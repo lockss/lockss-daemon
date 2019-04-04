@@ -1107,6 +1107,21 @@
 
  {
   title <
+   name = Advances in Public Relations and Communication Management ;
+   issn = 2398-3914 ;
+   type = bookSeries
+  >
+  #param[journal_issn] = 2398-3914
+  #series = aprcm
+
+   au < finished ; manifest ; 2016 ; 9781786357168 ; 9781786357151 ; 9781786357151 ; The Management Game of Communication Volume 1 ; https://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
+   au < finished ; manifest ; 2017 ; 9781787147171 ; 9781787147164 ; 9781787147164 ; How Strategic Communication Shapes Value and Innovation in Society Volume 2 ; https://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
+   au < deepCrawl ; exists ; 2018 ; 9781787692923 ; 9781787692916 ; 9781787692916 ; Public Relations and the Power of Creativity: Strategic Opportunities, Innovation and Critical Challenges Volume 3 ; https://www.emeraldinsight.com/ ;  >
+
+ }
+
+ {
+  title <
    name = Advances in Race and Ethnicity in Education ;
    issn = 2051-2317 ;
    type = bookSeries
@@ -1120,6 +1135,22 @@
    au < finished ; manifest ; 2017 ; 9781785601293 ; 9781785601286 ; 9781785601286 ; The School to Prison Pipeline: The Role of Culture and Discipline in School Volume 4 ; https://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
    au < finished ; manifest ; 2017 ; 9781787142596 ; 9781787142589 ; 9781787142589 ; African American Children in Early Childhood Education: Making the Case for Policy Investments in Families, Schools, and Communities Volume 5 ; https://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
    au < finished ; manifest ; 2017 ; 9781787144620 ; 9781787144613 ; 9781787144613 ; Black Female Teachers: Diversifying the United States' Teacher Workforce Volume 6 ; https://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
+
+ }
+
+ {
+  title <
+   name = Advances in Research Ethics and Integrity ;
+   issn = 2398-6018 ;
+   type = bookSeries
+  >
+  #param[journal_issn] = 2398-6018
+  #series = arei
+
+   au < finished ; manifest ; 2017 ; 9781787141315 ; 9781787141308 ; 9781787141308 ; Finding Common Ground: Consensus in Research Ethics Across the Social Sciences Volume 1 ; https://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
+   au < finished ; manifest ; 2017 ; 9781787144866 ; 9781787144859 ; 9781787144859 ; The Ethics of Online Research Volume 2 ; https://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
+   au < exists ; exists ; 2018 ; 9781787146082 ; 9781787146075 ; 9781787146075 ; Virtue Ethics in the Conduct and Governance of Social Science Research Volume 3 ; https://www.emeraldinsight.com/ ; >
+   au < exists ; exists ; 2018 ; 9781787435728 ; 9781787435711 ; 9781787435711 ; Ethics and Integrity in Health and Life Sciences Research Volume 4 ; https://www.emeraldinsight.com/ ; >
 
  }
 
@@ -1193,6 +1224,20 @@
    au < finished ; manifest ; 2016 ; 9781786355447 ; 9781786355430 ; 9781786355430 ; General and Special Education Inclusion in an Age of Change: Roles of Professionals Involved Volume 32 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
    au < exists ; exists ; 2018 ; 9781787430907 ; 9781787430891 ; 9781787430891 ; Viewpoints on Interventions for Learners with Disabilities Volume 33 ; http://www.emeraldinsight.com/ ; >
    au < exists ; exists ; 2019 ; 9781787560413 ; 9781787560406 ; 9781787560406 ; Special Education for Young Learners with Disabilities Volume 34 ; http://www.emeraldinsight.com/ ; >
+
+ }
+
+ {
+  title <
+   name = Advances in Special Education Technology ;
+   issn = 2056-7693 ;
+   type = bookSeries
+  >
+  #param[journal_issn] = 2056-7693
+  #series = aset
+
+   au < finished ; manifest ; 2015 ; 9781784416423 ; 9781784416416 ; 9781784416416 ; Efficacy of Assistive Technology Interventions Volume 1 ; https://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
+   au < finished ; manifest ; 2015 ; 9781785602894 ; 9781785602887 ; 9781785602887 ; Accessible Instructional Design Volume 2 ; https://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
 
  }
 
@@ -1741,7 +1786,7 @@
    au < finished ; crawling ; 2016 ; 9781786353849 ; 9781786353832 ; 9781786353832 ; Accountability and Social Responsibility: International Perspectives Volume 9 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
    au < finished ; manifest ; 2016 ; 9781786356260 ; 9781786356253 ; 9781786356253 ; Corporate Responsibility and Stakeholding Volume 10 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 2017 ; 9781787144125 ; 9781787144118 ; 9781787144118 ; Corporate Social Responsibility and Corporate Governance Volume 11 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
-   au < deepCrawl ; exists ; 2017 ; 9781787146952 ; 9781787146945 ; 9781787146945 ; Modern Organisational Governance Volume 12 ; http://www.emeraldinsight.com/ ;  >
+   au < superseded ; exists ; 2017 ; 9781787144125 ; 9781787144118 ; 9781787144118 ; Volume 11 - Corporate Social Responsibility and Corporate Governance: Concepts, Perspectives and Emerging Trends in Ibero-America [superseded] ; https://www.emeraldinsight.com/ ;  > #same volume preserved in different series.   au < deepCrawl ; exists ; 2017 ; 9781787146952 ; 9781787146945 ; 9781787146945 ; Modern Organisational Governance Volume 12 ; http://www.emeraldinsight.com/ ;  >
    au < deepCrawl ; exists ; 2018 ; 9781787561625 ; 9781787561618 ; 9781787561618 ; Redefining Corporate Social Responsibility Volume 13 ; https://www.emeraldinsight.com/ ;  >
    au < exists ; exists ; 2018 ; 9781787563803 ; 9781787563797 ; 9781787563797 ; Stakeholders, Governance and Responsibility Volume 14 ; https://www.emeraldinsight.com/ ;  >
 
@@ -1839,21 +1884,16 @@
    au < finished ; finished ; 2013 ; 9781781902875 ; 9781781902882 ; 9781781902882 ; Transport Survey Methods: Best Practice for Decision Making (9781781902882) ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
    au < finished ; manifest ; 2015 ; 9781784410728 ; 9781784410711 ; 9781784410711 ; Bounded Rational Choice Behaviour: Applications in Transport ; https://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
    au < finished ; manifest ; 2015 ; 9781784412555 ; 9781784412548 ; 9781784412548 ; Volume 11 - Genre Theory in Information Studies ; https://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
-   au < finished ; manifest ; 2015 ; 9781785602894 ; 9781785602887 ; 9781785602887 ; Volume 2 - Accessible Instructional Design ; https://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
-   au < finished ; manifest ; 2015 ; 9781784418847 ; 9781784418830 ; 9781784418830 ; Volume 24 - Asian Leadership in Policy and Governance ; https://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
-   au < finished ; manifest ; 2015 ; 9781784416423 ; 9781784416416 ; 9781784416416 ; Volume 1 - Efficacy of Assistive Technology Interventions ; https://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
    au < finished ; manifest ; 2015 ; 9781784418700 ; 9781784418694 ; 9781784418694 ; Airport Design and Operation: Third Edition ; https://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
    au < finished ; manifest ; 2015 ; 9781784419851 ; 9781784419844 ; 9781784419844 ; Chinese Railways in the Era of High-Speed ; https://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
    au < finished ; manifest ; 2016 ; 9781786351463 ; 9781786351456 ; 9781786351456 ; Creative Social Change ; https://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
    au < finished ; manifest ; 2016 ; 9781785609466 ; 9781785609459 ; 9781785609459 ; Organization Theory ; https://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
    au < finished ; manifest ; 2016 ; 9781786353900 ; 9781786353894 ; 9781786353894 ; Volume 20 - A. C. Littleton's Final Thoughts on Accounting: A Collection of Unpublished Essays ; https://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
    au < finished ; manifest ; 2016 ; 9781786354525 ; 9781786354518 ; 9781786354518 ; Risk Management in Emerging Markets: Issues, Framework, and Modeling ; https://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
-   au < finished ; manifest ; 2016 ; 9781786357168 ; 9781786357151 ; 9781786357151 ; Volume 1 - The Management Game of Communication ; https://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
    au < finished ; manifest ; 2016 ; 9781786353689 ; 9781786353672 ; 9781786353672 ; Reimagining Business Education: Insights and Actions from the Business Education Jam ; https://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
    au < finished ; manifest ; 2016 ; 9781787140356 ; 9781787140349 ; 9781787140349 ; Designing Creative Organizations: Tools, Processes and Practice ; https://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
    au < finished ; manifest ; 2016 ; 9781785606854 ; 9781785606847 ; 9781785606847 ; Organizing Disaster ; https://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
    au < finished ; manifest ; 2016 ; 9781786354488 ; 9781786354471 ; 9781786354471 ; The Aging Workforce Handbook: Individual, Organizational, and Societal Challenges ; https://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
-   au < finished ; manifest ; 2016 ; 9781786350565 ; 9781786350558 ; 9781786350558 ; Volume 25 - Governing for the Future: Designing Democratic Institutions for a Better Tomorrow ; https://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
    au < finished ; manifest ; 2016 ; 9781785606397 ; 9781785606380 ; 9781785606380 ; Community Management of Urban Open Spaces in Developing Economies ; https://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
    au < finished ; manifest ; 2016 ; 9781785604652 ; 9781785604645 ; 9781785604645 ; Mastering Digital Transformation: Towards a Smarter Society, Economy, City and Nation ; https://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
    au < finished ; manifest ; 2016 ; 9781785606519 ; 9781785606502 ; 9781785606502 ; Qualitative Research in the Study of Leadership ; https://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
@@ -1881,34 +1921,27 @@
    au < finished ; manifest ; 2016 ; 9781786352903 ; 9781786352897 ; 9781786352897 ; The Handbook of Managing and Marketing Tourism Experiences ; https://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
    au < finished ; manifest ; 2016 ; 9781786353429 ; 9781786353412 ; 9781786353412 ; Contesting Institutional Hegemony in Today's Business Schools: Doctoral Students Speak Out ; https://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
    au < finished ; manifest ; 2016 ; 9781786355669 ; 9781786355652 ; 9781786355652 ; Marconomics: Defining Economics through Social Science and Consumer Behavior ; https://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
-   au < finished ; manifest ; 2016 ; 9781786350442 ; 9781786350435 ; 9781786350435 ; Volume 26 - The Global Educational Policy Environment in the Fourth Industrial Revolution: Gated, Regulated and Governed ; https://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
    au < finished ; manifest ; 2016 ; 9781785609480 ; 9781785609473 ; 9781785609473 ; Followership in Action: Cases and Commentaries ; https://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2017 ; 9781786352224 ; 9781786352217 ; 9781786352217 ; Traffic Safety and Human Behavior (9781786352217) ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
    au < finished ; manifest ; 2017 ; 9781787436411 ; 9781787436404 ; 9781787436404 ; Achieving Evidence-Informed Policy and Practice in Education: Evidenced ; https://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
    au < finished ; manifest ; 2017 ; 9781787145665 ; 9781787145658 ; 9781787145658 ; Inside Knowledge: How Women Can Thrive in Professional Service Firms ; https://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
    au < finished ; manifest ; 2017 ; 9781787141193 ; 9781787141186 ; 9781787141186 ; Change Management for Organizations: Lessons from Political Upheaval in India ; https://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
-   au < finished ; manifest ; 2017 ; 9781787433328 ; 9781787433311 ; 9781787433311 ; Volume 54B - Multimodality, Meaning, and Institutions ; https://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
-   au < finished ; manifest ; 2017 ; 9781787144866 ; 9781787144859 ; 9781787144859 ; Volume 2 - The Ethics of Online Research ; https://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
    au < finished ; manifest ; 2017 ; 9781787145467 ; 9781787145450 ; 9781787145450 ; Insights and Research on the Study of Gender and Intersectionality in International Airline Cultures ; https://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
    au < finished ; manifest ; 2017 ; 9781787145146 ; 9781787145139 ; 9781787145139 ; National Identity and Europe in Times of Crisis: Doing and Undoing Europe ; https://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
    au < finished ; manifest ; 2017 ; 9781787145504 ; 9781787145498 ; 9781787145498 ; No Business is an Island: Making Sense of the Interactive Business World ; https://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
    au < finished ; manifest ; 2017 ; 9781787145320 ; 9781787145313 ; 9781787145313 ; Volume 12 - The Organization of Knowledge: Caught between Global Structures and Local Meaning ; https://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
    au < finished ; manifest ; 2017 ; 9781787148284 ; 9781787148277 ; 9781787148277 ; Human Capital and Assets in the Networked World ; https://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
    au < finished ; manifest ; 2017 ; 9781787436121 ; 9781787436114 ; 9781787436114 ; Juvenile Delinquency, Crime and Social Marginalization: Social and Political Implications ; https://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
-   au < finished ; manifest ; 2017 ; 9781787144620 ; 9781787144613 ; 9781787144613 ; Volume 6 - Black Female Teachers: Diversifying the United States' Teacher Workforce ; https://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
    au < finished ; manifest ; 2017 ; 9781787436770 ; 9781787436763 ; 9781787436763 ; Volume 2 - Methodological Challenges and Advances in Managerial and Organizational Cognition ; https://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
    au < finished ; manifest ; 2017 ; 9781787432864 ; 9781787432857 ; 9781787432857 ; Custard, Culverts and Cake: Academics on Life in The Archers ; https://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
    au < finished ; manifest ; 2017 ; 9781787433588 ; 9781787433571 ; 9781787433571 ; The Globalization of Foreign Investment in Africa: The Role of Europe, China, and India ; https://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
    au < finished ; manifest ; 2017 ; 9781787143166 ; 9781787143159 ; 9781787143159 ; Electronic HRM in the Smart Era ; https://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
    au < finished ; manifest ; 2017 ; 9781787435261 ; 9781787435254 ; 9781787435254 ; And Now What?: A Guide to Leadership and Taking Charge in Your New Role ; https://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
-   au < finished ; manifest ; 2017 ; 9781787142633 ; 9781787142626 ; 9781787142626 ; Volume 27 - Governmental Financial Resilience: International Perspectives on How Local Governments Face Austerity ; https://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
    au < finished ; manifest ; 2017 ; 9781787148826 ; 9781787148819 ; 9781787148819 ; Childbirth and Parenting in Horror Texts: The Marginalized and the Monstrous ; https://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
    au < finished ; manifest ; 2017 ; 9781787430983 ; 9781787430976 ; 9781787430976 ; Volume 14 - Social Movements and Media ; https://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
    au < finished ; manifest ; 2017 ; 9781786357823 ; 9781786357816 ; 9781786357816 ; Living in Two Homes: Integration, Identity and Education of Transnational Migrants in a Globalized World ; https://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
    au < finished ; manifest ; 2017 ; 9781787144941 ; 9781787144934 ; 9781787144934 ; The Emerald Handbook of Public–Private Partnerships in Developing and Emerging Economies: Perspectives on Public Policy, Entrepreneurship and Poverty ; https://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
    au < finished ; manifest ; 2017 ; 9781787431867 ; 9781787431850 ; 9781787431850 ; Breaking the Zero-Sum Game: Transforming Societies through Inclusive Leadership ; https://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
-   au < finished ; manifest ; 2017 ; 9781787147171 ; 9781787147164 ; 9781787147164 ; Volume 2 - How Strategic Communication Shapes Value and Innovation in Society ; https://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
-   au < finished ; manifest ; 2017 ; 9781787144729 ; 9781787144712 ; 9781787144712 ; Volume 28 - The Experience of Democracy and Bureaucracy in South Korea ; https://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
    au < finished ; manifest ; 2017 ; 9781787148369 ; 9781787148352 ; 9781787148352 ; Mastering Market Analytics: Business Metrics – Practice and Application ; https://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
    au < finished ; manifest ; 2017 ; 9781787141834 ; 9781787141827 ; 9781787141827 ; Design of Technology-Enhanced Learning: Integrating Research and Practice ; https://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
    au < finished ; manifest ; 2017 ; 9781787144224 ; 9781787144217 ; 9781787144217 ; Developing Holistic Leadership: A Source of Business Innovation ; https://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
@@ -1919,7 +1952,6 @@
    au < finished ; manifest ; 2017 ; 9781787142077 ; 9781787142060 ; 9781787142060 ; The Imagination Gap ; https://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
    au < finished ; manifest ; 2017 ; 9781787433908 ; 9781787433892 ; 9781787433892 ; The Ideological Evolution of Human Resource Management: A Critical Look into HRM Research and Practices ; https://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
    au < finished ; manifest ; 2017 ; 9781787435346 ; 9781787435339 ; 9781787435339 ; The AGM in Europe: Theory and Practice of Shareholder Behaviour ; https://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
-   au < finished ; manifest ; 2017 ; 9781787141315 ; 9781787141308 ; 9781787141308 ; Volume 1 - Finding Common Ground: Consensus in Research Ethics Across the Social Sciences ; https://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
    au < finished ; manifest ; 2017 ; 9781786356789 ; 9781786356772 ; 9781786356772 ; The Executive's Guide to 21st Century Corporate Citizenship: How Your Company Can Win the Battle for Reputation and Impact ; https://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
    au < finished ; manifest ; 2017 ; 9781786358295 ; 9781786358288 ; 9781786358288 ; Forming and Centering: Foundational Aspects of Architectural Design ; https://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
    au < finished ; manifest ; 2017 ; 9781787148307 ; 9781787148291 ; 9781787148291 ; Project Management: A Multi-Perspective Leadership Framework ; https://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
@@ -1935,15 +1967,12 @@
    au < finished ; manifest ; 2017 ; 9781786356888 ; 9781786356871 ; 9781786356871 ; Grassroots Leadership and the Arts for Social Change ; https://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
    au < finished ; manifest ; 2017 ; 9781787148321 ; 9781787148314 ; 9781787148314 ; The Responsive Global Organization: New Insights from Global Strategy and International Business ; https://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
    au < finished ; manifest ; 2017 ; 9781787430969 ; 9781787430952 ; 9781787430952 ; Africa: The Future of Management Education ; https://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
-   au < finished ; manifest ; 2017 ; 9781787435568 ; 9781787435551 ; 9781787435551 ; Volume 29 - Corruption, Accountability and Discretion ; https://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
    au < finished ; manifest ; 2017 ; 9781787141353 ; 9781787141346 ; 9781787141346 ; Internationalization of Firms: The Role of Institutional Distance on Location and Entry mode ; https://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
    au < finished ; manifest ; 2017 ; 9781787144842 ; 9781787144835 ; 9781787144835 ; Global Currents in Gender and Feminisms: Canadian and International Perspectives ; https://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
    au < finished ; manifest ; 2017 ; 9781786354464 ; 9781786354457 ; 9781786354457 ; The Handbook of Business and Corruption: Cross-Sectoral Experiences ; https://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
    au < finished ; manifest ; 2017 ; 9781787147010 ; 9781787147003 ; 9781787147003 ; Count Down: The Past, Present and Uncertain Future of the Big Four Accounting Firms ; https://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
-   au < finished ; manifest ; 2017 ; 9781787433304 ; 9781787433298 ; 9781787433298 ; Volume 54A - Multimodality, Meaning, and Institutions ; https://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
    au < finished ; manifest ; 2017 ; 9781787142237 ; 9781787142220 ; 9781787142220 ; How Mediation Works: Theory, Research, and Practice ; https://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
    au < finished ; manifest ; 2017 ; 9781787434103 ; 9781787434097 ; 9781787434097 ; Volume 5 - Advances in Pacific Basin Business Economics and Finance ; https://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
-   au < finished ; manifest ; 2017 ; 9781787141858 ; 9781787141841 ; 9781787141841 ; Volume 12 - Service-Learning: Enhancing Inclusive Education ; https://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
    au < finished ; manifest ; 2017 ; 9781787145641 ; 9781787145634 ; 9781787145634 ; Production, Safety and Teamwork in a Deep-Level Mining Workplace: Perspectives from the Rock-Face ; https://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
    au < finished ; manifest ; 2017 ; 9781786358318 ; 9781786358301 ; 9781786358301 ; Megaproject Risk Analysis and Simulation: A Dynamic Systems Approach ; https://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
    au < finished ; manifest ; 2017 ; 9781787430686 ; 9781787430679 ; 9781787430679 ; Living Alone, Living Together: Two Essays on the Use of Housing ; https://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
@@ -1988,11 +2017,9 @@
    au < deepCrawl ; exists ; 2018 ; 9781787543560 ; 9781787543539 ; 9781787543539 ; How Social Science Can Help Us Make Better Choices: Optimal Rationality in Action ; https://www.emeraldinsight.com/ ;  >
    au < deepCrawl ; exists ; 2018 ; 9781787567665 ; 9781787430532 ; 9781787430532 ; Death, The Dead and Popular Culture ; https://www.emeraldinsight.com/ ;  >
    au < deepCrawl ; exists ; 2018 ; 9781787567702 ; 9781787567672 ; 9781787567672 ; A Meaningful Life at Work: The Paradox of Wellbeing ; https://www.emeraldinsight.com/ ;  >
-   au < deepCrawl ; exists ; 2018 ; 9781787545663 ; 9781787545656 ; 9781787545656 ; Volume 7 - Airline Economics in Asia ; https://www.emeraldinsight.com/ ;  >
    au < deepCrawl ; exists ; 2018 ; 9781787438002 ; 9781787437999 ; 9781787437999 ; The Efficiency of Mutual Fund Families: Insights from the Spanish Market ; https://www.emeraldinsight.com/ ;  >
    au < deepCrawl ; exists ; 2018 ; 9781787145542 ; 9781787145535 ; 9781787145535 ; Food Retailing and Sustainable Development: European Perspectives ; https://www.emeraldinsight.com/ ;  >
    au < deepCrawl ; exists ; 2018 ; 9781787566101 ; 9781787566071 ; 9781787566071 ; Reputation Management: The Future of Corporate Communications and Public Relations ; https://www.emeraldinsight.com/ ;  >
-   au < deepCrawl ; exists ; 2018 ; 9781787692923 ; 9781787692916 ; 9781787692916 ; Volume 3 - Public Relations and the Power of Creativity: Strategic Opportunities, Innovation and Critical Challenges ; https://www.emeraldinsight.com/ ;  >
    au < deepCrawl ; exists ; 2018 ; 9781787435285 ; 9781787435278 ; 9781787435278 ; Energy Power Risk: Derivatives, Computation and Optimization ; https://www.emeraldinsight.com/ ;  >
    au < deepCrawl ; exists ; 2018 ; 9781787565487 ; 9781787565470 ; 9781787565470 ; Beyond the Digital Divide: Contextualizing the Information Society ; https://www.emeraldinsight.com/ ;  >
    au < deepCrawl ; exists ; 2018 ; 9781787564664 ; 9781787564657 ; 9781787564657 ; Pervasive Punishment: Making Sense of Mass Supervision ; https://www.emeraldinsight.com/ ;  >
@@ -2011,26 +2038,21 @@
    au < deepCrawl ; exists ; 2018 ; 9781787433489 ; 9781787433472 ; 9781787433472 ; The Return of Trust? Institutions and the Public after the Icelandic Financial Crisis ; https://www.emeraldinsight.com/ ;  >
    au < deepCrawl ; exists ; 2018 ; 9781787436695 ; 9781787436688 ; 9781787436688 ; Digital Materialism: Origins, Philosophies, Prospects ; https://www.emeraldinsight.com/ ;  >
    au < deepCrawl ; exists ; 2018 ; 9781787438125 ; 9781787438118 ; 9781787438118 ; Parkour, Deviance and Leisure in the Late-Capitalist City: An Ethnography ; https://www.emeraldinsight.com/ ;  >
-   au < deepCrawl ; exists ; 2018 ; 9781787438163 ; 9781787438156 ; 9781787438156 ; Volume 99 - Governance and Regulations' Contemporary Issues ; https://www.emeraldinsight.com/ ;  >
    au < deepCrawl ; exists ; 2018 ; 9781787435544 ; 9781787435537 ; 9781787435537 ; Broken Pie Chart: 5 Ways to Build Your Investment Portfolio to Withstand and Prosper in Risky Markets ; https://www.emeraldinsight.com/ ;  >
    au < deepCrawl ; exists ; 2018 ; 9781787548336 ; 9781787548329 ; 9781787548329 ; Boosting Impact and Innovation in Higher Education: The Knowledge Entrepreneur and High Diversity Groups in Universities ; https://www.emeraldinsight.com/ ;  >
    au < deepCrawl ; exists ; 2018 ; 9781787562769 ; 9781787562752 ; 9781787562752 ; Developing Insights on Branding in the B2B Context: Case Studies from Business Practice ; https://www.emeraldinsight.com/ ;  >
    au < deepCrawl ; exists ; 2018 ; 9781787438149 ; 9781787438132 ; 9781787438132 ; Empirical Nursing: The Art of Evidence-Based Care ; https://www.emeraldinsight.com/ ;  >
    au < deepCrawl ; exists ; 2018 ; 9781787568426 ; 9781787568419 ; 9781787568419 ; Volume 4 - Economic Areas Under Financial Stability ; https://www.emeraldinsight.com/ ;  >
-   au < deepCrawl ; exists ; 2018 ; 9781787145429 ; 9781787145412 ; 9781787145412 ; Volume 294 - Health Econometrics ; https://www.emeraldinsight.com/ ;  >
    au < deepCrawl ; exists ; 2018 ; 9781787562882 ; 9781787562875 ; 9781787562875 ; Models of Modern Information Economy: Conceptual Contradictions and Practical Examples ; https://www.emeraldinsight.com/ ;  >
    au < deepCrawl ; exists ; 2018 ; 9781787438576 ; 9781787438569 ; 9781787438569 ; The Marketisation of English Higher Education: A Policy Analysis of a Risk-based System ; https://www.emeraldinsight.com/ ;  >
    au < deepCrawl ; exists ; 2018 ; 9781787144880 ; 9781787144873 ; 9781787144873 ; Active Learning Strategies in Higher Education: Teaching for Leadership, Innovation, and Creativity ; https://www.emeraldinsight.com/ ;  >
-   au < deepCrawl ; exists ; 2018 ; 9781787433106 ; 9781787433090 ; 9781787433090 ; Volume 30 - Leadership and Public Sector Reform in Asia ; https://www.emeraldinsight.com/ ;  >
    au < deepCrawl ; exists ; 2018 ; 9781787565746 ; 9781787565715 ; 9781787565715 ; Death, Memorialization and Deviant Spaces ; https://www.emeraldinsight.com/ ;  >
    au < deepCrawl ; exists ; 2018 ; 9781787697164 ; 9781787697133 ; 9781787697133 ; Social Worlds and the Leisure Experience ; https://www.emeraldinsight.com/ ;  >
    au < deepCrawl ; exists ; 2018 ; 9781787543201 ; 9781787543171 ; 9781787543171 ; Governance of the Smart Mobility Transition ; https://www.emeraldinsight.com/ ;  >
-   au < deepCrawl ; exists ; 2018 ; 9781787564169 ; 9781787564152 ; 9781787564152 ; Volume 25 - Advances in Taxation ; https://www.emeraldinsight.com/ ;  >
    au < deepCrawl ; exists ; 2018 ; 9781787542600 ; 9781787542594 ; 9781787542594 ; Volume 2 - Corporate Social Responsibility ; https://www.emeraldinsight.com/ ;  >
    au < deepCrawl ; exists ; 2018 ; 9781786356727 ; 9781786356710 ; 9781786356710 ; The Emerald Handbook of Quantum Storytelling Consulting ; https://www.emeraldinsight.com/ ;  >
    au < deepCrawl ; exists ; 2018 ; 9781787437821 ; 9781787437814 ; 9781787437814 ; Expand, Grow, Thrive: 5 Proven Steps to Turn Good Brands into Global Brands through the LASSO Method ; https://www.emeraldinsight.com/ ;  >
    au < deepCrawl ; exists ; 2018 ; 9781787696822 ; 9781787696815 ; 9781787696815 ; Volume 2 - The Banking Sector Under Financial Stability ; https://www.emeraldinsight.com/ ;  >
-   au < deepCrawl ; exists ; 2018 ; 9781787431720 ; 9781787431713 ; 9781787431713 ; Volume 6 - Cross-Sectoral Relations in the Delivery of Public Services ; https://www.emeraldinsight.com/ ;  >
    au < deepCrawl ; exists ; 2018 ; 9781787541306 ; 9781787436909 ; 9781787436909 ; Inclusive Education in South Africa and the Developing World: The Search for an Inclusive Pedagogy ; https://www.emeraldinsight.com/ ;  >
    au < deepCrawl ; exists ; 2018 ; 9781787542167 ; 9781787437142 ; 9781787437142 ; Refugees in Higher Education: Debate, Discourse and Practice ; https://www.emeraldinsight.com/ ;  >
    au < deepCrawl ; exists ; 2018 ; 9781787546547 ; 9781787546516 ; 9781787546516 ; Higher Education Funding and Access in International Perspective ; https://www.emeraldinsight.com/ ;  >
@@ -2116,7 +2138,6 @@
    au < deepCrawl ; exists ; 2018 ; 9781787435308 ; 9781787435292 ; 9781787435292 ; The Emerald Handbook of Entrepreneurship in Tourism, Travel and Hospitality: Skills for Successful Ventures ; https://www.emeraldinsight.com/ ;  >
    au < deepCrawl ; exists ; 2018 ; 9781787569782 ; 9781787569775 ; 9781787569775 ; The Development of the Maltese Insurance Industry: A Comprehensive Study ; https://www.emeraldinsight.com/ ;  >
    au < deepCrawl ; exists ; 2018 ; 9781787564466 ; 9781787564459 ; 9781787564459 ; Volume 6 - Advances in Pacific Basin Business, Economics and Finance ; https://www.emeraldinsight.com/ ;  >
-   au < deepCrawl ; exists ; 2018 ; 9781787437708 ; 9781787437692 ; 9781787437692 ; Volume 7 - Hybridity in the Governance and Delivery of Public Services ; https://www.emeraldinsight.com/ ;  >
    au < deepCrawl ; exists ; 2018 ; 9781787543348 ; 9781787543331 ; 9781787543331 ; Midlife Creativity and Identity: Life into Art ; https://www.emeraldinsight.com/ ;  >
    au < deepCrawl ; exists ; 2018 ; 9781787561038 ; 9781787561021 ; 9781787561021 ; Managing Brands in 4D: Understanding Perceptual, Emotional, Social and Cultural Branding ; https://www.emeraldinsight.com/ ;  >
    au < deepCrawl ; exists ; 2018 ; 9781787432291 ; 9781787432284 ; 9781787432284 ; Sexual Violence on Campus: Power-Conscious Approaches to Awareness, Prevention, and Response ; https://www.emeraldinsight.com/ ;  >
@@ -2586,6 +2607,26 @@
   #series = pppp
 
    au < frozen ; exists ; 2003 ; 9780125421188 ; 9781849500081 ; 9781849500081 ; Progress in Psychobiology and Physiological Psychology Volume 18 ; https://www.emeraldinsight.com/ ;  >
+
+ }
+
+ {
+  title <
+   name = Public Policy and Governance ;
+   issn = 2053-7697 ;
+   type = bookSeries
+  >
+  #param[journal_issn] = 2053-7697
+  #series = ppg
+  #continues = 0732-1317
+
+   au < finished ; manifest ; 2015 ; 9781784418847 ; 9781784418830 ; 9781784418830 ; Asian Leadership in Policy and Governance Volume 24 ; https://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
+   au < finished ; manifest ; 2016 ; 9781786350565 ; 9781786350558 ; 9781786350558 ; Governing for the Future: Designing Democratic Institutions for a Better Tomorrow Volume 25 ; https://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
+   au < finished ; manifest ; 2016 ; 9781786350442 ; 9781786350435 ; 9781786350435 ; The Global Educational Policy Environment in the Fourth Industrial Revolution: Gated, Regulated and Governed Volume 26 ; https://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
+   au < finished ; manifest ; 2017 ; 9781787142633 ; 9781787142626 ; 9781787142626 ; Governmental Financial Resilience: International Perspectives on How Local Governments Face Austerity Volume 27 ; https://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
+   au < finished ; manifest ; 2017 ; 9781787144729 ; 9781787144712 ; 9781787144712 ; The Experience of Democracy and Bureaucracy in South Korea Volume 28 ; https://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
+   au < finished ; manifest ; 2017 ; 9781787435568 ; 9781787435551 ; 9781787435551 ; Corruption, Accountability and Discretion Volume 29 ; https://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
+   au < deepCrawl ; exists ; 2018 ; 9781787433106 ; 9781787433090 ; 9781787433090 ; Leadership and Public Sector Reform in Asia Volume 30 ; https://www.emeraldinsight.com/ ;  >
 
  }
 
@@ -3130,6 +3171,7 @@
   >
   #param[journal_issn] = 0732-1317
   #series = rpp
+  #continued_by = 2053-7697
 
    au < finished ; manifest ; 2001 ; 9780762307593 ; 9781849500920 ; 9781849500920 ; Learning from International Public Management Reform: Part A Volume 11 Part 1 ; https://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
    au < finished ; crawling ; 2001 ; 9780762307609 ; 9781849500937 ; 9781849500937 ; Learning from International Public Management Reform: Part B Volume 11 Part 2 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
@@ -4003,6 +4045,22 @@
    au < finished ; crawling ; 2013 ; 9781781904893 ; 9781781904909 ; 9781781904909 ; Understanding the Relationship Between Networks and Technology, Creativity and Innovation Volume 13 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
    au < finished ; crawling ; 2014 ; 9781783506552 ; 9781783506569 ; 9781783506569 ; Exploration and Exploitation in Early Stage Ventures and SMEs Volume 14 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
    au < finished ; crawling ; 2016 ; 9781786353726 ; 9781786353719 ; 9781786353719 ; Mergers and Acquisitions, Entrepreneurship and Innovation Volume 15 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
+
+ }
+
+ {
+  title <
+   name = The Theory and Practice of Financial Stability ;
+   type = bookSeries
+  >
+  #param[journal_issn] =
+  #series = tpfs
+
+   au < exists ; exists ; 2018 ; 9781787568341 ; 9781787568334 ; 9781787568334 ; Understanding Financial Stability Volume 1 ; https://www.emeraldinsight.com/ ;  >
+   au < deepCrawl ; exists ; 2018 ; 9781787696822 ; 9781787696815 ; 9781787696815 ; The Banking Sector Under Financial Stability Volume 2 ; https://www.emeraldinsight.com/ ;  >
+   au < deepCrawl ; exists ; 2018 ; 9781787568389 ; 9781787568372 ; 9781787568372 ; The Corporate, Real Estate, Household, Government and Non-Bank Financial Sectors Under Financial Stability Volume 3 ; https://www.emeraldinsight.com/ ;  >
+   au < deepCrawl ; exists ; 2018 ; 9781787568426 ; 9781787568419 ; 9781787568419 ; Economic Areas Under Financial Stability Volume 4; https://www.emeraldinsight.com/ ;  >
+   au < exists ; exists ; 2018 ; 9781787568464 ; 9781787568457 ; 9781787568457 ; Tools and Techniques for Financial Stability Analysis Volume 5; https://www.emeraldinsight.com/ ;  >
 
  }
 
