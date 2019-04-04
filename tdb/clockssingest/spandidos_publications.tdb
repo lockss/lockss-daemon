@@ -1,7 +1,9 @@
 {
   publisher <
     name = Spandidos Publications ;
-    info[tester] = 8
+    info[contract] = 2018 ;
+    info[tester] = 8 ;
+    info[poller] = 7
   >
 
   plugin = org.lockss.plugin.spandidos.ClockssSpandidosPlugin
