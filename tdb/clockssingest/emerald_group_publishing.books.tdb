@@ -4128,8 +4128,24 @@
    au < exists ; exists ; 2018 ; 9781787568341 ; 9781787568334 ; 9781787568334 ; Understanding Financial Stability Volume 1 ; https://www.emeraldinsight.com/ ;  >
    au < deepCrawl ; exists ; 2018 ; 9781787696822 ; 9781787696815 ; 9781787696815 ; The Banking Sector Under Financial Stability Volume 2 ; https://www.emeraldinsight.com/ ;  >
    au < deepCrawl ; exists ; 2018 ; 9781787568389 ; 9781787568372 ; 9781787568372 ; The Corporate, Real Estate, Household, Government and Non-Bank Financial Sectors Under Financial Stability Volume 3 ; https://www.emeraldinsight.com/ ;  >
-   au < deepCrawl ; exists ; 2018 ; 9781787568426 ; 9781787568419 ; 9781787568419 ; Economic Areas Under Financial Stability Volume 4; https://www.emeraldinsight.com/ ;  >
-   au < exists ; exists ; 2018 ; 9781787568464 ; 9781787568457 ; 9781787568457 ; Tools and Techniques for Financial Stability Analysis Volume 5; https://www.emeraldinsight.com/ ;  >
+   au < deepCrawl ; exists ; 2018 ; 9781787568426 ; 9781787568419 ; 9781787568419 ; Economic Areas Under Financial Stability Volume 4 ; https://www.emeraldinsight.com/ ;  >
+   au < exists ; exists ; 2018 ; 9781787568464 ; 9781787568457 ; 9781787568457 ; Tools and Techniques for Financial Stability Analysis Volume 5 ; https://www.emeraldinsight.com/ ;  >
+
+ }
+
+ {
+  title <
+   name = Theory and Method in Higher Education Research ;
+   issn = 2056-3752 ;
+   type = bookSeries
+  >
+  #param[journal_issn] = 2056-3752
+  #series = tmher
+
+   au < exists ; exists ; 2015 ; 9781785602870 ; 9781785602863 ; 9781785602863 ; Theory and Method in Higher Education Research Volume 1 ; https://www.emeraldinsight.com/ ;  >
+   au < exists ; exists ; 2016 ; 9781786358950 ; 9781786358943 ; 9781786358943 ; Theory and Method in Higher Education Research Volume 2 ; https://www.emeraldinsight.com/ ;  >
+   au < exists ; exists ; 2017 ; 9781787432239 ; 9781787432222 ; 9781787432222 ; Theory and Method in Higher Education Research Volume 3 ; https://www.emeraldinsight.com/ ;  >
+   au < exists ; exists ; 2018 ; 9781787692787 ; 9781787692770 ; 9781787692770 ; Theory and Method in Higher Education Research Volume 4 ; https://www.emeraldinsight.com/ ;  >
 
  }
 
