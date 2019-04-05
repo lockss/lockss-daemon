@@ -328,7 +328,7 @@
       param[journal_abbr] = crossingborders
 
       au < testing ; exists ; 2015 ; Crossing Borders: An Undergraduate Journal of Interdisciplinary Scholarship Volume 1 ; 1 ; >
-      au < ready ; exists ; 2016 ; Crossing Borders: An Undergraduate Journal of Interdisciplinary Scholarship Volume 2 ; 2 ; >
+      au < crawling ; exists ; 2016 ; Crossing Borders: An Undergraduate Journal of Interdisciplinary Scholarship Volume 2 ; 2 ; >
       au < testing ; exists ; 2017 ; Crossing Borders: An Undergraduate Journal of Interdisciplinary Scholarship Volume 3 ; 3 ; >
       au < expected ; exists ; 2018 ; Crossing Borders: An Undergraduate Journal of Interdisciplinary Scholarship Volume 4 ; 4 ; >
       au < expected ; exists ; 2019 ; Crossing Borders: An Undergraduate Journal of Interdisciplinary Scholarship Volume 5 ; 5 ; >
@@ -451,7 +451,7 @@
       param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = ijssw
 
-      au < ready ; exists ; 2016 ; International Journal of School Social Work Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2016 ; International Journal of School Social Work Volume 1 ; 1 ; >
       au < testing ; exists ; 2017 ; International Journal of School Social Work Volume 2 ; 2 ; >
       au < frozen ; exists ; 2018 ; International Journal of School Social Work Volume 3 ; 3 ; >
       au < expected ; exists ; 2019 ; International Journal of School Social Work Volume 4 ; 4 ; >
@@ -515,7 +515,7 @@
       au < manifest ; exists ; 2009 ; Journal of Applied Communications Volume 92 ; 92 ; >
       au < manifest ; exists ; 2010 ; Journal of Applied Communications Volume 93 ; 93 ; >
       au < manifest ; exists ; 2011 ; Journal of Applied Communications Volume 94 ; 94 ; >
-      au < ready ; exists ; 2012 ; Journal of Applied Communications Volume 95 ; 95 ; >
+      au < crawling ; exists ; 2012 ; Journal of Applied Communications Volume 95 ; 95 ; >
       au < frozen ; exists ; 2013 ; Journal of Applied Communications Volume 96 ; 96 ; >
       au < frozen ; exists ; 2014 ; Journal of Applied Communications Volume 97 ; 97 ; >
       au < testing ; exists ; 2015 ; Journal of Applied Communications Volume 98 ; 98 ; >
@@ -638,7 +638,7 @@
       au < frozen ; exists ; 2014 ; Networks: An Online Journal for Teacher Research Volume 17 ; 17 ; >
       au < frozen ; exists ; 2015 ; Networks: An Online Journal for Teacher Research Volume 18 ; 18 ; >
       au < frozen ; exists ; 2016 ; Networks: An Online Journal for Teacher Research Volume 19 ; 19 ; >
-      au < ready ; exists ; 2017 ; Networks: An Online Journal for Teacher Research Volume 20 ; 20 ; >
+      au < crawling ; exists ; 2017 ; Networks: An Online Journal for Teacher Research Volume 20 ; 20 ; >
       au < testing ; exists ; 2018 ; Networks: An Online Journal for Teacher Research Volume 21 ; 21 ; >
       au < expected ; exists ; 2019 ; Networks: An Online Journal for Teacher Research Volume 22 ; 22 ; >
 
