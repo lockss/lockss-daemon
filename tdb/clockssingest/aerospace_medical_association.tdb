@@ -30,7 +30,6 @@
     
       param[base_url] = https://www.ingentaconnect.com/
       param[api_url] = https://api.ingentaconnect.com/
-    
   
     au < manifest ; exists ; 2003 ; 74 ; Aviation, Space, and Environmental Medicine Volume 74 ; 74 ; >
     au < manifest ; exists ; 2004 ; 75 ; Aviation, Space, and Environmental Medicine Volume 75 ; 75 ; >
@@ -42,6 +41,7 @@
     au < manifest ; exists ; 2010 ; 81 ; Aviation, Space, and Environmental Medicine Volume 81 ; 81 ; >
     au < manifest ; exists ; 2011 ; 82 ; Aviation, Space, and Environmental Medicine Volume 82 ; 82 ; >
     }
+
     {
       param[base_url] = http://www.ingentaconnect.com/
       param[api_url] = http://api.ingentaconnect.com/
@@ -71,17 +71,17 @@
       param[base_url] = http://www.ingentaconnect.com/
       param[api_url] = http://api.ingentaconnect.com/
     
-
     au < finished ; finished ; 2015 ; 86 ; Aerospace Medicine and Human Performance Volume 86 ; 86 ; >
     au < deepCrawl ; exists ; 2016 ; 87 ; Aerospace Medicine and Human Performance Volume 87 ; 87 ; >
     au < deepCrawl ; exists ; 2017 ; 88 ; Aerospace Medicine and Human Performance Volume 88 ; 88 ; >
     }
+
     {
       param[base_url] = https://www.ingentaconnect.com/
       param[api_url] = https://api.ingentaconnect.com/
 
-
     au < testing ; exists ; 2018 ; 89 ; Aerospace Medicine and Human Performance Volume 89 ; 89 ; >
+    au < expected ; exists ; 2019 ; 90 ; Aerospace Medicine and Human Performance Volume 90 ; 90 ; >
     }
 
   }
