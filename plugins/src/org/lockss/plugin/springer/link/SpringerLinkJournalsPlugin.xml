@@ -129,7 +129,7 @@
       <string>1,"^https?://%s/download/epub/",  url_host(base_url)</string>
       <string>1,"^https?://%s/(content|article)/",  url_host(base_url)</string>
       <string>1,"^https?://%s/(springerlink-)?static/", url_host(base_url)</string>
-      <string>1,"^https?://(%s|static-content\.springer\.com/).*\.pdf$", url_host(base_url)</string>
+      <string>1,"^https?://(%s|etatic-content\.springer\.com/).*\.pdf$", url_host(base_url)</string>
     </list>
   </entry>
   <entry>
@@ -140,7 +140,7 @@
       <string>"^%s(article|content/pdf)/[.0-9]+(/|%%2F)[^\?&amp;]+(\.pdf|/fulltext\.html)$", base_url</string>
     </list>
   </entry>
-    <entry>
+  <entry>
     <string>au_refetch_depth</string>
     <int>1</int>
   </entry>
@@ -175,6 +175,10 @@
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.springer.link.SpringerLinkArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>au_login_page_checker</string>
+    <string>org.lockss.plugin.springer.link.SpringerLinkLoginPageChecker</string>
   </entry>
   <entry>
     <string>plugin_cache_result_list</string>
