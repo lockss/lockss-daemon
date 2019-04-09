@@ -36,6 +36,7 @@
     au < ers.ClockssERSDrupalPlugin ; finished ; crawling ; 2016 ; Breathe Volume 12 ; 12 ; reingest4.clockss.org:8082 >
     au < ers.ClockssERSDrupalPlugin ; deepCrawl ; exists ; 2017 ; Breathe Volume 13 ; 13 ; >
     au < ers.ClockssERSDrupalPlugin ; deepCrawl ; exists ; 2018 ; Breathe Volume 14 ; 14 ; >
+    au < ers.ClockssERSDrupalPlugin ; expected ; exists ; 2019 ; Breathe Volume 15 ; 15 ; >
 
   }
 
@@ -52,6 +53,7 @@
     au < ers.ClockssERSDrupalPlugin ; finished ; crawling ; 2016 ; ERJ Open Research Volume 2 ; 2 ; reingest1.clockss.org:8082 >
     au < ers.ClockssERSDrupalPlugin ; frozen ; exists ; 2017 ; ERJ Open Research Volume 3 ; 3 ; >
     au < ers.ClockssERSDrupalPlugin ; deepCrawl ; exists ; 2018 ; ERJ Open Research Volume 4 ; 4 ; >
+    au < ers.ClockssERSDrupalPlugin ; expected ; exists ; 2019 ; ERJ Open Research Volume 5 ; 5 ; >
 
   }
 
@@ -124,6 +126,8 @@
       au < ers.ClockssERSDrupalPlugin ; deepCrawl ; exists ; 2017 ; European Respiratory Journal Volume 50 ; 50 ; >
       au < ers.ClockssERSDrupalPlugin ; deepCrawl ; exists ; 2018 ; European Respiratory Journal Volume 51 ; 51 ; >
       au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 2018 ; European Respiratory Journal Volume 52 ; 52 ; >
+      au < ers.ClockssERSDrupalPlugin ; expected ; exists ; 2019 ; European Respiratory Journal Volume 53 ; 53 ; >
+      au < ers.ClockssERSDrupalPlugin ; expected ; exists ; 2019 ; European Respiratory Journal Volume 54 ; 54 ; >
 
     }
 
@@ -153,6 +157,7 @@
     au < ers.ClockssERSDrupalPlugin ; finished ; crawling ; 2016 ; European Respiratory Review Volume 25 ; 25 ; reingest2.clockss.org:8085 >
     au < ers.ClockssERSDrupalPlugin ; deepCrawl ; exists ; 2017 ; European Respiratory Review Volume 26 ; 26 ; >
     au < ers.ClockssERSDrupalPlugin ; deepCrawl ; exists ; 2018 ; European Respiratory Review Volume 27 ; 27 ; >
+    au < ers.ClockssERSDrupalPlugin ; expected ; exists ; 2019 ; European Respiratory Review Volume 28 ; 28 ; >
 
   }
 

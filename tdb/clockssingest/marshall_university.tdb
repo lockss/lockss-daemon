@@ -1,0 +1,33 @@
+{
+
+  publisher <
+    name = Marshall University, Joan C. Edwards School of Medicine ;
+    info[contract] = 2015 ;
+    info[tester] = 5 ;
+    info[poller] = 8
+  >
+  
+  # Do not add any titles with the DigitalCommons/BePress Plugin without Vicky's approval. Document Vicky's approval in PD-36.
+
+  {
+  
+    title <
+      name = Marshall Journal of Medicine ;
+      eissn = 2379-9536 ;
+      issnl = 2379-9536
+    >
+    
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
+    param[base_url] = https://mds.marshall.edu/
+    param[journal_abbr] = mjm
+    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+
+    au < exists ; exists ; 2015 ; Marshall Journal of Medicine Volume 1 ; 1 ; >
+    au < exists ; exists ; 2016 ; Marshall Journal of Medicine Volume 2 ; 2 ; >
+    au < exists ; exists ; 2017 ; Marshall Journal of Medicine Volume 3 ; 3 ; >
+    au < exists ; exists ; 2018 ; Marshall Journal of Medicine Volume 4 ; 4 ; >
+    au < exists ; exists ; 2019 ; Marshall Journal of Medicine Volume 5 ; 5 ; >
+
+  }
+
+}

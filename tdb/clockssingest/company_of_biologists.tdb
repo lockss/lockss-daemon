@@ -29,6 +29,7 @@
     au < biologists.ClockssBiologistsDrupalPlugin ; finished ; crawling ; 2016 ; Biology Open Volume 5 ; 5 ; reingest5.clockss.org:8082 >
     au < biologists.ClockssBiologistsDrupalPlugin ; deepCrawl ; exists ; 2017 ; Biology Open Volume 6 ; 6 ; >
     au < biologists.ClockssBiologistsDrupalPlugin ; deepCrawl ; exists ; 2018 ; Biology Open Volume 7 ; 7 ; >
+    au < biologists.ClockssBiologistsDrupalPlugin ; expected ; exists ; 2019 ; Biology Open Volume 8 ; 8 ; >
 
   }
 
@@ -188,6 +189,7 @@
     au < biologists.ClockssBiologistsDrupalPlugin ; finished ; crawling ; 2016 ; Development Volume 143 ; 143 ; reingest4.clockss.org:8082 >
     au < biologists.ClockssBiologistsDrupalPlugin ; deepCrawl ; exists ; 2017 ; Development Volume 144 ; 144 ; >
     au < biologists.ClockssBiologistsDrupalPlugin ; deepCrawl ; exists ; 2018 ; Development Volume 145 ; 145 ; >
+    au < biologists.ClockssBiologistsDrupalPlugin ; expected ; exists ; 2019 ; Development Volume 146 ; 146 ; >
 
   }
 
@@ -213,6 +215,7 @@
     au < biologists.ClockssBiologistsDrupalPlugin ; finished ; crawling ; 2016 ; Disease Models & Mechanisms Volume 9 ; 9 ; reingest5.clockss.org:8082 >
     au < biologists.ClockssBiologistsDrupalPlugin ; deepCrawl ; exists ; 2017 ; Disease Models & Mechanisms Volume 10 ; 10 ; >
     au < biologists.ClockssBiologistsDrupalPlugin ; deepCrawl ; exists ; 2018 ; Disease Models & Mechanisms Volume 11 ; 11 ; >
+    au < biologists.ClockssBiologistsDrupalPlugin ; expected ; exists ; 2019 ; Disease Models & Mechanisms Volume 12 ; 12 ; >
 
   }
 
@@ -622,6 +625,7 @@
     au < biologists.ClockssBiologistsDrupalPlugin ; finished ; crawling ; 2016 ; Journal of Experimental Biology Volume 219 ; 219 ; reingest2.clockss.org:8085 >
     au < biologists.ClockssBiologistsDrupalPlugin ; deepCrawl ; exists ; 2017 ; Journal of Experimental Biology Volume 220 ; 220 ; >
     au < biologists.ClockssBiologistsDrupalPlugin ; deepCrawl ; exists ; 2018 ; Journal of Experimental Biology Volume 221 ; 221 ; >
+    au < biologists.ClockssBiologistsDrupalPlugin ; expected ; exists ; 2019 ; Journal of Experimental Biology Volume 222 ; 222 ; >
 
   }
 
