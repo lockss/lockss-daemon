@@ -48,7 +48,7 @@ public class ProjectMuse2017ArticleIteratorFactory
   private static final Logger log = Logger.getLogger(ProjectMuse2017ArticleIteratorFactory.class);
   
   protected static final String ROOT_TEMPLATE = "\"%sarticle/\", base_url";
-  protected static final String PATTERN_TEMPLATE = "/article/[0-9]+$";
+  protected static final String PATTERN_TEMPLATE = "/article/[0-9]+(/pdf|/summary)?$";
   
   // various aspects of an article
   //   https://muse.jhu.edu/article/634157
