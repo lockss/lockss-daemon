@@ -18,9 +18,9 @@
 
       attr[journal_id] = 675
 
-        au < exists ; 2016 ; African Arts Volume 49 [2016] ; 11166 >
-        au < exists ; 2017 ; African Arts Volume 50 [2017] ; 12383 >
-        au < exists ; 2018 ; African Arts Volume 51 [2018] ; 13230 >
+        au < testing ; 2016 ; African Arts Volume 49 [2016] ; 11166 >
+        au < testing ; 2017 ; African Arts Volume 50 [2017] ; 12383 >
+        au < testing ; 2018 ; African Arts Volume 51 [2018] ; 13230 >
         au < exists ; 2019 ; African Arts Volume 52 [2019] ; 13928 >
 
     }
@@ -52,8 +52,8 @@
         au < released ; 2014 ; Computer Music Journal Volume 38 [2014] ; 9867 >
         au < released ; 2015 ; Computer Music Journal Volume 39 [2015] ; 10511 >
         au < released ; 2016 ; Computer Music Journal Volume 40 [2016] ; 11132 >
-        au < exists ; 2017 ; Computer Music Journal Volume 41 [2017] ; 12577 >
-        au < exists ; 2018 ; Computer Music Journal Volume 42 [2018] ; 13431 >
+        au < testing ; 2017 ; Computer Music Journal Volume 41 [2017] ; 12577 >
+        au < testing ; 2018 ; Computer Music Journal Volume 42 [2018] ; 13431 >
 
     }
     
@@ -83,7 +83,7 @@
         au < released ; 2015 ; Global Environmental Politics Volume 15 [2015] ; 10323 >
         au < released ; 2016 ; Global Environmental Politics Volume 16 [2016] ; 10934 >
         au < released ; 2017 ; Global Environmental Politics Volume 17 [2017] ; 12364 >
-        au < exists ; 2018 ; Global Environmental Politics Volume 18 [2018] ; 13267 >
+        au < testing ; 2018 ; Global Environmental Politics Volume 18 [2018] ; 13267 >
         au < exists ; 2019 ; Global Environmental Politics Volume 19 [2019] ; 13980 >
 
     }
@@ -171,8 +171,8 @@
         au < released ; 2014-2015 ; International Security Volume 39 [2014-2015] ; 10151 >
         au < released ; 2015-2016 ; International Security Volume 40 [2015-2016] ; 10752 >
         au < released ; 2016-2017 ; International Security Volume 41 [2016-2017] ; 11352 >
-        au < exists ; 2017 ; International Security Volume 42 [2017] ; 12799 >
-        au < exists ; 2018 ; International Security Volume 43 [2018] ; 13643 >
+        au < testing ; 2017 ; International Security Volume 42 [2017] ; 12799 >
+        au < testing ; 2018 ; International Security Volume 43 [2018] ; 13643 >
 
     }
     
@@ -205,8 +205,8 @@
         au < released ; 2014 ; Journal of Cold War Studies Volume 16 [2014] ; 9905 >
         au < released ; 2015 ; Journal of Cold War Studies Volume 17 [2015] ; 10607 >
         au < released ; 2016 ; Journal of Cold War Studies Volume 18 [2016] ; 11053 >
-        au < exists ; 2017 ; Journal of Cold War Studies Volume 19 [2017] ; 12590 >
-        au < exists ; 2018 ; Journal of Cold War Studies Volume 20 [2018] ; 13407 >
+        au < testing ; 2017 ; Journal of Cold War Studies Volume 19 [2017] ; 12590 >
+        au < testing ; 2018 ; Journal of Cold War Studies Volume 20 [2018] ; 13407 >
 
     }
     
@@ -239,8 +239,8 @@
         au < released ; 2014-2015 ; Journal of Interdisciplinary History Volume 45 [2014-2015] ; 9927 >
         au < released ; 2015-2016 ; Journal of Interdisciplinary History Volume 46 [2015-2016] ; 10616 >
         au < released ; 2016-2017 ; Journal of Interdisciplinary History Volume 47 [2016-2017] ; 11186 >
-        au < exists ; 2017-2018 ; Journal of Interdisciplinary History Volume 48 [2017-2018] ; 12679 >
-        au < exists ; 2018-2019 ; Journal of Interdisciplinary History Volume 49 [2018-2019] ; 13544 >
+        au < testing ; 2017-2018 ; Journal of Interdisciplinary History Volume 48 [2017-2018] ; 12679 >
+        au < manifest ; 2018-2019 ; Journal of Interdisciplinary History Volume 49 [2018-2019] ; 13544 >
 
     }
     
@@ -305,7 +305,7 @@
         au < released ; 2015 ; Leonardo Volume 48 [2015] ; 10310 >
         au < released ; 2016 ; Leonardo Volume 49 [2016] ; 10930 >
         au < released ; 2017 ; Leonardo Volume 50 [2017] ; 12351 >
-        au < exists ; 2018 ; Leonardo Volume 51 [2018] ; 13231 >
+        au < testing ; 2018 ; Leonardo Volume 51 [2018] ; 13231 >
         au < exists ; 2019 ; Leonardo Volume 52 [2019] ; 13934 >
 
     }
@@ -347,8 +347,8 @@
         au < released ; 2014 ; Leonardo Music Journal Volume 24 [2014] ; 10237 >
         au < released ; 2015 ; Leonardo Music Journal Volume 25 [2015] ; 10870 >
         au < released ; 2016 ; Leonardo Music Journal Volume 26 [2016] ; 12228 >
-        au < exists ; 2017 ; Leonardo Music Journal Volume 27 [2017] ; 13045 >
-        au < exists ; 2018 ; Leonardo Music Journal Volume 28 [2018] ; 13806 >
+        au < testing ; 2017 ; Leonardo Music Journal Volume 27 [2017] ; 13045 >
+        au < testing ; 2018 ; Leonardo Music Journal Volume 28 [2018] ; 13806 >
 
     }
     
@@ -381,7 +381,7 @@
         au < released ; 2015 ; Linguistic Inquiry Volume 46 [2015] ; 10309 >
         au < released ; 2016 ; Linguistic Inquiry Volume 47 [2016] ; 10924 >
         au < released ; 2017 ; Linguistic Inquiry Volume 48 [2017] ; 12341 >
-        au < exists ; 2018 ; Linguistic Inquiry Volume 49 [2018] ; 13148 >
+        au < testing ; 2018 ; Linguistic Inquiry Volume 49 [2018] ; 13148 >
         au < exists ; 2019 ; Linguistic Inquiry Volume 50 [2019] ; 13880 >
 
     }
@@ -436,7 +436,7 @@
         au < released ; 2015 ; PAJ: A Journal of Performance and Art Volume 37 [2015 (109-111)] ; 10264 >
         au < released ; 2016 ; PAJ: A Journal of Performance and Art Volume 38 [2016 (112-114)] ; 10923 >
         au < released ; 2017 ; PAJ: A Journal of Performance and Art Volume 39 [2017 (115-117)] ; 12335 >
-        au < exists ; 2018 ; PAJ: A Journal of Performance and Art Volume 40 [2018 (118-120)] ; 13180 >
+        au < testing ; 2018 ; PAJ: A Journal of Performance and Art Volume 40 [2018 (118-120)] ; 13180 >
         au < exists ; 2019 ; PAJ: A Journal of Performance and Art Volume 41 [2019 (121-123)] ; 13889 >
 
     }
@@ -472,7 +472,7 @@
         au < released ; 2015 ; Perspectives on Science Volume 23 [2015] ; 10403 >
         au < released ; 2016 ; Perspectives on Science Volume 24 [2016] ; 10879 >
         au < released ; 2017 ; Perspectives on Science Volume 25 [2017] ; 12361 >
-        au < exists ; 2018 ; Perspectives on Science Volume 26 [2018] ; 13232 >
+        au < testing ; 2018 ; Perspectives on Science Volume 26 [2018] ; 13232 >
         au < exists ; 2019 ; Perspectives on Science Volume 27 [2019] ; 13929 >
 
     }
@@ -507,7 +507,7 @@
         au < released ; 2015 ; TDR: The Drama Review Volume 59 [2015 (225-228)] ; 10430 >
         au < released ; 2016 ; TDR: The Drama Review Volume 60 [2016 (229-232)] ; 11021 >
         au < released ; 2017 ; TDR: The Drama Review Volume 61 [2017 (233-236)] ; 12434 >
-        au < exists ; 2018 ; TDR: The Drama Review Volume 62 [2018 (237-240)] ; 13244 >
+        au < testing ; 2018 ; TDR: The Drama Review Volume 62 [2018 (237-240)] ; 13244 >
         au < exists ; 2019 ; TDR: The Drama Review Volume 63 [2019 (241-244)] ; 13970 >
 
     }
