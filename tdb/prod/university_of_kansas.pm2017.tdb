@@ -17,8 +17,8 @@
       attr[journal_id] = 571
       #publisher_id:177, Department of Theatre, University of Kansas
 
-        au < manifest ; 2007-2008 ; Journal of Dramatic Theory and Criticism Volume 22 [2007-2008] ; 9291 >
-        au < manifest ; 2008-2009 ; Journal of Dramatic Theory and Criticism Volume 23 [2008-2009] ; 9292 >
+        au < testing ; 2007-2008 ; Journal of Dramatic Theory and Criticism Volume 22 [2007-2008] ; 9291 >
+        au < testing ; 2008-2009 ; Journal of Dramatic Theory and Criticism Volume 23 [2008-2009] ; 9292 >
         au < released ; 2009-2010 ; Journal of Dramatic Theory and Criticism Volume 24 [2009-2010] ; 9293 >
         au < released ; 2010-2011 ; Journal of Dramatic Theory and Criticism Volume 25 [2010-2011] ; 9294 >
         au < released ; 2011-2012 ; Journal of Dramatic Theory and Criticism Volume 26 [2011-2012] ; 7905 >
@@ -27,8 +27,8 @@
         au < released ; 2014-2015 ; Journal of Dramatic Theory and Criticism Volume 29 [2014-2015] ; 10442 >
         au < released ; 2015-2016 ; Journal of Dramatic Theory and Criticism Volume 30 [2015-2016] ; 10906 >
         au < released ; 2016-2017 ; Journal of Dramatic Theory and Criticism Volume 31 [2016-2017] ; 12408 >
-        au < exists ; 2017-2018 ; Journal of Dramatic Theory and Criticism Volume 32 [2017-2018] ; 13145 >
-        au < exists ; 2018-2019 ; Journal of Dramatic Theory and Criticism Volume 33 [2018-2019] ; 13866 >
+        au < testing ; 2017-2018 ; Journal of Dramatic Theory and Criticism Volume 32 [2017-2018] ; 13145 >
+        au < manifest ; 2018-2019 ; Journal of Dramatic Theory and Criticism Volume 33 [2018-2019] ; 13866 >
 
     }
 
@@ -53,8 +53,8 @@
         au < released ; 2014-2015 ; Latin American Theatre Review Volume 48 [2014-2015] ; 10634 >
         au < released ; 2015-2016 ; Latin American Theatre Review Volume 49 [2015-2016] ; 11365 >
         au < released ; 2016-2017 ; Latin American Theatre Review Volume 50 [2016-2017] ; 12402 >
-        au < exists ; 2017-2018 ; Latin American Theatre Review Volume 51 [2017-2018] ; 13636 >
-        au < exists ; 2018 ; Latin American Theatre Review Volume 52 [2018] ; 13837 >
+        au < testing ; 2017-2018 ; Latin American Theatre Review Volume 51 [2017-2018] ; 13636 >
+        au < testing ; 2018 ; Latin American Theatre Review Volume 52 [2018] ; 13837 >
 
     }
 
