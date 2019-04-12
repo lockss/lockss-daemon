@@ -66,7 +66,12 @@ public class ProjectMuse2017ArticleIteratorFactory
   //   https://muse.jhu.edu/article/634155/image/fig01?format=thumb
   
   protected static final Pattern HTML_PATTERN = Pattern.compile(
-      "([0-9]+)$", Pattern.CASE_INSENSITIVE);
+	      "([0-9]+)$", Pattern.CASE_INSENSITIVE);
+  //4/12/19 - seeing some articles that only have /summary and /pdf
+  protected static final Pattern SUMMARY_PATTERN = Pattern.compile(
+	      "([0-9]+)/summary$", Pattern.CASE_INSENSITIVE);
+  protected static final Pattern PDF_PATTERN = Pattern.compile(
+	      "([0-9]+)/pdf$", Pattern.CASE_INSENSITIVE);
   
   // how to change from one form (aspect) of article to another
   protected static final String HTML_REPLACEMENT = "$1";
@@ -90,11 +95,11 @@ public class ProjectMuse2017ArticleIteratorFactory
         HTML_PATTERN, HTML_REPLACEMENT,
         ArticleFiles.ROLE_FULL_TEXT_HTML);
     
-    builder.addAspect(
+    builder.addAspect(SUMMARY_PATTERN,
         SUMM_REPLACEMENT,
         ArticleFiles.ROLE_ABSTRACT);
     
-    builder.addAspect(
+    builder.addAspect(PDF_PATTERN,
         PDF_REPLACEMENT,
         ArticleFiles.ROLE_FULL_TEXT_PDF);
     
