@@ -6,7 +6,7 @@
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
-  #
+  #publisher_id:138
 
     {
     title <
@@ -26,7 +26,7 @@
         au < released ; 2015 ; Journal of Biblical Literature Volume 134 [2015] ; 10592 >
         au < released ; 2016 ; Journal of Biblical Literature Volume 135 [2016] ; 11087 >
         au < released ; 2017 ; Journal of Biblical Literature Volume 136 [2017] ; 12508 >
-        au < exists ; 2018 ; Journal of Biblical Literature Volume 137 [2018] ; 13389 >
+        au < testing ; 2018 ; Journal of Biblical Literature Volume 137 [2018] ; 13389 >
 
     }
 
