@@ -79,8 +79,8 @@
         au < released ; 2014-2015 ; Quaestiones Disputatae Volume 5 [2014-2015] ; 10539 >
         au < released ; 2015-2016 ; Quaestiones Disputatae Volume 6 [2015-2016] ; 10768 >
         au < released ; 2016-2017 ; Quaestiones Disputatae Volume 7 [2016-2017] ; 12462 >
-        au < testing ; 2017-2018 ; Quaestiones Disputatae Volume 8 [2017-2018] ; 13029 >
-        au < testing ; 2018-2019 ; Quaestiones Disputatae Volume 9 [2018-2019] ; 13997 >
+        au < ready ; 2017-2018 ; Quaestiones Disputatae Volume 8 [2017-2018] ; 13029 >
+        au < ready ; 2018-2019 ; Quaestiones Disputatae Volume 9 [2018-2019] ; 13997 >
 
     }
 
@@ -190,7 +190,7 @@
 
       attr[journal_id] = 686
 
-        au < testing ; 2016 ; Nova et vetera Volume 14 [2016] ; 10947 >
+        au < ready ; 2016 ; Nova et vetera Volume 14 [2016] ; 10947 >
         au < ready ; 2017 ; Nova et vetera Volume 15 [2017] ; 12538 >
         au < ready ; 2018 ; Nova et vetera Volume 16 [2018] ; 13229 >
 

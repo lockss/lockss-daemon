@@ -53,6 +53,14 @@ public abstract class BasePlugin
     implements Plugin {
   static Logger log = Logger.getLogger("BasePlugin");
 
+  /** If true, AU associations with tdb entries will be updated even if the
+   * entire tdb is empty.  This is usually a result of a configuration
+   * error so it's better to ignore the empty tdb and keep using the last
+   * known entry. */
+  public static final String PARAM_INSTALL_EMPTY_TDB =
+    Configuration.PREFIX + "installEmptyTdb.";
+  public static final boolean DEFAULT_INSTALL_EMPTY_TDB = false;
+
   // Below org.lockss.title.xxx.
   static final String TITLE_PARAM_TITLE = "title";
   static final String TITLE_PARAM_JOURNAL = "journalTitle";
@@ -222,11 +230,15 @@ public abstract class BasePlugin
   protected void setConfig(Configuration newConfig,
 			   Configuration prevConfig,
 			   Configuration.Differences diffs) {
-    // PJG: should we get this from the changedKeys?
     if (diffs.containsTdbPluginId(getPluginId())) {
       Tdb tdb = newConfig.getTdb();
-      if (tdb != null) {
+      if (tdb != null && !tdb.isEmpty()) {
 	setTitleConfigs(tdb);
+      } else if (newConfig.getBoolean(PARAM_INSTALL_EMPTY_TDB,
+				      DEFAULT_INSTALL_EMPTY_TDB)) {
+	// Don't remove existing tdb associationg just because we
+	// loaded an empty tdb (unless configured to do so).
+	setTitleConfigs(new Tdb());
       }
     }
   }
@@ -269,10 +281,8 @@ public abstract class BasePlugin
       }
     }
     //TODO: decide on how to support plug-ins which do not use the title registry
-    if (!titleMap.isEmpty()) {
-      setTitleConfigMap(titleMap, auidMap);
-      notifyAusTitleDbChanged();
-    }
+    setTitleConfigMap(titleMap, auidMap);
+    notifyAusTitleDbChanged();
   }
 
   protected void setTitleConfigMap(Map<String, TitleConfig> titleMap,
