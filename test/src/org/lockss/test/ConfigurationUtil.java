@@ -287,9 +287,9 @@ public class ConfigurationUtil {
    * @param url URL of a config file.
    */
   public static boolean setTdb(Tdb tdb) {
-    Configuration config = ConfigManager.newConfiguration();
+    Configuration config = CurrentConfig.getCurrentConfig().copy();
     config.setTdb(tdb);
-    return installConfig(merge(CurrentConfig.getCurrentConfig(), config));
+    return installConfig(config);
   }
 
   /** Install the supplied Configuration as the current configuration.
