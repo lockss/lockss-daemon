@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>14</string>
+    <string>15</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -38,7 +38,8 @@
   </entry>
   <entry>
     <string>au_start_url</string>
-<!--  this now redirects to version without /publications/ but will still work -->    
+<!--  this now redirects to version without /publications/ but will still work -->
+<!--  and now it redirects to a version with /publications/journals but will still work -->    
     <string>"%spublications/%s", base_url, journal_id</string>
   </entry>
   <entry>
@@ -89,7 +90,7 @@
       <string>1,"^https?://%s%spublications/(journals/)?%s(\?page=[0-9]+)?$", url_host(base_url), url_path(base_url), journal_id</string>
       <string>1,"^https?://%s%s[?]p=[0-9]+$", url_host(base_url), url_path(base_url)</string>
       <string>1,"^https?://%s%snode/[0-9]+(/download)?$", url_host(base_url), url_path(base_url)</string>
-      <string>1,"^https?://%s%spublications/(journals/)?%s-(issue|volume|no-[1-9]|winter)-%s(-[12ni][^/]*?)?(/download)?$", url_host(base_url), url_path(base_url), journal_id, volume_name</string>
+      <string>1,"^https?://%s%spublications/(journals/(%s/)?)?%s-(issue|volume|no-[1-9]|winter)-%s(-[12ni][^/]*?)?(/download)?$", url_host(base_url), url_path(base_url), journal_id, journal_id, volume_name</string>
       <string>1,"^https?://press-files\.anu\.edu\.au/downloads/press/[^/]+/(html|media|pdf)/", base_url</string>
     </list>
   </entry>
