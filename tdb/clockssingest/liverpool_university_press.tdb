@@ -527,9 +527,8 @@
     param[journal_id] = hgr
 
     au < finished ; finished ; 2015 ; Hunter Gatherer Research Volume 1 ; 1 ; http://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2016 ; Hunter Gatherer Research Volume 2 ; 2 ; http://online.liverpooluniversitypress.co.uk/ ; >
-    au < frozen ; exists ; 2017-2018 ; Hunter Gatherer Research Volume 3 ; 3 ; http://online.liverpooluniversitypress.co.uk/ ; >
-    au < expected ; exists ; 2018-2019 ; Hunter Gatherer Research Volume 4 ; 4 ; http://online.liverpooluniversitypress.co.uk/ ; >
+    au < frozen ; exists ; 2016-2017 ; Hunter Gatherer Research Volume 2 ; 2 ; http://online.liverpooluniversitypress.co.uk/ ; >
+    au < ingNotReady ; exists ; 2017-2019 ; Hunter Gatherer Research Volume 3 ; 3 ; http://online.liverpooluniversitypress.co.uk/ ; > #issue 3, 4 not online
 
   }
 
