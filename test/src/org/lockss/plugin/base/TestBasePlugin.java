@@ -49,6 +49,7 @@ import org.lockss.util.*;
  *
  */
 public class TestBasePlugin extends LockssTestCase {
+  static Logger log = Logger.getLogger("TestBasePlugin");
 
   static final ConfigParamDescr PD_VOL = ConfigParamDescr.VOLUME_NUMBER;
   static final ConfigParamDescr PD_YEAR = ConfigParamDescr.YEAR;
@@ -234,6 +235,38 @@ public class TestBasePlugin extends LockssTestCase {
     tc = mbp.getTitleConfig(new String("Howl"));
     assertEquals("av111", tc.getAttributes().get("attr1"));
     assertEquals("av222", tc.getAttributes().get("attr2"));
+
+    // install an empty TDB
+    ConfigurationUtil.setTdb(new Tdb());
+
+    assertSameElements(ListUtil.list("It's", "Howl"),
+		       mbp.getSupportedTitles());
+    tc = mbp.getTitleConfig(new String("It's"));
+    assertEquals("It's", tc.getDisplayName());
+    assertEquals("jtitle", tc.getJournalTitle());
+    assertEquals("4", tc.getPluginVersion());
+    assertEquals(plugName, tc.getPluginName());
+
+    epa1 = new ConfigParamAssignment(PD_YEAR, "year_1");
+    epa2 = new ConfigParamAssignment(PD_VOL, "vol_1");
+    tcParams = tc.getParams();
+    assertEquals(SetUtil.set(epa1, epa2), SetUtil.theSet(tcParams));
+    assertEmpty(tc.getAttributes());
+
+    tc = mbp.getTitleConfig(new String("Howl"));
+    assertEquals("av111", tc.getAttributes().get("attr1"));
+    assertEquals("av222", tc.getAttributes().get("attr2"));
+
+    // install the original TDB
+    ConfigurationUtil.setTdb(tdb);
+    assertSameElements(ListUtil.list("It's", "Howl"),
+		       mbp.getSupportedTitles());
+    ConfigurationUtil.addFromArgs(BasePlugin.PARAM_INSTALL_EMPTY_TDB, "true");
+    // install an empty TDB again, this time the plugin should install an
+    // empty title map
+    ConfigurationUtil.setTdb(new Tdb());
+
+    assertEmpty(mbp.getSupportedTitles());
   }
 
   public void testGetMimeTypeInfo() throws IOException {
