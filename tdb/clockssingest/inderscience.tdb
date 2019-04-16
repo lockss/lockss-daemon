@@ -1721,7 +1721,7 @@
       au < doNotProcess ; exists ; 2007-2008 ; International Journal of Chinese Culture and Management Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; exists ; 2009 ; International Journal of Chinese Culture and Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2010-2015 ; International Journal of Chinese Culture and Management Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2017-2019 ; International Journal of Chinese Culture and Management Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; > #issue2, 3, 4 not online
+      au < testing ; exists ; 2017-2019 ; International Journal of Chinese Culture and Management Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; > #issue2, 3, 4 not online
 
     }
 
@@ -5658,7 +5658,7 @@
       param[journal_id] = ijmissp
 
       au < finished ; finished ; 2013-2016 ; International Journal of Machine Intelligence and Sensory Signal Processing Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 2017-2019 ; International Journal of Machine Intelligence and Sensory Signal Processing Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2017-2019 ; International Journal of Machine Intelligence and Sensory Signal Processing Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -6106,7 +6106,7 @@
 
       au < doNotProcess ; doNotProcess ; 2009-2010 ; International Journal of Materials Engineering Innovation Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Materials Engineering Innovation Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Materials Engineering Innovation Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; > 
+      au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Materials Engineering Innovation Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Materials Engineering Innovation Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2014 ; International Journal of Materials Engineering Innovation Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; International Journal of Materials Engineering Innovation Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
@@ -7072,7 +7072,7 @@
         issnl = 1757-5648
       >
 
-      param[journal_id] = ijpee 
+      param[journal_id] = ijpee
 
       au < doNotProcess ; doNotProcess ; 2009-2010 ; International Journal of Pluralism and Economics Education Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Pluralism and Economics Education Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
@@ -7630,7 +7630,7 @@
 
       param[journal_id] = ijris
 
-      comment[vol5] = notReady multiple charsets on page. http://inderscience.metapress.com/content/e43jr3v2t0m6724t/fulltext.html 
+      comment[vol5] = notReady multiple charsets on page. http://inderscience.metapress.com/content/e43jr3v2t0m6724t/fulltext.html
 
       au < doNotProcess ; exists ; 2009 ; International Journal of Reasoning-based Intelligent Systems Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Reasoning-based Intelligent Systems Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
@@ -8190,7 +8190,7 @@
       param[journal_id] = ijsccps
 
       au < finished ; crawling ; 2011-2016 ; International Journal of Social Computing and Cyber-Physical Systems Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 2017-2019 ; International Journal of Social Computing and Cyber-Physical Systems Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
+      au < testing ; exists ; 2017-2019 ; International Journal of Social Computing and Cyber-Physical Systems Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
 
     }
 
