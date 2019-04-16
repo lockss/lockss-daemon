@@ -806,7 +806,6 @@
       au < doNotProcess ; 2013 ; International Journal of Auditing Technology Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
       au < released ; 2014-2015 ; International Journal of Auditing Technology Volume 2 ; 2 ; http://www.inderscienceonline.com/ >
       au < released ; 2016-2017 ; International Journal of Auditing Technology Volume 3 ; 3 ; http://www.inderscienceonline.com/ >
-      au < expected ; 2018 ; International Journal of Auditing Technology Volume 4 ; 4 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -1155,7 +1154,6 @@
       au < doNotProcess ; 2010 ; International Journal of Biomedical Nanoscience and Nanotechnology Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
       au < doNotProcess ; 2011-2012 ; International Journal of Biomedical Nanoscience and Nanotechnology Volume 2 ; 2 ; https://www.inderscienceonline.com/ >
       au < released ; 2013-2017 ; International Journal of Biomedical Nanoscience and Nanotechnology Volume 3 ; 3 ; http://www.inderscienceonline.com/ >
-      au < expected ; 2018-2019 ; International Journal of Biomedical Nanoscience and Nanotechnology Volume 4 ; 4 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -2736,7 +2734,7 @@
 
       param[journal_id] = ijebank
 
-      au < doNotProcess ; 2008 ; International Journal of Electronic Banking Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
+      au < exists ; 2008-2018 ; International Journal of Electronic Banking Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -2827,7 +2825,7 @@
       au < doNotProcess ; 2012 ; International Journal of Electronic Finance Volume 6 ; 6 ; https://www.inderscienceonline.com/ >
       au < manifest ; 2013 ; International Journal of Electronic Finance Volume 7 ; 7 ; https://www.inderscienceonline.com/ >
       au < released ; 2014-2015 ; International Journal of Electronic Finance Volume 8 ; 8 ; http://www.inderscienceonline.com/ >
-      au < released ; 2016-2019 ; International Journal of Electronic Finance Volume 9 ; 9 ; https://www.inderscienceonline.com/ > #issue 3 & 4 not online yet
+      au < released ; 2016-2019 ; International Journal of Electronic Finance Volume 9 ; 9 ; https://www.inderscienceonline.com/ > #issue 4 not online yet
 
     }
 
@@ -2938,7 +2936,6 @@
       param[journal_id] = ijetrade
       # title is not yet published on 9/20/2013
 
-      au < expected ; 2018 ; International Journal of Electronic Trade Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -3116,7 +3113,6 @@
       param[journal_id] = ijesii
       # title is not yet published on 9/20/2013
 
-      au < expected ; 2018 ; International Journal of Enterprise Systems Integration and Interoperability Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -3132,7 +3128,6 @@
       param[journal_id] = ijenttm
       # title is not yet published on 9/20/2013
 
-      au < expected ; 2018 ; International Journal of Entertainment Technology and Management Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -4010,7 +4005,7 @@
       au < released ; 2012-2014 ; International Journal of Happiness and Development Volume 1 ; 1 ; http://www.inderscienceonline.com/ >
       au < released ; 2015 ; International Journal of Happiness and Development Volume 2 ; 2 ; http://www.inderscienceonline.com/ >
       au < released ; 2016-2017 ; International Journal of Happiness and Development Volume 3 ; 3 ; http://www.inderscienceonline.com/ >
-      au < manifest ; 2018-2019 ; International Journal of Happiness and Development Volume 4 ; 4 ; https://www.inderscienceonline.com/ >
+      au < manifest ; 2018 ; International Journal of Happiness and Development Volume 4 ; 4 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -4902,7 +4897,7 @@
       au < doNotProcess ; 2010-2011 ; International Journal of Intercultural Information Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ >
       au < doNotProcess ; 2012-2013 ; International Journal of Intercultural Information Management Volume 3 ; 3 ; https://www.inderscienceonline.com/ >
       au < released ; 2014 ; International Journal of Intercultural Information Management Volume 4 ; 4 ; http://www.inderscienceonline.com/ >
-      au < released ; 2015 ; International Journal of Intercultural Information Management Volume 5 ; 5 ; http://www.inderscienceonline.com/ >
+      au < released ; 2015 ; International Journal of Intercultural Information Management Volume 5 ; 5 ; http://www.inderscienceonline.com/ > #issue 3,4 not online
 
     }
 
@@ -4943,7 +4938,7 @@
       au < doNotProcess ; 2009-2010 ; International Journal of Internet Manufacturing and Services Volume 2 ; 2 ; https://www.inderscienceonline.com/ >
       au < released ; 2011-2014 ; International Journal of Internet Manufacturing and Services Volume 3 ; 3 ; http://www.inderscienceonline.com/ >
       au < released ; 2015-2017 ; International Journal of Internet Manufacturing and Services Volume 4 ; 4 ; http://www.inderscienceonline.com/ > #volume 4 issue 3 & 4 not online yet
-      au < manifest ; 2018-2019 ; International Journal of Internet Manufacturing and Services Volume 5 ; 5 ; https://www.inderscienceonline.com/ > #volume 5 issue 3 & 5 not online yet
+      au < manifest ; 2018 ; International Journal of Internet Manufacturing and Services Volume 5 ; 5 ; https://www.inderscienceonline.com/ > #volume 5 issue 3 & 5 not online yet
 
     }
 
@@ -5140,7 +5135,7 @@
       au < doNotProcess ; 2012-2013 ; International Journal of Knowledge Engineering and Data Mining Volume 2 ; 2 ; https://www.inderscienceonline.com/ >
       au < released ; 2014-2015 ; International Journal of Knowledge Engineering and Data Mining Volume 3 ; 3 ; http://www.inderscienceonline.com/ >
       au < released ; 2016-2017 ; International Journal of Knowledge Engineering and Data Mining Volume 4 ; 4 ; https://www.inderscienceonline.com/ >
-      au < manifest ; 2018-2019 ; International Journal of Knowledge Engineering and Data Mining Volume 5 ; 5 ; https://www.inderscienceonline.com/ >
+      au < manifest ; 2018 ; International Journal of Knowledge Engineering and Data Mining Volume 5 ; 5 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -5309,7 +5304,6 @@
 
       param[journal_id] = ijlid
 
-      au < expected ; 2018 ; International Journal of Legal Information Design Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -5628,6 +5622,7 @@
       param[journal_id] = ijmd
 
       au < released ; 2011-2016 ; International Journal of Management Development Volume 1 ; 1 ; http://www.inderscienceonline.com/ >
+      au < exists ; 2018-2020 ; International Journal of Management Development Volume 2 ; 2 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -6385,7 +6380,7 @@
 
       au < doNotProcess ; 2010 ; International Journal of Multimedia Intelligence and Security Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
       au < doNotProcess ; 2011 ; International Journal of Multimedia Intelligence and Security Volume 2 ; 2 ; https://www.inderscienceonline.com/ >
-      au < manifest ; 2013 ; International Journal of Multimedia Intelligence and Security Volume 3 ; 3 ; https://www.inderscienceonline.com/ >
+      au < manifest ; 2013-2019 ; International Journal of Multimedia Intelligence and Security Volume 3 ; 3 ; https://www.inderscienceonline.com/ > #issue 3, 4 not online
 
     }
 
@@ -8169,7 +8164,6 @@
       # title is not yet published on 9/26/2013
       param[journal_id] = ijsrpsd
 
-      au < expected ; 2018 ; International Journal of Sudan Research, Policy and Sustainable Development Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -8247,7 +8241,6 @@
       au < released ; 2015 ; International Journal of Sustainable Development Volume 18 ; 18 ; http://www.inderscienceonline.com/ >
       au < released ; 2016 ; International Journal of Sustainable Development Volume 19 ; 19 ; http://www.inderscienceonline.com/ >
       au < released ; 2017 ; International Journal of Sustainable Development Volume 20 ; 20 ; https://www.inderscienceonline.com/ >
-      au < expected ; 2018 ; International Journal of Sustainable Development Volume 21 ; 21 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -8470,7 +8463,6 @@
       au < doNotProcess ; 2007-2008 ; International Journal of Technoentrepreneurship Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
       au < doNotProcess ; 2009-2011 ; International Journal of Technoentrepreneurship Volume 2 ; 2 ; https://www.inderscienceonline.com/ >
       au < released ; 2015-2017 ; International Journal of Technoentrepreneurship Volume 3 ; 3 ; http://www.inderscienceonline.com/ >
-      au < expected ; 2018-2019 ; International Journal of Technoentrepreneurship Volume 4 ; 4 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -8685,7 +8677,6 @@
       au < released ; 2015 ; International Journal of Technology Marketing Volume 10 ; 10 ; http://www.inderscienceonline.com/ >
       au < released ; 2016 ; International Journal of Technology Marketing Volume 11 ; 11 ; http://www.inderscienceonline.com/ >
       au < released ; 2017 ; International Journal of Technology Marketing Volume 12 ; 12 ; https://www.inderscienceonline.com/ >
-      au < expected ; 2018 ; International Journal of Technology Marketing Volume 13 ; 13 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -8702,8 +8693,7 @@
 
       au < released ; 2012-2014 ; International Journal of Technology Policy and Law Volume 1 ; 1 ; http://www.inderscienceonline.com/ >
       au < released ; 2015-2016 ; International Journal of Technology Policy and Law Volume 2 ; 2 ; http://www.inderscienceonline.com/ >
-      au < released ; 2017 ; International Journal of Technology Policy and Law Volume 3 ; 3 ; https://www.inderscienceonline.com/ >
-      au < expected ; 2018 ; International Journal of Technology Policy and Law Volume 4 ; 4 ; https://www.inderscienceonline.com/ >
+      au < released ; 2017 ; International Journal of Technology Policy and Law Volume 3 ; 3 ; https://www.inderscienceonline.com/ > #issue 2, 3, 4 not online
 
     }
 
@@ -8798,7 +8788,7 @@
 
       au < doNotProcess ; 2009-2010 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
       au < released ; 2011-2013 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 2 ; 2 ; http://www.inderscienceonline.com/ >
-      au < released ; 2014 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 3 ; 3 ; http://www.inderscienceonline.com/ >
+      au < released ; 2014-2018 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 3 ; 3 ; http://www.inderscienceonline.com/ > #issue 3, 4 not online
 
     }
 
@@ -8904,8 +8894,7 @@
       au < doNotProcess ; 2013 ; International Journal of Trust Management in Computing and Communications Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
       au < released ; 2014 ; International Journal of Trust Management in Computing and Communications Volume 2 ; 2 ; http://www.inderscienceonline.com/ >
       au < released ; 2015-2016 ; International Journal of Trust Management in Computing and Communications Volume 3 ; 3 ; http://www.inderscienceonline.com/ >
-      au < released ; 2017 ; International Journal of Trust Management in Computing and Communications Volume 4 ; 4 ; https://www.inderscienceonline.com/ >
-      au < expected ; 2018 ; International Journal of Trust Management in Computing and Communications Volume 5 ; 5 ; https://www.inderscienceonline.com/ >
+      au < released ; 2017-2018 ; International Journal of Trust Management in Computing and Communications Volume 4 ; 4 ; https://www.inderscienceonline.com/ > #issue 3,4 not online
 
     }
 
@@ -9615,7 +9604,7 @@
       au < manifest ; 2013 ; World Review of Intermodal Transportation Research Volume 4 ; 4 ; https://www.inderscienceonline.com/ >
       au < released ; 2014-2015 ; World Review of Intermodal Transportation Research Volume 5 ; 5 ; http://www.inderscienceonline.com/ >
       au < released ; 2016-2017 ; World Review of Intermodal Transportation Research Volume 6 ; 6 ; https://www.inderscienceonline.com/ >
-      au < manifest ; 2018-2019 ; World Review of Intermodal Transportation Research Volume 7 ; 7 ; https://www.inderscienceonline.com/ >
+      au < manifest ; 2018 ; World Review of Intermodal Transportation Research Volume 7 ; 7 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -9674,7 +9663,7 @@
 
       au < released ; 2013-2014 ; Asian Journal of Management Science and Applications Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
       au < released ; 2015-2016 ; Asian Journal of Management Science and Applications Volume 2 ; 2 ; https://www.inderscienceonline.com/ >
-      au < manifest ; 2017-2019 ; Asian Journal of Management Science and Applications Volume 3 ; 3 ; https://www.inderscienceonline.com/ > #issue 4 not online
+      au < manifest ; 2017-2018 ; Asian Journal of Management Science and Applications Volume 3 ; 3 ; https://www.inderscienceonline.com/ >
 
   }
 
@@ -9905,7 +9894,8 @@
       param[journal_id] = ijscim
 
       au < released ; 2015-2016 ; International Journal of Supply Chain and Inventory Management Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
-      au < manifest ; 2017-2019 ; International Journal of Supply Chain and Inventory Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ > #issue 3, 4 not online
+      au < manifest ; 2017 ; International Journal of Supply Chain and Inventory Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ >
+      au < manifest ; 2018 ; International Journal of Supply Chain and Inventory Management Volume 3 ; 3 ; https://www.inderscienceonline.com/ > #issue 2 not online
 
   }
 
@@ -10052,7 +10042,7 @@
 
       param[journal_id] = ijsmarttl
 
-      au < released ; 2016-2019 ; International Journal of Smart Technology and Learning Volume 1 ; 1 ; https://www.inderscienceonline.com/ > #issue 2, 3 and 4 not online
+      au < released ; 2016-2019 ; International Journal of Smart Technology and Learning Volume 1 ; 1 ; https://www.inderscienceonline.com/ > #issue 3 and 4 not online
 
   }
 
