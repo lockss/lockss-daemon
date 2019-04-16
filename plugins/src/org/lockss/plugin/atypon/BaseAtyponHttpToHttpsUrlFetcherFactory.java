@@ -32,6 +32,9 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.atypon;
 
+
+import java.net.MalformedURLException;
+
 import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.plugin.UrlFetcher;
 import org.lockss.plugin.UrlFetcherFactory;
@@ -39,6 +42,7 @@ import org.lockss.plugin.base.HttpToHttpsUrlFetcher;
 import org.lockss.util.*;
 
   public class BaseAtyponHttpToHttpsUrlFetcherFactory implements UrlFetcherFactory {
+	  private static final Logger log = Logger.getLogger(BaseAtyponHttpToHttpsUrlFetcherFactory.class);
 
   @Override
   public UrlFetcher createUrlFetcher(CrawlerFacade crawlFacade, String url) {
@@ -77,7 +81,44 @@ import org.lockss.util.*;
           && (fetched.equals(normalized) ||
               fetched.equals(normalized.replace("%2F","/")));
     }
+    
+    /*
+     * In early 2019 we noticed that Atypon had added new functionality where if the referer was a different host, it 
+     * redirected to the "full text" version of the article, even when the url was for doi/abs . 
+     * when
+     * 	http abstract --> redirected to https abstract with the referer from an original http 
+     * it was identified as "a different site" by their algorithm and caused them to redirect to full text, which was
+     * sometimes (Emerald books, for example) PDF.  So we were getting and storing PDF content at doi/abs and not getting
+     * any meta tags or bibliographic information.
+     * This function overrides the default and checks for the above scenario. When it happens, it
+     * makes the referer the https equivalent of what it was.
+     * 
+     */
+    
+    @Override
+    protected void addPluginRequestHeaders() {
+    	super.addPluginRequestHeaders();
+    	if ((reqProps != null) && (reqProps.getProperty(Constants.HTTP_REFERER) != null) ){
+    		String ref = reqProps.getProperty(Constants.HTTP_REFERER);
+    		if (origUrl != null && UrlUtil.isHttpUrl(origUrl) &&
+    				fetchUrl != null && UrlUtil.isHttpsUrl(fetchUrl) &&
+    				UrlUtil.isHttpUrl(ref) ) {
+    			Boolean makeChange = false;
+    			try {
+    				makeChange = (UrlUtil.getHost(ref).equals(UrlUtil.getHost(fetchUrl)));
+    			} catch (MalformedURLException e) {
+    				//referer wasn't a valid url - no need to change it
+    				log.debug("referer URL was malformed: " + ref, e);
+    			}
+    			if (makeChange) {
+    				//actually the same host, make the protocol match to avoid "different host" behavior
+    				log.debug3("changing referer protocol to match redirected https because host otherwise the same");
+    				reqProps.setProperty(Constants.HTTP_REFERER, ref.replace("http:", "https:"));
+    				log.debug3("orig: " + origUrl + ", f: " + fetchUrl + ", new referer: " + reqProps.getProperty(Constants.HTTP_REFERER));
+    			}
+    		}
+    	}
+    }
   }
 
-  
 }

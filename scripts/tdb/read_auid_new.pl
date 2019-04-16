@@ -178,6 +178,7 @@ while (my $line = <>) {
             my $man_contents = $resp->content;
             # printf("%s\n",$man_contents);
             if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
               $result = "Redirected";
             } elsif (defined($man_contents) && (($man_contents =~ m/\/cgi\/reprint\/$param{volume_name}\//) || ($man_contents =~ m/$base_url_short" lockss-probe/))) {
                 $result = "CGI_probe_link";
@@ -233,6 +234,7 @@ while (my $line = <>) {
         if ($resp->is_success) {
             my $man_contents = $resp->content;
             if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
               $result = "Redirected";
             } elsif (defined($man_contents) && (($man_contents =~ m/\/cgi\/reprint\/$param{volume_name}\//) || ($man_contents =~ m/$base_url_short" lockss-probe/))) {
                 $result = "CGI_probe_link";

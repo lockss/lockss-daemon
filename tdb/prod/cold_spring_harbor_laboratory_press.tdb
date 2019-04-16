@@ -377,36 +377,36 @@
       issnl = 1355-8382
     >
 
-    implicit < status ; year ; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
 
     {
 
-      param[base_url] = http://rnajournal.cshlp.org/
+      #param[base_url] = http://rnajournal.cshlp.org/
 
-      au < released ; 1995 ; RNA Volume 1 ; 1 >
-      au < released ; 1996 ; RNA Volume 2 ; 2 >
-      au < released ; 1997 ; RNA Volume 3 ; 3 >
-      au < released ; 1998 ; RNA Volume 4 ; 4 >
-      au < released ; 1999 ; RNA Volume 5 ; 5 >
-      au < released ; 2000 ; RNA Volume 6 ; 6 >
-      au < released ; 2001 ; RNA Volume 7 ; 7 >
-      au < released ; 2002 ; RNA Volume 8 ; 8 >
-      au < released ; 2003 ; RNA Volume 9 ; 9 >
-      au < released ; 2004 ; RNA Volume 10 ; 10 >
-      au < released ; 2005 ; RNA Volume 11 ; 11 >
-      au < released ; 2006 ; RNA Volume 12 ; 12 >
-      au < released ; 2007 ; RNA Volume 13 ; 13 >
-      au < released ; 2008 ; RNA Volume 14 ; 14 >
-      au < released ; 2009 ; RNA Volume 15 ; 15 >
-      au < released ; 2010 ; RNA Volume 16 ; 16 >
-      au < released ; 2011 ; RNA Volume 17 ; 17 >
-      au < released ; 2012 ; RNA Volume 18 ; 18 >
-      au < released ; 2013 ; RNA Volume 19 ; 19 >
-      au < released ; 2014 ; RNA Volume 20 ; 20 >
-      au < released ; 2015 ; RNA Volume 21 ; 21 >
-      au < released ; 2016 ; RNA Volume 22 ; 22 >
-      au < released ; 2017 ; RNA Volume 23 ; 23 >
-      au < manifest ; 2018 ; RNA Volume 24 ; 24 >
+      au < released ; 1995 ; RNA Volume 1 ; 1 ; http://rnajournal.cshlp.org/ >
+      au < released ; 1996 ; RNA Volume 2 ; 2 ; http://rnajournal.cshlp.org/ >
+      au < released ; 1997 ; RNA Volume 3 ; 3 ; http://rnajournal.cshlp.org/ >
+      au < released ; 1998 ; RNA Volume 4 ; 4 ; http://rnajournal.cshlp.org/ >
+      au < released ; 1999 ; RNA Volume 5 ; 5 ; http://rnajournal.cshlp.org/ >
+      au < released ; 2000 ; RNA Volume 6 ; 6 ; http://rnajournal.cshlp.org/ >
+      au < released ; 2001 ; RNA Volume 7 ; 7 ; http://rnajournal.cshlp.org/ >
+      au < released ; 2002 ; RNA Volume 8 ; 8 ; http://rnajournal.cshlp.org/ >
+      au < released ; 2003 ; RNA Volume 9 ; 9 ; http://rnajournal.cshlp.org/ >
+      au < released ; 2004 ; RNA Volume 10 ; 10 ; http://rnajournal.cshlp.org/ >
+      au < released ; 2005 ; RNA Volume 11 ; 11 ; http://rnajournal.cshlp.org/ >
+      au < released ; 2006 ; RNA Volume 12 ; 12 ; http://rnajournal.cshlp.org/ >
+      au < released ; 2007 ; RNA Volume 13 ; 13 ; http://rnajournal.cshlp.org/ >
+      au < released ; 2008 ; RNA Volume 14 ; 14 ; http://rnajournal.cshlp.org/ >
+      au < released ; 2009 ; RNA Volume 15 ; 15 ; http://rnajournal.cshlp.org/ >
+      au < released ; 2010 ; RNA Volume 16 ; 16 ; http://rnajournal.cshlp.org/ >
+      au < released ; 2011 ; RNA Volume 17 ; 17 ; http://rnajournal.cshlp.org/ >
+      au < released ; 2012 ; RNA Volume 18 ; 18 ; http://rnajournal.cshlp.org/ >
+      au < released ; 2013 ; RNA Volume 19 ; 19 ; http://rnajournal.cshlp.org/ >
+      au < released ; 2014 ; RNA Volume 20 ; 20 ; http://rnajournal.cshlp.org/ >
+      au < released ; 2015 ; RNA Volume 21 ; 21 ; http://rnajournal.cshlp.org/ >
+      au < released ; 2016 ; RNA Volume 22 ; 22 ; http://rnajournal.cshlp.org/ >
+      au < released ; 2017 ; RNA Volume 23 ; 23 ; http://rnajournal.cshlp.org/ >
+      au < manifest ; 2018 ; RNA Volume 24 ; 24 ; https://rnajournal.cshlp.org/ >
 
     }
 

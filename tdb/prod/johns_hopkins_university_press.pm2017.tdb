@@ -63,7 +63,7 @@
         au < released ; 2014 ; American Imago Volume 71 [2014] ; 9803 >
         au < released ; 2015 ; American Imago Volume 72 [2015] ; 10509 >
         au < released ; 2016 ; American Imago Volume 73 [2016] ; 11127 >
-        au < testing ; 2017 ; American Imago Volume 74 [2017] ; 12589 >
+        au < ready ; 2017 ; American Imago Volume 74 [2017] ; 12589 >
         au < testing ; 2018 ; American Imago Volume 75 [2018] ; 13359 >
 
     }
@@ -322,13 +322,13 @@
         au < testing ; 2009 ; Asian Perspective Volume 33 [2009] ; 13833 >
         au < testing ; 2010 ; Asian Perspective Volume 34 [2010] ; 13832 >
         au < testing ; 2011 ; Asian Perspective Volume 35 [2011] ; 13831 >
-        au < testing ; 2012 ; Asian Perspective Volume 36 [2012] ; 13850 >
-        au < testing ; 2013 ; Asian Perspective Volume 37 [2013] ; 13849 >
+        au < ready ; 2012 ; Asian Perspective Volume 36 [2012] ; 13850 >
+        au < ready ; 2013 ; Asian Perspective Volume 37 [2013] ; 13849 >
         au < testing ; 2014 ; Asian Perspective Volume 38 [2014] ; 13848 >
         au < testing ; 2015 ; Asian Perspective Volume 39 [2015] ; 13847 >
         au < testing ; 2016 ; Asian Perspective Volume 40 [2016] ; 13846 >
         au < testing ; 2017 ; Asian Perspective Volume 41 [2017] ; 13844 >
-        au < testing ; 2018 ; Asian Perspective Volume 42 [2018] ; 13843 >
+        au < ready ; 2018 ; Asian Perspective Volume 42 [2018] ; 13843 >
         au < exists ; 2019 ; Asian Perspective Volume 43 [2019] ; 13917 >
 
     }
@@ -468,7 +468,7 @@
         au < released ; 2015 ; CEA Critic Volume 77 [2015] ; 10526 >
         au < released ; 2016 ; CEA Critic Volume 78 [2016] ; 11276 >
         au < released ; 2017 ; CEA Critic Volume 79 [2017] ; 12514 >
-        au < testing ; 2018 ; CEA Critic Volume 80 [2018] ; 13396 >
+        au < ready ; 2018 ; CEA Critic Volume 80 [2018] ; 13396 >
 
     }
 
@@ -971,7 +971,7 @@
         au < released ; 2015 ; Hispania Volume 98 [2015] ; 10503 >
         au < released ; 2016 ; Hispania Volume 99 [2016] ; 11043 >
         au < released ; 2017 ; Hispania Volume 100 [2017] ; 12491 >
-        au < testing ; 2018 ; Hispania Volume 101 [2018] ; 13440 >
+        au < ready ; 2018 ; Hispania Volume 101 [2018] ; 13440 >
 
     }
 
@@ -1085,12 +1085,12 @@
 
       attr[journal_id] = 734
 
-       au < testing ; 2008 ; Journal of Chinese Religions Volume 36 [2008] [ProjectMuse] ; 13749 >
+       au < ready ; 2008 ; Journal of Chinese Religions Volume 36 [2008] [ProjectMuse] ; 13749 >
        au < testing ; 2009 ; Journal of Chinese Religions Volume 37 [2009] [ProjectMuse] ; 13750 >
        au < testing ; 2010 ; Journal of Chinese Religions Volume 38 [2010] [ProjectMuse] ; 13751 >
        au < testing ; 2011 ; Journal of Chinese Religions Volume 39 [2011] [ProjectMuse] ; 13747 >
        au < testing ; 2012 ; Journal of Chinese Religions Volume 40 [2012] [ProjectMuse] ; 13748 >
-       au < testing ; 2013 ; Journal of Chinese Religions Volume 41 [2013] [ProjectMuse] ; 13752 >
+       au < ready ; 2013 ; Journal of Chinese Religions Volume 41 [2013] [ProjectMuse] ; 13752 >
        au < testing ; 2014 ; Journal of Chinese Religions Volume 42 [2014] [ProjectMuse] ; 13753 >
        au < testing ; 2015 ; Journal of Chinese Religions Volume 43 [2015] [ProjectMuse] ; 13754 >
        au < testing ; 2016 ; Journal of Chinese Religions Volume 44 [2016] [ProjectMuse] ; 13755 >
@@ -1330,7 +1330,7 @@
         au < released ; 2015 ; Journal of Late Antiquity Volume 8 [2015] ; 10681 >
         au < released ; 2016 ; Journal of Late Antiquity Volume 9 [2016] ; 11221 >
         au < testing ; 2017 ; Journal of Late Antiquity Volume 10 [2017] ; 12872 >
-        au < testing ; 2018 ; Journal of Late Antiquity Volume 11 [2018] ; 13684 >
+        au < ready ; 2018 ; Journal of Late Antiquity Volume 11 [2018] ; 13684 >
 
     }
 
@@ -1753,7 +1753,7 @@
         au < released ; 2014 ; Literature and Medicine Volume 32 [2014] ; 10063 >
         au < released ; 2015 ; Literature and Medicine Volume 33 [2015] ; 10678 >
         au < released ; 2016 ; Literature and Medicine Volume 34 [2016] ; 11362 >
-        au < testing ; 2017 ; Literature and Medicine Volume 35 [2017] ; 12664 >
+        au < ready ; 2017 ; Literature and Medicine Volume 35 [2017] ; 12664 >
         au < testing ; 2018 ; Literature and Medicine Volume 36 [2018] ; 13577 >
 
     }
@@ -1817,7 +1817,7 @@
         au < released ; 2015 ; MFS Modern Fiction Studies Volume 61 [2015] ; 10524 >
         au < released ; 2016 ; MFS Modern Fiction Studies Volume 62 [2016] ; 11115 >
         au < released ; 2017 ; MFS Modern Fiction Studies Volume 63 [2017] ; 12487 >
-        au < testing ; 2018 ; MFS Modern Fiction Studies Volume 64 [2018] ; 13345 >
+        au < ready ; 2018 ; MFS Modern Fiction Studies Volume 64 [2018] ; 13345 >
 
     }
 
@@ -1961,7 +1961,7 @@
         au < released ; 2014 ; Narrative Inquiry in Bioethics Volume 4 [2014] ; 9882 >
         au < released ; 2015 ; Narrative Inquiry in Bioethics Volume 5 [2015] ; 10443 >
         au < released ; 2016 ; Narrative Inquiry in Bioethics Volume 6 [2016] ; 11267 >
-        au < testing ; 2017 ; Narrative Inquiry in Bioethics Volume 7 [2017] ; 12755 >
+        au < ready ; 2017 ; Narrative Inquiry in Bioethics Volume 7 [2017] ; 12755 >
         au < testing ; 2018 ; Narrative Inquiry in Bioethics Volume 8 [2018] ; 13382 >
 
     }
@@ -2269,7 +2269,7 @@
         au < released ; 2013-2014 ; Postmodern Culture Volume 24 [2013-2014] ; 10351 >
         au < released ; 2014-2015 ; Postmodern Culture Volume 25 [2014-2015] ; 10847 >
         au < released ; 2015-2016 ; Postmodern Culture Volume 26 [2015-2016] ; 11416 >
-        au < testing ; 2016-2017 ; Postmodern Culture Volume 27 [2016-2017] ; 12816 >
+        au < ready ; 2016-2017 ; Postmodern Culture Volume 27 [2016-2017] ; 12816 >
         au < testing ; 2017-2018 ; Postmodern Culture Volume 28 [2017-2018] ; 13662 >
 
     }
@@ -2569,7 +2569,7 @@
         au < released ; 2014 ; Social Research: An International Quarterly Volume 81 [2014] ; 9904 >
         au < released ; 2015 ; Social Research: An International Quarterly Volume 82 [2015] ; 10528 >
         au < released ; 2016 ; Social Research: An International Quarterly Volume 83 [2016] ; 11254 >
-        au < testing ; 2017 ; Social Research: An International Quarterly Volume 84 [2017] ; 12666 >
+        au < ready ; 2017 ; Social Research: An International Quarterly Volume 84 [2017] ; 12666 >
         au < testing ; 2018 ; Social Research: An International Quarterly Volume 85 [2018] ; 13467 >
 
     }
@@ -2823,7 +2823,7 @@
         au < released ; 2014 ; TAPA Volume 144 [2014] ; 9934 >
         au < released ; 2015 ; TAPA Volume 145 [2015] ; 10600 >
         au < released ; 2016 ; TAPA Volume 146 [2016] ; 11226 >
-        au < testing ; 2017 ; TAPA Volume 147 [2017] ; 12575 >
+        au < ready ; 2017 ; TAPA Volume 147 [2017] ; 12575 >
         au < testing ; 2018 ; TAPA Volume 148 [2018] ; 13491 >
 
     }
@@ -3053,7 +3053,7 @@
         au < released ; 2014 ; The Lion and the Unicorn Volume 38 [2014] ; 9992 >
         au < released ; 2015 ; The Lion and the Unicorn Volume 39 [2015] ; 10701 >
         au < released ; 2016 ; The Lion and the Unicorn Volume 40 [2016] ; 11260 >
-        au < testing ; 2017 ; The Lion and the Unicorn Volume 41 [2017] ; 12714 >
+        au < ready ; 2017 ; The Lion and the Unicorn Volume 41 [2017] ; 12714 >
         au < testing ; 2018 ; The Lion and the Unicorn Volume 42 [2018] ; 13717 >
 
     }
@@ -3209,7 +3209,7 @@
         au < released ; 2015 ; Theatre Topics Volume 25 [2015] ; 10473 >
         au < released ; 2016 ; Theatre Topics Volume 26 [2016] ; 11102 >
         au < testing ; 2017 ; Theatre Topics Volume 27 [2017] ; 12535 >
-        au < testing ; 2018 ; Theatre Topics Volume 28 [2018] ; 13376 >
+        au < ready ; 2018 ; Theatre Topics Volume 28 [2018] ; 13376 >
 
     }
     
