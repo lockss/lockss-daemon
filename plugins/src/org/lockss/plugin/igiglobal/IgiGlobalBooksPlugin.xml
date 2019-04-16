@@ -14,7 +14,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>22</string>
+    <string>23</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -163,6 +163,8 @@
   <entry>
     <string>plugin_cache_result_list</string>
     <list>
+	  <!--  wrong length if not pdf just accept -->
+      <string>org.lockss.plugin.ContentValidationException$WrongLength=org.lockss.plugin.igiglobal.IgiGlobalHttpResponseHandler</string>
       <!-- Invalid content-type file; no retry. Captures cases of html returned instead of PDF  -->
       <string>org.lockss.plugin.ContentValidationException=org.lockss.util.urlconn.CacheException$ExpectedNoRetryException</string>
     </list>
