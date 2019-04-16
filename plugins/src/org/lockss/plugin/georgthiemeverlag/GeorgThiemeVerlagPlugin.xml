@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>35</string>
+    <string>36</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -115,6 +115,12 @@
       <string>"^%s(?:[^/]+/)?ejournals/pdf/10[.][0-9a-z]{4,6}/[^/?&amp;]+[.]pdf(\?articleLanguage=.*)?$", base_url</string>
     </list>
   </entry>
+  <entry>
+  <!--  appears to use the same "ejournals" for both books and journals; but make it more generic
+   "https://profile.thieme.de/HTML/sso/ejournals/login.htm?type=default...." -->
+    <string>au_redirect_to_login_url_pattern</string>
+    <string>"/sso/(ejournals|ebooks)/login\.htm\?"</string>
+  </entry>  
   <entry>
     <string>plugin_cache_result_list</string>
     <list>
