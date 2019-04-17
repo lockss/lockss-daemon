@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>10</string>
+    <string>11</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -98,7 +98,15 @@
    "https://profile.thieme.de/HTML/sso/ejournals/login.htm?type=default...." -->
     <string>au_redirect_to_login_url_pattern</string>
     <string>"/sso/(ejournals|ebooks)/login\.htm\?"</string>
-  </entry>    
+  </entry>
+  <!--  improve content validation through use of mime-type expectation map -->
+  <entry>
+    <string>au_url_mime_type</string>
+    <list>
+      <string>/ebooks/(book|html)/, text/html</string>
+      <string>/ebooks/pdf/, application/pdf</string>
+    </list>
+  </entry>      
   <entry>
     <string>plugin_cache_result_list</string>
     <list>
