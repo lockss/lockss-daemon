@@ -14,11 +14,11 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>32</string>
+    <string>33</string>
   </entry>
    <entry>
     <string>plugin_parent_version</string>
-    <string>32</string>
+    <string>33</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -27,6 +27,11 @@
   <entry>
     <string>au_name</string>
     <string>"American Institute of Aeronautics and Astronautics Journals Plugin (CLOCKSS), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+  </entry>
+  <entry>
+    <!--  for now, for clockss, do not filter PDF before computing hash; for production machine we start from a single copy -->
+    <string>application/pdf_filter_factory</string>  
+    <org.lockss.util.Default />
   </entry>
   <!--  support for http to https -->
   <entry>
