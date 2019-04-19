@@ -50,22 +50,22 @@ public class HindawiArticleIteratorFactory
    * article example: http://www.hindawi.com/journals/ijmms/1978/231678/
    * toc example: http://www.hindawi.com/journals/aaa/2013/ --> http://www.hindawi.com/journals/aaa/2013/14/ (1,373 articles)
    */
-  protected static final String PATTERN_TEMPLATE = "\"^(%sjournals/%s/%s/\\d{4,}|%sjournals/%s/%s/\\d+\\.pdf)$\", base_url, journal_id, volume_name, download_url, journal_id, volume_name";
+  protected static final String PATTERN_TEMPLATE = "\"^(%sjournals/%s/%s/\\d{4,}/|%sjournals/%s/%s/\\d+\\.pdf)$\", base_url, journal_id, volume_name, download_url, journal_id, volume_name";
 
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) throws PluginException {
     String base_url = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
     String download_url = au.getConfiguration().get("download_url");
     
-    final Pattern HTML_PATTERN = Pattern.compile(String.format("^%sjournals/([^/]+)/([^/]+)/(\\d+)$", base_url), Pattern.CASE_INSENSITIVE);
-    final String HTML_REPLACEMENT = String.format("%sjournals/$1/$2/$3", base_url);
+    final Pattern HTML_PATTERN = Pattern.compile(String.format("^%sjournals/([^/]+)/([^/]+)/(\\d+)/$", base_url), Pattern.CASE_INSENSITIVE);
+    final String HTML_REPLACEMENT = String.format("%sjournals/$1/$2/$3/", base_url);
 
     final Pattern PDF_PATTERN = Pattern.compile(String.format("^%sjournals/([^/]+)/([^/]+)/(\\d+)\\.pdf$", download_url), Pattern.CASE_INSENSITIVE);
     final String PDF_REPLACEMENT = String.format("%sjournals/$1/$2/$3.pdf", download_url);
 
-    final String ABSTRACT_REPLACEMENT = String.format("%sjournals/$1/$2/$3/abs", base_url);
-    final String CITATION_REPLACEMENT = String.format("%sjournals/$1/$2/$3/cta", base_url);
-    final String REFERENCES_REPLACEMENT = String.format("%sjournals/$1/$2/$3/ref", base_url);
+    final String ABSTRACT_REPLACEMENT = String.format("%sjournals/$1/$2/$3/abs/", base_url);
+    final String CITATION_REPLACEMENT = String.format("%sjournals/$1/$2/$3/cta/", base_url);
+    final String REFERENCES_REPLACEMENT = String.format("%sjournals/$1/$2/$3/ref/", base_url);
     final String EPUB_REPLACEMENT = String.format("%sjournals/$1/$2/$3.epub", download_url);
     
     SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);

@@ -10,7 +10,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>17</string>
+    <string>17-demo</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -31,12 +31,12 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Pensoft OAI Plugin</string>
+    <string>Pensoft OAI Plugin (Demo)</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
     <!-- for no store exception-->
-    <string>1.72.0</string>
+    <string>1.75.0</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
@@ -44,7 +44,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Pensoft OAI Plugin, Base URL %s, OAI Set %s, OAI Date %s", base_url, au_oai_set, au_oai_date</string>
+    <string>"Pensoft OAI Plugin (Demo), Base URL %s, OAI Set %s, OAI Date %s", base_url, au_oai_set, au_oai_date</string>
   </entry>
   <entry>
     <string>au_permission_url</string>

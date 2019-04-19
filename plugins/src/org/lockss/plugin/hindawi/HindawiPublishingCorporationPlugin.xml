@@ -10,11 +10,11 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>37</string>
+    <string>38-demo</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <string>1.70.0</string>  <!-- HTTP-To-HTTPS -->
+    <string>1.75.0</string>  <!-- HTTP-To-HTTPS -->
   </entry>
   <entry>
     <string>au_def_pause_time</string>
@@ -39,11 +39,11 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Hindawi Publishing Corporation Plugin, Base URL %s, Download URL %s, Journal ID %s, Volume %s", base_url, download_url, journal_id, volume_name</string>
+    <string>"Hindawi Publishing Corporation Plugin (Demo), Base URL %s, Download URL %s, Journal ID %s, Volume %s", base_url, download_url, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Hindawi Publishing Corporation Plugin</string>
+    <string>Hindawi Publishing Corporation Plugin (Demo)</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
