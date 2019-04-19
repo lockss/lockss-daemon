@@ -21,12 +21,12 @@
       param[journal_abbr] = bsphs
 
       au < manifest ; exists ; 2011 ; Bulletin for Spanish and Portuguese Historical Studies Volume 35 ; 35 ; >
-      au < testing ; exists ; 2012 ; Bulletin for Spanish and Portuguese Historical Studies Volume 36 ; 36 ; >
+      au < crawling ; exists ; 2012 ; Bulletin for Spanish and Portuguese Historical Studies Volume 36 ; 36 ; >
       au < frozen ; exists ; 2013 ; Bulletin for Spanish and Portuguese Historical Studies Volume 37 ; 37 ; >
-      au < ready ; exists ; 2014 ; Bulletin for Spanish and Portuguese Historical Studies Volume 38 ; 38 ; >
-      au < testing ; exists ; 2015 ; Bulletin for Spanish and Portuguese Historical Studies Volume 39 ; 39 ; >
+      au < frozen ; exists ; 2014 ; Bulletin for Spanish and Portuguese Historical Studies Volume 38 ; 38 ; >
+      au < crawling ; exists ; 2015 ; Bulletin for Spanish and Portuguese Historical Studies Volume 39 ; 39 ; >
       au < frozen ; exists ; 2016 ; Bulletin for Spanish and Portuguese Historical Studies Volume 40 ; 40 ; >
-      au < testing ; exists ; 2017 ; Bulletin for Spanish and Portuguese Historical Studies Volume 41 ; 41 ; >
+      au < crawling ; exists ; 2017 ; Bulletin for Spanish and Portuguese Historical Studies Volume 41 ; 41 ; >
       au < frozen ; exists ; 2018 ; Bulletin for Spanish and Portuguese Historical Studies Volume 42 ; 42 ; >
       au < manifest ; exists ; 2019 ; Bulletin for Spanish and Portuguese Historical Studies Volume 43 ; 43 ; >
       au < expected ; exists ; 2020 ; Bulletin for Spanish and Portuguese Historical Studies Volume 44 ; 44 ; >

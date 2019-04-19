@@ -1081,6 +1081,39 @@
 
     }
 
+  {
+
+    title <
+      name = Alternatives to Laboratory Animals ;
+      issn = 0261-1929 ;
+      eissn = 2632-3559
+    >
+
+      #param[journal_id] = atl
+
+      au < exists ; 1999 ; Alternatives to Laboratory Animals Volume 27 ; 27 ; atla ; https://journals.sagepub.com/ >
+      au < exists ; 2000 ; Alternatives to Laboratory Animals Volume 28 ; 28 ; atla ; https://journals.sagepub.com/ >
+      au < exists ; 2001 ; Alternatives to Laboratory Animals Volume 29 ; 29 ; atla ; https://journals.sagepub.com/ >
+      au < exists ; 2002 ; Alternatives to Laboratory Animals Volume 30 ; 30 ; atla ; https://journals.sagepub.com/ >
+      au < exists ; 2003 ; Alternatives to Laboratory Animals Volume 31 ; 31 ; atla ; https://journals.sagepub.com/ >
+      au < exists ; 2004 ; Alternatives to Laboratory Animals Volume 32 ; 32 ; atla ; https://journals.sagepub.com/ >
+      au < exists ; 2005 ; Alternatives to Laboratory Animals Volume 33 ; 33 ; atla ; https://journals.sagepub.com/ >
+      au < exists ; 2006 ; Alternatives to Laboratory Animals Volume 34 ; 34 ; atla ; https://journals.sagepub.com/ >
+      au < exists ; 2007 ; Alternatives to Laboratory Animals Volume 35 ; 35 ; atla ; https://journals.sagepub.com/ >
+      au < exists ; 2008 ; Alternatives to Laboratory Animals Volume 36 ; 36 ; atla ; https://journals.sagepub.com/ >
+      au < exists ; 2009 ; Alternatives to Laboratory Animals Volume 37 ; 37 ; atla ; https://journals.sagepub.com/ >
+      au < exists ; 2010 ; Alternatives to Laboratory Animals Volume 38 ; 38 ; atla ; https://journals.sagepub.com/ >
+      au < exists ; 2011 ; Alternatives to Laboratory Animals Volume 39 ; 39 ; atla ; https://journals.sagepub.com/ >
+      au < exists ; 2012 ; Alternatives to Laboratory Animals Volume 40 ; 40 ; atla ; https://journals.sagepub.com/ >
+      au < exists ; 2013 ; Alternatives to Laboratory Animals Volume 41 ; 41 ; atla ; https://journals.sagepub.com/ >
+      au < exists ; 2014 ; Alternatives to Laboratory Animals Volume 42 ; 42 ; atla ; https://journals.sagepub.com/ >
+      au < exists ; 2015 ; Alternatives to Laboratory Animals Volume 43 ; 43 ; atla ; https://journals.sagepub.com/ >
+      au < exists ; 2016 ; Alternatives to Laboratory Animals Volume 44 ; 44 ; atla ; https://journals.sagepub.com/ >
+      au < exists ; 2017 ; Alternatives to Laboratory Animals Volume 45 ; 45 ; atla ; https://journals.sagepub.com/ >
+      au < exists ; 2018 ; Alternatives to Laboratory Animals Volume 46 ; 46 ; atla ; https://journals.sagepub.com/ >
+
+  }
+
     {
 
       title <
@@ -26544,7 +26577,6 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2015 ; Journal of Parenteral and Enteral Nutrition Volume 39 ; 39 ; pena ; https://journals.sagepub.com/ >
         au < released ; 2016 ; Journal of Parenteral and Enteral Nutrition Volume 40 ; 40 ; pena ; http://journals.sagepub.com/ >
         au < released ; 2017 ; Journal of Parenteral and Enteral Nutrition Volume 41 ; 41 ; pena ; http://journals.sagepub.com/ >
-        au < expected ; 2018 ; Journal of Parenteral and Enteral Nutrition Volume 42 ; 42 ; pena ; https://journals.sagepub.com/ >
 
       }
 
@@ -33771,7 +33803,6 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2015 ; Nutrition in Clinical Practice Volume 30 ; 30 ; ncpa ; https://journals.sagepub.com/ >
         au < released ; 2016 ; Nutrition in Clinical Practice Volume 31 ; 31 ; ncpa ; http://journals.sagepub.com/ >
         au < released ; 2017 ; Nutrition in Clinical Practice Volume 32 ; 32 ; ncpa ; http://journals.sagepub.com/ >
-        au < expected ; 2018 ; Nutrition in Clinical Practice Volume 33 ; 33 ; ncpa ; https://journals.sagepub.com/ >
 
       }
 

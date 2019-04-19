@@ -36,6 +36,7 @@ package org.lockss.plugin.atypon;
 import java.net.MalformedURLException;
 
 import org.lockss.daemon.Crawler.CrawlerFacade;
+import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.UrlFetcher;
 import org.lockss.plugin.UrlFetcherFactory;
@@ -114,7 +115,7 @@ public class BaseAtyponHttpToHttpsUrlFetcherFactory implements UrlFetcherFactory
 					if (makeChange) {
 						//actually the same host, make the protocol match to avoid "different host" behavior
 						log.debug3("changing referer protocol to match redirected https to avoid Atypon full-text-for-other-host-referers feature");
-						reqProps.setProperty(Constants.HTTP_REFERER, ref.replace("http:", "https:"));
+						reqProps.setProperty(Constants.HTTP_REFERER, ref.replaceFirst("^http:", "https:"));
 					}
 				}
 			}
@@ -127,23 +128,26 @@ public class BaseAtyponHttpToHttpsUrlFetcherFactory implements UrlFetcherFactory
 		 * 
 		 */
 		@Override
-		  protected boolean forceRefetch(){
+		protected boolean forceRefetch(){
 			if (super.forceRefetch()) {
 				return true;
 			}
 			CachedUrl cachedVersion = au.makeCachedUrl(origUrl);
+			try {
 			if ((cachedVersion!=null) && cachedVersion.hasContent()) {
 				CIProperties cachedProps = cachedVersion.getProperties();
 				String cached_mime =
 						cachedProps.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE);
 				String cmime = HeaderUtil.getMimeTypeFromContentType(cached_mime); // returns lower case for direct comparison
-				cachedVersion.release();
 				if (!origUrl.contains(PDF_PATH) && Constants.MIME_TYPE_PDF.equals(cmime)) {
 					log.debug("forcing a refetch because the url should not be pdf");
 					return true;
 				}
 			}
 			return false;
-		  }
+			} finally {
+				AuUtil.safeRelease(cachedVersion);
+			}
+		}
 	}
 }
