@@ -3031,6 +3031,27 @@ while (my $line = <>) {
     }
     sleep(4);
     
+      } elsif ($plugin eq "ClockssSilvaFennicaNoJidPlugin") {
+    $url = sprintf("%sissue/volume/%s",
+        $param{base_url}, $param{volume_name});
+    $start_url = uri_unescape($url);
+    my $req_s = HTTP::Request->new(GET, $start_url);
+    my $resp_s = $ua->request($req_s);
+    #For reporting at the end
+    $man_url = $start_url;
+    if ($resp_s->is_success) {
+      my $start_contents = $resp_s->content;
+      if (defined($start_contents) && ($start_contents =~ m/<h1>([A-Z][^<]+ $param{volume_name})</)) {
+        $vol_title = $1;
+        $result = "Manifest"
+      } else {
+        $result = "--NO_TAG--"
+      }
+    } else {
+      $result = "--REQ_FAIL--"
+    }
+    sleep(4);
+    
   } elsif ($plugin eq "ClockssSpandidosPlugin" || $plugin eq "SpandidosPlugin") {
       # manifest page is the entire journal archive
       # we will confirm an appropriate volume issue 

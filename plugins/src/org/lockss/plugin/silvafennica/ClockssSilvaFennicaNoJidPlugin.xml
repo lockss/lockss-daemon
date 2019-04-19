@@ -3,12 +3,12 @@
     <string>plugin_status</string>
     <string>ready</string>
   </entry>
-  <!-- identical to SilvaFennicaNoJidPlugin but with journal_id which is only used for a start_url -->
-  <!-- not currently a child because of different params, though technically it could be -->
-  <!-- IF YOU MODIFY THIS PLUGIN YOU MUST ALSO MODIFY ClockssSilvaFennicaNoJidPlugin (or understand why not)-->
+  <!-- identical to SilvaFennica but with journal_id removed but that was only used for a start_url -->
+  <!-- not currently deployed a child because of different params, though technically it could be -->
+  <!-- IF YOU MODIFY THIS PLUGIN YOU MUST ALSO MODIFY ClockssSilvaFennicaPlugin (or understand why not)-->
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.silvafennica.ClockssSilvaFennicaPlugin</string>
+    <string>org.lockss.plugin.silvafennica.ClockssSilvaFennicaNoJidPlugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -33,15 +33,15 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Finnish Society of Forest Science Journals Plugin (CLOCKSS)</string>
+    <string>Finnish Society of Forest Science Journals No JournalID Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Finnish Society of Forest Science Journals Plugin (CLOCKSS), Base URL %s, JID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"Finnish Society of Forest Science Journals No JournalID Plugin (CLOCKSS), Base URL %s,  Volume %s", base_url, volume_name</string>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%sissue/%s/volume/%s", base_url, journal_id, volume_name</string>
+    <string>"%sissue/volume/%s", base_url, volume_name</string>
   </entry>
   <entry>
     <string>au_permission_url</string>
@@ -95,15 +95,6 @@
         <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
         <type>3</type>
         <size>40</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
-      <org.lockss.daemon.ConfigParamDescr>
-        <key>journal_id</key>
-        <displayName>Journal Id</displayName>
-        <description>Identifier for journal (often used as part of file names)</description>
-        <type>1</type>
-        <size>20</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
