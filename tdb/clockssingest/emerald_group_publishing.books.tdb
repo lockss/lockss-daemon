@@ -2248,7 +2248,7 @@
    au < finished ; manifest ; 2014 ; 9781784412371 ; 9781784412364 ; 9781784412364 ; Inquiry-Based Learning for the Arts, Humanities, and Social Sciences: A Conceptual and Practical Resource for Educators Volume 2 ; https://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
    au < finished ; manifest ; 2015 ; 9781784418489 ; 9781784418472 ; 9781784418472 ; Inquiry-Based Learning for Multidisciplinary Programs: A Conceptual and Practical Resource for Educators Volume 3 ; https://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
    au < finished ; manifest ; 2015 ; 9781784418502 ; 9781784418496 ; 9781784418496 ; Inquiry-Based Learning for Science, Technology, Engineering, and Math (Stem) Programs: A Conceptual and Practical Resource for Educators Volume 4 ; https://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
-   au < crawling ; exists ; 2015 ; 9781785601330 ; 9781785601323 ; 9781785601323 ; University Partnerships for Community and School System Development Volume 5 ; https://www.emeraldinsight.com/ ; >
+   au < frozen ; exists ; 2015 ; 9781785601330 ; 9781785601323 ; 9781785601323 ; University Partnerships for Community and School System Development Volume 5 ; https://www.emeraldinsight.com/ ; >
    au < finished ; manifest ; 2016 ; 9781785601354 ; 9781785601347 ; 9781785601347 ; Emerging Directions in Doctoral Education Volume 6 ; https://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
    au < crawling ; exists ; 2016 ; 9781786353009 ; 9781786352996 ; 9781786352996 ; University Partnerships for Academic Programs and Professional Development Volume 7 ; https://www.emeraldinsight.com/ ; >
    au < crawling ; exists ; 2016 ; 9781786353023 ; 9781786353016 ; 9781786353016 ; University Partnerships for International Development Volume 8 ; https://www.emeraldinsight.com/ ; >
@@ -2256,7 +2256,7 @@
    au < crawling ; exists ; 2017 ; 9781787142657 ; 9781787142640 ; 9781787142640 ; University Partnerships for Pre-Service and Teacher Development Volume 10 ; https://www.emeraldinsight.com/ ; >
    au < deepCrawl ; exists ; 2018 ; 9781787147966 ; 9781787147959 ; 9781787147959 ; Refugee Education: Integration and Acceptance of Refugees in Mainstream Society Volume 11 ; https://www.emeraldinsight.com/ ;  >
    au < deepCrawl ; exists ; 2018 ; 9781787560574 ; 9781787560567 ; 9781787560567 ; Contexts for Diversity and Gender Identities in Higher Education: International Perspectives on Equity and Inclusion Volume 12 ; https://www.emeraldinsight.com/ ;  >
-   au < crawling ; exists ; 2018 ; 9781787147980 ; 9781787147973 ; 9781787147973 ; Strategies, Policies, and Directions for Refugee Education Volume 13 ; https://www.emeraldinsight.com/ ;  >
+   au < frozen ; exists ; 2018 ; 9781787147980 ; 9781787147973 ; 9781787147973 ; Strategies, Policies, and Directions for Refugee Education Volume 13 ; https://www.emeraldinsight.com/ ;  >
    au < deepCrawl ; exists ; 2018 ; 9781787560536 ; 9781787560529 ; 9781787560529 ; Perspectives on Diverse Student Identities in Higher Education: International Perspectives on Equity and Inclusion Volume 14 ; https://www.emeraldinsight.com/ ;  >
    au < crawling ; exists ; 2018 ; 9781787148000 ; 9781787147997 ; 9781787147997 ; Language, Teaching, and Pedagogy for Refugee Education Volume 15 ; https://www.emeraldinsight.com/ ;  >
    au < crawling ; exists ; 2018 ; 9781787560611 ; 9781787560604 ; 9781787560604 ; Strategies for Fostering Inclusive Classrooms in Higher Education: International Perspectives on Equity and Inclusion Volume 16 ; https://www.emeraldinsight.com/ ;  >
@@ -4126,7 +4126,7 @@
   #param[journal_issn] =
   #series = tpfs
 
-   au < crawling ; exists ; 2018 ; 9781787568341 ; 9781787568334 ; 9781787568334 ; Understanding Financial Stability Volume 1 ; https://www.emeraldinsight.com/ ;  >
+   au < frozen ; exists ; 2018 ; 9781787568341 ; 9781787568334 ; 9781787568334 ; Understanding Financial Stability Volume 1 ; https://www.emeraldinsight.com/ ;  >
    au < deepCrawl ; exists ; 2018 ; 9781787696822 ; 9781787696815 ; 9781787696815 ; The Banking Sector Under Financial Stability Volume 2 ; https://www.emeraldinsight.com/ ;  >
    au < deepCrawl ; exists ; 2018 ; 9781787568389 ; 9781787568372 ; 9781787568372 ; The Corporate, Real Estate, Household, Government and Non-Bank Financial Sectors Under Financial Stability Volume 3 ; https://www.emeraldinsight.com/ ;  >
    au < deepCrawl ; exists ; 2018 ; 9781787568426 ; 9781787568419 ; 9781787568419 ; Economic Areas Under Financial Stability Volume 4 ; https://www.emeraldinsight.com/ ;  >
@@ -4146,7 +4146,7 @@
    au < crawling ; exists ; 2015 ; 9781785602870 ; 9781785602863 ; 9781785602863 ; Theory and Method in Higher Education Research Volume 1 ; https://www.emeraldinsight.com/ ;  >
    au < crawling ; exists ; 2016 ; 9781786358950 ; 9781786358943 ; 9781786358943 ; Theory and Method in Higher Education Research Volume 2 ; https://www.emeraldinsight.com/ ;  >
    au < ready ; exists ; 2017 ; 9781787432239 ; 9781787432222 ; 9781787432222 ; Theory and Method in Higher Education Research Volume 3 ; https://www.emeraldinsight.com/ ;  >
-   au < crawling ; exists ; 2018 ; 9781787692787 ; 9781787692770 ; 9781787692770 ; Theory and Method in Higher Education Research Volume 4 ; https://www.emeraldinsight.com/ ;  >
+   au < frozen ; exists ; 2018 ; 9781787692787 ; 9781787692770 ; 9781787692770 ; Theory and Method in Higher Education Research Volume 4 ; https://www.emeraldinsight.com/ ;  >
 
  }
 
@@ -4188,7 +4188,7 @@
    au < finished ; crawling ; 2012 ; 9781781904756 ; 9781781904763 ; 9781781904763 ; Sustainable Transport for Chinese Cities Volume 3 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2012 ; 9781786352262 ; 9781786352255 ; 9781786352255 ; Paratransit: Shaping the Flexible Transport Future Volume 8 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2012 ; 9781787146280 ; 9781787146273 ; 9781787146273 ; Walking: Connecting Sustainable Transport with Health Volume 9 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
-   au < crawling ; exists ; 2018 ; 9781787146242 ; 9781787146235 ; 9781787146235 ; Transport, Travel and Later Life Volume 10 ; https://www.emeraldinsight.com/ ;  >
+   au < frozen ; exists ; 2018 ; 9781787146242 ; 9781787146235 ; 9781787146235 ; Transport, Travel and Later Life Volume 10 ; https://www.emeraldinsight.com/ ;  >
    au < deepCrawl ; exists ; 2018 ; 9781786352248 ; 9781786352231 ; 9781786352231 ; Safe Mobility: Challenges, Methodology and Solutions Volume 11 ; https://www.emeraldinsight.com/ ;  >
 
  }
