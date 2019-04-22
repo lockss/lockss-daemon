@@ -19,7 +19,7 @@
 
       attr[journal_id] = 150
 
-        au < ready ; 2001 ; Philosophy & Public Affairs Volume 30 [2001] ; 504 >
+        au < releasing ; 2001 ; Philosophy & Public Affairs Volume 30 [2001] ; 504 >
         au < testing ; 2003 ; Philosophy & Public Affairs Volume 31 [2003] ; 806 >
 
     }
@@ -36,10 +36,10 @@
       attr[journal_id] = 286
 
         au < testing ; 2005 ; The Future of Children Volume 15 [2005] ; 2663 >
-        au < ready ; 2006 ; The Future of Children Volume 16 [2006] ; 2966 >
-        au < ready ; 2007 ; The Future of Children Volume 17 [2007] ; 3265 >
-        au < ready ; 2008 ; The Future of Children Volume 18 [2008] ; 3795 >
-        au < ready ; 2009 ; The Future of Children Volume 19 [2009] ; 4413 >
+        au < releasing ; 2006 ; The Future of Children Volume 16 [2006] ; 2966 >
+        au < releasing ; 2007 ; The Future of Children Volume 17 [2007] ; 3265 >
+        au < releasing ; 2008 ; The Future of Children Volume 18 [2008] ; 3795 >
+        au < releasing ; 2009 ; The Future of Children Volume 19 [2009] ; 4413 >
         au < released ; 2010 ; The Future of Children Volume 20 [2010] ; 6333 >
         au < released ; 2011 ; The Future of Children Volume 21 [2011] ; 7520 >
         au < released ; 2012 ; The Future of Children Volume 22 [2012] ; 8367 >

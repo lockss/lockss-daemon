@@ -19,16 +19,16 @@
 
       attr[journal_id] = 44
 
-        au < ready ; 2000 ; Demography Volume 37 [2000] ; 155 >
-        au < ready ; 2001 ; Demography Volume 38 [2001] ; 156 >
-        au < ready ; 2002 ; Demography Volume 39 [2002] ; 157 >
-        au < ready ; 2003 ; Demography Volume 40 [2003] ; 812 >
-        au < ready ; 2004 ; Demography Volume 41 [2004] ; 1767 >
-        au < ready ; 2005 ; Demography Volume 42 [2005] ; 2670 >
-        au < ready ; 2006 ; Demography Volume 43 [2006] ; 2937 >
-        au < ready ; 2007 ; Demography Volume 44 [2007] ; 3228 >
-        au < ready ; 2008 ; Demography Volume 45 [2008] ; 3615 >
-        au < ready ; 2009 ; Demography Volume 46 [2009] ; 4131 >
+        au < releasing ; 2000 ; Demography Volume 37 [2000] ; 155 >
+        au < releasing ; 2001 ; Demography Volume 38 [2001] ; 156 >
+        au < releasing ; 2002 ; Demography Volume 39 [2002] ; 157 >
+        au < releasing ; 2003 ; Demography Volume 40 [2003] ; 812 >
+        au < releasing ; 2004 ; Demography Volume 41 [2004] ; 1767 >
+        au < releasing ; 2005 ; Demography Volume 42 [2005] ; 2670 >
+        au < releasing ; 2006 ; Demography Volume 43 [2006] ; 2937 >
+        au < releasing ; 2007 ; Demography Volume 44 [2007] ; 3228 >
+        au < releasing ; 2008 ; Demography Volume 45 [2008] ; 3615 >
+        au < releasing ; 2009 ; Demography Volume 46 [2009] ; 4131 >
         au < released ; 2010 ; Demography Volume 47 [2010] ; 5785 >
 
     }
