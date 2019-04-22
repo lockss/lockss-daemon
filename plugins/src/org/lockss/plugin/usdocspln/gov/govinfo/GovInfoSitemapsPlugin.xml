@@ -80,16 +80,31 @@
   </entry>
   <entry>
     <string>au_crawlrules</string>
+    <!--
+    https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css
+    https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css
+    https://www.govinfo.gov/sites/all/themes/custom/bootstrap-fdsys/bootstrap/fonts/glyphicons-halflings-regular.eot
+    https://www.govinfo.gov/sites/all/themes/custom/bootstrap-fdsys/bootstrap/fonts/glyphicons-halflings-regular.woff
+    https://www.govinfo.gov/sites/all/themes/custom/bootstrap-fdsys/bootstrap/fonts/glyphicons-halflings-regular.ttf
+    https://www.govinfo.gov/sites/all/themes/custom/bootstrap-fdsys/bootstrap/fonts/glyphicons-halflings-regular.svg
+    https://www.govinfo.gov/sites/all/themes/custom/bootstrap-fdsys/font-awesome/fonts/fontawesome-webfont.eot%3Fv=4.3.0
+    https://www.govinfo.gov/sites/all/themes/custom/bootstrap-fdsys/font-awesome/fonts/fontawesome-webfont.eot
+    https://www.govinfo.gov/sites/all/themes/custom/bootstrap-fdsys/font-awesome/fonts/fontawesome-webfont.woff2%3Fv=4.3.0
+    https://www.govinfo.gov/sites/all/themes/custom/bootstrap-fdsys/font-awesome/fonts/fontawesome-webfont.woff%3Fv=4.3.0
+    https://www.govinfo.gov/sites/all/themes/custom/bootstrap-fdsys/font-awesome/fonts/fontawesome-webfont.ttf%3Fv=4.3.0
+    https://www.govinfo.gov/sites/all/themes/custom/bootstrap-fdsys/font-awesome/fonts/fontawesome-webfont.svg%3Fv=4.3.0
+    -->
     <list>
-      <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", url_host(base_url)</string>
 <!-- https://www.govinfo.gov/content/pkg/DCPD-201800002.zip-->
       <string>2,"^https?://%s/content/(granule|pkg)/[^/]+\.zip$", url_host(base_url)</string>
 <!--https://www.govinfo.gov/content/pkg/DCPD-201800002/html/DCPD-201800002.htm -->
-      <string>1,"^https?://%s/content/(granule|pkg)/%s-", url_host(base_url), collection_id</string>
+      <string>1,"^https?://%s/content/(granule|pkg)/%s-20180007", url_host(base_url), collection_id</string>
 <!--https://www.govinfo.gov/app/details/DCPD-201800002 -->
-      <string>1,"^https?://%s/app/details/%s-", url_host(base_url), collection_id</string>
+      <string>1,"^https?://%s/app/details/%s-20180007", url_host(base_url), collection_id</string>
 <!--  https://www.govinfo.gov/app/frtoc/2018-01-02 -->
 	  <string>1, "^https?://%s/app/frtoc/%d", url_host(base_url), year</string>
+      <string>1, "^https://maxcdn.bootstrapcdn.com/.*\.css$"</string>
+      <string>1, "^https?://www\.govinfo\.gov/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)(\?v=[0-9.]+)?$", url_host(base_url)</string>
     </list>
   </entry>
   <entry>
@@ -170,12 +185,26 @@
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
     <string>"/pkg/(%s[^/]+)/(pdf|xml)/\1[^/]+\.\2$", collection_id</string>
+    <string>^https://maxcdn.bootstrapcdn.com/.*\.css$</string>
+    <string>/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)(\?Fv=[0-9.]+)?$</string>
   </entry>
   <entry>
     <!-- these will not count towards poll results but will replicate from peer if above -->
     <string>au_url_poll_result_weight</string>
     <list>
       <string>"/pkg/(%s[^/]+)/(pdf|xml)/\1[^/]+\.\2$", collection_id, 0</string>
+      <string>^https://maxcdn.bootstrapcdn.com/.*\.css$, 0</string>
+      <string>/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)(\?v=[0-9.]+)?$, 0</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_permitted_host_pattern</string>
+    <list>
+      <!--
+      https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css
+      https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css
+      -->
+      <string>"maxcdn\.bootstrapcdn\.com"</string>
     </list>
   </entry>
 </map>
