@@ -1285,7 +1285,7 @@
    au < finished ; crawling ; 2016 ; 9781786355089 ; 9781786355072 ; 9781786355072 ; Resource Redeployment and Corporate Strategy Volume 35 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2017 ; 9781787142770 ; 9781787142763 ; 9781787142763 ; Geography, Location, and Strategy Volume 36 ; http://www.emeraldinsight.com/ ;  >
    au < finished ; exists ; 2017 ; 9781787430808 ; 9781787430792 ; 9781787430792 ; Entrepreneurship, Innovation, and Platforms Volume 37 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
-   au < crawling ; exists ; 2018 ; 9781787563162 ; 9781787563155 ; 9781787563155 ; Sustainability, Stakeholder Governance, and Corporate Social Responsibility Volume 38 ; https://www.emeraldinsight.com/ ;  >
+   au < frozen ; exists ; 2018 ; 9781787563162 ; 9781787563155 ; 9781787563155 ; Sustainability, Stakeholder Governance, and Corporate Social Responsibility Volume 38 ; https://www.emeraldinsight.com/ ;  >
    au < deepCrawl ; exists ; 2018 ; 9781787563483 ; 9781787563476 ; 9781787563476 ; Behavioral Strategy in Perspective Volume 39 ; https://www.emeraldinsight.com/ ;  >
    au < deepCrawl ; exists ; 2018 ; 9781787563308 ; 9781787563292 ; 9781787563292 ; Organization Design Volume 40 ; https://www.emeraldinsight.com/ ;  >
  }
@@ -4095,7 +4095,7 @@
   #series = sdat
 
    au < finished ; crawling ; 2016 ; 9781786353900 ; 9781786353894 ; 9781786353894 ; A. C. Littleton's Final Thoughts on Accounting: A Collection of Unpublished Essays Volume 20 ; https://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
-   au < crawling ; exists ; 2017 ; 9781787148420 ; 9781787148413 ; 9781787148413 ; Understanding Mattessich and Ijiri: A Study of Accounting Thought Volume 21 ; https://www.emeraldinsight.com/ ; >
+   au < frozen ; exists ; 2017 ; 9781787148420 ; 9781787148413 ; 9781787148413 ; Understanding Mattessich and Ijiri: A Study of Accounting Thought Volume 21 ; https://www.emeraldinsight.com/ ; >
    au < frozen ; exists ; 2018 ; 9781787564084 ; 9781787564077 ; 9781787564077 ; William A. Paton: A Study of his Accounting Thought Volume 22 ; https://www.emeraldinsight.com/ ; >
 
  }
@@ -4145,7 +4145,7 @@
 
    au < frozen ; exists ; 2015 ; 9781785602870 ; 9781785602863 ; 9781785602863 ; Theory and Method in Higher Education Research Volume 1 ; https://www.emeraldinsight.com/ ;  >
    au < frozen ; exists ; 2016 ; 9781786358950 ; 9781786358943 ; 9781786358943 ; Theory and Method in Higher Education Research Volume 2 ; https://www.emeraldinsight.com/ ;  >
-   au < crawling ; exists ; 2017 ; 9781787432239 ; 9781787432222 ; 9781787432222 ; Theory and Method in Higher Education Research Volume 3 ; https://www.emeraldinsight.com/ ;  >
+   au < frozen ; exists ; 2017 ; 9781787432239 ; 9781787432222 ; 9781787432222 ; Theory and Method in Higher Education Research Volume 3 ; https://www.emeraldinsight.com/ ;  >
    au < frozen ; exists ; 2018 ; 9781787692787 ; 9781787692770 ; 9781787692770 ; Theory and Method in Higher Education Research Volume 4 ; https://www.emeraldinsight.com/ ;  >
 
  }
