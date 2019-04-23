@@ -1225,7 +1225,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Annals of Botany Volume 115-116 ; 115-116 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Annals of Botany Volume 117-118 ; 117-118 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Annals of Botany Volume 119-120 ; 119-120 ; reingest1.clockss.org:8082 >
-    au < ready ; exists ; 2018 ; 2018 ; Annals of Botany Volume 121-122 ; 121-122 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; Annals of Botany Volume 121-122 ; 121-122 ; >
 
   }
 
@@ -5461,7 +5461,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; FEMS Microbiology Letters Volume 350-361 ; 350-361 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; FEMS Microbiology Letters Volume 362 ; 362 ; >
     au < frozen ; exists ; 2016 ; 2016 ; FEMS Microbiology Letters Volume 363 ; 363 ; >
-    au < ready ; exists ; 2016 ; 2017 ; FEMS Microbiology Letters Volume 364 ; 364 ; >
+    au < crawling ; exists ; 2016 ; 2017 ; FEMS Microbiology Letters Volume 364 ; 364 ; >
     au < frozen ; exists ; 2016 ; 2018 ; FEMS Microbiology Letters Volume 365 ; 365 ; >
 
   }
@@ -12815,7 +12815,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 428-436 ; 428-436 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 437-445 ; 437-445 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 446-455 ; 446-455 ; >
-    au < ready ; exists ; 2016 ; 2016 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 456-463 ; 456-463 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 456-463 ; 456-463 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 464-472 ; 464-472 ; >
     au < testing ; exists ; 2018 ; 2018 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 473-481 ; 473-481 ; >
 
@@ -13199,7 +13199,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Nephrology Dialysis Transplantation Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Nephrology Dialysis Transplantation Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Nephrology Dialysis Transplantation Volume 30 ; 30 ; >
-    au < ready ; exists ; 2016 ; 2016 ; Nephrology Dialysis Transplantation Volume 31 ; 31 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; Nephrology Dialysis Transplantation Volume 31 ; 31 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Nephrology Dialysis Transplantation Volume 32 ; 32 ; >
     au < testing ; exists ; 2018 ; 2018 ; Nephrology Dialysis Transplantation Volume 33 ; 33 ; >
 
@@ -13233,7 +13233,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Neuro-Oncology Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Neuro-Oncology Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Neuro-Oncology Volume 17 ; 17 ; >
-    au < ready ; exists ; 2016 ; 2016 ; Neuro-Oncology Volume 18 ; 18 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; Neuro-Oncology Volume 18 ; 18 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Neuro-Oncology Volume 19 ; 19 ; >
     au < testing ; exists ; 2018 ; 2018 ; Neuro-Oncology Volume 20 ; 20 ; >
 
@@ -13325,7 +13325,7 @@
     au < manifest ; exists ; 2013 ; 2013 ; Neurosurgery Volume 60,72-73 ; 60,72-73 ; >
     au < manifest ; exists ; 2014 ; 2014 ; Neurosurgery Volume 61,74-75 ; 61,74-75 ; >
     au < manifest ; exists ; 2015 ; 2015 ; Neurosurgery Volume 62,76-77 ; 62,76-77 ; >
-    au < ready ; exists ; 2016 ; 2016 ; Neurosurgery Volume 63,78-79 ; 63,78-79 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; Neurosurgery Volume 63,78-79 ; 63,78-79 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Neurosurgery Volume 64,80-81 ; 64,80-81 ; >
     au < testing ; exists ; 2018 ; 2018 ; Neurosurgery Volume 65,82-83 ; 65,82-83 ; >
 
@@ -14385,7 +14385,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Past & Present Volume 218-221 ; 218-221 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Past & Present Volume 222-225 ; 222-225 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Past & Present Volume 226-229 ; 226-229 ; >
-    au < ready ; exists ; 2016 ; 2016 ; Past & Present Volume 230-233 ; 230-233 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; Past & Present Volume 230-233 ; 230-233 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Past & Present Volume 234-237 ; 234-237 ; >
     au < testing ; exists ; 2018 ; 2018 ; Past & Present Volume 238-241 ; 238-241 ; >
 
@@ -14519,7 +14519,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Philosophia Mathematica Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Philosophia Mathematica Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Philosophia Mathematica Volume 23 ; 23 ; >
-    au < ready ; exists ; 2016 ; 2016 ; Philosophia Mathematica Volume 24 ; 24 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; Philosophia Mathematica Volume 24 ; 24 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Philosophia Mathematica Volume 25 ; 25 ; >
     au < testing ; exists ; 2018 ; 2018 ; Philosophia Mathematica Volume 26 ; 26 ; >
 
@@ -17480,7 +17480,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; The Cambridge Quarterly Volume 42 ; 42 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; The Cambridge Quarterly Volume 43 ; 43 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The Cambridge Quarterly Volume 44 ; 44 ; >
-    au < ready ; exists ; 2016 ; 2016 ; The Cambridge Quarterly Volume 45 ; 45 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; The Cambridge Quarterly Volume 45 ; 45 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The Cambridge Quarterly Volume 46 ; 46 ; >
     au < testing ; exists ; 2018 ; 2018 ; The Cambridge Quarterly Volume 47 ; 47 ; >
 
