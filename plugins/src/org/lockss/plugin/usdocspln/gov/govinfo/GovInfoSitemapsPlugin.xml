@@ -151,10 +151,13 @@
         <!-- pause crawls Monday through Friday 9am through 9pm Eastern, but a "heartbeat" once per hour is allowed -->
         <entry>
           <org.lockss.daemon.CrawlWindows-Daily>
-            <from>9:00</from>
-            <to>21:00</to>
+            <!--<from>9:00</from>
+            <to>21:00</to>, original-->
+            <from>1:00</from>
+            <to>2:00</to>
             <timeZoneId>US/Eastern</timeZoneId>
-            <daysOfWeek>4;5;6</daysOfWeek>
+            <!--<daysOfWeek>4;5;6</daysOfWeek>, original-->
+            <daysOfWeek>1;7</daysOfWeek>
           </org.lockss.daemon.CrawlWindows-Daily>
           <org.lockss.plugin.RateLimiterInfo>
             <rate>1/1h</rate>
