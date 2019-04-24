@@ -10,6 +10,9 @@
     param[base_url] = https://press.anu.edu.au/
     implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
     #RT 7563
+    #April 2019 - 2 journal ids changed as did location of start url
+    #4/24/19 - froze completed content on production; modified plugin to handle content going forward
+    
 
   {
   
@@ -74,6 +77,8 @@
       eissn = 1447-4735
     >
     
+    {
+    
     param[journal_id] = agenda-journal-policy-analysis-and-reform
 
     au < finished ; frozen ; 1994 ; Agenda - A Journal of Policy Analysis and Reform Volume 1 ; 1 ; reingest5.clockss.org:8082 >
@@ -101,9 +106,47 @@
     au < finished ; frozen ; 2016 ; Agenda - A Journal of Policy Analysis and Reform Volume 23 ; 23 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2017 ; Agenda - A Journal of Policy Analysis and Reform Volume 24 ; 24 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2018 ; Agenda - A Journal of Policy Analysis and Reform Volume 25 ; 25 ; >
-    au < expected ; exists ; 2019 ; Agenda - A Journal of Policy Analysis and Reform Volume 26 ; 26 ; >
+    
+    }
+     
+    { 
+    
+    #April 2019 - journal id changed as did location of start url
+    param[journal_id] = agenda
+    
+      au < expected ; exists ; 2019 ; Agenda - A Journal of Policy Analysis and Reform Volume 26 ; 26 ; >
+      
+    }
+  }
+  
+  {
+  
+    title <
+      name = ANU Historical Journal II ;
+      issn = 2652-015X ;
+      eissn = 2652-0281
+    >
+    
+    param[journal_id] = anu-historical-journal
+
+    au < expected ; exists ; 2019 ; ANU Historical Journal II: Number 1 ; 1 ; >
 
   }
+  
+    {
+  
+    title <
+      name = Australian Journal of Biography and History ;
+      issn = 2209-9522 ;
+      eissn = 2209-9573
+    >
+    
+    param[journal_id] = australian-journal-biography-and-history
+    #this one may be challenging - link to issue doesn't include volume number...
+    au < exists ; exists ; 2018 ; Australian Journal of Biography and History: Number 1 ; 1 ; >
+    au < expected ; exists ; 2019 ; Australian Journal of Biography and History: Number 2 ; 2 ; >
+
+  }  
 
   {
   
@@ -123,6 +166,7 @@
     au < finished ; frozen ; 2014 ; ANU Undergraduate Research Journal: Volume Six ; six ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2015 ; ANU Undergraduate Research Journal: Volume Seven ; seven ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2016 ; ANU Undergraduate Research Journal: Volume Eight ; eight ; reingest4.clockss.org:8082 >
+    #after 2016 moved to http://studentjournals.anu.edu.au/index.php/aurj (OJS3)
 
   }
 
@@ -145,6 +189,7 @@
     au < finished ; frozen ; 2011 ; Australian Humanities Review Issue 50 ; 50 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2011 ; Australian Humanities Review Issue 51 ; 51 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2012 ; Australian Humanities Review Issue 52 ; 52 ; reingest3.clockss.org:8083 >
+    #ceased
 
   }
 
@@ -163,6 +208,7 @@
     au < finished ; frozen ; 2014 ; Burgmann Journal - Research Debate Opinion Issue 3 ; 3 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2015 ; Burgmann Journal - Research Debate Opinion Issue 4 ; 4 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2016 ; Burgmann Journal - Research Debate Opinion Issue 5 ; 5 ; reingest3.clockss.org:8083 >
+    #after 2016 moved to http://studentjournals.anu.edu.au/index.php/burgmann (OJS3)
 
   }
 
@@ -183,6 +229,7 @@
     au < finished ; frozen ; 2013 ; craft + design enquiry issue 5 ; 5 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2014 ; craft + design enquiry issue 6 ; 6 ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2015 ; craft + design enquiry issue 7 ; 7 ; reingest5.clockss.org:8082 >
+    #ceased
 
   }
 
@@ -208,6 +255,7 @@
     au < finished ; frozen ; 2014 ; Cross-sections, The Bruce Hall Academic Journal: Volume X ; x ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2015 ; Cross-sections, The Bruce Hall Academic Journal: Volume XI ; xi ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2016 ; Cross-sections, The Bruce Hall Academic Journal: Volume XII ; xii ; reingest2.clockss.org:8085 >
+    #after 2016 published under http://studentjournals.anu.edu.au/index.php/cs (which is OJS3)
 
   }
 
@@ -228,6 +276,10 @@
     au < finished ; frozen ; 2013 ; East Asia Forum Quarterly Volume 5 ; 5 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2014 ; East Asia Forum Quarterly Volume 6 ; 6 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2015 ; East Asia Forum Quarterly Volume 7 ; 7 ; reingest4.clockss.org:8082 >
+    au < exists ; exists ; 2016 ; East Asia Forum Quarterly Volume 8 ; 8 ; >
+    au < exists ; exists ; 2017 ; East Asia Forum Quarterly Volume 9 ; 9 ; >
+    au < exists ; exists ; 2018 ; East Asia Forum Quarterly Volume 10 ; 10 ; >
+    au < exists ; exists ; 2019 ; East Asia Forum Quarterly Volume 11 ; 11 ; >
 
   }
 
@@ -245,6 +297,7 @@
     au < finished ; frozen ; 2015 ; Human Ecology Review: Volume 21 ; 21 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2016 ; Human Ecology Review: Volume 22 ; 22 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2017 ; Human Ecology Review: Volume 23 ; 23 ; reingest3.clockss.org:8083 >
+    au < exists ; exists ; 2018 ; Human Ecology Review: Volume 24 ; 24 ; >
 
   }
 
@@ -274,6 +327,7 @@
     au < finished ; frozen ; 2011 ; Humanities Research Journal Series: Volume XVII ; xvii ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2012 ; Humanities Research Journal Series: Volume XVIII ; xviii ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2013 ; Humanities Research Journal Series: Volume XIX ; xix ; reingest3.clockss.org:8083 >
+    #ceased
 
   }
   
@@ -310,6 +364,7 @@
     au < frozen ; exists ; 2011 ; Medical Student Journal of Australia: Volume Three ; three ; >
     au < frozen ; exists ; 2012-2013 ; Medical Student Journal of Australia: Volume Four ; four ; >
     au < frozen ; exists ; 2014-2015 ; Medical Student Journal of Australia: Volume Five ; five ; >
+    #ceased publication
 
   }
 
@@ -325,6 +380,7 @@
 
     au < finished ; frozen ; 2015 ; Merici - Ursula Hall Academic Journal: Volume 1 ; 1 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2016 ; Merici - Ursula Hall Academic Journal: Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+    #ceased publication
 
   }
 
@@ -339,6 +395,7 @@
     param[journal_id] = human-voyage-undergraduate-research-biological-anthropology
 
     au < finished ; frozen ; 2017 ; The Human Voyage: Undergraduate Research in Biological Anthropology: Volume 1 ; 1 ; reingest4.clockss.org:8082 >
+    #after 2017 published at http://studentjournals.anu.edu.au/index.php/hv (OJS3)
 
   }
 
