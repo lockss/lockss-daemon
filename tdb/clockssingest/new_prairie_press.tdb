@@ -394,9 +394,9 @@
       au < manifest ; exists ; 2010 ; Educational Considerations Volume 38 ; 38 ; >
       au < manifest ; exists ; 2011 ; Educational Considerations Volume 39 ; 39 ; >
       au < testing ; exists ; 2012 ; Educational Considerations Volume 40 ; 40 ; >
-      au < testing ; exists ; 2013 ; Educational Considerations Volume 41 ; 41 ; >
+      au < ready ; exists ; 2013 ; Educational Considerations Volume 41 ; 41 ; >
       au < frozen ; exists ; 2014 ; Educational Considerations Volume 42 ; 42 ; >
-      au < testing ; exists ; 2015 ; Educational Considerations Volume 43 ; 43 ; >
+      au < ready ; exists ; 2015 ; Educational Considerations Volume 43 ; 43 ; >
       au < testing ; exists ; 2016 ; Educational Considerations Volume 44 ; 44 ; >
       au < exists ; exists ; 2017 ; Educational Considerations Volume 45 ; 45 ; >
       au < expected ; exists ; 2018 ; Educational Considerations Volume 46 ; 46 ; >
@@ -529,7 +529,7 @@
       au < frozen ; exists ; 2014 ; Journal of Applied Communications Volume 97 ; 97 ; >
       au < frozen ; exists ; 2015 ; Journal of Applied Communications Volume 98 ; 98 ; >
       au < testing ; exists ; 2016 ; Journal of Applied Communications Volume 99 ; 99 ; >
-      au < testing ; exists ; 2017 ; Journal of Applied Communications Volume 100 ; 100 ; >
+      au < ready ; exists ; 2017 ; Journal of Applied Communications Volume 100 ; 100 ; >
       au < frozen ; exists ; 2018 ; Journal of Applied Communications Volume 101 ; 101 ; >
       au < manifest ; exists ; 2019 ; Journal of Applied Communications Volume 102 ; 102 ; >
       au < manifest ; exists ; 2020 ; Journal of Applied Communications Volume 103 ; 103 ; >
@@ -589,7 +589,7 @@
       param[journal_abbr] = kaesrr
 
       au < crawling ; exists ; 2015 ; Kansas Agricultural Experiment Station Research Reports Volume 1 ; 1 ; >
-      au < testing ; exists ; 2016 ; Kansas Agricultural Experiment Station Research Reports Volume 2 ; 2 ; >
+      au < ready ; exists ; 2016 ; Kansas Agricultural Experiment Station Research Reports Volume 2 ; 2 ; >
       au < frozen ; exists ; 2017 ; Kansas Agricultural Experiment Station Research Reports Volume 3 ; 3 ; >
       au < frozen ; exists ; 2018 ; Kansas Agricultural Experiment Station Research Reports Volume 4 ; 4 ; >
       au < manifest ; exists ; 2019 ; Kansas Agricultural Experiment Station Research Reports Volume 5 ; 5 ; >
@@ -652,7 +652,7 @@
       au < frozen ; exists ; 2015 ; Networks: An Online Journal for Teacher Research Volume 18 ; 18 ; >
       au < frozen ; exists ; 2016 ; Networks: An Online Journal for Teacher Research Volume 19 ; 19 ; >
       au < frozen ; exists ; 2017 ; Networks: An Online Journal for Teacher Research Volume 20 ; 20 ; >
-      au < testing ; exists ; 2018 ; Networks: An Online Journal for Teacher Research Volume 21 ; 21 ; >
+      au < ready ; exists ; 2018 ; Networks: An Online Journal for Teacher Research Volume 21 ; 21 ; >
       au < expected ; exists ; 2019 ; Networks: An Online Journal for Teacher Research Volume 22 ; 22 ; >
       au < expected ; exists ; 2020 ; Networks: An Online Journal for Teacher Research Volume 23 ; 23 ; >
 
@@ -707,7 +707,7 @@
       au < frozen ; exists ; 2012 ; Oz Volume 34 ; 34 ; >
       au < frozen ; exists ; 2013 ; Oz Volume 35 ; 35 ; >
       au < frozen ; exists ; 2014 ; Oz Volume 36 ; 36 ; >
-      au < testing ; exists ; 2015 ; Oz Volume 37 ; 37 ; >
+      au < ready ; exists ; 2015 ; Oz Volume 37 ; 37 ; >
       au < frozen ; exists ; 2016 ; Oz Volume 38 ; 38 ; >
       au < frozen ; exists ; 2017 ; Oz Volume 39 ; 39 ; >
       au < frozen ; exists ; 2018 ; Oz Volume 40 ; 40 ; >

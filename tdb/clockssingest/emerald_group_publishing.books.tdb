@@ -995,7 +995,7 @@
    au < finished ; crawling ; 2015 ; 9781783505814 ; 9781783505685 ; 9781783505685 ; Genetics, Health and Society Volume 16 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 9781785604034 ; 9781785604027 ; 9781785604027 ; 50 Years After Deinstitutionalization: Mental Illness in Contemporary Communities Volume 17 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
    au < frozen ; exists ; 2017 ; 9781786350923 ; 9781786350916 ; 9781786350916 ; Food Systems and Health Volume 18 ; http://www.emeraldinsight.com/ ;  >
-   au < testing ; exists ; 2019 ; 9781787430624 ; 9781787430617 ; 9781787430617 ; Immigration and Health Volume 19 ; https://www.emeraldinsight.com/ ;  >
+   au < ready ; exists ; 2019 ; 9781787430624 ; 9781787430617 ; 9781787430617 ; Immigration and Health Volume 19 ; https://www.emeraldinsight.com/ ;  >
 
  }
 
@@ -1459,7 +1459,7 @@
   #param[journal_issn] = 2514-1759
   #series = bas
 
-   au < testing ; exists ; 2017 ; 9781787144088 ; 9781787144071 ; 9781787144071 ; Stakeholder Management Volume 1 ; https://www.emeraldinsight.com/ ;  >
+   au < ready ; exists ; 2017 ; 9781787144088 ; 9781787144071 ; 9781787144071 ; Stakeholder Management Volume 1 ; https://www.emeraldinsight.com/ ;  >
    au < frozen ; exists ; 2018 ; 9781787542600 ; 9781787542594 ; 9781787542594 ; Corporate Social Responsibility Volume 2 ; https://www.emeraldinsight.com/ ;  >
 
  }
