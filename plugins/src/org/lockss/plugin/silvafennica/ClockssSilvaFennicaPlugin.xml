@@ -3,6 +3,9 @@
     <string>plugin_status</string>
     <string>ready</string>
   </entry>
+  <!-- identical to SilvaFennicaNoJidPlugin but with journal_id which is only used for a start_url -->
+  <!-- not currently a child because of different params, though technically it could be -->
+  <!-- IF YOU MODIFY THIS PLUGIN YOU MUST ALSO MODIFY ClockssSilvaFennicaNoJidPlugin (or understand why not)-->
   <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.silvafennica.ClockssSilvaFennicaPlugin</string>

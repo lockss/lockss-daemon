@@ -19,13 +19,13 @@
 
       attr[journal_id] = 708
 
-        au < testing ; 2012 ; Antiphon: A Journal for Liturgical Renewal Volume 16 [2012] ; 13207 >
-        au < ready ; 2013 ; Antiphon: A Journal for Liturgical Renewal Volume 17 [2013] ; 13208 >
-        au < ready ; 2014 ; Antiphon: A Journal for Liturgical Renewal Volume 18 [2014] ; 13209 >
-        au < ready ; 2015 ; Antiphon: A Journal for Liturgical Renewal Volume 19 [2015] ; 12148 >
-        au < ready ; 2016 ; Antiphon: A Journal for Liturgical Renewal Volume 20 [2016] ; 12152 >
-        au < ready ; 2017 ; Antiphon: A Journal for Liturgical Renewal Volume 21 [2017] ; 12661 >
-        au < ready ; 2018 ; Antiphon: A Journal for Liturgical Renewal Volume 22 [2018] ; 13404 >
+        au < released ; 2012 ; Antiphon: A Journal for Liturgical Renewal Volume 16 [2012] ; 13207 >
+        au < released ; 2013 ; Antiphon: A Journal for Liturgical Renewal Volume 17 [2013] ; 13208 >
+        au < released ; 2014 ; Antiphon: A Journal for Liturgical Renewal Volume 18 [2014] ; 13209 >
+        au < released ; 2015 ; Antiphon: A Journal for Liturgical Renewal Volume 19 [2015] ; 12148 >
+        au < released ; 2016 ; Antiphon: A Journal for Liturgical Renewal Volume 20 [2016] ; 12152 >
+        au < released ; 2017 ; Antiphon: A Journal for Liturgical Renewal Volume 21 [2017] ; 12661 >
+        au < released ; 2018 ; Antiphon: A Journal for Liturgical Renewal Volume 22 [2018] ; 13404 >
 
     }
 
@@ -43,7 +43,7 @@
         au < released ; 2013 ; Bulletin of Medieval Canon Law Volume 30 [2013] ; 9910 >
         au < released ; 2014 ; Bulletin of Medieval Canon Law Volume 31 [2014] ; 10834 >
         au < released ; 2015 ; Bulletin of Medieval Canon Law Volume 32 [2015] ; 11204 >
-        au < ready ; 2016 ; Bulletin of Medieval Canon Law Volume 33 [2016] ; 12557 >
+        au < released ; 2016 ; Bulletin of Medieval Canon Law Volume 33 [2016] ; 12557 >
         au < testing ; 2017 ; Bulletin of Medieval Canon Law Volume 34 [2017] ; 13553 >
 
     }
@@ -60,7 +60,7 @@
       attr[journal_id] = 743
 
         au < testing ; 2017 ; Old Testament Abstracts Volume 40 [2017] ; 13968 >
-        au < ready ; 2018 ; Old Testament Abstracts Volume 41 [2018] ; 13969 >
+        au < released ; 2018 ; Old Testament Abstracts Volume 41 [2018] ; 13969 >
         au < exists ; 2019 ; Old Testament Abstracts Volume 42 [2019] ; 13990 >
 
     }
@@ -79,8 +79,8 @@
         au < released ; 2014-2015 ; Quaestiones Disputatae Volume 5 [2014-2015] ; 10539 >
         au < released ; 2015-2016 ; Quaestiones Disputatae Volume 6 [2015-2016] ; 10768 >
         au < released ; 2016-2017 ; Quaestiones Disputatae Volume 7 [2016-2017] ; 12462 >
-        au < ready ; 2017-2018 ; Quaestiones Disputatae Volume 8 [2017-2018] ; 13029 >
-        au < ready ; 2018-2019 ; Quaestiones Disputatae Volume 9 [2018-2019] ; 13997 >
+        au < released ; 2017-2018 ; Quaestiones Disputatae Volume 8 [2017-2018] ; 13029 >
+        au < released ; 2018-2019 ; Quaestiones Disputatae Volume 9 [2018-2019] ; 13997 >
 
     }
 
@@ -135,7 +135,7 @@
         au < released ; 2015 ; The Catholic Historical Review Volume 101 [2015] ; 10427 >
         au < released ; 2016 ; The Catholic Historical Review Volume 102 [2016] ; 11170 >
         au < released ; 2017 ; The Catholic Historical Review Volume 103 [2017] ; 12486 >
-        au < ready ; 2018 ; The Catholic Historical Review Volume 104 [2018] ; 13408 >
+        au < released ; 2018 ; The Catholic Historical Review Volume 104 [2018] ; 13408 >
 
     }
 
@@ -175,7 +175,7 @@
 
         au < testing ; 2016 ; The Jurist: Studies in Church Law and Ministry Volume 13 [2016] ; 13031 >
         au < testing ; 2017 ; The Jurist: Studies in Church Law and Ministry Volume 14 [2017] ; 13034 >
-        au < ready ; 2018 ; The Jurist: Studies in Church Law and Ministry Volume 15 [2018] ; 13620 >
+        au < released ; 2018 ; The Jurist: Studies in Church Law and Ministry Volume 15 [2018] ; 13620 >
 
     }
 
@@ -190,9 +190,9 @@
 
       attr[journal_id] = 686
 
-        au < ready ; 2016 ; Nova et vetera Volume 14 [2016] ; 10947 >
-        au < ready ; 2017 ; Nova et vetera Volume 15 [2017] ; 12538 >
-        au < ready ; 2018 ; Nova et vetera Volume 16 [2018] ; 13229 >
+        au < released ; 2016 ; Nova et vetera Volume 14 [2016] ; 10947 >
+        au < released ; 2017 ; Nova et vetera Volume 15 [2017] ; 12538 >
+        au < released ; 2018 ; Nova et vetera Volume 16 [2018] ; 13229 >
 
     }
 

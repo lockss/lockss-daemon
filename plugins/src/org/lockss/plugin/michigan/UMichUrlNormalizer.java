@@ -40,8 +40,8 @@ public class UMichUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
   
   protected static final Logger log = Logger.getLogger(UMichUrlNormalizer.class);
   
-  //protected static final String LOCALE_PARAM = "\\?locale=en";
-  //protected static final String UTF_PARAM = "\\?utf=.*";
+  protected static final String LOCALE_PARAM = "\\?locale=en";
+  protected static final String UTF_PARAM = "\\?utf8=.*";
   /* not used as patterns, no need to escape questionmark and dot*/
   private static final String IMAGE_SERVICE  = "/image-service/";
   private static final String JPEG_ARGUMENT  = ".jpg?";
@@ -51,8 +51,8 @@ public class UMichUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
   public String normalizeUrl(String url, ArchivalUnit au)
 		  throws PluginException {
 	  // no need to check first 
-	  //url = url.replaceFirst(LOCALE_PARAM, "");
-	  //url = url.replaceFirst(LOCALE_PARAM, "");
+	  url = url.replaceFirst(LOCALE_PARAM, "");
+	  url = url.replaceFirst(UTF_PARAM, "");
 	  // remove changing argument on end of images 
 	  if (url.contains(IMAGE_SERVICE) && url.contains(JPEG_ARGUMENT)) {
 		  url = url.replaceFirst("\\?.*", "");

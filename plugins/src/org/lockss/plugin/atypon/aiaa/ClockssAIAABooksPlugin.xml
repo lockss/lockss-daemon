@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>ready</string>
+    <string>down - for review of new site</string>
   </entry>
   <!-- https transition enabled -->  
   <entry>
@@ -10,7 +10,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>17</string>
+    <string>19</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -22,12 +22,17 @@
   </entry>
    <entry>
     <string>plugin_parent_version</string>
-    <string>17</string>
+    <string>19</string>
   </entry>
   <entry>
     <string>au_name</string>
     <string>"American Institute of Aeronautics and Astronautics Books Plugin (CLOCKSS), Base URL %s, eISBN %s", base_url, book_eisbn</string>
   </entry>
+  <entry>
+    <!--  for now, for clockss, do not filter PDF before computing hash; for production machine we start from a single copy -->
+    <string>application/pdf_filter_factory</string>  
+    <org.lockss.util.Default />
+  </entry>  
   <!--  support for http to https -->
   <entry>
   <string>au_start_url</string>

@@ -43,23 +43,23 @@
       issnl = 1943-0264
     >
 
-    implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
+    implicit < status ; status2 ; year ; name ; param[volume_name] ; param[base_url] ; hidden[proxy] >
 
     {
 
-      param[base_url] = http://cshperspectives.cshlp.org/
+      #param[base_url] = http://cshperspectives.cshlp.org/
 
-      au < frozen ; exists ; 2009 ; Cold Spring Harbor Perspectives in Biology Volume 1 ; 1 ; >
-      au < frozen ; exists ; 2010 ; Cold Spring Harbor Perspectives in Biology Volume 2 ; 2 ; >
-      au < frozen ; exists ; 2011 ; Cold Spring Harbor Perspectives in Biology Volume 3 ; 3 ; >
-      au < frozen ; exists ; 2012 ; Cold Spring Harbor Perspectives in Biology Volume 4 ; 4 ; >
-      au < frozen ; exists ; 2013 ; Cold Spring Harbor Perspectives in Biology Volume 5 ; 5 ; >
-      au < finished ; crawling ; 2014 ; Cold Spring Harbor Perspectives in Biology Volume 6 ; 6 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2015 ; Cold Spring Harbor Perspectives in Biology Volume 7 ; 7 ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2016 ; Cold Spring Harbor Perspectives in Biology Volume 8 ; 8 ; >
-      au < deepCrawl ; exists ; 2017 ; Cold Spring Harbor Perspectives in Biology Volume 9 ; 9 ; >
-      au < deepCrawl ; exists ; 2018 ; Cold Spring Harbor Perspectives in Biology Volume 10 ; 10 ; >
-      au < expected ; exists ; 2019 ; Cold Spring Harbor Perspectives in Biology Volume 11 ; 11 ; >
+      au < frozen ; exists ; 2009 ; Cold Spring Harbor Perspectives in Biology Volume 1 ; 1 ; http://cshperspectives.cshlp.org/ ; >
+      au < frozen ; exists ; 2010 ; Cold Spring Harbor Perspectives in Biology Volume 2 ; 2 ; http://cshperspectives.cshlp.org/ ; >
+      au < frozen ; exists ; 2011 ; Cold Spring Harbor Perspectives in Biology Volume 3 ; 3 ; http://cshperspectives.cshlp.org/ ; >
+      au < frozen ; exists ; 2012 ; Cold Spring Harbor Perspectives in Biology Volume 4 ; 4 ; http://cshperspectives.cshlp.org/ ; >
+      au < frozen ; exists ; 2013 ; Cold Spring Harbor Perspectives in Biology Volume 5 ; 5 ; http://cshperspectives.cshlp.org/ ; >
+      au < finished ; crawling ; 2014 ; Cold Spring Harbor Perspectives in Biology Volume 6 ; 6 ; http://cshperspectives.cshlp.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; Cold Spring Harbor Perspectives in Biology Volume 7 ; 7 ; http://cshperspectives.cshlp.org/ ; reingest5.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2016 ; Cold Spring Harbor Perspectives in Biology Volume 8 ; 8 ; http://cshperspectives.cshlp.org/ ; >
+      au < deepCrawl ; exists ; 2017 ; Cold Spring Harbor Perspectives in Biology Volume 9 ; 9 ; http://cshperspectives.cshlp.org/ ; >
+      au < deepCrawl ; exists ; 2018 ; Cold Spring Harbor Perspectives in Biology Volume 10 ; 10 ; http://cshperspectives.cshlp.org/ ; >
+      au < manifest ; exists ; 2019 ; Cold Spring Harbor Perspectives in Biology Volume 11 ; 11 ; https://cshperspectives.cshlp.org/ ; >
 
     }
     
@@ -421,7 +421,7 @@
       au < deepCrawl ; exists ; 2016 ; RNA Volume 22 ; 22 ; http://rnajournal.cshlp.org/ ; >
       au < deepCrawl ; exists ; 2017 ; RNA Volume 23 ; 23 ; http://rnajournal.cshlp.org/ ; >
       au < deepCrawl ; exists ; 2018 ; RNA Volume 24 ; 24 ; http://rnajournal.cshlp.org/ ; >
-      au < expected ; exists ; 2019 ; RNA Volume 25 ; 25 ; https://rnajournal.cshlp.org/ ; >
+      au < manifest ; exists ; 2019 ; RNA Volume 25 ; 25 ; https://rnajournal.cshlp.org/ ; >
 
     }
 
