@@ -6159,7 +6159,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Genome Biology and Evolution Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Genome Biology and Evolution Volume 7 ; 7 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Genome Biology and Evolution Volume 8 ; 8 ; >
-    au < testing ; exists ; 2017 ; 2017 ; Genome Biology and Evolution Volume 9 ; 9 ; >
+    au < notReady ; exists ; 2017 ; 2017 ; Genome Biology and Evolution Volume 9 ; 9 ; > # 403 error on cdn back file
     au < deepCrawl ; exists ; 2018 ; 2018 ; Genome Biology and Evolution Volume 10 ; 10 ; >
 
   }
@@ -9278,7 +9278,7 @@
 
     param[journal_id] = ecco-jccs
 
-    au < testing ; exists ; 2007 ; 2007 ; Journal of Crohn's and Colitis Supplements Volume 1 ; 1 ; >
+    au < notReady ; exists ; 2007 ; 2007 ; Journal of Crohn's and Colitis Supplements Volume 1 ; 1 ; > # no permission statement on manifest page
     au < frozen ; exists ; 2008 ; 2008 ; Journal of Crohn's and Colitis Supplements Volume 2 ; 2 ; >
     au < frozen ; exists ; 2009 ; 2009 ; Journal of Crohn's and Colitis Supplements Volume 3 ; 3 ; >
     au < frozen ; exists ; 2010 ; 2010 ; Journal of Crohn's and Colitis Supplements Volume 4 ; 4 ; >
@@ -10364,7 +10364,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Journal of Medical Entomology Volume 42 ; 42 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Journal of Medical Entomology Volume 43 ; 43 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Journal of Medical Entomology Volume 44 ; 44 ; >
-    au < testing ; exists ; 2008 ; 2008 ; Journal of Medical Entomology Volume 45 ; 45 ; >
+    au < notReady ; exists ; 2008 ; 2008 ; Journal of Medical Entomology Volume 45 ; 45 ; > #403 error on cdn back file
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Journal of Medical Entomology Volume 46 ; 46 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Journal of Medical Entomology Volume 47 ; 47 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Journal of Medical Entomology Volume 48 ; 48 ; >
