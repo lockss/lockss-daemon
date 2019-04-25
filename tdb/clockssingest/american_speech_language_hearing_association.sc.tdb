@@ -27,7 +27,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; American Journal of Audiology Volume 23 ; 2014 ; https://aja.pubs.asha.org/ ; >
       au < doNotProcess ; doNotProcess ; 2015 ; American Journal of Audiology Volume 24 ; 2015 ; https://aja.pubs.asha.org/ ; >
       au < frozen ; exists ; 2016 ; American Journal of Audiology Volume 25 ; 2016 ; http://aja.pubs.asha.org/ ; >
-      au < deepCrawl ; exists ; 2017 ; American Journal of Audiology Volume 26 ; 2017 ; http://aja.pubs.asha.org/ ; >
+      au < frozen ; exists ; 2017 ; American Journal of Audiology Volume 26 ; 2017 ; http://aja.pubs.asha.org/ ; >
       au < doNotProcess ; doNotProcess ; 2018 ; American Journal of Audiology Volume 27 ; 2018 ; https://aja.pubs.asha.org/ ; >
 
   }
@@ -44,7 +44,7 @@
       param[resource_id] = 141
 
       au < frozen ; exists ; 2016 ; American Journal of Speech-Language Pathology Volume 25 ; 2016 ; http://ajslp.pubs.asha.org/ ; >
-      au < deepCrawl ; exists ; 2017 ; American Journal of Speech-Language Pathology Volume 26 ; 2017 ; http://ajslp.pubs.asha.org/ ; >
+      au < frozen ; exists ; 2017 ; American Journal of Speech-Language Pathology Volume 26 ; 2017 ; http://ajslp.pubs.asha.org/ ; >
       au < doNotProcess ; doNotProcess ; 2018 ; American Journal of Speech-Language Pathology Volume 27 ; 2018 ; https://ajslp.pubs.asha.org/ ; >
 
   }
@@ -64,7 +64,7 @@
 
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Speech, Language, and Hearing Research Volume 58 ; 2015 ; https://jslhr.pubs.asha.org/ ; >
       au < frozen ; exists ; 2016 ; Journal of Speech, Language, and Hearing Research Volume 59 ; 2016 ; http://jslhr.pubs.asha.org/ ; >
-      au < deepCrawl ; exists ; 2017 ; Journal of Speech, Language, and Hearing Research Volume 60 ; 2017 ; http://jslhr.pubs.asha.org/ ; >
+      au < frozen ; exists ; 2017 ; Journal of Speech, Language, and Hearing Research Volume 60 ; 2017 ; http://jslhr.pubs.asha.org/ ; >
       au < doNotProcess ; doNotProcess ; 2018 ; Journal of Speech, Language, and Hearing Research Volume 61 ; 2018 ; https://jslhr.pubs.asha.org/ ; >
 
   }
@@ -81,7 +81,7 @@
       param[resource_id] = 143
 
       au < frozen ; exists ; 2016 ; Language, Speech, and Hearing Services in Schools Volume 47 ; 2016 ; http://lshss.pubs.asha.org/ ; >
-      au < deepCrawl ; exists ; 2017 ; Language, Speech, and Hearing Services in Schools Volume 48 ; 2017 ; http://lshss.pubs.asha.org/ ; >
+      au < frozen ; exists ; 2017 ; Language, Speech, and Hearing Services in Schools Volume 48 ; 2017 ; http://lshss.pubs.asha.org/ ; >
       au < doNotProcess ; doNotProcess ; 2018 ; Language, Speech, and Hearing Services in Schools Volume 49 ; 2018 ; https://lshss.pubs.asha.org/ ; >
 
   }
