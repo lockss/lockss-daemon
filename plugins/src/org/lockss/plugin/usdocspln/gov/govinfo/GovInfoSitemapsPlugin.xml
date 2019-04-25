@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>development</string>
+    <string>ready</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -97,14 +97,12 @@
     <list>
 <!-- https://www.govinfo.gov/content/pkg/DCPD-201800002.zip-->
       <string>2,"^https?://%s/content/(granule|pkg)/[^/]+\.zip$", url_host(base_url)</string>
-<!--https://www.govinfo.gov/content/pkg/DCPD-201800002/html/DCPD-201800002.htm -->
-      <string>1,"^https?://%s/content/(granule|pkg)/%s-20180007", url_host(base_url), collection_id</string>
-<!--https://www.govinfo.gov/app/details/DCPD-201800002 -->
-      <string>1,"^https?://%s/app/details/%s-20180007", url_host(base_url), collection_id</string>
+      <string>1,"^https?://%s/content/(granule|pkg)/%s-", url_host(base_url), collection_id</string>
+      <string>1,"^https?://%s/app/details/%s-", url_host(base_url), collection_id</string>
 <!--  https://www.govinfo.gov/app/frtoc/2018-01-02 -->
 	  <string>1, "^https?://%s/app/frtoc/%d", url_host(base_url), year</string>
       <string>1, "^https://maxcdn.bootstrapcdn.com/.*\.css$"</string>
-      <string>1, "^https?://www\.govinfo\.gov/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)(\?v=[0-9.]+)?$", url_host(base_url)</string>
+      <string>1, "^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)([^/]+v=[0-9.]+)?$", url_host(base_url)</string>
     </list>
   </entry>
   <entry>
@@ -151,13 +149,10 @@
         <!-- pause crawls Monday through Friday 9am through 9pm Eastern, but a "heartbeat" once per hour is allowed -->
         <entry>
           <org.lockss.daemon.CrawlWindows-Daily>
-            <!--<from>9:00</from>
-            <to>21:00</to>, original-->
-            <from>1:00</from>
-            <to>2:00</to>
+            <from>9:00</from>
+            <to>21:00</to>
             <timeZoneId>US/Eastern</timeZoneId>
-            <!--<daysOfWeek>4;5;6</daysOfWeek>, original-->
-            <daysOfWeek>1;7</daysOfWeek>
+            <daysOfWeek>4;5;6</daysOfWeek>
           </org.lockss.daemon.CrawlWindows-Daily>
           <org.lockss.plugin.RateLimiterInfo>
             <rate>1/1h</rate>
