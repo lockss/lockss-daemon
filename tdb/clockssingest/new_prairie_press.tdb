@@ -306,10 +306,10 @@
       param[journal_abbr] = advocate
 
       au < manifest ; exists ; 2011 ; The Advocate Volume 19 ; 19 ; >
-      au < crawling ; exists ; 2012 ; The Advocate Volume 20 ; 20 ; >
-      au < crawling ; exists ; 2013 ; The Advocate Volume 21 ; 21 ; >
+      au < frozen ; exists ; 2012 ; The Advocate Volume 20 ; 20 ; >
+      au < frozen ; exists ; 2013 ; The Advocate Volume 21 ; 21 ; >
       au < frozen ; exists ; 2014 ; The Advocate Volume 22 ; 22 ; >
-      au < testing ; exists ; 2015 ; The Advocate Volume 23 ; 23 ; >
+      au < ready ; exists ; 2015 ; The Advocate Volume 23 ; 23 ; >
       au < exists ; exists ; 2016 ; The Advocate Volume 24 ; 24 ; >
       au < exists ; exists ; 2017 ; The Advocate Volume 25 ; 25 ; >
       au < expected ; exists ; 2018 ; The Advocate Volume 26 ; 26 ; >
@@ -331,7 +331,7 @@
       param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = crossingborders
 
-      au < crawling ; exists ; 2015 ; Crossing Borders: An Undergraduate Journal of Interdisciplinary Scholarship Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2015 ; Crossing Borders: An Undergraduate Journal of Interdisciplinary Scholarship Volume 1 ; 1 ; >
       au < frozen ; exists ; 2016 ; Crossing Borders: An Undergraduate Journal of Interdisciplinary Scholarship Volume 2 ; 2 ; >
       au < ready ; exists ; 2017 ; Crossing Borders: An Undergraduate Journal of Interdisciplinary Scholarship Volume 3 ; 3 ; >
       au < expected ; exists ; 2018 ; Crossing Borders: An Undergraduate Journal of Interdisciplinary Scholarship Volume 4 ; 4 ; >
@@ -393,7 +393,7 @@
       au < manifest ; exists ; 2009 ; Educational Considerations Volume 37 ; 37 ; >
       au < manifest ; exists ; 2010 ; Educational Considerations Volume 38 ; 38 ; >
       au < manifest ; exists ; 2011 ; Educational Considerations Volume 39 ; 39 ; >
-      au < testing ; exists ; 2012 ; Educational Considerations Volume 40 ; 40 ; >
+      au < ready ; exists ; 2012 ; Educational Considerations Volume 40 ; 40 ; >
       au < ready ; exists ; 2013 ; Educational Considerations Volume 41 ; 41 ; >
       au < frozen ; exists ; 2014 ; Educational Considerations Volume 42 ; 42 ; >
       au < ready ; exists ; 2015 ; Educational Considerations Volume 43 ; 43 ; >
@@ -418,7 +418,7 @@
       param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = fgr
 
-      au < crawling ; exists ; 2016 ; Fungal Genetics Reports Volume 62 ; 62 ; >
+      au < frozen ; exists ; 2016 ; Fungal Genetics Reports Volume 62 ; 62 ; >
       au < exists ; exists ; 2017 ; Fungal Genetics Reports Volume 63 ; 63 ; >
       au < expected ; exists ; 2018 ; Fungal Genetics Reports Volume 64 ; 64 ; >
       au < expected ; exists ; 2019 ; Fungal Genetics Reports Volume 65 ; 65 ; >
@@ -460,7 +460,7 @@
       param[journal_abbr] = ijssw
 
       au < frozen ; exists ; 2016 ; International Journal of School Social Work Volume 1 ; 1 ; >
-      au < testing ; exists ; 2017 ; International Journal of School Social Work Volume 2 ; 2 ; >
+      au < ready ; exists ; 2017 ; International Journal of School Social Work Volume 2 ; 2 ; >
       au < frozen ; exists ; 2018 ; International Journal of School Social Work Volume 3 ; 3 ; >
       au < expected ; exists ; 2019 ; International Journal of School Social Work Volume 4 ; 4 ; >
       au < expected ; exists ; 2020 ; International Journal of School Social Work Volume 5 ; 5 ; >
@@ -528,7 +528,7 @@
       au < frozen ; exists ; 2013 ; Journal of Applied Communications Volume 96 ; 96 ; >
       au < frozen ; exists ; 2014 ; Journal of Applied Communications Volume 97 ; 97 ; >
       au < frozen ; exists ; 2015 ; Journal of Applied Communications Volume 98 ; 98 ; >
-      au < testing ; exists ; 2016 ; Journal of Applied Communications Volume 99 ; 99 ; >
+      au < ready ; exists ; 2016 ; Journal of Applied Communications Volume 99 ; 99 ; >
       au < ready ; exists ; 2017 ; Journal of Applied Communications Volume 100 ; 100 ; >
       au < frozen ; exists ; 2018 ; Journal of Applied Communications Volume 101 ; 101 ; >
       au < manifest ; exists ; 2019 ; Journal of Applied Communications Volume 102 ; 102 ; >
@@ -588,7 +588,7 @@
       param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = kaesrr
 
-      au < crawling ; exists ; 2015 ; Kansas Agricultural Experiment Station Research Reports Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2015 ; Kansas Agricultural Experiment Station Research Reports Volume 1 ; 1 ; >
       au < ready ; exists ; 2016 ; Kansas Agricultural Experiment Station Research Reports Volume 2 ; 2 ; >
       au < frozen ; exists ; 2017 ; Kansas Agricultural Experiment Station Research Reports Volume 3 ; 3 ; >
       au < frozen ; exists ; 2018 ; Kansas Agricultural Experiment Station Research Reports Volume 4 ; 4 ; >
@@ -836,7 +836,7 @@
       au < frozen ; exists ; 2012 ; Studies in 20th & 21st Century Literature Volume 37 ; 37 ; >
       au < frozen ; exists ; 2013 ; Studies in 20th & 21st Century Literature Volume 38 ; 38 ; >
       au < frozen ; exists ; 2014 ; Studies in 20th & 21st Century Literature Volume 39 ; 39 ; >
-      au < testing ; exists ; 2015 ; Studies in 20th & 21st Century Literature Volume 40 ; 40 ; >
+      au < ready ; exists ; 2015 ; Studies in 20th & 21st Century Literature Volume 40 ; 40 ; >
       au < frozen ; exists ; 2016 ; Studies in 20th & 21st Century Literature Volume 41 ; 41 ; >
       au < frozen ; exists ; 2017 ; Studies in 20th & 21st Century Literature Volume 42 ; 42 ; >
       au < frozen ; exists ; 2018 ; Studies in 20th & 21st Century Literature Volume 43 ; 43 ; >

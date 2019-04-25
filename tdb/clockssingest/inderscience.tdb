@@ -175,7 +175,7 @@
       au < doNotProcess ; doNotProcess ; 2011-2012 ; European Journal of Cross-Cultural Competence and Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2014-2015 ; European Journal of Cross-Cultural Competence and Management Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; >
       au < finished ; crawling ; 2016-2017 ; European Journal of Cross-Cultural Competence and Management Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < manifest ; exists ; 2018-2019 ; European Journal of Cross-Cultural Competence and Management Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2018-2019 ; European Journal of Cross-Cultural Competence and Management Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -534,7 +534,7 @@
       au < doNotProcess ; exists ; 2009 ; International Journal of Agent-Oriented Software Engineering Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2010-2011 ; International Journal of Agent-Oriented Software Engineering Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < frozen ; exists ; 2015-2017 ; International Journal of Agent-Oriented Software Engineering Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2018-2019 ; International Journal of Agent-Oriented Software Engineering Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2018-2019 ; International Journal of Agent-Oriented Software Engineering Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -921,7 +921,7 @@
 
       au < doNotProcess ; doNotProcess ; 2009-2010 ; International Journal of Autonomic Computing Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < finished ; crawling ; 2014-2017 ; International Journal of Autonomic Computing Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 2018-2019 ; International Journal of Autonomic Computing Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2018-2019 ; International Journal of Autonomic Computing Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -1721,7 +1721,7 @@
       au < doNotProcess ; exists ; 2007-2008 ; International Journal of Chinese Culture and Management Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; exists ; 2009 ; International Journal of Chinese Culture and Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2010-2015 ; International Journal of Chinese Culture and Management Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2017-2019 ; International Journal of Chinese Culture and Management Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; > #issue2, 3, 4 not online
+      au < crawling ; exists ; 2017-2019 ; International Journal of Chinese Culture and Management Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; > #issue2, 3, 4 not online
 
     }
 
@@ -1808,7 +1808,7 @@
       au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Collaborative Enterprise Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2014 ; International Journal of Collaborative Enterprise Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; >
       au < finished ; crawling ; 2015-2016 ; International Journal of Collaborative Enterprise Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < manifest ; exists ; 2018-2019 ; International Journal of Collaborative Enterprise Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2018-2019 ; International Journal of Collaborative Enterprise Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -2574,7 +2574,7 @@
       au < finished ; finished ; 2013-2014 ; International Journal of Decision Sciences, Risk and Management Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; >
       au < finished ; crawling ; 2015-2016 ; International Journal of Decision Sciences, Risk and Management Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; International Journal of Decision Sciences, Risk and Management Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 2018-2019 ; International Journal of Decision Sciences, Risk and Management Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; > #issue 3, 4 not online
+      au < testing ; exists ; 2018-2019 ; International Journal of Decision Sciences, Risk and Management Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; > #issue 3, 4 not online
 
     }
 
@@ -2645,7 +2645,7 @@
       param[journal_id] = ijdh
 
       au < finished ; crawling ; 2015-2016 ; International Journal of the Digital Human Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < manifest ; exists ; 2018-2019 ; International Journal of the Digital Human Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2018-2019 ; International Journal of the Digital Human Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -2663,7 +2663,7 @@
       au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Diplomacy and Economy Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2014-2015 ; International Journal of Diplomacy and Economy Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; >
       au < finished ; crawling ; 2016-2017 ; International Journal of Diplomacy and Economy Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < manifest ; exists ; 2018-2019 ; International Journal of Diplomacy and Economy Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2018-2019 ; International Journal of Diplomacy and Economy Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -2974,7 +2974,7 @@
       au < finished ; finished ; 2012-2014 ; International Journal of Electronic Healthcare Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2015 ; International Journal of Electronic Healthcare Volume 8 ; 8 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2016-2017 ; International Journal of Electronic Healthcare Volume 9 ; 9 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 > 
-      au < manifest ; exists ; 2018-2019 ; International Journal of Electronic Healthcare Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2018-2019 ; International Journal of Electronic Healthcare Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -3373,7 +3373,7 @@
       au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Environment and Health Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2014-2015 ; International Journal of Environment and Health Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; >
       au < finished ; crawling ; 2016-2017 ; International Journal of Environment and Health Volume 8 ; 8 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < manifest ; exists ; 2018-2019 ; International Journal of Environment and Health Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2018-2019 ; International Journal of Environment and Health Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -3700,7 +3700,7 @@
       au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Experimental Design and Process Optimisation Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2014-2015 ; International Journal of Experimental Design and Process Optimisation Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; >
       au < frozen ; exists ; 2016-2017 ; International Journal of Experimental Design and Process Optimisation Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2018-2019 ; International Journal of Experimental Design and Process Optimisation Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2018-2019 ; International Journal of Experimental Design and Process Optimisation Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -3800,7 +3800,7 @@
       au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Forensic Engineering Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2014-2015 ; International Journal of Forensic Engineering Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; >
       au < finished ; crawling ; 2016-2017 ; International Journal of Forensic Engineering Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < manifest ; exists ; 2018-2019 ; International Journal of Forensic Engineering Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2018-2019 ; International Journal of Forensic Engineering Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -4299,7 +4299,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Human Factors Modelling and Simulation Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2013-2014 ; International Journal of Human Factors Modelling and Simulation Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; >
       au < finished ; crawling ; 2015-2017 ; International Journal of Human Factors Modelling and Simulation Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2018-2019 ; International Journal of Human Factors Modelling and Simulation Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2018-2019 ; International Journal of Human Factors Modelling and Simulation Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -4372,7 +4372,7 @@
 
       au < finished ; finished ; 2015 ; International Journal of Image Mining Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2016-2017 ; International Journal of Image Mining Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 2018-2019 ; International Journal of Image Mining Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2018-2019 ; International Journal of Image Mining Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -4486,7 +4486,7 @@
       au < finished ; finished ; 2009-2014 ; International Journal of Industrial Electronics and Drives Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2015 ; International Journal of Industrial Electronics and Drives Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2016-2017 ; International Journal of Industrial Electronics and Drives Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 2018-2019 ; International Journal of Industrial Electronics and Drives Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2018-2019 ; International Journal of Industrial Electronics and Drives Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -4795,7 +4795,7 @@
       au < finished ; finished ; 2013-2014 ; International Journal of Innovation and Regional Development Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2015 ; International Journal of Innovation and Regional Development Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2016-2017 ; International Journal of Innovation and Regional Development Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < manifest ; exists ; 2018-2019 ; International Journal of Innovation and Regional Development Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2018-2019 ; International Journal of Innovation and Regional Development Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -4882,7 +4882,7 @@
       param[journal_id] = ijit
 
       au < finished ; crawling ; 2011-2015 ; International Journal of Instrumentation Technology Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < manifest ; exists ; 2018-2019 ; International Journal of Instrumentation Technology Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2018-2019 ; International Journal of Instrumentation Technology Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -5110,7 +5110,7 @@
       au < doNotProcess ; doNotProcess ; 2009-2010 ; International Journal of Internet Manufacturing and Services Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2011-2014 ; International Journal of Internet Manufacturing and Services Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; >
       au < finished ; crawling ; 2015-2017 ; International Journal of Internet Manufacturing and Services Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2018 ; International Journal of Internet Manufacturing and Services Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2018 ; International Journal of Internet Manufacturing and Services Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2019 ; International Journal of Internet Manufacturing and Services Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -5315,7 +5315,7 @@
       au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Knowledge Engineering and Data Mining Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2014-2015 ; International Journal of Knowledge Engineering and Data Mining Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; >
       au < finished ; crawling ; 2016-2017 ; International Journal of Knowledge Engineering and Data Mining Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < testing ; exists ; 2018 ; International Journal of Knowledge Engineering and Data Mining Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
+      au < ready ; exists ; 2018 ; International Journal of Knowledge Engineering and Data Mining Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2019 ; International Journal of Knowledge Engineering and Data Mining Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -5509,7 +5509,7 @@
       au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Leisure and Tourism Marketing Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2014-2015 ; International Journal of Leisure and Tourism Marketing Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2016-2017 ; International Journal of Leisure and Tourism Marketing Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < manifest ; exists ; 2018-2019 ; International Journal of Leisure and Tourism Marketing Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2018-2019 ; International Journal of Leisure and Tourism Marketing Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -5642,7 +5642,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Low Radiation Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2013-2014 ; International Journal of Low Radiation Volume 9 ; 9 ; http://www.inderscienceonline.com/ ; >
       au < finished ; crawling ; 2015-2017 ; International Journal of Low Radiation Volume 10 ; 10 ; http://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2018-2019 ; International Journal of Low Radiation Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2018-2019 ; International Journal of Low Radiation Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -5658,7 +5658,7 @@
       param[journal_id] = ijmissp
 
       au < finished ; finished ; 2013-2016 ; International Journal of Machine Intelligence and Sensory Signal Processing Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < ready ; exists ; 2017-2019 ; International Journal of Machine Intelligence and Sensory Signal Processing Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < ingNotReady ; exists ; 2017-2019 ; International Journal of Machine Intelligence and Sensory Signal Processing Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -6476,7 +6476,7 @@
       au < finished ; finished ; 2014 ; International Journal of Modelling in Operations Management Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2015 ; International Journal of Modelling in Operations Management Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2016-2017 ; International Journal of Modelling in Operations Management Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < manifest ; exists ; 2018-2019 ; International Journal of Modelling in Operations Management Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2018-2019 ; International Journal of Modelling in Operations Management Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -6678,7 +6678,7 @@
       au < finished ; finished ; 2014 ; International Journal of Nanoparticles Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2015 ; International Journal of Nanoparticles Volume 8 ; 8 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2016-2017 ; International Journal of Nanoparticles Volume 9 ; 9 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2018 ; International Journal of Nanoparticles Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; >
+      au < frozen ; exists ; 2018 ; International Journal of Nanoparticles Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2019 ; International Journal of Nanoparticles Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -7234,7 +7234,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Private Law Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2014 ; International Journal of Private Law Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015-2017 ; International Journal of Private Law Volume 8 ; 8 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < manifest ; exists ; 2018-2019 ; International Journal of Private Law Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2018-2019 ; International Journal of Private Law Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -7556,7 +7556,7 @@
       au < finished ; finished ; 2014 ; International Journal of Quality Engineering and Technology Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; International Journal of Quality Engineering and Technology Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2016-2017 ; International Journal of Quality Engineering and Technology Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 2018-2019 ; International Journal of Quality Engineering and Technology Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; > # issue 3,4 not online yet
+      au < testing ; exists ; 2018-2019 ; International Journal of Quality Engineering and Technology Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; > # issue 3,4 not online yet
 
     }
 
@@ -7593,7 +7593,7 @@
       au < doNotProcess ; exists ; 2009 ; International Journal of Radio Frequency Identification Technology and Applications Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Radio Frequency Identification Technology and Applications Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2012-2015 ; International Journal of Radio Frequency Identification Technology and Applications Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2018-2019 ; International Journal of Radio Frequency Identification Technology and Applications Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2018-2019 ; International Journal of Radio Frequency Identification Technology and Applications Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -7614,7 +7614,7 @@
       au < finished ; finished ; 2014 ; International Journal of Rapid Manufacturing Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2015 ; International Journal of Rapid Manufacturing Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2016-2017 ; International Journal of Rapid Manufacturing Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < ready ; exists ; 2018 ; International Journal of Rapid Manufacturing Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2018 ; International Journal of Rapid Manufacturing Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2019 ; International Journal of Rapid Manufacturing Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -7971,7 +7971,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Services Operations and Informatics Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Services Operations and Informatics Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
       au < finished ; crawling ; 2013-2017 ; International Journal of Services Operations and Informatics Volume 8 ; 8 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < manifest ; exists ; 2018-2019 ; International Journal of Services Operations and Informatics Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2018-2019 ; International Journal of Services Operations and Informatics Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -8053,7 +8053,7 @@
       au < finished ; finished ; 2014 ; International Journal of Services, Economics and Management Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2015-2016 ; International Journal of Services, Economics and Management Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; International Journal of Services, Economics and Management Volume 8 ; 8 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < manifest ; exists ; 2018-2019 ; International Journal of Services, Economics and Management Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; > #issue3,4 not online
+      au < testing ; exists ; 2018-2019 ; International Journal of Services, Economics and Management Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; > #issue3,4 not online
 
     }
 
@@ -8174,7 +8174,7 @@
 
       au < doNotProcess ; doNotProcess ; 2008-2012 ; International Journal of Social and Humanistic Computing Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < finished ; crawling ; 2013-2017 ; International Journal of Social and Humanistic Computing Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < manifest ; exists ; 2018-2019 ; International Journal of Social and Humanistic Computing Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2018-2019 ; International Journal of Social and Humanistic Computing Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -8209,7 +8209,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Social Entrepreneurship and Innovation Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2014-2015 ; International Journal of Social Entrepreneurship and Innovation Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2016-2017 ; International Journal of Social Entrepreneurship and Innovation Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < manifest ; exists ; 2018-2019 ; International Journal of Social Entrepreneurship and Innovation Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2018-2019 ; International Journal of Social Entrepreneurship and Innovation Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -8308,7 +8308,7 @@
       au < finished ; finished ; 2014 ; International Journal of Space Science and Engineering Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2015 ; International Journal of Space Science and Engineering Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2016-2017 ; International Journal of Space Science and Engineering Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < manifest ; exists ; 2018-2019 ; International Journal of Space Science and Engineering Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2018-2019 ; International Journal of Space Science and Engineering Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -8843,7 +8843,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Technology Intelligence and Planning Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2014-2015 ; International Journal of Technology Intelligence and Planning Volume 10 ; 10 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2016-2017 ; International Journal of Technology Intelligence and Planning Volume 11 ; 11 ; http://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2018-2019 ; International Journal of Technology Intelligence and Planning Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2018-2019 ; International Journal of Technology Intelligence and Planning Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -9100,7 +9100,7 @@
       au < finished ; finished ; 2015 ; International Journal of Tourism Anthropology Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; International Journal of Tourism Anthropology Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2017 ; International Journal of Tourism Anthropology Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < testing ; exists ; 2018 ; International Journal of Tourism Anthropology Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
+      au < ready ; exists ; 2018 ; International Journal of Tourism Anthropology Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2019 ; International Journal of Tourism Anthropology Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -9259,7 +9259,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Vehicle Autonomous Systems Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2014 ; International Journal of Vehicle Autonomous Systems Volume 12 ; 12 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2015-2017 ; International Journal of Vehicle Autonomous Systems Volume 13 ; 13 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < manifest ; exists ; 2018-2019 ; International Journal of Vehicle Autonomous Systems Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2018-2019 ; International Journal of Vehicle Autonomous Systems Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -9331,7 +9331,7 @@
       au < finished ; crawling ; 2017 ; International Journal of Vehicle Design Volume 74 ; 74 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; International Journal of Vehicle Design Volume 75 ; 75 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2018 ; International Journal of Vehicle Design Volume 76 ; 76 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < ready ; exists ; 2018 ; International Journal of Vehicle Design Volume 77 ; 77 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2018 ; International Journal of Vehicle Design Volume 77 ; 77 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2018 ; International Journal of Vehicle Design Volume 78 ; 78 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2019 ; International Journal of Vehicle Design Volume 79 ; 79 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2019 ; International Journal of Vehicle Design Volume 80 ; 80 ; https://www.inderscienceonline.com/ ; >
@@ -9425,7 +9425,7 @@
       au < finished ; finished ; 2014 ; International Journal of Vehicle Safety Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2015 ; International Journal of Vehicle Safety Volume 8 ; 8 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2016-2017 ; International Journal of Vehicle Safety Volume 9 ; 9 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 2018-2019 ; International Journal of Vehicle Safety Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2018-2019 ; International Journal of Vehicle Safety Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -9598,7 +9598,7 @@
 
       au < doNotProcess ; doNotProcess ; 2011-2012 ; International Journal of Web Science Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2013-2014 ; International Journal of Web Science Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; >
-      au < notReady ; exists ; 2017-2019 ; International Journal of Web Science Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; > #issue2, 3, 4 not online
+      au < ingNotReady ; exists ; 2017-2019 ; International Journal of Web Science Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; > #issue2, 3, 4 not online
 
     }
 
@@ -9797,7 +9797,7 @@
       au < finished ; finished ; 2014 ; Latin American Journal of Management for Sustainable Development Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2015 ; Latin American Journal of Management for Sustainable Development Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2016-2017 ; Latin American Journal of Management for Sustainable Development Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < manifest ; exists ; 2018-2019 ; Latin American Journal of Management for Sustainable Development Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2018-2019 ; Latin American Journal of Management for Sustainable Development Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -10003,7 +10003,7 @@
       au < finished ; crawling ; 2013-2015 ; International Journal of Bonds and Derivatives Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2016 ; International Journal of Bonds and Derivatives Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2017 ; International Journal of Bonds and Derivatives Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 2018-2019 ; International Journal of Bonds and Derivatives Volume 4 ; 4 ; https://www.inderscienceonline.com/ ;  >
+      au < testing ; exists ; 2018-2019 ; International Journal of Bonds and Derivatives Volume 4 ; 4 ; https://www.inderscienceonline.com/ ;  >
 
   }
 
@@ -10127,7 +10127,7 @@
       param[journal_id] = ijhem
 
       au < finished ; crawling ; 2014-2016 ; International Journal of Hospitality and Event Management Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 2018-2019 ; International Journal of Hospitality and Event Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2018-2019 ; International Journal of Hospitality and Event Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
 
   }
 
@@ -10177,7 +10177,7 @@
 
       au < finished ; crawling ; 2015 ; International Journal of Decision Support Systems Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2016-2017 ; International Journal of Decision Support Systems Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < manifest ; exists ; 2018-2019 ; International Journal of Decision Support Systems Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2018-2019 ; International Journal of Decision Support Systems Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
 
   }
 
@@ -10192,7 +10192,7 @@
       param[journal_id] = ijhes
 
       au < finished ; crawling ; 2015-2017 ; International Journal of Higher Education and Sustainability Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < manifest ; exists ; 2018-2019 ; International Journal of Higher Education and Sustainability Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2018-2019 ; International Journal of Higher Education and Sustainability Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
 
   }
 
@@ -10224,7 +10224,7 @@
 
       au < finished ; crawling ; 2015-2016 ; International Journal of Supply Chain and Inventory Management Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2017 ; International Journal of Supply Chain and Inventory Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ ;  >
-      au < manifest ; exists ; 2018-2019 ; International Journal of Supply Chain and Inventory Management Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; > #issue 2 not online
+      au < testing ; exists ; 2018-2019 ; International Journal of Supply Chain and Inventory Management Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; > #issue 2 not online
 
   }
 
@@ -10315,7 +10315,7 @@
       param[journal_id] = ijexportm
 
       au < finished ; crawling ; 2016-2017 ; International Journal of Export Marketing Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 2018-2019 ; International Journal of Export Marketing Volume 2 ; 2 ; https://www.inderscienceonline.com/ ;  >  # issue 3, 4 not online
+      au < testing ; exists ; 2018-2019 ; International Journal of Export Marketing Volume 2 ; 2 ; https://www.inderscienceonline.com/ ;  >  # issue 3, 4 not online
 
   }
 
@@ -10432,7 +10432,7 @@
       param[journal_id] = ijfib
 
       au < finished ; crawling ; 2016-2017 ; International Journal of Financial Innovation in Banking Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 2018-2019 ; International Journal of Financial Innovation in Banking Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2018-2019 ; International Journal of Financial Innovation in Banking Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
 
   }
 
