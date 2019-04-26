@@ -23,7 +23,7 @@
         au < released ; 2015 ; Anthropologica Volume 57 [2015] ; 10602 >
         au < released ; 2016 ; Anthropologica Volume 58 [2016] ; 11256 >
         au < ready ; 2017 ; Anthropologica Volume 59 [2017] ; 12653 >
-        au < testing ; 2018 ; Anthropologica Volume 60 [2018] ; 13693 >
+        au < ready ; 2018 ; Anthropologica Volume 60 [2018] ; 13693 >
 
     }
 
@@ -38,9 +38,9 @@
 
       attr[journal_id] = 699
 
-        au < testing ; 2016 ; Canadian Bulletin of Medical History Volume 33 [2016] ; 11424 >
+        au < ready ; 2016 ; Canadian Bulletin of Medical History Volume 33 [2016] ; 11424 >
         au < ready ; 2017 ; Canadian Bulletin of Medical History Volume 34 [2017] ; 12568 >
-        au < testing ; 2018 ; Canadian Bulletin of Medical History Volume 35 [2018] ; 13524 >
+        au < ready ; 2018 ; Canadian Bulletin of Medical History Volume 35 [2018] ; 13524 >
 
     }
 
@@ -84,9 +84,9 @@
       attr[journal_id] = 727
 
         au < testing ; 2015 ; Canadian Journal of Film Studies / Revue canadienne d'études cinématographiques Volume 24 [2015] ; 13064 >
-        au < testing ; 2016 ; Canadian Journal of Film Studies / Revue canadienne d'études cinématographiques Volume 25 [2016] ; 13065 >
+        au < ready ; 2016 ; Canadian Journal of Film Studies / Revue canadienne d'études cinématographiques Volume 25 [2016] ; 13065 >
         au < ready ; 2017 ; Canadian Journal of Film Studies / Revue canadienne d'études cinématographiques Volume 26 [2017] ; 13367 >
-        au < testing ; 2018 ; Canadian Journal of Film Studies / Revue canadienne d'études cinématographiques Volume 27 [2018] ; 13696 >
+        au < ready ; 2018 ; Canadian Journal of Film Studies / Revue canadienne d'études cinématographiques Volume 27 [2018] ; 13696 >
 
     }
 
@@ -103,7 +103,7 @@
 
         au < released ; 2015 ; Canadian Journal of History Volume 50 [2015] ; 10557 >
         au < released ; 2016 ; Canadian Journal of History Volume 51 [2016] ; 11194 >
-        au < testing ; 2017 ; Canadian Journal of History Volume 52 [2017] ; 12527 >
+        au < ready ; 2017 ; Canadian Journal of History Volume 52 [2017] ; 12527 >
         au < testing ; 2018 ; Canadian Journal of History Volume 53 [2018] ; 13442 >
 
     }
@@ -126,7 +126,7 @@
         au < released ; 2014 ; Canadian Journal of Information and Library Science Volume 38 [2014] ; 10029 >
         au < released ; 2015 ; Canadian Journal of Information and Library Science Volume 39 [2015] ; 10710 >
         au < released ; 2016 ; Canadian Journal of Information and Library Science Volume 40 [2016] ; 11034 >
-        au < testing ; 2017 ; Canadian Journal of Information and Library Science Volume 41 [2017] ; 12793 >
+        au < ready ; 2017 ; Canadian Journal of Information and Library Science Volume 41 [2017] ; 12793 >
         au < testing ; 2018 ; Canadian Journal of Information and Library Science Volume 42 [2018] ; 13940 >
 
     }
@@ -143,10 +143,10 @@
       attr[journal_id] = 316
 
         au < ready ; 2005 ; Canadian Journal of Women and the Law Volume 17 [2005] ; 3111 >
-        au < testing ; 2006 ; Canadian Journal of Women and the Law Volume 18 [2006] ; 3594 >
-        au < testing ; 2007 ; Canadian Journal of Women and the Law Volume 19 [2007] ; 3642 >
-        au < testing ; 2008 ; Canadian Journal of Women and the Law Volume 20 [2008] ; 3876 >
-        au < testing ; 2009 ; Canadian Journal of Women and the Law Volume 21 [2009] ; 5731 >
+        au < ready ; 2006 ; Canadian Journal of Women and the Law Volume 18 [2006] ; 3594 >
+        au < ready ; 2007 ; Canadian Journal of Women and the Law Volume 19 [2007] ; 3642 >
+        au < ready ; 2008 ; Canadian Journal of Women and the Law Volume 20 [2008] ; 3876 >
+        au < ready ; 2009 ; Canadian Journal of Women and the Law Volume 21 [2009] ; 5731 >
         au < released ; 2010 ; Canadian Journal of Women and the Law Volume 22 [2010] ; 6576 >
         au < released ; 2011 ; Canadian Journal of Women and the Law Volume 23 [2011] ; 7295 >
         au < released ; 2012 ; Canadian Journal of Women and the Law Volume 24 [2012] ; 8240 >
@@ -154,8 +154,8 @@
         au < released ; 2014 ; Canadian Journal of Women and the Law Volume 26 [2014] ; 9920 >
         au < released ; 2015 ; Canadian Journal of Women and the Law Volume 27 [2015] ; 10550 >
         au < released ; 2016 ; Canadian Journal of Women and the Law Volume 28 [2016] ; 11152 >
-        au < testing ; 2017 ; Canadian Journal of Women and the Law Volume 29 [2017] ; 12561 >
-        au < testing ; 2018 ; Canadian Journal of Women and the Law Volume 30 [2018] ; 13378 >
+        au < ready ; 2017 ; Canadian Journal of Women and the Law Volume 29 [2017] ; 12561 >
+        au < ready ; 2018 ; Canadian Journal of Women and the Law Volume 30 [2018] ; 13378 >
 
     }
 
@@ -179,7 +179,7 @@
         au < released ; 2015 ; Canadian Public Policy Volume 41 [2015] ; 10447 >
         au < released ; 2016 ; Canadian Public Policy Volume 42 [2016] ; 11092 >
         au < released ; 2017 ; Canadian Public Policy Volume 43 [2017] ; 12331 >
-        au < testing ; 2018 ; Canadian Public Policy Volume 44 [2018] ; 13346 >
+        au < ready ; 2018 ; Canadian Public Policy Volume 44 [2018] ; 13346 >
 
     }
 
@@ -195,16 +195,16 @@
       attr[journal_id] = 269
 
         au < testing ; 1970 ; Canadian Review of American Studies Volume 1 [1970] ; 13100 >
-        au < testing ; 1971 ; Canadian Review of American Studies Volume 2 [1971] ; 13099 >
+        au < ready ; 1971 ; Canadian Review of American Studies Volume 2 [1971] ; 13099 >
         au < testing ; 1972 ; Canadian Review of American Studies Volume 3 [1972] ; 13098 >
         au < testing ; 1973 ; Canadian Review of American Studies Volume 4 [1973] ; 13097 >
         au < testing ; 1974 ; Canadian Review of American Studies Volume 5 [1974] ; 13096 >
         au < ready ; 1975 ; Canadian Review of American Studies Volume 6 [1975] ; 13095 >
-        au < testing ; 1976 ; Canadian Review of American Studies Volume 7 [1976] ; 13094 >
+        au < ready ; 1976 ; Canadian Review of American Studies Volume 7 [1976] ; 13094 >
         au < ready ; 1977 ; Canadian Review of American Studies Volume 8 [1977] ; 13093 >
         au < testing ; 1978 ; Canadian Review of American Studies Volume 9 [1978] ; 13092 >
         au < testing ; 1979 ; Canadian Review of American Studies Volume 10 [1979] ; 13091 >
-        au < testing ; 1980 ; Canadian Review of American Studies Volume 11 [1980] ; 13090 >
+        au < ready ; 1980 ; Canadian Review of American Studies Volume 11 [1980] ; 13090 >
         au < testing ; 1981 ; Canadian Review of American Studies Volume 12 [1981] ; 13089 >
         au < testing ; 1982 ; Canadian Review of American Studies Volume 13 [1982] ; 13088 >
         au < testing ; 1983 ; Canadian Review of American Studies Volume 14 [1983] ; 13087 >
@@ -220,7 +220,7 @@
         au < testing ; 1994 ; Canadian Review of American Studies Volume 24 [1994] ; 13076 >
         au < testing ; 1995 ; Canadian Review of American Studies Volume 25 [1995] ; 13075 >
         au < testing ; 1996 ; Canadian Review of American Studies Volume 26 [1996] ; 13074 >
-        au < testing ; 1997 ; Canadian Review of American Studies Volume 27 [1997] ; 13073 >
+        au < ready ; 1997 ; Canadian Review of American Studies Volume 27 [1997] ; 13073 >
         au < testing ; 1998 ; Canadian Review of American Studies Volume 28 [1998] ; 13072 >
         au < testing ; 1999 ; Canadian Review of American Studies Volume 29 [1999] ; 13071 >
         au < testing ; 2000 ; Canadian Review of American Studies Volume 30 [2000] ; 13068 >
@@ -229,7 +229,7 @@
         au < testing ; 2003 ; Canadian Review of American Studies Volume 33 [2003] ; 13050 >
         au < testing ; 2004 ; Canadian Review of American Studies Volume 34 [2004] ; 2521 >
         au < testing ; 2005 ; Canadian Review of American Studies Volume 35 [2005] ; 2949 >
-        au < testing ; 2006 ; Canadian Review of American Studies Volume 36 [2006] ; 3074 >
+        au < ready ; 2006 ; Canadian Review of American Studies Volume 36 [2006] ; 3074 >
         au < testing ; 2007 ; Canadian Review of American Studies Volume 37 [2007] ; 3402 >
         au < testing ; 2008 ; Canadian Review of American Studies Volume 38 [2008] ; 3905 >
         au < testing ; 2009 ; Canadian Review of American Studies Volume 39 [2009] ; 4371 >
@@ -368,11 +368,11 @@
         au < testing ; 1994-1995 ; Eighteenth-Century Fiction Volume 7 [1994-1995] ; 6785 >
         au < testing ; 1995-1996 ; Eighteenth-Century Fiction Volume 8 [1995-1996] ; 6786 >
         au < testing ; 1996-1997 ; Eighteenth-Century Fiction Volume 9 [1996-1997] ; 6787 >
-        au < testing ; 1997-1998 ; Eighteenth-Century Fiction Volume 10 [1997-1998] ; 6788 >
-        au < testing ; 1998-1999 ; Eighteenth-Century Fiction Volume 11 [1998-1999] ; 6789 >
+        au < ready ; 1997-1998 ; Eighteenth-Century Fiction Volume 10 [1997-1998] ; 6788 >
+        au < ready ; 1998-1999 ; Eighteenth-Century Fiction Volume 11 [1998-1999] ; 6789 >
         au < testing ; 1999-2000 ; Eighteenth-Century Fiction Volume 12 [1999-2000] ; 6790 >
-        au < testing ; 2000-2001 ; Eighteenth-Century Fiction Volume 13 [2000-2001] ; 6791 >
-        au < testing ; 2001-2002 ; Eighteenth-Century Fiction Volume 14 [2001-2002] ; 6792 >
+        au < ready ; 2000-2001 ; Eighteenth-Century Fiction Volume 13 [2000-2001] ; 6791 >
+        au < ready ; 2001-2002 ; Eighteenth-Century Fiction Volume 14 [2001-2002] ; 6792 >
         au < testing ; 2002-2003 ; Eighteenth-Century Fiction Volume 15 [2002-2003] ; 6793 >
         au < testing ; 2003-2004 ; Eighteenth-Century Fiction Volume 16 [2003-2004] ; 6794 >
         au < testing ; 2004-2005 ; Eighteenth-Century Fiction Volume 17 [2004-2005] ; 6795 >
