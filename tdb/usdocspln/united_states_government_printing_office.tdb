@@ -11,7 +11,7 @@
   {
 
   plugin = org.lockss.plugin.usdocspln.gov.govinfo.GovInfoSitemapsPlugin
-  base_url = https://www.govinfo.gov/
+  param[base_url] = https://www.govinfo.gov/
   implicit < status ; year ; name ; param[year] >
 
   {
