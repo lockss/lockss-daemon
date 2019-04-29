@@ -165,9 +165,9 @@
     au < doesNotExist ; exists ; 1993 ; ; 9781563471049 ; 9781563471049 ; Proceedings of the 36th Colloquium on the Law of Outer Space ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1994 ; ; 9781624105449 ; 9781624105449 ; 19th Atmospheric Flight Mechanics Conference ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1994 ; ; 9781624105463 ; 9781624105463 ; Guidance, Navigation, and Control Conference ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1994 ; ; 9781624105432 ; 9781624105432 ; Astrodynamics Conference ; https://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 1994 ; ; 9781624105432 ; 9781624105432 ; Astrodynamics Conference ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < doesNotExist ; exists ; 1994 ; ; 9781563471308 ; 9781563471308 ; Proceedings of the 37th Colloquium on the Law of Outer Space ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1994 ; ; 9781624105456 ; 9781624105456 ; Flight Simualtion Technologies Conference ; https://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 1994 ; ; 9781624105456 ; 9781624105456 ; Flight Simualtion Technologies Conference ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < doesNotExist ; exists ; 1995 ; ; 9781563472138 ; 9781563472138 ; Proceedings of the 38th Colloquium on the Law of Outer Space ; https://arc.aiaa.org/ ; >
     au < doesNotExist ; exists ; 1996 ; ; 9781563472510 ; 9781563472510 ; Proceedings of the 39th Colloquium on the Law of Outer Space ; https://arc.aiaa.org/ ; >
     au < doesNotExist ; exists ; 1997 ; ; 9781563472787 ; 9781563472787 ; Proceedings of the 40th Colloquium on the Law of Outer Space ; https://arc.aiaa.org/ ; >
@@ -229,7 +229,7 @@
     au < finished ; manifest ; 2004 ; ; 9781624100741 ; 9781624100741 ; AIAA Modeling and Simulation Technologies Conference and Exhibit (9781624100741) ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2004 ; ; 9781624100758 ; 9781624100758 ; AIAA/AAS Astrodynamics Specialist Conference and Exhibit (9781624100758) ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2004 ; ; 9781624100833 ; 9781624100833 ; CANEUS 2004 Conference on Micro-Nano-Technologies (9781624100833) ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2004 ; ; 9781624100840 ; 9781624100840 ; Space 2004 Conference and Exhibit (9781624100840) ; https://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 2004 ; ; 9781624100840 ; 9781624100840 ; Space 2004 Conference and Exhibit (9781624100840) ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2004 ; ; 9781624100765 ; 9781624100765 ; USAF Developmental Test and Evaluation Summit (9781624100765) ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2004 ; ; 9781624100307 ; 9781624100307 ; 2nd AIAA Flow Control Conference (9781624100307) ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2004 ; ; 9781624100772 ; 9781624100772 ; 2nd International Energy Conversion Engineering Conference (9781624100772) ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
@@ -338,7 +338,7 @@
     au < finished ; manifest ; 2008 ; ; 9781624101694 ; 9781624101694 ; 2008 U.S. Air Force T&E Days (9781624101694) ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < doesNotExist ; exists ; 2008 ; ; 9781600867170 ; 9781600867170 ; Proceedings of the 51st Colloquium on the Law of Outer Space ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2009 ; ; 9781624101328 ; 9781624101328 ; AIAA Atmospheric Flight Mechanics Conference (9781624101328) ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2009 ; ; 9781624101366 ; 9781624101366 ; AIAA Balloon Systems Conference (9781624101366) ; https://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 2009 ; ; 9781624101366 ; 9781624101366 ; AIAA Balloon Systems Conference (9781624101366) ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; ; 9781600869785 ; 9781600869785 ; AIAA Guidance, Navigation, and Control Conference (9781600869785) ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2009 ; ; 9781600869792 ; 9781600869792 ; AIAA Infotech@Aerospace Conference (9781600869792) ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; ; 9781624101618 ; 9781624101618 ; AIAA Modeling and Simulation Technologies Conference (9781624101618) ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
@@ -348,9 +348,9 @@
     au < finished ; manifest ; 2009 ; ; 9781624101335 ; 9781624101335 ; 1st AIAA Atmospheric and Space Environments Conference (9781624101335) ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; ; 9781600869761 ; 9781600869761 ; 7th International Energy Conversion Engineering Conference (9781600869761) ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; ; 9781600869778 ; 9781600869778 ; 9th AIAA Aviation Technology, Integration, and Operations Conference (ATIO) (9781600869778) ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2009 ; ; 9781600869679 ; 9781600869679 ; 15th AIAA/CEAS Aeroacoustics Conference (30th AIAA Aeroacoustics Conference) (9781600869679) ; https://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 2009 ; ; 9781600869679 ; 9781600869679 ; 15th AIAA/CEAS Aeroacoustics Conference (30th AIAA Aeroacoustics Conference) (9781600869679) ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; ; 9781600869686 ; 9781600869686 ; 16th AIAA/DLR/DGLR International Space Planes and Hypersonic Systems and Technologies Conference (9781600869686) ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2009 ; ; 9781624101588 ; 9781624101588 ; 18th AIAA Lighter-Than-Air Systems Technology Conference (9781624101588) ; https://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 2009 ; ; 9781624101588 ; 9781624101588 ; 18th AIAA Lighter-Than-Air Systems Technology Conference (9781624101588) ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; ; 9781624101373 ; 9781624101373 ; 19th AIAA Computational Fluid Dynamics (9781624101373) ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2009 ; ; 9781600869693 ; 9781600869693 ; 20th AIAA Aerodynamic Decelerator Systems Technology Conference and Seminar (9781600869693) ; https://arc.aiaa.org/ ; >
     au < finished ; manifest ; 2009 ; ; 9781624101304 ; 9781624101304 ; 27th AIAA Applied Aerodynamics Conference (9781624101304) ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
@@ -361,25 +361,25 @@
     au < finished ; manifest ; 2009 ; ; 9781600869754 ; 9781600869754 ; 50th AIAA/ASME/ASCE/AHS/ASC Structures, Structural Dynamics, and Materials Conference (9781600869754) ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
     au < doesNotExist ; exists ; 2009 ; ; 9781600867729 ; 9781600867729 ; Proceedings of the 52nd Colloquium on the Law of Outer Space ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2010 ; ; 9781624101519 ; 9781624101519 ; AIAA Atmospheric Flight Mechanics Conference (9781624101519) ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2010 ; ; 9781624101496 ; 9781624101496 ; AIAA Atmospheric and Space Environments Conference (9781624101496) ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2010 ; ; 9781600869624 ; 9781600869624 ; AIAA Guidance, Navigation, and Control Conference (9781600869624) ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2010 ; ; 9781600869631 ; 9781600869631 ; AIAA Infotech@Aerospace 2010 (9781600869631) ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2010 ; ; 9781624101526 ; 9781624101526 ; AIAA Modeling and Simulation Technologies Conference (9781624101526) ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2010 ; ; 9781600869662 ; 9781600869662 ; AIAA SPACE 2010 Conference & Exposition (9781600869662) ; https://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 2010 ; ; 9781624101496 ; 9781624101496 ; AIAA Atmospheric and Space Environments Conference (9781624101496) ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2010 ; ; 9781600869624 ; 9781600869624 ; AIAA Guidance, Navigation, and Control Conference (9781600869624) ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2010 ; ; 9781600869631 ; 9781600869631 ; AIAA Infotech@Aerospace 2010 (9781600869631) ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2010 ; ; 9781624101526 ; 9781624101526 ; AIAA Modeling and Simulation Technologies Conference (9781624101526) ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2010 ; ; 9781600869662 ; 9781600869662 ; AIAA SPACE 2010 Conference & Exposition (9781600869662) ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2010 ; ; 9781624101502 ; 9781624101502 ; AIAA/AAS Astrodynamics Specialist Conference (9781624101502) ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2010 ; ; 9781624101649 ; 9781624101649 ; SpaceOps 2010 Conference (9781624101649) ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2010 ; ; 9781600869655 ; 9781600869655 ; U.S. Air Force T&E Days 2010 (9781600869655) ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2010 ; ; 9781624101403 ; 9781624101403 ; 5th Flow Control Conference (9781624101403) ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2010 ; ; 9781624101564 ; 9781624101564 ; 8th Annual International Energy Conversion Engineering Conference (9781624101564) ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2010 ; ; 9781624101595 ; 9781624101595 ; 10th AIAA Aviation Technology, Integration, and Operations (ATIO) Conference (9781624101595) ; https://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 2010 ; ; 9781624101595 ; 9781624101595 ; 10th AIAA Aviation Technology, Integration, and Operations (ATIO) Conference (9781624101595) ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2010 ; ; 9781624101397 ; 9781624101397 ; 10th AIAA/ASME Joint Thermophysics and Heat Transfer Conference (9781624101397) ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2010 ; ; 9781600869549 ; 9781600869549 ; 13th AIAA/ISSMO Multidisciplinary Analysis Optimization Conference (9781600869549) ; https://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 2010 ; ; 9781600869549 ; 9781600869549 ; 13th AIAA/ISSMO Multidisciplinary Analysis Optimization Conference (9781600869549) ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2010 ; ; 9781600869556 ; 9781600869556 ; 16th AIAA/CEAS Aeroacoustics Conference (9781600869556) ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2010 ; ; 9781624101427 ; 9781624101427 ; 27th AIAA Aerodynamic Measurement Technology and Ground Testing Conference (9781624101427) ; https://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 2010 ; ; 9781624101427 ; 9781624101427 ; 27th AIAA Aerodynamic Measurement Technology and Ground Testing Conference (9781624101427) ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2010 ; ; 9781624101410 ; 9781624101410 ; 28th AIAA Applied Aerodynamics Conference (9781624101410) ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2010 ; ; 9781624101663 ; 9781624101663 ; 28th AIAA International Communications Satellite Systems Conference (ICSSC-2010) (9781624101663) ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2010 ; ; 9781600869563 ; 9781600869563 ; 40th Fluid Dynamics Conference and Exhibit (9781600869563) ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2010 ; ; 9781600869570 ; 9781600869570 ; 40th International Conference on Environmental Systems (9781600869570) ; https://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 2010 ; ; 9781600869570 ; 9781600869570 ; 40th International Conference on Environmental Systems (9781600869570) ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2010 ; ; 9781624101380 ; 9781624101380 ; 41st Plasmadynamics and Lasers Conference (9781624101380) ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2010 ; ; 9781600869587 ; 9781600869587 ; 46th AIAA/ASME/SAE/ASEE Joint Propulsion Conference & Exhibit (9781600869587) ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2010 ; ; 9781600869594 ; 9781600869594 ; 48th AIAA Aerospace Sciences Meeting Including the New Horizons Forum and Aerospace Exposition (9781600869594) ; https://arc.aiaa.org/ ; >
