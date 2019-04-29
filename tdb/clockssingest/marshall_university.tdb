@@ -22,10 +22,10 @@
     param[journal_abbr] = mjm
     implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
 
-    au < testing ; exists ; 2015 ; Marshall Journal of Medicine Volume 1 ; 1 ; >
-    au < testing ; exists ; 2016 ; Marshall Journal of Medicine Volume 2 ; 2 ; >
-    au < testing ; exists ; 2017 ; Marshall Journal of Medicine Volume 3 ; 3 ; >
-    au < testing ; exists ; 2018 ; Marshall Journal of Medicine Volume 4 ; 4 ; >
+    au < ready ; exists ; 2015 ; Marshall Journal of Medicine Volume 1 ; 1 ; >
+    au < ready ; exists ; 2016 ; Marshall Journal of Medicine Volume 2 ; 2 ; >
+    au < ready ; exists ; 2017 ; Marshall Journal of Medicine Volume 3 ; 3 ; >
+    au < ready ; exists ; 2018 ; Marshall Journal of Medicine Volume 4 ; 4 ; >
     au < manifest ; exists ; 2019 ; Marshall Journal of Medicine Volume 5 ; 5 ; >
 
   }
