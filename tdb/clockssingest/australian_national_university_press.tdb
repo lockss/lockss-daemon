@@ -114,7 +114,7 @@
     #April 2019 - journal id changed as did location of start url
     param[journal_id] = agenda
     
-      au < expected ; exists ; 2019 ; Agenda - A Journal of Policy Analysis and Reform Volume 26 ; 26 ; >
+      au < manifest ; exists ; 2019 ; Agenda - A Journal of Policy Analysis and Reform Volume 26 ; 26 ; >
       
     }
   }
@@ -129,7 +129,7 @@
     
     param[journal_id] = anu-historical-journal
 
-    au < expected ; exists ; 2019 ; ANU Historical Journal II: Number 1 ; 1 ; >
+    au < manifest ; exists ; 2019 ; ANU Historical Journal II: Number 1 ; 1 ; >
 
   }
   

@@ -1225,7 +1225,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Annals of Botany Volume 115-116 ; 115-116 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Annals of Botany Volume 117-118 ; 117-118 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Annals of Botany Volume 119-120 ; 119-120 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2018 ; 2018 ; Annals of Botany Volume 121-122 ; 121-122 ; >
+    au < frozen ; exists ; 2018 ; 2018 ; Annals of Botany Volume 121-122 ; 121-122 ; >
 
   }
 
@@ -1351,7 +1351,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; AoB PLANTS Volume 7 ; 7 ; >
     au < frozen ; exists ; 2016 ; 2016 ; AoB PLANTS Volume 8 ; 8 ; >
     au < finished ; crawling ; 2017 ; 2017 ; AoB PLANTS Volume 9 ; 9 ; reingest3.clockss.org:8083 >
-    au < ready ; exists ; 2018 ; 2018 ; AoB PLANTS Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2018 ; 2018 ; AoB PLANTS Volume 10 ; 10 ; >
 
   }
 
@@ -5461,7 +5461,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; FEMS Microbiology Letters Volume 350-361 ; 350-361 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; FEMS Microbiology Letters Volume 362 ; 362 ; >
     au < frozen ; exists ; 2016 ; 2016 ; FEMS Microbiology Letters Volume 363 ; 363 ; >
-    au < crawling ; exists ; 2016 ; 2017 ; FEMS Microbiology Letters Volume 364 ; 364 ; >
+    au < frozen ; exists ; 2016 ; 2017 ; FEMS Microbiology Letters Volume 364 ; 364 ; >
     au < frozen ; exists ; 2016 ; 2018 ; FEMS Microbiology Letters Volume 365 ; 365 ; >
 
   }
@@ -7957,7 +7957,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; International Journal of Law and Information Technology Volume 23 ; 23 ; >
     au < frozen ; exists ; 2016 ; 2016 ; International Journal of Law and Information Technology Volume 24 ; 24 ; >
     au < frozen ; exists ; 2017 ; 2017 ; International Journal of Law and Information Technology Volume 25 ; 25 ; >
-    au < testing ; exists ; 2018 ; 2018 ; International Journal of Law and Information Technology Volume 26 ; 26 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; International Journal of Law and Information Technology Volume 26 ; 26 ; >
 
   }
 
@@ -12815,7 +12815,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 428-436 ; 428-436 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 437-445 ; 437-445 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 446-455 ; 446-455 ; >
-    au < crawling ; exists ; 2016 ; 2016 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 456-463 ; 456-463 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 456-463 ; 456-463 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 464-472 ; 464-472 ; >
     au < testing ; exists ; 2018 ; 2018 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 473-481 ; 473-481 ; >
 
@@ -13152,7 +13152,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; National Science Review Volume 1 ; 1 ; > #doesNotExist
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; National Science Review Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; National Science Review Volume 2 ; 2 ; >
-    au < testing ; exists ; 2016 ; 2016 ; National Science Review Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; National Science Review Volume 3 ; 3 ; >
     au < frozen ; exists ; 2017 ; 2017 ; National Science Review Volume 4 ; 4 ; >
     au < testing ; exists ; 2018 ; 2018 ; National Science Review Volume 5 ; 5 ; >
 
@@ -13199,7 +13199,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Nephrology Dialysis Transplantation Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Nephrology Dialysis Transplantation Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Nephrology Dialysis Transplantation Volume 30 ; 30 ; >
-    au < crawling ; exists ; 2016 ; 2016 ; Nephrology Dialysis Transplantation Volume 31 ; 31 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; Nephrology Dialysis Transplantation Volume 31 ; 31 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Nephrology Dialysis Transplantation Volume 32 ; 32 ; >
     au < testing ; exists ; 2018 ; 2018 ; Nephrology Dialysis Transplantation Volume 33 ; 33 ; >
 
@@ -13233,7 +13233,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Neuro-Oncology Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Neuro-Oncology Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Neuro-Oncology Volume 17 ; 17 ; >
-    au < crawling ; exists ; 2016 ; 2016 ; Neuro-Oncology Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; Neuro-Oncology Volume 18 ; 18 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Neuro-Oncology Volume 19 ; 19 ; >
     au < testing ; exists ; 2018 ; 2018 ; Neuro-Oncology Volume 20 ; 20 ; >
 
@@ -13325,7 +13325,7 @@
     au < manifest ; exists ; 2013 ; 2013 ; Neurosurgery Volume 60,72-73 ; 60,72-73 ; >
     au < manifest ; exists ; 2014 ; 2014 ; Neurosurgery Volume 61,74-75 ; 61,74-75 ; >
     au < manifest ; exists ; 2015 ; 2015 ; Neurosurgery Volume 62,76-77 ; 62,76-77 ; >
-    au < crawling ; exists ; 2016 ; 2016 ; Neurosurgery Volume 63,78-79 ; 63,78-79 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; Neurosurgery Volume 63,78-79 ; 63,78-79 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Neurosurgery Volume 64,80-81 ; 64,80-81 ; >
     au < testing ; exists ; 2018 ; 2018 ; Neurosurgery Volume 65,82-83 ; 65,82-83 ; >
 
@@ -13714,7 +13714,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Nutrition Reviews Volume 71 ; 71 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Nutrition Reviews Volume 72 ; 72 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Nutrition Reviews Volume 73 ; 73 ; >
-    au < ready ; exists ; 2016 ; 2016 ; Nutrition Reviews Volume 74 ; 74 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; Nutrition Reviews Volume 74 ; 74 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Nutrition Reviews Volume 75 ; 75 ; >
     au < testing ; exists ; 2018 ; 2018 ; Nutrition Reviews Volume 76 ; 76 ; >
 
@@ -14012,7 +14012,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Oxford Economic Papers Volume 65 ; 65 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Oxford Economic Papers Volume 66 ; 66 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Oxford Economic Papers Volume 67 ; 67 ; >
-    au < testing ; exists ; 2016 ; 2016 ; Oxford Economic Papers Volume 68 ; 68 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; Oxford Economic Papers Volume 68 ; 68 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Oxford Economic Papers Volume 69 ; 69 ; >
     au < testing ; exists ; 2018 ; 2018 ; Oxford Economic Papers Volume 70 ; 70 ; >
 
@@ -14385,7 +14385,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Past & Present Volume 218-221 ; 218-221 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Past & Present Volume 222-225 ; 222-225 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Past & Present Volume 226-229 ; 226-229 ; >
-    au < crawling ; exists ; 2016 ; 2016 ; Past & Present Volume 230-233 ; 230-233 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; Past & Present Volume 230-233 ; 230-233 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Past & Present Volume 234-237 ; 234-237 ; >
     au < testing ; exists ; 2018 ; 2018 ; Past & Present Volume 238-241 ; 238-241 ; >
 
@@ -14519,7 +14519,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Philosophia Mathematica Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Philosophia Mathematica Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Philosophia Mathematica Volume 23 ; 23 ; >
-    au < crawling ; exists ; 2016 ; 2016 ; Philosophia Mathematica Volume 24 ; 24 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; Philosophia Mathematica Volume 24 ; 24 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Philosophia Mathematica Volume 25 ; 25 ; >
     au < testing ; exists ; 2018 ; 2018 ; Philosophia Mathematica Volume 26 ; 26 ; >
 
@@ -16251,7 +16251,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Social Forces Volume 92 ; 92 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Social Forces Volume 93 ; 93 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Social Forces Volume 94 ; 94 ; >
-    au < testing ; exists ; 2016 ; 2016 ; Social Forces Volume 95 ; 95 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; Social Forces Volume 95 ; 95 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Social Forces Volume 96 ; 96 ; >
     au < testing ; exists ; 2018 ; 2018 ; Social Forces Volume 97 ; 97 ; >
 
@@ -16335,7 +16335,7 @@
     au < manifest ; exists ; 2013 ; 2013 ; Social Politics: International Studies in Gender, State & Society Volume 20 ; 20 ; >
     au < manifest ; exists ; 2014 ; 2014 ; Social Politics: International Studies in Gender, State & Society Volume 21 ; 21 ; >
     au < manifest ; exists ; 2015 ; 2015 ; Social Politics: International Studies in Gender, State & Society Volume 22 ; 22 ; >
-    au < ready ; exists ; 2016 ; 2016 ; Social Politics: International Studies in Gender, State & Society Volume 23 ; 23 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; Social Politics: International Studies in Gender, State & Society Volume 23 ; 23 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Social Politics: International Studies in Gender, State & Society Volume 24 ; 24 ; >
     au < testing ; exists ; 2018 ; 2018 ; Social Politics: International Studies in Gender, State & Society Volume 25 ; 25 ; >
 
@@ -16725,7 +16725,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Statute Law Review Volume 34 ; 34 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Statute Law Review Volume 35 ; 35 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Statute Law Review Volume 36 ; 36 ; >
-    au < crawling ; exists ; 2016 ; 2016 ; Statute Law Review Volume 37 ; 37 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; Statute Law Review Volume 37 ; 37 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Statute Law Review Volume 38 ; 38 ; >
     au < testing ; exists ; 2018 ; 2018 ; Statute Law Review Volume 39 ; 39 ; >
 
@@ -17480,7 +17480,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; The Cambridge Quarterly Volume 42 ; 42 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; The Cambridge Quarterly Volume 43 ; 43 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The Cambridge Quarterly Volume 44 ; 44 ; >
-    au < crawling ; exists ; 2016 ; 2016 ; The Cambridge Quarterly Volume 45 ; 45 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; The Cambridge Quarterly Volume 45 ; 45 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The Cambridge Quarterly Volume 46 ; 46 ; >
     au < testing ; exists ; 2018 ; 2018 ; The Cambridge Quarterly Volume 47 ; 47 ; >
 
@@ -17500,7 +17500,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; The Chinese Journal of Comparative Law Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; The Chinese Journal of Comparative Law Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The Chinese Journal of Comparative Law Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2016 ; 2016 ; The Chinese Journal of Comparative Law Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; The Chinese Journal of Comparative Law Volume 4 ; 4 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The Chinese Journal of Comparative Law Volume 5 ; 5 ; >
     au < testing ; exists ; 2018 ; 2018 ; The Chinese Journal of Comparative Law Volume 6 ; 6 ; >
 
@@ -19712,7 +19712,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; The Review of Financial Studies Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; The Review of Financial Studies Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The Review of Financial Studies Volume 28 ; 28 ; >
-    au < ready ; exists ; 2016 ; 2016 ; The Review of Financial Studies Volume 29 ; 29 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; The Review of Financial Studies Volume 29 ; 29 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The Review of Financial Studies Volume 30 ; 30 ; >
     au < testing ; exists ; 2018 ; 2018 ; The Review of Financial Studies Volume 31 ; 31 ; >
 
@@ -19844,7 +19844,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; The Year's Work in Critical and Cultural Theory Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; The Year's Work in Critical and Cultural Theory Volume 22 ; 22 ; >
     au < manifest ; exists ; 2015 ; 2015 ; The Year's Work in Critical and Cultural Theory Volume 23 ; 23 ; >
-    au < testing ; exists ; 2016 ; 2016 ; The Year's Work in Critical and Cultural Theory Volume 24 ; 24 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; The Year's Work in Critical and Cultural Theory Volume 24 ; 24 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The Year's Work in Critical and Cultural Theory Volume 25 ; 25 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; The Year's Work in Critical and Cultural Theory Volume 26 ; 26 ; >
 
@@ -20432,7 +20432,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Western Historical Quarterly Volume 44 ; 44 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Western Historical Quarterly Volume 45 ; 45 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Western Historical Quarterly Volume 46 ; 46 ; >
-    au < testing ; exists ; 2016 ; 2016 ; Western Historical Quarterly Volume 47 ; 47 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; Western Historical Quarterly Volume 47 ; 47 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Western Historical Quarterly Volume 48 ; 48 ; >
     au < testing ; exists ; 2018 ; 2018 ; Western Historical Quarterly Volume 49 ; 49 ; >
 

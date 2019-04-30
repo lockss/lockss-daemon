@@ -11,7 +11,7 @@
   {
 
   plugin = org.lockss.plugin.usdocspln.gov.govinfo.GovInfoSitemapsPlugin
-  base_url = https://www.govinfo.gov/
+  param[base_url] = https://www.govinfo.gov/
   implicit < status ; year ; name ; param[year] >
 
   {
@@ -450,13 +450,13 @@
     param[collection_id] = USCOURTS
 
 
-    au < manifest ; 2013 ; United States Courts 2013 ;  2013 > 
-    au < manifest ; 2014 ; United States Courts 2014 ;  2014 > 
-    au < manifest ; 2015 ; United States Courts 2015 ;  2015 > 
-    au < manifest ; 2016 ; United States Courts 2016 ;  2016 > 
-    au < manifest ; 2017 ; United States Courts 2017 ;  2017 > 
-    au < manifest ; 2018 ; United States Courts 2018 ;  2018 > 
-    au < manifest ; 2019 ; United States Courts 2019 ;  2019 > 
+    au < doNotProcess ; 2013 ; United States Courts 2013 ;  2013 >
+    au < doNotProcess ; 2014 ; United States Courts 2014 ;  2014 >
+    au < doNotProcess ; 2015 ; United States Courts 2015 ;  2015 >
+    au < doNotProcess ; 2016 ; United States Courts 2016 ;  2016 >
+    au < doNotProcess ; 2017 ; United States Courts 2017 ;  2017 >
+    au < doNotProcess ; 2018 ; United States Courts 2018 ;  2018 >
+    au < doNotProcess ; 2019 ; United States Courts 2019 ;  2019 >
 
   }
 

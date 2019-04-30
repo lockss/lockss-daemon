@@ -10,7 +10,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>37</string>
+    <string>38</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -81,8 +81,7 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-    <!--  take out images.hindawi.com for now SSL exception -->
-      <string>1,"^https?://((fonts|ajax)\.googleapis\.com|cdnjs\.cloudflare\.com|fast\.fonts\.net)/"</string>
+      <string>1,"^https?://((fonts|ajax)\.googleapis\.com|cdnjs\.cloudflare\.com|fast\.fonts\.net|images\.hindawi\.com)/"</string>
       <string>1,"^https?://(%s|%s)/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$", url_host(base_url), url_host(download_url)</string>
       <string>4,"^https?://(%s|%s)/", url_host(base_url), url_host(download_url)</string>
       <string>1,"^https?://(%s|%s)/lockss.html$", url_host(base_url), url_host(download_url)</string>

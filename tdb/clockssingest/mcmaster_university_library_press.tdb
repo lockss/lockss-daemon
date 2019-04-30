@@ -60,7 +60,7 @@
       au < notReady ; exists ; 2015 ; Early Theatre Volume 18 ; 18 ; 2015 ; > #clockss permission page missing index.php
       au < notReady ; exists ; 2016 ; Early Theatre Volume 19 ; 19 ; 2016 ; > #clockss permission page missing index.php
       au < notReady ; exists ; 2017 ; Early Theatre Volume 20 ; 20 ; 2017 ; > #clockss permission page missing index.php
-      au < expected ; exists ; 2018 ; Early Theatre Volume 21 ; 21 ; 2018 ; >
+      au < exists ; exists ; 2018 ; Early Theatre Volume 21 ; 21 ; 2018 ; >
       au < expected ; exists ; 2019 ; Early Theatre Volume 22 ; 22 ; 2019 ; >
 
     }

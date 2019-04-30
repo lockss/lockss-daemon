@@ -1,0 +1,29 @@
+{
+  publisher <
+    name = University of New Brunswick, Department of History
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:284
+
+  {
+    title <
+      name = Acadiensis: Journal of the History of the Atlantic Region / Revue d’histoire de la region atlantique ;
+      issn = 0044-5851 ;
+      eissn = 1712-7432 ;
+      issnl = 0044-5851
+
+    >
+
+      attr[journal_id] = 683
+
+      au < manifest ; 2016 ; Acadiensis: Journal of the History of the Atlantic Region / Revue d’histoire de la region atlantique Volume 45 [2016] ; 11197 >
+      au < manifest ; 2017 ; Acadiensis: Journal of the History of the Atlantic Region / Revue d’histoire de la region atlantique Volume 46 [2017] ; 12712 >
+      au < manifest ; 2018 ; Acadiensis: Journal of the History of the Atlantic Region / Revue d’histoire de la region atlantique Volume 47 [2018] ; 13488 >
+
+   }
+
+
+}
