@@ -19,6 +19,7 @@
       >
       param[base_url] = http://journal.cpha.ca/
       param[journal_id] = cjph
+      #move to springer
 
       au < frozen ; exists ; 1997 ; Canadian Journal of Public Health Volume 88 ; 88 ; 1997 ; >
       au < frozen ; exists ; 1998 ; Canadian Journal of Public Health Volume 89 ; 89 ; 1998 ; >
@@ -41,8 +42,6 @@
       au < frozen ; exists ; 2015 ; Canadian Journal of Public Health Volume 106 ; 106 ; 2015 ; > 
       au < frozen ; exists ; 2016 ; Canadian Journal of Public Health Volume 107 ; 107 ; 2016 ; > 
       au < finished ; crawling ; 2017 ; Canadian Journal of Public Health Volume 108 ; 108 ; 2017 ; reingest2.clockss.org:8085 > 
-      au < expected ; exists ; 2018 ; Canadian Journal of Public Health Volume 109 ; 109 ; 2018 ; >
-      au < expected ; exists ; 2019 ; Canadian Journal of Public Health Volume 110 ; 110 ; 2019 ; >
 
     }
 

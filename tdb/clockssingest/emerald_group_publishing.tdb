@@ -1613,6 +1613,7 @@
 
     comment[journal_issn] = 0160-4953
     param[journal_id] = cb
+    #continued_by = 2514-9326
 
     au < manifest ; exists ; 1978-1979 ; Collection Building Volume 1 ; 1 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 1980 ; Collection Building Volume 2 ; 2 ; https://www.emeraldinsight.com/ ; >
@@ -1650,8 +1651,22 @@
     au < finished ; finished ; 2015 ; Collection Building Volume 34 ; 34 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Collection Building Volume 35 ; 35 ; http://www.emeraldinsight.com/ ; >
     au < frozen ; exists ; 2017 ; Collection Building Volume 36 ; 36 ; https://www.emeraldinsight.com/ ; >
-    au < expected ; exists ; 2018 ; Collection Building Volume 37 ; 37 ; https://www.emeraldinsight.com/ ; >
-    au < expected ; exists ; 2019 ; Collection Building Volume 38 ; 38 ; https://www.emeraldinsight.com/ ; >
+
+  }
+
+  {
+    title <
+      name = Collection and Curation ;
+      issn = 2514-9326 ;
+      issnl = 2514-9326
+    >
+
+    comment[journal_issn] = 2514-9326
+    param[journal_id] = cc
+    #continues = 0160-4953
+
+    au < exists ; exists ; 2018 ; Collection and Curation Volume 37 ; 37 ; https://www.emeraldinsight.com/ ; >
+    au < exists ; exists ; 2019 ; Collection and Curation Volume 38 ; 38 ; https://www.emeraldinsight.com/ ; >
 
   }
 
@@ -3063,6 +3078,7 @@
     comment[journal_issn] = 0828-8666
     param[journal_id] = h
     # online from 1989
+    #continued_by = 2514-9369
 
     au < manifest ; exists ; 1989 ; Humanomics Volume 5 ; 5 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 1990 ; Humanomics Volume 6 ; 6 ; https://www.emeraldinsight.com/ ; >
@@ -3093,8 +3109,21 @@
     au < finished ; finished ; 2015 ; Humanomics Volume 31 ; 31 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Humanomics Volume 32 ; 32 ; http://www.emeraldinsight.com/ ; >
     au < frozen ; exists ; 2017 ; Humanomics Volume 33 ; 33 ; https://www.emeraldinsight.com/ ; >
-    au < expected ; exists ; 2018 ; Humanomics Volume 34 ; 34 ; https://www.emeraldinsight.com/ ; >
-    au < expected ; exists ; 2019 ; Humanomics Volume 35 ; 35 ; https://www.emeraldinsight.com/ ; >
+  }
+
+  {
+    title <
+      name = International Journal of Ethics and Systems ;
+      issn = 2514-9369 ;
+      issnl = 2514-9369
+    >
+
+    comment[journal_issn] = 2514-9369
+    param[journal_id] = ijoes
+    #continues = 0828-8666
+
+    au < exists ; exists ; 2018 ; International Journal of Ethics and Systems Volume 34 ; 34 ; https://www.emeraldinsight.com/ ; >
+    au < exists ; exists ; 2019 ; International Journal of Ethics and Systems Volume 35 ; 35 ; https://www.emeraldinsight.com/ ; >
 
   }
 
@@ -4467,6 +4496,7 @@
 
     comment[journal_issn] = 1756-1450
     param[journal_id] = ijlbe
+    #continued_by = 2514-9407
 
     au < manifest ; exists ; 2009 ; International Journal of Law in the Built Environment Volume 1 ; 1 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2010 ; International Journal of Law in the Built Environment Volume 2 ; 2 ; https://www.emeraldinsight.com/ ; >
@@ -4477,8 +4507,21 @@
     au < finished ; finished ; 2015 ; International Journal of Law in the Built Environment Volume 7 ; 7 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; International Journal of Law in the Built Environment Volume 8 ; 8 ; http://www.emeraldinsight.com/ ; >
     au < finished ; crawling ; 2017 ; International Journal of Law in the Built Environment Volume 9 ; 9 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
-    au < expected ; exists ; 2018 ; International Journal of Law in the Built Environment Volume 10 ; 10 ; https://www.emeraldinsight.com/ ; >
-    au < expected ; exists ; 2019 ; International Journal of Law in the Built Environment Volume 11 ; 11 ; https://www.emeraldinsight.com/ ; >
+  }
+
+  {
+    title <
+      name = Journal of Property, Planning and Environmental Law ;
+      issn = 2514-9407 ;
+      issnl = 2514-9407
+    >
+
+    comment[journal_issn] = 2514-9407
+    param[journal_id] = jppel
+    #continues = 1756-1450
+
+    au < exists ; exists ; 2018 ; Journal of Property, Planning and Environmental Law Volume 10 ; 10 ; https://www.emeraldinsight.com/ ; >
+    au < exists ; exists ; 2019 ; Journal of Property, Planning and Environmental Law Volume 11 ; 11 ; https://www.emeraldinsight.com/ ; >
 
   }
 
@@ -8974,6 +9017,7 @@
 
     comment[journal_issn] = 0024-2535
     param[journal_id] = lr
+    #continued_by = 2514-9342
 
     au < manifest ; exists ; 1928 ; Library Review Volume 1 ; 1 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 1930 ; Library Review Volume 2 ; 2 ; https://www.emeraldinsight.com/ ; >
@@ -9041,8 +9085,21 @@
     au < finished ; crawling ; 2015 ; Library Review Volume 64 ; 64 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Library Review Volume 65 ; 65 ; http://www.emeraldinsight.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Library Review Volume 66 ; 66 ; http://www.emeraldinsight.com/ ; >
-    au < expected ; exists ; 2018 ; Library Review Volume 67 ; 67 ; https://www.emeraldinsight.com/ ; >
-    au < expected ; exists ; 2019 ; Library Review Volume 68 ; 68 ; https://www.emeraldinsight.com/ ; >
+  }
+
+  {
+    title <
+      name = Global Knowledge, Memory and Communication ;
+      issn = 2514-9342 ;
+      issnl = 2514-9342
+    >
+
+    comment[journal_issn] = 2514-9342
+    param[journal_id] = gkmc
+    #continues = 0024-2535
+
+    au < exists ; exists ; 2018 ; Global Knowledge, Memory and Communication Volume 67 ; 67 ; https://www.emeraldinsight.com/ ; >
+    au < exists ; exists ; 2019 ; Global Knowledge, Memory and Communication Volume 68 ; 68 ; https://www.emeraldinsight.com/ ; >
 
   }
 
@@ -10601,6 +10658,7 @@
 
     comment[journal_issn] = 0033-0337
     param[journal_id] = prog
+    #continued_by = 2514-9288
 
     au < manifest ; exists ; 1968 ; Program: Electronic Library and Information Systems Volume 1 ; 1 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 1969 ; Program: Electronic Library and Information Systems Volume 2 ; 2 ; https://www.emeraldinsight.com/ ; >
@@ -10653,8 +10711,21 @@
     au < finished ; crawling ; 2015 ; Program: Electronic Library and Information Systems Volume 49 ; 49 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2016 ; Program: Electronic Library and Information Systems Volume 50 ; 50 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Program: Electronic Library and Information Systems Volume 51 ; 51 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
-    au < expected ; exists ; 2018 ; Program: Electronic Library and Information Systems Volume 52 ; 52 ; https://www.emeraldinsight.com/ ; >
-    au < expected ; exists ; 2019 ; Program: Electronic Library and Information Systems Volume 53 ; 53 ; https://www.emeraldinsight.com/ ; >
+  }
+
+  {
+    title <
+      name = Data Technologies and Applications ;
+      issn = 2514-9288 ;
+      issnl = 2514-9288
+    >
+
+    comment[journal_issn] = 2514-9288
+    param[journal_id] = dta
+    #continues = 0033-0337
+
+    au < exists ; exists ; 2018 ; Data Technologies and Applications Volume 52 ; 52 ; https://www.emeraldinsight.com/ ; >
+    au < exists ; exists ; 2019 ; Data Technologies and Applications Volume 53 ; 53 ; https://www.emeraldinsight.com/ ; >
 
   }
 

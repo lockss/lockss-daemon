@@ -931,6 +931,7 @@
     >
 
     param[journal_id] = jnmoco
+    #stop publishing
 
     au < manifest ; exists ; 2011 ; Journal of Nanomechanics and Micromechanics Volume 1 ; 1 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2012 ; Journal of Nanomechanics and Micromechanics Volume 2 ; 2 ; http://ascelibrary.org/ ; >
@@ -939,8 +940,6 @@
     au < finished ; finished ; 2015 ; Journal of Nanomechanics and Micromechanics Volume 5 ; 5 ; http://ascelibrary.org/ ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Journal of Nanomechanics and Micromechanics Volume 6 ; 6 ; http://ascelibrary.org/ ; >
     au < frozen ; exists ; 2017 ; Journal of Nanomechanics and Micromechanics Volume 7 ; 7 ; https://ascelibrary.org/ ; >
-    au < expected ; exists ; 2018 ; Journal of Nanomechanics and Micromechanics Volume 8 ; 8 ; https://ascelibrary.org/ ; >
-    au < expected ; exists ; 2019 ; Journal of Nanomechanics and Micromechanics Volume 9 ; 9 ; https://ascelibrary.org/ ; >
 
   }
 
