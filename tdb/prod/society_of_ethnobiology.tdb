@@ -13,20 +13,20 @@
     >
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; volume ; name ; param[year] >
-    param[base_url] = http://ojs.ethnobiology.org/
+    implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
+    #param[base_url] = http://ojs.ethnobiology.org/
 
     param[journal_id] = ebl
     
-    au < released ; 2010 ; 1 ; Ethnobiology Letters Volume 1 ; 2010 >
-    au < released ; 2011 ; 2 ; Ethnobiology Letters Volume 2 ; 2011 >
-    au < released ; 2012 ; 3 ; Ethnobiology Letters Volume 3 ; 2012 >
-    au < released ; 2013 ; 4 ; Ethnobiology Letters Volume 4 ; 2013 >
-    au < released ; 2014 ; 5 ; Ethnobiology Letters Volume 5 ; 2014 >
-    au < released ; 2015 ; 6 ; Ethnobiology Letters Volume 6 ; 2015 >
-    au < released ; 2016 ; 7 ; Ethnobiology Letters Volume 7 ; 2016 >
-    au < released ; 2017 ; 8 ; Ethnobiology Letters Volume 8 ; 2017 >
-    au < manifest ; 2018 ; 9 ; Ethnobiology Letters Volume 9 ; 2018 >
+    au < released ; 2010 ; 1 ; Ethnobiology Letters Volume 1 ; 2010 ; http://ojs.ethnobiology.org/ >
+    au < released ; 2011 ; 2 ; Ethnobiology Letters Volume 2 ; 2011 ; http://ojs.ethnobiology.org/ >
+    au < released ; 2012 ; 3 ; Ethnobiology Letters Volume 3 ; 2012 ; http://ojs.ethnobiology.org/ >
+    au < released ; 2013 ; 4 ; Ethnobiology Letters Volume 4 ; 2013 ; http://ojs.ethnobiology.org/ >
+    au < released ; 2014 ; 5 ; Ethnobiology Letters Volume 5 ; 2014 ; http://ojs.ethnobiology.org/ >
+    au < released ; 2015 ; 6 ; Ethnobiology Letters Volume 6 ; 2015 ; http://ojs.ethnobiology.org/ >
+    au < released ; 2016 ; 7 ; Ethnobiology Letters Volume 7 ; 2016 ; http://ojs.ethnobiology.org/ >
+    au < released ; 2017 ; 8 ; Ethnobiology Letters Volume 8 ; 2017 ; http://ojs.ethnobiology.org/ >
+    au < exists ; 2018 ; 9 ; Ethnobiology Letters Volume 9 ; 2018 ; https://ojs.ethnobiology.org/ >
 
   }
 
@@ -38,6 +38,26 @@
       issnl = 0278-0771
     >
 
+#    { #not on ojs.
+#    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+#    implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
+#    #param[base_url] = http://ojs.ethnobiology.org/
+#
+#    param[journal_id] = ebl
+#    
+#    au < doNotProcess ; 2010 ; 30 ; Journal of Ethnobiology Volume 30 ; 2010 ; https://ojs.ethnobiology.org/ >
+#    au < doNotProcess ; 2011 ; 31 ; Journal of Ethnobiology Volume 31 ; 2011 ; https://ojs.ethnobiology.org/ >
+#    au < doNotProcess ; 2012 ; 32 ; Journal of Ethnobiology Volume 32 ; 2012 ; https://ojs.ethnobiology.org/ >
+#    au < doNotProcess ; 2013 ; 33 ; Journal of Ethnobiology Volume 33 ; 2013 ; https://ojs.ethnobiology.org/ >
+#    au < doNotProcess ; 2014 ; 34 ; Journal of Ethnobiology Volume 34 ; 2014 ; https://ojs.ethnobiology.org/ >
+#    au < doNotProcess ; 2015 ; 35 ; Journal of Ethnobiology Volume 35 ; 2015 ; https://ojs.ethnobiology.org/ >
+#    au < doNotProcess ; 2016 ; 36 ; Journal of Ethnobiology Volume 36 ; 2016 ; https://ojs.ethnobiology.org/ >
+#    au < doNotProcess ; 2017 ; 37 ; Journal of Ethnobiology Volume 37 ; 2017 ; https://ojs.ethnobiology.org/ >
+#    au < exists ; 2018 ; 38 ; Journal of Ethnobiology Volume 38 ; 2018 ; https://ojs.ethnobiology.org/ >
+#
+#    }
+#
+    {
     plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
     implicit < status ; year ; name ; param[volume_name] >
     param[base_url] = http://www.bioone.org/
@@ -59,8 +79,9 @@
     au < down ; 2015 ; Journal of Ethnobiology Volume 35 ; 35 >
     au < down ; 2016 ; Journal of Ethnobiology Volume 36 ; 36 >
     au < down ; 2017 ; Journal of Ethnobiology Volume 37 ; 37 >
-    au < manifest ; 2018 ; Journal of Ethnobiology Volume 38 ; 38 >
+    au < exists ; 2018 ; Journal of Ethnobiology Volume 38 ; 38 >
 
+    }
   }
 
 }
