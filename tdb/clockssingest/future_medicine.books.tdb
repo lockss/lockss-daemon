@@ -103,7 +103,7 @@
     au < finished ; finished ; 2013 ; 978-1-78084-287-5 ; 978-1-78084-285-1 ; 9781780842851 ; Advances in Myocardial Infarction Management ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2013 ; 978-1-78084-305-6 ; 978-1-78084-303-2 ; 9781780843032 ; Clinical Management of Thyroid Cancer ; http://www.futuremedicine.com/ ; >
     au < finished ; finished ; 2013 ; 978-1-78084-329-2 ; 978-1-78084-327-8 ; 9781780843278 ; Monoclonal Antibodies Targeting EGFR/HER2 and Clinical Outcomes in Cancer Treatment ; http://www.futuremedicine.com/ ; >
-    au < frozen ; exists ; 2013 ; 978-1-78084-191-5 ; 978-1-78084-189-2 ; 9781780841892 ; Gout ; https://www.futuremedicine.com/ ; >
+    au < finished ; manifest ; 2013 ; 978-1-78084-191-5 ; 978-1-78084-189-2 ; 9781780841892 ; Gout ; https://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2013 ; 978-1-78084-245-5 ; 978-1-78084-243-1 ; 9781780842431 ; Personalized Management of Multiple Sclerosis ; http://www.futuremedicine.com/ ; >
     au < finished ; finished ; 2013 ; 978-1-78084-254-7 ; 978-1-78084-252-3 ; 9781780842523 ; Advances in the Management of Ankylosing Spondylitis ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2013 ; 978-1-78084-275-2 ; 978-1-78084-273-8 ; 9781780842738 ; Advances in the Treatment of Chronic Myeloid Leukemia ; http://www.futuremedicine.com/ ; >
@@ -175,7 +175,7 @@
     au < finished ; finished ; 2015 ; 978-1-78084-515-9 ; 978-1-78084-513-5 ; 9781780845135 ; Contemporary Approaches to Idiopathic Pulmonary Fibrosis ; http://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 978-1-78084-581-4 ; 978-1-78084-579-1 ; 9781780845791 ; Hodgkin and Non-Hodgkin Lymphomas Seen through Their Microenvironment: Impact on Diagnosis, Prognosis and Innovative Therapy (Volume 1) ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 978-1-78084-584-5 ; 978-1-78084-582-1 ; 9781780845821 ; Hodgkin and Non-Hodgkin Lymphomas Seen through Their Microenvironment: Impact on Diagnosis, Prognosis and Innovative Therapy (Volume 2) ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2015 ;  ; 978-1-78084-423-7 ; 9781780844237 ; Advances in Bladder Cancer Management ; http://www.futuremedicine.com/ ; >
+    au < finished ; manifest ; 2015 ;  ; 978-1-78084-423-7 ; 9781780844237 ; Advances in Bladder Cancer Management ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2016 ;  ; 978-1-78084-489-3 ; 9781780844893 ; Contemporary Approaches to Upper Respiratory Tract Infections ; https://www.futuremedicine.com/ ; >
     #added in October 2017 per publisher request
     au < frozen ; exists ; 2015 ;  ; 978-1-78084-459-6 ; 9781780844596 ; Traumatic Brain Injury Rehabilitation Medicine ; https://www.futuremedicine.com/ ; >
