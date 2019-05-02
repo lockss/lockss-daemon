@@ -135,6 +135,8 @@ implements SourceXmlSchemaHelper {
     // do NOT cook publisher_name; get from TDB file for consistency
     cookMap.put(dataset_chapter_doi, MetadataField.FIELD_DOI);
     cookMap.put(dataset_book_title, MetadataField.FIELD_PUBLICATION_TITLE);
+    // Elsevier has indicated that we should prioritize copyright year
+    // which comes from main.xml - so don't cook this value
     cookMap.put(dataset_chapter_date, MetadataField.FIELD_DATE);
   }
 

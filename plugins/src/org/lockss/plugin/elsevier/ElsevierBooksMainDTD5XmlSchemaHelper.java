@@ -230,6 +230,8 @@ implements SourceXmlSchemaHelper {
     cookMap.put(common_title, MetadataField.FIELD_ARTICLE_TITLE);
     cookMap.put(common_isbn, MetadataField.FIELD_ISBN);
     cookMap.put(common_issn, MetadataField.FIELD_ISSN); // part of a series?
+    // Elsevier has indicated that this should take priority over online date
+	cookMap.put(common_copyright, MetadataField.FIELD_DATE);    
     cookMap.put(common_author_group, 
         new MetadataField(MetadataField.FIELD_AUTHOR, MetadataField.splitAt(AUTHOR_SPLIT_CHAR)));
   }
