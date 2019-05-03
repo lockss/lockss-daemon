@@ -140,8 +140,6 @@
 
     au < finished ; finished ; 2015 ; Engineering Education Letters Volume 2015 ; 2015 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2017 ; Engineering Education Letters Volume 2017 ; 2017 ; >
-    au < expected ; exists ; 2018 ; Engineering Education Letters Volume 2018 ; 2018 ; >
-    au < expected ; exists ; 2019 ; Engineering Education Letters Volume 2019 ; 2019 ; >
 
   }
 
@@ -179,8 +177,6 @@
     au < finished ; finished ; 2015 ; International Review of Law Volume 2015 ; 2015 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; International Review of Law Volume 2016 ; 2016 ; >
     au < deepCrawl ; exists ; 2017 ; International Review of Law Volume 2017 ; 2017 ; >
-    au < expected ; exists ; 2018 ; International Review of Law Volume 2018 ; 2018 ; >
-    au < expected ; exists ; 2019 ; International Review of Law Volume 2019 ; 2019 ; >
 
   }
 
@@ -201,8 +197,6 @@
     au < finished ; finished ; 2015 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2015 ; 2015 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2016 ; 2016 ; >
     au < deepCrawl ; exists ; 2017 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2017 ; 2017 ; >
-    au < expected ; exists ; 2018 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2018 ; 2018 ; >
-    au < expected ; exists ; 2019 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2019 ; 2019 ; >
 
   }
 
@@ -385,14 +379,24 @@
 
     au < manifest ; exists ; 1997 ; Qatar Medical Journal Volume 1997 ; 1997 ; ># no substance?
     au < frozen ; exists ; 1998 ; Qatar Medical Journal Volume 1998 ; 1998 ; >
+    au < exists ; exists ; 2000 ; Qatar Medical Journal Volume 2000 ; 2000 ; >
+    au < exists ; exists ; 2001 ; Qatar Medical Journal Volume 2001 ; 2001 ; >
+    au < exists ; exists ; 2002 ; Qatar Medical Journal Volume 2002 ; 2002 ; >
+    au < exists ; exists ; 2003 ; Qatar Medical Journal Volume 2003 ; 2003 ; >
+    au < exists ; exists ; 2004 ; Qatar Medical Journal Volume 2004 ; 2004 ; >
+    au < exists ; exists ; 2005 ; Qatar Medical Journal Volume 2005 ; 2005 ; >
+    au < exists ; exists ; 2006 ; Qatar Medical Journal Volume 2006 ; 2006 ; >
+    au < exists ; exists ; 2007 ; Qatar Medical Journal Volume 2007 ; 2007 ; >
+    au < exists ; exists ; 2008 ; Qatar Medical Journal Volume 2008 ; 2008 ; >
+    au < exists ; exists ; 2009 ; Qatar Medical Journal Volume 2009 ; 2009 ; >
+    au < exists ; exists ; 2010 ; Qatar Medical Journal Volume 2010 ; 2010 ; >
+    au < exists ; exists ; 2011 ; Qatar Medical Journal Volume 2011 ; 2011 ; >
     au < finished ; finished ; 2012 ; Qatar Medical Journal Volume 2012 ; 2012 ; >
     au < finished ; finished ; 2013 ; Qatar Medical Journal Volume 2013 ; 2013 ; >
     au < frozen ; exists ; 2014 ; Qatar Medical Journal Volume 2014 ; 2014 ; >
     au < frozen ; exists ; 2015 ; Qatar Medical Journal Volume 2015 ; 2015 ; >
     au < frozen ; exists ; 2016 ; Qatar Medical Journal Volume 2016 ; 2016 ; >
     au < deepCrawl ; exists ; 2017 ; Qatar Medical Journal Volume 2017 ; 2017 ; >
-    au < expected ; exists ; 2018 ; Qatar Medical Journal Volume 2018 ; 2018 ; >
-    au < expected ; exists ; 2019 ; Qatar Medical Journal Volume 2019 ; 2019 ; >
 
   }
 
@@ -435,6 +439,7 @@
 
     plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
     param[journal_id] = qproc
+    #continued_by = 2313-6030
     comment[V2013] = 3 pdfs unavailable w 500 error. Example http://www.qscience.com/doi/pdfplus/10.5339/qproc.2013.fmd.3 also 5 & 8.
 
     au < finished ; frozen ; 2012 ; QScience Proceedings Volume 2012 ; 2012 ; >
@@ -443,9 +448,6 @@
     au < finished ; finished ; 2015 ; QScience Proceedings Volume 2015 ; 2015 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2016 ; QScience Proceedings Volume 2016 ; 2016 ; >
     au < finished ; exists ; 2017 ; QScience Proceedings Volume 2017 ; 2017 ; reingest1.clockss.org:8082 >
-    au < expected ; exists ; 2018 ; QScience Proceedings Volume 2018 ; 2018 ; >
-    au < expected ; exists ; 2019 ; QScience Proceedings Volume 2019 ; 2019 ; >
-
   }
 
   {
