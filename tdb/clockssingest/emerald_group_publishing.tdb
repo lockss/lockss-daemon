@@ -109,7 +109,7 @@
     au < crawling ; exists ; 2006 ; Accounting, Auditing & Accountability Journal Volume 19 ; 19 ; https://www.emeraldinsight.com/ ; >
     au < crawling ; exists ; 2007 ; Accounting, Auditing & Accountability Journal Volume 20 ; 20 ; https://www.emeraldinsight.com/ ; >
     au < crawling ; exists ; 2008 ; Accounting, Auditing & Accountability Journal Volume 21 ; 21 ; https://www.emeraldinsight.com/ ; >
-    au < ready ; exists ; 2009 ; Accounting, Auditing & Accountability Journal Volume 22 ; 22 ; https://www.emeraldinsight.com/ ; >
+    au < crawling ; exists ; 2009 ; Accounting, Auditing & Accountability Journal Volume 22 ; 22 ; https://www.emeraldinsight.com/ ; >
     au < crawling ; exists ; 2010 ; Accounting, Auditing & Accountability Journal Volume 23 ; 23 ; https://www.emeraldinsight.com/ ; >
     au < crawling ; exists ; 2011 ; Accounting, Auditing & Accountability Journal Volume 24 ; 24 ; https://www.emeraldinsight.com/ ; >
     au < crawling ; exists ; 2012 ; Accounting, Auditing & Accountability Journal Volume 25 ; 25 ; https://www.emeraldinsight.com/ ; >
@@ -160,10 +160,10 @@
     param[journal_id] = amhld
     comment[continued_by] = 2044-1282
 
-    au < ready ; exists ; 2007 ; Advances in Mental Health and Learning Disabilities Volume 1 ; 1 ; https://www.emeraldinsight.com/ ; >
+    au < crawling ; exists ; 2007 ; Advances in Mental Health and Learning Disabilities Volume 1 ; 1 ; https://www.emeraldinsight.com/ ; >
     au < crawling ; exists ; 2008 ; Advances in Mental Health and Learning Disabilities Volume 2 ; 2 ; https://www.emeraldinsight.com/ ; >
     au < crawling ; exists ; 2009 ; Advances in Mental Health and Learning Disabilities Volume 3 ; 3 ; https://www.emeraldinsight.com/ ; >
-    au < ready ; exists ; 2010 ; Advances in Mental Health and Learning Disabilities Volume 4 ; 4 ; https://www.emeraldinsight.com/ ; >
+    au < crawling ; exists ; 2010 ; Advances in Mental Health and Learning Disabilities Volume 4 ; 4 ; https://www.emeraldinsight.com/ ; >
 
   }
 
@@ -231,7 +231,7 @@
     au < crawling ; exists ; 2001 ; Agricultural Finance Review Volume 61 ; 61 ; https://www.emeraldinsight.com/ ; >
     au < crawling ; exists ; 2002 ; Agricultural Finance Review Volume 62 ; 62 ; https://www.emeraldinsight.com/ ; >
     au < crawling ; exists ; 2003 ; Agricultural Finance Review Volume 63 ; 63 ; https://www.emeraldinsight.com/ ; >
-    au < ready ; exists ; 2004 ; Agricultural Finance Review Volume 64 ; 64 ; https://www.emeraldinsight.com/ ; >
+    au < crawling ; exists ; 2004 ; Agricultural Finance Review Volume 64 ; 64 ; https://www.emeraldinsight.com/ ; >
     au < crawling ; exists ; 2005 ; Agricultural Finance Review Volume 65 ; 65 ; https://www.emeraldinsight.com/ ; >
     au < crawling ; exists ; 2006 ; Agricultural Finance Review Volume 66 ; 66 ; https://www.emeraldinsight.com/ ; >
     au < crawling ; exists ; 2007 ; Agricultural Finance Review Volume 67 ; 67 ; https://www.emeraldinsight.com/ ; >
@@ -240,7 +240,7 @@
     au < crawling ; exists ; 2010 ; Agricultural Finance Review Volume 70 ; 70 ; https://www.emeraldinsight.com/ ; >
     au < crawling ; exists ; 2011 ; Agricultural Finance Review Volume 71 ; 71 ; https://www.emeraldinsight.com/ ; >
     au < crawling ; exists ; 2012 ; Agricultural Finance Review Volume 72 ; 72 ; https://www.emeraldinsight.com/ ; >
-    au < ready ; exists ; 2013 ; Agricultural Finance Review Volume 73 ; 73 ; https://www.emeraldinsight.com/ ; >
+    au < crawling ; exists ; 2013 ; Agricultural Finance Review Volume 73 ; 73 ; https://www.emeraldinsight.com/ ; >
     au < finished ; finished ; 2014 ; Agricultural Finance Review Volume 74 ; 74 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; Agricultural Finance Review Volume 75 ; 75 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Agricultural Finance Review Volume 76 ; 76 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
@@ -532,7 +532,7 @@
 
     au < manifest ; exists ; 2011 ; Arts Marketing: An International Journal Volume 1 ; 1 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2012 ; Arts Marketing: An International Journal Volume 2 ; 2 ; https://www.emeraldinsight.com/ ; >
-    au < ready ; exists ; 2013 ; Arts Marketing: An International Journal Volume 3 ; 3 ; https://www.emeraldinsight.com/ ; >
+    au < crawling ; exists ; 2013 ; Arts Marketing: An International Journal Volume 3 ; 3 ; https://www.emeraldinsight.com/ ; >
     au < finished ; finished ; 2014 ; Arts Marketing: An International Journal Volume 4 ; 4 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
     au < superseded ; exists ; 2015 ; Arts Marketing: An International Journal Volume 5 [superseded] ; 5 ; http://www.emeraldinsight.com/ ; >
 
@@ -650,7 +650,7 @@
     comment[journal_issn] = 2046-3162
     param[journal_id] = aeds
 
-    au < ready ; exists ; 2012 ; Asian Education and Development Studies Volume 1 ; 1 ; https://www.emeraldinsight.com/ ; >
+    au < crawling ; exists ; 2012 ; Asian Education and Development Studies Volume 1 ; 1 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2013 ; Asian Education and Development Studies Volume 2 ; 2 ; https://www.emeraldinsight.com/ ; >
     au < finished ; finished ; 2014 ; Asian Education and Development Studies Volume 3 ; 3 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Asian Education and Development Studies Volume 4 ; 4 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
@@ -672,7 +672,7 @@
     param[journal_id] = ajq
 
     au < crawling ; exists ; 2000 ; Asian Journal on Quality Volume 1 ; 1 ; https://www.emeraldinsight.com/ ; >
-    au < ready ; exists ; 2001 ; Asian Journal on Quality Volume 2 ; 2 ; https://www.emeraldinsight.com/ ; >
+    au < crawling ; exists ; 2001 ; Asian Journal on Quality Volume 2 ; 2 ; https://www.emeraldinsight.com/ ; >
     au < crawling ; exists ; 2002 ; Asian Journal on Quality Volume 3 ; 3 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2003 ; Asian Journal on Quality Volume 4 ; 4 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2004 ; Asian Journal on Quality Volume 5 ; 5 ; https://www.emeraldinsight.com/ ; >
@@ -681,7 +681,7 @@
     au < manifest ; exists ; 2007 ; Asian Journal on Quality Volume 8 ; 8 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2008 ; Asian Journal on Quality Volume 9 ; 9 ; https://www.emeraldinsight.com/ ; >
     au < crawling ; exists ; 2009 ; Asian Journal on Quality Volume 10 ; 10 ; https://www.emeraldinsight.com/ ; >
-    au < ready ; exists ; 2010 ; Asian Journal on Quality Volume 11 ; 11 ; https://www.emeraldinsight.com/ ; >
+    au < crawling ; exists ; 2010 ; Asian Journal on Quality Volume 11 ; 11 ; https://www.emeraldinsight.com/ ; >
     au < crawling ; exists ; 2011 ; Asian Journal on Quality Volume 12 ; 12 ; https://www.emeraldinsight.com/ ; >
     au < crawling ; exists ; 2012 ; Asian Journal on Quality Volume 13 ; 13 ; https://www.emeraldinsight.com/ ; >
 
@@ -917,7 +917,7 @@
     au < manifest ; exists ; 2010 ; Baltic Journal of Management Volume 5 ; 5 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2011 ; Baltic Journal of Management Volume 6 ; 6 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2012 ; Baltic Journal of Management Volume 7 ; 7 ; https://www.emeraldinsight.com/ ; >
-    au < ready ; exists ; 2013 ; Baltic Journal of Management Volume 8 ; 8 ; https://www.emeraldinsight.com/ ; >
+    au < crawling ; exists ; 2013 ; Baltic Journal of Management Volume 8 ; 8 ; https://www.emeraldinsight.com/ ; >
     au < finished ; finished ; 2014 ; Baltic Journal of Management Volume 9 ; 9 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Baltic Journal of Management Volume 10 ; 10 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Baltic Journal of Management Volume 11 ; 11 ; http://www.emeraldinsight.com/ ; >
