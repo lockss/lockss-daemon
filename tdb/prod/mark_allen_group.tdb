@@ -537,8 +537,22 @@
     au < released ; 2014 ; Journal of Renal Nursing Volume 6 ; 6 ; http://www.magonlinelibrary.com/ >
     au < released ; 2015 ; Journal of Renal Nursing Volume 7 ; 7 ; http://www.magonlinelibrary.com/ >
     au < released ; 2016 ; Journal of Renal Nursing Volume 8 ; 8 ; http://www.magonlinelibrary.com/ >
-    au < expected ; 2017 ; Journal of Renal Nursing Volume 9 ; 9 ; https://www.magonlinelibrary.com/ >
-    au < expected ; 2018 ; Journal of Renal Nursing Volume 10 ; 10 ; https://www.magonlinelibrary.com/ >
+  }
+
+  {
+    title <
+      name = Journal of Kidney Care ;
+      issn = 2397-9534 ;
+      eissn = 2397-9542
+    >
+
+    param[journal_id] = jokc
+    #continues = 2041-1448
+
+    au < exists ; 2016 ; Journal of Kidney Care Volume 1 ; 1 ; https://www.magonlinelibrary.com/ >
+    au < exists ; 2017 ; Journal of Kidney Care Volume 2 ; 2 ; https://www.magonlinelibrary.com/ >
+    au < exists ; 2018 ; Journal of Kidney Care Volume 3 ; 3 ; https://www.magonlinelibrary.com/ >
+    au < exists ; 2019 ; Journal of Kidney Care Volume 4 ; 4 ; https://www.magonlinelibrary.com/ >
 
   }
 
