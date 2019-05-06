@@ -1158,7 +1158,7 @@
     au < frozen ; exists ; 2016 ; British Food Journal Volume 118 ; 118 ; http://www.emeraldinsight.com/ ; >
     au < frozen ; exists ; 2017 ; British Food Journal Volume 119 ; 119 ; https://www.emeraldinsight.com/ ; >
     au < deepCrawl ; exists ; 2018 ; British Food Journal Volume 120 ; 120 ; https://www.emeraldinsight.com/ ; >
-    au < expected ; exists ; 2019 ; British Food Journal Volume 121 ; 121 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2019 ; British Food Journal Volume 121 ; 121 ; https://www.emeraldinsight.com/ ; >
 
   }
 
@@ -1665,8 +1665,8 @@
     param[journal_id] = cc
     #continues = 0160-4953
 
-    au < exists ; exists ; 2018 ; Collection and Curation Volume 37 ; 37 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 2019 ; Collection and Curation Volume 38 ; 38 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2018 ; Collection and Curation Volume 37 ; 37 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2019 ; Collection and Curation Volume 38 ; 38 ; https://www.emeraldinsight.com/ ; >
 
   }
 
@@ -3122,8 +3122,8 @@
     param[journal_id] = ijoes
     #continues = 0828-8666
 
-    au < exists ; exists ; 2018 ; International Journal of Ethics and Systems Volume 34 ; 34 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 2019 ; International Journal of Ethics and Systems Volume 35 ; 35 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2018 ; International Journal of Ethics and Systems Volume 34 ; 34 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2019 ; International Journal of Ethics and Systems Volume 35 ; 35 ; https://www.emeraldinsight.com/ ; >
 
   }
 
@@ -4520,8 +4520,8 @@
     param[journal_id] = jppel
     #continues = 1756-1450
 
-    au < exists ; exists ; 2018 ; Journal of Property, Planning and Environmental Law Volume 10 ; 10 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 2019 ; Journal of Property, Planning and Environmental Law Volume 11 ; 11 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2018 ; Journal of Property, Planning and Environmental Law Volume 10 ; 10 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2019 ; Journal of Property, Planning and Environmental Law Volume 11 ; 11 ; https://www.emeraldinsight.com/ ; >
 
   }
 
@@ -7410,7 +7410,7 @@
     au < frozen ; exists ; 2016 ; Journal of International Education in Business Volume 9 ; 9 ; http://www.emeraldinsight.com/ ; >
     au < finished ; crawling ; 2017 ; Journal of International Education in Business Volume 10 ; 10 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2018 ; Journal of International Education in Business Volume 11 ; 11 ; https://www.emeraldinsight.com/ ; >
-    au < expected ; exists ; 2019 ; Journal of International Education in Business Volume 12 ; 12 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2019 ; Journal of International Education in Business Volume 12 ; 12 ; https://www.emeraldinsight.com/ ; >
 
   }
 
@@ -8412,7 +8412,7 @@
     au < finished ; crawling ; 2016 ; Journal of Services Marketing Volume 30 ; 30 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2017 ; Journal of Services Marketing Volume 31 ; 31 ; http://www.emeraldinsight.com/ ; >
     au < deepCrawl ; exists ; 2018 ; Journal of Services Marketing Volume 32 ; 32 ; https://www.emeraldinsight.com/ ; >
-    au < expected ; exists ; 2019 ; Journal of Services Marketing Volume 33 ; 33 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2019 ; Journal of Services Marketing Volume 33 ; 33 ; https://www.emeraldinsight.com/ ; >
 
   }
 
@@ -9098,8 +9098,8 @@
     param[journal_id] = gkmc
     #continues = 0024-2535
 
-    au < exists ; exists ; 2018 ; Global Knowledge, Memory and Communication Volume 67 ; 67 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 2019 ; Global Knowledge, Memory and Communication Volume 68 ; 68 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2018 ; Global Knowledge, Memory and Communication Volume 67 ; 67 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2019 ; Global Knowledge, Memory and Communication Volume 68 ; 68 ; https://www.emeraldinsight.com/ ; >
 
   }
 
@@ -10724,8 +10724,8 @@
     param[journal_id] = dta
     #continues = 0033-0337
 
-    au < exists ; exists ; 2018 ; Data Technologies and Applications Volume 52 ; 52 ; https://www.emeraldinsight.com/ ; >
-    au < exists ; exists ; 2019 ; Data Technologies and Applications Volume 53 ; 53 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2018 ; Data Technologies and Applications Volume 52 ; 52 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2019 ; Data Technologies and Applications Volume 53 ; 53 ; https://www.emeraldinsight.com/ ; >
 
   }
 

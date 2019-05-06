@@ -1376,7 +1376,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; AoB PLANTS Volume 8 ; 8 ; >
     au < finished ; crawling ; 2017 ; 2017 ; AoB PLANTS Volume 9 ; 9 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2018 ; 2018 ; AoB PLANTS Volume 10 ; 10 ; >
-    au < expected ; exists ; 2019 ; 2019 ; AoB PLANTS Volume 11 ; 11 ; >
+    au < manifest ; exists ; 2019 ; 2019 ; AoB PLANTS Volume 11 ; 11 ; >
 
   }
 
@@ -2194,7 +2194,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Biology Methods and Protocols Volume 1 ; 1 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Biology Methods and Protocols Volume 2 ; 2 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Biology Methods and Protocols Volume 3 ; 3 ; >
-    au < expected ; exists ; 2019 ; 2019 ; Biology Methods and Protocols Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2019 ; 2019 ; Biology Methods and Protocols Volume 4 ; 4 ; >
 
   }
 
@@ -3569,7 +3569,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Community Development Journal Volume 51 ; 51 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Community Development Journal Volume 52 ; 52 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Community Development Journal Volume 53 ; 53 ; >
-    au < expected ; exists ; 2019 ; 2019 ; Community Development Journal Volume 54 ; 54 ; >
+    au < manifest ; exists ; 2019 ; 2019 ; Community Development Journal Volume 54 ; 54 ; >
 
   }
 
@@ -3643,7 +3643,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Conservation Physiology Volume 4 ; 4 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Conservation Physiology Volume 5 ; 5 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Conservation Physiology Volume 6 ; 6 ; >
-    au < expected ; exists ; 2019 ; 2019 ; Conservation Physiology Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2019 ; 2019 ; Conservation Physiology Volume 7 ; 7 ; >
 
   }
 
@@ -3780,7 +3780,7 @@
 
     au < finished ; crawling ; 2017 ; 2017 ; Current Developments in Nutrition Volume 1 ; 1 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Current Developments in Nutrition Volume 2 ; 2 ; >
-    au < expected ; exists ; 2019 ; 2019 ; Current Developments in Nutrition Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2019 ; 2019 ; Current Developments in Nutrition Volume 3 ; 3 ; >
 
   }
 
@@ -3844,7 +3844,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Current Zoology Volume 62 ; 62 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Current Zoology Volume 63 ; 63 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Current Zoology Volume 64 ; 64 ; >
-    au < expected ; exists ; 2019 ; 2019 ; Current Zoology Volume 65 ; 65 ; >
+    au < manifest ; exists ; 2019 ; 2019 ; Current Zoology Volume 65 ; 65 ; >
 
   }
 
@@ -3884,7 +3884,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; DNA Research Volume 23 ; 23 ; >
     au < finished ; crawling ; 2017 ; 2017 ; DNA Research Volume 24 ; 24 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; DNA Research Volume 25 ; 25 ; >
-    au < expected ; exists ; 2019 ; 2019 ; DNA Research Volume 26 ; 26 ; >
+    au < manifest ; exists ; 2019 ; 2019 ; DNA Research Volume 26 ; 26 ; >
 
   }
 
@@ -3908,7 +3908,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Database Volume 2016 ; 2016 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Database Volume 2017 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Database Volume 2018 ; 2018 ; >
-    au < expected ; exists ; 2019 ; 2019 ; Database Volume 2019 ; 2019 ; >
+    au < manifest ; exists ; 2019 ; 2019 ; Database Volume 2019 ; 2019 ; >
 
   }
 
@@ -5691,7 +5691,7 @@
     #this title was ONLY in the publisher listing
     au < finished ; crawling ; 2017 ; 2017 ; Food Quality and Safety Volume 1 ; 1 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Food Quality and Safety Volume 2 ; 2 ; >
-    au < expected ; exists ; 2019 ; 2019 ; Food Quality and Safety Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2019 ; 2019 ; Food Quality and Safety Volume 3 ; 3 ; >
 
   }
 
@@ -6233,7 +6233,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Gastroenterology Report Volume 4 ; 4 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Gastroenterology Report Volume 5 ; 5 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Gastroenterology Report Volume 6 ; 6 ; >
-    au < expected ; exists ; 2019 ; 2019 ; Gastroenterology Report Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2019 ; 2019 ; Gastroenterology Report Volume 7 ; 7 ; >
 
   }
 
@@ -6256,7 +6256,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Genome Biology and Evolution Volume 8 ; 8 ; >
     au < notReady ; exists ; 2017 ; 2017 ; Genome Biology and Evolution Volume 9 ; 9 ; > # 403 error on cdn back file
     au < deepCrawl ; exists ; 2018 ; 2018 ; Genome Biology and Evolution Volume 10 ; 10 ; >
-    au < expected ; exists ; 2019 ; 2019 ; Genome Biology and Evolution Volume 11 ; 11 ; >
+    au < manifest ; exists ; 2019 ; 2019 ; Genome Biology and Evolution Volume 11 ; 11 ; >
 
   }
 
@@ -6449,7 +6449,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; GigaScience Volume 5 [OUP] ; 5 ; >
     au < frozen ; exists ; 2017 ; 2017 ; GigaScience Volume 6 [OUP] ; 6 ; >
     au < frozen ; exists ; 2018 ; 2018 ; GigaScience Volume 7 [OUP] ; 7 ; >
-    au < expected ; exists ; 2019 ; 2019 ; GigaScience Volume 8 [OUP] ; 8 ; >
+    au < manifest ; exists ; 2019 ; 2019 ; GigaScience Volume 8 [OUP] ; 8 ; >
 
   }
 
@@ -6922,7 +6922,7 @@
     #this title was ONLY in the publisher listing
     au < finished ; crawling ; 2017 ; 2017 ; Human Reproduction Open Volume 2017 ; 2017 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Human Reproduction Open Volume 2018 ; 2018 ; >
-    au < expected ; exists ; 2019 ; 2019 ; Human Reproduction Open Volume 2019 ; 2019 ; >
+    au < manifest ; exists ; 2019 ; 2019 ; Human Reproduction Open Volume 2019 ; 2019 ; >
 
   }
 
@@ -8212,7 +8212,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; International Journal of Low-Carbon Technologies Volume 11 ; 11 ; >
     au < frozen ; exists ; 2017 ; 2017 ; International Journal of Low-Carbon Technologies Volume 12 ; 12 ; >
     au < testing ; exists ; 2018 ; 2018 ; International Journal of Low-Carbon Technologies Volume 13 ; 13 ; >
-    au < expected ; exists ; 2019 ; 2019 ; International Journal of Low-Carbon Technologies Volume 14 ; 14 ; >
+    au < manifest ; exists ; 2019 ; 2019 ; International Journal of Low-Carbon Technologies Volume 14 ; 14 ; >
 
   }
 
@@ -8248,7 +8248,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; International Journal of Neuropsychopharmacology Volume 19 ; 19 ; >
     au < frozen ; exists ; 2017 ; 2017 ; International Journal of Neuropsychopharmacology Volume 20 ; 20 ; >
     au < testing ; exists ; 2018 ; 2018 ; International Journal of Neuropsychopharmacology Volume 21 ; 21 ; >
-    au < expected ; exists ; 2019 ; 2019 ; International Journal of Neuropsychopharmacology Volume 22 ; 22 ; >
+    au < manifest ; exists ; 2019 ; 2019 ; International Journal of Neuropsychopharmacology Volume 22 ; 22 ; >
 
   }
 
@@ -9908,7 +9908,7 @@
     param[journal_id] = jge
 
     au < deepCrawl ; exists ; 2018 ; 2018 ; Journal of Geophysics and Engineering Volume 15 ; 15 ; >
-    au < expected ; exists ; 2019 ; 2019 ; Journal of Geophysics and Engineering Volume 16 ; 16 ; >
+    au < manifest ; exists ; 2019 ; 2019 ; Journal of Geophysics and Engineering Volume 16 ; 16 ; >
 
   }
 
@@ -10188,7 +10188,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Journal of Insect Science Volume 16 ; 16 ; >
     au < testing ; exists ; 2017 ; 2017 ; Journal of Insect Science Volume 17 ; 17 ; >
     au < testing ; exists ; 2018 ; 2018 ; Journal of Insect Science Volume 18 ; 18 ; >
-    au < expected ; exists ; 2019 ; 2019 ; Journal of Insect Science Volume 19 ; 19 ; >
+    au < manifest ; exists ; 2019 ; 2019 ; Journal of Insect Science Volume 19 ; 19 ; >
 
   }
 
@@ -10206,7 +10206,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Journal of Integrable Systems Volume 1 ; 1 ; >
     au < testing ; exists ; 2017 ; 2017 ; Journal of Integrable Systems Volume 2 ; 2 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Journal of Integrable Systems Volume 3 ; 3 ; >
-    au < expected ; exists ; 2019 ; 2019 ; Journal of Integrable Systems Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2019 ; 2019 ; Journal of Integrable Systems Volume 4 ; 4 ; >
 
   }
 
@@ -10229,7 +10229,7 @@
     au < testing ; exists ; 2016 ; 2016 ; Journal of Integrated Pest Management Volume 7 ; 7 ; >
     au < testing ; exists ; 2017 ; 2017 ; Journal of Integrated Pest Management Volume 8 ; 8 ; >
     au < testing ; exists ; 2018 ; 2018 ; Journal of Integrated Pest Management Volume 9 ; 9 ; >
-    au < expected ; exists ; 2019 ; 2019 ; Journal of Integrated Pest Management Volume 10 ; 10 ; >
+    au < manifest ; exists ; 2019 ; 2019 ; Journal of Integrated Pest Management Volume 10 ; 10 ; >
 
   }
 
@@ -11435,7 +11435,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Journal of Surgical Case Reports Volume 2016 ; 2016 ; >
     au < testing ; exists ; 2017 ; 2017 ; Journal of Surgical Case Reports Volume 2017 ; 2017 ; >
     au < testing ; exists ; 2018 ; 2018 ; Journal of Surgical Case Reports Volume 2018 ; 2018 ; >
-    au < expected ; exists ; 2019 ; 2019 ; Journal of Surgical Case Reports Volume 2019 ; 2019 ; >
+    au < manifest ; exists ; 2019 ; 2019 ; Journal of Surgical Case Reports Volume 2019 ; 2019 ; >
 
   }
 
@@ -11606,7 +11606,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Journal of Urban Ecology Volume 2 ; 2 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Journal of Urban Ecology Volume 3 ; 3 ; >
     au < testing ; exists ; 2018 ; 2018 ; Journal of Urban Ecology Volume 4 ; 4 ; >
-    au < expected ; exists ; 2019 ; 2019 ; Journal of Urban Ecology Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2019 ; 2019 ; Journal of Urban Ecology Volume 5 ; 5 ; >
 
   }
 
@@ -13521,7 +13521,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Neuroscience of Consciousness Volume 2016 ; 2016 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Neuroscience of Consciousness Volume 2017 ; 2017 ; >
     au < testing ; exists ; 2018 ; 2018 ; Neuroscience of Consciousness Volume 2018 ; 2018 ; >
-    au < expected ; exists ; 2019 ; 2019 ; Neuroscience of Consciousness Volume 2019 ; 2019 ; >
+    au < manifest ; exists ; 2019 ; 2019 ; Neuroscience of Consciousness Volume 2019 ; 2019 ; >
 
   }
 
@@ -13873,7 +13873,7 @@
     au < testing ; exists ; 2016 ; 2016 ; Nucleic Acids Research Volume 44 ; 44 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Nucleic Acids Research Volume 45 ; 45 ; >
     au < testing ; exists ; 2018 ; 2018 ; Nucleic Acids Research Volume 46 ; 46 ; >
-    au < expected ; exists ; 2019 ; 2019 ; Nucleic Acids Research Volume 47 ; 47 ; >
+    au < manifest ; exists ; 2019 ; 2019 ; Nucleic Acids Research Volume 47 ; 47 ; >
 
   }
 
@@ -14349,7 +14349,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Oxford Journal of Legal Studies Volume 36 ; 36 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Oxford Journal of Legal Studies Volume 37 ; 37 ; >
     au < testing ; exists ; 2018 ; 2018 ; Oxford Journal of Legal Studies Volume 38 ; 38 ; >
-    au < expected ; exists ; 2019 ; 2019 ; Oxford Journal of Legal Studies Volume 39 ; 39 ; >
+    au < manifest ; exists ; 2019 ; 2019 ; Oxford Journal of Legal Studies Volume 39 ; 39 ; >
 
   }
 
@@ -14368,7 +14368,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Oxford Medical Case Reports Volume 2016 ; 2016 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Oxford Medical Case Reports Volume 2017 ; 2017 ; >
     au < testing ; exists ; 2018 ; 2018 ; Oxford Medical Case Reports Volume 2018 ; 2018 ; >
-    au < expected ; exists ; 2019 ; 2019 ; Oxford Medical Case Reports Volume 2019 ; 2019 ; >
+    au < manifest ; exists ; 2019 ; 2019 ; Oxford Medical Case Reports Volume 2019 ; 2019 ; >
 
   }
 
@@ -15311,7 +15311,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2016 ; 2016 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2017 ; 2017 ; >
     au < testing ; exists ; 2018 ; 2018 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2018 ; 2018 ; >
-    au < expected ; exists ; 2019 ; 2019 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2019 ; 2019 ; >
+    au < manifest ; exists ; 2019 ; 2019 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2019 ; 2019 ; >
 
   }
 
@@ -15840,7 +15840,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Regenerative Biomaterials Volume 3 ; 3 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Regenerative Biomaterials Volume 4 ; 4 ; >
     au < testing ; exists ; 2018 ; 2018 ; Regenerative Biomaterials Volume 5 ; 5 ; >
-    au < expected ; exists ; 2019 ; 2019 ; Regenerative Biomaterials Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2019 ; 2019 ; Regenerative Biomaterials Volume 6 ; 6 ; >
 
   }
 
@@ -16440,7 +16440,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Social Cognitive and Affective Neuroscience Volume 11 ; 11 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Social Cognitive and Affective Neuroscience Volume 12 ; 12 ; >
     au < testing ; exists ; 2018 ; 2018 ; Social Cognitive and Affective Neuroscience Volume 13 ; 13 ; >
-    au < expected ; exists ; 2019 ; 2019 ; Social Cognitive and Affective Neuroscience Volume 14 ; 14 ; >
+    au < manifest ; exists ; 2019 ; 2019 ; Social Cognitive and Affective Neuroscience Volume 14 ; 14 ; >
 
   }
 
@@ -17035,7 +17035,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Statute Law Review Volume 37 ; 37 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Statute Law Review Volume 38 ; 38 ; >
     au < testing ; exists ; 2018 ; 2018 ; Statute Law Review Volume 39 ; 39 ; >
-    au < expected ; exists ; 2019 ; 2019 ; Statute Law Review Volume 40 ; 40 ; >
+    au < manifest ; exists ; 2019 ; 2019 ; Statute Law Review Volume 40 ; 40 ; >
 
   }
 
@@ -17052,7 +17052,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Synthetic Biology Volume 1 ; 1 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Synthetic Biology Volume 2 ; 2 ; >
     au < testing ; exists ; 2018 ; 2018 ; Synthetic Biology Volume 3 ; 3 ; >
-    au < expected ; exists ; 2019 ; 2019 ; Synthetic Biology Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2019 ; 2019 ; Synthetic Biology Volume 4 ; 4 ; >
 
   }
 
@@ -20735,7 +20735,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Virus Evolution Volume 2 ; 2 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Virus Evolution Volume 3 ; 3 ; >
     au < testing ; exists ; 2018 ; 2018 ; Virus Evolution Volume 4 ; 4 ; >
-    au < expected ; exists ; 2019 ; 2019 ; Virus Evolution Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2019 ; 2019 ; Virus Evolution Volume 5 ; 5 ; >
 
   }
 
