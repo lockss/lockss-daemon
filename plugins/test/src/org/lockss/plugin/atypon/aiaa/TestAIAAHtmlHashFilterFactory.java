@@ -64,10 +64,7 @@ public class TestAIAAHtmlHashFilterFactory extends LockssTestCase {
           " </div></div></div><!-- /fulltext content --></div>";
 
   private static final String citedByFiltered = 
-      " <div id=\"articleContent\"> <p class=\"fulltext\"> </p>" +
-          " <h1 class=\"arttitle\"> Optimal, Environmentally Friendly Departure Procedures for Civil Aircraft </h1>" +
-          " <div class=\"artAuthors\"> <span class=\"NLM_string-name\">R. Torres </span> <span class=\"NLM_x\">; </span> </div>" +
-          " </div>";
+      " Optimal, Environmentally Friendly Departure Procedures for Civil Aircraft R. Torres ; ";
       
   /* script call that generates institution specific thingie */
   private static final String scriptHtml = 
@@ -80,13 +77,7 @@ public class TestAIAAHtmlHashFilterFactory extends LockssTestCase {
           "<script type=\"text/javascript\">genSfxLinks('s0', '', '10.2514/1.C031282');</script>" +
           "</td></tr></table>";
   private static final String scriptFiltered = 
-      " <table border=\"0\" width=\"100%\" class=\"articleEntry\">" +
-          " <tr>" +
-          " <td align=\"right\" valign=\"top\" width=\"18\" class=\"nowrap\">1 </td>" +
-          " <td valign=\"top\">" +
-          " <div class=\"art_title\">Green Aviation Papers, Call and Recognition </div>" +
-          " <br> </br>" +
-          " </td> </tr> </table>";
+      " 1 Green Aviation Papers, Call and Recognition ";
   
 
   private static final String commentModified =
@@ -101,15 +92,7 @@ public class TestAIAAHtmlHashFilterFactory extends LockssTestCase {
           "</tr></table>";
   
   private static final String commentModifiedFiltered = 
-      " <input type=\"checkbox\" name=\"markall\" id=\"markall\" onclick=\"onClickMarkAll(frmAbs)\"/>" +
-          " <label for=\"markall\">Select All </label>" +
-          " <hr/>" +
-          " <table border=\"0\" width=\"100%\" class=\"articleEntry\">" +
-          " <tr>" +
-          " <td align=\"right\" valign=\"top\" width=\"18\"> <input type=\"checkbox\" name=\"doi\" value=\"10.2514/1.46304\"> </input> <br> </br>" +
-          "" +
-          " </td> <td align=\"right\" valign=\"top\" width=\"18\" class=\"nowrap\">391 </td>" +
-          " </tr> </table>";
+      " Select All 391 ";
   
   private static final String spanIdHtml =
       "<div id=\"sec2.1\" class=\"NLM_sec NLM_sec_level_2\">" +
@@ -118,11 +101,8 @@ public class TestAIAAHtmlHashFilterFactory extends LockssTestCase {
       "<p>The Johnson distribution</p>";
   
   private static final String spanIdHtmlFiltered =
-      " <div id=\"sec2.1\" class=\"NLM_sec NLM_sec_level_2\">" +
-      " <span class=\"title2\" >" +
-      "A. Fitting the Johnson Distribution to Point Data </span> " +
-      "<p>The Johnson distribution </p>";
-  
+      "A. Fitting the Johnson Distribution to Point Data The Johnson distribution";
+
   private static final String adHolderDiv = 
       "<div " +
           "id=\"widget-7132\" class=\"widget type-ad-placeholder ui-helper-clearfix\">" +
@@ -146,11 +126,7 @@ public class TestAIAAHtmlHashFilterFactory extends LockssTestCase {
           "</li>" +
           "</ul>";
   private static final String listItemCitedByFiltered =
-      " <ul> <li class=\"articleToolLi showPDFPlus\">" +
-          " <a href=\"/doi/pdfplus/10.2514/1.36414\" target=\"_blank\">" +
-          " </a>" +
-          " </li>" +
-          " </ul>";
+      " ";
       
 public static final String sectionsPulldown =  
   "<table width=\"50%\" cellpadding=\"0\" cellspacing=\"0\"><tr>" +
@@ -163,17 +139,7 @@ public static final String sectionsPulldown =
   "<option value=\"#_i16\">References</option>" +
   "<option value=\"#citart1\">CITING ARTICLES</option></select></form>" +
   "</td></tr></table>";
-public static final String sectionsPulldownFiltered =  
-" <table width=\"50%\" cellpadding=\"0\" cellspacing=\"0\"> <tr>" +
-" <td nowrap=\"\" height=\"16\" width=\"40\" align=\"left\">" +
-" <span class=\"fulltext\">Sections: </span> </td>" +
-" <td nowrap=\"\" height=\"16\" width=\"92\" align=\"left\" valign=\"middle\">" +
-" <form style=\"margin-bottom:0\">" +
-" <select name=\"select23\" class=\"fulltextdd\" onChange=\"GoTo(this, 'self')\">" +
-" <option value=\"#\" selected=\"\">Choose </option>" +
-" <option value=\"#_i16\">References </option>" +
-" </select> </form>" +
-" </td> </tr> </table>";
+public static final String sectionsPulldownFiltered = "Sections: Choose References";
 
 public static final String sectionHeading =
   "<div class=\"sectionHeadingContainer\"><div class=\"sectionHeadingContainer2\">" +
@@ -190,9 +156,7 @@ public static final String sectionHeading =
   "<a href=\"#_i3\">" +
   "<img src=\"/templates/jsp/images/arrow_down.gif\" alt=\"Next section\"></img>" +
   "</a></td></tr></table></div></div>";
-public static final String sectionHeadingFiltered =
-" <div class=\"sectionHeadingContainer\"> <div class=\"sectionHeadingContainer2\">" +
-" </div> </div>";
+public static final String sectionHeadingFiltered = "";
 
   
   public void testFiltering() throws Exception {
@@ -213,7 +177,7 @@ public static final String sectionHeadingFiltered =
     
     inA = fact.createFilteredInputStream(mau, new StringInputStream(spanIdHtml),
         ENC);
-    assertEquals(spanIdHtmlFiltered,StringUtil.fromInputStream(inA));
+    assertEquals(spanIdHtmlFiltered,StringUtil.fromInputStream(inA).trim());
     
     inA = fact.createFilteredInputStream(mau, new StringInputStream(adHolderDiv),
         ENC);
@@ -225,11 +189,11 @@ public static final String sectionHeadingFiltered =
 
     inA = fact.createFilteredInputStream(mau, new StringInputStream(sectionsPulldown),
         ENC);
-    assertEquals(sectionsPulldownFiltered,StringUtil.fromInputStream(inA));
+    assertEquals(sectionsPulldownFiltered,StringUtil.fromInputStream(inA).trim());
 
     inA = fact.createFilteredInputStream(mau, new StringInputStream(sectionHeading),
         ENC);
-    assertEquals(sectionHeadingFiltered,StringUtil.fromInputStream(inA));
+    assertEquals(sectionHeadingFiltered,StringUtil.fromInputStream(inA).trim());
  
   }
 }

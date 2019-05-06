@@ -65,7 +65,7 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
 
   static final String baseRepairList[] = 
     {
-    "://[^/]+/(templates/jsp|(css|img|js)Jawr|fonts|pb-assets|resources|sda|wro|products/photo-theme)/",
+    "://[^/]+/(templates/jsp|(css|img|js)Jawr|fonts|pb-assets|releasedAssets|resources|sda|wro|products/photo-theme)/",
     "/(assets|css|img|js|wro)/.+\\.(css|gif|jpe?g|js|png)(_v[0-9]+)?$",
     "://[^/]+/na[0-9]+/home/(readonly|literatum)/publisher/.*(cover\\.jpg|/covergifs/.*\\.jpg|\\.fp\\.png(_v[0-9]+)?)$",
     "://[^/]+/na[0-9]+/home/(readonly|literatum)/publisher/.*/images/.*\\.(gif|jpe?g|png)$",
@@ -73,7 +73,7 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
 
   static final String bookRepairList[] = 
     {
-    "://[^/]+/(templates/jsp|(css|img|js)Jawr|pb-assets|resources|sda|wro)/",
+    "://[^/]+/(templates/jsp|(css|img|js)Jawr|pb-assets|releasedAssets|resources|sda|wro)/",
     "/(assets|css|img|js|wro)/.+\\.(css|gif|jpe?g|js|png)(_v[0-9]+)?$",
     "://[^/]+/na[0-9]+/home/(readonly|literatum)/publisher/.*(cover\\.jpg|/covergifs/.*\\.jpg|\\.fp\\.png(_v[0-9]+)?)$",
     "://[^/]+/na[0-9]+/home/(readonly|literatum)/publisher/.*/images/.*\\.(gif|jpe?g|png)$",
