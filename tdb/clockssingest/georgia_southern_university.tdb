@@ -196,11 +196,11 @@
       param[base_url] = https://digitalcommons.georgiasouthern.edu/
       param[journal_abbr] = thecoastalreview
 
-      au < manifest ; exists ; 2017 ; The Coastal Review Special Issues ; 0 ; >
+      au < testing ; exists ; 2017 ; The Coastal Review Special Issues ; 0 ; >
       au < manifest ; exists ; 2007 ; The Coastal Review Volume 1 ; 1 ; >
       au < manifest ; exists ; 2008 ; The Coastal Review Volume 2 ; 2 ; >
       au < manifest ; exists ; 2011 ; The Coastal Review Volume 3 ; 3 ; >
-      au < manifest ; exists ; 2013 ; The Coastal Review Volume 4 ; 4 ; >
+      au < testing ; exists ; 2013 ; The Coastal Review Volume 4 ; 4 ; >
       au < doesNotExist ; doesNotExist ; 2012 ; The Coastal Review Volume 5 ; 5 ; >
       au < frozen ; exists ; 2015-2016 ; The Coastal Review Volume 6 ; 6 ; >
       au < frozen ; exists ; 2015-2016 ; The Coastal Review Volume 7 ; 7 ; >
