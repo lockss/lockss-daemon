@@ -549,10 +549,10 @@
     param[journal_id] = jokc
     #continues = 2041-1448
 
-    au < exists ; 2016 ; Journal of Kidney Care Volume 1 ; 1 ; https://www.magonlinelibrary.com/ >
-    au < exists ; 2017 ; Journal of Kidney Care Volume 2 ; 2 ; https://www.magonlinelibrary.com/ >
-    au < exists ; 2018 ; Journal of Kidney Care Volume 3 ; 3 ; https://www.magonlinelibrary.com/ >
-    au < exists ; 2019 ; Journal of Kidney Care Volume 4 ; 4 ; https://www.magonlinelibrary.com/ >
+    au < manifest ; 2016 ; Journal of Kidney Care Volume 1 ; 1 ; https://www.magonlinelibrary.com/ >
+    au < manifest ; 2017 ; Journal of Kidney Care Volume 2 ; 2 ; https://www.magonlinelibrary.com/ >
+    au < manifest ; 2018 ; Journal of Kidney Care Volume 3 ; 3 ; https://www.magonlinelibrary.com/ >
+    au < manifest ; 2019 ; Journal of Kidney Care Volume 4 ; 4 ; https://www.magonlinelibrary.com/ >
 
   }
 
@@ -790,14 +790,14 @@
     comment[base_url] = http://www.earlyyearseducator.co.uk/
     param[journal_id] = eyed
 
-    au < exists ; 1999-2000 ; Early Years Educator (EYE) Volume 1 ; 1 ; https://www.magonlinelibrary.com/ >
-    au < exists ; 2000-2001 ; Early Years Educator (EYE) Volume 2 ; 2 ; https://www.magonlinelibrary.com/ >
-    au < exists ; 2001-2002 ; Early Years Educator (EYE) Volume 3 ; 3 ; https://www.magonlinelibrary.com/ >
-    au < exists ; 2002-2003 ; Early Years Educator (EYE) Volume 4 ; 4 ; https://www.magonlinelibrary.com/ >
-    au < exists ; 2003-2004 ; Early Years Educator (EYE) Volume 5 ; 5 ; https://www.magonlinelibrary.com/ >
-    au < exists ; 2004-2005 ; Early Years Educator (EYE) Volume 6 ; 6 ; https://www.magonlinelibrary.com/ >
-    au < exists ; 2005-2006 ; Early Years Educator (EYE) Volume 7 ; 7 ; https://www.magonlinelibrary.com/ >
-    au < exists ; 2006-2007 ; Early Years Educator (EYE) Volume 8 ; 8 ; https://www.magonlinelibrary.com/ >
+    au < manifest ; 1999-2000 ; Early Years Educator (EYE) Volume 1 ; 1 ; https://www.magonlinelibrary.com/ >
+    au < manifest ; 2000-2001 ; Early Years Educator (EYE) Volume 2 ; 2 ; https://www.magonlinelibrary.com/ >
+    au < manifest ; 2001-2002 ; Early Years Educator (EYE) Volume 3 ; 3 ; https://www.magonlinelibrary.com/ >
+    au < manifest ; 2002-2003 ; Early Years Educator (EYE) Volume 4 ; 4 ; https://www.magonlinelibrary.com/ >
+    au < manifest ; 2003-2004 ; Early Years Educator (EYE) Volume 5 ; 5 ; https://www.magonlinelibrary.com/ >
+    au < manifest ; 2004-2005 ; Early Years Educator (EYE) Volume 6 ; 6 ; https://www.magonlinelibrary.com/ >
+    au < manifest ; 2005-2006 ; Early Years Educator (EYE) Volume 7 ; 7 ; https://www.magonlinelibrary.com/ >
+    au < manifest ; 2006-2007 ; Early Years Educator (EYE) Volume 8 ; 8 ; https://www.magonlinelibrary.com/ >
     au < manifest ; 2007-2008 ; Early Years Educator (EYE) Volume 9 ; 9 ; https://www.magonlinelibrary.com/ >
     au < manifest ; 2008-2009 ; Early Years Educator (EYE) Volume 10 ; 10 ; https://www.magonlinelibrary.com/ >
     au < manifest ; 2009-2010 ; Early Years Educator (EYE) Volume 11 ; 11 ; https://www.magonlinelibrary.com/ >
