@@ -30,7 +30,7 @@
     au < released ; 2016 ; Journal of Biological Chemistry Volume 291 ; 291 >
     au < released ; 2017 ; Journal of Biological Chemistry Volume 292 ; 292 >
     au < manifest ; 2018 ; Journal of Biological Chemistry Volume 293 ; 293 >
-    au < expected ; 2019 ; Journal of Biological Chemistry Volume 294 ; 294 >
+    au < manifest ; 2019 ; Journal of Biological Chemistry Volume 294 ; 294 >
 
   }
 
@@ -78,7 +78,7 @@
     au < released ; 2016 ; The Journal of Lipid Research Volume 57 ; 57 >
     au < released ; 2017 ; The Journal of Lipid Research Volume 58 ; 58 >
     au < released ; 2018 ; The Journal of Lipid Research Volume 59 ; 59 >
-    au < expected ; 2019 ; The Journal of Lipid Research Volume 60 ; 60 >
+    au < manifest ; 2019 ; The Journal of Lipid Research Volume 60 ; 60 >
 
   }
 
@@ -94,27 +94,27 @@
     {
 
       pluginPrefix = org.lockss.plugin.highwire.
-      param[base_url] = http://www.mcponline.org/
-      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+      #param[base_url] = http://www.mcponline.org/
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] ; param[base_url] >
 
-      au < HighWirePressH20Plugin ; released ; 2002 ; Molecular & Cellular Proteomics Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; released ; 2003 ; Molecular & Cellular Proteomics Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; released ; 2004 ; Molecular & Cellular Proteomics Volume 3 ; 3 >
-      au < HighWirePressPlugin ; down ; 2005 ; Molecular & Cellular Proteomics Volume 4 ; 4 >
-      au < HighWirePressPlugin ; down ; 2006 ; Molecular & Cellular Proteomics Volume 5 ; 5 >
-      au < HighWirePressPlugin ; down ; 2007 ; Molecular & Cellular Proteomics Volume 6 ; 6 >
-      au < HighWirePressPlugin ; down ; 2008 ; Molecular & Cellular Proteomics Volume 7 ; 7 >
-      au < HighWirePressPlugin ; down ; 2009 ; Molecular & Cellular Proteomics Volume 8 ; 8 >
-      au < HighWirePressPlugin ; down ; 2010 ; Molecular & Cellular Proteomics Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; released ; 2011 ; Molecular & Cellular Proteomics Volume 10 ; 10 >
-      au < HighWirePressH20Plugin ; released ; 2012 ; Molecular & Cellular Proteomics Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; released ; 2013 ; Molecular & Cellular Proteomics Volume 12 ; 12 >
-      au < HighWirePressH20Plugin ; released ; 2014 ; Molecular & Cellular Proteomics Volume 13 ; 13 >
-      au < HighWirePressH20Plugin ; released ; 2015 ; Molecular & Cellular Proteomics Volume 14 ; 14 >
-      au < HighWirePressH20Plugin ; released ; 2016 ; Molecular & Cellular Proteomics Volume 15 ; 15 >
-      au < HighWirePressH20Plugin ; released ; 2017 ; Molecular & Cellular Proteomics Volume 16 ; 16 >
-      au < HighWirePressH20Plugin ; manifest ; 2018 ; Molecular & Cellular Proteomics Volume 17 ; 17 >
-      au < HighWirePressH20Plugin ; expected ; 2019 ; Molecular & Cellular Proteomics Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; released ; 2002 ; Molecular & Cellular Proteomics Volume 1 ; 1 ; http://www.mcponline.org/ >
+      au < HighWirePressH20Plugin ; released ; 2003 ; Molecular & Cellular Proteomics Volume 2 ; 2 ; http://www.mcponline.org/ >
+      au < HighWirePressH20Plugin ; released ; 2004 ; Molecular & Cellular Proteomics Volume 3 ; 3 ; http://www.mcponline.org/ >
+      au < HighWirePressPlugin ; down ; 2005 ; Molecular & Cellular Proteomics Volume 4 ; 4 ; http://www.mcponline.org/ >
+      au < HighWirePressPlugin ; down ; 2006 ; Molecular & Cellular Proteomics Volume 5 ; 5 ; http://www.mcponline.org/ >
+      au < HighWirePressPlugin ; down ; 2007 ; Molecular & Cellular Proteomics Volume 6 ; 6 ; http://www.mcponline.org/ >
+      au < HighWirePressPlugin ; down ; 2008 ; Molecular & Cellular Proteomics Volume 7 ; 7 ; http://www.mcponline.org/ >
+      au < HighWirePressPlugin ; down ; 2009 ; Molecular & Cellular Proteomics Volume 8 ; 8 ; http://www.mcponline.org/ >
+      au < HighWirePressPlugin ; down ; 2010 ; Molecular & Cellular Proteomics Volume 9 ; 9 ; http://www.mcponline.org/ >
+      au < HighWirePressH20Plugin ; released ; 2011 ; Molecular & Cellular Proteomics Volume 10 ; 10 ; http://www.mcponline.org/ >
+      au < HighWirePressH20Plugin ; released ; 2012 ; Molecular & Cellular Proteomics Volume 11 ; 11 ; http://www.mcponline.org/ >
+      au < HighWirePressH20Plugin ; released ; 2013 ; Molecular & Cellular Proteomics Volume 12 ; 12 ; http://www.mcponline.org/ >
+      au < HighWirePressH20Plugin ; released ; 2014 ; Molecular & Cellular Proteomics Volume 13 ; 13 ; http://www.mcponline.org/ >
+      au < HighWirePressH20Plugin ; released ; 2015 ; Molecular & Cellular Proteomics Volume 14 ; 14 ; http://www.mcponline.org/ >
+      au < HighWirePressH20Plugin ; released ; 2016 ; Molecular & Cellular Proteomics Volume 15 ; 15 ; http://www.mcponline.org/ >
+      au < HighWirePressH20Plugin ; released ; 2017 ; Molecular & Cellular Proteomics Volume 16 ; 16 ; http://www.mcponline.org/ >
+      au < HighWirePressH20Plugin ; manifest ; 2018 ; Molecular & Cellular Proteomics Volume 17 ; 17 ; https://www.mcponline.org/ >
+      au < HighWirePressH20Plugin ; expected ; 2019 ; Molecular & Cellular Proteomics Volume 18 ; 18 ; https://www.mcponline.org/ >
 
     }
 

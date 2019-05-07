@@ -61,6 +61,9 @@ public class AIAAHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
         // and at the top "sections:" pulldown there it is harder to identify
         // seems to be <option value="#citart1"..>
         HtmlNodeFilters.tagWithAttributeRegex("option", "value", "#citart"),
+        // add the following after AIAA platform upgrade 05/2019
+        HtmlNodeFilters.tagWithAttribute("div",  "class", "header__institution-bar"),
+        HtmlNodeFilters.tagWithAttribute("div",  "class", "header__search-bar"),
         
     };
     // super.createFilteredInputStream adds aiaa filter to the baseAtyponFilters
@@ -78,6 +81,15 @@ public class AIAAHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
   public boolean doHttpsConversion() {
     return true;
   }
+
+  // enable this filter since AIAA add more "id" attribute to html tag like h2 and a few others after 05/2019 platform change
+  @Override
+  public boolean doTagIDFiltering() {
+    return true;
+  }
+
+  @Override
+  public boolean doTagRemovalFiltering() { return true; }
 
 }
 

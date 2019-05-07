@@ -2412,15 +2412,15 @@
       comment[publisher] = White Rose University Press
 #      param[base_url] = https://www.bioj-online.com/
 
-      au < crawling ; exists ; 2009 ; 6 ; British and Irish Orthoptic Journal Volume 2009 ; 2009 ; https://www.bioj-online.com/ ; >
-      au < crawling ; exists ; 2010 ; 7 ; British and Irish Orthoptic Journal Volume 2010 ; 2010 ; https://www.bioj-online.com/ ; >
-      au < crawling ; exists ; 2011 ; 8 ; British and Irish Orthoptic Journal Volume 2011 ; 2011 ; https://www.bioj-online.com/ ; >
-      au < crawling ; exists ; 2012 ; 9 ; British and Irish Orthoptic Journal Volume 2012 ; 2012 ; https://www.bioj-online.com/ ; >
-      au < crawling ; exists ; 2013 ; 10 ; British and Irish Orthoptic Journal Volume 2013 ; 2013 ; https://www.bioj-online.com/ ; >
-      au < crawling ; exists ; 2014 ; 11 ; British and Irish Orthoptic Journal Volume 2014 ; 2014 ; https://www.bioj-online.com/ ; >
-      au < crawling ; exists ; 2015 ; 12 ; British and Irish Orthoptic Journal Volume 2015 ; 2015 ; https://www.bioj-online.com/ ; >
-      au < crawling ; exists ; 2016 ; 13 ; British and Irish Orthoptic Journal Volume 2016 ; 2016 ; https://www.bioj-online.com/ ; >
-      au < crawling ; exists ; 2018 ; 14 ; British and Irish Orthoptic Journal Volume 2018 ; 2018 ; https://www.bioj-online.com/ ; >
+      au < frozen ; exists ; 2009 ; 6 ; British and Irish Orthoptic Journal Volume 2009 ; 2009 ; https://www.bioj-online.com/ ; >
+      au < frozen ; exists ; 2010 ; 7 ; British and Irish Orthoptic Journal Volume 2010 ; 2010 ; https://www.bioj-online.com/ ; >
+      au < frozen ; exists ; 2011 ; 8 ; British and Irish Orthoptic Journal Volume 2011 ; 2011 ; https://www.bioj-online.com/ ; >
+      au < frozen ; exists ; 2012 ; 9 ; British and Irish Orthoptic Journal Volume 2012 ; 2012 ; https://www.bioj-online.com/ ; >
+      au < frozen ; exists ; 2013 ; 10 ; British and Irish Orthoptic Journal Volume 2013 ; 2013 ; https://www.bioj-online.com/ ; >
+      au < frozen ; exists ; 2014 ; 11 ; British and Irish Orthoptic Journal Volume 2014 ; 2014 ; https://www.bioj-online.com/ ; >
+      au < frozen ; exists ; 2015 ; 12 ; British and Irish Orthoptic Journal Volume 2015 ; 2015 ; https://www.bioj-online.com/ ; >
+      au < frozen ; exists ; 2016 ; 13 ; British and Irish Orthoptic Journal Volume 2016 ; 2016 ; https://www.bioj-online.com/ ; >
+      au < frozen ; exists ; 2018 ; 14 ; British and Irish Orthoptic Journal Volume 2018 ; 2018 ; https://www.bioj-online.com/ ; >
       au < crawling ; exists ; 2019 ; 15 ; British and Irish Orthoptic Journal Volume 2019 ; 2019 ; https://www.bioj-online.com/ ; >
       au < expected ; exists ; 2020 ; 16 ; British and Irish Orthoptic Journal Volume 2020 ; 2020 ; https://www.bioj-online.com/ ; >
 
@@ -2453,7 +2453,7 @@
 #      param[base_url] = https://www.ujpir-journal.com/
 
       au < deepCrawl ; exists ; 2018 ; 1 ; Undergraduate Journal of Politics and International Relations Volume 2018 ; 2018 ; https://www.ujpir-journal.com/ ; >
-      au < expected ; exists ; 2019 ; 2 ; Undergraduate Journal of Politics and International Relations Volume 2019 ; 2019 ; https://www.ujpir-journal.com/ ; >
+      au < manifest ; exists ; 2019 ; 2 ; Undergraduate Journal of Politics and International Relations Volume 2019 ; 2019 ; https://www.ujpir-journal.com/ ; >
 
   }
 }

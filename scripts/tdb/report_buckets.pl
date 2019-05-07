@@ -108,20 +108,24 @@ foreach my $auid (keys(%auid_status)) {
 		if ($end_code == $code{"other"}) {
 			printf("Unexpected status:%s\n",$auid);
 		}
-		if ($start_code == $code{"released"} && $end_code == $code{"deleted"}) {
-			printf("Previously released, now deleted:%s\n",$auid);
-		}
-		if ($start_code == $code{"down"} && $end_code == $code{"deleted"}) {
-			printf("Previously down, now deleted:%s\n",$auid);
-		}
-		if ($start_code == $code{"superseded"} && $end_code == $code{"deleted"}) {
-			printf("Previously superseded, now deleted:%s\n",$auid);
-		}
-		if ($start_code == $code{"released"} && $end_code == $code{"exists"}) {
-			printf("Previously released, now exists:%s\n",$auid);
-		}
-		if ($start_code == $code{"released"} && $end_code == $code{"manifest"}) {
-			printf("Previously released, now manifest:%s\n",$auid);
+#		if ($start_code == $code{"released"} && $end_code == $code{"deleted"}) {
+#			printf("Previously released, now deleted:%s\n",$auid);
+#		}
+#		if ($start_code == $code{"down"} && $end_code == $code{"deleted"}) {
+#			printf("Previously down, now deleted:%s\n",$auid);
+#		}
+#		if ($start_code == $code{"superseded"} && $end_code == $code{"deleted"}) {
+#			printf("Previously superseded, now deleted:%s\n",$auid);
+#		}
+#		if ($start_code == $code{"released"} && $end_code == $code{"exists"}) {
+#			printf("Previously released, now exists:%s\n",$auid);
+#		}
+#		if ($start_code == $code{"released"} && $end_code == $code{"manifest"}) {
+#			printf("Previously released, now manifest:%s\n",$auid);
+#		}
+		if (($start_code == $code{"released"} || $start_code == $code{"down"} || $start_code == $code{"superseded"}) &&
+		     !($end_code == $code{"released"} || $end_code == $code{"down"} || $end_code == $code{"superseded"})) {
+			printf("Previously %s, now %s: %s\n",&code_name($start_code),&code_name($end_code),$auid);
 		}
 	}
 
@@ -144,61 +148,62 @@ print("\n");
 exit(0);
 
 # Fill buckets based on info for each AU ID.
-my @start_bucket = ();
-my @end_bucket = ();
-my @no_change_bucket = ();
-my @change_bucket = ();
-foreach my $c (keys(%code)) {
-    my $code_num = $code{$c};
-    $start_bucket[$code_num] = 0;
-    $end_bucket[$code_num] = 0;
-    $no_change_bucket[$code_num] = 0;
-    $change_bucket[$code_num] = 0;
-}
-foreach my $auid (keys(%auid_status)) {
-    $start_code = $auid_status{$auid}{start};
-    $end_code = $auid_status{$auid}{end};
-    $start_bucket[$start_code] += 1;
-    $end_bucket[$end_code] += 1;
-    if ($start_code == $end_code) {
-        $no_change_bucket[$start_code] += 1;
-    } else {
-        if ($end_code == $code{"deleted"}) {
-            $change_bucket[$end_code] += 1;
-        } elsif (($start_code == $code{"other"}) ||
-	 	($end_code == $code{"other"})) {
-	    $change_bucket[$code{"other"}] += 1;
-        } elsif (($start_code == $code{"doNotProcess"}) ||
-	 	($end_code == $code{"doNotProcess"})) {
-	    $change_bucket[$code{"doNotProcess"}] += 1;
-        } elsif (($start_code == $code{"doesNotExist"}) ||
-	 	($end_code == $code{"doesNotExist"})) {
-	    $change_bucket[$code{"doesNotExist"}] += 1;
-	} else {
-	    # Use a for loop to check all possible buckets.
-	    # Don't check buckets beyond superseded because
-	    # the "if" clauses above have already checked
-	    # for them.
-	    for (my $c = $code{"notPresent"};
-		    $c <= $code{"superseded"};
-		    ++$c) {
-		if (($start_code <= $c) && ($end_code > $c)) {
-		    $change_bucket[$c] += 1;
-		}
-	    }
-        }
-    }
-}
-
-# Write out report.
-for (my $c = $code{"notPresent"}; $c <= $code{"deleted"}; ++$c) {
-    printf("%s\t%d\t%d\t%d\t%d\n",
-	&code_name($c),
-	$start_bucket[$c], $end_bucket[$c],
-	$no_change_bucket[$c], $change_bucket[$c]);
-}
-
-exit(0);
+###my @start_bucket = ();
+###my @end_bucket = ();
+###my @no_change_bucket = ();
+###my @change_bucket = ();
+###foreach my $c (keys(%code)) {
+###    my $code_num = $code{$c};
+###    $start_bucket[$code_num] = 0;
+###    $end_bucket[$code_num] = 0;
+###    $no_change_bucket[$code_num] = 0;
+###    $change_bucket[$code_num] = 0;
+###}
+###foreach my $auid (keys(%auid_status)) {
+###    $start_code = $auid_status{$auid}{start};
+###    $end_code = $auid_status{$auid}{end};
+###    $start_bucket[$start_code] += 1;
+###    $end_bucket[$end_code] += 1;
+###    if ($start_code == $end_code) {
+###        $no_change_bucket[$start_code] += 1;
+###    } else {
+###        if ($end_code == $code{"deleted"}) {
+###            $change_bucket[$end_code] += 1;
+###        } elsif (($start_code == $code{"other"}) ||
+###	 	($end_code == $code{"other"})) {
+###	    $change_bucket[$code{"other"}] += 1;
+###        } elsif (($start_code == $code{"doNotProcess"}) ||
+###	 	($end_code == $code{"doNotProcess"})) {
+###	    $change_bucket[$code{"doNotProcess"}] += 1;
+###        } elsif (($start_code == $code{"doesNotExist"}) ||
+###	 	($end_code == $code{"doesNotExist"})) {
+###	    $change_bucket[$code{"doesNotExist"}] += 1;
+###	} else {
+###	    # Use a for loop to check all possible buckets.
+###	    # Don't check buckets beyond superseded because
+###	    # the "if" clauses above have already checked
+###	    # for them.
+###	    for (my $c = $code{"notPresent"};
+###		    $c <= $code{"superseded"};
+###		    ++$c) {
+###		if (($start_code <= $c) && ($end_code > $c)) {
+###		    $change_bucket[$c] += 1;
+###		}
+###	    }
+###        }
+###    }
+###}
+###
+#### Write out report.
+###for (my $c = $code{"notPresent"}; $c <= $code{"deleted"}; ++$c) {
+###    printf("%s\t%d\t%d\t%d\t%d\n",
+###	&code_name($c),
+###	$start_bucket[$c], $end_bucket[$c],
+###	$no_change_bucket[$c], $change_bucket[$c]);
+###}
+###
+###exit(0);
+###
 
 sub code_name {
     my ($code_num) = @_;
