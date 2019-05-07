@@ -125,7 +125,7 @@ foreach my $auid (keys(%auid_status)) {
 #		}
 		if (($start_code == $code{"released"} || $start_code == $code{"down"} || $start_code == $code{"superseded"}) &&
 		     !($end_code == $code{"released"} || $end_code == $code{"down"} || $end_code == $code{"superseded"})) {
-			printf("Previously %s, now %s: %s\n",$start_code,$end_code,$auid);
+			printf("Previously %s, now %s: %s\n",&code_name($start_code),&code_name($end_code),$auid);
 		}
 	}
 
