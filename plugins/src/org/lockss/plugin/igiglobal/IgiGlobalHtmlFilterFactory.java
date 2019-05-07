@@ -70,11 +70,15 @@ public class IgiGlobalHtmlFilterFactory implements FilterFactory {
         // navbar
         HtmlNodeFilters.tag("nav"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "navbar"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "platform-toolbar"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "search-menu"),
         // Left column
         HtmlNodeFilters.tagWithAttribute("div", "id", "SidebarLeft"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "SidebarLeft"), // (old)
         // Right column
         HtmlNodeFilters.tagWithAttribute("div", "class", "SidebarRight"),
+        // Content embedded inside platform-toolbar
+        HtmlNodeFilters.tagWithAttribute("div", "class", "tpd-content"),
         // Footer
         HtmlNodeFilters.tagWithAttribute("div", "class", "Footer"),
         HtmlNodeFilters.tag("footer"),
