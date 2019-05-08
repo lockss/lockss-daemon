@@ -304,7 +304,7 @@
       attr[journal_id] = 684
 
         au < testing ; 2016 ; ASAP/Journal Volume 72 [2016] ; 10926 >
-        au < testing ; 2017 ; ASAP/Journal Volume 73 [2017] ; 12431 >
+        au < ready ; 2017 ; ASAP/Journal Volume 73 [2017] ; 12431 >
         au < ready ; 2018 ; ASAP/Journal Volume 74 [2018] ; 13237 >
 
     }
@@ -562,7 +562,7 @@
         au < released ; 2014 ; Children's Literature Volume 42 [2014] ; 9998 >
         au < released ; 2015 ; Children's Literature Volume 43 [2015] ; 10642 >
         au < released ; 2016 ; Children's Literature Volume 44 [2016] ; 11235 >
-        au < testing ; 2017 ; Children's Literature Volume 45 [2017] ; 12697 >
+        au < ready ; 2017 ; Children's Literature Volume 45 [2017] ; 12697 >
         au < ready ; 2018 ; Children's Literature Volume 46 [2018] ; 13525 >
 
     }
@@ -766,7 +766,7 @@
       attr[journal_id] = 549
 
         au < testing ; 2015 ; Dante Studies Volume 133 [2015] ; 10872 >
-        au < testing ; 2016 ; Dante Studies Volume 134 [2016] ; 12251 >
+        au < ready ; 2016 ; Dante Studies Volume 134 [2016] ; 12251 >
         au < ready ; 2017 ; Dante Studies Volume 135 [2017] ; 13252 >
 
     }
@@ -1561,15 +1561,15 @@
 
       attr[journal_id] = 333
 
-        au < testing ; 1986 ; L'Esprit Créateur Volume 26 [1986] ; 9442 >
+        au < ready ; 1986 ; L'Esprit Créateur Volume 26 [1986] ; 9442 >
         au < ready ; 1987 ; L'Esprit Créateur Volume 27 [1987] ; 9443 >
-        au < testing ; 1988 ; L'Esprit Créateur Volume 28 [1988] ; 9444 >
+        au < ready ; 1988 ; L'Esprit Créateur Volume 28 [1988] ; 9444 >
         au < ready ; 1989 ; L'Esprit Créateur Volume 29 [1989] ; 9445 >
-        au < testing ; 1990 ; L'Esprit Créateur Volume 30 [1990] ; 9446 >
-        au < testing ; 1991 ; L'Esprit Créateur Volume 31 [1991] ; 9447 >
+        au < ready ; 1990 ; L'Esprit Créateur Volume 30 [1990] ; 9446 >
+        au < ready ; 1991 ; L'Esprit Créateur Volume 31 [1991] ; 9447 >
         au < ready ; 1992 ; L'Esprit Créateur Volume 32 [1992] ; 9448 >
         au < ready ; 1993 ; L'Esprit Créateur Volume 33 [1993] ; 9449 >
-        au < testing ; 1994 ; L'Esprit Créateur Volume 34 [1994] ; 9450 >
+        au < ready ; 1994 ; L'Esprit Créateur Volume 34 [1994] ; 9450 >
         au < ready ; 1995 ; L'Esprit Créateur Volume 35 [1995] ; 9451 >
         au < released ; 1996 ; L'Esprit Créateur Volume 36 [1996] ; 4340 >
         au < released ; 1997 ; L'Esprit Créateur Volume 37 [1997] ; 4339 >
@@ -1644,7 +1644,7 @@
         au < released ; 2014 ; Late Imperial China Volume 35 [2014] ; 10064 >
         au < released ; 2015 ; Late Imperial China Volume 36 [2015] ; 10686 >
         au < released ; 2016 ; Late Imperial China Volume 37 [2016] ; 11268 >
-        au < testing ; 2017 ; Late Imperial China Volume 38 [2017] ; 12730 >
+        au < ready ; 2017 ; Late Imperial China Volume 38 [2017] ; 12730 >
         au < ready ; 2018 ; Late Imperial China Volume 39 [2018] ; 13561 >
 
     }
@@ -2397,7 +2397,7 @@
         au < released ; 2014 ; SAIS Review of International Affairs Volume 34 [2014] ; 10056 >
         au < released ; 2015 ; SAIS Review of International Affairs Volume 35 [2015] ; 10636 >
         au < released ; 2016 ; SAIS Review of International Affairs Volume 36 [2016] ; 11301 >
-        au < testing ; 2017 ; SAIS Review of International Affairs Volume 37 [2017] ; 12976 >
+        au < ready ; 2017 ; SAIS Review of International Affairs Volume 37 [2017] ; 12976 >
         au < ready ; 2018 ; SAIS Review of International Affairs Volume 38 [2018] ; 13645 >
 
     }
@@ -2518,7 +2518,7 @@
         au < released ; 2014 ; Shakespeare Quarterly Volume 65 [2014] ; 9909 >
         au < released ; 2015 ; Shakespeare Quarterly Volume 66 [2015] ; 10516 >
         au < released ; 2016 ; Shakespeare Quarterly Volume 67 [2016] ; 11354 >
-        au < testing ; 2017 ; Shakespeare Quarterly Volume 68 [2017] ; 12892 >
+        au < ready ; 2017 ; Shakespeare Quarterly Volume 68 [2017] ; 12892 >
         au < ready ; 2018 ; Shakespeare Quarterly Volume 69 [2018] ; 13592 >
 
     }
