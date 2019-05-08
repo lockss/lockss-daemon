@@ -2506,7 +2506,7 @@
       au < finished ; crawling ; 2017 ; International Journal of Data Mining and Bioinformatics Volume 19 ; 19 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2018 ; International Journal of Data Mining and Bioinformatics Volume 20 ; 20 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2018 ; International Journal of Data Mining and Bioinformatics Volume 21 ; 21 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < ready ; exists ; 2018 ; International Journal of Data Mining and Bioinformatics Volume 22 ; 22 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2018 ; International Journal of Data Mining and Bioinformatics Volume 22 ; 22 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2019 ; International Journal of Data Mining and Bioinformatics Volume 23 ; 23 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2019 ; International Journal of Data Mining and Bioinformatics Volume 24 ; 24 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2019 ; International Journal of Data Mining and Bioinformatics Volume 25 ; 25 ; https://www.inderscienceonline.com/ ; >
@@ -2832,7 +2832,7 @@
 
       param[journal_id] = ijebank
 
-      au < manifest ; exists ; 2008-2018 ; International Journal of Electronic Banking Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; > #issue 3, 4 not online
+      au < ingNotReady ; exists ; 2008-2018 ; International Journal of Electronic Banking Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; > #issue 3, 4 not online
 
     }
 
@@ -3451,7 +3451,7 @@
       au < finished ; crawling ; 2017 ; International Journal of Environment and Pollution Volume 61 ; 61 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; International Journal of Environment and Pollution Volume 62 ; 62 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; International Journal of Environment and Pollution Volume 63 ; 63 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < ready ; exists ; 2018 ; International Journal of Environment and Pollution Volume 64 ; 64 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2018 ; International Journal of Environment and Pollution Volume 64 ; 64 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2019 ; International Journal of Environment and Pollution Volume 65 ; 65 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2019 ; International Journal of Environment and Pollution Volume 66 ; 66 ; https://www.inderscienceonline.com/ ; >
 
