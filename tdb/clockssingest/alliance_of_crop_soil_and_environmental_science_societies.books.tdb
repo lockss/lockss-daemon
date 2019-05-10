@@ -172,7 +172,7 @@
     au < finished ; crawling ; 1981 ; 978-0-89118-307-5 ; Transferring Technology for Small-Scale Farming ; transferringtec ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1975 ; 978-0-89118-290-0 ; Tropical Forages in Livestock Production Systems ; tropicalforages ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 1965 ; 978-0-89118-273-3 ; World Population and Food Supplies, 1980 ; worldpopulation ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 1997 ; 978-0-89118-327-3 ; Advances in Carbon Dioxide Effects Research ; advancesincarbo ; reingest1.clockss.org:8081 >
+    au < finished ; manifest ; 1997 ; 978-0-89118-327-3 ; Advances in Carbon Dioxide Effects Research ; advancesincarbo ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 1982 ; 978-0-89118-251-1 ; Soil Erosion and Crop Productivity ; soilerosionandc ; reingest4.clockss.org:8082 >
 
   }
@@ -187,7 +187,7 @@
     param[series_id] = cssaspecialpubl
     
     au < finished ; manifest ; 1993 ; 978-0-89118-600-7 ; Intellectual Property Rights: Protection of Plant Materials ; intellectualpro ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 1973 ; 978-0-89118-583-3 ; Anti-Quality Components of Forages ; antiqualitycomp ; reingest1.clockss.org:8081 >
+    au < finished ; manifest ; 1973 ; 978-0-89118-583-3 ; Anti-Quality Components of Forages ; antiqualitycomp ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2004 ; 978-0-89118-611-3 ; Challenges and Strategies of Dryland Agriculture ; challengesandst ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1998 ; 978-0-89118-604-5 ; Concepts and Breeding of Heterosis in Crop Plants ; conceptsandbree ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1984 ; 978-0-89118-587-1 ; Conservation of Crop Germplasm—An International Perspective ; conservationofc ; reingest5.clockss.org:8082 >
@@ -309,7 +309,7 @@
     au < finished ; crawling ; 1967 ; 978-0-89118-897-1 ; Soil Testing and Plant Analysis Part II Plant Analysis ; soiltestingandp_part2 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 1994 ; 978-0-89118-935-0 ; Soil Testing: Prospects for Improving Nutrient Recommendations ; soiltestingpros ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 1987 ; 978-0-89118-916-9 ; Soil Testing: Sampling, Correlation, Calibration, and Interpretation ; soiltestingsamp ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2013 ; 978-0-89118-959-6 ; Soil–Water–Root Processes: Advances in Tomography and Imaging ; soilwaterrootpr ; reingest1.clockss.org:8081 >
+    au < finished ; manifest ; 2013 ; 978-0-89118-959-6 ; Soil–Water–Root Processes: Advances in Tomography and Imaging ; soilwaterrootpr ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 1993 ; 978-0-89118-927-5 ; Sorption and Degradation of Pesticides and Organic Chemicals in Soil ; sorptionanddegr ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 1991 ; 978-0-89118-923-7 ; Spatial Variabilities of Soils and Landforms ; spatialvariabil ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2001 ; 978-0-89118-952-7 ; Sustaining Soil Fertility in West Africa ; sustainingsoilf ; reingest4.clockss.org:8082 >
@@ -402,12 +402,12 @@
     au < finished ; crawling ; 1985 ; 978-0-89118-247-4 ; Potassium in Agriculture ; potassiuminagri ; reingest3.clockss.org:8083 >
     au < exists ; exists ; 2017 ; 978-0-89118-362-4 ; Practical Mathematics for Precision Farming ; practicalmath ; >
     au < finished ; crawling ; 2010 ; 978-0-89118-198-9 ; Practical Perspectives on Science Education ; practicalperspe ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 1996 ; 978-0-89118-257-3 ; Precision Agriculture: Proceedings of the Third International Conference ; precisionagricu3 ; reingest1.clockss.org:8081 >
+    au < finished ; manifest ; 1996 ; 978-0-89118-257-3 ; Precision Agriculture: Proceedings of the Third International Conference ; precisionagricu3 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1999 ; 978-0-89118-258-0 ; Precision Agriculture: Proceedings of the Fourth International Conference, Part A ; precisionagric4a ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1999 ; 978-0-89118-258-0 ; Precision Agriculture: Proceedings of the Fourth International Conference, Part B ; precisionagric4b ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1993 ; 978-0-89118-261-0 ; Proceedings of Soil Specific Crop Management ; proceedingsofso ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 1974 ; 978-0-89118-573-4 ; Proceedings of the Second International Turfgrass Research Conference ; proceedingsofth2 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 1980 ; 978-0-89118-248-1 ; Proceedings of the Third International Turfgrass Research Conference ; proceedingsofth3 ; reingest1.clockss.org:8081 >
+    au < finished ; manifest ; 1980 ; 978-0-89118-248-1 ; Proceedings of the Third International Turfgrass Research Conference ; proceedingsofth3 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1994 ; 978-0-89118-884-1 ; Quantitative Methods in Soil Mineralogy ; quantitativemet ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 1992 ; 978-0-89118-259-7 ; Research Ethics, Manuscript Review, and Journal Quality ; researchethicsm ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 1974 ; 978-0-89118-574-1 ; Seventy Generations of Selection for Oil and Protein in Maize ; seventygenerati ; reingest3.clockss.org:8083 >
