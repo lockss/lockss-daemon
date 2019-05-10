@@ -26353,6 +26353,35 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
     }
 
+  {
+
+    title <
+      name = Journal of Modern European History ;
+      issn = 1611-8944 ;
+      eissn = 2631-9764
+    >
+
+    #journal_id = meh
+
+      au < exists ; 2003 ; Journal of Modern European History Volume 1 ; 1 ; meha ; https://journals.sagepub.com/ >
+      au < exists ; 2004 ; Journal of Modern European History Volume 2 ; 2 ; meha ; https://journals.sagepub.com/ >
+      au < exists ; 2005 ; Journal of Modern European History Volume 3 ; 3 ; meha ; https://journals.sagepub.com/ >
+      au < exists ; 2006 ; Journal of Modern European History Volume 4 ; 4 ; meha ; https://journals.sagepub.com/ >
+      au < exists ; 2007 ; Journal of Modern European History Volume 5 ; 5 ; meha ; https://journals.sagepub.com/ >
+      au < exists ; 2008 ; Journal of Modern European History Volume 6 ; 6 ; meha ; https://journals.sagepub.com/ >
+      au < exists ; 2009 ; Journal of Modern European History Volume 7 ; 7 ; meha ; https://journals.sagepub.com/ >
+      au < exists ; 2010 ; Journal of Modern European History Volume 8 ; 8 ; meha ; https://journals.sagepub.com/ >
+      au < exists ; 2011 ; Journal of Modern European History Volume 9 ; 9 ; meha ; https://journals.sagepub.com/ >
+      au < exists ; 2012 ; Journal of Modern European History Volume 10 ; 10 ; meha ; https://journals.sagepub.com/ >
+      au < exists ; 2013 ; Journal of Modern European History Volume 11 ; 11 ; meha ; https://journals.sagepub.com/ >
+      au < exists ; 2014 ; Journal of Modern European History Volume 12 ; 12 ; meha ; https://journals.sagepub.com/ >
+      au < exists ; 2015 ; Journal of Modern European History Volume 13 ; 13 ; meha ; https://journals.sagepub.com/ >
+      au < exists ; 2016 ; Journal of Modern European History Volume 14 ; 14 ; meha ; https://journals.sagepub.com/ >
+      au < exists ; 2017 ; Journal of Modern European History Volume 15 ; 15 ; meha ; https://journals.sagepub.com/ >
+      au < exists ; 2018 ; Journal of Modern European History Volume 16 ; 16 ; meha ; https://journals.sagepub.com/ >
+
+  }
+
     {
 
       title <
