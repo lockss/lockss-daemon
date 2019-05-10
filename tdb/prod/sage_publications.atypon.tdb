@@ -25070,6 +25070,26 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
   }
 
+  {
+
+    title <
+      name = Journal of Information Technology Teaching Cases ;
+      eissn = 2043-8869
+    >
+
+    #journal_id = ttc
+
+    au < exists ; 2011 ; Journal of Information Technology Teaching Cases Volume 1 ; 1 ; ttca ; https://journals.sagepub.com/ >
+    au < exists ; 2012 ; Journal of Information Technology Teaching Cases Volume 2 ; 2 ; ttca ; https://journals.sagepub.com/ >
+    au < exists ; 2013 ; Journal of Information Technology Teaching Cases Volume 3 ; 3 ; ttca ; https://journals.sagepub.com/ >
+    au < exists ; 2014 ; Journal of Information Technology Teaching Cases Volume 4 ; 4 ; ttca ; https://journals.sagepub.com/ >
+    au < exists ; 2015 ; Journal of Information Technology Teaching Cases Volume 5 ; 5 ; ttca ; https://journals.sagepub.com/ >
+    au < exists ; 2016 ; Journal of Information Technology Teaching Cases Volume 6 ; 6 ; ttca ; https://journals.sagepub.com/ >
+    au < exists ; 2017 ; Journal of Information Technology Teaching Cases Volume 7 ; 7 ; ttca ; https://journals.sagepub.com/ >
+    au < exists ; 2018 ; Journal of Information Technology Teaching Cases Volume 8 ; 8 ; ttca ; https://journals.sagepub.com/ >
+
+  }
+
     {
 
       title <
