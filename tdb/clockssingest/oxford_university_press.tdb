@@ -8337,7 +8337,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; International Journal of Refugee Law Volume 27 ; 27 ; >
     au < frozen ; exists ; 2016 ; 2016 ; International Journal of Refugee Law Volume 28 ; 28 ; >
     au < frozen ; exists ; 2017 ; 2017 ; International Journal of Refugee Law Volume 29 ; 29 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; International Journal of Refugee Law Volume 30 ; 30 ; >
+    au < frozen ; exists ; 2018 ; 2018 ; International Journal of Refugee Law Volume 30 ; 30 ; >
     au < expected ; exists ; 2019 ; 2019 ; International Journal of Refugee Law Volume 31 ; 31 ; >
 
   }
@@ -8755,7 +8755,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Jerusalem Review of Legal Studies Volume 10-9 ; 10-9 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Jerusalem Review of Legal Studies Volume 11-12 ; 11-12 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Jerusalem Review of Legal Studies Volume 13-14 ; 13-14 ; >
-    au < crawling ; exists ; 2017 ; 2017 ; Jerusalem Review of Legal Studies Volume 15-16 ; 15-16 ; >
+    au < frozen ; exists ; 2017 ; 2017 ; Jerusalem Review of Legal Studies Volume 15-16 ; 15-16 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Jerusalem Review of Legal Studies Volume 17-18 ; 17-18 ; >
     au < expected ; exists ; 2019 ; 2019 ; Jerusalem Review of Legal Studies Volume 19-20 ; 19-20 ; >
 
@@ -9721,7 +9721,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Journal of European Competition Law & Practice Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of European Competition Law & Practice Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of European Competition Law & Practice Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2016 ; 2016 ; Journal of European Competition Law & Practice Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; Journal of European Competition Law & Practice Volume 7 ; 7 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Journal of European Competition Law & Practice Volume 8 ; 8 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of European Competition Law & Practice Volume 9 ; 9 ; >
     au < expected ; exists ; 2019 ; 2019 ; Journal of European Competition Law & Practice Volume 10 ; 10 ; >
@@ -10257,7 +10257,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Intellectual Property Law & Practice Volume 10 ; 10 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Journal of Intellectual Property Law & Practice Volume 11 ; 11 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Journal of Intellectual Property Law & Practice Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Journal of Intellectual Property Law & Practice Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2018 ; 2018 ; Journal of Intellectual Property Law & Practice Volume 13 ; 13 ; >
     au < expected ; exists ; 2019 ; 2019 ; Journal of Intellectual Property Law & Practice Volume 14 ; 14 ; >
 
   }
@@ -10424,9 +10424,9 @@
     param[journal_id] = jlb
 
     #this title was ONLY in the publisher listing
-    au < crawling ; exists ; 2014 ; 2014 ; Journal of Law and the Biosciences Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2015 ; 2015 ; Journal of Law and the Biosciences Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2016 ; 2016 ; Journal of Law and the Biosciences Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2014 ; 2014 ; Journal of Law and the Biosciences Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2015 ; 2015 ; Journal of Law and the Biosciences Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; Journal of Law and the Biosciences Volume 3 ; 3 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Journal of Law and the Biosciences Volume 4 ; 4 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Journal of Law and the Biosciences Volume 5 ; 5 ; >
     au < expected ; exists ; 2019 ; 2019 ; Journal of Law and the Biosciences Volume 6 ; 6 ; >
@@ -10701,7 +10701,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Journal of Molluscan Studies Volume 79 ; 79 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Molluscan Studies Volume 80 ; 80 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Molluscan Studies Volume 81 ; 81 ; >
-    au < crawling ; exists ; 2016 ; 2016 ; Journal of Molluscan Studies Volume 82 ; 82 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; Journal of Molluscan Studies Volume 82 ; 82 ; >
     au < testing ; exists ; 2017 ; 2017 ; Journal of Molluscan Studies Volume 83 ; 83 ; >
     au < ready ; exists ; 2018 ; 2018 ; Journal of Molluscan Studies Volume 84 ; 84 ; >
     au < expected ; exists ; 2019 ; 2019 ; Journal of Molluscan Studies Volume 85 ; 85 ; >
@@ -10841,7 +10841,7 @@
     au < frozen ; exists ; 2015 ; 2015 ; The Journal of Nutrition Volume 145 ; 145 ; >
     au < testing ; exists ; 2016 ; 2016 ; The Journal of Nutrition Volume 146 ; 146 ; >
     au < testing ; exists ; 2017 ; 2017 ; The Journal of Nutrition Volume 147 ; 147 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; The Journal of Nutrition Volume 148 ; 148 ; >
+    au < frozen ; exists ; 2018 ; 2018 ; The Journal of Nutrition Volume 148 ; 148 ; >
     au < expected ; exists ; 2019 ; 2019 ; The Journal of Nutrition Volume 149 ; 149 ; >
 
   }
@@ -11044,7 +11044,7 @@
 
     param[journal_id] = jpe
 
-    au < crawling ; exists ; 2008 ; 2008 ; Journal of Plant Ecology Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2008 ; 2008 ; Journal of Plant Ecology Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Journal of Plant Ecology Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Journal of Plant Ecology Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Journal of Plant Ecology Volume 4 ; 4 ; >
@@ -11208,7 +11208,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Radiation Research Volume 56 ; 56 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Journal of Radiation Research Volume 57 ; 57 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Journal of Radiation Research Volume 58 ; 58 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Journal of Radiation Research Volume 59 ; 59 ; >
+    au < frozen ; exists ; 2018 ; 2018 ; Journal of Radiation Research Volume 59 ; 59 ; >
     au < expected ; exists ; 2019 ; 2019 ; Journal of Radiation Research Volume 60 ; 60 ; >
 
   }
@@ -11778,7 +11778,7 @@
 
     #this title was ONLY in the publisher listing
     au < crawling ; exists ; 2017 ; 2017 ; Journal of the Endocrine Society Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Journal of the Endocrine Society Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2018 ; 2018 ; Journal of the Endocrine Society Volume 2 ; 2 ; >
     au < expected ; exists ; 2019 ; 2019 ; Journal of the Endocrine Society Volume 3 ; 3 ; >
 
   }
@@ -12103,11 +12103,11 @@
     au < doNotProcess ; exists ; 2006 ; 2006 ; Laboratory Medicine Volume 37 ; 37 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Laboratory Medicine Volume 38 ; 38 ; >
     au < frozen ; exists ; 2008 ; 2008 ; Laboratory Medicine Volume 39 ; 39 ; >
-    au < crawling ; exists ; 2009 ; 2009 ; Laboratory Medicine Volume 40 ; 40 ; >
+    au < frozen ; exists ; 2009 ; 2009 ; Laboratory Medicine Volume 40 ; 40 ; >
     au < testing ; exists ; 2010 ; 2010 ; Laboratory Medicine Volume 41 ; 41 ; >
     au < frozen ; exists ; 2011 ; 2011 ; Laboratory Medicine Volume 42 ; 42 ; >
     au < frozen ; exists ; 2012 ; 2012 ; Laboratory Medicine Volume 43 ; 43 ; >
-    au < crawling ; exists ; 2013 ; 2013 ; Laboratory Medicine Volume 44 ; 44 ; >
+    au < frozen ; exists ; 2013 ; 2013 ; Laboratory Medicine Volume 44 ; 44 ; >
     au < frozen ; exists ; 2014 ; 2014 ; Laboratory Medicine Volume 45 ; 45 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Laboratory Medicine Volume 46 ; 46 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Laboratory Medicine Volume 47 ; 47 ; >
