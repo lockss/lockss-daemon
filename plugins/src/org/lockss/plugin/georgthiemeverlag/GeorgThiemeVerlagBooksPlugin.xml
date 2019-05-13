@@ -9,11 +9,11 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Georg Thieme Verlag Books Plugin (LOCKSS2.0)</string>
+    <string>Georg Thieme Verlag Books Plugin (LOCKSS 2.0)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>11-LK2</string>
+    <string>11-L2</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -38,7 +38,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Georg Thieme Verlag Books Plugin (LOCKSS2.0), Base URL %s, DOI %s", base_url, doi</string>
+    <string>"Georg Thieme Verlag Books Plugin (LOCKSS 2.0), Base URL %s, DOI %s", base_url, doi</string>
   </entry>
   <entry>
     <string>au_start_url</string>
