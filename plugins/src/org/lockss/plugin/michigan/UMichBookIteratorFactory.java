@@ -49,30 +49,40 @@ implements ArticleIteratorFactory,
   
   protected static Logger log = Logger.getLogger(UMichBookIteratorFactory.class);
   
-  // params from tdb file corresponding to AU
-  protected static final String ROOT_TEMPLATE = "\"%sepub/\", base_url";
-  protected static final String PATTERN_TEMPLATE = "\"^%s%s$\", base_url, book_uri";
+
+    protected static final String PATTERN_TEMPLATE = "\"^%s%s$\", base_url, book_uri";
   
   private static final Pattern LANDING_PATTERN = Pattern.compile(
       "^(https?://[^/]+/)(.*/[^/]+)$",
       Pattern.CASE_INSENSITIVE);
   private static final String LANDING_REPLACEMENT = "$1/$2";
   
-  //https://www.fulcrum.org/concern/monographs/tm70mv886
-  // link on landing page
-  //https://www.fulcrum.org/epubs/9s161681f
-  // extractable link on epubs page
-  //https://www.fulcrum.org//downloads/9s161681f
-  
+
+    /*
+     *    Book landing page is this:
+     *    https://www.fulcrum.org/concern/monographs/q811kk505
+     *    and there is some html metadata there so use this file 
+     *    At least in some cases, the full-text access urls can be found here too
+     *    as download links. 
+     *    
+     *    If not, on the page that is the "read book" link of the form
+     *    https://www.fulcrum.org/epubs/bz60cx371
+     *    is an html page that may have hidden "download_links" that we extract
+     *    but they'll match the "download" menu on the landing page if that's there.
+     *    
+     *    We could parse the landing page to try to identify the PDF and EPUB full text cu
+     *    but for now this is sufficient.  
+     */
+
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) 
       throws PluginException {
     SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
-    
-    builder.setSpec(target,
-        ROOT_TEMPLATE,
-        PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
-    
+        
+    builder.setSpec(builder.newSpec()
+            .setTarget(target)
+            .setPatternTemplate(PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE));    
+
     builder.addAspect(
         LANDING_PATTERN,
         LANDING_REPLACEMENT,
