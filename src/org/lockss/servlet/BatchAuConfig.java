@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2019 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -109,6 +105,7 @@ public class BatchAuConfig extends LockssServlet {
   static final String ACTION_REACT_AUS = "DoReactivateAus";
   static final String ACTION_RESTORE_AUS = "DoAddAus";
   static final String ACTION_DO_BACKUP = "Backup";
+  static final String ACTION_BACK_TO_HERE = "BackToHere";
 
   static final String KEY_VERB = "Verb";
   static final String KEY_DEFAULT_REPO = "DefaultRepository";
@@ -192,6 +189,7 @@ public class BatchAuConfig extends LockssServlet {
     else if (action.equals(ACTION_DO_BACKUP)) doBackup();
     else if (action.equals(ACTION_REMOVE_AUS)) doRemoveAus(false);
     else if (action.equals(ACTION_DEACT_AUS)) doRemoveAus(true);
+    else if (action.equals(ACTION_BACK_TO_HERE)) displayMenu();
     else {
       errMsg = "Unknown action: " + action;
       log.warning(errMsg);
