@@ -50,9 +50,12 @@ public class BaseAtyponPageCountPdfFactory implements FilterFactory {
       pdfDocument = pdfDocumentFactory.makeDocument(in);
       pageCount = pdfDocument.getNumberOfPages();
 
-      String pageCountHash = String.format(PDF_HASH_STRING_FORMAT, String.valueOf(pageCount));
-      InputStream pageCountHashInputStream = new ByteArrayInputStream(pageCountHash.toString().getBytes());
-
+      // default to an empty string so it raises a zero hash error
+      String pageCountHashString = "";
+      if (pageCount > 0) {
+        pageCountHashString = String.format(PDF_HASH_STRING_FORMAT, String.valueOf(pageCount));
+      }
+      InputStream pageCountHashInputStream = new ByteArrayInputStream(pageCountHashString.toString().getBytes());
       return pageCountHashInputStream;
 
     } catch (IOException ioe) {
