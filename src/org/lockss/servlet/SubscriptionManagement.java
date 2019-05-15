@@ -1,6 +1,6 @@
 /*
 
- Copyright (c) 2013-2017 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2019 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -112,6 +112,8 @@ public class SubscriptionManagement extends LockssServlet {
   public static final String TRI_STATE_WIDGET_HIDDEN_ID_SUFFIX = "Hidden";
   public static final String TRI_STATE_WIDGET_HIDDEN_ID_UNSET_VALUE = "unset";
   private static final String ADD_SUBSCRIPTIONS_ACTION = "Add";
+  private static final String CONFIRM_AUTO_ADD_SUBSCRIPTIONS_ACTION =
+      "confirmAutoAdd";
   private static final String UPDATE_SUBSCRIPTIONS_ACTION = "Update";
 
   private static final String SUBSCRIBED_RANGES_PARAM_NAME = "subscribedRanges";
@@ -265,6 +267,19 @@ public class SubscriptionManagement extends LockssServlet {
 	displayResults(status, SHOW_UPDATE_PAGE_LINK_TEXT,
 	    	       SHOW_UPDATE_PAGE_ACTION);
       } else if (AUTO_ADD_SUBSCRIPTIONS_ACTION.equals(action)) {
+	// Check whether there are any subscriptions currently defined.
+	if (subManager.hasSubscriptionRanges()
+	    || subManager.hasPublisherSubscriptions()) {
+	  // Yes: Ask for confirmation.
+	  displaySynchronizationConfirmationPage();
+	} else {
+	  // No: Add the necessary subscription options so that all the
+	  // configured AUs fall in subscribed ranges and do not fall in any
+	  // unsubscribed range.
+	  status = subManager.subscribeAllConfiguredAus();
+	  displayResults(status, AUTO_ADD_SUBSCRIPTIONS_LINK_TEXT, null);
+	}
+      } else if (CONFIRM_AUTO_ADD_SUBSCRIPTIONS_ACTION.equals(action)) {
 	// Add the necessary subscription options so that all the configured AUs
 	// fall in subscribed ranges and do not fall in any unsubscribed range.
 	status = subManager.subscribeAllConfiguredAus();
@@ -3080,5 +3095,59 @@ public class SubscriptionManagement extends LockssServlet {
     bulkActionDiv.add(bulkActionMessageBox);
     
     return bulkActionDiv;
+  }
+
+  /**
+   * Displays the subscription synchronization confirmation page.
+   * 
+   * @throws IOException
+   *           if any problem occurred writing the page.
+   */
+  private void displaySynchronizationConfirmationPage() throws IOException {
+    final String DEBUG_HEADER = "displaySynchronizationConfirmationPage(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+    // Start the page.
+    Page page = newPage();
+    layoutErrorBlock(page);
+
+    // Display the warning message.
+    ServletUtil.layoutErrorBlock(page, "*** WARNING ***", null);
+    ServletUtil.layoutErrorBlock(page,
+	"This will delete any custom subscriptions you may already have set up."
+	, null);
+    ServletUtil.layoutErrorBlock(page,
+	"If you are sure that you want to continue, press the 'Confirm' button below.",
+	null);
+
+    // Create the layout form for the 'Cancel' button.
+    page.add("<br><center><table><tr><td>");
+
+    Form form = ServletUtil.newForm(srvURL(
+	AdminServletManager.SERVLET_BATCH_AU_CONFIG));
+    ServletUtil.layoutButton(this, form, ACTION_TAG,
+	BatchAuConfig.ACTION_BACK_TO_HERE, Input.Submit, "Cancel", false,
+	false);
+    page.add(form);
+
+    // Create the layout form for the 'Confirm' button.
+    page.add("</td><td>");
+
+    form = ServletUtil.newForm(srvURL(myServletDescr()));
+    ServletUtil.layoutButton(this, form, ACTION_TAG,
+	CONFIRM_AUTO_ADD_SUBSCRIPTIONS_ACTION, Input.Submit, "Confirm", false,
+	false);
+    page.add(form);
+    page.add("</td></tr></table></center>");
+
+    // Add the link to go back to the previous page.
+    ServletUtil.layoutBackLink(page,
+	srvLink(AdminServletManager.SERVLET_BATCH_AU_CONFIG,
+	    	BACK_LINK_TEXT_PREFIX
+	    	+ getHeading(AdminServletManager.SERVLET_BATCH_AU_CONFIG)));
+
+    // Finish up.
+    endPage(page);
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
 }
