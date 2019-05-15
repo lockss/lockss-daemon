@@ -67,6 +67,14 @@ implements ArticleIteratorFactory,
   //http://zookeys.pensoft.net/lib/ajax_srv/article_elements_srv.php?action=download_pdf&item_id=1929
   protected static final String PDF_0_REPLACEMENT = "lib/ajax_srv/article_elements_srv.php?action=download_pdf&item_id=$1";
   protected static final String PDF_1_REPLACEMENT = "article/$1/download/pdf/";
+  // PDFs can now also show up with a fileid after the terminating slash - this isn't dicsoverable from the html article pattern
+  // protected static final String PDF_3_REPLACEMENT = "article/$1/download/pdf/xxxyy";
+  // not clear how to proceed at this point without 
+  // for example: https://biodiscovery.pensoft.net/article/8964
+  // has a pdf of : https://biodiscovery.pensoft.net/article/8964/download/pdf/283658
+  // We could look for any CUs that match https://biodiscovery.pensoft.net/article/8964/download/pdf/
+  // but for now, just leave it not found - we know that we get the article because that's how we 
+  // start from oai-pmh
   
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) 

@@ -45,6 +45,12 @@ import org.lockss.util.Logger;
  * https://subtbiol.pensoft.net/article/23364/download/pdf
  * https://subtbiol.pensoft.net/lib/ajax_srv/generate_pdf.php?document_id=23364&readonly_preview=1
  * 
+ * May 2019 - seeing additional PDF pattern of 
+ * https://biodiscovery.pensoft.net/article/8964/download/pdf/283658
+ * which redirects through 
+ * /lib/ajax_srv/generate_pdf.php?document_id=8964&readonly_preview=1&file_id=283658
+ * (the file_id for a normal PDF is 0)
+ * 
  */
 public class PensoftOaiUrlConsumerFactory implements UrlConsumerFactory {
   private static final Logger log = Logger.getLogger(PensoftOaiUrlConsumerFactory.class);
@@ -64,7 +70,8 @@ public class PensoftOaiUrlConsumerFactory implements UrlConsumerFactory {
    */
   public class PensoftOaiUrlConsumer extends SimpleUrlConsumer {
 
-    public static final String DOWNLOADPDF_URL = "article/[^/]+/download/pdf/?$";
+	//PDF now has optional terminating file_id number or the (optional?) terminating slash
+    public static final String DOWNLOADPDF_URL = "article/[^/]+/download/pdf(/|/[0-9]+)?$";
     public static final String GENERATE_URL = "/lib/ajax_srv/generate_pdf[.]php[?]document_id=";
 
     protected Pattern DOWNLOADPDF_PAT = Pattern.compile(DOWNLOADPDF_URL, Pattern.CASE_INSENSITIVE);
