@@ -21361,6 +21361,42 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
   }
 
+  {
+
+    title <
+      name = Journal of Chemical Research ;
+      issn = 1747-5198 ;
+      eissn = 2047-6507 ;
+      issnl = 1747-5198
+    >
+
+    #journal_id] = jcr
+    #doNotProcess = content had been processed in Science Reviews 2000
+
+    au < exists ; 1999 ; Journal of Chemical Research Volume 23 ; 23 ; chla ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2000 ; Journal of Chemical Research Volume 2000 ; 2000 ; chla ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2001 ; Journal of Chemical Research Volume 2001 ; 2001 ; chla ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2002 ; Journal of Chemical Research Volume 2002 ; 2002 ; chla ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2003 ; Journal of Chemical Research Volume 2003 ; 2003 ; chla ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2004 ; Journal of Chemical Research Volume 2004 ; 2004 ; chla ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2005 ; Journal of Chemical Research Volume 2005 ; 2005 ; chla ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2006 ; Journal of Chemical Research Volume 2006 ; 2006 ; chla ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2007 ; Journal of Chemical Research Volume 2007 ; 2007 ; chla ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2008 ; Journal of Chemical Research Volume 2008 ; 2008 ; chla ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2009 ; Journal of Chemical Research Volume 2009 ; 2009 ; chla ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2010 ; Journal of Chemical Research Volume 34 ; 34 ; chla ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2011 ; Journal of Chemical Research Volume 35 ; 35 ; chla ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2012 ; Journal of Chemical Research Volume 36 ; 36 ; chla ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2013 ; Journal of Chemical Research Volume 37 ; 37 ; chla ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2014 ; Journal of Chemical Research Volume 38 ; 38 ; chla ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2015 ; Journal of Chemical Research Volume 39 ; 39 ; chla ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2016 ; Journal of Chemical Research Volume 40 ; 40 ; chla ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2017 ; Journal of Chemical Research Volume 41 ; 41 ; chla ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2018 ; Journal of Chemical Research Volume 42 ; 42 ; chla ; https://journals.sagepub.com/ >
+    au < exists ; 2019 ; Journal of Chemical Research Volume 43 ; 43 ; chla ; https://journals.sagepub.com/ >
+
+  }
+
     {
 
       title <
@@ -36870,6 +36906,44 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       }
 
     }
+
+  {
+
+    title <
+      name = Progress in Reaction Kinetics & Mechanism ;
+      issn = 1468-6783 ;
+      eissn = 1471-406X ;
+      issnl = 1468-6783
+    >
+
+    #journal_id] = prk
+    #doNotProcess = content had been processed in Science Reviews 2000
+
+    au < doNotProcess ; 1997 ; Progress in Reaction Kinetics & Mechanism Volume 22 ; 22 ; prka ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 1998 ; Progress in Reaction Kinetics & Mechanism Volume 23 ; 23 ; prka ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 1999 ; Progress in Reaction Kinetics & Mechanism Volume 24 ; 24 ; prka ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2000 ; Progress in Reaction Kinetics & Mechanism Volume 25 ; 25 ; prka ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2001 ; Progress in Reaction Kinetics & Mechanism Volume 26 ; 26 ; prka ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2002 ; Progress in Reaction Kinetics & Mechanism Volume 27 ; 27 ; prka ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2003 ; Progress in Reaction Kinetics & Mechanism Volume 28 ; 28 ; prka ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2004 ; Progress in Reaction Kinetics & Mechanism Volume 29 ; 29 ; prka ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2005 ; Progress in Reaction Kinetics & Mechanism Volume 30 ; 30 ; prka ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2006 ; Progress in Reaction Kinetics & Mechanism Volume 31 ; 31 ; prka ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2007 ; Progress in Reaction Kinetics & Mechanism Volume 32 ; 32 ; prka ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2008 ; Progress in Reaction Kinetics & Mechanism Volume 33 ; 33 ; prka ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2009 ; Progress in Reaction Kinetics & Mechanism Volume 34 ; 34 ; prka ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2010 ; Progress in Reaction Kinetics & Mechanism Volume 35 ; 35 ; prka ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2011 ; Progress in Reaction Kinetics & Mechanism Volume 36 ; 36 ; prka ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2012 ; Progress in Reaction Kenetics & Mechanism Volume 37 ; 37 ; prka ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2013 ; Progress in Reaction Kenetics & Mechanism Volume 38 ; 38 ; prka ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2014 ; Progress in Reaction Kenetics & Mechanism Volume 39 ; 39 ; prka ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2015 ; Progress in Reaction Kenetics & Mechanism Volume 40 ; 40 ; prka ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2016 ; Progress in Reaction Kenetics & Mechanism Volume 41 ; 41 ; prka ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2017 ; Progress in Reaction Kenetics & Mechanism Volume 42 ; 42 ; prka ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2018 ; Progress in Reaction Kenetics & Mechanism Volume 43 ; 43 ; prka ; https://journals.sagepub.com/ >
+    au < exists ; 2019 ; Progress in Reaction Kenetics & Mechanism Volume 44 ; 44 ; prka ; https://journals.sagepub.com/ >
+
+  }
 
     {
 
