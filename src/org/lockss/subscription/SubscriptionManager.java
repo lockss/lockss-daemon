@@ -1,6 +1,6 @@
 /*
 
- Copyright (c) 2013-2018 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2019 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -1108,11 +1108,19 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       firstProprietaryId = proprietaryIds[0];
     }
 
+    // Get the AUs of the title, sorted chronologically.
+    List<TdbAu> sortedTdbAus = title.getSortedTdbAus();
+
     // Get the periods covered by the title currently configured archival units,
     // indexed by provider.
     Map<TdbProvider, List<BibliographicPeriod>> periodsByProvider =
-	getTitleConfiguredCoveragePeriodsByProvider(title.getSortedTdbAus(),
+	getTitleConfiguredCoveragePeriodsByProvider(sortedTdbAus,
 	    configuredAus);
+
+    // Get the last periods of any archival units in the title, indexed by
+    // provider.
+    Map<TdbProvider, BibliographicPeriod> lastPeriodByProvider =
+	getLastPeriodbyProvider(sortedTdbAus);
 
     try {
       // Find the publisher in the database or create it.
@@ -1177,10 +1185,31 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	List<BibliographicPeriod> periods = periodsByProvider.get(provider);
 	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "periods = " + periods);
 
+	// Get the start edge of the last period of any archival unit.
+	BibliographicPeriodEdge lastTitlePeriodStartEdge =
+	    lastPeriodByProvider.get(provider).getStartEdge();
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	    + "lastTitlePeriodStartEdge = " + lastTitlePeriodStartEdge);
+
+	// Get the end edge of the last period of any configured archival unit.
+	BibliographicPeriodEdge lastConfiguredPeriodEndEdge =
+	    periods.get(periods.size() - 1).getEndEdge();
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	    + "lastConfiguredPeriodEndEdge = " + lastConfiguredPeriodEndEdge);
+
+	// The archival Units in the future of all the currently configured
+	// archival units cannot be included in the subscription if the last
+	// known period is not already configured. Otherwise, extend the
+	// subscription to the future.
+	boolean extendFuture =
+	    lastTitlePeriodStartEdge.equals(lastConfiguredPeriodEndEdge);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "extendFuture = " + extendFuture);
+
 	// Create the subscriptions for the configured archival units for the
 	// publication and provider.
 	subscribePublicationProviderConfiguredAus(publicationSeq, provider,
-	    periods, conn);
+	    periods, extendFuture, conn);
       }
 
       // Finalize all the subscription changes for this title.
@@ -1361,6 +1390,64 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
   }
 
   /**
+   * Provides the last periods covered by the archival units of a title,
+   * indexed by provider.
+   * 
+   * @param titleAus
+   *          A list of TdbAus with the title
+   * @return a Map<TdbProvider, BibliographicPeriod> with the last periods
+   *         covered by the archival units of the title, indexed by provider.
+   */
+  private Map<TdbProvider, BibliographicPeriod> getLastPeriodbyProvider(
+      List<TdbAu> titleAus) {
+    final String DEBUG_HEADER = "getLastPeriodbyProvider(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "titleAus = " + titleAus);
+
+    Map<TdbProvider, BibliographicPeriod> lastPeriodByProvider =
+	new HashMap<TdbProvider, BibliographicPeriod>();
+
+    TdbProvider provider = null;
+    BibliographicPeriod period = null;
+
+    // Loop through all the title archival units.
+    for (TdbAu au : titleAus) {
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "au = " + au);
+
+      try {
+	// Get the provider.
+	provider = au.getTdbProvider();
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "provider = " + provider);
+
+	// Check whether the subscription needs to be for the whole title, not
+	// subscription ranges.
+	if (isWholeTitleSynchronization) {
+	  // Yes: Specify a period that covers any time.
+	  lastPeriodByProvider.put(provider,
+	      BibliographicPeriod.ALL_TIME_PERIOD);
+	  // No more processing to do for this Archival Unit.
+	  continue;
+	}
+
+	List<BibliographicPeriod> auRanges = au.getPublicationRanges();
+	int auRangesLastIndex = auRanges.size() - 1;
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auRangesLastIndex = "
+	    + auRangesLastIndex);
+
+	period = auRanges.get(auRangesLastIndex);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "period = " + period);
+
+	// Add this period to the map.
+	lastPeriodByProvider.put(provider, period);
+      } catch (RuntimeException re) {
+	log.error("Cannot find the periods for AU " + au, re);
+      }
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+    return lastPeriodByProvider;
+  }
+
+  /**
    * Creates subscriptions for the archival units of a title for a provider
    * that are configured in the system.
    * 
@@ -1371,19 +1458,23 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    * @param periods
    *          A List<BibliographicPeriod> with the periods of the archival
    *          units.
+   * @param extendFuture
+   *          A boolean with the indication of whether future archival units
+   *          need to be included in the subscription.
    * @param conn
    *          A Connection with the database connection to be used.
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
   private void subscribePublicationProviderConfiguredAus(Long publicationSeq,
-      TdbProvider provider, List<BibliographicPeriod> periods, Connection conn)
-	  throws DbException {
+      TdbProvider provider, List<BibliographicPeriod> periods,
+      boolean extendFuture, Connection conn) throws DbException {
     final String DEBUG_HEADER = "subscribePublicationProviderConfiguredAus(): ";
     if (log.isDebug2()) {
       log.debug2(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
       log.debug2(DEBUG_HEADER + "provider = " + provider);
       log.debug2(DEBUG_HEADER + "periods = " + periods);
+      log.debug2(DEBUG_HEADER + "extendFuture = " + extendFuture);
     }
 
     // Find the provider in the database or create it.
@@ -1417,17 +1508,18 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	log.debug3(DEBUG_HEADER + "periodCount = " + periodCount);
       }
 
-      // Check whether this is the last period.
-      if (periodCount-- == 1) {
+      // Check whether this is the last period and the subscription needs to be
+      // extended to the future.
+      if (periodCount-- == 1 && extendFuture) {
 	// Yes: Extend it to the far future and persist it.
-	BibliographicPeriod lastPeriod =
+	BibliographicPeriod extendedPeriod =
 	    new BibliographicPeriod(period.getStartEdge(),
 		BibliographicPeriodEdge.INFINITY_EDGE);
 	if (log.isDebug3())
-	  log.debug3(DEBUG_HEADER + "lastPeriod = " + lastPeriod);
+	  log.debug3(DEBUG_HEADER + "extendedPeriod = " + extendedPeriod);
 
 	subManagerSql.persistSubscriptionRange(conn, subscriptionSeq,
-	    lastPeriod, true);
+	    extendedPeriod, true);
       } else {
 	// No: Just persist it.
 	subManagerSql.persistSubscriptionRange(conn, subscriptionSeq, period,
