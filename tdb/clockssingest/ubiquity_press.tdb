@@ -130,7 +130,7 @@
       comment[publisher] = Levy Library Press
 #      param[base_url] = https://journalofscientificinnovationinmedicine.org/
 
-      au < manifest ; exists ; 2018 ; 1 ; Journal of Scientific Innovation in Medicine Volume 2018 ; 2018 ; https://journalofscientificinnovationinmedicine.org/ ; >
+      au < ready ; exists ; 2018 ; 1 ; Journal of Scientific Innovation in Medicine Volume 2018 ; 2018 ; https://journalofscientificinnovationinmedicine.org/ ; >
       au < manifest ; exists ; 2019 ; 2 ; Journal of Scientific Innovation in Medicine Volume 2019 ; 2019 ; https://journalofscientificinnovationinmedicine.org/ ; >
 
   }
@@ -481,7 +481,7 @@
       #publisher = Stockholm University Press
 
     au < manifest ; exists ; 1999 ; 1 ; Scandinavian Journal of Disability Research Volume 1 ; 1999 ; https://www.sjdr.se/ ; >
-    au < manifest ; exists ; 2000 ; 2 ; Scandinavian Journal of Disability Research Volume 2 ; 2000 ; https://www.sjdr.se/ ; >
+    au < ready ; exists ; 2000 ; 2 ; Scandinavian Journal of Disability Research Volume 2 ; 2000 ; https://www.sjdr.se/ ; >
     au < ready ; exists ; 2001 ; 3 ; Scandinavian Journal of Disability Research Volume 3 ; 2001 ; https://www.sjdr.se/ ; >
     au < doesNotExist ; doesNotExist ; 2002 ; 4 ; Scandinavian Journal of Disability Research Volume 4 ; 2002 ; https://www.sjdr.se/ ; >
     au < ready ; exists ; 2003 ; 5 ; Scandinavian Journal of Disability Research Volume 5 ; 2003 ; https://www.sjdr.se/ ; >
@@ -1723,7 +1723,7 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://www.ijds.eu/
 
-      au < manifest ; exists ; 2018 ; 1 ; International Journal of Driving Science Volume 2018 ; 2018 ; https://www.ijds.eu/ ; >
+      au < ready ; exists ; 2018 ; 1 ; International Journal of Driving Science Volume 2018 ; 2018 ; https://www.ijds.eu/ ; >
       au < expected ; exists ; 2019 ; 2 ; International Journal of Driving Science Volume 2019 ; 2019 ; https://www.ijds.eu/ ; >
 
   }
@@ -1738,7 +1738,7 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://www.worldwidewastejournal.com/
 
-      au < manifest ; exists ; 2018 ; 1 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2018 ; 2018 ; https://www.worldwidewastejournal.com/ ; >
+      au < ready ; exists ; 2018 ; 1 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2018 ; 2018 ; https://www.worldwidewastejournal.com/ ; >
       au < manifest ; exists ; 2019 ; 2 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2019 ; 2019 ; https://www.worldwidewastejournal.com/ ; >
 
   }
