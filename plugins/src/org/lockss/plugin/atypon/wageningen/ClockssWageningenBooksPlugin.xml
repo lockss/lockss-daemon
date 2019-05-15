@@ -10,7 +10,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>19</string>
+    <string>20</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -65,5 +65,10 @@
         <long>100</long>
       </entry>
     </map>
+  </entry>
+  <!--This change should only belong to Clockss version-->
+  <entry>
+    <string>application/pdf_filter_factory</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponPageCountPdfFactory</string>
   </entry>
 </map>
