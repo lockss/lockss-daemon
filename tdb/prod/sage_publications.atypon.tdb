@@ -39596,6 +39596,41 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
     }
 
+  {
+
+    title <
+      name = Science Progress ;
+      issn = 0036-8504 ;
+      issnl = 0036-8504
+    >
+
+    #journal_id = sci
+    #doNotProcess = content had been processed in Science Reviews 2000
+
+    au < exists ; 1999 ; Science Progress Volume 82 ; 82 ; scia ; https://journals.sagepub.com/ >
+    au < exists ; 2000 ; Science Progress Volume 83 ; 83 ; scia ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2001 ; Science Progress Volume 84 ; 84 ; scia ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2002 ; Science Progress Volume 85 ; 85 ; scia ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2003 ; Science Progress Volume 86 ; 86 ; scia ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2004 ; Science Progress Volume 87 ; 87 ; scia ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2005 ; Science Progress Volume 88 ; 88 ; scia ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2006 ; Science Progress Volume 89 ; 89 ; scia ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2007 ; Science Progress Volume 90 ; 90 ; scia ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2008 ; Science Progress Volume 91 ; 91 ; scia ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2009 ; Science Progress Volume 92 ; 92 ; scia ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2010 ; Science Progress Volume 93 ; 93 ; scia ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2011 ; Science Progress Volume 94 ; 94 ; scia ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2012 ; Science Progress Volume 95 ; 95 ; scia ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2013 ; Science Progress Volume 96 ; 96 ; scia ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2014 ; Science Progress Volume 97 ; 97 ; scia ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2015 ; Science Progress Volume 98 ; 98 ; scia ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2016 ; Science Progress Volume 99 ; 99 ; scia ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2017 ; Science Progress Volume 100 ; 100 ; scia ; https://journals.sagepub.com/ >
+    au < doNotProcess ; 2018 ; Science Progress Volume 101 ; 101 ; scia ; https://journals.sagepub.com/ >
+    au < exists ; 2019 ; Science Progress Volume 101 ; 101 ; scia ; https://journals.sagepub.com/ >
+
+  }
+
     {
 
       title <

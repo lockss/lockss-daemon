@@ -49,7 +49,7 @@
     param[journal_id] = abr
     param[journal_issn] = 1758-1559
     comment[continues] = 1470-2061
-    #move to Sage
+    #move to Sage in 2019
 
     au < released ; 2008-2009 ; Avian Biology Research Volume 1 ; 1 >
     au < released ; 2009 ; Avian Biology Research Volume 2 ; 2 >
@@ -109,7 +109,7 @@
 
     param[journal_id] = jcr   
     param[journal_issn] = 1747-5198
-    #move to Sage
+    #move to Sage in 2019
 
     au < released ; 2000 ; Journal of Chemical Research Volume 2000 ; 2000 >
     au < released ; 2001 ; Journal of Chemical Research Volume 2001 ; 2001 >
@@ -193,7 +193,7 @@
 
     param[journal_id] = prk
     param[journal_issn] = 1468-6783
-    #move to Sage
+    #move to Sage in 2019
 
     au < released ; 1997 ; Progress in Reaction Kinetics & Mechanism Volume 22 ; 22 >
     au < released ; 1998 ; Progress in Reaction Kinetics & Mechanism Volume 23 ; 23 >
@@ -230,6 +230,7 @@
 
     param[journal_id] = sciprg
     param[journal_issn] = 0036-8504
+    #move to Sage in 2019
 
     au < released ; 2001 ; Science Progress Volume 84 ; 84 >
     au < released ; 2002 ; Science Progress Volume 85 ; 85 >
