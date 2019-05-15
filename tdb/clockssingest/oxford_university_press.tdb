@@ -6331,7 +6331,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Geophysical Journal International Volume 200-203 ; 200-203 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Geophysical Journal International Volume 204-207 ; 204-207 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Geophysical Journal International Volume 208-211 ; 208-211 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Geophysical Journal International Volume 212-215 ; 212-215 ; >
+    au < frozen ; exists ; 2018 ; 2018 ; Geophysical Journal International Volume 212-215 ; 212-215 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Geophysical Journal International Volume 216-219 ; 216-219 ; >
 
   }
@@ -8732,7 +8732,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Japanese Journal of Clinical Oncology Volume 45 ; 45 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Japanese Journal of Clinical Oncology Volume 46 ; 46 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Japanese Journal of Clinical Oncology Volume 47 ; 47 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Japanese Journal of Clinical Oncology Volume 48 ; 48 ; >
+    au < frozen ; exists ; 2018 ; 2018 ; Japanese Journal of Clinical Oncology Volume 48 ; 48 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Japanese Journal of Clinical Oncology Volume 49 ; 49 ; >
 
   }
@@ -9034,7 +9034,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Antimicrobial Chemotherapy Volume 70 ; 70 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Journal of Antimicrobial Chemotherapy Volume 71 ; 71 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Journal of Antimicrobial Chemotherapy Volume 72 ; 72 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Journal of Antimicrobial Chemotherapy Volume 73 ; 73 ; >
+    au < frozen ; exists ; 2018 ; 2018 ; Journal of Antimicrobial Chemotherapy Volume 73 ; 73 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Journal of Antimicrobial Chemotherapy Volume 74 ; 74 ; >
 
   }
@@ -10204,7 +10204,7 @@
 
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Integrable Systems Volume 1 ; 1 ; > #doesNotExist
     au < frozen ; exists ; 2016 ; 2016 ; Journal of Integrable Systems Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2017 ; 2017 ; Journal of Integrable Systems Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2017 ; 2017 ; Journal of Integrable Systems Volume 2 ; 2 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Journal of Integrable Systems Volume 3 ; 3 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Journal of Integrable Systems Volume 4 ; 4 ; >
 
@@ -10833,7 +10833,7 @@
     au < exists ; exists ; 2007 ; 2007 ; The Journal of Nutrition Volume 137 ; 137 ; >
     au < frozen ; exists ; 2008 ; 2008 ; The Journal of Nutrition Volume 138 ; 138 ; >
     au < frozen ; exists ; 2009 ; 2009 ; The Journal of Nutrition Volume 139 ; 139 ; >
-    au < crawling ; exists ; 2010 ; 2010 ; The Journal of Nutrition Volume 140 ; 140 ; >
+    au < frozen ; exists ; 2010 ; 2010 ; The Journal of Nutrition Volume 140 ; 140 ; >
     au < frozen ; exists ; 2011 ; 2011 ; The Journal of Nutrition Volume 141 ; 141 ; >
     au < frozen ; exists ; 2012 ; 2012 ; The Journal of Nutrition Volume 142 ; 142 ; >
     au < frozen ; exists ; 2013 ; 2013 ; The Journal of Nutrition Volume 143 ; 143 ; >
@@ -11172,7 +11172,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Journal of Public Health Volume 35 ; 35 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Public Health Volume 36 ; 36 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Public Health Volume 37 ; 37 ; >
-    au < crawling ; exists ; 2016 ; 2016 ; Journal of Public Health Volume 38 ; 38 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; Journal of Public Health Volume 38 ; 38 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Journal of Public Health Volume 39 ; 39 ; >
     au < crawling ; exists ; 2018 ; 2018 ; Journal of Public Health Volume 40 ; 40 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Journal of Public Health Volume 41 ; 41 ; >
@@ -11853,7 +11853,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of the History of Collections Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of the History of Collections Volume 27 ; 27 ; >
     au < crawling ; exists ; 2016 ; 2016 ; Journal of the History of Collections Volume 28 ; 28 ; >
-    au < crawling ; exists ; 2017 ; 2017 ; Journal of the History of Collections Volume 29 ; 29 ; >
+    au < frozen ; exists ; 2017 ; 2017 ; Journal of the History of Collections Volume 29 ; 29 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of the History of Collections Volume 30 ; 30 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Journal of the History of Collections Volume 31 ; 31 ; >
 
@@ -12281,7 +12281,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Logic Journal of the IGPL Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Logic Journal of the IGPL Volume 23 ; 23 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Logic Journal of the IGPL Volume 24 ; 24 ; >
-    au < crawling ; exists ; 2017 ; 2017 ; Logic Journal of the IGPL Volume 25 ; 25 ; >
+    au < frozen ; exists ; 2017 ; 2017 ; Logic Journal of the IGPL Volume 25 ; 25 ; >
     au < crawling ; exists ; 2018 ; 2018 ; Logic Journal of the IGPL Volume 26 ; 26 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Logic Journal of the IGPL Volume 27 ; 27 ; >
 
