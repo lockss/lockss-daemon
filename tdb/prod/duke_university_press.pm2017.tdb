@@ -93,8 +93,8 @@
       attr[journal_id] = 427
       #move from University of Hawaii Press
 
-        au < manifest ; 2008 ; Archives of Asian Art Volume 58 [2008] ; 4133 >
-        au < manifest ; 2009 ; Archives of Asian Art Volume 59 [2009] ; 4392 >
+        au < testing ; 2008 ; Archives of Asian Art Volume 58 [2008] ; 4133 >
+        au < testing ; 2009 ; Archives of Asian Art Volume 59 [2009] ; 4392 >
         au < released ; 2010 ; Archives of Asian Art Volume 60 [2010] ; 6360 >
         au < released ; 2011 ; Archives of Asian Art Volume 61 [2011] ; 7524 >
         au < released ; 2012 ; Archives of Asian Art Volume 62 [2012] ; 8495 >
@@ -348,7 +348,7 @@
 
       attr[journal_id] = 67
 
-        au < manifest ; 1999 ; GLQ: A Journal of Lesbian and Gay Studies Volume 5 [1999] ; 232 >
+        au < testing ; 1999 ; GLQ: A Journal of Lesbian and Gay Studies Volume 5 [1999] ; 232 >
         au < released ; 2000 ; GLQ: A Journal of Lesbian and Gay Studies Volume 6 [2000] ; 233 >
         au < released ; 2001 ; GLQ: A Journal of Lesbian and Gay Studies Volume 7 [2001] ; 234 >
         au < released ; 2002 ; GLQ: A Journal of Lesbian and Gay Studies Volume 8 [2002] ; 235 >
@@ -656,7 +656,7 @@
         au < released ; 2016 ; Meridians: feminism, race, transnationalism Volume 14 [2016] ; 11425 >
         au < released ; 2016-2017 ; Meridians: feminism, race, transnationalism Volume 15 [2016-2017] ; 12483 >
         au < ready ; 2017-2018 ; Meridians: feminism, race, transnationalism Volume 16 [2017-2018] ; 13042 >
-        au < manifest ; 2018-2019 ; Meridians: feminism, race, transnationalism Volume 17 [2018-2019] ; 13719 >
+        au < testing ; 2018-2019 ; Meridians: feminism, race, transnationalism Volume 17 [2018-2019] ; 13719 >
 
     }
 
@@ -813,7 +813,7 @@
       attr[journal_id] = 477
       #move from University of Nebraska Press
 
-        au < manifest ; 2009 ; Qui Parle: Critical Humanities and Social Sciences Volume 18 [2009] ; 5046 >
+        au < testing ; 2009 ; Qui Parle: Critical Humanities and Social Sciences Volume 18 [2009] ; 5046 >
         au < released ; 2010 ; Qui Parle: Critical Humanities and Social Sciences Volume 19 [2010] ; 6477 >
         au < released ; 2011 ; Qui Parle: Critical Humanities and Social Sciences Volume 20 [2011] ; 7678 >
         au < released ; 2012 ; Qui Parle: Critical Humanities and Social Sciences Volume 21 [2012] ; 8522 >
@@ -1074,7 +1074,7 @@
         au < released ; 2011 ; World Policy Journal Volume 28 [2011] ; 7587 >
         au < released ; 2016-2017 ; World Policy Journal Volume 33 [2016-2017] ; 11103 >
         au < ready ; 2017-2018 ; World Policy Journal Volume 34 [2017-2018] ; 12524 >
-        au < manifest ; 2018-2019 ; World Policy Journal Volume 35 [2018-2019] ; 13354 >
+        au < testing ; 2018-2019 ; World Policy Journal Volume 35 [2018-2019] ; 13354 >
 
     }
 
