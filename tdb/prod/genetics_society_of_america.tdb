@@ -23,7 +23,7 @@
     au < HighWirePressH20Plugin ; down ; 2015 ; G3: Genes, Genomes, Genetics Volume 5 ; 5 >
     au < gensoc.GeneticsSocietyDrupalPlugin ; released ; 2016 ; G3: Genes, Genomes, Genetics Volume 6 ; 6 >
     au < gensoc.GeneticsSocietyDrupalPlugin ; released ; 2017 ; G3: Genes, Genomes, Genetics Volume 7 ; 7 >
-    au < gensoc.GeneticsSocietyDrupalPlugin ; manifest ; 2018 ; G3: Genes, Genomes, Genetics Volume 8 ; 8 >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; exists ; 2018 ; G3: Genes, Genomes, Genetics Volume 8 ; 8 >
 
   }
     
@@ -245,9 +245,9 @@
     au < gensoc.GeneticsSocietyDrupalPlugin ; released ; 2017 ; Genetics Volume 205 ; 205 >
     au < gensoc.GeneticsSocietyDrupalPlugin ; released ; 2017 ; Genetics Volume 206 ; 206 >
     au < gensoc.GeneticsSocietyDrupalPlugin ; released ; 2017 ; Genetics Volume 207 ; 207 >
-    au < gensoc.GeneticsSocietyDrupalPlugin ; manifest ; 2018 ; Genetics Volume 208 ; 208 >
-    au < gensoc.GeneticsSocietyDrupalPlugin ; manifest ; 2018 ; Genetics Volume 209 ; 209 >
-    au < gensoc.GeneticsSocietyDrupalPlugin ; manifest ; 2018 ; Genetics Volume 210 ; 210 >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; exists ; 2018 ; Genetics Volume 208 ; 208 >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; exists ; 2018 ; Genetics Volume 209 ; 209 >
+    au < gensoc.GeneticsSocietyDrupalPlugin ; exists ; 2018 ; Genetics Volume 210 ; 210 >
 
   }
 
