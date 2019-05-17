@@ -24920,6 +24920,20 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
     }
 
+  {
+
+    title <
+      name = Journal of Indian Orthodontic Society ;
+      issn = 0301-5742 ;
+      eissn = 0974-9098
+    >
+
+    #journal_id = jio
+
+      au < exists ; 2019 ; Journal of Indian Orthodontic Society Volume 53 ; 53 ; iema ; https://journals.sagepub.com/ >
+
+  }
+
     {
 
       title <
@@ -33255,6 +33269,33 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
   {
 
     title <
+      name = Natural Product Communications ;
+      issn = 1934-578X ;
+      eissn = 1555-9475
+    >
+
+      #jouranl_id = npx
+
+      au < exists ; 2016 ; Natural Product Communications Volume 1 ; 1 ; npxa ; https://journals.sagepub.com/ >
+      au < exists ; 2017 ; Natural Product Communications Volume 2 ; 2 ; npxa ; https://journals.sagepub.com/ >
+      au < exists ; 2008 ; Natural Product Communications Volume 3 ; 3 ; npxa ; https://journals.sagepub.com/ >
+      au < exists ; 2009 ; Natural Product Communications Volume 4 ; 4 ; npxa ; https://journals.sagepub.com/ >
+      au < exists ; 2010 ; Natural Product Communications Volume 5 ; 5 ; npxa ; https://journals.sagepub.com/ >
+      au < exists ; 2011 ; Natural Product Communications Volume 6 ; 6 ; npxa ; https://journals.sagepub.com/ >
+      au < exists ; 2012 ; Natural Product Communications Volume 7 ; 7 ; npxa ; https://journals.sagepub.com/ >
+      au < exists ; 2013 ; Natural Product Communications Volume 8 ; 8 ; npxa ; https://journals.sagepub.com/ >
+      au < exists ; 2014 ; Natural Product Communications Volume 9 ; 9 ; npxa ; https://journals.sagepub.com/ >
+      au < exists ; 2015 ; Natural Product Communications Volume 10 ; 10 ; npxa ; https://journals.sagepub.com/ >
+      au < exists ; 2016 ; Natural Product Communications Volume 11 ; 11 ; npxa ; https://journals.sagepub.com/ >
+      au < exists ; 2017 ; Natural Product Communications Volume 12 ; 12 ; npxa ; https://journals.sagepub.com/ >
+      au < exists ; 2018 ; Natural Product Communications Volume 13 ; 13 ; npxa ; https://journals.sagepub.com/ >
+      au < exists ; 2019 ; Natural Product Communications Volume 14 ; 14 ; npxa ; https://journals.sagepub.com/ >
+
+  }
+
+  {
+
+    title <
       name = Netherlands Quarterly of Human Rights ;
       issn = 0924-0519 ;
       eissn = 2214-7357
@@ -39732,6 +39773,30 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       }
 
     }
+
+  {
+
+    title <
+      name = Sculpture Review ;
+      issn = 0747-5284 ;
+      eissn = 2632-3494
+    >
+
+    #journal_id = srx
+
+      au < exists ; 2009 ; Sculpture Review Volume 58 ; 58 ; sthd ; https://journals.sagepub.com/ >
+      au < exists ; 2010 ; Sculpture Review Volume 59 ; 59 ; sthd ; https://journals.sagepub.com/ >
+      au < exists ; 2011 ; Sculpture Review Volume 60 ; 60 ; sthd ; https://journals.sagepub.com/ >
+      au < exists ; 2012 ; Sculpture Review Volume 61 ; 61 ; sthd ; https://journals.sagepub.com/ >
+      au < exists ; 2013 ; Sculpture Review Volume 62 ; 62 ; sthd ; https://journals.sagepub.com/ >
+      au < exists ; 2014 ; Sculpture Review Volume 63 ; 63 ; sthd ; https://journals.sagepub.com/ >
+      au < exists ; 2015 ; Sculpture Review Volume 64 ; 64 ; sthd ; https://journals.sagepub.com/ >
+      au < exists ; 2016 ; Sculpture Review Volume 65 ; 65 ; sthd ; https://journals.sagepub.com/ >
+      au < exists ; 2017 ; Sculpture Review Volume 66 ; 66 ; sthd ; https://journals.sagepub.com/ >
+      au < exists ; 2018 ; Sculpture Review Volume 67 ; 67 ; sthd ; https://journals.sagepub.com/ >
+      au < exists ; 2019 ; Sculpture Review Volume 68 ; 68 ; sthd ; https://journals.sagepub.com/ >
+
+  }
 
     {
 
