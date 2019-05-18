@@ -82,7 +82,7 @@
 
       attr[journal_id] = 222
 
-        au < testing ; 2003 ; Journal for the Psychoanalysis of Culture and Society Volume 8 [2003] ; 850 >
+        au < ready ; 2003 ; Journal for the Psychoanalysis of Culture and Society Volume 8 [2003] ; 850 >
 
     }
 
@@ -119,9 +119,9 @@
         au < testing ; 2002 ; Narrative Volume 10 [2002] ; 463 >
         au < testing ; 2003 ; Narrative Volume 11 [2003] ; 769 >
         au < testing ; 2004 ; Narrative Volume 12 [2004] ; 1723 >
-        au < testing ; 2005 ; Narrative Volume 13 [2005] ; 2636 >
+        au < ready ; 2005 ; Narrative Volume 13 [2005] ; 2636 >
         au < testing ; 2006 ; Narrative Volume 14 [2006] ; 2890 >
-        au < testing ; 2007 ; Narrative Volume 15 [2007] ; 3188 >
+        au < ready ; 2007 ; Narrative Volume 15 [2007] ; 3188 >
         au < testing ; 2008 ; Narrative Volume 16 [2008] ; 3644 >
         au < testing ; 2009 ; Narrative Volume 17 [2009] ; 4077 >
         au < released ; 2010 ; Narrative Volume 18 [2010] ; 5740 >
@@ -148,7 +148,7 @@
 
       attr[journal_id] = 90
 
-        au < testing ; 2002 ; The Journal of Higher Education Volume 73 [2002] ; 295 >
+        au < ready ; 2002 ; The Journal of Higher Education Volume 73 [2002] ; 295 >
         au < testing ; 2003 ; The Journal of Higher Education Volume 74 [2003] ; 775 >
         au < manifest ; 2004 ; The Journal of Higher Education Volume 75 [2004] ; 1728 >
         au < manifest ; 2005 ; The Journal of Higher Education Volume 76 [2005] ; 2630 >
