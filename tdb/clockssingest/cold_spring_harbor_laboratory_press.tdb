@@ -253,29 +253,29 @@
       au < finished ; manifest ; 1988 ; Genes & Development Volume 2 ; 2 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 1989 ; Genes & Development Volume 3 ; 3 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 1990 ; Genes & Development Volume 4 ; 4 ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 1991 ; Genes & Development Volume 5 ; 5 ; >
-      au < frozen ; exists ; 1992 ; Genes & Development Volume 6 ; 6 ; >
-      au < frozen ; exists ; 1993 ; Genes & Development Volume 7 ; 7 ; >
-      au < frozen ; exists ; 1994 ; Genes & Development Volume 8 ; 8 ; >
-      au < frozen ; exists ; 1995 ; Genes & Development Volume 9 ; 9 ; >
-      au < frozen ; exists ; 1996 ; Genes & Development Volume 10 ; 10 ; >
-      au < frozen ; exists ; 1997 ; Genes & Development Volume 11 ; 11 ; >
-      au < frozen ; exists ; 1998 ; Genes & Development Volume 12 ; 12 ; >
-      au < frozen ; exists ; 1999 ; Genes & Development Volume 13 ; 13 ; >
-      au < frozen ; exists ; 2000 ; Genes & Development Volume 14 ; 14 ; >
-      au < frozen ; exists ; 2001 ; Genes & Development Volume 15 ; 15 ; >
-      au < frozen ; exists ; 2002 ; Genes & Development Volume 16 ; 16 ; >
-      au < frozen ; exists ; 2003 ; Genes & Development Volume 17 ; 17 ; >
+      au < finished ; manifest ; 1991 ; Genes & Development Volume 5 ; 5 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1992 ; Genes & Development Volume 6 ; 6 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1993 ; Genes & Development Volume 7 ; 7 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1994 ; Genes & Development Volume 8 ; 8 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1995 ; Genes & Development Volume 9 ; 9 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1996 ; Genes & Development Volume 10 ; 10 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1997 ; Genes & Development Volume 11 ; 11 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1998 ; Genes & Development Volume 12 ; 12 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1999 ; Genes & Development Volume 13 ; 13 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2000 ; Genes & Development Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2001 ; Genes & Development Volume 15 ; 15 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2002 ; Genes & Development Volume 16 ; 16 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2003 ; Genes & Development Volume 17 ; 17 ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2004 ; Genes & Development Volume 18 ; 18 ; >
-      au < frozen ; exists ; 2005 ; Genes & Development Volume 19 ; 19 ; >
-      au < frozen ; exists ; 2006 ; Genes & Development Volume 20 ; 20 ; >
+      au < finished ; manifest ; 2005 ; Genes & Development Volume 19 ; 19 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2006 ; Genes & Development Volume 20 ; 20 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2007 ; Genes & Development Volume 21 ; 21 ; >
-      au < frozen ; exists ; 2008 ; Genes & Development Volume 22 ; 22 ; >
+      au < finished ; manifest ; 2008 ; Genes & Development Volume 22 ; 22 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2009 ; Genes & Development Volume 23 ; 23 ; >
       au < frozen ; exists ; 2010 ; Genes & Development Volume 24 ; 24 ; >
-      au < frozen ; exists ; 2011 ; Genes & Development Volume 25 ; 25 ; >
-      au < frozen ; exists ; 2012 ; Genes & Development Volume 26 ; 26 ; >
-      au < frozen ; exists ; 2013 ; Genes & Development Volume 27 ; 27 ; >
+      au < finished ; manifest ; 2011 ; Genes & Development Volume 25 ; 25 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2012 ; Genes & Development Volume 26 ; 26 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2013 ; Genes & Development Volume 27 ; 27 ; reingest4.clockss.org:8082 >
       au < zapped ; finished ; 2014 ; Genes & Development Volume 28 ; 28 ; >
       au < finished ; crawling ; 2015 ; Genes & Development Volume 29 ; 29 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2016 ; Genes & Development Volume 30 ; 30 ; >
@@ -303,24 +303,24 @@
 #      param[base_url] = http://genome.cshlp.org/
 
       au < frozen ; exists ; 1991-1992 ; Genome Research Volume 1 ; 1 ; https://genome.cshlp.org/ ; >
-      au < frozen ; exists ; 1992-1993 ; Genome Research Volume 2 ; 2 ; https://genome.cshlp.org/ ; >
+      au < finished ; manifest ; 1992-1993 ; Genome Research Volume 2 ; 2 ; https://genome.cshlp.org/ ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 1993-1994 ; Genome Research Volume 3 ; 3 ; https://genome.cshlp.org/ ; >
-      au < frozen ; exists ; 1994-1995 ; Genome Research Volume 4 ; 4 ; https://genome.cshlp.org/ ; >
-      au < frozen ; exists ; 1995 ; Genome Research Volume 5 ; 5 ; https://genome.cshlp.org/ ; >
-      au < frozen ; exists ; 1996 ; Genome Research Volume 6  ; 6  ; https://genome.cshlp.org/ ; >
-      au < frozen ; exists ; 1997 ; Genome Research Volume 7  ; 7  ; https://genome.cshlp.org/ ; >
-      au < frozen ; exists ; 1998 ; Genome Research Volume 8  ; 8  ; https://genome.cshlp.org/ ; >
-      au < frozen ; exists ; 1999 ; Genome Research Volume 9  ; 9  ; https://genome.cshlp.org/ ; >
-      au < frozen ; exists ; 2000 ; Genome Research Volume 10 ; 10 ; https://genome.cshlp.org/ ; >
-      au < frozen ; exists ; 2001 ; Genome Research Volume 11 ; 11 ; https://genome.cshlp.org/ ; >
-      au < frozen ; exists ; 2002 ; Genome Research Volume 12 ; 12 ; https://genome.cshlp.org/ ; >
-      au < frozen ; exists ; 2003 ; Genome Research Volume 13 ; 13 ; https://genome.cshlp.org/ ; >
-      au < frozen ; exists ; 2004 ; Genome Research Volume 14 ; 14 ; https://genome.cshlp.org/ ; >
-      au < frozen ; exists ; 2005 ; Genome Research Volume 15 ; 15 ; https://genome.cshlp.org/ ; >
-      au < frozen ; exists ; 2006 ; Genome Research Volume 16 ; 16 ; https://genome.cshlp.org/ ; >
-      au < frozen ; exists ; 2007 ; Genome Research Volume 17 ; 17 ; https://genome.cshlp.org/ ; >
-      au < frozen ; exists ; 2008 ; Genome Research Volume 18 ; 18 ; https://genome.cshlp.org/ ; >
-      au < frozen ; exists ; 2009 ; Genome Research Volume 19 ; 19 ; https://genome.cshlp.org/ ; >
+      au < finished ; manifest ; 1994-1995 ; Genome Research Volume 4 ; 4 ; https://genome.cshlp.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1995 ; Genome Research Volume 5 ; 5 ; https://genome.cshlp.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1996 ; Genome Research Volume 6  ; 6  ; https://genome.cshlp.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1997 ; Genome Research Volume 7  ; 7  ; https://genome.cshlp.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1998 ; Genome Research Volume 8  ; 8  ; https://genome.cshlp.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1999 ; Genome Research Volume 9  ; 9  ; https://genome.cshlp.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2000 ; Genome Research Volume 10 ; 10 ; https://genome.cshlp.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2001 ; Genome Research Volume 11 ; 11 ; https://genome.cshlp.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2002 ; Genome Research Volume 12 ; 12 ; https://genome.cshlp.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2003 ; Genome Research Volume 13 ; 13 ; https://genome.cshlp.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2004 ; Genome Research Volume 14 ; 14 ; https://genome.cshlp.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2005 ; Genome Research Volume 15 ; 15 ; https://genome.cshlp.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2006 ; Genome Research Volume 16 ; 16 ; https://genome.cshlp.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2007 ; Genome Research Volume 17 ; 17 ; https://genome.cshlp.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2008 ; Genome Research Volume 18 ; 18 ; https://genome.cshlp.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2009 ; Genome Research Volume 19 ; 19 ; https://genome.cshlp.org/ ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2010 ; Genome Research Volume 20 ; 20 ; https://genome.cshlp.org/ ; >
       au < frozen ; exists ; 2011 ; Genome Research Volume 21 ; 21 ; https://genome.cshlp.org/ ; >
       au < frozen ; exists ; 2012 ; Genome Research Volume 22 ; 22 ; https://genome.cshlp.org/ ; >
