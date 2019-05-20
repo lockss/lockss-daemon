@@ -371,8 +371,8 @@
       au < manifest ; 2013 ; 2013 ; BioDiscovery Volume 2013 ; 2013 ; https://biodiscovery.pensoft.net/ >
       au < manifest ; 2014 ; 2014 ; BioDiscovery Volume 2014 ; 2014 ; https://biodiscovery.pensoft.net/ >
       au < manifest ; 2015 ; 2015 ; BioDiscovery Volume 2015 ; 2015 ; https://biodiscovery.pensoft.net/ >
-      au < releasing ; 2016 ; 2016 ; BioDiscovery Volume 2016 ; 2016 ; https://biodiscovery.pensoft.net/ >
-      au < releasing ; 2017 ; 2017 ; BioDiscovery Volume 2017 ; 2017 ; https://biodiscovery.pensoft.net/ >
+      au < released ; 2016 ; 2016 ; BioDiscovery Volume 2016 ; 2016 ; https://biodiscovery.pensoft.net/ >
+      au < released ; 2017 ; 2017 ; BioDiscovery Volume 2017 ; 2017 ; https://biodiscovery.pensoft.net/ >
       au < manifest ; 2018 ; 2018 ; BioDiscovery Volume 2018 ; 2018 ; https://biodiscovery.pensoft.net/ >
       au < manifest ; 2019 ; 2019 ; BioDiscovery Volume 2019 ; 2019 ; https://biodiscovery.pensoft.net/ >
 
@@ -556,7 +556,7 @@
 
       param[au_oai_set] = mbmg
 
-      au < releasing ; 2017 ; 2017 ; Metabarcoding and Metagenomics Volume 2017 ; 2017 ; https://mbmg.pensoft.net/ >
+      au < released ; 2017 ; 2017 ; Metabarcoding and Metagenomics Volume 2017 ; 2017 ; https://mbmg.pensoft.net/ >
       au < manifest ; 2018 ; 2018 ; Metabarcoding and Metagenomics Volume 2018 ; 2018 ; https://mbmg.pensoft.net/ >
       au < manifest ; 2019 ; 2019 ; Metabarcoding and Metagenomics Volume 2019 ; 2019 ; https://mbmg.pensoft.net/ >
 
@@ -603,8 +603,8 @@
 
       param[au_oai_set] = oneecosystem
 
-      au < releasing ; 2016 ; 2016 ; One Ecosystem Volume 2016 ; 2016 ; https://oneecosystem.pensoft.net/ >
-      au < releasing ; 2017 ; 2017 ; One Ecosystem Volume 2017 ; 2017 ; https://oneecosystem.pensoft.net/ >
+      au < released ; 2016 ; 2016 ; One Ecosystem Volume 2016 ; 2016 ; https://oneecosystem.pensoft.net/ >
+      au < released ; 2017 ; 2017 ; One Ecosystem Volume 2017 ; 2017 ; https://oneecosystem.pensoft.net/ >
       au < manifest ; 2018 ; 2018 ; One Ecosystem Volume 2018 ; 2018 ; https://oneecosystem.pensoft.net/ >
       au < manifest ; 2019 ; 2019 ; One Ecosystem Volume 2019 ; 2019 ; https://oneecosystem.pensoft.net/ >
 
