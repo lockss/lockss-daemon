@@ -22,10 +22,10 @@
         au < testing ; 2003 ; American Periodicals: A Journal of History & Criticism Volume 13 [2003] ; 2131 >
         au < testing ; 2004 ; American Periodicals: A Journal of History & Criticism Volume 14 [2004] ; 2453 >
         au < testing ; 2005 ; American Periodicals: A Journal of History & Criticism Volume 15 [2005] ; 2752 >
-        au < ready ; 2006 ; American Periodicals: A Journal of History & Criticism Volume 16 [2006] ; 3014 >
-        au < ready ; 2007 ; American Periodicals: A Journal of History & Criticism Volume 17 [2007] ; 3328 >
-        au < ready ; 2008 ; American Periodicals: A Journal of History & Criticism Volume 18 [2008] ; 3722 >
-        au < ready ; 2009 ; American Periodicals: A Journal of History & Criticism Volume 19 [2009] ; 4238 >
+        au < releasing ; 2006 ; American Periodicals: A Journal of History & Criticism Volume 16 [2006] ; 3014 >
+        au < releasing ; 2007 ; American Periodicals: A Journal of History & Criticism Volume 17 [2007] ; 3328 >
+        au < releasing ; 2008 ; American Periodicals: A Journal of History & Criticism Volume 18 [2008] ; 3722 >
+        au < releasing ; 2009 ; American Periodicals: A Journal of History & Criticism Volume 19 [2009] ; 4238 >
         au < released ; 2010 ; American Periodicals: A Journal of History & Criticism Volume 20 [2010] ; 6108 >
         au < released ; 2011 ; American Periodicals: A Journal of History & Criticism Volume 21 [2011] ; 7492 >
         au < released ; 2012 ; American Periodicals: A Journal of History & Criticism Volume 22 [2012] ; 8164 >
@@ -34,7 +34,7 @@
         au < released ; 2015 ; American Periodicals: A Journal of History & Criticism Volume 25 [2015] ; 10578 >
         au < released ; 2016 ; American Periodicals: A Journal of History & Criticism Volume 26 [2016] ; 11109 >
         au < released ; 2017 ; American Periodicals: A Journal of History & Criticism Volume 27 [2017] ; 12504 >
-        au < ready ; 2018 ; American Periodicals: A Journal of History & Criticism Volume 28 [2018] ; 13324 >
+        au < releasing ; 2018 ; American Periodicals: A Journal of History & Criticism Volume 28 [2018] ; 13324 >
 
     }
 
@@ -49,8 +49,8 @@
 
       attr[journal_id] = 66
 
-        au < ready ; 2002 ; Geographical Analysis Volume 34 [2002] ; 231 >
-        au < ready ; 2003 ; Geographical Analysis Volume 35 [2003] ; 759 >
+        au < releasing ; 2002 ; Geographical Analysis Volume 34 [2002] ; 231 >
+        au < releasing ; 2003 ; Geographical Analysis Volume 35 [2003] ; 759 >
         au < testing ; 2004 ; Geographical Analysis Volume 36 [2004] ; 1719 >
 
     }
@@ -67,7 +67,7 @@
       attr[journal_id] = 701
 
         au < released ; 2017 ; Inks: The Journal of the Comics Studies Society Volume 1 [2017] ; 12493 >
-        au < ready ; 2018 ; Inks: The Journal of the Comics Studies Society Volume 2 [2018] ; 13362 >
+        au < releasing ; 2018 ; Inks: The Journal of the Comics Studies Society Volume 2 [2018] ; 13362 >
 
     }
 
@@ -82,7 +82,7 @@
 
       attr[journal_id] = 222
 
-        au < ready ; 2003 ; Journal for the Psychoanalysis of Culture and Society Volume 8 [2003] ; 850 >
+        au < releasing ; 2003 ; Journal for the Psychoanalysis of Culture and Society Volume 8 [2003] ; 850 >
 
     }
 
@@ -97,11 +97,11 @@
 
       attr[journal_id] = 123
 
-        au < ready ; 2002 ; Journal of Money, Credit, and Banking Volume 34 [2002] ; 407 >
-        au < ready ; 2003 ; Journal of Money, Credit, and Banking Volume 35 [2003] ; 798 >
-        au < ready ; 2004 ; Journal of Money, Credit, and Banking Volume 36 [2004] ; 1751 >
+        au < releasing ; 2002 ; Journal of Money, Credit, and Banking Volume 34 [2002] ; 407 >
+        au < releasing ; 2003 ; Journal of Money, Credit, and Banking Volume 35 [2003] ; 798 >
+        au < releasing ; 2004 ; Journal of Money, Credit, and Banking Volume 36 [2004] ; 1751 >
         au < testing ; 2005 ; Journal of Money, Credit, and Banking Volume 37 [2005] ; 2672 >
-        au < ready ; 2006 ; Journal of Money, Credit, and Banking Volume 38 [2006] ; 3024 >
+        au < releasing ; 2006 ; Journal of Money, Credit, and Banking Volume 38 [2006] ; 3024 >
 
     }
 
@@ -116,14 +116,14 @@
 
       attr[journal_id] = 135
 
-        au < ready ; 2002 ; Narrative Volume 10 [2002] ; 463 >
-        au < ready ; 2003 ; Narrative Volume 11 [2003] ; 769 >
-        au < ready ; 2004 ; Narrative Volume 12 [2004] ; 1723 >
-        au < ready ; 2005 ; Narrative Volume 13 [2005] ; 2636 >
-        au < ready ; 2006 ; Narrative Volume 14 [2006] ; 2890 >
-        au < ready ; 2007 ; Narrative Volume 15 [2007] ; 3188 >
-        au < ready ; 2008 ; Narrative Volume 16 [2008] ; 3644 >
-        au < ready ; 2009 ; Narrative Volume 17 [2009] ; 4077 >
+        au < releasing ; 2002 ; Narrative Volume 10 [2002] ; 463 >
+        au < releasing ; 2003 ; Narrative Volume 11 [2003] ; 769 >
+        au < releasing ; 2004 ; Narrative Volume 12 [2004] ; 1723 >
+        au < releasing ; 2005 ; Narrative Volume 13 [2005] ; 2636 >
+        au < releasing ; 2006 ; Narrative Volume 14 [2006] ; 2890 >
+        au < releasing ; 2007 ; Narrative Volume 15 [2007] ; 3188 >
+        au < releasing ; 2008 ; Narrative Volume 16 [2008] ; 3644 >
+        au < releasing ; 2009 ; Narrative Volume 17 [2009] ; 4077 >
         au < released ; 2010 ; Narrative Volume 18 [2010] ; 5740 >
         au < released ; 2011 ; Narrative Volume 19 [2011] ; 6801 >
         au < released ; 2012 ; Narrative Volume 20 [2012] ; 7886 >
@@ -148,8 +148,8 @@
 
       attr[journal_id] = 90
 
-        au < ready ; 2002 ; The Journal of Higher Education Volume 73 [2002] ; 295 >
-        au < ready ; 2003 ; The Journal of Higher Education Volume 74 [2003] ; 775 >
+        au < releasing ; 2002 ; The Journal of Higher Education Volume 73 [2002] ; 295 >
+        au < releasing ; 2003 ; The Journal of Higher Education Volume 74 [2003] ; 775 >
         au < testing ; 2004 ; The Journal of Higher Education Volume 75 [2004] ; 1728 >
         au < testing ; 2005 ; The Journal of Higher Education Volume 76 [2005] ; 2630 >
         au < testing ; 2006 ; The Journal of Higher Education Volume 77 [2006] ; 2928 >
@@ -177,9 +177,9 @@
 
       attr[journal_id] = 718
 
-        au < ready ; 2017 ; Victorians: A Journal of Culture and Literature Volume 131 [Summer 2017] ; 12808 >
-        au < ready ; 2017 ; Victorians: A Journal of Culture and Literature Volume 132 [Winter 2017] ; 13147 >
-        au < ready ; 2018 ; Victorians: A Journal of Culture and Literature Volume 133 [Summer 2018] ; 13578 >
+        au < releasing ; 2017 ; Victorians: A Journal of Culture and Literature Volume 131 [Summer 2017] ; 12808 >
+        au < releasing ; 2017 ; Victorians: A Journal of Culture and Literature Volume 132 [Winter 2017] ; 13147 >
+        au < releasing ; 2018 ; Victorians: A Journal of Culture and Literature Volume 133 [Summer 2018] ; 13578 >
         au < released ; 2018 ; Victorians: A Journal of Culture and Literature Volume 134 [Winter 2018] ; 13784 >
 
     }

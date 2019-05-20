@@ -22,8 +22,8 @@
         au < released ; 2014 ; Anthropologica Volume 56 [2014] ; 9942 >
         au < released ; 2015 ; Anthropologica Volume 57 [2015] ; 10602 >
         au < released ; 2016 ; Anthropologica Volume 58 [2016] ; 11256 >
-        au < ready ; 2017 ; Anthropologica Volume 59 [2017] ; 12653 >
-        au < ready ; 2018 ; Anthropologica Volume 60 [2018] ; 13693 >
+        au < releasing ; 2017 ; Anthropologica Volume 59 [2017] ; 12653 >
+        au < releasing ; 2018 ; Anthropologica Volume 60 [2018] ; 13693 >
 
     }
 
@@ -38,9 +38,9 @@
 
       attr[journal_id] = 699
 
-        au < ready ; 2016 ; Canadian Bulletin of Medical History Volume 33 [2016] ; 11424 >
-        au < ready ; 2017 ; Canadian Bulletin of Medical History Volume 34 [2017] ; 12568 >
-        au < ready ; 2018 ; Canadian Bulletin of Medical History Volume 35 [2018] ; 13524 >
+        au < releasing ; 2016 ; Canadian Bulletin of Medical History Volume 33 [2016] ; 11424 >
+        au < releasing ; 2017 ; Canadian Bulletin of Medical History Volume 34 [2017] ; 12568 >
+        au < releasing ; 2018 ; Canadian Bulletin of Medical History Volume 35 [2018] ; 13524 >
 
     }
 
@@ -56,10 +56,10 @@
       attr[journal_id] = 315
 
         #au < manifest ; DDDD ; Canadian Journal of Criminology and Criminal Justice Ahead of Print ; 12384 >
-        au < ready ; 2006 ; Canadian Journal of Criminology and Criminal Justice Volume 48 [2006] ; 3076 >
-        au < ready ; 2007 ; Canadian Journal of Criminology and Criminal Justice Volume 49 [2007] ; 3373 >
-        au < ready ; 2008 ; Canadian Journal of Criminology and Criminal Justice Volume 50 [2008] ; 3772 >
-        au < ready ; 2009 ; Canadian Journal of Criminology and Criminal Justice Volume 51 [2009] ; 4226 >
+        au < releasing ; 2006 ; Canadian Journal of Criminology and Criminal Justice Volume 48 [2006] ; 3076 >
+        au < releasing ; 2007 ; Canadian Journal of Criminology and Criminal Justice Volume 49 [2007] ; 3373 >
+        au < releasing ; 2008 ; Canadian Journal of Criminology and Criminal Justice Volume 50 [2008] ; 3772 >
+        au < releasing ; 2009 ; Canadian Journal of Criminology and Criminal Justice Volume 51 [2009] ; 4226 >
         au < released ; 2010 ; Canadian Journal of Criminology and Criminal Justice Volume 52 [2010] ; 5793 >
         au < released ; 2011 ; Canadian Journal of Criminology and Criminal Justice Volume 53 [2011] ; 6836 >
         au < released ; 2012 ; Canadian Journal of Criminology and Criminal Justice Volume 54 [2012] ; 8075 >
@@ -68,7 +68,7 @@
         au < released ; 2015 ; Canadian Journal of Criminology and Criminal Justice Volume 57 [2015] ; 10287 >
         au < released ; 2016 ; Canadian Journal of Criminology and Criminal Justice Volume 58 [2016] ; 11036 >
         au < released ; 2017 ; Canadian Journal of Criminology and Criminal Justice Volume 59 [2017] ; 12291 >
-        au < ready ; 2018 ; Canadian Journal of Criminology and Criminal Justice Volume 60 [2018] ; 13155 >
+        au < releasing ; 2018 ; Canadian Journal of Criminology and Criminal Justice Volume 60 [2018] ; 13155 >
 
     }
 
@@ -83,10 +83,10 @@
 
       attr[journal_id] = 727
 
-        au < ready ; 2015 ; Canadian Journal of Film Studies / Revue canadienne d'études cinématographiques Volume 24 [2015] ; 13064 >
-        au < ready ; 2016 ; Canadian Journal of Film Studies / Revue canadienne d'études cinématographiques Volume 25 [2016] ; 13065 >
-        au < ready ; 2017 ; Canadian Journal of Film Studies / Revue canadienne d'études cinématographiques Volume 26 [2017] ; 13367 >
-        au < ready ; 2018 ; Canadian Journal of Film Studies / Revue canadienne d'études cinématographiques Volume 27 [2018] ; 13696 >
+        au < releasing ; 2015 ; Canadian Journal of Film Studies / Revue canadienne d'études cinématographiques Volume 24 [2015] ; 13064 >
+        au < releasing ; 2016 ; Canadian Journal of Film Studies / Revue canadienne d'études cinématographiques Volume 25 [2016] ; 13065 >
+        au < releasing ; 2017 ; Canadian Journal of Film Studies / Revue canadienne d'études cinématographiques Volume 26 [2017] ; 13367 >
+        au < releasing ; 2018 ; Canadian Journal of Film Studies / Revue canadienne d'études cinématographiques Volume 27 [2018] ; 13696 >
 
     }
 
@@ -103,8 +103,8 @@
 
         au < released ; 2015 ; Canadian Journal of History Volume 50 [2015] ; 10557 >
         au < released ; 2016 ; Canadian Journal of History Volume 51 [2016] ; 11194 >
-        au < ready ; 2017 ; Canadian Journal of History Volume 52 [2017] ; 12527 >
-        au < ready ; 2018 ; Canadian Journal of History Volume 53 [2018] ; 13442 >
+        au < releasing ; 2017 ; Canadian Journal of History Volume 52 [2017] ; 12527 >
+        au < releasing ; 2018 ; Canadian Journal of History Volume 53 [2018] ; 13442 >
 
     }
 
@@ -126,8 +126,8 @@
         au < released ; 2014 ; Canadian Journal of Information and Library Science Volume 38 [2014] ; 10029 >
         au < released ; 2015 ; Canadian Journal of Information and Library Science Volume 39 [2015] ; 10710 >
         au < released ; 2016 ; Canadian Journal of Information and Library Science Volume 40 [2016] ; 11034 >
-        au < ready ; 2017 ; Canadian Journal of Information and Library Science Volume 41 [2017] ; 12793 >
-        au < ready ; 2018 ; Canadian Journal of Information and Library Science Volume 42 [2018] ; 13940 >
+        au < releasing ; 2017 ; Canadian Journal of Information and Library Science Volume 41 [2017] ; 12793 >
+        au < releasing ; 2018 ; Canadian Journal of Information and Library Science Volume 42 [2018] ; 13940 >
 
     }
 
@@ -142,11 +142,11 @@
 
       attr[journal_id] = 316
 
-        au < ready ; 2005 ; Canadian Journal of Women and the Law Volume 17 [2005] ; 3111 >
-        au < ready ; 2006 ; Canadian Journal of Women and the Law Volume 18 [2006] ; 3594 >
-        au < ready ; 2007 ; Canadian Journal of Women and the Law Volume 19 [2007] ; 3642 >
-        au < ready ; 2008 ; Canadian Journal of Women and the Law Volume 20 [2008] ; 3876 >
-        au < ready ; 2009 ; Canadian Journal of Women and the Law Volume 21 [2009] ; 5731 >
+        au < releasing ; 2005 ; Canadian Journal of Women and the Law Volume 17 [2005] ; 3111 >
+        au < releasing ; 2006 ; Canadian Journal of Women and the Law Volume 18 [2006] ; 3594 >
+        au < releasing ; 2007 ; Canadian Journal of Women and the Law Volume 19 [2007] ; 3642 >
+        au < releasing ; 2008 ; Canadian Journal of Women and the Law Volume 20 [2008] ; 3876 >
+        au < releasing ; 2009 ; Canadian Journal of Women and the Law Volume 21 [2009] ; 5731 >
         au < released ; 2010 ; Canadian Journal of Women and the Law Volume 22 [2010] ; 6576 >
         au < released ; 2011 ; Canadian Journal of Women and the Law Volume 23 [2011] ; 7295 >
         au < released ; 2012 ; Canadian Journal of Women and the Law Volume 24 [2012] ; 8240 >
@@ -154,8 +154,8 @@
         au < released ; 2014 ; Canadian Journal of Women and the Law Volume 26 [2014] ; 9920 >
         au < released ; 2015 ; Canadian Journal of Women and the Law Volume 27 [2015] ; 10550 >
         au < released ; 2016 ; Canadian Journal of Women and the Law Volume 28 [2016] ; 11152 >
-        au < ready ; 2017 ; Canadian Journal of Women and the Law Volume 29 [2017] ; 12561 >
-        au < ready ; 2018 ; Canadian Journal of Women and the Law Volume 30 [2018] ; 13378 >
+        au < releasing ; 2017 ; Canadian Journal of Women and the Law Volume 29 [2017] ; 12561 >
+        au < releasing ; 2018 ; Canadian Journal of Women and the Law Volume 30 [2018] ; 13378 >
 
     }
 
@@ -170,7 +170,7 @@
 
       attr[journal_id] = 438
 
-        au < ready ; 2009 ; Canadian Public Policy Volume 35 [2009] ; 4321 >
+        au < releasing ; 2009 ; Canadian Public Policy Volume 35 [2009] ; 4321 >
         au < released ; 2010 ; Canadian Public Policy Volume 36 [2010] ; 6175 >
         au < released ; 2011 ; Canadian Public Policy Volume 37 [2011] ; 6997 >
         au < released ; 2012 ; Canadian Public Policy Volume 38 [2012] ; 8155 >
@@ -179,7 +179,7 @@
         au < released ; 2015 ; Canadian Public Policy Volume 41 [2015] ; 10447 >
         au < released ; 2016 ; Canadian Public Policy Volume 42 [2016] ; 11092 >
         au < released ; 2017 ; Canadian Public Policy Volume 43 [2017] ; 12331 >
-        au < ready ; 2018 ; Canadian Public Policy Volume 44 [2018] ; 13346 >
+        au < releasing ; 2018 ; Canadian Public Policy Volume 44 [2018] ; 13346 >
 
     }
 
@@ -194,45 +194,45 @@
 
       attr[journal_id] = 269
 
-        au < ready ; 1970 ; Canadian Review of American Studies Volume 1 [1970] ; 13100 >
-        au < ready ; 1971 ; Canadian Review of American Studies Volume 2 [1971] ; 13099 >
-        au < ready ; 1972 ; Canadian Review of American Studies Volume 3 [1972] ; 13098 >
-        au < ready ; 1973 ; Canadian Review of American Studies Volume 4 [1973] ; 13097 >
-        au < ready ; 1974 ; Canadian Review of American Studies Volume 5 [1974] ; 13096 >
-        au < ready ; 1975 ; Canadian Review of American Studies Volume 6 [1975] ; 13095 >
-        au < ready ; 1976 ; Canadian Review of American Studies Volume 7 [1976] ; 13094 >
-        au < ready ; 1977 ; Canadian Review of American Studies Volume 8 [1977] ; 13093 >
-        au < ready ; 1978 ; Canadian Review of American Studies Volume 9 [1978] ; 13092 >
-        au < ready ; 1979 ; Canadian Review of American Studies Volume 10 [1979] ; 13091 >
-        au < ready ; 1980 ; Canadian Review of American Studies Volume 11 [1980] ; 13090 >
-        au < ready ; 1981 ; Canadian Review of American Studies Volume 12 [1981] ; 13089 >
-        au < ready ; 1982 ; Canadian Review of American Studies Volume 13 [1982] ; 13088 >
-        au < ready ; 1983 ; Canadian Review of American Studies Volume 14 [1983] ; 13087 >
-        au < ready ; 1984 ; Canadian Review of American Studies Volume 15 [1984] ; 13086 >
-        au < ready ; 1985 ; Canadian Review of American Studies Volume 16 [1985] ; 13085 >
-        au < ready ; 1986 ; Canadian Review of American Studies Volume 17 [1986] ; 13084 >
-        au < ready ; 1987 ; Canadian Review of American Studies Volume 18 [1987] ; 13083 >
-        au < ready ; 1988 ; Canadian Review of American Studies Volume 19 [1988] ; 13082 >
-        au < ready ; 1989 ; Canadian Review of American Studies Volume 20 [1989] ; 13080 >
-        au < ready ; 1990 ; Canadian Review of American Studies Volume 21 [1990] ; 13079 >
-        au < ready ; 1991-1992 ; Canadian Review of American Studies Volume 22 [1991-1992] ; 13078 >
-        au < ready ; 1992-1993 ; Canadian Review of American Studies Volume 23 [1992-1993] ; 13077 >
-        au < ready ; 1994 ; Canadian Review of American Studies Volume 24 [1994] ; 13076 >
-        au < ready ; 1995 ; Canadian Review of American Studies Volume 25 [1995] ; 13075 >
-        au < ready ; 1996 ; Canadian Review of American Studies Volume 26 [1996] ; 13074 >
-        au < ready ; 1997 ; Canadian Review of American Studies Volume 27 [1997] ; 13073 >
-        au < ready ; 1998 ; Canadian Review of American Studies Volume 28 [1998] ; 13072 >
-        au < ready ; 1999 ; Canadian Review of American Studies Volume 29 [1999] ; 13071 >
-        au < ready ; 2000 ; Canadian Review of American Studies Volume 30 [2000] ; 13068 >
-        au < ready ; 2001 ; Canadian Review of American Studies Volume 31 [2001] ; 13067 >
-        au < ready ; 2002 ; Canadian Review of American Studies Volume 32 [2002] ; 13066 >
-        au < ready ; 2003 ; Canadian Review of American Studies Volume 33 [2003] ; 13050 >
-        au < ready ; 2004 ; Canadian Review of American Studies Volume 34 [2004] ; 2521 >
-        au < ready ; 2005 ; Canadian Review of American Studies Volume 35 [2005] ; 2949 >
-        au < ready ; 2006 ; Canadian Review of American Studies Volume 36 [2006] ; 3074 >
-        au < ready ; 2007 ; Canadian Review of American Studies Volume 37 [2007] ; 3402 >
-        au < ready ; 2008 ; Canadian Review of American Studies Volume 38 [2008] ; 3905 >
-        au < ready ; 2009 ; Canadian Review of American Studies Volume 39 [2009] ; 4371 >
+        au < releasing ; 1970 ; Canadian Review of American Studies Volume 1 [1970] ; 13100 >
+        au < releasing ; 1971 ; Canadian Review of American Studies Volume 2 [1971] ; 13099 >
+        au < releasing ; 1972 ; Canadian Review of American Studies Volume 3 [1972] ; 13098 >
+        au < releasing ; 1973 ; Canadian Review of American Studies Volume 4 [1973] ; 13097 >
+        au < releasing ; 1974 ; Canadian Review of American Studies Volume 5 [1974] ; 13096 >
+        au < releasing ; 1975 ; Canadian Review of American Studies Volume 6 [1975] ; 13095 >
+        au < releasing ; 1976 ; Canadian Review of American Studies Volume 7 [1976] ; 13094 >
+        au < releasing ; 1977 ; Canadian Review of American Studies Volume 8 [1977] ; 13093 >
+        au < releasing ; 1978 ; Canadian Review of American Studies Volume 9 [1978] ; 13092 >
+        au < releasing ; 1979 ; Canadian Review of American Studies Volume 10 [1979] ; 13091 >
+        au < releasing ; 1980 ; Canadian Review of American Studies Volume 11 [1980] ; 13090 >
+        au < releasing ; 1981 ; Canadian Review of American Studies Volume 12 [1981] ; 13089 >
+        au < releasing ; 1982 ; Canadian Review of American Studies Volume 13 [1982] ; 13088 >
+        au < releasing ; 1983 ; Canadian Review of American Studies Volume 14 [1983] ; 13087 >
+        au < releasing ; 1984 ; Canadian Review of American Studies Volume 15 [1984] ; 13086 >
+        au < releasing ; 1985 ; Canadian Review of American Studies Volume 16 [1985] ; 13085 >
+        au < releasing ; 1986 ; Canadian Review of American Studies Volume 17 [1986] ; 13084 >
+        au < releasing ; 1987 ; Canadian Review of American Studies Volume 18 [1987] ; 13083 >
+        au < releasing ; 1988 ; Canadian Review of American Studies Volume 19 [1988] ; 13082 >
+        au < releasing ; 1989 ; Canadian Review of American Studies Volume 20 [1989] ; 13080 >
+        au < releasing ; 1990 ; Canadian Review of American Studies Volume 21 [1990] ; 13079 >
+        au < releasing ; 1991-1992 ; Canadian Review of American Studies Volume 22 [1991-1992] ; 13078 >
+        au < releasing ; 1992-1993 ; Canadian Review of American Studies Volume 23 [1992-1993] ; 13077 >
+        au < releasing ; 1994 ; Canadian Review of American Studies Volume 24 [1994] ; 13076 >
+        au < releasing ; 1995 ; Canadian Review of American Studies Volume 25 [1995] ; 13075 >
+        au < releasing ; 1996 ; Canadian Review of American Studies Volume 26 [1996] ; 13074 >
+        au < releasing ; 1997 ; Canadian Review of American Studies Volume 27 [1997] ; 13073 >
+        au < releasing ; 1998 ; Canadian Review of American Studies Volume 28 [1998] ; 13072 >
+        au < releasing ; 1999 ; Canadian Review of American Studies Volume 29 [1999] ; 13071 >
+        au < releasing ; 2000 ; Canadian Review of American Studies Volume 30 [2000] ; 13068 >
+        au < releasing ; 2001 ; Canadian Review of American Studies Volume 31 [2001] ; 13067 >
+        au < releasing ; 2002 ; Canadian Review of American Studies Volume 32 [2002] ; 13066 >
+        au < releasing ; 2003 ; Canadian Review of American Studies Volume 33 [2003] ; 13050 >
+        au < releasing ; 2004 ; Canadian Review of American Studies Volume 34 [2004] ; 2521 >
+        au < releasing ; 2005 ; Canadian Review of American Studies Volume 35 [2005] ; 2949 >
+        au < releasing ; 2006 ; Canadian Review of American Studies Volume 36 [2006] ; 3074 >
+        au < releasing ; 2007 ; Canadian Review of American Studies Volume 37 [2007] ; 3402 >
+        au < releasing ; 2008 ; Canadian Review of American Studies Volume 38 [2008] ; 3905 >
+        au < releasing ; 2009 ; Canadian Review of American Studies Volume 39 [2009] ; 4371 >
         au < released ; 2010 ; Canadian Review of American Studies Volume 40 [2010] ; 5939 >
         au < released ; 2011 ; Canadian Review of American Studies Volume 41 [2011] ; 7022 >
         au < released ; 2012 ; Canadian Review of American Studies Volume 42 [2012] ; 8202 >
@@ -241,7 +241,7 @@
         au < released ; 2015 ; Canadian Review of American Studies Volume 45 [2015] ; 10537 >
         au < released ; 2016 ; Canadian Review of American Studies Volume 46 [2016] ; 11161 >
         au < released ; 2017 ; Canadian Review of American Studies Volume 47 [2017] ; 12502 >
-        au < ready ; 2018 ; Canadian Review of American Studies Volume 48 [2018] ; 13192 >
+        au < releasing ; 2018 ; Canadian Review of American Studies Volume 48 [2018] ; 13192 >
 
     }
 
@@ -285,14 +285,14 @@
         au < released ; 2016 ; Canadian Theatre Review Volume 167 [Summer 2016] ; 11406 >
         au < released ; 2016 ; Canadian Theatre Review Volume 168 [Fall 2016] ; 12245 >
         au < released ; 2017 ; Canadian Theatre Review Volume 169 [Winter 2017] ; 12395 >
-        au < ready ; 2017 ; Canadian Theatre Review Volume 170 [Spring 2017] ; 12588 >
-        au < ready ; 2017 ; Canadian Theatre Review Volume 171 [Summer 2017] ; 12825 >
-        au < ready ; 2017 ; Canadian Theatre Review Volume 172 [Fall 2017] ; 13016 >
-        au < ready ; 2018 ; Canadian Theatre Review Volume 173 [Winter 2018] ; 13183 >
-        au < ready ; 2018 ; Canadian Theatre Review Volume 174 [Spring 2018] ; 13492 >
-        au < ready ; 2018 ; Canadian Theatre Review Volume 175 [Summer 2018] ; 13594 >
-        au < ready ; 2018 ; Canadian Theatre Review Volume 176 [Fall 2018] ; 13757 >
-        au < ready ; 2019 ; Canadian Theatre Review Volume 177 [Winter 2019] ; 13922 >
+        au < releasing ; 2017 ; Canadian Theatre Review Volume 170 [Spring 2017] ; 12588 >
+        au < releasing ; 2017 ; Canadian Theatre Review Volume 171 [Summer 2017] ; 12825 >
+        au < releasing ; 2017 ; Canadian Theatre Review Volume 172 [Fall 2017] ; 13016 >
+        au < releasing ; 2018 ; Canadian Theatre Review Volume 173 [Winter 2018] ; 13183 >
+        au < releasing ; 2018 ; Canadian Theatre Review Volume 174 [Spring 2018] ; 13492 >
+        au < releasing ; 2018 ; Canadian Theatre Review Volume 175 [Summer 2018] ; 13594 >
+        au < releasing ; 2018 ; Canadian Theatre Review Volume 176 [Fall 2018] ; 13757 >
+        au < releasing ; 2019 ; Canadian Theatre Review Volume 177 [Winter 2019] ; 13922 >
 
     }
 
@@ -310,7 +310,7 @@
         au < released ; 2015 ; Cartographica: The International Journal for Geographic Information and Geovisualization Volume 50 [2015] ; 10495 >
         au < released ; 2016 ; Cartographica: The International Journal for Geographic Information and Geovisualization Volume 51 [2016] ; 11056 >
         au < released ; 2017 ; Cartographica: The International Journal for Geographic Information and Geovisualization Volume 52 [2017] ; 12496 >
-        au < ready ; 2018 ; Cartographica: The International Journal for Geographic Information and Geovisualization Volume 53 [2018] ; 13374 >
+        au < releasing ; 2018 ; Cartographica: The International Journal for Geographic Information and Geovisualization Volume 53 [2018] ; 13374 >
 
     }
 
@@ -325,26 +325,26 @@
 
       attr[journal_id] = 321
 
-        au < ready ; 1991 ; Diaspora: A Journal of Transnational Studies Volume 1 [1991] ; 7452 >
-        au < ready ; 1992-1993 ; Diaspora: A Journal of Transnational Studies Volume 2 [1992-1993] ; 7453 >
-        au < ready ; 1994 ; Diaspora: A Journal of Transnational Studies Volume 3 [1994] ; 7481 >
-        au < ready ; 1995 ; Diaspora: A Journal of Transnational Studies Volume 4 [1995] ; 7482 >
-        au < ready ; 1996 ; Diaspora: A Journal of Transnational Studies Volume 5 [1996] ; 6437 >
-        au < ready ; 1997 ; Diaspora: A Journal of Transnational Studies Volume 6 [1997] ; 6438 >
-        au < ready ; 1998 ; Diaspora: A Journal of Transnational Studies Volume 7 [1998] ; 7489 >
-        au < ready ; 1999 ; Diaspora: A Journal of Transnational Studies Volume 8 [1999] ; 7490 >
-        au < ready ; 2000 ; Diaspora: A Journal of Transnational Studies Volume 9 [2000] ; 7491 >
-        au < ready ; 2001 ; Diaspora: A Journal of Transnational Studies Volume 10 [2001] ; 6398 >
-        au < ready ; 2002 ; Diaspora: A Journal of Transnational Studies Volume 11 [2002] ; 6399 >
-        au < ready ; 2003 ; Diaspora: A Journal of Transnational Studies Volume 12 [2003] ; 6400 >
-        au < ready ; 2004 ; Diaspora: A Journal of Transnational Studies Volume 13 [2004] ; 3157 >
-        au < ready ; 2005 ; Diaspora: A Journal of Transnational Studies Volume 14 [2005] ; 3777 >
-        au < ready ; 2006 ; Diaspora: A Journal of Transnational Studies Volume 15 [2006] ; 6213 >
-        au < ready ; 2007 ; Diaspora: A Journal of Transnational Studies Volume 16 [2007] ; 8309 >
-        au < ready ; 2008 ; Diaspora: A Journal of Transnational Studies Volume 17 [2008] ; 9290 >
-        au < ready ; 2009 ; Diaspora: A Journal of Transnational Studies Volume 18 [2009] ; 10417 >
+        au < releasing ; 1991 ; Diaspora: A Journal of Transnational Studies Volume 1 [1991] ; 7452 >
+        au < releasing ; 1992-1993 ; Diaspora: A Journal of Transnational Studies Volume 2 [1992-1993] ; 7453 >
+        au < releasing ; 1994 ; Diaspora: A Journal of Transnational Studies Volume 3 [1994] ; 7481 >
+        au < releasing ; 1995 ; Diaspora: A Journal of Transnational Studies Volume 4 [1995] ; 7482 >
+        au < releasing ; 1996 ; Diaspora: A Journal of Transnational Studies Volume 5 [1996] ; 6437 >
+        au < releasing ; 1997 ; Diaspora: A Journal of Transnational Studies Volume 6 [1997] ; 6438 >
+        au < releasing ; 1998 ; Diaspora: A Journal of Transnational Studies Volume 7 [1998] ; 7489 >
+        au < releasing ; 1999 ; Diaspora: A Journal of Transnational Studies Volume 8 [1999] ; 7490 >
+        au < releasing ; 2000 ; Diaspora: A Journal of Transnational Studies Volume 9 [2000] ; 7491 >
+        au < releasing ; 2001 ; Diaspora: A Journal of Transnational Studies Volume 10 [2001] ; 6398 >
+        au < releasing ; 2002 ; Diaspora: A Journal of Transnational Studies Volume 11 [2002] ; 6399 >
+        au < releasing ; 2003 ; Diaspora: A Journal of Transnational Studies Volume 12 [2003] ; 6400 >
+        au < releasing ; 2004 ; Diaspora: A Journal of Transnational Studies Volume 13 [2004] ; 3157 >
+        au < releasing ; 2005 ; Diaspora: A Journal of Transnational Studies Volume 14 [2005] ; 3777 >
+        au < releasing ; 2006 ; Diaspora: A Journal of Transnational Studies Volume 15 [2006] ; 6213 >
+        au < releasing ; 2007 ; Diaspora: A Journal of Transnational Studies Volume 16 [2007] ; 8309 >
+        au < releasing ; 2008 ; Diaspora: A Journal of Transnational Studies Volume 17 [2008] ; 9290 >
+        au < releasing ; 2009 ; Diaspora: A Journal of Transnational Studies Volume 18 [2009] ; 10417 >
         au < released ; 2010 ; Diaspora: A Journal of Transnational Studies Volume 19 [2010] ; 12208 >
-        au < ready ; 2011 ; Diaspora: A Journal of Transnational Studies Volume 20 [2011] ; 13516 >
+        au < releasing ; 2011 ; Diaspora: A Journal of Transnational Studies Volume 20 [2011] ; 13516 >
 
     }
 
@@ -359,28 +359,28 @@
 
       attr[journal_id] = 324
 
-        au < ready ; 1988-1987 ; Eighteenth-Century Fiction Volume 1 [1988-1987] ; 6829 >
-        au < ready ; 1989-1990 ; Eighteenth-Century Fiction Volume 2 [1989-1990] ; 6828 >
-        au < ready ; 1990-1991 ; Eighteenth-Century Fiction Volume 3 [1990-1991] ; 6827 >
-        au < ready ; 1991-1992 ; Eighteenth-Century Fiction Volume 4 [1991-1992] ; 6826 >
-        au < ready ; 1992-1993 ; Eighteenth-Century Fiction Volume 5 [1992-1993] ; 6825 >
-        au < ready ; 1993-1994 ; Eighteenth-Century Fiction Volume 6 [1993-1994] ; 6722 >
-        au < ready ; 1994-1995 ; Eighteenth-Century Fiction Volume 7 [1994-1995] ; 6785 >
-        au < ready ; 1995-1996 ; Eighteenth-Century Fiction Volume 8 [1995-1996] ; 6786 >
-        au < ready ; 1996-1997 ; Eighteenth-Century Fiction Volume 9 [1996-1997] ; 6787 >
-        au < ready ; 1997-1998 ; Eighteenth-Century Fiction Volume 10 [1997-1998] ; 6788 >
-        au < ready ; 1998-1999 ; Eighteenth-Century Fiction Volume 11 [1998-1999] ; 6789 >
-        au < ready ; 1999-2000 ; Eighteenth-Century Fiction Volume 12 [1999-2000] ; 6790 >
-        au < ready ; 2000-2001 ; Eighteenth-Century Fiction Volume 13 [2000-2001] ; 6791 >
-        au < ready ; 2001-2002 ; Eighteenth-Century Fiction Volume 14 [2001-2002] ; 6792 >
-        au < ready ; 2002-2003 ; Eighteenth-Century Fiction Volume 15 [2002-2003] ; 6793 >
-        au < ready ; 2003-2004 ; Eighteenth-Century Fiction Volume 16 [2003-2004] ; 6794 >
-        au < ready ; 2004-2005 ; Eighteenth-Century Fiction Volume 17 [2004-2005] ; 6795 >
-        au < ready ; 2005-2006 ; Eighteenth-Century Fiction Volume 18 [2005-2006] ; 3109 >
-        au < ready ; 2006-2007 ; Eighteenth-Century Fiction Volume 19 [2006-2007] ; 3172 >
-        au < ready ; 2007 ; Eighteenth-Century Fiction Volume 20 [2007] ; 3593 >
-        au < ready ; 2008 ; Eighteenth-Century Fiction Volume 21 [2008] ; 3955 >
-        au < ready ; 2009 ; Eighteenth-Century Fiction Volume 22 [2009] ; 5654 >
+        au < releasing ; 1988-1987 ; Eighteenth-Century Fiction Volume 1 [1988-1987] ; 6829 >
+        au < releasing ; 1989-1990 ; Eighteenth-Century Fiction Volume 2 [1989-1990] ; 6828 >
+        au < releasing ; 1990-1991 ; Eighteenth-Century Fiction Volume 3 [1990-1991] ; 6827 >
+        au < releasing ; 1991-1992 ; Eighteenth-Century Fiction Volume 4 [1991-1992] ; 6826 >
+        au < releasing ; 1992-1993 ; Eighteenth-Century Fiction Volume 5 [1992-1993] ; 6825 >
+        au < releasing ; 1993-1994 ; Eighteenth-Century Fiction Volume 6 [1993-1994] ; 6722 >
+        au < releasing ; 1994-1995 ; Eighteenth-Century Fiction Volume 7 [1994-1995] ; 6785 >
+        au < releasing ; 1995-1996 ; Eighteenth-Century Fiction Volume 8 [1995-1996] ; 6786 >
+        au < releasing ; 1996-1997 ; Eighteenth-Century Fiction Volume 9 [1996-1997] ; 6787 >
+        au < releasing ; 1997-1998 ; Eighteenth-Century Fiction Volume 10 [1997-1998] ; 6788 >
+        au < releasing ; 1998-1999 ; Eighteenth-Century Fiction Volume 11 [1998-1999] ; 6789 >
+        au < releasing ; 1999-2000 ; Eighteenth-Century Fiction Volume 12 [1999-2000] ; 6790 >
+        au < releasing ; 2000-2001 ; Eighteenth-Century Fiction Volume 13 [2000-2001] ; 6791 >
+        au < releasing ; 2001-2002 ; Eighteenth-Century Fiction Volume 14 [2001-2002] ; 6792 >
+        au < releasing ; 2002-2003 ; Eighteenth-Century Fiction Volume 15 [2002-2003] ; 6793 >
+        au < releasing ; 2003-2004 ; Eighteenth-Century Fiction Volume 16 [2003-2004] ; 6794 >
+        au < releasing ; 2004-2005 ; Eighteenth-Century Fiction Volume 17 [2004-2005] ; 6795 >
+        au < releasing ; 2005-2006 ; Eighteenth-Century Fiction Volume 18 [2005-2006] ; 3109 >
+        au < releasing ; 2006-2007 ; Eighteenth-Century Fiction Volume 19 [2006-2007] ; 3172 >
+        au < releasing ; 2007 ; Eighteenth-Century Fiction Volume 20 [2007] ; 3593 >
+        au < releasing ; 2008 ; Eighteenth-Century Fiction Volume 21 [2008] ; 3955 >
+        au < releasing ; 2009 ; Eighteenth-Century Fiction Volume 22 [2009] ; 5654 >
         au < released ; 2010 ; Eighteenth-Century Fiction Volume 23 [2010] ; 6568 >
         au < released ; 2011 ; Eighteenth-Century Fiction Volume 24 [2011] ; 7664 >
         au < released ; 2012 ; Eighteenth-Century Fiction Volume 25 [2012] ; 8463 >
@@ -388,8 +388,8 @@
         au < released ; 2014 ; Eighteenth-Century Fiction Volume 27 [2014] ; 10179 >
         au < released ; 2015-2016 ; Eighteenth-Century Fiction Volume 28 [2015-2016] ; 10794 >
         au < released ; 2016 ; Eighteenth-Century Fiction Volume 29 [2016] ; 12103 >
-        au < ready ; 2017 ; Eighteenth-Century Fiction Volume 30 [2017] ; 12896 >
-        au < ready ; 2018 ; Eighteenth-Century Fiction Volume 31 [2018] ; 13685 >
+        au < releasing ; 2017 ; Eighteenth-Century Fiction Volume 30 [2017] ; 12896 >
+        au < releasing ; 2018 ; Eighteenth-Century Fiction Volume 31 [2018] ; 13685 >
         au < doesNotExist ; 2019 ; Eighteenth-Century Fiction Volume 31 [2019] ; 13881 >
 
     }
@@ -405,8 +405,8 @@
 
       attr[journal_id] = 700
 
-        au < ready ; 2014 ; Florilegium Volume 31 [2014] ; 12104 >
-        au < ready ; 2015 ; Florilegium Volume 32 [2015] ; 12756 >
+        au < releasing ; 2014 ; Florilegium Volume 31 [2014] ; 12104 >
+        au < releasing ; 2015 ; Florilegium Volume 32 [2015] ; 12756 >
 
     }
 
@@ -421,8 +421,8 @@
 
       attr[journal_id] = 253
 
-        au < ready ; 2004 ; Francophonies d'Amérique Printemps 2004 Volume 17 ; 2528 >
-        au < ready ; 2004 ; Francophonies d'Amérique Automne 2004 Volume 18 ; 2691 >
+        au < releasing ; 2004 ; Francophonies d'Amérique Printemps 2004 Volume 17 ; 2528 >
+        au < releasing ; 2004 ; Francophonies d'Amérique Automne 2004 Volume 18 ; 2691 >
 
     }
 
@@ -440,8 +440,8 @@
         au < released ; 2014 ; Genocide Studies International Volume 8 [2014] ; 9791 >
         au < released ; 2015 ; Genocide Studies International Volume 9 [2015] ; 10446 >
         au < released ; 2016 ; Genocide Studies International Volume 10 [2016] ; 11071 >
-        au < ready ; 2017 ; Genocide Studies International Volume 11 [2017] ; 13107 >
-        au < ready ; 2018 ; Genocide Studies International Volume 12 [2018] ; 13585 >
+        au < releasing ; 2017 ; Genocide Studies International Volume 11 [2017] ; 13107 >
+        au < releasing ; 2018 ; Genocide Studies International Volume 12 [2018] ; 13585 >
 
     }
     
@@ -456,10 +456,10 @@
 
       attr[journal_id] = 439
 
-        au < ready ; 2006 ; Genocide Studies and Prevention Volume 1 [2006] ; 6392 >
-        au < ready ; 2007 ; Genocide Studies and Prevention Volume 2 [2007] ; 6391 >
-        au < ready ; 2008 ; Genocide Studies and Prevention Volume 3 [2008] ; 6390 >
-        au < ready ; 2009 ; Genocide Studies and Prevention Volume 4 [2009] ; 4347 >
+        au < releasing ; 2006 ; Genocide Studies and Prevention Volume 1 [2006] ; 6392 >
+        au < releasing ; 2007 ; Genocide Studies and Prevention Volume 2 [2007] ; 6391 >
+        au < releasing ; 2008 ; Genocide Studies and Prevention Volume 3 [2008] ; 6390 >
+        au < releasing ; 2009 ; Genocide Studies and Prevention Volume 4 [2009] ; 4347 >
         au < released ; 2010 ; Genocide Studies and Prevention Volume 5 [2010] ; 6113 >
         au < released ; 2011 ; Genocide Studies and Prevention Volume 6 [2011] ; 7062 >
         au < released ; 2012 ; Genocide Studies and Prevention Volume 7 [2012] ; 8231 >
@@ -477,8 +477,8 @@
       attr[journal_id] = 440
       #published by Les publications Histoire sociale / Social History Inc., publisher_id:273
 
-        au < ready ; 2008 ; Histoire sociale / Social History Volume 41 [2008] ; 4010 >
-        au < ready ; 2009 ; Histoire sociale / Social History Volume 42 [2009] ; 5647 >
+        au < releasing ; 2008 ; Histoire sociale / Social History Volume 41 [2008] ; 4010 >
+        au < releasing ; 2009 ; Histoire sociale / Social History Volume 42 [2009] ; 5647 >
         au < released ; 2010 ; Histoire sociale / Social History Volume 43 [2010] ; 6560 >
         au < released ; 2011 ; Histoire sociale / Social History Volume 44 [2011] ; 7548 >
         au < released ; 2012 ; Histoire sociale / Social History Volume 45 [2012] ; 8420 >
@@ -486,8 +486,8 @@
         au < released ; 2014 ; Histoire sociale / Social History Volume 47 [2014] ; 10024 >
         au < released ; 2015 ; Histoire sociale / Social History Volume 48 [2015] ; 10664 >
         au < released ; 2016 ; Histoire sociale / Social History Volume 49 [2016] ; 11223 >
-        au < ready ; 2017 ; Histoire sociale / Social History Volume 50 [2017] ; 12734 >
-        au < ready ; 2018 ; Histoire sociale / Social History Volume 51 [2018] ; 13596 >
+        au < releasing ; 2017 ; Histoire sociale / Social History Volume 50 [2017] ; 12734 >
+        au < releasing ; 2018 ; Histoire sociale / Social History Volume 51 [2018] ; 13596 >
 
     }
 
@@ -500,8 +500,8 @@
 
       attr[journal_id] = 431
 
-        au < ready ; 2008 ; IJFAB: International Journal of Feminist Approaches to Bioethics Volume 1 [2008] ; 4252 >
-        au < ready ; 2009 ; IJFAB: International Journal of Feminist Approaches to Bioethics Volume 2 [2009] ; 4247 >
+        au < releasing ; 2008 ; IJFAB: International Journal of Feminist Approaches to Bioethics Volume 1 [2008] ; 4252 >
+        au < releasing ; 2009 ; IJFAB: International Journal of Feminist Approaches to Bioethics Volume 2 [2009] ; 4247 >
         au < released ; 2010 ; IJFAB: International Journal of Feminist Approaches to Bioethics Volume 3 [2010] ; 5931 >
         au < released ; 2011 ; IJFAB: International Journal of Feminist Approaches to Bioethics Volume 4 [2011] ; 7071 >
         au < released ; 2012 ; IJFAB: International Journal of Feminist Approaches to Bioethics Volume 5 [2012] ; 8136 >
@@ -509,8 +509,8 @@
         au < released ; 2014 ; IJFAB: International Journal of Feminist Approaches to Bioethics Volume 7 [2014] ; 9852 >
         au < released ; 2015 ; IJFAB: International Journal of Feminist Approaches to Bioethics Volume 8 [2015] ; 10558 >
         au < released ; 2016 ; IJFAB: International Journal of Feminist Approaches to Bioethics Volume 9 [2016] ; 11063 >
-        au < ready ; 2017 ; IJFAB: International Journal of Feminist Approaches to Bioethics Volume 10 [2017] ; 12525 >
-        au < ready ; 2018 ; IJFAB: International Journal of Feminist Approaches to Bioethics Volume 11 [2018] ; 13284 >
+        au < releasing ; 2017 ; IJFAB: International Journal of Feminist Approaches to Bioethics Volume 10 [2017] ; 12525 >
+        au < releasing ; 2018 ; IJFAB: International Journal of Feminist Approaches to Bioethics Volume 11 [2018] ; 13284 >
         au < exists ; 2019 ; IJFAB: International Journal of Feminist Approaches to Bioethics Volume 12 [2019] ; 13987 >
 
     }
@@ -533,9 +533,9 @@
         au < released ; 2015 ; International Journal of Canadian Studies Volume 51 [2015] ; 10767 >
         au < released ; 2015 ; International Journal of Canadian Studies Volume 52 [2015] ; 11047 >
         au < released ; 2016 ; International Journal of Canadian Studies Volume 53 [2016] ; 12201 >
-        au < ready ; 2016 ; International Journal of Canadian Studies Volume 54 [2016] ; 13005 >
-        au < ready ; 2017 ; International Journal of Canadian Studies Volume 55 [2017] ; 13462 >
-        au < ready ; 2017 ; International Journal of Canadian Studies Volume 56 [2017] ; 13732 >
+        au < releasing ; 2016 ; International Journal of Canadian Studies Volume 54 [2016] ; 13005 >
+        au < releasing ; 2017 ; International Journal of Canadian Studies Volume 55 [2017] ; 13462 >
+        au < releasing ; 2017 ; International Journal of Canadian Studies Volume 56 [2017] ; 13732 >
 
     }
 
@@ -551,44 +551,44 @@
     attr[journal_id] = 330
     #doNotProcess = processed in old ProjectMuse
 
-      au < ready ; 1966 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 1 [1966] ; 12990 >
-      au < ready ; 1967 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 2 [1967] ; 12989 >
-      au < ready ; 1968 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 3 [1968] ; 12988 >
-      au < ready ; 1969 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 4 [1969] ; 12987 >
-      au < ready ; 1970 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 5 [1970] ; 12974 >
-      au < ready ; 1971 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 6 [1971] ; 12973 >
-      au < ready ; 1972 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 7 [1972] ; 12972 >
-      au < ready ; 1973 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 8 [1973] ; 12971 >
-      au < ready ; 1974 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 9 [1974] ; 12970 >
-      au < ready ; 1975 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 10 [1975] ; 12969 >
-      au < ready ; 1976 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 11 [1976] ; 12968 >
-      au < ready ; 1977 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 12 [1977] ; 12967 >
-      au < ready ; 1978-1979 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 13 [1978-1979] ; 12966 >
-      au < ready ; 1979-1980 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 14 [1979-1980] ; 12965 >
-      au < ready ; 1980-1981 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 15 [1980-1981] ; 12964 >
-      au < ready ; 1981-1982 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 16 [1981-1982] ; 12963 >
-      au < ready ; 1982-1983 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 17 [1982-1983] ; 12962 >
-      au < ready ; 1983-1984 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 18 [1983-1984] ; 12961 >
-      au < ready ; 1984-1985 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 19 [1984-1985] ; 12960 >
-      au < ready ; 1985-1986 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 20 [1985-1986] ; 12958 >
-      au < ready ; 1986-1987 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 21 [1986-1987] ; 12957 >
-      au < ready ; 1987-1988 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 22 [1987-1988] ; 12956 >
-      au < ready ; 1988-1989 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 23 [1988-1989] ; 12955 >
-      au < ready ; 1989-1990 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 24 [1989-1990] ; 12954 >
-      au < ready ; 1990-1991 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 25 [1990-1991] ; 12953 >
-      au < ready ; 1991-1992 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 26 [1991-1992] ; 12952 >
-      au < ready ; 1992-1993 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 27 [1992-1993] ; 12951 >
-      au < ready ; 1993-1994 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 28 [1993-1994] ; 12950 >
-      au < ready ; 1994-1995 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 29 [1994-1995] ; 12949 >
-      au < ready ; 1995-1996 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 30 [1995-1996] ; 12948 >
-      au < ready ; 1996-1997 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 31 [1996-1997] ; 12947 >
-      au < ready ; 1997-1998 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 32 [1997-1998] ; 12946 >
-      au < ready ; 1998-1999 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 33 [1998-1999] ; 12945 >
-      au < ready ; 1999-2000 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 34 [1999-2000] ; 12944 >
-      au < ready ; 2001 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 35 [2001] ; 12909 >
-      au < ready ; 2002 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 36 [2002] ; 12908 >
-      au < ready ; 2003 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 37 [2003] ; 12907 >
-      au < ready ; 2004 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 38 [2004] ; 12906 >
+      au < releasing ; 1966 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 1 [1966] ; 12990 >
+      au < releasing ; 1967 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 2 [1967] ; 12989 >
+      au < releasing ; 1968 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 3 [1968] ; 12988 >
+      au < releasing ; 1969 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 4 [1969] ; 12987 >
+      au < releasing ; 1970 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 5 [1970] ; 12974 >
+      au < releasing ; 1971 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 6 [1971] ; 12973 >
+      au < releasing ; 1972 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 7 [1972] ; 12972 >
+      au < releasing ; 1973 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 8 [1973] ; 12971 >
+      au < releasing ; 1974 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 9 [1974] ; 12970 >
+      au < releasing ; 1975 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 10 [1975] ; 12969 >
+      au < releasing ; 1976 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 11 [1976] ; 12968 >
+      au < releasing ; 1977 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 12 [1977] ; 12967 >
+      au < releasing ; 1978-1979 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 13 [1978-1979] ; 12966 >
+      au < releasing ; 1979-1980 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 14 [1979-1980] ; 12965 >
+      au < releasing ; 1980-1981 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 15 [1980-1981] ; 12964 >
+      au < releasing ; 1981-1982 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 16 [1981-1982] ; 12963 >
+      au < releasing ; 1982-1983 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 17 [1982-1983] ; 12962 >
+      au < releasing ; 1983-1984 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 18 [1983-1984] ; 12961 >
+      au < releasing ; 1984-1985 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 19 [1984-1985] ; 12960 >
+      au < releasing ; 1985-1986 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 20 [1985-1986] ; 12958 >
+      au < releasing ; 1986-1987 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 21 [1986-1987] ; 12957 >
+      au < releasing ; 1987-1988 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 22 [1987-1988] ; 12956 >
+      au < releasing ; 1988-1989 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 23 [1988-1989] ; 12955 >
+      au < releasing ; 1989-1990 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 24 [1989-1990] ; 12954 >
+      au < releasing ; 1990-1991 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 25 [1990-1991] ; 12953 >
+      au < releasing ; 1991-1992 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 26 [1991-1992] ; 12952 >
+      au < releasing ; 1992-1993 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 27 [1992-1993] ; 12951 >
+      au < releasing ; 1993-1994 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 28 [1993-1994] ; 12950 >
+      au < releasing ; 1994-1995 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 29 [1994-1995] ; 12949 >
+      au < releasing ; 1995-1996 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 30 [1995-1996] ; 12948 >
+      au < releasing ; 1996-1997 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 31 [1996-1997] ; 12947 >
+      au < releasing ; 1997-1998 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 32 [1997-1998] ; 12946 >
+      au < releasing ; 1998-1999 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 33 [1998-1999] ; 12945 >
+      au < releasing ; 1999-2000 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 34 [1999-2000] ; 12944 >
+      au < releasing ; 2001 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 35 [2001] ; 12909 >
+      au < releasing ; 2002 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 36 [2002] ; 12908 >
+      au < releasing ; 2003 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 37 [2003] ; 12907 >
+      au < releasing ; 2004 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 38 [2004] ; 12906 >
       au < doNotProcess ; 2005 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 39 [2005] ; 3108 >
       au < doNotProcess ; 2006 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 40 [2006] ; 3258 >
       au < doNotProcess ; 2007 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 41 [2007] ; 3792 >
@@ -600,9 +600,9 @@
       au < doNotProcess ; 2013 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 47 [2013] ; 9604 >
       au < doNotProcess ; 2014 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 48 [2014] ; 9994 >
       au < doNotProcess ; 2015 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 49 [2015] ; 10984 >
-      au < ready ; 2016 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 50 [2016] ; 12217 >
-      au < ready ; 2017 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 51 [2017] ; 13010 >
-      au < ready ; 2018 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 52 [2018] ; 13665 >
+      au < releasing ; 2016 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 50 [2016] ; 12217 >
+      au < releasing ; 2017 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 51 [2017] ; 13010 >
+      au < releasing ; 2018 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 52 [2018] ; 13665 >
 
     }
 
@@ -619,8 +619,8 @@
         au < released ; 2014 ; Journal of Religion and Popular Culture Volume 26 [2014] ; 9831 >
         au < released ; 2015 ; Journal of Religion and Popular Culture Volume 27 [2015] ; 10542 >
         au < released ; 2016 ; Journal of Religion and Popular Culture Volume 28 [2016] ; 12105 >
-        au < ready ; 2017 ; Journal of Religion and Popular Culture Volume 29 [2017] ; 12518 >
-        au < ready ; 2018 ; Journal of Religion and Popular Culture Volume 30 [2018] ; 13435 >
+        au < releasing ; 2017 ; Journal of Religion and Popular Culture Volume 29 [2017] ; 12518 >
+        au < releasing ; 2018 ; Journal of Religion and Popular Culture Volume 30 [2018] ; 13435 >
 
     }
 
@@ -635,12 +635,12 @@
 
       attr[journal_id] = 251
 
-        au < ready ; 2003-2004 ; Journal of Scholarly Publishing Volume 35 [2003-2004] ; 1776 >
-        au < ready ; 2004-2005 ; Journal of Scholarly Publishing Volume 36 [2004-2005] ; 2585 >
-        au < ready ; 2005-2006 ; Journal of Scholarly Publishing Volume 37 [2005-2006] ; 2888 >
-        au < ready ; 2006-2007 ; Journal of Scholarly Publishing Volume 38 [2006-2007] ; 3203 >
-        au < ready ; 2007-2008 ; Journal of Scholarly Publishing Volume 39 [2007-2008] ; 3475 >
-        au < ready ; 2008-2009 ; Journal of Scholarly Publishing Volume 40 [2008-2009] ; 4025 >
+        au < releasing ; 2003-2004 ; Journal of Scholarly Publishing Volume 35 [2003-2004] ; 1776 >
+        au < releasing ; 2004-2005 ; Journal of Scholarly Publishing Volume 36 [2004-2005] ; 2585 >
+        au < releasing ; 2005-2006 ; Journal of Scholarly Publishing Volume 37 [2005-2006] ; 2888 >
+        au < releasing ; 2006-2007 ; Journal of Scholarly Publishing Volume 38 [2006-2007] ; 3203 >
+        au < releasing ; 2007-2008 ; Journal of Scholarly Publishing Volume 39 [2007-2008] ; 3475 >
+        au < releasing ; 2008-2009 ; Journal of Scholarly Publishing Volume 40 [2008-2009] ; 4025 >
         au < released ; 2009-2010 ; Journal of Scholarly Publishing Volume 41 [2009-2010] ; 5660 >
         au < released ; 2010-2011 ; Journal of Scholarly Publishing Volume 42 [2010-2011] ; 6514 >
         au < released ; 2011-2012 ; Journal of Scholarly Publishing Volume 43 [2011-2012] ; 7653 >
@@ -649,8 +649,8 @@
         au < released ; 2014 ; Journal of Scholarly Publishing Volume 46 [2014] ; 10185 >
         au < released ; 2015 ; Journal of Scholarly Publishing Volume 47 [2015] ; 10778 >
         au < released ; 2016 ; Journal of Scholarly Publishing Volume 48 [2016] ; 12143 >
-        au < ready ; 2017 ; Journal of Scholarly Publishing Volume 49 [2017] ; 13008 >
-        au < ready ; 2018 ; Journal of Scholarly Publishing Volume 50 [2018] ; 13730 >
+        au < releasing ; 2017 ; Journal of Scholarly Publishing Volume 49 [2017] ; 13008 >
+        au < releasing ; 2018 ; Journal of Scholarly Publishing Volume 50 [2018] ; 13730 >
 
     }
 
@@ -665,58 +665,58 @@
 
       attr[journal_id] = 302
 
-        au < ready ; 1958 ; Modern Drama Volume 1 [1958] ; 8674 >
-        au < ready ; 1959 ; Modern Drama Volume 2 [1959] ; 8675 >
-        au < ready ; 1960 ; Modern Drama Volume 3 [1960] ; 8676 >
-        au < ready ; 1961 ; Modern Drama Volume 4 [1961] ; 8677 >
-        au < ready ; 1962 ; Modern Drama Volume 5 [1962] ; 8678 >
-        au < ready ; 1963 ; Modern Drama Volume 6 [1963] ; 8679 >
-        au < ready ; 1964 ; Modern Drama Volume 7 [1964] ; 8680 >
-        au < ready ; 1965 ; Modern Drama Volume 8 [1965] ; 8681 >
-        au < ready ; 1966 ; Modern Drama Volume 9 [1966] ; 8682 >
-        au < ready ; 1967 ; Modern Drama Volume 10 [1967] ; 8683 >
-        au < ready ; 1968 ; Modern Drama Volume 11 [1968] ; 8684 >
-        au < ready ; 1969 ; Modern Drama Volume 12 [1969] ; 8685 >
-        au < ready ; 1970 ; Modern Drama Volume 13 [1970] ; 8719 >
-        au < ready ; 1971 ; Modern Drama Volume 14 [1971] ; 8686 >
-        au < ready ; 1972 ; Modern Drama Volume 15 [1972] ; 8687 >
-        au < ready ; 1973 ; Modern Drama Volume 16 [1973] ; 8688 >
-        au < ready ; 1974 ; Modern Drama Volume 17 [1974] ; 8689 >
-        au < ready ; 1975 ; Modern Drama Volume 18 [1975] ; 8690 >
-        au < ready ; 1976 ; Modern Drama Volume 19 [1976] ; 8691 >
-        au < ready ; 1977 ; Modern Drama Volume 20 [1977] ; 8692 >
-        au < ready ; 1978 ; Modern Drama Volume 21 [1978] ; 8693 >
-        au < ready ; 1979 ; Modern Drama Volume 22 [1979] ; 8694 >
-        au < ready ; 1980 ; Modern Drama Volume 23 [1980] ; 8695 >
-        au < ready ; 1981 ; Modern Drama Volume 24 [1981] ; 8696 >
-        au < ready ; 1982 ; Modern Drama Volume 25 [1982] ; 8697 >
-        au < ready ; 1983 ; Modern Drama Volume 26 [1983] ; 8698 >
-        au < ready ; 1984 ; Modern Drama Volume 27 [1984] ; 8699 >
-        au < ready ; 1985 ; Modern Drama Volume 28 [1985] ; 8700 >
-        au < ready ; 1986 ; Modern Drama Volume 29 [1986] ; 8701 >
-        au < ready ; 1987 ; Modern Drama Volume 30 [1987] ; 8750 >
-        au < ready ; 1988 ; Modern Drama Volume 31 [1988] ; 8752 >
-        au < ready ; 1989 ; Modern Drama Volume 32 [1989] ; 8761 >
-        au < ready ; 1990 ; Modern Drama Volume 33 [1990] ; 8762 >
-        au < ready ; 1991 ; Modern Drama Volume 34 [1991] ; 8763 >
-        au < ready ; 1992 ; Modern Drama Volume 35 [1992] ; 8764 >
-        au < ready ; 1993 ; Modern Drama Volume 36 [1993] ; 8765 >
-        au < ready ; 1994 ; Modern Drama Volume 37 [1994] ; 8766 >
-        au < ready ; 1995 ; Modern Drama Volume 38 [1995] ; 8767 >
-        au < ready ; 1996 ; Modern Drama Volume 39 [1996] ; 8768 >
-        au < ready ; 1997 ; Modern Drama Volume 40 [1997] ; 8769 >
-        au < ready ; 1998 ; Modern Drama Volume 41 [1998] ; 8770 >
-        au < ready ; 1999 ; Modern Drama Volume 42 [1999] ; 8771 >
-        au < ready ; 2000 ; Modern Drama Volume 43 [2000] ; 8772 >
-        au < ready ; 2001 ; Modern Drama Volume 44 [2001] ; 8773 >
-        au < ready ; 2002 ; Modern Drama Volume 45 [2002] ; 8774 >
-        au < ready ; 2003 ; Modern Drama Volume 46 [2003] ; 8775 >
-        au < ready ; 2004 ; Modern Drama Volume 47 [2004] ; 8776 >
-        au < ready ; 2005 ; Modern Drama Volume 48 [2005] ; 2767 >
-        au < ready ; 2006 ; Modern Drama Volume 49 [2006] ; 3059 >
-        au < ready ; 2007 ; Modern Drama Volume 50 [2007] ; 3401 >
-        au < ready ; 2008 ; Modern Drama Volume 51 [2008] ; 3874 >
-        au < ready ; 2009 ; Modern Drama Volume 52 [2009] ; 4289 >
+        au < releasing ; 1958 ; Modern Drama Volume 1 [1958] ; 8674 >
+        au < releasing ; 1959 ; Modern Drama Volume 2 [1959] ; 8675 >
+        au < releasing ; 1960 ; Modern Drama Volume 3 [1960] ; 8676 >
+        au < releasing ; 1961 ; Modern Drama Volume 4 [1961] ; 8677 >
+        au < releasing ; 1962 ; Modern Drama Volume 5 [1962] ; 8678 >
+        au < releasing ; 1963 ; Modern Drama Volume 6 [1963] ; 8679 >
+        au < releasing ; 1964 ; Modern Drama Volume 7 [1964] ; 8680 >
+        au < releasing ; 1965 ; Modern Drama Volume 8 [1965] ; 8681 >
+        au < releasing ; 1966 ; Modern Drama Volume 9 [1966] ; 8682 >
+        au < releasing ; 1967 ; Modern Drama Volume 10 [1967] ; 8683 >
+        au < releasing ; 1968 ; Modern Drama Volume 11 [1968] ; 8684 >
+        au < releasing ; 1969 ; Modern Drama Volume 12 [1969] ; 8685 >
+        au < releasing ; 1970 ; Modern Drama Volume 13 [1970] ; 8719 >
+        au < releasing ; 1971 ; Modern Drama Volume 14 [1971] ; 8686 >
+        au < releasing ; 1972 ; Modern Drama Volume 15 [1972] ; 8687 >
+        au < releasing ; 1973 ; Modern Drama Volume 16 [1973] ; 8688 >
+        au < releasing ; 1974 ; Modern Drama Volume 17 [1974] ; 8689 >
+        au < releasing ; 1975 ; Modern Drama Volume 18 [1975] ; 8690 >
+        au < releasing ; 1976 ; Modern Drama Volume 19 [1976] ; 8691 >
+        au < releasing ; 1977 ; Modern Drama Volume 20 [1977] ; 8692 >
+        au < releasing ; 1978 ; Modern Drama Volume 21 [1978] ; 8693 >
+        au < releasing ; 1979 ; Modern Drama Volume 22 [1979] ; 8694 >
+        au < releasing ; 1980 ; Modern Drama Volume 23 [1980] ; 8695 >
+        au < releasing ; 1981 ; Modern Drama Volume 24 [1981] ; 8696 >
+        au < releasing ; 1982 ; Modern Drama Volume 25 [1982] ; 8697 >
+        au < releasing ; 1983 ; Modern Drama Volume 26 [1983] ; 8698 >
+        au < releasing ; 1984 ; Modern Drama Volume 27 [1984] ; 8699 >
+        au < releasing ; 1985 ; Modern Drama Volume 28 [1985] ; 8700 >
+        au < releasing ; 1986 ; Modern Drama Volume 29 [1986] ; 8701 >
+        au < releasing ; 1987 ; Modern Drama Volume 30 [1987] ; 8750 >
+        au < releasing ; 1988 ; Modern Drama Volume 31 [1988] ; 8752 >
+        au < releasing ; 1989 ; Modern Drama Volume 32 [1989] ; 8761 >
+        au < releasing ; 1990 ; Modern Drama Volume 33 [1990] ; 8762 >
+        au < releasing ; 1991 ; Modern Drama Volume 34 [1991] ; 8763 >
+        au < releasing ; 1992 ; Modern Drama Volume 35 [1992] ; 8764 >
+        au < releasing ; 1993 ; Modern Drama Volume 36 [1993] ; 8765 >
+        au < releasing ; 1994 ; Modern Drama Volume 37 [1994] ; 8766 >
+        au < releasing ; 1995 ; Modern Drama Volume 38 [1995] ; 8767 >
+        au < releasing ; 1996 ; Modern Drama Volume 39 [1996] ; 8768 >
+        au < releasing ; 1997 ; Modern Drama Volume 40 [1997] ; 8769 >
+        au < releasing ; 1998 ; Modern Drama Volume 41 [1998] ; 8770 >
+        au < releasing ; 1999 ; Modern Drama Volume 42 [1999] ; 8771 >
+        au < releasing ; 2000 ; Modern Drama Volume 43 [2000] ; 8772 >
+        au < releasing ; 2001 ; Modern Drama Volume 44 [2001] ; 8773 >
+        au < releasing ; 2002 ; Modern Drama Volume 45 [2002] ; 8774 >
+        au < releasing ; 2003 ; Modern Drama Volume 46 [2003] ; 8775 >
+        au < releasing ; 2004 ; Modern Drama Volume 47 [2004] ; 8776 >
+        au < releasing ; 2005 ; Modern Drama Volume 48 [2005] ; 2767 >
+        au < releasing ; 2006 ; Modern Drama Volume 49 [2006] ; 3059 >
+        au < releasing ; 2007 ; Modern Drama Volume 50 [2007] ; 3401 >
+        au < releasing ; 2008 ; Modern Drama Volume 51 [2008] ; 3874 >
+        au < releasing ; 2009 ; Modern Drama Volume 52 [2009] ; 4289 >
         au < released ; 2010 ; Modern Drama Volume 53 [2010] ; 6214 >
         au < released ; 2011 ; Modern Drama Volume 54 [2011] ; 7077 >
         au < released ; 2012 ; Modern Drama Volume 55 [2012] ; 8201 >
@@ -725,7 +725,7 @@
         au < released ; 2015 ; Modern Drama Volume 58 [2015] ; 10497 >
         au < released ; 2016 ; Modern Drama Volume 59 [2016] ; 11037 >
         au < released ; 2017 ; Modern Drama Volume 60 [2017] ; 12442 >
-        au < ready ; 2018 ; Modern Drama Volume 61 [2018] ; 13310 >
+        au < releasing ; 2018 ; Modern Drama Volume 61 [2018] ; 13310 >
         au < exists ; 2019 ; Modern Drama Volume 62 [2019] ; 13981 >
 
     }
@@ -742,50 +742,50 @@
       attr[journal_id] = 366
       #move from Classical Association of Canada / Société canadienne des études classiques
 
-        au < ready ; 1956 ; Echos du monde classique: Classical news and views Volume I [1956] ; 10412 >
-        au < ready ; 1957 ; Echos du monde classique: Classical news and views Volume II [1957] ; 10411 >
-        au < ready ; 1958 ; Echos du monde classique: Classical news and views Volume III [1958] ; 10410 >
-        au < ready ; 1959 ; Echos du monde classique: Classical news and views Volume IV [1959] ; 10409 >
-        au < ready ; 1960 ; Echos du monde classique: Classical news and views Volume V [1960] ; 10352 >
-        au < ready ; 1961-1962 ; Echos du monde classique: Classical news and views Volume VI [1961-1962] ; 9692 >
-        au < ready ; 1962-1963 ; Echos du monde classique: Classical news and views Volume VII [1962-1963] ; 9693 >
-        au < ready ; 1963-1964 ; Echos du monde classique: Classical news and views Volume VIII [1963-1964] ; 9694 >
-        au < ready ; 1965 ; Echos du monde classique: Classical news and views Volume IX [1965] ; 9695 >
-        au < ready ; 1966 ; Echos du monde classique: Classical news and views Volume X [1966] ; 9696 >
-        au < ready ; 1967 ; Echos du monde classique: Classical news and views Volume XI [1967] ; 9697 >
-        au < ready ; 1968 ; Echos du monde classique: Classical news and views Volume XII [1968] ; 9698 >
-        au < ready ; 1969 ; Echos du monde classique: Classical news and views Volume XIII [1969] ; 9699 >
-        au < ready ; 1970 ; Echos du monde classique: Classical news and views Volume XIV [1970] ; 9700 >
-        au < ready ; 1971 ; Echos du monde classique: Classical news and views Volume XV [1971] ; 9701 >
-        au < ready ; 1972 ; Echos du monde classique: Classical news and views Volume XVI [1972] ; 9702 >
-        au < ready ; 1973 ; Echos du monde classique: Classical news and views Volume XVII [1973] ; 9703 >
-        au < ready ; 1974 ; Echos du monde classique: Classical news and views Volume XVIII [1974] ; 9704 >
-        au < ready ; 1975 ; Echos du monde classique: Classical news and views Volume XIX [1975] ; 9705 >
-        au < ready ; 1976 ; Echos du monde classique: Classical news and views Volume XX [1976] ; 9706 >
-        au < ready ; 1977 ; Echos du monde classique: Classical news and views Volume XXI [1977] ; 9707 >
-        au < ready ; 1978 ; Echos du monde classique: Classical news and views Volume XXII [1978] ; 9708 >
-        au < ready ; 1979 ; Echos du monde classique: Classical news and views Volume XXIII [1979] ; 9709 >
-        au < ready ; 1980 ; Echos du monde classique: Classical news and views Volume XXIV [1980] ; 9710 >
-        au < ready ; 1981 ; Echos du monde classique: Classical news and views Volume XXV [1981] ; 9711 >
-        au < ready ; 1982 ; Echos du monde classique: Classical views Volume XVI [New Series 1, 1982] ; 9712 >
-        au < ready ; 1983 ; Echos du monde classique: Classical views Volume XXVII [New Series 2, 1983] ; 9713 >
-        au < ready ; 1984 ; Echos du monde classique: Classical views Volume XXVIII [New Series 3, 1984] ; 9714 >
-        au < ready ; 1985 ; Echos du monde classique: Classical views Volume XXIX [New Series 4, 1985] ; 9715 >
-        au < ready ; 1986 ; Echos du monde classique: Classical views Volume XXX [New Series 5, 1986] ; 9716 >
-        au < ready ; 1987 ; Echos du monde classique: Classical views Volume XXXI [New Series 6, 1987] ; 9717 >
-        au < ready ; 1988 ; Echos du monde classique: Classical views Volume XXXII [New Series 7, 1988] ; 9718 >
-        au < ready ; 1989 ; Echos du monde classique: Classical views Volume XXXIII [New Series 8, 1989] ; 9719 >
-        au < ready ; 1990 ; Echos du monde classique: Classical views Volume XXXIV [New Series 9, 1990] ; 9720 >
-        au < ready ; 1991 ; Echos du monde classique: Classical views Volume XXXV [New Series 10, 1991] ; 9721 >
-        au < ready ; 1992 ; Echos du monde classique: Classical views Volume XXXVI [New Series 11, 1992] ; 9722 >
-        au < ready ; 1993 ; Echos du monde classique: Classical views Volume XXXVII [New Series 12, 1993] ; 9723 >
-        au < ready ; 1994 ; Echos du monde classique: Classical views Volume XXXVIII [New Series 13, 1994] ; 9724 >
-        au < ready ; 1995 ; Echos du monde classique: Classical views Volume XXXIX [New Series 14, 1995] ; 9725 >
-        au < ready ; 1996 ; Echos du monde classique: Classical views Volume XL [New Series 15, 1996] ; 9726 >
-        au < ready ; 1997 ; Echos du monde classique: Classical views Volume XLI [New Series 16, 1997] ; 9727 >
-        au < ready ; 1998 ; Echos du monde classique: Classical views Volume XLII [New Series 17, 1998] ; 9728 >
-        au < ready ; 1999 ; Echos du monde classique: Classical views Volume XLIII [New Series 18, 1999] ; 9729 >
-        au < ready ; 2000 ; Echos du monde classique: Classical views Volume XLIV [New Series 19, 2000] ; 9749 >
+        au < releasing ; 1956 ; Echos du monde classique: Classical news and views Volume I [1956] ; 10412 >
+        au < releasing ; 1957 ; Echos du monde classique: Classical news and views Volume II [1957] ; 10411 >
+        au < releasing ; 1958 ; Echos du monde classique: Classical news and views Volume III [1958] ; 10410 >
+        au < releasing ; 1959 ; Echos du monde classique: Classical news and views Volume IV [1959] ; 10409 >
+        au < releasing ; 1960 ; Echos du monde classique: Classical news and views Volume V [1960] ; 10352 >
+        au < releasing ; 1961-1962 ; Echos du monde classique: Classical news and views Volume VI [1961-1962] ; 9692 >
+        au < releasing ; 1962-1963 ; Echos du monde classique: Classical news and views Volume VII [1962-1963] ; 9693 >
+        au < releasing ; 1963-1964 ; Echos du monde classique: Classical news and views Volume VIII [1963-1964] ; 9694 >
+        au < releasing ; 1965 ; Echos du monde classique: Classical news and views Volume IX [1965] ; 9695 >
+        au < releasing ; 1966 ; Echos du monde classique: Classical news and views Volume X [1966] ; 9696 >
+        au < releasing ; 1967 ; Echos du monde classique: Classical news and views Volume XI [1967] ; 9697 >
+        au < releasing ; 1968 ; Echos du monde classique: Classical news and views Volume XII [1968] ; 9698 >
+        au < releasing ; 1969 ; Echos du monde classique: Classical news and views Volume XIII [1969] ; 9699 >
+        au < releasing ; 1970 ; Echos du monde classique: Classical news and views Volume XIV [1970] ; 9700 >
+        au < releasing ; 1971 ; Echos du monde classique: Classical news and views Volume XV [1971] ; 9701 >
+        au < releasing ; 1972 ; Echos du monde classique: Classical news and views Volume XVI [1972] ; 9702 >
+        au < releasing ; 1973 ; Echos du monde classique: Classical news and views Volume XVII [1973] ; 9703 >
+        au < releasing ; 1974 ; Echos du monde classique: Classical news and views Volume XVIII [1974] ; 9704 >
+        au < releasing ; 1975 ; Echos du monde classique: Classical news and views Volume XIX [1975] ; 9705 >
+        au < releasing ; 1976 ; Echos du monde classique: Classical news and views Volume XX [1976] ; 9706 >
+        au < releasing ; 1977 ; Echos du monde classique: Classical news and views Volume XXI [1977] ; 9707 >
+        au < releasing ; 1978 ; Echos du monde classique: Classical news and views Volume XXII [1978] ; 9708 >
+        au < releasing ; 1979 ; Echos du monde classique: Classical news and views Volume XXIII [1979] ; 9709 >
+        au < releasing ; 1980 ; Echos du monde classique: Classical news and views Volume XXIV [1980] ; 9710 >
+        au < releasing ; 1981 ; Echos du monde classique: Classical news and views Volume XXV [1981] ; 9711 >
+        au < releasing ; 1982 ; Echos du monde classique: Classical views Volume XVI [New Series 1, 1982] ; 9712 >
+        au < releasing ; 1983 ; Echos du monde classique: Classical views Volume XXVII [New Series 2, 1983] ; 9713 >
+        au < releasing ; 1984 ; Echos du monde classique: Classical views Volume XXVIII [New Series 3, 1984] ; 9714 >
+        au < releasing ; 1985 ; Echos du monde classique: Classical views Volume XXIX [New Series 4, 1985] ; 9715 >
+        au < releasing ; 1986 ; Echos du monde classique: Classical views Volume XXX [New Series 5, 1986] ; 9716 >
+        au < releasing ; 1987 ; Echos du monde classique: Classical views Volume XXXI [New Series 6, 1987] ; 9717 >
+        au < releasing ; 1988 ; Echos du monde classique: Classical views Volume XXXII [New Series 7, 1988] ; 9718 >
+        au < releasing ; 1989 ; Echos du monde classique: Classical views Volume XXXIII [New Series 8, 1989] ; 9719 >
+        au < releasing ; 1990 ; Echos du monde classique: Classical views Volume XXXIV [New Series 9, 1990] ; 9720 >
+        au < releasing ; 1991 ; Echos du monde classique: Classical views Volume XXXV [New Series 10, 1991] ; 9721 >
+        au < releasing ; 1992 ; Echos du monde classique: Classical views Volume XXXVI [New Series 11, 1992] ; 9722 >
+        au < releasing ; 1993 ; Echos du monde classique: Classical views Volume XXXVII [New Series 12, 1993] ; 9723 >
+        au < releasing ; 1994 ; Echos du monde classique: Classical views Volume XXXVIII [New Series 13, 1994] ; 9724 >
+        au < releasing ; 1995 ; Echos du monde classique: Classical views Volume XXXIX [New Series 14, 1995] ; 9725 >
+        au < releasing ; 1996 ; Echos du monde classique: Classical views Volume XL [New Series 15, 1996] ; 9726 >
+        au < releasing ; 1997 ; Echos du monde classique: Classical views Volume XLI [New Series 16, 1997] ; 9727 >
+        au < releasing ; 1998 ; Echos du monde classique: Classical views Volume XLII [New Series 17, 1998] ; 9728 >
+        au < releasing ; 1999 ; Echos du monde classique: Classical views Volume XLIII [New Series 18, 1999] ; 9729 >
+        au < releasing ; 2000 ; Echos du monde classique: Classical views Volume XLIV [New Series 19, 2000] ; 9749 >
         au < released ; 2001 ; Mouseion: Journal of the Classical Association of Canada Volume 1 [2001, XLV—Series III] ; 8626 >
         au < released ; 2002 ; Mouseion: Journal of the Classical Association of Canada Volume 2 [2002, XLVI—Series III] ; 8627 >
         au < released ; 2003 ; Mouseion: Journal of the Classical Association of Canada Volume 3 [2003, XLVII—Series III] ; 8628 >
@@ -800,7 +800,7 @@
         au < released ; 2012 ; Mouseion: Journal of the Classical Association of Canada Volume 12 [2012, LVI—Series III] ; 10569 >
         au < released ; 2016 ; Mouseion: Journal of the Classical Association of Canada Volume 13 [2016, LVII—Series III] ; 11188 >
         au < released ; 2017 ; Mouseion: Journal of the Classical Association of Canada Volume 14 [2017, LVIII-Series III] ; 12438 >
-        au < ready ; 2018 ; Mouseion: Journal of the Classical Association of Canada Volume 15 [2018, LIX-Series III] ; 13363 >
+        au < releasing ; 2018 ; Mouseion: Journal of the Classical Association of Canada Volume 15 [2018, LIX-Series III] ; 13363 >
 
     }
 
@@ -815,10 +815,10 @@
 
       attr[journal_id] = 351
 
-        au < ready ; 2006 ; Seminar: A Journal of Germanic Studies Volume 42 [2006] ; 3073 >
-        au < ready ; 2007 ; Seminar: A Journal of Germanic Studies Volume 43 [2007] ; 3234 >
-        au < ready ; 2008 ; Seminar: A Journal of Germanic Studies Volume 44 [2008] ; 3773 >
-        au < ready ; 2009 ; Seminar: A Journal of Germanic Studies Volume 45 [2009] ; 4118 >
+        au < releasing ; 2006 ; Seminar: A Journal of Germanic Studies Volume 42 [2006] ; 3073 >
+        au < releasing ; 2007 ; Seminar: A Journal of Germanic Studies Volume 43 [2007] ; 3234 >
+        au < releasing ; 2008 ; Seminar: A Journal of Germanic Studies Volume 44 [2008] ; 3773 >
+        au < releasing ; 2009 ; Seminar: A Journal of Germanic Studies Volume 45 [2009] ; 4118 >
         au < released ; 2010 ; Seminar: A Journal of Germanic Studies Volume 46 [2010] ; 5832 >
         au < released ; 2011 ; Seminar: A Journal of Germanic Studies Volume 47 [2011] ; 6798 >
         au < released ; 2012 ; Seminar: A Journal of Germanic Studies Volume 48 [2012] ; 8017 >
@@ -827,7 +827,7 @@
         au < released ; 2015 ; Seminar: A Journal of Germanic Studies Volume 51 [2015] ; 10416 >
         au < released ; 2016 ; Seminar: A Journal of Germanic Studies Volume 52 [2016] ; 10963 >
         au < released ; 2017 ; Seminar: A Journal of Germanic Studies Volume 53 [2017] ; 12452 >
-        au < ready ; 2018 ; Seminar: A Journal of Germanic Studies Volume 54 [2018] ; 13255 >
+        au < releasing ; 2018 ; Seminar: A Journal of Germanic Studies Volume 54 [2018] ; 13255 >
         au < exists ; 2019 ; Seminar: A Journal of Germanic Studies Volume 55 [2019] ; 13919 >
 
     }
@@ -843,96 +843,96 @@
 
       attr[journal_id] = 248
 
-        au < ready ; 1920 ; The Canadian Historical Review Volume 1 [1920] ; 10144 >
-        au < ready ; 1921 ; The Canadian Historical Review Volume 2 [1921] ; 10143 >
-        au < ready ; 1922 ; The Canadian Historical Review Volume 3 [1922] ; 10142 >
-        au < ready ; 1923 ; The Canadian Historical Review Volume 4 [1923] ; 10141 >
-        au < ready ; 1924 ; The Canadian Historical Review Volume 5 [1924] ; 10140 >
-        au < ready ; 1925 ; The Canadian Historical Review Volume 6 [1925] ; 10139 >
-        au < ready ; 1926 ; The Canadian Historical Review Volume 7 [1926] ; 10138 >
-        au < ready ; 1927 ; The Canadian Historical Review Volume 8 [1927] ; 10137 >
-        au < ready ; 1928 ; The Canadian Historical Review Volume 9 [1928] ; 10136 >
-        au < ready ; 1929 ; The Canadian Historical Review Volume 10 [1929] ; 10134 >
-        au < ready ; 1930 ; The Canadian Historical Review Volume 11 [1930] ; 10133 >
-        au < ready ; 1931 ; The Canadian Historical Review Volume 12 [1931] ; 10132 >
-        au < ready ; 1932 ; The Canadian Historical Review Volume 13 [1932] ; 10131 >
-        au < ready ; 1933 ; The Canadian Historical Review Volume 14 [1933] ; 10130 >
-        au < ready ; 1934 ; The Canadian Historical Review Volume 15 [1934] ; 10129 >
-        au < ready ; 1935 ; The Canadian Historical Review Volume 16 [1935] ; 10128 >
-        au < ready ; 1936 ; The Canadian Historical Review Volume 17 [1936] ; 10127 >
-        au < ready ; 1937 ; The Canadian Historical Review Volume 18 [1937] ; 10126 >
-        au < ready ; 1938 ; The Canadian Historical Review Volume 19 [1938] ; 10125 >
-        au < ready ; 1939 ; The Canadian Historical Review Volume 20 [1939] ; 10074 >
-        au < ready ; 1940 ; The Canadian Historical Review Volume 21 [1940] ; 10073 >
-        au < ready ; 1941 ; The Canadian Historical Review Volume 22 [1941] ; 10072 >
-        au < ready ; 1942 ; The Canadian Historical Review Volume 23 [1942] ; 10071 >
-        au < ready ; 1943 ; The Canadian Historical Review Volume 24 [1943] ; 10070 >
-        au < ready ; 1944 ; The Canadian Historical Review Volume 25 [1944] ; 10069 >
-        au < ready ; 1945 ; The Canadian Historical Review Volume 26 [1945] ; 10068 >
-        au < ready ; 1946 ; The Canadian Historical Review Volume 27 [1946] ; 10067 >
-        au < ready ; 1947 ; The Canadian Historical Review Volume 28 [1947] ; 10066 >
-        au < ready ; 1948 ; The Canadian Historical Review Volume 29 [1948] ; 10065 >
-        au < ready ; 1949 ; The Canadian Historical Review Volume 30 [1949] ; 10042 >
-        au < ready ; 1950 ; The Canadian Historical Review Volume 31 [1950] ; 10041 >
-        au < ready ; 1951 ; The Canadian Historical Review Volume 32 [1951] ; 10040 >
-        au < ready ; 1952 ; The Canadian Historical Review Volume 33 [1952] ; 10039 >
-        au < ready ; 1953 ; The Canadian Historical Review Volume 34 [1953] ; 10038 >
-        au < ready ; 1954 ; The Canadian Historical Review Volume 35 [1954] ; 10037 >
-        au < ready ; 1955 ; The Canadian Historical Review Volume 36 [1955] ; 10036 >
-        au < ready ; 1956 ; The Canadian Historical Review Volume 37 [1956] ; 10035 >
-        au < ready ; 1957 ; The Canadian Historical Review Volume 38 [1957] ; 10034 >
-        au < ready ; 1958 ; The Canadian Historical Review Volume 39 [1958] ; 10033 >
-        au < ready ; 1959 ; The Canadian Historical Review Volume 40 [1959] ; 10032 >
-        au < ready ; 1960 ; The Canadian Historical Review Volume 41 [1960] ; 10023 >
-        au < ready ; 1961 ; The Canadian Historical Review Volume 42 [1961] ; 10022 >
-        au < ready ; 1962 ; The Canadian Historical Review Volume 43 [1962] ; 10021 >
-        au < ready ; 1963 ; The Canadian Historical Review Volume 44 [1963] ; 10020 >
-        au < ready ; 1964 ; The Canadian Historical Review Volume 45 [1964] ; 10019 >
-        au < ready ; 1965 ; The Canadian Historical Review Volume 46 [1965] ; 10018 >
-        au < ready ; 1966 ; The Canadian Historical Review Volume 47 [1966] ; 10017 >
-        au < ready ; 1967 ; The Canadian Historical Review Volume 48 [1967] ; 10016 >
-        au < ready ; 1968 ; The Canadian Historical Review Volume 49 [1968] ; 10015 >
-        au < ready ; 1969 ; The Canadian Historical Review Volume 50 [1969] ; 10013 >
-        au < ready ; 1970 ; The Canadian Historical Review Volume 51 [1970] ; 10012 >
-        au < ready ; 1971 ; The Canadian Historical Review Volume 52 [1971] ; 10011 >
-        au < ready ; 1972 ; The Canadian Historical Review Volume 53 [1972] ; 10010 >
-        au < ready ; 1973 ; The Canadian Historical Review Volume 54 [1973] ; 10009 >
-        au < ready ; 1974 ; The Canadian Historical Review Volume 55 [1974] ; 10008 >
-        au < ready ; 1975 ; The Canadian Historical Review Volume 56 [1975] ; 10007 >
-        au < ready ; 1976 ; The Canadian Historical Review Volume 57 [1976] ; 10006 >
-        au < ready ; 1977 ; The Canadian Historical Review Volume 58 [1977] ; 10005 >
-        au < ready ; 1978 ; The Canadian Historical Review Volume 59 [1978] ; 10004 >
-        au < ready ; 1979 ; The Canadian Historical Review Volume 60 [1979] ; 9404 >
-        au < ready ; 1980 ; The Canadian Historical Review Volume 61 [1980] ; 9403 >
-        au < ready ; 1981 ; The Canadian Historical Review Volume 62 [1981] ; 9402 >
-        au < ready ; 1982 ; The Canadian Historical Review Volume 63 [1982] ; 9401 >
-        au < ready ; 1983 ; The Canadian Historical Review Volume 64 [1983] ; 9400 >
-        au < ready ; 1984 ; The Canadian Historical Review Volume 65 [1984] ; 9399 >
-        au < ready ; 1985 ; The Canadian Historical Review Volume 66 [1985] ; 9398 >
-        au < ready ; 1986 ; The Canadian Historical Review Volume 67 [1986] ; 9397 >
-        au < ready ; 1987 ; The Canadian Historical Review Volume 68 [1987] ; 9396 >
-        au < ready ; 1988 ; The Canadian Historical Review Volume 69 [1988] ; 9395 >
-        au < ready ; 1989 ; The Canadian Historical Review Volume 70 [1989] ; 9394 >
-        au < ready ; 1990 ; The Canadian Historical Review Volume 71 [1990] ; 9393 >
-        au < ready ; 1991 ; The Canadian Historical Review Volume 72 [1991] ; 9392 >
-        au < ready ; 1992 ; The Canadian Historical Review Volume 73 [1992] ; 9391 >
-        au < ready ; 1993 ; The Canadian Historical Review Volume 74 [1993] ; 9390 >
-        au < ready ; 1994 ; The Canadian Historical Review Volume 75 [1994] ; 9389 >
-        au < ready ; 1995 ; The Canadian Historical Review Volume 76 [1995] ; 9388 >
-        au < ready ; 1996 ; The Canadian Historical Review Volume 77 [1996] ; 9387 >
-        au < ready ; 1997 ; The Canadian Historical Review Volume 78 [1997] ; 9386 >
-        au < ready ; 1998 ; The Canadian Historical Review Volume 79 [1998] ; 9385 >
-        au < ready ; 1999 ; The Canadian Historical Review Volume 80 [1999] ; 9384 >
-        au < ready ; 2000 ; The Canadian Historical Review Volume 81 [2000] ; 9383 >
-        au < ready ; 2001 ; The Canadian Historical Review Volume 82 [2001] ; 9382 >
-        au < ready ; 2002 ; The Canadian Historical Review Volume 83 [2002] ; 9381 >
-        au < ready ; 2003 ; The Canadian Historical Review Volume 84 [2003] ; 9380 >
-        au < ready ; 2004 ; The Canadian Historical Review Volume 85 [2004] ; 2460 >
-        au < ready ; 2005 ; The Canadian Historical Review Volume 86 [2005] ; 2706 >
-        au < ready ; 2006 ; The Canadian Historical Review Volume 87 [2006] ; 2987 >
-        au < ready ; 2007 ; The Canadian Historical Review Volume 88 [2007] ; 3302 >
-        au < ready ; 2008 ; The Canadian Historical Review Volume 89 [2008] ; 3771 >
-        au < ready ; 2009 ; The Canadian Historical Review Volume 90 [2009] ; 4260 >
+        au < releasing ; 1920 ; The Canadian Historical Review Volume 1 [1920] ; 10144 >
+        au < releasing ; 1921 ; The Canadian Historical Review Volume 2 [1921] ; 10143 >
+        au < releasing ; 1922 ; The Canadian Historical Review Volume 3 [1922] ; 10142 >
+        au < releasing ; 1923 ; The Canadian Historical Review Volume 4 [1923] ; 10141 >
+        au < releasing ; 1924 ; The Canadian Historical Review Volume 5 [1924] ; 10140 >
+        au < releasing ; 1925 ; The Canadian Historical Review Volume 6 [1925] ; 10139 >
+        au < releasing ; 1926 ; The Canadian Historical Review Volume 7 [1926] ; 10138 >
+        au < releasing ; 1927 ; The Canadian Historical Review Volume 8 [1927] ; 10137 >
+        au < releasing ; 1928 ; The Canadian Historical Review Volume 9 [1928] ; 10136 >
+        au < releasing ; 1929 ; The Canadian Historical Review Volume 10 [1929] ; 10134 >
+        au < releasing ; 1930 ; The Canadian Historical Review Volume 11 [1930] ; 10133 >
+        au < releasing ; 1931 ; The Canadian Historical Review Volume 12 [1931] ; 10132 >
+        au < releasing ; 1932 ; The Canadian Historical Review Volume 13 [1932] ; 10131 >
+        au < releasing ; 1933 ; The Canadian Historical Review Volume 14 [1933] ; 10130 >
+        au < releasing ; 1934 ; The Canadian Historical Review Volume 15 [1934] ; 10129 >
+        au < releasing ; 1935 ; The Canadian Historical Review Volume 16 [1935] ; 10128 >
+        au < releasing ; 1936 ; The Canadian Historical Review Volume 17 [1936] ; 10127 >
+        au < releasing ; 1937 ; The Canadian Historical Review Volume 18 [1937] ; 10126 >
+        au < releasing ; 1938 ; The Canadian Historical Review Volume 19 [1938] ; 10125 >
+        au < releasing ; 1939 ; The Canadian Historical Review Volume 20 [1939] ; 10074 >
+        au < releasing ; 1940 ; The Canadian Historical Review Volume 21 [1940] ; 10073 >
+        au < releasing ; 1941 ; The Canadian Historical Review Volume 22 [1941] ; 10072 >
+        au < releasing ; 1942 ; The Canadian Historical Review Volume 23 [1942] ; 10071 >
+        au < releasing ; 1943 ; The Canadian Historical Review Volume 24 [1943] ; 10070 >
+        au < releasing ; 1944 ; The Canadian Historical Review Volume 25 [1944] ; 10069 >
+        au < releasing ; 1945 ; The Canadian Historical Review Volume 26 [1945] ; 10068 >
+        au < releasing ; 1946 ; The Canadian Historical Review Volume 27 [1946] ; 10067 >
+        au < releasing ; 1947 ; The Canadian Historical Review Volume 28 [1947] ; 10066 >
+        au < releasing ; 1948 ; The Canadian Historical Review Volume 29 [1948] ; 10065 >
+        au < releasing ; 1949 ; The Canadian Historical Review Volume 30 [1949] ; 10042 >
+        au < releasing ; 1950 ; The Canadian Historical Review Volume 31 [1950] ; 10041 >
+        au < releasing ; 1951 ; The Canadian Historical Review Volume 32 [1951] ; 10040 >
+        au < releasing ; 1952 ; The Canadian Historical Review Volume 33 [1952] ; 10039 >
+        au < releasing ; 1953 ; The Canadian Historical Review Volume 34 [1953] ; 10038 >
+        au < releasing ; 1954 ; The Canadian Historical Review Volume 35 [1954] ; 10037 >
+        au < releasing ; 1955 ; The Canadian Historical Review Volume 36 [1955] ; 10036 >
+        au < releasing ; 1956 ; The Canadian Historical Review Volume 37 [1956] ; 10035 >
+        au < releasing ; 1957 ; The Canadian Historical Review Volume 38 [1957] ; 10034 >
+        au < releasing ; 1958 ; The Canadian Historical Review Volume 39 [1958] ; 10033 >
+        au < releasing ; 1959 ; The Canadian Historical Review Volume 40 [1959] ; 10032 >
+        au < releasing ; 1960 ; The Canadian Historical Review Volume 41 [1960] ; 10023 >
+        au < releasing ; 1961 ; The Canadian Historical Review Volume 42 [1961] ; 10022 >
+        au < releasing ; 1962 ; The Canadian Historical Review Volume 43 [1962] ; 10021 >
+        au < releasing ; 1963 ; The Canadian Historical Review Volume 44 [1963] ; 10020 >
+        au < releasing ; 1964 ; The Canadian Historical Review Volume 45 [1964] ; 10019 >
+        au < releasing ; 1965 ; The Canadian Historical Review Volume 46 [1965] ; 10018 >
+        au < releasing ; 1966 ; The Canadian Historical Review Volume 47 [1966] ; 10017 >
+        au < releasing ; 1967 ; The Canadian Historical Review Volume 48 [1967] ; 10016 >
+        au < releasing ; 1968 ; The Canadian Historical Review Volume 49 [1968] ; 10015 >
+        au < releasing ; 1969 ; The Canadian Historical Review Volume 50 [1969] ; 10013 >
+        au < releasing ; 1970 ; The Canadian Historical Review Volume 51 [1970] ; 10012 >
+        au < releasing ; 1971 ; The Canadian Historical Review Volume 52 [1971] ; 10011 >
+        au < releasing ; 1972 ; The Canadian Historical Review Volume 53 [1972] ; 10010 >
+        au < releasing ; 1973 ; The Canadian Historical Review Volume 54 [1973] ; 10009 >
+        au < releasing ; 1974 ; The Canadian Historical Review Volume 55 [1974] ; 10008 >
+        au < releasing ; 1975 ; The Canadian Historical Review Volume 56 [1975] ; 10007 >
+        au < releasing ; 1976 ; The Canadian Historical Review Volume 57 [1976] ; 10006 >
+        au < releasing ; 1977 ; The Canadian Historical Review Volume 58 [1977] ; 10005 >
+        au < releasing ; 1978 ; The Canadian Historical Review Volume 59 [1978] ; 10004 >
+        au < releasing ; 1979 ; The Canadian Historical Review Volume 60 [1979] ; 9404 >
+        au < releasing ; 1980 ; The Canadian Historical Review Volume 61 [1980] ; 9403 >
+        au < releasing ; 1981 ; The Canadian Historical Review Volume 62 [1981] ; 9402 >
+        au < releasing ; 1982 ; The Canadian Historical Review Volume 63 [1982] ; 9401 >
+        au < releasing ; 1983 ; The Canadian Historical Review Volume 64 [1983] ; 9400 >
+        au < releasing ; 1984 ; The Canadian Historical Review Volume 65 [1984] ; 9399 >
+        au < releasing ; 1985 ; The Canadian Historical Review Volume 66 [1985] ; 9398 >
+        au < releasing ; 1986 ; The Canadian Historical Review Volume 67 [1986] ; 9397 >
+        au < releasing ; 1987 ; The Canadian Historical Review Volume 68 [1987] ; 9396 >
+        au < releasing ; 1988 ; The Canadian Historical Review Volume 69 [1988] ; 9395 >
+        au < releasing ; 1989 ; The Canadian Historical Review Volume 70 [1989] ; 9394 >
+        au < releasing ; 1990 ; The Canadian Historical Review Volume 71 [1990] ; 9393 >
+        au < releasing ; 1991 ; The Canadian Historical Review Volume 72 [1991] ; 9392 >
+        au < releasing ; 1992 ; The Canadian Historical Review Volume 73 [1992] ; 9391 >
+        au < releasing ; 1993 ; The Canadian Historical Review Volume 74 [1993] ; 9390 >
+        au < releasing ; 1994 ; The Canadian Historical Review Volume 75 [1994] ; 9389 >
+        au < releasing ; 1995 ; The Canadian Historical Review Volume 76 [1995] ; 9388 >
+        au < releasing ; 1996 ; The Canadian Historical Review Volume 77 [1996] ; 9387 >
+        au < releasing ; 1997 ; The Canadian Historical Review Volume 78 [1997] ; 9386 >
+        au < releasing ; 1998 ; The Canadian Historical Review Volume 79 [1998] ; 9385 >
+        au < releasing ; 1999 ; The Canadian Historical Review Volume 80 [1999] ; 9384 >
+        au < releasing ; 2000 ; The Canadian Historical Review Volume 81 [2000] ; 9383 >
+        au < releasing ; 2001 ; The Canadian Historical Review Volume 82 [2001] ; 9382 >
+        au < releasing ; 2002 ; The Canadian Historical Review Volume 83 [2002] ; 9381 >
+        au < releasing ; 2003 ; The Canadian Historical Review Volume 84 [2003] ; 9380 >
+        au < releasing ; 2004 ; The Canadian Historical Review Volume 85 [2004] ; 2460 >
+        au < releasing ; 2005 ; The Canadian Historical Review Volume 86 [2005] ; 2706 >
+        au < releasing ; 2006 ; The Canadian Historical Review Volume 87 [2006] ; 2987 >
+        au < releasing ; 2007 ; The Canadian Historical Review Volume 88 [2007] ; 3302 >
+        au < releasing ; 2008 ; The Canadian Historical Review Volume 89 [2008] ; 3771 >
+        au < releasing ; 2009 ; The Canadian Historical Review Volume 90 [2009] ; 4260 >
         au < released ; 2010 ; The Canadian Historical Review Volume 91 [2010] ; 5847 >
         au < released ; 2011 ; The Canadian Historical Review Volume 92 [2011] ; 6897 >
         au < released ; 2012 ; The Canadian Historical Review Volume 93 [2012] ; 8023 >
@@ -941,7 +941,7 @@
         au < released ; 2015 ; The Canadian Historical Review Volume 96 [2015] ; 10445 >
         au < released ; 2016 ; The Canadian Historical Review Volume 97 [2016] ; 11089 >
         au < released ; 2017 ; The Canadian Historical Review Volume 98 [2017] ; 12437 >
-        au < ready ; 2018 ; The Canadian Historical Review Volume 99 [2018] ; 13336 >
+        au < releasing ; 2018 ; The Canadian Historical Review Volume 99 [2018] ; 13336 >
         au < exists ; 2019 ; The Canadian Historical Review Volume 100 [2019] ; 13999 >
 
     }
@@ -960,8 +960,8 @@
         au < released ; 2014 ; The Canadian Journal of Human Sexuality Volume 23 [2014] ; 9916 >
         au < released ; 2015 ; The Canadian Journal of Human Sexuality Volume 24 [2015] ; 10532 >
         au < released ; 2016 ; The Canadian Journal of Human Sexuality Volume 25 [2016] ; 11119 >
-        au < ready ; 2017 ; The Canadian Journal of Human Sexuality Volume 26 [2017] ; 12553 >
-        au < ready ; 2018 ; The Canadian Journal of Human Sexuality Volume 27 [2018] ; 13498 >
+        au < releasing ; 2017 ; The Canadian Journal of Human Sexuality Volume 26 [2017] ; 12553 >
+        au < releasing ; 2018 ; The Canadian Journal of Human Sexuality Volume 27 [2018] ; 13498 >
 
     }
 
@@ -994,11 +994,11 @@
 
       attr[journal_id] = 272
 
-        au < ready ; 2004-2005 ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 61 [2004-2005] ; 2592 >
-        au < ready ; 2005-2006 ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 62 [2005-2006] ; 2842 >
-        au < ready ; 2006-2007 ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 63 [2006-2007] ; 3149 >
-        au < ready ; 2007-2008 ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 64 [2007-2008] ; 3634 >
-        au < ready ; 2008-2009 ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 65 [2008-2009] ; 4053 >
+        au < releasing ; 2004-2005 ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 61 [2004-2005] ; 2592 >
+        au < releasing ; 2005-2006 ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 62 [2005-2006] ; 2842 >
+        au < releasing ; 2006-2007 ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 63 [2006-2007] ; 3149 >
+        au < releasing ; 2007-2008 ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 64 [2007-2008] ; 3634 >
+        au < releasing ; 2008-2009 ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 65 [2008-2009] ; 4053 >
         au < released ; 2009-2010 ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 66 [2009-2010] ; 5653 >
         au < released ; 2011 ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 67 [2011] ; 6966 >
         au < released ; 2012 ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 68 [2012] ; 8022 >
@@ -1007,7 +1007,7 @@
         au < released ; 2015 ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 71 [2015] ; 10344 >
         au < released ; 2016 ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 72 [2016] ; 11035 >
         au < released ; 2017 ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 73 [2017] ; 12376 >
-        au < ready ; 2018 ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 74 [2018] ; 13293 >
+        au < releasing ; 2018 ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 74 [2018] ; 13293 >
 
     }
 
@@ -1022,7 +1022,7 @@
 
       attr[journal_id] = 445
 
-        au < ready ; 2009 ; The Tocqueville Review/La revue Tocqueville Volume 30 [2009] ; 4934 >
+        au < releasing ; 2009 ; The Tocqueville Review/La revue Tocqueville Volume 30 [2009] ; 4934 >
         au < released ; 2010 ; The Tocqueville Review/La revue Tocqueville Volume 31 [2010] ; 6397 >
         au < released ; 2011 ; The Tocqueville Review/La revue Tocqueville Volume 32 [2011] ; 7326 >
         au < released ; 2012 ; The Tocqueville Review/La revue Tocqueville Volume 33 [2012] ; 8152 >
@@ -1030,8 +1030,8 @@
         au < released ; 2014 ; The Tocqueville Review/La revue Tocqueville Volume 35 [2014] ; 10117 >
         au < released ; 2015 ; The Tocqueville Review/La revue Tocqueville Volume 36 [2015] ; 10687 >
         au < released ; 2016 ; The Tocqueville Review/La revue Tocqueville Volume 37 [2016] ; 11316 >
-        au < ready ; 2017 ; The Tocqueville Review/La revue Tocqueville Volume 38 [2017] ; 12695 >
-        au < ready ; 2018 ; The Tocqueville Review/La revue Tocqueville Volume 39 [2018] ; 13521 >
+        au < releasing ; 2017 ; The Tocqueville Review/La revue Tocqueville Volume 38 [2017] ; 12695 >
+        au < releasing ; 2018 ; The Tocqueville Review/La revue Tocqueville Volume 39 [2018] ; 13521 >
 
     }
 
@@ -1046,9 +1046,9 @@
 
       attr[journal_id] = 736
 
-        au < ready ; 2017 ; TOPIA: Canadian Journal of Cultural Studies Number 37 [Spring 2017] ; 13773 >
-        au < ready ; 2017 ; TOPIA: Canadian Journal of Cultural Studies Number 38 [Fall 2017] ; 13771 >
-        au < ready ; 2018 ; TOPIA: Canadian Journal of Cultural Studies Number 39 [Spring 2018] ; 13694 >
+        au < releasing ; 2017 ; TOPIA: Canadian Journal of Cultural Studies Number 37 [Spring 2017] ; 13773 >
+        au < releasing ; 2017 ; TOPIA: Canadian Journal of Cultural Studies Number 38 [Fall 2017] ; 13771 >
+        au < releasing ; 2018 ; TOPIA: Canadian Journal of Cultural Studies Number 39 [Spring 2018] ; 13694 >
 
     }
 
@@ -1063,14 +1063,14 @@
 
       attr[journal_id] = 447
 
-        au < ready ; 2008 ; The Yearbook of Comparative Literature Volume 54 [2008] ; 6604 >
-        au < ready ; 2009 ; The Yearbook of Comparative Literature Volume 55 [2009] ; 7084 >
+        au < releasing ; 2008 ; The Yearbook of Comparative Literature Volume 54 [2008] ; 6604 >
+        au < releasing ; 2009 ; The Yearbook of Comparative Literature Volume 55 [2009] ; 7084 >
         au < released ; 2010 ; The Yearbook of Comparative Literature Volume 56 [2010] ; 8342 >
         au < released ; 2011 ; The Yearbook of Comparative Literature Volume 57 [2011] ; 9289 >
         au < released ; 2012 ; The Yearbook of Comparative Literature Volume 58 [2012] ; 10109 >
         au < released ; 2013 ; The Yearbook of Comparative Literature Volume 59 [2013] ; 11165 >
-        au < ready ; 2014 ; The Yearbook of Comparative Literature Volume 60 [2014] ; 12732 >
-        au < ready ; 2015 ; The Yearbook of Comparative Literature Volume 61 [2015] ; 13133 >
+        au < releasing ; 2014 ; The Yearbook of Comparative Literature Volume 60 [2014] ; 12732 >
+        au < releasing ; 2015 ; The Yearbook of Comparative Literature Volume 61 [2015] ; 13133 >
 
     }
     
@@ -1091,8 +1091,8 @@
         au < released ; 2014 ; Toronto Journal of Theology Volume 30 [2014] ; 10028 >
         au < released ; 2015 ; Toronto Journal of Theology Volume 31 [2015] ; 10474 >
         au < released ; 2016 ; Toronto Journal of Theology Volume 32 [2016] ; 11304 >
-        au < ready ; 2017 ; Toronto Journal of Theology Volume 33 [2017] ; 12660 >
-        au < ready ; 2018 ; Toronto Journal of Theology Volume 34 [2018] ; 13583 >
+        au < releasing ; 2017 ; Toronto Journal of Theology Volume 33 [2017] ; 12660 >
+        au < releasing ; 2018 ; Toronto Journal of Theology Volume 34 [2018] ; 13583 >
 
     }
 
@@ -1107,12 +1107,12 @@
 
       attr[journal_id] = 252
 
-        au < ready ; 2004 ; University of Toronto Law Journal Volume 54 [2004] ; 1777 >
-        au < ready ; 2005 ; University of Toronto Law Journal Volume 55 [2005] ; 2637 >
-        au < ready ; 2006 ; University of Toronto Law Journal Volume 56 [2006] ; 2934 >
-        au < ready ; 2007 ; University of Toronto Law Journal Volume 57 [2007] ; 3214 >
-        au < ready ; 2008 ; University of Toronto Law Journal Volume 58 [2008] ; 3723 >
-        au < ready ; 2009 ; University of Toronto Law Journal Volume 59 [2009] ; 4117 >
+        au < releasing ; 2004 ; University of Toronto Law Journal Volume 54 [2004] ; 1777 >
+        au < releasing ; 2005 ; University of Toronto Law Journal Volume 55 [2005] ; 2637 >
+        au < releasing ; 2006 ; University of Toronto Law Journal Volume 56 [2006] ; 2934 >
+        au < releasing ; 2007 ; University of Toronto Law Journal Volume 57 [2007] ; 3214 >
+        au < releasing ; 2008 ; University of Toronto Law Journal Volume 58 [2008] ; 3723 >
+        au < releasing ; 2009 ; University of Toronto Law Journal Volume 59 [2009] ; 4117 >
         au < released ; 2010 ; University of Toronto Law Journal Volume 60 [2010] ; 5830 >
         au < released ; 2011 ; University of Toronto Law Journal Volume 61 [2011] ; 6991 >
         au < released ; 2012 ; University of Toronto Law Journal Volume 62 [2012] ; 8110 >
@@ -1121,7 +1121,7 @@
         au < released ; 2015 ; University of Toronto Law Journal Volume 65 [2015] ; 10489 >
         au < released ; 2016 ; University of Toronto Law Journal Volume 66 [2016] ; 10928 >
         au < released ; 2017 ; University of Toronto Law Journal Volume 67 [2017] ; 12323 >
-        au < ready ; 2018 ; University of Toronto Law Journal Volume 68 [2018] ; 13176 >
+        au < releasing ; 2018 ; University of Toronto Law Journal Volume 68 [2018] ; 13176 >
         au < exists ; 2019 ; University of Toronto Law Journal Volume 69 [2019] ; 13857 >
 
     }
@@ -1137,82 +1137,82 @@
 
       attr[journal_id] = 303
 
-        au < ready ; 1931-1932 ; University of Toronto Quarterly Volume 1 [1931-1932] ; 9374 >
-        au < ready ; 1932-1933 ; University of Toronto Quarterly Volume 2 [1932-1933] ; 9373 >
-        au < ready ; 1933-1934 ; University of Toronto Quarterly Volume 3 [1933-1934] ; 9372 >
-        au < ready ; 1934-1935 ; University of Toronto Quarterly Volume 4 [1934-1935] ; 9371 >
-        au < ready ; 1935-1936 ; University of Toronto Quarterly Volume 5 [1935-1936] ; 9370 >
-        au < ready ; 1936-1937 ; University of Toronto Quarterly Volume 6 [1936-1937] ; 9369 >
-        au < ready ; 1937-1938 ; University of Toronto Quarterly Volume 7 [1937-1938] ; 9368 >
-        au < ready ; 1938-1939 ; University of Toronto Quarterly Volume 8 [1938-1939] ; 9367 >
-        au < ready ; 1939-1940 ; University of Toronto Quarterly Volume 9 [1939-1940] ; 9366 >
-        au < ready ; 1940-1941 ; University of Toronto Quarterly Volume 10 [1940-1941] ; 9239 >
-        au < ready ; 1941-1942 ; University of Toronto Quarterly Volume 11 [1941-1942] ; 9238 >
-        au < ready ; 1942-1943 ; University of Toronto Quarterly Volume 12 [1942-1943] ; 9237 >
-        au < ready ; 1943-1944 ; University of Toronto Quarterly Volume 13 [1943-1944] ; 9236 >
-        au < ready ; 1944-1945 ; University of Toronto Quarterly Volume 14 [1944-1945] ; 9235 >
-        au < ready ; 1945-1946 ; University of Toronto Quarterly Volume 15 [1945-1946] ; 9234 >
-        au < ready ; 1946-1947 ; University of Toronto Quarterly Volume 16 [1946-1947] ; 9233 >
-        au < ready ; 1947-1948 ; University of Toronto Quarterly Volume 17 [1947-1948] ; 9232 >
-        au < ready ; 1948-1949 ; University of Toronto Quarterly Volume 18 [1948-1949] ; 9231 >
-        au < ready ; 1949-1950 ; University of Toronto Quarterly Volume 19 [1949-1950] ; 9230 >
-        au < ready ; 1950-1951 ; University of Toronto Quarterly Volume 20 [1950-1951] ; 9228 >
-        au < ready ; 1951-1952 ; University of Toronto Quarterly Volume 21 [1951-1952] ; 9227 >
-        au < ready ; 1953-1954 ; University of Toronto Quarterly Volume 23 [1953-1954] ; 9225 >
-        au < ready ; 1954-1955 ; University of Toronto Quarterly Volume 24 [1954-1955] ; 9224 >
-        au < ready ; 1955-1956 ; University of Toronto Quarterly Volume 25 [1955-1956] ; 9223 >
-        au < ready ; 1956-1957 ; University of Toronto Quarterly Volume 26 [1956-1957] ; 9222 >
-        au < ready ; 1957-1958 ; University of Toronto Quarterly Volume 27 [1957-1958] ; 9221 >
-        au < ready ; 1958-1959 ; University of Toronto Quarterly Volume 28 [1958-1959] ; 9220 >
-        au < ready ; 1959 ; University of Toronto Quarterly Volume 29 [1959] ; 9219 >
-        au < ready ; 1960-1961 ; University of Toronto Quarterly Volume 30 [1960-1961] ; 9196 >
-        au < ready ; 1961-1962 ; University of Toronto Quarterly Volume 31 [1961-1962] ; 9195 >
-        au < ready ; 1962-1963 ; University of Toronto Quarterly Volume 32 [1962-1963] ; 9194 >
-        au < ready ; 1963-1964 ; University of Toronto Quarterly Volume 33 [1963-1964] ; 9193 >
-        au < ready ; 1964-1965 ; University of Toronto Quarterly Volume 34 [1964-1965] ; 9192 >
-        au < ready ; 1965-1966 ; University of Toronto Quarterly Volume 35 [1965-1966] ; 9191 >
-        au < ready ; 1966-1967 ; University of Toronto Quarterly Volume 36 [1966-1967] ; 9190 >
-        au < ready ; 1967-1968 ; University of Toronto Quarterly Volume 37 [1967-1968] ; 9189 >
-        au < ready ; 1968-1969 ; University of Toronto Quarterly Volume 38 [1968-1969] ; 9188 >
-        au < ready ; 1969-1970 ; University of Toronto Quarterly Volume 39 [1969-1970] ; 9187 >
-        au < ready ; 1971-1972 ; University of Toronto Quarterly Volume 41 [1971-1972] ; 9185 >
-        au < ready ; 1972-1973 ; University of Toronto Quarterly Volume 42 [1972-1973] ; 9184 >
-        au < ready ; 1973-1974 ; University of Toronto Quarterly Volume 43 [1973-1974] ; 9183 >
-        au < ready ; 1974-1975 ; University of Toronto Quarterly Volume 44 [1974-1975] ; 9182 >
-        au < ready ; 1975-1976 ; University of Toronto Quarterly Volume 45 [1975-1976] ; 9181 >
-        au < ready ; 1976-1977 ; University of Toronto Quarterly Volume 46 [1976-1977] ; 9180 >
-        au < ready ; 1977-1978 ; University of Toronto Quarterly Volume 47 [1977-1978] ; 9166 >
-        au < ready ; 1978-1979 ; University of Toronto Quarterly Volume 48 [1978-1979] ; 9165 >
-        au < ready ; 1979-1980 ; University of Toronto Quarterly Volume 49 [1979-1980] ; 9164 >
-        au < ready ; 1980-1981 ; University of Toronto Quarterly Volume 50 [1980-1981] ; 9163 >
-        au < ready ; 1981-1982 ; University of Toronto Quarterly Volume 51 [1981-1982] ; 9162 >
-        au < ready ; 1982-1983 ; University of Toronto Quarterly Volume 52 [1982-1983] ; 9161 >
-        au < ready ; 1983-1984 ; University of Toronto Quarterly Volume 53 [1983-1984] ; 9160 >
-        au < ready ; 1984-1985 ; University of Toronto Quarterly Volume 54 [1984-1985] ; 9159 >
-        au < ready ; 1985-1986 ; University of Toronto Quarterly Volume 55 [1985-1986] ; 9158 >
-        au < ready ; 1986-1987 ; University of Toronto Quarterly Volume 56 [1986-1987] ; 9157 >
-        au < ready ; 1987-1988 ; University of Toronto Quarterly Volume 57 [1987-1988] ; 9156 >
-        au < ready ; 1988-1989 ; University of Toronto Quarterly Volume 58 [1988-1989] ; 9155 >
-        au < ready ; 1989-1990 ; University of Toronto Quarterly Volume 59 [1989-1990] ; 9154 >
-        au < ready ; 1990-1991 ; University of Toronto Quarterly Volume 60 [1990-1991] ; 9146 >
-        au < ready ; 1991-1992 ; University of Toronto Quarterly Volume 61 [1991-1992] ; 9145 >
-        au < ready ; 1992-1993 ; University of Toronto Quarterly Volume 62 [1992-1993] ; 9144 >
-        au < ready ; 1993-1994 ; University of Toronto Quarterly Volume 63 [1993-1994] ; 9143 >
-        au < ready ; 1994-1995 ; University of Toronto Quarterly Volume 64 [1994-1995] ; 9142 >
-        au < ready ; 1995-1996 ; University of Toronto Quarterly Volume 65 [1995-1996] ; 9141 >
-        au < ready ; 1996-1997 ; University of Toronto Quarterly Volume 66 [1996-1997] ; 9140 >
-        au < ready ; 1997-1998 ; University of Toronto Quarterly Volume 67 [1997-1998] ; 9139 >
-        au < ready ; 1998-1999 ; University of Toronto Quarterly Volume 68 [1998-1999] ; 9138 >
-        au < ready ; 1999-2000 ; University of Toronto Quarterly Volume 69 [1999-2000] ; 9137 >
-        au < ready ; 2000-2001 ; University of Toronto Quarterly Volume 70 [2000-2001] ; 9136 >
-        au < ready ; 2001-2002 ; University of Toronto Quarterly Volume 71 [2001-2002] ; 9135 >
-        au < ready ; 2002-2003 ; University of Toronto Quarterly Volume 72 [2002-2003] ; 9134 >
-        au < ready ; 2003-2004 ; University of Toronto Quarterly Volume 73 [2003-2004] ; 9133 >
-        au < ready ; 2004-2005 ; University of Toronto Quarterly Volume 74 [2004-2005] ; 2713 >
-        au < ready ; 2006 ; University of Toronto Quarterly Volume 75 [2006] ; 2941 >
-        au < ready ; 2007 ; University of Toronto Quarterly Volume 76 [2007] ; 3289 >
-        au < ready ; 2008 ; University of Toronto Quarterly Volume 77 [2008] ; 3782 >
-        au < ready ; 2009 ; University of Toronto Quarterly Volume 78 [2009] ; 4386 >
+        au < releasing ; 1931-1932 ; University of Toronto Quarterly Volume 1 [1931-1932] ; 9374 >
+        au < releasing ; 1932-1933 ; University of Toronto Quarterly Volume 2 [1932-1933] ; 9373 >
+        au < releasing ; 1933-1934 ; University of Toronto Quarterly Volume 3 [1933-1934] ; 9372 >
+        au < releasing ; 1934-1935 ; University of Toronto Quarterly Volume 4 [1934-1935] ; 9371 >
+        au < releasing ; 1935-1936 ; University of Toronto Quarterly Volume 5 [1935-1936] ; 9370 >
+        au < releasing ; 1936-1937 ; University of Toronto Quarterly Volume 6 [1936-1937] ; 9369 >
+        au < releasing ; 1937-1938 ; University of Toronto Quarterly Volume 7 [1937-1938] ; 9368 >
+        au < releasing ; 1938-1939 ; University of Toronto Quarterly Volume 8 [1938-1939] ; 9367 >
+        au < releasing ; 1939-1940 ; University of Toronto Quarterly Volume 9 [1939-1940] ; 9366 >
+        au < releasing ; 1940-1941 ; University of Toronto Quarterly Volume 10 [1940-1941] ; 9239 >
+        au < releasing ; 1941-1942 ; University of Toronto Quarterly Volume 11 [1941-1942] ; 9238 >
+        au < releasing ; 1942-1943 ; University of Toronto Quarterly Volume 12 [1942-1943] ; 9237 >
+        au < releasing ; 1943-1944 ; University of Toronto Quarterly Volume 13 [1943-1944] ; 9236 >
+        au < releasing ; 1944-1945 ; University of Toronto Quarterly Volume 14 [1944-1945] ; 9235 >
+        au < releasing ; 1945-1946 ; University of Toronto Quarterly Volume 15 [1945-1946] ; 9234 >
+        au < releasing ; 1946-1947 ; University of Toronto Quarterly Volume 16 [1946-1947] ; 9233 >
+        au < releasing ; 1947-1948 ; University of Toronto Quarterly Volume 17 [1947-1948] ; 9232 >
+        au < releasing ; 1948-1949 ; University of Toronto Quarterly Volume 18 [1948-1949] ; 9231 >
+        au < releasing ; 1949-1950 ; University of Toronto Quarterly Volume 19 [1949-1950] ; 9230 >
+        au < releasing ; 1950-1951 ; University of Toronto Quarterly Volume 20 [1950-1951] ; 9228 >
+        au < releasing ; 1951-1952 ; University of Toronto Quarterly Volume 21 [1951-1952] ; 9227 >
+        au < releasing ; 1953-1954 ; University of Toronto Quarterly Volume 23 [1953-1954] ; 9225 >
+        au < releasing ; 1954-1955 ; University of Toronto Quarterly Volume 24 [1954-1955] ; 9224 >
+        au < releasing ; 1955-1956 ; University of Toronto Quarterly Volume 25 [1955-1956] ; 9223 >
+        au < releasing ; 1956-1957 ; University of Toronto Quarterly Volume 26 [1956-1957] ; 9222 >
+        au < releasing ; 1957-1958 ; University of Toronto Quarterly Volume 27 [1957-1958] ; 9221 >
+        au < releasing ; 1958-1959 ; University of Toronto Quarterly Volume 28 [1958-1959] ; 9220 >
+        au < releasing ; 1959 ; University of Toronto Quarterly Volume 29 [1959] ; 9219 >
+        au < releasing ; 1960-1961 ; University of Toronto Quarterly Volume 30 [1960-1961] ; 9196 >
+        au < releasing ; 1961-1962 ; University of Toronto Quarterly Volume 31 [1961-1962] ; 9195 >
+        au < releasing ; 1962-1963 ; University of Toronto Quarterly Volume 32 [1962-1963] ; 9194 >
+        au < releasing ; 1963-1964 ; University of Toronto Quarterly Volume 33 [1963-1964] ; 9193 >
+        au < releasing ; 1964-1965 ; University of Toronto Quarterly Volume 34 [1964-1965] ; 9192 >
+        au < releasing ; 1965-1966 ; University of Toronto Quarterly Volume 35 [1965-1966] ; 9191 >
+        au < releasing ; 1966-1967 ; University of Toronto Quarterly Volume 36 [1966-1967] ; 9190 >
+        au < releasing ; 1967-1968 ; University of Toronto Quarterly Volume 37 [1967-1968] ; 9189 >
+        au < releasing ; 1968-1969 ; University of Toronto Quarterly Volume 38 [1968-1969] ; 9188 >
+        au < releasing ; 1969-1970 ; University of Toronto Quarterly Volume 39 [1969-1970] ; 9187 >
+        au < releasing ; 1971-1972 ; University of Toronto Quarterly Volume 41 [1971-1972] ; 9185 >
+        au < releasing ; 1972-1973 ; University of Toronto Quarterly Volume 42 [1972-1973] ; 9184 >
+        au < releasing ; 1973-1974 ; University of Toronto Quarterly Volume 43 [1973-1974] ; 9183 >
+        au < releasing ; 1974-1975 ; University of Toronto Quarterly Volume 44 [1974-1975] ; 9182 >
+        au < releasing ; 1975-1976 ; University of Toronto Quarterly Volume 45 [1975-1976] ; 9181 >
+        au < releasing ; 1976-1977 ; University of Toronto Quarterly Volume 46 [1976-1977] ; 9180 >
+        au < releasing ; 1977-1978 ; University of Toronto Quarterly Volume 47 [1977-1978] ; 9166 >
+        au < releasing ; 1978-1979 ; University of Toronto Quarterly Volume 48 [1978-1979] ; 9165 >
+        au < releasing ; 1979-1980 ; University of Toronto Quarterly Volume 49 [1979-1980] ; 9164 >
+        au < releasing ; 1980-1981 ; University of Toronto Quarterly Volume 50 [1980-1981] ; 9163 >
+        au < releasing ; 1981-1982 ; University of Toronto Quarterly Volume 51 [1981-1982] ; 9162 >
+        au < releasing ; 1982-1983 ; University of Toronto Quarterly Volume 52 [1982-1983] ; 9161 >
+        au < releasing ; 1983-1984 ; University of Toronto Quarterly Volume 53 [1983-1984] ; 9160 >
+        au < releasing ; 1984-1985 ; University of Toronto Quarterly Volume 54 [1984-1985] ; 9159 >
+        au < releasing ; 1985-1986 ; University of Toronto Quarterly Volume 55 [1985-1986] ; 9158 >
+        au < releasing ; 1986-1987 ; University of Toronto Quarterly Volume 56 [1986-1987] ; 9157 >
+        au < releasing ; 1987-1988 ; University of Toronto Quarterly Volume 57 [1987-1988] ; 9156 >
+        au < releasing ; 1988-1989 ; University of Toronto Quarterly Volume 58 [1988-1989] ; 9155 >
+        au < releasing ; 1989-1990 ; University of Toronto Quarterly Volume 59 [1989-1990] ; 9154 >
+        au < releasing ; 1990-1991 ; University of Toronto Quarterly Volume 60 [1990-1991] ; 9146 >
+        au < releasing ; 1991-1992 ; University of Toronto Quarterly Volume 61 [1991-1992] ; 9145 >
+        au < releasing ; 1992-1993 ; University of Toronto Quarterly Volume 62 [1992-1993] ; 9144 >
+        au < releasing ; 1993-1994 ; University of Toronto Quarterly Volume 63 [1993-1994] ; 9143 >
+        au < releasing ; 1994-1995 ; University of Toronto Quarterly Volume 64 [1994-1995] ; 9142 >
+        au < releasing ; 1995-1996 ; University of Toronto Quarterly Volume 65 [1995-1996] ; 9141 >
+        au < releasing ; 1996-1997 ; University of Toronto Quarterly Volume 66 [1996-1997] ; 9140 >
+        au < releasing ; 1997-1998 ; University of Toronto Quarterly Volume 67 [1997-1998] ; 9139 >
+        au < releasing ; 1998-1999 ; University of Toronto Quarterly Volume 68 [1998-1999] ; 9138 >
+        au < releasing ; 1999-2000 ; University of Toronto Quarterly Volume 69 [1999-2000] ; 9137 >
+        au < releasing ; 2000-2001 ; University of Toronto Quarterly Volume 70 [2000-2001] ; 9136 >
+        au < releasing ; 2001-2002 ; University of Toronto Quarterly Volume 71 [2001-2002] ; 9135 >
+        au < releasing ; 2002-2003 ; University of Toronto Quarterly Volume 72 [2002-2003] ; 9134 >
+        au < releasing ; 2003-2004 ; University of Toronto Quarterly Volume 73 [2003-2004] ; 9133 >
+        au < releasing ; 2004-2005 ; University of Toronto Quarterly Volume 74 [2004-2005] ; 2713 >
+        au < releasing ; 2006 ; University of Toronto Quarterly Volume 75 [2006] ; 2941 >
+        au < releasing ; 2007 ; University of Toronto Quarterly Volume 76 [2007] ; 3289 >
+        au < releasing ; 2008 ; University of Toronto Quarterly Volume 77 [2008] ; 3782 >
+        au < releasing ; 2009 ; University of Toronto Quarterly Volume 78 [2009] ; 4386 >
         au < released ; 2010 ; University of Toronto Quarterly Volume 79 [2010] ; 6414 >
         au < released ; 2011 ; University of Toronto Quarterly Volume 80 [2011] ; 6832 >
         au < released ; 2012 ; University of Toronto Quarterly Volume 81 [2012] ; 8014 >
@@ -1221,7 +1221,7 @@
         au < released ; 2015 ; University of Toronto Quarterly Volume 84 [2015] ; 10523 >
         au < released ; 2016 ; University of Toronto Quarterly Volume 85 [2016] ; 10987 >
         au < released ; 2017 ; University of Toronto Quarterly Volume 86 [2017] ; 12365 >
-        au < ready ; 2018 ; University of Toronto Quarterly Volume 87 [2018] ; 13340 >
+        au < releasing ; 2018 ; University of Toronto Quarterly Volume 87 [2018] ; 13340 >
 
     }
 

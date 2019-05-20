@@ -17,26 +17,26 @@
 
       attr[journal_id] = 512
 
-        au < ready ; 1990 ; Hebrew Studies Volume 31 [1990] ; 6603 >
-        au < ready ; 1991 ; Hebrew Studies Volume 32 [1991] ; 6602 >
-        au < ready ; 1992 ; Hebrew Studies Volume 33 [1992] ; 6601 >
-        au < ready ; 1993 ; Hebrew Studies Volume 34 [1993] ; 6600 >
-        au < ready ; 1994 ; Hebrew Studies Volume 35 [1994] ; 6599 >
-        au < ready ; 1995 ; Hebrew Studies Volume 36 [1995] ; 6598 >
+        au < releasing ; 1990 ; Hebrew Studies Volume 31 [1990] ; 6603 >
+        au < releasing ; 1991 ; Hebrew Studies Volume 32 [1991] ; 6602 >
+        au < releasing ; 1992 ; Hebrew Studies Volume 33 [1992] ; 6601 >
+        au < releasing ; 1993 ; Hebrew Studies Volume 34 [1993] ; 6600 >
+        au < releasing ; 1994 ; Hebrew Studies Volume 35 [1994] ; 6599 >
+        au < releasing ; 1995 ; Hebrew Studies Volume 36 [1995] ; 6598 >
         au < testing ; 1996 ; Hebrew Studies Volume 37 [1996] ; 6597 >
-        au < ready ; 1997 ; Hebrew Studies Volume 38 [1997] ; 6596 >
-        au < ready ; 1998 ; Hebrew Studies Volume 39 [1998] ; 6595 >
-        au < ready ; 1999 ; Hebrew Studies Volume 40 [1999] ; 6594 >
-        au < ready ; 2000 ; Hebrew Studies Volume 41 [2000] ; 6593 >
-        au < ready ; 2001 ; Hebrew Studies Volume 42 [2001] ; 6584 >
-        au < ready ; 2002 ; Hebrew Studies Volume 43 [2002] ; 6585 >
+        au < releasing ; 1997 ; Hebrew Studies Volume 38 [1997] ; 6596 >
+        au < releasing ; 1998 ; Hebrew Studies Volume 39 [1998] ; 6595 >
+        au < releasing ; 1999 ; Hebrew Studies Volume 40 [1999] ; 6594 >
+        au < releasing ; 2000 ; Hebrew Studies Volume 41 [2000] ; 6593 >
+        au < releasing ; 2001 ; Hebrew Studies Volume 42 [2001] ; 6584 >
+        au < releasing ; 2002 ; Hebrew Studies Volume 43 [2002] ; 6585 >
         au < testing ; 2003 ; Hebrew Studies Volume 44 [2003] ; 6586 >
-        au < ready ; 2004 ; Hebrew Studies Volume 45 [2004] ; 6587 >
-        au < ready ; 2005 ; Hebrew Studies Volume 46 [2005] ; 6588 >
+        au < releasing ; 2004 ; Hebrew Studies Volume 45 [2004] ; 6587 >
+        au < releasing ; 2005 ; Hebrew Studies Volume 46 [2005] ; 6588 >
         au < testing ; 2006 ; Hebrew Studies Volume 47 [2006] ; 6589 >
-        au < ready ; 2007 ; Hebrew Studies Volume 48 [2007] ; 6590 >
-        au < ready ; 2008 ; Hebrew Studies Volume 49 [2008] ; 6591 >
-        au < ready ; 2009 ; Hebrew Studies Volume 50 [2009] ; 6592 >
+        au < releasing ; 2007 ; Hebrew Studies Volume 48 [2007] ; 6590 >
+        au < releasing ; 2008 ; Hebrew Studies Volume 49 [2008] ; 6591 >
+        au < releasing ; 2009 ; Hebrew Studies Volume 50 [2009] ; 6592 >
         au < released ; 2010 ; Hebrew Studies Volume 51 [2010] ; 6567 >
         au < released ; 2011 ; Hebrew Studies Volume 52 [2011] ; 7831 >
         au < released ; 2012 ; Hebrew Studies Volume 53 [2012] ; 8524 >
@@ -44,8 +44,8 @@
         au < released ; 2014 ; Hebrew Studies Volume 55 [2014] ; 10255 >
         au < released ; 2015 ; Hebrew Studies Volume 56 [2015] ; 10850 >
         au < released ; 2016 ; Hebrew Studies Volume 57 [2016] ; 12225 >
-        au < ready ; 2017 ; Hebrew Studies Volume 58 [2017] ; 13035 >
-        au < ready ; 2018 ; Hebrew Studies Volume 59 [2018] ; 13726 >
+        au < releasing ; 2017 ; Hebrew Studies Volume 58 [2017] ; 13035 >
+        au < releasing ; 2018 ; Hebrew Studies Volume 59 [2018] ; 13726 >
 
     }
 
