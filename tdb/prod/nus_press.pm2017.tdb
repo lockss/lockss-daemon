@@ -44,11 +44,11 @@
 
         au < testing ; 2003 ; China: An International Journal Volume 1 [2003] ; 2835 >
         au < ready ; 2004 ; China: An International Journal Volume 2 [2004] ; 1775 >
-        au < testing ; 2005 ; China: An International Journal Volume 3 [2005] ; 2654 >
+        au < ready ; 2005 ; China: An International Journal Volume 3 [2005] ; 2654 >
         au < testing ; 2006 ; China: An International Journal Volume 4 [2006] ; 2939 >
-        au < testing ; 2007 ; China: An International Journal Volume 5 [2007] ; 3257 >
-        au < testing ; 2008 ; China: An International Journal Volume 6 [2008] ; 3692 >
-        au < testing ; 2009 ; China: An International Journal Volume 7 [2009] ; 4219 >
+        au < ready ; 2007 ; China: An International Journal Volume 5 [2007] ; 3257 >
+        au < ready ; 2008 ; China: An International Journal Volume 6 [2008] ; 3692 >
+        au < ready ; 2009 ; China: An International Journal Volume 7 [2009] ; 4219 >
         au < released ; 2010 ; China: An International Journal Volume 8 [2010] ; 5925 >
         au < released ; 2011 ; China: An International Journal Volume 9 [2011] ; 6943 >
         au < released ; 2012 ; China: An International Journal Volume 10 [2012] ; 8234 >
@@ -73,9 +73,9 @@
 
       attr[journal_id] = 331
 
-        au < testing ; 2005 ; Journal of Chinese Overseas Volume 1 [2005] ; 3368 >
+        au < ready ; 2005 ; Journal of Chinese Overseas Volume 1 [2005] ; 3368 >
         au < ready ; 2006 ; Journal of Chinese Overseas Volume 2 [2006] ; 3085 >
-        au < testing ; 2007 ; Journal of Chinese Overseas Volume 3 [2007] ; 3382 >
+        au < ready ; 2007 ; Journal of Chinese Overseas Volume 3 [2007] ; 3382 >
         au < ready ; 2008 ; Journal of Chinese Overseas Volume 4 [2008] ; 3758 >
 
     }
