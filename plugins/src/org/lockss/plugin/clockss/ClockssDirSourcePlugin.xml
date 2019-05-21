@@ -10,12 +10,12 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>1-L2</string>
   </entry>
   <entry>
-    <!-- support for guessing at encoding, setting provider -->
+    <!-- support for LOCKSS2.0 versioning -->
     <string>required_daemon_version</string>
-    <string>1.67.0</string>
+    <string>1.75.0</string>
   </entry>  
   <entry>
     <string>plugin_name</string>
