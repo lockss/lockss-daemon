@@ -1,0 +1,19 @@
+Court website is handled differently from govinfo by the following means:
+
+      sitemap: https://www.govinfo.gov/sitemap/USCOURTS/USCOURTS_akd_2014_sitemap.xml
+
+      au < manifest ; 2014 ; USCOURTS_akd 2014 ; USCOURTS ; akd ; 2014 >
+      https://www.govinfo.gov/sitemap/USCOURTS/USCOURTS_akd_2014_sitemap.xml
+
+      https://www.govinfo.gov/app/details/USCOURTS-akd-3_08-cv-00162
+      https://www.govinfo.gov/content/pkg/USCOURTS-akd-1_06-cv-00009.zip
+      https://www.govinfo.gov/metadata/pkg/USCOURTS-akd-1_06-cv-00009/mods.xml
+      https://www.govinfo.gov/metadata/pkg/USCOURTS-akd-1_06-cv-00009/premis.xml
+
+
+Let's use count_id("akd") as an example:
+    1.  The sitemap uses "_" between "USCOURTS" and "akd"
+    2.  Other urls uses "-" between "USCOURTS" and "akd"
+    3.  It does not provide direct access to its .pdf file, it zipped .pdf and some other content into the .zip
+        and zipped the content on nightly basis. An email is sent to contact them to see whether they will provide
+        direct access to .pdf in the future

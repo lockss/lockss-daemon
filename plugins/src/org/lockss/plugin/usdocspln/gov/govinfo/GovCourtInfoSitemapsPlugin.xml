@@ -1,0 +1,210 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>testing</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.usdocspln.gov.govinfo.GovCourtInfoSitemapsPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <!-- uses functors like url_host() -->
+    <string>required_daemon_version</string>
+    <string>1.68.0</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>GovCourtInfo Sitemaps Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>collection_id</key>
+        <displayName>Collection Identifier</displayName>
+        <description>A short code identifying the top-level collection, e.g. FR for the Federal Register. Case-sensitive.</description>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>court_id</key>
+        <displayName>Court ID</displayName>
+        <description>Court Identifier</description>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"GovCourtInfo Sitemaps Plugin, Base URL %s, Collection ID %s, Year %d", base_url, collection_id, year</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+      <!--https://www.govinfo.gov/sitemap/USCOURTS/USCOURTS_akd_2014_sitemap.xml-->
+      <string>"%ssitemap/USCOURTS/%s_%s_%d_sitemap.xml", base_url, collection_id, court_id, year</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <!--
+      implicit < status ; year ; name ; param[collection_id] ; param[court_id] ; param[year] >
+      au < manifest ; 2014 ; USCOURTS_akd 2014 ; USCOURTS ; akd ; 2014 >
+      https://www.govinfo.gov/sitemap/USCOURTS/USCOURTS_akd_2014_sitemap.xml
+      https://www.govinfo.gov/app/details/USCOURTS-akd-3_08-cv-00162
+      https://www.govinfo.gov/content/pkg/USCOURTS-akd-1_06-cv-00009.zip
+      https://www.govinfo.gov/metadata/pkg/USCOURTS-akd-1_06-cv-00009/mods.xml
+      https://www.govinfo.gov/metadata/pkg/USCOURTS-akd-1_06-cv-00009/premis.xml
+      -->
+      <string>1,"^https://%s/(content|metadata)/pkg/%s-%s", url_host(base_url), collection_id, court_id</string>
+      <string>1,"^https://%s/app/details/%s-%s", url_host(base_url), collection_id, court_id</string>
+      <string>1,"^https://maxcdn\.bootstrapcdn\.com/.*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)"</string>
+      <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)", url_host(base_url)</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"^%s^metadata/pkg/[^/]+/[^/]+\.xml$", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>plugin_fetch_rate_limiter_source</string>
+    <string>key:GPO</string>
+  </entry>
+  <entry>
+    <string>application/xml_link_extractor_factory</string>
+    <string>org.lockss.plugin.usdocspln.gov.govinfo.GovInfoSitemapsLinkExtractorFactory</string>
+  </entry>
+  <entry>
+    <string>text/xml_link_extractor_factory</string>
+    <string>org.lockss.plugin.usdocspln.gov.govinfo.GovInfoSitemapsLinkExtractorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.usdocspln.gov.govinfo.GovCourtInfoSitemapsArticleIteratorFactory</string>
+  </entry>
+    <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.usdocspln.gov.govinfo.GovCourtInfoSitemapsArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>au_crawl_depth</string>
+    <int>99</int>
+  </entry>
+  <entry>
+    <string>au_rate_limiter_info</string>
+    <org.lockss.plugin.RateLimiterInfo>
+      <!-- this very next rate is ignored -->
+      <rate>1/3s</rate>
+      <cond>
+        <!-- pause crawls Monday through Friday 9am through 9pm Eastern, but a "heartbeat" once per hour is allowed -->
+        <entry>
+          <org.lockss.daemon.CrawlWindows-Daily>
+            <!--<from>9:00</from>
+            <to>21:00</to>-->
+            <from>1:00</from>
+            <to>8:00</to>
+            <timeZoneId>US/Eastern</timeZoneId>
+            <!--<daysOfWeek>4;5;6</daysOfWeek>-->
+            <daysOfWeek>1</daysOfWeek>
+          </org.lockss.daemon.CrawlWindows-Daily>
+          <org.lockss.plugin.RateLimiterInfo>
+            <rate>1/1h</rate>
+          </org.lockss.plugin.RateLimiterInfo>
+        </entry>
+        <!-- pause crawls Sunday 2am through 10am Eastern, but a "heartbeat" once per hour is allowed -->
+        <entry>
+          <org.lockss.daemon.CrawlWindows-Daily>
+            <from>2:00</from>
+            <to>10:00</to>
+            <timeZoneId>US/Eastern</timeZoneId>
+            <daysOfWeek>1</daysOfWeek>
+          </org.lockss.daemon.CrawlWindows-Daily>
+          <org.lockss.plugin.RateLimiterInfo>
+            <rate>1/1h</rate>
+          </org.lockss.plugin.RateLimiterInfo>
+        </entry>
+        <!-- the rest of the time, 1/3s -->
+        <entry>
+          <org.lockss.daemon.CrawlWindows-Always />
+          <org.lockss.plugin.RateLimiterInfo>
+            <rate>1/3s</rate>
+          </org.lockss.plugin.RateLimiterInfo>
+        </entry>
+      </cond>
+    </org.lockss.plugin.RateLimiterInfo>
+  </entry>
+  <entry>
+    <string>au_repair_from_peer_if_missing_url_pattern</string>
+    <string>"/pkg/(%s[^/]+)/(pdf|xml)/\1[^/]+\.\2$", collection_id</string>
+    <string>^https://maxcdn\.bootstrapcdn\.com/.*\.css$</string>
+    <string>/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)(\?Fv=[0-9.]+)?$</string>
+  </entry>
+  <entry>
+    <!-- these will not count towards poll results but will replicate from peer if above -->
+    <string>au_url_poll_result_weight</string>
+    <list>
+      <string>"/pkg/(%s[^/]+)/(pdf|xml)/\1[^/]+\.\2$", collection_id, 0</string>
+      <string>^https://maxcdn\.bootstrapcdn\.com/.*\.css$, 0</string>
+      <string>/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)(\?v=[0-9.]+)?$, 0</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_permitted_host_pattern</string>
+    <list>
+      <!--
+      https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css
+      https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css
+      -->
+      <string>"maxcdn\.bootstrapcdn\.com"</string>
+    </list>
+  </entry>
+</map>

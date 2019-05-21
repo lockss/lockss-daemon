@@ -13,6 +13,7 @@
   #https://www.govinfo.gov/sitemap/USCOURTS/USCOURTS_akd_2014_sitemap.xml
   
   rights = openaccess
+  #plugin = org.lockss.plugin.usdocspln.gov.govinfo.GovCourtInfoSitemapsPlugin
   plugin = org.lockss.plugin.usdocspln.gov.govinfo.GovInfoSitemapsPlugin
   param[base_url] = https://www.govinfo.gov/
   implicit < status ; year ; name ; param[collection_id] ; param[year] >
