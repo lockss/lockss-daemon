@@ -59,9 +59,7 @@
     >
     comment[0] = ceased publication in 1999
     param[collection_id] = CZIC
-
-
-    # stopped publication in 1999
+    # stopped publication in 1999. See https://www.govinfo.gov/sitemap/CZIC_sitemap_index.xml
 
   }
 
@@ -78,20 +76,6 @@
 
   }
 
-
-  {
-
-    title <
-      name = Commerce Business Daily
-
-      >
-
-   param[collection_id] = CDB
-
-
-       au < exists ; 1996 ; Code of Federal Regulations 1996 ;  1996 >
-
-  }
 
   {
 
@@ -195,17 +179,24 @@
     comment[0] = published from 1971 to 2006
 
     {
-    #This material included in the collection "GPO"
+    #This material now included in the collection "GPO"
     param[collection_id] = GPO-CRECB
-
-
     }
     
     {
     param[collection_id] = CRECB
 
 
-    au < notReady ; 2005 ; Congressional Record (Bound) 2005 ;  2005 > #continuously fails testing.
+    au < exists ; 2005 ; Congressional Record (Bound) 2005 ;  2005 > #continuously fails testing on old platform.
+    au < exists ; 2007 ; Congressional Record (Bound) 2007 ;  2007 > 
+    au < exists ; 2008 ; Congressional Record (Bound) 2008 ;  2008 > 
+    au < exists ; 2009 ; Congressional Record (Bound) 2009 ;  2009 > 
+    au < exists ; 2010 ; Congressional Record (Bound) 2010 ;  2010 > 
+    au < exists ; 2011 ; Congressional Record (Bound) 2011 ;  2011 > 
+    au < exists ; 2012 ; Congressional Record (Bound) 2012 ;  2012 > 
+    au < exists ; 2013 ; Congressional Record (Bound) 2013 ;  2007 > 
+    au < exists ; 2014 ; Congressional Record (Bound) 2014 ;  2014 > 
+    au < exists ; 2015 ; Congressional Record (Bound) 2015 ;  2015 > 
 
     }
   }
@@ -283,8 +274,6 @@
     >
     comment[0] = published from 1995 to 2004
     param[collection_id] = ERIC
-
-
 
   }
 
@@ -470,7 +459,7 @@
 
 
     au < manifest ; 2018 ; United States Government Manual 2018 ;  2018 >
-    au < manifest ; 2019 ; United States Government Manual 2019 ;  2019 >
+    au < expected ; 2019 ; United States Government Manual 2019 ;  2019 >
 
   }
 
@@ -483,7 +472,7 @@
     param[collection_id] = STATUTE
 
 
-    au < expected ; 2013 ; United States Statutes at Large 2013 ;  2013 >
+    au < manifest ; 2013 ; United States Statutes at Large 2013 ;  2013 >
 
   }
 
