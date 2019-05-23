@@ -22,7 +22,7 @@
 
     param[collection_id] = GOVPUB
 
-    au < manifest ; 2019 ; Account of the Receipts and Expenditures of the United States 2019 ;  2019 >
+    au < manifest ; 2019 ; Account of the Receipts and Expenditures of the United States 2019 ; 2019 >
 
   }
 
@@ -34,7 +34,7 @@
 
     param[collection_id] = GPO
 
-    au < manifest ; 2019 ; Additional Government Publications 2019 ;  2019 >
+    au < manifest ; 2019 ; Additional Government Publications 2019 ; 2019 >
 
   }
 
@@ -47,7 +47,7 @@
     param[collection_id] = BUDGET
 
 
-    au < manifest ; 2019 ; Budget of the United States Government 2019 ;  2019 >
+    au < manifest ; 2019 ; Budget of the United States Government 2019 ; 2019 >
 
 
   }
@@ -72,7 +72,7 @@
     param[collection_id] = CFR
 
 
-    au < manifest ; 2019 ; Code of Federal Regulations 2019 ;  2019 >
+    au < manifest ; 2019 ; Code of Federal Regulations 2019 ; 2019 >
 
   }
 
@@ -89,7 +89,7 @@
     param[collection_id] = BILLS
 
  
-    au < manifest ; 2019 ; Congressional Bills 2019 ;  2019 >
+    au < manifest ; 2019 ; Congressional Bills 2019 ; 2019 >
 
   }
 
@@ -102,7 +102,7 @@
     param[collection_id] = CCAL
 
  
-    au < manifest ; 2019 ; Congressional Calendars 2019 ;  2019 >
+    au < manifest ; 2019 ; Congressional Calendars 2019 ; 2019 >
 
   }
 
@@ -115,7 +115,7 @@
     param[collection_id] = CPRT
 
 
-    au < manifest ; 2019 ; Congressional Committee Prints 2019 ;  2019 >
+    au < manifest ; 2019 ; Congressional Committee Prints 2019 ; 2019 >
 
   }
 
@@ -128,7 +128,7 @@
     param[collection_id] = CDIR
 
 
-    au < expected ; 2017 ; Congressional Directory 2017 ;  2017 >
+    au < expected ; 2017 ; Congressional Directory 2017 ; 2017 >
 
   }
 
@@ -141,7 +141,7 @@
     param[collection_id] = CDOC
 
 
-    au < manifest ; 2019 ; Congressional Documents 2019 ;  2019 >
+    au < manifest ; 2019 ; Congressional Documents 2019 ; 2019 >
 
   }
 
@@ -154,7 +154,7 @@
     param[collection_id] = CHRG
 
  
-    au < manifest ; 2019 ; Congressional Hearings 2019 ;  2019 >
+    au < manifest ; 2019 ; Congressional Hearings 2019 ; 2019 >
 
   }
 
@@ -167,7 +167,7 @@
     param[collection_id] = CREC
 
 
-    au < manifest ; 2019 ; Congressional Record 2019 ;  2019 >
+    au < manifest ; 2019 ; Congressional Record 2019 ; 2019 >
 
   }
 
@@ -187,16 +187,16 @@
     param[collection_id] = CRECB
 
 
-    au < exists ; 2005 ; Congressional Record (Bound) 2005 ;  2005 > #continuously fails testing on old platform.
-    au < exists ; 2007 ; Congressional Record (Bound) 2007 ;  2007 > 
-    au < exists ; 2008 ; Congressional Record (Bound) 2008 ;  2008 > 
-    au < exists ; 2009 ; Congressional Record (Bound) 2009 ;  2009 > 
-    au < exists ; 2010 ; Congressional Record (Bound) 2010 ;  2010 > 
-    au < exists ; 2011 ; Congressional Record (Bound) 2011 ;  2011 > 
-    au < exists ; 2012 ; Congressional Record (Bound) 2012 ;  2012 > 
-    au < exists ; 2013 ; Congressional Record (Bound) 2013 ;  2007 > 
-    au < exists ; 2014 ; Congressional Record (Bound) 2014 ;  2014 > 
-    au < exists ; 2015 ; Congressional Record (Bound) 2015 ;  2015 > 
+    au < manifest ; 2005 ; Congressional Record (Bound) 2005 ; 2005 > #continuously fails testing on old platform.
+    au < manifest ; 2007 ; Congressional Record (Bound) 2007 ; 2007 > 
+    au < manifest ; 2008 ; Congressional Record (Bound) 2008 ; 2008 > 
+    au < manifest ; 2009 ; Congressional Record (Bound) 2009 ; 2009 > 
+    au < manifest ; 2010 ; Congressional Record (Bound) 2010 ; 2010 > 
+    au < manifest ; 2011 ; Congressional Record (Bound) 2011 ; 2011 > 
+    au < manifest ; 2012 ; Congressional Record (Bound) 2012 ; 2012 > 
+    au < exists ; 2013 ; Congressional Record (Bound) 2013 ; 2013 > 
+    au < manifest ; 2014 ; Congressional Record (Bound) 2014 ; 2014 > 
+    au < manifest ; 2015 ; Congressional Record (Bound) 2015 ; 2015 > 
 
     }
   }
@@ -210,7 +210,7 @@
     param[collection_id] = CRI
 
 
-    au < manifest ; 2019 ; Congressional Record Index 2019 ;  2019 >
+    au < manifest ; 2019 ; Congressional Record Index 2019 ; 2019 >
 
   }
 
@@ -223,7 +223,7 @@
     param[collection_id] = CRPT
 
 
-    au < manifest ; 2019 ; Congressional Reports 2019 ;  2019 >
+    au < manifest ; 2019 ; Congressional Reports 2019 ; 2019 >
 
   }
 
@@ -236,8 +236,8 @@
     param[collection_id] = DCPD
 
 
-    au < ready ; 2018 ; Daily Compilation of Presidential Documents 2018 ;  2018 >
-    au < manifest ; 2019 ; Daily Compilation of Presidential Documents 2019 ;  2019 >
+    au < ready ; 2018 ; Daily Compilation of Presidential Documents 2018 ; 2018 >
+    au < manifest ; 2019 ; Daily Compilation of Presidential Documents 2019 ; 2019 >
 
   }
 
@@ -250,7 +250,7 @@
     param[collection_id] = ECONI
 
 
-    au < manifest ; 2019 ; Economic Indicators 2019 ;  2019 >
+    au < manifest ; 2019 ; Economic Indicators 2019 ; 2019 >
 
   }
 
@@ -263,7 +263,7 @@
     param[collection_id] = ERP
 
 
-    au < manifest ; 2019 ; Economic Report of the President 2019 ;  2019 >
+    au < manifest ; 2019 ; Economic Report of the President 2019 ; 2019 >
 
   }
 
@@ -274,7 +274,6 @@
     >
     comment[0] = published from 1995 to 2004
     param[collection_id] = ERIC
-
   }
 
   {
@@ -285,8 +284,7 @@
 
     param[collection_id] = FR
 
-
-    au < manifest ; 2019 ; Federal Register 2019 ;  2019 >
+    au < manifest ; 2019 ; Federal Register 2019 ; 2019 >
 
   }
 
@@ -298,8 +296,6 @@
     comment[0] = published from 1994 to 2008
     param[collection_id] = GAOREPORTS
 
-
-
   }
 
   {
@@ -310,8 +306,7 @@
 
     param[collection_id] = HOB
 
-
-    au < manifest ; 2019 ; History of Bills 2019 ;  2019 >
+    au < manifest ; 2019 ; History of Bills 2019 ; 2019 >
 
   }
 
@@ -324,9 +319,8 @@
     param[collection_id] = HMAN
 
 
-    au < expected ; 2014 ; House Rules and Manual 2014 ;  2014 >
-
-    au < expected ; 2016 ; House Rules and Manual 2016 ;  2016 >
+    au < expected ; 2014 ; House Rules and Manual 2014 ; 2014 >
+    au < expected ; 2016 ; House Rules and Manual 2016 ; 2016 >
 
   }
 
@@ -338,9 +332,6 @@
     comment[0] = published from 1992 to 1999
     param[collection_id] = HJOURNAL
 
-
-
-
   }
 
   {
@@ -351,8 +342,7 @@
 
     param[collection_id] = LSA
 
-
-    au < manifest ; 2019 ; List of CFR Sections Affected 2019 ;  2019 >
+    au < manifest ; 2019 ; List of CFR Sections Affected 2019 ; 2019 >
 
   }
 
@@ -364,8 +354,12 @@
     comment[0] = published from 1995 to 2005
     param[collection_id] = PAI
 
-
-    au < expected ; 2014 ; Privacy Act Issuances 2014 ;  2014 >
+    au < exists ; 2007 ; Privacy Act Issuances 2007 ; https://www.gpo.gov/ ; 2007 >
+    au < exists ; 2009 ; Privacy Act Issuances 2009 ; https://www.gpo.gov/ ; 2009 >
+    au < exists ; 2011 ; Privacy Act Issuances 2011 ; https://www.gpo.gov/ ; 2011 >
+    au < doNotProcess ; 2013 ; Privacy Act Issuances 2013 ; https://www.gpo.gov/ ; 2013 >
+    au < exists ; 2015 ; Privacy Act Issuances 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < exists ; 2017 ; Privacy Act Issuances 2017 ; https://www.gpo.gov/ ; 2017 >
 
   }
 
@@ -377,8 +371,7 @@
 
     param[collection_id] = PLAW
 
-
-    au < manifest ; 2019 ; Public and Private Laws 2019 ;  2019 >
+    au < manifest ; 2019 ; Public and Private Laws 2019 ; 2019 >
 
   }
 
@@ -387,9 +380,10 @@
     title <
       name = Public Papers of the Presidents of the United States
     >
-    comment[0] = published from 1991 to 2006 and 2009
+    comment[0] = published from 1991 to 2013
     param[collection_id] = PPP
 
+    au < exists ; 2013 ; Public Papers of the Presidents of the United States 2013 ; 2013 >
 
   }
 
@@ -400,8 +394,6 @@
     >
 
     param[collection_id] = SMAN
-
-
 
   }
 
@@ -415,7 +407,7 @@
         param[collection_id] = SCD
 
 
-    au < exists ; 1937 ; Supreme Court Decisions 1937 ;  1937 >
+    au < exists ; 1937 ; Supreme Court Decisions 1937 ; 1937 >
 
     }
 
@@ -427,7 +419,10 @@
 
     param[collection_id] = USCODE
 
-
+    au < exists ; 2014 ; United States Code 2014 ; 2014 >
+    au < exists ; 2015 ; United States Code 2015 ; 2015 >
+    au < exists ; 2016 ; United States Code 2016 ; 2016 >
+    au < exists ; 2017 ; United States Code 2017 ; 2017 >
 
   }
 
@@ -438,14 +433,13 @@
 
     param[collection_id] = USCOURTS
 
-
-    au < doNotProcess ; 2013 ; United States Courts 2013 ;  2013 >
-    au < doNotProcess ; 2014 ; United States Courts 2014 ;  2014 >
-    au < doNotProcess ; 2015 ; United States Courts 2015 ;  2015 >
-    au < doNotProcess ; 2016 ; United States Courts 2016 ;  2016 >
-    au < doNotProcess ; 2017 ; United States Courts 2017 ;  2017 >
-    au < doNotProcess ; 2018 ; United States Courts 2018 ;  2018 >
-    au < doNotProcess ; 2019 ; United States Courts 2019 ;  2019 >
+    au < doNotProcess ; 2013 ; United States Courts 2013 ; 2013 >
+    au < doNotProcess ; 2014 ; United States Courts 2014 ; 2014 >
+    au < doNotProcess ; 2015 ; United States Courts 2015 ; 2015 >
+    au < doNotProcess ; 2016 ; United States Courts 2016 ; 2016 >
+    au < doNotProcess ; 2017 ; United States Courts 2017 ; 2017 >
+    au < doNotProcess ; 2018 ; United States Courts 2018 ; 2018 >
+    au < doNotProcess ; 2019 ; United States Courts 2019 ; 2019 >
 
   }
 
@@ -457,9 +451,8 @@
 
     param[collection_id] = GOVMAN
 
-
-    au < manifest ; 2018 ; United States Government Manual 2018 ;  2018 >
-    au < expected ; 2019 ; United States Government Manual 2019 ;  2019 >
+    au < manifest ; 2018 ; United States Government Manual 2018 ; 2018 >
+    au < expected ; 2019 ; United States Government Manual 2019 ; 2019 >
 
   }
 
@@ -472,7 +465,7 @@
     param[collection_id] = STATUTE
 
 
-    au < manifest ; 2013 ; United States Statutes at Large 2013 ;  2013 >
+    au < manifest ; 2013 ; United States Statutes at Large 2013 ; 2013 >
 
   }
 
@@ -483,9 +476,7 @@
      >
 
     param[collection_id] = WCPD
-
-
-    au < expected ; 2010 ; Weekly Compilation of Presidential Documents 2010 ;  2010 >
+    #published 1993-2009
 
   }
 

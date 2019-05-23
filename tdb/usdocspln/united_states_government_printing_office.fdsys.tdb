@@ -1160,9 +1160,12 @@
     au < down ; 2001 ; Privacy Act Issuances 2001 ; http://www.gpo.gov/ ; 2001 >
     au < down ; 2003 ; Privacy Act Issuances 2003 ; http://www.gpo.gov/ ; 2003 >
     au < down ; 2005 ; Privacy Act Issuances 2005 ; http://www.gpo.gov/ ; 2005 >
-
+    au < doNotProcess ; 2007 ; Privacy Act Issuances 2007 ; https://www.gpo.gov/ ; 2007 >
+    au < doNotProcess ; 2009 ; Privacy Act Issuances 2009 ; https://www.gpo.gov/ ; 2009 >
+    au < doNotProcess ; 2011 ; Privacy Act Issuances 2011 ; https://www.gpo.gov/ ; 2011 >
     au < down ; 2013 ; Privacy Act Issuances 2013 ; https://www.gpo.gov/ ; 2013 >
-    au < expected ; 2014 ; Privacy Act Issuances 2014 ; https://www.gpo.gov/ ; 2014 >
+    au < doNotProcess ; 2015 ; Privacy Act Issuances 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < doNotProcess ; 2017 ; Privacy Act Issuances 2017 ; https://www.gpo.gov/ ; 2017 >
 
   }
 
@@ -1174,8 +1177,6 @@
 
     param[collection_id] = PLAW
 
-    au < doesNotExist ; 1906 ; Public and Private Laws 1906 ; https://www.gpo.gov/ ; 1906 > # no such sitemap
-    au < doesNotExist ; 1941 ; Public and Private Laws 1941 ; https://www.gpo.gov/ ; 1941 > # empty sitemap
     au < down ; 1995 ; Public and Private Laws 1995 ; http://www.gpo.gov/ ; 1995 >
     au < down ; 1996 ; Public and Private Laws 1996 ; http://www.gpo.gov/ ; 1996 >
     au < down ; 1997 ; Public and Private Laws 1997 ; http://www.gpo.gov/ ; 1997 >
@@ -1208,7 +1209,7 @@
     title <
       name = Public Papers of the Presidents of the United States
     >
-    comment[0] = published from 1991 to 2006 and 2009
+    comment[0] = published from 1991 to 2013
     param[collection_id] = PPP
 
     au < down ; 1991 ; Public Papers of the Presidents of the United States 1991 ; http://www.gpo.gov/ ; 1991 >
@@ -1449,9 +1450,8 @@
     au < down ; 2008 ; United States Statutes at Large 2008 ; http://www.gpo.gov/ ; 2008 >
     au < down ; 2009 ; United States Statutes at Large 2009 ; https://www.gpo.gov/ ; 2009 >
     au < down ; 2010 ; United States Statutes at Large 2010 ; https://www.gpo.gov/ ; 2010 >
-    au < expected ; 2011 ; United States Statutes at Large 2011 ; https://www.gpo.gov/ ; 2011 >
+    au < doesNotExist ; 2011 ; United States Statutes at Large 2011 ; https://www.gpo.gov/ ; 2011 >
     au < down ; 2012 ; United States Statutes at Large 2012 ; https://www.gpo.gov/ ; 2012 >
-    au < expected ; 2013 ; United States Statutes at Large 2013 ; https://www.gpo.gov/ ; 2013 >
 
   }
 
@@ -1462,6 +1462,7 @@
      >
 
     param[collection_id] = WCPD
+    #published 1993-2009
 
     au < down ; 1993 ; Weekly Compilation of Presidential Documents 1993 ; http://www.gpo.gov/ ; 1993 >
     au < down ; 1994 ; Weekly Compilation of Presidential Documents 1994 ; http://www.gpo.gov/ ; 1994 >
@@ -1480,7 +1481,6 @@
     au < down ; 2007 ; Weekly Compilation of Presidential Documents 2007 ; http://www.gpo.gov/ ; 2007 >
     au < down ; 2008 ; Weekly Compilation of Presidential Documents 2008 ; http://www.gpo.gov/ ; 2008 >
     au < down ; 2009 ; Weekly Compilation of Presidential Documents 2009 ; http://www.gpo.gov/ ; 2009 >
-    au < expected ; 2010 ; Weekly Compilation of Presidential Documents 2010 ; https://www.gpo.gov/ ; 2010 >
 
   }
 
