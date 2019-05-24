@@ -60,6 +60,11 @@ public class ElsevierSourceArticleMetadataExtractor implements ArticleMetadataEx
       throws IOException, PluginException {
     if (emit == null)
       emit = new ElsevierEmitter(af,emitter);
+    //This is redundant on the creation pass
+    //when called from ListObjects a new emitter is passed in each time.
+    emit.setParentEmitter(emitter);
+    emit.setArticleFiles(af);
+        	
     if (emit.hasEmitted(af.getFullTextUrl()))
       return;
 
@@ -116,8 +121,10 @@ public class ElsevierSourceArticleMetadataExtractor implements ArticleMetadataEx
     }
 
     public void emitMetadata(CachedUrl cu, ArticleMetadata am) {
-      if (collectedArticles.contains(cu.getUrl())) 
+      if (collectedArticles.contains(cu.getUrl())) { 
+    	log.debug3("˙: " + cu.getUrl());
         return;
+      }
       
       collectedArticles.add(cu.getUrl());
       addAccessUrl(am, af);
@@ -126,9 +133,16 @@ public class ElsevierSourceArticleMetadataExtractor implements ArticleMetadataEx
       }
       parent.emitMetadata(af, am);
     }
-
+    
+    /*
+     * ListObjects calls repeatedly with different values
+     * allow the code to reset 
+     */
     void setParentEmitter(Emitter parent) {
-      this.parent = parent;
+        this.parent = parent;
+    }
+    void setArticleFiles(ArticleFiles af) {
+        this.af = af;
     }
 
     public boolean hasEmitted(String url)
