@@ -52,6 +52,13 @@ public class TestPub2WebUrlConsumer extends LockssTestCase {
       "https://digital-library.theiet.org/deliver/fulltext/iet-syb/11/6/SYB.2017.0013.R2.SUP1.docx?itemId=/content/journals/10.1049/iet-syb.2017.0013/sup1&mimeType=docx"
       );
 
+  Set<String> originatingUrls2 = SetUtil.set(
+          "https://mic.microbiologyresearch.org/content/journal/micro/10.1099/00221287-139-1-49?crawler=true&mimetype=application/pdf",
+          "https://mic.microbiologyresearch.org/content/journal/micro/10.1099/00221287-139-9-1979?crawler=true&mimetype=application/pdf",
+          "https://mic.microbiologyresearch.org/content/journal/micro/10.1099/00221287-139-9-1987?crawler=true&mimetype=application/pdf",
+          "https://mic.microbiologyresearch.org/content/journal/micro/10.1099/00221287-139-9-1995?crawler=true&mimetype=application/pdf"
+  );
+
   Set<String> destinationUrls = SetUtil.set(
       "http://www.microbiologyresearch.org/docserver/fulltext/jmm/64/2/000003b.mov?expires=1462410081&id=id&accname=guest&checksum=BAE31918F398930F23AA6FF787ADEA8",
       "http://www.microbiologyresearch.org/docserver/fulltext/jmm/64/2/000003c.mov?expires=1462410087&id=id&accname=guest&checksum=26350595A02A4F467F1160DEA4379A88",
@@ -60,13 +67,21 @@ public class TestPub2WebUrlConsumer extends LockssTestCase {
       "http://www.microbiologyresearch.org/docserver/fulltext/mgen/1/1/000001.pdf?expires=1472240373&id=id&accname=guest&checksum=BB2B5F904726B8D614BF63E8898665F1",
       "https://www.microbiologyresearch.org/docserver/fulltext/supplementary-figures_jmmcr.0.000015.pdf?expires=1472241881&id=id&accname=guest&checksum=B525FA14B2C3EAE641F814853E58678E",
       "http://digital-library.theiet.org/docserver/fulltext/iet-syb/11/3/SYB.2016.0052.R1.SUP1.docx?expires=1549647549&id=id&accname=325104&checksum=83B36F2CEC253D2DAF8EE20CBB4C880F",
-      "http://digital-library.theiet.org/docserver/fulltext/iet-syb/11/6/SYB.2017.0013.R2.SUP1.docx?expires=1549646776&id=id&accname=guest&checksum=B011065F87CACCD30A572764F3E7D924"
+      "http://digital-library.theiet.org/docserver/fulltext/iet-syb/11/6/SYB.2017.0013.R2.SUP1.docx?expires=1549646776&id=id&accname=guest&checksum=B011065F87CACCD30A572764F3E7D924",
+      "https://www.microbiologyresearch.org/docserver/fulltext/micro/139/1/mic-139-1-49.pdf?expires=1558562688&id=id&accname=guest&checksum=C5016D69F74F8B015CB2A6A62134C4F9"
       );
 
 
   public void testOrigPdfPattern() throws Exception {
     Pattern origFullTextPat = Pattern.compile(Pub2WebUrlConsumer.ORIG_FULLTEXT_STRING, Pattern.CASE_INSENSITIVE);
     for (String url : originatingUrls) {
+      assertMatchesRE(origFullTextPat, url);
+    }
+  }
+
+  public void testOrigPdfPattern2() throws Exception {
+    Pattern origFullTextPat = Pattern.compile(Pub2WebUrlConsumer.ORIG_FULLTEXT_STRING2, Pattern.CASE_INSENSITIVE);
+    for (String url : originatingUrls2) {
       assertMatchesRE(origFullTextPat, url);
     }
   }
