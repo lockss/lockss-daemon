@@ -12652,7 +12652,7 @@
     au < frozen ; exists ; 2015 ; 2015 ; Migration Studies Volume 3 ; 3 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Migration Studies Volume 4 ; 4 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Migration Studies Volume 5 ; 5 ; >
-    au < ready ; exists ; 2018 ; 2018 ; Migration Studies Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; Migration Studies Volume 6 ; 6 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Migration Studies Volume 7 ; 7 ; >
 
   }
@@ -14736,7 +14736,7 @@
 
     param[journal_id] = ppmg
 
-    au < ready ; exists ; 2018 ; 2018 ; Perspectives on Public Management and Governance Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; Perspectives on Public Management and Governance Volume 1 ; 1 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Perspectives on Public Management and Governance Volume 2 ; 2 ; >
 
   }
@@ -17848,7 +17848,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The Chinese Journal of International Politics Volume 8 ; 8 ; >
     au < frozen ; exists ; 2016 ; 2016 ; The Chinese Journal of International Politics Volume 9 ; 9 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The Chinese Journal of International Politics Volume 10 ; 10 ; >
-    au < ready ; exists ; 2018 ; 2018 ; The Chinese Journal of International Politics Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; The Chinese Journal of International Politics Volume 11 ; 11 ; >
     au < manifest ; exists ; 2019 ; 2019 ; The Chinese Journal of International Politics Volume 12 ; 12 ; >
 
   }
@@ -20516,7 +20516,7 @@
     param[journal_id] = tas
 
     au < frozen ; exists ; 2017 ; 2017 ; Translational Animal Science Volume 1 ; 1 ; >
-    au < ready ; exists ; 2018 ; 2018 ; Translational Animal Science Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; Translational Animal Science Volume 2 ; 2 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Translational Animal Science Volume 3 ; 3 ; >
 
   }
