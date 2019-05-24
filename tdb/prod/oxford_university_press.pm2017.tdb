@@ -404,11 +404,11 @@
         au < ready ; 2001-2002 ; Social Forces Volume 80 [2001-2002] ; 641 >
         au < ready ; 2002-2003 ; Social Forces Volume 81 [2002-2003] ; 735 >
         au < ready ; 2003-2004 ; Social Forces Volume 82 [2003-2004] ; 971 >
-        au < testing ; 2004-2005 ; Social Forces Volume 83 [2004-2005] ; 2593 >
-        au < testing ; 2005-2006 ; Social Forces Volume 84 [2005-2006] ; 2865 >
+        au < ready ; 2004-2005 ; Social Forces Volume 83 [2004-2005] ; 2593 >
+        au < ready ; 2005-2006 ; Social Forces Volume 84 [2005-2006] ; 2865 >
         au < testing ; 2006-2007 ; Social Forces Volume 85 [2006-2007] ; 3147 >
         au < ready ; 2007-2008 ; Social Forces Volume 86 [2007-2008] ; 3469 >
-        au < testing ; 2008-2009 ; Social Forces Volume 87 [2008-2009] ; 4065 >
+        au < ready ; 2008-2009 ; Social Forces Volume 87 [2008-2009] ; 4065 >
         au < released ; 2009-2010 ; Social Forces Volume 88 [2009-2010] ; 5689 >
         au < released ; 2010-2011 ; Social Forces Volume 89 [2010-2011] ; 6984 >
         au < released ; 2011-2012 ; Social Forces Volume 90 [2011-2012] ; 7887 >
@@ -418,7 +418,7 @@
         au < released ; 2015-2016 ; Social Forces Volume 94 [2015-2016] ; 10747 >
         au < released ; 2016-2017 ; Social Forces Volume 95 [2016-2017] ; 12121 >
         au < released ; 2017-2018 ; Social Forces Volume 96 [2017-2018] ; 12812 >
-        au < testing ; 2018-2019 ; Social Forces Volume 97 [2018-2019] ; 13666 >
+        au < ready ; 2018-2019 ; Social Forces Volume 97 [2018-2019] ; 13666 >
 
     }
 
@@ -432,11 +432,11 @@
 
       attr[journal_id] = 234
 
-        au < testing ; 2003 ; Social Politics: International Studies in Gender, State and Society Volume 10 [2003] ; 942 >
+        au < ready ; 2003 ; Social Politics: International Studies in Gender, State and Society Volume 10 [2003] ; 942 >
         au < ready ; 2004 ; Social Politics: International Studies in Gender, State and Society Volume 11 [2004] ; 2518 >
         au < ready ; 2005 ; Social Politics: International Studies in Gender, State and Society Volume 12 [2005] ; 2720 >
         au < ready ; 2006 ; Social Politics: International Studies in Gender, State and Society Volume 13 [2006] ; 2995 >
-        au < testing ; 2007 ; Social Politics: International Studies in Gender, State and Society Volume 14 [2007] ; 3391 >
+        au < ready ; 2007 ; Social Politics: International Studies in Gender, State and Society Volume 14 [2007] ; 3391 >
         au < ready ; 2008 ; Social Politics: International Studies in Gender, State and Society Volume 15 [2008] ; 3748 >
         au < ready ; 2009 ; Social Politics: International Studies in Gender, State and Society Volume 16 [2009] ; 4233 >
         au < released ; 2010 ; Social Politics: International Studies in Gender, State and Society Volume 17 [2010] ; 5940 >
@@ -461,10 +461,10 @@
 
       attr[journal_id] = 314
 
-        au < testing ; 2006 ; The Cambridge Quarterly Volume 35 [2006] ; 3174 >
-        au < testing ; 2007 ; The Cambridge Quarterly Volume 36 [2007] ; 3304 >
-        au < testing ; 2008 ; The Cambridge Quarterly Volume 37 [2008] ; 3696 >
-        au < testing ; 2009 ; The Cambridge Quarterly Volume 38 [2009] ; 4177 >
+        au < ready ; 2006 ; The Cambridge Quarterly Volume 35 [2006] ; 3174 >
+        au < ready ; 2007 ; The Cambridge Quarterly Volume 36 [2007] ; 3304 >
+        au < ready ; 2008 ; The Cambridge Quarterly Volume 37 [2008] ; 3696 >
+        au < ready ; 2009 ; The Cambridge Quarterly Volume 38 [2009] ; 4177 >
         au < released ; 2010 ; The Cambridge Quarterly Volume 39 [2010] ; 6040 >
         au < released ; 2011 ; The Cambridge Quarterly Volume 40 [2011] ; 7080 >
         au < released ; 2012 ; The Cambridge Quarterly Volume 41 [2012] ; 8182 >
@@ -487,7 +487,7 @@
 
       attr[journal_id] = 345
 
-        au < testing ; 2006 ; The Library: The Transactions of the Bibliographical Society Volume 7 [2006] ; 3134 >
+        au < ready ; 2006 ; The Library: The Transactions of the Bibliographical Society Volume 7 [2006] ; 3134 >
         au < ready ; 2007 ; The Library: The Transactions of the Bibliographical Society Volume 8 [2007] ; 3314 >
         au < ready ; 2008 ; The Library: The Transactions of the Bibliographical Society Volume 9 [2008] ; 3857 >
         au < ready ; 2009 ; The Library: The Transactions of the Bibliographical Society Volume 10 [2009] ; 4264 >
@@ -515,13 +515,13 @@
       attr[journal_id] = 148
 
         au < ready ; 2002 ; The Opera Quarterly Volume 18 [2002] ; 496 >
-        au < testing ; 2003 ; The Opera Quarterly Volume 19 [2003] ; 815 >
+        au < ready ; 2003 ; The Opera Quarterly Volume 19 [2003] ; 815 >
         au < testing ; 2004 ; The Opera Quarterly Volume 20 [2004] ; 2419 >
-        au < testing ; 2005 ; The Opera Quarterly Volume 21 [2005] ; 2782 >
+        au < ready ; 2005 ; The Opera Quarterly Volume 21 [2005] ; 2782 >
         au < ready ; 2006 ; The Opera Quarterly Volume 22 [2006] ; 3290 >
         au < ready ; 2007 ; The Opera Quarterly Volume 23 [2007] ; 4001 >
-        au < testing ; 2008 ; The Opera Quarterly Volume 24 [2008] ; 5667 >
-        au < testing ; 2009 ; The Opera Quarterly Volume 25 [2009] ; 5794 >
+        au < ready ; 2008 ; The Opera Quarterly Volume 24 [2008] ; 5667 >
+        au < ready ; 2009 ; The Opera Quarterly Volume 25 [2009] ; 5794 >
         au < released ; 2010 ; The Opera Quarterly Volume 26 [2010] ; 6393 >
         au < released ; 2011 ; The Opera Quarterly Volume 27 [2011] ; 7651 >
         au < released ; 2012 ; The Opera Quarterly Volume 28 [2012] ; 8514 >
@@ -544,8 +544,8 @@
 
       attr[journal_id] = 389
 
-        au < testing ; 2008 ; Oral History Review Volume 35 [2008] ; 3851 >
-        au < testing ; 2009 ; Oral History Review Volume 36 [2009] ; 4401 >
+        au < ready ; 2008 ; Oral History Review Volume 35 [2008] ; 3851 >
+        au < ready ; 2009 ; Oral History Review Volume 36 [2009] ; 4401 >
         au < released ; 2010 ; Oral History Review Volume 37 [2010] ; 6636 >
         au < released ; 2011 ; Oral History Review Volume 38 [2011] ; 7572 >
         au < released ; 2012 ; Oral History Review Volume 39 [2012] ; 8199 >
