@@ -45,7 +45,11 @@
     <string>plugin_name</string>
     <string>Code Ocean Source Plugin (CLOCKSS)</string>
   </entry>
-<!--  not unpacking archives -->
+<!-- pulling metadata.yml from archive -->
+ <entry>
+    <string>plugin_archive_file_types</string>
+    <string>standard</string>
+  </entry>
   <entry>
     <string>au_substance_url_pattern</string>
     <list>

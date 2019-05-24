@@ -49,23 +49,30 @@ public class CodeOceanArticleIteratorFactory implements ArticleIteratorFactory, 
 
   private static final Logger log = Logger.getLogger(CodeOceanArticleIteratorFactory.class);
   
-  
-  //../code-ocean-released/2018/test-publisher/77d6193e-1a32-42c9-a66c-290fdee8da95.zip
-  //    which has within it "metadata/metadata.yml" along with other contents for the code module
-  //../code-ocean-released/2018/test-publisher/77d6193e-1a32-42c9-a66c-290fdee8da95.tar
-  //  this is the accompanying custom docker image 
+  /*
+   * .../code-ocean-released/2019/nature/4aaa25ae-2fb9-49fe-8379-7deb6bfb80e9/v1.0
+  *     capsule.zip  - code capsule, data, etc - including metadata
+  *     results.zip - 
+  *     image.tar.xz - compressed docker image
+  *     extract.sh - extraction script should anything be needed
+  *  and there can be multiple versions under the same UUID
+  *     
+   */
   private static final String PATTERN_TEMPLATE = 
-      "\"^%s%s/[^/]+/[^/]+\\.zip$\", base_url, directory";
+      "\"^%s%s/.*/capsule\\.zip\", base_url, directory";
   
   // Be sure to exclude all nested archives in case we ever explode the zip to look at the yaml
   protected static final Pattern NESTED_ARCHIVE_PATTERN = 
       Pattern.compile(".*/[^/]+\\.zip!/.+\\.(zip|tar|gz|tgz|tar\\.gz)$", 
           Pattern.CASE_INSENSITIVE);  
 
-  private static final Pattern ZIP_PATTERN = Pattern.compile("/(.*)\\.zip$", Pattern.CASE_INSENSITIVE);
-  private static final String 	ZIP_REPLACEMENT = "/$1.zip";
+  //private static final Pattern MD_PATTERN = Pattern.compile("/([^/]+)/(v[^/]+)/capsule\\.zip[!]/metadata/metadata\\.yml", Pattern.CASE_INSENSITIVE);
+  private static final Pattern ZIP_PATTERN = Pattern.compile("/([^/]+)/(v[^/]+)/capsule\\.zip$", Pattern.CASE_INSENSITIVE);
+  private static final String 	ZIP_REPLACEMENT = "/$1/$2/capsule.zip";
+  private static final String MD_REPLACEMENT = "/$1/$2/capsule.zip!/metadata/metadata.yml";
   // might exist, might not
-  private static final String TAR_REPLACEMENT = "/$1.tar";
+  private static final String TAR_REPLACEMENT = "/$1/$2/image.tar.xz";
+  private static final String RES_REPLACEMENT = "/$1/$2/results.zip";
   
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
@@ -80,15 +87,26 @@ public class CodeOceanArticleIteratorFactory implements ArticleIteratorFactory, 
         .setExcludeSubTreePattern(NESTED_ARCHIVE_PATTERN));
     
 
+
     // set up ZIP to be an aspect that will trigger an ArticleFiles to feed the metadata extractor
     builder.addAspect(ZIP_PATTERN,
-        ZIP_REPLACEMENT,
+    		ZIP_REPLACEMENT,
         ArticleFiles.ROLE_ARTICLE_METADATA);
+
+    builder.addAspect(
+            MD_REPLACEMENT,
+            ArticleFiles.ROLE_ARTICLE_METADATA);
     
     // tar files represent the docker config of the equivalent zip code modul
     // associate them but they aren't themselves a code module
     builder.addAspect(TAR_REPLACEMENT,
         ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS);
+
+    // results
+    // associate them but they aren't themselves a code module
+    builder.addAspect(RES_REPLACEMENT,
+        "ExperimentalResults");
+
 
 
     return builder.getSubTreeArticleIterator();
