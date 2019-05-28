@@ -19,9 +19,9 @@
 
       attr[journal_id] = 362
 
-        au < testing ; 2007 ; Conradiana Volume 39 [2007] ; 3414 >
-        au < testing ; 2008 ; Conradiana Volume 40 [2008] ; 3508 >
-        au < testing ; 2009 ; Conradiana Volume 41 [2009] ; 6351 >
+        au < ready ; 2007 ; Conradiana Volume 39 [2007] ; 3414 >
+        au < ready ; 2008 ; Conradiana Volume 40 [2008] ; 3508 >
+        au < ready ; 2009 ; Conradiana Volume 41 [2009] ; 6351 >
         au < released ; 2010 ; Conradiana Volume 42 [2010] ; 7610 >
         au < released ; 2011 ; Conradiana Volume 43 [2011] ; 9556 >
         au < released ; 2012 ; Conradiana Volume 44 [2012] ; 9863 >
@@ -43,7 +43,7 @@
       attr[journal_id] = 363
 
         au < ready ; 2007 ; Helios Volume 34 [2007] ; 3440 >
-        au < testing ; 2008 ; Helios Volume 35 [2008] ; 3578 >
+        au < ready ; 2008 ; Helios Volume 35 [2008] ; 3578 >
         au < ready ; 2009 ; Helios Volume 36 [2009] ; 5695 >
         au < released ; 2010 ; Helios Volume 37 [2010] ; 6678 >
         au < released ; 2011 ; Helios Volume 38 [2011] ; 7612 >
