@@ -60,7 +60,7 @@
     au < finished ; finished ; 2007 ; Agronomy Journal Volume 99 ; 99 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2008 ; Agronomy Journal Volume 100 ; 100 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2009 ; Agronomy Journal Volume 101 ; 101 ; reingest1.clockss.org:8082 > #malformed url. 403 error
-    au < ready ; exists ; 2010 ; Agronomy Journal Volume 102 ; 102 ; > #malformed url. 403 error: https://dl.sciencesocieties.org/publications/aj/articles/102/1/www.usask.ca/agriculture/plantsci/winter_cereals/Winter_wheat/CHAPT10/cvchpt10.php
+    au < crawling ; exists ; 2010 ; Agronomy Journal Volume 102 ; 102 ; > #malformed url. 403 error: https://dl.sciencesocieties.org/publications/aj/articles/102/1/www.usask.ca/agriculture/plantsci/winter_cereals/Winter_wheat/CHAPT10/cvchpt10.php
     au < notReady ; exists ; 2011 ; Agronomy Journal Volume 103 ; 103 ; > #malformed url. 403 error: https://dl.sciencesocieties.org/publications/aj/articles/103/6/https/attra.ncat.org/attra-pub/summaries/summary.php?pub=87
     au < notReady ; exists ; 2012 ; Agronomy Journal Volume 104 ; 104 ; > #malformed url. 403 error: https://dl.sciencesocieties.org/publications/aj/articles/104/2/agroclimate.org/forestry/wildfire/wildfire.php   
     au < finished ; finished ; 2013 ; Agronomy Journal Volume 105 ; 105 ; reingest1.clockss.org:8082 >
@@ -262,7 +262,7 @@
     au < finished ; finished ; 2008 ; Natural Sciences Education Volume 37 ; 37 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2009 ; Natural Sciences Education Volume 38 ; 38 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2010 ; Natural Sciences Education Volume 39 ; 39 ; reingest1.clockss.org:8082 >
-    au < ready ; exists ; 2011 ; Natural Sciences Education Volume 40 ; 40 ; > #malformed url. 403 Error: https://dl.sciencesocieties.org/publications/nse/articles/40/1/www.nap.edu/openbook.php?record_id=12602&;page=155   
+    au < crawling ; exists ; 2011 ; Natural Sciences Education Volume 40 ; 40 ; > #malformed url. 403 Error: https://dl.sciencesocieties.org/publications/nse/articles/40/1/www.nap.edu/openbook.php?record_id=12602&;page=155   
     au < finished ; finished ; 2012 ; Natural Sciences Education Volume 41 ; 41 ; >
     au < finished ; finished ; 2013 ; Natural Sciences Education Volume 42 ; 42 ; >
     au < finished ; finished ; 2014 ; Natural Sciences Education Volume 43 ; 43 ; >
@@ -289,7 +289,7 @@
     au < notReady ; exists ; 2008 ; The Plant Genome Volume 1 ; 1 ; > #403 error: https://dl.sciencesocieties.org/publications/tpg/supplements/1/1-2-p%20111b.txt
     au < finished ; finished ; 2009 ; The Plant Genome Volume 2 ; 2 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2010 ; The Plant Genome Volume 3 ; 3 ; >
-    au < ready ; exists ; 2011 ; The Plant Genome Volume 4 ; 4 ; > #malformed url: https://dl.sciencesocieties.org/publications/tpg/articles/4/1/www.phytozome.net/soybean.php
+    au < crawling ; exists ; 2011 ; The Plant Genome Volume 4 ; 4 ; > #malformed url: https://dl.sciencesocieties.org/publications/tpg/articles/4/1/www.phytozome.net/soybean.php
     au < finished ; finished ; 2012 ; The Plant Genome Volume 5 ; 5 ; >
     au < finished ; finished ; 2013 ; The Plant Genome Volume 6 ; 6 ; >
     au < finished ; manifest ; 2014 ; The Plant Genome Volume 7 ; 7 ; reingest4.clockss.org:8082 >
@@ -377,7 +377,7 @@
     au < finished ; finished ; 2007 ; Vadose Zone Journal Volume 6 ; 6 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2008 ; Vadose Zone Journal Volume 7 ; 7 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2009 ; Vadose Zone Journal Volume 8 ; 8 ; reingest3.clockss.org:8083 >
-    au < ready ; exists ; 2010 ; Vadose Zone Journal Volume 9 ; 9 ; > #malformed url. 403 error: https://dl.sciencesocieties.org/publications/vzj/articles/9/2/www.alglib.net/eigen/symmetric/tdevd.php   
+    au < crawling ; exists ; 2010 ; Vadose Zone Journal Volume 9 ; 9 ; > #malformed url. 403 error: https://dl.sciencesocieties.org/publications/vzj/articles/9/2/www.alglib.net/eigen/symmetric/tdevd.php   
     au < finished ; finished ; 2011 ; Vadose Zone Journal Volume 10 ; 10 ; >
     au < finished ; finished ; 2012 ; Vadose Zone Journal Volume 11 ; 11 ; >
     au < finished ; finished ; 2013 ; Vadose Zone Journal Volume 12 ; 12 ; reingest2.clockss.org:8085 >
