@@ -42,6 +42,13 @@ import org.lockss.plugin.ArticleFiles;
 import org.lockss.plugin.ArticleIteratorFactory;
 import org.lockss.plugin.SubTreeArticleIteratorBuilder;
 import org.lockss.util.Logger;
+import org.lockss.daemon.PluginException;
+import org.lockss.extractor.ArticleMetadataExtractor;
+import org.lockss.extractor.ArticleMetadataExtractorFactory;
+import org.lockss.extractor.BaseArticleMetadataExtractor;
+import org.lockss.extractor.MetadataTarget;
+import org.lockss.plugin.*;
+import org.lockss.util.Logger;
 
 import java.util.Arrays;
 import java.util.Iterator;
@@ -55,37 +62,35 @@ public class GovCourtInfoSitemapsArticleIteratorFactory
     Logger.getLogger(GovCourtInfoSitemapsArticleIteratorFactory.class);
 
   /*
-  https://www.govinfo.gov/app/details/USCOURTS-akd-1_11-cv-00009
-  https://www.govinfo.gov/app/details/USCOURTS-akd-3_12-cv-00250/context
+  https://www.govinfo.gov/app/details/USCOURTS-akd-1_11-cv-00016/
+  https://www.govinfo.gov/app/details/USCOURTS-akd-1_11-cv-00016/summary
+  https://www.govinfo.gov/app/details/USCOURTS-akd-1_11-cv-00016/context
+  https://www.govinfo.gov/content/pkg/USCOURTS-akd-1_11-cv-00016/pdf/USCOURTS-akd-1_11-cv-00016-0.pdf
+  https://www.govinfo.gov/content/pkg/USCOURTS-akd-1_11-cv-00016/pdf/USCOURTS-akd-1_11-cv-00016-1.pdf
+  https://www.govinfo.gov/content/pkg/USCOURTS-akd-1_11-cv-00016/pdf/USCOURTS-akd-1_11-cv-00016-2.pdf
    */
 
-  protected static final String ROOT_TEMPLATE = "\"%sapp/details/\", base_url";
+  protected static final String PATTERN_TEMPLATE = "\"^%sapp/details/([^/]+)/context\", base_url";
+  final Pattern PATTERN = Pattern.compile("([^/]+)", Pattern.CASE_INSENSITIVE);
+  final String REPLACEMENT = "$1";
 
-  protected static final String PATTERN_TEMPLATE =
-          "\"^%sapp/details/([^/]+)/context\", base_url";
-
-  protected static final Pattern HTML_PATTERN =
-          Pattern.compile("([^/]+)/context\\$",
-                  Pattern.CASE_INSENSITIVE);
-
-  protected static final String HTML_REPLACEMENT = "$1/context";
 
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
                                                       MetadataTarget target)
       throws PluginException {
-    
+
+
     SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
-    
-    builder.setSpec(target, ROOT_TEMPLATE, PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
+    SubTreeArticleIterator.Spec theSpec = new SubTreeArticleIterator.Spec();
+    builder.setSpec(theSpec);
+    theSpec.setTarget(target);
+
+    theSpec.setPatternTemplate(PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
 
     builder.addAspect(
-            HTML_PATTERN,
-            HTML_REPLACEMENT,
-            ArticleFiles.ROLE_FULL_TEXT_HTML);
-
-    builder.setRoleFromOtherRoles(
-            ArticleFiles.ROLE_ARTICLE_METADATA,
-            ArticleFiles.ROLE_FULL_TEXT_HTML);
+            PATTERN,
+            REPLACEMENT,
+            ArticleFiles.ROLE_ARTICLE_METADATA);
 
     return builder.getSubTreeArticleIterator();
   }

@@ -109,7 +109,7 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^content/pkg/(%s-%s[^/]+)/pdf/\1[^/]+\.pdf$", base_url, collection_id, court_id</string>
+      <string>"content/pkg/(%s-%s[^/]+)/pdf/\1[^/]+\.pdf$", base_url, collection_id, court_id</string>
     </list>
   </entry>
   <entry>
