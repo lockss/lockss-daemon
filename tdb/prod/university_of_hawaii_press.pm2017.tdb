@@ -330,7 +330,7 @@
         au < ready ; 2006 ; Journal of World History Volume 17 [2006] ; 3005 >
         au < ready ; 2007 ; Journal of World History Volume 18 [2007] ; 3244 >
         au < ready ; 2008 ; Journal of World History Volume 19 [2008] ; 3629 >
-        au < testing ; 2009 ; Journal of World History Volume 20 [2009] ; 4158 >
+        au < ready ; 2009 ; Journal of World History Volume 20 [2009] ; 4158 >
         au < released ; 2010 ; Journal of World History Volume 21 [2010] ; 5698 >
         au < released ; 2011 ; Journal of World History Volume 22 [2011] ; 6705 >
         au < released ; 2012 ; Journal of World History Volume 23 [2012] ; 8044 >
@@ -354,11 +354,11 @@
 
       attr[journal_id] = 225
 
-        au < testing ; 2002 ; Ka Ho'oilina/The Legacy Puke Volume 1 [2002] ; 945 >
-        au < testing ; 2003 ; Ka Ho'oilina/The Legacy Puke Volume 2 [2003] ; 1784 >
+        au < ready ; 2002 ; Ka Ho'oilina/The Legacy Puke Volume 1 [2002] ; 945 >
+        au < ready ; 2003 ; Ka Ho'oilina/The Legacy Puke Volume 2 [2003] ; 1784 >
         au < testing ; 2004 ; Ka Ho'oilina/The Legacy Puke Volume 3 [2004] ; 2601 >
-        au < testing ; 2005 ; Ka Ho'oilina/The Legacy Puke Volume 4 [2005] ; 2931 >
-        au < testing ; 2006 ; Ka Ho'oilina/The Legacy Puke Volume 5 [2006] ; 3186 >
+        au < ready ; 2005 ; Ka Ho'oilina/The Legacy Puke Volume 4 [2005] ; 2931 >
+        au < ready ; 2006 ; Ka Ho'oilina/The Legacy Puke Volume 5 [2006] ; 3186 >
 
     }
 
@@ -376,30 +376,30 @@
         #au < exists ; DDDD ; Korean Studies [Early Release Articles] ; 12443 >
         au < testing ; 1977 ; Korean Studies Volume 1 [1977] ; 5968 >
         au < testing ; 1978 ; Korean Studies Volume 2 [1978] ; 5967 >
-        au < testing ; 1979 ; Korean Studies Volume 3 [1979] ; 5966 >
-        au < testing ; 1980 ; Korean Studies Volume 4 [1980] ; 5965 >
+        au < ready ; 1979 ; Korean Studies Volume 3 [1979] ; 5966 >
+        au < ready ; 1980 ; Korean Studies Volume 4 [1980] ; 5965 >
         au < testing ; 1981 ; Korean Studies Volume 5 [1981] ; 5964 >
-        au < testing ; 1982 ; Korean Studies Volume 6 [1982] ; 5963 >
+        au < ready ; 1982 ; Korean Studies Volume 6 [1982] ; 5963 >
         au < testing ; 1983 ; Korean Studies Volume 7 [1983] ; 5962 >
-        au < testing ; 1984 ; Korean Studies Volume 8 [1984] ; 5961 >
+        au < ready ; 1984 ; Korean Studies Volume 8 [1984] ; 5961 >
         au < testing ; 1985 ; Korean Studies Volume 9 [1985] ; 5960 >
         au < testing ; 1986 ; Korean Studies Volume 10 [1986] ; 5959 >
-        au < testing ; 1987 ; Korean Studies Volume 11 [1987] ; 5958 >
-        au < testing ; 1988 ; Korean Studies Volume 12 [1988] ; 5957 >
-        au < testing ; 1989 ; Korean Studies Volume 13 [1989] ; 5956 >
+        au < ready ; 1987 ; Korean Studies Volume 11 [1987] ; 5958 >
+        au < ready ; 1988 ; Korean Studies Volume 12 [1988] ; 5957 >
+        au < ready ; 1989 ; Korean Studies Volume 13 [1989] ; 5956 >
         au < testing ; 1990 ; Korean Studies Volume 14 [1990] ; 5955 >
         au < testing ; 1991 ; Korean Studies Volume 15 [1991] ; 5954 >
         au < testing ; 1992 ; Korean Studies Volume 16 [1992] ; 5953 >
         au < testing ; 1993 ; Korean Studies Volume 17 [1993] ; 5952 >
         au < testing ; 1994 ; Korean Studies Volume 18 [1994] ; 5951 >
         au < testing ; 1995 ; Korean Studies Volume 19 [1995] ; 5950 >
-        au < testing ; 1996 ; Korean Studies Volume 20 [1996] ; 5949 >
-        au < testing ; 1997 ; Korean Studies Volume 21 [1997] ; 5948 >
+        au < ready ; 1996 ; Korean Studies Volume 20 [1996] ; 5949 >
+        au < ready ; 1997 ; Korean Studies Volume 21 [1997] ; 5948 >
         au < testing ; 1998 ; Korean Studies Volume 22 [1998] ; 5947 >
         au < testing ; 1999 ; Korean Studies Volume 23 [1999] ; 5946 >
-        au < testing ; 2000 ; Korean Studies Volume 24 [2000] ; 364 >
-        au < testing ; 2001 ; Korean Studies Volume 25 [2001] ; 365 >
-        au < testing ; 2002 ; Korean Studies Volume 26 [2002] ; 848 >
+        au < ready ; 2000 ; Korean Studies Volume 24 [2000] ; 364 >
+        au < ready ; 2001 ; Korean Studies Volume 25 [2001] ; 365 >
+        au < ready ; 2002 ; Korean Studies Volume 26 [2002] ; 848 >
         au < testing ; 2003 ; Korean Studies Volume 27 [2003] ; 2620 >
         au < testing ; 2004 ; Korean Studies Volume 28 [2004] ; 2808 >
         au < testing ; 2005 ; Korean Studies Volume 29 [2005] ; 3017 >
@@ -436,11 +436,11 @@
         au < testing ; 2002-2003 ; Manoa Volume 14 [2002-2003] ; 404 >
         au < testing ; 2003 ; Manoa Volume 15 [2003] ; 920 >
         au < testing ; 2004 ; Manoa Volume 16 [2004] ; 2495 >
-        au < testing ; 2005 ; Manoa Volume 17 [2005] ; 2804 >
-        au < testing ; 2006 ; Manoa Volume 18 [2006] ; 3120 >
-        au < testing ; 2007 ; Manoa Volume 19 [2007] ; 3422 >
+        au < ready ; 2005 ; Manoa Volume 17 [2005] ; 2804 >
+        au < ready ; 2006 ; Manoa Volume 18 [2006] ; 3120 >
+        au < ready ; 2007 ; Manoa Volume 19 [2007] ; 3422 >
         au < testing ; 2008 ; Manoa Volume 20 [2008] ; 3798 >
-        au < testing ; 2009 ; Manoa Volume 21 [2009] ; 4181 >
+        au < ready ; 2009 ; Manoa Volume 21 [2009] ; 4181 >
         au < released ; 2010 ; Manoa Volume 22 [2010] ; 6329 >
         au < released ; 2011 ; Manoa Volume 23 [2011] ; 7487 >
         au < released ; 2012 ; Manoa Volume 24 [2012] ; 8423 >
@@ -466,8 +466,8 @@
 
         au < testing ; 1999 ; Oceanic Linguistics Volume 38 [1999] ; 492 >
         au < testing ; 2000 ; Oceanic Linguistics Volume 39 [2000] ; 493 >
-        au < testing ; 2001 ; Oceanic Linguistics Volume 40 [2001] ; 494 >
-        au < testing ; 2002 ; Oceanic Linguistics Volume 41 [2002] ; 495 >
+        au < ready ; 2001 ; Oceanic Linguistics Volume 40 [2001] ; 494 >
+        au < ready ; 2002 ; Oceanic Linguistics Volume 41 [2002] ; 495 >
         au < testing ; 2003 ; Oceanic Linguistics Volume 42 [2003] ; 940 >
         au < testing ; 2004 ; Oceanic Linguistics Volume 43 [2004] ; 2556 >
         au < testing ; 2005 ; Oceanic Linguistics Volume 44 [2005] ; 2806 >
@@ -606,11 +606,11 @@
         au < testing ; 2002 ; The Contemporary Pacific Volume 14 [2002] ; 136 >
         au < testing ; 2003 ; The Contemporary Pacific Volume 15 [2003] ; 789 >
         au < testing ; 2004 ; The Contemporary Pacific Volume 16 [2004] ; 1749 >
-        au < testing ; 2005 ; The Contemporary Pacific Volume 17 [2005] ; 2626 >
+        au < ready ; 2005 ; The Contemporary Pacific Volume 17 [2005] ; 2626 >
         au < testing ; 2006 ; The Contemporary Pacific Volume 18 [2006] ; 2878 >
         au < testing ; 2007 ; The Contemporary Pacific Volume 19 [2007] ; 3195 >
         au < testing ; 2008 ; The Contemporary Pacific Volume 20 [2008] ; 3501 >
-        au < testing ; 2009 ; The Contemporary Pacific Volume 21 [2009] ; 4034 >
+        au < ready ; 2009 ; The Contemporary Pacific Volume 21 [2009] ; 4034 >
         au < released ; 2010 ; The Contemporary Pacific Volume 22 [2010] ; 5702 >
         au < released ; 2011 ; The Contemporary Pacific Volume 23 [2011] ; 6643 >
         au < released ; 2012 ; The Contemporary Pacific Volume 24 [2012] ; 7749 >
@@ -683,76 +683,76 @@
       attr[journal_id] = 280
 
         au < testing ; 1935 ; Yearbook of the Association of Pacific Coast Geographers Volume 1 [1935] ; 7819 >
-        au < testing ; 1936 ; Yearbook of the Association of Pacific Coast Geographers Volume 2 [1936] ; 7822 >
-        au < testing ; 1937 ; Yearbook of the Association of Pacific Coast Geographers Volume 3 [1937] ; 7825 >
+        au < ready ; 1936 ; Yearbook of the Association of Pacific Coast Geographers Volume 2 [1936] ; 7822 >
+        au < ready ; 1937 ; Yearbook of the Association of Pacific Coast Geographers Volume 3 [1937] ; 7825 >
         au < testing ; 1938 ; Yearbook of the Association of Pacific Coast Geographers Volume 4 [1938] ; 7839 >
-        au < testing ; 1939 ; Yearbook of the Association of Pacific Coast Geographers Volume 5 [1939] ; 7840 >
-        au < testing ; 1940 ; Yearbook of the Association of Pacific Coast Geographers Volume 6 [1940] ; 7841 >
-        au < testing ; 1941 ; Yearbook of the Association of Pacific Coast Geographers Volume 7 [1941] ; 7842 >
+        au < ready ; 1939 ; Yearbook of the Association of Pacific Coast Geographers Volume 5 [1939] ; 7840 >
+        au < ready ; 1940 ; Yearbook of the Association of Pacific Coast Geographers Volume 6 [1940] ; 7841 >
+        au < ready ; 1941 ; Yearbook of the Association of Pacific Coast Geographers Volume 7 [1941] ; 7842 >
         au < testing ; 1942 ; Yearbook of the Association of Pacific Coast Geographers Volume 8 [1942] ; 7834 >
         au < testing ; 1947 ; Yearbook of the Association of Pacific Coast Geographers Volume 9 [1947] ; 7838 >
-        au < testing ; 1948 ; Yearbook of the Association of Pacific Coast Geographers Volume 10 [1948] ; 7835 >
-        au < testing ; 1949 ; Yearbook of the Association of Pacific Coast Geographers Volume 11 [1949] ; 7843 >
-        au < testing ; 1950 ; Yearbook of the Association of Pacific Coast Geographers Volume 12 [1950] ; 7836 >
-        au < testing ; 1951 ; Yearbook of the Association of Pacific Coast Geographers Volume 13 [1951] ; 7837 >
-        au < testing ; 1952 ; Yearbook of the Association of Pacific Coast Geographers Volume 14 [1952] ; 7898 >
-        au < testing ; 1953 ; Yearbook of the Association of Pacific Coast Geographers Volume 15 [1953] ; 7870 >
-        au < testing ; 1954 ; Yearbook of the Association of Pacific Coast Geographers Volume 16 [1954] ; 7863 >
-        au < testing ; 1955 ; Yearbook of the Association of Pacific Coast Geographers Volume 17 [1955] ; 7864 >
-        au < testing ; 1956 ; Yearbook of the Association of Pacific Coast Geographers Volume 18 [1956] ; 7853 >
-        au < testing ; 1957 ; Yearbook of the Association of Pacific Coast Geographers Volume 19 [1957] ; 7919 >
+        au < ready ; 1948 ; Yearbook of the Association of Pacific Coast Geographers Volume 10 [1948] ; 7835 >
+        au < ready ; 1949 ; Yearbook of the Association of Pacific Coast Geographers Volume 11 [1949] ; 7843 >
+        au < ready ; 1950 ; Yearbook of the Association of Pacific Coast Geographers Volume 12 [1950] ; 7836 >
+        au < ready ; 1951 ; Yearbook of the Association of Pacific Coast Geographers Volume 13 [1951] ; 7837 >
+        au < ready ; 1952 ; Yearbook of the Association of Pacific Coast Geographers Volume 14 [1952] ; 7898 >
+        au < ready ; 1953 ; Yearbook of the Association of Pacific Coast Geographers Volume 15 [1953] ; 7870 >
+        au < ready ; 1954 ; Yearbook of the Association of Pacific Coast Geographers Volume 16 [1954] ; 7863 >
+        au < ready ; 1955 ; Yearbook of the Association of Pacific Coast Geographers Volume 17 [1955] ; 7864 >
+        au < ready ; 1956 ; Yearbook of the Association of Pacific Coast Geographers Volume 18 [1956] ; 7853 >
+        au < ready ; 1957 ; Yearbook of the Association of Pacific Coast Geographers Volume 19 [1957] ; 7919 >
         au < testing ; 1958 ; Yearbook of the Association of Pacific Coast Geographers Volume 20 [1958] ; 7920 >
-        au < manifest ; 1959 ; Yearbook of the Association of Pacific Coast Geographers Volume 21 [1959] ; 7881 >
-        au < manifest ; 1960 ; Yearbook of the Association of Pacific Coast Geographers Volume 22 [1960] ; 7891 >
-        au < manifest ; 1961 ; Yearbook of the Association of Pacific Coast Geographers Volume 23 [1961] ; 7892 >
-        au < manifest ; 1962 ; Yearbook of the Association of Pacific Coast Geographers Volume 24 [1962] ; 7882 >
-        au < manifest ; 1963 ; Yearbook of the Association of Pacific Coast Geographers Volume 25 [1963] ; 7893 >
-        au < manifest ; 1964 ; Yearbook of the Association of Pacific Coast Geographers Volume 26 [1964] ; 7894 >
-        au < manifest ; 1965 ; Yearbook of the Association of Pacific Coast Geographers Volume 27 [1965] ; 7223 >
-        au < manifest ; 1966 ; Yearbook of the Association of Pacific Coast Geographers Volume 28 [1966] ; 7222 >
-        au < manifest ; 1967 ; Yearbook of the Association of Pacific Coast Geographers Volume 29 [1967] ; 7221 >
-        au < manifest ; 1968 ; Yearbook of the Association of Pacific Coast Geographers Volume 30 [1968] ; 7220 >
-        au < manifest ; 1969 ; Yearbook of the Association of Pacific Coast Geographers Volume 31 [1969] ; 7219 >
-        au < manifest ; 1970 ; Yearbook of the Association of Pacific Coast Geographers Volume 32 [1970] ; 7218 >
-        au < manifest ; 1971 ; Yearbook of the Association of Pacific Coast Geographers Volume 33 [1971] ; 7217 >
-        au < manifest ; 1972 ; Yearbook of the Association of Pacific Coast Geographers Volume 34 [1972] ; 7216 >
-        au < manifest ; 1973 ; Yearbook of the Association of Pacific Coast Geographers Volume 35 [1973] ; 7215 >
-        au < manifest ; 1974 ; Yearbook of the Association of Pacific Coast Geographers Volume 36 [1974] ; 7214 >
-        au < manifest ; 1975 ; Yearbook of the Association of Pacific Coast Geographers Volume 37 [1975] ; 7213 >
-        au < manifest ; 1976 ; Yearbook of the Association of Pacific Coast Geographers Volume 38 [1976] ; 7212 >
-        au < manifest ; 1977 ; Yearbook of the Association of Pacific Coast Geographers Volume 39 [1977] ; 7211 >
-        au < manifest ; 1978 ; Yearbook of the Association of Pacific Coast Geographers Volume 40 [1978] ; 7210 >
-        au < manifest ; 1979 ; Yearbook of the Association of Pacific Coast Geographers Volume 41 [1979] ; 7043 >
-        au < manifest ; 1980 ; Yearbook of the Association of Pacific Coast Geographers Volume 42 [1980] ; 7224 >
-        au < manifest ; 1981 ; Yearbook of the Association of Pacific Coast Geographers Volume 43 [1981] ; 7225 >
-        au < manifest ; 1982 ; Yearbook of the Association of Pacific Coast Geographers Volume 44 [1982] ; 7226 >
-        au < manifest ; 1983 ; Yearbook of the Association of Pacific Coast Geographers Volume 45 [1983] ; 7227 >
-        au < manifest ; 1984 ; Yearbook of the Association of Pacific Coast Geographers Volume 46 [1984] ; 7228 >
-        au < manifest ; 1985 ; Yearbook of the Association of Pacific Coast Geographers Volume 47 [1985] ; 7229 >
-        au < manifest ; 1986 ; Yearbook of the Association of Pacific Coast Geographers Volume 48 [1986] ; 7184 >
-        au < manifest ; 1987 ; Yearbook of the Association of Pacific Coast Geographers Volume 49 [1987] ; 7186 >
-        au < manifest ; 1988 ; Yearbook of the Association of Pacific Coast Geographers Volume 50 [1988] ; 7187 >
-        au < manifest ; 1989 ; Yearbook of the Association of Pacific Coast Geographers Volume 51 [1989] ; 7188 >
-        au < manifest ; 1990 ; Yearbook of the Association of Pacific Coast Geographers Volume 52 [1990] ; 7189 >
-        au < manifest ; 1991 ; Yearbook of the Association of Pacific Coast Geographers Volume 53 [1991] ; 7190 >
-        au < manifest ; 1992 ; Yearbook of the Association of Pacific Coast Geographers Volume 54 [1992] ; 7191 >
-        au < manifest ; 1993 ; Yearbook of the Association of Pacific Coast Geographers Volume 55 [1993] ; 7192 >
-        au < manifest ; 1994 ; Yearbook of the Association of Pacific Coast Geographers Volume 56 [1994] ; 7193 >
-        au < manifest ; 1995 ; Yearbook of the Association of Pacific Coast Geographers Volume 57 [1995] ; 7194 >
-        au < manifest ; 1996 ; Yearbook of the Association of Pacific Coast Geographers Volume 58 [1996] ; 7195 >
-        au < manifest ; 1997 ; Yearbook of the Association of Pacific Coast Geographers Volume 59 [1997] ; 7196 >
-        au < manifest ; 1998 ; Yearbook of the Association of Pacific Coast Geographers Volume 60 [1998] ; 7197 >
-        au < manifest ; 1999 ; Yearbook of the Association of Pacific Coast Geographers Volume 61 [1999] ; 7198 >
-        au < manifest ; 2000 ; Yearbook of the Association of Pacific Coast Geographers Volume 62 [2000] ; 7199 >
-        au < manifest ; 2001 ; Yearbook of the Association of Pacific Coast Geographers Volume 63 [2001] ; 7200 >
-        au < manifest ; 2002 ; Yearbook of the Association of Pacific Coast Geographers Volume 64 [2002] ; 7201 >
-        au < manifest ; 2003 ; Yearbook of the Association of Pacific Coast Geographers Volume 65 [2003] ; 7202 >
-        au < manifest ; 2004 ; Yearbook of the Association of Pacific Coast Geographers Volume 66 [2004] ; 2574 >
-        au < manifest ; 2005 ; Yearbook of the Association of Pacific Coast Geographers Volume 67 [2005] ; 2824 >
-        au < manifest ; 2006 ; Yearbook of the Association of Pacific Coast Geographers Volume 68 [2006] ; 3099 >
-        au < manifest ; 2007 ; Yearbook of the Association of Pacific Coast Geographers Volume 69 [2007] ; 3439 >
-        au < manifest ; 2008 ; Yearbook of the Association of Pacific Coast Geographers Volume 70 [2008] ; 3828 >
-        au < manifest ; 2009 ; Yearbook of the Association of Pacific Coast Geographers Volume 71 [2009] ; 4382 >
+        au < testing ; 1959 ; Yearbook of the Association of Pacific Coast Geographers Volume 21 [1959] ; 7881 >
+        au < testing ; 1960 ; Yearbook of the Association of Pacific Coast Geographers Volume 22 [1960] ; 7891 >
+        au < testing ; 1961 ; Yearbook of the Association of Pacific Coast Geographers Volume 23 [1961] ; 7892 >
+        au < testing ; 1962 ; Yearbook of the Association of Pacific Coast Geographers Volume 24 [1962] ; 7882 >
+        au < testing ; 1963 ; Yearbook of the Association of Pacific Coast Geographers Volume 25 [1963] ; 7893 >
+        au < testing ; 1964 ; Yearbook of the Association of Pacific Coast Geographers Volume 26 [1964] ; 7894 >
+        au < testing ; 1965 ; Yearbook of the Association of Pacific Coast Geographers Volume 27 [1965] ; 7223 >
+        au < testing ; 1966 ; Yearbook of the Association of Pacific Coast Geographers Volume 28 [1966] ; 7222 >
+        au < testing ; 1967 ; Yearbook of the Association of Pacific Coast Geographers Volume 29 [1967] ; 7221 >
+        au < testing ; 1968 ; Yearbook of the Association of Pacific Coast Geographers Volume 30 [1968] ; 7220 >
+        au < testing ; 1969 ; Yearbook of the Association of Pacific Coast Geographers Volume 31 [1969] ; 7219 >
+        au < testing ; 1970 ; Yearbook of the Association of Pacific Coast Geographers Volume 32 [1970] ; 7218 >
+        au < testing ; 1971 ; Yearbook of the Association of Pacific Coast Geographers Volume 33 [1971] ; 7217 >
+        au < testing ; 1972 ; Yearbook of the Association of Pacific Coast Geographers Volume 34 [1972] ; 7216 >
+        au < testing ; 1973 ; Yearbook of the Association of Pacific Coast Geographers Volume 35 [1973] ; 7215 >
+        au < testing ; 1974 ; Yearbook of the Association of Pacific Coast Geographers Volume 36 [1974] ; 7214 >
+        au < testing ; 1975 ; Yearbook of the Association of Pacific Coast Geographers Volume 37 [1975] ; 7213 >
+        au < testing ; 1976 ; Yearbook of the Association of Pacific Coast Geographers Volume 38 [1976] ; 7212 >
+        au < testing ; 1977 ; Yearbook of the Association of Pacific Coast Geographers Volume 39 [1977] ; 7211 >
+        au < testing ; 1978 ; Yearbook of the Association of Pacific Coast Geographers Volume 40 [1978] ; 7210 >
+        au < testing ; 1979 ; Yearbook of the Association of Pacific Coast Geographers Volume 41 [1979] ; 7043 >
+        au < testing ; 1980 ; Yearbook of the Association of Pacific Coast Geographers Volume 42 [1980] ; 7224 >
+        au < testing ; 1981 ; Yearbook of the Association of Pacific Coast Geographers Volume 43 [1981] ; 7225 >
+        au < testing ; 1982 ; Yearbook of the Association of Pacific Coast Geographers Volume 44 [1982] ; 7226 >
+        au < testing ; 1983 ; Yearbook of the Association of Pacific Coast Geographers Volume 45 [1983] ; 7227 >
+        au < testing ; 1984 ; Yearbook of the Association of Pacific Coast Geographers Volume 46 [1984] ; 7228 >
+        au < testing ; 1985 ; Yearbook of the Association of Pacific Coast Geographers Volume 47 [1985] ; 7229 >
+        au < testing ; 1986 ; Yearbook of the Association of Pacific Coast Geographers Volume 48 [1986] ; 7184 >
+        au < testing ; 1987 ; Yearbook of the Association of Pacific Coast Geographers Volume 49 [1987] ; 7186 >
+        au < testing ; 1988 ; Yearbook of the Association of Pacific Coast Geographers Volume 50 [1988] ; 7187 >
+        au < testing ; 1989 ; Yearbook of the Association of Pacific Coast Geographers Volume 51 [1989] ; 7188 >
+        au < testing ; 1990 ; Yearbook of the Association of Pacific Coast Geographers Volume 52 [1990] ; 7189 >
+        au < testing ; 1991 ; Yearbook of the Association of Pacific Coast Geographers Volume 53 [1991] ; 7190 >
+        au < testing ; 1992 ; Yearbook of the Association of Pacific Coast Geographers Volume 54 [1992] ; 7191 >
+        au < testing ; 1993 ; Yearbook of the Association of Pacific Coast Geographers Volume 55 [1993] ; 7192 >
+        au < testing ; 1994 ; Yearbook of the Association of Pacific Coast Geographers Volume 56 [1994] ; 7193 >
+        au < testing ; 1995 ; Yearbook of the Association of Pacific Coast Geographers Volume 57 [1995] ; 7194 >
+        au < testing ; 1996 ; Yearbook of the Association of Pacific Coast Geographers Volume 58 [1996] ; 7195 >
+        au < testing ; 1997 ; Yearbook of the Association of Pacific Coast Geographers Volume 59 [1997] ; 7196 >
+        au < testing ; 1998 ; Yearbook of the Association of Pacific Coast Geographers Volume 60 [1998] ; 7197 >
+        au < testing ; 1999 ; Yearbook of the Association of Pacific Coast Geographers Volume 61 [1999] ; 7198 >
+        au < testing ; 2000 ; Yearbook of the Association of Pacific Coast Geographers Volume 62 [2000] ; 7199 >
+        au < testing ; 2001 ; Yearbook of the Association of Pacific Coast Geographers Volume 63 [2001] ; 7200 >
+        au < testing ; 2002 ; Yearbook of the Association of Pacific Coast Geographers Volume 64 [2002] ; 7201 >
+        au < testing ; 2003 ; Yearbook of the Association of Pacific Coast Geographers Volume 65 [2003] ; 7202 >
+        au < testing ; 2004 ; Yearbook of the Association of Pacific Coast Geographers Volume 66 [2004] ; 2574 >
+        au < testing ; 2005 ; Yearbook of the Association of Pacific Coast Geographers Volume 67 [2005] ; 2824 >
+        au < testing ; 2006 ; Yearbook of the Association of Pacific Coast Geographers Volume 68 [2006] ; 3099 >
+        au < testing ; 2007 ; Yearbook of the Association of Pacific Coast Geographers Volume 69 [2007] ; 3439 >
+        au < testing ; 2008 ; Yearbook of the Association of Pacific Coast Geographers Volume 70 [2008] ; 3828 >
+        au < testing ; 2009 ; Yearbook of the Association of Pacific Coast Geographers Volume 71 [2009] ; 4382 >
         au < released ; 2010 ; Yearbook of the Association of Pacific Coast Geographers Volume 72 [2010] ; 6433 >
         au < released ; 2011 ; Yearbook of the Association of Pacific Coast Geographers Volume 73 [2011] ; 7510 >
         au < released ; 2012 ; Yearbook of the Association of Pacific Coast Geographers Volume 74 [2012] ; 8427 >
