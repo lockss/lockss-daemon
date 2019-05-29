@@ -53,20 +53,23 @@ public class GovCourtInfoSitemapsArticleIteratorFactory
   
   protected static Logger log = 
     Logger.getLogger(GovCourtInfoSitemapsArticleIteratorFactory.class);
-    /*
-    https://www.govinfo.gov/app/details/USCOURTS-akd-3_08-cv-00162
-    --The site does not have have .htm/.html/.pdf, it provides .zip file which contains .pdf file
-    --Not sure how to handle it, leave it in the comment for now
-    https://www.govinfo.gov/content/pkg/USCOURTS-akd-1_06-cv-00009.zip
-     */
 
-  protected static final String ROOT_TEMPLATE =
-    "\"%app/detail/\", base_url";
+  /*
+  https://www.govinfo.gov/app/details/USCOURTS-akd-1_11-cv-00009
+  https://www.govinfo.gov/app/details/USCOURTS-akd-3_12-cv-00250/context
+   */
+
+  protected static final String ROOT_TEMPLATE = "\"%sapp/details/\", base_url";
 
   protected static final String PATTERN_TEMPLATE =
-    "\"^%sapp/detail/([^/]+)\", base_url";
+          "\"^%sapp/details/([^/]+)/context\", base_url";
 
-  
+  protected static final Pattern HTML_PATTERN =
+          Pattern.compile("([^/]+)/context\\$",
+                  Pattern.CASE_INSENSITIVE);
+
+  protected static final String HTML_REPLACEMENT = "$1/context";
+
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
                                                       MetadataTarget target)
       throws PluginException {
@@ -74,12 +77,15 @@ public class GovCourtInfoSitemapsArticleIteratorFactory
     SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
     
     builder.setSpec(target, ROOT_TEMPLATE, PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
-    builder.addRoles(
-            Arrays.asList(
+
+    builder.addAspect(
+            HTML_PATTERN,
+            HTML_REPLACEMENT,
+            ArticleFiles.ROLE_FULL_TEXT_HTML);
+
+    builder.setRoleFromOtherRoles(
             ArticleFiles.ROLE_ARTICLE_METADATA,
-            ArticleFiles.ROLE_FULL_TEXT_HTML));
-
-
+            ArticleFiles.ROLE_FULL_TEXT_HTML);
 
     return builder.getSubTreeArticleIterator();
   }

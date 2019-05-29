@@ -99,6 +99,7 @@
       https://www.govinfo.gov/metadata/pkg/USCOURTS-akd-1_06-cv-00009/mods.xml
       https://www.govinfo.gov/metadata/pkg/USCOURTS-akd-1_06-cv-00009/premis.xml
       -->
+      <string>2,"^https://%s/content/pkg/[^/]+\.zip$", url_host(base_url)</string>
       <string>1,"^https://%s/(content|metadata)/pkg/%s-%s", url_host(base_url), collection_id, court_id</string>
       <string>1,"^https://%s/app/details/%s-%s", url_host(base_url), collection_id, court_id</string>
       <string>1,"^https://maxcdn\.bootstrapcdn\.com/.*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)"</string>
@@ -108,7 +109,7 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%s^metadata/pkg/[^/]+/[^/]+\.xml$", base_url</string>
+      <string>"^content/pkg/(%s-%s[^/]+)/pdf/\1[^/]+\.pdf$", base_url, collection_id, court_id</string>
     </list>
   </entry>
   <entry>
@@ -121,11 +122,11 @@
   </entry>
   <entry>
     <string>application/xml_link_extractor_factory</string>
-    <string>org.lockss.plugin.usdocspln.gov.govinfo.GovInfoSitemapsLinkExtractorFactory</string>
+    <string>org.lockss.plugin.usdocspln.gov.govinfo.GovCourtInfoSitemapsLinkExtractorFactory</string>
   </entry>
   <entry>
     <string>text/xml_link_extractor_factory</string>
-    <string>org.lockss.plugin.usdocspln.gov.govinfo.GovInfoSitemapsLinkExtractorFactory</string>
+    <string>org.lockss.plugin.usdocspln.gov.govinfo.GovCourtInfoSitemapsLinkExtractorFactory</string>
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
@@ -150,11 +151,11 @@
           <org.lockss.daemon.CrawlWindows-Daily>
             <!--<from>9:00</from>
             <to>21:00</to>-->
-            <from>1:00</from>
-            <to>8:00</to>
+            <from>17:00</from>
+            <to>18:00</to>
             <timeZoneId>US/Eastern</timeZoneId>
             <!--<daysOfWeek>4;5;6</daysOfWeek>-->
-            <daysOfWeek>1</daysOfWeek>
+            <daysOfWeek>1;2;3;4;5;6</daysOfWeek>
           </org.lockss.daemon.CrawlWindows-Daily>
           <org.lockss.plugin.RateLimiterInfo>
             <rate>1/1h</rate>
@@ -186,7 +187,7 @@
     <string>au_repair_from_peer_if_missing_url_pattern</string>
     <string>"/pkg/(%s[^/]+)/(pdf|xml)/\1[^/]+\.\2$", collection_id</string>
     <string>^https://maxcdn\.bootstrapcdn\.com/.*\.css$</string>
-    <string>/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)(\?Fv=[0-9.]+)?$</string>
+    <string>/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)</string>
   </entry>
   <entry>
     <!-- these will not count towards poll results but will replicate from peer if above -->
@@ -194,7 +195,7 @@
     <list>
       <string>"/pkg/(%s[^/]+)/(pdf|xml)/\1[^/]+\.\2$", collection_id, 0</string>
       <string>^https://maxcdn\.bootstrapcdn\.com/.*\.css$, 0</string>
-      <string>/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)(\?v=[0-9.]+)?$, 0</string>
+      <string>/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf), 0</string>
     </list>
   </entry>
   <entry>
