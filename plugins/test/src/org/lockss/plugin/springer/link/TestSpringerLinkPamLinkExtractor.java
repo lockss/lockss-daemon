@@ -40,6 +40,7 @@ import org.lockss.extractor.*;
 import org.lockss.extractor.LinkExtractor.Callback;
 import org.lockss.plugin.springer.link.SpringerLinkPamLinkExtractor;
 import org.lockss.test.*;
+import org.lockss.util.StringUtil;
 
 public class TestSpringerLinkPamLinkExtractor extends LockssTestCase {
   

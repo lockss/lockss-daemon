@@ -63,69 +63,6 @@ public class SpringerLinkPamLinkExtractor implements LinkExtractor {
 
   /**
    * <p>
-   * A simple line rewriting reader that adds namespace declarations to a bare
-   * top-level <code>&lt;response&gt;</code> node.
-   * </p>
-   * 
-   * @since 1.67.5
-   */
-  public static class PamRewritingReader extends LineRewritingReader {
-
-    /**
-     * <p>
-     * A flag indicating if the single rewriting operation has taken place.
-     * </p>
-     * 
-     * @since 1.67.5
-     */
-    protected boolean rewritten;
-    
-    /**
-     * <p>
-     * Wraps an incoming reader.
-     * </p>
-     * 
-     * @param reader
-     *          A reader.
-     * @since 1.67.5
-     */
-    public PamRewritingReader(Reader reader) {
-      super(reader);
-      this.rewritten = false;
-    }
-    
-    @Override
-    public String rewriteLine(String line) {
-      if (!rewritten && line.startsWith("<response>")) {
-        rewritten = true;
-        StringBuilder sb = new StringBuilder();
-        sb.append("<response");
-        for (Map.Entry<String, String> ent : NAMESPACE_MAP.entrySet()) {
-          sb.append(" xmlns:");
-          sb.append(ent.getKey());
-          sb.append("=\"");
-          sb.append(ent.getValue());
-          sb.append("\"");
-        }
-        sb.append(">");
-        line = sb.toString() + line.substring(10);
-      }
-      return line;
-    }
-    
-  }
-
-  /**
-   * <p>
-   * The map of namespaces used in responses. (See static initializer.)
-   * </p>
-   * 
-   * @since 1.67.5
-   */
-  protected static final Map<String, String> NAMESPACE_MAP;
-
-  /**
-   * <p>
    * An XPath expression to select the total number of records from the result
    * section of the response. (See static initializer.)
    * </p>
@@ -206,24 +143,30 @@ public class SpringerLinkPamLinkExtractor implements LinkExtractor {
 
   /*
    * STATIC INITIALIZER
+   * 
+   * May 2019 - namesapce_map is no longer used; instead create the DocumentBuilderFactory to
+   * ignore namespaces
+   * The XPATH definitions will work without the namespace portion unless doing a direct
+   * string comparison of the node value.
+   *
+   * ARTICLE = xpath.compile("/response/records/pam:message/xhtml:head/pam:article");
+   * DOI = xpath.compile("prism:doi");
+   * ABSTRACT = xpath.compile("prism:url[not(@format)]");
+   * HTML = xpath.compile("prism:url[@format='html']");
+   * PDF = xpath.compile("prism:url[@format='pdf']");
+   * 
    */
   static {
-    NAMESPACE_MAP = new HashMap<String, String>();
-    NAMESPACE_MAP.put("dc", "http://purl.org/dc/elements/1.1/");
-    NAMESPACE_MAP.put("pam", "http://prismstandard.org/namespaces/pam/2.0/");
-    NAMESPACE_MAP.put("prism", "http://prismstandard.org/namespaces/basic/2.0/");
-    NAMESPACE_MAP.put("xhtml", "http://www.w3.org/1999/xhtml");
     try {
       XPath xpath = XPathFactory.newInstance().newXPath();
-      xpath.setNamespaceContext(new OneToOneNamespaceContext(NAMESPACE_MAP));
       START = xpath.compile("/response/result/start");
       PAGE_LENGTH = xpath.compile("/response/result/pageLength");
       TOTAL = xpath.compile("/response/result/total");
-      ARTICLE = xpath.compile("/response/records/pam:message/xhtml:head/pam:article");
-      DOI = xpath.compile("prism:doi");
-      ABSTRACT = xpath.compile("prism:url[not(@format)]");
-      HTML = xpath.compile("prism:url[@format='html']");
-      PDF = xpath.compile("prism:url[@format='pdf']");
+      ARTICLE = xpath.compile("/response/records/message/head/article");
+      DOI = xpath.compile("doi");
+      ABSTRACT = xpath.compile("url[not(@format)]");
+      HTML = xpath.compile("url[@format='html']");
+      PDF = xpath.compile("url[@format='pdf']");
     }
     catch (XPathExpressionException xpee) {
       throw new ExceptionInInitializerError(xpee);
@@ -289,8 +232,12 @@ public class SpringerLinkPamLinkExtractor implements LinkExtractor {
       throws IOException {
     String loggerUrl = loggerUrl(srcUrl);
     DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-    factory.setNamespaceAware(true);
-    InputSource inputSource = new InputSource(new PamRewritingReader(new InputStreamReader(in, encoding)));
+    // do not set namespaces to true - default is false
+    // so that we don't need to track variations to the namespaces sent in the XML over time
+    //factory.setNamespaceAware(true);
+    // Now that namespaces are ignored, no need to rewrite any of the lines
+    //InputSource inputSource = new InputSource(new PamRewritingReader(new InputStreamReader(in, encoding)));
+    InputSource inputSource = new InputSource(new InputStreamReader(in, encoding));
     Document doc = null;
     try {
       DocumentBuilder builder = factory.newDocumentBuilder();
