@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2019 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -58,10 +54,45 @@ public class ListObjects extends LockssServlet {
   public static final String FIELD_POLL_WEIGHT = "PollWeight";
   public static final String FIELD_CONTENT_TYPE = "ContentType";
   public static final String FIELD_SIZE = "Size";
+  public static final String FIELD_PROPS_URL = "PropsUrl";
+  public static final String FIELD_VERSION = "Version";
+
+  public static final String FIELD_AUNAME = "AuName";
+  public static final String FIELD_AUID = "Auid";
+
+  static final String HELP =
+    "ListObjects query args:<ul>" +
+    "<li>type - Type of list requested; one of:<ul>" +
+    "  <li>aus - List all active AUs.</li>" +
+    "  <li>auids - List auid of all active AUs.</li>" +
+    "  <li>urls - List urls of AU.</li>" +
+    "  <li>urlsm - List urls of AU including archive members.</li>" +
+    "  <li>suburls - List substance urls of AU.</li>" +
+    "  <li>suburlsdetail - List substance urls of AU, including redirect chains.</li>" +
+    "  <li>articles - List articles of AU found by ArticleIterator.</li>" +
+    "  <li>dois - List article DOIs found by MetadataExtractor.</li>" +
+    "  <li>metadata - List raw metadata.</li>" +
+    "  <li>auvalidate - Run ContentValidator over AU.</li>" +
+    "  <li>extracturls - List results of running LinkExtractor on URL.  Requires 'url' arg.</li></ul>" +
+    "<li>auid - Required for all but 'auids' above.</li>" +
+    "<li>url - Required for 'extracturls'.</li>" +
+    "<li>fields - Comma-separated list of fields to display." +
+    "<br>For 'urls' and 'urlsm':<ul>" +
+    "  <li>ContentType - MIME type.</li>" +
+    "  <li>PollWeight - URL's poll weight from plugin poll result weight map, if any.</li>" +
+    "  <li>PropsUrl - The URL fetched, recorded in CU properties.</li>" +
+    "  <li>Size - File size.</li>" +
+    "  <li>Version - CU version.</li></ul>" +
+    "For 'aus':<ul>" +
+    "  <li>AuName - AU name.</li>" +
+    "  <li>Auid - AU ID.</li></ul>" +
+    "<li>maxversions - For 'urls' and 'urlsm', the maximum versions to include. Defaults to 1; 0 or negative is unlimited.</li>" +
+    "<li>errorResp - If 'text', errors will be reported with error HTTP status and text content.</li></ul>";
 
   private String auid;
   private String url;
   private List<String> fields;
+  private int maxVersions = 1;
   
   private ArchivalUnit au;
 
@@ -74,6 +105,7 @@ public class ListObjects extends LockssServlet {
     auid = null;
     url = null;
     fields = null;
+    maxVersions = 1;
     super.resetLocals();
   }
 
@@ -94,7 +126,7 @@ public class ListObjects extends LockssServlet {
     }
     String type = getParameter("type");
     if (StringUtil.isNullString(type)) {
-      displayError("\"type\" arg must be specified");
+      displayError("\"type\" arg must be specified", HELP);
       return;
     }
     String fieldParam = getParameter("fields");
@@ -108,17 +140,33 @@ public class ListObjects extends LockssServlet {
       fields = ListUtil.list(FIELD_CONTENT_TYPE, FIELD_SIZE, FIELD_POLL_WEIGHT);
     }    
 
+    // Backwards compatibility with old "auids"
+    if (type.equalsIgnoreCase("auids")) {
+      type = "aus";
+      fields = ListUtil.list(FIELD_AUID);
+    }
+    if (type.equalsIgnoreCase("aus") && (fields == null || fields.isEmpty())) {
+      fields = ListUtil.list(FIELD_AUNAME);
+    }
+
+    String maxVerParam = getParameter("maxversions");
+    if (!StringUtil.isNullString(maxVerParam)) {
+      try {
+	maxVersions = Integer.parseInt(maxVerParam);
+      } catch (NumberFormatException e) {
+	log.warning("Illegal maxversions: " + maxVerParam);
+      }
+    }
+
     if (type.equalsIgnoreCase("aus")) {
-      new AuNameList().execute();
-    } else if (type.equalsIgnoreCase("auids")) {
-      new AuidList().execute();
+      new AuList().execute();
     } else {
       // all others need au
       auid = getParameter("auid");
       url = getParameter("url");
       au = pluginMgr.getAuFromId(auid);
       if (au == null) {
-	displayError("No such AU: " + auid);
+	sendError(404, "AU not found","# AU not found:\n" + auid);
 	return;
       }
       if (type.equalsIgnoreCase("urls")) {
@@ -150,7 +198,7 @@ public class ListObjects extends LockssServlet {
       } else if (type.equalsIgnoreCase("auvalidate")) {
 	new ValidationList().execute();
       } else {
-	displayError("Unknown list type: " + type);
+	sendError(400, "Unknown list type: " + type, null);
 	return;
       }
     }
@@ -172,12 +220,38 @@ public class ListObjects extends LockssServlet {
     return null != au.getPlugin().getArticleIteratorFactory();
   }
 
+  private void sendError(int respCode, String respMsg, String message)
+      throws IOException {
+    if ("text".equals(req.getParameter("errorResp"))) {
+      sendTextError(respCode, respMsg, message);
+    } else {
+      displayError(respMsg, message);
+    }
+  }
+
+  protected void sendTextError(int respCode, String respMsg, String message)
+      throws IOException {
+    resp.setContentType("text/plain");
+    resp.setStatus(respCode, respMsg);
+    PrintWriter wrtr = resp.getWriter();
+    wrtr.println(message);
+    wrtr.close();
+  }
+
   void displayError(String error) throws IOException {
+    displayError(error, null);
+  }
+
+  void displayError(String error, String message) throws IOException {
     Page page = newPage();
     Composite comp = new Composite();
     comp.add("<center><font color=red size=+1>");
     comp.add(error);
     comp.add("</font></center><br>");
+    if (message != null) {
+      comp.add("<br><br>");
+      comp.add(StringUtil.replaceString(message, "\n", "<br>"));
+    }
     page.add(comp);
     endPage(page);
   }
@@ -213,9 +287,13 @@ public class ListObjects extends LockssServlet {
     }
 
     void finish() {;
-      wrtr.println("# " + units(itemCnt));
+      printCount();
       wrtr.println(isError ? "# end (errors)" : "# end");
       wrtr.flush();
+    }
+
+    protected void printCount() {
+      wrtr.println("# " + units(itemCnt));
     }
 
     final void execute() throws IOException {
@@ -229,6 +307,7 @@ public class ListObjects extends LockssServlet {
   /** Lists of objects (URLs, files, etc.) which are based on AU's
    * repository nodes */
   abstract class BaseNodeList extends BaseList {
+    protected int urlCnt = 0;
     
     /** Subs must process content CUs */
     abstract void processContentCu(CachedUrl cu);
@@ -237,10 +316,21 @@ public class ListObjects extends LockssServlet {
       for (CuIterator iter = getIterator();
 	   iter.hasNext(); ) {
 	CachedUrl cu = iter.next();
-	try {
-	  processCu(cu);
-	} finally {
-	  AuUtil.safeRelease(cu);
+	if (cu.hasContent()) {
+	  urlCnt++;
+	}
+	if (maxVersions < 1) {
+	  maxVersions = Integer.MAX_VALUE;
+	}
+	CachedUrl[] cuVers = (maxVersions == 1
+			      ? new CachedUrl[] { cu }
+			      : cu.getCuVersions(maxVersions));
+	for (CachedUrl cuVer : cuVers) {
+	  try {
+	    processCu(cuVer);
+	  } finally {
+	    AuUtil.safeRelease(cuVer);
+	  }
 	}
       }
     }
@@ -256,6 +346,15 @@ public class ListObjects extends LockssServlet {
       }
     }
     
+    protected void printCount() {
+      if (maxVersions == 1) {
+	wrtr.println("# " + units(itemCnt));
+      } else {
+	wrtr.println("# " + StringUtil.numberOfUnits(urlCnt, "URL"));
+	wrtr.println("# " + StringUtil.numberOfUnits(itemCnt, "total version"));
+      }
+    }
+
   }
 
   /** List URLs in AU */
@@ -305,6 +404,17 @@ public class ListObjects extends LockssServlet {
 	  case FIELD_SIZE:
 	    wrtr.print("\t" + cu.getContentSize());
 	    break;
+	  case FIELD_VERSION:
+	    wrtr.print("\t" + cu.getVersion());
+	    break;
+	  case FIELD_PROPS_URL:
+	    String propsUrl =
+	      cu.getProperties().getProperty(CachedUrl.PROPERTY_NODE_URL);
+	    wrtr.print("\t" + (propsUrl != null ? propsUrl : ""));
+	    break;
+	  default:
+	    wrtr.print("\t???");
+	    break;
 	  }
 	}
       }
@@ -350,6 +460,10 @@ public class ListObjects extends LockssServlet {
     CuIterator getIterator() {
       return au.getAuCachedUrlSet().getCuIterator();
     }
+
+    String unitName() {
+      return "substance URL";
+    }
   }
 
   /** List substance URLs in AU */
@@ -361,10 +475,6 @@ public class ListObjects extends LockssServlet {
 
     void printHeader() {
       wrtr.println("# Substance URLs* in " + au.getName());
-    }
-
-    String units(int n) {
-      return StringUtil.numberOfUnits(n, "substance URL", "substance URLs");
     }
 
     protected void processCu(CachedUrl cu) {
@@ -399,10 +509,6 @@ public class ListObjects extends LockssServlet {
       wrtr.println("# Substance checker mode is " + subChecker.getMode());
     }
 
-    String units(int n) {
-      return StringUtil.numberOfUnits(n, "substance URL", "substance URLs");
-    }
-
     protected void processCu(CachedUrl cu) {
       if (cu.hasContent()) {
  	String cuUrl = cu.getUrl();
@@ -419,11 +525,13 @@ public class ListObjects extends LockssServlet {
 	  itemCnt++;
 	}
 	wrtr.println((hasSubst ? "Yes" : "No ") + "  " + cuUrl);
-	if (urls.size() != 1 || cuUrl != urls.get(0)) {
+	List<String> redirs = AuUtil.getRedirectChain(cu);
+	if (redirs.size() > 1) {
 	  wrtr.println("  Redirect chain:");
-	  for (String url : AuUtil.getRedirectChain(cu)) {
+	  for (String url : redirs) {
 	    if (res.containsKey(url)) {
-	      wrtr.println((hasSubst ? "  Yes" : "  No ") + "   " + url);
+	      wrtr.println((subChecker.isSubstanceUrl(url)
+			    ? "  Yes" : "  No ") + "   " + url);
 	    } else {
 	      wrtr.println("        " + url);
 	    }
@@ -491,8 +599,8 @@ public class ListObjects extends LockssServlet {
       wrtr.println("# Substance files* in " + au.getName());
     }
 
-    String units(int n) {
-      return StringUtil.numberOfUnits(n, "substance file", "substance files");
+    String unitName() {
+      return "substance file";
     }
 
     protected void processCu(CachedUrl cu) {
@@ -751,6 +859,10 @@ public class ListObjects extends LockssServlet {
   /** Base for lists of AUs */
   abstract class BaseAuList extends BaseList {
 
+    String unitName() {
+      return "AU";
+    }
+
     void doBody() throws IOException {
       boolean includeInternalAus = isDebugUser();
       for (ArchivalUnit au : pluginMgr.getAllAus()) {
@@ -767,39 +879,37 @@ public class ListObjects extends LockssServlet {
   }
 
   /** List AU names */
-  class AuNameList extends BaseAuList {
+  class AuList extends BaseAuList {
     
     void printHeader() {
-      wrtr.println("# AUs on " + getMachineName());
-    }
-
-    String unitName() {
-      return "AU";
+      wrtr.println("# AUs");
+      if (fields != null) {
+	wrtr.println("# " + StringUtil.separatedString(fields, "\t"));
+      }
     }
 
     void processAu(ArchivalUnit au) {
-      wrtr.println(au.getName());
+      List<String> line = new ArrayList<>();
+      if (fields != null) {
+	for (String f : fields) {
+	  switch (f) {
+	  case FIELD_AUNAME:
+	    line.add(au.getName());
+	    break;
+	  case FIELD_AUID:
+	    line.add(au.getAuId());
+	    break;
+	  default:
+	    line.add("???");
+	    break;
+	  }
+	}
+      }
+      wrtr.println(StringUtil.separatedString(line, "\t"));
     }
     
   }
 
-  /** List AUIDs */
-  class AuidList extends BaseAuList {
-    
-    void printHeader() {
-      wrtr.println("# AUIDs on " + getMachineName());
-    }
-
-    String unitName() {
-      return "AU";
-    }
-
-    void processAu(ArchivalUnit au) {
-      wrtr.println(au.getAuId());
-    }
-    
-  }
-  
   /** Display list of URLs that link extractor finds in file */
   class ExtractUrlsList extends BaseList {
 
