@@ -674,7 +674,7 @@ public class TestAuUtil extends LockssTestCase {
     List<String> remUrls = new ArrayList(urls);
     String first = remUrls.remove(0);
     String last = urls.get(urls.size() - 1);
-    MockCachedUrl firstCu = mau.addUrl(first);
+    MockCachedUrl firstCu = mau.addUrl(first, "content: " + first);
     List<MockCachedUrl> mcus = new ArrayList<MockCachedUrl>();
     mcus.add(firstCu);
     MockCachedUrl mcu = firstCu;
@@ -684,10 +684,12 @@ public class TestAuUtil extends LockssTestCase {
       props.put(CachedUrl.PROPERTY_REDIRECTED_TO, url);
       props.put(CachedUrl.PROPERTY_CONTENT_URL, last);
       mcu.setProperties(props);
-      props = new CIProperties();
-      mcu = mau.addUrl(url);
+      mcu = mau.addUrl(url, "content: " + url);
       mcus.add(mcu);
     }
+    CIProperties props = new CIProperties();
+    props.put(CachedUrl.PROPERTY_CONTENT_URL, last);
+    mcu.setProperties(props);
   }
 
 
