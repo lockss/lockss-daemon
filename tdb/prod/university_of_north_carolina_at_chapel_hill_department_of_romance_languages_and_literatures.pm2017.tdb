@@ -19,13 +19,13 @@
 
       attr[journal_id] = 586
 
-        au < manifest ; 2008 ; Hispanófila Volume 153 [2008] ; 8332 >
-        au < manifest ; 2008 ; Hispanófila Volume 152 [2008] ; 8333 >
-        au < manifest ; 2008 ; Hispanófila Volume 151 [2008] ; 8334 >
-        au < manifest ; 2009 ; Hispanófila Volume 154 [2009] ; 8324 >
-        au < manifest ; 2009 ; Hispanófila Volume 155 [2009] ; 8325 >
-        au < manifest ; 2009 ; Hispanófila Volume 156 [2009] ; 8326 >
-        au < manifest ; 2009 ; Hispanófila Volume 157 [2009] ; 8327 >
+        au < testing ; 2008 ; Hispanófila Volume 153 [2008] ; 8332 >
+        au < testing ; 2008 ; Hispanófila Volume 152 [2008] ; 8333 >
+        au < testing ; 2008 ; Hispanófila Volume 151 [2008] ; 8334 >
+        au < testing ; 2009 ; Hispanófila Volume 154 [2009] ; 8324 >
+        au < testing ; 2009 ; Hispanófila Volume 155 [2009] ; 8325 >
+        au < testing ; 2009 ; Hispanófila Volume 156 [2009] ; 8326 >
+        au < testing ; 2009 ; Hispanófila Volume 157 [2009] ; 8327 >
         au < released ; 2010 ; Hispanófila Volume 160 [Septiembre 2010] ; 8178 >
         au < released ; 2010 ; Hispanófila Volume 159 [Mayo 2010] ; 8179 >
         au < released ; 2010 ; Hispanófila Volume 158 [Enero 2010] ; 8180 >
@@ -65,9 +65,9 @@
 
       attr[journal_id] = 588
 
-        au < manifest ; 2006 ; Romance Notes Volume 47 [2006] ; 8322 >
-        au < manifest ; 2007 ; Romance Notes Volume 48 [2007] ; 8211 >
-        au < manifest ; 2009 ; Romance Notes Volume 49 [2009] ; 8210 >
+        au < testing ; 2006 ; Romance Notes Volume 47 [2006] ; 8322 >
+        au < testing ; 2007 ; Romance Notes Volume 48 [2007] ; 8211 >
+        au < testing ; 2009 ; Romance Notes Volume 49 [2009] ; 8210 >
         au < released ; 2010 ; Romance Notes Volume 50 [2010] ; 7815 >
         au < released ; 2011 ; Romance Notes Volume 51 [2011] ; 8124 >
         au < released ; 2012 ; Romance Notes Volume 52 [2012] ; 8409 >
