@@ -15,6 +15,9 @@
     {
       #plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
       plugin = needs.plugin  #new ingenta platform
+
+      #not found on ingenta normal website, check http://www.ajtmh.org/content/journals/14761645/browse?page=previous-issues
+
       param[base_url] = http://www.ingentaconnect.com/
       param[api_url] = http://api.ingentaconnect.com/
       param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -28,8 +31,8 @@
       au < exists ; 2016 ; The American Journal of Tropical Medicine and Hygiene Volume 95 ; 95 >
       au < exists ; 2017 ; The American Journal of Tropical Medicine and Hygiene Volume 96 ; 96 >
       au < exists ; 2017 ; The American Journal of Tropical Medicine and Hygiene Volume 97 ; 97 >
-      au < expected ; 2018 ; The American Journal of Tropical Medicine and Hygiene Volume 98 ; 98 >
-      au < expected ; 2018 ; The American Journal of Tropical Medicine and Hygiene Volume 99 ; 99 >
+      au < exists ; 2018 ; The American Journal of Tropical Medicine and Hygiene Volume 98 ; 98 >
+      au < exists ; 2018 ; The American Journal of Tropical Medicine and Hygiene Volume 99 ; 99 >
     }
 
     {

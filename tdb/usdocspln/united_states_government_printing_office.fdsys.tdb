@@ -455,21 +455,6 @@
 
   }
 
-
-  {
-
-    title <
-      name = Commerce Business Daily
-
-      >
-
-   param[collection_id] = CDB
-
-
-       au < exists ; 1996 ; Code of Federal Regulations 1996 ; https://www.gpo.gov/ ; 1996 >
-
-  }
-
   {
 
 
@@ -602,9 +587,9 @@
     au < down ; 2009 ; Congressional Directory 2009 ; http://www.gpo.gov/ ; 2009 >
     au < down ; 2011 ; Congressional Directory 2011 ; http://www.gpo.gov/ ; 2011 >
     au < down ; 2014 ; Congressional Directory 2014 ; https://www.gpo.gov/ ; 2014 >
-    au < expected ; 2015 ; Congressional Directory 2015 ; https://www.gpo.gov/ ; 2015 >
+    #au < expected ; 2015 ; Congressional Directory 2015 ; https://www.gpo.gov/ ; 2015 >
     au < down ; 2016 ; Congressional Directory 2016 ; https://www.gpo.gov/ ; 2016 >
-    au < expected ; 2017 ; Congressional Directory 2017 ; https://www.gpo.gov/ ; 2017 >
+    #au < expected ; 2017 ; Congressional Directory 2017 ; https://www.gpo.gov/ ; 2017 >
 
   }
 
@@ -737,39 +722,39 @@
     >
     comment[0] = published from 1971 to 2006
 
-    {
-    #This material included in the collection "GPO"
-    param[collection_id] = GPO-CRECB
-
-    au < exists ; 1971 ; Congressional Record (Bound) 1971 ; https://www.gpo.gov/ ; 1971 >
-    au < exists ; 1972 ; Congressional Record (Bound) 1972 ; https://www.gpo.gov/ ; 1972 >
-    au < exists ; 1973 ; Congressional Record (Bound) 1973 ; https://www.gpo.gov/ ; 1973 >
-    au < exists ; 1974 ; Congressional Record (Bound) 1974 ; https://www.gpo.gov/ ; 1974 >
-    au < exists ; 1975 ; Congressional Record (Bound) 1975 ; https://www.gpo.gov/ ; 1975 >
-    au < exists ; 1976 ; Congressional Record (Bound) 1976 ; https://www.gpo.gov/ ; 1976 >
-    au < exists ; 1977 ; Congressional Record (Bound) 1977 ; https://www.gpo.gov/ ; 1977 >
-    au < exists ; 1978 ; Congressional Record (Bound) 1978 ; https://www.gpo.gov/ ; 1978 >
-    au < exists ; 1979 ; Congressional Record (Bound) 1979 ; https://www.gpo.gov/ ; 1979 >
-    au < exists ; 1980 ; Congressional Record (Bound) 1980 ; https://www.gpo.gov/ ; 1980 >
-    au < exists ; 1981 ; Congressional Record (Bound) 1981 ; https://www.gpo.gov/ ; 1981 >
-    au < exists ; 1982 ; Congressional Record (Bound) 1982 ; https://www.gpo.gov/ ; 1982 >
-    au < exists ; 1983 ; Congressional Record (Bound) 1983 ; https://www.gpo.gov/ ; 1983 >
-    au < exists ; 1984 ; Congressional Record (Bound) 1984 ; https://www.gpo.gov/ ; 1984 >
-    au < exists ; 1985 ; Congressional Record (Bound) 1985 ; https://www.gpo.gov/ ; 1985 >
-    au < exists ; 1986 ; Congressional Record (Bound) 1986 ; https://www.gpo.gov/ ; 1986 >
-    au < exists ; 1987 ; Congressional Record (Bound) 1987 ; https://www.gpo.gov/ ; 1987 >
-    au < exists ; 1988 ; Congressional Record (Bound) 1988 ; https://www.gpo.gov/ ; 1988 >
-    au < exists ; 1989 ; Congressional Record (Bound) 1989 ; https://www.gpo.gov/ ; 1989 >
-    au < exists ; 1990 ; Congressional Record (Bound) 1990 ; https://www.gpo.gov/ ; 1990 >
-    au < exists ; 1991 ; Congressional Record (Bound) 1991 ; https://www.gpo.gov/ ; 1991 >
-    au < exists ; 1992 ; Congressional Record (Bound) 1992 ; https://www.gpo.gov/ ; 1992 >
-    au < exists ; 1993 ; Congressional Record (Bound) 1993 ; https://www.gpo.gov/ ; 1993 >
-    au < exists ; 1994 ; Congressional Record (Bound) 1994 ; https://www.gpo.gov/ ; 1994 >
-    au < exists ; 1995 ; Congressional Record (Bound) 1995 ; https://www.gpo.gov/ ; 1995 >
-    au < exists ; 1996 ; Congressional Record (Bound) 1996 ; https://www.gpo.gov/ ; 1996 >
-    au < exists ; 1997 ; Congressional Record (Bound) 1997 ; https://www.gpo.gov/ ; 1997 >
-    au < exists ; 1998 ; Congressional Record (Bound) 1998 ; https://www.gpo.gov/ ; 1998 >
-    }
+#    {
+#    #This material included in the collection "GPO"
+#    param[collection_id] = GPO-CRECB
+#
+#    au < exists ; 1971 ; Congressional Record (Bound) 1971 ; https://www.gpo.gov/ ; 1971 >
+#    au < exists ; 1972 ; Congressional Record (Bound) 1972 ; https://www.gpo.gov/ ; 1972 >
+#    au < exists ; 1973 ; Congressional Record (Bound) 1973 ; https://www.gpo.gov/ ; 1973 >
+#    au < exists ; 1974 ; Congressional Record (Bound) 1974 ; https://www.gpo.gov/ ; 1974 >
+#    au < exists ; 1975 ; Congressional Record (Bound) 1975 ; https://www.gpo.gov/ ; 1975 >
+#    au < exists ; 1976 ; Congressional Record (Bound) 1976 ; https://www.gpo.gov/ ; 1976 >
+#    au < exists ; 1977 ; Congressional Record (Bound) 1977 ; https://www.gpo.gov/ ; 1977 >
+#    au < exists ; 1978 ; Congressional Record (Bound) 1978 ; https://www.gpo.gov/ ; 1978 >
+#    au < exists ; 1979 ; Congressional Record (Bound) 1979 ; https://www.gpo.gov/ ; 1979 >
+#    au < exists ; 1980 ; Congressional Record (Bound) 1980 ; https://www.gpo.gov/ ; 1980 >
+#    au < exists ; 1981 ; Congressional Record (Bound) 1981 ; https://www.gpo.gov/ ; 1981 >
+#    au < exists ; 1982 ; Congressional Record (Bound) 1982 ; https://www.gpo.gov/ ; 1982 >
+#    au < exists ; 1983 ; Congressional Record (Bound) 1983 ; https://www.gpo.gov/ ; 1983 >
+#    au < exists ; 1984 ; Congressional Record (Bound) 1984 ; https://www.gpo.gov/ ; 1984 >
+#    au < exists ; 1985 ; Congressional Record (Bound) 1985 ; https://www.gpo.gov/ ; 1985 >
+#    au < exists ; 1986 ; Congressional Record (Bound) 1986 ; https://www.gpo.gov/ ; 1986 >
+#    au < exists ; 1987 ; Congressional Record (Bound) 1987 ; https://www.gpo.gov/ ; 1987 >
+#    au < exists ; 1988 ; Congressional Record (Bound) 1988 ; https://www.gpo.gov/ ; 1988 >
+#    au < exists ; 1989 ; Congressional Record (Bound) 1989 ; https://www.gpo.gov/ ; 1989 >
+#    au < exists ; 1990 ; Congressional Record (Bound) 1990 ; https://www.gpo.gov/ ; 1990 >
+#    au < exists ; 1991 ; Congressional Record (Bound) 1991 ; https://www.gpo.gov/ ; 1991 >
+#    au < exists ; 1992 ; Congressional Record (Bound) 1992 ; https://www.gpo.gov/ ; 1992 >
+#    au < exists ; 1993 ; Congressional Record (Bound) 1993 ; https://www.gpo.gov/ ; 1993 >
+#    au < exists ; 1994 ; Congressional Record (Bound) 1994 ; https://www.gpo.gov/ ; 1994 >
+#    au < exists ; 1995 ; Congressional Record (Bound) 1995 ; https://www.gpo.gov/ ; 1995 >
+#    au < exists ; 1996 ; Congressional Record (Bound) 1996 ; https://www.gpo.gov/ ; 1996 >
+#    au < exists ; 1997 ; Congressional Record (Bound) 1997 ; https://www.gpo.gov/ ; 1997 >
+#    au < exists ; 1998 ; Congressional Record (Bound) 1998 ; https://www.gpo.gov/ ; 1998 >
+#    }
     {
     param[collection_id] = CRECB
 
@@ -779,7 +764,7 @@
     au < superseded ; 2002 ; Congressional Record (Bound) 2002 [superseded] ; http://www.gpo.gov/ ; 2002 > #actually empty...See https://www.gpo.gov/smap/fdsys/sitemap_2002/2002_CRECB_sitemap.xml
     au < doesNotExist ; 2003 ; Congressional Record (Bound) 2003 ; http://www.gpo.gov/ ; 2003 >
     au < doesNotExist ; 2004 ; Congressional Record (Bound) 2004 ; http://www.gpo.gov/ ; 2004 >
-    au < notReady ; 2005 ; Congressional Record (Bound) 2005 ; https://www.gpo.gov/ ; 2005 > #continuously fails testing.
+#    au < notReady ; 2005 ; Congressional Record (Bound) 2005 ; https://www.gpo.gov/ ; 2005 > #continuously fails testing.
     au < down ; 2006 ; Congressional Record (Bound) 2006 ; https://www.gpo.gov/ ; 2006 >
     }
   }
@@ -1102,9 +1087,8 @@
     au < down ; 2009 ; House Rules and Manual 2009 ; http://www.gpo.gov/ ; 2009 >
     au < down ; 2011 ; House Rules and Manual 2011 ; http://www.gpo.gov/ ; 2011 >
     au < down ; 2013 ; House Rules and Manual 2013 ; http://www.gpo.gov/ ; 2013 >
-    au < expected ; 2014 ; House Rules and Manual 2014 ; https://www.gpo.gov/ ; 2014 >
+    au < doesNotExist ; 2014 ; House Rules and Manual 2014 ; https://www.gpo.gov/ ; 2014 >
     au < down ; 2015 ; House Rules and Manual 2015 ; https://www.gpo.gov/ ; 2015 >
-    au < expected ; 2016 ; House Rules and Manual 2016 ; https://www.gpo.gov/ ; 2016 >
 
   }
 
@@ -1175,9 +1159,12 @@
     au < down ; 2001 ; Privacy Act Issuances 2001 ; http://www.gpo.gov/ ; 2001 >
     au < down ; 2003 ; Privacy Act Issuances 2003 ; http://www.gpo.gov/ ; 2003 >
     au < down ; 2005 ; Privacy Act Issuances 2005 ; http://www.gpo.gov/ ; 2005 >
-
+    au < doNotProcess ; 2007 ; Privacy Act Issuances 2007 ; https://www.gpo.gov/ ; 2007 >
+    au < doNotProcess ; 2009 ; Privacy Act Issuances 2009 ; https://www.gpo.gov/ ; 2009 >
+    au < doNotProcess ; 2011 ; Privacy Act Issuances 2011 ; https://www.gpo.gov/ ; 2011 >
     au < down ; 2013 ; Privacy Act Issuances 2013 ; https://www.gpo.gov/ ; 2013 >
-    au < expected ; 2014 ; Privacy Act Issuances 2014 ; https://www.gpo.gov/ ; 2014 >
+    au < doNotProcess ; 2015 ; Privacy Act Issuances 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < doNotProcess ; 2017 ; Privacy Act Issuances 2017 ; https://www.gpo.gov/ ; 2017 >
 
   }
 
@@ -1189,8 +1176,6 @@
 
     param[collection_id] = PLAW
 
-    au < doesNotExist ; 1906 ; Public and Private Laws 1906 ; https://www.gpo.gov/ ; 1906 > # no such sitemap
-    au < doesNotExist ; 1941 ; Public and Private Laws 1941 ; https://www.gpo.gov/ ; 1941 > # empty sitemap
     au < down ; 1995 ; Public and Private Laws 1995 ; http://www.gpo.gov/ ; 1995 >
     au < down ; 1996 ; Public and Private Laws 1996 ; http://www.gpo.gov/ ; 1996 >
     au < down ; 1997 ; Public and Private Laws 1997 ; http://www.gpo.gov/ ; 1997 >
@@ -1223,7 +1208,7 @@
     title <
       name = Public Papers of the Presidents of the United States
     >
-    comment[0] = published from 1991 to 2006 and 2009
+    comment[0] = published from 1991 to 2013
     param[collection_id] = PPP
 
     au < down ; 1991 ; Public Papers of the Presidents of the United States 1991 ; http://www.gpo.gov/ ; 1991 >
@@ -1265,19 +1250,18 @@
 
   }
 
-{
-
-    title <
-      name = Supreme Court Decisions
-
-      >
-
-        param[collection_id] = SCD
-
-
-    au < exists ; 1937 ; Supreme Court Decisions 1937 ; https://www.gpo.gov/ ; 1937 >
-
-    }
+#{
+#
+#    title <
+#      name = Supreme Court Decisions
+#
+#      >
+#
+#        param[collection_id] = SCD
+#
+#    au < exists ; 1937 ; Supreme Court Decisions 1937 ; https://www.gpo.gov/ ; 1937 >
+#
+#    }
 
   {
 
@@ -1464,9 +1448,8 @@
     au < down ; 2008 ; United States Statutes at Large 2008 ; http://www.gpo.gov/ ; 2008 >
     au < down ; 2009 ; United States Statutes at Large 2009 ; https://www.gpo.gov/ ; 2009 >
     au < down ; 2010 ; United States Statutes at Large 2010 ; https://www.gpo.gov/ ; 2010 >
-    au < expected ; 2011 ; United States Statutes at Large 2011 ; https://www.gpo.gov/ ; 2011 >
+    au < doesNotExist ; 2011 ; United States Statutes at Large 2011 ; https://www.gpo.gov/ ; 2011 >
     au < down ; 2012 ; United States Statutes at Large 2012 ; https://www.gpo.gov/ ; 2012 >
-    au < expected ; 2013 ; United States Statutes at Large 2013 ; https://www.gpo.gov/ ; 2013 >
 
   }
 
@@ -1477,6 +1460,7 @@
      >
 
     param[collection_id] = WCPD
+    #published 1993-2009
 
     au < down ; 1993 ; Weekly Compilation of Presidential Documents 1993 ; http://www.gpo.gov/ ; 1993 >
     au < down ; 1994 ; Weekly Compilation of Presidential Documents 1994 ; http://www.gpo.gov/ ; 1994 >
@@ -1495,7 +1479,6 @@
     au < down ; 2007 ; Weekly Compilation of Presidential Documents 2007 ; http://www.gpo.gov/ ; 2007 >
     au < down ; 2008 ; Weekly Compilation of Presidential Documents 2008 ; http://www.gpo.gov/ ; 2008 >
     au < down ; 2009 ; Weekly Compilation of Presidential Documents 2009 ; http://www.gpo.gov/ ; 2009 >
-    au < expected ; 2010 ; Weekly Compilation of Presidential Documents 2010 ; https://www.gpo.gov/ ; 2010 >
 
   }
 
