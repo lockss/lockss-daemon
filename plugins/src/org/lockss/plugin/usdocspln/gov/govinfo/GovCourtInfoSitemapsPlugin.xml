@@ -109,7 +109,7 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"content/pkg/(%s-%s[^/]+)/pdf/\1[^/]+\.pdf$", base_url, collection_id, court_id</string>
+      <string>"content/pkg/(%s-%s[^/]+)/pdf/\1[^/]+\.pdf$", collection_id, court_id</string>
     </list>
   </entry>
   <entry>
@@ -149,13 +149,10 @@
         <!-- pause crawls Monday through Friday 9am through 9pm Eastern, but a "heartbeat" once per hour is allowed -->
         <entry>
           <org.lockss.daemon.CrawlWindows-Daily>
-            <!--<from>9:00</from>
-            <to>21:00</to>-->
-            <from>17:00</from>
-            <to>18:00</to>
+            <from>9:00</from>
+            <to>21:00</to>
             <timeZoneId>US/Eastern</timeZoneId>
-            <!--<daysOfWeek>4;5;6</daysOfWeek>-->
-            <daysOfWeek>1;2;3;4;5;6</daysOfWeek>
+            <daysOfWeek>4;5;6</daysOfWeek>
           </org.lockss.daemon.CrawlWindows-Daily>
           <org.lockss.plugin.RateLimiterInfo>
             <rate>1/1h</rate>

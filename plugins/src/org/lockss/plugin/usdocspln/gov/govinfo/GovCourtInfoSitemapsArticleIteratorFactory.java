@@ -63,16 +63,20 @@ public class GovCourtInfoSitemapsArticleIteratorFactory
 
   /*
   https://www.govinfo.gov/app/details/USCOURTS-akd-1_11-cv-00016/
-  https://www.govinfo.gov/app/details/USCOURTS-akd-1_11-cv-00016/summary
   https://www.govinfo.gov/app/details/USCOURTS-akd-1_11-cv-00016/context
   https://www.govinfo.gov/content/pkg/USCOURTS-akd-1_11-cv-00016/pdf/USCOURTS-akd-1_11-cv-00016-0.pdf
   https://www.govinfo.gov/content/pkg/USCOURTS-akd-1_11-cv-00016/pdf/USCOURTS-akd-1_11-cv-00016-1.pdf
   https://www.govinfo.gov/content/pkg/USCOURTS-akd-1_11-cv-00016/pdf/USCOURTS-akd-1_11-cv-00016-2.pdf
    */
 
-  protected static final String PATTERN_TEMPLATE = "\"^%sapp/details/([^/]+)/context\", base_url";
-  final Pattern PATTERN = Pattern.compile("([^/]+)", Pattern.CASE_INSENSITIVE);
-  final String REPLACEMENT = "$1";
+  protected static final String ROOT_TEMPLATE = "\"%sapp/details/\", base_url";
+  protected static final String PATTERN_TEMPLATE = "\"%sapp/details/([^/]+)/([^/]+)$\", base_url";
+
+
+  final Pattern HTML_PATTERN = Pattern.compile("([^/]+)/context$", Pattern.CASE_INSENSITIVE);
+  final String HTML_REPLACEMENT = "$1";
+
+  protected static final String PDF_FILE_LANDING_PAGE = "PDFFileLandingPage";
 
 
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
@@ -81,16 +85,16 @@ public class GovCourtInfoSitemapsArticleIteratorFactory
 
 
     SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
-    SubTreeArticleIterator.Spec theSpec = new SubTreeArticleIterator.Spec();
-    builder.setSpec(theSpec);
-    theSpec.setTarget(target);
 
-    theSpec.setPatternTemplate(PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
+    builder.setSpec(target, ROOT_TEMPLATE, PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
 
     builder.addAspect(
-            PATTERN,
-            REPLACEMENT,
-            ArticleFiles.ROLE_ARTICLE_METADATA);
+            HTML_PATTERN,
+            HTML_REPLACEMENT,
+            PDF_FILE_LANDING_PAGE);
+    
+    builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA, PDF_FILE_LANDING_PAGE);
+
 
     return builder.getSubTreeArticleIterator();
   }
