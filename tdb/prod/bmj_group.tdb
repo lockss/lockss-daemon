@@ -481,6 +481,23 @@
 
   {
     title <
+      name = BMJ Health & Care Informatics ;
+      issn = 2058-4555 ;
+      eissn = 2632-1009 ;
+      issn = 2058-4555
+    >
+
+    #param[base_url] = https://informatics.bmj.com/
+
+    au < bmj.BMJDrupalPlugin ; exists ; 2015 ; BMJ Health & Care Informatics Volume 22 ; 22 ; https://informatics.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; exists ; 2016 ; BMJ Health & Care Informatics Volume 23 ; 23 ; https://informatics.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; exists ; 2017 ; BMJ Health & Care Informatics Volume 24 ; 24 ; https://informatics.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; exists ; 2018 ; BMJ Health & Care Informatics Volume 25 ; 25 ; https://informatics.bmj.com/ >
+
+  }
+
+  {
+    title <
       name = BMJ Innovations ;
       issn = 2055-8074 ;
       eissn = 2055-642X ;

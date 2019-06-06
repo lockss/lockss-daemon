@@ -19,13 +19,13 @@
 
       attr[journal_id] = 586
 
-        au < manifest ; 2008 ; Hispanófila Volume 153 [2008] ; 8332 >
-        au < manifest ; 2008 ; Hispanófila Volume 152 [2008] ; 8333 >
-        au < manifest ; 2008 ; Hispanófila Volume 151 [2008] ; 8334 >
-        au < manifest ; 2009 ; Hispanófila Volume 154 [2009] ; 8324 >
-        au < manifest ; 2009 ; Hispanófila Volume 155 [2009] ; 8325 >
-        au < manifest ; 2009 ; Hispanófila Volume 156 [2009] ; 8326 >
-        au < manifest ; 2009 ; Hispanófila Volume 157 [2009] ; 8327 >
+        au < ready ; 2008 ; Hispanófila Volume 153 [2008] ; 8332 >
+        au < ready ; 2008 ; Hispanófila Volume 152 [2008] ; 8333 >
+        au < ready ; 2008 ; Hispanófila Volume 151 [2008] ; 8334 >
+        au < ready ; 2009 ; Hispanófila Volume 154 [2009] ; 8324 >
+        au < ready ; 2009 ; Hispanófila Volume 155 [2009] ; 8325 >
+        au < ready ; 2009 ; Hispanófila Volume 156 [2009] ; 8326 >
+        au < ready ; 2009 ; Hispanófila Volume 157 [2009] ; 8327 >
         au < released ; 2010 ; Hispanófila Volume 160 [Septiembre 2010] ; 8178 >
         au < released ; 2010 ; Hispanófila Volume 159 [Mayo 2010] ; 8179 >
         au < released ; 2010 ; Hispanófila Volume 158 [Enero 2010] ; 8180 >
@@ -46,11 +46,11 @@
         au < released ; 2015 ; Hispanófila Volume 175 [Diciembre 2015] ; 11239 >
         au < released ; 2016 ; Hispanófila Volume 176 [Enero 2016] ; 12235 >
         au < released ; 2016 ; Hispanófila Volume 177 [Junio 2016] ; 12237 >
-        au < ready ; 2016 ; Hispanófila Volume 178 [Diciembre 2016] ; 12587 >
-        au < ready ; 2017 ; Hispanófila Volume 179 [Enero 2017] ; 12765 >
-        au < ready ; 2017 ; Hispanófila Volume 180 [Junio 2017] ; 13169 >
-        au < ready ; 2017 ; Hispanófila Volume 181 [Diciembre 2017] ; 13490 >
-        au < ready ; 2018 ; Hispanófila Volume 182 [Enero 2018] ; 13647 >
+        au < released ; 2016 ; Hispanófila Volume 178 [Diciembre 2016] ; 12587 >
+        au < released ; 2017 ; Hispanófila Volume 179 [Enero 2017] ; 12765 >
+        au < released ; 2017 ; Hispanófila Volume 180 [Junio 2017] ; 13169 >
+        au < released ; 2017 ; Hispanófila Volume 181 [Diciembre 2017] ; 13490 >
+        au < released ; 2018 ; Hispanófila Volume 182 [Enero 2018] ; 13647 >
 
     }
 
@@ -65,9 +65,9 @@
 
       attr[journal_id] = 588
 
-        au < manifest ; 2006 ; Romance Notes Volume 47 [2006] ; 8322 >
-        au < manifest ; 2007 ; Romance Notes Volume 48 [2007] ; 8211 >
-        au < manifest ; 2009 ; Romance Notes Volume 49 [2009] ; 8210 >
+        au < ready ; 2006 ; Romance Notes Volume 47 [2006] ; 8322 >
+        au < ready ; 2007 ; Romance Notes Volume 48 [2007] ; 8211 >
+        au < ready ; 2009 ; Romance Notes Volume 49 [2009] ; 8210 >
         au < released ; 2010 ; Romance Notes Volume 50 [2010] ; 7815 >
         au < released ; 2011 ; Romance Notes Volume 51 [2011] ; 8124 >
         au < released ; 2012 ; Romance Notes Volume 52 [2012] ; 8409 >
@@ -75,8 +75,8 @@
         au < released ; 2014 ; Romance Notes Volume 54 [2014] ; 9680 >
         au < released ; 2015 ; Romance Notes Volume 55 [2015] ; 10744 >
         au < released ; 2016 ; Romance Notes Volume 56 [2016] ; 11240 >
-        au < ready ; 2017 ; Romance Notes Volume 57 [2017] ; 12685 >
-        au < ready ; 2018 ; Romance Notes Volume 58 [2018] ; 13531 >
+        au < released ; 2017 ; Romance Notes Volume 57 [2017] ; 12685 >
+        au < released ; 2018 ; Romance Notes Volume 58 [2018] ; 13531 >
 
     }
 

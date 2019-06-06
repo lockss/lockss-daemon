@@ -18,16 +18,16 @@
 
       attr[journal_id] = 8
 
-        au < manifest ; 2000 ; American Literary History Volume 12 [2000] ; 36 >
-        au < manifest ; 2001 ; American Literary History Volume 13 [2001] ; 37 >
-        au < manifest ; 2002 ; American Literary History Volume 14 [2002] ; 38 >
-        au < manifest ; 2003 ; American Literary History Volume 15 [2003] ; 799 >
-        au < manifest ; 2004 ; American Literary History Volume 16 [2004] ; 1782 >
-        au < manifest ; 2005 ; American Literary History Volume 17 [2005] ; 2621 >
-        au < manifest ; 2006 ; American Literary History Volume 18 [2006] ; 2927 >
-        au < manifest ; 2007 ; American Literary History Volume 19 [2007] ; 3352 >
-        au < manifest ; 2008 ; American Literary History Volume 20 [2008] ; 3688 >
-        au < manifest ; 2009 ; American Literary History Volume 21 [2009] ; 4129 >
+        au < ready ; 2000 ; American Literary History Volume 12 [2000] ; 36 >
+        au < ready ; 2001 ; American Literary History Volume 13 [2001] ; 37 >
+        au < ready ; 2002 ; American Literary History Volume 14 [2002] ; 38 >
+        au < ready ; 2003 ; American Literary History Volume 15 [2003] ; 799 >
+        au < ready ; 2004 ; American Literary History Volume 16 [2004] ; 1782 >
+        au < ready ; 2005 ; American Literary History Volume 17 [2005] ; 2621 >
+        au < ready ; 2006 ; American Literary History Volume 18 [2006] ; 2927 >
+        au < ready ; 2007 ; American Literary History Volume 19 [2007] ; 3352 >
+        au < ready ; 2008 ; American Literary History Volume 20 [2008] ; 3688 >
+        au < ready ; 2009 ; American Literary History Volume 21 [2009] ; 4129 >
         au < released ; 2010 ; American Literary History Volume 22 [2010] ; 5787 >
         au < released ; 2011 ; American Literary History Volume 23 [2011] ; 6810 >
         au < released ; 2012 ; American Literary History Volume 24 [2012] ; 7934 >
@@ -36,7 +36,7 @@
         au < released ; 2015 ; American Literary History Volume 27 [2015] ; 10311 >
         au < released ; 2016 ; American Literary History Volume 28 [2016] ; 10925 >
         au < released ; 2017 ; American Literary History Volume 29 [2017] ; 12403 >
-        au < ready ; 2018 ; American Literary History Volume 30 [2018] ; 13211 >
+        au < released ; 2018 ; American Literary History Volume 30 [2018] ; 13211 >
         au < exists ; 2019 ; American Literary History Volume 31 [2019] ; 13893 >
 
     }
@@ -51,10 +51,10 @@
 
       attr[journal_id] = 265
 
-        au < manifest ; 2004 ; Early Music Volume 32 [2004] ; 2674 >
-        au < manifest ; 2005 ; Early Music Volume 33 [2005] ; 2745 >
-        au < manifest ; 2006 ; Early Music Volume 34 [2006] ; 3004 >
-        au < manifest ; 2007 ; Early Music Volume 35 [2007] ; 3327 >
+        au < ready ; 2004 ; Early Music Volume 32 [2004] ; 2674 >
+        au < ready ; 2005 ; Early Music Volume 33 [2005] ; 2745 >
+        au < ready ; 2006 ; Early Music Volume 34 [2006] ; 3004 >
+        au < ready ; 2007 ; Early Music Volume 35 [2007] ; 3327 >
 
     }
 
@@ -68,8 +68,8 @@
 
       attr[journal_id] = 325
 
-        au < manifest ; 2006 ; Essays in Criticism Volume 56 [2006] ; 3077 >
-        au < manifest ; 2007 ; Essays in Criticism Volume 57 [2007] ; 3243 >
+        au < ready ; 2006 ; Essays in Criticism Volume 56 [2006] ; 3077 >
+        au < ready ; 2007 ; Essays in Criticism Volume 57 [2007] ; 3243 >
 
     }
 
@@ -83,10 +83,10 @@
 
       attr[journal_id] = 346
 
-        au < manifest ; 2006 ; French Studies: A Quarterly Review Volume 60 [2006] ; 3191 >
-        au < manifest ; 2007 ; French Studies: A Quarterly Review Volume 61 [2007] ; 3284 >
-        au < manifest ; 2008 ; French Studies: A Quarterly Review Volume 62 [2008] ; 3661 >
-        au < manifest ; 2009 ; French Studies: A Quarterly Review Volume 63 [2009] ; 4104 >
+        au < ready ; 2006 ; French Studies: A Quarterly Review Volume 60 [2006] ; 3191 >
+        au < ready ; 2007 ; French Studies: A Quarterly Review Volume 61 [2007] ; 3284 >
+        au < ready ; 2008 ; French Studies: A Quarterly Review Volume 62 [2008] ; 3661 >
+        au < ready ; 2009 ; French Studies: A Quarterly Review Volume 63 [2009] ; 4104 >
         au < released ; 2010 ; French Studies: A Quarterly Review Volume 64 [2010] ; 5736 >
         au < released ; 2011 ; French Studies: A Quarterly Review Volume 65 [2011] ; 6708 >
         au < released ; 2012 ; French Studies: A Quarterly Review Volume 66 [2012] ; 7888 >
@@ -95,7 +95,7 @@
         au < released ; 2015 ; French Studies: A Quarterly Review Volume 69 [2015] ; 10414 >
         au < released ; 2016 ; French Studies: A Quarterly Review Volume 70 [2016] ; 10895 >
         au < released ; 2017 ; French Studies: A Quarterly Review Volume 71 [2017] ; 12597 >
-        au < ready ; 2018 ; French Studies: A Quarterly Review Volume 72 [2018] ; 13156 >
+        au < released ; 2018 ; French Studies: A Quarterly Review Volume 72 [2018] ; 13156 >
         au < exists ; 2019 ; French Studies: A Quarterly Review Volume 73 [2019] ; 13925 >
 
     }
@@ -110,18 +110,18 @@
 
       attr[journal_id] = 277
 
-        au < manifest ; 2004 ; History Workshop Journal Issue 57 [Spring 2004] ; 2536 >
-        au < manifest ; 2004 ; History Workshop Journal Issue 58 [Autumn 2004] ; 2612 >
-        au < manifest ; 2005 ; History Workshop Journal Issue 59 [Spring 2005] ; 2938 >
-        au < manifest ; 2005 ; History Workshop Journal Issue 60 [Autumn 2005] ; 2943 >
-        au < manifest ; 2006 ; History Workshop Journal Issue 61 [Spring 2006] ; 3025 >
-        au < manifest ; 2006 ; History Workshop Journal Issue 62 [Autumn 2006] ; 3163 >
-        au < manifest ; 2007 ; History Workshop Journal Issue 63 [Spring 2007] ; 3392 >
-        au < manifest ; 2007 ; History Workshop Journal Issue 64 [Autumn 2007] ; 3580 >
-        au < manifest ; 2008 ; History Workshop Journal Issue 65 [Spring 2008] ; 3781 >
-        au < manifest ; 2008 ; History Workshop Journal Issue 66 [Autumn 2008] ; 4028 >
-        au < manifest ; 2009 ; History Workshop Journal Issue 67 [Spring 2009] ; 4365 >
-        au < manifest ; 2009 ; History Workshop Journal Issue 68 [Autumn 2009] ; 5686 >
+        au < ready ; 2004 ; History Workshop Journal Issue 57 [Spring 2004] ; 2536 >
+        au < ready ; 2004 ; History Workshop Journal Issue 58 [Autumn 2004] ; 2612 >
+        au < ready ; 2005 ; History Workshop Journal Issue 59 [Spring 2005] ; 2938 >
+        au < ready ; 2005 ; History Workshop Journal Issue 60 [Autumn 2005] ; 2943 >
+        au < ready ; 2006 ; History Workshop Journal Issue 61 [Spring 2006] ; 3025 >
+        au < ready ; 2006 ; History Workshop Journal Issue 62 [Autumn 2006] ; 3163 >
+        au < ready ; 2007 ; History Workshop Journal Issue 63 [Spring 2007] ; 3392 >
+        au < ready ; 2007 ; History Workshop Journal Issue 64 [Autumn 2007] ; 3580 >
+        au < ready ; 2008 ; History Workshop Journal Issue 65 [Spring 2008] ; 3781 >
+        au < ready ; 2008 ; History Workshop Journal Issue 66 [Autumn 2008] ; 4028 >
+        au < ready ; 2009 ; History Workshop Journal Issue 67 [Spring 2009] ; 4365 >
+        au < ready ; 2009 ; History Workshop Journal Issue 68 [Autumn 2009] ; 5686 >
         au < released ; 2010 ; History Workshop Journal Issue 69 [Spring 2010] ; 6383 >
         au < released ; 2010 ; History Workshop Journal Issue 70 [Autumn 2010] ; 6544 >
         au < released ; 2011 ; History Workshop Journal Issue 71 [Spring 2011] ; 7086 >
@@ -136,10 +136,10 @@
         au < released ; 2015 ; History Workshop Journal Issue 80 [Autumn 2015] ; 10810 >
         au < released ; 2016 ; History Workshop Journal Issue 81 [Spring 2016] ; 11210 >
         au < released ; 2016 ; History Workshop Journal Issue 82 [Autumn 2016] ; 12194 >
-        au < ready ; 2017 ; History Workshop Journal Issue 83 [Spring 2017] ; 12751 >
+        au < released ; 2017 ; History Workshop Journal Issue 83 [Spring 2017] ; 12751 >
         au < released ; 2017 ; History Workshop Journal Issue 84 [Autumn 2017] ; 12991 >
         au < released ; 2018 ; History Workshop Journal Issue 85 [Spring 2018] ; 13409 >
-        au < ready ; 2018 ; History Workshop Journal Issue 86 [Autumn 2018] ; 13779 >
+        au < released ; 2018 ; History Workshop Journal Issue 86 [Autumn 2018] ; 13779 >
 
     }
 
@@ -153,13 +153,13 @@
 
       attr[journal_id] = 220
 
-        au < manifest ; 2003 ; Holocaust and Genocide Studies Volume 17 [2003] ; 912 >
-        au < manifest ; 2004 ; Holocaust and Genocide Studies Volume 18 [2004] ; 2519 >
-        au < manifest ; 2005 ; Holocaust and Genocide Studies Volume 19 [2005] ; 2756 >
-        au < manifest ; 2006 ; Holocaust and Genocide Studies Volume 20 [2006] ; 3013 >
-        au < manifest ; 2007 ; Holocaust and Genocide Studies Volume 21 [2007] ; 3381 >
-        au < manifest ; 2008 ; Holocaust and Genocide Studies Volume 22 [2008] ; 3765 >
-        au < manifest ; 2009 ; Holocaust and Genocide Studies Volume 23 [2009] ; 4288 >
+        au < ready ; 2003 ; Holocaust and Genocide Studies Volume 17 [2003] ; 912 >
+        au < ready ; 2004 ; Holocaust and Genocide Studies Volume 18 [2004] ; 2519 >
+        au < ready ; 2005 ; Holocaust and Genocide Studies Volume 19 [2005] ; 2756 >
+        au < ready ; 2006 ; Holocaust and Genocide Studies Volume 20 [2006] ; 3013 >
+        au < ready ; 2007 ; Holocaust and Genocide Studies Volume 21 [2007] ; 3381 >
+        au < ready ; 2008 ; Holocaust and Genocide Studies Volume 22 [2008] ; 3765 >
+        au < ready ; 2009 ; Holocaust and Genocide Studies Volume 23 [2009] ; 4288 >
         au < released ; 2010 ; Holocaust and Genocide Studies Volume 24 [2010] ; 6217 >
         au < released ; 2011 ; Holocaust and Genocide Studies Volume 25 [2011] ; 7297 >
         au < released ; 2012 ; Holocaust and Genocide Studies Volume 26 [2012] ; 8236 >
@@ -182,8 +182,8 @@
 
       attr[journal_id] = 350
 
-        au < manifest ; 2006 ; Journal of the American Academy of Religion Volume 74 [2006 ] ; 3040 >
-        au < manifest ; 2007 ; Journal of the American Academy of Religion Volume 75 [2007 ] ; 3394 >
+        au < ready ; 2006 ; Journal of the American Academy of Religion Volume 74 [2006 ] ; 3040 >
+        au < ready ; 2007 ; Journal of the American Academy of Religion Volume 75 [2007 ] ; 3394 >
 
     }
 
@@ -197,16 +197,16 @@
 
       attr[journal_id] = 92
 
-        au < manifest ; 2000 ; Journal of the History of Medicine and Allied Sciences Volume 55 [2000] ; 303 >
-        au < manifest ; 2001 ; Journal of the History of Medicine and Allied Sciences Volume 56 [2001] ; 304 >
-        au < manifest ; 2002 ; Journal of the History of Medicine and Allied Sciences Volume 57 [2002] ; 305 >
-        au < manifest ; 2003 ; Journal of the History of Medicine and Allied Sciences Volume 58 [2003] ; 830 >
-        au < manifest ; 2004 ; Journal of the History of Medicine and Allied Sciences Volume 59 [2004] ; 1779 >
-        au < manifest ; 2005 ; Journal of the History of Medicine and Allied Sciences Volume 60 [2005] ; 2609 >
-        au < manifest ; 2006 ; Journal of the History of Medicine and Allied Sciences Volume 61 [2006] ; 2883 >
-        au < manifest ; 2007 ; Journal of the History of Medicine and Allied Sciences Volume 62 [2007] ; 3196 >
-        au < manifest ; 2008 ; Journal of the History of Medicine and Allied Sciences Volume 63 [2008] ; 3633 >
-        au < manifest ; 2009 ; Journal of the History of Medicine and Allied Sciences Volume 64 [2009] ; 4058 >
+        au < ready ; 2000 ; Journal of the History of Medicine and Allied Sciences Volume 55 [2000] ; 303 >
+        au < ready ; 2001 ; Journal of the History of Medicine and Allied Sciences Volume 56 [2001] ; 304 >
+        au < ready ; 2002 ; Journal of the History of Medicine and Allied Sciences Volume 57 [2002] ; 305 >
+        au < ready ; 2003 ; Journal of the History of Medicine and Allied Sciences Volume 58 [2003] ; 830 >
+        au < ready ; 2004 ; Journal of the History of Medicine and Allied Sciences Volume 59 [2004] ; 1779 >
+        au < ready ; 2005 ; Journal of the History of Medicine and Allied Sciences Volume 60 [2005] ; 2609 >
+        au < ready ; 2006 ; Journal of the History of Medicine and Allied Sciences Volume 61 [2006] ; 2883 >
+        au < ready ; 2007 ; Journal of the History of Medicine and Allied Sciences Volume 62 [2007] ; 3196 >
+        au < ready ; 2008 ; Journal of the History of Medicine and Allied Sciences Volume 63 [2008] ; 3633 >
+        au < ready ; 2009 ; Journal of the History of Medicine and Allied Sciences Volume 64 [2009] ; 4058 >
         au < released ; 2010 ; Journal of the History of Medicine and Allied Sciences Volume 65 [2010] ; 5710 >
         au < released ; 2011 ; Journal of the History of Medicine and Allied Sciences Volume 66 [2011] ; 6674 >
         au < released ; 2012 ; Journal of the History of Medicine and Allied Sciences Volume 67 [2012] ; 7771 >
@@ -214,8 +214,8 @@
         au < released ; 2014 ; Journal of the History of Medicine and Allied Sciences Volume 69 [2014] ; 9568 >
         au < released ; 2015 ; Journal of the History of Medicine and Allied Sciences Volume 70 [2015] ; 10272 >
         au < released ; 2016 ; Journal of the History of Medicine and Allied Sciences Volume 71 [2016] ; 10867 >
-        au < ready ; 2017 ; Journal of the History of Medicine and Allied Sciences Volume 72 [2017] ; 12598 >
-        au < ready ; 2018 ; Journal of the History of Medicine and Allied Sciences Volume 73 [2018] ; 13131 >
+        au < released ; 2017 ; Journal of the History of Medicine and Allied Sciences Volume 72 [2017] ; 12598 >
+        au < released ; 2018 ; Journal of the History of Medicine and Allied Sciences Volume 73 [2018] ; 13131 >
         au < exists ; 2019 ; Journal of the History of Medicine and Allied Sciences Volume 74 [2019] ; 13989 >
 
     }
@@ -250,7 +250,7 @@
         au < released ; 2015-2016 ; Journal of Social History Volume 49 [2015-2016] ; 10782 >
         au < released ; 2016-2017 ; Journal of Social History Volume 50 [2016-2017] ; 11426 >
         au < released ; 2017-2018 ; Journal of Social History Volume 51 [2017-2018] ; 12894 >
-        au < manifest ; 2018-2019 ; Journal of Social History Volume 52 [2018-2019] ; 13658 >
+        au < ready ; 2018-2019 ; Journal of Social History Volume 52 [2018-2019] ; 13658 >
 
     }
 
@@ -264,10 +264,10 @@
 
       attr[journal_id] = 305
 
-        au < manifest ; 2005 ; Journal of the Royal Musical Association Volume 130 [2005] ; 2827 >
-        au < manifest ; 2006 ; Journal of the Royal Musical Association Volume 131 [2006] ; 3121 >
-        au < manifest ; 2007 ; Journal of the Royal Musical Association Volume 132 [2007] ; 3514 >
-        au < manifest ; 2008 ; Journal of the Royal Musical Association Volume 133 [2008] ; 4074 >
+        au < ready ; 2005 ; Journal of the Royal Musical Association Volume 130 [2005] ; 2827 >
+        au < ready ; 2006 ; Journal of the Royal Musical Association Volume 131 [2006] ; 3121 >
+        au < ready ; 2007 ; Journal of the Royal Musical Association Volume 132 [2007] ; 3514 >
+        au < ready ; 2008 ; Journal of the Royal Musical Association Volume 133 [2008] ; 4074 >
 
     }
     
@@ -284,7 +284,7 @@
       attr[journal_id] = 458
       #move from Society for the Study of the Multi-Ethnic Literature of the United States
 
-        au < manifest ; 2009 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 34 [2009] ; 4313 >
+        au < ready ; 2009 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 34 [2009] ; 4313 >
         au < released ; 2010 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 35 [2010] ; 5919 >
         au < released ; 2011 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 36 [2011] ; 6952 >
         au < released ; 2012 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 37 [2012] ; 8146 >
@@ -293,7 +293,7 @@
         au < released ; 2015 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 40 [2015] ; 10548 >
         au < released ; 2016 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 41 [2016] ; 11049 >
         au < released ; 2017 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 42 [2017] ; 12617 >
-        au < ready ; 2018 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 43 [2018] ; 13260 >
+        au < released ; 2018 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 43 [2018] ; 13260 >
         au < exists ; 2019 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 44 [2019] ; 13982 >
 
     }
@@ -308,20 +308,20 @@
 
       attr[journal_id] = 127
 
-        au < manifest ; 1996 ; Modern Judaism Volume 16 [1996] ; 428 >
-        au < manifest ; 1997 ; Modern Judaism Volume 17 [1997] ; 429 >
-        au < manifest ; 1998 ; Modern Judaism Volume 18 [1998] ; 430 >
-        au < manifest ; 1999 ; Modern Judaism Volume 19 [1999] ; 431 >
-        au < manifest ; 2000 ; Modern Judaism Volume 20 [2000] ; 432 >
-        au < manifest ; 2001 ; Modern Judaism Volume 21 [2001] ; 433 >
-        au < manifest ; 2002 ; Modern Judaism Volume 22 [2002] ; 434 >
-        au < manifest ; 2003 ; Modern Judaism Volume 23 [2003] ; 828 >
-        au < manifest ; 2004 ; Modern Judaism Volume 24 [2004] ; 2425 >
-        au < manifest ; 2005 ; Modern Judaism Volume 25 [2005] ; 2662 >
-        au < manifest ; 2006 ; Modern Judaism Volume 26 [2006] ; 2924 >
-        au < manifest ; 2007 ; Modern Judaism Volume 27 [2007] ; 3278 >
-        au < manifest ; 2008 ; Modern Judaism Volume 28 [2008] ; 3638 >
-        au < manifest ; 2009 ; Modern Judaism Volume 29 [2009] ; 4352 >
+        au < ready ; 1996 ; Modern Judaism Volume 16 [1996] ; 428 >
+        au < ready ; 1997 ; Modern Judaism Volume 17 [1997] ; 429 >
+        au < ready ; 1998 ; Modern Judaism Volume 18 [1998] ; 430 >
+        au < ready ; 1999 ; Modern Judaism Volume 19 [1999] ; 431 >
+        au < ready ; 2000 ; Modern Judaism Volume 20 [2000] ; 432 >
+        au < ready ; 2001 ; Modern Judaism Volume 21 [2001] ; 433 >
+        au < ready ; 2002 ; Modern Judaism Volume 22 [2002] ; 434 >
+        au < ready ; 2003 ; Modern Judaism Volume 23 [2003] ; 828 >
+        au < ready ; 2004 ; Modern Judaism Volume 24 [2004] ; 2425 >
+        au < ready ; 2005 ; Modern Judaism Volume 25 [2005] ; 2662 >
+        au < ready ; 2006 ; Modern Judaism Volume 26 [2006] ; 2924 >
+        au < ready ; 2007 ; Modern Judaism Volume 27 [2007] ; 3278 >
+        au < ready ; 2008 ; Modern Judaism Volume 28 [2008] ; 3638 >
+        au < ready ; 2009 ; Modern Judaism Volume 29 [2009] ; 4352 >
         au < released ; 2010 ; Modern Judaism Volume 30 [2010] ; 5846 >
         au < released ; 2011 ; Modern Judaism Volume 31 [2011] ; 7323 >
         au < released ; 2012 ; Modern Judaism Volume 32 [2012] ; 8191 >
@@ -330,7 +330,7 @@
         au < released ; 2015 ; Modern Judaism Volume 35 [2015] ; 10322 >
         au < released ; 2016 ; Modern Judaism Volume 36 [2016] ; 10972 >
         au < released ; 2017 ; Modern Judaism Volume 37 [2017] ; 12406 >
-        au < ready ; 2018 ; Modern Judaism Volume 38 [2018] ; 13179 >
+        au < released ; 2018 ; Modern Judaism Volume 38 [2018] ; 13179 >
         au < exists ; 2019 ; Modern Judaism Volume 39 [2019] ; 13938 >
 
     }
@@ -345,12 +345,12 @@
 
       attr[journal_id] = 266
 
-        au < manifest ; 2004 ; Music and Letters Volume 85 [2004] ; 2673 >
-        au < manifest ; 2005 ; Music and Letters Volume 86 [2005] ; 2758 >
-        au < manifest ; 2006 ; Music and Letters Volume 87 [2006] ; 2945 >
-        au < manifest ; 2007 ; Music and Letters Volume 88 [2007] ; 3333 >
-        au < manifest ; 2008 ; Music and Letters Volume 89 [2008] ; 3683 >
-        au < manifest ; 2009 ; Music and Letters Volume 90 [2009] ; 4231 >
+        au < ready ; 2004 ; Music and Letters Volume 85 [2004] ; 2673 >
+        au < ready ; 2005 ; Music and Letters Volume 86 [2005] ; 2758 >
+        au < ready ; 2006 ; Music and Letters Volume 87 [2006] ; 2945 >
+        au < ready ; 2007 ; Music and Letters Volume 88 [2007] ; 3333 >
+        au < ready ; 2008 ; Music and Letters Volume 89 [2008] ; 3683 >
+        au < ready ; 2009 ; Music and Letters Volume 90 [2009] ; 4231 >
         au < released ; 2010 ; Music and Letters Volume 91 [2010] ; 6404 >
         au < released ; 2011 ; Music and Letters Volume 92 [2011] ; 7254 >
         au < released ; 2012 ; Music and Letters Volume 93 [2012] ; 8157 >
@@ -373,18 +373,18 @@
 
       attr[journal_id] = 306
 
-        au < manifest ; 2005 ; Past & Present Number 188 [August 2005] ; 2857 >
-        au < manifest ; 2005 ; Past & Present Number 189 [November 2005] ; 2864 >
-        au < manifest ; 2006 ; Past & Present Number 190 [February 2006] ; 2972 >
-        au < manifest ; 2006 ; Past & Present Number 191 [May 2006] ; 3112 >
-        au < manifest ; 2006 ; Past & Present Number 192 [August 2006] ; 3178 >
-        au < manifest ; 2006 ; Past & Present Number 193 [November 2006] ; 3285 >
-        au < manifest ; 2006 ; Past & Present 2006 Supplement ; 3185 >
-        au < manifest ; 2007 ; Past & Present Number 194 [February 2007] ; 3464 >
-        au < manifest ; 2007 ; Past & Present Number 195 [May 2007] ; 3579 >
-        au < manifest ; 2007 ; Past & Present Number 196 [August 2007] ; 3595 >
-        au < manifest ; 2007 ; Past & Present Number 197 [November 2007] ; 3596 >
-        au < manifest ; 2007 ; Past & Present 2007 Supplement ; 3640 >
+        au < ready ; 2005 ; Past & Present Number 188 [August 2005] ; 2857 >
+        au < ready ; 2005 ; Past & Present Number 189 [November 2005] ; 2864 >
+        au < ready ; 2006 ; Past & Present Number 190 [February 2006] ; 2972 >
+        au < ready ; 2006 ; Past & Present Number 191 [May 2006] ; 3112 >
+        au < ready ; 2006 ; Past & Present Number 192 [August 2006] ; 3178 >
+        au < ready ; 2006 ; Past & Present Number 193 [November 2006] ; 3285 >
+        au < ready ; 2006 ; Past & Present 2006 Supplement ; 3185 >
+        au < ready ; 2007 ; Past & Present Number 194 [February 2007] ; 3464 >
+        au < ready ; 2007 ; Past & Present Number 195 [May 2007] ; 3579 >
+        au < ready ; 2007 ; Past & Present Number 196 [August 2007] ; 3595 >
+        au < ready ; 2007 ; Past & Present Number 197 [November 2007] ; 3596 >
+        au < ready ; 2007 ; Past & Present 2007 Supplement ; 3640 >
 
     }
 
@@ -400,15 +400,15 @@
       attr[journal_id] = 187
       #move from University of North Carolina Press
 
-        au < manifest ; 2000-2001 ; Social Forces Volume 79 [2000-2001] ; 640 >
-        au < manifest ; 2001-2002 ; Social Forces Volume 80 [2001-2002] ; 641 >
-        au < manifest ; 2002-2003 ; Social Forces Volume 81 [2002-2003] ; 735 >
-        au < manifest ; 2003-2004 ; Social Forces Volume 82 [2003-2004] ; 971 >
-        au < manifest ; 2004-2005 ; Social Forces Volume 83 [2004-2005] ; 2593 >
-        au < manifest ; 2005-2006 ; Social Forces Volume 84 [2005-2006] ; 2865 >
-        au < manifest ; 2006-2007 ; Social Forces Volume 85 [2006-2007] ; 3147 >
-        au < manifest ; 2007-2008 ; Social Forces Volume 86 [2007-2008] ; 3469 >
-        au < manifest ; 2008-2009 ; Social Forces Volume 87 [2008-2009] ; 4065 >
+        au < ready ; 2000-2001 ; Social Forces Volume 79 [2000-2001] ; 640 >
+        au < ready ; 2001-2002 ; Social Forces Volume 80 [2001-2002] ; 641 >
+        au < ready ; 2002-2003 ; Social Forces Volume 81 [2002-2003] ; 735 >
+        au < ready ; 2003-2004 ; Social Forces Volume 82 [2003-2004] ; 971 >
+        au < ready ; 2004-2005 ; Social Forces Volume 83 [2004-2005] ; 2593 >
+        au < ready ; 2005-2006 ; Social Forces Volume 84 [2005-2006] ; 2865 >
+        au < ready ; 2006-2007 ; Social Forces Volume 85 [2006-2007] ; 3147 >
+        au < ready ; 2007-2008 ; Social Forces Volume 86 [2007-2008] ; 3469 >
+        au < ready ; 2008-2009 ; Social Forces Volume 87 [2008-2009] ; 4065 >
         au < released ; 2009-2010 ; Social Forces Volume 88 [2009-2010] ; 5689 >
         au < released ; 2010-2011 ; Social Forces Volume 89 [2010-2011] ; 6984 >
         au < released ; 2011-2012 ; Social Forces Volume 90 [2011-2012] ; 7887 >
@@ -418,7 +418,7 @@
         au < released ; 2015-2016 ; Social Forces Volume 94 [2015-2016] ; 10747 >
         au < released ; 2016-2017 ; Social Forces Volume 95 [2016-2017] ; 12121 >
         au < released ; 2017-2018 ; Social Forces Volume 96 [2017-2018] ; 12812 >
-        au < manifest ; 2018-2019 ; Social Forces Volume 97 [2018-2019] ; 13666 >
+        au < ready ; 2018-2019 ; Social Forces Volume 97 [2018-2019] ; 13666 >
 
     }
 
@@ -432,13 +432,13 @@
 
       attr[journal_id] = 234
 
-        au < manifest ; 2003 ; Social Politics: International Studies in Gender, State and Society Volume 10 [2003] ; 942 >
-        au < manifest ; 2004 ; Social Politics: International Studies in Gender, State and Society Volume 11 [2004] ; 2518 >
-        au < manifest ; 2005 ; Social Politics: International Studies in Gender, State and Society Volume 12 [2005] ; 2720 >
-        au < manifest ; 2006 ; Social Politics: International Studies in Gender, State and Society Volume 13 [2006] ; 2995 >
-        au < manifest ; 2007 ; Social Politics: International Studies in Gender, State and Society Volume 14 [2007] ; 3391 >
-        au < manifest ; 2008 ; Social Politics: International Studies in Gender, State and Society Volume 15 [2008] ; 3748 >
-        au < manifest ; 2009 ; Social Politics: International Studies in Gender, State and Society Volume 16 [2009] ; 4233 >
+        au < ready ; 2003 ; Social Politics: International Studies in Gender, State and Society Volume 10 [2003] ; 942 >
+        au < ready ; 2004 ; Social Politics: International Studies in Gender, State and Society Volume 11 [2004] ; 2518 >
+        au < ready ; 2005 ; Social Politics: International Studies in Gender, State and Society Volume 12 [2005] ; 2720 >
+        au < ready ; 2006 ; Social Politics: International Studies in Gender, State and Society Volume 13 [2006] ; 2995 >
+        au < ready ; 2007 ; Social Politics: International Studies in Gender, State and Society Volume 14 [2007] ; 3391 >
+        au < ready ; 2008 ; Social Politics: International Studies in Gender, State and Society Volume 15 [2008] ; 3748 >
+        au < ready ; 2009 ; Social Politics: International Studies in Gender, State and Society Volume 16 [2009] ; 4233 >
         au < released ; 2010 ; Social Politics: International Studies in Gender, State and Society Volume 17 [2010] ; 5940 >
         au < released ; 2011 ; Social Politics: International Studies in Gender, State and Society Volume 18 [2011] ; 7004 >
         au < released ; 2012 ; Social Politics: International Studies in Gender, State and Society Volume 19 [2012] ; 8145 >
@@ -461,10 +461,10 @@
 
       attr[journal_id] = 314
 
-        au < manifest ; 2006 ; The Cambridge Quarterly Volume 35 [2006] ; 3174 >
-        au < manifest ; 2007 ; The Cambridge Quarterly Volume 36 [2007] ; 3304 >
-        au < manifest ; 2008 ; The Cambridge Quarterly Volume 37 [2008] ; 3696 >
-        au < manifest ; 2009 ; The Cambridge Quarterly Volume 38 [2009] ; 4177 >
+        au < ready ; 2006 ; The Cambridge Quarterly Volume 35 [2006] ; 3174 >
+        au < ready ; 2007 ; The Cambridge Quarterly Volume 36 [2007] ; 3304 >
+        au < ready ; 2008 ; The Cambridge Quarterly Volume 37 [2008] ; 3696 >
+        au < ready ; 2009 ; The Cambridge Quarterly Volume 38 [2009] ; 4177 >
         au < released ; 2010 ; The Cambridge Quarterly Volume 39 [2010] ; 6040 >
         au < released ; 2011 ; The Cambridge Quarterly Volume 40 [2011] ; 7080 >
         au < released ; 2012 ; The Cambridge Quarterly Volume 41 [2012] ; 8182 >
@@ -487,10 +487,10 @@
 
       attr[journal_id] = 345
 
-        au < manifest ; 2006 ; The Library: The Transactions of the Bibliographical Society Volume 7 [2006] ; 3134 >
-        au < manifest ; 2007 ; The Library: The Transactions of the Bibliographical Society Volume 8 [2007] ; 3314 >
-        au < manifest ; 2008 ; The Library: The Transactions of the Bibliographical Society Volume 9 [2008] ; 3857 >
-        au < manifest ; 2009 ; The Library: The Transactions of the Bibliographical Society Volume 10 [2009] ; 4264 >
+        au < ready ; 2006 ; The Library: The Transactions of the Bibliographical Society Volume 7 [2006] ; 3134 >
+        au < ready ; 2007 ; The Library: The Transactions of the Bibliographical Society Volume 8 [2007] ; 3314 >
+        au < ready ; 2008 ; The Library: The Transactions of the Bibliographical Society Volume 9 [2008] ; 3857 >
+        au < ready ; 2009 ; The Library: The Transactions of the Bibliographical Society Volume 10 [2009] ; 4264 >
         au < released ; 2010 ; The Library: The Transactions of the Bibliographical Society Volume 11 [2010] ; 6117 >
         au < released ; 2011 ; The Library: The Transactions of the Bibliographical Society Volume 12 [2011] ; 7044 >
         au < released ; 2012 ; The Library: The Transactions of the Bibliographical Society Volume 13 [2012] ; 8139 >
@@ -514,14 +514,14 @@
 
       attr[journal_id] = 148
 
-        au < manifest ; 2002 ; The Opera Quarterly Volume 18 [2002] ; 496 >
-        au < manifest ; 2003 ; The Opera Quarterly Volume 19 [2003] ; 815 >
-        au < manifest ; 2004 ; The Opera Quarterly Volume 20 [2004] ; 2419 >
-        au < manifest ; 2005 ; The Opera Quarterly Volume 21 [2005] ; 2782 >
-        au < manifest ; 2006 ; The Opera Quarterly Volume 22 [2006] ; 3290 >
-        au < manifest ; 2007 ; The Opera Quarterly Volume 23 [2007] ; 4001 >
-        au < manifest ; 2008 ; The Opera Quarterly Volume 24 [2008] ; 5667 >
-        au < manifest ; 2009 ; The Opera Quarterly Volume 25 [2009] ; 5794 >
+        au < ready ; 2002 ; The Opera Quarterly Volume 18 [2002] ; 496 >
+        au < ready ; 2003 ; The Opera Quarterly Volume 19 [2003] ; 815 >
+        au < ready ; 2004 ; The Opera Quarterly Volume 20 [2004] ; 2419 >
+        au < ready ; 2005 ; The Opera Quarterly Volume 21 [2005] ; 2782 >
+        au < ready ; 2006 ; The Opera Quarterly Volume 22 [2006] ; 3290 >
+        au < ready ; 2007 ; The Opera Quarterly Volume 23 [2007] ; 4001 >
+        au < ready ; 2008 ; The Opera Quarterly Volume 24 [2008] ; 5667 >
+        au < ready ; 2009 ; The Opera Quarterly Volume 25 [2009] ; 5794 >
         au < released ; 2010 ; The Opera Quarterly Volume 26 [2010] ; 6393 >
         au < released ; 2011 ; The Opera Quarterly Volume 27 [2011] ; 7651 >
         au < released ; 2012 ; The Opera Quarterly Volume 28 [2012] ; 8514 >
@@ -544,8 +544,8 @@
 
       attr[journal_id] = 389
 
-        au < manifest ; 2008 ; Oral History Review Volume 35 [2008] ; 3851 >
-        au < manifest ; 2009 ; Oral History Review Volume 36 [2009] ; 4401 >
+        au < ready ; 2008 ; Oral History Review Volume 35 [2008] ; 3851 >
+        au < ready ; 2009 ; Oral History Review Volume 36 [2009] ; 4401 >
         au < released ; 2010 ; Oral History Review Volume 37 [2010] ; 6636 >
         au < released ; 2011 ; Oral History Review Volume 38 [2011] ; 7572 >
         au < released ; 2012 ; Oral History Review Volume 39 [2012] ; 8199 >

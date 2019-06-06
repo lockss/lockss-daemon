@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>down - abstract parent only</string>
+    <string>ready</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>25</string>
+    <string>26</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -131,9 +131,7 @@
       <!-- Crawl rule out bad citation files (?fmt=xxxx) in favor of /cite/xxxx, originally in IET xml -->
       <string>2,"^https?://%s/content/(journals?|suppddata)/[0-9]{2}\.[0-9]{4}/%s[^?]+\?fmt=[^/&amp;]+$",  url_host(base_url), journal_id</string>
       <!--  toc and subsections -->
-      <!--<string>1,"^https?://%s/content/journals?/%s/%s/",  url_host(base_url), journal_id, volume_name</string>, from IET-->
       <string>1,"^https?://%s/content/journals?/%s/%s/", url_host(base_url), journal_id, volume_name</string>
-      <!--<string>1,"^https?://%s/sarticles/renderlist\.action\?fmt=ahah&amp;items=.*",  url_host(base_url)</string>, from IET-->
       <string>1,"^https?://%s/articles/renderlist\.action\?fmt=ahah&amp;items=.*", url_host(base_url)</string>
       <!-- pick up articles -->
       <!--<string>2,"^https?://%s/content/journals?/[0-9]{2}\.[0-9]{4}/%s[^?]+\?term=.*&amp;db=pubmed$",  url_host(base_url), journal_id</string>, from IET-->

@@ -68,6 +68,7 @@ public class BaseFileArticleMetadataExtractor extends BaseArticleMetadataExtract
 	private static Logger log = 
 			Logger.getLogger(BaseFileArticleMetadataExtractor.class);
 	private static final String DEFAULT_FILE_TYPE = "file";
+	private static final String DEFAULT_PUBLICATION_TITLE = "File Publication";
 	
 
 	public BaseFileArticleMetadataExtractor(String role) {
@@ -100,8 +101,7 @@ public class BaseFileArticleMetadataExtractor extends BaseArticleMetadataExtract
 	protected void setFileMetadata(CachedUrl cu, ArticleMetadata am) {
 		String url = cu.getUrl();
 		log.debug3("generate MD for generic file object url " + url);
-		long content_size = cu.getContentSize();
-		String content_mime = cu.getContentType();
+		
 		
 		ArchivalUnit au = cu.getArchivalUnit();
 		TdbAu tdbau = au.getTdbAu();
@@ -131,12 +131,16 @@ public class BaseFileArticleMetadataExtractor extends BaseArticleMetadataExtract
 		FILE_MAP.put("FileType", getFileObjectType(cu));
 		// default is base filename
 		FILE_MAP.put("FileIdentifier", getFileIdentifier(cu));
-		FILE_MAP.put("FileSizeBytes", Long.toString(content_size));
-		FILE_MAP.put("FileMime", content_mime);
+		FILE_MAP.put("FileSizeBytes", getFileSize(cu));
+		FILE_MAP.put("FileMime", getFileMime(cu));
 		// default is no additional k-v pairs
 		setAdditionalFileData(cu,FILE_MAP);
 
 		am.putRaw(MetadataField.FIELD_MD_MAP.getKey(), FILE_MAP);
+		
+		// in case there are any other am items that can be set
+		setAdditionalArticleMetadata(cu,am);
+
 		
 	}
 
@@ -178,7 +182,7 @@ public class BaseFileArticleMetadataExtractor extends BaseArticleMetadataExtract
 	 */
 	protected String getPublicationTitle(CachedUrl cu, TdbAu tdbau) {
 		// Get limited information from the TDB file
-		return (tdbau != null) ? tdbau.getPublicationTitle() : null;
+		return (tdbau != null) ? tdbau.getPublicationTitle() : DEFAULT_PUBLICATION_TITLE;
 	}	
 	
 	/**
@@ -220,6 +224,30 @@ public class BaseFileArticleMetadataExtractor extends BaseArticleMetadataExtract
 	protected String getFileObjectType(CachedUrl cu) {
 		return DEFAULT_FILE_TYPE;
 	}	
+	
+	/*
+	 * A child can override this
+	 * By default use the size of the metadata cu
+	 * but this might not be true if the object is an archive
+	 * from which the metadata file is accessed
+	 */
+	protected String getFileSize(CachedUrl cu) {
+		long content_size = cu.getContentSize();
+		return Long.toString(content_size);
+		
+	}
+	
+	/*
+	 * A child can override this
+	 * By default use the mime type of the metadata cu
+	 * but this might not be true if the object is an archive
+	 * from which the metadata file is accessed
+	 */
+	protected String getFileMime(CachedUrl cu) {
+		String content_mime = cu.getContentType();
+		return content_mime;
+		
+	}
 
 	/**
 	 * A child plugin might extend this class to add more information appropriate to
@@ -230,6 +258,16 @@ public class BaseFileArticleMetadataExtractor extends BaseArticleMetadataExtract
 	protected void setAdditionalFileData(CachedUrl cu, Map<String, String> fILE_MAP) {
 		log.debug3("In empty default setAdditionalFileData");
 	}
+	
+	/*
+	 * Most FILE objects won't need more than what is set in the setFileMetadata method
+	 * but in case there is some other metadata that maps to standard article metadata fields
+	 * a child can override this
+	 */
+	protected void setAdditionalArticleMetadata(CachedUrl metadataCu, ArticleMetadata fileAM) {
+		log.debug3("In empty default setAdditionalArticleMetadata");
+	}
+
 	
 
 

@@ -378,9 +378,6 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Durkheimian Studies Volume 20 ; 20 ; >
     au < frozen ; exists ; 2015 ; Durkheimian Studies Volume 21 ; 21 ; >
     au < frozen ; exists ; 2016 ; Durkheimian Studies Volume 22 ; 22 ; >
-    au < doesNotExist ; doesNotExist ; 2017 ; Durkheimian Studies Volume 23 ; 23 ; >
-    au < exists ; exists ; 2018 ; Durkheimian Studies Volume 24 ; 24 ; >
-    au < expected ; exists ; 2019 ; Durkheimian Studies Volume 25 ; 25 ; >
 
   }
 
@@ -689,14 +686,24 @@
     param[journal_id] = italian-politics
     #param[journal_issn] = 1086-4946 
     
+    au < exists ; exists ; 2000 ; Italian Politics Volume 15 ; 15 ; >
+    au < exists ; exists ; 2001 ; Italian Politics Volume 16 ; 16 ; >
+    au < exists ; exists ; 2002 ; Italian Politics Volume 17 ; 17 ; >
+    au < exists ; exists ; 2003 ; Italian Politics Volume 18 ; 18 ; >
+    au < exists ; exists ; 2004 ; Italian Politics Volume 19 ; 19 ; >
+    au < exists ; exists ; 2005 ; Italian Politics Volume 20 ; 20 ; >
+    au < exists ; exists ; 2006 ; Italian Politics Volume 21 ; 21 ; >
+    au < exists ; exists ; 2007 ; Italian Politics Volume 22 ; 22 ; >
+    au < exists ; exists ; 2008 ; Italian Politics Volume 23 ; 23 ; >
+    au < exists ; exists ; 2009 ; Italian Politics Volume 24 ; 24 ; >
+    au < exists ; exists ; 2010 ; Italian Politics Volume 25 ; 25 ; >
+    au < exists ; exists ; 2011 ; Italian Politics Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Italian Politics Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Italian Politics Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Italian Politics Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Italian Politics Volume 30 ; 30 ; >
     au < frozen ; exists ; 2016 ; Italian Politics Volume 31 ; 31 ; >
     au < finished ; crawling ; 2017 ; Italian Politics Volume 32 ; 32 ; reingest2.clockss.org:8085 >
-    au < exists ; exists ; 2018 ; Italian Politics Volume 33 ; 33 ; >
-    au < expected ; exists ; 2019 ; Italian Politics Volume 34 ; 34 ; >
 
   }
 
@@ -819,8 +826,6 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Mobility in History Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Mobility in History Volume 7 ; 7 ; >
     au < finished ; crawling ; 2017 ; Mobility in History Volume 8 ; 8 ; reingest5.clockss.org:8082 >
-    au < exists ; exists ; 2018 ; Mobility in History Volume 9 ; 9 ; >
-    au < expected ; exists ; 2019 ; Mobility in History Volume 10 ; 10 ; >
 
   }
 

@@ -17,14 +17,14 @@
 
       attr[journal_id] = 511
 
-        au < manifest ; 2006 ; Asia Policy Number 1 [January 2006] ; 6656 >
-        au < manifest ; 2006 ; Asia Policy Number 2 [July 2006] ; 6657 >
-        au < manifest ; 2007 ; Asia Policy Number 3 [January 2007] ; 6658 >
-        au < manifest ; 2007 ; Asia Policy Number 4 [July 2007] ; 6659 >
-        au < manifest ; 2008 ; Asia Policy Number 5 [January 2008] ; 6660 >
-        au < manifest ; 2008 ; Asia Policy Number 6 [July 2008] ; 6661 >
-        au < manifest ; 2009 ; Asia Policy Number 7 [January 2009] ; 6662 >
-        au < manifest ; 2009 ; Asia Policy Number 8 [July 2009] ; 6663 >
+        au < ready ; 2006 ; Asia Policy Number 1 [January 2006] ; 6656 >
+        au < released ; 2006 ; Asia Policy Number 2 [July 2006] ; 6657 >
+        au < ready ; 2007 ; Asia Policy Number 3 [January 2007] ; 6658 >
+        au < released ; 2007 ; Asia Policy Number 4 [July 2007] ; 6659 >
+        au < ready ; 2008 ; Asia Policy Number 5 [January 2008] ; 6660 >
+        au < released ; 2008 ; Asia Policy Number 6 [July 2008] ; 6661 >
+        au < released ; 2009 ; Asia Policy Number 7 [January 2009] ; 6662 >
+        au < ready ; 2009 ; Asia Policy Number 8 [July 2009] ; 6663 >
         au < released ; 2010 ; Asia Policy Number 9 [January 2010] ; 6664 >
         au < released ; 2010 ; Asia Policy Number 10 [July 2010] ; 6665 >
         au < released ; 2011 ; Asia Policy Number 11 [January 2011] ; 6765 >
@@ -40,7 +40,7 @@
         au < released ; 2016 ; Asia Policy Number 21 [January 2016] ; 10944 >
         au < released ; 2016 ; Asia Policy Number 22 [July 2016] ; 11351 >
         au < released ; 2017 ; Asia Policy Number 23 [January 2017] ; 12353 >
-        au < ready ; 2017 ; Asia Policy Number 24 [July 2017] ; 12794 >
+        au < released ; 2017 ; Asia Policy Number 24 [July 2017] ; 12794 >
         au < released ; 2018 ; Asia Policy Volume 13 [2018] ; 13205 >
         au < exists ; 2019 ; Asia Policy Volume 14 [2019] ; 13944 >
 

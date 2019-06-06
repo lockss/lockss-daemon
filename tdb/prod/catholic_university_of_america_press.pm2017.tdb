@@ -44,7 +44,7 @@
         au < released ; 2014 ; Bulletin of Medieval Canon Law Volume 31 [2014] ; 10834 >
         au < released ; 2015 ; Bulletin of Medieval Canon Law Volume 32 [2015] ; 11204 >
         au < released ; 2016 ; Bulletin of Medieval Canon Law Volume 33 [2016] ; 12557 >
-        au < ready ; 2017 ; Bulletin of Medieval Canon Law Volume 34 [2017] ; 13553 >
+        au < released ; 2017 ; Bulletin of Medieval Canon Law Volume 34 [2017] ; 13553 >
 
     }
 
@@ -59,7 +59,7 @@
 
       attr[journal_id] = 743
 
-        au < ready ; 2017 ; Old Testament Abstracts Volume 40 [2017] ; 13968 >
+        au < released ; 2017 ; Old Testament Abstracts Volume 40 [2017] ; 13968 >
         au < released ; 2018 ; Old Testament Abstracts Volume 41 [2018] ; 13969 >
         au < exists ; 2019 ; Old Testament Abstracts Volume 42 [2019] ; 13990 >
 
@@ -95,8 +95,8 @@
 
       attr[journal_id] = 742
 
-        au < ready ; 2017 ; The Catholic Biblical Quarterly Volume 79 [2017] ; 13967 >
-        au < ready ; 2018 ; The Catholic Biblical Quarterly Volume 80 [2018] ; 13986 >
+        au < released ; 2017 ; The Catholic Biblical Quarterly Volume 79 [2017] ; 13967 >
+        au < released ; 2018 ; The Catholic Biblical Quarterly Volume 80 [2018] ; 13986 >
         au < exists ; 2019 ; The Catholic Biblical Quarterly Volume 81 [2019] ; 13991 >
 
     }
@@ -173,8 +173,8 @@
 
       attr[journal_id] = 725
 
-        au < ready ; 2016 ; The Jurist: Studies in Church Law and Ministry Volume 13 [2016] ; 13031 >
-        au < ready ; 2017 ; The Jurist: Studies in Church Law and Ministry Volume 14 [2017] ; 13034 >
+        au < released ; 2016 ; The Jurist: Studies in Church Law and Ministry Volume 13 [2016] ; 13031 >
+        au < released ; 2017 ; The Jurist: Studies in Church Law and Ministry Volume 14 [2017] ; 13034 >
         au < released ; 2018 ; The Jurist: Studies in Church Law and Ministry Volume 15 [2018] ; 13620 >
 
     }
@@ -207,86 +207,86 @@
 
       attr[journal_id] = 694
 
-        au < ready ; 1941 ; The Thomist: A Speculative Quarterly Review Volume 3 [1941] ; 10996 >
-        au < ready ; 1942 ; The Thomist: A Speculative Quarterly Review Volume 4 [1942] ; 10997 >
-        au < ready ; 1943 ; The Thomist: A Speculative Quarterly Review Volume 5 [1943] ; 10999 >
-        au < testing ; 1943 ; The Thomist: A Speculative Quarterly Review Volume 6 [1943] ; 10998 >
-        au < ready ; 1944 ; The Thomist: A Speculative Quarterly Review Volume 7 [1944] ; 11293 >
-        au < ready ; 1945 ; The Thomist: A Speculative Quarterly Review Volume 8 [1945] ; 11294 >
-        au < ready ; 1946 ; The Thomist: A Speculative Quarterly Review Volume 9 [1946] ; 11295 >
-        au < ready ; 1947 ; The Thomist: A Speculative Quarterly Review Volume 10 [1947] ; 11296 >
-        au < ready ; 1948 ; The Thomist: A Speculative Quarterly Review Volume 11 [1948] ; 11297 >
-        au < testing ; 1949 ; The Thomist: A Speculative Quarterly Review Volume 12 [1949] ; 11298 >
-        au < ready ; 1950 ; The Thomist: A Speculative Quarterly Review Volume 13 [1950] ; 11299 >
-        au < testing ; 1951 ; The Thomist: A Speculative Quarterly Review Volume 14 [1951] ; 11300 >
-        au < testing ; 1952 ; The Thomist: A Speculative Quarterly Review Volume 15 [1952] ; 11318 >
-        au < ready ; 1953 ; The Thomist: A Speculative Quarterly Review Volume 16 [1953] ; 11319 >
-        au < ready ; 1954 ; The Thomist: A Speculative Quarterly Review Volume 17 [1954] ; 11320 >
-        au < testing ; 1955 ; The Thomist: A Speculative Quarterly Review Volume 18 [1955] ; 11321 >
-        au < ready ; 1956 ; The Thomist: A Speculative Quarterly Review Volume 19 [1956] ; 11322 >
-        au < ready ; 1957 ; The Thomist: A Speculative Quarterly Review Volume 20 [1957] ; 11323 >
-        au < ready ; 1958 ; The Thomist: A Speculative Quarterly Review Volume 21 [1958] ; 11324 >
-        au < ready ; 1959 ; The Thomist: A Speculative Quarterly Review Volume 22 [1959] ; 11325 >
-        au < testing ; 1960 ; The Thomist: A Speculative Quarterly Review Volume 23 [1960] ; 11326 >
-        au < ready ; 1961 ; The Thomist: A Speculative Quarterly Review Volume 24 [1961] ; 11327 >
-        au < ready ; 1962 ; The Thomist: A Speculative Quarterly Review Volume 25 [1962] ; 11328 >
-        au < ready ; 1963 ; The Thomist: A Speculative Quarterly Review Volume 26 [1963] ; 11330 >
-        au < ready ; 1963 ; The Thomist: A Speculative Quarterly Review Volume 27 [1963] ; 11329 >
-        au < testing ; 1964 ; The Thomist: A Speculative Quarterly Review Volume 28 [1964] ; 11331 >
-        au < ready ; 1965 ; The Thomist: A Speculative Quarterly Review Volume 29 [1965] ; 11332 >
-        au < testing ; 1966 ; The Thomist: A Speculative Quarterly Review Volume 30 [1966] ; 11333 >
-        au < testing ; 1967 ; The Thomist: A Speculative Quarterly Review Volume 31 [1967] ; 11366 >
-        au < ready ; 1968 ; The Thomist: A Speculative Quarterly Review Volume 32 [1968] ; 11367 >
-        au < ready ; 1969 ; The Thomist: A Speculative Quarterly Review Volume 33 [1969] ; 11368 >
-        au < ready ; 1970 ; The Thomist: A Speculative Quarterly Review Volume 34 [1970] ; 11369 >
-        au < ready ; 1971 ; The Thomist: A Speculative Quarterly Review Volume 35 [1971] ; 11370 >
-        au < testing ; 1972 ; The Thomist: A Speculative Quarterly Review Volume 36 [1972] ; 11371 >
-        au < ready ; 1973 ; The Thomist: A Speculative Quarterly Review Volume 37 [1973] ; 11372 >
-        au < ready ; 1974 ; The Thomist: A Speculative Quarterly Review Volume 38 [1974] ; 11373 >
-        au < ready ; 1975 ; The Thomist: A Speculative Quarterly Review Volume 39 [1975] ; 11374 >
-        au < ready ; 1976 ; The Thomist: A Speculative Quarterly Review Volume 40 [1976] ; 11375 >
-        au < ready ; 1977 ; The Thomist: A Speculative Quarterly Review Volume 41 [1977] ; 11376 >
-        au < testing ; 1978 ; The Thomist: A Speculative Quarterly Review Volume 42 [1978] ; 11377 >
-        au < ready ; 1979 ; The Thomist: A Speculative Quarterly Review Volume 43 [1979] ; 11378 >
-        au < ready ; 1980 ; The Thomist: A Speculative Quarterly Review Volume 44 [1980] ; 11379 >
-        au < ready ; 1981 ; The Thomist: A Speculative Quarterly Review Volume 45 [1981] ; 11380 >
-        au < testing ; 1982 ; The Thomist: A Speculative Quarterly Review Volume 46 [1982] ; 11381 >
-        au < testing ; 1983 ; The Thomist: A Speculative Quarterly Review Volume 47 [1983] ; 11382 >
-        au < testing ; 1984 ; The Thomist: A Speculative Quarterly Review Volume 48 [1984] ; 11383 >
-        au < testing ; 1985 ; The Thomist: A Speculative Quarterly Review Volume 49 [1985] ; 11384 >
-        au < testing ; 1986 ; The Thomist: A Speculative Quarterly Review Volume 50 [1986] ; 11385 >
-        au < testing ; 1987 ; The Thomist: A Speculative Quarterly Review Volume 51 [1987] ; 11386 >
-        au < testing ; 1988 ; The Thomist: A Speculative Quarterly Review Volume 52 [1988] ; 11387 >
-        au < testing ; 1989 ; The Thomist: A Speculative Quarterly Review Volume 53 [1989] ; 11388 >
-        au < testing ; 1990 ; The Thomist: A Speculative Quarterly Review Volume 54 [1990] ; 11389 >
-        au < testing ; 1991 ; The Thomist: A Speculative Quarterly Review Volume 55 [1991] ; 11390 >
-        au < testing ; 1992 ; The Thomist: A Speculative Quarterly Review Volume 56 [1992] ; 11391 >
-        au < testing ; 1993 ; The Thomist: A Speculative Quarterly Review Volume 57 [1993] ; 11392 >
-        au < testing ; 1994 ; The Thomist: A Speculative Quarterly Review Volume 58 [1994] ; 11393 >
-        au < testing ; 1995 ; The Thomist: A Speculative Quarterly Review Volume 59 [1995] ; 11394 >
-        au < testing ; 1996 ; The Thomist: A Speculative Quarterly Review Volume 60 [1996] ; 11395 >
-        au < testing ; 1997 ; The Thomist: A Speculative Quarterly Review Volume 61 [1997] ; 11428 >
-        au < testing ; 1998 ; The Thomist: A Speculative Quarterly Review Volume 62 [1998] ; 12098 >
-        au < testing ; 1999 ; The Thomist: A Speculative Quarterly Review Volume 63 [1999] ; 12097 >
-        au < testing ; 2000 ; The Thomist: A Speculative Quarterly Review Volume 64 [2000] ; 12099 >
-        au < testing ; 2001 ; The Thomist: A Speculative Quarterly Review Volume 65 [2001] ; 12101 >
-        au < testing ; 2002 ; The Thomist: A Speculative Quarterly Review Volume 66 [2002] ; 12100 >
-        au < testing ; 2003 ; The Thomist: A Speculative Quarterly Review Volume 67 [2003] ; 12109 >
-        au < testing ; 2004 ; The Thomist: A Speculative Quarterly Review Volume 68 [2004] ; 12108 >
-        au < testing ; 2005 ; The Thomist: A Speculative Quarterly Review Volume 69 [2005] ; 12111 >
-        au < testing ; 2006 ; The Thomist: A Speculative Quarterly Review Volume 70 [2006] ; 12110 >
-        au < testing ; 2007 ; The Thomist: A Speculative Quarterly Review Volume 71 [2007] ; 12115 >
-        au < testing ; 2008 ; The Thomist: A Speculative Quarterly Review Volume 72 [2008] ; 12114 >
-        au < testing ; 2009 ; The Thomist: A Speculative Quarterly Review Volume 73 [2009] ; 12113 >
-        au < testing ; 2010 ; The Thomist: A Speculative Quarterly Review Volume 74 [2010] ; 12112 >
-        au < testing ; 2011 ; The Thomist: A Speculative Quarterly Review Volume 75 [2011] ; 12119 >
-        au < testing ; 2012 ; The Thomist: A Speculative Quarterly Review Volume 76 [2012] ; 12118 >
-        au < testing ; 2013 ; The Thomist: A Speculative Quarterly Review Volume 77 [2013] ; 12117 >
-        au < testing ; 2014 ; The Thomist: A Speculative Quarterly Review Volume 78 [2014] ; 12116 >
-        au < testing ; 2015 ; The Thomist: A Speculative Quarterly Review Volume 79 [2015] ; 12120 >
-        au < testing ; 2016 ; The Thomist: A Speculative Quarterly Review Volume 80 [2016] ; 11288 >
-        au < testing ; 2017 ; The Thomist: A Speculative Quarterly Review Volume 81 [2017] ; 12801 >
-        au < testing ; 2018 ; The Thomist: A Speculative Quarterly Review Volume 82 [2018] ; 13673 >
+        au < released ; 1941 ; The Thomist: A Speculative Quarterly Review Volume 3 [1941] ; 10996 >
+        au < released ; 1942 ; The Thomist: A Speculative Quarterly Review Volume 4 [1942] ; 10997 >
+        au < released ; 1943 ; The Thomist: A Speculative Quarterly Review Volume 5 [1943] ; 10999 >
+        au < released ; 1943 ; The Thomist: A Speculative Quarterly Review Volume 6 [1943] ; 10998 >
+        au < released ; 1944 ; The Thomist: A Speculative Quarterly Review Volume 7 [1944] ; 11293 >
+        au < released ; 1945 ; The Thomist: A Speculative Quarterly Review Volume 8 [1945] ; 11294 >
+        au < released ; 1946 ; The Thomist: A Speculative Quarterly Review Volume 9 [1946] ; 11295 >
+        au < released ; 1947 ; The Thomist: A Speculative Quarterly Review Volume 10 [1947] ; 11296 >
+        au < released ; 1948 ; The Thomist: A Speculative Quarterly Review Volume 11 [1948] ; 11297 >
+        au < released ; 1949 ; The Thomist: A Speculative Quarterly Review Volume 12 [1949] ; 11298 >
+        au < released ; 1950 ; The Thomist: A Speculative Quarterly Review Volume 13 [1950] ; 11299 >
+        au < released ; 1951 ; The Thomist: A Speculative Quarterly Review Volume 14 [1951] ; 11300 >
+        au < released ; 1952 ; The Thomist: A Speculative Quarterly Review Volume 15 [1952] ; 11318 >
+        au < released ; 1953 ; The Thomist: A Speculative Quarterly Review Volume 16 [1953] ; 11319 >
+        au < released ; 1954 ; The Thomist: A Speculative Quarterly Review Volume 17 [1954] ; 11320 >
+        au < released ; 1955 ; The Thomist: A Speculative Quarterly Review Volume 18 [1955] ; 11321 >
+        au < released ; 1956 ; The Thomist: A Speculative Quarterly Review Volume 19 [1956] ; 11322 >
+        au < released ; 1957 ; The Thomist: A Speculative Quarterly Review Volume 20 [1957] ; 11323 >
+        au < released ; 1958 ; The Thomist: A Speculative Quarterly Review Volume 21 [1958] ; 11324 >
+        au < released ; 1959 ; The Thomist: A Speculative Quarterly Review Volume 22 [1959] ; 11325 >
+        au < released ; 1960 ; The Thomist: A Speculative Quarterly Review Volume 23 [1960] ; 11326 >
+        au < released ; 1961 ; The Thomist: A Speculative Quarterly Review Volume 24 [1961] ; 11327 >
+        au < released ; 1962 ; The Thomist: A Speculative Quarterly Review Volume 25 [1962] ; 11328 >
+        au < released ; 1963 ; The Thomist: A Speculative Quarterly Review Volume 26 [1963] ; 11330 >
+        au < released ; 1963 ; The Thomist: A Speculative Quarterly Review Volume 27 [1963] ; 11329 >
+        au < released ; 1964 ; The Thomist: A Speculative Quarterly Review Volume 28 [1964] ; 11331 >
+        au < released ; 1965 ; The Thomist: A Speculative Quarterly Review Volume 29 [1965] ; 11332 >
+        au < released ; 1966 ; The Thomist: A Speculative Quarterly Review Volume 30 [1966] ; 11333 >
+        au < released ; 1967 ; The Thomist: A Speculative Quarterly Review Volume 31 [1967] ; 11366 >
+        au < released ; 1968 ; The Thomist: A Speculative Quarterly Review Volume 32 [1968] ; 11367 >
+        au < released ; 1969 ; The Thomist: A Speculative Quarterly Review Volume 33 [1969] ; 11368 >
+        au < released ; 1970 ; The Thomist: A Speculative Quarterly Review Volume 34 [1970] ; 11369 >
+        au < released ; 1971 ; The Thomist: A Speculative Quarterly Review Volume 35 [1971] ; 11370 >
+        au < released ; 1972 ; The Thomist: A Speculative Quarterly Review Volume 36 [1972] ; 11371 >
+        au < released ; 1973 ; The Thomist: A Speculative Quarterly Review Volume 37 [1973] ; 11372 >
+        au < released ; 1974 ; The Thomist: A Speculative Quarterly Review Volume 38 [1974] ; 11373 >
+        au < released ; 1975 ; The Thomist: A Speculative Quarterly Review Volume 39 [1975] ; 11374 >
+        au < released ; 1976 ; The Thomist: A Speculative Quarterly Review Volume 40 [1976] ; 11375 >
+        au < released ; 1977 ; The Thomist: A Speculative Quarterly Review Volume 41 [1977] ; 11376 >
+        au < released ; 1978 ; The Thomist: A Speculative Quarterly Review Volume 42 [1978] ; 11377 >
+        au < released ; 1979 ; The Thomist: A Speculative Quarterly Review Volume 43 [1979] ; 11378 >
+        au < released ; 1980 ; The Thomist: A Speculative Quarterly Review Volume 44 [1980] ; 11379 >
+        au < released ; 1981 ; The Thomist: A Speculative Quarterly Review Volume 45 [1981] ; 11380 >
+        au < ready ; 1982 ; The Thomist: A Speculative Quarterly Review Volume 46 [1982] ; 11381 >
+        au < released ; 1983 ; The Thomist: A Speculative Quarterly Review Volume 47 [1983] ; 11382 >
+        au < released ; 1984 ; The Thomist: A Speculative Quarterly Review Volume 48 [1984] ; 11383 >
+        au < released ; 1985 ; The Thomist: A Speculative Quarterly Review Volume 49 [1985] ; 11384 >
+        au < ready ; 1986 ; The Thomist: A Speculative Quarterly Review Volume 50 [1986] ; 11385 >
+        au < released ; 1987 ; The Thomist: A Speculative Quarterly Review Volume 51 [1987] ; 11386 >
+        au < released ; 1988 ; The Thomist: A Speculative Quarterly Review Volume 52 [1988] ; 11387 >
+        au < ready ; 1989 ; The Thomist: A Speculative Quarterly Review Volume 53 [1989] ; 11388 >
+        au < released ; 1990 ; The Thomist: A Speculative Quarterly Review Volume 54 [1990] ; 11389 >
+        au < ready ; 1991 ; The Thomist: A Speculative Quarterly Review Volume 55 [1991] ; 11390 >
+        au < released ; 1992 ; The Thomist: A Speculative Quarterly Review Volume 56 [1992] ; 11391 >
+        au < ready ; 1993 ; The Thomist: A Speculative Quarterly Review Volume 57 [1993] ; 11392 >
+        au < ready ; 1994 ; The Thomist: A Speculative Quarterly Review Volume 58 [1994] ; 11393 >
+        au < released ; 1995 ; The Thomist: A Speculative Quarterly Review Volume 59 [1995] ; 11394 >
+        au < released ; 1996 ; The Thomist: A Speculative Quarterly Review Volume 60 [1996] ; 11395 >
+        au < ready ; 1997 ; The Thomist: A Speculative Quarterly Review Volume 61 [1997] ; 11428 >
+        au < ready ; 1998 ; The Thomist: A Speculative Quarterly Review Volume 62 [1998] ; 12098 >
+        au < ready ; 1999 ; The Thomist: A Speculative Quarterly Review Volume 63 [1999] ; 12097 >
+        au < released ; 2000 ; The Thomist: A Speculative Quarterly Review Volume 64 [2000] ; 12099 >
+        au < released ; 2001 ; The Thomist: A Speculative Quarterly Review Volume 65 [2001] ; 12101 >
+        au < released ; 2002 ; The Thomist: A Speculative Quarterly Review Volume 66 [2002] ; 12100 >
+        au < ready ; 2003 ; The Thomist: A Speculative Quarterly Review Volume 67 [2003] ; 12109 >
+        au < released ; 2004 ; The Thomist: A Speculative Quarterly Review Volume 68 [2004] ; 12108 >
+        au < ready ; 2005 ; The Thomist: A Speculative Quarterly Review Volume 69 [2005] ; 12111 >
+        au < released ; 2006 ; The Thomist: A Speculative Quarterly Review Volume 70 [2006] ; 12110 >
+        au < ready ; 2007 ; The Thomist: A Speculative Quarterly Review Volume 71 [2007] ; 12115 >
+        au < released ; 2008 ; The Thomist: A Speculative Quarterly Review Volume 72 [2008] ; 12114 >
+        au < ready ; 2009 ; The Thomist: A Speculative Quarterly Review Volume 73 [2009] ; 12113 >
+        au < released ; 2010 ; The Thomist: A Speculative Quarterly Review Volume 74 [2010] ; 12112 >
+        au < released ; 2011 ; The Thomist: A Speculative Quarterly Review Volume 75 [2011] ; 12119 >
+        au < ready ; 2012 ; The Thomist: A Speculative Quarterly Review Volume 76 [2012] ; 12118 >
+        au < released ; 2013 ; The Thomist: A Speculative Quarterly Review Volume 77 [2013] ; 12117 >
+        au < released ; 2014 ; The Thomist: A Speculative Quarterly Review Volume 78 [2014] ; 12116 >
+        au < released ; 2015 ; The Thomist: A Speculative Quarterly Review Volume 79 [2015] ; 12120 >
+        au < ready ; 2016 ; The Thomist: A Speculative Quarterly Review Volume 80 [2016] ; 11288 >
+        au < released ; 2017 ; The Thomist: A Speculative Quarterly Review Volume 81 [2017] ; 12801 >
+        au < released ; 2018 ; The Thomist: A Speculative Quarterly Review Volume 82 [2018] ; 13673 >
 
     }
 
@@ -312,7 +312,7 @@
         au < released ; 2015 ; U.S. Catholic Historian Volume 33 [2015] ; 10541 >
         au < released ; 2016 ; U.S. Catholic Historian Volume 34 [2016] ; 11032 >
         au < released ; 2017 ; U.S. Catholic Historian Volume 35 [2017] ; 12428 >
-        au < testing ; 2018 ; U.S. Catholic Historian Volume 36 [2018] ; 13195 >
+        au < released ; 2018 ; U.S. Catholic Historian Volume 36 [2018] ; 13195 >
         au < exists ; 2019 ; U.S. Catholic Historian Volume 37 [2019] ; 13945 >
 
     }

@@ -19,13 +19,13 @@
 
       attr[journal_id] = 384
 
-        au < manifest ; 2003 ; Arctic Anthropology Volume 40 [2003] ; 6350 >
-        au < manifest ; 2004 ; Arctic Anthropology Volume 41 [2004] ; 6349 >
-        au < manifest ; 2005 ; Arctic Anthropology Volume 42 [2005] ; 6348 >
-        au < manifest ; 2006 ; Arctic Anthropology Volume 43 [2006] ; 6347 >
-        au < manifest ; 2007 ; Arctic Anthropology Volume 44 [2007] ; 6346 >
-        au < manifest ; 2008 ; Arctic Anthropology Volume 45 [2008] ; 3829 >
-        au < manifest ; 2009 ; Arctic Anthropology Volume 46 [2009] ; 5715 >
+        au < testing ; 2003 ; Arctic Anthropology Volume 40 [2003] ; 6350 >
+        au < testing ; 2004 ; Arctic Anthropology Volume 41 [2004] ; 6349 >
+        au < testing ; 2005 ; Arctic Anthropology Volume 42 [2005] ; 6348 >
+        au < testing ; 2006 ; Arctic Anthropology Volume 43 [2006] ; 6347 >
+        au < testing ; 2007 ; Arctic Anthropology Volume 44 [2007] ; 6346 >
+        au < testing ; 2008 ; Arctic Anthropology Volume 45 [2008] ; 3829 >
+        au < testing ; 2009 ; Arctic Anthropology Volume 46 [2009] ; 5715 >
         au < released ; 2010 ; Arctic Anthropology Volume 47 [2010] ; 6407 >
         au < released ; 2011 ; Arctic Anthropology Volume 48 [2011] ; 7568 >
         au < released ; 2012 ; Arctic Anthropology Volume 49 [2012] ; 8428 >
@@ -33,8 +33,8 @@
         au < released ; 2014 ; Arctic Anthropology Volume 51 [2014] ; 10183 >
         au < released ; 2015 ; Arctic Anthropology Volume 52 [2015] ; 10724 >
         au < released ; 2016 ; Arctic Anthropology Volume 53 [2016] ; 12106 >
-        au < ready ; 2017 ; Arctic Anthropology Volume 54 [2017] ; 13117 >
-        au < ready ; 2018 ; Arctic Anthropology Volume 55 [2018] ; 13808 >
+        au < released ; 2017 ; Arctic Anthropology Volume 54 [2017] ; 13117 >
+        au < released ; 2018 ; Arctic Anthropology Volume 55 [2018] ; 13808 >
 
     }
 
@@ -49,7 +49,7 @@
 
       attr[journal_id] = 714
 
-        au < ready ; 2016 ; Constitutional Studies Volume 1 [2016] ; 12192 >
+        au < released ; 2016 ; Constitutional Studies Volume 1 [2016] ; 12192 >
 
     }
 
@@ -64,12 +64,12 @@
 
       attr[journal_id] = 261
 
-        au < manifest ; 2004 ; Contemporary Literature Volume 45 [2004] ; 2523 >
-        au < manifest ; 2005 ; Contemporary Literature Volume 46 [2005] ; 2770 >
-        au < manifest ; 2006 ; Contemporary Literature Volume 47 [2006] ; 3081 >
-        au < manifest ; 2007 ; Contemporary Literature Volume 48 [2007] ; 3374 >
-        au < manifest ; 2008 ; Contemporary Literature Volume 49 [2008] ; 3807 >
-        au < manifest ; 2009 ; Contemporary Literature Volume 50 [2009] ; 4404 >
+        au < testing ; 2004 ; Contemporary Literature Volume 45 [2004] ; 2523 >
+        au < testing ; 2005 ; Contemporary Literature Volume 46 [2005] ; 2770 >
+        au < testing ; 2006 ; Contemporary Literature Volume 47 [2006] ; 3081 >
+        au < testing ; 2007 ; Contemporary Literature Volume 48 [2007] ; 3374 >
+        au < testing ; 2008 ; Contemporary Literature Volume 49 [2008] ; 3807 >
+        au < testing ; 2009 ; Contemporary Literature Volume 50 [2009] ; 4404 >
         au < released ; 2010 ; Contemporary Literature Volume 51 [2010] ; 6386 >
         au < released ; 2011 ; Contemporary Literature Volume 52 [2011] ; 7428 >
         au < released ; 2012 ; Contemporary Literature Volume 53 [2012] ; 8336 >
@@ -77,7 +77,7 @@
         au < released ; 2014 ; Contemporary Literature Volume 55 [2014] ; 9986 >
         au < released ; 2015 ; Contemporary Literature Volume 56 [2015] ; 10628 >
         au < released ; 2016 ; Contemporary Literature Volume 57 [2016] ; 11232 >
-        au < ready ; 2017 ; Contemporary Literature Volume 58 [2017] ; 13142 >
+        au < released ; 2017 ; Contemporary Literature Volume 58 [2017] ; 13142 >
 
     }
 
@@ -100,7 +100,7 @@
         au < released ; 2015 ; Ecological Restoration Volume 33 [2015] ; 10413 >
         au < released ; 2016 ; Ecological Restoration Volume 34 [2016] ; 10975 >
         au < released ; 2017 ; Ecological Restoration Volume 35 [2017] ; 12396 >
-        au < ready ; 2018 ; Ecological Restoration Volume 36 [2018] ; 13298 >
+        au < released ; 2018 ; Ecological Restoration Volume 36 [2018] ; 13298 >
 
     }
 
@@ -118,8 +118,8 @@
         au < released ; 2014 ; Ghana Studies Volume 17 [2014] ; 10219 >
         au < released ; 2015 ; Ghana Studies Volume 18 [2015] ; 10933 >
         au < released ; 2016 ; Ghana Studies Volume 19 [2016] ; 12302 >
-        au < ready ; 2017 ; Ghana Studies Volume 20 [2017] ; 13021 >
-        au < ready ; 2018 ; Ghana Studies Volume 21 [2018] ; 13774 >
+        au < released ; 2017 ; Ghana Studies Volume 20 [2017] ; 13021 >
+        au < released ; 2018 ; Ghana Studies Volume 21 [2018] ; 13774 >
 
     }
 
@@ -134,8 +134,8 @@
 
       attr[journal_id] = 560
 
-        au < manifest ; 2008 ; Land Economics Volume 84 [2008] ; 7538 >
-        au < manifest ; 2009 ; Land Economics Volume 85 [2009] ; 7539 >
+        au < testing ; 2008 ; Land Economics Volume 84 [2008] ; 7538 >
+        au < testing ; 2009 ; Land Economics Volume 85 [2009] ; 7539 >
         au < released ; 2010 ; Land Economics Volume 86 [2010] ; 7540 >
         au < released ; 2011 ; Land Economics Volume 87 [2011] ; 7541 >
         au < released ; 2012 ; Land Economics Volume 88 [2012] ; 7871 >
@@ -144,7 +144,7 @@
         au < released ; 2015 ; Land Economics Volume 91 [2015] ; 10297 >
         au < released ; 2016 ; Land Economics Volume 92 [2016] ; 10901 >
         au < released ; 2017 ; Land Economics Volume 93 [2017] ; 12303 >
-        au < ready ; 2018 ; Land Economics Volume 94 [2018] ; 13187 >
+        au < released ; 2018 ; Land Economics Volume 94 [2018] ; 13187 >
         au < exists ; 2019 ; Land Economics Volume 95 [2019] ; 13845 >
 
     }
@@ -166,8 +166,8 @@
         au < released ; 2014 ; Landscape Journal: design, planning, and management of the land Volume 33 [2014] ; 10149 >
         au < released ; 2015 ; Landscape Journal: design, planning, and management of the land Volume 34 [2015] ; 10739 >
         au < released ; 2016 ; Landscape Journal: design, planning, and management of the land Volume 35 [2016] ; 12144 >
-        au < ready ; 2017 ; Landscape Journal: design, planning, and management of the land Volume 36 [2017] ; 13143 >
-        au < ready ; 2018 ; Landscape Journal: design, planning, and management of the land Volume 37 [2018] ; 13884 >
+        au < released ; 2017 ; Landscape Journal: design, planning, and management of the land Volume 36 [2017] ; 13143 >
+        au < released ; 2018 ; Landscape Journal: design, planning, and management of the land Volume 37 [2018] ; 13884 >
 
     }
 
@@ -182,12 +182,12 @@
 
       attr[journal_id] = 273
 
-        au < manifest ; 2004 ; Luso-Brazilian Review Volume 41 [2004] ; 2577 >
-        au < manifest ; 2005 ; Luso-Brazilian Review Volume 42 [2005] ; 2846 >
-        au < manifest ; 2006 ; Luso-Brazilian Review Volume 43 [2006] ; 3106 >
-        au < manifest ; 2007 ; Luso-Brazilian Review Volume 44 [2007] ; 3441 >
-        au < manifest ; 2008 ; Luso-Brazilian Review Volume 45 [2008] ; 3900 >
-        au < manifest ; 2009 ; Luso-Brazilian Review Volume 46 [2009] ; 4390 >
+        au < testing ; 2004 ; Luso-Brazilian Review Volume 41 [2004] ; 2577 >
+        au < testing ; 2005 ; Luso-Brazilian Review Volume 42 [2005] ; 2846 >
+        au < testing ; 2006 ; Luso-Brazilian Review Volume 43 [2006] ; 3106 >
+        au < testing ; 2007 ; Luso-Brazilian Review Volume 44 [2007] ; 3441 >
+        au < testing ; 2008 ; Luso-Brazilian Review Volume 45 [2008] ; 3900 >
+        au < testing ; 2009 ; Luso-Brazilian Review Volume 46 [2009] ; 4390 >
         au < released ; 2010 ; Luso-Brazilian Review Volume 47 [2010] ; 6384 >
         au < released ; 2011 ; Luso-Brazilian Review Volume 48 [2011] ; 7386 >
         au < released ; 2012 ; Luso-Brazilian Review Volume 49 [2012] ; 8433 >
@@ -195,8 +195,8 @@
         au < released ; 2014 ; Luso-Brazilian Review Volume 51 [2014] ; 9990 >
         au < released ; 2015 ; Luso-Brazilian Review Volume 52 [2015] ; 10641 >
         au < released ; 2016 ; Luso-Brazilian Review Volume 53 [2016] ; 11243 >
-        au < ready ; 2017 ; Luso-Brazilian Review Volume 54 [2017] ; 12675 >
-        au < ready ; 2018 ; Luso-Brazilian Review Volume 55 [2018] ; 13590 >
+        au < released ; 2017 ; Luso-Brazilian Review Volume 54 [2017] ; 12675 >
+        au < released ; 2018 ; Luso-Brazilian Review Volume 55 [2018] ; 13590 >
 
     }
 
@@ -211,9 +211,9 @@
 
       attr[journal_id] = 359
 
-        au < manifest ; 2007 ; Monatshefte Volume 99 [2007] ; 3299 >
-        au < manifest ; 2008 ; Monatshefte Volume 100 [2008] ; 3729 >
-        au < manifest ; 2009 ; Monatshefte Volume 101 [2009] ; 4230 >
+        au < testing ; 2007 ; Monatshefte Volume 99 [2007] ; 3299 >
+        au < testing ; 2008 ; Monatshefte Volume 100 [2008] ; 3729 >
+        au < testing ; 2009 ; Monatshefte Volume 101 [2009] ; 4230 >
         au < released ; 2010 ; Monatshefte Volume 102 [2010] ; 5834 >
         au < released ; 2011 ; Monatshefte Volume 103 [2011] ; 6919 >
         au < released ; 2012 ; Monatshefte Volume 104 [2012] ; 8104 >
@@ -222,7 +222,7 @@
         au < released ; 2015 ; Monatshefte Volume 107 [2015] ; 10448 >
         au < released ; 2016 ; Monatshefte Volume 108 [2016] ; 11072 >
         au < released ; 2017 ; Monatshefte Volume 109 [2017] ; 12460 >
-        au < ready ; 2018 ; Monatshefte Volume 110 [2018] ; 13370 >
+        au < released ; 2018 ; Monatshefte Volume 110 [2018] ; 13370 >
 
     }
 
@@ -235,7 +235,7 @@
 
       attr[journal_id] = 276
 
-        au < manifest ; 2004 ; Native Plants Journal Volume 5 [2004] ; 2508 >
+        au < testing ; 2004 ; Native Plants Journal Volume 5 [2004] ; 2508 >
         au < manifest ; 2005 ; Native Plants Journal Volume 6 [2005] ; 2737 >
         au < manifest ; 2006 ; Native Plants Journal Volume 7 [2006] ; 3016 >
         au < manifest ; 2007 ; Native Plants Journal Volume 8 [2007] ; 3308 >
@@ -248,8 +248,8 @@
         au < released ; 2014 ; Native Plants Journal Volume 15 [2014] ; 9918 >
         au < released ; 2015 ; Native Plants Journal Volume 16 [2015] ; 10540 >
         au < released ; 2016 ; Native Plants Journal Volume 17 [2016] ; 11147 >
-        au < ready ; 2017 ; Native Plants Journal Volume 18 [2017] ; 12688 >
-        au < ready ; 2018 ; Native Plants Journal Volume 19 [2018] ; 13443 >
+        au < released ; 2017 ; Native Plants Journal Volume 18 [2017] ; 12688 >
+        au < released ; 2018 ; Native Plants Journal Volume 19 [2018] ; 13443 >
 
     }
 
@@ -274,7 +274,7 @@
         au < released ; 2015 ; Journal of Human Resources Volume 50 [2015] ; 10392 >
         au < released ; 2016 ; Journal of Human Resources Volume 51 [2016] ; 10943 >
         au < released ; 2017 ; Journal of Human Resources Volume 52 [2017] ; 12422 >
-        au < ready ; 2018 ; Journal of Human Resources Volume 53 [2018] ; 13173 >
+        au < released ; 2018 ; Journal of Human Resources Volume 53 [2018] ; 13173 >
         au < exists ; 2019 ; Journal of Human Resources Volume 54 [2019] ; 13861 >
 
     }

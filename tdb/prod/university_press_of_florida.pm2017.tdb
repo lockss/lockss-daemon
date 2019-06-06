@@ -20,10 +20,10 @@
       attr[journal_id] = 715
       #continues = Journal of Third World Studies, 8755-3449
 
-        au < ready ; 2015 ; Journal of Global South Studies Volume 32 [2015] ; 12313 >
-        au < ready ; 2016 ; Journal of Global South Studies Volume 33 [2016] ; 12314 >
-        au < ready ; 2017 ; Journal of Global South Studies Volume 34 [2017] ; 12768 >
-        au < ready ; 2018 ; Journal of Global South Studies Volume 35 [2018] ; 13494 >
+        au < released ; 2015 ; Journal of Global South Studies Volume 32 [2015] ; 12313 >
+        au < released ; 2016 ; Journal of Global South Studies Volume 33 [2016] ; 12314 >
+        au < released ; 2017 ; Journal of Global South Studies Volume 34 [2017] ; 12768 >
+        au < released ; 2018 ; Journal of Global South Studies Volume 35 [2018] ; 13494 >
 
     }
 
@@ -38,7 +38,7 @@
 
       attr[journal_id] = 741
 
-        au < ready ; 2018 ; Rhetoric of Health & Medicine Volume 1 [2018] ; 13791 >
+        au < released ; 2018 ; Rhetoric of Health & Medicine Volume 1 [2018] ; 13791 >
 
     }
 
@@ -53,13 +53,13 @@
 
       attr[journal_id] = 710
 
-        au < ready ; 2015 ; Subtropics Volume 19 [Spring/Summer 2015] ; 11418 >
-        au < ready ; 2016 ; Subtropics Volume 20/21 [Spring/Summer 2016] ; 11419 >
-        au < ready ; 2016 ; Subtropics Volume 22 [Fall/Winter 2016] ; 12336 >
-        au < ready ; 2017 ; Subtropics Volume 23 [Spring/Summer 2017] ; 12705 >
-        au < ready ; 2017 ; Subtropics Volume 24 [Fall/Winter 2017] ; 13132 >
-        au < ready ; 2018 ; Subtropics Volume 25 [Spring/Summer 2018] ; 13542 >
-        au < ready ; 2018 ; Subtropics Volume 26 [Fall/Winter 2018] ; 13890 >
+        au < released ; 2015 ; Subtropics Volume 19 [Spring/Summer 2015] ; 11418 >
+        au < released ; 2016 ; Subtropics Volume 20/21 [Spring/Summer 2016] ; 11419 >
+        au < released ; 2016 ; Subtropics Volume 22 [Fall/Winter 2016] ; 12336 >
+        au < released ; 2017 ; Subtropics Volume 23 [Spring/Summer 2017] ; 12705 >
+        au < released ; 2017 ; Subtropics Volume 24 [Fall/Winter 2017] ; 13132 >
+        au < released ; 2018 ; Subtropics Volume 25 [Spring/Summer 2018] ; 13542 >
+        au < released ; 2018 ; Subtropics Volume 26 [Fall/Winter 2018] ; 13890 >
 
     }
 

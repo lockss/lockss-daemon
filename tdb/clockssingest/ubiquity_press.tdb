@@ -130,7 +130,7 @@
       comment[publisher] = Levy Library Press
 #      param[base_url] = https://journalofscientificinnovationinmedicine.org/
 
-      au < ready ; exists ; 2018 ; 1 ; Journal of Scientific Innovation in Medicine Volume 2018 ; 2018 ; https://journalofscientificinnovationinmedicine.org/ ; >
+      au < frozen ; exists ; 2018 ; 1 ; Journal of Scientific Innovation in Medicine Volume 2018 ; 2018 ; https://journalofscientificinnovationinmedicine.org/ ; >
       au < manifest ; exists ; 2019 ; 2 ; Journal of Scientific Innovation in Medicine Volume 2019 ; 2019 ; https://journalofscientificinnovationinmedicine.org/ ; >
 
   }
@@ -344,7 +344,7 @@
 #      param[base_url] = https://openscreensjournal.com/
 
       au < deepCrawl ; exists ; 2018 ; 1 ; Open Screens Volume 2018 ; 2018 ; https://openscreensjournal.com/ ; >
-      au < expected ; exists ; 2019 ; 2 ; Open Screens Volume 2019 ; 2019 ; https://openscreensjournal.com/ ; >
+      au < manifest ; exists ; 2019 ; 2 ; Open Screens Volume 2019 ; 2019 ; https://openscreensjournal.com/ ; >
 
   }
 
@@ -481,24 +481,24 @@
       #publisher = Stockholm University Press
 
     au < manifest ; exists ; 1999 ; 1 ; Scandinavian Journal of Disability Research Volume 1 ; 1999 ; https://www.sjdr.se/ ; >
-    au < ready ; exists ; 2000 ; 2 ; Scandinavian Journal of Disability Research Volume 2 ; 2000 ; https://www.sjdr.se/ ; >
-    au < ready ; exists ; 2001 ; 3 ; Scandinavian Journal of Disability Research Volume 3 ; 2001 ; https://www.sjdr.se/ ; >
+    au < frozen ; exists ; 2000 ; 2 ; Scandinavian Journal of Disability Research Volume 2 ; 2000 ; https://www.sjdr.se/ ; >
+    au < frozen ; exists ; 2001 ; 3 ; Scandinavian Journal of Disability Research Volume 3 ; 2001 ; https://www.sjdr.se/ ; >
     au < doesNotExist ; doesNotExist ; 2002 ; 4 ; Scandinavian Journal of Disability Research Volume 4 ; 2002 ; https://www.sjdr.se/ ; >
-    au < ready ; exists ; 2003 ; 5 ; Scandinavian Journal of Disability Research Volume 5 ; 2003 ; https://www.sjdr.se/ ; >
-    au < ready ; exists ; 2004 ; 6 ; Scandinavian Journal of Disability Research Volume 6 ; 2004 ; https://www.sjdr.se/ ; >
-    au < ready ; exists ; 2005 ; 7 ; Scandinavian Journal of Disability Research Volume 7 ; 2005 ; https://www.sjdr.se/ ; >
-    au < ready ; exists ; 2006 ; 8 ; Scandinavian Journal of Disability Research Volume 8 ; 2006 ; https://www.sjdr.se/ ; >
-    au < ready ; exists ; 2007 ; 9 ; Scandinavian Journal of Disability Research Volume 9 ; 2007 ; https://www.sjdr.se/ ; >
-    au < ready ; exists ; 2008 ; 10 ; Scandinavian Journal of Disability Research Volume 10 ; 2008 ; https://www.sjdr.se/ ; >
-    au < ready ; exists ; 2009 ; 11 ; Scandinavian Journal of Disability Research Volume 11 ; 2009 ; https://www.sjdr.se/ ; >
-    au < ready ; exists ; 2010 ; 12 ; Scandinavian Journal of Disability Research Volume 12 ; 2010 ; https://www.sjdr.se/ ; >
-    au < ready ; exists ; 2011 ; 13 ; Scandinavian Journal of Disability Research Volume 13 ; 2011 ; https://www.sjdr.se/ ; >
-    au < ready ; exists ; 2012 ; 14 ; Scandinavian Journal of Disability Research Volume 14 ; 2012 ; https://www.sjdr.se/ ; >
-    au < ready ; exists ; 2013 ; 15 ; Scandinavian Journal of Disability Research Volume 15 ; 2013 ; https://www.sjdr.se/ ; >
-    au < ready ; exists ; 2014 ; 16 ; Scandinavian Journal of Disability Research Volume 16 ; 2014 ; https://www.sjdr.se/ ; >
-    au < ready ; exists ; 2015 ; 17 ; Scandinavian Journal of Disability Research Volume 17 ; 2015 ; https://www.sjdr.se/ ; >
-    au < ready ; exists ; 2016 ; 18 ; Scandinavian Journal of Disability Research Volume 18 ; 2016 ; https://www.sjdr.se/ ; >
-    au < ready ; exists ; 2017 ; 19 ; Scandinavian Journal of Disability Research Volume 19 ; 2017 ; https://www.sjdr.se/ ; >
+    au < frozen ; exists ; 2003 ; 5 ; Scandinavian Journal of Disability Research Volume 5 ; 2003 ; https://www.sjdr.se/ ; >
+    au < frozen ; exists ; 2004 ; 6 ; Scandinavian Journal of Disability Research Volume 6 ; 2004 ; https://www.sjdr.se/ ; >
+    au < frozen ; exists ; 2005 ; 7 ; Scandinavian Journal of Disability Research Volume 7 ; 2005 ; https://www.sjdr.se/ ; >
+    au < frozen ; exists ; 2006 ; 8 ; Scandinavian Journal of Disability Research Volume 8 ; 2006 ; https://www.sjdr.se/ ; >
+    au < frozen ; exists ; 2007 ; 9 ; Scandinavian Journal of Disability Research Volume 9 ; 2007 ; https://www.sjdr.se/ ; >
+    au < frozen ; exists ; 2008 ; 10 ; Scandinavian Journal of Disability Research Volume 10 ; 2008 ; https://www.sjdr.se/ ; >
+    au < frozen ; exists ; 2009 ; 11 ; Scandinavian Journal of Disability Research Volume 11 ; 2009 ; https://www.sjdr.se/ ; >
+    au < frozen ; exists ; 2010 ; 12 ; Scandinavian Journal of Disability Research Volume 12 ; 2010 ; https://www.sjdr.se/ ; >
+    au < frozen ; exists ; 2011 ; 13 ; Scandinavian Journal of Disability Research Volume 13 ; 2011 ; https://www.sjdr.se/ ; >
+    au < frozen ; exists ; 2012 ; 14 ; Scandinavian Journal of Disability Research Volume 14 ; 2012 ; https://www.sjdr.se/ ; >
+    au < frozen ; exists ; 2013 ; 15 ; Scandinavian Journal of Disability Research Volume 15 ; 2013 ; https://www.sjdr.se/ ; >
+    au < frozen ; exists ; 2014 ; 16 ; Scandinavian Journal of Disability Research Volume 16 ; 2014 ; https://www.sjdr.se/ ; >
+    au < frozen ; exists ; 2015 ; 17 ; Scandinavian Journal of Disability Research Volume 17 ; 2015 ; https://www.sjdr.se/ ; >
+    au < frozen ; exists ; 2016 ; 18 ; Scandinavian Journal of Disability Research Volume 18 ; 2016 ; https://www.sjdr.se/ ; >
+    au < frozen ; exists ; 2017 ; 19 ; Scandinavian Journal of Disability Research Volume 19 ; 2017 ; https://www.sjdr.se/ ; >
     au < deepCrawl ; exists ; 2018 ; 20 ; Scandinavian Journal of Disability Research Volume 20 ; 2018 ; https://www.sjdr.se/ ; >
     au < manifest ; exists ; 2019 ; 21 ; Scandinavian Journal of Disability Research Volume 21 ; 2019 ; https://www.sjdr.se/ ; >
     au < expected ; exists ; 2020 ; 22 ; Scandinavian Journal of Disability Research Volume 22 ; 2020 ; https://www.sjdr.se/ ; >
@@ -997,7 +997,7 @@
       au < doNotProcess ; exists ; 2016 ; 2016 ; Journal of Interactive Media in Education Volume 2016 ; 2016 ; https://jime.open.ac.uk/ ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2017 ; 2017 ; Journal of Interactive Media in Education Volume 2017 ; 2017 ; https://jime.open.ac.uk/ ; > #no www
       au < deepCrawl ; exists ; 2018 ; 2018 ; Journal of Interactive Media in Education Volume 2018 ; 2018 ; https://jime.open.ac.uk/ ; > #no www
-      au < expected ; exists ; 2019 ; 2019 ; Journal of Interactive Media in Education Volume 2019 ; 2019 ; https://jime.open.ac.uk/ ; >
+      au < manifest ; exists ; 2019 ; 2019 ; Journal of Interactive Media in Education Volume 2019 ; 2019 ; https://jime.open.ac.uk/ ; >
     }
   }
 
@@ -1116,7 +1116,7 @@
       au < frozen ; exists ; 2016 ; 4 ; Journal of Open Psychology Data Volume 2016 ; 2016 ; http://openpsychologydata.metajnl.com/ ; >
       au < deepCrawl ; exists ; 2017 ; 5 ; Journal of Open Psychology Data Volume 2017 ; 2017 ; http://openpsychologydata.metajnl.com/ ; >
       au < deepCrawl ; exists ; 2018 ; 6 ; Journal of Open Psychology Data Volume 2018 ; 2018 ; https://openpsychologydata.metajnl.com/ ; >
-      au < expected ; exists ; 2019 ; 7 ; Journal of Open Psychology Data Volume 2019 ; 2019 ; https://openpsychologydata.metajnl.com/ ; >
+      au < manifest ; exists ; 2019 ; 7 ; Journal of Open Psychology Data Volume 2019 ; 2019 ; https://openpsychologydata.metajnl.com/ ; >
 
   }
 
@@ -1723,7 +1723,7 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://www.ijds.eu/
 
-      au < ready ; exists ; 2018 ; 1 ; International Journal of Driving Science Volume 2018 ; 2018 ; https://www.ijds.eu/ ; >
+      au < frozen ; exists ; 2018 ; 1 ; International Journal of Driving Science Volume 2018 ; 2018 ; https://www.ijds.eu/ ; >
       au < expected ; exists ; 2019 ; 2 ; International Journal of Driving Science Volume 2019 ; 2019 ; https://www.ijds.eu/ ; >
 
   }
@@ -1738,7 +1738,7 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://www.worldwidewastejournal.com/
 
-      au < ready ; exists ; 2018 ; 1 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2018 ; 2018 ; https://www.worldwidewastejournal.com/ ; >
+      au < frozen ; exists ; 2018 ; 1 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2018 ; 2018 ; https://www.worldwidewastejournal.com/ ; >
       au < manifest ; exists ; 2019 ; 2 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2019 ; 2019 ; https://www.worldwidewastejournal.com/ ; >
 
   }
@@ -2196,7 +2196,7 @@
       au < finished ; crawling ; 2016 ; 9 ; Studium Volume 2016 ; 2016 ; http://www.gewina-studium.nl/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2017 ; 10 ; Studium Volume 2017 ; 2017 ; http://www.gewina-studium.nl/ ; >
       au < deepCrawl ; exists ; 2018 ; 11 ; Studium Volume 2018 ; 2018 ; https://www.gewina-studium.nl/ ; >
-      au < expected ; exists ; 2019 ; 12 ; Studium Volume 2019 ; 2019 ; https://www.gewina-studium.nl/ ; >
+      au < manifest ; exists ; 2019 ; 12 ; Studium Volume 2019 ; 2019 ; https://www.gewina-studium.nl/ ; >
 
   }
 

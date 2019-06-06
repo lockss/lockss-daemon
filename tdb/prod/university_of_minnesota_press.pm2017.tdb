@@ -19,9 +19,9 @@
 
       attr[journal_id] = 360
 
-        au < manifest ; 2007 ; Buildings & Landscapes: Journal of the Vernacular Architecture Forum Volume 14 [Fall 2007] ; 3589 >
-        au < manifest ; 2008 ; Buildings & Landscapes: Journal of the Vernacular Architecture Forum Volume 15 [Fall 2008] ; 4024 >
-        au < manifest ; 2009 ; Buildings & Landscapes: Journal of the Vernacular Architecture Forum Volume 16 [2009] ; 4362 >
+        au < testing ; 2007 ; Buildings & Landscapes: Journal of the Vernacular Architecture Forum Volume 14 [Fall 2007] ; 3589 >
+        au < ready ; 2008 ; Buildings & Landscapes: Journal of the Vernacular Architecture Forum Volume 15 [Fall 2008] ; 4024 >
+        au < ready ; 2009 ; Buildings & Landscapes: Journal of the Vernacular Architecture Forum Volume 16 [2009] ; 4362 >
         au < released ; 2010 ; Buildings & Landscapes: Journal of the Vernacular Architecture Forum Volume 17 [2010] ; 6364 >
         au < released ; 2011 ; Buildings & Landscapes: Journal of the Vernacular Architecture Forum Volume 18 [2011] ; 7485 >
         au < released ; 2012 ; Buildings & Landscapes: Journal of the Vernacular Architecture Forum Volume 19 [2012] ; 8411 >
@@ -45,33 +45,33 @@
 
       attr[journal_id] = 41
 
-        au < manifest ; 2001 ; Cultural Critique Number 49 [Fall 2001] ; 146 >
-        au < manifest ; 2001 ; Cultural Critique Number 47 [Winter 2001] ; 737 >
-        au < manifest ; 2001 ; Cultural Critique Number 48 [Spring 2001] ; 739 >
-        au < manifest ; 2002 ; Cultural Critique Number 50 [Winter 2002] ; 147 >
-        au < manifest ; 2002 ; Cultural Critique Number 51 [Spring 2002] ; 740 >
-        au < manifest ; 2002 ; Cultural Critique Number 52 [Fall 2002] ; 779 >
-        au < manifest ; 2003 ; Cultural Critique Number 53 [Winter 2003] ; 876 >
-        au < manifest ; 2003 ; Cultural Critique Number 54 [Spring 2003] ; 943 >
-        au < manifest ; 2003 ; Cultural Critique Number 55 [Fall 2003] ; 1711 >
-        au < manifest ; 2004 ; Cultural Critique Number 56 [Winter 2004] ; 1722 >
-        au < manifest ; 2004 ; Cultural Critique Number 57 [Spring 2004] ; 2563 >
-        au < manifest ; 2004 ; Cultural Critique Number 58 [Fall 2004] ; 2586 >
-        au < manifest ; 2005 ; Cultural Critique Number 59 [Winter 2005] ; 2616 >
-        au < manifest ; 2005 ; Cultural Critique Number 60 [Spring 2005] ; 2832 >
-        au < manifest ; 2005 ; Cultural Critique Number 61 [Fall 2005] ; 2889 >
-        au < manifest ; 2006 ; Cultural Critique Number 62 [Winter 2006] ; 2955 >
-        au < manifest ; 2006 ; Cultural Critique Number 63 [Spring 2006] ; 3125 >
-        au < manifest ; 2006 ; Cultural Critique Number 64 [Fall 2006] ; 3176 >
-        au < manifest ; 2007 ; Cultural Critique Number 65 [Fall 2007] ; 3398 >
-        au < manifest ; 2007 ; Cultural Critique Number 66 [Spring 2007] ; 3437 >
-        au < manifest ; 2007 ; Cultural Critique Number 67 [Fall 2007] ; 3484 >
-        au < manifest ; 2008 ; Cultural Critique Number 68 [Winter 2008] ; 3651 >
-        au < manifest ; 2008 ; Cultural Critique Number 69 [Spring 2008] ; 3813 >
-        au < manifest ; 2008 ; Cultural Critique Number 70 [Fall 2008] ; 4026 >
-        au < manifest ; 2009 ; Cultural Critique Number 71 [Winter 2009] ; 4157 >
-        au < manifest ; 2009 ; Cultural Critique Number 72 [Spring 2009] ; 4399 >
-        au < manifest ; 2009 ; Cultural Critique Number 73 [Fall 2009] ; 5677 >
+        au < ready ; 2001 ; Cultural Critique Number 49 [Fall 2001] ; 146 >
+        au < ready ; 2001 ; Cultural Critique Number 47 [Winter 2001] ; 737 >
+        au < ready ; 2001 ; Cultural Critique Number 48 [Spring 2001] ; 739 >
+        au < ready ; 2002 ; Cultural Critique Number 50 [Winter 2002] ; 147 >
+        au < ready ; 2002 ; Cultural Critique Number 51 [Spring 2002] ; 740 >
+        au < ready ; 2002 ; Cultural Critique Number 52 [Fall 2002] ; 779 >
+        au < ready ; 2003 ; Cultural Critique Number 53 [Winter 2003] ; 876 >
+        au < ready ; 2003 ; Cultural Critique Number 54 [Spring 2003] ; 943 >
+        au < ready ; 2003 ; Cultural Critique Number 55 [Fall 2003] ; 1711 >
+        au < ready ; 2004 ; Cultural Critique Number 56 [Winter 2004] ; 1722 >
+        au < ready ; 2004 ; Cultural Critique Number 57 [Spring 2004] ; 2563 >
+        au < ready ; 2004 ; Cultural Critique Number 58 [Fall 2004] ; 2586 >
+        au < ready ; 2005 ; Cultural Critique Number 59 [Winter 2005] ; 2616 >
+        au < testing ; 2005 ; Cultural Critique Number 60 [Spring 2005] ; 2832 >
+        au < ready ; 2005 ; Cultural Critique Number 61 [Fall 2005] ; 2889 >
+        au < ready ; 2006 ; Cultural Critique Number 62 [Winter 2006] ; 2955 >
+        au < ready ; 2006 ; Cultural Critique Number 63 [Spring 2006] ; 3125 >
+        au < ready ; 2006 ; Cultural Critique Number 64 [Fall 2006] ; 3176 >
+        au < testing ; 2007 ; Cultural Critique Number 65 [Fall 2007] ; 3398 >
+        au < ready ; 2007 ; Cultural Critique Number 66 [Spring 2007] ; 3437 >
+        au < ready ; 2007 ; Cultural Critique Number 67 [Fall 2007] ; 3484 >
+        au < ready ; 2008 ; Cultural Critique Number 68 [Winter 2008] ; 3651 >
+        au < testing ; 2008 ; Cultural Critique Number 69 [Spring 2008] ; 3813 >
+        au < ready ; 2008 ; Cultural Critique Number 70 [Fall 2008] ; 4026 >
+        au < ready ; 2009 ; Cultural Critique Number 71 [Winter 2009] ; 4157 >
+        au < ready ; 2009 ; Cultural Critique Number 72 [Spring 2009] ; 4399 >
+        au < ready ; 2009 ; Cultural Critique Number 73 [Fall 2009] ; 5677 >
         au < released ; 2010 ; Cultural Critique Number 74 [Winter 2010] ; 5841 >
         au < released ; 2010 ; Cultural Critique Number 75 [Spring 2010] ; 6420 >
         au < released ; 2010 ; Cultural Critique Number 76 [Fall 2010] ; 6581 >
@@ -115,8 +115,8 @@
 
       attr[journal_id] = 407
 
-        au < manifest ; 2008 ; Future Anterior Volume 5 [2008] ; 3953 >
-        au < manifest ; 2009 ; Future Anterior Volume 6 [2009] ; 5678 >
+        au < ready ; 2008 ; Future Anterior Volume 5 [2008] ; 3953 >
+        au < ready ; 2009 ; Future Anterior Volume 6 [2009] ; 5678 >
         au < released ; 2010 ; Future Anterior Volume 7 [2010] ; 6582 >
         au < released ; 2011 ; Future Anterior Volume 8 [2011] ; 8193 >
         au < released ; 2012 ; Future Anterior Volume 9 [2012] ; 8635 >
@@ -139,10 +139,10 @@
 
       attr[journal_id] = 461
 
-        au < manifest ; 2006 ; Mechademia Volume 1 [2006] ; 5720 >
-        au < manifest ; 2007 ; Mechademia Volume 2 [2007] ; 5721 >
-        au < manifest ; 2008 ; Mechademia Volume 3 [2008] ; 5723 >
-        au < manifest ; 2009 ; Mechademia Volume 4 [2009] ; 5724 >
+        au < ready ; 2006 ; Mechademia Volume 1 [2006] ; 5720 >
+        au < ready ; 2007 ; Mechademia Volume 2 [2007] ; 5721 >
+        au < ready ; 2008 ; Mechademia Volume 3 [2008] ; 5723 >
+        au < ready ; 2009 ; Mechademia Volume 4 [2009] ; 5724 >
         au < released ; 2010 ; Mechademia Volume 5 [2010] ; 6569 >
         au < released ; 2011 ; Mechademia Volume 6 [2011] ; 7679 >
         au < released ; 2012 ; Mechademia Volume 7 [2012] ; 8502 >
@@ -163,13 +163,13 @@
 
       attr[journal_id] = 232
 
-        au < manifest ; 2003 ; The Moving Image Volume 3 [2003] ; 937 >
-        au < manifest ; 2004 ; The Moving Image Volume 4 [2004] ; 2555 >
-        au < manifest ; 2005 ; The Moving Image Volume 5 [2005] ; 2822 >
-        au < manifest ; 2006 ; The Moving Image Volume 6 [2006] ; 3051 >
-        au < manifest ; 2007 ; The Moving Image Volume 7 [2007] ; 3446 >
-        au < manifest ; 2008 ; The Moving Image Volume 8 [2008] ; 3871 >
-        au < manifest ; 2009 ; The Moving Image Volume 9 [2009] ; 5655 >
+        au < ready ; 2003 ; The Moving Image Volume 3 [2003] ; 937 >
+        au < ready ; 2004 ; The Moving Image Volume 4 [2004] ; 2555 >
+        au < ready ; 2005 ; The Moving Image Volume 5 [2005] ; 2822 >
+        au < ready ; 2006 ; The Moving Image Volume 6 [2006] ; 3051 >
+        au < ready ; 2007 ; The Moving Image Volume 7 [2007] ; 3446 >
+        au < ready ; 2008 ; The Moving Image Volume 8 [2008] ; 3871 >
+        au < ready ; 2009 ; The Moving Image Volume 9 [2009] ; 5655 >
         au < released ; 2010 ; The Moving Image Volume 10 [2010] ; 6615 >
         au < released ; 2011 ; The Moving Image Volume 11 [2011] ; 7526 >
         au < released ; 2012 ; The Moving Image Volume 12 [2012] ; 8395 >
@@ -211,16 +211,16 @@
 
       attr[journal_id] = 207
 
-        au < manifest ; 2000 ; Wicazo Sa Review Volume 15 [2000] ; 708 >
-        au < manifest ; 2001 ; Wicazo Sa Review Volume 16 [2001] ; 709 >
-        au < manifest ; 2002 ; Wicazo Sa Review Volume 17 [2002] ; 710 >
-        au < manifest ; 2003 ; Wicazo Sa Review Volume 18 [2003] ; 926 >
-        au < manifest ; 2004 ; Wicazo Sa Review Volume 19 [2004] ; 2498 >
-        au < manifest ; 2005 ; Wicazo Sa Review Volume 20 [2005] ; 2704 >
-        au < manifest ; 2006 ; Wicazo Sa Review Volume 21 [2006] ; 3122 >
-        au < manifest ; 2007 ; Wicazo Sa Review Volume 22 [2007] ; 3383 >
-        au < manifest ; 2008 ; Wicazo Sa Review Volume 23 [2008] ; 3730 >
-        au < manifest ; 2009 ; Wicazo Sa Review Volume 24 [2009] ; 4332 >
+        au < ready ; 2000 ; Wicazo Sa Review Volume 15 [2000] ; 708 >
+        au < ready ; 2001 ; Wicazo Sa Review Volume 16 [2001] ; 709 >
+        au < ready ; 2002 ; Wicazo Sa Review Volume 17 [2002] ; 710 >
+        au < ready ; 2003 ; Wicazo Sa Review Volume 18 [2003] ; 926 >
+        au < ready ; 2004 ; Wicazo Sa Review Volume 19 [2004] ; 2498 >
+        au < ready ; 2005 ; Wicazo Sa Review Volume 20 [2005] ; 2704 >
+        au < ready ; 2006 ; Wicazo Sa Review Volume 21 [2006] ; 3122 >
+        au < ready ; 2007 ; Wicazo Sa Review Volume 22 [2007] ; 3383 >
+        au < ready ; 2008 ; Wicazo Sa Review Volume 23 [2008] ; 3730 >
+        au < ready ; 2009 ; Wicazo Sa Review Volume 24 [2009] ; 4332 >
         au < released ; 2010 ; Wicazo Sa Review Volume 25 [2010] ; 6172 >
         au < released ; 2011 ; Wicazo Sa Review Volume 26 [2011] ; 7316 >
         au < released ; 2012 ; Wicazo Sa Review Volume 27 [2012] ; 8303 >
