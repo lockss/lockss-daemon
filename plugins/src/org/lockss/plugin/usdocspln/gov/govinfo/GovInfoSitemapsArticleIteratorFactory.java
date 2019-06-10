@@ -47,16 +47,22 @@ public class GovInfoSitemapsArticleIteratorFactory
   protected static Logger log = 
     Logger.getLogger(GovInfoSitemapsArticleIteratorFactory.class);
   
-  /*
-     https://www.govinfo.gov/app/details/DCPD-201800002
-     htps://www.govinfo.gov/content/pkg/DCPD-201800002/html/DCPD-201800002.htm
-     htps://www.govinfo.gov/content/pkg/DCPD-201800002/pdf/DCPD-201800002.pdf
-*/
+    /*
+      https://www.govinfo.gov/app/details/DCPD-201800002
+      htps://www.govinfo.gov/content/pkg/DCPD-201800002/html/DCPD-201800002.htm
+      htps://www.govinfo.gov/content/pkg/DCPD-201800002/pdf/DCPD-201800002.pdf
+
+      https://www.govinfo.gov/app/details/USCOURTS-akd-1_11-cv-00016/
+      https://www.govinfo.gov/app/details/USCOURTS-akd-1_11-cv-00016/context
+      https://www.govinfo.gov/content/pkg/USCOURTS-akd-1_11-cv-00016/pdf/USCOURTS-akd-1_11-cv-00016-0.pdf
+      https://www.govinfo.gov/content/pkg/USCOURTS-akd-1_11-cv-00016/pdf/USCOURTS-akd-1_11-cv-00016-1.pdf
+      https://www.govinfo.gov/content/pkg/USCOURTS-akd-1_11-cv-00016/pdf/USCOURTS-akd-1_11-cv-00016-2.pdf
+    */
   protected static final String ROOT_TEMPLATE =
-    "\"%scontent/pkg/\", base_url";
+    "\"%s(content/pkg|app/details)/\", base_url";
 
   protected static final String PATTERN_TEMPLATE =
-    "\"^%scontent/pkg/([^/]+)/(html?|mp3|pdf|xml)/([^/]+)\\.(html?|mp3|pdf|xml)$\", base_url";
+    "\"^%s(content/pkg|app/detail)/([^/]+)/(html?|mp3|pdf|xml)/([^/]+)\\.(html?|mp3|pdf|xml)$\", base_url";
   
   protected static final Pattern HTML_PATTERN = 
       Pattern.compile("([^/]+)/html/([^/]+)\\.htm$",
@@ -73,14 +79,18 @@ public class GovInfoSitemapsArticleIteratorFactory
   protected static final Pattern XML_PATTERN = 
       Pattern.compile("([^/]+)/xml/([^/]+)\\.xml$",
           Pattern.CASE_INSENSITIVE);
+
+  protected static final Pattern PDF_LANDING_PAGE_PATTERN = Pattern.compile("([^/]+)/context$", Pattern.CASE_INSENSITIVE);
   
   protected static final String HTML_REPLACEMENT1 = "$1/html/$2.htm";
   protected static final String HTML_REPLACEMENT2 = "$1/html/$2.html";
   protected static final String MP3_REPLACEMENT = "$1/mp3/$2.mp3";
   protected static final String PDF_REPLACEMENT = "$1/pdf/$2.pdf";
   protected static final String XML_REPLACEMENT = "$1/xml/$2.xml";
+  protected static final String PDF_LANDING_PAGE_REPLACEMENT = "$1";
   
   protected static final String ROLE_AUDIO_FILE = "AudioFile";
+  protected static final String PDF_FILE_LANDING_PAGE = "PDFFileLandingPage";
   
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
                                                       MetadataTarget target)
@@ -106,13 +116,19 @@ public class GovInfoSitemapsArticleIteratorFactory
     builder.addAspect(
         MP3_PATTERN, MP3_REPLACEMENT, 
         ROLE_AUDIO_FILE);
+
+    builder.addAspect(
+            PDF_LANDING_PAGE_PATTERN,
+            PDF_LANDING_PAGE_REPLACEMENT,
+            PDF_FILE_LANDING_PAGE);
     
     // add metadata role from html, xml, or pdf (NOTE: pdf metadata is the access url)
     builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA, Arrays.asList(
         ArticleFiles.ROLE_FULL_TEXT_HTML,
         ArticleFiles.ROLE_FULL_TEXT_PDF,
         ArticleFiles.ROLE_FULL_TEXT_XML,
-        ROLE_AUDIO_FILE));
+        ROLE_AUDIO_FILE,
+        PDF_FILE_LANDING_PAGE));
     
     return builder.getSubTreeArticleIterator();
   }

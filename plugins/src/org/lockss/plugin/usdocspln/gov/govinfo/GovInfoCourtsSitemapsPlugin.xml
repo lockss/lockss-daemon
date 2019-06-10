@@ -1,0 +1,118 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>ready</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.usdocspln.gov.govinfo.GovInfoCourtsSitemapsPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.usdocspln.gov.govinfo.GovInfoSitemapsPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent_version</string>
+    <string>3</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>GovInfoCourts Sitemaps Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>collection_id</key>
+        <displayName>Collection Identifier</displayName>
+        <description>A short code identifying the top-level collection, e.g. FR for the Federal Register. Case-sensitive.</description>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>court_id</key>
+        <displayName>Court ID</displayName>
+        <description>Court Identifier</description>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"GovInfoCourts Sitemaps Plugin, Base URL %s, Collection ID %s, Year %d", base_url, collection_id, year</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+      <!--https://www.govinfo.gov/sitemap/USCOURTS/USCOURTS_akd_2014_sitemap.xml-->
+      <string>"%ssitemap/USCOURTS/%s_%s_%d_sitemap.xml", base_url, collection_id, court_id, year</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <!--
+      implicit < status ; year ; name ; param[collection_id] ; param[court_id] ; param[year] >
+      au < manifest ; 2014 ; USCOURTS_akd 2014 ; USCOURTS ; akd ; 2014 >
+      https://www.govinfo.gov/sitemap/USCOURTS/USCOURTS_akd_2014_sitemap.xml
+      https://www.govinfo.gov/app/details/USCOURTS-akd-3_08-cv-00162
+      https://www.govinfo.gov/content/pkg/USCOURTS-akd-1_06-cv-00009.zip
+      https://www.govinfo.gov/metadata/pkg/USCOURTS-akd-1_06-cv-00009/mods.xml
+      https://www.govinfo.gov/metadata/pkg/USCOURTS-akd-1_06-cv-00009/premis.xml
+      -->
+      <string>2,"^https://%s/content/pkg/[^/]+\.zip$", url_host(base_url)</string>
+      <string>1,"^https://%s/(content|metadata)/pkg/%s-%s", url_host(base_url), collection_id, court_id</string>
+      <string>1,"^https://%s/app/details/%s-%s", url_host(base_url), collection_id, court_id</string>
+      <string>1,"^https://maxcdn\.bootstrapcdn\.com/.*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)"</string>
+      <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)", url_host(base_url)</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"content/pkg/(%s-%s[^/]+)/pdf/\1[^/]+\.pdf$", collection_id, court_id</string>
+    </list>
+  </entry>
+</map>

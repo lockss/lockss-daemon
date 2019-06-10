@@ -180,10 +180,21 @@ public class GovInfoSitemapsLinkExtractorFactory implements LinkExtractorFactory
       
       // Parse document; may bail early with custom NoNeedToContinueException
       try {
+        log.debug3("srcUrl: " + srcUrl);
         saxParser.parse(inputSource, new SitemapsHandler(new URL(srcUrl), 
             new Callback() {
           @Override
           public void foundLink(String url) {
+            log.debug3("foundLink : " + url);
+            //create "contextUrl" by appending "/context" to this link:
+            //https://www.govinfo.gov/app/details/USCOURTS-akd-1_13-cv-00005
+            //https://www.govinfo.gov/app/details/USCOURTS-akd-1_13-cv-00005/context
+            //https://www.govinfo.gov/app/details/USCOURTS-akd-1_13-cv-00005/summary
+            if ((url.indexOf("app/details/USCOURTS") > -1) && (url.indexOf("context") == -1) && (url.indexOf("summary") == -1)) {
+              url  += "/context";
+              log.debug3("USCOURTS PDF File Context Landing Page Url: " + url);
+            }
+            log.debug3("Govinfo Url: " + url);
             cb.foundLink(url);
           }
       }));
