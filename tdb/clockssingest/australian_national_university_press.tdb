@@ -143,7 +143,7 @@
     
     param[journal_id] = australian-journal-biography-and-history
     #this one may be challenging - link to issue doesn't include volume number...
-    au < exists ; exists ; 2018 ; Australian Journal of Biography and History: Number 1 ; 1 ; >
+    au < manifest ; exists ; 2018 ; Australian Journal of Biography and History: Number 1 ; 1 ; >
     au < expected ; exists ; 2019 ; Australian Journal of Biography and History: Number 2 ; 2 ; >
 
   }  
@@ -346,7 +346,7 @@
     au < finished ; frozen ; 2017 ; International Review of Environmental History: Volume 3 ; 3 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2018 ; International Review of Environmental History: Volume 4 ; 4 ; reingest4.clockss.org:8082 >
 	#NO - they've completely changed the url layout for this journal's TOC - lock down 1-4 and then will need a new approach for future
-    au < expected ; exists ; 2019 ; International Review of Environmental History: Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2019 ; International Review of Environmental History: Volume 5 ; 5 ; >
 
   }
 
