@@ -38,8 +38,9 @@
   </entry>
   <entry>
     <string>au_start_url</string>
-<!--  this now redirects to version without /publications/ but will still work -->
-<!--  and now it redirects to a version with /publications/journals but will still work -->    
+    <!--  6/14/19 - intentional backwards incompatible change -->
+    <!-- site changed and redirects + new journal_id did not work; lock down processed content on production and change start_url -->
+    <!-- crawl rules still work for legacy content so production content maintenance will be fine -->
     <string>"%spublications/journals/%s", base_url, journal_id</string>
   </entry>
   <entry>
@@ -56,8 +57,6 @@
     <string>au_permitted_host_pattern</string>
     <list>
       <string>(fonts|ajax)\.(googleapis|gstatic)\.com</string>
-      <!--<string>press-files\.anu\.edu\.au</string> -->
-      <!-- XXX above needed because lockss.txt missing on that domain -->
     </list>
   </entry>
   <entry>
@@ -90,7 +89,7 @@
       <string>1,"^https?://%s%spublications/(journals/)?%s(\?page=[0-9]+)?$", url_host(base_url), url_path(base_url), journal_id</string>
       <string>1,"^https?://%s%s[?]p=[0-9]+$", url_host(base_url), url_path(base_url)</string>
       <string>1,"^https?://%s%snode/[0-9]+(/download)?$", url_host(base_url), url_path(base_url)</string>
-      <!-- avoid filter out volume based url for some journals -->
+      <!-- 6/14/19 - some journals use short jid on TOC link; allow any lower-case-char sequence in this position since the full journal id is also there -->
       <!-- e.g. https://press.anu.edu.au/publications/journals/australian-journal-biography-and-history/ajbh-1 -->
       <!-- e.g. https://press.anu.edu.au/publications/journals/international-review-environmental-history/ireh-volume-5-issue-1-2019 -->
       <string>1,"^https?://%s%spublications/(journals/(%s/)?)?(%s|[a-z]+)(-(issue|volume|no-[1-9]|winter))?-%s(-[12ni][^/]*?)?(/download)?$", url_host(base_url), url_path(base_url), journal_id, journal_id, volume_name</string>
