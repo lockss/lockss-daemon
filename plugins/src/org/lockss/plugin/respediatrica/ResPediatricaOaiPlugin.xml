@@ -104,6 +104,15 @@
                 <definitional>true</definitional>
                 <defaultOnly>false</defaultOnly>
             </org.lockss.daemon.ConfigParamDescr>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>year</key>
+                <displayName>Publish Year</displayName>
+                <description>Year-2012 will be converted to from=2012-01-01/until=2012-12-31</description>
+                <type>1</type>
+                <size>4</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
         </list>
     </entry>
     <entry>

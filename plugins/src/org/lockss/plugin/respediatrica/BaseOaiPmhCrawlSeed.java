@@ -73,7 +73,8 @@ public abstract class BaseOaiPmhCrawlSeed extends BaseCrawlSeed {
   public static final String KEY_AU_OAI_METADATA_PREFIX = "oai_metadata_prefix";
   public static final String KEY_AU_OAI_GRANULARITY = "oai_granularity";
   public static final String DEFAULT_OAI_URL_POSTFIX = "oai/request";
-  public static final String YEAR_POSTFIX = "-01-01";
+  public static final String YEAR_START_POSTFIX = "-01-01";
+  public static final String YEAR_END_POSTFIX = "-12-31";
   public static final Granularity DEFAULT_GRANULARITY = Granularity.Second;
   public static final String NULL_SET = "[NONE]";
   
@@ -166,7 +167,8 @@ public abstract class BaseOaiPmhCrawlSeed extends BaseCrawlSeed {
    * @throws ConfigurationException 
    */
   protected void setDates(int year) throws ConfigurationException {
-    setDates(year + YEAR_POSTFIX, (year + 1) + YEAR_POSTFIX);
+    setDates(year + YEAR_START_POSTFIX, year  + YEAR_END_POSTFIX);
+    logger.debug3("Fei - setDates: from " + year + YEAR_START_POSTFIX + " until" + (year + 1) + YEAR_END_POSTFIX);
   }
   
   /**
@@ -188,9 +190,11 @@ public abstract class BaseOaiPmhCrawlSeed extends BaseCrawlSeed {
   protected Date parseDate(String date, DateFormat df, String name) 
       throws ConfigurationException {
     Date ret;
+    /*
     if(date.length() == 10) {
       date = date + "T00:00:00";
     }
+     */
     try {
       ret = df.parse(date);
     } catch (ParseException e) {
