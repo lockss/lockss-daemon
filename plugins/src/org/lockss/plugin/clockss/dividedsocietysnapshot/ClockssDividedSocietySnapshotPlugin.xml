@@ -10,7 +10,11 @@
   <entry>
     <string>plugin_version</string>
     <string>1</string>
-  </entry> 
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Divided Society Snapshot Plugin (CLOCKSS)</string>
+  </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
@@ -29,20 +33,6 @@
     </map>
   </entry>
   <entry>
-    <string>au_crawlrules</string>
-    <list>
-      <string>1,"^%s", base_url</string>
-    </list>
-  </entry>
-  <entry>
-    <string>au_permission_url</string>
-    <string>"https://www.dividedsociety.org/4e566d92-3778-41c0-b7d7-c9fe7bd71aa9/ip_access"</string>
-  </entry>
-  <entry>
-    <string>au_start_url</string>
-    <string>"%sarchive/journals", base_url</string>
-  </entry>
-  <entry>
     <string>plugin_config_props</string>
     <list>
       <org.lockss.daemon.ConfigParamDescr>
@@ -57,6 +47,18 @@
     </list>
   </entry>
   <entry>
+    <string>au_name</string>
+    <string>"Divided Society Snapshot Plugin (CLOCKSS), Base URL %s", base_url</string>
+  </entry>
+  <entry>
+    <string>au_permission_url</string>
+    <string>"https://www.dividedsociety.org/4e566d92-3778-41c0-b7d7-c9fe7bd71aa9/ip_access"</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%sarchive/journals", base_url</string>
+  </entry>
+  <entry>
     <string>clockss_override</string>
     <map>
       <entry>
@@ -66,17 +68,95 @@
     </map>
   </entry>
   <entry>
-    <string>au_name</string>
-    <string>"Divided Society Snapshot Plugin (CLOCKSS), Base URL %s", base_url</string>
-  </entry>
-  <entry>
-    <string>plugin_name</string>
-    <string>Divided Society Snapshot Plugin (CLOCKSS)</string>
-  </entry>
-  <entry>
     <!-- manifest to issue to articles -->
     <string>au_refetch_depth</string>
-    <int>10</int>
+    <int>2</int>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <!--excludes the following urls
+      https://www.dividedsociety.org/about
+      https://www.dividedsociety.org/accessibility
+      https://www.dividedsociety.org/advanced-search
+      https://www.dividedsociety.org/bookmarks
+      https://www.dividedsociety.org/contact
+      https://www.dividedsociety.org/essays
+      https://www.dividedsociety.org/faqs
+      https://www.dividedsociety.org/flag/flag/bookmark/2908?destination=node/2908&token=C4cU62axQyNIh7RIuwuTjZqNafv6-72lUfopYaICnL0
+      https://www.dividedsociety.org/journals
+      https://www.dividedsociety.org/journals/breadline-news
+      https://www.dividedsociety.org/journals/breadline-news/issue-june-1993
+      https://www.dividedsociety.org/journals/breadline-news/issue-june-1993/sacked
+      https://www.dividedsociety.org/journals/breadline-news/issue-june-1993/sacked#main-content
+      https://www.dividedsociety.org/outreach
+      https://www.dividedsociety.org/posters
+      https://www.dividedsociety.org/privacy-policy
+      https://www.dividedsociety.org/theme
+      https://www.dividedsociety.org/topics/employment
+      https://www.dividedsociety.org/topics/trade-unions
+      https://www.dividedsociety.org/topics/workers-rights
+      https://www.dividedsociety.org/user
+      https://www.dividedsociety.org/user/logout
+      https://www.dividedsociety.org/privacy-policy
+      https://www.dividedsociety.org/sites/default/files/inline-images/UVGltd.jpg
+      https://www.dividedsociety.org/faqs
+      https://www.dividedsociety.org/privacy-policy
+      https://www.dividedsociety.org/user/password
+      https://www.dividedsociety.org/search?search_api_fulltext=posters%20and
+      https://www.dividedsociety.org/journals/2
+      https://www.dividedsociety.org/node/50392
+      https://www.dividedsociety.org/node/50392/delete
+      https://www.dividedsociety.org/outreach/toolkits/downing-street-declaration
+
+
+
+      https://www.dividedsociety.org/about
+      https://www.dividedsociety.org/flag/unflag/bookmark/44119?destination=bookmarks&token=6Dj8ttRrq0Vi5ijSo-divhRBWADR_NTmslgnfruKFfA
+      https://www.dividedsociety.org/user/9742
+      https://www.dividedsociety.org/flag/unflag/bookmark/44119?destination=user/9742&token=6Dj8ttRrq0Vi5ijSo-divhRBWADR_NTmslgnfruKFfA
+      https://www.dividedsociety.org/subscribe
+      https://www.dividedsociety.org/explore/posters
+      https://www.dividedsociety.org/journals/2
+      https://www.dividedsociety.org/journals?combine=&page=0
+      https://www.dividedsociety.org/posters?f%5B0%5D=geographic_posters%3ABelfast
+      https://www.dividedsociety.org/posters?page=0
+      https://www.dividedsociety.org/essays/suffering-victims-and-survivors-troubles-policy-and-politics-victimhood
+      -->
+      <string>2,"^%s(accessibility|contact|faqs|privacy-policy)", base_url</string>
+      <!--url included
+      https://www.dividedsociety.org/archive/journals/2823/issues
+      https://www.dividedsociety.org/core/themes/stable/images/core/tree-bottom.png
+      https://www.dividedsociety.org/libraries/chosen/chosen-sprite.png
+      https://www.dividedsociety.org/themes/dividedsociety/fonts/icomoon.eot?em6kwp
+      https://www.dividedsociety.org/sites/default/files/css/css_k_NGlLmTI1QFezDCynIZbLq_k3bxWI7G3TD9hr6KZW0.css?prk07m
+      -->
+      <string>1,"^%s", base_url</string>
+      <string>1,"^https?://((fonts|ajax)\.googleapis\.com)/"</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_repair_from_peer_if_missing_url_pattern</string>
+    <list>
+      <string>.+[.](bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)(\?.*)?$"</string>
+    </list>
+  </entry>
+  <entry>
+    <!-- these will not count towards poll results but will replicate from peer if above -->
+    <string>au_url_poll_result_weight</string>
+    <list>
+      <string>".+[.](bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)(\?.*)?$", 0</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_permitted_host_pattern</string>
+    <list>
+      <!--All their pdf files are saved on dropbox-->
+      <!--https://www.dividedsociety.org/journals/breadline-news/issue-june-1993/sacked has its pdf file
+      at https://dl.dropboxusercontent.com/s/vwoftqe1hx9pi1u/bre_001_001.pdf-->
+      <string>"dl\.dropboxusercontent\.com"</string>
+      <string>(fonts|ajax)\.googleapis\.com</string>
+    </list>
   </entry>
   <!--
   <entry>
