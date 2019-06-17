@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>16</string>
+    <string>17</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -92,7 +92,7 @@
       <!-- 6/14/19 - some journals use short jid on TOC link; allow any lower-case-char sequence in this position since the full journal id is also there -->
       <!-- e.g. https://press.anu.edu.au/publications/journals/australian-journal-biography-and-history/ajbh-1 -->
       <!-- e.g. https://press.anu.edu.au/publications/journals/international-review-environmental-history/ireh-volume-5-issue-1-2019 -->
-      <string>1,"^https?://%s%spublications/(journals/(%s/)?)?(%s|[a-z]+)(-(issue|volume|no-[1-9]|winter))?-%s(-[12ni][^/]*?)?(/download)?$", url_host(base_url), url_path(base_url), journal_id, journal_id, volume_name</string>
+      <string>1,"^https?://%s%spublications/(journals/(%s/)?)?(%s|[a-z]+)(-(ii-number|issue|volume|no-[1-9]|winter))?-%s(-[12ni][^/]*?)?(/download)?$", url_host(base_url), url_path(base_url), journal_id, journal_id, volume_name</string>
       <string>1,"^https?://press-files\.anu\.edu\.au/downloads/press/[^/]+/(html|media|pdf)/", base_url</string>
     </list>
   </entry>
