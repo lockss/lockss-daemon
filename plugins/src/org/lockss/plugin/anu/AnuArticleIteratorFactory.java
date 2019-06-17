@@ -56,7 +56,7 @@ implements ArticleIteratorFactory,
   //in 2019 format changed and added extra layer publications/journals/journal-id/journal-id-volume-foo
   // to support both old and new, add in optional level 
   protected static final String PATTERN_TEMPLATE =
-      "\"^%spublications/(?:journals/(%s/)?)?(?!.+/download$)(%s|[a-z]+)-(ii-number|issue|volume|no-[1-9]|winter)-%s(-[a-z0-9].+?)?$\", base_url, journal_id,journal_id, volume_name";
+      "\"^%spublications/(?:journals/(%s/)?)?(?!.+/download$)(%s|[a-z]+)(-(ii-number|issue|volume|no-[1-9]|winter))?-%s(-[a-z0-9].+?)?$\", base_url, journal_id,journal_id, volume_name";
   
   //we don't even get here unless the PATTERN_TEMPLATE worked and that was checkeding journal_id
   //allow option extra level of "journal-id/" just after publications/journals/

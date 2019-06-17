@@ -152,7 +152,7 @@
 
     #6/14/19 change to layout - plugin has been modified to handle backwards incompatible with finished content
     au < testing ; exists ; 2018 ; Australian Journal of Biography and History: Number 1 ; 1 ; >
-    au < testing ; exists ; 2019 ; Australian Journal of Biography and History: Number 2 ; 2 ; >
+    au < expected ; exists ; 2019 ; Australian Journal of Biography and History: Number 2 ; 2 ; >
 
   }  
 
