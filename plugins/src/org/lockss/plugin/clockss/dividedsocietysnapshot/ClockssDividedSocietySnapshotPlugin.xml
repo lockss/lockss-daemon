@@ -123,15 +123,20 @@
       https://www.dividedsociety.org/posters?page=0
       https://www.dividedsociety.org/essays/suffering-victims-and-survivors-troubles-policy-and-politics-victimhood
       -->
-      <string>2,"^%s(accessibility|contact|faqs|privacy-policy)", base_url</string>
+      <string>2,"^%s(about|accessibility|advanced-search|bookmarks|contact|essays|faqs|flag|outreach|posters|privacy-policy|topics|user|search|node|subscribe|explore|posters)", base_url</string>
       <!--url included
       https://www.dividedsociety.org/archive/journals/2823/issues
       https://www.dividedsociety.org/core/themes/stable/images/core/tree-bottom.png
       https://www.dividedsociety.org/libraries/chosen/chosen-sprite.png
       https://www.dividedsociety.org/themes/dividedsociety/fonts/icomoon.eot?em6kwp
       https://www.dividedsociety.org/sites/default/files/css/css_k_NGlLmTI1QFezDCynIZbLq_k3bxWI7G3TD9hr6KZW0.css?prk07m
+      https://www.dividedsociety.org/archive/journals/issues/224/articles
+      https://www.dividedsociety.org/journals/agiy-info/14/fas-distribute-guide-london
       -->
-      <string>1,"^%s", base_url</string>
+      <string>2,"^%sjournals/[0-9]+$", base_url</string>
+      <string>2,"^%sjournals\?combine=", base_url</string>
+      <string>1,"^%sjournals", base_url</string>
+      <string>1,"^%s(archive|core|libraries|themes|sites)/", base_url</string>
       <string>1,"^https?://((fonts|ajax)\.googleapis\.com)/"</string>
     </list>
   </entry>
