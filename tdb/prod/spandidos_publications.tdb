@@ -307,5 +307,18 @@
     au < manifest ; 2018 ; Molecular Medicine Reports Volume 18 ; 18 >
 
   }
+  
+    {
+      title <
+        name = World Academy of Sciences Journal ;
+        issn = 2632-2900 ;
+        eissn = 2632-2929
+      >
+      
+      param[journal_id] = wasj
+  
+      au < manifest ; 2019 ; World Academy of Sciences Journal Volume 1 ; 1 >
+    
+    }  
 
 }
