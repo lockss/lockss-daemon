@@ -189,6 +189,7 @@
     comment[continues] = 1748-2976
     #param[base_url] = http://www.foodandnutritionresearch.net/
     param[journal_id] = zfnr20
+    #published by SNF Swedish Nutrition Foundation in cooperation with Open Academia
 
 	comment[fnr2008] = 502 Proxy Error
 
@@ -202,7 +203,6 @@
     au < doNotProcess ; 2015 ; Food & Nutrition Research [including Supplements] Volume 59 ; 59 ; https://www.tandfonline.com/ >
     au < released ; 2016 ; Food & Nutrition Research [including Supplements] Volume 60 ; 60 ; http://www.tandfonline.com/ >
     au < released ; 2017 ; Food & Nutrition Research [including Supplements] Volume 61 ; 61 ; http://www.tandfonline.com/ >
-    au < expected ; 2018 ; Food & Nutrition Research [including Supplements] Volume 62 ; 62 ; https://www.tandfonline.com/ >
 
   }
 
