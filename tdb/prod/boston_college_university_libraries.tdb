@@ -82,7 +82,6 @@
       au < released ; 2015 ; Elements - Boston College Undergraduate Research Journal Volume 11 ; 11 ; 2015 ; http://ejournals.bc.edu/ojs/ >
       au < released ; 2016 ; Elements - Boston College Undergraduate Research Journal Volume 12 ; 12 ; 2016 ; http://ejournals.bc.edu/ojs/ >
       au < released ; 2017 ; Elements - Boston College Undergraduate Research Journal Volume 13 ; 13 ; 2017 ; https://ejournals.bc.edu/ojs/ >
-      au < expected ; 2018 ; Elements - Boston College Undergraduate Research Journal Volume 14 ; 14 ; 2018 ; https://ejournals.bc.edu/ojs/ >
 
     }
 
@@ -327,12 +326,11 @@
 
       param[journal_id] = integritas
 
-      au < released ; 2013 ; Integritas: Advancing the Mission of Catholic Higher Education Volume 2013 ; 1 ; 2013 ; https://ejournals.bc.edu/ojs/ >
-      au < released ; 2014 ; Integritas: Advancing the Mission of Catholic Higher Education Volume 2014 ; 2 ; 2014 ; https://ejournals.bc.edu/ojs/ >
-      au < released ; 2015 ; Integritas: Advancing the Mission of Catholic Higher Education Volume 2015 ; 3 ; 2015 ; https://ejournals.bc.edu/ojs/ >
-      au < released ; 2016 ; Integritas: Advancing the Mission of Catholic Higher Education Volume 2016 ; 4 ; 2016 ; https://ejournals.bc.edu/ojs/ >
-      au < released ; 2017 ; Integritas: Advancing the Mission of Catholic Higher Education Volume 2017 ; 5 ; 2017 ; https://ejournals.bc.edu/ojs/ >
-      au < expected ; 2018 ; Integritas: Advancing the Mission of Catholic Higher Education Volume 2018 ; 6 ; 2018 ; https://ejournals.bc.edu/ojs/ >
+      au < released ; 2013 ; Integritas: Advancing the Mission of Catholic Higher Education Volume 2013 ; 1-2 ; 2013 ; https://ejournals.bc.edu/ojs/ >
+      au < released ; 2014 ; Integritas: Advancing the Mission of Catholic Higher Education Volume 2014 ; 3-4 ; 2014 ; https://ejournals.bc.edu/ojs/ >
+      au < released ; 2015 ; Integritas: Advancing the Mission of Catholic Higher Education Volume 2015 ; 5-6 ; 2015 ; https://ejournals.bc.edu/ojs/ >
+      au < released ; 2016 ; Integritas: Advancing the Mission of Catholic Higher Education Volume 2016 ; 7-8 ; 2016 ; https://ejournals.bc.edu/ojs/ >
+      au < released ; 2017 ; Integritas: Advancing the Mission of Catholic Higher Education Volume 2017 ; 9 ; 2017 ; https://ejournals.bc.edu/ojs/ >
 
   }
 
@@ -401,8 +399,7 @@
       au < released ; 2013 ; Lingua Frankly Volume 2013 ; 1 ; 2013 ; https://ejournals.bc.edu/ojs/ >
       au < released ; 2014 ; Lingua Frankly Volume 2014 ; 2 ; 2014 ; https://ejournals.bc.edu/ojs/ >
       au < released ; 2016 ; Lingua Frankly Volume 2016 ; 3 ; 2016 ; https://ejournals.bc.edu/ojs/ >
-      au < expected ; 2017 ; Lingua Frankly Volume 2017 ; 4 ; 2017 ; https://ejournals.bc.edu/ojs/ >
-      au < manifest ; 2018 ; Lingua Frankly Volume 2018 ; 5 ; 2018 ; https://ejournals.bc.edu/ojs/ >
+      au < manifest ; 2018 ; Lingua Frankly Volume 2018 ; 4 ; 2018 ; https://ejournals.bc.edu/ojs/ >
 
   }
 
@@ -436,7 +433,6 @@
       au < released ; 2009 ; Romance eReview Volume 2009 ; 19 ; 2009 ; https://ejournals.bc.edu/ojs/ >
       au < released ; 2014 ; Romance eReview Volume 2014 ; 20 ; 2014 ; https://ejournals.bc.edu/ojs/ >
       au < released ; 2017 ; Romance eReview Volume 2017 ; 21 ; 2017 ; https://ejournals.bc.edu/ojs/ >
-      au < expected ; 2018 ; Romance eReview Volume 2018 ; 22 ; 2018 ; https://ejournals.bc.edu/ojs/ >
 
   }
 
