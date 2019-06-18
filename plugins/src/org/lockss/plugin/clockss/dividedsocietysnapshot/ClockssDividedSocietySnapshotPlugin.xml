@@ -44,6 +44,24 @@
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_number</key>
+        <displayName>Journal Number</displayName>
+        <description>Number for journal (often used as part of file names)</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_id</key>
+        <displayName>Journal Identifier</displayName>
+        <description>Identifier for journal (often used as part of file names)</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
     </list>
   </entry>
   <entry>
@@ -135,9 +153,18 @@
       -->
       <string>2,"^%sjournals/[0-9]+$", base_url</string>
       <string>2,"^%sjournals\?combine=", base_url</string>
-      <string>1,"^%sjournals", base_url</string>
-      <string>1,"^%s(archive|core|libraries|themes|sites)/", base_url</string>
+      <!--https://www.dividedsociety.org/archive/journals/7299/issues-->
+      <string>1,"^%sarchive/journals/%s/issues", base_url, journal_number</string>
+      <!-- https://www.dividedsociety.org/archive/journals/issues/7300/articles-->
+      <string>1,"^%sarchive/journals/issues/[0-9]+/articles", base_url</string>
+      <!--https://www.dividedsociety.org/journals/cliftonville-community-news/issue-no-1/blues-cliftonville-->
+      <string>1,"^%sjournals/%s/", base_url, journal_id</string>
+      <string>1,"^%s(core|libraries|themes|sites)/", base_url</string>
       <string>1,"^https?://((fonts|ajax)\.googleapis\.com)/"</string>
+      <string>1,"^https?://fonts\.gstatic\.com/.*\.ttf$"</string>
+      <string>1,"https://static.addtoany.com/.*\.js"</string>
+      <string>1,"https://ds360.co/.*\.js"</string>
+      <string>1,"https://dl.dropboxusercontent.com/.*\.(pdf|jpe?g|png)"</string>
     </list>
   </entry>
   <entry>
@@ -161,44 +188,9 @@
       at https://dl.dropboxusercontent.com/s/vwoftqe1hx9pi1u/bre_001_001.pdf-->
       <string>"dl\.dropboxusercontent\.com"</string>
       <string>(fonts|ajax)\.googleapis\.com</string>
+      <string>"fonts\.gstatic\.com"</string>
+      <string>"static\.addtoany\.com"</string>
+      <string>"ds360\.co"</string>
     </list>
   </entry>
-  <!--
-  <entry>
-    <string>au_substance_url_pattern</string>
-    <list>
-      <string>"^%s%d/.+\.zip", base_url, year</string>
-    </list>
-  </entry>
-  <entry>
-    <string>plugin_archive_file_types</string>
-    <string>standard</string>
-  </entry>  
-  <entry>
-    <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.clockss.SourceZipXmlArticleIteratorFactory</string>
-  </entry>
-  <entry>
-    <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.clockss.SourceZipXmlArticleIteratorFactory</string>
-  </entry>
-  <entry>
-    <string>text/xml_metadata_extractor_factory_map</string>
-    <map>
-      <entry>
-        <string>*</string>
-        <string>org.lockss.plugin.clockss.dividedsocietysnapshot.AIAAXmlMetadataExtractorFactory</string>
-      </entry>
-    </map>
-  </entry>
-    <entry>
-    <string>application/xml_metadata_extractor_factory_map</string>
-    <map>
-      <entry>
-        <string>*</string>
-        <string>org.lockss.plugin.clockss.dividedsocietysnapshot.AIAAXmlMetadataExtractorFactory</string>
-      </entry>
-    </map>
-  </entry>    
-  -->
 </map>    
