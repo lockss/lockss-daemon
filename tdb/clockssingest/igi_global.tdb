@@ -86,6 +86,7 @@
       issnl = 1942-535X
     >
     param[journal_issn] = 1942-535X
+    #continued_by = 2640-9976
 
     au < manifest ; exists ; 2009 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 1 ; 1 ; https://www.igi-global.com/ ; > 
     au < finished ; crawling ; 2010 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 2 ; 2 ; http://www.igi-global.com/ ; > 
@@ -96,8 +97,21 @@
     au < finished ; finished ; 2015 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 7 ; 7 ; http://www.igi-global.com/ ; reingest5.clockss.org:8082 > 
     au < deepCrawl ; exists ; 2016 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 8 ; 8 ; http://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2017 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 9 ; 9 ; http://www.igi-global.com/ ; > 
-    au < expected ; exists ; 2018 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 10 ; 10 ; https://www.igi-global.com/ ; > 
-    au < expected ; exists ; 2019 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 11 ; 11 ; https://www.igi-global.com/ ; > 
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Technological Innovation and Social Dynamics (IJTISD) ;
+      issn = 2640-9976 ;
+      eissn = 2640-9984 ;
+      issnl = 2640-9976
+    >
+    param[journal_issn] = 2640-9976
+    #continues = 1942-535X & 2155-6334
+
+    au < expected ; exists ; 2019 ; International Journal of Technological Innovation and Social Dynamics (IJTISD) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
 
   }
 
@@ -1114,7 +1128,7 @@
     au < finished ; finished ; 2015 ; International Journal of e-Collaboration (IJeC) Volume 11 ; 11 ; http://www.igi-global.com/ ; reingest4.clockss.org:8082 > 
     au < deepCrawl ; exists ; 2016 ; International Journal of e-Collaboration (IJeC) Volume 12 ; 12 ; http://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2017 ; International Journal of e-Collaboration (IJeC) Volume 13 ; 13 ; http://www.igi-global.com/ ; > 
-    au < expected ; exists ; 2018 ; International Journal of e-Collaboration (IJeC) Volume 14 ; 14 ; https://www.igi-global.com/ ; > 
+    au < exists ; exists ; 2018 ; International Journal of e-Collaboration (IJeC) Volume 14 ; 14 ; https://www.igi-global.com/ ; >
     au < expected ; exists ; 2019 ; International Journal of e-Collaboration (IJeC) Volume 15 ; 15 ; https://www.igi-global.com/ ; > 
 
   }
@@ -2756,6 +2770,7 @@
       issnl = 2155-6334
     >
     param[journal_issn] = 2155-6334
+     #continued_by = 2640-9976
 
     au < finished ; crawling ; 2011 ; International Journal of Social and Organizational Dynamics in IT (IJSODIT) Volume 1 ; 1 ; http://www.igi-global.com/ ; > 
     au < finished ; crawling ; 2012 ; International Journal of Social and Organizational Dynamics in IT (IJSODIT) Volume 2 ; 2 ; http://www.igi-global.com/ ; > 
@@ -2763,8 +2778,6 @@
     au < finished ; finished ; 2015 ; International Journal of Social and Organizational Dynamics in IT (IJSODIT) Volume 4 ; 4 ; http://www.igi-global.com/ ; reingest3.clockss.org:8083 > 
     au < deepCrawl ; exists ; 2016 ; International Journal of Social and Organizational Dynamics in IT (IJSODIT) Volume 5 ; 5 ; http://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2017 ; International Journal of Social and Organizational Dynamics in IT (IJSODIT) Volume 6 ; 6 ; http://www.igi-global.com/ ; > 
-    au < expected ; exists ; 2018 ; International Journal of Social and Organizational Dynamics in IT (IJSODIT) Volume 7 ; 7 ; https://www.igi-global.com/ ; > 
-    au < expected ; exists ; 2019 ; International Journal of Social and Organizational Dynamics in IT (IJSODIT) Volume 8 ; 8 ; https://www.igi-global.com/ ; > 
 
   }
 
