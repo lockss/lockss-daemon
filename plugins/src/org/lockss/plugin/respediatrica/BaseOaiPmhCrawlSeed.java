@@ -190,11 +190,10 @@ public abstract class BaseOaiPmhCrawlSeed extends BaseCrawlSeed {
   protected Date parseDate(String date, DateFormat df, String name) 
       throws ConfigurationException {
     Date ret;
-    /*
+
     if(date.length() == 10) {
       date = date + "T00:00:00";
     }
-     */
     try {
       ret = df.parse(date);
     } catch (ParseException e) {
