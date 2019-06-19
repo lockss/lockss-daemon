@@ -70,11 +70,14 @@
   </entry>
   <entry>
     <string>au_permission_url</string>
-    <string>"https://www.dividedsociety.org/4e566d92-3778-41c0-b7d7-c9fe7bd71aa9/ip_access"</string>
+    <string>"http://clockss-ingest.lockss.org/clockss.txt"</string>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%sarchive/journals", base_url</string>
+    <list>
+      <string>"https://www.dividedsociety.org/4e566d92-3778-41c0-b7d7-c9fe7bd71aa9/ip_access"</string>
+      <string>"%sarchive/journals", base_url</string>
+    </list>
   </entry>
   <entry>
     <string>clockss_override</string>
@@ -191,6 +194,7 @@
       <string>"fonts\.gstatic\.com"</string>
       <string>"static\.addtoany\.com"</string>
       <string>"ds360\.co"</string>
+      <string>"www\.dividedsociety\.org"</string>
     </list>
   </entry>
 </map>    
