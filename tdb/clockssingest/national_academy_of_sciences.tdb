@@ -145,7 +145,7 @@
         param[base_url] = https://www.pnas.org/
 
     au < ClockssHWDrupalPlugin ; manifest ; exists ; 2018 ; Proceedings of the National Academy of Sciences Volume 115 ; 115 ; >
-    au < ClockssHWDrupalPlugin ; expected ; exists ; 2019 ; Proceedings of the National Academy of Sciences Volume 116 ; 116 ; >
+    au < ClockssHWDrupalPlugin ; manifest ; exists ; 2019 ; Proceedings of the National Academy of Sciences Volume 116 ; 116 ; >
 
     }
 

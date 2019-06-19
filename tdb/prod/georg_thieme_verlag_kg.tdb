@@ -781,10 +781,9 @@
 
     >
     param[journal_id] = 10.1055/s-00032321
-    #years = 2017-current
+    #years = 2017
 
     au < released ; 2017 ; 2017 ; Current Research: Concussion Volume 4 ; 4 >
-    au < expected ; 2018 ; 2018 ; Current Research: Concussion Volume 5 ; 5 >
 
   }
 
@@ -7114,10 +7113,9 @@
     >
 
     param[journal_id] = 10.1055/s-00033423
-    comment[years] = 2017-current
+    comment[years] = 2017
 
     au < released ; 2017 ; 2017 ; osteopathisch - Fachzeitschrift für Osteopathen Volume 1 ; 1 >
-    au < expected ; 2018 ; 2018 ; osteopathisch - Fachzeitschrift für Osteopathen Volume 2 ; 2 >
 
   }
 

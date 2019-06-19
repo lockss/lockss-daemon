@@ -298,6 +298,8 @@
 
       param[base_url] = https://academic.oup.com/
       param[journal_id] = mend
+      #merged_into = 0013-7227
+      #merged its content and scope with Endocrinology in November 2016
 
       au < doNotProcess ; 1987 ; Molecular Endocrinology Volume 1 ; 1987 >
       au < doNotProcess ; 1988 ; Molecular Endocrinology Volume 2 ; 1988 >
@@ -329,8 +331,6 @@
       au < doNotProcess ; 2014 ; Molecular Endocrinology Volume 28 ; 2014 >
       au < doNotProcess ; 2015 ; Molecular Endocrinology Volume 29 ; 2015 >
       au < manifest ; 2016 ; Molecular Endocrinology Volume 30 ; 2016 >
-      au < exists ; 2017 ; Molecular Endocrinology Volume 31 ; 2017 >
-      au < expected ; 2018 ; Molecular Endocrinology Volume 32 ; 2018 >
 
     }
 
