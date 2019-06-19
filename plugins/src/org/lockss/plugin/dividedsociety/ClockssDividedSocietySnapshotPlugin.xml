@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.clockss.dividedsocietysnapshot.ClockssDividedSocietySnapshotPlugin</string>
+    <string>org.lockss.plugin.dividedsociety.ClockssDividedSocietySnapshotPlugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -66,7 +66,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Divided Society Snapshot Plugin (CLOCKSS), Base URL %s", base_url</string>
+    <string>"Divided Society Snapshot Plugin (CLOCKSS), Base URL %s, Journal Number %s, Journal ID %s", base_url, journal_number, journal_id</string>
   </entry>
   <entry>
     <string>au_permission_url</string>
@@ -94,69 +94,18 @@
     <int>2</int>
   </entry>
   <entry>
-    <string>au_crawlrules</string>
+    <string>au_crawlrules</string>  
     <list>
-      <!--excludes the following urls
-      https://www.dividedsociety.org/about
-      https://www.dividedsociety.org/accessibility
-      https://www.dividedsociety.org/advanced-search
-      https://www.dividedsociety.org/bookmarks
-      https://www.dividedsociety.org/contact
-      https://www.dividedsociety.org/essays
-      https://www.dividedsociety.org/faqs
-      https://www.dividedsociety.org/flag/flag/bookmark/2908?destination=node/2908&token=C4cU62axQyNIh7RIuwuTjZqNafv6-72lUfopYaICnL0
-      https://www.dividedsociety.org/journals
-      https://www.dividedsociety.org/journals/breadline-news
-      https://www.dividedsociety.org/journals/breadline-news/issue-june-1993
-      https://www.dividedsociety.org/journals/breadline-news/issue-june-1993/sacked
-      https://www.dividedsociety.org/journals/breadline-news/issue-june-1993/sacked#main-content
-      https://www.dividedsociety.org/outreach
-      https://www.dividedsociety.org/posters
-      https://www.dividedsociety.org/privacy-policy
-      https://www.dividedsociety.org/theme
-      https://www.dividedsociety.org/topics/employment
-      https://www.dividedsociety.org/topics/trade-unions
-      https://www.dividedsociety.org/topics/workers-rights
-      https://www.dividedsociety.org/user
-      https://www.dividedsociety.org/user/logout
-      https://www.dividedsociety.org/privacy-policy
-      https://www.dividedsociety.org/sites/default/files/inline-images/UVGltd.jpg
-      https://www.dividedsociety.org/faqs
-      https://www.dividedsociety.org/privacy-policy
-      https://www.dividedsociety.org/user/password
-      https://www.dividedsociety.org/search?search_api_fulltext=posters%20and
-      https://www.dividedsociety.org/journals/2
-      https://www.dividedsociety.org/node/50392
-      https://www.dividedsociety.org/node/50392/delete
-      https://www.dividedsociety.org/outreach/toolkits/downing-street-declaration
-
-
-
-      https://www.dividedsociety.org/about
-      https://www.dividedsociety.org/flag/unflag/bookmark/44119?destination=bookmarks&token=6Dj8ttRrq0Vi5ijSo-divhRBWADR_NTmslgnfruKFfA
-      https://www.dividedsociety.org/user/9742
-      https://www.dividedsociety.org/flag/unflag/bookmark/44119?destination=user/9742&token=6Dj8ttRrq0Vi5ijSo-divhRBWADR_NTmslgnfruKFfA
-      https://www.dividedsociety.org/subscribe
-      https://www.dividedsociety.org/explore/posters
-      https://www.dividedsociety.org/journals/2
-      https://www.dividedsociety.org/journals?combine=&page=0
-      https://www.dividedsociety.org/posters?f%5B0%5D=geographic_posters%3ABelfast
-      https://www.dividedsociety.org/posters?page=0
-      https://www.dividedsociety.org/essays/suffering-victims-and-survivors-troubles-policy-and-politics-victimhood
-      -->
-      <string>2,"^%s(about|accessibility|advanced-search|bookmarks|contact|essays|faqs|flag|outreach|posters|privacy-policy|topics|user|search|node|subscribe|explore|posters)", base_url</string>
-      <!--url included
-      https://www.dividedsociety.org/archive/journals/2823/issues
-      https://www.dividedsociety.org/core/themes/stable/images/core/tree-bottom.png
-      https://www.dividedsociety.org/libraries/chosen/chosen-sprite.png
-      https://www.dividedsociety.org/themes/dividedsociety/fonts/icomoon.eot?em6kwp
-      https://www.dividedsociety.org/sites/default/files/css/css_k_NGlLmTI1QFezDCynIZbLq_k3bxWI7G3TD9hr6KZW0.css?prk07m
-      https://www.dividedsociety.org/archive/journals/issues/224/articles
-      https://www.dividedsociety.org/journals/agiy-info/14/fas-distribute-guide-london
-      -->
+      <string>2,"^%s(about|accessibility|advanced-search|bookmarks|contact|essays|faqs|flag|outreach|posters|privacy-policy|topics|search|node|subscribe|explore|posters)", base_url</string>
       <string>2,"^%sjournals/[0-9]+$", base_url</string>
       <string>2,"^%sjournals\?combine=", base_url</string>
-      <!--https://www.dividedsociety.org/archive/journals/7299/issues-->
+      <!--  we need to come in through a specific url to redirect in order to gain a session cookie -->
+      <!-- https://www.dividedsociety.org/4e566d92-3778-41c0-b7d7-c9fe7bd71aa9/ip_access redirects to:
+        https://www.dividedsociety.org/user which goes to
+        https://www.dividedsociety.org/user/9742 -->
+      <string>1,"^%sarchive/4e566d92-3778-41c0-b7d7-c9fe7bd71aa9/ip_access", base_url</string>
+      <string>1,"^%suser$", base_url</string> 
+      <string>1,"^%suser/[0-9]+$", base_url</string>
       <string>1,"^%sarchive/journals/%s/issues", base_url, journal_number</string>
       <!-- https://www.dividedsociety.org/archive/journals/issues/7300/articles-->
       <string>1,"^%sarchive/journals/issues/[0-9]+/articles", base_url</string>
@@ -170,6 +119,23 @@
       <string>1,"https://dl.dropboxusercontent.com/.*\.(pdf|jpe?g|png)"</string>
     </list>
   </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.dividedsociety.DividedSocietyArticleIteratorFactory</string>
+  </entry> 
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.dividedsociety.DividedSocietyArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.dividedsociety.DividedSocietyHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>  
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
     <list>
@@ -194,6 +160,7 @@
       <string>"fonts\.gstatic\.com"</string>
       <string>"static\.addtoany\.com"</string>
       <string>"ds360\.co"</string>
+      <!--  special case to allow one time collection with our own permission -->
       <string>"www\.dividedsociety\.org"</string>
     </list>
   </entry>
