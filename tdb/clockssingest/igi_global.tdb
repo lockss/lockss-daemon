@@ -2322,7 +2322,7 @@
       issnl = 2640-4079
     >
     param[journal_issn] = 2640-4079
-    #continues = 1947-8534
+    #continues = 2166-7241
 
     au < expected ; exists ; 2018 ; International Journal of Applied Research on Smart Surveillance Technologies and Society (IJARSSTS) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
     au < expected ; exists ; 2019 ; International Journal of Applied Research on Smart Surveillance Technologies and Society (IJARSSTS) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
@@ -2531,7 +2531,7 @@
     >
 
     param[journal_issn] = 2640-4109
-    #continues = 2155-5621
+    #continues = 2156-1796
 
     au < crawling ; exists ; 2018 ; International Journal of End-User Computing and Development (IJEUCD) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
     au < expected ; exists ; 2019 ; International Journal of End-User Computing and Development (IJEUCD) Volume 8 ; 8 ; https://www.igi-global.com/ ; >
@@ -2607,6 +2607,7 @@
       issnl = 2155-496X
     >
     param[journal_issn] = 2155-496X
+    #continued_by = 2641-0923
 
     au < finished ; crawling ; 2011 ; International Journal of Quality Assurance in Engineering and Technology Education (IJQAETE) Volume 1 ; 1 ; http://www.igi-global.com/ ; > 
     au < finished ; crawling ; 2012 ; International Journal of Quality Assurance in Engineering and Technology Education (IJQAETE) Volume 2 ; 2 ; http://www.igi-global.com/ ; > 
@@ -2614,8 +2615,22 @@
     au < frozen ; exists ; 2015 ; International Journal of Quality Assurance in Engineering and Technology Education (IJQAETE) Volume 4 ; 4 ; http://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2016 ; International Journal of Quality Assurance in Engineering and Technology Education (IJQAETE) Volume 5 ; 5 ; http://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2017 ; International Journal of Quality Assurance in Engineering and Technology Education (IJQAETE) Volume 6 ; 6 ; http://www.igi-global.com/ ; > 
-    au < expected ; exists ; 2018 ; International Journal of Quality Assurance in Engineering and Technology Education (IJQAETE) Volume 7 ; 7 ; https://www.igi-global.com/ ; > 
-    au < expected ; exists ; 2019 ; International Journal of Quality Assurance in Engineering and Technology Education (IJQAETE) Volume 8 ; 8 ; https://www.igi-global.com/ ; > 
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Quality Control and Standards in Science and Engineering (IJQCSSE) ;
+      issn = 2641-0923 ;
+      eissn = 2641-0931 ;
+      issnl = 2641-0923
+    >
+    param[journal_issn] = 2641-0923
+    #continues = 2155-496X
+
+    au < expected ; exists ; 2018 ; International Journal of Quality Control and Standards in Science and Engineering (IJQCSSE) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
+    au < expected ; exists ; 2019 ; International Journal of Quality Control and Standards in Science and Engineering (IJQCSSE) Volume 8 ; 8 ; https://www.igi-global.com/ ; >
 
   }
 
@@ -2712,7 +2727,7 @@
       issnl = 2640-4265
     >
     param[journal_issn] = 2640-4265
-    #continues = 1947-959X
+    #continues = 1947-3036
 
     au < notReady ; exists ; 2018 ; International Journal of Systems and Software Security and Protection (IJSSSP) Volume 9 ; 9 ; https://www.igi-global.com/ ; > #incorrect article count
     au < expected ; exists ; 2019 ; International Journal of Systems and Software Security and Protection (IJSSSP) Volume 10 ; 10 ; https://www.igi-global.com/ ; >

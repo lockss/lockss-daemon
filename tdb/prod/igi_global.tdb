@@ -2220,13 +2220,29 @@
     >
 
     param[journal_issn] = 2166-7241
+    #continued_by = 2640-4079
 
     au < released ; 2013 ; International Journal of Monitoring and Surveillance Technologies Research (IJMSTR) Volume 1 ; 1 ; http://www.igi-global.com/ >
     au < released ; 2014 ; International Journal of Monitoring and Surveillance Technologies Research (IJMSTR) Volume 2 ; 2 ; http://www.igi-global.com/ >
     au < released ; 2015 ; International Journal of Monitoring and Surveillance Technologies Research (IJMSTR) Volume 3 ; 3 ; http://www.igi-global.com/ >
     au < released ; 2016 ; International Journal of Monitoring and Surveillance Technologies Research (IJMSTR) Volume 4 ; 4 ; http://www.igi-global.com/ >
     au < released ; 2017 ; International Journal of Monitoring and Surveillance Technologies Research (IJMSTR) Volume 5 ; 5 ; https://www.igi-global.com/ >
-    au < expected ; 2018 ; International Journal of Monitoring and Surveillance Technologies Research (IJMSTR) Volume 6 ; 6 ; https://www.igi-global.com/ >
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Applied Research on Smart Surveillance Technologies and Society (IJARSSTS) ;
+      issn = 2640-4079 ;
+      eissn = 2640-4087 ;
+      issnl = 2640-4079
+    >
+    param[journal_issn] = 2640-4079
+    #continues = 2166-7241
+
+    au < expected ; 2018 ; International Journal of Applied Research on Smart Surveillance Technologies and Society (IJARSSTS) Volume 6 ; 6 ; https://www.igi-global.com/ >
+    au < expected ; 2019 ; International Journal of Applied Research on Smart Surveillance Technologies and Society (IJARSSTS) Volume 7 ; 7 ; https://www.igi-global.com/ >
 
   }
 
@@ -2406,6 +2422,7 @@
       issnl = 2156-1796
     >
     param[journal_issn] = 2156-1796
+    #continued_by = 2640-4109
 
     au < released ; 2011 ; International Journal of People-Oriented Programming (IJPOP) Volume 1 ; 1 ; http://www.igi-global.com/ >
     au < released ; 2012 ; International Journal of People-Oriented Programming (IJPOP) Volume 2 ; 2 ; http://www.igi-global.com/ >
@@ -2413,7 +2430,23 @@
     au < released ; 2015 ; International Journal of People-Oriented Programming (IJPOP) Volume 4 ; 4 ; http://www.igi-global.com/ >
     au < released ; 2016 ; International Journal of People-Oriented Programming (IJPOP) Volume 5 ; 5 ; http://www.igi-global.com/ >
     au < released ; 2017 ; International Journal of People-Oriented Programming (IJPOP) Volume 6 ; 6 ; https://www.igi-global.com/ >
-    au < expected ; 2018 ; International Journal of People-Oriented Programming (IJPOP) Volume 7 ; 7 ; https://www.igi-global.com/ >
+
+  }
+
+  {
+
+    title <
+      name = International Journal of End-User Computing and Development (IJEUCD) ;
+      issn = 2640-4109 ;
+      eissn = 2640-4125 ;
+      issnl = 2640-4109
+    >
+
+    param[journal_issn] = 2640-4109
+    #continues = 2156-1796
+
+    au < exists ; 2018 ; International Journal of End-User Computing and Development (IJEUCD) Volume 7 ; 7 ; https://www.igi-global.com/ >
+    au < expected ; 2019 ; International Journal of End-User Computing and Development (IJEUCD) Volume 8 ; 8 ; https://www.igi-global.com/ >
 
   }
 
@@ -2484,6 +2517,7 @@
       issnl = 2155-496X
     >
     param[journal_issn] = 2155-496X
+    #continued_by = 2641-0923
 
     au < released ; 2011 ; International Journal of Quality Assurance in Engineering and Technology Education (IJQAETE) Volume 1 ; 1 ; http://www.igi-global.com/ >
     au < released ; 2012 ; International Journal of Quality Assurance in Engineering and Technology Education (IJQAETE) Volume 2 ; 2 ; http://www.igi-global.com/ >
@@ -2491,7 +2525,21 @@
     au < released ; 2015 ; International Journal of Quality Assurance in Engineering and Technology Education (IJQAETE) Volume 4 ; 4 ; http://www.igi-global.com/ >
     au < released ; 2016 ; International Journal of Quality Assurance in Engineering and Technology Education (IJQAETE) Volume 5 ; 5 ; http://www.igi-global.com/ >
     au < released ; 2017 ; International Journal of Quality Assurance in Engineering and Technology Education (IJQAETE) Volume 6 ; 6 ; https://www.igi-global.com/ >
-    au < expected ; 2018 ; International Journal of Quality Assurance in Engineering and Technology Education (IJQAETE) Volume 7 ; 7 ; https://www.igi-global.com/ >
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Quality Control and Standards in Science and Engineering (IJQCSSE) ;
+      issn = 2641-0923 ;
+      eissn = 2641-0931 ;
+      issnl = 2641-0923
+    >
+    param[journal_issn] = 2641-0923
+    #continues = 2155-496X
+
+    au < expected ; 2018 ; International Journal of Quality Control and Standards in Science and Engineering (IJQCSSE) Volume 7 ; 7 ; https://www.igi-global.com/ >
 
   }
 
@@ -2564,6 +2612,7 @@
       issnl = 1947-3036
     >
     param[journal_issn] = 1947-3036
+    #continued_by = 2640-4265
 
     au < manifest ; 2010 ; International Journal of Secure Software Engineering (IJSSE) Volume 1 ; 1 ; https://www.igi-global.com/ >
     au < released ; 2011 ; International Journal of Secure Software Engineering (IJSSE) Volume 2 ; 2 ; http://www.igi-global.com/ >
@@ -2573,7 +2622,22 @@
     au < released ; 2015 ; International Journal of Secure Software Engineering (IJSSE) Volume 6 ; 6 ; http://www.igi-global.com/ >
     au < released ; 2016 ; International Journal of Secure Software Engineering (IJSSE) Volume 7 ; 7 ; http://www.igi-global.com/ >
     au < released ; 2017 ; International Journal of Secure Software Engineering (IJSSE) Volume 8 ; 8 ; https://www.igi-global.com/ >
-    au < expected ; 2018 ; International Journal of Secure Software Engineering (IJSSE) Volume 9 ; 9 ; https://www.igi-global.com/ >
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Systems and Software Security and Protection (IJSSSP) ;
+      issn = 2640-4265 ;
+      eissn = 2640-4273 ;
+      issnl = 2640-4265
+    >
+    param[journal_issn] = 2640-4265
+    #continues = 1947-3036
+
+    au < exists ; 2018 ; International Journal of Systems and Software Security and Protection (IJSSSP) Volume 9 ; 9 ; https://www.igi-global.com/ >
+    au < expected ; 2019 ; International Journal of Systems and Software Security and Protection (IJSSSP) Volume 10 ; 10 ; https://www.igi-global.com/ >
 
   }
 
