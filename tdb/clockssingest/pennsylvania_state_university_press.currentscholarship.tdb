@@ -767,7 +767,7 @@
         eissn = 2470-6221
       >
 
-      param[journalid] = aboriginal
+      param[journal_id] = aboriginal
 
       au < exists ; exists ; 2017 ; ab-Original Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2018 ; ab-Original Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
@@ -785,7 +785,7 @@
         eissn = 2576-0998
       >
 
-      param[journalid] = bullbiblrese
+      param[journal_id] = bullbiblrese
 
       au < exists ; exists ; 1991 ; Bulletin for Biblical Research Volume 1991 ; 1991 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 1992 ; Bulletin for Biblical Research Volume 1992 ; 1992 ; https://www.jstor.org/ ; >
@@ -829,7 +829,7 @@
         eissn = 1878-5328
       >
 
-      param[journalid] = bustan
+      param[journal_id] = bustan
 
       au < exists ; exists ; 2010 ; Bustan - The Middle East Book Review Volume 2010 ; 2010 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2011 ; Bustan - The Middle East Book Review Volume 2011 ; 2011 ; https://www.jstor.org/ ; >
@@ -854,7 +854,7 @@
         eissn = 2333-3154
       >
 
-      param[journalid] = arthmillj
+      param[journal_id] = arthmillj
 
       au < exists ; exists ; 2006 ; The Arthur Miller Journal Volume 2006 ; 2006 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2007 ; The Arthur Miller Journal Volume 2007 ; 2007 ; https://www.jstor.org/ ; >
@@ -883,7 +883,7 @@
         eissn = 2377-9551
       >
 
-      param[journalid] = caliope
+      param[journal_id] = caliope
 
       au < expected ; exists ; 2019 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
       au < expected ; exists ; 2020 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
@@ -899,7 +899,7 @@
         eissn = 2572-4428
       >
 
-      param[journalid] = comeperf
+      param[journal_id] = comeperf
 
       au < exists ; exists ; 2004 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 2004 ; 2004 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2005 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 2005 ; 2005 ; https://www.jstor.org/ ; >
@@ -930,7 +930,7 @@
         eissn = 2167-8510
       >
 
-      param[journalid] = dickstudannu
+      param[journal_id] = dickstudannu
 
       au < exists ; exists ; 1970 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 1970 ; 1970 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 1971 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 1971 ; 1971 ; https://www.jstor.org/ ; >
@@ -995,7 +995,7 @@
         eissn = 2578-2185
       >
 
-      param[journalid] = ecumenica
+      param[journal_id] = ecumenica
 
       au < exists ; exists ; 2008 ; Ecumenica: Performance and Religion Volume 2008 ; 2008 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2009 ; Ecumenica: Performance and Religion Volume 2009 ; 2009 ; https://www.jstor.org/ ; >
@@ -1022,7 +1022,7 @@
         eissn = 2330-3980
       >
 
-      param[journalid] = editwharrevi
+      param[journal_id] = editwharrevi
 
       au < exists ; exists ; 1990 ; Edith Wharton Review Volume 1990 ; 1990 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 1991 ; Edith Wharton Review Volume 1991 ; 1991 ; https://www.jstor.org/ ; >
@@ -1067,7 +1067,7 @@
         eissn = 2372-191X
       >
 
-      param[journalid] = georelioghlstud
+      param[journal_id] = georelioghlstud
 
       au < exists ; exists ; 1992 ; George Eliot-George Henry Lewes Studies Volume 1992 ; 1992 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 1993 ; George Eliot-George Henry Lewes Studies Volume 1993 ; 1993 ; https://www.jstor.org/ ; >
@@ -1110,7 +1110,7 @@
         eissn = 1945-4023
       >
 
-      param[journalid] = gestaltreview
+      param[journal_id] = gestaltreview
 
       au < exists ; exists ; 1997 ; Gestalt Review Volume 1997 ; 1997 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 1998 ; Gestalt Review Volume 1998 ; 1998 ; https://www.jstor.org/ ; >
@@ -1148,7 +1148,7 @@
         eissn = 2376-5755
       >
 
-      param[journalid] = intejperslite
+      param[journal_id] = intejperslite
 
       au < exists ; exists ; 2016 ; International Journal of Persian Literature Volume 2016 ; 2016 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2017 ; International Journal of Persian Literature Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
@@ -1167,7 +1167,7 @@
         eissn = 2576-7941
       >
 
-      param[journalid] = jstudpaullett
+      param[journal_id] = jstudpaullett
 
       au < exists ; exists ; 2011 ; Journal for the Study of Paul and His Letters Volume 2011 ; 2011 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2012 ; Journal for the Study of Paul and His Letters Volume 2012 ; 2012 ; https://www.jstor.org/ ; >
@@ -1191,7 +1191,7 @@
         eissn = 2380-7687
       >
 
-      param[journalid] = jasiapacipopcult
+      param[journal_id] = jasiapacipopcult
 
       au < exists ; exists ; 2016 ; Journal of Asia-Pacific Pop Culture Volume 2016 ; 2016 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2017 ; Journal of Asia-Pacific Pop Culture Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
@@ -1210,7 +1210,7 @@
         eissn = 2158-3897
       >
 
-      param[journalid] = jinfopoli
+      param[journal_id] = jinfopoli
 
       au < exists ; exists ; 2011 ; Journal of Information Policy Volume 2011 ; 2011 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2012 ; Journal of Information Policy Volume 2012 ; 2012 ; https://www.jstor.org/ ; >
@@ -1234,7 +1234,7 @@
         eissn = 2334-1785
       >
 
-      param[journalid] = jjewiethi
+      param[journal_id] = jjewiethi
 
       au < exists ; exists ; 2015 ; Journal of Jewish Ethics Volume 2015 ; 2015 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2016 ; Journal of Jewish Ethics Volume 2016 ; 2016 ; https://www.jstor.org/ ; >
@@ -1254,7 +1254,7 @@
         eissn = 1939-0467
       >
 
-      param[journalid] = naturesopolirese
+      param[journal_id] = naturesopolirese
 
       au < exists ; exists ; 2009 ; Journal of Natural Resources Policy Research Volume 2009 ; 2009 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2010 ; Journal of Natural Resources Policy Research Volume 2010 ; 2010 ; https://www.jstor.org/ ; >
@@ -1280,7 +1280,7 @@
         eissn = 2471-4461
       >
 
-      param[journalid] = jpoststud
+      param[journal_id] = jpoststud
 
       au < exists ; exists ; 2017 ; Journal of Posthuman Studies Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2018 ; Journal of Posthuman Studies Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
@@ -1298,7 +1298,7 @@
         eissn = 2475-1898
       >
 
-      param[journalid] = jpennacadscie
+      param[journal_id] = jpennacadscie
 
       au < exists ; exists ; 1998 ; Journal of the Pennsylvania Academy of Science Volume 1998 ; 1998 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 1999 ; Journal of the Pennsylvania Academy of Science Volume 1999 ; 1999 ; https://www.jstor.org/ ; >
@@ -1335,7 +1335,7 @@
         eissn = 2576-7933
       >
 
-      param[journalid] = jtheointe
+      param[journal_id] = jtheointe
 
       au < exists ; exists ; 2007 ; Journal of Theological Interpretation Volume 2007 ; 2007 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2008 ; Journal of Theological Interpretation Volume 2008 ; 2008 ; https://www.jstor.org/ ; >
@@ -1363,7 +1363,7 @@
         eissn = 2473-036X
       >
 
-      param[journalid] = libraries
+      param[journal_id] = libraries
 
       au < exists ; exists ; 2017 ; Libraries: Culture, History, and Society Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2018 ; Libraries: Culture, History, and Society Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
@@ -1381,7 +1381,7 @@
         eissn = 2573-6973
       >
 
-      param[journalid] = nathhawtrevi
+      param[journal_id] = nathhawtrevi
 
       au < exists ; exists ; 1986 ; Nathaniel Hawthorne Review Volume 1986 ; 1986 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 1987 ; Nathaniel Hawthorne Review Volume 1987 ; 1987 ; https://www.jstor.org/ ; >
@@ -1430,7 +1430,7 @@
         eissn = 1529-1502
       >
 
-      param[journalid] = resoamerlitestud
+      param[journal_id] = resoamerlitestud
 
       au < exists ; exists ; 1971 ; Resources for American Literary Study Volume 1971 ; 1971 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 1972 ; Resources for American Literary Study Volume 1972 ; 1972 ; https://www.jstor.org/ ; >
@@ -1494,7 +1494,7 @@
         eissn = 2333-9934
       >
 
-      param[journalid] = studamerhumor
+      param[journal_id] = studamerhumor
 
       au < exists ; exists ; 1974 ; Studies in American Humor Volume 1974 ; 1974 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 1975 ; Studies in American Humor Volume 1975 ; 1975 ; https://www.jstor.org/ ; >
@@ -1555,7 +1555,7 @@
         eissn = 2374-6629
       >
 
-      param[journalid] = style
+      param[journal_id] = style
 
       au < exists ; exists ; 1967 ; Style Volume 1967 ; 1967 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 1968 ; Style Volume 1968 ; 1968 ; https://www.jstor.org/ ; >
@@ -1623,7 +1623,7 @@
         eissn = 2333-3065
       >
 
-      param[journalid] = cormmccaj
+      param[journal_id] = cormmccaj
 
       au < exists ; exists ; 2001 ; The Cormac McCarthy Journal Volume 2001 ; 2001 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2002 ; The Cormac McCarthy Journal Volume 2002 ; 2002 ; https://www.jstor.org/ ; >
@@ -1657,7 +1657,7 @@
         eissn = 2473-8441
       >
 
-      param[journalid] = haropintrevi
+      param[journal_id] = haropintrevi
 
       au < exists ; exists ; 2017 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2018 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
@@ -1675,7 +1675,7 @@
         eissn = 2375-0464
       >
 
-      param[journalid] = jdevepers
+      param[journal_id] = jdevepers
 
       au < exists ; exists ; 2017 ; The Journal of Development Perspectives Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2018 ; The Journal of Development Perspectives Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
@@ -1693,7 +1693,7 @@
         eissn = 1943-1538
       >
 
-      param[journalid] = jworlchri
+      param[journal_id] = jworlchri
 
       au < exists ; exists ; 2008 ; The Journal of World Christianity Volume 2008 ; 2008 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2009 ; The Journal of World Christianity Volume 2009 ; 2009 ; https://www.jstor.org/ ; >
@@ -1720,7 +1720,7 @@
         eissn = 2374-670X
       >
 
-      param[journalid] = korelangamer
+      param[journal_id] = korelangamer
 
       au < exists ; exists ; 1995 ; The Korean Language in America Volume 1995 ; 1995 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 1996 ; The Korean Language in America Volume 1996 ; 1996 ; https://www.jstor.org/ ; >
@@ -1760,7 +1760,7 @@
         eissn = 2576-649X
       >
 
-      param[journalid] = langhughrevi
+      param[journal_id] = langhughrevi
 
       au < exists ; exists ; 1982 ; The Langston Hughes Review Volume 1982 ; 1982 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 1983 ; The Langston Hughes Review Volume 1983 ; 1983 ; https://www.jstor.org/ ; >
@@ -1813,7 +1813,7 @@
         eissn = 2377-9578
       >
 
-      param[journalid] = trajincschped
+      param[journal_id] = trajincschped
 
       au < exists ; exists ; 1990 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 1990 ; 1990 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 1991 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 1991 ; 1991 ; https://www.jstor.org/ ; >
@@ -1858,7 +1858,7 @@
         eissn = 2291-1731
       >
 
-      param[journalid] = weslmethstud
+      param[journal_id] = weslmethstud
 
       au < exists ; exists ; 2009 ; Wesley and Methodist Studies Volume 2009 ; 2009 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2010 ; Wesley and Methodist Studies Volume 2010 ; 2010 ; https://www.jstor.org/ ; >
@@ -1884,7 +1884,7 @@
         eissn = 1935-0244
       >
 
-      param[journalid] = willcarlwillrevi
+      param[journal_id] = willcarlwillrevi
 
       au < exists ; exists ; 1980 ; William Carlos Williams Review Volume 1980 ; 1980 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 1981 ; William Carlos Williams Review Volume 1981 ; 1981 ; https://www.jstor.org/ ; >
