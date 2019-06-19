@@ -552,7 +552,7 @@
     au < finished ; crawling ; 2016 ; Arts and the Market Volume 6 ; 6 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Arts and the Market Volume 7 ; 7 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Arts and the Market Volume 8 ; 8 ; https://www.emeraldinsight.com/ ; >
-    au < expected ; exists ; 2019 ; Arts and the Market Volume 9 ; 9 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2019 ; Arts and the Market Volume 9 ; 9 ; https://www.emeraldinsight.com/ ; >
 
   }
 
@@ -1537,7 +1537,7 @@
     au < finished ; crawling ; 2016 ; Circuit World Volume 42 ; 42 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2017 ; Circuit World Volume 43 ; 43 ; https://www.emeraldinsight.com/ ; >
     au < deepCrawl ; exists ; 2018 ; Circuit World Volume 44 ; 44 ; https://www.emeraldinsight.com/ ; >
-    au < expected ; exists ; 2019 ; Circuit World Volume 45 ; 45 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2019 ; Circuit World Volume 45 ; 45 ; https://www.emeraldinsight.com/ ; >
 
   }
 
@@ -2994,7 +2994,7 @@
     au < frozen ; exists ; 2016 ; History of Education Review Volume 45 ; 45 ; http://www.emeraldinsight.com/ ; >
     au < frozen ; exists ; 2017 ; History of Education Review Volume 46 ; 46 ; https://www.emeraldinsight.com/ ; >
     au < deepCrawl ; exists ; 2018 ; History of Education Review Volume 47 ; 47 ; https://www.emeraldinsight.com/ ; >
-    au < expected ; exists ; 2019 ; History of Education Review Volume 48 ; 48 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2019 ; History of Education Review Volume 48 ; 48 ; https://www.emeraldinsight.com/ ; >
 
   }
 
@@ -6749,7 +6749,7 @@
     au < finished ; crawling ; 2016 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 10 ; 10 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2017 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 11 ; 11 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 12 ; 12 ; https://www.emeraldinsight.com/ ; >
-    au < expected ; exists ; 2019 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 13 ; 13 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2019 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 13 ; 13 ; https://www.emeraldinsight.com/ ; >
 
   }
 
@@ -12547,7 +12547,7 @@
     au < finished ; crawling ; 2016 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 17 ; 17 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2017 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 18 ; 18 ; http://www.emeraldinsight.com/ ; >
     au < deepCrawl ; exists ; 2018 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 19 ; 19 ; https://www.emeraldinsight.com/ ; >
-    au < expected ; exists ; 2019 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 20 ; 20 ; https://www.emeraldinsight.com/ ; >
+    au < manifest ; exists ; 2019 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 20 ; 20 ; https://www.emeraldinsight.com/ ; >
 
   }
 

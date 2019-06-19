@@ -371,7 +371,7 @@
       param[au_oai_set] = aca
 
       au < frozen ; exists ; 2018 ; 2018 ; ARPHA Conference Abstracts Volume 2018 ; 2018 ; https://aca.pensoft.net/ ; >
-      au < exists ; exists ; 2019 ; 2019 ; ARPHA Conference Abstracts Volume 2019 ; 2019 ; https://aca.pensoft.net/ ; >
+      au < manifest ; exists ; 2019 ; 2019 ; ARPHA Conference Abstracts Volume 2019 ; 2019 ; https://aca.pensoft.net/ ; >
 
   }
 
@@ -407,7 +407,7 @@
       param[au_oai_set] = biss
 
       au < frozen ; exists ; 2018 ; 2018 ; Biodiversity Information Science and Standards Volume 2018 ; 2018 ; https://biss.pensoft.net/ ; >
-      au < exists ; exists ; 2019 ; 2019 ; Biodiversity Information Science and Standards Volume 2019 ; 2019 ; https://biss.pensoft.net/ ; >
+      au < manifest ; exists ; 2019 ; 2019 ; Biodiversity Information Science and Standards Volume 2019 ; 2019 ; https://biss.pensoft.net/ ; >
 
   }
 
