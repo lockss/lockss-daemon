@@ -46,6 +46,10 @@
         <string>"ResPediatrica OAI Plugin, Base URL %s, OAI Set %s, OAI Date %s", base_url, au_oai_set, au_oai_date</string>
     </entry>
     <entry>
+        <string>au_start_url</string>
+        <string>"%soai?verb=ListRecords&amp;from=2012-01-01&amp;until=2012-12-31&amp;metadataPrefix=oai_dc", base_url</string>
+    </entry>
+    <entry>
         <string>au_permission_url</string>
         <string>"%s", to_http(base_url)</string>
     </entry>
@@ -105,6 +109,7 @@
                 <definitional>true</definitional>
                 <defaultOnly>false</defaultOnly>
             </org.lockss.daemon.ConfigParamDescr>
+            <!--
             <org.lockss.daemon.ConfigParamDescr>
                 <key>year</key>
                 <displayName>Year</displayName>
@@ -114,6 +119,7 @@
                 <definitional>true</definitional>
                 <defaultOnly>false</defaultOnly>
             </org.lockss.daemon.ConfigParamDescr>
+            -->
         </list>
     </entry>
     <entry>
