@@ -237,10 +237,10 @@
 
         au < ready ; 2004 ; Native Plants Journal Volume 5 [2004] ; 2508 >
         au < testing ; 2005 ; Native Plants Journal Volume 6 [2005] ; 2737 >
-        au < testing ; 2006 ; Native Plants Journal Volume 7 [2006] ; 3016 >
-        au < testing ; 2007 ; Native Plants Journal Volume 8 [2007] ; 3308 >
-        au < testing ; 2008 ; Native Plants Journal Volume 9 [2008] ; 3788 >
-        au < testing ; 2009 ; Native Plants Journal Volume 10 [2009] ; 4262 >
+        au < ready ; 2006 ; Native Plants Journal Volume 7 [2006] ; 3016 >
+        au < ready ; 2007 ; Native Plants Journal Volume 8 [2007] ; 3308 >
+        au < ready ; 2008 ; Native Plants Journal Volume 9 [2008] ; 3788 >
+        au < ready ; 2009 ; Native Plants Journal Volume 10 [2009] ; 4262 >
         au < released ; 2010 ; Native Plants Journal Volume 11 [2010] ; 6169 >
         au < released ; 2011 ; Native Plants Journal Volume 12 [2011] ; 7144 >
         au < released ; 2012 ; Native Plants Journal Volume 13 [2012] ; 8192 >
@@ -264,8 +264,8 @@
 
       attr[journal_id] = 556
 
-        au < testing ; 2008 ; Journal of Human Resources Volume 43 [2008] ; 7533 >
-        au < testing ; 2009 ; Journal of Human Resources Volume 44 [2009] ; 7534 >
+        au < ready ; 2008 ; Journal of Human Resources Volume 43 [2008] ; 7533 >
+        au < ready ; 2009 ; Journal of Human Resources Volume 44 [2009] ; 7534 >
         au < released ; 2010 ; Journal of Human Resources Volume 45 [2010] ; 7535 >
         au < released ; 2011 ; Journal of Human Resources Volume 46 [2011] ; 7536 >
         au < released ; 2012 ; Journal of Human Resources Volume 47 [2012] ; 7900 >
