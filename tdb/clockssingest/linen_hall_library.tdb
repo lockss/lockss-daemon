@@ -533,4 +533,23 @@
     au < testing ; exists ; 2019 ; Youth against the war ; 45908 ; youth-against-war ; >
   }
 
+  #Very little bibliographic information available - get the content preserved
+  {
+    title <
+       name = Divided Society Collections Snapshot Content
+    >
+
+    plugin = org.lockss.plugin.dividedsociety.ClockssDividedSocietyCollectionSnapshotPlugin
+    param[base_url] = https://www.dividedsociety.org/
+
+    implicit < status ; status2 ; year ; name ; param[collection_id] ; hidden[proxy] >
+
+    # We are collecting each item one time and then locking down the content, it is not recurring
+    # The year represents the year of ingest, not the year of publication - same as for SourcePlugin
+    au < testing ; exists ; 2019 ; Divided Society Posters Collection ; posters ; >
+    au < testing ; exists ; 2019 ; Divided Society Essays Collection ; essays ; >
+    au < testing ; exists ; 2019 ; Divided Society Outreach Collection ; outreach ; >
+
+   } 
+
 }

@@ -15,7 +15,6 @@ import org.lockss.plugin.Plugin;
 import org.lockss.util.ListUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.TypedEntryMap;
-import org.lockss.util.UrlUtil;
 
 public  class DividedSocietyFeatureUrlHelperFactory implements FeatureUrlHelperFactory {
   private static final Logger log = Logger.getLogger(DividedSocietyFeatureUrlHelperFactory.class);
@@ -34,6 +33,9 @@ public  class DividedSocietyFeatureUrlHelperFactory implements FeatureUrlHelperF
    * Bypass that and use the second start_url which happens to be hard-coded to the top of all collected content
    * Each AU will only hold the content for its one journal. 
    * Use the journal number to access the AU at the logical top of the specific title 
+   * 
+   * The ClockssDividedSocietySnapshotPlugin starts in one place and the 
+   * ClockssDividedSocietyCollectionSnapshotPlugin starts in another 
    */
   private static class DividedSocietyFeatureUrlHelper extends BaseFeatureUrlHelper {
 
@@ -43,13 +45,9 @@ public  class DividedSocietyFeatureUrlHelperFactory implements FeatureUrlHelperF
         throws PluginException, IOException {
 
       if (au == null) {
-        return null;
+    	  return null;
       }
-      //https://www.dividedsociety.org/archive/journals/<number>/issues
-      String baseUrl = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
-      String journal_num = au.getConfiguration().get("journal_number");
-      String titleUrl = baseUrl + START_JOURNAL_ARCHIVE + "/" + journal_num + "/issues";
-      return (ListUtil.list(titleUrl));
+      return (ListUtil.list(getTitleUrl(au)));
     }
     
     @Override
@@ -64,13 +62,31 @@ public  class DividedSocietyFeatureUrlHelperFactory implements FeatureUrlHelperF
       }
       //https://www.dividedsociety.org/archive/journals/1000/issues
       if (itemType == OpenUrlResolver.OpenUrlInfo.ResolvedTo.TITLE) {
-          String baseUrl = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
-          String journal_num = au.getConfiguration().get("journal_number");
-          String titleUrl = baseUrl + START_JOURNAL_ARCHIVE + "/" + journal_num + "/issues";
-          return (ListUtil.list(titleUrl));
+          return (ListUtil.list(getTitleUrl(au)));
       } else {
         return null;
       }
+    }
+    
+    private String getTitleUrl(ArchivalUnit au) {
+        //https://www.dividedsociety.org/archive/journals/<number>/issues
+
+        if (au == null) {
+          return null;
+        }
+        String pluginId = au.getPluginId();
+        String baseUrl = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
+        String titleUrl;
+        if (pluginId.contains("CollectionSnapshot")) {
+           //https://www.dividedsociety.org/posters
+           String coll_id = au.getConfiguration().get("collection_id");    	  
+           titleUrl = baseUrl +  coll_id;
+        } else {
+            //https://www.dividedsociety.org/archive/journals/<number>/issues
+            String journal_num = au.getConfiguration().get("journal_number");
+            titleUrl = baseUrl + START_JOURNAL_ARCHIVE + "/" + journal_num + "/issues";
+        }
+        return titleUrl;
     }
   }
 }
