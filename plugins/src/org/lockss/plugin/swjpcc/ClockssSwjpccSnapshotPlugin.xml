@@ -15,6 +15,11 @@
     <string>plugin_version</string>
     <string>2</string>
   </entry>
+<!-- Even though not file-transfer, this is a bulk collection of all content available at the site -->
+  <entry>
+    <string>plugin_bulk_content</string>
+    <boolean>true</boolean>
+  </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
