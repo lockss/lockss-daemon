@@ -9,11 +9,16 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>plugin_name</string>
     <string>Divided Society Collection Snapshot Plugin (CLOCKSS)</string>
+  </entry>
+  <!-- While not file-transfer, this is a single point in time collection of all content associated with a title  -->
+  <entry>
+    <string>plugin_bulk_content</string>
+    <boolean>true</boolean>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -121,6 +126,11 @@
       <string>1,"https://dl.dropboxusercontent.com/.*\.(pdf|jpe?g|png|mp3)"</string>
     </list>
   </entry>
+<!--  pick up <source src=xxx audio files -->
+  <entry>
+    <string>text/html_link_extractor_factory</string>
+    <string>org.lockss.plugin.dividedsociety.DividedSocietyLinkExtractorFactory</string>  
+  </entry>  
   <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.dividedsociety.DividedSocietyCollectionArticleIteratorFactory</string>
