@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -79,6 +79,17 @@
       <string>"%sarchive/journals", base_url</string>
     </list>
   </entry>
+  <entry>
+    <string>au_feature_urls</string>
+    <map>
+      <entry>
+      <!--  we don't want this to default to the first start_url because we need the second one -->
+      <!--  or maybe even the specific title as a TITLE resolution -->
+        <string>au_volume</string>
+        <string>org.lockss.plugin.dividedsociety.DividedSocietyFeatureUrlHelperFactory</string>
+      </entry>
+    </map>
+  </entry>  
   <entry>
     <string>clockss_override</string>
     <map>
