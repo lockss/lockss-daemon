@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -80,12 +80,16 @@
     </list>
   </entry>
   <entry>
+	<!--  use the second start_url, not the first -->
+    <string>plugin_access_url_factory</string>
+    <string>org.lockss.plugin.dividedsociety.DividedSocietyFeatureUrlHelperFactory</string>
+  </entry>
+  <entry>
     <string>au_feature_urls</string>
     <map>
       <entry>
-      <!--  we don't want this to default to the first start_url because we need the second one -->
-      <!--  or maybe even the specific title as a TITLE resolution -->
-        <string>au_volume</string>
+      <!--  we don't want this to default to start_url because we need to access a specific title-->
+        <string>au_title</string>
         <string>org.lockss.plugin.dividedsociety.DividedSocietyFeatureUrlHelperFactory</string>
       </entry>
     </map>

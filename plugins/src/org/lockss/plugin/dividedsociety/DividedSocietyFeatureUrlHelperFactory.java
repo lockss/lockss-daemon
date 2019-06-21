@@ -32,7 +32,8 @@ public  class DividedSocietyFeatureUrlHelperFactory implements FeatureUrlHelperF
    * Divided Socity has two start_urls.  The first is the way we're granted our cookies for access
    * but isn'tuseful as an access url to the preserved content.
    * Bypass that and use the second start_url which happens to be hard-coded to the top of all collected content
-   * Each AU will only hold the content for its one journal.  
+   * Each AU will only hold the content for its one journal. 
+   * Use the journal number to access the AU at the logical top of the specific title 
    */
   private static class DividedSocietyFeatureUrlHelper extends BaseFeatureUrlHelper {
 
@@ -44,10 +45,11 @@ public  class DividedSocietyFeatureUrlHelperFactory implements FeatureUrlHelperF
       if (au == null) {
         return null;
       }
-      //https://www.dividedsociety.org/archive/journals
+      //https://www.dividedsociety.org/archive/journals/<number>/issues
       String baseUrl = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
-      String archiveUrl = baseUrl + START_JOURNAL_ARCHIVE;
-      return (ListUtil.list(archiveUrl));
+      String journal_num = au.getConfiguration().get("journal_number");
+      String titleUrl = baseUrl + START_JOURNAL_ARCHIVE + "/" + journal_num + "/issues";
+      return (ListUtil.list(titleUrl));
     }
     
     @Override
