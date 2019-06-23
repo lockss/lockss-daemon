@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -130,7 +130,11 @@
   <entry>
     <string>text/html_link_extractor_factory</string>
     <string>org.lockss.plugin.dividedsociety.DividedSocietyLinkExtractorFactory</string>  
-  </entry>  
+  </entry>
+  <entry>
+   <string>au_url_normalizer</string>
+  <string>org.lockss.plugin.dividedsociety.DividedSocietyUrlNormalizer</string>
+  </entry> 
   <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.dividedsociety.DividedSocietyCollectionArticleIteratorFactory</string>
