@@ -40,21 +40,26 @@ import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 
-//
-// A  variation on the generic CLOCKSS source article iterator
-// it iterates over the delivered zip files and allows the metadata extractor to count items.
-// a ".tar" file of the same base
-//
+/*
+ * A  variation on the generic CLOCKSS source article iterator
+ * it iterates over the delivered zip files and allows the metadata extractor to count items.
+ * code-ocean-released/2019/nature/4aaa25ae-2fb9-49fe-8379-7deb6bfb80e9/v1.0/capsule.zip
+ * code-ocean-released/2019/nature/4aaa25ae-2fb9-49fe-8379-7deb6bfb80e9/v1.0/extract.sh
+ * code-ocean-released/2019/nature/4aaa25ae-2fb9-49fe-8379-7deb6bfb80e9/v1.0/image.tar.xz
+ * code-ocean-released/2019/nature/4aaa25ae-2fb9-49fe-8379-7deb6bfb80e9/v1.0/preservation.yml
+ * code-ocean-released/2019/nature/4aaa25ae-2fb9-49fe-8379-7deb6bfb80e9/v1.0/results.zip
+ */
 public class CodeOceanArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory  {
 
   private static final Logger log = Logger.getLogger(CodeOceanArticleIteratorFactory.class);
   
   /*
    * .../code-ocean-released/2019/nature/4aaa25ae-2fb9-49fe-8379-7deb6bfb80e9/v1.0
-  *     capsule.zip  - code capsule, data, etc - including metadata
+  *     capsule.zip  - code capsule, data, etc a
   *     results.zip - 
   *     image.tar.xz - compressed docker image
   *     extract.sh - extraction script should anything be needed
+  *     preservation.yml - use this for preservation metadata rather than capsule.zip!/metadata.yml
   *  and there can be multiple versions under the same UUID
   *     
    */
@@ -66,10 +71,9 @@ public class CodeOceanArticleIteratorFactory implements ArticleIteratorFactory, 
       Pattern.compile(".*/[^/]+\\.zip!/.+\\.(zip|tar|gz|tgz|tar\\.gz)$", 
           Pattern.CASE_INSENSITIVE);  
 
-  //private static final Pattern MD_PATTERN = Pattern.compile("/([^/]+)/(v[^/]+)/capsule\\.zip[!]/metadata/metadata\\.yml", Pattern.CASE_INSENSITIVE);
   private static final Pattern ZIP_PATTERN = Pattern.compile("/([^/]+)/(v[^/]+)/capsule\\.zip$", Pattern.CASE_INSENSITIVE);
   private static final String 	ZIP_REPLACEMENT = "/$1/$2/capsule.zip";
-  private static final String MD_REPLACEMENT = "/$1/$2/capsule.zip!/metadata/metadata.yml";
+  private static final String MD_REPLACEMENT = "/$1/$2/preservation.yml";
   // might exist, might not
   private static final String TAR_REPLACEMENT = "/$1/$2/image.tar.xz";
   private static final String RES_REPLACEMENT = "/$1/$2/results.zip";

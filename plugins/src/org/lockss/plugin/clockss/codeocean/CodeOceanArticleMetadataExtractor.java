@@ -44,6 +44,7 @@ import org.lockss.extractor.MetadataField;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.BaseFileArticleMetadataExtractor;
+import org.lockss.util.Logger;
 
 /*
  * Customize the ArticleMetadata class for generic file objects for Code Ocean
@@ -51,10 +52,18 @@ import org.lockss.plugin.clockss.BaseFileArticleMetadataExtractor;
  * 
  * The files inside a specific 
  * code-ocean-released/2019/nature/LONGUUID/v1.0/
- *     capsule.zip  - code capsule, data, etc - including metadata
+ *     capsule.zip  - code capsule, data
  *     results.zip - 
  *     image.tar.xz - compressed docker image
  *     extract.sh - extraction script should anything be needed
+ *     prervation.yml - metadata for CLOCKSS purposes - do not use capsule.zip!/metadata.yml
+ * code-ocean-released/2019/nature/4aaa25ae-2fb9-49fe-8379-7deb6bfb80e9/v1.0/capsule.zip
+ * code-ocean-released/2019/nature/4aaa25ae-2fb9-49fe-8379-7deb6bfb80e9/v1.0/extract.sh
+ * code-ocean-released/2019/nature/4aaa25ae-2fb9-49fe-8379-7deb6bfb80e9/v1.0/image.tar.xz
+ * code-ocean-released/2019/nature/4aaa25ae-2fb9-49fe-8379-7deb6bfb80e9/v1.0/preservation.yml
+ * code-ocean-released/2019/nature/4aaa25ae-2fb9-49fe-8379-7deb6bfb80e9/v1.0/results.zip
+ * 
+ * The metadata object is preservation.yml but the access.url and size and type are for capsule.zip
  */
 
 public class CodeOceanArticleMetadataExtractor extends BaseFileArticleMetadataExtractor{
@@ -62,6 +71,10 @@ public class CodeOceanArticleMetadataExtractor extends BaseFileArticleMetadataEx
 	/*
 	 * code ocean delivers capsules under publisher subdirectories - map the publisher path to a specifc publisher
 	 */
+
+	private static Logger log = 
+			Logger.getLogger(CodeOceanArticleMetadataExtractor.class);
+	
 	static private final Map<String, String> PublisherIDMap =
 			new HashMap<String,String>();
 	static {
@@ -70,19 +83,90 @@ public class CodeOceanArticleMetadataExtractor extends BaseFileArticleMetadataEx
 		PublisherIDMap.put("taylorandfrancis", "Taylor & Francis");
 		PublisherIDMap.put("cambridge", "Cambridge University Press");
 	}
-
 	private static final String CODE_OCEAN_FILE_TYPE = "code capsule";
 	private static final String CC_ARTICLE_DOI = "CodeCapsule_article_doi";
 	private static final String CODE_OCEAN = "Code Ocean";
-	private static final Pattern  ZIP_PAT = Pattern.compile("/code-ocean-released/([^/]+)/([^/]+)/([^/]+)/[vV]([^/]+)/capsule\\.zip", Pattern.CASE_INSENSITIVE);  
+	private static final Pattern  ZIP_PAT = Pattern.compile("/code-ocean-released/([^/]+)/([^/]+)/([^/]+)/[vV]([^/]+)/capsule\\.zip", Pattern.CASE_INSENSITIVE);
+	/* regex group1 = ingest year, group2 = publisher, group3 = identifier, group4= version number */
 	private static final int YEAR_GROUP = 1;
 	private static final int PUB_GROUP = 2;
 	private static final int UUID_GROUP = 3;
 	private static final int VERSION_GROUP = 4;
+	private static final int PRESERVATION_YML_LENGTH = 16;
+	
 	
 	public CodeOceanArticleMetadataExtractor(String role) {
 		super(role);
 	}
+	
+	
+	
+	/*
+	 * 
+	 * CodeOcean is a little different from the other FILE object items.
+	 * CodeOcean provides *some* metadata in a preservation.yml file that lives as a sibling of the actual 
+	 * item it describes "capsule.zip". 
+	 * Override the main File metadata method setFileMetadata
+	 * TODO: As we do more of these, we may want to refactor BaseFileArticleMetadataExtractor
+	 * to better serve more variants.  Or is this type really an anomaoly and it's fine as it is 
+	 */
+	
+	/**
+	 * CodeOcean needs to do the basic 4: FileType, FileIdentifier, FileSizeBytes and FileMime
+	 * but will pull date, publisher, etc from a different file than the accessurl
+	 */
+	@Override
+	protected void setFileMetadata(CachedUrl cu, ArticleMetadata am) {
+		String url = cu.getUrl();
+		String capsule_url = url.substring(0,url.length() - PRESERVATION_YML_LENGTH) + "capsule.zip";
+		log.debug3("for metadata use: " + url + " and for capsule use: " + capsule_url);
+		
+		/* Extract interesting bits from preservation.yml before proceeding */
+		
+		
+		
+		ArchivalUnit au = cu.getArchivalUnit();
+		TdbAu tdbau = au.getTdbAu();
+		// use getters so a child plugin can override
+		// default values come from tdbau if it's available
+		String year = getContentYear(cu, tdbau);
+		String publisher = getContentPublisher(cu, tdbau);
+		String provider = getContentProvider(cu,tdbau, publisher);
+		String pTitle = getPublicationTitle(cu,tdbau);
+
+
+		am.put(MetadataField.FIELD_ACCESS_URL, capsule_url);
+		am.put(MetadataField.FIELD_PROVIDER, provider);
+		am.put(MetadataField.FIELD_PUBLISHER, publisher);
+		am.put(MetadataField.FIELD_DATE, year);
+		// Neither an article, book, nor proceeding - "other"
+		am.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_FILE);
+		// Not explicitly necessary, would be inferred
+		am.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_FILE);
+		am.put(MetadataField.FIELD_PUBLICATION_TITLE, pTitle);
+
+		// Add a custom map to the generic am table 
+		// Allow a child to override FileType
+		Map<String, String> FILE_MAP = new HashMap<String,String>();
+
+		//default is "file"
+		FILE_MAP.put("FileType", getFileObjectType(cu));
+		// default is base filename
+		FILE_MAP.put("FileIdentifier", getFileIdentifier(cu));
+		FILE_MAP.put("FileSizeBytes", getFileSize(cu));
+		FILE_MAP.put("FileMime", getFileMime(cu));
+		// default is no additional k-v pairs
+		setAdditionalFileData(cu,FILE_MAP);
+
+		am.putRaw(MetadataField.FIELD_MD_MAP.getKey(), FILE_MAP);
+		
+		// in case there are any other am items that can be set
+		setAdditionalArticleMetadata(cu,am);
+
+		
+	}
+	
+	
 
 	@Override
 	protected String getContentYear(CachedUrl cu, TdbAu tdbau) {
