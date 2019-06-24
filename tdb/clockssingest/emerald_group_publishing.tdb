@@ -1014,7 +1014,7 @@
     au < frozen ; exists ; 2007 ; The Bottom Line: Managing Library Finances Volume 20 ; 20 ; https://www.emeraldinsight.com/ ; >
     au < frozen ; exists ; 2008 ; The Bottom Line: Managing Library Finances Volume 21 ; 21 ; https://www.emeraldinsight.com/ ; >
     au < frozen ; exists ; 2009 ; The Bottom Line: Managing Library Finances Volume 22 ; 22 ; https://www.emeraldinsight.com/ ; >
-    au < crawling ; exists ; 2010 ; The Bottom Line: Managing Library Finances Volume 23 ; 23 ; https://www.emeraldinsight.com/ ; >
+    au < frozen ; exists ; 2010 ; The Bottom Line: Managing Library Finances Volume 23 ; 23 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2011 ; The Bottom Line: Managing Library Finances Volume 24 ; 24 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2012 ; The Bottom Line: Managing Library Finances Volume 25 ; 25 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2013 ; The Bottom Line: Managing Library Finances Volume 26 ; 26 ; https://www.emeraldinsight.com/ ; >
@@ -1524,7 +1524,7 @@
     au < manifest ; exists ; 2003 ; Circuit World Volume 29 ; 29 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2004 ; Circuit World Volume 30 ; 30 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2005 ; Circuit World Volume 31 ; 31 ; https://www.emeraldinsight.com/ ; >
-    au < crawling ; exists ; 2006 ; Circuit World Volume 32 ; 32 ; https://www.emeraldinsight.com/ ; >
+    au < frozen ; exists ; 2006 ; Circuit World Volume 32 ; 32 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2007 ; Circuit World Volume 33 ; 33 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2008 ; Circuit World Volume 34 ; 34 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2009 ; Circuit World Volume 35 ; 35 ; https://www.emeraldinsight.com/ ; >
@@ -2392,7 +2392,7 @@
     au < manifest ; exists ; 2006 ; Engineering, Construction and Architectural Management Volume 13 ; 13 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2007 ; Engineering, Construction and Architectural Management Volume 14 ; 14 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2008 ; Engineering, Construction and Architectural Management Volume 15 ; 15 ; https://www.emeraldinsight.com/ ; >
-    au < crawling ; exists ; 2009 ; Engineering, Construction and Architectural Management Volume 16 ; 16 ; https://www.emeraldinsight.com/ ; >
+    au < frozen ; exists ; 2009 ; Engineering, Construction and Architectural Management Volume 16 ; 16 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2010 ; Engineering, Construction and Architectural Management Volume 17 ; 17 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2011 ; Engineering, Construction and Architectural Management Volume 18 ; 18 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2012 ; Engineering, Construction and Architectural Management Volume 19 ; 19 ; https://www.emeraldinsight.com/ ; >
@@ -3448,7 +3448,7 @@
     au < manifest ; exists ; 2003 ; info Volume 5 ; 5 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2004 ; info Volume 6 ; 6 ; https://www.emeraldinsight.com/ ; >
     au < frozen ; exists ; 2005 ; info Volume 7 ; 7 ; https://www.emeraldinsight.com/ ; >
-    au < crawling ; exists ; 2006 ; info Volume 8 ; 8 ; https://www.emeraldinsight.com/ ; >
+    au < frozen ; exists ; 2006 ; info Volume 8 ; 8 ; https://www.emeraldinsight.com/ ; >
     au < frozen ; exists ; 2007 ; info Volume 9 ; 9 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2008 ; info Volume 10 ; 10 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2009 ; info Volume 11 ; 11 ; https://www.emeraldinsight.com/ ; >
@@ -4475,7 +4475,7 @@
     au < manifest ; exists ; 2009 ; International Journal of Law and Management Volume 51 ; 51 ; https://www.emeraldinsight.com/ ; >
     au < ready ; exists ; 2010 ; International Journal of Law and Management Volume 52 ; 52 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2011 ; International Journal of Law and Management Volume 53 ; 53 ; https://www.emeraldinsight.com/ ; >
-    au < crawling ; exists ; 2012 ; International Journal of Law and Management Volume 54 ; 54 ; https://www.emeraldinsight.com/ ; >
+    au < frozen ; exists ; 2012 ; International Journal of Law and Management Volume 54 ; 54 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2013 ; International Journal of Law and Management Volume 55 ; 55 ; https://www.emeraldinsight.com/ ; >
     au < finished ; crawling ; 2014 ; International Journal of Law and Management Volume 56 ; 56 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; International Journal of Law and Management Volume 57 ; 57 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
@@ -4650,7 +4650,7 @@
     param[journal_id] = ijmf
 
     au < frozen ; exists ; 2005 ; International Journal of Managerial Finance Volume 1 ; 1 ; https://www.emeraldinsight.com/ ; >
-    au < crawling ; exists ; 2006 ; International Journal of Managerial Finance Volume 2 ; 2 ; https://www.emeraldinsight.com/ ; >
+    au < frozen ; exists ; 2006 ; International Journal of Managerial Finance Volume 2 ; 2 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2007 ; International Journal of Managerial Finance Volume 3 ; 3 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2008 ; International Journal of Managerial Finance Volume 4 ; 4 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2009 ; International Journal of Managerial Finance Volume 5 ; 5 ; https://www.emeraldinsight.com/ ; >
@@ -5472,7 +5472,7 @@
     au < crawling ; exists ; 2007 ; International Journal of Sociology and Social Policy Volume 27 ; 27 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2008 ; International Journal of Sociology and Social Policy Volume 28 ; 28 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2009 ; International Journal of Sociology and Social Policy Volume 29 ; 29 ; https://www.emeraldinsight.com/ ; >
-    au < crawling ; exists ; 2010 ; International Journal of Sociology and Social Policy Volume 30 ; 30 ; https://www.emeraldinsight.com/ ; >
+    au < frozen ; exists ; 2010 ; International Journal of Sociology and Social Policy Volume 30 ; 30 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2011 ; International Journal of Sociology and Social Policy Volume 31 ; 31 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2012 ; International Journal of Sociology and Social Policy Volume 32 ; 32 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2013 ; International Journal of Sociology and Social Policy Volume 33 ; 33 ; https://www.emeraldinsight.com/ ; >
@@ -5708,7 +5708,7 @@
     au < manifest ; exists ; 2004 ; International Marketing Review Volume 21 ; 21 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2005 ; International Marketing Review Volume 22 ; 22 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2006 ; International Marketing Review Volume 23 ; 23 ; https://www.emeraldinsight.com/ ; >
-    au < crawling ; exists ; 2007 ; International Marketing Review Volume 24 ; 24 ; https://www.emeraldinsight.com/ ; >
+    au < frozen ; exists ; 2007 ; International Marketing Review Volume 24 ; 24 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2008 ; International Marketing Review Volume 25 ; 25 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2009 ; International Marketing Review Volume 26 ; 26 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2010 ; International Marketing Review Volume 27 ; 27 ; https://www.emeraldinsight.com/ ; >
@@ -6572,7 +6572,7 @@
     au < manifest ; exists ; 1999 ; Journal of Economic Studies Volume 26 ; 26 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2000 ; Journal of Economic Studies Volume 27 ; 27 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2001 ; Journal of Economic Studies Volume 28 ; 28 ; https://www.emeraldinsight.com/ ; >
-    au < crawling ; exists ; 2002 ; Journal of Economic Studies Volume 29 ; 29 ; https://www.emeraldinsight.com/ ; >
+    au < frozen ; exists ; 2002 ; Journal of Economic Studies Volume 29 ; 29 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2003 ; Journal of Economic Studies Volume 30 ; 30 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2004 ; Journal of Economic Studies Volume 31 ; 31 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2005 ; Journal of Economic Studies Volume 32 ; 32 ; https://www.emeraldinsight.com/ ; >
@@ -8599,7 +8599,7 @@
     au < manifest ; exists ; 1997 ; Journal of Workplace Learning Volume 9 ; 9 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 1998 ; Journal of Workplace Learning Volume 10 ; 10 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 1999 ; Journal of Workplace Learning Volume 11 ; 11 ; https://www.emeraldinsight.com/ ; >
-    au < crawling ; exists ; 2000 ; Journal of Workplace Learning Volume 12 ; 12 ; https://www.emeraldinsight.com/ ; >
+    au < frozen ; exists ; 2000 ; Journal of Workplace Learning Volume 12 ; 12 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2001 ; Journal of Workplace Learning Volume 13 ; 13 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2002 ; Journal of Workplace Learning Volume 14 ; 14 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2003 ; Journal of Workplace Learning Volume 15 ; 15 ; https://www.emeraldinsight.com/ ; >
@@ -8670,7 +8670,7 @@
     au < manifest ; exists ; 2006 ; Kybernetes Volume 35 ; 35 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2007 ; Kybernetes Volume 36 ; 36 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2008 ; Kybernetes Volume 37 ; 37 ; https://www.emeraldinsight.com/ ; >
-    au < crawling ; exists ; 2009 ; Kybernetes Volume 38 ; 38 ; https://www.emeraldinsight.com/ ; >
+    au < frozen ; exists ; 2009 ; Kybernetes Volume 38 ; 38 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2010 ; Kybernetes Volume 39 ; 39 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2011 ; Kybernetes Volume 40 ; 40 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2012 ; Kybernetes Volume 41 ; 41 ; https://www.emeraldinsight.com/ ; >
@@ -9887,7 +9887,7 @@
     au < manifest ; exists ; 2005 ; Multidiscipline Modeling in Materials and Structures Volume 1 ; 1 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2006 ; Multidiscipline Modeling in Materials and Structures Volume 2 ; 2 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2007 ; Multidiscipline Modeling in Materials and Structures Volume 3 ; 3 ; https://www.emeraldinsight.com/ ; >
-    au < crawling ; exists ; 2008 ; Multidiscipline Modeling in Materials and Structures Volume 4 ; 4 ; https://www.emeraldinsight.com/ ; >
+    au < frozen ; exists ; 2008 ; Multidiscipline Modeling in Materials and Structures Volume 4 ; 4 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2009 ; Multidiscipline Modeling in Materials and Structures Volume 5 ; 5 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2010 ; Multidiscipline Modeling in Materials and Structures Volume 6 ; 6 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2011 ; Multidiscipline Modeling in Materials and Structures Volume 7 ; 7 ; https://www.emeraldinsight.com/ ; >
@@ -10439,7 +10439,7 @@
     au < manifest ; exists ; 2006 ; Performance Measurement and Metrics Volume 7 ; 7 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2007 ; Performance Measurement and Metrics Volume 8 ; 8 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2008 ; Performance Measurement and Metrics Volume 9 ; 9 ; https://www.emeraldinsight.com/ ; >
-    au < crawling ; exists ; 2009 ; Performance Measurement and Metrics Volume 10 ; 10 ; https://www.emeraldinsight.com/ ; >
+    au < frozen ; exists ; 2009 ; Performance Measurement and Metrics Volume 10 ; 10 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2010 ; Performance Measurement and Metrics Volume 11 ; 11 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2011 ; Performance Measurement and Metrics Volume 12 ; 12 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2012 ; Performance Measurement and Metrics Volume 13 ; 13 ; https://www.emeraldinsight.com/ ; >
@@ -12376,7 +12376,7 @@
     au < manifest ; exists ; 1999 ; Work Study Volume 48 ; 48 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2000 ; Work Study Volume 49 ; 49 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2001 ; Work Study Volume 50 ; 50 ; https://www.emeraldinsight.com/ ; >
-    au < crawling ; exists ; 2002 ; Work Study Volume 51 ; 51 ; https://www.emeraldinsight.com/ ; >
+    au < frozen ; exists ; 2002 ; Work Study Volume 51 ; 51 ; https://www.emeraldinsight.com/ ; >
     au < manifest ; exists ; 2003 ; Work Study Volume 52 ; 52 ; https://www.emeraldinsight.com/ ; >
 
   }
