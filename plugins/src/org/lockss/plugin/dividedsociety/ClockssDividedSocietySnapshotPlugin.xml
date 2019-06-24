@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -136,7 +136,7 @@
       <string>1,"^https?://fonts\.gstatic\.com/.*\.ttf$"</string>
       <string>1,"https://static.addtoany.com/.*\.js"</string>
       <string>1,"https://ds360.co/.*\.js"</string>
-      <string>1,"https://dl.dropboxusercontent.com/.*\.(pdf|jpe?g|png)"</string>
+      <string>1,"https://dl.dropboxusercontent.com/.*\.(pdf|jpe?g|png|mp3)"</string>
     </list>
   </entry>
   <!--  pick up <source src=xxx audio files -->
