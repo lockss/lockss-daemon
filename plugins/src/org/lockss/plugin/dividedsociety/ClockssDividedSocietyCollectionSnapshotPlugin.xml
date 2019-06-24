@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -112,7 +112,8 @@
       <string>2,"^%sjournals\?combine=", base_url</string>
       <!-- Way too many search combinatorials to allow them to get collected as access in to posters -->
       <!--  https://www.dividedsociety.org/posters?f%5B0%5D=people_posters%3AGerry%20Adams...with other options -->
-      <string>2,"^%s%s\?f%5B0%5D", base_url, collection_id"</string>
+      <!--  %% to get a % in a regex string -->
+      <string>2,"^%s%s\?f%%5B0%%5D", base_url, collection_id"</string>
       <!--  we need to come in through a specific url to redirect in order to gain a session cookie -->
       <!-- https://www.dividedsociety.org/4e566d92-3778-41c0-b7d7-c9fe7bd71aa9/ip_access redirects to:
         https://www.dividedsociety.org/user which goes to
