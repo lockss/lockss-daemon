@@ -34,12 +34,14 @@ package org.lockss.plugin.clockss.crossref;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import org.lockss.config.TdbAu;
+import org.lockss.extractor.ArticleMetadata;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.BaseFileArticleMetadataExtractor;
 
 /*
  * Customize the ArticleMetadata class for generic file objects for Crossref
+ * CrossRef doesn't extract from any file, it just uses the information found in the url
+ * to fill in values.
  */
 
 public class CrossrefArticleMetadataExtractor extends BaseFileArticleMetadataExtractor{
@@ -57,10 +59,11 @@ public class CrossrefArticleMetadataExtractor extends BaseFileArticleMetadataExt
 		super(role);
 	}
 
+	//am has nothing in it because we don't extract information from any file
 	@Override
-	protected String getContentYear(CachedUrl cu, TdbAu tdbau) {
+	protected String getContentYear(CachedUrl cu, ArticleMetadata am) {
 		// Get limited information from the TDB file
-		String defYr = super.getContentYear(cu,tdbau);
+		String defYr = super.getContentYear(cu,am);
 		if (defYr == null) {
 			Matcher umat = TGZ_PAT.matcher(cu.getUrl());
 			if (umat.find()) {

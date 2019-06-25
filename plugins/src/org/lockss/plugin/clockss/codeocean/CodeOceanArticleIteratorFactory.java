@@ -61,6 +61,9 @@ public class CodeOceanArticleIteratorFactory implements ArticleIteratorFactory, 
   *     extract.sh - extraction script should anything be needed
   *     preservation.yml - use this for preservation metadata rather than capsule.zip!/metadata.yml
   *  and there can be multiple versions under the same UUID
+  *  
+  *  Use the capsule.zip as the metadata object and then use file-substitution to find the 
+  *  preservation.yml for details.
   *     
    */
   private static final String PATTERN_TEMPLATE = 
@@ -78,6 +81,9 @@ public class CodeOceanArticleIteratorFactory implements ArticleIteratorFactory, 
   private static final String TAR_REPLACEMENT = "/$1/$2/image.tar.xz";
   private static final String RES_REPLACEMENT = "/$1/$2/results.zip";
   
+  private static final String ROLE_PRESERVATION_FILE = "PresevationMetadata";
+  private static final String ROLE_FILE_ITEM = "FileItem";
+  
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
                                                       MetadataTarget target)
@@ -93,13 +99,21 @@ public class CodeOceanArticleIteratorFactory implements ArticleIteratorFactory, 
 
 
     // set up ZIP to be an aspect that will trigger an ArticleFiles to feed the metadata extractor
+    // set up ZIP to be the aspect that is the access_url "full text CU"
     builder.addAspect(ZIP_PATTERN,
     		ZIP_REPLACEMENT,
-        ArticleFiles.ROLE_ARTICLE_METADATA);
+        ROLE_FILE_ITEM, // this is the url of the item being counted    		
+        ArticleFiles.ROLE_ARTICLE_METADATA); //if there wasn't a preservation.yml, we'd get what we could from this
 
+    // this should be secondary ROLE_ARTICLE_METADATA
     builder.addAspect(
             MD_REPLACEMENT,
-            ArticleFiles.ROLE_ARTICLE_METADATA);
+            ROLE_PRESERVATION_FILE,
+            ArticleFiles.ROLE_ARTICLE_METADATA); //use this to pull in additional details
+    
+    // reset the ordering of the ROLE_ARTICLE_METADATA
+    // make the file object a fallback in case a preservation.yml isn't included
+    builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA, ROLE_PRESERVATION_FILE, ROLE_FILE_ITEM);
     
     // tar files represent the docker config of the equivalent zip code modul
     // associate them but they aren't themselves a code module

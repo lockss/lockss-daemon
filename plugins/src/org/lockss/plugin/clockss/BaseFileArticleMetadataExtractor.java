@@ -50,6 +50,7 @@ import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArticleFiles;
+import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.util.Logger;
 
@@ -62,8 +63,9 @@ import org.lockss.util.Logger;
  *  This class adds standardized support to add the size, and mimetype of the item
  *  The sub class extends this to provide a file identifier and the file type (what it is),
  *  and any additional custom key/value pairs for the specific type of file.
- */
-public class BaseFileArticleMetadataExtractor extends BaseArticleMetadataExtractor{
+ *  
+ */  
+ public class BaseFileArticleMetadataExtractor extends BaseArticleMetadataExtractor{
 
 	private static Logger log = 
 			Logger.getLogger(BaseFileArticleMetadataExtractor.class);
@@ -82,11 +84,57 @@ public class BaseFileArticleMetadataExtractor extends BaseArticleMetadataExtract
 
 		BaseFileEmitter emit = new BaseFileEmitter(af, emitter);
 
-		CachedUrl metadataCu = af.getRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA);
+		/*
+		 * An individual FILE type child plugin an override these to 
+		 * better meet the needs of their layout. 
+		 * The fileCu defines the item whose mimetype and size define the object
+		 * The metadataCu is used for any optional additional FileMetadataExtractor work
+		 */
+		CachedUrl metadataCu = getMetadataUrl(af);  // null if no additional metadata extraction 
+		CachedUrl fileCu = getFileUrl(af); //the item that is considered the access url for this FILE type object
+		if (metadataCu != null) {
+			try {
+				// additional FILE item information added in the emitter
+				FileMetadataExtractor me = metadataCu.getFileMetadataExtractor(target);
+				if (me != null) {
+					// This will return through the BaseFileEmitter and applied the FileObjectMetadata defaults there
+					me.extract(target, metadataCu, emit);
+					return;
+				}
+			} catch (IOException ex) {
+				log.warning("Error in FileMetadataExtractor", ex);
+			} finally {
+				AuUtil.safeRelease(metadataCu);
+			}
+		}
+		// If we didn't use a FileMetdataExtractor, simply proceed with additional file item information in the emitter
 		ArticleMetadata fileAM = new ArticleMetadata();
-		setFileMetadata(metadataCu, fileAM);
-		emit.emitMetadata(metadataCu, fileAM);
+		emit.emitMetadata(fileCu, fileAM);
 	}
+
+
+
+    /*
+     * Default is null
+     * Set this CU if there is a file that should have a FileMetadataExtractor applied to it
+     * Otherwise the metadata will come from the getFileUrl - size, mimetype, etc.
+     * 
+     */
+	protected CachedUrl getMetadataUrl(ArticleFiles af) {
+		return null;
+	}
+
+	/*
+     * Default is the ROLE_ARTICLE_METADATA but no additional
+     * metadata is extracted beyond the file characteristics - size, mimeType, etc.
+     * as well as tdb information off the AU.
+     * plugin can override to handle differently
+     * 
+     */
+	protected CachedUrl getFileUrl(ArticleFiles af) {
+		return af.getRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA);
+	}
+
 
 
 	/**
@@ -95,22 +143,23 @@ public class BaseFileArticleMetadataExtractor extends BaseArticleMetadataExtract
 	 * contents of the object.
 	 * Set consistent basic information before emitting.
 	 * A child plugin can override as necessary.
+	 * The am object might come in pre-filled with information from file metadata extraction
+	 * It is assumed that the cu here is that of the File object
 	 * @param cu - The CU for which we are generating metadata
 	 * @param am - the AM in to which to put the generated metadata 
 	 */
-	protected void setFileMetadata(CachedUrl cu, ArticleMetadata am) {
+	protected void setFileObjectMetadata(CachedUrl cu, ArticleMetadata am) {
 		String url = cu.getUrl();
 		log.debug3("generate MD for generic file object url " + url);
 		
 		
-		ArchivalUnit au = cu.getArchivalUnit();
-		TdbAu tdbau = au.getTdbAu();
 		// use getters so a child plugin can override
 		// default values come from tdbau if it's available
-		String year = getContentYear(cu, tdbau);
-		String publisher = getContentPublisher(cu, tdbau);
-		String provider = getContentProvider(cu,tdbau, publisher);
-		String pTitle = getPublicationTitle(cu,tdbau);
+		// am is passed in case it contains metadata parsed out of a file
+		String year = getContentYear(cu,am);
+		String publisher = getContentPublisher(cu,am);
+		String provider = getContentProvider(cu, am);
+		String pTitle = getPublicationTitle(cu,am);
 
 
 		am.put(MetadataField.FIELD_ACCESS_URL, url);
@@ -133,9 +182,7 @@ public class BaseFileArticleMetadataExtractor extends BaseArticleMetadataExtract
 		FILE_MAP.put("FileIdentifier", getFileIdentifier(cu));
 		FILE_MAP.put("FileSizeBytes", getFileSize(cu));
 		FILE_MAP.put("FileMime", getFileMime(cu));
-		// default is no additional k-v pairs
-		setAdditionalFileData(cu,FILE_MAP);
-
+		// default is no additional k-v pairs; child can add specific items
 		am.putRaw(MetadataField.FIELD_MD_MAP.getKey(), FILE_MAP);
 		
 		// in case there are any other am items that can be set
@@ -166,8 +213,10 @@ public class BaseFileArticleMetadataExtractor extends BaseArticleMetadataExtract
 	 * @param tdbau
 	 * @return
 	 */
-	protected String getContentYear(CachedUrl cu, TdbAu tdbau) {
+	protected String getContentYear(CachedUrl cu, ArticleMetadata am) {
 		// Get limited information from the TDB file
+		ArchivalUnit au = cu.getArchivalUnit();
+		TdbAu tdbau = au.getTdbAu();
 		return (tdbau != null) ? tdbau.getEndYear() : null;
 	}
 	
@@ -180,8 +229,10 @@ public class BaseFileArticleMetadataExtractor extends BaseArticleMetadataExtract
 	 * @param tdbau
 	 * @return
 	 */
-	protected String getPublicationTitle(CachedUrl cu, TdbAu tdbau) {
+	protected String getPublicationTitle(CachedUrl cu,ArticleMetadata am) {
 		// Get limited information from the TDB file
+		ArchivalUnit au = cu.getArchivalUnit();
+		TdbAu tdbau = au.getTdbAu();
 		return (tdbau != null) ? tdbau.getPublicationTitle() : DEFAULT_PUBLICATION_TITLE;
 	}	
 	
@@ -193,7 +244,9 @@ public class BaseFileArticleMetadataExtractor extends BaseArticleMetadataExtract
 	 * @param tdbau
 	 * @return
 	 */
-	protected String getContentPublisher(CachedUrl cu, TdbAu tdbau) {
+	protected String getContentPublisher(CachedUrl cu, ArticleMetadata am) {
+		ArchivalUnit au = cu.getArchivalUnit();
+		TdbAu tdbau = au.getTdbAu();
 		return (tdbau != null) ? tdbau.getPublisherName() : getDefaultPublisherName();
 	}
 	
@@ -208,8 +261,10 @@ public class BaseFileArticleMetadataExtractor extends BaseArticleMetadataExtract
 	}
 
 
-	protected String getContentProvider(CachedUrl cu, TdbAu tdbau, String publisher) {
-		return (tdbau != null) ? tdbau.getProviderName() : publisher;
+	protected String getContentProvider(CachedUrl cu, ArticleMetadata am) {
+		ArchivalUnit au = cu.getArchivalUnit();
+		TdbAu tdbau = au.getTdbAu();		
+		return (tdbau != null) ? tdbau.getProviderName() : getContentPublisher(cu,am);
 	}
 	
 	/**
@@ -255,13 +310,14 @@ public class BaseFileArticleMetadataExtractor extends BaseArticleMetadataExtract
 	 * @param cu
 	 * @param fILE_MAP
 	 */
-	protected void setAdditionalFileData(CachedUrl cu, Map<String, String> fILE_MAP) {
+	protected void setAdditionalFileData(CachedUrl cu, Map<String, String> FILE_MAP,ArticleMetadata am) {
 		log.debug3("In empty default setAdditionalFileData");
 	}
 	
 	/*
 	 * Most FILE objects won't need more than what is set in the setFileMetadata method
 	 * but in case there is some other metadata that maps to standard article metadata fields
+	 * The FILE_MAP is already on the ArticleMetadata object in case more needs to be added there
 	 * a child can override this
 	 */
 	protected void setAdditionalArticleMetadata(CachedUrl metadataCu, ArticleMetadata fileAM) {
@@ -275,7 +331,7 @@ public class BaseFileArticleMetadataExtractor extends BaseArticleMetadataExtract
 	 * Do not use the emitter from BaseArticleMetadata because
 	 * some of the default behaviors do not make sense for File objects
 	 */
-	static class BaseFileEmitter implements FileMetadataExtractor.Emitter {
+	 class BaseFileEmitter implements FileMetadataExtractor.Emitter {
 		private Emitter parent;
 		private ArticleFiles af;
 
@@ -284,7 +340,20 @@ public class BaseFileArticleMetadataExtractor extends BaseArticleMetadataExtract
 			this.parent = parent;
 		}
 
-		public void emitMetadata(CachedUrl cu, ArticleMetadata am) {
+		
+		
+		/*
+		 * It isn't necessary for a FileMetadataExtractor to be applied
+		 * These methods will be called to fill in data based on the information
+		 * of the FILE object - as determined by a child plugin
+		 * In the case where extraction is done on a file this comes after that step
+		 * and allows use of what was found by that extractor
+		 * The CU in the arguments should be that of the FILE object itself
+		 * any metadata extracted from a separate metadataCu should already be in the am
+		 */
+		public void emitMetadata(CachedUrl fileCu, ArticleMetadata am) {
+			
+			setFileObjectMetadata(fileCu, am);
 			parent.emitMetadata(af, am);
 		}  
 
