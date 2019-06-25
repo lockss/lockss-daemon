@@ -148,21 +148,22 @@ import org.lockss.util.Logger;
 	 * @param cu - The CU for which we are generating metadata
 	 * @param am - the AM in to which to put the generated metadata 
 	 */
-	protected void setFileObjectMetadata(CachedUrl cu, ArticleMetadata am) {
-		String url = cu.getUrl();
-		log.debug3("generate MD for generic file object url " + url);
+	protected void setFileObjectMetadata(ArticleFiles af, ArticleMetadata am) {
+		CachedUrl fileCu = getFileUrl(af); //this might not be the same as the metadata url
+		String file_url = fileCu.getUrl();
+		log.debug3("generate MD for generic file object url " + file_url);
 		
 		
 		// use getters so a child plugin can override
 		// default values come from tdbau if it's available
 		// am is passed in case it contains metadata parsed out of a file
-		String year = getContentYear(cu,am);
-		String publisher = getContentPublisher(cu,am);
-		String provider = getContentProvider(cu, am);
-		String pTitle = getPublicationTitle(cu,am);
+		String year = getContentYear(fileCu,am);
+		String publisher = getContentPublisher(fileCu,am);
+		String provider = getContentProvider(fileCu, am);
+		String pTitle = getPublicationTitle(fileCu,am);
 
 
-		am.put(MetadataField.FIELD_ACCESS_URL, url);
+		am.put(MetadataField.FIELD_ACCESS_URL, file_url);
 		am.put(MetadataField.FIELD_PROVIDER, provider);
 		am.put(MetadataField.FIELD_PUBLISHER, publisher);
 		am.put(MetadataField.FIELD_DATE, year);
@@ -177,16 +178,16 @@ import org.lockss.util.Logger;
 		Map<String, String> FILE_MAP = new HashMap<String,String>();
 
 		//default is "file"
-		FILE_MAP.put("FileType", getFileObjectType(cu));
+		FILE_MAP.put("FileType", getFileObjectType(fileCu));
 		// default is base filename
-		FILE_MAP.put("FileIdentifier", getFileIdentifier(cu));
-		FILE_MAP.put("FileSizeBytes", getFileSize(cu));
-		FILE_MAP.put("FileMime", getFileMime(cu));
+		FILE_MAP.put("FileIdentifier", getFileIdentifier(fileCu));
+		FILE_MAP.put("FileSizeBytes", getFileSize(fileCu));
+		FILE_MAP.put("FileMime", getFileMime(fileCu));
 		// default is no additional k-v pairs; child can add specific items
 		am.putRaw(MetadataField.FIELD_MD_MAP.getKey(), FILE_MAP);
 		
 		// in case there are any other am items that can be set
-		setAdditionalArticleMetadata(cu,am);
+		setAdditionalArticleMetadata(fileCu,am);
 
 		
 	}
@@ -353,7 +354,7 @@ import org.lockss.util.Logger;
 		 */
 		public void emitMetadata(CachedUrl fileCu, ArticleMetadata am) {
 			
-			setFileObjectMetadata(fileCu, am);
+			setFileObjectMetadata(af, am);
 			parent.emitMetadata(af, am);
 		}  
 

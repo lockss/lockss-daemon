@@ -215,11 +215,14 @@ public class CodeOceanArticleMetadataExtractor extends BaseFileArticleMetadataEx
 			defV = umat.group(VERSION_GROUP);
 		}
 		file_map.put("CapsuleVersion", defV);
-		if (am.getRaw("AssociatedArticleDoi") != null) {
-			file_map.put("AssociatedArticleDoi",am.getRaw("AssociatedArticleDoi"));
+		if (am.getRaw("article_doi") != null) {
+			file_map.put("article_doi",am.getRaw("article_doi"));
 		}
-		if (am.getRaw("AssociatedArticleDate") != null) {
-			file_map.put("AssociatedArticleDate",am.getRaw("AssociatedArticleDate"));
+		if (am.getRaw("article_publish_date") != null) {
+			file_map.put("article_publish_date",am.getRaw("article_publish_date"));
+		}	
+		if (am.getRaw("article_journal") != null) {
+			file_map.put("article_journal",am.getRaw("article_journal"));
 		}	
 		// The doi for this item will already be on the AM if it was found
 	}

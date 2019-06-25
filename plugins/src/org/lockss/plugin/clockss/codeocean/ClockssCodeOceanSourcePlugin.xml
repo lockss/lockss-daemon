@@ -67,4 +67,13 @@
     <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.clockss.codeocean.CodeOceanArticleIteratorFactory</string>
   </entry>
+    <entry>
+    <string>text/plain_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.clockss.codeocean.FakeYamlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>  
 </map>    
