@@ -33,7 +33,9 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.clockss;
 
 import java.io.IOException;
+import java.text.ParseException;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 import org.apache.commons.io.FilenameUtils;
 
@@ -43,6 +45,7 @@ import org.apache.commons.io.FilenameUtils;
 
 import org.lockss.config.TdbAu;
 import org.lockss.daemon.PluginException;
+import org.lockss.daemon.PublicationDate;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.BaseArticleMetadataExtractor;
 import org.lockss.extractor.FileMetadataExtractor;
@@ -56,6 +59,9 @@ import org.lockss.util.Logger;
 
 
 /*
+ *  Despite the awkward name, this is an ArticleMetadata class
+ *  which is designed to provide support for a class of content called "Files"
+ *  
  *  A shared ArticleMetadataExtractor for "file" objects.
  *  File objects (as opposed to article, book, or proceeding require 
  *  only an access_url and a publisher
@@ -89,6 +95,7 @@ import org.lockss.util.Logger;
 		 * better meet the needs of their layout. 
 		 * The fileCu defines the item whose mimetype and size define the object
 		 * The metadataCu is used for any optional additional FileMetadataExtractor work
+		 * if it's null (default), basic information about the file object is emitted
 		 */
 		CachedUrl metadataCu = getMetadataUrl(af);  // null if no additional metadata extraction 
 		CachedUrl fileCu = getFileUrl(af); //the item that is considered the access url for this FILE type object
@@ -156,13 +163,13 @@ import org.lockss.util.Logger;
 		
 		// use getters so a child plugin can override
 		// default values come from tdbau if it's available
-		// am is passed in case it contains metadata parsed out of a file
+		// am is passed in case it contains metadata parsed by an
+		// option FileMetadataExtractor
 		String year = getContentYear(fileCu,am);
 		String publisher = getContentPublisher(fileCu,am);
 		String provider = getContentProvider(fileCu, am);
 		String pTitle = getPublicationTitle(fileCu,am);
-
-
+		
 		am.put(MetadataField.FIELD_ACCESS_URL, file_url);
 		am.put(MetadataField.FIELD_PROVIDER, provider);
 		am.put(MetadataField.FIELD_PUBLISHER, publisher);
@@ -170,7 +177,6 @@ import org.lockss.util.Logger;
 		// Neither an article, book, nor proceeding - "other"
 		am.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_FILE);
 		// Not explicitly necessary, would be inferred
-		am.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_FILE);
 		am.put(MetadataField.FIELD_PUBLICATION_TITLE, pTitle);
 
 		// Add a custom map to the generic am table 
@@ -362,8 +368,5 @@ import org.lockss.util.Logger;
 			this.parent = parent;
 		}
 	}
-
-
-
 
 }

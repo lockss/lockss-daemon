@@ -71,9 +71,9 @@ import org.lockss.plugin.*;
  * TODO: ADD IN TRUE YAML PARSING ONCE AVAILABLE
  *
  */
-public class FakeYamlMetadataExtractorFactory
+public class AdHocYamlMetadataExtractorFactory
   implements FileMetadataExtractorFactory {
-  static Logger log = Logger.getLogger(FakeYamlMetadataExtractorFactory.class);
+  static Logger log = Logger.getLogger(AdHocYamlMetadataExtractorFactory.class);
   
   private static final Pattern CONTEXT_PATTERN = Pattern.compile("^([a-z_]+):\\s*",Pattern.CASE_INSENSITIVE);
   // indented value - group1 = key, group 3 = value
@@ -82,10 +82,10 @@ public class FakeYamlMetadataExtractorFactory
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
 							   String contentType)
       throws PluginException {
-    return new FakeYamlMetadataExtractor();
+    return new AdHocYamlMetadataExtractor();
   }
 
-  public static class FakeYamlMetadataExtractor 
+  public static class AdHocYamlMetadataExtractor 
     implements FileMetadataExtractor {
 
     // Map code ocean items to cooked metadata fields
