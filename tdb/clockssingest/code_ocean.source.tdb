@@ -13,7 +13,7 @@
     >
     provider = Code Ocean
     plugin = org.lockss.plugin.clockss.codeocean.ClockssCodeOceanSourcePlugin
-    param[base_url] = http://clockss-ingest.clockss.org/sourcefiles/code-ocean-released/
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/code-ocean-released/
     
     hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[directory] >
