@@ -176,6 +176,7 @@ import org.lockss.util.Logger;
 		am.put(MetadataField.FIELD_DATE, year);
 		// Neither an article, book, nor proceeding - "other"
 		am.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_FILE);
+		am.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_FILE);
 		// Not explicitly necessary, would be inferred
 		am.put(MetadataField.FIELD_PUBLICATION_TITLE, pTitle);
 
