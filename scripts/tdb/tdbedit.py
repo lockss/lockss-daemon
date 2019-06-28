@@ -189,6 +189,12 @@ class _TdbEditOptions(object):
     group.add_option('--to-proxy-random', metavar='CSPROXY', help='proxy settings to update to, assigned randomly')
     group.add_option('--to-proxy-round-robin', metavar='CSPROXY', help='proxy settings to update to, assigned in round robin')
     parser.add_option_group(group)
+    group = optparse.OptionGroup(parser, 'Name changes')
+    group.add_option('--add-superseded', metavar='NAME', action='store_true',  help='[superseded] added to name', default=False)
+    group.add_option('--add-match', metavar='NAME', action='store_true',  help='[article count match] added to name', default=False)
+    group.add_option('--add-mismatch', metavar='NAME', action='store_true',  help='[article count mismatch] added to name', default=False)
+    group.add_option('--add-unconfirmed', metavar='NAME', action='store_true',  help='[article count unconfirmed] added to name', default=False)
+    parser.add_option_group(group)
     return parser
 
   def __init__(self, parser, opts, args):
@@ -215,6 +221,11 @@ class _TdbEditOptions(object):
     - __proxy (generator of strings): bottomless generator of values from
     to_proxy based on the requested type of proxy change; see __proxy_random(),
     __proxy_round_robin() and next_proxy()
+    append this change to the AU name, limited to:([superseded], [article count match], [article count mismatch], [article count unconfirmed])
+    - add_superseded (boolean) : if True, adds '[superseded]'
+    - add_match (boolean) : if True, adds '[article count match]'
+    - add_mismatch (boolean) : if True, adds '[article count mismatch]'
+    - add_unconfirmed (boolean) : if True, adds '[article count unconfirmed]'
     - auids (list of strings): AUIDs the changes apply to
     - files (list of strings): files the changes apply to
     '''
@@ -261,6 +272,15 @@ class _TdbEditOptions(object):
       else: self.to_proxy = [x.strip() for x in (opts.to_proxy_random or opts.to_proxy_round_robin).split(',')]
       if opts.to_proxy_random is not None: self.__proxy = self.__proxy_random()
       else: self.__proxy = self.__proxy_round_robin()
+    if opts.add_superseded :
+      self.name_change = '[superseded]'
+    elif opts.add_match :
+      self.name_change = '[article count match]'
+    elif opts.add_mismatch :
+      self.name_change = '[article count mismatch]'
+    elif opts.add_unconfirmed :
+      self.name_change = '[article count unconfirmed]'
+    else : self.name_change = ''
     # files
     if len(args) == 0: parser.error('at least one file is required')
     self.files = args[:]
@@ -348,6 +368,10 @@ class _Au(object):
     '''Sets the AU's status2 to the given value.'''
     self._set('status2', val)
 
+  def set_name(self, val):
+    '''Adds the val to the AU's name.'''
+    self._extend('name', val)
+
   def generate_body(self):
     '''Regenerates the AU's textual body.'''
     return ';'.join(self.values)
@@ -373,6 +397,23 @@ class _Au(object):
     if val.strip() != self.values[fieldindex].strip():
       self.values[fieldindex] = ' %s ' % (val,)
       self.changed = True
+
+  def _extend(self, field, val):
+    '''
+    Extends the given field with the given val, adding leading/trailing whitespace.
+    Only currently used with 'name' and extensions that are bracketed with '[]'
+    replace extension if already has one
+    Raises KeyError if no such field is defined
+    '''
+    fieldindex = self.implicitmap.get(field)
+    if fieldindex is None:
+      raise KeyError, '%s' % (field,)
+    name = self.values[fieldindex].strip()
+    if name[-1] == ']' :
+      # already has an extension - replace 
+      name = self.values[fieldindex] = name[0:name.find('[')].strip()
+    self.values[fieldindex] = ' %s %s ' % (name, val.strip())
+    self.changed = True
 
 # A regular expression to match implicit<...> lines
 # - Group 1: semicolon-separated body of the implicit<...> statement
@@ -497,6 +538,8 @@ def _change_aus(options, aus):
       target = options.next_proxy()
       if target == _NONE: target = None
       au.set_proxy(target)
+    if len(options.name_change) != 0 :
+      au.set_name(options.name_change)
   if errors > 0: sys.exit('%d %s; exiting' % (errors, 'error' if errors == 1 else 'errors'))
 
 def _alter_files(options, aus):
