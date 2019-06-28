@@ -66,7 +66,8 @@ public class UMichHtmlHashFilterFactory implements FilterFactory {
       // filter out script
       new TagNameFilter("script"),
       // header & footer
-
+      //long item in place for "<!-- COinS for Zotero, etc -->" which changes over time
+      HtmlNodeFilters.tagWithAttributeRegex("span", "title", "^ctx_ver="),
     };
 
     InputStream interStream = new HtmlFilterInputStream(in, encoding,
