@@ -28,6 +28,10 @@
     <string>"Oxford University Press Plugin (CLOCKSS), Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
   </entry>
   <entry>
+    <string>application/pdf_filter_factory</string>
+    <string>org.lockss.plugin.silverchair.BaseScPageCountPdfFilterFactory</string>
+  </entry>
+  <entry>
     <string>clockss_override</string>
     <map>
      <entry>

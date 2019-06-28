@@ -10,9 +10,9 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-public class BaseScPageCountPdfFactory implements FilterFactory {
+public class BaseScPageCountPdfFilterFactory implements FilterFactory {
 
-  private static final Logger log = Logger.getLogger(BaseScPageCountPdfFactory.class);
+  private static final Logger log = Logger.getLogger(BaseScPageCountPdfFilterFactory.class);
   private static final String PDF_HASH_STRING_FORMAT = "This PDF file has: %s pages total";
 
   /**
@@ -29,7 +29,7 @@ public class BaseScPageCountPdfFactory implements FilterFactory {
    * generate a fixed format string contains its page count
    * @param pdfDocumentFactory
    */
-  public BaseScPageCountPdfFactory(PdfDocumentFactory pdfDocumentFactory) {
+  public BaseScPageCountPdfFilterFactory(PdfDocumentFactory pdfDocumentFactory) {
     this.pdfDocumentFactory = pdfDocumentFactory;
   }
 
@@ -40,7 +40,7 @@ public class BaseScPageCountPdfFactory implements FilterFactory {
    * @since 1.56
    * @see DefaultPdfDocumentFactory
    */
-  public BaseScPageCountPdfFactory() {
+  public BaseScPageCountPdfFilterFactory() {
     this(DefaultPdfDocumentFactory.getInstance());
   }
 
