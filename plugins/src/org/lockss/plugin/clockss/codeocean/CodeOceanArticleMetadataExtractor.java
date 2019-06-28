@@ -37,13 +37,12 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.apache.commons.lang.StringUtils;
-import org.lockss.config.TdbAu;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.MetadataField;
-import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.ArticleFiles;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.BaseFileArticleMetadataExtractor;
+import org.lockss.util.Logger;
 
 /*
  * Customize the ArticleMetadata class for generic file objects for Code Ocean
@@ -51,10 +50,19 @@ import org.lockss.plugin.clockss.BaseFileArticleMetadataExtractor;
  * 
  * The files inside a specific 
  * code-ocean-released/2019/nature/LONGUUID/v1.0/
- *     capsule.zip  - code capsule, data, etc - including metadata
+ *     capsule.zip  - code capsule, data
  *     results.zip - 
  *     image.tar.xz - compressed docker image
  *     extract.sh - extraction script should anything be needed
+ *     prervation.yml - metadata for CLOCKSS purposes - do not use capsule.zip!/metadata.yml
+ * code-ocean-released/2019/nature/4aaa25ae-2fb9-49fe-8379-7deb6bfb80e9/v1.0/capsule.zip
+ * code-ocean-released/2019/nature/4aaa25ae-2fb9-49fe-8379-7deb6bfb80e9/v1.0/extract.sh
+ * code-ocean-released/2019/nature/4aaa25ae-2fb9-49fe-8379-7deb6bfb80e9/v1.0/image.tar.xz
+ * code-ocean-released/2019/nature/4aaa25ae-2fb9-49fe-8379-7deb6bfb80e9/v1.0/preservation.yml
+ * code-ocean-released/2019/nature/4aaa25ae-2fb9-49fe-8379-7deb6bfb80e9/v1.0/results.zip
+ * 
+ * The metadata object is preservation.yml but the access.url and size and type are for capsule.zip
+ * Use capsule.zip as the metadata object and then do filename substitution for extracting the details
  */
 
 public class CodeOceanArticleMetadataExtractor extends BaseFileArticleMetadataExtractor{
@@ -62,6 +70,10 @@ public class CodeOceanArticleMetadataExtractor extends BaseFileArticleMetadataEx
 	/*
 	 * code ocean delivers capsules under publisher subdirectories - map the publisher path to a specifc publisher
 	 */
+
+	private static Logger log = 
+			Logger.getLogger(CodeOceanArticleMetadataExtractor.class);
+	
 	static private final Map<String, String> PublisherIDMap =
 			new HashMap<String,String>();
 	static {
@@ -70,24 +82,67 @@ public class CodeOceanArticleMetadataExtractor extends BaseFileArticleMetadataEx
 		PublisherIDMap.put("taylorandfrancis", "Taylor & Francis");
 		PublisherIDMap.put("cambridge", "Cambridge University Press");
 	}
-
 	private static final String CODE_OCEAN_FILE_TYPE = "code capsule";
-	private static final String CC_ARTICLE_DOI = "CodeCapsule_article_doi";
 	private static final String CODE_OCEAN = "Code Ocean";
-	private static final Pattern  ZIP_PAT = Pattern.compile("/code-ocean-released/([^/]+)/([^/]+)/([^/]+)/[vV]([^/]+)/capsule\\.zip", Pattern.CASE_INSENSITIVE);  
+	private static final Pattern  ZIP_PAT = Pattern.compile("/code-ocean-released/([^/]+)/([^/]+)/([^/]+)/[vV]([^/]+)/capsule\\.zip", Pattern.CASE_INSENSITIVE);
+	/* regex group1 = ingest year, group2 = publisher, group3 = identifier, group4= version number */
 	private static final int YEAR_GROUP = 1;
 	private static final int PUB_GROUP = 2;
 	private static final int UUID_GROUP = 3;
 	private static final int VERSION_GROUP = 4;
+
 	
 	public CodeOceanArticleMetadataExtractor(String role) {
 		super(role);
 	}
 
+	
+	/*
+	 *  CodeOcean has a file item "capsule.zip" that is the item we
+	 *  store characteristics about but additional metadata is extracted
+	 *  out of a preservation.yml file that is a sibling of capsule.zip
+	 */
+	protected CachedUrl getFileUrl(ArticleFiles af) {
+		CachedUrl fcu = af.getRoleCu("FileItem");
+		if (fcu == null) {
+			return super.getFileUrl(af);
+		}
+		return fcu;
+	}
+
+
+    /*
+     * File item is capsule.zip
+     * Metadata from preservation.yml
+     * But check in case that file was missing, we don't want to extract
+     * any additional information so just return null.
+     */
+	protected CachedUrl getMetadataUrl(ArticleFiles af) {
+		CachedUrl mdcu = af.getRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA); 
+		if((mdcu != null) && mdcu.getUrl().endsWith(".yml")) {
+			return mdcu;
+		}
+		return null;
+	}	
+	/*
+	 * 
+	 * CodeOcean is a little different from the other FILE object items.
+	 * CodeOcean provides *some* metadata in a preservation.yml file that lives as a sibling of the actual 
+	 * item it describes "capsule.zip". 
+	 * Override the main File metadata method setFileMetadata
+	 */
+
+	/*
+	 * The AM should have the date from preservation.yml file
+ 	 * If not, fail over to deposit date. 
+	 */
 	@Override
-	protected String getContentYear(CachedUrl cu, TdbAu tdbau) {
-		// Get limited information from the TDB file
-		String defYr = super.getContentYear(cu,tdbau);
+	protected String getContentYear(CachedUrl cu, ArticleMetadata am) {
+		
+		if ((am != null) && am.get(MetadataField.FIELD_DATE) != null) {
+			return am.get(MetadataField.FIELD_DATE);
+		}
+		String defYr = super.getContentYear(cu,am);
 		if (defYr == null) {
 			Matcher umat = ZIP_PAT.matcher(cu.getUrl());
 			if (umat.find()) {
@@ -103,88 +158,43 @@ public class CodeOceanArticleMetadataExtractor extends BaseFileArticleMetadataEx
 	 * If for some reason not set, use the publisher name in the url
 	 */
 	@Override
-	protected String getContentPublisher(CachedUrl cu, TdbAu tdbau) {
-		String defPub = super.getContentPublisher(cu, tdbau);
-		if (defPub == null) {
-			Matcher umat = ZIP_PAT.matcher(cu.getUrl());
-			if (umat.find()) {
-				String pubkey = umat.group(PUB_GROUP);
-				if (PublisherIDMap.containsKey(pubkey)) {
-						return PublisherIDMap.get(pubkey);
-				}
-				return pubkey;
+	protected String getContentPublisher(CachedUrl cu, ArticleMetadata am) {
+		// if not there, use the 
+    	Matcher umat = ZIP_PAT.matcher(cu.getUrl());
+		if (umat.find()) {
+			String pubkey = umat.group(PUB_GROUP);
+			if (PublisherIDMap.containsKey(pubkey)) {
+					return PublisherIDMap.get(pubkey);
 			}
+			return pubkey;
 		}
-		return defPub;
+		// last chance
+		return super.getContentPublisher(cu,am);
 	}
 	
 	@Override
 	protected String getFileIdentifier(CachedUrl cu) {
-		String defId = super.getFileIdentifier(cu);
 		Matcher umat = ZIP_PAT.matcher(cu.getUrl());
 		if (umat.find()) {
 			return umat.group(UUID_GROUP);
-			}
-	    return defId; // might not be unique but we shouldn't get here.
-	}
-
-
-	@Override
-	protected String getContentProvider(CachedUrl cu, TdbAu tdbau, String publisher) {
-		return (tdbau != null) ? tdbau.getProviderName() : CODE_OCEAN;
+		}
+		return super.getFileIdentifier(cu); // not useful, just capsule.zip
 	}
 
 	/*
 	 * Code Ocean is actually the provider and provides
 	 * code modules for multliple publishers
-	 */
-	
+	 */ 
+	@Override
+	protected String getContentProvider(CachedUrl cu, ArticleMetadata am) {
+		return CODE_OCEAN;
+	}
+
 
 	@Override
 	protected String getFileObjectType(CachedUrl cu) {
 		return CODE_OCEAN_FILE_TYPE;
 	}
-	
-	
-	/*
-	 * In place in case we get the iterator to see metadata.yml instead of the zip
-	 * If the capsule.zip is the metadata cu then just use defaults
-	 */
-	@Override
-	protected String getFileSize(CachedUrl cu) {
-		String defSize = super.getFileSize(cu);
-		if (cu.getUrl().endsWith(".yml")) {
-  		  String zip_url = StringUtils.substringBefore(cu.getUrl(), "!");
-		  ArchivalUnit au = cu.getArchivalUnit();
-		  if (au != null) {
-			CachedUrl zipCu = au.makeCachedUrl(zip_url);
-			if(zipCu != null && (zipCu.hasContent())) {
-				defSize = Long.toString(zipCu.getContentSize());
-			}
-		  }
-		}
-	    return defSize;
-	}
-	
-	/*
-	 * In place in case we get the iterator to see metadata.yml instead of the zip
-	 * If the capsule.zip is the metadata cu then just use defaults
-	 */
-	protected String getFileMime(CachedUrl cu) {
-		String defMime = super.getFileMime(cu);
-		if (cu.getUrl().endsWith(".yml")) {
-		  String zip_url = StringUtils.substringBefore(cu.getUrl(), "!");
-		  ArchivalUnit au = cu.getArchivalUnit();
-		  if (au != null) {
-			 CachedUrl zipCu = au.makeCachedUrl(zip_url);
-  			  if(zipCu != null && (zipCu.hasContent())) {
-			  	defMime = zipCu.getContentType();
-			  }
-		  }
-		}
-		return defMime;
-		
-	}	
 	
 	
 	/*
@@ -197,36 +207,25 @@ public class CodeOceanArticleMetadataExtractor extends BaseFileArticleMetadataEx
 	 */
 
 	@Override
-	protected void setAdditionalFileData(CachedUrl cu, Map<String, String> FILE_MAP) {
+	protected void setAdditionalArticleMetadata(CachedUrl cu, ArticleMetadata am) {
+		Map<String,String> file_map = am.getRawMap(MetadataField.FIELD_MD_MAP.getKey());
 		String defV = "1.0";
 		Matcher umat = ZIP_PAT.matcher(cu.getUrl());
 		if (umat.find()) {
 			defV = umat.group(VERSION_GROUP);
 		}
-		FILE_MAP.put("CapsuleVersion", defV);
-		//get associated article doi
-		//FILE_MAP.put("CapsuleArticleDoi, "");
-	}
-	
-	
-	/*
-	 * CODE OCEAN provides DOIs for each version of each code capsule
-	 * so the same UUID might have 1+ DOIs
-	 * currently our metadata cu is the capsule.zip, but we might switch 
-	 * to metadata.yml - in which case, need to change the access_url as well.
-	 * 
-	 */
-	protected void setAdditionalArticleMetadata(CachedUrl metadataCu, ArticleMetadata fileAM) {
-		if(metadataCu.getUrl().endsWith(".yml")) {
-			//fileAM.put(MetadataField.FIELD_DOI,thedoi);
-			// and because the metadata is pulled from the internal metadata file, 
-			// modify the access_url to be just the capsule.zip
-			String thedoi = null;
-			String zip_url = StringUtils.substringBefore(metadataCu.getUrl(), "!");
-			fileAM.replace(MetadataField.FIELD_ACCESS_URL, zip_url);
+		file_map.put("CapsuleVersion", defV);
+		if (am.getRaw("article_doi") != null) {
+			file_map.put("article_doi",am.getRaw("article_doi"));
 		}
+		if (am.getRaw("article_publish_date") != null) {
+			file_map.put("article_publish_date",am.getRaw("article_publish_date"));
+		}	
+		if (am.getRaw("article_journal") != null) {
+			file_map.put("article_journal",am.getRaw("article_journal"));
+		}	
+		// The doi for this item will already be on the AM if it was found
 	}
-
 	
 
 }

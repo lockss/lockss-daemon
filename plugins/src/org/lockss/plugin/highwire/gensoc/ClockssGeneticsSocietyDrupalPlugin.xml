@@ -1,0 +1,43 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>pending contract</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.highwire.gensoc.ClockssGeneticsSocietyDrupalPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Genetics Society of America Plugin (CLOCKSS)</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>8</string>
+  </entry>
+  <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.highwire.gensoc.GeneticsSocietyDrupalPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent_version</string>
+    <string>8</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Genetics Society of America Plugin (CLOCKSS), Base URL %s, Volume %s", base_url, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%sclockss-manifest/vol_%s_manifest.html", base_url, volume_name</string>
+  </entry>
+  <entry>
+    <string>clockss_override</string>
+    <map>
+      <entry>
+        <string>au_def_pause_time</string>
+        <long>100</long>
+      </entry>
+    </map>
+  </entry>
+</map>

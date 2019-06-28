@@ -118,11 +118,20 @@ public class Pub2WebUrlConsumerFactory implements UrlConsumerFactory {
 	 *
 	 * http://mic.microbiologyresearch.org/deliver/fulltext/micro/164/12/1567_micro000734.pdf?itemId=/content/journal/micro/10.1099/mic.0.000734mimeType=application/pdf
 	 * Certain .PDF urls passed in without "&" in front of "mimeType", still need to handle it in order to avoid multiple copies saved
+	 *
+	 *
+	 * 5/22/2019, the following two URLs points to the same PDF file
+	 * https://mic.microbiologyresearch.org/content/journal/micro/10.1099/00221287-139-1-49?crawler=true&mimetype=application/pdf
+	 * https://mic.microbiologyresearch.org/deliver/fulltext/micro/139/1/mic-139-1-49.pdf?itemId=/content/journal/micro/10.1099/00221287-139-1-49mimeType=application/pdf
+	 * And they all be saved to the final location at:
+	 * https://www.microbiologyresearch.org/docserver/fulltext/micro/139/1/mic-139-1-49.pdf?expires=1558562688&id=id&accname=guest&checksum=C5016D69F74F8B015CB2A6A62134C4F9
 	 */
 	public class Pub2WebUrlConsumer extends HttpToHttpsUrlConsumer {
 
 		public static final String DEL_URL = "deliver/fulltext/";
 		public static final String DEL_ARGS = "\\?itemId=[^&]+(&|&amp;)?mimeType=[^&]+";
+		public static final String DEL_URL2 = "content/journal/";
+		public static final String DEL_ARGS2 = "\\?crawler=true&mimetype=application/pdf";
 		public static final String DOC_URL = "docserver/fulltext/";
 		public static final String DOC_ARGS = "\\?expires=[^&]+(&|&amp;)id=id&accname=[^&]+(&|&amp;)checksum=.+$";
 
@@ -132,10 +141,12 @@ public class Pub2WebUrlConsumerFactory implements UrlConsumerFactory {
 		// docserver/fulltext + argument section with expiration and checksum
 		//"[^?]+" catches the "JID/VOL/ISSUE/ARTID_supp.suff" portion
 		public static final String ORIG_FULLTEXT_STRING = DEL_URL + "[^?]+" + DEL_ARGS; // it has arguments...
+		public static final String ORIG_FULLTEXT_STRING2 = DEL_URL2 + "[^?]+" + DEL_ARGS2; // it has arguments...
 		public static final String DEST_FULLTEXT_STRING = DOC_URL + "[^?]+" + DOC_ARGS;
 
 
 		protected Pattern origFullTextPat = Pattern.compile(ORIG_FULLTEXT_STRING, Pattern.CASE_INSENSITIVE);
+		protected Pattern origFullTextPat2 = Pattern.compile(ORIG_FULLTEXT_STRING2, Pattern.CASE_INSENSITIVE);
 		protected Pattern destFullTextPat = Pattern.compile(DEST_FULLTEXT_STRING, Pattern.CASE_INSENSITIVE);
 
 		public Pub2WebUrlConsumer(CrawlerFacade facade,
@@ -154,7 +165,7 @@ public class Pub2WebUrlConsumerFactory implements UrlConsumerFactory {
 				should =  fud.redirectUrls != null
 						&& fud.redirectUrls.size() >= 1
 						&& destFullTextPat.matcher(fud.fetchUrl).find()
-						&& origFullTextPat.matcher(fud.origUrl).find();
+						&& (origFullTextPat.matcher(fud.origUrl).find() || origFullTextPat2.matcher(fud.origUrl).find());
 						if (!should) {
 							log.debug3("NOT swallowing this pub2web redirect");
 							log.debug3("[orig,fetch] = [" + fud.origUrl + "," + fud.fetchUrl + "]");

@@ -19,13 +19,13 @@
 
       attr[journal_id] = 384
 
-        au < manifest ; 2003 ; Arctic Anthropology Volume 40 [2003] ; 6350 >
-        au < manifest ; 2004 ; Arctic Anthropology Volume 41 [2004] ; 6349 >
-        au < manifest ; 2005 ; Arctic Anthropology Volume 42 [2005] ; 6348 >
-        au < manifest ; 2006 ; Arctic Anthropology Volume 43 [2006] ; 6347 >
-        au < manifest ; 2007 ; Arctic Anthropology Volume 44 [2007] ; 6346 >
-        au < manifest ; 2008 ; Arctic Anthropology Volume 45 [2008] ; 3829 >
-        au < manifest ; 2009 ; Arctic Anthropology Volume 46 [2009] ; 5715 >
+        au < ready ; 2003 ; Arctic Anthropology Volume 40 [2003] ; 6350 >
+        au < ready ; 2004 ; Arctic Anthropology Volume 41 [2004] ; 6349 >
+        au < ready ; 2005 ; Arctic Anthropology Volume 42 [2005] ; 6348 >
+        au < ready ; 2006 ; Arctic Anthropology Volume 43 [2006] ; 6347 >
+        au < ready ; 2007 ; Arctic Anthropology Volume 44 [2007] ; 6346 >
+        au < ready ; 2008 ; Arctic Anthropology Volume 45 [2008] ; 3829 >
+        au < ready ; 2009 ; Arctic Anthropology Volume 46 [2009] ; 5715 >
         au < released ; 2010 ; Arctic Anthropology Volume 47 [2010] ; 6407 >
         au < released ; 2011 ; Arctic Anthropology Volume 48 [2011] ; 7568 >
         au < released ; 2012 ; Arctic Anthropology Volume 49 [2012] ; 8428 >
@@ -64,12 +64,12 @@
 
       attr[journal_id] = 261
 
-        au < manifest ; 2004 ; Contemporary Literature Volume 45 [2004] ; 2523 >
-        au < manifest ; 2005 ; Contemporary Literature Volume 46 [2005] ; 2770 >
-        au < manifest ; 2006 ; Contemporary Literature Volume 47 [2006] ; 3081 >
-        au < manifest ; 2007 ; Contemporary Literature Volume 48 [2007] ; 3374 >
-        au < manifest ; 2008 ; Contemporary Literature Volume 49 [2008] ; 3807 >
-        au < manifest ; 2009 ; Contemporary Literature Volume 50 [2009] ; 4404 >
+        au < ready ; 2004 ; Contemporary Literature Volume 45 [2004] ; 2523 >
+        au < ready ; 2005 ; Contemporary Literature Volume 46 [2005] ; 2770 >
+        au < ready ; 2006 ; Contemporary Literature Volume 47 [2006] ; 3081 >
+        au < ready ; 2007 ; Contemporary Literature Volume 48 [2007] ; 3374 >
+        au < ready ; 2008 ; Contemporary Literature Volume 49 [2008] ; 3807 >
+        au < ready ; 2009 ; Contemporary Literature Volume 50 [2009] ; 4404 >
         au < released ; 2010 ; Contemporary Literature Volume 51 [2010] ; 6386 >
         au < released ; 2011 ; Contemporary Literature Volume 52 [2011] ; 7428 >
         au < released ; 2012 ; Contemporary Literature Volume 53 [2012] ; 8336 >
@@ -134,8 +134,8 @@
 
       attr[journal_id] = 560
 
-        au < manifest ; 2008 ; Land Economics Volume 84 [2008] ; 7538 >
-        au < manifest ; 2009 ; Land Economics Volume 85 [2009] ; 7539 >
+        au < ready ; 2008 ; Land Economics Volume 84 [2008] ; 7538 >
+        au < ready ; 2009 ; Land Economics Volume 85 [2009] ; 7539 >
         au < released ; 2010 ; Land Economics Volume 86 [2010] ; 7540 >
         au < released ; 2011 ; Land Economics Volume 87 [2011] ; 7541 >
         au < released ; 2012 ; Land Economics Volume 88 [2012] ; 7871 >
@@ -182,12 +182,12 @@
 
       attr[journal_id] = 273
 
-        au < manifest ; 2004 ; Luso-Brazilian Review Volume 41 [2004] ; 2577 >
-        au < manifest ; 2005 ; Luso-Brazilian Review Volume 42 [2005] ; 2846 >
-        au < manifest ; 2006 ; Luso-Brazilian Review Volume 43 [2006] ; 3106 >
-        au < manifest ; 2007 ; Luso-Brazilian Review Volume 44 [2007] ; 3441 >
-        au < manifest ; 2008 ; Luso-Brazilian Review Volume 45 [2008] ; 3900 >
-        au < manifest ; 2009 ; Luso-Brazilian Review Volume 46 [2009] ; 4390 >
+        au < ready ; 2004 ; Luso-Brazilian Review Volume 41 [2004] ; 2577 >
+        au < ready ; 2005 ; Luso-Brazilian Review Volume 42 [2005] ; 2846 >
+        au < ready ; 2006 ; Luso-Brazilian Review Volume 43 [2006] ; 3106 >
+        au < ready ; 2007 ; Luso-Brazilian Review Volume 44 [2007] ; 3441 >
+        au < ready ; 2008 ; Luso-Brazilian Review Volume 45 [2008] ; 3900 >
+        au < ready ; 2009 ; Luso-Brazilian Review Volume 46 [2009] ; 4390 >
         au < released ; 2010 ; Luso-Brazilian Review Volume 47 [2010] ; 6384 >
         au < released ; 2011 ; Luso-Brazilian Review Volume 48 [2011] ; 7386 >
         au < released ; 2012 ; Luso-Brazilian Review Volume 49 [2012] ; 8433 >
@@ -211,9 +211,9 @@
 
       attr[journal_id] = 359
 
-        au < manifest ; 2007 ; Monatshefte Volume 99 [2007] ; 3299 >
-        au < manifest ; 2008 ; Monatshefte Volume 100 [2008] ; 3729 >
-        au < manifest ; 2009 ; Monatshefte Volume 101 [2009] ; 4230 >
+        au < ready ; 2007 ; Monatshefte Volume 99 [2007] ; 3299 >
+        au < ready ; 2008 ; Monatshefte Volume 100 [2008] ; 3729 >
+        au < ready ; 2009 ; Monatshefte Volume 101 [2009] ; 4230 >
         au < released ; 2010 ; Monatshefte Volume 102 [2010] ; 5834 >
         au < released ; 2011 ; Monatshefte Volume 103 [2011] ; 6919 >
         au < released ; 2012 ; Monatshefte Volume 104 [2012] ; 8104 >
@@ -235,12 +235,12 @@
 
       attr[journal_id] = 276
 
-        au < manifest ; 2004 ; Native Plants Journal Volume 5 [2004] ; 2508 >
-        au < manifest ; 2005 ; Native Plants Journal Volume 6 [2005] ; 2737 >
-        au < manifest ; 2006 ; Native Plants Journal Volume 7 [2006] ; 3016 >
-        au < manifest ; 2007 ; Native Plants Journal Volume 8 [2007] ; 3308 >
-        au < manifest ; 2008 ; Native Plants Journal Volume 9 [2008] ; 3788 >
-        au < manifest ; 2009 ; Native Plants Journal Volume 10 [2009] ; 4262 >
+        au < ready ; 2004 ; Native Plants Journal Volume 5 [2004] ; 2508 >
+        au < ready ; 2005 ; Native Plants Journal Volume 6 [2005] ; 2737 >
+        au < ready ; 2006 ; Native Plants Journal Volume 7 [2006] ; 3016 >
+        au < ready ; 2007 ; Native Plants Journal Volume 8 [2007] ; 3308 >
+        au < ready ; 2008 ; Native Plants Journal Volume 9 [2008] ; 3788 >
+        au < ready ; 2009 ; Native Plants Journal Volume 10 [2009] ; 4262 >
         au < released ; 2010 ; Native Plants Journal Volume 11 [2010] ; 6169 >
         au < released ; 2011 ; Native Plants Journal Volume 12 [2011] ; 7144 >
         au < released ; 2012 ; Native Plants Journal Volume 13 [2012] ; 8192 >
@@ -264,8 +264,8 @@
 
       attr[journal_id] = 556
 
-        au < manifest ; 2008 ; Journal of Human Resources Volume 43 [2008] ; 7533 >
-        au < manifest ; 2009 ; Journal of Human Resources Volume 44 [2009] ; 7534 >
+        au < ready ; 2008 ; Journal of Human Resources Volume 43 [2008] ; 7533 >
+        au < ready ; 2009 ; Journal of Human Resources Volume 44 [2009] ; 7534 >
         au < released ; 2010 ; Journal of Human Resources Volume 45 [2010] ; 7535 >
         au < released ; 2011 ; Journal of Human Resources Volume 46 [2011] ; 7536 >
         au < released ; 2012 ; Journal of Human Resources Volume 47 [2012] ; 7900 >

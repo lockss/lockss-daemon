@@ -4111,6 +4111,7 @@
     >
     param[base_url] = http://www.rpsjournal.net/
     #param[base_url] = http://rps.mui.ac.ir/index.php/jrps/
+    param[journal_issn] = 1735-5362
     comment[jrps] = the url structure is the new version
 
     au < exists ; 2016 ; Research in Pharmaceutical Sciences Volume 11 ; 2016 ; 11 >

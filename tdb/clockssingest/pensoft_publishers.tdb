@@ -339,7 +339,7 @@
 
       param[au_oai_set] = alpineentomology
 
-      au < crawling ; exists ; 2017 ; 2017 ; Alpine Entomology Volume 2017 ; 2017 ; https://alpineentomology.pensoft.net/ ; >
+      au < frozen ; exists ; 2017 ; 2017 ; Alpine Entomology Volume 2017 ; 2017 ; https://alpineentomology.pensoft.net/ ; >
       au < frozen ; exists ; 2018 ; 2018 ; Alpine Entomology Volume 2018 ; 2018 ; https://alpineentomology.pensoft.net/ ; >
       au < manifest ; exists ; 2019 ; 2019 ; Alpine Entomology Volume 2019 ; 2019 ; https://alpineentomology.pensoft.net/ ; >
 
@@ -371,7 +371,7 @@
       param[au_oai_set] = aca
 
       au < frozen ; exists ; 2018 ; 2018 ; ARPHA Conference Abstracts Volume 2018 ; 2018 ; https://aca.pensoft.net/ ; >
-      au < exists ; exists ; 2019 ; 2019 ; ARPHA Conference Abstracts Volume 2019 ; 2019 ; https://aca.pensoft.net/ ; >
+      au < manifest ; exists ; 2019 ; 2019 ; ARPHA Conference Abstracts Volume 2019 ; 2019 ; https://aca.pensoft.net/ ; >
 
   }
 
@@ -391,7 +391,7 @@
       au < frozen ; exists ; 2015 ; 2015 ; BioDiscovery Volume 2015 ; 2015 ; https://biodiscovery.pensoft.net/ ; >
       au < frozen ; exists ; 2016 ; 2016 ; BioDiscovery Volume 2016 ; 2016 ; https://biodiscovery.pensoft.net/ ; >
       au < frozen ; exists ; 2017 ; 2017 ; BioDiscovery Volume 2017 ; 2017 ; https://biodiscovery.pensoft.net/ ; >
-      au < crawling ; exists ; 2018 ; 2018 ; BioDiscovery Volume 2018 ; 2018 ; https://biodiscovery.pensoft.net/ ; >
+      au < frozen ; exists ; 2018 ; 2018 ; BioDiscovery Volume 2018 ; 2018 ; https://biodiscovery.pensoft.net/ ; >
       au < manifest ; exists ; 2019 ; 2019 ; BioDiscovery Volume 2019 ; 2019 ; https://biodiscovery.pensoft.net/ ; >
 
   }
@@ -407,7 +407,7 @@
       param[au_oai_set] = biss
 
       au < frozen ; exists ; 2018 ; 2018 ; Biodiversity Information Science and Standards Volume 2018 ; 2018 ; https://biss.pensoft.net/ ; >
-      au < exists ; exists ; 2019 ; 2019 ; Biodiversity Information Science and Standards Volume 2019 ; 2019 ; https://biss.pensoft.net/ ; >
+      au < manifest ; exists ; 2019 ; 2019 ; Biodiversity Information Science and Standards Volume 2019 ; 2019 ; https://biss.pensoft.net/ ; >
 
   }
 
@@ -450,7 +450,7 @@
 
       param[au_oai_set] = evolsyst
 
-      au < crawling ; exists ; 2018 ; 2018 ; Evolutionary Systematics Volume 2018 ; 2018 ; https://evolsyst.pensoft.net/ ; >
+      au < frozen ; exists ; 2018 ; 2018 ; Evolutionary Systematics Volume 2018 ; 2018 ; https://evolsyst.pensoft.net/ ; >
       au < manifest ; exists ; 2019 ; 2019 ; Evolutionary Systematics Volume 2019 ; 2019 ; https://evolsyst.pensoft.net/ ; >
 
   }
@@ -480,8 +480,8 @@
 
       param[au_oai_set] = hmj
 
-      au < crawling ; exists ; 2018 ; 2018 ; History of Medicine Volume 2018 ; 2018 ; https://hmj.pensoft.net/ ; >
-      au < exists ; exists ; 2019 ; 2019 ; History of Medicine Volume 2019 ; 2019 ; https://hmj.pensoft.net/ ; >
+      au < frozen ; exists ; 2018 ; 2018 ; History of Medicine Volume 2018 ; 2018 ; https://hmj.pensoft.net/ ; >
+      au < manifest ; exists ; 2019 ; 2019 ; History of Medicine Volume 2019 ; 2019 ; https://hmj.pensoft.net/ ; >
 
   }
 
@@ -496,8 +496,8 @@
 
       param[au_oai_set] = italianbotanist
 
-      au < crawling ; exists ; 2016 ; 2016 ; Italian Botanist Volume 2016 ; 2016 ; https://italianbotanist.pensoft.net/ ; >
-      au < crawling ; exists ; 2017 ; 2017 ; Italian Botanist Volume 2017 ; 2017 ; https://italianbotanist.pensoft.net/ ; >
+      au < frozen ; exists ; 2016 ; 2016 ; Italian Botanist Volume 2016 ; 2016 ; https://italianbotanist.pensoft.net/ ; >
+      au < frozen ; exists ; 2017 ; 2017 ; Italian Botanist Volume 2017 ; 2017 ; https://italianbotanist.pensoft.net/ ; >
       au < frozen ; exists ; 2018 ; 2018 ; Italian Botanist Volume 2018 ; 2018 ; https://italianbotanist.pensoft.net/ ; >
       au < manifest ; exists ; 2019 ; 2019 ; Italian Botanist Volume 2019 ; 2019 ; https://italianbotanist.pensoft.net/ ; >
 
@@ -556,10 +556,10 @@
       param[au_oai_set] = mab
 
       au < frozen ; exists ; 2014 ; 2014 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2014 ; 2014 ; https://mab-online.nl/ ; >
-      au < crawling ; exists ; 2015 ; 2015 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2015 ; 2015 ; https://mab-online.nl/ ; >
+      au < frozen ; exists ; 2015 ; 2015 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2015 ; 2015 ; https://mab-online.nl/ ; >
       au < frozen ; exists ; 2016 ; 2016 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2016 ; 2016 ; https://mab-online.nl/ ; >
-      au < crawling ; exists ; 2017 ; 2017 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2017 ; 2017 ; https://mab-online.nl/ ; >
-      au < crawling ; exists ; 2018 ; 2018 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2018 ; 2018 ; https://mab-online.nl/ ; >
+      au < frozen ; exists ; 2017 ; 2017 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2017 ; 2017 ; https://mab-online.nl/ ; >
+      au < frozen ; exists ; 2018 ; 2018 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2018 ; 2018 ; https://mab-online.nl/ ; >
       au < manifest ; exists ; 2019 ; 2019 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2019 ; 2019 ; https://mab-online.nl/ ; >
 
   }
@@ -639,9 +639,9 @@
       param[au_oai_set] = rio
 
       au < frozen ; exists ; 2015 ; 2015 ; Research Ideas and Outcomes Volume 2015 ; 2015 ; https://riojournal.com/ ; >
-      au < crawling ; exists ; 2016 ; 2016 ; Research Ideas and Outcomes Volume 2016 ; 2016 ; https://riojournal.com/ ; >
+      au < frozen ; exists ; 2016 ; 2016 ; Research Ideas and Outcomes Volume 2016 ; 2016 ; https://riojournal.com/ ; >
       au < frozen ; exists ; 2017 ; 2017 ; Research Ideas and Outcomes Volume 2017 ; 2017 ; https://riojournal.com/ ; >
-      au < crawling ; exists ; 2018 ; 2018 ; Research Ideas and Outcomes Volume 2018 ; 2018 ; https://riojournal.com/ ; >
+      au < frozen ; exists ; 2018 ; 2018 ; Research Ideas and Outcomes Volume 2018 ; 2018 ; https://riojournal.com/ ; >
       au < manifest ; exists ; 2019 ; 2019 ; Research Ideas and Outcomes Volume 2019 ; 2019 ; https://riojournal.com/ ; >
 
   }
@@ -657,9 +657,9 @@
       param[au_oai_set] = rrpharmacology
 
       au < frozen ; exists ; 2015 ; 2015 ; Research results in Pharmacology Volume 2015 ; 2015 ; https://rrpharmacology.pensoft.net/ ; >
-      au < crawling ; exists ; 2016 ; 2016 ; Research results in Pharmacology Volume 2016 ; 2016 ; https://rrpharmacology.pensoft.net/ ; >
+      au < frozen ; exists ; 2016 ; 2016 ; Research results in Pharmacology Volume 2016 ; 2016 ; https://rrpharmacology.pensoft.net/ ; >
       au < frozen ; exists ; 2017 ; 2017 ; Research results in Pharmacology Volume 2017 ; 2017 ; https://rrpharmacology.pensoft.net/ ; >
-      au < manifest ; exists ; 2018 ; 2018 ; Research results in Pharmacology Volume 2018 ; 2018 ; https://rrpharmacology.pensoft.net/ ; >
+      au < frozen ; exists ; 2018 ; 2018 ; Research results in Pharmacology Volume 2018 ; 2018 ; https://rrpharmacology.pensoft.net/ ; >
       au < manifest ; exists ; 2019 ; 2019 ; Research results in Pharmacology Volume 2019 ; 2019 ; https://rrpharmacology.pensoft.net/ ; >
 
   }
@@ -675,7 +675,7 @@
       param[au_oai_set] = rethinkingecology
 
       au < frozen ; exists ; 2016 ; 2016 ; Rethinking Ecology Volume 2016 ; 2016 ; https://rethinkingecology.pensoft.net/ ; >
-      au < crawling ; exists ; 2017 ; 2017 ; Rethinking Ecology Volume 2017 ; 2017 ; https://rethinkingecology.pensoft.net/ ; >
+      au < frozen ; exists ; 2017 ; 2017 ; Rethinking Ecology Volume 2017 ; 2017 ; https://rethinkingecology.pensoft.net/ ; >
       au < frozen ; exists ; 2018 ; 2018 ; Rethinking Ecology Volume 2018 ; 2018 ; https://rethinkingecology.pensoft.net/ ; >
       au < manifest ; exists ; 2019 ; 2019 ; Rethinking Ecology Volume 2019 ; 2019 ; https://rethinkingecology.pensoft.net/ ; >
 

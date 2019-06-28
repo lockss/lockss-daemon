@@ -83,22 +83,22 @@
     {
   
       plugin = org.lockss.plugin.atypon.allenpress.AllenPressJournalsPlugin
-      param[base_url] = http://www.japmaonline.org/
-      implicit < status ; year ; name ; param[volume_name] >
+      #param[base_url] = http://www.japmaonline.org/
+      implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
       # platform Allen Press
       param[journal_id] = apms
       #content available from 1965 volume 55 to 2009 volume 99
 
-      au < doNotProcess ; 2009 ; Journal of the American Podiatric Medical Association Volume 99 ; 99 >
-      au < released ; 2010 ; Journal of the American Podiatric Medical Association Volume 100 ; 100 >
-      au < released ; 2011 ; Journal of the American Podiatric Medical Association Volume 101 ; 101 >
-      au < doNotProcess ; 2012 ; Journal of the American Podiatric Medical Association Volume 102 ; 102 >
-      au < released ; 2013 ; Journal of the American Podiatric Medical Association Volume 103 ; 103 >
-      au < released ; 2014 ; Journal of the American Podiatric Medical Association Volume 104 ; 104 >
-      au < released ; 2015 ; Journal of the American Podiatric Medical Association Volume 105 ; 105 >
-      au < released ; 2016 ; Journal of the American Podiatric Medical Association Volume 106 ; 106 >
-      au < released ; 2017 ; Journal of the American Podiatric Medical Association Volume 107 ; 107 >
-      au < manifest ; 2018 ; Journal of the American Podiatric Medical Association Volume 108 ; 108 >
+      au < doNotProcess ; 2009 ; Journal of the American Podiatric Medical Association Volume 99 ; 99 ; https://www.japmaonline.org/ >
+      au < released ; 2010 ; Journal of the American Podiatric Medical Association Volume 100 ; 100 ; http://www.japmaonline.org/ >
+      au < released ; 2011 ; Journal of the American Podiatric Medical Association Volume 101 ; 101 ; http://www.japmaonline.org/ >
+      au < doNotProcess ; 2012 ; Journal of the American Podiatric Medical Association Volume 102 ; 102 ; https://www.japmaonline.org/ >
+      au < released ; 2013 ; Journal of the American Podiatric Medical Association Volume 103 ; 103 ; http://www.japmaonline.org/ >
+      au < released ; 2014 ; Journal of the American Podiatric Medical Association Volume 104 ; 104 ; http://www.japmaonline.org/ >
+      au < released ; 2015 ; Journal of the American Podiatric Medical Association Volume 105 ; 105 ; http://www.japmaonline.org/ >
+      au < released ; 2016 ; Journal of the American Podiatric Medical Association Volume 106 ; 106 ; http://www.japmaonline.org/ >
+      au < released ; 2017 ; Journal of the American Podiatric Medical Association Volume 107 ; 107 ; http://www.japmaonline.org/ >
+      au < testing ; 2018 ; Journal of the American Podiatric Medical Association Volume 108 ; 108 ; https://www.japmaonline.org/ >
 
     }
 

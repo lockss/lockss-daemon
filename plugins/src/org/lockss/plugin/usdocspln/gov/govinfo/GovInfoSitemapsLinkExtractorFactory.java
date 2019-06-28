@@ -34,6 +34,7 @@ package org.lockss.plugin.usdocspln.gov.govinfo;
 
 import java.io.*;
 import java.net.*;
+import java.util.ArrayList;
 
 import javax.xml.parsers.*;
 
@@ -46,7 +47,7 @@ import org.xml.sax.*;
 public class GovInfoSitemapsLinkExtractorFactory implements LinkExtractorFactory {
 
   protected static Logger log = Logger.getLogger(GovInfoSitemapsLinkExtractorFactory.class);
-  
+
   protected static class NoNeedToContinueException extends SAXException {
     
     public NoNeedToContinueException() {
@@ -180,10 +181,23 @@ public class GovInfoSitemapsLinkExtractorFactory implements LinkExtractorFactory
       
       // Parse document; may bail early with custom NoNeedToContinueException
       try {
+        log.debug3("srcUrl: " + srcUrl);
         saxParser.parse(inputSource, new SitemapsHandler(new URL(srcUrl), 
             new Callback() {
           @Override
           public void foundLink(String url) {
+            log.debug3("foundLink : " + url);
+            //create "contextUrl" by appending "/context" to this link:
+            //https://www.govinfo.gov/app/details/USCOURTS-akd-1_13-cv-00005
+            //https://www.govinfo.gov/app/details/USCOURTS-akd-1_13-cv-00005/context
+            //https://www.govinfo.gov/app/details/USCOURTS-akd-1_13-cv-00005 is default as the summary page
+            //https://www.govinfo.gov/app/details/DCPD-201800001/context
+            //https://www.govinfo.gov/app/details/CHRG-115shrg89104818/context
+            if (url.indexOf("app/details/") > -1 && (url.indexOf("context") == -1) && (url.indexOf("summary") == -1)) {
+              url  += "/context";
+              log.debug3("Context PDF File Context Landing Page Url: " + url);
+            }
+            log.debug3("Govinfo Url: " + url);
             cb.foundLink(url);
           }
       }));

@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>31</string>
+    <string>32</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -17,7 +17,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>31</string>
+    <string>32</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -26,6 +26,10 @@
   <entry>
     <string>au_name</string>
     <string>"Oxford University Press Plugin (CLOCKSS), Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
+  </entry>
+  <entry>
+    <string>application/pdf_filter_factory</string>
+    <string>org.lockss.plugin.silverchair.BaseScPageCountPdfFilterFactory</string>
   </entry>
   <entry>
     <string>clockss_override</string>

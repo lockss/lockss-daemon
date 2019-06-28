@@ -1,7 +1,7 @@
 {
 
   publisher <
-    name = Test Publisher ;
+    name = Code Ocean ; #publisher will get set by plugin for metadata
     info[contract] = 2018 ;
     info[tester] = S
   >
@@ -13,12 +13,12 @@
     >
     provider = Code Ocean
     plugin = org.lockss.plugin.clockss.codeocean.ClockssCodeOceanSourcePlugin
-    param[base_url] = http://clockss-ingest.clockss.org/sourcefiles/code-ocean-released/
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/code-ocean-released/
     
     hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[directory] >
 
-    au < exists ; exists ; 2019 ; Code Ocean Source Content 2019 ; 2019 >
+    au < readySource ; crawling ; 2019 ; Code Ocean Source Content 2019 ; 2019 >
 
   }
 

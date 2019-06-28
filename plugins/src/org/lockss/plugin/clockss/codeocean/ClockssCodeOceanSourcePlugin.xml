@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>development</string>
+    <string>ready</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>6</string>
   </entry>
   <entry>
   <!--  metadata support for ARTICLE_TYPE_FILE -->
@@ -45,7 +45,7 @@
     <string>plugin_name</string>
     <string>Code Ocean Source Plugin (CLOCKSS)</string>
   </entry>
-<!-- pulling metadata.yml from archive -->
+<!-- preservation.yml is not in the archive, no need to unpack -->
  <entry>
     <string>plugin_archive_file_types</string>
     <string>standard</string>
@@ -59,12 +59,37 @@
     </list>
   </entry>
   <entry>
+    <string>au_url_mime_type</string>
+    <list>
+      <string>.*\.yml$, text/plain</string>
+    </list>
+  </entry>
+  <entry>
   <!--  we are simply counting the delivered zip items without looking inside them -->
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.clockss.codeocean.CodeOceanArticleIteratorFactory</string>
-  </entry>
+  </entry>  
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.clockss.codeocean.CodeOceanArticleIteratorFactory</string>
   </entry>
+    <entry>
+    <string>text/plain_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.clockss.codeocean.AdHocYamlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <!--  protect against an unknown future -->
+  <entry>
+    <string>text/x-yaml_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.clockss.codeocean.AdHocYamlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>   
 </map>    

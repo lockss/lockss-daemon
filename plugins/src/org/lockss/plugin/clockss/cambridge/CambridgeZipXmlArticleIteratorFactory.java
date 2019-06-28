@@ -51,8 +51,18 @@ public class CambridgeZipXmlArticleIteratorFactory implements ArticleIteratorFac
   // ROOT_TEMPLATE doesn't need to be defined as sub-tree is entire tree under base/year
   
   // For Cambridge, we only want to iterate on the blahblah/12345h.(sgm|xml) files, not the 12345w.xmlfiles
-  protected static final String ONLY_H_XML_OR_SGM_TEMPLATE =
-      "\"%s%d/.*\\.zip!/.*h\\.(xml|sgm)$\", base_url, year";
+  /*July 2019 - delivery source and format changed slightly. 
+  * Previously it was
+  *   fooa.pdf, (fooh.xml and foow.xml) or fooh.sgm  - we trapped on the xxxh.(sgm|xml) and ignored xxxw.xml
+  * now it's only 
+  *   fooa.pdf and foo.xml
+  * Making the plugin work forwards and backwards compatibility 
+  * The JATS schema was also updated and the internal layout changed - no more subdirectories but these 
+  * changes should be transparent
+  */
+  
+  protected static final String ONLY_PLAIN_OR_H_XML_OR_SGM_TEMPLATE =
+      "\"%s%d/.*\\.zip!/(?!.*w\\.(xml|sgm)).*\\.(xml|sgm)$\", base_url, year";
 
   // Be sure to exclude all nested archives in case supplemental data is provided this way
   protected static final Pattern NESTED_ARCHIVE_PATTERN = 
@@ -72,7 +82,7 @@ public class CambridgeZipXmlArticleIteratorFactory implements ArticleIteratorFac
     // no need to limit to ROOT_TEMPLATE
     builder.setSpec(builder.newSpec()
                     .setTarget(target)
-                    .setPatternTemplate(ONLY_H_XML_OR_SGM_TEMPLATE, Pattern.CASE_INSENSITIVE)
+                    .setPatternTemplate(ONLY_PLAIN_OR_H_XML_OR_SGM_TEMPLATE, Pattern.CASE_INSENSITIVE)
                     .setExcludeSubTreePattern(NESTED_ARCHIVE_PATTERN)
                     .setVisitArchiveMembers(true)); // to be able to see what is in zip
     

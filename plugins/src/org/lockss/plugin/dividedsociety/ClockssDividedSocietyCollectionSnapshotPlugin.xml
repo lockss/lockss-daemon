@@ -1,0 +1,187 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>ready</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.dividedsociety.ClockssDividedSocietyCollectionSnapshotPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>7</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Divided Society Collection Snapshot Plugin (CLOCKSS)</string>
+  </entry>
+  <!-- While not file-transfer, this is a single point in time collection of all content associated with a title  -->
+  <entry>
+    <string>plugin_bulk_content</string>
+    <boolean>true</boolean>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>collection_id</key>
+        <displayName>Collection Identifier</displayName>
+        <description>A short code identifying the top-level collection, eg posters, essays. Case-sensitive.</description>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Divided Society Collection Snapshot Plugin (CLOCKSS), Base URL %s, Collection %s", base_url, collection_id</string>
+  </entry>
+  <entry>
+    <string>au_permission_url</string>
+    <string>"http://clockss-ingest.lockss.org/clockss.txt"</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <list>
+      <string>"https://www.dividedsociety.org/4e566d92-3778-41c0-b7d7-c9fe7bd71aa9/ip_access"</string>
+      <string>"%sarchive/journals", base_url</string>
+    </list>
+  </entry>
+  <entry>
+	<!--  use the second start_url, not the first -->
+    <string>plugin_access_url_factory</string>
+    <string>org.lockss.plugin.dividedsociety.DividedSocietyFeatureUrlHelperFactory</string>
+  </entry>
+  <entry>
+    <string>au_feature_urls</string>
+    <map>
+      <entry>
+      <!--  we don't want this to default to start_url because we need to access a specific title-->
+        <string>au_title</string>
+        <string>org.lockss.plugin.dividedsociety.DividedSocietyFeatureUrlHelperFactory</string>
+      </entry>
+    </map>
+  </entry>  
+  <entry>
+    <string>clockss_override</string>
+    <map>
+      <entry>
+        <string>au_def_pause_time</string>
+        <long>100</long>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <!-- manifest to issue to articles -->
+    <string>au_refetch_depth</string>
+    <int>2</int>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>  
+    <list>
+      <string>2,"^%s(about|accessibility|advanced-search|bookmarks|contact|faqs|flag|privacy-policy|topics|search|node|subscribe|explore)", base_url</string>
+      <string>2,"^%sjournals/[0-9]+$", base_url</string>
+      <string>2,"^%sjournals\?combine=", base_url</string>
+      <!-- Way too many search combinatorials to allow them to get collected as access in to posters -->
+      <!--  https://www.dividedsociety.org/posters?f%5B0%5D=people_posters%3AGerry%20Adams...with other options -->
+      <!--  %% to get a % in a regex string -->
+      <string>2,"^%s%s\?f%%5B0%%5D", base_url, collection_id</string>
+      <!--  we need to come in through a specific url to redirect in order to gain a session cookie -->
+      <!-- https://www.dividedsociety.org/4e566d92-3778-41c0-b7d7-c9fe7bd71aa9/ip_access redirects to:
+        https://www.dividedsociety.org/user which goes to
+        https://www.dividedsociety.org/user/9742 -->
+      <string>1,"^%sarchive/4e566d92-3778-41c0-b7d7-c9fe7bd71aa9/ip_access", base_url</string>
+      <string>1,"^%suser$", base_url</string> 
+      <string>1,"^%suser/[0-9]+$", base_url</string>
+      <string>1,"^%s%s", base_url, collection_id</string>
+      <string>1,"^%s(core|libraries|themes|sites)/", base_url</string>
+      <string>1,"^https?://((fonts|ajax)\.googleapis\.com)/"</string>
+      <string>1,"^https?://fonts\.gstatic\.com/.*\.ttf$"</string>
+      <string>1,"https://static.addtoany.com/.*\.js"</string>
+      <string>1,"https://ds360.co/.*\.js"</string>
+      <string>1,"https://dl.dropboxusercontent.com/.*\.(pdf|jpe?g|png|mp3)"</string>
+    </list>
+  </entry>
+<!--  pick up <source src=xxx audio files -->
+  <entry>
+    <string>text/html_link_extractor_factory</string>
+    <string>org.lockss.plugin.dividedsociety.DividedSocietyLinkExtractorFactory</string>  
+  </entry>
+  <entry>
+   <string>au_url_normalizer</string>
+  <string>org.lockss.plugin.dividedsociety.DividedSocietyUrlNormalizer</string>
+  </entry> 
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.dividedsociety.DividedSocietyCollectionArticleIteratorFactory</string>
+  </entry> 
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.dividedsociety.DividedSocietyCollectionArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.dividedsociety.DividedSocietyHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>  
+  <entry>
+    <string>au_repair_from_peer_if_missing_url_pattern</string>
+    <list>
+      <string>.+[.](bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)(\?.*)?$"</string>
+    </list>
+  </entry>
+  <entry>
+    <!-- these will not count towards poll results but will replicate from peer if above -->
+    <string>au_url_poll_result_weight</string>
+    <list>
+      <string>".+[.](bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)(\?.*)?$", 0</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_permitted_host_pattern</string>
+    <list>
+      <!--All their pdf files are saved on dropbox-->
+      <!--https://www.dividedsociety.org/journals/breadline-news/issue-june-1993/sacked has its pdf file
+      at https://dl.dropboxusercontent.com/s/vwoftqe1hx9pi1u/bre_001_001.pdf-->
+      <string>"dl\.dropboxusercontent\.com"</string>
+      <string>(fonts|ajax)\.googleapis\.com</string>
+      <string>"fonts\.gstatic\.com"</string>
+      <string>"static\.addtoany\.com"</string>
+      <string>"ds360\.co"</string>
+      <!--  special case to allow one time collection with our own permission -->
+      <string>"www\.dividedsociety\.org"</string>
+    </list>
+  </entry>
+</map>    

@@ -86,6 +86,7 @@
       issnl = 1942-535X
     >
     param[journal_issn] = 1942-535X
+    #continued_by = 2640-9976
 
     au < manifest ; exists ; 2009 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 1 ; 1 ; https://www.igi-global.com/ ; > 
     au < finished ; crawling ; 2010 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 2 ; 2 ; http://www.igi-global.com/ ; > 
@@ -96,8 +97,21 @@
     au < finished ; finished ; 2015 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 7 ; 7 ; http://www.igi-global.com/ ; reingest5.clockss.org:8082 > 
     au < deepCrawl ; exists ; 2016 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 8 ; 8 ; http://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2017 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 9 ; 9 ; http://www.igi-global.com/ ; > 
-    au < expected ; exists ; 2018 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 10 ; 10 ; https://www.igi-global.com/ ; > 
-    au < expected ; exists ; 2019 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 11 ; 11 ; https://www.igi-global.com/ ; > 
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Technological Innovation and Social Dynamics (IJTISD) ;
+      issn = 2640-9976 ;
+      eissn = 2640-9984 ;
+      issnl = 2640-9976
+    >
+    param[journal_issn] = 2640-9976
+    #continues = 1942-535X & 2155-6334
+
+    au < expected ; exists ; 2019 ; International Journal of Technological Innovation and Social Dynamics (IJTISD) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
 
   }
 
@@ -1114,7 +1128,7 @@
     au < finished ; finished ; 2015 ; International Journal of e-Collaboration (IJeC) Volume 11 ; 11 ; http://www.igi-global.com/ ; reingest4.clockss.org:8082 > 
     au < deepCrawl ; exists ; 2016 ; International Journal of e-Collaboration (IJeC) Volume 12 ; 12 ; http://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2017 ; International Journal of e-Collaboration (IJeC) Volume 13 ; 13 ; http://www.igi-global.com/ ; > 
-    au < expected ; exists ; 2018 ; International Journal of e-Collaboration (IJeC) Volume 14 ; 14 ; https://www.igi-global.com/ ; > 
+    au < manifest ; exists ; 2018 ; International Journal of e-Collaboration (IJeC) Volume 14 ; 14 ; https://www.igi-global.com/ ; >
     au < expected ; exists ; 2019 ; International Journal of e-Collaboration (IJeC) Volume 15 ; 15 ; https://www.igi-global.com/ ; > 
 
   }
@@ -1188,7 +1202,7 @@
     au < deepCrawl ; exists ; 2016 ; International Journal of Electronic Government Research (IJEGR) Volume 12 ; 12 ; http://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2017 ; International Journal of Electronic Government Research (IJEGR) Volume 13 ; 13 ; http://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2018 ; International Journal of Electronic Government Research (IJEGR) Volume 14 ; 14 ; https://www.igi-global.com/ ; >
-    au < expected ; exists ; 2019 ; International Journal of Electronic Government Research (IJEGR) Volume 15 ; 15 ; https://www.igi-global.com/ ; >
+    au < manifest ; exists ; 2019 ; International Journal of Electronic Government Research (IJEGR) Volume 15 ; 15 ; https://www.igi-global.com/ ; >
 
   }
 
@@ -1502,7 +1516,7 @@
     param[journal_issn] = 2640-4249
     #continues = 1947-9158
 
-    au < crawling ; exists ; 2018 ; International Journal of Mobile Devices, Wearable Technology, and Flexible Electronics (IJMDWTFE) Volume 9 ; 9 ; https://www.igi-global.com/ ; >
+    au < frozen ; exists ; 2018 ; International Journal of Mobile Devices, Wearable Technology, and Flexible Electronics (IJMDWTFE) Volume 9 ; 9 ; https://www.igi-global.com/ ; >
     au < expected ; exists ; 2019 ; International Journal of Mobile Devices, Wearable Technology, and Flexible Electronics (IJMDWTFE) Volume 10 ; 10 ; https://www.igi-global.com/ ; >
 
   }
@@ -2308,7 +2322,7 @@
       issnl = 2640-4079
     >
     param[journal_issn] = 2640-4079
-    #continues = 1947-8534
+    #continues = 2166-7241
 
     au < expected ; exists ; 2018 ; International Journal of Applied Research on Smart Surveillance Technologies and Society (IJARSSTS) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
     au < expected ; exists ; 2019 ; International Journal of Applied Research on Smart Surveillance Technologies and Society (IJARSSTS) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
@@ -2334,7 +2348,7 @@
     au < deepCrawl ; exists ; 2016 ; International Journal of Multimedia Data Engineering and Management (IJMDEM) Volume 7 ; 7 ; http://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2017 ; International Journal of Multimedia Data Engineering and Management (IJMDEM) Volume 8 ; 8 ; http://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2018 ; International Journal of Multimedia Data Engineering and Management (IJMDEM) Volume 9 ; 9 ; https://www.igi-global.com/ ; > 
-    au < expected ; exists ; 2019 ; International Journal of Multimedia Data Engineering and Management (IJMDEM) Volume 10 ; 10 ; https://www.igi-global.com/ ; > 
+    au < manifest ; exists ; 2019 ; International Journal of Multimedia Data Engineering and Management (IJMDEM) Volume 10 ; 10 ; https://www.igi-global.com/ ; > 
 
   }
 
@@ -2517,9 +2531,9 @@
     >
 
     param[journal_issn] = 2640-4109
-    #continues = 2155-5621
+    #continues = 2156-1796
 
-    au < crawling ; exists ; 2018 ; International Journal of End-User Computing and Development (IJEUCD) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
+    au < frozen ; exists ; 2018 ; International Journal of End-User Computing and Development (IJEUCD) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
     au < expected ; exists ; 2019 ; International Journal of End-User Computing and Development (IJEUCD) Volume 8 ; 8 ; https://www.igi-global.com/ ; >
 
   }
@@ -2593,6 +2607,7 @@
       issnl = 2155-496X
     >
     param[journal_issn] = 2155-496X
+    #continued_by = 2641-0923
 
     au < finished ; crawling ; 2011 ; International Journal of Quality Assurance in Engineering and Technology Education (IJQAETE) Volume 1 ; 1 ; http://www.igi-global.com/ ; > 
     au < finished ; crawling ; 2012 ; International Journal of Quality Assurance in Engineering and Technology Education (IJQAETE) Volume 2 ; 2 ; http://www.igi-global.com/ ; > 
@@ -2600,8 +2615,22 @@
     au < frozen ; exists ; 2015 ; International Journal of Quality Assurance in Engineering and Technology Education (IJQAETE) Volume 4 ; 4 ; http://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2016 ; International Journal of Quality Assurance in Engineering and Technology Education (IJQAETE) Volume 5 ; 5 ; http://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2017 ; International Journal of Quality Assurance in Engineering and Technology Education (IJQAETE) Volume 6 ; 6 ; http://www.igi-global.com/ ; > 
-    au < expected ; exists ; 2018 ; International Journal of Quality Assurance in Engineering and Technology Education (IJQAETE) Volume 7 ; 7 ; https://www.igi-global.com/ ; > 
-    au < expected ; exists ; 2019 ; International Journal of Quality Assurance in Engineering and Technology Education (IJQAETE) Volume 8 ; 8 ; https://www.igi-global.com/ ; > 
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Quality Control and Standards in Science and Engineering (IJQCSSE) ;
+      issn = 2641-0923 ;
+      eissn = 2641-0931 ;
+      issnl = 2641-0923
+    >
+    param[journal_issn] = 2641-0923
+    #continues = 2155-496X
+
+    au < expected ; exists ; 2018 ; International Journal of Quality Control and Standards in Science and Engineering (IJQCSSE) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
+    au < expected ; exists ; 2019 ; International Journal of Quality Control and Standards in Science and Engineering (IJQCSSE) Volume 8 ; 8 ; https://www.igi-global.com/ ; >
 
   }
 
@@ -2698,7 +2727,7 @@
       issnl = 2640-4265
     >
     param[journal_issn] = 2640-4265
-    #continues = 1947-959X
+    #continues = 1947-3036
 
     au < notReady ; exists ; 2018 ; International Journal of Systems and Software Security and Protection (IJSSSP) Volume 9 ; 9 ; https://www.igi-global.com/ ; > #incorrect article count
     au < expected ; exists ; 2019 ; International Journal of Systems and Software Security and Protection (IJSSSP) Volume 10 ; 10 ; https://www.igi-global.com/ ; >
@@ -2756,6 +2785,7 @@
       issnl = 2155-6334
     >
     param[journal_issn] = 2155-6334
+     #continued_by = 2640-9976
 
     au < finished ; crawling ; 2011 ; International Journal of Social and Organizational Dynamics in IT (IJSODIT) Volume 1 ; 1 ; http://www.igi-global.com/ ; > 
     au < finished ; crawling ; 2012 ; International Journal of Social and Organizational Dynamics in IT (IJSODIT) Volume 2 ; 2 ; http://www.igi-global.com/ ; > 
@@ -2763,8 +2793,6 @@
     au < finished ; finished ; 2015 ; International Journal of Social and Organizational Dynamics in IT (IJSODIT) Volume 4 ; 4 ; http://www.igi-global.com/ ; reingest3.clockss.org:8083 > 
     au < deepCrawl ; exists ; 2016 ; International Journal of Social and Organizational Dynamics in IT (IJSODIT) Volume 5 ; 5 ; http://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2017 ; International Journal of Social and Organizational Dynamics in IT (IJSODIT) Volume 6 ; 6 ; http://www.igi-global.com/ ; > 
-    au < expected ; exists ; 2018 ; International Journal of Social and Organizational Dynamics in IT (IJSODIT) Volume 7 ; 7 ; https://www.igi-global.com/ ; > 
-    au < expected ; exists ; 2019 ; International Journal of Social and Organizational Dynamics in IT (IJSODIT) Volume 8 ; 8 ; https://www.igi-global.com/ ; > 
 
   }
 
@@ -3435,7 +3463,7 @@
     au < deepCrawl ; exists ; 2016 ; Journal of Database Management (JDM) Volume 27 ; 27 ; http://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2017 ; Journal of Database Management (JDM) Volume 28 ; 28 ; http://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2018 ; Journal of Database Management (JDM) Volume 29 ; 29 ; https://www.igi-global.com/ ; > 
-    au < expected ; exists ; 2019 ; Journal of Database Management (JDM) Volume 30 ; 30 ; https://www.igi-global.com/ ; > 
+    au < manifest ; exists ; 2019 ; Journal of Database Management (JDM) Volume 30 ; 30 ; https://www.igi-global.com/ ; > 
 
   }
 

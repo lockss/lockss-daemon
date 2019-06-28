@@ -1,0 +1,34 @@
+Court website is handled differently from govinfo by the following means:
+
+      sitemap: https://www.govinfo.gov/sitemap/USCOURTS/USCOURTS_akd_2014_sitemap.xml
+
+      au < manifest ; 2014 ; USCOURTS_akd 2014 ; USCOURTS ; akd ; 2014 >
+      https://www.govinfo.gov/sitemap/USCOURTS/USCOURTS_akd_2014_sitemap.xml
+
+      https://www.govinfo.gov/app/details/USCOURTS-akd-3_08-cv-00162
+      https://www.govinfo.gov/content/pkg/USCOURTS-akd-1_06-cv-00009.zip
+      https://www.govinfo.gov/metadata/pkg/USCOURTS-akd-1_06-cv-00009/mods.xml
+      https://www.govinfo.gov/metadata/pkg/USCOURTS-akd-1_06-cv-00009/premis.xml
+
+
+Let's use count_id("akd") as an example:
+    1.  The sitemap uses "_" between "USCOURTS" and "akd"
+    2.  Other urls uses "-" between "USCOURTS" and "akd"
+    3.  PDF file is accessed by the following method:
+===========================================================
+USCOURTS is arranged in a similar manner as the CHRG collection – at the package level, there are no pdfs, but there are granules underneath that do include them. In the example below, the individual court opinion pdf can be found on the second link you provided below. There is a -0 appended to the packageID listed in the sitemap details link in the case of the link you provided. For additional examples on the url patterns, please see https://www.govinfo.gov/help/uscourts#urls
+
+
+You can see the total list of granules for the package available here:
+https://www.govinfo.gov/app/details/USCOURTS-akd-1_13-cv-00010/context
+
+It may make sense to look at crawling the /context versions of the details pages in order to get the pdf/text/other content formats of the individual granules (or to identify which granule detail pages you need to crawl as well – noting that the granule detail pages will repeat the package-level premis and zip file links although they have distinct mods files (the data in the granule mods file is contained within the package level mods as well, but the granule-level is specific to that smaller chunk of the package)
+
+Of course, the zip file does include the package- and granule-level content files.
+
+A similar CHRG example with a single granule (part) is:
+
+https://www.govinfo.gov/app/details/CHRG-116hhrg34926/summary
+
+Here is an example of a CHRG package with multiple granules/parts:
+https://www.govinfo.gov/app/details/CHRG-115hhrg24725/context

@@ -14,7 +14,7 @@ mkdir -p $tpath
   ls tdb/clockssingest | grep .tdb > $tpath/clocksslist
   diff $tpath/glnlist $tpath/clocksslist | grep "< " | sed 's/..//' > $tpath/notclockss
   echo "american_medical_association.tdb" >> $tpath/notclockss
-  echo "purdue_university_press.tdb" >> $tpath/notclockss
+  #echo "purdue_university_press.tdb" >> $tpath/notclockss
   echo "centro_de_filosofia_da_universidade_de_lisboa.tdb" >> $tpath/notclockss
   diff $tpath/glnlist $tpath/notclockss | grep "< " | sed 's/..//' > $tpath/glnAndclockss
 

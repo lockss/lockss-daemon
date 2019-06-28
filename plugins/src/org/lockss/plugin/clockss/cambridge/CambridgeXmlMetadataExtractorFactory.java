@@ -122,8 +122,13 @@ public class CambridgeXmlMetadataExtractorFactory extends SourceXmlMetadataExtra
         ArticleMetadata oneAM) {
 
       String url_string = cu.getUrl();
-      //remove "h.xml" and replace with "a.pdf"
-      String pdfName = url_string.substring(0,url_string.length() - 5) + "a.pdf";
+      //remove "h.xml" and replace with "a.pdf" if there is an "h" before the .xml
+      //just swap the ".xml" for "a.pdf" if there is no h
+      int remove_count = 4;
+      if (url_string.endsWith("h.xml")) {
+    	  remove_count = 5;
+      }
+      String pdfName = url_string.substring(0,url_string.length() - remove_count) + "a.pdf";
       log.debug3("pdfName is " + pdfName);
       List<String> returnList = new ArrayList<String>();
       returnList.add(pdfName);
