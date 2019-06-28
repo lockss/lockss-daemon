@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -136,6 +136,8 @@
     <string>au_url_poll_result_weight</string>
     <list>
       <string>".+[.](bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)(\?.*)?$", 0</string>
+      <!--  do not replicate, just don't count in poll; it's a frame for the epub viewer and hashes to zero -->
+      <string>"^%sepubs/[^/]+$", base_url, 0</string>
     </list>
   </entry>
   <!--  tell the default base.MimeTypeContentValidator what url patterns to validate by mime type -->

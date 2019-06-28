@@ -55,10 +55,7 @@ public class UMichHtmlHashFilterFactory implements FilterFactory {
     NodeFilter[] includeNodes = new NodeFilter[] {
     		// on an asset page or book landing page, just the description and bibliographic info
             HtmlNodeFilters.tagWithAttributeRegex("div", "id", "maincontent"),
-            // https://www.fulcrum.org/epubs/bz60cx371
-            // on the epub relowable viewer page, it's all pretty much script but we don't want to ignore it
-            // because each book has different downloadable links
-            HtmlNodeFilters.tagWithAttributeRegex("div", "id", "ebpub"),
+            // https://www.fulcrum.org/epubs/bz60cx371 - is set to poll weight zero
 
     };
 
