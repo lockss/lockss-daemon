@@ -531,6 +531,7 @@
     au < finished ; crawling ; 2019 ; Wright View, The ; 28278 ; wright-view ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; Xpress, The ; 28257 ; xpress ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2019 ; Youth against the war ; 45908 ; youth-against-war ; reingest5.clockss.org:8082 >
+    # This was a one-time collection. We will not process anything else
   }
 
   #Very little bibliographic information available - get the content preserved
@@ -549,7 +550,7 @@
     au < finished ; crawling ; 2019 ; Divided Society Posters Collection ; posters ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2019 ; Divided Society Essays Collection ; essays ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; Divided Society Outreach Collection ; outreach ; reingest2.clockss.org:8085 >
-
+    # This was a one-time collection. We will not process anything else
    } 
 
 }
