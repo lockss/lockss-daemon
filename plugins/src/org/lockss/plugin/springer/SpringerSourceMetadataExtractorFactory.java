@@ -96,16 +96,20 @@ public class SpringerSourceMetadataExtractorFactory
             }
             return booksHelper;
           } else if ("Journal".equals(nodeName)) {
-            if(journalHelper == null) {
-              journalHelper = new SpringerJournalSourceSchemaHelper();
-            }
-            return journalHelper;
+          	if(journalHelper == null) {
+           	 journalHelper = new SpringerJournalSourceSchemaHelper();
+           	}
+           	return journalHelper;
           }
         }
       }
-      // the only way you get here is if you could not figure out which
-      // schema to use
-      throw new ShouldNotHappenException("This does not match expected schema");
+      // if we return null this will throw and the whole AU indexing will fail...
+      // which is excessive. Just log a problem, use the journal helper and keep going
+      log.warning("The xml didn't match expected schema: " + cu.getUrl());
+      if(journalHelper == null) {
+    	 journalHelper = new SpringerJournalSourceSchemaHelper();
+      }
+      return journalHelper;
     }
 
     
