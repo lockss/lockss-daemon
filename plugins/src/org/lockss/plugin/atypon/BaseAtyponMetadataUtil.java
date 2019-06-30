@@ -111,7 +111,7 @@ public class BaseAtyponMetadataUtil {
         }
       } else if (foundISSN != null) {
         // there wasn't an EISSN, so let's check the ISSN
-        if (!(foundISSN.equals(AU_ISSN) || foundEISSN.equals(AU_EISSN)) ) {
+        if (!(foundISSN.equals(AU_ISSN) || foundISSN.equals(AU_EISSN)) ) {
           return false;
         }
       }
