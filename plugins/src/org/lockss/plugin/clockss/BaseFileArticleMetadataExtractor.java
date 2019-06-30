@@ -308,6 +308,8 @@ import org.lockss.util.Logger;
 	 */
 	protected String getFileMime(CachedUrl cu) {
 		String content_mime = cu.getContentType();
+		// needed after the getContentType
+		AuUtil.safeRelease(cu);
 		return content_mime;
 		
 	}
