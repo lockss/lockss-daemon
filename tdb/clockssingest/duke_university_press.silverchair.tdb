@@ -1,0 +1,612 @@
+{
+
+  publisher <
+    name = Duke University Press ;
+    info[contract] = 2012 ;
+    info[back] = 2000 ;
+    info[tester] = 5 ;
+    info[poller] = 6
+  >
+    plugin = org.lockss.plugin.silverchair.dup.ClockssDupSilverchairPlugin
+    implicit < status ; status2 ; year ; param[year] ; name ; volume ; hidden[proxy] >
+    param[base_url] = https://read.dukeupress.edu/
+    
+    #IN PROGRESS - VOLUMES ARE NOT CORRECT - PLACEHOLDER by aro for development
+
+  {
+
+    title <
+      name = American Literary Scholarship ;
+      issn = 0065-9142 ;
+      eissn = 1527-2125 ;
+      issnl = 0065-9142
+    >
+      au < exists ; exists ; 2018 ; 2018 ;  American Literary Scholarship 2018 ; 2018 ; >
+  }
+
+  {
+
+    title <
+      name = American Literature ;
+      issn = 0002-9831 ;
+      eissn = 1527-2117 ;
+      issnl = 0002-9831
+    >
+      au < exists ; exists ; 2018 ; 2018 ;  American Literature Volume 90 ; 90 ; >
+  }
+
+  {
+
+    title <
+      name = American Speech ;
+      issn = 0003-1283 ;
+      eissn = 1527-2133 ;
+      issnl = 0003-1283
+    >
+      au < exists ; exists ; 2018 ; 2018 ;  American Speech Volume 93 ; 93 ; >
+  }
+
+  {
+
+     title <
+      name = boundary 2 ;
+      issn = 0190-3659 ;
+      eissn = 1527-2141 ;
+      issnl = 0190-3659
+    >
+      au < exists ; exists ; 2018 ; 2018 ;  boundary 2 Volume 45 ; 45 ; >
+  }
+
+  {
+
+    title <
+      name = Camera Obscura: Feminism, Culture, and Media Studies ;
+      issn = 0270-5346 ;
+      eissn = 1529-1510 ;
+      issnl = 0270-5346
+    >
+
+      au < exists ; exists ; 2018 ; 2018 ;  Camera Obscura: Feminism, Culture, and Media Studies Volume 33 ; 33 ; >
+
+  }
+
+  {
+
+    title <
+      name = The Carlyle Letters Online ;
+      issn = 1532-0928 ;
+      eissn = 1940-1795 ;
+      issnl = 0002-9831
+    >
+  }
+
+  {
+
+    title <
+      name = Common Knowledge ;
+      issn = 0961-754X ;
+      eissn = 1538-4578 ;
+      issnl = 0961-754X
+    >
+      au < exists ; exists ; 2018 ; 2018 ;  Common Knowledge Volume 23 ; 23 ; >
+  }
+
+  {
+
+    title <
+      name = Comparative Literature ;
+      issn = 0010-4124 ;
+      eissn = 1945-8517 ;
+      issnl = 0010-4124
+    >
+      au < exists ; exists ; 2018 ; 2018 ;  Comparative Literature Volume 69 ; 69 ; >
+  }
+
+  {
+
+    title <
+      name = Comparative Studies of South Asia, Africa and the Middle East ;
+      issn = 1089-201X ;
+      eissn = 1548-226X ;
+      issnl = 1089-201X
+    >
+      au < exists ; exists ; 2018 ; 2018 ;  Comparative Studies of South Asia, Africa and the Middle East Volume 37 ; 37 ; >
+  }
+
+  {
+
+     title <
+      name = Cultural Politics ;
+      issn = 1743-2197 ;
+      eissn = 1751-7435 ;
+      issnl = 1743-2197
+    >
+      au < exists ; exists ; 2018 ; 2018 ;  Cultural Politics Volume 13 ; 13 ; >
+  }
+
+  {
+
+    title <
+      name = differences: A Journal of Feminist Cultural Studies ;
+      issn = 1040-7391 ;
+      eissn = 1527-1986 ;
+      issnl = 1040-7391
+    >
+
+      au < exists ; exists ; 2018 ; 2018 ;  differences: A Journal of Feminist Cultural Studies Volume 28 ; 28 ; >
+  }
+
+  {
+
+    title <
+      name = East Asian Science, Technology and Society: An International Journal ;
+      issn = 1875-2160 ;
+      eissn = 1875-2152 ;
+      issnl = 1875-2160
+    >
+      au < exists ; exists ; 2018 ; 2018 ;  East Asian Science, Technology and Society: An International Journal Volume 11 ; 11 ; >
+  }
+
+  {
+
+    title <
+      name = Eighteenth-Century Life ;
+      issn =  0098-2601 ;
+      eissn = 1086-3192 ;
+      issnl = 0098-2601
+    >
+      au < exists ; exists ; 2018 ; 2018 ;  Eighteenth-Century Life Volume 41 ; 41 ; >
+  }
+
+  {
+
+    title <
+      name = Environmental Humanities ;
+      eissn = 2201-1919 ;
+      issnl = 2201-1919
+    >
+
+      au < exists ; exists ; 2018 ; 2018 ;  Environmental Humanities Volume 9 ; 9 ; >
+
+  }
+
+  {
+
+    title <
+      name = Ethnohistory ;
+      issn = 0014-1801 ;
+      eissn = 1527-5477
+
+    >
+      au < exists ; exists ; 2018 ; 2018 ;  Ethnohistory Volume 64 ; 64 ; >
+  }
+
+  {
+
+    title <
+      name = French Historical Studies ;
+      issn = 0016-1071 ;
+      eissn =  1527-5493
+
+    >
+      au < exists ; exists ; 2018 ; 2018 ;  French Historical Studies Volume 40 ; 40 ; >
+  }
+
+  {
+
+    title <
+      name = Genre: Forms of Discourse and Culture ;
+      issn = 0016-6928 ;
+      eissn =  2160-0228
+
+  >
+
+      au < exists ; exists ; 2018 ; 2018 ;  Genre: Forms of Discourse and Culture Volume 50 ; 50 ; >
+
+  }
+
+  {
+
+    title <
+      name = GLQ: A Journal of Lesbian and Gay Studies ;
+      issn = 1064-2684 ;
+      eissn = 1527-9375
+      >
+
+      au < exists ; exists ; 2018 ; 2018 ;  GLQ: A Journal of Lesbian and Gay Studies Volume 23 ; 23 ; >
+
+    }
+
+    {
+
+    title <
+      name = Hispanic American Historical Review ;
+      issn = 0018-2168 ;
+      eissn = 1527-1900
+
+      >
+
+      au < exists ; exists ; 2018 ; 2018 ;  Hispanic American Historical Review Volume 97 ; 97 ; >
+
+    }
+
+    {
+
+    title <
+      name = History of Political Economy ;
+      issn = 0018-2702 ;
+      eissn = 1527-1919
+
+   >
+
+      au < exists ; exists ; 2018 ; 2018 ;  History of Political Economy Volume 49 ; 49 ; >
+
+    }
+
+  {
+    title <
+      name = Journal of Chinese Literature and Culture ;
+      issn = 2329-0048 ;
+      eissn = 2329-0056 
+    >
+
+     au < exists ; exists ; 2018 ; 2018 ;  Journal of Chinese Literature and Culture Volume 4 ; 4 ; >
+
+  }
+
+    {
+
+    title <
+      name = Journal of Health Politics, Policy and Law ;
+      issn = 0361-6878 ;
+      eissn = 1527-1927
+
+>
+
+      au < exists ; exists ; 2018 ; 2018 ;  Journal of Health Politics, Policy and Law Volume 42 ; 42 ; >
+
+    }
+
+    {
+
+    title <
+      name = Journal of Medieval and Early Modern Studies ;
+      issn = 1082-9636 ;
+      eissn = 1527-8263
+
+>
+
+      au < exists ; exists ; 2018 ; 2018 ;  Journal of Medieval and Early Modern Studies Volume 47 ; 47 ; >
+
+   }
+
+   {
+
+    title <
+      name = Journal of Middle East Women's Studies ;
+      issn = 1552-5864 ;
+      eissn = 1558-9579
+
+   >
+
+      au < exists ; exists ; 2018 ; 2018 ;  Journal of Middle East Women's Studies Volume 13 ; 13 ; >
+
+   }
+
+   {
+
+    title <
+      name = Journal of Music Theory ;
+      issn = 0022-2909 ;
+      eissn = 1941-7497
+
+   >
+
+      au < exists ; exists ; 2018 ; 2018 ;  Journal of Music Theory Volume 61 ; 61 ; >
+
+    }
+
+    {
+
+    title <
+      name = Labor: Studies in Working-Class History of the Americas ;
+      issn = 1547-6715 ;
+      eissn = 1558-1454
+
+>
+
+      au < exists ; exists ; 2018 ; 2018 ;  Labor: Studies in Working-Class History of the Americas Volume 14 ; 14 ; >
+
+    }
+
+    {
+
+    title <
+      name = Limnology and Oceanography: Fluids and Environments ;
+      eissn = 2157-3689
+
+    >
+
+    }
+
+    {
+
+    title <
+      name = Mediterranean Quarterly ;
+      issn = 1047-4552 ;
+      eissn = 1527-1935
+
+    >
+
+      au < exists ; exists ; 2018 ; 2018 ;  Mediterranean Quarterly Volume 28 ; 28 ; >
+
+     }
+
+    {
+
+    title <
+      name = The Minnesota Review ;
+      issn = 0026-5667 ;
+      eissn = 2157-4189
+
+>
+
+      au < exists ; exists ; 2018 ; 2018 ;  The Minnesota Review Volume FOO ; FOO ; >
+
+    }
+
+    {
+
+    title <
+      name = MLQ: Modern Language Quarterly ;
+      issn = 0026-7929 ;
+      eissn = 1527-1943
+
+     >
+
+      au < exists ; exists ; 2018 ; 2018 ;  MLQ: Modern Language Quarterly Volume 78 ; 78 ; >
+
+    }
+
+    {
+
+    title <
+      name = New German Critique ;
+      issn = 0094-033X ;
+      eissn = 1558-1462
+
+     >
+
+      au < exists ; exists ; 2018 ; 2018 ;  New German Critique Volume 44 ; 44 ; >
+
+     }
+
+    {
+
+    title <
+      name = Nka: Journal of Contemporary African Art ;
+      issn = 1075-7163 ;
+      eissn = 2152-7792
+
+     >
+
+      au < exists ; exists ; 2018 ; 2018 ;  Nka: Journal of Contemporary African Art Volume FOO ; FOO ; >
+
+    }
+
+    {
+
+    title <
+      name = Novel: A Forum on Fiction ;
+      issn = 0029-5132 ;
+      eissn = 1945-8509
+
+     >
+
+      au < exists ; exists ; 2018 ; 2018 ;  Novel: A Forum on Fiction Volume 50 ; 50 ; >
+
+    }
+
+    {
+
+    title <
+      name = Pedagogy ;
+      issn = 1531-4200 ;
+      eissn =  1533-6255
+
+      >
+
+      au < exists ; exists ; 2018 ; 2018 ;  Pedagogy Volume 17 ; 17 ; >
+
+    }
+
+    {
+
+    title <
+      name = Philosophical Review ;
+      issn = 0031-8108 ;
+      eissn = 1558-1470
+
+      >
+
+      au < exists ; exists ; 2018 ; 2018 ;  Philosophical Review Volume 126 ; 126 ; >
+
+  }
+
+      {
+
+    title <
+      name = Poetics Today ;
+      issn =  0333-5372 ;
+      eissn = 1527-5507
+
+     >
+
+      au < exists ; exists ; 2018 ; 2018 ;  Poetics Today Volume 38 ; 38 ; >
+
+     }
+
+         {
+
+    title <
+      name = positions: east asia cultures critique ;
+      issn = 1067-9847 ;
+      eissn = 1527-8271
+
+>
+
+      au < exists ; exists ; 2018 ; 2018 ;  positions: asia critique Volume 25 ; 25 ; >
+
+  }
+
+  {
+    title <
+      name = Publication of the American Dialect Society ;
+      issn = 2157-6114 ;
+      eissn = 0002-8207
+
+    >
+
+
+      au < exists ; exists ; 2018 ; 2018 ;  Publication of the American Dialect Society Volume 101 ; 101 ; >
+
+  }
+
+    {
+
+    title <
+      name = Public Culture ;
+      issn = 0899-2363 ;
+      eissn = 1527-8018
+
+      >
+
+      au < exists ; exists ; 2018 ; 2018 ;  Public Culture Volume 29 ; 29 ; >
+
+    }
+
+    {
+
+    title <
+      name = Radical History Review ;
+      issn = 0163-6545 ;
+      eissn = 1534-1453
+
+>
+
+      au < exists ; exists ; 2018 ; 2018 ;  Radical History Review Volume FOO ; FOO ; >
+
+      }
+
+     {
+
+    title <
+      name = Small Axe ;
+      issn = 0799-0537 ;
+      eissn = 1534-6714
+
+      >
+
+      au < exists ; exists ; 2018 ; 2018 ;  Small Axe Volume 21 ; 21 ; >
+
+    }
+
+    {
+
+    title <
+      name = Social Science History ;
+      issn = 0145-5532 ;
+      eissn = 1527-8034
+      >
+
+      #move to Cambridge
+
+     }
+
+     {
+
+    title <
+      name = Social Text ;
+      issn = 0164-2472 ;
+      eissn = 1527-1951
+
+      >
+
+      au < exists ; exists ; 2018 ; 2018 ;  Social Text Volume 35 ; 35 ; >
+
+     }
+
+     {
+
+    title <
+      name = The South Atlantic Quarterly ;
+      issn = 0038-2876 ;
+      eissn = 1527-8026
+
+      >
+
+      au < exists ; exists ; 2018 ; 2018 ;  The South Atlantic Quarterly Volume 116 ; 116 ; >
+
+     }
+
+     {
+
+    title <
+      name = Theater ;
+      issn = 0161-0775 ;
+      eissn = 1527-196X
+
+      >
+
+      au < exists ; exists ; 2018 ; 2018 ;  Theater Volume 47 ; 47 ; >
+
+    }
+
+    {
+
+    title <
+      name = Tikkun ;
+      issn = 0887-9982 ;
+      eissn = 2164-0041
+
+>
+
+      au < exists ; exists ; 2018 ; 2018 ;  Tikkun Volume 32 ; 32 ; >
+
+  }
+
+    {
+    title <
+      name = Transgender Studies Quarterly ;
+      issn = 2328-9252 ;
+      eissn = 2328-9260 ;
+      issnl = 2328-9252
+    >
+
+
+    }
+
+    {
+    title <
+      name = Twentieth-Century Literature ;
+      issn = 0041-462X ;
+      eissn = 2325-8101 ;
+      issnl = 0041-462X
+    >
+      au < exists ; exists ; 2018 ; 2018 ;  Twentieth-Century Literature Volume 63 ; 63 ; >
+
+  }
+  {
+
+    title <
+      name = World Policy Journal ;
+      issn = 0740-2775 ;
+      eissn = 1936-0924
+    >
+
+      #move from Oxford University Press 
+
+      au < exists ; exists ; 2018 ; 2018 ;  World Policy Journal Volume 34 ; 34 ; >
+
+  }
+}
