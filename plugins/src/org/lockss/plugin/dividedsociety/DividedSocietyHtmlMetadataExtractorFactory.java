@@ -38,6 +38,7 @@ import java.io.*;
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
 import org.lockss.util.*;
+import org.lockss.config.TdbAu;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
@@ -60,8 +61,10 @@ public class DividedSocietyHtmlMetadataExtractorFactory
     private static MultiMap tagMap = new MultiValueMap();
 
     static {
+    	
         tagMap.put("dcterms.publisher", MetadataField.DC_FIELD_PUBLISHER);
-        tagMap.put("dcterms.publisher", MetadataField.FIELD_PUBLISHER);
+        //for now don't cook the publisher - wait to hear back from Kim, set to "Linen Hall Library"
+        //tagMap.put("dcterms.publisher", MetadataField.FIELD_PUBLISHER);
 
         tagMap.put("dcterms.date", MetadataField.DC_FIELD_DATE);
         tagMap.put("dcterms.date", MetadataField.FIELD_DATE);
@@ -87,6 +90,32 @@ public class DividedSocietyHtmlMetadataExtractorFactory
       log.debug3("Metadata - cachedurl cu:" + cu.getUrl());
       ArticleMetadata am = super.extract(target, cu);
       am.cook(tagMap);
+      
+      /*
+       * Do some post-cook cleanup. Noted several pieces of content didn't get a publication title
+       * And posters, outreach, and essays don't have one, so use the TDB name
+       */
+      //for now don't set the publisher and it will come from TDB value
+      
+      if (am.get(MetadataField.FIELD_PUBLICATION_TITLE) == null) {
+    	  ArchivalUnit thisau = cu.getArchivalUnit();
+    	  TdbAu tdbau = thisau.getTdbAu();
+    	  String au_name = (tdbau == null) ? null : tdbau.getName();
+    	  if (au_name != null) {
+    		  am.put(MetadataField.FIELD_PUBLICATION_TITLE, au_name);
+    	  }
+      }
+      // There are about 29 items that just don't give a date and we can't get it from tdb
+      // because we're preserving an entire run of a topic or journal.
+      // There is one case where it just needs cleaning up leading dash - "-1991"
+      if ((am.get(MetadataField.FIELD_DATE) == null) || (am.get(MetadataField.FIELD_DATE).startsWith("-"))){
+    	  String rawdate = am.getRaw("dcterms.date");
+    	  if (rawdate != null) {
+    		  rawdate.replace("-", "");
+        	  am.put(MetadataField.FIELD_DATE, rawdate);
+    	  }
+      }
+      // publisher will get set from the TDB file to Linen Hall Library if it wasn't pulled from the content
       return am;
     }
     
