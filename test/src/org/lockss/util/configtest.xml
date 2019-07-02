@@ -151,12 +151,42 @@
       <property name="test.t" value="foo"/>
     </if>
 
+    <!-- Test hostIP -->
+    <if hostIP="11.22.33.44">
+      <property name="test.hostIP.true" value="foo"/>
+    </if>
+    <if hostIP="66.66.66.66">
+      <property name="test.hostIP.false" value="foo"/>
+    </if>
+
     <!-- Test platform name -->
     <if platformName="Linux rpm">
       <property name="test.platformName.linux" value="linux"/>
     </if>
     <if platformName="OpenBSD CD">
       <property name="test.platformName.openbsd" value="openbsd"/>
+    </if>
+
+    <!-- Test service name -->
+    <if>
+      <test serviceName="Rest Service 1"/>
+      <then>
+	<property name="test.serviceName.foo" value="the service"/>
+      </then>
+      <else>
+	<property name="test.serviceName.foo" value="another service"/>
+      </else>
+    </if>
+
+    <!-- Test service abbrev -->
+    <if>
+      <test serviceAbbrev="sabbrev"/>
+      <then>
+	<property name="test.serviceAbbrev.foo" value="service 1"/>
+      </then>
+      <else>
+	<property name="test.serviceAbbrev.foo" value="not service 1"/>
+      </else>
     </if>
 
     <!-- Test that unexpected / unknown conditionals eval to false -->

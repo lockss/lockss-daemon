@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2019 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,6 +34,7 @@ import java.util.*;
 import javax.xml.parsers.*;
 
 import org.lockss.config.*;
+import org.lockss.app.*;
 import org.xml.sax.*;
 import org.xml.sax.helpers.*;
 
@@ -55,14 +56,18 @@ public class XmlPropertyLoader {
 
   private static final Set conditionals =
     SetUtil.fromArray(new String[] {
-      "group", "hostname", "daemonVersion", "daemonVersionMin",
-      "daemonVersionMax", "platformName", "platformVersion",
-      "platformVersionMin", "platformVersionMax"
+      "serviceName", "serviceAbbrev",
+      "group", "hostname", "hostIP",
+      "daemonVersion", "daemonVersionMin", "daemonVersionMax",
+      "platformName",
+      "platformVersion", "platformVersionMin", "platformVersionMax"
     });
 
   private static XmlPropertyLoader m_instance = null;
 
   private static Logger log = Logger.getLogger("XmlPropertyLoader");
+
+  protected ServiceDescr m_serviceDescr;
 
   public static void load(PropertyTree props, InputStream istr)
       throws ParserConfigurationException, SAXException, IOException {
@@ -94,7 +99,7 @@ public class XmlPropertyLoader {
   /**
    * Load a set of XML properties from the input stream.
    */
-  void loadProperties(PropertyTree props, InputStream istr)
+  protected void loadProperties(PropertyTree props, InputStream istr)
       throws ParserConfigurationException, SAXException, IOException {
     loadProperties(props, (Tdb)null, istr);
   }
@@ -106,7 +111,7 @@ public class XmlPropertyLoader {
    * @param tdb the Tdb to load into
    * @para istr the input stream
    */
-  void loadProperties(PropertyTree props, Tdb tdb, InputStream istr)
+  protected void loadProperties(PropertyTree props, Tdb tdb, InputStream istr)
       throws ParserConfigurationException, SAXException, IOException {
 
     SAXParserFactory factory = SAXParserFactory.newInstance();
@@ -131,8 +136,21 @@ public class XmlPropertyLoader {
     return ConfigManager.getPlatformHostname();
   }
 
+  public String getPlatformHostIP() {
+    return CurrentConfig.getParam(ConfigManager.PARAM_PLATFORM_IP_ADDRESS);
+  }
+
   public List getPlatformGroupList() {
     return ConfigManager.getPlatformGroupList();
+  }
+
+  // Overridable for testing.
+  protected ServiceDescr getServiceDescr() {
+//     LockssApp app = LockssApp.getLockssApp();
+//     if (app != null) {
+//       return app.getMyServiceDescr();
+//     }
+    return null;
   }
 
   /**
@@ -203,6 +221,9 @@ public class XmlPropertyLoader {
     private String m_sysPlatformName;
     private List m_sysGroups;
     private String m_sysHostname;
+    private String m_sysIPAddr;
+    private String m_serviceName;
+    private String m_serviceAbbrev;
 
     /**
      * Default constructor.
@@ -223,14 +244,23 @@ public class XmlPropertyLoader {
       }
       m_sysGroups = getPlatformGroupList();
       m_sysHostname = getPlatformHostname();
+      m_sysIPAddr = getPlatformHostIP();
 
+      ServiceDescr descr = getServiceDescr();
+      if (descr != null) {
+	m_serviceAbbrev = descr.getAbbrev();
+	m_serviceName =  descr.getName();
+      }
       m_props = props;
       m_tdb = tdb;
       log.debug2("Conditionals: {platformVer=" + m_sysPlatformVer + "}, " +
 		 "{daemonVer=" + m_sysDaemonVer + "}, " +
 		 "{groups=" + m_sysGroups + "}, " +
 		 "{hostname=" + m_sysHostname + "}, " +
-		 "{platformName=" + m_sysPlatformName + "}");
+		 "{hostIP=" + m_sysIPAddr + "}, " +
+		 "{platformName=" + m_sysPlatformName + "}, " +
+		 "{serviceName=" + m_serviceName + "}, " +
+		 "{serviceAbbrev=" + m_serviceAbbrev + "}");
     }
 
     /**
@@ -737,6 +767,9 @@ public class XmlPropertyLoader {
       // Get the XML element attributes
       String group = null;
       String hostname = null;
+      String hostIP = null;
+      String serviceName = null;
+      String serviceAbbrev = null;
       String platformName = null;
       Version daemonMin = null;
       Version daemonMax = null;
@@ -745,6 +778,9 @@ public class XmlPropertyLoader {
 
       group = attrs.getValue("group");
       hostname = attrs.getValue("hostname");
+      hostIP = attrs.getValue("hostIP");
+      serviceName = attrs.getValue("serviceName");
+      serviceAbbrev = attrs.getValue("serviceAbbrev");
       platformName = attrs.getValue("platformName");
 
       if (attrs.getValue("daemonVersionMin") != null) {
@@ -795,6 +831,27 @@ public class XmlPropertyLoader {
        */
       if (hostname != null) {
 	returnVal &= StringUtil.equalStringsIgnoreCase(m_sysHostname, hostname);
+      }
+
+      /*
+       * hostIP checking.
+       */
+      if (hostIP != null) {
+	returnVal &= StringUtil.equalStringsIgnoreCase(m_sysIPAddr, hostIP);
+      }
+
+      /*
+       * Service name checking.
+       */
+      if (serviceName != null) {
+	returnVal &= StringUtil.equalStringsIgnoreCase(m_serviceName, serviceName);
+      }
+
+      /*
+       * Service abbrev checking.
+       */
+      if (serviceAbbrev != null) {
+	returnVal &= StringUtil.equalStringsIgnoreCase(m_serviceAbbrev, serviceAbbrev);
       }
 
       /*
