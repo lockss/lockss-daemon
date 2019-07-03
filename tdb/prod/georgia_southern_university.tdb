@@ -99,8 +99,8 @@
       param[base_url] = https://digitalcommons.georgiasouthern.edu/
       param[journal_abbr] = gcpa
 
-      au < exists ; 2013 ; Georgia Journal of College Student Affairs Volume 29 ; 29 >
-      au < exists ; 2014 ; Georgia Journal of College Student Affairs Volume 30 ; 30 >
+      au < manifest ; 2013 ; Georgia Journal of College Student Affairs Volume 29 ; 29 >
+      au < manifest ; 2014 ; Georgia Journal of College Student Affairs Volume 30 ; 30 >
       au < manifest ; 2016 ; Georgia Journal of College Student Affairs Volume 32 ; 32 >
 
   }
