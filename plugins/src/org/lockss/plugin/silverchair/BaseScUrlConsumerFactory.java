@@ -53,7 +53,8 @@ public class BaseScUrlConsumerFactory implements UrlConsumerFactory {
   private static final String DEL_URL = "/(issue|article)-pdf/";
   // will redirect to: 
   // https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/ageing/45/2/10.1093_ageing_afw017/3/afw017.pdf?Expires=...
-  private static final String DOC_URL = "/backfile/Content_public/Journal/[^?]+";
+  //https://dup.silverchair-cdn.com/dup/Content_public/Journal/jclc/1/1-2/10.1215_23290048-2749359/4/1.pdf?Expires=1562199683&Signature=fIhPLCXoE2wIzx-p2pXNsDKtisJEl7tz98Ea3l1QSKBnzYhc8a3TXinElJWJElQOWKalmqiG0gtKIVrt3Vu3bQvnc~Po27TK5gzBMui9-gGVZOEoDN7uktnx6poUfe6wqeZuQMymH8Gpdvj2EMNPH702eAvWaSPeYsbMS9I~4tFrqb1m~HLCXBr29N7BsZi4yNwUkCikZc16w9ktMOycTBRaYYYqSzw2y-PfDttejI4BlUtF~zYZMZuLBWVrhND4DwONRiu2JkZrUUiCeiiclhbkH4FLIfnvDr3l9492ZW61z8yORlptOYVuaLPvv4xKAqY4DMQro~QhmR47Zd6NfQ__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA
+  private static final String DOC_URL = "(/backfile)?/Content_public/Journal/[^?]+";
   private static final String DOC_ARGS = "\\?Expires=[^&]+&Signature=[^&]+&Key-Pair-Id=.+$";
   // or if through watermarking to:
   // https://watermark.silverchair.com/front_matter.pdf?token=AQECAHi208
