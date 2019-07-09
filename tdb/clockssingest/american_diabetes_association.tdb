@@ -20,15 +20,15 @@
     
       #param[base_url] = http://clinical.diabetesjournals.org/
 
-      au < ada.ClockssADADrupalPlugin ; exists ; exists ; 2001 ; Clinical Diabetes Volume 19 ; 19 ; https://clinical.diabetesjournals.org/ ; >
-      au < ada.ClockssADADrupalPlugin ; exists ; exists ; 2002 ; Clinical Diabetes Volume 20 ; 20 ; https://clinical.diabetesjournals.org/ ; >
-      au < ada.ClockssADADrupalPlugin ; exists ; exists ; 2003 ; Clinical Diabetes Volume 21 ; 21 ; https://clinical.diabetesjournals.org/ ; >
-      au < ada.ClockssADADrupalPlugin ; exists ; exists ; 2004 ; Clinical Diabetes Volume 22 ; 22 ; https://clinical.diabetesjournals.org/ ; >
-      au < ada.ClockssADADrupalPlugin ; exists ; exists ; 2005 ; Clinical Diabetes Volume 23 ; 23 ; https://clinical.diabetesjournals.org/ ; >
-      au < ada.ClockssADADrupalPlugin ; exists ; exists ; 2006 ; Clinical Diabetes Volume 24 ; 24 ; https://clinical.diabetesjournals.org/ ; >
-      au < ada.ClockssADADrupalPlugin ; exists ; exists ; 2007 ; Clinical Diabetes Volume 25 ; 25 ; https://clinical.diabetesjournals.org/ ; >
-      au < ada.ClockssADADrupalPlugin ; exists ; exists ; 2008 ; Clinical Diabetes Volume 26 ; 26 ; https://clinical.diabetesjournals.org/ ; >
-      au < ada.ClockssADADrupalPlugin ; exists ; exists ; 2009 ; Clinical Diabetes Volume 27 ; 27 ; https://clinical.diabetesjournals.org/ ; >
+      au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2001 ; Clinical Diabetes Volume 19 ; 19 ; https://clinical.diabetesjournals.org/ ; >
+      au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2002 ; Clinical Diabetes Volume 20 ; 20 ; https://clinical.diabetesjournals.org/ ; >
+      au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2003 ; Clinical Diabetes Volume 21 ; 21 ; https://clinical.diabetesjournals.org/ ; >
+      au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2004 ; Clinical Diabetes Volume 22 ; 22 ; https://clinical.diabetesjournals.org/ ; >
+      au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2005 ; Clinical Diabetes Volume 23 ; 23 ; https://clinical.diabetesjournals.org/ ; >
+      au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2006 ; Clinical Diabetes Volume 24 ; 24 ; https://clinical.diabetesjournals.org/ ; >
+      au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2007 ; Clinical Diabetes Volume 25 ; 25 ; https://clinical.diabetesjournals.org/ ; >
+      au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2008 ; Clinical Diabetes Volume 26 ; 26 ; https://clinical.diabetesjournals.org/ ; >
+      au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2009 ; Clinical Diabetes Volume 27 ; 27 ; https://clinical.diabetesjournals.org/ ; >
       au < ada.ClockssADADrupalPlugin ; finished ; crawling ; 2010 ; Clinical Diabetes Volume 28 ; 28 ; http://clinical.diabetesjournals.org/ ; reingest5.clockss.org:8082 >
       au < ada.ClockssADADrupalPlugin ; finished ; crawling ; 2011 ; Clinical Diabetes Volume 29 ; 29 ; http://clinical.diabetesjournals.org/ ; reingest5.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Clinical Diabetes Volume 30 ; 30 ; http://clinical.diabetesjournals.org/ ; >
@@ -55,16 +55,16 @@
 
       {
 
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1966 ; Diabetes Volume 14 [tables of contents only] ; 14 ; https://diabetes.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1966 ; Diabetes Volume 15 [tables of contents only] ; 15 ; https://diabetes.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1967 ; Diabetes Volume 16 [tables of contents only] ; 16 ; https://diabetes.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1968 ; Diabetes Volume 17 [tables of contents only] ; 17 ; https://diabetes.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1969 ; Diabetes Volume 18 [tables of contents only] ; 18 ; https://diabetes.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1970 ; Diabetes Volume 19 [tables of contents only] ; 19 ; https://diabetes.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1971 ; Diabetes Volume 20 [tables of contents only] ; 20 ; https://diabetes.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1972 ; Diabetes Volume 21 [tables of contents only] ; 21 ; https://diabetes.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1973 ; Diabetes Volume 22 [tables of contents only] ; 22 ; https://diabetes.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1974 ; Diabetes Volume 23 [tables of contents only] ; 23 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1966 ; Diabetes Volume 14 [tables of contents only] ; 14 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1966 ; Diabetes Volume 15 [tables of contents only] ; 15 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1967 ; Diabetes Volume 16 [tables of contents only] ; 16 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1968 ; Diabetes Volume 17 [tables of contents only] ; 17 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1969 ; Diabetes Volume 18 [tables of contents only] ; 18 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1970 ; Diabetes Volume 19 [tables of contents only] ; 19 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1971 ; Diabetes Volume 20 [tables of contents only] ; 20 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1972 ; Diabetes Volume 21 [tables of contents only] ; 21 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1973 ; Diabetes Volume 22 [tables of contents only] ; 22 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1974 ; Diabetes Volume 23 [tables of contents only] ; 23 ; https://diabetes.diabetesjournals.org/ ; >
 
       }
 
@@ -72,46 +72,46 @@
 
         attr[au_coverage_depth] = abstracts
 
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1975 ; Diabetes Volume 24 [abstracts only] ; 24 ; https://diabetes.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1976 ; Diabetes Volume 25 [abstracts only] ; 25 ; https://diabetes.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1977 ; Diabetes Volume 26 [abstracts only] ; 26 ; https://diabetes.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1978 ; Diabetes Volume 27 [abstracts only] ; 27 ; https://diabetes.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1979 ; Diabetes Volume 28 [abstracts only] ; 28 ; https://diabetes.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1980 ; Diabetes Volume 29 [abstracts only] ; 29 ; https://diabetes.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1981 ; Diabetes Volume 30 [abstracts only] ; 30 ; https://diabetes.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1982 ; Diabetes Volume 31 [abstracts only] ; 31 ; https://diabetes.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1983 ; Diabetes Volume 32 [abstracts only] ; 32 ; https://diabetes.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1984 ; Diabetes Volume 33 [abstracts only] ; 33 ; https://diabetes.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1985 ; Diabetes Volume 34 [abstracts only] ; 34 ; https://diabetes.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1986 ; Diabetes Volume 35 [abstracts only] ; 35 ; https://diabetes.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1987 ; Diabetes Volume 36 [abstracts only] ; 36 ; https://diabetes.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1988 ; Diabetes Volume 37 [abstracts only] ; 37 ; https://diabetes.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1989 ; Diabetes Volume 38 [abstracts only] ; 38 ; https://diabetes.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1990 ; Diabetes Volume 39 [abstracts only] ; 39 ; https://diabetes.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1991 ; Diabetes Volume 40 [abstracts only] ; 40 ; https://diabetes.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1992 ; Diabetes Volume 41 [abstracts only] ; 41 ; https://diabetes.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1993 ; Diabetes Volume 42 [abstracts only] ; 42 ; https://diabetes.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1994 ; Diabetes Volume 43 [abstracts only] ; 43 ; https://diabetes.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1995 ; Diabetes Volume 44 [abstracts only] ; 44 ; https://diabetes.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1996 ; Diabetes Volume 45 [abstracts only] ; 45 ; https://diabetes.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1997 ; Diabetes Volume 46 [abstracts only] ; 46 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1975 ; Diabetes Volume 24 [abstracts only] ; 24 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1976 ; Diabetes Volume 25 [abstracts only] ; 25 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1977 ; Diabetes Volume 26 [abstracts only] ; 26 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1978 ; Diabetes Volume 27 [abstracts only] ; 27 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1979 ; Diabetes Volume 28 [abstracts only] ; 28 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1980 ; Diabetes Volume 29 [abstracts only] ; 29 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1981 ; Diabetes Volume 30 [abstracts only] ; 30 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1982 ; Diabetes Volume 31 [abstracts only] ; 31 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1983 ; Diabetes Volume 32 [abstracts only] ; 32 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1984 ; Diabetes Volume 33 [abstracts only] ; 33 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1985 ; Diabetes Volume 34 [abstracts only] ; 34 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1986 ; Diabetes Volume 35 [abstracts only] ; 35 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1987 ; Diabetes Volume 36 [abstracts only] ; 36 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1988 ; Diabetes Volume 37 [abstracts only] ; 37 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1989 ; Diabetes Volume 38 [abstracts only] ; 38 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1990 ; Diabetes Volume 39 [abstracts only] ; 39 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1991 ; Diabetes Volume 40 [abstracts only] ; 40 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1992 ; Diabetes Volume 41 [abstracts only] ; 41 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1993 ; Diabetes Volume 42 [abstracts only] ; 42 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1994 ; Diabetes Volume 43 [abstracts only] ; 43 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1995 ; Diabetes Volume 44 [abstracts only] ; 44 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1996 ; Diabetes Volume 45 [abstracts only] ; 45 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1997 ; Diabetes Volume 46 [abstracts only] ; 46 ; https://diabetes.diabetesjournals.org/ ; >
 
       }
 
       {
 
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1998 ; Diabetes Volume 47 ; 47 ; https://diabetes.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1999 ; Diabetes Volume 48 ; 48 ; https://diabetes.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 2000 ; Diabetes Volume 49 ; 49 ; https://diabetes.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 2001 ; Diabetes Volume 50 ; 50 ; https://diabetes.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 2002 ; Diabetes Volume 51 ; 51 ; https://diabetes.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 2003 ; Diabetes Volume 52 ; 52 ; https://diabetes.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 2004 ; Diabetes Volume 53 ; 53 ; https://diabetes.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 2005 ; Diabetes Volume 54 ; 54 ; https://diabetes.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 2006 ; Diabetes Volume 55 ; 55 ; https://diabetes.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 2007 ; Diabetes Volume 56 ; 56 ; https://diabetes.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 2008 ; Diabetes Volume 57 ; 57 ; https://diabetes.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 2009 ; Diabetes Volume 58 ; 58 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1998 ; Diabetes Volume 47 ; 47 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1999 ; Diabetes Volume 48 ; 48 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2000 ; Diabetes Volume 49 ; 49 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2001 ; Diabetes Volume 50 ; 50 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2002 ; Diabetes Volume 51 ; 51 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2003 ; Diabetes Volume 52 ; 52 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2004 ; Diabetes Volume 53 ; 53 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2005 ; Diabetes Volume 54 ; 54 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2006 ; Diabetes Volume 55 ; 55 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2007 ; Diabetes Volume 56 ; 56 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2008 ; Diabetes Volume 57 ; 57 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2009 ; Diabetes Volume 58 ; 58 ; https://diabetes.diabetesjournals.org/ ; >
         au < ada.ClockssADADrupalPlugin ; frozen ; exists ; 2010 ; Diabetes Volume 59 ; 59 ; http://diabetes.diabetesjournals.org/ ; >
         au < ada.ClockssADADrupalPlugin ; frozen ; exists ; 2011 ; Diabetes Volume 60 ; 60 ; http://diabetes.diabetesjournals.org/ ; >
         au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Diabetes Volume 61 ; 61 ; http://diabetes.diabetesjournals.org/ ; >
@@ -142,45 +142,45 @@
 
         attr[au_coverage_depth] = abstracts
 
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1978 ; Diabetes Care Volume 1 [abstracts only] ; 1 ; https://care.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1979 ; Diabetes Care Volume 2 [abstracts only] ; 2 ; https://care.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1980 ; Diabetes Care Volume 3 [abstracts only] ; 3 ; https://care.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1981 ; Diabetes Care Volume 4 [abstracts only] ; 4 ; https://care.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1982 ; Diabetes Care Volume 5 [abstracts only] ; 5 ; https://care.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1983 ; Diabetes Care Volume 6 [abstracts only] ; 6 ; https://care.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1984 ; Diabetes Care Volume 7 [abstracts only] ; 7 ; https://care.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1985 ; Diabetes Care Volume 8 [abstracts only] ; 8 ; https://care.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1986 ; Diabetes Care Volume 9 [abstracts only] ; 9 ; https://care.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1987 ; Diabetes Care Volume 10 [abstracts only] ; 10 ; https://care.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1988 ; Diabetes Care Volume 11 [abstracts only] ; 11 ; https://care.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1989 ; Diabetes Care Volume 12 [abstracts only] ; 12 ; https://care.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1990 ; Diabetes Care Volume 13 [abstracts only] ; 13 ; https://care.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1991 ; Diabetes Care Volume 14 [abstracts only] ; 14 ; https://care.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1992 ; Diabetes Care Volume 15 [abstracts only] ; 15 ; https://care.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1993 ; Diabetes Care Volume 16 [abstracts only] ; 16 ; https://care.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1994 ; Diabetes Care Volume 17 [abstracts only] ; 17 ; https://care.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1995 ; Diabetes Care Volume 18 [abstracts only] ; 18 ; https://care.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1996 ; Diabetes Care Volume 19 [abstracts only] ; 19 ; https://care.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1997 ; Diabetes Care Volume 20 [abstracts only] ; 20 ; https://care.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1978 ; Diabetes Care Volume 1 [abstracts only] ; 1 ; https://care.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1979 ; Diabetes Care Volume 2 [abstracts only] ; 2 ; https://care.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1980 ; Diabetes Care Volume 3 [abstracts only] ; 3 ; https://care.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1981 ; Diabetes Care Volume 4 [abstracts only] ; 4 ; https://care.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1982 ; Diabetes Care Volume 5 [abstracts only] ; 5 ; https://care.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1983 ; Diabetes Care Volume 6 [abstracts only] ; 6 ; https://care.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1984 ; Diabetes Care Volume 7 [abstracts only] ; 7 ; https://care.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1985 ; Diabetes Care Volume 8 [abstracts only] ; 8 ; https://care.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1986 ; Diabetes Care Volume 9 [abstracts only] ; 9 ; https://care.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1987 ; Diabetes Care Volume 10 [abstracts only] ; 10 ; https://care.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1988 ; Diabetes Care Volume 11 [abstracts only] ; 11 ; https://care.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1989 ; Diabetes Care Volume 12 [abstracts only] ; 12 ; https://care.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1990 ; Diabetes Care Volume 13 [abstracts only] ; 13 ; https://care.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1991 ; Diabetes Care Volume 14 [abstracts only] ; 14 ; https://care.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1992 ; Diabetes Care Volume 15 [abstracts only] ; 15 ; https://care.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1993 ; Diabetes Care Volume 16 [abstracts only] ; 16 ; https://care.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1994 ; Diabetes Care Volume 17 [abstracts only] ; 17 ; https://care.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1995 ; Diabetes Care Volume 18 [abstracts only] ; 18 ; https://care.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1996 ; Diabetes Care Volume 19 [abstracts only] ; 19 ; https://care.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1997 ; Diabetes Care Volume 20 [abstracts only] ; 20 ; https://care.diabetesjournals.org/ ; >
       }
       {
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1998 ; Diabetes Care Volume 21 ; 21 ; https://care.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1999 ; Diabetes Care Volume 22 ; 22 ; https://care.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 2000 ; Diabetes Care Volume 23 ; 23 ; https://care.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 2001 ; Diabetes Care Volume 24 ; 24 ; https://care.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 2002 ; Diabetes Care Volume 25 ; 25 ; https://care.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 2003 ; Diabetes Care Volume 26 ; 26 ; https://care.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 2004 ; Diabetes Care Volume 27 ; 27 ; https://care.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 2005 ; Diabetes Care Volume 28 ; 28 ; https://care.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 2006 ; Diabetes Care Volume 29 ; 29 ; https://care.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 2007 ; Diabetes Care Volume 30 ; 30 ; https://care.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 2008 ; Diabetes Care Volume 31 ; 31 ; https://care.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 2009 ; Diabetes Care Volume 32 ; 32 ; https://care.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1998 ; Diabetes Care Volume 21 ; 21 ; https://care.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1999 ; Diabetes Care Volume 22 ; 22 ; https://care.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2000 ; Diabetes Care Volume 23 ; 23 ; https://care.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2001 ; Diabetes Care Volume 24 ; 24 ; https://care.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2002 ; Diabetes Care Volume 25 ; 25 ; https://care.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2003 ; Diabetes Care Volume 26 ; 26 ; https://care.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2004 ; Diabetes Care Volume 27 ; 27 ; https://care.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2005 ; Diabetes Care Volume 28 ; 28 ; https://care.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2006 ; Diabetes Care Volume 29 ; 29 ; https://care.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2007 ; Diabetes Care Volume 30 ; 30 ; https://care.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2008 ; Diabetes Care Volume 31 ; 31 ; https://care.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2009 ; Diabetes Care Volume 32 ; 32 ; https://care.diabetesjournals.org/ ; >
         au < ada.ClockssADADrupalPlugin ; finished ; crawling ; 2010 ; Diabetes Care Volume 33 ; 33 ; http://care.diabetesjournals.org/ ; reingest5.clockss.org:8082 >
         au < ada.ClockssADADrupalPlugin ; finished ; crawling ; 2011 ; Diabetes Care Volume 34 ; 34 ; http://care.diabetesjournals.org/ ; reingest3.clockss.org:8083 >
         au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2012 ; Diabetes Care Volume 35 ; 35 ; http://care.diabetesjournals.org/ ; >
         au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2013 ; Diabetes Care Volume 36 [superseded] ; 36 ; http://care.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 2013 ; Diabetes Care Volume 36 ; 36 ; https://care.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2013 ; Diabetes Care Volume 36 ; 36 ; https://care.diabetesjournals.org/ ; >
         au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 2014 ; Diabetes Care Volume 37 ; 37 ; http://care.diabetesjournals.org/ ; reingest4.clockss.org:8082 >
         au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2015 ; Diabetes Care Volume 38 ; 38 ; http://care.diabetesjournals.org/ ; reingest1.clockss.org:8082 >
         au < ada.ClockssADADrupalPlugin ; finished ; crawling ; 2016 ; Diabetes Care Volume 39 ; 39 ; http://care.diabetesjournals.org/ ; reingest4.clockss.org:8082 >
@@ -202,15 +202,15 @@
     >
       #param[base_url] = http://spectrum.diabetesjournals.org/
 
-      au < ada.ClockssADADrupalPlugin ; exists ; exists ; 2001 ; Diabetes Spectrum Volume 14 ; 14 ; https://spectrum.diabetesjournals.org/ ; >
-      au < ada.ClockssADADrupalPlugin ; exists ; exists ; 2002 ; Diabetes Spectrum Volume 15 ; 15 ; https://spectrum.diabetesjournals.org/ ; >
-      au < ada.ClockssADADrupalPlugin ; exists ; exists ; 2003 ; Diabetes Spectrum Volume 16 ; 16 ; https://spectrum.diabetesjournals.org/ ; >
-      au < ada.ClockssADADrupalPlugin ; exists ; exists ; 2004 ; Diabetes Spectrum Volume 17 ; 17 ; https://spectrum.diabetesjournals.org/ ; >
-      au < ada.ClockssADADrupalPlugin ; exists ; exists ; 2005 ; Diabetes Spectrum Volume 18 ; 18 ; https://spectrum.diabetesjournals.org/ ; >
-      au < ada.ClockssADADrupalPlugin ; exists ; exists ; 2006 ; Diabetes Spectrum Volume 19 ; 19 ; https://spectrum.diabetesjournals.org/ ; >
-      au < ada.ClockssADADrupalPlugin ; exists ; exists ; 2007 ; Diabetes Spectrum Volume 20 ; 20 ; https://spectrum.diabetesjournals.org/ ; >
-      au < ada.ClockssADADrupalPlugin ; exists ; exists ; 2008 ; Diabetes Spectrum Volume 21 ; 21 ; https://spectrum.diabetesjournals.org/ ; >
-      au < ada.ClockssADADrupalPlugin ; exists ; exists ; 2009 ; Diabetes Spectrum Volume 22 ; 22 ; https://spectrum.diabetesjournals.org/ ; >
+      au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2001 ; Diabetes Spectrum Volume 14 ; 14 ; https://spectrum.diabetesjournals.org/ ; >
+      au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2002 ; Diabetes Spectrum Volume 15 ; 15 ; https://spectrum.diabetesjournals.org/ ; >
+      au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2003 ; Diabetes Spectrum Volume 16 ; 16 ; https://spectrum.diabetesjournals.org/ ; >
+      au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2004 ; Diabetes Spectrum Volume 17 ; 17 ; https://spectrum.diabetesjournals.org/ ; >
+      au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2005 ; Diabetes Spectrum Volume 18 ; 18 ; https://spectrum.diabetesjournals.org/ ; >
+      au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2006 ; Diabetes Spectrum Volume 19 ; 19 ; https://spectrum.diabetesjournals.org/ ; >
+      au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2007 ; Diabetes Spectrum Volume 20 ; 20 ; https://spectrum.diabetesjournals.org/ ; >
+      au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2008 ; Diabetes Spectrum Volume 21 ; 21 ; https://spectrum.diabetesjournals.org/ ; >
+      au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2009 ; Diabetes Spectrum Volume 22 ; 22 ; https://spectrum.diabetesjournals.org/ ; >
       au < ada.ClockssADADrupalPlugin ; finished ; crawling ; 2010 ; Diabetes Spectrum Volume 23 ; 23 ; http://spectrum.diabetesjournals.org/ ; reingest5.clockss.org:8082 >
       au < ada.ClockssADADrupalPlugin ; finished ; crawling ; 2011 ; Diabetes Spectrum Volume 24 ; 24 ; http://spectrum.diabetesjournals.org/ ; reingest5.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Diabetes Spectrum Volume 25 ; 25 ; http://spectrum.diabetesjournals.org/ ; >
