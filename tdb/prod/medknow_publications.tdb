@@ -3822,7 +3822,7 @@
     au < released ; 2015 ; Nigerian Medical Journal Volume 56 ; 2015 ; 56 >
     au < released ; 2016 ; Nigerian Medical Journal Volume 57 ; 2016 ; 57 >
     au < released ; 2017 ; Nigerian Medical Journal Volume 58 ; 2017 ; 58 >
-    au < expected ; 2018 ; Nigerian Medical Journal Volume 59 ; 2018 ; 59 >
+    au < manifest ; 2018 ; Nigerian Medical Journal Volume 59 ; 2018 ; 59 >
 
   }
 
@@ -4114,9 +4114,9 @@
     param[journal_issn] = 1735-5362
     comment[jrps] = the url structure is the new version
 
-    au < exists ; 2016 ; Research in Pharmaceutical Sciences Volume 11 ; 2016 ; 11 >
-    au < exists ; 2017 ; Research in Pharmaceutical Sciences Volume 12 ; 2017 ; 12 >
-    au < exists ; 2018 ; Research in Pharmaceutical Sciences Volume 13 ; 2018 ; 13 >
+    au < manifest ; 2016 ; Research in Pharmaceutical Sciences Volume 11 ; 2016 ; 11 >
+    au < manifest ; 2017 ; Research in Pharmaceutical Sciences Volume 12 ; 2017 ; 12 >
+    au < manifest ; 2018 ; Research in Pharmaceutical Sciences Volume 13 ; 2018 ; 13 >
 
   }
     
