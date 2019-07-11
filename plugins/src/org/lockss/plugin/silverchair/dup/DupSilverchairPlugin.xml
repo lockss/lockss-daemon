@@ -10,7 +10,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -128,6 +128,10 @@
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.silverchair.dup.DupScHtmlHashFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.silverchair.dup.DupScHtmlCrawlFilterFactory</string>
   </entry>
   <entry>
     <string>application/pdf_filter_factory</string>
