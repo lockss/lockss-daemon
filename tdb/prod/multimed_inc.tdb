@@ -12,25 +12,25 @@
     >
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    param[base_url] = http://www.current-oncology.com/
+    #param[base_url] = http://www.current-oncology.com/
     param[journal_id] = oncology
 
-    implicit < status ; year ; name ; volume ; param[year] >
+    implicit < status ; year ; name ; volume ; param[year] ; param[base_url] >
 
-    au < released ; 2005 ; Current Oncology Volume 12 ; 12 ; 2005 >
-    au < released ; 2006 ; Current Oncology Volume 13 ; 13 ; 2006 >
-    au < released ; 2007 ; Current Oncology Volume 14 ; 14 ; 2007 >
-    au < released ; 2008 ; Current Oncology Volume 15 ; 15 ; 2008 >
-    au < released ; 2009 ; Current Oncology Volume 16 ; 16 ; 2009 >
-    au < released ; 2010 ; Current Oncology Volume 17 ; 17 ; 2010 >
-    au < released ; 2011 ; Current Oncology Volume 18 ; 18 ; 2011 >
-    au < released ; 2012 ; Current Oncology Volume 19 ; 19 ; 2012 >
-    au < released ; 2013 ; Current Oncology Volume 20 ; 20 ; 2013 >
-    au < released ; 2014 ; Current Oncology Volume 21 ; 21 ; 2014 >
-    au < released ; 2015 ; Current Oncology Volume 22 ; 22 ; 2015 >
-    au < released ; 2016 ; Current Oncology Volume 23 ; 23 ; 2016 >
-    au < released ; 2017 ; Current Oncology Volume 24 ; 24 ; 2017 >
-    au < testing ; 2018 ; Current Oncology Volume 25 ; 25 ; 2018 >
+    au < down ; 2005 ; Current Oncology Volume 12 ; 12 ; 2005 ; http://www.current-oncology.com/ >
+    au < down ; 2006 ; Current Oncology Volume 13 ; 13 ; 2006 ; http://www.current-oncology.com/ >
+    au < down ; 2007 ; Current Oncology Volume 14 ; 14 ; 2007 ; http://www.current-oncology.com/ >
+    au < down ; 2008 ; Current Oncology Volume 15 ; 15 ; 2008 ; http://www.current-oncology.com/ >
+    au < down ; 2009 ; Current Oncology Volume 16 ; 16 ; 2009 ; http://www.current-oncology.com/ >
+    au < down ; 2010 ; Current Oncology Volume 17 ; 17 ; 2010 ; http://www.current-oncology.com/ >
+    au < down ; 2011 ; Current Oncology Volume 18 ; 18 ; 2011 ; http://www.current-oncology.com/ >
+    au < down ; 2012 ; Current Oncology Volume 19 ; 19 ; 2012 ; http://www.current-oncology.com/ >
+    au < down ; 2013 ; Current Oncology Volume 20 ; 20 ; 2013 ; http://www.current-oncology.com/ >
+    au < down ; 2014 ; Current Oncology Volume 21 ; 21 ; 2014 ; http://www.current-oncology.com/ >
+    au < down ; 2015 ; Current Oncology Volume 22 ; 22 ; 2015 ; http://www.current-oncology.com/ >
+    au < down ; 2016 ; Current Oncology Volume 23 ; 23 ; 2016 ; http://www.current-oncology.com/ >
+    au < down ; 2017 ; Current Oncology Volume 24 ; 24 ; 2017 ; http://www.current-oncology.com/ >
+    au < exists ; 2018 ; Current Oncology Volume 25 ; 25 ; 2018 ; https://current-oncology.com/ >
 
   }
 
