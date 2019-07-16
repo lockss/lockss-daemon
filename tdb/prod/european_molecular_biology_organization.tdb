@@ -6,7 +6,7 @@
 
   plugin = org.lockss.plugin.highwire.embo.EMBODrupalPlugin
   comment[platform] = HighWire Drupal
-  implicit < status ; year ; name ; param[volume_name] >
+  implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
 
   {
   
@@ -17,30 +17,30 @@
       issnl = 0261-4189
     >
 
-    param[base_url] = http://emboj.embopress.org/
+    #param[base_url] = http://emboj.embopress.org/
 
-    au < manifest ; 1997 ; The EMBO Journal Volume 16 ; 16 >
-    au < manifest ; 1998 ; The EMBO Journal Volume 17 ; 17 >
-    au < manifest ; 1999 ; The EMBO Journal Volume 18 ; 18 >
-    au < released ; 2000 ; The EMBO Journal Volume 19 ; 19 >
-    au < released ; 2001 ; The EMBO Journal Volume 20 ; 20 >
-    au < released ; 2002 ; The EMBO Journal Volume 21 ; 21 >
-    au < released ; 2003 ; The EMBO Journal Volume 22 ; 22 >
-    au < released ; 2004 ; The EMBO Journal Volume 23 ; 23 >
-    au < released ; 2005 ; The EMBO Journal Volume 24 ; 24 >
-    au < released ; 2006 ; The EMBO Journal Volume 25 ; 25 >
-    au < released ; 2007 ; The EMBO Journal Volume 26 ; 26 >
-    au < released ; 2008 ; The EMBO Journal Volume 27 ; 27 >
-    au < released ; 2009 ; The EMBO Journal Volume 28 ; 28 >
-    au < released ; 2010 ; The EMBO Journal Volume 29 ; 29 >
-    au < released ; 2011 ; The EMBO Journal Volume 30 ; 30 >
-    au < released ; 2012 ; The EMBO Journal Volume 31 ; 31 >
-    au < released ; 2013 ; The EMBO Journal Volume 32 ; 32 >
-    au < released ; 2014 ; The EMBO Journal Volume 33 ; 33 >
-    au < released ; 2015 ; The EMBO Journal Volume 34 ; 34 >
-    au < exists ; 2016 ; The EMBO Journal Volume 35 ; 35 >
-    au < exists ; 2017 ; The EMBO Journal Volume 36 ; 36 >
-    au < exists ; 2018 ; The EMBO Journal Volume 37 ; 37 >
+    au < manifest ; 1997 ; The EMBO Journal Volume 16 ; 16 ; https://emboj.embopress.org/ >
+    au < manifest ; 1998 ; The EMBO Journal Volume 17 ; 17 ; https://emboj.embopress.org/ >
+    au < manifest ; 1999 ; The EMBO Journal Volume 18 ; 18 ; https://emboj.embopress.org/ >
+    au < released ; 2000 ; The EMBO Journal Volume 19 ; 19 ; http://emboj.embopress.org/ >
+    au < released ; 2001 ; The EMBO Journal Volume 20 ; 20 ; http://emboj.embopress.org/ >
+    au < released ; 2002 ; The EMBO Journal Volume 21 ; 21 ; http://emboj.embopress.org/ >
+    au < released ; 2003 ; The EMBO Journal Volume 22 ; 22 ; http://emboj.embopress.org/ >
+    au < released ; 2004 ; The EMBO Journal Volume 23 ; 23 ; http://emboj.embopress.org/ >
+    au < released ; 2005 ; The EMBO Journal Volume 24 ; 24 ; http://emboj.embopress.org/ >
+    au < released ; 2006 ; The EMBO Journal Volume 25 ; 25 ; http://emboj.embopress.org/ >
+    au < released ; 2007 ; The EMBO Journal Volume 26 ; 26 ; http://emboj.embopress.org/ >
+    au < released ; 2008 ; The EMBO Journal Volume 27 ; 27 ; http://emboj.embopress.org/ >
+    au < released ; 2009 ; The EMBO Journal Volume 28 ; 28 ; http://emboj.embopress.org/ >
+    au < released ; 2010 ; The EMBO Journal Volume 29 ; 29 ; http://emboj.embopress.org/ >
+    au < released ; 2011 ; The EMBO Journal Volume 30 ; 30 ; http://emboj.embopress.org/ >
+    au < released ; 2012 ; The EMBO Journal Volume 31 ; 31 ; http://emboj.embopress.org/ >
+    au < released ; 2013 ; The EMBO Journal Volume 32 ; 32 ; http://emboj.embopress.org/ >
+    au < released ; 2014 ; The EMBO Journal Volume 33 ; 33 ; http://emboj.embopress.org/ >
+    au < released ; 2015 ; The EMBO Journal Volume 34 ; 34 ; http://emboj.embopress.org/ >
+    au < exists ; 2016 ; The EMBO Journal Volume 35 ; 35 ; https://emboj.embopress.org/ >
+    au < exists ; 2017 ; The EMBO Journal Volume 36 ; 36 ; https://emboj.embopress.org/ >
+    au < exists ; 2018 ; The EMBO Journal Volume 37 ; 37 ; https://emboj.embopress.org/ >
 
   }
 
@@ -51,18 +51,18 @@
       eissn = 1757-4684
     >
 
-    param[base_url] = http://embomolmed.embopress.org/
+    #param[base_url] = http://embomolmed.embopress.org/
     
-    au < released ; 2009 ; EMBO Molecular Medicine Volume 1 ; 1 >
-    au < released ; 2009-2010 ; EMBO Molecular Medicine Volume 2 ; 2 >
-    au < released ; 2011 ; EMBO Molecular Medicine Volume 3 ; 3 >
-    au < released ; 2012 ; EMBO Molecular Medicine Volume 4 ; 4 >
-    au < released ; 2013 ; EMBO Molecular Medicine Volume 5 ; 5 >
-    au < released ; 2014 ; EMBO Molecular Medicine Volume 6 ; 6 >
-    au < released ; 2015 ; EMBO Molecular Medicine Volume 7 ; 7 >
-    au < exists ; 2016 ; EMBO Molecular Medicine Volume 8 ; 8 >
-    au < exists ; 2017 ; EMBO Molecular Medicine Volume 9 ; 9 >
-    au < exists ; 2018 ; EMBO Molecular Medicine Volume 10 ; 10 >
+    au < released ; 2009 ; EMBO Molecular Medicine Volume 1 ; 1 ; http://embomolmed.embopress.org/ >
+    au < released ; 2009-2010 ; EMBO Molecular Medicine Volume 2 ; 2 ; http://embomolmed.embopress.org/ >
+    au < released ; 2011 ; EMBO Molecular Medicine Volume 3 ; 3 ; http://embomolmed.embopress.org/ >
+    au < released ; 2012 ; EMBO Molecular Medicine Volume 4 ; 4 ; http://embomolmed.embopress.org/ >
+    au < released ; 2013 ; EMBO Molecular Medicine Volume 5 ; 5 ; http://embomolmed.embopress.org/ >
+    au < released ; 2014 ; EMBO Molecular Medicine Volume 6 ; 6 ; http://embomolmed.embopress.org/ >
+    au < released ; 2015 ; EMBO Molecular Medicine Volume 7 ; 7 ; http://embomolmed.embopress.org/ >
+    au < exists ; 2016 ; EMBO Molecular Medicine Volume 8 ; 8 ; https://embomolmed.embopress.org/ >
+    au < exists ; 2017 ; EMBO Molecular Medicine Volume 9 ; 9 ; https://embomolmed.embopress.org/ >
+    au < exists ; 2018 ; EMBO Molecular Medicine Volume 10 ; 10 ; https://embomolmed.embopress.org/ >
 
   }
 
@@ -74,27 +74,27 @@
       eissn = 1469-3178 ;
       issnl = 1469-221X
     >
-    param[base_url] = http://embor.embopress.org/
+    #param[base_url] = http://embor.embopress.org/
 
-    au < released ; 2000 ; EMBO Reports Volume 1 ; 1 >
-    au < released ; 2001 ; EMBO Reports Volume 2 ; 2 >
-    au < released ; 2002 ; EMBO Reports Volume 3 ; 3 >
-    au < released ; 2003 ; EMBO Reports Volume 4 ; 4 >
-    au < released ; 2004 ; EMBO Reports Volume 5 ; 5 >
-    au < released ; 2005 ; EMBO Reports Volume 6 ; 6 >
-    au < released ; 2006 ; EMBO Reports Volume 7 ; 7 >
-    au < released ; 2007 ; EMBO Reports Volume 8 ; 8 >
-    au < released ; 2008 ; EMBO Reports Volume 9 ; 9 >
-    au < released ; 2009 ; EMBO Reports Volume 10 ; 10 >
-    au < released ; 2010 ; EMBO Reports Volume 11 ; 11 >
-    au < released ; 2011 ; EMBO Reports Volume 12 ; 12 >
-    au < released ; 2012 ; EMBO Reports Volume 13 ; 13 >
-    au < released ; 2013 ; EMBO Reports Volume 14 ; 14 >
-    au < released ; 2014 ; EMBO Reports Volume 15 ; 15 >
-    au < released ; 2015 ; EMBO Reports Volume 16 ; 16 >
-    au < exists ; 2016 ; EMBO Reports Volume 17 ; 17 >
-    au < exists ; 2017 ; EMBO Reports Volume 18 ; 18 >
-    au < exists ; 2018 ; EMBO Reports Volume 19 ; 19 >
+    au < released ; 2000 ; EMBO Reports Volume 1 ; 1 ; http://embor.embopress.org/ >
+    au < released ; 2001 ; EMBO Reports Volume 2 ; 2 ; http://embor.embopress.org/ >
+    au < released ; 2002 ; EMBO Reports Volume 3 ; 3 ; http://embor.embopress.org/ >
+    au < released ; 2003 ; EMBO Reports Volume 4 ; 4 ; http://embor.embopress.org/ >
+    au < released ; 2004 ; EMBO Reports Volume 5 ; 5 ; http://embor.embopress.org/ >
+    au < released ; 2005 ; EMBO Reports Volume 6 ; 6 ; http://embor.embopress.org/ >
+    au < released ; 2006 ; EMBO Reports Volume 7 ; 7 ; http://embor.embopress.org/ >
+    au < released ; 2007 ; EMBO Reports Volume 8 ; 8 ; http://embor.embopress.org/ >
+    au < released ; 2008 ; EMBO Reports Volume 9 ; 9 ; http://embor.embopress.org/ >
+    au < released ; 2009 ; EMBO Reports Volume 10 ; 10 ; http://embor.embopress.org/ >
+    au < released ; 2010 ; EMBO Reports Volume 11 ; 11 ; http://embor.embopress.org/ >
+    au < released ; 2011 ; EMBO Reports Volume 12 ; 12 ; http://embor.embopress.org/ >
+    au < released ; 2012 ; EMBO Reports Volume 13 ; 13 ; http://embor.embopress.org/ >
+    au < released ; 2013 ; EMBO Reports Volume 14 ; 14 ; http://embor.embopress.org/ >
+    au < released ; 2014 ; EMBO Reports Volume 15 ; 15 ; http://embor.embopress.org/ >
+    au < released ; 2015 ; EMBO Reports Volume 16 ; 16 ; http://embor.embopress.org/ >
+    au < exists ; 2016 ; EMBO Reports Volume 17 ; 17 ; https://embor.embopress.org/ >
+    au < exists ; 2017 ; EMBO Reports Volume 18 ; 18 ; https://embor.embopress.org/ >
+    au < exists ; 2018 ; EMBO Reports Volume 19 ; 19 ; https://embor.embopress.org/ >
 
   }
 
@@ -104,22 +104,22 @@
       name = Molecular Systems Biology ;
       eissn = 1744-4292
     >
-    param[base_url] = http://msb.embopress.org/
+    #param[base_url] = http://msb.embopress.org/
     
-    au < released ; 2005 ; Molecular Systems Biology Volume 1 ; 1 >
-    au < released ; 2006 ; Molecular Systems Biology Volume 2 ; 2 >
-    au < released ; 2007 ; Molecular Systems Biology Volume 3 ; 3 >
-    au < released ; 2008 ; Molecular Systems Biology Volume 4 ; 4 >
-    au < released ; 2009 ; Molecular Systems Biology Volume 5 ; 5 >
-    au < released ; 2010 ; Molecular Systems Biology Volume 6 ; 6 >
-    au < released ; 2011 ; Molecular Systems Biology Volume 7 ; 7 >
-    au < released ; 2012 ; Molecular Systems Biology Volume 8 ; 8 >
-    au < released ; 2013 ; Molecular Systems Biology Volume 9 ; 9 >
-    au < released ; 2014 ; Molecular Systems Biology Volume 10 ; 10 >
-    au < released ; 2015 ; Molecular Systems Biology Volume 11 ; 11 >
-    au < exists ; 2016 ; Molecular Systems Biology Volume 12 ; 12 >
-    au < exists ; 2017 ; Molecular Systems Biology Volume 13 ; 13 >
-    au < exists ; 2018 ; Molecular Systems Biology Volume 14 ; 14 >
+    au < released ; 2005 ; Molecular Systems Biology Volume 1 ; 1 ; http://msb.embopress.org/ >
+    au < released ; 2006 ; Molecular Systems Biology Volume 2 ; 2 ; http://msb.embopress.org/ >
+    au < released ; 2007 ; Molecular Systems Biology Volume 3 ; 3 ; http://msb.embopress.org/ >
+    au < released ; 2008 ; Molecular Systems Biology Volume 4 ; 4 ; http://msb.embopress.org/ >
+    au < released ; 2009 ; Molecular Systems Biology Volume 5 ; 5 ; http://msb.embopress.org/ >
+    au < released ; 2010 ; Molecular Systems Biology Volume 6 ; 6 ; http://msb.embopress.org/ >
+    au < released ; 2011 ; Molecular Systems Biology Volume 7 ; 7 ; http://msb.embopress.org/ >
+    au < released ; 2012 ; Molecular Systems Biology Volume 8 ; 8 ; http://msb.embopress.org/ >
+    au < released ; 2013 ; Molecular Systems Biology Volume 9 ; 9 ; http://msb.embopress.org/ >
+    au < released ; 2014 ; Molecular Systems Biology Volume 10 ; 10 ; http://msb.embopress.org/ >
+    au < released ; 2015 ; Molecular Systems Biology Volume 11 ; 11 ; http://msb.embopress.org/ >
+    au < exists ; 2016 ; Molecular Systems Biology Volume 12 ; 12 ; https://msb.embopress.org/ >
+    au < exists ; 2017 ; Molecular Systems Biology Volume 13 ; 13 ; https://msb.embopress.org/ >
+    au < exists ; 2018 ; Molecular Systems Biology Volume 14 ; 14 ; https://msb.embopress.org/ >
 
   }
 
