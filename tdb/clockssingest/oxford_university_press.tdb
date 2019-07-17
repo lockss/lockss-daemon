@@ -4454,8 +4454,8 @@
     au < manifest ; exists ; 2014 ; 2014 ; The Economic Journal Volume 124 ; 124 ; >
     au < manifest ; exists ; 2015 ; 2015 ; The Economic Journal Volume 125 ; 125 ; >
     au < frozen ; exists ; 2016 ; 2016 ; The Economic Journal Volume 126 ; 126 ; >
-    au < testing ; exists ; 2017 ; 2017 ; The Economic Journal Volume 127 ; 127 ; >
-    au < testing ; exists ; 2018 ; 2018 ; The Economic Journal Volume 128 ; 128 ; >
+    au < ready ; exists ; 2017 ; 2017 ; The Economic Journal Volume 127 ; 127 ; >
+    au < ready ; exists ; 2018 ; 2018 ; The Economic Journal Volume 128 ; 128 ; >
     au < manifest ; exists ; 2019 ; 2019 ; The Economic Journal Volume 129 ; 129 ; >
 
   }
@@ -12398,7 +12398,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; MHR: Basic science of reproductive medicine Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; MHR: Basic science of reproductive medicine Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; MHR: Basic science of reproductive medicine Volume 21 ; 21 ; >
-    au < testing ; exists ; 2016 ; 2016 ; MHR: Basic science of reproductive medicine Volume 22 ; 22 ; >
+    au < ready ; exists ; 2016 ; 2016 ; MHR: Basic science of reproductive medicine Volume 22 ; 22 ; >
     au < frozen ; exists ; 2017 ; 2017 ; MHR: Basic science of reproductive medicine Volume 23 ; 23 ; >
     au < frozen ; exists ; 2018 ; 2018 ; MHR: Basic science of reproductive medicine Volume 24 ; 24 ; >
     au < manifest ; exists ; 2019 ; 2019 ; MHR: Basic science of reproductive medicine Volume 25 ; 25 ; >
@@ -12930,7 +12930,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Molecular Biology and Evolution Volume 32 ; 32 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Molecular Biology and Evolution Volume 33 ; 33 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Molecular Biology and Evolution Volume 34 ; 34 ; >
-    au < testing ; exists ; 2018 ; 2018 ; Molecular Biology and Evolution Volume 35 ; 35 ; >
+    au < ready ; exists ; 2018 ; 2018 ; Molecular Biology and Evolution Volume 35 ; 35 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Molecular Biology and Evolution Volume 36 ; 36 ; >
 
   }
@@ -13202,7 +13202,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Music Therapy Perspectives Volume 33 ; 33 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Music Therapy Perspectives Volume 34 ; 34 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Music Therapy Perspectives Volume 35 ; 35 ; >
-    au < testing ; exists ; 2018 ; 2018 ; Music Therapy Perspectives Volume 36 ; 36 ; >
+    au < ready ; exists ; 2018 ; 2018 ; Music Therapy Perspectives Volume 36 ; 36 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Music Therapy Perspectives Volume 37 ; 37 ; >
 
   }
@@ -13399,7 +13399,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; National Science Review Volume 2 ; 2 ; >
     au < frozen ; exists ; 2016 ; 2016 ; National Science Review Volume 3 ; 3 ; >
     au < frozen ; exists ; 2017 ; 2017 ; National Science Review Volume 4 ; 4 ; >
-    au < testing ; exists ; 2018 ; 2018 ; National Science Review Volume 5 ; 5 ; >
+    au < ready ; exists ; 2018 ; 2018 ; National Science Review Volume 5 ; 5 ; >
     au < manifest ; exists ; 2019 ; 2019 ; National Science Review Volume 6 ; 6 ; >
 
   }
@@ -14946,7 +14946,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Policing: A Journal of Policy and Practice Volume 9 ; 9 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Policing: A Journal of Policy and Practice Volume 10 ; 10 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Policing: A Journal of Policy and Practice Volume 11 ; 11 ; >
-    au < testing ; exists ; 2018 ; 2018 ; Policing: A Journal of Policy and Practice Volume 12 ; 12 ; >
+    au < ready ; exists ; 2018 ; 2018 ; Policing: A Journal of Policy and Practice Volume 12 ; 12 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Policing: A Journal of Policy and Practice Volume 13 ; 13 ; >
 
   }
@@ -15819,7 +15819,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Refugee Survey Quarterly Volume 34 ; 34 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Refugee Survey Quarterly Volume 35 ; 35 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Refugee Survey Quarterly Volume 36 ; 36 ; >
-    au < testing ; exists ; 2018 ; 2018 ; Refugee Survey Quarterly Volume 37 ; 37 ; >
+    au < ready ; exists ; 2018 ; 2018 ; Refugee Survey Quarterly Volume 37 ; 37 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Refugee Survey Quarterly Volume 38 ; 38 ; >
 
   }
@@ -16980,7 +16980,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Sociology of Religion Volume 76 ; 76 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Sociology of Religion Volume 77 ; 77 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Sociology of Religion Volume 78 ; 78 ; >
-    au < testing ; exists ; 2018 ; 2018 ; Sociology of Religion Volume 79 ; 79 ; >
+    au < ready ; exists ; 2018 ; 2018 ; Sociology of Religion Volume 79 ; 79 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Sociology of Religion Volume 80 ; 80 ; >
 
   }
@@ -17051,7 +17051,7 @@
     #this title was ONLY in the publisher listing
     au < frozen ; exists ; 2016 ; 2016 ; Synthetic Biology Volume 1 ; 1 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Synthetic Biology Volume 2 ; 2 ; >
-    au < testing ; exists ; 2018 ; 2018 ; Synthetic Biology Volume 3 ; 3 ; >
+    au < ready ; exists ; 2018 ; 2018 ; Synthetic Biology Volume 3 ; 3 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Synthetic Biology Volume 4 ; 4 ; >
 
   }
@@ -17185,7 +17185,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Teaching Mathematics and its Applications: An International Journal of the IMA Volume 34 ; 34 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Teaching Mathematics and its Applications: An International Journal of the IMA Volume 35 ; 35 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Teaching Mathematics and its Applications: An International Journal of the IMA Volume 36 ; 36 ; >
-    au < testing ; exists ; 2018 ; 2018 ; Teaching Mathematics and its Applications: An International Journal of the IMA Volume 37 ; 37 ; >
+    au < ready ; exists ; 2018 ; 2018 ; Teaching Mathematics and its Applications: An International Journal of the IMA Volume 37 ; 37 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Teaching Mathematics and its Applications: An International Journal of the IMA Volume 38 ; 38 ; >
 
   }
@@ -20486,7 +20486,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 109 ; 109 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 110 ; 110 ; >
     au < ready ; exists ; 2017 ; 2017 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 111 ; 111 ; >
-    au < testing ; exists ; 2018 ; 2018 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 112 ; 112 ; >
+    au < ready ; exists ; 2018 ; 2018 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 112 ; 112 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 113 ; 113 ; >
 
   }
