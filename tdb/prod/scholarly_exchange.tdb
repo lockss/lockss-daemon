@@ -18,13 +18,12 @@
     implicit < status ; year ; name ; volume ; param[year] >
     param[base_url] = http://www.ajpspharm.com/
     param[journal_id] = AJPSP
+    #webpage gone
 
-    au < released ; 2010 ; African Journal of Pharmaceutical Sciences and Pharmacy Volume 1 ; 1 ; 2010 >
-    au < released ; 2011 ; African Journal of Pharmaceutical Sciences and Pharmacy Volume 2 ; 2 ; 2011 >
-    au < released ; 2012 ; African Journal of Pharmaceutical Sciences and Pharmacy Volume 3 ; 3 ; 2012 >
-    au < released ; 2013 ; African Journal of Pharmaceutical Sciences and Pharmacy Volume 4 ; 4 ; 2013 >
-    au < exists ; 2017 ; African Journal of Pharmaceutical Sciences and Pharmacy Volume 5 ; 5 ; 2017 >
-    au < expected ; 2018 ; African Journal of Pharmaceutical Sciences and Pharmacy Volume 6 ; 6 ; 2018 >
+    au < down ; 2010 ; African Journal of Pharmaceutical Sciences and Pharmacy Volume 1 ; 1 ; 2010 >
+    au < down ; 2011 ; African Journal of Pharmaceutical Sciences and Pharmacy Volume 2 ; 2 ; 2011 >
+    au < down ; 2012 ; African Journal of Pharmaceutical Sciences and Pharmacy Volume 3 ; 3 ; 2012 >
+    au < down ; 2013 ; African Journal of Pharmaceutical Sciences and Pharmacy Volume 4 ; 4 ; 2013 >
 
   }
 }  
@@ -43,19 +42,21 @@
     >
     
     provider = Scholarly Exchange
-    plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; name ; volume ; param[year] >
+    #plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    pluginPrefix = org.lockss.plugin.
+    implicit < pluginSuffix ; status ; year ; name ; volume ; param[year] >
     param[base_url] = http://ijms.nmdl.org/
     param[journal_id] = MSJ
+    #moved to ojs3
 
-    au < released ; 2010 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 1 ; 1 ; 2010 >
-    au < released ; 2011 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 2 ; 2 ; 2011 >
-    au < released ; 2012 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 3 ; 3 ; 2012 >
-    au < released ; 2013 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 4 ; 4 ; 2013 >
-    au < released ; 2015 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 5 ; 5 ; 2015 >
-    au < released ; 2016 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 6 ; 6 ; 2016 >
-    au < exists ; 2017 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 7 ; 7 ; 2017 >
-    au < expected ; 2018 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 8 ; 8 ; 2018 >
+    au < ojs2.OJS2Plugin ; down ; 2010 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 1 ; 1 ; 2010 >
+    au < ojs2.OJS2Plugin ; down ; 2011 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 2 ; 2 ; 2011 >
+    au < ojs2.OJS2Plugin ; down ; 2012 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 3 ; 3 ; 2012 >
+    au < ojs2.OJS2Plugin ; down ; 2013 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 4 ; 4 ; 2013 >
+    au < ojs2.OJS2Plugin ; down ; 2015 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 5 ; 5 ; 2015 >
+    au < ojs2.OJS2Plugin ; down ; 2016 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 6 ; 6 ; 2016 >
+    au < ojs3.Ojs3Plugin ; exists ; 2017 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 7 ; 7 ; 2017 >
+    au < ojs3.Ojs3Plugin ; exists ; 2018 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 8 ; 8 ; 2018 >
 
   }
 }  
@@ -74,20 +75,22 @@
     >
     
     provider = Scholarly Exchange
-    plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; name ; volume ; param[year] >
+    #plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    pluginPrefix = org.lockss.plugin.
+    implicit < pluginSuffix ; status ; year ; name ; volume ; param[year] >
     param[base_url] = http://www.ijic.info/
     param[journal_id] = IJIC
+    #moved to ojs3
 
-    au < released ; 2010 ; International Journal of Infection Control Volume 6 ; 6 ; 2010 >
-    au < released ; 2011 ; International Journal of Infection Control Volume 7 ; 7 ; 2011 >
-    au < released ; 2012 ; International Journal of Infection Control Volume 8 ; 8 ; 2012 >
-    au < released ; 2013 ; International Journal of Infection Control Volume 9 ; 9 ; 2013 >
-    au < released ; 2014 ; International Journal of Infection Control Volume 10 ; 10 ; 2014 >
-    au < released ; 2015 ; International Journal of Infection Control Volume 11 ; 11 ; 2015 >
-    au < released ; 2016 ; International Journal of Infection Control Volume 12 ; 12 ; 2016 >
-    au < exists ; 2017 ; International Journal of Infection Control Volume 13 ; 13 ; 2017 >
-    au < expected ; 2018 ; International Journal of Infection Control Volume 14 ; 14 ; 2018 >
+    au < ojs2.OJS2Plugin ; down ; 2010 ; International Journal of Infection Control Volume 6 ; 6 ; 2010 >
+    au < ojs2.OJS2Plugin ; down ; 2011 ; International Journal of Infection Control Volume 7 ; 7 ; 2011 >
+    au < ojs2.OJS2Plugin ; down ; 2012 ; International Journal of Infection Control Volume 8 ; 8 ; 2012 >
+    au < ojs2.OJS2Plugin ; down ; 2013 ; International Journal of Infection Control Volume 9 ; 9 ; 2013 >
+    au < ojs2.OJS2Plugin ; down ; 2014 ; International Journal of Infection Control Volume 10 ; 10 ; 2014 >
+    au < ojs2.OJS2Plugin ; down ; 2015 ; International Journal of Infection Control Volume 11 ; 11 ; 2015 >
+    au < ojs2.OJS2Plugin ; down ; 2016 ; International Journal of Infection Control Volume 12 ; 12 ; 2016 >
+    au < ojs3.Ojs3Plugin ; exists ; 2017 ; International Journal of Infection Control Volume 13 ; 13 ; 2017 >
+    au < ojs3.Ojs3Plugin ; exists ; 2018 ; International Journal of Infection Control Volume 14 ; 14 ; 2018 >
 
   }
 }
@@ -106,20 +109,22 @@
     >
     
     provider = Scholarly Exchange
-    plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; name ; volume ; param[year] >
+    #plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    pluginPrefix = org.lockss.plugin.
+    implicit < pluginSuffix ; status ; year ; name ; volume ; param[year] >
     param[base_url] = http://www.ijtarp.org/
     param[journal_id] = IJTAR
+    #moved to ojs3
 
-    au < released ; 2010 ; International Journal of Transactional Analysis Research & Practice Volume 1 ; 1 ; 2010 >
-    au < released ; 2011 ; International Journal of Transactional Analysis Research & Practice Volume 2 ; 2 ; 2011 >
-    au < released ; 2012 ; International Journal of Transactional Analysis Research & Practice Volume 3 ; 3 ; 2012 >
-    au < released ; 2013 ; International Journal of Transactional Analysis Research & Practice Volume 4 ; 4 ; 2013 >
-    au < released ; 2014 ; International Journal of Transactional Analysis Research & Practice Volume 5 ; 5 ; 2014 >
-    au < released ; 2015 ; International Journal of Transactional Analysis Research & Practice Volume 6 ; 6 ; 2015 >
-    au < released ; 2016 ; International Journal of Transactional Analysis Research & Practice Volume 7 ; 7 ; 2016 >
-    au < released ; 2017 ; International Journal of Transactional Analysis Research & Practice Volume 8 ; 8 ; 2017 >
-    au < expected ; 2018 ; International Journal of Transactional Analysis Research & Practice Volume 9 ; 9 ; 2018 >
+    au < ojs2.OJS2Plugin ; down ; 2010 ; International Journal of Transactional Analysis Research & Practice Volume 1 ; 1 ; 2010 >
+    au < ojs2.OJS2Plugin ; down ; 2011 ; International Journal of Transactional Analysis Research & Practice Volume 2 ; 2 ; 2011 >
+    au < ojs2.OJS2Plugin ; down ; 2012 ; International Journal of Transactional Analysis Research & Practice Volume 3 ; 3 ; 2012 >
+    au < ojs2.OJS2Plugin ; down ; 2013 ; International Journal of Transactional Analysis Research & Practice Volume 4 ; 4 ; 2013 >
+    au < ojs2.OJS2Plugin ; down ; 2014 ; International Journal of Transactional Analysis Research & Practice Volume 5 ; 5 ; 2014 >
+    au < ojs2.OJS2Plugin ; down ; 2015 ; International Journal of Transactional Analysis Research & Practice Volume 6 ; 6 ; 2015 >
+    au < ojs2.OJS2Plugin ; down ; 2016 ; International Journal of Transactional Analysis Research & Practice Volume 7 ; 7 ; 2016 >
+    au < ojs2.OJS2Plugin ; down ; 2017 ; International Journal of Transactional Analysis Research & Practice Volume 8 ; 8 ; 2017 >
+    au < ojs3.Ojs3Plugin ; exists ; 2018 ; International Journal of Transactional Analysis Research & Practice Volume 9 ; 9 ; 2018 >
 
   }
 }
@@ -138,23 +143,25 @@
     >
     
     provider = Scholarly Exchange
-    plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; name ; volume ; param[year] >
+    #plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    pluginPrefix = org.lockss.plugin.
+    implicit < pluginSuffix ; status ; year ; name ; volume ; param[year] >
     param[base_url] = http://www.intersticios.es/
     param[journal_id] = InterSoc
+    #moved to ojs3
 
-    au < released ; 2007 ; Intersticios Volume 1 ; 1 ; 2007 >
-    au < released ; 2008 ; Intersticios Volume 2 ; 2 ; 2008 >
-    au < released ; 2009 ; Intersticios Volume 3 ; 3 ; 2009 >
-    au < released ; 2010 ; Intersticios Volume 4 ; 4 ; 2010 >
-    au < released ; 2011 ; Intersticios Volume 5 ; 5 ; 2011 >
-    au < released ; 2012 ; Intersticios Volume 6 ; 6 ; 2012 >
-    au < released ; 2013 ; Intersticios Volume 7 ; 7 ; 2013 >
-    au < released ; 2014 ; Intersticios Volume 8 ; 8 ; 2014 >
-    au < released ; 2015 ; Intersticios Volume 9 ; 9 ; 2015 >
-    au < released ; 2016 ; Intersticios Volume 10 ; 10 ; 2016 >
-    au < exists ; 2017 ; Intersticios Volume 11 ; 11 ; 2017 >
-    au < expected ; 2018 ; Intersticios Volume 12 ; 12 ; 2018 >
+    au < ojs2.OJS2Plugin ; down ; 2007 ; Intersticios Volume 1 ; 1 ; 2007 >
+    au < ojs2.OJS2Plugin ; down ; 2008 ; Intersticios Volume 2 ; 2 ; 2008 >
+    au < ojs2.OJS2Plugin ; down ; 2009 ; Intersticios Volume 3 ; 3 ; 2009 >
+    au < ojs2.OJS2Plugin ; down ; 2010 ; Intersticios Volume 4 ; 4 ; 2010 >
+    au < ojs2.OJS2Plugin ; down ; 2011 ; Intersticios Volume 5 ; 5 ; 2011 >
+    au < ojs2.OJS2Plugin ; down ; 2012 ; Intersticios Volume 6 ; 6 ; 2012 >
+    au < ojs2.OJS2Plugin ; down ; 2013 ; Intersticios Volume 7 ; 7 ; 2013 >
+    au < ojs2.OJS2Plugin ; down ; 2014 ; Intersticios Volume 8 ; 8 ; 2014 >
+    au < ojs2.OJS2Plugin ; down ; 2015 ; Intersticios Volume 9 ; 9 ; 2015 >
+    au < ojs2.OJS2Plugin ; down ; 2016 ; Intersticios Volume 10 ; 10 ; 2016 >
+    au < ojs3.Ojs3Plugin ; exists ; 2017 ; Intersticios Volume 11 ; 11 ; 2017 >
+    au < ojs3.Ojs3Plugin ; exists ; 2018 ; Intersticios Volume 12 ; 12 ; 2018 >
 
   }
 }
@@ -177,17 +184,16 @@
     implicit < status ; year ; name ; volume ; param[year] >
     param[base_url] = http://www.investigativesciencesjournal.org/
     param[journal_id] = ISJ
+    #webpage gone
 
-    au < released ; 2009 ; Investigative Sciences Journal Volume 1 ; 1 ; 2009 >
-    au < released ; 2010 ; Investigative Sciences Journal Volume 2 ; 2 ; 2010 >
-    au < released ; 2011 ; Investigative Sciences Journal Volume 3 ; 3 ; 2011 >
-    au < released ; 2012 ; Investigative Sciences Journal Volume 4 ; 4 ; 2012 >
-    au < released ; 2013 ; Investigative Sciences Journal Volume 5 ; 5 ; 2013 >
-    au < released ; 2014 ; Investigative Sciences Journal Volume 6 ; 6 ; 2014 >
-    au < released ; 2015 ; Investigative Sciences Journal Volume 7 ; 7 ; 2015 >
-    au < released ; 2016 ; Investigative Sciences Journal Volume 8 ; 8 ; 2016 >
-    au < exists ; 2017 ; Investigative Sciences Journal Volume 9 ; 9 ; 2017 >
-    au < expected ; 2018 ; Investigative Sciences Journal Volume 10 ; 10 ; 2018 >
+    au < down ; 2009 ; Investigative Sciences Journal Volume 1 ; 1 ; 2009 >
+    au < down ; 2010 ; Investigative Sciences Journal Volume 2 ; 2 ; 2010 >
+    au < down ; 2011 ; Investigative Sciences Journal Volume 3 ; 3 ; 2011 >
+    au < down ; 2012 ; Investigative Sciences Journal Volume 4 ; 4 ; 2012 >
+    au < down ; 2013 ; Investigative Sciences Journal Volume 5 ; 5 ; 2013 >
+    au < down ; 2014 ; Investigative Sciences Journal Volume 6 ; 6 ; 2014 >
+    au < down ; 2015 ; Investigative Sciences Journal Volume 7 ; 7 ; 2015 >
+    au < down ; 2016 ; Investigative Sciences Journal Volume 8 ; 8 ; 2016 >
 
   }
 }
@@ -206,17 +212,21 @@
     >
     
     provider = Scholarly Exchange
-    plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; name ; volume ; param[year] >
+    #plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    pluginPrefix = org.lockss.plugin.
+    implicit < pluginSuffix ; status ; year ; name ; volume ; param[year] >
     param[base_url] = http://www.journal-alm.org/
     param[journal_id] = JALM
+    #moved to ojs3
 
-    au < released ; 2012 ; Journal of Applied Leadership and Management Volume 2012 ; 2012 ; 2012 >
-    au < released ; 2013 ; Journal of Applied Leadership and Management Volume 2013 ; 2013 ; 2013 >
-    au < released ; 2014 ; Journal of Applied Leadership and Management Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015-2016 ; Journal of Applied Leadership and Management Volume 2015 ; 2015 ; 2015 >
-    au < released ; 2015-2016 ; Journal of Applied Leadership and Management Volume 2016 ; 2016 ; 2016 >
-    
+    au < ojs2.OJS2Plugin ; down ; 2012 ; Journal of Applied Leadership and Management Volume 2012 ; 2012 ; 2012 >
+    au < ojs2.OJS2Plugin ; down ; 2013 ; Journal of Applied Leadership and Management Volume 2013 ; 2013 ; 2013 >
+    au < ojs2.OJS2Plugin ; down ; 2014 ; Journal of Applied Leadership and Management Volume 2014 ; 2014 ; 2014 >
+    au < ojs2.OJS2Plugin ; down ; 2015-2016 ; Journal of Applied Leadership and Management Volume 2015 ; 2015 ; 2015 >
+    au < ojs2.OJS2Plugin ; down ; 2015-2016 ; Journal of Applied Leadership and Management Volume 2016 ; 2016 ; 2016 >
+    au < ojs3.Ojs3Plugin ; exists ; 2017 ; Journal of Applied Leadership and Management Volume 2017 ; 2017 ; 2017 >
+    au < ojs3.Ojs3Plugin ; exists ; 2018 ; Journal of Applied Leadership and Management Volume 2018 ; 2018 ; 2018 >
+
   }
 }
   
@@ -271,10 +281,11 @@
     implicit < status ; year ; name ; volume ; param[year] >
     param[base_url] = http://www.scholarlyexchange.org/ojs/
     param[journal_id] = JMEP
+    #webpage gone
 
-    au < released ; 2012 ; Journal of Medical Education Perspectives Volume 1 ; 1 ; 2012 >
-    au < released ; 2013 ; Journal of Medical Education Perspectives Volume 2 ; 2 ; 2013 >
-    au < released ; 2014 ; Journal of Medical Education Perspectives Volume 3 ; 3 ; 2014 >
+    au < down ; 2012 ; Journal of Medical Education Perspectives Volume 1 ; 1 ; 2012 >
+    au < down ; 2013 ; Journal of Medical Education Perspectives Volume 2 ; 2 ; 2013 >
+    au < down ; 2014 ; Journal of Medical Education Perspectives Volume 3 ; 3 ; 2014 >
     
   }
 }
@@ -294,19 +305,21 @@
     >
     
     provider = Scholarly Exchange
-    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    plugin = org.lockss.plugin.ojs3.Ojs3Plugin
     implicit < status ; year ; name ; volume ; param[year] >
     param[base_url] = http://www.kcajournals.com/
     param[journal_id] = KCAJBM
+    #moved to ojs3
 
 #NOT READY - requires registration to access full-text content; we have sent an email 
 # to see if this can be turned off, otherwise not preservable in the GLN
+
     au < notReady ; 2008 ; KCA Journal of Business Management Volume 1 ; 1 ; 2008 >
     au < notReady ; 2009 ; KCA Journal of Business Management Volume 2 ; 2 ; 2009 >
     au < notReady ; 2011 ; KCA Journal of Business Management Volume 3 ; 3 ; 2011 >
-    au < notReady ; 2012 ; KCA Journal of Business Management Volume 4-5 ; 4-5 ; 2012 >
-    au < notReady ; 2014 ; KCA Journal of Business Management Volume 6 ; 6 ; 2014 >
-    au < notReady ; 2015 ; KCA Journal of Business Management Volume 7 ; 7 ; 2015 >
+    au < notReady ; 2012 ; KCA Journal of Business Management Volume 4 ; 4 ; 2012 >
+    au < notReady ; 2014 ; KCA Journal of Business Management Volume 5 ; 5 ; 2014 >
+    au < notReady ; 2015 ; KCA Journal of Business Management Volume 6-7 ; 6-7 ; 2015 >
     au < exists ; 2017 ; KCA Journal of Business Management Volume 8 ; 8 ; 2017 >
     au < expected ; 2018 ; KCA Journal of Business Management Volume 9 ; 9 ; 2018 >
 
@@ -328,21 +341,23 @@
     >
     
     provider = Scholarly Exchange
-    plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; name ; volume ; param[year] >
+    #plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    pluginPrefix = org.lockss.plugin.
+    implicit < pluginSuffix ; status ; year ; name ; volume ; param[year] >
     param[base_url] = http://www.kmuj.kmu.edu.pk/
     param[journal_id] = KMJ
+    #moved to ojs3
 
-    au < released ; 2009 ; Khyber Medical University Journal Volume 1 ; 1 ; 2009 >
-    au < released ; 2010 ; Khyber Medical University Journal Volume 2 ; 2 ; 2010 >
-    au < released ; 2011 ; Khyber Medical University Journal Volume 3 ; 3 ; 2011 >
-    au < released ; 2012 ; Khyber Medical University Journal Volume 4 ; 4 ; 2012 >
-    au < released ; 2013 ; Khyber Medical University Journal Volume 5 ; 5 ; 2013 >
-    au < released ; 2014 ; Khyber Medical University Journal Volume 6 ; 6 ; 2014 >
-    au < released ; 2015 ; Khyber Medical University Journal Volume 7 ; 7 ; 2015 >
-    au < released ; 2016 ; Khyber Medical University Journal Volume 8 ; 8 ; 2016 >
-    au < exists ; 2017 ; Khyber Medical University Journal Volume 9 ; 9 ; 2017 >
-    au < expected ; 2018 ; Khyber Medical University Journal Volume 10 ; 10 ; 2018 >
+    au < ojs2.OJS2Plugin ; down ; 2009 ; Khyber Medical University Journal Volume 1 ; 1 ; 2009 >
+    au < ojs2.OJS2Plugin ; down ; 2010 ; Khyber Medical University Journal Volume 2 ; 2 ; 2010 >
+    au < ojs2.OJS2Plugin ; down ; 2011 ; Khyber Medical University Journal Volume 3 ; 3 ; 2011 >
+    au < ojs2.OJS2Plugin ; down ; 2012 ; Khyber Medical University Journal Volume 4 ; 4 ; 2012 >
+    au < ojs2.OJS2Plugin ; down ; 2013 ; Khyber Medical University Journal Volume 5 ; 5 ; 2013 >
+    au < ojs2.OJS2Plugin ; down ; 2014 ; Khyber Medical University Journal Volume 6 ; 6 ; 2014 >
+    au < ojs2.OJS2Plugin ; down ; 2015 ; Khyber Medical University Journal Volume 7 ; 7 ; 2015 >
+    au < ojs2.OJS2Plugin ; down ; 2016 ; Khyber Medical University Journal Volume 8 ; 8 ; 2016 >
+    au < ojs3.Ojs3Plugin ; exists ; 2017 ; Khyber Medical University Journal Volume 9 ; 9 ; 2017 >
+    au < ojs3.Ojs3Plugin ; exists ; 2018 ; Khyber Medical University Journal Volume 10 ; 10 ; 2018 >
 
   }
 }  
@@ -361,21 +376,25 @@
     >
     
     provider = Scholarly Exchange
-    plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; name ; volume ; param[year] >
+    #plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    pluginPrefix = org.lockss.plugin.
+    implicit < pluginSuffix ; status ; year ; name ; volume ; param[year] >
     param[base_url] = http://www.mjhid.org/
     param[journal_id] = mjhid
+    #moved to ojs3
 
-    au < released ; 2009 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 1 ; 1 ; 2009 >
-    au < released ; 2010 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 2 ; 2 ; 2010 >
-    au < released ; 2011 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 3 ; 3 ; 2011 >
-    au < released ; 2012 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 4 ; 4 ; 2012 >
-    au < released ; 2013 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 5 ; 5 ; 2013 >
-    au < released ; 2014 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 6 ; 6 ; 2014 >
-    au < released ; 2015 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 7 ; 7 ; 2015 >
-    au < released ; 2016 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 8 ; 8 ; 2016 >
-    au < released ; 2017 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 9 ; 9 ; 2017 >
-    au < testing ; 2018 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 10 ; 10 ; 2018 >
+    #manifest pages don't have links, for example http://www.mjhid.org/index.php/mjhid/gateway/lockss?year=2018
+
+    au < ojs2.OJS2Plugin ; down ; 2009 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 1 ; 1 ; 2009 >
+    au < ojs2.OJS2Plugin ; down ; 2010 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 2 ; 2 ; 2010 >
+    au < ojs2.OJS2Plugin ; down ; 2011 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 3 ; 3 ; 2011 >
+    au < ojs2.OJS2Plugin ; down ; 2012 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 4 ; 4 ; 2012 >
+    au < ojs2.OJS2Plugin ; down ; 2013 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 5 ; 5 ; 2013 >
+    au < ojs2.OJS2Plugin ; down ; 2014 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 6 ; 6 ; 2014 >
+    au < ojs2.OJS2Plugin ; down ; 2015 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 7 ; 7 ; 2015 >
+    au < ojs2.OJS2Plugin ; down ; 2016 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 8 ; 8 ; 2016 >
+    au < ojs2.OJS2Plugin ; down ; 2017 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 9 ; 9 ; 2017 >
+    au < ojs3.Ojs3Plugin ; exists ; 2018 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 10 ; 10 ; 2018 >
 
   }
 }
@@ -424,19 +443,21 @@
     >
     
     provider = Scholarly Exchange
-    plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; name ; volume ; param[year] >
+    #plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    pluginPrefix = org.lockss.plugin.
+    implicit < pluginSuffix ; status ; year ; name ; volume ; param[year] >
     param[base_url] = http://www.wpcjournal.com/
     param[journal_id] = UDP
+    #moved to ojs3
 
-    au < released ; 2010 ; Understanding and Dismantling Privilege Volume 1 ; 1 ; 2010 >
-    au < released ; 2012 ; Understanding and Dismantling Privilege Volume 2 ; 2 ; 2012 >
-    au < released ; 2013 ; Understanding and Dismantling Privilege Volume 3 ; 3 ; 2013 >
-    au < released ; 2014 ; Understanding and Dismantling Privilege Volume 4 ; 4 ; 2014 >
-    au < released ; 2015 ; Understanding and Dismantling Privilege Volume 5 ; 5 ; 2015 >
-    au < released ; 2016 ; Understanding and Dismantling Privilege Volume 6 ; 6 ; 2016 >
-    au < exists ; 2017 ; Understanding and Dismantling Privilege Volume 7 ; 7 ; 2017 >
-    au < expected ; 2018 ; Understanding and Dismantling Privilege Volume 8 ; 8 ; 2018 >
+    au < ojs2.OJS2Plugin ; down ; 2010 ; Understanding and Dismantling Privilege Volume 1 ; 1 ; 2010 >
+    au < ojs2.OJS2Plugin ; down ; 2012 ; Understanding and Dismantling Privilege Volume 2 ; 2 ; 2012 >
+    au < ojs2.OJS2Plugin ; down ; 2013 ; Understanding and Dismantling Privilege Volume 3 ; 3 ; 2013 >
+    au < ojs2.OJS2Plugin ; down ; 2014 ; Understanding and Dismantling Privilege Volume 4 ; 4 ; 2014 >
+    au < ojs2.OJS2Plugin ; down ; 2015 ; Understanding and Dismantling Privilege Volume 5 ; 5 ; 2015 >
+    au < ojs2.OJS2Plugin ; down ; 2016 ; Understanding and Dismantling Privilege Volume 6 ; 6 ; 2016 >
+    au < ojs3.Ojs3Plugin ; exists ; 2017 ; Understanding and Dismantling Privilege Volume 7 ; 7 ; 2017 >
+    au < ojs3.Ojs3Plugin ; exists ; 2018 ; Understanding and Dismantling Privilege Volume 8 ; 8 ; 2018 >
 
   }
 }
