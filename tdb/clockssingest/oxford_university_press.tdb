@@ -4311,8 +4311,8 @@
     au < manifest ; exists ; 2014 ; 2014 ; The Econometrics Journal Volume 17 ; 17 ; >
     au < manifest ; exists ; 2015 ; 2015 ; The Econometrics Journal Volume 18 ; 18 ; >
     au < frozen ; exists ; 2016 ; 2016 ; The Econometrics Journal Volume 19 ; 19 ; >
-    au < testing ; exists ; 2017 ; 2017 ; The Econometrics Journal Volume 20 ; 20 ; >
-    au < testing ; exists ; 2018 ; 2018 ; The Econometrics Journal Volume 21 ; 21 ; >
+    au < ready ; exists ; 2017 ; 2017 ; The Econometrics Journal Volume 20 ; 20 ; >
+    au < ready ; exists ; 2018 ; 2018 ; The Econometrics Journal Volume 21 ; 21 ; >
     au < manifest ; exists ; 2019 ; 2019 ; The Econometrics Journal Volume 22 ; 22 ; >
 
   }
@@ -7734,7 +7734,7 @@
     au < manifest ; exists ; 2014 ; 2014 ; Integrative Biology Volume 6 ; 6 ; >
     au < manifest ; exists ; 2015 ; 2015 ; Integrative Biology Volume 7 ; 7 ; >
     au < ready ; exists ; 2016 ; 2016 ; Integrative Biology Volume 8 ; 8 ; >
-    au < testing ; exists ; 2017 ; 2017 ; Integrative Biology Volume 9 ; 9 ; >
+    au < ready ; exists ; 2017 ; 2017 ; Integrative Biology Volume 9 ; 9 ; >
     au < ready ; exists ; 2018 ; 2018 ; Integrative Biology Volume 10 ; 10 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Integrative Biology Volume 11 ; 11 ; >
 
@@ -10702,7 +10702,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Molluscan Studies Volume 80 ; 80 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Molluscan Studies Volume 81 ; 81 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Journal of Molluscan Studies Volume 82 ; 82 ; >
-    au < testing ; exists ; 2017 ; 2017 ; Journal of Molluscan Studies Volume 83 ; 83 ; >
+    au < ready ; exists ; 2017 ; 2017 ; Journal of Molluscan Studies Volume 83 ; 83 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Molluscan Studies Volume 84 ; 84 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Journal of Molluscan Studies Volume 85 ; 85 ; >
 
@@ -13577,7 +13577,7 @@
     au < manifest ; exists ; 2015 ; 2015 ; Neurosurgery Volume 62,76-77 ; 62,76-77 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Neurosurgery Volume 63,78-79 ; 63,78-79 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Neurosurgery Volume 64,80-81 ; 64,80-81 ; >
-    au < testing ; exists ; 2018 ; 2018 ; Neurosurgery Volume 82-83 ; 82-83 ; >
+    au < ready ; exists ; 2018 ; 2018 ; Neurosurgery Volume 82-83 ; 82-83 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Neurosurgery Volume 84-85 ; 84-85 ; >
 
   }
@@ -16002,7 +16002,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Review of Finance Volume 19 ; 19 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Review of Finance Volume 20 ; 20 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Review of Finance Volume 21 ; 21 ; >
-    au < testing ; exists ; 2018 ; 2018 ; Review of Finance Volume 22 ; 22 ; >
+    au < ready ; exists ; 2018 ; 2018 ; Review of Finance Volume 22 ; 22 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Review of Finance Volume 23 ; 23 ; >
 
   }
@@ -16213,7 +16213,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Science and Public Policy Volume 42 ; 42 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Science and Public Policy Volume 43 ; 43 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Science and Public Policy Volume 44 ; 44 ; >
-    au < testing ; exists ; 2018 ; 2018 ; Science and Public Policy Volume 45 ; 45 ; >
+    au < ready ; exists ; 2018 ; 2018 ; Science and Public Policy Volume 45 ; 45 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Science and Public Policy Volume 46 ; 46 ; >
 
   }
@@ -16355,7 +16355,7 @@
     au < manifest ; exists ; 2015 ; 2015 ; Shakespeare Quarterly Volume 66 ; 66 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Shakespeare Quarterly Volume 67 ; 67 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Shakespeare Quarterly Volume 68 ; 68 ; >
-    au < testing ; exists ; 2018 ; 2018 ; Shakespeare Quarterly Volume 69 ; 69 ; >
+    au < ready ; exists ; 2018 ; 2018 ; Shakespeare Quarterly Volume 69 ; 69 ; >
     au < expected ; exists ; 2019 ; 2019 ; Shakespeare Quarterly Volume 70 ; 70 ; >
 
   }
@@ -16732,7 +16732,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Social Science Japan Journal Volume 18 ; 18 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Social Science Japan Journal Volume 19 ; 19 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Social Science Japan Journal Volume 20 ; 20 ; >
-    au < testing ; exists ; 2018 ; 2018 ; Social Science Japan Journal Volume 21 ; 21 ; >
+    au < ready ; exists ; 2018 ; 2018 ; Social Science Japan Journal Volume 21 ; 21 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Social Science Japan Journal Volume 22 ; 22 ; >
 
   }
@@ -16850,7 +16850,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Social Work Research Volume 39 ; 39 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Social Work Research Volume 40 ; 40 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Social Work Research Volume 41 ; 41 ; >
-    au < testing ; exists ; 2018 ; 2018 ; Social Work Research Volume 42 ; 42 ; >
+    au < ready ; exists ; 2018 ; 2018 ; Social Work Research Volume 42 ; 42 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Social Work Research Volume 43 ; 43 ; >
 
   }
@@ -17034,7 +17034,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Statute Law Review Volume 36 ; 36 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Statute Law Review Volume 37 ; 37 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Statute Law Review Volume 38 ; 38 ; >
-    au < testing ; exists ; 2018 ; 2018 ; Statute Law Review Volume 39 ; 39 ; >
+    au < ready ; exists ; 2018 ; 2018 ; Statute Law Review Volume 39 ; 39 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Statute Law Review Volume 40 ; 40 ; >
 
   }
@@ -17323,7 +17323,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The American Historical Review Volume 120 ; 120 ; >
     au < frozen ; exists ; 2016 ; 2016 ; The American Historical Review Volume 121 ; 121 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The American Historical Review Volume 122 ; 122 ; >
-    au < testing ; exists ; 2018 ; 2018 ; The American Historical Review Volume 123 ; 123 ; >
+    au < ready ; exists ; 2018 ; 2018 ; The American Historical Review Volume 123 ; 123 ; >
     au < manifest ; exists ; 2019 ; 2019 ; The American Historical Review Volume 124 ; 124 ; >
 
   }
@@ -17821,7 +17821,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The Chinese Journal of Comparative Law Volume 3 ; 3 ; >
     au < frozen ; exists ; 2016 ; 2016 ; The Chinese Journal of Comparative Law Volume 4 ; 4 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The Chinese Journal of Comparative Law Volume 5 ; 5 ; >
-    au < testing ; exists ; 2018 ; 2018 ; The Chinese Journal of Comparative Law Volume 6 ; 6 ; >
+    au < ready ; exists ; 2018 ; 2018 ; The Chinese Journal of Comparative Law Volume 6 ; 6 ; >
     au < manifest ; exists ; 2019 ; 2019 ; The Chinese Journal of Comparative Law Volume 7 ; 7 ; >
 
   }
@@ -18563,7 +18563,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The Journal of Law, Economics, and Organization Volume 31 ; 31 ; >
     au < frozen ; exists ; 2016 ; 2016 ; The Journal of Law, Economics, and Organization Volume 32 ; 32 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The Journal of Law, Economics, and Organization Volume 33 ; 33 ; >
-    au < testing ; exists ; 2018 ; 2018 ; The Journal of Law, Economics, and Organization Volume 34 ; 34 ; >
+    au < ready ; exists ; 2018 ; 2018 ; The Journal of Law, Economics, and Organization Volume 34 ; 34 ; >
     au < manifest ; exists ; 2019 ; 2019 ; The Journal of Law, Economics, and Organization Volume 35 ; 35 ; >
 
   }
@@ -18859,7 +18859,7 @@
     au < manifest ; exists ; 2015 ; 2015 ; The Journals of Gerontology: Series B Volume 70 ; 70 ; >
     au < frozen ; exists ; 2016 ; 2016 ; The Journals of Gerontology: Series B Volume 71 ; 71 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The Journals of Gerontology: Series B Volume 72 ; 72 ; >
-    au < testing ; exists ; 2018 ; 2018 ; The Journals of Gerontology: Series B Volume 73 ; 73 ; >
+    au < ready ; exists ; 2018 ; 2018 ; The Journals of Gerontology: Series B Volume 73 ; 73 ; >
     au < manifest ; exists ; 2019 ; 2019 ; The Journals of Gerontology: Series B Volume 74 ; 74 ; >
 
   }
@@ -19083,7 +19083,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The Library Volume 16 ; 16 ; >
     au < frozen ; exists ; 2016 ; 2016 ; The Library Volume 17 ; 17 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The Library Volume 18 ; 18 ; >
-    au < testing ; exists ; 2018 ; 2018 ; The Library Volume 19 ; 19 ; >
+    au < ready ; exists ; 2018 ; 2018 ; The Library Volume 19 ; 19 ; >
     au < manifest ; exists ; 2019 ; 2019 ; The Library Volume 20 ; 20 ; >
 
   }
@@ -19120,7 +19120,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The Monist Volume 98 ; 98 ; >
     au < frozen ; exists ; 2016 ; 2016 ; The Monist Volume 99 ; 99 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The Monist Volume 100 ; 100 ; >
-    au < testing ; exists ; 2018 ; 2018 ; The Monist Volume 101 ; 101 ; >
+    au < ready ; exists ; 2018 ; 2018 ; The Monist Volume 101 ; 101 ; >
     au < manifest ; exists ; 2019 ; 2019 ; The Monist Volume 102 ; 102 ; >
 
   }
@@ -19428,7 +19428,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The Philosophical Quarterly Volume 65 ; 65 ; >
     au < frozen ; exists ; 2016 ; 2016 ; The Philosophical Quarterly Volume 66 ; 66 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The Philosophical Quarterly Volume 67 ; 67 ; >
-    au < testing ; exists ; 2018 ; 2018 ; The Philosophical Quarterly Volume 68 ; 68 ; >
+    au < ready ; exists ; 2018 ; 2018 ; The Philosophical Quarterly Volume 68 ; 68 ; >
     au < manifest ; exists ; 2019 ; 2019 ; The Philosophical Quarterly Volume 69 ; 69 ; >
 
   }
@@ -19574,7 +19574,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The Quarterly Journal of Economics Volume 130 ; 130 ; >
     au < frozen ; exists ; 2016 ; 2016 ; The Quarterly Journal of Economics Volume 131 ; 131 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The Quarterly Journal of Economics Volume 132 ; 132 ; >
-    au < testing ; exists ; 2018 ; 2018 ; The Quarterly Journal of Economics Volume 133 ; 133 ; >
+    au < ready ; exists ; 2018 ; 2018 ; The Quarterly Journal of Economics Volume 133 ; 133 ; >
     au < manifest ; exists ; 2019 ; 2019 ; The Quarterly Journal of Economics Volume 134 ; 134 ; >
 
   }
@@ -20063,7 +20063,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The Review of Financial Studies Volume 28 ; 28 ; >
     au < frozen ; exists ; 2016 ; 2016 ; The Review of Financial Studies Volume 29 ; 29 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The Review of Financial Studies Volume 30 ; 30 ; >
-    au < testing ; exists ; 2018 ; 2018 ; The Review of Financial Studies Volume 31 ; 31 ; >
+    au < ready ; exists ; 2018 ; 2018 ; The Review of Financial Studies Volume 31 ; 31 ; >
     au < manifest ; exists ; 2019 ; 2019 ; The Review of Financial Studies Volume 32 ; 32 ; >
 
   }
@@ -20360,7 +20360,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Toxicological Sciences Volume 143-148 ; 143-148 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Toxicological Sciences Volume 149-154 ; 149-154 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Toxicological Sciences Volume 155-160 ; 155-160 ; >
-    au < testing ; exists ; 2018 ; 2018 ; Toxicological Sciences Volume 161-166 ; 161-166 ; >
+    au < ready ; exists ; 2018 ; 2018 ; Toxicological Sciences Volume 161-166 ; 161-166 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Toxicological Sciences Volume 167-172 ; 167-172 ; >
 
   }
@@ -20614,7 +20614,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Trusts & Trustees Volume 21 ; 21 ; >
     au < ready ; exists ; 2016 ; 2016 ; Trusts & Trustees Volume 22 ; 22 ; >
     au < ready ; exists ; 2017 ; 2017 ; Trusts & Trustees Volume 23 ; 23 ; >
-    au < testing ; exists ; 2018 ; 2018 ; Trusts & Trustees Volume 24 ; 24 ; >
+    au < ready ; exists ; 2018 ; 2018 ; Trusts & Trustees Volume 24 ; 24 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Trusts & Trustees Volume 25 ; 25 ; >
 
   }
