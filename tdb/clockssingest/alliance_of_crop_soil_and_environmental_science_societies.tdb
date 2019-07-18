@@ -62,7 +62,7 @@
     au < finished ; finished ; 2009 ; Agronomy Journal Volume 101 ; 101 ; reingest1.clockss.org:8082 > #malformed url. 403 error
     au < frozen ; exists ; 2010 ; Agronomy Journal Volume 102 ; 102 ; >
     au < frozen ; exists ; 2011 ; Agronomy Journal Volume 103 ; 103 ; >
-    au < ready ; exists ; 2012 ; Agronomy Journal Volume 104 ; 104 ; >
+    au < crawling ; exists ; 2012 ; Agronomy Journal Volume 104 ; 104 ; >
     au < finished ; finished ; 2013 ; Agronomy Journal Volume 105 ; 105 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Agronomy Journal Volume 106 ; 106 ; >
     au < finished ; finished ; 2015 ; Agronomy Journal Volume 107 ; 107 ; reingest5.clockss.org:8082 > #malformed url. 403 error
@@ -186,7 +186,7 @@
     au < finished ; finished ; 2008 ; Journal of Environmental Quality Volume 37 ; 37 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2009 ; Journal of Environmental Quality Volume 38 ; 38 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2010 ; Journal of Environmental Quality Volume 39 ; 39 ; >
-    au < ready ; exists ; 2011 ; Journal of Environmental Quality Volume 40 ; 40 ; >
+    au < crawling ; exists ; 2011 ; Journal of Environmental Quality Volume 40 ; 40 ; >
     au < finished ; finished ; 2012 ; Journal of Environmental Quality Volume 41 ; 41 ; >
     au < finished ; finished ; 2013 ; Journal of Environmental Quality Volume 42 ; 42 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Journal of Environmental Quality Volume 43 ; 43 ; reingest4.clockss.org:8082 >
@@ -286,7 +286,7 @@
     
     param[journal_id] = tpg
 
-    au < ready ; exists ; 2008 ; The Plant Genome Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2008 ; The Plant Genome Volume 1 ; 1 ; >
     au < finished ; finished ; 2009 ; The Plant Genome Volume 2 ; 2 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2010 ; The Plant Genome Volume 3 ; 3 ; >
     au < frozen ; exists ; 2011 ; The Plant Genome Volume 4 ; 4 ; >
@@ -320,7 +320,7 @@
     au < finished ; finished ; 2009 ; Soil Horizons Volume 50 ; 50 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2010 ; Soil Horizons Volume 51 ; 51 ; >
     au < finished ; finished ; 2011 ; Soil Horizons Volume 52 ; 52 ; >
-    au < ready ; exists ; 2012 ; Soil Horizons Volume 53 ; 53 ; >
+    au < crawling ; exists ; 2012 ; Soil Horizons Volume 53 ; 53 ; >
     au < finished ; finished ; 2013 ; Soil Horizons Volume 54 ; 54 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Soil Horizons Volume 55 ; 55 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Soil Horizons Volume 56 ; 56 ; reingest5.clockss.org:8082 >
