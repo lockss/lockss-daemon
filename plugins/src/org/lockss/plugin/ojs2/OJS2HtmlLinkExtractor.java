@@ -56,7 +56,7 @@ public class OJS2HtmlLinkExtractor extends GoslingHtmlLinkExtractor {
 	protected static final String MANIFEST_PATH = "/gateway/";
 	protected static final String TOC_PATH = "/issue/view/";
 	protected static final Pattern TOC_PATH_PAT = Pattern.compile(".*/issue/view/([^/]+)(/.*)?", Pattern.CASE_INSENSITIVE);
-	//protected static final Pattern LAND_PAT = Pattern.compile("/article/view/[^/]+$", Pattern.CASE_INSENSITIVE);
+	protected static final Pattern LAND_PAT = Pattern.compile("/article/view/[^/]+$", Pattern.CASE_INSENSITIVE);
 
 
 	protected static final Pattern OPEN_RT_WINDOW_PATTERN =
@@ -98,12 +98,20 @@ public class OJS2HtmlLinkExtractor extends GoslingHtmlLinkExtractor {
 					// From a toc page, it can only goes to the same toc
 					if (srcUrl.contains(TOC_PATH) && url.contains(TOC_PATH)) {
 						Matcher srcMat = TOC_PATH_PAT.matcher(srcUrl);
-						Matcher landMat = TOC_PATH_PAT.matcher(url);
+						Matcher targetMat = TOC_PATH_PAT.matcher(url);
 
-						if (srcMat.matches() && landMat.matches() && (!srcMat.group(1).equals(landMat.group(1)))) {
+						if (srcMat.matches() && targetMat.matches() && (!srcMat.group(1).equals(targetMat.group(1)))) {
 							log.debug3("Suppressing found link for different issue number, url is: " + url + " srcUrl is: " + srcUrl);
 							return;
 						}
+					}
+
+					// if the found url is for an article landing page, we should only "find"
+					// it on an issue TOC to avoid overcrawling
+					Matcher landMat = LAND_PAT.matcher(url);
+					if (landMat.find() && !(srcUrl.contains(TOC_PATH))) {
+						log.debug3("Suppressing found link: " + url + " from page " + srcUrl);
+						return;
 					}
 				}
 
