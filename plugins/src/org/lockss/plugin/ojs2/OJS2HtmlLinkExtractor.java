@@ -55,7 +55,8 @@ public class OJS2HtmlLinkExtractor extends GoslingHtmlLinkExtractor {
 	// instead of a crawl filter, limit which links are foundon which pages
 	protected static final String MANIFEST_PATH = "/gateway/";
 	protected static final String TOC_PATH = "/issue/view/";
-	protected static final Pattern LAND_PAT = Pattern.compile("/article/view/[^/]+$", Pattern.CASE_INSENSITIVE);
+	protected static final Pattern TOC_PATH_PAT = Pattern.compile(".*/issue/view/([^/]+)(/.*)?", Pattern.CASE_INSENSITIVE);
+	//protected static final Pattern LAND_PAT = Pattern.compile("/article/view/[^/]+$", Pattern.CASE_INSENSITIVE);
 
 
 	protected static final Pattern OPEN_RT_WINDOW_PATTERN =
@@ -77,23 +78,42 @@ public class OJS2HtmlLinkExtractor extends GoslingHtmlLinkExtractor {
 			public void foundLink(String url) {
 				// If the found url is an issue TOC then we should only "find" it on a manifest
 				// to avoid overcrawling
-				if ((url.contains(TOC_PATH)) && !(srcUrl.contains(MANIFEST_PATH))) {
-					log.debug3("Suppressing found link: " + url + " from page " + srcUrl);
-					return;
-				}
-				// if the found url is for an article landing page, we should only "find"
-				// it on an issue TOC to avoid overcrawling
-				Matcher landMat = LAND_PAT.matcher(url);
-				if (landMat.find() && !(srcUrl.contains(TOC_PATH))) {
-					log.debug3("Suppressing found link: " + url + " from page " + srcUrl);
-					return;
-				}
-				// Now just do whatever else is needed
-				if (au != null) {
-					if (UrlUtil.isSameHost(srcUrl, url)) {
-						url = AuUtil.normalizeHttpHttpsFromBaseUrl(au, url);
+				/*
+				Because different OJS publishers construct their showToc link differently, some of the "showToc" links to
+				issue content itself, however some of the "showToc" links to other related/archived articles.
+				So the following rules will be applied here to make sure we pick the right showToc without over-crawling:
+				1. From manifest page, it can go to any url
+				2. From a toc page, it can only goes to the same toc
+				3. From any other places other than toc, it can not go to any toc
+				 */
+
+				// From manifest page, it can go to any url
+				if (!srcUrl.contains(MANIFEST_PATH)) {
+					// From any other places other than toc, it can not go to any toc
+					if (!srcUrl.contains(TOC_PATH) && url.contains(TOC_PATH)) {
+						log.debug3("Suppressing found link for non TOC_PATH: " + url + " from page " + srcUrl);
+						return;
+					}
+
+					// From a toc page, it can only goes to the same toc
+					if (srcUrl.contains(TOC_PATH) && url.contains(TOC_PATH)) {
+						Matcher srcMat = TOC_PATH_PAT.matcher(srcUrl);
+						Matcher landMat = TOC_PATH_PAT.matcher(url);
+
+						if (srcMat.matches() && landMat.matches() && (!srcMat.group(1).equals(landMat.group(1)))) {
+							log.debug3("Suppressing found link for different issue number, url is: " + url + " srcUrl is: " + srcUrl);
+							return;
+						}
 					}
 				}
+
+				//
+				if (au != null) {
+						if (UrlUtil.isSameHost(srcUrl, url)) {
+							url = AuUtil.normalizeHttpHttpsFromBaseUrl(au, url);
+						}
+					}
+
 				cb.foundLink(url);
 			}
 		}

@@ -34,6 +34,8 @@ package org.lockss.plugin.ojs2;
 
 import java.io.*;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.lockss.util.*;
 import org.lockss.config.Configuration;
@@ -103,7 +105,14 @@ public class TestOJS2HtmlLinkExtractorFactory extends LockssTestCase {
       "http://www.xyz.com/index.php/edui/article/viewFile/19759/18125";
   static final String expectedIframePdfViewerUrl2 =
       "http://www.xyz.com/plugins/generic/pdfJsViewer/pdf.js/web/viewer.html?file=https%3A%2F%2Fwww.xyz.com%2Findex.php%2Fedui%2Farticle%2FviewFile%2F19759%2F18125";
-  
+
+  static final String showTocUrlHtmlCodeSnap = "                " +
+          "<ul class=\"menu\">\n" +
+          "<li><a href=\"http://www.xyz.com/foo/bar/issue/view/007\">Table of Contents</a></li>\n" +
+          "<li><a href=\"http://www.xyz.com/foo/bar/issue/view/007/showToc\">Table of Contents</a></li>\n" +
+          "<li><a href=\"http://www.xyz.com/foo/bar/issue/view/63\">Table of Contents</a></li>\n" +
+          "<li><a href=\"http://www.xyz.com/foo/bar/issue/view/63/showToc\">Table of Contents</a></li>\n" +
+          "</ul>";
   
   /**
    * Make a basic OJS test AU to which URLs can be added.
@@ -252,6 +261,71 @@ public class TestOJS2HtmlLinkExtractorFactory extends LockssTestCase {
     assertEquals(Arrays.asList(expectedIframePdfViewerUrl1,
                                expectedIframePdfViewerUrl2),
                  foundLink);
+  }
+
+  public void testGetIssueUrlsWhenIssueNumberMatch() throws Exception {
+
+    MockArchivalUnit mockAu = makeAu();
+    InputStream in =  new ByteArrayInputStream(showTocUrlHtmlCodeSnap.getBytes());
+    LinkExtractor ext  = fact.createLinkExtractor("text/html");
+    final String showTocUrl = "http://www.xyz.com/foo/bar/issue/view/63/showToc";
+    final List<String> foundLink = new ArrayList<String>();
+
+    ext.extractUrls(mockAu, in, "UTF-8", "http://www.xyz.com/foo/bar/issue/view/63", new Callback() {
+      @Override
+      public void foundLink(String url) {
+        if (url.equals(showTocUrl)) {
+          foundLink.add(url);
+        }
+      }
+    });
+
+    assertTrue(foundLink.size() > 0);
+
+  }
+
+  public void testGetZeroIssueUrlWhenIssueNumberNotMatch() throws Exception {
+
+    MockArchivalUnit mockAu = makeAu();
+    InputStream in =  new ByteArrayInputStream(showTocUrlHtmlCodeSnap.getBytes());
+    LinkExtractor ext  = fact.createLinkExtractor("text/html");
+    final List<String> foundLink = new ArrayList<String>();
+    final String showTocUrl1 = "http://www.xyz.com/foo/bar/issue/view/007";
+    final String showTocUrl2 = "http://www.xyz.com/foo/bar/issue/view/007/showToc";
+
+    ext.extractUrls(mockAu, in, "UTF-8", "http://www.xyz.com/foo/bar/issue/view/59", new Callback() {
+      @Override
+      public void foundLink(String url) {
+        if (url.equals(showTocUrl1) || url.equals(showTocUrl2)) {
+          foundLink.add(url);
+        }
+      }
+    });
+
+    assertTrue(foundLink.isEmpty());
+
+  }
+
+  public void testGetIssueUrlFromManifestPage() throws Exception {
+
+    MockArchivalUnit mockAu = makeAu();
+    InputStream in =  new ByteArrayInputStream(showTocUrlHtmlCodeSnap.getBytes());
+    LinkExtractor ext  = fact.createLinkExtractor("text/html");
+    final List<String> foundLink = new ArrayList<String>();
+    final String showTocUrl1 = "http://www.xyz.com/foo/bar/issue/view/63";
+    final String showTocUrl2 = "http://www.xyz.com/foo/bar/issue/view/007";
+
+    ext.extractUrls(mockAu, in, "UTF-8", "http://www.xyz.com/foo/bar/gateway/lockss?year=2018", new Callback() {
+      @Override
+      public void foundLink(String url) {
+        if (url.equals(showTocUrl1) || url.equals(showTocUrl2)) {
+          foundLink.add(url);
+        }
+      }
+    });
+
+    assertTrue(foundLink.size() == 2);
+
   }
   
 }
