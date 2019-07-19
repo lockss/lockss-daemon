@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>26</string>
+    <string>27</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -160,7 +160,7 @@
        http://digital-library.theiet.org/content/journals/10.1049/iet-syb.2015.0051?crawler=true&mimetype=application/pdf
     -->
     <list>
-      <string>"^%s/content/journals?(/%s)?/[^/]+/[^/]+\?crawler=true&amp;mimetype=application/pdf$",  base_url, journal_id</string>
+      <string>"^%scontent/journals?(/%s)?/[^/]+/[^/]+\?crawler=true&amp;mimetype=application/pdf$",  base_url, journal_id</string>
     </list>
   </entry>
   <!--  also for https conversion -->
