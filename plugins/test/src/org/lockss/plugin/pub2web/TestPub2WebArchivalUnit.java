@@ -389,5 +389,47 @@ public class TestPub2WebArchivalUnit extends LockssTestCase {
     //Microbiology Society Journals Plugin (CLOCKSS), Base URL %s, Journal ID %s, Volume %s
     assertEquals(MS_PluginName + ", Base URL http://www.ajrnl.com/, Journal ID blah, Volume 33", au.getName());
   }
+
+  public void testCheckSubstanceRules() throws Exception {
+    String ROOT_URL = "http://www.example.com/";
+    String JID = "blah";
+    DefinableArchivalUnit au =
+            makeAu(MS_PLUGIN_ID, new URL("http://www.ajrnl.com/"), 33, JID);
+
+    List<String> substanceList = ListUtil.list(
+            ROOT_URL + "content/journal/" + JID + "/10.1099/0096266X-14-1-15?crawler=true&mimetype=application/pdf",
+            ROOT_URL + "content/journal/" + JID + "/10.1099/0096266X-14-1-57?crawler=true&mimetype=application/pdf"
+    );
+
+    List<String> notSubstanceList = ListUtil.list(
+            ROOT_URL + "deliver/fulltext/" + JID + "/14/1/toc.pdf?itemId=/content/journal/ijsem/14/1/tocpdf1&mimeType=pdf",
+            ROOT_URL + "",
+            ROOT_URL + ""
+    );
+
+    boolean found = false;
+
+    String strPat = "^" + ROOT_URL + "content/journals?(/" + JID + ")?/[^/]+/[^/]+\\?crawler=true&mimetype=application/pdf$";
+    Pattern thisPat = Pattern.compile(strPat);
+    String lastUrl = "";
+
+    for (String nextUrl : substanceList) {
+      log.debug("testing for substance: "+ nextUrl);
+      Matcher m = thisPat.matcher(nextUrl);
+      lastUrl = nextUrl;
+      found = m.matches();
+      if (!found) break;
+    }
+    assertEquals(lastUrl, true, found);
+
+    for (String nextUrl : notSubstanceList) {
+      log.debug("testing for not substance: "+ nextUrl);
+      Matcher m = thisPat.matcher(nextUrl);
+      lastUrl = nextUrl;
+      found = m.matches();
+      if (found) break;
+    }
+    assertEquals(lastUrl, false, found);
+  }
 }
 
