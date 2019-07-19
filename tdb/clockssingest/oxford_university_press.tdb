@@ -419,9 +419,9 @@
       issnl = 1046-2821
     >
 
-    param[journal_id] = 
+    param[journal_id] =
 
-    #this title was ONLY in the previous TDB listing - suppressing AU generation 
+    #this title was ONLY in the previous TDB listing - suppressing AU generation
 
   }
 
@@ -561,13 +561,13 @@
     au < exists ; exists ; 2006 ; 2006 ; The American Journal of Clinical Nutrition Volume 83-84 ; 83-84 ; >
     au < exists ; exists ; 2007 ; 2007 ; The American Journal of Clinical Nutrition Volume 85-86 ; 85-86 ; >
     au < manifest ; exists ; 2008 ; 2008 ; The American Journal of Clinical Nutrition Volume 87-88 ; 87-88 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; The American Journal of Clinical Nutrition Volume 89-90 ; 89-90 ; >
-    au < manifest ; exists ; 2010 ; 2010 ; The American Journal of Clinical Nutrition Volume 91-92 ; 91-92 ; >
-    au < manifest ; exists ; 2011 ; 2011 ; The American Journal of Clinical Nutrition Volume 93-94 ; 93-94 ; >
-    au < manifest ; exists ; 2012 ; 2012 ; The American Journal of Clinical Nutrition Volume 95-96 ; 95-96 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; The American Journal of Clinical Nutrition Volume 97-98 ; 97-98 ; >
-    au < manifest ; exists ; 2014 ; 2014 ; The American Journal of Clinical Nutrition Volume 99-100 ; 99-100 ; >
-    au < manifest ; exists ; 2015 ; 2015 ; The American Journal of Clinical Nutrition Volume 101-102 ; 101-102 ; >
+    au < testing ; exists ; 2009 ; 2009 ; The American Journal of Clinical Nutrition Volume 89-90 ; 89-90 ; >
+    au < testing ; exists ; 2010 ; 2010 ; The American Journal of Clinical Nutrition Volume 91-92 ; 91-92 ; >
+    au < testing ; exists ; 2011 ; 2011 ; The American Journal of Clinical Nutrition Volume 93-94 ; 93-94 ; >
+    au < testing ; exists ; 2012 ; 2012 ; The American Journal of Clinical Nutrition Volume 95-96 ; 95-96 ; >
+    au < testing ; exists ; 2013 ; 2013 ; The American Journal of Clinical Nutrition Volume 97-98 ; 97-98 ; >
+    au < testing ; exists ; 2014 ; 2014 ; The American Journal of Clinical Nutrition Volume 99-100 ; 99-100 ; >
+    au < testing ; exists ; 2015 ; 2015 ; The American Journal of Clinical Nutrition Volume 101-102 ; 101-102 ; >
     au < frozen ; exists ; 2016 ; 2016 ; The American Journal of Clinical Nutrition Volume 103-104 ; 103-104 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The American Journal of Clinical Nutrition Volume 105-106 ; 105-106 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; The American Journal of Clinical Nutrition Volume 107-108 ; 107-108 ; >
@@ -595,12 +595,12 @@
     au < doNotProcess ; exists ; 2006 ; 2006 ; American Journal of Clinical Pathology Volume 125-126 ; 125-126 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; American Journal of Clinical Pathology Volume 127-128 ; 127-128 ; >
     au < manifest ; exists ; 2008 ; 2008 ; American Journal of Clinical Pathology Volume 129-130 ; 129-130 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; American Journal of Clinical Pathology Volume 131-132 ; 131-132 ; >
-    au < manifest ; exists ; 2010 ; 2010 ; American Journal of Clinical Pathology Volume 133-134 ; 133-134 ; >
-    au < manifest ; exists ; 2011 ; 2011 ; American Journal of Clinical Pathology Volume 135-136 ; 135-136 ; >
-    au < manifest ; exists ; 2012 ; 2012 ; American Journal of Clinical Pathology Volume 137-138 ; 137-138 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; American Journal of Clinical Pathology Volume 139-140 ; 139-140 ; >
-    au < manifest ; exists ; 2014 ; 2014 ; American Journal of Clinical Pathology Volume 141-142 ; 141-142 ; >
+    au < testing ; exists ; 2009 ; 2009 ; American Journal of Clinical Pathology Volume 131-132 ; 131-132 ; >
+    au < testing ; exists ; 2010 ; 2010 ; American Journal of Clinical Pathology Volume 133-134 ; 133-134 ; >
+    au < testing ; exists ; 2011 ; 2011 ; American Journal of Clinical Pathology Volume 135-136 ; 135-136 ; >
+    au < testing ; exists ; 2012 ; 2012 ; American Journal of Clinical Pathology Volume 137-138 ; 137-138 ; >
+    au < testing ; exists ; 2013 ; 2013 ; American Journal of Clinical Pathology Volume 139-140 ; 139-140 ; >
+    au < testing ; exists ; 2014 ; 2014 ; American Journal of Clinical Pathology Volume 141-142 ; 141-142 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; American Journal of Clinical Pathology Volume 143-144 ; 143-144 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; American Journal of Clinical Pathology Volume 145-146 ; 145-146 ; >
     au < frozen ; exists ; 2017 ; 2017 ; American Journal of Clinical Pathology Volume 147-148 ; 147-148 ; >
@@ -733,7 +733,7 @@
     param[journal_id] = ajhp
 
     au < doNotProcess ; exists ; 1945 ; 1945 ; American Journal of Health-System Pharmacy Volume 2 ; 2 ; >
-    
+
     au < doNotProcess ; exists ; 1968 ; 1968 ; American Journal of Health-System Pharmacy Volume 25 ; 25 ; >
 
     au < doNotProcess ; exists ; 1982 ; 1982 ; American Journal of Health-System Pharmacy Volume 39 ; 39 ; >
@@ -754,13 +754,13 @@
     au < doNotProcess ; exists ; 2006 ; 2006 ; American Journal of Health-System Pharmacy Volume 63 ; 63 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; American Journal of Health-System Pharmacy Volume 64 ; 64 ; >
     au < manifest ; exists ; 2008 ; 2008 ; American Journal of Health-System Pharmacy Volume 65 ; 65 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; American Journal of Health-System Pharmacy Volume 66 ; 66 ; >
-    au < manifest ; exists ; 2010 ; 2010 ; American Journal of Health-System Pharmacy Volume 67 ; 67 ; >
-    au < manifest ; exists ; 2011 ; 2011 ; American Journal of Health-System Pharmacy Volume 68 ; 68 ; >
-    au < manifest ; exists ; 2012 ; 2012 ; American Journal of Health-System Pharmacy Volume 69 ; 69 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; American Journal of Health-System Pharmacy Volume 70 ; 70 ; >
-    au < manifest ; exists ; 2014 ; 2014 ; American Journal of Health-System Pharmacy Volume 71 ; 71 ; >
-    au < manifest ; exists ; 2015 ; 2015 ; American Journal of Health-System Pharmacy Volume 72 ; 72 ; >
+    au < testing ; exists ; 2009 ; 2009 ; American Journal of Health-System Pharmacy Volume 66 ; 66 ; >
+    au < testing ; exists ; 2010 ; 2010 ; American Journal of Health-System Pharmacy Volume 67 ; 67 ; >
+    au < testing ; exists ; 2011 ; 2011 ; American Journal of Health-System Pharmacy Volume 68 ; 68 ; >
+    au < testing ; exists ; 2012 ; 2012 ; American Journal of Health-System Pharmacy Volume 69 ; 69 ; >
+    au < testing ; exists ; 2013 ; 2013 ; American Journal of Health-System Pharmacy Volume 70 ; 70 ; >
+    au < testing ; exists ; 2014 ; 2014 ; American Journal of Health-System Pharmacy Volume 71 ; 71 ; >
+    au < testing ; exists ; 2015 ; 2015 ; American Journal of Health-System Pharmacy Volume 72 ; 72 ; >
     au < frozen ; exists ; 2016 ; 2016 ; American Journal of Health-System Pharmacy Volume 73 ; 73 ; >
     au < frozen ; exists ; 2017 ; 2017 ; American Journal of Health-System Pharmacy Volume 74 ; 74 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; American Journal of Health-System Pharmacy Volume 75 ; 75 ; >
@@ -931,9 +931,9 @@
       issnl = 0003-1569
     >
 
-    param[journal_id] = 
+    param[journal_id] =
 
-    #this title was ONLY in the previous TDB listing - suppressing AU generation 
+    #this title was ONLY in the previous TDB listing - suppressing AU generation
 
   }
 
@@ -1073,13 +1073,13 @@
     au < exists ; exists ; 2006 ; 2006 ; Journal of Animal Science Volume 83 ; 83 ; >
     au < exists ; exists ; 2007 ; 2007 ; Journal of Animal Science Volume 84 ; 84 ; >
     au < manifest ; exists ; 2008 ; 2008 ; Journal of Animal Science Volume 85 ; 85 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; Journal of Animal Science Volume 86 ; 86 ; >
-    au < manifest ; exists ; 2010 ; 2010 ; Journal of Animal Science Volume 87 ; 87 ; >
-    au < manifest ; exists ; 2011 ; 2011 ; Journal of Animal Science Volume 88 ; 88 ; >
-    au < manifest ; exists ; 2012 ; 2012 ; Journal of Animal Science Volume 89 ; 89 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; Journal of Animal Science Volume 90 ; 90 ; >
-    au < manifest ; exists ; 2014 ; 2014 ; Journal of Animal Science Volume 91 ; 91 ; >
-    au < manifest ; exists ; 2015 ; 2015 ; Journal of Animal Science Volume 92 ; 92 ; >
+    au < testing ; exists ; 2009 ; 2009 ; Journal of Animal Science Volume 86 ; 86 ; >
+    au < testing ; exists ; 2010 ; 2010 ; Journal of Animal Science Volume 87 ; 87 ; >
+    au < testing ; exists ; 2011 ; 2011 ; Journal of Animal Science Volume 88 ; 88 ; >
+    au < testing ; exists ; 2012 ; 2012 ; Journal of Animal Science Volume 89 ; 89 ; >
+    au < testing ; exists ; 2013 ; 2013 ; Journal of Animal Science Volume 90 ; 90 ; >
+    au < testing ; exists ; 2014 ; 2014 ; Journal of Animal Science Volume 91 ; 91 ; >
+    au < testing ; exists ; 2015 ; 2015 ; Journal of Animal Science Volume 92 ; 92 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Journal of Animal Science Volume 93 ; 93 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Journal of Animal Science Volume 94 ; 94 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Journal of Animal Science Volume 95 ; 95 ; >
@@ -1480,7 +1480,7 @@
 
   }
 
-  #Publisher and previous TDB differ on title - Applied Mathematics Research eXpress vs Applied Mathematics Research eXpress (AMRX) 
+  #Publisher and previous TDB differ on title - Applied Mathematics Research eXpress vs Applied Mathematics Research eXpress (AMRX)
   {
 
     title <
@@ -1776,13 +1776,13 @@
     au < doNotProcess ; exists ; 2006 ; 2006 ; The Auk: Ornithological Advances Volume 121 ; 121 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; The Auk: Ornithological Advances Volume 122 ; 122 ; >
     au < manifest ; exists ; 2008 ; 2008 ; The Auk: Ornithological Advances Volume 123 ; 123 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; The Auk: Ornithological Advances Volume 124 ; 124 ; >
-    au < manifest ; exists ; 2010 ; 2010 ; The Auk: Ornithological Advances Volume 125 ; 125 ; >
-    au < manifest ; exists ; 2011 ; 2011 ; The Auk: Ornithological Advances Volume 126 ; 126 ; >
-    au < manifest ; exists ; 2012 ; 2012 ; The Auk: Ornithological Advances Volume 127 ; 127 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; The Auk: Ornithological Advances Volume 128 ; 128 ; >
-    au < manifest ; exists ; 2014 ; 2014 ; The Auk: Ornithological Advances Volume 129 ; 129 ; >
-    au < manifest ; exists ; 2015 ; 2015 ; The Auk: Ornithological Advances Volume 130 ; 130 ; >
+    au < testing ; exists ; 2009 ; 2009 ; The Auk: Ornithological Advances Volume 124 ; 124 ; >
+    au < testing ; exists ; 2010 ; 2010 ; The Auk: Ornithological Advances Volume 125 ; 125 ; >
+    au < testing ; exists ; 2011 ; 2011 ; The Auk: Ornithological Advances Volume 126 ; 126 ; >
+    au < testing ; exists ; 2012 ; 2012 ; The Auk: Ornithological Advances Volume 127 ; 127 ; >
+    au < testing ; exists ; 2013 ; 2013 ; The Auk: Ornithological Advances Volume 128 ; 128 ; >
+    au < testing ; exists ; 2014 ; 2014 ; The Auk: Ornithological Advances Volume 129 ; 129 ; >
+    au < testing ; exists ; 2015 ; 2015 ; The Auk: Ornithological Advances Volume 130 ; 130 ; >
     au < frozen ; exists ; 2016 ; 2016 ; The Auk: Ornithological Advances Volume 131 ; 131 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The Auk: Ornithological Advances Volume 132 ; 132 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; The Auk: Ornithological Advances Volume 133 ; 133 ; >
@@ -1810,19 +1810,19 @@
     au < doNotProcess ; exists ; 2006 ; 2006 ; BJA Education Volume 6 ; 6 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; BJA Education Volume 7 ; 7 ; >
     au < manifest ; exists ; 2008 ; 2008 ; BJA Education Volume 8 ; 8 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; BJA Education Volume 9 ; 9 ; >
-    au < manifest ; exists ; 2010 ; 2010 ; BJA Education Volume 10 ; 10 ; >
-    au < manifest ; exists ; 2011 ; 2011 ; BJA Education Volume 11 ; 11 ; >
-    au < manifest ; exists ; 2012 ; 2012 ; BJA Education Volume 12 ; 12 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; BJA Education Volume 13 ; 13 ; >
-    au < manifest ; exists ; 2014 ; 2014 ; BJA Education Volume 14 ; 14 ; >
+    au < testing ; exists ; 2009 ; 2009 ; BJA Education Volume 9 ; 9 ; >
+    au < testing ; exists ; 2010 ; 2010 ; BJA Education Volume 10 ; 10 ; >
+    au < testing ; exists ; 2011 ; 2011 ; BJA Education Volume 11 ; 11 ; >
+    au < testing ; exists ; 2012 ; 2012 ; BJA Education Volume 12 ; 12 ; >
+    au < testing ; exists ; 2013 ; 2013 ; BJA Education Volume 13 ; 13 ; >
+    au < testing ; exists ; 2014 ; 2014 ; BJA Education Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; BJA Education Volume 15 ; 15 ; >
     au < frozen ; exists ; 2016 ; 2016 ; BJA Education Volume 16 ; 16 ; >
     au < finished ; crawling ; 2017 ; 2017 ; BJA Education Volume 17 ; 17 ; reingest2.clockss.org:8085 >
 
   }
 
-  #Publisher and previous TDB differ on title - BJA: British Journal of Anaesthesia vs British Journal of Anaesthesia 
+  #Publisher and previous TDB differ on title - BJA: British Journal of Anaesthesia vs British Journal of Anaesthesia
   {
 
     title <
@@ -1934,9 +1934,9 @@
       issn = 0361-5448
     >
 
-    param[journal_id] = 
+    param[journal_id] =
 
-    #this title was ONLY in the previous TDB listing - suppressing AU generation 
+    #this title was ONLY in the previous TDB listing - suppressing AU generation
 
   }
 
@@ -1947,9 +1947,9 @@
       issn = 1533-6689
     >
 
-    param[journal_id] = 
+    param[journal_id] =
 
-    #this title was ONLY in the previous TDB listing - suppressing AU generation 
+    #this title was ONLY in the previous TDB listing - suppressing AU generation
 
   }
 
@@ -2167,13 +2167,13 @@
     au < doNotProcess ; exists ; 2006 ; 2006 ; Biological Journal of the Linnean Society Volume 87-89 ; 87-89 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Biological Journal of the Linnean Society Volume 90-92 ; 90-92 ; >
     au < manifest ; exists ; 2008 ; 2008 ; Biological Journal of the Linnean Society Volume 93-95 ; 93-95 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; Biological Journal of the Linnean Society Volume 96-98 ; 96-98 ; >
-    au < manifest ; exists ; 2010 ; 2010 ; Biological Journal of the Linnean Society Volume 99-101 ; 99-101 ; >
-    au < manifest ; exists ; 2011 ; 2011 ; Biological Journal of the Linnean Society Volume 102-104 ; 102-104 ; >
-    au < manifest ; exists ; 2012 ; 2012 ; Biological Journal of the Linnean Society Volume 105-107 ; 105-107 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; Biological Journal of the Linnean Society Volume 108-110 ; 108-110 ; >
-    au < manifest ; exists ; 2014 ; 2014 ; Biological Journal of the Linnean Society Volume 111-113 ; 111-113 ; >
-    au < manifest ; exists ; 2015 ; 2015 ; Biological Journal of the Linnean Society Volume 114-116 ; 114-116 ; >
+    au < testing ; exists ; 2009 ; 2009 ; Biological Journal of the Linnean Society Volume 96-98 ; 96-98 ; >
+    au < testing ; exists ; 2010 ; 2010 ; Biological Journal of the Linnean Society Volume 99-101 ; 99-101 ; >
+    au < testing ; exists ; 2011 ; 2011 ; Biological Journal of the Linnean Society Volume 102-104 ; 102-104 ; >
+    au < testing ; exists ; 2012 ; 2012 ; Biological Journal of the Linnean Society Volume 105-107 ; 105-107 ; >
+    au < testing ; exists ; 2013 ; 2013 ; Biological Journal of the Linnean Society Volume 108-110 ; 108-110 ; >
+    au < testing ; exists ; 2014 ; 2014 ; Biological Journal of the Linnean Society Volume 111-113 ; 111-113 ; >
+    au < testing ; exists ; 2015 ; 2015 ; Biological Journal of the Linnean Society Volume 114-116 ; 114-116 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Biological Journal of the Linnean Society Volume 117-119 ; 117-119 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Biological Journal of the Linnean Society Volume 120-122 ; 120-122 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Biological Journal of the Linnean Society Volume 123-125 ; 123-125 ; >
@@ -2249,13 +2249,13 @@
     au < doNotProcess ; exists ; 2006 ; 2006 ; Biology of Reproduction Volume 74-75 ; 74-75 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Biology of Reproduction Volume 76-77 ; 76-77 ; >
     au < manifest ; exists ; 2008 ; 2008 ; Biology of Reproduction Volume 78-79 ; 78-79 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; Biology of Reproduction Volume 80-81 ; 80-81 ; >
-    au < manifest ; exists ; 2010 ; 2010 ; Biology of Reproduction Volume 82-83 ; 82-83 ; >
-    au < manifest ; exists ; 2011 ; 2011 ; Biology of Reproduction Volume 84-85 ; 84-85 ; >
-    au < manifest ; exists ; 2012 ; 2012 ; Biology of Reproduction Volume 86-87 ; 86-87 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; Biology of Reproduction Volume 88-89 ; 88-89 ; >
-    au < manifest ; exists ; 2014 ; 2014 ; Biology of Reproduction Volume 90-91 ; 90-91 ; >
-    au < manifest ; exists ; 2015 ; 2015 ; Biology of Reproduction Volume 92-93 ; 92-93 ; >
+    au < testing ; exists ; 2009 ; 2009 ; Biology of Reproduction Volume 80-81 ; 80-81 ; >
+    au < testing ; exists ; 2010 ; 2010 ; Biology of Reproduction Volume 82-83 ; 82-83 ; >
+    au < testing ; exists ; 2011 ; 2011 ; Biology of Reproduction Volume 84-85 ; 84-85 ; >
+    au < testing ; exists ; 2012 ; 2012 ; Biology of Reproduction Volume 86-87 ; 86-87 ; >
+    au < testing ; exists ; 2013 ; 2013 ; Biology of Reproduction Volume 88-89 ; 88-89 ; >
+    au < testing ; exists ; 2014 ; 2014 ; Biology of Reproduction Volume 90-91 ; 90-91 ; >
+    au < testing ; exists ; 2015 ; 2015 ; Biology of Reproduction Volume 92-93 ; 92-93 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Biology of Reproduction Volume 94-95 ; 94-95 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Biology of Reproduction Volume 96-97 ; 96-97 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Biology of Reproduction Volume 98-99 ; 98-99 ; >
@@ -2393,13 +2393,13 @@
     param[journal_id] = biohorizons
 
     au < manifest ; exists ; 2008 ; 2008 ; Bioscience Horizons: The International Journal of Student Research Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; Bioscience Horizons: The International Journal of Student Research Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2010 ; 2010 ; Bioscience Horizons: The International Journal of Student Research Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2011 ; 2011 ; Bioscience Horizons: The International Journal of Student Research Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2012 ; 2012 ; Bioscience Horizons: The International Journal of Student Research Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; Bioscience Horizons: The International Journal of Student Research Volume 6 ; 6 ; >
-    au < manifest ; exists ; 2014 ; 2014 ; Bioscience Horizons: The International Journal of Student Research Volume 7 ; 7 ; >
-    au < manifest ; exists ; 2015 ; 2015 ; Bioscience Horizons: The International Journal of Student Research Volume 8 ; 8 ; >
+    au < testing ; exists ; 2009 ; 2009 ; Bioscience Horizons: The International Journal of Student Research Volume 2 ; 2 ; >
+    au < testing ; exists ; 2010 ; 2010 ; Bioscience Horizons: The International Journal of Student Research Volume 3 ; 3 ; >
+    au < testing ; exists ; 2011 ; 2011 ; Bioscience Horizons: The International Journal of Student Research Volume 4 ; 4 ; >
+    au < testing ; exists ; 2012 ; 2012 ; Bioscience Horizons: The International Journal of Student Research Volume 5 ; 5 ; >
+    au < testing ; exists ; 2013 ; 2013 ; Bioscience Horizons: The International Journal of Student Research Volume 6 ; 6 ; >
+    au < testing ; exists ; 2014 ; 2014 ; Bioscience Horizons: The International Journal of Student Research Volume 7 ; 7 ; >
+    au < testing ; exists ; 2015 ; 2015 ; Bioscience Horizons: The International Journal of Student Research Volume 8 ; 8 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Bioscience Horizons: The International Journal of Student Research Volume 9 ; 9 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Bioscience Horizons: The International Journal of Student Research Volume 10 ; 10 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Bioscience Horizons: The International Journal of Student Research Volume 11 ; 11 ; >
@@ -2698,9 +2698,9 @@
       issnl = 1473-9550
     >
 
-    param[journal_id] = 
+    param[journal_id] =
 
-    #this title was ONLY in the previous TDB listing - suppressing AU generation 
+    #this title was ONLY in the previous TDB listing - suppressing AU generation
 
   }
 
@@ -2855,9 +2855,9 @@
       issnl = 0013-8754
     >
 
-    param[journal_id] = 
+    param[journal_id] =
 
-    #this title was ONLY in the previous TDB listing - suppressing AU generation 
+    #this title was ONLY in the previous TDB listing - suppressing AU generation
 
   }
 
@@ -2870,9 +2870,9 @@
       issnl = 0024-6093
     >
 
-    param[journal_id] = 
+    param[journal_id] =
 
-    #this title was ONLY in the previous TDB listing - suppressing AU generation 
+    #this title was ONLY in the previous TDB listing - suppressing AU generation
 
   }
 
@@ -3326,7 +3326,7 @@
 
   }
 
-  #Publisher and previous TDB differ on title - Christian bioethics: Non-Ecumenical Studies in Medical Morality vs Christian Bioethics: Non-Ecumenical Studies in Medical Morality 
+  #Publisher and previous TDB differ on title - Christian bioethics: Non-Ecumenical Studies in Medical Morality vs Christian Bioethics: Non-Ecumenical Studies in Medical Morality
   {
 
     title <
@@ -3647,8 +3647,8 @@
 
   }
 
-  #Publisher and previous TDB differ on eissn - 1754-1476 vs 1754-1484 
-  #Publisher and previous TDB differ on issn - 1754-1484 vs 1754-1476 
+  #Publisher and previous TDB differ on eissn - 1754-1476 vs 1754-1484
+  #Publisher and previous TDB differ on issn - 1754-1484 vs 1754-1476
   {
 
     title <
@@ -3685,9 +3685,9 @@
       issnl = 1743-1816
     >
 
-    param[journal_id] = 
+    param[journal_id] =
 
-    #this title was ONLY in the previous TDB listing - suppressing AU generation 
+    #this title was ONLY in the previous TDB listing - suppressing AU generation
 
   }
 
@@ -3888,7 +3888,7 @@
 
   }
 
-  #Publisher and previous TDB differ on title - Database vs Database: The Journal of Biological Databases and Curation 
+  #Publisher and previous TDB differ on title - Database vs Database: The Journal of Biological Databases and Curation
   {
 
     title <
@@ -4069,9 +4069,9 @@
       eissn = 2059-6987
     >
 
-    param[journal_id] = 
+    param[journal_id] =
 
-    #this title was ONLY in the previous TDB listing - suppressing AU generation 
+    #this title was ONLY in the previous TDB listing - suppressing AU generation
 
   }
 
@@ -4162,7 +4162,7 @@
 
   }
 
-  #Publisher and previous TDB differ on title - EP Europace vs Europace 
+  #Publisher and previous TDB differ on title - EP Europace vs Europace
   {
 
     title <
@@ -5112,9 +5112,9 @@
       issnl = 1525-2167
     >
 
-    param[journal_id] = 
+    param[journal_id] =
 
-    #this title was ONLY in the previous TDB listing - suppressing AU generation 
+    #this title was ONLY in the previous TDB listing - suppressing AU generation
 
   }
 
@@ -5420,9 +5420,9 @@
       issnl = 0928-8244
     >
 
-    param[journal_id] = 
+    param[journal_id] =
 
-    #this title was ONLY in the previous TDB listing - suppressing AU generation 
+    #this title was ONLY in the previous TDB listing - suppressing AU generation
 
   }
 
@@ -5486,9 +5486,9 @@
       issnl = 0920-8534
     >
 
-    param[journal_id] = 
+    param[journal_id] =
 
-    #this title was ONLY in the previous TDB listing - suppressing AU generation 
+    #this title was ONLY in the previous TDB listing - suppressing AU generation
 
   }
 
@@ -6077,7 +6077,7 @@
 
   }
 
-  #Publisher and previous TDB differ on title - French Studies vs French Studies: A Quarterly Review 
+  #Publisher and previous TDB differ on title - French Studies vs French Studies: A Quarterly Review
   {
 
     title <
@@ -7014,7 +7014,7 @@
 
   }
 
-  #Publisher and previous TDB differ on title - ICES Journal of Marine Science vs ICES Journal of Marine Science: Journal du Conseil 
+  #Publisher and previous TDB differ on title - ICES Journal of Marine Science vs ICES Journal of Marine Science: Journal du Conseil
   {
 
     title <
@@ -7162,9 +7162,9 @@
       issnl = 0258-3690
     >
 
-    param[journal_id] = 
+    param[journal_id] =
 
-    #this title was ONLY in the previous TDB listing - suppressing AU generation 
+    #this title was ONLY in the previous TDB listing - suppressing AU generation
 
   }
 
@@ -7332,9 +7332,9 @@
       issnl = 0265-0754
     >
 
-    param[journal_id] = 
+    param[journal_id] =
 
-    #this title was ONLY in the previous TDB listing - suppressing AU generation 
+    #this title was ONLY in the previous TDB listing - suppressing AU generation
 
   }
 
@@ -7407,7 +7407,7 @@
 
   }
 
-  #Publisher and previous TDB differ on title - ISLE: Interdisciplinary Studies in Literature and Environment vs Interdisciplinary Studies in Literature and Environment 
+  #Publisher and previous TDB differ on title - ISLE: Interdisciplinary Studies in Literature and Environment vs Interdisciplinary Studies in Literature and Environment
   {
 
     title <
@@ -7748,13 +7748,13 @@
       eissn = 1873-7951
     >
 
-    param[journal_id] = 
+    param[journal_id] =
 
-    #this title was ONLY in the previous TDB listing - suppressing AU generation 
+    #this title was ONLY in the previous TDB listing - suppressing AU generation
 
   }
 
-  #Publisher and previous TDB differ on title - Interactive CardioVascular and Thoracic Surgery vs Interactive Cardiovascular and Thoracic Surgery 
+  #Publisher and previous TDB differ on title - Interactive CardioVascular and Thoracic Surgery vs Interactive Cardiovascular and Thoracic Surgery
   {
 
     title <
@@ -7910,9 +7910,9 @@
       name = International Immunology Meeting Abstracts
     >
 
-    param[journal_id] = 
+    param[journal_id] =
 
-    #this title was ONLY in the previous TDB listing - suppressing AU generation 
+    #this title was ONLY in the previous TDB listing - suppressing AU generation
 
   }
 
@@ -9653,9 +9653,9 @@
       issnl = 0022-0744
     >
 
-    param[journal_id] = 
+    param[journal_id] =
 
-    #this title was ONLY in the previous TDB listing - suppressing AU generation 
+    #this title was ONLY in the previous TDB listing - suppressing AU generation
 
   }
 
@@ -10533,7 +10533,7 @@
 
   }
 
-  #Publisher and previous TDB differ on issn - 0022-2858 vs 0022-2585 
+  #Publisher and previous TDB differ on issn - 0022-2858 vs 0022-2585
   {
 
     title <
@@ -10578,9 +10578,9 @@
       issnl = 0268-1218
     >
 
-    param[journal_id] = 
+    param[journal_id] =
 
-    #this title was ONLY in the previous TDB listing - suppressing AU generation 
+    #this title was ONLY in the previous TDB listing - suppressing AU generation
 
   }
 
@@ -11059,8 +11059,8 @@
 
   }
 
-  #Publisher and previous TDB differ on eissn - 2051-8811 vs 2051-8803 
-  #Publisher and previous TDB differ on issn - 2051-8803 vs 2051-8811 
+  #Publisher and previous TDB differ on eissn - 2051-8811 vs 2051-8803
+  #Publisher and previous TDB differ on issn - 2051-8803 vs 2051-8811
   {
 
     title <
@@ -11387,8 +11387,8 @@
 
   }
 
-  #Publisher and previous TDB differ on eissn - 1527-1897 vs 0022-4529 
-  #Publisher and previous TDB differ on issn - 0022-4529 vs 1527-1897 
+  #Publisher and previous TDB differ on eissn - 1527-1897 vs 0022-4529
+  #Publisher and previous TDB differ on issn - 0022-4529 vs 1527-1897
   {
 
     title <
@@ -11468,9 +11468,9 @@
       issnl = 1753-8416
     >
 
-    param[journal_id] = 
+    param[journal_id] =
 
-    #this title was ONLY in the previous TDB listing - suppressing AU generation 
+    #this title was ONLY in the previous TDB listing - suppressing AU generation
 
   }
 
@@ -12010,9 +12010,9 @@
       eissn = 2053-9711
     >
 
-    param[journal_id] = 
+    param[journal_id] =
 
-    #this title was ONLY in the previous TDB listing - suppressing AU generation 
+    #this title was ONLY in the previous TDB listing - suppressing AU generation
 
   }
 
@@ -12025,9 +12025,9 @@
       issnl = 0024-6107
     >
 
-    param[journal_id] = 
+    param[journal_id] =
 
-    #this title was ONLY in the previous TDB listing - suppressing AU generation 
+    #this title was ONLY in the previous TDB listing - suppressing AU generation
 
   }
 
@@ -12193,9 +12193,9 @@
       issnl = 0268-1145
     >
 
-    param[journal_id] = 
+    param[journal_id] =
 
-    #this title was ONLY in the previous TDB listing - suppressing AU generation 
+    #this title was ONLY in the previous TDB listing - suppressing AU generation
 
   }
 
@@ -12307,7 +12307,7 @@
 
   }
 
-  #Publisher and previous TDB differ on title - MELUS vs MELUS: Multi-Ethnic Literature of the U.S. 
+  #Publisher and previous TDB differ on title - MELUS vs MELUS: Multi-Ethnic Literature of the U.S.
   {
 
     title <
@@ -12605,9 +12605,9 @@
       issnl = 1079-1760
     >
 
-    param[journal_id] = 
+    param[journal_id] =
 
-    #this title was ONLY in the previous TDB listing - suppressing AU generation 
+    #this title was ONLY in the previous TDB listing - suppressing AU generation
 
   }
 
@@ -12989,9 +12989,9 @@
       issnl = 1674-2052
     >
 
-    param[journal_id] = 
+    param[journal_id] =
 
-    #this title was ONLY in the previous TDB listing - suppressing AU generation 
+    #this title was ONLY in the previous TDB listing - suppressing AU generation
 
   }
 
@@ -13069,9 +13069,9 @@
       eissn = 1813-9175
     >
 
-    param[journal_id] = 
+    param[journal_id] =
 
-    #this title was ONLY in the previous TDB listing - suppressing AU generation 
+    #this title was ONLY in the previous TDB listing - suppressing AU generation
 
   }
 
@@ -13378,9 +13378,9 @@
       issnl = 1753-0784
     >
 
-    param[journal_id] = 
+    param[journal_id] =
 
-    #this title was ONLY in the previous TDB listing - suppressing AU generation 
+    #this title was ONLY in the previous TDB listing - suppressing AU generation
 
   }
 
@@ -13626,9 +13626,9 @@
       issnl = 1462-2203
     >
 
-    param[journal_id] = 
+    param[journal_id] =
 
-    #this title was ONLY in the previous TDB listing - suppressing AU generation 
+    #this title was ONLY in the previous TDB listing - suppressing AU generation
 
   }
 
@@ -14960,9 +14960,9 @@
       issnl = 1047-1987
     >
 
-    param[journal_id] = 
+    param[journal_id] =
 
-    #this title was ONLY in the previous TDB listing - suppressing AU generation 
+    #this title was ONLY in the previous TDB listing - suppressing AU generation
 
   }
 
@@ -15293,7 +15293,7 @@
 
   }
 
-  #Publisher and previous TDB differ on title - Progress of Theoretical and Experimental Physics vs Progress of Theoretical and Experimental Physics (PTEP) 
+  #Publisher and previous TDB differ on title - Progress of Theoretical and Experimental Physics vs Progress of Theoretical and Experimental Physics (PTEP)
   {
 
     title <
@@ -16007,7 +16007,7 @@
 
   }
 
-  #Publisher and previous TDB differ on eissn - 1462-0332 vs 1460-2172 
+  #Publisher and previous TDB differ on eissn - 1462-0332 vs 1460-2172
   {
 
     title <
@@ -16093,9 +16093,9 @@
       issn = 0036-2174
     >
 
-    param[journal_id] = 
+    param[journal_id] =
 
-    #this title was ONLY in the previous TDB listing - suppressing AU generation 
+    #this title was ONLY in the previous TDB listing - suppressing AU generation
 
   }
 
@@ -16651,9 +16651,9 @@
       issnl = 1072-4745
     >
 
-    param[journal_id] = 
+    param[journal_id] =
 
-    #this title was ONLY in the previous TDB listing - suppressing AU generation 
+    #this title was ONLY in the previous TDB listing - suppressing AU generation
 
   }
 
@@ -17606,7 +17606,7 @@
 
   }
 
-  #Publisher and previous TDB differ on title - The British Journal of Criminology vs The British Journal of Criminology: An International Review of Crime and Society 
+  #Publisher and previous TDB differ on title - The British Journal of Criminology vs The British Journal of Criminology: An International Review of Crime and Society
   {
 
     title <
@@ -18942,7 +18942,7 @@
 
   }
 
-  #Publisher and previous TDB differ on title - The Library vs The Library: The Transactions of the Bibliographical Society 
+  #Publisher and previous TDB differ on title - The Library vs The Library: The Transactions of the Bibliographical Society
   {
 
     title <
@@ -20499,9 +20499,9 @@
       issnl = 2052-4986
     >
 
-    param[journal_id] = 
+    param[journal_id] =
 
-    #this title was ONLY in the previous TDB listing - suppressing AU generation 
+    #this title was ONLY in the previous TDB listing - suppressing AU generation
 
   }
 
@@ -20901,14 +20901,14 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Yearbook of International Environmental Law Volume 15 ; 15 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Yearbook of International Environmental Law Volume 16 ; 16 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Yearbook of International Environmental Law Volume 17 ; 17 ; >
-    au < testing ; exists ; 2008 ; 2008 ; Yearbook of International Environmental Law Volume 18 ; 18 ; >
+    au < ready ; exists ; 2008 ; 2008 ; Yearbook of International Environmental Law Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Yearbook of International Environmental Law Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Yearbook of International Environmental Law Volume 20-21 ; 20-21 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Yearbook of International Environmental Law Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Yearbook of International Environmental Law Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Yearbook of International Environmental Law Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Yearbook of International Environmental Law Volume 25 ; 25 ; >
-    au < testing ; exists ; 2015 ; 2015 ; Yearbook of International Environmental Law Volume 26 ; 26 ; >
+    au < ready ; exists ; 2015 ; 2015 ; Yearbook of International Environmental Law Volume 26 ; 26 ; >
 
   }
 
