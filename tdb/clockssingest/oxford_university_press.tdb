@@ -7726,14 +7726,14 @@
 
     param[journal_id] = ib
 
-    au < testing ; exists ; 2009 ; 2009 ; Integrative Biology Volume 1 ; 1 ; >
-    au < testing ; exists ; 2010 ; 2010 ; Integrative Biology Volume 2 ; 2 ; >
-    au < testing ; exists ; 2011 ; 2011 ; Integrative Biology Volume 3 ; 3 ; >
-    au < testing ; exists ; 2012 ; 2012 ; Integrative Biology Volume 4 ; 4 ; >
-    au < testing ; exists ; 2013 ; 2013 ; Integrative Biology Volume 5 ; 5 ; >
-    au < testing ; exists ; 2014 ; 2014 ; Integrative Biology Volume 6 ; 6 ; >
-    au < testing ; exists ; 2015 ; 2015 ; Integrative Biology Volume 7 ; 7 ; >
-    au < testing ; exists ; 2016 ; 2016 ; Integrative Biology Volume 8 ; 8 ; >
+    au < ready ; exists ; 2009 ; 2009 ; Integrative Biology Volume 1 ; 1 ; >
+    au < ready ; exists ; 2010 ; 2010 ; Integrative Biology Volume 2 ; 2 ; >
+    au < ready ; exists ; 2011 ; 2011 ; Integrative Biology Volume 3 ; 3 ; >
+    au < ready ; exists ; 2012 ; 2012 ; Integrative Biology Volume 4 ; 4 ; >
+    au < ready ; exists ; 2013 ; 2013 ; Integrative Biology Volume 5 ; 5 ; >
+    au < ready ; exists ; 2014 ; 2014 ; Integrative Biology Volume 6 ; 6 ; >
+    au < ready ; exists ; 2015 ; 2015 ; Integrative Biology Volume 7 ; 7 ; >
+    au < ready ; exists ; 2016 ; 2016 ; Integrative Biology Volume 8 ; 8 ; >
     au < crawling ; exists ; 2017 ; 2017 ; Integrative Biology Volume 9 ; 9 ; >
     au < crawling ; exists ; 2018 ; 2018 ; Integrative Biology Volume 10 ; 10 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Integrative Biology Volume 11 ; 11 ; >
@@ -13567,10 +13567,10 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Neurosurgery Volume 56-57 ; 56-57 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Neurosurgery Volume 58-59 ; 58-59 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Neurosurgery Volume 60-61 ; 60-61 ; >
-    au < testing ; exists ; 2008 ; 2008 ; Neurosurgery Volume 62-63 ; 62-63 ; >
-    au < testing ; exists ; 2009 ; 2009 ; Neurosurgery Volume 64-65 ; 64-65 ; >
-    au < testing ; exists ; 2010 ; 2010 ; Neurosurgery Volume 66-67 ; 66-67 ; >
-    au < testing ; exists ; 2011 ; 2011 ; Neurosurgery Volume 58,68-69 ; 58,68-69 ; >
+    au < ready ; exists ; 2008 ; 2008 ; Neurosurgery Volume 62-63 ; 62-63 ; >
+    au < ready ; exists ; 2009 ; 2009 ; Neurosurgery Volume 64-65 ; 64-65 ; >
+    au < ready ; exists ; 2010 ; 2010 ; Neurosurgery Volume 66-67 ; 66-67 ; >
+    au < ready ; exists ; 2011 ; 2011 ; Neurosurgery Volume 58,68-69 ; 58,68-69 ; >
     au < testing ; exists ; 2012 ; 2012 ; Neurosurgery Volume 59,70-71 ; 59,70-71 ; >
     au < testing ; exists ; 2013 ; 2013 ; Neurosurgery Volume 60,72-73 ; 60,72-73 ; >
     au < testing ; exists ; 2014 ; 2014 ; Neurosurgery Volume 61,74-75 ; 61,74-75 ; >
@@ -13602,7 +13602,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Nicotine & Tobacco Research Volume 7 ; 7 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Nicotine & Tobacco Research Volume 8 ; 8 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Nicotine & Tobacco Research Volume 9 ; 9 ; >
-    au < testing ; exists ; 2008 ; 2008 ; Nicotine & Tobacco Research Volume 10 ; 10 ; >
+    au < ready ; exists ; 2008 ; 2008 ; Nicotine & Tobacco Research Volume 10 ; 10 ; >
     au < testing ; exists ; 2009 ; 2009 ; Nicotine & Tobacco Research Volume 11 ; 11 ; >
     au < testing ; exists ; 2010 ; 2010 ; Nicotine & Tobacco Research Volume 12 ; 12 ; >
     au < testing ; exists ; 2011 ; 2011 ; Nicotine & Tobacco Research Volume 13 ; 13 ; >
@@ -14122,7 +14122,7 @@
     au < testing ; exists ; 2012 ; 2012 ; Operative Neurosurgery Volume 70 ; 70 ; >
     au < testing ; exists ; 2013 ; 2013 ; Operative Neurosurgery Volume 72 ; 72 ; >
     au < testing ; exists ; 2014 ; 2014 ; Operative Neurosurgery Volume 10 ; 10 ; >
-    au < testing ; exists ; 2015 ; 2015 ; Operative Neurosurgery Volume 11 ; 11 ; >
+    au < ready ; exists ; 2015 ; 2015 ; Operative Neurosurgery Volume 11 ; 11 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Operative Neurosurgery Volume 12 ; 12 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Operative Neurosurgery Volume 13 ; 13 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Operative Neurosurgery Volume 14 ; 14 ; >
@@ -14835,14 +14835,14 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Physical Therapy Volume 85 ; 85 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Physical Therapy Volume 86 ; 86 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Physical Therapy Volume 87 ; 87 ; >
-    au < testing ; exists ; 2008 ; 2008 ; Physical Therapy Volume 88 ; 88 ; >
-    au < testing ; exists ; 2009 ; 2009 ; Physical Therapy Volume 89 ; 89 ; >
-    au < testing ; exists ; 2010 ; 2010 ; Physical Therapy Volume 90 ; 90 ; >
+    au < ready ; exists ; 2008 ; 2008 ; Physical Therapy Volume 88 ; 88 ; >
+    au < ready ; exists ; 2009 ; 2009 ; Physical Therapy Volume 89 ; 89 ; >
+    au < ready ; exists ; 2010 ; 2010 ; Physical Therapy Volume 90 ; 90 ; >
     au < testing ; exists ; 2011 ; 2011 ; Physical Therapy Volume 91 ; 91 ; >
     au < testing ; exists ; 2012 ; 2012 ; Physical Therapy Volume 92 ; 92 ; >
     au < testing ; exists ; 2013 ; 2013 ; Physical Therapy Volume 93 ; 93 ; >
-    au < testing ; exists ; 2014 ; 2014 ; Physical Therapy Volume 94 ; 94 ; >
-    au < testing ; exists ; 2015 ; 2015 ; Physical Therapy Volume 95 ; 95 ; >
+    au < ready ; exists ; 2014 ; 2014 ; Physical Therapy Volume 94 ; 94 ; >
+    au < ready ; exists ; 2015 ; 2015 ; Physical Therapy Volume 95 ; 95 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Physical Therapy Volume 96 ; 96 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Physical Therapy Volume 97 ; 97 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Physical Therapy Volume 98 ; 98 ; >
@@ -18817,7 +18817,7 @@
     au < testing ; exists ; 2012 ; 2012 ; The Journals of Gerontology: Series A Volume 67-67A ; 67-67A ; >
     au < testing ; exists ; 2013 ; 2013 ; The Journals of Gerontology: Series A Volume 68 ; 68 ; >
     au < testing ; exists ; 2014 ; 2014 ; The Journals of Gerontology: Series A Volume 69-69A ; 69-69A ; >
-    au < testing ; exists ; 2015 ; 2015 ; The Journals of Gerontology: Series A Volume 70 ; 70 ; >
+    au < ready ; exists ; 2015 ; 2015 ; The Journals of Gerontology: Series A Volume 70 ; 70 ; >
     au < frozen ; exists ; 2016 ; 2016 ; The Journals of Gerontology: Series A Volume 71 ; 71 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The Journals of Gerontology: Series A Volume 72 ; 72 ; >
     au < crawling ; exists ; 2018 ; 2018 ; The Journals of Gerontology: Series A Volume 73 ; 73 ; >
@@ -18849,12 +18849,12 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; The Journals of Gerontology: Series B Volume 60 ; 60 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; The Journals of Gerontology: Series B Volume 61 ; 61 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; The Journals of Gerontology: Series B Volume 62 ; 62 ; >
-    au < testing ; exists ; 2008 ; 2008 ; The Journals of Gerontology: Series B Volume 63 ; 63 ; >
+    au < ready ; exists ; 2008 ; 2008 ; The Journals of Gerontology: Series B Volume 63 ; 63 ; >
     au < testing ; exists ; 2009 ; 2009 ; The Journals of Gerontology: Series B Volume 64B ; 64B ; >
     au < testing ; exists ; 2010 ; 2010 ; The Journals of Gerontology: Series B Volume 65B ; 65B ; >
     au < testing ; exists ; 2011 ; 2011 ; The Journals of Gerontology: Series B Volume 66B ; 66B ; >
-    au < testing ; exists ; 2012 ; 2012 ; The Journals of Gerontology: Series B Volume 67-67B ; 67-67B ; >
-    au < testing ; exists ; 2013 ; 2013 ; The Journals of Gerontology: Series B Volume 68 ; 68 ; >
+    au < ready ; exists ; 2012 ; 2012 ; The Journals of Gerontology: Series B Volume 67-67B ; 67-67B ; >
+    au < ready ; exists ; 2013 ; 2013 ; The Journals of Gerontology: Series B Volume 68 ; 68 ; >
     au < testing ; exists ; 2014 ; 2014 ; The Journals of Gerontology: Series B Volume 69-69B ; 69-69B ; >
     au < testing ; exists ; 2015 ; 2015 ; The Journals of Gerontology: Series B Volume 70 ; 70 ; >
     au < frozen ; exists ; 2016 ; 2016 ; The Journals of Gerontology: Series B Volume 71 ; 71 ; >
