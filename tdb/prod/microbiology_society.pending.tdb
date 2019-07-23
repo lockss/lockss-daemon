@@ -213,10 +213,10 @@
       au < doNotProcess ; 2010 ; International Journal of Systematic and Evolutionary Microbiology Volume 60 ; 60 >
       au < doNotProcess ; 2011 ; International Journal of Systematic and Evolutionary Microbiology Volume 61 ; 61 >
       au < doNotProcess ; 2012 ; International Journal of Systematic and Evolutionary Microbiology Volume 62 ; 62 >
-      au < doNotProcess ; 2013 ; International Journal of Systematic and Evolutionary Microbiology Volume 63 ; 63 >#test when plugin is ready.
-      au < doNotProcess ; 2014 ; International Journal of Systematic and Evolutionary Microbiology Volume 64 ; 64 >#test when plugin is ready.
-      au < doNotProcess ; 2015 ; International Journal of Systematic and Evolutionary Microbiology Volume 65 ; 65 >#test when plugin is ready.
-      au < doNotProcess ; 2016 ; International Journal of Systematic and Evolutionary Microbiology Volume 66 ; 66 >#test when plugin is ready.
+      au < manifest ; 2013 ; International Journal of Systematic and Evolutionary Microbiology Volume 63 ; 63 >#test when plugin is ready.
+      au < manifest ; 2014 ; International Journal of Systematic and Evolutionary Microbiology Volume 64 ; 64 >#test when plugin is ready.
+      au < manifest ; 2015 ; International Journal of Systematic and Evolutionary Microbiology Volume 65 ; 65 >#test when plugin is ready.
+      au < manifest ; 2016 ; International Journal of Systematic and Evolutionary Microbiology Volume 66 ; 66 >#test when plugin is ready.
 
     }
     
@@ -1008,10 +1008,10 @@
       au < doNotProcess ; 2010 ; Microbiology Volume 156 ; 156 >
       au < doNotProcess ; 2011 ; Microbiology Volume 157 ; 157 >
       au < doNotProcess ; 2012 ; Microbiology Volume 158 ; 158 >
-      au < doNotProcess ; 2013 ; Microbiology Volume 159 ; 159 >#test when plugin is ready.
-      au < doNotProcess ; 2014 ; Microbiology Volume 160 ; 160 >#test when plugin is ready.
-      au < doNotProcess ; 2015 ; Microbiology Volume 161 ; 161 >#test when plugin is ready.
-      au < doNotProcess ; 2016 ; Microbiology Volume 162 ; 162 >#test when plugin is ready.
+      au < manifest ; 2013 ; Microbiology Volume 159 ; 159 >#test when plugin is ready.
+      au < manifest ; 2014 ; Microbiology Volume 160 ; 160 >#test when plugin is ready.
+      au < manifest ; 2015 ; Microbiology Volume 161 ; 161 >#test when plugin is ready.
+      au < manifest ; 2016 ; Microbiology Volume 162 ; 162 >#test when plugin is ready.
 
     }
 
