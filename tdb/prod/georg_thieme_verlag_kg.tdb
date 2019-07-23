@@ -7298,7 +7298,7 @@
     param[journal_id] = 10.1055/s-00039252
     comment[years] = 2019-current
 
-    au < expected ; 2019 ; 2019 ; Yearbook of Medical Informatics Volume 83 ; 83 >
+    au < manifest ; 2019 ; 2019 ; Yearbook of Medical Informatics Volume 83 ; 83 >
 
   }
 }
