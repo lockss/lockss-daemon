@@ -97,8 +97,10 @@ public class SageAtyponHtmlHashFilterFactory
 	  */
 	   //TOC still uses tocContent; /full/ and /figure/ still use literatumPublicationContentWidget
 	   // article abstract now has <div class="widget accessDenialWidget none articleContent widget-non....>
-	   HtmlNodeFilters.tagWithAttributeRegex("div","class"," articleContent ")
-
+	   HtmlNodeFilters.tagWithAttributeRegex("div","class"," articleContent "),
+	//https://journals.sagepub.com/doi/abs/10.1606/1044-3894.2016.97.18, need the div to get abstracted content
+	//https://journals.sagepub.com/doi/abs/10.1606/1044-3894.2016.97.1, it is not guaranteed each article has Abstract content
+	HtmlNodeFilters.tagWithAttributeRegex("div","class","hlFld-Abstract"),
 
 	};
     NodeFilter[] excludeNodes = new NodeFilter[] {
