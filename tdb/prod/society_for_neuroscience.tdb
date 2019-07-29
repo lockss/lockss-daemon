@@ -11,15 +11,22 @@
       issnl = 2373-2822
     >
 
-      param[base_url] = http://eneuro.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+    {
+      param[base_url] = http://eneuro.org/
 
       au < sfn.SFNDrupalPlugin ; released ; 2014 ; eNeuro Volume 1 ; 1 >
       au < sfn.SFNDrupalPlugin ; released ; 2015 ; eNeuro Volume 2 ; 2 >
       au < sfn.SFNDrupalPlugin ; released ; 2016 ; eNeuro Volume 3 ; 3 >
-      au < sfn.SFNDrupalPlugin ; exists ; 2017 ; eNeuro Volume 4 ; 4 >
-      au < sfn.SFNDrupalPlugin ; expected ; 2018 ; eNeuro Volume 5 ; 5 >
+    }
 
+    {
+      param[base_url] = https://www.eneuro.org/
+
+      au < sfn.SFNDrupalPlugin ; exists ; 2017 ; eNeuro Volume 4 ; 4 >
+      au < sfn.SFNDrupalPlugin ; exists ; 2018 ; eNeuro Volume 5 ; 5 >
+    }
   }
   
   {
