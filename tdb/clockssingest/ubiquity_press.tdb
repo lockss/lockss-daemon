@@ -2491,4 +2491,57 @@
 
   }
 
+{
+  publisher <
+    name = Scandinavian Military Studies ;
+    info[contract] = 2011 ;
+    info[back] = 2000 ;
+    info[tester] = 8 ;
+    info[poller] = 8
+  >
+
+    provider = Ubiquity Press
+    plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
+    implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
+  {
+
+      title <
+        name = Scandinavian Journal of Military Studies ;
+        eissn = 2596-3856
+      >
+
+      comment[publisher] = Ubiquity Press
+#      param[base_url] = https://sjms.nu/
+
+      au < exists ; exists ; 2018 ; 1 ; Scandinavian Military Studies Volume 2018 ; 2018 ; https://sjms.nu/ ; >
+      au < exists ; exists ; 2019 ; 2 ; Scandinavian Military Studies Volume 2019 ; 2019 ; https://sjms.nu/ ; >
+
+  }
+
+{
+  publisher <
+    name = Aperio ;
+    info[contract] = 2011 ;
+    info[back] = 2000 ;
+    info[tester] = 8 ;
+    info[poller] = 8
+  >
+
+    provider = Ubiquity Press
+    plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
+    implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
+  {
+
+      title <
+        name = Journal of Modern Philosophy ;
+        eissn = 2644-0652
+      >
+
+      comment[publisher] = Ubiquity Press
+#      param[base_url] = https://jmphil.org/
+
+      au < exists ; exists ; 2019 ; 1 ; Journal of Modern Philosophy Volume 2019 ; 2019 ; https://jmphil.org/ ; >
+
+  }
+
 }
