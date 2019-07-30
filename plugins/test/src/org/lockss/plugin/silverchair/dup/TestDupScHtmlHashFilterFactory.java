@@ -65,13 +65,21 @@ public class TestDupScHtmlHashFilterFactory extends LockssTestCase {
     "<div class=\"article-groups\">article-groups content</div>\n" +
     "<h1 class=\"wi-article-title\">h1 title content</h1>\n" +
     "<h2 class=\"backreferences-title\">h2 title content</h1>\n" +
+    "<div class=\"al-article-items\">" +
+    "<h5 class=\"customLink item-title\" data-article-id-access=\"132803\">\n" +
+    "            <a href=\"/jhppl/article/43/1/5/132803/Innovative-Contracting-for-Pharmaceuticals-and\">item title content</a>\n" +
+    "            <i class=\"access-icon icon-availability_unlocked\"></i>\n" +
+    "            \n" +
+    "                         \n" +
+    "        </h5>\n" +
+    "</div>\n" +
     "<div class=\"article\">\n" +
         "<div class=\"widget other-widget\">\n" +
           "<div id=\"ContentTab\" class=\"content active\">main content</div>\n" +
         "</div>\n" +
     "</div>";
 
-  private static final String notIncludedFiltered = " main content ";
+  private static final String expected = " item title content main content ";
 
   public void testFiltering() throws Exception {
     InputStream inA;
@@ -81,8 +89,7 @@ public class TestDupScHtmlHashFilterFactory extends LockssTestCase {
         Constants.DEFAULT_ENCODING);
     a = StringUtil.fromInputStream(inA);
     log.debug3("result a = " + a);
-    assertEquals(notIncludedFiltered, a);
+    assertEquals(expected, a);
 
   }
-  
 }
