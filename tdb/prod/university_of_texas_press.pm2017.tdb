@@ -83,7 +83,7 @@
       attr[journal_id] = 31
       #continues = 0009-7101
 
-        au < ready ; 2018-2019 ; JCMS: Journal of Cinema and Media Studies Volume 58 [2018-2019] ; 13692 >
+        au < releasing ; 2018-2019 ; JCMS: Journal of Cinema and Media Studies Volume 58 [2018-2019] ; 13692 >
 
     }
 
@@ -123,7 +123,7 @@
         au < released ; 2001 ; Libraries & the Cultural Record Volume 36 [2001] ; 367 >
         au < released ; 2002 ; Libraries & the Cultural Record Volume 37 [2002] ; 368 >
         au < released ; 2003 ; Libraries & the Cultural Record Volume 38 [2003] ; 793 >
-        au < ready ; 2004 ; Libraries & the Cultural Record Volume 39 [2004] ; 1748 >
+        au < releasing ; 2004 ; Libraries & the Cultural Record Volume 39 [2004] ; 1748 >
         au < released ; 2005 ; Libraries & the Cultural Record Volume 40 [2005] ; 2723 >
 
     }
@@ -137,10 +137,10 @@
       attr[journal_id] = 111
       #continues = 0894-8631
 
-        au < ready ; 2006 ; Information & Culture: A Journal of History Volume 41 [2006] ; 2976 >
-        au < ready ; 2007 ; Information & Culture: A Journal of History Volume 42 [2007] ; 3351 >
-        au < ready ; 2008 ; Information & Culture: A Journal of History Volume 43 [2008] ; 3504 >
-        au < ready ; 2009 ; Information & Culture: A Journal of History Volume 44 [2009] ; 4103 >
+        au < releasing ; 2006 ; Information & Culture: A Journal of History Volume 41 [2006] ; 2976 >
+        au < releasing ; 2007 ; Information & Culture: A Journal of History Volume 42 [2007] ; 3351 >
+        au < releasing ; 2008 ; Information & Culture: A Journal of History Volume 43 [2008] ; 3504 >
+        au < releasing ; 2009 ; Information & Culture: A Journal of History Volume 44 [2009] ; 4103 >
         au < released ; 2010 ; Information & Culture: A Journal of History Volume 45 [2010] ; 5666 >
         au < released ; 2011 ; Information & Culture: A Journal of History Volume 46 [2011] ; 6575 >
         au < released ; 2012 ; Information & Culture: A Journal of History Volume 47 [2012] ; 8102 >
@@ -197,15 +197,15 @@
 
       attr[journal_id] = 179
 
-        au < ready ; 2001 ; Journal of the History of Sexuality Volume 10 [2001] ; 621 >
-        au < ready ; 2002 ; Journal of the History of Sexuality Volume 11 [2002] ; 622 >
-        au < ready ; 2003 ; Journal of the History of Sexuality Volume 12 [2003] ; 951 >
-        au < ready ; 2004 ; Journal of the History of Sexuality Volume 13 [2004] ; 2554 >
-        au < ready ; 2005 ; Journal of the History of Sexuality Volume 14 [2005] ; 2922 >
-        au < ready ; 2006 ; Journal of the History of Sexuality Volume 15 [2006] ; 3158 >
-        au < ready ; 2007 ; Journal of the History of Sexuality Volume 16 [2007] ; 3462 >
-        au < ready ; 2008 ; Journal of the History of Sexuality Volume 17 [2008] ; 3576 >
-        au < ready ; 2009 ; Journal of the History of Sexuality Volume 18 [2009] ; 4007 >
+        au < releasing ; 2001 ; Journal of the History of Sexuality Volume 10 [2001] ; 621 >
+        au < releasing ; 2002 ; Journal of the History of Sexuality Volume 11 [2002] ; 622 >
+        au < releasing ; 2003 ; Journal of the History of Sexuality Volume 12 [2003] ; 951 >
+        au < releasing ; 2004 ; Journal of the History of Sexuality Volume 13 [2004] ; 2554 >
+        au < releasing ; 2005 ; Journal of the History of Sexuality Volume 14 [2005] ; 2922 >
+        au < releasing ; 2006 ; Journal of the History of Sexuality Volume 15 [2006] ; 3158 >
+        au < releasing ; 2007 ; Journal of the History of Sexuality Volume 16 [2007] ; 3462 >
+        au < releasing ; 2008 ; Journal of the History of Sexuality Volume 17 [2008] ; 3576 >
+        au < releasing ; 2009 ; Journal of the History of Sexuality Volume 18 [2009] ; 4007 >
         au < released ; 2010 ; Journal of the History of Sexuality Volume 19 [2010] ; 5650 >
         au < released ; 2011 ; Journal of the History of Sexuality Volume 20 [2011] ; 6557 >
         au < released ; 2012 ; Journal of the History of Sexuality Volume 21 [2012] ; 7798 >
@@ -230,15 +230,15 @@
 
       attr[journal_id] = 113
 
-        au < ready ; 2001 ; Latin American Music Review Volume 22 [2001] ; 371 >
-        au < ready ; 2002 ; Latin American Music Review Volume 23 [2002] ; 372 >
-        au < ready ; 2003 ; Latin American Music Review Volume 24 [2003] ; 929 >
-        au < ready ; 2004 ; Latin American Music Review Volume 25 [2004] ; 2538 >
-        au < ready ; 2005 ; Latin American Music Review Volume 26 [2005] ; 2786 >
-        au < ready ; 2006 ; Latin American Music Review Volume 27 [2006] ; 3180 >
-        au < ready ; 2007 ; Latin American Music Review Volume 28 [2007] ; 3416 >
-        au < ready ; 2008 ; Latin American Music Review Volume 29 [2008] ; 3903 >
-        au < ready ; 2009 ; Latin American Music Review Volume 30 [2009] ; 4182 >
+        au < releasing ; 2001 ; Latin American Music Review Volume 22 [2001] ; 371 >
+        au < releasing ; 2002 ; Latin American Music Review Volume 23 [2002] ; 372 >
+        au < releasing ; 2003 ; Latin American Music Review Volume 24 [2003] ; 929 >
+        au < releasing ; 2004 ; Latin American Music Review Volume 25 [2004] ; 2538 >
+        au < releasing ; 2005 ; Latin American Music Review Volume 26 [2005] ; 2786 >
+        au < releasing ; 2006 ; Latin American Music Review Volume 27 [2006] ; 3180 >
+        au < releasing ; 2007 ; Latin American Music Review Volume 28 [2007] ; 3416 >
+        au < releasing ; 2008 ; Latin American Music Review Volume 29 [2008] ; 3903 >
+        au < releasing ; 2009 ; Latin American Music Review Volume 30 [2009] ; 4182 >
         au < released ; 2010 ; Latin American Music Review Volume 31 [2010] ; 6441 >
         au < released ; 2011 ; Latin American Music Review Volume 32 [2011] ; 7117 >
         au < released ; 2012 ; Latin American Music Review Volume 33 [2012] ; 8388 >
@@ -285,15 +285,15 @@
 
       attr[journal_id] = 199
 
-        au < ready ; 2001 ; Texas Studies in Literature and Language Volume 43 [2001] ; 678 >
-        au < ready ; 2002 ; Texas Studies in Literature and Language Volume 44 [2002] ; 679 >
-        au < ready ; 2003 ; Texas Studies in Literature and Language Volume 45 [2003] ; 898 >
-        au < ready ; 2004 ; Texas Studies in Literature and Language Volume 46 [2004] ; 1785 >
-        au < ready ; 2005 ; Texas Studies in Literature and Language Volume 47 [2005] ; 2777 >
-        au < ready ; 2006 ; Texas Studies in Literature and Language Volume 48 [2006] ; 3042 >
-        au < ready ; 2007 ; Texas Studies in Literature and Language Volume 49 [2007] ; 3338 >
-        au < ready ; 2008 ; Texas Studies in Literature and Language Volume 50 [2008] ; 3527 >
-        au < ready ; 2009 ; Texas Studies in Literature and Language Volume 51 [2009] ; 4051 >
+        au < releasing ; 2001 ; Texas Studies in Literature and Language Volume 43 [2001] ; 678 >
+        au < releasing ; 2002 ; Texas Studies in Literature and Language Volume 44 [2002] ; 679 >
+        au < releasing ; 2003 ; Texas Studies in Literature and Language Volume 45 [2003] ; 898 >
+        au < releasing ; 2004 ; Texas Studies in Literature and Language Volume 46 [2004] ; 1785 >
+        au < releasing ; 2005 ; Texas Studies in Literature and Language Volume 47 [2005] ; 2777 >
+        au < releasing ; 2006 ; Texas Studies in Literature and Language Volume 48 [2006] ; 3042 >
+        au < releasing ; 2007 ; Texas Studies in Literature and Language Volume 49 [2007] ; 3338 >
+        au < releasing ; 2008 ; Texas Studies in Literature and Language Volume 50 [2008] ; 3527 >
+        au < releasing ; 2009 ; Texas Studies in Literature and Language Volume 51 [2009] ; 4051 >
         au < released ; 2010 ; Texas Studies in Literature and Language Volume 52 [2010] ; 5742 >
         au < released ; 2011 ; Texas Studies in Literature and Language Volume 53 [2011] ; 6617 >
         au < released ; 2012 ; Texas Studies in Literature and Language Volume 54 [2012] ; 8007 >
@@ -338,20 +338,20 @@
 
       attr[journal_id] = 230
 
-        au < ready ; 2003 ; The Velvet Light Trap Number 51 [Spring 2003] ; 899 >
-        au < ready ; 2003 ; The Velvet Light Trap Number 52 [Fall 2003] ; 958 >
-        au < ready ; 2004 ; The Velvet Light Trap Number 53 [Spring 2004] ; 1783 >
-        au < ready ; 2004 ; The Velvet Light Trap Number 54 [Fall 2004] ; 2589 >
-        au < ready ; 2005 ; The Velvet Light Trap Number 55 [Spring 2005] ; 2731 >
-        au < ready ; 2005 ; The Velvet Light Trap Number 56 [Fall 2005] ; 2923 >
-        au < ready ; 2006 ; The Velvet Light Trap Number 57 [Spring 2006] ; 3003 >
-        au < ready ; 2006 ; The Velvet Light Trap Number 58 [Fall 2006] ; 3155 >
-        au < ready ; 2007 ; The Velvet Light Trap Number 59 [Spring 2007] ; 3303 >
-        au < ready ; 2007 ; The Velvet Light Trap Number 60 [Fall 2007] ; 3479 >
-        au < ready ; 2008 ; The Velvet Light Trap Number 61 [Spring 2008] ; 3591 >
-        au < ready ; 2008 ; The Velvet Light Trap Number 62 [Fall 2008] ; 3837 >
-        au < ready ; 2009 ; The Velvet Light Trap Number 63 [Spring 2009] ; 4049 >
-        au < ready ; 2009 ; The Velvet Light Trap Number 64 [Fall 2009] ; 4375 >
+        au < releasing ; 2003 ; The Velvet Light Trap Number 51 [Spring 2003] ; 899 >
+        au < releasing ; 2003 ; The Velvet Light Trap Number 52 [Fall 2003] ; 958 >
+        au < releasing ; 2004 ; The Velvet Light Trap Number 53 [Spring 2004] ; 1783 >
+        au < releasing ; 2004 ; The Velvet Light Trap Number 54 [Fall 2004] ; 2589 >
+        au < releasing ; 2005 ; The Velvet Light Trap Number 55 [Spring 2005] ; 2731 >
+        au < releasing ; 2005 ; The Velvet Light Trap Number 56 [Fall 2005] ; 2923 >
+        au < releasing ; 2006 ; The Velvet Light Trap Number 57 [Spring 2006] ; 3003 >
+        au < releasing ; 2006 ; The Velvet Light Trap Number 58 [Fall 2006] ; 3155 >
+        au < releasing ; 2007 ; The Velvet Light Trap Number 59 [Spring 2007] ; 3303 >
+        au < releasing ; 2007 ; The Velvet Light Trap Number 60 [Fall 2007] ; 3479 >
+        au < releasing ; 2008 ; The Velvet Light Trap Number 61 [Spring 2008] ; 3591 >
+        au < releasing ; 2008 ; The Velvet Light Trap Number 62 [Fall 2008] ; 3837 >
+        au < releasing ; 2009 ; The Velvet Light Trap Number 63 [Spring 2009] ; 4049 >
+        au < releasing ; 2009 ; The Velvet Light Trap Number 64 [Fall 2009] ; 4375 >
         au < released ; 2010 ; The Velvet Light Trap Number 65 [Spring 2010] ; 5744 >
         au < released ; 2010 ; The Velvet Light Trap Number 66 [Fall 2010] ; 6358 >
         au < released ; 2011 ; The Velvet Light Trap Number 67 [Spring 2011] ; 6873 >

@@ -44,7 +44,7 @@
     au < HighWirePressH20Plugin ; down ; 2012 ; Engineering Geology Special Publications Volume 25 ; 25 ; http://egsp.lyellcollection.org/ >
     au < HighWirePressH20Plugin ; down ; 2012 ; Engineering Geology Special Publications Volume 26 ; 26 ; http://egsp.lyellcollection.org/ >
     au < HighWirePressH20Plugin ; down ; 2016 ; Engineering Geology Special Publications Volume 27 ; 27 ; http://egsp.lyellcollection.org/ >
-    au < gsl.GSLDrupalPlugin ; ready ; 2017 ; Engineering Geology Special Publications Volume 28 ; 28 ; https://egsp.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; releasing ; 2017 ; Engineering Geology Special Publications Volume 28 ; 28 ; https://egsp.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; expected ; 2018 ; Engineering Geology Special Publications Volume 29 ; 29 ; https://egsp.lyellcollection.org/ >
 
   }
@@ -143,7 +143,7 @@
     au < HighWirePressH20Plugin ; down ; 2015 ; Geological Society of London Memoirs Volume 45 ; 45 ; http://mem.lyellcollection.org/ >
     au < HighWirePressH20Plugin ; down ; 2016 ; Geological Society of London Memoirs Volume 46 ; 46 ; http://mem.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; released ; 2017 ; Geological Society of London Memoirs Volume 47 ; 47 ; http://mem.lyellcollection.org/ >
-    au < gsl.GSLDrupalPlugin ; ready ; 2017 ; Geological Society of London Memoirs Volume 48 ; 48 ; https://mem.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; releasing ; 2017 ; Geological Society of London Memoirs Volume 48 ; 48 ; https://mem.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; manifest ; 2018 ; Geological Society of London Memoirs Volume 49 ; 49 ; https://mem.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; expected ; 2018 ; Geological Society of London Memoirs Volume 50 ; 50 ; https://mem.lyellcollection.org/ >
 
@@ -600,7 +600,7 @@
     au < HighWirePressH20Plugin ; down ; 2016 ; Geological Society of London Special Publications Volume 436 ; 436 ; http://sp.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; released ; 2017 ; Geological Society of London Special Publications Volume 437 ; 437 ; http://sp.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; manifest ; 2017 ; Geological Society of London Special Publications Volume 438 ; 438 ; https://sp.lyellcollection.org/ >
-    au < gsl.GSLDrupalPlugin ; ready ; 2017 ; Geological Society of London Special Publications Volume 439 ; 439 ; https://sp.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; releasing ; 2017 ; Geological Society of London Special Publications Volume 439 ; 439 ; https://sp.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; manifest ; 2018 ; Geological Society of London Special Publications Volume 440 ; 440 ; https://sp.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; released ; 2017 ; Geological Society of London Special Publications Volume 441 ; 441 ; http://sp.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; released ; 2017 ; Geological Society of London Special Publications Volume 442 ; 442 ; http://sp.lyellcollection.org/ >
@@ -608,7 +608,7 @@
     au < gsl.GSLDrupalPlugin ; released ; 2017 ; Geological Society of London Special Publications Volume 444 ; 444 ; http://sp.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; released ; 2017 ; Geological Society of London Special Publications Volume 445 ; 445 ; http://sp.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; released ; 2017 ; Geological Society of London Special Publications Volume 446 ; 446 ; http://sp.lyellcollection.org/ >
-    au < gsl.GSLDrupalPlugin ; ready ; 2017 ; Geological Society of London Special Publications Volume 447 ; 447 ; https://sp.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; releasing ; 2017 ; Geological Society of London Special Publications Volume 447 ; 447 ; https://sp.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; released ; 2017 ; Geological Society of London Special Publications Volume 448 ; 448 ; http://sp.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; released ; 2017 ; Geological Society of London Special Publications Volume 449 ; 449 ; http://sp.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; manifest ; 2018 ; Geological Society of London Special Publications Volume 450 ; 450 ; https://sp.lyellcollection.org/ >
@@ -618,8 +618,8 @@
     au < gsl.GSLDrupalPlugin ; released ; 2017 ; Geological Society of London Special Publications Volume 454 ; 454 ; http://sp.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; manifest ; 2018 ; Geological Society of London Special Publications Volume 455 ; 455 ; https://sp.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; manifest ; 2018 ; Geological Society of London Special Publications Volume 456 ; 456 ; https://sp.lyellcollection.org/ >
-    au < gsl.GSLDrupalPlugin ; ready ; 2017 ; Geological Society of London Special Publications Volume 457 ; 457 ; https://sp.lyellcollection.org/ >
-    au < gsl.GSLDrupalPlugin ; ready ; 2017 ; Geological Society of London Special Publications Volume 458 ; 458 ; https://sp.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; releasing ; 2017 ; Geological Society of London Special Publications Volume 457 ; 457 ; https://sp.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; releasing ; 2017 ; Geological Society of London Special Publications Volume 458 ; 458 ; https://sp.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; manifest ; 2018 ; Geological Society of London Special Publications Volume 459 ; 459 ; https://sp.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; manifest ; 2018 ; Geological Society of London Special Publications Volume 460 ; 460 ; https://sp.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; manifest ; 2018 ; Geological Society of London Special Publications Volume 461 ; 461 ; https://sp.lyellcollection.org/ >
