@@ -971,12 +971,12 @@
 #      param[base_url] = https://mra.asm.org/
        comment[continued_by]=2576-098X
 
-      au < asm.ASMDrupalPlugin ; releasing ; 2013 ; Genome Announcements Volume 1 ; 1 ; https://mra.asm.org/ >
-      au < asm.ASMDrupalPlugin ; releasing ; 2014 ; Genome Announcements Volume 2 ; 2 ; https://mra.asm.org/ >
-      au < asm.ASMDrupalPlugin ; releasing ; 2015 ; Genome Announcements Volume 3 ; 3 ; https://mra.asm.org/ >
-      au < asm.ASMDrupalPlugin ; releasing ; 2016 ; Genome Announcements Volume 4 ; 4 ; https://mra.asm.org/ >
-      au < asm.ASMDrupalPlugin ; releasing ; 2017 ; Genome Announcements Volume 5 ; 5 ; https://mra.asm.org/ >
-      au < asm.ASMDrupalPlugin ; releasing ; 2018 ; Genome Announcements Volume 6 ; 6 ; https://mra.asm.org/ >
+      au < asm.ASMDrupalPlugin ; released ; 2013 ; Genome Announcements Volume 1 ; 1 ; https://mra.asm.org/ >
+      au < asm.ASMDrupalPlugin ; released ; 2014 ; Genome Announcements Volume 2 ; 2 ; https://mra.asm.org/ >
+      au < asm.ASMDrupalPlugin ; released ; 2015 ; Genome Announcements Volume 3 ; 3 ; https://mra.asm.org/ >
+      au < asm.ASMDrupalPlugin ; released ; 2016 ; Genome Announcements Volume 4 ; 4 ; https://mra.asm.org/ >
+      au < asm.ASMDrupalPlugin ; released ; 2017 ; Genome Announcements Volume 5 ; 5 ; https://mra.asm.org/ >
+      au < asm.ASMDrupalPlugin ; released ; 2018 ; Genome Announcements Volume 6 ; 6 ; https://mra.asm.org/ >
       #changed name and issn.
     }
 
@@ -989,7 +989,7 @@
       comment[continues]=2169-8287
 
       #starts with volume 7
-      au < asm.ASMDrupalPlugin ; releasing ; 2018 ; Microbiology Resource Announcements Volume 7 ; 7 ; https://mra.asm.org/ >
+      au < asm.ASMDrupalPlugin ; released ; 2018 ; Microbiology Resource Announcements Volume 7 ; 7 ; https://mra.asm.org/ >
 
     }
   
