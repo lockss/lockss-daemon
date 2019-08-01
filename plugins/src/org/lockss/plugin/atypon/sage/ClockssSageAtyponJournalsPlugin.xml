@@ -22,11 +22,11 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Sage Publications Journals Plugin (CLOCKSS)</string>
+    <string>SAGE Publications Journals Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Sage Publications Journals Plugin (CLOCKSS), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"SAGE Publications Journals Plugin (CLOCKSS), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
   <!--  override start url from parent to support http to https conversion -->
   <entry>

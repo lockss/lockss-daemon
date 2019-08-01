@@ -20,13 +20,13 @@
       attr[journal_id] = 247
       #move from Population Review Publications
 
-        au < ready ; 2003 ; Population Review Volume 42 [2003] ; 2493 >
-        au < ready ; 2004 ; Population Review Volume 43 [2004] ; 2540 >
-        au < ready ; 2005 ; Population Review Volume 44 [2005] ; 2812 >
-        au < ready ; 2006 ; Population Review Volume 45 [2006] ; 3153 >
-        au < ready ; 2007 ; Population Review Volume 46 [2007] ; 3410 >
-        au < ready ; 2008 ; Population Review Volume 47 [2008] ; 3852 >
-        au < ready ; 2009 ; Population Review Volume 48 [2009] ; 4343 >
+        au < released ; 2003 ; Population Review Volume 42 [2003] ; 2493 >
+        au < released ; 2004 ; Population Review Volume 43 [2004] ; 2540 >
+        au < released ; 2005 ; Population Review Volume 44 [2005] ; 2812 >
+        au < released ; 2006 ; Population Review Volume 45 [2006] ; 3153 >
+        au < released ; 2007 ; Population Review Volume 46 [2007] ; 3410 >
+        au < released ; 2008 ; Population Review Volume 47 [2008] ; 3852 >
+        au < released ; 2009 ; Population Review Volume 48 [2009] ; 4343 >
         au < released ; 2010 ; Population Review Volume 49 [2010] ; 5758 >
         au < released ; 2011 ; Population Review Volume 50 [2011] ; 6735 >
         au < released ; 2012 ; Population Review Volume 51 [2012] ; 7933 >

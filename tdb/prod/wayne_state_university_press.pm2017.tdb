@@ -19,15 +19,15 @@
 
       attr[journal_id] = 40
 
-        au < ready ; 2001 ; Criticism Volume 43 [2001] ; 144 >
-        au < ready ; 2002 ; Criticism Volume 44 [2002] ; 145 >
-        au < ready ; 2003 ; Criticism Volume 45 [2003] ; 930 >
-        au < ready ; 2004 ; Criticism Volume 46 [2004] ; 2550 >
-        au < ready ; 2005 ; Criticism Volume 47 [2005] ; 3019 >
-        au < ready ; 2006 ; Criticism Volume 48 [2006] ; 3438 >
-        au < ready ; 2007 ; Criticism Volume 49 [2007] ; 3690 >
-        au < ready ; 2008 ; Criticism Volume 50 [2008] ; 4006 >
-        au < ready ; 2009 ; Criticism Volume 51 [2009] ; 5700 >
+        au < released ; 2001 ; Criticism Volume 43 [2001] ; 144 >
+        au < released ; 2002 ; Criticism Volume 44 [2002] ; 145 >
+        au < released ; 2003 ; Criticism Volume 45 [2003] ; 930 >
+        au < released ; 2004 ; Criticism Volume 46 [2004] ; 2550 >
+        au < released ; 2005 ; Criticism Volume 47 [2005] ; 3019 >
+        au < released ; 2006 ; Criticism Volume 48 [2006] ; 3438 >
+        au < released ; 2007 ; Criticism Volume 49 [2007] ; 3690 >
+        au < released ; 2008 ; Criticism Volume 50 [2008] ; 4006 >
+        au < released ; 2009 ; Criticism Volume 51 [2009] ; 5700 >
         au < released ; 2010 ; Criticism Volume 52 [2010] ; 6672 >
         au < released ; 2011 ; Criticism Volume 53 [2011] ; 7528 >
         au < released ; 2012 ; Criticism Volume 54 [2012] ; 8019 >
@@ -51,16 +51,16 @@
 
       attr[journal_id] = 48
 
-        au < ready ; 2000 ; Discourse Volume 22 [2000] ; 167 >
-        au < ready ; 2001 ; Discourse Volume 23 [2001] ; 168 >
-        au < ready ; 2002 ; Discourse Volume 24 [2002] ; 819 >
-        au < ready ; 2003 ; Discourse Volume 25 [2003] ; 1768 >
-        au < ready ; 2004 ; Discourse Volume 26 [2004] ; 2810 >
-        au < ready ; 2005 ; Discourse Volume 27 [2005] ; 3115 >
-        au < ready ; 2006 ; Discourse Volume 28 [2006] ; 3687 >
-        au < ready ; 2007 ; Discourse Volume 29 [2007] ; 4021 >
-        au < ready ; 2008 ; Discourse Volume 30 [2008] ; 4926 >
-        au < ready ; 2009 ; Discourse Volume 31 [2009] ; 5762 >
+        au < released ; 2000 ; Discourse Volume 22 [2000] ; 167 >
+        au < released ; 2001 ; Discourse Volume 23 [2001] ; 168 >
+        au < released ; 2002 ; Discourse Volume 24 [2002] ; 819 >
+        au < released ; 2003 ; Discourse Volume 25 [2003] ; 1768 >
+        au < released ; 2004 ; Discourse Volume 26 [2004] ; 2810 >
+        au < released ; 2005 ; Discourse Volume 27 [2005] ; 3115 >
+        au < released ; 2006 ; Discourse Volume 28 [2006] ; 3687 >
+        au < released ; 2007 ; Discourse Volume 29 [2007] ; 4021 >
+        au < released ; 2008 ; Discourse Volume 30 [2008] ; 4926 >
+        au < released ; 2009 ; Discourse Volume 31 [2009] ; 5762 >
         au < released ; 2010 ; Discourse Volume 32 [2010] ; 6447 >
         au < released ; 2011 ; Discourse Volume 33 [2011] ; 7808 >
         au < released ; 2012 ; Discourse Volume 34 [2012] ; 8889 >
@@ -84,10 +84,10 @@
 
       attr[journal_id] = 326
 
-        au < ready ; 2006 ; Framework: The Journal of Cinema and Media Volume 47 [2006] ; 2956 >
-        au < ready ; 2007 ; Framework: The Journal of Cinema and Media Volume 48 [2007] ; 3223 >
-        au < ready ; 2008 ; Framework: The Journal of Cinema and Media Volume 49 [2008] ; 4022 >
-        au < ready ; 2009 ; Framework: The Journal of Cinema and Media Volume 50 [2009] ; 5717 >
+        au < released ; 2006 ; Framework: The Journal of Cinema and Media Volume 47 [2006] ; 2956 >
+        au < released ; 2007 ; Framework: The Journal of Cinema and Media Volume 48 [2007] ; 3223 >
+        au < released ; 2008 ; Framework: The Journal of Cinema and Media Volume 49 [2008] ; 4022 >
+        au < released ; 2009 ; Framework: The Journal of Cinema and Media Volume 50 [2009] ; 5717 >
         au < released ; 2010 ; Framework: The Journal of Cinema and Media Volume 51 [2010] ; 6332 >
         au < released ; 2011 ; Framework: The Journal of Cinema and Media Volume 52 [2011] ; 7705 >
         au < released ; 2012 ; Framework: The Journal of Cinema and Media Volume 53 [2012] ; 8109 >
@@ -111,15 +111,15 @@
 
       attr[journal_id] = 79
 
-        au < ready ; 2001 ; Human Biology Volume 73 [2001] ; 270 >
-        au < ready ; 2002 ; Human Biology Volume 74 [2002] ; 271 >
-        au < ready ; 2003 ; Human Biology Volume 75 [2003] ; 859 >
-        au < ready ; 2004 ; Human Biology Volume 76 [2004] ; 2437 >
-        au < ready ; 2005 ; Human Biology Volume 77 [2005] ; 2773 >
-        au < ready ; 2006 ; Human Biology Volume 78 [2006] ; 3038 >
-        au < ready ; 2007 ; Human Biology Volume 79 [2007] ; 3447 >
-        au < ready ; 2008 ; Human Biology Volume 80 [2008] ; 3689 >
-        au < ready ; 2009 ; Human Biology Volume 81 [2009] ; 4367 >
+        au < released ; 2001 ; Human Biology Volume 73 [2001] ; 270 >
+        au < released ; 2002 ; Human Biology Volume 74 [2002] ; 271 >
+        au < released ; 2003 ; Human Biology Volume 75 [2003] ; 859 >
+        au < released ; 2004 ; Human Biology Volume 76 [2004] ; 2437 >
+        au < released ; 2005 ; Human Biology Volume 77 [2005] ; 2773 >
+        au < released ; 2006 ; Human Biology Volume 78 [2006] ; 3038 >
+        au < released ; 2007 ; Human Biology Volume 79 [2007] ; 3447 >
+        au < released ; 2008 ; Human Biology Volume 80 [2008] ; 3689 >
+        au < released ; 2009 ; Human Biology Volume 81 [2009] ; 4367 >
         au < released ; 2010 ; Human Biology Volume 82 [2010] ; 5839 >
         au < released ; 2011 ; Human Biology Volume 83 [2011] ; 7081 >
         au < released ; 2012 ; Human Biology Volume 84 [2012] ; 8190 >
@@ -162,15 +162,15 @@
 
       attr[journal_id] = 122
 
-        au < ready ; 2001 ; Marvels & Tales Volume 15 [2001] ; 405 >
-        au < ready ; 2002 ; Marvels & Tales Volume 16 [2002] ; 406 >
-        au < ready ; 2003 ; Marvels & Tales Volume 17 [2003] ; 911 >
-        au < ready ; 2004 ; Marvels & Tales Volume 18 [2004] ; 2484 >
-        au < ready ; 2005 ; Marvels & Tales Volume 19 [2005] ; 2794 >
-        au < ready ; 2006 ; Marvels & Tales Volume 20 [2006] ; 3086 >
-        au < ready ; 2007 ; Marvels & Tales Volume 21 [2007] ; 3866 >
-        au < ready ; 2008 ; Marvels & Tales Volume 22 [2008] ; 3899 >
-        au < ready ; 2009 ; Marvels & Tales Volume 23 [2009] ; 4373 >
+        au < released ; 2001 ; Marvels & Tales Volume 15 [2001] ; 405 >
+        au < released ; 2002 ; Marvels & Tales Volume 16 [2002] ; 406 >
+        au < released ; 2003 ; Marvels & Tales Volume 17 [2003] ; 911 >
+        au < released ; 2004 ; Marvels & Tales Volume 18 [2004] ; 2484 >
+        au < released ; 2005 ; Marvels & Tales Volume 19 [2005] ; 2794 >
+        au < released ; 2006 ; Marvels & Tales Volume 20 [2006] ; 3086 >
+        au < released ; 2007 ; Marvels & Tales Volume 21 [2007] ; 3866 >
+        au < released ; 2008 ; Marvels & Tales Volume 22 [2008] ; 3899 >
+        au < released ; 2009 ; Marvels & Tales Volume 23 [2009] ; 4373 >
         au < released ; 2010 ; Marvels & Tales Volume 24 [2010] ; 6382 >
         au < released ; 2011 ; Marvels & Tales Volume 25 [2011] ; 7291 >
         au < released ; 2012 ; Marvels & Tales Volume 26 [2012] ; 8261 >
@@ -194,15 +194,15 @@
 
       attr[journal_id] = 132
 
-        au < ready ; 2001 ; Merrill-Palmer Quarterly Volume 47 [2001] ; 457 >
-        au < ready ; 2002 ; Merrill-Palmer Quarterly Volume 48 [2002] ; 458 >
-        au < ready ; 2003 ; Merrill-Palmer Quarterly Volume 49 [2003] ; 778 >
-        au < ready ; 2004 ; Merrill-Palmer Quarterly Volume 50 [2004] ; 1745 >
-        au < ready ; 2005 ; Merrill-Palmer Quarterly Volume 51 [2005] ; 2692 >
-        au < ready ; 2006 ; Merrill-Palmer Quarterly Volume 52 [2006] ; 2951 >
-        au < ready ; 2007 ; Merrill-Palmer Quarterly Volume 53 [2007] ; 3357 >
-        au < ready ; 2008 ; Merrill-Palmer Quarterly Volume 54 [2008] ; 3678 >
-        au < ready ; 2009 ; Merrill-Palmer Quarterly Volume 55 [2009] ; 4045 >
+        au < released ; 2001 ; Merrill-Palmer Quarterly Volume 47 [2001] ; 457 >
+        au < released ; 2002 ; Merrill-Palmer Quarterly Volume 48 [2002] ; 458 >
+        au < released ; 2003 ; Merrill-Palmer Quarterly Volume 49 [2003] ; 778 >
+        au < released ; 2004 ; Merrill-Palmer Quarterly Volume 50 [2004] ; 1745 >
+        au < released ; 2005 ; Merrill-Palmer Quarterly Volume 51 [2005] ; 2692 >
+        au < released ; 2006 ; Merrill-Palmer Quarterly Volume 52 [2006] ; 2951 >
+        au < released ; 2007 ; Merrill-Palmer Quarterly Volume 53 [2007] ; 3357 >
+        au < released ; 2008 ; Merrill-Palmer Quarterly Volume 54 [2008] ; 3678 >
+        au < released ; 2009 ; Merrill-Palmer Quarterly Volume 55 [2009] ; 4045 >
         au < released ; 2010 ; Merrill-Palmer Quarterly Volume 56 [2010] ; 5826 >
         au < released ; 2011 ; Merrill-Palmer Quarterly Volume 57 [2011] ; 6698 >
         au < released ; 2012 ; Merrill-Palmer Quarterly Volume 58 [2012] ; 7826 >

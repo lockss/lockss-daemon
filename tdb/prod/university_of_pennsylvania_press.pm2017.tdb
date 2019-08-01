@@ -41,11 +41,11 @@
 
       attr[journal_id] = 464
 
-        au < ready ; 2005 ; Dissent Volume 52 [2005] ; 7345 >
-        au < ready ; 2006 ; Dissent Volume 53 [2006] ; 7346 >
-        au < ready ; 2007 ; Dissent Volume 54 [2007] ; 7347 >
-        au < ready ; 2008 ; Dissent Volume 55 [2008] ; 7348 >
-        au < ready ; 2009 ; Dissent Volume 56 [2009] ; 4075 >
+        au < released ; 2005 ; Dissent Volume 52 [2005] ; 7345 >
+        au < released ; 2006 ; Dissent Volume 53 [2006] ; 7346 >
+        au < released ; 2007 ; Dissent Volume 54 [2007] ; 7347 >
+        au < released ; 2008 ; Dissent Volume 55 [2008] ; 7348 >
+        au < released ; 2009 ; Dissent Volume 56 [2009] ; 4075 >
         au < released ; 2010 ; Dissent Volume 57 [2010] ; 5713 >
         au < released ; 2011 ; Dissent Volume 58 [2011] ; 6681 >
         au < released ; 2012 ; Dissent Volume 59 [2012] ; 7874 >
@@ -70,13 +70,13 @@
 
       attr[journal_id] = 322
 
-        au < ready ; 2003 ; Early American Studies: An Interdisciplinary Journal Volume 1 [2003] ; 3499 >
-        au < ready ; 2004 ; Early American Studies: An Interdisciplinary Journal Volume 2 [2004] ; 3498 >
-        au < ready ; 2005 ; Early American Studies: An Interdisciplinary Journal Volume 3 [2005] ; 3497 >
-        au < ready ; 2006 ; Early American Studies: An Interdisciplinary Journal Volume 4 [2006] ; 3061 >
-        au < ready ; 2007 ; Early American Studies: An Interdisciplinary Journal Volume 5 [2007] ; 3358 >
-        au < ready ; 2008 ; Early American Studies: An Interdisciplinary Journal Volume 6 [2008] ; 3707 >
-        au < ready ; 2009 ; Early American Studies: An Interdisciplinary Journal Volume 7 [2009] ; 4109 >
+        au < released ; 2003 ; Early American Studies: An Interdisciplinary Journal Volume 1 [2003] ; 3499 >
+        au < released ; 2004 ; Early American Studies: An Interdisciplinary Journal Volume 2 [2004] ; 3498 >
+        au < released ; 2005 ; Early American Studies: An Interdisciplinary Journal Volume 3 [2005] ; 3497 >
+        au < released ; 2006 ; Early American Studies: An Interdisciplinary Journal Volume 4 [2006] ; 3061 >
+        au < released ; 2007 ; Early American Studies: An Interdisciplinary Journal Volume 5 [2007] ; 3358 >
+        au < released ; 2008 ; Early American Studies: An Interdisciplinary Journal Volume 6 [2008] ; 3707 >
+        au < released ; 2009 ; Early American Studies: An Interdisciplinary Journal Volume 7 [2009] ; 4109 >
         au < released ; 2010 ; Early American Studies: An Interdisciplinary Journal Volume 8 [2010] ; 5649 >
         au < released ; 2011 ; Early American Studies: An Interdisciplinary Journal Volume 9 [2011] ; 6536 >
         au < released ; 2012 ; Early American Studies: An Interdisciplinary Journal Volume 10 [2012] ; 7857 >
@@ -102,15 +102,15 @@
       attr[journal_id] = 63
       #move from University of Nebraska Press
 
-        au < ready ; 2001 ; French Forum Volume 26 [2001] ; 227 >
-        au < ready ; 2002 ; French Forum Volume 27 [2002] ; 228 >
-        au < ready ; 2003 ; French Forum Volume 28 [2003] ; 964 >
-        au < ready ; 2004 ; French Forum Volume 29 [2004] ; 2544 >
-        au < ready ; 2005 ; French Forum Volume 30 [2005] ; 2748 >
-        au < ready ; 2006 ; French Forum Volume 31 [2006] ; 3123 >
-        au < ready ; 2007 ; French Forum Volume 32 [2007] ; 3635 >
-        au < ready ; 2008 ; French Forum Volume 33 [2008] ; 4000 >
-        au < ready ; 2009 ; French Forum Volume 34 [2009] ; 4419 >
+        au < released ; 2001 ; French Forum Volume 26 [2001] ; 227 >
+        au < released ; 2002 ; French Forum Volume 27 [2002] ; 228 >
+        au < released ; 2003 ; French Forum Volume 28 [2003] ; 964 >
+        au < released ; 2004 ; French Forum Volume 29 [2004] ; 2544 >
+        au < released ; 2005 ; French Forum Volume 30 [2005] ; 2748 >
+        au < released ; 2006 ; French Forum Volume 31 [2006] ; 3123 >
+        au < released ; 2007 ; French Forum Volume 32 [2007] ; 3635 >
+        au < released ; 2008 ; French Forum Volume 33 [2008] ; 4000 >
+        au < released ; 2009 ; French Forum Volume 34 [2009] ; 4419 >
         au < released ; 2010 ; French Forum Volume 35 [2010] ; 6167 >
         au < released ; 2011 ; French Forum Volume 36 [2011] ; 7438 >
         au < released ; 2012 ; French Forum Volume 37 [2012] ; 8503 >
@@ -134,11 +134,11 @@
 
       attr[journal_id] = 289
 
-        au < ready ; 2005 ; Hispanic Review Volume 73 [2005] ; 2634 >
-        au < ready ; 2006 ; Hispanic Review Volume 74 [2006] ; 2895 >
-        au < ready ; 2007 ; Hispanic Review Volume 75 [2007] ; 3319 >
-        au < ready ; 2008 ; Hispanic Review Volume 76 [2008] ; 3679 >
-        au < ready ; 2009 ; Hispanic Review Volume 77 [2009] ; 4100 >
+        au < released ; 2005 ; Hispanic Review Volume 73 [2005] ; 2634 >
+        au < released ; 2006 ; Hispanic Review Volume 74 [2006] ; 2895 >
+        au < released ; 2007 ; Hispanic Review Volume 75 [2007] ; 3319 >
+        au < released ; 2008 ; Hispanic Review Volume 76 [2008] ; 3679 >
+        au < released ; 2009 ; Hispanic Review Volume 77 [2009] ; 4100 >
         au < released ; 2010 ; Hispanic Review Volume 78 [2010] ; 5669 >
         au < released ; 2011 ; Hispanic Review Volume 79 [2011] ; 6626 >
         au < released ; 2012 ; Hispanic Review Volume 80 [2012] ; 7858 >
@@ -223,14 +223,14 @@
 
       attr[journal_id] = 292
 
-        au < ready ; 2001-2002 ; Jewish Quarterly Review Volume 92 [2001-2002] ; 6417 >
-        au < ready ; 2002-2003 ; Jewish Quarterly Review Volume 93 [2002-2003] ; 6418 >
-        au < ready ; 2004 ; Jewish Quarterly Review Volume 94 [2004] ; 6419 >
-        au < ready ; 2005 ; Jewish Quarterly Review Volume 95 [2005] ; 2633 >
-        au < ready ; 2006 ; Jewish Quarterly Review Volume 96 [2006] ; 2874 >
-        au < ready ; 2007 ; Jewish Quarterly Review Volume 97 [2007] ; 3249 >
-        au < ready ; 2008 ; Jewish Quarterly Review Volume 98 [2008] ; 3659 >
-        au < ready ; 2009 ; Jewish Quarterly Review Volume 99 [2009] ; 4130 >
+        au < released ; 2001-2002 ; Jewish Quarterly Review Volume 92 [2001-2002] ; 6417 >
+        au < released ; 2002-2003 ; Jewish Quarterly Review Volume 93 [2002-2003] ; 6418 >
+        au < released ; 2004 ; Jewish Quarterly Review Volume 94 [2004] ; 6419 >
+        au < released ; 2005 ; Jewish Quarterly Review Volume 95 [2005] ; 2633 >
+        au < released ; 2006 ; Jewish Quarterly Review Volume 96 [2006] ; 2874 >
+        au < released ; 2007 ; Jewish Quarterly Review Volume 97 [2007] ; 3249 >
+        au < released ; 2008 ; Jewish Quarterly Review Volume 98 [2008] ; 3659 >
+        au < released ; 2009 ; Jewish Quarterly Review Volume 99 [2009] ; 4130 >
         au < released ; 2010 ; Jewish Quarterly Review Volume 100 [2010] ; 5656 >
         au < released ; 2011 ; Jewish Quarterly Review Volume 101 [2011] ; 6543 >
         au < released ; 2012 ; Jewish Quarterly Review Volume 102 [2012] ; 8002 >
@@ -255,15 +255,15 @@
 
       attr[journal_id] = 293
 
-        au < ready ; 2001 ; Journal for Early Modern Cultural Studies Volume 1 [2001] ; 8133 >
-        au < ready ; 2002 ; Journal for Early Modern Cultural Studies Volume 2 [2002] ; 8132 >
-        au < ready ; 2003 ; Journal for Early Modern Cultural Studies Volume 3 [2003] ; 8131 >
-        au < ready ; 2004 ; Journal for Early Modern Cultural Studies Volume 4 [2004] ; 6686 >
-        au < ready ; 2005 ; Journal for Early Modern Cultural Studies Volume 5 [2005] ; 2766 >
-        au < ready ; 2006 ; Journal for Early Modern Cultural Studies Volume 6 [2006] ; 3011 >
-        au < ready ; 2007 ; Journal for Early Modern Cultural Studies Volume 7 [2007] ; 3354 >
-        au < ready ; 2008 ; Journal for Early Modern Cultural Studies Volume 8 [2008] ; 3814 >
-        au < ready ; 2009 ; Journal for Early Modern Cultural Studies Volume 9 [2009] ; 4320 >
+        au < released ; 2001 ; Journal for Early Modern Cultural Studies Volume 1 [2001] ; 8133 >
+        au < released ; 2002 ; Journal for Early Modern Cultural Studies Volume 2 [2002] ; 8132 >
+        au < released ; 2003 ; Journal for Early Modern Cultural Studies Volume 3 [2003] ; 8131 >
+        au < released ; 2004 ; Journal for Early Modern Cultural Studies Volume 4 [2004] ; 6686 >
+        au < released ; 2005 ; Journal for Early Modern Cultural Studies Volume 5 [2005] ; 2766 >
+        au < released ; 2006 ; Journal for Early Modern Cultural Studies Volume 6 [2006] ; 3011 >
+        au < released ; 2007 ; Journal for Early Modern Cultural Studies Volume 7 [2007] ; 3354 >
+        au < released ; 2008 ; Journal for Early Modern Cultural Studies Volume 8 [2008] ; 3814 >
+        au < released ; 2009 ; Journal for Early Modern Cultural Studies Volume 9 [2009] ; 4320 >
         au < released ; 2010 ; Journal for Early Modern Cultural Studies Volume 10 [2010] ; 6178 >
         au < released ; 2011 ; Journal for Early Modern Cultural Studies Volume 11 [2011] ; 7567 >
         au < released ; 2012 ; Journal for Early Modern Cultural Studies Volume 12 [2012] ; 7859 >
@@ -305,11 +305,11 @@
 
       attr[journal_id] = 295
 
-        au < ready ; 2005 ; Journal of the Early Republic Volume 25 [2005] ; 2695 >
-        au < ready ; 2006 ; Journal of the Early Republic Volume 26 [2006] ; 2959 >
-        au < ready ; 2007 ; Journal of the Early Republic Volume 27 [2007] ; 3239 >
-        au < ready ; 2008 ; Journal of the Early Republic Volume 28 [2008] ; 3516 >
-        au < ready ; 2009 ; Journal of the Early Republic Volume 29 [2009] ; 4156 >
+        au < released ; 2005 ; Journal of the Early Republic Volume 25 [2005] ; 2695 >
+        au < released ; 2006 ; Journal of the Early Republic Volume 26 [2006] ; 2959 >
+        au < released ; 2007 ; Journal of the Early Republic Volume 27 [2007] ; 3239 >
+        au < released ; 2008 ; Journal of the Early Republic Volume 28 [2008] ; 3516 >
+        au < released ; 2009 ; Journal of the Early Republic Volume 29 [2009] ; 4156 >
         au < released ; 2010 ; Journal of the Early Republic Volume 30 [2010] ; 5685 >
         au < released ; 2011 ; Journal of the Early Republic Volume 31 [2011] ; 6637 >
         au < released ; 2012 ; Journal of the Early Republic Volume 32 [2012] ; 8001 >
@@ -334,20 +334,20 @@
 
       attr[journal_id] = 91
 
-        au < ready ; 1996 ; Journal of the History of Ideas Volume 57 [1996] ; 296 >
-        au < ready ; 1997 ; Journal of the History of Ideas Volume 58 [1997] ; 297 >
-        au < ready ; 1998 ; Journal of the History of Ideas Volume 59 [1998] ; 298 >
-        au < ready ; 1999 ; Journal of the History of Ideas Volume 60 [1999] ; 299 >
-        au < ready ; 2000 ; Journal of the History of Ideas Volume 61 [2000] ; 300 >
-        au < ready ; 2001 ; Journal of the History of Ideas Volume 62 [2001] ; 301 >
-        au < ready ; 2002 ; Journal of the History of Ideas Volume 63 [2002] ; 302 >
-        au < ready ; 2003 ; Journal of the History of Ideas Volume 64 [2003] ; 910 >
-        au < ready ; 2004 ; Journal of the History of Ideas Volume 65 [2004] ; 2516 >
-        au < ready ; 2005 ; Journal of the History of Ideas Volume 66 [2005] ; 2818 >
-        au < ready ; 2006 ; Journal of the History of Ideas Volume 67 [2006] ; 2967 >
-        au < ready ; 2007 ; Journal of the History of Ideas Volume 68 [2007] ; 3247 >
-        au < ready ; 2008 ; Journal of the History of Ideas Volume 69 [2008] ; 3523 >
-        au < ready ; 2009 ; Journal of the History of Ideas Volume 70 [2009] ; 4061 >
+        au < released ; 1996 ; Journal of the History of Ideas Volume 57 [1996] ; 296 >
+        au < released ; 1997 ; Journal of the History of Ideas Volume 58 [1997] ; 297 >
+        au < released ; 1998 ; Journal of the History of Ideas Volume 59 [1998] ; 298 >
+        au < released ; 1999 ; Journal of the History of Ideas Volume 60 [1999] ; 299 >
+        au < released ; 2000 ; Journal of the History of Ideas Volume 61 [2000] ; 300 >
+        au < released ; 2001 ; Journal of the History of Ideas Volume 62 [2001] ; 301 >
+        au < released ; 2002 ; Journal of the History of Ideas Volume 63 [2002] ; 302 >
+        au < released ; 2003 ; Journal of the History of Ideas Volume 64 [2003] ; 910 >
+        au < released ; 2004 ; Journal of the History of Ideas Volume 65 [2004] ; 2516 >
+        au < released ; 2005 ; Journal of the History of Ideas Volume 66 [2005] ; 2818 >
+        au < released ; 2006 ; Journal of the History of Ideas Volume 67 [2006] ; 2967 >
+        au < released ; 2007 ; Journal of the History of Ideas Volume 68 [2007] ; 3247 >
+        au < released ; 2008 ; Journal of the History of Ideas Volume 69 [2008] ; 3523 >
+        au < released ; 2009 ; Journal of the History of Ideas Volume 70 [2009] ; 4061 >
         au < released ; 2010 ; Journal of the History of Ideas Volume 71 [2010] ; 5683 >
         au < released ; 2011 ; Journal of the History of Ideas Volume 72 [2011] ; 6638 >
         au < released ; 2012 ; Journal of the History of Ideas Volume 73 [2012] ; 7860 >
@@ -372,10 +372,10 @@
 
       attr[journal_id] = 387
 
-        au < ready ; 2006 ; Magic, Ritual, and Witchcraft Volume 1 [2006] ; 3743 >
-        au < ready ; 2007 ; Magic, Ritual, and Witchcraft Volume 2 [2007] ; 3744 >
-        au < ready ; 2008 ; Magic, Ritual, and Witchcraft Volume 3 [2008] ; 3759 >
-        au < ready ; 2009 ; Magic, Ritual, and Witchcraft Volume 4 [2009] ; 4245 >
+        au < released ; 2006 ; Magic, Ritual, and Witchcraft Volume 1 [2006] ; 3743 >
+        au < released ; 2007 ; Magic, Ritual, and Witchcraft Volume 2 [2007] ; 3744 >
+        au < released ; 2008 ; Magic, Ritual, and Witchcraft Volume 3 [2008] ; 3759 >
+        au < released ; 2009 ; Magic, Ritual, and Witchcraft Volume 4 [2009] ; 4245 >
         au < released ; 2010 ; Magic, Ritual, and Witchcraft Volume 5 [2010] ; 5930 >
         au < released ; 2011 ; Magic, Ritual, and Witchcraft Volume 6 [2011] ; 7149 >
         au < released ; 2012 ; Magic, Ritual, and Witchcraft Volume 7 [2012] ; 8293 >
@@ -415,9 +415,9 @@
 
       attr[journal_id] = 426
 
-        au < ready ; 2007 ; Revista Hispánica Moderna Volume 60 [2007] ; 6430 >
-        au < ready ; 2008 ; Revista Hispánica Moderna Volume 61 [2008] ; 6431 >
-        au < ready ; 2009 ; Revista Hispánica Moderna Volume 62 [2009] ; 4176 >
+        au < released ; 2007 ; Revista Hispánica Moderna Volume 60 [2007] ; 6430 >
+        au < released ; 2008 ; Revista Hispánica Moderna Volume 61 [2008] ; 6431 >
+        au < released ; 2009 ; Revista Hispánica Moderna Volume 62 [2009] ; 4176 >
         au < released ; 2010 ; Revista Hispánica Moderna Volume 63 [2010] ; 5808 >
         au < released ; 2011 ; Revista Hispánica Moderna Volume 64 [2011] ; 6939 >
         au < released ; 2012 ; Revista Hispánica Moderna Volume 65 [2012] ; 8267 >
@@ -459,10 +459,10 @@
 
       attr[journal_id] = 364
 
-        au < ready ; 2006 ; The Eighteenth Century Volume 47 [2006] ; 3486 >
-        au < ready ; 2007 ; The Eighteenth Century Volume 48 [2007] ; 3405 >
-        au < ready ; 2008 ; The Eighteenth Century Volume 49 [2008] ; 3738 >
-        au < ready ; 2009 ; The Eighteenth Century Volume 50 [2009] ; 5818 >
+        au < released ; 2006 ; The Eighteenth Century Volume 47 [2006] ; 3486 >
+        au < released ; 2007 ; The Eighteenth Century Volume 48 [2007] ; 3405 >
+        au < released ; 2008 ; The Eighteenth Century Volume 49 [2008] ; 3738 >
+        au < released ; 2009 ; The Eighteenth Century Volume 50 [2009] ; 5818 >
         au < released ; 2010 ; The Eighteenth Century Volume 51 [2010] ; 6344 >
         au < released ; 2011 ; The Eighteenth Century Volume 52 [2011] ; 6838 >
         au < released ; 2012 ; The Eighteenth Century Volume 53 [2012] ; 8045 >
