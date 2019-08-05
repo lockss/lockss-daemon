@@ -85,7 +85,7 @@
     au < ready ; 1920 ; Additional Government Publications 1920 ; 1920 ; https://www.govinfo.gov/ >
     au < ready ; 1921 ; Additional Government Publications 1921 ; 1921 ; https://www.govinfo.gov/ >
     au < ready ; 1922 ; Additional Government Publications 1922 ; 1922 ; https://www.govinfo.gov/ >
-    au < manifest ; 1923 ; Additional Government Publications 1923 ; 1923 ; https://www.govinfo.gov/ >
+    au < ready ; 1923 ; Additional Government Publications 1923 ; 1923 ; https://www.govinfo.gov/ >
     au < ready ; 1924 ; Additional Government Publications 1924 ; 1924 ; https://www.govinfo.gov/ >
     au < ready ; 1925 ; Additional Government Publications 1925 ; 1925 ; https://www.govinfo.gov/ >
     au < ready ; 1926 ; Additional Government Publications 1926 ; 1926 ; https://www.govinfo.gov/ >
@@ -231,8 +231,8 @@
     au < ready ; 1961 ; Congressional Hearings 1961 ; 1961 ; https://www.govinfo.gov/ >
     au < ready ; 1962 ; Congressional Hearings 1962 ; 1962 ; https://www.govinfo.gov/ >
     au < ready ; 1963 ; Congressional Hearings 1963 ; 1963 ; https://www.govinfo.gov/ >
-    au < manifest ; 1964 ; Congressional Hearings 1964 ; 1964 ; https://www.govinfo.gov/ >
-    au < manifest ; 1965 ; Congressional Hearings 1965 ; 1965 ; https://www.govinfo.gov/ >
+    au < ready ; 1964 ; Congressional Hearings 1964 ; 1964 ; https://www.govinfo.gov/ >
+    au < ready ; 1965 ; Congressional Hearings 1965 ; 1965 ; https://www.govinfo.gov/ >
     
     au < doNotProcess ; 1966 ; Congressional Hearings 1966 ; 1966 ; https://www.govinfo.gov/ >
     au < manifest ; 1967 ; Congressional Hearings 1967 ; 1967 ; https://www.govinfo.gov/ >
@@ -556,7 +556,7 @@
     au < ready ; 1991 ; Federal Register 1991 ; 1991 ; https://www.govinfo.gov/ >
     au < ready ; 1992 ; Federal Register 1992 ; 1992 ; https://www.govinfo.gov/ >
     au < ready ; 1993 ; Federal Register 1993 ; 1993 ; https://www.govinfo.gov/ >
-    au < manifest ; 2019 ; Federal Register 2019 ; 2019 ; https://www.govinfo.gov/ >
+    au < ready ; 2019 ; Federal Register 2019 ; 2019 ; https://www.govinfo.gov/ >
 
   }
 
