@@ -336,6 +336,38 @@
   {
 
       title <
+        name = Ethnologia Europaea ;
+        eissn = 1604-3030
+      >
+
+      comment[publisher] = Open Library of Humanities
+#      param[base_url] = https://ee.openlibhums.org/
+
+      au < exists ; exists ; 2000 ; 30 ; Ethnologia Europaea Volume 2000 ; 2000 ; https://ee.openlibhums.org/ ; >
+      au < exists ; exists ; 2001 ; 31 ; Ethnologia Europaea Volume 2001 ; 2001 ; https://ee.openlibhums.org/ ; >
+      au < exists ; exists ; 2002 ; 32 ; Ethnologia Europaea Volume 2002 ; 2002 ; https://ee.openlibhums.org/ ; >
+      au < exists ; exists ; 2003 ; 33 ; Ethnologia Europaea Volume 2003 ; 2003 ; https://ee.openlibhums.org/ ; >
+      au < exists ; exists ; 2004 ; 34 ; Ethnologia Europaea Volume 2004 ; 2004 ; https://ee.openlibhums.org/ ; >
+      au < exists ; exists ; 2005 ; 35 ; Ethnologia Europaea Volume 2005 ; 2005 ; https://ee.openlibhums.org/ ; >
+      au < exists ; exists ; 2006 ; 36 ; Ethnologia Europaea Volume 2006 ; 2006 ; https://ee.openlibhums.org/ ; >
+      au < exists ; exists ; 2007 ; 37 ; Ethnologia Europaea Volume 2007 ; 2007 ; https://ee.openlibhums.org/ ; >
+      au < exists ; exists ; 2008 ; 38 ; Ethnologia Europaea Volume 2008 ; 2008 ; https://ee.openlibhums.org/ ; >
+      au < exists ; exists ; 2009 ; 39 ; Ethnologia Europaea Volume 2009 ; 2009 ; https://ee.openlibhums.org/ ; >
+      au < exists ; exists ; 2010 ; 40 ; Ethnologia Europaea Volume 2010 ; 2010 ; https://ee.openlibhums.org/ ; >
+      au < exists ; exists ; 2011 ; 41 ; Ethnologia Europaea Volume 2011 ; 2011 ; https://ee.openlibhums.org/ ; >
+      au < exists ; exists ; 2012 ; 42 ; Ethnologia Europaea Volume 2012 ; 2012 ; https://ee.openlibhums.org/ ; >
+      au < exists ; exists ; 2013 ; 43 ; Ethnologia Europaea Volume 2013 ; 2013 ; https://ee.openlibhums.org/ ; >
+      au < exists ; exists ; 2014 ; 44 ; Ethnologia Europaea Volume 2014 ; 2014 ; https://ee.openlibhums.org/ ; >
+      au < exists ; exists ; 2015 ; 45 ; Ethnologia Europaea Volume 2015 ; 2015 ; https://ee.openlibhums.org/ ; >
+      au < exists ; exists ; 2016 ; 46 ; Ethnologia Europaea Volume 2016 ; 2016 ; https://ee.openlibhums.org/ ; >
+      au < exists ; exists ; 2017 ; 47 ; Ethnologia Europaea Volume 2017 ; 2017 ; https://ee.openlibhums.org/ ; >
+      au < exists ; exists ; 2019 ; 49 ; Ethnologia Europaea Volume 2019 ; 2019 ; https://ee.openlibhums.org/ ; >
+
+  }
+
+  {
+
+      title <
         name = Open Screens ;
         eissn = 2516-2888
       >
