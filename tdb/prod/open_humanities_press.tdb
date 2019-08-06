@@ -241,7 +241,7 @@
       param[base_url] = https://www.postcolonial.org/
       param[journal_id] = pct
 
-      au < ojs2.OJS2Plugin ; testing ; 2018 ; Postcolonial Text Volume 13 ; 13 ; 2018 >
+      au < ojs2.OJS2Plugin ; notReady ; 2018 ; Postcolonial Text Volume 13 ; 13 ; 2018 > #Crawl completed with no substance
 
       }
     }
