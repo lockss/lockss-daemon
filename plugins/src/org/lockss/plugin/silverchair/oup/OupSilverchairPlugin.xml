@@ -10,7 +10,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>32</string>
+    <string>33</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -112,7 +112,13 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%s%s/article-pdf/([0-9]+|doi)/[^?]+\.pdf$", base_url, journal_id</string>
+      <!--
+      Loose the substance pattern a bit in case the publisher put more than number, characters in url later
+      Just check they are inside airticle-pdf directory with .pdf file extension for now
+      https://academic.oup.com/tbm/article-pdf/2/1/82/22037627/13142_2011_article_107.pdf
+      https://academic.oup.com/biomedgerontology/article-pdf/64A/1/1/1551400/gln051.pdf
+      -->
+      <string>"^%s%s/article-pdf/[^?]+\.pdf$", base_url, journal_id</string>
     </list>
   </entry>
   <entry>
