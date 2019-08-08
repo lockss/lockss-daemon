@@ -26,8 +26,7 @@
       au < finished ; finished ; 2014 ; African Journal of Accounting, Auditing and Finance Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2015 ; African Journal of Accounting, Auditing and Finance Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; African Journal of Accounting, Auditing and Finance Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2018 ; African Journal of Accounting, Auditing and Finance Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < expected ; exists ; 2019 ; African Journal of Accounting, Auditing and Finance Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
+      au < ingNotReady ; manifest ; 2018-2019 ; African Journal of Accounting, Auditing and Finance Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 > #issue 4 not online
 
     }
 
@@ -48,8 +47,7 @@
       au < finished ; finished ; 2015 ; African Journal of Economic and Sustainable Development Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; African Journal of Economic and Sustainable Development Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2017 ; African Journal of Economic and Sustainable Development Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2018 ; African Journal of Economic and Sustainable Development Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
-      au < expected ; exists ; 2019 ; African Journal of Economic and Sustainable Development Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; >
+      au < ingNotReady ; exists ; 2018 ; African Journal of Economic and Sustainable Development Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
 
     }
 
@@ -175,7 +173,7 @@
       au < doNotProcess ; doNotProcess ; 2011-2012 ; European Journal of Cross-Cultural Competence and Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2014-2015 ; European Journal of Cross-Cultural Competence and Management Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; >
       au < finished ; crawling ; 2016-2017 ; European Journal of Cross-Cultural Competence and Management Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2018-2019 ; European Journal of Cross-Cultural Competence and Management Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
+      au < ingNotReady ; exists ; 2019-2020 ; European Journal of Cross-Cultural Competence and Management Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
 
     }
 
@@ -310,7 +308,7 @@
       au < finished ; crawling ; 2016 ; International Journal of Accounting and Finance Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2017 ; International Journal of Accounting and Finance Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2018 ; International Journal of Accounting and Finance Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < expected ; exists ; 2019 ; International Journal of Accounting and Finance Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
+      au < exists ; exists ; 2019 ; International Journal of Accounting and Finance Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -534,7 +532,7 @@
       au < doNotProcess ; exists ; 2009 ; International Journal of Agent-Oriented Software Engineering Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2010-2011 ; International Journal of Agent-Oriented Software Engineering Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < frozen ; exists ; 2015-2017 ; International Journal of Agent-Oriented Software Engineering Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; >
-      au < crawling ; exists ; 2018-2019 ; International Journal of Agent-Oriented Software Engineering Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2018 ; International Journal of Agent-Oriented Software Engineering Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -705,6 +703,7 @@
 
       au < finished ; finished ; 2013-2014 ; International Journal of Applied Nonlinear Science Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2015-2016 ; International Journal of Applied Nonlinear Science Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
+      au < exists ; exists ; 2018-2019 ; International Journal of Applied Nonlinear Science Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
 
     }
 
