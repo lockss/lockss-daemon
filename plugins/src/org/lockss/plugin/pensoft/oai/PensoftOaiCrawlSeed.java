@@ -97,6 +97,11 @@ public class PensoftOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
     }
     
   }
+
+  /*
+   * Here's an example of an OAI request to Pensoft:
+   * https://compcytogen.pensoft.net/oai/request?verb=ListRecords&from=2013-01-01&until=2013-12-31&set=compcytogen&metadataPrefix=oai_dc
+   */
   
   @Override
   protected Collection<String> getRecordList(ListRecordsParameters params)
