@@ -811,8 +811,8 @@
       #publisher = Ubiquity Press
 
       au < superseded ; exists ; 2018 ; 1 ; Future Cities and Environment Volume 2018 [superseded] ; 2018 ; https://futurecitiesandenvironment.com/ ; >
-      au < exists ; exists ; 2018 ; 1 ; Future Cities and Environment Volume 2018 ; 2018 ; https://www.futurecitiesandenvironment.com/ ; >
-      au < expected ; exists ; 2019 ; 2 ; Future Cities and Environment Volume 2019 ; 2019 ; https://www.futurecitiesandenvironment.com/ ; >
+      au < manifest ; exists ; 2018 ; 1 ; Future Cities and Environment Volume 2018 ; 2018 ; https://www.futurecitiesandenvironment.com/ ; >
+      au < manifest ; exists ; 2019 ; 2 ; Future Cities and Environment Volume 2019 ; 2019 ; https://www.futurecitiesandenvironment.com/ ; >
 
   }
 
@@ -1854,7 +1854,7 @@
       au < frozen ; exists ; 2016 ; 11 ; Westminster Papers in Communication and Culture Volume 2016 ; 2016 ; http://www.westminsterpapers.org/ ; >
       au < deepCrawl ; exists ; 2017 ; 12 ; Westminster Papers in Communication and Culture Volume 2017 ; 2017 ; http://www.westminsterpapers.org/ ; >
       au < deepCrawl ; exists ; 2018 ; 13 ; Westminster Papers in Communication and Culture Volume 2018 ; 2018 ; https://www.westminsterpapers.org/ ; >
-      au < expected ; exists ; 2019 ; 14 ; Westminster Papers in Communication and Culture Volume 2019 ; 2019 ; https://www.westminsterpapers.org/ ; >
+      au < manifest ; exists ; 2019 ; 14 ; Westminster Papers in Communication and Culture Volume 2019 ; 2019 ; https://www.westminsterpapers.org/ ; >
 
   }
 
@@ -2546,8 +2546,8 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://sjms.nu/
 
-      au < exists ; exists ; 2018 ; 1 ; Scandinavian Military Studies Volume 2018 ; 2018 ; https://sjms.nu/ ; >
-      au < exists ; exists ; 2019 ; 2 ; Scandinavian Military Studies Volume 2019 ; 2019 ; https://sjms.nu/ ; >
+      au < manifest ; exists ; 2018 ; 1 ; Scandinavian Military Studies Volume 2018 ; 2018 ; https://sjms.nu/ ; >
+      au < manifest ; exists ; 2019 ; 2 ; Scandinavian Military Studies Volume 2019 ; 2019 ; https://sjms.nu/ ; >
 
   }
 }
