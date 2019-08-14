@@ -518,6 +518,41 @@
 
    {
     title <
+      name = Annals of Otology and Neurotology ;
+      eissn = 2581-5784 ;
+      doi = 10.1055/s-00042129
+
+    >
+    param[journal_id] = 10.1055/s-00042129
+    comment[years] = 2018-current
+
+    au < exists ; exists ; 2018 ; 2018 ; Annals of Otology and Neurotology Volume 1 ; 1 ; >
+    au < expected ; exists ; 2019 ; 2019 ; Annals of Otology and Neurotology Volume 2 ; 2 ; >
+
+   }
+
+   {
+    title <
+      name = AORTA ;
+      eissn = 2325-4637 ;
+      doi = 10.1055/s-00039245
+
+    >
+    param[journal_id] = 10.1055/s-00039245
+    comment[years] = 2013-current
+
+    au < exists ; exists ; 2013 ; 2013 ; AORTA Volume 1 ; 1 ; >
+    au < exists ; exists ; 2014 ; 2014 ; AORTA Volume 2 ; 2 ; >
+    au < exists ; exists ; 2015 ; 2015 ; AORTA Volume 3 ; 3 ; >
+    au < exists ; exists ; 2016 ; 2016 ; AORTA Volume 4 ; 4 ; >
+    au < exists ; exists ; 2017 ; 2017 ; AORTA Volume 5 ; 5 ; >
+    au < exists ; exists ; 2018 ; 2018 ; AORTA Volume 6 ; 6 ; >
+    au < exists ; exists ; 2019 ; 2019 ; AORTA Volume 7 ; 7 ; >
+
+   }
+
+   {
+    title <
       name = Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery ;
       issn = 0103-5355 ;
       eissn = 2359-5922 ;
