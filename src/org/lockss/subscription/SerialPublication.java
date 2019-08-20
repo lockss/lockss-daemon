@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
- Copyright (c) 2013-2015 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2019 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -56,6 +52,7 @@ public class SerialPublication {
   private Set<String> proprietaryIds;
   private TdbTitle tdbTitle;
   private String uniqueName;
+  private int availableAuCount = -1;
   private int auCount = -1;
 
   public Long getPublicationNumber() {
@@ -241,6 +238,22 @@ public class SerialPublication {
     this.uniqueName = uniqueName;
   }
 
+  public int getAvailableAuCount() {
+    if (availableAuCount < 0 && tdbTitle == null) {
+      getTdbTitle();
+
+      if (tdbTitle != null) {
+	availableAuCount = tdbTitle.getTdbAvailableAuCount();
+      }
+    }
+
+    return availableAuCount;
+  }
+
+  public void setAvailableAuCount(int availableAuCount) {
+    this.availableAuCount = availableAuCount;
+  }
+
   public int getAuCount() {
     if (auCount < 0 && tdbTitle == null) {
       getTdbTitle();
@@ -269,6 +282,7 @@ public class SerialPublication {
 	.append("', eIssn='").append(eIssn)
 	.append("', proprietaryIds='").append(proprietaryIds)
 	.append("', uniqueName='").append(uniqueName)
+	.append("', availableAuCount=").append(availableAuCount)
 	.append("', auCount=").append(auCount);
 
     if (tdbTitle != null) {

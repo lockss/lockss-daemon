@@ -44,6 +44,7 @@ import javax.servlet.http.HttpSession;
 import org.apache.commons.collections.FactoryUtils;
 import org.apache.commons.collections.map.MultiValueMap;
 import org.lockss.config.Configuration;
+import org.lockss.config.TdbAu;
 import org.lockss.config.TdbPublisher;
 import org.lockss.config.TdbUtil;
 import org.lockss.db.DbException;
@@ -806,6 +807,12 @@ public class SubscriptionManagement extends LockssServlet {
       if (log.isDebug3())
 	log.debug3(DEBUG_HEADER + "publisherNumber = " + publisherNumber);
 
+      // The publisher available archival unit count.
+      int availableAuCount =
+	  publishers.get(publisherName).getAvailableAuCount();
+      if (log.isDebug3())
+          log.debug3(DEBUG_HEADER + "availableAuCount = " + availableAuCount);
+
       // Get the count ot archival units.
       int auCount = publishers.get(publisherName).getAuCount();
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auCount = " + auCount);
@@ -817,7 +824,7 @@ public class SubscriptionManagement extends LockssServlet {
 
       // Populate a tab with the publications for this publisher.
       populateTabPublisherPublications(publisherName, publisherNumber,
-	  null, auCount, pubSet, divTableMap, start, end);
+	  null, availableAuCount, auCount, pubSet, divTableMap, start, end);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
@@ -920,8 +927,10 @@ public class SubscriptionManagement extends LockssServlet {
    *          A Long with the number assigned to the publisher.
    * @param publisherSubscriptionSetting
    *          A Boolean with the setting of the publisher subscription.
+   * @param availableAuCount
+   *          An int with the count of the publisher available Archival Units.
    * @param auCount
-   *          An int with the count of the publisher Archival Units.
+   *          An int with the count of all of the publisher Archival Units.
    * @param pubSet
    *          A TreeSet<SerialPublication> with the publisher publications.
    * @param divTableMap
@@ -933,9 +942,9 @@ public class SubscriptionManagement extends LockssServlet {
    *          A String representing the last character of the tab.
    */
   private void populateTabPublisherPublications(String publisherName,
-      Long publisherNumber, Boolean publisherSubscriptionSetting, int auCount,
-      TreeSet<SerialPublication> pubSet, Map<String, Table> divTableMap,
-      String start, String end) {
+      Long publisherNumber, Boolean publisherSubscriptionSetting,
+      int availableAuCount, int auCount, TreeSet<SerialPublication> pubSet,
+      Map<String, Table> divTableMap, String start, String end) {
     final String DEBUG_HEADER = "populateTabPublisherPublications(): ";
     if (log.isDebug2())
       log.debug2(DEBUG_HEADER + "publisherName = " + publisherName);
@@ -974,7 +983,8 @@ public class SubscriptionManagement extends LockssServlet {
     // Check whether there are any publications to show.
     if (pubSet != null && pubSet.size() > 0) {
       // Yes: Get the publisher row title.
-      publisherRowTitle += " (" + pubSet.size() + " T) (" + auCount + " AU)";
+      publisherRowTitle += " (" + pubSet.size() + " T) (" + availableAuCount
+	  + "/" + auCount + " available AU)";
     }
 
     if (log.isDebug3())
@@ -1159,8 +1169,9 @@ public class SubscriptionManagement extends LockssServlet {
     pubTitleLabel.add(titleCheckBox);
     
     pubTitleLabel.add(publication.getUniqueName() + " ("
-        + publication.getAuCount() + " AU)");
-    
+	+ publication.getAvailableAuCount() + "/" 
+        + publication.getAuCount() + " available AU)");
+
     divTable.addCell(pubTitleLabel, "class=\"sub-publication-name\"");
 
     String subscribedRangesId =
@@ -1746,19 +1757,22 @@ public class SubscriptionManagement extends LockssServlet {
 				       backLinkDisplayText + " Results");
 
     PublisherStatusEntry totalSubscriptionEntry = null;
-    List<PublisherStatusEntry> publisherSuscriptionEntries =
-	new ArrayList<PublisherStatusEntry>();
 
     if (subManager.isTotalSubscriptionEnabled()) {
       totalSubscriptionEntry = status.getTotalSubscriptionStatusEntry();
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + "totalSubscriptionEntry = "
 	  + totalSubscriptionEntry);
-
-      publisherSuscriptionEntries =
-	  status.getPublisherSubscriptionStatusEntries();
     }
 
+    List<PublisherStatusEntry> publisherSuscriptionEntries =
+	  status.getPublisherSubscriptionStatusEntries();
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	+ "publisherSuscriptionEntries = " + publisherSuscriptionEntries);
+
     List<StatusEntry> statusEntries = status.getStatusEntries();
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "statusEntries = " + statusEntries);
+
     page.add("<br>");
 
     if (totalSubscriptionEntry == null
@@ -1784,11 +1798,18 @@ public class SubscriptionManagement extends LockssServlet {
 	String attributes =
 	    "align=\"center\" cellspacing=\"4\" cellpadding=\"5\"";
 
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	    + "publisherSuscriptionEntries.size() = "
+	    + publisherSuscriptionEntries.size());
+
 	if (totalSubscriptionEntry != null
 	    || publisherSuscriptionEntries.size() > 0) {
 	  displayPublisherSubscriptionResults(border, attributes,
 	      totalSubscriptionEntry, publisherSuscriptionEntries, page);
 	}
+
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	    + "statusEntries.size() = " + statusEntries.size());
 
 	if (statusEntries.size() > 0) {
 	  displayPublicationSubscriptionResults(border, attributes,
@@ -2183,6 +2204,7 @@ public class SubscriptionManagement extends LockssServlet {
 
       if (tdbPublisher != null) {
 	publisher.setAuCount(tdbPublisher.getTdbAuCount());
+	publisher.setAvailableAuCount(tdbPublisher.getTdbAvailableAuCount());
       }
 
       publisherSubscriptions.add(publisherSubscription);
@@ -2363,7 +2385,13 @@ public class SubscriptionManagement extends LockssServlet {
     if (log.isDebug3())
 	log.debug3(DEBUG_HEADER + "publisherName = " + publisherName);
 
-    // The archival unit count.
+    // The publisher available archival unit count.
+    int availableAuCount =
+	publisherSubscription.getPublisher().getAvailableAuCount();
+    if (log.isDebug3())
+        log.debug3(DEBUG_HEADER + "availableAuCount = " + availableAuCount);
+
+    // The publisher total archival unit count.
     int auCount = publisherSubscription.getPublisher().getAuCount();
     if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auCount = " + auCount);
 
@@ -2401,7 +2429,8 @@ public class SubscriptionManagement extends LockssServlet {
     // Check whether there are any publications to show.
     if (subSet != null && subSet.size() > 0) {
       // Yes: Get the publisher row title.
-      publisherRowTitle += " (" + subSet.size() + " T) (" + auCount + " AU)";
+      publisherRowTitle += " (" + subSet.size() + " T) (" + availableAuCount
+	  + "/" + auCount + " available AU)";
     }
 
     if (log.isDebug3())
@@ -2477,8 +2506,9 @@ public class SubscriptionManagement extends LockssServlet {
     pubTitleLabel.add(titleCheckBox);
     
     pubTitleLabel.add(publication.getUniqueName() + " ("
-        + publication.getAuCount() + " AU)");
-    
+	+ publication.getAvailableAuCount() + "/" 
+        + publication.getAuCount() + " available AU)");
+
     divTable.addCell(pubTitleLabel, "class=\"sub-publication-name\"");
     
     String subscribedRangesId =

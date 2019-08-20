@@ -1742,6 +1742,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	    publication.setProprietaryIds(new LinkedHashSet<String>(Arrays
 		.asList(title.getProprietaryIds())));
 	    publication.setTdbTitle(title);
+	    publication.setAvailableAuCount(title.getTdbAvailableAuCount());
 	    publication.setAuCount(title.getTdbAuCount());
 
 	    if (log.isDebug3())
@@ -1757,6 +1758,8 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	      Publisher undecidedPublicationPublisher = new Publisher();
 	      undecidedPublicationPublisher
 	      .setAuCount(publisher.getTdbAuCount());
+	      undecidedPublicationPublisher
+	      .setAvailableAuCount(publisher.getTdbAvailableAuCount());
 	      undecidedPublicationPublisher.setPublisherName(publisherName);
 	      undecidedPublicationPublisher
 	      .setPublisherNumber(publisherNumber++);
