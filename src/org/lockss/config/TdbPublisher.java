@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2019 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -106,9 +102,9 @@ public class TdbPublisher {
   }
 
   /**
-   * Return the number of TdbTitles for this publisher.
+   * Provides the total count of TdbAUs for this publisher.
    * 
-   * @return the number of TdbTitles for this publisher
+   * @return an int with the total count of TdbAUs for this publisher.
    */
   public int getTdbAuCount() {
     int auCount = 0;
@@ -116,6 +112,30 @@ public class TdbPublisher {
       auCount += title.getTdbAuCount();
     }
     return auCount;
+  }
+
+  /**
+   * Provides the count of available (not down) TdbAus for this publisher.
+   * 
+   * @return an int with the count of available (not down) TdbAus for this
+   *         publisher.
+   */
+  public int getTdbAvailableAuCount() {
+    final String DEBUG_HEADER = "getTdbAvailableAuCount(): ";
+    if (logger.isDebug2()) logger.debug2(DEBUG_HEADER + "Invoked");
+
+    // Accumulator for the count of AUs currently available.
+    int availableAuCount = 0;
+
+    // Loop through all the titles for this publisher.
+    for (TdbTitle title : titlesById.values()) {
+      // Accumulate the title's available AUs.
+      availableAuCount += title.getTdbAvailableAuCount();
+    }
+
+    if (logger.isDebug2())
+      logger.debug2(DEBUG_HEADER + "availableAuCount = " + availableAuCount);
+    return availableAuCount;
   }
 
   /**

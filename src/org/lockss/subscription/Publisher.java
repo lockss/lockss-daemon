@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
- Copyright (c) 2015 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2015-2019 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -40,6 +36,7 @@ public class Publisher {
   private Long publisherSeq;
   private Long publisherNumber;
   private String publisherName;
+  private int availableAuCount;
   private int auCount;
 
   public Long getPublisherSeq() {
@@ -60,6 +57,12 @@ public class Publisher {
   public void setPublisherName(String publisherName) {
     this.publisherName = publisherName;
   }
+  public int getAvailableAuCount() {
+    return availableAuCount;
+  }
+  public void setAvailableAuCount(int availableAuCount) {
+    this.availableAuCount = availableAuCount;
+  }
   public int getAuCount() {
     return auCount;
   }
@@ -70,6 +73,8 @@ public class Publisher {
   @Override
   public String toString() {
     return "[Publisher publisherNumber=" + publisherNumber
-	+ ", publisherName=" + publisherName + ", auCount=" + auCount + "]";
+	+ ", publisherName=" + publisherName
+	+ ", availableAuCount=" + availableAuCount + ", auCount=" + auCount
+	+ "]";
   }
 }

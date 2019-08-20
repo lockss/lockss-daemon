@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2019 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -734,13 +730,44 @@ public class TdbTitle {
   }
   
   /**
-   * Return the number of TdbAus for this title.
+   * Provides the total count of TdbAUs for this title.
    * 
-   * @return the number of TdbAus
+   * @return an int with the total count of TdbAUs for this title.
    */
   public int getTdbAuCount()
   {
     return tdbAus.size();
+  }
+
+  /**
+   * Provides the count of available (not down) TdbAus for this title.
+   * 
+   * @return an int with the count of available (not down) TdbAus for this
+   *         title.
+   */
+  public int getTdbAvailableAuCount() {
+    final String DEBUG_HEADER = "getTdbAvailableAuCount(): ";
+    if (logger.isDebug2()) logger.debug2(DEBUG_HEADER + "Invoked");
+
+    // Accumulator for the count of AUs currently available.
+    int availableAuCount = 0;
+
+    for (TdbAu tdbAu : tdbAus.values()) {
+      // Check whether the AU is not down.
+      if (!tdbAu.isDown()) {
+	// Yes: It is available - Count it.
+	if (logger.isDebug3())
+	  logger.debug3(DEBUG_HEADER + "TdbAu '" + tdbAu + "' is available.");
+	availableAuCount++;
+      } else {
+	if (logger.isDebug3())
+	  logger.debug3(DEBUG_HEADER + "TdbAu '" + tdbAu + "' is down.");
+      }
+    }
+
+    if (logger.isDebug2())
+      logger.debug2(DEBUG_HEADER + "availableAuCount = " + availableAuCount);
+    return availableAuCount;
   }
 
   /**
