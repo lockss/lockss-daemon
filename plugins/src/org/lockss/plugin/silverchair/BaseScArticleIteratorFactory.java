@@ -49,8 +49,8 @@ public class BaseScArticleIteratorFactory
   
   private static String ROOT_TEMPLATE = "\"%s%s/article\", base_url, journal_id";
   private static String PATTERN_TEMPLATE = "\"^%s%s/article(-abstract)?/\", base_url, journal_id";
-  
-  private static Pattern HTML_PATTERN = Pattern.compile("/article/([0-9i]+)/(.*)$", Pattern.CASE_INSENSITIVE);
+  //https://academic.oup.com/psychsocgerontology/article/66B/1/109/580460
+  private static Pattern HTML_PATTERN = Pattern.compile("/article/([^/]+)/(.*)$", Pattern.CASE_INSENSITIVE);
   private static String HTML_REPLACEMENT = "/article/$1/$2";
   private static String ABSTRACT_REPLACEMENT = "/article-abstract/$1/$2";
   private static String CITATION_REPLACEMENT = "/downloadcitation/$1?format=ris";
