@@ -40,8 +40,6 @@ import org.lockss.util.*;
 import org.lockss.config.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.clockss.schweizerbart.SchweizerbartXmlMetadataExtractorFactory;
-
 
 public class TestCambridgeMetadataExtractor extends LockssTestCase {
 
