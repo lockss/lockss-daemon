@@ -7,9 +7,9 @@ tpath="/home/$LOGNAME/tmp"
 #mkdir -p $tpath
 
 plugin="lockss"
-#count=250
+count=250
 year=`date +%Y`
-count=25
+#count=25
 
 # Make a list of AUids that are on ingest machine(s), and 'Yes' have substance, have crawled successfully at least once.
    # Date of last successful crawl is unimportant because many good AUs have been frozen or finished.
