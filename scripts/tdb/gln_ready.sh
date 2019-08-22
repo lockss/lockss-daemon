@@ -11,6 +11,15 @@ count=250
 year=`date +%Y`
 #count=25
 
+#After February of this year, you can release content from last year. ignore this year.
+week=`date +%W`
+if [ $week -lt 8 ]
+then
+  ((year--))
+  #echo $year
+fi
+#echo $year
+
 # Make a list of AUids that are on ingest machine(s), and 'Yes' have substance, have crawled successfully at least once.
    # Date of last successful crawl is unimportant because many good AUs have been frozen or finished.
    # Run this separately, once per day.
