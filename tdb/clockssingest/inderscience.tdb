@@ -10200,7 +10200,7 @@
 
       au < finished ; crawling ; 2015 ; International Journal of Markets and Business Systems Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; International Journal of Markets and Business Systems Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2017-2018 ; International Journal of Markets and Business Systems Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
+      au < deepCrawl ; exists ; 2017-2018 ; International Journal of Markets and Business Systems Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2019-2020 ; International Journal of Markets and Business Systems Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
 
   }
@@ -10293,7 +10293,7 @@
 
       param[journal_id] = ijcssr
 
-      au < crawling ; exists ; 2016-2018 ; International Journal of Corporate Strategy and Social Responsibility Volume 1 ; 1 ; http://www.inderscienceonline.com/ ;  >
+      au < deepCrawl ; exists ; 2016-2018 ; International Journal of Corporate Strategy and Social Responsibility Volume 1 ; 1 ; http://www.inderscienceonline.com/ ;  >
       au < expected ; exists ; 2019-2020 ; International Journal of Corporate Strategy and Social Responsibility Volume 2 ; 2 ; https://www.inderscienceonline.com/ ;  >
 
   }
@@ -10325,7 +10325,7 @@
       param[journal_id] = ijmcs
 
       au < finished ; crawling ; 2016 ; International Journal of Multinational Corporation Strategy Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2017-2018 ; International Journal of Multinational Corporation Strategy Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; >
+      au < deepCrawl ; exists ; 2017-2018 ; International Journal of Multinational Corporation Strategy Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2019-2020 ; International Journal of Multinational Corporation Strategy Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
 
   }
@@ -10413,7 +10413,7 @@
       param[journal_id] = ijeie
 
       au < finished ; crawling ; 2016 ; International Journal of Earthquake and Impact Engineering Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2017-2018 ; International Journal of Earthquake and Impact Engineering Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; >
+      au < deepCrawl ; exists ; 2017-2018 ; International Journal of Earthquake and Impact Engineering Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2019-2020 ; International Journal of Earthquake and Impact Engineering Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
 
   }
