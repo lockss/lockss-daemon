@@ -123,6 +123,21 @@
   {
 
       title <
+        name = Journal of Altmeterics ;
+        eissn = 2577-5685
+      >
+
+      comment[publisher] = Levy Library Press
+#      param[base_url] = https://www.journalofaltmetrics.org/
+
+      au < exists ; exists ; 2018 ; 1 ; Journal of Altmetrics Volume 2018 ; 2018 ; https://www.journalofaltmetrics.org/ ; >
+      au < exists ; exists ; 2019 ; 2 ; Journal of Altmetrics Volume 2019 ; 2019 ; https://www.journalofaltmetrics.org/ ; >
+
+  }
+
+  {
+
+      title <
         name = Journal of Scientific Innovation in Medicine ;
         eissn = 2579-0153
       >
