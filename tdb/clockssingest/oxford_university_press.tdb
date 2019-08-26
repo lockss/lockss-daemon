@@ -91,12 +91,12 @@
 
     param[journal_id] = advances
 
-    au < manifest ; exists ; 2010 ; 2010 ; Advances in Nutrition Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2011 ; 2011 ; Advances in Nutrition Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2012 ; 2012 ; Advances in Nutrition Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; Advances in Nutrition Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2014 ; 2014 ; Advances in Nutrition Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2015 ; 2015 ; Advances in Nutrition Volume 6 ; 6 ; >
+    au < testing ; exists ; 2010 ; 2010 ; Advances in Nutrition Volume 1 ; 1 ; >
+    au < testing ; exists ; 2011 ; 2011 ; Advances in Nutrition Volume 2 ; 2 ; >
+    au < testing ; exists ; 2012 ; 2012 ; Advances in Nutrition Volume 3 ; 3 ; >
+    au < testing ; exists ; 2013 ; 2013 ; Advances in Nutrition Volume 4 ; 4 ; >
+    au < testing ; exists ; 2014 ; 2014 ; Advances in Nutrition Volume 5 ; 5 ; >
+    au < testing ; exists ; 2015 ; 2015 ; Advances in Nutrition Volume 6 ; 6 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Advances in Nutrition Volume 7 ; 7 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Advances in Nutrition Volume 8 ; 8 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Advances in Nutrition Volume 9 ; 9 ; >
@@ -1041,11 +1041,11 @@
 
     param[journal_id] = af
 
-    au < manifest ; exists ; 2011 ; 2011 ; Animal Frontiers Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2012 ; 2012 ; Animal Frontiers Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; Animal Frontiers Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2014 ; 2014 ; Animal Frontiers Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2015 ; 2015 ; Animal Frontiers Volume 5 ; 5 ; >
+    au < testing ; exists ; 2011 ; 2011 ; Animal Frontiers Volume 1 ; 1 ; >
+    au < testing ; exists ; 2012 ; 2012 ; Animal Frontiers Volume 2 ; 2 ; >
+    au < testing ; exists ; 2013 ; 2013 ; Animal Frontiers Volume 3 ; 3 ; >
+    au < testing ; exists ; 2014 ; 2014 ; Animal Frontiers Volume 4 ; 4 ; >
+    au < testing ; exists ; 2015 ; 2015 ; Animal Frontiers Volume 5 ; 5 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Animal Frontiers Volume 6 ; 6 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Animal Frontiers Volume 7 ; 7 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Animal Frontiers Volume 8 ; 8 ; >
@@ -2454,12 +2454,12 @@
     #this title was ONLY in the publisher listing
     #content available from 1856 volume 1 to 2009 volume 161
 
-    au < manifest ; exists ; 2010 ; 2010 ; Botanical Journal of the Linnean Society Volume 162-164 ; 162-164 ; >
-    au < manifest ; exists ; 2011 ; 2011 ; Botanical Journal of the Linnean Society Volume 165-167 ; 165-167 ; >
-    au < manifest ; exists ; 2012 ; 2012 ; Botanical Journal of the Linnean Society Volume 168-170 ; 168-170 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; Botanical Journal of the Linnean Society Volume 171-173 ; 171-173 ; >
-    au < manifest ; exists ; 2014 ; 2014 ; Botanical Journal of the Linnean Society Volume 174-176 ; 174-176 ; >
-    au < manifest ; exists ; 2015 ; 2015 ; Botanical Journal of the Linnean Society Volume 177-179 ; 177-179 ; >
+    au < testing ; exists ; 2010 ; 2010 ; Botanical Journal of the Linnean Society Volume 162-164 ; 162-164 ; >
+    au < testing ; exists ; 2011 ; 2011 ; Botanical Journal of the Linnean Society Volume 165-167 ; 165-167 ; >
+    au < testing ; exists ; 2012 ; 2012 ; Botanical Journal of the Linnean Society Volume 168-170 ; 168-170 ; >
+    au < testing ; exists ; 2013 ; 2013 ; Botanical Journal of the Linnean Society Volume 171-173 ; 171-173 ; >
+    au < testing ; exists ; 2014 ; 2014 ; Botanical Journal of the Linnean Society Volume 174-176 ; 174-176 ; >
+    au < testing ; exists ; 2015 ; 2015 ; Botanical Journal of the Linnean Society Volume 177-179 ; 177-179 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Botanical Journal of the Linnean Society Volume 180-182 ; 180-182 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Botanical Journal of the Linnean Society Volume 183-185 ; 183-185 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Botanical Journal of the Linnean Society Volume 186-188 ; 186-188 ; >
@@ -3614,13 +3614,13 @@
     au < doNotProcess ; exists ; 2006 ; 2006 ; The Condor: Ornithological Applications Volume 108 ; 108 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; The Condor: Ornithological Applications Volume 109 ; 109 ; >
     au < manifest ; exists ; 2008 ; 2008 ; The Condor: Ornithological Applications Volume 110 ; 110 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; The Condor: Ornithological Applications Volume 111 ; 111 ; >
-    au < manifest ; exists ; 2010 ; 2010 ; The Condor: Ornithological Applications Volume 112 ; 112 ; >
-    au < manifest ; exists ; 2011 ; 2011 ; The Condor: Ornithological Applications Volume 113 ; 113 ; >
-    au < manifest ; exists ; 2012 ; 2012 ; The Condor: Ornithological Applications Volume 114 ; 114 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; The Condor: Ornithological Applications Volume 115 ; 115 ; >
-    au < manifest ; exists ; 2014 ; 2014 ; The Condor: Ornithological Applications Volume 116 ; 116 ; >
-    au < manifest ; exists ; 2015 ; 2015 ; The Condor: Ornithological Applications Volume 117 ; 117 ; >
+    au < testing ; exists ; 2009 ; 2009 ; The Condor: Ornithological Applications Volume 111 ; 111 ; >
+    au < testing ; exists ; 2010 ; 2010 ; The Condor: Ornithological Applications Volume 112 ; 112 ; >
+    au < testing ; exists ; 2011 ; 2011 ; The Condor: Ornithological Applications Volume 113 ; 113 ; >
+    au < testing ; exists ; 2012 ; 2012 ; The Condor: Ornithological Applications Volume 114 ; 114 ; >
+    au < testing ; exists ; 2013 ; 2013 ; The Condor: Ornithological Applications Volume 115 ; 115 ; >
+    au < testing ; exists ; 2014 ; 2014 ; The Condor: Ornithological Applications Volume 116 ; 116 ; >
+    au < testing ; exists ; 2015 ; 2015 ; The Condor: Ornithological Applications Volume 117 ; 117 ; >
     au < frozen ; exists ; 2016 ; 2016 ; The Condor: Ornithological Applications Volume 118 ; 118 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The Condor: Ornithological Applications Volume 119 ; 119 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; The Condor: Ornithological Applications Volume 120 ; 120 ; >
@@ -3836,11 +3836,11 @@
 
     param[journal_id] = cz
 
-    au < manifest ; exists ; 2011 ; 2011 ; Current Zoology Volume 57 ; 57 ; >
-    au < manifest ; exists ; 2012 ; 2012 ; Current Zoology Volume 58 ; 58 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; Current Zoology Volume 59 ; 59 ; >
-    au < manifest ; exists ; 2014 ; 2014 ; Current Zoology Volume 60 ; 60 ; >
-    au < manifest ; exists ; 2015 ; 2015 ; Current Zoology Volume 61 ; 61 ; >
+    au < testing ; exists ; 2011 ; 2011 ; Current Zoology Volume 57 ; 57 ; >
+    au < testing ; exists ; 2012 ; 2012 ; Current Zoology Volume 58 ; 58 ; >
+    au < testing ; exists ; 2013 ; 2013 ; Current Zoology Volume 59 ; 59 ; >
+    au < testing ; exists ; 2014 ; 2014 ; Current Zoology Volume 60 ; 60 ; >
+    au < testing ; exists ; 2015 ; 2015 ; Current Zoology Volume 61 ; 61 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Current Zoology Volume 62 ; 62 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Current Zoology Volume 63 ; 63 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Current Zoology Volume 64 ; 64 ; >
@@ -3946,12 +3946,12 @@
     au < doNotProcess ; exists ; 2006 ; 2006 ; Digital Scholarship in the Humanities Volume 21 ; 21 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Digital Scholarship in the Humanities Volume 22 ; 22 ; >
     au < manifest ; exists ; 2008 ; 2008 ; Digital Scholarship in the Humanities Volume 23 ; 23 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; Digital Scholarship in the Humanities Volume 24 ; 24 ; >
-    au < manifest ; exists ; 2010 ; 2010 ; Digital Scholarship in the Humanities Volume 25 ; 25 ; >
-    au < manifest ; exists ; 2011 ; 2011 ; Digital Scholarship in the Humanities Volume 26 ; 26 ; >
-    au < manifest ; exists ; 2012 ; 2012 ; Digital Scholarship in the Humanities Volume 27 ; 27 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; Digital Scholarship in the Humanities Volume 28 ; 28 ; >
-    au < manifest ; exists ; 2014 ; 2014 ; Digital Scholarship in the Humanities Volume 29 ; 29 ; >
+    au < testing ; exists ; 2009 ; 2009 ; Digital Scholarship in the Humanities Volume 24 ; 24 ; >
+    au < testing ; exists ; 2010 ; 2010 ; Digital Scholarship in the Humanities Volume 25 ; 25 ; >
+    au < testing ; exists ; 2011 ; 2011 ; Digital Scholarship in the Humanities Volume 26 ; 26 ; >
+    au < testing ; exists ; 2012 ; 2012 ; Digital Scholarship in the Humanities Volume 27 ; 27 ; >
+    au < testing ; exists ; 2013 ; 2013 ; Digital Scholarship in the Humanities Volume 28 ; 28 ; >
+    au < testing ; exists ; 2014 ; 2014 ; Digital Scholarship in the Humanities Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Digital Scholarship in the Humanities Volume 30 ; 30 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Digital Scholarship in the Humanities Volume 31 ; 31 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Digital Scholarship in the Humanities Volume 32 ; 32 ; reingest5.clockss.org:8082 >
@@ -4048,13 +4048,13 @@
     au < doNotProcess ; exists ; 2006 ; 2006 ; Diseases of the Esophagus Volume 19 ; 19 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Diseases of the Esophagus Volume 20 ; 20 ; >
     au < manifest ; exists ; 2008 ; 2008 ; Diseases of the Esophagus Volume 21 ; 21 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; Diseases of the Esophagus Volume 22 ; 22 ; >
-    au < manifest ; exists ; 2010 ; 2010 ; Diseases of the Esophagus Volume 23 ; 23 ; >
-    au < manifest ; exists ; 2011 ; 2011 ; Diseases of the Esophagus Volume 24 ; 24 ; >
-    au < manifest ; exists ; 2012 ; 2012 ; Diseases of the Esophagus Volume 25 ; 25 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; Diseases of the Esophagus Volume 26 ; 26 ; >
-    au < manifest ; exists ; 2014 ; 2014 ; Diseases of the Esophagus Volume 27 ; 27 ; >
-    au < manifest ; exists ; 2015 ; 2015 ; Diseases of the Esophagus Volume 28 ; 28 ; >
+    au < testing ; exists ; 2009 ; 2009 ; Diseases of the Esophagus Volume 22 ; 22 ; >
+    au < testing ; exists ; 2010 ; 2010 ; Diseases of the Esophagus Volume 23 ; 23 ; >
+    au < testing ; exists ; 2011 ; 2011 ; Diseases of the Esophagus Volume 24 ; 24 ; >
+    au < testing ; exists ; 2012 ; 2012 ; Diseases of the Esophagus Volume 25 ; 25 ; >
+    au < testing ; exists ; 2013 ; 2013 ; Diseases of the Esophagus Volume 26 ; 26 ; >
+    au < testing ; exists ; 2014 ; 2014 ; Diseases of the Esophagus Volume 27 ; 27 ; >
+    au < testing ; exists ; 2015 ; 2015 ; Diseases of the Esophagus Volume 28 ; 28 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Diseases of the Esophagus Volume 29 ; 29 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Diseases of the Esophagus Volume 30 ; 30 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Diseases of the Esophagus Volume 31 ; 31 ; >
@@ -4303,13 +4303,13 @@
     au < exists ; exists ; 2006 ; 2006 ; The Econometrics Journal Volume 9 ; 9 ; >
     au < exists ; exists ; 2007 ; 2007 ; The Econometrics Journal Volume 10 ; 10 ; >
     au < manifest ; exists ; 2008 ; 2008 ; The Econometrics Journal Volume 11 ; 11 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; The Econometrics Journal Volume 12 ; 12 ; >
-    au < manifest ; exists ; 2010 ; 2010 ; The Econometrics Journal Volume 13 ; 13 ; >
-    au < manifest ; exists ; 2011 ; 2011 ; The Econometrics Journal Volume 14 ; 14 ; >
-    au < manifest ; exists ; 2012 ; 2012 ; The Econometrics Journal Volume 15 ; 15 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; The Econometrics Journal Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2014 ; 2014 ; The Econometrics Journal Volume 17 ; 17 ; >
-    au < manifest ; exists ; 2015 ; 2015 ; The Econometrics Journal Volume 18 ; 18 ; >
+    au < testing ; exists ; 2009 ; 2009 ; The Econometrics Journal Volume 12 ; 12 ; >
+    au < testing ; exists ; 2010 ; 2010 ; The Econometrics Journal Volume 13 ; 13 ; >
+    au < testing ; exists ; 2011 ; 2011 ; The Econometrics Journal Volume 14 ; 14 ; >
+    au < testing ; exists ; 2012 ; 2012 ; The Econometrics Journal Volume 15 ; 15 ; >
+    au < testing ; exists ; 2013 ; 2013 ; The Econometrics Journal Volume 16 ; 16 ; >
+    au < testing ; exists ; 2014 ; 2014 ; The Econometrics Journal Volume 17 ; 17 ; >
+    au < testing ; exists ; 2015 ; 2015 ; The Econometrics Journal Volume 18 ; 18 ; >
     au < frozen ; exists ; 2016 ; 2016 ; The Econometrics Journal Volume 19 ; 19 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The Econometrics Journal Volume 20 ; 20 ; >
     au < frozen ; exists ; 2018 ; 2018 ; The Econometrics Journal Volume 21 ; 21 ; >
@@ -4446,13 +4446,13 @@
     au < exists ; exists ; 2006 ; 2006 ; The Economic Journal Volume 116 ; 116 ; >
     au < exists ; exists ; 2007 ; 2007 ; The Economic Journal Volume 117 ; 117 ; >
     au < manifest ; exists ; 2008 ; 2008 ; The Economic Journal Volume 118 ; 118 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; The Economic Journal Volume 119 ; 119 ; >
-    au < manifest ; exists ; 2010 ; 2010 ; The Economic Journal Volume 120 ; 120 ; >
-    au < manifest ; exists ; 2011 ; 2011 ; The Economic Journal Volume 121 ; 121 ; >
-    au < manifest ; exists ; 2012 ; 2012 ; The Economic Journal Volume 122 ; 122 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; The Economic Journal Volume 123 ; 123 ; >
-    au < manifest ; exists ; 2014 ; 2014 ; The Economic Journal Volume 124 ; 124 ; >
-    au < manifest ; exists ; 2015 ; 2015 ; The Economic Journal Volume 125 ; 125 ; >
+    au < testing ; exists ; 2009 ; 2009 ; The Economic Journal Volume 119 ; 119 ; >
+    au < testing ; exists ; 2010 ; 2010 ; The Economic Journal Volume 120 ; 120 ; >
+    au < testing ; exists ; 2011 ; 2011 ; The Economic Journal Volume 121 ; 121 ; >
+    au < testing ; exists ; 2012 ; 2012 ; The Economic Journal Volume 122 ; 122 ; >
+    au < testing ; exists ; 2013 ; 2013 ; The Economic Journal Volume 123 ; 123 ; >
+    au < testing ; exists ; 2014 ; 2014 ; The Economic Journal Volume 124 ; 124 ; >
+    au < testing ; exists ; 2015 ; 2015 ; The Economic Journal Volume 125 ; 125 ; >
     au < frozen ; exists ; 2016 ; 2016 ; The Economic Journal Volume 126 ; 126 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The Economic Journal Volume 127 ; 127 ; >
     au < frozen ; exists ; 2018 ; 2018 ; The Economic Journal Volume 128 ; 128 ; >
@@ -9099,13 +9099,13 @@
     au < exists ; exists ; 2006 ; 2006 ; Journal of Burn Care & Research Volume 27 ; 27 ; >
     au < exists ; exists ; 2007 ; 2007 ; Journal of Burn Care & Research Volume 28 ; 28 ; >
     au < manifest ; exists ; 2008 ; 2008 ; Journal of Burn Care & Research Volume 29 ; 29 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; Journal of Burn Care & Research Volume 30 ; 30 ; >
-    au < manifest ; exists ; 2010 ; 2010 ; Journal of Burn Care & Research Volume 31 ; 31 ; >
-    au < manifest ; exists ; 2011 ; 2011 ; Journal of Burn Care & Research Volume 32 ; 32 ; >
-    au < manifest ; exists ; 2012 ; 2012 ; Journal of Burn Care & Research Volume 33 ; 33 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; Journal of Burn Care & Research Volume 34 ; 34 ; >
-    au < manifest ; exists ; 2014 ; 2014 ; Journal of Burn Care & Research Volume 35 ; 35 ; >
-    au < manifest ; exists ; 2015 ; 2015 ; Journal of Burn Care & Research Volume 36 ; 36 ; >
+    au < testing ; exists ; 2009 ; 2009 ; Journal of Burn Care & Research Volume 30 ; 30 ; >
+    au < testing ; exists ; 2010 ; 2010 ; Journal of Burn Care & Research Volume 31 ; 31 ; >
+    au < testing ; exists ; 2011 ; 2011 ; Journal of Burn Care & Research Volume 32 ; 32 ; >
+    au < testing ; exists ; 2012 ; 2012 ; Journal of Burn Care & Research Volume 33 ; 33 ; >
+    au < testing ; exists ; 2013 ; 2013 ; Journal of Burn Care & Research Volume 34 ; 34 ; >
+    au < testing ; exists ; 2014 ; 2014 ; Journal of Burn Care & Research Volume 35 ; 35 ; >
+    au < testing ; exists ; 2015 ; 2015 ; Journal of Burn Care & Research Volume 36 ; 36 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Journal of Burn Care & Research Volume 37 ; 37 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Journal of Burn Care & Research Volume 38 ; 38 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Journal of Burn Care & Research Volume 39 ; 39 ; >
@@ -14690,10 +14690,10 @@
     au < doNotProcess ; exists ; 2006 ; 2006 ; Pathogens and Disease Volume 46-48 ; 46-48 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Pathogens and Disease Volume 49-51 ; 49-51 ; >
     au < manifest ; exists ; 2008 ; 2008 ; Pathogens and Disease Volume 52-54 ; 52-54 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; Pathogens and Disease Volume 55-57 ; 55-57 ; >
-    au < manifest ; exists ; 2010 ; 2010 ; Pathogens and Disease Volume 58-60 ; 58-60 ; >
-    au < manifest ; exists ; 2011 ; 2011 ; Pathogens and Disease Volume 61-63 ; 61-63 ; >
-    au < manifest ; exists ; 2012 ; 2012 ; Pathogens and Disease Volume 64-66 ; 64-66 ; >
+    au < testing ; exists ; 2009 ; 2009 ; Pathogens and Disease Volume 55-57 ; 55-57 ; >
+    au < testing ; exists ; 2010 ; 2010 ; Pathogens and Disease Volume 58-60 ; 58-60 ; >
+    au < testing ; exists ; 2011 ; 2011 ; Pathogens and Disease Volume 61-63 ; 61-63 ; >
+    au < testing ; exists ; 2012 ; 2012 ; Pathogens and Disease Volume 64-66 ; 64-66 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Pathogens and Disease Volume 67-69 ; 67-69 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Pathogens and Disease Volume 70-72 ; 70-72 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Pathogens and Disease Volume 73 ; 73 ; >
@@ -16901,7 +16901,7 @@
     au < doNotProcess ; exists ; 2006 ; 2006 ; Socio-Economic Review Volume 4 ; 4 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Socio-Economic Review Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; Socio-Economic Review Volume 6 ; 6 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; Socio-Economic Review Volume 7 ; 7 ; >
+    au < testing ; exists ; 2009 ; 2009 ; Socio-Economic Review Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Socio-Economic Review Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Socio-Economic Review Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Socio-Economic Review Volume 10 ; 10 ; >
@@ -16971,7 +16971,7 @@
     au < doNotProcess ; exists ; 2006 ; 2006 ; Sociology of Religion Volume 67 ; 67 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Sociology of Religion Volume 68 ; 68 ; >
     au < manifest ; exists ; 2008 ; 2008 ; Sociology of Religion Volume 69 ; 69 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; Sociology of Religion Volume 70 ; 70 ; >
+    au < testing ; exists ; 2009 ; 2009 ; Sociology of Religion Volume 70 ; 70 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Sociology of Religion Volume 71 ; 71 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Sociology of Religion Volume 72 ; 72 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Sociology of Religion Volume 73 ; 73 ; >
@@ -20579,7 +20579,7 @@
     au < doNotProcess ; exists ; 2006 ; 2006 ; Tree Physiology Volume 26 ; 26 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Tree Physiology Volume 27 ; 27 ; >
     au < manifest ; exists ; 2008 ; 2008 ; Tree Physiology Volume 28 ; 28 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; Tree Physiology Volume 29 ; 29 ; >
+    au < testing ; exists ; 2009 ; 2009 ; Tree Physiology Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Tree Physiology Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Tree Physiology Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Tree Physiology Volume 32 ; 32 ; >
