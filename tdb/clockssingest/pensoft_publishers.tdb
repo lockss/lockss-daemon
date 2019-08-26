@@ -430,20 +430,6 @@
   {
 
       title <
-        name = Clinical Psychology in Europe ;
-        eissn = 2625-3410
-      >
-
-      param[au_oai_set] = cpe
-
-      au < manifest ; exists ; 2019 ; 2019 ; Clinical Psychology in Europe Volume 2019 ; 2019 ; https://cpe.psychopen.eu/ ; >
-
-  }
-
-
-  {
-
-      title <
         name = Evolutionary Systematics ;
         eissn = 2535-0730
       >
@@ -700,22 +686,6 @@
 #
 #  }
 #
-
-  {
-
-      title <
-        name = Social Psychological Bulletin ;
-        issn = 1896-1800 ;
-        eissn = 2569-653X
-      >
-
-      param[au_oai_set] = sbp
-
-      au < exists ; exists ; 2018 ; 2018 ; Social Psychological Bulletin Volume 2018 ; 2018 ; https://spb.psychopen.eu/ ; >
-      au < exists ; exists ; 2019 ; 2019 ; Social Psychological Bulletin Volume 2019 ; 2019 ; https://spb.psychopen.eu/ ; >
-
-  }
-
 
   {
 

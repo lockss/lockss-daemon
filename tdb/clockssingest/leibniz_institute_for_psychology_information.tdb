@@ -202,32 +202,4 @@
 
   }
 
-  {
-    title <
-      name = Social Psychological Bulletin ;
-      issn = 1896-1800 ;
-      eissn = 2569-653X
-    >
-
-      #param[base_url] = https://spb.psychopen.eu/
-      param[journal_id] = spb
-
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2018 ; Social Psychological Bulletin Volume 13 ; 13 ; 2018 ; https://spb.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; expected ; exists ; 2019 ; Social Psychological Bulletin Volume 14 ; 14 ; 2019 ; https://spb.psychopen.eu/ ; >
-
-  }
-
-  {
-    title <
-      name = Clinical Psychology in Europe ;
-      eissn = 2625-3410
-    >
-
-      #param[base_url] = https://cpe.psychopen.eu/
-      param[journal_id] = spb
-
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2019 ; Clinical Psychology in Europe Volume 1 ; 1 ; 2019 ; https://cpe.psychopen.eu/ ; >
-
-  }
-
 }
