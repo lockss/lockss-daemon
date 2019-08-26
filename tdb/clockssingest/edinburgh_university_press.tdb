@@ -600,13 +600,13 @@
     param[journal_id] = film
     #move from Open Humanities Press
     
-     au < testing ; exists ; 2007 ; Film-Philosophy Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
-     au < manifest ; exists ; 2008 ; Film-Philosophy Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
-     au < frozen ; exists ; 2009 ; Film-Philosophy Volume 3 ; 3 ; https://www.euppublishing.com/ ; >
-     au < frozen ; exists ; 2010 ; Film-Philosophy Volume 4 ; 4 ; https://www.euppublishing.com/ ; >
-     au < frozen ; exists ; 2011 ; Film-Philosophy Volume 5 ; 5 ; https://www.euppublishing.com/ ; >
-     au < frozen ; exists ; 2012 ; Film-Philosophy Volume 6 ; 6 ; https://www.euppublishing.com/ ; >
-     au < frozen ; exists ; 2013 ; Film-Philosophy Volume 7 ; 7 ; https://www.euppublishing.com/ ; >
+     au < testing ; exists ; 1997 ; Film-Philosophy Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
+     au < manifest ; exists ; 1998 ; Film-Philosophy Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
+     au < frozen ; exists ; 1999 ; Film-Philosophy Volume 3 ; 3 ; https://www.euppublishing.com/ ; >
+     au < frozen ; exists ; 2000 ; Film-Philosophy Volume 4 ; 4 ; https://www.euppublishing.com/ ; >
+     au < frozen ; exists ; 2001 ; Film-Philosophy Volume 5 ; 5 ; https://www.euppublishing.com/ ; >
+     au < frozen ; exists ; 2002 ; Film-Philosophy Volume 6 ; 6 ; https://www.euppublishing.com/ ; >
+     au < frozen ; exists ; 2003 ; Film-Philosophy Volume 7 ; 7 ; https://www.euppublishing.com/ ; >
      au < manifest ; exists ; 2004 ; Film-Philosophy Volume 8 ; 8 ; https://www.euppublishing.com/ ; >
      au < manifest ; exists ; 2005 ; Film-Philosophy Volume 9 ; 9 ; https://www.euppublishing.com/ ; > #testing by EDINA (aro)
      au < manifest ; exists ; 2006 ; Film-Philosophy Volume 10 ; 10 ; https://www.euppublishing.com/ ; > #testing by EDINA (aro)
