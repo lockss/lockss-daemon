@@ -28,7 +28,7 @@
     param[journal_id] = sch
     #sch - Scottish Church History coming in 2019
 
-    au < manifest ; exists ; 2013 ; Scottish Church History Volume 42 ; 42 ; https://www.euppublishing.com/ ; >
+    au < testing ; exists ; 2013 ; Scottish Church History Volume 42 ; 42 ; https://www.euppublishing.com/ ; >
     au < manifest ; exists ; 2014 ; Scottish Church History Volume 43 ; 43 ; https://www.euppublishing.com/ ; >
     au < manifest ; exists ; 2015 ; Scottish Church History Volume 44 ; 44 ; https://www.euppublishing.com/ ; >
     au < manifest ; exists ; 2016 ; Scottish Church History Volume 45 ; 45 ; https://www.euppublishing.com/ ; >
@@ -239,7 +239,7 @@
     param[journal_id] = arch
     # Volumes 19 and 20 are currently represented as Arabic numerals on the website.
 
-    au < manifest ; exists ; 2000 ; Architectural Heritage Volume 11 ; 11 ; https://www.euppublishing.com/ ; >
+    au < testing ; exists ; 2000 ; Architectural Heritage Volume 11 ; 11 ; https://www.euppublishing.com/ ; >
     au < manifest ; exists ; 2001 ; Architectural Heritage Volume 12 ; 12 ; https://www.euppublishing.com/ ; >
     au < manifest ; exists ; 2002 ; Architectural Heritage Volume 13 ; 13 ; https://www.euppublishing.com/ ; >
     au < finished ; finished ; 2003 ; Architectural Heritage Volume 14 ; 14 ; http://www.euppublishing.com/ ; >
@@ -272,7 +272,7 @@
 
     param[journal_id] = anh
 
-    au < manifest ; exists ; 2000 ; Archives of Natural History Volume 27 ; 27 ; https://www.euppublishing.com/ ; >
+    au < testing ; exists ; 2000 ; Archives of Natural History Volume 27 ; 27 ; https://www.euppublishing.com/ ; >
     au < manifest ; exists ; 2001 ; Archives of Natural History Volume 28 ; 28 ; https://www.euppublishing.com/ ; >
     au < manifest ; exists ; 2002 ; Archives of Natural History Volume 29 ; 29 ; https://www.euppublishing.com/ ; >
     au < finished ; finished ; 2003 ; Archives of Natural History Volume 30 ; 30 ; http://www.euppublishing.com/ ; >
@@ -306,7 +306,7 @@
 
     param[journal_id] = bjj
 
-    au < manifest ; exists ; 2000 ; Ben Jonson Journal Volume 7 ; 7 ; https://www.euppublishing.com/ ; >
+    au < testing ; exists ; 2000 ; Ben Jonson Journal Volume 7 ; 7 ; https://www.euppublishing.com/ ; >
     au < manifest ; exists ; 2001 ; Ben Jonson Journal Volume 8 ; 8 ; https://www.euppublishing.com/ ; >
     au < manifest ; exists ; 2002 ; Ben Jonson Journal Volume 9 ; 9 ; https://www.euppublishing.com/ ; >
     au < manifest ; exists ; 2003 ; Ben Jonson Journal Volume 10 ; 10 ; https://www.euppublishing.com/ ; >
@@ -543,7 +543,7 @@
 
     param[journal_id] = elr
 
-    au < manifest ; exists ; 2000 ; Edinburgh Law Review Volume 4 ; 4 ; https://www.euppublishing.com/ ; >
+    au < testing ; exists ; 2000 ; Edinburgh Law Review Volume 4 ; 4 ; https://www.euppublishing.com/ ; >
     au < manifest ; exists ; 2001 ; Edinburgh Law Review Volume 5 ; 5 ; https://www.euppublishing.com/ ; >
     au < manifest ; exists ; 2002 ; Edinburgh Law Review Volume 6 ; 6 ; https://www.euppublishing.com/ ; >
     au < manifest ; exists ; 2003 ; Edinburgh Law Review Volume 7 ; 7 ; https://www.euppublishing.com/ ; >
@@ -600,7 +600,7 @@
     param[journal_id] = film
     #move from Open Humanities Press
     
-     au < manifest ; exists ; 2007 ; Film-Philosophy Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
+     au < testing ; exists ; 2007 ; Film-Philosophy Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
      au < manifest ; exists ; 2008 ; Film-Philosophy Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
      au < frozen ; exists ; 2009 ; Film-Philosophy Volume 3 ; 3 ; https://www.euppublishing.com/ ; >
      au < frozen ; exists ; 2010 ; Film-Philosophy Volume 4 ; 4 ; https://www.euppublishing.com/ ; >
@@ -640,7 +640,7 @@
      #gothic - Gothic Studies transferred from ManUP 2019 (all volumes 1999 V1 +)
 
      au < manifest ; exists ; 1999 ; Gothic Studies Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
-     au < manifest ; exists ; 2000 ; Gothic Studies Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
+     au < testing ; exists ; 2000 ; Gothic Studies Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
      au < manifest ; exists ; 2001 ; Gothic Studies Volume 3 ; 3 ; https://www.euppublishing.com/ ; >
      au < manifest ; exists ; 2002 ; Gothic Studies Volume 4 ; 4 ; https://www.euppublishing.com/ ; >
      au < manifest ; exists ; 2003 ; Gothic Studies Volume 5 ; 5 ; https://www.euppublishing.com/ ; >
@@ -676,7 +676,7 @@
 
     param[journal_id] = hls
 
-    au < manifest ; exists ; 2002 ; Holy Land Studies Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
+    au < testing ; exists ; 2002 ; Holy Land Studies Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
     au < manifest ; exists ; 2003 ; Holy Land Studies Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
     au < finished ; finished ; 2004 ; Holy Land Studies Volume 3 ; 3 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2005 ; Holy Land Studies Volume 4 ; 4 ; http://www.euppublishing.com/ ; >
@@ -726,7 +726,7 @@
 
     param[journal_id] = inr
 
-    au < manifest ; exists ; 2000 ; The Innes Review Volume 51 ; 51 ; https://www.euppublishing.com/ ; >
+    au < testing ; exists ; 2000 ; The Innes Review Volume 51 ; 51 ; https://www.euppublishing.com/ ; >
     au < manifest ; exists ; 2001 ; The Innes Review Volume 52 ; 52 ; https://www.euppublishing.com/ ; >
     au < manifest ; exists ; 2002 ; The Innes Review Volume 53 ; 53 ; https://www.euppublishing.com/ ; >
     au < manifest ; exists ; 2003 ; The Innes Review Volume 54 ; 54 ; https://www.euppublishing.com/ ; >
@@ -876,7 +876,7 @@
 
     param[journal_id] = jobs
 
-    au < manifest ; exists ; 2000 ; Journal of Beckett Studies Volume 9 ; 9 ; https://www.euppublishing.com/ ; >
+    au < testing ; exists ; 2000 ; Journal of Beckett Studies Volume 9 ; 9 ; https://www.euppublishing.com/ ; >
     au < manifest ; exists ; 2001 ; Journal of Beckett Studies Volume 10 ; 10 ; https://www.euppublishing.com/ ; >
     au < manifest ; exists ; 2002 ; Journal of Beckett Studies Volume 11 ; 11 ; https://www.euppublishing.com/ ; >
     au < manifest ; exists ; 2003 ; Journal of Beckett Studies Volume 12 ; 12 ; https://www.euppublishing.com/ ; >
@@ -993,7 +993,7 @@
 
     param[journal_id] = jqs
 
-    au < manifest ; exists ; 2000 ; Journal of Qur'anic Studies Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
+    au < testing ; exists ; 2000 ; Journal of Qur'anic Studies Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
     au < manifest ; exists ; 2001 ; Journal of Qur'anic Studies Volume 3 ; 3 ; https://www.euppublishing.com/ ; >
     au < manifest ; exists ; 2002 ; Journal of Qur'anic Studies Volume 4 ; 4 ; https://www.euppublishing.com/ ; >
     au < manifest ; exists ; 2003 ; Journal of Qur'anic Studies Volume 5 ; 5 ; https://www.euppublishing.com/ ; >
@@ -1045,7 +1045,7 @@
     au < doNotProcess ; exists ; 1997 ; Scottish Economic and Social History Volume 17 ; 17 ; https://www.euppublishing.com/ ; >
     au < doNotProcess ; exists ; 1998 ; Scottish Economic and Social History Volume 18 ; 18 ; https://www.euppublishing.com/ ; >
     au < doNotProcess ; exists ; 1999 ; Scottish Economic and Social History Volume 19 ; 19 ; https://www.euppublishing.com/ ; >
-    au < manifest ; exists ; 2000 ; Scottish Economic and Social History Volume 20 ; 20 ; https://www.euppublishing.com/ ; >
+    au < testing ; exists ; 2000 ; Scottish Economic and Social History Volume 20 ; 20 ; https://www.euppublishing.com/ ; >
     
   }
   {
@@ -1862,7 +1862,7 @@
        au < manifest ; exists ; 1997 ; Costume Volume 31 ; 31 ; https://www.euppublishing.com/ ; >
        au < manifest ; exists ; 1998 ; Costume Volume 32 ; 32 ; https://www.euppublishing.com/ ; >
        au < manifest ; exists ; 1999 ; Costume Volume 33 ; 33 ; https://www.euppublishing.com/ ; >
-       au < manifest ; exists ; 2000 ; Costume Volume 34 ; 34 ; https://www.euppublishing.com/ ; >
+       au < testing ; exists ; 2000 ; Costume Volume 34 ; 34 ; https://www.euppublishing.com/ ; >
        au < manifest ; exists ; 2001 ; Costume Volume 35 ; 35 ; https://www.euppublishing.com/ ; >
        au < manifest ; exists ; 2002 ; Costume Volume 36 ; 36 ; https://www.euppublishing.com/ ; >
        au < manifest ; exists ; 2003 ; Costume Volume 37 ; 37 ; https://www.euppublishing.com/ ; >
