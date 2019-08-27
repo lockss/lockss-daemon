@@ -3,7 +3,7 @@
 #One day / one line snapshot of tdb status for GLN AUs
 #echo "date,doesNotExist,expected,exists,manifest,doNotProcess,testing,notReady,ready,released,down,superseded,other" > ./progress_out.txt
 tpath="/home/$LOGNAME/tmp"
-./scripts/tdb/tdbout -c status tdb/prod/*.tdb > $tpath/allstatus
+./scripts/tdb/tdbout -c status tdb/prod/ > $tpath/allstatus
 countother=`cat $tpath/allstatus | wc -l`
 OutputX=`date +%F`
 for j in doesNotExist expected exists manifest doNotProcess testing notReady ready released down superseded
