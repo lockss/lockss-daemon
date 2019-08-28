@@ -230,7 +230,7 @@ scripts/tdb/scrub_table.pl $tpath/issn
 ###echo "---------------------"
 echo "---------------------"
 echo "Missing Slashes"
-grep "param\[base_url\]" tdb/*/ | grep "http.*://" | grep -v "/\s*$" | grep -v ":\s*#" | grep -v "\/\s*#"
+grep "param\[base_url\]" tdb/*/*.tdb tdb/*/*/*.tdb | grep "http.*://" | grep -v "/\s*$" | grep -v ":\s*#" | grep -v "\/\s*#"
 echo "---------------------"
 echo "---------------------"
 
