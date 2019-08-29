@@ -184,7 +184,7 @@
 #      param[base_url] = http://www.birpublications.org/
       param[journal_id] = bjro
 
-      au < exists ; exists ; 2019 ; BJR|Open Volume 1 ; 1 ; https://www.birpublications.org/ ; >
+      au < manifest ; exists ; 2019 ; BJR|Open Volume 1 ; 1 ; https://www.birpublications.org/ ; >
 
   }
 
