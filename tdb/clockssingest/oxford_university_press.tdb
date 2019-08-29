@@ -96,7 +96,7 @@
     au < testing ; exists ; 2012 ; 2012 ; Advances in Nutrition Volume 3 ; 3 ; >
     au < testing ; exists ; 2013 ; 2013 ; Advances in Nutrition Volume 4 ; 4 ; >
     au < testing ; exists ; 2014 ; 2014 ; Advances in Nutrition Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2015 ; 2015 ; Advances in Nutrition Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2015 ; 2015 ; Advances in Nutrition Volume 6 ; 6 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Advances in Nutrition Volume 7 ; 7 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Advances in Nutrition Volume 8 ; 8 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Advances in Nutrition Volume 9 ; 9 ; >
@@ -1042,9 +1042,9 @@
     param[journal_id] = af
 
     au < testing ; exists ; 2011 ; 2011 ; Animal Frontiers Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2012 ; 2012 ; Animal Frontiers Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2012 ; 2012 ; Animal Frontiers Volume 2 ; 2 ; >
     au < testing ; exists ; 2013 ; 2013 ; Animal Frontiers Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2014 ; 2014 ; Animal Frontiers Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2014 ; 2014 ; Animal Frontiers Volume 4 ; 4 ; >
     au < testing ; exists ; 2015 ; 2015 ; Animal Frontiers Volume 5 ; 5 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Animal Frontiers Volume 6 ; 6 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Animal Frontiers Volume 7 ; 7 ; reingest5.clockss.org:8082 >
@@ -4309,7 +4309,7 @@
     au < testing ; exists ; 2012 ; 2012 ; The Econometrics Journal Volume 15 ; 15 ; >
     au < testing ; exists ; 2013 ; 2013 ; The Econometrics Journal Volume 16 ; 16 ; >
     au < testing ; exists ; 2014 ; 2014 ; The Econometrics Journal Volume 17 ; 17 ; >
-    au < crawling ; exists ; 2015 ; 2015 ; The Econometrics Journal Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2015 ; 2015 ; The Econometrics Journal Volume 18 ; 18 ; >
     au < frozen ; exists ; 2016 ; 2016 ; The Econometrics Journal Volume 19 ; 19 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The Econometrics Journal Volume 20 ; 20 ; >
     au < frozen ; exists ; 2018 ; 2018 ; The Econometrics Journal Volume 21 ; 21 ; >
