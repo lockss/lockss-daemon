@@ -769,7 +769,7 @@
 
       param[journal_id] = aboriginal
 
-      au < ready ; exists ; 2017 ; ab-Original Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
+      au < crawling ; exists ; 2017 ; ab-Original Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2018 ; ab-Original Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
       au < expected ; exists ; 2019 ; ab-Original Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
       au < expected ; exists ; 2020 ; ab-Original Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
@@ -813,8 +813,8 @@
       au < crawling ; exists ; 2014 ; Bulletin for Biblical Research Volume 2014 ; 2014 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2015 ; Bulletin for Biblical Research Volume 2015 ; 2015 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2016 ; Bulletin for Biblical Research Volume 2016 ; 2016 ; https://www.jstor.org/ ; >
-      au < ready ; exists ; 2017 ; Bulletin for Biblical Research Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
-      au < ready ; exists ; 2018 ; Bulletin for Biblical Research Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
+      au < crawling ; exists ; 2017 ; Bulletin for Biblical Research Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
+      au < crawling ; exists ; 2018 ; Bulletin for Biblical Research Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2019 ; Bulletin for Biblical Research Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
       au < expected ; exists ; 2020 ; Bulletin for Biblical Research Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
 
