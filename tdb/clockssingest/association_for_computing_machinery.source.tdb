@@ -48,10 +48,19 @@
       au < readySource ; crawling ; 2019 ; Association for Computing Machinery Source Content 2019_1 ; 2019_1 >
       au < readySource ; crawling ; 2019 ; Association for Computing Machinery Source Content 2019_2 ; 2019_2 >
       au < manifest ; exists ; 2019 ; Association for Computing Machinery Source Content 2019_3 ; 2019_3 >#HOLD - see clay
-      au < exists ; exists ; 2019 ; Association for Computing Machinery Source Content 2019_4 ; 2019_4 >
-      au < exists ; exists ; 2019 ; Association for Computing Machinery Source Content 2019_5 ; 2019_5 >
-      au < exists ; exists ; 2019 ; Association for Computing Machinery Source Content 2019_6 ; 2019_6 >
    
+     }
+
+     {
+
+       plugin = org.lockss.plugin.associationforcomputingmachinery.ClockssACMJatsSourcePlugin
+       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/acm-released/
+       hidden[proxy] = DIRECT
+       implicit < status ; status2 ; year ; name ; param[directory] >
+
+
+       au < exists ; exists ; 2019 ; Association for Computing Machinery Source Content 2019_4 ; 2019_4 >
+
      }
   }
 
