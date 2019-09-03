@@ -169,7 +169,7 @@
     >
 
       #param[base_url] = https://jbdgm.psychopen.eu/
-      param[journal_id] = jbdgm
+      param[journal_id] = JBDGM
 
       au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 1984 ; Jahrbuch Musikpsychologie Volume 1 ; 1 ; 1984 ; https://jbdgm.psychopen.eu/ ; >
       au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 1985 ; Jahrbuch Musikpsychologie Volume 2 ; 2 ; 1985 ; https://jbdgm.psychopen.eu/ ; >
@@ -198,7 +198,7 @@
       au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2015 ; Jahrbuch Musikpsychologie Volume 25 ; 25 ; 2015 ; https://jbdgm.psychopen.eu/ ; >
       au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2016 ; Jahrbuch Musikpsychologie Volume 26 ; 26 ; 2016 ; https://jbdgm.psychopen.eu/ ; >
       au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2017 ; Jahrbuch Musikpsychologie Volume 27 ; 27 ; 2017 ; https://jbdgm.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2018 ; Jahrbuch Musikpsychologie Volume 28 ; 28 ; 2018 ; https://jbdgm.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2018 ; Jahrbuch Musikpsychologie Volume 28 ; 28 ; 2018 ; https://jbdgm.psychopen.eu/ ; > #failed test.
 
   }
 
