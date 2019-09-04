@@ -769,8 +769,8 @@
 
       param[journal_id] = aboriginal
 
-      au < crawling ; exists ; 2017 ; ab-Original Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2018 ; ab-Original Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2017 ; ab-Original Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2018 ; ab-Original Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
       au < expected ; exists ; 2019 ; ab-Original Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
       au < expected ; exists ; 2020 ; ab-Original Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
 
@@ -810,11 +810,11 @@
       au < exists ; exists ; 2011 ; Bulletin for Biblical Research Volume 2011 ; 2011 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2012 ; Bulletin for Biblical Research Volume 2012 ; 2012 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2013 ; Bulletin for Biblical Research Volume 2013 ; 2013 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2014 ; Bulletin for Biblical Research Volume 2014 ; 2014 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2015 ; Bulletin for Biblical Research Volume 2015 ; 2015 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2016 ; Bulletin for Biblical Research Volume 2016 ; 2016 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2017 ; Bulletin for Biblical Research Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2018 ; Bulletin for Biblical Research Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2014 ; Bulletin for Biblical Research Volume 2014 ; 2014 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2015 ; Bulletin for Biblical Research Volume 2015 ; 2015 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2016 ; Bulletin for Biblical Research Volume 2016 ; 2016 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2017 ; Bulletin for Biblical Research Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2018 ; Bulletin for Biblical Research Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2019 ; Bulletin for Biblical Research Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
       au < expected ; exists ; 2020 ; Bulletin for Biblical Research Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
 
@@ -836,10 +836,10 @@
       au < manifest ; exists ; 2012 ; Bustan - The Middle East Book Review Volume 2012 ; 2012 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2013 ; Bustan - The Middle East Book Review Volume 2013 ; 2013 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2014 ; Bustan - The Middle East Book Review Volume 2014 ; 2014 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2015 ; Bustan - The Middle East Book Review Volume 2015 ; 2015 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2016 ; Bustan - The Middle East Book Review Volume 2016 ; 2016 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2017 ; Bustan - The Middle East Book Review Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2018 ; Bustan - The Middle East Book Review Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2015 ; Bustan - The Middle East Book Review Volume 2015 ; 2015 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2016 ; Bustan - The Middle East Book Review Volume 2016 ; 2016 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2017 ; Bustan - The Middle East Book Review Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2018 ; Bustan - The Middle East Book Review Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2019 ; Bustan - The Middle East Book Review Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
       au < expected ; exists ; 2020 ; Bustan - The Middle East Book Review Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
 
@@ -863,12 +863,12 @@
       au < exists ; exists ; 2010 ; The Arthur Miller Journal Volume 2010 ; 2010 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2011 ; The Arthur Miller Journal Volume 2011 ; 2011 ; https://www.jstor.org/ ; >
       au < ready ; exists ; 2012 ; The Arthur Miller Journal Volume 2012 ; 2012 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2013 ; The Arthur Miller Journal Volume 2013 ; 2013 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2014 ; The Arthur Miller Journal Volume 2014 ; 2014 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2015 ; The Arthur Miller Journal Volume 2015 ; 2015 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2016 ; The Arthur Miller Journal Volume 2016 ; 2016 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2013 ; The Arthur Miller Journal Volume 2013 ; 2013 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2014 ; The Arthur Miller Journal Volume 2014 ; 2014 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2015 ; The Arthur Miller Journal Volume 2015 ; 2015 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2016 ; The Arthur Miller Journal Volume 2016 ; 2016 ; https://www.jstor.org/ ; >
       au < ready ; exists ; 2017 ; The Arthur Miller Journal Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2018 ; The Arthur Miller Journal Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2018 ; The Arthur Miller Journal Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2019 ; The Arthur Miller Journal Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
       au < expected ; exists ; 2020 ; The Arthur Miller Journal Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
 
@@ -911,8 +911,8 @@
       au < exists ; exists ; 2011 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 2011 ; 2011 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2012 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 2012 ; 2012 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2013 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 2013 ; 2013 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2014 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 2014 ; 2014 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2015 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 2015 ; 2015 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2014 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 2014 ; 2014 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2015 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 2015 ; 2015 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2016 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 2016 ; 2016 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2017 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2018 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
