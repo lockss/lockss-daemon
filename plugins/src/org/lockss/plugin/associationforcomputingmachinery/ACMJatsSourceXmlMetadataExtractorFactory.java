@@ -46,9 +46,6 @@ public class ACMJatsSourceXmlMetadataExtractorFactory
         implements FileMetadataExtractorFactory {
     static Logger log = Logger.getLogger("ACMJatsSourceMetadataExtractorFactory");
 
-
-    private static final String PDF_DIR_FILE = "/Page_Renditions/online.pdf";
-
     private static SourceXmlSchemaHelper JatsPublishingHelper = null;
 
     @Override
@@ -73,17 +70,14 @@ public class ACMJatsSourceXmlMetadataExtractorFactory
         protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
                                                                 ArticleMetadata oneAM) {
 
-            String pdfPath;
+            String pdfPath = "";
             String url_string = cu.getUrl();
-            int markup_dir_start = url_string.lastIndexOf("/Markup/");
-            // This will leave the "/", so just add back on the sibling_dir and filename
-            if (markup_dir_start < 0) {
-                //can't return null because that would make it okay to emit
-                // this will fail to emit, as it should - we don't know how to verify the PDF existence
-                log.siteWarning("The XML file lives at an unexpected location: " + url_string);
-                pdfPath = PDF_DIR_FILE;
-            }  else {
-                pdfPath = url_string.substring(0, markup_dir_start) + PDF_DIR_FILE;
+            log.debug3("Fei: url_string " + url_string);
+            //XML and PDF are located inside the same directory
+            //http://content5.lockss.org/sourcefiles/acmjats-released/2019_4/XRDSv25i4-0716143453.zip!/3344809/3329889/3329889.xml
+            //http://content5.lockss.org/sourcefiles/acmjats-released/2019_4/XRDSv25i4-0716143453.zip!/3344809/3329889/3329889.pdf
+            if (url_string.indexOf(".xml") > -1) {
+                pdfPath = url_string.replace(".xml", ".pdf");
             }
             log.debug3("pdfPath is " + pdfPath);
             List<String> returnList = new ArrayList<String>();
@@ -95,7 +89,6 @@ public class ACMJatsSourceXmlMetadataExtractorFactory
         protected void postCookProcess(SourceXmlSchemaHelper schemaHelper,
                                        CachedUrl cu, ArticleMetadata thisAM) {
 
-            log.debug3("in AIP postCookProcess");
             //If we didn't get a valid date value, use the copyright year if it's there
             if (thisAM.get(MetadataField.FIELD_DATE) == null) {
                 if (thisAM.getRaw(JatsPublishingSchemaHelper.JATS_date) != null) {
