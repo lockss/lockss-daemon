@@ -331,12 +331,12 @@
       au < aha.AHADrupalPlugin ; down ; 1993 ; Circulation Research Volume 73 ; 73 >
       au < aha.AHADrupalPlugin ; down ; 1994 ; Circulation Research Volume 74 ; 74 >
       au < aha.AHADrupalPlugin ; down ; 1994 ; Circulation Research Volume 75 ; 75 >
-      au < aha.AHADrupalPlugin ; manifest ; 1995 ; Circulation Research Volume 76 ; 76 > #doi link only, no pdf file
-      au < aha.AHADrupalPlugin ; manifest ; 1995 ; Circulation Research Volume 77 ; 77 > #doi link only, no pdf file
-      au < aha.AHADrupalPlugin ; manifest ; 1996 ; Circulation Research Volume 78 ; 78 > #doi link only, no pdf file
-      au < aha.AHADrupalPlugin ; manifest ; 1996 ; Circulation Research Volume 79 ; 79 > #doi link only, no pdf file
-      au < aha.AHADrupalPlugin ; manifest ; 1997 ; Circulation Research Volume 80 ; 80 > #doi link only, no pdf file
-      au < aha.AHADrupalPlugin ; manifest ; 1997 ; Circulation Research Volume 81 ; 81 > #doi link only, no pdf file
+      au < aha.AHADrupalPlugin ; doNotProcess ; 1995 ; Circulation Research Volume 76 ; 76 > #doi link only, no pdf file
+      au < aha.AHADrupalPlugin ; doNotProcess ; 1995 ; Circulation Research Volume 77 ; 77 > #doi link only, no pdf file
+      au < aha.AHADrupalPlugin ; doNotProcess ; 1996 ; Circulation Research Volume 78 ; 78 > #doi link only, no pdf file
+      au < aha.AHADrupalPlugin ; doNotProcess ; 1996 ; Circulation Research Volume 79 ; 79 > #doi link only, no pdf file
+      au < aha.AHADrupalPlugin ; doNotProcess ; 1997 ; Circulation Research Volume 80 ; 80 > #doi link only, no pdf file
+      au < aha.AHADrupalPlugin ; doNotProcess ; 1997 ; Circulation Research Volume 81 ; 81 > #doi link only, no pdf file
       au < aha.AHADrupalPlugin ; down ; 1998 ; Circulation Research Volume 82 ; 82 >
       au < aha.AHADrupalPlugin ; down ; 1998 ; Circulation Research Volume 83 ; 83 >
       au < aha.AHADrupalPlugin ; down ; 1999 ; Circulation Research Volume 84 ; 84 >
@@ -595,12 +595,12 @@
       au < aha.AHADrupalPlugin ; down ; 1993 ; Hypertension Volume 22 ; 22 >
       au < aha.AHADrupalPlugin ; down ; 1994 ; Hypertension Volume 23 ; 23 >
       au < aha.AHADrupalPlugin ; down ; 1994 ; Hypertension Volume 24 ; 24 >
-      au < aha.AHADrupalPlugin ; manifest ; 1995 ; Hypertension Volume 25 ; 25 > #doi link only, no pdf file
-      au < aha.AHADrupalPlugin ; manifest ; 1995 ; Hypertension Volume 26 ; 26 > #doi link only, no pdf file
-      au < aha.AHADrupalPlugin ; manifest ; 1996 ; Hypertension Volume 27 ; 27 > #doi link only, no pdf file
-      au < aha.AHADrupalPlugin ; manifest ; 1996 ; Hypertension Volume 28 ; 28 > #doi link only, no pdf file
+      au < aha.AHADrupalPlugin ; doNotProcess ; 1995 ; Hypertension Volume 25 ; 25 > #doi link only, no pdf file
+      au < aha.AHADrupalPlugin ; doNotProcess ; 1995 ; Hypertension Volume 26 ; 26 > #doi link only, no pdf file
+      au < aha.AHADrupalPlugin ; doNotProcess ; 1996 ; Hypertension Volume 27 ; 27 > #doi link only, no pdf file
+      au < aha.AHADrupalPlugin ; doNotProcess ; 1996 ; Hypertension Volume 28 ; 28 > #doi link only, no pdf file
       au < aha.AHADrupalPlugin ; down ; 1997 ; Hypertension Volume 29 ; 29 >
-      au < aha.AHADrupalPlugin ; manifest ; 1997 ; Hypertension Volume 30 ; 30 > #doi link only, no pdf file
+      au < aha.AHADrupalPlugin ; doNotProcess ; 1997 ; Hypertension Volume 30 ; 30 > #doi link only, no pdf file
       au < aha.AHADrupalPlugin ; down ; 1998 ; Hypertension Volume 31 ; 31 >
       au < aha.AHADrupalPlugin ; down ; 1998 ; Hypertension Volume 32 ; 32 >
       au < aha.AHADrupalPlugin ; down ; 1999 ; Hypertension Volume 33 ; 33 >
@@ -686,9 +686,9 @@
       au < aha.AHADrupalPlugin ; down ; 1992 ; Stroke Volume 23 ; 23 >
       au < aha.AHADrupalPlugin ; down ; 1993 ; Stroke Volume 24 ; 24 >
       au < aha.AHADrupalPlugin ; down ; 1994 ; Stroke Volume 25 ; 25 >
-      au < aha.AHADrupalPlugin ; manifest ; 1995 ; Stroke Volume 26 ; 26 > #doi link only, no pdf
-      au < aha.AHADrupalPlugin ; manifest ; 1996 ; Stroke Volume 27 ; 27 > #doi link only, no pdf
-      au < aha.AHADrupalPlugin ; manifest ; 1997 ; Stroke Volume 28 ; 28 > #doi link only, no pdf
+      au < aha.AHADrupalPlugin ; doNotProcess ; 1995 ; Stroke Volume 26 ; 26 > #doi link only, no pdf
+      au < aha.AHADrupalPlugin ; doNotProcess ; 1996 ; Stroke Volume 27 ; 27 > #doi link only, no pdf
+      au < aha.AHADrupalPlugin ; doNotProcess ; 1997 ; Stroke Volume 28 ; 28 > #doi link only, no pdf
       au < aha.AHADrupalPlugin ; down ; 1998 ; Stroke Volume 29 ; 29 >
       au < aha.AHADrupalPlugin ; down ; 1999 ; Stroke Volume 30 ; 30 >
       au < HighWirePressH20Plugin ; down ; 2000 ; Stroke Volume 31 ; 31 >
