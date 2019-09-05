@@ -18,14 +18,14 @@
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
     #moved to Wiley
 
-    au < HighWirePressH20Plugin ; manifest ; 1997 ; American Journal of Botany Volume 84 ; 84 >
-    au < HighWirePressH20Plugin ; manifest ; 1998 ; American Journal of Botany Volume 85 ; 85 >
-    au < HighWirePressH20Plugin ; manifest ; 1999 ; American Journal of Botany Volume 86 ; 86 >
-    au < HighWirePressH20Plugin ; manifest ; 2000 ; American Journal of Botany Volume 87 ; 87 >
-    au < HighWirePressH20Plugin ; manifest ; 2001 ; American Journal of Botany Volume 88 ; 88 >
-    au < HighWirePressH20Plugin ; manifest ; 2002 ; American Journal of Botany Volume 89 ; 89 >
-    au < HighWirePressH20Plugin ; manifest ; 2003 ; American Journal of Botany Volume 90 ; 90 >
-    au < HighWirePressH20Plugin ; manifest ; 2004 ; American Journal of Botany Volume 91 ; 91 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1997 ; American Journal of Botany Volume 84 ; 84 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1998 ; American Journal of Botany Volume 85 ; 85 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 1999 ; American Journal of Botany Volume 86 ; 86 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2000 ; American Journal of Botany Volume 87 ; 87 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2001 ; American Journal of Botany Volume 88 ; 88 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2002 ; American Journal of Botany Volume 89 ; 89 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2003 ; American Journal of Botany Volume 90 ; 90 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2004 ; American Journal of Botany Volume 91 ; 91 >
     au < HighWireStrVolPlugin ; superseded ; 2005 ; American Journal of Botany Volume 92 [superseded] ; 92 >
     au < HighWirePressPlugin ; down ; 2005 ; American Journal of Botany Volume 92 ; 92 >
     au < HighWireStrVolPlugin ; superseded ; 2006 ; American Journal of Botany Volume 93 [superseded] ; 93 >

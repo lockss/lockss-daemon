@@ -4,6 +4,9 @@
     name = Association of College & Research Libraries
   >
 
+     #contact publisher if they join CLOCKSS
+     #retired file in 2019
+
       #moving to OJS end of April 2017
       plugin = org.lockss.plugin.ojs2.OJS2Plugin
       implicit < status ; year ; name ; param[year] >
