@@ -19,7 +19,7 @@
    {
     
     plugin = org.lockss.plugin.bepress.BePressPlugin
-    param[base_url] = http://vc.bridgew.edu/
+    param[base_url] = https://vc.bridgew.edu/
     param[journal_abbr] = jiws
     implicit < status ; year ; name ; param[volume] >
 
