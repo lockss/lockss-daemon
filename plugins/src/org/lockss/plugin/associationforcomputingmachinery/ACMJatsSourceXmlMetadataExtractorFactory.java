@@ -42,8 +42,7 @@ import org.lockss.util.Logger;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ACMJatsSourceXmlMetadataExtractorFactory
-        implements FileMetadataExtractorFactory {
+public class ACMJatsSourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
     static Logger log = Logger.getLogger("ACMJatsSourceMetadataExtractorFactory");
 
     private static SourceXmlSchemaHelper JatsPublishingHelper = null;
@@ -55,7 +54,7 @@ public class ACMJatsSourceXmlMetadataExtractorFactory
         return new JatsPublishingSourceXmlMetadataExtractor();
     }
 
-    public class JatsPublishingSourceXmlMetadataExtractor extends SourceXmlMetadataExtractorFactory.SourceXmlMetadataExtractor {
+    public class JatsPublishingSourceXmlMetadataExtractor extends SourceXmlMetadataExtractor {
 
         @Override
         protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
