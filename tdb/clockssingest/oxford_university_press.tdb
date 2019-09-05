@@ -93,9 +93,9 @@
 
     au < ready ; exists ; 2010 ; 2010 ; Advances in Nutrition Volume 1 ; 1 ; >
     au < ready ; exists ; 2011 ; 2011 ; Advances in Nutrition Volume 2 ; 2 ; >
-    au < ready ; exists ; 2012 ; 2012 ; Advances in Nutrition Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2012 ; 2012 ; Advances in Nutrition Volume 3 ; 3 ; >
     au < ready ; exists ; 2013 ; 2013 ; Advances in Nutrition Volume 4 ; 4 ; >
-    au < ready ; exists ; 2014 ; 2014 ; Advances in Nutrition Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2014 ; 2014 ; Advances in Nutrition Volume 5 ; 5 ; >
     au < frozen ; exists ; 2015 ; 2015 ; Advances in Nutrition Volume 6 ; 6 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Advances in Nutrition Volume 7 ; 7 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Advances in Nutrition Volume 8 ; 8 ; >
@@ -810,7 +810,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; American Journal of Hypertension Volume 29 ; 29 ; >
     au < frozen ; exists ; 2017 ; 2017 ; American Journal of Hypertension Volume 30 ; 30 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; American Journal of Hypertension Volume 31 ; 31 ; >
-    au < ready ; exists ; 2019 ; 2019 ; American Journal of Hypertension Volume 32 ; 32 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; American Journal of Hypertension Volume 32 ; 32 ; >
 
   }
 
@@ -1083,7 +1083,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Journal of Animal Science Volume 93 ; 93 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Journal of Animal Science Volume 94 ; 94 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Journal of Animal Science Volume 95 ; 95 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Journal of Animal Science Volume 96 ; 96 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Journal of Animal Science Volume 96 ; 96 ; >
 
   }
 
@@ -1246,7 +1246,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Annals of Botany Volume 117-118 ; 117-118 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Annals of Botany Volume 119-120 ; 119-120 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Annals of Botany Volume 121-122 ; 121-122 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Annals of Botany Volume 123-124 ; 123-124 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Annals of Botany Volume 123-124 ; 123-124 ; >
 
   }
 
@@ -1353,7 +1353,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Annals of the Entomological Society of America Volume 109 ; 109 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Annals of the Entomological Society of America Volume 110 ; 110 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Annals of the Entomological Society of America Volume 111 ; 111 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Annals of the Entomological Society of America Volume 112 ; 112 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Annals of the Entomological Society of America Volume 112 ; 112 ; >
 
   }
 
@@ -1689,7 +1689,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Arthropod Management Tests Volume 41 ; 41 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Arthropod Management Tests Volume 42 ; 42 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Arthropod Management Tests Volume 43 ; 43 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Arthropod Management Tests Volume 44 ; 44 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Arthropod Management Tests Volume 44 ; 44 ; >
 
   }
 
@@ -2063,7 +2063,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; BioScience Volume 66 ; 66 ; >
     au < frozen ; exists ; 2017 ; 2017 ; BioScience Volume 67 ; 67 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; BioScience Volume 68 ; 68 ; >
-    au < ready ; exists ; 2019 ; 2019 ; BioScience Volume 69 ; 69 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; BioScience Volume 69 ; 69 ; >
 
   }
 
@@ -2379,7 +2379,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Biometrika Volume 103 ; 103 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Biometrika Volume 104 ; 104 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Biometrika Volume 105 ; 105 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Biometrika Volume 106 ; 106 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Biometrika Volume 106 ; 106 ; >
 
   }
 
@@ -2437,7 +2437,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Biostatistics Volume 17 ; 17 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Biostatistics Volume 18 ; 18 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Biostatistics Volume 19 ; 19 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Biostatistics Volume 20 ; 20 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Biostatistics Volume 20 ; 20 ; >
 
   }
 
@@ -2653,7 +2653,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Briefings in Bioinformatics Volume 17 ; 17 ; > #configuration: not polling on ingest machines 12/6/18 ARO PDF issue
     au < finished ; crawling ; 2017 ; 2017 ; Briefings in Bioinformatics Volume 18 ; 18 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Briefings in Bioinformatics Volume 19 ; 19 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Briefings in Bioinformatics Volume 20 ; 20 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Briefings in Bioinformatics Volume 20 ; 20 ; >
 
   }
 
@@ -2685,7 +2685,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Briefings in Functional Genomics Volume 15 ; 15 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Briefings in Functional Genomics Volume 16 ; 16 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Briefings in Functional Genomics Volume 17 ; 17 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Briefings in Functional Genomics Volume 18 ; 18 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Briefings in Functional Genomics Volume 18 ; 18 ; >
 
   }
 
@@ -3014,7 +3014,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Capital Markets Law Journal Volume 11 ; 11 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Capital Markets Law Journal Volume 12 ; 12 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Capital Markets Law Journal Volume 13 ; 13 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Capital Markets Law Journal Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Capital Markets Law Journal Volume 14 ; 14 ; >
 
   }
 
@@ -3617,9 +3617,9 @@
     au < ready ; exists ; 2009 ; 2009 ; The Condor: Ornithological Applications Volume 111 ; 111 ; >
     au < ready ; exists ; 2010 ; 2010 ; The Condor: Ornithological Applications Volume 112 ; 112 ; >
     au < ready ; exists ; 2011 ; 2011 ; The Condor: Ornithological Applications Volume 113 ; 113 ; >
-    au < ready ; exists ; 2012 ; 2012 ; The Condor: Ornithological Applications Volume 114 ; 114 ; >
+    au < crawling ; exists ; 2012 ; 2012 ; The Condor: Ornithological Applications Volume 114 ; 114 ; >
     au < ready ; exists ; 2013 ; 2013 ; The Condor: Ornithological Applications Volume 115 ; 115 ; >
-    au < ready ; exists ; 2014 ; 2014 ; The Condor: Ornithological Applications Volume 116 ; 116 ; >
+    au < crawling ; exists ; 2014 ; 2014 ; The Condor: Ornithological Applications Volume 116 ; 116 ; >
     au < ready ; exists ; 2015 ; 2015 ; The Condor: Ornithological Applications Volume 117 ; 117 ; >
     au < frozen ; exists ; 2016 ; 2016 ; The Condor: Ornithological Applications Volume 118 ; 118 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The Condor: Ornithological Applications Volume 119 ; 119 ; >
@@ -3840,7 +3840,7 @@
     au < ready ; exists ; 2012 ; 2012 ; Current Zoology Volume 58 ; 58 ; >
     au < ready ; exists ; 2013 ; 2013 ; Current Zoology Volume 59 ; 59 ; >
     au < ready ; exists ; 2014 ; 2014 ; Current Zoology Volume 60 ; 60 ; >
-    au < ready ; exists ; 2015 ; 2015 ; Current Zoology Volume 61 ; 61 ; >
+    au < crawling ; exists ; 2015 ; 2015 ; Current Zoology Volume 61 ; 61 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Current Zoology Volume 62 ; 62 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Current Zoology Volume 63 ; 63 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Current Zoology Volume 64 ; 64 ; >
@@ -3948,8 +3948,8 @@
     au < manifest ; exists ; 2008 ; 2008 ; Digital Scholarship in the Humanities Volume 23 ; 23 ; >
     au < ready ; exists ; 2009 ; 2009 ; Digital Scholarship in the Humanities Volume 24 ; 24 ; >
     au < ready ; exists ; 2010 ; 2010 ; Digital Scholarship in the Humanities Volume 25 ; 25 ; >
-    au < ready ; exists ; 2011 ; 2011 ; Digital Scholarship in the Humanities Volume 26 ; 26 ; >
-    au < ready ; exists ; 2012 ; 2012 ; Digital Scholarship in the Humanities Volume 27 ; 27 ; >
+    au < crawling ; exists ; 2011 ; 2011 ; Digital Scholarship in the Humanities Volume 26 ; 26 ; >
+    au < crawling ; exists ; 2012 ; 2012 ; Digital Scholarship in the Humanities Volume 27 ; 27 ; >
     au < ready ; exists ; 2013 ; 2013 ; Digital Scholarship in the Humanities Volume 28 ; 28 ; >
     au < ready ; exists ; 2014 ; 2014 ; Digital Scholarship in the Humanities Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Digital Scholarship in the Humanities Volume 30 ; 30 ; >
@@ -4050,8 +4050,8 @@
     au < manifest ; exists ; 2008 ; 2008 ; Diseases of the Esophagus Volume 21 ; 21 ; >
     au < ready ; exists ; 2009 ; 2009 ; Diseases of the Esophagus Volume 22 ; 22 ; >
     au < ready ; exists ; 2010 ; 2010 ; Diseases of the Esophagus Volume 23 ; 23 ; >
-    au < ready ; exists ; 2011 ; 2011 ; Diseases of the Esophagus Volume 24 ; 24 ; >
-    au < ready ; exists ; 2012 ; 2012 ; Diseases of the Esophagus Volume 25 ; 25 ; >
+    au < crawling ; exists ; 2011 ; 2011 ; Diseases of the Esophagus Volume 24 ; 24 ; >
+    au < crawling ; exists ; 2012 ; 2012 ; Diseases of the Esophagus Volume 25 ; 25 ; >
     au < ready ; exists ; 2013 ; 2013 ; Diseases of the Esophagus Volume 26 ; 26 ; >
     au < ready ; exists ; 2014 ; 2014 ; Diseases of the Esophagus Volume 27 ; 27 ; >
     au < ready ; exists ; 2015 ; 2015 ; Diseases of the Esophagus Volume 28 ; 28 ; >
@@ -4306,7 +4306,7 @@
     au < testing ; exists ; 2009 ; 2009 ; The Econometrics Journal Volume 12 ; 12 ; >
     au < frozen ; exists ; 2010 ; 2010 ; The Econometrics Journal Volume 13 ; 13 ; >
     au < frozen ; exists ; 2011 ; 2011 ; The Econometrics Journal Volume 14 ; 14 ; >
-    au < ready ; exists ; 2012 ; 2012 ; The Econometrics Journal Volume 15 ; 15 ; >
+    au < crawling ; exists ; 2012 ; 2012 ; The Econometrics Journal Volume 15 ; 15 ; >
     au < ready ; exists ; 2013 ; 2013 ; The Econometrics Journal Volume 16 ; 16 ; >
     au < ready ; exists ; 2014 ; 2014 ; The Econometrics Journal Volume 17 ; 17 ; >
     au < frozen ; exists ; 2015 ; 2015 ; The Econometrics Journal Volume 18 ; 18 ; >
@@ -4446,12 +4446,12 @@
     au < exists ; exists ; 2006 ; 2006 ; The Economic Journal Volume 116 ; 116 ; >
     au < exists ; exists ; 2007 ; 2007 ; The Economic Journal Volume 117 ; 117 ; >
     au < manifest ; exists ; 2008 ; 2008 ; The Economic Journal Volume 118 ; 118 ; >
-    au < ready ; exists ; 2009 ; 2009 ; The Economic Journal Volume 119 ; 119 ; >
-    au < ready ; exists ; 2010 ; 2010 ; The Economic Journal Volume 120 ; 120 ; >
-    au < ready ; exists ; 2011 ; 2011 ; The Economic Journal Volume 121 ; 121 ; >
+    au < crawling ; exists ; 2009 ; 2009 ; The Economic Journal Volume 119 ; 119 ; >
+    au < crawling ; exists ; 2010 ; 2010 ; The Economic Journal Volume 120 ; 120 ; >
+    au < crawling ; exists ; 2011 ; 2011 ; The Economic Journal Volume 121 ; 121 ; >
     au < ready ; exists ; 2012 ; 2012 ; The Economic Journal Volume 122 ; 122 ; >
-    au < ready ; exists ; 2013 ; 2013 ; The Economic Journal Volume 123 ; 123 ; >
-    au < ready ; exists ; 2014 ; 2014 ; The Economic Journal Volume 124 ; 124 ; >
+    au < crawling ; exists ; 2013 ; 2013 ; The Economic Journal Volume 123 ; 123 ; >
+    au < crawling ; exists ; 2014 ; 2014 ; The Economic Journal Volume 124 ; 124 ; >
     au < ready ; exists ; 2015 ; 2015 ; The Economic Journal Volume 125 ; 125 ; >
     au < frozen ; exists ; 2016 ; 2016 ; The Economic Journal Volume 126 ; 126 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The Economic Journal Volume 127 ; 127 ; >
@@ -6567,7 +6567,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Health & Social Work Volume 41 ; 41 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Health & Social Work Volume 42 ; 42 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Health & Social Work Volume 43 ; 43 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Health & Social Work Volume 44 ; 44 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Health & Social Work Volume 44 ; 44 ; >
 
   }
 
@@ -20579,7 +20579,7 @@
     au < doNotProcess ; exists ; 2006 ; 2006 ; Tree Physiology Volume 26 ; 26 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Tree Physiology Volume 27 ; 27 ; >
     au < manifest ; exists ; 2008 ; 2008 ; Tree Physiology Volume 28 ; 28 ; >
-    au < ready ; exists ; 2009 ; 2009 ; Tree Physiology Volume 29 ; 29 ; >
+    au < crawling ; exists ; 2009 ; 2009 ; Tree Physiology Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Tree Physiology Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Tree Physiology Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Tree Physiology Volume 32 ; 32 ; >
