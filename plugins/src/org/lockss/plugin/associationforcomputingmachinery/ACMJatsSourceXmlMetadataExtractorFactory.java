@@ -71,7 +71,6 @@ public class ACMJatsSourceXmlMetadataExtractorFactory extends SourceXmlMetadataE
 
             String pdfPath = "";
             String url_string = cu.getUrl();
-            log.debug3("Fei: url_string " + url_string);
             //XML and PDF are located inside the same directory
             //http://content5.lockss.org/sourcefiles/acmjats-released/2019_4/XRDSv25i4-0716143453.zip!/3344809/3329889/3329889.xml
             //http://content5.lockss.org/sourcefiles/acmjats-released/2019_4/XRDSv25i4-0716143453.zip!/3344809/3329889/3329889.pdf
