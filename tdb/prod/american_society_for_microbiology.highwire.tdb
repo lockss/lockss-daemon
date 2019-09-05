@@ -82,7 +82,7 @@
       au < HighWirePressH20Plugin ; down ; 2015 ; Antimicrobial Agents and Chemotherapy Volume 59 ; 59 ; http://aac.asm.org/ >
       au < HighWirePressH20Plugin ; down ; 2016 ; Antimicrobial Agents and Chemotherapy Volume 60 ; 60 ; http://aac.asm.org/ >
       au < HighWirePressH20Plugin ; down ; 2017 ; Antimicrobial Agents and Chemotherapy Volume 61 ; 61 ; http://aac.asm.org/ >
-  
+
       au < asm.ASMDrupalPlugin ; exists ; 2018 ; Antimicrobial Agents and Chemotherapy Volume 62 ; 62 ; https://aac.asm.org/ >
     }
   
@@ -179,7 +179,7 @@
       au < HighWirePressH20Plugin ; down ; 2015 ; Applied and Environmental Microbiology Volume 81 ; 81 ; http://aem.asm.org/ >
       au < HighWirePressH20Plugin ; down ; 2016 ; Applied and Environmental Microbiology Volume 82 ; 82 ; http://aem.asm.org/ >
       au < HighWirePressH20Plugin ; down ; 2017 ; Applied and Environmental Microbiology Volume 83 ; 83 ; http://aem.asm.org/ >
-  
+
       au < asm.ASMDrupalPlugin ; exists ; 2018 ; Applied and Environmental Microbiology Volume 84 ; 84 ; https://aem.asm.org/ >
     }
   
@@ -257,7 +257,7 @@
       au < HighWirePressH20Plugin ; down ; 2015 ; Clinical Microbiology Reviews Volume 28 ; 28 ; http://cmr.asm.org/ >
       au < HighWirePressH20Plugin ; down ; 2016 ; Clinical Microbiology Reviews Volume 29 ; 29 ; http://cmr.asm.org/ >
       au < HighWirePressH20Plugin ; down ; 2017 ; Clinical Microbiology Reviews Volume 30 ; 30 ; http://cmr.asm.org/ >
-  
+
       au < asm.ASMDrupalPlugin ; exists ; 2018 ; Clinical Microbiology Reviews Volume 31 ; 31 ; https://cmr.asm.org/ >
     }
   
@@ -382,7 +382,7 @@
       au < HighWirePressH20Plugin ; down ; 2015 ; Infection and Immunity Volume 83 ; 83 ; http://iai.asm.org/ >
       au < HighWirePressH20Plugin ; down ; 2016 ; Infection and Immunity Volume 84 ; 84 ; http://iai.asm.org/ >
       au < HighWirePressH20Plugin ; down ; 2017 ; Infection and Immunity Volume 85 ; 85 ; http://iai.asm.org/ >
-  
+
       au < asm.ASMDrupalPlugin ; exists ; 2018 ; Infection and Immunity Volume 86 ; 86 ; https://iai.asm.org/ >
     }
   
@@ -594,7 +594,7 @@
       au < HighWirePressH20Plugin ; down ; 2015 ; Journal of Bacteriology Volume 197 ; 197 ; http://jb.asm.org/ >
       au < HighWirePressH20Plugin ; down ; 2016 ; Journal of Bacteriology Volume 198 ; 198 ; http://jb.asm.org/ >
       au < HighWirePressH20Plugin ; down ; 2017 ; Journal of Bacteriology Volume 199 ; 199 ; http://jb.asm.org/ >
-  
+
       au < asm.ASMDrupalPlugin ; exists ; 2018 ; Journal of Bacteriology Volume 200 ; 200 ; https://jb.asm.org/ >
     }
   
@@ -662,7 +662,7 @@
       au < HighWirePressH20Plugin ; down ; 2015 ; Journal of Clinical Microbiology Volume 53 ; 53 ; http://jcm.asm.org/ >
       au < HighWirePressH20Plugin ; down ; 2016 ; Journal of Clinical Microbiology Volume 54 ; 54 ; http://jcm.asm.org/ >
       au < HighWirePressH20Plugin ; down ; 2017 ; Journal of Clinical Microbiology Volume 55 ; 55 ; http://jcm.asm.org/ >
-  
+
       au < asm.ASMDrupalPlugin ; exists ; 2018 ; Journal of Clinical Microbiology Volume 56 ; 56 ; https://jcm.asm.org/ >
     }
   
@@ -676,38 +676,38 @@
 #      param[base_url] = http://jvi.asm.org/
       #notReady = Probe url cgi/reprint/  outside of crawl spec counting
       
-      au < asm.ASMDrupalPlugin ; exists ; 1967 ; Journal of Virology Volume 1 ; 1 ; https://jvi.asm.org/ >
-      au < asm.ASMDrupalPlugin ; exists ; 1968 ; Journal of Virology Volume 2 ; 2 ; https://jvi.asm.org/ >
-      au < asm.ASMDrupalPlugin ; exists ; 1969 ; Journal of Virology Volume 3 ; 3 ; https://jvi.asm.org/ >
-      au < asm.ASMDrupalPlugin ; exists ; 1969 ; Journal of Virology Volume 4 ; 4 ; https://jvi.asm.org/ >
-      au < asm.ASMDrupalPlugin ; exists ; 1970 ; Journal of Virology Volume 5 ; 5 ; https://jvi.asm.org/ >
-      au < asm.ASMDrupalPlugin ; exists ; 1970 ; Journal of Virology Volume 6 ; 6 ; https://jvi.asm.org/ >
-      au < asm.ASMDrupalPlugin ; exists ; 1971 ; Journal of Virology Volume 7 ; 7 ; https://jvi.asm.org/ >
-      au < asm.ASMDrupalPlugin ; exists ; 1971 ; Journal of Virology Volume 8 ; 8 ; https://jvi.asm.org/ >
-      au < asm.ASMDrupalPlugin ; exists ; 1972 ; Journal of Virology Volume 9 ; 9 ; https://jvi.asm.org/ >
-      au < asm.ASMDrupalPlugin ; exists ; 1972 ; Journal of Virology Volume 10 ; 10 ; https://jvi.asm.org/ >
-      au < asm.ASMDrupalPlugin ; exists ; 1973 ; Journal of Virology Volume 11 ; 11 ; https://jvi.asm.org/ >
-      au < asm.ASMDrupalPlugin ; exists ; 1973 ; Journal of Virology Volume 12 ; 12 ; https://jvi.asm.org/ >
-      au < asm.ASMDrupalPlugin ; exists ; 1974 ; Journal of Virology Volume 13 ; 13 ; https://jvi.asm.org/ >
-      au < asm.ASMDrupalPlugin ; exists ; 1974 ; Journal of Virology Volume 14 ; 14 ; https://jvi.asm.org/ >
-      au < asm.ASMDrupalPlugin ; exists ; 1975 ; Journal of Virology Volume 15 ; 15 ; https://jvi.asm.org/ >
-      au < asm.ASMDrupalPlugin ; exists ; 1975 ; Journal of Virology Volume 16 ; 16 ; https://jvi.asm.org/ >
-      au < asm.ASMDrupalPlugin ; exists ; 1976 ; Journal of Virology Volume 17 ; 17 ; https://jvi.asm.org/ >
-      au < asm.ASMDrupalPlugin ; exists ; 1976 ; Journal of Virology Volume 18 ; 18 ; https://jvi.asm.org/ >
-      au < asm.ASMDrupalPlugin ; exists ; 1976 ; Journal of Virology Volume 19 ; 19 ; https://jvi.asm.org/ >
-      au < asm.ASMDrupalPlugin ; exists ; 1976 ; Journal of Virology Volume 20 ; 20 ; https://jvi.asm.org/ >
-      au < asm.ASMDrupalPlugin ; exists ; 1977 ; Journal of Virology Volume 21 ; 21 ; https://jvi.asm.org/ >
-      au < asm.ASMDrupalPlugin ; exists ; 1977 ; Journal of Virology Volume 22 ; 22 ; https://jvi.asm.org/ >
-      au < asm.ASMDrupalPlugin ; exists ; 1977 ; Journal of Virology Volume 23 ; 23 ; https://jvi.asm.org/ >
-      au < asm.ASMDrupalPlugin ; exists ; 1977 ; Journal of Virology Volume 24 ; 24 ; https://jvi.asm.org/ >
-      au < asm.ASMDrupalPlugin ; exists ; 1978 ; Journal of Virology Volume 25 ; 25 ; https://jvi.asm.org/ >
-      au < asm.ASMDrupalPlugin ; exists ; 1978 ; Journal of Virology Volume 26 ; 26 ; https://jvi.asm.org/ >
-      au < asm.ASMDrupalPlugin ; exists ; 1978 ; Journal of Virology Volume 27 ; 27 ; https://jvi.asm.org/ >
-      au < asm.ASMDrupalPlugin ; exists ; 1978 ; Journal of Virology Volume 28 ; 28 ; https://jvi.asm.org/ >
-      au < asm.ASMDrupalPlugin ; exists ; 1979 ; Journal of Virology Volume 29 ; 29 ; https://jvi.asm.org/ >
-      au < asm.ASMDrupalPlugin ; exists ; 1979 ; Journal of Virology Volume 30 ; 30 ; https://jvi.asm.org/ >
-      au < asm.ASMDrupalPlugin ; exists ; 1979 ; Journal of Virology Volume 31 ; 31 ; https://jvi.asm.org/ >
-      au < asm.ASMDrupalPlugin ; exists ; 1979 ; Journal of Virology Volume 32 ; 32 ; https://jvi.asm.org/ >
+      au < asm.ASMDrupalPlugin ; doNotProcess ; 1967 ; Journal of Virology Volume 1 ; 1 ; https://jvi.asm.org/ >
+      au < asm.ASMDrupalPlugin ; doNotProcess ; 1968 ; Journal of Virology Volume 2 ; 2 ; https://jvi.asm.org/ >
+      au < asm.ASMDrupalPlugin ; doNotProcess ; 1969 ; Journal of Virology Volume 3 ; 3 ; https://jvi.asm.org/ >
+      au < asm.ASMDrupalPlugin ; doNotProcess ; 1969 ; Journal of Virology Volume 4 ; 4 ; https://jvi.asm.org/ >
+      au < asm.ASMDrupalPlugin ; doNotProcess ; 1970 ; Journal of Virology Volume 5 ; 5 ; https://jvi.asm.org/ >
+      au < asm.ASMDrupalPlugin ; doNotProcess ; 1970 ; Journal of Virology Volume 6 ; 6 ; https://jvi.asm.org/ >
+      au < asm.ASMDrupalPlugin ; doNotProcess ; 1971 ; Journal of Virology Volume 7 ; 7 ; https://jvi.asm.org/ >
+      au < asm.ASMDrupalPlugin ; doNotProcess ; 1971 ; Journal of Virology Volume 8 ; 8 ; https://jvi.asm.org/ >
+      au < asm.ASMDrupalPlugin ; doNotProcess ; 1972 ; Journal of Virology Volume 9 ; 9 ; https://jvi.asm.org/ >
+      au < asm.ASMDrupalPlugin ; doNotProcess ; 1972 ; Journal of Virology Volume 10 ; 10 ; https://jvi.asm.org/ >
+      au < asm.ASMDrupalPlugin ; doNotProcess ; 1973 ; Journal of Virology Volume 11 ; 11 ; https://jvi.asm.org/ >
+      au < asm.ASMDrupalPlugin ; doNotProcess ; 1973 ; Journal of Virology Volume 12 ; 12 ; https://jvi.asm.org/ >
+      au < asm.ASMDrupalPlugin ; doNotProcess ; 1974 ; Journal of Virology Volume 13 ; 13 ; https://jvi.asm.org/ >
+      au < asm.ASMDrupalPlugin ; doNotProcess ; 1974 ; Journal of Virology Volume 14 ; 14 ; https://jvi.asm.org/ >
+      au < asm.ASMDrupalPlugin ; doNotProcess ; 1975 ; Journal of Virology Volume 15 ; 15 ; https://jvi.asm.org/ >
+      au < asm.ASMDrupalPlugin ; doNotProcess ; 1975 ; Journal of Virology Volume 16 ; 16 ; https://jvi.asm.org/ >
+      au < asm.ASMDrupalPlugin ; doNotProcess ; 1976 ; Journal of Virology Volume 17 ; 17 ; https://jvi.asm.org/ >
+      au < asm.ASMDrupalPlugin ; doNotProcess ; 1976 ; Journal of Virology Volume 18 ; 18 ; https://jvi.asm.org/ >
+      au < asm.ASMDrupalPlugin ; doNotProcess ; 1976 ; Journal of Virology Volume 19 ; 19 ; https://jvi.asm.org/ >
+      au < asm.ASMDrupalPlugin ; doNotProcess ; 1976 ; Journal of Virology Volume 20 ; 20 ; https://jvi.asm.org/ >
+      au < asm.ASMDrupalPlugin ; doNotProcess ; 1977 ; Journal of Virology Volume 21 ; 21 ; https://jvi.asm.org/ >
+      au < asm.ASMDrupalPlugin ; doNotProcess ; 1977 ; Journal of Virology Volume 22 ; 22 ; https://jvi.asm.org/ >
+      au < asm.ASMDrupalPlugin ; doNotProcess ; 1977 ; Journal of Virology Volume 23 ; 23 ; https://jvi.asm.org/ >
+      au < asm.ASMDrupalPlugin ; doNotProcess ; 1977 ; Journal of Virology Volume 24 ; 24 ; https://jvi.asm.org/ >
+      au < asm.ASMDrupalPlugin ; doNotProcess ; 1978 ; Journal of Virology Volume 25 ; 25 ; https://jvi.asm.org/ >
+      au < asm.ASMDrupalPlugin ; doNotProcess ; 1978 ; Journal of Virology Volume 26 ; 26 ; https://jvi.asm.org/ >
+      au < asm.ASMDrupalPlugin ; doNotProcess ; 1978 ; Journal of Virology Volume 27 ; 27 ; https://jvi.asm.org/ >
+      au < asm.ASMDrupalPlugin ; doNotProcess ; 1978 ; Journal of Virology Volume 28 ; 28 ; https://jvi.asm.org/ >
+      au < asm.ASMDrupalPlugin ; doNotProcess ; 1979 ; Journal of Virology Volume 29 ; 29 ; https://jvi.asm.org/ >
+      au < asm.ASMDrupalPlugin ; doNotProcess ; 1979 ; Journal of Virology Volume 30 ; 30 ; https://jvi.asm.org/ >
+      au < asm.ASMDrupalPlugin ; doNotProcess ; 1979 ; Journal of Virology Volume 31 ; 31 ; https://jvi.asm.org/ >
+      au < asm.ASMDrupalPlugin ; doNotProcess ; 1979 ; Journal of Virology Volume 32 ; 32 ; https://jvi.asm.org/ >
       au < HighWirePressH20Plugin ; down ; 1980 ; Journal of Virology Volume 33 ; 33 ; http://jvi.asm.org/ >
       au < HighWirePressH20Plugin ; down ; 1980 ; Journal of Virology Volume 34 ; 34 ; http://jvi.asm.org/ >
       au < HighWirePressH20Plugin ; down ; 1980 ; Journal of Virology Volume 35 ; 35 ; http://jvi.asm.org/ >
