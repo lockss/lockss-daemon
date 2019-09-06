@@ -372,6 +372,7 @@ Args:
   <property name="jackson-core.jar" value="${lib}/jackson-core-${jackson.version}.jar" />
   <property name="jackson-databind.jar" value="${lib}/jackson-databind-${jackson.version}.jar" />
   <property name="jackson-annotations.jar" value="${lib}/jackson-annotations-${jackson.version}.jar" />
+  <property name="json-path.jar" value="${lib}/json-path-2.4.0.jar" />
 
   <property name="antlr.runtime.jar" value="${lib}/antlr-runtime-4.5.3.jar" />
   <property name="antlr.tools.jar" value="${lib}/antlr-4.5.3-complete.jar" />
@@ -582,6 +583,7 @@ Args:
     <pathelement path="${jackson-annotations.jar}" />
     <pathelement path="${jackson-core.jar}" />
     <pathelement path="${jackson-databind.jar}" />
+    <pathelement path="${json-path.jar}" />
     <!-- Needed for TDB tools: -->
     <pathelement path="${antlr.runtime.jar}" />
     <!-- Needed by XOAI -->
