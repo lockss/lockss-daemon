@@ -29,11 +29,11 @@
     #sch - Scottish Church History coming in 2019
 
     au < frozen ; exists ; 2013 ; Scottish Church History Volume 42 ; 42 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 2014 ; Scottish Church History Volume 43 ; 43 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 2014 ; Scottish Church History Volume 43 ; 43 ; https://www.euppublishing.com/ ; >
     au < ready ; exists ; 2015 ; Scottish Church History Volume 44 ; 44 ; https://www.euppublishing.com/ ; >
     au < ready ; exists ; 2016 ; Scottish Church History Volume 45 ; 45 ; https://www.euppublishing.com/ ; >
     au < frozen ; exists ; 2017 ; Scottish Church History Volume 46 ; 46 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 2018 ; Scottish Church History Volume 47 ; 47 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 2018 ; Scottish Church History Volume 47 ; 47 ; https://www.euppublishing.com/ ; >
     au < manifest ; exists ; 2019 ; Scottish Church History Volume 48 ; 48 ; https://www.euppublishing.com/ ; >
   }
 
@@ -641,7 +641,7 @@
 
      au < manifest ; exists ; 1999 ; Gothic Studies Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
      au < frozen ; exists ; 2000 ; Gothic Studies Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
-     au < crawling ; exists ; 2001 ; Gothic Studies Volume 3 ; 3 ; https://www.euppublishing.com/ ; >
+     au < frozen ; exists ; 2001 ; Gothic Studies Volume 3 ; 3 ; https://www.euppublishing.com/ ; >
      au < frozen ; exists ; 2002 ; Gothic Studies Volume 4 ; 4 ; https://www.euppublishing.com/ ; >
      au < frozen ; exists ; 2003 ; Gothic Studies Volume 5 ; 5 ; https://www.euppublishing.com/ ; >
      au < frozen ; exists ; 2004 ; Gothic Studies Volume 6 ; 6 ; https://www.euppublishing.com/ ; >
@@ -677,7 +677,7 @@
     param[journal_id] = hls
 
     au < frozen ; exists ; 2002 ; Holy Land Studies Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 2003 ; Holy Land Studies Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 2003 ; Holy Land Studies Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
     au < finished ; finished ; 2004 ; Holy Land Studies Volume 3 ; 3 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2005 ; Holy Land Studies Volume 4 ; 4 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2006 ; Holy Land Studies Volume 5 ; 5 ; http://www.euppublishing.com/ ; >
