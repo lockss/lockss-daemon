@@ -92,7 +92,7 @@
     param[journal_id] = advances
 
     au < ready ; exists ; 2010 ; 2010 ; Advances in Nutrition Volume 1 ; 1 ; >
-    au < ready ; exists ; 2011 ; 2011 ; Advances in Nutrition Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2011 ; 2011 ; Advances in Nutrition Volume 2 ; 2 ; >
     au < crawling ; exists ; 2012 ; 2012 ; Advances in Nutrition Volume 3 ; 3 ; >
     au < ready ; exists ; 2013 ; 2013 ; Advances in Nutrition Volume 4 ; 4 ; >
     au < crawling ; exists ; 2014 ; 2014 ; Advances in Nutrition Volume 5 ; 5 ; >
@@ -536,7 +536,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; American Journal of Agricultural Economics Volume 98 ; 98 ; >
     au < frozen ; exists ; 2017 ; 2017 ; American Journal of Agricultural Economics Volume 99 ; 99 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; American Journal of Agricultural Economics Volume 100 ; 100 ; >
-    au < ready ; exists ; 2019 ; 2019 ; American Journal of Agricultural Economics Volume 101 ; 101 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; American Journal of Agricultural Economics Volume 101 ; 101 ; >
 
   }
 
@@ -571,7 +571,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; The American Journal of Clinical Nutrition Volume 103-104 ; 103-104 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The American Journal of Clinical Nutrition Volume 105-106 ; 105-106 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; The American Journal of Clinical Nutrition Volume 107-108 ; 107-108 ; >
-    au < ready ; exists ; 2019 ; 2019 ; The American Journal of Clinical Nutrition Volume 109-110 ; 109-110 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; The American Journal of Clinical Nutrition Volume 109-110 ; 109-110 ; >
 
   }
 
@@ -1043,9 +1043,9 @@
 
     au < ready ; exists ; 2011 ; 2011 ; Animal Frontiers Volume 1 ; 1 ; >
     au < frozen ; exists ; 2012 ; 2012 ; Animal Frontiers Volume 2 ; 2 ; >
-    au < ready ; exists ; 2013 ; 2013 ; Animal Frontiers Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2013 ; 2013 ; Animal Frontiers Volume 3 ; 3 ; >
     au < frozen ; exists ; 2014 ; 2014 ; Animal Frontiers Volume 4 ; 4 ; >
-    au < ready ; exists ; 2015 ; 2015 ; Animal Frontiers Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2015 ; 2015 ; Animal Frontiers Volume 5 ; 5 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Animal Frontiers Volume 6 ; 6 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Animal Frontiers Volume 7 ; 7 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Animal Frontiers Volume 8 ; 8 ; >
@@ -1099,7 +1099,7 @@
     param[journal_id] = abm
 
     au < deepCrawl ; exists ; 2018 ; 2018 ; Annals of Behavioral Medicine Volume 1 ; 1 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Annals of Behavioral Medicine Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Annals of Behavioral Medicine Volume 2 ; 2 ; >
 
   }
 
@@ -1309,7 +1309,7 @@
 
     au < finished ; crawling ; 2017 ; 2017 ; Annals of Work Exposures and Health Volume 61 ; 61 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2018 ; 2018 ; Annals of Work Exposures and Health Volume 62 ; 62 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Annals of Work Exposures and Health Volume 63 ; 63 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Annals of Work Exposures and Health Volume 63 ; 63 ; >
 
   }
 
@@ -1376,7 +1376,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; AoB PLANTS Volume 8 ; 8 ; >
     au < finished ; crawling ; 2017 ; 2017 ; AoB PLANTS Volume 9 ; 9 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2018 ; 2018 ; AoB PLANTS Volume 10 ; 10 ; >
-    au < ready ; exists ; 2019 ; 2019 ; AoB PLANTS Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; AoB PLANTS Volume 11 ; 11 ; >
 
   }
 
@@ -1476,7 +1476,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Applied Linguistics Volume 37 ; 37 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Applied Linguistics Volume 38 ; 38 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Applied Linguistics Volume 39 ; 39 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Applied Linguistics Volume 40 ; 40 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Applied Linguistics Volume 40 ; 40 ; >
 
   }
 
@@ -1556,7 +1556,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Arbitration International Volume 32 ; 32 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Arbitration International Volume 33 ; 33 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Arbitration International Volume 34 ; 34 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Arbitration International Volume 35 ; 35 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Arbitration International Volume 35 ; 35 ; >
 
   }
 
@@ -1626,7 +1626,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Archives of Clinical Neuropsychology Volume 31 ; 31 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Archives of Clinical Neuropsychology Volume 32 ; 32 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Archives of Clinical Neuropsychology Volume 33 ; 33 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Archives of Clinical Neuropsychology Volume 34 ; 34 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Archives of Clinical Neuropsychology Volume 34 ; 34 ; >
 
   }
 
@@ -1786,7 +1786,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; The Auk: Ornithological Advances Volume 131 ; 131 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The Auk: Ornithological Advances Volume 132 ; 132 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; The Auk: Ornithological Advances Volume 133 ; 133 ; >
-    au < ready ; exists ; 2019 ; 2019 ; The Auk: Ornithological Advances Volume 134 ; 134 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; The Auk: Ornithological Advances Volume 134 ; 134 ; >
 
   }
 
@@ -2194,7 +2194,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Biology Methods and Protocols Volume 1 ; 1 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Biology Methods and Protocols Volume 2 ; 2 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Biology Methods and Protocols Volume 3 ; 3 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Biology Methods and Protocols Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Biology Methods and Protocols Volume 4 ; 4 ; >
 
   }
 
@@ -2259,7 +2259,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Biology of Reproduction Volume 94-95 ; 94-95 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Biology of Reproduction Volume 96-97 ; 96-97 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Biology of Reproduction Volume 98-99 ; 98-99 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Biology of Reproduction Volume 100-101 ; 100-101 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Biology of Reproduction Volume 100-101 ; 100-101 ; >
 
   }
 
@@ -2458,7 +2458,7 @@
     au < ready ; exists ; 2011 ; 2011 ; Botanical Journal of the Linnean Society Volume 165-167 ; 165-167 ; >
     au < ready ; exists ; 2012 ; 2012 ; Botanical Journal of the Linnean Society Volume 168-170 ; 168-170 ; >
     au < ready ; exists ; 2013 ; 2013 ; Botanical Journal of the Linnean Society Volume 171-173 ; 171-173 ; >
-    au < ready ; exists ; 2014 ; 2014 ; Botanical Journal of the Linnean Society Volume 174-176 ; 174-176 ; >
+    au < crawling ; exists ; 2014 ; 2014 ; Botanical Journal of the Linnean Society Volume 174-176 ; 174-176 ; >
     au < testing ; exists ; 2015 ; 2015 ; Botanical Journal of the Linnean Society Volume 177-179 ; 177-179 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Botanical Journal of the Linnean Society Volume 180-182 ; 180-182 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Botanical Journal of the Linnean Society Volume 183-185 ; 183-185 ; reingest1.clockss.org:8082 >
@@ -2619,7 +2619,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Brain Volume 139 ; 139 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Brain Volume 140 ; 140 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Brain Volume 141 ; 141 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Brain Volume 142 ; 142 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Brain Volume 142 ; 142 ; >
 
   }
 
@@ -2986,7 +2986,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Cambridge Journal of Regions, Economy and Society Volume 9 ; 9 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Cambridge Journal of Regions, Economy and Society Volume 10 ; 10 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Cambridge Journal of Regions, Economy and Society Volume 11 ; 11 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Cambridge Journal of Regions, Economy and Society Volume 12 ; 12 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Cambridge Journal of Regions, Economy and Society Volume 12 ; 12 ; >
 
   }
 
@@ -3178,7 +3178,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Cerebral Cortex Volume 26 ; 26 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Cerebral Cortex Volume 27 ; 27 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Cerebral Cortex Volume 28 ; 28 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Cerebral Cortex Volume 29 ; 29 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Cerebral Cortex Volume 29 ; 29 ; >
 
   }
 
@@ -3322,7 +3322,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Chinese Journal of International Law Volume 15 ; 15 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Chinese Journal of International Law Volume 16 ; 16 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Chinese Journal of International Law Volume 17 ; 17 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Chinese Journal of International Law Volume 18 ; 18 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Chinese Journal of International Law Volume 18 ; 18 ; >
 
   }
 
@@ -3362,7 +3362,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 22 ; 22 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 23 ; 23 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 24 ; 24 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 25 ; 25 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 25 ; 25 ; >
 
   }
 
@@ -3387,7 +3387,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Classical Receptions Journal Volume 8 ; 8 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Classical Receptions Journal Volume 9 ; 9 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Classical Receptions Journal Volume 10 ; 10 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Classical Receptions Journal Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Classical Receptions Journal Volume 11 ; 11 ; >
 
   }
 
@@ -3614,7 +3614,7 @@
     au < doNotProcess ; exists ; 2006 ; 2006 ; The Condor: Ornithological Applications Volume 108 ; 108 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; The Condor: Ornithological Applications Volume 109 ; 109 ; >
     au < manifest ; exists ; 2008 ; 2008 ; The Condor: Ornithological Applications Volume 110 ; 110 ; >
-    au < ready ; exists ; 2009 ; 2009 ; The Condor: Ornithological Applications Volume 111 ; 111 ; >
+    au < crawling ; exists ; 2009 ; 2009 ; The Condor: Ornithological Applications Volume 111 ; 111 ; >
     au < ready ; exists ; 2010 ; 2010 ; The Condor: Ornithological Applications Volume 112 ; 112 ; >
     au < ready ; exists ; 2011 ; 2011 ; The Condor: Ornithological Applications Volume 113 ; 113 ; >
     au < crawling ; exists ; 2012 ; 2012 ; The Condor: Ornithological Applications Volume 114 ; 114 ; >
@@ -3836,7 +3836,7 @@
 
     param[journal_id] = cz
 
-    au < ready ; exists ; 2011 ; 2011 ; Current Zoology Volume 57 ; 57 ; >
+    au < crawling ; exists ; 2011 ; 2011 ; Current Zoology Volume 57 ; 57 ; >
     au < ready ; exists ; 2012 ; 2012 ; Current Zoology Volume 58 ; 58 ; >
     au < ready ; exists ; 2013 ; 2013 ; Current Zoology Volume 59 ; 59 ; >
     au < ready ; exists ; 2014 ; 2014 ; Current Zoology Volume 60 ; 60 ; >
@@ -3950,7 +3950,7 @@
     au < ready ; exists ; 2010 ; 2010 ; Digital Scholarship in the Humanities Volume 25 ; 25 ; >
     au < crawling ; exists ; 2011 ; 2011 ; Digital Scholarship in the Humanities Volume 26 ; 26 ; >
     au < crawling ; exists ; 2012 ; 2012 ; Digital Scholarship in the Humanities Volume 27 ; 27 ; >
-    au < ready ; exists ; 2013 ; 2013 ; Digital Scholarship in the Humanities Volume 28 ; 28 ; >
+    au < crawling ; exists ; 2013 ; 2013 ; Digital Scholarship in the Humanities Volume 28 ; 28 ; >
     au < ready ; exists ; 2014 ; 2014 ; Digital Scholarship in the Humanities Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Digital Scholarship in the Humanities Volume 30 ; 30 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Digital Scholarship in the Humanities Volume 31 ; 31 ; >
@@ -4048,13 +4048,13 @@
     au < doNotProcess ; exists ; 2006 ; 2006 ; Diseases of the Esophagus Volume 19 ; 19 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Diseases of the Esophagus Volume 20 ; 20 ; >
     au < manifest ; exists ; 2008 ; 2008 ; Diseases of the Esophagus Volume 21 ; 21 ; >
-    au < ready ; exists ; 2009 ; 2009 ; Diseases of the Esophagus Volume 22 ; 22 ; >
-    au < ready ; exists ; 2010 ; 2010 ; Diseases of the Esophagus Volume 23 ; 23 ; >
+    au < crawling ; exists ; 2009 ; 2009 ; Diseases of the Esophagus Volume 22 ; 22 ; >
+    au < crawling ; exists ; 2010 ; 2010 ; Diseases of the Esophagus Volume 23 ; 23 ; >
     au < crawling ; exists ; 2011 ; 2011 ; Diseases of the Esophagus Volume 24 ; 24 ; >
     au < crawling ; exists ; 2012 ; 2012 ; Diseases of the Esophagus Volume 25 ; 25 ; >
-    au < ready ; exists ; 2013 ; 2013 ; Diseases of the Esophagus Volume 26 ; 26 ; >
+    au < crawling ; exists ; 2013 ; 2013 ; Diseases of the Esophagus Volume 26 ; 26 ; >
     au < ready ; exists ; 2014 ; 2014 ; Diseases of the Esophagus Volume 27 ; 27 ; >
-    au < ready ; exists ; 2015 ; 2015 ; Diseases of the Esophagus Volume 28 ; 28 ; >
+    au < crawling ; exists ; 2015 ; 2015 ; Diseases of the Esophagus Volume 28 ; 28 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Diseases of the Esophagus Volume 29 ; 29 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Diseases of the Esophagus Volume 30 ; 30 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Diseases of the Esophagus Volume 31 ; 31 ; >
@@ -4452,7 +4452,7 @@
     au < ready ; exists ; 2012 ; 2012 ; The Economic Journal Volume 122 ; 122 ; >
     au < crawling ; exists ; 2013 ; 2013 ; The Economic Journal Volume 123 ; 123 ; >
     au < crawling ; exists ; 2014 ; 2014 ; The Economic Journal Volume 124 ; 124 ; >
-    au < ready ; exists ; 2015 ; 2015 ; The Economic Journal Volume 125 ; 125 ; >
+    au < crawling ; exists ; 2015 ; 2015 ; The Economic Journal Volume 125 ; 125 ; >
     au < frozen ; exists ; 2016 ; 2016 ; The Economic Journal Volume 126 ; 126 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The Economic Journal Volume 127 ; 127 ; >
     au < frozen ; exists ; 2018 ; 2018 ; The Economic Journal Volume 128 ; 128 ; >
@@ -6073,7 +6073,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; French History Volume 30 ; 30 ; >
     au < finished ; crawling ; 2017 ; 2017 ; French History Volume 31 ; 31 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; French History Volume 32 ; 32 ; >
-    au < ready ; exists ; 2019 ; 2019 ; French History Volume 33 ; 33 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; French History Volume 33 ; 33 ; >
 
   }
 
@@ -6161,7 +6161,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; French Studies Volume 70 ; 70 ; >
     au < finished ; crawling ; 2017 ; 2017 ; French Studies Volume 71 ; 71 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; French Studies Volume 72 ; 72 ; >
-    au < ready ; exists ; 2019 ; 2019 ; French Studies Volume 73 ; 73 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; French Studies Volume 73 ; 73 ; >
 
   }
 
@@ -6256,7 +6256,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Genome Biology and Evolution Volume 8 ; 8 ; >
     au < notReady ; exists ; 2017 ; 2017 ; Genome Biology and Evolution Volume 9 ; 9 ; > # 403 error on cdn back file
     au < deepCrawl ; exists ; 2018 ; 2018 ; Genome Biology and Evolution Volume 10 ; 10 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Genome Biology and Evolution Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Genome Biology and Evolution Volume 11 ; 11 ; >
 
   }
 
@@ -6428,7 +6428,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; German History Volume 34 ; 34 ; >
     au < frozen ; exists ; 2017 ; 2017 ; German History Volume 35 ; 35 ; >
     au < frozen ; exists ; 2018 ; 2018 ; German History Volume 36 ; 36 ; >
-    au < ready ; exists ; 2019 ; 2019 ; German History Volume 37 ; 37 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; German History Volume 37 ; 37 ; >
 
   }
 
@@ -6711,7 +6711,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Health Promotion International Volume 31 ; 31 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Health Promotion International Volume 32 ; 32 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Health Promotion International Volume 33 ; 33 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Health Promotion International Volume 34 ; 34 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Health Promotion International Volume 34 ; 34 ; >
 
   }
 
@@ -6858,7 +6858,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Human Molecular Genetics Volume 25 ; 25 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Human Molecular Genetics Volume 26 ; 26 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Human Molecular Genetics Volume 27 ; 27 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Human Molecular Genetics Volume 28 ; 28 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Human Molecular Genetics Volume 28 ; 28 ; >
 
   }
 
@@ -6922,7 +6922,7 @@
     #this title was ONLY in the publisher listing
     au < finished ; crawling ; 2017 ; 2017 ; Human Reproduction Open Volume 2017 ; 2017 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Human Reproduction Open Volume 2018 ; 2018 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Human Reproduction Open Volume 2019 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Human Reproduction Open Volume 2019 ; 2019 ; >
 
   }
 
@@ -9102,7 +9102,7 @@
     au < frozen ; exists ; 2009 ; 2009 ; Journal of Burn Care & Research Volume 30 ; 30 ; >
     au < frozen ; exists ; 2010 ; 2010 ; Journal of Burn Care & Research Volume 31 ; 31 ; >
     au < testing ; exists ; 2011 ; 2011 ; Journal of Burn Care & Research Volume 32 ; 32 ; >
-    au < ready ; exists ; 2012 ; 2012 ; Journal of Burn Care & Research Volume 33 ; 33 ; >
+    au < crawling ; exists ; 2012 ; 2012 ; Journal of Burn Care & Research Volume 33 ; 33 ; >
     au < frozen ; exists ; 2013 ; 2013 ; Journal of Burn Care & Research Volume 34 ; 34 ; >
     au < frozen ; exists ; 2014 ; 2014 ; Journal of Burn Care & Research Volume 35 ; 35 ; >
     au < frozen ; exists ; 2015 ; 2015 ; Journal of Burn Care & Research Volume 36 ; 36 ; >
@@ -14693,7 +14693,7 @@
     au < frozen ; exists ; 2009 ; 2009 ; Pathogens and Disease Volume 55-57 ; 55-57 ; >
     au < ready ; exists ; 2010 ; 2010 ; Pathogens and Disease Volume 58-60 ; 58-60 ; >
     au < frozen ; exists ; 2011 ; 2011 ; Pathogens and Disease Volume 61-63 ; 61-63 ; >
-    au < ready ; exists ; 2012 ; 2012 ; Pathogens and Disease Volume 64-66 ; 64-66 ; >
+    au < crawling ; exists ; 2012 ; 2012 ; Pathogens and Disease Volume 64-66 ; 64-66 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Pathogens and Disease Volume 67-69 ; 67-69 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Pathogens and Disease Volume 70-72 ; 70-72 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Pathogens and Disease Volume 73 ; 73 ; >
