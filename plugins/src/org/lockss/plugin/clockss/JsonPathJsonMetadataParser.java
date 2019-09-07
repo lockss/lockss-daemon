@@ -26,12 +26,14 @@
 
 package org.lockss.plugin.clockss;
 
-import static org.lockss.extractor.JsonPathMetadataExtractor.STRING_LIST_TYPE;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.node.JsonNodeType;
 import com.jayway.jsonpath.Configuration;
 import com.jayway.jsonpath.Configuration.ConfigurationBuilder;
 import com.jayway.jsonpath.DocumentContext;
 import com.jayway.jsonpath.JsonPath;
+import com.jayway.jsonpath.TypeRef;
 import com.jayway.jsonpath.spi.json.JacksonJsonNodeJsonProvider;
 import com.jayway.jsonpath.spi.mapper.JacksonMappingProvider;
 import java.io.BufferedInputStream;
@@ -42,8 +44,6 @@ import java.util.List;
 import java.util.Map;
 
 import org.lockss.extractor.ArticleMetadata;
-import org.lockss.extractor.JsonPathMetadataExtractor.JSON_TYPE;
-import org.lockss.extractor.JsonPathMetadataExtractor.JsonPathValue;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.util.IOUtil;
@@ -51,6 +51,141 @@ import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 
 public class JsonPathJsonMetadataParser {
+
+  static abstract public class JsonPathValue {
+
+    /**
+     * Override this method to specify a different type
+     */
+    public abstract JsonNodeType getType();
+
+    /**
+     * Override this method to handle a node-valued
+     * property or attribute. The default implementation
+     * returns the text content of the node.
+     *
+     * @param node the node value
+     * @return the text value of the node
+     */
+    public String getValue(JsonNode node) {
+      return (node == null) ? null : node.textValue();
+    }
+
+    /**
+     * Override this method to handle a text-valued
+     * property or attribute. The default implementation
+     * returns the input string.
+     *
+     * @param s the text value
+     * @return the text value
+     */
+    public String getValue(String s) {
+      return s;
+    }
+
+    /**
+     * Override this method to handle a boolean-valued
+     * property or attribute.  The default implementation
+     * returns the string value of the input boolean.
+     *
+     * @param b the boolean value
+     * @return the string value of the boolean
+     */
+    public String getValue(Boolean b) {
+      return (b == null) ? null : b.toString();
+    }
+
+    /**
+     * Override this method to handle a number-valued
+     * property or attribute.  The default implementation
+     * returns the string value of the input number.
+     *
+     * @param n the number value
+     * @return the string value of the number
+     */
+    public String getValue(Number n) {
+      return (n == null) ? null : n.toString();
+    }
+  }
+
+  /**
+   * JsonPathValue value for a single String value
+   */
+  static public class StringValue extends JsonPathValue {
+
+    @Override
+    public JsonNodeType getType() {
+      return JsonNodeType.STRING;
+    }
+  }
+
+  static final public JsonPathValue STRING_VALUE = new StringValue();
+
+  /**
+   * JsonPathValue for a single number value
+   */
+  static public class NumberValue extends JsonPathValue {
+
+    @Override
+    public JsonNodeType getType() {
+      return JsonNodeType.NUMBER;
+    }
+  }
+
+  static final public JsonPathValue NUMBER_VALUE = new NumberValue();
+
+  /**
+   * JsonPathValue for a boolean value
+   */
+  static public class BooleanValue extends JsonPathValue {
+
+    @Override
+    public JsonNodeType getType() {
+      return JsonNodeType.BOOLEAN;
+    }
+  }
+
+  static final public JsonPathValue BOOLEAN_VALUE = new BooleanValue();
+
+  /**
+   * JsonPathValue for an untyped object
+   */
+  static public class ObjectValue extends JsonPathValue {
+
+    @Override
+    public JsonNodeType getType() {
+      return JsonNodeType.OBJECT;
+    }
+  }
+
+  static final public JsonPathValue OBJECT_VALUE = new ObjectValue();
+
+  /**
+   * JsonPathValue for an untyped array
+   */
+  static public class ArrayValue extends JsonPathValue {
+
+    @Override
+    public JsonNodeType getType() {
+      return JsonNodeType.ARRAY;
+    }
+  }
+
+  static final public JsonPathValue ARRAY_VALUE = new ArrayValue();
+
+  /**
+   * JsonPathValue for an untyped array
+   */
+  static public class NullValue extends JsonPathValue {
+
+    @Override
+    public JsonNodeType getType() {
+      return JsonNodeType.NULL;
+    }
+  }
+
+  static final public JsonPathValue NULL_VALUE = new NullValue();
+  static final TypeRef<List<String>> STRING_LIST = new TypeRef<List<String>>() {};
 
   private static Logger log = Logger.getLogger(JsonPathJsonMetadataParser.class);
   protected JsonPathInfo[] gJPathList;
@@ -281,35 +416,35 @@ public class JsonPathJsonMetadataParser {
 
     for (JsonPathInfo info : jPathList) {
       log.debug3("evaluate jsonPath: " + info.jKey);
-      JSON_TYPE type = info.jVal.getType();
+      JsonNodeType type = info.jVal.getType();
       JsonPath expr = info.jExpr;
       String key = info.jKey;
       String value = null;
       switch (type) {
-        case STRING_TYPE:
+        case STRING:
           value = doc.read(expr, String.class);
           break;
-        case NUMBER_TYPE:
+        case NUMBER:
           Number num = doc.read(expr, Number.class);
           value = (num == null) ? null : num.toString();
           break;
-        case OBJECT_TYPE:
+        case OBJECT:
           Object obj = doc.read(expr);
           value = (obj == null) ? null : obj.toString();
           break;
-        case ARRAY_TYPE:
-          List<String> vals = doc.read(expr, STRING_LIST_TYPE);
+        case ARRAY:
+          List<String> vals = doc.read(expr, STRING_LIST);
           for (String val : vals) {
             if (!StringUtil.isNullString(val)) {
               returnAM.putRaw(key, val);
             }
           }
           break;
-        case BOOLEAN_TYPE:
+        case BOOLEAN:
           Boolean b = doc.read(expr, Boolean.class);
           value = (b == null) ? null : b.toString();
           break;
-        case NULL_TYPE:
+        case NULL:
           value = null;
           break;
         default:

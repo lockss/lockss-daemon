@@ -34,9 +34,12 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import org.apache.commons.collections.map.MultiValueMap;
 
-import org.lockss.extractor.*;
-import org.lockss.extractor.JsonPathMetadataExtractor.JsonPathValue;
+import org.lockss.extractor.ArticleMetadata;
+import org.lockss.extractor.FileMetadataExtractor;
+import org.lockss.extractor.FileMetadataListExtractor;
+import org.lockss.extractor.MetadataField;
 import org.lockss.plugin.CachedUrl;
+import org.lockss.plugin.clockss.JsonPathJsonMetadataParser.JsonPathValue;
 import org.lockss.plugin.clockss.SourceJsonMetadataExtractorFactory.SourceJsonMetadataExtractor;
 import org.lockss.util.Logger;
 
@@ -149,11 +152,11 @@ public class TestJsonPathJsonlMetadataExtractor extends TestSourceJsonMetadataEx
     private final Map<String,JsonPathValue> schemaMap =
         new HashMap<String,JsonPathValue>();
     {
-      schemaMap.put(article_id, JsonPathMetadataExtractor.STRING_VALUE);
-      schemaMap.put(article_title, JsonPathMetadataExtractor.STRING_VALUE);
-      schemaMap.put(article_date, JsonPathMetadataExtractor.STRING_VALUE);
-      schemaMap.put(meta_publisher, JsonPathMetadataExtractor.STRING_VALUE);
-      schemaMap.put(meta_journal, JsonPathMetadataExtractor.STRING_VALUE);
+      schemaMap.put(article_id, JsonPathJsonMetadataParser.STRING_VALUE);
+      schemaMap.put(article_title, JsonPathJsonMetadataParser.STRING_VALUE);
+      schemaMap.put(article_date, JsonPathJsonMetadataParser.STRING_VALUE);
+      schemaMap.put(meta_publisher, JsonPathJsonMetadataParser.STRING_VALUE);
+      schemaMap.put(meta_journal, JsonPathJsonMetadataParser.STRING_VALUE);
     }
 
     private final MultiValueMap cookMap = new MultiValueMap();

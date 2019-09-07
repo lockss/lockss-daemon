@@ -24,44 +24,103 @@
  * in this Software without prior written authorization from Stanford University.
  */
 
-package org.lockss.plugin.clockss;
+package org.lockss.plugin.clockss.emis;
 
+import static org.lockss.plugin.clockss.JsonPathJsonMetadataParser.ARRAY_VALUE;
+import static org.lockss.plugin.clockss.JsonPathJsonMetadataParser.STRING_VALUE;
+
+import java.util.HashMap;
 import java.util.Map;
 import org.apache.commons.collections.map.MultiValueMap;
 
+import org.lockss.extractor.MetadataField;
 import org.lockss.plugin.clockss.JsonPathJsonMetadataParser.JsonPathValue;
+import org.lockss.util.Logger;
 
-/**
- * Class to set up specific schema information for the
- * SourceJsonMetadataExtractor. A helper class defines the schema
- * and provides the information to the extractor via the get methods.
- */
-public interface SourceJsonSchemaHelper {
+public class EmisSourceJsonSchemaHelper implements
+    org.lockss.plugin.clockss.SourceJsonSchemaHelper {
+
+  private static final Logger log = Logger.getLogger(EmisSourceJsonSchemaHelper.class);
+
+  private static final String AUTHOR_SEPARATOR = ",";
+
+  /* 1.  MAP associating xpath with value type with evaluator */
+  static private final Map<String, JsonPathValue> mif_articleMap = new HashMap<String, JsonPathValue>();
+  private static final String mif_pubname = "$.['SE.TI']";
+  private static final String mif__volume = "$.['IN.VO']";
+  private static final String mif_issue = "$.['IN.IS']";
+  private static final String mif_issn = "$.['SE.IS']";
+  private static final String mif_date = "$.['IN.PY']";
+  private static final String mif_atitle = "$.['DE.TI']";
+  private static final String mif_authors = "$.['DE.AU']";
+  private static final String mif_aurl = "$.['EM.EL']";
+  /* 2. Each item (article) has its own XML file */
+  static private final String mif_articleNode = "$.";
+  /* 3. no global information  one file/article */
+  static private final Map<String, JsonPathValue> mif_globalMap = null;
+  /*
+   * The emitter will need a map to know how to cook ONIX raw values
+   */
+  private static final MultiValueMap mif_cookMap = new MultiValueMap();
+
+  static {
+    mif_articleMap.put(mif_pubname, STRING_VALUE);
+    mif_articleMap.put(mif__volume, STRING_VALUE);
+    mif_articleMap.put(mif_issue, STRING_VALUE);
+    mif_articleMap.put(mif_issn, STRING_VALUE);
+    mif_articleMap.put(mif_date, STRING_VALUE);
+    mif_articleMap.put(mif_atitle, STRING_VALUE);
+    mif_articleMap.put(mif_authors, ARRAY_VALUE);
+    mif_articleMap.put(mif_aurl, STRING_VALUE);
+  }
+
+  static {
+    mif_cookMap.put(mif_pubname, MetadataField.FIELD_PUBLICATION_TITLE);
+    mif_cookMap.put(mif_atitle, MetadataField.FIELD_ARTICLE_TITLE);
+    mif_cookMap.put(mif_aurl, MetadataField.FIELD_ACCESS_URL);
+    mif_cookMap.put(mif_issn, MetadataField.FIELD_ISSN);
+    mif_cookMap.put(mif__volume, MetadataField.FIELD_VOLUME);
+    mif_cookMap.put(mif_issue, MetadataField.FIELD_ISSUE);
+    mif_cookMap.put(mif_authors, MetadataField.FIELD_AUTHOR);
+    mif_cookMap.put(mif_date, MetadataField.FIELD_DATE);
+  }
 
   /**
    * Return the map for metadata that carries across all records in this JSON
    * schema. It can be null. <br/>
    * If null, only article level information is retrieved.
    */
-  Map<String, JsonPathValue> getGlobalMetaMap();
+  @Override
+  public Map<String, JsonPathValue> getGlobalMetaMap() {
+    return mif_globalMap;
+  }
 
   /**
    * Return the map for metadata that is specific to each "article" record.
    */
-  Map<String, JsonPathValue> getArticleMetaMap();
+  @Override
+  public Map<String, JsonPathValue> getArticleMetaMap() {
+    return mif_articleMap;
+  }
 
   /**
    * Return the jsonpath string which defines one "article" record
    * It can be null.<br/>
    * If null, jsonpath matching starts at the root of the document.
    */
-  String getArticleNode();
+  @Override
+  public String getArticleNode() {
+    return mif_articleNode;
+  }
 
   /**
    * Return the map to translate from raw metadata to cooked metadata
    * This must be set or no metadata gets emitted
    */
-  MultiValueMap getCookMap();
+  @Override
+  public MultiValueMap getCookMap() {
+    return mif_cookMap;
+  }
 
   /**
    * Return the jsonpath key for an item in the record that identifies a
@@ -73,7 +132,10 @@ public interface SourceJsonSchemaHelper {
    * one ArticleMetadata for all associated records.
    * It can be null - no record consolidation will happen.
    */
-  String getDeDuplicationJsonKey();
+  @Override
+  public String getDeDuplicationJsonKey() {
+    return null;
+  }
 
   /**
    * Used only in consolidateRecords()
@@ -85,8 +147,10 @@ public interface SourceJsonSchemaHelper {
    * It can be null. Consolidation may occur, but the record field will
    * not be combined.
    */
-  String getConsolidationJsonKey();
-
+  @Override
+  public String getConsolidationJsonKey() {
+    return null;
+  }
 
   /**
    * Used only in preEmitCheck() which may be overridden by a child
@@ -95,8 +159,8 @@ public interface SourceJsonSchemaHelper {
    * as the filename.
    * It can be null if the filename doesn't include metadata information.
    */
-  String getFilenameJsonKey();
-
+  @Override
+  public String getFilenameJsonKey() {
+    return null;
+  }
 }
-
-
