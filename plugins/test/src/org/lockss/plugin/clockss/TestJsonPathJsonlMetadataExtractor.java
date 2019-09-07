@@ -61,6 +61,22 @@ public class TestJsonPathJsonlMetadataExtractor extends TestSourceJsonMetadataEx
   private static String goodDate = "1999";
   private static String goodIdentifier = "123";
 
+  private static String dotArticleContent =
+      "{\n"
+          + "\t\"my.article\": {\n"
+          + "\t\t\"meta\": {\n"
+          + "\t\t\t\"my.publisher\": \"Publisher Co.\",\n"
+          + "\t\t\t\"my.journaltitle\": \"A Journal Title\"\n"
+          + "\t\t},\n"
+          + "\t\t\"my.identifier\": \"123\",\n"
+          + "\t\t\"my.title\": \"A Good Title\",\n"
+          + "\t\t\"my.pubdate\": {\n"
+          + "\t\t\t\"date\": \"1999\",\n"
+          + "\t\t\t\"_type\": \"online\"\n"
+          + "\t\t}\n"
+          + "\t}\n"
+          + "}";
+
   private static String singleArticleContent =
       "{\n"
           + "\t\"article\": {\n"
@@ -77,11 +93,62 @@ public class TestJsonPathJsonlMetadataExtractor extends TestSourceJsonMetadataEx
           + "\t}\n"
           + "}";
 
+  static final String article_id =  "$.article.identifier";
+  static final String article_date = "$.article.pubdate.date";
+  static final String article_title = "$.article.title";
+  static final String meta_publisher = "$.article.meta.publisher";
+  static final String meta_journal = "$.article.meta.journaltitle";
+
+  private final Map<String,JsonPathValue> schemaMap =
+      new HashMap<String,JsonPathValue>();
+  {
+    schemaMap.put(article_id, JsonPathJsonMetadataParser.STRING_VALUE);
+    schemaMap.put(article_title, JsonPathJsonMetadataParser.STRING_VALUE);
+    schemaMap.put(article_date, JsonPathJsonMetadataParser.STRING_VALUE);
+    schemaMap.put(meta_publisher, JsonPathJsonMetadataParser.STRING_VALUE);
+    schemaMap.put(meta_journal, JsonPathJsonMetadataParser.STRING_VALUE);
+  }
+
+  private final MultiValueMap cookMap = new MultiValueMap();
+  {
+    // do NOT cook publisher_name; get from TDB file for consistency
+    cookMap.put(article_id, MetadataField.FIELD_PROPRIETARY_IDENTIFIER);
+    cookMap.put(article_date, MetadataField.FIELD_DATE);
+    cookMap.put(meta_publisher, MetadataField.FIELD_PUBLISHER);
+    cookMap.put(meta_journal, MetadataField.FIELD_PUBLICATION_TITLE);
+    cookMap.put(article_title, MetadataField.FIELD_ARTICLE_TITLE);
+  }
+
+  static final String dotarticle_id =  "$[\"my.article\"][\"my.identifier\"]";
+  static final String dotarticle_date = "$[\"my.article\"][\"my.pubdate\"][\"date\"]";
+  static final String dotarticle_title = "$[\"my.article\"][\"my.title\"]";
+  static final String dotmeta_publisher = "$[\"my.article\"][\"meta\"][\"my.publisher\"]";
+  static final String dotmeta_journal = "$[\"my.article\"][\"meta\"][\"my.journaltitle\"]";
+  private final Map<String,JsonPathValue> dotschemaMap =
+      new HashMap<String,JsonPathValue>();
+  {
+    dotschemaMap.put(dotarticle_id, JsonPathJsonMetadataParser.STRING_VALUE);
+    dotschemaMap.put(dotarticle_title, JsonPathJsonMetadataParser.STRING_VALUE);
+    dotschemaMap.put(dotarticle_date, JsonPathJsonMetadataParser.STRING_VALUE);
+    dotschemaMap.put(dotmeta_publisher, JsonPathJsonMetadataParser.STRING_VALUE);
+    dotschemaMap.put(dotmeta_journal, JsonPathJsonMetadataParser.STRING_VALUE);
+  }
+
+  private final MultiValueMap dotcookMap = new MultiValueMap();
+  {
+    dotcookMap.put(dotarticle_id, MetadataField.FIELD_PROPRIETARY_IDENTIFIER);
+    dotcookMap.put(dotarticle_date, MetadataField.FIELD_DATE);
+    dotcookMap.put(dotmeta_publisher, MetadataField.FIELD_PUBLISHER);
+    dotcookMap.put(dotmeta_journal, MetadataField.FIELD_PUBLICATION_TITLE);
+    dotcookMap.put(dotarticle_title, MetadataField.FIELD_ARTICLE_TITLE);
+  }
+
+
   // SchemaA takes in all the values from a globalMap
   public void testExtractJsonSchemaA() throws Exception {
 
     String json_url = getBaseUrl() + getYear() + "/schemaA.json";
-    FileMetadataExtractor me = new MyJsonMetadataExtractor();
+    FileMetadataExtractor me = new MyJsonMetadataExtractor(schemaMap, cookMap);
     FileMetadataListExtractor mle =
         new FileMetadataListExtractor(me);
     List<ArticleMetadata> mdlist = extractFromContent(json_url, "application/json", singleArticleContent, mle);
@@ -98,7 +165,7 @@ public class TestJsonPathJsonlMetadataExtractor extends TestSourceJsonMetadataEx
   // SchemaB takes in all the values from a articleMap
   public void testExtractJsonSchemaB() throws Exception {
     String json_url = getBaseUrl() + getYear() + "/schemaB.json";
-    FileMetadataExtractor me = new MyJsonMetadataExtractor();
+    FileMetadataExtractor me = new MyJsonMetadataExtractor(schemaMap, cookMap);
     FileMetadataListExtractor mle =
         new FileMetadataListExtractor(me);
     List<ArticleMetadata> mdlist = extractFromContent(json_url, "application/json", singleArticleContent, mle);
@@ -112,11 +179,53 @@ public class TestJsonPathJsonlMetadataExtractor extends TestSourceJsonMetadataEx
     assertEquals(goodJournalTitle, md.get(MetadataField.FIELD_PUBLICATION_TITLE));
   }
 
+  public void testDotExtractJsonSchemaA() throws Exception {
+
+    String json_url = getBaseUrl() + getYear() + "/schemaA.json";
+    FileMetadataExtractor me = new MyJsonMetadataExtractor(dotschemaMap, dotcookMap);
+    FileMetadataListExtractor mle =
+        new FileMetadataListExtractor(me);
+    List<ArticleMetadata> mdlist = extractFromContent(json_url, "application/json", dotArticleContent, mle);
+    assertNotEmpty(mdlist);
+    ArticleMetadata md = mdlist.get(0);
+    assertNotNull(md);
+    assertEquals(goodPublisher, md.get(MetadataField.FIELD_PUBLISHER));
+    assertEquals(goodTitle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
+    assertEquals(goodIdentifier, md.get(MetadataField.FIELD_PROPRIETARY_IDENTIFIER));
+    assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));
+    assertEquals(goodJournalTitle, md.get(MetadataField.FIELD_PUBLICATION_TITLE));
+  }
+
+  // SchemaB takes in all the values from a articleMap
+  public void testDotExtractJsonSchemaB() throws Exception {
+    String json_url = getBaseUrl() + getYear() + "/schemaB.json";
+    FileMetadataExtractor me = new MyJsonMetadataExtractor(dotschemaMap, dotcookMap);
+    FileMetadataListExtractor mle =
+        new FileMetadataListExtractor(me);
+    List<ArticleMetadata> mdlist = extractFromContent(json_url, "application/json", dotArticleContent, mle);
+    assertNotEmpty(mdlist);
+    ArticleMetadata md = mdlist.get(0);
+    assertNotNull(md);
+    assertEquals(goodPublisher, md.get(MetadataField.FIELD_PUBLISHER));
+    assertEquals(goodTitle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
+    assertEquals(goodIdentifier, md.get(MetadataField.FIELD_PROPRIETARY_IDENTIFIER));
+    assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));
+    assertEquals(goodJournalTitle, md.get(MetadataField.FIELD_PUBLICATION_TITLE));
+  }
+
+
   // Set up a test version of a source extractor in order to define/control
   // a basic schema for testing
   private class MyJsonMetadataExtractor extends SourceJsonMetadataExtractor {
 
+    private Map<String,JsonPathValue> schema;
+    private MultiValueMap cooker;
 
+    MyJsonMetadataExtractor(Map<String,JsonPathValue> schema,
+                            MultiValueMap cooker) {
+      this.schema = schema;
+      this.cooker = cooker;
+    }
     // choose the schema based on the URL - for publishers that use > 1
     @Override
     protected SourceJsonSchemaHelper setUpSchema(CachedUrl cu,
@@ -125,11 +234,11 @@ public class TestJsonPathJsonlMetadataExtractor extends TestSourceJsonMetadataEx
       Matcher AMat = schemaAPATTERN.matcher(cu.getUrl());
       if (AMat.find()) {
         log.debug3("using schemaA - globalMap only");
-        return new schemaAJsonSchemaHelper();
+        return new schemaAJsonSchemaHelper(schema, cooker);
       }
       // Otherwise it's the B schema
       log.debug3("using schemaB - articleMap only");
-      return new schemaBJsonSchemaHelper();
+      return new schemaBJsonSchemaHelper(schema, cooker);
     }
 
     // Make this do nothing so that we don't need to add actual content files
@@ -143,42 +252,23 @@ public class TestJsonPathJsonlMetadataExtractor extends TestSourceJsonMetadataEx
     }
 
 
-    static final String article_id =  "$.article.identifier";
-    static final String article_date = "$.article.pubdate.date";
-    static final String article_title = "$.article.title";
-    static final String meta_publisher = "$.article.meta.publisher";
-    static final String meta_journal = "$.article.meta.journaltitle";
-
-    private final Map<String,JsonPathValue> schemaMap =
-        new HashMap<String,JsonPathValue>();
-    {
-      schemaMap.put(article_id, JsonPathJsonMetadataParser.STRING_VALUE);
-      schemaMap.put(article_title, JsonPathJsonMetadataParser.STRING_VALUE);
-      schemaMap.put(article_date, JsonPathJsonMetadataParser.STRING_VALUE);
-      schemaMap.put(meta_publisher, JsonPathJsonMetadataParser.STRING_VALUE);
-      schemaMap.put(meta_journal, JsonPathJsonMetadataParser.STRING_VALUE);
-    }
-
-    private final MultiValueMap cookMap = new MultiValueMap();
-    {
-      // do NOT cook publisher_name; get from TDB file for consistency
-      cookMap.put(article_id, MetadataField.FIELD_PROPRIETARY_IDENTIFIER);
-      cookMap.put(article_date, MetadataField.FIELD_DATE);
-      cookMap.put(meta_publisher, MetadataField.FIELD_PUBLISHER);
-      cookMap.put(meta_journal, MetadataField.FIELD_PUBLICATION_TITLE);
-      cookMap.put(article_title, MetadataField.FIELD_ARTICLE_TITLE);
-    }
-
 
     // Schema A will access the content solely through a globalMap
     // since there is only one article per file
     private class schemaAJsonSchemaHelper
         implements SourceJsonSchemaHelper {
+      private Map<String,JsonPathValue> schema;
+      private MultiValueMap cooker;
 
+      schemaAJsonSchemaHelper(Map<String,JsonPathValue> schema,
+                              MultiValueMap cooker) {
+        this.schema = schema;
+        this.cooker = cooker;
+      }
 
       @Override
       public Map<String, JsonPathValue> getGlobalMetaMap() {
-        return schemaMap;
+        return schema;
       }
 
       @Override
@@ -193,7 +283,7 @@ public class TestJsonPathJsonlMetadataExtractor extends TestSourceJsonMetadataEx
 
       @Override
       public MultiValueMap getCookMap() {
-        return cookMap;
+        return cooker;
       }
 
       @Override
@@ -215,8 +305,14 @@ public class TestJsonPathJsonlMetadataExtractor extends TestSourceJsonMetadataEx
     // SchemaB will access the content through an article map where the article
     // node is the top <article> node and no global information
     private class schemaBJsonSchemaHelper implements SourceJsonSchemaHelper {
+      private Map<String,JsonPathValue> schema;
+      private MultiValueMap cooker;
 
-
+      schemaBJsonSchemaHelper(Map<String,JsonPathValue> schema,
+                              MultiValueMap cooker) {
+        this.schema = schema;
+        this.cooker = cooker;
+      }
       @Override
       public Map<String, JsonPathValue> getGlobalMetaMap() {
         return null;
@@ -224,7 +320,7 @@ public class TestJsonPathJsonlMetadataExtractor extends TestSourceJsonMetadataEx
 
       @Override
       public Map<String, JsonPathValue> getArticleMetaMap() {
-        return schemaMap;
+        return schema;
       }
 
       // use the top of the document
@@ -235,7 +331,7 @@ public class TestJsonPathJsonlMetadataExtractor extends TestSourceJsonMetadataEx
 
       @Override
       public MultiValueMap getCookMap() {
-        return cookMap;
+        return cooker;
       }
 
       @Override
