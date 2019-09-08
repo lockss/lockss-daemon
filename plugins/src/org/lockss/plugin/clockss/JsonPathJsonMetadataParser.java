@@ -348,7 +348,7 @@ public class JsonPathJsonMetadataParser {
       else {
         /* Get a list of articles */
         log.debug3("extracting article data from each article path:" + articlePath);
-        List<String> articleList = context.read(articlePath);
+        List<String> articleList = context.read(articlePath,STRING_LIST);
         log.debug3("Looping through article list of " + articleList.size() + " items");
         long startTime = 0;
         long endTime = 0;

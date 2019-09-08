@@ -54,14 +54,15 @@ public class EmisSourceJsonSchemaHelper implements
   private static final String mif_atitle = "$[\"DE.TI\"]";
   private static final String mif_authors = "$[\"DE.AU\"]";
   private static final String mif_aurl = "$[\"EM.EL\"]";
-  /* 2. Each item (article) has its own XML file */
-  static private final String mif_articleNode = "$.";
+  /* 2. Each item (article) has its own JSON file */
+  static private final String mif_articleNode = null;
   /* 3. no global information  one file/article */
   static private final Map<String, JsonPathValue> mif_globalMap = null;
   /*
    * The emitter will need a map to know how to cook ONIX raw values
    */
   private static final MultiValueMap mif_cookMap = new MultiValueMap();
+
 
   static {
     mif_articleMap.put(mif_pubname, STRING_VALUE);

@@ -27,12 +27,11 @@
 package org.lockss.plugin.clockss.emis;
 
 import com.jayway.jsonpath.DocumentContext;
-import java.util.ArrayList;
-import java.util.List;
 
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.FileMetadataExtractor;
+import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.SourceJsonMetadataExtractorFactory;
@@ -40,9 +39,10 @@ import org.lockss.plugin.clockss.SourceJsonSchemaHelper;
 import org.lockss.util.Logger;
 
 public class EmisJsonMetadataExtractorFactory extends SourceJsonMetadataExtractorFactory {
+
   static Logger log = Logger.getLogger(EmisJsonMetadataExtractorFactory.class);
 
-  private static SourceJsonSchemaHelper jsonPublishingHelper =null;
+  private static SourceJsonSchemaHelper jsonPublishingHelper = null;
 
   /**
    * Create a FileMetadataExtractor
@@ -61,46 +61,16 @@ public class EmisJsonMetadataExtractorFactory extends SourceJsonMetadataExtracto
 
     @Override
     protected void postCookProcess(SourceJsonSchemaHelper schemaHelper, CachedUrl cu,
-                                   ArticleMetadata thisAM) {
-      super.postCookProcess(schemaHelper, cu, thisAM);
-    }
-
-    /**
-     * A routine used by preEmitCheck to know which files to check for
-     * existence.
-     * It returns a list of strings, each string is a
-     * complete url for a file that could be used to check for whether a cu
-     * with that name exists and has content.
-     * If the returned list is null, preEmitCheck returns TRUE
-     * If any of the files in the list is found and exists, preEmitCheck
-     * returns TRUE. It stops after finding one.
-     * If the list is not null and no file exists, preEmitCheck returns FALSE
-     * The first existing file from the list gets set as the access URL.
-     * The child plugin could override preEmitCheck for different results.
-     * The base version of this returns the value of the schema helper's value at
-     * getFilenameXPathKey in the same directory as the JSON file.
-     */
-    @Override
-    protected List<String> getFilenamesAssociatedWithRecord(SourceJsonSchemaHelper helper,
-                                                            CachedUrl cu, ArticleMetadata oneAM) {
-      String pdfPath = "";
-      String url_string = cu.getUrl();
-      int last_slash = url_string.lastIndexOf("/");
-      String path = url_string.substring(0, last_slash);
-      String pdf = path + "/001.pdf";
-      String html = path + "/000.html";
-
-      log.debug3("pdf path: " + pdf + " html path: " + html) ;
-
-      List<String> returnList = new ArrayList<String>();
-      returnList.add(pdf);
-      returnList.add(html);
-
-      if(url_string.indexOf(".json") > -1 && url_string.indexOf("mif.json") == -1) {
-        returnList.remove(url_string);
+                                   ArticleMetadata am) {
+      log.debug3("in EMIS postCookProcess");
+      if (am.get(MetadataField.FIELD_ACCESS_URL) != null) {
+        // this field is a series of ';' seperated values we split them and assign as needed
+        String[] urls = am.get(MetadataField.FIELD_ACCESS_URL).split(";");
+        // per email first field in list
+        am.replace(MetadataField.FIELD_ACCESS_URL, urls[0].trim());
       }
-      return returnList;
     }
+
 
     @Override
     protected SourceJsonSchemaHelper setUpSchema(CachedUrl cu, DocumentContext doc) {
@@ -111,6 +81,5 @@ public class EmisJsonMetadataExtractorFactory extends SourceJsonMetadataExtracto
       return jsonPublishingHelper;
     }
   }
-
 
 }
