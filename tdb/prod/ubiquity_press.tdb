@@ -118,8 +118,8 @@
       comment[publisher] = Levy Library Press
 #      param[base_url] = https://www.journalofaltmetrics.org/
 
-      au < exists ; 2018 ; 1 ; Journal of Altmetrics Volume 2018 ; 2018 ; https://www.journalofaltmetrics.org/ >
-      au < exists ; 2019 ; 2 ; Journal of Altmetrics Volume 2019 ; 2019 ; https://www.journalofaltmetrics.org/ >
+      au < manifest ; 2018 ; 1 ; Journal of Altmetrics Volume 2018 ; 2018 ; https://www.journalofaltmetrics.org/ >
+      au < manifest ; 2019 ; 2 ; Journal of Altmetrics Volume 2019 ; 2019 ; https://www.journalofaltmetrics.org/ >
 
   }
 
@@ -2068,7 +2068,7 @@
       au < released ; 2016 ; 6 ; Incontri. Rivista europea di studi italiani Volume 2016 ; 2016 ; http://www.rivista-incontri.nl/ >
       au < released ; 2017 ; 7 ; Incontri. Rivista europea di studi italiani Volume 2017 ; 2017 ; https://www.rivista-incontri.nl/ >
       au < manifest ; 2018 ; 8 ; Incontri. Rivista europea di studi italiani Volume 2018 ; 2018 ; https://www.rivista-incontri.nl/ >
-      au < expected ; 2019 ; 9 ; Incontri. Rivista europea di studi italiani Volume 2019 ; 2019 ; https://www.rivista-incontri.nl/ >
+      au < manifest ; 2019 ; 9 ; Incontri. Rivista europea di studi italiani Volume 2019 ; 2019 ; https://www.rivista-incontri.nl/ >
 
   }
 
