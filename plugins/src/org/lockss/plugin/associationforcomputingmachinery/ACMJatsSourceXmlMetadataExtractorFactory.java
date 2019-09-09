@@ -33,12 +33,16 @@ package org.lockss.plugin.associationforcomputingmachinery;
  */
 
 import org.lockss.daemon.PluginException;
+import org.lockss.daemon.ShouldNotHappenException;
 import org.lockss.extractor.*;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.JatsPublishingSchemaHelper;
+import org.lockss.plugin.clockss.BitsPublishingSchemaHelper;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 import org.lockss.util.Logger;
+import org.w3c.dom.Document;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -46,6 +50,7 @@ public class ACMJatsSourceXmlMetadataExtractorFactory extends SourceXmlMetadataE
     static Logger log = Logger.getLogger("ACMJatsSourceMetadataExtractorFactory");
 
     private static SourceXmlSchemaHelper JatsPublishingHelper = null;
+    private static SourceXmlSchemaHelper BitsPublishingHelper = null;
 
     @Override
     public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
@@ -56,13 +61,34 @@ public class ACMJatsSourceXmlMetadataExtractorFactory extends SourceXmlMetadataE
 
     public class JatsPublishingSourceXmlMetadataExtractor extends SourceXmlMetadataExtractor {
 
+        /*
+         * This setUpSchema shouldn't be called directly
+         * but for safety, just use the CU to figure out which schema to use.
+         *
+         */
         @Override
         protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
-            // Once you have it, just keep returning the same one. It won't change.
-            if (JatsPublishingHelper == null) {
-                JatsPublishingHelper = new JatsPublishingSchemaHelper();
+            throw new ShouldNotHappenException("This version of the schema setup cannot be used for this plugin");
+        }
+
+        @Override
+        protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu, Document xmlDoc) {
+            String url = cu.getUrl();
+            // acm monther conferences is using BITS format
+            if ((url != null) && url.indexOf("acmotherconferences") > -1) {
+                log.debug3("Setup Bits schema helper");
+                if (BitsPublishingHelper == null) {
+                    BitsPublishingHelper = new BitsPublishingSchemaHelper();
+                }
+                return BitsPublishingHelper;
+            } else {
+                log.debug3("Setup Jats schema helper");
+                // acm other material is using JATS format
+                if (JatsPublishingHelper == null) {
+                    JatsPublishingHelper = new JatsPublishingSchemaHelper();
+                }
+                return JatsPublishingHelper;
             }
-            return JatsPublishingHelper;
         }
 
         @Override
@@ -74,6 +100,7 @@ public class ACMJatsSourceXmlMetadataExtractorFactory extends SourceXmlMetadataE
             //XML and PDF are located inside the same directory
             //http://content5.lockss.org/sourcefiles/acmjats-released/2019_4/XRDSv25i4-0716143453.zip!/3344809/3329889/3329889.xml
             //http://content5.lockss.org/sourcefiles/acmjats-released/2019_4/XRDSv25i4-0716143453.zip!/3344809/3329889/3329889.pdf
+
             if (url_string.indexOf(".xml") > -1) {
                 pdfPath = url_string.replace(".xml", ".pdf");
             }
