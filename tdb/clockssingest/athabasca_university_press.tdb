@@ -72,10 +72,10 @@
       param[base_url] = http://www.irrodl.org/
       param[journal_id] = irrodl
 
-      au < exists ; exists ; 2011 ; International Review of Research in Open and Distance Learning (IRRODL) Volume 12 ; 12 ; 2011 ; >
-      au < exists ; exists ; 2017 ; International Review of Research in Open and Distance Learning (IRRODL) Volume 18 ; 18 ; 2017 ; >
-      au < exists ; exists ; 2018 ; International Review of Research in Open and Distance Learning (IRRODL) Volume 19 ; 19 ; 2018 ; >
-      au < exists ; exists ; 2019 ; International Review of Research in Open and Distance Learning (IRRODL) Volume 20 ; 20 ; 2019 ; >
+      au < manifest ; exists ; 2011 ; International Review of Research in Open and Distance Learning (IRRODL) Volume 12 ; 12 ; 2011 ; >
+      au < manifest ; exists ; 2017 ; International Review of Research in Open and Distance Learning (IRRODL) Volume 18 ; 18 ; 2017 ; >
+      au < manifest ; exists ; 2018 ; International Review of Research in Open and Distance Learning (IRRODL) Volume 19 ; 19 ; 2018 ; >
+      au < manifest ; exists ; 2019 ; International Review of Research in Open and Distance Learning (IRRODL) Volume 20 ; 20 ; 2019 ; >
       }
     
   }
@@ -162,15 +162,15 @@
       param[base_url] = http://jrp.icaap.org/
       param[journal_id] = jrp
 
-      au < exists ; exists ; 2005 ; Journal of Research Practice Volume 1 ; 1 ; 2005 ; >
-      au < exists ; exists ; 2006 ; Journal of Research Practice Volume 2 ; 2 ; 2006 ; >
-      au < exists ; exists ; 2007 ; Journal of Research Practice Volume 3 ; 3 ; 2007 ; >
-      au < exists ; exists ; 2008 ; Journal of Research Practice Volume 4 ; 4 ; 2008 ; >
-      au < exists ; exists ; 2009 ; Journal of Research Practice Volume 5 ; 5 ; 2009 ; >
-      au < exists ; exists ; 2010 ; Journal of Research Practice Volume 6 ; 6 ; 2010 ; >
-      au < exists ; exists ; 2011 ; Journal of Research Practice Volume 7 ; 7 ; 2011 ; >
-      au < exists ; exists ; 2017 ; Journal of Research Practice Volume 13 ; 13 ; 2017 ; >
-      au < exists ; exists ; 2018 ; Journal of Research Practice Volume 14 ; 14 ; 2018 ; >
+      au < manifest ; exists ; 2005 ; Journal of Research Practice Volume 1 ; 1 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; Journal of Research Practice Volume 2 ; 2 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; Journal of Research Practice Volume 3 ; 3 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; Journal of Research Practice Volume 4 ; 4 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; Journal of Research Practice Volume 5 ; 5 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; Journal of Research Practice Volume 6 ; 6 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; Journal of Research Practice Volume 7 ; 7 ; 2011 ; >
+      au < manifest ; exists ; 2017 ; Journal of Research Practice Volume 13 ; 13 ; 2017 ; >
+      au < manifest ; exists ; 2018 ; Journal of Research Practice Volume 14 ; 14 ; 2018 ; >
       au < expected ; exists ; 2019 ; Journal of Research Practice Volume 15 ; 15 ; 2019 ; >
       }
     
