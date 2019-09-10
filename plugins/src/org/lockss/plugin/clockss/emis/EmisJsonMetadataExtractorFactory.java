@@ -61,13 +61,22 @@ public class EmisJsonMetadataExtractorFactory extends SourceJsonMetadataExtracto
 
     @Override
     protected void postCookProcess(SourceJsonSchemaHelper schemaHelper, CachedUrl cu,
-                                   ArticleMetadata am) {
+                                   ArticleMetadata thisAm) {
       log.debug3("in EMIS postCookProcess");
-      if (am.get(MetadataField.FIELD_ACCESS_URL) != null) {
+      String substance_urls = thisAm.getRaw(EmisSourceJsonSchemaHelper.mif_aurl);
+      if (substance_urls != null) {
         // this field is a series of ';' seperated values we split them and assign as needed
-        String[] urls = am.get(MetadataField.FIELD_ACCESS_URL).split(";");
+        String[] urls = substance_urls.split(";");
         // per email first field in list
-        am.replace(MetadataField.FIELD_ACCESS_URL, urls[0].trim());
+        thisAm.replace(MetadataField.FIELD_ACCESS_URL, urls[0].trim());
+      }
+
+      if(thisAm.hasInvalidValue(MetadataField.FIELD_ISSN)) {
+        String raw_issn = thisAm.getRaw(EmisSourceJsonSchemaHelper.mif_issn);
+        if(raw_issn.length() > 8) {
+          String issn = raw_issn.substring(0,9);
+          thisAm.replace(MetadataField.FIELD_ISSN, issn);
+        }
       }
     }
 

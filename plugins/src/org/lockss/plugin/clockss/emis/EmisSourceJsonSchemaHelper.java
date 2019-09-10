@@ -46,14 +46,14 @@ public class EmisSourceJsonSchemaHelper implements
 
   /* 1.  MAP associating xpath with value type with evaluator */
   static private final Map<String, JsonPathValue> mif_articleMap = new HashMap<String, JsonPathValue>();
-  private static final String mif_pubname = "$[\"SE.TI\"]";
-  private static final String mif__volume = "$[\"IN.VO\"]";
-  private static final String mif_issue = "$[\"IN.IS\"]";
-  private static final String mif_issn = "$[\"SE.IS\"]";
-  private static final String mif_date = "$[\"IN.PY\"]";
-  private static final String mif_atitle = "$[\"DE.TI\"]";
-  private static final String mif_authors = "$[\"DE.AU\"]";
-  private static final String mif_aurl = "$[\"EM.EL\"]";
+  static final String mif_pubname = "$[\"SE.TI\"]";
+  static final String mif__volume = "$[\"IN.VO\"]";
+  static final String mif_issue = "$[\"IN.IS\"]";
+  static final String mif_issn = "$[\"SE.IS\"]";
+  static final String mif_date = "$[\"IN.PY\"]";
+  static final String mif_atitle = "$[\"DE.TI\"]";
+  static final String mif_authors = "$[\"DE.AU\"]";
+  static final String mif_aurl = "$[\"EM.EL\"]";
   /* 2. Each item (article) has its own JSON file */
   static private final String mif_articleNode = null;
   /* 3. no global information  one file/article */
