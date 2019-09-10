@@ -1,14 +1,22 @@
 #!/bin/sh
 
-if [ ! -d ../clockss ]; then
+CLOCKSS='../clockss'
+
+if [ ! -d "${CLOCKSS}" ]; then
   echo "You need to create your own tdb/clockss subdirectory."
   exit 1
 fi
-CLOCKSS=`find ../clockss | wc -l`
-if [ "${CLOCKSS}" != "1" ]; then
+if [ "$(find "${CLOCKSS}" | wc -l)" != "1" ]; then
   echo "Your tdb/clockss subdirectory needs to be empty."
   exit 1
 fi
-for f in *.tdb ; do
-  cat $f | sed -e 's@status\( *\);\( *\)status2@status1\1;\2status@' -e 's@hidden\[proxy\]@proxy@' > ../clockss/$f
+for d in . * ; do
+  if [ -d "${d}" ]; then
+    if [ "${d}" != '.' ]; then
+      mkdir "${CLOCKSS}/${d}"
+    fi
+    for f in ${d}/*.tdb ; do
+      sed -e 's@status\( *\);\( *\)status2@status1\1;\2status@' -e 's@hidden\[proxy\]@proxy@' "$f" > "${CLOCKSS}/${f}"
+    done
+  fi
 done
