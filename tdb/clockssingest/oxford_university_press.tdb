@@ -536,7 +536,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; American Journal of Agricultural Economics Volume 98 ; 98 ; >
     au < frozen ; exists ; 2017 ; 2017 ; American Journal of Agricultural Economics Volume 99 ; 99 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; American Journal of Agricultural Economics Volume 100 ; 100 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; American Journal of Agricultural Economics Volume 101 ; 101 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; American Journal of Agricultural Economics Volume 101 ; 101 ; >
 
   }
 
@@ -1083,7 +1083,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Journal of Animal Science Volume 93 ; 93 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Journal of Animal Science Volume 94 ; 94 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Journal of Animal Science Volume 95 ; 95 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Journal of Animal Science Volume 96 ; 96 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Animal Science Volume 96 ; 96 ; >
 
   }
 
@@ -2437,7 +2437,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Biostatistics Volume 17 ; 17 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Biostatistics Volume 18 ; 18 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Biostatistics Volume 19 ; 19 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Biostatistics Volume 20 ; 20 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Biostatistics Volume 20 ; 20 ; >
 
   }
 
@@ -2653,7 +2653,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Briefings in Bioinformatics Volume 17 ; 17 ; > #configuration: not polling on ingest machines 12/6/18 ARO PDF issue
     au < finished ; crawling ; 2017 ; 2017 ; Briefings in Bioinformatics Volume 18 ; 18 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Briefings in Bioinformatics Volume 19 ; 19 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Briefings in Bioinformatics Volume 20 ; 20 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Briefings in Bioinformatics Volume 20 ; 20 ; >
 
   }
 
@@ -3322,7 +3322,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Chinese Journal of International Law Volume 15 ; 15 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Chinese Journal of International Law Volume 16 ; 16 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Chinese Journal of International Law Volume 17 ; 17 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Chinese Journal of International Law Volume 18 ; 18 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Chinese Journal of International Law Volume 18 ; 18 ; >
 
   }
 
@@ -3362,7 +3362,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 22 ; 22 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 23 ; 23 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 24 ; 24 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 25 ; 25 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 25 ; 25 ; >
 
   }
 

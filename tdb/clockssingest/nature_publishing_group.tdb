@@ -187,7 +187,7 @@
     au < zapped ; finished ; 2008 ; Bone Marrow Transplantation Volume 42 ; 2008 ; 42 ; >
     au < finished ; frozen ; 2009 ; Bone Marrow Transplantation Volume 43 ; 2009 ; 43 ; >
     au < zapped ; finished ; 2009 ; Bone Marrow Transplantation Volume 44 ; 2009 ; 44 ; >
-    au < finished ; crawling ; 2010 ; Bone Marrow Transplantation Volume 45 ; 2010 ; 45 ; >
+    au < finished ; frozen ; 2010 ; Bone Marrow Transplantation Volume 45 ; 2010 ; 45 ; >
     au < zapped ; finished ; 2010 ; Bone Marrow Transplantation Volume 46 [superseded] ; 2010 ; 46 ; >
     au < finished ; frozen ; 2011 ; Bone Marrow Transplantation Volume 46 ; 2011 ; 46 ; >
     au < finished ; frozen ; 2012 ; Bone Marrow Transplantation Volume 47 ; 2012 ; 47 ; >
@@ -771,7 +771,7 @@
     au < finished ; finished ; 2008 ; European Journal of Human Genetics Volume 16 ; 2008 ; 16 ; >
     au < finished ; finished ; 2009 ; European Journal of Human Genetics Volume 17 ; 2009 ; 17 ; >
     au < finished ; frozen ; 2010 ; European Journal of Human Genetics Volume 18 ; 2010 ; 18 ; >
-    au < finished ; crawling ; 2011 ; European Journal of Human Genetics Volume 19 ; 2011 ; 19 ; >
+    au < finished ; frozen ; 2011 ; European Journal of Human Genetics Volume 19 ; 2011 ; 19 ; >
     au < finished ; finished ; 2012 ; European Journal of Human Genetics Volume 20 ; 2012 ; 20 ; >
     au < frozen ; exists ; 2013 ; European Journal of Human Genetics Volume 21 ; 2013 ; 21 ; >
     au < finished ; finished ; 2014 ; European Journal of Human Genetics Volume 22 ; 2014 ; 22 ; reingest2.clockss.org:8085 >
@@ -1886,7 +1886,7 @@
     au < doNotProcess ; exists ; 2007 ; Leukemia Volume 21 ; 2007 ; 21 ; >
     au < zapped ; finished ; 2008 ; Leukemia Volume 22 ; 2008 ; 22 ; >
     au < finished ; frozen ; 2009 ; Leukemia Volume 23 ; 2009 ; 23 ; >
-    au < finished ; crawling ; 2010 ; Leukemia Volume 24 ; 2010 ; 24 ; >
+    au < finished ; frozen ; 2010 ; Leukemia Volume 24 ; 2010 ; 24 ; >
     au < finished ; frozen ; 2011 ; Leukemia Volume 25 ; 2011 ; 25 ; >
     au < finished ; frozen ; 2012 ; Leukemia Volume 26 ; 2012 ; 26 ; >
     au < frozen ; exists ; 2013 ; Leukemia Volume 27 ; 2013 ; 27 ; >
@@ -2540,7 +2540,7 @@
     au < doNotProcess ; exists ; 2007 ; Nature Biotechnology Volume 25 ; 2007 ; 25 ; >
     au < zapped ; finished ; 2008 ; Nature Biotechnology Volume 26 ; 2008 ; 26 ; >
     au < zapped ; finished ; 2009 ; Nature Biotechnology Volume 27 ; 2009 ; 27 ; >
-    au < finished ; crawling ; 2010 ; Nature Biotechnology Volume 28 ; 2010 ; 28 ; >
+    au < finished ; frozen ; 2010 ; Nature Biotechnology Volume 28 ; 2010 ; 28 ; >
     au < finished ; frozen ; 2011 ; Nature Biotechnology Volume 29 ; 2011 ; 29 ; >
     au < frozen ; exists ; 2012 ; Nature Biotechnology Volume 30 ; 2012 ; 30 ; >
     au < frozen ; exists ; 2013 ; Nature Biotechnology Volume 31 ; 2013 ; 31 ; >
@@ -2600,7 +2600,7 @@
     au < doNotProcess ; exists ; 2007 ; Nature Chemical Biology Volume 3 ; 2007 ; 3 ; >
     au < zapped ; finished ; 2008 ; Nature Chemical Biology Volume 4 ; 2008 ; 4 ; >
     au < zapped ; finished ; 2009 ; Nature Chemical Biology Volume 5 ; 2009 ; 5 ; >
-    au < finished ; crawling ; 2010 ; Nature Chemical Biology Volume 6 ; 2010 ; 6 ; >
+    au < finished ; frozen ; 2010 ; Nature Chemical Biology Volume 6 ; 2010 ; 6 ; >
     au < frozen ; exists ; 2011 ; Nature Chemical Biology Volume 7 ; 2011 ; 7 ; >
     au < frozen ; exists ; 2012 ; Nature Chemical Biology Volume 8 ; 2012 ; 8 ; >
     au < frozen ; exists ; 2013 ; Nature Chemical Biology Volume 9 ; 2013 ; 9 ; >
@@ -2623,7 +2623,7 @@
     param[journal_id] = nchem
 
     au < finished ; finished ; 2009 ; Nature Chemistry Volume 1 ; 2009 ; 1 ; >
-    au < finished ; crawling ; 2010 ; Nature Chemistry Volume 2 ; 2010 ; 2 ; >
+    au < finished ; frozen ; 2010 ; Nature Chemistry Volume 2 ; 2010 ; 2 ; >
     au < frozen ; exists ; 2011 ; Nature Chemistry Volume 3 ; 2011 ; 3 ; >
     au < frozen ; exists ; 2012 ; Nature Chemistry Volume 4 ; 2012 ; 4 ; >
     au < frozen ; exists ; 2013 ; Nature Chemistry Volume 5 ; 2013 ; 5 ; >
@@ -2752,7 +2752,7 @@
     au < doNotProcess ; exists ; 2007 ; Nature Genetics Volume 39 ; 2007 ; 39 ; >
     au < finished ; frozen ; 2008 ; Nature Genetics Volume 40 ; 2008 ; 40 ; >
     au < zapped ; finished ; 2009 ; Nature Genetics Volume 41 ; 2009 ; 41 ; >
-    au < finished ; crawling ; 2010 ; Nature Genetics Volume 42 ; 2010 ; 42 ; >
+    au < finished ; frozen ; 2010 ; Nature Genetics Volume 42 ; 2010 ; 42 ; >
     au < finished ; frozen ; 2011 ; Nature Genetics Volume 43 ; 2011 ; 43 ; >
     au < frozen ; exists ; 2012 ; Nature Genetics Volume 44 ; 2012 ; 44 ; >
     au < frozen ; exists ; 2013 ; Nature Genetics Volume 45 ; 2013 ; 45 ; >
@@ -2777,7 +2777,7 @@
     au < zapped ; finished ; 2008 ; Nature Geoscience Volume 1 ; 2008 ; 1 ; >
     au < zapped ; finished ; 2009 ; Nature Geoscience Volume 2 ; 2009 ; 2 ; >
     au < finished ; frozen ; 2010 ; Nature Geoscience Volume 3 ; 2010 ; 3 ; >
-    au < finished ; crawling ; 2011 ; Nature Geoscience Volume 4 ; 2011 ; 4 ; >
+    au < finished ; frozen ; 2011 ; Nature Geoscience Volume 4 ; 2011 ; 4 ; >
     au < frozen ; exists ; 2012 ; Nature Geoscience Volume 5 ; 2012 ; 5 ; >
     au < frozen ; exists ; 2013 ; Nature Geoscience Volume 6 ; 2013 ; 6 ; >
     au < zapped ; finished ; 2014 ; Nature Geoscience Volume 7 ; 2014 ; 7 ; reingest1.clockss.org:8082 >
@@ -2839,7 +2839,7 @@
     au < zapped ; finished ; 2008 ; Nature Materials Volume 7 ; 2008 ; 7 ; >
     au < zapped ; finished ; 2009 ; Nature Materials Volume 8 ; 2009 ; 8 ; >
     au < finished ; frozen ; 2010 ; Nature Materials Volume 9 ; 2010 ; 9 ; >
-    au < finished ; crawling ; 2011 ; Nature Materials Volume 10 ; 2011 ; 10 ; >
+    au < finished ; frozen ; 2011 ; Nature Materials Volume 10 ; 2011 ; 10 ; >
     au < frozen ; exists ; 2012 ; Nature Materials Volume 11 ; 2012 ; 11 ; >
     au < frozen ; exists ; 2013 ; Nature Materials Volume 12 ; 2013 ; 12 ; >
     au < zapped ; finished ; 2014 ; Nature Materials Volume 13 ; 2014 ; 13 ; reingest2.clockss.org:8085 >
@@ -2875,7 +2875,7 @@
     au < doNotProcess ; exists ; 2007 ; Nature Medicine Volume 13 ; 2007 ; 13 ; >
     au < zapped ; finished ; 2008 ; Nature Medicine Volume 14 ; 2008 ; 14 ; >
     au < zapped ; finished ; 2009 ; Nature Medicine Volume 15 ; 2009 ; 15 ; >
-    au < finished ; crawling ; 2010 ; Nature Medicine Volume 16 ; 2010 ; 16 ; >
+    au < finished ; frozen ; 2010 ; Nature Medicine Volume 16 ; 2010 ; 16 ; >
     au < frozen ; exists ; 2011 ; Nature Medicine Volume 17 ; 2011 ; 17 ; >
     au < frozen ; exists ; 2012 ; Nature Medicine Volume 18 ; 2012 ; 18 ; >
     au < frozen ; exists ; 2013 ; Nature Medicine Volume 19 ; 2013 ; 19 ; >
@@ -2904,7 +2904,7 @@
     au < finished ; frozen ; 2008 ; Nature Methods Volume 5 ; 2008 ; 5 ; >
     au < zapped ; finished ; 2009 ; Nature Methods Volume 6 ; 2009 ; 6 ; >
     au < finished ; frozen ; 2010 ; Nature Methods Volume 7 ; 2010 ; 7 ; >
-    au < finished ; crawling ; 2011 ; Nature Methods Volume 8 ; 2011 ; 8 ; >
+    au < finished ; frozen ; 2011 ; Nature Methods Volume 8 ; 2011 ; 8 ; >
     au < frozen ; exists ; 2012 ; Nature Methods Volume 9 ; 2012 ; 9 ; >
     au < frozen ; exists ; 2013 ; Nature Methods Volume 10 ; 2013 ; 10 ; >
     au < frozen ; exists ; 2014 ; Nature Methods Volume 11 ; 2014 ; 11 ; >
@@ -2929,7 +2929,7 @@
     au < doNotProcess ; exists ; 2007 ; Nature Nanotechnology Volume 2 ; 2007 ; 2 ; >
     au < zapped ; finished ; 2008 ; Nature Nanotechnology Volume 3 ; 2008 ; 3 ; >
     au < zapped ; finished ; 2009 ; Nature Nanotechnology Volume 4 ; 2009 ; 4 ; >
-    au < finished ; crawling ; 2010 ; Nature Nanotechnology Volume 5 ; 2010 ; 5 ; >
+    au < finished ; frozen ; 2010 ; Nature Nanotechnology Volume 5 ; 2010 ; 5 ; >
     au < finished ; frozen ; 2011 ; Nature Nanotechnology Volume 6 ; 2011 ; 6 ; >
     au < frozen ; exists ; 2012 ; Nature Nanotechnology Volume 7 ; 2012 ; 7 ; >
     au < frozen ; exists ; 2013 ; Nature Nanotechnology Volume 8 ; 2013 ; 8 ; >
@@ -2989,8 +2989,8 @@
     au < doNotProcess ; exists ; 2007 ; Nature Photonics Volume 1 ; 2007 ; 1 ; >
     au < zapped ; finished ; 2008 ; Nature Photonics Volume 2 ; 2008 ; 2 ; >
     au < zapped ; finished ; 2009 ; Nature Photonics Volume 3 ; 2009 ; 3 ; >
-    au < finished ; crawling ; 2010 ; Nature Photonics Volume 4 ; 2010 ; 4 ; >
-    au < finished ; crawling ; 2011 ; Nature Photonics Volume 5 ; 2011 ; 5 ; >
+    au < finished ; frozen ; 2010 ; Nature Photonics Volume 4 ; 2010 ; 4 ; >
+    au < finished ; frozen ; 2011 ; Nature Photonics Volume 5 ; 2011 ; 5 ; >
     au < frozen ; exists ; 2012 ; Nature Photonics Volume 6 ; 2012 ; 6 ; >
     au < frozen ; exists ; 2013 ; Nature Photonics Volume 7 ; 2013 ; 7 ; >
     au < frozen ; exists ; 2014 ; Nature Photonics Volume 8 ; 2014 ; 8 ; >
@@ -3040,10 +3040,10 @@
 
     au < doNotProcess ; exists ; 2006 ; Nature Protocols Volume 1 ; 2006 ; 1 ; >
     au < doNotProcess ; exists ; 2007 ; Nature Protocols Volume 2 ; 2007 ; 2 ; >
-    au < finished ; crawling ; 2008 ; Nature Protocols Volume 3 ; 2008 ; 3 ; >
+    au < finished ; frozen ; 2008 ; Nature Protocols Volume 3 ; 2008 ; 3 ; >
     au < zapped ; finished ; 2009 ; Nature Protocols Volume 4 ; 2009 ; 4 ; >
-    au < finished ; crawling ; 2010 ; Nature Protocols Volume 5 ; 2010 ; 5 ; >
-    au < finished ; crawling ; 2011 ; Nature Protocols Volume 6 ; 2011 ; 6 ; >
+    au < finished ; frozen ; 2010 ; Nature Protocols Volume 5 ; 2010 ; 5 ; >
+    au < finished ; frozen ; 2011 ; Nature Protocols Volume 6 ; 2011 ; 6 ; >
     au < frozen ; exists ; 2012 ; Nature Protocols Volume 7 ; 2012 ; 7 ; >
     au < frozen ; exists ; 2013 ; Nature Protocols Volume 8 ; 2013 ; 8 ; >
     au < zapped ; finished ; 2014 ; Nature Protocols Volume 9 ; 2014 ; 9 ; reingest1.clockss.org:8082 >
@@ -3249,7 +3249,7 @@
     au < zapped ; finished ; 2009 ; Nature Reviews Genetics Volume 10 ; 2009 ; 10 ; >
     au < finished ; frozen ; 2010 ; Nature Reviews Genetics Volume 11 ; 2010 ; 11 ; >
     au < finished ; frozen ; 2011 ; Nature Reviews Genetics Volume 12 ; 2011 ; 12 ; >
-    au < finished ; crawling ; 2012 ; Nature Reviews Genetics Volume 13 ; 2012 ; 13 ; >
+    au < finished ; frozen ; 2012 ; Nature Reviews Genetics Volume 13 ; 2012 ; 13 ; >
     au < frozen ; exists ; 2013 ; Nature Reviews Genetics Volume 14 ; 2013 ; 14 ; >
     au < doNotProcess ; exists ; 2014 ; Nature Reviews Genetics Volume 15 ; 2014 ; 15 ; >
     au < frozen ; exists ; 2015 ; Nature Reviews Genetics Volume 16 ; 2015 ; 16 ; >
@@ -3518,7 +3518,7 @@
     au < doNotProcess ; exists ; 2007 ; Nature Structural and Molecular Biology Volume 14 ; 2007 ; 14 ; >
     au < zapped ; finished ; 2008 ; Nature Structural and Molecular Biology Volume 15 ; 2008 ; 15 ; >
     au < finished ; frozen ; 2009 ; Nature Structural and Molecular Biology Volume 16 ; 2009 ; 16 ; >
-    au < finished ; crawling ; 2010 ; Nature Structural and Molecular Biology Volume 17 ; 2010 ; 17 ; >
+    au < finished ; frozen ; 2010 ; Nature Structural and Molecular Biology Volume 17 ; 2010 ; 17 ; >
     au < frozen ; exists ; 2011 ; Nature Structural and Molecular Biology Volume 18 ; 2011 ; 18 ; >
     au < frozen ; exists ; 2012 ; Nature Structural and Molecular Biology Volume 19 ; 2012 ; 19 ; >
     au < frozen ; exists ; 2013 ; Nature Structural and Molecular Biology Volume 20 ; 2013 ; 20 ; >
@@ -3638,7 +3638,7 @@
     au < finished ; finished ; 2008 ; Obesity Volume 16 ; 2008 ; 16 ; >
     au < finished ; frozen ; 2009 ; Obesity Volume 17 ; 2009 ; 17 ; >
     au < finished ; finished ; 2010 ; Obesity Volume 18 ; 2010 ; 18 ; >
-    au < finished ; crawling ; 2011 ; Obesity Volume 19 ; 2011 ; 19 ; >
+    au < finished ; frozen ; 2011 ; Obesity Volume 19 ; 2011 ; 19 ; >
     au < superseded ; exists ; 2012 ; Obesity Volume 20 [to delete] ; 2012 ; 20 ; >
 
   }
