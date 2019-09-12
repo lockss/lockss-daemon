@@ -18,12 +18,12 @@
 
       param[base_url] = https://www.eneuro.org/
 
-      au < sfn.ClockssSFNDrupalPlugin ; exists ; exists ; 2014 ; eNeuro Volume 1 ; 1 ; >
-      au < sfn.ClockssSFNDrupalPlugin ; exists ; exists ; 2015 ; eNeuro Volume 2 ; 2 ; >
-      au < sfn.ClockssSFNDrupalPlugin ; exists ; exists ; 2016 ; eNeuro Volume 3 ; 3 ; >
-      au < sfn.ClockssSFNDrupalPlugin ; exists ; exists ; 2017 ; eNeuro Volume 4 ; 4 ; >
-      au < sfn.ClockssSFNDrupalPlugin ; exists ; exists ; 2018 ; eNeuro Volume 5 ; 5 ; >
-      au < sfn.ClockssSFNDrupalPlugin ; exists ; exists ; 2019 ; eNeuro Volume 6 ; 6 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; manifest ; exists ; 2014 ; eNeuro Volume 1 ; 1 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; manifest ; exists ; 2015 ; eNeuro Volume 2 ; 2 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; manifest ; exists ; 2016 ; eNeuro Volume 3 ; 3 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; manifest ; exists ; 2017 ; eNeuro Volume 4 ; 4 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; manifest ; exists ; 2018 ; eNeuro Volume 5 ; 5 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; manifest ; exists ; 2019 ; eNeuro Volume 6 ; 6 ; >
   }
   
   {
@@ -34,7 +34,7 @@
       issnl = 0270-6474
     >
 
-      param[base_url] = http://www.jneurosci.org/
+      param[base_url] = https://www.jneurosci.org/
 
       au < sfn.ClockssSFNDrupalPlugin ; exists ; exists ; 1981 ; Journal of Neuroscience Volume 1 ; 1 ; >
       au < sfn.ClockssSFNDrupalPlugin ; exists ; exists ; 1982 ; Journal of Neuroscience Volume 2 ; 2 ; >
