@@ -30,7 +30,7 @@
 
     au < frozen ; exists ; 2013 ; Scottish Church History Volume 42 ; 42 ; https://www.euppublishing.com/ ; >
     au < frozen ; exists ; 2014 ; Scottish Church History Volume 43 ; 43 ; https://www.euppublishing.com/ ; >
-    au < ready ; exists ; 2015 ; Scottish Church History Volume 44 ; 44 ; https://www.euppublishing.com/ ; >
+    au < crawling ; exists ; 2015 ; Scottish Church History Volume 44 ; 44 ; https://www.euppublishing.com/ ; >
     au < ready ; exists ; 2016 ; Scottish Church History Volume 45 ; 45 ; https://www.euppublishing.com/ ; >
     au < frozen ; exists ; 2017 ; Scottish Church History Volume 46 ; 46 ; https://www.euppublishing.com/ ; >
     au < frozen ; exists ; 2018 ; Scottish Church History Volume 47 ; 47 ; https://www.euppublishing.com/ ; >
@@ -273,7 +273,7 @@
     param[journal_id] = anh
 
     au < frozen ; exists ; 2000 ; Archives of Natural History Volume 27 ; 27 ; https://www.euppublishing.com/ ; >
-    au < ready ; exists ; 2001 ; Archives of Natural History Volume 28 ; 28 ; https://www.euppublishing.com/ ; >
+    au < crawling ; exists ; 2001 ; Archives of Natural History Volume 28 ; 28 ; https://www.euppublishing.com/ ; >
     au < frozen ; exists ; 2002 ; Archives of Natural History Volume 29 ; 29 ; https://www.euppublishing.com/ ; >
     au < finished ; finished ; 2003 ; Archives of Natural History Volume 30 ; 30 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2004 ; Archives of Natural History Volume 31 ; 31 ; http://www.euppublishing.com/ ; >
