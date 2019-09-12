@@ -39,18 +39,18 @@
       param[journal_abbr] = biyclc
       # no volume published in 2011
 
-      au < manifest ; exists ; 2005 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 1 ; 1 ; https://newprairiepress.org/ ; >
-      au < manifest ; exists ; 2006 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 2 ; 2 ; https://newprairiepress.org/ ; >
-      au < manifest ; exists ; 2007 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 3 ; 3 ; https://newprairiepress.org/ ; >
-      au < manifest ; exists ; 2008 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 4 ; 4 ; https://newprairiepress.org/ ; >
-      au < manifest ; exists ; 2009 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 5 ; 5 ; https://newprairiepress.org/ ; >
-      au < manifest ; exists ; 2010 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 6 ; 6 ; https://newprairiepress.org/ ; >
+      au < testing ; exists ; 2005 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 1 ; 1 ; https://newprairiepress.org/ ; >
+      au < testing ; exists ; 2006 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 2 ; 2 ; https://newprairiepress.org/ ; >
+      au < testing ; exists ; 2007 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 3 ; 3 ; https://newprairiepress.org/ ; >
+      au < testing ; exists ; 2008 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 4 ; 4 ; https://newprairiepress.org/ ; >
+      au < testing ; exists ; 2009 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 5 ; 5 ; https://newprairiepress.org/ ; >
+      au < testing ; exists ; 2010 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 6 ; 6 ; https://newprairiepress.org/ ; >
       au < finished ; finished ; 2012 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 7 ; 7 ; http://newprairiepress.org/ ; >
       au < finished ; finished ; 2013 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 8 ; 8 ; http://newprairiepress.org/ ; >
       au < finished ; finished ; 2014 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 9 ; 9 ; http://newprairiepress.org/ ; >
       au < finished ; finished ; 2015 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 10 ; 10 ; http://newprairiepress.org/ ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2016 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 11 ; 11 ; http://newprairiepress.org/ ; >
-      au < manifest ; exists ; 2017 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 12 ; 12 ; https://newprairiepress.org/ ; >
+      au < testing ; exists ; 2017 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 12 ; 12 ; https://newprairiepress.org/ ; >
 
     }
   }
@@ -146,8 +146,8 @@
       #param[base_url] = http://newprairiepress.org/
       param[journal_abbr] = jft
 
-      au < manifest ; exists ; 2010 ; Journal of Financial Therapy Volume 1 ; 1 ; https://newprairiepress.org/ ; >
-      au < manifest ; exists ; 2011 ; Journal of Financial Therapy Volume 2 ; 2 ; https://newprairiepress.org/ ; >
+      au < testing ; exists ; 2010 ; Journal of Financial Therapy Volume 1 ; 1 ; https://newprairiepress.org/ ; >
+      au < testing ; exists ; 2011 ; Journal of Financial Therapy Volume 2 ; 2 ; https://newprairiepress.org/ ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Journal of Financial Therapy Volume 3 ; 3 ; https://newprairiepress.org/ ; >
       au < finished ; finished ; 2013 ; Journal of Financial Therapy Volume 4 ; 4 ; http://newprairiepress.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2014 ; Journal of Financial Therapy Volume 5 ; 5 ; http://newprairiepress.org/ ; >
@@ -207,7 +207,7 @@
       #param[base_url] = http://newprairiepress.org/
       param[journal_abbr] = culsproceedings
 
-      au < manifest ; exists ; 2011 ; Kansas Library Association College and University Libraries Section Proceedings Volume 1 ; 1 ; https://newprairiepress.org/ ; >
+      au < testing ; exists ; 2011 ; Kansas Library Association College and University Libraries Section Proceedings Volume 1 ; 1 ; https://newprairiepress.org/ ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Kansas Library Association College and University Libraries Section Proceedings Volume 2 ; 2 ; https://newprairiepress.org/ ; >
       au < finished ; finished ; 2013 ; Kansas Library Association College and University Libraries Section Proceedings Volume 3 ; 3 ; http://newprairiepress.org/ ; >
       au < finished ; finished ; 2014 ; Kansas Library Association College and University Libraries Section Proceedings Volume 4 ; 4 ; http://newprairiepress.org/ ; >
@@ -245,12 +245,12 @@
       #param[base_url] = http://newprairiepress.org/
       param[journal_abbr] = ojrrp
 
-      au < manifest ; exists ; 2006 ; Online Journal of Rural Research & Policy Volume 1 ; 1 ; https://newprairiepress.org/ ; >
-      au < manifest ; exists ; 2007 ; Online Journal of Rural Research & Policy Volume 2 ; 2 ; https://newprairiepress.org/ ; >
-      au < manifest ; exists ; 2008 ; Online Journal of Rural Research & Policy Volume 3 ; 3 ; https://newprairiepress.org/ ; >
-      au < manifest ; exists ; 2009 ; Online Journal of Rural Research & Policy Volume 4 ; 4 ; https://newprairiepress.org/ ; >
-      au < manifest ; exists ; 2010 ; Online Journal of Rural Research & Policy Volume 5 ; 5 ; https://newprairiepress.org/ ; >
-      au < manifest ; exists ; 2011 ; Online Journal of Rural Research & Policy Volume 6 ; 6 ; https://newprairiepress.org/ ; >
+      au < testing ; exists ; 2006 ; Online Journal of Rural Research & Policy Volume 1 ; 1 ; https://newprairiepress.org/ ; >
+      au < testing ; exists ; 2007 ; Online Journal of Rural Research & Policy Volume 2 ; 2 ; https://newprairiepress.org/ ; >
+      au < testing ; exists ; 2008 ; Online Journal of Rural Research & Policy Volume 3 ; 3 ; https://newprairiepress.org/ ; >
+      au < testing ; exists ; 2009 ; Online Journal of Rural Research & Policy Volume 4 ; 4 ; https://newprairiepress.org/ ; >
+      au < testing ; exists ; 2010 ; Online Journal of Rural Research & Policy Volume 5 ; 5 ; https://newprairiepress.org/ ; >
+      au < testing ; exists ; 2011 ; Online Journal of Rural Research & Policy Volume 6 ; 6 ; https://newprairiepress.org/ ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Online Journal of Rural Research & Policy Volume 7 ; 7 ; https://newprairiepress.org/ ; >
       au < finished ; finished ; 2013 ; Online Journal of Rural Research & Policy Volume 8 ; 8 ; http://newprairiepress.org/ ; >
       au < finished ; finished ; 2014 ; Online Journal of Rural Research & Policy Volume 9 ; 9 ; http://newprairiepress.org/ ; >
@@ -280,13 +280,13 @@
       au < manifest ; exists ; 2002 ; Transactions of the Burgon Society Volume 2 ; 2 ; https://newprairiepress.org/ ; >
       au < manifest ; exists ; 2003 ; Transactions of the Burgon Society Volume 3 ; 3 ; https://newprairiepress.org/ ; >
       au < manifest ; exists ; 2004 ; Transactions of the Burgon Society Volume 4 ; 4 ; https://newprairiepress.org/ ; >
-      au < manifest ; exists ; 2005 ; Transactions of the Burgon Society Volume 5 ; 5 ; https://newprairiepress.org/ ; >
-      au < manifest ; exists ; 2006 ; Transactions of the Burgon Society Volume 6 ; 6 ; https://newprairiepress.org/ ; >
-      au < manifest ; exists ; 2007 ; Transactions of the Burgon Society Volume 7 ; 7 ; https://newprairiepress.org/ ; >
-      au < manifest ; exists ; 2008 ; Transactions of the Burgon Society Volume 8 ; 8 ; https://newprairiepress.org/ ; >
-      au < manifest ; exists ; 2009 ; Transactions of the Burgon Society Volume 9 ; 9 ; https://newprairiepress.org/ ; >
-      au < manifest ; exists ; 2010 ; Transactions of the Burgon Society Volume 10 ; 10 ; https://newprairiepress.org/ ; >
-      au < manifest ; exists ; 2011 ; Transactions of the Burgon Society Volume 11 ; 11 ; https://newprairiepress.org/ ; >
+      au < testing ; exists ; 2005 ; Transactions of the Burgon Society Volume 5 ; 5 ; https://newprairiepress.org/ ; >
+      au < testing ; exists ; 2006 ; Transactions of the Burgon Society Volume 6 ; 6 ; https://newprairiepress.org/ ; >
+      au < testing ; exists ; 2007 ; Transactions of the Burgon Society Volume 7 ; 7 ; https://newprairiepress.org/ ; >
+      au < testing ; exists ; 2008 ; Transactions of the Burgon Society Volume 8 ; 8 ; https://newprairiepress.org/ ; >
+      au < testing ; exists ; 2009 ; Transactions of the Burgon Society Volume 9 ; 9 ; https://newprairiepress.org/ ; >
+      au < testing ; exists ; 2010 ; Transactions of the Burgon Society Volume 10 ; 10 ; https://newprairiepress.org/ ; >
+      au < testing ; exists ; 2011 ; Transactions of the Burgon Society Volume 11 ; 11 ; https://newprairiepress.org/ ; >
       au < frozen ; exists ; 2012 ; Transactions of the Burgon Society Volume 12 ; 12 ; http://newprairiepress.org/ ; >
       au < frozen ; exists ; 2014 ; Transactions of the Burgon Society Volume 13 ; 13 ; http://newprairiepress.org/ ; >
       au < frozen ; exists ; 2014 ; Transactions of the Burgon Society Volume 14 ; 14 ; http://newprairiepress.org/ ; >
@@ -307,7 +307,7 @@
       param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = advocate
 
-      au < manifest ; exists ; 2011 ; The Advocate Volume 19 ; 19 ; >
+      au < testing ; exists ; 2011 ; The Advocate Volume 19 ; 19 ; >
       au < frozen ; exists ; 2012 ; The Advocate Volume 20 ; 20 ; >
       au < frozen ; exists ; 2013-2014 ; The Advocate Volume 21 ; 21 ; >
       au < frozen ; exists ; 2014-2015 ; The Advocate Volume 22 ; 22 ; >
@@ -379,13 +379,13 @@
       au < manifest ; exists ; 2001-2002 ; Educational Considerations Volume 29 ; 29 ; >
       au < manifest ; exists ; 2002-2003 ; Educational Considerations Volume 30 ; 30 ; >
       au < manifest ; exists ; 2003-2004 ; Educational Considerations Volume 31 ; 31 ; >
-      au < manifest ; exists ; 2004-2005 ; Educational Considerations Volume 32 ; 32 ; >
-      au < manifest ; exists ; 2005-2006 ; Educational Considerations Volume 33 ; 33 ; >
-      au < manifest ; exists ; 2006-2007 ; Educational Considerations Volume 34 ; 34 ; >
-      au < manifest ; exists ; 2007-2008 ; Educational Considerations Volume 35 ; 35 ; >
-      au < manifest ; exists ; 2008-2009 ; Educational Considerations Volume 36 ; 36 ; >
-      au < manifest ; exists ; 2009-2010 ; Educational Considerations Volume 37 ; 37 ; >
-      au < manifest ; exists ; 2010-2011 ; Educational Considerations Volume 38 ; 38 ; >
+      au < testing ; exists ; 2004-2005 ; Educational Considerations Volume 32 ; 32 ; >
+      au < testing ; exists ; 2005-2006 ; Educational Considerations Volume 33 ; 33 ; >
+      au < testing ; exists ; 2006-2007 ; Educational Considerations Volume 34 ; 34 ; >
+      au < testing ; exists ; 2007-2008 ; Educational Considerations Volume 35 ; 35 ; >
+      au < testing ; exists ; 2008-2009 ; Educational Considerations Volume 36 ; 36 ; >
+      au < testing ; exists ; 2009-2010 ; Educational Considerations Volume 37 ; 37 ; >
+      au < testing ; exists ; 2010-2011 ; Educational Considerations Volume 38 ; 38 ; >
       au < frozen ; exists ; 2011-2012 ; Educational Considerations Volume 39 ; 39 ; >
       au < frozen ; exists ; 2012-2013 ; Educational Considerations Volume 40 ; 40 ; >
       au < frozen ; exists ; 2013-2014 ; Educational Considerations Volume 41 ; 41 ; >
@@ -514,9 +514,9 @@
       au < manifest ; exists ; 2002 ; Fungal Genetics Newsletter Volume 49 ; 49 ; >
       au < manifest ; exists ; 2003 ; Fungal Genetics Newsletter Volume 50 ; 50 ; >
       au < manifest ; exists ; 2004 ; Fungal Genetics Newsletter Volume 51 ; 51 ; >
-      au < manifest ; exists ; 2005 ; Fungal Genetics Newsletter Volume 52 ; 52 ; >
-      au < manifest ; exists ; 2006 ; Fungal Genetics Newsletter Volume 53 ; 53 ; >
-      au < manifest ; exists ; 2007 ; Fungal Genetics Newsletter Volume 54 ; 54 ; >
+      au < testing ; exists ; 2005 ; Fungal Genetics Newsletter Volume 52 ; 52 ; >
+      au < testing ; exists ; 2006 ; Fungal Genetics Newsletter Volume 53 ; 53 ; >
+      au < testing ; exists ; 2007 ; Fungal Genetics Newsletter Volume 54 ; 54 ; >
 
   }
 
@@ -535,10 +535,10 @@
 
       #continues = 0895-1942
 
-      au < manifest ; exists ; 2008 ; Fungal Genetics Reports Volume 55 ; 55 ; >
-      au < manifest ; exists ; 2009 ; Fungal Genetics Reports Volume 56 ; 56 ; >
-      au < manifest ; exists ; 2010 ; Fungal Genetics Reports Volume 57 ; 57 ; >
-      au < manifest ; exists ; 2011 ; Fungal Genetics Reports Volume 58 ; 58 ; >
+      au < testing ; exists ; 2008 ; Fungal Genetics Reports Volume 55 ; 55 ; >
+      au < testing ; exists ; 2009 ; Fungal Genetics Reports Volume 56 ; 56 ; >
+      au < testing ; exists ; 2010 ; Fungal Genetics Reports Volume 57 ; 57 ; >
+      au < testing ; exists ; 2011 ; Fungal Genetics Reports Volume 58 ; 58 ; >
       au < frozen ; exists ; 2012 ; Fungal Genetics Reports Volume 59 ; 59 ; >
       au < frozen ; exists ; 2013 ; Fungal Genetics Reports Volume 60 ; 60 ; >
       au < frozen ; exists ; 2015 ; Fungal Genetics Reports Volume 61 ; 61 ; >
@@ -635,13 +635,13 @@
       au < manifest ; exists ; 2002 ; Journal of Applied Communications Volume 85 ; 85 ; >
       au < manifest ; exists ; 2003 ; Journal of Applied Communications Volume 86 ; 86 ; >
       au < manifest ; exists ; 2004 ; Journal of Applied Communications Volume 87 ; 87 ; >
-      au < manifest ; exists ; 2005 ; Journal of Applied Communications Volume 88 ; 88 ; >
-      au < manifest ; exists ; 2006 ; Journal of Applied Communications Volume 89 ; 89 ; >
-      au < manifest ; exists ; 2007 ; Journal of Applied Communications Volume 90 ; 90 ; >
-      au < manifest ; exists ; 2008 ; Journal of Applied Communications Volume 91 ; 91 ; >
-      au < manifest ; exists ; 2009 ; Journal of Applied Communications Volume 92 ; 92 ; >
-      au < manifest ; exists ; 2010 ; Journal of Applied Communications Volume 93 ; 93 ; >
-      au < manifest ; exists ; 2011 ; Journal of Applied Communications Volume 94 ; 94 ; >
+      au < testing ; exists ; 2005 ; Journal of Applied Communications Volume 88 ; 88 ; >
+      au < testing ; exists ; 2006 ; Journal of Applied Communications Volume 89 ; 89 ; >
+      au < testing ; exists ; 2007 ; Journal of Applied Communications Volume 90 ; 90 ; >
+      au < testing ; exists ; 2008 ; Journal of Applied Communications Volume 91 ; 91 ; >
+      au < testing ; exists ; 2009 ; Journal of Applied Communications Volume 92 ; 92 ; >
+      au < testing ; exists ; 2010 ; Journal of Applied Communications Volume 93 ; 93 ; >
+      au < testing ; exists ; 2011 ; Journal of Applied Communications Volume 94 ; 94 ; >
       au < frozen ; exists ; 2012 ; Journal of Applied Communications Volume 95 ; 95 ; >
       au < frozen ; exists ; 2013 ; Journal of Applied Communications Volume 96 ; 96 ; >
       au < frozen ; exists ; 2014 ; Journal of Applied Communications Volume 97 ; 97 ; >
@@ -670,9 +670,9 @@
       au < manifest ; exists ; 1999-2000 ; Journal of Hazardous Substance Research Volume 2 ; 2 ; >
       au < manifest ; exists ; 2001-2002 ; Journal of Hazardous Substance Research Volume 3 ; 3 ; >
       au < manifest ; exists ; 2003 ; Journal of Hazardous Substance Research Volume 4 ; 4 ; >
-      au < manifest ; exists ; 2006 ; Journal of Hazardous Substance Research Volume 5 ; 5 ; >
-      au < manifest ; exists ; 2007 ; Journal of Hazardous Substance Research Volume 6 ; 6 ; >
-      au < manifest ; exists ; 2007 ; Journal of Hazardous Substance Research Volume 7 ; 7 ; >
+      au < testing ; exists ; 2006 ; Journal of Hazardous Substance Research Volume 5 ; 5 ; >
+      au < testing ; exists ; 2007 ; Journal of Hazardous Substance Research Volume 6 ; 6 ; >
+      au < testing ; exists ; 2007 ; Journal of Hazardous Substance Research Volume 7 ; 7 ; >
 
   }
 
@@ -742,11 +742,11 @@
       au < manifest ; exists ; 2002 ; Networks: An Online Journal for Teacher Research Volume 5 ; 5 ; >
       au < manifest ; exists ; 2003 ; Networks: An Online Journal for Teacher Research Volume 6 ; 6 ; >
       au < manifest ; exists ; 2004 ; Networks: An Online Journal for Teacher Research Volume 7 ; 7 ; >
-      au < manifest ; exists ; 2005 ; Networks: An Online Journal for Teacher Research Volume 8 ; 8 ; >
-      au < manifest ; exists ; 2006 ; Networks: An Online Journal for Teacher Research Volume 9 ; 9 ; >
-      au < manifest ; exists ; 2008 ; Networks: An Online Journal for Teacher Research Volume 10 ; 10 ; >
-      au < manifest ; exists ; 2009 ; Networks: An Online Journal for Teacher Research Volume 11 ; 11 ; >
-      au < manifest ; exists ; 2010 ; Networks: An Online Journal for Teacher Research Volume 12 ; 12 ; >
+      au < testing ; exists ; 2005 ; Networks: An Online Journal for Teacher Research Volume 8 ; 8 ; >
+      au < testing ; exists ; 2006 ; Networks: An Online Journal for Teacher Research Volume 9 ; 9 ; >
+      au < testing ; exists ; 2008 ; Networks: An Online Journal for Teacher Research Volume 10 ; 10 ; >
+      au < testing ; exists ; 2009 ; Networks: An Online Journal for Teacher Research Volume 11 ; 11 ; >
+      au < testing ; exists ; 2010 ; Networks: An Online Journal for Teacher Research Volume 12 ; 12 ; >
       au < frozen ; exists ; 2013 ; Networks: An Online Journal for Teacher Research Volume 13 ; 13 ; >
       au < frozen ; exists ; 2013 ; Networks: An Online Journal for Teacher Research Volume 14 ; 14 ; >
       au < frozen ; exists ; 2014 ; Networks: An Online Journal for Teacher Research Volume 15 ; 15 ; >
@@ -798,13 +798,13 @@
       au < manifest ; exists ; 2002 ; Oz Volume 24 ; 24 ; >
       au < manifest ; exists ; 2003 ; Oz Volume 25 ; 25 ; >
       au < manifest ; exists ; 2004 ; Oz Volume 26 ; 26 ; >
-      au < manifest ; exists ; 2005 ; Oz Volume 27 ; 27 ; >
-      au < manifest ; exists ; 2006 ; Oz Volume 28 ; 28 ; >
-      au < manifest ; exists ; 2007 ; Oz Volume 29 ; 29 ; >
-      au < manifest ; exists ; 2008 ; Oz Volume 30 ; 30 ; >
-      au < manifest ; exists ; 2009 ; Oz Volume 31 ; 31 ; >
-      au < manifest ; exists ; 2010 ; Oz Volume 32 ; 32 ; >
-      au < manifest ; exists ; 2011 ; Oz Volume 33 ; 33 ; >
+      au < testing ; exists ; 2005 ; Oz Volume 27 ; 27 ; >
+      au < testing ; exists ; 2006 ; Oz Volume 28 ; 28 ; >
+      au < testing ; exists ; 2007 ; Oz Volume 29 ; 29 ; >
+      au < testing ; exists ; 2008 ; Oz Volume 30 ; 30 ; >
+      au < testing ; exists ; 2009 ; Oz Volume 31 ; 31 ; >
+      au < testing ; exists ; 2010 ; Oz Volume 32 ; 32 ; >
+      au < testing ; exists ; 2011 ; Oz Volume 33 ; 33 ; >
       au < frozen ; exists ; 2012 ; Oz Volume 34 ; 34 ; >
       au < frozen ; exists ; 2013 ; Oz Volume 35 ; 35 ; >
       au < frozen ; exists ; 2014 ; Oz Volume 36 ; 36 ; >
@@ -865,7 +865,7 @@
       param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = seek
 
-      au < manifest ; exists ; 2011 ; Seek Volume 1 ; 1 ; >
+      au < testing ; exists ; 2011 ; Seek Volume 1 ; 1 ; >
       au < frozen ; exists ; 2012 ; Seek Volume 2 ; 2 ; >
       au < frozen ; exists ; 2013 ; Seek Volume 3 ; 3 ; >
       au < frozen ; exists ; 2014 ; Seek Volume 4 ; 4 ; >
@@ -920,13 +920,13 @@
       au < manifest ; exists ; 2002 ; Studies in 20th & 21st Century Literature Volume 27 ; 27 ; >
       au < manifest ; exists ; 2003 ; Studies in 20th & 21st Century Literature Volume 28 ; 28 ; >
       au < manifest ; exists ; 2004 ; Studies in 20th & 21st Century Literature Volume 29 ; 29 ; >
-      au < manifest ; exists ; 2005 ; Studies in 20th & 21st Century Literature Volume 30 ; 30 ; >
-      au < manifest ; exists ; 2006 ; Studies in 20th & 21st Century Literature Volume 31 ; 31 ; >
-      au < manifest ; exists ; 2007 ; Studies in 20th & 21st Century Literature Volume 32 ; 32 ; >
-      au < manifest ; exists ; 2008 ; Studies in 20th & 21st Century Literature Volume 33 ; 33 ; >
-      au < manifest ; exists ; 2009 ; Studies in 20th & 21st Century Literature Volume 34 ; 34 ; >
-      au < manifest ; exists ; 2010 ; Studies in 20th & 21st Century Literature Volume 35 ; 35 ; >
-      au < manifest ; exists ; 2011 ; Studies in 20th & 21st Century Literature Volume 36 ; 36 ; >
+      au < testing ; exists ; 2005 ; Studies in 20th & 21st Century Literature Volume 30 ; 30 ; >
+      au < testing ; exists ; 2006 ; Studies in 20th & 21st Century Literature Volume 31 ; 31 ; >
+      au < testing ; exists ; 2007 ; Studies in 20th & 21st Century Literature Volume 32 ; 32 ; >
+      au < testing ; exists ; 2008 ; Studies in 20th & 21st Century Literature Volume 33 ; 33 ; >
+      au < testing ; exists ; 2009 ; Studies in 20th & 21st Century Literature Volume 34 ; 34 ; >
+      au < testing ; exists ; 2010 ; Studies in 20th & 21st Century Literature Volume 35 ; 35 ; >
+      au < testing ; exists ; 2011 ; Studies in 20th & 21st Century Literature Volume 36 ; 36 ; >
       au < frozen ; exists ; 2012 ; Studies in 20th & 21st Century Literature Volume 37 ; 37 ; >
       au < frozen ; exists ; 2013 ; Studies in 20th & 21st Century Literature Volume 38 ; 38 ; >
       au < frozen ; exists ; 2014 ; Studies in 20th & 21st Century Literature Volume 39 ; 39 ; >
