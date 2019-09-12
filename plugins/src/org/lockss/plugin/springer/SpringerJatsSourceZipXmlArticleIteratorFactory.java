@@ -20,9 +20,13 @@ public class SpringerJatsSourceZipXmlArticleIteratorFactory extends SourceXmlArt
 
     protected static Logger log = Logger.getLogger(SpringerJatsSourceZipXmlArticleIteratorFactory.class);
 
-    protected static final String ALL_XML_PATTERN_TEMPLATE = "\"^%s[^/]+/(.*)\\.xml.Meta$\",base_url";
+    protected static final String ALL_XML_PATTERN_TEMPLATE = "\"^%s[^/]+/(.*)\\.xml\\.Meta$\",base_url";
 
-    public static final Pattern XML_PATTERN = Pattern.compile("/(.*)\\.xml.Meta$", Pattern.CASE_INSENSITIVE);
+    protected static final Pattern NESTED_ARCHIVE_PATTERN =
+            Pattern.compile(".*/.+\\.(zip|tar|gz|tgz|tar\\.gz)$",
+                    Pattern.CASE_INSENSITIVE);
+
+    public static final Pattern XML_PATTERN = Pattern.compile("/(.*)\\.xml\\.Meta$", Pattern.CASE_INSENSITIVE);
     public static final String XML_REPLACEMENT = "/$1.xml";
     private static final String PDF_REPLACEMENT = "/$1.pdf";
 
@@ -51,6 +55,17 @@ public class SpringerJatsSourceZipXmlArticleIteratorFactory extends SourceXmlArt
 
         return builder.getSubTreeArticleIterator();
     }
+
+    protected Pattern getExcludeSubTreePattern() {
+        log.debug3("Fei: NESTED_ARCHIVE_PATTERN = " + NESTED_ARCHIVE_PATTERN);
+        return NESTED_ARCHIVE_PATTERN;
+    }
+
+    protected String getIncludePatternTemplate() {
+        log.debug3("Fei: ALL_XML_PATTERN_TEMPLATE = " + ALL_XML_PATTERN_TEMPLATE);
+        return ALL_XML_PATTERN_TEMPLATE;
+    }
+
 
     protected boolean getIsArchive() {
         return false;
