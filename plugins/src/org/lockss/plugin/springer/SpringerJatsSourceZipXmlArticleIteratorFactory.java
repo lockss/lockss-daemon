@@ -16,18 +16,31 @@ import org.lockss.util.Logger;
 import java.util.Iterator;
 import java.util.regex.Pattern;
 
-public class SpringerJatsSourceZipXmlArticleIteratorFactory extends SourceXmlArticleIteratorFactory {
+public class SpringerJatsSourceZipXmlArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory  {
 
     protected static Logger log = Logger.getLogger(SpringerJatsSourceZipXmlArticleIteratorFactory.class);
 
-    protected static final String ALL_XML_PATTERN_TEMPLATE = "\"^%s[^/]+/(.*)\\.xml\\.Meta$\",base_url";
+    protected static final String ALL_ZIP_XML_PATTERN_TEMPLATE =
+            "\"%s[^/]+/.*\\.zip!/.*\\.xml\\.Meta$\", base_url";
 
-    protected static final Pattern NESTED_ARCHIVE_PATTERN =
-            Pattern.compile(".*/.+\\.(zip|tar|gz|tgz|tar\\.gz)$",
+    // Be sure to exclude all nested archives in case supplemental data is provided this way
+    protected static final Pattern SUB_NESTED_ARCHIVE_PATTERN =
+            Pattern.compile(".*/[^/]+\\.zip!/.+\\.(zip|tar|gz|tgz|tar\\.gz)$",
                     Pattern.CASE_INSENSITIVE);
+
+    protected Pattern getExcludeSubTreePattern() {
+        //return SUB_NESTED_ARCHIVE_PATTERN;
+        return null;
+    }
+
+    protected String getIncludePatternTemplate() {
+        return ALL_ZIP_XML_PATTERN_TEMPLATE;
+    }
 
     public static final Pattern XML_PATTERN = Pattern.compile("/(.*)\\.xml\\.Meta$", Pattern.CASE_INSENSITIVE);
     public static final String XML_REPLACEMENT = "/$1.xml";
+    // There will not always be a 1:1 PDF relationship, but when there is use that as the
+    // full-text CU.
     private static final String PDF_REPLACEMENT = "/$1.pdf";
 
     @Override
@@ -43,30 +56,28 @@ public class SpringerJatsSourceZipXmlArticleIteratorFactory extends SourceXmlArt
                 .setExcludeSubTreePattern(getExcludeSubTreePattern())
                 .setVisitArchiveMembers(getIsArchive()));
 
+        // NOTE - full_text_cu is set automatically to the url used for the articlefiles
+        // ultimately the metadata extractor needs to set the entire facet map
+
+        // set up XML to be an aspect that will trigger an ArticleFiles to feed the metadata extractor
         builder.addAspect(XML_PATTERN,
                 XML_REPLACEMENT,
                 ArticleFiles.ROLE_ARTICLE_METADATA);
-        
+
+        // While we can't identify articles that are *just* PDF which is why they
+        // can't trigger an articlefiles by themselves, we can identify them
+        // by replacement and they should be the full text CU.
         builder.addAspect(PDF_REPLACEMENT,
                 ArticleFiles.ROLE_FULL_TEXT_PDF);
-
+        //Now set the order for the full text cu
         builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF,
                 ArticleFiles.ROLE_ARTICLE_METADATA); // though if it comes to this it won't emit
 
         return builder.getSubTreeArticleIterator();
     }
 
-    protected Pattern getExcludeSubTreePattern() {
-        log.debug3("Fei: NESTED_ARCHIVE_PATTERN = " + NESTED_ARCHIVE_PATTERN);
-        return NESTED_ARCHIVE_PATTERN;
-    }
-
-    protected String getIncludePatternTemplate() {
-        log.debug3("Fei: ALL_XML_PATTERN_TEMPLATE = " + ALL_XML_PATTERN_TEMPLATE);
-        return ALL_XML_PATTERN_TEMPLATE;
-    }
-
-
+    // NOTE - for a child to create their own version of this
+    // indicates if the iterator should descend in to archives (for tar/zip deliveries)
     protected boolean getIsArchive() {
         return false;
     }
