@@ -39,10 +39,10 @@
       param[journal_abbr] = biyclc
       # no volume published in 2011
 
-      au < testing ; exists ; 2005 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 1 ; 1 ; https://newprairiepress.org/ ; >
-      au < testing ; exists ; 2006 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 2 ; 2 ; https://newprairiepress.org/ ; >
-      au < testing ; exists ; 2007 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 3 ; 3 ; https://newprairiepress.org/ ; >
-      au < testing ; exists ; 2008 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 4 ; 4 ; https://newprairiepress.org/ ; >
+      au < ready ; exists ; 2005 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 1 ; 1 ; https://newprairiepress.org/ ; >
+      au < ready ; exists ; 2006 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 2 ; 2 ; https://newprairiepress.org/ ; >
+      au < ready ; exists ; 2007 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 3 ; 3 ; https://newprairiepress.org/ ; >
+      au < ready ; exists ; 2008 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 4 ; 4 ; https://newprairiepress.org/ ; >
       au < testing ; exists ; 2009 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 5 ; 5 ; https://newprairiepress.org/ ; >
       au < testing ; exists ; 2010 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 6 ; 6 ; https://newprairiepress.org/ ; >
       au < finished ; finished ; 2012 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 7 ; 7 ; http://newprairiepress.org/ ; >
