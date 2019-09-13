@@ -35,6 +35,7 @@ package org.lockss.plugin.associationforcomputingmachinery;
 import org.lockss.daemon.PluginException;
 import org.lockss.daemon.ShouldNotHappenException;
 import org.lockss.extractor.*;
+import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.JatsPublishingSchemaHelper;
 import org.lockss.plugin.clockss.BitsPublishingSchemaHelper;
@@ -76,13 +77,13 @@ public class ACMJatsSourceXmlMetadataExtractorFactory extends SourceXmlMetadataE
             String url = cu.getUrl();
             // acm  conferences is using BITS format
             if ((url != null) && url.indexOf("conferences") > -1) {
-                log.debug3("Setup Bits schema helper");
+                log.debug3("Setup Bits schema helper for url " + url);
                 if (BitsPublishingHelper == null) {
                     BitsPublishingHelper = new BitsPublishingSchemaHelper();
                 }
                 return BitsPublishingHelper;
             } else {
-                log.debug3("Setup Jats schema helper");
+                log.debug3("Setup Jats schema helper for url " + url);
                 // acm other material is using JATS format
                 if (JatsPublishingHelper == null) {
                     JatsPublishingHelper = new JatsPublishingSchemaHelper();
@@ -97,16 +98,26 @@ public class ACMJatsSourceXmlMetadataExtractorFactory extends SourceXmlMetadataE
 
             String pdfPath = "";
             String url_string = cu.getUrl();
-            //XML and PDF are located inside the same directory
-            //http://content5.lockss.org/sourcefiles/acmjats-released/2019_4/XRDSv25i4-0716143453.zip!/3344809/3329889/3329889.xml
-            //http://content5.lockss.org/sourcefiles/acmjats-released/2019_4/XRDSv25i4-0716143453.zip!/3344809/3329889/3329889.pdf
-
+            List<String> returnList = new ArrayList<String>();
+            //XML and PDF are located inside the same directory in most cases
+            //Occasionally there is not PDF file, but only xml file, which matches their website setup, like the following:
+            //http://content5.lockss.org/sourcefiles/acmjats-released/2019_4/acmotherconferences_2839462-0718100456.zip
+            //The also submit xml for issue, but not article, like the following:
+            //http://content5.lockss.org/sourcefiles/acmjats-released/2019_4/TACCESSv12i2-0716230343.zip, which has no pdf
             if (url_string.indexOf(".xml") > -1) {
                 pdfPath = url_string.replace(".xml", ".pdf");
+                ArchivalUnit B_au = cu.getArchivalUnit();
+                CachedUrl fileCu;
+                fileCu = B_au.makeCachedUrl(pdfPath);
+                log.debug3("Check for existence of " + pdfPath);
+                if(fileCu != null && (fileCu.hasContent())) {
+                    log.debug3("pdfPath is " + pdfPath);
+                    returnList.add(pdfPath);
+                } else {
+                    log.debug3("no matching PDF found, use xml file instead " + pdfPath);
+                    returnList.add(url_string);
+                }
             }
-            log.debug3("pdfPath is " + pdfPath);
-            List<String> returnList = new ArrayList<String>();
-            returnList.add(pdfPath);
             return returnList;
         }
 
