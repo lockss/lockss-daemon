@@ -2,24 +2,33 @@
 # tdbout -t publisher,plugin,publisher:info[contract],year,publisher:info[tester],status,publisher:info[back],publisher:info[poller] *.tdb 
 
 BEGIN {
+  #After July 1 of this year, start reporting on this year. Before that, ignore this year.
+  str = "date +%Y";
+  str | getline current_year;
+  #close str;
+  str = "date +%W";
+  str | getline week;
+  #close str;
+  if (week<26) {
+  	current_year=current_year-1
+  }
+  #printf "%s %s", current_year, week;
   FS="\t"
   pn = 0
-    #str = "date +%m-%d-%Y";
-    #str | getline date;
-    #close str;
 }
-#$3>date
+
 {
   # add a loop to add line only if either status is (wanted or testing) or ending year is gt or eq to contract year
 
-  #After July 1 of this year, start reporting on this year. Before that, ignore this year.
-  current_year=`date +%Y`
-  week=`date +%W`
-  if [ $week -lt 26 ]
-    then
-    ((current_year--))
+  #current_year=2018
+
+  #current_year=`date +%Y`
+  #week=`date +%W`
+  #if [ $week -lt 26 ]
+  #  then
+  #  ((current_year--))
     #echo current_year $current_year
-  fi
+  #fi
   #echo current_year $current_year
   
   # end_year is the AU year, or the second half of a range, ie 2014 in 2013-2014
