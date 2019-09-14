@@ -11,8 +11,17 @@ BEGIN {
 #$3>date
 {
   # add a loop to add line only if either status is (wanted or testing) or ending year is gt or eq to contract year
-  # increased to 2018 July 1 ish 2018
-  current_year = 2018
+
+  #After July 1 of this year, start reporting on this year. Before that, ignore this year.
+  current_year=`date +%Y`
+  week=`date +%W`
+  if [ $week -lt 26 ]
+    then
+    ((current_year--))
+    #echo current_year $current_year
+  fi
+  #echo current_year $current_year
+  
   # end_year is the AU year, or the second half of a range, ie 2014 in 2013-2014
   end_year = 0
   incontract = 0
