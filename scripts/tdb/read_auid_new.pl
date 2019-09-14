@@ -1009,7 +1009,6 @@ while (my $line = <>) {
   # the non-Clockss Atypon Books plugins go here
   } elsif (($plugin eq "GenericAtyponBooksPlugin") ||
            ($plugin eq "AIAABooksPlugin") ||
-           ($plugin eq "ACSESSBooksPlugin") ||
            ($plugin eq "EmeraldGroupBooksPlugin") ||
            ($plugin eq "EndocrineSocietyBooksPlugin") ||
            ($plugin eq "FutureScienceBooksPlugin") ||
@@ -1067,7 +1066,6 @@ while (my $line = <>) {
 
   # the CLOCKSS Atypon Books plugins go here
   } elsif (($plugin eq "ClockssGenericAtyponBooksPlugin") ||
-           ($plugin eq "ClockssACSESSBooksPlugin") ||
            ($plugin eq "ClockssAIAABooksPlugin") ||
            ($plugin eq "ClockssEmeraldGroupBooksPlugin") ||
            ($plugin eq "ClockssEndocrineSocietyBooksPlugin") ||
@@ -1079,7 +1077,7 @@ while (my $line = <>) {
            ($plugin eq "ClockssSiamBooksPlugin") ||
            ($plugin eq "ClockssWageningenBooksPlugin")) {
       $url = sprintf("%sclockss/eisbn/%s",
-      $param{base_url}, $param{book_eisbn});
+          $param{base_url}, $param{book_eisbn});
       $man_url = uri_unescape($url);
       my $req = HTTP::Request->new(GET, $man_url);
       my $resp = $ua->request($req);
