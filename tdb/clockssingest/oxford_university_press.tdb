@@ -1376,7 +1376,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; AoB PLANTS Volume 8 ; 8 ; >
     au < finished ; crawling ; 2017 ; 2017 ; AoB PLANTS Volume 9 ; 9 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2018 ; 2018 ; AoB PLANTS Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; AoB PLANTS Volume 11 ; 11 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; AoB PLANTS Volume 11 ; 11 ; >
 
   }
 
@@ -2194,7 +2194,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Biology Methods and Protocols Volume 1 ; 1 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Biology Methods and Protocols Volume 2 ; 2 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Biology Methods and Protocols Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Biology Methods and Protocols Volume 4 ; 4 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Biology Methods and Protocols Volume 4 ; 4 ; >
 
   }
 
@@ -2789,7 +2789,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; British Medical Bulletin Volume 117-120 ; 117-120 ; >
     au < frozen ; exists ; 2017 ; 2017 ; British Medical Bulletin Volume 121-124 ; 121-124 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; British Medical Bulletin Volume 125-127 ; 125-127 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; British Medical Bulletin Volume 128-130 ; 128-130 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; British Medical Bulletin Volume 128-130 ; 128-130 ; >
 
   }
 
