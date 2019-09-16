@@ -330,35 +330,35 @@
       param[base_url] = http://trumpeter.athabascau.ca/
       param[journal_id] = trumpet
 
-      au < exists ; exists ; 1983 ; The Trumpeter Volume 1 (1983) ; 1 ; 1983 ; >
-      au < exists ; exists ; 1984 ; The Trumpeter Volume 1 (1984) ; 1 ; 1984 ; >
-      au < exists ; exists ; 1985 ; The Trumpeter Volume 2 ; 2 ; 1985 ; >
-      au < exists ; exists ; 1986 ; The Trumpeter Volume 3 ; 3 ; 1986 ; >
-      au < exists ; exists ; 1987 ; The Trumpeter Volume 4 ; 4 ; 1987 ; >
-      au < exists ; exists ; 1988 ; The Trumpeter Volume 5 ; 5 ; 1988 ; >
-      au < exists ; exists ; 1989 ; The Trumpeter Volume 6 ; 6 ; 1989 ; >
-      au < exists ; exists ; 1990 ; The Trumpeter Volume 7 ; 7 ; 1990 ; >
-      au < exists ; exists ; 1991 ; The Trumpeter Volume 8 ; 8 ; 1991 ; >
-      au < exists ; exists ; 1992 ; The Trumpeter Volume 9 ; 9 ; 1992 ; >
-      au < exists ; exists ; 1993 ; The Trumpeter Volume 10 ; 10 ; 1993 ; >
-      au < exists ; exists ; 1994 ; The Trumpeter Volume 11 ; 11 ; 1994 ; >
-      au < exists ; exists ; 1995 ; The Trumpeter Volume 12 ; 12 ; 1995 ; >
-      au < exists ; exists ; 1996 ; The Trumpeter Volume 13 ; 13 ; 1996 ; >
-      au < exists ; exists ; 1997 ; The Trumpeter Volume 14 ; 14 ; 1997 ; >
-      au < exists ; exists ; 1998 ; The Trumpeter Volume 15 ; 15 ; 1998 ; >
-      au < exists ; exists ; 2000 ; The Trumpeter Volume 16 ; 16 ; 2000 ; >
-      au < exists ; exists ; 2001 ; The Trumpeter Volume 17 ; 17 ; 2001 ; >
-      au < exists ; exists ; 2002 ; The Trumpeter Volume 18 ; 18 ; 2002 ; >
-      au < exists ; exists ; 2003 ; The Trumpeter Volume 19 ; 19 ; 2003 ; >
-      au < exists ; exists ; 2004 ; The Trumpeter Volume 20 ; 20 ; 2004 ; >
-      au < exists ; exists ; 2005 ; The Trumpeter Volume 21 ; 21 ; 2005 ; >
-      au < exists ; exists ; 2006 ; The Trumpeter Volume 22 ; 22 ; 2006 ; >
-      au < exists ; exists ; 2007 ; The Trumpeter Volume 23 ; 23 ; 2007 ; >
-      au < exists ; exists ; 2008 ; The Trumpeter Volume 24 ; 24 ; 2008 ; >
-      au < exists ; exists ; 2009 ; The Trumpeter Volume 25 ; 25 ; 2009 ; >
-      au < exists ; exists ; 2010 ; The Trumpeter Volume 26 ; 26 ; 2010 ; >
-      au < exists ; exists ; 2011 ; The Trumpeter Volume 27 ; 27 ; 2011 ; >
-      au < exists ; exists ; 2018 ; The Trumpeter Volume 34 ; 34 ; 2018 ; >
+      au < manifest ; exists ; 1983 ; The Trumpeter Volume 1 (1983) ; 1 ; 1983 ; >
+      au < manifest ; exists ; 1984 ; The Trumpeter Volume 1 (1984) ; 1 ; 1984 ; >
+      au < manifest ; exists ; 1985 ; The Trumpeter Volume 2 ; 2 ; 1985 ; >
+      au < manifest ; exists ; 1986 ; The Trumpeter Volume 3 ; 3 ; 1986 ; >
+      au < manifest ; exists ; 1987 ; The Trumpeter Volume 4 ; 4 ; 1987 ; >
+      au < manifest ; exists ; 1988 ; The Trumpeter Volume 5 ; 5 ; 1988 ; >
+      au < manifest ; exists ; 1989 ; The Trumpeter Volume 6 ; 6 ; 1989 ; >
+      au < manifest ; exists ; 1990 ; The Trumpeter Volume 7 ; 7 ; 1990 ; >
+      au < manifest ; exists ; 1991 ; The Trumpeter Volume 8 ; 8 ; 1991 ; >
+      au < manifest ; exists ; 1992 ; The Trumpeter Volume 9 ; 9 ; 1992 ; >
+      au < manifest ; exists ; 1993 ; The Trumpeter Volume 10 ; 10 ; 1993 ; >
+      au < manifest ; exists ; 1994 ; The Trumpeter Volume 11 ; 11 ; 1994 ; >
+      au < manifest ; exists ; 1995 ; The Trumpeter Volume 12 ; 12 ; 1995 ; >
+      au < manifest ; exists ; 1996 ; The Trumpeter Volume 13 ; 13 ; 1996 ; >
+      au < manifest ; exists ; 1997 ; The Trumpeter Volume 14 ; 14 ; 1997 ; >
+      au < manifest ; exists ; 1998 ; The Trumpeter Volume 15 ; 15 ; 1998 ; >
+      au < manifest ; exists ; 2000 ; The Trumpeter Volume 16 ; 16 ; 2000 ; >
+      au < manifest ; exists ; 2001 ; The Trumpeter Volume 17 ; 17 ; 2001 ; >
+      au < manifest ; exists ; 2002 ; The Trumpeter Volume 18 ; 18 ; 2002 ; >
+      au < manifest ; exists ; 2003 ; The Trumpeter Volume 19 ; 19 ; 2003 ; >
+      au < manifest ; exists ; 2004 ; The Trumpeter Volume 20 ; 20 ; 2004 ; >
+      au < manifest ; exists ; 2005 ; The Trumpeter Volume 21 ; 21 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; The Trumpeter Volume 22 ; 22 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; The Trumpeter Volume 23 ; 23 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; The Trumpeter Volume 24 ; 24 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; The Trumpeter Volume 25 ; 25 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; The Trumpeter Volume 26 ; 26 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; The Trumpeter Volume 27 ; 27 ; 2011 ; >
+      au < manifest ; exists ; 2018 ; The Trumpeter Volume 34 ; 34 ; 2018 ; >
       au < expected ; exists ; 2019 ; The Trumpeter Volume 35 ; 35 ; 2019 ; >
     }
     
