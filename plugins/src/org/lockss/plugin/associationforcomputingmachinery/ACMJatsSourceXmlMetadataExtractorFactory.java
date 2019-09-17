@@ -38,7 +38,6 @@ import org.lockss.extractor.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.JatsPublishingSchemaHelper;
-import org.lockss.plugin.clockss.BitsPublishingSchemaHelper;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 import org.lockss.util.Logger;
@@ -79,7 +78,7 @@ public class ACMJatsSourceXmlMetadataExtractorFactory extends SourceXmlMetadataE
             if ((url != null) && url.indexOf("conferences") > -1) {
                 log.debug3("Setup Bits schema helper for url " + url);
                 if (BitsPublishingHelper == null) {
-                    BitsPublishingHelper = new BitsPublishingSchemaHelper();
+                    BitsPublishingHelper = new ACMBitsPublishingSchemaHelper();
                 }
                 return BitsPublishingHelper;
             } else {

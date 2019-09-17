@@ -1,4 +1,4 @@
-package org.lockss.plugin.clockss;
+package org.lockss.plugin.associationforcomputingmachinery;
 
 import org.apache.commons.collections.map.MultiValueMap;
 import org.apache.commons.lang.StringUtils;
@@ -6,6 +6,7 @@ import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.XmlDomMetadataExtractor;
 import org.lockss.extractor.XmlDomMetadataExtractor.NodeValue;
 import org.lockss.extractor.XmlDomMetadataExtractor.XPathValue;
+import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 import org.lockss.util.Logger;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
