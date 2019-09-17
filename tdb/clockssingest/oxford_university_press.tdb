@@ -76,7 +76,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Adaptation Volume 9 ; 9 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Adaptation Volume 10 ; 10 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Adaptation Volume 11 ; 11 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Adaptation Volume 12 ; 12 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Adaptation Volume 12 ; 12 ; >
 
   }
 
@@ -1041,7 +1041,7 @@
 
     param[journal_id] = af
 
-    au < ready ; exists ; 2011 ; 2011 ; Animal Frontiers Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2011 ; 2011 ; Animal Frontiers Volume 1 ; 1 ; >
     au < frozen ; exists ; 2012 ; 2012 ; Animal Frontiers Volume 2 ; 2 ; >
     au < frozen ; exists ; 2013 ; 2013 ; Animal Frontiers Volume 3 ; 3 ; >
     au < frozen ; exists ; 2014 ; 2014 ; Animal Frontiers Volume 4 ; 4 ; >
@@ -3501,7 +3501,7 @@
     param[journal_id] = ccc
 
     au < deepCrawl ; exists ; 2018 ; 2018 ; Communication, Culture & Critique Volume 1 ; 1 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Communication, Culture & Critique Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Communication, Culture & Critique Volume 2 ; 2 ; >
 
   }
 
@@ -4013,7 +4013,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Diplomatic History Volume 40 ; 40 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Diplomatic History Volume 41 ; 41 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Diplomatic History Volume 42 ; 42 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Diplomatic History Volume 43 ; 43 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Diplomatic History Volume 43 ; 43 ; >
 
   }
 
@@ -4313,7 +4313,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; The Econometrics Journal Volume 19 ; 19 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The Econometrics Journal Volume 20 ; 20 ; >
     au < frozen ; exists ; 2018 ; 2018 ; The Econometrics Journal Volume 21 ; 21 ; >
-    au < ready ; exists ; 2019 ; 2019 ; The Econometrics Journal Volume 22 ; 22 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; The Econometrics Journal Volume 22 ; 22 ; >
 
   }
 
@@ -5720,7 +5720,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Foreign Policy Analysis Volume 12 ; 12 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Foreign Policy Analysis Volume 13 ; 13 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2018 ; 2018 ; Foreign Policy Analysis Volume 14 ; 14 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Foreign Policy Analysis Volume 15 ; 15 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Foreign Policy Analysis Volume 15 ; 15 ; >
 
   }
 
@@ -6771,7 +6771,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; History Workshop Journal Volume 81-82 ; 81-82 ; >
     au < frozen ; exists ; 2017 ; 2017 ; History Workshop Journal Volume 83-84 ; 83-84 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; History Workshop Journal Volume 85-86 ; 85-86 ; >
-    au < ready ; exists ; 2019 ; 2019 ; History Workshop Journal Volume 87-88 ; 87-88 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; History Workshop Journal Volume 87-88 ; 87-88 ; >
 
   }
 
@@ -7389,7 +7389,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; IMA Journal of Numerical Analysis Volume 36 ; 36 ; >
     au < finished ; crawling ; 2017 ; 2017 ; IMA Journal of Numerical Analysis Volume 37 ; 37 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; IMA Journal of Numerical Analysis Volume 38 ; 38 ; >
-    au < ready ; exists ; 2019 ; 2019 ; IMA Journal of Numerical Analysis Volume 39 ; 39 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; IMA Journal of Numerical Analysis Volume 39 ; 39 ; >
 
   }
 
@@ -7589,7 +7589,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Industrial and Corporate Change Volume 25 ; 25 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Industrial and Corporate Change Volume 26 ; 26 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2018 ; 2018 ; Industrial and Corporate Change Volume 27 ; 27 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Industrial and Corporate Change Volume 28 ; 28 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Industrial and Corporate Change Volume 28 ; 28 ; >
 
   }
 
@@ -8613,7 +8613,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; International Studies Review Volume 18 ; 18 ; >
     au < frozen ; exists ; 2017 ; 2017 ; International Studies Review Volume 19 ; 19 ; >
     au < frozen ; exists ; 2018 ; 2018 ; International Studies Review Volume 20 ; 20 ; >
-    au < ready ; exists ; 2019 ; 2019 ; International Studies Review Volume 21 ; 21 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; International Studies Review Volume 21 ; 21 ; >
 
   }
 
@@ -8672,7 +8672,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; JNCI: Journal of the National Cancer Institute Volume 108 ; 108 ; >
     au < frozen ; exists ; 2017 ; 2017 ; JNCI: Journal of the National Cancer Institute Volume 109 ; 109 ; >
     au < frozen ; exists ; 2018 ; 2018 ; JNCI: Journal of the National Cancer Institute Volume 110 ; 110 ; >
-    au < ready ; exists ; 2019 ; 2019 ; JNCI: Journal of the National Cancer Institute Volume 111 ; 111 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; JNCI: Journal of the National Cancer Institute Volume 111 ; 111 ; >
 
   }
 
@@ -9057,7 +9057,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Journal of Antitrust Enforcement Volume 4 ; 4 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Journal of Antitrust Enforcement Volume 5 ; 5 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Antitrust Enforcement Volume 6 ; 6 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Journal of Antitrust Enforcement Volume 7 ; 7 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Journal of Antitrust Enforcement Volume 7 ; 7 ; >
 
   }
 
@@ -9302,7 +9302,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Journal of Competition Law & Economics Volume 12 ; 12 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Journal of Competition Law & Economics Volume 13 ; 13 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Competition Law & Economics Volume 14 ; 14 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Journal of Competition Law & Economics Volume 15 ; 15 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Journal of Competition Law & Economics Volume 15 ; 15 ; >
 
   }
 
