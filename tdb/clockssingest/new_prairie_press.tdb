@@ -39,12 +39,12 @@
       param[journal_abbr] = biyclc
       # no volume published in 2011
 
-      au < crawling ; exists ; 2005 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 1 ; 1 ; https://newprairiepress.org/ ; >
-      au < crawling ; exists ; 2006 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 2 ; 2 ; https://newprairiepress.org/ ; >
+      au < frozen ; exists ; 2005 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 1 ; 1 ; https://newprairiepress.org/ ; >
+      au < frozen ; exists ; 2006 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 2 ; 2 ; https://newprairiepress.org/ ; >
       au < ready ; exists ; 2007 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 3 ; 3 ; https://newprairiepress.org/ ; >
       au < crawling ; exists ; 2008 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 4 ; 4 ; https://newprairiepress.org/ ; >
       au < crawling ; exists ; 2009 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 5 ; 5 ; https://newprairiepress.org/ ; >
-      au < crawling ; exists ; 2010 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 6 ; 6 ; https://newprairiepress.org/ ; >
+      au < frozen ; exists ; 2010 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 6 ; 6 ; https://newprairiepress.org/ ; >
       au < finished ; finished ; 2012 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 7 ; 7 ; http://newprairiepress.org/ ; >
       au < finished ; finished ; 2013 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 8 ; 8 ; http://newprairiepress.org/ ; >
       au < finished ; finished ; 2014 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 9 ; 9 ; http://newprairiepress.org/ ; >
@@ -514,9 +514,9 @@
       au < manifest ; exists ; 2002 ; Fungal Genetics Newsletter Volume 49 ; 49 ; >
       au < manifest ; exists ; 2003 ; Fungal Genetics Newsletter Volume 50 ; 50 ; >
       au < manifest ; exists ; 2004 ; Fungal Genetics Newsletter Volume 51 ; 51 ; >
-      au < crawling ; exists ; 2005 ; Fungal Genetics Newsletter Volume 52 ; 52 ; >
+      au < frozen ; exists ; 2005 ; Fungal Genetics Newsletter Volume 52 ; 52 ; >
       au < ready ; exists ; 2006 ; Fungal Genetics Newsletter Volume 53 ; 53 ; >
-      au < crawling ; exists ; 2007 ; Fungal Genetics Newsletter Volume 54 ; 54 ; >
+      au < frozen ; exists ; 2007 ; Fungal Genetics Newsletter Volume 54 ; 54 ; >
 
   }
 
@@ -672,7 +672,7 @@
       au < manifest ; exists ; 2003 ; Journal of Hazardous Substance Research Volume 4 ; 4 ; >
       au < testing ; exists ; 2006 ; Journal of Hazardous Substance Research Volume 5 ; 5 ; >
       au < testing ; exists ; 2007 ; Journal of Hazardous Substance Research Volume 6 ; 6 ; >
-      au < crawling ; exists ; 2007 ; Journal of Hazardous Substance Research Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2007 ; Journal of Hazardous Substance Research Volume 7 ; 7 ; >
 
   }
 
@@ -742,7 +742,7 @@
       au < manifest ; exists ; 2002 ; Networks: An Online Journal for Teacher Research Volume 5 ; 5 ; >
       au < manifest ; exists ; 2003 ; Networks: An Online Journal for Teacher Research Volume 6 ; 6 ; >
       au < manifest ; exists ; 2004 ; Networks: An Online Journal for Teacher Research Volume 7 ; 7 ; >
-      au < crawling ; exists ; 2005 ; Networks: An Online Journal for Teacher Research Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2005 ; Networks: An Online Journal for Teacher Research Volume 8 ; 8 ; >
       au < testing ; exists ; 2006 ; Networks: An Online Journal for Teacher Research Volume 9 ; 9 ; >
       au < testing ; exists ; 2008 ; Networks: An Online Journal for Teacher Research Volume 10 ; 10 ; >
       au < testing ; exists ; 2009 ; Networks: An Online Journal for Teacher Research Volume 11 ; 11 ; >
