@@ -47,7 +47,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ACMJatsSourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
-    static Logger log = Logger.getLogger("ACMJatsSourceMetadataExtractorFactory");
+    static Logger log = Logger.getLogger(ACMJatsSourceXmlMetadataExtractorFactory.class);
 
     private static SourceXmlSchemaHelper JatsPublishingHelper = null;
     private static SourceXmlSchemaHelper BitsPublishingHelper = null;
