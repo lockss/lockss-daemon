@@ -86,6 +86,22 @@
     au < readySource ; crawling ; 2019 ; Springer Delivered Source Content 2019 HD1_6 ; 2019 ; HD1_6 >
     
     
-  }  
+  }
+
+  {
+      title <
+        name = Springer Delivered Jats Source Content
+      >
+
+      plugin = org.lockss.plugin.springer.ClockssSpringerJatsSourcePlugin
+      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/springerjats-released/
+      hidden[proxy] = DIRECT
+      implicit < status ; status2 ; year ; name  ; param[directory] >
+
+      au < manifest ; exists ;  2019 ; Springer Delivered Source Content 2019 HD1_5 ; 2019_04 >
+      au < manifest ; exists ;  2019 ; Springer Delivered Source Content 2019 HD1_6 ; 2019_05 >
+
+
+    }
 
 }
