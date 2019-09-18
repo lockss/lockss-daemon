@@ -245,7 +245,7 @@
       #param[base_url] = http://newprairiepress.org/
       param[journal_abbr] = ojrrp
 
-      au < testing ; exists ; 2006 ; Online Journal of Rural Research & Policy Volume 1 ; 1 ; https://newprairiepress.org/ ; >
+      au < ready ; exists ; 2006 ; Online Journal of Rural Research & Policy Volume 1 ; 1 ; https://newprairiepress.org/ ; >
       au < crawling ; exists ; 2007 ; Online Journal of Rural Research & Policy Volume 2 ; 2 ; https://newprairiepress.org/ ; >
       au < crawling ; exists ; 2008 ; Online Journal of Rural Research & Policy Volume 3 ; 3 ; https://newprairiepress.org/ ; >
       au < ready ; exists ; 2009 ; Online Journal of Rural Research & Policy Volume 4 ; 4 ; https://newprairiepress.org/ ; >
@@ -283,8 +283,8 @@
       au < crawling ; exists ; 2005 ; Transactions of the Burgon Society Volume 5 ; 5 ; https://newprairiepress.org/ ; >
       au < crawling ; exists ; 2006 ; Transactions of the Burgon Society Volume 6 ; 6 ; https://newprairiepress.org/ ; >
       au < crawling ; exists ; 2007 ; Transactions of the Burgon Society Volume 7 ; 7 ; https://newprairiepress.org/ ; >
-      au < testing ; exists ; 2008 ; Transactions of the Burgon Society Volume 8 ; 8 ; https://newprairiepress.org/ ; >
-      au < testing ; exists ; 2009 ; Transactions of the Burgon Society Volume 9 ; 9 ; https://newprairiepress.org/ ; >
+      au < ready ; exists ; 2008 ; Transactions of the Burgon Society Volume 8 ; 8 ; https://newprairiepress.org/ ; >
+      au < ready ; exists ; 2009 ; Transactions of the Burgon Society Volume 9 ; 9 ; https://newprairiepress.org/ ; >
       au < crawling ; exists ; 2010 ; Transactions of the Burgon Society Volume 10 ; 10 ; https://newprairiepress.org/ ; >
       au < crawling ; exists ; 2011 ; Transactions of the Burgon Society Volume 11 ; 11 ; https://newprairiepress.org/ ; >
       au < frozen ; exists ; 2012 ; Transactions of the Burgon Society Volume 12 ; 12 ; http://newprairiepress.org/ ; >
@@ -804,7 +804,7 @@
       au < crawling ; exists ; 2008 ; Oz Volume 30 ; 30 ; >
       au < crawling ; exists ; 2009 ; Oz Volume 31 ; 31 ; >
       au < crawling ; exists ; 2010 ; Oz Volume 32 ; 32 ; >
-      au < testing ; exists ; 2011 ; Oz Volume 33 ; 33 ; >
+      au < ready ; exists ; 2011 ; Oz Volume 33 ; 33 ; >
       au < frozen ; exists ; 2012 ; Oz Volume 34 ; 34 ; >
       au < frozen ; exists ; 2013 ; Oz Volume 35 ; 35 ; >
       au < frozen ; exists ; 2014 ; Oz Volume 36 ; 36 ; >
