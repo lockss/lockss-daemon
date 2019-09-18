@@ -155,7 +155,7 @@ public class ACMBitsPublishingSchemaHelper implements SourceXmlSchemaHelper {
      */
     private static String BITS_book = "/book-part-wrapper";
     private static String BITS_publisher= "/book-part-wrapper/collection-meta/title-group/title";
-    private static String BITS_doi = "/book-part-wrapper/book-meta/book-id[@book-id-type = \"doi\"]";
+    private static String BITS_doi = "/book-part-wrapper/book-part/book-part-meta//book-part-id[@book-part-id-type=\"doi\"]";
     private static String BITS_book_title =  "/book-part-wrapper/book-meta/book-title-group/book-title";
     private static String BITS_contrib = "/book-part-wrapper/book-part/book-part-meta/contrib-group/contrib/name";
     private static String BITS_fpage = "/book-part-wrapper/book-part/book-part-meta/fpage";

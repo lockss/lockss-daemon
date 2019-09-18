@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article>
+<article xmlns:xlink="http://www.w3.org/1999/xlink"  article-type="research-article" dtd-version="1.2d1" xml:lang="en">
+    <front>
+        <journal-meta>
+            <journal-id journal-id-type="acm-id">J373</journal-id>
+            <journal-id journal-id-type="publisher-id">INTERACTIONS</journal-id>
+            <journal-title-group>
+                <journal-title>Interactions</journal-title>
+            </journal-title-group>
+            <issn pub-type="ppub">1072-5520</issn>
+            <issn pub-type="epub">1558-3449</issn>
+            <publisher>
+                <publisher-name>ACM</publisher-name>
+                <publisher-name specific-use="publisher-id db-only">PUB27</publisher-name>
+                <publisher-loc>New York, NY, USA</publisher-loc>
+            </publisher>
+        </journal-meta>
+        <article-meta>
+            <article-id pub-id-type="acm-id">3169128</article-id>
+            <article-id pub-id-type="xlink:href">http://dlnext.acm.org/doi/10.1145/3169128</article-id><article-id pub-id-type="doi">10.1145/3169128</article-id>
+            <article-id pub-id-type="manuscript_tracking_id">IAX.25.01.17</article-id>
+            <article-categories>
+                <subj-group subj-group-type="ccs2012">
+                    <compound-subject>
+                        <compound-subject-part content-type="code">10003120</compound-subject-part>
+                        <compound-subject-part content-type="text">Human-centered computing</compound-subject-part>
+                        <compound-subject-part content-type="weight">500</compound-subject-part>
+                    </compound-subject>
+                    <compound-subject>
+                        <compound-subject-part content-type="code">10003120.10003121</compound-subject-part>
+                        <compound-subject-part content-type="text">Human-centered computing~Human computer interaction (HCI)</compound-subject-part>
+                        <compound-subject-part content-type="weight">500</compound-subject-part>
+                    </compound-subject>
+                    <compound-subject>
+                        <compound-subject-part content-type="code">10003456.10003457.10003567.10010990</compound-subject-part>
+                        <compound-subject-part content-type="text">Social and professional topics~Professional topics~Computing and business~Socio-technical systems</compound-subject-part>
+                        <compound-subject-part content-type="weight">500</compound-subject-part>
+                    </compound-subject>
+                    <compound-subject>
+                        <compound-subject-part content-type="code">10003456.10010927</compound-subject-part>
+                        <compound-subject-part content-type="text">Social and professional topics~User characteristics</compound-subject-part>
+                        <compound-subject-part content-type="weight">500</compound-subject-part>
+                    </compound-subject>
+                    <compound-subject>
+                        <compound-subject-part content-type="code">10003120.10003138.10003139.10010906</compound-subject-part>
+                        <compound-subject-part content-type="text">Human-centered computing~Ubiquitous and mobile computing~Ubiquitous and mobile computing theory, concepts and paradigms~Ambient intelligence</compound-subject-part>
+                        <compound-subject-part content-type="weight">500</compound-subject-part>
+                    </compound-subject>
+                </subj-group>
+                <subj-group subj-group-type="qualifier-density">
+                    <compound-subject>
+                        <compound-subject-part content-type="code">popular</compound-subject-part>
+                        <compound-subject-part content-type="text">Popular</compound-subject-part>
+                    </compound-subject>
+                </subj-group>
+                <subj-group subj-group-type="qualifier-review_process">
+                    <compound-subject>
+                        <compound-subject-part content-type="code">pre-selected</compound-subject-part>
+                        <compound-subject-part content-type="text">Pre-selected</compound-subject-part>
+                    </compound-subject>
+                </subj-group>
+                <subj-group subj-group-type="qualifier-editorial_treatment">
+                    <compound-subject>
+                        <compound-subject-part content-type="code">developmentally_edited</compound-subject-part>
+                        <compound-subject-part content-type="text">Developmentally edited</compound-subject-part>
+                    </compound-subject>
+                </subj-group>
+            </article-categories>
+            <title-group>
+                <article-title>Special Topic: Taking Action in a Changing World</article-title>
+            </title-group>
+            <contrib-group>
+                <contrib contrib-type="author" id="artseq-00001">
+                    <contrib-id contrib-id-type="person_id" authenticated="false">P6383545</contrib-id>
+                    <name name-style="western">
+                        <surname>Light</surname>
+                        <given-names>Ann</given-names>
+                    </name>
+                    <aff>University of Sussex</aff>
+                    <email>ann.light@sussex.ac.uk</email>
+                    <role>Author</role>
+                </contrib>
+                <contrib contrib-type="author" id="artseq-00002">
+                    <contrib-id contrib-id-type="person_id" authenticated="false">P6383546</contrib-id>
+                    <name name-style="western">
+                        <surname>Frauenberger</surname>
+                        <given-names>Chris</given-names>
+                    </name>
+                    <aff>TU Wien</aff>
+                    <email>christopher.frauenberger@tuwien.ac.at</email>
+                    <role>Author</role>
+                </contrib>
+                <contrib contrib-type="author" id="artseq-00003">
+                    <contrib-id contrib-id-type="person_id" authenticated="false">P6383547</contrib-id>
+                    <name name-style="western">
+                        <surname>Preece</surname>
+                        <given-names>Jennifer</given-names>
+                    </name>
+                    <aff>University of Maryland</aff>
+                    <email>preece@umd.edu</email>
+                    <role>Author</role>
+                </contrib>
+                <contrib contrib-type="author" id="artseq-00004">
+                    <contrib-id contrib-id-type="person_id" authenticated="false">P6383548</contrib-id><contrib-id contrib-id-type="profile_id" authenticated="false">10.1145/contrib-81498658319</contrib-id>
+                    <name name-style="western">
+                        <surname>Strohmeier</surname>
+                        <given-names>Paul</given-names>
+                    </name>
+                    <aff>University of Copenhagen</aff>
+                    <email>p.strohmeier@di.ku.dk</email>
+                    <role>Author</role>
+                </contrib>
+                <contrib contrib-type="author" id="artseq-00005">
+                    <contrib-id contrib-id-type="person_id" authenticated="false">P6383549</contrib-id>
+                    <name name-style="western">
+                        <surname>Ferrario</surname>
+                        <given-names>Maria Angela</given-names>
+                    </name>
+                    <aff>Lancaster University</aff>
+                    <email>m.a.ferrario@lancaster.ac.uk</email>
+                    <role>Author</role>
+                </contrib>
+            </contrib-group>
+            <pub-date date-type="publication" pub-type="ppub">
+                <day>21</day>
+                <month>12</month>
+                <year>2017</year>
+            </pub-date>
+            <volume>25</volume>
+            <issue>1</issue>
+            <fpage>34</fpage>
+            <lpage>45</lpage>
+            <permissions>
+                <copyright-year>2017</copyright-year>
+                <copyright-holder>Copyright held by authors. Publication rights licensed to ACM.</copyright-holder>
+                <license license-type="acmcopyright">
+                    <license-p>Permission to make digital or hard copies of all or part of this work for personal or classroom use is granted without fee provided that copies are not made or distributed for profit or commercial advantage and that copies bear this notice and the full citation on the first page. Copyrights for components of this work owned by others than ACM must be honored. Abstracting with credit is permitted. To copy otherwise, or republish, to post on servers or to redistribute to lists, requires prior specific permission and/or a fee. Request permissions from Permissions@acm.org</license-p>
+                </license>
+            </permissions>
+            <self-uri content-type="html" xlink:href="3169128.html" />
+            <self-uri content-type="pdf" xlink:href="3169128.pdf" />
+            <self-uri content-type="digital-edition" xlink:href="http://mags.acm.org/interactions/january_february_2018/?folio=34&amp;refurl=http://dl.acm.org/" />
+        </article-meta>
+    </front>
+
+    <back>
+        <ref-list specific-use="unparsed">
+            <ref id="ref-00001">
+                <mixed-citation>Fiesler, C., Anthony, L., Strohmeier, P., Fussell, S., and Mark, G. SIG on Taking action in a changing world: Research and community. <italic toggle="yes">Proc. CHI EA '17.</italic> 2017. <pub-id pub-id-type="doi" xlink:href="10.1145/3027063.3051707" assigning-authority="crossref">10.1145/3027063.3051707</pub-id> <pub-id pub-id-type="doi" xlink:href="10.1145/3027063.3051707" /></mixed-citation>
+            </ref>
+            <ref id="ref-00002">
+                <mixed-citation>Light, A., Shklovski, I., and Powell, A. Design for existential crisis. <italic toggle="yes">Proc. Alt-CHI '17.</italic> {now extended as: Light, A., Powell, A., and Shklovski, I. Design for existential crisis in the Anthropocene Age. <italic toggle="yes">Proc. ACM C&amp;T'17.</italic>} <pub-id pub-id-type="doi" xlink:href="10.1145/3027063.3052760" assigning-authority="crossref">10.1145/3027063.3052760</pub-id> <pub-id pub-id-type="doi" xlink:href="10.1145/3027063.3052760" /></mixed-citation>
+            </ref>
+            <ref id="ref-00003">
+                <mixed-citation>DiSalvo, C., Light, A., Hirsch, T., Le Dantec, C.A., Goodman, L., and Hill, K. HCI, communities and politics. Panel. <italic toggle="yes">Proc. CHI EA '10.</italic> 2010. <pub-id pub-id-type="doi" xlink:href="10.1145/1753846.1753940" assigning-authority="crossref">10.1145/1753846.1753940</pub-id> <pub-id pub-id-type="doi" xlink:href="10.1145/1753846.1753940" /></mixed-citation>
+            </ref>
+            <ref id="ref-00004">
+                <mixed-citation>Solnit, R. <italic toggle="yes">Hope in the Dark: Untold Histories, Wild Possibilities.</italic> Nation Books, New York, 2004.</mixed-citation>
+            </ref>
+            <ref id="ref-00005">
+                <mixed-citation>Star, S.L. and Strauss, A. Layers of silence, arenas of voice: The ecology of visible and invisible work. <italic toggle="yes">Computer Supported Cooperative Work 8</italic>, 1--2 (Mar. 1999), 9--30. <pub-id pub-id-type="doi" xlink:href="10.1023/A:1008651105359" assigning-authority="crossref">10.1023/A:1008651105359</pub-id> <pub-id pub-id-type="doi" xlink:href="10.1023/A:1008651105359" /></mixed-citation>
+            </ref>
+            <ref id="ref-00006">
+                <mixed-citation>Bennett, J. <italic toggle="yes">The Enchantment of Modern Life.</italic> Princeton Univ. Press, 2001.</mixed-citation>
+            </ref>
+            <ref id="ref-00007">
+                <mixed-citation>Ferrario, M.A., Simm, W., Whittle, J., Frauenberger, C., Fitzpatrick, G., and Purgathofer, P. Values in computing. <italic toggle="yes">Proc. of the 2017 CHI Conference Extended Abstracts on Human Factors in Computing Systems.</italic> ACM, New York, 2017, 660--667. <pub-id pub-id-type="doi" xlink:href="10.1145/3027063.3027067" assigning-authority="crossref">10.1145/3027063.3027067</pub-id> <pub-id pub-id-type="doi" xlink:href="10.1145/3027063.3027067" /></mixed-citation>
+            </ref>
+            <ref id="ref-00008">
+                <mixed-citation>Blom, P. <italic toggle="yes">Fracture - Life and Culture in the West, 1918--1938.</italic> Basic Books, 2015, ISBN-10: 0465022499.</mixed-citation>
+            </ref>
+            <ref id="ref-00009">
+                <mixed-citation>Kranzberg, M. Six laws of technology. Presidential Address at the Annual Meeting of the Society for the History of Technology, 1985.</mixed-citation>
+            </ref>
+            <ref id="ref-00010">
+                <mixed-citation>Rogaway, P. The moral character of cryptographic work. Essay to accompany the 2015 IACR Distinguished Lecture. 2015; http://web.cs.ucdavis.edu/~rogaway/papers/moral.pdf</mixed-citation>
+            </ref>
+            <ref id="ref-00011">
+                <mixed-citation>Klein, N. <italic toggle="yes">This Changes Everything: Capitalism vs. The Climate.</italic> Alfred A. Knopf, Toronto, 2014.</mixed-citation>
+            </ref>
+            <ref id="ref-00012">
+                <mixed-citation>Stevens, M., Vitos, M., Altenbuchner, J., Conquest, G., Lewis, J., and Haklay, M. Introducing Sapelli: A mobile data collection platform for non-literate users. <italic toggle="yes">Proc. of the 4<sup>th</sup> Annual Symposium on Computing for Development.</italic> 2013. <pub-id pub-id-type="doi" xlink:href="10.1145/2537052.2537069" assigning-authority="crossref">10.1145/2537052.2537069</pub-id> <pub-id pub-id-type="doi" xlink:href="10.1145/2537052.2537069" /></mixed-citation>
+            </ref>
+            <ref id="ref-00013">
+                <mixed-citation>Ceballosa, G., Ehrlich, P.R., and Dirzom, R. Biological annihilation via the ongoing sixth mass extinction signaled by vertebrate population losses and declines. <italic toggle="yes">Proc. of the National Academy of Sciences. PNAS Early Edition.</italic> 2017, 1--8.</mixed-citation>
+            </ref>
+            <ref id="ref-00014">
+                <mixed-citation>Preece, J. Citizen science: New research challenges in HCI. <italic toggle="yes">Int'l J. of Human-Computer Interaction 32</italic>, 8 (2016), 585--612.</mixed-citation>
+            </ref>
+            <ref id="ref-00015">
+                <mixed-citation>Preece, J. How two billion smartphone users can save species. <italic toggle="yes">Interactions 24</italic>, 2 (Mar.-Apr. 2017), 27--33; http://interactions.acm.org/archive/view/march-april-2017/how-two-billion-smartphone-users-can-save-species <pub-id pub-id-type="doi" xlink:href="10.1145/3043702" assigning-authority="crossref">10.1145/3043702</pub-id> <pub-id pub-id-type="doi" xlink:href="10.1145/3043702" /></mixed-citation>
+            </ref>
+            <ref id="ref-00016">
+                <mixed-citation>Dreyfuss, E. Banned from the US? There's a robot for that 2017. <italic toggle="yes">Wired</italic> (June 5, 2017); https://www.wired.com/2017/06/banned-us-theres-robot/</mixed-citation>
+            </ref>
+            <ref id="ref-00017">
+                <mixed-citation>ACM Visa Notice; http://www.acm.org/about-acm/suspension-of-visas</mixed-citation>
+            </ref>
+            <ref id="ref-00018">
+                <mixed-citation>Statement by CHI, 2017; https://chi2017.acm.org/special-statement.html</mixed-citation>
+            </ref>
+            <ref id="ref-00019">
+                <mixed-citation>The "Values in Computing" survey (respondents n=151), carried out in conjunction with the CHI 2017 Workshop on the same topic {&amp;lt;zref=R7&amp;gt;7&amp;lt;zrefx&amp;gt;}. <pub-id pub-id-type="doi" xlink:href="10.1145/3027063.3027067" assigning-authority="crossref">10.1145/3027063.3027067</pub-id> <pub-id pub-id-type="doi" xlink:href="10.1145/3027063.3027067" /></mixed-citation>
+            </ref>
+            <ref id="ref-00020">
+                <mixed-citation><italic toggle="yes">Queer Science Manifesto</italic>;, http://notjustforscientists.org/idea/make-your-personal-queer-science-manifesto/</mixed-citation>
+            </ref>
+            <ref id="ref-00021">
+                <mixed-citation>Bachmann, M. How the hub found its center. <italic toggle="yes">Stanford Social Innovation Review</italic>, 2014; http://m.pnas.org/content/early/2017/07/05/1704949114.full.pdf</mixed-citation>
+            </ref>
+        </ref-list>
+    </back>
+</article>
