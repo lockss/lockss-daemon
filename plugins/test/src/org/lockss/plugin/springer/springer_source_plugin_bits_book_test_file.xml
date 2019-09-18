@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book>
+<book xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="2.0" xml:lang="de">
+    <book-meta>
+        <book-id book-id-type="publisher-id">978-3-658-27709-3</book-id>
+        <book-id book-id-type="doi">10.1007/978-3-658-27709-3</book-id>
+        <book-id book-id-type="book-title-id">489756</book-id>
+        <book-title-group>
+            <book-title>Stahlbetonerhaltung</book-title>
+            <subtitle>Erkennen – Messen – Erhalten</subtitle>
+        </book-title-group>
+        <contrib-group>
+            <contrib contrib-type="author">
+                <name>
+                    <surname>Wietek</surname>
+                    <given-names>Bernhard</given-names>
+                    <prefix>Prof.</prefix>
+                </name>
+                <xref ref-type="aff" rid="Aff1">1</xref>
+                <xref ref-type="corresp" rid="book_cor1">a</xref>
+            </contrib>
+            <aff id="Aff1">
+                <label>Aff1</label>
+                <institution-wrap />
+                <addr-line content-type="city">Sistrans</addr-line>
+                <country country="AT">Austria</country>
+            </aff>
+        </contrib-group>
+        <author-notes>
+            <corresp id="book_cor1">
+                <label>a</label>
+                <phone>+43436643418808</phone>
+                <fax>+4343512 37 81 884</fax>
+                <email>wietek@a-bau.co.at</email>
+            </corresp>
+        </author-notes>
+        <isbn content-type="ppub">978-3-658-27708-6</isbn>
+        <isbn content-type="epub">978-3-658-27709-3</isbn>
+        <publisher>
+            <publisher-name>Springer Fachmedien Wiesbaden</publisher-name>
+            <publisher-loc>Wiesbaden</publisher-loc>
+        </publisher>
+        <permissions>
+            <copyright-statement>© Springer Fachmedien Wiesbaden GmbH, ein Teil von Springer Nature 2019</copyright-statement>
+            <copyright-year>2019</copyright-year>
+        </permissions>
+        <custom-meta-group>
+            <custom-meta>
+                <meta-name>publisher-imprint-name</meta-name>
+                <meta-value>Springer Vieweg</meta-value>
+            </custom-meta>
+            <custom-meta>
+                <meta-name>book-chapter-count</meta-name>
+                <meta-value>9</meta-value>
+            </custom-meta>
+            <custom-meta>
+                <meta-name>media-type</meta-name>
+                <meta-value>eBook</meta-value>
+            </custom-meta>
+            <custom-meta>
+                <meta-name>book-product-type</meta-name>
+                <meta-value>Professional book</meta-value>
+            </custom-meta>
+            <custom-meta>
+                <meta-name>contains-esm</meta-name>
+                <meta-value>No</meta-value>
+            </custom-meta>
+            <custom-meta>
+                <meta-name>book-subject-primary</meta-name>
+                <meta-value>Engineering</meta-value>
+            </custom-meta>
+            <custom-meta>
+                <meta-name>book-subject-secondary</meta-name>
+                <meta-value>Solid Construction</meta-value>
+            </custom-meta>
+            <custom-meta>
+                <meta-name>book-subject-secondary</meta-name>
+                <meta-value>Building Materials</meta-value>
+            </custom-meta>
+            <custom-meta>
+                <meta-name>book-subject-secondary</meta-name>
+                <meta-value>Geoengineering, Foundations, Hydraulics</meta-value>
+            </custom-meta>
+            <custom-meta>
+                <meta-name>book-subject-secondary</meta-name>
+                <meta-value>Building Construction and Design</meta-value>
+            </custom-meta>
+            <custom-meta>
+                <meta-name>book-subject-collection</meta-name>
+                <meta-value>Engineering</meta-value>
+            </custom-meta>
+            <custom-meta>
+                <meta-name>pdf-file-reference</meta-name>
+                <meta-value>BodyRef/PDF/978-3-658-27709-3_Book.pdf</meta-value>
+            </custom-meta>
+            <custom-meta>
+                <meta-name>target-type</meta-name>
+                <meta-value>OnlinePDF</meta-value>
+            </custom-meta>
+            <custom-meta>
+                <meta-name>output-medium</meta-name>
+                <meta-value>Online</meta-value>
+            </custom-meta>
+            <custom-meta>
+                <meta-name>pdf-type</meta-name>
+                <meta-value>Typeset</meta-value>
+            </custom-meta>
+        </custom-meta-group>
+    </book-meta>
+</book>

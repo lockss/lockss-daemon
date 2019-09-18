@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book>
+<book xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="2.0" xml:lang="en">
+    <collection-meta collection-type="series">
+        <collection-id collection-id-type="publisher-id">7651</collection-id>
+        <title-group>
+            <title>Methods in Molecular Biology</title>
+        </title-group>
+        <contrib-group content-type="collaborators">
+            <contrib contrib-type="Editor-in-chief">
+                <name>
+                    <surname>Walker</surname>
+                    <given-names>John M.</given-names>
+                </name>
+                <xref ref-type="aff" rid="Aff11">11</xref>
+            </contrib>
+            <aff id="Aff11">
+                <label>Aff11</label>
+                <institution-wrap>
+                    <institution-id institution-id-type="GRID">grid.5846.f</institution-id>
+                    <institution-id institution-id-type="ISNI">0000 0001 2161 9644</institution-id>
+                    <institution content-type="org-division">School of Life Sciences</institution>
+                    <institution content-type="org-name">University of Hertfordshire</institution>
+                </institution-wrap>
+                <addr-line content-type="city">Hatfield, Hertfordshire</addr-line>
+                <country country="GB">UK</country>
+            </aff>
+        </contrib-group>
+        <issn publication-format="print">1064-3745</issn>
+        <issn publication-format="electronic">1940-6029</issn>
+    </collection-meta>
+    <book-meta>
+        <book-id book-id-type="publisher-id">978-1-4939-1346-6</book-id>
+        <book-id book-id-type="doi">10.1007/978-1-4939-1346-6</book-id>
+        <book-id book-id-type="book-title-id">312055</book-id>
+        <book-title-group>
+            <book-title>Steroid Receptors</book-title>
+            <subtitle>Methods and Protocols</subtitle>
+        </book-title-group>
+        <contrib-group content-type="book editors">
+            <contrib contrib-type="editor">
+                <name>
+                    <surname>Castoria</surname>
+                    <given-names>Gabriella</given-names>
+                </name>
+                <xref ref-type="aff" rid="Aff12">12</xref>
+            </contrib>
+            <contrib contrib-type="editor">
+                <name>
+                    <surname>Auricchio</surname>
+                    <given-names>Ferdinando</given-names>
+                </name>
+                <xref ref-type="aff" rid="Aff12">12</xref>
+            </contrib>
+            <aff id="Aff12">
+                <label>Aff12</label>
+                <institution-wrap>
+                    <institution-id institution-id-type="GRID">grid.9841.4</institution-id>
+                    <institution-id institution-id-type="ISNI">0000 0001 2200 8888</institution-id>
+                    <institution content-type="org-name">Second University of Naples</institution>
+                </institution-wrap>
+                <addr-line content-type="city">Naples</addr-line>
+                <country country="IT">Italy</country>
+            </aff>
+        </contrib-group>
+        <book-volume-number>1204</book-volume-number>
+        <isbn content-type="ppub">978-1-4939-1345-9</isbn>
+        <isbn content-type="epub">978-1-4939-1346-6</isbn>
+        <publisher>
+            <publisher-name>Springer New York</publisher-name>
+            <publisher-loc>New York, NY</publisher-loc>
+        </publisher>
+        <permissions>
+            <copyright-statement>© Springer Science+Business Media New York 2014</copyright-statement>
+            <copyright-year>2014</copyright-year>
+        </permissions>
+        <custom-meta-group>
+            <custom-meta>
+                <meta-name>publisher-imprint-name</meta-name>
+                <meta-value>Humana</meta-value>
+            </custom-meta>
+        </custom-meta-group>
+    </book-meta>
+</book>

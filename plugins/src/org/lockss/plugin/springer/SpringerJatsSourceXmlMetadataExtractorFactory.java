@@ -75,15 +75,14 @@ public class SpringerJatsSourceXmlMetadataExtractorFactory extends SourceXmlMeta
         protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu, Document xmlDoc) {
             String url = cu.getUrl();
             // book is using BITS format
-            log.debug3("Fei: url_string = " + url);
             if ((url != null) && url.indexOf("BOK") > -1) {
-                log.debug3("Fei: Setup Bits schema helper for url " + url);
+                log.debug3("Setup Bits schema helper for url " + url);
                 if (BitsPublishingHelper == null) {
                     BitsPublishingHelper = new SpringerBitsPublishingSchemaHelper();
                 }
                 return BitsPublishingHelper;
             } else {
-                log.debug3("Fei: Setup Jats schema helper for url " + url);
+                log.debug3("Setup Jats schema helper for url " + url);
                 // journal  material is using JATS format
                 if (JatsPublishingHelper == null) {
                     JatsPublishingHelper = new JatsPublishingSchemaHelper();
@@ -110,7 +109,6 @@ public class SpringerJatsSourceXmlMetadataExtractorFactory extends SourceXmlMeta
             String fileName = url_string.substring(index);
             int fileNameExtensionIndex =  fileName.length() - replacement.length();
             pdfPath = dirPath + "/BodyRef/PDF" + fileName.replace(replacement, ".pdf");
-
 
             log.debug3("pdfPath is " + pdfPath);
             List<String> returnList = new ArrayList<String>();

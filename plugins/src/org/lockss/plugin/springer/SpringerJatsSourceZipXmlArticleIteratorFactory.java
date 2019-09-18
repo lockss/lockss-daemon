@@ -49,18 +49,16 @@ public class SpringerJatsSourceZipXmlArticleIteratorFactory implements ArticleIt
 
         //The order of how Aspect defined is import here.
         builder.addAspect(Pattern.compile(  "/([^/]+)_nlm\\.xml$"),
-                PDF_REPLACEMENT,
-                ArticleFiles.ROLE_FULL_TEXT_PDF);
+                XML_REPLACEMENT,
+                ARTICLE_METADATA_JATS_XML_ROLE);
 
         builder.addAspect(Pattern.compile(  "/([^/]+)_nlm\\.xml\\.Meta$"),
                 XML_META_REPLACEMENT,
                 ARTICLE_METADATA_JATS_META_ROLE);
 
         builder.addAspect(Pattern.compile(  "/([^/]+)_nlm\\.xml$"),
-                XML_REPLACEMENT,
-                ARTICLE_METADATA_JATS_XML_ROLE);
-
-        builder.setFullTextFromRoles(   ArticleFiles.ROLE_FULL_TEXT_PDF);
+                PDF_REPLACEMENT,
+                ArticleFiles.ROLE_FULL_TEXT_PDF);
 
         //ArticleMetadata may be provided by both .xml and .xml.Meta file in case of Journals
         //For book/book series, ArticleMetadata is provided by .xml
