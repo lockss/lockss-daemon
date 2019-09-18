@@ -1734,7 +1734,7 @@
 
     param[journal_id] = swc
 
-    au < ready ; exists ; 2000 ; Studies in World Christianity Volume 6 ; 6 ; https://www.euppublishing.com/ ; >
+    au < crawling ; exists ; 2000 ; Studies in World Christianity Volume 6 ; 6 ; https://www.euppublishing.com/ ; >
     au < finished ; finished ; 2001 ; Studies in World Christianity Volume 7 ; 7 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2002 ; Studies in World Christianity Volume 8 ; 8 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2003 ; Studies in World Christianity Volume 9 ; 9 ; http://www.euppublishing.com/ ; >
