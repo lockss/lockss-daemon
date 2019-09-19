@@ -12671,7 +12671,7 @@
     param[journal_id] = milmed
 
     au < frozen ; exists ; 2017 ; 2017 ; Military Medicine Volume 1 ; 1 ; >
-    au < frozen ; exists ; 2018 ; 2018 ; Military Medicine Volume 2 ; 2 ; >
+    au < finished ; manifest ; 2018 ; 2018 ; Military Medicine Volume 2 ; 2 ; reingest3.clockss.org:8083 >
     au < testing ; exists ; 2019 ; 2019 ; Military Medicine Volume 3 ; 3 ; >
 
   }
@@ -12932,7 +12932,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Molecular Biology and Evolution Volume 32 ; 32 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Molecular Biology and Evolution Volume 33 ; 33 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Molecular Biology and Evolution Volume 34 ; 34 ; >
-    au < frozen ; exists ; 2018 ; 2018 ; Molecular Biology and Evolution Volume 35 ; 35 ; >
+    au < finished ; manifest ; 2018 ; 2018 ; Molecular Biology and Evolution Volume 35 ; 35 ; reingest2.clockss.org:8085 >
     au < ready ; exists ; 2019 ; 2019 ; Molecular Biology and Evolution Volume 36 ; 36 ; >
 
   }
@@ -13127,7 +13127,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Music Theory Spectrum Volume 37 ; 37 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Music Theory Spectrum Volume 38 ; 38 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Music Theory Spectrum Volume 39 ; 39 ; >
-    au < frozen ; exists ; 2018 ; 2018 ; Music Theory Spectrum Volume 40 ; 40 ; >
+    au < finished ; manifest ; 2018 ; 2018 ; Music Theory Spectrum Volume 40 ; 40 ; reingest4.clockss.org:8082 >
     au < ready ; exists ; 2019 ; 2019 ; Music Theory Spectrum Volume 41 ; 41 ; >
 
   }
@@ -13204,7 +13204,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Music Therapy Perspectives Volume 33 ; 33 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Music Therapy Perspectives Volume 34 ; 34 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Music Therapy Perspectives Volume 35 ; 35 ; >
-    au < frozen ; exists ; 2018 ; 2018 ; Music Therapy Perspectives Volume 36 ; 36 ; >
+    au < finished ; exists ; 2018 ; 2018 ; Music Therapy Perspectives Volume 36 ; 36 ; reingest3.clockss.org:8083 >
     au < testing ; exists ; 2019 ; 2019 ; Music Therapy Perspectives Volume 37 ; 37 ; >
 
   }
@@ -13401,7 +13401,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; National Science Review Volume 2 ; 2 ; >
     au < frozen ; exists ; 2016 ; 2016 ; National Science Review Volume 3 ; 3 ; >
     au < frozen ; exists ; 2017 ; 2017 ; National Science Review Volume 4 ; 4 ; >
-    au < frozen ; exists ; 2018 ; 2018 ; National Science Review Volume 5 ; 5 ; >
+    au < finished ; manifest ; 2018 ; 2018 ; National Science Review Volume 5 ; 5 ; reingest1.clockss.org:8082 >
     au < ready ; exists ; 2019 ; 2019 ; National Science Review Volume 6 ; 6 ; >
 
   }
@@ -13579,7 +13579,7 @@
     au < frozen ; exists ; 2015 ; 2015 ; Neurosurgery Volume 62,76-77 ; 62,76-77 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Neurosurgery Volume 63,78-79 ; 63,78-79 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Neurosurgery Volume 64,80-81 ; 64,80-81 ; >
-    au < frozen ; exists ; 2018 ; 2018 ; Neurosurgery Volume 82-83 ; 82-83 ; >
+    au < finished ; manifest ; 2018 ; 2018 ; Neurosurgery Volume 82-83 ; 82-83 ; reingest2.clockss.org:8085 >
     au < testing ; exists ; 2019 ; 2019 ; Neurosurgery Volume 84-85 ; 84-85 ; >
 
   }
@@ -13874,7 +13874,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Nucleic Acids Research Volume 43 ; 43 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Nucleic Acids Research Volume 44 ; 44 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Nucleic Acids Research Volume 45 ; 45 ; >
-    au < frozen ; exists ; 2018 ; 2018 ; Nucleic Acids Research Volume 46 ; 46 ; >
+    au < finished ; manifest ; 2018 ; 2018 ; Nucleic Acids Research Volume 46 ; 46 ; reingest3.clockss.org:8083 >
     au < testing ; exists ; 2019 ; 2019 ; Nucleic Acids Research Volume 47 ; 47 ; >
 
   }
@@ -13972,7 +13972,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Nutrition Reviews Volume 73 ; 73 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Nutrition Reviews Volume 74 ; 74 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Nutrition Reviews Volume 75 ; 75 ; >
-    au < frozen ; exists ; 2018 ; 2018 ; Nutrition Reviews Volume 76 ; 76 ; >
+    au < finished ; manifest ; 2018 ; 2018 ; Nutrition Reviews Volume 76 ; 76 ; reingest4.clockss.org:8082 >
     au < testing ; exists ; 2019 ; 2019 ; Nutrition Reviews Volume 77 ; 77 ; >
 
   }
@@ -14079,7 +14079,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Occupational Medicine Volume 65 ; 65 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Occupational Medicine Volume 66 ; 66 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Occupational Medicine Volume 67 ; 67 ; >
-    au < frozen ; exists ; 2018 ; 2018 ; Occupational Medicine Volume 68 ; 68 ; >
+    au < finished ; manifest ; 2018 ; 2018 ; Occupational Medicine Volume 68 ; 68 ; reingest5.clockss.org:8082 >
     au < testing ; exists ; 2019 ; 2019 ; Occupational Medicine Volume 69 ; 69 ; >
 
   }
