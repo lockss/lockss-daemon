@@ -15,7 +15,7 @@ public class SpringerJatsSourceZipXmlArticleIteratorFactory implements ArticleIt
     private static String ARTICLE_METADATA_JATS_XML_ROLE = "ArticleMetadataJatsXml";
 
     protected static final String ALL_ZIP_XML_PATTERN_TEMPLATE =
-            "\"%s[^/]+/.*\\.zip!/.*\\.xml(\\.Meta)?$\", base_url";
+            "\"%s[^/]+/.*\\.zip!/.*\\.pdf$\", base_url";
 
     // Be sure to exclude all nested archives in case supplemental data is provided this way
     protected static final Pattern SUB_NESTED_ARCHIVE_PATTERN =
@@ -48,6 +48,10 @@ public class SpringerJatsSourceZipXmlArticleIteratorFactory implements ArticleIt
                 .setVisitArchiveMembers(getIsArchive()));
 
         //The order of how Aspect defined is import here.
+        builder.addAspect(Pattern.compile(  "/([^/]+)\\.pdf$"),
+                PDF_REPLACEMENT,
+                ArticleFiles.ROLE_FULL_TEXT_PDF);
+
         builder.addAspect(Pattern.compile(  "/([^/]+)_nlm\\.xml$"),
                 XML_REPLACEMENT,
                 ARTICLE_METADATA_JATS_XML_ROLE);
@@ -56,10 +60,7 @@ public class SpringerJatsSourceZipXmlArticleIteratorFactory implements ArticleIt
                 XML_META_REPLACEMENT,
                 ARTICLE_METADATA_JATS_META_ROLE);
 
-        builder.addAspect(Pattern.compile(  "/([^/]+)_nlm\\.xml$"),
-                PDF_REPLACEMENT,
-                ArticleFiles.ROLE_FULL_TEXT_PDF);
-
+        builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF);
         //ArticleMetadata may be provided by both .xml and .xml.Meta file in case of Journals
         //For book/book series, ArticleMetadata is provided by .xml
         builder.setRoleFromOtherRoles( ArticleFiles.ROLE_ARTICLE_METADATA,
