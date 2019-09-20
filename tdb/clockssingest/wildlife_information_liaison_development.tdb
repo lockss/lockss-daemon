@@ -8,7 +8,6 @@
     info[poller] = 8
   >
   
-  plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
   implicit < status ; status2 ; year ; param[year] ; name ; volume ; hidden[proxy] >
   
   {
@@ -19,9 +18,20 @@
       issnl = 0974-7907
     >
     
-    param[base_url] = http://threatenedtaxa.org/
     param[journal_id] = JoTT
     #the CLOCKSS permission statement is malformed, but the CC license is sufficient
+
+    {
+    param[base_url] = https://threatenedtaxa.org/
+    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+    attr[start_stem] = index.php/
+
+    au < expected ; exists ; 2019 ; 2019 ; Journal of Threatened Taxa Volume 11 ; 11 ; >
+    }
+
+    {
+    param[base_url] = http://threatenedtaxa.org/
+    plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
 
     au < frozen ; exists ; 2009 ; 2009 ; Journal of Threatened Taxa Volume 1 ; 1 ; >
     au < frozen ; exists ; 2010 ; 2010 ; Journal of Threatened Taxa Volume 2 ; 2 ; >
@@ -33,8 +43,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Journal of Threatened Taxa Volume 8 ; 8 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Journal of Threatened Taxa Volume 9 ; 9 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Journal of Threatened Taxa Volume 10 ; 10 ; >
-    au < expected ; exists ; 2019 ; 2019 ; Journal of Threatened Taxa Volume 11 ; 11 ; >
-
+    }
 
   }
 

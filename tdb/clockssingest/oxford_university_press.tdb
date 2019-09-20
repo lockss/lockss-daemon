@@ -7857,7 +7857,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; International Health Volume 8 ; 8 ; >
     au < finished ; crawling ; 2017 ; 2017 ; International Health Volume 9 ; 9 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; International Health Volume 10 ; 10 ; >
-    au < ready ; exists ; 2019 ; 2019 ; International Health Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; International Health Volume 11 ; 11 ; >
 
   }
 
@@ -7902,7 +7902,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; International Immunology Volume 28 ; 28 ; >
     au < frozen ; exists ; 2017 ; 2017 ; International Immunology Volume 29 ; 29 ; >
     au < frozen ; exists ; 2018 ; 2018 ; International Immunology Volume 30 ; 30 ; >
-    au < ready ; exists ; 2019 ; 2019 ; International Immunology Volume 31 ; 31 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; International Immunology Volume 31 ; 31 ; >
 
   }
 
@@ -8093,7 +8093,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; International Journal of Law and Information Technology Volume 24 ; 24 ; >
     au < frozen ; exists ; 2017 ; 2017 ; International Journal of Law and Information Technology Volume 25 ; 25 ; >
     au < frozen ; exists ; 2018 ; 2018 ; International Journal of Law and Information Technology Volume 26 ; 26 ; >
-    au < ready ; exists ; 2019 ; 2019 ; International Journal of Law and Information Technology Volume 27 ; 27 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; International Journal of Law and Information Technology Volume 27 ; 27 ; >
 
   }
 
@@ -9338,7 +9338,7 @@
     param[journal_id] = jcmc
 
     au < deepCrawl ; exists ; 2018 ; 2018 ; Journal of Computer-Mediated Communication Volume 1 ; 1 ; >
-    au < testing ; exists ; 2019 ; 2019 ; Journal of Computer-Mediated Communication Volume 2 ; 2 ; >
+    au < ready ; exists ; 2019 ; 2019 ; Journal of Computer-Mediated Communication Volume 2 ; 2 ; >
 
   }
 
@@ -10291,7 +10291,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Journal of International Criminal Justice Volume 14 ; 14 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Journal of International Criminal Justice Volume 15 ; 15 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of International Criminal Justice Volume 16 ; 16 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Journal of International Criminal Justice Volume 17 ; 17 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Journal of International Criminal Justice Volume 17 ; 17 ; >
 
   }
 
@@ -10395,7 +10395,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Journal of Islamic Studies Volume 27 ; 27 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Journal of Islamic Studies Volume 28 ; 28 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Islamic Studies Volume 29 ; 29 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Journal of Islamic Studies Volume 30 ; 30 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Journal of Islamic Studies Volume 30 ; 30 ; >
 
   }
 
@@ -10412,7 +10412,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Journal of Language Evolution Volume 1 ; 1 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Journal of Language Evolution Volume 2 ; 2 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Journal of Language Evolution Volume 3 ; 3 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Journal of Language Evolution Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Journal of Language Evolution Volume 4 ; 4 ; >
 
   }
 
@@ -10706,7 +10706,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Journal of Molluscan Studies Volume 82 ; 82 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Journal of Molluscan Studies Volume 83 ; 83 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Molluscan Studies Volume 84 ; 84 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Journal of Molluscan Studies Volume 85 ; 85 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Journal of Molluscan Studies Volume 85 ; 85 ; >
 
   }
 
@@ -11945,7 +11945,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Journal of the History of Medicine and Allied Sciences Volume 71 ; 71 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Journal of the History of Medicine and Allied Sciences Volume 72 ; 72 ; >
     au < finished ; manifest ; 2018 ; 2018 ; Journal of the History of Medicine and Allied Sciences Volume 73 ; 73 ; reingest3.clockss.org:8083 >
-    au < testing ; exists ; 2019 ; 2019 ; Journal of the History of Medicine and Allied Sciences Volume 74 ; 74 ; >
+    au < ready ; exists ; 2019 ; 2019 ; Journal of the History of Medicine and Allied Sciences Volume 74 ; 74 ; >
 
   }
 
@@ -12182,7 +12182,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Literary Imagination Volume 18 ; 18 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Literary Imagination Volume 19 ; 19 ; >
     au < finished ; manifest ; 2018 ; 2018 ; Literary Imagination Volume 20 ; 20 ; reingest2.clockss.org:8085 >
-    au < testing ; exists ; 2019 ; 2019 ; Literary Imagination Volume 21 ; 21 ; >
+    au < ready ; exists ; 2019 ; 2019 ; Literary Imagination Volume 21 ; 21 ; >
 
   }
 
@@ -12285,7 +12285,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Logic Journal of the IGPL Volume 24 ; 24 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Logic Journal of the IGPL Volume 25 ; 25 ; >
     au < finished ; manifest ; 2018 ; 2018 ; Logic Journal of the IGPL Volume 26 ; 26 ; reingest4.clockss.org:8082 >
-    au < ready ; exists ; 2019 ; 2019 ; Logic Journal of the IGPL Volume 27 ; 27 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Logic Journal of the IGPL Volume 27 ; 27 ; >
 
   }
 
@@ -12364,7 +12364,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; MELUS Volume 41 ; 41 ; >
     au < testing ; exists ; 2017 ; 2017 ; MELUS Volume 42 ; 42 ; >
     au < finished ; manifest ; 2018 ; 2018 ; MELUS Volume 43 ; 43 ; reingest5.clockss.org:8082 >
-    au < ready ; exists ; 2019 ; 2019 ; MELUS Volume 44 ; 44 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; MELUS Volume 44 ; 44 ; >
 
   }
 
@@ -12403,7 +12403,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; MHR: Basic science of reproductive medicine Volume 22 ; 22 ; >
     au < frozen ; exists ; 2017 ; 2017 ; MHR: Basic science of reproductive medicine Volume 23 ; 23 ; >
     au < finished ; manifest ; 2018 ; 2018 ; MHR: Basic science of reproductive medicine Volume 24 ; 24 ; reingest1.clockss.org:8082 >
-    au < ready ; exists ; 2019 ; 2019 ; MHR: Basic science of reproductive medicine Volume 25 ; 25 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; MHR: Basic science of reproductive medicine Volume 25 ; 25 ; >
 
   }
 
@@ -12468,7 +12468,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Mammalian Species Volume 48 ; 48 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Mammalian Species Volume 49 ; 49 ; >
     au < finished ; manifest ; 2018 ; 2018 ; Mammalian Species Volume 50 ; 50 ; reingest2.clockss.org:8085 >
-    au < ready ; exists ; 2019 ; 2019 ; Mammalian Species Volume 51 ; 51 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Mammalian Species Volume 51 ; 51 ; >
 
   }
 
@@ -12559,7 +12559,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Medical Law Review Volume 24 ; 24 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Medical Law Review Volume 25 ; 25 ; >
     au < finished ; manifest ; 2018 ; 2018 ; Medical Law Review Volume 26 ; 26 ; reingest3.clockss.org:8083 >
-    au < ready ; exists ; 2019 ; 2019 ; Medical Law Review Volume 27 ; 27 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Medical Law Review Volume 27 ; 27 ; >
 
   }
 
@@ -12595,7 +12595,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Medical Mycology Volume 54 ; 54 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Medical Mycology Volume 55 ; 55 ; >
     au < finished ; manifest ; 2018 ; 2018 ; Medical Mycology Volume 56 ; 56 ; reingest4.clockss.org:8082 >
-    au < ready ; exists ; 2019 ; 2019 ; Medical Mycology Volume 57 ; 57 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Medical Mycology Volume 57 ; 57 ; >
 
   }
 
@@ -12671,7 +12671,7 @@
     param[journal_id] = milmed
 
     au < frozen ; exists ; 2017 ; 2017 ; Military Medicine Volume 1 ; 1 ; >
-    au < frozen ; exists ; 2018 ; 2018 ; Military Medicine Volume 2 ; 2 ; >
+    au < finished ; manifest ; 2018 ; 2018 ; Military Medicine Volume 2 ; 2 ; reingest3.clockss.org:8083 >
     au < testing ; exists ; 2019 ; 2019 ; Military Medicine Volume 3 ; 3 ; >
 
   }
@@ -12932,8 +12932,8 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Molecular Biology and Evolution Volume 32 ; 32 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Molecular Biology and Evolution Volume 33 ; 33 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Molecular Biology and Evolution Volume 34 ; 34 ; >
-    au < frozen ; exists ; 2018 ; 2018 ; Molecular Biology and Evolution Volume 35 ; 35 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Molecular Biology and Evolution Volume 36 ; 36 ; >
+    au < finished ; manifest ; 2018 ; 2018 ; Molecular Biology and Evolution Volume 35 ; 35 ; reingest2.clockss.org:8085 >
+    au < crawling ; exists ; 2019 ; 2019 ; Molecular Biology and Evolution Volume 36 ; 36 ; >
 
   }
 
@@ -13127,8 +13127,8 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Music Theory Spectrum Volume 37 ; 37 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Music Theory Spectrum Volume 38 ; 38 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Music Theory Spectrum Volume 39 ; 39 ; >
-    au < frozen ; exists ; 2018 ; 2018 ; Music Theory Spectrum Volume 40 ; 40 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Music Theory Spectrum Volume 41 ; 41 ; >
+    au < finished ; manifest ; 2018 ; 2018 ; Music Theory Spectrum Volume 40 ; 40 ; reingest4.clockss.org:8082 >
+    au < crawling ; exists ; 2019 ; 2019 ; Music Theory Spectrum Volume 41 ; 41 ; >
 
   }
 
@@ -13204,8 +13204,8 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Music Therapy Perspectives Volume 33 ; 33 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Music Therapy Perspectives Volume 34 ; 34 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Music Therapy Perspectives Volume 35 ; 35 ; >
-    au < frozen ; exists ; 2018 ; 2018 ; Music Therapy Perspectives Volume 36 ; 36 ; >
-    au < testing ; exists ; 2019 ; 2019 ; Music Therapy Perspectives Volume 37 ; 37 ; >
+    au < finished ; exists ; 2018 ; 2018 ; Music Therapy Perspectives Volume 36 ; 36 ; reingest3.clockss.org:8083 >
+    au < ready ; exists ; 2019 ; 2019 ; Music Therapy Perspectives Volume 37 ; 37 ; >
 
   }
 
@@ -13367,7 +13367,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Mutagenesis Volume 31 ; 31 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Mutagenesis Volume 32 ; 32 ; >
     au < finished ; manifest ; 2018 ; 2018 ; Mutagenesis Volume 33 ; 33 ; reingest1.clockss.org:8082 >
-    au < ready ; exists ; 2019 ; 2019 ; Mutagenesis Volume 34 ; 34 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Mutagenesis Volume 34 ; 34 ; >
 
   }
 
@@ -13401,8 +13401,8 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; National Science Review Volume 2 ; 2 ; >
     au < frozen ; exists ; 2016 ; 2016 ; National Science Review Volume 3 ; 3 ; >
     au < frozen ; exists ; 2017 ; 2017 ; National Science Review Volume 4 ; 4 ; >
-    au < frozen ; exists ; 2018 ; 2018 ; National Science Review Volume 5 ; 5 ; >
-    au < ready ; exists ; 2019 ; 2019 ; National Science Review Volume 6 ; 6 ; >
+    au < finished ; manifest ; 2018 ; 2018 ; National Science Review Volume 5 ; 5 ; reingest1.clockss.org:8082 >
+    au < crawling ; exists ; 2019 ; 2019 ; National Science Review Volume 6 ; 6 ; >
 
   }
 
@@ -13505,7 +13505,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Neuro-Oncology Practice Volume 3 ; 3 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Neuro-Oncology Practice Volume 4 ; 4 ; >
     au < finished ; manifest ; 2018 ; 2018 ; Neuro-Oncology Practice Volume 5 ; 5 ; reingest2.clockss.org:8085 >
-    au < ready ; exists ; 2019 ; 2019 ; Neuro-Oncology Practice Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Neuro-Oncology Practice Volume 6 ; 6 ; >
 
   }
 
@@ -13579,7 +13579,7 @@
     au < frozen ; exists ; 2015 ; 2015 ; Neurosurgery Volume 62,76-77 ; 62,76-77 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Neurosurgery Volume 63,78-79 ; 63,78-79 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Neurosurgery Volume 64,80-81 ; 64,80-81 ; >
-    au < frozen ; exists ; 2018 ; 2018 ; Neurosurgery Volume 82-83 ; 82-83 ; >
+    au < finished ; manifest ; 2018 ; 2018 ; Neurosurgery Volume 82-83 ; 82-83 ; reingest2.clockss.org:8085 >
     au < testing ; exists ; 2019 ; 2019 ; Neurosurgery Volume 84-85 ; 84-85 ; >
 
   }
@@ -13615,7 +13615,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Nicotine & Tobacco Research Volume 18 ; 18 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Nicotine & Tobacco Research Volume 19 ; 19 ; >
     au < finished ; manifest ; 2018 ; 2018 ; Nicotine & Tobacco Research Volume 20 ; 20 ; reingest4.clockss.org:8082 >
-    au < ready ; exists ; 2019 ; 2019 ; Nicotine & Tobacco Research Volume 21 ; 21 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Nicotine & Tobacco Research Volume 21 ; 21 ; >
 
   }
 
@@ -13815,7 +13815,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Notes and Queries Volume 63 ; 63 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Notes and Queries Volume 64 ; 64 ; >
     au < finished ; manifest ; 2018 ; 2018 ; Notes and Queries Volume 65 ; 65 ; reingest5.clockss.org:8082 >
-    au < ready ; exists ; 2019 ; 2019 ; Notes and Queries Volume 66 ; 66 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Notes and Queries Volume 66 ; 66 ; >
 
   }
 
@@ -13874,7 +13874,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Nucleic Acids Research Volume 43 ; 43 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Nucleic Acids Research Volume 44 ; 44 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Nucleic Acids Research Volume 45 ; 45 ; >
-    au < frozen ; exists ; 2018 ; 2018 ; Nucleic Acids Research Volume 46 ; 46 ; >
+    au < finished ; manifest ; 2018 ; 2018 ; Nucleic Acids Research Volume 46 ; 46 ; reingest3.clockss.org:8083 >
     au < testing ; exists ; 2019 ; 2019 ; Nucleic Acids Research Volume 47 ; 47 ; >
 
   }
@@ -13972,7 +13972,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Nutrition Reviews Volume 73 ; 73 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Nutrition Reviews Volume 74 ; 74 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Nutrition Reviews Volume 75 ; 75 ; >
-    au < frozen ; exists ; 2018 ; 2018 ; Nutrition Reviews Volume 76 ; 76 ; >
+    au < finished ; manifest ; 2018 ; 2018 ; Nutrition Reviews Volume 76 ; 76 ; reingest4.clockss.org:8082 >
     au < testing ; exists ; 2019 ; 2019 ; Nutrition Reviews Volume 77 ; 77 ; >
 
   }
@@ -14079,8 +14079,8 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Occupational Medicine Volume 65 ; 65 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Occupational Medicine Volume 66 ; 66 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Occupational Medicine Volume 67 ; 67 ; >
-    au < frozen ; exists ; 2018 ; 2018 ; Occupational Medicine Volume 68 ; 68 ; >
-    au < testing ; exists ; 2019 ; 2019 ; Occupational Medicine Volume 69 ; 69 ; >
+    au < finished ; manifest ; 2018 ; 2018 ; Occupational Medicine Volume 68 ; 68 ; reingest5.clockss.org:8082 >
+    au < ready ; exists ; 2019 ; 2019 ; Occupational Medicine Volume 69 ; 69 ; >
 
   }
 
@@ -14184,7 +14184,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Oxford Art Journal Volume 39 ; 39 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Oxford Art Journal Volume 40 ; 40 ; >
     au < finished ; manifest ; 2018 ; 2018 ; Oxford Art Journal Volume 41 ; 41 ; reingest1.clockss.org:8082 >
-    au < testing ; exists ; 2019 ; 2019 ; Oxford Art Journal Volume 42 ; 42 ; >
+    au < ready ; exists ; 2019 ; 2019 ; Oxford Art Journal Volume 42 ; 42 ; >
 
   }
 
@@ -14419,7 +14419,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Oxford Review of Economic Policy Volume 32 ; 32 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Oxford Review of Economic Policy Volume 33 ; 33 ; >
     au < testing ; exists ; 2018 ; 2018 ; Oxford Review of Economic Policy Volume 34 ; 34 ; >
-    au < testing ; exists ; 2019 ; 2019 ; Oxford Review of Economic Policy Volume 35 ; 35 ; >
+    au < ready ; exists ; 2019 ; 2019 ; Oxford Review of Economic Policy Volume 35 ; 35 ; >
 
   }
 
@@ -14490,7 +14490,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Pain Medicine Volume 17 ; 17 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Pain Medicine Volume 18 ; 18 ; >
     au < finished ; manifest ; 2018 ; 2018 ; Pain Medicine Volume 19 ; 19 ; reingest5.clockss.org:8082 >
-    au < ready ; exists ; 2019 ; 2019 ; Pain Medicine Volume 20 ; 20 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Pain Medicine Volume 20 ; 20 ; >
 
   }
 
@@ -14702,7 +14702,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Pathogens and Disease Volume 74 ; 74 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Pathogens and Disease Volume 75 ; 75 ; >
     au < finished ; manifest ; 2018 ; 2018 ; Pathogens and Disease Volume 76 ; 76 ; reingest3.clockss.org:8083 >
-    au < ready ; exists ; 2019 ; 2019 ; Pathogens and Disease Volume 77 ; 77 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Pathogens and Disease Volume 77 ; 77 ; >
 
   }
 
