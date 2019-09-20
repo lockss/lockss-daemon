@@ -30,10 +30,14 @@ public class SpringerJatsSourceZipXmlArticleIteratorFactory implements ArticleIt
         return ALL_ZIP_XML_PATTERN_TEMPLATE;
     }
 
-    public static final Pattern XML_PATTERN = Pattern.compile("/(.*)\\.xml(\\.Meta)?$", Pattern.CASE_INSENSITIVE);
-    public static final String XML_META_REPLACEMENT = "/$1_nlm.xml.Meta";
-    public static final String XML_REPLACEMENT = "/$1_nlm.xml";
-    private static final String PDF_REPLACEMENT = "/BodyRef/PDF/$1.pdf";
+    protected static final Pattern PDF_PATTERN = Pattern.compile("/BodyRef/PDF/([^/]+)\\.pdf$");
+    protected static final String PDF_REPLACEMENT = "/BodyRef/PDF/$1.pdf";
+
+    protected static final Pattern XML_PATTERN = Pattern.compile("/([^/]+)_nlm\\.xml$", Pattern.CASE_INSENSITIVE);
+    protected static final String XML_REPLACEMENT = "/$1_nlm.xml";
+    
+    protected static final Pattern XML_META_PATTERN = Pattern.compile("/([^/]+)_nlm\\.xml\\.Meta$");
+    protected static final String XML_META_REPLACEMENT = "/$1_nlm.xml.Meta";
 
     @Override
     public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
@@ -47,25 +51,27 @@ public class SpringerJatsSourceZipXmlArticleIteratorFactory implements ArticleIt
                 .setExcludeSubTreePattern(getExcludeSubTreePattern())
                 .setVisitArchiveMembers(getIsArchive()));
 
-        //The order of how Aspect defined is import here.
-        builder.addAspect(Pattern.compile(  "/([^/]+)\\.pdf$"),
-                PDF_REPLACEMENT,
-                ArticleFiles.ROLE_FULL_TEXT_PDF);
+        //The order of how Aspect defined is important here.
+        
+        builder.addAspect(PDF_PATTERN,
+                          PDF_REPLACEMENT,
+                          ArticleFiles.ROLE_FULL_TEXT_PDF);
 
-        builder.addAspect(Pattern.compile(  "/([^/]+)_nlm\\.xml$"),
-                XML_REPLACEMENT,
-                ARTICLE_METADATA_JATS_XML_ROLE);
+        builder.addAspect(XML_PATTERN,
+                          XML_REPLACEMENT,
+                          ARTICLE_METADATA_JATS_XML_ROLE);
 
-        builder.addAspect(Pattern.compile(  "/([^/]+)_nlm\\.xml\\.Meta$"),
-                XML_META_REPLACEMENT,
-                ARTICLE_METADATA_JATS_META_ROLE);
+        builder.addAspect(XML_META_PATTERN,
+                          XML_META_REPLACEMENT,
+                          ARTICLE_METADATA_JATS_META_ROLE);
 
         builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF);
+        
         //ArticleMetadata may be provided by both .xml and .xml.Meta file in case of Journals
         //For book/book series, ArticleMetadata is provided by .xml
-        builder.setRoleFromOtherRoles( ArticleFiles.ROLE_ARTICLE_METADATA,
-                ARTICLE_METADATA_JATS_META_ROLE,
-                ARTICLE_METADATA_JATS_XML_ROLE);
+        builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA,
+                                      ARTICLE_METADATA_JATS_META_ROLE,
+                                      ARTICLE_METADATA_JATS_XML_ROLE);
 
         return builder.getSubTreeArticleIterator();
     }
