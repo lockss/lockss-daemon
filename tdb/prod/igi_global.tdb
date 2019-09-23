@@ -210,7 +210,7 @@
     param[journal_issn] = 2637-7888
     #continues = 1943-0744
 
-    au < expected ; 2018 ; International Journal of Distributed Artificial Intelligence (IJDAI) Volume 10 ; 10 ; https://www.igi-global.com/ >
+    au < manifest ; 2018 ; International Journal of Distributed Artificial Intelligence (IJDAI) Volume 10 ; 10 ; https://www.igi-global.com/ >
     au < expected ; 2019 ; International Journal of Distributed Artificial Intelligence (IJDAI) Volume 11 ; 11 ; https://www.igi-global.com/ >
 
   }
