@@ -1327,7 +1327,7 @@
       au < doNotProcess ; exists ; 1998 ; Nottingham French Studies Volume 37 ; 37 ; https://www.euppublishing.com/ ; >
       au < doNotProcess ; exists ; 1999 ; Nottingham French Studies Volume 38 ; 38 ; https://www.euppublishing.com/ ; >
       au < frozen ; exists ; 2000 ; Nottingham French Studies Volume 39 ; 39 ; https://www.euppublishing.com/ ; >
-      au < crawling ; exists ; 2001 ; Nottingham French Studies Volume 40 ; 40 ; https://www.euppublishing.com/ ; >
+      au < frozen ; exists ; 2001 ; Nottingham French Studies Volume 40 ; 40 ; https://www.euppublishing.com/ ; >
       au < frozen ; exists ; 2002 ; Nottingham French Studies Volume 41 ; 41 ; https://www.euppublishing.com/ ; >
       au < frozen ; exists ; 2003 ; Nottingham French Studies Volume 42 ; 42 ; https://www.euppublishing.com/ ; >
       au < frozen ; exists ; 2004 ; Nottingham French Studies Volume 43 ; 43 ; https://www.euppublishing.com/ ; >
@@ -1365,10 +1365,10 @@
     au < frozen ; exists ; 2000 ; Oxford Literary Review Volume 22 ; 22 ; https://www.euppublishing.com/ ; >
     au < frozen ; exists ; 2001 ; Oxford Literary Review Volume 23 ; 23 ; https://www.euppublishing.com/ ; >
     au < frozen ; exists ; 2002 ; Oxford Literary Review Volume 24 ; 24 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 2003 ; Oxford Literary Review Volume 25 ; 25 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 2003 ; Oxford Literary Review Volume 25 ; 25 ; https://www.euppublishing.com/ ; >
     au < crawling ; exists ; 2004 ; Oxford Literary Review Volume 26 ; 26 ; https://www.euppublishing.com/ ; >
     au < frozen ; exists ; 2005 ; Oxford Literary Review Volume 27 ; 27 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 2006 ; Oxford Literary Review Volume 28 ; 28 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 2006 ; Oxford Literary Review Volume 28 ; 28 ; https://www.euppublishing.com/ ; >
     au < finished ; finished ; 2007 ; Oxford Literary Review Volume 29 ; 29 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2008 ; Oxford Literary Review Volume 30 ; 30 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2009 ; Oxford Literary Review Volume 31 ; 31 ; http://www.euppublishing.com/ ; >
@@ -1768,7 +1768,7 @@
 
     param[journal_id] = tal
 
-    au < crawling ; exists ; 2000 ; Translation and Literature Volume 9 ; 9 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 2000 ; Translation and Literature Volume 9 ; 9 ; https://www.euppublishing.com/ ; >
     au < frozen ; exists ; 2001 ; Translation and Literature Volume 10 ; 10 ; https://www.euppublishing.com/ ; >
     au < finished ; finished ; 2002 ; Translation and Literature Volume 11 ; 11 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2003 ; Translation and Literature Volume 12 ; 12 ; http://www.euppublishing.com/ ; >
