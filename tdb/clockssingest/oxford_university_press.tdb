@@ -9338,7 +9338,7 @@
     param[journal_id] = jcmc
 
     au < deepCrawl ; exists ; 2018 ; 2018 ; Journal of Computer-Mediated Communication Volume 1 ; 1 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Journal of Computer-Mediated Communication Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Journal of Computer-Mediated Communication Volume 2 ; 2 ; >
 
   }
 
@@ -11945,7 +11945,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Journal of the History of Medicine and Allied Sciences Volume 71 ; 71 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Journal of the History of Medicine and Allied Sciences Volume 72 ; 72 ; >
     au < finished ; manifest ; 2018 ; 2018 ; Journal of the History of Medicine and Allied Sciences Volume 73 ; 73 ; reingest3.clockss.org:8083 >
-    au < ready ; exists ; 2019 ; 2019 ; Journal of the History of Medicine and Allied Sciences Volume 74 ; 74 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Journal of the History of Medicine and Allied Sciences Volume 74 ; 74 ; >
 
   }
 
@@ -12182,7 +12182,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Literary Imagination Volume 18 ; 18 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Literary Imagination Volume 19 ; 19 ; >
     au < finished ; manifest ; 2018 ; 2018 ; Literary Imagination Volume 20 ; 20 ; reingest2.clockss.org:8085 >
-    au < ready ; exists ; 2019 ; 2019 ; Literary Imagination Volume 21 ; 21 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Literary Imagination Volume 21 ; 21 ; >
 
   }
 
@@ -13205,7 +13205,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Music Therapy Perspectives Volume 34 ; 34 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Music Therapy Perspectives Volume 35 ; 35 ; >
     au < finished ; exists ; 2018 ; 2018 ; Music Therapy Perspectives Volume 36 ; 36 ; reingest3.clockss.org:8083 >
-    au < ready ; exists ; 2019 ; 2019 ; Music Therapy Perspectives Volume 37 ; 37 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Music Therapy Perspectives Volume 37 ; 37 ; >
 
   }
 
@@ -14080,7 +14080,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Occupational Medicine Volume 66 ; 66 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Occupational Medicine Volume 67 ; 67 ; >
     au < finished ; manifest ; 2018 ; 2018 ; Occupational Medicine Volume 68 ; 68 ; reingest5.clockss.org:8082 >
-    au < ready ; exists ; 2019 ; 2019 ; Occupational Medicine Volume 69 ; 69 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Occupational Medicine Volume 69 ; 69 ; >
 
   }
 
@@ -14184,7 +14184,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Oxford Art Journal Volume 39 ; 39 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Oxford Art Journal Volume 40 ; 40 ; >
     au < finished ; manifest ; 2018 ; 2018 ; Oxford Art Journal Volume 41 ; 41 ; reingest1.clockss.org:8082 >
-    au < ready ; exists ; 2019 ; 2019 ; Oxford Art Journal Volume 42 ; 42 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Oxford Art Journal Volume 42 ; 42 ; >
 
   }
 
@@ -14419,7 +14419,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Oxford Review of Economic Policy Volume 32 ; 32 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Oxford Review of Economic Policy Volume 33 ; 33 ; >
     au < testing ; exists ; 2018 ; 2018 ; Oxford Review of Economic Policy Volume 34 ; 34 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Oxford Review of Economic Policy Volume 35 ; 35 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Oxford Review of Economic Policy Volume 35 ; 35 ; >
 
   }
 
