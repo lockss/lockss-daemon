@@ -59,7 +59,7 @@
        implicit < status ; status2 ; year ; name ; param[directory] >
 
        au < manifest ; exists ; 2019 ; Association for Computing Machinery Source Content 2019_4 ; 2019_4 >
-       au < exists ; exists ; 2019 ; Association for Computing Machinery Source Content 2019_5 ; 2019_5 >
+       au < manifest ; exists ; 2019 ; Association for Computing Machinery Source Content 2019_5 ; 2019_5 >
        au < exists ; exists ; 2019 ; Association for Computing Machinery Source Content 2019_6 ; 2019_6 >
 
      }
