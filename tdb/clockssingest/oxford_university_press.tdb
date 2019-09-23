@@ -571,7 +571,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; The American Journal of Clinical Nutrition Volume 103-104 ; 103-104 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The American Journal of Clinical Nutrition Volume 105-106 ; 105-106 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; The American Journal of Clinical Nutrition Volume 107-108 ; 107-108 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; The American Journal of Clinical Nutrition Volume 109-110 ; 109-110 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; The American Journal of Clinical Nutrition Volume 109-110 ; 109-110 ; >
 
   }
 
@@ -605,7 +605,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; American Journal of Clinical Pathology Volume 145-146 ; 145-146 ; >
     au < frozen ; exists ; 2017 ; 2017 ; American Journal of Clinical Pathology Volume 147-148 ; 147-148 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; American Journal of Clinical Pathology Volume 149-150 ; 149-150 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; American Journal of Clinical Pathology Volume 151-152 ; 151-152 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; American Journal of Clinical Pathology Volume 151-152 ; 151-152 ; >
 
   }
 
@@ -2177,7 +2177,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Biological Journal of the Linnean Society Volume 117-119 ; 117-119 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Biological Journal of the Linnean Society Volume 120-122 ; 120-122 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Biological Journal of the Linnean Society Volume 123-125 ; 123-125 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Biological Journal of the Linnean Society Volume 126-128 ; 126-128 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Biological Journal of the Linnean Society Volume 126-128 ; 126-128 ; >
 
   }
 
@@ -3908,7 +3908,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Database Volume 2016 ; 2016 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Database Volume 2017 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Database Volume 2018 ; 2018 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Database Volume 2019 ; 2019 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Database Volume 2019 ; 2019 ; >
 
   }
 
@@ -5691,7 +5691,7 @@
     #this title was ONLY in the publisher listing
     au < finished ; crawling ; 2017 ; 2017 ; Food Quality and Safety Volume 1 ; 1 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Food Quality and Safety Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Food Quality and Safety Volume 3 ; 3 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Food Quality and Safety Volume 3 ; 3 ; >
 
   }
 
@@ -6233,7 +6233,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Gastroenterology Report Volume 4 ; 4 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Gastroenterology Report Volume 5 ; 5 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Gastroenterology Report Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Gastroenterology Report Volume 7 ; 7 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Gastroenterology Report Volume 7 ; 7 ; >
 
   }
 
@@ -6617,7 +6617,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Health Education Research Volume 31 ; 31 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Health Education Research Volume 32 ; 32 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Health Education Research Volume 33 ; 33 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Health Education Research Volume 34 ; 34 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Health Education Research Volume 34 ; 34 ; >
 
   }
 
@@ -6818,7 +6818,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Holocaust and Genocide Studies Volume 30 ; 30 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Holocaust and Genocide Studies Volume 31 ; 31 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Holocaust and Genocide Studies Volume 32 ; 32 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Holocaust and Genocide Studies Volume 33 ; 33 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Holocaust and Genocide Studies Volume 33 ; 33 ; >
 
   }
 
@@ -7104,7 +7104,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; ICES Journal of Marine Science Volume 73 ; 73 ; >
     au < frozen ; exists ; 2017 ; 2017 ; ICES Journal of Marine Science Volume 74 ; 74 ; >
     au < frozen ; exists ; 2018 ; 2018 ; ICES Journal of Marine Science Volume 75 ; 75 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; ICES Journal of Marine Science Volume 76 ; 76 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; ICES Journal of Marine Science Volume 76 ; 76 ; >
 
   }
 
@@ -7990,7 +7990,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; International Journal of Constitutional Law Volume 14 ; 14 ; >
     au < finished ; crawling ; 2017 ; 2017 ; International Journal of Constitutional Law Volume 15 ; 15 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; International Journal of Constitutional Law Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; International Journal of Constitutional Law Volume 17 ; 17 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; International Journal of Constitutional Law Volume 17 ; 17 ; >
 
   }
 
@@ -8250,7 +8250,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; International Journal of Neuropsychopharmacology Volume 19 ; 19 ; >
     au < frozen ; exists ; 2017 ; 2017 ; International Journal of Neuropsychopharmacology Volume 20 ; 20 ; >
     au < frozen ; exists ; 2018 ; 2018 ; International Journal of Neuropsychopharmacology Volume 21 ; 21 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; International Journal of Neuropsychopharmacology Volume 22 ; 22 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; International Journal of Neuropsychopharmacology Volume 22 ; 22 ; >
 
   }
 
@@ -9702,7 +9702,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Journal of Environmental Law Volume 28 ; 28 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Journal of Environmental Law Volume 29 ; 29 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Environmental Law Volume 30 ; 30 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Journal of Environmental Law Volume 31 ; 31 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Environmental Law Volume 31 ; 31 ; >
 
   }
 
@@ -9910,7 +9910,7 @@
     param[journal_id] = jge
 
     au < deepCrawl ; exists ; 2018 ; 2018 ; Journal of Geophysics and Engineering Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Journal of Geophysics and Engineering Volume 16 ; 16 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Geophysics and Engineering Volume 16 ; 16 ; >
 
   }
 
