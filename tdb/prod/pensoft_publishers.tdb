@@ -69,7 +69,7 @@
     au < notReady ; 2015 ; 10 ; BioRisk Volume 2015 [abstract only] ; 2015 ; https://biorisk.pensoft.net/ > #no substance.
     au < released ; 2016 ; 11 ; BioRisk Volume 2016 ; 2016 ; https://biorisk.pensoft.net/ >
     au < released ; 2017 ; 12 ; BioRisk Volume 2017 ; 2017 ; https://biorisk.pensoft.net/ >
-    au < ready ; 2018 ; 13 ; BioRisk Volume 2018 ; 2018 ; https://biorisk.pensoft.net/ >
+    au < releasing ; 2018 ; 13 ; BioRisk Volume 2018 ; 2018 ; https://biorisk.pensoft.net/ >
 
    }
 
@@ -194,7 +194,7 @@
     au < released ; 2015 ; 24-27 ; NeoBiota Volume 2015 ; 2015 ; http://neobiota.pensoft.net/ >
     au < released ; 2016 ; 28-31 ; NeoBiota Volume 2016 ; 2016 ; https://neobiota.pensoft.net/ >
     au < released ; 2017 ; 32-36 ; NeoBiota Volume 2017 ; 2017 ; https://neobiota.pensoft.net/ >
-    au < ready ; 2018 ; 37-41 ; NeoBiota Volume 2018 ; 2018 ; https://neobiota.pensoft.net/ >
+    au < releasing ; 2018 ; 37-41 ; NeoBiota Volume 2018 ; 2018 ; https://neobiota.pensoft.net/ >
 
    }
 
@@ -214,7 +214,7 @@
     au < released ; 2015 ; 38 ; Nota Lepidopterologica Volume 2015 ; 2015 ; https://nl.pensoft.net/ >
     au < released ; 2016 ; 39 ; Nota Lepidopterologica Volume 2016 ; 2016 ; https://nl.pensoft.net/ >
     au < released ; 2017 ; 40 ; Nota Lepidopterologica Volume 2017 ; 2017 ; https://nl.pensoft.net/ >
-    au < ready ; 2018 ; 41 ; Nota Lepidopterologica Volume 2018 ; 2018 ; https://nl.pensoft.net/ >
+    au < releasing ; 2018 ; 41 ; Nota Lepidopterologica Volume 2018 ; 2018 ; https://nl.pensoft.net/ >
 
    }
 
@@ -238,7 +238,7 @@
     au < released ; 2015 ; 44-57 ; PhytoKeys Volume 2015 ; 2015 ; https://phytokeys.pensoft.net/ >
     au < released ; 2016 ; 58-75 ; PhytoKeys Volume 2016 ; 2016 ; https://phytokeys.pensoft.net/ >
     au < released ; 2017 ; 76-91 ; PhytoKeys Volume 2017 ; 2017 ; https://phytokeys.pensoft.net/ >
-    au < ready ; 2018 ; 92-118 ; PhytoKeys Volume 2018 ; 2018 ; https://phytokeys.pensoft.net/ >
+    au < releasing ; 2018 ; 92-118 ; PhytoKeys Volume 2018 ; 2018 ; https://phytokeys.pensoft.net/ >
 
    }
 
@@ -261,7 +261,7 @@
     au < released ; 2015 ; 15-16 ; Subterranean Biology Volume 2015 ; 2015 ; http://subtbiol.pensoft.net/ >
     au < released ; 2016 ; 17-20 ; Subterranean Biology Volume 2016 ; 2016 ; https://subtbiol.pensoft.net/ >
     au < released ; 2017 ; 21-24 ; Subterranean Biology Volume 2017 ; 2017 ; https://subtbiol.pensoft.net/ >
-    au < ready ; 2018 ; 25-28 ; Subterranean Biology Volume 2018 ; 2018 ; https://subtbiol.pensoft.net/ >
+    au < releasing ; 2018 ; 25-28 ; Subterranean Biology Volume 2018 ; 2018 ; https://subtbiol.pensoft.net/ >
 
    }
 
@@ -287,7 +287,7 @@
     au < released ; 2015 ; 469-548 ; ZooKeys Volume 2015 ; 2015 ; https://zookeys.pensoft.net/ >
     au < released ; 2016 ; 549-641 ; ZooKeys Volume 2016 ; 2016 ; https://zookeys.pensoft.net/ >
     au < released ; 2017 ; 642-725 ; ZooKeys Volume 2017 ; 2017 ; https://zookeys.pensoft.net/ >
-    au < ready ; 2018 ; 726-810 ; ZooKeys Volume 2018 ; 2018 ; https://zookeys.pensoft.net/ >
+    au < releasing ; 2018 ; 726-810 ; ZooKeys Volume 2018 ; 2018 ; https://zookeys.pensoft.net/ >
 
    }
    
@@ -307,7 +307,7 @@
     au < released ; 2015 ; 91 ; Zoosystematics and Evolution Volume 2015 ; 2015 ; https://zse.pensoft.net/ >
     au < released ; 2016 ; 92 ; Zoosystematics and Evolution Volume 2016 ; 2016 ; https://zse.pensoft.net/ >
     au < released ; 2017 ; 93 ; Zoosystematics and Evolution Volume 2017 ; 2017 ; https://zse.pensoft.net/ >
-    au < ready ; 2018 ; 94 ; Zoosystematics and Evolution Volume 2018 ; 2018 ; https://zse.pensoft.net/ >
+    au < releasing ; 2018 ; 94 ; Zoosystematics and Evolution Volume 2018 ; 2018 ; https://zse.pensoft.net/ >
 
     }
 
@@ -337,7 +337,7 @@
 
       param[au_oai_set] = aer
 
-      au < ready ; 2018 ; 2018 ; Arctic Environmental Research Volume 2018 ; 2018 ; https://aer.pensoft.net/ >
+      au < releasing ; 2018 ; 2018 ; Arctic Environmental Research Volume 2018 ; 2018 ; https://aer.pensoft.net/ >
       au < manifest ; 2019 ; 2019 ; Arctic Environmental Research Volume 2019 ; 2019 ; https://aer.pensoft.net/ >
 
   }
@@ -373,7 +373,7 @@
       au < released ; 2015 ; 2015 ; BioDiscovery Volume 2015 ; 2015 ; https://biodiscovery.pensoft.net/ >
       au < released ; 2016 ; 2016 ; BioDiscovery Volume 2016 ; 2016 ; https://biodiscovery.pensoft.net/ >
       au < released ; 2017 ; 2017 ; BioDiscovery Volume 2017 ; 2017 ; https://biodiscovery.pensoft.net/ >
-      au < ready ; 2018 ; 2018 ; BioDiscovery Volume 2018 ; 2018 ; https://biodiscovery.pensoft.net/ >
+      au < releasing ; 2018 ; 2018 ; BioDiscovery Volume 2018 ; 2018 ; https://biodiscovery.pensoft.net/ >
       au < manifest ; 2019 ; 2019 ; BioDiscovery Volume 2019 ; 2019 ; https://biodiscovery.pensoft.net/ >
 
   }
@@ -388,7 +388,7 @@
 
       param[au_oai_set] = biss
 
-      au < ready ; 2018 ; 2018 ; Biodiversity Information Science and Standards Volume 2018 ; 2018 ; https://biss.pensoft.net/ >
+      au < releasing ; 2018 ; 2018 ; Biodiversity Information Science and Standards Volume 2018 ; 2018 ; https://biss.pensoft.net/ >
       au < manifest ; 2019 ; 2019 ; Biodiversity Information Science and Standards Volume 2019 ; 2019 ; https://biss.pensoft.net/ >
 
   }
@@ -403,7 +403,7 @@
 
       param[au_oai_set] = checklist
 
-      au < ready ; 2018 ; 2018 ; Check List Volume 2018 ; 2018 ; https://checklist.pensoft.net/ >
+      au < releasing ; 2018 ; 2018 ; Check List Volume 2018 ; 2018 ; https://checklist.pensoft.net/ >
       au < manifest ; 2019 ; 2019 ; Check List Volume 2019 ; 2019 ; https://checklist.pensoft.net/ >
 
   }
@@ -432,7 +432,7 @@
 
       param[au_oai_set] = evolsyst
 
-      au < ready ; 2018 ; 2018 ; Evolutionary Systematics Volume 2018 ; 2018 ; https://evolsyst.pensoft.net/ >
+      au < releasing ; 2018 ; 2018 ; Evolutionary Systematics Volume 2018 ; 2018 ; https://evolsyst.pensoft.net/ >
       au < manifest ; 2019 ; 2019 ; Evolutionary Systematics Volume 2019 ; 2019 ; https://evolsyst.pensoft.net/ >
 
   }
@@ -462,7 +462,7 @@
 
       param[au_oai_set] = hmj
 
-      au < ready ; 2018 ; 2018 ; History of Medicine Volume 2018 ; 2018 ; https://hmj.pensoft.net/ >
+      au < releasing ; 2018 ; 2018 ; History of Medicine Volume 2018 ; 2018 ; https://hmj.pensoft.net/ >
       au < manifest ; 2019 ; 2019 ; History of Medicine Volume 2019 ; 2019 ; https://hmj.pensoft.net/ >
 
   }
@@ -480,7 +480,7 @@
 
       au < released ; 2016 ; 2016 ; Italian Botanist Volume 2016 ; 2016 ; https://italianbotanist.pensoft.net/ >
       au < released ; 2017 ; 2017 ; Italian Botanist Volume 2017 ; 2017 ; https://italianbotanist.pensoft.net/ >
-      au < ready ; 2018 ; 2018 ; Italian Botanist Volume 2018 ; 2018 ; https://italianbotanist.pensoft.net/ >
+      au < releasing ; 2018 ; 2018 ; Italian Botanist Volume 2018 ; 2018 ; https://italianbotanist.pensoft.net/ >
       au < manifest ; 2019 ; 2019 ; Italian Botanist Volume 2019 ; 2019 ; https://italianbotanist.pensoft.net/ >
 
   }
@@ -522,7 +522,7 @@
       param[au_oai_set] = jor
 
       au < released ; 2017 ; 2017 ; Journal of Orthoptera Research Volume 2017 ; 2017 ; https://jor.pensoft.net/ >
-      au < ready ; 2018 ; 2018 ; Journal of Orthoptera Research Volume 2018 ; 2018 ; https://jor.pensoft.net/ >
+      au < releasing ; 2018 ; 2018 ; Journal of Orthoptera Research Volume 2018 ; 2018 ; https://jor.pensoft.net/ >
       au < manifest ; 2019 ; 2019 ; Journal of Orthoptera Research Volume 2019 ; 2019 ; https://jor.pensoft.net/ >
 
   }
@@ -541,7 +541,7 @@
       au < released ; 2015 ; 2015 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2015 ; 2015 ; https://mab-online.nl/ >
       au < released ; 2016 ; 2016 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2016 ; 2016 ; https://mab-online.nl/ >
       au < released ; 2017 ; 2017 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2017 ; 2017 ; https://mab-online.nl/ >
-      au < ready ; 2018 ; 2018 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2018 ; 2018 ; https://mab-online.nl/ >
+      au < releasing ; 2018 ; 2018 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2018 ; 2018 ; https://mab-online.nl/ >
       au < manifest ; 2019 ; 2019 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2019 ; 2019 ; https://mab-online.nl/ >
 
   }
@@ -573,7 +573,7 @@
 
       param[au_oai_set] = moem
 
-      au < ready ; 2018 ; 2018 ; Modern Electronic Materials Volume 2018 ; 2018 ; https://moem.pensoft.net/ >
+      au < releasing ; 2018 ; 2018 ; Modern Electronic Materials Volume 2018 ; 2018 ; https://moem.pensoft.net/ >
       au < exists ; 2019 ; 2019 ; Modern Electronic Materials Volume 2019 ; 2019 ; https://moem.pensoft.net/ >
 
   }
@@ -605,7 +605,7 @@
 
       au < released ; 2016 ; 2016 ; One Ecosystem Volume 2016 ; 2016 ; https://oneecosystem.pensoft.net/ >
       au < released ; 2017 ; 2017 ; One Ecosystem Volume 2017 ; 2017 ; https://oneecosystem.pensoft.net/ >
-      au < ready ; 2018 ; 2018 ; One Ecosystem Volume 2018 ; 2018 ; https://oneecosystem.pensoft.net/ >
+      au < releasing ; 2018 ; 2018 ; One Ecosystem Volume 2018 ; 2018 ; https://oneecosystem.pensoft.net/ >
       au < manifest ; 2019 ; 2019 ; One Ecosystem Volume 2019 ; 2019 ; https://oneecosystem.pensoft.net/ >
 
   }
@@ -641,7 +641,7 @@
       au < released ; 2015 ; 2015 ; Research results in Pharmacology Volume 2015 ; 2015 ; https://rrpharmacology.pensoft.net/ >
       au < released ; 2016 ; 2016 ; Research results in Pharmacology Volume 2016 ; 2016 ; https://rrpharmacology.pensoft.net/ >
       au < released ; 2017 ; 2017 ; Research results in Pharmacology Volume 2017 ; 2017 ; https://rrpharmacology.pensoft.net/ >
-      au < ready ; 2018 ; 2018 ; Research results in Pharmacology Volume 2018 ; 2018 ; https://rrpharmacology.pensoft.net/ >
+      au < releasing ; 2018 ; 2018 ; Research results in Pharmacology Volume 2018 ; 2018 ; https://rrpharmacology.pensoft.net/ >
       au < manifest ; 2019 ; 2019 ; Research results in Pharmacology Volume 2019 ; 2019 ; https://rrpharmacology.pensoft.net/ >
 
   }
@@ -725,7 +725,7 @@
       #moved from scielo.
 
       au < released ; 2017 ; 34 ; Zoologia Volume 2017 ; 2017 ; https://zoologia.pensoft.net/ >
-      au < ready ; 2018 ; 35 ; Zoologia Volume 2018 ; 2018 ; https://zoologia.pensoft.net/ >
+      au < releasing ; 2018 ; 35 ; Zoologia Volume 2018 ; 2018 ; https://zoologia.pensoft.net/ >
       au < manifest ; 2019 ; 36 ; Zoologia Volume 2019 ; 2019 ; https://zoologia.pensoft.net/ >
 
   }

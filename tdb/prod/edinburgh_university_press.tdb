@@ -52,7 +52,7 @@
     implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
     param[journal_id] = afg
 
-    au < ready ; 2018 ; Afghanistan Volume 1 ; 1 ; https://www.euppublishing.com/ >
+    au < releasing ; 2018 ; Afghanistan Volume 1 ; 1 ; https://www.euppublishing.com/ >
 
   }
 
@@ -76,7 +76,7 @@
     au < released ; 2015 ; Somatechnics Volume 5 ; 5 ; https://www.euppublishing.com/ >
     au < released ; 2016 ; Somatechnics Volume 6 ; 6 ; https://www.euppublishing.com/ >
     au < released ; 2017 ; Somatechnics Volume 7 ; 7 ; https://www.euppublishing.com/ >
-    au < ready ; 2018 ; Somatechnics Volume 8 ; 8 ; https://www.euppublishing.com/ >
+    au < releasing ; 2018 ; Somatechnics Volume 8 ; 8 ; https://www.euppublishing.com/ >
 
   }
 
@@ -119,7 +119,7 @@
 
     param[journal_id] = dlgs
     #no volumes before 2018. See comment above.
-    au < ready ; 2018 ; Deleuze and Guattari Studies Volume 12 ; 12 ; https://www.euppublishing.com/ >
+    au < releasing ; 2018 ; Deleuze and Guattari Studies Volume 12 ; 12 ; https://www.euppublishing.com/ >
 
   }
 
@@ -211,7 +211,7 @@
       au < released ; 2015 ; Archives of Natural History Volume 42 ; 42 ; http://www.euppublishing.com/ >
       au < released ; 2016 ; Archives of Natural History Volume 43 ; 43 ; http://www.euppublishing.com/ >
       au < released ; 2017 ; Archives of Natural History Volume 44 ; 44 ; https://www.euppublishing.com/ >
-      au < ready ; 2018 ; Archives of Natural History Volume 45 ; 45 ; https://www.euppublishing.com/ >
+      au < releasing ; 2018 ; Archives of Natural History Volume 45 ; 45 ; https://www.euppublishing.com/ >
 
     }
     
@@ -322,7 +322,7 @@
       au < released ; 2015 ; Comparative Critical Studies Volume 12 ; 12 ; http://www.euppublishing.com/ >
       au < released ; 2016 ; Comparative Critical Studies Volume 13 ; 13 ; http://www.euppublishing.com/ >
       au < released ; 2017 ; Comparative Critical Studies Volume 14 ; 14 ; https://www.euppublishing.com/ >
-      au < ready ; 2018 ; Comparative Critical Studies Volume 15 ; 15 ; https://www.euppublishing.com/ >
+      au < releasing ; 2018 ; Comparative Critical Studies Volume 15 ; 15 ; https://www.euppublishing.com/ >
     
     }
 
@@ -524,7 +524,7 @@
       au < released ; 2015 ; Derrida Today Volume 8 ; 8 ; http://www.euppublishing.com/ >
       au < released ; 2016 ; Derrida Today Volume 9 ; 9 ; http://www.euppublishing.com/ >
       au < released ; 2017 ; Derrida Today Volume 10 ; 10 ; https://www.euppublishing.com/ >
-      au < ready ; 2018 ; Derrida Today Volume 11 ; 11 ; https://www.euppublishing.com/ >
+      au < releasing ; 2018 ; Derrida Today Volume 11 ; 11 ; https://www.euppublishing.com/ >
 
     }
     
@@ -653,7 +653,7 @@
      au < released ; 2015 ; Film-Philosophy Volume 19 ; 19 ; https://www.euppublishing.com/ >
      au < released ; 2016 ; Film-Philosophy Volume 20 ; 20 ; http://www.euppublishing.com/ >
      au < released ; 2017 ; Film-Philosophy Volume 21 ; 21 ; https://www.euppublishing.com/ >
-     au < ready ; 2018 ; Film-Philosophy Volume 22 ; 22 ; https://www.euppublishing.com/ >
+     au < releasing ; 2018 ; Film-Philosophy Volume 22 ; 22 ; https://www.euppublishing.com/ >
 
   }
 
@@ -672,15 +672,15 @@
      implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
 
      au < manifest ; 1999 ; Gothic Studies Volume 1 ; 1 ; https://www.euppublishing.com/ >
-     au < ready ; 2000 ; Gothic Studies Volume 2 ; 2 ; https://www.euppublishing.com/ >
-     au < ready ; 2001 ; Gothic Studies Volume 3 ; 3 ; https://www.euppublishing.com/ >
+     au < releasing ; 2000 ; Gothic Studies Volume 2 ; 2 ; https://www.euppublishing.com/ >
+     au < releasing ; 2001 ; Gothic Studies Volume 3 ; 3 ; https://www.euppublishing.com/ >
      au < manifest ; 2002 ; Gothic Studies Volume 4 ; 4 ; https://www.euppublishing.com/ >
-     au < ready ; 2003 ; Gothic Studies Volume 5 ; 5 ; https://www.euppublishing.com/ >
-     au < ready ; 2004 ; Gothic Studies Volume 6 ; 6 ; https://www.euppublishing.com/ >
+     au < releasing ; 2003 ; Gothic Studies Volume 5 ; 5 ; https://www.euppublishing.com/ >
+     au < releasing ; 2004 ; Gothic Studies Volume 6 ; 6 ; https://www.euppublishing.com/ >
      au < doesNotExist ; 2005 ; Gothic Studies Volume 7 ; 7 ; https://www.euppublishing.com/ >
-     au < ready ; 2006 ; Gothic Studies Volume 8 ; 8 ; https://www.euppublishing.com/ >
+     au < releasing ; 2006 ; Gothic Studies Volume 8 ; 8 ; https://www.euppublishing.com/ >
      au < manifest ; 2007 ; Gothic Studies Volume 9 ; 9 ; https://www.euppublishing.com/ >
-     au < ready ; 2008 ; Gothic Studies Volume 10 ; 10 ; https://www.euppublishing.com/ >
+     au < releasing ; 2008 ; Gothic Studies Volume 10 ; 10 ; https://www.euppublishing.com/ >
      au < released ; 2009 ; Gothic Studies Volume 11 ; 11 ; https://www.euppublishing.com/ >
      au < released ; 2010 ; Gothic Studies Volume 12 ; 12 ; https://www.euppublishing.com/ >
      au < released ; 2011 ; Gothic Studies Volume 13 ; 13 ; https://www.euppublishing.com/ >
@@ -690,7 +690,7 @@
      au < released ; 2015 ; Gothic Studies Volume 17 ; 17 ; https://www.euppublishing.com/ >
      au < released ; 2016 ; Gothic Studies Volume 18 ; 18 ; https://www.euppublishing.com/ >
      au < released ; 2017 ; Gothic Studies Volume 19 ; 19 ; https://www.euppublishing.com/ >
-     au < ready ; 2018 ; Gothic Studies Volume 20 ; 20 ; https://www.euppublishing.com/ >
+     au < releasing ; 2018 ; Gothic Studies Volume 20 ; 20 ; https://www.euppublishing.com/ >
 
   }
 
@@ -763,7 +763,7 @@
       au < released ; 2015 ; Journal of Holy Land and Palestine Studies Volume 14 ; 14 ; http://www.euppublishing.com/ >
       au < released ; 2016 ; Journal of Holy Land and Palestine Studies Volume 15 ; 15 ; http://www.euppublishing.com/ >
       au < released ; 2017 ; Journal of Holy Land and Palestine Studies Volume 16 ; 16 ; https://www.euppublishing.com/ >
-      au < ready ; 2018 ; Journal of Holy Land and Palestine Studies Volume 17 ; 17 ; https://www.euppublishing.com/ >
+      au < releasing ; 2018 ; Journal of Holy Land and Palestine Studies Volume 17 ; 17 ; https://www.euppublishing.com/ >
 
   }
 
@@ -944,7 +944,7 @@
       au < released ; 2015 ; Irish University Review Volume 45 ; 45 ; http://www.euppublishing.com/ >
       au < released ; 2016 ; Irish University Review Volume 46 ; 46 ; http://www.euppublishing.com/ >
       au < released ; 2017 ; Irish University Review Volume 47 ; 47 ; https://www.euppublishing.com/ >
-      au < ready ; 2018 ; Irish University Review Volume 48 ; 48 ; https://www.euppublishing.com/ >
+      au < releasing ; 2018 ; Irish University Review Volume 48 ; 48 ; https://www.euppublishing.com/ >
   
     }
   
@@ -1033,7 +1033,7 @@
       param[journal_id] = ink
       implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
 
-    au < ready ; 2018 ; Journal of Inklings Studies Volume 1 ; 1 ; https://www.euppublishing.com/ >
+    au < releasing ; 2018 ; Journal of Inklings Studies Volume 1 ; 1 ; https://www.euppublishing.com/ >
 
     }
   }
@@ -1224,7 +1224,7 @@
       au < released ; 2015 ; Journal of Scottish Philosophy Volume 13 ; 13 ; http://www.euppublishing.com/ >
       au < released ; 2016 ; Journal of Scottish Philosophy Volume 14 ; 14 ; http://www.euppublishing.com/ >
       au < released ; 2017 ; Journal of Scottish Philosophy Volume 15 ; 15 ; https://www.euppublishing.com/ >
-      au < ready ; 2018 ; Journal of Scottish Philosophy Volume 16 ; 16 ; https://www.euppublishing.com/ >
+      au < releasing ; 2018 ; Journal of Scottish Philosophy Volume 16 ; 16 ; https://www.euppublishing.com/ >
     
     }
     
@@ -1316,7 +1316,7 @@
       au < released ; 2015 ; Modernist Cultures Volume 10 ; 10 ; http://www.euppublishing.com/ >
       au < released ; 2016 ; Modernist Cultures Volume 11 ; 11 ; http://www.euppublishing.com/ >
       au < released ; 2017 ; Modernist Cultures Volume 12 ; 12 ; https://www.euppublishing.com/ >
-      au < ready ; 2018 ; Modernist Cultures Volume 13 ; 13 ; https://www.euppublishing.com/ >
+      au < releasing ; 2018 ; Modernist Cultures Volume 13 ; 13 ; https://www.euppublishing.com/ >
     
     }
 
@@ -1412,7 +1412,7 @@
       au < released ; 2015 ; The New Soundtrack Volume 5 ; 5 ; http://www.euppublishing.com/ >
       au < released ; 2016 ; The New Soundtrack Volume 6 ; 6 ; http://www.euppublishing.com/ >
       au < released ; 2017 ; The New Soundtrack Volume 7 ; 7 ; https://www.euppublishing.com/ >
-      au < ready ; 2018 ; The New Soundtrack Volume 8 ; 8 ; https://www.euppublishing.com/ >
+      au < releasing ; 2018 ; The New Soundtrack Volume 8 ; 8 ; https://www.euppublishing.com/ >
 
     }
 
@@ -1520,7 +1520,7 @@
       au < released ; 2015 ; Nottingham French Studies Volume 54 ; 54 ; http://www.euppublishing.com/ >
       au < released ; 2016 ; Nottingham French Studies Volume 55 ; 55 ; http://www.euppublishing.com/ >
       au < released ; 2017 ; Nottingham French Studies Volume 56 ; 56 ; https://www.euppublishing.com/ >
-      au < ready ; 2018 ; Nottingham French Studies Volume 57 ; 57 ; https://www.euppublishing.com/ >
+      au < releasing ; 2018 ; Nottingham French Studies Volume 57 ; 57 ; https://www.euppublishing.com/ >
   
     }
   
@@ -1847,7 +1847,7 @@
       au < released ; 2015 ; Scottish Affairs Volume 24 ; 24 ; http://www.euppublishing.com/ >
       au < released ; 2016 ; Scottish Affairs Volume 25 ; 25 ; http://www.euppublishing.com/ >
       au < released ; 2017 ; Scottish Affairs Volume 26 ; 26 ; https://www.euppublishing.com/ >
-      au < ready ; 2018 ; Scottish Affairs Volume 27 ; 27 ; https://www.euppublishing.com/ >
+      au < releasing ; 2018 ; Scottish Affairs Volume 27 ; 27 ; https://www.euppublishing.com/ >
    
   }
 
@@ -2139,7 +2139,7 @@
       au < released ; 2015 ; Word Structure Volume 8 ; 8 ; http://www.euppublishing.com/ >
       au < released ; 2016 ; Word Structure Volume 9 ; 9 ; http://www.euppublishing.com/ >
       au < released ; 2017 ; Word Structure Volume 10 ; 10 ; https://www.euppublishing.com/ >
-      au < ready ; 2018 ; Word Structure Volume 11 ; 11 ; https://www.euppublishing.com/ >
+      au < releasing ; 2018 ; Word Structure Volume 11 ; 11 ; https://www.euppublishing.com/ >
     
     }
     
@@ -2194,14 +2194,14 @@
       au < manifest ; 1997 ; Costume Volume 31 ; 31 ; https://www.euppublishing.com/ >
       au < manifest ; 1998 ; Costume Volume 32 ; 32 ; https://www.euppublishing.com/ >
       au < manifest ; 1999 ; Costume Volume 33 ; 33 ; https://www.euppublishing.com/ >
-      au < ready ; 2000 ; Costume Volume 34 ; 34 ; https://www.euppublishing.com/ >
-      au < ready ; 2001 ; Costume Volume 35 ; 35 ; https://www.euppublishing.com/ >
-      au < ready ; 2002 ; Costume Volume 36 ; 36 ; https://www.euppublishing.com/ >
-      au < ready ; 2003 ; Costume Volume 37 ; 37 ; https://www.euppublishing.com/ >
-      au < ready ; 2004 ; Costume Volume 38 ; 38 ; https://www.euppublishing.com/ >
-      au < ready ; 2005 ; Costume Volume 39 ; 39 ; https://www.euppublishing.com/ >
-      au < ready ; 2006 ; Costume Volume 40 ; 40 ; https://www.euppublishing.com/ >
-      au < ready ; 2007 ; Costume Volume 41 ; 41 ; https://www.euppublishing.com/ >
+      au < releasing ; 2000 ; Costume Volume 34 ; 34 ; https://www.euppublishing.com/ >
+      au < releasing ; 2001 ; Costume Volume 35 ; 35 ; https://www.euppublishing.com/ >
+      au < releasing ; 2002 ; Costume Volume 36 ; 36 ; https://www.euppublishing.com/ >
+      au < releasing ; 2003 ; Costume Volume 37 ; 37 ; https://www.euppublishing.com/ >
+      au < releasing ; 2004 ; Costume Volume 38 ; 38 ; https://www.euppublishing.com/ >
+      au < releasing ; 2005 ; Costume Volume 39 ; 39 ; https://www.euppublishing.com/ >
+      au < releasing ; 2006 ; Costume Volume 40 ; 40 ; https://www.euppublishing.com/ >
+      au < releasing ; 2007 ; Costume Volume 41 ; 41 ; https://www.euppublishing.com/ >
       au < manifest ; 2008 ; Costume Volume 42 ; 42 ; https://www.euppublishing.com/ >
       au < manifest ; 2009 ; Costume Volume 43 ; 43 ; https://www.euppublishing.com/ >
       au < doNotProcess ; 2010 ; Costume Volume 44 ; 44 ; https://www.euppublishing.com/ >
@@ -2212,7 +2212,7 @@
       au < doNotProcess ; 2015 ; Costume Volume 49 ; 49 ; https://www.euppublishing.com/ >
       au < doNotProcess ; 2016 ; Costume Volume 50 ; 50 ; https://www.euppublishing.com/ >
       au < released ; 2017 ; Costume Volume 51 ; 51 ; https://www.euppublishing.com/ >
-      au < ready ; 2018 ; Costume Volume 52 ; 52 ; https://www.euppublishing.com/ >
+      au < releasing ; 2018 ; Costume Volume 52 ; 52 ; https://www.euppublishing.com/ >
   
     }
   
