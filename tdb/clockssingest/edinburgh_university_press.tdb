@@ -1331,7 +1331,7 @@
       au < frozen ; exists ; 2002 ; Nottingham French Studies Volume 41 ; 41 ; https://www.euppublishing.com/ ; >
       au < frozen ; exists ; 2003 ; Nottingham French Studies Volume 42 ; 42 ; https://www.euppublishing.com/ ; >
       au < frozen ; exists ; 2004 ; Nottingham French Studies Volume 43 ; 43 ; https://www.euppublishing.com/ ; >
-      au < crawling ; exists ; 2005 ; Nottingham French Studies Volume 44 ; 44 ; https://www.euppublishing.com/ ; >
+      au < frozen ; exists ; 2005 ; Nottingham French Studies Volume 44 ; 44 ; https://www.euppublishing.com/ ; >
       au < crawling ; exists ; 2006 ; Nottingham French Studies Volume 45 ; 45 ; https://www.euppublishing.com/ ; >
       au < frozen ; exists ; 2007 ; Nottingham French Studies Volume 46 ; 46 ; https://www.euppublishing.com/ ; >
       au < frozen ; exists ; 2008 ; Nottingham French Studies Volume 47 ; 47 ; https://www.euppublishing.com/ ; >
@@ -1366,7 +1366,7 @@
     au < frozen ; exists ; 2001 ; Oxford Literary Review Volume 23 ; 23 ; https://www.euppublishing.com/ ; >
     au < frozen ; exists ; 2002 ; Oxford Literary Review Volume 24 ; 24 ; https://www.euppublishing.com/ ; >
     au < frozen ; exists ; 2003 ; Oxford Literary Review Volume 25 ; 25 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 2004 ; Oxford Literary Review Volume 26 ; 26 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 2004 ; Oxford Literary Review Volume 26 ; 26 ; https://www.euppublishing.com/ ; >
     au < frozen ; exists ; 2005 ; Oxford Literary Review Volume 27 ; 27 ; https://www.euppublishing.com/ ; >
     au < frozen ; exists ; 2006 ; Oxford Literary Review Volume 28 ; 28 ; https://www.euppublishing.com/ ; >
     au < finished ; finished ; 2007 ; Oxford Literary Review Volume 29 ; 29 ; http://www.euppublishing.com/ ; >
@@ -1734,7 +1734,7 @@
 
     param[journal_id] = swc
 
-    au < crawling ; exists ; 2000 ; Studies in World Christianity Volume 6 ; 6 ; https://www.euppublishing.com/ ; >
+    au < frozen ; exists ; 2000 ; Studies in World Christianity Volume 6 ; 6 ; https://www.euppublishing.com/ ; >
     au < finished ; finished ; 2001 ; Studies in World Christianity Volume 7 ; 7 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2002 ; Studies in World Christianity Volume 8 ; 8 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2003 ; Studies in World Christianity Volume 9 ; 9 ; http://www.euppublishing.com/ ; >
