@@ -245,11 +245,11 @@
       #param[base_url] = http://newprairiepress.org/
       param[journal_abbr] = ojrrp
 
-      au < crawling ; exists ; 2006 ; Online Journal of Rural Research & Policy Volume 1 ; 1 ; https://newprairiepress.org/ ; >
+      au < frozen ; exists ; 2006 ; Online Journal of Rural Research & Policy Volume 1 ; 1 ; https://newprairiepress.org/ ; >
       au < frozen ; exists ; 2007 ; Online Journal of Rural Research & Policy Volume 2 ; 2 ; https://newprairiepress.org/ ; >
       au < frozen ; exists ; 2008 ; Online Journal of Rural Research & Policy Volume 3 ; 3 ; https://newprairiepress.org/ ; >
       au < frozen ; exists ; 2009 ; Online Journal of Rural Research & Policy Volume 4 ; 4 ; https://newprairiepress.org/ ; >
-      au < crawling ; exists ; 2010 ; Online Journal of Rural Research & Policy Volume 5 ; 5 ; https://newprairiepress.org/ ; >
+      au < frozen ; exists ; 2010 ; Online Journal of Rural Research & Policy Volume 5 ; 5 ; https://newprairiepress.org/ ; >
       au < frozen ; exists ; 2011 ; Online Journal of Rural Research & Policy Volume 6 ; 6 ; https://newprairiepress.org/ ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Online Journal of Rural Research & Policy Volume 7 ; 7 ; https://newprairiepress.org/ ; >
       au < finished ; finished ; 2013 ; Online Journal of Rural Research & Policy Volume 8 ; 8 ; http://newprairiepress.org/ ; >
@@ -285,8 +285,8 @@
       au < crawling ; exists ; 2007 ; Transactions of the Burgon Society Volume 7 ; 7 ; https://newprairiepress.org/ ; >
       au < frozen ; exists ; 2008 ; Transactions of the Burgon Society Volume 8 ; 8 ; https://newprairiepress.org/ ; >
       au < frozen ; exists ; 2009 ; Transactions of the Burgon Society Volume 9 ; 9 ; https://newprairiepress.org/ ; >
-      au < crawling ; exists ; 2010 ; Transactions of the Burgon Society Volume 10 ; 10 ; https://newprairiepress.org/ ; >
-      au < crawling ; exists ; 2011 ; Transactions of the Burgon Society Volume 11 ; 11 ; https://newprairiepress.org/ ; >
+      au < frozen ; exists ; 2010 ; Transactions of the Burgon Society Volume 10 ; 10 ; https://newprairiepress.org/ ; >
+      au < frozen ; exists ; 2011 ; Transactions of the Burgon Society Volume 11 ; 11 ; https://newprairiepress.org/ ; >
       au < frozen ; exists ; 2012 ; Transactions of the Burgon Society Volume 12 ; 12 ; http://newprairiepress.org/ ; >
       au < frozen ; exists ; 2014 ; Transactions of the Burgon Society Volume 13 ; 13 ; http://newprairiepress.org/ ; >
       au < frozen ; exists ; 2014 ; Transactions of the Burgon Society Volume 14 ; 14 ; http://newprairiepress.org/ ; >
@@ -307,7 +307,7 @@
       param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = advocate
 
-      au < crawling ; exists ; 2011 ; The Advocate Volume 19 ; 19 ; >
+      au < frozen ; exists ; 2011 ; The Advocate Volume 19 ; 19 ; >
       au < frozen ; exists ; 2012 ; The Advocate Volume 20 ; 20 ; >
       au < frozen ; exists ; 2013-2014 ; The Advocate Volume 21 ; 21 ; >
       au < frozen ; exists ; 2014-2015 ; The Advocate Volume 22 ; 22 ; >
@@ -380,7 +380,7 @@
       au < manifest ; exists ; 2002-2003 ; Educational Considerations Volume 30 ; 30 ; >
       au < manifest ; exists ; 2003-2004 ; Educational Considerations Volume 31 ; 31 ; >
       au < frozen ; exists ; 2004-2005 ; Educational Considerations Volume 32 ; 32 ; >
-      au < crawling ; exists ; 2005-2006 ; Educational Considerations Volume 33 ; 33 ; >
+      au < frozen ; exists ; 2005-2006 ; Educational Considerations Volume 33 ; 33 ; >
       au < frozen ; exists ; 2006-2007 ; Educational Considerations Volume 34 ; 34 ; >
       au < frozen ; exists ; 2007-2008 ; Educational Considerations Volume 35 ; 35 ; >
       au < frozen ; exists ; 2008-2009 ; Educational Considerations Volume 36 ; 36 ; >
@@ -641,7 +641,7 @@
       au < frozen ; exists ; 2008 ; Journal of Applied Communications Volume 91 ; 91 ; >
       au < frozen ; exists ; 2009 ; Journal of Applied Communications Volume 92 ; 92 ; >
       au < frozen ; exists ; 2010 ; Journal of Applied Communications Volume 93 ; 93 ; >
-      au < crawling ; exists ; 2011 ; Journal of Applied Communications Volume 94 ; 94 ; >
+      au < frozen ; exists ; 2011 ; Journal of Applied Communications Volume 94 ; 94 ; >
       au < frozen ; exists ; 2012 ; Journal of Applied Communications Volume 95 ; 95 ; >
       au < frozen ; exists ; 2013 ; Journal of Applied Communications Volume 96 ; 96 ; >
       au < frozen ; exists ; 2014 ; Journal of Applied Communications Volume 97 ; 97 ; >
@@ -671,7 +671,7 @@
       au < manifest ; exists ; 2001-2002 ; Journal of Hazardous Substance Research Volume 3 ; 3 ; >
       au < manifest ; exists ; 2003 ; Journal of Hazardous Substance Research Volume 4 ; 4 ; >
       au < frozen ; exists ; 2006 ; Journal of Hazardous Substance Research Volume 5 ; 5 ; >
-      au < crawling ; exists ; 2007 ; Journal of Hazardous Substance Research Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2007 ; Journal of Hazardous Substance Research Volume 6 ; 6 ; >
       au < frozen ; exists ; 2007 ; Journal of Hazardous Substance Research Volume 7 ; 7 ; >
 
   }
@@ -744,9 +744,9 @@
       au < manifest ; exists ; 2004 ; Networks: An Online Journal for Teacher Research Volume 7 ; 7 ; >
       au < frozen ; exists ; 2005 ; Networks: An Online Journal for Teacher Research Volume 8 ; 8 ; >
       au < frozen ; exists ; 2006 ; Networks: An Online Journal for Teacher Research Volume 9 ; 9 ; >
-      au < crawling ; exists ; 2008 ; Networks: An Online Journal for Teacher Research Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2008 ; Networks: An Online Journal for Teacher Research Volume 10 ; 10 ; >
       au < frozen ; exists ; 2009 ; Networks: An Online Journal for Teacher Research Volume 11 ; 11 ; >
-      au < crawling ; exists ; 2010 ; Networks: An Online Journal for Teacher Research Volume 12 ; 12 ; >
+      au < frozen ; exists ; 2010 ; Networks: An Online Journal for Teacher Research Volume 12 ; 12 ; >
       au < frozen ; exists ; 2013 ; Networks: An Online Journal for Teacher Research Volume 13 ; 13 ; >
       au < frozen ; exists ; 2013 ; Networks: An Online Journal for Teacher Research Volume 14 ; 14 ; >
       au < frozen ; exists ; 2014 ; Networks: An Online Journal for Teacher Research Volume 15 ; 15 ; >
@@ -865,7 +865,7 @@
       param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = seek
 
-      au < crawling ; exists ; 2011 ; Seek Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2011 ; Seek Volume 1 ; 1 ; >
       au < frozen ; exists ; 2012 ; Seek Volume 2 ; 2 ; >
       au < frozen ; exists ; 2013 ; Seek Volume 3 ; 3 ; >
       au < frozen ; exists ; 2014 ; Seek Volume 4 ; 4 ; >
