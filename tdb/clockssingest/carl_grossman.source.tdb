@@ -13,7 +13,7 @@
       name = Carl Grossman Books Source Content
     >
     
-    plugin = needs.plugin
+    plugin = needs.SourcePlugin
     #plugin = org.lockss.plugin.clockss.carlgrossman.ClockssCarlGrossmanBooksSourcePlugin
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/carlgrossmann-released/
     hidden[proxy] = DIRECT
