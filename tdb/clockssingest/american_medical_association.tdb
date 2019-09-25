@@ -24,7 +24,7 @@
     param[resource_id] = 184
     param[journal_id] = jamacardiology
     
-    au < finished ; crawling ; 2016 ; JAMA Cardiology Volume 1 ; 2016 ; http://jamanetwork.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; JAMA Cardiology Volume 1 ; 2016 ; http://jamanetwork.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; JAMA Cardiology Volume 2 ; 2017 ; http://jamanetwork.com/ ; >
     au < deepCrawl ; exists ; 2018 ; JAMA Cardiology Volume 3 ; 2018 ; https://jamanetwork.com/ ; >
     au < manifest ; exists ; 2019 ; JAMA Cardiology Volume 4 ; 2019 ; https://jamanetwork.com/ ; >

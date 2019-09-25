@@ -65,7 +65,7 @@
     au < finished ; finished ; 2013 ; Vascular Health and Risk Management Volume 9 ; 9 ; 2013 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Vascular Health and Risk Management Volume 10 ; 10 ; 2014 ; >
     au < finished ; finished ; 2015 ; Vascular Health and Risk Management Volume 11 ; 11 ; 2015 ; >
-    au < finished ; crawling ; 2016 ; Vascular Health and Risk Management Volume 12 ; 12 ; 2016 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Vascular Health and Risk Management Volume 12 ; 12 ; 2016 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Vascular Health and Risk Management Volume 13 ; 13 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Vascular Health and Risk Management Volume 14 ; 14 ; 2018 ; >
     au < manifest ; exists ; 2019 ; Vascular Health and Risk Management Volume 15 ; 15 ; 2019 ; >
@@ -500,7 +500,7 @@
     
     param[journal_id] = 30
 
-    au < finished ; crawling ; 2008 ; Journal of Receptor, Ligand and Channel Research Volume 1 ; 1 ; 2008 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2008 ; Journal of Receptor, Ligand and Channel Research Volume 1 ; 1 ; 2008 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2009 ; Journal of Receptor, Ligand and Channel Research Volume 2 ; 2 ; 2009 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2010 ; Journal of Receptor, Ligand and Channel Research Volume 3 ; 3 ; 2010 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2011 ; Journal of Receptor, Ligand and Channel Research Volume 4 ; 4 ; 2011 ; reingest1.clockss.org:8082 >
@@ -1186,7 +1186,7 @@
     au < finished ; finished ; 2013 ; Open Access Rheumatology: Research and Reviews Volume 5 ; 5 ; 2013 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Open Access Rheumatology: Research and Reviews Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Open Access Rheumatology: Research and Reviews Volume 7 ; 7 ; 2015 ; >
-    au < finished ; crawling ; 2016 ; Open Access Rheumatology: Research and Reviews Volume 8 ; 8 ; 2016 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Open Access Rheumatology: Research and Reviews Volume 8 ; 8 ; 2016 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Open Access Rheumatology: Research and Reviews Volume 9 ; 9 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Open Access Rheumatology: Research and Reviews Volume 10 ; 10 ; 2018 ; >
     au < manifest ; exists ; 2019 ; Open Access Rheumatology: Research and Reviews Volume 11 ; 11 ; 2019 ; >
@@ -1559,7 +1559,7 @@
     #ceased publishing in May 2016
 
     au < finished ; crawling ; 2009 ; Open Access Bioinformatics Volume 1 ; 1 ; 2009 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2010 ; Open Access Bioinformatics Volume 2 ; 2 ; 2010 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2010 ; Open Access Bioinformatics Volume 2 ; 2 ; 2010 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2011 ; Open Access Bioinformatics Volume 3 ; 3 ; 2011 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2012 ; Open Access Bioinformatics Volume 4 ; 4 ; 2012 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2013 ; Open Access Bioinformatics Volume 5 ; 5 ; 2013 ; reingest2.clockss.org:8085 >
@@ -1740,7 +1740,7 @@
     au < finished ; finished ; 2013 ; Adolescent Health, Medicine and Therapeutics Volume 4 ; 4 ; 2013 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Adolescent Health, Medicine and Therapeutics Volume 5 ; 5 ; 2014 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Adolescent Health, Medicine and Therapeutics Volume 6 ; 6 ; 2015 ; >
-    au < finished ; crawling ; 2016 ; Adolescent Health, Medicine and Therapeutics Volume 7 ; 7 ; 2016 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2016 ; Adolescent Health, Medicine and Therapeutics Volume 7 ; 7 ; 2016 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; Adolescent Health, Medicine and Therapeutics Volume 8 ; 8 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Adolescent Health, Medicine and Therapeutics Volume 9 ; 9 ; 2018 ; >
     au < manifest ; exists ; 2019 ; Adolescent Health, Medicine and Therapeutics Volume 10 ; 10 ; 2019 ; >
@@ -2335,7 +2335,7 @@
     param[journal_id] = 118
     #ceased publishing in December 2016
 
-    au < finished ; crawling ; 2011 ; Research and Reports in Biochemistry Volume 1 ; 1 ; 2011 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2011 ; Research and Reports in Biochemistry Volume 1 ; 1 ; 2011 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2012 ; Research and Reports in Biochemistry Volume 2 ; 2 ; 2012 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2013 ; Research and Reports in Biochemistry Volume 3 ; 3 ; 2013 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Research and Reports in Biochemistry Volume 4 ; 4 ; 2014 ; >
@@ -2587,7 +2587,7 @@
     param[journal_id] = 138
 
     au < finished ; finished ; 2012 ; ImmunoTargets and Therapy Volume 1 ; 1 ; 2012 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2013 ; ImmunoTargets and Therapy Volume 2 ; 2 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; ImmunoTargets and Therapy Volume 2 ; 2 ; 2013 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; ImmunoTargets and Therapy Volume 3 ; 3 ; 2014 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; ImmunoTargets and Therapy Volume 4 ; 4 ; 2015 ; >
     au < finished ; crawling ; 2016 ; ImmunoTargets and Therapy Volume 5 ; 5 ; 2016 ; reingest1.clockss.org:8082 >
@@ -2794,7 +2794,7 @@
 
     au < finished ; finished ; 2014 ; Metalloproteinases In Medicine Volume 1 ; 1 ; 2014 ; >
     au < finished ; finished ; 2015 ; Metalloproteinases In Medicine Volume 2 ; 2 ; 2015 ; >
-    au < finished ; crawling ; 2016 ; Metalloproteinases In Medicine Volume 3 ; 3 ; 2016 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2016 ; Metalloproteinases In Medicine Volume 3 ; 3 ; 2016 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; Metalloproteinases In Medicine Volume 4 ; 4 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Metalloproteinases In Medicine Volume 5 ; 5 ; 2018 ; >
     au < manifest ; exists ; 2019 ; Metalloproteinases In Medicine Volume 6 ; 6 ; 2019 ; >
@@ -2832,7 +2832,7 @@
     au < finished ; finished ; 2013 ; Journal of Vascular Diagnostics and Interventions Volume 1 ; 1 ; 2013 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Journal of Vascular Diagnostics and Interventions Volume 2 ; 2 ; 2014 ; >
     au < finished ; finished ; 2015 ; Journal of Vascular Diagnostics and Interventions Volume 3 ; 3 ; 2015 ; >
-    au < finished ; crawling ; 2016 ; Journal of Vascular Diagnostics and Interventions Volume 4 ; 4 ; 2016 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2016 ; Journal of Vascular Diagnostics and Interventions Volume 4 ; 4 ; 2016 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; Journal of Vascular Diagnostics and Interventions Volume 5 ; 5 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Journal of Vascular Diagnostics and Interventions Volume 6 ; 6 ; 2018 ; >
     au < manifest ; exists ; 2019 ; Journal of Vascular Diagnostics and Interventions Volume 7 ; 7 ; 2019 ; >
@@ -2850,7 +2850,7 @@
 
     au < finished ; finished ; 2014 ; Chronic Wound Care Management and Research Volume 1 ; 1 ; 2014 ; >
     au < finished ; finished ; 2015 ; Chronic Wound Care Management and Research Volume 2 ; 2 ; 2015 ; >
-    au < finished ; crawling ; 2016 ; Chronic Wound Care Management and Research Volume 3 ; 3 ; 2016 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Chronic Wound Care Management and Research Volume 3 ; 3 ; 2016 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Chronic Wound Care Management and Research Volume 4 ; 4 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Chronic Wound Care Management and Research Volume 5 ; 5 ; 2018 ; >
     au < manifest ; exists ; 2019 ; Chronic Wound Care Management and Research Volume 6 ; 6 ; 2019 ; >
@@ -2886,7 +2886,7 @@
 
     au < finished ; finished ; 2014 ; Ambulatory Anesthesia Volume 1 ; 1 ; 2014 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Ambulatory Anesthesia Volume 2 ; 2 ; 2015 ; >
-    au < finished ; crawling ; 2016 ; Ambulatory Anesthesia Volume 3 ; 3 ; 2016 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Ambulatory Anesthesia Volume 3 ; 3 ; 2016 ; reingest1.clockss.org:8082 >
    
   }
 
@@ -2918,7 +2918,7 @@
     param[journal_id] = 157
 
     au < finished ; finished ; 2015 ; Advanced Health Care Technologies Volume 1 ; 1 ; 2015 ; >
-    au < finished ; crawling ; 2016 ; Advanced Health Care Technologies Volume 2 ; 2 ; 2016 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2016 ; Advanced Health Care Technologies Volume 2 ; 2 ; 2016 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; Advanced Health Care Technologies Volume 3 ; 3 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Advanced Health Care Technologies Volume 4 ; 4 ; 2018 ; >
     au < manifest ; exists ; 2019 ; Advanced Health Care Technologies Volume 5 ; 5 ; 2019 ; >
