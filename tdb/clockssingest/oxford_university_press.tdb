@@ -1309,7 +1309,7 @@
 
     au < finished ; crawling ; 2017 ; 2017 ; Annals of Work Exposures and Health Volume 61 ; 61 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2018 ; 2018 ; Annals of Work Exposures and Health Volume 62 ; 62 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Annals of Work Exposures and Health Volume 63 ; 63 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Annals of Work Exposures and Health Volume 63 ; 63 ; >
 
   }
 
@@ -1353,7 +1353,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Annals of the Entomological Society of America Volume 109 ; 109 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Annals of the Entomological Society of America Volume 110 ; 110 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Annals of the Entomological Society of America Volume 111 ; 111 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Annals of the Entomological Society of America Volume 112 ; 112 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Annals of the Entomological Society of America Volume 112 ; 112 ; >
 
   }
 
@@ -1556,7 +1556,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Arbitration International Volume 32 ; 32 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Arbitration International Volume 33 ; 33 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Arbitration International Volume 34 ; 34 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Arbitration International Volume 35 ; 35 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Arbitration International Volume 35 ; 35 ; >
 
   }
 
@@ -1786,7 +1786,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; The Auk: Ornithological Advances Volume 131 ; 131 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The Auk: Ornithological Advances Volume 132 ; 132 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; The Auk: Ornithological Advances Volume 133 ; 133 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; The Auk: Ornithological Advances Volume 134 ; 134 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; The Auk: Ornithological Advances Volume 134 ; 134 ; >
 
   }
 
@@ -3014,7 +3014,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Capital Markets Law Journal Volume 11 ; 11 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Capital Markets Law Journal Volume 12 ; 12 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Capital Markets Law Journal Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Capital Markets Law Journal Volume 14 ; 14 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Capital Markets Law Journal Volume 14 ; 14 ; >
 
   }
 
@@ -3485,7 +3485,7 @@
     param[journal_id] = ct
 
     au < deepCrawl ; exists ; 2018 ; 2018 ; Communication Theory Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Communication Theory Volume 2 ; 2 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Communication Theory Volume 2 ; 2 ; >
 
   }
 
@@ -4158,7 +4158,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; ELT Journal Volume 70 ; 70 ; >
     au < frozen ; exists ; 2017 ; 2017 ; ELT Journal Volume 71 ; 71 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; ELT Journal Volume 72 ; 72 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; ELT Journal Volume 73 ; 73 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; ELT Journal Volume 73 ; 73 ; >
 
   }
 
@@ -4313,7 +4313,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; The Econometrics Journal Volume 19 ; 19 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The Econometrics Journal Volume 20 ; 20 ; >
     au < frozen ; exists ; 2018 ; 2018 ; The Econometrics Journal Volume 21 ; 21 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; The Econometrics Journal Volume 22 ; 22 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; The Econometrics Journal Volume 22 ; 22 ; >
 
   }
 
@@ -6428,7 +6428,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; German History Volume 34 ; 34 ; >
     au < frozen ; exists ; 2017 ; 2017 ; German History Volume 35 ; 35 ; >
     au < frozen ; exists ; 2018 ; 2018 ; German History Volume 36 ; 36 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; German History Volume 37 ; 37 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; German History Volume 37 ; 37 ; >
 
   }
 
@@ -7277,7 +7277,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; IMA Journal of Applied Mathematics Volume 81 ; 81 ; >
     au < finished ; crawling ; 2017 ; 2017 ; IMA Journal of Applied Mathematics Volume 82 ; 82 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; IMA Journal of Applied Mathematics Volume 83 ; 83 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; IMA Journal of Applied Mathematics Volume 84 ; 84 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; IMA Journal of Applied Mathematics Volume 84 ; 84 ; >
 
   }
 
@@ -7446,7 +7446,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; ISLE: Interdisciplinary Studies in Literature and Environment Volume 23 ; 23 ; >
     au < frozen ; exists ; 2017 ; 2017 ; ISLE: Interdisciplinary Studies in Literature and Environment Volume 24 ; 24 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; ISLE: Interdisciplinary Studies in Literature and Environment Volume 25 ; 25 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; ISLE: Interdisciplinary Studies in Literature and Environment Volume 26 ; 26 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; ISLE: Interdisciplinary Studies in Literature and Environment Volume 26 ; 26 ; >
 
   }
 
@@ -7959,7 +7959,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; International Journal for Quality in Health Care Volume 28 ; 28 ; >
     au < frozen ; exists ; 2017 ; 2017 ; International Journal for Quality in Health Care Volume 29 ; 29 ; >
     au < frozen ; exists ; 2018 ; 2018 ; International Journal for Quality in Health Care Volume 30 ; 30 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; International Journal for Quality in Health Care Volume 31 ; 31 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; International Journal for Quality in Health Care Volume 31 ; 31 ; >
 
   }
 
@@ -10231,7 +10231,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Journal of Integrated Pest Management Volume 7 ; 7 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Journal of Integrated Pest Management Volume 8 ; 8 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Integrated Pest Management Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Journal of Integrated Pest Management Volume 10 ; 10 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Integrated Pest Management Volume 10 ; 10 ; >
 
   }
 
@@ -10567,7 +10567,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Journal of Medical Entomology Volume 53 ; 53 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Journal of Medical Entomology Volume 54 ; 54 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Medical Entomology Volume 55 ; 55 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Journal of Medical Entomology Volume 56 ; 56 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Medical Entomology Volume 56 ; 56 ; >
 
   }
 
@@ -11608,7 +11608,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Journal of Urban Ecology Volume 2 ; 2 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Journal of Urban Ecology Volume 3 ; 3 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Urban Ecology Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Journal of Urban Ecology Volume 5 ; 5 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Urban Ecology Volume 5 ; 5 ; >
 
   }
 
@@ -12403,7 +12403,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; MHR: Basic science of reproductive medicine Volume 22 ; 22 ; >
     au < frozen ; exists ; 2017 ; 2017 ; MHR: Basic science of reproductive medicine Volume 23 ; 23 ; >
     au < finished ; manifest ; 2018 ; 2018 ; MHR: Basic science of reproductive medicine Volume 24 ; 24 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2019 ; 2019 ; MHR: Basic science of reproductive medicine Volume 25 ; 25 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; MHR: Basic science of reproductive medicine Volume 25 ; 25 ; >
 
   }
 
@@ -14702,7 +14702,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Pathogens and Disease Volume 74 ; 74 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Pathogens and Disease Volume 75 ; 75 ; >
     au < finished ; manifest ; 2018 ; 2018 ; Pathogens and Disease Volume 76 ; 76 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2019 ; 2019 ; Pathogens and Disease Volume 77 ; 77 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Pathogens and Disease Volume 77 ; 77 ; >
 
   }
 
