@@ -345,6 +345,8 @@ implements SourceXmlSchemaHelper {
   private static String JATS_lpage = JATS_ameta + "/lpage";
   // used by WARC in post-commit
   public static String JATS_self_uri = JATS_ameta + "/self-uri";
+  // related article pdf xpath
+  public static String JATS_article_related_pdf = JATS_ameta + "/related-article[@related-article-type=\"pdf\"]";
   
   public static String JATS_copydate = JATS_ameta + "/permissions/copyright-year";
   // The date could be identified by new or by older tag attributes
@@ -386,6 +388,7 @@ implements SourceXmlSchemaHelper {
     JATS_articleMap.put(JATS_fpage, XmlDomMetadataExtractor.TEXT_VALUE);
     JATS_articleMap.put(JATS_lpage, XmlDomMetadataExtractor.TEXT_VALUE);
     JATS_articleMap.put(JATS_self_uri, XmlDomMetadataExtractor.TEXT_VALUE);
+    JATS_articleMap.put(JATS_article_related_pdf, XmlDomMetadataExtractor.TEXT_VALUE);
     JATS_articleMap.put(JATS_date, JATS_DATE_VALUE);
     JATS_articleMap.put(JATS_edate, JATS_DATE_VALUE);
     JATS_articleMap.put(JATS_copydate, XmlDomMetadataExtractor.TEXT_VALUE); 
