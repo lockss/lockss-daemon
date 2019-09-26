@@ -23,18 +23,34 @@ public class InnovativeMedicalResearchJatsSourceZipXmlArticleIteratorFactory imp
     //http://content5.lockss.org/sourcefiles/imrpress-released/2019/JMCM2018-Volume%201%20Issue%202.zip!/JMCM2018-Volume 1 Issue 2/2617-5282-2018-2/1545826577946-771105881.pdf
     //Their folder name combines uppercase and lowercase
     protected static final String ALL_ZIP_XML_PATTERN_TEMPLATE =
-            "\"%s%s/.*\\.zip!/([^/]+)/([^/]+)/([^/]+)$\", base_url, directory";
+            "\"%s%s/[^/]+\\.zip!/[^/]+/[^/]+/[^/]+$\", base_url, directory";
 
     // Be sure to exclude all nested archives in case supplemental data is provided this way
     protected static final Pattern SUB_NESTED_ARCHIVE_PATTERN =
             Pattern.compile(".*/[^/]+\\.zip!/.+\\.(zip|tar|gz|tgz|tar\\.gz)$",
                     Pattern.CASE_INSENSITIVE);
+    /*
+    This is the matching group for the following pattern
+    0	/JMCM2018-Volume%201%20Issue%202.zip!/JMCM2018-Volume 1 Issue 2/2617-5282-2018-2/1545826577946-771105881.pdf
+    1	JMCM2018-Volume 1 Issue 2
+    2	2617-5282-2018-2
+    3	1545826577946-771105881.pdf
+    4
+    5	1545826577946-771105881.pdf
 
-    protected static final String COMMON_PATTERN_STRING = "/([^/]+)/([^/]+)/((\\d+-\\d+\\.pdf)|(\\d+\\-\\d+\\-[\\d\\-]+))\\.(?:xml|pdf)$";
+    0	/JMCM2018-Volume%201%20Issue%202.zip!/JMCM2018-Volume 1 Issue 2/2617-5282-2018-2/1545826577946-771105881.pdf
+    1	JMCM2018-Volume 1 Issue 2
+    2	2617-5282-2018-2
+    3	2617-5282-1-2-107.xml
+    4	2617-5282-1-2-107.xml
+    5
+     */
+
+    protected static final String COMMON_PATTERN_STRING = "/([^/]+)/([^/]+)/((\\d+\\-\\d+\\-\\d+\\-[\\d\\-]+\\.xml)|(\\d+\\-\\d+\\.pdf))";
     protected static final Pattern COMMON_PATTERN = Pattern.compile(COMMON_PATTERN_STRING);
 
-    protected static final String PDF_REPLACEMENT = "/$1/$2/$3.pdf";
-    protected static final String XML_REPLACEMENT = "/$1/$2/$3.xml";
+    protected static final String PDF_REPLACEMENT = "/$1/$2/$5";
+    protected static final String XML_REPLACEMENT = "/$1/$2/$4";
 
 
     @Override
@@ -49,14 +65,13 @@ public class InnovativeMedicalResearchJatsSourceZipXmlArticleIteratorFactory imp
                 .setExcludeSubTreePattern(getExcludeSubTreePattern())
                 .setVisitArchiveMembers(getIsArchive()));
 
+        builder.addAspect(COMMON_PATTERN_STRING,
+                XML_REPLACEMENT,
+                ArticleFiles.ROLE_ARTICLE_METADATA);
 
         builder.addAspect(COMMON_PATTERN,
                 PDF_REPLACEMENT,
                 ArticleFiles.ROLE_FULL_TEXT_PDF);
-
-        builder.addAspect(COMMON_PATTERN,
-                XML_REPLACEMENT,
-                ArticleFiles.ROLE_ARTICLE_METADATA);
 
         builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF);
 
