@@ -217,7 +217,7 @@
     param[journal_issn] = 2637-7888
     #continues = 1943-0744
 
-    au < ready ; exists ; 2018 ; International Journal of Distributed Artificial Intelligence (IJDAI) Volume 10 ; 10 ; https://www.igi-global.com/ ; >
+    au < crawling ; exists ; 2018 ; International Journal of Distributed Artificial Intelligence (IJDAI) Volume 10 ; 10 ; https://www.igi-global.com/ ; >
     au < expected ; exists ; 2019 ; International Journal of Distributed Artificial Intelligence (IJDAI) Volume 11 ; 11 ; https://www.igi-global.com/ ; >
 
   }
@@ -3032,7 +3032,7 @@
     au < frozen ; exists ; 2016 ; International Journal of Synthetic Emotions (IJSE) Volume 7 ; 7 ; http://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2017 ; International Journal of Synthetic Emotions (IJSE) Volume 8 ; 8 ; http://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2018 ; International Journal of Synthetic Emotions (IJSE) Volume 9 ; 9 ; https://www.igi-global.com/ ; > 
-    au < ready ; exists ; 2019 ; International Journal of Synthetic Emotions (IJSE) Volume 10 ; 10 ; https://www.igi-global.com/ ; >
+    au < crawling ; exists ; 2019 ; International Journal of Synthetic Emotions (IJSE) Volume 10 ; 10 ; https://www.igi-global.com/ ; >
 
   }
 
