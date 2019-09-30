@@ -1953,7 +1953,7 @@
       au < finished ; crawling ; 2016 ; International Journal of Computational Economics and Econometrics Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; International Journal of Computational Economics and Econometrics Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2018 ; International Journal of Computational Economics and Econometrics Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2019 ; International Journal of Computational Economics and Econometrics Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
+      au < deepCrawl ; exists ; 2019 ; International Journal of Computational Economics and Econometrics Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -8933,7 +8933,7 @@
       au < finished ; crawling ; 2018 ; International Journal of Technology Management Volume 77 ; 77 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2018 ; International Journal of Technology Management Volume 78 ; 78 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2019 ; International Journal of Technology Management Volume 79 ; 79 ; https://www.inderscienceonline.com/ ; >
-      au < crawling ; exists ; 2019 ; International Journal of Technology Management Volume 80 ; 80 ; https://www.inderscienceonline.com/ ; >
+      au < deepCrawl ; exists ; 2019 ; International Journal of Technology Management Volume 80 ; 80 ; https://www.inderscienceonline.com/ ; >
       au < deepCrawl ; exists ; 2019 ; International Journal of Technology Management Volume 81 ; 81 ; https://www.inderscienceonline.com/ ; >
 
       }
