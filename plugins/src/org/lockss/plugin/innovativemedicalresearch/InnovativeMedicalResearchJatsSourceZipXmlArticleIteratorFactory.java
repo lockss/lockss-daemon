@@ -1,18 +1,39 @@
 package org.lockss.plugin.innovativemedicalresearch;
 
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.FilenameUtils;
+import org.htmlparser.Node;
+import org.htmlparser.NodeFilter;
+import org.htmlparser.Parser;
+import org.htmlparser.lexer.InputStreamSource;
+import org.htmlparser.lexer.Lexer;
+import org.htmlparser.lexer.Page;
+import org.htmlparser.lexer.Stream;
+import org.htmlparser.tags.MetaTag;
+import org.htmlparser.util.NodeList;
+import org.htmlparser.util.ParserException;
 import org.lockss.daemon.PluginException;
-import org.lockss.extractor.ArticleMetadataExtractor;
-import org.lockss.extractor.ArticleMetadataExtractorFactory;
-import org.lockss.extractor.BaseArticleMetadataExtractor;
-import org.lockss.extractor.MetadataTarget;
-import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.ArticleFiles;
-import org.lockss.plugin.ArticleIteratorFactory;
-import org.lockss.plugin.SubTreeArticleIteratorBuilder;
+import org.lockss.extractor.*;
+import org.lockss.plugin.*;
 import org.lockss.plugin.clockss.JatsPublishingSchemaHelper;
+import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
+import org.lockss.plugin.clockss.XPathXmlMetadataParser;
+import org.lockss.util.Constants;
 import org.lockss.util.Logger;
+import org.w3c.dom.Document;
+import org.xml.sax.SAXException;
 
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.xpath.*;
+import java.io.File;
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.util.Collection;
 import java.util.Iterator;
+import java.util.List;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class InnovativeMedicalResearchJatsSourceZipXmlArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
@@ -29,53 +50,72 @@ public class InnovativeMedicalResearchJatsSourceZipXmlArticleIteratorFactory imp
     protected static final Pattern SUB_NESTED_ARCHIVE_PATTERN =
             Pattern.compile(".*/[^/]+\\.zip!/.+\\.(zip|tar|gz|tgz|tar\\.gz)$",
                     Pattern.CASE_INSENSITIVE);
-    /*
-    This is the matching group for the following pattern
-    0	/JMCM2018-Volume%201%20Issue%202.zip!/JMCM2018-Volume 1 Issue 2/2617-5282-2018-2/1545826577946-771105881.pdf
-    1	JMCM2018-Volume 1 Issue 2
-    2	2617-5282-2018-2
-    3	1545826577946-771105881.pdf
-    4
-    5	1545826577946-771105881.pdf
 
-    0	/JMCM2018-Volume%201%20Issue%202.zip!/JMCM2018-Volume 1 Issue 2/2617-5282-2018-2/1545826577946-771105881.pdf
-    1	JMCM2018-Volume 1 Issue 2
-    2	2617-5282-2018-2
-    3	2617-5282-1-2-107.xml
-    4	2617-5282-1-2-107.xml
-    5
-     */
 
-    protected static final String COMMON_PATTERN_STRING = "/([^/]+)/([^/]+)/((\\d+\\-\\d+\\-\\d+\\-[\\d\\-]+\\.xml)|(\\d+\\-\\d+\\.pdf))";
-    protected static final Pattern COMMON_PATTERN = Pattern.compile(COMMON_PATTERN_STRING);
+    protected static final String ROOT_TEMPLATE_STRING =  "\"%s%s\", base_url, directory";
+    protected static final Pattern ROOT_TEMPLATE = Pattern.compile(ROOT_TEMPLATE_STRING);
 
-    protected static final String PDF_REPLACEMENT = "/$1/$2/$5";
-    protected static final String XML_REPLACEMENT = "/$1/$2/$4";
+    protected static final String PATTERN_TEMPLATE_STRING =  "\"%s%s/[^/]+\\.zip!/.+\\.xml\", base_url, directory";
+    protected static final Pattern PATTERN_TEMPLATE = Pattern.compile(PATTERN_TEMPLATE_STRING);
+
+    protected static final String XML_PATTERN_STRING = "/([^/]+\\.xml)";
+    protected static final Pattern XML_PATTERN = Pattern.compile(XML_PATTERN_STRING);
 
 
     @Override
-    public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
-                                                        MetadataTarget target)
-            throws PluginException {
-        SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
+    public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, final MetadataTarget target) throws PluginException {
+        return new SubTreeArticleIterator(au,
+                new SubTreeArticleIterator.Spec()
+                        .setTarget(target)
+                        .setRootTemplate(ROOT_TEMPLATE_STRING)
+                        .setPatternTemplate(PATTERN_TEMPLATE_STRING)
+                        .setVisitArchiveMembers(true)) {
 
-        builder.setSpec(builder.newSpec()
-                .setTarget(target)
-                .setPatternTemplate(getIncludePatternTemplate())
-                .setExcludeSubTreePattern(getExcludeSubTreePattern())
-                .setVisitArchiveMembers(getIsArchive()));
+            @Override
+            protected ArticleFiles createArticleFiles(CachedUrl cu) {
+                String url = cu.getUrl();
+                ArticleFiles af = new ArticleFiles();
 
-        builder.addAspect(COMMON_PATTERN_STRING,
-                XML_REPLACEMENT,
-                ArticleFiles.ROLE_ARTICLE_METADATA);
+                Matcher xmlMatch = XML_PATTERN.matcher(url);
+                if (xmlMatch.find()) {
+                    CachedUrl xmlCu = au.makeCachedUrl(url.toString());
+                    af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, xmlCu);
 
-        builder.addAspect(COMMON_PATTERN,
-                PDF_REPLACEMENT,
-                ArticleFiles.ROLE_FULL_TEXT_PDF);
+                    // .xml and .pdf are one-to-one relationship.
+                    // Extract pdf from .xml "related-article" xpath and build PDF aspect manually
+                    XPathXmlMetadataParser xmlParser = new XPathXmlMetadataParser();
+                    try {
+                        SourceXmlSchemaHelper schemaHelper = new JatsPublishingSchemaHelper();
 
-        builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF);
+                        xmlParser.setXmlParsingSchema(schemaHelper.getGlobalMetaMap(),
+                                schemaHelper.getArticleNode(),
+                                schemaHelper.getArticleMetaMap());
 
-        return builder.getSubTreeArticleIterator();
+                        List<ArticleMetadata> amList = xmlParser.extractMetadataFromCu(target, cu);
+
+                        if (amList != null) {
+                            for (ArticleMetadata oneAM : amList) {
+                                String filenameValue = oneAM.getRaw(JatsPublishingSchemaHelper.JATS_article_related_pdf);
+                                if (filenameValue != null) {
+                                    String cuBase = FilenameUtils.getFullPath(url);
+                                    String pdfPath = cuBase + filenameValue;
+                                    CachedUrl pdfCu = au.makeCachedUrl(pdfPath);
+                                    af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
+                                    af.setFullTextCu(pdfCu);
+                                }
+                            }
+                        }
+                    }  catch (SAXException e) {
+                        e.printStackTrace();
+                    } catch (XPathExpressionException e) {
+                        e.printStackTrace();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+                return af;
+            }
+        };
     }
 
     protected Pattern getExcludeSubTreePattern() {

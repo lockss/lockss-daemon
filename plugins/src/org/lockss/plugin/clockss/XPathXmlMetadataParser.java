@@ -557,7 +557,12 @@ public class XPathXmlMetadataParser  {
     try {
       InputSource iSource = makeInputSource(cu);
       doc = builder.parse(iSource);
-      return doc;
+      if (doc != null) {
+        return doc;
+      } else {
+        log.debug("Can not parse Cu for url " + cu.getUrl());
+        return null;
+      }
     }
     catch (SAXException se) {
       log.debug("SAXException while parsing XML file: " + cu.getUrl(), se);
