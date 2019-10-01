@@ -718,7 +718,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; American Journal of Epidemiology Volume 183-184 ; 183-184 ; >
     au < frozen ; exists ; 2017 ; 2017 ; American Journal of Epidemiology Volume 185-186 ; 185-186 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; American Journal of Epidemiology Volume 187-188 ; 187-188 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; American Journal of Epidemiology Volume 189-190 ; 189-190 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; American Journal of Epidemiology Volume 189-190 ; 189-190 ; >
 
   }
 
@@ -764,7 +764,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; American Journal of Health-System Pharmacy Volume 73 ; 73 ; >
     au < frozen ; exists ; 2017 ; 2017 ; American Journal of Health-System Pharmacy Volume 74 ; 74 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; American Journal of Health-System Pharmacy Volume 75 ; 75 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; American Journal of Health-System Pharmacy Volume 76 ; 76 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; American Journal of Health-System Pharmacy Volume 76 ; 76 ; >
 
   }
 
@@ -1026,7 +1026,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Analysis Volume 76 ; 76 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Analysis Volume 77 ; 77 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Analysis Volume 78 ; 78 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Analysis Volume 79 ; 79 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Analysis Volume 79 ; 79 ; >
 
   }
 
@@ -2463,7 +2463,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Botanical Journal of the Linnean Society Volume 180-182 ; 180-182 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Botanical Journal of the Linnean Society Volume 183-185 ; 183-185 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Botanical Journal of the Linnean Society Volume 186-188 ; 186-188 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Botanical Journal of the Linnean Society Volume 189-191 ; 189-191 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Botanical Journal of the Linnean Society Volume 189-191 ; 189-191 ; >
 
   }
 
@@ -3068,7 +3068,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Carcinogenesis Volume 37 ; 37 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Carcinogenesis Volume 38 ; 38 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Carcinogenesis Volume 39 ; 39 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Carcinogenesis Volume 40 ; 40 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Carcinogenesis Volume 40 ; 40 ; >
 
   }
 
@@ -3443,7 +3443,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Clinical Infectious Diseases Volume 62-63 ; 62-63 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Clinical Infectious Diseases Volume 64-65 ; 64-65 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Clinical Infectious Diseases Volume 66-67 ; 66-67 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Clinical Infectious Diseases Volume 68-69 ; 68-69 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Clinical Infectious Diseases Volume 68-69 ; 68-69 ; >
 
   }
 
@@ -5674,7 +5674,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Family Practice Volume 33 ; 33 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Family Practice Volume 34 ; 34 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Family Practice Volume 35 ; 35 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Family Practice Volume 36 ; 36 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Family Practice Volume 36 ; 36 ; >
 
   }
 
@@ -5851,7 +5851,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Forest Science Volume 62 ; 62 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Forest Science Volume 63 ; 63 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Forest Science Volume 64 ; 64 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Forest Science Volume 65 ; 65 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Forest Science Volume 65 ; 65 ; >
 
   }
 
@@ -6332,7 +6332,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Geophysical Journal International Volume 204-207 ; 204-207 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Geophysical Journal International Volume 208-211 ; 208-211 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Geophysical Journal International Volume 212-215 ; 212-215 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Geophysical Journal International Volume 216-219 ; 216-219 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Geophysical Journal International Volume 216-219 ; 216-219 ; >
 
   }
 
@@ -6511,7 +6511,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Glycobiology Volume 26 ; 26 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Glycobiology Volume 27 ; 27 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Glycobiology Volume 28 ; 28 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Glycobiology Volume 29 ; 29 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Glycobiology Volume 29 ; 29 ; >
 
   }
 
@@ -7389,7 +7389,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; IMA Journal of Numerical Analysis Volume 36 ; 36 ; >
     au < finished ; crawling ; 2017 ; 2017 ; IMA Journal of Numerical Analysis Volume 37 ; 37 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; IMA Journal of Numerical Analysis Volume 38 ; 38 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; IMA Journal of Numerical Analysis Volume 39 ; 39 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; IMA Journal of Numerical Analysis Volume 39 ; 39 ; >
 
   }
 
@@ -7715,7 +7715,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Integrative and Comparative Biology Volume 56 ; 56 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Integrative and Comparative Biology Volume 57 ; 57 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Integrative and Comparative Biology Volume 58 ; 58 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Integrative and Comparative Biology Volume 59 ; 59 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Integrative and Comparative Biology Volume 59 ; 59 ; >
 
   }
 
@@ -8801,7 +8801,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Journal of African Economies Volume 25 ; 25 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Journal of African Economies Volume 26 ; 26 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of African Economies Volume 27 ; 27 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Journal of African Economies Volume 28 ; 28 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of African Economies Volume 28 ; 28 ; >
 
   }
 
@@ -9182,7 +9182,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Journal of Chromatographic Science Volume 54 ; 54 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Journal of Chromatographic Science Volume 55 ; 55 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Chromatographic Science Volume 56 ; 56 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Journal of Chromatographic Science Volume 57 ; 57 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Chromatographic Science Volume 57 ; 57 ; >
 
   }
 
@@ -9273,7 +9273,7 @@
     param[journal_id] = joc
 
     au < deepCrawl ; exists ; 2018 ; 2018 ; Journal of Communication Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Journal of Communication Volume 2 ; 2 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Communication Volume 2 ; 2 ; >
 
   }
 
@@ -9323,7 +9323,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Journal of Complex Networks Volume 4 ; 4 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Journal of Complex Networks Volume 5 ; 5 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Complex Networks Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Journal of Complex Networks Volume 7 ; 7 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Complex Networks Volume 7 ; 7 ; >
 
   }
 
@@ -9609,7 +9609,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Journal of Economic Entomology Volume 109 ; 109 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Journal of Economic Entomology Volume 110 ; 110 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Economic Entomology Volume 111 ; 111 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Journal of Economic Entomology Volume 112 ; 112 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Economic Entomology Volume 112 ; 112 ; >
 
   }
 
@@ -11079,7 +11079,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Journal of Professions and Organization Volume 3 ; 3 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Journal of Professions and Organization Volume 4 ; 4 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Professions and Organization Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Journal of Professions and Organization Volume 6 ; 6 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Professions and Organization Volume 6 ; 6 ; >
 
   }
 
@@ -13060,7 +13060,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 456-463 ; 456-463 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 464-472 ; 464-472 ; >
     au < finished ; manifest ; 2018 ; 2018 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 473-481 ; 473-481 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2019 ; 2019 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 482-490 ; 482-490 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 482-490 ; 482-490 ; >
 
   }
 
@@ -14575,7 +14575,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Parliamentary Affairs Volume 69 ; 69 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Parliamentary Affairs Volume 70 ; 70 ; >
     au < finished ; manifest ; 2018 ; 2018 ; Parliamentary Affairs Volume 71 ; 71 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2019 ; 2019 ; Parliamentary Affairs Volume 72 ; 72 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Parliamentary Affairs Volume 72 ; 72 ; >
 
   }
 
@@ -15615,7 +15615,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Publius: The Journal of Federalism Volume 46 ; 46 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Publius: The Journal of Federalism Volume 47 ; 47 ; >
     au < finished ; manifest ; 2018 ; 2018 ; Publius: The Journal of Federalism Volume 48 ; 48 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2019 ; 2019 ; Publius: The Journal of Federalism Volume 49 ; 49 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Publius: The Journal of Federalism Volume 49 ; 49 ; >
 
   }
 
@@ -15842,7 +15842,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Regenerative Biomaterials Volume 3 ; 3 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Regenerative Biomaterials Volume 4 ; 4 ; >
     au < finished ; manifest ; 2018 ; 2018 ; Regenerative Biomaterials Volume 5 ; 5 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2019 ; 2019 ; Regenerative Biomaterials Volume 6 ; 6 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Regenerative Biomaterials Volume 6 ; 6 ; >
 
   }
 
@@ -16216,7 +16216,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Science and Public Policy Volume 43 ; 43 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Science and Public Policy Volume 44 ; 44 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Science and Public Policy Volume 45 ; 45 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Science and Public Policy Volume 46 ; 46 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Science and Public Policy Volume 46 ; 46 ; >
 
   }
 
@@ -17054,7 +17054,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Synthetic Biology Volume 1 ; 1 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Synthetic Biology Volume 2 ; 2 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Synthetic Biology Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Synthetic Biology Volume 4 ; 4 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Synthetic Biology Volume 4 ; 4 ; >
 
   }
 
