@@ -35,12 +35,13 @@ public class ScientificVideoProtocolsRisMetadataExtractorFactory implements File
         ScientificVideoProtocolsRisMetadataExtractor ris = new ScientificVideoProtocolsRisMetadataExtractor();
 
         //isbn: [inv: 2632-4350, org.lockss.extractor.MetadataException$ValidationException: Illegal ISBN: 2632-4350]
+        //ris.addRisTag("TY", RisMetadataExtractor.REFTYPE_JOURNAL);
         ris.addRisTag("DA", MetadataField.FIELD_DATE);
         ris.addRisTag("TI", MetadataField.FIELD_PUBLICATION_TITLE);
         ris.addRisTag("SP", MetadataField.FIELD_START_PAGE);
         ris.addRisTag("VL", MetadataField.FIELD_VOLUME);
         ris.addRisTag("IS", MetadataField.FIELD_ISSUE);
-        ris.addRisTag("SN", MetadataField.FIELD_ISBN);
+        ris.addRisTag("SN", MetadataField.FIELD_ISSN);
         ris.addRisTag("DO", MetadataField.FIELD_DOI);
         // Do not use UR listed in the ris file! It will get set to full text CU by daemon
         return ris;
