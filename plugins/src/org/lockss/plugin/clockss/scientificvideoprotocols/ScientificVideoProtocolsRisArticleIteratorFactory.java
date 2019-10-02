@@ -47,7 +47,7 @@ public class ScientificVideoProtocolsRisArticleIteratorFactory implements Articl
         builder.addAspect(RIS_PATTERN,
                 RIS_REPLACEMENT,
                 ArticleFiles.ROLE_ARTICLE_METADATA);
-        
+
         builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF);
 
         return builder.getSubTreeArticleIterator();
