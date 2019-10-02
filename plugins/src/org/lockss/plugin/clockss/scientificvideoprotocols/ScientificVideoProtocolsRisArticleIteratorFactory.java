@@ -40,14 +40,14 @@ public class ScientificVideoProtocolsRisArticleIteratorFactory implements Articl
                 .setTarget(target)
                 .setPatternTemplate(PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE));
 
-        builder.addAspect(RIS_PATTERN,
-                RIS_REPLACEMENT,
-                ArticleFiles.ROLE_ARTICLE_METADATA);
-
         builder.addAspect(PDF_PATTERN,
                 PDF_REPLACEMENT,
                 ArticleFiles.ROLE_FULL_TEXT_PDF);
 
+        builder.addAspect(RIS_PATTERN,
+                RIS_REPLACEMENT,
+                ArticleFiles.ROLE_ARTICLE_METADATA);
+        
         builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF);
 
         return builder.getSubTreeArticleIterator();
