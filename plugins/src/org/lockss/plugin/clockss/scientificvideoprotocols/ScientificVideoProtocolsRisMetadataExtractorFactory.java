@@ -9,6 +9,7 @@ import org.lockss.util.Logger;
 import java.io.IOException;
 
 /*
+Here is the sample data from .ris file
 TY  - JOUR
 AU  - Ramakrishnan, Venki
 AU  - Alsari, Mejd
@@ -34,8 +35,6 @@ public class ScientificVideoProtocolsRisMetadataExtractorFactory implements File
 
         ScientificVideoProtocolsRisMetadataExtractor ris = new ScientificVideoProtocolsRisMetadataExtractor();
 
-        //isbn: [inv: 2632-4350, org.lockss.extractor.MetadataException$ValidationException: Illegal ISBN: 2632-4350]
-        //ris.addRisTag("TY", RisMetadataExtractor.REFTYPE_JOURNAL);
         ris.addRisTag("DA", MetadataField.FIELD_DATE);
         ris.addRisTag("TI", MetadataField.FIELD_PUBLICATION_TITLE);
         ris.addRisTag("SP", MetadataField.FIELD_START_PAGE);
