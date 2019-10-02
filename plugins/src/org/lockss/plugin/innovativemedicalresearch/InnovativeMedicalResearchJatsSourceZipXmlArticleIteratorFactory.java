@@ -106,11 +106,11 @@ public class InnovativeMedicalResearchJatsSourceZipXmlArticleIteratorFactory imp
                             }
                         }
                     }  catch (SAXException e) {
-                        e.printStackTrace();
+                        log.warning("ignoring sax error - " + e.getMessage());
                     } catch (XPathExpressionException e) {
-                        e.printStackTrace();
+                        log.warning("ignoring xpath error - " + e.getMessage());
                     } catch (IOException e) {
-                        e.printStackTrace();
+                        log.warning("ignoring io error - " + e.getMessage());
                     }
                 }
                 return af;
