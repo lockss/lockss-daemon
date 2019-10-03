@@ -10,9 +10,9 @@ echo "###Ready highwire" > $t/tmp_HW  #clear out file.
 #Atypon (not T&F), in order by year
 #Ready
 echo "###Ready Atypon $year" > $t/tmp_Atypon  #clear out file
-#./scripts/tdb/tdbout -Y -a -Q 'plugin ~ "typon" and year is "$year" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | shuf >> $t/tmp_Atypon
+./scripts/tdb/tdbout -Y -a -Q 'plugin ~ "typon" and year is "'$year'" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | shuf >> $t/tmp_Atypon
 echo "###Ready Atypon not $year" >> $t/tmp_Atypon
-./scripts/tdb/tdbout -Y -a -Q 'plugin ~ "typon" and year is not "$year" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | shuf >> $t/tmp_Atypon
+./scripts/tdb/tdbout -Y -a -Q 'plugin ~ "typon" and year is not "'$year'" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | shuf >> $t/tmp_Atypon
 #Manifest
 echo "###Manifest Sage 2018" >> $t/tmp_Atypon
 ./scripts/tdb/tdbout -MT -a -Q 'year ~ "2018$" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/sage_publications.atypon.tdb | shuf >> $t/tmp_Atypon
@@ -47,9 +47,9 @@ echo "###Manifest Sage 2008" >> $t/tmp_Atypon
 #Misc: all but Highwire, T&F, Atypon
 #Ready
 echo "###Ready Misc $year" > $t/tmp_Misc  #clear out file
-./scripts/tdb/tdbout -Y -a -Q 'year is "$year" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | grep -v highwire | grep -v typon | grep -v ClockssTaylorAndFrancisPlugin | shuf >> $t/tmp_Misc
+./scripts/tdb/tdbout -Y -a -Q 'year is "'$year'" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | grep -v highwire | grep -v typon | grep -v ClockssTaylorAndFrancisPlugin | shuf >> $t/tmp_Misc
 echo "###Ready Misc not $year" >> $t/tmp_Misc
-./scripts/tdb/tdbout -Y -a -Q 'year is not "$year" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | grep -v highwire | grep -v typon | grep -v ClockssTaylorAndFrancisPlugin | shuf >> $t/tmp_Misc
+./scripts/tdb/tdbout -Y -a -Q 'year is not "'$year'" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | grep -v highwire | grep -v typon | grep -v ClockssTaylorAndFrancisPlugin | shuf >> $t/tmp_Misc
 #Single Ingest Machines: all publishers
 echo "*********************" >> $t/tmp_Misc
 echo "###Ready Misc Ingest1" >> $t/tmp_Misc
