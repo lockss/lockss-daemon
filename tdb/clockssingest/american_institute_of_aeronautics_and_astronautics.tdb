@@ -167,7 +167,7 @@
     au < frozen ; exists ; 2016 ; Journal of Aerospace Computing, Information, and Communication Volume 13 ; 13 ; http://arc.aiaa.org/ ; >
     au < deepCrawl ; exists ; 2017 ; Journal of Aerospace Computing, Information, and Communication Volume 14 ; 14 ; http://arc.aiaa.org/ ; >
     au < finished ; crawling ; 2018 ; Journal of Aerospace Computing, Information, and Communication Volume 15 ; 15 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
-    au < testing ; exists ; 2019 ; Journal of Aerospace Computing, Information, and Communication Volume 16 ; 16 ; https://arc.aiaa.org/ ; >
+    au < ready ; exists ; 2019 ; Journal of Aerospace Computing, Information, and Communication Volume 16 ; 16 ; https://arc.aiaa.org/ ; >
 
   }
   
@@ -186,7 +186,7 @@
     au < frozen ; exists ; 2016 ; Journal of Air Transportation Volume 24 ; 24 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2017 ; Journal of Air Transportation Volume 25 ; 25 ; https://arc.aiaa.org/ ; >
     au < finished ; frozen ; 2018 ; Journal of Air Transportation Volume 26 ; 26 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
-    au < testing ; exists ; 2019 ; Journal of Air Transportation Volume 27 ; 27 ; https://arc.aiaa.org/ ; >
+    au < ready ; exists ; 2019 ; Journal of Air Transportation Volume 27 ; 27 ; https://arc.aiaa.org/ ; >
 
   }
 
@@ -406,7 +406,7 @@
     au < frozen ; exists ; 2016 ; Journal of Propulsion and Power Volume 32 ; 32 ; http://arc.aiaa.org/ ; >
     au < deepCrawl ; exists ; 2017 ; Journal of Propulsion and Power Volume 33 ; 33 ; http://arc.aiaa.org/ ; >
     au < finished ; crawling ; 2018 ; Journal of Propulsion and Power Volume 34 ; 34 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
-    au < testing ; exists ; 2019 ; Journal of Propulsion and Power Volume 35 ; 35 ; https://arc.aiaa.org/ ; >
+    au < ready ; exists ; 2019 ; Journal of Propulsion and Power Volume 35 ; 35 ; https://arc.aiaa.org/ ; >
 
   }
 
@@ -521,7 +521,7 @@
     au < frozen ; exists ; 2016 ; Journal of Thermophysics and Heat Transfer Volume 30 ; 30 ; http://arc.aiaa.org/ ; >
     au < finished ; crawling ; 2017 ; Journal of Thermophysics and Heat Transfer Volume 31 ; 31 ; http://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; Journal of Thermophysics and Heat Transfer Volume 32 ; 32 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
-    au < testing ; exists ; 2019 ; Journal of Thermophysics and Heat Transfer Volume 33 ; 33 ; https://arc.aiaa.org/ ; >
+    au < ready ; exists ; 2019 ; Journal of Thermophysics and Heat Transfer Volume 33 ; 33 ; https://arc.aiaa.org/ ; >
 
   } 
   
