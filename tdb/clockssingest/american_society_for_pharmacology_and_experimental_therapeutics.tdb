@@ -69,7 +69,7 @@
     au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 2016 ; Drug Metabolism and Disposition Volume 44 ; 44 ; reingest4.clockss.org:8082 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 2017 ; Drug Metabolism and Disposition Volume 45 ; 45 ; reingest3.clockss.org:8083 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 2018 ; Drug Metabolism and Disposition Volume 46 ; 46 ; reingest2.clockss.org:8085 >
-    au < aspet.ClockssASPETDrupalPlugin ; ready ; exists ; 2019 ; Drug Metabolism and Disposition Volume 47 ; 47 ; >
+    au < aspet.ClockssASPETDrupalPlugin ; crawling ; exists ; 2019 ; Drug Metabolism and Disposition Volume 47 ; 47 ; >
 
   }
 
@@ -456,10 +456,10 @@
     au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 2018 ; Journal of Pharmacology and Experimental Therapeutics Volume 365 ; 365 ; reingest5.clockss.org:8082 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 2018 ; Journal of Pharmacology and Experimental Therapeutics Volume 366 ; 366 ; reingest2.clockss.org:8085 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 2018 ; Journal of Pharmacology and Experimental Therapeutics Volume 367 ; 367 ; reingest4.clockss.org:8082 >
-    au < aspet.ClockssASPETDrupalPlugin ; ready ; exists ; 2019 ; Journal of Pharmacology and Experimental Therapeutics Volume 368 ; 368 ; >
-    au < aspet.ClockssASPETDrupalPlugin ; ready ; exists ; 2019 ; Journal of Pharmacology and Experimental Therapeutics Volume 369 ; 369 ; >
-    au < aspet.ClockssASPETDrupalPlugin ; ready ; exists ; 2019 ; Journal of Pharmacology and Experimental Therapeutics Volume 370 ; 370 ; >
-    au < aspet.ClockssASPETDrupalPlugin ; ready ; exists ; 2019 ; Journal of Pharmacology and Experimental Therapeutics Volume 371 ; 371 ; >
+    au < aspet.ClockssASPETDrupalPlugin ; crawling ; exists ; 2019 ; Journal of Pharmacology and Experimental Therapeutics Volume 368 ; 368 ; >
+    au < aspet.ClockssASPETDrupalPlugin ; crawling ; exists ; 2019 ; Journal of Pharmacology and Experimental Therapeutics Volume 369 ; 369 ; >
+    au < aspet.ClockssASPETDrupalPlugin ; crawling ; exists ; 2019 ; Journal of Pharmacology and Experimental Therapeutics Volume 370 ; 370 ; >
+    au < aspet.ClockssASPETDrupalPlugin ; crawling ; exists ; 2019 ; Journal of Pharmacology and Experimental Therapeutics Volume 371 ; 371 ; >
 
     }
   }
@@ -683,7 +683,7 @@
     au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 2016 ; Pharmacological Reviews Volume 68 ; 68 ; reingest1.clockss.org:8082 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 2017 ; Pharmacological Reviews Volume 69 ; 69 ; reingest5.clockss.org:8082 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 2018 ; Pharmacological Reviews Volume 70 ; 70 ; reingest4.clockss.org:8082 >
-    au < aspet.ClockssASPETDrupalPlugin ; ready ; exists ; 2019 ; Pharmacological Reviews Volume 71 ; 71 ; >
+    au < aspet.ClockssASPETDrupalPlugin ; crawling ; exists ; 2019 ; Pharmacological Reviews Volume 71 ; 71 ; >
 
   }
 

@@ -59,7 +59,7 @@
       au < finished ; crawling ; 2016 ; Cold Spring Harbor Perspectives in Biology Volume 8 ; 8 ; http://cshperspectives.cshlp.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; Cold Spring Harbor Perspectives in Biology Volume 9 ; 9 ; http://cshperspectives.cshlp.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2018 ; Cold Spring Harbor Perspectives in Biology Volume 10 ; 10 ; http://cshperspectives.cshlp.org/ ; reingest2.clockss.org:8085 >
-      au < ready ; exists ; 2019 ; Cold Spring Harbor Perspectives in Biology Volume 11 ; 11 ; https://cshperspectives.cshlp.org/ ; >
+      au < crawling ; exists ; 2019 ; Cold Spring Harbor Perspectives in Biology Volume 11 ; 11 ; https://cshperspectives.cshlp.org/ ; >
 
     }
     
@@ -121,7 +121,7 @@
       au < finished ; crawling ; 2016 ; Cold Spring Harbor Protocols Volume 2016 ; 2016 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; Cold Spring Harbor Protocols Volume 2017 ; 2017 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2018 ; Cold Spring Harbor Protocols Volume 2018 ; 2018 ; reingest3.clockss.org:8083 >
-      au < ready ; exists ; 2019 ; Cold Spring Harbor Protocols Volume 2019 ; 2019 ; >
+      au < crawling ; exists ; 2019 ; Cold Spring Harbor Protocols Volume 2019 ; 2019 ; >
 
     }
     
@@ -226,7 +226,7 @@
       au < finished ; crawling ; 2015 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 80 ; 80 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 81 ; 81 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 82 ; 82 ; reingest2.clockss.org:8085 >
-      au < ready ; exists ; 2018 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 83 ; 83 ; >#publ June 2019
+      au < crawling ; exists ; 2018 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 83 ; 83 ; >#publ June 2019
       au < expected ; exists ; 2019 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 84 ; 84 ; >
 
     }
@@ -281,7 +281,7 @@
       au < deepCrawl ; exists ; 2016 ; Genes & Development Volume 30 ; 30 ; >
       au < deepCrawl ; exists ; 2017 ; Genes & Development Volume 31 ; 31 ; >
       au < finished ; crawling ; 2018 ; Genes & Development Volume 32 ; 32 ; reingest2.clockss.org:8085 >
-      au < ready ; exists ; 2019 ; Genes & Development Volume 33 ; 33 ; >
+      au < crawling ; exists ; 2019 ; Genes & Development Volume 33 ; 33 ; >
 
     }
 
@@ -376,7 +376,7 @@
       au < finished ; crawling ; 2016 ; Learning & Memory Volume 23 ; 23 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2017 ; Learning & Memory Volume 24 ; 24 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2018 ; Learning & Memory Volume 25 ; 25 ; reingest4.clockss.org:8082 >
-      au < ready ; exists ; 2019 ; Learning & Memory Volume 26 ; 26 ; >
+      au < crawling ; exists ; 2019 ; Learning & Memory Volume 26 ; 26 ; >
 
     }
 
@@ -421,7 +421,7 @@
       au < finished ; crawling ; 2016 ; RNA Volume 22 ; 22 ; http://rnajournal.cshlp.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; RNA Volume 23 ; 23 ; http://rnajournal.cshlp.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2018 ; RNA Volume 24 ; 24 ; http://rnajournal.cshlp.org/ ; reingest3.clockss.org:8083 >
-      au < ready ; exists ; 2019 ; RNA Volume 25 ; 25 ; https://rnajournal.cshlp.org/ ; >
+      au < crawling ; exists ; 2019 ; RNA Volume 25 ; 25 ; https://rnajournal.cshlp.org/ ; >
 
     }
 
