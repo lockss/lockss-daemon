@@ -29,10 +29,10 @@ fi
    #set -x
    # Make a list of AUids from clockss
    #./scripts/tdb/tdbout -CZLI -a -Q "year ~ '^20' and plugin ~ '$plugin' and year !~ '$year'" tdb/clockssingest/*.tdb | grep -v TaylorAndFrancisPlugin | sort > $tpath/gr_clockss_c.txt
-   ./scripts/tdb/tdbout -CZLIF -a -Q "plugin ~ "'$plugin'" and year !~ "'$year'"" tdb/clockssingest/*.tdb | sort > $tpath/gr_clockss_c.txt
+   ./scripts/tdb/tdbout -CZLIF -a -Q 'plugin ~ "'$plugin'" and year !~ "'$year'"' tdb/clockssingest/*.tdb | sort > $tpath/gr_clockss_c.txt
    # Make a list of AUids from gln
    #./scripts/tdb/tdbout -M -a -Q "year ~ '^20' and plugin ~ '$plugin' and year !~ '$year'" tdb/prod/*.tdb | grep -v TaylorAndFrancisPlugin | sort > $tpath/gr_gln_m.txt
-   ./scripts/tdb/tdbout -M -a -Q "plugin ~ "'$plugin'" and year !~ "'$year'"" tdb/prod/*.tdb | sort > $tpath/gr_gln_m.txt
+   ./scripts/tdb/tdbout -M -a -Q 'plugin ~ "'$plugin'" and year !~ "'$year'"' tdb/prod/*.tdb | sort > $tpath/gr_gln_m.txt
 
    # Convert the gln list to clockss format, and start a list
    cat $tpath/gr_gln_m.txt | sed -e 's/\(\|[^\|]*\)Plugin/Clockss\1Plugin/' | sort > $tpath/gr_gln_mc.txt
