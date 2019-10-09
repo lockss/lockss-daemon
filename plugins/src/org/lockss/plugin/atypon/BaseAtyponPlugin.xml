@@ -62,7 +62,9 @@
       <!--  it is okay to use issue even though it's not a param, it is provided by the query -->
       <entry>
         <string>au_issue</string>
-        <string>"%stoc/%s/%s/%s", base_url, journal_id, volume_name, issue</string>
+        <list>
+          <string>"%stoc/%s/%s/%s", base_url, journal_id, volume_name, issue</string>
+        </list>
       </entry>
       <!--  we don't need au_volume as it will default to au_start_url -->
     </map>
@@ -127,7 +129,8 @@
       http://www.fasebj.org/doi/suppl/10.1096/fj.201700767R/suppl_file/fj.201700767R.sd1.docx -->
       <string>1,"^https?://%s\.global\.prod\.fastly\.net/[^?]*\.(css|gif|jpe?g|js|png)$", url_host(base_url)</string>
       <string>1,"^https?://%s/na[0-9]+/home/literatum/publisher/[^/]+/journals/[^/]+/%s/", url_host(base_url), journal_id</string>
-      <string>1,"^https?://%s/toc/%s(\.[0-9]+)?/%s($|/)", url_host(base_url), journal_id, volume_name</string>
+      <!--royal society publishing has 'year' in their toc url: https://royalsocietypublishing.org/toc/rsos/2019/6/10-->
+      <string>1,"^https?://%s/toc/%s(\.[0-9]+)?(/\d+)?/%s($|/)", url_host(base_url), journal_id, volume_name</string>
       <string>2,"^https?://%s/doi/([^/]+/)?[0-9.]+/(null\?|[-.9]+$)", url_host(base_url)</string>
       <string>2,"^https?://%s/doi/.*\?(prevSearch=|queryID=%%24%%7BresultBean.queryID%%7D|tab=permissions)", url_host(base_url)</string>
       <string>1,"^https?://%s/doi/((pdf|pdfplus|full|abs|ref(erences)?|suppl|figure|video[^/]+)/)?[0-9.]+/", url_host(base_url)</string>

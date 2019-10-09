@@ -171,6 +171,8 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     shouldCacheTest("https://" + ROOT_HOST + ".global.prod.fastly.net/foo/bar/baz/qux.js", true, ABAu, cus);
     // toc page for an issue
     shouldCacheTest(ROOT_URL+"toc/xxxx/123/5", true, ABAu, cus);
+    // toc page for an issue with year embedded in the url
+    shouldCacheTest(ROOT_URL+"toc/xxxx/2019/123/5", true, ABAu, cus);
     // special issue
     shouldCacheTest(ROOT_URL+"doi/abs/11.1111/1234-abc.12G", true, ABAu, cus);
     shouldCacheTest(ROOT_URL+"doi/pdf/11.1111/1234-abc.12G", true, ABAu, cus);
