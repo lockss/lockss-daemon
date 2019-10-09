@@ -62,6 +62,7 @@
       au < HWDrupalPlugin ; manifest ; 2016 ; American Journal of Neuroradiology Volume 37 ; 37 >
       au < HWDrupalPlugin ; manifest ; 2017 ; American Journal of Neuroradiology Volume 38 ; 38 >
       au < HWDrupalPlugin ; manifest ; 2018 ; American Journal of Neuroradiology Volume 39 ; 39 >
+      au < HWDrupalPlugin ; expected ; 2019 ; American Journal of Neuroradiology Volume 40 ; 40 >
 
     }
 
@@ -102,6 +103,7 @@
 
       au < notReady ; 2017 ; Neurographics Volume 7 ; 7 > #Unable to fetch permission page, https://www.ingentaconnect.com/content/1541-6593?format=lockss&volume=7
       au < exists ; 2018 ; Neurographics Volume 8 ; 8 >
+      au < expected ; 2019 ; Neurographics Volume 9 ; 9 >
 
     }
 
