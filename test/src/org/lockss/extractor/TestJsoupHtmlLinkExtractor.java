@@ -622,7 +622,21 @@ public class TestJsoupHtmlLinkExtractor extends LockssTestCase {
         "<a href = mailto:user@example.com</a>";
     assertEquals(SetUtil.set(), parseSingleSource(source));
   }
+  public void testParseVideoTags() throws Exception {
+    String url1="http://www.example.com/forrest_gump.mp4";
+    String url2="http://www.example.com/forrest_gump.ogg";
+    String url3="http://www.example.com/subtitles_en.vtt";
+    String url4="http://www.example.com/subtitles_no.vtt";
 
+    String source = "<video width=\"320\" height=\"240\" controls>\n"
+        + "  <source src=\"forrest_gump.mp4\" type=\"video/mp4\">\n"
+        + "  <source src=\"forrest_gump.ogg\" type=\"video/ogg\">\n"
+        + "  <track src=\"subtitles_en.vtt\" kind=\"subtitles\" srclang=\"en\" label=\"English\">\n"
+        + "  <track src=\"subtitles_no.vtt\" kind=\"subtitles\" srclang=\"no\" label=\"Norwegian\">\n"
+        + "</video>";
+    assertEquals(SetUtil.set(url1,url2,url3, url4), parseSingleSource(source));
+
+  }
   /**
    * Included to test a chunk of HighWire HTML that we're not parsing
    * correctly
