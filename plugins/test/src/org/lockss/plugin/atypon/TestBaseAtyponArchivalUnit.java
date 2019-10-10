@@ -181,6 +181,14 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     shouldCacheTest(ROOT_URL+"doi/suppl/11.1111/1234-abc.12G/suppl_pres.ppt", true, ABAu, cus);
     shouldCacheTest(ROOT_URL+"doi/ref/11.1111/1234-abc.12G", true, ABAu, cus);
     shouldCacheTest(ROOT_URL+"doi/video_original/11.1111/1234-abc.12G", true, ABAu, cus);
+    // special case for future medicine which we should exclude all the staff inside "suppl_file" starts with "."(dot) to avoid 404
+    shouldCacheTest(ROOT_URL+"doi/suppl/10.2217/fmb.14.49/suppl_file/49ab.suppl", true, ABAu, cus);
+    shouldCacheTest(ROOT_URL+"doi/suppl/10.2217/fmb.14.49/suppl_file/ab65.suppl", true, ABAu, cus);
+    shouldCacheTest(ROOT_URL+"doi/suppl/10.2217/fmb.14.49/suppl_file/?ab65.suppl", true, ABAu, cus);
+    shouldCacheTest(ROOT_URL+"doi/suppl/10.2217/fmb.14.49/suppl_file/#ab65.suppl", true, ABAu, cus);
+    shouldCacheTest(ROOT_URL+"doi/suppl/10.2217/fmb.14.49/suppl_file/.ab49.suppl", false, ABAu, cus);
+    shouldCacheTest(ROOT_URL+"doi/suppl/10.2217/fmb.14.49/suppl_file/.49ab.suppl", false, ABAu, cus);
+    shouldCacheTest(ROOT_URL+"doi/suppl/10.2217/fmb.14.49/suppl_file/.?#49ab.suppl", false, ABAu, cus);
     //other DOI forms
     shouldCacheTest(ROOT_URL+"doi/abs/11.1111/XX12FG", true, ABAu, cus);
     shouldCacheTest(ROOT_URL+"doi/abs/11.1111/mypubfile", true, ABAu, cus);
