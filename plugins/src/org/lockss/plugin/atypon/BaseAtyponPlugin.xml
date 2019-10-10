@@ -137,7 +137,7 @@
       FutureMedicine like us to exclude all the staff inside "suppl_file" starts with "."(dot) to avoid 404
       https://www.futuremedicine.com/doi/suppl/10.2217/fmb.14.49/suppl_file/.49.suppl
       -->
-      <string>2,"^https?://%s/doi/suppl/[^/]+/[^/]+/suppl_file/\.", url_host(base_url)</string>
+      <string>2,"^https?://%s/doi/suppl/.*/suppl_file/\.", url_host(base_url)</string>
       <string>1,"^https?://%s/doi/((pdf|pdfplus|full|abs|ref(erences)?|suppl|figure|video[^/]+)/)?[0-9.]+/", url_host(base_url)</string>
       <string>2,"^https?://%s/action/showFullPopup\?doi=.*&amp;id=$", url_host(base_url)</string>
       <string>1,"^https?://%s/action/downloadCitation\?doi=.*&amp;format=ris&amp;include=(cit|abs)$", url_host(base_url)</string>

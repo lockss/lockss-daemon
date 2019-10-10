@@ -186,6 +186,8 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     shouldCacheTest(ROOT_URL+"doi/suppl/10.2217/fmb.14.49/suppl_file/ab65.suppl", true, ABAu, cus);
     shouldCacheTest(ROOT_URL+"doi/suppl/10.2217/fmb.14.49/suppl_file/?ab65.suppl", true, ABAu, cus);
     shouldCacheTest(ROOT_URL+"doi/suppl/10.2217/fmb.14.49/suppl_file/#ab65.suppl", true, ABAu, cus);
+    shouldCacheTest(ROOT_URL+"doi/suppl/10.2217/f/m/b.14.49/suppl_file/#ab65.suppl", true, ABAu, cus);
+    shouldCacheTest(ROOT_URL+"doi/suppl/10.2217/f/m/b.14.49/suppl_file/.ab49.suppl", false, ABAu, cus);
     shouldCacheTest(ROOT_URL+"doi/suppl/10.2217/fmb.14.49/suppl_file/.ab49.suppl", false, ABAu, cus);
     shouldCacheTest(ROOT_URL+"doi/suppl/10.2217/fmb.14.49/suppl_file/.49ab.suppl", false, ABAu, cus);
     shouldCacheTest(ROOT_URL+"doi/suppl/10.2217/fmb.14.49/suppl_file/.?#49ab.suppl", false, ABAu, cus);
