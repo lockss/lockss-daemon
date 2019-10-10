@@ -19,11 +19,11 @@
       param[base_url] = https://www.eneuro.org/
 
       au < sfn.ClockssSFNDrupalPlugin ; testing ; exists ; 2014 ; eNeuro Volume 1 ; 1 ; >
-      au < sfn.ClockssSFNDrupalPlugin ; testing ; exists ; 2015 ; eNeuro Volume 2 ; 2 ; >
-      au < sfn.ClockssSFNDrupalPlugin ; testing ; exists ; 2016 ; eNeuro Volume 3 ; 3 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; ready ; exists ; 2015 ; eNeuro Volume 2 ; 2 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; ready ; exists ; 2016 ; eNeuro Volume 3 ; 3 ; >
       au < sfn.ClockssSFNDrupalPlugin ; testing ; exists ; 2017 ; eNeuro Volume 4 ; 4 ; >
-      au < sfn.ClockssSFNDrupalPlugin ; testing ; exists ; 2018 ; eNeuro Volume 5 ; 5 ; >
-      au < sfn.ClockssSFNDrupalPlugin ; testing ; exists ; 2019 ; eNeuro Volume 6 ; 6 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; ready ; exists ; 2018 ; eNeuro Volume 5 ; 5 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; ready ; exists ; 2019 ; eNeuro Volume 6 ; 6 ; >
   }
   
   {
@@ -67,11 +67,11 @@
       au < sfn.ClockssSFNDrupalPlugin ; manifest ; exists ; 2009 ; Journal of Neuroscience Volume 29 ; 29 ; >
       au < sfn.ClockssSFNDrupalPlugin ; testing ; exists ; 2010 ; Journal of Neuroscience Volume 30 ; 30 ; >
       au < sfn.ClockssSFNDrupalPlugin ; testing ; exists ; 2011 ; Journal of Neuroscience Volume 31 ; 31 ; >
-      au < sfn.ClockssSFNDrupalPlugin ; testing ; exists ; 2012 ; Journal of Neuroscience Volume 32 ; 32 ; >
-      au < sfn.ClockssSFNDrupalPlugin ; testing ; exists ; 2013 ; Journal of Neuroscience Volume 33 ; 33 ; >
-      au < sfn.ClockssSFNDrupalPlugin ; testing ; exists ; 2014 ; Journal of Neuroscience Volume 34 ; 34 ; >
-      au < sfn.ClockssSFNDrupalPlugin ; testing ; exists ; 2015 ; Journal of Neuroscience Volume 35 ; 35 ; >
-      au < sfn.ClockssSFNDrupalPlugin ; testing ; exists ; 2016 ; Journal of Neuroscience Volume 36 ; 36 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; ready ; exists ; 2012 ; Journal of Neuroscience Volume 32 ; 32 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; ready ; exists ; 2013 ; Journal of Neuroscience Volume 33 ; 33 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; ready ; exists ; 2014 ; Journal of Neuroscience Volume 34 ; 34 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; ready ; exists ; 2015 ; Journal of Neuroscience Volume 35 ; 35 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; ready ; exists ; 2016 ; Journal of Neuroscience Volume 36 ; 36 ; >
       au < sfn.ClockssSFNDrupalPlugin ; testing ; exists ; 2017 ; Journal of Neuroscience Volume 37 ; 37 ; >
       au < sfn.ClockssSFNDrupalPlugin ; testing ; exists ; 2018 ; Journal of Neuroscience Volume 38 ; 38 ; >
       au < sfn.ClockssSFNDrupalPlugin ; testing ; exists ; 2019 ; Journal of Neuroscience Volume 39 ; 39 ; >
