@@ -23,7 +23,6 @@
     implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
 
     au < ready ; exists ; 2019 ; Karbala International Journal of Modern Science Volume 5 ; 5 ; >
-    au < expected ; exists ; 2020 ; Karbala International Journal of Modern Science Volume 6 ; 6 ; >
 
   }
 
