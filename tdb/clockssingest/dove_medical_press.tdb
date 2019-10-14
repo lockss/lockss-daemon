@@ -41,7 +41,7 @@
     au < finished ; crawling ; 2016 ; Therapeutics and Clinical Risk Management Volume 12 ; 12 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Therapeutics and Clinical Risk Management Volume 13 ; 13 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Therapeutics and Clinical Risk Management Volume 14 ; 14 ; 2018 ; >
-    au < ready ; exists ; 2019 ; Therapeutics and Clinical Risk Management Volume 15 ; 15 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; Therapeutics and Clinical Risk Management Volume 15 ; 15 ; 2019 ; >
 
   }
 
@@ -95,7 +95,7 @@
     au < finished ; crawling ; 2016 ; Neuropsychiatric Disease and Treatment Volume 12 ; 12 ; 2016 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; Neuropsychiatric Disease and Treatment Volume 13 ; 13 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Neuropsychiatric Disease and Treatment Volume 14 ; 14 ; 2018 ; >
-    au < ready ; exists ; 2019 ; Neuropsychiatric Disease and Treatment Volume 15 ; 15 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; Neuropsychiatric Disease and Treatment Volume 15 ; 15 ; 2019 ; >
 
   }
 
@@ -121,7 +121,7 @@
     au < finished ; crawling ; 2016 ; Clinical Interventions in Aging Volume 11 ; 11 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Clinical Interventions in Aging Volume 12 ; 12 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Clinical Interventions in Aging Volume 13 ; 13 ; 2018 ; >
-    au < ready ; exists ; 2019 ; Clinical Interventions in Aging Volume 14 ; 14 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; Clinical Interventions in Aging Volume 14 ; 14 ; 2019 ; >
 
   }
 
@@ -147,7 +147,7 @@
     au < finished ; crawling ; 2016 ; International Journal of Nanomedicine Volume 11 ; 11 ; 2016 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; International Journal of Nanomedicine Volume 12 ; 12 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; International Journal of Nanomedicine Volume 13 ; 13 ; 2018 ; >
-    au < ready ; exists ; 2019 ; International Journal of Nanomedicine Volume 14 ; 14 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; International Journal of Nanomedicine Volume 14 ; 14 ; 2019 ; >
 
   }
 
@@ -844,7 +844,7 @@
     au < finished ; crawling ; 2016 ; Drug, Healthcare and Patient Safety Volume 8 ; 8 ; 2016 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Drug, Healthcare and Patient Safety Volume 9 ; 9 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Drug, Healthcare and Patient Safety Volume 10 ; 10 ; 2018 ; >
-    au < ready ; exists ; 2019 ; Drug, Healthcare and Patient Safety Volume 11 ; 11 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; Drug, Healthcare and Patient Safety Volume 11 ; 11 ; 2019 ; >
 
   }
 
@@ -867,7 +867,7 @@
     au < finished ; crawling ; 2016 ; International Journal of Women's Health Volume 8 ; 8 ; 2016 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; International Journal of Women's Health Volume 9 ; 9 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; International Journal of Women's Health Volume 10 ; 10 ; 2018 ; >
-    au < ready ; exists ; 2019 ; International Journal of Women's Health Volume 11 ; 11 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; International Journal of Women's Health Volume 11 ; 11 ; 2019 ; >
 
   }
 
@@ -959,7 +959,7 @@
     au < finished ; crawling ; 2016 ; Reports in Medical Imaging Volume 9 ; 9 ; 2016 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Reports in Medical Imaging Volume 10 ; 10 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Reports in Medical Imaging Volume 11 ; 11 ; 2018 ; >
-    au < ready ; exists ; 2019 ; Reports in Medical Imaging Volume 12 ; 12 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; Reports in Medical Imaging Volume 12 ; 12 ; 2019 ; >
 
   }
 
@@ -1052,7 +1052,7 @@
     au < finished ; crawling ; 2016 ; Psychology Research and Behavior Management Volume 9 ; 9 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Psychology Research and Behavior Management Volume 10 ; 10 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Psychology Research and Behavior Management Volume 11 ; 11 ; 2018 ; >
-    au < ready ; exists ; 2019 ; Psychology Research and Behavior Management Volume 12 ; 12 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; Psychology Research and Behavior Management Volume 12 ; 12 ; 2019 ; >
 
   }
 
@@ -1235,7 +1235,7 @@
     au < finished ; crawling ; 2016 ; Hepatic Medicine: Evidence and Research Volume 8 ; 8 ; 2016 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; Hepatic Medicine: Evidence and Research Volume 9 ; 9 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Hepatic Medicine: Evidence and Research Volume 10 ; 10 ; 2018 ; >
-    au < ready ; exists ; 2019 ; Hepatic Medicine: Evidence and Research Volume 11 ; 11 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; Hepatic Medicine: Evidence and Research Volume 11 ; 11 ; 2019 ; >
 
   }
 
@@ -1295,7 +1295,7 @@
     au < finished ; crawling ; 2016 ; Clinical Pharmacology: Advances and Applications Volume 8 ; 8 ; 2016 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Clinical Pharmacology: Advances and Applications Volume 9 ; 9 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Clinical Pharmacology: Advances and Applications Volume 10 ; 10 ; 2018 ; >
-    au < ready ; exists ; 2019 ; Clinical Pharmacology: Advances and Applications Volume 11 ; 11 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; Clinical Pharmacology: Advances and Applications Volume 11 ; 11 ; 2019 ; >
 
   }
 
@@ -1318,7 +1318,7 @@
     au < finished ; crawling ; 2016 ; Journal of Experimental Pharmacology Volume 8 ; 8 ; 2016 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Journal of Experimental Pharmacology Volume 9 ; 9 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Journal of Experimental Pharmacology Volume 10 ; 10 ; 2018 ; >
-    au < ready ; exists ; 2019 ; Journal of Experimental Pharmacology Volume 11 ; 11 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; Journal of Experimental Pharmacology Volume 11 ; 11 ; 2019 ; >
 
   }
 
@@ -1433,7 +1433,7 @@
     au < finished ; crawling ; 2016 ; Nature and Science of Sleep Volume 8 ; 8 ; 2016 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Nature and Science of Sleep Volume 9 ; 9 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Nature and Science of Sleep Volume 10 ; 10 ; 2018 ; >
-    au < ready ; exists ; 2019 ; Nature and Science of Sleep Volume 11 ; 11 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; Nature and Science of Sleep Volume 11 ; 11 ; 2019 ; >
 
   }
 
@@ -1455,7 +1455,7 @@
     au < finished ; crawling ; 2016 ; Open Access Journal of Contraception Volume 7 ; 7 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Open Access Journal of Contraception Volume 8 ; 8 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Open Access Journal of Contraception Volume 9 ; 9 ; 2018 ; >
-    au < ready ; exists ; 2019 ; Open Access Journal of Contraception Volume 10 ; 10 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; Open Access Journal of Contraception Volume 10 ; 10 ; 2019 ; >
 
   }
 
@@ -1544,7 +1544,7 @@
     au < finished ; crawling ; 2016 ; Pathology and Laboratory Medicine International Volume 8 ; 8 ; 2016 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Pathology and Laboratory Medicine International Volume 9 ; 9 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Pathology and Laboratory Medicine International Volume 10 ; 10 ; 2018 ; >
-    au < ready ; exists ; 2019 ; Pathology and Laboratory Medicine International Volume 11 ; 11 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; Pathology and Laboratory Medicine International Volume 11 ; 11 ; 2019 ; >
 
   }
 
@@ -1588,7 +1588,7 @@
     au < finished ; crawling ; 2016 ; Clinical Audit Volume 8 ; 8 ; 2016 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Clinical Audit Volume 9 ; 9 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Clinical Audit Volume 10 ; 10 ; 2018 ; >
-    au < ready ; exists ; 2019 ; Clinical Audit Volume 11 ; 11 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; Clinical Audit Volume 11 ; 11 ; 2019 ; >
 
   }
 
@@ -1610,7 +1610,7 @@
     au < finished ; crawling ; 2016 ; Lung Cancer: Targets and Therapy Volume 7 ; 7 ; 2016 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; Lung Cancer: Targets and Therapy Volume 8 ; 8 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Lung Cancer: Targets and Therapy Volume 9 ; 9 ; 2018 ; >
-    au < ready ; exists ; 2019 ; Lung Cancer: Targets and Therapy Volume 10 ; 10 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; Lung Cancer: Targets and Therapy Volume 10 ; 10 ; 2019 ; >
 
   }
 
@@ -1831,7 +1831,7 @@
     au < finished ; crawling ; 2016 ; Research and Reports in Tropical Medicine Volume 7 ; 7 ; 2016 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Research and Reports in Tropical Medicine Volume 8 ; 8 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Research and Reports in Tropical Medicine Volume 9 ; 9 ; 2018 ; >
-    au < ready ; exists ; 2019 ; Research and Reports in Tropical Medicine Volume 10 ; 10 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; Research and Reports in Tropical Medicine Volume 10 ; 10 ; 2019 ; >
 
   }
 
@@ -1875,7 +1875,7 @@
     au < finished ; crawling ; 2016 ; Pragmatic and Observational Research Volume 7 ; 7 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Pragmatic and Observational Research Volume 8 ; 8 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Pragmatic and Observational Research Volume 9 ; 9 ; 2018 ; >
-    au < ready ; exists ; 2019 ; Pragmatic and Observational Research Volume 10 ; 10 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; Pragmatic and Observational Research Volume 10 ; 10 ; 2019 ; >
 
   }
 
@@ -1940,7 +1940,7 @@
     au < finished ; crawling ; 2016 ; Substance Abuse and Rehabilitation Volume 7 ; 7 ; 2016 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Substance Abuse and Rehabilitation Volume 8 ; 8 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Substance Abuse and Rehabilitation Volume 9 ; 9 ; 2018 ; >
-    au < ready ; exists ; 2019 ; Substance Abuse and Rehabilitation Volume 10 ; 10 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; Substance Abuse and Rehabilitation Volume 10 ; 10 ; 2019 ; >
 
   }
 
@@ -2003,7 +2003,7 @@
     au < finished ; crawling ; 2016 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 6 ; 6 ; 2016 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 7 ; 7 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 8 ; 8 ; 2018 ; >
-    au < ready ; exists ; 2019 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 9 ; 9 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 9 ; 9 ; 2019 ; >
 
   }
 
@@ -2225,7 +2225,7 @@
     au < finished ; crawling ; 2016 ; Medicolegal and Bioethics Volume 6 ; 6 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Medicolegal and Bioethics Volume 7 ; 7 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Medicolegal and Bioethics Volume 8 ; 8 ; 2018 ; >
-    au < ready ; exists ; 2019 ; Medicolegal and Bioethics Volume 9 ; 9 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; Medicolegal and Bioethics Volume 9 ; 9 ; 2019 ; >
 
   }
 
@@ -2401,7 +2401,7 @@
     au < finished ; crawling ; 2016 ; Psoriasis: Targets and Therapy Volume 6 ; 6 ; 2016 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Psoriasis: Targets and Therapy Volume 7 ; 7 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Psoriasis: Targets and Therapy Volume 8 ; 8 ; 2018 ; >
-    au < ready ; exists ; 2019 ; Psoriasis: Targets and Therapy Volume 9 ; 9 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; Psoriasis: Targets and Therapy Volume 9 ; 9 ; 2019 ; >
 
   }
 
@@ -2593,7 +2593,7 @@
     au < finished ; crawling ; 2016 ; ImmunoTargets and Therapy Volume 5 ; 5 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; ImmunoTargets and Therapy Volume 6 ; 6 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; ImmunoTargets and Therapy Volume 7 ; 7 ; 2018 ; >
-    au < ready ; exists ; 2019 ; ImmunoTargets and Therapy Volume 8 ; 8 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; ImmunoTargets and Therapy Volume 8 ; 8 ; 2019 ; >
 
   }
 
@@ -2760,7 +2760,7 @@
     au < finished ; crawling ; 2016 ; Journal of Hepatocellular Carcinoma Volume 3 ; 3 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Journal of Hepatocellular Carcinoma Volume 4 ; 4 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Journal of Hepatocellular Carcinoma Volume 5 ; 5 ; 2018 ; >
-    au < ready ; exists ; 2019 ; Journal of Hepatocellular Carcinoma Volume 6 ; 6 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; Journal of Hepatocellular Carcinoma Volume 6 ; 6 ; 2019 ; >
 
   }
 
@@ -2835,7 +2835,7 @@
     au < finished ; frozen ; 2016 ; Journal of Vascular Diagnostics and Interventions Volume 4 ; 4 ; 2016 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; Journal of Vascular Diagnostics and Interventions Volume 5 ; 5 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Journal of Vascular Diagnostics and Interventions Volume 6 ; 6 ; 2018 ; >
-    au < ready ; exists ; 2019 ; Journal of Vascular Diagnostics and Interventions Volume 7 ; 7 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; Journal of Vascular Diagnostics and Interventions Volume 7 ; 7 ; 2019 ; >
 
   }
 
