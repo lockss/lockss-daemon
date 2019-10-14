@@ -189,7 +189,7 @@
     au < finished ; finished ; 2015-2016 ; Journal of Human Performance in Extreme Environments Volume 12 ; 12 ; http://docs.lib.purdue.edu/ ; >
     au < frozen ; exists ; 2017 ; Journal of Human Performance in Extreme Environments Volume 13 ; 13 ; http://docs.lib.purdue.edu/ ; >
     au < deepCrawl ; exists ; 2018 ; Journal of Human Performance in Extreme Environments Volume 14 ; 14 ; https://docs.lib.purdue.edu/ ; > # Probe url error on previous test
-    au < ready ; exists ; 2019 ; Journal of Human Performance in Extreme Environments Volume 15 ; 15 ; https://docs.lib.purdue.edu/ ; >
+    au < crawling ; exists ; 2019 ; Journal of Human Performance in Extreme Environments Volume 15 ; 15 ; https://docs.lib.purdue.edu/ ; >
 
   }
 

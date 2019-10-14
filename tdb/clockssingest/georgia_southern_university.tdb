@@ -53,7 +53,7 @@
       param[base_url] = https://digitalcommons.georgiasouthern.edu/
       param[journal_abbr] = cimle
 
-      au < ready ; exists ; 2019 ; Current Issues in Middle Level Education Volume 24 ; 24 ; >
+      au < crawling ; exists ; 2019 ; Current Issues in Middle Level Education Volume 24 ; 24 ; >
 
   }
 
@@ -130,7 +130,7 @@
       au < frozen ; exists ; 2016 ; International Journal for the Scholarship of Teaching & Learning Volume 10 ; 10 ; >
       au < frozen ; exists ; 2017 ; International Journal for the Scholarship of Teaching & Learning Volume 11 ; 11 ; >
       au < frozen ; exists ; 2018 ; International Journal for the Scholarship of Teaching & Learning Volume 12 ; 12 ; >
-      au < ready ; exists ; 2019 ; International Journal for the Scholarship of Teaching & Learning Volume 13 ; 13 ; >
+      au < crawling ; exists ; 2019 ; International Journal for the Scholarship of Teaching & Learning Volume 13 ; 13 ; >
 
   }
 

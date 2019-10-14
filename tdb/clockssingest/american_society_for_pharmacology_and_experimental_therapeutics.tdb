@@ -382,7 +382,7 @@
     au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 2000 ; Journal of Pharmacology and Experimental Therapeutics Volume 294 ; 294 ; reingest1.clockss.org:8082 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 2000 ; Journal of Pharmacology and Experimental Therapeutics Volume 295 ; 295 ; reingest2.clockss.org:8085 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 2001 ; Journal of Pharmacology and Experimental Therapeutics Volume 296 ; 296 ; reingest3.clockss.org:8083 >
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 2001 ; Journal of Pharmacology and Experimental Therapeutics Volume 297 ; 297 ; reingest4.clockss.org:8082 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 2001 ; Journal of Pharmacology and Experimental Therapeutics Volume 297 ; 297 ; reingest4.clockss.org:8082 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 2001 ; Journal of Pharmacology and Experimental Therapeutics Volume 298 ; 298 ; reingest5.clockss.org:8082 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 2001 ; Journal of Pharmacology and Experimental Therapeutics Volume 299 ; 299 ; reingest1.clockss.org:8082 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 2002 ; Journal of Pharmacology and Experimental Therapeutics Volume 300 ; 300 ; reingest2.clockss.org:8085 >
@@ -408,7 +408,7 @@
     au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 2007 ; Journal of Pharmacology and Experimental Therapeutics Volume 320 ; 320 ; reingest2.clockss.org:8085 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 2007 ; Journal of Pharmacology and Experimental Therapeutics Volume 321 ; 321 ; reingest3.clockss.org:8083 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 2007 ; Journal of Pharmacology and Experimental Therapeutics Volume 322 ; 322 ; reingest4.clockss.org:8082 >
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 2007 ; Journal of Pharmacology and Experimental Therapeutics Volume 323 ; 323 ; reingest5.clockss.org:8082 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 2007 ; Journal of Pharmacology and Experimental Therapeutics Volume 323 ; 323 ; reingest5.clockss.org:8082 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 2008 ; Journal of Pharmacology and Experimental Therapeutics Volume 324 ; 324 ; reingest1.clockss.org:8082 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 2008 ; Journal of Pharmacology and Experimental Therapeutics Volume 325 ; 325 ; reingest2.clockss.org:8085 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 2008 ; Journal of Pharmacology and Experimental Therapeutics Volume 326 ; 326 ; reingest3.clockss.org:8083 >
@@ -542,7 +542,7 @@
     au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1991 ; Molecular Pharmacology Volume 40 ; 40 ; reingest2.clockss.org:8085 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1992 ; Molecular Pharmacology Volume 41 ; 41 ; reingest3.clockss.org:8083 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1992 ; Molecular Pharmacology Volume 42 ; 42 ; reingest4.clockss.org:8082 >
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1993 ; Molecular Pharmacology Volume 43 ; 43 ; reingest5.clockss.org:8082 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 1993 ; Molecular Pharmacology Volume 43 ; 43 ; reingest5.clockss.org:8082 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1993 ; Molecular Pharmacology Volume 44 ; 44 ; reingest1.clockss.org:8082 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1994 ; Molecular Pharmacology Volume 45 ; 45 ; reingest2.clockss.org:8085 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1994 ; Molecular Pharmacology Volume 46 ; 46 ; reingest3.clockss.org:8083 >
@@ -596,8 +596,8 @@
     au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 2017 ; Molecular Pharmacology Volume 92 ; 92 ; reingest3.clockss.org:8083 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 2018 ; Molecular Pharmacology Volume 93 ; 93 ; reingest2.clockss.org:8085 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 2018 ; Molecular Pharmacology Volume 94 ; 94 ; reingest1.clockss.org:8082 >
-    au < aspet.ClockssASPETDrupalPlugin ; ready ; exists ; 2019 ; Molecular Pharmacology Volume 95 ; 95 ; >
-    au < aspet.ClockssASPETDrupalPlugin ; testing ; exists ; 2019 ; Molecular Pharmacology Volume 96 ; 96 ; >
+    au < aspet.ClockssASPETDrupalPlugin ; crawling ; exists ; 2019 ; Molecular Pharmacology Volume 95 ; 95 ; >
+    au < aspet.ClockssASPETDrupalPlugin ; crawling ; exists ; 2019 ; Molecular Pharmacology Volume 96 ; 96 ; >
 
   }
 

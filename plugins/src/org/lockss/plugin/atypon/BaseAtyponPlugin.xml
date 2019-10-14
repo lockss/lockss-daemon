@@ -18,7 +18,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>104</string>
+    <string>105</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -133,6 +133,14 @@
       <string>1,"^https?://%s/toc/%s(\.[0-9]+)?(/\d+)?/%s($|/)", url_host(base_url), journal_id, volume_name</string>
       <string>2,"^https?://%s/doi/([^/]+/)?[0-9.]+/(null\?|[-.9]+$)", url_host(base_url)</string>
       <string>2,"^https?://%s/doi/.*\?(prevSearch=|queryID=%%24%%7BresultBean.queryID%%7D|tab=permissions)", url_host(base_url)</string>
+      <!--
+      10/10/2019
+      "134.173.130.2" [29/Jul/2019:04:15:48 -0700] "GET /doi/suppl/10.2217/fmb.14.49/suppl_file/.49.suppl HTTP/1.1" 404 30647 "http://www.futuremedicine.com/doi/full/10.2217/fmb.14.49"
+      Based on a ServiceNow ticket exchanged with FutureMedicine, the above link generated from their legacy html tag will trigger 404.
+      FutureMedicine like us to exclude all the staff inside "suppl_file" starts with "."(dot) to avoid 404
+      https://www.futuremedicine.com/doi/suppl/10.2217/fmb.14.49/suppl_file/.49.suppl
+      -->
+      <string>2,"^https?://%s/doi/suppl/.*/suppl_file/\.", url_host(base_url)</string>
       <string>1,"^https?://%s/doi/((pdf|pdfplus|full|abs|ref(erences)?|suppl|figure|video[^/]+)/)?[0-9.]+/", url_host(base_url)</string>
       <string>2,"^https?://%s/action/showFullPopup\?doi=.*&amp;id=$", url_host(base_url)</string>
       <string>1,"^https?://%s/action/downloadCitation\?doi=.*&amp;format=ris&amp;include=(cit|abs)$", url_host(base_url)</string>

@@ -548,7 +548,6 @@
     au < frozen ; exists ; 2017 ; 19 ; Scandinavian Journal of Disability Research Volume 19 ; 2017 ; https://www.sjdr.se/ ; >
     au < deepCrawl ; exists ; 2018 ; 20 ; Scandinavian Journal of Disability Research Volume 20 ; 2018 ; https://www.sjdr.se/ ; >
     au < manifest ; exists ; 2019 ; 21 ; Scandinavian Journal of Disability Research Volume 21 ; 2019 ; https://www.sjdr.se/ ; >
-    au < expected ; exists ; 2020 ; 22 ; Scandinavian Journal of Disability Research Volume 22 ; 2020 ; https://www.sjdr.se/ ; >
 
   }
 
@@ -875,7 +874,6 @@
       au < frozen ; exists ; 2016 ; 2 ; Glocality: Undergraduate Academic Journal Volume 2016 ; 2016 ; http://www.glocality.eu/ ; >
       au < deepCrawl ; exists ; 2017 ; 3 ; Glocality: Undergraduate Academic Journal Volume 2017 ; 2017 ; http://www.glocality.eu/ ; >
       au < expected ; exists ; 2019 ; 4 ; Glocality: Undergraduate Academic Journal Volume 2019 ; 2019 ; https://www.glocality.eu/ ; >
-      au < expected ; exists ; 2020 ; 5 ; Glocality: Undergraduate Academic Journal Volume 2020 ; 2020 ; https://www.glocality.eu/ ; >
 
   }
 
@@ -1445,7 +1443,6 @@
       au < frozen ; exists ; 2016 ; 8 ; Present Pasts Volume 2016 ; 2016 ; https://presentpasts.info/ ; >
       au < deepCrawl ; exists ; 2017 ; 9 ; Present Pasts Volume 2017 ; 2017 ; https://presentpasts.info/ ; >
       au < manifest ; exists ; 2019 ; 10 ; Present Pasts Volume 2019 ; 2019 ; https://presentpasts.info/ ; >
-      au < expected ; exists ; 2020 ; 11 ; Present Pasts Volume 2020 ; 2020 ; https://presentpasts.info/ ; >
 
     }
   }
@@ -1645,7 +1642,6 @@
       au < frozen ; exists ; 2017 ; 5 ; eGEMs Volume 2017 ; 2017 ; https://egems.academyhealth.org/ ; >
       au < deepCrawl ; exists ; 2018 ; 6 ; eGEMs Volume 2018 ; 2018 ; https://egems.academyhealth.org/ ; >
       au < crawling ; exists ; 2019 ; 7 ; eGEMs Volume 2019 ; 2019 ; https://egems.academyhealth.org/ ; >
-      au < expected ; exists ; 2020 ; 8 ; eGEMs Volume 2020 ; 2020 ; https://egems.academyhealth.org/ ; >
 
   }
 
@@ -2499,7 +2495,6 @@
       au < frozen ; exists ; 2016 ; 13 ; British and Irish Orthoptic Journal Volume 2016 ; 2016 ; https://www.bioj-online.com/ ; >
       au < frozen ; exists ; 2018 ; 14 ; British and Irish Orthoptic Journal Volume 2018 ; 2018 ; https://www.bioj-online.com/ ; >
       au < crawling ; exists ; 2019 ; 15 ; British and Irish Orthoptic Journal Volume 2019 ; 2019 ; https://www.bioj-online.com/ ; >
-      au < expected ; exists ; 2020 ; 16 ; British and Irish Orthoptic Journal Volume 2020 ; 2020 ; https://www.bioj-online.com/ ; >
 
   }
 
@@ -2591,7 +2586,7 @@
       comment[publisher] = Scandinavian Military Studies
 #      param[base_url] = https://sjms.nu/
 
-      au < manifest ; exists ; 2018 ; 1 ; Scandinavian Military Studies Volume 2018 ; 2018 ; https://sjms.nu/ ; >
+      au < ready ; exists ; 2018 ; 1 ; Scandinavian Military Studies Volume 2018 ; 2018 ; https://sjms.nu/ ; >
       au < manifest ; exists ; 2019 ; 2 ; Scandinavian Military Studies Volume 2019 ; 2019 ; https://sjms.nu/ ; >
 
   }

@@ -62,6 +62,7 @@
       au < HighWirePressH20Plugin ; down ; 2016 ; The Plant Cell Volume 28 ; 28 >
       au < aspb.ASPBDrupalPlugin ; released ; 2017 ; The Plant Cell Volume 29 ; 29 >
       au < aspb.ASPBDrupalPlugin ; manifest ; 2018 ; The Plant Cell Volume 30 ; 30 >
+      au < aspb.ASPBDrupalPlugin ; expected ; 2019 ; The Plant Cell Volume 31 ; 31 >
 
     }
 
@@ -264,6 +265,9 @@
     au < aspb.ASPBDrupalPlugin ; released ; 2018 ; Plant Physiology Volume 176 ; 176 >
     au < aspb.ASPBDrupalPlugin ; released ; 2018 ; Plant Physiology Volume 177 ; 177 >
     au < aspb.ASPBDrupalPlugin ; released ; 2018 ; Plant Physiology Volume 178 ; 178 >
+    au < aspb.ASPBDrupalPlugin ; expected ; 2019 ; Plant Physiology Volume 179 ; 179 >
+    au < aspb.ASPBDrupalPlugin ; expected ; 2019 ; Plant Physiology Volume 180 ; 180 >
+    au < aspb.ASPBDrupalPlugin ; expected ; 2019 ; Plant Physiology Volume 181 ; 181 >
 
   }
 
@@ -297,6 +301,7 @@
       au < down ; 2016 ; The Arabidopsis Book Volume 14 ; 14 >
       au < manifest ; 2017 ; The Arabidopsis Book Volume 15 ; 15 >
       au < manifest ; 2018 ; The Arabidopsis Book Volume 16 ; 16 >
+      au < expected ; 2019 ; The Arabidopsis Book Volume 17 ; 17 >
     }
 
   }
