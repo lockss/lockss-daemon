@@ -68,7 +68,7 @@
     au < finished ; frozen ; 2016 ; Vascular Health and Risk Management Volume 12 ; 12 ; 2016 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Vascular Health and Risk Management Volume 13 ; 13 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Vascular Health and Risk Management Volume 14 ; 14 ; 2018 ; >
-    au < ready ; exists ; 2019 ; Vascular Health and Risk Management Volume 15 ; 15 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; Vascular Health and Risk Management Volume 15 ; 15 ; 2019 ; >
 
   }
 
@@ -197,7 +197,7 @@
     au < finished ; crawling ; 2016 ; Journal of Multidisciplinary Healthcare Volume 9 ; 9 ; 2016 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Journal of Multidisciplinary Healthcare Volume 10 ; 10 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Journal of Multidisciplinary Healthcare Volume 11 ; 11 ; 2018 ; >
-    au < ready ; exists ; 2019 ; Journal of Multidisciplinary Healthcare Volume 12 ; 12 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; Journal of Multidisciplinary Healthcare Volume 12 ; 12 ; 2019 ; >
 
   }
 
@@ -272,7 +272,7 @@
     au < finished ; crawling ; 2016 ; Nanotechnology, Science and Applications Volume 9 ; 9 ; 2016 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Nanotechnology, Science and Applications Volume 10 ; 10 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Nanotechnology, Science and Applications Volume 11 ; 11 ; 2018 ; >
-    au < ready ; exists ; 2019 ; Nanotechnology, Science and Applications Volume 12 ; 12 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; Nanotechnology, Science and Applications Volume 12 ; 12 ; 2019 ; >
 
   }
 
@@ -346,7 +346,7 @@
     au < finished ; crawling ; 2016 ; OncoTargets and Therapy Volume 9 ; 9 ; 2016 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; OncoTargets and Therapy Volume 10 ; 10 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; OncoTargets and Therapy Volume 11 ; 11 ; 2018 ; >
-    au < ready ; exists ; 2019 ; OncoTargets and Therapy Volume 12 ; 12 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; OncoTargets and Therapy Volume 12 ; 12 ; 2019 ; >
 
   }
 
@@ -582,7 +582,7 @@
     au < finished ; crawling ; 2016 ; Clinical, Cosmetic and Investigational Dermatology Volume 9 ; 9 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Clinical, Cosmetic and Investigational Dermatology Volume 10 ; 10 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Clinical, Cosmetic and Investigational Dermatology Volume 11 ; 11 ; 2018 ; >
-    au < ready ; exists ; 2019 ; Clinical, Cosmetic and Investigational Dermatology Volume 12 ; 12 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; Clinical, Cosmetic and Investigational Dermatology Volume 12 ; 12 ; 2019 ; >
 
   }
 
@@ -821,7 +821,7 @@
     au < finished ; crawling ; 2016 ; Clinical Epidemiology Volume 8 ; 8 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Clinical Epidemiology Volume 9 ; 9 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Clinical Epidemiology Volume 10 ; 10 ; 2018 ; >
-    au < ready ; exists ; 2019 ; Clinical Epidemiology Volume 11 ; 11 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; Clinical Epidemiology Volume 11 ; 11 ; 2019 ; >
 
   }
 
@@ -982,7 +982,7 @@
     au < finished ; crawling ; 2016 ; Research and Reports in Urology Volume 8 ; 8 ; 2016 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; Research and Reports in Urology Volume 9 ; 9 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Research and Reports in Urology Volume 10 ; 10 ; 2018 ; >
-    au < ready ; exists ; 2019 ; Research and Reports in Urology Volume 11 ; 11 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; Research and Reports in Urology Volume 11 ; 11 ; 2019 ; >
 
   }
 
@@ -1005,7 +1005,7 @@
     au < finished ; crawling ; 2016 ; Open Access Journal of Clinical Trials Volume 8 ; 8 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Open Access Journal of Clinical Trials Volume 9 ; 9 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Open Access Journal of Clinical Trials Volume 10 ; 10 ; 2018 ; >
-    au < ready ; exists ; 2019 ; Open Access Journal of Clinical Trials Volume 11 ; 11 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; Open Access Journal of Clinical Trials Volume 11 ; 11 ; 2019 ; >
 
   }
 
@@ -1075,7 +1075,7 @@
     au < finished ; crawling ; 2016 ; Clinical, Cosmetic and Investigational Dentistry Volume 8 ; 8 ; 2016 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Clinical, Cosmetic and Investigational Dentistry Volume 9 ; 9 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Clinical, Cosmetic and Investigational Dentistry Volume 10 ; 10 ; 2018 ; >
-    au < ready ; exists ; 2019 ; Clinical, Cosmetic and Investigational Dentistry Volume 11 ; 11 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; Clinical, Cosmetic and Investigational Dentistry Volume 11 ; 11 ; 2019 ; >
 
   }
 
@@ -1521,7 +1521,7 @@
     au < finished ; crawling ; 2016 ; Eye and Brain Volume 8 ; 8 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Eye and Brain Volume 9 ; 9 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Eye and Brain Volume 10 ; 10 ; 2018 ; >
-    au < ready ; exists ; 2019 ; Eye and Brain Volume 11 ; 11 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; Eye and Brain Volume 11 ; 11 ; 2019 ; >
 
   }
 
@@ -1721,7 +1721,7 @@
     au < finished ; crawling ; 2016 ; Core Evidence Volume 11 ; 11 ; 2016 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Core Evidence Volume 12 ; 12 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Core Evidence Volume 13 ; 13 ; 2018 ; >
-    au < ready ; exists ; 2019 ; Core Evidence Volume 14 ; 14 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; Core Evidence Volume 14 ; 14 ; 2019 ; >
 
   }
 
@@ -1961,7 +1961,7 @@
     au < finished ; crawling ; 2016 ; Degenerative Neurological and Neuromuscular Disease Volume 6 ; 6 ; 2016 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; Degenerative Neurological and Neuromuscular Disease Volume 7 ; 7 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Degenerative Neurological and Neuromuscular Disease Volume 8 ; 8 ; 2018 ; >
-    au < ready ; exists ; 2019 ; Degenerative Neurological and Neuromuscular Disease Volume 9 ; 9 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; Degenerative Neurological and Neuromuscular Disease Volume 9 ; 9 ; 2019 ; >
 
   }
 
@@ -2046,7 +2046,7 @@
     au < finished ; crawling ; 2016 ; Pediatric Health, Medicine and Therapeutics Volume 7 ; 7 ; 2016 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Pediatric Health, Medicine and Therapeutics Volume 8 ; 8 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Pediatric Health, Medicine and Therapeutics Volume 9 ; 9 ; 2018 ; >
-    au < ready ; exists ; 2019 ; Pediatric Health, Medicine and Therapeutics Volume 10 ; 10 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; Pediatric Health, Medicine and Therapeutics Volume 10 ; 10 ; 2019 ; >
 
   }
 
@@ -2477,7 +2477,7 @@
     au < finished ; crawling ; 2016 ; Nursing: Research and Reviews Volume 6 ; 6 ; 2016 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; Nursing: Research and Reviews Volume 7 ; 7 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Nursing: Research and Reviews Volume 8 ; 8 ; 2018 ; >
-    au < ready ; exists ; 2019 ; Nursing: Research and Reviews Volume 9 ; 9 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; Nursing: Research and Reviews Volume 9 ; 9 ; 2019 ; >
 
   }
 
@@ -2535,7 +2535,7 @@
     au < finished ; crawling ; 2016 ; Integrated Pharmacy Research and Practice Volume 5 ; 5 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Integrated Pharmacy Research and Practice Volume 6 ; 6 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Integrated Pharmacy Research and Practice Volume 7 ; 7 ; 2018 ; >
-    au < ready ; exists ; 2019 ; Integrated Pharmacy Research and Practice Volume 8 ; 8 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; Integrated Pharmacy Research and Practice Volume 8 ; 8 ; 2019 ; >
 
   }
 
@@ -2797,7 +2797,7 @@
     au < finished ; frozen ; 2016 ; Metalloproteinases In Medicine Volume 3 ; 3 ; 2016 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; Metalloproteinases In Medicine Volume 4 ; 4 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Metalloproteinases In Medicine Volume 5 ; 5 ; 2018 ; >
-    au < ready ; exists ; 2019 ; Metalloproteinases In Medicine Volume 6 ; 6 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; Metalloproteinases In Medicine Volume 6 ; 6 ; 2019 ; >
 
   }
 
@@ -2870,7 +2870,7 @@
     au < finished ; crawling ; 2016 ; Robotic Surgery: Research and Reviews Volume 3 ; 3 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Robotic Surgery: Research and Reviews Volume 4 ; 4 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Robotic Surgery: Research and Reviews Volume 5 ; 5 ; 2018 ; >
-    au < ready ; exists ; 2019 ; Robotic Surgery: Research and Reviews Volume 6 ; 6 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; Robotic Surgery: Research and Reviews Volume 6 ; 6 ; 2019 ; >
 
   }
 

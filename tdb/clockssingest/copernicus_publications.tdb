@@ -400,7 +400,7 @@
       au < finished ; crawling ; 2016 ; 2016 ; Biogeosciences Volume 13 ; 13 ; http://www.biogeosciences.net/ ; http://www.biogeosciences.net/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2017 ; 2017 ; Biogeosciences Volume 14 ; 14 ; https://www.biogeosciences.net/ ; https://www.biogeosciences.net/ ; >
       au < deepCrawl ; exists ; 2018 ; 2018 ; Biogeosciences Volume 15 ; 15 ; https://www.biogeosciences.net/ ; https://www.biogeosciences.net/ ; >
-      au < ready ; exists ; 2019 ; 2019 ; Biogeosciences Volume 16 ; 16 ; https://www.biogeosciences.net/ ; https://www.biogeosciences.net/ ; >
+      au < crawling ; exists ; 2019 ; 2019 ; Biogeosciences Volume 16 ; 16 ; https://www.biogeosciences.net/ ; https://www.biogeosciences.net/ ; >
 
    }
 
@@ -453,7 +453,7 @@
       au < finished ; crawling ; 2016 ; 2016 ; Climate of the Past Volume 12 ; 12 ; http://www.clim-past.net/ ; http://www.climate-of-the-past.net/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; 2017 ; Climate of the Past Volume 13 ; 13 ; https://www.clim-past.net/ ; https://www.climate-of-the-past.net/ ; >
       au < deepCrawl ; exists ; 2018 ; 2018 ; Climate of the Past Volume 14 ; 14 ; https://www.clim-past.net/ ; https://www.climate-of-the-past.net/ ; >
-      au < ready ; exists ; 2019 ; 2019 ; Climate of the Past Volume 15 ; 15 ; https://www.clim-past.net/ ; https://www.climate-of-the-past.net/ ; >
+      au < crawling ; exists ; 2019 ; 2019 ; Climate of the Past Volume 15 ; 15 ; https://www.clim-past.net/ ; https://www.climate-of-the-past.net/ ; >
 
    }
 
@@ -1423,7 +1423,7 @@
       au < frozen ; exists ; 2016 ; 2016 ; Natural Hazards and Earth System Sciences Volume 16 ; 16 ; https://www.nat-hazards-earth-syst-sci.net/ ; https://www.natural-hazards-and-earth-system-sciences.net/ ; >
       au < deepCrawl ; exists ; 2017 ; 2017 ; Natural Hazards and Earth System Sciences Volume 17 ; 17 ; https://www.nat-hazards-earth-syst-sci.net/ ; https://www.natural-hazards-and-earth-system-sciences.net/ ; >
       au < deepCrawl ; exists ; 2018 ; 2018 ; Natural Hazards and Earth System Sciences Volume 18 ; 18 ; https://www.nat-hazards-earth-syst-sci.net/ ; https://www.natural-hazards-and-earth-system-sciences.net/ ; >
-      au < ready ; exists ; 2019 ; 2019 ; Natural Hazards and Earth System Sciences Volume 19 ; 19 ; https://www.nat-hazards-earth-syst-sci.net/ ; https://www.natural-hazards-and-earth-system-sciences.net/ ; >
+      au < crawling ; exists ; 2019 ; 2019 ; Natural Hazards and Earth System Sciences Volume 19 ; 19 ; https://www.nat-hazards-earth-syst-sci.net/ ; https://www.natural-hazards-and-earth-system-sciences.net/ ; >
 
    }
 
@@ -1803,7 +1803,7 @@
       au < finished ; crawling ; 2016 ; 2016 ; The Cryosphere Volume 10 ; 10 ; http://www.the-cryosphere.net/ ; http://www.the-cryosphere.net/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; 2017 ; The Cryosphere Volume 11 ; 11 ; https://www.the-cryosphere.net/ ; https://www.the-cryosphere.net/ ; >
       au < deepCrawl ; exists ; 2018 ; 2018 ; The Cryosphere Volume 12 ; 12 ; https://www.the-cryosphere.net/ ; https://www.the-cryosphere.net/ ; >
-      au < ready ; exists ; 2019 ; 2019 ; The Cryosphere Volume 13 ; 13 ; https://www.the-cryosphere.net/ ; https://www.the-cryosphere.net/ ; >
+      au < crawling ; exists ; 2019 ; 2019 ; The Cryosphere Volume 13 ; 13 ; https://www.the-cryosphere.net/ ; https://www.the-cryosphere.net/ ; >
 
    }
 
