@@ -890,6 +890,23 @@ public class TestDefaultUrlCacher extends LockssTestCase {
 
   // Should throw exception derived from IOException thrown by InputStream
   // in copy()
+  public void testCopyInputErrorUnmapped() throws Exception {
+    InputStream input = new ThrowingInputStream(
+               new StringInputStream("will throw"),
+				       new IOException("Malformed chunk"),
+				       null);
+    ud = new UrlData(input, new CIProperties(), TEST_URL);
+    cacher = new MyDefaultUrlCacher(mau, ud);
+    try {
+      cacher.storeContentIn0(TEST_URL, input, ud.headers, false, null);
+      fail("Copy should have thrown StreamUtil.InputException");
+    } catch (StreamUtil.InputException e) {
+      IOException t = e.getIOCause();
+      assertClass(IOException.class, t);
+      assertEquals("java.io.IOException: Malformed chunk", t.toString());
+    }
+  }
+
   public void testCopyInputError() throws Exception {
     InputStream input = new ThrowingInputStream(
                new StringInputStream("will throw"),
@@ -899,11 +916,28 @@ public class TestDefaultUrlCacher extends LockssTestCase {
     cacher = new MyDefaultUrlCacher(mau, ud);
     try {
       cacher.storeContent();
-      fail("Copy should have thrown");
-    } catch (IOException e) {
+      fail("Copy should have thrown CacheException");
+    } catch (CacheException e) {
+      assertClass(IOException.class, e);
+      assertMatchesRE("UnknownExceptionException: Unmapped exception: java.io.IOException: Malformed chunk", e.toString());
+    }
+  }
+
+  // Should throw exception derived from IOException thrown by InputStream
+  // in close()
+  public void testCopyInputErrorOnCloseUnmapped() throws Exception {
+    InputStream input = new ThrowingInputStream(
+               new StringInputStream("will throw"),
+				       null, new IOException("CRLF expected at end of chunk: -1/-1"));
+    ud = new UrlData(input, new CIProperties(), TEST_URL);
+    cacher = new MyDefaultUrlCacher(mau, ud);
+    try {
+      cacher.storeContentIn0(TEST_URL, input, ud.headers, false, null);
+      fail("Copy should have thrown StreamUtil.InputException");
+    } catch (StreamUtil.InputException e) {
       Throwable t = e.getCause();
       assertClass(IOException.class, t);
-      assertEquals("java.io.IOException: Malformed chunk", t.getMessage());
+      assertEquals("java.io.IOException: CRLF expected at end of chunk: -1/-1", t.toString());
     }
   }
 
@@ -917,11 +951,10 @@ public class TestDefaultUrlCacher extends LockssTestCase {
     cacher = new MyDefaultUrlCacher(mau, ud);
     try {
       cacher.storeContent();
-      fail("Copy should have thrown");
-    } catch (IOException e) {
-      Throwable t = e.getCause();
-      assertClass(IOException.class, t);
-      assertEquals("java.io.IOException: CRLF expected at end of chunk: -1/-1", t.getMessage());
+      fail("Copy should have thrown CacheException");
+    } catch (CacheException e) {
+      assertClass(IOException.class, e);
+      assertMatchesRE("UnknownExceptionException: Unmapped exception: java.io.IOException: CRLF expected at end of chunk: -1/-1", e.toString());
     }
   }
 
