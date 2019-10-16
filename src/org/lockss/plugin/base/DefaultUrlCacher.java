@@ -271,6 +271,39 @@ public class DefaultUrlCacher implements UrlCacher {
     OutputStream os = null;
     boolean currentWasSuspect = isCurrentVersionSuspect();
     try {
+
+      storeContentIn0(url, input, headers, doValidate, redirUrls);
+
+    } catch (StreamUtil.OutputException ex) {
+      abandonNewVersion(leaf);
+      throw resultMap.getRepositoryException(ex.getIOCause());
+    } catch (StreamUtil.InputException ex) {
+      logger.debug("storeContentIn0", ex);
+      IOException ioex = ex.getIOCause();
+      abandonNewVersion(leaf);
+      throw ioex instanceof CacheException
+	? ioex : resultMap.mapException(au, url, ioex, null);
+    } catch (IOException ex) {
+      logger.debug("storeContentIn1", ex);
+      abandonNewVersion(leaf);
+      // XXX some code below here maps the exception
+      throw ex instanceof CacheException
+	? ex : resultMap.mapException(au, url, ex, null);
+    } finally {
+      IOUtil.safeClose(os);
+    }
+  }
+
+  // Seperate so test can check exception before mapping or extracting
+  // cause
+  protected void storeContentIn0(String url, InputStream input,
+				 CIProperties headers,
+				 boolean doValidate, List<String> redirUrls)
+      throws IOException {
+    RepositoryNode leaf = null;
+    OutputStream os = null;
+    boolean currentWasSuspect = isCurrentVersionSuspect();
+    try {
       leaf = repository.createNewNode(url);
       alreadyHasContent = leaf.hasContent();
       leaf.makeNewVersion();
@@ -355,15 +388,6 @@ public class DefaultUrlCacher implements UrlCacher {
 	  raiseAlert(alert);
 	}
       }
-    } catch (StreamUtil.OutputException ex) {
-      abandonNewVersion(leaf);
-      throw resultMap.getRepositoryException(ex.getIOCause());
-    } catch (IOException ex) {
-      logger.debug("storeContentIn1", ex);
-      abandonNewVersion(leaf);
-      // XXX some code below here maps the exception
-      throw ex instanceof CacheException
-	? ex : resultMap.mapException(au, url, ex, null);
     } finally {
       IOUtil.safeClose(os);
     }
