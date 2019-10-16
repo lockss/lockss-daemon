@@ -771,7 +771,7 @@ public class XStreamSerializer extends ObjectSerializer {
         // Keep the default
       }
       ReflectionProvider reflectionProvider = null;
-      if (   (   vendor.contains("Sun")
+      if (   ( true ||  vendor.contains("Sun")
               || vendor.contains("Oracle")
               || vendor.contains("Apple")
               || vendor.contains("Hewlett-Packard")
