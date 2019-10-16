@@ -195,6 +195,13 @@ public class TestHttpResultMap extends LockssTestCase {
 				       "foo");
     assertTrue(exception instanceof CacheException.WarningOnly);
 
+    exception = resultMap.mapException(null, "",
+				       new javax.net.ssl.SSLException("ssl ex"),
+				       "foo");
+    assertTrue(exception.toString(),
+	       exception instanceof
+	       CacheException.RetryableNetworkException_3_30S);
+
     // Unmapped subclass of ContentValidationException should map to what
     // ContentValidationException maps to
     exception = resultMap.mapException(null, "",
