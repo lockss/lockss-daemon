@@ -35,6 +35,7 @@
       param[journal_id] = jocg
 
       au < exists ; 2018 ; Journal of Computational Geometry Volume 9 ; 9 ; 2018 > #Unable to fetch permission page
+      au < expected ; 2019 ; Journal of Computational Geometry Volume 10 ; 10 ; 2019 > #Unable to fetch permission page
 
       }
 
