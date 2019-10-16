@@ -333,6 +333,9 @@ public class HttpResultMap implements CacheResultMap {
     // SocketException
     storeMapEntry(SocketTimeoutException.class,
  		  CacheException.RetryableNetworkException_3_30S.class);
+    // SSL
+    storeMapEntry(javax.net.ssl.SSLException.class,
+ 		  CacheException.RetryableNetworkException_3_30S.class);
     // I don't think these can happen
     storeMapEntry(ProtocolException.class,
  		  CacheException.RetryableNetworkException_3_30S.class);
