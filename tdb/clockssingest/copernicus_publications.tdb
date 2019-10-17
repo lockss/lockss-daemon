@@ -127,7 +127,7 @@
       au < finished ; crawling ; 2016 ; 2016 ; Advances in Science and Research Volume 13 ; 13 ; http://www.adv-sci-res.net/ ; http://www.advances-in-science-and-research.net/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2017 ; 2017 ; Advances in Science and Research Volume 14 ; 14 ; https://www.adv-sci-res.net/ ; https://www.advances-in-science-and-research.net/ ; >
       au < deepCrawl ; exists ; 2018 ; 2018 ; Advances in Science and Research Volume 15 ; 15 ; https://www.adv-sci-res.net/ ; https://www.advances-in-science-and-research.net/ ; >
-      au < ready ; exists ; 2019 ; 2019 ; Advances in Science and Research Volume 16 ; 16 ; https://www.adv-sci-res.net/ ; https://www.advances-in-science-and-research.net/ ; >
+      au < crawling ; exists ; 2019 ; 2019 ; Advances in Science and Research Volume 16 ; 16 ; https://www.adv-sci-res.net/ ; https://www.advances-in-science-and-research.net/ ; >
 
    }
 
@@ -145,7 +145,7 @@
       au < finished ; crawling ; 2016 ; 2016 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 2 ; 2 ; http://www.adv-stat-clim-meteorol-oceanogr.net/ ; http://www.advances-statistical-climatology-meteorology-oceanography.net/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; 2017 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 3 ; 3 ; https://www.adv-stat-clim-meteorol-oceanogr.net/ ; https://www.advances-statistical-climatology-meteorology-oceanography.net/ ; >
       au < deepCrawl ; exists ; 2018 ; 2018 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 4 ; 4 ; https://www.adv-stat-clim-meteorol-oceanogr.net/ ; https://www.advances-statistical-climatology-meteorology-oceanography.net/ ; >
-      au < ready ; exists ; 2019 ; 2019 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 5 ; 5 ; https://www.adv-stat-clim-meteorol-oceanogr.net/ ; https://www.advances-statistical-climatology-meteorology-oceanography.net/ ; >
+      au < crawling ; exists ; 2019 ; 2019 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 5 ; 5 ; https://www.adv-stat-clim-meteorol-oceanogr.net/ ; https://www.advances-statistical-climatology-meteorology-oceanography.net/ ; >
 
    }
 
@@ -759,7 +759,7 @@
       au < frozen ; exists ; 2016 ; 2016 ; E&G Quaternary Science Journal Volume 65 ; 65 ; https://www.eg-quaternary-sci-j.net/ ; https://www.eg-quaternary-science-journal.net/ ; >
       au < finished ; crawling ; 2017 ; 2017 ; E&G Quaternary Science Journal Volume 66 ; 66 ; https://www.eg-quaternary-sci-j.net/ ; https://www.eg-quaternary-science-journal.net/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018 ; 2018 ; E&G Quaternary Science Journal Volume 67 ; 67 ; https://www.eg-quaternary-sci-j.net/ ; https://www.eg-quaternary-science-journal.net/ ; >
-      au < ready ; exists ; 2019 ; 2019 ; E&G Quaternary Science Journal Volume 68 ; 68 ; https://www.eg-quaternary-sci-j.net/ ; https://www.eg-quaternary-science-journal.net/ ; >
+      au < crawling ; exists ; 2019 ; 2019 ; E&G Quaternary Science Journal Volume 68 ; 68 ; https://www.eg-quaternary-sci-j.net/ ; https://www.eg-quaternary-science-journal.net/ ; >
 
   }
 
@@ -1030,7 +1030,7 @@
       au < finished ; crawling ; 2016 ; 2016 ; History of Geo- and Space Sciences Volume 7 ; 7 ; http://www.hist-geo-space-sci.net/ ; http://www.history-of-geo-and-space-sciences.net/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2017 ; 2017 ; History of Geo- and Space Sciences Volume 8 ; 8 ; https://www.hist-geo-space-sci.net/ ; https://www.history-of-geo-and-space-sciences.net/ ; >
       au < deepCrawl ; exists ; 2018 ; 2018 ; History of Geo- and Space Sciences Volume 9 ; 9 ; https://www.hist-geo-space-sci.net/ ; https://www.history-of-geo-and-space-sciences.net/ ; >
-      au < ready ; exists ; 2019 ; 2019 ; History of Geo- and Space Sciences Volume 10 ; 10 ; https://www.hist-geo-space-sci.net/ ; https://www.history-of-geo-and-space-sciences.net/ ; >
+      au < crawling ; exists ; 2019 ; 2019 ; History of Geo- and Space Sciences Volume 10 ; 10 ; https://www.hist-geo-space-sci.net/ ; https://www.history-of-geo-and-space-sciences.net/ ; >
 
    }
 
@@ -1521,7 +1521,7 @@
       au < frozen ; exists ; 2016 ; 2016 ; Ocean Science Volume 12 ; 12 ; https://www.ocean-sci.net/ ; https://www.ocean-science.net/ ; >
       au < deepCrawl ; exists ; 2017 ; 2017 ; Ocean Science Volume 13 ; 13 ; https://www.ocean-sci.net/ ; https://www.ocean-science.net/ ; >
       au < deepCrawl ; exists ; 2018 ; 2018 ; Ocean Science Volume 14 ; 14 ; https://www.ocean-sci.net/ ; https://www.ocean-science.net/ ; >
-      au < ready ; exists ; 2019 ; 2019 ; Ocean Science Volume 15 ; 15 ; https://www.ocean-sci.net/ ; https://www.ocean-science.net/ ; >
+      au < crawling ; exists ; 2019 ; 2019 ; Ocean Science Volume 15 ; 15 ; https://www.ocean-sci.net/ ; https://www.ocean-science.net/ ; >
 
    }
 
@@ -1611,7 +1611,7 @@
       au < frozen ; exists ; 2016 ; 2016 ; Proceedings of the International Association of Hydrological Sciences Volume 374 ; 374 ; https://www.proc-iahs.net/ ; https://www.proceedings-iahs.net/ ; >
       au < finished ; crawling ; 2017 ; 2017 ; Proceedings of the International Association of Hydrological Sciences Volume 375 ; 375 ; https://www.proc-iahs.net/ ; https://www.proceedings-iahs.net/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018 ; 2018 ; Proceedings of the International Association of Hydrological Sciences Volume 376 ; 376 ; https://www.proc-iahs.net/ ; https://www.proceedings-iahs.net/ ; >
-      au < ready ; exists ; 2019 ; 2019 ; Proceedings of the International Association of Hydrological Sciences Volume 377 ; 377 ; https://www.proc-iahs.net/ ; https://www.proceedings-iahs.net/ ; >
+      au < crawling ; exists ; 2019 ; 2019 ; Proceedings of the International Association of Hydrological Sciences Volume 377 ; 377 ; https://www.proc-iahs.net/ ; https://www.proceedings-iahs.net/ ; >
 
    }
 
@@ -1648,7 +1648,7 @@
       au < finished ; crawling ; 2016 ; 2016 ; Scientific Drilling Volume 20 ; 20 ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; 2017 ; Scientific Drilling Volume 21 ; 21 ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ ; >
       au < deepCrawl ; exists ; 2018 ; 2018 ; Scientific Drilling Volume 22 ; 22 ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ ; >
-      au < ready ; exists ; 2019 ; 2019 ; Scientific Drilling Volume 23 ; 23 ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ ; >
+      au < crawling ; exists ; 2019 ; 2019 ; Scientific Drilling Volume 23 ; 23 ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ ; >
 
    }
 
@@ -1687,7 +1687,7 @@
       au < finished ; crawling ; 2016 ; 2016 ; SOIL Volume 2 ; 2 ; http://www.soil-journal.net/ ; http://www.soil-journal.net/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; 2017 ; SOIL Volume 3 ; 3 ; https://www.soil-journal.net/ ; https://www.soil-journal.net/ ; >
       au < deepCrawl ; exists ; 2018 ; 2018 ; SOIL Volume 4 ; 4 ; https://www.soil-journal.net/ ; https://www.soil-journal.net/ ; >
-      au < ready ; exists ; 2019 ; 2019 ; SOIL Volume 5 ; 5 ; https://www.soil-journal.net/ ; https://www.soil-journal.net/ ; >
+      au < crawling ; exists ; 2019 ; 2019 ; SOIL Volume 5 ; 5 ; https://www.soil-journal.net/ ; https://www.soil-journal.net/ ; >
 
    }
 
@@ -1875,7 +1875,7 @@
       au < finished ; crawling ; 2016 ; 2016 ; Wind Energy Science Volume 1 ; 1 ; https://www.wind-energ-sci.net/ ; https://www.wind-energy-science.net/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2017 ; 2017 ; Wind Energy Science Volume 2 ; 2 ; https://www.wind-energ-sci.net/ ; https://www.wind-energy-science.net/ ; >
       au < deepCrawl ; exists ; 2018 ; 2018 ; Wind Energy Science Volume 3 ; 3 ; https://www.wind-energ-sci.net/ ; https://www.wind-energy-science.net/ ; >
-      au < ready ; exists ; 2019 ; 2019 ; Wind Energy Science Volume 4 ; 4 ; https://www.wind-energ-sci.net/ ; https://www.wind-energy-science.net/ ; >
+      au < crawling ; exists ; 2019 ; 2019 ; Wind Energy Science Volume 4 ; 4 ; https://www.wind-energ-sci.net/ ; https://www.wind-energy-science.net/ ; >
 
    }
 
