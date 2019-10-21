@@ -46,30 +46,65 @@ import org.w3c.dom.Node;
 
 /**
  *  A helper class that defines a schema for Casalini Libri
- *  Monographs which were delivred with a monographs.mrc
- *  marc data record collection which we turned in to a marcxml 21
- *  XML file 
- *  @author alexohlson
+ *  Please see MARC21 schema: http://www.loc.gov/marc/bibliographic/
  */
 public class CasaliniMarcXmlSchemaHelper
 implements SourceXmlSchemaHelper {
   static Logger log = Logger.getLogger(CasaliniMarcXmlSchemaHelper.class);
-  
 
-  
-  //MARCXML is opaque. Each item is a datafield with a numbered tag
-  // with values stored in subfields identified by a code, eg
-  // <marc:datafield tag="097" ind1="0" ind2=" ">
-  //    <marc:subfield code="a">2249531</marc:subfield>
-  //    <marc:subfield code="b">015</marc:subfield>
-  //    <marc:subfield code="c">2279430</marc:subfield>
-  //    <marc:subfield code="d">0001</marc:subfield>
-  // </marc:datafield>
-  // Define tags/codes here for the bits we can use
+  /*
+    <collection xmlns="http://www.loc.gov/MARC21/slim">
+	<record>
+		<leader>00938nab a2200229 i 4500</leader>
+		<controlfield tag="001">000002194804</controlfield>
+		<controlfield tag="003">ItFiC</controlfield>
+		<controlfield tag="005">20070508000000.0</controlfield>
+		<controlfield tag="006">m        d        </controlfield>
+		<controlfield tag="007">cr uuu---uuuuu</controlfield>
+		<controlfield tag="008">091114s2000    xx uu   s    u0    0und c</controlfield>
+		<datafield ind1=" " ind2=" " tag="040">
+			<subfield code="a">ItFiC</subfield>
+			<subfield code="b">eng</subfield>
+			<subfield code="c">ItFiC</subfield>
+		</datafield>
+		<datafield ind1="0" ind2=" " tag="097">
+			<subfield code="a">2193101</subfield>
+			<subfield code="b">012</subfield>
+			<subfield code="c">2194804</subfield>
+			<subfield code="d">004</subfield>
+		</datafield>
+		<datafield ind1="0" ind2="0" tag="245">
+			<subfield code="a">Psicoterapia e scienze umane. Fascicolo 4, 2000.</subfield>
+		</datafield>
+		<datafield ind1=" " ind2=" " tag="260">
+			<subfield code="a">Milano :</subfield>
+			<subfield code="b">Franco Angeli,</subfield>
+			<subfield code="c">2000.</subfield>
+		</datafield>
+		<datafield ind1="0" ind2=" " tag="773">
+			<subfield code="t">Psicoterapia e scienze umane.</subfield>
+			<subfield code="d">Milano : Franco Angeli </subfield>
+			<subfield code="x">1972-5043</subfield>
+			<subfield code="w">()2193101</subfield>
+		</datafield>
+		<datafield ind1="4" ind2="0" tag="856">
+			<subfield code="u">http://digital.casalini.it/2194804</subfield>
+		</datafield>
+		<datafield ind1=" " ind2=" " tag="900">
+			<subfield code="a">(c) Casalini Libri, 50014 Fiesole (Italy) - www.casalini.it</subfield>
+		</datafield>
+		<datafield ind1=" " ind2=" " tag="910">
+			<subfield code="a">aBibliographic data</subfield>
+			<subfield code="e">Torrossa Fulltext Resource</subfield>
+			<subfield code="g">Casalini Libri</subfield>
+		</datafield>
+	</record>
+	</collection>
+   */
+
   private static final String ISBN_TAG ="020";
   private static final String isbn_code ="a";
-  
-  private static final String LOCATOR1_TAG ="092";
+
   private static final String LOCATOR2_TAG ="097";
   private static final String dir_code ="a";
   private static final String file_code ="c";
@@ -85,11 +120,6 @@ implements SourceXmlSchemaHelper {
 
   private static final String NAME_TAG ="700";
   private static final String name_code ="a";
-  
-  private static final String ID_TAG ="773";
-    private static final String isbn_id_code ="z";
-  
-  
 
   // A top level for the worksheet table is
   private static String MARC_record = "/collection/record";
@@ -101,15 +131,12 @@ implements SourceXmlSchemaHelper {
   public static String MARC_file =  
       "datafield[@tag = \"" + LOCATOR2_TAG + "\"]" +
           "/subfield[@code = \"" + file_code + "\"]";
-  private static String MARC_id_isbn =  
-      "datafield[@tag = \"" + ID_TAG + "\"]" +
-          "/subfield[@code = \"" + isbn_id_code + "\"]";
   public static String MARC_isbn =  
       "datafield[@tag = \"" + ISBN_TAG + "\"]" +
           "/subfield[@code = \"" + isbn_code + "\"]";
   public static String MARC_title = 
       "datafield[@tag = \"" + TITLE_TAG + "\"]" +
-          "/subfield[@code = \"" + title_code + "\"]";
+          "/subfield[@code=\"" + title_code + "\"]";
   public static String MARC_subtitle = 
       "datafield[@tag = \"" + TITLE_TAG + "\"]" +
           "/subfield[@code = \"" + subtitle_code + "\"]";
@@ -125,22 +152,7 @@ implements SourceXmlSchemaHelper {
   private static String MARC_altauthor = 
       "datafield[@tag = \"" + TITLE_TAG + "\"]" +
           "/subfield[@code = \"" + author_code + "\"]";
-  
-  
-  /*
-   *  Put date in to a format we want
-   *  Variants given to us are:
-   *  2000
-   *  2000 (printed 1999)
-   *  2000.
-   *  2000-
-   *  2000-2002
-   *  2000 (2005 printing)
-   *  [2000]
-   *  Strip off punctuation
-   *  Take the first four digit year date
-   */
-  
+
   static private final NodeValue ADATE_VALUE = new NodeValue() {
     @Override
     public String getValue(Node node) {
@@ -177,19 +189,19 @@ implements SourceXmlSchemaHelper {
    */
 
   /* 1.  MAP associating xpath with value type with evaluator */
-  static private final Map<String,XPathValue> casalini_articleMap = 
+  static private final Map<String,XPathValue> casalini_articleMap =
       new HashMap<String,XPathValue>();
   static {
+
     casalini_articleMap.put(MARC_isbn, ISBN_VALUE);
-    casalini_articleMap.put(MARC_id_isbn, ISBN_VALUE);
-    casalini_articleMap.put(MARC_title, TITLE_VALUE);
-    casalini_articleMap.put(MARC_subtitle, TITLE_VALUE);
+    casalini_articleMap.put(MARC_title, XmlDomMetadataExtractor.TEXT_VALUE);
     casalini_articleMap.put(MARC_publisher, XmlDomMetadataExtractor.TEXT_VALUE);
     casalini_articleMap.put(MARC_pub_date,  ADATE_VALUE);
     casalini_articleMap.put(MARC_author, XmlDomMetadataExtractor.TEXT_VALUE);
     casalini_articleMap.put(MARC_dir, XmlDomMetadataExtractor.TEXT_VALUE);
     casalini_articleMap.put(MARC_file, XmlDomMetadataExtractor.TEXT_VALUE);
     casalini_articleMap.put(MARC_altauthor, XmlDomMetadataExtractor.TEXT_VALUE);
+
   }
 
   /* 2. there is only one XML file */
@@ -203,12 +215,7 @@ implements SourceXmlSchemaHelper {
    */
   private static final MultiValueMap cookMap = new MultiValueMap();
   static {
-    // More of the records have this rather than the MARC_isbn
-    // postCookProcess to add in missing values from raw data
-    cookMap.put(MARC_id_isbn, MetadataField.FIELD_ISBN);
-    // we defer attributing this until postCookProcess when we can 
-    // determin if it is an article (chapter) title or a publication title
-    //cookMap.put(MARC_title, MetadataField.FIELD_PUBLICATION_TITLE);
+    cookMap.put(MARC_title, MetadataField.FIELD_PUBLICATION_TITLE);
     cookMap.put(MARC_author, MetadataField.FIELD_AUTHOR);
     cookMap.put(MARC_publisher, MetadataField.FIELD_PUBLISHER);
     cookMap.put(MARC_pub_date, MetadataField.FIELD_DATE);

@@ -63,11 +63,12 @@ public class CasaliniLibriMarcXmlMetadataExtractorFactory extends SourceXmlMetad
 
     @Override
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
-      // Once you have it, just keep returning the same one. It won't change.
-      if (CasaliniHelper != null) {
-        return CasaliniHelper;
+      // They upload two xml source files, and we are only interested in article related xml for metadata
+      // psicoterapia_scienze_umane_issues_20191014.xml
+      // psicoterapia_scienze_umane_articles_20191014.xml
+      if  (CasaliniHelper == null && cu.getUrl().indexOf("articles") > -1) {
+        CasaliniHelper = new CasaliniMarcXmlSchemaHelper();
       }
-      CasaliniHelper = new CasaliniMarcXmlSchemaHelper();
       return CasaliniHelper;
     }
     
