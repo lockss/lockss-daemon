@@ -46,7 +46,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Acta Biochimica et Biophysica Sinica Volume 47 ; 47 >
     au < released ; 2016 ; 2016 ; Acta Biochimica et Biophysica Sinica Volume 48 ; 48 >
     au < released ; 2017 ; 2017 ; Acta Biochimica et Biophysica Sinica Volume 49 ; 49 >
-    au < manifest ; 2018 ; 2018 ; Acta Biochimica et Biophysica Sinica Volume 50 ; 50 >
+    au < ready ; 2018 ; 2018 ; Acta Biochimica et Biophysica Sinica Volume 50 ; 50 >
     au < manifest ; 2019 ; 2019 ; Acta Biochimica et Biophysica Sinica Volume 51 ; 51 >
 
   }
@@ -331,7 +331,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Age and Ageing Volume 44 ; 44 >
     au < released ; 2016 ; 2016 ; Age and Ageing Volume 45 ; 45 >
     au < released ; 2017 ; 2017 ; Age and Ageing Volume 46 ; 46 >
-    au < manifest ; 2018 ; 2018 ; Age and Ageing Volume 47 ; 47 >
+    au < ready ; 2018 ; 2018 ; Age and Ageing Volume 47 ; 47 >
     au < manifest ; 2019 ; 2019 ; Age and Ageing Volume 48 ; 48 >
 
   }
@@ -760,7 +760,7 @@
     au < manifest ; 2015 ; 2015 ; American Journal of Health-System Pharmacy Volume 72 ; 72 >
     au < released ; 2016 ; 2016 ; American Journal of Health-System Pharmacy Volume 73 ; 73 >
     au < released ; 2017 ; 2017 ; American Journal of Health-System Pharmacy Volume 74 ; 74 >
-    au < manifest ; 2018 ; 2018 ; American Journal of Health-System Pharmacy Volume 75 ; 75 >
+    au < ready ; 2018 ; 2018 ; American Journal of Health-System Pharmacy Volume 75 ; 75 >
     au < manifest ; 2019 ; 2019 ; American Journal of Health-System Pharmacy Volume 76 ; 76 >
 
   }
@@ -806,7 +806,7 @@
     au < doNotProcess ; 2015 ; 2015 ; American Journal of Hypertension Volume 28 ; 28 >
     au < released ; 2016 ; 2016 ; American Journal of Hypertension Volume 29 ; 29 >
     au < released ; 2017 ; 2017 ; American Journal of Hypertension Volume 30 ; 30 >
-    au < manifest ; 2018 ; 2018 ; American Journal of Hypertension Volume 31 ; 31 >
+    au < ready ; 2018 ; 2018 ; American Journal of Hypertension Volume 31 ; 31 >
     au < manifest ; 2019 ; 2019 ; American Journal of Hypertension Volume 32 ; 32 >
 
   }
@@ -1042,10 +1042,10 @@
     au < released ; 2012 ; 2012 ; Animal Frontiers Volume 2 ; 2 >
     au < released ; 2013 ; 2013 ; Animal Frontiers Volume 3 ; 3 >
     au < released ; 2014 ; 2014 ; Animal Frontiers Volume 4 ; 4 >
-    au < manifest ; 2015 ; 2015 ; Animal Frontiers Volume 5 ; 5 >
+    au < ready ; 2015 ; 2015 ; Animal Frontiers Volume 5 ; 5 >
     au < released ; 2016 ; 2016 ; Animal Frontiers Volume 6 ; 6 >
     au < released ; 2017 ; 2017 ; Animal Frontiers Volume 7 ; 7 >
-    au < manifest ; 2018 ; 2018 ; Animal Frontiers Volume 8 ; 8 >
+    au < ready ; 2018 ; 2018 ; Animal Frontiers Volume 8 ; 8 >
     au < manifest ; 2019 ; 2019 ; Animal Frontiers Volume 9 ; 9 >
 
   }
@@ -1286,7 +1286,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Annals of Oncology Volume 26 ; 26 >
     au < released ; 2016 ; 2016 ; Annals of Oncology Volume 27 ; 27 >
     au < released ; 2017 ; 2017 ; Annals of Oncology Volume 28 ; 28 >
-    au < manifest ; 2018 ; 2018 ; Annals of Oncology Volume 29 ; 29 >
+    au < ready ; 2018 ; 2018 ; Annals of Oncology Volume 29 ; 29 >
     au < manifest ; 2019 ; 2019 ; Annals of Oncology Volume 30 ; 30 >
 
   }
@@ -2059,7 +2059,7 @@
     au < doNotProcess ; 2015 ; 2015 ; BioScience Volume 65 ; 65 >
     au < released ; 2016 ; 2016 ; BioScience Volume 66 ; 66 >
     au < released ; 2017 ; 2017 ; BioScience Volume 67 ; 67 >
-    au < manifest ; 2018 ; 2018 ; BioScience Volume 68 ; 68 >
+    au < ready ; 2018 ; 2018 ; BioScience Volume 68 ; 68 >
     au < manifest ; 2019 ; 2019 ; BioScience Volume 69 ; 69 >
 
   }
@@ -2190,7 +2190,7 @@
     #this title was ONLY in the publisher listing
     au < released ; 2016 ; 2016 ; Biology Methods and Protocols Volume 1 ; 1 >
     au < released ; 2017 ; 2017 ; Biology Methods and Protocols Volume 2 ; 2 >
-    au < manifest ; 2018 ; 2018 ; Biology Methods and Protocols Volume 3 ; 3 >
+    au < ready ; 2018 ; 2018 ; Biology Methods and Protocols Volume 3 ; 3 >
     au < manifest ; 2019 ; 2019 ; Biology Methods and Protocols Volume 4 ; 4 >
 
   }
@@ -2451,9 +2451,9 @@
     #this title was ONLY in the publisher listing
     #content available from 1856 volume 1 to 2009 volume 161
 
-    au < manifest ; 2010 ; 2010 ; Botanical Journal of the Linnean Society Volume 162-164 ; 162-164 >
+    au < ready ; 2010 ; 2010 ; Botanical Journal of the Linnean Society Volume 162-164 ; 162-164 >
     au < released ; 2011 ; 2011 ; Botanical Journal of the Linnean Society Volume 165-167 ; 165-167 >
-    au < manifest ; 2012 ; 2012 ; Botanical Journal of the Linnean Society Volume 168-170 ; 168-170 >
+    au < ready ; 2012 ; 2012 ; Botanical Journal of the Linnean Society Volume 168-170 ; 168-170 >
     au < manifest ; 2013 ; 2013 ; Botanical Journal of the Linnean Society Volume 171-173 ; 171-173 >
     au < released ; 2014 ; 2014 ; Botanical Journal of the Linnean Society Volume 174-176 ; 174-176 >
     au < manifest ; 2015 ; 2015 ; Botanical Journal of the Linnean Society Volume 177-179 ; 177-179 >
@@ -2615,7 +2615,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Brain Volume 138 ; 138 >
     au < released ; 2016 ; 2016 ; Brain Volume 139 ; 139 >
     au < released ; 2017 ; 2017 ; Brain Volume 140 ; 140 >
-    au < manifest ; 2018 ; 2018 ; Brain Volume 141 ; 141 >
+    au < ready ; 2018 ; 2018 ; Brain Volume 141 ; 141 >
     au < manifest ; 2019 ; 2019 ; Brain Volume 142 ; 142 >
 
   }
@@ -2785,7 +2785,7 @@
     au < doNotProcess ; 2015 ; 2015 ; British Medical Bulletin Volume 113-116 ; 113-116 >
     au < released ; 2016 ; 2016 ; British Medical Bulletin Volume 117-120 ; 117-120 >
     au < released ; 2017 ; 2017 ; British Medical Bulletin Volume 121-124 ; 121-124 >
-    au < manifest ; 2018 ; 2018 ; British Medical Bulletin Volume 125-127 ; 125-127 >
+    au < ready ; 2018 ; 2018 ; British Medical Bulletin Volume 125-127 ; 125-127 >
     au < manifest ; 2019 ; 2019 ; British Medical Bulletin Volume 128-130 ; 128-130 >
 
   }
@@ -3010,7 +3010,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Capital Markets Law Journal Volume 10 ; 10 >
     au < released ; 2016 ; 2016 ; Capital Markets Law Journal Volume 11 ; 11 >
     au < released ; 2017 ; 2017 ; Capital Markets Law Journal Volume 12 ; 12 >
-    au < manifest ; 2018 ; 2018 ; Capital Markets Law Journal Volume 13 ; 13 >
+    au < ready ; 2018 ; 2018 ; Capital Markets Law Journal Volume 13 ; 13 >
     au < manifest ; 2019 ; 2019 ; Capital Markets Law Journal Volume 14 ; 14 >
 
   }
@@ -3131,7 +3131,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Cardiovascular Research Volume 105-108 ; 105-108 >
     au < released ; 2016 ; 2016 ; Cardiovascular Research Volume 109-112 ; 109-112 >
     au < released ; 2017 ; 2017 ; Cardiovascular Research Volume 113 ; 113 >
-    au < manifest ; 2018 ; 2018 ; Cardiovascular Research Volume 114 ; 114 >
+    au < ready ; 2018 ; 2018 ; Cardiovascular Research Volume 114 ; 114 >
     au < manifest ; 2019 ; 2019 ; Cardiovascular Research Volume 115 ; 115 >
 
   }
@@ -3358,7 +3358,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 21 ; 21 >
     au < released ; 2016 ; 2016 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 22 ; 22 >
     au < released ; 2017 ; 2017 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 23 ; 23 >
-    au < manifest ; 2018 ; 2018 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 24 ; 24 >
+    au < ready ; 2018 ; 2018 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 24 ; 24 >
     au < manifest ; 2019 ; 2019 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 25 ; 25 >
 
   }
@@ -3465,7 +3465,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Clinical Kidney Journal Volume 8 ; 8 >
     au < released ; 2016 ; 2016 ; Clinical Kidney Journal Volume 9 ; 9 >
     au < released ; 2017 ; 2017 ; Clinical Kidney Journal Volume 10 ; 10 >
-    au < manifest ; 2018 ; 2018 ; Clinical Kidney Journal Volume 11 ; 11 >
+    au < ready ; 2018 ; 2018 ; Clinical Kidney Journal Volume 11 ; 11 >
     au < manifest ; 2019 ; 2019 ; Clinical Kidney Journal Volume 12 ; 12 >
 
   }
@@ -3616,7 +3616,7 @@
     au < manifest ; 2011 ; 2011 ; The Condor: Ornithological Applications Volume 113 ; 113 >
     au < released ; 2012 ; 2012 ; The Condor: Ornithological Applications Volume 114 ; 114 >
     au < manifest ; 2013 ; 2013 ; The Condor: Ornithological Applications Volume 115 ; 115 >
-    au < manifest ; 2014 ; 2014 ; The Condor: Ornithological Applications Volume 116 ; 116 >
+    au < ready ; 2014 ; 2014 ; The Condor: Ornithological Applications Volume 116 ; 116 >
     au < released ; 2015 ; 2015 ; The Condor: Ornithological Applications Volume 117 ; 117 >
     au < released ; 2016 ; 2016 ; The Condor: Ornithological Applications Volume 118 ; 118 >
     au < released ; 2017 ; 2017 ; The Condor: Ornithological Applications Volume 119 ; 119 >
@@ -3776,7 +3776,7 @@
     param[journal_id] = cdn
 
     au < released ; 2017 ; 2017 ; Current Developments in Nutrition Volume 1 ; 1 >
-    au < manifest ; 2018 ; 2018 ; Current Developments in Nutrition Volume 2 ; 2 >
+    au < ready ; 2018 ; 2018 ; Current Developments in Nutrition Volume 2 ; 2 >
     au < manifest ; 2019 ; 2019 ; Current Developments in Nutrition Volume 3 ; 3 >
 
   }
@@ -3818,7 +3818,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Current Legal Problems Volume 68 ; 68 >
     au < released ; 2016 ; 2016 ; Current Legal Problems Volume 69 ; 69 >
     au < released ; 2017 ; 2017 ; Current Legal Problems Volume 70 ; 70 >
-    au < manifest ; 2018 ; 2018 ; Current Legal Problems Volume 71 ; 71 >
+    au < ready ; 2018 ; 2018 ; Current Legal Problems Volume 71 ; 71 >
     au < expected ; 2019 ; 2019 ; Current Legal Problems Volume 72 ; 72 >
 
   }
@@ -3833,14 +3833,14 @@
 
     param[journal_id] = cz
 
-    au < manifest ; 2011 ; 2011 ; Current Zoology Volume 57 ; 57 >
+    au < ready ; 2011 ; 2011 ; Current Zoology Volume 57 ; 57 >
     au < released ; 2012 ; 2012 ; Current Zoology Volume 58 ; 58 >
-    au < manifest ; 2013 ; 2013 ; Current Zoology Volume 59 ; 59 >
-    au < manifest ; 2014 ; 2014 ; Current Zoology Volume 60 ; 60 >
-    au < manifest ; 2015 ; 2015 ; Current Zoology Volume 61 ; 61 >
+    au < ready ; 2013 ; 2013 ; Current Zoology Volume 59 ; 59 >
+    au < ready ; 2014 ; 2014 ; Current Zoology Volume 60 ; 60 >
+    au < ready ; 2015 ; 2015 ; Current Zoology Volume 61 ; 61 >
     au < released ; 2016 ; 2016 ; Current Zoology Volume 62 ; 62 >
     au < released ; 2017 ; 2017 ; Current Zoology Volume 63 ; 63 >
-    au < manifest ; 2018 ; 2018 ; Current Zoology Volume 64 ; 64 >
+    au < ready ; 2018 ; 2018 ; Current Zoology Volume 64 ; 64 >
     au < manifest ; 2019 ; 2019 ; Current Zoology Volume 65 ; 65 >
 
   }
@@ -3904,7 +3904,7 @@
     au < manifest ; 2015 ; 2015 ; Database Volume 2015 ; 2015 >
     au < released ; 2016 ; 2016 ; Database Volume 2016 ; 2016 >
     au < released ; 2017 ; 2017 ; Database Volume 2017 ; 2017 >
-    au < manifest ; 2018 ; 2018 ; Database Volume 2018 ; 2018 >
+    au < ready ; 2018 ; 2018 ; Database Volume 2018 ; 2018 >
     au < manifest ; 2019 ; 2019 ; Database Volume 2019 ; 2019 >
 
   }
@@ -3944,8 +3944,8 @@
     au < exists ; 2007 ; 2007 ; Digital Scholarship in the Humanities Volume 22 ; 22 >
     au < manifest ; 2008 ; 2008 ; Digital Scholarship in the Humanities Volume 23 ; 23 >
     au < manifest ; 2009 ; 2009 ; Digital Scholarship in the Humanities Volume 24 ; 24 >
-    au < manifest ; 2010 ; 2010 ; Digital Scholarship in the Humanities Volume 25 ; 25 >
-    au < manifest ; 2011 ; 2011 ; Digital Scholarship in the Humanities Volume 26 ; 26 >
+    au < ready ; 2010 ; 2010 ; Digital Scholarship in the Humanities Volume 25 ; 25 >
+    au < ready ; 2011 ; 2011 ; Digital Scholarship in the Humanities Volume 26 ; 26 >
     au < manifest ; 2012 ; 2012 ; Digital Scholarship in the Humanities Volume 27 ; 27 >
     au < released ; 2013 ; 2013 ; Digital Scholarship in the Humanities Volume 28 ; 28 >
     au < manifest ; 2014 ; 2014 ; Digital Scholarship in the Humanities Volume 29 ; 29 >
@@ -4047,9 +4047,9 @@
     au < manifest ; 2008 ; 2008 ; Diseases of the Esophagus Volume 21 ; 21 >
     au < released ; 2009 ; 2009 ; Diseases of the Esophagus Volume 22 ; 22 >
     au < manifest ; 2010 ; 2010 ; Diseases of the Esophagus Volume 23 ; 23 >
-    au < manifest ; 2011 ; 2011 ; Diseases of the Esophagus Volume 24 ; 24 >
+    au < ready ; 2011 ; 2011 ; Diseases of the Esophagus Volume 24 ; 24 >
     au < released ; 2012 ; 2012 ; Diseases of the Esophagus Volume 25 ; 25 >
-    au < manifest ; 2013 ; 2013 ; Diseases of the Esophagus Volume 26 ; 26 >
+    au < ready ; 2013 ; 2013 ; Diseases of the Esophagus Volume 26 ; 26 >
     au < manifest ; 2014 ; 2014 ; Diseases of the Esophagus Volume 27 ; 27 >
     au < manifest ; 2015 ; 2015 ; Diseases of the Esophagus Volume 28 ; 28 >
     au < released ; 2016 ; 2016 ; Diseases of the Esophagus Volume 29 ; 29 >
@@ -4300,12 +4300,12 @@
     au < exists ; 2006 ; 2006 ; The Econometrics Journal Volume 9 ; 9 >
     au < exists ; 2007 ; 2007 ; The Econometrics Journal Volume 10 ; 10 >
     au < manifest ; 2008 ; 2008 ; The Econometrics Journal Volume 11 ; 11 >
-    au < manifest ; 2009 ; 2009 ; The Econometrics Journal Volume 12 ; 12 >
-    au < manifest ; 2010 ; 2010 ; The Econometrics Journal Volume 13 ; 13 >
+    au < ready ; 2009 ; 2009 ; The Econometrics Journal Volume 12 ; 12 >
+    au < ready ; 2010 ; 2010 ; The Econometrics Journal Volume 13 ; 13 >
     au < manifest ; 2011 ; 2011 ; The Econometrics Journal Volume 14 ; 14 >
     au < manifest ; 2012 ; 2012 ; The Econometrics Journal Volume 15 ; 15 >
     au < manifest ; 2013 ; 2013 ; The Econometrics Journal Volume 16 ; 16 >
-    au < manifest ; 2014 ; 2014 ; The Econometrics Journal Volume 17 ; 17 >
+    au < ready ; 2014 ; 2014 ; The Econometrics Journal Volume 17 ; 17 >
     au < manifest ; 2015 ; 2015 ; The Econometrics Journal Volume 18 ; 18 >
     au < released ; 2016 ; 2016 ; The Econometrics Journal Volume 19 ; 19 >
     au < released ; 2017 ; 2017 ; The Econometrics Journal Volume 20 ; 20 >
@@ -4444,12 +4444,12 @@
     au < exists ; 2007 ; 2007 ; The Economic Journal Volume 117 ; 117 >
     au < manifest ; 2008 ; 2008 ; The Economic Journal Volume 118 ; 118 >
     au < manifest ; 2009 ; 2009 ; The Economic Journal Volume 119 ; 119 >
-    au < manifest ; 2010 ; 2010 ; The Economic Journal Volume 120 ; 120 >
+    au < ready ; 2010 ; 2010 ; The Economic Journal Volume 120 ; 120 >
     au < released ; 2011 ; 2011 ; The Economic Journal Volume 121 ; 121 >
-    au < manifest ; 2012 ; 2012 ; The Economic Journal Volume 122 ; 122 >
+    au < ready ; 2012 ; 2012 ; The Economic Journal Volume 122 ; 122 >
     au < manifest ; 2013 ; 2013 ; The Economic Journal Volume 123 ; 123 >
     au < released ; 2014 ; 2014 ; The Economic Journal Volume 124 ; 124 >
-    au < manifest ; 2015 ; 2015 ; The Economic Journal Volume 125 ; 125 >
+    au < ready ; 2015 ; 2015 ; The Economic Journal Volume 125 ; 125 >
     au < released ; 2016 ; 2016 ; The Economic Journal Volume 126 ; 126 >
     au < released ; 2017 ; 2017 ; The Economic Journal Volume 127 ; 127 >
     au < manifest ; 2018 ; 2018 ; The Economic Journal Volume 128 ; 128 >
@@ -5470,7 +5470,7 @@
     au < doNotProcess ; 2015 ; 2015 ; FEMS Microbiology Ecology Volume 91 ; 91 >
     au < released ; 2016 ; 2016 ; FEMS Microbiology Ecology Volume 92 ; 92 >
     au < released ; 2017 ; 2017 ; FEMS Microbiology Ecology Volume 93 ; 93 >
-    au < manifest ; 2018 ; 2018 ; FEMS Microbiology Ecology Volume 94 ; 94 >
+    au < ready ; 2018 ; 2018 ; FEMS Microbiology Ecology Volume 94 ; 94 >
     au < manifest ; 2019 ; 2019 ; FEMS Microbiology Ecology Volume 95 ; 95 >
 
   }
@@ -6252,7 +6252,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Genome Biology and Evolution Volume 7 ; 7 >
     au < released ; 2016 ; 2016 ; Genome Biology and Evolution Volume 8 ; 8 >
     au < manifest ; 2017 ; 2017 ; Genome Biology and Evolution Volume 9 ; 9 > # 403 error on cdn back file
-    au < manifest ; 2018 ; 2018 ; Genome Biology and Evolution Volume 10 ; 10 >
+    au < ready ; 2018 ; 2018 ; Genome Biology and Evolution Volume 10 ; 10 >
     au < manifest ; 2019 ; 2019 ; Genome Biology and Evolution Volume 11 ; 11 >
 
   }
@@ -6328,7 +6328,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Geophysical Journal International Volume 200-203 ; 200-203 >
     au < released ; 2016 ; 2016 ; Geophysical Journal International Volume 204-207 ; 204-207 >
     au < released ; 2017 ; 2017 ; Geophysical Journal International Volume 208-211 ; 208-211 >
-    au < manifest ; 2018 ; 2018 ; Geophysical Journal International Volume 212-215 ; 212-215 >
+    au < ready ; 2018 ; 2018 ; Geophysical Journal International Volume 212-215 ; 212-215 >
     au < manifest ; 2019 ; 2019 ; Geophysical Journal International Volume 216-219 ; 216-219 >
 
   }
@@ -6424,7 +6424,7 @@
     au < doNotProcess ; 2015 ; 2015 ; German History Volume 33 ; 33 >
     au < released ; 2016 ; 2016 ; German History Volume 34 ; 34 >
     au < released ; 2017 ; 2017 ; German History Volume 35 ; 35 >
-    au < manifest ; 2018 ; 2018 ; German History Volume 36 ; 36 >
+    au < ready ; 2018 ; 2018 ; German History Volume 36 ; 36 >
     au < manifest ; 2019 ; 2019 ; German History Volume 37 ; 37 >
 
   }
@@ -6707,7 +6707,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Health Promotion International Volume 30 ; 30 >
     au < released ; 2016 ; 2016 ; Health Promotion International Volume 31 ; 31 >
     au < released ; 2017 ; 2017 ; Health Promotion International Volume 32 ; 32 >
-    au < manifest ; 2018 ; 2018 ; Health Promotion International Volume 33 ; 33 >
+    au < ready ; 2018 ; 2018 ; Health Promotion International Volume 33 ; 33 >
     au < manifest ; 2019 ; 2019 ; Health Promotion International Volume 34 ; 34 >
 
   }
@@ -6765,7 +6765,7 @@
     au < doNotProcess ; 2015 ; 2015 ; History Workshop Journal Volume 79-80 ; 79-80 >
     au < released ; 2016 ; 2016 ; History Workshop Journal Volume 81-82 ; 81-82 >
     au < released ; 2017 ; 2017 ; History Workshop Journal Volume 83-84 ; 83-84 >
-    au < manifest ; 2018 ; 2018 ; History Workshop Journal Volume 85-86 ; 85-86 >
+    au < ready ; 2018 ; 2018 ; History Workshop Journal Volume 85-86 ; 85-86 >
     au < manifest ; 2019 ; 2019 ; History Workshop Journal Volume 87-88 ; 87-88 >
 
   }
@@ -6854,7 +6854,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Human Molecular Genetics Volume 24 ; 24 >
     au < released ; 2016 ; 2016 ; Human Molecular Genetics Volume 25 ; 25 >
     au < released ; 2017 ; 2017 ; Human Molecular Genetics Volume 26 ; 26 >
-    au < manifest ; 2018 ; 2018 ; Human Molecular Genetics Volume 27 ; 27 >
+    au < ready ; 2018 ; 2018 ; Human Molecular Genetics Volume 27 ; 27 >
     au < manifest ; 2019 ; 2019 ; Human Molecular Genetics Volume 28 ; 28 >
 
   }
@@ -6918,7 +6918,7 @@
 
     #this title was ONLY in the publisher listing
     au < released ; 2017 ; 2017 ; Human Reproduction Open Volume 2017 ; 2017 >
-    au < manifest ; 2018 ; 2018 ; Human Reproduction Open Volume 2018 ; 2018 >
+    au < ready ; 2018 ; 2018 ; Human Reproduction Open Volume 2018 ; 2018 >
     au < manifest ; 2019 ; 2019 ; Human Reproduction Open Volume 2019 ; 2019 >
 
   }
@@ -7271,7 +7271,7 @@
     au < doNotProcess ; 2015 ; 2015 ; IMA Journal of Applied Mathematics Volume 80 ; 80 >
     au < released ; 2016 ; 2016 ; IMA Journal of Applied Mathematics Volume 81 ; 81 >
     au < released ; 2017 ; 2017 ; IMA Journal of Applied Mathematics Volume 82 ; 82 >
-    au < manifest ; 2018 ; 2018 ; IMA Journal of Applied Mathematics Volume 83 ; 83 >
+    au < ready ; 2018 ; 2018 ; IMA Journal of Applied Mathematics Volume 83 ; 83 >
     au < manifest ; 2019 ; 2019 ; IMA Journal of Applied Mathematics Volume 84 ; 84 >
 
   }
@@ -7399,7 +7399,7 @@
 
     param[journal_id] = ibdjournal
 
-    au < manifest ; 2018 ; 2018 ; Inflammatory Bowel Diseases Volume 1 ; 1 >
+    au < ready ; 2018 ; 2018 ; Inflammatory Bowel Diseases Volume 1 ; 1 >
     au < manifest ; 2019 ; 2019 ; Inflammatory Bowel Diseases Volume 2 ; 2 >
 
   }
@@ -7440,7 +7440,7 @@
     au < doNotProcess ; 2015 ; 2015 ; ISLE: Interdisciplinary Studies in Literature and Environment Volume 22 ; 22 >
     au < released ; 2016 ; 2016 ; ISLE: Interdisciplinary Studies in Literature and Environment Volume 23 ; 23 >
     au < released ; 2017 ; 2017 ; ISLE: Interdisciplinary Studies in Literature and Environment Volume 24 ; 24 >
-    au < manifest ; 2018 ; 2018 ; ISLE: Interdisciplinary Studies in Literature and Environment Volume 25 ; 25 >
+    au < ready ; 2018 ; 2018 ; ISLE: Interdisciplinary Studies in Literature and Environment Volume 25 ; 25 >
     au < manifest ; 2019 ; 2019 ; ISLE: Interdisciplinary Studies in Literature and Environment Volume 26 ; 26 >
 
   }
@@ -7636,7 +7636,7 @@
 
     #this title was ONLY in the publisher listing
     au < released ; 2017 ; 2017 ; Insect Systematics and Diversity Volume 1 ; 1 >
-    au < manifest ; 2018 ; 2018 ; Insect Systematics and Diversity Volume 2 ; 2 >
+    au < ready ; 2018 ; 2018 ; Insect Systematics and Diversity Volume 2 ; 2 >
     au < manifest ; 2019 ; 2019 ; Insect Systematics and Diversity Volume 3 ; 3 >
 
   }
@@ -7803,7 +7803,7 @@
     au < released ; 2015 ; 2015 ; International Affairs Volume 91 ; 91 >
     au < released ; 2016 ; 2016 ; International Affairs Volume 92 ; 92 >
     au < released ; 2017 ; 2017 ; International Affairs Volume 93 ; 93 >
-    au < manifest ; 2018 ; 2018 ; International Affairs Volume 94 ; 94 >
+    au < ready ; 2018 ; 2018 ; International Affairs Volume 94 ; 94 >
     au < manifest ; 2019 ; 2019 ; International Affairs Volume 95 ; 95 >
 
   }
@@ -7851,7 +7851,7 @@
     au < doNotProcess ; 2015 ; 2015 ; International Health Volume 7 ; 7 >
     au < released ; 2016 ; 2016 ; International Health Volume 8 ; 8 >
     au < released ; 2017 ; 2017 ; International Health Volume 9 ; 9 >
-    au < manifest ; 2018 ; 2018 ; International Health Volume 10 ; 10 >
+    au < ready ; 2018 ; 2018 ; International Health Volume 10 ; 10 >
     au < manifest ; 2019 ; 2019 ; International Health Volume 11 ; 11 >
 
   }
@@ -7896,7 +7896,7 @@
     au < doNotProcess ; 2015 ; 2015 ; International Immunology Volume 27 ; 27 >
     au < released ; 2016 ; 2016 ; International Immunology Volume 28 ; 28 >
     au < released ; 2017 ; 2017 ; International Immunology Volume 29 ; 29 >
-    au < manifest ; 2018 ; 2018 ; International Immunology Volume 30 ; 30 >
+    au < ready ; 2018 ; 2018 ; International Immunology Volume 30 ; 30 >
     au < manifest ; 2019 ; 2019 ; International Immunology Volume 31 ; 31 >
 
   }
@@ -7953,7 +7953,7 @@
     au < doNotProcess ; 2015 ; 2015 ; International Journal for Quality in Health Care Volume 27 ; 27 >
     au < released ; 2016 ; 2016 ; International Journal for Quality in Health Care Volume 28 ; 28 >
     au < released ; 2017 ; 2017 ; International Journal for Quality in Health Care Volume 29 ; 29 >
-    au < manifest ; 2018 ; 2018 ; International Journal for Quality in Health Care Volume 30 ; 30 >
+    au < ready ; 2018 ; 2018 ; International Journal for Quality in Health Care Volume 30 ; 30 >
     au < manifest ; 2019 ; 2019 ; International Journal for Quality in Health Care Volume 31 ; 31 >
 
   }
@@ -7984,7 +7984,7 @@
     au < doNotProcess ; 2015 ; 2015 ; International Journal of Constitutional Law Volume 13 ; 13 >
     au < released ; 2016 ; 2016 ; International Journal of Constitutional Law Volume 14 ; 14 >
     au < released ; 2017 ; 2017 ; International Journal of Constitutional Law Volume 15 ; 15 >
-    au < manifest ; 2018 ; 2018 ; International Journal of Constitutional Law Volume 16 ; 16 >
+    au < ready ; 2018 ; 2018 ; International Journal of Constitutional Law Volume 16 ; 16 >
     au < manifest ; 2019 ; 2019 ; International Journal of Constitutional Law Volume 17 ; 17 >
 
   }
@@ -8046,7 +8046,7 @@
     au < doNotProcess ; 2015 ; 2015 ; International Journal of Epidemiology Volume 44 ; 44 >
     au < released ; 2016 ; 2016 ; International Journal of Epidemiology Volume 45 ; 45 >
     au < released ; 2017 ; 2017 ; International Journal of Epidemiology Volume 46 ; 46 >
-    au < manifest ; 2018 ; 2018 ; International Journal of Epidemiology Volume 47 ; 47 >
+    au < ready ; 2018 ; 2018 ; International Journal of Epidemiology Volume 47 ; 47 >
     au < manifest ; 2019 ; 2019 ; International Journal of Epidemiology Volume 48 ; 48 >
 
   }
@@ -8244,7 +8244,7 @@
     au < doNotProcess ; 2015 ; 2015 ; International Journal of Neuropsychopharmacology Volume 18 ; 18 >
     au < released ; 2016 ; 2016 ; International Journal of Neuropsychopharmacology Volume 19 ; 19 >
     au < released ; 2017 ; 2017 ; International Journal of Neuropsychopharmacology Volume 20 ; 20 >
-    au < manifest ; 2018 ; 2018 ; International Journal of Neuropsychopharmacology Volume 21 ; 21 >
+    au < ready ; 2018 ; 2018 ; International Journal of Neuropsychopharmacology Volume 21 ; 21 >
     au < manifest ; 2019 ; 2019 ; International Journal of Neuropsychopharmacology Volume 22 ; 22 >
 
   }
@@ -8466,7 +8466,7 @@
     au < doNotProcess ; 2015 ; 2015 ; International Political Sociology Volume 9 ; 9 >
     au < released ; 2016 ; 2016 ; International Political Sociology Volume 10 ; 10 >
     au < released ; 2017 ; 2017 ; International Political Sociology Volume 11 ; 11 >
-    au < manifest ; 2018 ; 2018 ; International Political Sociology Volume 12 ; 12 >
+    au < ready ; 2018 ; 2018 ; International Political Sociology Volume 12 ; 12 >
     au < manifest ; 2019 ; 2019 ; International Political Sociology Volume 13 ; 13 >
 
   }
@@ -8533,7 +8533,7 @@
     au < doNotProcess ; 2015 ; 2015 ; International Studies Perspectives Volume 16 ; 16 >
     au < released ; 2016 ; 2016 ; International Studies Perspectives Volume 17 ; 17 >
     au < released ; 2017 ; 2017 ; International Studies Perspectives Volume 18 ; 18 >
-    au < manifest ; 2018 ; 2018 ; International Studies Perspectives Volume 19 ; 19 >
+    au < ready ; 2018 ; 2018 ; International Studies Perspectives Volume 19 ; 19 >
     au < manifest ; 2019 ; 2019 ; International Studies Perspectives Volume 20 ; 20 >
 
   }
@@ -8567,7 +8567,7 @@
     au < doNotProcess ; 2015 ; 2015 ; International Studies Quarterly Volume 59 ; 59 >
     au < released ; 2016 ; 2016 ; International Studies Quarterly Volume 60 ; 60 >
     au < released ; 2017 ; 2017 ; International Studies Quarterly Volume 61 ; 61 >
-    au < manifest ; 2018 ; 2018 ; International Studies Quarterly Volume 62 ; 62 >
+    au < ready ; 2018 ; 2018 ; International Studies Quarterly Volume 62 ; 62 >
     au < manifest ; 2019 ; 2019 ; International Studies Quarterly Volume 63 ; 63 >
 
   }
@@ -9097,10 +9097,10 @@
     au < exists ; 2007 ; 2007 ; Journal of Burn Care & Research Volume 28 ; 28 >
     au < manifest ; 2008 ; 2008 ; Journal of Burn Care & Research Volume 29 ; 29 >
     au < released ; 2009 ; 2009 ; Journal of Burn Care & Research Volume 30 ; 30 >
-    au < manifest ; 2010 ; 2010 ; Journal of Burn Care & Research Volume 31 ; 31 >
-    au < manifest ; 2011 ; 2011 ; Journal of Burn Care & Research Volume 32 ; 32 >
+    au < ready ; 2010 ; 2010 ; Journal of Burn Care & Research Volume 31 ; 31 >
+    au < ready ; 2011 ; 2011 ; Journal of Burn Care & Research Volume 32 ; 32 >
     au < manifest ; 2012 ; 2012 ; Journal of Burn Care & Research Volume 33 ; 33 >
-    au < manifest ; 2013 ; 2013 ; Journal of Burn Care & Research Volume 34 ; 34 >
+    au < ready ; 2013 ; 2013 ; Journal of Burn Care & Research Volume 34 ; 34 >
     au < manifest ; 2014 ; 2014 ; Journal of Burn Care & Research Volume 35 ; 35 >
     au < released ; 2015 ; 2015 ; Journal of Burn Care & Research Volume 36 ; 36 >
     au < released ; 2016 ; 2016 ; Journal of Burn Care & Research Volume 37 ; 37 >
@@ -9332,7 +9332,7 @@
 
     param[journal_id] = jcmc
 
-    au < manifest ; 2018 ; 2018 ; Journal of Computer-Mediated Communication Volume 1 ; 1 >
+    au < ready ; 2018 ; 2018 ; Journal of Computer-Mediated Communication Volume 1 ; 1 >
     au < manifest ; 2019 ; 2019 ; Journal of Computer-Mediated Communication Volume 2 ; 2 >
 
   }
@@ -9513,7 +9513,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Journal of Cybersecurity Volume 1 ; 1 >
     au < released ; 2016 ; 2016 ; Journal of Cybersecurity Volume 2 ; 2 >
     au < released ; 2017 ; 2017 ; Journal of Cybersecurity Volume 3 ; 3 >
-    au < manifest ; 2018 ; 2018 ; Journal of Cybersecurity Volume 4 ; 4 >
+    au < ready ; 2018 ; 2018 ; Journal of Cybersecurity Volume 4 ; 4 >
     au < manifest ; 2019 ; 2019 ; Journal of Cybersecurity Volume 5 ; 5 >
 
   }
@@ -9636,7 +9636,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Journal of Economic Geography Volume 15 ; 15 >
     au < released ; 2016 ; 2016 ; Journal of Economic Geography Volume 16 ; 16 >
     au < released ; 2017 ; 2017 ; Journal of Economic Geography Volume 17 ; 17 >
-    au < manifest ; 2018 ; 2018 ; Journal of Economic Geography Volume 18 ; 18 >
+    au < ready ; 2018 ; 2018 ; Journal of Economic Geography Volume 18 ; 18 >
     au < manifest ; 2019 ; 2019 ; Journal of Economic Geography Volume 19 ; 19 >
 
   }
@@ -9804,7 +9804,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Journal of Experimental Botany Volume 66 ; 66 >
     au < released ; 2016 ; 2016 ; Journal of Experimental Botany Volume 67 ; 67 >
     au < released ; 2017 ; 2017 ; Journal of Experimental Botany Volume 68 ; 68 >
-    au < manifest ; 2018 ; 2018 ; Journal of Experimental Botany Volume 69 ; 69 >
+    au < ready ; 2018 ; 2018 ; Journal of Experimental Botany Volume 69 ; 69 >
     au < manifest ; 2019 ; 2019 ; Journal of Experimental Botany Volume 70 ; 70 >
 
   }
@@ -9888,7 +9888,7 @@
     au < released ; 2015 ; 2015 ; Journal of Forestry Volume 113 ; 113 >
     au < released ; 2016 ; 2016 ; Journal of Forestry Volume 114 ; 114 >
     au < released ; 2017 ; 2017 ; Journal of Forestry Volume 115 ; 115 >
-    au < manifest ; 2018 ; 2018 ; Journal of Forestry Volume 116 ; 116 >
+    au < ready ; 2018 ; 2018 ; Journal of Forestry Volume 116 ; 116 >
     au < manifest ; 2019 ; 2019 ; Journal of Forestry Volume 117 ; 117 >
 
   }
@@ -10128,7 +10128,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Journal of Hip Preservation Surgery Volume 2 ; 2 >
     au < released ; 2016 ; 2016 ; Journal of Hip Preservation Surgery Volume 3 ; 3 >
     au < released ; 2017 ; 2017 ; Journal of Hip Preservation Surgery Volume 4 ; 4 >
-    au < manifest ; 2018 ; 2018 ; Journal of Hip Preservation Surgery Volume 5 ; 5 >
+    au < ready ; 2018 ; 2018 ; Journal of Hip Preservation Surgery Volume 5 ; 5 >
     au < manifest ; 2019 ; 2019 ; Journal of Hip Preservation Surgery Volume 6 ; 6 >
 
   }
@@ -10184,7 +10184,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Journal of Insect Science Volume 15 ; 15 >
     au < released ; 2016 ; 2016 ; Journal of Insect Science Volume 16 ; 16 >
     au < released ; 2017 ; 2017 ; Journal of Insect Science Volume 17 ; 17 >
-    au < manifest ; 2018 ; 2018 ; Journal of Insect Science Volume 18 ; 18 >
+    au < ready ; 2018 ; 2018 ; Journal of Insect Science Volume 18 ; 18 >
     au < manifest ; 2019 ; 2019 ; Journal of Insect Science Volume 19 ; 19 >
 
   }
@@ -10225,7 +10225,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Journal of Integrated Pest Management Volume 6 ; 6 >
     au < released ; 2016 ; 2016 ; Journal of Integrated Pest Management Volume 7 ; 7 >
     au < released ; 2017 ; 2017 ; Journal of Integrated Pest Management Volume 8 ; 8 >
-    au < manifest ; 2018 ; 2018 ; Journal of Integrated Pest Management Volume 9 ; 9 >
+    au < ready ; 2018 ; 2018 ; Journal of Integrated Pest Management Volume 9 ; 9 >
     au < manifest ; 2019 ; 2019 ; Journal of Integrated Pest Management Volume 10 ; 10 >
 
   }
@@ -10285,7 +10285,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Journal of International Criminal Justice Volume 13 ; 13 >
     au < released ; 2016 ; 2016 ; Journal of International Criminal Justice Volume 14 ; 14 >
     au < released ; 2017 ; 2017 ; Journal of International Criminal Justice Volume 15 ; 15 >
-    au < manifest ; 2018 ; 2018 ; Journal of International Criminal Justice Volume 16 ; 16 >
+    au < ready ; 2018 ; 2018 ; Journal of International Criminal Justice Volume 16 ; 16 >
     au < manifest ; 2019 ; 2019 ; Journal of International Criminal Justice Volume 17 ; 17 >
 
   }
@@ -10601,7 +10601,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Journal of Molecular Cell Biology Volume 7 ; 7 >
     au < released ; 2016 ; 2016 ; Journal of Molecular Cell Biology Volume 8 ; 8 >
     au < released ; 2017 ; 2017 ; Journal of Molecular Cell Biology Volume 9 ; 9 >
-    au < manifest ; 2018 ; 2018 ; Journal of Molecular Cell Biology Volume 10 ; 10 >
+    au < ready ; 2018 ; 2018 ; Journal of Molecular Cell Biology Volume 10 ; 10 >
     au < manifest ; 2019 ; 2019 ; Journal of Molecular Cell Biology Volume 11 ; 11 >
 
   }
@@ -10770,7 +10770,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Journal of Music Therapy Volume 52 ; 52 >
     au < released ; 2016 ; 2016 ; Journal of Music Therapy Volume 53 ; 53 >
     au < released ; 2017 ; 2017 ; Journal of Music Therapy Volume 54 ; 54 >
-    au < manifest ; 2018 ; 2018 ; Journal of Music Therapy Volume 55 ; 55 >
+    au < ready ; 2018 ; 2018 ; Journal of Music Therapy Volume 55 ; 55 >
     au < manifest ; 2019 ; 2019 ; Journal of Music Therapy Volume 56 ; 56 >
 
   }
@@ -10803,7 +10803,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Journal of Neuropathology & Experimental Neurology Volume 74 ; 74 >
     au < released ; 2016 ; 2016 ; Journal of Neuropathology & Experimental Neurology Volume 75 ; 75 >
     au < released ; 2017 ; 2017 ; Journal of Neuropathology & Experimental Neurology Volume 76 ; 76 >
-    au < manifest ; 2018 ; 2018 ; Journal of Neuropathology & Experimental Neurology Volume 77 ; 77 >
+    au < ready ; 2018 ; 2018 ; Journal of Neuropathology & Experimental Neurology Volume 77 ; 77 >
     au < manifest ; 2019 ; 2019 ; Journal of Neuropathology & Experimental Neurology Volume 78 ; 78 >
 
   }
@@ -11025,7 +11025,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Journal of Plankton Research Volume 37 ; 37 >
     au < released ; 2016 ; 2016 ; Journal of Plankton Research Volume 38 ; 38 >
     au < released ; 2017 ; 2017 ; Journal of Plankton Research Volume 39 ; 39 >
-    au < manifest ; 2018 ; 2018 ; Journal of Plankton Research Volume 40 ; 40 >
+    au < ready ; 2018 ; 2018 ; Journal of Plankton Research Volume 40 ; 40 >
     au < manifest ; 2019 ; 2019 ; Journal of Plankton Research Volume 41 ; 41 >
 
   }
@@ -11073,7 +11073,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Journal of Professions and Organization Volume 2 ; 2 >
     au < released ; 2016 ; 2016 ; Journal of Professions and Organization Volume 3 ; 3 >
     au < released ; 2017 ; 2017 ; Journal of Professions and Organization Volume 4 ; 4 >
-    au < manifest ; 2018 ; 2018 ; Journal of Professions and Organization Volume 5 ; 5 >
+    au < ready ; 2018 ; 2018 ; Journal of Professions and Organization Volume 5 ; 5 >
     au < manifest ; 2019 ; 2019 ; Journal of Professions and Organization Volume 6 ; 6 >
 
   }
@@ -11379,7 +11379,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Journal of Semitic Studies Volume 60 ; 60 >
     au < released ; 2016 ; 2016 ; Journal of Semitic Studies Volume 61 ; 61 >
     au < released ; 2017 ; 2017 ; Journal of Semitic Studies Volume 62 ; 62 >
-    au < manifest ; 2018 ; 2018 ; Journal of Semitic Studies Volume 63 ; 63 >
+    au < ready ; 2018 ; 2018 ; Journal of Semitic Studies Volume 63 ; 63 >
     au < manifest ; 2019 ; 2019 ; Journal of Semitic Studies Volume 64 ; 64 >
 
   }
@@ -11431,7 +11431,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Journal of Surgical Case Reports Volume 2015 ; 2015 >
     au < released ; 2016 ; 2016 ; Journal of Surgical Case Reports Volume 2016 ; 2016 >
     au < released ; 2017 ; 2017 ; Journal of Surgical Case Reports Volume 2017 ; 2017 >
-    au < manifest ; 2018 ; 2018 ; Journal of Surgical Case Reports Volume 2018 ; 2018 >
+    au < ready ; 2018 ; 2018 ; Journal of Surgical Case Reports Volume 2018 ; 2018 >
     au < manifest ; 2019 ; 2019 ; Journal of Surgical Case Reports Volume 2019 ; 2019 >
 
   }
@@ -12109,7 +12109,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Laboratory Medicine Volume 46 ; 46 >
     au < released ; 2016 ; 2016 ; Laboratory Medicine Volume 47 ; 47 >
     au < released ; 2017 ; 2017 ; Laboratory Medicine Volume 48 ; 48 >
-    au < manifest ; 2018 ; 2018 ; Laboratory Medicine Volume 49 ; 49 >
+    au < ready ; 2018 ; 2018 ; Laboratory Medicine Volume 49 ; 49 >
     au < manifest ; 2019 ; 2019 ; Laboratory Medicine Volume 50 ; 50 >
 
   }
@@ -12553,7 +12553,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Medical Law Review Volume 23 ; 23 >
     au < released ; 2016 ; 2016 ; Medical Law Review Volume 24 ; 24 >
     au < released ; 2017 ; 2017 ; Medical Law Review Volume 25 ; 25 >
-    au < manifest ; 2018 ; 2018 ; Medical Law Review Volume 26 ; 26 >
+    au < ready ; 2018 ; 2018 ; Medical Law Review Volume 26 ; 26 >
     au < manifest ; 2019 ; 2019 ; Medical Law Review Volume 27 ; 27 >
 
   }
@@ -12629,7 +12629,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Microscopy Volume 64 ; 64 >
     au < released ; 2016 ; 2016 ; Microscopy Volume 65 ; 65 >
     au < released ; 2017 ; 2017 ; Microscopy Volume 66 ; 66 >
-    au < manifest ; 2018 ; 2018 ; Microscopy Volume 67 ; 67 >
+    au < ready ; 2018 ; 2018 ; Microscopy Volume 67 ; 67 >
     au < manifest ; 2019 ; 2019 ; Microscopy Volume 68 ; 68 >
 
   }
@@ -12927,7 +12927,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Molecular Biology and Evolution Volume 32 ; 32 >
     au < released ; 2016 ; 2016 ; Molecular Biology and Evolution Volume 33 ; 33 >
     au < released ; 2017 ; 2017 ; Molecular Biology and Evolution Volume 34 ; 34 >
-    au < manifest ; 2018 ; 2018 ; Molecular Biology and Evolution Volume 35 ; 35 >
+    au < ready ; 2018 ; 2018 ; Molecular Biology and Evolution Volume 35 ; 35 >
     au < manifest ; 2019 ; 2019 ; Molecular Biology and Evolution Volume 36 ; 36 >
 
   }
@@ -13025,7 +13025,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 446-454 ; 446-454 >
     au < doNotProcess ; 2016 ; 2016 ; Monthly Notices of the Royal Astronomical Society Volume 455-463 ; 455-463 >
     au < released ; 2017 ; 2017 ; Monthly Notices of the Royal Astronomical Society Volume 464-472 ; 464-472 >
-    au < manifest ; 2018 ; 2018 ; Monthly Notices of the Royal Astronomical Society Volume 473-481 ; 473-481 >
+    au < ready ; 2018 ; 2018 ; Monthly Notices of the Royal Astronomical Society Volume 473-481 ; 473-481 >
     au < manifest ; 2019 ; 2019 ; Monthly Notices of the Royal Astronomical Society Volume 482-490 ; 482-490 >
 
   }
@@ -13054,7 +13054,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 446-455 ; 446-455 >
     au < released ; 2016 ; 2016 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 456-463 ; 456-463 >
     au < released ; 2017 ; 2017 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 464-472 ; 464-472 >
-    au < manifest ; 2018 ; 2018 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 473-481 ; 473-481 >
+    au < ready ; 2018 ; 2018 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 473-481 ; 473-481 >
     au < manifest ; 2019 ; 2019 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 482-490 ; 482-490 >
 
   }
@@ -13122,7 +13122,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Music Theory Spectrum Volume 37 ; 37 >
     au < released ; 2016 ; 2016 ; Music Theory Spectrum Volume 38 ; 38 >
     au < released ; 2017 ; 2017 ; Music Theory Spectrum Volume 39 ; 39 >
-    au < manifest ; 2018 ; 2018 ; Music Theory Spectrum Volume 40 ; 40 >
+    au < ready ; 2018 ; 2018 ; Music Theory Spectrum Volume 40 ; 40 >
     au < manifest ; 2019 ; 2019 ; Music Theory Spectrum Volume 41 ; 41 >
 
   }
@@ -13199,7 +13199,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Music Therapy Perspectives Volume 33 ; 33 >
     au < released ; 2016 ; 2016 ; Music Therapy Perspectives Volume 34 ; 34 >
     au < released ; 2017 ; 2017 ; Music Therapy Perspectives Volume 35 ; 35 >
-    au < manifest ; 2018 ; 2018 ; Music Therapy Perspectives Volume 36 ; 36 >
+    au < ready ; 2018 ; 2018 ; Music Therapy Perspectives Volume 36 ; 36 >
     au < manifest ; 2019 ; 2019 ; Music Therapy Perspectives Volume 37 ; 37 >
 
   }
@@ -13313,7 +13313,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Music and Letters Volume 96 ; 96 >
     au < released ; 2016 ; 2016 ; Music and Letters Volume 97 ; 97 >
     au < released ; 2017 ; 2017 ; Music and Letters Volume 98 ; 98 >
-    au < manifest ; 2018 ; 2018 ; Music and Letters Volume 99 ; 99 >
+    au < ready ; 2018 ; 2018 ; Music and Letters Volume 99 ; 99 >
     au < manifest ; 2019 ; 2019 ; Music and Letters Volume 100 ; 100 >
 
   }
@@ -13479,7 +13479,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Neuro-Oncology Volume 17 ; 17 >
     au < released ; 2016 ; 2016 ; Neuro-Oncology Volume 18 ; 18 >
     au < released ; 2017 ; 2017 ; Neuro-Oncology Volume 19 ; 19 >
-    au < manifest ; 2018 ; 2018 ; Neuro-Oncology Volume 20 ; 20 >
+    au < ready ; 2018 ; 2018 ; Neuro-Oncology Volume 20 ; 20 >
     au < manifest ; 2019 ; 2019 ; Neuro-Oncology Volume 21 ; 21 >
 
   }
@@ -13517,7 +13517,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Neuroscience of Consciousness Volume 2015 ; 2015 >
     au < released ; 2016 ; 2016 ; Neuroscience of Consciousness Volume 2016 ; 2016 >
     au < released ; 2017 ; 2017 ; Neuroscience of Consciousness Volume 2017 ; 2017 >
-    au < manifest ; 2018 ; 2018 ; Neuroscience of Consciousness Volume 2018 ; 2018 >
+    au < ready ; 2018 ; 2018 ; Neuroscience of Consciousness Volume 2018 ; 2018 >
     au < manifest ; 2019 ; 2019 ; Neuroscience of Consciousness Volume 2019 ; 2019 >
 
   }
@@ -13574,7 +13574,7 @@
     au < released ; 2015 ; 2015 ; Neurosurgery Volume 62,76-77 ; 62,76-77 >
     au < released ; 2016 ; 2016 ; Neurosurgery Volume 63,78-79 ; 63,78-79 >
     au < released ; 2017 ; 2017 ; Neurosurgery Volume 64,80-81 ; 64,80-81 >
-    au < manifest ; 2018 ; 2018 ; Neurosurgery Volume 82-83 ; 82-83 >
+    au < ready ; 2018 ; 2018 ; Neurosurgery Volume 82-83 ; 82-83 >
     au < manifest ; 2019 ; 2019 ; Neurosurgery Volume 84-85 ; 84-85 >
 
   }
@@ -14122,7 +14122,7 @@
     au < released ; 2015 ; 2015 ; Operative Neurosurgery Volume 11 ; 11 >
     au < released ; 2016 ; 2016 ; Operative Neurosurgery Volume 12 ; 12 >
     au < released ; 2017 ; 2017 ; Operative Neurosurgery Volume 13 ; 13 >
-    au < manifest ; 2018 ; 2018 ; Operative Neurosurgery Volume 14 ; 14 >
+    au < ready ; 2018 ; 2018 ; Operative Neurosurgery Volume 14 ; 14 >
     au < manifest ; 2019 ; 2019 ; Operative Neurosurgery Volume 15 ; 15 >
 
   }
@@ -14292,7 +14292,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Oxford Journal of Law and Religion Volume 4 ; 4 >
     au < released ; 2016 ; 2016 ; Oxford Journal of Law and Religion Volume 5 ; 5 >
     au < released ; 2017 ; 2017 ; Oxford Journal of Law and Religion Volume 6 ; 6 >
-    au < manifest ; 2018 ; 2018 ; Oxford Journal of Law and Religion Volume 7 ; 7 >
+    au < ready ; 2018 ; 2018 ; Oxford Journal of Law and Religion Volume 7 ; 7 >
     au < manifest ; 2019 ; 2019 ; Oxford Journal of Law and Religion Volume 8 ; 8 >
 
   }
@@ -14364,7 +14364,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Oxford Medical Case Reports Volume 2015 ; 2015 >
     au < released ; 2016 ; 2016 ; Oxford Medical Case Reports Volume 2016 ; 2016 >
     au < released ; 2017 ; 2017 ; Oxford Medical Case Reports Volume 2017 ; 2017 >
-    au < manifest ; 2018 ; 2018 ; Oxford Medical Case Reports Volume 2018 ; 2018 >
+    au < ready ; 2018 ; 2018 ; Oxford Medical Case Reports Volume 2018 ; 2018 >
     au < manifest ; 2019 ; 2019 ; Oxford Medical Case Reports Volume 2019 ; 2019 >
 
   }
@@ -14687,10 +14687,10 @@
     au < exists ; 2006 ; 2006 ; Pathogens and Disease Volume 46-48 ; 46-48 >
     au < exists ; 2007 ; 2007 ; Pathogens and Disease Volume 49-51 ; 49-51 >
     au < manifest ; 2008 ; 2008 ; Pathogens and Disease Volume 52-54 ; 52-54 >
-    au < manifest ; 2009 ; 2009 ; Pathogens and Disease Volume 55-57 ; 55-57 >
+    au < ready ; 2009 ; 2009 ; Pathogens and Disease Volume 55-57 ; 55-57 >
     au < released ; 2010 ; 2010 ; Pathogens and Disease Volume 58-60 ; 58-60 >
     au < released ; 2011 ; 2011 ; Pathogens and Disease Volume 61-63 ; 61-63 >
-    au < manifest ; 2012 ; 2012 ; Pathogens and Disease Volume 64-66 ; 64-66 >
+    au < ready ; 2012 ; 2012 ; Pathogens and Disease Volume 64-66 ; 64-66 >
     au < doNotProcess ; 2013 ; 2013 ; Pathogens and Disease Volume 67-69 ; 67-69 >
     au < doNotProcess ; 2014 ; 2014 ; Pathogens and Disease Volume 70-72 ; 70-72 >
     au < doNotProcess ; 2015 ; 2015 ; Pathogens and Disease Volume 73 ; 73 >
@@ -14842,7 +14842,7 @@
     au < released ; 2015 ; 2015 ; Physical Therapy Volume 95 ; 95 >
     au < released ; 2016 ; 2016 ; Physical Therapy Volume 96 ; 96 >
     au < released ; 2017 ; 2017 ; Physical Therapy Volume 97 ; 97 >
-    au < manifest ; 2018 ; 2018 ; Physical Therapy Volume 98 ; 98 >
+    au < ready ; 2018 ; 2018 ; Physical Therapy Volume 98 ; 98 >
     au < manifest ; 2019 ; 2019 ; Physical Therapy Volume 99 ; 99 >
 
   }
@@ -14943,7 +14943,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Policing: A Journal of Policy and Practice Volume 9 ; 9 >
     au < released ; 2016 ; 2016 ; Policing: A Journal of Policy and Practice Volume 10 ; 10 >
     au < released ; 2017 ; 2017 ; Policing: A Journal of Policy and Practice Volume 11 ; 11 >
-    au < manifest ; 2018 ; 2018 ; Policing: A Journal of Policy and Practice Volume 12 ; 12 >
+    au < ready ; 2018 ; 2018 ; Policing: A Journal of Policy and Practice Volume 12 ; 12 >
     au < manifest ; 2019 ; 2019 ; Policing: A Journal of Policy and Practice Volume 13 ; 13 >
 
   }
@@ -15307,7 +15307,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2015 ; 2015 >
     au < released ; 2016 ; 2016 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2016 ; 2016 >
     au < released ; 2017 ; 2017 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2017 ; 2017 >
-    au < manifest ; 2018 ; 2018 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2018 ; 2018 >
+    au < ready ; 2018 ; 2018 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2018 ; 2018 >
     au < manifest ; 2019 ; 2019 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2019 ; 2019 >
 
   }
@@ -15609,7 +15609,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Publius: The Journal of Federalism Volume 45 ; 45 >
     au < released ; 2016 ; 2016 ; Publius: The Journal of Federalism Volume 46 ; 46 >
     au < released ; 2017 ; 2017 ; Publius: The Journal of Federalism Volume 47 ; 47 >
-    au < manifest ; 2018 ; 2018 ; Publius: The Journal of Federalism Volume 48 ; 48 >
+    au < ready ; 2018 ; 2018 ; Publius: The Journal of Federalism Volume 48 ; 48 >
     au < manifest ; 2019 ; 2019 ; Publius: The Journal of Federalism Volume 49 ; 49 >
 
   }
@@ -16078,7 +16078,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Rheumatology Volume 54 ; 54 >
     au < released ; 2016 ; 2016 ; Rheumatology Volume 55 ; 55 >
     au < released ; 2017 ; 2017 ; Rheumatology Volume 56 ; 56 >
-    au < manifest ; 2018 ; 2018 ; Rheumatology Volume 57 ; 57 >
+    au < ready ; 2018 ; 2018 ; Rheumatology Volume 57 ; 57 >
     au < manifest ; 2019 ; 2019 ; Rheumatology Volume 58 ; 58 >
 
   }
@@ -16436,7 +16436,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Social Cognitive and Affective Neuroscience Volume 10 ; 10 >
     au < released ; 2016 ; 2016 ; Social Cognitive and Affective Neuroscience Volume 11 ; 11 >
     au < released ; 2017 ; 2017 ; Social Cognitive and Affective Neuroscience Volume 12 ; 12 >
-    au < manifest ; 2018 ; 2018 ; Social Cognitive and Affective Neuroscience Volume 13 ; 13 >
+    au < ready ; 2018 ; 2018 ; Social Cognitive and Affective Neuroscience Volume 13 ; 13 >
     au < manifest ; 2019 ; 2019 ; Social Cognitive and Affective Neuroscience Volume 14 ; 14 >
 
   }
@@ -16634,7 +16634,7 @@
     au < released ; 2015 ; 2015 ; Social Politics: International Studies in Gender, State & Society Volume 22 ; 22 >
     au < released ; 2016 ; 2016 ; Social Politics: International Studies in Gender, State & Society Volume 23 ; 23 >
     au < released ; 2017 ; 2017 ; Social Politics: International Studies in Gender, State & Society Volume 24 ; 24 >
-    au < manifest ; 2018 ; 2018 ; Social Politics: International Studies in Gender, State & Society Volume 25 ; 25 >
+    au < ready ; 2018 ; 2018 ; Social Politics: International Studies in Gender, State & Society Volume 25 ; 25 >
     au < manifest ; 2019 ; 2019 ; Social Politics: International Studies in Gender, State & Society Volume 26 ; 26 >
 
   }
@@ -16968,7 +16968,7 @@
     au < exists ; 2006 ; 2006 ; Sociology of Religion Volume 67 ; 67 >
     au < exists ; 2007 ; 2007 ; Sociology of Religion Volume 68 ; 68 >
     au < manifest ; 2008 ; 2008 ; Sociology of Religion Volume 69 ; 69 >
-    au < manifest ; 2009 ; 2009 ; Sociology of Religion Volume 70 ; 70 >
+    au < ready ; 2009 ; 2009 ; Sociology of Religion Volume 70 ; 70 >
     au < doNotProcess ; 2010 ; 2010 ; Sociology of Religion Volume 71 ; 71 >
     au < doNotProcess ; 2011 ; 2011 ; Sociology of Religion Volume 72 ; 72 >
     au < doNotProcess ; 2012 ; 2012 ; Sociology of Religion Volume 73 ; 73 >
@@ -16977,7 +16977,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Sociology of Religion Volume 76 ; 76 >
     au < released ; 2016 ; 2016 ; Sociology of Religion Volume 77 ; 77 >
     au < released ; 2017 ; 2017 ; Sociology of Religion Volume 78 ; 78 >
-    au < manifest ; 2018 ; 2018 ; Sociology of Religion Volume 79 ; 79 >
+    au < ready ; 2018 ; 2018 ; Sociology of Religion Volume 79 ; 79 >
     au < manifest ; 2019 ; 2019 ; Sociology of Religion Volume 80 ; 80 >
 
   }
@@ -17031,7 +17031,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Statute Law Review Volume 36 ; 36 >
     au < released ; 2016 ; 2016 ; Statute Law Review Volume 37 ; 37 >
     au < released ; 2017 ; 2017 ; Statute Law Review Volume 38 ; 38 >
-    au < manifest ; 2018 ; 2018 ; Statute Law Review Volume 39 ; 39 >
+    au < ready ; 2018 ; 2018 ; Statute Law Review Volume 39 ; 39 >
     au < manifest ; 2019 ; 2019 ; Statute Law Review Volume 40 ; 40 >
 
   }
@@ -17422,7 +17422,7 @@
     au < doNotProcess ; 2015 ; 2015 ; The American Journal of Jurisprudence Volume 60 ; 60 >
     au < released ; 2016 ; 2016 ; The American Journal of Jurisprudence Volume 61 ; 61 >
     au < released ; 2017 ; 2017 ; The American Journal of Jurisprudence Volume 62 ; 62 >
-    au < manifest ; 2018 ; 2018 ; The American Journal of Jurisprudence Volume 63 ; 63 >
+    au < ready ; 2018 ; 2018 ; The American Journal of Jurisprudence Volume 63 ; 63 >
     au < manifest ; 2019 ; 2019 ; The American Journal of Jurisprudence Volume 64 ; 64 >
 
   }
@@ -17735,7 +17735,7 @@
     au < doNotProcess ; 2015 ; 2015 ; The British Journal of Social Work Volume 45 ; 45 >
     au < released ; 2016 ; 2016 ; The British Journal of Social Work Volume 46 ; 46 >
     au < released ; 2017 ; 2017 ; The British Journal of Social Work Volume 47 ; 47 >
-    au < manifest ; 2018 ; 2018 ; The British Journal of Social Work Volume 48 ; 48 >
+    au < ready ; 2018 ; 2018 ; The British Journal of Social Work Volume 48 ; 48 >
     au < manifest ; 2019 ; 2019 ; The British Journal of Social Work Volume 49 ; 49 >
 
   }
@@ -17818,7 +17818,7 @@
     au < doNotProcess ; 2015 ; 2015 ; The Chinese Journal of Comparative Law Volume 3 ; 3 >
     au < released ; 2016 ; 2016 ; The Chinese Journal of Comparative Law Volume 4 ; 4 >
     au < released ; 2017 ; 2017 ; The Chinese Journal of Comparative Law Volume 5 ; 5 >
-    au < manifest ; 2018 ; 2018 ; The Chinese Journal of Comparative Law Volume 6 ; 6 >
+    au < ready ; 2018 ; 2018 ; The Chinese Journal of Comparative Law Volume 6 ; 6 >
     au < manifest ; 2019 ; 2019 ; The Chinese Journal of Comparative Law Volume 7 ; 7 >
 
   }
@@ -18184,7 +18184,7 @@
     au < doNotProcess ; 2015 ; 2015 ; The Journal of Applied Poultry Research Volume 24 ; 24 >
     au < released ; 2016 ; 2016 ; The Journal of Applied Poultry Research Volume 25 ; 25 >
     au < released ; 2017 ; 2017 ; The Journal of Applied Poultry Research Volume 26 ; 26 >
-    au < manifest ; 2018 ; 2018 ; The Journal of Applied Poultry Research Volume 27 ; 27 >
+    au < ready ; 2018 ; 2018 ; The Journal of Applied Poultry Research Volume 27 ; 27 >
     au < manifest ; 2019 ; 2019 ; The Journal of Applied Poultry Research Volume 28 ; 28 >
 
   }
@@ -18381,7 +18381,7 @@
     au < doNotProcess ; 2015 ; 2015 ; The Journal of Hindu Studies Volume 8 ; 8 >
     au < released ; 2016 ; 2016 ; The Journal of Hindu Studies Volume 9 ; 9 >
     au < released ; 2017 ; 2017 ; The Journal of Hindu Studies Volume 10 ; 10 >
-    au < manifest ; 2018 ; 2018 ; The Journal of Hindu Studies Volume 11 ; 11 >
+    au < ready ; 2018 ; 2018 ; The Journal of Hindu Studies Volume 11 ; 11 >
     au < manifest ; 2019 ; 2019 ; The Journal of Hindu Studies Volume 12 ; 12 >
 
   }
@@ -18560,7 +18560,7 @@
     au < doNotProcess ; 2015 ; 2015 ; The Journal of Law, Economics, and Organization Volume 31 ; 31 >
     au < released ; 2016 ; 2016 ; The Journal of Law, Economics, and Organization Volume 32 ; 32 >
     au < released ; 2017 ; 2017 ; The Journal of Law, Economics, and Organization Volume 33 ; 33 >
-    au < manifest ; 2018 ; 2018 ; The Journal of Law, Economics, and Organization Volume 34 ; 34 >
+    au < ready ; 2018 ; 2018 ; The Journal of Law, Economics, and Organization Volume 34 ; 34 >
     au < manifest ; 2019 ; 2019 ; The Journal of Law, Economics, and Organization Volume 35 ; 35 >
 
   }
@@ -18752,7 +18752,7 @@
     au < doNotProcess ; 2015 ; 2015 ; The Journal of Theological Studies Volume 66 ; 66 >
     au < released ; 2016 ; 2016 ; The Journal of Theological Studies Volume 67 ; 67 >
     au < released ; 2017 ; 2017 ; The Journal of Theological Studies Volume 68 ; 68 >
-    au < manifest ; 2018 ; 2018 ; The Journal of Theological Studies Volume 69 ; 69 >
+    au < ready ; 2018 ; 2018 ; The Journal of Theological Studies Volume 69 ; 69 >
     au < manifest ; 2019 ; 2019 ; The Journal of Theological Studies Volume 70 ; 70 >
 
   }
@@ -18778,7 +18778,7 @@
     au < doNotProcess ; 2015 ; 2015 ; The Journal of World Energy Law & Business Volume 8 ; 8 >
     au < released ; 2016 ; 2016 ; The Journal of World Energy Law & Business Volume 9 ; 9 >
     au < released ; 2017 ; 2017 ; The Journal of World Energy Law & Business Volume 10 ; 10 >
-    au < manifest ; 2018 ; 2018 ; The Journal of World Energy Law & Business Volume 11 ; 11 >
+    au < ready ; 2018 ; 2018 ; The Journal of World Energy Law & Business Volume 11 ; 11 >
     au < manifest ; 2019 ; 2019 ; The Journal of World Energy Law & Business Volume 12 ; 12 >
 
   }
@@ -18849,14 +18849,14 @@
     au < released ; 2008 ; 2008 ; The Journals of Gerontology: Series B Volume 63 ; 63 >
     au < released ; 2009 ; 2009 ; The Journals of Gerontology: Series B Volume 64B ; 64B >
     au < manifest ; 2010 ; 2010 ; The Journals of Gerontology: Series B Volume 65B ; 65B >
-    au < manifest ; 2011 ; 2011 ; The Journals of Gerontology: Series B Volume 66B ; 66B >
+    au < ready ; 2011 ; 2011 ; The Journals of Gerontology: Series B Volume 66B ; 66B >
     au < released ; 2012 ; 2012 ; The Journals of Gerontology: Series B Volume 67-67B ; 67-67B >
     au < released ; 2013 ; 2013 ; The Journals of Gerontology: Series B Volume 68 ; 68 >
     au < released ; 2014 ; 2014 ; The Journals of Gerontology: Series B Volume 69-69B ; 69-69B >
     au < released ; 2015 ; 2015 ; The Journals of Gerontology: Series B Volume 70 ; 70 >
     au < released ; 2016 ; 2016 ; The Journals of Gerontology: Series B Volume 71 ; 71 >
     au < released ; 2017 ; 2017 ; The Journals of Gerontology: Series B Volume 72 ; 72 >
-    au < manifest ; 2018 ; 2018 ; The Journals of Gerontology: Series B Volume 73 ; 73 >
+    au < ready ; 2018 ; 2018 ; The Journals of Gerontology: Series B Volume 73 ; 73 >
     au < manifest ; 2019 ; 2019 ; The Journals of Gerontology: Series B Volume 74 ; 74 >
 
   }
@@ -19282,7 +19282,7 @@
     au < doNotProcess ; 2015 ; 2015 ; The Opera Quarterly Volume 31 ; 31 >
     au < released ; 2016 ; 2016 ; The Opera Quarterly Volume 32 ; 32 >
     au < released ; 2017 ; 2017 ; The Opera Quarterly Volume 33 ; 33 >
-    au < manifest ; 2018 ; 2018 ; The Opera Quarterly Volume 34 ; 34 >
+    au < ready ; 2018 ; 2018 ; The Opera Quarterly Volume 34 ; 34 >
     au < expected ; 2019 ; 2019 ; The Opera Quarterly Volume 35 ; 35 >
 
   }
@@ -19426,7 +19426,7 @@
     au < doNotProcess ; 2015 ; 2015 ; The Philosophical Quarterly Volume 65 ; 65 >
     au < released ; 2016 ; 2016 ; The Philosophical Quarterly Volume 66 ; 66 >
     au < released ; 2017 ; 2017 ; The Philosophical Quarterly Volume 67 ; 67 >
-    au < manifest ; 2018 ; 2018 ; The Philosophical Quarterly Volume 68 ; 68 >
+    au < ready ; 2018 ; 2018 ; The Philosophical Quarterly Volume 68 ; 68 >
     au < manifest ; 2019 ; 2019 ; The Philosophical Quarterly Volume 69 ; 69 >
 
   }
@@ -19762,7 +19762,7 @@
     au < doNotProcess ; 2015 ; 2015 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 68 ; 68 >
     au < released ; 2016 ; 2016 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 69 ; 69 >
     au < released ; 2017 ; 2017 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 70 ; 70 >
-    au < manifest ; 2018 ; 2018 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 71 ; 71 >
+    au < ready ; 2018 ; 2018 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 71 ; 71 >
     au < manifest ; 2019 ; 2019 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 72 ; 72 >
 
   }
@@ -19785,7 +19785,7 @@
     au < doNotProcess ; 2015 ; 2015 ; The Review of Asset Pricing Studies Volume 5 ; 5 >
     au < released ; 2016 ; 2016 ; The Review of Asset Pricing Studies Volume 6 ; 6 >
     au < released ; 2017 ; 2017 ; The Review of Asset Pricing Studies Volume 7 ; 7 >
-    au < manifest ; 2018 ; 2018 ; The Review of Asset Pricing Studies Volume 8 ; 8 >
+    au < ready ; 2018 ; 2018 ; The Review of Asset Pricing Studies Volume 8 ; 8 >
     au < manifest ; 2019 ; 2019 ; The Review of Asset Pricing Studies Volume 9 ; 9 >
 
   }
@@ -20061,7 +20061,7 @@
     au < doNotProcess ; 2015 ; 2015 ; The Review of Financial Studies Volume 28 ; 28 >
     au < released ; 2016 ; 2016 ; The Review of Financial Studies Volume 29 ; 29 >
     au < released ; 2017 ; 2017 ; The Review of Financial Studies Volume 30 ; 30 >
-    au < manifest ; 2018 ; 2018 ; The Review of Financial Studies Volume 31 ; 31 >
+    au < ready ; 2018 ; 2018 ; The Review of Financial Studies Volume 31 ; 31 >
     au < manifest ; 2019 ; 2019 ; The Review of Financial Studies Volume 32 ; 32 >
 
   }
@@ -20358,7 +20358,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Toxicological Sciences Volume 143-148 ; 143-148 >
     au < released ; 2016 ; 2016 ; Toxicological Sciences Volume 149-154 ; 149-154 >
     au < released ; 2017 ; 2017 ; Toxicological Sciences Volume 155-160 ; 155-160 >
-    au < manifest ; 2018 ; 2018 ; Toxicological Sciences Volume 161-166 ; 161-166 >
+    au < ready ; 2018 ; 2018 ; Toxicological Sciences Volume 161-166 ; 161-166 >
     au < manifest ; 2019 ; 2019 ; Toxicological Sciences Volume 167-172 ; 167-172 >
 
   }
@@ -20514,7 +20514,7 @@
     param[journal_id] = tas
 
     au < released ; 2017 ; 2017 ; Translational Animal Science Volume 1 ; 1 >
-    au < manifest ; 2018 ; 2018 ; Translational Animal Science Volume 2 ; 2 >
+    au < ready ; 2018 ; 2018 ; Translational Animal Science Volume 2 ; 2 >
     au < manifest ; 2019 ; 2019 ; Translational Animal Science Volume 3 ; 3 >
 
   }
@@ -20576,7 +20576,7 @@
     au < exists ; 2006 ; 2006 ; Tree Physiology Volume 26 ; 26 >
     au < exists ; 2007 ; 2007 ; Tree Physiology Volume 27 ; 27 >
     au < manifest ; 2008 ; 2008 ; Tree Physiology Volume 28 ; 28 >
-    au < manifest ; 2009 ; 2009 ; Tree Physiology Volume 29 ; 29 >
+    au < ready ; 2009 ; 2009 ; Tree Physiology Volume 29 ; 29 >
     au < doNotProcess ; 2010 ; 2010 ; Tree Physiology Volume 30 ; 30 >
     au < doNotProcess ; 2011 ; 2011 ; Tree Physiology Volume 31 ; 31 >
     au < doNotProcess ; 2012 ; 2012 ; Tree Physiology Volume 32 ; 32 >
@@ -20585,7 +20585,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Tree Physiology Volume 35 ; 35 >
     au < released ; 2016 ; 2016 ; Tree Physiology Volume 36 ; 36 >
     au < released ; 2017 ; 2017 ; Tree Physiology Volume 37 ; 37 >
-    au < manifest ; 2018 ; 2018 ; Tree Physiology Volume 38 ; 38 >
+    au < ready ; 2018 ; 2018 ; Tree Physiology Volume 38 ; 38 >
     au < manifest ; 2019 ; 2019 ; Tree Physiology Volume 39 ; 39 >
 
   }
@@ -20795,7 +20795,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Western Historical Quarterly Volume 46 ; 46 >
     au < released ; 2016 ; 2016 ; Western Historical Quarterly Volume 47 ; 47 >
     au < released ; 2017 ; 2017 ; Western Historical Quarterly Volume 48 ; 48 >
-    au < manifest ; 2018 ; 2018 ; Western Historical Quarterly Volume 49 ; 49 >
+    au < ready ; 2018 ; 2018 ; Western Historical Quarterly Volume 49 ; 49 >
     au < manifest ; 2019 ; 2019 ; Western Historical Quarterly Volume 50 ; 50 >
 
   }
@@ -20866,7 +20866,7 @@
     au < doNotProcess ; 2015 ; 2015 ; Yearbook of European Law Volume 34 ; 34 >
     au < released ; 2016 ; 2016 ; Yearbook of European Law Volume 35 ; 35 >
     au < released ; 2017 ; 2017 ; Yearbook of European Law Volume 36 ; 36 >
-    au < manifest ; 2018 ; 2018 ; Yearbook of European Law Volume 37 ; 37 >
+    au < ready ; 2018 ; 2018 ; Yearbook of European Law Volume 37 ; 37 >
     au < expected ; 2019 ; 2019 ; Yearbook of European Law Volume 38 ; 38 >
 
   }
@@ -20930,7 +20930,7 @@
     au < released ; 2015 ; 2015 ; Zoological Journal of the Linnean Society Volume 173-175 ; 173-175 >
     au < released ; 2016 ; 2016 ; Zoological Journal of the Linnean Society Volume 176-178 ; 176-178 >
     au < released ; 2017 ; 2017 ; Zoological Journal of the Linnean Society Volume 179-181 ; 179-181 >
-    au < manifest ; 2018 ; 2018 ; Zoological Journal of the Linnean Society Volume 182-184 ; 182-184 >
+    au < ready ; 2018 ; 2018 ; Zoological Journal of the Linnean Society Volume 182-184 ; 182-184 >
     au < manifest ; 2019 ; 2019 ; Zoological Journal of the Linnean Society Volume 185-187 ; 185-187 >
 
   }
