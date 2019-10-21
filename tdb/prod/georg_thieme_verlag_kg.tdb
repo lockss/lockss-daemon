@@ -107,7 +107,7 @@
     au < released ; 2015 ; 2015 ; Aktuelle Dermatologie Volume 41 ; 41 >
     au < released ; 2016 ; 2016 ; Aktuelle Dermatologie Volume 42 ; 42 >
     au < released ; 2017 ; 2017 ; Aktuelle Dermatologie Volume 43 ; 43 >
-    au < manifest ; 2018 ; 2018 ; Aktuelle Dermatologie Volume 44 ; 44 >
+    au < released ; 2018 ; 2018 ; Aktuelle Dermatologie Volume 44 ; 44 >
     au < expected ; 2019 ; 2019 ; Aktuelle Dermatologie Volume 45 ; 45 >
 
   }
@@ -162,7 +162,7 @@
     au < released ; 2015 ; 2015 ; Aktuelle Kardiologie Volume 4 ; 4 >
     au < released ; 2016 ; 2016 ; Aktuelle Kardiologie Volume 5 ; 5 >
     au < released ; 2017 ; 2017 ; Aktuelle Kardiologie Volume 6 ; 6 >
-    au < manifest ; 2018 ; 2018 ; Aktuelle Kardiologie Volume 7 ; 7 >
+    au < released ; 2018 ; 2018 ; Aktuelle Kardiologie Volume 7 ; 7 >
     au < expected ; 2019 ; 2019 ; Aktuelle Kardiologie Volume 8 ; 8 >
 
   }
@@ -407,7 +407,7 @@
     au < manifest ; 2015 ; 2015 ; Allgemeine Homöopathische Zeitung Volume 260 ; 260 >
     au < released ; 2016 ; 2016 ; Allgemeine Homöopathische Zeitung Volume 261 ; 261 >
     au < released ; 2017 ; 2017 ; Allgemeine Homöopathische Zeitung Volume 262 ; 262 >
-    au < manifest ; 2018 ; 2018 ; Allgemeine Homöopathische Zeitung Volume 263 ; 263 >
+    au < released ; 2018 ; 2018 ; Allgemeine Homöopathische Zeitung Volume 263 ; 263 >
     au < expected ; 2019 ; 2019 ; Allgemeine Homöopathische Zeitung Volume 264 ; 264 >
 
     }
@@ -434,7 +434,7 @@
     au < released ; 2015 ; 2015 ; Allgemein- und Viszeralchirurgie up2date Volume 9 ; 9 >
     au < released ; 2016 ; 2016 ; Allgemein- und Viszeralchirurgie up2date Volume 10 ; 10 >
     au < released ; 2017 ; 2017 ; Allgemein- und Viszeralchirurgie up2date Volume 11 ; 11 >
-    au < manifest ; 2018 ; 2018 ; Allgemein- und Viszeralchirurgie up2date Volume 12 ; 12 >
+    au < released ; 2018 ; 2018 ; Allgemein- und Viszeralchirurgie up2date Volume 12 ; 12 >
     au < expected ; 2019 ; 2019 ; Allgemein- und Viszeralchirurgie up2date Volume 13 ; 13 >
 
    }
@@ -523,7 +523,7 @@
     param[journal_id] = 10.1055/s-00042129
     comment[years] = 2018-current
 
-    au < manifest ; 2018 ; 2018 ; Annals of Otology and Neurotology Volume 1 ; 1 >
+    au < released ; 2018 ; 2018 ; Annals of Otology and Neurotology Volume 1 ; 1 >
     au < manifest ; 2019 ; 2019 ; Annals of Otology and Neurotology Volume 2 ; 2 >
 
    }
@@ -539,11 +539,11 @@
     comment[years] = 2013-current
 
     au < released ; 2013 ; 2013 ; AORTA Volume 1 ; 1 >
-    au < manifest ; 2014 ; 2014 ; AORTA Volume 2 ; 2 >
+    au < released ; 2014 ; 2014 ; AORTA Volume 2 ; 2 >
     au < manifest ; 2015 ; 2015 ; AORTA Volume 3 ; 3 >
     au < released ; 2016 ; 2016 ; AORTA Volume 4 ; 4 >
-    au < manifest ; 2017 ; 2017 ; AORTA Volume 5 ; 5 >
-    au < manifest ; 2018 ; 2018 ; AORTA Volume 6 ; 6 >
+    au < released ; 2017 ; 2017 ; AORTA Volume 5 ; 5 >
+    au < released ; 2018 ; 2018 ; AORTA Volume 6 ; 6 >
     au < manifest ; 2019 ; 2019 ; AORTA Volume 7 ; 7 >
 
    }
@@ -562,7 +562,7 @@
    au < released ; 2015 ; 2015 ; Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery Volume 34 ; 34 >
    au < released ; 2016 ; 2016 ; Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery Volume 35 ; 35 >
    au < released ; 2017 ; 2017 ; Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery Volume 36 ; 36 >
-   au < manifest ; 2018 ; 2018 ; Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery Volume 37 ; 37 >
+   au < released ; 2018 ; 2018 ; Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery Volume 37 ; 37 >
    au < expected ; 2019 ; 2019 ; Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery Volume 38 ; 38 >
 
    }
@@ -630,7 +630,7 @@
     au < released ; 2015 ; 2015 ; Drug Research Volume 65 ; 65 >
     au < released ; 2016 ; 2016 ; Drug Research Volume 66 ; 66 >
     au < released ; 2017 ; 2017 ; Drug Research Volume 67 ; 67 >
-    au < manifest ; 2018 ; 2018 ; Drug Research Volume 68 ; 68 >
+    au < released ; 2018 ; 2018 ; Drug Research Volume 68 ; 68 >
     au < expected ; 2019 ; 2019 ; Drug Research Volume 69 ; 69 >
 
    }
@@ -653,7 +653,7 @@
     au < released ; 2015 ; 2015 ; Augenheilkunde up2date Volume 5 ; 5 >
     au < released ; 2016 ; 2016 ; Augenheilkunde up2date Volume 6 ; 6 >
     au < released ; 2017 ; 2017 ; Augenheilkunde up2date Volume 7 ; 7 >
-    au < manifest ; 2018 ; 2018 ; Augenheilkunde up2date Volume 8 ; 8 >
+    au < released ; 2018 ; 2018 ; Augenheilkunde up2date Volume 8 ; 8 >
     au < expected ; 2019 ; 2019 ; Augenheilkunde up2date Volume 9 ; 9 >
 
   }
@@ -777,7 +777,7 @@
     au < released ; 2015 ; 2015 ; Clinics in Colon and Rectal Surgery Volume 28 ; 028 >
     au < released ; 2016 ; 2016 ; Clinics in Colon and Rectal Surgery Volume 29 ; 29 >
     au < released ; 2017 ; 2017 ; Clinics in Colon and Rectal Surgery Volume 30 ; 30 >
-    au < manifest ; 2018 ; 2018 ; Clinics in Colon and Rectal Surgery Volume 31 ; 31 >
+    au < released ; 2018 ; 2018 ; Clinics in Colon and Rectal Surgery Volume 31 ; 31 >
     au < expected ; 2019 ; 2019 ; Clinics in Colon and Rectal Surgery Volume 32 ; 32 >
 
   }
@@ -804,7 +804,7 @@
     au < released ; 2015 ; 2015 ; Craniomaxillofacial Trauma & Reconstruction Volume 8 ; 8 >
     au < released ; 2016 ; 2016 ; Craniomaxillofacial Trauma & Reconstruction Volume 9 ; 9 >
     au < released ; 2017 ; 2017 ; Craniomaxillofacial Trauma & Reconstruction Volume 10 ; 10 >
-    au < manifest ; 2018 ; 2018 ; Craniomaxillofacial Trauma & Reconstruction Volume 11 ; 11 >
+    au < released ; 2018 ; 2018 ; Craniomaxillofacial Trauma & Reconstruction Volume 11 ; 11 >
     au < expected ; 2019 ; 2019 ; Craniomaxillofacial Trauma & Reconstruction Volume 12 ; 12 >
 
   }
@@ -1020,7 +1020,7 @@
    au < released ; 2015 ; 2015 ; Diabetologie und Stoffwechsel Volume 10 ; 10 >
    au < released ; 2016 ; 2016 ; Diabetologie und Stoffwechsel Volume 11 ; 11 >
    au < released ; 2017 ; 2017 ; Diabetologie und Stoffwechsel Volume 12 ; 12 >
-   au < manifest ; 2018 ; 2018 ; Diabetologie und Stoffwechsel Volume 13 ; 13 >
+   au < released ; 2018 ; 2018 ; Diabetologie und Stoffwechsel Volume 13 ; 13 >
    au < expected ; 2019 ; 2019 ; Diabetologie und Stoffwechsel Volume 14 ; 14 >
 
   }
@@ -1206,7 +1206,7 @@
    au < released ; 2015 ; 2015 ; DMW - Deutsche Medizinische Wochenschrift Volume 141 ; 141 >
    au < released ; 2016 ; 2016 ; DMW - Deutsche Medizinische Wochenschrift Volume 142 ; 142 >
    au < released ; 2017 ; 2017 ; DMW - Deutsche Medizinische Wochenschrift Volume 143 ; 143 >
-   au < manifest ; 2018 ; 2018 ; DMW - Deutsche Medizinische Wochenschrift Volume 144 ; 144 >
+   au < released ; 2018 ; 2018 ; DMW - Deutsche Medizinische Wochenschrift Volume 144 ; 144 >
    au < expected ; 2019 ; 2019 ; DMW - Deutsche Medizinische Wochenschrift Volume 145 ; 145 >
 
   }
@@ -1266,7 +1266,7 @@
    au < released ; 2015 ; 2015 ; Endo-Praxis Volume 31 ; 31 >
    au < released ; 2016 ; 2016 ; Endo-Praxis Volume 32 ; 32 >
    au < released ; 2017 ; 2017 ; Endo-Praxis Volume 33 ; 33 >
-   au < manifest ; 2018 ; 2018 ; Endo-Praxis Volume 34 ; 34 >
+   au < released ; 2018 ; 2018 ; Endo-Praxis Volume 34 ; 34 >
    au < expected ; 2019 ; 2019 ; Endo-Praxis Volume 35 ; 35 >
 
   }
@@ -1416,7 +1416,7 @@
    au < released ; 2015 ; 2015 ; Erfahrungsheilkunde Volume 64 ; 64 >
    au < released ; 2016 ; 2016 ; Erfahrungsheilkunde Volume 65 ; 65 >
    au < released ; 2017 ; 2017 ; Erfahrungsheilkunde Volume 66 ; 66 >
-   au < manifest ; 2018 ; 2018 ; Erfahrungsheilkunde Volume 67 ; 67 >
+   au < released ; 2018 ; 2018 ; Erfahrungsheilkunde Volume 67 ; 67 >
    au < expected ; 2019 ; 2019 ; Erfahrungsheilkunde Volume 68 ; 68 >
 
   }
@@ -1540,7 +1540,7 @@
    au < released ; 2015 ; 2015 ; European Journal of Pediatric Surgery Volume 25 ; 25 >
    au < released ; 2016 ; 2016 ; European Journal of Pediatric Surgery Volume 26 ; 26 >
    au < released ; 2017 ; 2017 ; European Journal of Pediatric Surgery Volume 27 ; 27 >
-   au < manifest ; 2018 ; 2018 ; European Journal of Pediatric Surgery Volume 28 ; 28 >
+   au < released ; 2018 ; 2018 ; European Journal of Pediatric Surgery Volume 28 ; 28 >
    au < expected ; 2019 ; 2019 ; European Journal of Pediatric Surgery Volume 29 ; 29 >
 
   }
@@ -1651,7 +1651,7 @@
    au < released ; 2015 ; 2015 ; Experimental and Clinical Endocrinology & Diabetes Volume 123 ; 123 >
    au < released ; 2016 ; 2016 ; Experimental and Clinical Endocrinology & Diabetes Volume 124 ; 124 >
    au < released ; 2017 ; 2017 ; Experimental and Clinical Endocrinology & Diabetes Volume 125 ; 125 >
-   au < manifest ; 2018 ; 2018 ; Experimental and Clinical Endocrinology & Diabetes Volume 126 ; 126 >
+   au < released ; 2018 ; 2018 ; Experimental and Clinical Endocrinology & Diabetes Volume 126 ; 126 >
    au < expected ; 2019 ; 2019 ; Experimental and Clinical Endocrinology & Diabetes Volume 127 ; 127 >
 
   }
@@ -1746,7 +1746,7 @@
    au < released ; 2015 ; 2015 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 22 ; 22 >
    au < released ; 2016 ; 2016 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 23 ; 23 >
    au < released ; 2017 ; 2017 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 24 ; 24 >
-   au < manifest ; 2018 ; 2018 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 25 ; 25 >
+   au < released ; 2018 ; 2018 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 25 ; 25 >
    au < expected ; 2019 ; 2019 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 26 ; 26 >
 
   }
@@ -1800,7 +1800,7 @@
    au < released ; 2015 ; 2015 ; Fortschritte der Neurologie - Psychiatrie Volume 83 ; 83 >
    au < released ; 2016 ; 2016 ; Fortschritte der Neurologie - Psychiatrie Volume 84 ; 84 >
    au < released ; 2017 ; 2017 ; Fortschritte der Neurologie - Psychiatrie Volume 85 ; 85 >
-   au < manifest ; 2018 ; 2018 ; Fortschritte der Neurologie - Psychiatrie Volume 86 ; 86 >
+   au < released ; 2018 ; 2018 ; Fortschritte der Neurologie - Psychiatrie Volume 86 ; 86 >
    au < expected ; 2019 ; 2019 ; Fortschritte der Neurologie - Psychiatrie Volume 87 ; 87 >
 
   }
@@ -1997,7 +1997,7 @@
    au < released ; 2015 ; 2015 ; Gesundheitswesen Das Volume 79 ; 79 >
    au < released ; 2016 ; 2016 ; Gesundheitswesen Das Volume 80 ; 80 >
    au < released ; 2017 ; 2017 ; Gesundheitswesen Das Volume 81 ; 81 >
-   au < manifest ; 2018 ; 2018 ; Gesundheitswesen Das Volume 82 ; 82 >
+   au < released ; 2018 ; 2018 ; Gesundheitswesen Das Volume 82 ; 82 >
    au < expected ; 2019 ; 2019 ; Gesundheitswesen Das Volume 83 ; 83 >
 
   }
@@ -2054,7 +2054,7 @@
    au < released ; 2015 ; 2015 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 47 ; 47 >
    au < released ; 2016 ; 2016 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 48 ; 48 >
    au < released ; 2017 ; 2017 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 49 ; 49 >
-   au < manifest ; 2018 ; 2018 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 50 ; 50 >
+   au < released ; 2018 ; 2018 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 50 ; 50 >
    au < expected ; 2019 ; 2019 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 51 ; 51 >
 
   }
@@ -2076,7 +2076,7 @@
     au < released ; 2015 ; 2015 ; Handchirurgie Scan Volume 4 ; 4 >
     au < released ; 2016 ; 2016 ; Handchirurgie Scan Volume 5 ; 5 >
     au < released ; 2017 ; 2017 ; Handchirurgie Scan Volume 6 ; 6 >
-    au < manifest ; 2018 ; 2018 ; Handchirurgie Scan Volume 7 ; 7 >
+    au < released ; 2018 ; 2018 ; Handchirurgie Scan Volume 7 ; 7 >
     au < expected ; 2019 ; 2019 ; Handchirurgie Scan Volume 8 ; 8 >
 
   }
@@ -2106,7 +2106,7 @@
    au < released ; 2015 ; 2015 ; Hebamme Die Volume 28 ; 28 >
    au < released ; 2016 ; 2016 ; Hebamme Die Volume 29 ; 29 >
    au < released ; 2017 ; 2017 ; Hebamme Die Volume 30 ; 30 >
-   au < manifest ; 2018 ; 2018 ; Hebamme Die Volume 31 ; 31 >
+   au < released ; 2018 ; 2018 ; Hebamme Die Volume 31 ; 31 >
    au < expected ; 2019 ; 2019 ; Hebamme Die Volume 32 ; 32 >
 
   }
@@ -2325,7 +2325,7 @@
    au < released ; 2015 ; 2015 ; Informationen aus Orthodontie & Kieferorthopädie Volume 47 ; 47 >
    au < released ; 2016 ; 2016 ; Informationen aus Orthodontie & Kieferorthopädie Volume 48 ; 48 >
    au < released ; 2017 ; 2017 ; Informationen aus Orthodontie & Kieferorthopädie Volume 49 ; 49 >
-   au < manifest ; 2018 ; 2018 ; Informationen aus Orthodontie & Kieferorthopädie Volume 50 ; 50 >
+   au < released ; 2018 ; 2018 ; Informationen aus Orthodontie & Kieferorthopädie Volume 50 ; 50 >
    au < expected ; 2019 ; 2019 ; Informationen aus Orthodontie & Kieferorthopädie Volume 51 ; 51 >
 
   }
@@ -2427,7 +2427,7 @@
    au < released ; 2015 ; 2015 ; International Archives of Otorhinolaryngology Volume 19 ; 19 >
    au < released ; 2016 ; 2016 ; International Archives of Otorhinolaryngology Volume 20 ; 20 >
    au < released ; 2017 ; 2017 ; International Archives of Otorhinolaryngology Volume 21 ; 21 >
-   au < manifest ; 2018 ; 2018 ; International Archives of Otorhinolaryngology Volume 22 ; 22 >
+   au < released ; 2018 ; 2018 ; International Archives of Otorhinolaryngology Volume 22 ; 22 >
    au < expected ; 2019 ; 2019 ; International Archives of Otorhinolaryngology Volume 23 ; 23 >
 
   }
@@ -2470,7 +2470,7 @@
     au < released ; 2015 ; 2015 ; International Journal of Angiology Volume 24 ; 24 >
     au < released ; 2016 ; 2016 ; International Journal of Angiology Volume 25 ; 25 >
     au < released ; 2017 ; 2017 ; International Journal of Angiology Volume 26 ; 26 >
-    au < manifest ; 2018 ; 2018 ; International Journal of Angiology Volume 27 ; 27 >
+    au < released ; 2018 ; 2018 ; International Journal of Angiology Volume 27 ; 27 >
     au < expected ; 2019 ; 2019 ; International Journal of Angiology Volume 28 ; 28 >
 
   }
@@ -2585,7 +2585,7 @@
     au < released ; 2015 ; 2015 ; Journal Club AINS Volume 4 ; 4 >
     au < released ; 2016 ; 2016 ; Journal Club AINS Volume 5 ; 5 >
     au < released ; 2017 ; 2017 ; Journal Club AINS Volume 6 ; 6 >
-    au < manifest ; 2018 ; 2018 ; Journal Club AINS Volume 7 ; 7 >
+    au < released ; 2018 ; 2018 ; Journal Club AINS Volume 7 ; 7 >
     au < expected ; 2019 ; 2019 ; Journal Club AINS Volume 8 ; 8 >
 
   }
@@ -2668,7 +2668,7 @@
    au < released ; 2015 ; 2015 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 10 ; 10 >
    au < released ; 2016 ; 2016 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 11 ; 11 >
    au < released ; 2017 ; 2017 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 12 ; 12 >
-   au < manifest ; 2018 ; 2018 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 13 ; 13 >
+   au < released ; 2018 ; 2018 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 13 ; 13 >
    au < expected ; 2019 ; 2019 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 14 ; 14 >
 
   }
@@ -2701,7 +2701,7 @@
     #years = 2017-current
 
     au < released ; 2017 ; 2017 ; Journal of Clinical Interventional Radiology Volume 1 ; 1 >
-    au < manifest ; 2018 ; 2018 ; Journal of Clinical Interventional Radiology Volume 2 ; 2 >
+    au < released ; 2018 ; 2018 ; Journal of Clinical Interventional Radiology Volume 2 ; 2 >
     au < expected ; 2019 ; 2019 ; Journal of Clinical Interventional Radiology Volume 3 ; 3 >
 
   }
@@ -3073,7 +3073,7 @@
     au < released ; 2015 ; 2015 ; Journal of Reconstructive Microsurgery Volume 31 ; 31 >
     au < released ; 2016 ; 2016 ; Journal of Reconstructive Microsurgery Volume 32 ; 32 >
     au < released ; 2017 ; 2017 ; Journal of Reconstructive Microsurgery Volume 33 ; 33 >
-    au < manifest ; 2018 ; 2018 ; Journal of Reconstructive Microsurgery Volume 34 ; 34 >
+    au < released ; 2018 ; 2018 ; Journal of Reconstructive Microsurgery Volume 34 ; 34 >
     au < expected ; 2019 ; 2019 ; Journal of Reconstructive Microsurgery Volume 35 ; 35 >
 
   }
@@ -3168,7 +3168,7 @@
     au < released ; 2015 ; 2015 ; Kardiologie up2date Volume 11 ; 11 >
     au < released ; 2016 ; 2016 ; Kardiologie up2date Volume 12 ; 12 >
     au < released ; 2017 ; 2017 ; Kardiologie up2date Volume 13 ; 13 >
-    au < manifest ; 2018 ; 2018 ; Kardiologie up2date Volume 14 ; 14 >
+    au < released ; 2018 ; 2018 ; Kardiologie up2date Volume 14 ; 14 >
     au < expected ; 2019 ; 2019 ; Kardiologie up2date Volume 15 ; 15 >
 
   }
@@ -3195,7 +3195,7 @@
     au < released ; 2015 ; 2015 ; kleintier konkret Volume 18 ; 18 >
     au < released ; 2016 ; 2016 ; kleintier konkret Volume 19 ; 19 >
     au < released ; 2017 ; 2017 ; kleintier konkret Volume 20 ; 20 >
-    au < manifest ; 2018 ; 2018 ; kleintier konkret Volume 21 ; 21 >
+    au < released ; 2018 ; 2018 ; kleintier konkret Volume 21 ; 21 >
     au < expected ; 2019 ; 2019 ; kleintier konkret Volume 22 ; 22 >
 
   }
@@ -3420,7 +3420,7 @@
     au < released ; 2015 ; 2015 ; kma - Das Gesundheitswirtschaftsmagazin Volume 20 ; 20 >
     au < released ; 2016 ; 2016 ; kma - Das Gesundheitswirtschaftsmagazin Volume 21 ; 21 >
     au < released ; 2017 ; 2017 ; kma - Das Gesundheitswirtschaftsmagazin Volume 22 ; 22 >
-    au < manifest ; 2018 ; 2018 ; kma - Das Gesundheitswirtschaftsmagazin Volume 23 ; 23 >
+    au < released ; 2018 ; 2018 ; kma - Das Gesundheitswirtschaftsmagazin Volume 23 ; 23 >
     au < expected ; 2019 ; 2019 ; kma - Das Gesundheitswirtschaftsmagazin Volume 24 ; 24 >
 
   }
@@ -3524,7 +3524,7 @@
     au < released ; 2015 ; 2015 ; Laryngo-Rhino-Otologie Volume 94 ; 94 >
     au < released ; 2016 ; 2016 ; Laryngo-Rhino-Otologie Volume 95 ; 95 >
     au < manifest ; 2017 ; 2017 ; Laryngo-Rhino-Otologie Volume 96 ; 96 >
-    au < manifest ; 2018 ; 2018 ; Laryngo-Rhino-Otologie Volume 97 ; 97 >
+    au < released ; 2018 ; 2018 ; Laryngo-Rhino-Otologie Volume 97 ; 97 >
     au < expected ; 2019 ; 2019 ; Laryngo-Rhino-Otologie Volume 98 ; 98 >
 
   }
@@ -3935,7 +3935,7 @@
     au < released ; 2015 ; 2015 ; Notfallmedizin up2date Volume 10 ; 10 >
     au < released ; 2016 ; 2016 ; Notfallmedizin up2date Volume 11 ; 11 >
     au < released ; 2017 ; 2017 ; Notfallmedizin up2date Volume 12 ; 12 >
-    au < manifest ; 2018 ; 2018 ; Notfallmedizin up2date Volume 13 ; 13 >
+    au < released ; 2018 ; 2018 ; Notfallmedizin up2date Volume 13 ; 13 >
     au < expected ; 2019 ; 2019 ; Notfallmedizin up2date Volume 14 ; 14 >
 
   }
@@ -4001,7 +4001,7 @@
     au < released ; 2015 ; 2015 ; OP-Journal Volume 31 ; 31 >
     au < released ; 2016 ; 2016 ; OP-Journal Volume 32 ; 32 >
     au < released ; 2017 ; 2017 ; OP-Journal Volume 33 ; 33 >
-    au < manifest ; 2018 ; 2018 ; OP-Journal Volume 34 ; 34 >
+    au < released ; 2018 ; 2018 ; OP-Journal Volume 34 ; 34 >
     au < expected ; 2019 ; 2019 ; OP-Journal Volume 35 ; 35 >
 
   }
@@ -4137,7 +4137,7 @@
     au < released ; 2015 ; 2015 ; Pädiatrie up2date Volume 10 ; 10 >
     au < released ; 2016 ; 2016 ; Pädiatrie up2date Volume 11 ; 11 >
     au < manifest ; 2017 ; 2017 ; Pädiatrie up2date Volume 12 ; 12 >
-    au < manifest ; 2018 ; 2018 ; Pädiatrie up2date Volume 13 ; 13 >
+    au < released ; 2018 ; 2018 ; Pädiatrie up2date Volume 13 ; 13 >
     au < expected ; 2019 ; 2019 ; Pädiatrie up2date Volume 14 ; 14 >
 
   }
@@ -4251,7 +4251,7 @@
     au < released ; 2015 ; 2015 ; Pharmacopsychiatry Volume 48 ; 48 >
     au < released ; 2016 ; 2016 ; Pharmacopsychiatry Volume 49 ; 49 >
     au < released ; 2017 ; 2017 ; Pharmacopsychiatry Volume 50 ; 50 >
-    au < manifest ; 2018 ; 2018 ; Pharmacopsychiatry Volume 51 ; 51 >
+    au < released ; 2018 ; 2018 ; Pharmacopsychiatry Volume 51 ; 51 >
     au < expected ; 2019 ; 2019 ; Pharmacopsychiatry Volume 52 ; 52 >
 
   }
@@ -4705,7 +4705,7 @@
    au < released ; 2015 ; 2015 ; Psychiatrische Praxis Volume 42 ; 42 >
    au < released ; 2016 ; 2016 ; Psychiatrische Praxis Volume 43 ; 43 >
    au < released ; 2017 ; 2017 ; Psychiatrische Praxis Volume 44 ; 44 >
-   au < manifest ; 2018 ; 2018 ; Psychiatrische Praxis Volume 45 ; 45 >
+   au < released ; 2018 ; 2018 ; Psychiatrische Praxis Volume 45 ; 45 >
    au < expected ; 2019 ; 2019 ; Psychiatrische Praxis Volume 46 ; 46 >
 
   }
@@ -4774,7 +4774,7 @@
    au < released ; 2015 ; 2015 ; Radiologie up2date Volume 15 ; 15 >
    au < released ; 2016 ; 2016 ; Radiologie up2date Volume 16 ; 16 >
    au < released ; 2017 ; 2017 ; Radiologie up2date Volume 17 ; 17 >
-   au < manifest ; 2018 ; 2018 ; Radiologie up2date Volume 18 ; 18 >
+   au < released ; 2018 ; 2018 ; Radiologie up2date Volume 18 ; 18 >
    au < expected ; 2019 ; 2019 ; Radiologie up2date Volume 19 ; 19 >
 
   }
@@ -4834,7 +4834,7 @@
    au < released ; 2015 ; 2015 ; Rehabilitation Die Volume 54 ; 54 >
    au < released ; 2016 ; 2016 ; Rehabilitation Die Volume 55 ; 55 >
    au < released ; 2017 ; 2017 ; Rehabilitation Die Volume 56 ; 56 >
-   au < manifest ; 2018 ; 2018 ; Rehabilitation Die Volume 57 ; 57 >
+   au < released ; 2018 ; 2018 ; Rehabilitation Die Volume 57 ; 57 >
    au < expected ; 2019 ; 2019 ; Rehabilitation Die Volume 58 ; 58 >
 
   }
@@ -4876,7 +4876,7 @@
 
    au < released ; 2016 ; 2016 ; Revista Brasileira de Ginecologia e Obstetrícia Volume 38 ; 38 >
    au < released ; 2017 ; 2017 ; Revista Brasileira de Ginecologia e Obstetrícia Volume 39 ; 39 >
-   au < manifest ; 2018 ; 2018 ; Revista Brasileira de Ginecologia e Obstetrícia Volume 40 ; 40 >
+   au < released ; 2018 ; 2018 ; Revista Brasileira de Ginecologia e Obstetrícia Volume 40 ; 40 >
    au < expected ; 2019 ; 2019 ; Revista Brasileira de Ginecologia e Obstetrícia Volume 41 ; 41 >
 
   }
@@ -5030,7 +5030,7 @@
    au < released ; 2015 ; 2015 ; Seminars in Hearing Volume 36 ; 36 >
    au < released ; 2016 ; 2016 ; Seminars in Hearing Volume 37 ; 37 >
    au < released ; 2017 ; 2017 ; Seminars in Hearing Volume 38 ; 38 >
-   au < manifest ; 2018 ; 2018 ; Seminars in Hearing Volume 39 ; 39 >
+   au < released ; 2018 ; 2018 ; Seminars in Hearing Volume 39 ; 39 >
    au < expected ; 2019 ; 2019 ; Seminars in Hearing Volume 40 ; 40 >
 
   }
@@ -5135,7 +5135,7 @@
    au < released ; 2015 ; 2015 ; Seminars in Liver Disease Volume 35 ; 35 >
    au < released ; 2016 ; 2016 ; Seminars in Liver Disease Volume 36 ; 36 >
    au < released ; 2017 ; 2017 ; Seminars in Liver Disease Volume 37 ; 37 >
-   au < manifest ; 2018 ; 2018 ; Seminars in Liver Disease Volume 38 ; 38 >
+   au < released ; 2018 ; 2018 ; Seminars in Liver Disease Volume 38 ; 38 >
    au < expected ; 2019 ; 2019 ; Seminars in Liver Disease Volume 39 ; 39 >
 
   }
@@ -5791,7 +5791,7 @@
     au < released ; 2015 ; 2015 ; The Surgery Journal Volume 1 ; 1 >
     au < released ; 2016 ; 2016 ; The Surgery Journal Volume 2 ; 2 >
     au < released ; 2017 ; 2017 ; The Surgery Journal Volume 3 ; 3 >
-    au < manifest ; 2018 ; 2018 ; The Surgery Journal Volume 4 ; 4 >
+    au < released ; 2018 ; 2018 ; The Surgery Journal Volume 4 ; 4 >
     au < expected ; 2019 ; 2019 ; The Surgery Journal Volume 5 ; 5 >
 
   }
@@ -5977,7 +5977,7 @@
    au < released ; 2015 ; 2015 ; team-konkret Volume 11 ; 11 >
    au < released ; 2016 ; 2016 ; team-konkret Volume 12 ; 12 >
    au < released ; 2017 ; 2017 ; team-konkret Volume 13 ; 13 >
-   au < manifest ; 2018 ; 2018 ; team-konkret Volume 14 ; 14 >
+   au < released ; 2018 ; 2018 ; team-konkret Volume 14 ; 14 >
    au < expected ; 2019 ; 2019 ; team-konkret Volume 15 ; 15 >
 
   }
@@ -6057,7 +6057,7 @@
     au < released ; 2015 ; 2015 ; The Thoracic and Cardiovascular Surgeon Reports Volume 4 ; 4 >
     au < released ; 2016 ; 2016 ; The Thoracic and Cardiovascular Surgeon Reports Volume 5 ; 5 >
     au < released ; 2017 ; 2017 ; The Thoracic and Cardiovascular Surgeon Reports Volume 6 ; 6 >
-    au < manifest ; 2018 ; 2018 ; The Thoracic and Cardiovascular Surgeon Reports Volume 7 ; 7 >
+    au < released ; 2018 ; 2018 ; The Thoracic and Cardiovascular Surgeon Reports Volume 7 ; 7 >
     au < expected ; 2019 ; 2019 ; The Thoracic and Cardiovascular Surgeon Reports Volume 8 ; 8 >
 
   }
@@ -6398,7 +6398,7 @@
     au < released ; 2015 ; 2015 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 29 ; 29 >
     au < released ; 2016 ; 2016 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 30 ; 30 >
     au < released ; 2017 ; 2017 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 31 ; 31 >
-    au < manifest ; 2018 ; 2018 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 32 ; 32 >
+    au < released ; 2018 ; 2018 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 32 ; 32 >
     au < expected ; 2019 ; 2019 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 33 ; 33 >
 
   }
@@ -6433,7 +6433,7 @@
     au < released ; 2015 ; 2015 ; Zeitschrift für Gastroenterologie Volume 53 ; 53 >
     au < released ; 2016 ; 2016 ; Zeitschrift für Gastroenterologie Volume 54 ; 54 >
     au < manifest ; 2017 ; 2017 ; Zeitschrift für Gastroenterologie Volume 55 ; 55 >
-    au < manifest ; 2018 ; 2018 ; Zeitschrift für Gastroenterologie Volume 56 ; 56 >
+    au < released ; 2018 ; 2018 ; Zeitschrift für Gastroenterologie Volume 56 ; 56 >
     au < expected ; 2019 ; 2019 ; Zeitschrift für Gastroenterologie Volume 57 ; 57 >
 
   }
@@ -6573,7 +6573,7 @@
     au < released ; 2015 ; 2015 ; Zeitschrift für Komplementärmedizin Volume 7 ; 7 >
     au < released ; 2016 ; 2016 ; Zeitschrift für Komplementärmedizin Volume 8 ; 8 >
     au < released ; 2017 ; 2017 ; Zeitschrift für Komplementärmedizin Volume 9 ; 9 >
-    au < manifest ; 2018 ; 2018 ; Zeitschrift für Komplementärmedizin Volume 10 ; 10 >
+    au < released ; 2018 ; 2018 ; Zeitschrift für Komplementärmedizin Volume 10 ; 10 >
     au < expected ; 2019 ; 2019 ; Zeitschrift für Komplementärmedizin Volume 11 ; 11 >
 
   }
@@ -6772,7 +6772,7 @@
     au < released ; 2015 ; 2015 ; Zeitschrift für Sexualforschung Volume 28 ; 28 >
     au < released ; 2016 ; 2016 ; Zeitschrift für Sexualforschung Volume 29 ; 29 >
     au < released ; 2017 ; 2017 ; Zeitschrift für Sexualforschung Volume 30 ; 30 >
-    au < manifest ; 2018 ; 2018 ; Zeitschrift für Sexualforschung Volume 31 ; 31 >
+    au < released ; 2018 ; 2018 ; Zeitschrift für Sexualforschung Volume 31 ; 31 >
     au < expected ; 2019 ; 2019 ; Zeitschrift für Sexualforschung Volume 32 ; 32 >
 
   }
@@ -6944,7 +6944,7 @@
     comment[years] = 2017-current
 
     au < released ; 2017 ; 2017 ; ACI Open Volume 1 ; 1 >
-    au < manifest ; 2018 ; 2018 ; ACI Open Volume 2 ; 2 >
+    au < released ; 2018 ; 2018 ; ACI Open Volume 2 ; 2 >
     au < expected ; 2019 ; 2019 ; ACI Open Volume 3 ; 3 >
 
   }
@@ -7046,7 +7046,7 @@
     comment[years] = 2017-current
 
     au < released ; 2017 ; 2017 ; GGP - Fachzeitschrift für Geriatrische und Gerontologische Pflege Volume 1 ; 1 >
-    au < manifest ; 2018 ; 2018 ; GGP - Fachzeitschrift für Geriatrische und Gerontologische Pflege Volume 2 ; 2 >
+    au < released ; 2018 ; 2018 ; GGP - Fachzeitschrift für Geriatrische und Gerontologische Pflege Volume 2 ; 2 >
     au < expected ; 2019 ; 2019 ; GGP - Fachzeitschrift für Geriatrische und Gerontologische Pflege Volume 3 ; 3 >
 
   }
@@ -7081,7 +7081,7 @@
     au < released ; 2015 ; 2015 ; Hämostaseologie Volume 35 ; 35 >
     au < released ; 2016 ; 2016 ; Hämostaseologie Volume 36 ; 36 >
     au < released ; 2017 ; 2017 ; Hämostaseologie Volume 37 ; 37 >
-    au < manifest ; 2018 ; 2018 ; Hämostaseologie Volume 38 ; 38 >
+    au < released ; 2018 ; 2018 ; Hämostaseologie Volume 38 ; 38 >
     au < expected ; 2019 ; 2019 ; Hämostaseologie Volume 39 ; 39 >
 
   }
@@ -7164,7 +7164,7 @@
     au < released ; 2015 ; 2015 ; Kinder- und Jugendmedizin Volume 15 ; 15 >
     au < released ; 2016 ; 2016 ; Kinder- und Jugendmedizin Volume 16 ; 16 >
     au < released ; 2017 ; 2017 ; Kinder- und Jugendmedizin Volume 17 ; 17 >
-    au < manifest ; 2018 ; 2018 ; Kinder- und Jugendmedizin Volume 18 ; 18 >
+    au < released ; 2018 ; 2018 ; Kinder- und Jugendmedizin Volume 18 ; 18 >
     au < expected ; 2019 ; 2019 ; Kinder- und Jugendmedizin Volume 19 ; 19 >
 
   }
@@ -7284,7 +7284,7 @@
     au < released ; 2015 ; 2015 ; Onkologische Welt Volume 6 ; 6 >
     au < released ; 2016 ; 2016 ; Onkologische Welt Volume 7 ; 7 >
     au < released ; 2017 ; 2017 ; Onkologische Welt Volume 8 ; 8 >
-    au < manifest ; 2018 ; 2018 ; Onkologische Welt Volume 9 ; 9 >
+    au < released ; 2018 ; 2018 ; Onkologische Welt Volume 9 ; 9 >
     au < expected ; 2019 ; 2019 ; Onkologische Welt Volume 10 ; 10 >
 
   }
@@ -7385,7 +7385,7 @@
     au < released ; 2015 ; 2015 ; Revista Iberoamericana de Cirugía de la Mano Volume 43 ; 43 >
     au < released ; 2016 ; 2016 ; Revista Iberoamericana de Cirugía de la Mano Volume 44 ; 44 >
     au < manifest ; 2017 ; 2017 ; Revista Iberoamericana de Cirugía de la Mano Volume 45 ; 45 >
-    au < manifest ; 2018 ; 2018 ; Revista Iberoamericana de Cirugía de la Mano Volume 46 ; 46 >
+    au < released ; 2018 ; 2018 ; Revista Iberoamericana de Cirugía de la Mano Volume 46 ; 46 >
     au < expected ; 2019 ; 2019 ; Revista Iberoamericana de Cirugía de la Mano Volume 47 ; 47 >
 
   }
