@@ -1069,8 +1069,8 @@
     au < HighWirePressH20Plugin ; down ; 2015 ; Heart Asia Volume 7 ; 7 ; http://heartasia.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; exists ; 2016; Heart Asia Volume 8 ; 8 ; https://heartasia.bmj.com/ > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; Heart Asia Volume 9 ; 9 ; https://heartasia.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; manifest ; 2018 ; Heart Asia Volume 10 ; 10; https://heartasia.bmj.com/  >
-    au < bmj.BMJDrupalPlugin ; expected ; 2019 ; Heart Asia Volume 11 ; 10; https://heartasia.bmj.com/  >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2018 ; Heart Asia Volume 10 ; 10 ; https://heartasia.bmj.com/  >
+    au < bmj.BMJDrupalPlugin ; expected ; 2019 ; Heart Asia Volume 11 ; 11 ; https://heartasia.bmj.com/  >
 
   }
 
