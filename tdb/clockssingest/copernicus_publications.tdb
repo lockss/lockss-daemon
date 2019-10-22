@@ -68,7 +68,7 @@
       au < finished ; crawling ; 2016 ; 2016 ; Advances in Geosciences Volume 42 ; 42 ; http://www.adv-geosci.net/ ; http://www.advances-in-geosciences.net/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; 2017 ; Advances in Geosciences Volume 43 ; 43 ; https://www.adv-geosci.net/ ; https://www.advances-in-geosciences.net/ ; >
       au < deepCrawl ; exists ; 2018 ; 2018 ; Advances in Geosciences Volume 44 ; 44 ; https://www.adv-geosci.net/ ; https://www.advances-in-geosciences.net/ ; >
-      au < ready ; exists ; 2019 ; 2019 ; Advances in Geosciences Volume 45 ; 45 ; https://www.adv-geosci.net/ ; https://www.advances-in-geosciences.net/ ; >
+      au < crawling ; exists ; 2019 ; 2019 ; Advances in Geosciences Volume 45 ; 45 ; https://www.adv-geosci.net/ ; https://www.advances-in-geosciences.net/ ; >
 
    }
 
@@ -502,7 +502,7 @@
       au < finished ; crawling ; 2016 ; 2016 ; Drinking Water Engineering and Science Volume 9 ; 9 ; http://www.drink-water-eng-sci.net/ ; http://www.drinking-water-engineering-and-science.net/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; 2017 ; Drinking Water Engineering and Science Volume 10 ; 10 ; https://www.drink-water-eng-sci.net/ ; https://www.drinking-water-engineering-and-science.net/ ; >
       au < deepCrawl ; exists ; 2018 ; 2018 ; Drinking Water Engineering and Science Volume 11 ; 11 ; https://www.drink-water-eng-sci.net/ ; https://www.drinking-water-engineering-and-science.net/ ; >
-      au < ready ; exists ; 2019 ; 2019 ; Drinking Water Engineering and Science Volume 12 ; 12 ; https://www.drink-water-eng-sci.net/ ; https://www.drinking-water-engineering-and-science.net/ ; >
+      au < crawling ; exists ; 2019 ; 2019 ; Drinking Water Engineering and Science Volume 12 ; 12 ; https://www.drink-water-eng-sci.net/ ; https://www.drinking-water-engineering-and-science.net/ ; >
 
    }
 
@@ -903,7 +903,7 @@
       au < finished ; crawling ; 2016 ; 2016 ; Geographica Helvetica Volume 71 ; 71 ; https://www.geogr-helv.net/ ; https://www.geographica-helvetica.net/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; 2017 ; Geographica Helvetica Volume 72 ; 72 ; https://www.geogr-helv.net/ ; https://www.geographica-helvetica.net/ ; >
       au < deepCrawl ; exists ; 2018 ; 2018 ; Geographica Helvetica Volume 73 ; 73 ; https://www.geogr-helv.net/ ; https://www.geographica-helvetica.net/ ; >
-      au < ready ; exists ; 2019 ; 2019 ; Geographica Helvetica Volume 74 ; 74 ; https://www.geogr-helv.net/ ; https://www.geographica-helvetica.net/ ; >
+      au < crawling ; exists ; 2019 ; 2019 ; Geographica Helvetica Volume 74 ; 74 ; https://www.geogr-helv.net/ ; https://www.geographica-helvetica.net/ ; >
 
    }
 
@@ -924,7 +924,7 @@
       au < finished ; crawling ; 2016 ; 2016 ; Geoscientific Instrumentation, Methods and Data Systems Volume 5 ; 5 ; http://www.geosci-instrum-method-data-syst.net/ ; http://www.geoscientific-instrumentation-methods-and-data-systems.net/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2017 ; 2017 ; Geoscientific Instrumentation, Methods and Data Systems Volume 6 ; 6 ; https://www.geosci-instrum-method-data-syst.net/ ; https://www.geoscientific-instrumentation-methods-and-data-systems.net/ ; >
       au < deepCrawl ; exists ; 2018 ; 2018 ; Geoscientific Instrumentation, Methods and Data Systems Volume 7 ; 7 ; https://www.geosci-instrum-method-data-syst.net/ ; https://www.geoscientific-instrumentation-methods-and-data-systems.net/ ; >
-      au < ready ; exists ; 2019 ; 2019 ; Geoscientific Instrumentation, Methods and Data Systems Volume 8 ; 8 ; https://www.geosci-instrum-method-data-syst.net/ ; https://www.geoscientific-instrumentation-methods-and-data-systems.net/ ; >
+      au < crawling ; exists ; 2019 ; 2019 ; Geoscientific Instrumentation, Methods and Data Systems Volume 8 ; 8 ; https://www.geosci-instrum-method-data-syst.net/ ; https://www.geoscientific-instrumentation-methods-and-data-systems.net/ ; >
 
    }
 
@@ -1347,7 +1347,7 @@
       au < frozen ; exists ; 2016 ; 2016 ; Journal of Micropalaeontology Volume 35 ; 35 ; https://www.j-micropalaeontol.net/ ; https://www.journal-of-micropalaeontology.net/ ; >
       au < finished ; crawling ; 2017 ; 2017 ; Journal of Micropalaeontology Volume 36 ; 36 ; https://www.j-micropalaeontol.net/ ; https://www.journal-of-micropalaeontology.net/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018 ; 2018 ; Journal of Micropalaeontology Volume 37 ; 37 ; https://www.j-micropalaeontol.net/ ; https://www.journal-of-micropalaeontology.net/ ; >
-      au < ready ; exists ; 2019 ; 2019 ; Journal of Micropalaeontology Volume 38 ; 38 ; https://www.j-micropalaeontol.net/ ; https://www.journal-of-micropalaeontology.net/ ; >
+      au < crawling ; exists ; 2019 ; 2019 ; Journal of Micropalaeontology Volume 38 ; 38 ; https://www.j-micropalaeontol.net/ ; https://www.journal-of-micropalaeontology.net/ ; >
 
   }
 
@@ -1725,7 +1725,7 @@
       au < finished ; crawling ; 2016 ; 2016 ; Solid Earth Volume 7 ; 7 ; http://www.solid-earth.net/ ; http://www.solid-earth.net/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2017 ; 2017 ; Solid Earth Volume 8 ; 8 ; https://www.solid-earth.net/ ; https://www.solid-earth.net/ ; >
       au < deepCrawl ; exists ; 2018 ; 2018 ; Solid Earth Volume 9 ; 9 ; https://www.solid-earth.net/ ; https://www.solid-earth.net/ ; >
-      au < ready ; exists ; 2019 ; 2019 ; Solid Earth Volume 10 ; 10 ; https://www.solid-earth.net/ ; https://www.solid-earth.net/ ; >
+      au < crawling ; exists ; 2019 ; 2019 ; Solid Earth Volume 10 ; 10 ; https://www.solid-earth.net/ ; https://www.solid-earth.net/ ; >
 
    }
 
