@@ -34,6 +34,8 @@ package org.lockss.plugin.clockss.casalini;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.apache.commons.io.FilenameUtils;
 import org.lockss.util.*;
@@ -68,23 +70,99 @@ public class CasaliniLibriMarcXmlMetadataExtractorFactory extends SourceXmlMetad
       return CasaliniHelper;
     }
 
+    /*
+      <datafield ind1="0" ind2=" " tag="773">
+        <subfield code="t">Psicoterapia e scienze umane. Fascicolo 4, 2000.</subfield> // we are trying to get "4"
+        <subfield code="d">Milano : Franco Angeli, 2000.</subfield>
+        <subfield code="w">()2194804</subfield>
+      </datafield>
+   */
+    // It is not clear which one can be used as "volume" of the PDF file, we use the above "4"
+    // we also assume it is single digit number between 1-9
     @Override
     protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, 
         CachedUrl cu,
         ArticleMetadata oneAM) {
 
-      String yearNum = oneAM.getRaw(CasaliniMarcXmlSchemaHelper.PDF_FILE_YEAR).replace(".", "");
-      String volumeNum = oneAM.getRaw(CasaliniMarcXmlSchemaHelper.PDF_FILE_VOLUME).replace("0", "");
-      String fileNum = oneAM.getRaw(CasaliniMarcXmlSchemaHelper.MARC_file);
-
-      log.debug3("Building PDF file with  filename - " + fileNum +  ", volume - " + volumeNum + ", year - " + yearNum);
-
-      String cuBase = FilenameUtils.getFullPath(cu.getUrl());
+      String yearNum = "";
+      String pdfFilePath = "";
+      String volumeNum = "1";
       ArrayList<String> returnList = new ArrayList<String>();
-      String pdfFilePath = cuBase + yearNum + "_" + volumeNum + "_" + fileNum +  ".pdf";
+      Boolean volumeNumFound = false;
 
-      returnList.add(pdfFilePath);
+      try {
+        if (oneAM.getRaw(CasaliniMarcXmlSchemaHelper.PDF_FILE_YEAR) != null) {
+          yearNum = oneAM.getRaw(CasaliniMarcXmlSchemaHelper.PDF_FILE_YEAR).replace(".", "");
+        } else {
+          log.debug3("yearNum is empty");
+        }
+
+        String fileNum = oneAM.getRaw(CasaliniMarcXmlSchemaHelper.MARC_file);
+        String cuBase = FilenameUtils.getFullPath(cu.getUrl());
+
+        if (oneAM.getRaw(CasaliniMarcXmlSchemaHelper.PDF_FILE_VOLUME) != null) {
+          String volumeString = oneAM.getRaw(CasaliniMarcXmlSchemaHelper.PDF_FILE_VOLUME);
+          int lastComma = volumeString.lastIndexOf(",");
+          if (lastComma > -1) {
+            volumeNum = volumeString.substring((lastComma - 1), lastComma);
+            volumeNumFound = true;
+            pdfFilePath = cuBase + yearNum + "_" + volumeNum + "_" + fileNum + ".pdf";
+            returnList.add(pdfFilePath);
+            log.debug3("Found volume number, building PDF file with  filename - " + fileNum + ", volume - " + volumeNum + ", year - " + yearNum);
+          }
+        }
+        if (!volumeNumFound) {
+          ArrayList<Integer> volumes = new ArrayList<>();
+          volumes.add(1);
+          volumes.add(2);
+          volumes.add(3);
+          volumes.add(4);
+
+          for (int volume : volumes) {
+            pdfFilePath = cuBase + yearNum + "_" + volume + "_" + fileNum + ".pdf";
+            returnList.add(pdfFilePath);
+            log.debug3("Could not find volume number from xml, building PDF file with filename - " + fileNum + ", with possible guessed volume - " + volumeNum + ", year - " + yearNum);
+          }
+        }
+      } catch (NullPointerException e) {
+        e.printStackTrace();
+      }
       return returnList;
+    }
+
+    @Override
+    protected void postCookProcess(SourceXmlSchemaHelper schemaHelper,
+                                   CachedUrl cu, ArticleMetadata thisAM) {
+
+      if (thisAM.getRaw(CasaliniMarcXmlSchemaHelper.MARC_start_page) != null) {
+        String pages = thisAM.getRaw(CasaliniMarcXmlSchemaHelper.MARC_start_page);
+        String page_pattern = ".*(\\d+)\\-(\\d+).*";
+
+        Pattern pattern = Pattern.compile(page_pattern, Pattern.CASE_INSENSITIVE);
+        Matcher matcher = pattern.matcher(pages);
+
+        String start_page = "0";
+        String end_page = "0";
+
+        if (matcher.matches()) {
+          while (matcher.find()) {
+            start_page = matcher.group(1);
+            end_page = matcher.group(2);
+          }
+        }
+
+        thisAM.put(MetadataField.FIELD_START_PAGE, start_page);
+        thisAM.put(MetadataField.FIELD_END_PAGE, end_page);
+      }
+
+      if (thisAM.getRaw(CasaliniMarcXmlSchemaHelper.MARC_author) != null) {
+        String author = thisAM.getRaw(CasaliniMarcXmlSchemaHelper.MARC_author);
+        thisAM.put(MetadataField.FIELD_AUTHOR, author.replace(".", ""));
+      }
+
+      if (thisAM.getRaw(CasaliniMarcXmlSchemaHelper.MARC_doi) != null) {
+        thisAM.put(MetadataField.FIELD_DOI, thisAM.getRaw(CasaliniMarcXmlSchemaHelper.MARC_doi));
+      }
     }
   }
 }

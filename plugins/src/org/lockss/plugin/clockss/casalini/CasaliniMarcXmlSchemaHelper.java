@@ -55,41 +55,50 @@ implements SourceXmlSchemaHelper {
 
   /*
     <collection xmlns="http://www.loc.gov/MARC21/slim">
-	<record>
-		<leader>00938nab a2200229 i 4500</leader>
-		<controlfield tag="001">000002194804</controlfield>
+<record>
+		<leader>01079nab a2200265 i 4500</leader>
+		<controlfield tag="001">000002213906</controlfield>
 		<controlfield tag="003">ItFiC</controlfield>
-		<controlfield tag="005">20070508000000.0</controlfield>
+		<controlfield tag="005">20091114214923.0</controlfield>
 		<controlfield tag="006">m        d        </controlfield>
 		<controlfield tag="007">cr uuu---uuuuu</controlfield>
-		<controlfield tag="008">091114s2000    xx uu   s    u0    0und c</controlfield>
+		<controlfield tag="008">091114n        xx uu   s    u0    0und c</controlfield>
+		<datafield ind1="7" ind2=" " tag="024">
+			<subfield code="a">10.1400/64562</subfield>
+			<subfield code="2">DOI</subfield>
+		</datafield>
 		<datafield ind1=" " ind2=" " tag="040">
 			<subfield code="a">ItFiC</subfield>
 			<subfield code="b">eng</subfield>
 			<subfield code="c">ItFiC</subfield>
 		</datafield>
 		<datafield ind1="0" ind2=" " tag="097">
-			<subfield code="a">2193101</subfield>
-			<subfield code="b">012</subfield>
-			<subfield code="c">2194804</subfield>
-			<subfield code="d">004</subfield>
+			<subfield code="a">2194804</subfield>
+			<subfield code="b">013</subfield>
+			<subfield code="c">2213906</subfield>
+			<subfield code="d">001</subfield>
 		</datafield>
-		<datafield ind1="0" ind2="0" tag="245">
-			<subfield code="a">Psicoterapia e scienze umane. Fascicolo 4, 2000.</subfield>
+		<datafield ind1="1" ind2="3" tag="245">
+			<subfield code="a">La svolta post-moderna in psicoanalisi.</subfield>
 		</datafield>
 		<datafield ind1=" " ind2=" " tag="260">
 			<subfield code="a">Milano :</subfield>
 			<subfield code="b">Franco Angeli,</subfield>
 			<subfield code="c">2000.</subfield>
 		</datafield>
+		<datafield ind1=" " ind2=" " tag="300">
+			<subfield code="a">P. [1-40] [40]</subfield>
+		</datafield>
+		<datafield ind1="1" ind2=" " tag="700">
+			<subfield code="a">Eagle, Morris N.</subfield>
+		</datafield>
 		<datafield ind1="0" ind2=" " tag="773">
-			<subfield code="t">Psicoterapia e scienze umane.</subfield>
-			<subfield code="d">Milano : Franco Angeli </subfield>
-			<subfield code="x">1972-5043</subfield>
-			<subfield code="w">()2193101</subfield>
+			<subfield code="t">Psicoterapia e scienze umane. Fascicolo 4, 2000.</subfield>
+			<subfield code="d">Milano : Franco Angeli, 2000.</subfield>
+			<subfield code="w">()2194804</subfield>
 		</datafield>
 		<datafield ind1="4" ind2="0" tag="856">
-			<subfield code="u">http://digital.casalini.it/2194804</subfield>
+			<subfield code="u">http://digital.casalini.it/10.1400/64562</subfield>
 		</datafield>
 		<datafield ind1=" " ind2=" " tag="900">
 			<subfield code="a">(c) Casalini Libri, 50014 Fiesole (Italy) - www.casalini.it</subfield>
@@ -100,28 +109,28 @@ implements SourceXmlSchemaHelper {
 			<subfield code="g">Casalini Libri</subfield>
 		</datafield>
 	</record>
-	</collection>
    */
 
   /*
-  The xml file use two different format for tag-"097" over the years"
-    <datafield ind1="0" ind2=" " tag="097">
-			<subfield code="a">2194804</subfield> //this is the last part of the PDF file "2013_4_2905983.pdf"
+  <datafield ind1="7" ind2=" " tag="024">
+			<subfield code="a">10.1400/64562</subfield>
+			<subfield code="2">DOI</subfield>
+  </datafield>
+   */
+  private static final String DOI_TAG ="024";
+  private static final String doi_code ="a";
+
+  /*
+  		<datafield ind1="0" ind2=" " tag="097">
+			<subfield code="a">2194804</subfield> //this is the last part of PDF file name
 			<subfield code="b">013</subfield>
-			<subfield code="c">2213906</subfield>
-			<subfield code="d">001</subfield>
-		</datafield>
-	<datafield ind1="0" ind2=" " tag="097">
-			<subfield code="a">2621658</subfield>
-			<subfield code="b">013</subfield>
-			<subfield code="c">2621680</subfield>
-			<subfield code="d">016</subfield>
-			<subfield code="h">004</subfield>
+			<subfield code="c">2213906</subfield> // this is an number we call "article number"
+			<subfield code="d">001</subfield> // this is the volume part of the PDF
 		</datafield>
    */
   private static final String PDF_TAG ="097";
   private static final String file_code ="a";
-  private static final String volume_code ="d";
+  private static final String article_code ="c";
 
   /*
     <datafield ind1="0" ind2="0" tag="245">
@@ -150,6 +159,48 @@ implements SourceXmlSchemaHelper {
   private static final String ELECTRONIC_ACCESS_LOCATION_TAG ="260";
   private static final String url_code ="u";
 
+  /*
+    <datafield ind1=" " ind2=" " tag="300">
+		<subfield code="a">P. [1-40] [40]</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="300">
+		<subfield code="a">370-370 p.</subfield>
+	</datafield>
+  */
+  private static final String START_PAGE_LOCATION_TAG ="300";
+  private static final String start_page_code ="a";
+
+  /*
+	<datafield ind1="1" ind2=" " tag="700">
+		<subfield code="a">Eagle, Morris N.</subfield>
+	</datafield>
+
+	<datafield ind1="1" ind2=" " tag="700">
+		<subfield code="a">Muhlleitner, Elke.</subfield>
+	</datafield>
+	<datafield ind1="1" ind2=" " tag="700">
+		<subfield code="a">Reichmayr, Johannes.</subfield>
+	</datafield>
+   */
+  private static final String AUTHOR_TAG ="700";
+  private static final String author_name_code ="a";
+
+  /*
+  	<datafield ind1="0" ind2=" " tag="773">
+		<subfield code="t">Psicoterapia e scienze umane. Fascicolo 4, 2000.</subfield>
+		<subfield code="d">Milano : Franco Angeli, 2000.</subfield>
+		<subfield code="w">()2194804</subfield>
+	</datafield>
+
+	<datafield ind1="0" ind2=" " tag="773">
+		<subfield code="t">Psicoterapia e scienze umane.</subfield>
+		<subfield code="x">1972-5043</subfield>
+		<subfield code="w">()4517279</subfield>
+	</datafield>
+   */
+  private static final String PUB_TAG ="773";
+  private static final String publication_code ="t";
+
   // A top level for the worksheet table is
   private static String MARC_record = "/collection/record";
 
@@ -158,8 +209,11 @@ implements SourceXmlSchemaHelper {
       "datafield[@tag = \"" + PUBLICATION_TAG + "\"]" +
           "/subfield[@code = \"" + pubdate_code + "\"]";
   public static String PDF_FILE_VOLUME =
+          "datafield[@tag = \"" + PUB_TAG + "\"]" +
+                  "/subfield[@code = \"" + publication_code + "\"]";
+  public static String PDF_ARTICLE =
           "datafield[@tag = \"" + PDF_TAG + "\"]" +
-                  "/subfield[@code = \"" + volume_code + "\"]";
+                  "/subfield[@code = \"" + article_code + "\"]";
   public static String MARC_file =  
       "datafield[@tag = \"" + PDF_TAG + "\"]" +
           "/subfield[@code = \"" + file_code + "\"]";
@@ -172,9 +226,15 @@ implements SourceXmlSchemaHelper {
   public static String MARC_publisher = 
       "datafield[@tag = \"" + PUBLICATION_TAG + "\"]" +
           "/subfield[@code = \"" + pub_code + "\"]";
-  public static String MARC_access_url =
-          "datafield[@tag = \"" + ELECTRONIC_ACCESS_LOCATION_TAG + "\"]" +
-                  "/subfield[@code = \"" + url_code + "\"]";
+  public static String MARC_doi =
+          "datafield[@tag = \"" + DOI_TAG + "\"]" +
+                  "/subfield[@code = \"" + doi_code + "\"]";
+  public static String MARC_start_page =
+          "datafield[@tag = \"" + START_PAGE_LOCATION_TAG + "\"]" +
+                  "/subfield[@code = \"" + start_page_code + "\"]";
+  public static String MARC_author =
+          "datafield[@tag = \"" + AUTHOR_TAG + "\"]" +
+                  "/subfield[@code = \"" + author_name_code + "\"]";
   
   /*
    *  The following 3 variables are needed to construct the XPathXmlMetadataParser
@@ -190,7 +250,11 @@ implements SourceXmlSchemaHelper {
     casalini_articleMap.put(MARC_pub_date,  XmlDomMetadataExtractor.TEXT_VALUE);
     casalini_articleMap.put(PDF_FILE_YEAR, XmlDomMetadataExtractor.TEXT_VALUE);
     casalini_articleMap.put(PDF_FILE_VOLUME, XmlDomMetadataExtractor.TEXT_VALUE);
+    casalini_articleMap.put(PDF_ARTICLE, XmlDomMetadataExtractor.TEXT_VALUE);
     casalini_articleMap.put(MARC_file, XmlDomMetadataExtractor.TEXT_VALUE);
+    casalini_articleMap.put(MARC_doi, XmlDomMetadataExtractor.TEXT_VALUE);
+    casalini_articleMap.put(MARC_start_page, XmlDomMetadataExtractor.TEXT_VALUE);
+    casalini_articleMap.put(MARC_author, XmlDomMetadataExtractor.TEXT_VALUE);
 
   }
 
@@ -205,9 +269,12 @@ implements SourceXmlSchemaHelper {
    */
   private static final MultiValueMap cookMap = new MultiValueMap();
   static {
+
     cookMap.put(MARC_title, MetadataField.FIELD_PUBLICATION_TITLE);
     cookMap.put(MARC_publisher, MetadataField.FIELD_PUBLISHER);
     cookMap.put(MARC_pub_date, MetadataField.FIELD_DATE);
+    cookMap.put(MARC_author, MetadataField.FIELD_AUTHOR);
+
   }
 
 
