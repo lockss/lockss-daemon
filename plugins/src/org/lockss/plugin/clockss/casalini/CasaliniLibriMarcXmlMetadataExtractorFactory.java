@@ -90,43 +90,40 @@ public class CasaliniLibriMarcXmlMetadataExtractorFactory extends SourceXmlMetad
       ArrayList<String> returnList = new ArrayList<String>();
       Boolean volumeNumFound = false;
 
-      try {
-        if (oneAM.getRaw(CasaliniMarcXmlSchemaHelper.PDF_FILE_YEAR) != null) {
-          yearNum = oneAM.getRaw(CasaliniMarcXmlSchemaHelper.PDF_FILE_YEAR).replace(".", "");
-        } else {
-          log.debug3("yearNum is empty");
-        }
-
-        String fileNum = oneAM.getRaw(CasaliniMarcXmlSchemaHelper.MARC_file);
-        String cuBase = FilenameUtils.getFullPath(cu.getUrl());
-
-        if (oneAM.getRaw(CasaliniMarcXmlSchemaHelper.PDF_FILE_VOLUME) != null) {
-          String volumeString = oneAM.getRaw(CasaliniMarcXmlSchemaHelper.PDF_FILE_VOLUME);
-          int lastComma = volumeString.lastIndexOf(",");
-          if (lastComma > -1) {
-            volumeNum = volumeString.substring((lastComma - 1), lastComma);
-            volumeNumFound = true;
-            pdfFilePath = cuBase + yearNum + "_" + volumeNum + "_" + fileNum + ".pdf";
-            returnList.add(pdfFilePath);
-            log.debug3("Found volume number, building PDF file with  filename - " + fileNum + ", volume - " + volumeNum + ", year - " + yearNum);
-          }
-        }
-        if (!volumeNumFound) {
-          ArrayList<Integer> volumes = new ArrayList<>();
-          volumes.add(1);
-          volumes.add(2);
-          volumes.add(3);
-          volumes.add(4);
-
-          for (int volume : volumes) {
-            pdfFilePath = cuBase + yearNum + "_" + volume + "_" + fileNum + ".pdf";
-            returnList.add(pdfFilePath);
-            log.debug3("Could not find volume number from xml, building PDF file with filename - " + fileNum + ", with possible guessed volume - " + volumeNum + ", year - " + yearNum);
-          }
-        }
-      } catch (NullPointerException e) {
-        e.printStackTrace();
+      if (oneAM.getRaw(CasaliniMarcXmlSchemaHelper.PDF_FILE_YEAR) != null) {
+        yearNum = oneAM.getRaw(CasaliniMarcXmlSchemaHelper.PDF_FILE_YEAR).replace(".", "");
+      } else {
+        log.debug3("yearNum is empty");
       }
+
+      String fileNum = oneAM.getRaw(CasaliniMarcXmlSchemaHelper.MARC_file);
+      String cuBase = FilenameUtils.getFullPath(cu.getUrl());
+
+      if (oneAM.getRaw(CasaliniMarcXmlSchemaHelper.PDF_FILE_VOLUME) != null) {
+        String volumeString = oneAM.getRaw(CasaliniMarcXmlSchemaHelper.PDF_FILE_VOLUME);
+        int lastComma = volumeString.lastIndexOf(",");
+        if (lastComma > -1) {
+          volumeNum = volumeString.substring((lastComma - 1), lastComma);
+          volumeNumFound = true;
+          pdfFilePath = cuBase + yearNum + "_" + volumeNum + "_" + fileNum + ".pdf";
+          returnList.add(pdfFilePath);
+          log.debug3("Found volume number, building PDF file with  filename - " + fileNum + ", volume - " + volumeNum + ", year - " + yearNum);
+        }
+      }
+      if (!volumeNumFound) {
+        ArrayList<Integer> volumes = new ArrayList<>();
+        volumes.add(1);
+        volumes.add(2);
+        volumes.add(3);
+        volumes.add(4);
+
+        for (int volume : volumes) {
+          pdfFilePath = cuBase + yearNum + "_" + volume + "_" + fileNum + ".pdf";
+          returnList.add(pdfFilePath);
+          log.debug3("Could not find volume number from xml, building PDF file with filename - " + fileNum + ", with possible guessed volume - " + volumeNum + ", year - " + yearNum);
+        }
+      }
+
       return returnList;
     }
 
