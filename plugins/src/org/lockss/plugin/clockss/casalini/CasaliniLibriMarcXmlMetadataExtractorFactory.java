@@ -136,7 +136,10 @@ public class CasaliniLibriMarcXmlMetadataExtractorFactory extends SourceXmlMetad
 
       if (thisAM.getRaw(CasaliniMarcXmlSchemaHelper.MARC_start_page) != null) {
         String pages = thisAM.getRaw(CasaliniMarcXmlSchemaHelper.MARC_start_page);
-        String page_pattern = ".*(\\d+)\\-(\\d+).*";
+        // It might in different formats
+        // P. [1-20] [20]
+        // 370-370 p.
+        String page_pattern = "[^\\d]*?(\\d+)\\s*?\\-\\s*?(\\d+)[^\\d]*?";
 
         Pattern pattern = Pattern.compile(page_pattern, Pattern.CASE_INSENSITIVE);
         Matcher matcher = pattern.matcher(pages);
@@ -144,11 +147,9 @@ public class CasaliniLibriMarcXmlMetadataExtractorFactory extends SourceXmlMetad
         String start_page = "0";
         String end_page = "0";
 
-        if (matcher.matches()) {
-          while (matcher.find()) {
+        while (matcher.find()) {
             start_page = matcher.group(1);
             end_page = matcher.group(2);
-          }
         }
 
         thisAM.put(MetadataField.FIELD_START_PAGE, start_page);
