@@ -27,7 +27,7 @@
 
       au < finished ; crawling ; 2015 ; Cold Spring Harbor Molecular Case Studies Volume 1 ; 1 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; Cold Spring Harbor Molecular Case Studies Volume 2 ; 2 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2017 ; Cold Spring Harbor Molecular Case Studies Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2017 ; Cold Spring Harbor Molecular Case Studies Volume 3 ; 3 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2018 ; Cold Spring Harbor Molecular Case Studies Volume 4 ; 4 ; reingest1.clockss.org:8082 >
       au < expected ; exists ; 2019 ; Cold Spring Harbor Molecular Case Studies Volume 5 ; 5 ; >
 
@@ -362,7 +362,7 @@
       au < finished ; crawling ; 2002 ; Learning & Memory Volume 9 ; 9 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2003 ; Learning & Memory Volume 10 ; 10 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2004 ; Learning & Memory Volume 11 ; 11 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2005 ; Learning & Memory Volume 12 ; 12 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2005 ; Learning & Memory Volume 12 ; 12 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2006 ; Learning & Memory Volume 13 ; 13 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2007 ; Learning & Memory Volume 14 ; 14 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2008 ; Learning & Memory Volume 15 ; 15 ; reingest4.clockss.org:8082 >
