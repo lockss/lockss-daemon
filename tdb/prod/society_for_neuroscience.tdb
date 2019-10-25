@@ -26,6 +26,7 @@
 
       au < sfn.SFNDrupalPlugin ; exists ; 2017 ; eNeuro Volume 4 ; 4 >
       au < sfn.SFNDrupalPlugin ; exists ; 2018 ; eNeuro Volume 5 ; 5 >
+      au < sfn.SFNDrupalPlugin ; expected ; 2019 ; eNeuro Volume 6 ; 6 >
     }
   }
   
@@ -80,6 +81,7 @@
       au < sfn.SFNDrupalPlugin ; released ; 2016 ; Journal of Neuroscience Volume 36 ; 36 >
       au < sfn.SFNDrupalPlugin ; released ; 2017 ; Journal of Neuroscience Volume 37 ; 37 >
       au < sfn.SFNDrupalPlugin ; released ; 2018 ; Journal of Neuroscience Volume 38 ; 38 >
+      au < sfn.SFNDrupalPlugin ; expected ; 2019 ; Journal of Neuroscience Volume 39 ; 39 >
 
     }
 
