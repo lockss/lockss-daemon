@@ -189,7 +189,7 @@
     au < biologists.ClockssBiologistsDrupalPlugin ; finished ; crawling ; 2016 ; Development Volume 143 ; 143 ; http://dev.biologists.org/ ; reingest4.clockss.org:8082 >
     au < biologists.ClockssBiologistsDrupalPlugin ; deepCrawl ; exists ; 2017 ; Development Volume 144 ; 144 ; http://dev.biologists.org/ ; >
     au < biologists.ClockssBiologistsDrupalPlugin ; deepCrawl ; exists ; 2018 ; Development Volume 145 ; 145 ; http://dev.biologists.org/ ; >
-    au < biologists.ClockssBiologistsDrupalPlugin ; testing ; exists ; 2019 ; Development Volume 146 ; 146 ; https://dev.biologists.org/ ; >
+    au < biologists.ClockssBiologistsDrupalPlugin ; ready ; exists ; 2019 ; Development Volume 146 ; 146 ; https://dev.biologists.org/ ; >
 
   }
 
@@ -389,7 +389,7 @@
     au < biologists.ClockssBiologistsDrupalPlugin ; finished ; crawling ; 2016 ; Journal of Cell Science Volume 129 ; 129 ; http://jcs.biologists.org/ ; reingest1.clockss.org:8082 >
     au < biologists.ClockssBiologistsDrupalPlugin ; deepCrawl ; exists ; 2017 ; Journal of Cell Science Volume 130 ; 130 ; http://jcs.biologists.org/ ; >
     au < biologists.ClockssBiologistsDrupalPlugin ; deepCrawl ; exists ; 2018 ; Journal of Cell Science Volume 131 ; 131 ; http://jcs.biologists.org/ ; >
-    au < biologists.ClockssBiologistsDrupalPlugin ; testing ; exists ; 2019 ; Journal of Cell Science Volume 132 ; 132 ; https://jcs.biologists.org/ ; >
+    au < biologists.ClockssBiologistsDrupalPlugin ; ready ; exists ; 2019 ; Journal of Cell Science Volume 132 ; 132 ; https://jcs.biologists.org/ ; >
 
   }
 
