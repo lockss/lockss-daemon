@@ -220,7 +220,7 @@ implements SourceXmlSchemaHelper {
   public static String MARC_title = 
       "datafield[@tag = \"" + TITLE_TAG + "\"]" +
           "/subfield[@code=\"" + title_code + "\"]";
-  private static String MARC_pub_date = 
+  public static String MARC_pub_date =
       "datafield[@tag = \"" + PUBLICATION_TAG + "\"]" +
           "/subfield[@code = \"" + pubdate_code + "\"]";
   public static String MARC_publisher = 
@@ -265,7 +265,7 @@ implements SourceXmlSchemaHelper {
   static private final Map<String,XPathValue> MARC_globalMap = null;
 
   /*
-   * The emitter will need a map to know how to cook ONIX raw values
+   * The emitter will need a map to know how to cook raw values
    */
   private static final MultiValueMap cookMap = new MultiValueMap();
   static {
@@ -330,7 +330,6 @@ implements SourceXmlSchemaHelper {
    */
   @Override
   public String getFilenameXPathKey() {
-    log.debug3("Fei: PDF file name is made of year - " + PDF_FILE_YEAR  + ", volume - " + PDF_FILE_VOLUME + ", filename - " + MARC_file);
-    return PDF_FILE_YEAR.replace(".", "") + "_" + PDF_FILE_VOLUME.replace("0", "") + "_" + MARC_file;
+    return null;
   }
 }
