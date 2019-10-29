@@ -38,7 +38,7 @@
       au < ojs2.OJS2Plugin ; released ; 2016 ; Cosmos and History Volume 12 ; 12 ; 2016 >
       au < ojs2.OJS2Plugin ; released ; 2017 ; Cosmos and History Volume 13 ; 13 ; 2017 >
       au < ojs2.OJS2Plugin ; released ; 2018 ; Cosmos and History Volume 14 ; 14 ; 2018 >
-      au < ojs2.OJS2Plugin ; expected ; 2019 ; Cosmos and History Volume 15 ; 15 ; 2019 >
+      au < ojs2.OJS2Plugin ; manifest ; 2019 ; Cosmos and History Volume 15 ; 15 ; 2019 >
 
     }
   
@@ -191,7 +191,7 @@
       au < ojs2.OJS2Plugin ; released ; 2016 ; International Journal of Žižek Studies Volume 10 ; 10 ; 2016 >
       au < ojs2.OJS2Plugin ; released ; 2017 ; International Journal of Žižek Studies Volume 11 ; 11 ; 2017 >
       au < ojs2.OJS2Plugin ; released ; 2018 ; International Journal of Žižek Studies Volume 12 ; 12 ; 2018 >
-      au < ojs2.OJS2Plugin ; expected ; 2019 ; International Journal of Žižek Studies Volume 13 ; 13 ; 2019 >
+      au < ojs2.OJS2Plugin ; manifest ; 2019 ; International Journal of Žižek Studies Volume 13 ; 13 ; 2019 >
 
     }
     
@@ -245,7 +245,7 @@
       param[journal_id] = pct
 
       au < ojs2.OJS2Plugin ; notReady ; 2018 ; Postcolonial Text Volume 13 ; 13 ; 2018 > #Crawl completed with no substance
-      au < ojs2.OJS2Plugin ; expected ; 2019 ; Postcolonial Text Volume 14 ; 14 ; 2019 > #Crawl completed with no substance
+      au < ojs2.OJS2Plugin ; manifest ; 2019 ; Postcolonial Text Volume 14 ; 14 ; 2019 > #Crawl completed with no substance
 
       }
     }
