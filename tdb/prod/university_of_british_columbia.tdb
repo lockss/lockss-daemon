@@ -24,16 +24,13 @@
     implicit < status ; year ; name ; param[volume_name] >
 
     {
-        param[base_url] = http://www.ingentaconnect.com/
-        param[api_url] = http://api.ingentaconnect.com/
+        param[base_url] = https://www.ingentaconnect.com/
+        param[api_url] = https://api.ingentaconnect.com/
 
     au < manifest ; 2005-2006 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 78 ; 78 >
     au < manifest ; 2006-2007 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 79 ; 79 >
     au < manifest ; 2007 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 80 ; 80 >
     au < manifest ; 2008 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 81 ; 81 >
-
-    au < manifest ; 2018 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 91 ; 91 >
-    au < expected ; 2019 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 92 ; 92 >
 
     }
 
@@ -50,6 +47,16 @@
     au < released ; 2015 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 88 ; 88 >
     au < released ; 2016 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 89 ; 89 >
     au < released ; 2017 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 90 ; 90 >
+
+    }
+
+    {
+        param[base_url] = https://www.ingentaconnect.com/
+        param[api_url] = https://api.ingentaconnect.com/
+
+    au < manifest ; 2018 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 91 ; 91 >
+    au < expected ; 2019 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 92 ; 92 >
+
     }
 
   }
