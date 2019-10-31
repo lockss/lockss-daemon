@@ -37,41 +37,41 @@
     
     param[journal_id] = bull
       
-    au < frozen ; exists ; 1891 ; Bulletin of the American Mathematical Society Volume 0-1 (1891) ; 1891 ; http://www.ams.org/ ; >
-    au < frozen ; exists ; 1892 ; Bulletin of the American Mathematical Society Volume 1-2 (1892) ; 1892 ; http://www.ams.org/ ; >
-    au < frozen ; exists ; 1893 ; Bulletin of the American Mathematical Society Volume 2-3 (1893) ; 1893 ; http://www.ams.org/ ; >
-    au < frozen ; exists ; 1894 ; Bulletin of the American Mathematical Society Volume 1-3 (1894) ; 1894 ; http://www.ams.org/ ; >
-    au < frozen ; exists ; 1895 ; Bulletin of the American Mathematical Society Volume 1-2 (1895) ; 1895 ; http://www.ams.org/ ; >
-    au < frozen ; exists ; 1896 ; Bulletin of the American Mathematical Society Volume 2-3 (1896) ; 1896 ; http://www.ams.org/ ; >
-    au < frozen ; exists ; 1897 ; Bulletin of the American Mathematical Society Volume 3-4 (1897) ; 1897 ; http://www.ams.org/ ; >
-    au < frozen ; exists ; 1898 ; Bulletin of the American Mathematical Society Volume 4-5 (1898) ; 1898 ; http://www.ams.org/ ; >
-    au < frozen ; exists ; 1899 ; Bulletin of the American Mathematical Society Volume 5-6 (1899) ; 1899 ; http://www.ams.org/ ; >
-    au < frozen ; exists ; 1900 ; Bulletin of the American Mathematical Society Volume 6-7 (1900) ; 1900 ; http://www.ams.org/ ; >
-    au < frozen ; exists ; 1901 ; Bulletin of the American Mathematical Society Volume 7-8 (1901) ; 1901 ; http://www.ams.org/ ; >
-    au < frozen ; exists ; 1902 ; Bulletin of the American Mathematical Society Volume 8-9 (1902) ; 1902 ; http://www.ams.org/ ; >
-    au < frozen ; exists ; 1903 ; Bulletin of the American Mathematical Society Volume 9-10 (1903) ; 1903 ; http://www.ams.org/ ; >
-    au < frozen ; exists ; 1904 ; Bulletin of the American Mathematical Society Volume 10-11 (1904) ; 1904 ; http://www.ams.org/ ; >
-    au < frozen ; exists ; 1905 ; Bulletin of the American Mathematical Society Volume 11-12 (1905) ; 1905 ; http://www.ams.org/ ; >
-    au < frozen ; exists ; 1906 ; Bulletin of the American Mathematical Society Volume 12-13 (1906) ; 1906 ; http://www.ams.org/ ; >
-    au < frozen ; exists ; 1907 ; Bulletin of the American Mathematical Society Volume 13-14 (1907) ; 1907 ; http://www.ams.org/ ; >
-    au < frozen ; exists ; 1908 ; Bulletin of the American Mathematical Society Volume 14-15 (1908) ; 1908 ; http://www.ams.org/ ; >
-    au < frozen ; exists ; 1909 ; Bulletin of the American Mathematical Society Volume 15-16 (1909) ; 1909 ; http://www.ams.org/ ; >
-    au < frozen ; exists ; 1910 ; Bulletin of the American Mathematical Society Volume 16-17 (1910) ; 1910 ; http://www.ams.org/ ; >
-    au < frozen ; exists ; 1911 ; Bulletin of the American Mathematical Society Volume 17-18 (1911) ; 1911 ; http://www.ams.org/ ; >
-    au < frozen ; exists ; 1912 ; Bulletin of the American Mathematical Society Volume 18-19 (1912) ; 1912 ; http://www.ams.org/ ; >
-    au < frozen ; exists ; 1913 ; Bulletin of the American Mathematical Society Volume 19-20 (1913) ; 1913 ; http://www.ams.org/ ; >
-    au < frozen ; exists ; 1914 ; Bulletin of the American Mathematical Society Volume 20-21 (1914) ; 1914 ; http://www.ams.org/ ; >
-    au < frozen ; exists ; 1915 ; Bulletin of the American Mathematical Society Volume 21-22 (1915) ; 1915 ; http://www.ams.org/ ; >
-    au < frozen ; exists ; 1916 ; Bulletin of the American Mathematical Society Volume 22-23 (1916) ; 1916 ; http://www.ams.org/ ; >
-    au < frozen ; exists ; 1917 ; Bulletin of the American Mathematical Society Volume 23-24 (1917) ; 1917 ; http://www.ams.org/ ; >
-    au < frozen ; exists ; 1918 ; Bulletin of the American Mathematical Society Volume 24-25 (1918) ; 1918 ; http://www.ams.org/ ; >
-    au < frozen ; exists ; 1919 ; Bulletin of the American Mathematical Society Volume 25-26 (1919) ; 1919 ; http://www.ams.org/ ; >
-    au < frozen ; exists ; 1920 ; Bulletin of the American Mathematical Society Volume 26-27 (1920) ; 1920 ; http://www.ams.org/ ; >
-    au < frozen ; exists ; 1921 ; Bulletin of the American Mathematical Society Volume 27 (1921) ; 1921 ; http://www.ams.org/ ; >
-    au < frozen ; exists ; 1922 ; Bulletin of the American Mathematical Society Volume 28 (1922) ; 1922 ; http://www.ams.org/ ; >
-    au < frozen ; exists ; 1923 ; Bulletin of the American Mathematical Society Volume 29 (1923) ; 1923 ; http://www.ams.org/ ; >
-    au < frozen ; exists ; 1924 ; Bulletin of the American Mathematical Society Volume 30 (1924) ; 1924 ; http://www.ams.org/ ; >
-    au < frozen ; exists ; 1925 ; Bulletin of the American Mathematical Society Volume 31 (1925) ; 1925 ; http://www.ams.org/ ; >
+    au < finished ; manifest ; 1891 ; Bulletin of the American Mathematical Society Volume 0-1 (1891) ; 1891 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1892 ; Bulletin of the American Mathematical Society Volume 1-2 (1892) ; 1892 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1893 ; Bulletin of the American Mathematical Society Volume 2-3 (1893) ; 1893 ; http://www.ams.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1894 ; Bulletin of the American Mathematical Society Volume 1-3 (1894) ; 1894 ; http://www.ams.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1895 ; Bulletin of the American Mathematical Society Volume 1-2 (1895) ; 1895 ; http://www.ams.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1896 ; Bulletin of the American Mathematical Society Volume 2-3 (1896) ; 1896 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1897 ; Bulletin of the American Mathematical Society Volume 3-4 (1897) ; 1897 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1898 ; Bulletin of the American Mathematical Society Volume 4-5 (1898) ; 1898 ; http://www.ams.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1899 ; Bulletin of the American Mathematical Society Volume 5-6 (1899) ; 1899 ; http://www.ams.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1900 ; Bulletin of the American Mathematical Society Volume 6-7 (1900) ; 1900 ; http://www.ams.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1901 ; Bulletin of the American Mathematical Society Volume 7-8 (1901) ; 1901 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1902 ; Bulletin of the American Mathematical Society Volume 8-9 (1902) ; 1902 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1903 ; Bulletin of the American Mathematical Society Volume 9-10 (1903) ; 1903 ; http://www.ams.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1904 ; Bulletin of the American Mathematical Society Volume 10-11 (1904) ; 1904 ; http://www.ams.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1905 ; Bulletin of the American Mathematical Society Volume 11-12 (1905) ; 1905 ; http://www.ams.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1906 ; Bulletin of the American Mathematical Society Volume 12-13 (1906) ; 1906 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1907 ; Bulletin of the American Mathematical Society Volume 13-14 (1907) ; 1907 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1908 ; Bulletin of the American Mathematical Society Volume 14-15 (1908) ; 1908 ; http://www.ams.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1909 ; Bulletin of the American Mathematical Society Volume 15-16 (1909) ; 1909 ; http://www.ams.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1910 ; Bulletin of the American Mathematical Society Volume 16-17 (1910) ; 1910 ; http://www.ams.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1911 ; Bulletin of the American Mathematical Society Volume 17-18 (1911) ; 1911 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1912 ; Bulletin of the American Mathematical Society Volume 18-19 (1912) ; 1912 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1913 ; Bulletin of the American Mathematical Society Volume 19-20 (1913) ; 1913 ; http://www.ams.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1914 ; Bulletin of the American Mathematical Society Volume 20-21 (1914) ; 1914 ; http://www.ams.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1915 ; Bulletin of the American Mathematical Society Volume 21-22 (1915) ; 1915 ; http://www.ams.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1916 ; Bulletin of the American Mathematical Society Volume 22-23 (1916) ; 1916 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1917 ; Bulletin of the American Mathematical Society Volume 23-24 (1917) ; 1917 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1918 ; Bulletin of the American Mathematical Society Volume 24-25 (1918) ; 1918 ; http://www.ams.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1919 ; Bulletin of the American Mathematical Society Volume 25-26 (1919) ; 1919 ; http://www.ams.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1920 ; Bulletin of the American Mathematical Society Volume 26-27 (1920) ; 1920 ; http://www.ams.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1921 ; Bulletin of the American Mathematical Society Volume 27 (1921) ; 1921 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1922 ; Bulletin of the American Mathematical Society Volume 28 (1922) ; 1922 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1923 ; Bulletin of the American Mathematical Society Volume 29 (1923) ; 1923 ; http://www.ams.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1924 ; Bulletin of the American Mathematical Society Volume 30 (1924) ; 1924 ; http://www.ams.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1925 ; Bulletin of the American Mathematical Society Volume 31 (1925) ; 1925 ; http://www.ams.org/ ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 1926 ; Bulletin of the American Mathematical Society Volume 32 (1926) ; 1926 ; http://www.ams.org/ ; >
     au < frozen ; exists ; 1927 ; Bulletin of the American Mathematical Society Volume 33 (1927) ; 1927 ; http://www.ams.org/ ; >
     au < frozen ; exists ; 1928 ; Bulletin of the American Mathematical Society Volume 34 (1928) ; 1928 ; http://www.ams.org/ ; >
