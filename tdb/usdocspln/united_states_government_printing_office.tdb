@@ -568,7 +568,7 @@
     comment[0] = published from 1994 to 2008, +2017
     param[collection_id] = GAOREPORTS
 
-    #au < exists ; 2017 ; Government Accountability Office Reports and Comptroller General Decisions 2017 ; 2017 ; https://www.gpo.gov/ >#EMPTY
+    #au < exists ; 2017 ; Government Accountability Office Reports and Comptroller General Decisions 2017 ; 2017 ; https://www.govinfo.gov/ >#EMPTY
 
   }
 
@@ -598,7 +598,7 @@
     au < doesNotExist ; 2016 ; House Rules and Manual 2016 ; 2016 ; https://www.govinfo.gov/ >
     au < released ; 2017 ; House Rules and Manual 2017 ; 2017 ; https://www.govinfo.gov/ >
     au < doesNotExist ; 2018 ; House Rules and Manual 2018 ; 2018 ; https://www.govinfo.gov/ >
-    au < exists ; 2019 ; House Rules and Manual 2019 ; 2019 ; https://www.govinfo.gov/ >
+    au < manifest ; 2019 ; House Rules and Manual 2019 ; 2019 ; https://www.govinfo.gov/ >
 
   }
 
@@ -632,13 +632,13 @@
     comment[0] = published from 1995 to 2005
     param[collection_id] = PAI
 
-    au < exists ; 2007 ; Privacy Act Issuances 2007 ; 2007 ; https://www.gpo.gov/ >
-    au < exists ; 2008 ; Privacy Act Issuances 2008 ; 2008 ; https://www.gpo.gov/ >
-    au < exists ; 2009 ; Privacy Act Issuances 2009 ; 2009 ; https://www.gpo.gov/ >
-    au < exists ; 2011 ; Privacy Act Issuances 2011 ; 2011 ; https://www.gpo.gov/ >
-    au < doNotProcess ; 2013 ; Privacy Act Issuances 2013 ; 2013 ; https://www.gpo.gov/ >
-    au < exists ; 2015 ; Privacy Act Issuances 2015 ; 2015 ; https://www.gpo.gov/ >
-    au < exists ; 2017 ; Privacy Act Issuances 2017 ; 2017 ; https://www.gpo.gov/ >
+    au < exists ; 2007 ; Privacy Act Issuances 2007 ; 2007 ; https://www.govinfo.gov/ >
+    au < exists ; 2008 ; Privacy Act Issuances 2008 ; 2008 ; https://www.govinfo.gov/ >
+    au < exists ; 2009 ; Privacy Act Issuances 2009 ; 2009 ; https://www.govinfo.gov/ >
+    au < exists ; 2011 ; Privacy Act Issuances 2011 ; 2011 ; https://www.govinfo.gov/ >
+    au < doNotProcess ; 2013 ; Privacy Act Issuances 2013 ; 2013 ; https://www.govinfo.gov/ >
+    au < exists ; 2015 ; Privacy Act Issuances 2015 ; 2015 ; https://www.govinfo.gov/ >
+    au < exists ; 2017 ; Privacy Act Issuances 2017 ; 2017 ; https://www.govinfo.gov/ >
 
   }
 
