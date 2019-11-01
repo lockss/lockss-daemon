@@ -565,33 +565,10 @@
     title <
       name = Government Accountability Office Reports and Comptroller General Decisions
     >
-    comment[0] = published from 1994 to 2008
+    comment[0] = published from 1994 to 2008, +2017
     param[collection_id] = GAOREPORTS
 
-    au < exists ; 1994 ; Government Accountability Office Reports and Comptroller General Decisions 1994 ; 1994 ; https://www.gpo.gov/ >
-    au < exists ; 1995 ; Government Accountability Office Reports and Comptroller General Decisions 1995 ; 1995 ; https://www.gpo.gov/ >
-    au < exists ; 1996 ; Government Accountability Office Reports and Comptroller General Decisions 1996 ; 1996 ; https://www.gpo.gov/ >
-    au < exists ; 1997 ; Government Accountability Office Reports and Comptroller General Decisions 1997 ; 1997 ; https://www.gpo.gov/ >
-    au < exists ; 1998 ; Government Accountability Office Reports and Comptroller General Decisions 1998 ; 1998 ; https://www.gpo.gov/ >
-    au < exists ; 1999 ; Government Accountability Office Reports and Comptroller General Decisions 1999 ; 1999 ; https://www.gpo.gov/ >
-    au < exists ; 2000 ; Government Accountability Office Reports and Comptroller General Decisions 2000 ; 2000 ; https://www.gpo.gov/ >
-    au < exists ; 2001 ; Government Accountability Office Reports and Comptroller General Decisions 2001 ; 2001 ; https://www.gpo.gov/ >
-    au < exists ; 2002 ; Government Accountability Office Reports and Comptroller General Decisions 2002 ; 2002 ; https://www.gpo.gov/ >
-    au < exists ; 2003 ; Government Accountability Office Reports and Comptroller General Decisions 2003 ; 2003 ; https://www.gpo.gov/ >
-    au < exists ; 2004 ; Government Accountability Office Reports and Comptroller General Decisions 2004 ; 2004 ; https://www.gpo.gov/ >
-    au < exists ; 2005 ; Government Accountability Office Reports and Comptroller General Decisions 2005 ; 2005 ; https://www.gpo.gov/ >
-    au < exists ; 2006 ; Government Accountability Office Reports and Comptroller General Decisions 2006 ; 2006 ; https://www.gpo.gov/ >
-    au < exists ; 2007 ; Government Accountability Office Reports and Comptroller General Decisions 2007 ; 2007 ; https://www.gpo.gov/ >
-    au < exists ; 2008 ; Government Accountability Office Reports and Comptroller General Decisions 2008 ; 2008 ; https://www.gpo.gov/ >
-    au < exists ; 2009 ; Government Accountability Office Reports and Comptroller General Decisions 2009 ; 2009 ; https://www.gpo.gov/ >
-    au < exists ; 2010 ; Government Accountability Office Reports and Comptroller General Decisions 2010 ; 2010 ; https://www.gpo.gov/ >
-    au < exists ; 2011 ; Government Accountability Office Reports and Comptroller General Decisions 2011 ; 2011 ; https://www.gpo.gov/ >
-    au < exists ; 2012 ; Government Accountability Office Reports and Comptroller General Decisions 2012 ; 2012 ; https://www.gpo.gov/ >
-    au < exists ; 2013 ; Government Accountability Office Reports and Comptroller General Decisions 2013 ; 2013 ; https://www.gpo.gov/ >
-    au < exists ; 2014 ; Government Accountability Office Reports and Comptroller General Decisions 2014 ; 2014 ; https://www.gpo.gov/ >
-    au < exists ; 2015 ; Government Accountability Office Reports and Comptroller General Decisions 2015 ; 2015 ; https://www.gpo.gov/ >
-    au < exists ; 2016 ; Government Accountability Office Reports and Comptroller General Decisions 2016 ; 2016 ; https://www.gpo.gov/ >
-    au < exists ; 2017 ; Government Accountability Office Reports and Comptroller General Decisions 2017 ; 2017 ; https://www.gpo.gov/ >
+    #au < exists ; 2017 ; Government Accountability Office Reports and Comptroller General Decisions 2017 ; 2017 ; https://www.gpo.gov/ >#EMPTY
 
   }
 
@@ -616,9 +593,12 @@
     param[collection_id] = HMAN
 
 
-    au < expected ; 2014 ; House Rules and Manual 2014 ; 2014 ; https://www.govinfo.gov/ >
-    au < expected ; 2016 ; House Rules and Manual 2016 ; 2016 ; https://www.govinfo.gov/ >
+    au < doesNotExist ; 2014 ; House Rules and Manual 2014 ; 2014 ; https://www.govinfo.gov/ >
+    au < doNotProcess ; 2015 ; House Rules and Manual 2015 ; 2015 ; https://www.govinfo.gov/ >
+    au < doesNotExist ; 2016 ; House Rules and Manual 2016 ; 2016 ; https://www.govinfo.gov/ >
     au < released ; 2017 ; House Rules and Manual 2017 ; 2017 ; https://www.govinfo.gov/ >
+    au < doesNotExist ; 2018 ; House Rules and Manual 2018 ; 2018 ; https://www.govinfo.gov/ >
+    au < exists ; 2019 ; House Rules and Manual 2019 ; 2019 ; https://www.govinfo.gov/ >
 
   }
 
@@ -652,16 +632,6 @@
     comment[0] = published from 1995 to 2005
     param[collection_id] = PAI
 
-    au < exists ; 1995 ; Privacy Act Issuances 1995 ; 1995 ; https://www.gpo.gov/ >
-    au < exists ; 1997 ; Privacy Act Issuances 1997 ; 1997 ; https://www.gpo.gov/ >
-    au < exists ; 1999 ; Privacy Act Issuances 1999 ; 1999 ; https://www.gpo.gov/ >
-    au < exists ; 2000 ; Privacy Act Issuances 2000 ; 2000 ; https://www.gpo.gov/ >
-    au < exists ; 2001 ; Privacy Act Issuances 2001 ; 2001 ; https://www.gpo.gov/ >
-    au < exists ; 2002 ; Privacy Act Issuances 2002 ; 2002 ; https://www.gpo.gov/ >
-    au < exists ; 2003 ; Privacy Act Issuances 2003 ; 2003 ; https://www.gpo.gov/ >
-    au < exists ; 2004 ; Privacy Act Issuances 2004 ; 2004 ; https://www.gpo.gov/ >
-    au < exists ; 2005 ; Privacy Act Issuances 2005 ; 2005 ; https://www.gpo.gov/ >
-    au < exists ; 2006 ; Privacy Act Issuances 2006 ; 2006 ; https://www.gpo.gov/ >
     au < exists ; 2007 ; Privacy Act Issuances 2007 ; 2007 ; https://www.gpo.gov/ >
     au < exists ; 2008 ; Privacy Act Issuances 2008 ; 2008 ; https://www.gpo.gov/ >
     au < exists ; 2009 ; Privacy Act Issuances 2009 ; 2009 ; https://www.gpo.gov/ >
@@ -705,20 +675,6 @@
     param[collection_id] = SMAN
 
   }
-
-{
-
-    title <
-      name = Supreme Court Decisions
-
-      >
-
-        param[collection_id] = SCD
-
-
-    au < exists ; 1937 ; Supreme Court Decisions 1937 ; 1937 ; https://www.govinfo.gov/ >
-
-    }
 
   {
 
@@ -764,6 +720,7 @@
 
     au < released ; 2018 ; United States Government Manual 2018 ; 2018 ; https://www.govinfo.gov/ >
     au < expected ; 2019 ; United States Government Manual 2019 ; 2019 ; https://www.govinfo.gov/ >
+    au < expected ; 2020 ; United States Government Manual 2020 ; 2020 ; https://www.govinfo.gov/ >
 
   }
 
@@ -776,7 +733,6 @@
     param[collection_id] = STATUTE
 
 
-    au < exists ; 2008 ; United States Statutes at Large 2008 ; 2008 ; https://www.govinfo.gov/ >
     au < manifest ; 2012 ; United States Statutes at Large 2012 ; 2012 ; https://www.govinfo.gov/ >
     au < released ; 2013 ; United States Statutes at Large 2013 ; 2013 ; https://www.govinfo.gov/ >
 
