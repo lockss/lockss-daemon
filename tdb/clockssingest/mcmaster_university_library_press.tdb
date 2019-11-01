@@ -351,4 +351,18 @@
 
     }
 
+    {
+
+      title < 
+        name = International Journal of Risk and Recovery
+      
+      >
+      plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+      param[base_url] = https://mulpress.mcmaster.ca/
+      param[journal_id] = ijrr
+
+      au < exists ; exists ; 2018 ; International Journal of Risk and Recovery Volume 1 ; 1 ; 2018 ; > 
+
+    }
+
 }
