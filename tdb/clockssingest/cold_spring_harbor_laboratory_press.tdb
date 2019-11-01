@@ -54,7 +54,7 @@
       au < finished ; crawling ; 2011 ; Cold Spring Harbor Perspectives in Biology Volume 3 ; 3 ; http://cshperspectives.cshlp.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2012 ; Cold Spring Harbor Perspectives in Biology Volume 4 ; 4 ; http://cshperspectives.cshlp.org/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2013 ; Cold Spring Harbor Perspectives in Biology Volume 5 ; 5 ; http://cshperspectives.cshlp.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2014 ; Cold Spring Harbor Perspectives in Biology Volume 6 ; 6 ; http://cshperspectives.cshlp.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; Cold Spring Harbor Perspectives in Biology Volume 6 ; 6 ; http://cshperspectives.cshlp.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; Cold Spring Harbor Perspectives in Biology Volume 7 ; 7 ; http://cshperspectives.cshlp.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; Cold Spring Harbor Perspectives in Biology Volume 8 ; 8 ; http://cshperspectives.cshlp.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; Cold Spring Harbor Perspectives in Biology Volume 9 ; 9 ; http://cshperspectives.cshlp.org/ ; reingest1.clockss.org:8082 >
@@ -206,7 +206,7 @@
       au < finished ; crawling ; 1995 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 60 ; 60 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 1996 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 61 ; 61 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 1997 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 62 ; 62 ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 1998 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 63 ; 63 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 1998 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 63 ; 63 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 1999 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 64 ; 64 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2000 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 65 ; 65 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2001 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 66 ; 66 ; reingest3.clockss.org:8083 >
@@ -397,7 +397,7 @@
 
       #param[base_url] = http://rnajournal.cshlp.org/
 
-      au < finished ; crawling ; 1995 ; RNA Volume 1 ; 1 ; http://rnajournal.cshlp.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 1995 ; RNA Volume 1 ; 1 ; http://rnajournal.cshlp.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 1996 ; RNA Volume 2 ; 2 ; http://rnajournal.cshlp.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 1997 ; RNA Volume 3 ; 3 ; http://rnajournal.cshlp.org/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 1998 ; RNA Volume 4 ; 4 ; http://rnajournal.cshlp.org/ ; reingest3.clockss.org:8083 >

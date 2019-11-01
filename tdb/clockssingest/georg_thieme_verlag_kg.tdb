@@ -2892,7 +2892,7 @@
     param[journal_id] = 10.1055/s-00029025
     comment[years] = 2012-current
 
-    au < finished ; crawling ; 2012 ; 2012 ; Journal of Pediatric Epilepsy Volume 1 ; 1 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2012 ; 2012 ; Journal of Pediatric Epilepsy Volume 1 ; 1 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2013 ; 2013 ; Journal of Pediatric Epilepsy Volume 2 ; 2 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; 2014 ; Journal of Pediatric Epilepsy Volume 3 ; 3 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Journal of Pediatric Epilepsy Volume 4 ; 4 ; reingest1.clockss.org:8082 >
@@ -2915,7 +2915,7 @@
     param[journal_id] = 10.1055/s-00029027
     comment[years] = 2012-current
 
-    au < finished ; crawling ; 2012 ; 2012 ; Journal of Pediatric Genetics Volume 1 ; 1 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2012 ; 2012 ; Journal of Pediatric Genetics Volume 1 ; 1 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2013 ; 2013 ; Journal of Pediatric Genetics Volume 2 ; 2 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 2014 ; Journal of Pediatric Genetics Volume 3 ; 3 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; Journal of Pediatric Genetics Volume 4 ; 4 ; reingest5.clockss.org:8082 >
@@ -2998,7 +2998,7 @@
     au < manifest ; exists ; 2008 ; 2008 ; Journal of Pediatric Neurology Volume 6 ; 6 ; >
     au < frozen ; exists ; 2009 ; 2009 ; Journal of Pediatric Neurology Volume 7 ; 7 ; >
     au < finished ; crawling ; 2010 ; 2010 ; Journal of Pediatric Neurology Volume 8 ; 8 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2011 ; 2011 ; Journal of Pediatric Neurology Volume 9 ; 9 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2011 ; 2011 ; Journal of Pediatric Neurology Volume 9 ; 9 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2012 ; 2012 ; Journal of Pediatric Neurology Volume 10 ; 10 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; 2013 ; Journal of Pediatric Neurology Volume 11 ; 11 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 2014 ; Journal of Pediatric Neurology Volume 12 ; 12 ; reingest2.clockss.org:8085 >
@@ -4355,7 +4355,7 @@
     au < finished ; finished ; 2013 ; 2013 ; physioscience Volume 9 ; 9 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 2014 ; physioscience Volume 10 ; 10 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; physioscience Volume 11 ; 11 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; 2016 ; physioscience Volume 12 ; 12 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; 2016 ; physioscience Volume 12 ; 12 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; physioscience Volume 13 ; 13 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; physioscience Volume 14 ; 14 ; >
     au < crawling ; exists ; 2019 ; 2019 ; physioscience Volume 15 ; 15 ; >
@@ -4531,7 +4531,7 @@
 
    au < finished ; finished ; 2014 ; 2014 ; Planta Medica Letters Volume 1 ; 1 ; >
    au < finished ; finished ; 2015 ; 2015 ; Planta Medica Letters Volume 2 ; 2 ; reingest1.clockss.org:8082 >
-   au < finished ; crawling ; 2016 ; 2016 ; Planta Medica Letters Volume 3 ; 3 ; reingest5.clockss.org:8082 >
+   au < finished ; frozen ; 2016 ; 2016 ; Planta Medica Letters Volume 3 ; 3 ; reingest5.clockss.org:8082 >
 
   }
 

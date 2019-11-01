@@ -121,7 +121,7 @@
     au < finished ; crawling ; 1970 ; 978-0-89118-283-2 ; Agronomy & Health ; agronomyandheal ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1971 ; 978-0-89118-285-6 ; Agronomy in a Changing World and Research Needs For The Seventies ; agronomyinachan ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 1964 ; 978-0-89118-337-2 ; Agronomy in the Americas ; agronomyintheam ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 1978 ; 978-0-89118-299-3 ; Agronomy in Today's Society ; agronomyintoday ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 1978 ; 978-0-89118-299-3 ; Agronomy in Today's Society ; agronomyintoday ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 1979 ; 978-0-89118-303-7 ; Agronomy—Solving Problems, Serving People ; agronomysolving ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1978 ; 978-0-89118-302-0 ; Agronomy: Science in Action ; agronomyscience ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 1975 ; 978-0-89118-289-4 ; All-Out Food Production: Strategy and Resource Implications ; alloutfoodprodu ; reingest1.clockss.org:8082 >
@@ -258,7 +258,7 @@
     param[series_id] = sssaspecialpubl
     
     au < finished ; crawling ; 1982 ; 978-0-89118-905-3 ; Acid Sulfate Weathering ; acidsulfateweat ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 1992 ; 978-0-89118-925-1 ; Advances in Measurement of Soil Physical Properties: Bringing Theory into Practice ; advancesinmeasu ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1992 ; 978-0-89118-925-1 ; Advances in Measurement of Soil Physical Properties: Bringing Theory into Practice ; advancesinmeasu ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; 978-0-89118-967-1 ; Agricultural and Environmental Applications of Biochar: Advances and Barriers ; sssaspecpub63 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 1996 ; 978-0-89118-943-5 ; Applications of GIS to the Modeling of Non-Point Source Pollutants in the Vadose Zone ; applicationsofg ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 1997 ; 978-0-89118-945-9 ; Aquic Conditions and Hydric Soils: The Problem Soils ; aquicconditions ; reingest4.clockss.org:8082 >
@@ -313,7 +313,7 @@
     au < finished ; frozen ; 1993 ; 978-0-89118-927-5 ; Sorption and Degradation of Pesticides and Organic Chemicals in Soil ; sorptionanddegr ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 1991 ; 978-0-89118-923-7 ; Spatial Variabilities of Soils and Landforms ; spatialvariabil ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2001 ; 978-0-89118-952-7 ; Sustaining Soil Fertility in West Africa ; sustainingsoilf ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 1998 ; 978-0-89118-948-0 ; The Contribution of Soil Science to the Development of and Implementation of Criteria and Indicators of Sustainable Forest Management ; thecontribution ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1998 ; 978-0-89118-948-0 ; The Contribution of Soil Science to the Development of and Implementation of Criteria and Indicators of Sustainable Forest Management ; thecontribution ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 1996 ; 978-0-89118-940-4 ; The Role of Soil Science in Interdisciplinary Research ; theroleofsoilsc ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 1994 ; 978-0-89118-931-2 ; Tomography of Soil-Water-Root Processes ; tomographyofsoi ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 1979 ; 978-0-89118-903-9 ; Universal Soil Loss Equation: Past, Present, and Future ; universalsoillo ; reingest2.clockss.org:8085 >
