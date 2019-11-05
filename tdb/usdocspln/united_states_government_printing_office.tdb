@@ -23,7 +23,7 @@
     param[collection_id] = GOVPUB
 
     au < released ; 2019 ; Account of the Receipts and Expenditures of the United States 2019 ; 2019 ; https://www.govinfo.gov/ >
-    #au < exists ; 2904 ; Account of the Receipts and Expenditures of the United States 2904 ; 2904 ; https://www.govinfo.gov/ > #empty
+    au < exists ; 2904 ; Account of the Receipts and Expenditures of the United States 2904 ; 2904 ; https://www.govinfo.gov/ > #empty
 
   }
 
@@ -185,6 +185,7 @@
     param[collection_id] = CPRT
 
 
+    au < exists ; 1993 ; Congressional Committee Prints 1993 ; 1993 ; https://www.govinfo.gov/ >
     au < released ; 2019 ; Congressional Committee Prints 2019 ; 2019 ; https://www.govinfo.gov/ >
 
   }
@@ -211,10 +212,9 @@
 
     param[collection_id] = CDOC
 
-
-    au < manifest ; 2017 ; Congressional Documents 2017 ; 2017 ; https://www.govinfo.gov/ >
-    au < manifest ; 2018 ; Congressional Documents 2018 ; 2018 ; https://www.govinfo.gov/ >
     au < released ; 2019 ; Congressional Documents 2019 ; 2019 ; https://www.govinfo.gov/ >
+    #au < expected ; 2020 ; Congressional Documents 2020 ; 2020 ; https://www.govinfo.gov/ >
+    au < expected ; 2021 ; Congressional Documents 2021 ; 2021 ; https://www.govinfo.gov/ >
 
   }
 
@@ -227,7 +227,8 @@
     param[collection_id] = CHRG
 
  
-    au < notReady ; 1958 ; Congressional Hearings 1958 ; 1958 ; https://www.govinfo.gov/ > #link on sitemap page does not have a pdf. See https://www.govinfo.gov/sitemap/CHRG_1958_sitemap.xml
+    au < exists ; 1934 ; Congressional Hearings 1934 ; 1934 ; https://www.govinfo.gov/ > 
+    au < exists ; 1958 ; Congressional Hearings 1958 ; 1958 ; https://www.govinfo.gov/ > #link on sitemap page does not have a pdf. See https://www.govinfo.gov/sitemap/CHRG_1958_sitemap.xml
     au < doesNotExist ; 1959 ; Congressional Hearings 1959 ; 1959 ; https://www.govinfo.gov/ >
     au < released ; 1960 ; Congressional Hearings 1960 ; 1960 ; https://www.govinfo.gov/ >
     au < released ; 1961 ; Congressional Hearings 1961 ; 1961 ; https://www.govinfo.gov/ >
@@ -235,7 +236,6 @@
     au < released ; 1963 ; Congressional Hearings 1963 ; 1963 ; https://www.govinfo.gov/ >
     au < released ; 1964 ; Congressional Hearings 1964 ; 1964 ; https://www.govinfo.gov/ >
     au < released ; 1965 ; Congressional Hearings 1965 ; 1965 ; https://www.govinfo.gov/ >
-    
     au < doNotProcess ; 1966 ; Congressional Hearings 1966 ; 1966 ; https://www.govinfo.gov/ >
     au < manifest ; 1967 ; Congressional Hearings 1967 ; 1967 ; https://www.govinfo.gov/ >
     au < manifest ; 1968 ; Congressional Hearings 1968 ; 1968 ; https://www.govinfo.gov/ >
@@ -360,10 +360,10 @@
     au < released ; 1949 ; Statute Compilations 1949 ; 1949 ; https://www.govinfo.gov/ >
     au < released ; 1950 ; Statute Compilations 1950 ; 1950 ; https://www.govinfo.gov/ >
     au < released ; 1955 ; Statute Compilations 1955 ; 1955 ; https://www.govinfo.gov/ >
-    au < notReady ; 1958 ; Statute Compilations 1958 ; 1958 ; https://www.govinfo.gov/ > #empty see https://www.govinfo.gov/sitemap/COMPS_1958_sitemap.xml
+    au < exists ; 1958 ; Statute Compilations 1958 ; 1958 ; https://www.govinfo.gov/ > #empty see https://www.govinfo.gov/sitemap/COMPS_1958_sitemap.xml
     au < released ; 1960 ; Statute Compilations 1960 ; 1960 ; https://www.govinfo.gov/ >
-    au < doesNotExist ; 1961 ; Statute Compilations 1961 ; 1961 ; https://www.govinfo.gov/ >
-    au < doesNotExist ; 1965 ; Statute Compilations 1965 ; 1965 ; https://www.govinfo.gov/ >
+    au < exists ; 1961 ; Statute Compilations 1961 ; 1961 ; https://www.govinfo.gov/ > #empty see https://www.govinfo.gov/sitemap/COMPS_1961_sitemap.xml
+    au < exists ; 1965 ; Statute Compilations 1965 ; 1965 ; https://www.govinfo.gov/ > #empty see https://www.govinfo.gov/sitemap/COMPS_1965_sitemap.xml
     au < released ; 1966 ; Statute Compilations 1966 ; 1966 ; https://www.govinfo.gov/ >
     au < released ; 1968 ; Statute Compilations 1968 ; 1968 ; https://www.govinfo.gov/ >
     au < released ; 1970 ; Statute Compilations 1970 ; 1970 ; https://www.govinfo.gov/ >
@@ -376,7 +376,7 @@
     au < doesNotExist ; 1982 ; Statute Compilations 1982 ; 1982 ; https://www.govinfo.gov/ >
     au < released ; 1983 ; Statute Compilations 1983 ; 1983 ; https://www.govinfo.gov/ >
     au < released ; 1984 ; Statute Compilations 1984 ; 1984 ; https://www.govinfo.gov/ >
-    au < notReady ; 1985 ; Statute Compilations 1985 ; 1985 ; https://www.govinfo.gov/ > #empty site map see https://www.govinfo.gov/sitemap/COMPS_1985_sitemap.xml
+    au < exists ; 1985 ; Statute Compilations 1985 ; 1985 ; https://www.govinfo.gov/ > #empty site map see https://www.govinfo.gov/sitemap/COMPS_1985_sitemap.xml
     au < released ; 1986 ; Statute Compilations 1986 ; 1986 ; https://www.govinfo.gov/ >
     au < released ; 1987 ; Statute Compilations 1987 ; 1987 ; https://www.govinfo.gov/ >
     au < doesNotExist ; 1988 ; Statute Compilations 1988 ; 1988 ; https://www.govinfo.gov/ >
