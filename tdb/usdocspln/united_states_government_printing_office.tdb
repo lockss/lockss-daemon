@@ -684,8 +684,8 @@
     #Published 1994-2017
     param[collection_id] = USCODE
 
-    au < manifest ; 2012 ; United States Code 2012 ; 2012 ; https://www.govinfo.gov/ >
-    au < manifest ; 2013 ; United States Code 2013 ; 2013 ; https://www.govinfo.gov/ >
+    au < doNotProcess ; 2012 ; United States Code 2012 ; 2012 ; https://www.govinfo.gov/ >
+    au < doNotProcess ; 2013 ; United States Code 2013 ; 2013 ; https://www.govinfo.gov/ >
     au < released ; 2014 ; United States Code 2014 ; 2014 ; https://www.govinfo.gov/ >
     au < released ; 2015 ; United States Code 2015 ; 2015 ; https://www.govinfo.gov/ >
     au < released ; 2016 ; United States Code 2016 ; 2016 ; https://www.govinfo.gov/ >
@@ -733,7 +733,7 @@
     param[collection_id] = STATUTE
 
 
-    au < manifest ; 2012 ; United States Statutes at Large 2012 ; 2012 ; https://www.govinfo.gov/ >
+    au < doNotProcess ; 2012 ; United States Statutes at Large 2012 ; 2012 ; https://www.govinfo.gov/ >
     au < released ; 2013 ; United States Statutes at Large 2013 ; 2013 ; https://www.govinfo.gov/ >
 
   }
