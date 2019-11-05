@@ -33,17 +33,17 @@ my $ua = LWP::UserAgent->new;
 $url = sprintf("https://www.govinfo.gov/sitemaps");
 my @collection_list=();
 #$man_url=uri_unescape($url);
-#printf("%s\n",$url);
+printf("%s\n",$url);
 my $req = HTTP::Request->new(GET, $url);
 my $resp = $ua->request($req);
 if ($resp->is_success) {
-  #printf("Success\n");
+  printf("Success\n");
   my $man_contents = $resp->content;
   #printf("$man_contents\n");
   if ($req->url ne $resp->request->uri) {
     printf("Redirected from %s\n", $url);
   } elsif (defined($man_contents) && ($man_contents =~ m/\/sitemap\/.*_sitemap_index.xml/)) {
-    #printf("Not redirected and has a match.\n");
+    printf("Not redirected and has a match.\n");
         #my $ln = 0;
     foreach my $line (split(/\n/m, $man_contents)) {
       #++$ln;
@@ -55,9 +55,9 @@ if ($resp->is_success) {
     } 
   }   
 } else {
-  printf("--REQ_FAIL--" . $resp->code() . " " . $resp->message());
+  printf("--REQ_FAIL--" . $resp->code() . " " . $resp->message() . "\n");
 }
-#exit(0)
+exit(0);
 
 foreach my $collection (@collection_list) {
   #fetch the associated sitemap which has all the years.
