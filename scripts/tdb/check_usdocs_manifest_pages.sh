@@ -12,7 +12,7 @@ cat $tpath/list1a | sort  > $tpath/list1b
 cat $tpath/list1b | uniq > $tpath/list1c
 echo "Duplicate AUs in previous and new tdb files."
 comm -23 $tpath/list1b $tpath/list1c
-./scripts/tdb/check_usdocs_manifest_pages.pl | sort > $tpath/list2a
+perl scripts/tdb/check_usdocs_manifest_pages.pl | sort | uniq > $tpath/list2a
 echo "AUs missing from the tdb files."
 comm -13 $tpath/list1c $tpath/list2a
 echo "Extra AUs in the tdb files."
