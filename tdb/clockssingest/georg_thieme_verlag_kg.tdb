@@ -886,7 +886,7 @@
 
    au < doNotProcess ; exists ; 2000 ; 2000 ; Deutsche Zeitschrift für Akupunktur Volume 43 ; 43 ; >
    au < doNotProcess ; exists ; 2001 ; 2001 ; Deutsche Zeitschrift für Akupunktur Volume 44 ; 44 ; >
-   au < finished ; crawling ; 2002 ; 2002 ; Deutsche Zeitschrift für Akupunktur Volume 45 ; 45 ; reingest2.clockss.org:8085 >
+   au < finished ; frozen ; 2002 ; 2002 ; Deutsche Zeitschrift für Akupunktur Volume 45 ; 45 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -1239,7 +1239,7 @@
    au < finished ; finished ; 2013 ; 2013 ; Deutsche Zeitschrift für Osteopathie Volume 11 ; 11 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2014 ; 2014 ; Deutsche Zeitschrift für Osteopathie Volume 12 ; 12 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; Deutsche Zeitschrift für Osteopathie Volume 13 ; 13 ; reingest3.clockss.org:8083 >
-   au < finished ; crawling ; 2016 ; 2016 ; Deutsche Zeitschrift für Osteopathie Volume 14 ; 14 ; reingest2.clockss.org:8085 >
+   au < finished ; frozen ; 2016 ; 2016 ; Deutsche Zeitschrift für Osteopathie Volume 14 ; 14 ; reingest2.clockss.org:8085 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Deutsche Zeitschrift für Osteopathie Volume 15 ; 15 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Deutsche Zeitschrift für Osteopathie Volume 16 ; 16 ; >
    au < crawling ; exists ; 2019 ; 2019 ; Deutsche Zeitschrift für Osteopathie Volume 17 ; 17 ; >
@@ -1267,7 +1267,7 @@
    au < finished ; finished ; 2013 ; 2013 ; Endo-Praxis Volume 29 ; 29 ; >
    au < finished ; finished ; 2014 ; 2014 ; Endo-Praxis Volume 30 ; 30 ; >
    au < finished ; finished ; 2015 ; 2015 ; Endo-Praxis Volume 31 ; 31 ; reingest3.clockss.org:8083 >
-   au < finished ; crawling ; 2016 ; 2016 ; Endo-Praxis Volume 32 ; 32 ; reingest3.clockss.org:8083 >
+   au < finished ; frozen ; 2016 ; 2016 ; Endo-Praxis Volume 32 ; 32 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Endo-Praxis Volume 33 ; 33 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Endo-Praxis Volume 34 ; 34 ; >
    au < crawling ; exists ; 2019 ; 2019 ; Endo-Praxis Volume 35 ; 35 ; >
@@ -1857,7 +1857,7 @@
    au < finished ; finished ; 2013 ; 2013 ; Gastroenterologie up2dat Volume 9 ; 9 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2014 ; 2014 ; Gastroenterologie up2dat Volume 10 ; 10 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; Gastroenterologie up2dat Volume 11 ; 11 ; reingest4.clockss.org:8082 >
-   au < finished ; crawling ; 2016 ; 2016 ; Gastroenterologie up2dat Volume 12 ; 12 ; reingest4.clockss.org:8082 >
+   au < finished ; frozen ; 2016 ; 2016 ; Gastroenterologie up2dat Volume 12 ; 12 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Gastroenterologie up2dat Volume 13 ; 13 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Gastroenterologie up2dat Volume 14 ; 14 ; >
    au < crawling ; exists ; 2019 ; 2019 ; Gastroenterologie up2dat Volume 15 ; 15 ; >
@@ -5702,7 +5702,7 @@
    au < finished ; finished ; 2013 ; 2013 ; Sportverletzung - Sportschaden Volume 27 ; 27 ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2014 ; 2014 ; Sportverletzung - Sportschaden Volume 28 ; 28 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; Sportverletzung - Sportschaden Volume 29 ; 29 ; reingest3.clockss.org:8083 >
-   au < finished ; crawling ; 2016 ; 2016 ; Sportverletzung - Sportschaden Volume 30 ; 30 ; reingest2.clockss.org:8085 >
+   au < finished ; frozen ; 2016 ; 2016 ; Sportverletzung - Sportschaden Volume 30 ; 30 ; reingest2.clockss.org:8085 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Sportverletzung - Sportschaden Volume 31 ; 31 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Sportverletzung - Sportschaden Volume 32 ; 32 ; >
    au < crawling ; exists ; 2019 ; 2019 ; Sportverletzung - Sportschaden Volume 33 ; 33 ; >
@@ -6630,7 +6630,7 @@
     au < finished ; finished ; 2013 ; 2013 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 151 ; 151 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; 2014 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 152 ; 152 ; >
     au < finished ; finished ; 2015 ; 2015 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 153 ; 153 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; 2016 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 154 ; 154 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2016 ; 2016 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 154 ; 154 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 155 ; 155 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 156 ; 156 ; >
     au < crawling ; exists ; 2019 ; 2019 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 157 ; 157 ; >
@@ -7259,7 +7259,7 @@
     au < frozen ; exists ; 2012 ; 2012 ; Nuklearmedizin Volume 51 ; 51 ; >
     au < frozen ; exists ; 2013 ; 2013 ; Nuklearmedizin Volume 52 ; 52 ; >
     au < frozen ; exists ; 2014 ; 2014 ; Nuklearmedizin Volume 53 ; 53 ; >
-    au < finished ; crawling ; 2015 ; 2015 ; Nuklearmedizin Volume 54 ; 54 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; 2015 ; Nuklearmedizin Volume 54 ; 54 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; 2016 ; Nuklearmedizin Volume 55 ; 55 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Nuklearmedizin Volume 56 ; 56 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Nuklearmedizin Volume 57 ; 57 ; >

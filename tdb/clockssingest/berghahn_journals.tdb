@@ -231,7 +231,7 @@
     au < frozen ; exists ; 2014 ; Contention Volume 2 ; 2 ; >
     au < frozen ; exists ; 2015 ; Contention Volume 3 ; 3 ; >
     au < frozen ; exists ; 2016 ; Contention Volume 4 ; 4 ; >
-    au < finished ; crawling ; 2017 ; Contention Volume 5 ; 5 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2017 ; Contention Volume 5 ; 5 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Contention Volume 6 ; 6 ; >
     au < expected ; exists ; 2019 ; Contention Volume 7 ; 7 ; >
 

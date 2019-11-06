@@ -505,7 +505,7 @@
     au < finished ; finished ; 2010 ; Journal of Receptor, Ligand and Channel Research Volume 3 ; 3 ; 2010 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2011 ; Journal of Receptor, Ligand and Channel Research Volume 4 ; 4 ; 2011 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Journal of Receptor, Ligand and Channel Research Volume 5 ; 5 ; 2012 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2013 ; Journal of Receptor, Ligand and Channel Research Volume 6 ; 6 ; 2013 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Journal of Receptor, Ligand and Channel Research Volume 6 ; 6 ; 2013 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Journal of Receptor, Ligand and Channel Research Volume 7 ; 7 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Journal of Receptor, Ligand and Channel Research Volume 8 ; 8 ; 2015 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2016 ; Journal of Receptor, Ligand and Channel Research Volume 9 ; 9 ; 2016 ; reingest5.clockss.org:8082 >
@@ -1250,7 +1250,7 @@
     #ceased publishing in July 2016
 
     au < finished ; finished ; 2015 ; International Journal of High Throughput Screening Volume 5 ; 5 ; 2015 ; >
-    au < finished ; crawling ; 2016 ; International Journal of High Throughput Screening Volume 6 ; 6 ; 2016 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; International Journal of High Throughput Screening Volume 6 ; 6 ; 2016 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -2470,7 +2470,7 @@
     param[journal_id] = 131
 
     au < finished ; frozen ; 2011 ; Nursing: Research and Reviews Volume 1 ; 1 ; 2011 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2012 ; Nursing: Research and Reviews Volume 2 ; 2 ; 2012 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2012 ; Nursing: Research and Reviews Volume 2 ; 2 ; 2012 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Nursing: Research and Reviews Volume 3 ; 3 ; 2013 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Nursing: Research and Reviews Volume 4 ; 4 ; 2014 ; >
     au < finished ; finished ; 2015 ; Nursing: Research and Reviews Volume 5 ; 5 ; 2015 ; >
