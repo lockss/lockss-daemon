@@ -376,9 +376,6 @@
     au < deepCrawl ; exists ; 2018 ; 5 ; IUCrJ Volume 5 October ; 2018-10 ; >
     au < expected ; exists ; 2018 ; 5 ; IUCrJ Volume 5 November ; 2018-11 ; >
     au < manifest ; exists ; 2018 ; 5 ; IUCrJ Volume 5 December ; 2018-12 ; >
-    }
-    {
-      param[au_oai_set] = m
 
     au < expected ; exists ; 2019 ; 6 ; IUCrJ Volume 6 January ; 2019-01 ; >
     au < expected ; exists ; 2019 ; 6 ; IUCrJ Volume 6 February ; 2019-02 ; >
@@ -392,6 +389,7 @@
     au < expected ; exists ; 2019 ; 6 ; IUCrJ Volume 6 October ; 2019-10 ; >
     au < expected ; exists ; 2019 ; 6 ; IUCrJ Volume 6 November ; 2019-11 ; >
     au < expected ; exists ; 2019 ; 6 ; IUCrJ Volume 6 December ; 2019-12 ; >
+
     }
   }
   
