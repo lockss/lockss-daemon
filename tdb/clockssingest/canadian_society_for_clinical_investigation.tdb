@@ -24,6 +24,7 @@
         plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
         param[base_url] = https://cimonline.ca/
         #url moved from cimonline.ca to www.cimonline.ca to https://cimonline.ca
+        attr[start_stem] = index.php/
 
         au < doNotProcess ; doNotProcess ; 2007 ; Clinical & Investigative Medicine Volume 30 ; 30 ; 2007 ; >
         au < doNotProcess ; doNotProcess ; 2008 ; Clinical & Investigative Medicine Volume 31 ; 31 ; 2008 ; >
