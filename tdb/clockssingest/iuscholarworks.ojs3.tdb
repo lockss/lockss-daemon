@@ -915,7 +915,7 @@
 
       param[journal_id] = sdh
 
-      au < manifest ; exists ; 2017 ; 2017 ; Studies in Digital Heritage Volume 1 ; 1 ; >
+      au < notReady ; exists ; 2017 ; 2017 ; Studies in Digital Heritage Volume 1 ; 1 ; > #500 error on malformed url. https://scholarworks.iu.edu/journals/index.php/sdh/article/download/23331/%20/en.wikipedia.org/wiki/Goldilocks_principle
       au < frozen ; exists ; 2018 ; 2018 ; Studies in Digital Heritage Volume 2 ; 2 ; >
 
   }
@@ -946,9 +946,9 @@
       #no issn/eissn
 
       au < frozen ; exists ; 2014 ; 2014 ; Tributaries Volume 17 ; 17 ; >
-      au < manifest ; exists ; 2015 ; 2015 ; Tributaries Volume 18 ; 18 ; >
+      au < ready ; exists ; 2015 ; 2015 ; Tributaries Volume 18 ; 18 ; > #no substance, but the single pdf is collected. https://scholarworks.iu.edu/journals/index.php/tributaries/issue/view/1243/pdf_8
       au < frozen ; exists ; 2016 ; 2016 ; Tributaries Volume 19 ; 19 ; >
-      au < manifest ; exists ; 2017 ; 2017 ; Tributaries Volume 20 ; 20 ; >
+      au < ready ; exists ; 2017 ; 2017 ; Tributaries Volume 20 ; 20 ; > #no substance, but the two pdfs are collected. https://scholarworks.iu.edu/journals/index.php/tributaries/issue/view/1881/103 & 4
 
   }
 
