@@ -164,7 +164,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Biomarkers in Cancer Volume 6 ; 6 ; bica ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Biomarkers in Cancer Volume 7 ; 7 ; bica ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2016 ; Biomarkers in Cancer Volume 8 ; 8 ; bica ; http://journals.sagepub.com/ ; >
-    au < finished ; crawling ; 2017 ; Biomarkers in Cancer Volume 9 ; 9 ; bica ; http://journals.sagepub.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2017 ; Biomarkers in Cancer Volume 9 ; 9 ; bica ; http://journals.sagepub.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; Biomarkers in Cancer Volume 10 ; 10 ; bica ; http://journals.sagepub.com/ ; >
 
   }
@@ -500,7 +500,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Clinical Medicine Insights: Gastroenterology Volume 7 ; 7 ; cmga ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Gastroenterology Volume 8 ; 8 ; cmga ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Gastroenterology Volume 9 ; 9 ; cmga ; http://journals.sagepub.com/ ; >
-    au < finished ; crawling ; 2017 ; Clinical Medicine Insights: Gastroenterology Volume 10 ; 10 ; cmga ; http://journals.sagepub.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2017 ; Clinical Medicine Insights: Gastroenterology Volume 10 ; 10 ; cmga ; http://journals.sagepub.com/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Clinical Medicine Insights: Gastroenterology Volume 11 ; 11 ; cmga ; http://journals.sagepub.com/ ; >
 
   }
