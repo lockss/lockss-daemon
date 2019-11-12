@@ -281,6 +281,6 @@ public abstract class PdfBoxTokenStream implements PdfTokenStream {
    */
   public static final String PARAM_FILE_BACKED_LISTS_THRESHOLD = PREFIX + "fileBackedListsThreshold";
   
-  public static final int DEFAULT_FILE_BACKED_LISTS_THRESHOLD = 100_000;
+  public static final int DEFAULT_FILE_BACKED_LISTS_THRESHOLD = 1_000_000;
  
 }
