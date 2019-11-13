@@ -47,7 +47,7 @@
       au < finished ; finished ; 2015 ; African Journal of Economic and Sustainable Development Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; African Journal of Economic and Sustainable Development Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2017 ; African Journal of Economic and Sustainable Development Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < ingNotReady ; exists ; 2018 ; African Journal of Economic and Sustainable Development Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
+      au < ingNotReady ; exists ; 2018-2019 ; African Journal of Economic and Sustainable Development Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; > #issue 3, 4 not online
 
     }
 
@@ -703,7 +703,7 @@
 
       au < finished ; finished ; 2013-2014 ; International Journal of Applied Nonlinear Science Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2015-2016 ; International Journal of Applied Nonlinear Science Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2018-2019 ; International Journal of Applied Nonlinear Science Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
+      au < ingNotReady ; exists ; 2018-2019 ; International Journal of Applied Nonlinear Science Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; > # issue 2, 3, 4 not exists
 
     }
 
@@ -827,7 +827,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Auditing Technology Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2014-2015 ; International Journal of Auditing Technology Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2016-2017 ; International Journal of Auditing Technology Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 2018-2020 ; International Journal of Auditing Technology Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2018-2020 ; International Journal of Auditing Technology Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not exists
 
     }
 
@@ -1431,7 +1431,7 @@
       au < finished ; finished ; 2015 ; International Journal of Business Environment Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; International Journal of Business Environment Volume 8 ; 8 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2017 ; International Journal of Business Environment Volume 9 ; 9 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < ingNotReady ; manifest ; 2018-2019 ; International Journal of Business Environment Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 > #issue 4 not online
+      au < deepCrawl ; manifest ; 2018-2019 ; International Journal of Business Environment Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
 
     }
 
@@ -2502,9 +2502,6 @@
       au < finished ; crawling ; 2018 ; International Journal of Data Mining and Bioinformatics Volume 20 ; 20 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2018 ; International Journal of Data Mining and Bioinformatics Volume 21 ; 21 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2019 ; International Journal of Data Mining and Bioinformatics Volume 22 ; 22 ; https://www.inderscienceonline.com/ ; >
-      au < expected ; exists ; 2019 ; International Journal of Data Mining and Bioinformatics Volume 23 ; 23 ; https://www.inderscienceonline.com/ ; >
-      au < expected ; exists ; 2019 ; International Journal of Data Mining and Bioinformatics Volume 24 ; 24 ; https://www.inderscienceonline.com/ ; >
-      au < expected ; exists ; 2019 ; International Journal of Data Mining and Bioinformatics Volume 25 ; 25 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -2882,7 +2879,7 @@
       au < finished ; finished ; 2015 ; International Journal of Electronic Customer Relationship Management Volume 9 ; 9 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2016 ; International Journal of Electronic Customer Relationship Management Volume 10 ; 10 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2017-2018 ; International Journal of Electronic Customer Relationship Management Volume 11 ; 11 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2019 ; International Journal of Electronic Customer Relationship Management Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
+      au < ingNotReady ; exists ; 2019-2020 ; International Journal of Electronic Customer Relationship Management Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -4069,7 +4066,7 @@
       au < doNotProcess ; doNotProcess ; 2011-2012 ; International Journal of Granular Computing, Rough Sets and Intelligent Systems Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2013-2014 ; International Journal of Granular Computing, Rough Sets and Intelligent Systems Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       # below au was incorrectly moved to production too early - take it down until year span over
-      au < ingNotReady ; down ; 2015-2019 ; International Journal of Granular Computing, Rough Sets and Intelligent Systems Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; > #issue 2, 3 & 4 not online yet
+      au < ingNotReady ; down ; 2015 ; International Journal of Granular Computing, Rough Sets and Intelligent Systems Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; > #issue 2, 3 & 4 not online yet
 
     }
 
@@ -6595,7 +6592,7 @@
 
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Multimedia Intelligence and Security Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Multimedia Intelligence and Security Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
-      au < crawling ; exists ; 2013-2019 ; International Journal of Multimedia Intelligence and Security Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; > #issue 3, 4 not online
+      au < ingNotReady ; exists ; 2013-2019 ; International Journal of Multimedia Intelligence and Security Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; > #issue 3, 4 not online
 
     }
 
@@ -10103,7 +10100,7 @@
       au < finished ; crawling ; 2014-2015 ; International Journal of Automotive Composites Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; International Journal of Automotive Composites Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2017 ; International Journal of Automotive Composites Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < ingNotReady ; exists ; 2018 ; International Journal of Automotive Composites Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
+      au < ingNotReady ; exists ; 2018-2019 ; International Journal of Automotive Composites Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; > #issue 3, 4 not online
 
   }
 
