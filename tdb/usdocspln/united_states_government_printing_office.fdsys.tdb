@@ -764,7 +764,7 @@
     au < superseded ; 2002 ; Congressional Record (Bound) 2002 [superseded] ; http://www.gpo.gov/ ; 2002 > #actually empty...See https://www.gpo.gov/smap/fdsys/sitemap_2002/2002_CRECB_sitemap.xml
     au < doesNotExist ; 2003 ; Congressional Record (Bound) 2003 ; http://www.gpo.gov/ ; 2003 >
     au < doesNotExist ; 2004 ; Congressional Record (Bound) 2004 ; http://www.gpo.gov/ ; 2004 >
-#    au < notReady ; 2005 ; Congressional Record (Bound) 2005 ; https://www.gpo.gov/ ; 2005 > #continuously fails testing.
+#    au < doNotProcess ; 2005 ; Congressional Record (Bound) 2005 ; https://www.gpo.gov/ ; 2005 > #continuously fails testing.
     au < down ; 2006 ; Congressional Record (Bound) 2006 ; https://www.gpo.gov/ ; 2006 >
     }
   }
@@ -867,7 +867,7 @@
     au < down ; 2015 ; Daily Compilation of Presidential Documents 2015 ; https://www.gpo.gov/ ; 2015 >
     au < down ; 2016 ; Daily Compilation of Presidential Documents 2016 ; https://www.gpo.gov/ ; 2016 >
     au < down ; 2017 ; Daily Compilation of Presidential Documents 2017 ; https://www.gpo.gov/ ; 2017 >
-    au < down ; 2018 ; Daily Compilation of Presidential Documents 2018 ; https://www.gpo.gov/ ; 2018 >
+    au < superseded ; 2018 ; Daily Compilation of Presidential Documents 2018 [superseded] ; https://www.gpo.gov/ ; 2018 >
 
   }
 
@@ -1337,12 +1337,12 @@
     au < down ; 2010 ; United States Courts 2010 ; http://www.gpo.gov/ ; 2010 >
     au < down ; 2011 ; United States Courts 2011 ; http://www.gpo.gov/ ; 2011 >
     au < down ; 2012 ; United States Courts 2012 ; http://www.gpo.gov/ ; 2012 >
-    au < notReady ; 2013 ; United States Courts 2013 ; https://www.gpo.gov/ ; 2013 > #continuously fails testing.
-    au < notReady ; 2014 ; United States Courts 2014 ; https://www.gpo.gov/ ; 2014 > #continuously fails testing.
-    au < notReady ; 2015 ; United States Courts 2015 ; https://www.gpo.gov/ ; 2015 > #continuously fails testing.
-    au < notReady ; 2016 ; United States Courts 2016 ; https://www.gpo.gov/ ; 2016 > #continuously fails testing.
-    au < notReady ; 2017 ; United States Courts 2017 ; https://www.gpo.gov/ ; 2017 > #continuously fails testing.
-    au < notReady ; 2018 ; United States Courts 2018 ; https://www.gpo.gov/ ; 2018 > #continuously fails testing.
+    au < doNotProcess ; 2013 ; United States Courts 2013 ; https://www.gpo.gov/ ; 2013 > #continuously fails testing.
+    au < doNotProcess ; 2014 ; United States Courts 2014 ; https://www.gpo.gov/ ; 2014 > #continuously fails testing.
+    au < doNotProcess ; 2015 ; United States Courts 2015 ; https://www.gpo.gov/ ; 2015 > #continuously fails testing.
+    au < doNotProcess ; 2016 ; United States Courts 2016 ; https://www.gpo.gov/ ; 2016 > #continuously fails testing.
+    au < doNotProcess ; 2017 ; United States Courts 2017 ; https://www.gpo.gov/ ; 2017 > #continuously fails testing.
+    au < doNotProcess ; 2018 ; United States Courts 2018 ; https://www.gpo.gov/ ; 2018 > #continuously fails testing.
 
   }
 
@@ -1377,7 +1377,7 @@
     au < down ; 2015 ; United States Government Manual 2015 ; https://www.gpo.gov/ ; 2015 >
     au < down ; 2016 ; United States Government Manual 2016 ; https://www.gpo.gov/ ; 2016 >
     au < down ; 2017 ; United States Government Manual 2017 ; https://www.gpo.gov/ ; 2017 >
-    au < manifest ; 2018 ; United States Government Manual 2018 ; https://www.gpo.gov/ ; 2018 >
+    au < doNotProcess ; 2018 ; United States Government Manual 2018 ; https://www.gpo.gov/ ; 2018 >
 
   }
 

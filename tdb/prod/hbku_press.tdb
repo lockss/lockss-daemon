@@ -8,6 +8,7 @@
   plugin = org.lockss.plugin.atypon.bloomsburyqatar.BloomsburyQatarPlugin
   param[base_url] = http://www.qscience.com/
   implicit < status ; year ; name ; param[volume_name] >
+  #move to Ingenta, SR00612776
 
   {
   
@@ -36,11 +37,11 @@
     param[journal_id] = gcsp
       #move to Global Cardiology Science and Practice has been published by the Magdi Yacoub Institute
  
-    au < released ; 2011 ; Aswan Heart Centre: Science and Practice Series Volume 2011 ; 2011 >
-    au < released ; 2012 ; Global Cardiology Science and Practice Volume 2012 ; 2012 >
-    au < manifest ; 2013 ; Global Cardiology Science and Practice Volume 2013 ; 2013 >
-    au < released ; 2014 ; Global Cardiology Science and Practice Volume 2014 ; 2014 >
-    au < released ; 2015 ; Global Cardiology Science and Practice Volume 2015 ; 2015 >
+    au < down ; 2011 ; Aswan Heart Centre: Science and Practice Series Volume 2011 ; 2011 >
+    au < down ; 2012 ; Global Cardiology Science and Practice Volume 2012 ; 2012 >
+    au < doNotProcess ; 2013 ; Global Cardiology Science and Practice Volume 2013 ; 2013 >
+    au < down ; 2014 ; Global Cardiology Science and Practice Volume 2014 ; 2014 >
+    au < down ; 2015 ; Global Cardiology Science and Practice Volume 2015 ; 2015 >
 
   }
 
@@ -53,13 +54,13 @@
     
     param[journal_id] = avi
 
-    au < released ; 2010 ; Avicenna Volume 2010 ; 2010 >
-    au < released ; 2011 ; Avicenna Volume 2011 ; 2011 >
-    au < released ; 2012 ; Avicenna Volume 2012 ; 2012 >
-    au < released ; 2013 ; Avicenna Volume 2013 ; 2013 >
-    au < released ; 2014 ; Avicenna Volume 2014 ; 2014 >
-    au < released ; 2015 ; Avicenna Volume 2015 ; 2015 >
-    au < released ; 2016 ; Avicenna Volume 2016 ; 2016 >
+    au < down ; 2010 ; Avicenna Volume 2010 ; 2010 >
+    au < down ; 2011 ; Avicenna Volume 2011 ; 2011 >
+    au < down ; 2012 ; Avicenna Volume 2012 ; 2012 >
+    au < down ; 2013 ; Avicenna Volume 2013 ; 2013 >
+    au < down ; 2014 ; Avicenna Volume 2014 ; 2014 >
+    au < down ; 2015 ; Avicenna Volume 2015 ; 2015 >
+    au < down ; 2016 ; Avicenna Volume 2016 ; 2016 >
 
   }
 
@@ -72,9 +73,9 @@
     
     param[journal_id] = cis
 
-    au < released ; 2010 ; Contemporary Islamic Studies Volume 2010 ; 2010 >
-    au < released ; 2011 ; Contemporary Islamic Studies Volume 2011 ; 2011 >  
-    au < released ; 2012 ; Contemporary Islamic Studies Volume 2012 ; 2012 >  
+    au < down ; 2010 ; Contemporary Islamic Studies Volume 2010 ; 2010 >
+    au < down ; 2011 ; Contemporary Islamic Studies Volume 2011 ; 2011 >  
+    au < down ; 2012 ; Contemporary Islamic Studies Volume 2012 ; 2012 >  
   }
 
   {
@@ -86,9 +87,9 @@
     
     param[journal_id] = difi
 
-    au < released ; 2013 ; DIFI Family Research and Proceedings Volume 2013 ; 2013 >
-    au < released ; 2014 ; DIFI Family Research and Proceedings Volume 2014 ; 2014 >
-    au < released ; 2015 ; DIFI Family Research and Proceedings Volume 2015 ; 2015 >
+    au < down ; 2013 ; DIFI Family Research and Proceedings Volume 2013 ; 2013 >
+    au < down ; 2014 ; DIFI Family Research and Proceedings Volume 2014 ; 2014 >
+    au < down ; 2015 ; DIFI Family Research and Proceedings Volume 2015 ; 2015 >
 
   }
 
@@ -101,8 +102,8 @@
     
     param[journal_id] = eel
 
-    au < released ; 2015 ; Engineering Education Letters Volume 2015 ; 2015 >
-    au < released ; 2017 ; Engineering Education Letters Volume 2017 ; 2017 >
+    au < down ; 2015 ; Engineering Education Letters Volume 2015 ; 2015 >
+    au < down ; 2017 ; Engineering Education Letters Volume 2017 ; 2017 >
 
   }
 
@@ -115,8 +116,8 @@
     
     param[journal_id] = igmhe
 
-    au < released ; 2013 ; Innovations in Global Medical and Health Education Volume 2013 ; 2013 >
-    au < released ; 2014 ; Innovations in Global Medical and Health Education Volume 2014 ; 2014 >
+    au < down ; 2013 ; Innovations in Global Medical and Health Education Volume 2013 ; 2013 >
+    au < down ; 2014 ; Innovations in Global Medical and Health Education Volume 2014 ; 2014 >
 
   }
 
@@ -129,13 +130,13 @@
     
     param[journal_id] = irl
 
-    au < released ; 2012 ; International Review of Law Volume 2012 ; 2012 >
-    au < released ; 2013 ; International Review of Law Volume 2013 ; 2013 >
+    au < down ; 2012 ; International Review of Law Volume 2012 ; 2012 >
+    au < down ; 2013 ; International Review of Law Volume 2013 ; 2013 >
     au < doesNotExist ; 2013 ; International Review of Law Volume DomesticViolence ; DomesticViolence >
-    au < released ; 2014 ; International Review of Law Volume 2014 ; 2014 >
-    au < released ; 2015 ; International Review of Law Volume 2015 ; 2015 >
-    au < released ; 2016 ; International Review of Law Volume 2016 ; 2016 >
-    au < released ; 2017 ; International Review of Law Volume 2017 ; 2017 >
+    au < down ; 2014 ; International Review of Law Volume 2014 ; 2014 >
+    au < down ; 2015 ; International Review of Law Volume 2015 ; 2015 >
+    au < down ; 2016 ; International Review of Law Volume 2016 ; 2016 >
+    au < down ; 2017 ; International Review of Law Volume 2017 ; 2017 >
 
   }
 
@@ -149,12 +150,12 @@
     
     param[journal_id] = jemtac
 
-    au < released ; 2012 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2012 ; 2012 >
-    au < released ; 2013 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2013 ; 2013 >
-    au < released ; 2014 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2014 ; 2014 >
-    au < released ; 2015 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2015 ; 2015 >
-    au < released ; 2016 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2016 ; 2016 >
-    au < released ; 2017 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2017 ; 2017 >
+    au < down ; 2012 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2012 ; 2012 >
+    au < down ; 2013 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2013 ; 2013 >
+    au < down ; 2014 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2014 ; 2014 >
+    au < down ; 2015 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2015 ; 2015 >
+    au < down ; 2016 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2016 ; 2016 >
+    au < down ; 2017 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2017 ; 2017 >
 
   }
 
@@ -167,8 +168,8 @@
     
     param[journal_id] = messa
 
-    au < released ; 2014 ; Journal of Georgetown University-Qatar: Middle Eastern Studies Student Association Volume 2014 ; 2014 >
-    au < released ; 2015 ; Journal of Georgetown University-Qatar: Middle Eastern Studies Student Association Volume 2015 ; 2015 >
+    au < down ; 2014 ; Journal of Georgetown University-Qatar: Middle Eastern Studies Student Association Volume 2014 ; 2014 >
+    au < down ; 2015 ; Journal of Georgetown University-Qatar: Middle Eastern Studies Student Association Volume 2015 ; 2015 >
 
   }
 
@@ -181,7 +182,7 @@
 
     param[journal_id] = jist
 
-    au < manifest ; 2018 ; Journal of Information Studies & Technology Volume 2018 ; 2018 >
+    au < doNotProcess ; 2018 ; Journal of Information Studies & Technology Volume 2018 ; 2018 >
 
   }
 
@@ -194,9 +195,9 @@
     
     param[journal_id] = jlghp
 
-    au < released ; 2013 ; Journal of Local and Global Health Perspectives Volume 2013 ; 2013 >
-    au < released ; 2015 ; Journal of Local and Global Health Perspectives Volume 2015 ; 2015 >
-    au < released ; 2016 ; Journal of Local and Global Health Perspectives Volume 2016 ; 2016 >
+    au < down ; 2013 ; Journal of Local and Global Health Perspectives Volume 2013 ; 2013 >
+    au < down ; 2015 ; Journal of Local and Global Health Perspectives Volume 2015 ; 2015 >
+    au < down ; 2016 ; Journal of Local and Global Health Perspectives Volume 2016 ; 2016 >
 
   }
 
@@ -209,11 +210,11 @@
     
     param[journal_id] = jlghs
 
-    au < released ; 2012 ; Journal of Local and Global Health Science Volume 2012 ; 2012 >
-    au < released ; 2013 ; Journal of Local and Global Health Science Volume 2013 ; 2013 >
-    au < released ; 2014 ; Journal of Local and Global Health Science Volume 2014 ; 2014 >
-    au < released ; 2015 ; Journal of Local and Global Health Science Volume 2015 ; 2015 >
-    au < released ; 2016 ; Journal of Local and Global Health Science Volume 2016 ; 2016 >
+    au < down ; 2012 ; Journal of Local and Global Health Science Volume 2012 ; 2012 >
+    au < down ; 2013 ; Journal of Local and Global Health Science Volume 2013 ; 2013 >
+    au < down ; 2014 ; Journal of Local and Global Health Science Volume 2014 ; 2014 >
+    au < down ; 2015 ; Journal of Local and Global Health Science Volume 2015 ; 2015 >
+    au < down ; 2016 ; Journal of Local and Global Health Science Volume 2016 ; 2016 >
 
   }
 
@@ -226,15 +227,15 @@
     
     param[journal_id] = nmejre
 
-    au < manifest ; 2006 ; Near and Middle Eastern Journal of Research in Education Volume 1 (2006) ; 1 >
-    au < released ; 2007 ; Near and Middle Eastern Journal of Research in Education Volume 2 (2007) ; 2 > 
-    au < released ; 2010 ; Near and Middle Eastern Journal of Research in Education Volume 2010 ; 2010 >
-    au < released ; 2011 ; Near and Middle Eastern Journal of Research in Education Volume 2011 ; 2011 > 
-    au < released ; 2012 ; Near and Middle Eastern Journal of Research in Education Volume 2012 ; 2012 > 
-    au < released ; 2013 ; Near and Middle Eastern Journal of Research in Education Volume 2013 ; 2013 >
-    au < released ; 2014 ; Near and Middle Eastern Journal of Research in Education Volume 2014 ; 2014 >
-    au < released ; 2015 ; Near and Middle Eastern Journal of Research in Education Volume 2015 ; 2015 >
-    au < released ; 2016 ; Near and Middle Eastern Journal of Research in Education Volume 2016 ; 2016 >
+    au < doNotProcess ; 2006 ; Near and Middle Eastern Journal of Research in Education Volume 1 (2006) ; 1 >
+    au < down ; 2007 ; Near and Middle Eastern Journal of Research in Education Volume 2 (2007) ; 2 > 
+    au < down ; 2010 ; Near and Middle Eastern Journal of Research in Education Volume 2010 ; 2010 >
+    au < down ; 2011 ; Near and Middle Eastern Journal of Research in Education Volume 2011 ; 2011 > 
+    au < down ; 2012 ; Near and Middle Eastern Journal of Research in Education Volume 2012 ; 2012 > 
+    au < down ; 2013 ; Near and Middle Eastern Journal of Research in Education Volume 2013 ; 2013 >
+    au < down ; 2014 ; Near and Middle Eastern Journal of Research in Education Volume 2014 ; 2014 >
+    au < down ; 2015 ; Near and Middle Eastern Journal of Research in Education Volume 2015 ; 2015 >
+    au < down ; 2016 ; Near and Middle Eastern Journal of Research in Education Volume 2016 ; 2016 >
 
   }
 
@@ -247,9 +248,9 @@
     
     param[journal_id] = pil
 
-    au < released ; 2010 ; Perspectives in International Librarianship Volume 2010 ; 2010 >
-    au < released ; 2011 ; Perspectives in International Librarianship Volume 2011 ; 2011 >  
-    au < released ; 2012 ; Perspectives in International Librarianship Volume 2012 ; 2012 >  
+    au < down ; 2010 ; Perspectives in International Librarianship Volume 2010 ; 2010 >
+    au < down ; 2011 ; Perspectives in International Librarianship Volume 2011 ; 2011 >  
+    au < down ; 2012 ; Perspectives in International Librarianship Volume 2012 ; 2012 >  
 
   }
 
@@ -263,10 +264,10 @@
     param[journal_id] = qfarf
     comment[continued_by] = 2313-6030
 
-    au < released ; 2010 ; Qatar Foundation Annual Research Forum Proceedings Volume 2010 ; 2010 >
-    au < released ; 2011 ; Qatar Foundation Annual Research Forum Proceedings Volume 2011 ; 2011 >
-    au < manifest ; 2012 ; Qatar Foundation Annual Research Forum Proceedings Volume 2012 ; 2012 >
-    au < released ; 2013 ; Qatar Foundation Annual Research Forum Proceedings Volume 2013 ; 2013 >
+    au < down ; 2010 ; Qatar Foundation Annual Research Forum Proceedings Volume 2010 ; 2010 >
+    au < down ; 2011 ; Qatar Foundation Annual Research Forum Proceedings Volume 2011 ; 2011 >
+    au < doNotProcess ; 2012 ; Qatar Foundation Annual Research Forum Proceedings Volume 2012 ; 2012 >
+    au < down ; 2013 ; Qatar Foundation Annual Research Forum Proceedings Volume 2013 ; 2013 >
     
   }
 
@@ -280,9 +281,9 @@
     param[journal_id] = qfarc
     comment[continues] = 2220-251X
 
-    au < released ; 2014 ; Qatar Foundation Annual Research Conference Proceedings Volume 1 ; 1 >
-    au < released ; 2016 ; Qatar Foundation Annual Research Conference Proceedings Volume 2016 ; 2016 >
-    au < manifest ; 2018 ; Qatar Foundation Annual Research Conference Proceedings Volume 2018 ; 2018 >
+    au < down ; 2014 ; Qatar Foundation Annual Research Conference Proceedings Volume 1 ; 1 >
+    au < down ; 2016 ; Qatar Foundation Annual Research Conference Proceedings Volume 2016 ; 2016 >
+    au < doNotProcess ; 2018 ; Qatar Foundation Annual Research Conference Proceedings Volume 2018 ; 2018 >
 
   }
 
@@ -294,8 +295,8 @@
     
     param[journal_id] = qmj
 
-    au < manifest ; 1997 ; Qatar Medical Journal Volume 1997 ; 1997 >
-    au < manifest ; 1998 ; Qatar Medical Journal Volume 1998 ; 1998 >
+    au < doNotProcess ; 1997 ; Qatar Medical Journal Volume 1997 ; 1997 >
+    au < doNotProcess ; 1998 ; Qatar Medical Journal Volume 1998 ; 1998 >
     au < exists ; 2000 ; Qatar Medical Journal Volume 2000 ; 2000 >
     au < exists ; 2001 ; Qatar Medical Journal Volume 2001 ; 2001 >
     au < exists ; 2002 ; Qatar Medical Journal Volume 2002 ; 2002 >
@@ -308,12 +309,12 @@
     au < exists ; 2009 ; Qatar Medical Journal Volume 2009 ; 2009 >
     au < exists ; 2010 ; Qatar Medical Journal Volume 2010 ; 2010 >
     au < exists ; 2011 ; Qatar Medical Journal Volume 2011 ; 2011 >
-    au < released ; 2012 ; Qatar Medical Journal Volume 2012 ; 2012 >
-    au < released ; 2013 ; Qatar Medical Journal Volume 2013 ; 2013 >
-    au < released ; 2014 ; Qatar Medical Journal Volume 2014 ; 2014 >
-    au < released ; 2015 ; Qatar Medical Journal Volume 2015 ; 2015 >
-    au < released ; 2016 ; Qatar Medical Journal Volume 2016 ; 2016 >
-    au < released ; 2017 ; Qatar Medical Journal Volume 2017 ; 2017 >
+    au < down ; 2012 ; Qatar Medical Journal Volume 2012 ; 2012 >
+    au < down ; 2013 ; Qatar Medical Journal Volume 2013 ; 2013 >
+    au < down ; 2014 ; Qatar Medical Journal Volume 2014 ; 2014 >
+    au < down ; 2015 ; Qatar Medical Journal Volume 2015 ; 2015 >
+    au < down ; 2016 ; Qatar Medical Journal Volume 2016 ; 2016 >
+    au < down ; 2017 ; Qatar Medical Journal Volume 2017 ; 2017 >
 
   }
 
@@ -325,14 +326,14 @@
     
     param[journal_id] = connect
     
-    au < released ; 2011 ; QScience Connect Volume 2011 ; 2011 >
-    au < released ; 2012 ; QScience Connect Volume 2012 ; 2012 >
-    au < released ; 2013 ; QScience Connect Volume 2013 ; 2013 >
-    au < released ; 2014 ; QScience Connect Volume 2014 ; 2014 >
-    au < released ; 2015 ; QScience Connect Volume 2015 ; 2015 >
-    au < released ; 2016 ; QScience Connect Volume 2016 ; 2016 >
-    au < released ; 2017 ; QScience Connect Volume 2017 ; 2017 >
-    au < manifest ; 2018 ; QScience Connect Volume 2018 ; 2018 >
+    au < down ; 2011 ; QScience Connect Volume 2011 ; 2011 >
+    au < down ; 2012 ; QScience Connect Volume 2012 ; 2012 >
+    au < down ; 2013 ; QScience Connect Volume 2013 ; 2013 >
+    au < down ; 2014 ; QScience Connect Volume 2014 ; 2014 >
+    au < down ; 2015 ; QScience Connect Volume 2015 ; 2015 >
+    au < down ; 2016 ; QScience Connect Volume 2016 ; 2016 >
+    au < down ; 2017 ; QScience Connect Volume 2017 ; 2017 >
+    au < doNotProcess ; 2018 ; QScience Connect Volume 2018 ; 2018 >
 
   }
 
@@ -345,12 +346,12 @@
     
     param[journal_id] = qproc
 
-    au < released ; 2012 ; QScience Proceedings Volume 2012 ; 2012 >
-    au < released ; 2013 ; QScience Proceedings Volume 2013 ; 2013 >
-    au < released ; 2014 ; QScience Proceedings Volume 2014 ; 2014 >
-    au < released ; 2015 ; QScience Proceedings Volume 2015 ; 2015 >
-    au < released ; 2016 ; QScience Proceedings Volume 2016 ; 2016 >
-    au < released ; 2017 ; QScience Proceedings Volume 2017 ; 2017 >
+    au < down ; 2012 ; QScience Proceedings Volume 2012 ; 2012 >
+    au < down ; 2013 ; QScience Proceedings Volume 2013 ; 2013 >
+    au < down ; 2014 ; QScience Proceedings Volume 2014 ; 2014 >
+    au < down ; 2015 ; QScience Proceedings Volume 2015 ; 2015 >
+    au < down ; 2016 ; QScience Proceedings Volume 2016 ; 2016 >
+    au < down ; 2017 ; QScience Proceedings Volume 2017 ; 2017 >
 
   }
 
@@ -363,7 +364,7 @@
 
     param[journal_id] = rolacc
 
-    au < manifest ; 2018 ; Rule of Law and Anti-Corruption Journal Volume 2018 ; 2018 >
+    au < doNotProcess ; 2018 ; Rule of Law and Anti-Corruption Journal Volume 2018 ; 2018 >
 
   }
 
@@ -376,10 +377,10 @@
     
     param[journal_id] = rels
 
-    au < released ; 2012 ; Religions: A Scholarly Journal Volume 2012 ; 2012 >
-    au < released ; 2014 ; Religions: A Scholarly Journal Volume 2014 ; 2014 >
-    au < released ; 2015 ; Religions: A Scholarly Journal Volume 2015 ; 2015 >
-    au < released ; 2016 ; Religions: A Scholarly Journal Volume 2016 ; 2016 >
+    au < down ; 2012 ; Religions: A Scholarly Journal Volume 2012 ; 2012 >
+    au < down ; 2014 ; Religions: A Scholarly Journal Volume 2014 ; 2014 >
+    au < down ; 2015 ; Religions: A Scholarly Journal Volume 2015 ; 2015 >
+    au < down ; 2016 ; Religions: A Scholarly Journal Volume 2016 ; 2016 >
 
   }
 
@@ -392,8 +393,8 @@
     
     param[journal_id] = stsp
 
-    au < manifest ; 2010 ; Sustainable Technologies, Systems and Policies Volume 2010 ; 2010 >
-    au < manifest ; 2012 ; Sustainable Technologies, Systems and Policies Volume 2012 ; 2012 >
+    au < doNotProcess ; 2010 ; Sustainable Technologies, Systems and Policies Volume 2010 ; 2010 >
+    au < doNotProcess ; 2012 ; Sustainable Technologies, Systems and Policies Volume 2012 ; 2012 >
     au < doesNotExist ; 2012 ; Sustainable Technologies, Systems and Policies Volume CCS+Workshop ; CCS+Workshop >
 
   }
@@ -407,8 +408,8 @@
     
     param[journal_id] = tasmeem
 
-    au < released ; 2014 ; Tasmeem Volume 2014 ; 2014 >
-    au < released ; 2015 ; Tasmeem Volume 2015 ; 2015 >
+    au < down ; 2014 ; Tasmeem Volume 2014 ; 2014 >
+    au < down ; 2015 ; Tasmeem Volume 2015 ; 2015 >
 
   }
 

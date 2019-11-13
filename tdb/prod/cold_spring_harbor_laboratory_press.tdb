@@ -38,23 +38,23 @@
       issnl = 1943-0264
     >
 
-    implicit < status ; year ; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
 
     {
 
-      param[base_url] = http://cshperspectives.cshlp.org/
+      #param[base_url] = http://cshperspectives.cshlp.org/
 
-      au < released ; 2009 ; Cold Spring Harbor Perspectives in Biology Volume 1 ; 1 >
-      au < released ; 2010 ; Cold Spring Harbor Perspectives in Biology Volume 2 ; 2 >
-      au < released ; 2011 ; Cold Spring Harbor Perspectives in Biology Volume 3 ; 3 >
-      au < released ; 2012 ; Cold Spring Harbor Perspectives in Biology Volume 4 ; 4 >
-      au < released ; 2013 ; Cold Spring Harbor Perspectives in Biology Volume 5 ; 5 >
-      au < released ; 2014 ; Cold Spring Harbor Perspectives in Biology Volume 6 ; 6 >
-      au < released ; 2015 ; Cold Spring Harbor Perspectives in Biology Volume 7 ; 7 >
-      au < released ; 2016 ; Cold Spring Harbor Perspectives in Biology Volume 8 ; 8 >
-      au < released ; 2017 ; Cold Spring Harbor Perspectives in Biology Volume 9 ; 9 >
-      au < manifest ; 2018 ; Cold Spring Harbor Perspectives in Biology Volume 10 ; 10 >
-      au < expected ; 2019 ; Cold Spring Harbor Perspectives in Biology Volume 11 ; 11 >
+      au < released ; 2009 ; Cold Spring Harbor Perspectives in Biology Volume 1 ; 1 ; http://cshperspectives.cshlp.org/ >
+      au < released ; 2010 ; Cold Spring Harbor Perspectives in Biology Volume 2 ; 2 ; http://cshperspectives.cshlp.org/ >
+      au < released ; 2011 ; Cold Spring Harbor Perspectives in Biology Volume 3 ; 3 ; http://cshperspectives.cshlp.org/ >
+      au < released ; 2012 ; Cold Spring Harbor Perspectives in Biology Volume 4 ; 4 ; http://cshperspectives.cshlp.org/ >
+      au < released ; 2013 ; Cold Spring Harbor Perspectives in Biology Volume 5 ; 5 ; http://cshperspectives.cshlp.org/ >
+      au < released ; 2014 ; Cold Spring Harbor Perspectives in Biology Volume 6 ; 6 ; http://cshperspectives.cshlp.org/ >
+      au < released ; 2015 ; Cold Spring Harbor Perspectives in Biology Volume 7 ; 7 ; http://cshperspectives.cshlp.org/ >
+      au < released ; 2016 ; Cold Spring Harbor Perspectives in Biology Volume 8 ; 8 ; http://cshperspectives.cshlp.org/ >
+      au < released ; 2017 ; Cold Spring Harbor Perspectives in Biology Volume 9 ; 9 ; http://cshperspectives.cshlp.org/ >
+      au < manifest ; 2018 ; Cold Spring Harbor Perspectives in Biology Volume 10 ; 10 ; https://cshperspectives.cshlp.org/ >
+      au < manifest ; 2019 ; Cold Spring Harbor Perspectives in Biology Volume 11 ; 11 ; https://cshperspectives.cshlp.org/ >
 
     }
     

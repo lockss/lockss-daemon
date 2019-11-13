@@ -14,29 +14,29 @@
     {
 
       pluginPrefix = org.lockss.plugin.highwire.
-      param[base_url] = http://www.cfp.ca/
-      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+      #param[base_url] = http://www.cfp.ca/
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] ; param[base_url] >
 
-      au < HighWirePressH20Plugin ; down ; 2000 ; Canadian Family Physician Volume 46 ; 46 >
-      au < HighWirePressH20Plugin ; down ; 2001 ; Canadian Family Physician Volume 47 ; 47 >
-      au < HighWirePressH20Plugin ; down ; 2002 ; Canadian Family Physician Volume 48 ; 48 >
-      au < HighWirePressH20Plugin ; down ; 2003 ; Canadian Family Physician Volume 49 ; 49 >
-      au < HighWirePressH20Plugin ; down ; 2004 ; Canadian Family Physician Volume 50 ; 50 >
-      au < HighWirePressH20Plugin ; down ; 2005 ; Canadian Family Physician Volume 51 ; 51 >
-      au < HighWirePressH20Plugin ; down ; 2006 ; Canadian Family Physician Volume 52 ; 52 >
-      au < HighWirePressH20Plugin ; down ; 2007 ; Canadian Family Physician Volume 53 ; 53 >
-      au < HighWirePressH20Plugin ; down ; 2008 ; Canadian Family Physician Volume 54 ; 54 >
-      au < HighWirePressH20Plugin ; down ; 2009 ; Canadian Family Physician Volume 55 ; 55 >
-      au < HighWirePressH20Plugin ; down ; 2010 ; Canadian Family Physician Volume 56 ; 56 >
-      au < HighWirePressH20Plugin ; down ; 2011 ; Canadian Family Physician Volume 57 ; 57 >
-      au < HighWirePressH20Plugin ; down ; 2012 ; Canadian Family Physician Volume 58 ; 58 >
-      au < HighWirePressH20Plugin ; down ; 2013 ; Canadian Family Physician Volume 59 ; 59 >
-      au < HighWirePressH20Plugin ; down ; 2014 ; Canadian Family Physician Volume 60 ; 60 >
-      au < HighWirePressH20Plugin ; down ; 2015 ; Canadian Family Physician Volume 61 ; 61 >
-      au < cfpc.CollegeFamilyPhysCanadaDrupalPlugin ; released ; 2016 ; Canadian Family Physician Volume 62 ; 62 >
-      au < cfpc.CollegeFamilyPhysCanadaDrupalPlugin ; released ; 2017 ; Canadian Family Physician Volume 63 ; 63 >
-      au < cfpc.CollegeFamilyPhysCanadaDrupalPlugin ; released ; 2018 ; Canadian Family Physician Volume 64 ; 64 >
-      au < cfpc.CollegeFamilyPhysCanadaDrupalPlugin ; expected ; 2019 ; Canadian Family Physician Volume 65 ; 65 >
+      au < HighWirePressH20Plugin ; down ; 2000 ; Canadian Family Physician Volume 46 ; 46 ; http://www.cfp.ca/ >
+      au < HighWirePressH20Plugin ; down ; 2001 ; Canadian Family Physician Volume 47 ; 47 ; http://www.cfp.ca/ >
+      au < HighWirePressH20Plugin ; down ; 2002 ; Canadian Family Physician Volume 48 ; 48 ; http://www.cfp.ca/ >
+      au < HighWirePressH20Plugin ; down ; 2003 ; Canadian Family Physician Volume 49 ; 49 ; http://www.cfp.ca/ >
+      au < HighWirePressH20Plugin ; down ; 2004 ; Canadian Family Physician Volume 50 ; 50 ; http://www.cfp.ca/ >
+      au < HighWirePressH20Plugin ; down ; 2005 ; Canadian Family Physician Volume 51 ; 51 ; http://www.cfp.ca/ >
+      au < HighWirePressH20Plugin ; down ; 2006 ; Canadian Family Physician Volume 52 ; 52 ; http://www.cfp.ca/ >
+      au < HighWirePressH20Plugin ; down ; 2007 ; Canadian Family Physician Volume 53 ; 53 ; http://www.cfp.ca/ >
+      au < HighWirePressH20Plugin ; down ; 2008 ; Canadian Family Physician Volume 54 ; 54 ; http://www.cfp.ca/ >
+      au < HighWirePressH20Plugin ; down ; 2009 ; Canadian Family Physician Volume 55 ; 55 ; http://www.cfp.ca/ >
+      au < HighWirePressH20Plugin ; down ; 2010 ; Canadian Family Physician Volume 56 ; 56 ; http://www.cfp.ca/ >
+      au < HighWirePressH20Plugin ; down ; 2011 ; Canadian Family Physician Volume 57 ; 57 ; http://www.cfp.ca/ >
+      au < HighWirePressH20Plugin ; down ; 2012 ; Canadian Family Physician Volume 58 ; 58 ; http://www.cfp.ca/ >
+      au < HighWirePressH20Plugin ; down ; 2013 ; Canadian Family Physician Volume 59 ; 59 ; http://www.cfp.ca/ >
+      au < HighWirePressH20Plugin ; down ; 2014 ; Canadian Family Physician Volume 60 ; 60 ; http://www.cfp.ca/ >
+      au < HighWirePressH20Plugin ; down ; 2015 ; Canadian Family Physician Volume 61 ; 61 ; http://www.cfp.ca/ >
+      au < cfpc.CollegeFamilyPhysCanadaDrupalPlugin ; released ; 2016 ; Canadian Family Physician Volume 62 ; 62 ; http://www.cfp.ca/ >
+      au < cfpc.CollegeFamilyPhysCanadaDrupalPlugin ; released ; 2017 ; Canadian Family Physician Volume 63 ; 63 ; http://www.cfp.ca/ >
+      au < cfpc.CollegeFamilyPhysCanadaDrupalPlugin ; released ; 2018 ; Canadian Family Physician Volume 64 ; 64 ; http://www.cfp.ca/ >
+      au < cfpc.CollegeFamilyPhysCanadaDrupalPlugin ; manifest ; 2019 ; Canadian Family Physician Volume 65 ; 65 ; https://www.cfp.ca/ >
 
     }
 

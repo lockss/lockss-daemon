@@ -246,7 +246,7 @@
     au < doNotProcess ; 2012 ; USCOURTS_ca10 2012 ; USCOURTS ; ca10 ; 2012 >
     au < ready ; 2013 ; USCOURTS_ca10 2013 ; USCOURTS ; ca10 ; 2013 >
     au < manifest ; 2014 ; USCOURTS_ca10 2014 ; USCOURTS ; ca10 ; 2014 >
-    au < manifest ; 2015 ; USCOURTS_ca10 2015 ; USCOURTS ; ca10 ; 2015 >
+    au < ready ; 2015 ; USCOURTS_ca10 2015 ; USCOURTS ; ca10 ; 2015 >
     au < manifest ; 2016 ; USCOURTS_ca10 2016 ; USCOURTS ; ca10 ; 2016 >
     au < manifest ; 2017 ; USCOURTS_ca10 2017 ; USCOURTS ; ca10 ; 2017 >
     au < manifest ; 2018 ; USCOURTS_ca10 2018 ; USCOURTS ; ca10 ; 2018 >
@@ -634,7 +634,7 @@
     au < doNotProcess ; 2012 ; USCOURTS_flsd 2012 ; USCOURTS ; flsd ; 2012 >
     au < ready ; 2013 ; USCOURTS_flsd 2013 ; USCOURTS ; flsd ; 2013 >
     au < manifest ; 2014 ; USCOURTS_flsd 2014 ; USCOURTS ; flsd ; 2014 >
-    au < manifest ; 2015 ; USCOURTS_flsd 2015 ; USCOURTS ; flsd ; 2015 >
+    au < ready ; 2015 ; USCOURTS_flsd 2015 ; USCOURTS ; flsd ; 2015 >
     au < ready ; 2016 ; USCOURTS_flsd 2016 ; USCOURTS ; flsd ; 2016 >
     au < ready ; 2017 ; USCOURTS_flsd 2017 ; USCOURTS ; flsd ; 2017 >
     au < manifest ; 2018 ; USCOURTS_flsd 2018 ; USCOURTS ; flsd ; 2018 >
@@ -802,7 +802,7 @@
     au < doNotProcess ; 2012 ; USCOURTS_ilnd 2012 ; USCOURTS ; ilnd ; 2012 >
     au < manifest ; 2013 ; USCOURTS_ilnd 2013 ; USCOURTS ; ilnd ; 2013 >
     au < manifest ; 2014 ; USCOURTS_ilnd 2014 ; USCOURTS ; ilnd ; 2014 >
-    au < manifest ; 2015 ; USCOURTS_ilnd 2015 ; USCOURTS ; ilnd ; 2015 >
+    au < ready ; 2015 ; USCOURTS_ilnd 2015 ; USCOURTS ; ilnd ; 2015 >
     au < manifest ; 2016 ; USCOURTS_ilnd 2016 ; USCOURTS ; ilnd ; 2016 >
     au < released ; 2017 ; USCOURTS_ilnd 2017 ; USCOURTS ; ilnd ; 2017 >
     au < manifest ; 2018 ; USCOURTS_ilnd 2018 ; USCOURTS ; ilnd ; 2018 >
@@ -1325,7 +1325,7 @@
     au < manifest ; 2014 ; USCOURTS_ned 2014 ; USCOURTS ; ned ; 2014 >
     au < manifest ; 2015 ; USCOURTS_ned 2015 ; USCOURTS ; ned ; 2015 >
     au < manifest ; 2016 ; USCOURTS_ned 2016 ; USCOURTS ; ned ; 2016 >
-    au < manifest ; 2017 ; USCOURTS_ned 2017 ; USCOURTS ; ned ; 2017 >
+    au < ready ; 2017 ; USCOURTS_ned 2017 ; USCOURTS ; ned ; 2017 >
     au < manifest ; 2018 ; USCOURTS_ned 2018 ; USCOURTS ; ned ; 2018 >
     au < manifest ; 2019 ; USCOURTS_ned 2019 ; USCOURTS ; ned ; 2019 >
 

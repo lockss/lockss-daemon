@@ -341,7 +341,7 @@ while (my $line = <>) {
           if ($req->url ne $resp->request->uri) {
               $vol_title = $resp->request->uri;
               $result = "Redirected";
-          } elsif (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) || ($man_contents =~ m/$oa_tag/))) {
+          } elsif (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) || ($man_contents =~ m/$oa_tag/)) && ($man_contents =~ m#https://www\.govinfo\.gov/#)) {
               $vol_title = $param{collection_id};
               $result = "Manifest"
           } else {

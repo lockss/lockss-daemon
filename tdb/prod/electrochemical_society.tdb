@@ -5,6 +5,7 @@
   >
 
     pluginPrefix = org.lockss.plugin.highwire.
+    #move to IOP Publishing in 2020
 
   {
   
@@ -88,6 +89,7 @@
 
     param[base_url] = http://jss.ecsdl.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    #move to IOP Publishing in 2020
 
     au < HighWirePressH20Plugin ; released ; 2012 ; ECS Journal of Solid State Science and Technology Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; released ; 2013 ; ECS Journal of Solid State Science and Technology Volume 2 ; 2 >
@@ -258,8 +260,8 @@
     au < HighWirePressH20Plugin ; manifest ; 2019 ; ECS Transactions Volume 90 ; 90 >
     au < HighWirePressH20Plugin ; manifest ; 2019 ; ECS Transactions Volume 91 ; 91 >
     au < HighWirePressH20Plugin ; manifest ; 2019 ; ECS Transactions Volume 92 ; 92 >
-    au < HighWirePressH20Plugin ; expected ; 2019 ; ECS Transactions Volume 93 ; 93 >
-    au < HighWirePressH20Plugin ; expected ; 2019 ; ECS Transactions Volume 94 ; 94 >
+    au < HighWirePressH20Plugin ; manifest ; 2019 ; ECS Transactions Volume 93 ; 93 >
+    au < HighWirePressH20Plugin ; manifest ; 2019 ; ECS Transactions Volume 94 ; 94 >
 
   }
 

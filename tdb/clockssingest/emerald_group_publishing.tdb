@@ -1534,7 +1534,7 @@
     au < down ; exists ; 2013 ; Circuit World Volume 39 ; 39 ; https://www.emeraldinsight.com/ ; >
     au < finished ; finished ; 2014 ; Circuit World Volume 40 ; 40 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Circuit World Volume 41 ; 41 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Circuit World Volume 42 ; 42 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Circuit World Volume 42 ; 42 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2017 ; Circuit World Volume 43 ; 43 ; https://www.emeraldinsight.com/ ; >
     au < deepCrawl ; exists ; 2018 ; Circuit World Volume 44 ; 44 ; https://www.emeraldinsight.com/ ; >
     au < doNotProcess ; exists ; 2019 ; Circuit World Volume 45 ; 45 ; https://www.emeraldinsight.com/ ; >
@@ -1943,7 +1943,7 @@
     param[journal_id] = ccsm
     #continues = 1352-7606
 
-    au < finished ; crawling ; 2016 ; Cross Cultural & Strategic Management Volume 23 ; 23 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2016 ; Cross Cultural & Strategic Management Volume 23 ; 23 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2017 ; Cross Cultural & Strategic Management Volume 24 ; 24 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; Cross Cultural & Strategic Management Volume 25 ; 25 ; https://www.emeraldinsight.com/ ; >
     au < doNotProcess ; exists ; 2019 ; Cross Cultural & Strategic Management Volume 26 ; 26 ; https://www.emeraldinsight.com/ ; >
@@ -2398,7 +2398,7 @@
     au < down ; exists ; 2012 ; Engineering, Construction and Architectural Management Volume 19 ; 19 ; https://www.emeraldinsight.com/ ; >
     au < down ; exists ; 2013 ; Engineering, Construction and Architectural Management Volume 20 ; 20 ; https://www.emeraldinsight.com/ ; >
     au < finished ; finished ; 2014 ; Engineering, Construction and Architectural Management Volume 21 ; 21 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Engineering, Construction and Architectural Management Volume 22 ; 22 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Engineering, Construction and Architectural Management Volume 22 ; 22 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Engineering, Construction and Architectural Management Volume 23 ; 23 ; http://www.emeraldinsight.com/ ; >
     au < frozen ; exists ; 2017 ; Engineering, Construction and Architectural Management Volume 24 ; 24 ; https://www.emeraldinsight.com/ ; >
     au < deepCrawl ; exists ; 2018 ; Engineering, Construction and Architectural Management Volume 25 ; 25 ; https://www.emeraldinsight.com/ ; >
@@ -2693,7 +2693,7 @@
     au < down ; exists ; 2013 ; European Journal of Marketing Volume 47 ; 47 ; https://www.emeraldinsight.com/ ; >
     au < finished ; crawling ; 2014 ; European Journal of Marketing Volume 48 ; 48 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; European Journal of Marketing Volume 49 ; 49 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; European Journal of Marketing Volume 50 ; 50 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; European Journal of Marketing Volume 50 ; 50 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2017 ; European Journal of Marketing Volume 51 ; 51 ; https://www.emeraldinsight.com/ ; >
     au < deepCrawl ; exists ; 2018 ; European Journal of Marketing Volume 52 ; 52 ; https://www.emeraldinsight.com/ ; >
     au < doNotProcess ; exists ; 2019 ; European Journal of Marketing Volume 53 ; 53 ; https://www.emeraldinsight.com/ ; >
@@ -3422,7 +3422,7 @@
     au < down ; exists ; 2013 ; Industrial Robot: The international journal of industrial and service robotics Volume 40 ; 40 ; https://www.emeraldinsight.com/ ; >
     au < finished ; finished ; 2014 ; Industrial Robot: The international journal of industrial and service robotics Volume 41 ; 41 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Industrial Robot: The international journal of industrial and service robotics Volume 42 ; 42 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Industrial Robot: The international journal of industrial and service robotics Volume 43 ; 43 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Industrial Robot: The international journal of industrial and service robotics Volume 43 ; 43 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Industrial Robot: The international journal of industrial and service robotics Volume 44 ; 44 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Industrial Robot: The international journal of industrial and service robotics Volume 45 ; 45 ; https://www.emeraldinsight.com/ ; >
     au < doNotProcess ; exists ; 2019 ; Industrial Robot: The international journal of industrial and service robotics Volume 46 ; 46 ; https://www.emeraldinsight.com/ ; >
@@ -5563,7 +5563,7 @@
     au < doNotProcess ; exists ; 2011 ; International Journal of Web Information Systems Volume 7 ; 7 ; https://www.emeraldinsight.com/ ; >
     au < down ; exists ; 2012 ; International Journal of Web Information Systems Volume 8 ; 8 ; https://www.emeraldinsight.com/ ; >
     au < down ; exists ; 2013 ; International Journal of Web Information Systems Volume 9 ; 9 ; https://www.emeraldinsight.com/ ; >
-    au < finished ; crawling ; 2014 ; International Journal of Web Information Systems Volume 10 ; 10 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2014 ; International Journal of Web Information Systems Volume 10 ; 10 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; International Journal of Web Information Systems Volume 11 ; 11 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; International Journal of Web Information Systems Volume 12 ; 12 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; International Journal of Web Information Systems Volume 13 ; 13 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
@@ -5759,7 +5759,7 @@
     au < frozen ; exists ; 2013 ; Internet Research Volume 23 ; 23 ; https://www.emeraldinsight.com/ ; >
     au < finished ; finished ; 2014 ; Internet Research Volume 24 ; 24 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Internet Research Volume 25 ; 25 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Internet Research Volume 26 ; 26 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2016 ; Internet Research Volume 26 ; 26 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2017 ; Internet Research Volume 27 ; 27 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Internet Research Volume 28 ; 28 ; https://www.emeraldinsight.com/ ; >
     au < doNotProcess ; exists ; 2019 ; Internet Research Volume 29 ; 29 ; https://www.emeraldinsight.com/ ; >
@@ -6244,7 +6244,7 @@
     au < finished ; finished ; 2014 ; Journal of Chinese Human Resources Management Volume 5 ; 5 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2015 ; Journal of Chinese Human Resources Management Volume 6 ; 6 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Journal of Chinese Human Resources Management Volume 7 ; 7 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2017 ; Journal of Chinese Human Resources Management Volume 8 ; 8 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2017 ; Journal of Chinese Human Resources Management Volume 8 ; 8 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Journal of Chinese Human Resources Management Volume 9 ; 9 ; https://www.emeraldinsight.com/ ; >
     au < doNotProcess ; exists ; 2019 ; Journal of Chinese Human Resources Management Volume 10 ; 10 ; https://www.emeraldinsight.com/ ; >
 
@@ -6892,7 +6892,7 @@
     au < doNotProcess ; exists ; 2011 ; Journal of Family Business Management Volume 1 ; 1 ; https://www.emeraldinsight.com/ ; >
     au < down ; exists ; 2012 ; Journal of Family Business Management Volume 2 ; 2 ; https://www.emeraldinsight.com/ ; >
     au < down ; exists ; 2013 ; Journal of Family Business Management Volume 3 ; 3 ; https://www.emeraldinsight.com/ ; >
-    au < finished ; crawling ; 2014 ; Journal of Family Business Management Volume 4 ; 4 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2014 ; Journal of Family Business Management Volume 4 ; 4 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Journal of Family Business Management Volume 5 ; 5 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Journal of Family Business Management Volume 6 ; 6 ; http://www.emeraldinsight.com/ ; >
     au < finished ; crawling ; 2017 ; Journal of Family Business Management Volume 7 ; 7 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
@@ -7068,7 +7068,7 @@
     au < finished ; finished ; 2014 ; Journal of Financial Regulation and Compliance Volume 22 ; 22 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Journal of Financial Regulation and Compliance Volume 23 ; 23 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Journal of Financial Regulation and Compliance Volume 24 ; 24 ; http://www.emeraldinsight.com/ ; >
-    au < finished ; crawling ; 2017 ; Journal of Financial Regulation and Compliance Volume 25 ; 25 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2017 ; Journal of Financial Regulation and Compliance Volume 25 ; 25 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Journal of Financial Regulation and Compliance Volume 26 ; 26 ; https://www.emeraldinsight.com/ ; >
     au < doNotProcess ; exists ; 2019 ; Journal of Financial Regulation and Compliance Volume 27 ; 27 ; https://www.emeraldinsight.com/ ; >
 
@@ -7854,7 +7854,7 @@
     au < down ; exists ; 2013 ; The Journal of Mental Health Training, Education and Practice: Issues for workforce development Volume 8 ; 8 ; https://www.emeraldinsight.com/ ; >
     au < finished ; finished ; 2014 ; The Journal of Mental Health Training, Education and Practice: Issues for workforce development Volume 9 ; 9 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; The Journal of Mental Health Training, Education and Practice: Issues for workforce development Volume 10 ; 10 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; The Journal of Mental Health Training, Education and Practice: Issues for workforce development Volume 11 ; 11 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2016 ; The Journal of Mental Health Training, Education and Practice: Issues for workforce development Volume 11 ; 11 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2017 ; The Journal of Mental Health Training, Education and Practice: Issues for workforce development Volume 12 ; 12 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; The Journal of Mental Health Training, Education and Practice: Issues for workforce development Volume 13 ; 13 ; https://www.emeraldinsight.com/ ; >
     au < doNotProcess ; exists ; 2019 ; The Journal of Mental Health Training, Education and Practice: Issues for workforce development Volume 14 ; 14 ; https://www.emeraldinsight.com/ ; >
@@ -9756,7 +9756,7 @@
     au < down ; exists ; 2013 ; Mental Health and Social Inclusion Volume 17 ; 17 ; https://www.emeraldinsight.com/ ; >
     au < finished ; finished ; 2014 ; Mental Health and Social Inclusion Volume 18 ; 18 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; Mental Health and Social Inclusion Volume 19 ; 19 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2016 ; Mental Health and Social Inclusion Volume 20 ; 20 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Mental Health and Social Inclusion Volume 20 ; 20 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Mental Health and Social Inclusion Volume 21 ; 21 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2018 ; Mental Health and Social Inclusion Volume 22 ; 22 ; https://www.emeraldinsight.com/ ; >
     au < doNotProcess ; exists ; 2019 ; Mental Health and Social Inclusion Volume 23 ; 23 ; https://www.emeraldinsight.com/ ; >
@@ -10396,7 +10396,7 @@
     au < doNotProcess ; exists ; 2011 ; Pacific Accounting Review Volume 23 ; 23 ; https://www.emeraldinsight.com/ ; >
     au < frozen ; exists ; 2012 ; Pacific Accounting Review Volume 24 ; 24 ; https://www.emeraldinsight.com/ ; >
     au < down ; exists ; 2013 ; Pacific Accounting Review Volume 25 ; 25 ; https://www.emeraldinsight.com/ ; >
-    au < finished ; crawling ; 2014 ; Pacific Accounting Review Volume 26 ; 26 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2014 ; Pacific Accounting Review Volume 26 ; 26 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Pacific Accounting Review Volume 27 ; 27 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Pacific Accounting Review Volume 28 ; 28 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Pacific Accounting Review Volume 29 ; 29 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
@@ -10447,7 +10447,7 @@
     au < finished ; finished ; 2014 ; Performance Measurement and Metrics Volume 15 ; 15 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2015 ; Performance Measurement and Metrics Volume 16 ; 16 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Performance Measurement and Metrics Volume 17 ; 17 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2017 ; Performance Measurement and Metrics Volume 18 ; 18 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2017 ; Performance Measurement and Metrics Volume 18 ; 18 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Performance Measurement and Metrics Volume 19 ; 19 ; https://www.emeraldinsight.com/ ; >
     au < doNotProcess ; exists ; 2019 ; Performance Measurement and Metrics Volume 20 ; 20 ; https://www.emeraldinsight.com/ ; >
 
@@ -11170,7 +11170,7 @@
     au < doNotProcess ; exists ; 2011 ; Reference Services Review Volume 39 ; 39 ; https://www.emeraldinsight.com/ ; >
     au < frozen ; exists ; 2012 ; Reference Services Review Volume 40 ; 40 ; https://www.emeraldinsight.com/ ; >
     au < down ; exists ; 2013 ; Reference Services Review Volume 41 ; 41 ; https://www.emeraldinsight.com/ ; >
-    au < finished ; crawling ; 2014 ; Reference Services Review Volume 42 ; 42 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2014 ; Reference Services Review Volume 42 ; 42 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Reference Services Review Volume 43 ; 43 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2016 ; Reference Services Review Volume 44 ; 44 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2017 ; Reference Services Review Volume 45 ; 45 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
@@ -11229,7 +11229,7 @@
     au < frozen ; exists ; 2013 ; Review of Behavioral Finance Volume 5 ; 5 ; https://www.emeraldinsight.com/ ; >
     au < finished ; finished ; 2014 ; Review of Behavioral Finance Volume 6 ; 6 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2015 ; Review of Behavioral Finance Volume 7 ; 7 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Review of Behavioral Finance Volume 8 ; 8 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Review of Behavioral Finance Volume 8 ; 8 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Review of Behavioral Finance Volume 9 ; 9 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Review of Behavioral Finance Volume 10 ; 10 ; https://www.emeraldinsight.com/ ; >
     au < doNotProcess ; exists ; 2019 ; Review of Behavioral Finance Volume 11 ; 11 ; https://www.emeraldinsight.com/ ; >
@@ -12113,7 +12113,7 @@
     au < down ; exists ; 2013 ; The TQM Journal Volume 25 ; 25 ; https://www.emeraldinsight.com/ ; >
     au < finished ; finished ; 2014 ; The TQM Journal Volume 26 ; 26 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; The TQM Journal Volume 27 ; 27 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2016 ; The TQM Journal Volume 28 ; 28 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2016 ; The TQM Journal Volume 28 ; 28 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2017 ; The TQM Journal Volume 29 ; 29 ; http://www.emeraldinsight.com/ ; >
     au < deepCrawl ; exists ; 2018 ; The TQM Journal Volume 30 ; 30 ; https://www.emeraldinsight.com/ ; >
     au < doNotProcess ; exists ; 2019 ; The TQM Journal Volume 31 ; 31 ; https://www.emeraldinsight.com/ ; >

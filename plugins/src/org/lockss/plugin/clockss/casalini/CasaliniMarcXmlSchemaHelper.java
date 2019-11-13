@@ -32,6 +32,7 @@
 
 package org.lockss.plugin.clockss.casalini;
 
+import com.sun.jimi.core.util.P;
 import org.apache.commons.collections.map.MultiValueMap;
 import org.apache.commons.lang.StringUtils;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
@@ -46,150 +47,215 @@ import org.w3c.dom.Node;
 
 /**
  *  A helper class that defines a schema for Casalini Libri
- *  Monographs which were delivred with a monographs.mrc
- *  marc data record collection which we turned in to a marcxml 21
- *  XML file 
- *  @author alexohlson
+ *  Please see MARC21 schema: http://www.loc.gov/marc/bibliographic/
  */
 public class CasaliniMarcXmlSchemaHelper
 implements SourceXmlSchemaHelper {
   static Logger log = Logger.getLogger(CasaliniMarcXmlSchemaHelper.class);
-  
 
-  
-  //MARCXML is opaque. Each item is a datafield with a numbered tag
-  // with values stored in subfields identified by a code, eg
-  // <marc:datafield tag="097" ind1="0" ind2=" ">
-  //    <marc:subfield code="a">2249531</marc:subfield>
-  //    <marc:subfield code="b">015</marc:subfield>
-  //    <marc:subfield code="c">2279430</marc:subfield>
-  //    <marc:subfield code="d">0001</marc:subfield>
-  // </marc:datafield>
-  // Define tags/codes here for the bits we can use
-  private static final String ISBN_TAG ="020";
-  private static final String isbn_code ="a";
-  
-  private static final String LOCATOR1_TAG ="092";
-  private static final String LOCATOR2_TAG ="097";
-  private static final String dir_code ="a";
-  private static final String file_code ="c";
+  /*
+    <collection xmlns="http://www.loc.gov/MARC21/slim">
+<record>
+		<leader>01079nab a2200265 i 4500</leader>
+		<controlfield tag="001">000002213906</controlfield>
+		<controlfield tag="003">ItFiC</controlfield>
+		<controlfield tag="005">20091114214923.0</controlfield>
+		<controlfield tag="006">m        d        </controlfield>
+		<controlfield tag="007">cr uuu---uuuuu</controlfield>
+		<controlfield tag="008">091114n        xx uu   s    u0    0und c</controlfield>
+		<datafield ind1="7" ind2=" " tag="024">
+			<subfield code="a">10.1400/64562</subfield>
+			<subfield code="2">DOI</subfield>
+		</datafield>
+		<datafield ind1=" " ind2=" " tag="040">
+			<subfield code="a">ItFiC</subfield>
+			<subfield code="b">eng</subfield>
+			<subfield code="c">ItFiC</subfield>
+		</datafield>
+		<datafield ind1="0" ind2=" " tag="097">
+			<subfield code="a">2194804</subfield>
+			<subfield code="b">013</subfield>
+			<subfield code="c">2213906</subfield>
+			<subfield code="d">001</subfield>
+		</datafield>
+		<datafield ind1="1" ind2="3" tag="245">
+			<subfield code="a">La svolta post-moderna in psicoanalisi.</subfield>
+		</datafield>
+		<datafield ind1=" " ind2=" " tag="260">
+			<subfield code="a">Milano :</subfield>
+			<subfield code="b">Franco Angeli,</subfield>
+			<subfield code="c">2000.</subfield>
+		</datafield>
+		<datafield ind1=" " ind2=" " tag="300">
+			<subfield code="a">P. [1-40] [40]</subfield>
+		</datafield>
+		<datafield ind1="1" ind2=" " tag="700">
+			<subfield code="a">Eagle, Morris N.</subfield>
+		</datafield>
+		<datafield ind1="0" ind2=" " tag="773">
+			<subfield code="t">Psicoterapia e scienze umane. Fascicolo 4, 2000.</subfield>
+			<subfield code="d">Milano : Franco Angeli, 2000.</subfield>
+			<subfield code="w">()2194804</subfield>
+		</datafield>
+		<datafield ind1="4" ind2="0" tag="856">
+			<subfield code="u">http://digital.casalini.it/10.1400/64562</subfield>
+		</datafield>
+		<datafield ind1=" " ind2=" " tag="900">
+			<subfield code="a">(c) Casalini Libri, 50014 Fiesole (Italy) - www.casalini.it</subfield>
+		</datafield>
+		<datafield ind1=" " ind2=" " tag="910">
+			<subfield code="a">aBibliographic data</subfield>
+			<subfield code="e">Torrossa Fulltext Resource</subfield>
+			<subfield code="g">Casalini Libri</subfield>
+		</datafield>
+	</record>
+   */
 
+  /*
+  <datafield ind1="7" ind2=" " tag="024">
+			<subfield code="a">10.1400/64562</subfield>
+			<subfield code="2">DOI</subfield>
+  </datafield>
+   */
+  private static final String DOI_TAG ="024";
+  private static final String doi_code ="a";
+
+  /*
+  		<datafield ind1="0" ind2=" " tag="097">
+			<subfield code="a">2194804</subfield> //this is the last part of PDF file name
+			<subfield code="b">013</subfield>
+			<subfield code="c">2213906</subfield> // this is an number we call "article number"
+			<subfield code="d">001</subfield> // this is the volume part of the PDF
+		</datafield>
+   */
+  private static final String PDF_TAG ="097";
+  private static final String file_code ="a";
+  private static final String article_code ="c";
+
+  /*
+    <datafield ind1="0" ind2="0" tag="245">
+		<subfield code="a">Psicoterapia e scienze umane. Fascicolo 4, 2000.</subfield>
+	</datafield>
+   */
   private static final String TITLE_TAG ="245";
   private static final String title_code ="a";
-  private static final String subtitle_code ="b";
-  private static final String author_code ="c";
 
+  /*
+	<datafield ind1=" " ind2=" " tag="260">
+		<subfield code="a">Milano :</subfield>
+		<subfield code="b">Franco Angeli,</subfield>
+		<subfield code="c">2000.</subfield> //this is the year of the PDF file "2000_4_2194804.pdf"
+	</datafield>
+   */
   private static final String PUBLICATION_TAG ="260";
   private static final String pub_code ="b";
   private static final String pubdate_code ="c";
 
-  private static final String NAME_TAG ="700";
-  private static final String name_code ="a";
-  
-  private static final String ID_TAG ="773";
-    private static final String isbn_id_code ="z";
-  
-  
+  /*
+    <datafield ind1="4" ind2="0" tag="856">
+		<subfield code="u">http://digital.casalini.it/2194804</subfield>
+	</datafield>
+   */
+  private static final String ELECTRONIC_ACCESS_LOCATION_TAG ="260";
+  private static final String url_code ="u";
+
+  /*
+    <datafield ind1=" " ind2=" " tag="300">
+		<subfield code="a">P. [1-40] [40]</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="300">
+		<subfield code="a">370-370 p.</subfield>
+	</datafield>
+  */
+  private static final String START_PAGE_LOCATION_TAG ="300";
+  private static final String start_page_code ="a";
+
+  /*
+	<datafield ind1="1" ind2=" " tag="700">
+		<subfield code="a">Eagle, Morris N.</subfield>
+	</datafield>
+
+	<datafield ind1="1" ind2=" " tag="700">
+		<subfield code="a">Muhlleitner, Elke.</subfield>
+	</datafield>
+	<datafield ind1="1" ind2=" " tag="700">
+		<subfield code="a">Reichmayr, Johannes.</subfield>
+	</datafield>
+   */
+  private static final String AUTHOR_TAG ="700";
+  private static final String author_name_code ="a";
+
+  /*
+  	<datafield ind1="0" ind2=" " tag="773">
+		<subfield code="t">Psicoterapia e scienze umane. Fascicolo 4, 2000.</subfield>
+		<subfield code="d">Milano : Franco Angeli, 2000.</subfield>
+		<subfield code="w">()2194804</subfield>
+	</datafield>
+
+	<datafield ind1="0" ind2=" " tag="773">
+		<subfield code="t">Psicoterapia e scienze umane.</subfield>
+		<subfield code="x">1972-5043</subfield>
+		<subfield code="w">()4517279</subfield>
+	</datafield>
+   */
+  private static final String PUB_TAG ="773";
+  private static final String publication_code ="t";
 
   // A top level for the worksheet table is
   private static String MARC_record = "/collection/record";
 
   // these are all relative to the record
-  public static String MARC_dir =  
-      "datafield[@tag = \"" + LOCATOR2_TAG + "\"]" +
-          "/subfield[@code = \"" + dir_code + "\"]";
+  public static String PDF_FILE_YEAR =
+      "datafield[@tag = \"" + PUBLICATION_TAG + "\"]" +
+          "/subfield[@code = \"" + pubdate_code + "\"]";
+  public static String PDF_FILE_VOLUME =
+          "datafield[@tag = \"" + PUB_TAG + "\"]" +
+                  "/subfield[@code = \"" + publication_code + "\"]";
+  public static String PDF_ARTICLE =
+          "datafield[@tag = \"" + PDF_TAG + "\"]" +
+                  "/subfield[@code = \"" + article_code + "\"]";
   public static String MARC_file =  
-      "datafield[@tag = \"" + LOCATOR2_TAG + "\"]" +
+      "datafield[@tag = \"" + PDF_TAG + "\"]" +
           "/subfield[@code = \"" + file_code + "\"]";
-  private static String MARC_id_isbn =  
-      "datafield[@tag = \"" + ID_TAG + "\"]" +
-          "/subfield[@code = \"" + isbn_id_code + "\"]";
-  public static String MARC_isbn =  
-      "datafield[@tag = \"" + ISBN_TAG + "\"]" +
-          "/subfield[@code = \"" + isbn_code + "\"]";
   public static String MARC_title = 
       "datafield[@tag = \"" + TITLE_TAG + "\"]" +
-          "/subfield[@code = \"" + title_code + "\"]";
-  public static String MARC_subtitle = 
-      "datafield[@tag = \"" + TITLE_TAG + "\"]" +
-          "/subfield[@code = \"" + subtitle_code + "\"]";
-  private static String MARC_pub_date = 
+          "/subfield[@code=\"" + title_code + "\"]";
+  public static String MARC_pub_date =
       "datafield[@tag = \"" + PUBLICATION_TAG + "\"]" +
           "/subfield[@code = \"" + pubdate_code + "\"]";
   public static String MARC_publisher = 
       "datafield[@tag = \"" + PUBLICATION_TAG + "\"]" +
           "/subfield[@code = \"" + pub_code + "\"]";
-  private static String MARC_author = 
-      "datafield[@tag = \"" + NAME_TAG + "\"]" +
-          "/subfield[@code = \"" + name_code + "\"]";
-  private static String MARC_altauthor = 
-      "datafield[@tag = \"" + TITLE_TAG + "\"]" +
-          "/subfield[@code = \"" + author_code + "\"]";
-  
-  
-  /*
-   *  Put date in to a format we want
-   *  Variants given to us are:
-   *  2000
-   *  2000 (printed 1999)
-   *  2000.
-   *  2000-
-   *  2000-2002
-   *  2000 (2005 printing)
-   *  [2000]
-   *  Strip off punctuation
-   *  Take the first four digit year date
-   */
-  
-  static private final NodeValue ADATE_VALUE = new NodeValue() {
-    @Override
-    public String getValue(Node node) {
-      String cleandate =  StringUtils.stripStart(node.getTextContent(), ".-[] ");
-      return StringUtils.substring(cleandate,0,4);
-    }
-  };
-  
-  /*
-   *  Cleanup the title or subtitle so they look nice 
-   */
-  static private final NodeValue TITLE_VALUE = new NodeValue() {
-    @Override
-    public String getValue(Node node) {
-      // remove extraneous spaces and punctuation
-      // so that when put together Title: Subtitle it looks correct
-      //
-      return StringUtils.strip(node.getTextContent(), ",/: "); 
-    }
-  };
-  
-  // could be 13 or 10, take out hyphens
-  static private final NodeValue ISBN_VALUE = new NodeValue() {
-    @Override
-    public String getValue(Node node) {
-      String justisbn = StringUtils.strip(node.getTextContent(), "(* ");
-      return StringUtils.remove(justisbn, "-");
-    }
-  };
-
+  public static String MARC_doi =
+          "datafield[@tag = \"" + DOI_TAG + "\"]" +
+                  "/subfield[@code = \"" + doi_code + "\"]";
+  public static String MARC_start_page =
+          "datafield[@tag = \"" + START_PAGE_LOCATION_TAG + "\"]" +
+                  "/subfield[@code = \"" + start_page_code + "\"]";
+  public static String MARC_author =
+          "datafield[@tag = \"" + AUTHOR_TAG + "\"]" +
+                  "/subfield[@code = \"" + author_name_code + "\"]";
   
   /*
    *  The following 3 variables are needed to construct the XPathXmlMetadataParser
    */
 
   /* 1.  MAP associating xpath with value type with evaluator */
-  static private final Map<String,XPathValue> casalini_articleMap = 
+  static private final Map<String,XPathValue> casalini_articleMap =
       new HashMap<String,XPathValue>();
   static {
-    casalini_articleMap.put(MARC_isbn, ISBN_VALUE);
-    casalini_articleMap.put(MARC_id_isbn, ISBN_VALUE);
-    casalini_articleMap.put(MARC_title, TITLE_VALUE);
-    casalini_articleMap.put(MARC_subtitle, TITLE_VALUE);
+
+    casalini_articleMap.put(MARC_title, XmlDomMetadataExtractor.TEXT_VALUE);
     casalini_articleMap.put(MARC_publisher, XmlDomMetadataExtractor.TEXT_VALUE);
-    casalini_articleMap.put(MARC_pub_date,  ADATE_VALUE);
-    casalini_articleMap.put(MARC_author, XmlDomMetadataExtractor.TEXT_VALUE);
-    casalini_articleMap.put(MARC_dir, XmlDomMetadataExtractor.TEXT_VALUE);
+    casalini_articleMap.put(MARC_pub_date,  XmlDomMetadataExtractor.TEXT_VALUE);
+    casalini_articleMap.put(PDF_FILE_YEAR, XmlDomMetadataExtractor.TEXT_VALUE);
+    casalini_articleMap.put(PDF_FILE_VOLUME, XmlDomMetadataExtractor.TEXT_VALUE);
+    casalini_articleMap.put(PDF_ARTICLE, XmlDomMetadataExtractor.TEXT_VALUE);
     casalini_articleMap.put(MARC_file, XmlDomMetadataExtractor.TEXT_VALUE);
-    casalini_articleMap.put(MARC_altauthor, XmlDomMetadataExtractor.TEXT_VALUE);
+    casalini_articleMap.put(MARC_doi, XmlDomMetadataExtractor.TEXT_VALUE);
+    casalini_articleMap.put(MARC_start_page, XmlDomMetadataExtractor.TEXT_VALUE);
+    casalini_articleMap.put(MARC_author, XmlDomMetadataExtractor.TEXT_VALUE);
+
   }
 
   /* 2. there is only one XML file */
@@ -199,19 +265,14 @@ implements SourceXmlSchemaHelper {
   static private final Map<String,XPathValue> MARC_globalMap = null;
 
   /*
-   * The emitter will need a map to know how to cook ONIX raw values
+   * The emitter will need a map to know how to cook raw values
    */
   private static final MultiValueMap cookMap = new MultiValueMap();
   static {
-    // More of the records have this rather than the MARC_isbn
-    // postCookProcess to add in missing values from raw data
-    cookMap.put(MARC_id_isbn, MetadataField.FIELD_ISBN);
-    // we defer attributing this until postCookProcess when we can 
-    // determin if it is an article (chapter) title or a publication title
-    //cookMap.put(MARC_title, MetadataField.FIELD_PUBLICATION_TITLE);
-    cookMap.put(MARC_author, MetadataField.FIELD_AUTHOR);
+    cookMap.put(MARC_title, MetadataField.FIELD_PUBLICATION_TITLE);
     cookMap.put(MARC_publisher, MetadataField.FIELD_PUBLISHER);
     cookMap.put(MARC_pub_date, MetadataField.FIELD_DATE);
+    cookMap.put(MARC_author, MetadataField.FIELD_AUTHOR);
   }
 
 
@@ -269,7 +330,6 @@ implements SourceXmlSchemaHelper {
    */
   @Override
   public String getFilenameXPathKey() {
-    return MARC_dir;
+    return null;
   }
-
 }

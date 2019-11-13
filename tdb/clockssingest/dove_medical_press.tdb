@@ -505,7 +505,7 @@
     au < finished ; finished ; 2010 ; Journal of Receptor, Ligand and Channel Research Volume 3 ; 3 ; 2010 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2011 ; Journal of Receptor, Ligand and Channel Research Volume 4 ; 4 ; 2011 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Journal of Receptor, Ligand and Channel Research Volume 5 ; 5 ; 2012 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2013 ; Journal of Receptor, Ligand and Channel Research Volume 6 ; 6 ; 2013 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Journal of Receptor, Ligand and Channel Research Volume 6 ; 6 ; 2013 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Journal of Receptor, Ligand and Channel Research Volume 7 ; 7 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Journal of Receptor, Ligand and Channel Research Volume 8 ; 8 ; 2015 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2016 ; Journal of Receptor, Ligand and Channel Research Volume 9 ; 9 ; 2016 ; reingest5.clockss.org:8082 >
@@ -549,7 +549,7 @@
 
     au < finished ; finished ; 2008 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 1 ; 1 ; 2008 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2009 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 2 ; 2 ; 2009 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2010 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 3 ; 3 ; 2010 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2010 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 3 ; 3 ; 2010 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2011 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 4 ; 4 ; 2011 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2012 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 5 ; 5 ; 2012 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2013 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 6 ; 6 ; 2013 ; reingest2.clockss.org:8085 >
@@ -835,7 +835,7 @@
     param[journal_id] = 44
 
     au < finished ; crawling ; 2009 ; Drug, Healthcare and Patient Safety Volume 1 ; 1 ; 2009 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2010 ; Drug, Healthcare and Patient Safety Volume 2 ; 2 ; 2010 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2010 ; Drug, Healthcare and Patient Safety Volume 2 ; 2 ; 2010 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2011 ; Drug, Healthcare and Patient Safety Volume 3 ; 3 ; 2011 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2012 ; Drug, Healthcare and Patient Safety Volume 4 ; 4 ; 2012 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2013 ; Drug, Healthcare and Patient Safety Volume 5 ; 5 ; 2013 ; reingest4.clockss.org:8082 >
@@ -935,7 +935,7 @@
     au < finished ; crawling ; 2013 ; International Journal of Interferon, Cytokine and Mediator Research Volume 5 ; 5 ; 2013 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; International Journal of Interferon, Cytokine and Mediator Research Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; International Journal of Interferon, Cytokine and Mediator Research Volume 7 ; 7 ; 2015 ; >
-    au < finished ; crawling ; 2016 ; International Journal of Interferon, Cytokine and Mediator Research Volume 8 ; 8 ; 2016 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; International Journal of Interferon, Cytokine and Mediator Research Volume 8 ; 8 ; 2016 ; reingest1.clockss.org:8082 >
     
   }
 
@@ -1111,7 +1111,7 @@
     
     param[journal_id] = 56
 
-    au < finished ; crawling ; 2008 ; Risk Management and Healthcare Policy Volume 1 ; 1 ; 2008 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2008 ; Risk Management and Healthcare Policy Volume 1 ; 1 ; 2008 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2009 ; Risk Management and Healthcare Policy Volume 2 ; 2 ; 2009 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2010 ; Risk Management and Healthcare Policy Volume 3 ; 3 ; 2010 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2011 ; Risk Management and Healthcare Policy Volume 4 ; 4 ; 2011 ; reingest5.clockss.org:8082 >
@@ -1250,7 +1250,7 @@
     #ceased publishing in July 2016
 
     au < finished ; finished ; 2015 ; International Journal of High Throughput Screening Volume 5 ; 5 ; 2015 ; >
-    au < finished ; crawling ; 2016 ; International Journal of High Throughput Screening Volume 6 ; 6 ; 2016 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; International Journal of High Throughput Screening Volume 6 ; 6 ; 2016 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -1427,7 +1427,7 @@
     au < finished ; finished ; 2010 ; Nature and Science of Sleep Volume 2 ; 2 ; 2010 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2011 ; Nature and Science of Sleep Volume 3 ; 3 ; 2011 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2012 ; Nature and Science of Sleep Volume 4 ; 4 ; 2012 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2013 ; Nature and Science of Sleep Volume 5 ; 5 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Nature and Science of Sleep Volume 5 ; 5 ; 2013 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Nature and Science of Sleep Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Nature and Science of Sleep Volume 7 ; 7 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Nature and Science of Sleep Volume 8 ; 8 ; 2016 ; reingest4.clockss.org:8082 >
@@ -1536,7 +1536,7 @@
 
     au < finished ; crawling ; 2009 ; Pathology and Laboratory Medicine International Volume 1 ; 1 ; 2009 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2010 ; Pathology and Laboratory Medicine International Volume 2 ; 2 ; 2010 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2011 ; Pathology and Laboratory Medicine International Volume 3 ; 3 ; 2011 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2011 ; Pathology and Laboratory Medicine International Volume 3 ; 3 ; 2011 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2012 ; Pathology and Laboratory Medicine International Volume 4 ; 4 ; 2012 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; Pathology and Laboratory Medicine International Volume 5 ; 5 ; 2013 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Pathology and Laboratory Medicine International Volume 6 ; 6 ; 2014 ; >
@@ -1734,7 +1734,7 @@
     
     param[journal_id] = 89
 
-    au < finished ; crawling ; 2010 ; Adolescent Health, Medicine and Therapeutics Volume 1 ; 1 ; 2010 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2010 ; Adolescent Health, Medicine and Therapeutics Volume 1 ; 1 ; 2010 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2011 ; Adolescent Health, Medicine and Therapeutics Volume 2 ; 2 ; 2011 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Adolescent Health, Medicine and Therapeutics Volume 3 ; 3 ; 2012 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; Adolescent Health, Medicine and Therapeutics Volume 4 ; 4 ; 2013 ; reingest4.clockss.org:8082 >
@@ -2222,7 +2222,7 @@
     au < finished ; crawling ; 2013 ; Medicolegal and Bioethics Volume 3 ; 3 ; 2013 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Medicolegal and Bioethics Volume 4 ; 4 ; 2014 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Medicolegal and Bioethics Volume 5 ; 5 ; 2015 ; >
-    au < finished ; crawling ; 2016 ; Medicolegal and Bioethics Volume 6 ; 6 ; 2016 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Medicolegal and Bioethics Volume 6 ; 6 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Medicolegal and Bioethics Volume 7 ; 7 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Medicolegal and Bioethics Volume 8 ; 8 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Medicolegal and Bioethics Volume 9 ; 9 ; 2019 ; >
@@ -2355,7 +2355,7 @@
     #ceased publishing in September 2016
 
     au < finished ; crawling ; 2011 ; Antibody Technology Journal Volume 1 ; 1 ; 2011 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2012 ; Antibody Technology Journal Volume 2 ; 2 ; 2012 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2012 ; Antibody Technology Journal Volume 2 ; 2 ; 2012 ; reingest3.clockss.org:8083 >
     au < doesNotExist ; doesNotExist ; 2013 ; Antibody Technology Journal Volume 3 ; 3 ; 2013 ; >
     au < finished ; finished ; 2014 ; Antibody Technology Journal Volume 4 ; 4 ; 2014 ; >
     au < finished ; finished ; 2015 ; Antibody Technology Journal Volume 5 ; 5 ; 2015 ; >
@@ -2398,7 +2398,7 @@
     au < finished ; crawling ; 2013 ; Psoriasis: Targets and Therapy Volume 3 ; 3 ; 2013 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Psoriasis: Targets and Therapy Volume 4 ; 4 ; 2014 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Psoriasis: Targets and Therapy Volume 5 ; 5 ; 2015 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2016 ; Psoriasis: Targets and Therapy Volume 6 ; 6 ; 2016 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Psoriasis: Targets and Therapy Volume 6 ; 6 ; 2016 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Psoriasis: Targets and Therapy Volume 7 ; 7 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Psoriasis: Targets and Therapy Volume 8 ; 8 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Psoriasis: Targets and Therapy Volume 9 ; 9 ; 2019 ; >
@@ -2469,8 +2469,8 @@
     
     param[journal_id] = 131
 
-    au < finished ; crawling ; 2011 ; Nursing: Research and Reviews Volume 1 ; 1 ; 2011 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2012 ; Nursing: Research and Reviews Volume 2 ; 2 ; 2012 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2011 ; Nursing: Research and Reviews Volume 1 ; 1 ; 2011 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2012 ; Nursing: Research and Reviews Volume 2 ; 2 ; 2012 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Nursing: Research and Reviews Volume 3 ; 3 ; 2013 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Nursing: Research and Reviews Volume 4 ; 4 ; 2014 ; >
     au < finished ; finished ; 2015 ; Nursing: Research and Reviews Volume 5 ; 5 ; 2015 ; >
@@ -2528,7 +2528,7 @@
     
     param[journal_id] = 135
 
-    au < finished ; crawling ; 2012 ; Integrated Pharmacy Research and Practice Volume 1 ; 1 ; 2012 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2012 ; Integrated Pharmacy Research and Practice Volume 1 ; 1 ; 2012 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2013 ; Integrated Pharmacy Research and Practice Volume 2 ; 2 ; 2013 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Integrated Pharmacy Research and Practice Volume 3 ; 3 ; 2014 ; >
     au < finished ; finished ; 2015 ; Integrated Pharmacy Research and Practice Volume 4 ; 4 ; 2015 ; >

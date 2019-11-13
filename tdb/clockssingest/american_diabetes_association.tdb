@@ -212,7 +212,7 @@
       au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2008 ; Diabetes Spectrum Volume 21 ; 21 ; https://spectrum.diabetesjournals.org/ ; >
       au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2009 ; Diabetes Spectrum Volume 22 ; 22 ; https://spectrum.diabetesjournals.org/ ; >
       au < ada.ClockssADADrupalPlugin ; finished ; crawling ; 2010 ; Diabetes Spectrum Volume 23 ; 23 ; http://spectrum.diabetesjournals.org/ ; reingest5.clockss.org:8082 >
-      au < ada.ClockssADADrupalPlugin ; finished ; crawling ; 2011 ; Diabetes Spectrum Volume 24 ; 24 ; http://spectrum.diabetesjournals.org/ ; reingest5.clockss.org:8082 >
+      au < ada.ClockssADADrupalPlugin ; finished ; frozen ; 2011 ; Diabetes Spectrum Volume 24 ; 24 ; http://spectrum.diabetesjournals.org/ ; reingest5.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Diabetes Spectrum Volume 25 ; 25 ; http://spectrum.diabetesjournals.org/ ; >
       au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2013 ; Diabetes Spectrum Volume 26 ; 26 ; http://spectrum.diabetesjournals.org/ ; reingest3.clockss.org:8083 >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Diabetes Spectrum Volume 27 ; 27 ; http://spectrum.diabetesjournals.org/ ; >

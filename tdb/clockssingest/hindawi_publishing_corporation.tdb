@@ -2878,7 +2878,7 @@
     #Moved to archive
 
     au < finished ; finished ; 2014 ; Chinese Journal of Biology Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2015 ; Chinese Journal of Biology Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Chinese Journal of Biology Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Chinese Journal of Biology Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
 
   }
@@ -5079,7 +5079,7 @@
     au < manifest ; exists ; 2013 ; International Journal of Otolaryngology Volume 2013 ; 2013 ; 2013 ; https://www.hindawi.com/ ; >
     au < finished ; finished ; 2014 ; International Journal of Otolaryngology Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; International Journal of Otolaryngology Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2016 ; International Journal of Otolaryngology Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; International Journal of Otolaryngology Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; International Journal of Otolaryngology Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
     au < deepCrawl ; exists ; 2018 ; International Journal of Otolaryngology Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
     au < manifest ; exists ; 2019 ; International Journal of Otolaryngology Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
@@ -5938,7 +5938,7 @@
     au < doNotProcess ; exists ; 2013 ; Journal of Applied Chemistry Volume 2013 ; 2013 ; 2013 ; https://www.hindawi.com/ ; >
     au < finished ; finished ; 2014 ; Journal of Applied Chemistry Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2015 ; Journal of Applied Chemistry Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2016 ; Journal of Applied Chemistry Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Journal of Applied Chemistry Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2017 ; Journal of Applied Chemistry Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
     au < doNotProcess ; exists ; 2018 ; Journal of Applied Chemistry Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
     au < doNotProcess ; exists ; 2019 ; Journal of Applied Chemistry Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
@@ -8415,7 +8415,7 @@
     au < manifest ; exists ; 2012 ; Journal of Toxicology Volume 2012 ; 2012 ; 2012 ; https://www.hindawi.com/ ; >
     au < manifest ; exists ; 2013 ; Journal of Toxicology Volume 2013 ; 2013 ; 2013 ; https://www.hindawi.com/ ; >
     au < finished ; finished ; 2014 ; Journal of Toxicology Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Journal of Toxicology Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2015 ; Journal of Toxicology Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2016 ; Journal of Toxicology Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Journal of Toxicology Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
     au < deepCrawl ; exists ; 2018 ; Journal of Toxicology Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
@@ -8773,7 +8773,7 @@
     param[journal_id] = misy
 
     au < finished ; finished ; 2014 ; Mobile Information Systems Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Mobile Information Systems Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Mobile Information Systems Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; Mobile Information Systems Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Mobile Information Systems Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
     au < deepCrawl ; exists ; 2018 ; Mobile Information Systems Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >

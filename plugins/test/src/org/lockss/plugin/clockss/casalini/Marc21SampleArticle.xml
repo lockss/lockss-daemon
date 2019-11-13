@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<collection>
+    <record>
+        <leader>01086nab a2200265 i 4500</leader>
+        <controlfield tag="001">000002213907</controlfield>
+        <controlfield tag="003">ItFiC</controlfield>
+        <controlfield tag="005">20091114214923.0</controlfield>
+        <controlfield tag="006">m        d        </controlfield>
+        <controlfield tag="007">cr uuu---uuuuu</controlfield>
+        <controlfield tag="008">091114n        xx uu   s    u0    0und c</controlfield>
+        <datafield ind1="7" ind2=" " tag="024">
+            <subfield code="a">10.1400/64564</subfield>
+            <subfield code="2">DOI</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="040">
+            <subfield code="a">ItFiC</subfield>
+            <subfield code="b">eng</subfield>
+            <subfield code="c">ItFiC</subfield>
+        </datafield>
+        <datafield ind1="0" ind2=" " tag="097">
+            <subfield code="a">2194804</subfield>
+            <subfield code="b">013</subfield>
+            <subfield code="c">2213907</subfield>
+            <subfield code="d">002</subfield>
+        </datafield>
+        <datafield ind1="1" ind2="3" tag="245">
+            <subfield code="a">Il piccolo Hans e la fobia del professor Freud.</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="260">
+            <subfield code="a">Milano :</subfield>
+            <subfield code="b">Franco Angeli,</subfield>
+            <subfield code="c">2000.</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="300">
+            <subfield code="a">P. [1-37] [37]</subfield>
+        </datafield>
+        <datafield ind1="1" ind2=" " tag="700">
+            <subfield code="a">Romano, Cesare.</subfield>
+        </datafield>
+        <datafield ind1="0" ind2=" " tag="773">
+            <subfield code="t">Psicoterapia e scienze umane. Fascicolo 4, 2000.</subfield>
+            <subfield code="d">Milano : Franco Angeli, 2000.</subfield>
+            <subfield code="w">()2194804</subfield>
+        </datafield>
+        <datafield ind1="4" ind2="0" tag="856">
+            <subfield code="u">http://digital.casalini.it/10.1400/64564</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="900">
+            <subfield code="a">(c) Casalini Libri, 50014 Fiesole (Italy) - www.casalini.it</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="910">
+            <subfield code="a">aBibliographic data</subfield>
+            <subfield code="e">Torrossa Fulltext Resource</subfield>
+            <subfield code="g">Casalini Libri</subfield>
+        </datafield>
+    </record>
+    <record>
+        <leader>00919nab a22002537i 4500</leader>
+        <controlfield tag="001">000004517744</controlfield>
+        <controlfield tag="003">ItFiC</controlfield>
+        <controlfield tag="005">20190715030907.0</controlfield>
+        <controlfield tag="007">cr uuu---uuuuu</controlfield>
+        <controlfield tag="008">190711s2019    it uu   s     0   00ita d</controlfield>
+        <datafield ind1=" " ind2=" " tag="020">
+            <subfield code="q">pdf</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="022">
+            <subfield code="a">1972-5043</subfield>
+        </datafield>
+        <datafield ind1="7" ind2=" " tag="024">
+            <subfield code="a">10.3280/PU2019-002017</subfield>
+            <subfield code="2">DOI</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="040">
+            <subfield code="a">ItFiC</subfield>
+            <subfield code="b">eng</subfield>
+            <subfield code="c">ItFiC</subfield>
+        </datafield>
+        <datafield ind1="0" ind2=" " tag="097">
+            <subfield code="a">4517279</subfield>
+            <subfield code="b">013</subfield>
+            <subfield code="c">4517744</subfield>
+            <subfield code="d">017</subfield>
+            <subfield code="h">004</subfield>
+        </datafield>
+        <datafield ind1="0" ind2="0" tag="245">
+            <subfield code="a">Riviste : segnalazioni di sommari di riviste italiane e straniere.</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="260">
+            <subfield code="a">Milano :</subfield>
+            <subfield code="b">Franco Angeli,</subfield>
+            <subfield code="c">2019.</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="300">
+            <subfield code="a">351-369 p.</subfield>
+        </datafield>
+        <datafield ind1="0" ind2=" " tag="773">
+            <subfield code="t">Psicoterapia e scienze umane.</subfield>
+            <subfield code="x">1972-5043</subfield>
+            <subfield code="w">()4517279</subfield>
+        </datafield>
+        <datafield ind1="4" ind2="0" tag="856">
+            <subfield code="u">http://digital.casalini.it/10.3280/PU2019-002017</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="900">
+            <subfield code="a">(c) Casalini Libri, 50014 Fiesole (Italy) - www.casalini.it</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="910">
+            <subfield code="a">aBibliographic data</subfield>
+            <subfield code="e">Torrossa Fulltext Resource</subfield>
+            <subfield code="g">Casalini Libri</subfield>
+        </datafield>
+    </record>
+</collection>

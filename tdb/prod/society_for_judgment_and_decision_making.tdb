@@ -16,8 +16,6 @@
     rights = openaccess
     implicit < status ; year ; name ; param[volume_name] >
     
-    comment[notReady_v7] = V7 403 Forbidden http://journal.sjdm.org/11/111202/data.dta
-    
     comment[doNotProcess] = plugin needs review
     
     au < released ; 2006 ; Judgment and Decision Making Volume 1 ; 1 >
@@ -29,6 +27,11 @@
     au < released ; 2012 ; Judgment and Decision Making Volume 7 ; 7 >
     au < doNotProcess ; 2013 ; Judgment and Decision Making Volume 8 ; 8 >
     au < doNotProcess ; 2014 ; Judgment and Decision Making Volume 9 ; 9 >
+    au < exists ; 2015 ; Judgment and Decision Making Volume 10 ; 10 >
+    au < exists ; 2016 ; Judgment and Decision Making Volume 11 ; 11 >
+    au < exists ; 2017 ; Judgment and Decision Making Volume 12 ; 12 >
+    au < exists ; 2018 ; Judgment and Decision Making Volume 13 ; 13 >
+    au < exists ; 2019 ; Judgment and Decision Making Volume 14 ; 14 >
 
   }
 
