@@ -1255,6 +1255,7 @@
     #moved to archive
     
     au < doNotProcess ; exists ; 2008 ; International Journal of Power Management Electronics Volume 2008 (2008) ; 2008 ; 2008 ; https://www.hindawi.com/ ; >
+    au < doesNotExist ; doesNotExist ; 2009 ; International Journal of Power Management Electronics Volume 2009 (2009) ; 2009 ; 2009 ; https://www.hindawi.com/ ; >
     au < doNotProcess ; exists ; 2010 ; Advances in Power Electronics Volume 2010 (2010) ; 2010 ; 2010 ; https://www.hindawi.com/ ; >
     au < doNotProcess ; exists ; 2011 ; Advances in Power Electronics Volume 2011 (2011) ; 2011 ; 2011 ; https://www.hindawi.com/ ; >
     au < doNotProcess ; exists ; 2012 ; Advances in Power Electronics Volume 2012 (2012) ; 2012 ; 2012 ; https://www.hindawi.com/ ; >
@@ -1263,8 +1264,7 @@
     au < finished ; finished ; 2015 ; Advances in Power Electronics Volume 2015 (2015) ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Advances in Power Electronics Volume 2016 (2016) ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
     au < finished ; crawling ; 2017 ; Advances in Power Electronics Volume 2017 (2017) ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
-    au < doNotProcess ; exists ; 2018 ; Advances in Power Electronics Volume 2018 (2018) ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < doNotProcess ; exists ; 2019 ; Advances in Power Electronics Volume 2019 (2019) ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < exists ; exists ; 2018 ; Advances in Power Electronics Volume 2018 (2018) ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
   }
  
   {
@@ -6101,7 +6101,8 @@
     au < finished ; crawling ; 2015 ; Journal of Biophysics Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Journal of Biophysics Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; Journal of Biophysics Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
-    #stopped publishing after 2017. 
+    au < exists ; exists ; 2018 ; Journal of Biophysics Volume 2018 ; 2018 ; 2018 ; http://www.hindawi.com/ ; >
+    #stopped publishing after 2017, 2018 contains one article (corrigendum). 
   }
 
   {
@@ -7027,7 +7028,8 @@
     au < finished ; crawling ; 2015 ; Journal of Gravity Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; Journal of Gravity Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
     au < testing ; exists ; 2017 ; Journal of Gravity Volume 2017 ; 2017 ; 2017 ; https://www.hindawi.com/ ; >
-    #no issues published after 2017
+    au < exists ; exists ; 2018 ; Journal of Gravity Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
+    #no issues published after 2017; 2018 contains one article (corrigendum)
   }
 
   {
