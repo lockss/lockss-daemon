@@ -161,8 +161,8 @@
       param[base_url] = https://digitalcommons.georgiasouthern.edu/
       param[journal_abbr] = nyar
 
-      au < frozen ; exists ; 2015 ; National Youth-At-Risk Journal Volume 1 ; 1 ; >
-      au < frozen ; exists ; 2016 ; National Youth-At-Risk Journal Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2015-2016 ; National Youth-At-Risk Journal Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2016-2017 ; National Youth-At-Risk Journal Volume 2 ; 2 ; >
       au < frozen ; exists ; 2018 ; National Youth-At-Risk Journal Volume 3 ; 3 ; >
       au < expected ; exists ; 2019 ; National Youth-At-Risk Journal Volume 4 ; 4 ; >
 
@@ -207,6 +207,7 @@
       au < frozen ; exists ; 2016-2017 ; The Coastal Review Volume 8 ; 8 ; >
       au < frozen ; exists ; 2017-2018 ; The Coastal Review Volume 9 ; 9 ; >
       au < crawling ; exists ; 2018-2019 ; The Coastal Review Volume 10 ; 10 ; >
+      au < exists ; exists ; 2019-2020 ; The Coastal Review Volume 11 ; 11 ; >
 
   }
 
