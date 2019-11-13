@@ -136,7 +136,7 @@ public class TestCambridgeMetadataExtractor extends LockssTestCase {
 
       CIProperties xmlHeader = new CIProperties();    
       String xml_url = "http://www.source.com/TestXMLh.sgm";
-      String pdfUrl1 = "http://www.source.com/TestXMLa.pdf";
+      String pdfUrl1 = "http://www.source.com/TestXMLha.pdf";
       xmlHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
       MockCachedUrl mcu = mau.addUrl(xml_url, true, true, xmlHeader);
       // Now add all the pdf files in our AU since we check for them before emitting
