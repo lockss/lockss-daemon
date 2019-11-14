@@ -454,15 +454,15 @@
   {
   
     title <
-      name = Rule of Law and Anti-Corruption Journal ;
+      name = Rule of Law and Anti-Corruption Center ;
       eissn = 2617-2763
     >
 
     plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
     param[journal_id] = rolacc
 
-    au < deepCrawl ; exists ; 2018 ; Rule of Law and Anti-Corruption Journal Volume 2018 ; 2018 ; >
-    au < expected ; exists ; 2019 ; Rule of Law and Anti-Corruption Journal Volume 2019 ; 2019 ; >
+    au < deepCrawl ; exists ; 2018 ; Rule of Law and Anti-Corruption Center Volume 2018 ; 2018 ; >
+    au < expected ; exists ; 2019 ; Rule of Law and Anti-Corruption Center Volume 2019 ; 2019 ; >
 
   }
   
