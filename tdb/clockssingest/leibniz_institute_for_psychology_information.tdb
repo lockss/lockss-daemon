@@ -56,7 +56,7 @@
       au < ojs2.ClockssOJS2Plugin ; finished ; crawling ; 2016 ; The European Journal of Counselling Psychology Volume 5 ; 5 ; 2016 ; http://ejcop.psychopen.eu/ ; reingest3.clockss.org:8083 >
       au < ojs2.ClockssOJS2Plugin ; deepCrawl ; exists ; 2017 ; The European Journal of Counselling Psychology Volume 6 ; 6 ; 2017 ; https://ejcop.psychopen.eu/ ; >
       au < ojs2.ClockssOJS2Plugin ; deepCrawl ; exists ; 2018 ; The European Journal of Counselling Psychology Volume 7 ; 7 ; 2018 ; https://ejcop.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; expected ; exists ; 2019 ; The European Journal of Counselling Psychology Volume 8 ; 8 ; 2019 ; https://ejcop.psychopen.eu/ ; >
+      au < ojs2.ClockssOJS2Plugin ; expected ; exists ; 2019 ; The European Journal of Counselling Psychology Volume 8 ; 8 ; 2019 ; https://ejcop.psychopen.eu/ ; >
 
   }
 
@@ -81,7 +81,7 @@
       au < ojs2.ClockssOJS2Plugin ; finished ; crawling ; 2016 ; Interpersona: An International Journal on Personal Relationships Volume 10 ; 10 ; 2016 ; http://interpersona.psychopen.eu/ ; reingest3.clockss.org:8083 >
       au < ojs2.ClockssOJS2Plugin ; frozen ; exists ; 2017 ; Interpersona: An International Journal on Personal Relationships Volume 11 ; 11 ; 2017 ; https://interpersona.psychopen.eu/ ; >
       au < ojs2.ClockssOJS2Plugin ; deepCrawl ; exists ; 2018 ; Interpersona: An International Journal on Personal Relationships Volume 12 ; 12 ; 2018 ; https://interpersona.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; expected ; exists ; 2019 ; Interpersona: An International Journal on Personal Relationships Volume 13 ; 13 ; 2019 ; https://interpersona.psychopen.eu/ ; >
+      au < ojs2.ClockssOJS2Plugin ; expected ; exists ; 2019 ; Interpersona: An International Journal on Personal Relationships Volume 13 ; 13 ; 2019 ; https://interpersona.psychopen.eu/ ; >
 
   }
 
@@ -138,7 +138,7 @@
       au < ojs2.ClockssOJS2Plugin ; finished ; crawling ; 2016 ; Psychological Thought Volume 9 ; 9 ; 2016 ; http://psyct.psychopen.eu/ ; reingest5.clockss.org:8082 >
       au < ojs2.ClockssOJS2Plugin ; deepCrawl ; exists ; 2017 ; Psychological Thought Volume 10 ; 10 ; 2017 ; https://psyct.psychopen.eu/ ; >
       au < ojs2.ClockssOJS2Plugin ; deepCrawl ; exists ; 2018 ; Psychological Thought Volume 11 ; 11 ; 2018 ; https://psyct.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; expected ; exists ; 2019 ; Psychological Thought Volume 12 ; 12 ; 2019 ; https://psyct.psychopen.eu/ ; >
+      au < ojs2.ClockssOJS2Plugin ; expected ; exists ; 2019 ; Psychological Thought Volume 12 ; 12 ; 2019 ; https://psyct.psychopen.eu/ ; >
 
   }
 
@@ -158,7 +158,7 @@
       au < ojs2.ClockssOJS2Plugin ; finished ; crawling ; 2016 ; Psychology, Community & Health Volume 5 ; 5 ; 2016 ; http://pch.psychopen.eu/ ; reingest1.clockss.org:8082 >
       au < ojs2.ClockssOJS2Plugin ; deepCrawl ; exists ; 2017 ; Psychology, Community & Health Volume 6 ; 6 ; 2017 ; https://pch.psychopen.eu/ ; >
       au < ojs2.ClockssOJS2Plugin ; deepCrawl ; exists ; 2018 ; Psychology, Community & Health Volume 7 ; 7 ; 2018 ; https://pch.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; expected ; exists ; 2019 ; Psychology, Community & Health Volume 8 ; 8 ; 2019 ; https://pch.psychopen.eu/ ; >
+      au < ojs2.ClockssOJS2Plugin ; expected ; exists ; 2019 ; Psychology, Community & Health Volume 8 ; 8 ; 2019 ; https://pch.psychopen.eu/ ; >
 
   }
 
@@ -172,34 +172,36 @@
       #param[base_url] = https://jbdgm.psychopen.eu/
       param[journal_id] = JBDGM
 
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 1984 ; Jahrbuch Musikpsychologie Volume 1 ; 1 ; 1984 ; https://jbdgm.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 1985 ; Jahrbuch Musikpsychologie Volume 2 ; 2 ; 1985 ; https://jbdgm.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 1986 ; Jahrbuch Musikpsychologie Volume 3 ; 3 ; 1986 ; https://jbdgm.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 1987 ; Jahrbuch Musikpsychologie Volume 4 ; 4 ; 1987 ; https://jbdgm.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 1988 ; Jahrbuch Musikpsychologie Volume 5 ; 5 ; 1988 ; https://jbdgm.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 1989 ; Jahrbuch Musikpsychologie Volume 6 ; 6 ; 1989 ; https://jbdgm.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 1990 ; Jahrbuch Musikpsychologie Volume 7 ; 7 ; 1990 ; https://jbdgm.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 1991 ; Jahrbuch Musikpsychologie Volume 8 ; 8 ; 1991 ; https://jbdgm.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 1992 ; Jahrbuch Musikpsychologie Volume 9 ; 9 ; 1992 ; https://jbdgm.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 1993 ; Jahrbuch Musikpsychologie Volume 10 ; 10 ; 1993 ; https://jbdgm.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 1994 ; Jahrbuch Musikpsychologie Volume 11 ; 11 ; 1994 ; https://jbdgm.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 1995 ; Jahrbuch Musikpsychologie Volume 12 ; 12 ; 1995 ; https://jbdgm.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 1998 ; Jahrbuch Musikpsychologie Volume 13 ; 13 ; 1998 ; https://jbdgm.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 1999 ; Jahrbuch Musikpsychologie Volume 14 ; 14 ; 1999 ; https://jbdgm.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2000 ; Jahrbuch Musikpsychologie Volume 15 ; 15 ; 2000 ; https://jbdgm.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2002 ; Jahrbuch Musikpsychologie Volume 16 ; 16 ; 2002 ; https://jbdgm.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2004 ; Jahrbuch Musikpsychologie Volume 17 ; 17 ; 2004 ; https://jbdgm.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2006 ; Jahrbuch Musikpsychologie Volume 18 ; 18 ; 2006 ; https://jbdgm.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2007 ; Jahrbuch Musikpsychologie Volume 19 ; 19 ; 2007 ; https://jbdgm.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2009 ; Jahrbuch Musikpsychologie Volume 20 ; 20 ; 2009 ; https://jbdgm.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2011 ; Jahrbuch Musikpsychologie Volume 21 ; 21 ; 2011 ; https://jbdgm.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2012 ; Jahrbuch Musikpsychologie Volume 22 ; 22 ; 2012 ; https://jbdgm.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2013 ; Jahrbuch Musikpsychologie Volume 23 ; 23 ; 2013 ; https://jbdgm.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2014 ; Jahrbuch Musikpsychologie Volume 24 ; 24 ; 2014 ; https://jbdgm.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2015 ; Jahrbuch Musikpsychologie Volume 25 ; 25 ; 2015 ; https://jbdgm.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2016 ; Jahrbuch Musikpsychologie Volume 26 ; 26 ; 2016 ; https://jbdgm.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2017 ; Jahrbuch Musikpsychologie Volume 27 ; 27 ; 2017 ; https://jbdgm.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2018 ; Jahrbuch Musikpsychologie Volume 28 ; 28 ; 2018 ; https://jbdgm.psychopen.eu/ ; > #failed test. corrected start_stem
+#      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 1984 ; Jahrbuch Musikpsychologie Volume 1 ; 1 ; 1984 ; https://jbdgm.psychopen.eu/ ; >
+#      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 1985 ; Jahrbuch Musikpsychologie Volume 2 ; 2 ; 1985 ; https://jbdgm.psychopen.eu/ ; >
+#      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 1986 ; Jahrbuch Musikpsychologie Volume 3 ; 3 ; 1986 ; https://jbdgm.psychopen.eu/ ; >
+#      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 1987 ; Jahrbuch Musikpsychologie Volume 4 ; 4 ; 1987 ; https://jbdgm.psychopen.eu/ ; >
+#      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 1988 ; Jahrbuch Musikpsychologie Volume 5 ; 5 ; 1988 ; https://jbdgm.psychopen.eu/ ; >
+#      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 1989 ; Jahrbuch Musikpsychologie Volume 6 ; 6 ; 1989 ; https://jbdgm.psychopen.eu/ ; >
+#      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 1990 ; Jahrbuch Musikpsychologie Volume 7 ; 7 ; 1990 ; https://jbdgm.psychopen.eu/ ; >
+#      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 1991 ; Jahrbuch Musikpsychologie Volume 8 ; 8 ; 1991 ; https://jbdgm.psychopen.eu/ ; >
+#      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 1992 ; Jahrbuch Musikpsychologie Volume 9 ; 9 ; 1992 ; https://jbdgm.psychopen.eu/ ; >
+#      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 1993 ; Jahrbuch Musikpsychologie Volume 10 ; 10 ; 1993 ; https://jbdgm.psychopen.eu/ ; >
+#      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 1994 ; Jahrbuch Musikpsychologie Volume 11 ; 11 ; 1994 ; https://jbdgm.psychopen.eu/ ; >
+#      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 1995 ; Jahrbuch Musikpsychologie Volume 12 ; 12 ; 1995 ; https://jbdgm.psychopen.eu/ ; >
+#      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 1998 ; Jahrbuch Musikpsychologie Volume 13 ; 13 ; 1998 ; https://jbdgm.psychopen.eu/ ; >
+#      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 1999 ; Jahrbuch Musikpsychologie Volume 14 ; 14 ; 1999 ; https://jbdgm.psychopen.eu/ ; >
+#      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2000 ; Jahrbuch Musikpsychologie Volume 15 ; 15 ; 2000 ; https://jbdgm.psychopen.eu/ ; >
+#      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2002 ; Jahrbuch Musikpsychologie Volume 16 ; 16 ; 2002 ; https://jbdgm.psychopen.eu/ ; >
+#      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2004 ; Jahrbuch Musikpsychologie Volume 17 ; 17 ; 2004 ; https://jbdgm.psychopen.eu/ ; >
+#      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2006 ; Jahrbuch Musikpsychologie Volume 18 ; 18 ; 2006 ; https://jbdgm.psychopen.eu/ ; >
+#      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2007 ; Jahrbuch Musikpsychologie Volume 19 ; 19 ; 2007 ; https://jbdgm.psychopen.eu/ ; >
+#      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2009 ; Jahrbuch Musikpsychologie Volume 20 ; 20 ; 2009 ; https://jbdgm.psychopen.eu/ ; >
+#      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2011 ; Jahrbuch Musikpsychologie Volume 21 ; 21 ; 2011 ; https://jbdgm.psychopen.eu/ ; >
+#      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2012 ; Jahrbuch Musikpsychologie Volume 22 ; 22 ; 2012 ; https://jbdgm.psychopen.eu/ ; >
+#      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2013 ; Jahrbuch Musikpsychologie Volume 23 ; 23 ; 2013 ; https://jbdgm.psychopen.eu/ ; >
+#      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2014 ; Jahrbuch Musikpsychologie Volume 24 ; 24 ; 2014 ; https://jbdgm.psychopen.eu/ ; >
+#      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2015 ; Jahrbuch Musikpsychologie Volume 25 ; 25 ; 2015 ; https://jbdgm.psychopen.eu/ ; >
+#      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2016 ; Jahrbuch Musikpsychologie Volume 26 ; 26 ; 2016 ; https://jbdgm.psychopen.eu/ ; >
+#      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2017 ; Jahrbuch Musikpsychologie Volume 27 ; 27 ; 2017 ; https://jbdgm.psychopen.eu/ ; >
+
+      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2018 ; Jahrbuch Musikpsychologie Volume 28 ; 28 ; 2018 ; https://jbdgm.psychopen.eu/ ; > #failed test. corrected start_stem
+      au < ojs3.ClockssOjs3Plugin ; expected ; exists ; 2019 ; Jahrbuch Musikpsychologie Volume 29 ; 29 ; 2019 ; https://jbdgm.psychopen.eu/ ; > 
 
   }
 
