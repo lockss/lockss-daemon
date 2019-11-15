@@ -170,7 +170,7 @@
     au < frozen ; exists ; 2012 ; Groups, Geometry, and Dynamics Volume 6 ; 6 ; >
     au < frozen ; exists ; 2013 ; Groups, Geometry, and Dynamics Volume 7 ; 7 ; >
     au < frozen ; exists ; 2014 ; Groups, Geometry, and Dynamics Volume 8 ; 8 ; >
-    au < finished ; crawling ; 2015 ; Groups, Geometry, and Dynamics Volume 9 ; 9 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2015 ; Groups, Geometry, and Dynamics Volume 9 ; 9 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2016 ; Groups, Geometry, and Dynamics Volume 10 ; 10 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Groups, Geometry, and Dynamics Volume 11 ; 11 ; >
     au < deepCrawl ; exists ; 2018 ; Groups, Geometry, and Dynamics Volume 12 ; 12 ; >
@@ -379,7 +379,7 @@
     param[journal_issn] = 0032-5155
     comment[journal_id] = pm
     
-    au < finished ; crawling ; 2007 ; Portugaliae Mathematica Volume 64 ; 64 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2007 ; Portugaliae Mathematica Volume 64 ; 64 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2008 ; Portugaliae Mathematica Volume 65 ; 65 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2009 ; Portugaliae Mathematica Volume 66 ; 66 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2010 ; Portugaliae Mathematica Volume 67 ; 67 ; reingest5.clockss.org:8082 >
