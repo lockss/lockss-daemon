@@ -1,0 +1,107 @@
+<?xml version="1.0" ?><wsdl:definitions name="ExportServiceImplService" targetNamespace="http://export.ws.lockss.org/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://export.ws.lockss.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://export.ws.lockss.org/" xmlns:tns="http://export.ws.lockss.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="createExportFiles" type="tns:createExportFiles"></xs:element>
+<xs:element name="createExportFilesResponse" type="tns:createExportFilesResponse"></xs:element>
+<xs:complexType name="createExportFiles">
+<xs:sequence>
+<xs:element minOccurs="0" name="arg0" type="tns:exportServiceParams"></xs:element>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="exportServiceParams">
+<xs:sequence>
+<xs:element minOccurs="0" name="auid" type="xs:string"></xs:element>
+<xs:element name="compress" type="xs:boolean"></xs:element>
+<xs:element name="excludeDirNodes" type="xs:boolean"></xs:element>
+<xs:element minOccurs="0" name="filePrefix" type="xs:string"></xs:element>
+<xs:element minOccurs="0" name="fileType" type="tns:typeEnum"></xs:element>
+<xs:element name="maxSize" type="xs:long"></xs:element>
+<xs:element name="maxVersions" type="xs:int"></xs:element>
+<xs:element minOccurs="0" name="xlateFilenames" type="tns:filenameTranslationEnum"></xs:element>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="createExportFilesResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:exportServiceWsResult"></xs:element>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="exportServiceWsResult">
+<xs:sequence>
+<xs:element minOccurs="0" name="auId" type="xs:string"></xs:element>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="dataHandlerWrappers" nillable="true" type="tns:dataHandlerWrapper"></xs:element>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="dataHandlerWrapper">
+<xs:sequence>
+<xs:element minOccurs="0" name="dataHandler" type="xs:base64Binary"></xs:element>
+<xs:element minOccurs="0" name="name" type="xs:string"></xs:element>
+<xs:element name="size" type="xs:long"></xs:element>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="lockssWebServicesFaultInfo">
+<xs:sequence>
+<xs:element minOccurs="0" name="message" type="xs:string"></xs:element>
+</xs:sequence>
+</xs:complexType>
+<xs:simpleType name="typeEnum">
+<xs:restriction base="xs:string">
+<xs:enumeration value="WARC_RESPONSE"></xs:enumeration>
+<xs:enumeration value="WARC_RESOURCE"></xs:enumeration>
+<xs:enumeration value="ARC_RESPONSE"></xs:enumeration>
+<xs:enumeration value="ARC_RESOURCE"></xs:enumeration>
+<xs:enumeration value="ZIP"></xs:enumeration>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="filenameTranslationEnum">
+<xs:restriction base="xs:string">
+<xs:enumeration value="XLATE_NONE"></xs:enumeration>
+<xs:enumeration value="XLATE_WINDOWS"></xs:enumeration>
+<xs:enumeration value="XLATE_MAC"></xs:enumeration>
+</xs:restriction>
+</xs:simpleType>
+<xs:element name="LockssWebServicesFault" nillable="true" type="tns:lockssWebServicesFaultInfo"></xs:element>
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="createExportFiles">
+    <wsdl:part element="tns:createExportFiles" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="LockssWebServicesFault">
+    <wsdl:part element="tns:LockssWebServicesFault" name="LockssWebServicesFault">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createExportFilesResponse">
+    <wsdl:part element="tns:createExportFilesResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ExportService">
+    <wsdl:operation name="createExportFiles">
+      <wsdl:input message="tns:createExportFiles" name="createExportFiles">
+    </wsdl:input>
+      <wsdl:output message="tns:createExportFilesResponse" name="createExportFilesResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:LockssWebServicesFault" name="LockssWebServicesFault">
+    </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ExportServiceImplServiceSoapBinding" type="tns:ExportService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"></soap:binding>
+    <wsdl:operation name="createExportFiles">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="createExportFiles">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="createExportFilesResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+      <wsdl:fault name="LockssWebServicesFault">
+        <soap:fault name="LockssWebServicesFault" use="literal"></soap:fault>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ExportServiceImplService">
+    <wsdl:port binding="tns:ExportServiceImplServiceSoapBinding" name="ExportServiceImplPort">
+      <soap:address location="http://localhost:8081/ws/ExportService"></soap:address>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
