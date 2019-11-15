@@ -4,8 +4,10 @@ import org.apache.commons.io.FilenameUtils;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.FileMetadataExtractor;
+import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.CachedUrl;
+import org.lockss.plugin.clockss.JatsPublishingSchemaHelper;
 import org.lockss.plugin.clockss.Onix3BooksSchemaHelper;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
@@ -31,16 +33,46 @@ public class LiverpoolOnix3XmlMetadataExtractorFactory extends SourceXmlMetadata
 
         @Override
         protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
-            // Once you have it, just keep returning the same one. It won't change.
-
-            log.debug3("Fei: LiverpoolOnix3XmlMetadataExtractor");
-
             if (Onix3Helper == null) {
                 Onix3Helper = new Onix3BooksSchemaHelper();
             }
             return Onix3Helper;
         }
 
+        /*
+         * (non-Javadoc)
+         * Do not verify the existence of content. Just emit for each article/book
+         * defined in the XML
+         */
+        @Override
+        protected boolean preEmitCheck(SourceXmlSchemaHelper schemaHelper,
+                                       CachedUrl cu, ArticleMetadata thisAM) {
+            return true;
+        }
+
+        /*
+         * (non-Javadoc)
+         * WARC XML files are a little non-standard in that they store the actual access.url
+         * location in the "self-uri" field for Jats and the proprietary ID field
+         * for ONIX
+         * set the access_url depending on the schema
+         * set the publisher as well. It may get replaced by the TDB value
+         */
+        @Override
+        protected void postCookProcess(SourceXmlSchemaHelper schemaHelper,
+                                       CachedUrl cu, ArticleMetadata thisAM) {
+
+            String access = thisAM.getRaw(Onix3BooksSchemaHelper.ONIX_idtype_proprietary);
+            if (access != null) {
+                thisAM.replace(MetadataField.FIELD_ACCESS_URL, access);
+            }
+            if (thisAM.get(MetadataField.FIELD_DATE)== null) {
+                String copydate = thisAM.getRaw(Onix3BooksSchemaHelper.ONIX_copy_date);
+                if (copydate != null) {
+                    thisAM.put(MetadataField.FIELD_DATE,copydate);
+                }
+            }
+        }
 
         /* In this case, use the RecordReference + .pdf for the matching file */
         @Override
