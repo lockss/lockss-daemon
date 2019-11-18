@@ -1264,7 +1264,7 @@
     au < finished ; finished ; 2015 ; Advances in Power Electronics Volume 2015 (2015) ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Advances in Power Electronics Volume 2016 (2016) ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
     au < finished ; crawling ; 2017 ; Advances in Power Electronics Volume 2017 (2017) ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
-    au < exists ; exists ; 2018 ; Advances in Power Electronics Volume 2018 (2018) ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
+    au < manifest ; exists ; 2018 ; Advances in Power Electronics Volume 2018 (2018) ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
   }
  
   {
@@ -7028,7 +7028,7 @@
     au < finished ; crawling ; 2015 ; Journal of Gravity Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; Journal of Gravity Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
     au < testing ; exists ; 2017 ; Journal of Gravity Volume 2017 ; 2017 ; 2017 ; https://www.hindawi.com/ ; >
-    au < exists ; exists ; 2018 ; Journal of Gravity Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
+    au < manifest ; exists ; 2018 ; Journal of Gravity Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
     #no issues published after 2017; 2018 contains one article (corrigendum)
   }
 
