@@ -21,13 +21,14 @@
     #param[base_url] = http://digitalscholarship.unlv.edu/
     param[journal_abbr] = jpme
     implicit < status ; status2 ; year ; name ; param[volume] ; param[base_url] ; hidden[proxy] >
+    #bepress stop processing. See LXPUB-46
 
-    au < manifest ; exists ; 2006 ; Journal of Praxis in Multicultural Education Volume 1 ; 1 ; https://digitalscholarship.unlv.edu/ ; >
-    au < manifest ; exists ; 2007 ; Journal of Praxis in Multicultural Education volume 2 ; 2 ; https://digitalscholarship.unlv.edu/ ; >
-    au < manifest ; exists ; 2008 ; Journal of Praxis in Multicultural Education Volume 3 ; 3 ; https://digitalscholarship.unlv.edu/ ; >
-    au < manifest ; exists ; 2009 ; Journal of Praxis in Multicultural Education Volume 4 ; 4 ; https://digitalscholarship.unlv.edu/ ; >
-    au < manifest ; exists ; 2010 ; Journal of Praxis in Multicultural Education Volume 5 ; 5 ; https://digitalscholarship.unlv.edu/ ; >
-    au < manifest ; exists ; 2011 ; Journal of Praxis in Multicultural Education Volume 6 ; 6 ; https://digitalscholarship.unlv.edu/ ; >
+    au < doNotProcess ; exists ; 2006 ; Journal of Praxis in Multicultural Education Volume 1 ; 1 ; https://digitalscholarship.unlv.edu/ ; >
+    au < doNotProcess ; exists ; 2007 ; Journal of Praxis in Multicultural Education volume 2 ; 2 ; https://digitalscholarship.unlv.edu/ ; >
+    au < doNotProcess ; exists ; 2008 ; Journal of Praxis in Multicultural Education Volume 3 ; 3 ; https://digitalscholarship.unlv.edu/ ; >
+    au < doNotProcess ; exists ; 2009 ; Journal of Praxis in Multicultural Education Volume 4 ; 4 ; https://digitalscholarship.unlv.edu/ ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Praxis in Multicultural Education Volume 5 ; 5 ; https://digitalscholarship.unlv.edu/ ; >
+    au < doNotProcess ; exists ; 2011 ; Journal of Praxis in Multicultural Education Volume 6 ; 6 ; https://digitalscholarship.unlv.edu/ ; >
     au < finished ; finished ; 2012 ; Journal of Praxis in Multicultural Education Volume 7 ; 7 ; http://digitalscholarship.unlv.edu/ ; >
     au < finished ; finished ; 2013-2014 ; Journal of Praxis in Multicultural Education Volume 8 ; 8 ; http://digitalscholarship.unlv.edu/ ; >
     au < finished ; finished ; 2014 ; Journal of Praxis in Multicultural Education Volume 9 ; 9 ; http://digitalscholarship.unlv.edu/ ; >
