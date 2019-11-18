@@ -24,7 +24,7 @@
 
     au < released ; 2016 ; 7 ; African Invertebrates Volume 2016 ; 2016 ; https://africaninvertebrates.pensoft.net/ >
     au < released ; 2017 ; 8 ; African Invertebrates Volume 2017 ; 2017 ; https://africaninvertebrates.pensoft.net/ >
-    au < manifest ; 2018 ; 9 ; African Invertebrates Volume 2018 ; 2018 ; https://africaninvertebrates.pensoft.net/ >
+    au < ready ; 2018 ; 9 ; African Invertebrates Volume 2018 ; 2018 ; https://africaninvertebrates.pensoft.net/ >
     au < manifest ; 2019 ; 9 ; African Invertebrates Volume 2019 ; 2019 ; https://africaninvertebrates.pensoft.net/ >
 
   }
@@ -132,7 +132,7 @@
     au < released ; 2015 ; 42-47 ; Journal of Hymenoptera Research Volume 2015 ; 2015 ; https://jhr.pensoft.net/ >
     au < released ; 2016 ; 48-53 ; Journal of Hymenoptera Research Volume 2016 ; 2016 ; https://jhr.pensoft.net/ >
     au < released ; 2017 ; 54-61 ; Journal of Hymenoptera Research Volume 2017 ; 2017 ; https://jhr.pensoft.net/ >
-    au < manifest ; 2018 ; 62-69 ; Journal of Hymenoptera Research Volume 2018 ; 2018 ; https://jhr.pensoft.net/ >
+    au < ready ; 2018 ; 62-69 ; Journal of Hymenoptera Research Volume 2018 ; 2018 ; https://jhr.pensoft.net/ >
     au < manifest ; 2019 ; 62-69 ; Journal of Hymenoptera Research Volume 2019 ; 2019 ; https://jhr.pensoft.net/ >
 
    }
@@ -156,7 +156,7 @@
     au < released ; 2015 ; 9-11 ; MycoKeys Volume 2015 ; 2015 ; https://mycokeys.pensoft.net/ >
     au < released ; 2016 ; 12-18 ; MycoKeys Volume 2016 ; 2016 ; https://mycokeys.pensoft.net/ >
     au < released ; 2017 ; 19-28 ; MycoKeys Volume 2017 ; 2017 ; https://mycokeys.pensoft.net/ >
-    au < manifest ; 2018 ; 29-38 ; MycoKeys Volume 2018 ; 2018 ; https://mycokeys.pensoft.net/ >
+    au < ready ; 2018 ; 29-38 ; MycoKeys Volume 2018 ; 2018 ; https://mycokeys.pensoft.net/ >
     au < manifest ; 2019 ; 29-38 ; MycoKeys Volume 2019 ; 2019 ; https://mycokeys.pensoft.net/ >
 
    }
@@ -365,7 +365,7 @@
 
       param[au_oai_set] = aca
 
-      au < manifest ; 2018 ; 2018 ; ARPHA Conference Abstracts Volume 2018 ; 2018 ; https://aca.pensoft.net/ >
+      au < ready ; 2018 ; 2018 ; ARPHA Conference Abstracts Volume 2018 ; 2018 ; https://aca.pensoft.net/ >
       au < manifest ; 2019 ; 2019 ; ARPHA Conference Abstracts Volume 2019 ; 2019 ; https://aca.pensoft.net/ >
 
   }
@@ -519,7 +519,7 @@
     au < released ; 2015 ; 9 ; Comparative Cytogenetics Volume 2015 ; 2015 ; http://compcytogen.pensoft.net/ >
     au < released ; 2016 ; 10 ; Comparative Cytogenetics Volume 2016 ; 2016 ; https://compcytogen.pensoft.net/ >
     au < released ; 2017 ; 11 ; Comparative Cytogenetics Volume 2017 ; 2017 ; https://compcytogen.pensoft.net/ >
-    au < manifest ; 2018 ; 12 ; Comparative Cytogenetics Volume 2018 ; 2018 ; https://compcytogen.pensoft.net/ >
+    au < ready ; 2018 ; 12 ; Comparative Cytogenetics Volume 2018 ; 2018 ; https://compcytogen.pensoft.net/ >
     au < manifest ; 2019 ; 13 ; Comparative Cytogenetics Volume 2019 ; 2019 ; https://compcytogen.pensoft.net/ >
 
    }
