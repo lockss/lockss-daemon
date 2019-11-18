@@ -72,6 +72,21 @@
 
   {
     title <
+      name = JCO Global Oncology ;
+      eissn = 2378-9506 ;
+      issnl = 2378-9506
+    >
+
+      param[journal_id] = go
+      #formerly Journal of Global Oncology 2378-9506
+
+      au < doNotProcess ; exists ; 2019 ; JCO Global Oncology Volume 5 ; 5 ; https://ascopubs.org/ ; >
+      au < expected ; exists ; 2020 ; JCO Global Oncology Volume 6 ; 6 ; https://ascopubs.org/ ; >
+
+  }
+
+  {
+    title <
       name = Journal of Global Oncology ;
       eissn = 2378-9506 ;
       issnl = 2378-9506
@@ -85,6 +100,7 @@
       au < deepCrawl ; exists ; 2017 ; Journal of Global Oncology Volume 3 ; 3 ; http://ascopubs.org/ ; >
       au < deepCrawl ; exists ; 2018 ; Journal of Global Oncology Volume 4 ; 4 ; http://ascopubs.org/ ; >
       au < crawling ; exists ; 2019 ; Journal of Global Oncology Volume 5 ; 5 ; https://ascopubs.org/ ; >
+      #title changed as of 2020.
 
   }
 
