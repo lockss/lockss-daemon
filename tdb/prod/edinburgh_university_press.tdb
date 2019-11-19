@@ -71,7 +71,7 @@
     implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
     param[journal_id] = anph
 
-    au < exists ; 2019 ; Ancient Philosophy Today Volume 1 ; 1 ; https://www.euppublishing.com/ >
+    au < manifest ; 2019 ; Ancient Philosophy Today Volume 1 ; 1 ; https://www.euppublishing.com/ >
 
   }
 
@@ -88,13 +88,13 @@
     implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
     param[journal_id] = sch
 
-    au < exists ; 2013 ; Scottish Church History Volume 42 ; 42 ; https://www.euppublishing.com/ >
-    au < exists ; 2014 ; Scottish Church History Volume 43 ; 43 ; https://www.euppublishing.com/ >
-    au < exists ; 2015 ; Scottish Church History Volume 44 ; 44 ; https://www.euppublishing.com/ >
-    au < exists ; 2016 ; Scottish Church History Volume 45 ; 45 ; https://www.euppublishing.com/ >
-    au < exists ; 2017 ; Scottish Church History Volume 46 ; 46 ; https://www.euppublishing.com/ >
-    au < exists ; 2018 ; Scottish Church History Volume 47 ; 47 ; https://www.euppublishing.com/ >
-    au < exists ; 2019 ; Scottish Church History Volume 48 ; 48 ; https://www.euppublishing.com/ >
+    au < manifest ; 2013 ; Scottish Church History Volume 42 ; 42 ; https://www.euppublishing.com/ >
+    au < manifest ; 2014 ; Scottish Church History Volume 43 ; 43 ; https://www.euppublishing.com/ >
+    au < manifest ; 2015 ; Scottish Church History Volume 44 ; 44 ; https://www.euppublishing.com/ >
+    au < manifest ; 2016 ; Scottish Church History Volume 45 ; 45 ; https://www.euppublishing.com/ >
+    au < manifest ; 2017 ; Scottish Church History Volume 46 ; 46 ; https://www.euppublishing.com/ >
+    au < manifest ; 2018 ; Scottish Church History Volume 47 ; 47 ; https://www.euppublishing.com/ >
+    au < manifest ; 2019 ; Scottish Church History Volume 48 ; 48 ; https://www.euppublishing.com/ >
   }
 
   {
