@@ -368,7 +368,9 @@ while (my $line = <>) {
               if ($man_contents =~ m/<title>\s*(.*)\s*<\/title>/si) {
                   $vol_title = $1;
               }
-              if ($man_contents =~ m/\/articles\//) {
+              #if ($man_contents =~ m/\/articles\//) {
+              #if ($man_contents =~ m/\/volume\/.+\/issue\//) {
+              if ($man_contents =~ m/\/volume\//) {
                   $result = "Manifest";
               } else {
                   $result = "--NO_CONT--";
@@ -404,7 +406,7 @@ while (my $line = <>) {
                   $vol_title = $1;
               }
               my $man_contents = $resp->content;
-              if (defined($man_contents) && ($man_contents =~ m/\/articles\//)) {
+              if (defined($man_contents) && ($man_contents =~ m/\/volume\//)) {
                   $result = "Manifest";
               } else {
                   $result = "--NO_CONT--";
