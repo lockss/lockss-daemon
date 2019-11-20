@@ -10,6 +10,7 @@
 
     implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
     #moved to OJS3
+    attr[start_stem] = index.php/
 
   {
   
@@ -298,6 +299,7 @@
       au < exists ; exists ; 2009 ; Oral History Forum d'histoire orale Volume 29 ; 29 ; 2009 ; >
       au < exists ; exists ; 2010 ; Oral History Forum d'histoire orale Volume 30 ; 30 ; 2010 ; >
       au < exists ; exists ; 2011 ; Oral History Forum d'histoire orale Volume 31 ; 31 ; 2011 ; >
+
       au < exists ; exists ; 2017 ; Oral History Forum d'histoire orale Volume 37 ; 37 ; 2017 ; >
       au < exists ; exists ; 2018 ; Oral History Forum d'histoire orale Volume 38 ; 38 ; 2018 ; >#one year embargo?
       au < expected ; exists ; 2019 ; Oral History Forum d'histoire orale Volume 39 ; 39 ; 2019 ; >
