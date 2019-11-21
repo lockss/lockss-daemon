@@ -22,8 +22,8 @@ public class LiverpoolArticleIteratorFactory  implements ArticleIteratorFactory,
     private static final String PATTERN_TEMPLATE = "\"%s%d/.+\",base_url,year";
 
     //protected static final Pattern XML_PATTERN = Pattern.compile("/([^/]+)\\.xml$");
-    protected static final Pattern XML_PATTERN = Pattern.compile("/([^/]+)_xml$");
-    protected static final String XML_REPLACEMENT = "/([^/]+)_xml$";
+    protected static final Pattern XML_PATTERN = Pattern.compile("/([^/]+).xml$");
+    protected static final String XML_REPLACEMENT = "/([^/]+).xml$";
 
 
     @Override

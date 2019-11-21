@@ -35,35 +35,6 @@ public class TestLiverpoolOnix3XmlMetadataExtractorFactory extends SourceXmlMeta
         return xmlContent;
     }
 
-
-    /*
-     public void testFromWarcOnixXMLFile() throws Exception {
-      InputStream file_input = null;
-      try {
-        file_input = getResourceAsStream(realOnixXMLFile);
-        String string_input = StringUtil.fromInputStream(file_input);
-        IOUtil.safeClose(file_input);
-
-        CIProperties xmlHeader = new CIProperties();
-        // mock up coming from a zip arhive
-        String xml_url = BASE_URL + YEAR + "TestXML.xml";
-        xmlHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
-        MockCachedUrl mcu = mau.addUrl(xml_url, true, true, xmlHeader);
-        mcu.setContent(string_input);
-        mcu.setContentSize(string_input.length());
-        mcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
-
-      FileMetadataExtractor me = new WarcXmlMetadataExtractorFactory().createFileMetadataExtractor(
-          MetadataTarget.Any(), "text/xml");
-        FileMetadataListExtractor mle =
-            new FileMetadataListExtractor(me);
-        List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), mcu);
-        assertNotEmpty(mdlist);
-        assertEquals(4, mdlist.size());
-
-  }
-     */
-
     public void testExtractArticleXmlSchema() throws Exception {
 
         String fname = "sample_onix3_metadata.xml";
