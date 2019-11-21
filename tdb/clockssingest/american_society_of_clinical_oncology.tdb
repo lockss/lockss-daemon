@@ -61,9 +61,9 @@
       au < finished ; crawling ; 2011 ; Journal of Clinical Oncology Volume 29 ; 29 ; http://ascopubs.org/ ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2012 ; Journal of Clinical Oncology Volume 30 ; 30 ; http://ascopubs.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2013 ; Journal of Clinical Oncology Volume 31 ; 31 ; http://ascopubs.org/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2014 ; Journal of Clinical Oncology Volume 32 ; 32 ; http://ascopubs.org/ ; >
-      au < frozen ; exists ; 2015 ; Journal of Clinical Oncology Volume 33 ; 33 ; http://ascopubs.org/ ; >
-      au < frozen ; exists ; 2016 ; Journal of Clinical Oncology Volume 34 ; 34 ; http://ascopubs.org/ ; >
+      au < finished ; manifest ; 2014 ; Journal of Clinical Oncology Volume 32 ; 32 ; http://ascopubs.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2015 ; Journal of Clinical Oncology Volume 33 ; 33 ; http://ascopubs.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2016 ; Journal of Clinical Oncology Volume 34 ; 34 ; http://ascopubs.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; Journal of Clinical Oncology Volume 35 ; 35 ; http://ascopubs.org/ ; >
       au < deepCrawl ; exists ; 2018 ; Journal of Clinical Oncology Volume 36 ; 36 ; http://ascopubs.org/ ; >
       au < crawling ; exists ; 2019 ; Journal of Clinical Oncology Volume 37 ; 37 ; https://ascopubs.org/ ; >
@@ -81,7 +81,6 @@
       #formerly Journal of Global Oncology 2378-9506
 
       au < doNotProcess ; exists ; 2019 ; JCO Global Oncology Volume 5 ; 5 ; https://ascopubs.org/ ; >
-      au < expected ; exists ; 2020 ; JCO Global Oncology Volume 6 ; 6 ; https://ascopubs.org/ ; >
 
   }
 
