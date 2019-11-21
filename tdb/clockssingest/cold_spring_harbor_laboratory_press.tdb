@@ -154,7 +154,7 @@
       au < finished ; crawling ; 1940 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 8 ; 8 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 1941 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 9 ; 9 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 1942 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 10 ; 10 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 1946 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 11 ; 11 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 1946 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 11 ; 11 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 1947 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 12 ; 12 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 1948 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 13 ; 13 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 1949 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 14 ; 14 ; reingest2.clockss.org:8085 >
@@ -191,7 +191,7 @@
       au < finished ; crawling ; 1980 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 45 ; 45 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 1981 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 46 ; 46 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 1982 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 47 ; 47 ; reingest4.clockss.org:8082 >#not i2 or i3
-      au < finished ; crawling ; 1983 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 48 ; 48 ; reingest5.clockss.org:8082 >#not i2 or i3
+      au < finished ; frozen ; 1983 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 48 ; 48 ; reingest5.clockss.org:8082 >#not i2 or i3
       au < finished ; crawling ; 1984 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 49 ; 49 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 1985 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 50 ; 50 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 1986 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 51 ; 51 ; reingest3.clockss.org:8083 >
@@ -203,7 +203,7 @@
       au < finished ; crawling ; 1992 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 57 ; 57 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 1993 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 58 ; 58 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 1994 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 59 ; 59 ; reingest1.clockss.org:8082 >#not i2 or i3
-      au < finished ; crawling ; 1995 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 60 ; 60 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 1995 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 60 ; 60 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 1996 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 61 ; 61 ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 1997 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 62 ; 62 ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 1998 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 63 ; 63 ; reingest5.clockss.org:8082 >
@@ -252,7 +252,7 @@
       au < finished ; crawling ; 1987 ; Genes & Development Volume 1 ; 1 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 1988 ; Genes & Development Volume 2 ; 2 ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 1989 ; Genes & Development Volume 3 ; 3 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 1990 ; Genes & Development Volume 4 ; 4 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 1990 ; Genes & Development Volume 4 ; 4 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 1991 ; Genes & Development Volume 5 ; 5 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 1992 ; Genes & Development Volume 6 ; 6 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 1993 ; Genes & Development Volume 7 ; 7 ; reingest3.clockss.org:8083 >
@@ -268,7 +268,7 @@
       au < finished ; crawling ; 2003 ; Genes & Development Volume 17 ; 17 ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2004 ; Genes & Development Volume 18 ; 18 ; >
       au < finished ; crawling ; 2005 ; Genes & Development Volume 19 ; 19 ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2006 ; Genes & Development Volume 20 ; 20 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2006 ; Genes & Development Volume 20 ; 20 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2007 ; Genes & Development Volume 21 ; 21 ; >
       au < finished ; crawling ; 2008 ; Genes & Development Volume 22 ; 22 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2009 ; Genes & Development Volume 23 ; 23 ; >
@@ -399,7 +399,7 @@
 
       au < finished ; frozen ; 1995 ; RNA Volume 1 ; 1 ; http://rnajournal.cshlp.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 1996 ; RNA Volume 2 ; 2 ; http://rnajournal.cshlp.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 1997 ; RNA Volume 3 ; 3 ; http://rnajournal.cshlp.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 1997 ; RNA Volume 3 ; 3 ; http://rnajournal.cshlp.org/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 1998 ; RNA Volume 4 ; 4 ; http://rnajournal.cshlp.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 1999 ; RNA Volume 5 ; 5 ; http://rnajournal.cshlp.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2000 ; RNA Volume 6 ; 6 ; http://rnajournal.cshlp.org/ ; reingest5.clockss.org:8082 >

@@ -639,7 +639,7 @@
      #volume 13, 14 and 15 have been preserved under Manchester University Press
      #gothic - Gothic Studies transferred from ManUP 2019 (all volumes 1999 V1 +)
 
-     au < manifest ; exists ; 1999 ; Gothic Studies Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
+     au < ready ; exists ; 1999 ; Gothic Studies Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
      au < frozen ; exists ; 2000 ; Gothic Studies Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
      au < frozen ; exists ; 2001 ; Gothic Studies Volume 3 ; 3 ; https://www.euppublishing.com/ ; >
      au < frozen ; exists ; 2002 ; Gothic Studies Volume 4 ; 4 ; https://www.euppublishing.com/ ; >
@@ -1686,13 +1686,13 @@
     au < finished ; finished ; 2008 ; Scottish Archaeological Journal Volume 30 ; 30 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2009 ; Scottish Archaeological Journal Volume 31 ; 31 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2010 ; Scottish Archaeological Journal Volume 32 ; 32 ; http://www.euppublishing.com/ ; >
-    au < manifest ; exists ; 2011 ; Scottish Archaeological Journal Volume 33 ; 33 ; https://www.euppublishing.com/ ; >
-    au < manifest ; exists ; 2012 ; Scottish Archaeological Journal Volume 34-35 ; 34-35 ; https://www.euppublishing.com/ ; >
-    au < manifest ; exists ; 2014 ; Scottish Archaeological Journal Volume 36-37 ; 36-37 ; https://www.euppublishing.com/ ; >
-    au < manifest ; exists ; 2016 ; Scottish Archaeological Journal Volume 38 ; 38 ; https://www.euppublishing.com/ ; >
-    au < manifest ; exists ; 2017 ; Scottish Archaeological Journal Volume 39 ; 39 ; https://www.euppublishing.com/ ; >
-    au < manifest ; exists ; 2018 ; Scottish Archaeological Journal Volume 40 ; 40 ; https://www.euppublishing.com/ ; >
-    au < manifest ; exists ; 2019 ; Scottish Archaeological Journal Volume 41 ; 41 ; https://www.euppublishing.com/ ; >
+    au < ready ; exists ; 2011 ; Scottish Archaeological Journal Volume 33 ; 33 ; https://www.euppublishing.com/ ; >
+    au < testing ; exists ; 2012 ; Scottish Archaeological Journal Volume 34-35 ; 34-35 ; https://www.euppublishing.com/ ; >
+    au < testing ; exists ; 2014 ; Scottish Archaeological Journal Volume 36-37 ; 36-37 ; https://www.euppublishing.com/ ; >
+    au < ready ; exists ; 2016 ; Scottish Archaeological Journal Volume 38 ; 38 ; https://www.euppublishing.com/ ; >
+    au < ready ; exists ; 2017 ; Scottish Archaeological Journal Volume 39 ; 39 ; https://www.euppublishing.com/ ; >
+    au < ready ; exists ; 2018 ; Scottish Archaeological Journal Volume 40 ; 40 ; https://www.euppublishing.com/ ; >
+    au < crawling ; exists ; 2019 ; Scottish Archaeological Journal Volume 41 ; 41 ; https://www.euppublishing.com/ ; >
   }
   }
    

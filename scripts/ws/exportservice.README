@@ -1,0 +1,37 @@
+To create a working LOCKSS Export Service client, go through the following
+steps:
+
+1) Execute in a shell the command
+
+wget --user lockss-u --password lockss-p --output-document=ExportService.wsdl http://localhost:8081/ws/ExportService?wsdl
+
+where "localhost:8081" specifies the socket of a running LOCKSS daemon and
+"lockss-u"/"lockss-p" are suitable credentials to access it.
+
+The result will be a file named "ExportService.wsdl" containing what is
+commonly called "the WSDL file" of the service. A copy of this file is checked
+into this directory.
+
+2) Execute in a shell the command
+
+wsdl2py --complexType ExportService.wsdl
+
+where "ExportService.wsdl" is the WSDL file generated in the previous step.
+
+The result will be that three files are generated:
+
+ExportServiceImplService_client.py
+ExportServiceImplService_types.py
+ExportServiceImplService_server.py
+
+A copy of these files is checked into this directory.
+
+3) Create by hand the shell script "exportservice.py".
+
+A copy of this file is checked into this directory.
+
+To use the LOCKSS Export Service client, execute in a shell the command
+
+python2 exportservice.py --host=localhost:8081 --username=lockss-u --password=lockss-p --create-export-files --auid='org|lockss|plugin|...'
+
+where "org|lockss|plugin|..." is the auid of the Archival Unit you want to export.

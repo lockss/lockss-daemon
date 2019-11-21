@@ -300,7 +300,7 @@
       comment[overcrawl] = overcrawl due to broken manifest pages, multiple volumes per year
 
       au < finished ; crawling ; 2010 ; Faraday Discussions Volume 144 ; 144 ; 2010 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2010 ; Faraday Discussions Volume 145 ; 145 ; 2010 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2010 ; Faraday Discussions Volume 145 ; 145 ; 2010 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2010 ; Faraday Discussions Volume 146 ; 146 ; 2010 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2010 ; Faraday Discussions Volume 147 ; 147 ; 2010 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
 
@@ -378,12 +378,12 @@
       au < deepCrawl ; exists ; 2018 ; Faraday Discussions Volume 212 ; 212 ; 2018 ; https://pubs.rsc.org/ ; >
 
       au < testing ; exists ; 2019 ; Faraday Discussions Volume 213 ; 213 ; 2019 ; https://pubs.rsc.org/ ; >
-      au < manifest ; exists ; 2019 ; Faraday Discussions Volume 214 ; 214 ; 2019 ; https://pubs.rsc.org/ ; >
-      au < manifest ; exists ; 2019 ; Faraday Discussions Volume 215 ; 215 ; 2019 ; https://pubs.rsc.org/ ; >
+      au < testing ; exists ; 2019 ; Faraday Discussions Volume 214 ; 214 ; 2019 ; https://pubs.rsc.org/ ; >
+      au < testing ; exists ; 2019 ; Faraday Discussions Volume 215 ; 215 ; 2019 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2019 ; Faraday Discussions Volume 216 ; 216 ; 2019 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2019 ; Faraday Discussions Volume 217 ; 217 ; 2019 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2019 ; Faraday Discussions Volume 218 ; 218 ; 2019 ; https://pubs.rsc.org/ ; >
-      au < manifest ; exists ; 2019 ; Faraday Discussions Volume 219 ; 219 ; 2019 ; https://pubs.rsc.org/ ; >
+      au < testing ; exists ; 2019 ; Faraday Discussions Volume 219 ; 219 ; 2019 ; https://pubs.rsc.org/ ; >
       au < expected ; exists ; 2019 ; Faraday Discussions Volume 220 ; 220 ; 2019 ; https://pubs.rsc.org/ ; >
       au < expected ; exists ; 2019 ; Faraday Discussions Volume 221 ; 221 ; 2019 ; https://pubs.rsc.org/ ; >
       au < expected ; exists ; 2019 ; Faraday Discussions Volume 222 ; 222 ; 2019 ; https://pubs.rsc.org/ ; >

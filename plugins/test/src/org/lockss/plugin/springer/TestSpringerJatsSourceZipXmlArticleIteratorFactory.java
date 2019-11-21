@@ -59,21 +59,6 @@ public class TestSpringerJatsSourceZipXmlArticleIteratorFactory extends ArticleI
         return conf;
     }
 
-    public void testUrlsWithPrefixes() throws Exception {
-        SubTreeArticleIterator artIter = createSubTreeIter();
-        Pattern pat = getPattern(artIter);
-
-        assertMatchesRE(pat, "http://content5.lockss.org/sourcefiles/springerjats-released/2019_5/ftp_PUB_19-09-16_05-04-12.zip!/JOU=00441/VOL=2019.378/ISU=1/ART=3050/441_2019_Article_3050_nlm.xml.Meta");
-        assertMatchesRE(pat, "http://content5.lockss.org/sourcefiles/springerjats-released/2019_5/ftp_PUB_19-09-16_05-04-12.zip!/JOU=00441/VOL=2019.378/ISU=1/ART=3050/441_2019_Article_3050_nlm.xml");
-        assertMatchesRE(pat, "http://content5.lockss.org/sourcefiles/springerjats-released/2019_5/ftp_PUB_19-09-16_05-04-12.zip!/BSE=7911/BOK=978-3-030-31143-8/978-3-030-31143-8_Book_nlm.xml");
-        assertMatchesRE(pat, "http://content5.lockss.org/sourcefiles/springerjats-released/2019_5/ftp_PUB_19-09-16_05-04-12.zip!/BSE=7651/BOK=978-1-4939-1346-6/978-1-4939-1346-6_Book_nlm.xml");
-
-        assertNotMatchesRE(pat, "http://content5.lockss.org/sourcefiles/springerjats-released/2019_5/ftp_PUB_19-09-16_05-04-12.zip!/JOU=00441/VOL=2019.378/ISU=1/ART=3050/441_2019_Article_3050_nlm.xml.Metadata");
-        assertNotMatchesRE(pat, "http://content5.lockss.org/sourcefiles/springerjats-released/2019_5/ftp_PUB_19-09-16_05-04-12.zip!/JOU=00441/VOL=2019.378/ISU=1/ART=3050/441_2019_Article_3050_nl.html");
-        assertNotMatchesRE(pat, "http://content5.lockss.org/sourcefiles/springerjats-released/2019_5/ftp_PUB_19-09-16_05-04-12.zip!/BSE=7911/BOK=978-3-030-31143-8/978-3-030-31143-8_Book.txt");
-        assertNotMatchesRE(pat, "http://content5.lockss.org/sourcefiles/springerjats-released/2019_5/ftp_PUB_19-09-16_05-04-12.zip!/BSE=7651/BOK=978-1-4939-1346-6/978-1-4939-1346-6_Book_nlm.png");
-    }
-
     public void testCreateArticleFiles() throws Exception {
         PluginTestUtil.crawlSimAu(sau);
 
@@ -85,7 +70,6 @@ public class TestSpringerJatsSourceZipXmlArticleIteratorFactory extends ArticleI
         PluginTestUtil.copyAu(sau, au, ".*\\.pdf$", pat2, rep2);
 
         int xmlCount = 0;
-        int htmlCount = 0;
         int pdfCount = 0;
 
         for (CachedUrl cu : AuUtil.getCuIterable(au)) {
@@ -93,18 +77,31 @@ public class TestSpringerJatsSourceZipXmlArticleIteratorFactory extends ArticleI
             log.info("url: " + url);
             if (url.contains("Article")) {
                 if (url.endsWith(".xml")) {
-                    //verifyArticleFile(cu);
-                    log.info(url);
+                    log.info("Article url = " + url);
                 }
                 xmlCount++;
             } else if (url.endsWith(".pdf")) {
                 pdfCount++;
             }
         }
-        //log.info("Article count is " + count);
         log.info("xml count is " + xmlCount);
         log.info("pdf count is " + pdfCount);
 
+    }
+
+    public void testUrlsWithPrefixes() throws Exception {
+        SubTreeArticleIterator artIter = createSubTreeIter();
+        Pattern pat = getPattern(artIter);
+
+        assertNotMatchesRE(pat, "http://content5.lockss.org/sourcefiles/springerjats-released/2019_5/ftp_PUB_19-09-16_05-04-12.zip!/JOU=00441/VOL=2019.378/ISU=1/ART=3050/441_2019_Article_3050_nlm.xml");
+        assertNotMatchesRE(pat, "http://content5.lockss.org/sourcefiles/springerjats-released/2019_5/ftp_PUB_19-09-16_05-04-12.zip!/BSE=7911/BOK=978-3-030-31143-8/978-3-030-31143-8_Book_nlm.xml");
+        assertNotMatchesRE(pat, "http://content5.lockss.org/sourcefiles/springerjats-released/2019_5/ftp_PUB_19-09-16_05-04-12.zip!/BSE=7651/BOK=978-1-4939-1346-6/978-1-4939-1346-6_Book_nlm.xml");
+        assertNotMatchesRE(pat, "http://content5.lockss.org/sourcefiles/springerjats-released/2019_5/ftp_PUB_19-09-16_05-04-12.zip!/JOU=00441/VOL=2019.378/ISU=1/ART=3050/441_2019_Article_3050_nlm.xml.Metadata");
+        assertNotMatchesRE(pat, "http://content5.lockss.org/sourcefiles/springerjats-released/2019_5/ftp_PUB_19-09-16_05-04-12.zip!/JOU=00441/VOL=2019.378/ISU=1/ART=3050/441_2019_Article_3050_nl.html");
+        assertNotMatchesRE(pat, "http://content5.lockss.org/sourcefiles/springerjats-released/2019_5/ftp_PUB_19-09-16_05-04-12.zip!/BSE=7911/BOK=978-3-030-31143-8/978-3-030-31143-8_Book.txt");
+        assertNotMatchesRE(pat, "http://content5.lockss.org/sourcefiles/springerjats-released/2019_5/ftp_PUB_19-09-16_05-04-12.zip!/BSE=7651/BOK=978-1-4939-1346-6/978-1-4939-1346-6_Book_nlm.png");
+        
+        assertMatchesRE(pat, "http://content5.lockss.org/sourcefiles/springerjats-released/2019_5/ftp_PUB_19-09-16_05-04-12.zip!/JOU=00441/VOL=2019.378/ISU=1/ART=3050/441_2019_Article_3050.pdf");
     }
 
 }

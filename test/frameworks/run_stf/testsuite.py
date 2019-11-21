@@ -158,7 +158,8 @@ class TinyUiForbiddenTestCase( TinyUiTests ):
         # Relies on the URL returning a 403 with a specially crafted body containing hint text.
         # See HTTPConfigFile.java and http://props.lockss.org:8001/daemon/README
         self.config_URLs = 'http://props.lockss.org:8001/daemon/forbidden.xml',
-        self.expected_pattern = '403: Forbidden.*LOCKSS team.*access list'
+#         self.expected_pattern = '403: Forbidden.*LOCKSS team.*access list'
+        self.expected_pattern = '403: Forbidden'
 
 
 class TinyUiRefusedTestCase( TinyUiTests ):
