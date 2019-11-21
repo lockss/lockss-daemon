@@ -94,8 +94,8 @@
       #param[base_url] = http://jgo.ascopubs.org/ 
       param[journal_id] = jgo
 
-      au < frozen ; exists ; 2015 ; Journal of Global Oncology Volume 1 ; 1 ; http://ascopubs.org/ ; >
-      au < frozen ; exists ; 2016 ; Journal of Global Oncology Volume 2 ; 2 ; http://ascopubs.org/ ; >
+      au < finished ; manifest ; 2015 ; Journal of Global Oncology Volume 1 ; 1 ; http://ascopubs.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; Journal of Global Oncology Volume 2 ; 2 ; http://ascopubs.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2017 ; Journal of Global Oncology Volume 3 ; 3 ; http://ascopubs.org/ ; >
       au < deepCrawl ; exists ; 2018 ; Journal of Global Oncology Volume 4 ; 4 ; http://ascopubs.org/ ; >
       au < crawling ; exists ; 2019 ; Journal of Global Oncology Volume 5 ; 5 ; https://ascopubs.org/ ; >
@@ -113,12 +113,12 @@
       #param[base_url] = http://jop.ascopubs.org/ 
       param[journal_id] = jop
 
-      au < frozen ; exists ; 2005 ; Journal of Oncology Practice Volume 1 ; 1 ; http://ascopubs.org/ ; >
-      au < frozen ; exists ; 2006 ; Journal of Oncology Practice Volume 2 ; 2 ; http://ascopubs.org/ ; >
-      au < frozen ; exists ; 2007 ; Journal of Oncology Practice Volume 3 ; 3 ; http://ascopubs.org/ ; >
-      au < frozen ; exists ; 2008 ; Journal of Oncology Practice Volume 4 ; 4 ; http://ascopubs.org/ ; >
-      au < frozen ; exists ; 2009 ; Journal of Oncology Practice Volume 5 ; 5 ; http://ascopubs.org/ ; >
-      au < frozen ; exists ; 2010 ; Journal of Oncology Practice Volume 6 ; 6 ; http://ascopubs.org/ ; >
+      au < finished ; manifest ; 2005 ; Journal of Oncology Practice Volume 1 ; 1 ; http://ascopubs.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2006 ; Journal of Oncology Practice Volume 2 ; 2 ; http://ascopubs.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2007 ; Journal of Oncology Practice Volume 3 ; 3 ; http://ascopubs.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2008 ; Journal of Oncology Practice Volume 4 ; 4 ; http://ascopubs.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2009 ; Journal of Oncology Practice Volume 5 ; 5 ; http://ascopubs.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2010 ; Journal of Oncology Practice Volume 6 ; 6 ; http://ascopubs.org/ ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2011 ; Journal of Oncology Practice Volume 7 ; 7 ; http://ascopubs.org/ ; >
       au < frozen ; exists ; 2012 ; Journal of Oncology Practice Volume 8 ; 8 ; http://ascopubs.org/ ; >
       au < frozen ; exists ; 2013 ; Journal of Oncology Practice Volume 9 ; 9 ; http://ascopubs.org/ ; >
