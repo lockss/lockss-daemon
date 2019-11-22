@@ -107,7 +107,7 @@
     au < frozen ; exists ; 2016 ; Active and Passive Electronic Components Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
     au < finished ; crawling ; 2017 ; Active and Passive Electronic Components Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Active and Passive Electronic Components Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < ready ; exists ; 2019 ; Active and Passive Electronic Components Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < crawling ; exists ; 2019 ; Active and Passive Electronic Components Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
 
   }
   
@@ -834,7 +834,7 @@
     au < frozen ; exists ; 2016 ; Advances in Mathematical Physics Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Advances in Mathematical Physics Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
     au < deepCrawl ; exists ; 2018 ; Advances in Mathematical Physics Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < ready ; exists ; 2019 ; Advances in Mathematical Physics Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < crawling ; exists ; 2019 ; Advances in Mathematical Physics Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
 
   }
 
@@ -1455,7 +1455,7 @@
     au < frozen ; exists ; 2016 ; Advances in Urology Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
     au < finished ; crawling ; 2017 ; Advances in Urology Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Advances in Urology Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < ready ; exists ; 2019 ; Advances in Urology Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < crawling ; exists ; 2019 ; Advances in Urology Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
 
   }
 
@@ -1740,7 +1740,7 @@
     au < frozen ; exists ; 2016 ; Archaea Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
     au < finished ; crawling ; 2017 ; Archaea Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Archaea Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < ready ; exists ; 2019 ; Archaea Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < crawling ; exists ; 2019 ; Archaea Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
 
   }
 
@@ -1824,7 +1824,7 @@
     au < frozen ; exists ; 2016 ; Autoimmune Diseases Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
     au < finished ; crawling ; 2017 ; Autoimmune Diseases Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Autoimmune Diseases Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < ready ; exists ; 2019 ; Autoimmune Diseases Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < crawling ; exists ; 2019 ; Autoimmune Diseases Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
 
   }
 
@@ -1868,7 +1868,7 @@
     au < frozen ; exists ; 2016 ; Behavioural Neurology Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Behavioural Neurology Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
     au < deepCrawl ; exists ; 2018 ; Behavioural Neurology Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < ready ; exists ; 2019 ; Behavioural Neurology Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < crawling ; exists ; 2019 ; Behavioural Neurology Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
 
   }
 
@@ -2023,7 +2023,7 @@
     au < deepCrawl ; exists ; 2017 ; Canadian Journal of Gastroenterology and Hepatology Volume 2017 (2017) ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
         
     au < deepCrawl ; exists ; 2018 ; Canadian Journal of Gastroenterology and Hepatology Volume 2018 (2018) ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < ready ; exists ; 2019 ; Canadian Journal of Gastroenterology and Hepatology Volume 2019 (2019) ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < crawling ; exists ; 2019 ; Canadian Journal of Gastroenterology and Hepatology Volume 2019 (2019) ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
   }
 
   {
@@ -2223,7 +2223,7 @@
     au < frozen ; exists ; 2016 ; Case Reports in Dermatological Medicine Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
     au < finished ; crawling ; 2017 ; Case Reports in Dermatological Medicine Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Case Reports in Dermatological Medicine Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < ready ; exists ; 2019 ; Case Reports in Dermatological Medicine Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < crawling ; exists ; 2019 ; Case Reports in Dermatological Medicine Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
 
   }
 
@@ -2289,7 +2289,7 @@
     au < frozen ; exists ; 2016 ; Case Reports in Gastrointestinal Medicine Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Case Reports in Gastrointestinal Medicine Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
     au < deepCrawl ; exists ; 2018 ; Case Reports in Gastrointestinal Medicine Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < ready ; exists ; 2019 ; Case Reports in Gastrointestinal Medicine Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < crawling ; exists ; 2019 ; Case Reports in Gastrointestinal Medicine Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
 
   }
 
@@ -2311,7 +2311,7 @@
     au < frozen ; exists ; 2016 ; Case Reports in Genetics Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Case Reports in Genetics Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
     au < deepCrawl ; exists ; 2018 ; Case Reports in Genetics Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < ready ; exists ; 2019 ; Case Reports in Genetics Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < crawling ; exists ; 2019 ; Case Reports in Genetics Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
 
   }
 
@@ -2377,7 +2377,7 @@
     au < frozen ; exists ; 2016 ; Case Reports in Immunology Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
     au < finished ; crawling ; 2017 ; Case Reports in Immunology Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; Case Reports in Immunology Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < ready ; exists ; 2019 ; Case Reports in Immunology Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < crawling ; exists ; 2019 ; Case Reports in Immunology Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
 
   }
 
@@ -2775,7 +2775,7 @@
     au < frozen ; exists ; 2016 ; Case Reports in Urology Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
     au < finished ; crawling ; 2017 ; Case Reports in Urology Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; Case Reports in Urology Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < ready ; exists ; 2019 ; Case Reports in Urology Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < crawling ; exists ; 2019 ; Case Reports in Urology Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
 
   }
 
@@ -3013,7 +3013,7 @@
     au < frozen ; exists ; 2016 ; Computational and Mathematical Methods in Medicine Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Computational and Mathematical Methods in Medicine Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
     au < deepCrawl ; exists ; 2018 ; Computational and Mathematical Methods in Medicine Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < ready ; exists ; 2019 ; Computational and Mathematical Methods in Medicine Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < crawling ; exists ; 2019 ; Computational and Mathematical Methods in Medicine Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
 
   }
   
@@ -3205,7 +3205,7 @@
     au < finished ; crawling ; 2017 ; Dermatology Research and Practice Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
     
     au < deepCrawl ; exists ; 2018 ; Dermatology Research and Practice Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < ready ; exists ; 2019 ; Dermatology Research and Practice Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < crawling ; exists ; 2019 ; Dermatology Research and Practice Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
   }
   
   {
@@ -3291,7 +3291,7 @@
     au < frozen ; exists ; 2016 ; Discrete Dynamics in Nature and Society Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Discrete Dynamics in Nature and Society Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
     au < deepCrawl ; exists ; 2018 ; Discrete Dynamics in Nature and Society Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < ready ; exists ; 2019 ; Discrete Dynamics in Nature and Society Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < crawling ; exists ; 2019 ; Discrete Dynamics in Nature and Society Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
 
   }
 
@@ -3539,7 +3539,7 @@
     au < finished ; crawling ; 2016 ; Gastroenterology Research and Practice Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; Gastroenterology Research and Practice Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
     au < deepCrawl ; exists ; 2018 ; Gastroenterology Research and Practice Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < ready ; exists ; 2019 ; Gastroenterology Research and Practice Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < crawling ; exists ; 2019 ; Gastroenterology Research and Practice Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
 
   }
 
@@ -3578,7 +3578,7 @@
 
     au < deepCrawl ; exists ; 2017 ; Geofluids Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
     au < deepCrawl ; exists ; 2018 ; Geofluids Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < ready ; exists ; 2019 ; Geofluids Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < crawling ; exists ; 2019 ; Geofluids Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
 
   }
 
@@ -3894,7 +3894,7 @@
     au < frozen ; exists ; 2016 ; International Journal of Analytical Chemistry Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2017 ; International Journal of Analytical Chemistry Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; International Journal of Analytical Chemistry Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < ready ; exists ; 2019 ; International Journal of Analytical Chemistry Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < crawling ; exists ; 2019 ; International Journal of Analytical Chemistry Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
 
   }
 
@@ -4132,7 +4132,7 @@
     au < frozen ; exists ; 2016 ; International Journal of Cell Biology Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
     au < deepCrawl ; exists ; 2017 ; International Journal of Cell Biology Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
     au < deepCrawl ; exists ; 2018 ; International Journal of Cell Biology Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < ready ; exists ; 2019 ; International Journal of Cell Biology Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < crawling ; exists ; 2019 ; International Journal of Cell Biology Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
 
   }
 
@@ -4304,7 +4304,7 @@
     au < frozen ; exists ; 2016 ; International Journal of Dentistry Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
     au < deepCrawl ; exists ; 2017 ; International Journal of Dentistry Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
     au < deepCrawl ; exists ; 2018 ; International Journal of Dentistry Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
-    au < ready ; exists ; 2019 ; International Journal of Dentistry Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
+    au < crawling ; exists ; 2019 ; International Journal of Dentistry Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
 
   }
 

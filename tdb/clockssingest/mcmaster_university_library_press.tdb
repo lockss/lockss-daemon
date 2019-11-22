@@ -61,13 +61,13 @@
       au < frozen ; exists ; 2009 ; Early Theatre Volume 12 ; 12 ; 2009 ; > 
       au < frozen ; exists ; 2010 ; Early Theatre Volume 13 ; 13 ; 2010 ; > 
       au < frozen ; exists ; 2011 ; Early Theatre Volume 14 ; 14 ; 2011 ; > 
-      au < ready ; exists ; 2012 ; Early Theatre Volume 15 ; 15 ; 2012 ; > 
+      au < crawling ; exists ; 2012 ; Early Theatre Volume 15 ; 15 ; 2012 ; > 
       au < frozen ; exists ; 2013 ; Early Theatre Volume 16 ; 16 ; 2013 ; > 
       au < frozen ; exists ; 2014 ; Early Theatre Volume 17 ; 17 ; 2014 ; > 
       au < frozen ; exists ; 2015 ; Early Theatre Volume 18 ; 18 ; 2015 ; > 
       au < frozen ; exists ; 2016 ; Early Theatre Volume 19 ; 19 ; 2016 ; > 
       au < frozen ; exists ; 2017 ; Early Theatre Volume 20 ; 20 ; 2017 ; > 
-      au < ready ; exists ; 2018 ; Early Theatre Volume 21 ; 21 ; 2018 ; >
+      au < crawling ; exists ; 2018 ; Early Theatre Volume 21 ; 21 ; 2018 ; >
       au < manifest ; exists ; 2019 ; Early Theatre Volume 22 ; 22 ; 2019 ; > #subscription for a year.
 
     }
@@ -99,12 +99,12 @@
       au < frozen ; exists ; 2006 ; Energy Studies Review Volume 14 ; 14 ; 2006 ; > 
       au < frozen ; exists ; 2007 ; Energy Studies Review Volume 15 ; 15 ; 2007 ; > 
       au < frozen ; exists ; 2009 ; Energy Studies Review Volume 16 ; 16 ; 2009 ; > 
-      au < ready ; exists ; 2010 ; Energy Studies Review Volume 17 ; 17 ; 2010 ; > 
+      au < crawling ; exists ; 2010 ; Energy Studies Review Volume 17 ; 17 ; 2010 ; > 
       au < frozen ; exists ; 2011 ; Energy Studies Review Volume 18 ; 18 ; 2011 ; > 
       au < frozen ; exists ; 2012 ; Energy Studies Review Volume 19 ; 19 ; 2012 ; > 
       au < frozen ; exists ; 2013 ; Energy Studies Review Volume 20 ; 20 ; 2013 ; > 
-      au < ready ; exists ; 2014 ; Energy Studies Review Volume 21 ; 21 ; 2014 ; > 
-      au < ready ; exists ; 2015 ; Energy Studies Review Volume 22 ; 22 ; 2015 ; > #clockss permission page missing index.php. See https://energystudiesreview.ca/esr/about/editorialPolicies
+      au < crawling ; exists ; 2014 ; Energy Studies Review Volume 21 ; 21 ; 2014 ; > 
+      au < crawling ; exists ; 2015 ; Energy Studies Review Volume 22 ; 22 ; 2015 ; > #clockss permission page missing index.php. See https://energystudiesreview.ca/esr/about/editorialPolicies
       au < frozen ; exists ; 2016 ; Energy Studies Review Volume 23 ; 23 ; 2016 ; > #clockss permission page missing index.php. See https://energystudiesreview.ca/esr/about/editorialPolicies
 
     }
@@ -125,11 +125,11 @@
       au < frozen ; exists ; 2011 ; Global Labour Journal Volume 2 ; 2 ; 2011 ; > 
       au < frozen ; exists ; 2012 ; Global Labour Journal Volume 3 ; 3 ; 2012 ; > 
       au < frozen ; exists ; 2013 ; Global Labour Journal Volume 4 ; 4 ; 2013 ; > 
-      au < ready ; exists ; 2014 ; Global Labour Journal Volume 5 ; 5 ; 2014 ; > 
+      au < crawling ; exists ; 2014 ; Global Labour Journal Volume 5 ; 5 ; 2014 ; > 
       au < doNotProcess ; exists ; 2015 ; Global Labour Journal Volume 6 ; 6 ; 2015 ; > 
       au < doNotProcess ; exists ; 2016 ; Global Labour Journal Volume 7 ; 7 ; 2016 ; > 
       au < doNotProcess ; exists ; 2017 ; Global Labour Journal Volume 8 ; 8 ; 2017 ; > 
-      au < ready ; exists ; 2018 ; Global Labour Journal Volume 9 ; 9 ; 2018 ; > 
+      au < crawling ; exists ; 2018 ; Global Labour Journal Volume 9 ; 9 ; 2018 ; > 
       au < crawling ; exists ; 2019 ; Global Labour Journal Volume 10 ; 10 ; 2019 ; > 
       }
       {
@@ -154,11 +154,11 @@
       plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
 
       au < frozen ; exists ; 2013 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 1 ; 1 ; 2013 ; > 
-      au < ready ; exists ; 2014 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 2 ; 2 ; 2014 ; > 
+      au < crawling ; exists ; 2014 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 2 ; 2 ; 2014 ; > 
       au < doNotProcess ; exists ; 2015 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 3 ; 3 ; 2015 ; > 
       au < doNotProcess ; exists ; 2016 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 4 ; 4 ; 2016 ; > 
       au < doNotProcess ; exists ; 2017 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 5 ; 5 ; 2017 ; > 
-      au < ready ; exists ; 2018 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 6 ; 6 ; 2018 ; > 
+      au < crawling ; exists ; 2018 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 6 ; 6 ; 2018 ; > 
       au < crawling ; exists ; 2019 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 7 ; 7 ; 2019 ; > 
       }
       {
@@ -210,7 +210,7 @@
       au < frozen ; exists ; 2015 ; Journal for the History of Analytical Philosophy Volume 5 ; 5 ; 2015 ; >  #clockss permission page missing index.php
       au < frozen ; exists ; 2016 ; Journal for the History of Analytical Philosophy Volume 6 ; 6 ; 2016 ; >  #clockss permission page missing index.php
       au < frozen ; exists ; 2017 ; Journal for the History of Analytical Philosophy Volume 7 ; 7 ; 2017 ; >  #clockss permission page missing index.php
-      au < ready ; exists ; 2018 ; Journal for the History of Analytical Philosophy Volume 8 ; 8 ; 2018 ; >
+      au < crawling ; exists ; 2018 ; Journal for the History of Analytical Philosophy Volume 8 ; 8 ; 2018 ; >
       au < crawling ; exists ; 2019 ; Journal for the History of Analytical Philosophy Volume 9 ; 9 ; 2019 ; >
 
     }
@@ -278,14 +278,14 @@
       au < manifest ; exists ; 1999 ; Russell: the Journal of Bertrand Russell Studies Volume 19 ; 19 ; 1999 ; >
       au < frozen ; exists ; 2000 ; Russell: the Journal of Bertrand Russell Studies Volume 20 ; 20 ; 2000 ; >
       au < frozen ; exists ; 2001 ; Russell: the Journal of Bertrand Russell Studies Volume 21 ; 21 ; 2001 ; >
-      au < ready ; exists ; 2002 ; Russell: the Journal of Bertrand Russell Studies Volume 22 ; 22 ; 2002 ; >
+      au < crawling ; exists ; 2002 ; Russell: the Journal of Bertrand Russell Studies Volume 22 ; 22 ; 2002 ; >
       au < frozen ; exists ; 2003 ; Russell: the Journal of Bertrand Russell Studies Volume 23 ; 23 ; 2003 ; >
       au < frozen ; exists ; 2004 ; Russell: the Journal of Bertrand Russell Studies Volume 24 ; 24 ; 2004 ; >
       au < frozen ; exists ; 2005 ; Russell: the Journal of Bertrand Russell Studies Volume 25 ; 25 ; 2005 ; >
       au < frozen ; exists ; 2006 ; Russell: the Journal of Bertrand Russell Studies Volume 26 ; 26 ; 2006 ; >
       au < frozen ; exists ; 2007 ; Russell: the Journal of Bertrand Russell Studies Volume 27 ; 27 ; 2007 ; >
       au < frozen ; exists ; 2008 ; Russell: the Journal of Bertrand Russell Studies Volume 28 ; 28 ; 2008 ; >
-      au < ready ; exists ; 2009 ; Russell: the Journal of Bertrand Russell Studies Volume 29 ; 29 ; 2009 ; >
+      au < crawling ; exists ; 2009 ; Russell: the Journal of Bertrand Russell Studies Volume 29 ; 29 ; 2009 ; >
       au < frozen ; exists ; 2010 ; Russell: the Journal of Bertrand Russell Studies Volume 30 ; 30 ; 2010 ; >
       au < frozen ; exists ; 2011 ; Russell: the Journal of Bertrand Russell Studies Volume 31 ; 31 ; 2011 ; >
       au < doNotProcess ; exists ; 2012 ; Russell: the Journal of Bertrand Russell Studies Volume 32 ; 32 ; 2012 ; >
