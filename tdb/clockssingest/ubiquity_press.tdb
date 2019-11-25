@@ -855,7 +855,7 @@
       #publisher = Ubiquity Press
 
       au < crawling ; exists ; 2018 ; 1 ; Future Cities and Environment Volume 2018 ; 2018 ; https://futurecitiesandenvironment.com/ ; >
-      au < expected ; exists ; 2019 ; 2 ; Future Cities and Environment Volume 2019 ; 2019 ; https://futurecitiesandenvironment.com/ ; >
+      au < manifest ; exists ; 2019 ; 2 ; Future Cities and Environment Volume 2019 ; 2019 ; https://futurecitiesandenvironment.com/ ; >
 
   }
 
@@ -1021,7 +1021,7 @@
       au < frozen ; exists ; 2016 ; 7 ; Journal of European Psychology Students Volume 2016 ; 2016 ; http://jeps.efpsa.org/ ; >
       au < deepCrawl ; exists ; 2017 ; 8 ; Journal of European Psychology Students Volume 2017 ; 2017 ; http://jeps.efpsa.org/ ; >
       au < deepCrawl ; exists ; 2018 ; 9 ; Journal of European Psychology Students Volume 2018 ; 2018 ; https://jeps.efpsa.org/ ; >
-      au < exists ; exists ; 2019 ; 10 ; Journal of European Psychology Students Volume 2019 ; 2019 ; https://jeps.efpsa.org/ ; >
+      au < manifest ; exists ; 2019 ; 10 ; Journal of European Psychology Students Volume 2019 ; 2019 ; https://jeps.efpsa.org/ ; >
 
   }
 
