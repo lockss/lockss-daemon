@@ -234,10 +234,10 @@
     param[base_url] = http://archsurg.jamanetwork.com/
     param[resource_id] = 76
     
-    au <doNotProcess ; doNotProcess ; 1922 ; Archives of Surgery Volume 5 ; 5 ; >
-    au <doNotProcess ; doNotProcess ; 1922 ; Archives of Surgery Volume 6 ; 6 ; >
-    au <doNotProcess ; doNotProcess ; 1976 ; Archives of Surgery Volume 111 ; 1976 ; >
-    au <doNotProcess ; doNotProcess ; 1999 ; Archives of Surgery Volume 134 ; 1999 ; >
+    au < doNotProcess ; doNotProcess ; 1922 ; Archives of Surgery Volume 5 ; 5 ; >
+    au < doNotProcess ; doNotProcess ; 1922 ; Archives of Surgery Volume 6 ; 6 ; >
+    au < doNotProcess ; doNotProcess ; 1976 ; Archives of Surgery Volume 111 ; 1976 ; >
+    au < doNotProcess ; doNotProcess ; 1999 ; Archives of Surgery Volume 134 ; 1999 ; >
     au < superseded ; exists ; 2012 ; Archives of Surgery Volume 147 [superseded] ; 2012 ; >
   
   }
@@ -277,13 +277,13 @@
     param[base_url] = http://archneurpsyc.jamanetwork.com/
     param[resource_id] = 91
 
-    au <doNotProcess ; doNotProcess ; 1923 ; AMA Archives of Neurology and Psychiatry Volume 9 ; 9 ; >
-    au <doNotProcess ; doNotProcess ; 1929 ; AMA Archives of Neurology and Psychiatry Volume 21 ; 21 ; >
-    au <doNotProcess ; doNotProcess ; 1933 ; AMA Archives of Neurology and Psychiatry Volume 29 ; 29 ; >
-    au <doNotProcess ; doNotProcess ; 1939 ; AMA Archives of Neurology and Psychiatry Volume 41 ; 41 ; >
-    au <doNotProcess ; doNotProcess ; 1945 ; AMA Archives of Neurology and Psychiatry Volume 53 ; 53 ; >
-    au <doNotProcess ; doNotProcess ; 1951 ; AMA Archives of Neurology and Psychiatry Volume 65 ; 65 ; >
-    au <doNotProcess ; doNotProcess ; 1957 ; AMA Archives of Neurology and Psychiatry Volume 77 ; 77 ; >
+    au < doNotProcess ; doNotProcess ; 1923 ; AMA Archives of Neurology and Psychiatry Volume 9 ; 9 ; >
+    au < doNotProcess ; doNotProcess ; 1929 ; AMA Archives of Neurology and Psychiatry Volume 21 ; 21 ; >
+    au < doNotProcess ; doNotProcess ; 1933 ; AMA Archives of Neurology and Psychiatry Volume 29 ; 29 ; >
+    au < doNotProcess ; doNotProcess ; 1939 ; AMA Archives of Neurology and Psychiatry Volume 41 ; 41 ; >
+    au < doNotProcess ; doNotProcess ; 1945 ; AMA Archives of Neurology and Psychiatry Volume 53 ; 53 ; >
+    au < doNotProcess ; doNotProcess ; 1951 ; AMA Archives of Neurology and Psychiatry Volume 65 ; 65 ; >
+    au < doNotProcess ; doNotProcess ; 1957 ; AMA Archives of Neurology and Psychiatry Volume 77 ; 77 ; >
 
   }
 
