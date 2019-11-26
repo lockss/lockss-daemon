@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<crossref_result xmlns="http://www.crossref.org/qrschema/3.0" version="3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.crossref.org/qrschema/3.0 http://www.crossref.org/schemas/crossref_query_output3.0.xsd">
+    <query_result>
+        <head>
+            <doi_batch_id>none</doi_batch_id>
+        </head>
+        <body>
+            <query status="resolved">
+                <doi type="journal_article">10.22580/2016/iSciNoteJ1.1.2</doi>
+                <crm-item name="publisher-name" type="string">Mondal I-Sciences</crm-item>
+                <crm-item name="prefix-name" type="string">Mondal I-Sciences</crm-item>
+                <crm-item name="member-id" type="number">9864</crm-item>
+                <crm-item name="citation-id" type="number">92163583</crm-item>
+                <crm-item name="journal-id" type="number">304110</crm-item>
+                <crm-item name="deposit-timestamp" type="number">201708060435</crm-item>
+                <crm-item name="owner-prefix" type="string">10.22580</crm-item>
+                <crm-item name="last-update" type="date">2017-08-06T08:35:54Z</crm-item>
+                <crm-item name="created" type="date">2017-08-06T08:35:52Z</crm-item>
+                <crm-item name="citedby-count" type="number">0</crm-item>
+                <doi_record>
+                    <crossref xmlns="http://www.crossref.org/xschema/1.1" xsi:schemaLocation="http://www.crossref.org/xschema/1.1 http://doi.crossref.org/schemas/unixref1.1.xsd">
+                        <journal>
+                            <journal_metadata>
+                                <full_title>iScience Notes</full_title>
+                                <abbrev_title>iSci. Note.</abbrev_title>
+                                <doi_data>
+                                    <doi>10.22580/2016/iSciNote</doi>
+                                    <resource>http://www.isciencenote.com/</resource>
+                                </doi_data>
+                            </journal_metadata>
+                            <journal_issue>
+                                <publication_date media_type="online">
+                                    <month>10</month>
+                                    <day>15</day>
+                                    <year>2016</year>
+                                </publication_date>
+                                <journal_volume>
+                                    <volume>9</volume>
+                                </journal_volume>
+                                <issue>7</issue>
+                                <doi_data>
+                                    <doi>10.22580/2016/iSciNoteJ1.2</doi>
+                                    <resource>http://isciencenote.com/journal.html?id=chris1234</resource>
+                                </doi_data>
+                            </journal_issue>
+                            <journal_article publication_type="full_text">
+                                <titles>
+                                    <title>HIV Latent Reservoir Cure Strategies</title>
+                                </titles>
+                                <contributors>
+                                    <person_name sequence="first" contributor_role="author">
+                                        <given_name>Christopher J.</given_name>
+                                        <surname>Destache</surname>
+                                    </person_name>
+                                </contributors>
+                                <publication_date media_type="online">
+                                    <month>10</month>
+                                    <day>15</day>
+                                    <year>2016</year>
+                                </publication_date>
+                                <pages>
+                                    <first_page>1</first_page>
+                                    <last_page>1</last_page>
+                                </pages>
+                                <doi_data>
+                                    <doi>10.22580/2016/iSciNoteJ1.1.2</doi>
+                                    <resource>http://isciencenote.com/journal.html?id=chris1234</resource>
+                                </doi_data>
+                            </journal_article>
+                        </journal>
+                    </crossref>
+                </doi_record>
+            </query>
+        </body>
+    </query_result>
+</crossref_result>
