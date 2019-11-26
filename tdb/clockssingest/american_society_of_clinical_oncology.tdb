@@ -122,9 +122,9 @@
       au < finished ; manifest ; 2011 ; Journal of Oncology Practice Volume 7 ; 7 ; http://ascopubs.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2012 ; Journal of Oncology Practice Volume 8 ; 8 ; http://ascopubs.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2013 ; Journal of Oncology Practice Volume 9 ; 9 ; http://ascopubs.org/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2014 ; Journal of Oncology Practice Volume 10 ; 10 ; http://ascopubs.org/ ; >
-      au < frozen ; exists ; 2015 ; Journal of Oncology Practice Volume 11 ; 11 ; http://ascopubs.org/ ; >
-      au < frozen ; exists ; 2016 ; Journal of Oncology Practice Volume 12 ; 12 ; http://ascopubs.org/ ; >
+      au < finished ; manifest ; 2014 ; Journal of Oncology Practice Volume 10 ; 10 ; http://ascopubs.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2015 ; Journal of Oncology Practice Volume 11 ; 11 ; http://ascopubs.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2016 ; Journal of Oncology Practice Volume 12 ; 12 ; http://ascopubs.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; Journal of Oncology Practice Volume 13 ; 13 ; http://ascopubs.org/ ; >
       au < deepCrawl ; exists ; 2018 ; Journal of Oncology Practice Volume 14 ; 14 ; http://ascopubs.org/ ; >
       au < crawling ; exists ; 2019 ; Journal of Oncology Practice Volume 15 ; 15 ; https://ascopubs.org/ ; >
