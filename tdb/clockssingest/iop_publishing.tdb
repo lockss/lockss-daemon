@@ -817,7 +817,7 @@
     au < finished ; finished ; 2010 ; Inverse Problems Volume 26 ; 26 ; > 
     au < finished ; finished ; 2011 ; Inverse Problems Volume 27 ; 27 ; > 
     au < finished ; frozen ; 2012 ; Inverse Problems Volume 28 ; 28 ; > 
-    au < frozen ; exists ; 2013 ; Inverse Problems Volume 29 ; 29 ; > 
+    au < finished ; manifest ; 2013 ; Inverse Problems Volume 29 ; 29 ; reingest4.clockss.org:8082 >
     au < zapped ; finished ; 2014 ; Inverse Problems Volume 30 ; 30 ; reingest3.clockss.org:8083 > 
     au < superseded ; exists ; 2015 ; Inverse Problems Volume 31 [superseded] ; 31 ; > #no substance
 
@@ -1167,8 +1167,8 @@
     au < finished ; finished ; 2010 ; Journal of Instrumentation Volume 5 ; 5 ; > 
     au < finished ; frozen ; 2011 ; Journal of Instrumentation Volume 6 ; 6 ; > 
     au < finished ; frozen ; 2012 ; Journal of Instrumentation Volume 7 ; 7 ; > 
-    au < frozen ; exists ; 2013 ; Journal of Instrumentation Volume 8 ; 8 ; > 
-    au < frozen ; exists ; 2014 ; Journal of Instrumentation Volume 9 ; 9 ; > 
+    au < finished ; manifest ; 2013 ; Journal of Instrumentation Volume 8 ; 8 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2014 ; Journal of Instrumentation Volume 9 ; 9 ; reingest4.clockss.org:8082 >
     au < superseded ; exists ; 2015; Journal of Instrumentation Volume 10 [superseded] ; 10 ; > #no substance
 
   }
@@ -1206,9 +1206,9 @@
     au < finished ; finished ; 2009 ; Journal of Micromechanics and Microengineering Volume 19 ; 19 ; > 
     au < finished ; frozen ; 2010 ; Journal of Micromechanics and Microengineering Volume 20 ; 20 ; > 
     au < finished ; frozen ; 2011 ; Journal of Micromechanics and Microengineering Volume 21 ; 21 ; > 
-    au < frozen ; exists ; 2012 ; Journal of Micromechanics and Microengineering Volume 22 ; 22 ; > 
-    au < frozen ; exists ; 2013 ; Journal of Micromechanics and Microengineering Volume 23 ; 23 ; > 
-    au < frozen ; exists ; 2014 ; Journal of Micromechanics and Microengineering Volume 24 ; 24 ; > 
+    au < finished ; manifest ; 2012 ; Journal of Micromechanics and Microengineering Volume 22 ; 22 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2013 ; Journal of Micromechanics and Microengineering Volume 23 ; 23 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2014 ; Journal of Micromechanics and Microengineering Volume 24 ; 24 ; reingest4.clockss.org:8082 >
     au < superseded ; exists ; 2015 ; Journal of Micromechanics and Microengineering Volume 25 [superseded] ; 25 ; > #no substance
 
   }
@@ -1278,8 +1278,8 @@
     au < finished ; finished ; 2010 ; Journal of Optics Volume 12 ; 12 ; > 
     au < finished ; frozen ; 2011 ; Journal of Optics Volume 13 ; 13 ; > 
     au < finished ; frozen ; 2012 ; Journal of Optics Volume 14 ; 14 ; > 
-    au < frozen ; exists ; 2013 ; Journal of Optics Volume 15 ; 15 ; > 
-    au < frozen ; exists ; 2014 ; Journal of Optics Volume 16 ; 16 ; > 
+    au < finished ; manifest ; 2013 ; Journal of Optics Volume 15 ; 15 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2014 ; Journal of Optics Volume 16 ; 16 ; reingest1.clockss.org:8082 >
     au < superseded ; exists ; 2015; Journal of Optics Volume 17 [superseded] ; 17 ; > #no substance
 
   }
@@ -1464,8 +1464,8 @@
     au < finished ; finished ; 2010 ; Journal of Physics A: Mathematical and Theoretical Volume 43 ; 43 ; > 
     au < finished ; frozen ; 2011 ; Journal of Physics A: Mathematical and Theoretical Volume 44 ; 44 ; > 
     au < finished ; frozen ; 2012 ; Journal of Physics A: Mathematical and Theoretical Volume 45 ; 45 ; > 
-    au < frozen ; exists ; 2013 ; Journal of Physics A: Mathematical and Theoretical Volume 46 ; 46 ; > 
-    au < frozen ; exists ; 2014 ; Journal of Physics A: Mathematical and Theoretical Volume 47 ; 47 ; > 
+    au < finished ; manifest ; 2013 ; Journal of Physics A: Mathematical and Theoretical Volume 46 ; 46 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2014 ; Journal of Physics A: Mathematical and Theoretical Volume 47 ; 47 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Physics A: Mathematical and Theoretical Volume 48 ; 48 ; > 
 
   }
@@ -1765,9 +1765,9 @@
     au < finished ; finished ; 2009 ; Journal of Physics G: Nuclear and Particle Physics Volume 36 ; 36 ; > 
     au < finished ; finished ; 2010 ; Journal of Physics G: Nuclear and Particle Physics Volume 37 ; 37 ; > 
     au < finished ; finished ; 2011 ; Journal of Physics G: Nuclear and Particle Physics Volume 38 ; 38 ; > 
-    au < frozen ; exists ; 2012 ; Journal of Physics G: Nuclear and Particle Physics Volume 39 ; 39 ; > 
-    au < frozen ; exists ; 2013 ; Journal of Physics G: Nuclear and Particle Physics Volume 40 ; 40 ; > 
-    au < frozen ; exists ; 2014 ; Journal of Physics G: Nuclear and Particle Physics Volume 41 ; 41 ; > 
+    au < finished ; manifest ; 2012 ; Journal of Physics G: Nuclear and Particle Physics Volume 39 ; 39 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2013 ; Journal of Physics G: Nuclear and Particle Physics Volume 40 ; 40 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2014 ; Journal of Physics G: Nuclear and Particle Physics Volume 41 ; 41 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Physics G: Nuclear and Particle Physics Volume 42 ; 42 ; > 
 
   }
