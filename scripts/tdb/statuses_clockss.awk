@@ -3,6 +3,8 @@
 
 BEGIN {
   #After July 1 of this year, start reporting on this year. Before that, ignore this year.
+  str = "date +%m-%d-%Y";
+  str | getline date;
   str = "date +%Y";
   str | getline current_year;
   #close str;
@@ -16,6 +18,7 @@ BEGIN {
   FS="\t"
   pn = 0
 }
+$3>date
 
 {
   # add a loop to add line only if either status is (wanted or testing) or ending year is gt or eq to contract year
@@ -148,7 +151,8 @@ END {
     }
 
   printf "\n"
-  #printf "%s", date
-  #printf "\n"
+  printf "%s", date
+  printf "\n"
+
 }
 
