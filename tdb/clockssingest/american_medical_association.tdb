@@ -47,7 +47,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; JAMA Dermatology Volume 149 ; 2013 ; https://jamanetwork.com/ ; >
     au < doNotProcess ; doNotProcess ; 2014 ; JAMA Dermatology Volume 150 ; 2014 ; https://jamanetwork.com/ ; >
     au < doNotProcess ; doNotProcess ; 2015 ; JAMA Dermatology Volume 151 ; 2015 ; https://jamanetwork.com/ ; >
-    au < finished ; crawling ; 2016 ; JAMA Dermatology Volume 152 ; 2016 ; http://jamanetwork.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; JAMA Dermatology Volume 152 ; 2016 ; http://jamanetwork.com/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; JAMA Dermatology Volume 153 ; 2017 ; http://jamanetwork.com/ ; >
     au < deepCrawl ; exists ; 2018 ; JAMA Dermatology Volume 154 ; 2018 ; https://jamanetwork.com/ ; >
     au < manifest ; exists ; 2019 ; JAMA Dermatology Volume 155 ; 2019 ; https://jamanetwork.com/ ; >
