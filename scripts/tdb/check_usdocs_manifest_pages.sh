@@ -1,5 +1,5 @@
 #! /bin/bash
-# Script that creates a list of auids that are ready to be pushed to the gln, based on clockss test results
+# Script that creates a list of AUs by collection_id and year, that are missing from the USDocs tdb files.
 #
 
 tpath="/home/$LOGNAME/tmp"
