@@ -62,8 +62,8 @@
     au < finished ; finished ; 2010 ; Advances in Natural Science: Nanoscience and Nanotechnology Volume 1 ; 1 ; > 
     au < finished ; finished ; 2011 ; Advances in Natural Science: Nanoscience and Nanotechnology Volume 2 ; 2 ; >
     au < finished ; frozen ; 2012 ; Advances in Natural Science: Nanoscience and Nanotechnology Volume 3 ; 3 ; > 
-    au < finished ; manifest ; 2013 ; Advances in Natural Science: Nanoscience and Nanotechnology Volume 4 ; 4 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2014 ; Advances in Natural Science: Nanoscience and Nanotechnology Volume 5 ; 5 ; reingest1.clockss.org:8082 > 
+    au < finished ; crawling ; 2013 ; Advances in Natural Science: Nanoscience and Nanotechnology Volume 4 ; 4 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2014 ; Advances in Natural Science: Nanoscience and Nanotechnology Volume 5 ; 5 ; reingest1.clockss.org:8082 > 
     au < superseded ; exists ; 2015; Advances in Natural Science: Nanoscience and Nanotechnology Volume 6 [superseded] ; 6 ; > #no substance
 
   }
@@ -81,12 +81,12 @@
     comment[param] = eissn preferred
 
     au < finished ; finished ; 2008 ; Applied Physics Express Volume 1 ; 1 ; >
-    au < finished ; manifest ; 2009 ; Applied Physics Express Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2009 ; Applied Physics Express Volume 2 ; 2 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2010 ; Applied Physics Express Volume 3 ; 3 ; >
     au < finished ; finished ; 2011 ; Applied Physics Express Volume 4 ; 4 ; >
     au < finished ; finished ; 2012 ; Applied Physics Express Volume 5 ; 5 ; >
     au < zapped ; finished ; 2013 ; Applied Physics Express Volume 6 ; 6 ; >
-    au < finished ; manifest ; 2014 ; Applied Physics Express Volume 7 ; 7 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2014 ; Applied Physics Express Volume 7 ; 7 ; reingest3.clockss.org:8083 >
     au < superseded ; exists ; 2015; Applied Physics Express Volume 8 [superseded] ; 8 ; > #no substance
 
   }
@@ -107,7 +107,7 @@
     au < finished ; finished ; 2010 ; Biofabrication Volume 2 ; 2 ; > 
     au < finished ; finished ; 2011 ; Biofabrication Volume 3 ; 3 ; > 
     au < finished ; frozen ; 2012 ; Biofabrication Volume 4 ; 4 ; > 
-    au < finished ; manifest ; 2013 ; Biofabrication Volume 5 ; 5 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; Biofabrication Volume 5 ; 5 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Biofabrication Volume 6 ; 6 ; reingest5.clockss.org:8082 > 
     au < doNotProcess ; doNotProcess ; 2015 ; Biofabrication Volume 7 ; 7 ; > 
 
@@ -132,8 +132,8 @@
     au < finished ; finished ; 2010 ; Bioinspiration & Biomimetics Volume 5 ; 5 ; > 
     au < finished ; finished ; 2011 ; Bioinspiration & Biomimetics Volume 6 ; 6 ; > 
     au < finished ; frozen ; 2012 ; Bioinspiration & Biomimetics Volume 7 ; 7 ; > 
-    au < finished ; manifest ; 2013 ; Bioinspiration & Biomimetics Volume 8 ; 8 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2014 ; Bioinspiration & Biomimetics Volume 9 ; 9 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; Bioinspiration & Biomimetics Volume 8 ; 8 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; Bioinspiration & Biomimetics Volume 9 ; 9 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2015 ; Bioinspiration & Biomimetics Volume 10 ; 10 ; > 
 
   }
@@ -400,8 +400,8 @@
     au < finished ; finished ; 2010 ; Classical and Quantum Gravity Volume 27 ; 27 ; > 
     au < finished ; frozen ; 2011 ; Classical and Quantum Gravity Volume 28 ; 28 ; > 
     au < finished ; frozen ; 2012 ; Classical and Quantum Gravity Volume 29 ; 29 ; > 
-    au < finished ; manifest ; 2013 ; Classical and Quantum Gravity Volume 30 ; 30 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2014 ; Classical and Quantum Gravity Volume 31 ; 31 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; Classical and Quantum Gravity Volume 30 ; 30 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; Classical and Quantum Gravity Volume 31 ; 31 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2015 ; Classical and Quantum Gravity Volume 32 ; 32 ; > 
 
   }
@@ -528,9 +528,9 @@
     au < finished ; finished ; 2009 ; Environmental Research Letters Volume 4 ; 4 ; > 
     au < finished ; finished ; 2010 ; Environmental Research Letters Volume 5 ; 5 ; > 
     au < finished ; finished ; 2011 ; Environmental Research Letters Volume 6 ; 6 ; > 
-    au < finished ; manifest ; 2012 ; Environmental Research Letters Volume 7 ; 7 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2013 ; Environmental Research Letters Volume 8 ; 8 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2014 ; Environmental Research Letters Volume 9 ; 9 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2012 ; Environmental Research Letters Volume 7 ; 7 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2013 ; Environmental Research Letters Volume 8 ; 8 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2014 ; Environmental Research Letters Volume 9 ; 9 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; exists ; 2015 ; Environmental Research Letters Volume 10 ; 10 ; > 
 
   }
@@ -574,7 +574,7 @@
     au < doNotProcess ; doNotProcess ; 1993 ; EPL (Europhysics Letters) Volume 23 ; 23 ; > 
     au < doNotProcess ; doNotProcess ; 1993 ; EPL (Europhysics Letters) Volume 24 ; 24 ; > 
     au < doNotProcess ; doNotProcess ; 1994 ; EPL (Europhysics Letters) Volume 25 ; 25 ; > 
-    au < finished ; manifest ; 1994 ; EPL (Europhysics Letters) Volume 26 ; 26 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 1994 ; EPL (Europhysics Letters) Volume 26 ; 26 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 1994 ; EPL (Europhysics Letters) Volume 27 ; 27 ; > 
     au < doNotProcess ; doNotProcess ; 1994 ; EPL (Europhysics Letters) Volume 28 ; 28 ; > 
     au < doNotProcess ; doNotProcess ; 1995 ; EPL (Europhysics Letters) Volume 29 ; 29 ; > 
@@ -645,14 +645,14 @@
     au < finished ; frozen ; 2011 ; EPL (Europhysics Letters) Volume 94 ; 94 ; > 
     au < finished ; frozen ; 2011 ; EPL (Europhysics Letters) Volume 95 ; 95 ; > 
     au < finished ; frozen ; 2011 ; EPL (Europhysics Letters) Volume 96 ; 96 ; >
-    au < finished ; manifest ; 2012 ; EPL (Europhysics Letters) Volume 97 ; 97 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2012 ; EPL (Europhysics Letters) Volume 97 ; 97 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2012 ; EPL (Europhysics Letters) Volume 98 ; 98 ; >
-    au < finished ; manifest ; 2012 ; EPL (Europhysics Letters) Volume 99 ; 99 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2012 ; EPL (Europhysics Letters) Volume 100 ; 100 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2013 ; EPL (Europhysics Letters) Volume 101 ; 101 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2013 ; EPL (Europhysics Letters) Volume 102 ; 102 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2013 ; EPL (Europhysics Letters) Volume 103 ; 103 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2013 ; EPL (Europhysics Letters) Volume 104 ; 104 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2012 ; EPL (Europhysics Letters) Volume 99 ; 99 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2012 ; EPL (Europhysics Letters) Volume 100 ; 100 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2013 ; EPL (Europhysics Letters) Volume 101 ; 101 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; EPL (Europhysics Letters) Volume 102 ; 102 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; EPL (Europhysics Letters) Volume 103 ; 103 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; EPL (Europhysics Letters) Volume 104 ; 104 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; EPL (Europhysics Letters) Volume 105 ; 105 ; >
     au < finished ; finished ; 2014 ; EPL (Europhysics Letters) Volume 106 ; 106 ; >
     au < finished ; finished ; 2014 ; EPL (Europhysics Letters) Volume 107 ; 107 ; >
@@ -817,7 +817,7 @@
     au < finished ; finished ; 2010 ; Inverse Problems Volume 26 ; 26 ; > 
     au < finished ; finished ; 2011 ; Inverse Problems Volume 27 ; 27 ; > 
     au < finished ; frozen ; 2012 ; Inverse Problems Volume 28 ; 28 ; > 
-    au < finished ; manifest ; 2013 ; Inverse Problems Volume 29 ; 29 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; Inverse Problems Volume 29 ; 29 ; reingest4.clockss.org:8082 >
     au < zapped ; finished ; 2014 ; Inverse Problems Volume 30 ; 30 ; reingest3.clockss.org:8083 > 
     au < superseded ; exists ; 2015 ; Inverse Problems Volume 31 [superseded] ; 31 ; > #no substance
 
@@ -1167,8 +1167,8 @@
     au < finished ; finished ; 2010 ; Journal of Instrumentation Volume 5 ; 5 ; > 
     au < finished ; frozen ; 2011 ; Journal of Instrumentation Volume 6 ; 6 ; > 
     au < finished ; frozen ; 2012 ; Journal of Instrumentation Volume 7 ; 7 ; > 
-    au < finished ; manifest ; 2013 ; Journal of Instrumentation Volume 8 ; 8 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2014 ; Journal of Instrumentation Volume 9 ; 9 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; Journal of Instrumentation Volume 8 ; 8 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2014 ; Journal of Instrumentation Volume 9 ; 9 ; reingest4.clockss.org:8082 >
     au < superseded ; exists ; 2015; Journal of Instrumentation Volume 10 [superseded] ; 10 ; > #no substance
 
   }
@@ -1206,9 +1206,9 @@
     au < finished ; finished ; 2009 ; Journal of Micromechanics and Microengineering Volume 19 ; 19 ; > 
     au < finished ; frozen ; 2010 ; Journal of Micromechanics and Microengineering Volume 20 ; 20 ; > 
     au < finished ; frozen ; 2011 ; Journal of Micromechanics and Microengineering Volume 21 ; 21 ; > 
-    au < finished ; manifest ; 2012 ; Journal of Micromechanics and Microengineering Volume 22 ; 22 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2013 ; Journal of Micromechanics and Microengineering Volume 23 ; 23 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2014 ; Journal of Micromechanics and Microengineering Volume 24 ; 24 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2012 ; Journal of Micromechanics and Microengineering Volume 22 ; 22 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; Journal of Micromechanics and Microengineering Volume 23 ; 23 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2014 ; Journal of Micromechanics and Microengineering Volume 24 ; 24 ; reingest4.clockss.org:8082 >
     au < superseded ; exists ; 2015 ; Journal of Micromechanics and Microengineering Volume 25 [superseded] ; 25 ; > #no substance
 
   }
@@ -1278,8 +1278,8 @@
     au < finished ; finished ; 2010 ; Journal of Optics Volume 12 ; 12 ; > 
     au < finished ; frozen ; 2011 ; Journal of Optics Volume 13 ; 13 ; > 
     au < finished ; frozen ; 2012 ; Journal of Optics Volume 14 ; 14 ; > 
-    au < finished ; manifest ; 2013 ; Journal of Optics Volume 15 ; 15 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2014 ; Journal of Optics Volume 16 ; 16 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; Journal of Optics Volume 15 ; 15 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; Journal of Optics Volume 16 ; 16 ; reingest1.clockss.org:8082 >
     au < superseded ; exists ; 2015; Journal of Optics Volume 17 [superseded] ; 17 ; > #no substance
 
   }
@@ -1464,8 +1464,8 @@
     au < finished ; finished ; 2010 ; Journal of Physics A: Mathematical and Theoretical Volume 43 ; 43 ; > 
     au < finished ; frozen ; 2011 ; Journal of Physics A: Mathematical and Theoretical Volume 44 ; 44 ; > 
     au < finished ; frozen ; 2012 ; Journal of Physics A: Mathematical and Theoretical Volume 45 ; 45 ; > 
-    au < finished ; manifest ; 2013 ; Journal of Physics A: Mathematical and Theoretical Volume 46 ; 46 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2014 ; Journal of Physics A: Mathematical and Theoretical Volume 47 ; 47 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2013 ; Journal of Physics A: Mathematical and Theoretical Volume 46 ; 46 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; Journal of Physics A: Mathematical and Theoretical Volume 47 ; 47 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Physics A: Mathematical and Theoretical Volume 48 ; 48 ; > 
 
   }
@@ -1765,9 +1765,9 @@
     au < finished ; finished ; 2009 ; Journal of Physics G: Nuclear and Particle Physics Volume 36 ; 36 ; > 
     au < finished ; finished ; 2010 ; Journal of Physics G: Nuclear and Particle Physics Volume 37 ; 37 ; > 
     au < finished ; finished ; 2011 ; Journal of Physics G: Nuclear and Particle Physics Volume 38 ; 38 ; > 
-    au < finished ; manifest ; 2012 ; Journal of Physics G: Nuclear and Particle Physics Volume 39 ; 39 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2013 ; Journal of Physics G: Nuclear and Particle Physics Volume 40 ; 40 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2014 ; Journal of Physics G: Nuclear and Particle Physics Volume 41 ; 41 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2012 ; Journal of Physics G: Nuclear and Particle Physics Volume 39 ; 39 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2013 ; Journal of Physics G: Nuclear and Particle Physics Volume 40 ; 40 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2014 ; Journal of Physics G: Nuclear and Particle Physics Volume 41 ; 41 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Physics G: Nuclear and Particle Physics Volume 42 ; 42 ; > 
 
   }
@@ -1831,13 +1831,13 @@
     au < doNotProcess ; doNotProcess ; 2005 ; Journal of Physics: Condensed Matter Volume 17 ; 17 ; > 
     au < doNotProcess ; doNotProcess ; 2006 ; Journal of Physics: Condensed Matter Volume 18 ; 18 ; > 
     au < doNotProcess ; doNotProcess ; 2007 ; Journal of Physics: Condensed Matter Volume 19 ; 19 ; > 
-    au < finished ; manifest ; 2008 ; Journal of Physics: Condensed Matter Volume 20 ; 20 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2008 ; Journal of Physics: Condensed Matter Volume 20 ; 20 ; reingest1.clockss.org:8082 >
     au < zapped ; finished ; 2009 ; Journal of Physics: Condensed Matter Volume 21 ; 21 ; > 
     au < finished ; frozen ; 2010 ; Journal of Physics: Condensed Matter Volume 22 ; 22 ; > 
     au < finished ; frozen ; 2011 ; Journal of Physics: Condensed Matter Volume 23 ; 23 ; > 
     au < finished ; frozen ; 2012 ; Journal of Physics: Condensed Matter Volume 24 ; 24 ; > 
-    au < finished ; manifest ; 2013 ; Journal of Physics: Condensed Matter Volume 25 ; 25 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2014 ; Journal of Physics: Condensed Matter Volume 26 ; 26 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2013 ; Journal of Physics: Condensed Matter Volume 25 ; 25 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2014 ; Journal of Physics: Condensed Matter Volume 26 ; 26 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Physics: Condensed Matter Volume 27 ; 27 ; > 
 
   }
@@ -2596,9 +2596,9 @@
     au < finished ; finished ; 2009 ; Journal of Statistical Mechanics: Theory and Experiment Volume 2009 ; 2009 ; > 
     au < finished ; finished ; 2010 ; Journal of Statistical Mechanics: Theory and Experiment Volume 2010 ; 2010 ; > 
     au < finished ; frozen ; 2011 ; Journal of Statistical Mechanics: Theory and Experiment Volume 2011 ; 2011 ; > 
-    au < finished ; manifest ; 2012 ; Journal of Statistical Mechanics: Theory and Experiment Volume 2012 ; 2012 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2013 ; Journal of Statistical Mechanics: Theory and Experiment Volume 2013 ; 2013 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2014 ; Journal of Statistical Mechanics: Theory and Experiment Volume 2014 ; 2014 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2012 ; Journal of Statistical Mechanics: Theory and Experiment Volume 2012 ; 2012 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; Journal of Statistical Mechanics: Theory and Experiment Volume 2013 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; Journal of Statistical Mechanics: Theory and Experiment Volume 2014 ; 2014 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Statistical Mechanics: Theory and Experiment Volume 2015 ; 2015 ; > 
 
   }
@@ -2719,9 +2719,9 @@
     au < finished ; finished ; 2009 ; Measurement Science and Technology Volume 20 ; 20 ; > 
     au < finished ; finished ; 2010 ; Measurement Science and Technology Volume 21 ; 21 ; > 
     au < finished ; finished ; 2011 ; Measurement Science and Technology Volume 22 ; 22 ; > 
-    au < finished ; manifest ; 2012 ; Measurement Science and Technology Volume 23 ; 23 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2013 ; Measurement Science and Technology Volume 24 ; 24 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2014 ; Measurement Science and Technology Volume 25 ; 25 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2012 ; Measurement Science and Technology Volume 23 ; 23 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; Measurement Science and Technology Volume 24 ; 24 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; Measurement Science and Technology Volume 25 ; 25 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2015 ; Measurement Science and Technology Volume 26 ; 26 ; > 
 
   }
@@ -2882,8 +2882,8 @@
     au < finished ; frozen ; 2009 ; Nanotechnology Volume 20 ; 20 ; > 
     au < finished ; frozen ; 2010 ; Nanotechnology Volume 21 ; 21 ; > 
     au < finished ; frozen ; 2011 ; Nanotechnology Volume 22 ; 22 ; > 
-    au < finished ; manifest ; 2012 ; Nanotechnology Volume 23 ; 23 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2013 ; Nanotechnology Volume 24 ; 24 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2012 ; Nanotechnology Volume 23 ; 23 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2013 ; Nanotechnology Volume 24 ; 24 ; reingest4.clockss.org:8082 >
     au < zapped ; finished ; 2014 ; Nanotechnology Volume 25 ; 25 ; > 
     au < doNotProcess ; doNotProcess ; 2015 ; Nanotechnology Volume 26 ; 26 ; > 
     
@@ -2908,13 +2908,13 @@
     au < doNotProcess ; doNotProcess ; 2005 ; New Journal of Physics Volume 7 ; 7 ; > 
     au < doNotProcess ; doNotProcess ; 2006 ; New Journal of Physics Volume 8 ; 8 ; > 
     au < doNotProcess ; doNotProcess ; 2007 ; New Journal of Physics Volume 9 ; 9 ; > 
-    au < finished ; manifest ; 2008 ; New Journal of Physics Volume 10 ; 10 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2008 ; New Journal of Physics Volume 10 ; 10 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2009 ; New Journal of Physics Volume 11 ; 11 ; > 
     au < finished ; frozen ; 2010 ; New Journal of Physics Volume 12 ; 12 ; > 
     au < finished ; frozen ; 2011 ; New Journal of Physics Volume 13 ; 13 ; > 
-    au < finished ; manifest ; 2012 ; New Journal of Physics Volume 14 ; 14 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2013 ; New Journal of Physics Volume 15 ; 15 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2014 ; New Journal of Physics Volume 16 ; 16 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2012 ; New Journal of Physics Volume 14 ; 14 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2013 ; New Journal of Physics Volume 15 ; 15 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; New Journal of Physics Volume 16 ; 16 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2015 ; New Journal of Physics Volume 17 ; 17 ; > 
 
   }
@@ -3165,11 +3165,11 @@
     au < finished ; finished ; 2011 ; Physica Scripta Volume 83 ; 83 ; > 
     au < finished ; frozen ; 2011 ; Physica Scripta Volume 84 ; 84 ; > 
     au < finished ; frozen ; 2012 ; Physica Scripta Volume 85 ; 85 ; > 
-    au < finished ; manifest ; 2012 ; Physica Scripta Volume 86 ; 86 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2013 ; Physica Scripta Volume 87 ; 87 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2013 ; Physica Scripta Volume 88 ; 88 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2014 ; Physica Scripta Volume 89 ; 89 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2014 ; Physica Scripta Volume 90 ; 90 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2012 ; Physica Scripta Volume 86 ; 86 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; Physica Scripta Volume 87 ; 87 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; Physica Scripta Volume 88 ; 88 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2014 ; Physica Scripta Volume 89 ; 89 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; Physica Scripta Volume 90 ; 90 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2015 ; Physica Scripta Volume 91 ; 91 ; > 
     au < doNotProcess ; doNotProcess ; 2015 ; Physica Scripta Volume 92 ; 92 ; > 
 
@@ -3197,7 +3197,7 @@
     au < finished ; frozen ; 2010 ; Physical Biology Volume 7 ; 7 ; > 
     au < finished ; finished ; 2011 ; Physical Biology Volume 8 ; 8 ; > 
     au < finished ; frozen ; 2012 ; Physical Biology Volume 9 ; 9 ; > 
-    au < finished ; manifest ; 2013 ; Physical Biology Volume 10 ; 10 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2013 ; Physical Biology Volume 10 ; 10 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Physical Biology Volume 11 ; 11 ; > 
     au < doNotProcess ; doNotProcess ; 2015 ; Physical Biology Volume 12 ; 12 ; > 
 
@@ -3336,8 +3336,8 @@
     au < finished ; finished ; 2009 ; Physics in Medicine and Biology Volume 54 ; 54 ; > 
     au < finished ; finished ; 2010 ; Physics in Medicine and Biology Volume 55 ; 55 ; > 
     au < finished ; frozen ; 2011 ; Physics in Medicine and Biology Volume 56 ; 56 ; > 
-    au < finished ; manifest ; 2012 ; Physics in Medicine and Biology Volume 57 ; 57 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2013 ; Physics in Medicine and Biology Volume 58 ; 58 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2012 ; Physics in Medicine and Biology Volume 57 ; 57 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; Physics in Medicine and Biology Volume 58 ; 58 ; reingest4.clockss.org:8082 >
     au < superseded ; exists ; 2014 ; Physics in Medicine and Biology Volume 59 [superseded] ; 59 ; > #no successful crawl, although content is substantial. 403 error. 
     au < doNotProcess ; doNotProcess ; 2015 ; Physics in Medicine and Biology Volume 60 ; 60 ; > 
 
@@ -3485,9 +3485,9 @@
     au < finished ; frozen ; 2009 ; Plasma Physics and Controlled Fusion Volume 51 ; 51 ; > 
     au < finished ; frozen ; 2010 ; Plasma Physics and Controlled Fusion Volume 52 ; 52 ; > 
     au < finished ; finished ; 2011 ; Plasma Physics and Controlled Fusion Volume 53 ; 53 ; >
-    au < finished ; manifest ; 2012 ; Plasma Physics and Controlled Fusion Volume 54 ; 54 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2013 ; Plasma Physics and Controlled Fusion Volume 55 ; 55 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2014 ; Plasma Physics and Controlled Fusion Volume 56 ; 56 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2012 ; Plasma Physics and Controlled Fusion Volume 54 ; 54 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2013 ; Plasma Physics and Controlled Fusion Volume 55 ; 55 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2014 ; Plasma Physics and Controlled Fusion Volume 56 ; 56 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2015 ; Plasma Physics and Controlled Fusion Volume 57 ; 57 ; >
 
   }
@@ -4016,9 +4016,9 @@
     au < finished ; finished ; 2009 ; Semiconductor Science and Technology Volume 24 ; 24 ; > 
     au < finished ; finished ; 2010 ; Semiconductor Science and Technology Volume 25 ; 25 ; > 
     au < finished ; finished ; 2011 ; Semiconductor Science and Technology Volume 26 ; 26 ; > 
-    au < finished ; manifest ; 2012 ; Semiconductor Science and Technology Volume 27 ; 27 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2013 ; Semiconductor Science and Technology Volume 28 ; 28 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2014 ; Semiconductor Science and Technology Volume 29 ; 29 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2012 ; Semiconductor Science and Technology Volume 27 ; 27 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; Semiconductor Science and Technology Volume 28 ; 28 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; Semiconductor Science and Technology Volume 29 ; 29 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2015 ; Semiconductor Science and Technology Volume 30 ; 30 ; > 
 
   }
@@ -4056,8 +4056,8 @@
     au < finished ; finished ; 2009 ; Smart Materials and Structures Volume 18 ; 18 ; > 
     au < finished ; frozen ; 2010 ; Smart Materials and Structures Volume 19 ; 19 ; > 
     au < finished ; frozen ; 2011 ; Smart Materials and Structures Volume 20 ; 20 ; > 
-    au < finished ; manifest ; 2012 ; Smart Materials and Structures Volume 21 ; 21 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2013 ; Smart Materials and Structures Volume 22 ; 22 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2012 ; Smart Materials and Structures Volume 21 ; 21 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2013 ; Smart Materials and Structures Volume 22 ; 22 ; reingest3.clockss.org:8083 >
     au < zapped ; finished ; 2014 ; Smart Materials and Structures Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Smart Materials and Structures Volume 24 ; 24 ; > 
 
@@ -4118,7 +4118,7 @@
     comment[param] = eissn preferred
 
     au < finished ; finished ; 2013 ; Surface Topography: Metrology and Properties Volume 1 ; 1 ; >
-    au < finished ; manifest ; 2014 ; Surface Topography: Metrology and Properties Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2014 ; Surface Topography: Metrology and Properties Volume 2 ; 2 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2015 ; Surface Topography: Metrology and Properties Volume 3 ; 3 ; >
 
   }
