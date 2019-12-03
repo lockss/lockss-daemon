@@ -86,7 +86,7 @@
     au < finished ; finished ; 2011 ; Applied Physics Express Volume 4 ; 4 ; >
     au < finished ; finished ; 2012 ; Applied Physics Express Volume 5 ; 5 ; >
     au < zapped ; finished ; 2013 ; Applied Physics Express Volume 6 ; 6 ; >
-    au < frozen ; exists ; 2014 ; Applied Physics Express Volume 7 ; 7 ; >
+    au < finished ; manifest ; 2014 ; Applied Physics Express Volume 7 ; 7 ; reingest3.clockss.org:8083 >
     au < superseded ; exists ; 2015; Applied Physics Express Volume 8 [superseded] ; 8 ; > #no substance
 
   }
@@ -107,7 +107,7 @@
     au < finished ; finished ; 2010 ; Biofabrication Volume 2 ; 2 ; > 
     au < finished ; finished ; 2011 ; Biofabrication Volume 3 ; 3 ; > 
     au < finished ; frozen ; 2012 ; Biofabrication Volume 4 ; 4 ; > 
-    au < frozen ; exists ; 2013 ; Biofabrication Volume 5 ; 5 ; > 
+    au < finished ; manifest ; 2013 ; Biofabrication Volume 5 ; 5 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Biofabrication Volume 6 ; 6 ; reingest5.clockss.org:8082 > 
     au < doNotProcess ; doNotProcess ; 2015 ; Biofabrication Volume 7 ; 7 ; > 
 
@@ -132,8 +132,8 @@
     au < finished ; finished ; 2010 ; Bioinspiration & Biomimetics Volume 5 ; 5 ; > 
     au < finished ; finished ; 2011 ; Bioinspiration & Biomimetics Volume 6 ; 6 ; > 
     au < finished ; frozen ; 2012 ; Bioinspiration & Biomimetics Volume 7 ; 7 ; > 
-    au < frozen ; exists ; 2013 ; Bioinspiration & Biomimetics Volume 8 ; 8 ; > 
-    au < frozen ; exists ; 2014 ; Bioinspiration & Biomimetics Volume 9 ; 9 ; > 
+    au < finished ; manifest ; 2013 ; Bioinspiration & Biomimetics Volume 8 ; 8 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2014 ; Bioinspiration & Biomimetics Volume 9 ; 9 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2015 ; Bioinspiration & Biomimetics Volume 10 ; 10 ; > 
 
   }
