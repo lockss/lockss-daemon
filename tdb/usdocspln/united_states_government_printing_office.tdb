@@ -185,8 +185,8 @@
     param[collection_id] = CPRT
 
 
-    au < exists ; 1990 ; Congressional Committee Prints 1990 ; 1990 ; https://www.govinfo.gov/ >
-    au < exists ; 1992 ; Congressional Committee Prints 1992 ; 1992 ; https://www.govinfo.gov/ >
+    au < manifest ; 1990 ; Congressional Committee Prints 1990 ; 1990 ; https://www.govinfo.gov/ >
+    au < manifest ; 1992 ; Congressional Committee Prints 1992 ; 1992 ; https://www.govinfo.gov/ >
     au < manifest ; 1993 ; Congressional Committee Prints 1993 ; 1993 ; https://www.govinfo.gov/ >
     au < released ; 2019 ; Congressional Committee Prints 2019 ; 2019 ; https://www.govinfo.gov/ >
 
@@ -576,10 +576,10 @@
     comment[0] = published from 1994 to 2008, +2017
     param[collection_id] = GAOREPORTS
 
-    au < exists ; 1989 ; Government Accountability Office Reports and Comptroller General Decisions 1989 ; 1989 ; https://www.govinfo.gov/ >
-    au < exists ; 1990 ; Government Accountability Office Reports and Comptroller General Decisions 1990 ; 1990 ; https://www.govinfo.gov/ >
-    au < exists ; 1991 ; Government Accountability Office Reports and Comptroller General Decisions 1991 ; 1991 ; https://www.govinfo.gov/ >
-    au < exists ; 1992 ; Government Accountability Office Reports and Comptroller General Decisions 1992 ; 1992 ; https://www.govinfo.gov/ >
+    au < manifest ; 1989 ; Government Accountability Office Reports and Comptroller General Decisions 1989 ; 1989 ; https://www.govinfo.gov/ >
+    au < manifest ; 1990 ; Government Accountability Office Reports and Comptroller General Decisions 1990 ; 1990 ; https://www.govinfo.gov/ >
+    au < manifest ; 1991 ; Government Accountability Office Reports and Comptroller General Decisions 1991 ; 1991 ; https://www.govinfo.gov/ >
+    au < manifest ; 1992 ; Government Accountability Office Reports and Comptroller General Decisions 1992 ; 1992 ; https://www.govinfo.gov/ >
     au < exists ; 2017 ; Government Accountability Office Reports and Comptroller General Decisions 2017 ; 2017 ; https://www.govinfo.gov/ >#EMPTY
 
   }
