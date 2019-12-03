@@ -516,7 +516,7 @@
     #param[base_url] = http://innovations.bmj.com/
 
     au < HighWirePressH20Plugin ; down ; 2015 ; BMJ Innovations Volume 1 ; 1 ; http://innovations.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; exists ; 2016; BMJ Innovations Volume 2 ; 2 ; https://innovations.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2016; BMJ Innovations Volume 2 ; 2 ; https://innovations.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; BMJ Innovations Volume 3 ; 3 ; https://innovations.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2018 ; BMJ Innovations Volume 4 ; 4 ; https://innovations.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2019 ; BMJ Innovations Volume 5 ; 5 ; https://innovations.bmj.com/ >
@@ -624,7 +624,7 @@
     #param[base_url] = http://stel.bmj.com/
     
     au < HighWirePressH20Plugin ; down ; 2014-2015 ; BMJ Simulation & Technology Enhanced Learning Volume 1 ; 1 ; http://stel.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; exists ; 2016; BMJ Simulation & Technology Enhanced Learning Volume 2 ; 2 ; https://stel.bmj.com/ > # Unable to fetch probe permission page
+    au < bmj.BMJDrupalPlugin ; manifest ; 2016; BMJ Simulation & Technology Enhanced Learning Volume 2 ; 2 ; https://stel.bmj.com/ > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; BMJ Simulation & Technology Enhanced Learning Volume 3 ; 3 ; https://stel.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2018 ; BMJ Simulation & Technology Enhanced Learning Volume 4 ; 4 ; https://stel.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2019 ; BMJ Simulation & Technology Enhanced Learning Volume 5 ; 5 ; https://stel.bmj.com/ >
@@ -1006,7 +1006,7 @@
     au < HighWirePressH20Plugin ; down ; 2013 ; European Journal of Hospital Pharmacy: Science and Practice Volume 20 ; 20 ; http://ejhp.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2014 ; European Journal of Hospital Pharmacy: Science and Practice Volume 21 ; 21 ; http://ejhp.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2015 ; European Journal of Hospital Pharmacy: Science and Practice Volume 22 ; 22 ; http://ejhp.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; exists ; 2016; European Journal of Hospital Pharmacy: Science and Practice Volume 23 ; 23 ; https://ejhp.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2016; European Journal of Hospital Pharmacy: Science and Practice Volume 23 ; 23 ; https://ejhp.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; European Journal of Hospital Pharmacy: Science and Practice Volume 24 ; 24 ; https://ejhp.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2018 ; European Journal of Hospital Pharmacy: Science and Practice Volume 25 ; 25 ; https://ejhp.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2019 ; European Journal of Hospital Pharmacy: Science and Practice Volume 26 ; 26 ; https://ejhp.bmj.com/ >
