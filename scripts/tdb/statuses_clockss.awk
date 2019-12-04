@@ -14,11 +14,11 @@ BEGIN {
   if (week<26) {
   	current_year=current_year-1
   }
-  printf "Current-Year:%s Current-Week:%s", current_year, week;
+  #printf "DEBUG: Current-Year:%s Current-Week:%s\n", current_year, week;
   FS="\t"
   pn = 0
 }
-$3>date
+#$3>date
 
 {
   # add a loop to add line only if either status is (wanted or testing) or ending year is gt or eq to contract year
@@ -47,7 +47,7 @@ $3>date
   if (length($4) > 3) {
     end_year = substr($4,length($4)-3,4)
   }
-  printf "%s\t%s\t%s\t%s\t%s\t%s\t%s\n", $1,$2,$3,$4,$7,end_year,test_year
+  #printf "DEBUG: %s\t%s\t%s\t%s\t%s\t%s\t%s\n", $1,$2,$3,$4,$7,end_year,test_year
   # Is the AU year >= the contract year or the back year. And then decide what to do with the current year.
   if ($6 == "wanted" || $6 == "testing") {
       incontract = 1;
