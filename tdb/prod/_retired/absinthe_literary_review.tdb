@@ -29,7 +29,6 @@
     {
     
       param[base_url] = http://www.absintheliteraryreview.com/
-
       comment[doNotProcess] = waiting for plugin fix
 
       au < doNotProcess ; Absinthe Literary Review 2003 ; 2003 >
