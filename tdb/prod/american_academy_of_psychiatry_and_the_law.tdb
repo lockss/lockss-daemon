@@ -28,6 +28,14 @@
     }
 
     {
+    #base_url changed upon move to Drupal.
+    param[base_url] = https://jaapl.org/
+
+    au < aapl.AAPLDrupalPlugin ; doNotProcess ; 2016 ; Journal of the American Academy of Psychiatry and the Law Online Volume 44 ; 44 >
+
+    }
+
+    {
       param[base_url] = http://www.jaapl.org/
 
     au < HighWirePressH20Plugin ; released ; 1973 ; Journal of the American Academy of Psychiatry and the Law Online Volume 1 ; 1 >
