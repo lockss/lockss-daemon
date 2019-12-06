@@ -3295,7 +3295,7 @@
     au < doNotProcess ; exists ; 2011 ; Industrial Lubrication and Tribology Volume 63 ; 63 ; https://www.emeraldinsight.com/ ; >
     au < down ; exists ; 2012 ; Industrial Lubrication and Tribology Volume 64 ; 64 ; https://www.emeraldinsight.com/ ; >
     au < down ; exists ; 2013 ; Industrial Lubrication and Tribology Volume 65 ; 65 ; https://www.emeraldinsight.com/ ; >
-    au < finished ; crawling ; 2014 ; Industrial Lubrication and Tribology Volume 66 ; 66 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2014 ; Industrial Lubrication and Tribology Volume 66 ; 66 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2015 ; Industrial Lubrication and Tribology Volume 67 ; 67 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Industrial Lubrication and Tribology Volume 68 ; 68 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Industrial Lubrication and Tribology Volume 69 ; 69 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
@@ -4506,7 +4506,7 @@
     au < finished ; finished ; 2014 ; International Journal of Law in the Built Environment Volume 6 ; 6 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; International Journal of Law in the Built Environment Volume 7 ; 7 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; International Journal of Law in the Built Environment Volume 8 ; 8 ; http://www.emeraldinsight.com/ ; >
-    au < finished ; crawling ; 2017 ; International Journal of Law in the Built Environment Volume 9 ; 9 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2017 ; International Journal of Law in the Built Environment Volume 9 ; 9 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
   }
 
   {
@@ -4564,7 +4564,7 @@
     #continues = 1747-9886
 
     au < finished ; crawling ; 2015 ; International Journal of Public Leadership Volume 11 ; 11 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; International Journal of Public Leadership Volume 12 ; 12 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; International Journal of Public Leadership Volume 12 ; 12 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; International Journal of Public Leadership Volume 13 ; 13 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2018 ; International Journal of Public Leadership Volume 14 ; 14 ; https://www.emeraldinsight.com/ ; >
     au < doNotProcess ; exists ; 2019 ; International Journal of Public Leadership Volume 15 ; 15 ; https://www.emeraldinsight.com/ ; >
@@ -4970,7 +4970,7 @@
     au < finished ; crawling ; 2014 ; International Journal of Pervasive Computing and Communications Volume 10 ; 10 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; International Journal of Pervasive Computing and Communications Volume 11 ; 11 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; International Journal of Pervasive Computing and Communications Volume 12 ; 12 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2017 ; International Journal of Pervasive Computing and Communications Volume 13 ; 13 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2017 ; International Journal of Pervasive Computing and Communications Volume 13 ; 13 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; International Journal of Pervasive Computing and Communications Volume 14 ; 14 ; https://www.emeraldinsight.com/ ; >
     au < doNotProcess ; exists ; 2019 ; International Journal of Pervasive Computing and Communications Volume 15 ; 15 ; https://www.emeraldinsight.com/ ; >
 
@@ -8364,7 +8364,7 @@
     au < finished ; finished ; 2014 ; Journal of Service Management Volume 25 ; 25 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Journal of Service Management Volume 26 ; 26 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2016 ; Journal of Service Management Volume 27 ; 27 ; http://www.emeraldinsight.com/ ; >
-    au < finished ; crawling ; 2017 ; Journal of Service Management Volume 28 ; 28 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2017 ; Journal of Service Management Volume 28 ; 28 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Journal of Service Management Volume 29 ; 29 ; https://www.emeraldinsight.com/ ; >
     au < doNotProcess ; exists ; 2019 ; Journal of Service Management Volume 30 ; 30 ; https://www.emeraldinsight.com/ ; >
 
@@ -10399,7 +10399,7 @@
     au < finished ; frozen ; 2014 ; Pacific Accounting Review Volume 26 ; 26 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Pacific Accounting Review Volume 27 ; 27 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Pacific Accounting Review Volume 28 ; 28 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2017 ; Pacific Accounting Review Volume 29 ; 29 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2017 ; Pacific Accounting Review Volume 29 ; 29 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Pacific Accounting Review Volume 30 ; 30 ; https://www.emeraldinsight.com/ ; >
     au < doNotProcess ; exists ; 2019 ; Pacific Accounting Review Volume 31 ; 31 ; https://www.emeraldinsight.com/ ; >
 
@@ -11485,7 +11485,7 @@
     au < finished ; finished ; 2014 ; Soldering & Surface Mount Technology Volume 26 ; 26 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Soldering & Surface Mount Technology Volume 27 ; 27 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2016 ; Soldering & Surface Mount Technology Volume 28 ; 28 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2017 ; Soldering & Surface Mount Technology Volume 29 ; 29 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2017 ; Soldering & Surface Mount Technology Volume 29 ; 29 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Soldering & Surface Mount Technology Volume 30 ; 30 ; https://www.emeraldinsight.com/ ; >
     au < doNotProcess ; exists ; 2019 ; Soldering & Surface Mount Technology Volume 31 ; 31 ; https://www.emeraldinsight.com/ ; >
 
@@ -11574,7 +11574,7 @@
     au < down ; exists ; 2013 ; Strategic Direction Volume 29 ; 29 ; https://www.emeraldinsight.com/ ; >
     au < finished ; finished ; 2014 ; Strategic Direction Volume 30 ; 30 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Strategic Direction Volume 31 ; 31 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2016 ; Strategic Direction Volume 32 ; 32 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Strategic Direction Volume 32 ; 32 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Strategic Direction Volume 33 ; 33 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Strategic Direction Volume 34 ; 34 ; https://www.emeraldinsight.com/ ; >
     au < doNotProcess ; exists ; 2019 ; Strategic Direction Volume 35 ; 35 ; https://www.emeraldinsight.com/ ; >
@@ -11997,7 +11997,7 @@
     au < down ; exists ; 2013 ; Therapeutic Communities: The International Journal of Therapeutic Communities Volume 34 ; 34 ; https://www.emeraldinsight.com/ ; >
     au < finished ; finished ; 2014 ; Therapeutic Communities: The International Journal of Therapeutic Communities Volume 35 ; 35 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Therapeutic Communities: The International Journal of Therapeutic Communities Volume 36 ; 36 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2016 ; Therapeutic Communities: The International Journal of Therapeutic Communities Volume 37 ; 37 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Therapeutic Communities: The International Journal of Therapeutic Communities Volume 37 ; 37 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Therapeutic Communities: The International Journal of Therapeutic Communities Volume 38 ; 38 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Therapeutic Communities: The International Journal of Therapeutic Communities Volume 39 ; 39 ; https://www.emeraldinsight.com/ ; >
     au < doNotProcess ; exists ; 2019 ; Therapeutic Communities: The International Journal of Therapeutic Communities Volume 40 ; 40 ; https://www.emeraldinsight.com/ ; >

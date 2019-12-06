@@ -572,7 +572,7 @@
       au < finished ; finished ; 2015 ; International Journal of Agile Systems and Management Volume 8 ; 8 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; International Journal of Agile Systems and Management Volume 9 ; 9 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; International Journal of Agile Systems and Management Volume 10 ; 10 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2018 ; International Journal of Agile Systems and Management Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2018 ; International Journal of Agile Systems and Management Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2019 ; International Journal of Agile Systems and Management Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -1404,7 +1404,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Business Continuity and Risk Management Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Business Continuity and Risk Management Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2014 ; International Journal of Business Continuity and Risk Management Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2015-2016 ; International Journal of Business Continuity and Risk Management Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2015-2016 ; International Journal of Business Continuity and Risk Management Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; International Journal of Business Continuity and Risk Management Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2018 ; International Journal of Business Continuity and Risk Management Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2019 ; International Journal of Business Continuity and Risk Management Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
@@ -2523,7 +2523,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Data Mining, Modelling and Management Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2014 ; International Journal of Data Mining, Modelling and Management Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2015 ; International Journal of Data Mining, Modelling and Management Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2016 ; International Journal of Data Mining, Modelling and Management Volume 8 ; 8 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2016 ; International Journal of Data Mining, Modelling and Management Volume 8 ; 8 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2017 ; International Journal of Data Mining, Modelling and Management Volume 9 ; 9 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2018 ; International Journal of Data Mining, Modelling and Management Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2019 ; International Journal of Data Mining, Modelling and Management Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; >
@@ -3692,7 +3692,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Experimental Design and Process Optimisation Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Experimental Design and Process Optimisation Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2014-2015 ; International Journal of Experimental Design and Process Optimisation Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; >
-      au < finished ; crawling ; 2016-2017 ; International Journal of Experimental Design and Process Optimisation Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2016-2017 ; International Journal of Experimental Design and Process Optimisation Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2019 ; International Journal of Experimental Design and Process Optimisation Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -4524,7 +4524,7 @@
       au < finished ; crawling ; 2016 ; International Journal of Information and Communication Technology Volume 8 ; 8 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2016 ; International Journal of Information and Communication Technology Volume 9 ; 9 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2017 ; International Journal of Information and Communication Technology Volume 10 ; 10 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2017 ; International Journal of Information and Communication Technology Volume 11 ; 11 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2017 ; International Journal of Information and Communication Technology Volume 11 ; 11 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2018 ; International Journal of Information and Communication Technology Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2018 ; International Journal of Information and Communication Technology Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2019 ; International Journal of Information and Communication Technology Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; >
@@ -4576,7 +4576,7 @@
       au < finished ; finished ; 2014 ; International Journal of Information and Decision Sciences Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2015 ; International Journal of Information and Decision Sciences Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2016 ; International Journal of Information and Decision Sciences Volume 8 ; 8 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2017 ; International Journal of Information and Decision Sciences Volume 9 ; 9 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2017 ; International Journal of Information and Decision Sciences Volume 9 ; 9 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2018 ; International Journal of Information and Decision Sciences Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2019 ; International Journal of Information and Decision Sciences Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; >
 
@@ -4706,7 +4706,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Information Technology and Management Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2014 ; International Journal of Information Technology and Management Volume 13 ; 13 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; International Journal of Information Technology and Management Volume 14 ; 14 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2016 ; International Journal of Information Technology and Management Volume 15 ; 15 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2016 ; International Journal of Information Technology and Management Volume 15 ; 15 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2017 ; International Journal of Information Technology and Management Volume 16 ; 16 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2018 ; International Journal of Information Technology and Management Volume 17 ; 17 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2019 ; International Journal of Information Technology and Management Volume 18 ; 18 ; https://www.inderscienceonline.com/ ; >
@@ -5437,7 +5437,7 @@
       au < finished ; finished ; 2015 ; International Journal of Learning and Intellectual Capital Volume 12 ; 12 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2016 ; International Journal of Learning and Intellectual Capital Volume 13 ; 13 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2017 ; International Journal of Learning and Intellectual Capital Volume 14 ; 14 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2018 ; International Journal of Learning and Intellectual Capital Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2018 ; International Journal of Learning and Intellectual Capital Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2019 ; International Journal of Learning and Intellectual Capital Volume 16 ; 16 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -6154,7 +6154,7 @@
       au < finished ; crawling ; 2016 ; International Journal of Mathematics in Operational Research Volume 9 ; 9 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2017 ; International Journal of Mathematics in Operational Research Volume 10 ; 10 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2017 ; International Journal of Mathematics in Operational Research Volume 11 ; 11 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2018 ; International Journal of Mathematics in Operational Research Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2018 ; International Journal of Mathematics in Operational Research Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2018 ; International Journal of Mathematics in Operational Research Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2019 ; International Journal of Mathematics in Operational Research Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2019 ; International Journal of Mathematics in Operational Research Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
@@ -6443,7 +6443,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Mobile Network Design and Innovation Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2013-2014 ; International Journal of Mobile Network Design and Innovation Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2015-2016 ; International Journal of Mobile Network Design and Innovation Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2017 ; International Journal of Mobile Network Design and Innovation Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2017 ; International Journal of Mobile Network Design and Innovation Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2018 ; International Journal of Mobile Network Design and Innovation Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2019 ; International Journal of Mobile Network Design and Innovation Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
 
@@ -6666,7 +6666,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Nanoparticles Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2014 ; International Journal of Nanoparticles Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2015 ; International Journal of Nanoparticles Volume 8 ; 8 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2016-2017 ; International Journal of Nanoparticles Volume 9 ; 9 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2016-2017 ; International Journal of Nanoparticles Volume 9 ; 9 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2018 ; International Journal of Nanoparticles Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2019 ; International Journal of Nanoparticles Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; >
 
@@ -8925,7 +8925,7 @@
       au < finished ; crawling ; 2016 ; International Journal of Technology Management Volume 72 ; 72 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; International Journal of Technology Management Volume 73 ; 73 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; International Journal of Technology Management Volume 74 ; 74 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2017 ; International Journal of Technology Management Volume 75 ; 75 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2017 ; International Journal of Technology Management Volume 75 ; 75 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2018 ; International Journal of Technology Management Volume 76 ; 76 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2018 ; International Journal of Technology Management Volume 77 ; 77 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2018 ; International Journal of Technology Management Volume 78 ; 78 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
@@ -9180,7 +9180,7 @@
 
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Trust Management in Computing and Communications Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2014 ; International Journal of Trust Management in Computing and Communications Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2015-2016 ; International Journal of Trust Management in Computing and Communications Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2015-2016 ; International Journal of Trust Management in Computing and Communications Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2017-2018 ; International Journal of Trust Management in Computing and Communications Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 > #issue 3,4 not online
 
     }
@@ -9993,7 +9993,7 @@
       param[journal_id] = ijbd
 
       au < finished ; frozen ; 2013-2015 ; International Journal of Bonds and Derivatives Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2016 ; International Journal of Bonds and Derivatives Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2016 ; International Journal of Bonds and Derivatives Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2017 ; International Journal of Bonds and Derivatives Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < ingNotReady ; exists ; 2018-2019 ; International Journal of Bonds and Derivatives Volume 4 ; 4 ; https://www.inderscienceonline.com/ ;  > #issue 2, 3 , 4 not online
 
@@ -10129,7 +10129,7 @@
 
       param[journal_id] = ijscor
 
-      au < finished ; crawling ; 2014-2015 ; International Journal of Supply Chain and Operations Resilience Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2014-2015 ; International Journal of Supply Chain and Operations Resilience Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2016 ; International Journal of Supply Chain and Operations Resilience Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2017-2019 ; International Journal of Supply Chain and Operations Resilience Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; >
 
