@@ -67,7 +67,7 @@
         <map>
             <entry>
                 <string>*</string>
-                <string>org.lockss.plugin.clockss.innovativepublication.AIPJatsSourceXmlMetadataExtractorFactory</string>
+                <string>org.lockss.plugin.clockss.innovativepublication.InnovativePublicationMetadataExtractorFactory</string>
             </entry>
         </map>
     </entry>
@@ -76,7 +76,7 @@
         <map>
             <entry>
                 <string>*</string>
-                <string>org.lockss.plugin.aclockss.innovativepublication.AIPJatsSourceXmlMetadataExtractorFactory</string>
+                <string>org.lockss.plugin.clockss.innovativepublication.InnovativePublicationMetadataExtractorFactory</string>
             </entry>
         </map>
     </entry>
