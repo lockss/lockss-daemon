@@ -1,0 +1,89 @@
+<map>
+    <entry>
+        <string>plugin_status</string>
+        <string>ready</string>
+    </entry>
+    <entry>
+        <string>plugin_identifier</string>
+        <string>org.lockss.plugin.clockss.gigascience.GigaSciencePlugin</string>
+    </entry>
+    <entry>
+        <string>plugin_name</string>
+        <string>Giga Science Plugin</string>
+    </entry>
+    <entry>
+        <string>plugin_version</string>
+        <string>1</string>
+    </entry>
+    <entry>
+        <string>plugin_config_props</string>
+        <list>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>base_url</key>
+                <displayName>Base URL</displayName>
+                <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+                <type>3</type>
+                <size>40</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>year</key>
+                <displayName>Year</displayName>
+                <description>Four digit year (e.g., 2018, range will be '2018-01-01' to '2018-12-31')</description>
+                <type>4</type>
+                <size>4</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+        </list>
+    </entry>
+    <entry>
+        <string>au_name</string>
+        <string>"GigaScience Files Plugin, Base URL %s, Year %d", base_url, year</string>
+    </entry>
+    <entry>
+        <string>au_refetch_depth</string>
+        <int>1</int>
+    </entry>
+    <entry>
+        <string>au_start_url</string>
+        <string>"%s/list?start_date=%d-01-01&amp;end_date=%d-12-31", base_url, year</string>
+    </entry>
+    <!-- CrawlSeed takes precedence but leave it in for safety in case daemon expects it somewhere -->
+    <!--
+    <entry>
+        <string>au_start_url</string>
+        <string>"%slockss.txt", base_url</string>
+    </entry>
+    -->
+    <!--
+    <entry>
+        <string>au_permission_url</string>
+        <string>"%slockss.txt", to_https(base_url)</string>
+    </entry>
+    -->
+    <entry>
+        <string>plugin_crawl_seed_factory</string>
+        <string>org.lockss.plugin.clockss.gigascience.GigaScienceCrawlSeedFactory</string>
+    </entry>
+    <!--
+    <entry>
+        <string>plugin_article_iterator_factory</string>
+        <string>org.lockss.plugin.gigascience.GigaScienceArticleIteratorFactory</string>
+    </entry>
+    <entry>
+        <string>plugin_article_metadata_extractor_factory</string>
+        <string>org.lockss.plugin.gigascience.GigaScienceArticleIteratorFactory</string>
+    </entry>
+    <entry>
+        <string>text/html_metadata_extractor_factory_map</string>
+        <map>
+            <entry>
+                <string>*;DublinCore</string>
+                <string>org.lockss.plugin.gigascience.GigaScienceFilesHtmlMetadataExtractorFactory</string>
+            </entry>
+        </map>
+    </entry>
+    -->
+</map>
