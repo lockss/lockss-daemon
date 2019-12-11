@@ -4,6 +4,7 @@
     name = American Society of Hematology
   >
 
+# move to SilverChair 2019
   {
 
     title <
@@ -157,60 +158,58 @@
       param[base_url] = http://www.bloodjournal.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < ash.ASHDrupalPlugin ; released ; 1993 ; Blood Volume 81 ; 81 >
-      au < ash.ASHDrupalPlugin ; released ; 1993 ; Blood Volume 82 ; 82 >
-      au < ash.ASHDrupalPlugin ; released ; 1994 ; Blood Volume 83 ; 83 >
-      au < ash.ASHDrupalPlugin ; released ; 1994 ; Blood Volume 84 ; 84 >
-      au < ash.ASHDrupalPlugin ; released ; 1995 ; Blood Volume 85 ; 85 >
-      au < ash.ASHDrupalPlugin ; released ; 1995 ; Blood Volume 86 ; 86 >
-      au < ash.ASHDrupalPlugin ; released ; 1996 ; Blood Volume 87 ; 87 >
-      au < ash.ASHDrupalPlugin ; released ; 1996 ; Blood Volume 88 ; 88 >
-      au < ash.ASHDrupalPlugin ; released ; 1997 ; Blood Volume 89 ; 89 >
-      au < ash.ASHDrupalPlugin ; released ; 1997 ; Blood Volume 90 ; 90 >
-      au < ash.ASHDrupalPlugin ; released ; 1998 ; Blood Volume 91 ; 91 >
-      au < ash.ASHDrupalPlugin ; released ; 1998 ; Blood Volume 92 ; 92 >
-      au < ash.ASHDrupalPlugin ; released ; 1999 ; Blood Volume 93 ; 93 >
-      au < ash.ASHDrupalPlugin ; released ; 1999 ; Blood Volume 94 ; 94 >
-      au < ash.ASHDrupalPlugin ; released ; 2000 ; Blood Volume 95 ; 95 >
-      au < ash.ASHDrupalPlugin ; released ; 2000 ; Blood Volume 96 ; 96 >
-      au < ash.ASHDrupalPlugin ; released ; 2001 ; Blood Volume 97 ; 97 >
-      au < ash.ASHDrupalPlugin ; released ; 2001 ; Blood Volume 98 ; 98 >
-      au < ash.ASHDrupalPlugin ; released ; 2002 ; Blood Volume 99 ; 99 >
-      au < ash.ASHDrupalPlugin ; released ; 2002 ; Blood Volume 100 ; 100 >
-      au < ash.ASHDrupalPlugin ; released ; 2003 ; Blood Volume 101 ; 101 >
-      au < ash.ASHDrupalPlugin ; released ; 2003 ; Blood Volume 102 ; 102 >
-      au < ash.ASHDrupalPlugin ; released ; 2004 ; Blood Volume 103 ; 103 >
-      au < ash.ASHDrupalPlugin ; released ; 2004 ; Blood Volume 104 ; 104 >
-      au < ash.ASHDrupalPlugin ; released ; 2005 ; Blood Volume 105 ; 105 >
-      au < ash.ASHDrupalPlugin ; released ; 2005 ; Blood Volume 106 ; 106 >
-      au < ash.ASHDrupalPlugin ; released ; 2006 ; Blood Volume 107 ; 107 >
-      au < ash.ASHDrupalPlugin ; released ; 2006 ; Blood Volume 108 ; 108 >
-      au < ash.ASHDrupalPlugin ; released ; 2007 ; Blood Volume 109 ; 109 >
-      au < ash.ASHDrupalPlugin ; released ; 2007 ; Blood Volume 110 ; 110 >
-      au < ash.ASHDrupalPlugin ; released ; 2008 ; Blood Volume 111 ; 111 >
-      au < ash.ASHDrupalPlugin ; released ; 2008 ; Blood Volume 112 ; 112 >
-      au < ash.ASHDrupalPlugin ; released ; 2009 ; Blood Volume 113 ; 113 >
-      au < ash.ASHDrupalPlugin ; released ; 2009 ; Blood Volume 114 ; 114 >
-      au < ash.ASHDrupalPlugin ; released ; 2010 ; Blood Volume 115 ; 115 >
-      au < ash.ASHDrupalPlugin ; released ; 2010 ; Blood Volume 116 ; 116 >
-      au < ash.ASHDrupalPlugin ; released ; 2011 ; Blood Volume 117 ; 117 >
-      au < ash.ASHDrupalPlugin ; released ; 2011 ; Blood Volume 118 ; 118 >
-      au < ash.ASHDrupalPlugin ; released ; 2012 ; Blood Volume 119 ; 119 >
-      au < ash.ASHDrupalPlugin ; released ; 2012 ; Blood Volume 120 ; 120 >
-      au < ash.ASHDrupalPlugin ; released ; 2013 ; Blood Volume 121 ; 121 >
-      au < ash.ASHDrupalPlugin ; released ; 2013 ; Blood Volume 122 ; 122 >
-      au < ash.ASHDrupalPlugin ; released ; 2014 ; Blood Volume 123 ; 123 >
-      au < ash.ASHDrupalPlugin ; released ; 2014 ; Blood Volume 124 ; 124 >
-      au < ash.ASHDrupalPlugin ; released ; 2015 ; Blood Volume 125 ; 125 >
-      au < ash.ASHDrupalPlugin ; released ; 2015 ; Blood Volume 126 ; 126 >
-      au < ash.ASHDrupalPlugin ; released ; 2016 ; Blood Volume 127 ; 127 >
-      au < ash.ASHDrupalPlugin ; released ; 2016 ; Blood Volume 128 ; 128 >
-      au < ash.ASHDrupalPlugin ; released ; 2017 ; Blood Volume 129 ; 129 >
-      au < ash.ASHDrupalPlugin ; released ; 2017 ; Blood Volume 130 ; 130 >
-      au < ash.ASHDrupalPlugin ; released ; 2018 ; Blood Volume 131 ; 131 >
-      au < ash.ASHDrupalPlugin ; released ; 2018 ; Blood Volume 132 ; 132 >
-      au < ash.ASHDrupalPlugin ; expected ; 2019 ; Blood Volume 133 ; 133 >
-      au < ash.ASHDrupalPlugin ; expected ; 2019 ; Blood Volume 134 ; 134 >
+      au < ash.ASHDrupalPlugin ; down ; 1993 ; Blood Volume 81 ; 81 >
+      au < ash.ASHDrupalPlugin ; down ; 1993 ; Blood Volume 82 ; 82 >
+      au < ash.ASHDrupalPlugin ; down ; 1994 ; Blood Volume 83 ; 83 >
+      au < ash.ASHDrupalPlugin ; down ; 1994 ; Blood Volume 84 ; 84 >
+      au < ash.ASHDrupalPlugin ; down ; 1995 ; Blood Volume 85 ; 85 >
+      au < ash.ASHDrupalPlugin ; down ; 1995 ; Blood Volume 86 ; 86 >
+      au < ash.ASHDrupalPlugin ; down ; 1996 ; Blood Volume 87 ; 87 >
+      au < ash.ASHDrupalPlugin ; down ; 1996 ; Blood Volume 88 ; 88 >
+      au < ash.ASHDrupalPlugin ; down ; 1997 ; Blood Volume 89 ; 89 >
+      au < ash.ASHDrupalPlugin ; down ; 1997 ; Blood Volume 90 ; 90 >
+      au < ash.ASHDrupalPlugin ; down ; 1998 ; Blood Volume 91 ; 91 >
+      au < ash.ASHDrupalPlugin ; down ; 1998 ; Blood Volume 92 ; 92 >
+      au < ash.ASHDrupalPlugin ; down ; 1999 ; Blood Volume 93 ; 93 >
+      au < ash.ASHDrupalPlugin ; down ; 1999 ; Blood Volume 94 ; 94 >
+      au < ash.ASHDrupalPlugin ; down ; 2000 ; Blood Volume 95 ; 95 >
+      au < ash.ASHDrupalPlugin ; down ; 2000 ; Blood Volume 96 ; 96 >
+      au < ash.ASHDrupalPlugin ; down ; 2001 ; Blood Volume 97 ; 97 >
+      au < ash.ASHDrupalPlugin ; down ; 2001 ; Blood Volume 98 ; 98 >
+      au < ash.ASHDrupalPlugin ; down ; 2002 ; Blood Volume 99 ; 99 >
+      au < ash.ASHDrupalPlugin ; down ; 2002 ; Blood Volume 100 ; 100 >
+      au < ash.ASHDrupalPlugin ; down ; 2003 ; Blood Volume 101 ; 101 >
+      au < ash.ASHDrupalPlugin ; down ; 2003 ; Blood Volume 102 ; 102 >
+      au < ash.ASHDrupalPlugin ; down ; 2004 ; Blood Volume 103 ; 103 >
+      au < ash.ASHDrupalPlugin ; down ; 2004 ; Blood Volume 104 ; 104 >
+      au < ash.ASHDrupalPlugin ; down ; 2005 ; Blood Volume 105 ; 105 >
+      au < ash.ASHDrupalPlugin ; down ; 2005 ; Blood Volume 106 ; 106 >
+      au < ash.ASHDrupalPlugin ; down ; 2006 ; Blood Volume 107 ; 107 >
+      au < ash.ASHDrupalPlugin ; down ; 2006 ; Blood Volume 108 ; 108 >
+      au < ash.ASHDrupalPlugin ; down ; 2007 ; Blood Volume 109 ; 109 >
+      au < ash.ASHDrupalPlugin ; down ; 2007 ; Blood Volume 110 ; 110 >
+      au < ash.ASHDrupalPlugin ; down ; 2008 ; Blood Volume 111 ; 111 >
+      au < ash.ASHDrupalPlugin ; down ; 2008 ; Blood Volume 112 ; 112 >
+      au < ash.ASHDrupalPlugin ; down ; 2009 ; Blood Volume 113 ; 113 >
+      au < ash.ASHDrupalPlugin ; down ; 2009 ; Blood Volume 114 ; 114 >
+      au < ash.ASHDrupalPlugin ; down ; 2010 ; Blood Volume 115 ; 115 >
+      au < ash.ASHDrupalPlugin ; down ; 2010 ; Blood Volume 116 ; 116 >
+      au < ash.ASHDrupalPlugin ; down ; 2011 ; Blood Volume 117 ; 117 >
+      au < ash.ASHDrupalPlugin ; down ; 2011 ; Blood Volume 118 ; 118 >
+      au < ash.ASHDrupalPlugin ; down ; 2012 ; Blood Volume 119 ; 119 >
+      au < ash.ASHDrupalPlugin ; down ; 2012 ; Blood Volume 120 ; 120 >
+      au < ash.ASHDrupalPlugin ; down ; 2013 ; Blood Volume 121 ; 121 >
+      au < ash.ASHDrupalPlugin ; down ; 2013 ; Blood Volume 122 ; 122 >
+      au < ash.ASHDrupalPlugin ; down ; 2014 ; Blood Volume 123 ; 123 >
+      au < ash.ASHDrupalPlugin ; down ; 2014 ; Blood Volume 124 ; 124 >
+      au < ash.ASHDrupalPlugin ; down ; 2015 ; Blood Volume 125 ; 125 >
+      au < ash.ASHDrupalPlugin ; down ; 2015 ; Blood Volume 126 ; 126 >
+      au < ash.ASHDrupalPlugin ; down ; 2016 ; Blood Volume 127 ; 127 >
+      au < ash.ASHDrupalPlugin ; down ; 2016 ; Blood Volume 128 ; 128 >
+      au < ash.ASHDrupalPlugin ; down ; 2017 ; Blood Volume 129 ; 129 >
+      au < ash.ASHDrupalPlugin ; down ; 2017 ; Blood Volume 130 ; 130 >
+      au < ash.ASHDrupalPlugin ; down ; 2018 ; Blood Volume 131 ; 131 >
+      au < ash.ASHDrupalPlugin ; down ; 2018 ; Blood Volume 132 ; 132 >
 
     }
 
@@ -229,26 +228,25 @@
     param[base_url] = http://asheducationbook.hematologylibrary.org/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < released ; 2000 ; Hematology: ASH Education Program Book Volume 2000 ; 2000 >
-    au < released ; 2001 ; Hematology: ASH Education Program Book Volume 2001 ; 2001 >
-    au < released ; 2002 ; Hematology: ASH Education Program Book Volume 2002 ; 2002 >
-    au < released ; 2003 ; Hematology: ASH Education Program Book Volume 2003 ; 2003 >
-    au < released ; 2004 ; Hematology: ASH Education Program Book Volume 2004 ; 2004 >
-    au < released ; 2005 ; Hematology: ASH Education Program Book Volume 2005 ; 2005 >
-    au < released ; 2006 ; Hematology: ASH Education Program Book Volume 2006 ; 2006 >
-    au < released ; 2007 ; Hematology: ASH Education Program Book Volume 2007 ; 2007 >
-    au < released ; 2008 ; Hematology: ASH Education Program Book Volume 2008 ; 2008 >
-    au < released ; 2009 ; Hematology: ASH Education Program Book Volume 2009 ; 2009 >
-    au < released ; 2010 ; Hematology: ASH Education Program Book Volume 2010 ; 2010 >
-    au < released ; 2011 ; Hematology: ASH Education Program Book Volume 2011 ; 2011 >
-    au < released ; 2012 ; Hematology: ASH Education Program Book Volume 2012 ; 2012 >
-    au < released ; 2013 ; Hematology: ASH Education Program Book Volume 2013 ; 2013 >
-    au < released ; 2014 ; Hematology: ASH Education Program Book Volume 2014 ; 2014 >
-    au < released ; 2015 ; Hematology: ASH Education Program Book Volume 2015 ; 2015 >
-    au < released ; 2016 ; Hematology: ASH Education Program Book Volume 2016 ; 2016 >
-    au < released ; 2017 ; Hematology: ASH Education Program Book Volume 2017 ; 2017 >
-    au < released ; 2018 ; Hematology: ASH Education Program Book Volume 2018 ; 2018 >
-    au < expected ; 2019 ; Hematology: ASH Education Program Book Volume 2019 ; 2019 >
+    au < down ; 2000 ; Hematology: ASH Education Program Book Volume 2000 ; 2000 >
+    au < down ; 2001 ; Hematology: ASH Education Program Book Volume 2001 ; 2001 >
+    au < down ; 2002 ; Hematology: ASH Education Program Book Volume 2002 ; 2002 >
+    au < down ; 2003 ; Hematology: ASH Education Program Book Volume 2003 ; 2003 >
+    au < down ; 2004 ; Hematology: ASH Education Program Book Volume 2004 ; 2004 >
+    au < down ; 2005 ; Hematology: ASH Education Program Book Volume 2005 ; 2005 >
+    au < down ; 2006 ; Hematology: ASH Education Program Book Volume 2006 ; 2006 >
+    au < down ; 2007 ; Hematology: ASH Education Program Book Volume 2007 ; 2007 >
+    au < down ; 2008 ; Hematology: ASH Education Program Book Volume 2008 ; 2008 >
+    au < down ; 2009 ; Hematology: ASH Education Program Book Volume 2009 ; 2009 >
+    au < down ; 2010 ; Hematology: ASH Education Program Book Volume 2010 ; 2010 >
+    au < down ; 2011 ; Hematology: ASH Education Program Book Volume 2011 ; 2011 >
+    au < down ; 2012 ; Hematology: ASH Education Program Book Volume 2012 ; 2012 >
+    au < down ; 2013 ; Hematology: ASH Education Program Book Volume 2013 ; 2013 >
+    au < down ; 2014 ; Hematology: ASH Education Program Book Volume 2014 ; 2014 >
+    au < down ; 2015 ; Hematology: ASH Education Program Book Volume 2015 ; 2015 >
+    au < down ; 2016 ; Hematology: ASH Education Program Book Volume 2016 ; 2016 >
+    au < down ; 2017 ; Hematology: ASH Education Program Book Volume 2017 ; 2017 >
+    au < down ; 2018 ; Hematology: ASH Education Program Book Volume 2018 ; 2018 >
 
   }
 

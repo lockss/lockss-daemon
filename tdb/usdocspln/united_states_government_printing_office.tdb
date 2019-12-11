@@ -6,7 +6,8 @@
 
   rights = openaccess
   #before 2019 AUs were released with other plugin
-  #this tdb file is 2019+; as well as some previous AUs that weren't released previously
+  #this tdb file is 2019+; as well as some previous AUs that weren't released previously. To update use script scripts/tdb/check_usdocs_manifest_pages.sh
+  #Release all content in this tdb file, then release back content starting 6/1/2019.
 
   {
 
@@ -185,7 +186,9 @@
     param[collection_id] = CPRT
 
 
-    au < exists ; 1993 ; Congressional Committee Prints 1993 ; 1993 ; https://www.govinfo.gov/ >
+    au < manifest ; 1990 ; Congressional Committee Prints 1990 ; 1990 ; https://www.govinfo.gov/ >
+    au < manifest ; 1992 ; Congressional Committee Prints 1992 ; 1992 ; https://www.govinfo.gov/ >
+    au < manifest ; 1993 ; Congressional Committee Prints 1993 ; 1993 ; https://www.govinfo.gov/ >
     au < released ; 2019 ; Congressional Committee Prints 2019 ; 2019 ; https://www.govinfo.gov/ >
 
   }
@@ -228,7 +231,7 @@
 
  
     au < exists ; 1934 ; Congressional Hearings 1934 ; 1934 ; https://www.govinfo.gov/ > 
-    au < exists ; 1958 ; Congressional Hearings 1958 ; 1958 ; https://www.govinfo.gov/ > #link on sitemap page does not have a pdf. See https://www.govinfo.gov/sitemap/CHRG_1958_sitemap.xml
+    au < manifest ; 1958 ; Congressional Hearings 1958 ; 1958 ; https://www.govinfo.gov/ > #link on sitemap page does not have a pdf. See https://www.govinfo.gov/sitemap/CHRG_1958_sitemap.xml
     au < doesNotExist ; 1959 ; Congressional Hearings 1959 ; 1959 ; https://www.govinfo.gov/ >
     au < released ; 1960 ; Congressional Hearings 1960 ; 1960 ; https://www.govinfo.gov/ >
     au < released ; 1961 ; Congressional Hearings 1961 ; 1961 ; https://www.govinfo.gov/ >
@@ -574,7 +577,11 @@
     comment[0] = published from 1994 to 2008, +2017
     param[collection_id] = GAOREPORTS
 
-    #au < exists ; 2017 ; Government Accountability Office Reports and Comptroller General Decisions 2017 ; 2017 ; https://www.govinfo.gov/ >#EMPTY
+    au < manifest ; 1989 ; Government Accountability Office Reports and Comptroller General Decisions 1989 ; 1989 ; https://www.govinfo.gov/ >
+    au < manifest ; 1990 ; Government Accountability Office Reports and Comptroller General Decisions 1990 ; 1990 ; https://www.govinfo.gov/ >
+    au < manifest ; 1991 ; Government Accountability Office Reports and Comptroller General Decisions 1991 ; 1991 ; https://www.govinfo.gov/ >
+    au < manifest ; 1992 ; Government Accountability Office Reports and Comptroller General Decisions 1992 ; 1992 ; https://www.govinfo.gov/ >
+    au < exists ; 2017 ; Government Accountability Office Reports and Comptroller General Decisions 2017 ; 2017 ; https://www.govinfo.gov/ >#EMPTY
 
   }
 
@@ -671,15 +678,15 @@
     param[collection_id] = PPP
 
     au < manifest ; 1929 ; Public Papers of the Presidents of the United States 1929 ; 1929 ; https://www.govinfo.gov/ >
-    au < manifest ; 1930 ; Public Papers of the Presidents of the United States 1930 ; 1930 ; https://www.govinfo.gov/ >
-    au < manifest ; 1931 ; Public Papers of the Presidents of the United States 1931 ; 1931 ; https://www.govinfo.gov/ >
+    au < ready ; 1930 ; Public Papers of the Presidents of the United States 1930 ; 1930 ; https://www.govinfo.gov/ >
+    au < ready ; 1931 ; Public Papers of the Presidents of the United States 1931 ; 1931 ; https://www.govinfo.gov/ >
     au < manifest ; 1932 ; Public Papers of the Presidents of the United States 1932 ; 1932 ; https://www.govinfo.gov/ >
 
-    au < manifest ; 1945 ; Public Papers of the Presidents of the United States 1945 ; 1945 ; https://www.govinfo.gov/ >
-    au < manifest ; 1946 ; Public Papers of the Presidents of the United States 1946 ; 1946 ; https://www.govinfo.gov/ >
-    au < manifest ; 1947 ; Public Papers of the Presidents of the United States 1947 ; 1947 ; https://www.govinfo.gov/ >
-    au < manifest ; 1948 ; Public Papers of the Presidents of the United States 1948 ; 1948 ; https://www.govinfo.gov/ >
-    au < manifest ; 1949 ; Public Papers of the Presidents of the United States 1949 ; 1949 ; https://www.govinfo.gov/ >
+    au < ready ; 1945 ; Public Papers of the Presidents of the United States 1945 ; 1945 ; https://www.govinfo.gov/ >
+    au < ready ; 1946 ; Public Papers of the Presidents of the United States 1946 ; 1946 ; https://www.govinfo.gov/ >
+    au < ready ; 1947 ; Public Papers of the Presidents of the United States 1947 ; 1947 ; https://www.govinfo.gov/ >
+    au < ready ; 1948 ; Public Papers of the Presidents of the United States 1948 ; 1948 ; https://www.govinfo.gov/ >
+    au < ready ; 1949 ; Public Papers of the Presidents of the United States 1949 ; 1949 ; https://www.govinfo.gov/ >
     au < manifest ; 1950 ; Public Papers of the Presidents of the United States 1950 ; 1950 ; https://www.govinfo.gov/ >
     au < manifest ; 1951 ; Public Papers of the Presidents of the United States 1951 ; 1951 ; https://www.govinfo.gov/ >
     au < manifest ; 1952 ; Public Papers of the Presidents of the United States 1952 ; 1952 ; https://www.govinfo.gov/ >
@@ -783,7 +790,7 @@
     param[collection_id] = GOVMAN
 
     au < released ; 2018 ; United States Government Manual 2018 ; 2018 ; https://www.govinfo.gov/ >
-    au < expected ; 2019 ; United States Government Manual 2019 ; 2019 ; https://www.govinfo.gov/ >
+    au < manifest ; 2019 ; United States Government Manual 2019 ; 2019 ; https://www.govinfo.gov/ >
     au < expected ; 2020 ; United States Government Manual 2020 ; 2020 ; https://www.govinfo.gov/ >
 
   }

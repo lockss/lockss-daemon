@@ -39,7 +39,7 @@
       au < finished ; crawling ; 2016 ; Current Herpetology Volume 35 ; 35 ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2017 ; Current Herpetology Volume 36 ; 36 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2018 ; Current Herpetology Volume 37 ; 37 ; reingest2.clockss.org:8085 >
-      au < expected ; exists ; 2019 ; Current Herpetology Volume 38 ; 38 ; >
+      au < doNotProcess ; exists ; 2019 ; Current Herpetology Volume 38 ; 38 ; >
 
     }
 
@@ -85,7 +85,7 @@
       au < frozen ; exists ; 2016 ; Journal of Mammalian Ova Research Volume 33 ; 33 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2017 ; Journal of Mammalian Ova Research Volume 34 ; 34 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2018 ; Journal of Mammalian Ova Research Volume 35 ; 35 ; reingest2.clockss.org:8085 >
-      au < expected ; exists ; 2019 ; Journal of Mammalian Ova Research Volume 36 ; 36 ; >
+      au < doNotProcess ; exists ; 2019 ; Journal of Mammalian Ova Research Volume 36 ; 36 ; >
 
     }
 
@@ -131,7 +131,7 @@
       au < finished ; crawling ; 2016 ; Mammal Study Volume 41 ; 41 ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2017 ; Mammal Study Volume 42 ; 42 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2018 ; Mammal Study Volume 43 ; 43 ; reingest2.clockss.org:8085 >
-      au < expected ; exists ; 2019 ; Mammal Study Volume 44 ; 44 ; >
+      au < doNotProcess ; exists ; 2019 ; Mammal Study Volume 44 ; 44 ; >
 
     }
 
@@ -175,7 +175,7 @@
       au < finished ; crawling ; 2016 ; Ornithological Science Volume 15 ; 15 ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2017 ; Ornithological Science Volume 16 ; 16 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2018 ; Ornithological Science Volume 17 ; 17 ; reingest2.clockss.org:8085 >
-      au < expected ; exists ; 2019 ; Ornithological Science Volume 18 ; 18 ; >
+      au < doNotProcess ; exists ; 2019 ; Ornithological Science Volume 18 ; 18 ; >
 
     }
     
@@ -223,7 +223,7 @@
       au < finished ; crawling ; 2016 ; Paleontological Research Volume 20 ; 20 ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2017 ; Paleontological Research Volume 21 ; 21 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2018 ; Paleontological Research Volume 22 ; 22 ; reingest2.clockss.org:8085 >
-      au < expected ; exists ; 2019 ; Paleontological Research Volume 23 ; 23 ; >
+      au < doNotProcess ; exists ; 2019 ; Paleontological Research Volume 23 ; 23 ; >
 
     }
 
@@ -278,7 +278,7 @@
       au < finished ; crawling ; 2016 ; Zoological Science Volume 33 ; 33 ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2017 ; Zoological Science Volume 34 ; 34 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2018 ; Zoological Science Volume 35 ; 35 ; reingest2.clockss.org:8085 >
-      au < expected ; exists ; 2019 ; Zoological Science Volume 36 ; 36 ; >
+      au < doNotProcess ; exists ; 2019 ; Zoological Science Volume 36 ; 36 ; >
 
     }
 

@@ -532,4 +532,32 @@
 
   }
 
+  {
+
+    title <
+      name = Journal on Mathematics of Data Science ;
+      eissn = 2577-0187
+    >
+
+    param[journal_id] = sjmdaq
+
+    au < manifest ; exists ; 2019 ; Journal on Mathematics of Data Science Volume 1 ; 1 ; https://epubs.siam.org/ ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal on Applied Algebra and Geometry ;
+      eissn = 2470-6566
+    >
+
+    param[journal_id] = SIAGA
+
+    au < exists ; exists ; 2017 ; Journal on Applied Algebra and Geometry Volume 1 ; 1 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 2018 ; Journal on Applied Algebra and Geometry Volume 2 ; 2 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 2019 ; Journal on Applied Algebra and Geometry Volume 3 ; 3 ; https://epubs.siam.org/ ; >
+
+  }
+
 }

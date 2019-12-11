@@ -73,7 +73,6 @@
     implicit < status ; status2 ; year ; name ; param[year] >
     
     au < readySource ; finished ; 2017 ; IOP Publishing Books Source Content 2017 ; 2017 >
-    au < expected ; exists ; 2018 ; IOP Publishing Books Source Content 2018 ; 2018 >
     #no content since 2017 through this pipeline
 
   }

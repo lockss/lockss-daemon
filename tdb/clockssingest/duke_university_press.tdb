@@ -32,7 +32,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2000 ; American Literary Scholarship 2000 ; 1998 ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2001 ; American Literary Scholarship 2001 ; 1999 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2002 ; American Literary Scholarship 2002 ; 2000 ; reingest3.clockss.org:8083 >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2003 ; American Literary Scholarship 2003 ; 2001 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2003 ; American Literary Scholarship 2003 ; 2001 ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2004 ; American Literary Scholarship 2004 ; 2002 ; reingest5.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2005 ; American Literary Scholarship 2005 ; 2003 ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2006 ; American Literary Scholarship 2006 ; 2004 ; reingest2.clockss.org:8085 >
@@ -121,7 +121,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; American Speech Volume 88 ; 88 ; reingest5.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; American Speech Volume 89 ; 89 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; American Speech Volume 90 ; 90 ; reingest1.clockss.org:8082 >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2016 ; American Speech Volume 91 ; 91 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2016 ; American Speech Volume 91 ; 91 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2017 ; American Speech Volume 92 ; 92 ; >
 
     }
@@ -198,13 +198,13 @@
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1995 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 12 ; 12 ; >
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1996 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 13 ; 13 ; >
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1997-1999 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 14 ; 14 ; >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2000-2001 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 15 ; 15 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2000-2001 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 15 ; 15 ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2001 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 16 ; 16 ; reingest5.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2002 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 17 ; 17 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2003 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 18 ; 18 ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2004 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 19 ; 19 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2005 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 20 ; 20 ; reingest5.clockss.org:8082 >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2006 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 21 ; 21 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2006 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 21 ; 21 ; reingest3.clockss.org:8083 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2007 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 22 ; 22 ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2008 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 23 ; 23 ; reingest5.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2009 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 24 ; 24 ; reingest3.clockss.org:8083 >
@@ -301,8 +301,8 @@
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2007 ; Common Knowledge Volume 13 ; 13 ; reingest3.clockss.org:8083 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2008 ; Common Knowledge Volume 14 ; 14 ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2009 ; Common Knowledge Volume 15 ; 15 ; reingest4.clockss.org:8082 >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2010 ; Common Knowledge Volume 16 ; 16 ; reingest4.clockss.org:8082 >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2011 ; Common Knowledge Volume 17 ; 17 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2010 ; Common Knowledge Volume 16 ; 16 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2011 ; Common Knowledge Volume 17 ; 17 ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Common Knowledge Volume 18 ; 18 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Common Knowledge Volume 19 ; 19 ; reingest5.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Common Knowledge Volume 20 ; 20 ; >
@@ -345,7 +345,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2013 ; Comparative Literature Volume 65 ; 65 ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Comparative Literature Volume 66 ; 66 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Comparative Literature Volume 67 ; 67 ; reingest2.clockss.org:8085 >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2016 ; Comparative Literature Volume 68 ; 68 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2016 ; Comparative Literature Volume 68 ; 68 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2017 ; Comparative Literature Volume 69 ; 69 ; >
 
     }
@@ -389,9 +389,9 @@
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2000 ; Comparative Studies of South Asia, Africa and the Middle East Volume 20 ; 20 ; reingest5.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2001 ; Comparative Studies of South Asia, Africa and the Middle East Volume 21 ; 21 ; reingest3.clockss.org:8083 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2002 ; Comparative Studies of South Asia, Africa and the Middle East Volume 22 ; 22 ; reingest1.clockss.org:8082 >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2003 ; Comparative Studies of South Asia, Africa and the Middle East Volume 23 ; 23 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2003 ; Comparative Studies of South Asia, Africa and the Middle East Volume 23 ; 23 ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2004 ; Comparative Studies of South Asia, Africa and the Middle East Volume 24 ; 24 ; reingest1.clockss.org:8082 >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2005 ; Comparative Studies of South Asia, Africa and the Middle East Volume 25 ; 25 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2005 ; Comparative Studies of South Asia, Africa and the Middle East Volume 25 ; 25 ; reingest3.clockss.org:8083 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2006 ; Comparative Studies of South Asia, Africa and the Middle East Volume 26 ; 26 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2007 ; Comparative Studies of South Asia, Africa and the Middle East Volume 27 ; 27 ; reingest5.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2008 ; Comparative Studies of South Asia, Africa and the Middle East Volume 28 ; 28 ; reingest3.clockss.org:8083 >
@@ -468,7 +468,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2008 ; differences: A Journal of Feminist Cultural Studies Volume 19 ; 19 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2009 ; differences: A Journal of Feminist Cultural Studies Volume 20 ; 20 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2010 ; differences: A Journal of Feminist Cultural Studies Volume 21 ; 21 ; reingest1.clockss.org:8082 >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2011 ; differences: A Journal of Feminist Cultural Studies Volume 22 ; 22 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2011 ; differences: A Journal of Feminist Cultural Studies Volume 22 ; 22 ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; differences: A Journal of Feminist Cultural Studies Volume 23 ; 23 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; differences: A Journal of Feminist Cultural Studies Volume 24 ; 24 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; differences: A Journal of Feminist Cultural Studies Volume 25 ; 25 ; >
@@ -527,7 +527,7 @@
 
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2000 ; Eighteenth-Century Life Volume 24 ; 24 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2001 ; Eighteenth-Century Life Volume 25 ; 25 ; reingest1.clockss.org:8082 >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2002 ; Eighteenth-Century Life Volume 26 ; 26 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2002 ; Eighteenth-Century Life Volume 26 ; 26 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2003 ; Eighteenth-Century Life Volume 27 ; 27 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2004 ; Eighteenth-Century Life Volume 28 ; 28 ; reingest5.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2005 ; Eighteenth-Century Life Volume 29 ; 29 ; reingest4.clockss.org:8082 >
@@ -588,7 +588,7 @@
 
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2000 ; Ethnohistory Volume 47 ; 47 ; reingest5.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2001 ; Ethnohistory Volume 48 ; 48 ; reingest2.clockss.org:8085 >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2002 ; Ethnohistory Volume 49 ; 49 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2002 ; Ethnohistory Volume 49 ; 49 ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2003 ; Ethnohistory Volume 50 ; 50 ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2004 ; Ethnohistory Volume 51 ; 51 ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2005 ; Ethnohistory Volume 52 ; 52 ; reingest3.clockss.org:8083 >
@@ -631,11 +631,11 @@
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2004 ; French Historical Studies Volume 27 ; 27 ; reingest3.clockss.org:8083 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2005 ; French Historical Studies Volume 28 ; 28 ; reingest5.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2006 ; French Historical Studies Volume 29 ; 29 ; reingest3.clockss.org:8083 >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2007 ; French Historical Studies Volume 30 ; 30 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2007 ; French Historical Studies Volume 30 ; 30 ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2008 ; French Historical Studies Volume 31 ; 31 ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2009 ; French Historical Studies Volume 32 ; 32 ; reingest3.clockss.org:8083 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2010 ; French Historical Studies Volume 33 ; 33 ; reingest1.clockss.org:8082 >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2011 ; French Historical Studies Volume 34 ; 34 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2011 ; French Historical Studies Volume 34 ; 34 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; French Historical Studies Volume 35 ; 35 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; French Historical Studies Volume 36 ; 36 ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; French Historical Studies Volume 37 ; 37 ; >
@@ -661,7 +661,7 @@
       implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2000 ; Genre: Forms of Discourse and Culture Volume 33 ; 33 ; reingest3.clockss.org:8083 >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2001 ; Genre: Forms of Discourse and Culture Volume 34 ; 34 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2001 ; Genre: Forms of Discourse and Culture Volume 34 ; 34 ; reingest5.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2002 ; Genre: Forms of Discourse and Culture Volume 35 ; 35 ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2003 ; Genre: Forms of Discourse and Culture Volume 36 ; 36 ; reingest5.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2004 ; Genre: Forms of Discourse and Culture Volume 37 ; 37 ; reingest3.clockss.org:8083 >
@@ -742,8 +742,8 @@
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2007 ; Hispanic American Historical Review Volume 87 ; 87 ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2008 ; Hispanic American Historical Review Volume 88 ; 88 ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2009 ; Hispanic American Historical Review Volume 89 ; 89 ; reingest3.clockss.org:8083 >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2010 ; Hispanic American Historical Review Volume 90 ; 90; reingest2.clockss.org:8085 >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2011 ; Hispanic American Historical Review Volume 91 ; 91 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2010 ; Hispanic American Historical Review Volume 90 ; 90; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2011 ; Hispanic American Historical Review Volume 91 ; 91 ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Hispanic American Historical Review Volume 92 ; 92 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Hispanic American Historical Review Volume 93 ; 93 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Hispanic American Historical Review Volume 94 ; 94 ; >
@@ -882,7 +882,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2008 ; Journal of Health Politics, Policy and Law Volume 33 ; 33 ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2009 ; Journal of Health Politics, Policy and Law Volume 34 ; 34 ; reingest5.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2010 ; Journal of Health Politics, Policy and Law Volume 35 ; 35 ; reingest2.clockss.org:8085 >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2011 ; Journal of Health Politics, Policy and Law Volume 36 ; 36 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2011 ; Journal of Health Politics, Policy and Law Volume 36 ; 36 ; reingest5.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Journal of Health Politics, Policy and Law Volume 37 ; 37 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Journal of Health Politics, Policy and Law Volume 38 ; 38 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Journal of Health Politics, Policy and Law Volume 39 ; 39 ; >
@@ -960,7 +960,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2001 ; Journal of Music Theory Volume 45 ; 45 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2002 ; Journal of Music Theory Volume 46 ; 46 ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2003 ; Journal of Music Theory Volume 47 ; 47 ; reingest2.clockss.org:8085 >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2004 ; Journal of Music Theory Volume 48 ; 48 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2004 ; Journal of Music Theory Volume 48 ; 48 ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2005 ; Journal of Music Theory Volume 49 ; 49 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2006 ; Journal of Music Theory Volume 50 ; 50 ; reingest5.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2007 ; Journal of Music Theory Volume 51 ; 51 ; reingest4.clockss.org:8082 >
@@ -990,7 +990,7 @@
       implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2004 ; Labor: Studies in Working-Class History of the Americas Volume 1 ; 1 ; reingest2.clockss.org:8085 >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2005 ; Labor: Studies in Working-Class History of the Americas Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2005 ; Labor: Studies in Working-Class History of the Americas Volume 2 ; 2 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2006 ; Labor: Studies in Working-Class History of the Americas Volume 3 ; 3 ; reingest5.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2007 ; Labor: Studies in Working-Class History of the Americas Volume 4 ; 4 ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2008 ; Labor: Studies in Working-Class History of the Americas Volume 5 ; 5 ; reingest1.clockss.org:8082 >
@@ -1040,12 +1040,12 @@
 
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2000 ; Mediterranean Quarterly Volume 11 ; 11 ; reingest3.clockss.org:8083 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2001 ; Mediterranean Quarterly Volume 12 ; 12 ; reingest5.clockss.org:8082 >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2002 ; Mediterranean Quarterly Volume 13 ; 13 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2002 ; Mediterranean Quarterly Volume 13 ; 13 ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2003 ; Mediterranean Quarterly Volume 14 ; 14 ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2004 ; Mediterranean Quarterly Volume 15 ; 15 ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2005 ; Mediterranean Quarterly Volume 16 ; 16 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2006 ; Mediterranean Quarterly Volume 17 ; 17 ; reingest5.clockss.org:8082 >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2007 ; Mediterranean Quarterly Volume 18 ; 18 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2007 ; Mediterranean Quarterly Volume 18 ; 18 ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2008 ; Mediterranean Quarterly Volume 19 ; 19 ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2009 ; Mediterranean Quarterly Volume 20 ; 20 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2010 ; Mediterranean Quarterly Volume 21 ; 21 ; reingest3.clockss.org:8083 >
@@ -1079,7 +1079,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2007 ; The Minnesota Review Volume 2007 ; 2007 ; reingest5.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2008 ; The Minnesota Review Volume 2008 ; 2008 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2009 ; The Minnesota Review Volume 2009 ; 2009 ; reingest1.clockss.org:8082 >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2010 ; The Minnesota Review Volume 2010 ; 2010 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2010 ; The Minnesota Review Volume 2010 ; 2010 ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2011 ; The Minnesota Review Volume 2011 ; 2011 ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; The Minnesota Review Volume 2012 ; 2012 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; The Minnesota Review Volume 2013 ; 2013 ; >
@@ -1180,7 +1180,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; MLQ: Modern Language Quarterly Volume 74 ; 74 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; MLQ: Modern Language Quarterly Volume 75 ; 75 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; MLQ: Modern Language Quarterly Volume 76 ; 76 ; reingest2.clockss.org:8085 >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2016 ; MLQ: Modern Language Quarterly Volume 77 ; 77 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2016 ; MLQ: Modern Language Quarterly Volume 77 ; 77 ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2017 ; MLQ: Modern Language Quarterly Volume 78 ; 78 ; >
 
     }
@@ -1241,7 +1241,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2008 ; Nka: Journal of Contemporary African Art Volume 2008 ; 2008 ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2009 ; Nka: Journal of Contemporary African Art Volume 2009 ; 2009 ; reingest5.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2010 ; Nka: Journal of Contemporary African Art Volume 2010 ; 2010 ; reingest5.clockss.org:8082 >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2011 ; Nka: Journal of Contemporary African Art Volume 2011 ; 2011 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2011 ; Nka: Journal of Contemporary African Art Volume 2011 ; 2011 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Nka: Journal of Contemporary African Art Volume 2012 ; 2012 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Nka: Journal of Contemporary African Art Volume 2013 ; 2013 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Nka: Journal of Contemporary African Art Volume 2014 ; 2014 ; >
@@ -1306,7 +1306,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2008 ; Pedagogy Volume 8 ; 8  ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2009 ; Pedagogy Volume 9 ; 9  ; reingest3.clockss.org:8083 >
       au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2010 ; Pedagogy Volume 10 ; 10 ; reingest4.clockss.org:8082 >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2011 ; Pedagogy Volume 11 ; 11 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2011 ; Pedagogy Volume 11 ; 11 ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Pedagogy Volume 12 ; 12 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Pedagogy Volume 13 ; 13 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Pedagogy Volume 14 ; 14 ; >
@@ -1335,7 +1335,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2004 ; Philosophical Review Volume 113 ; 113 ; reingest5.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2005 ; Philosophical Review Volume 114 ; 114 ; reingest5.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2006 ; Philosophical Review Volume 115 ; 115 ; reingest3.clockss.org:8083 >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2007 ; Philosophical Review Volume 116 ; 116 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2007 ; Philosophical Review Volume 116 ; 116 ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2008 ; Philosophical Review Volume 117 ; 117 ; reingest5.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2009 ; Philosophical Review Volume 118 ; 118 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2010 ; Philosophical Review Volume 119 ; 119 ; reingest2.clockss.org:8085 >
@@ -1403,14 +1403,14 @@
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1997 ; positions: east asia cultures critique Volume 5 ; 5 ; >
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1998 ; positions: east asia cultures critique Volume 6 ; 6 ; >
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1999 ; positions: east asia cultures critique Volume 7 ; 7 ; >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2000 ; positions: east asia cultures critique Volume 8 ; 8 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2000 ; positions: east asia cultures critique Volume 8 ; 8 ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2001 ; positions: east asia cultures critique Volume 9 ; 9 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2002 ; positions: east asia cultures critique Volume 10 ; 10 ; reingest5.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2003 ; positions: east asia cultures critique Volume 11 ; 11 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2004 ; positions: east asia cultures critique Volume 12 ; 12 ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2005 ; positions: east asia cultures critique Volume 13 ; 13 ; reingest2.clockss.org:8085 >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2006 ; positions: east asia cultures critique Volume 14 ; 14 ; reingest1.clockss.org:8082 >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2007 ; positions: east asia cultures critique Volume 15 ; 15 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2006 ; positions: east asia cultures critique Volume 14 ; 14 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2007 ; positions: east asia cultures critique Volume 15 ; 15 ; reingest5.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2008 ; positions: east asia cultures critique Volume 16 ; 16 ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2009 ; positions: east asia cultures critique Volume 17 ; 17 ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2010 ; positions: east asia cultures critique Volume 18 ; 18 ; reingest5.clockss.org:8082 >
@@ -1444,13 +1444,13 @@
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2002 ; Publication of the American Dialect Society Volume 86 ; 86 ; reingest3.clockss.org:8083 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2002 ; Publication of the American Dialect Society Volume 87 ; 87 ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2003 ; Publication of the American Dialect Society Volume 88 ; 88 ; reingest1.clockss.org:8082 >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2004 ; Publication of the American Dialect Society Volume 89 ; 89 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2004 ; Publication of the American Dialect Society Volume 89 ; 89 ; reingest5.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2005 ; Publication of the American Dialect Society Volume 90 ; 90 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2006 ; Publication of the American Dialect Society Volume 91 ; 91 ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2007 ; Publication of the American Dialect Society Volume 92 ; 92 ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2008 ; Publication of the American Dialect Society Volume 93 ; 93 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2009 ; Publication of the American Dialect Society Volume 94 ; 94 ; reingest3.clockss.org:8083 >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2010 ; Publication of the American Dialect Society Volume 95 ; 95 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2010 ; Publication of the American Dialect Society Volume 95 ; 95 ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2011 ; Publication of the American Dialect Society Volume 96 ; 96 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Publication of the American Dialect Society Volume 97 ; 97 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Publication of the American Dialect Society Volume 98 ; 98 ; >
@@ -1492,10 +1492,10 @@
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2004 ; Public Culture Volume 16 ; 16 ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2005 ; Public Culture Volume 17 ; 17 ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2006 ; Public Culture Volume 18 ; 18 ; reingest3.clockss.org:8083 >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2007 ; Public Culture Volume 19 ; 19 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2007 ; Public Culture Volume 19 ; 19 ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2008 ; Public Culture Volume 20 ; 20 ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2009 ; Public Culture Volume 21 ; 21 ; reingest5.clockss.org:8082 >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2010 ; Public Culture Volume 22 ; 22 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2010 ; Public Culture Volume 22 ; 22 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2011 ; Public Culture Volume 23 ; 23 ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Public Culture Volume 24 ; 24 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Public Culture Volume 25 ; 25 ; reingest4.clockss.org:8082 >
@@ -1547,7 +1547,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2001 ; Radical History Review Volume 2001 ; 2001 ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2002 ; Radical History Review Volume 2002 ; 2002 ; reingest3.clockss.org:8083 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2003 ; Radical History Review Volume 2003 ; 2003 ; reingest3.clockss.org:8083 >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2004 ; Radical History Review Volume 2004 ; 2004 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2004 ; Radical History Review Volume 2004 ; 2004 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2005 ; Radical History Review Volume 2005 ; 2005 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2006 ; Radical History Review Volume 2006 ; 2006 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2007 ; Radical History Review Volume 2007 ; 2007 ; reingest5.clockss.org:8082 >
@@ -1585,7 +1585,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2007 ; Small Axe Volume 11 ; 11 ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2008 ; Small Axe Volume 12 ; 12 ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2009 ; Small Axe Volume 13 ; 13 ; reingest4.clockss.org:8082 >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2010 ; Small Axe Volume 14 ; 14 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2010 ; Small Axe Volume 14 ; 14 ; reingest3.clockss.org:8083 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2011 ; Small Axe Volume 15 ; 15 ; reingest5.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Small Axe Volume 16 ; 16 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Small Axe Volume 17 ; 17 ; >
@@ -1639,7 +1639,7 @@
       param[base_url] = http://socialtext.dukejournals.org/
       implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2000 ; Social Text Volume 18 ; 18 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2000 ; Social Text Volume 18 ; 18 ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2001 ; Social Text Volume 19 ; 19 ; reingest5.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2002 ; Social Text Volume 20 ; 20 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2003 ; Social Text Volume 21 ; 21 ; reingest3.clockss.org:8083 >
@@ -1734,7 +1734,7 @@
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1996-1997 ; Theater Volume 27 ; 27 ; >
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1997-1998 ; Theater Volume 28 ; 28 ; >
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1999 ; Theater Volume 29 ; 29 ; >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2000 ; Theater Volume 30 ; 30 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2000 ; Theater Volume 30 ; 30 ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2001 ; Theater Volume 31 ; 31 ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2002 ; Theater Volume 32 ; 32 ; reingest5.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2003 ; Theater Volume 33 ; 33 ; reingest1.clockss.org:8082 >
@@ -1743,7 +1743,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2006 ; Theater Volume 36 ; 36 ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2007 ; Theater Volume 37 ; 37 ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2008 ; Theater Volume 38 ; 38 ; reingest1.clockss.org:8082 >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2009 ; Theater Volume 39 ; 39 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2009 ; Theater Volume 39 ; 39 ; reingest5.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2010 ; Theater Volume 40 ; 40 ; reingest3.clockss.org:8083 >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011-2012 ; Theater Volume 41 ; 41 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Theater Volume 42 ; 42 ; >
@@ -1773,7 +1773,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Tikkun Volume 28 ; 28 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Tikkun Volume 29 ; 29 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Tikkun Volume 30 ; 30 ; reingest1.clockss.org:8082 >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2016 ; Tikkun Volume 31 ; 31 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2016 ; Tikkun Volume 31 ; 31 ; reingest3.clockss.org:8083 >
       au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2017 ; Tikkun Volume 32 ; 32 ; >
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2018 ; Tikkun Volume 33 ; 33 ; >
       #stopped publishing after 2018

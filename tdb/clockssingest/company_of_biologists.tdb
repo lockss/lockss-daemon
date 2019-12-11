@@ -209,7 +209,7 @@
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010 ; Disease Models & Mechanisms Volume 3 ; 3 ; http://dmm.biologists.org/ ; >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Disease Models & Mechanisms Volume 4 ; 4 ; http://dmm.biologists.org/ ; >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Disease Models & Mechanisms Volume 5 ; 5 ; http://dmm.biologists.org/ ; >
-    au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2013 ; Disease Models & Mechanisms Volume 6 ; 6 ; http://dmm.biologists.org/ ; reingest3.clockss.org:8083 >
+    au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2013 ; Disease Models & Mechanisms Volume 6 ; 6 ; http://dmm.biologists.org/ ; reingest3.clockss.org:8083 >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Disease Models & Mechanisms Volume 7 ; 7 ; http://dmm.biologists.org/ ; >
     au < biologists.ClockssBiologistsDrupalPlugin ; zapped ; finished ; 2015 ; Disease Models & Mechanisms Volume 8 ; 8 ; http://dmm.biologists.org/ ; reingest2.clockss.org:8085 >
     au < biologists.ClockssBiologistsDrupalPlugin ; finished ; crawling ; 2016 ; Disease Models & Mechanisms Volume 9 ; 9 ; http://dmm.biologists.org/ ; reingest5.clockss.org:8082 >
@@ -612,7 +612,7 @@
     au < biologists.ClockssBiologistsDrupalPlugin ; finished ; crawling ; 2003 ; Journal of Experimental Biology Volume 206 ; 206 ; http://jeb.biologists.org/ ; reingest2.clockss.org:8085 >
     au < biologists.ClockssBiologistsDrupalPlugin ; notReady ; exists ; 2004 ; Journal of Experimental Biology Volume 207 ; 207 ; https://jeb.biologists.org/ ; > #Probe url: http://jeb.biologists.org/content/207/25/v.2.long outside of crawl spec counting
     au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 2005 ; Journal of Experimental Biology Volume 208 ; 208 ; http://jeb.biologists.org/ ; >
-    au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2006 ; Journal of Experimental Biology Volume 209 ; 209 ; http://jeb.biologists.org/ ; reingest3.clockss.org:8083 >
+    au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2006 ; Journal of Experimental Biology Volume 209 ; 209 ; http://jeb.biologists.org/ ; reingest3.clockss.org:8083 >
     au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 2007 ; Journal of Experimental Biology Volume 210 ; 210 ; http://jeb.biologists.org/ ; >
     au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2008 ; Journal of Experimental Biology Volume 211 ; 211 ; http://jeb.biologists.org/ ; reingest4.clockss.org:8082 >
     au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 2009 ; Journal of Experimental Biology Volume 212 ; 212 ; http://jeb.biologists.org/ ; >
@@ -625,7 +625,7 @@
     au < biologists.ClockssBiologistsDrupalPlugin ; finished ; crawling ; 2016 ; Journal of Experimental Biology Volume 219 ; 219 ; http://jeb.biologists.org/ ; reingest2.clockss.org:8085 >
     au < biologists.ClockssBiologistsDrupalPlugin ; deepCrawl ; exists ; 2017 ; Journal of Experimental Biology Volume 220 ; 220 ; http://jeb.biologists.org/ ; >
     au < biologists.ClockssBiologistsDrupalPlugin ; deepCrawl ; exists ; 2018 ; Journal of Experimental Biology Volume 221 ; 221 ; http://jeb.biologists.org/ ; >
-    au < biologists.ClockssBiologistsDrupalPlugin ; testing ; exists ; 2019 ; Journal of Experimental Biology Volume 222 ; 222 ; https://jeb.biologists.org/ ; >
+    au < biologists.ClockssBiologistsDrupalPlugin ; crawling ; exists ; 2019 ; Journal of Experimental Biology Volume 222 ; 222 ; https://jeb.biologists.org/ ; >
 
   }
 

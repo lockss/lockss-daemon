@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ONIXMessage  release="3.0">
+    <Header>
+        <Sender>
+            <SenderName>Liverpool University Press</SenderName>
+            <ContactName>David Aldridge</ContactName>
+            <EmailAddress>david+lup@bibliocloud.com</EmailAddress>
+        </Sender>
+        <Addressee>
+            <AddresseeName>CLOCKSS</AddresseeName>
+        </Addressee>
+        <SentDateTime>20190930</SentDateTime>
+        <DefaultLanguageOfText>eng</DefaultLanguageOfText>
+        <DefaultCurrencyCode>GBP</DefaultCurrencyCode>
+    </Header>
+    <Product>
+        <RecordReference>9781786949639</RecordReference>
+        <NotificationType>03</NotificationType>
+        <RecordSourceIdentifier>
+            <RecordSourceIDType>01</RecordSourceIDType>
+            <IDTypeName>Publisher name</IDTypeName>
+            <IDValue>Liverpool University Press</IDValue>
+        </RecordSourceIdentifier>
+        <ProductIdentifier>
+            <!--GTIN-13-->
+            <ProductIDType>03</ProductIDType>
+            <IDValue>9781786949639</IDValue>
+        </ProductIdentifier>
+        <ProductIdentifier>
+            <!--ISBN-->
+            <ProductIDType>15</ProductIDType>
+            <IDValue>9781786949639</IDValue>
+        </ProductIdentifier>
+        <ProductIdentifier>
+            <ProductIDType>01</ProductIDType>
+            <IDTypeName>Publisher's Reference</IDTypeName>
+            <IDValue>SS19</IDValue>
+        </ProductIdentifier>
+        <Barcode>
+            <BarcodeType>00</BarcodeType>
+        </Barcode>
+        <DescriptiveDetail>
+            <ProductComposition>00</ProductComposition>
+            <ProductForm>EA</ProductForm>
+            <ProductFormDetail>E107</ProductFormDetail>
+            <ProductPackaging>00</ProductPackaging>
+            <PrimaryContentType>10</PrimaryContentType>
+            <EpubTechnicalProtection>00</EpubTechnicalProtection>
+            <Collection>
+                <CollectionType>10</CollectionType>
+                <CollectionSequence>
+                    <CollectionSequenceType>03</CollectionSequenceType>
+                    <CollectionSequenceNumber>21</CollectionSequenceNumber>
+                </CollectionSequence>
+                <TitleDetail>
+                    <TitleType>01</TitleType>
+                    <TitleElement>
+                        <TitleElementLevel>02</TitleElementLevel>
+                        <NoPrefix/>
+                        <TitleWithoutPrefix>Postcolonialism Across the Disciplines</TitleWithoutPrefix>
+                    </TitleElement>
+                </TitleDetail>
+            </Collection>
+            <TitleDetail>
+                <TitleType>01</TitleType>
+                <TitleElement>
+                    <TitleElementLevel>01</TitleElementLevel>
+                    <NoPrefix/>
+                    <TitleWithoutPrefix>Affective Disorders</TitleWithoutPrefix>
+                    <Subtitle>Emotion in Colonial and Postcolonial Literature</Subtitle>
+                </TitleElement>
+            </TitleDetail>
+            <Contributor>
+                <SequenceNumber>1</SequenceNumber>
+                <ContributorRole>A01</ContributorRole>
+                <NameType>00</NameType>
+                <NameIdentifier>
+                    <NameIDType>01</NameIDType>
+                    <IDTypeName>system-internal-identifier</IDTypeName>
+                    <IDValue>92827</IDValue>
+                </NameIdentifier>
+                <PersonName>Bede Scott</PersonName>
+                <PersonNameInverted>Scott, Bede</PersonNameInverted>
+                <NamesBeforeKey>Bede</NamesBeforeKey>
+                <KeyNames>Scott</KeyNames>
+                <BiographicalNote textformat="07">Bede Scott is an Associate Professor of World Literature at Nanyang Technological University, Singapore.</BiographicalNote>
+            </Contributor>
+            <NoEdition/>
+            <Extent>
+                <!--Absolute Page Count-->
+                <ExtentType>07</ExtentType>
+                <ExtentValue>200</ExtentValue>
+                <ExtentUnit>03</ExtentUnit>
+            </Extent>
+            <NumberOfIllustrations>2</NumberOfIllustrations>
+            <AncillaryContent>
+                <AncillaryContentType>01</AncillaryContentType>
+                <Number>2</Number>
+            </AncillaryContent>
+            <Subject>
+                <!--Thema main subject-->
+                <MainSubject/>
+                <SubjectSchemeIdentifier>93</SubjectSchemeIdentifier>
+                <SubjectSchemeVersion>1.0</SubjectSchemeVersion>
+                <SubjectCode>DSB</SubjectCode>
+                <SubjectHeadingText>Literary studies: general</SubjectHeadingText>
+            </Subject>
+            <Subject>
+                <!--Thema subject-->
+                <SubjectSchemeIdentifier>93</SubjectSchemeIdentifier>
+                <SubjectSchemeVersion>1.0</SubjectSchemeVersion>
+                <SubjectCode>DS</SubjectCode>
+                <SubjectHeadingText>Literature: history &amp; criticism</SubjectHeadingText>
+            </Subject>
+            <Subject>
+                <!--Thema place qualifier-->
+                <SubjectSchemeIdentifier>94</SubjectSchemeIdentifier>
+                <SubjectSchemeVersion>1.2</SubjectSchemeVersion>
+                <SubjectCode>1A</SubjectCode>
+                <SubjectHeadingText>World</SubjectHeadingText>
+            </Subject>
+            <Subject>
+                <!--Thema time period qualifier-->
+                <SubjectSchemeIdentifier>96</SubjectSchemeIdentifier>
+                <SubjectSchemeVersion>1.0</SubjectSchemeVersion>
+                <SubjectCode>3M</SubjectCode>
+                <SubjectHeadingText>c 1500 onwards to present day</SubjectHeadingText>
+            </Subject>
+            <Subject>
+                <!--Main BIC subject category-->
+                <MainSubject/>
+                <SubjectSchemeIdentifier>12</SubjectSchemeIdentifier>
+                <SubjectSchemeVersion>2.1</SubjectSchemeVersion>
+                <SubjectCode>DSB</SubjectCode>
+                <SubjectHeadingText>Literary studies - general</SubjectHeadingText>
+            </Subject>
+            <Subject>
+                <!--BIC time period qualifier-->
+                <SubjectSchemeIdentifier>15</SubjectSchemeIdentifier>
+                <SubjectSchemeVersion>2.1</SubjectSchemeVersion>
+                <SubjectCode>3J</SubjectCode>
+                <SubjectHeadingText>Modern period, c 1500 onwards</SubjectHeadingText>
+            </Subject>
+            <Subject>
+                <!--Main BISAC subject code-->
+                <MainSubject/>
+                <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+                <SubjectSchemeVersion>2018</SubjectSchemeVersion>
+                <SubjectCode>LIT025000</SubjectCode>
+                <SubjectHeadingText>LITERARY CRITICISM / Subjects &amp; Themes / General</SubjectHeadingText>
+            </Subject>
+            <Subject>
+                <!--BISAC subject code-->
+                <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+                <SubjectSchemeVersion>2018</SubjectSchemeVersion>
+                <SubjectCode>HIS000000</SubjectCode>
+                <SubjectHeadingText>HISTORY / General</SubjectHeadingText>
+            </Subject>
+            <Subject>
+                <!--BISAC subject code-->
+                <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+                <SubjectSchemeVersion>2018</SubjectSchemeVersion>
+                <SubjectCode>HIS037000</SubjectCode>
+                <SubjectHeadingText>HISTORY / World</SubjectHeadingText>
+            </Subject>
+            <Subject>
+                <!--BISAC subject code-->
+                <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+                <SubjectSchemeVersion>2018</SubjectSchemeVersion>
+                <SubjectCode>LIT006000</SubjectCode>
+                <SubjectHeadingText>LITERARY CRITICISM / Semiotics &amp; Theory</SubjectHeadingText>
+            </Subject>
+            <Subject>
+                <!--BISAC subject code-->
+                <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+                <SubjectSchemeVersion>2018</SubjectSchemeVersion>
+                <SubjectCode>LIT020000</SubjectCode>
+                <SubjectHeadingText>LITERARY CRITICISM / Comparative Literature</SubjectHeadingText>
+            </Subject>
+            <Subject>
+                <!--BISAC subject code-->
+                <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+                <SubjectSchemeVersion>2018</SubjectSchemeVersion>
+                <SubjectCode>LIT024000</SubjectCode>
+                <SubjectHeadingText>LITERARY CRITICISM / Modern / General</SubjectHeadingText>
+            </Subject>
+            <Subject>
+                <!--Keywords-->
+                <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+                <SubjectHeadingText>Affect studies;Colonial and postcolonial literature;Emotion;Narratology;Structure of feeling;World literature</SubjectHeadingText>
+            </Subject>
+            <Subject>
+                <!--Main publisher subject-->
+                <MainSubject/>
+                <SubjectSchemeIdentifier>23</SubjectSchemeIdentifier>
+                <SubjectHeadingText>Postcolonial Studies</SubjectHeadingText>
+            </Subject>
+            <Audience>
+                <!--ONIX audience-->
+                <AudienceCodeType>01</AudienceCodeType>
+                <AudienceCodeValue>01</AudienceCodeValue>
+            </Audience>
+        </DescriptiveDetail>
+        <CollateralDetail>
+            <TextContent>
+                <TextType>03</TextType>
+                <ContentAudience>00</ContentAudience>
+                <Text textformat="02"><![CDATA[<p>Situated at the intersection of postcolonial studies, affect studies, and narratology, <i>Affective Disorders</i> explores the significance of emotion in a range of colonial and postcolonial narratives. Through close readings of Naguib Mahfouz, Joaquim Maria Machado de Assis, and Upamanyu Chatterjee, among others, Bede Scott argues that literary representations of emotion need not be interpreted solely at the level of character, individual psychology, or the contingencies of plotting, but could also be related to broader sociopolitical forces. We thus find episodes of anger that serve as a collective response to the 'modernity' of wartime Cairo, feelings of jealousy that are inspired by the slave economy of imperial Brazil, and an overwhelming sense of boredom that emerges, in the late eighties, out of the bureaucratic procedures of the Indian Administrative Service. <i>Affective Disorders</i> also explores in some detail the formal consequences of these feelings – the way in which affective states such as anger or jealousy can often destabilize narratives, provoking crises of representation, generic ambivalence, and discursive rupture. By emphasizing the social origin of these emotions, and by analysing their influence on literary discourse, this study provides a deeper understanding of the relationship between various sociopolitical forces and the affective and aesthetic 'disorders' to which they give rise.</p>]]></Text>
+            </TextContent>
+            <TextContent>
+                <TextType>04</TextType>
+                <ContentAudience>00</ContentAudience>
+                <Text textformat="02"><![CDATA[<div>Acknowledgements<br>Introduction<br>1. Anger: Naguib Mahfouz’s <i>Midaq Alley</i><br>2. Reticence: Vikram Seth’s <i>A Suitable Boy</i><br>3. Jealousy: Joaquim Maria Machado de Assis’ <i>Dom Casmurro</i><br>4. Boredom: Upamanyu Chatterjee’s <i>English, August: An Indian Story</i><br>5. Fear: Michael Ondaatje’s <i>Anil’s Ghost</i><br>6. Stuplimity: Vikram Chandra’s <i>Sacred Games</i><br>Works Cited<br>Index<br></div>]]></Text>
+            </TextContent>
+            <TextContent>
+                <TextType>13</TextType>
+                <ContentAudience>00</ContentAudience>
+                <Text textformat="02"><![CDATA[<a target="_blank" rel="nofollow" href="https://global.oup.com/academic/product/9781786941701?cc=us">https://global.oup.com/academic/product/9781786941701?cc=us</a>]]></Text>
+            </TextContent>
+            <SupportingResource>
+                <ResourceContentType>01</ResourceContentType>
+                <ContentAudience>00</ContentAudience>
+                <ResourceMode>03</ResourceMode>
+                <ResourceVersion>
+                    <ResourceForm>02</ResourceForm>
+                    <ResourceVersionFeature>
+                        <!--Height-->
+                        <ResourceVersionFeatureType>02</ResourceVersionFeatureType>
+                        <FeatureValue>2819</FeatureValue>
+                    </ResourceVersionFeature>
+                    <ResourceVersionFeature>
+                        <!--Width-->
+                        <ResourceVersionFeatureType>03</ResourceVersionFeatureType>
+                        <FeatureValue>1888</FeatureValue>
+                    </ResourceVersionFeature>
+                    <ResourceVersionFeature>
+                        <!--Megabytes-->
+                        <ResourceVersionFeatureType>05</ResourceVersionFeatureType>
+                        <FeatureValue>0.39</FeatureValue>
+                    </ResourceVersionFeature>
+                    <ResourceVersionFeature>
+                        <!--MD5 hash-->
+                        <ResourceVersionFeatureType>06</ResourceVersionFeatureType>
+                        <FeatureValue>00ad82ba5146f9e0750217c7aacc3a47</FeatureValue>
+                    </ResourceVersionFeature>
+                    <ResourceVersionFeature>
+                        <!--Bytes-->
+                        <ResourceVersionFeatureType>07</ResourceVersionFeatureType>
+                        <FeatureValue>389669</FeatureValue>
+                    </ResourceVersionFeature>
+                    <ResourceVersionFeature>
+                        <!--SHA256 hash-->
+                        <ResourceVersionFeatureType>08</ResourceVersionFeatureType>
+                        <FeatureValue>91823cbdf3c689a83ac01a3aeafe11d4e9e9c44be2196f5f1b0b3cbb18f51629</FeatureValue>
+                    </ResourceVersionFeature>
+                    <ResourceLink>https://bibliocloudimages.s3-eu-west-1.amazonaws.com/356/260964//_jpg_rgb_original.jpg</ResourceLink>
+                </ResourceVersion>
+            </SupportingResource>
+            <!--eBook file version: 0bd4cd32368353926d569d8aacf557d2 NODELETE-->
+        </CollateralDetail>
+        <PublishingDetail>
+            <Imprint>
+                <ImprintIdentifier>
+                    <!--Pubisher's own imprint code-->
+                    <ImprintIDType>01</ImprintIDType>
+                    <IDTypeName>publisher-code</IDTypeName>
+                    <IDValue>LUP</IDValue>
+                </ImprintIdentifier>
+                <ImprintName>Liverpool University Press</ImprintName>
+            </Imprint>
+            <Publisher>
+                <!--Primary publisher-->
+                <PublishingRole>01</PublishingRole>
+                <PublisherIdentifier>
+                    <!--International Standard Name Identifier-->
+                    <PublisherIDType>16</PublisherIDType>
+                    <IDValue>0000-0001-1883-567X</IDValue>
+                </PublisherIdentifier>
+                <PublisherName>Liverpool University Press</PublisherName>
+            </Publisher>
+            <CityOfPublication>Liverpool</CityOfPublication>
+            <CountryOfPublication>GB</CountryOfPublication>
+            <PublishingStatus>04</PublishingStatus>
+            <PublishingDate>
+                <!--Nominal publication date-->
+                <PublishingDateRole>01</PublishingDateRole>
+                <Date dateformat="00">20190928</Date>
+            </PublishingDate>
+            <PublishingDate>
+                <!--Publication date of print counterpart-->
+                <PublishingDateRole>19</PublishingDateRole>
+                <Date dateformat="00">20190928</Date>
+            </PublishingDate>
+            <SalesRights>
+                <SalesRightsType>01</SalesRightsType>
+                <Territory>
+                    <RegionsIncluded>WORLD</RegionsIncluded>
+                </Territory>
+            </SalesRights>
+        </PublishingDetail>
+        <RelatedMaterial>
+            <RelatedWork>
+                <!--Product is a manifestation of-->
+                <WorkRelationCode>01</WorkRelationCode>
+                <WorkIdentifier>
+                    <!--Proprietary system identifier for the work-->
+                    <WorkIDType>01</WorkIDType>
+                    <IDTypeName>system-internal-identifier</IDTypeName>
+                    <IDValue>com.liverpool.onix.73088</IDValue>
+                </WorkIdentifier>
+            </RelatedWork>
+            <RelatedWork>
+                <!--Product's work in same collection as-->
+                <WorkRelationCode>04</WorkRelationCode>
+                <WorkIdentifier>
+                    <!--Proprietary system identifier for the work-->
+                    <WorkIDType>01</WorkIDType>
+                    <IDTypeName>system-internal-identifier</IDTypeName>
+                    <IDValue>com.liverpool.onix.40908</IDValue>
+                </WorkIdentifier>
+            </RelatedWork>
+            <RelatedWork>
+                <!--Product's work in same collection as-->
+                <WorkRelationCode>04</WorkRelationCode>
+                <WorkIdentifier>
+                    <!--Proprietary system identifier for the work-->
+                    <WorkIDType>01</WorkIDType>
+                    <IDTypeName>system-internal-identifier</IDTypeName>
+                    <IDValue>com.liverpool.onix.41004</IDValue>
+                </WorkIdentifier>
+            </RelatedWork>
+            <RelatedWork>
+                <!--Product's work in same collection as-->
+                <WorkRelationCode>04</WorkRelationCode>
+                <WorkIdentifier>
+                    <!--Proprietary system identifier for the work-->
+                    <WorkIDType>01</WorkIDType>
+                    <IDTypeName>system-internal-identifier</IDTypeName>
+                    <IDValue>com.liverpool.onix.41008</IDValue>
+                </WorkIdentifier>
+            </RelatedWork>
+            <RelatedWork>
+                <!--Product's work in same collection as-->
+                <WorkRelationCode>04</WorkRelationCode>
+                <WorkIdentifier>
+                    <!--Proprietary system identifier for the work-->
+                    <WorkIDType>01</WorkIDType>
+                    <IDTypeName>system-internal-identifier</IDTypeName>
+                    <IDValue>com.liverpool.onix.41031</IDValue>
+                </WorkIdentifier>
+            </RelatedWork>
+            <RelatedWork>
+                <!--Product's work in same collection as-->
+                <WorkRelationCode>04</WorkRelationCode>
+                <WorkIdentifier>
+                    <!--Proprietary system identifier for the work-->
+                    <WorkIDType>01</WorkIDType>
+                    <IDTypeName>system-internal-identifier</IDTypeName>
+                    <IDValue>com.liverpool.onix.41054</IDValue>
+                </WorkIdentifier>
+            </RelatedWork>
+            <RelatedWork>
+                <!--Product's work in same collection as-->
+                <WorkRelationCode>04</WorkRelationCode>
+                <WorkIdentifier>
+                    <!--Proprietary system identifier for the work-->
+                    <WorkIDType>01</WorkIDType>
+                    <IDTypeName>system-internal-identifier</IDTypeName>
+                    <IDValue>com.liverpool.onix.41068</IDValue>
+                </WorkIdentifier>
+            </RelatedWork>
+            <RelatedWork>
+                <!--Product's work in same collection as-->
+                <WorkRelationCode>04</WorkRelationCode>
+                <WorkIdentifier>
+                    <!--Proprietary system identifier for the work-->
+                    <WorkIDType>01</WorkIDType>
+                    <IDTypeName>system-internal-identifier</IDTypeName>
+                    <IDValue>com.liverpool.onix.41171</IDValue>
+                </WorkIdentifier>
+            </RelatedWork>
+            <RelatedWork>
+                <!--Product's work in same collection as-->
+                <WorkRelationCode>04</WorkRelationCode>
+                <WorkIdentifier>
+                    <!--Proprietary system identifier for the work-->
+                    <WorkIDType>01</WorkIDType>
+                    <IDTypeName>system-internal-identifier</IDTypeName>
+                    <IDValue>com.liverpool.onix.41264</IDValue>
+                </WorkIdentifier>
+            </RelatedWork>
+            <RelatedWork>
+                <!--Product's work in same collection as-->
+                <WorkRelationCode>04</WorkRelationCode>
+                <WorkIdentifier>
+                    <!--Proprietary system identifier for the work-->
+                    <WorkIDType>01</WorkIDType>
+                    <IDTypeName>system-internal-identifier</IDTypeName>
+                    <IDValue>com.liverpool.onix.41277</IDValue>
+                </WorkIdentifier>
+            </RelatedWork>
+            <RelatedWork>
+                <!--Product's work in same collection as-->
+                <WorkRelationCode>04</WorkRelationCode>
+                <WorkIdentifier>
+                    <!--Proprietary system identifier for the work-->
+                    <WorkIDType>01</WorkIDType>
+                    <IDTypeName>system-internal-identifier</IDTypeName>
+                    <IDValue>com.liverpool.onix.41284</IDValue>
+                </WorkIdentifier>
+            </RelatedWork>
+            <RelatedWork>
+                <!--Product's work in same collection as-->
+                <WorkRelationCode>04</WorkRelationCode>
+                <WorkIdentifier>
+                    <!--Proprietary system identifier for the work-->
+                    <WorkIDType>01</WorkIDType>
+                    <IDTypeName>system-internal-identifier</IDTypeName>
+                    <IDValue>com.liverpool.onix.41578</IDValue>
+                </WorkIdentifier>
+            </RelatedWork>
+            <RelatedWork>
+                <!--Product's work in same collection as-->
+                <WorkRelationCode>04</WorkRelationCode>
+                <WorkIdentifier>
+                    <!--Proprietary system identifier for the work-->
+                    <WorkIDType>01</WorkIDType>
+                    <IDTypeName>system-internal-identifier</IDTypeName>
+                    <IDValue>com.liverpool.onix.41582</IDValue>
+                </WorkIdentifier>
+            </RelatedWork>
+            <RelatedWork>
+                <!--Product's work in same collection as-->
+                <WorkRelationCode>04</WorkRelationCode>
+                <WorkIdentifier>
+                    <!--Proprietary system identifier for the work-->
+                    <WorkIDType>01</WorkIDType>
+                    <IDTypeName>system-internal-identifier</IDTypeName>
+                    <IDValue>com.liverpool.onix.41583</IDValue>
+                </WorkIdentifier>
+            </RelatedWork>
+            <RelatedWork>
+                <!--Product's work in same collection as-->
+                <WorkRelationCode>04</WorkRelationCode>
+                <WorkIdentifier>
+                    <!--Proprietary system identifier for the work-->
+                    <WorkIDType>01</WorkIDType>
+                    <IDTypeName>system-internal-identifier</IDTypeName>
+                    <IDValue>com.liverpool.onix.41625</IDValue>
+                </WorkIdentifier>
+            </RelatedWork>
+            <RelatedWork>
+                <!--Product's work in same collection as-->
+                <WorkRelationCode>04</WorkRelationCode>
+                <WorkIdentifier>
+                    <!--Proprietary system identifier for the work-->
+                    <WorkIDType>01</WorkIDType>
+                    <IDTypeName>system-internal-identifier</IDTypeName>
+                    <IDValue>com.liverpool.onix.41654</IDValue>
+                </WorkIdentifier>
+            </RelatedWork>
+            <RelatedWork>
+                <!--Product's work in same collection as-->
+                <WorkRelationCode>04</WorkRelationCode>
+                <WorkIdentifier>
+                    <!--Proprietary system identifier for the work-->
+                    <WorkIDType>01</WorkIDType>
+                    <IDTypeName>system-internal-identifier</IDTypeName>
+                    <IDValue>com.liverpool.onix.41677</IDValue>
+                </WorkIdentifier>
+            </RelatedWork>
+            <RelatedWork>
+                <!--Product's work in same collection as-->
+                <WorkRelationCode>04</WorkRelationCode>
+                <WorkIdentifier>
+                    <!--Proprietary system identifier for the work-->
+                    <WorkIDType>01</WorkIDType>
+                    <IDTypeName>system-internal-identifier</IDTypeName>
+                    <IDValue>com.liverpool.onix.41756</IDValue>
+                </WorkIdentifier>
+            </RelatedWork>
+            <RelatedWork>
+                <!--Product's work in same collection as-->
+                <WorkRelationCode>04</WorkRelationCode>
+                <WorkIdentifier>
+                    <!--Proprietary system identifier for the work-->
+                    <WorkIDType>01</WorkIDType>
+                    <IDTypeName>system-internal-identifier</IDTypeName>
+                    <IDValue>com.liverpool.onix.48418</IDValue>
+                </WorkIdentifier>
+            </RelatedWork>
+            <RelatedWork>
+                <!--Product's work in same collection as-->
+                <WorkRelationCode>04</WorkRelationCode>
+                <WorkIdentifier>
+                    <!--Proprietary system identifier for the work-->
+                    <WorkIDType>01</WorkIDType>
+                    <IDTypeName>system-internal-identifier</IDTypeName>
+                    <IDValue>com.liverpool.onix.48419</IDValue>
+                </WorkIdentifier>
+            </RelatedWork>
+            <RelatedWork>
+                <!--Product's work in same collection as-->
+                <WorkRelationCode>04</WorkRelationCode>
+                <WorkIdentifier>
+                    <!--Proprietary system identifier for the work-->
+                    <WorkIDType>01</WorkIDType>
+                    <IDTypeName>system-internal-identifier</IDTypeName>
+                    <IDValue>com.liverpool.onix.52496</IDValue>
+                </WorkIdentifier>
+            </RelatedWork>
+            <RelatedWork>
+                <!--Product's work in same collection as-->
+                <WorkRelationCode>04</WorkRelationCode>
+                <WorkIdentifier>
+                    <!--Proprietary system identifier for the work-->
+                    <WorkIDType>01</WorkIDType>
+                    <IDTypeName>system-internal-identifier</IDTypeName>
+                    <IDValue>com.liverpool.onix.82438</IDValue>
+                </WorkIdentifier>
+            </RelatedWork>
+            <RelatedWork>
+                <!--Product's work in same collection as-->
+                <WorkRelationCode>04</WorkRelationCode>
+                <WorkIdentifier>
+                    <!--Proprietary system identifier for the work-->
+                    <WorkIDType>01</WorkIDType>
+                    <IDTypeName>system-internal-identifier</IDTypeName>
+                    <IDValue>com.liverpool.onix.83291</IDValue>
+                </WorkIdentifier>
+            </RelatedWork>
+            <RelatedWork>
+                <!--Product's work in same collection as-->
+                <WorkRelationCode>04</WorkRelationCode>
+                <WorkIdentifier>
+                    <!--Proprietary system identifier for the work-->
+                    <WorkIDType>01</WorkIDType>
+                    <IDTypeName>system-internal-identifier</IDTypeName>
+                    <IDValue>com.liverpool.onix.87101</IDValue>
+                </WorkIdentifier>
+            </RelatedWork>
+            <RelatedWork>
+                <!--Product's work in same collection as-->
+                <WorkRelationCode>04</WorkRelationCode>
+                <WorkIdentifier>
+                    <!--Proprietary system identifier for the work-->
+                    <WorkIDType>01</WorkIDType>
+                    <IDTypeName>system-internal-identifier</IDTypeName>
+                    <IDValue>com.liverpool.onix.88782</IDValue>
+                </WorkIdentifier>
+            </RelatedWork>
+            <RelatedProduct>
+                <!--Epublication based on-->
+                <ProductRelationCode>13</ProductRelationCode>
+                <ProductIdentifier>
+                    <!--GTIN-13-->
+                    <ProductIDType>03</ProductIDType>
+                    <IDValue>9781786941701</IDValue>
+                </ProductIdentifier>
+                <ProductIdentifier>
+                    <!--ISBN-->
+                    <ProductIDType>15</ProductIDType>
+                    <IDValue>9781786941701</IDValue>
+                </ProductIdentifier>
+                <ProductIdentifier>
+                    <ProductIDType>01</ProductIDType>
+                    <IDTypeName>Publisher's Reference</IDTypeName>
+                    <IDValue>SS19</IDValue>
+                </ProductIdentifier>
+                <ProductForm>BB</ProductForm>
+            </RelatedProduct>
+        </RelatedMaterial>
+        <ProductSupply>
+            <Market>
+                <Territory>
+                    <CountriesIncluded>AD AE AF AG AI AL AM AO AQ AR AS AT AU AW AX AZ BA BB BD BE BF BG BH BI BJ BL BM BN BO BQ BR BS BT BV BW BY BZ CA CC CD CF CG CH CI CK CL CM CN CO CR CU CV CW CX CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GG GH GI GL GM GN GP GQ GR GS GT GU GW GY HK HM HN HR HT HU ID IE IL IM IN IO IQ IR IS IT JE JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD ME MF MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MY MZ NA NC NE NF NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RS RU RW SA SB SC SD SE SG SH SI SJ SK SL SM SN SO SR SS ST SV SX SY SZ TC TD TF TG TH TJ TK TL TM TN TO TR TT TV TW TZ UA UG UM US UY UZ VA VC VE VG VI VN VU WF WS YE YT ZA ZM ZW</CountriesIncluded>
+                </Territory>
+            </Market>
+            <SupplyDetail>
+                <Supplier>
+                    <SupplierRole>01</SupplierRole>
+                    <SupplierName>Liverpool University Press</SupplierName>
+                </Supplier>
+                <ProductAvailability>20</ProductAvailability>
+                <Price>
+                    <PriceType>02</PriceType>
+                    <PriceQualifier>05</PriceQualifier>
+                    <PriceStatus>00</PriceStatus>
+                    <PriceAmount>84.00</PriceAmount>
+                    <CurrencyCode>GBP</CurrencyCode>
+                    <ComparisonProductPrice>
+                        <ProductIdentifier>
+                            <!--GTIN-13-->
+                            <ProductIDType>03</ProductIDType>
+                            <IDValue>9781786941701</IDValue>
+                        </ProductIdentifier>
+                        <ProductIdentifier>
+                            <!--ISBN-->
+                            <ProductIDType>15</ProductIDType>
+                            <IDValue>9781786941701</IDValue>
+                        </ProductIdentifier>
+                        <ProductIdentifier>
+                            <ProductIDType>01</ProductIDType>
+                            <IDTypeName>Publisher's Reference</IDTypeName>
+                            <IDValue>SS19</IDValue>
+                        </ProductIdentifier>
+                        <PriceType>02</PriceType>
+                        <PriceAmount>80.00</PriceAmount>
+                        <CurrencyCode>GBP</CurrencyCode>
+                    </ComparisonProductPrice>
+                </Price>
+                <Price>
+                    <PriceType>02</PriceType>
+                    <PriceQualifier>06</PriceQualifier>
+                    <PriceStatus>00</PriceStatus>
+                    <PriceAmount>158.00</PriceAmount>
+                    <CurrencyCode>GBP</CurrencyCode>
+                    <ComparisonProductPrice>
+                        <ProductIdentifier>
+                            <!--GTIN-13-->
+                            <ProductIDType>03</ProductIDType>
+                            <IDValue>9781786941701</IDValue>
+                        </ProductIdentifier>
+                        <ProductIdentifier>
+                            <!--ISBN-->
+                            <ProductIDType>15</ProductIDType>
+                            <IDValue>9781786941701</IDValue>
+                        </ProductIdentifier>
+                        <ProductIdentifier>
+                            <ProductIDType>01</ProductIDType>
+                            <IDTypeName>Publisher's Reference</IDTypeName>
+                            <IDValue>SS19</IDValue>
+                        </ProductIdentifier>
+                        <PriceType>02</PriceType>
+                        <PriceAmount>180.00</PriceAmount>
+                        <CurrencyCode>GBP</CurrencyCode>
+                    </ComparisonProductPrice>
+                </Price>
+                <Price>
+                    <PriceType>01</PriceType>
+                    <PriceQualifier>05</PriceQualifier>
+                    <PriceStatus>00</PriceStatus>
+                    <PriceAmount>120.00</PriceAmount>
+                    <CurrencyCode>USD</CurrencyCode>
+                    <ComparisonProductPrice>
+                        <ProductIdentifier>
+                            <!--GTIN-13-->
+                            <ProductIDType>03</ProductIDType>
+                            <IDValue>9781786941701</IDValue>
+                        </ProductIdentifier>
+                        <ProductIdentifier>
+                            <!--ISBN-->
+                            <ProductIDType>15</ProductIDType>
+                            <IDValue>9781786941701</IDValue>
+                        </ProductIdentifier>
+                        <ProductIdentifier>
+                            <ProductIDType>01</ProductIDType>
+                            <IDTypeName>Publisher's Reference</IDTypeName>
+                            <IDValue>SS19</IDValue>
+                        </ProductIdentifier>
+                        <PriceType>01</PriceType>
+                        <PriceAmount>120.00</PriceAmount>
+                        <CurrencyCode>USD</CurrencyCode>
+                    </ComparisonProductPrice>
+                </Price>
+                <Price>
+                    <PriceType>01</PriceType>
+                    <PriceQualifier>06</PriceQualifier>
+                    <PriceStatus>00</PriceStatus>
+                    <PriceAmount>270.00</PriceAmount>
+                    <CurrencyCode>USD</CurrencyCode>
+                    <ComparisonProductPrice>
+                        <ProductIdentifier>
+                            <!--GTIN-13-->
+                            <ProductIDType>03</ProductIDType>
+                            <IDValue>9781786941701</IDValue>
+                        </ProductIdentifier>
+                        <ProductIdentifier>
+                            <!--ISBN-->
+                            <ProductIDType>15</ProductIDType>
+                            <IDValue>9781786941701</IDValue>
+                        </ProductIdentifier>
+                        <ProductIdentifier>
+                            <ProductIDType>01</ProductIDType>
+                            <IDTypeName>Publisher's Reference</IDTypeName>
+                            <IDValue>SS19</IDValue>
+                        </ProductIdentifier>
+                        <PriceType>01</PriceType>
+                        <PriceAmount>270.00</PriceAmount>
+                        <CurrencyCode>USD</CurrencyCode>
+                    </ComparisonProductPrice>
+                </Price>
+            </SupplyDetail>
+        </ProductSupply>
+    </Product>
+</ONIXMessage>

@@ -13,11 +13,11 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>8</string>
+    <string>9</string>
   </entry>
    <entry>
     <string>plugin_parent_version</string>
-    <string>8</string>
+    <string>9</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -29,7 +29,10 @@
   </entry>
     <entry>
     <string>au_start_url</string>
-    <string>"%sclockss/%s/%s/index.html", base_url, journal_id, volume_name</string>
+      <list>
+        <string>"%sclockss/%s/%s/index.html", to_http(base_url), journal_id, volume_name</string>
+        <string>"%sclockss/%s/%s/index.html", to_https(base_url), journal_id, volume_name</string>
+      </list>
   </entry>
   <entry>
   <!--  CLOCKSS does not need this warning message about registering IP addresses -->

@@ -4,7 +4,6 @@
   >
 
   implicit < status ; year ; name ; param[volume] >
-
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
 
   {
@@ -46,7 +45,6 @@
 
       au < superseded ; 2014 ; Ab Imperio Volume 2014 [superseded] ; 2014 >
       au < superseded ; 2015 ; Ab Imperio Volume 2015 [superseded] ; 2015 >
-
       au < doNotProcess ; 2016 ; Ab Imperio Volume 2016 ; 2016 >
 
     }

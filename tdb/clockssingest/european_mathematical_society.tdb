@@ -45,7 +45,7 @@
     comment[journal_id] = aihpd
     
     au < frozen ; exists ; 2014 ; Annales de l’Institut Henri Poincaré D Volume 1 ; 1 ; >
-    au < finished ; crawling ; 2015 ; Annales de l’Institut Henri Poincaré D Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Annales de l’Institut Henri Poincaré D Volume 2 ; 2 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Annales de l’Institut Henri Poincaré D Volume 3 ; 3 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; Annales de l’Institut Henri Poincaré D Volume 4 ; 4 ; >
     au < deepCrawl ; exists ; 2018 ; Annales de l’Institut Henri Poincaré D Volume 5 ; 5 ; >
@@ -359,10 +359,10 @@
     au < frozen ; exists ; 2012 ; L’Enseignement Mathématique Volume 58 ; 58 ; >
     au < frozen ; exists ; 2013 ; L’Enseignement Mathématique Volume 59 ; 59 ; >
     au < frozen ; exists ; 2014 ; L’Enseignement Mathématique Volume 60 ; 60 ; >
-    au < finished ; crawling ; 2015 ; L’Enseignement Mathématique Volume 61 ; 61 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; L’Enseignement Mathématique Volume 61 ; 61 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; L’Enseignement Mathématique Volume 62 ; 62 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2017 ; L’Enseignement Mathématique Volume 63 ; 63 ; >
-    au < exists ; exists ; 2018 ; L’Enseignement Mathématique Volume 64 ; 64 ; >
+    au < manifest ; exists ; 2018 ; L’Enseignement Mathématique Volume 64 ; 64 ; >
     au < expected ; exists ; 2019 ; L’Enseignement Mathématique Volume 65 ; 65 ; >
 
   }
@@ -525,7 +525,7 @@
     au < deepCrawl ; exists ; 2018 ; Rendiconti del Seminario Matematico della Università di Padova Volume 139 ; 139 ; >
     au < deepCrawl ; exists ; 2018 ; Rendiconti del Seminario Matematico della Università di Padova Volume 140 ; 140 ; >
     au < manifest ; exists ; 2019 ; Rendiconti del Seminario Matematico della Università di Padova Volume 141 ; 141 ; >
-    au < expected ; exists ; 2019 ; Rendiconti del Seminario Matematico della Università di Padova Volume 142 ; 142 ; >
+    au < manifest ; exists ; 2019 ; Rendiconti del Seminario Matematico della Università di Padova Volume 142 ; 142 ; >
 
   }
 
