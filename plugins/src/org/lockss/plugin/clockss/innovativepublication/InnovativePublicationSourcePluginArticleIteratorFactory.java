@@ -41,6 +41,10 @@ public class InnovativePublicationSourcePluginArticleIteratorFactory implements 
                 ROOT_TEMPLATE,
                 PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
 
+        builder.addAspect(PDF_PATTERN,
+                PDF_REPLACEMENT,
+                ArticleFiles.ROLE_FULL_TEXT_PDF);
+
         builder.addAspect(XML_PATTERN,
                 XML_REPLACEMENT,
                 ArticleFiles.ROLE_FULL_TEXT_XML,

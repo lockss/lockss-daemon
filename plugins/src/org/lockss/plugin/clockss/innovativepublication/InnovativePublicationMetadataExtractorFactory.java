@@ -7,11 +7,9 @@ import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.FileMetadataExtractor;
 import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
+import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.*;
-import org.lockss.plugin.clockss.casalini.CasaliniLibriMarcXmlMetadataExtractorFactory;
-import org.lockss.plugin.clockss.casalini.CasaliniMarcXmlSchemaHelper;
-import org.lockss.plugin.clockss.warc.WarcJatsPublishingSchemaHelper;
 import org.lockss.util.Logger;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
@@ -25,7 +23,6 @@ public class InnovativePublicationMetadataExtractorFactory  extends SourceXmlMet
     private static final Logger log = Logger.getLogger(InnovativePublicationMetadataExtractorFactory .class);
 
     private static SourceXmlSchemaHelper InnovativeJatsXmlHelper = null;
-    private static SourceXmlSchemaHelper InnovativeCrossRefXmlHelper = null;
 
     @Override
     public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
@@ -36,87 +33,44 @@ public class InnovativePublicationMetadataExtractorFactory  extends SourceXmlMet
 
     public class InnovativePublicationMetadataExtractor extends SourceXmlMetadataExtractor {
 
-        /*
-         * This setUpSchema shouldn't be called directly
-         * WARCs can use both JATSset and ONIX3 and we need to look in the
-         * doc to determine which we're handling
-         *
-         */
         @Override
         protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
             throw new ShouldNotHappenException("This version of the schema setup cannot be used for this plugin");
         }
-
-
-        // WARCs now support both JATSset and ONIX3 for books
-        // look in the doc to determine which we're handling in this case
+        
         @Override
         protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu, Document doc) {
 
-            Node rootNode = doc.getFirstChild();
-            log.debug3("root: " + rootNode.getNodeName());
-            if ("ONIXMessage".equals(rootNode.getNodeName())) {
-                log.debug3("ONIX xml");
-                if (InnovativeJatsXmlHelper == null) {
-                    InnovativeJatsXmlHelper = new JatsPublishingSchemaHelper();
-                }
-                return InnovativeJatsXmlHelper;
-            } else {
-                log.debug3("JATSset xml");
-                if (InnovativeCrossRefXmlHelper == null) {
-                    InnovativeCrossRefXmlHelper = new CrossRefSchemaHelper();
-                }
-                return InnovativeCrossRefXmlHelper;
+            if (InnovativeJatsXmlHelper == null) {
+                InnovativeJatsXmlHelper = new JatsPublishingSchemaHelper();
             }
+            return InnovativeJatsXmlHelper;
         }
 
-        // It is not clear which one can be used as "volume" of the PDF file, we use the above "4"
-        // we also assume it is single digit number between 1-9
         @Override
-        protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper,
-                                                                CachedUrl cu,
+        protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
                                                                 ArticleMetadata oneAM) {
 
-            String yearNum = "";
-            String pdfFilePath = "";
-            String volumeNum = "1";
-            ArrayList<String> returnList = new ArrayList<String>();
-            Boolean volumeNumFound = false;
-
-            if (oneAM.getRaw(CasaliniMarcXmlSchemaHelper.PDF_FILE_YEAR) != null) {
-                yearNum = oneAM.getRaw(CasaliniMarcXmlSchemaHelper.PDF_FILE_YEAR).replace(".", "");
-            } else {
-                log.debug3("yearNum is empty");
-            }
-
-            String fileNum = oneAM.getRaw(CasaliniMarcXmlSchemaHelper.MARC_file);
-            String cuBase = FilenameUtils.getFullPath(cu.getUrl());
-
-            if (oneAM.getRaw(CasaliniMarcXmlSchemaHelper.PDF_FILE_VOLUME) != null) {
-                String volumeString = oneAM.getRaw(CasaliniMarcXmlSchemaHelper.PDF_FILE_VOLUME);
-                int lastComma = volumeString.lastIndexOf(",");
-                if (lastComma > -1) {
-                    volumeNum = volumeString.substring((lastComma - 1), lastComma);
-                    volumeNumFound = true;
-                    pdfFilePath = cuBase + yearNum + "_" + volumeNum + "_" + fileNum + ".pdf";
-                    returnList.add(pdfFilePath);
-                    log.debug3("Found volume number, building PDF file with  filename - " + fileNum + ", volume - " + volumeNum + ", year - " + yearNum);
+            String pdfPath = "";
+            String url_string = cu.getUrl();
+            List<String> returnList = new ArrayList<String>();
+            //XML and PDF are located inside the same directory in most cases
+            //http://content5.lockss.org/sourcefiles/innovativepublication-released/2019/IJCA/2019/volume%206/issue%204/IJCA%206-4-478-480.pdf
+            //http://content5.lockss.org/sourcefiles/innovativepublication-released/2019/IJCA/2019/volume%206/issue%204/IJCA%206-4-481-487.xml
+            if (url_string.indexOf(".xml") > -1) {
+                pdfPath = url_string.replace(".xml", ".pdf");
+                ArchivalUnit B_au = cu.getArchivalUnit();
+                CachedUrl fileCu;
+                fileCu = B_au.makeCachedUrl(pdfPath);
+                log.debug3("Check for existence of " + pdfPath);
+                if(fileCu != null && (fileCu.hasContent())) {
+                    log.debug3("pdfPath is " + pdfPath);
+                    returnList.add(pdfPath);
+                } else {
+                    log.debug3("no matching PDF found, use xml file instead " + pdfPath);
+                    returnList.add(url_string);
                 }
             }
-            if (!volumeNumFound) {
-                ArrayList<Integer> volumes = new ArrayList<>();
-                volumes.add(1);
-                volumes.add(2);
-                volumes.add(3);
-                volumes.add(4);
-
-                for (int volume : volumes) {
-                    pdfFilePath = cuBase + yearNum + "_" + volume + "_" + fileNum + ".pdf";
-                    returnList.add(pdfFilePath);
-                    log.debug3("Could not find volume number from xml, building PDF file with filename - " + fileNum + ", with possible guessed volume - " + volumeNum + ", year - " + yearNum);
-                }
-            }
-
             return returnList;
         }
 
@@ -124,35 +78,13 @@ public class InnovativePublicationMetadataExtractorFactory  extends SourceXmlMet
         protected void postCookProcess(SourceXmlSchemaHelper schemaHelper,
                                        CachedUrl cu, ArticleMetadata thisAM) {
 
-            if (thisAM.getRaw(CasaliniMarcXmlSchemaHelper.MARC_start_page) != null) {
-                String pages = thisAM.getRaw(CasaliniMarcXmlSchemaHelper.MARC_start_page);
-                // It might in different formats
-                // P. [1-20] [20]
-                // 370-370 p.
-                String page_pattern = "[^\\d]*?(\\d+)\\s*?\\-\\s*?(\\d+)[^\\d]*?";
-
-                Pattern pattern = Pattern.compile(page_pattern, Pattern.CASE_INSENSITIVE);
-                Matcher matcher = pattern.matcher(pages);
-
-                String start_page = "0";
-                String end_page = "0";
-
-                while (matcher.find()) {
-                    start_page = matcher.group(1);
-                    end_page = matcher.group(2);
+            //If we didn't get a valid date value, use the copyright year if it's there
+            if (thisAM.get(MetadataField.FIELD_DATE) == null) {
+                if (thisAM.getRaw(JatsPublishingSchemaHelper.JATS_date) != null) {
+                    thisAM.put(MetadataField.FIELD_DATE, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_date));
+                } else {// last chance
+                    thisAM.put(MetadataField.FIELD_DATE, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_edate));
                 }
-
-                thisAM.put(MetadataField.FIELD_START_PAGE, start_page);
-                thisAM.put(MetadataField.FIELD_END_PAGE, end_page);
-            }
-
-            if (thisAM.getRaw(CasaliniMarcXmlSchemaHelper.MARC_author) != null) {
-                String author = thisAM.getRaw(CasaliniMarcXmlSchemaHelper.MARC_author);
-                thisAM.put(MetadataField.FIELD_AUTHOR, author.replace(".", ""));
-            }
-
-            if (thisAM.getRaw(CasaliniMarcXmlSchemaHelper.MARC_doi) != null) {
-                thisAM.put(MetadataField.FIELD_DOI, thisAM.getRaw(CasaliniMarcXmlSchemaHelper.MARC_doi));
             }
         }
     }
