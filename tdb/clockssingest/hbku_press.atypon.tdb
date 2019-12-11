@@ -450,14 +450,14 @@
   {
   
     title <
-      name = Rule of Law and Anti-Corruption Center ;
+      name = Rule of Law and Anti-Corruption Center Journal ;
       eissn = 2617-2763
     >
 
     plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
     param[journal_id] = rolacc
 
-    au < finished ; crawling ; 2018 ; Rule of Law and Anti-Corruption Center Volume 2018 ; 2018 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2018 ; Rule of Law and Anti-Corruption Center Journal Volume 2018 ; 2018 ; reingest3.clockss.org:8083 >
 
   }
   
