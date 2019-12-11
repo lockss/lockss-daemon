@@ -88,6 +88,18 @@
     implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
     param[journal_id] = sch
 
+    au < exists ; 2000 ; Scottish Church History Volume 30 ; 30 ; https://www.euppublishing.com/ >
+    au < exists ; 2002 ; Scottish Church History Volume 31 ; 31 ; https://www.euppublishing.com/ >
+    au < exists ; 2002 ; Scottish Church History Volume 32 ; 32 ; https://www.euppublishing.com/ >
+    au < exists ; 2003 ; Scottish Church History Volume 33 ; 33 ; https://www.euppublishing.com/ >
+    au < exists ; 2004 ; Scottish Church History Volume 34 ; 34 ; https://www.euppublishing.com/ >
+    au < exists ; 2005 ; Scottish Church History Volume 35 ; 35 ; https://www.euppublishing.com/ >
+    au < exists ; 2006 ; Scottish Church History Volume 36 ; 36 ; https://www.euppublishing.com/ >
+    au < exists ; 2007 ; Scottish Church History Volume 37 ; 37 ; https://www.euppublishing.com/ >
+    au < exists ; 2008 ; Scottish Church History Volume 38 ; 38 ; https://www.euppublishing.com/ >
+    au < exists ; 2009 ; Scottish Church History Volume 39 ; 39 ; https://www.euppublishing.com/ >
+    au < exists ; 2010 ; Scottish Church History Volume 40 ; 40 ; https://www.euppublishing.com/ >
+    au < exists ; 2012 ; Scottish Church History Volume 41 ; 41 ; https://www.euppublishing.com/ >
     au < manifest ; 2013 ; Scottish Church History Volume 42 ; 42 ; https://www.euppublishing.com/ >
     au < manifest ; 2014 ; Scottish Church History Volume 43 ; 43 ; https://www.euppublishing.com/ >
     au < manifest ; 2015 ; Scottish Church History Volume 44 ; 44 ; https://www.euppublishing.com/ >
@@ -1162,6 +1174,7 @@
       param[journal_id] = jqs
       implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
 
+      au < exists ; 1999 ; Journal of Qur'anic Studies Volume 1 ; 1 ; https://www.euppublishing.com/ >
       au < released ; 2005 ; Journal of Qur'anic Studies Volume 7 ; 7 ; http://www.euppublishing.com/ >
       au < released ; 2006 ; Journal of Qur'anic Studies Volume 8 ; 8 ; http://www.euppublishing.com/ >
       au < released ; 2007 ; Journal of Qur'anic Studies Volume 9 ; 9 ; http://www.euppublishing.com/ >
@@ -1176,8 +1189,8 @@
       au < released ; 2016 ; Journal of Qur'anic Studies Volume 18 ; 18 ; http://www.euppublishing.com/ >
       au < released ; 2017 ; Journal of Qur'anic Studies Volume 19 ; 19 ; https://www.euppublishing.com/ >
       au < released ; 2018 ; Journal of Qur'anic Studies Volume 20 ; 20 ; https://www.euppublishing.com/ >
-    
       au < manifest ; 2019 ; Journal of Qur'anic Studies Volume 21 ; 21 ; https://www.euppublishing.com/ >
+
     }
     
   }
