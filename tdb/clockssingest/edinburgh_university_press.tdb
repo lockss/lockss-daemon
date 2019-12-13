@@ -539,7 +539,7 @@
     au < finished ; finished ; 2015 ; Derrida Today Volume 8 ; 8 ; http://www.euppublishing.com/ ; >
     au < finished ; manifest ; 2016 ; Derrida Today Volume 9 ; 9 ; http://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2017 ; Derrida Today Volume 10 ; 10 ; http://www.euppublishing.com/ ; >
-    au < deepCrawl ; exists ; 2018 ; Derrida Today Volume 11 ; 11 ; https://www.euppublishing.com/ ; >
+    au < finished ; manifest ; 2018 ; Derrida Today Volume 11 ; 11 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2019 ; Derrida Today Volume 12 ; 12 ; https://www.euppublishing.com/ ; >
 
   }
@@ -670,7 +670,7 @@
      au < finished ; manifest ; 2015 ; Gothic Studies Volume 17 ; 17 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
      au < finished ; manifest ; 2016 ; Gothic Studies Volume 18 ; 18 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
      au < finished ; manifest ; 2017 ; Gothic Studies Volume 19 ; 19 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
-     au < deepCrawl ; exists ; 2018 ; Gothic Studies Volume 20 ; 20 ; https://www.euppublishing.com/ ; >
+     au < finished ; manifest ; 2018 ; Gothic Studies Volume 20 ; 20 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
      au < crawling ; exists ; 2019 ; Gothic Studies Volume 21 ; 21 ; https://www.euppublishing.com/ ; >
 
   }
@@ -1121,7 +1121,7 @@
     au < finished ; finished ; 2015 ; Journal of Scottish Philosophy Volume 13 ; 13 ; http://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2016 ; Journal of Scottish Philosophy Volume 14 ; 14 ; http://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Journal of Scottish Philosophy Volume 15 ; 15 ; http://www.euppublishing.com/ ; >
-    au < deepCrawl ; exists ; 2018 ; Journal of Scottish Philosophy Volume 16 ; 16 ; https://www.euppublishing.com/ ; >
+    au < finished ; manifest ; 2018 ; Journal of Scottish Philosophy Volume 16 ; 16 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2019 ; Journal of Scottish Philosophy Volume 17 ; 17 ; https://www.euppublishing.com/ ; >
 
   }
@@ -1283,7 +1283,7 @@
     au < finished ; finished ; 2015 ; Northern Scotland Volume 6 ; 6 ; http://www.euppublishing.com/ ; >
     au < finished ; manifest ; 2016 ; Northern Scotland Volume 7 ; 7 ; http://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Northern Scotland Volume 8 ; 8 ; http://www.euppublishing.com/ ; >
-    au < deepCrawl ; exists ; 2018 ; Northern Scotland Volume 9 ; 9 ; https://www.euppublishing.com/ ; >
+    au < finished ; manifest ; 2018 ; Northern Scotland Volume 9 ; 9 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2019 ; Northern Scotland Volume 10 ; 10 ; https://www.euppublishing.com/ ; >
 
   }
@@ -1496,7 +1496,7 @@
     au < finished ; finished ; 2015 ; Romanticism Volume 21 ; 21 ; http://www.euppublishing.com/ ; >
     au < finished ; manifest ; 2016 ; Romanticism Volume 22 ; 22 ; http://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Romanticism Volume 23 ; 23 ; http://www.euppublishing.com/ ; >
-    au < deepCrawl ; exists ; 2018 ; Romanticism Volume 24 ; 24 ; https://www.euppublishing.com/ ; >
+    au < finished ; manifest ; 2018 ; Romanticism Volume 24 ; 24 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2019 ; Romanticism Volume 25 ; 25 ; https://www.euppublishing.com/ ; >
 
   }
@@ -1830,7 +1830,7 @@
     au < frozen ; exists ; 2013 ; Word Structure Volume 6 ; 6 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2014 ; Word Structure Volume 7 ; 7 ; http://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Word Structure Volume 8 ; 8 ; http://www.euppublishing.com/ ; >
-    au < frozen ; exists ; 2016 ; Word Structure Volume 9 ; 9 ; http://www.euppublishing.com/ ; >
+    au < finished ; manifest ; 2016 ; Word Structure Volume 9 ; 9 ; http://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Word Structure Volume 10 ; 10 ; http://www.euppublishing.com/ ; >
     au < deepCrawl ; exists ; 2018 ; Word Structure Volume 11 ; 11 ; https://www.euppublishing.com/ ; >
     au < crawling ; exists ; 2019 ; Word Structure Volume 12 ; 12 ; https://www.euppublishing.com/ ; >
@@ -1882,14 +1882,14 @@
        au < manifest ; exists ; 1997 ; Costume Volume 31 ; 31 ; https://www.euppublishing.com/ ; >
        au < manifest ; exists ; 1998 ; Costume Volume 32 ; 32 ; https://www.euppublishing.com/ ; >
        au < manifest ; exists ; 1999 ; Costume Volume 33 ; 33 ; https://www.euppublishing.com/ ; >
-       au < frozen ; exists ; 2000 ; Costume Volume 34 ; 34 ; https://www.euppublishing.com/ ; >
-       au < frozen ; exists ; 2001 ; Costume Volume 35 ; 35 ; https://www.euppublishing.com/ ; >
-       au < frozen ; exists ; 2002 ; Costume Volume 36 ; 36 ; https://www.euppublishing.com/ ; >
-       au < frozen ; exists ; 2003 ; Costume Volume 37 ; 37 ; https://www.euppublishing.com/ ; >
-       au < frozen ; exists ; 2004 ; Costume Volume 38 ; 38 ; https://www.euppublishing.com/ ; >
+       au < finished ; manifest ; 2000 ; Costume Volume 34 ; 34 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
+       au < finished ; manifest ; 2001 ; Costume Volume 35 ; 35 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
+       au < finished ; manifest ; 2002 ; Costume Volume 36 ; 36 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
+       au < finished ; manifest ; 2003 ; Costume Volume 37 ; 37 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
+       au < finished ; manifest ; 2004 ; Costume Volume 38 ; 38 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
        au < frozen ; exists ; 2005 ; Costume Volume 39 ; 39 ; https://www.euppublishing.com/ ; >
-       au < frozen ; exists ; 2006 ; Costume Volume 40 ; 40 ; https://www.euppublishing.com/ ; >
-       au < frozen ; exists ; 2007 ; Costume Volume 41 ; 41 ; https://www.euppublishing.com/ ; >
+       au < finished ; manifest ; 2006 ; Costume Volume 40 ; 40 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
+       au < finished ; manifest ; 2007 ; Costume Volume 41 ; 41 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
        au < doNotProcess ; exists ; 2008 ; Costume Volume 42 ; 42 ; https://www.euppublishing.com/ ; >
        au < doNotProcess ; exists ; 2009 ; Costume Volume 43 ; 43 ; https://www.euppublishing.com/ ; >
        au < doNotProcess ; doNotProcess ; 2010 ; Costume Volume 44 ; 44 ; https://www.euppublishing.com/ ; >
