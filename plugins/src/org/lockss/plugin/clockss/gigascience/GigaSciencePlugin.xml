@@ -48,21 +48,22 @@
     </entry>
     <entry>
         <string>au_start_url</string>
-        <string>"%s/list?start_date=%d-01-01&amp;end_date=%d-12-31", base_url, year</string>
+        <string>"%s", base_url</string>
     </entry>
-    <!-- CrawlSeed takes precedence but leave it in for safety in case daemon expects it somewhere -->
-    <!--
-    <entry>
-        <string>au_start_url</string>
-        <string>"%slockss.txt", base_url</string>
-    </entry>
-    -->
-    <!--
     <entry>
         <string>au_permission_url</string>
-        <string>"%slockss.txt", to_https(base_url)</string>
+        <string>"%s", base_url</string>
     </entry>
-    -->
+    <entry>
+        <string>au_crawlrules</string>
+        <list>
+            <string>1,"%s", base_url</string>
+        </list>
+    </entry>
+    <entry>
+        <string>au_refetch_depth</string>
+        <int>1</int>
+    </entry>
     <entry>
         <string>plugin_crawl_seed_factory</string>
         <string>org.lockss.plugin.clockss.gigascience.GigaScienceCrawlSeedFactory</string>

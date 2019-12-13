@@ -399,6 +399,7 @@ public abstract class BaseSpringerLinkCrawlSeed extends BaseCrawlSeed {
       StringBuilder sb = new StringBuilder();
       sb.append("<html>\n");
       for (String u : urlList) {
+                log.debug3("Fei: url = " + u);
               sb.append("<a href=\"" + u + "\">" + u + "</a><br/>\n");
       }
       sb.append("</html>");

@@ -27,8 +27,8 @@ public class GigaScienceCrawlSeed extends BaseCrawlSeed {
 
     public static final String YEAR_PREFIX = "-01-01";
     public static final String YEAR_POSTFIX = "-12-31";
-    public static final String KEY_FROM_DATE = "start_date";
-    public static final String KEY_UNTIL_DATE = "end_date";
+    public static final String KEY_FROM_DATE = "start_date=";
+    public static final String KEY_UNTIL_DATE = "end_date=";
 
     protected Crawler.CrawlerFacade facade;
 
@@ -68,6 +68,18 @@ public class GigaScienceCrawlSeed extends BaseCrawlSeed {
         return urlList;
     }
 
+    @Override
+    public Collection<String> doGetPermissionUrls() throws ConfigurationException, PluginException, IOException{
+        if (urlList == null) {
+            populateUrlList();
+        }
+        if (urlList.isEmpty()) {
+            throw new CacheException.UnexpectedNoRetryFailException("Found no permitted urls");
+        }
+
+        return urlList;
+    }
+
     /**
      * <p>
      * Populates the URL list with start URLs.
@@ -77,19 +89,57 @@ public class GigaScienceCrawlSeed extends BaseCrawlSeed {
      * @since 1.67.5
      */
     protected void populateUrlList() throws IOException {
+
         AuState aus = AuUtil.getAuState(au);
         urlList = new ArrayList<String>();
-        String storeUrl =   baseUrl + "list?" + KEY_FROM_DATE + Integer.toString(this.year) + YEAR_PREFIX
+        String apiStartUrl =   baseUrl + "list?" + KEY_FROM_DATE + Integer.toString(this.year) + YEAR_PREFIX
                             + "&" + KEY_UNTIL_DATE + Integer.toString(this.year) + YEAR_POSTFIX;
 
         GigaScienceDoiLinkExtractor ple = new GigaScienceDoiLinkExtractor();
 
-        String loggerUrl = storeUrl ;
-        UrlFetcher uf = makeApiUrlFetcher(ple, loggerUrl, loggerUrl);
-        log.debug2("Request URL: " + loggerUrl);
+        UrlFetcher uf = makeApiUrlFetcher(ple,apiStartUrl);
+        log.debug2("Request URL: " + apiStartUrl);
+        facade.getCrawlerStatus().addPendingUrl(apiStartUrl);
+
+        // Make request
+        UrlFetcher.FetchResult fr = null;
+        try {
+            fr = uf.fetch();
+        }
+        catch (CacheException ce) {
+            if(ce.getCause() != null && ce.getCause().getMessage().contains("LOCKSS")) {
+                log.debug("OAI result errored due to LOCKSS audit proxy. Trying alternate start Url", ce);
+                urlList.add(apiStartUrl);
+                return;
+            } else {
+                log.debug2("Stopping due to fatal CacheException", ce);
+                Throwable cause = ce.getCause();
+                if (cause != null && IOException.class.equals(cause.getClass())) {
+                    throw (IOException)cause; // Unwrap IOException
+                }
+                else {
+                    throw ce;
+                }
+            }
+        }
+        if (fr == UrlFetcher.FetchResult.FETCHED) {
+            facade.getCrawlerStatus().removePendingUrl(apiStartUrl);
+            facade.getCrawlerStatus().signalUrlFetched(apiStartUrl);
+        }
+        else {
+            log.debug2("Stopping due to fetch result " + fr);
+            Map<String, String> errors = facade.getCrawlerStatus().getUrlsWithErrors();
+            if (errors.containsKey(apiStartUrl)) {
+                errors.put(apiStartUrl, errors.remove(apiStartUrl));
+            }
+            else {
+                facade.getCrawlerStatus().signalErrorForUrl(apiStartUrl, "Cannot fetch seed URL");
+            }
+            throw new CacheException("Cannot fetch seed URL");
+        }
 
         Collections.sort(urlList);
-        storeStartUrls(urlList, storeUrl);
+        storeStartUrls(urlList, apiStartUrl);
     }
 
     /**
@@ -107,8 +157,7 @@ public class GigaScienceCrawlSeed extends BaseCrawlSeed {
      * @since 1.67.5
      */
     protected UrlFetcher makeApiUrlFetcher(final GigaScienceDoiLinkExtractor ple,
-                                           final String url,
-                                           final String loggerUrl) {
+                                           final String url) {
         // Make a URL fetcher
         UrlFetcher uf = facade.makeUrlFetcher(url);
 
@@ -116,7 +165,6 @@ public class GigaScienceCrawlSeed extends BaseCrawlSeed {
         BitSet permFetchFlags = uf.getFetchFlags();
         permFetchFlags.set(UrlCacher.REFETCH_FLAG);
         uf.setFetchFlags(permFetchFlags);
-
 
         // Set custom URL consumer factory
         uf.setUrlConsumerFactory(new UrlConsumerFactory() {
@@ -132,27 +180,24 @@ public class GigaScienceCrawlSeed extends BaseCrawlSeed {
                         try {
                             String au_cset = AuUtil.getCharsetOrDefault(fud.headers);
                             String cset = CharsetUtil.guessCharsetFromStream(fud.input,au_cset);
-                            //FIXME 1.69
-                            // Once guessCharsetFromStream correctly uses the hint instead of returning null
-                            // this local bit won't be needed.
                             if (cset == null) {
                                 cset = au_cset;
                             }
-                            //
                             ple.extractUrls(au,
                                     fud.input,
                                     cset,
-                                    loggerUrl, // rather than fud.origUrl
+                                    url,
                                     new LinkExtractor.Callback() {
                                         @Override
-                                        public void foundLink(String url) {
-                                            partial.add(url);
+                                        public void foundLink(String doiUrl) {
+                                            log.debug3("Fei: doiUrl is added = " + doiUrl);
+                                            partial.add(doiUrl);
                                         }
                                     });
                         }
                         catch (IOException ioe) {
                             log.debug2("Link extractor threw", ioe);
-                            throw new IOException("Error while parsing PAM response for " + loggerUrl, ioe);
+                            throw new IOException("Error while parsing PAM response for " + url, ioe);
                         }
                         finally {
                             // Logging

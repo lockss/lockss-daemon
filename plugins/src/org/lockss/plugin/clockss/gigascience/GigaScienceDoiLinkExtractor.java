@@ -3,6 +3,7 @@ package org.lockss.plugin.clockss.gigascience;
 import org.apache.commons.lang3.StringUtils;
 import org.lockss.extractor.LinkExtractor;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.util.Logger;
 import org.lockss.util.XPathUtil;
 import org.lockss.util.urlconn.CacheException;
 import org.w3c.dom.Document;
@@ -24,7 +25,10 @@ import java.io.InputStreamReader;
 
 public class GigaScienceDoiLinkExtractor implements LinkExtractor {
 
+    protected static final XPathExpression DOIDataSets;
     protected static final XPathExpression DOI;
+
+    private static final Logger log = Logger.getLogger(GigaScienceDoiLinkExtractor.class);
 
 
     /*
@@ -37,6 +41,7 @@ public class GigaScienceDoiLinkExtractor implements LinkExtractor {
     static {
         try {
             XPath xpath = XPathFactory.newInstance().newXPath();
+            DOIDataSets = xpath.compile("//doi");
             DOI = xpath.compile("doi");
         }
         catch (XPathExpressionException xpee) {
@@ -83,7 +88,10 @@ public class GigaScienceDoiLinkExtractor implements LinkExtractor {
 
         NodeList dois = null;
         try {
-            dois = XPathUtil.evaluateNodeSet(DOI, doc);
+            //dois = XPathUtil.evaluateNodeSet(DOIDataSets, doc);
+            dois = XPathUtil.evaluateNodeSet(DOIDataSets, doc);
+            int doi_count = dois.getLength();
+            log.debug3("Fei: doi_count = " + doi_count);
         }
         catch (XPathExpressionException xpee) {
             throw new CacheException.UnknownExceptionException("Error while parsing results for " + loggerUrl, xpee);
@@ -99,6 +107,7 @@ public class GigaScienceDoiLinkExtractor implements LinkExtractor {
             doi = dois.item(i);
             try {
                 doiStr = XPathUtil.evaluateString(DOI, doi);
+                log.debug3("Fei: doiStr parsed from xml file = " + doiStr);
             }
             catch (XPathExpressionException xpee) {
                 throw new CacheException.UnknownExceptionException(
