@@ -7,7 +7,6 @@ import org.lockss.util.Logger;
 import org.lockss.util.XPathUtil;
 import org.lockss.util.urlconn.CacheException;
 import org.w3c.dom.Document;
-import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
@@ -15,10 +14,7 @@ import org.xml.sax.SAXException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.xpath.XPath;
-import javax.xml.xpath.XPathExpression;
-import javax.xml.xpath.XPathExpressionException;
-import javax.xml.xpath.XPathFactory;
+import javax.xml.xpath.*;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -26,10 +22,8 @@ import java.io.InputStreamReader;
 public class GigaScienceDoiLinkExtractor implements LinkExtractor {
 
     protected static final XPathExpression DOIDataSets;
-    protected static final XPathExpression DOI;
 
     private static final Logger log = Logger.getLogger(GigaScienceDoiLinkExtractor.class);
-
 
     /*
      * <?xml version="1.0" encoding="UTF-8"?>
@@ -41,27 +35,11 @@ public class GigaScienceDoiLinkExtractor implements LinkExtractor {
     static {
         try {
             XPath xpath = XPathFactory.newInstance().newXPath();
-            DOIDataSets = xpath.compile("//doi");
-            DOI = xpath.compile("doi");
+            DOIDataSets = xpath.compile("//doi/text()");
         }
         catch (XPathExpressionException xpee) {
             throw new ExceptionInInitializerError(xpee);
         }
-    }
-
-
-    /**
-     * <p>
-     * A flag indicating whether work on this query is done.
-     * </p>
-     *
-     * @since 1.67.5
-     */
-    protected boolean done;
-
-
-    public GigaScienceDoiLinkExtractor() {
-        this.done = false;
     }
 
     @Override
@@ -88,10 +66,10 @@ public class GigaScienceDoiLinkExtractor implements LinkExtractor {
 
         NodeList dois = null;
         try {
-            //dois = XPathUtil.evaluateNodeSet(DOIDataSets, doc);
+
             dois = XPathUtil.evaluateNodeSet(DOIDataSets, doc);
             int doi_count = dois.getLength();
-            log.debug3("Fei: doi_count = " + doi_count);
+            log.debug3("Total DOI count : " + doi_count);
         }
         catch (XPathExpressionException xpee) {
             throw new CacheException.UnknownExceptionException("Error while parsing results for " + loggerUrl, xpee);
@@ -101,30 +79,19 @@ public class GigaScienceDoiLinkExtractor implements LinkExtractor {
             throw new CacheException.UnknownExceptionException("Internal error parsing results for " + loggerUrl);
         }
 
-        Node doi = null;
-        String doiStr = null;
         for (int i = 0 ; i < dois.getLength() ; ++i) {
-            doi = dois.item(i);
-            try {
-                doiStr = XPathUtil.evaluateString(DOI, doi);
-                log.debug3("Fei: doiStr parsed from xml file = " + doiStr);
-            }
-            catch (XPathExpressionException xpee) {
-                throw new CacheException.UnknownExceptionException(
-                        String.format("Error while parsing stanza for %s in %s",
-                                doiStr == null ? "first DOI" : "DOI immediately after " + doiStr,
-                                loggerUrl),
-                        xpee);
-            }
+            log.debug3("Each DOI value " + dois.item(i).getNodeValue());
+            processDoi(cb, dois.item(i).getNodeValue());
+        }
+    }
+
+    public void processDoi(Callback cb, String doi) {
+        if (doi != null && !StringUtils.isEmpty(doi)) {
+            cb.foundLink(doi);
         }
     }
 
     public static final String loggerUrl(String srcUrl) {
         return srcUrl;
     }
-
-    public boolean isDone() {
-        return done;
-    }
-
 }
