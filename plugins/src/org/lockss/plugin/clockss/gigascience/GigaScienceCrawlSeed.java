@@ -24,6 +24,8 @@ public class GigaScienceCrawlSeed extends BaseCrawlSeed {
     //http://gigadb.org/api/list?start_date=2018-01-01&end_date=2018-12-31
     //http://gigadb.org/api/dataset?doi=100658
     protected static final String API_URL = "http://gigadb.org/api/";
+    protected static final String SINGLE_DOI_API_URL = "http://gigadb.org/api/dataset?doi=";
+
 
     public static final String YEAR_PREFIX = "-01-01";
     public static final String YEAR_POSTFIX = "-12-31";
@@ -65,18 +67,6 @@ public class GigaScienceCrawlSeed extends BaseCrawlSeed {
         if (urlList.isEmpty()) {
             throw new CacheException.UnexpectedNoRetryFailException("Found no start urls");
         }
-        return urlList;
-    }
-
-    @Override
-    public Collection<String> doGetPermissionUrls() throws ConfigurationException, PluginException, IOException{
-        if (urlList == null) {
-            populateUrlList();
-        }
-        if (urlList.isEmpty()) {
-            throw new CacheException.UnexpectedNoRetryFailException("Found no permitted urls");
-        }
-
         return urlList;
     }
 
@@ -219,7 +209,8 @@ public class GigaScienceCrawlSeed extends BaseCrawlSeed {
         StringBuilder sb = new StringBuilder();
         sb.append("<html>\n");
         for (String u : urlList) {
-            sb.append("<a href=\"" + u + "\">" + u + "</a><br/>\n");
+            log.debug3("SINGLE_DOI_API_URL is :" + SINGLE_DOI_API_URL + u);
+            sb.append("<a href=\"" + SINGLE_DOI_API_URL + u + "\">" + u + "</a><br/>\n");
         }
         sb.append("</html>");
         CIProperties headers = new CIProperties();

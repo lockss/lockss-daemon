@@ -52,17 +52,23 @@
     </entry>
     <entry>
         <string>au_permission_url</string>
-        <string>"%s", base_url</string>
+        <string>"https://link.springer.com/lockss.txt"</string>
     </entry>
     <entry>
         <string>au_crawlrules</string>
         <list>
             <string>1,"%s", base_url</string>
+            <string>1,"http://gigadb.org/"</string>
+            <string>1,"https://link.springer.com/lockss.txt"</string>
         </list>
     </entry>
     <entry>
         <string>au_refetch_depth</string>
         <int>1</int>
+    </entry>
+    <entry>
+        <string>au_permitted_host_pattern</string>
+        <string>link.springer.com</string>
     </entry>
     <entry>
         <string>plugin_crawl_seed_factory</string>
