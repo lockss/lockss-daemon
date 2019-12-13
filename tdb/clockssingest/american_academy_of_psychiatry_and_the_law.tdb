@@ -22,9 +22,9 @@
     param[base_url] = http://jaapl.org/
 
     au < aapl.ClockssAAPLDrupalPlugin ; frozen ; exists ; 2016 ; Journal of the American Academy of Psychiatry and the Law Online Volume 44 ; 44 ; >
-    au < aapl.ClockssAAPLDrupalPlugin ; ready ; exists ; 2017 ; Journal of the American Academy of Psychiatry and the Law Online Volume 45 ; 45 ; > #Probe url error
-    au < aapl.ClockssAAPLDrupalPlugin ; ready ; exists ; 2018 ; Journal of the American Academy of Psychiatry and the Law Online Volume 46 ; 46 ; > #Probe url error
-    au < aapl.ClockssAAPLDrupalPlugin ; ready ; exists ; 2019 ; Journal of the American Academy of Psychiatry and the Law Online Volume 47 ; 47 ; >
+    au < aapl.ClockssAAPLDrupalPlugin ; crawling ; exists ; 2017 ; Journal of the American Academy of Psychiatry and the Law Online Volume 45 ; 45 ; > #Probe url error
+    au < aapl.ClockssAAPLDrupalPlugin ; crawling ; exists ; 2018 ; Journal of the American Academy of Psychiatry and the Law Online Volume 46 ; 46 ; > #Probe url error
+    au < aapl.ClockssAAPLDrupalPlugin ; crawling ; exists ; 2019 ; Journal of the American Academy of Psychiatry and the Law Online Volume 47 ; 47 ; >
 
     }
 
