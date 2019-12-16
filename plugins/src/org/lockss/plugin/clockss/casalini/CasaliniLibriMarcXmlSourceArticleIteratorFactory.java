@@ -29,12 +29,9 @@ public class CasaliniLibriMarcXmlSourceArticleIteratorFactory implements Article
     private static final String PATTERN_TEMPLATE = "\"%s%d.*/[^/]+\",base_url,year";
 
     // The delivery does not have one-pdf-to-one-xml matching relationship,
-    // All the article metadata is inside article_xml.
+    // All the article metadata is inside articles_xml. However they may update other xmls or even Excel/CVS
     // So we not use PDF count as # of articles as in other plugin
-    protected static final Pattern PDF_PATTERN = Pattern.compile("/([^/]+)\\.pdf$");
-    protected static final String PDF_REPLACEMENT = "/$1.pdf";
-
-    protected static final Pattern XML_PATTERN = Pattern.compile("/([^/]+)\\.xml$");
+    protected static final Pattern XML_PATTERN = Pattern.compile("/(.*)_(articles)_(\\d+)?.xml$");
     protected static final String XML_REPLACEMENT = "/$1.xml";
 
 
@@ -50,7 +47,6 @@ public class CasaliniLibriMarcXmlSourceArticleIteratorFactory implements Article
 
         builder.addAspect(XML_PATTERN,
                 XML_REPLACEMENT,
-                ArticleFiles.ROLE_FULL_TEXT_XML,
                 ArticleFiles.ROLE_ARTICLE_METADATA);
 
         return builder.getSubTreeArticleIterator();
