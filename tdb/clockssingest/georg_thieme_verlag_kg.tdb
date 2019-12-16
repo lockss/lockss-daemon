@@ -3103,6 +3103,28 @@
 
   {
 
+      title <
+        name = Journal of Social Health and Diabetes ;
+        issn = 2321-0656 ;
+        eissn = 2321-0664 ;
+        doi = 10.1055/s-00041241
+      >
+
+    param[journal_id] = 10.1055/s-00041241
+    comment[years] = 2013-current
+
+      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Journal of Social Health and Diabetes Volume 1 ; 1 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Social Health and Diabetes Volume 2 ; 2 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Social Health and Diabetes Volume 3 ; 3 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Journal of Social Health and Diabetes Volume 4 ; 4 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Journal of Social Health and Diabetes Volume 5 ; 5 ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Journal of Social Health and Diabetes Volume 6 ; 6 ; >
+      au < exists ; exists ; 2019 ; 2019 ; Journal of Social Health and Diabetes Volume 7 ; 7 ; >
+
+  }
+
+  {
+
     title <
       name = Journal of Wrist Surgery ;
       issn = 2163-3916 ;
