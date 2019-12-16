@@ -7,7 +7,6 @@ import org.lockss.extractor.FileMetadataExtractor;
 import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.CachedUrl;
-import org.lockss.plugin.clockss.JatsPublishingSchemaHelper;
 import org.lockss.plugin.clockss.Onix3BooksSchemaHelper;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
@@ -17,8 +16,8 @@ import org.lockss.util.UrlUtil;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LiverpoolOnix3XmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
-    private static final Logger log = Logger.getLogger(LiverpoolOnix3XmlMetadataExtractorFactory.class);
+public class LiverpoolUniversityPressOnix3XmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
+    private static final Logger log = Logger.getLogger(LiverpoolUniversityPressOnix3XmlMetadataExtractorFactory.class);
 
     private static SourceXmlSchemaHelper Onix3Helper = null;
 

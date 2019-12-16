@@ -14,9 +14,9 @@ import org.lockss.util.Logger;
 import java.util.Iterator;
 import java.util.regex.Pattern;
 
-public class LiverpoolArticleIteratorFactory  implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
+public class LiverpoolUniversityPressArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
 
-    protected static Logger log = Logger.getLogger(LiverpoolArticleIteratorFactory.class);
+    protected static Logger log = Logger.getLogger(LiverpoolUniversityPressArticleIteratorFactory.class);
 
     protected static final String ROOT_TEMPLATE = "\"%s%d\",base_url,year";
     private static final String PATTERN_TEMPLATE = "\"%s%d/.+\",base_url,year";

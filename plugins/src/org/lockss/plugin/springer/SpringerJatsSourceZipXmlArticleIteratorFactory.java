@@ -15,7 +15,7 @@ public class SpringerJatsSourceZipXmlArticleIteratorFactory implements ArticleIt
     private static String ARTICLE_METADATA_JATS_XML_ROLE = "ArticleMetadataJatsXml";
 
     protected static final String ALL_ZIP_XML_PATTERN_TEMPLATE =
-            "\"%s[^/]+/.*\\.zip!/.*\\.pdf$\", base_url";
+            "\"%s[^/]+/.*\\.zip!/(.*)_(Article|OnlinePDF)(_\\d+)?\\.pdf$\", base_url";
 
     // Be sure to exclude all nested archives in case supplemental data is provided this way
     protected static final Pattern SUB_NESTED_ARCHIVE_PATTERN =
@@ -30,14 +30,12 @@ public class SpringerJatsSourceZipXmlArticleIteratorFactory implements ArticleIt
         return ALL_ZIP_XML_PATTERN_TEMPLATE;
     }
 
-    protected static final Pattern PDF_PATTERN = Pattern.compile("/BodyRef/PDF/([^/]+)\\.pdf$");
+    protected static final Pattern PDF_PATTERN = Pattern.compile("/BodyRef/PDF/(.*)_(Article|OnlinePDF)(_\\d+)?\\.pdf$");
     protected static final String PDF_REPLACEMENT = "/BodyRef/PDF/$1.pdf";
 
-    protected static final Pattern XML_PATTERN = Pattern.compile("/([^/]+)_nlm\\.xml$", Pattern.CASE_INSENSITIVE);
-    protected static final String XML_REPLACEMENT = "/$1_nlm.xml";
-    
-    protected static final Pattern XML_META_PATTERN = Pattern.compile("/([^/]+)_nlm\\.xml\\.Meta$");
-    protected static final String XML_META_REPLACEMENT = "/$1_nlm.xml.Meta";
+    protected static final String XML_REPLACEMENT = "/$1_Article$3_nlm.xml";
+
+    protected static final String XML_META_REPLACEMENT = "/$1_Article$3_nlm.xml.Meta";
 
     @Override
     public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
@@ -57,12 +55,10 @@ public class SpringerJatsSourceZipXmlArticleIteratorFactory implements ArticleIt
                           PDF_REPLACEMENT,
                           ArticleFiles.ROLE_FULL_TEXT_PDF);
 
-        builder.addAspect(XML_PATTERN,
-                          XML_REPLACEMENT,
+        builder.addAspect(XML_REPLACEMENT,
                           ARTICLE_METADATA_JATS_XML_ROLE);
 
-        builder.addAspect(XML_META_PATTERN,
-                          XML_META_REPLACEMENT,
+        builder.addAspect(XML_META_REPLACEMENT,
                           ARTICLE_METADATA_JATS_META_ROLE);
 
         builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF);
