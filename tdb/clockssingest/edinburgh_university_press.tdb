@@ -233,7 +233,7 @@
     au < finished ; finished ; 2015 ; African Journal of International and Comparative Law Volume 23 ; 23 ; http://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2016 ; African Journal of International and Comparative Law Volume 24 ; 24 ; http://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2017 ; African Journal of International and Comparative Law Volume 25 ; 25 ; http://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2018 ; African Journal of International and Comparative Law Volume 26 ; 26 ; https://www.euppublishing.com/ ; >
+    au < finished ; manifest ; 2018 ; African Journal of International and Comparative Law Volume 26 ; 26 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2019 ; African Journal of International and Comparative Law Volume 27 ; 27 ; https://www.euppublishing.com/ ; >
 
   }
@@ -265,7 +265,7 @@
     au < doNotProcess ; exists ; 2009 ; Architectural Heritage Volume 20 ; 20 ; https://www.euppublishing.com/ ; >
     au < finished ; finished ; 2010 ; Architectural Heritage Volume 21 ; 21 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2011 ; Architectural Heritage Volume 22 ; 22 ; http://www.euppublishing.com/ ; >
-    au < deepCrawl ; exists ; 2012 ; Architectural Heritage Volume 23 ; 23 ; http://www.euppublishing.com/ ; >
+    au < finished ; manifest ; 2012 ; Architectural Heritage Volume 23 ; 23 ; http://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Architectural Heritage Volume 24 ; 24; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2014 ; Architectural Heritage Volume 25 ; 25 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2015 ; Architectural Heritage Volume 26 ; 26 ; http://www.euppublishing.com/ ; >
@@ -301,8 +301,8 @@
     au < finished ; finished ; 2014 ; Archives of Natural History Volume 41 ; 41 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2015 ; Archives of Natural History Volume 42 ; 42 ; http://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2016 ; Archives of Natural History Volume 43 ; 43 ; http://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2017 ; Archives of Natural History Volume 44 ; 44 ; http://www.euppublishing.com/ ; >
-    au < deepCrawl ; exists ; 2018 ; Archives of Natural History Volume 45 ; 45 ; https://www.euppublishing.com/ ; >
+    au < finished ; manifest ; 2017 ; Archives of Natural History Volume 44 ; 44 ; http://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2018 ; Archives of Natural History Volume 45 ; 45 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2019 ; Archives of Natural History Volume 46 ; 46 ; https://www.euppublishing.com/ ; >
 
   }
@@ -335,8 +335,8 @@
     au < finished ; finished ; 2014 ; Ben Jonson Journal Volume 21 ; 21 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2015 ; Ben Jonson Journal Volume 22 ; 22 ; http://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2016 ; Ben Jonson Journal Volume 23 ; 23 ; http://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2017 ; Ben Jonson Journal Volume 24 ; 24 ; http://www.euppublishing.com/ ; >
-    au < deepCrawl ; exists ; 2018 ; Ben Jonson Journal Volume 25 ; 25 ; https://www.euppublishing.com/ ; >
+    au < finished ; manifest ; 2017 ; Ben Jonson Journal Volume 24 ; 24 ; http://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2018 ; Ben Jonson Journal Volume 25 ; 25 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2019 ; Ben Jonson Journal Volume 26 ; 26 ; https://www.euppublishing.com/ ; >
 
   }
@@ -361,8 +361,8 @@
     au < finished ; finished ; 2014 ; Britain and the World Volume 7 ; 7 ; http://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Britain and the World Volume 8 ; 8 ; http://www.euppublishing.com/ ; >
     au < finished ; manifest ; 2016 ; Britain and the World Volume 9 ; 9 ; http://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2017 ; Britain and the World Volume 10 ; 10 ; http://www.euppublishing.com/ ; >
-    au < deepCrawl ; exists ; 2018 ; Britain and the World Volume 11 ; 11 ; https://www.euppublishing.com/ ; >
+    au < finished ; manifest ; 2017 ; Britain and the World Volume 10 ; 10 ; http://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2018 ; Britain and the World Volume 11 ; 11 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2019 ; Britain and the World Volume 12 ; 12 ; https://www.euppublishing.com/ ; >
 
     }
@@ -371,7 +371,7 @@
     param[journal_id] = brs
     # old title used
 
-    au < deepCrawl ; exists ; 2008-2009 ; British Scholar Volume 1 ; 1 ; http://www.euppublishing.com/ ; >
+    au < finished ; manifest ; 2008-2009 ; British Scholar Volume 1 ; 1 ; http://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2009-2010 ; British Scholar Volume 2 ; 2 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2010 ; British Scholar Volume 3 ; 3 ; http://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
 
@@ -402,8 +402,8 @@
     au < finished ; finished ; 2014 ; Comparative Critical Studies Volume 11 ; 11 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2015 ; Comparative Critical Studies Volume 12 ; 12 ; http://www.euppublishing.com/ ; >
     au < finished ; manifest ; 2016 ; Comparative Critical Studies Volume 13 ; 13 ; http://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2017 ; Comparative Critical Studies Volume 14 ; 14 ; http://www.euppublishing.com/ ; >
-    au < deepCrawl ; exists ; 2018 ; Comparative Critical Studies Volume 15 ; 15 ; https://www.euppublishing.com/ ; >
+    au < finished ; manifest ; 2017 ; Comparative Critical Studies Volume 14 ; 14 ; http://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2018 ; Comparative Critical Studies Volume 15 ; 15 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2019 ; Comparative Critical Studies Volume 16 ; 16 ; https://www.euppublishing.com/ ; >
 
   }
@@ -430,8 +430,8 @@
     au < finished ; finished ; 2014 ; Corpora Volume 9 ; 9 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2015 ; Corpora Volume 10 ; 10 ; http://www.euppublishing.com/ ; >
     au < finished ; manifest ; 2016 ; Corpora Volume 11 ; 11 ; http://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2017 ; Corpora Volume 12 ; 12 ; http://www.euppublishing.com/ ; >
-    au < deepCrawl ; exists ; 2018 ; Corpora Volume 13 ; 13 ; https://www.euppublishing.com/ ; >
+    au < finished ; manifest ; 2017 ; Corpora Volume 12 ; 12 ; http://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2018 ; Corpora Volume 13 ; 13 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2019 ; Corpora Volume 14 ; 14 ; https://www.euppublishing.com/ ; >
 
   }
@@ -453,7 +453,7 @@
     au < finished ; manifest ; 2015 ; Cultural History Volume 4 ; 4 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2016 ; Cultural History Volume 5 ; 5 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Cultural History Volume 6 ; 6 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2018 ; Cultural History Volume 7 ; 7 ; https://www.euppublishing.com/ ; >
+    au < finished ; manifest ; 2018 ; Cultural History Volume 7 ; 7 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2019 ; Cultural History Volume 8 ; 8 ; https://www.euppublishing.com/ ; >
 
   }
@@ -486,8 +486,8 @@
     au < finished ; finished ; 2014 ; Dance Research Volume 32 ; 32 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2015 ; Dance Research Volume 33 ; 33 ; http://www.euppublishing.com/ ; >
     au < finished ; manifest ; 2016 ; Dance Research Volume 34 ; 34 ; http://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2017 ; Dance Research Volume 35 ; 35 ; http://www.euppublishing.com/ ; >
-    au < deepCrawl ; exists ; 2018 ; Dance Research Volume 36 ; 36 ; https://www.euppublishing.com/ ; >
+    au < finished ; manifest ; 2017 ; Dance Research Volume 35 ; 35 ; http://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2018 ; Dance Research Volume 36 ; 36 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2019 ; Dance Research Volume 37 ; 37 ; https://www.euppublishing.com/ ; >
 
   }
@@ -514,7 +514,7 @@
     au < finished ; finished ; 2014 ; Deleuze Studies Volume 8 ; 8 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2015 ; Deleuze Studies Volume 9 ; 9 ; http://www.euppublishing.com/ ; >
     au < finished ; manifest ; 2016 ; Deleuze Studies Volume 10 ; 10 ; http://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2017 ; Deleuze Studies Volume 11 ; 11 ; http://www.euppublishing.com/ ; >
+    au < finished ; manifest ; 2017 ; Deleuze Studies Volume 11 ; 11 ; http://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
     #no volumes after 2017. See note above.
   }
 
