@@ -4,7 +4,6 @@ import org.apache.commons.io.FileUtils;
 import org.lockss.extractor.*;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorTest;
-import org.lockss.plugin.clockss.warc.WarcXmlMetadataExtractorFactory;
 import org.lockss.test.MockArchivalUnit;
 import org.lockss.test.MockCachedUrl;
 import org.lockss.util.CIProperties;
@@ -52,7 +51,7 @@ public class TestLiverpoolOnix3XmlMetadataExtractorFactory extends SourceXmlMeta
         mcu.setContentSize(journalXml.length());
         mcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
 
-        FileMetadataExtractor me =  new LiverpoolOnix3XmlMetadataExtractorFactory().
+        FileMetadataExtractor me =  new LiverpoolUniversityPressBookOnix3XmlMetadataExtractorFactory().
                 createFileMetadataExtractor(MetadataTarget.Any(), "text/xml");
         FileMetadataListExtractor mle =
                 new FileMetadataListExtractor(me);

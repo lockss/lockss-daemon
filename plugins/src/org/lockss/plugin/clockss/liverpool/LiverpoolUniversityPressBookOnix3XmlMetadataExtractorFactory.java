@@ -16,8 +16,8 @@ import org.lockss.util.UrlUtil;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LiverpoolUniversityPressOnix3XmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
-    private static final Logger log = Logger.getLogger(LiverpoolUniversityPressOnix3XmlMetadataExtractorFactory.class);
+public class LiverpoolUniversityPressBookOnix3XmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
+    private static final Logger log = Logger.getLogger(LiverpoolUniversityPressBookOnix3XmlMetadataExtractorFactory.class);
 
     private static SourceXmlSchemaHelper Onix3Helper = null;
 

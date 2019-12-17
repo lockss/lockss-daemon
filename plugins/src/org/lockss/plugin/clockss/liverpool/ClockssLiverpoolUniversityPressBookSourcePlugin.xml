@@ -5,11 +5,11 @@
     </entry>
     <entry>
         <string>plugin_identifier</string>
-        <string>org.lockss.plugin.clockss.liverpool.ClockssLiverpoolUniversityPressSourcePlugin</string>
+        <string>org.lockss.plugin.clockss.liverpool.ClockssLiverpoolUniversityPressBookSourcePlugin</string>
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>1</string>
+        <string>2</string>
     </entry>
     <entry>
         <string>required_daemon_version</string>
@@ -56,18 +56,18 @@
     </entry>
     <entry>
         <string>plugin_article_iterator_factory</string>
-        <string>org.lockss.plugin.clockss.liverpool.LiverpoolUniversityPressArticleIteratorFactory</string>
+        <string>org.lockss.plugin.clockss.liverpool.LiverpoolUniversityPressBookArticleIteratorFactory</string>
     </entry>
     <entry>
         <string>plugin_article_metadata_extractor_factory</string>
-        <string>org.lockss.plugin.clockss.liverpool.LiverpoolUniversityPressArticleIteratorFactory</string>
+        <string>org.lockss.plugin.clockss.liverpool.LiverpoolUniversityPressBookArticleIteratorFactory</string>
     </entry>
     <entry>
         <string>text/xml_metadata_extractor_factory_map</string>
         <map>
             <entry>
                 <string>*</string>
-                <string>org.lockss.plugin.clockss.liverpool.LiverpoolOnix3XmlMetadataExtractorFactory</string>
+                <string>org.lockss.plugin.clockss.liverpool.LiverpoolUniversityPressBookOnix3XmlMetadataExtractorFactory</string>
             </entry>
         </map>
     </entry>
@@ -76,7 +76,7 @@
         <map>
             <entry>
                 <string>*</string>
-                <string>org.lockss.plugin.clockss.liverpool.LiverpoolOnix3XmlMetadataExtractorFactory</string>
+                <string>org.lockss.plugin.clockss.liverpool.LiverpoolUniversityPressBookOnix3XmlMetadataExtractorFactory</string>
             </entry>
         </map>
     </entry>

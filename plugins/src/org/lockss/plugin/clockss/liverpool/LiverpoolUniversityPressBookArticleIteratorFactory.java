@@ -14,14 +14,13 @@ import org.lockss.util.Logger;
 import java.util.Iterator;
 import java.util.regex.Pattern;
 
-public class LiverpoolUniversityPressArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
+public class LiverpoolUniversityPressBookArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
 
-    protected static Logger log = Logger.getLogger(LiverpoolUniversityPressArticleIteratorFactory.class);
+    protected static Logger log = Logger.getLogger(LiverpoolUniversityPressBookArticleIteratorFactory.class);
 
     protected static final String ROOT_TEMPLATE = "\"%s%d\",base_url,year";
     private static final String PATTERN_TEMPLATE = "\"%s%d/.+\",base_url,year";
 
-    //protected static final Pattern XML_PATTERN = Pattern.compile("/([^/]+)\\.xml$");
     protected static final Pattern XML_PATTERN = Pattern.compile("/([^/]+).xml$");
     protected static final String XML_REPLACEMENT = "/([^/]+).xml$";
 
@@ -38,7 +37,6 @@ public class LiverpoolUniversityPressArticleIteratorFactory implements ArticleIt
 
         builder.addAspect(XML_PATTERN,
                 XML_REPLACEMENT,
-                ArticleFiles.ROLE_FULL_TEXT_XML,
                 ArticleFiles.ROLE_ARTICLE_METADATA);
 
         return builder.getSubTreeArticleIterator();
