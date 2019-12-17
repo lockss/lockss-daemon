@@ -1,4 +1,4 @@
-package org.lockss.plugin.innovativemedicalresearch;
+package org.lockss.plugin.innovativemedicalresearchpress;
 
 import org.apache.commons.io.FilenameUtils;
 import org.lockss.daemon.PluginException;
@@ -17,8 +17,8 @@ import org.w3c.dom.Document;
 import java.util.ArrayList;
 import java.util.List;
 
-public class InnovativeMedicalResearchJatsSourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
-    static Logger log = Logger.getLogger(InnovativeMedicalResearchJatsSourceXmlMetadataExtractorFactory.class);
+public class InnovativeMedicalResearchPressJatsSourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
+    static Logger log = Logger.getLogger(InnovativeMedicalResearchPressJatsSourceXmlMetadataExtractorFactory.class);
 
     private static SourceXmlSchemaHelper JatsPublishingHelper = null;
 
