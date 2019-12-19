@@ -2,7 +2,7 @@
 
 TITLE_DBS=""
 PLN=clockssingest
-HEAP_ARG=-Xmx512m
+HEAP_ARG=-Xmx2048m
 
 while true ; do
   case "$1" in

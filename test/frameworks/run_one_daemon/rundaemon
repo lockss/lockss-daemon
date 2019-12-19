@@ -3,7 +3,7 @@
 TITLE_DBS=""
 PROPS=""
 PLN=prod
-HEAP_ARG=-Xmx512m
+HEAP_ARG=-Xmx2048m
 DAEMON_ARGS=""
 
 while true ; do
