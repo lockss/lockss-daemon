@@ -525,7 +525,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Clinical Medicine Insights: Oncology Volume 8 ; 8 ; onca ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Oncology Volume 9 ; 9 ; onca ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Oncology Volume 10 ; 10 ; onca ; http://journals.sagepub.com/ ; >
-    au < finished ; crawling ; 2017 ; Clinical Medicine Insights: Oncology Volume 11 ; 11 ; onca ; http://journals.sagepub.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2017 ; Clinical Medicine Insights: Oncology Volume 11 ; 11 ; onca ; http://journals.sagepub.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; Clinical Medicine Insights: Oncology Volume 12 ; 12 ; onca ; http://journals.sagepub.com/ ; >
 
   }

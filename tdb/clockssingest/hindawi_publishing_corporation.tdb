@@ -602,7 +602,7 @@
     #Moved to archive
 
     au < finished ; finished ; 2014 ; Advances in Environmental Chemistry Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Advances in Environmental Chemistry Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2015 ; Advances in Environmental Chemistry Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2016 ; Advances in Environmental Chemistry Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
 
   }
@@ -1336,7 +1336,7 @@
     #Moved to archive
 
     au < finished ; finished ; 2014 ; Advances in Radiology Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Advances in Radiology Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2015 ; Advances in Radiology Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest3.clockss.org:8083 >
 
   }
 
@@ -5867,7 +5867,7 @@
     
     au < finished ; finished ; 2014 ; Journal of Anesthesiology Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Journal of Anesthesiology Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Journal of Anesthesiology Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2016 ; Journal of Anesthesiology Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
 
   }
 
@@ -5937,7 +5937,7 @@
     
     au < doNotProcess ; exists ; 2013 ; Journal of Applied Chemistry Volume 2013 ; 2013 ; 2013 ; https://www.hindawi.com/ ; >
     au < finished ; finished ; 2014 ; Journal of Applied Chemistry Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2015 ; Journal of Applied Chemistry Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2015 ; Journal of Applied Chemistry Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2016 ; Journal of Applied Chemistry Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2017 ; Journal of Applied Chemistry Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
     au < doNotProcess ; exists ; 2018 ; Journal of Applied Chemistry Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
@@ -6120,7 +6120,7 @@
     au < doNotProcess ; exists ; 2012 ; Journal of Blood Transfusion Volume 2012 ; 2012 ; 2012 ; https://www.hindawi.com/ ; >
     au < doNotProcess ; exists ; 2013 ; Journal of Blood Transfusion Volume 2013 ; 2013 ; 2013 ; https://www.hindawi.com/ ; >
     au < finished ; finished ; 2014 ; Journal of Blood Transfusion Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; >
-    au < finished ; crawling ; 2015 ; Journal of Blood Transfusion Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2015 ; Journal of Blood Transfusion Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2016 ; Journal of Blood Transfusion Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
     au < frozen ; exists ; 2017 ; Journal of Blood Transfusion Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
     au < doNotProcess ; exists ; 2018 ; Journal of Blood Transfusion Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
@@ -6886,7 +6886,7 @@
     #Moved to archive
     
     au < finished ; finished ; 2014 ; Journal of Food Processing Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2015 ; Journal of Food Processing Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Journal of Food Processing Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Journal of Food Processing Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
 
   }
@@ -7798,7 +7798,7 @@
     au < manifest ; exists ; 2012 ; Journal of Pathogens Volume 2012 ; 2012 ; 2012 ; https://www.hindawi.com/ ; >
     au < manifest ; exists ; 2013 ; Journal of Pathogens Volume 2013 ; 2013 ; 2013 ; https://www.hindawi.com/ ; >
     au < finished ; finished ; 2014 ; Journal of Pathogens Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2015 ; Journal of Pathogens Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Journal of Pathogens Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; Journal of Pathogens Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Journal of Pathogens Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
     au < deepCrawl ; exists ; 2018 ; Journal of Pathogens Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
@@ -8243,7 +8243,7 @@
     au < manifest ; exists ; 2012 ; Spectroscopy: An International Journal Volume 27 (2012) ; 2012 ; 27 ; https://www.hindawi.com/ ; >
     au < manifest ; exists ; 2013 ; Journal of Spectroscopy Volume 2013 ; 2013 ; 2013 ; https://www.hindawi.com/ ; >
     au < finished ; finished ; 2014 ; Journal of Spectroscopy Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2015 ; Journal of Spectroscopy Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Journal of Spectroscopy Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; Journal of Spectroscopy Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Journal of Spectroscopy Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
     
@@ -8756,7 +8756,7 @@
     au < manifest ; exists ; 2012 ; Minimally Invasive Surgery Volume 2012 ; 2012 ; 2012 ; https://www.hindawi.com/ ; >
     au < manifest ; exists ; 2013 ; Minimally Invasive Surgery Volume 2013 ; 2013 ; 2013 ; https://www.hindawi.com/ ; >
     au < finished ; finished ; 2014 ; Minimally Invasive Surgery Volume 2014 ; 2014 ; 2014 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Minimally Invasive Surgery Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2015 ; Minimally Invasive Surgery Volume 2015 ; 2015 ; 2015 ; http://www.hindawi.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2016 ; Minimally Invasive Surgery Volume 2016 ; 2016 ; 2016 ; http://www.hindawi.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Minimally Invasive Surgery Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; >
     au < deepCrawl ; exists ; 2018 ; Minimally Invasive Surgery Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >

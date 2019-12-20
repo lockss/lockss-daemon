@@ -62,13 +62,13 @@
       au < finished ; crawling ; 1981 ; 978-1-56576-162-9 ; The Deep Sea Drilling Project: A Decade of Progress Volume 32 ; sepspdsd ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 1983 ; 978-1-56576-163-6 ; The Shelfbreak: Critical Interface on Continental Margins Volume 33 ; sepspshe ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 1984 ; 978-1-56576-164-3 ; Siliciclastic Shelf Sediments Volume 34 ; sepspsic ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 1985 ; 978-1-56576-165-0 ; Biogenic Structures: Their Use in Interpreting Depositional Systems Volume 35 ; sepspbio ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 1985 ; 978-1-56576-165-0 ; Biogenic Structures: Their Use in Interpreting Depositional Systems Volume 35 ; sepspbio ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 1985 ; 978-1-56576-166-7 ; Carbonate Cements Volume 36 ; sepspcar ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 1986 ; 978-1-56576-167-4 ; Strike-Slip Deformation, Basin Formation and Sedimentation Volume 37 ; sepspstr ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 1986 ; 978-1-56576-104-9 ; Roles of Organic Matter in Sediment Diagenesis Volume 38 ; sepsprol ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 1987 ; 978-1-56576-096-7 ; Recent Development in Fluvial Sedimentology Volume 39 ; sepspret ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 1987 ; 978-1-56576-168-1 ; Reservoir Sedimentology Volume 40 ; sepspres ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 1988 ; 978-1-56576-095-0 ; Sea-Level Fluctuation and Coastal Evolution Volume 41 ; sepspsea ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 1988 ; 978-1-56576-095-0 ; Sea-Level Fluctuation and Coastal Evolution Volume 41 ; sepspsea ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 1989 ; 978-1-56576-089-9 ; Sea-Level Changes Volume 42 ; sepspsel ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 1989 ; 978-1-56576-169-8 ; Sedimentology and Geochemistry of Dolostones Volume 43 ; sepspsgd ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 1989 ; 978-1-56576-105-6 ; Controls on Carbonate Platform and Basin Development Volume 44 ; sepspcot ; reingest2.clockss.org:8085 >
@@ -174,10 +174,10 @@
       au < finished ; crawling ; 1984 ; 978-1-56576-232-9 ; Mechanics of Sediment Movement Volume 3 ; sepscmsm ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 1987 ; 978-1-56576-233-6 ; Marine Evaporites Volume 4 ; sepscmae ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 1978 ; 978-1-56576-234-3 ; Trace Fossil Concepts Volume 5 ; sepsctfc ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 1979 ; 978-1-56576-235-0 ; Foraminiferal Ecology and Paleoecology Volume 6 ; sepscfor ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 1979 ; 978-1-56576-235-0 ; Foraminiferal Ecology and Paleoecology Volume 6 ; sepscfor ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 1987 ; 978-1-56576-236-7 ; How to Assess Maturation and Paleotemperatures Volume 7 ; sepschow ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 1980 ; 978-1-56576-237-4 ; Principles and Applications of Coal Petrology Volume 8 ; sepscpac ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 1982 ; 978-1-56576-238-1 ; Structures and Sequences in Clastic Rocks Volume 9 ; sepscstr ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 1982 ; 978-1-56576-238-1 ; Structures and Sequences in Clastic Rocks Volume 9 ; sepscstr ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 1983 ; 978-1-56576-239-8 ; Stable Isotopes in Sedimentary Geology Volume 10 ; sepscsis ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 1983 ; 978-1-56576-240-4 ; Patterns of Sedimentation, Diagenesis and Hydrocarbon Accumulation in Cretaceous Rocks of the Rocky Mountains Volume 11 ; sepscdia ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 1983 ; 978-1-56576-241-1 ; Platform Margin and Deep Water Carbonates Volume 12 ; sepscpla ; reingest5.clockss.org:8082 >
@@ -223,7 +223,7 @@
       param[base_url] = http://notes.sepmonline.org/
 
       au < finished ; crawling ; 1980 ; 978-1-56576-256-5 ; Carbonate Reservoir Rocks Volume 1 ; sepswcrr ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 1981 ; 978-1-56576-257-2 ; Deep-Water Clastic Sediments Volume 2 ; sepswdwc ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 1981 ; 978-1-56576-257-2 ; Deep-Water Clastic Sediments Volume 2 ; sepswdwc ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 1982 ; 978-1-56576-258-9 ; Depositional and Diagenetic Spectra of Evaporites Volume 3 ; sepswdds ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 1983 ; 978-1-56576-259-6 ; Carbonate Buildups Volume 4 ; sepswcbu ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 1984 ; 978-1-56576-260-2 ; Carbonate Sands Volume 5 ; sepswcas ; reingest5.clockss.org:8082 >

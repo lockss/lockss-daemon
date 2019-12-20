@@ -138,7 +138,7 @@
     au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2013 ; Interface Focus Volume 3 ; 3 ; >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2014 ; Interface Focus Volume 4 ; 4 ; reingest5.clockss.org:8082 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2015 ; Interface Focus Volume 5 ; 5 ; reingest5.clockss.org:8082 >
-    au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2016 ; Interface Focus Volume 6 ; 6 ; reingest5.clockss.org:8082 >
+    au < rsp.ClockssRSPDrupalPlugin ; finished ; frozen ; 2016 ; Interface Focus Volume 6 ; 6 ; reingest5.clockss.org:8082 >
     au < rsp.ClockssRSPDrupalPlugin ; frozen ; exists ; 2017 ; Interface Focus Volume 7 ; 7 ; >
     au < rsp.ClockssRSPDrupalPlugin ; frozen ; exists ; 2018 ; Interface Focus Volume 8 ; 8 ; >
 
@@ -1301,7 +1301,7 @@
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 468 ; 468 ; >
     au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2013 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 469 ; 469 ; >
     au < rsp.ClockssRSPDrupalPlugin ; frozen ; exists ; 2014 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 470 ; 470 ; >
-    au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2015 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 471 ; 471 ; reingest5.clockss.org:8082 >
+    au < rsp.ClockssRSPDrupalPlugin ; finished ; frozen ; 2015 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 471 ; 471 ; reingest5.clockss.org:8082 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2016 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 472 ; 472 ; reingest5.clockss.org:8082 >
     au < rsp.ClockssRSPDrupalPlugin ; frozen ; exists ; 2017 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 473 ; 473 ; >
     au < rsp.ClockssRSPDrupalPlugin ; frozen ; exists ; 2018 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 474 ; 474 ; >
