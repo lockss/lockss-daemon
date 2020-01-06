@@ -5,6 +5,10 @@
     info[tester] = 6
   >
 
+  #
+  # Do not process any more books until a discussion with Springer Nature is resolved regarding provisional access before purchase situations.
+  #
+
   plugin = org.lockss.plugin.springer.link.SpringerLinkBooksPlugin
   param[base_url] = https://link.springer.com/
 
@@ -17,399 +21,399 @@
         type = bookSeries
       >
 
-      au < released ; exists ; 978-3-319-32584-2 ; 978-3-319-32585-9 ; 2016 ; 'Ndrangheta (978-3-319-32585-9) ; 978-3-319-32585-9 ; >
-      au < released ; exists ; 978-3-319-28408-8 ; 978-3-319-28410-1 ; 2016 ; The Dematerialized Insurance (978-3-319-28410-1) ; 978-3-319-28410-1 ; >
-      au < released ; exists ; 978-3-319-47646-9 ; 978-3-319-47647-6 ; 2016 ; 3D Research Challenges in Cultural Heritage II (978-3-319-47647-6) ; 978-3-319-47647-6 ; >
-      au < released ; exists ; 978-3-658-14366-4 ; 978-3-658-14367-1 ; 2016 ; Achieving Brand Loyalty in China through After-Sales Services (978-3-658-14367-1) ; 978-3-658-14367-1 ; >
-      au < released ; exists ; 978-3-319-53467-1 ; 978-3-319-53469-5 ; 2017 ; Advanced Methods for Modeling Markets (978-3-319-53469-5) ; 978-3-319-53469-5 ; >
-      au < released ; exists ; 978-3-319-60746-7 ; 978-3-319-60747-4 ; 2018 ; Advances in Cross-Cultural Decision Making (978-3-319-60747-4) ; 978-3-319-60747-4 ; >
-      au < released ; exists ; 978-3-319-41955-8 ; 978-3-319-41956-5 ; 2017 ; Advances in Human Factors and System Interactions (978-3-319-41956-5) ; 978-3-319-41956-5 ; >
-      au < released ; exists ; 978-3-319-56607-8 ; 978-3-319-56608-5 ; 2017 ; Advances in Information Retrieval (978-3-319-56608-5) ; 978-3-319-56608-5 ; >
-      au < released ; exists ; 978-1-4939-6567-0 ; 978-1-4939-6568-7 ; 2016 ; Advances in Time Series Methods and Applications  (978-1-4939-6568-7) ; 978-1-4939-6568-7 ; >
-      au < released ; exists ; 978-3-319-32281-0 ; 978-3-319-32283-4 ; 2017 ; Agent-Based Modelling in Population Studies (978-3-319-32283-4) ; 978-3-319-32283-4 ; >
-      au < released ; exists ; 978-981-10-1012-5 ; 978-981-10-1014-9 ; 2016 ; Analytical Modeling Research in Fashion Business (978-981-10-1014-9) ; 978-981-10-1014-9 ; >
-      au < released ; exists ; 978-3-319-24239-2 ; 978-3-319-24241-5 ; 2016 ; Art Wealth Management (978-3-319-24241-5) ; 978-3-319-24241-5 ; >
-      au < released ; exists ; 978-1-137-48879-4 ; 978-1-137-48880-0 ; 2016 ; Artificial Intelligence in Financial Markets (978-1-137-48880-0) ; 978-1-137-48880-0 ; >
-      au < released ; exists ; 978-3-319-40327-4 ; 978-3-319-40328-1 ; 2017 ; Assessing the Economic Impact of Tourism (978-3-319-40328-1) ; 978-3-319-40328-1 ; >
-      au < released ; exists ; 978-3-319-30700-8 ; 978-3-319-30701-5 ; 2016 ; Bank Funding, Financial Instruments and Decision-Making in the Banking Industry (978-3-319-30701-5) ; 978-3-319-30701-5 ; >
-      au < released ; exists ; 978-3-319-42446-0 ; 978-3-319-42448-4 ; 2016 ; Banking Beyond Banks and Money (978-3-319-42448-4) ; 978-3-319-42448-4 ; >
-      au < released ; exists ; 978-1-349-55414-0 ; 978-0-230-37142-2 ; 2016 ; Banking in Portugal (978-0-230-37142-2) ; 978-0-230-37142-2 ; >
-      au < released ; exists ; 978-4-431-55401-1 ; 978-4-431-55402-8 ; 2016 ; Behavioral Economics of Preferences, Choices, and Happiness (978-4-431-55402-8) ; 978-4-431-55402-8 ; >
-      au < released ; exists ; 978-1-349-55435-5 ; 978-1-137-50642-9 ; 2016 ; Beyond Bitcoin (978-1-137-50642-9) ; 978-1-137-50642-9 ; >
-      au < released ; exists ; 978-3-319-54141-9 ; 978-3-319-54142-6 ; 2017 ; Beyond Bureaucracy (978-3-319-54142-6) ; 978-3-319-54142-6 ; >
-      au < released ; exists ; 978-81-322-3626-9 ; 978-81-322-3628-3 ; 2016 ; Big Data Analytics (978-81-322-3628-3) ; 978-81-322-3628-3 ; >
-      au < released ; exists ; 978-3-319-30263-8 ; 978-3-319-30265-2 ; 2016 ; Big Data Optimization: Recent Developments and Challenges (978-3-319-30265-2) ; 978-3-319-30265-2 ; >
-      au < released ; exists ; 978-1-137-57511-1 ; 978-1-137-57512-8 ; 2016 ; Bitcoin and Mobile Payments  (978-1-137-57512-8) ; 978-1-137-57512-8 ; >
-      au < released ; exists ; 978-1-137-59087-9 ; 978-1-137-58650-6 ; 2016 ; Black Nationalist Thought in South Africa (978-1-137-58650-6) ; 978-1-137-58650-6 ; >
-      au < released ; exists ; 978-1-137-60230-5 ; 978-1-137-60231-2 ; 2016 ; The Book of Payments (978-1-137-60231-2) ; 978-1-137-60231-2 ; >
-      au < released ; exists ; 978-3-319-53329-2 ; 978-3-319-53331-5 ; 2017 ; Boundaries within: Nation, Kinship and Identity among Migrants and Minorities (978-3-319-53331-5) ; 978-3-319-53331-5 ; >
-      au < released ; exists ; 978-3-319-48477-8 ; 978-3-319-48478-5 ; 2017 ; Business Innovation Through Blockchain (978-3-319-48478-5) ; 978-3-319-48478-5 ; >
-      au < released ; exists ; 978-981-10-1078-1 ; 978-981-10-1079-8 ; 2016 ; Business Trends in the Digital Era (978-981-10-1079-8) ; 978-981-10-1079-8 ; >
-      au < released ; exists ; 978-3-319-43689-0 ; 978-3-319-43690-6 ; 2016 ; The Challenge of the Digital Economy (978-3-319-43690-6) ; 978-3-319-43690-6 ; >
-      au < released ; exists ; 978-3-319-40450-9 ; 978-3-319-40451-6 ; 2017 ; China's Financial System (978-3-319-40451-6) ; 978-3-319-40451-6 ; >
-      au < released ; exists ; 978-1-137-43280-3 ; 978-1-137-43281-0 ; 2016 ; Commodity Market Trading and Investment (978-1-137-43281-0) ; 978-1-137-43281-0 ; >
-      au < released ; exists ; 978-3-319-44632-5 ; 978-3-319-44633-2 ; 2016 ; Competition Law Compliance Programmes (978-3-319-44633-2) ; 978-3-319-44633-2 ; >
-      au < released ; exists ; 978-3-319-30947-7 ; 978-3-319-30948-4 ; 2016 ; Competition Law Enforcement in the BRICS and in Developing Countries (978-3-319-30948-4) ; 978-3-319-30948-4 ; >
-      au < released ; exists ; 978-3-319-50900-6 ; 978-3-319-50901-3 ; 2017 ; Complex Networks & Their Applications V (978-3-319-50901-3) ; 978-3-319-50901-3 ; >
-      au < released ; exists ; 978-3-658-16501-7 ; 978-3-658-16502-4 ; 2017 ; The Concept Industry 4.0  (978-3-658-16502-4) ; 978-3-658-16502-4 ; >
-      au < released ; exists ; 978-3-319-55972-8 ; 978-3-319-55973-5 ; 2017 ; Contemporary Organized Crime (978-3-319-55973-5) ; 978-3-319-55973-5 ; >
-      au < released ; exists ; 978-3-319-32965-9 ; 978-3-319-32967-3 ; 2016 ; The Conversational Interface (978-3-319-32967-3) ; 978-3-319-32967-3 ; >
-      au < released ; exists ; 978-1-137-60371-5 ; 978-1-137-55089-7 ; 2016 ; Corporate China 2.0 (978-1-137-55089-7) ; 978-1-137-55089-7 ; >
-      au < released ; exists ; 978-3-319-43563-3 ; 978-3-319-43564-0 ; 2017 ; Corporate Social Responsibility and Diversity Management (978-3-319-43564-0) ; 978-3-319-43564-0 ; >
-      au < released ; exists ; 978-3-319-50190-1 ; 978-3-319-50191-8 ; 2017 ; Corruption and Governance in Africa (978-3-319-50191-8) ; 978-3-319-50191-8 ; >
-      au < released ; exists ; 978-3-319-45595-2 ; 978-3-319-45596-9 ; 2017 ; Creating Marketing Magic and Innovative Future Marketing Trends (978-3-319-45596-9) ; 978-3-319-45596-9 ; >
-      au < released ; exists ; 978-3-658-12602-5 ; 978-3-658-12603-2 ; 2016 ; Creating Shared Value as Future Factor of Competition (978-3-658-12603-2) ; 978-3-658-12603-2 ; >
-      au < released ; exists ; 978-3-319-56495-1 ; 978-3-319-56497-5 ; 2017 ; Creative Industries in Europe (978-3-319-56497-5) ; 978-3-319-56497-5 ; >
-      au < released ; exists ; 978-3-319-28783-6 ; 978-3-319-28784-3 ; 2016 ; Credit Cooperative Institutions in European Countries (978-3-319-28784-3) ; 978-3-319-28784-3 ; >
-      au < released ; exists ; 978-3-319-57974-0 ; 978-3-319-57975-7 ; 2017 ; Credit Risk Management for Derivatives (978-3-319-57975-7) ; 978-3-319-57975-7 ; >
-      au < released ; exists ; 978-3-319-27791-2 ; 978-3-319-27793-6 ; 2017 ; Crime Prevention in the 21st Century (978-3-319-27793-6) ; 978-3-319-27793-6 ; >
-      au < released ; exists ; 978-1-137-51723-4 ; 978-1-137-51724-1 ; 2016 ; Criminology of Corruption (978-1-137-51724-1) ; 978-1-137-51724-1 ; >
-      au < released ; exists ; 978-1-137-56020-9 ; 978-1-137-56021-6 ; 2016 ; Crowdfunding for SMEs (978-1-137-56021-6) ; 978-1-137-56021-6 ; >
-      au < released ; exists ; 978-3-319-18016-8 ; 978-3-319-18017-5 ; 2016 ; Crowdfunding in Europe (978-3-319-18017-5) ; 978-3-319-18017-5 ; >
-      au < released ; exists ; 978-3-319-18695-5 ; 978-3-319-18696-2 ; 2016 ; Cultural Perspectives in a Global Marketplace (978-3-319-18696-2) ; 978-3-319-18696-2 ; >
-      au < released ; exists ; 978-3-319-61984-2 ; 978-3-319-61985-9 ; 2018 ; Customer Engagement Marketing (978-3-319-61985-9) ; 978-3-319-61985-9 ; >
-      au < released ; exists ; 978-1-349-94904-5 ; 978-1-349-94905-2 ; 2017 ; Customer experience management rebooted (978-1-349-94905-2) ; 978-1-349-94905-2 ; >
-      au < released ; exists ; 978-3-319-19937-5 ; 978-3-319-19938-2 ; 2016 ; Customer Value Generation in Banking (978-3-319-19938-2) ; 978-3-319-19938-2 ; >
-      au < released ; exists ; 978-3-319-54974-3 ; 978-3-319-54975-0 ; 2017 ; Cyberspace (978-3-319-54975-0) ; 978-3-319-54975-0 ; >
-      au < released ; exists ; 978-3-319-64470-7 ; 978-3-319-64471-4 ; 2017 ; Database and Expert Systems Applications (978-3-319-64471-4) ; 978-3-319-64471-4 ; >
-      au < released ; exists ; 978-3-319-46987-4 ; 978-3-319-46989-8 ; 2016 ; Descartes' Treatise on Man and its Reception (978-3-319-46989-8) ; 978-3-319-46989-8 ; >
-      au < released ; exists ; 978-3-319-58639-7 ; 978-3-319-58640-3 ; 2017 ; Design, User Experience, and Usability: Understanding Users and Contexts (978-3-319-58640-3) ; 978-3-319-58640-3 ; >
-      au < released ; exists ; 978-3-319-23278-2 ; 978-3-319-23279-9 ; 2016 ; Digital Futures, Digital Transformation (978-3-319-23279-9) ; 978-3-319-23279-9 ; >
-      au < released ; exists ; 978-1-349-55858-2 ; 978-1-137-55327-0 ; 2016 ; Digital Insurance (978-1-137-55327-0) ; 978-1-137-55327-0 ; >
-      au < released ; exists ; 978-3-319-49699-3 ; 978-3-319-49700-6 ; 2016 ; Digital Transformation and Global Society (978-3-319-49700-6) ; 978-3-319-49700-6 ; >
-      au < released ; exists ; 978-3-319-66944-1 ; 978-3-319-66945-8 ; 2017 ; Digital Transformation in Financial Services (978-3-319-66945-8) ; 978-3-319-66945-8 ; >
-      au < released ; exists ; 978-3-319-31823-3 ; 978-3-319-31824-0 ; 2017 ; The Drivers of Digital Transformation (978-3-319-31824-0) ; 978-3-319-31824-0 ; >
-      au < released ; exists ; 978-3-319-39885-3 ; 978-3-319-39887-7 ; 2016 ; Dynamic Modeling, Empirical Macroeconomics, and Finance (978-3-319-39887-7) ; 978-3-319-39887-7 ; >
-      au < released ; exists ; 978-981-10-2566-2 ; 978-981-10-2567-9 ; 2017 ; Economic Consequence Analysis of Disasters (978-981-10-2567-9) ; 978-981-10-2567-9 ; >
-      au < released ; exists ; 978-1-349-71716-3 ; 978-1-137-55525-0 ; 2016 ; The Economics of Immigration (978-1-137-55525-0) ; 978-1-137-55525-0 ; >
-      au < released ; exists ; 978-981-10-0091-1 ; 978-981-10-0092-8 ; 2017 ; The Economics of International Immigration (978-981-10-0092-8) ; 978-981-10-0092-8 ; >
-      au < released ; exists ; 978-1-137-55518-2 ; 978-1-137-55519-9 ; 2016 ; Economics of the Labour Market (978-1-137-55519-9) ; 978-1-137-55519-9 ; >
-      au < released ; exists ; 978-981-10-1015-6 ; 978-981-10-1017-0 ; 2016 ; Efficiency and Competitiveness of International Airlines (978-981-10-1017-0) ; 978-981-10-1017-0 ; >
-      au < released ; exists ; 978-3-319-46450-3 ; 978-3-319-46451-0 ; 2017 ; Efficiency in Sustainable Supply Chain (978-3-319-46451-0) ; 978-3-319-46451-0 ; >
-      au < released ; exists ; 978-3-319-52458-0 ; 978-3-319-52459-7 ; 2017 ; Electronic Word of Mouth (eWOM) in the Marketing Context (978-3-319-52459-7) ; 978-3-319-52459-7 ; >
-      au < released ; exists ; 978-3-319-43251-9 ; 978-3-319-43252-6 ; 2017 ; Elements of Nonlinear Time Series Analysis and Forecasting (978-3-319-43252-6) ; 978-3-319-43252-6 ; >
-      au < manifest ; exists ; 978-1-4614-5689-6 ; 978-1-4614-5690-2 ; 2014 ; Encyclopedia of Criminology and Criminal Justice (978-1-4614-5690-2) ; 978-1-4614-5690-2 ; >      # no full book pdf
-      au < released ; exists ; 978-3-319-45846-5 ; 978-3-319-45848-9 ; 2017 ; Equity Markets in Transition (978-3-319-45848-9) ; 978-3-319-45848-9 ; >
-      au < released ; exists ; 978-3-319-45607-2 ; 978-3-319-45609-6 ; 2017 ; Ethics and Neuromarketing (978-3-319-45609-6) ; 978-3-319-45609-6 ; >
-      au < released ; exists ; 978-3-319-29214-4 ; 978-3-319-29215-1 ; 2016 ; European Yearbook of International Economic Law 2016 (978-3-319-29215-1) ; 978-3-319-29215-1 ; >
-      au < released ; exists ; 978-3-319-56924-6 ; 978-3-319-56925-3 ; 2017 ; Exploring Services Science (978-3-319-56925-3) ; 978-3-319-56925-3 ; >
-      au < released ; exists ; 978-3-319-28810-9 ; 978-3-319-28811-6 ; 2016 ; Extreme Inequalities in Contemporary Capitalism (978-3-319-28811-6) ; 978-3-319-28811-6 ; >
-      au < released ; exists ; 978-3-319-41182-8 ; 978-3-319-41183-5 ; 2017 ; Extreme Media and American Politics (978-3-319-41183-5) ; 978-3-319-41183-5 ; >
-      au < released ; exists ; 978-1-137-52336-5 ; 978-1-137-52337-2 ; 2016 ; Fashion Brand Internationalization (978-1-137-52337-2) ; 978-1-137-52337-2 ; >
-      au < released ; exists ; 978-1-137-52342-6 ; 978-1-137-52343-3 ; 2017 ; Fashion Branding and Communication (978-1-137-52343-3) ; 978-1-137-52343-3 ; >
-      au < released ; exists ; 978-3-658-17837-6 ; 978-3-658-17838-3 ; 2017 ; Fighting Corruption Collectively (978-3-658-17838-3) ; 978-3-658-17838-3 ; >
-      au < released ; exists ; 978-1-349-95084-3 ; 978-1-349-95085-0 ; 2016 ; Fighting Environmental Crime in Europe and Beyond (978-1-349-95085-0) ; 978-1-349-95085-0 ; >
-      au < released ; exists ; 978-3-319-41218-4 ; 978-3-319-41219-1 ; 2016 ; Financial Liberalisation (978-3-319-41219-1) ; 978-3-319-41219-1 ; >
-      au < released ; exists ; 978-3-319-53567-8 ; 978-3-319-53568-5 ; 2017 ; From Mafia to Organised Crime (978-3-319-53568-5) ; 978-3-319-53568-5 ; >
-      au < released ; exists ; 978-3-319-51414-7 ; 978-3-319-51415-4 ; 2017 ; The Future of FinTech (978-3-319-51415-4) ; 978-3-319-51415-4 ; >
-      au < released ; exists ; 978-3-319-29600-5 ; 978-3-319-29602-9 ; 2016 ; Gang Transitions and Transformations in an International Context (978-3-319-29602-9) ; 978-3-319-29602-9 ; >
-      au < released ; exists ; ; 978-94-6300-301-8 ; 2016 ; Global and Local Internationalization (978-94-6300-301-8) ; 978-94-6300-301-8 ; >
-      au < released ; exists ; 978-1-349-94993-9 ; 978-1-349-94994-6 ; 2017 ; Global Brand Strategy (978-1-349-94994-6) ; 978-1-349-94994-6 ; >
-      au < released ; exists ; 978-3-319-51063-7 ; 978-3-319-51064-4 ; 2016 ; Global Security, Safety and Sustainability - The Security Challenges of the Connected World (978-3-319-51064-4) ; 978-3-319-51064-4 ; >
-      au < released ; exists ; 978-3-319-28190-2 ; 978-3-319-28191-9 ; 2016 ; Globalisation and Higher Education Reforms (978-3-319-28191-9) ; 978-3-319-28191-9 ; >
-      au < released ; exists ; 978-1-4939-6413-0 ; 978-1-4939-6415-4 ; 2016 ; Google It (978-1-4939-6415-4) ; 978-1-4939-6415-4 ; >
-      au < released ; exists ; 978-981-10-0244-1 ; 978-981-10-0245-8 ; 2016 ; Green Fashion Volume 2 (978-981-10-0245-8) ; 978-981-10-0245-8 ; >
-      au < manifest ; exists ; ; 978-3-642-40933-2 ; 2015 ; Handbook of Human Resources Management (978-3-642-40933-2) ; 978-3-642-40933-2 ; >    # no full book pdf
-      au < released ; exists ; 978-3-319-39260-8 ; 978-3-319-39261-5 ; 2016 ; Handbook of Ratings (978-3-319-39261-5) ; 978-3-319-39261-5 ; >
-      au < released ; exists ; 978-3-319-60572-2 ; 978-3-319-60573-9 ; 2017 ; Handbook of the Psychology of Self-Forgiveness (978-3-319-60573-9) ; 978-3-319-60573-9 ; >
-      au < released ; exists ; 978-3-319-47876-0 ; 978-3-319-47877-7 ; 2017 ; Handbook of Theory and Practice of Sustainable Development in Higher Education Volume 4 (978-3-319-47877-7) ; 978-3-319-47877-7 ; >
-      au < released ; exists ; 978-3-319-58761-5 ; 978-3-319-58763-9 ; 2017 ; The Happy Mind: Cognitive Contributions to Well-Being (978-3-319-58763-9) ; 978-3-319-58763-9 ; >
-      au < released ; exists ; 978-3-319-58480-5 ; 978-3-319-58481-2 ; 2017 ; HCI in Business, Government and Organizations. Interacting with Information Systems (978-3-319-58481-2) ; 978-3-319-58481-2 ; >
-      au < released ; exists ; 978-3-319-39395-7 ; 978-3-319-39396-4 ; 2016 ; HCI in Business, Government, and Organizations: eCommerce and Innovation (978-3-319-39396-4) ; 978-3-319-39396-4 ; >
-      au < released ; exists ; 978-1-349-88780-4 ; 978-1-137-58971-2 ; 2016 ; Hybrid Securities (978-1-137-58971-2) ; 978-1-137-58971-2 ; >
-      au < released ; exists ; 978-3-319-31606-2 ; 978-3-319-31608-6 ; 2016 ; Illegal Entrepreneurship, Organized Crime and Social Control (978-3-319-31608-6) ; 978-3-319-31608-6 ; >
-      au < released ; exists ; 978-1-4842-2046-7 ; 978-1-4842-2047-4 ; 2016 ; Industry 4.0 (978-1-4842-2047-4) ; 978-1-4842-2047-4 ; >
-      au < released ; exists ; 978-3-319-33445-5 ; 978-3-319-33446-2 ; 2016 ; Innovations in Derivatives Markets (978-3-319-33446-2) ; 978-3-319-33446-2 ; >
-      au < released ; exists ; 978-3-319-40699-2 ; 978-3-319-40700-5 ; 2016 ; Innovative Methods in Media and Communication Research (978-3-319-40700-5) ; 978-3-319-40700-5 ; >
-      au < released ; exists ; 978-3-319-44461-1 ; 978-3-319-44462-8 ; 2016 ; Innovative Start-Ups and the Distribution of Human Capital (978-3-319-44462-8) ; 978-3-319-44462-8 ; >
-      au < released ; exists ; 978-3-319-23095-5 ; 978-3-319-23096-2 ; 2016 ; Inter-group Relations and Migrant Integration in European Cities (978-3-319-23096-2) ; 978-3-319-23096-2 ; >
-      au < released ; exists ; 978-1-137-59142-5 ; 978-1-137-59143-2 ; 2016 ; International Mobility and Educational Desire (978-1-137-59143-2) ; 978-1-137-59143-2 ; >
-      au < released ; exists ; 978-3-319-42206-0 ; 978-3-319-42208-4 ; 2016 ; International Research on Education for Sustainable Development in Early Childhood (978-3-319-42208-4) ; 978-3-319-42208-4 ; >
-      au < released ; exists ; 978-3-319-50090-4 ; 978-3-319-50091-1 ; 2017 ; Introduction to Electronic Commerce and Social Commerce (978-3-319-50091-1) ; 978-3-319-50091-1 ; >
-      au < released ; exists ; 978-1-137-53428-6 ; 978-1-137-53430-9 ; 2016 ; The Intuitive Customer (978-1-137-53430-9) ; 978-1-137-53430-9 ; >
-      au < released ; exists ; 978-3-319-44786-5 ; 978-3-319-44787-2 ; 2017 ; Investment and Competitiveness in Africa (978-3-319-44787-2) ; 978-3-319-44787-2 ; >
-      au < released ; exists ; 978-3-319-30287-4 ; 978-3-319-30288-1 ; 2016 ; Irish Women Writers and the Modern Short Story (978-3-319-30288-1) ; 978-3-319-30288-1 ; >
-      au < released ; exists ; 978-1-349-36441-1 ; 978-0-230-28144-8 ; 2010 ; John Keats (978-0-230-28144-8) ; 978-0-230-28144-8 ; >
-      au < released ; exists ; 978-1-137-56203-6 ; 978-1-137-56204-3 ; 2017 ; Justinian's men : careers and relationships of Byzantine army officers, 518-610 (978-1-137-56204-3) ; 978-1-137-56204-3 ; >
-      au < released ; exists ; 978-3-662-45319-3 ; 978-3-662-45320-9 ; 2016 ; Labor Migration, EU Enlargement, and the Great Recession  (978-3-662-45320-9) ; 978-3-662-45320-9 ; >
-      au < released ; exists ; 978-0-230-30261-7 ; 978-1-137-57647-7 ; 2016 ; Language Policy and Language Planning (978-1-137-57647-7) ; 978-1-137-57647-7 ; >
-      au < released ; exists ; 978-3-319-02236-9 ; 978-3-319-02237-6 ; 2017 ; Human Rights in Language and STEM Education (978-3-319-02237-6) ; 978-3-319-02237-6 ; >
-      au < released ; exists ; 978-3-662-54816-5 ; 978-3-662-54817-2 ; 2017 ; Legal Dynamics of EU External Relations (978-3-662-54817-2) ; 978-3-662-54817-2 ; >
-      au < released ; exists ; 978-3-319-28595-5 ; 978-3-319-28596-2 ; 2016 ; Legal Risks in EU Law (978-3-319-28596-2) ; 978-3-319-28596-2 ; >
-      au < released ; exists ; 978-3-319-55250-7 ; 978-3-319-55252-1 ; 2017 ; Linear Regression (978-3-319-55252-1) ; 978-3-319-55252-1 ; >
-      au < released ; exists ; 978-1-137-54713-2 ; 978-1-137-54715-6 ; 2017 ; Luxury Brands in China and India (978-1-137-54715-6) ; 978-1-137-54715-6 ; >
-      au < released ; exists ; 978-981-10-2974-5 ; 978-981-10-2976-9 ; 2017 ; Luxury Fashion Retail Management (978-981-10-2976-9) ; 978-981-10-2976-9 ; >
-      au < released ; exists ; 978-3-319-32852-2 ; 978-3-319-32854-6 ; 2016 ; Macroeconomic Policy (978-3-319-32854-6) ; 978-3-319-32854-6 ; >
-      au < released ; exists ; 978-3-319-46426-8 ; 978-3-319-46427-5 ; 2017 ; Marketing Renewable Energy (978-3-319-46427-5) ; 978-3-319-46427-5 ; >
-      au < released ; exists ; 978-1-137-60125-4 ; 978-1-137-60126-1 ; 2016 ; Migration and Social Remittances in a Global Europe (978-1-137-60126-1) ; 978-1-137-60126-1 ; >
-      au < released ; exists ; 978-1-137-58801-2 ; 978-1-137-58802-9 ; 2017 ; Migration and the Search for Home (978-1-137-58802-9) ; 978-1-137-58802-9 ; >
-      au < released ; exists ; 978-3-319-31151-7 ; 978-3-319-29595-4 ; 2016 ; A New Chapter in US-Cuba Relations (978-3-319-29595-4) ; 978-3-319-29595-4 ; >
-      au < released ; exists ; 978-3-319-41726-4 ; 978-3-319-41727-1 ; 2017 ; New Luxury Management (978-3-319-41727-1) ; 978-3-319-41727-1 ; >
-      au < released ; exists ; 978-3-319-40363-2 ; 978-3-319-40364-9 ; 2016 ; The New Music Industries (978-3-319-40364-9) ; 978-3-319-40364-9 ; >
-      au < released ; exists ; 978-981-10-5037-4 ; 978-981-10-5038-1 ; 2017 ; New Technology, Big Data and the Law  (978-981-10-5038-1) ; 978-981-10-5038-1 ; >
-      au < released ; exists ; 978-3-319-50312-7 ; 978-3-319-50313-4 ; 2017 ; Non-Performing Loans and Resolving Private Sector Insolvency (978-3-319-50313-4) ; 978-3-319-50313-4 ; >
-      au < released ; exists ; 978-3-319-24824-0 ; 978-3-319-24826-4 ; 2016 ; Online Brand Communities (978-3-319-24826-4) ; 978-3-319-24826-4 ; >
-      au < released ; exists ; 978-1-349-95117-8 ; 978-1-349-95118-5 ; 2016 ; Parole and Beyond (978-1-349-95118-5) ; 978-1-349-95118-5 ; >
-      au < released ; exists ;  ; 978-94-6300-983-6 ; 2017 ; Pedagogic Frailty and Resilience in the University (978-94-6300-983-6) ; 978-94-6300-983-6 ; >
-      au < released ; exists ; 978-1-137-58798-5 ; 978-1-137-58799-2 ; 2017 ; The Politics of Women and Migration in the Global South (978-1-137-58799-2) ; 978-1-137-58799-2 ; >
-      au < released ; exists ; 978-981-10-2542-6 ; 978-981-10-2543-3 ; 2017 ; Predictive Data Mining Models (978-981-10-2543-3) ; 978-981-10-2543-3 ; >
-      au < released ; exists ; 978-3-319-51348-5 ; 978-3-319-51349-2 ; 2017 ; Problem Behavior Theory and Adolescent Health  (978-3-319-51349-2) ; 978-3-319-51349-2 ; >
-      au < released ; exists ; 978-3-319-25021-2 ; 978-3-319-25023-6 ; 2016 ; Programmatic Advertising (978-3-319-25023-6) ; 978-3-319-25023-6 ; >
-      au < released ; exists ; 978-3-319-28309-8 ; 978-3-319-28310-4 ; 2016 ; Real Options Illustrated (978-3-319-28310-4) ; 978-3-319-28310-4 ; >
-      au < released ; exists ; 978-3-319-29876-4 ; 978-3-319-29877-1 ; 2016 ; Rediscovering the Essentiality of Marketing (978-3-319-29877-1) ; 978-3-319-29877-1 ; >
-      au < released ; exists ; 978-4-431-55620-6 ; 978-4-431-55621-3 ; 2016 ; Regional Free Trade Areas and Strategic Trade Policies (978-4-431-55621-3) ; 978-4-431-55621-3 ; >
-      au < released ; exists ; 978-1-137-27025-2 ; 978-1-137-27026-9 ; 2017 ; Religious Minorities in Turkey (978-1-137-27026-9) ; 978-1-137-27026-9 ; >
-      au < released ; exists ; 978-3-319-40203-1 ; 978-3-319-40204-8 ; 2016 ; Restructuring and Innovation in Banking (978-3-319-40204-8) ; 978-3-319-40204-8 ; >
-      au < released ; exists ; 978-3-319-22125-0 ; 978-3-319-22126-7 ; 2016 ; Risk Analysis of Natural Hazards (978-3-319-22126-7) ; 978-3-319-22126-7 ; >
-      au < released ; exists ; 978-3-319-55184-5 ; 978-3-319-55186-9 ; 2017 ; Rule of Law, Human Rights and Judicial Control of Power  (978-3-319-55186-9) ; 978-3-319-55186-9 ; >
-      au < released ; exists ; 978-3-642-30283-1 ; 978-3-642-30284-8 ; 2012 ; The Semantic Web: Research and Applications (978-3-642-30284-8) ; 978-3-642-30284-8 ; >
-      au < released ; exists ; 978-3-319-33025-9 ; 978-3-319-33026-6 ; 2016 ; Shadow Banking (978-3-319-33026-6) ; 978-3-319-33026-6 ; >
-      au < released ; exists ; 978-981-10-2995-0 ; 978-981-10-2996-7 ; 2017 ; Shadow Banking and the Rise of Capitalism in China (978-981-10-2996-7) ; 978-981-10-2996-7 ; >
-      au < released ; exists ; 978-1-349-57812-2 ; 978-1-137-49613-3 ; 2016 ; The Shadow Banking System (978-1-137-49613-3) ; 978-1-137-49613-3 ; >
-      au < released ; exists ; 978-3-319-47873-9 ; 978-3-319-47874-6 ; 2016 ; Social Informatics (978-3-319-47874-6) ; 978-3-319-47874-6 ; >
-      au < released ; exists ; 978-3-319-29987-7 ; 978-3-319-29989-1 ; 2016 ; Social Media in Employee Selection and Recruitment (978-3-319-29989-1) ; 978-3-319-29989-1 ; >
-      au < released ; exists ; 978-3-642-41478-7 ; 978-3-642-41479-4 ; 2013 ; Strategy and Communication for Innovation (978-3-642-41479-4) ; 978-3-642-41479-4 ; >
-      au < released ; exists ; 978-3-319-32962-8 ; 978-3-319-32963-5 ; 2016 ; Strategy and Game Theory (978-3-319-32963-5) ; 978-3-319-32963-5 ; >
-      au < released ; exists ; 978-3-319-51252-5 ; 978-3-319-51253-2 ; 2017 ; Sustainability in Fashion (978-3-319-51253-2) ; 978-3-319-51253-2 ; >
-      au < released ; exists ; 978-981-10-0469-8 ; 978-981-10-0471-1 ; 2017 ; Sustainability Through Innovation in Product Life Cycle Design (978-981-10-0471-1) ; 978-981-10-0471-1 ; >
-      au < released ; exists ; 978-981-10-2916-5 ; 978-981-10-2917-2 ; 2017 ; Sustainable Management of Luxury (978-981-10-2917-2) ; 978-981-10-2917-2 ; >
-      au < released ; exists ; 978-3-319-24146-3 ; 978-3-319-24148-7 ; 2016 ; Thriving in a New World Economy (978-3-319-24148-7) ; 978-3-319-24148-7 ; >
-      au < released ; exists ; 978-3-319-32861-4 ; 978-3-319-32862-1 ; 2016 ; Time Series Econometrics (978-3-319-32862-1) ; 978-3-319-32862-1 ; >
-      au < released ; exists ; 978-3-319-56572-9 ; 978-3-319-56574-3 ; 2017 ; Treatment of Foreign Law - Dynamics towards Convergence? (978-3-319-56574-3) ; 978-3-319-56574-3 ; >
-      au < released ; exists ; 978-3-319-52702-4 ; 978-3-319-52703-1 ; 2017 ; Using Open Data to Detect Organized Crime Threats (978-3-319-52703-1) ; 978-3-319-52703-1 ; >
-      au < released ; exists ; 978-3-319-51303-4 ; 978-3-319-51304-1 ; 2017 ; Using Transparency Against Corruption in Public Procurement (978-3-319-51304-1) ; 978-3-319-51304-1 ; >
-      au < released ; exists ; 978-1-137-39431-6 ; 978-1-137-38721-9 ; 2017 ; Vintage Marketing Differentiation (978-1-137-38721-9) ; 978-1-137-38721-9 ; >
-      au < released ; exists ; 978-1-137-57227-1 ; 978-1-137-57228-8 ; 2016 ; What is to be done about crime and punishment (978-1-137-57228-8) ; 978-1-137-57228-8 ; >
-      au < released ; exists ; 978-3-319-18856-0 ; 978-3-319-18857-7 ; 2016 ; Wine and Tourism (978-3-319-18857-7) ; 978-3-319-18857-7 ; >
-      au < released ; exists ; 978-3-319-46887-7 ; 978-3-319-46889-1 ; 2017 ; Africa's Population: In Search of a Demographic Dividend (978-3-319-46889-1) ; 978-3-319-46889-1 ; >
-      au < released ; exists ; 978-3-319-49817-1 ; 978-3-319-49818-8 ; 2017 ; Regional Upgrading in Southern Europe (978-3-319-49818-8) ; 978-3-319-49818-8 ; >
-      au < released ; exists ; 978-0-230-29097-6 ; 978-1-137-31501-4 ; 2016 ; Translating international women's rights : the CEDAW convention in context (978-1-137-31501-4) ; 978-1-137-31501-4 ; >
-      au < released ; exists ; 978-1-137-27308-6 ; 978-1-137-27309-3 ; 2016 ; Living on the edge : Iran and the practice of nuclear hedging (978-1-137-27309-3) ; 978-1-137-27309-3 ; >
-      au < released ; exists ; 978-1-137-39861-1 ; 978-1-137-43543-9 ; 2017 ; Public Culture, Cultural Identity, Cultural Policy (978-1-137-43543-9) ; 978-1-137-43543-9 ; >
-      au < released ; exists ; 978-1-137-43695-5 ; 978-1-137-43696-2 ; 2016 ; validation of risk models : a handbook for practitioners (978-1-137-43696-2) ; 978-1-137-43696-2 ; >
-      au < released ; exists ; 978-1-137-44253-6 ; 978-1-137-44254-3 ; 2018 ; Palgrave Handbook of Political Economy (978-1-137-44254-3) ; 978-1-137-44254-3 ; >
-      au < released ; exists ; 978-1-137-45316-7 ; 978-1-137-45317-4 ; 2017 ; Active citizenship in Europe : practices and demands in the EU, Italy, Turkey, and the UK (978-1-137-45317-4) ; 978-1-137-45317-4 ; >
-      au < released ; exists ; 978-1-137-46580-1 ; 978-1-137-46581-8 ; 2016 ; Foreign Office, commerce and British foreign policy in the twentieth century (978-1-137-46581-8) ; 978-1-137-46581-8 ; >
-      au < released ; exists ; 978-1-137-47181-9 ; 978-1-137-47182-6 ; 2017 ; revised European neighbourhood policy : continuity and change in EU foreign policy (978-1-137-47182-6) ; 978-1-137-47182-6 ; >
-      au < released ; exists ; 978-1-137-47918-1 ; 978-1-137-47919-8 ; 2016 ; Virtual workers and the global labour market (978-1-137-47919-8) ; 978-1-137-47919-8 ; >
-      au < released ; exists ; 978-1-137-48864-0 ; 978-1-137-48865-7 ; 2017 ; Digital Citizenship and Political Engagement : The Challenge from Online Campaigning and Advocacy Organisations (978-1-137-48865-7) ; 978-1-137-48865-7 ; >
-      au < released ; exists ; 978-1-137-49117-6 ; 978-1-137-48874-9 ; 2016 ; Politics of EU-China economic relations : an uneasy partnership (978-1-137-48874-9) ; 978-1-137-48874-9 ; >
-      au < released ; exists ; 978-1-137-50883-6 ; 978-1-137-50884-3 ; 2017 ; Governing Arctic change : global perspectives (978-1-137-50884-3) ; 978-1-137-50884-3 ; >
-      au < released ; exists ; 978-1-137-52097-5 ; 978-1-137-52099-9 ; 2016 ; Family Life in an Age of Migration and Mobility (978-1-137-52099-9) ; 978-1-137-52099-9 ; >
-      au < released ; exists ; 978-1-137-52320-4 ; 978-1-137-52321-1 ; 2017 ; Media and Global Climate Knowledge (978-1-137-52321-1) ; 978-1-137-52321-1 ; >
-      au < released ; exists ; 978-1-137-52486-7 ; 978-1-137-52487-4 ; 2016 ; girl's education : schooling and the formation of gender, identities, and future visions (978-1-137-52487-4) ; 978-1-137-52487-4 ; >
-      au < released ; exists ; 978-1-137-52691-5 ; 978-1-137-52692-2 ; 2016 ; Epistemology (978-1-137-52692-2) ; 978-1-137-52692-2 ; >
-      au < released ; exists ; 978-1-137-53379-1 ; 978-1-137-53380-7 ; 2017 ; morality of drone warfare and the politics of regulation (978-1-137-53380-7) ; 978-1-137-53380-7 ; >
-      au < released ; exists ; 978-1-137-53945-8 ; 978-1-137-53946-5 ; 2016 ; Marsilio Ficino and His World (978-1-137-53946-5) ; 978-1-137-53946-5 ; >
-      au < released ; exists ; 978-1-137-53968-7 ; 978-1-137-53969-4 ; 2017 ; South-South cooperation beyond the myths : rising donors, new aid practices? (978-1-137-53969-4) ; 978-1-137-53969-4 ; >
-      au < released ; exists ; 978-1-137-55255-6 ; 978-1-137-55256-3 ; 2017 ; Lobbying in Europe : public affairs and the lobbying industry in 28 EU countries (978-1-137-55256-3) ; 978-1-137-55256-3 ; >
-      au < released ; exists ; 978-1-137-55356-0 ; 978-1-137-55357-7 ; 2016 ; fragmentation of aid : concepts, measurements and implications for development cooperation (978-1-137-55357-7) ; 978-1-137-55357-7 ; >
-      au < released ; exists ; 978-1-137-55797-1 ; 978-1-137-55798-8 ; 2016 ; language of cosmetics advertising (978-1-137-55798-8) ; 978-1-137-55798-8 ; >
-      au < released ; exists ; 978-1-137-56237-1 ; 978-1-137-56238-8 ; 2016 ; Political economy of Disney : the cultural capitalism of Hollywood (978-1-137-56238-8) ; 978-1-137-56238-8 ; >
-      au < released ; exists ; 978-1-137-56592-1 ; 978-1-137-56593-8 ; 2017 ; Homosexuality and Italian cinema : from the fall of Fascism to the years of lead (978-1-137-56593-8) ; 978-1-137-56593-8 ; >
-      au < released ; exists ; 978-1-137-56735-2 ; 978-1-137-56736-9 ; 2017 ; brief history of international criminal law and International Criminal Court (978-1-137-56736-9) ; 978-1-137-56736-9 ; >
-      au < released ; exists ; 978-1-137-56951-6 ; 978-1-137-56952-3 ; 2017 ; Public-private partnerships : policy and governance challenges facing Kazakhstan and Russia (978-1-137-56952-3) ; 978-1-137-56952-3 ; >
-      au < released ; exists ; 978-1-137-57087-1 ; 978-1-137-57088-8 ; 2016 ; Fake meds online : the internet and the transnational market in illicit pharmaceuticals (978-1-137-57088-8) ; 978-1-137-57088-8 ; >
-      au < released ; exists ; 978-1-137-57097-0 ; 978-1-137-57098-7 ; 2017 ; Everyday nationhood : theorising culture, identity and belonging after Banal Nationalism (978-1-137-57098-7) ; 978-1-137-57098-7 ; >
-      au < released ; exists ; 978-1-137-57442-8 ; 978-1-137-57443-5 ; 2017 ; Before the Neoliberal Turn (978-1-137-57443-5) ; 978-1-137-57443-5 ; >
-      au < released ; exists ; 978-1-137-57689-7 ; 978-1-137-57690-3 ; 2017 ; Political economy of independent Ukraine : slow starts, false starts, and a last chance? (978-1-137-57690-3) ; 978-1-137-57690-3 ; >
-      au < released ; exists ; 978-1-137-58628-5 ; 978-1-137-58629-2 ; 2016 ; Intersections of religion and migration : issues at the global crossroads (978-1-137-58629-2) ; 978-1-137-58629-2 ; >
-      au < released ; exists ; 978-1-137-59000-8 ; 978-1-137-59001-5 ; 2016 ; Why the UK voted for Brexit : David Cameron's great miscalculation (978-1-137-59001-5) ; 978-1-137-59001-5 ; >
-      au < released ; exists ; 978-1-137-59105-0 ; 978-1-137-59104-3 ; 2017 ; Energy Union (978-1-137-59104-3) ; 978-1-137-59104-3 ; >
-      au < released ; exists ; 978-1-137-59723-6 ; 978-1-137-59724-3 ; 2017 ; NATO and the Western Balkans : from neutral spectator to proactive peacemaker (978-1-137-59724-3) ; 978-1-137-59724-3 ; >
-      au < released ; exists ; 978-1-137-59942-1 ; 978-1-137-59943-8 ; 2016 ; Constructing Methodology for Qualitative Research (978-1-137-59943-8) ; 978-1-137-59943-8 ; >
-      au < released ; exists ; 978-1-137-60026-4 ; 978-1-137-60027-1 ; 2017 ; Child insanity in England, 1845-1907 (978-1-137-60027-1) ; 978-1-137-60027-1 ; >
-      au < released ; exists ; 978-1-137-60161-2 ; 978-1-137-60018-9 ; 2017 ; Muslims, money, and democracy in Turkey : reluctant capitalists (978-1-137-60018-9) ; 978-1-137-60018-9 ; >
-      au < released ; exists ; 978-1-137-60377-7 ; 978-1-349-94915-1 ; 2016 ; Between Politics and Antipolitics (978-1-349-94915-1) ; 978-1-349-94915-1 ; >
-      au < released ; exists ; 978-1-349-55589-5 ; 978-1-137-51400-4 ; 2016 ; China, the European Union, and the international politics of global governance (978-1-137-51400-4) ; 978-1-137-51400-4 ; >
-      au < released ; exists ; 978-1-349-55824-7 ; 978-1-137-50867-6 ; 2016 ; Demystifying talent management : a critical approach to the realities of talent (978-1-137-50867-6) ; 978-1-137-50867-6 ; >
-      au < released ; exists ; 978-1-349-55851-3 ; 978-1-137-55871-8 ; 2016 ; Dickens, religion, and society (978-1-137-55871-8) ; 978-1-137-55871-8 ; >
-      au < released ; exists ; 978-1-349-56441-5 ; 978-1-137-50538-5 ; 2016 ; Japan’s Development Assistance (978-1-137-50538-5) ; 978-1-137-50538-5 ; >
-      au < released ; exists ; 978-1-349-56731-7 ; 978-1-137-45547-5 ; 2016 ; Napoleon’s Empire European Politics in Global Perspective (978-1-137-45547-5) ; 978-1-137-45547-5 ; >
-      au < released ; exists ; 978-1-349-56928-1 ; 978-1-137-48944-9 ; 2016 ; Politics and legitimacy in post-Soviet Eurasia (978-1-137-48944-9) ; 978-1-137-48944-9 ; >
-      au < released ; exists ; 978-1-349-57724-8 ; 978-1-137-49673-7 ; 2016 ; Political economy of climate change adaptation (978-1-137-49673-7) ; 978-1-137-49673-7 ; >
-      au < released ; exists ; 978-1-349-57917-4 ; 978-1-137-40185-4 ; 2016 ; Tourism Management, Marketing, and Development (978-1-137-40185-4) ; 978-1-137-40185-4 ; >
-      au < released ; exists ; 978-1-349-68068-9 ; 978-1-137-40534-0 ; 2016 ; Religion, gender and citizenship : women of faith, gender equality and feminism (978-1-137-40534-0) ; 978-1-137-40534-0 ; >
-      au < released ; exists ; 978-1-349-69803-5 ; 978-1-137-49760-4 ; 2016 ; 21st century perspectives on music, technology, and culture : listening spaces (978-1-137-49760-4) ; 978-1-137-49760-4 ; >
-      au < released ; exists ; 978-1-349-71343-1 ; 978-1-137-54425-4 ; 2016 ; Understanding consumer financial behavior : money management in an age of financial illiteracy (978-1-137-54425-4) ; 978-1-137-54425-4 ; >
-      au < released ; exists ; 978-1-349-84733-4 ; 978-1-137-57428-2 ; 2016 ; Media events : a critical contemporary approach (978-1-137-57428-2) ; 978-1-137-57428-2 ; >
-      au < released ; exists ; 978-1-349-88791-0 ; 978-1-137-59387-0 ; 2016 ; Asian Infrastructure Investment Bank: The Construction of Power and the Struggle for the East Asian International Order (978-1-137-59387-0) ; 978-1-137-59387-0 ; >
-      au < released ; exists ; 978-1-349-94884-0 ; 978-1-349-94885-7 ; 2016 ; Big Data Challenges (978-1-349-94885-7) ; 978-1-349-94885-7 ; >
-      au < released ; exists ; 978-1-349-94937-3 ; 978-1-349-94938-0 ; 2017 ; Partnerships in international policy-making : civil society and public institutions in European and global affairs (978-1-349-94938-0) ; 978-1-349-94938-0 ; >
-      au < released ; exists ; 978-1-349-95065-2 ; 978-1-137-60181-0 ; 2017 ; Between State and Non-State (978-1-137-60181-0) ; 978-1-137-60181-0 ; >
-      au < released ; exists ; 978-1-349-99536-3 ; 978-1-137-58939-2 ; 2016 ; Saudi Arabia and Iran : friends or foes (978-1-137-58939-2) ; 978-1-137-58939-2 ; >
-      au < released ; exists ; 978-1-349-99537-0 ; 978-1-137-58577-6 ; 2016 ; Iran in the world : President Rouhani's foreign policy (978-1-137-58577-6) ; 978-1-137-58577-6 ; >
-      au < released ; exists ; 978-1-4842-2390-1 ; 978-1-4842-2391-8 ; 2017 ; agile enterprise : building and running agile organizations (978-1-4842-2391-8) ; 978-1-4842-2391-8 ; >
-      au < released ; exists ; 978-3-319-06310-2 ; 978-3-319-06311-9 ; 2017 ; Educational Games for Soft-Skills Training in Digital Environments (978-3-319-06311-9) ; 978-3-319-06311-9 ; >
-      au < released ; exists ; 978-3-319-07541-9 ; 978-3-319-07542-6 ; 2016 ; International Food Law and Policy (978-3-319-07542-6) ; 978-3-319-07542-6 ; >
-      au < released ; exists ; 978-3-319-13164-1 ; 978-3-319-13165-8 ; 2016 ; Homicide in São Paulo (978-3-319-13165-8) ; 978-3-319-13165-8 ; >
-      au < released ; exists ; 978-3-319-19086-0 ; 978-3-319-19087-7 ; 2016 ; From Cold War to Cyber War The Evolution of the International Law of Peace and Armed Conflict over the last 25 Years (978-3-319-19087-7) ; 978-3-319-19087-7 ; >
-      au < released ; exists ; 978-3-319-21123-7 ; 978-3-319-21124-4 ; 2016 ; Edith Stein: Women, Social-Political Philosophy, Theology, Metaphysics and Public History (978-3-319-21124-4) ; 978-3-319-21124-4 ; >
-      au < released ; exists ; 978-3-319-21640-9 ; 978-3-319-21641-6 ; 2016 ; Key Initiatives in Corporate Social Responsibility (978-3-319-21641-6) ; 978-3-319-21641-6 ; >
-      au < released ; exists ; 978-3-319-23188-4 ; 978-3-319-23189-1 ; 2016 ; Rights of the Child in a Changing World (978-3-319-23189-1) ; 978-3-319-23189-1 ; >
-      au < released ; exists ; 978-3-319-23759-6 ; 978-3-319-23760-2 ; 2016 ; Drones and unmanned aerial systems : legal and social implications for security and surveillance (978-3-319-23760-2) ; 978-3-319-23760-2 ; >
-      au < released ; exists ; 978-3-319-24443-3 ; 978-3-319-24445-7 ; 2016 ; Migration in an Era of Restriction and Recession (978-3-319-24445-7) ; 978-3-319-24445-7 ; >
-      au < released ; exists ; 978-3-319-24881-3 ; 978-3-319-24883-7 ; 2016 ; Applications of the ""Fair Hearing"" norm in ECHR Article 6(1) to civil proceedings : with special emphasis on the balance between procedural safeguards and efficiency (978-3-319-24883-7) ; 978-3-319-24883-7 ; >
-      au < released ; exists ; 978-3-319-25550-7 ; 978-3-319-25552-1 ; 2016 ; Cyberbullying across the globe : gender, family, and mental health (978-3-319-25552-1) ; 978-3-319-25552-1 ; >
-      au < released ; exists ; 978-3-319-26092-1 ; 978-3-319-26094-5 ; 2016 ; English for Writing Research Papers (978-3-319-26094-5) ; 978-3-319-26094-5 ; >
-      au < released ; exists ; 978-3-319-26277-2 ; 978-3-319-26279-6 ; 2016 ; Global Marketing Strategy (978-3-319-26279-6) ; 978-3-319-26279-6 ; >
-      au < released ; exists ; 978-3-319-26328-1 ; 978-3-319-26330-4 ; 2016 ; English for Presentations at International Conferences (978-3-319-26330-4) ; 978-3-319-26330-4 ; >
-      au < released ; exists ; 978-3-319-27142-2 ; 978-3-319-27144-6 ; 2016 ; Arbitration and Contract Law (978-3-319-27144-6) ; 978-3-319-27144-6 ; >
-      au < released ; exists ; 978-3-319-27157-6 ; 978-3-319-27158-3 ; 2016 ; Compatibility of Transactional Resolutions of Antitrust Proceedings with Due Process and Fundamental Rights & Online Exhaustion of IP Rights (978-3-319-27158-3) ; 978-3-319-27158-3 ; >
-      au < released ; exists ; 978-3-319-28230-5 ; 978-3-319-28231-2 ; 2016 ; Information and Communication Technologies in Tourism 2016 (978-3-319-28231-2) ; 978-3-319-28231-2 ; >
-      au < released ; exists ; 978-3-319-29298-4 ; 978-3-319-29300-4 ; 2016 ; J. Michael Dunn on Information Based Logics (978-3-319-29300-4) ; 978-3-319-29300-4 ; >
-      au < released ; exists ; 978-3-319-29320-2 ; 978-3-319-29322-6 ; 2016 ; Legal Issues on Climate Change and International Trade Law (978-3-319-29322-6) ; 978-3-319-29322-6 ; >
-      au < released ; exists ; 978-3-319-29560-2 ; 978-3-319-29562-6 ; 2016 ; Nudging - Possibilities, Limitations and Applications in European Law and Economics (978-3-319-29562-6) ; 978-3-319-29562-6 ; >
-      au < released ; exists ; 978-3-319-29624-1 ; 978-3-319-29625-8 ; 2017 ; Understanding China Today (978-3-319-29625-8) ; 978-3-319-29625-8 ; >
-      au < released ; exists ; 978-3-319-30098-6 ; 978-3-319-30100-6 ; 2016 ; Resources for Teaching Mindfulness (978-3-319-30100-6) ; 978-3-319-30100-6 ; >
-      au < released ; exists ; 978-3-319-31234-7 ; 978-3-319-31235-4 ; 2016 ; Interventions in Learning Disabilities (978-3-319-31235-4) ; 978-3-319-31235-4 ; >
-      au < released ; exists ; 978-3-319-31543-0 ; 978-3-319-31545-4 ; 2016 ; Managing Software Process Evolution Traditional, Agile and Beyond – How to Handle Process Change (978-3-319-31545-4) ; 978-3-319-31545-4 ; >
-      au < released ; exists ; 978-3-319-31953-7 ; 978-3-319-31954-4 ; 2016 ; Researching Second Language Learning and Teaching from a Psycholinguistic Perspective (978-3-319-31954-4) ; 978-3-319-31954-4 ; >
-      au < released ; exists ; 978-3-319-32117-2 ; 978-3-319-32118-9 ; 2016 ; BBC and the Development of Anglophone Caribbean Literature, 1943-1958 (978-3-319-32118-9) ; 978-3-319-32118-9 ; >
-      au < released ; exists ; 978-3-319-32172-1 ; 978-3-319-32174-5 ; 2016 ; Regulating and Supervising European Financial Markets (978-3-319-32174-5) ; 978-3-319-32174-5 ; >
-      au < released ; exists ; 978-3-319-32529-3 ; 978-3-319-32530-9 ; 2016 ; Ukraine and Beyond (978-3-319-32530-9) ; 978-3-319-32530-9 ; >
-      au < released ; exists ; 978-3-319-32770-9 ; 978-3-319-32771-6 ; 2016 ; Individual Rights in EU Law (978-3-319-32771-6) ; 978-3-319-32771-6 ; >
-      au < released ; exists ; 978-3-319-33294-9 ; 978-3-319-33295-6 ; 2016 ; China’s New Foreign Policy (978-3-319-33295-6) ; 978-3-319-33295-6 ; >
-      au < released ; exists ; 978-3-319-33550-6 ; 978-3-319-33551-3 ; 2016 ; Social Emergence in International Relations (978-3-319-33551-3) ; 978-3-319-33551-3 ; >
-      au < released ; exists ; 978-3-319-33562-9 ; 978-3-319-33563-6 ; 2016 ; Refugees, Conflict and the Search for Belonging (978-3-319-33563-6) ; 978-3-319-33563-6 ; >
-      au < released ; exists ; 978-3-319-34089-0 ; 978-3-319-34090-6 ; 2016 ; European Union As Guardian of Internet Privacy (978-3-319-34090-6) ; 978-3-319-34090-6 ; >
-      au < released ; exists ; 978-3-319-34125-5 ; 978-3-319-34127-9 ; 2017 ; Research on E-Learning and ICT in Education (978-3-319-34127-9) ; 978-3-319-34127-9 ; >
-      au < released ; exists ; 978-3-319-35082-0 ; 978-3-319-35083-7 ; 2017 ; Corporate Social Responsibility (978-3-319-35083-7) ; 978-3-319-35083-7 ; >
-      au < released ; exists ; 978-3-319-35085-1 ; 978-3-319-35086-8 ; 2017 ; Dickens and the Virtual City (978-3-319-35086-8) ; 978-3-319-35086-8 ; >
-      au < released ; exists ; 978-3-319-39350-6 ; 978-3-319-39351-3 ; 2016 ; Human Rights and Religion in Educational Contexts (978-3-319-39351-3) ; 978-3-319-39351-3 ; >
-      au < released ; exists ; 978-3-319-39891-4 ; 978-3-319-39892-1 ; 2017 ; State Building and National Identity Reconstruction in the Horn of Africa (978-3-319-39892-1) ; 978-3-319-39892-1 ; >
-      au < released ; exists ; 978-3-319-39906-5 ; 978-3-319-39907-2 ; 2016 ; Virtual, Augmented and Mixed Reality 8th International Conference, VAMR 2016, Held as Part of HCI International 2016, Toronto, Canada, July 17-22, 2016. Proceedings (978-3-319-39907-2) ; 978-3-319-39907-2 ; >
-      au < released ; exists ; 978-3-319-40918-4 ; 978-3-319-40920-7 ; 2017 ; Parenting and Family Processes in Child Maltreatment and Intervention (978-3-319-40920-7) ; 978-3-319-40920-7 ; >
-      au < released ; exists ; 978-3-319-41365-5 ; 978-3-319-41366-2 ; 2017 ; Financial Risk Management (978-3-319-41366-2) ; 978-3-319-41366-2 ; >
-      au < released ; exists ; 978-3-319-42287-9 ; 978-3-319-42289-3 ; 2016 ; Family Law and Society in Europe From the Middle Ages to the Contemporary Era (978-3-319-42289-3) ; 978-3-319-42289-3 ; >
-      au < released ; exists ; 978-3-319-43134-5 ; 978-3-319-43135-2 ; 2016 ; Privacy and the American Constitution (978-3-319-43135-2) ; 978-3-319-43135-2 ; >
-      au < released ; exists ; 978-3-319-43200-7 ; 978-3-319-43201-4 ; 2017 ; Security Threats and Public Perception (978-3-319-43201-4) ; 978-3-319-43201-4 ; >
-      au < released ; exists ; 978-3-319-43288-5 ; 978-3-319-43289-2 ; 2017 ; Security and Bilateral Issues between Iran and its Arab Neighbours (978-3-319-43289-2) ; 978-3-319-43289-2 ; >
-      au < released ; exists ; 978-3-319-43945-7 ; 978-3-319-43946-4 ; 2016 ; Big Data Analytics and Knowledge Discovery 18th International Conference, DaWaK 2016, Porto, Portugal, September 6-8, 2016, Proceedings (978-3-319-43946-4) ; 978-3-319-43946-4 ; >
-      au < released ; exists ; 978-3-319-44286-0 ; 978-3-319-44287-7 ; 2017 ; Financial Regulation in the EU (978-3-319-44287-7) ; 978-3-319-44287-7 ; >
-      au < released ; exists ; 978-3-319-44375-1 ; 978-3-319-44377-5 ; 2017 ; Mutual Recognition of Judicial Decisions in European Criminal Law (978-3-319-44377-5) ; 978-3-319-44377-5 ; >
-      au < released ; exists ; 978-3-319-44644-8 ; 978-3-319-44645-5 ; 2017 ; International Economic Law (978-3-319-44645-5) ; 978-3-319-44645-5 ; >
-      au < released ; exists ; 978-3-319-45100-8 ; 978-3-319-45102-2 ; 2017 ; Media Exposure During Infancy and Early Childhood (978-3-319-45102-2) ; 978-3-319-45102-2 ; >
-      au < released ; exists ; 978-3-319-45233-3 ; 978-3-319-45234-0 ; 2016 ; Social Media: The Good, the Bad, and the Ugly 15th IFIP WG 6.11 Conference on e-Business, e-Services, and e-Society, I3E 2016, Swansea, UK, September 13–15, 2016, Proceedings (978-3-319-45234-0) ; 978-3-319-45234-0 ; >
-      au < released ; exists ; 978-3-319-45688-1 ; 978-3-319-45689-8 ; 2017 ; Shifting power in Asia-Pacific? : the rise of China, Sino-US competition and regional middle power allegiance (978-3-319-45689-8) ; 978-3-319-45689-8 ; >
-      au < released ; exists ; 978-3-319-46136-6 ; 978-3-319-46138-0 ; 2017 ; Evidence-based treatments for trauma-related disorders in children and adolescents (978-3-319-46138-0) ; 978-3-319-46138-0 ; >
-      au < released ; exists ; 978-3-319-46232-5 ; 978-3-319-46233-2 ; 2016 ; Aesthetics and neuroscience : scientific and artistic perspectives (978-3-319-46233-2) ; 978-3-319-46233-2 ; >
-      au < released ; exists ; 978-3-319-46899-0 ; 978-3-319-46900-3 ; 2017 ; Judgments of Love in Criminal Justice (978-3-319-46900-3) ; 978-3-319-46900-3 ; >
-      au < released ; exists ; 978-3-319-47258-4 ; 978-3-319-47259-1 ; 2017 ; Bad Girls and Transgressive Women in Popular Television, Fiction, and Film (978-3-319-47259-1) ; 978-3-319-47259-1 ; >
-      au < released ; exists ; 978-3-319-47529-5 ; 978-3-319-47530-1 ; 2017 ; EU, Promoting Regional Integration, and Conflict Resolution (978-3-319-47530-1) ; 978-3-319-47530-1 ; >
-      au < released ; exists ; 978-3-319-47562-2 ; 978-3-319-47563-9 ; 2017 ; Regional Integration Processes in the Commonwealth of Independent States (978-3-319-47563-9) ; 978-3-319-47563-9 ; >
-      au < released ; exists ; 978-3-319-47574-5 ; 978-3-319-47575-2 ; 2017 ; Dynamics of the Arab-Israel Conflict (978-3-319-47575-2) ; 978-3-319-47575-2 ; >
-      au < released ; exists ; 978-3-319-47670-4 ; 978-3-319-47671-1 ; 2016 ; Open Source Intelligence Investigation From Strategy to Implementation (978-3-319-47671-1) ; 978-3-319-47671-1 ; >
-      au < released ; exists ; 978-3-319-47867-8 ; 978-3-319-47868-5 ; 2017 ; Handbook of Theory and Practice of Sustainable Development in Higher Education Volume 1 (978-3-319-47868-5) ; 978-3-319-47868-5 ; >
-      au < released ; exists ; 978-3-319-47888-3 ; 978-3-319-47889-0 ; 2017 ; Handbook of Theory and Practice of Sustainable Development in Higher Education Volume 2 (978-3-319-47889-0) ; 978-3-319-47889-0 ; >
-      au < released ; exists ; 978-3-319-48444-0 ; 978-3-319-48445-7 ; 2017 ; Postcolonialism and Postsocialism in Fiction and Art (978-3-319-48445-7) ; 978-3-319-48445-7 ; >
-      au < released ; exists ; 978-3-319-48480-8 ; 978-3-319-48481-5 ; 2017 ; Whistleblowing in the World (978-3-319-48481-5) ; 978-3-319-48481-5 ; >
-      au < released ; exists ; 978-3-319-48495-2 ; 978-3-319-48496-9 ; 2016 ; Digital Heritage. Progress in Cultural Heritage: Documentation, Preservation, and Protection 6th International Conference, EuroMed 2016, Nicosia, Cyprus, October 31 – November 5, 2016, Proceedings, Part I (978-3-319-48496-9) ; 978-3-319-48496-9 ; >
-      au < released ; exists ; 978-3-319-48721-2 ; 978-3-319-48722-9 ; 2017 ; Reassessing the Role of Management in the Golden Age (978-3-319-48722-9) ; 978-3-319-48722-9 ; >
-      au < released ; exists ; 978-3-319-48733-5 ; 978-3-319-48734-2 ; 2017 ; Football and Supporter Activism in Europe (978-3-319-48734-2) ; 978-3-319-48734-2 ; >
-      au < released ; exists ; 978-3-319-48801-1 ; 978-3-319-48802-8 ; 2017 ; Creating Shared Value – Concepts, Experience, Criticism (978-3-319-48802-8) ; 978-3-319-48802-8 ; >
-      au < released ; exists ; 978-3-319-49075-5 ; 978-3-319-49077-9 ; 2017 ; Psychology of Digital Learning (978-3-319-49077-9) ; 978-3-319-49077-9 ; >
-      au < released ; exists ; 978-3-319-49333-6 ; 978-3-319-49334-3 ; 2017 ; Public Diplomacy and the Implementation of Foreign Policy in the US, Sweden and Turkey (978-3-319-49334-3) ; 978-3-319-49334-3 ; >
-      au < released ; exists ; 978-3-319-49585-9 ; 978-3-319-49586-6 ; 2016 ; Advanced Data Mining and Applications 12th International Conference, ADMA 2016, Gold Coast, QLD, Australia, December 12-15, 2016, Proceedings (978-3-319-49586-6) ; 978-3-319-49586-6 ; >
-      au < released ; exists ; 978-3-319-50913-6 ; 978-3-319-50915-0 ; 2017 ; Recognition and Enforcement of Foreign Arbitral Awards (978-3-319-50915-0) ; 978-3-319-50915-0 ; >
-      au < released ; exists ; 978-3-319-51057-6 ; 978-3-319-51058-3 ; 2017 ; Digital Storytelling in Higher Education (978-3-319-51058-3) ; 978-3-319-51058-3 ; >
-      au < released ; exists ; 978-3-319-51126-9 ; 978-3-319-51127-6 ; 2017 ; Advances in Luxury Brand Management (978-3-319-51127-6) ; 978-3-319-51127-6 ; >
-      au < released ; exists ; 978-3-319-51167-2 ; 978-3-319-51168-9 ; 2017 ; Information and Communication Technologies in Tourism 2017 (978-3-319-51168-9) ; 978-3-319-51168-9 ; >
-      au < released ; exists ; 978-3-319-51885-5 ; 978-3-319-51886-2 ; 2017 ; Engagement and Disengagement at Work (978-3-319-51886-2) ; 978-3-319-51886-2 ; >
-      au < released ; exists ; 978-3-319-53461-9 ; 978-3-319-53462-6 ; 2017 ; Legal Personhood: Animals, Artificial Intelligence and the Unborn (978-3-319-53462-6) ; 978-3-319-53462-6 ; >
-      au < released ; exists ; 978-3-319-53855-6 ; 978-3-319-53856-3 ; 2017 ; New Perspectives on Cybercrime (978-3-319-53856-3) ; 978-3-319-53856-3 ; >
-      au < released ; exists ; 978-3-319-54656-8 ; 978-3-319-54657-5 ; 2017 ; Public International Law of Cyberspace (978-3-319-54657-5) ; 978-3-319-54657-5 ; >
-      au < released ; exists ; 978-3-319-54887-6 ; 978-3-319-54888-3 ; 2017 ; Second Cold War (978-3-319-54888-3) ; 978-3-319-54888-3 ; >
-      au < released ; exists ; 978-3-319-55202-6 ; 978-3-319-55203-3 ; 2017 ; Extremism, Radicalization and Security (978-3-319-55203-3) ; 978-3-319-55203-3 ; >
-      au < released ; exists ; 978-3-319-55256-9 ; 978-3-319-55257-6 ; 2017 ; Russia and the European Union (978-3-319-55257-6) ; 978-3-319-55257-6 ; >
-      au < released ; exists ; 978-3-319-55494-5 ; 978-3-319-55495-2 ; 2017 ; Economics of UK-EU Relations (978-3-319-55495-2) ; 978-3-319-55495-2 ; >
-      au < released ; exists ; 978-3-319-56177-6 ; 978-3-319-50796-5 ; 2017 ; Data Protection and Privacy: (In)visibilities and Infrastructures (978-3-319-50796-5) ; 978-3-319-50796-5 ; >
-      au < released ; exists ; 978-3-319-56181-3 ; 978-3-319-56182-0 ; 2017 ; Dimensional Corporate Governance (978-3-319-56182-0) ; 978-3-319-56182-0 ; >
-      au < released ; exists ; 978-3-319-56341-1 ; 978-3-319-56342-8 ; 2017 ; Emigration and Diaspora Policies in the Age of Mobility (978-3-319-56342-8) ; 978-3-319-56342-8 ; >
-      au < released ; exists ; 978-3-319-56662-7 ; 978-3-319-56663-4 ; 2017 ; Mega-Regional Trade Agreements (978-3-319-56663-4) ; 978-3-319-56663-4 ; >
-      au < released ; exists ; 978-3-319-56746-4 ; 978-3-319-56747-1 ; 2017 ; Regional Cooperation in South Asia (978-3-319-56747-1) ; 978-3-319-56747-1 ; >
-      au < released ; exists ; 978-3-319-57782-1 ; 978-3-319-57783-8 ; 2017 ; Pedagogy of Compassion at the Heart of Higher Education (978-3-319-57783-8) ; 978-3-319-57783-8 ; >
-      au < released ; exists ; 978-3-319-57958-0 ; 978-3-319-57959-7 ; 2017 ; EU General Data Protection Regulation (GDPR) (978-3-319-57959-7) ; 978-3-319-57959-7 ; >
-      au < released ; exists ; 978-3-319-58492-8 ; 978-3-319-58493-5 ; 2018 ; Financing in Europe (978-3-319-58493-5) ; 978-3-319-58493-5 ; >
-      au < released ; exists ; 978-3-319-58831-5 ; 978-3-319-58832-2 ; 2017 ; European Yearbook of International Economic Law 2017 (978-3-319-58832-2) ; 978-3-319-58832-2 ; >
-      au < released ; exists ; 978-3-319-58882-7 ; 978-3-319-58883-4 ; 2017 ; Reshoring of Manufacturing (978-3-319-58883-4) ; 978-3-319-58883-4 ; >
-      au < released ; exists ; 978-3-319-59122-3 ; 978-3-319-59123-0 ; 2017 ; Global mental health : prevention and promotion (978-3-319-59123-0) ; 978-3-319-59123-0 ; >
-      au < released ; exists ; 978-3-319-59899-4 ; 978-3-319-59900-7 ; 2017 ; Exploring Spoken English Learner Language Using Corpora (978-3-319-59900-7) ; 978-3-319-59900-7 ; >
-      au < released ; exists ; 978-3-319-60145-8 ; 978-3-319-60146-5 ; 2017 ; History of Socially Responsible Business, C.1600–1950 (978-3-319-60146-5) ; 978-3-319-60146-5 ; >
-      au < released ; exists ; 978-3-319-61123-5 ; 978-3-319-61124-2 ; 2017 ; Megatrends and Air Transport (978-3-319-61124-2) ; 978-3-319-61124-2 ; >
-      au < released ; exists ; 978-3-319-61154-9 ; 978-3-319-61155-6 ; 2017 ; Environmental Policy, Non-Product Related Process and Production Methods and the Law of the World Trade Organization (978-3-319-61155-6) ; 978-3-319-61155-6 ; >
-      au < released ; exists ; 978-3-319-61178-5 ; 978-3-319-61179-2 ; 2017 ; Civil War and Narrative (978-3-319-61179-2) ; 978-3-319-61179-2 ; >
-      au < released ; exists ; 978-3-319-61215-7 ; 978-3-319-61216-4 ; 2017 ; Insurance Regulation in the European Union (978-3-319-61216-4) ; 978-3-319-61216-4 ; >
-      au < released ; exists ; 978-3-319-61809-8 ; 978-3-319-61810-4 ; 2017 ; Metrics of Subjective Well-Being: Limits and Improvements (978-3-319-61810-4) ; 978-3-319-61810-4 ; >
-      au < released ; exists ; 978-3-319-62565-2 ; 978-3-319-62566-9 ; 2017 ; History of Business in Africa (978-3-319-62566-9) ; 978-3-319-62566-9 ; >
-      au < released ; exists ; 978-3-319-62736-6 ; 978-3-319-62737-3 ; 2017 ; Digital Economy. Emerging Technologies and Business Innovation Second International Conference, ICDEc 2017, Sidi Bou Said, Tunisia, May 4–6, 2017, Proceedings (978-3-319-62737-3) ; 978-3-319-62737-3 ; >
-      au < released ; exists ; 978-3-319-62793-9 ; 978-3-319-62794-6 ; 2017 ; Arab Women and the Media in Changing Landscapes (978-3-319-62794-6) ; 978-3-319-62794-6 ; >
-      au < released ; exists ; 978-3-319-62937-7 ; 978-3-319-62938-4 ; 2017 ; Neuroeconomic and Behavioral Aspects of Decision Making (978-3-319-62938-4) ; 978-3-319-62938-4 ; >
-      au < released ; exists ; 978-3-319-63048-9 ; 978-3-319-63049-6 ; 2018 ; Vector Variational Inequalities and Vector Optimization (978-3-319-63049-6) ; 978-3-319-63049-6 ; >
-      au < released ; exists ; 978-3-319-63117-2 ; 978-3-319-63118-9 ; 2017 ; Time, Technology and Narrative Form in Contemporary US Television Drama (978-3-319-63118-9) ; 978-3-319-63118-9 ; >
-      au < released ; exists ; 978-3-319-64503-2 ; 978-3-319-64504-9 ; 2017 ; Who's Afraid of John Maynard Keynes? (978-3-319-64504-9) ; 978-3-319-64504-9 ; >
-      au < released ; exists ; 978-3-319-64875-0 ; 978-3-319-64876-7 ; 2017 ; IBroadway (978-3-319-64876-7) ; 978-3-319-64876-7 ; >
-      au < released ; exists ; 978-3-319-64954-2 ; 978-3-319-64955-9 ; 2017 ; EU Internet Law (978-3-319-64955-9) ; 978-3-319-64955-9 ; >
-      au < released ; exists ; 978-3-319-65339-6 ; 978-3-319-65340-2 ; 2017 ; Progress in Artificial Intelligence 18th EPIA Conference on Artificial Intelligence, EPIA 2017, Porto, Portugal, September 5-8, 2017, Proceedings (978-3-319-65340-2) ; 978-3-319-65340-2 ; >
-      au < released ; exists ; 978-3-319-65360-0 ; 978-3-319-65361-7 ; 2017 ; Dual Markets (978-3-319-65361-7) ; 978-3-319-65361-7 ; >
-      au < released ; exists ; 978-3-319-65505-5 ; 978-3-319-65506-2 ; 2018 ; Entrepreneurship in Culture and Creative Industries (978-3-319-65506-2) ; 978-3-319-65506-2 ; >
-      au < released ; exists ; 978-3-319-66019-6 ; 978-3-319-66020-2 ; 2018 ; Agricultural Development in the World Periphery (978-3-319-66020-2) ; 978-3-319-66020-2 ; >
-      au < released ; exists ; 978-3-319-66286-2 ; 978-3-319-66287-9 ; 2017 ; Cultural Intermediaries (978-3-319-66287-9) ; 978-3-319-66287-9 ; >
-      au < released ; exists ; 978-3-319-66561-0 ; 978-3-319-66562-7 ; 2017 ; Advances in Computing 12th Colombian Conference, CCC 2017, Cali, Colombia, September 19-22, 2017, Proceedings (978-3-319-66562-7) ; 978-3-319-66562-7 ; >
-      au < released ; exists ; 978-3-319-66922-9 ; 978-3-319-66923-6 ; 2017 ; Advances in Production Management Systems. The Path to Intelligent, Collaborative and Sustainable Manufacturing IFIP WG 5.7 International Conference, APMS 2017, Hamburg, Germany, September 3-7, 2017, Proceedings, Part I (978-3-319-66923-6) ; 978-3-319-66923-6 ; >
-      au < released ; exists ; 978-3-319-66925-0 ; 978-3-319-66926-7 ; 2017 ; Advances in Production Management Systems. The Path to Intelligent, Collaborative and Sustainable Manufacturing IFIP WG 5.7 International Conference, APMS 2017, Hamburg, Germany, September 3-7, 2017, Proceedings, Part II (978-3-319-66926-7) ; 978-3-319-66926-7 ; >
-      au < released ; exists ; 978-3-319-67025-6 ; 978-3-319-67026-3 ; 2017 ; New Activities For Cultural Heritage (978-3-319-67026-3) ; 978-3-319-67026-3 ; >
-      au < released ; exists ; 978-3-319-68420-8 ; 978-3-319-68421-5 ; 2017 ; Neuroscience and Social Science (978-3-319-68421-5) ; 978-3-319-68421-5 ; >
-      au < released ; exists ; 978-3-319-68746-9 ; 978-3-319-68747-6 ; 2017 ; Semantics and Pragmatics of Quotation (978-3-319-68747-6) ; 978-3-319-68747-6 ; >
-      au < released ; exists ; 978-3-319-68749-0 ; 978-3-319-68750-6 ; 2018 ; Marketing Transformation: Marketing Practice in an Ever Changing World (978-3-319-68750-6) ; 978-3-319-68750-6 ; >
-      au < released ; exists ; 978-3-319-69178-7 ; 978-3-319-69179-4 ; 2017 ; Advanced Data Mining and Applications 13th International Conference, ADMA 2017, Singapore, November 5–6, 2017, Proceedings (978-3-319-69179-4) ; 978-3-319-69179-4 ; >
-      au < released ; exists ; 978-3-319-70919-2 ; 978-3-319-70920-8 ; 2017 ; Communication and bioethics at the end of life : real cases, real dilemmas (978-3-319-70920-8) ; 978-3-319-70920-8 ; >
-      au < released ; exists ; 978-3-319-71071-6 ; 978-3-319-71072-3 ; 2018 ; Luigi L. Pasinetti: An Intellectual Biography (978-3-319-71072-3) ; 978-3-319-71072-3 ; >
-      au < released ; exists ; 978-3-319-73508-5 ; 978-3-319-73509-2 ; 2018 ; Technology Entrepreneurship (978-3-319-73509-2) ; 978-3-319-73509-2 ; >
-      au < released ; exists ; 978-3-319-74128-4 ; 978-3-319-74129-1 ; 2018 ; Emerging Issues in Global Marketing (978-3-319-74129-1) ; 978-3-319-74129-1 ; >
-      au < released ; exists ; 978-3-319-75825-1 ; 978-3-319-75826-8 ; 2018 ; Digital Cultural Heritage Final Conference of the Marie Skłodowska-Curie Initial Training Network for Digital Cultural Heritage, ITN-DCH 2017, Olimje, Slovenia, May 23–25, 2017, Revised Selected Papers (978-3-319-75826-8) ; 978-3-319-75826-8 ; >
-      au < released ; exists ; 978-3-319-77218-9 ; 978-3-319-77219-6 ; 2018 ; Continuous Time Modeling in the Behavioral and Related Sciences (978-3-319-77219-6) ; 978-3-319-77219-6 ; >
-      au < released ; exists ; 978-3-319-92773-2 ; 978-3-319-92775-6 ; 2018 ; Variational analysis and applications (978-3-319-92775-6) ; 978-3-319-92775-6 ; >
-      au < released ; exists ; 978-3-319-95761-6 ; 978-3-319-95762-3 ; 2018 ; Analytical Corporate Finance (978-3-319-95762-3) ; 978-3-319-95762-3 ; >
-      au < released ; exists ; 978-3-658-10182-4 ; 978-3-658-10183-1 ; 2017 ; Strategic Retail Management (978-3-658-10183-1) ; 978-3-658-10183-1 ; >
-      au < released ; exists ; 978-3-658-14293-3 ; 978-3-658-14294-0 ; 2016 ; Managing TV Brands with Social Media (978-3-658-14294-0) ; 978-3-658-14294-0 ; >
-      au < released ; exists ; 978-3-658-15036-5 ; 978-3-658-15037-2 ; 2016 ; Retail Brand Equity and Loyalty (978-3-658-15037-2) ; 978-3-658-15037-2 ; >
-      au < released ; exists ; 978-3-658-16804-9 ; 978-3-658-16805-6 ; 2017 ; Professionalization of Coaching (978-3-658-16805-6) ; 978-3-658-16805-6 ; >
-      au < released ; exists ; 978-3-658-17739-3 ; 978-3-658-17740-9 ; 2017 ; Popular music studies today : proceedings of the International Association for the Study of Popular Music 2017 (978-3-658-17740-9) ; 978-3-658-17740-9 ; >
-      au < released ; exists ; 978-3-662-49274-1 ; 978-3-662-49275-8 ; 2018 ; Digital Marketplaces Unleashed (978-3-662-49275-8) ; 978-3-662-49275-8 ; >
-      au < released ; exists ; 978-3-662-53054-2 ; 978-3-662-53055-9 ; 2016 ; State Aid Law and Business Taxation (978-3-662-53055-9) ; 978-3-662-53055-9 ; >
-      au < released ; exists ; 978-3-662-53784-8 ; 978-3-662-53785-5 ; 2017 ; Enterprise Risk Management Models (978-3-662-53785-5) ; 978-3-662-53785-5 ; >
-      au < released ; exists ; 978-3-662-54903-2 ; 978-3-662-54904-9 ; 2018 ; Internet of Things (978-3-662-54904-9) ; 978-3-662-54904-9 ; >
-      au < released ; exists ; 978-3-662-55429-6 ; 978-3-662-55430-2 ; 2017 ; Transatlantic Data Protection in Practice (978-3-662-55430-2) ; 978-3-662-55430-2 ; >
-      au < released ; exists ; 978-94-017-7375-1 ; 978-94-017-7376-8 ; 2016 ; Data Protection on the Move (978-94-017-7376-8) ; 978-94-017-7376-8 ; >
-      au < released ; exists ; 978-94-017-7463-5 ; 978-94-017-7465-9 ; 2016 ; Convergence of the Fundamental Rights Protection in Europe (978-94-017-7465-9) ; 978-94-017-7465-9 ; >
-      au < released ; exists ; 978-94-017-7469-7 ; 978-94-017-7471-0 ; 2016 ; Limitations of National Sovereignty through European Integration (978-94-017-7471-0) ; 978-94-017-7471-0 ; >
-      au < released ; exists ; 978-94-024-1148-5 ; 978-94-024-1150-8 ; 2017 ; Ethics, Law and the Politics of Information (978-94-024-1150-8) ; 978-94-024-1150-8 ; >
-      au < released ; exists ; 978-94-6265-074-9 ; 978-94-6265-075-6 ; 2016 ; Nuclear Non-Proliferation in International Law (978-94-6265-075-6) ; 978-94-6265-075-6 ; >
-      au < released ; exists ; 978-94-6265-086-2 ; 978-94-6265-088-6 ; 2016 ; Fundamental rights in international and European law : public and private law perspectives (978-94-6265-088-6) ; 978-94-6265-088-6 ; >
-      au < released ; exists ; 978-94-6265-131-9 ; 978-94-6265-132-6 ; 2016 ; Future of Drone Use (978-94-6265-132-6) ; 978-94-6265-132-6 ; >
-      au < released ; exists ; 978-94-6265-137-1 ; 978-94-6265-138-8 ; 2016 ; Nuclear Non-Proliferation in International Law - Volume III (978-94-6265-138-8) ; 978-94-6265-138-8 ; >
-      au < released ; exists ; 978-94-6265-140-1 ; 978-94-6265-141-8 ; 2016 ; Yearbook of International Humanitarian Law Volume 18, 2015 (978-94-6265-141-8) ; 978-94-6265-141-8 ; >
-      au < released ; exists ; 978-94-6265-149-4 ; 978-94-6265-150-0 ; 2017 ; African Criminal Court (978-94-6265-150-0) ; 978-94-6265-150-0 ; >
-      au < released ; exists ; 978-94-6265-158-6 ; 978-94-6265-159-3 ; 2017 ; Employment and Labour Relations Law in the Premier League, NBA and International Rugby Union (978-94-6265-159-3) ; 978-94-6265-159-3 ; >
-      au < released ; exists ;  ; 978-94-6300-956-0 ; 2017 ; Regionalization of African Higher Education (978-94-6300-956-0) ; 978-94-6300-956-0 ; >
-      au < released ; exists ;  ; 978-94-6351-050-9 ; 2017 ; Food Leadership (978-94-6351-050-9) ; 978-94-6351-050-9 ; >
-      au < released ; exists ;  ; 978-94-6351-161-2 ; 2017 ; Understanding Higher Education Internationalization (978-94-6351-161-2) ; 978-94-6351-161-2 ; >
-      au < released ; exists ; 978-981-10-0459-9 ; 978-981-10-0461-2 ; 2016 ; Ecological Economics and Harmonious Society (978-981-10-0461-2) ; 978-981-10-0461-2 ; >
-      au < released ; exists ; 978-981-10-1144-3 ; 978-981-10-1145-0 ; 2017 ; China-EU Relations (978-981-10-1145-0) ; 978-981-10-1145-0 ; >
-      au < released ; exists ; 978-981-10-2286-9 ; 978-981-10-2287-6 ; 2017 ; Development of Eco Cities in China (978-981-10-2287-6) ; 978-981-10-2287-6 ; >
-      au < released ; exists ; 978-981-10-2439-9 ; 978-981-10-2440-5 ; 2017 ; Green Fashion Retail (978-981-10-2440-5) ; 978-981-10-2440-5 ; >
-      au < released ; exists ; 978-981-10-2965-3 ; 978-981-10-2966-0 ; 2017 ; Contemporary Chinese Films and Celebrity Directors (978-981-10-2966-0) ; 978-981-10-2966-0 ; >
-      au < released ; exists ; 978-981-10-3622-4 ; 978-981-10-3623-1 ; 2017 ; Comparative Study of Funding Shareholder Litigation (978-981-10-3623-1) ; 978-981-10-3623-1 ; >
-      au < released ; exists ; 978-981-10-3703-0 ; 978-981-10-3704-7 ; 2017 ; Studies on China's Special Economic Zones (978-981-10-3704-7) ; 978-981-10-3704-7 ; >
-      au < released ; exists ; 978-981-10-3910-2 ; 978-981-10-3911-9 ; 2017 ; Corporate Governance in China (978-981-10-3911-9) ; 978-981-10-3911-9 ; >
-      au < released ; exists ; 978-981-10-3983-6 ; 978-981-10-3984-3 ; 2017 ; Copyright Law in the Digital World (978-981-10-3984-3) ; 978-981-10-3984-3 ; >
-      au < released ; exists ; 978-981-10-4055-9 ; 978-981-10-4056-6 ; 2017 ; Advances in Cultural Linguistics (978-981-10-4056-6) ; 978-981-10-4056-6 ; >
-      au < released ; exists ; 978-981-10-4644-5 ; 978-981-10-4645-2 ; 2017 ; English As a Medium of Instruction in Higher Education (978-981-10-4645-2) ; 978-981-10-4645-2 ; >
-      au < released ; exists ; 978-981-10-5298-9 ; 978-981-10-5299-6 ; 2017 ; Re-emerging Russia (978-981-10-5299-6) ; 978-981-10-5299-6 ; >
-      au < released ; exists ; 978-981-10-5881-3 ; 978-981-10-5882-0 ; 2017 ; Asia's Changing International Investment Regime (978-981-10-5882-0) ; 978-981-10-5882-0 ; >
-      au < released ; exists ; 978-981-10-6865-2 ; 978-981-10-6866-9 ; 2017 ; Treaty Interpretation Under the Vienna Convention on the Law of Treaties (978-981-10-6866-9) ; 978-981-10-6866-9 ; >
-      au < released ; exists ; 978-981-287-932-5 ; 978-981-287-934-9 ; 2016 ; Generation Z (978-981-287-934-9) ; 978-981-287-934-9 ; >
-      au < released ; exists ; 978-981-287-965-3 ; 978-981-287-967-7 ; 2016 ; Quadrilingual Education in Singapore (978-981-287-967-7) ; 978-981-287-967-7 ; >
+      au < down ; exists ; 978-3-319-32584-2 ; 978-3-319-32585-9 ; 2016 ; 'Ndrangheta (978-3-319-32585-9) ; 978-3-319-32585-9 ; >
+      au < down ; exists ; 978-3-319-28408-8 ; 978-3-319-28410-1 ; 2016 ; The Dematerialized Insurance (978-3-319-28410-1) ; 978-3-319-28410-1 ; >
+      au < down ; exists ; 978-3-319-47646-9 ; 978-3-319-47647-6 ; 2016 ; 3D Research Challenges in Cultural Heritage II (978-3-319-47647-6) ; 978-3-319-47647-6 ; >
+      au < down ; exists ; 978-3-658-14366-4 ; 978-3-658-14367-1 ; 2016 ; Achieving Brand Loyalty in China through After-Sales Services (978-3-658-14367-1) ; 978-3-658-14367-1 ; >
+      au < down ; exists ; 978-3-319-53467-1 ; 978-3-319-53469-5 ; 2017 ; Advanced Methods for Modeling Markets (978-3-319-53469-5) ; 978-3-319-53469-5 ; >
+      au < down ; exists ; 978-3-319-60746-7 ; 978-3-319-60747-4 ; 2018 ; Advances in Cross-Cultural Decision Making (978-3-319-60747-4) ; 978-3-319-60747-4 ; >
+      au < down ; exists ; 978-3-319-41955-8 ; 978-3-319-41956-5 ; 2017 ; Advances in Human Factors and System Interactions (978-3-319-41956-5) ; 978-3-319-41956-5 ; >
+      au < down ; exists ; 978-3-319-56607-8 ; 978-3-319-56608-5 ; 2017 ; Advances in Information Retrieval (978-3-319-56608-5) ; 978-3-319-56608-5 ; >
+      au < down ; exists ; 978-1-4939-6567-0 ; 978-1-4939-6568-7 ; 2016 ; Advances in Time Series Methods and Applications  (978-1-4939-6568-7) ; 978-1-4939-6568-7 ; >
+      au < down ; exists ; 978-3-319-32281-0 ; 978-3-319-32283-4 ; 2017 ; Agent-Based Modelling in Population Studies (978-3-319-32283-4) ; 978-3-319-32283-4 ; >
+      au < down ; exists ; 978-981-10-1012-5 ; 978-981-10-1014-9 ; 2016 ; Analytical Modeling Research in Fashion Business (978-981-10-1014-9) ; 978-981-10-1014-9 ; >
+      au < down ; exists ; 978-3-319-24239-2 ; 978-3-319-24241-5 ; 2016 ; Art Wealth Management (978-3-319-24241-5) ; 978-3-319-24241-5 ; >
+      au < down ; exists ; 978-1-137-48879-4 ; 978-1-137-48880-0 ; 2016 ; Artificial Intelligence in Financial Markets (978-1-137-48880-0) ; 978-1-137-48880-0 ; >
+      au < down ; exists ; 978-3-319-40327-4 ; 978-3-319-40328-1 ; 2017 ; Assessing the Economic Impact of Tourism (978-3-319-40328-1) ; 978-3-319-40328-1 ; >
+      au < down ; exists ; 978-3-319-30700-8 ; 978-3-319-30701-5 ; 2016 ; Bank Funding, Financial Instruments and Decision-Making in the Banking Industry (978-3-319-30701-5) ; 978-3-319-30701-5 ; >
+      au < down ; exists ; 978-3-319-42446-0 ; 978-3-319-42448-4 ; 2016 ; Banking Beyond Banks and Money (978-3-319-42448-4) ; 978-3-319-42448-4 ; >
+      au < down ; exists ; 978-1-349-55414-0 ; 978-0-230-37142-2 ; 2016 ; Banking in Portugal (978-0-230-37142-2) ; 978-0-230-37142-2 ; >
+      au < down ; exists ; 978-4-431-55401-1 ; 978-4-431-55402-8 ; 2016 ; Behavioral Economics of Preferences, Choices, and Happiness (978-4-431-55402-8) ; 978-4-431-55402-8 ; >
+      au < down ; exists ; 978-1-349-55435-5 ; 978-1-137-50642-9 ; 2016 ; Beyond Bitcoin (978-1-137-50642-9) ; 978-1-137-50642-9 ; >
+      au < down ; exists ; 978-3-319-54141-9 ; 978-3-319-54142-6 ; 2017 ; Beyond Bureaucracy (978-3-319-54142-6) ; 978-3-319-54142-6 ; >
+      au < down ; exists ; 978-81-322-3626-9 ; 978-81-322-3628-3 ; 2016 ; Big Data Analytics (978-81-322-3628-3) ; 978-81-322-3628-3 ; >
+      au < down ; exists ; 978-3-319-30263-8 ; 978-3-319-30265-2 ; 2016 ; Big Data Optimization: Recent Developments and Challenges (978-3-319-30265-2) ; 978-3-319-30265-2 ; >
+      au < down ; exists ; 978-1-137-57511-1 ; 978-1-137-57512-8 ; 2016 ; Bitcoin and Mobile Payments  (978-1-137-57512-8) ; 978-1-137-57512-8 ; >
+      au < down ; exists ; 978-1-137-59087-9 ; 978-1-137-58650-6 ; 2016 ; Black Nationalist Thought in South Africa (978-1-137-58650-6) ; 978-1-137-58650-6 ; >
+      au < down ; exists ; 978-1-137-60230-5 ; 978-1-137-60231-2 ; 2016 ; The Book of Payments (978-1-137-60231-2) ; 978-1-137-60231-2 ; >
+      au < down ; exists ; 978-3-319-53329-2 ; 978-3-319-53331-5 ; 2017 ; Boundaries within: Nation, Kinship and Identity among Migrants and Minorities (978-3-319-53331-5) ; 978-3-319-53331-5 ; >
+      au < down ; exists ; 978-3-319-48477-8 ; 978-3-319-48478-5 ; 2017 ; Business Innovation Through Blockchain (978-3-319-48478-5) ; 978-3-319-48478-5 ; >
+      au < down ; exists ; 978-981-10-1078-1 ; 978-981-10-1079-8 ; 2016 ; Business Trends in the Digital Era (978-981-10-1079-8) ; 978-981-10-1079-8 ; >
+      au < down ; exists ; 978-3-319-43689-0 ; 978-3-319-43690-6 ; 2016 ; The Challenge of the Digital Economy (978-3-319-43690-6) ; 978-3-319-43690-6 ; >
+      au < down ; exists ; 978-3-319-40450-9 ; 978-3-319-40451-6 ; 2017 ; China's Financial System (978-3-319-40451-6) ; 978-3-319-40451-6 ; >
+      au < down ; exists ; 978-1-137-43280-3 ; 978-1-137-43281-0 ; 2016 ; Commodity Market Trading and Investment (978-1-137-43281-0) ; 978-1-137-43281-0 ; >
+      au < down ; exists ; 978-3-319-44632-5 ; 978-3-319-44633-2 ; 2016 ; Competition Law Compliance Programmes (978-3-319-44633-2) ; 978-3-319-44633-2 ; >
+      au < down ; exists ; 978-3-319-30947-7 ; 978-3-319-30948-4 ; 2016 ; Competition Law Enforcement in the BRICS and in Developing Countries (978-3-319-30948-4) ; 978-3-319-30948-4 ; >
+      au < down ; exists ; 978-3-319-50900-6 ; 978-3-319-50901-3 ; 2017 ; Complex Networks & Their Applications V (978-3-319-50901-3) ; 978-3-319-50901-3 ; >
+      au < down ; exists ; 978-3-658-16501-7 ; 978-3-658-16502-4 ; 2017 ; The Concept Industry 4.0  (978-3-658-16502-4) ; 978-3-658-16502-4 ; >
+      au < down ; exists ; 978-3-319-55972-8 ; 978-3-319-55973-5 ; 2017 ; Contemporary Organized Crime (978-3-319-55973-5) ; 978-3-319-55973-5 ; >
+      au < down ; exists ; 978-3-319-32965-9 ; 978-3-319-32967-3 ; 2016 ; The Conversational Interface (978-3-319-32967-3) ; 978-3-319-32967-3 ; >
+      au < down ; exists ; 978-1-137-60371-5 ; 978-1-137-55089-7 ; 2016 ; Corporate China 2.0 (978-1-137-55089-7) ; 978-1-137-55089-7 ; >
+      au < down ; exists ; 978-3-319-43563-3 ; 978-3-319-43564-0 ; 2017 ; Corporate Social Responsibility and Diversity Management (978-3-319-43564-0) ; 978-3-319-43564-0 ; >
+      au < down ; exists ; 978-3-319-50190-1 ; 978-3-319-50191-8 ; 2017 ; Corruption and Governance in Africa (978-3-319-50191-8) ; 978-3-319-50191-8 ; >
+      au < down ; exists ; 978-3-319-45595-2 ; 978-3-319-45596-9 ; 2017 ; Creating Marketing Magic and Innovative Future Marketing Trends (978-3-319-45596-9) ; 978-3-319-45596-9 ; >
+      au < down ; exists ; 978-3-658-12602-5 ; 978-3-658-12603-2 ; 2016 ; Creating Shared Value as Future Factor of Competition (978-3-658-12603-2) ; 978-3-658-12603-2 ; >
+      au < down ; exists ; 978-3-319-56495-1 ; 978-3-319-56497-5 ; 2017 ; Creative Industries in Europe (978-3-319-56497-5) ; 978-3-319-56497-5 ; >
+      au < down ; exists ; 978-3-319-28783-6 ; 978-3-319-28784-3 ; 2016 ; Credit Cooperative Institutions in European Countries (978-3-319-28784-3) ; 978-3-319-28784-3 ; >
+      au < down ; exists ; 978-3-319-57974-0 ; 978-3-319-57975-7 ; 2017 ; Credit Risk Management for Derivatives (978-3-319-57975-7) ; 978-3-319-57975-7 ; >
+      au < down ; exists ; 978-3-319-27791-2 ; 978-3-319-27793-6 ; 2017 ; Crime Prevention in the 21st Century (978-3-319-27793-6) ; 978-3-319-27793-6 ; >
+      au < down ; exists ; 978-1-137-51723-4 ; 978-1-137-51724-1 ; 2016 ; Criminology of Corruption (978-1-137-51724-1) ; 978-1-137-51724-1 ; >
+      au < down ; exists ; 978-1-137-56020-9 ; 978-1-137-56021-6 ; 2016 ; Crowdfunding for SMEs (978-1-137-56021-6) ; 978-1-137-56021-6 ; >
+      au < down ; exists ; 978-3-319-18016-8 ; 978-3-319-18017-5 ; 2016 ; Crowdfunding in Europe (978-3-319-18017-5) ; 978-3-319-18017-5 ; >
+      au < down ; exists ; 978-3-319-18695-5 ; 978-3-319-18696-2 ; 2016 ; Cultural Perspectives in a Global Marketplace (978-3-319-18696-2) ; 978-3-319-18696-2 ; >
+      au < down ; exists ; 978-3-319-61984-2 ; 978-3-319-61985-9 ; 2018 ; Customer Engagement Marketing (978-3-319-61985-9) ; 978-3-319-61985-9 ; >
+      au < down ; exists ; 978-1-349-94904-5 ; 978-1-349-94905-2 ; 2017 ; Customer experience management rebooted (978-1-349-94905-2) ; 978-1-349-94905-2 ; >
+      au < down ; exists ; 978-3-319-19937-5 ; 978-3-319-19938-2 ; 2016 ; Customer Value Generation in Banking (978-3-319-19938-2) ; 978-3-319-19938-2 ; >
+      au < down ; exists ; 978-3-319-54974-3 ; 978-3-319-54975-0 ; 2017 ; Cyberspace (978-3-319-54975-0) ; 978-3-319-54975-0 ; >
+      au < down ; exists ; 978-3-319-64470-7 ; 978-3-319-64471-4 ; 2017 ; Database and Expert Systems Applications (978-3-319-64471-4) ; 978-3-319-64471-4 ; >
+      au < down ; exists ; 978-3-319-46987-4 ; 978-3-319-46989-8 ; 2016 ; Descartes' Treatise on Man and its Reception (978-3-319-46989-8) ; 978-3-319-46989-8 ; >
+      au < down ; exists ; 978-3-319-58639-7 ; 978-3-319-58640-3 ; 2017 ; Design, User Experience, and Usability: Understanding Users and Contexts (978-3-319-58640-3) ; 978-3-319-58640-3 ; >
+      au < down ; exists ; 978-3-319-23278-2 ; 978-3-319-23279-9 ; 2016 ; Digital Futures, Digital Transformation (978-3-319-23279-9) ; 978-3-319-23279-9 ; >
+      au < down ; exists ; 978-1-349-55858-2 ; 978-1-137-55327-0 ; 2016 ; Digital Insurance (978-1-137-55327-0) ; 978-1-137-55327-0 ; >
+      au < down ; exists ; 978-3-319-49699-3 ; 978-3-319-49700-6 ; 2016 ; Digital Transformation and Global Society (978-3-319-49700-6) ; 978-3-319-49700-6 ; >
+      au < down ; exists ; 978-3-319-66944-1 ; 978-3-319-66945-8 ; 2017 ; Digital Transformation in Financial Services (978-3-319-66945-8) ; 978-3-319-66945-8 ; >
+      au < down ; exists ; 978-3-319-31823-3 ; 978-3-319-31824-0 ; 2017 ; The Drivers of Digital Transformation (978-3-319-31824-0) ; 978-3-319-31824-0 ; >
+      au < down ; exists ; 978-3-319-39885-3 ; 978-3-319-39887-7 ; 2016 ; Dynamic Modeling, Empirical Macroeconomics, and Finance (978-3-319-39887-7) ; 978-3-319-39887-7 ; >
+      au < down ; exists ; 978-981-10-2566-2 ; 978-981-10-2567-9 ; 2017 ; Economic Consequence Analysis of Disasters (978-981-10-2567-9) ; 978-981-10-2567-9 ; >
+      au < down ; exists ; 978-1-349-71716-3 ; 978-1-137-55525-0 ; 2016 ; The Economics of Immigration (978-1-137-55525-0) ; 978-1-137-55525-0 ; >
+      au < down ; exists ; 978-981-10-0091-1 ; 978-981-10-0092-8 ; 2017 ; The Economics of International Immigration (978-981-10-0092-8) ; 978-981-10-0092-8 ; >
+      au < down ; exists ; 978-1-137-55518-2 ; 978-1-137-55519-9 ; 2016 ; Economics of the Labour Market (978-1-137-55519-9) ; 978-1-137-55519-9 ; >
+      au < down ; exists ; 978-981-10-1015-6 ; 978-981-10-1017-0 ; 2016 ; Efficiency and Competitiveness of International Airlines (978-981-10-1017-0) ; 978-981-10-1017-0 ; >
+      au < down ; exists ; 978-3-319-46450-3 ; 978-3-319-46451-0 ; 2017 ; Efficiency in Sustainable Supply Chain (978-3-319-46451-0) ; 978-3-319-46451-0 ; >
+      au < down ; exists ; 978-3-319-52458-0 ; 978-3-319-52459-7 ; 2017 ; Electronic Word of Mouth (eWOM) in the Marketing Context (978-3-319-52459-7) ; 978-3-319-52459-7 ; >
+      au < down ; exists ; 978-3-319-43251-9 ; 978-3-319-43252-6 ; 2017 ; Elements of Nonlinear Time Series Analysis and Forecasting (978-3-319-43252-6) ; 978-3-319-43252-6 ; >
+      au < doNotProcess ; exists ; 978-1-4614-5689-6 ; 978-1-4614-5690-2 ; 2014 ; Encyclopedia of Criminology and Criminal Justice (978-1-4614-5690-2) ; 978-1-4614-5690-2 ; >      # no full book pdf
+      au < down ; exists ; 978-3-319-45846-5 ; 978-3-319-45848-9 ; 2017 ; Equity Markets in Transition (978-3-319-45848-9) ; 978-3-319-45848-9 ; >
+      au < down ; exists ; 978-3-319-45607-2 ; 978-3-319-45609-6 ; 2017 ; Ethics and Neuromarketing (978-3-319-45609-6) ; 978-3-319-45609-6 ; >
+      au < down ; exists ; 978-3-319-29214-4 ; 978-3-319-29215-1 ; 2016 ; European Yearbook of International Economic Law 2016 (978-3-319-29215-1) ; 978-3-319-29215-1 ; >
+      au < down ; exists ; 978-3-319-56924-6 ; 978-3-319-56925-3 ; 2017 ; Exploring Services Science (978-3-319-56925-3) ; 978-3-319-56925-3 ; >
+      au < down ; exists ; 978-3-319-28810-9 ; 978-3-319-28811-6 ; 2016 ; Extreme Inequalities in Contemporary Capitalism (978-3-319-28811-6) ; 978-3-319-28811-6 ; >
+      au < down ; exists ; 978-3-319-41182-8 ; 978-3-319-41183-5 ; 2017 ; Extreme Media and American Politics (978-3-319-41183-5) ; 978-3-319-41183-5 ; >
+      au < down ; exists ; 978-1-137-52336-5 ; 978-1-137-52337-2 ; 2016 ; Fashion Brand Internationalization (978-1-137-52337-2) ; 978-1-137-52337-2 ; >
+      au < down ; exists ; 978-1-137-52342-6 ; 978-1-137-52343-3 ; 2017 ; Fashion Branding and Communication (978-1-137-52343-3) ; 978-1-137-52343-3 ; >
+      au < down ; exists ; 978-3-658-17837-6 ; 978-3-658-17838-3 ; 2017 ; Fighting Corruption Collectively (978-3-658-17838-3) ; 978-3-658-17838-3 ; >
+      au < down ; exists ; 978-1-349-95084-3 ; 978-1-349-95085-0 ; 2016 ; Fighting Environmental Crime in Europe and Beyond (978-1-349-95085-0) ; 978-1-349-95085-0 ; >
+      au < down ; exists ; 978-3-319-41218-4 ; 978-3-319-41219-1 ; 2016 ; Financial Liberalisation (978-3-319-41219-1) ; 978-3-319-41219-1 ; >
+      au < down ; exists ; 978-3-319-53567-8 ; 978-3-319-53568-5 ; 2017 ; From Mafia to Organised Crime (978-3-319-53568-5) ; 978-3-319-53568-5 ; >
+      au < down ; exists ; 978-3-319-51414-7 ; 978-3-319-51415-4 ; 2017 ; The Future of FinTech (978-3-319-51415-4) ; 978-3-319-51415-4 ; >
+      au < down ; exists ; 978-3-319-29600-5 ; 978-3-319-29602-9 ; 2016 ; Gang Transitions and Transformations in an International Context (978-3-319-29602-9) ; 978-3-319-29602-9 ; >
+      au < down ; exists ; ; 978-94-6300-301-8 ; 2016 ; Global and Local Internationalization (978-94-6300-301-8) ; 978-94-6300-301-8 ; >
+      au < down ; exists ; 978-1-349-94993-9 ; 978-1-349-94994-6 ; 2017 ; Global Brand Strategy (978-1-349-94994-6) ; 978-1-349-94994-6 ; >
+      au < down ; exists ; 978-3-319-51063-7 ; 978-3-319-51064-4 ; 2016 ; Global Security, Safety and Sustainability - The Security Challenges of the Connected World (978-3-319-51064-4) ; 978-3-319-51064-4 ; >
+      au < down ; exists ; 978-3-319-28190-2 ; 978-3-319-28191-9 ; 2016 ; Globalisation and Higher Education Reforms (978-3-319-28191-9) ; 978-3-319-28191-9 ; >
+      au < down ; exists ; 978-1-4939-6413-0 ; 978-1-4939-6415-4 ; 2016 ; Google It (978-1-4939-6415-4) ; 978-1-4939-6415-4 ; >
+      au < down ; exists ; 978-981-10-0244-1 ; 978-981-10-0245-8 ; 2016 ; Green Fashion Volume 2 (978-981-10-0245-8) ; 978-981-10-0245-8 ; >
+      au < doNotProcess ; exists ; ; 978-3-642-40933-2 ; 2015 ; Handbook of Human Resources Management (978-3-642-40933-2) ; 978-3-642-40933-2 ; >    # no full book pdf
+      au < down ; exists ; 978-3-319-39260-8 ; 978-3-319-39261-5 ; 2016 ; Handbook of Ratings (978-3-319-39261-5) ; 978-3-319-39261-5 ; >
+      au < down ; exists ; 978-3-319-60572-2 ; 978-3-319-60573-9 ; 2017 ; Handbook of the Psychology of Self-Forgiveness (978-3-319-60573-9) ; 978-3-319-60573-9 ; >
+      au < down ; exists ; 978-3-319-47876-0 ; 978-3-319-47877-7 ; 2017 ; Handbook of Theory and Practice of Sustainable Development in Higher Education Volume 4 (978-3-319-47877-7) ; 978-3-319-47877-7 ; >
+      au < down ; exists ; 978-3-319-58761-5 ; 978-3-319-58763-9 ; 2017 ; The Happy Mind: Cognitive Contributions to Well-Being (978-3-319-58763-9) ; 978-3-319-58763-9 ; >
+      au < down ; exists ; 978-3-319-58480-5 ; 978-3-319-58481-2 ; 2017 ; HCI in Business, Government and Organizations. Interacting with Information Systems (978-3-319-58481-2) ; 978-3-319-58481-2 ; >
+      au < down ; exists ; 978-3-319-39395-7 ; 978-3-319-39396-4 ; 2016 ; HCI in Business, Government, and Organizations: eCommerce and Innovation (978-3-319-39396-4) ; 978-3-319-39396-4 ; >
+      au < down ; exists ; 978-1-349-88780-4 ; 978-1-137-58971-2 ; 2016 ; Hybrid Securities (978-1-137-58971-2) ; 978-1-137-58971-2 ; >
+      au < down ; exists ; 978-3-319-31606-2 ; 978-3-319-31608-6 ; 2016 ; Illegal Entrepreneurship, Organized Crime and Social Control (978-3-319-31608-6) ; 978-3-319-31608-6 ; >
+      au < down ; exists ; 978-1-4842-2046-7 ; 978-1-4842-2047-4 ; 2016 ; Industry 4.0 (978-1-4842-2047-4) ; 978-1-4842-2047-4 ; >
+      au < down ; exists ; 978-3-319-33445-5 ; 978-3-319-33446-2 ; 2016 ; Innovations in Derivatives Markets (978-3-319-33446-2) ; 978-3-319-33446-2 ; >
+      au < down ; exists ; 978-3-319-40699-2 ; 978-3-319-40700-5 ; 2016 ; Innovative Methods in Media and Communication Research (978-3-319-40700-5) ; 978-3-319-40700-5 ; >
+      au < down ; exists ; 978-3-319-44461-1 ; 978-3-319-44462-8 ; 2016 ; Innovative Start-Ups and the Distribution of Human Capital (978-3-319-44462-8) ; 978-3-319-44462-8 ; >
+      au < down ; exists ; 978-3-319-23095-5 ; 978-3-319-23096-2 ; 2016 ; Inter-group Relations and Migrant Integration in European Cities (978-3-319-23096-2) ; 978-3-319-23096-2 ; >
+      au < down ; exists ; 978-1-137-59142-5 ; 978-1-137-59143-2 ; 2016 ; International Mobility and Educational Desire (978-1-137-59143-2) ; 978-1-137-59143-2 ; >
+      au < down ; exists ; 978-3-319-42206-0 ; 978-3-319-42208-4 ; 2016 ; International Research on Education for Sustainable Development in Early Childhood (978-3-319-42208-4) ; 978-3-319-42208-4 ; >
+      au < down ; exists ; 978-3-319-50090-4 ; 978-3-319-50091-1 ; 2017 ; Introduction to Electronic Commerce and Social Commerce (978-3-319-50091-1) ; 978-3-319-50091-1 ; >
+      au < down ; exists ; 978-1-137-53428-6 ; 978-1-137-53430-9 ; 2016 ; The Intuitive Customer (978-1-137-53430-9) ; 978-1-137-53430-9 ; >
+      au < down ; exists ; 978-3-319-44786-5 ; 978-3-319-44787-2 ; 2017 ; Investment and Competitiveness in Africa (978-3-319-44787-2) ; 978-3-319-44787-2 ; >
+      au < down ; exists ; 978-3-319-30287-4 ; 978-3-319-30288-1 ; 2016 ; Irish Women Writers and the Modern Short Story (978-3-319-30288-1) ; 978-3-319-30288-1 ; >
+      au < down ; exists ; 978-1-349-36441-1 ; 978-0-230-28144-8 ; 2010 ; John Keats (978-0-230-28144-8) ; 978-0-230-28144-8 ; >
+      au < down ; exists ; 978-1-137-56203-6 ; 978-1-137-56204-3 ; 2017 ; Justinian's men : careers and relationships of Byzantine army officers, 518-610 (978-1-137-56204-3) ; 978-1-137-56204-3 ; >
+      au < down ; exists ; 978-3-662-45319-3 ; 978-3-662-45320-9 ; 2016 ; Labor Migration, EU Enlargement, and the Great Recession  (978-3-662-45320-9) ; 978-3-662-45320-9 ; >
+      au < down ; exists ; 978-0-230-30261-7 ; 978-1-137-57647-7 ; 2016 ; Language Policy and Language Planning (978-1-137-57647-7) ; 978-1-137-57647-7 ; >
+      au < down ; exists ; 978-3-319-02236-9 ; 978-3-319-02237-6 ; 2017 ; Human Rights in Language and STEM Education (978-3-319-02237-6) ; 978-3-319-02237-6 ; >
+      au < down ; exists ; 978-3-662-54816-5 ; 978-3-662-54817-2 ; 2017 ; Legal Dynamics of EU External Relations (978-3-662-54817-2) ; 978-3-662-54817-2 ; >
+      au < down ; exists ; 978-3-319-28595-5 ; 978-3-319-28596-2 ; 2016 ; Legal Risks in EU Law (978-3-319-28596-2) ; 978-3-319-28596-2 ; >
+      au < down ; exists ; 978-3-319-55250-7 ; 978-3-319-55252-1 ; 2017 ; Linear Regression (978-3-319-55252-1) ; 978-3-319-55252-1 ; >
+      au < down ; exists ; 978-1-137-54713-2 ; 978-1-137-54715-6 ; 2017 ; Luxury Brands in China and India (978-1-137-54715-6) ; 978-1-137-54715-6 ; >
+      au < down ; exists ; 978-981-10-2974-5 ; 978-981-10-2976-9 ; 2017 ; Luxury Fashion Retail Management (978-981-10-2976-9) ; 978-981-10-2976-9 ; >
+      au < down ; exists ; 978-3-319-32852-2 ; 978-3-319-32854-6 ; 2016 ; Macroeconomic Policy (978-3-319-32854-6) ; 978-3-319-32854-6 ; >
+      au < down ; exists ; 978-3-319-46426-8 ; 978-3-319-46427-5 ; 2017 ; Marketing Renewable Energy (978-3-319-46427-5) ; 978-3-319-46427-5 ; >
+      au < down ; exists ; 978-1-137-60125-4 ; 978-1-137-60126-1 ; 2016 ; Migration and Social Remittances in a Global Europe (978-1-137-60126-1) ; 978-1-137-60126-1 ; >
+      au < down ; exists ; 978-1-137-58801-2 ; 978-1-137-58802-9 ; 2017 ; Migration and the Search for Home (978-1-137-58802-9) ; 978-1-137-58802-9 ; >
+      au < down ; exists ; 978-3-319-31151-7 ; 978-3-319-29595-4 ; 2016 ; A New Chapter in US-Cuba Relations (978-3-319-29595-4) ; 978-3-319-29595-4 ; >
+      au < down ; exists ; 978-3-319-41726-4 ; 978-3-319-41727-1 ; 2017 ; New Luxury Management (978-3-319-41727-1) ; 978-3-319-41727-1 ; >
+      au < down ; exists ; 978-3-319-40363-2 ; 978-3-319-40364-9 ; 2016 ; The New Music Industries (978-3-319-40364-9) ; 978-3-319-40364-9 ; >
+      au < down ; exists ; 978-981-10-5037-4 ; 978-981-10-5038-1 ; 2017 ; New Technology, Big Data and the Law  (978-981-10-5038-1) ; 978-981-10-5038-1 ; >
+      au < down ; exists ; 978-3-319-50312-7 ; 978-3-319-50313-4 ; 2017 ; Non-Performing Loans and Resolving Private Sector Insolvency (978-3-319-50313-4) ; 978-3-319-50313-4 ; >
+      au < down ; exists ; 978-3-319-24824-0 ; 978-3-319-24826-4 ; 2016 ; Online Brand Communities (978-3-319-24826-4) ; 978-3-319-24826-4 ; >
+      au < down ; exists ; 978-1-349-95117-8 ; 978-1-349-95118-5 ; 2016 ; Parole and Beyond (978-1-349-95118-5) ; 978-1-349-95118-5 ; >
+      au < down ; exists ;  ; 978-94-6300-983-6 ; 2017 ; Pedagogic Frailty and Resilience in the University (978-94-6300-983-6) ; 978-94-6300-983-6 ; >
+      au < down ; exists ; 978-1-137-58798-5 ; 978-1-137-58799-2 ; 2017 ; The Politics of Women and Migration in the Global South (978-1-137-58799-2) ; 978-1-137-58799-2 ; >
+      au < down ; exists ; 978-981-10-2542-6 ; 978-981-10-2543-3 ; 2017 ; Predictive Data Mining Models (978-981-10-2543-3) ; 978-981-10-2543-3 ; >
+      au < down ; exists ; 978-3-319-51348-5 ; 978-3-319-51349-2 ; 2017 ; Problem Behavior Theory and Adolescent Health  (978-3-319-51349-2) ; 978-3-319-51349-2 ; >
+      au < down ; exists ; 978-3-319-25021-2 ; 978-3-319-25023-6 ; 2016 ; Programmatic Advertising (978-3-319-25023-6) ; 978-3-319-25023-6 ; >
+      au < down ; exists ; 978-3-319-28309-8 ; 978-3-319-28310-4 ; 2016 ; Real Options Illustrated (978-3-319-28310-4) ; 978-3-319-28310-4 ; >
+      au < down ; exists ; 978-3-319-29876-4 ; 978-3-319-29877-1 ; 2016 ; Rediscovering the Essentiality of Marketing (978-3-319-29877-1) ; 978-3-319-29877-1 ; >
+      au < down ; exists ; 978-4-431-55620-6 ; 978-4-431-55621-3 ; 2016 ; Regional Free Trade Areas and Strategic Trade Policies (978-4-431-55621-3) ; 978-4-431-55621-3 ; >
+      au < down ; exists ; 978-1-137-27025-2 ; 978-1-137-27026-9 ; 2017 ; Religious Minorities in Turkey (978-1-137-27026-9) ; 978-1-137-27026-9 ; >
+      au < down ; exists ; 978-3-319-40203-1 ; 978-3-319-40204-8 ; 2016 ; Restructuring and Innovation in Banking (978-3-319-40204-8) ; 978-3-319-40204-8 ; >
+      au < down ; exists ; 978-3-319-22125-0 ; 978-3-319-22126-7 ; 2016 ; Risk Analysis of Natural Hazards (978-3-319-22126-7) ; 978-3-319-22126-7 ; >
+      au < down ; exists ; 978-3-319-55184-5 ; 978-3-319-55186-9 ; 2017 ; Rule of Law, Human Rights and Judicial Control of Power  (978-3-319-55186-9) ; 978-3-319-55186-9 ; >
+      au < down ; exists ; 978-3-642-30283-1 ; 978-3-642-30284-8 ; 2012 ; The Semantic Web: Research and Applications (978-3-642-30284-8) ; 978-3-642-30284-8 ; >
+      au < down ; exists ; 978-3-319-33025-9 ; 978-3-319-33026-6 ; 2016 ; Shadow Banking (978-3-319-33026-6) ; 978-3-319-33026-6 ; >
+      au < down ; exists ; 978-981-10-2995-0 ; 978-981-10-2996-7 ; 2017 ; Shadow Banking and the Rise of Capitalism in China (978-981-10-2996-7) ; 978-981-10-2996-7 ; >
+      au < down ; exists ; 978-1-349-57812-2 ; 978-1-137-49613-3 ; 2016 ; The Shadow Banking System (978-1-137-49613-3) ; 978-1-137-49613-3 ; >
+      au < down ; exists ; 978-3-319-47873-9 ; 978-3-319-47874-6 ; 2016 ; Social Informatics (978-3-319-47874-6) ; 978-3-319-47874-6 ; >
+      au < down ; exists ; 978-3-319-29987-7 ; 978-3-319-29989-1 ; 2016 ; Social Media in Employee Selection and Recruitment (978-3-319-29989-1) ; 978-3-319-29989-1 ; >
+      au < down ; exists ; 978-3-642-41478-7 ; 978-3-642-41479-4 ; 2013 ; Strategy and Communication for Innovation (978-3-642-41479-4) ; 978-3-642-41479-4 ; >
+      au < down ; exists ; 978-3-319-32962-8 ; 978-3-319-32963-5 ; 2016 ; Strategy and Game Theory (978-3-319-32963-5) ; 978-3-319-32963-5 ; >
+      au < down ; exists ; 978-3-319-51252-5 ; 978-3-319-51253-2 ; 2017 ; Sustainability in Fashion (978-3-319-51253-2) ; 978-3-319-51253-2 ; >
+      au < down ; exists ; 978-981-10-0469-8 ; 978-981-10-0471-1 ; 2017 ; Sustainability Through Innovation in Product Life Cycle Design (978-981-10-0471-1) ; 978-981-10-0471-1 ; >
+      au < down ; exists ; 978-981-10-2916-5 ; 978-981-10-2917-2 ; 2017 ; Sustainable Management of Luxury (978-981-10-2917-2) ; 978-981-10-2917-2 ; >
+      au < down ; exists ; 978-3-319-24146-3 ; 978-3-319-24148-7 ; 2016 ; Thriving in a New World Economy (978-3-319-24148-7) ; 978-3-319-24148-7 ; >
+      au < down ; exists ; 978-3-319-32861-4 ; 978-3-319-32862-1 ; 2016 ; Time Series Econometrics (978-3-319-32862-1) ; 978-3-319-32862-1 ; >
+      au < down ; exists ; 978-3-319-56572-9 ; 978-3-319-56574-3 ; 2017 ; Treatment of Foreign Law - Dynamics towards Convergence? (978-3-319-56574-3) ; 978-3-319-56574-3 ; >
+      au < down ; exists ; 978-3-319-52702-4 ; 978-3-319-52703-1 ; 2017 ; Using Open Data to Detect Organized Crime Threats (978-3-319-52703-1) ; 978-3-319-52703-1 ; >
+      au < down ; exists ; 978-3-319-51303-4 ; 978-3-319-51304-1 ; 2017 ; Using Transparency Against Corruption in Public Procurement (978-3-319-51304-1) ; 978-3-319-51304-1 ; >
+      au < down ; exists ; 978-1-137-39431-6 ; 978-1-137-38721-9 ; 2017 ; Vintage Marketing Differentiation (978-1-137-38721-9) ; 978-1-137-38721-9 ; >
+      au < down ; exists ; 978-1-137-57227-1 ; 978-1-137-57228-8 ; 2016 ; What is to be done about crime and punishment (978-1-137-57228-8) ; 978-1-137-57228-8 ; >
+      au < down ; exists ; 978-3-319-18856-0 ; 978-3-319-18857-7 ; 2016 ; Wine and Tourism (978-3-319-18857-7) ; 978-3-319-18857-7 ; >
+      au < down ; exists ; 978-3-319-46887-7 ; 978-3-319-46889-1 ; 2017 ; Africa's Population: In Search of a Demographic Dividend (978-3-319-46889-1) ; 978-3-319-46889-1 ; >
+      au < down ; exists ; 978-3-319-49817-1 ; 978-3-319-49818-8 ; 2017 ; Regional Upgrading in Southern Europe (978-3-319-49818-8) ; 978-3-319-49818-8 ; >
+      au < down ; exists ; 978-0-230-29097-6 ; 978-1-137-31501-4 ; 2016 ; Translating international women's rights : the CEDAW convention in context (978-1-137-31501-4) ; 978-1-137-31501-4 ; >
+      au < down ; exists ; 978-1-137-27308-6 ; 978-1-137-27309-3 ; 2016 ; Living on the edge : Iran and the practice of nuclear hedging (978-1-137-27309-3) ; 978-1-137-27309-3 ; >
+      au < down ; exists ; 978-1-137-39861-1 ; 978-1-137-43543-9 ; 2017 ; Public Culture, Cultural Identity, Cultural Policy (978-1-137-43543-9) ; 978-1-137-43543-9 ; >
+      au < down ; exists ; 978-1-137-43695-5 ; 978-1-137-43696-2 ; 2016 ; validation of risk models : a handbook for practitioners (978-1-137-43696-2) ; 978-1-137-43696-2 ; >
+      au < down ; exists ; 978-1-137-44253-6 ; 978-1-137-44254-3 ; 2018 ; Palgrave Handbook of Political Economy (978-1-137-44254-3) ; 978-1-137-44254-3 ; >
+      au < down ; exists ; 978-1-137-45316-7 ; 978-1-137-45317-4 ; 2017 ; Active citizenship in Europe : practices and demands in the EU, Italy, Turkey, and the UK (978-1-137-45317-4) ; 978-1-137-45317-4 ; >
+      au < down ; exists ; 978-1-137-46580-1 ; 978-1-137-46581-8 ; 2016 ; Foreign Office, commerce and British foreign policy in the twentieth century (978-1-137-46581-8) ; 978-1-137-46581-8 ; >
+      au < down ; exists ; 978-1-137-47181-9 ; 978-1-137-47182-6 ; 2017 ; revised European neighbourhood policy : continuity and change in EU foreign policy (978-1-137-47182-6) ; 978-1-137-47182-6 ; >
+      au < down ; exists ; 978-1-137-47918-1 ; 978-1-137-47919-8 ; 2016 ; Virtual workers and the global labour market (978-1-137-47919-8) ; 978-1-137-47919-8 ; >
+      au < down ; exists ; 978-1-137-48864-0 ; 978-1-137-48865-7 ; 2017 ; Digital Citizenship and Political Engagement : The Challenge from Online Campaigning and Advocacy Organisations (978-1-137-48865-7) ; 978-1-137-48865-7 ; >
+      au < down ; exists ; 978-1-137-49117-6 ; 978-1-137-48874-9 ; 2016 ; Politics of EU-China economic relations : an uneasy partnership (978-1-137-48874-9) ; 978-1-137-48874-9 ; >
+      au < down ; exists ; 978-1-137-50883-6 ; 978-1-137-50884-3 ; 2017 ; Governing Arctic change : global perspectives (978-1-137-50884-3) ; 978-1-137-50884-3 ; >
+      au < down ; exists ; 978-1-137-52097-5 ; 978-1-137-52099-9 ; 2016 ; Family Life in an Age of Migration and Mobility (978-1-137-52099-9) ; 978-1-137-52099-9 ; >
+      au < down ; exists ; 978-1-137-52320-4 ; 978-1-137-52321-1 ; 2017 ; Media and Global Climate Knowledge (978-1-137-52321-1) ; 978-1-137-52321-1 ; >
+      au < down ; exists ; 978-1-137-52486-7 ; 978-1-137-52487-4 ; 2016 ; girl's education : schooling and the formation of gender, identities, and future visions (978-1-137-52487-4) ; 978-1-137-52487-4 ; >
+      au < down ; exists ; 978-1-137-52691-5 ; 978-1-137-52692-2 ; 2016 ; Epistemology (978-1-137-52692-2) ; 978-1-137-52692-2 ; >
+      au < down ; exists ; 978-1-137-53379-1 ; 978-1-137-53380-7 ; 2017 ; morality of drone warfare and the politics of regulation (978-1-137-53380-7) ; 978-1-137-53380-7 ; >
+      au < down ; exists ; 978-1-137-53945-8 ; 978-1-137-53946-5 ; 2016 ; Marsilio Ficino and His World (978-1-137-53946-5) ; 978-1-137-53946-5 ; >
+      au < down ; exists ; 978-1-137-53968-7 ; 978-1-137-53969-4 ; 2017 ; South-South cooperation beyond the myths : rising donors, new aid practices? (978-1-137-53969-4) ; 978-1-137-53969-4 ; >
+      au < down ; exists ; 978-1-137-55255-6 ; 978-1-137-55256-3 ; 2017 ; Lobbying in Europe : public affairs and the lobbying industry in 28 EU countries (978-1-137-55256-3) ; 978-1-137-55256-3 ; >
+      au < down ; exists ; 978-1-137-55356-0 ; 978-1-137-55357-7 ; 2016 ; fragmentation of aid : concepts, measurements and implications for development cooperation (978-1-137-55357-7) ; 978-1-137-55357-7 ; >
+      au < down ; exists ; 978-1-137-55797-1 ; 978-1-137-55798-8 ; 2016 ; language of cosmetics advertising (978-1-137-55798-8) ; 978-1-137-55798-8 ; >
+      au < down ; exists ; 978-1-137-56237-1 ; 978-1-137-56238-8 ; 2016 ; Political economy of Disney : the cultural capitalism of Hollywood (978-1-137-56238-8) ; 978-1-137-56238-8 ; >
+      au < down ; exists ; 978-1-137-56592-1 ; 978-1-137-56593-8 ; 2017 ; Homosexuality and Italian cinema : from the fall of Fascism to the years of lead (978-1-137-56593-8) ; 978-1-137-56593-8 ; >
+      au < down ; exists ; 978-1-137-56735-2 ; 978-1-137-56736-9 ; 2017 ; brief history of international criminal law and International Criminal Court (978-1-137-56736-9) ; 978-1-137-56736-9 ; >
+      au < down ; exists ; 978-1-137-56951-6 ; 978-1-137-56952-3 ; 2017 ; Public-private partnerships : policy and governance challenges facing Kazakhstan and Russia (978-1-137-56952-3) ; 978-1-137-56952-3 ; >
+      au < down ; exists ; 978-1-137-57087-1 ; 978-1-137-57088-8 ; 2016 ; Fake meds online : the internet and the transnational market in illicit pharmaceuticals (978-1-137-57088-8) ; 978-1-137-57088-8 ; >
+      au < down ; exists ; 978-1-137-57097-0 ; 978-1-137-57098-7 ; 2017 ; Everyday nationhood : theorising culture, identity and belonging after Banal Nationalism (978-1-137-57098-7) ; 978-1-137-57098-7 ; >
+      au < down ; exists ; 978-1-137-57442-8 ; 978-1-137-57443-5 ; 2017 ; Before the Neoliberal Turn (978-1-137-57443-5) ; 978-1-137-57443-5 ; >
+      au < down ; exists ; 978-1-137-57689-7 ; 978-1-137-57690-3 ; 2017 ; Political economy of independent Ukraine : slow starts, false starts, and a last chance? (978-1-137-57690-3) ; 978-1-137-57690-3 ; >
+      au < down ; exists ; 978-1-137-58628-5 ; 978-1-137-58629-2 ; 2016 ; Intersections of religion and migration : issues at the global crossroads (978-1-137-58629-2) ; 978-1-137-58629-2 ; >
+      au < down ; exists ; 978-1-137-59000-8 ; 978-1-137-59001-5 ; 2016 ; Why the UK voted for Brexit : David Cameron's great miscalculation (978-1-137-59001-5) ; 978-1-137-59001-5 ; >
+      au < down ; exists ; 978-1-137-59105-0 ; 978-1-137-59104-3 ; 2017 ; Energy Union (978-1-137-59104-3) ; 978-1-137-59104-3 ; >
+      au < down ; exists ; 978-1-137-59723-6 ; 978-1-137-59724-3 ; 2017 ; NATO and the Western Balkans : from neutral spectator to proactive peacemaker (978-1-137-59724-3) ; 978-1-137-59724-3 ; >
+      au < down ; exists ; 978-1-137-59942-1 ; 978-1-137-59943-8 ; 2016 ; Constructing Methodology for Qualitative Research (978-1-137-59943-8) ; 978-1-137-59943-8 ; >
+      au < down ; exists ; 978-1-137-60026-4 ; 978-1-137-60027-1 ; 2017 ; Child insanity in England, 1845-1907 (978-1-137-60027-1) ; 978-1-137-60027-1 ; >
+      au < down ; exists ; 978-1-137-60161-2 ; 978-1-137-60018-9 ; 2017 ; Muslims, money, and democracy in Turkey : reluctant capitalists (978-1-137-60018-9) ; 978-1-137-60018-9 ; >
+      au < down ; exists ; 978-1-137-60377-7 ; 978-1-349-94915-1 ; 2016 ; Between Politics and Antipolitics (978-1-349-94915-1) ; 978-1-349-94915-1 ; >
+      au < down ; exists ; 978-1-349-55589-5 ; 978-1-137-51400-4 ; 2016 ; China, the European Union, and the international politics of global governance (978-1-137-51400-4) ; 978-1-137-51400-4 ; >
+      au < down ; exists ; 978-1-349-55824-7 ; 978-1-137-50867-6 ; 2016 ; Demystifying talent management : a critical approach to the realities of talent (978-1-137-50867-6) ; 978-1-137-50867-6 ; >
+      au < down ; exists ; 978-1-349-55851-3 ; 978-1-137-55871-8 ; 2016 ; Dickens, religion, and society (978-1-137-55871-8) ; 978-1-137-55871-8 ; >
+      au < down ; exists ; 978-1-349-56441-5 ; 978-1-137-50538-5 ; 2016 ; Japan’s Development Assistance (978-1-137-50538-5) ; 978-1-137-50538-5 ; >
+      au < down ; exists ; 978-1-349-56731-7 ; 978-1-137-45547-5 ; 2016 ; Napoleon’s Empire European Politics in Global Perspective (978-1-137-45547-5) ; 978-1-137-45547-5 ; >
+      au < down ; exists ; 978-1-349-56928-1 ; 978-1-137-48944-9 ; 2016 ; Politics and legitimacy in post-Soviet Eurasia (978-1-137-48944-9) ; 978-1-137-48944-9 ; >
+      au < down ; exists ; 978-1-349-57724-8 ; 978-1-137-49673-7 ; 2016 ; Political economy of climate change adaptation (978-1-137-49673-7) ; 978-1-137-49673-7 ; >
+      au < down ; exists ; 978-1-349-57917-4 ; 978-1-137-40185-4 ; 2016 ; Tourism Management, Marketing, and Development (978-1-137-40185-4) ; 978-1-137-40185-4 ; >
+      au < down ; exists ; 978-1-349-68068-9 ; 978-1-137-40534-0 ; 2016 ; Religion, gender and citizenship : women of faith, gender equality and feminism (978-1-137-40534-0) ; 978-1-137-40534-0 ; >
+      au < down ; exists ; 978-1-349-69803-5 ; 978-1-137-49760-4 ; 2016 ; 21st century perspectives on music, technology, and culture : listening spaces (978-1-137-49760-4) ; 978-1-137-49760-4 ; >
+      au < down ; exists ; 978-1-349-71343-1 ; 978-1-137-54425-4 ; 2016 ; Understanding consumer financial behavior : money management in an age of financial illiteracy (978-1-137-54425-4) ; 978-1-137-54425-4 ; >
+      au < down ; exists ; 978-1-349-84733-4 ; 978-1-137-57428-2 ; 2016 ; Media events : a critical contemporary approach (978-1-137-57428-2) ; 978-1-137-57428-2 ; >
+      au < down ; exists ; 978-1-349-88791-0 ; 978-1-137-59387-0 ; 2016 ; Asian Infrastructure Investment Bank: The Construction of Power and the Struggle for the East Asian International Order (978-1-137-59387-0) ; 978-1-137-59387-0 ; >
+      au < down ; exists ; 978-1-349-94884-0 ; 978-1-349-94885-7 ; 2016 ; Big Data Challenges (978-1-349-94885-7) ; 978-1-349-94885-7 ; >
+      au < down ; exists ; 978-1-349-94937-3 ; 978-1-349-94938-0 ; 2017 ; Partnerships in international policy-making : civil society and public institutions in European and global affairs (978-1-349-94938-0) ; 978-1-349-94938-0 ; >
+      au < down ; exists ; 978-1-349-95065-2 ; 978-1-137-60181-0 ; 2017 ; Between State and Non-State (978-1-137-60181-0) ; 978-1-137-60181-0 ; >
+      au < down ; exists ; 978-1-349-99536-3 ; 978-1-137-58939-2 ; 2016 ; Saudi Arabia and Iran : friends or foes (978-1-137-58939-2) ; 978-1-137-58939-2 ; >
+      au < down ; exists ; 978-1-349-99537-0 ; 978-1-137-58577-6 ; 2016 ; Iran in the world : President Rouhani's foreign policy (978-1-137-58577-6) ; 978-1-137-58577-6 ; >
+      au < down ; exists ; 978-1-4842-2390-1 ; 978-1-4842-2391-8 ; 2017 ; agile enterprise : building and running agile organizations (978-1-4842-2391-8) ; 978-1-4842-2391-8 ; >
+      au < down ; exists ; 978-3-319-06310-2 ; 978-3-319-06311-9 ; 2017 ; Educational Games for Soft-Skills Training in Digital Environments (978-3-319-06311-9) ; 978-3-319-06311-9 ; >
+      au < down ; exists ; 978-3-319-07541-9 ; 978-3-319-07542-6 ; 2016 ; International Food Law and Policy (978-3-319-07542-6) ; 978-3-319-07542-6 ; >
+      au < down ; exists ; 978-3-319-13164-1 ; 978-3-319-13165-8 ; 2016 ; Homicide in São Paulo (978-3-319-13165-8) ; 978-3-319-13165-8 ; >
+      au < down ; exists ; 978-3-319-19086-0 ; 978-3-319-19087-7 ; 2016 ; From Cold War to Cyber War The Evolution of the International Law of Peace and Armed Conflict over the last 25 Years (978-3-319-19087-7) ; 978-3-319-19087-7 ; >
+      au < down ; exists ; 978-3-319-21123-7 ; 978-3-319-21124-4 ; 2016 ; Edith Stein: Women, Social-Political Philosophy, Theology, Metaphysics and Public History (978-3-319-21124-4) ; 978-3-319-21124-4 ; >
+      au < down ; exists ; 978-3-319-21640-9 ; 978-3-319-21641-6 ; 2016 ; Key Initiatives in Corporate Social Responsibility (978-3-319-21641-6) ; 978-3-319-21641-6 ; >
+      au < down ; exists ; 978-3-319-23188-4 ; 978-3-319-23189-1 ; 2016 ; Rights of the Child in a Changing World (978-3-319-23189-1) ; 978-3-319-23189-1 ; >
+      au < down ; exists ; 978-3-319-23759-6 ; 978-3-319-23760-2 ; 2016 ; Drones and unmanned aerial systems : legal and social implications for security and surveillance (978-3-319-23760-2) ; 978-3-319-23760-2 ; >
+      au < down ; exists ; 978-3-319-24443-3 ; 978-3-319-24445-7 ; 2016 ; Migration in an Era of Restriction and Recession (978-3-319-24445-7) ; 978-3-319-24445-7 ; >
+      au < down ; exists ; 978-3-319-24881-3 ; 978-3-319-24883-7 ; 2016 ; Applications of the ""Fair Hearing"" norm in ECHR Article 6(1) to civil proceedings : with special emphasis on the balance between procedural safeguards and efficiency (978-3-319-24883-7) ; 978-3-319-24883-7 ; >
+      au < down ; exists ; 978-3-319-25550-7 ; 978-3-319-25552-1 ; 2016 ; Cyberbullying across the globe : gender, family, and mental health (978-3-319-25552-1) ; 978-3-319-25552-1 ; >
+      au < down ; exists ; 978-3-319-26092-1 ; 978-3-319-26094-5 ; 2016 ; English for Writing Research Papers (978-3-319-26094-5) ; 978-3-319-26094-5 ; >
+      au < down ; exists ; 978-3-319-26277-2 ; 978-3-319-26279-6 ; 2016 ; Global Marketing Strategy (978-3-319-26279-6) ; 978-3-319-26279-6 ; >
+      au < down ; exists ; 978-3-319-26328-1 ; 978-3-319-26330-4 ; 2016 ; English for Presentations at International Conferences (978-3-319-26330-4) ; 978-3-319-26330-4 ; >
+      au < down ; exists ; 978-3-319-27142-2 ; 978-3-319-27144-6 ; 2016 ; Arbitration and Contract Law (978-3-319-27144-6) ; 978-3-319-27144-6 ; >
+      au < down ; exists ; 978-3-319-27157-6 ; 978-3-319-27158-3 ; 2016 ; Compatibility of Transactional Resolutions of Antitrust Proceedings with Due Process and Fundamental Rights & Online Exhaustion of IP Rights (978-3-319-27158-3) ; 978-3-319-27158-3 ; >
+      au < down ; exists ; 978-3-319-28230-5 ; 978-3-319-28231-2 ; 2016 ; Information and Communication Technologies in Tourism 2016 (978-3-319-28231-2) ; 978-3-319-28231-2 ; >
+      au < down ; exists ; 978-3-319-29298-4 ; 978-3-319-29300-4 ; 2016 ; J. Michael Dunn on Information Based Logics (978-3-319-29300-4) ; 978-3-319-29300-4 ; >
+      au < down ; exists ; 978-3-319-29320-2 ; 978-3-319-29322-6 ; 2016 ; Legal Issues on Climate Change and International Trade Law (978-3-319-29322-6) ; 978-3-319-29322-6 ; >
+      au < down ; exists ; 978-3-319-29560-2 ; 978-3-319-29562-6 ; 2016 ; Nudging - Possibilities, Limitations and Applications in European Law and Economics (978-3-319-29562-6) ; 978-3-319-29562-6 ; >
+      au < down ; exists ; 978-3-319-29624-1 ; 978-3-319-29625-8 ; 2017 ; Understanding China Today (978-3-319-29625-8) ; 978-3-319-29625-8 ; >
+      au < down ; exists ; 978-3-319-30098-6 ; 978-3-319-30100-6 ; 2016 ; Resources for Teaching Mindfulness (978-3-319-30100-6) ; 978-3-319-30100-6 ; >
+      au < down ; exists ; 978-3-319-31234-7 ; 978-3-319-31235-4 ; 2016 ; Interventions in Learning Disabilities (978-3-319-31235-4) ; 978-3-319-31235-4 ; >
+      au < down ; exists ; 978-3-319-31543-0 ; 978-3-319-31545-4 ; 2016 ; Managing Software Process Evolution Traditional, Agile and Beyond – How to Handle Process Change (978-3-319-31545-4) ; 978-3-319-31545-4 ; >
+      au < down ; exists ; 978-3-319-31953-7 ; 978-3-319-31954-4 ; 2016 ; Researching Second Language Learning and Teaching from a Psycholinguistic Perspective (978-3-319-31954-4) ; 978-3-319-31954-4 ; >
+      au < down ; exists ; 978-3-319-32117-2 ; 978-3-319-32118-9 ; 2016 ; BBC and the Development of Anglophone Caribbean Literature, 1943-1958 (978-3-319-32118-9) ; 978-3-319-32118-9 ; >
+      au < down ; exists ; 978-3-319-32172-1 ; 978-3-319-32174-5 ; 2016 ; Regulating and Supervising European Financial Markets (978-3-319-32174-5) ; 978-3-319-32174-5 ; >
+      au < down ; exists ; 978-3-319-32529-3 ; 978-3-319-32530-9 ; 2016 ; Ukraine and Beyond (978-3-319-32530-9) ; 978-3-319-32530-9 ; >
+      au < down ; exists ; 978-3-319-32770-9 ; 978-3-319-32771-6 ; 2016 ; Individual Rights in EU Law (978-3-319-32771-6) ; 978-3-319-32771-6 ; >
+      au < down ; exists ; 978-3-319-33294-9 ; 978-3-319-33295-6 ; 2016 ; China’s New Foreign Policy (978-3-319-33295-6) ; 978-3-319-33295-6 ; >
+      au < down ; exists ; 978-3-319-33550-6 ; 978-3-319-33551-3 ; 2016 ; Social Emergence in International Relations (978-3-319-33551-3) ; 978-3-319-33551-3 ; >
+      au < down ; exists ; 978-3-319-33562-9 ; 978-3-319-33563-6 ; 2016 ; Refugees, Conflict and the Search for Belonging (978-3-319-33563-6) ; 978-3-319-33563-6 ; >
+      au < down ; exists ; 978-3-319-34089-0 ; 978-3-319-34090-6 ; 2016 ; European Union As Guardian of Internet Privacy (978-3-319-34090-6) ; 978-3-319-34090-6 ; >
+      au < down ; exists ; 978-3-319-34125-5 ; 978-3-319-34127-9 ; 2017 ; Research on E-Learning and ICT in Education (978-3-319-34127-9) ; 978-3-319-34127-9 ; >
+      au < down ; exists ; 978-3-319-35082-0 ; 978-3-319-35083-7 ; 2017 ; Corporate Social Responsibility (978-3-319-35083-7) ; 978-3-319-35083-7 ; >
+      au < down ; exists ; 978-3-319-35085-1 ; 978-3-319-35086-8 ; 2017 ; Dickens and the Virtual City (978-3-319-35086-8) ; 978-3-319-35086-8 ; >
+      au < down ; exists ; 978-3-319-39350-6 ; 978-3-319-39351-3 ; 2016 ; Human Rights and Religion in Educational Contexts (978-3-319-39351-3) ; 978-3-319-39351-3 ; >
+      au < down ; exists ; 978-3-319-39891-4 ; 978-3-319-39892-1 ; 2017 ; State Building and National Identity Reconstruction in the Horn of Africa (978-3-319-39892-1) ; 978-3-319-39892-1 ; >
+      au < down ; exists ; 978-3-319-39906-5 ; 978-3-319-39907-2 ; 2016 ; Virtual, Augmented and Mixed Reality 8th International Conference, VAMR 2016, Held as Part of HCI International 2016, Toronto, Canada, July 17-22, 2016. Proceedings (978-3-319-39907-2) ; 978-3-319-39907-2 ; >
+      au < down ; exists ; 978-3-319-40918-4 ; 978-3-319-40920-7 ; 2017 ; Parenting and Family Processes in Child Maltreatment and Intervention (978-3-319-40920-7) ; 978-3-319-40920-7 ; >
+      au < down ; exists ; 978-3-319-41365-5 ; 978-3-319-41366-2 ; 2017 ; Financial Risk Management (978-3-319-41366-2) ; 978-3-319-41366-2 ; >
+      au < down ; exists ; 978-3-319-42287-9 ; 978-3-319-42289-3 ; 2016 ; Family Law and Society in Europe From the Middle Ages to the Contemporary Era (978-3-319-42289-3) ; 978-3-319-42289-3 ; >
+      au < down ; exists ; 978-3-319-43134-5 ; 978-3-319-43135-2 ; 2016 ; Privacy and the American Constitution (978-3-319-43135-2) ; 978-3-319-43135-2 ; >
+      au < down ; exists ; 978-3-319-43200-7 ; 978-3-319-43201-4 ; 2017 ; Security Threats and Public Perception (978-3-319-43201-4) ; 978-3-319-43201-4 ; >
+      au < down ; exists ; 978-3-319-43288-5 ; 978-3-319-43289-2 ; 2017 ; Security and Bilateral Issues between Iran and its Arab Neighbours (978-3-319-43289-2) ; 978-3-319-43289-2 ; >
+      au < down ; exists ; 978-3-319-43945-7 ; 978-3-319-43946-4 ; 2016 ; Big Data Analytics and Knowledge Discovery 18th International Conference, DaWaK 2016, Porto, Portugal, September 6-8, 2016, Proceedings (978-3-319-43946-4) ; 978-3-319-43946-4 ; >
+      au < down ; exists ; 978-3-319-44286-0 ; 978-3-319-44287-7 ; 2017 ; Financial Regulation in the EU (978-3-319-44287-7) ; 978-3-319-44287-7 ; >
+      au < down ; exists ; 978-3-319-44375-1 ; 978-3-319-44377-5 ; 2017 ; Mutual Recognition of Judicial Decisions in European Criminal Law (978-3-319-44377-5) ; 978-3-319-44377-5 ; >
+      au < down ; exists ; 978-3-319-44644-8 ; 978-3-319-44645-5 ; 2017 ; International Economic Law (978-3-319-44645-5) ; 978-3-319-44645-5 ; >
+      au < down ; exists ; 978-3-319-45100-8 ; 978-3-319-45102-2 ; 2017 ; Media Exposure During Infancy and Early Childhood (978-3-319-45102-2) ; 978-3-319-45102-2 ; >
+      au < down ; exists ; 978-3-319-45233-3 ; 978-3-319-45234-0 ; 2016 ; Social Media: The Good, the Bad, and the Ugly 15th IFIP WG 6.11 Conference on e-Business, e-Services, and e-Society, I3E 2016, Swansea, UK, September 13–15, 2016, Proceedings (978-3-319-45234-0) ; 978-3-319-45234-0 ; >
+      au < down ; exists ; 978-3-319-45688-1 ; 978-3-319-45689-8 ; 2017 ; Shifting power in Asia-Pacific? : the rise of China, Sino-US competition and regional middle power allegiance (978-3-319-45689-8) ; 978-3-319-45689-8 ; >
+      au < down ; exists ; 978-3-319-46136-6 ; 978-3-319-46138-0 ; 2017 ; Evidence-based treatments for trauma-related disorders in children and adolescents (978-3-319-46138-0) ; 978-3-319-46138-0 ; >
+      au < down ; exists ; 978-3-319-46232-5 ; 978-3-319-46233-2 ; 2016 ; Aesthetics and neuroscience : scientific and artistic perspectives (978-3-319-46233-2) ; 978-3-319-46233-2 ; >
+      au < down ; exists ; 978-3-319-46899-0 ; 978-3-319-46900-3 ; 2017 ; Judgments of Love in Criminal Justice (978-3-319-46900-3) ; 978-3-319-46900-3 ; >
+      au < down ; exists ; 978-3-319-47258-4 ; 978-3-319-47259-1 ; 2017 ; Bad Girls and Transgressive Women in Popular Television, Fiction, and Film (978-3-319-47259-1) ; 978-3-319-47259-1 ; >
+      au < down ; exists ; 978-3-319-47529-5 ; 978-3-319-47530-1 ; 2017 ; EU, Promoting Regional Integration, and Conflict Resolution (978-3-319-47530-1) ; 978-3-319-47530-1 ; >
+      au < down ; exists ; 978-3-319-47562-2 ; 978-3-319-47563-9 ; 2017 ; Regional Integration Processes in the Commonwealth of Independent States (978-3-319-47563-9) ; 978-3-319-47563-9 ; >
+      au < down ; exists ; 978-3-319-47574-5 ; 978-3-319-47575-2 ; 2017 ; Dynamics of the Arab-Israel Conflict (978-3-319-47575-2) ; 978-3-319-47575-2 ; >
+      au < down ; exists ; 978-3-319-47670-4 ; 978-3-319-47671-1 ; 2016 ; Open Source Intelligence Investigation From Strategy to Implementation (978-3-319-47671-1) ; 978-3-319-47671-1 ; >
+      au < down ; exists ; 978-3-319-47867-8 ; 978-3-319-47868-5 ; 2017 ; Handbook of Theory and Practice of Sustainable Development in Higher Education Volume 1 (978-3-319-47868-5) ; 978-3-319-47868-5 ; >
+      au < down ; exists ; 978-3-319-47888-3 ; 978-3-319-47889-0 ; 2017 ; Handbook of Theory and Practice of Sustainable Development in Higher Education Volume 2 (978-3-319-47889-0) ; 978-3-319-47889-0 ; >
+      au < down ; exists ; 978-3-319-48444-0 ; 978-3-319-48445-7 ; 2017 ; Postcolonialism and Postsocialism in Fiction and Art (978-3-319-48445-7) ; 978-3-319-48445-7 ; >
+      au < down ; exists ; 978-3-319-48480-8 ; 978-3-319-48481-5 ; 2017 ; Whistleblowing in the World (978-3-319-48481-5) ; 978-3-319-48481-5 ; >
+      au < down ; exists ; 978-3-319-48495-2 ; 978-3-319-48496-9 ; 2016 ; Digital Heritage. Progress in Cultural Heritage: Documentation, Preservation, and Protection 6th International Conference, EuroMed 2016, Nicosia, Cyprus, October 31 – November 5, 2016, Proceedings, Part I (978-3-319-48496-9) ; 978-3-319-48496-9 ; >
+      au < down ; exists ; 978-3-319-48721-2 ; 978-3-319-48722-9 ; 2017 ; Reassessing the Role of Management in the Golden Age (978-3-319-48722-9) ; 978-3-319-48722-9 ; >
+      au < down ; exists ; 978-3-319-48733-5 ; 978-3-319-48734-2 ; 2017 ; Football and Supporter Activism in Europe (978-3-319-48734-2) ; 978-3-319-48734-2 ; >
+      au < down ; exists ; 978-3-319-48801-1 ; 978-3-319-48802-8 ; 2017 ; Creating Shared Value – Concepts, Experience, Criticism (978-3-319-48802-8) ; 978-3-319-48802-8 ; >
+      au < down ; exists ; 978-3-319-49075-5 ; 978-3-319-49077-9 ; 2017 ; Psychology of Digital Learning (978-3-319-49077-9) ; 978-3-319-49077-9 ; >
+      au < down ; exists ; 978-3-319-49333-6 ; 978-3-319-49334-3 ; 2017 ; Public Diplomacy and the Implementation of Foreign Policy in the US, Sweden and Turkey (978-3-319-49334-3) ; 978-3-319-49334-3 ; >
+      au < down ; exists ; 978-3-319-49585-9 ; 978-3-319-49586-6 ; 2016 ; Advanced Data Mining and Applications 12th International Conference, ADMA 2016, Gold Coast, QLD, Australia, December 12-15, 2016, Proceedings (978-3-319-49586-6) ; 978-3-319-49586-6 ; >
+      au < down ; exists ; 978-3-319-50913-6 ; 978-3-319-50915-0 ; 2017 ; Recognition and Enforcement of Foreign Arbitral Awards (978-3-319-50915-0) ; 978-3-319-50915-0 ; >
+      au < down ; exists ; 978-3-319-51057-6 ; 978-3-319-51058-3 ; 2017 ; Digital Storytelling in Higher Education (978-3-319-51058-3) ; 978-3-319-51058-3 ; >
+      au < down ; exists ; 978-3-319-51126-9 ; 978-3-319-51127-6 ; 2017 ; Advances in Luxury Brand Management (978-3-319-51127-6) ; 978-3-319-51127-6 ; >
+      au < down ; exists ; 978-3-319-51167-2 ; 978-3-319-51168-9 ; 2017 ; Information and Communication Technologies in Tourism 2017 (978-3-319-51168-9) ; 978-3-319-51168-9 ; >
+      au < down ; exists ; 978-3-319-51885-5 ; 978-3-319-51886-2 ; 2017 ; Engagement and Disengagement at Work (978-3-319-51886-2) ; 978-3-319-51886-2 ; >
+      au < down ; exists ; 978-3-319-53461-9 ; 978-3-319-53462-6 ; 2017 ; Legal Personhood: Animals, Artificial Intelligence and the Unborn (978-3-319-53462-6) ; 978-3-319-53462-6 ; >
+      au < down ; exists ; 978-3-319-53855-6 ; 978-3-319-53856-3 ; 2017 ; New Perspectives on Cybercrime (978-3-319-53856-3) ; 978-3-319-53856-3 ; >
+      au < down ; exists ; 978-3-319-54656-8 ; 978-3-319-54657-5 ; 2017 ; Public International Law of Cyberspace (978-3-319-54657-5) ; 978-3-319-54657-5 ; >
+      au < down ; exists ; 978-3-319-54887-6 ; 978-3-319-54888-3 ; 2017 ; Second Cold War (978-3-319-54888-3) ; 978-3-319-54888-3 ; >
+      au < down ; exists ; 978-3-319-55202-6 ; 978-3-319-55203-3 ; 2017 ; Extremism, Radicalization and Security (978-3-319-55203-3) ; 978-3-319-55203-3 ; >
+      au < down ; exists ; 978-3-319-55256-9 ; 978-3-319-55257-6 ; 2017 ; Russia and the European Union (978-3-319-55257-6) ; 978-3-319-55257-6 ; >
+      au < down ; exists ; 978-3-319-55494-5 ; 978-3-319-55495-2 ; 2017 ; Economics of UK-EU Relations (978-3-319-55495-2) ; 978-3-319-55495-2 ; >
+      au < down ; exists ; 978-3-319-56177-6 ; 978-3-319-50796-5 ; 2017 ; Data Protection and Privacy: (In)visibilities and Infrastructures (978-3-319-50796-5) ; 978-3-319-50796-5 ; >
+      au < down ; exists ; 978-3-319-56181-3 ; 978-3-319-56182-0 ; 2017 ; Dimensional Corporate Governance (978-3-319-56182-0) ; 978-3-319-56182-0 ; >
+      au < down ; exists ; 978-3-319-56341-1 ; 978-3-319-56342-8 ; 2017 ; Emigration and Diaspora Policies in the Age of Mobility (978-3-319-56342-8) ; 978-3-319-56342-8 ; >
+      au < down ; exists ; 978-3-319-56662-7 ; 978-3-319-56663-4 ; 2017 ; Mega-Regional Trade Agreements (978-3-319-56663-4) ; 978-3-319-56663-4 ; >
+      au < down ; exists ; 978-3-319-56746-4 ; 978-3-319-56747-1 ; 2017 ; Regional Cooperation in South Asia (978-3-319-56747-1) ; 978-3-319-56747-1 ; >
+      au < down ; exists ; 978-3-319-57782-1 ; 978-3-319-57783-8 ; 2017 ; Pedagogy of Compassion at the Heart of Higher Education (978-3-319-57783-8) ; 978-3-319-57783-8 ; >
+      au < down ; exists ; 978-3-319-57958-0 ; 978-3-319-57959-7 ; 2017 ; EU General Data Protection Regulation (GDPR) (978-3-319-57959-7) ; 978-3-319-57959-7 ; >
+      au < down ; exists ; 978-3-319-58492-8 ; 978-3-319-58493-5 ; 2018 ; Financing in Europe (978-3-319-58493-5) ; 978-3-319-58493-5 ; >
+      au < down ; exists ; 978-3-319-58831-5 ; 978-3-319-58832-2 ; 2017 ; European Yearbook of International Economic Law 2017 (978-3-319-58832-2) ; 978-3-319-58832-2 ; >
+      au < down ; exists ; 978-3-319-58882-7 ; 978-3-319-58883-4 ; 2017 ; Reshoring of Manufacturing (978-3-319-58883-4) ; 978-3-319-58883-4 ; >
+      au < down ; exists ; 978-3-319-59122-3 ; 978-3-319-59123-0 ; 2017 ; Global mental health : prevention and promotion (978-3-319-59123-0) ; 978-3-319-59123-0 ; >
+      au < down ; exists ; 978-3-319-59899-4 ; 978-3-319-59900-7 ; 2017 ; Exploring Spoken English Learner Language Using Corpora (978-3-319-59900-7) ; 978-3-319-59900-7 ; >
+      au < down ; exists ; 978-3-319-60145-8 ; 978-3-319-60146-5 ; 2017 ; History of Socially Responsible Business, C.1600–1950 (978-3-319-60146-5) ; 978-3-319-60146-5 ; >
+      au < down ; exists ; 978-3-319-61123-5 ; 978-3-319-61124-2 ; 2017 ; Megatrends and Air Transport (978-3-319-61124-2) ; 978-3-319-61124-2 ; >
+      au < down ; exists ; 978-3-319-61154-9 ; 978-3-319-61155-6 ; 2017 ; Environmental Policy, Non-Product Related Process and Production Methods and the Law of the World Trade Organization (978-3-319-61155-6) ; 978-3-319-61155-6 ; >
+      au < down ; exists ; 978-3-319-61178-5 ; 978-3-319-61179-2 ; 2017 ; Civil War and Narrative (978-3-319-61179-2) ; 978-3-319-61179-2 ; >
+      au < down ; exists ; 978-3-319-61215-7 ; 978-3-319-61216-4 ; 2017 ; Insurance Regulation in the European Union (978-3-319-61216-4) ; 978-3-319-61216-4 ; >
+      au < down ; exists ; 978-3-319-61809-8 ; 978-3-319-61810-4 ; 2017 ; Metrics of Subjective Well-Being: Limits and Improvements (978-3-319-61810-4) ; 978-3-319-61810-4 ; >
+      au < down ; exists ; 978-3-319-62565-2 ; 978-3-319-62566-9 ; 2017 ; History of Business in Africa (978-3-319-62566-9) ; 978-3-319-62566-9 ; >
+      au < down ; exists ; 978-3-319-62736-6 ; 978-3-319-62737-3 ; 2017 ; Digital Economy. Emerging Technologies and Business Innovation Second International Conference, ICDEc 2017, Sidi Bou Said, Tunisia, May 4–6, 2017, Proceedings (978-3-319-62737-3) ; 978-3-319-62737-3 ; >
+      au < down ; exists ; 978-3-319-62793-9 ; 978-3-319-62794-6 ; 2017 ; Arab Women and the Media in Changing Landscapes (978-3-319-62794-6) ; 978-3-319-62794-6 ; >
+      au < down ; exists ; 978-3-319-62937-7 ; 978-3-319-62938-4 ; 2017 ; Neuroeconomic and Behavioral Aspects of Decision Making (978-3-319-62938-4) ; 978-3-319-62938-4 ; >
+      au < down ; exists ; 978-3-319-63048-9 ; 978-3-319-63049-6 ; 2018 ; Vector Variational Inequalities and Vector Optimization (978-3-319-63049-6) ; 978-3-319-63049-6 ; >
+      au < down ; exists ; 978-3-319-63117-2 ; 978-3-319-63118-9 ; 2017 ; Time, Technology and Narrative Form in Contemporary US Television Drama (978-3-319-63118-9) ; 978-3-319-63118-9 ; >
+      au < down ; exists ; 978-3-319-64503-2 ; 978-3-319-64504-9 ; 2017 ; Who's Afraid of John Maynard Keynes? (978-3-319-64504-9) ; 978-3-319-64504-9 ; >
+      au < down ; exists ; 978-3-319-64875-0 ; 978-3-319-64876-7 ; 2017 ; IBroadway (978-3-319-64876-7) ; 978-3-319-64876-7 ; >
+      au < down ; exists ; 978-3-319-64954-2 ; 978-3-319-64955-9 ; 2017 ; EU Internet Law (978-3-319-64955-9) ; 978-3-319-64955-9 ; >
+      au < down ; exists ; 978-3-319-65339-6 ; 978-3-319-65340-2 ; 2017 ; Progress in Artificial Intelligence 18th EPIA Conference on Artificial Intelligence, EPIA 2017, Porto, Portugal, September 5-8, 2017, Proceedings (978-3-319-65340-2) ; 978-3-319-65340-2 ; >
+      au < down ; exists ; 978-3-319-65360-0 ; 978-3-319-65361-7 ; 2017 ; Dual Markets (978-3-319-65361-7) ; 978-3-319-65361-7 ; >
+      au < down ; exists ; 978-3-319-65505-5 ; 978-3-319-65506-2 ; 2018 ; Entrepreneurship in Culture and Creative Industries (978-3-319-65506-2) ; 978-3-319-65506-2 ; >
+      au < down ; exists ; 978-3-319-66019-6 ; 978-3-319-66020-2 ; 2018 ; Agricultural Development in the World Periphery (978-3-319-66020-2) ; 978-3-319-66020-2 ; >
+      au < down ; exists ; 978-3-319-66286-2 ; 978-3-319-66287-9 ; 2017 ; Cultural Intermediaries (978-3-319-66287-9) ; 978-3-319-66287-9 ; >
+      au < down ; exists ; 978-3-319-66561-0 ; 978-3-319-66562-7 ; 2017 ; Advances in Computing 12th Colombian Conference, CCC 2017, Cali, Colombia, September 19-22, 2017, Proceedings (978-3-319-66562-7) ; 978-3-319-66562-7 ; >
+      au < down ; exists ; 978-3-319-66922-9 ; 978-3-319-66923-6 ; 2017 ; Advances in Production Management Systems. The Path to Intelligent, Collaborative and Sustainable Manufacturing IFIP WG 5.7 International Conference, APMS 2017, Hamburg, Germany, September 3-7, 2017, Proceedings, Part I (978-3-319-66923-6) ; 978-3-319-66923-6 ; >
+      au < down ; exists ; 978-3-319-66925-0 ; 978-3-319-66926-7 ; 2017 ; Advances in Production Management Systems. The Path to Intelligent, Collaborative and Sustainable Manufacturing IFIP WG 5.7 International Conference, APMS 2017, Hamburg, Germany, September 3-7, 2017, Proceedings, Part II (978-3-319-66926-7) ; 978-3-319-66926-7 ; >
+      au < down ; exists ; 978-3-319-67025-6 ; 978-3-319-67026-3 ; 2017 ; New Activities For Cultural Heritage (978-3-319-67026-3) ; 978-3-319-67026-3 ; >
+      au < down ; exists ; 978-3-319-68420-8 ; 978-3-319-68421-5 ; 2017 ; Neuroscience and Social Science (978-3-319-68421-5) ; 978-3-319-68421-5 ; >
+      au < down ; exists ; 978-3-319-68746-9 ; 978-3-319-68747-6 ; 2017 ; Semantics and Pragmatics of Quotation (978-3-319-68747-6) ; 978-3-319-68747-6 ; >
+      au < down ; exists ; 978-3-319-68749-0 ; 978-3-319-68750-6 ; 2018 ; Marketing Transformation: Marketing Practice in an Ever Changing World (978-3-319-68750-6) ; 978-3-319-68750-6 ; >
+      au < down ; exists ; 978-3-319-69178-7 ; 978-3-319-69179-4 ; 2017 ; Advanced Data Mining and Applications 13th International Conference, ADMA 2017, Singapore, November 5–6, 2017, Proceedings (978-3-319-69179-4) ; 978-3-319-69179-4 ; >
+      au < down ; exists ; 978-3-319-70919-2 ; 978-3-319-70920-8 ; 2017 ; Communication and bioethics at the end of life : real cases, real dilemmas (978-3-319-70920-8) ; 978-3-319-70920-8 ; >
+      au < down ; exists ; 978-3-319-71071-6 ; 978-3-319-71072-3 ; 2018 ; Luigi L. Pasinetti: An Intellectual Biography (978-3-319-71072-3) ; 978-3-319-71072-3 ; >
+      au < down ; exists ; 978-3-319-73508-5 ; 978-3-319-73509-2 ; 2018 ; Technology Entrepreneurship (978-3-319-73509-2) ; 978-3-319-73509-2 ; >
+      au < down ; exists ; 978-3-319-74128-4 ; 978-3-319-74129-1 ; 2018 ; Emerging Issues in Global Marketing (978-3-319-74129-1) ; 978-3-319-74129-1 ; >
+      au < down ; exists ; 978-3-319-75825-1 ; 978-3-319-75826-8 ; 2018 ; Digital Cultural Heritage Final Conference of the Marie Skłodowska-Curie Initial Training Network for Digital Cultural Heritage, ITN-DCH 2017, Olimje, Slovenia, May 23–25, 2017, Revised Selected Papers (978-3-319-75826-8) ; 978-3-319-75826-8 ; >
+      au < down ; exists ; 978-3-319-77218-9 ; 978-3-319-77219-6 ; 2018 ; Continuous Time Modeling in the Behavioral and Related Sciences (978-3-319-77219-6) ; 978-3-319-77219-6 ; >
+      au < down ; exists ; 978-3-319-92773-2 ; 978-3-319-92775-6 ; 2018 ; Variational analysis and applications (978-3-319-92775-6) ; 978-3-319-92775-6 ; >
+      au < down ; exists ; 978-3-319-95761-6 ; 978-3-319-95762-3 ; 2018 ; Analytical Corporate Finance (978-3-319-95762-3) ; 978-3-319-95762-3 ; >
+      au < down ; exists ; 978-3-658-10182-4 ; 978-3-658-10183-1 ; 2017 ; Strategic Retail Management (978-3-658-10183-1) ; 978-3-658-10183-1 ; >
+      au < down ; exists ; 978-3-658-14293-3 ; 978-3-658-14294-0 ; 2016 ; Managing TV Brands with Social Media (978-3-658-14294-0) ; 978-3-658-14294-0 ; >
+      au < down ; exists ; 978-3-658-15036-5 ; 978-3-658-15037-2 ; 2016 ; Retail Brand Equity and Loyalty (978-3-658-15037-2) ; 978-3-658-15037-2 ; >
+      au < down ; exists ; 978-3-658-16804-9 ; 978-3-658-16805-6 ; 2017 ; Professionalization of Coaching (978-3-658-16805-6) ; 978-3-658-16805-6 ; >
+      au < down ; exists ; 978-3-658-17739-3 ; 978-3-658-17740-9 ; 2017 ; Popular music studies today : proceedings of the International Association for the Study of Popular Music 2017 (978-3-658-17740-9) ; 978-3-658-17740-9 ; >
+      au < down ; exists ; 978-3-662-49274-1 ; 978-3-662-49275-8 ; 2018 ; Digital Marketplaces Unleashed (978-3-662-49275-8) ; 978-3-662-49275-8 ; >
+      au < down ; exists ; 978-3-662-53054-2 ; 978-3-662-53055-9 ; 2016 ; State Aid Law and Business Taxation (978-3-662-53055-9) ; 978-3-662-53055-9 ; >
+      au < down ; exists ; 978-3-662-53784-8 ; 978-3-662-53785-5 ; 2017 ; Enterprise Risk Management Models (978-3-662-53785-5) ; 978-3-662-53785-5 ; >
+      au < down ; exists ; 978-3-662-54903-2 ; 978-3-662-54904-9 ; 2018 ; Internet of Things (978-3-662-54904-9) ; 978-3-662-54904-9 ; >
+      au < down ; exists ; 978-3-662-55429-6 ; 978-3-662-55430-2 ; 2017 ; Transatlantic Data Protection in Practice (978-3-662-55430-2) ; 978-3-662-55430-2 ; >
+      au < down ; exists ; 978-94-017-7375-1 ; 978-94-017-7376-8 ; 2016 ; Data Protection on the Move (978-94-017-7376-8) ; 978-94-017-7376-8 ; >
+      au < down ; exists ; 978-94-017-7463-5 ; 978-94-017-7465-9 ; 2016 ; Convergence of the Fundamental Rights Protection in Europe (978-94-017-7465-9) ; 978-94-017-7465-9 ; >
+      au < down ; exists ; 978-94-017-7469-7 ; 978-94-017-7471-0 ; 2016 ; Limitations of National Sovereignty through European Integration (978-94-017-7471-0) ; 978-94-017-7471-0 ; >
+      au < down ; exists ; 978-94-024-1148-5 ; 978-94-024-1150-8 ; 2017 ; Ethics, Law and the Politics of Information (978-94-024-1150-8) ; 978-94-024-1150-8 ; >
+      au < down ; exists ; 978-94-6265-074-9 ; 978-94-6265-075-6 ; 2016 ; Nuclear Non-Proliferation in International Law (978-94-6265-075-6) ; 978-94-6265-075-6 ; >
+      au < down ; exists ; 978-94-6265-086-2 ; 978-94-6265-088-6 ; 2016 ; Fundamental rights in international and European law : public and private law perspectives (978-94-6265-088-6) ; 978-94-6265-088-6 ; >
+      au < down ; exists ; 978-94-6265-131-9 ; 978-94-6265-132-6 ; 2016 ; Future of Drone Use (978-94-6265-132-6) ; 978-94-6265-132-6 ; >
+      au < down ; exists ; 978-94-6265-137-1 ; 978-94-6265-138-8 ; 2016 ; Nuclear Non-Proliferation in International Law - Volume III (978-94-6265-138-8) ; 978-94-6265-138-8 ; >
+      au < down ; exists ; 978-94-6265-140-1 ; 978-94-6265-141-8 ; 2016 ; Yearbook of International Humanitarian Law Volume 18, 2015 (978-94-6265-141-8) ; 978-94-6265-141-8 ; >
+      au < down ; exists ; 978-94-6265-149-4 ; 978-94-6265-150-0 ; 2017 ; African Criminal Court (978-94-6265-150-0) ; 978-94-6265-150-0 ; >
+      au < down ; exists ; 978-94-6265-158-6 ; 978-94-6265-159-3 ; 2017 ; Employment and Labour Relations Law in the Premier League, NBA and International Rugby Union (978-94-6265-159-3) ; 978-94-6265-159-3 ; >
+      au < down ; exists ;  ; 978-94-6300-956-0 ; 2017 ; Regionalization of African Higher Education (978-94-6300-956-0) ; 978-94-6300-956-0 ; >
+      au < down ; exists ;  ; 978-94-6351-050-9 ; 2017 ; Food Leadership (978-94-6351-050-9) ; 978-94-6351-050-9 ; >
+      au < down ; exists ;  ; 978-94-6351-161-2 ; 2017 ; Understanding Higher Education Internationalization (978-94-6351-161-2) ; 978-94-6351-161-2 ; >
+      au < down ; exists ; 978-981-10-0459-9 ; 978-981-10-0461-2 ; 2016 ; Ecological Economics and Harmonious Society (978-981-10-0461-2) ; 978-981-10-0461-2 ; >
+      au < down ; exists ; 978-981-10-1144-3 ; 978-981-10-1145-0 ; 2017 ; China-EU Relations (978-981-10-1145-0) ; 978-981-10-1145-0 ; >
+      au < down ; exists ; 978-981-10-2286-9 ; 978-981-10-2287-6 ; 2017 ; Development of Eco Cities in China (978-981-10-2287-6) ; 978-981-10-2287-6 ; >
+      au < down ; exists ; 978-981-10-2439-9 ; 978-981-10-2440-5 ; 2017 ; Green Fashion Retail (978-981-10-2440-5) ; 978-981-10-2440-5 ; >
+      au < down ; exists ; 978-981-10-2965-3 ; 978-981-10-2966-0 ; 2017 ; Contemporary Chinese Films and Celebrity Directors (978-981-10-2966-0) ; 978-981-10-2966-0 ; >
+      au < down ; exists ; 978-981-10-3622-4 ; 978-981-10-3623-1 ; 2017 ; Comparative Study of Funding Shareholder Litigation (978-981-10-3623-1) ; 978-981-10-3623-1 ; >
+      au < down ; exists ; 978-981-10-3703-0 ; 978-981-10-3704-7 ; 2017 ; Studies on China's Special Economic Zones (978-981-10-3704-7) ; 978-981-10-3704-7 ; >
+      au < down ; exists ; 978-981-10-3910-2 ; 978-981-10-3911-9 ; 2017 ; Corporate Governance in China (978-981-10-3911-9) ; 978-981-10-3911-9 ; >
+      au < down ; exists ; 978-981-10-3983-6 ; 978-981-10-3984-3 ; 2017 ; Copyright Law in the Digital World (978-981-10-3984-3) ; 978-981-10-3984-3 ; >
+      au < down ; exists ; 978-981-10-4055-9 ; 978-981-10-4056-6 ; 2017 ; Advances in Cultural Linguistics (978-981-10-4056-6) ; 978-981-10-4056-6 ; >
+      au < down ; exists ; 978-981-10-4644-5 ; 978-981-10-4645-2 ; 2017 ; English As a Medium of Instruction in Higher Education (978-981-10-4645-2) ; 978-981-10-4645-2 ; >
+      au < down ; exists ; 978-981-10-5298-9 ; 978-981-10-5299-6 ; 2017 ; Re-emerging Russia (978-981-10-5299-6) ; 978-981-10-5299-6 ; >
+      au < down ; exists ; 978-981-10-5881-3 ; 978-981-10-5882-0 ; 2017 ; Asia's Changing International Investment Regime (978-981-10-5882-0) ; 978-981-10-5882-0 ; >
+      au < down ; exists ; 978-981-10-6865-2 ; 978-981-10-6866-9 ; 2017 ; Treaty Interpretation Under the Vienna Convention on the Law of Treaties (978-981-10-6866-9) ; 978-981-10-6866-9 ; >
+      au < down ; exists ; 978-981-287-932-5 ; 978-981-287-934-9 ; 2016 ; Generation Z (978-981-287-934-9) ; 978-981-287-934-9 ; >
+      au < down ; exists ; 978-981-287-965-3 ; 978-981-287-967-7 ; 2016 ; Quadrilingual Education in Singapore (978-981-287-967-7) ; 978-981-287-967-7 ; >
     }
 }

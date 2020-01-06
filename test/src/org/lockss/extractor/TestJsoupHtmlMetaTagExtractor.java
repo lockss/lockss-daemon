@@ -131,10 +131,7 @@ public class TestJsoupHtmlMetaTagExtractor extends
   }
 
   public void testProblemFile() throws Exception {
-    if (isSkipNetworkTests()) return;
-    String prob_url = "http://msp.org/ant/2007/1-3/p03.xhtml";
-    System.out.println(Charset.defaultCharset());
-    InputStream istr = UrlUtil.openInputStream(prob_url);
+    InputStream istr = this.getClass().getResourceAsStream("utf8-meta.xhtml");
     //NB. StringUtil.fromInputStream() encodes as ENCODING_ISO_8859_1
     // This is incorrect for xhtml files which defaults to utf-8/16 or the
     // value in the content encoding statement.
