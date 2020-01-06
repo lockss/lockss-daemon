@@ -5,6 +5,10 @@
     info[tester] = 6
   >
 
+  #
+  # Do not process any more books until a discussion with Springer Nature is resolved regarding provisional access before purchase situations.
+  #
+
   plugin = org.lockss.plugin.springer.link.SpringerLinkBooksPlugin
   param[base_url] = https://link.springer.com/
 
