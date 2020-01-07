@@ -5,7 +5,7 @@
     </entry>
     <entry>
         <string>plugin_identifier</string>
-        <string>org.lockss.plugin.innovativemedicalresearch.ClockssInnovativeMedicalResearchJatsSourcePlugin</string>
+        <string>org.lockss.plugin.clockss.innovativepublication.ClockssInnovativePublicationSourcePlugin</string>
     </entry>
     <entry>
         <string>plugin_version</string>
@@ -13,15 +13,19 @@
     </entry>
     <entry>
         <string>plugin_parent</string>
-        <string>org.lockss.plugin.clockss.ClockssDirSourcePlugin</string>
+        <string>org.lockss.plugin.clockss.ClockssSourcePlugin</string>
     </entry>
     <entry>
         <string>plugin_parent_version</string>
-        <string>1</string>
+        <string>15</string>
     </entry>
     <entry>
         <string>plugin_feature_version_map</string>
         <map>
+            <entry>
+                <string>Substance</string>
+                <string>1</string>
+            </entry>
             <entry>
                 <string>Poll</string>
                 <string>1</string>
@@ -34,22 +38,16 @@
     </entry>
     <entry>
         <string>plugin_name</string>
-        <string>Innovative Medical Research Press JATS Source Plugin (CLOCKSS)</string>
+        <string>Innovative Publication Source Plugin (CLOCKSS)</string>
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"Innovative Medical Research Press JATS Source Plugin (CLOCKSS), Base URL %s, Directory %s", base_url, directory</string>
+        <string>"Innovative Publication Source Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
     </entry>
     <entry>
         <string>au_substance_url_pattern</string>
         <list>
-            <string>"^%s%s/.+\.zip", base_url, directory</string>
-        </list>
-    </entry>
-    <entry>
-        <string>au_crawlrules</string>
-        <list>
-            <string>1,"^%s%s/", base_url, directory</string>
+            <string>"^%s%d/.+\.pdf", base_url, year</string>
         </list>
     </entry>
     <entry>
@@ -58,18 +56,18 @@
     </entry>
     <entry>
         <string>plugin_article_iterator_factory</string>
-        <string>org.lockss.plugin.innovativemedicalresearch.InnovativeMedicalResearchJatsSourceZipXmlArticleIteratorFactory</string>
+        <string>org.lockss.plugin.clockss.innovativepublication.InnovativePublicationSourcePluginArticleIteratorFactory</string>
     </entry>
     <entry>
         <string>plugin_article_metadata_extractor_factory</string>
-        <string>org.lockss.plugin.innovativemedicalresearch.InnovativeMedicalResearchJatsSourceZipXmlArticleIteratorFactory</string>
+        <string>org.lockss.plugin.clockss.innovativepublication.InnovativePublicationSourcePluginArticleIteratorFactory</string>
     </entry>
     <entry>
         <string>text/xml_metadata_extractor_factory_map</string>
         <map>
             <entry>
                 <string>*</string>
-                <string>org.lockss.plugin.innovativemedicalresearch.InnovativeMedicalResearchJatsSourceXmlMetadataExtractorFactory</string>
+                <string>org.lockss.plugin.clockss.innovativepublication.InnovativePublicationMetadataExtractorFactory</string>
             </entry>
         </map>
     </entry>
@@ -78,7 +76,7 @@
         <map>
             <entry>
                 <string>*</string>
-                <string>org.lockss.plugin.innovativemedicalresearch.InnovativeMedicalResearchJatsSourceXmlMetadataExtractorFactory</string>
+                <string>org.lockss.plugin.clockss.innovativepublication.InnovativePublicationMetadataExtractorFactory</string>
             </entry>
         </map>
     </entry>

@@ -161,8 +161,8 @@
 
       au < manifest ; 2015-2016 ; National Youth-At-Risk Journal Volume 1 ; 1 >
       au < manifest ; 2016-2017 ; National Youth-At-Risk Journal Volume 2 ; 2 >
-      au < manifest ; 2018-2019 ; National Youth-At-Risk Journal Volume 3 ; 3 >
-      au < expected ; 2019-2020 ; National Youth-At-Risk Journal Volume 4 ; 4 >
+      au < manifest ; 2018 ; National Youth-At-Risk Journal Volume 3 ; 3 >
+      au < expected ; 2019 ; National Youth-At-Risk Journal Volume 4 ; 4 >
 
   }
 
@@ -194,7 +194,7 @@
       param[base_url] = https://digitalcommons.georgiasouthern.edu/
       param[journal_abbr] = thecoastalreview
 
-      au < manifest ; 2007 ; The Coastal Review Special Issue ; 0 >
+      au < manifest ; 2017 ; The Coastal Review Special Issue ; 0 >
       au < manifest ; 2007 ; The Coastal Review Volume 1 ; 1 >
       au < manifest ; 2008 ; The Coastal Review Volume 2 ; 2 >
       au < manifest ; 2011 ; The Coastal Review Volume 3 ; 3 >

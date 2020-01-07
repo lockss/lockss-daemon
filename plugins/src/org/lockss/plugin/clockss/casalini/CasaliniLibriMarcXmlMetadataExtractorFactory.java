@@ -158,6 +158,30 @@ public class CasaliniLibriMarcXmlMetadataExtractorFactory extends SourceXmlMetad
         thisAM.put(MetadataField.FIELD_AUTHOR, author.replace(".", ""));
       }
 
+      /*
+       Since casalini is using Marc format in a inconsistent way.
+       The something_articles_something.xml format changed in the middle of the xml.
+       This file list the inconsistence found in real data, so developer will not get trapped
+
+        ========In http://clockss-ingest.lockss.org/sourcefiles/casalini-released/2019/Psicoterapia/psicoterapia_scienze_umane_articles_20191014.xml==
+        The following samples list DOI  has not access_url vs DOI with access_url
+
+        ====DOI without access_url===
+        <datafield ind1="7" ind2=" " tag="024">
+        <subfield code="a">10.3280/PU2015-004011</subfield>
+        <subfield code="2">DOI</subfield>
+        </datafield>
+
+        ===DOI with access_url===
+        <datafield ind1="7" ind2=" " tag="024">
+        <subfield code="a">10.3280/PU2015-004011</subfield>
+        <subfield code="2">DOI</subfield>
+        </datafield>
+
+        <datafield ind1="4" ind2="0" tag="856">
+        <subfield code="u">http://digital.casalini.it/10.3280/PU2015-004011</subfield>
+        </datafield>
+       */
       if (thisAM.getRaw(CasaliniMarcXmlSchemaHelper.MARC_doi) != null) {
         thisAM.put(MetadataField.FIELD_DOI, thisAM.getRaw(CasaliniMarcXmlSchemaHelper.MARC_doi));
       }

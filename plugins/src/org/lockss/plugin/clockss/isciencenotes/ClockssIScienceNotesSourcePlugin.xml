@@ -5,7 +5,7 @@
     </entry>
     <entry>
         <string>plugin_identifier</string>
-        <string>org.lockss.plugin.clockss.isciencenotes.ClockssIscienceNotesSourcePlugin</string>
+        <string>org.lockss.plugin.clockss.isciencenotes.ClockssIScienceNotesSourcePlugin</string>
     </entry>
     <entry>
         <string>plugin_version</string>
@@ -25,11 +25,11 @@
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"Iscience Notes Source Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
+        <string>"iScience Notes Source Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
     </entry>
     <entry>
         <string>plugin_name</string>
-        <string>Iscience Notes Source Plugin (CLOCKSS)</string>
+        <string>iScience Notes Source Plugin (CLOCKSS)</string>
     </entry>
     <entry>
         <string>au_substance_url_pattern</string>
@@ -39,11 +39,11 @@
     </entry>
     <entry>
         <string>plugin_article_iterator_factory</string>
-        <string>org.lockss.plugin.clockss.isciencenotes.IscienceNotesXmlSourceArticleIteratorFactory</string>
+        <string>org.lockss.plugin.clockss.isciencenotes.IScienceNotesXmlSourceArticleIteratorFactory</string>
     </entry>
     <entry>
         <string>plugin_article_metadata_extractor_factory</string>
-        <string>org.lockss.plugin.clockss.isciencenotes.IscienceNotesXmlSourceArticleIteratorFactory</string>
+        <string>org.lockss.plugin.clockss.isciencenotes.IScienceNotesXmlSourceArticleIteratorFactory</string>
     </entry>
 
     <entry>
@@ -51,7 +51,7 @@
         <map>
             <entry>
                 <string>*</string>
-                <string>org.lockss.plugin.clockss.isciencenotes.IscienceNotesXmlMetadataExtractorFactory</string>
+                <string>org.lockss.plugin.clockss.isciencenotes.IScienceNotesXmlMetadataExtractorFactory</string>
             </entry>
         </map>
     </entry>
@@ -60,7 +60,7 @@
         <map>
             <entry>
                 <string>*</string>
-                <string>org.lockss.plugin.clockss.isciencenotes.IscienceNotesXmlMetadataExtractorFactory</string>
+                <string>org.lockss.plugin.clockss.isciencenotes.IScienceNotesXmlMetadataExtractorFactory</string>
             </entry>
         </map>
     </entry>

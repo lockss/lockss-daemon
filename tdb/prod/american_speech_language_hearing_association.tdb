@@ -43,7 +43,7 @@
       au < doNotProcess ; 2012 ; American Journal of Audiology Volume 21 ; 21 >
       au < doNotProcess ; 2013 ; American Journal of Audiology Volume 22 ; 22 >
       au < doNotProcess ; 2014 ; American Journal of Audiology Volume 23 ; 23 >
-      au < manifest ; 2015 ; American Journal of Audiology Volume 24 ; 24 >
+      au < released ; 2015 ; American Journal of Audiology Volume 24 ; 24 >
       au < doNotProcess ; 2016 ; American Journal of Audiology Volume 25 ; 25 >
       au < doNotProcess ; 2017 ; American Journal of Audiology Volume 26 ; 26 >
       au < released ; 2018 ; American Journal of Audiology Volume 27 ; 27 >
@@ -83,9 +83,9 @@
       au < doNotProcess ; 2010 ; American Journal of Speech-Language Pathology Volume 19 ; 19 >
       au < doNotProcess ; 2011 ; American Journal of Speech-Language Pathology Volume 20 ; 20 >
       au < doNotProcess ; 2012 ; American Journal of Speech-Language Pathology Volume 21 ; 21 >
-      au < manifest ; 2013 ; American Journal of Speech-Language Pathology Volume 22 ; 22 >
-      au < manifest ; 2014 ; American Journal of Speech-Language Pathology Volume 23 ; 23 >
-      au < manifest ; 2015 ; American Journal of Speech-Language Pathology Volume 24 ; 24 >
+      au < released ; 2013 ; American Journal of Speech-Language Pathology Volume 22 ; 22 >
+      au < released ; 2014 ; American Journal of Speech-Language Pathology Volume 23 ; 23 >
+      au < released ; 2015 ; American Journal of Speech-Language Pathology Volume 24 ; 24 >
       au < doNotProcess ; 2016 ; American Journal of Speech-Language Pathology Volume 25 ; 25 >
       au < doNotProcess ; 2017 ; American Journal of Speech-Language Pathology Volume 26 ; 26 >
       au < released ; 2018 ; American Journal of Speech-Language Pathology Volume 27 ; 27 >
@@ -261,9 +261,9 @@
       au < doNotProcess ; 2010 ; Journal of Speech, Language, and Hearing Research Volume 53 ; 53 >
       au < doNotProcess ; 2011 ; Journal of Speech, Language, and Hearing Research Volume 54 ; 54 >
       au < doNotProcess ; 2012 ; Journal of Speech, Language, and Hearing Research Volume 55 ; 55 >
-      au < manifest ; 2013 ; Journal of Speech, Language, and Hearing Research Volume 56 ; 56 >
+      au < released ; 2013 ; Journal of Speech, Language, and Hearing Research Volume 56 ; 56 >
       au < doNotProcess ; 2014 ; Journal of Speech, Language, and Hearing Research Volume 57 ; 57 >
-      au < manifest ; 2015 ; Journal of Speech, Language, and Hearing Research Volume 58 ; 58 >
+      au < released ; 2015 ; Journal of Speech, Language, and Hearing Research Volume 58 ; 58 >
       au < doNotProcess ; 2016 ; Journal of Speech, Language, and Hearing Research Volume 59 ; 59 >
       au < doNotProcess ; 2017 ; Journal of Speech, Language, and Hearing Research Volume 60 ; 60 >
       au < released ; 2018 ; Journal of Speech, Language, and Hearing Research Volume 61 ; 61 >
@@ -325,9 +325,9 @@
       au < doNotProcess ; 2010 ; Language, Speech, and Hearing Services in Schools Volume 41 ; 41 >
       au < doNotProcess ; 2011 ; Language, Speech, and Hearing Services in Schools Volume 42 ; 42 >
       au < doNotProcess ; 2012 ; Language, Speech, and Hearing Services in Schools Volume 43 ; 43 >
-      au < manifest ; 2013 ; Language, Speech, and Hearing Services in Schools Volume 44 ; 44 >
-      au < manifest ; 2014 ; Language, Speech, and Hearing Services in Schools Volume 45 ; 45 >
-      au < manifest ; 2015 ; Language, Speech, and Hearing Services in Schools Volume 46 ; 46 >
+      au < released ; 2013 ; Language, Speech, and Hearing Services in Schools Volume 44 ; 44 >
+      au < released ; 2014 ; Language, Speech, and Hearing Services in Schools Volume 45 ; 45 >
+      au < released ; 2015 ; Language, Speech, and Hearing Services in Schools Volume 46 ; 46 >
       au < doNotProcess ; 2016 ; Language, Speech, and Hearing Services in Schools Volume 47 ; 47 >
       au < doNotProcess ; 2017 ; Language, Speech, and Hearing Services in Schools Volume 48 ; 48 >
       au < released ; 2018 ; Language, Speech, and Hearing Services in Schools Volume 49 ; 49 >
@@ -355,14 +355,14 @@
       au < manifest ; 2007 ; ASHA Leader Volume 12 ; 12 >
       au < manifest ; 2008 ; ASHA Leader Volume 13 ; 13 >
       au < manifest ; 2009 ; ASHA Leader Volume 14 ; 14 >
-      au < manifest ; 2010 ; ASHA Leader Volume 15 ; 15 >
-      au < manifest ; 2011 ; ASHA Leader Volume 16 ; 16 >
-      au < manifest ; 2012 ; ASHA Leader Volume 17 ; 17 >
-      au < manifest ; 2013 ; ASHA Leader Volume 18 ; 18 >
-      au < manifest ; 2014 ; ASHA Leader Volume 19 ; 19 >
-      au < manifest ; 2015 ; ASHA Leader Volume 20 ; 20 >
-      au < manifest ; 2016 ; ASHA Leader Volume 21 ; 21 >
-      au < manifest ; 2017 ; ASHA Leader Volume 22 ; 22 >
+      au < released ; 2010 ; ASHA Leader Volume 15 ; 15 >
+      au < released ; 2011 ; ASHA Leader Volume 16 ; 16 >
+      au < released ; 2012 ; ASHA Leader Volume 17 ; 17 >
+      au < released ; 2013 ; ASHA Leader Volume 18 ; 18 >
+      au < released ; 2014 ; ASHA Leader Volume 19 ; 19 >
+      au < released ; 2015 ; ASHA Leader Volume 20 ; 20 >
+      au < released ; 2016 ; ASHA Leader Volume 21 ; 21 >
+      au < released ; 2017 ; ASHA Leader Volume 22 ; 22 >
       au < released ; 2018 ; ASHA Leader Volume 23 ; 23 >
       au < manifest ; 2019 ; ASHA Leader Volume 24 ; 24 >
   }
@@ -377,8 +377,8 @@
       param[journal_id] = persp
       param[base_url] = https://pubs.asha.org/
 
-      au < manifest ; 2016 ; Perspectives of the ASHA Special Interest Groups Volume 1 ; 1 >
-      au < manifest ; 2017 ; Perspectives of the ASHA Special Interest Groups Volume 2 ; 2 >
+      au < released ; 2016 ; Perspectives of the ASHA Special Interest Groups Volume 1 ; 1 >
+      au < released ; 2017 ; Perspectives of the ASHA Special Interest Groups Volume 2 ; 2 >
       au < released ; 2018 ; Perspectives of the ASHA Special Interest Groups Volume 3 ; 3 >
       au < manifest ; 2019 ; Perspectives of the ASHA Special Interest Groups Volume 4 ; 4 >
   }

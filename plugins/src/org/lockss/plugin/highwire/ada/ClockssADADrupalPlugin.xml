@@ -1,6 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
+    <!--please see PluginsLXPLUG-1765 for overcrawl PDF caused by pdf moved to cloudflare-->
     <string>ready</string>
   </entry>
   <!-- compare to ADADrupalPlugin, the added entries should be in synch -->
@@ -15,7 +16,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>7</string>
+    <string>8</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -23,7 +24,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>7</string>
+    <string>8</string>
   </entry>
   <entry>
     <string>au_name</string>

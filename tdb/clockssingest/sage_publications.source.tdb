@@ -20,8 +20,8 @@
     hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[year] >
     
-    au < readySource ; finished ; 2015 ; SAGE Publications Baywood Publishing Company Source Content 2015 ; 2015 >
-    au < readySource ; finished ; 2016 ; SAGE Publications Baywood Publishing Company Source Content 2016 ; 2016 >
+    au < zapped ; finished ; 2015 ; SAGE Publications Baywood Publishing Company Source Content 2015 ; 2015 >
+    au < zapped ; finished ; 2016 ; SAGE Publications Baywood Publishing Company Source Content 2016 ; 2016 >
     #CLOCKSS-OCLC does not yet have 2016 was not crawling 
     #no more AUs expected
   }
@@ -37,8 +37,8 @@
     hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[year] >
     
-    au < readySource ; finished ; 2017 ; SAGE Publications Books Source Content 2017 ; 2017 >
-    au < readySource ; frozen ; 2018 ; SAGE Publications Books Source Content 2018 ; 2018 >
+    au < zapped ; finished ; 2017 ; SAGE Publications Books Source Content 2017 ; 2017 >
+    au < readySource ; finished ; 2018 ; SAGE Publications Books Source Content 2018 ; 2018 >
     au < readySource ; crawling ; 2019 ; SAGE Publications Books Source Content 2019 ; 2019 >
 
   }  
@@ -81,7 +81,7 @@
     hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[year] >
     
-    au < readySource ; finished ; 2017 ; Canadian Journal of Nursing Research Volumes 45-47 Source Content 2017 ; 2017 >
+    au < zapped ; finished ; 2017 ; Canadian Journal of Nursing Research Volumes 45-47 Source Content 2017 ; 2017 >
 	#No more AUs expected
 
   }

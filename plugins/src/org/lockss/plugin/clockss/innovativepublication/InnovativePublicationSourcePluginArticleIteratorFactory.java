@@ -1,4 +1,4 @@
-package org.lockss.plugin.clockss.liverpool;
+package org.lockss.plugin.clockss.innovativepublication;
 
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadataExtractor;
@@ -14,16 +14,21 @@ import org.lockss.util.Logger;
 import java.util.Iterator;
 import java.util.regex.Pattern;
 
-public class LiverpoolArticleIteratorFactory  implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
+public class InnovativePublicationSourcePluginArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
 
-    protected static Logger log = Logger.getLogger(LiverpoolArticleIteratorFactory.class);
+    protected static Logger log = Logger.getLogger(InnovativePublicationSourcePluginArticleIteratorFactory .class);
 
     protected static final String ROOT_TEMPLATE = "\"%s%d\",base_url,year";
-    private static final String PATTERN_TEMPLATE = "\"%s%d/.+\",base_url,year";
+    private static final String PATTERN_TEMPLATE = "\"%s%d.*/[^/]+\",base_url,year";
 
-    //protected static final Pattern XML_PATTERN = Pattern.compile("/([^/]+)\\.xml$");
-    protected static final Pattern XML_PATTERN = Pattern.compile("/([^/]+).xml$");
-    protected static final String XML_REPLACEMENT = "/([^/]+).xml$";
+    // The delivery does not have one-pdf-to-one-xml matching relationship,
+    // All the article metadata is inside article_xml.
+    // So we not use PDF count as # of articles as in other plugin
+    protected static final Pattern PDF_PATTERN = Pattern.compile("/([^/]+)\\.pdf$");
+    protected static final String PDF_REPLACEMENT = "/$1.pdf";
+
+    protected static final Pattern XML_PATTERN = Pattern.compile("/([^/]+)\\.xml$");
+    protected static final String XML_REPLACEMENT = "/$1.xml";
 
 
     @Override
@@ -36,6 +41,10 @@ public class LiverpoolArticleIteratorFactory  implements ArticleIteratorFactory,
                 ROOT_TEMPLATE,
                 PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
 
+        builder.addAspect(PDF_PATTERN,
+                PDF_REPLACEMENT,
+                ArticleFiles.ROLE_FULL_TEXT_PDF);
+
         builder.addAspect(XML_PATTERN,
                 XML_REPLACEMENT,
                 ArticleFiles.ROLE_FULL_TEXT_XML,
@@ -43,6 +52,7 @@ public class LiverpoolArticleIteratorFactory  implements ArticleIteratorFactory,
 
         return builder.getSubTreeArticleIterator();
     }
+
 
     @Override
     public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)

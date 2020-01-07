@@ -155,8 +155,10 @@ implements SourceXmlSchemaHelper {
     <datafield ind1="4" ind2="0" tag="856">
 		<subfield code="u">http://digital.casalini.it/2194804</subfield>
 	</datafield>
+
+	ELECTRONIC_ACCESS_LOCATION_TAG are not used by current metadata mechanism
    */
-  private static final String ELECTRONIC_ACCESS_LOCATION_TAG ="260";
+  private static final String ELECTRONIC_ACCESS_LOCATION_TAG ="856";
   private static final String url_code ="u";
 
   /*

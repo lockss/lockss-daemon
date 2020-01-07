@@ -1,44 +1,25 @@
-package org.lockss.plugin.innovativemedicalresearch;
+package org.lockss.plugin.innovativemedicalresearchpress;
 
-import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
-import org.htmlparser.Node;
-import org.htmlparser.NodeFilter;
-import org.htmlparser.Parser;
-import org.htmlparser.lexer.InputStreamSource;
-import org.htmlparser.lexer.Lexer;
-import org.htmlparser.lexer.Page;
-import org.htmlparser.lexer.Stream;
-import org.htmlparser.tags.MetaTag;
-import org.htmlparser.util.NodeList;
-import org.htmlparser.util.ParserException;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.clockss.JatsPublishingSchemaHelper;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 import org.lockss.plugin.clockss.XPathXmlMetadataParser;
-import org.lockss.util.Constants;
 import org.lockss.util.Logger;
-import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.xpath.*;
-import java.io.File;
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class InnovativeMedicalResearchJatsSourceZipXmlArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
+public class InnovativeMedicalResearchPressJatsSourceZipXmlArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
 
-    protected static Logger log = Logger.getLogger(InnovativeMedicalResearchJatsSourceZipXmlArticleIteratorFactory.class);
+    protected static Logger log = Logger.getLogger(InnovativeMedicalResearchPressJatsSourceZipXmlArticleIteratorFactory.class);
 
     //http://content5.lockss.org/sourcefiles/imrpress-released/2019/JMCM2018-Volume%201%20Issue%202.zip!/JMCM2018-Volume 1 Issue 2/2617-5282-2018-2/2617-5282-1-2-107.xml
     //http://content5.lockss.org/sourcefiles/imrpress-released/2019/JMCM2018-Volume%201%20Issue%202.zip!/JMCM2018-Volume 1 Issue 2/2617-5282-2018-2/1545826577946-771105881.pdf

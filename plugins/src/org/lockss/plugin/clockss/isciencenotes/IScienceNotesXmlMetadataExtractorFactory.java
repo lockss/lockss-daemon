@@ -14,8 +14,8 @@ import org.lockss.util.Logger;
 import java.util.ArrayList;
 import java.util.List;
 
-public class IscienceNotesXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
-    private static final Logger log = Logger.getLogger(IscienceNotesXmlMetadataExtractorFactory.class);
+public class IScienceNotesXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
+    private static final Logger log = Logger.getLogger(IScienceNotesXmlMetadataExtractorFactory.class);
 
     private static SourceXmlSchemaHelper CrossRefHelper = null;
 
@@ -56,7 +56,7 @@ public class IscienceNotesXmlMetadataExtractorFactory extends SourceXmlMetadataE
         @Override
         protected void postCookProcess(SourceXmlSchemaHelper schemaHelper,
                                        CachedUrl cu, ArticleMetadata thisAM) {
-            log.debug("in AOFoundation postcook");
+            log.debug("in postcook");
             // In the AOFoundation metadata, the registrant is incorrectly set to WEB-FORM
             String pname = thisAM.get(MetadataField.FIELD_PUBLISHER);
             // they cannot seem to avoid spelling errors in the publication name. I'm going to manually set it

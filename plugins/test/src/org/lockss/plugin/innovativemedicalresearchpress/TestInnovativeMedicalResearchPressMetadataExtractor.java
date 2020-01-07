@@ -1,7 +1,6 @@
-package org.lockss.plugin.innovativemedicalresearch;
+package org.lockss.plugin.innovativemedicalresearchpress;
 
 import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.FilenameUtils;
 import org.lockss.daemon.ShouldNotHappenException;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.FileMetadataExtractor;
@@ -21,9 +20,9 @@ import java.util.ArrayList;
 import java.util.List;
 import org.w3c.dom.*;
 
-public class TestInnovativeMedicalResearchMetadataExtractor extends SourceXmlMetadataExtractorTest {
+public class TestInnovativeMedicalResearchPressMetadataExtractor extends SourceXmlMetadataExtractorTest {
 
-    private static final Logger log = Logger.getLogger(TestInnovativeMedicalResearchMetadataExtractor.class);
+    private static final Logger log = Logger.getLogger(TestInnovativeMedicalResearchPressMetadataExtractor.class);
 
     private static String BaseUrl = "http://source.host.org/sourcefiles/innovative/";
     private static String Directory = "2019";
@@ -33,7 +32,7 @@ public class TestInnovativeMedicalResearchMetadataExtractor extends SourceXmlMet
         try {
             String currentDirectory = System.getProperty("user.dir");
             String pathname = currentDirectory +
-                    "/plugins/test/src/org/lockss/plugin/innovativemedicalresearch/" + fname;
+                    "/plugins/test/src/org/lockss/plugin/innovativemedicalresearchpress/" + fname;
             xmlContent = FileUtils.readFileToString(new File(pathname), Constants.DEFAULT_ENCODING);
         } catch(IOException e) {
             e.printStackTrace();

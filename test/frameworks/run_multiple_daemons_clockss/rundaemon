@@ -1,7 +1,7 @@
 #!/bin/sh
 
 TITLE_DBS=""
-HEAP_ARG=-Xmx512m
+HEAP_ARG=-Xmx2048m
 
 if [ "X${PROJECT_DIR}" = "X" ]
 then
