@@ -180,8 +180,8 @@ public class GigaScienceCrawlSeed extends BaseCrawlSeed {
                                     new LinkExtractor.Callback() {
                                         @Override
                                         public void foundLink(String doiUrl) {
-                                            log.debug3("Fei: doiUrl is added = " + doiUrl);
-                                            partial.add(doiUrl);
+                                            log.debug3("doiUrl is added = " + doiUrl);
+                                            partial.add(SINGLE_DOI_API_URL + doiUrl);
                                         }
                                     });
                         }
