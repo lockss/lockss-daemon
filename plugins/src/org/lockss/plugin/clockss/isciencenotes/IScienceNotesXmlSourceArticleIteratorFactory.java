@@ -14,12 +14,13 @@ import org.lockss.util.Logger;
 import java.util.Iterator;
 import java.util.regex.Pattern;
 
-public class IscienceNotesXmlSourceArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
+public class IScienceNotesXmlSourceArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
 
-    protected static Logger log = Logger.getLogger(IscienceNotesXmlSourceArticleIteratorFactory.class);
+    protected static Logger log = Logger.getLogger(IScienceNotesXmlSourceArticleIteratorFactory.class);
 
     protected static final String ALL_PATTERN_TEMPLATE = "\"^%s[^/]+/(.*)\\.(xml|pdf)$\",base_url";
 
+    // FIXME: probably extraneous
     protected static final Pattern NESTED_ARCHIVE_PATTERN =
             Pattern.compile(".*/.+\\.(zip|tar|gz|tgz|tar\\.gz)$",
                     Pattern.CASE_INSENSITIVE);
@@ -57,6 +58,7 @@ public class IscienceNotesXmlSourceArticleIteratorFactory implements ArticleIter
         return builder.getSubTreeArticleIterator();
     }
 
+    // FIXME: probably extraneous
     protected Pattern getExcludeSubTreePattern() {
         return NESTED_ARCHIVE_PATTERN;
     }

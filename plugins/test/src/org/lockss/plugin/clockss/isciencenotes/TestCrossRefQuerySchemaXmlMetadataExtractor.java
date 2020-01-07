@@ -82,7 +82,7 @@ public class TestCrossRefQuerySchemaXmlMetadataExtractor extends LockssTestCase 
             mcu.setContentSize(string_input.length());
             mcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
 
-            FileMetadataExtractor me = new IscienceNotesXmlMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/xml");
+            FileMetadataExtractor me = new IScienceNotesXmlMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/xml");
             FileMetadataListExtractor mle =
                     new FileMetadataListExtractor(me);
             List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), mcu);
