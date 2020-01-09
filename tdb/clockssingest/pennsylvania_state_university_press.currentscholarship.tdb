@@ -429,8 +429,8 @@
 
       param[journal_id] = jspecphil
 
-      au < exists ; exists ; 2010 ; The Journal of Speculative Philosophy Volume 24 ; 2010 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 2011 ; The Journal of Speculative Philosophy Volume 25 ; 2011 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2010 ; The Journal of Speculative Philosophy Volume 24 ; 2010 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2011 ; The Journal of Speculative Philosophy Volume 25 ; 2011 ; https://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2012 ; The Journal of Speculative Philosophy Volume 26 ; 2012 ; https://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2013 ; The Journal of Speculative Philosophy Volume 27 ; 2013 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2014 ; The Journal of Speculative Philosophy Volume 28 ; 2014 ; http://www.jstor.org/ ; >

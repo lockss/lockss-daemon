@@ -2563,7 +2563,7 @@
 
     au < released ; 2017 ; 2017 ; Joints Volume 1 ; 1 >
     au < released ; 2018 ; 2018 ; Joints Volume 2 ; 2 >
-    au < expected ; 2019 ; 2019 ; Joints Volume 3 ; 3 >
+    au < manifest ; 2019 ; 2019 ; Joints Volume 3 ; 3 >
 
   }
 
@@ -3115,8 +3115,8 @@
       au < doNotProcess ; 2015 ; 2015 ; Journal of Social Health and Diabetes Volume 3 ; 3 >
       au < doNotProcess ; 2016 ; 2016 ; Journal of Social Health and Diabetes Volume 4 ; 4 >
       au < doNotProcess ; 2017 ; 2017 ; Journal of Social Health and Diabetes Volume 5 ; 5 >
-      au < exists ; 2018 ; 2018 ; Journal of Social Health and Diabetes Volume 6 ; 6 >
-      au < exists ; 2019 ; 2019 ; Journal of Social Health and Diabetes Volume 7 ; 7 >
+      au < manifest ; 2018 ; 2018 ; Journal of Social Health and Diabetes Volume 6 ; 6 >
+      au < manifest ; 2019 ; 2019 ; Journal of Social Health and Diabetes Volume 7 ; 7 >
 
   }
 

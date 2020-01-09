@@ -90,6 +90,7 @@
     au < notReady ; 2017 ; 9 ; Journal of Applied Sport Management: Research that Matters Volume 9 ; 2017 ; https://js.sagamorepub.com/ > #login found
     au < notReady ; 2018 ; 10 ; Journal of Applied Sport Management: Research that Matters Volume 10 ; 2018 ; https://js.sagamorepub.com/ > #login found
     au < manifest ; 2019 ; 11 ; Journal of Applied Sport Management: Research that Matters Volume 11 ; 2019 ; https://js.sagamorepub.com/ >
+    #see LXQUEUE-1700. No more volumes after 2019.
   }
 
   {
@@ -198,7 +199,7 @@
     au < released ; 2017 ; 35 ; Journal of Park and Recreation Administration Volume 35 ; 2017 ; http://js.sagamorepub.com/ >
     au < released ; 2018 ; 36 ; Journal of Park and Recreation Administration Volume 36 ; 2018 ; https://js.sagamorepub.com/ >
     au < manifest ; 2019 ; 37 ; Journal of Park and Recreation Administration Volume 37 ; 2019 ; https://js.sagamorepub.com/ >
-    au < exists ; 2020 ; 38 ; Journal of Park and Recreation Administration Volume 38 ; 2020 ; https://js.sagamorepub.com/ >
+    au < manifest ; 2020 ; 38 ; Journal of Park and Recreation Administration Volume 38 ; 2020 ; https://js.sagamorepub.com/ >
   }
 
   {
@@ -352,7 +353,7 @@
     au < released ; 2017 ; 7 ; Journal of Nonprofit Education and Leadership Volume 7 ; 2017 ; http://js.sagamorepub.com/ >
     au < released ; 2018 ; 8 ; Journal of Nonprofit Education and Leadership Volume 8 ; 2018 ; https://js.sagamorepub.com/ >
     au < manifest ; 2019 ; 9 ; Journal of Nonprofit Education and Leadership Volume 9 ; 2019 ; https://js.sagamorepub.com/ >
-    au < exists ; 2020 ; 10 ; Journal of Nonprofit Education and Leadership Volume 10 ; 2020 ; https://js.sagamorepub.com/ >
+    au < manifest ; 2020 ; 10 ; Journal of Nonprofit Education and Leadership Volume 10 ; 2020 ; https://js.sagamorepub.com/ >
 
     }
 
