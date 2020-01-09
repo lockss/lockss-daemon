@@ -229,8 +229,8 @@
 
     param[collection_id] = CHRG
 
- 
-    au < exists ; 1934 ; Congressional Hearings 1934 ; 1934 ; https://www.govinfo.gov/ > 
+
+    au < manifest ; 1934 ; Congressional Hearings 1934 ; 1934 ; https://www.govinfo.gov/ >
     au < manifest ; 1958 ; Congressional Hearings 1958 ; 1958 ; https://www.govinfo.gov/ > #link on sitemap page does not have a pdf. See https://www.govinfo.gov/sitemap/CHRG_1958_sitemap.xml
     au < doesNotExist ; 1959 ; Congressional Hearings 1959 ; 1959 ; https://www.govinfo.gov/ >
     au < released ; 1960 ; Congressional Hearings 1960 ; 1960 ; https://www.govinfo.gov/ >
