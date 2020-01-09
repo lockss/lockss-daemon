@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gigadb_entry>
+    <dataset id="647" doi="100486">
+        <submitter>
+            <first_name>Meng</first_name>
+            <last_name>Xu</last_name>
+            <affiliation>BGI</affiliation>
+            <username>xumeng@genomics.cn</username>
+            <email>xumeng@genomics.cn</email>
+        </submitter>
+        <title>Supporting data for "Comparative genomics and transcriptomics of Chrysolophus provide insights into the evolution of complex plumage coloration" </title>
+        <description> As one of the most recognizable characteristics in birds, plumage colour has a high impact on understanding the evolution and mechanisms of colouration. Feather and skin are ideal tissues to explore the genomics and complexity of colour patterns in vertebrates. Two species of the genus Chrysolophus, golden pheasant (Chrysolophus pictus) and Lady Amherst’s pheasant (Chrysolophus amherstiae), exhibit brilliant colours in their plumage, but with extreme phenotypic differences, making these two species great models to investigate plumage colouration mechanisms in birds.&lt;br /&gt;We sequence and assemble a genome of golden pheasant with high-coverage and annotate 15,552 protein-coding genes. The genome of Lady Amherst's pheasant is sequenced with low coverage. Based on the feather pigment identification, a series of genomic and transcriptomic comparisons are conducted to investigate the complex features of plumage colouration. Through identifying the lineage-specific sequence variations in Chrysolophus and golden pheasant, against different backgrounds, we find that four melanogenesis biosynthesis genes and some lipid-related genes might be candidate genomic factors for the evolution of melanin and carotenoid pigmentation, respectively. In addition, a study among 47 birds shows some candidate genes related to carotenoid colouration in a broad range of birds. The transcriptome data further reveal important regulators of the two colourations, particularly one splicing transcript of the microphthalmia-associated transcription factor (MITF) gene for pheomelanin synthesis.&lt;br /&gt;Analysis of the golden pheasant and its sister pheasant genomes, as well as comparison with other avian genomes, are helpful to reveal the underlying regulation of their plumage colouration. The present study provides important genomic information and insights for further studies of avian plumage evolution and diversity.</description>
+        <authors>
+            <author>
+                <firstname>Guangqi</firstname>
+                <middlename/>
+                <surname>Gao</surname>
+                <orcid/>
+            </author>
+            <author>
+                <firstname>Meng</firstname>
+                <middlename/>
+                <surname>Xu</surname>
+                <orcid>0000-0003-4747-7319</orcid>
+            </author>
+            <author>
+                <firstname>Yongchun</firstname>
+                <middlename/>
+                <surname>Zuo</surname>
+                <orcid/>
+            </author>
+        </authors>
+        <data_types>
+            <dataset_type>
+                <type_name>Genomic</type_name>
+                <type_id>2</type_id>
+            </dataset_type>
+            <dataset_type>
+                <type_name>Transcriptomic</type_name>
+                <type_id>4</type_id>
+            </dataset_type>
+        </data_types>
+        <image>
+            <image_filename>100486.png</image_filename>
+            <tag>Fig1 Golden pheasant (upper right) and Lady Amherst’s pheasant (upper left) and their feathers.</tag>
+            <license>CC0</license>
+            <source>Gao et al 2018</source>
+            <credit>Gao et al 2018</credit>
+        </image>
+        <dataset_size units="bytes">1401972736</dataset_size>
+        <ftp_site>ftp://parrot.genomics.cn/gigadb/pub/10.5524/100001_101000/100486/</ftp_site>
+        <publication date="2018-08-15">
+            <publisher name="GigaScience database"/>
+            <modification_date/>
+            <fair_use date=""/>
+        </publication>
+        <links>
+            <external_links>
+                <external_link type="Protocols.io">https://www.protocols.io/widgets/protocol/plumage-pigments-identification-by-high-performanc-sjtecnn</external_link>
+            </external_links>
+            <project_links>
+            </project_links>
+            <internal_links>
+            </internal_links>
+            <manuscript_links>
+                <manuscript_link>
+                    <manuscript_DOI>10.1093/gigascience/giy113</manuscript_DOI>
+                    <manuscript_pmid/>
+                </manuscript_link>
+            </manuscript_links>
+            <alternative_identifiers>
+            </alternative_identifiers>
+            <funding_links>
+                <grant>
+                    <funder_name>National Natural Science Foundation of China</funder_name>
+                    <fundref_url>http://dx.doi.org/10.13039/501100001809</fundref_url>
+                    <award>31660301</award>
+                    <comment>Open Project of Key Development Program for Basic Research of Inner Mongolia Autonomous Region</comment>
+                </grant>
+                <grant>
+                    <funder_name>Natural Science Foundation of Inner Mongolia</funder_name>
+                    <fundref_url>http://dx.doi.org/10.13039/501100004763</fundref_url>
+                    <award>2013ZD06</award>
+                    <comment/>
+                </grant>
+                <grant>
+                    <funder_name>MOST</funder_name>
+                    <fundref_url>unknown</fundref_url>
+                    <award>2011DQ782025</award>
+                    <comment>State Key Laboratory of Agricultural Genomics</comment>
+                </grant>
+                <grant>
+                    <funder_name>MOST</funder_name>
+                    <fundref_url>unknown</fundref_url>
+                    <award>2012CB22306</award>
+                    <comment>State Key Development Program for Basic Research of China (973 Program)</comment>
+                </grant>
+            </funding_links>
+        </links>
+        <ds_attributes>
+            <attribute>
+                <key>keyword</key>
+                <value>genome</value>
+                <unit/>
+            </attribute>
+            <attribute>
+                <key>keyword</key>
+                <value>transcriptome</value>
+                <unit/>
+            </attribute>
+            <attribute>
+                <key>keyword</key>
+                <value>chrysolophus</value>
+                <unit/>
+            </attribute>
+            <attribute>
+                <key>keyword</key>
+                <value>plumage</value>
+                <unit/>
+            </attribute>
+            <attribute>
+                <key>keyword</key>
+                <value>colouration</value>
+                <unit/>
+            </attribute>
+        </ds_attributes>
+    </dataset>
+</gigadb_entry>

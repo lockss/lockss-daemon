@@ -68,23 +68,39 @@
         <string>plugin_crawl_seed_factory</string>
         <string>org.lockss.plugin.clockss.gigascience.GigaScienceCrawlSeedFactory</string>
     </entry>
-    <!--
     <entry>
         <string>plugin_article_iterator_factory</string>
-        <string>org.lockss.plugin.gigascience.GigaScienceArticleIteratorFactory</string>
+        <string>org.lockss.plugin.clockss.gigascience.GigaScienceArticleIteratorFactory</string>
     </entry>
     <entry>
         <string>plugin_article_metadata_extractor_factory</string>
-        <string>org.lockss.plugin.gigascience.GigaScienceArticleIteratorFactory</string>
+        <string>org.lockss.plugin.clockss.gigascience.GigaScienceArticleIteratorFactory</string>
+    </entry>
+    <entry>
+        <string>text/xml_metadata_extractor_factory_map</string>
+        <map>
+            <entry>
+                <string>*</string>
+                <string>org.lockss.plugin.clockss.gigascience.GigaScienceAPIHtmlMetadataExtractorFactory</string>
+            </entry>
+        </map>
     </entry>
     <entry>
         <string>text/html_metadata_extractor_factory_map</string>
         <map>
             <entry>
                 <string>*;DublinCore</string>
-                <string>org.lockss.plugin.gigascience.GigaScienceFilesHtmlMetadataExtractorFactory</string>
+                <string>org.lockss.plugin.clockss.gigascience.GigaScienceAPIHtmlMetadataExtractorFactory</string>
             </entry>
         </map>
     </entry>
-    -->
+    <entry>
+        <string>application/xml_metadata_extractor_factory_map</string>
+        <map>
+            <entry>
+                <string>*</string>
+                <string>org.lockss.plugin.clockss.gigascience.GigaScienceAPIHtmlMetadataExtractorFactory</string>
+            </entry>
+        </map>
+    </entry>
 </map>
