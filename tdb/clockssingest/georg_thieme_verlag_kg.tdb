@@ -778,7 +778,7 @@
     au < finished ; finished ; 2013 ; 2013 ; Clinics in Colon and Rectal Surgery Volume 26 ; 026 ; >
     au < finished ; finished ; 2014 ; 2014 ; Clinics in Colon and Rectal Surgery Volume 27 ; 027 ; >
     au < finished ; finished ; 2015 ; 2015 ; Clinics in Colon and Rectal Surgery Volume 28 ; 028 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; 2016 ; Clinics in Colon and Rectal Surgery Volume 29 ; 29 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; 2016 ; Clinics in Colon and Rectal Surgery Volume 29 ; 29 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Clinics in Colon and Rectal Surgery Volume 30 ; 30 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Clinics in Colon and Rectal Surgery Volume 31 ; 31 ; >
     au < crawling ; exists ; 2019 ; 2019 ; Clinics in Colon and Rectal Surgery Volume 32 ; 32 ; >
@@ -2688,7 +2688,7 @@
     param[journal_id] = 10.1055/s-00028776 
     #years = 2016
 
-    au < finished ; crawling ; 2016 ; 2016 ; Journal of Clinical & Academic Ophthalmology Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2016 ; 2016 ; Journal of Clinical & Academic Ophthalmology Volume 8 ; 8 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -3249,7 +3249,7 @@
     au < finished ; finished ; 2013 ; 2013 ; Klinikarzt Der Volume 42 ; 42 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 2014 ; Klinikarzt Der Volume 43 ; 43 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; Klinikarzt Der Volume 44 ; 44 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; 2016 ; Klinikarzt Der Volume 45 ; 45 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2016 ; 2016 ; Klinikarzt Der Volume 45 ; 45 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Klinikarzt Der Volume 46 ; 46 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Klinikarzt Der Volume 47 ; 47 ; >
     au < crawling ; exists ; 2019 ; 2019 ; Klinikarzt Der Volume 48 ; 48 ; >
@@ -3958,7 +3958,7 @@
     au < finished ; finished ; 2013 ; 2013 ; Notfallmedizin up2date Volume 8 ; 8 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 2014 ; Notfallmedizin up2date Volume 9 ; 9 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Notfallmedizin up2date Volume 10 ; 10 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; 2016 ; Notfallmedizin up2date Volume 11 ; 11 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; 2016 ; Notfallmedizin up2date Volume 11 ; 11 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Notfallmedizin up2date Volume 12 ; 12 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Notfallmedizin up2date Volume 13 ; 13 ; >
     au < crawling ; exists ; 2019 ; 2019 ; Notfallmedizin up2date Volume 14 ; 14 ; >
@@ -5759,7 +5759,7 @@
    au < finished ; finished ; 2013 ; 2013 ; Sprache Stimme Gehör Volume 37 ; 37 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2014 ; 2014 ; Sprache Stimme Gehör Volume 38 ; 38 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; Sprache Stimme Gehör Volume 39 ; 39 ; reingest5.clockss.org:8082 >
-   au < finished ; crawling ; 2016 ; 2016 ; Sprache Stimme Gehör Volume 40 ; 40 ; reingest3.clockss.org:8083 >
+   au < finished ; frozen ; 2016 ; 2016 ; Sprache Stimme Gehör Volume 40 ; 40 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Sprache Stimme Gehör Volume 41 ; 41 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Sprache Stimme Gehör Volume 42 ; 42 ; >
    au < crawling ; exists ; 2019 ; 2019 ; Sprache Stimme Gehör Volume 43 ; 43 ; >

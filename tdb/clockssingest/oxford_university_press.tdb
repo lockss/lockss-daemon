@@ -3820,7 +3820,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Current Legal Problems Volume 67 ; 67 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Current Legal Problems Volume 68 ; 68 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Current Legal Problems Volume 69 ; 69 ; >
-    au < finished ; crawling ; 2017 ; 2017 ; Current Legal Problems Volume 70 ; 70 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2017 ; 2017 ; Current Legal Problems Volume 70 ; 70 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2018 ; 2018 ; Current Legal Problems Volume 71 ; 71 ; >
     au < expected ; exists ; 2019 ; 2019 ; Current Legal Problems Volume 72 ; 72 ; >
 
@@ -12402,7 +12402,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; MHR: Basic science of reproductive medicine Volume 21 ; 21 ; >
     au < frozen ; exists ; 2016 ; 2016 ; MHR: Basic science of reproductive medicine Volume 22 ; 22 ; >
     au < frozen ; exists ; 2017 ; 2017 ; MHR: Basic science of reproductive medicine Volume 23 ; 23 ; >
-    au < finished ; crawling ; 2018 ; 2018 ; MHR: Basic science of reproductive medicine Volume 24 ; 24 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2018 ; 2018 ; MHR: Basic science of reproductive medicine Volume 24 ; 24 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2019 ; 2019 ; MHR: Basic science of reproductive medicine Volume 25 ; 25 ; >
 
   }
@@ -12594,7 +12594,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Medical Mycology Volume 53 ; 53 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Medical Mycology Volume 54 ; 54 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Medical Mycology Volume 55 ; 55 ; >
-    au < finished ; crawling ; 2018 ; 2018 ; Medical Mycology Volume 56 ; 56 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2018 ; 2018 ; Medical Mycology Volume 56 ; 56 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2019 ; 2019 ; Medical Mycology Volume 57 ; 57 ; >
 
   }
@@ -15967,7 +15967,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Review of Environmental Economics and Policy Volume 9 ; 9 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Review of Environmental Economics and Policy Volume 10 ; 10 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Review of Environmental Economics and Policy Volume 11 ; 11 ; >
-    au < finished ; crawling ; 2018 ; 2018 ; Review of Environmental Economics and Policy Volume 12 ; 12 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2018 ; 2018 ; Review of Environmental Economics and Policy Volume 12 ; 12 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2019 ; 2019 ; Review of Environmental Economics and Policy Volume 13 ; 13 ; >
 
   }
