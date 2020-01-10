@@ -1,18 +1,31 @@
 {
 
   publisher <
-    name = Fulcrum
+    name = Fulcrum ;
+    info[contract] = 2018 ;
+    info[tester] = 8 ;
+    info[poller] = 8 ;
+    comment[platform] = Fulcrum
   >
+
+  plugin = org.lockss.plugin.michigan.UMichFulcrumBooksPlugin
+  param[base_url] = https://www.fulcrum.org/
+  implicit < status ; year ; isbn ; eisbn ; param[book_uri] ; name ; hidden[proxy] >
 
   {
     title <
-      name = Fulcrum NYU-PSNFS Publications
+      name = Fulcrum NYU-PSNFS Publications ;
+      type = bookSeries
     >
-    
-    # plugin, implicit...
-    
-    # au < ... >
-    
+
+    # This is a quickly put tdb file, the year might not right, need to double check
+    au < manifest ; 1981 ; 9780472029531 ; 9780472029532 ; concern/monographs/br86b359j ; Animal Acts: Performing Species Today (9780472029532) ; >
+    au < manifest ; 1981 ; 9781597409322 ; 9781597409322 ; concern/monographs/j9602145p ; Oplontis: Villa A ("of Poppaea") at Torre Annunziata, Italy. Volume 1. The Ancient Setting and Modern Rediscovery (9781597409322) ; >
+    au < manifest ; 1981 ; 9780814731956 ; 9780814731956 ; concern/monographs/w0892995q ; Show Sold Separately: Promos, Spoilers, and Other Media Paratexts (9780814731956) ; >
+    # The following book has not isbn/eisbn, use a fake one from the previous AU
+    au < manifest ; 1981 ; 9780814731956 ; 9780814731956 ; concern/monographs/zc77sr415 ; Integrated Studies of Cultural and Research Resources (9780814731956) ; >
+    au < manifest ; 1981 ; 9780472037384 ; 9780472124817 ; concern/monographs/ww72bc25j ; Developing Writers in Higher Education: A Longitudinal Study (9780472124817) ; >
+    au < manifest ; 1981 ; 9780252016629 ; 9781628201338 ; concern/monographs/1j92g748c ; Lake Erie Fishermen: Work, Identity, and Tradition (9781628201338) ; >
   }
 
 }
