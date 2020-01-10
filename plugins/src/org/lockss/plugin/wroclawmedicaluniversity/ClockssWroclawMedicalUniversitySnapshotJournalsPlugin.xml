@@ -1,0 +1,107 @@
+<map>
+    <entry>
+        <string>plugin_status</string>
+        <string>ready</string>
+    </entry>
+    <entry>
+        <string>plugin_identifier</string>
+        <string>org.lockss.plugin.wroclawmedicaluniversity.ClockssWroclawMedicalUniversitySnapshotJournalsPlugin</string>
+    </entry>
+    <entry>
+        <string>plugin_version</string>
+        <string>1</string>
+    </entry>
+    <entry>
+        <string>plugin_name</string>
+        <string>Wroclaw Medical University Snapshot Journals Plugin (CLOCKSS)</string>
+    </entry>
+    <entry>
+        <string>plugin_feature_version_map</string>
+        <map>
+            <entry>
+                <string>Substance</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Poll</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Metadata</string>
+                <string>1</string>
+            </entry>
+        </map>
+    </entry>
+    <entry>
+        <string>plugin_config_props</string>
+        <list>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>base_url</key>
+                <displayName>Base URL</displayName>
+                <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+                <type>3</type>
+                <size>40</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>volume_number</key>
+                <displayName>Volume Number</displayName>
+                <description>Number for journal (often used as part of file names)</description>
+                <type>1</type>
+                <size>40</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>issue_number</key>
+                <displayName>Issue Number</displayName>
+                <description>Number for issue (often used as part of file names)</description>
+                <type>1</type>
+                <size>40</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+        </list>
+    </entry>
+    <entry>
+        <string>au_name</string>
+        <string>"Wroclaw Medical University Snapshot Journals Plugin (CLOCKSS), Base URL %s, Volume Number %s, Issue Number %s", base_url, volume_number, issue_number</string>
+    </entry>
+    <entry>
+        <string>au_crawlrules</string>
+        <list>
+            <string>1,"^%s", base_url</string>
+        </list>
+    </entry>
+    <entry>
+        <!--http://www.dmp.umed.wroc.pl/en/archive/-->
+        <string>au_start_url</string>
+        <string>"%sen/archive/"</string>
+    </entry>
+    <entry>
+        <string>au_substance_url_pattern</string>
+        <list>
+            <string>"^http://www.dmp.umed.wroc.pl/pdf/.*/[^/]+.pdf$"</string>
+        </list>
+    </entry>
+    <!--
+    <entry>
+        <string>plugin_article_iterator_factory</string>
+        <string>org.lockss.plugin.pion.PionArticleIteratorFactory</string>
+    </entry>
+    <entry>
+        <string>plugin_article_metadata_extractor_factory</string>
+        <string>org.lockss.plugin.pion.PionArticleIteratorFactory</string>
+    </entry>
+    <entry>
+        <string>text/html_metadata_extractor_factory_map</string>
+        <map>
+            <entry>
+                <string>*;DublinCore</string>
+                <string>org.lockss.plugin.pion.PionHtmlMetadataExtractorFactory</string>
+            </entry>
+        </map>
+    </entry>
+    -->
+</map>
