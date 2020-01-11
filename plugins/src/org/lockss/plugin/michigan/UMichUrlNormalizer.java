@@ -50,13 +50,13 @@ public class UMichUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
   @Override
   public String normalizeUrl(String url, ArchivalUnit au)
 		  throws PluginException {
-	  // no need to check first 
-	  url = url.replaceFirst(LOCALE_PARAM, "");
-	  url = url.replaceFirst(UTF_PARAM, "");
-	  // remove changing argument on end of images 
-	  if (url.contains(IMAGE_SERVICE) && url.contains(JPEG_ARGUMENT)) {
-		  url = url.replaceFirst("\\?.*", "");
-	  }
+//	  // no need to check first 
+//	  url = url.replaceFirst(LOCALE_PARAM, "");
+//	  url = url.replaceFirst(UTF_PARAM, "");
+	  // remove changing argument on end of images
+          if (url.matches("/image-service/.*\\.(jpe?g|png)\\?")) {
+            url = url.replaceFirst("\\?.*", "");
+          }
 	  return(url);
   }
 

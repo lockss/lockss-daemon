@@ -47,7 +47,7 @@ import org.jsoup.nodes.Node;
 import org.lockss.extractor.JsoupHtmlLinkExtractor;
 import org.lockss.extractor.LinkExtractor;
 import org.lockss.extractor.LinkExtractorFactory;
-import org.lockss.extractor.JsoupHtmlLinkExtractor.ScriptTagLinkExtractor;
+import org.lockss.extractor.JsoupHtmlLinkExtractor.*;
 import org.lockss.extractor.LinkExtractor.Callback;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.Logger;
@@ -70,6 +70,8 @@ public class UMichHtmlLinkExtractorFactory implements LinkExtractorFactory {
 		// set up the base link extractor to use specific includes and excludes
 		// TURN on form extraction version of Jsoup for when the default is off
 		JsoupHtmlLinkExtractor extractor = new JsoupHtmlLinkExtractor(false, true, null, null);
+		extractor.registerTagExtractor("source", new SimpleTagLinkExtractor("src")); // not needed in 1.74.8+
+                extractor.registerTagExtractor("track", new SimpleTagLinkExtractor("src")); // not needed in 1.74.8+
 		extractor.registerTagExtractor(SCRIPT_TAG, new UMichScriptTagLinkExtractor());      
 		return extractor;
 	}
