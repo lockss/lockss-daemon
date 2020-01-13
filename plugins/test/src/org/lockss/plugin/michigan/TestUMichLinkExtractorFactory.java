@@ -30,10 +30,15 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.plugin.michigan;
 
-import java.util.Set;
 import org.lockss.plugin.UrlNormalizer;
 import org.lockss.plugin.atypon.BaseAtyponUrlNormalizer;
+
+import java.io.ByteArrayInputStream;
+import java.util.*;
+import java.util.regex.Pattern;
+
 import org.lockss.extractor.LinkExtractor;
+import org.lockss.extractor.LinkExtractor.Callback;
 import org.lockss.extractor.RegexpCssLinkExtractor;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockArchivalUnit;
@@ -74,7 +79,7 @@ public class TestUMichLinkExtractorFactory extends LockssTestCase {
       m_mau = new MockArchivalUnit();
       m_callback = new MyLinkExtractorCallback();
       fact = new UMichHtmlLinkExtractorFactory();
-      m_extractor = fact.createLinkExtractor("html");
+      m_extractor = fact.createLinkExtractor("text/html");
  
     }
  
@@ -82,7 +87,7 @@ public class TestUMichLinkExtractorFactory extends LockssTestCase {
   private Set<String> parseSingleSource(String source)
       throws Exception {
     MockArchivalUnit m_mau = new MockArchivalUnit();
-    LinkExtractor ue = new RegexpCssLinkExtractor();
+    LinkExtractor ue = new RegexpCssLinkExtractor(); // FIXME why a CSS link extractor?
     m_mau.setLinkExtractor("text/html", ue);
     MockCachedUrl mcu =
       new org.lockss.test.MockCachedUrl("https://www.fulcrum.org/epubs/9s161681f", m_mau);
@@ -118,9 +123,10 @@ public class TestUMichLinkExtractorFactory extends LockssTestCase {
 /*
   * Optionally use a real html page
  */
-  
+
   //static final String input_1 = "/tmp/testLinks.html";
   public void testDownloadsFromFormFile() throws Exception {
+    // FIXME this test does not seem to test anything
 	  /*
     InputStream input1 = new FileInputStream(input_1);
     String s_input1;
@@ -135,6 +141,90 @@ public class TestUMichLinkExtractorFactory extends LockssTestCase {
     for (String url : result_strings) {
       log.debug3("from URL: " + url);
     }
+  }
+
+  public static final String leafletTileLayerIiifAbsolute =
+      "<script>" +
+      "\r\n" + 
+      "    $().ready(function() {\r\n" + 
+      "        var map, layer;\r\n" + 
+      "        map = L.map('image', {\r\n" + 
+      "            center: [0, 0],\r\n" + 
+      "            crs: L.CRS.Simple,\r\n" + 
+      "            zoom: 0,\r\n" + 
+      "            scrollWheelZoom: false,\r\n" + 
+      "        });\r\n" + 
+      "        layer = L.tileLayer.iiif(\"http://www.foo.com/image-service/123456789/info.json?1555623447\", { bestFit: true } );\r\n" + 
+      "        layer.addTo(map);\r\n" + 
+      "        L.control.pan({ panOffset: 150 }).addTo(map);\r\n" + 
+      "        // Detect fullscreen toggling\r\n" + 
+      "        // Doesn't zoom in/out unless the browser has had a chance\r\n" + 
+      "        // to enter fullscreen, hence the timeout.\r\n" + 
+      "        // \"TypeError: The expression cannot be converted to return the specified type.\"\r\n" + 
+      "        // that prevents fullscreen toggle predates the code below,\r\n" + 
+      "        // I suspect a bug in vendor/leaflet.fullscreen-1.5.1/Control.FullScreen.js\r\n" + 
+      "        map.on('enterFullscreen', function() {\r\n" + 
+      "          setTimeout(function() {\r\n" + 
+      "            try { layer._fitBounds(); } catch (err) {}\r\n" + 
+      "            }, 1000);\r\n" + 
+      "        });\r\n" + 
+      "        map.on('exitFullscreen', function() {\r\n" + 
+      "          setTimeout(function() {\r\n" + 
+      "            try { layer._fitBounds(); } catch (err) {}\r\n" + 
+      "            }, 1000);\r\n" + 
+      "        });\r\n" + 
+      "    });\r\n" +
+      "</script>";
+  
+  public static final String leafletTileLayerIiifBaseUrl =
+      "<script>" +
+      "        layer = L.tileLayer.iiif(\"/image-service/123456789/info.json?1555623447\", { bestFit: true } );\r\n" + 
+      "</script>";
+  
+  public static final String leafletTileLayerIiifRelative =
+      "<script>" +
+      "        layer = L.tileLayer.iiif(\"abcdefgh\", { bestFit: true } );\r\n" + 
+      "</script>";
+  
+  public void testScriptTagLeafletTileLayerIiif() throws Exception {
+    LinkExtractor le = new UMichHtmlLinkExtractorFactory().createLinkExtractor(Constants.MIME_TYPE_HTML);
+    final List<String> res = new ArrayList<String>();
+    Callback cb = new Callback() {
+      @Override
+      public void foundLink(String url) {
+        res.add(url);
+      }
+    };
+    
+    // Absolute
+    le.extractUrls(null,
+                   new ByteArrayInputStream(leafletTileLayerIiifAbsolute.getBytes(Constants.ENCODING_UTF_8)),
+                   Constants.ENCODING_UTF_8,
+                   "http://www.example.com/concern/file_sets/111111111",
+                   cb);
+    assertEquals(Arrays.asList("http://www.foo.com/image-service/123456789/info.json"),
+                 res);
+    res.clear();
+    
+    // Base URL
+    le.extractUrls(null,
+                   new ByteArrayInputStream(leafletTileLayerIiifBaseUrl.getBytes(Constants.ENCODING_UTF_8)),
+                   Constants.ENCODING_UTF_8,
+                   "http://www.example.com/concern/file_sets/111111111",
+                   cb);
+    assertEquals(Arrays.asList("http://www.example.com/image-service/123456789/info.json"),
+                 res);
+    res.clear();
+    
+    // Relative
+    le.extractUrls(null,
+                   new ByteArrayInputStream(leafletTileLayerIiifRelative.getBytes(Constants.ENCODING_UTF_8)),
+                   Constants.ENCODING_UTF_8,
+                   "http://www.example.com/concern/file_sets/111111111",
+                   cb);
+    assertEquals(Arrays.asList("http://www.example.com/concern/file_sets/abcdefgh"),
+                 res);
+    res.clear();
   }
   
 }
