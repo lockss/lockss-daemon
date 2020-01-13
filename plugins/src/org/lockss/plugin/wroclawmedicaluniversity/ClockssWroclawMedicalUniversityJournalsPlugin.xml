@@ -5,7 +5,7 @@
     </entry>
     <entry>
         <string>plugin_identifier</string>
-        <string>org.lockss.plugin.wroclawmedicaluniversity.ClockssWroclawMedicalUniversitySnapshotJournalsPlugin</string>
+        <string>org.lockss.plugin.wroclawmedicaluniversity.ClockssWroclawMedicalUniversityJournalsPlugin</string>
     </entry>
     <entry>
         <string>plugin_version</string>
@@ -13,7 +13,7 @@
     </entry>
     <entry>
         <string>plugin_name</string>
-        <string>Wroclaw Medical University Snapshot Journals Plugin (CLOCKSS)</string>
+        <string>Wroclaw Medical University Journals Plugin (CLOCKSS)</string>
     </entry>
     <entry>
         <string>plugin_feature_version_map</string>
@@ -45,18 +45,18 @@
                 <defaultOnly>false</defaultOnly>
             </org.lockss.daemon.ConfigParamDescr>
             <org.lockss.daemon.ConfigParamDescr>
-                <key>volume_number</key>
-                <displayName>Volume Number</displayName>
-                <description>Number for journal (often used as part of file names)</description>
-                <type>1</type>
-                <size>40</size>
+                <key>year</key>
+                <displayName>Year</displayName>
+                <description>Four digit year (e.g., 2004)</description>
+                <type>4</type>
+                <size>4</size>
                 <definitional>true</definitional>
                 <defaultOnly>false</defaultOnly>
             </org.lockss.daemon.ConfigParamDescr>
             <org.lockss.daemon.ConfigParamDescr>
-                <key>issue_number</key>
-                <displayName>Issue Number</displayName>
-                <description>Number for issue (often used as part of file names)</description>
+                <key>volume_number</key>
+                <displayName>Volume Number</displayName>
+                <description>Number for volume (often used as part of file names)</description>
                 <type>1</type>
                 <size>40</size>
                 <definitional>true</definitional>
@@ -66,23 +66,53 @@
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"Wroclaw Medical University Snapshot Journals Plugin (CLOCKSS), Base URL %s, Volume Number %s, Issue Number %s", base_url, volume_number, issue_number</string>
+        <string>"Wroclaw Medical University  Journals Plugin (CLOCKSS), Base URL %s, Year %d, Volume Number %s", base_url, year, volume_number</string>
     </entry>
     <entry>
         <string>au_crawlrules</string>
         <list>
-            <string>1,"^%s", base_url</string>
+            <string>2,"%sen/archive/", base_url</string>
+            <string>1,"http://www.advances.umed.wroc.pl/common/css/"</string>
+            <string>1,"http://www.dmp.umed.wroc.pl/pdf/%d/%s/", year, volume_number</string>
+            <string>1,"^%sen/issue/%d/%s/", base_url, year, volume_number</string>
+            <string>1,"^%sen/article/%d/%s/", base_url, year, volume_number</string>
         </list>
+    </entry>
+    <entry>
+        <string>au_permission_url</string>
+        <string>"%sen/archive/", base_url</string>
     </entry>
     <entry>
         <!--http://www.dmp.umed.wroc.pl/en/archive/-->
         <string>au_start_url</string>
-        <string>"%sen/archive/"</string>
+        <string>"%sen/archive/", base_url</string>
     </entry>
     <entry>
         <string>au_substance_url_pattern</string>
         <list>
             <string>"^http://www.dmp.umed.wroc.pl/pdf/.*/[^/]+.pdf$"</string>
+        </list>
+    </entry>
+    <entry>
+        <string>au_permitted_host_pattern</string>
+        <list>
+            <string>(fonts|ajax)\.googleapis\.com</string>
+            <string>"cdnjs\.cloudflare\.com"</string>
+        </list>
+    </entry>
+    <entry>
+        <string>au_repair_from_peer_if_missing_url_pattern</string>
+        <list>
+            <string>.+[.](bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)(\?.*)?$"</string>
+            <string>https://fonts\.googleapis\.com/css\?</string>
+        </list>
+    </entry>
+    <entry>
+        <!-- these will not count towards poll results but will replicate from peer if above -->
+        <string>au_url_poll_result_weight</string>
+        <list>
+            <string>".+[.](bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)(\?.*)?$", 0</string>
+            <string>"https://fonts\.googleapis\.com/css\?", 0</string>
         </list>
     </entry>
     <!--
