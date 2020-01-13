@@ -147,7 +147,7 @@ public class UMichHtmlLinkExtractorFactory implements LinkExtractorFactory {
                   
                   Matcher fileSetsMat = PATTERN_FILE_SETS.matcher(srcUrl);
                   if (fileSetsMat.matches()) {
-                    doFileSets(fileSetsMat.group(2), node, au, cb);
+                    doFileSets(fileSetsMat.group(1), node, au, cb);
                     return;
                   }
                   
@@ -170,7 +170,7 @@ public class UMichHtmlLinkExtractorFactory implements LinkExtractorFactory {
                     for (String line = br.readLine() ; line != null ; line = br.readLine()) {
                       Matcher mat = PATTERN_LEAFLET_TILELAYER_IIIF.matcher(line);
                       if (mat.find()) {
-                        String found = mat.group(1);
+                        String found = mat.group(2);
                         String url = null;
                         if (found.startsWith("http")) { // assume absolute
                           url = found;
