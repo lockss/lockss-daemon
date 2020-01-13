@@ -46,7 +46,7 @@ import org.lockss.test.MockCachedUrl;
 import org.lockss.util.Constants;
 
 
-public class TestUMichLinkExtractorFactory extends LockssTestCase {
+public class TestUMichHtmlLinkExtractorFactory extends LockssTestCase {
   UrlNormalizer normalizer = new BaseAtyponUrlNormalizer();
 
   private UMichHtmlLinkExtractorFactory fact;

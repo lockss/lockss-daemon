@@ -90,8 +90,14 @@ public class UMichHtmlLinkExtractorFactory implements LinkExtractorFactory {
 		protected static final Pattern PATTERN_FILE_SETS =
 		    Pattern.compile("^(https?://[^/]+/concern/file_sets/[^/]+)(?:\\?.*)?$");
 		
+		/*
+		 * group 1: function call + open parenthesis + open quotation mark
+		 * group 2: primary JSON URL
+		 * group 3: optional JSON URL query (question mark + query string)
+		 * group 4: close quotatin mark + comma
+		 */
                 protected static final Pattern PATTERN_LEAFLET_TILELAYER_IIIF =
-                    Pattern.compile("tileLayer\\.iiif\\(\"([^?\"]+)(?:\\?[^\"]*)?\",");
+                    Pattern.compile("(tileLayer\\.iiif\\(\")([^?\"]+)(\\?[^\"]*)?(\",)");
                 
 		/* Make sure we're on a page that we care to parse for download information
 		 * Note that the base_url in this match does not include final "/" on purpose
@@ -164,7 +170,7 @@ public class UMichHtmlLinkExtractorFactory implements LinkExtractorFactory {
                     for (String line = br.readLine() ; line != null ; line = br.readLine()) {
                       Matcher mat = PATTERN_LEAFLET_TILELAYER_IIIF.matcher(line);
                       if (mat.find()) {
-                        String found = mat.group(1);
+                        String found = mat.group(2);
                         String url = null;
                         if (found.startsWith("http")) { // assume absolute
                           url = found;
