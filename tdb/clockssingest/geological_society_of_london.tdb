@@ -145,7 +145,7 @@
     au < gsl.ClockssGSLDrupalPlugin ; deepCrawl ; exists ; 2017 ; Geological Society of London Memoirs Volume 47 ; 47 ; http://mem.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; frozen ; exists ; 2017 ; Geological Society of London Memoirs Volume 48 ; 48 ; http://mem.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 2019 ; Geological Society of London Memoirs Volume 49 ; 49 ; https://mem.lyellcollection.org/ ;  >
-    au < gsl.ClockssGSLDrupalPlugin ; expected ; exists ; 2019 ; Geological Society of London Memoirs Volume 50 ; 50 ; https://mem.lyellcollection.org/ ;  >
+    au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 2019 ; Geological Society of London Memoirs Volume 50 ; 50 ; https://mem.lyellcollection.org/ ;  >
 
   }
 
@@ -646,7 +646,7 @@
     au < gsl.ClockssGSLDrupalPlugin ; expected ; exists ; 2019 ; Geological Society of London Special Publications Volume 484 ; 484 ; https://sp.lyellcollection.org/ ; >
     au < gsl.ClockssGSLDrupalPlugin ; expected ; exists ; 2019 ; Geological Society of London Special Publications Volume 485 ; 485 ; https://sp.lyellcollection.org/ ; >
     au < gsl.ClockssGSLDrupalPlugin ; expected ; exists ; 2019 ; Geological Society of London Special Publications Volume 486 ; 486 ; https://sp.lyellcollection.org/ ; >
-    au < gsl.ClockssGSLDrupalPlugin ; expected ; exists ; 2019 ; Geological Society of London Special Publications Volume 487 ; 487 ; https://sp.lyellcollection.org/ ; >
+    au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 2019 ; Geological Society of London Special Publications Volume 487 ; 487 ; https://sp.lyellcollection.org/ ; >
     au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 2019 ; Geological Society of London Special Publications Volume 488 ; 488 ; https://sp.lyellcollection.org/ ; >
 
   }
