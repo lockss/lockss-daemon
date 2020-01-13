@@ -61,8 +61,7 @@
             <!--  a strange redundant argument that causes a 503 now normalized-->
             <!-- <string>2,"^https?://%s/%s.*\?utf8=", url_host(base_url), book_uri</string>-->
             <string>1,"^https?://%s/%s", url_host(base_url), book_uri</string>
-            <string>1,"^https?://%s/concern/file_sets", url_host(base_url)</string>
-            <string>1,"^https?://%s/(downloads|epubs)/", url_host(base_url)</string>
+            <string>1,"^https?://%s/(concern/file_sets|downloads|epubs|image-service)/", url_host(base_url)</string>
         </list>
     </entry>
     <entry>

@@ -175,6 +175,7 @@ public class UMichHtmlLinkExtractorFactory implements LinkExtractorFactory {
                         else { // assume relative to srcUrl
                           url = srcUrl.substring(0, srcUrl.lastIndexOf('/') + 1) + found;
                         }
+                        log.debug2(String.format("Found IIIF URL: %s", url));
                         cb.foundLink(url);
                         break;
                       }
