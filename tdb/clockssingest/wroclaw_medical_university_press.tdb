@@ -1,0 +1,126 @@
+{
+
+  publisher <
+    name = Wroclaw Medical University Press ;
+    info[contract] = 2019 ;
+    info[tester] = 5 ;
+    info[poller] = 5
+  >
+
+
+    #plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+    plugin = needs.plugin
+    implicit < status ; status2 ; year ; param[year] ; name ; param[volume_name] ; hidden[proxy] >
+
+  {
+
+    title <
+      name = Advances in Clinical and Experimental Medicine ;
+      issn = 1899–5276 ;
+      eissn = 2451-2680
+    >
+    
+    param[base_url] = http://www.advances.umed.wroc.pl/
+    
+    au < exists ; exists ; 2006 ; 2006 ; Advances in Clinical and Experimental Medicine Volume 15 ; 15 ;  >
+    au < exists ; exists ; 2007 ; 2007 ; Advances in Clinical and Experimental Medicine Volume 16 ; 16 ;  >
+    au < exists ; exists ; 2008 ; 2008 ; Advances in Clinical and Experimental Medicine Volume 17 ; 17 ;  >
+    au < exists ; exists ; 2009 ; 2009 ; Advances in Clinical and Experimental Medicine Volume 18 ; 18 ;  >
+    au < exists ; exists ; 2010 ; 2010 ; Advances in Clinical and Experimental Medicine Volume 19 ; 19 ;  >
+    au < exists ; exists ; 2011 ; 2011 ; Advances in Clinical and Experimental Medicine Volume 20 ; 20 ;  >
+    au < exists ; exists ; 2012 ; 2012 ; Advances in Clinical and Experimental Medicine Volume 21 ; 21 ;  >
+    au < exists ; exists ; 2013 ; 2013 ; Advances in Clinical and Experimental Medicine Volume 22 ; 22 ;  >
+    au < exists ; exists ; 2014 ; 2014 ; Advances in Clinical and Experimental Medicine Volume 23 ; 23 ;  >
+    au < exists ; exists ; 2015 ; 2015 ; Advances in Clinical and Experimental Medicine Volume 24 ; 24 ;  >
+    au < exists ; exists ; 2016 ; 2016 ; Advances in Clinical and Experimental Medicine Volume 25 ; 25 ;  >
+    au < exists ; exists ; 2017 ; 2017 ; Advances in Clinical and Experimental Medicine Volume 26 ; 26 ;  >
+    au < exists ; exists ; 2018 ; 2018 ; Advances in Clinical and Experimental Medicine Volume 27 ; 27 ;  >
+    au < exists ; exists ; 2019 ; 2019 ; Advances in Clinical and Experimental Medicine Volume 28 ; 28 ;  >
+
+  }
+
+  {
+
+    title <
+      name = Dental and Medical Problems ;
+      issn = 1644-387X ;
+      eissn = 2300-9020
+    >
+    
+    param[base_url] = http://www.dmp.umed.wroc.pl/
+    
+    au < exists ; exists ; 2009 ; 2009 ; Dental and Medical Problems Volume 46 ; 46 ;  >
+    au < exists ; exists ; 2010 ; 2010 ; Dental and Medical Problems Volume 47 ; 47 ;  >
+    au < exists ; exists ; 2011 ; 2011 ; Dental and Medical Problems Volume 48 ; 48 ;  >
+    au < exists ; exists ; 2012 ; 2012 ; Dental and Medical Problems Volume 49 ; 49 ;  >
+    au < exists ; exists ; 2013 ; 2013 ; Dental and Medical Problems Volume 50 ; 50 ;  >
+    au < exists ; exists ; 2014 ; 2014 ; Dental and Medical Problems Volume 51 ; 51 ;  >
+    au < exists ; exists ; 2015 ; 2015 ; Dental and Medical Problems Volume 52 ; 52 ;  >
+    au < exists ; exists ; 2016 ; 2016 ; Dental and Medical Problems Volume 53 ; 53 ;  >
+    au < exists ; exists ; 2017 ; 2017 ; Dental and Medical Problems Volume 54 ; 54 ;  >
+    au < exists ; exists ; 2018 ; 2018 ; Dental and Medical Problems Volume 55 ; 55 ;  >
+    au < exists ; exists ; 2019 ; 2019 ; Dental and Medical Problems Volume 56 ; 56 ;  >
+
+  }
+
+  {
+
+    title <
+      name = Polymers in Medicine ;
+      issn = 1644-387X ;
+      eissn = 2300-9020
+    >
+    
+    param[base_url] = http://www.polimery.umed.wroc.pl/
+    
+    au < exists ; exists ; 2009 ; 2009 ; Polymers in Medicine Volume 39 ; 39 ;  >
+    au < exists ; exists ; 2010 ; 2010 ; Polymers in Medicine Volume 40 ; 40 ;  >
+    au < exists ; exists ; 2011 ; 2011 ; Polymers in Medicine Volume 41 ; 41 ;  >
+    au < exists ; exists ; 2012 ; 2012 ; Polymers in Medicine Volume 42 ; 42 ;  >
+    au < exists ; exists ; 2013 ; 2013 ; Polymers in Medicine Volume 43 ; 43 ;  >
+    au < exists ; exists ; 2014 ; 2014 ; Polymers in Medicine Volume 44 ; 44 ;  >
+    au < exists ; exists ; 2015 ; 2015 ; Polymers in Medicine Volume 45 ; 45 ;  >
+    au < exists ; exists ; 2016 ; 2016 ; Polymers in Medicine Volume 46 ; 46 ;  >
+    au < exists ; exists ; 2017 ; 2017 ; Polymers in Medicine Volume 47 ; 47 ;  >
+    au < exists ; exists ; 2018 ; 2018 ; Polymers in Medicine Volume 48 ; 48 ;  >
+    au < exists ; exists ; 2019 ; 2019 ; Polymers in Medicine Volume 49 ; 49 ;  >
+
+  }
+
+  {
+
+    title <
+      name = Pielęgniarstwo i Zdrowie Publiczne ;
+      issn = 2082-9876 ;
+      eissn = 2451-1870
+    >
+    
+    param[base_url] = http://www.pzp.umed.wroc.pl/
+    
+    au < exists ; exists ; 2011 ; 2011 ; Pielęgniarstwo i Zdrowie Publiczne Volume 1 ; 1 ;  >
+    au < exists ; exists ; 2012 ; 2012 ; Pielęgniarstwo i Zdrowie Publiczne Volume 2 ; 2 ;  >
+    au < exists ; exists ; 2013 ; 2013 ; Pielęgniarstwo i Zdrowie Publiczne Volume 3 ; 3 ;  >
+    au < exists ; exists ; 2014 ; 2014 ; Pielęgniarstwo i Zdrowie Publiczne Volume 4 ; 4 ;  >
+    au < exists ; exists ; 2015 ; 2015 ; Pielęgniarstwo i Zdrowie Publiczne Volume 5 ; 5 ;  >
+    au < exists ; exists ; 2016 ; 2016 ; Pielegniarstwo i Zdrowie Publiczne Volume 6 ; 6 ;  >
+    au < exists ; exists ; 2017 ; 2017 ; Pielegniarstwo i Zdrowie Publiczne Volume 7 ; 7 ;  >
+    au < exists ; exists ; 2018 ; 2018 ; Pielegniarstwo i Zdrowie Publiczne Volume 8 ; 8 ;  >
+    au < exists ; exists ; 2019 ; 2019 ; Pielegniarstwo i Zdrowie Publiczne Volume 9 ; 9 ;  >
+
+  }
+
+  {
+
+    title <
+      name = Clinical Education & Medical Simulation 
+    >
+    
+    param[base_url] = http://www.cems.umed.wroc.pl/
+    
+    au < doNotProcess ; exists ; 2018 ; 2018 ; Clinical Education & Medical Simulation Volume 1 ; 1 ;  >
+    au < doNotProcess ; exists ; 2019 ; 2019 ; Clinical Education & Medical Simulation Volume 2 ; 2 ;  >
+    # can't process till it has an issn
+
+  }
+
+}
