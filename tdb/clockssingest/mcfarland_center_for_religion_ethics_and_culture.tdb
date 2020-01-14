@@ -20,8 +20,8 @@
       param[base_url] = https://crossworks.holycross.edu/
       param[journal_abbr] = jgc
 
-      au < frozen ; exists ; 2016-2017 ; Journal of Global Catholicism Volume 1 ; 1 ; >
-      au < frozen ; exists ; 2017-2018 ; Journal of Global Catholicism Volume 2 ; 2 ; >
+      au < finished ; manifest ; 2016-2017 ; Journal of Global Catholicism Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2017-2018 ; Journal of Global Catholicism Volume 2 ; 2 ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2019 ; Journal of Global Catholicism Volume 3 ; 3 ; >
       au < expected ; exists ; 2020 ; Journal of Global Catholicism Volume 4 ; 4 ; >
 
