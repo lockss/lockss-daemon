@@ -54,7 +54,7 @@ public class UMichUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
 //	  url = url.replaceFirst(LOCALE_PARAM, "");
 //	  url = url.replaceFirst(UTF_PARAM, "");
 	  // remove changing argument on end of images
-          if (url.matches("/image-service/.*\\.(jpe?g|png)\\?")) {
+          if (url.matches("/image-service/.*\\.(jpe?g|png|json)\\?")) {
             url = url.replaceFirst("\\?.*", "");
           }
 	  return(url);

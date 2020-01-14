@@ -133,6 +133,10 @@
         </map>
     </entry>
     <entry>
+        <string>text/javascript_link_rewriter_factory</string>
+        <string>org.lockss.plugin.michigan.UMichJavaScriptLinkRewriterFactory</string>
+    </entry>
+    <entry>
         <string>au_repair_from_peer_if_missing_url_pattern</string>
         <list>
             <string>.+[.](bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)(\?.*)?$"</string>
