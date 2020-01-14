@@ -116,6 +116,14 @@
         <string>org.lockss.plugin.michigan.IiifJsonLinkExtractorFactory</string>
     </entry>
     <entry>
+        <string>application/json_link_rewriter_factory</string>
+        <string>org.lockss.plugin.michigan.UMichJsonLinkRewriterFactory</string>
+    </entry>
+    <entry>
+        <string>application/ld+json_link_rewriter_factory</string>
+        <string>org.lockss.plugin.michigan.UMichJsonLinkRewriterFactory</string>
+    </entry>
+    <entry>
         <string>plugin_article_iterator_factory</string>
         <string>org.lockss.plugin.michigan.UMichBookIteratorFactory</string>
     </entry>
