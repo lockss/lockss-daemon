@@ -31,14 +31,14 @@ public class IiifJsonLinkExtractor implements LinkExtractor {
     // Must be called "info.json"
     final String slashinfodotjson = "/info.json";
     if (!srcUrl.endsWith(slashinfodotjson)) {
-      log.debug(String.format("Not a designated IIIF Image Info file: %s", srcUrl));
+      log.debug2(String.format("Not a designated IIIF Image Info file: %s", srcUrl));
       return;
     }
     
     // Parse input
+    ObjectMapper objectMapper = new ObjectMapper();
     JsonNode rootNode = null;
     try (Reader reader = new InputStreamReader(in, encoding)) {
-      ObjectMapper objectMapper = new ObjectMapper();
       rootNode = objectMapper.readTree(reader);
       if (log.isDebug3()) {
         log.debug3(String.format("Input: %s", rootNode));
@@ -55,8 +55,8 @@ public class IiifJsonLinkExtractor implements LinkExtractor {
     // ID
     String id = rootNode.path("@id").asText(null);
     if (id == null) {
-      // Probably doesn't happen or invalid, but just in case, try to fall back on srcUrl
-      id = srcUrl.substring(0, srcUrl.length() - slashinfodotjson.length());
+      log.debug(String.format("Missing @id: %s", srcUrl));
+      return;
     }
     
     // Width and height
