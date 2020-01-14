@@ -61,7 +61,7 @@ public class UMichJsonLinkRewriterFactory implements LinkRewriterFactory {
     }
 
     // Replace ID
-    rootObject.put("@id", "http://127.0.0.1:8081/ServeContent?url=" + id); // FIXME
+    rootObject.put("@id", xform.rewrite(id));
     return new ByteArrayInputStream(rootObject.toString().getBytes(encoding));
   }
   
