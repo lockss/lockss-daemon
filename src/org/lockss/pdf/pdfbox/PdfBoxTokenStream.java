@@ -97,12 +97,15 @@ public abstract class PdfBoxTokenStream implements PdfTokenStream {
     PDFStreamParser pdfStreamParser = null;
     try {
       pdfStreamParser = new PDFStreamParser(pdStream.getStream());
+      int fileBackedThreshold =
+	(CurrentConfig.getBooleanParam(PARAM_ENABLE_FILE_BACKED_LISTS,
+				       DEFAULT_ENABLE_FILE_BACKED_LISTS))
+	? CurrentConfig.getIntParam(PARAM_FILE_BACKED_LISTS_THRESHOLD,
+				    DEFAULT_FILE_BACKED_LISTS_THRESHOLD)
+	: Integer.MAX_VALUE;
       Iterator<Object> iter = pdfStreamParser.getTokenIterator();
       while (iter.hasNext()) {
-        if (   CurrentConfig.getBooleanParam(PARAM_ENABLE_FILE_BACKED_LISTS,
-                                             DEFAULT_ENABLE_FILE_BACKED_LISTS)
-            && tokens.size() == CurrentConfig.getIntParam(PARAM_FILE_BACKED_LISTS_THRESHOLD,
-                                                          DEFAULT_FILE_BACKED_LISTS_THRESHOLD)) {
+        if (tokens.size() == fileBackedThreshold) {
           // List becoming too large for main memory
           FileBackedList<PdfToken> newList = new FileBackedList<PdfToken>(tokens);
           // Clean up old list
