@@ -110,7 +110,7 @@
         <string>au_repair_from_peer_if_missing_url_pattern</string>
         <list>
             <string>.+[.](bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)(\?.*)?$"</string>
-            <string>https://fonts\.googleapis\.com/css\?</string>
+            <string>fonts\.googleapis\.com/css\?</string>
         </list>
     </entry>
     <entry>
@@ -118,26 +118,24 @@
         <string>au_url_poll_result_weight</string>
         <list>
             <string>".+[.](bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)(\?.*)?$", 0</string>
-            <string>"https://fonts\.googleapis\.com/css\?", 0</string>
+            <string>"fonts\.googleapis\.com/css\?", 0</string>
         </list>
     </entry>
-    <!--
-<entry>
-    <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.wroclawmedicaluniversity.WroclawMedicalUniversityArticleIteratorFactory</string>
-</entry>
-<entry>
-    <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.wroclawmedicaluniversity.WroclawMedicalUniversityArticleIteratorFactory</string>
-</entry>
-<entry>
-    <string>text/html_metadata_extractor_factory_map</string>
-    <map>
-        <entry>
-            <string>*</string>
-            <string>org.lockss.plugin.wroclawmedicaluniversity.WroclawMedicalUniversityMetadataExtractorFactory</string>
-        </entry>
-    </map>
-</entry>
--->
+    <entry>
+        <string>plugin_article_iterator_factory</string>
+        <string>org.lockss.plugin.wroclawmedicaluniversity.WroclawMedicalUniversityArticleIteratorFactory</string>
+    </entry>
+    <entry>
+        <string>plugin_article_metadata_extractor_factory</string>
+        <string>org.lockss.plugin.wroclawmedicaluniversity.WroclawMedicalUniversityArticleIteratorFactory</string>
+    </entry>
+    <entry>
+        <string>text/html_metadata_extractor_factory_map</string>
+        <map>
+            <entry>
+                <string>*</string>
+                <string>org.lockss.plugin.wroclawmedicaluniversity.WroclawMedicalUniversityMetadataExtractorFactory</string>
+            </entry>
+        </map>
+    </entry>
 </map>
