@@ -430,7 +430,7 @@
       au < manifest ; exists ; 2019 ; Science Volume 364 ; 364 ; https://science.sciencemag.org/ ; >
       au < manifest ; exists ; 2019 ; Science Volume 365 ; 365 ; https://science.sciencemag.org/ ; >
       au < manifest ; exists ; 2019 ; Science Volume 366 ; 366 ; https://science.sciencemag.org/ ; >
-      au < expected ; exists ; 2020 ; Science Volume 367 ; 367 ; https://science.sciencemag.org/ ; >
+      au < manifest ; exists ; 2020 ; Science Volume 367 ; 367 ; https://science.sciencemag.org/ ; >
       au < expected ; exists ; 2020 ; Science Volume 368 ; 368 ; https://science.sciencemag.org/ ; >
       au < expected ; exists ; 2020 ; Science Volume 369 ; 369 ; https://science.sciencemag.org/ ; >
       au < expected ; exists ; 2020 ; Science Volume 370 ; 370 ; https://science.sciencemag.org/ ; >
@@ -484,7 +484,7 @@
       au < deepCrawl ; exists ; 2017 ; Science Translational Medicine Volume 9 ; 9 ; http://stm.sciencemag.org/ ; >
       au < deepCrawl ; exists ; 2018 ; Science Translational Medicine Volume 10 ; 10 ; http://stm.sciencemag.org/ ; >
       au < manifest ; exists ; 2019 ; Science Translational Medicine Volume 11 ; 11 ; https://stm.sciencemag.org/ ; >
-      au < expected ; exists ; 2020 ; Science Translational Medicine Volume 12 ; 12 ; https://stm.sciencemag.org/ ; >
+      au < manifest ; exists ; 2020 ; Science Translational Medicine Volume 12 ; 12 ; https://stm.sciencemag.org/ ; >
 
   }
 
@@ -502,7 +502,7 @@
       au < frozen ; exists ; 2017 ; Science Advances Volume 3 ; 3 ; http://advances.sciencemag.org/ ; >
       au < deepCrawl ; exists ; 2018 ; Science Advances Volume 4 ; 4 ; http://advances.sciencemag.org/ ; >
       au < manifest ; exists ; 2019 ; Science Advances Volume 5 ; 5 ; https://advances.sciencemag.org/ ; >
-      au < expected ; exists ; 2020 ; Science Advances Volume 6 ; 6 ; https://advances.sciencemag.org/ ; >
+      au < manifest ; exists ; 2020 ; Science Advances Volume 6 ; 6 ; https://advances.sciencemag.org/ ; >
 
   }
 
@@ -536,7 +536,7 @@
       au < frozen ; exists ; 2017 ; Science Immunology Volume 2 ; 2 ; http://immunology.sciencemag.org/ ; >
       au < deepCrawl ; exists ; 2018 ; Science Immunology Volume 3 ; 3 ; http://immunology.sciencemag.org/ ; >
       au < manifest ; exists ; 2019 ; Science Immunology Volume 4 ; 4 ; https://immunology.sciencemag.org/ ; >
-      au < expected ; exists ; 2020 ; Science Immunology Volume 5 ; 5 ; https://immunology.sciencemag.org/ ; >
+      au < manifest ; exists ; 2020 ; Science Immunology Volume 5 ; 5 ; https://immunology.sciencemag.org/ ; >
 
   }
 
