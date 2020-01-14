@@ -72,8 +72,12 @@
         <string>au_crawlrules</string>
         <list>
             <string>2,"%sen/archive/", base_url</string>
-            <string>1,"http://www.advances.umed.wroc.pl/common/css/"</string>
-            <string>1,"http://www.dmp.umed.wroc.pl/pdf/%d/%s/", year, volume_number</string>
+            <string>1,"https://fonts.googleapis.com/css"</string>
+            <string>1,"https://cdnjs.cloudflare.com/ajax/"</string>
+            <string>1,"https?://www.advances.umed.wroc.pl/(common|images)/"</string>
+            <string>1,"https?://www.advances.pl/cytowania/\?type=(bibtex|ris)?"</string>
+            <string>1,"https://fonts.gstatic.com/.*\.(bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)?"</string>
+            <string>1,"https?://www.dmp.umed.wroc.pl/pdf/%d/%s/", year, volume_number</string>
             <string>1,"^%sen/issue/%d/%s/", base_url, year, volume_number</string>
             <string>1,"^%sen/article/%d/%s/", base_url, year, volume_number</string>
         </list>
@@ -90,7 +94,7 @@
     <entry>
         <string>au_substance_url_pattern</string>
         <list>
-            <string>"^http://www.dmp.umed.wroc.pl/pdf/.*/[^/]+.pdf$"</string>
+            <string>"^%s/pdf/.*/[^/]+.pdf$", base_url</string>
         </list>
     </entry>
     <entry>
@@ -98,6 +102,8 @@
         <list>
             <string>(fonts|ajax)\.googleapis\.com</string>
             <string>"cdnjs\.cloudflare\.com"</string>
+            <string>"advances\.umed\.wroc\.pl"</string>
+            <string>"fonts\.gstatic\.com</string>
         </list>
     </entry>
     <entry>
@@ -116,22 +122,22 @@
         </list>
     </entry>
     <!--
-    <entry>
-        <string>plugin_article_iterator_factory</string>
-        <string>org.lockss.plugin.pion.PionArticleIteratorFactory</string>
-    </entry>
-    <entry>
-        <string>plugin_article_metadata_extractor_factory</string>
-        <string>org.lockss.plugin.pion.PionArticleIteratorFactory</string>
-    </entry>
-    <entry>
-        <string>text/html_metadata_extractor_factory_map</string>
-        <map>
-            <entry>
-                <string>*;DublinCore</string>
-                <string>org.lockss.plugin.pion.PionHtmlMetadataExtractorFactory</string>
-            </entry>
-        </map>
-    </entry>
-    -->
+<entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.wroclawmedicaluniversity.WroclawMedicalUniversityArticleIteratorFactory</string>
+</entry>
+<entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.wroclawmedicaluniversity.WroclawMedicalUniversityArticleIteratorFactory</string>
+</entry>
+<entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+        <entry>
+            <string>*</string>
+            <string>org.lockss.plugin.wroclawmedicaluniversity.WroclawMedicalUniversityMetadataExtractorFactory</string>
+        </entry>
+    </map>
+</entry>
+-->
 </map>
