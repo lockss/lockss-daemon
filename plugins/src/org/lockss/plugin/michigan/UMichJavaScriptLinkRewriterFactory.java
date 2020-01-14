@@ -24,11 +24,10 @@ public class UMichJavaScriptLinkRewriterFactory implements LinkRewriterFactory {
     public InputStream createLinkRewriter(
             String mimeType, ArchivalUnit au, InputStream in,
             String encoding, final String srcUrl,
-            ServletUtil.LinkTransform srvLinkXform)
+            final ServletUtil.LinkTransform srvLinkXform)
             throws PluginException, IOException {
 
-        //Need to know how to get base_url here
-        final String baseUrl = "https://www.fulcrum.org/";
+        final String baseUrl = srcUrl.substring(0,(srcUrl.indexOf("/concern/file_sets/") + 1));
 
         LineEndingBufferedReader br = new LineEndingBufferedReader(new InputStreamReader(in));
 
@@ -40,12 +39,28 @@ public class UMichJavaScriptLinkRewriterFactory implements LinkRewriterFactory {
 
                 if (mat.find()) {
 
+                    String found1 = mat.group(1);
+                    String found2 = mat.group(2);
+                    String found3 = mat.group(3);
+                    String found4 = mat.group(4);
+
+                    logger.debug3("line = " + line + " + , #found1 = " + found1 + ", #found2 = " + found2 + ", #found3 = " + found3 + ", #found4 = " + found4 + "#");
+
+                    //https://www.fulcrum.org/concern/file_sets/7w62f903v?locale=en, replaced Line  =         layer = L.tileLayer.iiif("/ServeContent?url=https://www.fulcrum.org/image-service/7w62f903v/info.json?1555623447", { bestFit: true } );
+                    //http://localhost:8081/ServeContent?url=https://www.fulcrum.org/image-service/7w62f903v/info.json?1555623447
                     String replacement = "/ServeContent?url=" + baseUrl.substring(0, baseUrl.length() - 1) + mat.group(2);
-                    String replacedScriptLine = line.replaceAll(mat.group(2),replacement);
 
-                    logger.debug3("scrLine is " + srcUrl + ", replaced Line  = " + replacedScriptLine);
+                    //#found2 = /image-service/xg94hq387/info.json#, #found3 = ?1555632458#, #found4 = ", { bestFit: true } );#
+                    //Replace found2 with new link and drop found3, it is the timestamp part
+                    //use StringBuilder, since replaceAll will give "Dangling meta character '?' near index 0 \\?1555623447" error
+                    StringBuilder replacedUrl = new StringBuilder();
+                    replacedUrl.append(found1);
+                    replacedUrl.append(replacement);
+                    replacedUrl.append(found4);
 
-                    return replacedScriptLine;
+                    logger.debug3("srcUrl = " + srcUrl + ", replacedUrl = " + replacedUrl);
+                    
+                    return replacedUrl.toString();
                 } else {
                     logger.debug3("No replacement happened  = " + line);
                     return line;
