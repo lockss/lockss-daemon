@@ -367,6 +367,10 @@ public class FileBackedLongList
    */
   @Override
   public synchronized void close() {
+    if (closed) {
+      return;
+    }
+    closed = true;
     if (mbbuf != null) {
       force();
       CountingRandomAccessFile.unmap(mbbuf);
