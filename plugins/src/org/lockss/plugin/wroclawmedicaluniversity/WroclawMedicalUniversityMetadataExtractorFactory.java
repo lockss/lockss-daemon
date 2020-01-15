@@ -5,7 +5,6 @@ import org.apache.commons.collections.map.MultiValueMap;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
 import org.lockss.plugin.CachedUrl;
-import org.lockss.plugin.ans.AnsHtmlMetadataExtractorFactory;
 
 import java.io.IOException;
 
@@ -32,6 +31,7 @@ public class WroclawMedicalUniversityMetadataExtractorFactory implements FileMet
             tagMap.put("citation_lastpage", MetadataField.FIELD_END_PAGE);
             tagMap.put("citation_doi", MetadataField.FIELD_DOI);
             tagMap.put("citation_issn", MetadataField.FIELD_ISSN);
+            tagMap.put("citation_publisher", MetadataField.FIELD_PUBLISHER);
         }
 
         @Override
