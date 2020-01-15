@@ -13,12 +13,11 @@
     >
     
     plugin = org.lockss.plugin.clockss.liverpool.ClockssLiverpoolUniversityPressBooksSourcePlugin
-    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/coursesource-released/
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/lup-released/
     
     hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[year] >
 
-    au < manifest ; exists ; 2019 ; Liverpool University Press Books Content 2019 ; 2019 >
     au < exists ; exists ; 2020 ; Liverpool University Press Books Content 2020 ; 2020 >
 
   }
