@@ -560,6 +560,10 @@ public class FileBackedList<E>
    */
   @Override
   public synchronized void close() {
+    if (closed) {
+      return;
+    }
+    closed = true;
     try {
       if (buffers != null) {
 	force();
