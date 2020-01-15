@@ -51,9 +51,8 @@
     <entry>
         <string>au_crawlrules</string>
         <list>
-            <!-- curated CDN list with terminators -->
-            <string>1,"^https?://(.+\.cloudfront.net/assets|use\.typekit\.net)/[^?]*\.(css|js)", url_host(base_url)</string>
             <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff2?)([?][0-9]+)?$", url_host(base_url)</string>
+            <string>1,"^https?://([^.]+\.cloudfront\.net|(fonts|ajax)\.(googleapis|gstatic)\.com)/"</string>
             <string>2,"^https?://%s/%s\.(atom|json|rss)", url_host(base_url), book_uri</string>
             <string>2,"^https?://%s/%s.*&amp;(sort|per_page|view)=", url_host(base_url), book_uri</string>
             <!--  %% is the way to represent a percent in a crawl rule -->
@@ -167,4 +166,10 @@
             <string>/download/, application/epub+zip</string>
         </list>
     </entry>
+  <entry>
+    <string>au_permitted_host_pattern</string>
+    <list>
+      <string>www\.fulcrum\.org|[^.]+\.cloudfront\.net|(fonts|ajax)\.(googleapis|gstatic)\.com</string>
+    </list>
+  </entry>
 </map>
