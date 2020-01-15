@@ -5,14 +5,12 @@ import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.ArticleMetadataExtractorFactory;
 import org.lockss.extractor.BaseArticleMetadataExtractor;
 import org.lockss.extractor.MetadataTarget;
-import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.ArticleFiles;
-import org.lockss.plugin.ArticleIteratorFactory;
-import org.lockss.plugin.SubTreeArticleIteratorBuilder;
+import org.lockss.plugin.*;
 import org.lockss.plugin.anu.AnuArticleIteratorFactory;
 import org.lockss.util.Logger;
 
 import java.util.Iterator;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class WroclawMedicalUniversityArticleIteratorFactory implements ArticleIteratorFactory,
@@ -55,6 +53,7 @@ public class WroclawMedicalUniversityArticleIteratorFactory implements ArticleIt
         builder.addAspect(
                 HTML_PATTERN,
                 HTML_REPLACEMENT,
+                ArticleFiles.ROLE_ABSTRACT,
                 ArticleFiles.ROLE_FULL_TEXT_HTML,
                 ArticleFiles.ROLE_ARTICLE_METADATA);
 
