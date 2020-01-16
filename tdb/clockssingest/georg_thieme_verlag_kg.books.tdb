@@ -10,8 +10,8 @@
   param[base_url] = https://www.thieme-connect.de/
   plugin = org.lockss.plugin.georgthiemeverlag.ClockssGeorgThiemeVerlagBooksPlugin
   implicit < status ; status2 ; year ; isbn ; eisbn ; param[doi] ; name ; hidden[proxy] >
-  #Look for new books at https://www.thieme-connect.de/static-pages/online/thiemeconnectcomebooks_AllTitles.txt
-
+  #Do not look for new books at https://www.thieme-connect.de/static-pages/online/thiemeconnectcomebooks_AllTitles.txt
+  #Look for new books as of 2020 at https://www.thieme-connect.de/products/ebooks/kbart/thiemeconnectcomebooks_AllTitles.txt
 
  {
   title <
