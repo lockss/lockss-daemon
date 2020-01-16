@@ -1,0 +1,218 @@
+<?xml version="1.0"?>
+<!DOCTYPE PubmedArticleSet PUBLIC "-//NLM//DTD PubMedArticle, 1st January 2019//EN" "https://dtd.nlm.nih.gov/ncbi/pubmed/out/pubmed_190101.dtd">
+<PubmedArticleSet>
+
+    <PubmedArticle>
+        <MedlineCitation Status="MEDLINE" Owner="NLM">
+            <PMID Version="1">30281141</PMID>
+            <DateCompleted>
+                <Year>2019</Year>
+                <Month>04</Month>
+                <Day>22</Day>
+            </DateCompleted>
+            <DateRevised>
+                <Year>2019</Year>
+                <Month>04</Month>
+                <Day>22</Day>
+            </DateRevised>
+            <Article PubModel="Print">
+                <Journal>
+                    <ISSN IssnType="Electronic">1651-2057</ISSN>
+                    <JournalIssue CitedMedium="Internet">
+                        <Volume>99</Volume>
+                        <Issue>1</Issue>
+                        <PubDate>
+                            <Year>2019</Year>
+                            <Month>01</Month>
+                            <Day>01</Day>
+                        </PubDate>
+                    </JournalIssue>
+                    <Title>Acta dermato-venereologica</Title>
+                    <ISOAbbreviation>Acta Derm. Venereol.</ISOAbbreviation>
+                </Journal>
+                <ArticleTitle>Fractional Ablative CO2 Laser Followed by Topical Application of Sodium Stibogluconate for Treatment of Active Cutaneous Leishmaniasis: A Randomized Controlled Trial.</ArticleTitle>
+                <Pagination>
+                    <MedlinePgn>53-57</MedlinePgn>
+                </Pagination>
+                <ELocationID EIdType="doi" ValidYN="Y">10.2340/00015555-3058</ELocationID>
+                <Abstract>
+                    <AbstractText>Conventional treatment of cutaneous leishmaniasis often leaves permanent scars with frequent psychosocial sequelae. The aim of this study was to compare the efficacy, safety, associated pain and final cosmetic outcome of fractional carbon dioxide (CO2) laser followed by topical application of sodium stibogluconate vs. sodium stibogluconate injections for the treatment of cutaneous leishmaniasis. A total of 181 lesions (20 patients) were randomly assigned to receive intralesional injections of sodium stibogluconate (control group) or fractional CO2 laser treatment followed by topical application of sodium stibogluconate (study group). The visual analogue scale (VAS) score of the control group was much higher than that of the study group (6.85 vs. 3.5, respectively, p&lt;0.001). Both the patients and 2 blinded dermatologists found the final cosmetic outcome to be superior for laser-treated lesions (p = 0.001 vs. p =0.008 for controls). Fractional CO2 laser treatment followed by topical application of sodium stibogluconate is less painful and leads to a better final cosmetic outcome compared with intralesional injections of sodium stibogluconate.</AbstractText>
+                </Abstract>
+                <AuthorList CompleteYN="Y">
+                    <Author ValidYN="Y">
+                        <LastName>Artzi</LastName>
+                        <ForeName>Ofir</ForeName>
+                        <Initials>O</Initials>
+                        <AffiliationInfo>
+                            <Affiliation>Department of Dermatology, Tel Aviv Medical Center, Tel Aviv, 6423906, Israel. benofir@gmail.com.</Affiliation>
+                        </AffiliationInfo>
+                    </Author>
+                    <Author ValidYN="Y">
+                        <LastName>Sprecher</LastName>
+                        <ForeName>Eli</ForeName>
+                        <Initials>E</Initials>
+                    </Author>
+                    <Author ValidYN="Y">
+                        <LastName>Koren</LastName>
+                        <ForeName>Amir</ForeName>
+                        <Initials>A</Initials>
+                    </Author>
+                    <Author ValidYN="Y">
+                        <LastName>Mehrabi</LastName>
+                        <ForeName>Joseph N</ForeName>
+                        <Initials>JN</Initials>
+                    </Author>
+                    <Author ValidYN="Y">
+                        <LastName>Katz</LastName>
+                        <ForeName>Oren</ForeName>
+                        <Initials>O</Initials>
+                    </Author>
+                    <Author ValidYN="Y">
+                        <LastName>Hilerowich</LastName>
+                        <ForeName>Yuval</ForeName>
+                        <Initials>Y</Initials>
+                    </Author>
+                </AuthorList>
+                <Language>eng</Language>
+                <PublicationTypeList>
+                    <PublicationType UI="D003160">Comparative Study</PublicationType>
+                    <PublicationType UI="D016428">Journal Article</PublicationType>
+                    <PublicationType UI="D016449">Randomized Controlled Trial</PublicationType>
+                </PublicationTypeList>
+            </Article>
+            <MedlineJournalInfo>
+                <Country>Sweden</Country>
+                <MedlineTA>Acta Derm Venereol</MedlineTA>
+                <NlmUniqueID>0370310</NlmUniqueID>
+                <ISSNLinking>0001-5555</ISSNLinking>
+            </MedlineJournalInfo>
+            <ChemicalList>
+                <Chemical>
+                    <RegistryNumber>0</RegistryNumber>
+                    <NameOfSubstance UI="D000981">Antiprotozoal Agents</NameOfSubstance>
+                </Chemical>
+                <Chemical>
+                    <RegistryNumber>V083S0159D</RegistryNumber>
+                    <NameOfSubstance UI="D000967">Antimony Sodium Gluconate</NameOfSubstance>
+                </Chemical>
+            </ChemicalList>
+            <CitationSubset>IM</CitationSubset>
+            <MeshHeadingList>
+                <MeshHeading>
+                    <DescriptorName UI="D000279" MajorTopicYN="N">Administration, Cutaneous</DescriptorName>
+                </MeshHeading>
+                <MeshHeading>
+                    <DescriptorName UI="D000328" MajorTopicYN="N">Adult</DescriptorName>
+                </MeshHeading>
+                <MeshHeading>
+                    <DescriptorName UI="D000967" MajorTopicYN="N">Antimony Sodium Gluconate</DescriptorName>
+                    <QualifierName UI="Q000008" MajorTopicYN="Y">administration &amp; dosage</QualifierName>
+                    <QualifierName UI="Q000009" MajorTopicYN="N">adverse effects</QualifierName>
+                </MeshHeading>
+                <MeshHeading>
+                    <DescriptorName UI="D000981" MajorTopicYN="N">Antiprotozoal Agents</DescriptorName>
+                    <QualifierName UI="Q000008" MajorTopicYN="Y">administration &amp; dosage</QualifierName>
+                    <QualifierName UI="Q000009" MajorTopicYN="N">adverse effects</QualifierName>
+                </MeshHeading>
+                <MeshHeading>
+                    <DescriptorName UI="D003131" MajorTopicYN="N">Combined Modality Therapy</DescriptorName>
+                </MeshHeading>
+                <MeshHeading>
+                    <DescriptorName UI="D005260" MajorTopicYN="N">Female</DescriptorName>
+                </MeshHeading>
+                <MeshHeading>
+                    <DescriptorName UI="D006801" MajorTopicYN="N">Humans</DescriptorName>
+                </MeshHeading>
+                <MeshHeading>
+                    <DescriptorName UI="D015552" MajorTopicYN="N">Injections, Intralesional</DescriptorName>
+                </MeshHeading>
+                <MeshHeading>
+                    <DescriptorName UI="D007557" MajorTopicYN="N" Type="Geographic">Israel</DescriptorName>
+                </MeshHeading>
+                <MeshHeading>
+                    <DescriptorName UI="D053685" MajorTopicYN="N">Laser Therapy</DescriptorName>
+                    <QualifierName UI="Q000009" MajorTopicYN="N">adverse effects</QualifierName>
+                    <QualifierName UI="Q000295" MajorTopicYN="Y">instrumentation</QualifierName>
+                </MeshHeading>
+                <MeshHeading>
+                    <DescriptorName UI="D054020" MajorTopicYN="N">Lasers, Gas</DescriptorName>
+                    <QualifierName UI="Q000009" MajorTopicYN="N">adverse effects</QualifierName>
+                    <QualifierName UI="Q000627" MajorTopicYN="Y">therapeutic use</QualifierName>
+                </MeshHeading>
+                <MeshHeading>
+                    <DescriptorName UI="D016773" MajorTopicYN="N">Leishmaniasis, Cutaneous</DescriptorName>
+                    <QualifierName UI="Q000175" MajorTopicYN="N">diagnosis</QualifierName>
+                    <QualifierName UI="Q000469" MajorTopicYN="N">parasitology</QualifierName>
+                    <QualifierName UI="Q000628" MajorTopicYN="Y">therapy</QualifierName>
+                </MeshHeading>
+                <MeshHeading>
+                    <DescriptorName UI="D008297" MajorTopicYN="N">Male</DescriptorName>
+                </MeshHeading>
+                <MeshHeading>
+                    <DescriptorName UI="D008875" MajorTopicYN="N">Middle Aged</DescriptorName>
+                </MeshHeading>
+                <MeshHeading>
+                    <DescriptorName UI="D010147" MajorTopicYN="N">Pain Measurement</DescriptorName>
+                </MeshHeading>
+                <MeshHeading>
+                    <DescriptorName UI="D017060" MajorTopicYN="N">Patient Satisfaction</DescriptorName>
+                </MeshHeading>
+                <MeshHeading>
+                    <DescriptorName UI="D011446" MajorTopicYN="N">Prospective Studies</DescriptorName>
+                </MeshHeading>
+                <MeshHeading>
+                    <DescriptorName UI="D012867" MajorTopicYN="N">Skin</DescriptorName>
+                    <QualifierName UI="Q000187" MajorTopicYN="Y">drug effects</QualifierName>
+                    <QualifierName UI="Q000469" MajorTopicYN="N">parasitology</QualifierName>
+                    <QualifierName UI="Q000473" MajorTopicYN="N">pathology</QualifierName>
+                    <QualifierName UI="Q000528" MajorTopicYN="Y">radiation effects</QualifierName>
+                </MeshHeading>
+                <MeshHeading>
+                    <DescriptorName UI="D013997" MajorTopicYN="N">Time Factors</DescriptorName>
+                </MeshHeading>
+                <MeshHeading>
+                    <DescriptorName UI="D016896" MajorTopicYN="N">Treatment Outcome</DescriptorName>
+                </MeshHeading>
+                <MeshHeading>
+                    <DescriptorName UI="D055815" MajorTopicYN="N">Young Adult</DescriptorName>
+                </MeshHeading>
+            </MeshHeadingList>
+            <KeywordList Owner="NOTNLM">
+                <Keyword MajorTopicYN="Y">cutaneous leishmaniasis</Keyword>
+                <Keyword MajorTopicYN="Y">carbon dioxide</Keyword>
+                <Keyword MajorTopicYN="Y">ablative fractional laser</Keyword>
+                <Keyword MajorTopicYN="Y">drug delivery</Keyword>
+            </KeywordList>
+        </MedlineCitation>
+        <PubmedData>
+            <History>
+                <PubMedPubDate PubStatus="pubmed">
+                    <Year>2018</Year>
+                    <Month>10</Month>
+                    <Day>4</Day>
+                    <Hour>6</Hour>
+                    <Minute>0</Minute>
+                </PubMedPubDate>
+                <PubMedPubDate PubStatus="medline">
+                    <Year>2019</Year>
+                    <Month>4</Month>
+                    <Day>23</Day>
+                    <Hour>6</Hour>
+                    <Minute>0</Minute>
+                </PubMedPubDate>
+                <PubMedPubDate PubStatus="entrez">
+                    <Year>2018</Year>
+                    <Month>10</Month>
+                    <Day>4</Day>
+                    <Hour>6</Hour>
+                    <Minute>0</Minute>
+                </PubMedPubDate>
+            </History>
+            <PublicationStatus>ppublish</PublicationStatus>
+            <ArticleIdList>
+                <ArticleId IdType="pubmed">30281141</ArticleId>
+                <ArticleId IdType="doi">10.2340/00015555-3058</ArticleId>
+            </ArticleIdList>
+        </PubmedData>
+    </PubmedArticle>
+</PubmedArticleSet>
