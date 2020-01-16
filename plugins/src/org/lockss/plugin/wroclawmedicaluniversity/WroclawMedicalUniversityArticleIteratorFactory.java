@@ -6,11 +6,9 @@ import org.lockss.extractor.ArticleMetadataExtractorFactory;
 import org.lockss.extractor.BaseArticleMetadataExtractor;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.*;
-import org.lockss.plugin.anu.AnuArticleIteratorFactory;
 import org.lockss.util.Logger;
 
 import java.util.Iterator;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class WroclawMedicalUniversityArticleIteratorFactory implements ArticleIteratorFactory,
