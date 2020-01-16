@@ -50,10 +50,8 @@
     au < finished ; manifest ; 2013 ; Against the Grain Volume 25 ; 25 ; http://docs.lib.purdue.edu/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2014 ; Against the Grain Volume 26 ; 26 ; http://docs.lib.purdue.edu/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2015 ; Against the Grain Volume 27 ; 27 ; http://docs.lib.purdue.edu/ ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2016-2018 ; Against the Grain Volume 28 ; 28 ; https://docs.lib.purdue.edu/ ; reingest5.clockss.org:8082 > #embargoed 4 years.
-    au < finished ; manifest ; 2017 ; Against the Grain Volume 29 ; 29 ; https://docs.lib.purdue.edu/ ; reingest4.clockss.org:8082 > #embargoed 4 years.
-    au < expected ; exists ; 2018 ; Against the Grain Volume 30 ; 30 ; https://docs.lib.purdue.edu/ ; > #embargoed 4 years.
-    au < expected ; exists ; 2019 ; Against the Grain Volume 31 ; 31 ; https://docs.lib.purdue.edu/ ; >
+    au < finished ; manifest ; 2016-2018 ; Against the Grain Volume 28 ; 28 ; https://docs.lib.purdue.edu/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2017 ; Against the Grain Volume 29 ; 29 ; https://docs.lib.purdue.edu/ ; reingest4.clockss.org:8082 >
 
   }
   
