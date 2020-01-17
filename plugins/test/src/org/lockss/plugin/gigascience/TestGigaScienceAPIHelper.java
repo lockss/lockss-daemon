@@ -1,9 +1,7 @@
-package org.lockss.plugin.clockss.gigascience;
+package org.lockss.plugin.gigascience;
 
-import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.StringUtils;
 import org.lockss.test.LockssTestCase;
-import org.lockss.util.Constants;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -21,7 +19,7 @@ public class TestGigaScienceAPIHelper extends LockssTestCase {
         String fname = "sample_single_doi.xml";
 
         String fileName= System.getProperty("user.dir") +
-                "/plugins/test/src/org/lockss/plugin/clockss/gigascience/" + fname;
+                "/plugins/test/src/org/lockss/plugin/gigascience/" + fname;
         Document document = getDocument(fileName);
 
         String xpathTitleExpression = "/gigadb_entry/dataset/title";

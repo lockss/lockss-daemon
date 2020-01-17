@@ -1,9 +1,8 @@
-package org.lockss.plugin.clockss.gigascience;
+package org.lockss.plugin.gigascience;
 
 import org.apache.commons.io.FileUtils;
 import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.extractor.LinkExtractor;
-import org.lockss.plugin.springer.link.SpringerLinkPamLinkExtractor;
 import org.lockss.test.ConfigurationUtil;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockArchivalUnit;
@@ -13,7 +12,6 @@ import org.lockss.util.Constants;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import javax.xml.parsers.DocumentBuilder;

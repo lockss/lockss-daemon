@@ -1,4 +1,4 @@
-package org.lockss.plugin.clockss.gigascience;
+package org.lockss.plugin.gigascience;
 
 import org.apache.commons.collections.map.MultiValueMap;
 import org.apache.commons.lang.StringUtils;

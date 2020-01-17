@@ -1,4 +1,4 @@
-package org.lockss.plugin.clockss.gigascience;
+package org.lockss.plugin.gigascience;
 
 import org.lockss.crawler.CrawlSeed;
 import org.lockss.crawler.CrawlSeedFactory;

@@ -1,4 +1,4 @@
-package org.lockss.plugin.clockss.gigascience;
+package org.lockss.plugin.gigascience;
 
 import org.apache.commons.lang3.StringUtils;
 import org.lockss.extractor.LinkExtractor;

@@ -5,7 +5,7 @@ import org.apache.commons.lang.StringUtils;
 import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.XmlDomMetadataExtractor;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
-import org.lockss.plugin.clockss.gigascience.GigaScienceAPIHelper;
+import org.lockss.plugin.gigascience.GigaScienceAPIHelper;
 import org.lockss.util.Logger;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;

@@ -1,4 +1,4 @@
-package org.lockss.plugin.clockss.gigascience;
+package org.lockss.plugin.gigascience;
 
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadataExtractor;

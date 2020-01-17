@@ -8,8 +8,7 @@ import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
-import org.lockss.plugin.clockss.casalini.CasaliniMarcXmlSchemaHelper;
-import org.lockss.plugin.clockss.gigascience.GigaScienceAPIHtmlMetadataExtractorFactory;
+import org.lockss.plugin.gigascience.GigaScienceAPIHtmlMetadataExtractorFactory;
 import org.lockss.util.Logger;
 
 import java.util.regex.Matcher;
