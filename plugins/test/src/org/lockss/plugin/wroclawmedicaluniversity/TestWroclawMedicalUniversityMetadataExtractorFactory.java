@@ -26,7 +26,7 @@ public class TestWroclawMedicalUniversityMetadataExtractorFactory extends Lockss
     private static String PLUGIN_NAME = "org.lockss.plugin.wroclawmedicaluniversity.ClockssWroclawMedicalUniversityJournalsPlugin";
     private static String BASE_URL = "http://www.wydawnictwo.umed.wroc.pl/";
     private final String YEAR = "2019";
-    private final String VOLUME_NUMBER = "56";
+    private final String VOLUME_NAME = "56";
 
     public void setUp() throws Exception {
         super.setUp();
@@ -53,7 +53,7 @@ public class TestWroclawMedicalUniversityMetadataExtractorFactory extends Lockss
         Configuration conf = ConfigManager.newConfiguration();
         conf.put("base_url", BASE_URL);
         conf.put("year", YEAR);
-        conf.put("volume_number", VOLUME_NUMBER);
+        conf.put("volume_name", VOLUME_NAME);
         return conf;
     }
 
