@@ -18,7 +18,7 @@ public class WroclawMedicalUniversityArticleIteratorFactory implements ArticleIt
 
     protected static final String ROOT_TEMPLATE = "\"%s\", base_url";
     protected static final String PATTERN_TEMPLATE =
-            "\"%s(en/article|pdf)/%d/%s/\", base_url, year, volume_number";
+            "\"%s(en/article|pdf)/%d/%s/\", base_url, year, volume_name";
 
     private static final Pattern HTML_PATTERN = Pattern.compile(
             "/(en/article)/([^/]+/[^/]+/[^/]+/\\d+)",
