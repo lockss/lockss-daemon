@@ -13,7 +13,7 @@
     </entry>
     <entry>
         <string>plugin_name</string>
-        <string>Wroc&#322;aw  Medical University Journals Plugin (CLOCKSS)</string>
+        <string>Wroc&#322;aw Medical University Press Journals Plugin (CLOCKSS)</string>
     </entry>
     <entry>
         <!--  for support of au_url_mime_type_validation_map-->
@@ -71,7 +71,7 @@
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"Wroc&#322;aw Medical University  Journals Plugin (CLOCKSS), Base URL %s, Year %d, Volume Number %s", base_url, year, volume_name</string>
+        <string>"Wroc&#322;aw Medical University Press Journals Plugin (CLOCKSS), Base URL %s, Year %d, Volume Number %s", base_url, year, volume_name</string>
     </entry>
     <entry>
         <string>au_crawlrules</string>
