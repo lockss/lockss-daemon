@@ -1,0 +1,60 @@
+{
+
+  publisher <
+    name = Wroclaw Medical University;
+    info[contract] = 2019 ;
+    info[tester] = 8 ;
+    info[poller] = 8
+  >
+  # There are 5 journals, for the other two, we do not have permission yet
+  {
+
+    title <
+      name = Advances in Clinical and Experimental Medicine
+    >
+
+    {
+
+      plugin = org.lockss.plugin.wroclawmedicaluniversity.ClockssWroclawMedicalUniversityJournalsPlugin
+      param[base_url] = http://www.dmp.umed.wroc.pl/
+      implicit < status ; status2 ; year ; name ; param[volume_name] >
+
+      au < exists; exists ; 2019 ; Advances in Clinical and Experimental Medicine Volume 28 ; 28 >
+
+    }
+  }
+
+  {
+    title <
+          name = Dental and Medical Problems
+        >
+
+    {
+
+      plugin = org.lockss.plugin.wroclawmedicaluniversity.ClockssWroclawMedicalUniversityJournalsPlugin
+      param[base_url] =  http://www.dmp.umed.wroc.pl/
+      implicit < status ; status2 ; year ; name ; param[volume_name] >
+
+      au < exists; exists ; 2019 ; Dental and Medical Problems 56 ; 56 >
+
+    }
+  }
+
+
+  {
+    title <
+          name = Nursing and Public Health
+        >
+
+    {
+
+      plugin = org.lockss.plugin.wroclawmedicaluniversity.ClockssWroclawMedicalUniversityJournalsPlugin
+      param[base_url] =  http://www.pzp.umed.wroc.pl/
+      implicit < status ; status2 ; year ; name ; param[volume_name] >
+
+      au < exists; exists ; 2019 ; Nursing and Public Health 9 ; 9 >
+
+    }
+  }
+}
+

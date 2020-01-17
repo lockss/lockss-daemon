@@ -21,14 +21,14 @@ public class WroclawMedicalUniversityArticleIteratorFactory implements ArticleIt
             "\"%s(en/article|pdf)/%d/%s/\", base_url, year, volume_number";
 
     private static final Pattern HTML_PATTERN = Pattern.compile(
-            ".*/(en/article)/([^/]+/[^/]+/[^/]+/[^/]+)",
+            "/(en/article)/([^/]+/[^/]+/[^/]+/\\d+)",
             Pattern.CASE_INSENSITIVE);
-    private static final String HTML_REPLACEMENT = "en/article/$2";
+    private static final String HTML_REPLACEMENT = "/en/article/$2";
 
     private static final Pattern PDF_PATTERN = Pattern.compile(
-            ".*/(pdf)/([^/]+/[^/]+/[^/]+/\\d+)\\.pdf",
+            "/(pdf)/([^/]+/[^/]+/[^/]+/\\d+)\\.pdf",
             Pattern.CASE_INSENSITIVE);
-    private static final String PDF_REPLACEMENT = "pdf/$2.pdf";
+    private static final String PDF_REPLACEMENT = "/pdf/$2.pdf";
 
 
     //It has only html and PDF, no separate pages other aspects, like  abstract/full_tex

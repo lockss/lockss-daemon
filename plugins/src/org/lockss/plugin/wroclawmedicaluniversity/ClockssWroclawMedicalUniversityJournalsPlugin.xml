@@ -16,6 +16,11 @@
         <string>Wroclaw Medical University Journals Plugin (CLOCKSS)</string>
     </entry>
     <entry>
+        <!--  for support of au_url_mime_type_validation_map-->
+        <string>required_daemon_version</string>
+        <string>1.74.0</string>
+    </entry>
+    <entry>
         <string>plugin_feature_version_map</string>
         <map>
             <entry>
@@ -54,11 +59,11 @@
                 <defaultOnly>false</defaultOnly>
             </org.lockss.daemon.ConfigParamDescr>
             <org.lockss.daemon.ConfigParamDescr>
-                <key>volume_number</key>
-                <displayName>Volume Number</displayName>
-                <description>Number for volume (often used as part of file names)</description>
+                <key>volume_name</key>
                 <type>1</type>
-                <size>40</size>
+                <displayName>Volume Name</displayName>
+                <description>Volume name, e.g. 23A</description>
+                <size>20</size>
                 <definitional>true</definitional>
                 <defaultOnly>false</defaultOnly>
             </org.lockss.daemon.ConfigParamDescr>
@@ -66,35 +71,32 @@
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"Wroclaw Medical University  Journals Plugin (CLOCKSS), Base URL %s, Year %d, Volume Number %s", base_url, year, volume_number</string>
+        <string>"Wroclaw Medical University  Journals Plugin (CLOCKSS), Base URL %s, Year %d, Volume Number %s", base_url, year, volume_name</string>
     </entry>
     <entry>
         <string>au_crawlrules</string>
         <list>
-            <string>2,"%sen/archive/", base_url</string>
-            <string>1,"https://fonts.googleapis.com/css"</string>
-            <string>1,"https://cdnjs.cloudflare.com/ajax/"</string>
-            <string>1,"https?://www.advances.umed.wroc.pl/(common|images)/"</string>
-            <string>1,"https?://www.advances.pl/cytowania/\?type=(bibtex|ris)?"</string>
-            <string>1,"https://fonts.gstatic.com/.*\.(bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)?"</string>
-            <string>1,"https?://www.dmp.umed.wroc.pl/pdf/%d/%s/", year, volume_number</string>
-            <string>1,"^%sen/issue/%d/%s/", base_url, year, volume_number</string>
-            <string>1,"^%sen/article/%d/%s/", base_url, year, volume_number</string>
+            <string>1,"https://fonts\.gstatic\.com/.*\.(bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)?"</string>
+            <string>1,"https://fonts\.googleapis\.com/css"</string>
+            <string>1,"https://cdnjs\.cloudflare\.com/ajax/"</string>
+            <string>1,"^http://%s/(common|images)/", url_host(base_url)</string>
+            <!--This bibtex and ris link are broken website wide, need to fix it when the link is fixed-->
+            <!--<string>1,"https?://www.advances.pl/cytowania/\?type=(bibtex|ris)?"</string>-->
+            <string>1,"^http://%s/pdf/%d/%s/", url_host(base_url), year, volume_name</string>
+            <string>1,"^http://%s/en/issue/%d/%s/", url_host(base_url), year, volume_name</string>
+            <string>1,"^http://%s/en/article/%d/%s/", url_host(base_url), year, volume_name</string>
         </list>
     </entry>
     <entry>
-        <string>au_permission_url</string>
-        <string>"%sen/archive/", base_url</string>
-    </entry>
-    <entry>
+        <!--This one does not have a separate permission statement because the permission statement can be found on start_url-->
         <!--http://www.dmp.umed.wroc.pl/en/archive/-->
         <string>au_start_url</string>
-        <string>"%sen/archive/", base_url</string>
+        <string>"http://%s/en/archive/", url_host(base_url)</string>
     </entry>
     <entry>
         <string>au_substance_url_pattern</string>
         <list>
-            <string>"^%s/pdf/.*/[^/]+.pdf$", base_url</string>
+            <string>"http://%s/pdf/%d/%s/[^/]+/[^/]+.pdf$", url_host(base_url), year, volume_name</string>
         </list>
     </entry>
     <entry>
@@ -102,7 +104,6 @@
         <list>
             <string>(fonts|ajax)\.googleapis\.com</string>
             <string>"cdnjs\.cloudflare\.com"</string>
-            <string>"advances\.umed\.wroc\.pl"</string>
             <string>"fonts\.gstatic\.com</string>
         </list>
     </entry>
