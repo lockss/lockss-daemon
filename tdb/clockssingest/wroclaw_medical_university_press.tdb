@@ -1,7 +1,7 @@
 {
 
   publisher <
-    name = Wroclaw Medical University Press ;
+    name = Wrocław Medical University Press ;
     info[contract] = 2019 ;
     info[back] = 2014 ;
     info[tester] = 5 ;
@@ -21,20 +21,20 @@
     
     param[base_url] = http://www.advances.umed.wroc.pl/
     
-    au < manifest ; exists ; 2006 ; 2006 ; Advances in Clinical and Experimental Medicine Volume 15 ; 15 ;  >
-    au < manifest ; exists ; 2007 ; 2007 ; Advances in Clinical and Experimental Medicine Volume 16 ; 16 ;  >
-    au < manifest ; exists ; 2008 ; 2008 ; Advances in Clinical and Experimental Medicine Volume 17 ; 17 ;  >
-    au < manifest ; exists ; 2009 ; 2009 ; Advances in Clinical and Experimental Medicine Volume 18 ; 18 ;  >
-    au < manifest ; exists ; 2010 ; 2010 ; Advances in Clinical and Experimental Medicine Volume 19 ; 19 ;  >
-    au < manifest ; exists ; 2011 ; 2011 ; Advances in Clinical and Experimental Medicine Volume 20 ; 20 ;  >
-    au < manifest ; exists ; 2012 ; 2012 ; Advances in Clinical and Experimental Medicine Volume 21 ; 21 ;  >
-    au < manifest ; exists ; 2013 ; 2013 ; Advances in Clinical and Experimental Medicine Volume 22 ; 22 ;  >
-    au < manifest ; exists ; 2014 ; 2014 ; Advances in Clinical and Experimental Medicine Volume 23 ; 23 ;  >
-    au < manifest ; exists ; 2015 ; 2015 ; Advances in Clinical and Experimental Medicine Volume 24 ; 24 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; Advances in Clinical and Experimental Medicine Volume 25 ; 25 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Advances in Clinical and Experimental Medicine Volume 26 ; 26 ;  >
-    au < manifest ; exists ; 2018 ; 2018 ; Advances in Clinical and Experimental Medicine Volume 27 ; 27 ;  >
-    au < manifest ; exists ; 2019 ; 2019 ; Advances in Clinical and Experimental Medicine Volume 28 ; 28 ;  >
+    au < crawling ; exists ; 2006 ; 2006 ; Advances in Clinical and Experimental Medicine Volume 15 ; 15 ;  >
+    au < crawling ; exists ; 2007 ; 2007 ; Advances in Clinical and Experimental Medicine Volume 16 ; 16 ;  >
+    au < crawling ; exists ; 2008 ; 2008 ; Advances in Clinical and Experimental Medicine Volume 17 ; 17 ;  >
+    au < crawling ; exists ; 2009 ; 2009 ; Advances in Clinical and Experimental Medicine Volume 18 ; 18 ;  >
+    au < crawling ; exists ; 2010 ; 2010 ; Advances in Clinical and Experimental Medicine Volume 19 ; 19 ;  >
+    au < crawling ; exists ; 2011 ; 2011 ; Advances in Clinical and Experimental Medicine Volume 20 ; 20 ;  >
+    au < crawling ; exists ; 2012 ; 2012 ; Advances in Clinical and Experimental Medicine Volume 21 ; 21 ;  >
+    au < crawling ; exists ; 2013 ; 2013 ; Advances in Clinical and Experimental Medicine Volume 22 ; 22 ;  >
+    au < crawling ; exists ; 2014 ; 2014 ; Advances in Clinical and Experimental Medicine Volume 23 ; 23 ;  >
+    au < crawling ; exists ; 2015 ; 2015 ; Advances in Clinical and Experimental Medicine Volume 24 ; 24 ;  >
+    au < crawling ; exists ; 2016 ; 2016 ; Advances in Clinical and Experimental Medicine Volume 25 ; 25 ;  >
+    au < crawling ; exists ; 2017 ; 2017 ; Advances in Clinical and Experimental Medicine Volume 26 ; 26 ;  >
+    au < crawling ; exists ; 2018 ; 2018 ; Advances in Clinical and Experimental Medicine Volume 27 ; 27 ;  >
+    au < crawling ; exists ; 2019 ; 2019 ; Advances in Clinical and Experimental Medicine Volume 28 ; 28 ;  >
 
   }
 
@@ -48,17 +48,17 @@
     
     param[base_url] = http://www.dmp.umed.wroc.pl/
     
-    au < manifest ; exists ; 2009 ; 2009 ; Dental and Medical Problems Volume 46 ; 46 ;  >
-    au < manifest ; exists ; 2010 ; 2010 ; Dental and Medical Problems Volume 47 ; 47 ;  >
-    au < manifest ; exists ; 2011 ; 2011 ; Dental and Medical Problems Volume 48 ; 48 ;  >
-    au < manifest ; exists ; 2012 ; 2012 ; Dental and Medical Problems Volume 49 ; 49 ;  >
-    au < manifest ; exists ; 2013 ; 2013 ; Dental and Medical Problems Volume 50 ; 50 ;  >
-    au < manifest ; exists ; 2014 ; 2014 ; Dental and Medical Problems Volume 51 ; 51 ;  >
-    au < manifest ; exists ; 2015 ; 2015 ; Dental and Medical Problems Volume 52 ; 52 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; Dental and Medical Problems Volume 53 ; 53 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Dental and Medical Problems Volume 54 ; 54 ;  >
-    au < manifest ; exists ; 2018 ; 2018 ; Dental and Medical Problems Volume 55 ; 55 ;  >
-    au < manifest ; exists ; 2019 ; 2019 ; Dental and Medical Problems Volume 56 ; 56 ;  >
+    au < crawling ; exists ; 2009 ; 2009 ; Dental and Medical Problems Volume 46 ; 46 ;  >
+    au < crawling ; exists ; 2010 ; 2010 ; Dental and Medical Problems Volume 47 ; 47 ;  >
+    au < crawling ; exists ; 2011 ; 2011 ; Dental and Medical Problems Volume 48 ; 48 ;  >
+    au < crawling ; exists ; 2012 ; 2012 ; Dental and Medical Problems Volume 49 ; 49 ;  >
+    au < crawling ; exists ; 2013 ; 2013 ; Dental and Medical Problems Volume 50 ; 50 ;  >
+    au < crawling ; exists ; 2014 ; 2014 ; Dental and Medical Problems Volume 51 ; 51 ;  >
+    au < crawling ; exists ; 2015 ; 2015 ; Dental and Medical Problems Volume 52 ; 52 ;  >
+    au < crawling ; exists ; 2016 ; 2016 ; Dental and Medical Problems Volume 53 ; 53 ;  >
+    au < crawling ; exists ; 2017 ; 2017 ; Dental and Medical Problems Volume 54 ; 54 ;  >
+    au < crawling ; exists ; 2018 ; 2018 ; Dental and Medical Problems Volume 55 ; 55 ;  >
+    au < crawling ; exists ; 2019 ; 2019 ; Dental and Medical Problems Volume 56 ; 56 ;  >
 
   }
 
@@ -72,17 +72,17 @@
     
     param[base_url] = http://www.polimery.umed.wroc.pl/
     
-    au < manifest ; exists ; 2009 ; 2009 ; Polymers in Medicine Volume 39 ; 39 ;  >
-    au < manifest ; exists ; 2010 ; 2010 ; Polymers in Medicine Volume 40 ; 40 ;  >
-    au < manifest ; exists ; 2011 ; 2011 ; Polymers in Medicine Volume 41 ; 41 ;  >
-    au < manifest ; exists ; 2012 ; 2012 ; Polymers in Medicine Volume 42 ; 42 ;  >
-    au < manifest ; exists ; 2013 ; 2013 ; Polymers in Medicine Volume 43 ; 43 ;  >
-    au < manifest ; exists ; 2014 ; 2014 ; Polymers in Medicine Volume 44 ; 44 ;  >
-    au < manifest ; exists ; 2015 ; 2015 ; Polymers in Medicine Volume 45 ; 45 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; Polymers in Medicine Volume 46 ; 46 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Polymers in Medicine Volume 47 ; 47 ;  >
-    au < manifest ; exists ; 2018 ; 2018 ; Polymers in Medicine Volume 48 ; 48 ;  >
-    au < manifest ; exists ; 2019 ; 2019 ; Polymers in Medicine Volume 49 ; 49 ;  >
+    au < crawling ; exists ; 2009 ; 2009 ; Polymers in Medicine Volume 39 ; 39 ;  >
+    au < crawling ; exists ; 2010 ; 2010 ; Polymers in Medicine Volume 40 ; 40 ;  >
+    au < crawling ; exists ; 2011 ; 2011 ; Polymers in Medicine Volume 41 ; 41 ;  >
+    au < crawling ; exists ; 2012 ; 2012 ; Polymers in Medicine Volume 42 ; 42 ;  >
+    au < crawling ; exists ; 2013 ; 2013 ; Polymers in Medicine Volume 43 ; 43 ;  >
+    au < crawling ; exists ; 2014 ; 2014 ; Polymers in Medicine Volume 44 ; 44 ;  >
+    au < crawling ; exists ; 2015 ; 2015 ; Polymers in Medicine Volume 45 ; 45 ;  >
+    au < crawling ; exists ; 2016 ; 2016 ; Polymers in Medicine Volume 46 ; 46 ;  >
+    au < crawling ; exists ; 2017 ; 2017 ; Polymers in Medicine Volume 47 ; 47 ;  >
+    au < crawling ; exists ; 2018 ; 2018 ; Polymers in Medicine Volume 48 ; 48 ;  >
+    au < crawling ; exists ; 2019 ; 2019 ; Polymers in Medicine Volume 49 ; 49 ;  >
 
   }
 
@@ -96,15 +96,15 @@
     
     param[base_url] = http://www.pzp.umed.wroc.pl/
     
-    au < manifest ; exists ; 2011 ; 2011 ; Nursing and Public Health Volume 1 ; 1 ;  >
-    au < manifest ; exists ; 2012 ; 2012 ; Nursing and Public Health Volume 2 ; 2 ;  >
-    au < manifest ; exists ; 2013 ; 2013 ; Nursing and Public Health Volume 3 ; 3 ;  >
-    au < manifest ; exists ; 2014 ; 2014 ; Nursing and Public Health Volume 4 ; 4 ;  >
-    au < manifest ; exists ; 2015 ; 2015 ; Nursing and Public Health Volume 5 ; 5 ;  >
-    au < manifest ; exists ; 2016 ; 2016 ; Nursing and Public Health Volume 6 ; 6 ;  >
-    au < manifest ; exists ; 2017 ; 2017 ; Nursing and Public Health Volume 7 ; 7 ;  >
-    au < manifest ; exists ; 2018 ; 2018 ; Nursing and Public Health Volume 8 ; 8 ;  >
-    au < manifest ; exists ; 2019 ; 2019 ; Nursing and Public Health Volume 9 ; 9 ;  >
+    au < crawling ; exists ; 2011 ; 2011 ; Nursing and Public Health Volume 1 ; 1 ;  >
+    au < crawling ; exists ; 2012 ; 2012 ; Nursing and Public Health Volume 2 ; 2 ;  >
+    au < crawling ; exists ; 2013 ; 2013 ; Nursing and Public Health Volume 3 ; 3 ;  >
+    au < crawling ; exists ; 2014 ; 2014 ; Nursing and Public Health Volume 4 ; 4 ;  >
+    au < crawling ; exists ; 2015 ; 2015 ; Nursing and Public Health Volume 5 ; 5 ;  >
+    au < crawling ; exists ; 2016 ; 2016 ; Nursing and Public Health Volume 6 ; 6 ;  >
+    au < crawling ; exists ; 2017 ; 2017 ; Nursing and Public Health Volume 7 ; 7 ;  >
+    au < crawling ; exists ; 2018 ; 2018 ; Nursing and Public Health Volume 8 ; 8 ;  >
+    au < crawling ; exists ; 2019 ; 2019 ; Nursing and Public Health Volume 9 ; 9 ;  >
 
   }
 
