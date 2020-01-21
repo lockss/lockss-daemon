@@ -32,7 +32,7 @@ public class TestGigaScienceDoiLinkExtractor extends LockssTestCase {
         try {
             String currentDirectory = System.getProperty("user.dir");
             String pathname = currentDirectory +
-                    "/plugins/test/src/org/lockss/plugin/clockss/gigascience/" + fname;
+                    "/plugins/test/src/org/lockss/plugin/gigascience/" + fname;
             xmlContent = FileUtils.readFileToString(new File(pathname), Constants.DEFAULT_ENCODING);
         } catch (IOException e) {
             e.printStackTrace();
@@ -46,7 +46,7 @@ public class TestGigaScienceDoiLinkExtractor extends LockssTestCase {
         String fname = "dois_api.xml";
 
         String fileName= System.getProperty("user.dir") +
-                "/plugins/test/src/org/lockss/plugin/clockss/gigascience/" + fname;
+                "/plugins/test/src/org/lockss/plugin/gigascience/" + fname;
         Document document = getDocument(fileName);
 
         String xpathExpression = "";
