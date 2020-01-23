@@ -5,7 +5,6 @@ import org.apache.commons.lang.StringUtils;
 import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.XmlDomMetadataExtractor;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
-import org.lockss.plugin.gigascience.GigaScienceAPIHelper;
 import org.lockss.util.Logger;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -18,7 +17,7 @@ import java.util.regex.Pattern;
 //https://www.nlm.nih.gov/bsd/licensee/elements_descriptions.html
 public class ActaDermatoVenereologicaNLMXmlHelper implements SourceXmlSchemaHelper {
 
-    private static final Logger log = Logger.getLogger(GigaScienceAPIHelper.class);
+    private static final Logger log = Logger.getLogger(ActaDermatoVenereologicaNLMXmlHelper.class);
 
     public static String PAGINATION = "/PubmedArticleSet/PubmedArticle/MedlineCitation/Article/Pagination/MedlinePgn";
 
