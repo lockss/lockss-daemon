@@ -116,7 +116,7 @@
 
       }
       {
-        plugin = needs plugin
+        plugin = needs.plugin
         implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
         #moved to janeway platform as of 2019.
 
