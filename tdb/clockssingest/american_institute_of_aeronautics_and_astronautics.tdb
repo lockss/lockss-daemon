@@ -52,9 +52,9 @@
     au < frozen ; exists ; 1981 ; AIAA Journal Volume 19 ; 19 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1982 ; AIAA Journal Volume 20 ; 20 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1983 ; AIAA Journal Volume 21 ; 21 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1984 ; AIAA Journal Volume 22 ; 22 ; https://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 1984 ; AIAA Journal Volume 22 ; 22 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 1985 ; AIAA Journal Volume 23 ; 23 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1986 ; AIAA Journal Volume 24 ; 24 ; https://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 1986 ; AIAA Journal Volume 24 ; 24 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 1987 ; AIAA Journal Volume 25 ; 25 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1988 ; AIAA Journal Volume 26 ; 26 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1989 ; AIAA Journal Volume 27 ; 27 ; https://arc.aiaa.org/ ; >
@@ -77,7 +77,7 @@
     au < frozen ; exists ; 2006 ; AIAA Journal Volume 44 ; 44 ; https://arc.aiaa.org/ ; >
     au < zapped ; finished ; 2007 ; AIAA Journal Volume 45 ; 45 ; http://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2008 ; AIAA Journal Volume 46 ; 46 ; http://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2009 ; AIAA Journal Volume 47 ; 47 ; https://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 2009 ; AIAA Journal Volume 47 ; 47 ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2010 ; AIAA Journal Volume 48 ; 48 ; https://arc.aiaa.org/ ; >
     au < finished ; finished ; 2011 ; AIAA Journal Volume 49 ; 49 ; http://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2012 ; AIAA Journal Volume 50 ; 50 ; http://arc.aiaa.org/ ; >
@@ -102,29 +102,29 @@
     param[journal_id] = atcq
     comment[continued_as] = 2380-9450 #Journal of Air Transportation
 
-    au < frozen ; exists ; 1993 ; Air Traffic Control Quarterly Volume 1 ; 1 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1994 ; Air Traffic Control Quarterly Volume 2 ; 2 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1995 ; Air Traffic Control Quarterly Volume 3 ; 3 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1996 ; Air Traffic Control Quarterly Volume 4 ; 4 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1997 ; Air Traffic Control Quarterly Volume 5 ; 5 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1998 ; Air Traffic Control Quarterly Volume 6 ; 6 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1999 ; Air Traffic Control Quarterly Volume 7 ; 7 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2000 ; Air Traffic Control Quarterly Volume 8 ; 8 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2001 ; Air Traffic Control Quarterly Volume 9 ; 9 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2002 ; Air Traffic Control Quarterly Volume 10 ; 10 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2003 ; Air Traffic Control Quarterly Volume 11 ; 11 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2004 ; Air Traffic Control Quarterly Volume 12 ; 12 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2005 ; Air Traffic Control Quarterly Volume 13 ; 13 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2006 ; Air Traffic Control Quarterly Volume 14 ; 14 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2007 ; Air Traffic Control Quarterly Volume 15 ; 15 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2008 ; Air Traffic Control Quarterly Volume 16 ; 16 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2009 ; Air Traffic Control Quarterly Volume 17 ; 17 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2010 ; Air Traffic Control Quarterly Volume 18 ; 18 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2011 ; Air Traffic Control Quarterly Volume 19 ; 19 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2012 ; Air Traffic Control Quarterly Volume 20 ; 20 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2013 ; Air Traffic Control Quarterly Volume 21 ; 21 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2014 ; Air Traffic Control Quarterly Volume 22 ; 22 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2015 ; Air Traffic Control Quarterly Volume 23 ; 23 ; https://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 1993 ; Air Traffic Control Quarterly Volume 1 ; 1 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1994 ; Air Traffic Control Quarterly Volume 2 ; 2 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1995 ; Air Traffic Control Quarterly Volume 3 ; 3 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1996 ; Air Traffic Control Quarterly Volume 4 ; 4 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1997 ; Air Traffic Control Quarterly Volume 5 ; 5 ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1998 ; Air Traffic Control Quarterly Volume 6 ; 6 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1999 ; Air Traffic Control Quarterly Volume 7 ; 7 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2000 ; Air Traffic Control Quarterly Volume 8 ; 8 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2001 ; Air Traffic Control Quarterly Volume 9 ; 9 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2002 ; Air Traffic Control Quarterly Volume 10 ; 10 ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2003 ; Air Traffic Control Quarterly Volume 11 ; 11 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2004 ; Air Traffic Control Quarterly Volume 12 ; 12 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2005 ; Air Traffic Control Quarterly Volume 13 ; 13 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2006 ; Air Traffic Control Quarterly Volume 14 ; 14 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2007 ; Air Traffic Control Quarterly Volume 15 ; 15 ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2008 ; Air Traffic Control Quarterly Volume 16 ; 16 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2009 ; Air Traffic Control Quarterly Volume 17 ; 17 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2010 ; Air Traffic Control Quarterly Volume 18 ; 18 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2011 ; Air Traffic Control Quarterly Volume 19 ; 19 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2012 ; Air Traffic Control Quarterly Volume 20 ; 20 ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2013 ; Air Traffic Control Quarterly Volume 21 ; 21 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2014 ; Air Traffic Control Quarterly Volume 22 ; 22 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2015 ; Air Traffic Control Quarterly Volume 23 ; 23 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
 
   }
   
@@ -139,14 +139,14 @@
     param[journal_id] = jacic
     comment[continued_by] = 2327-3097
 
-    au < frozen ; exists ; 2004 ; Journal of Aerospace Computing, Information, and Communication Volume 1 ; 1 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2005 ; Journal of Aerospace Computing, Information, and Communication Volume 2 ; 2 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2006 ; Journal of Aerospace Computing, Information, and Communication Volume 3 ; 3 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2007 ; Journal of Aerospace Computing, Information, and Communication Volume 4 ; 4 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2008 ; Journal of Aerospace Computing, Information, and Communication Volume 5 ; 5 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2009 ; Journal of Aerospace Computing, Information, and Communication Volume 6 ; 6 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2010 ; Journal of Aerospace Computing, Information, and Communication Volume 7 ; 7 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2011 ; Journal of Aerospace Computing, Information, and Communication Volume 8 ; 8 ; https://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 2004 ; Journal of Aerospace Computing, Information, and Communication Volume 1 ; 1 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2005 ; Journal of Aerospace Computing, Information, and Communication Volume 2 ; 2 ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2006 ; Journal of Aerospace Computing, Information, and Communication Volume 3 ; 3 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2007 ; Journal of Aerospace Computing, Information, and Communication Volume 4 ; 4 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2008 ; Journal of Aerospace Computing, Information, and Communication Volume 5 ; 5 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2009 ; Journal of Aerospace Computing, Information, and Communication Volume 6 ; 6 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2010 ; Journal of Aerospace Computing, Information, and Communication Volume 7 ; 7 ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2011 ; Journal of Aerospace Computing, Information, and Communication Volume 8 ; 8 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2012 ; Journal of Aerospace Computing, Information, and Communication Volume 9 ; 9 ; http://arc.aiaa.org/ ; >
 
   }
@@ -200,11 +200,11 @@
     >
     param[journal_id] = ja
 
-    au < frozen ; exists ; 1964 ; Journal of Aircraft Volume 1 ; 1 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1965 ; Journal of Aircraft Volume 2 ; 2 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1966 ; Journal of Aircraft Volume 3 ; 3 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1967 ; Journal of Aircraft Volume 4 ; 4 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1968 ; Journal of Aircraft Volume 5 ; 5 ; https://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 1964 ; Journal of Aircraft Volume 1 ; 1 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1965 ; Journal of Aircraft Volume 2 ; 2 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1966 ; Journal of Aircraft Volume 3 ; 3 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1967 ; Journal of Aircraft Volume 4 ; 4 ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1968 ; Journal of Aircraft Volume 5 ; 5 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 1969 ; Journal of Aircraft Volume 6 ; 6 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1970 ; Journal of Aircraft Volume 7 ; 7 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1971 ; Journal of Aircraft Volume 8 ; 8 ; https://arc.aiaa.org/ ; >
@@ -217,12 +217,12 @@
     au < frozen ; exists ; 1978 ; Journal of Aircraft Volume 15 ; 15 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1979 ; Journal of Aircraft Volume 16 ; 16 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1980 ; Journal of Aircraft Volume 17 ; 17 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1981 ; Journal of Aircraft Volume 18 ; 18 ; https://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 1981 ; Journal of Aircraft Volume 18 ; 18 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 1982 ; Journal of Aircraft Volume 19 ; 19 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1983 ; Journal of Aircraft Volume 20 ; 20 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1984 ; Journal of Aircraft Volume 21 ; 21 ; https://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 1984 ; Journal of Aircraft Volume 21 ; 21 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 1985 ; Journal of Aircraft Volume 22 ; 22 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1986 ; Journal of Aircraft Volume 23 ; 23 ; https://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 1986 ; Journal of Aircraft Volume 23 ; 23 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 1987 ; Journal of Aircraft Volume 24 ; 24 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1988 ; Journal of Aircraft Volume 25 ; 25 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1989 ; Journal of Aircraft Volume 26 ; 26 ; https://arc.aiaa.org/ ; >
