@@ -55,7 +55,6 @@
       au < exists ; exists ; 2020 ; Association for Computing Machinery Source Content 2020_2 ; 2020_2 >
       au < exists ; exists ; 2020 ; Association for Computing Machinery Source Content 2020_3 ; 2020_3 >
       
-      #below plugin does not yet exist
    
      }
 
@@ -65,6 +64,13 @@
        hidden[proxy] = DIRECT
        
        implicit < status ; status2 ; year ; name ; param[directory] >
+       
+       au < exists ; exists ; 2020 ; Association for Computing Machinery Source Content 2020_1 ; 2020_1 >
+       au < exists ; exists ; 2020 ; Association for Computing Machinery Source Content 2020_2 ; 2020_2 >
+       au < exists ; exists ; 2020 ; Association for Computing Machinery Source Content 2020_3 ; 2020_3 >
+       au < exists ; exists ; 2020 ; Association for Computing Machinery Source Content 2020_4 ; 2020_4 >
+       au < exists ; exists ; 2020 ; Association for Computing Machinery Source Content 2020_5 ; 2020_5 >
+       au < exists ; exists ; 2020 ; Association for Computing Machinery Source Content 2020_6 ; 2020_6 >
 
 
      }
