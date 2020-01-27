@@ -88,18 +88,18 @@
     implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
     param[journal_id] = sch
 
-    au < ready ; 2000 ; Scottish Church History Volume 30 ; 30 ; https://www.euppublishing.com/ >
-    au < ready ; 2002 ; Scottish Church History Volume 31 ; 31 ; https://www.euppublishing.com/ >
-    au < ready ; 2002 ; Scottish Church History Volume 32 ; 32 ; https://www.euppublishing.com/ >
-    au < ready ; 2003 ; Scottish Church History Volume 33 ; 33 ; https://www.euppublishing.com/ >
-    au < ready ; 2004 ; Scottish Church History Volume 34 ; 34 ; https://www.euppublishing.com/ >
-    au < ready ; 2005 ; Scottish Church History Volume 35 ; 35 ; https://www.euppublishing.com/ >
-    au < ready ; 2006 ; Scottish Church History Volume 36 ; 36 ; https://www.euppublishing.com/ >
-    au < ready ; 2007 ; Scottish Church History Volume 37 ; 37 ; https://www.euppublishing.com/ >
-    au < ready ; 2008 ; Scottish Church History Volume 38 ; 38 ; https://www.euppublishing.com/ >
-    au < ready ; 2009 ; Scottish Church History Volume 39 ; 39 ; https://www.euppublishing.com/ >
-    au < ready ; 2010 ; Scottish Church History Volume 40 ; 40 ; https://www.euppublishing.com/ >
-    au < ready ; 2012 ; Scottish Church History Volume 41 ; 41 ; https://www.euppublishing.com/ >
+    au < releasing ; 2000 ; Scottish Church History Volume 30 ; 30 ; https://www.euppublishing.com/ >
+    au < releasing ; 2002 ; Scottish Church History Volume 31 ; 31 ; https://www.euppublishing.com/ >
+    au < releasing ; 2002 ; Scottish Church History Volume 32 ; 32 ; https://www.euppublishing.com/ >
+    au < releasing ; 2003 ; Scottish Church History Volume 33 ; 33 ; https://www.euppublishing.com/ >
+    au < releasing ; 2004 ; Scottish Church History Volume 34 ; 34 ; https://www.euppublishing.com/ >
+    au < releasing ; 2005 ; Scottish Church History Volume 35 ; 35 ; https://www.euppublishing.com/ >
+    au < releasing ; 2006 ; Scottish Church History Volume 36 ; 36 ; https://www.euppublishing.com/ >
+    au < releasing ; 2007 ; Scottish Church History Volume 37 ; 37 ; https://www.euppublishing.com/ >
+    au < releasing ; 2008 ; Scottish Church History Volume 38 ; 38 ; https://www.euppublishing.com/ >
+    au < releasing ; 2009 ; Scottish Church History Volume 39 ; 39 ; https://www.euppublishing.com/ >
+    au < releasing ; 2010 ; Scottish Church History Volume 40 ; 40 ; https://www.euppublishing.com/ >
+    au < releasing ; 2012 ; Scottish Church History Volume 41 ; 41 ; https://www.euppublishing.com/ >
     au < released ; 2013 ; Scottish Church History Volume 42 ; 42 ; https://www.euppublishing.com/ >
     au < released ; 2014 ; Scottish Church History Volume 43 ; 43 ; https://www.euppublishing.com/ >
     au < released ; 2015 ; Scottish Church History Volume 44 ; 44 ; https://www.euppublishing.com/ >
@@ -216,9 +216,9 @@
       param[journal_id] = arch
       implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
 
-      au < ready ; 2000 ; Architectural Heritage Volume 11 ; 11 ; https://www.euppublishing.com/ >
-      au < ready ; 2001 ; Architectural Heritage Volume 12 ; 12 ; https://www.euppublishing.com/ >
-      au < ready ; 2002 ; Architectural Heritage Volume 13 ; 13 ; https://www.euppublishing.com/ >
+      au < releasing ; 2000 ; Architectural Heritage Volume 11 ; 11 ; https://www.euppublishing.com/ >
+      au < releasing ; 2001 ; Architectural Heritage Volume 12 ; 12 ; https://www.euppublishing.com/ >
+      au < releasing ; 2002 ; Architectural Heritage Volume 13 ; 13 ; https://www.euppublishing.com/ >
       au < released ; 2003 ; Architectural Heritage Volume 14 ; 14 ; http://www.euppublishing.com/ >
       au < released ; 2004 ; Architectural Heritage Volume 15 ; 15 ; http://www.euppublishing.com/ >
       au < released ; 2005 ; Architectural Heritage Volume 16 ; 16 ; http://www.euppublishing.com/ >
@@ -256,9 +256,9 @@
       param[journal_id] = anh
       implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
 
-      au < ready ; 2000 ; Archives of Natural History Volume 27 ; 27 ; https://www.euppublishing.com/ >
-      au < ready ; 2001 ; Archives of Natural History Volume 28 ; 28 ; https://www.euppublishing.com/ >
-      au < ready ; 2002 ; Archives of Natural History Volume 29 ; 29 ; https://www.euppublishing.com/ >
+      au < releasing ; 2000 ; Archives of Natural History Volume 27 ; 27 ; https://www.euppublishing.com/ >
+      au < releasing ; 2001 ; Archives of Natural History Volume 28 ; 28 ; https://www.euppublishing.com/ >
+      au < releasing ; 2002 ; Archives of Natural History Volume 29 ; 29 ; https://www.euppublishing.com/ >
       au < released ; 2003 ; Archives of Natural History Volume 30 ; 30 ; http://www.euppublishing.com/ >
       au < released ; 2004 ; Archives of Natural History Volume 31 ; 31 ; http://www.euppublishing.com/ >
       au < released ; 2005 ; Archives of Natural History Volume 32 ; 32 ; http://www.euppublishing.com/ >
@@ -297,13 +297,13 @@
       param[journal_id] = bjj
       implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
 
-      au < ready ; 2000 ; Ben Jonson Journal Volume 7 ; 7 ; https://www.euppublishing.com/ >
-      au < ready ; 2001 ; Ben Jonson Journal Volume 8 ; 8 ; https://www.euppublishing.com/ >
-      au < ready ; 2002 ; Ben Jonson Journal Volume 9 ; 9 ; https://www.euppublishing.com/ >
-      au < ready ; 2003 ; Ben Jonson Journal Volume 10 ; 10 ; https://www.euppublishing.com/ >
-      au < ready ; 2004 ; Ben Jonson Journal Volume 11 ; 11 ; https://www.euppublishing.com/ >
-      au < ready ; 2005 ; Ben Jonson Journal Volume 12 ; 12 ; https://www.euppublishing.com/ >
-      au < ready ; 2006 ; Ben Jonson Journal Volume 13 ; 13 ; https://www.euppublishing.com/ >
+      au < releasing ; 2000 ; Ben Jonson Journal Volume 7 ; 7 ; https://www.euppublishing.com/ >
+      au < releasing ; 2001 ; Ben Jonson Journal Volume 8 ; 8 ; https://www.euppublishing.com/ >
+      au < releasing ; 2002 ; Ben Jonson Journal Volume 9 ; 9 ; https://www.euppublishing.com/ >
+      au < releasing ; 2003 ; Ben Jonson Journal Volume 10 ; 10 ; https://www.euppublishing.com/ >
+      au < releasing ; 2004 ; Ben Jonson Journal Volume 11 ; 11 ; https://www.euppublishing.com/ >
+      au < releasing ; 2005 ; Ben Jonson Journal Volume 12 ; 12 ; https://www.euppublishing.com/ >
+      au < releasing ; 2006 ; Ben Jonson Journal Volume 13 ; 13 ; https://www.euppublishing.com/ >
       au < released ; 2007 ; Ben Jonson Journal Volume 14 ; 14 ; http://www.euppublishing.com/ >
       au < released ; 2008 ; Ben Jonson Journal Volume 15 ; 15 ; http://www.euppublishing.com/ >
       au < released ; 2009 ; Ben Jonson Journal Volume 16 ; 16 ; http://www.euppublishing.com/ >
@@ -624,10 +624,10 @@
       param[journal_id] = elr
       implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
 
-      au < ready ; 2000 ; Edinburgh Law Review Volume 4 ; 4 ; https://www.euppublishing.com/ >
-      au < ready ; 2001 ; Edinburgh Law Review Volume 5 ; 5 ; https://www.euppublishing.com/ >
-      au < ready ; 2002 ; Edinburgh Law Review Volume 6 ; 6 ; https://www.euppublishing.com/ >
-      au < ready ; 2003 ; Edinburgh Law Review Volume 7 ; 7 ; https://www.euppublishing.com/ >
+      au < releasing ; 2000 ; Edinburgh Law Review Volume 4 ; 4 ; https://www.euppublishing.com/ >
+      au < releasing ; 2001 ; Edinburgh Law Review Volume 5 ; 5 ; https://www.euppublishing.com/ >
+      au < releasing ; 2002 ; Edinburgh Law Review Volume 6 ; 6 ; https://www.euppublishing.com/ >
+      au < releasing ; 2003 ; Edinburgh Law Review Volume 7 ; 7 ; https://www.euppublishing.com/ >
       au < released ; 2004 ; Edinburgh Law Review Volume 8 ; 8 ; http://www.euppublishing.com/ >
       au < released ; 2005 ; Edinburgh Law Review Volume 9 ; 9 ; http://www.euppublishing.com/ >
       au < released ; 2006 ; Edinburgh Law Review Volume 10 ; 10 ; http://www.euppublishing.com/ >
