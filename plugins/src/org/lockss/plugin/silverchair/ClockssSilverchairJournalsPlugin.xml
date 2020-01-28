@@ -21,11 +21,11 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Silverchair Journals Plugin (CLOCKSS)</string>
+    <string>Silverchair Journals Plugin (Legacy, CLOCKSS)</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Silverchair Journals Plugin (CLOCKSS), Base URL %s, Resource ID %d, Year %d", base_url, resource_id, year</string>
+    <string>"Silverchair Journals Plugin (Legacy, CLOCKSS), Base URL %s, Resource ID %d, Year %d", base_url, resource_id, year</string>
   </entry>
   <entry>
     <string>clockss_override</string>

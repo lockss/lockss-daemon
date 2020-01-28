@@ -34,7 +34,7 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Silverchair Journals Plugin</string>
+    <string>Silverchair Journals Plugin (Legacy)</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -70,7 +70,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Silverchair Journals Plugin, Base URL %s, Resource ID %d, Year %d", base_url, resource_id, year</string>
+    <string>"Silverchair Journals Plugin (Legacy), Base URL %s, Resource ID %d, Year %d", base_url, resource_id, year</string>
   </entry>
   <entry>
     <string>au_start_url</string>
