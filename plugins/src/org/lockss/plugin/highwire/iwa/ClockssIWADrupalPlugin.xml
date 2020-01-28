@@ -11,7 +11,7 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>International Water Association Publishing Plugin (CLOCKSS) (Legacy)</string>
+    <string>International Water Association Publishing Plugin (Legacy, CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -27,7 +27,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"International Water Association Publishing Plugin (CLOCKSS) (Legacy), Base URL %s, Volume %s", base_url, volume_name</string>
+    <string>"International Water Association Publishing Plugin (Legacy, CLOCKSS), Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
   <entry>
     <string>au_start_url</string>
