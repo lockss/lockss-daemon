@@ -8,7 +8,7 @@ import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
-import org.lockss.plugin.gigascience.GigaScienceAPIHtmlMetadataExtractorFactory;
+import org.lockss.plugin.gigascience.GigaScienceAPIXmlMetadataExtractorFactory;
 import org.lockss.util.Logger;
 
 import java.util.regex.Matcher;
@@ -21,7 +21,7 @@ import java.util.regex.Pattern;
  */
 
 public class ActaDermatoVenereologicaNLMXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
-    private static final Logger log = Logger.getLogger(GigaScienceAPIHtmlMetadataExtractorFactory.class);
+    private static final Logger log = Logger.getLogger(ActaDermatoVenereologicaNLMXmlMetadataExtractorFactory.class);
 
     private static SourceXmlSchemaHelper ActaNLMXmlHelper = null;
 

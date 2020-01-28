@@ -7,8 +7,8 @@ import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 import org.lockss.util.Logger;
 
-public class GigaScienceAPIHtmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
-    private static final Logger log = Logger.getLogger(GigaScienceAPIHtmlMetadataExtractorFactory.class);
+public class GigaScienceAPIXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
+    private static final Logger log = Logger.getLogger(GigaScienceAPIXmlMetadataExtractorFactory.class);
 
     private static SourceXmlSchemaHelper GigaScienceAPIHelper = null;
 

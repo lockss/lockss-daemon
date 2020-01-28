@@ -19,8 +19,8 @@ public class GigaScienceArticleIteratorFactory implements ArticleIteratorFactory
     private static final String PATTERN_TEMPLATE = "\"%s\", base_url";
 
     //http://gigadb.org/api/dataset?doi=100300
-    private static final Pattern HTML_PATTERN = Pattern.compile("/(dataset\\?doi=.*)", Pattern.CASE_INSENSITIVE);
-    private static final String HTML_REPLACEMENT = "/$1";
+    private static final Pattern XML_PATTERN = Pattern.compile("/(dataset\\?doi=.*)", Pattern.CASE_INSENSITIVE);
+    private static final String XML_REPLACEMENT = "/$1";
 
     @Override
     public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
@@ -31,12 +31,12 @@ public class GigaScienceArticleIteratorFactory implements ArticleIteratorFactory
                 ROOT_TEMPLATE,
                 PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
 
-        builder.addAspect(HTML_PATTERN,
-                HTML_REPLACEMENT,
-                ArticleFiles.ROLE_FULL_TEXT_HTML,
+        builder.addAspect(XML_PATTERN,
+                XML_REPLACEMENT,
+                ArticleFiles.ROLE_FULL_TEXT_XML,
                 ArticleFiles.ROLE_ARTICLE_METADATA);
 
-        builder.setRoleFromOtherRoles( ArticleFiles.ROLE_ABSTRACT, ArticleFiles.ROLE_FULL_TEXT_HTML);
+        builder.setRoleFromOtherRoles( ArticleFiles.ROLE_ABSTRACT, ArticleFiles.ROLE_FULL_TEXT_XML);
         return builder.getSubTreeArticleIterator();
     }
 

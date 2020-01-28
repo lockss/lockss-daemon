@@ -16,6 +16,25 @@ public class TestGigaScienceAPIHelper extends LockssTestCase {
 
     public void testAPIXmlXPathAlone() throws Exception {
 
+        final String baseUrl = "http://gigadb.org/";
+        final int year = 2018;
+        final String YEAR_BEGIN = "-01-01";
+        final String YEAR_END = "-12-31";
+        final String KEY_FROM_DATE = "start_date=";
+        final String KEY_UNTIL_DATE = "end_date=";
+
+
+        String apiStartUrl =  String.format("%sapi/list?%s%s%s&%s%s%s",
+               baseUrl,
+                KEY_FROM_DATE,
+                Integer.toString(year),
+                YEAR_BEGIN,
+                KEY_UNTIL_DATE,
+                Integer.toString(year),
+                YEAR_END);
+
+        log.info("apiStartUrl: " + apiStartUrl);
+
         String fname = "sample_single_doi.xml";
 
         String fileName= System.getProperty("user.dir") +

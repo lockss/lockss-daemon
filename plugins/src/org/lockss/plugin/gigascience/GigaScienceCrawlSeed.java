@@ -23,12 +23,9 @@ public class GigaScienceCrawlSeed extends BaseCrawlSeed {
 
     //http://gigadb.org/api/list?start_date=2018-01-01&end_date=2018-12-31
     //http://gigadb.org/api/dataset?doi=100658
-    protected static final String API_URL = "http://gigadb.org/api/";
-    protected static final String SINGLE_DOI_API_URL = "http://gigadb.org/api/dataset?doi=";
 
-
-    public static final String YEAR_PREFIX = "-01-01";
-    public static final String YEAR_POSTFIX = "-12-31";
+    public static final String YEAR_BEGIN = "-01-01";
+    public static final String YEAR_END = "-12-31";
     public static final String KEY_FROM_DATE = "start_date=";
     public static final String KEY_UNTIL_DATE = "end_date=";
 
@@ -37,6 +34,7 @@ public class GigaScienceCrawlSeed extends BaseCrawlSeed {
     protected List<String> urlList;
 
     protected String baseUrl;
+    protected String apiSingleDoiAPIUrl;
     protected int year;
 
     public GigaScienceCrawlSeed(Crawler.CrawlerFacade facade) {
@@ -51,6 +49,7 @@ public class GigaScienceCrawlSeed extends BaseCrawlSeed {
     protected void initialize() throws ConfigurationException, PluginException, IOException {
         super.initialize();
         this.baseUrl = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
+        this.apiSingleDoiAPIUrl = this.baseUrl + "api/dataset?doi=";
         try {
             this.year = au.getConfiguration().getInt(ConfigParamDescr.YEAR.getKey());
         } catch (Configuration.InvalidParam e) {
@@ -80,14 +79,22 @@ public class GigaScienceCrawlSeed extends BaseCrawlSeed {
      */
     protected void populateUrlList() throws IOException {
 
-        AuState aus = AuUtil.getAuState(au);
         urlList = new ArrayList<String>();
-        String apiStartUrl =   baseUrl + "list?" + KEY_FROM_DATE + Integer.toString(this.year) + YEAR_PREFIX
-                            + "&" + KEY_UNTIL_DATE + Integer.toString(this.year) + YEAR_POSTFIX;
+
+        String apiStartUrl =  String.format("%sapi/list?%s%s%s&%s%s%s",
+                            this.baseUrl,
+                            KEY_FROM_DATE,
+                            Integer.toString(this.year),
+                            YEAR_BEGIN,
+                            KEY_UNTIL_DATE,
+                            Integer.toString(this.year),
+                            YEAR_END);
+
+        log.debug2("apiStartUrl: " + apiStartUrl);
 
         GigaScienceDoiLinkExtractor ple = new GigaScienceDoiLinkExtractor();
 
-        UrlFetcher uf = makeApiUrlFetcher(ple,apiStartUrl);
+        UrlFetcher uf = makeApiUrlFetcher(ple, apiStartUrl, this.apiSingleDoiAPIUrl);
         log.debug2("Request URL: " + apiStartUrl);
         facade.getCrawlerStatus().addPendingUrl(apiStartUrl);
 
@@ -135,19 +142,20 @@ public class GigaScienceCrawlSeed extends BaseCrawlSeed {
     /**
      * <p>
      * Makes a URL fetcher for the given API request, that will parse the result
-     * using the given {@link GigaScienceDoiLinkExtractor} instance.
+     * using the given GigaScienceDoiLinkExtractor instance.
      * </p>
      *
      * @param ple
-     *          A {@link GigaScienceDoiLinkExtractor} instance to parse the API
+     *          A  GigaScienceDoiLinkExtractor instance to parse the API
      *          response with.
      * @param url
      *          A query URL.
      * @return A URL fetcher for the given query URL.
      * @since 1.67.5
      */
-    protected UrlFetcher makeApiUrlFetcher(final GigaScienceDoiLinkExtractor ple,
-                                           final String url) {
+    protected UrlFetcher makeApiUrlFetcher( final GigaScienceDoiLinkExtractor ple,
+                                            final String url,
+                                            final String apiSingleDoiAPIUrl) {
         // Make a URL fetcher
         UrlFetcher uf = facade.makeUrlFetcher(url);
 
@@ -181,7 +189,7 @@ public class GigaScienceCrawlSeed extends BaseCrawlSeed {
                                         @Override
                                         public void foundLink(String doiUrl) {
                                             log.debug3("doiUrl is added = " + doiUrl);
-                                            partial.add(SINGLE_DOI_API_URL + doiUrl);
+                                            partial.add(apiSingleDoiAPIUrl + doiUrl);
                                         }
                                     });
                         }
@@ -209,8 +217,8 @@ public class GigaScienceCrawlSeed extends BaseCrawlSeed {
         StringBuilder sb = new StringBuilder();
         sb.append("<html>\n");
         for (String u : urlList) {
-            log.debug3("SINGLE_DOI_API_URL is :" + SINGLE_DOI_API_URL + u);
-            sb.append("<a href=\"" + SINGLE_DOI_API_URL + u + "\">" + u + "</a><br/>\n");
+            log.debug3("SINGLE_DOI_API_URL is :"  + u);
+            sb.append("<a href=\"" + u + "\">" + u + "</a><br/>\n");
         }
         sb.append("</html>");
         CIProperties headers = new CIProperties();

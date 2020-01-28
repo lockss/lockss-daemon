@@ -9,7 +9,7 @@
     </entry>
     <entry>
         <string>plugin_name</string>
-        <string>Giga Science Plugin</string>
+        <string>Giga Science API Plugin</string>
     </entry>
     <entry>
         <string>plugin_version</string>
@@ -40,29 +40,25 @@
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"GigaScience Files Plugin, Base URL %s, Year %d", base_url, year</string>
-    </entry>
-    <entry>
-        <string>au_refetch_depth</string>
-        <int>1</int>
+        <string>"Giga Science API Plugin, Base URL %s, Year %d", base_url, year</string>
     </entry>
     <entry>
         <string>au_start_url</string>
-        <string>"%s", base_url</string>
+        <string>"%sapi/", base_url</string>
     </entry>
     <entry>
         <string>au_permission_url</string>
-        <string>"http://gigadb.org/lockss.txt"</string>
+        <string>"%slockss.txt", base_url</string>
     </entry>
     <entry>
         <string>au_crawlrules</string>
         <list>
-            <string>1,"https?://gigadb.org/"</string>
+            <string>1,"%sapi/", base_url</string>
         </list>
     </entry>
     <entry>
         <string>au_refetch_depth</string>
-        <int>1</int>
+        <int>2</int>
     </entry>
     <entry>
         <string>plugin_crawl_seed_factory</string>
@@ -81,25 +77,7 @@
         <map>
             <entry>
                 <string>*</string>
-                <string>org.lockss.plugin.gigascience.GigaScienceAPIHtmlMetadataExtractorFactory</string>
-            </entry>
-        </map>
-    </entry>
-    <entry>
-        <string>text/html_metadata_extractor_factory_map</string>
-        <map>
-            <entry>
-                <string>*;DublinCore</string>
-                <string>org.lockss.plugin.gigascience.GigaScienceAPIHtmlMetadataExtractorFactory</string>
-            </entry>
-        </map>
-    </entry>
-    <entry>
-        <string>application/xml_metadata_extractor_factory_map</string>
-        <map>
-            <entry>
-                <string>*</string>
-                <string>org.lockss.plugin.gigascience.GigaScienceAPIHtmlMetadataExtractorFactory</string>
+                <string>org.lockss.plugin.gigascience.GigaScienceAPIXmlMetadataExtractorFactory</string>
             </entry>
         </map>
     </entry>
