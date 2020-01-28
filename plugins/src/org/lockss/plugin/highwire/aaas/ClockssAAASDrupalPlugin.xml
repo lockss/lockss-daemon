@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>19</string>
+    <string>20</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -21,7 +21,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>79</string>
+    <string>81</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -64,5 +64,12 @@
   <entry>
     <string>application/pdf_filter_factory</string>
     <string>org.lockss.plugin.highwire.HighWireDrupalScrapingPdfFilterFactory</string>
+  </entry>
+  <!--Need the following feature enabled to bypass "Unable to fetch probe permission page"-->
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <string>org.lockss.plugin.ContentValidationException$WrongLength=org.lockss.util.urlconn.CacheException$WarningOnly</string>
+    </list>
   </entry>
 </map>
