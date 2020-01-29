@@ -21,8 +21,8 @@ public class ActaDermatoVenereologicaArticleIteratorFactory implements ArticleIt
     protected static final String ROOT_TEMPLATE = "\"%s%d\",base_url,year";
     private static final String PATTERN_TEMPLATE = "\"%s%d/.+\",base_url,year";
 
-    public static final Pattern XML_PATTERN = Pattern.compile("/(.*)\\.xml$", Pattern.CASE_INSENSITIVE);
-    public static final Pattern PDF_PATTERN = Pattern.compile("/(.*)\\.pdf$", Pattern.CASE_INSENSITIVE);
+    public static final Pattern XML_PATTERN = Pattern.compile("/([^/]+)\\.xml$", Pattern.CASE_INSENSITIVE);
+    public static final Pattern PDF_PATTERN = Pattern.compile("/([^/]+)\\.pdf$", Pattern.CASE_INSENSITIVE);
     public static final String XML_REPLACEMENT = "/$1.xml";
     private static final String PDF_REPLACEMENT = "/$1.pdf";
 
@@ -43,10 +43,6 @@ public class ActaDermatoVenereologicaArticleIteratorFactory implements ArticleIt
 
         builder.addAspect(XML_PATTERN,
                 XML_REPLACEMENT,
-                ArticleFiles.ROLE_FULL_TEXT_XML,
-                ArticleFiles.ROLE_ARTICLE_METADATA);
-
-        builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF,
                 ArticleFiles.ROLE_ARTICLE_METADATA);
 
         return builder.getSubTreeArticleIterator();

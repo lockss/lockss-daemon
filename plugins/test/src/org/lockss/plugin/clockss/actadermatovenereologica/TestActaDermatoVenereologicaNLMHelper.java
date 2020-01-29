@@ -26,11 +26,11 @@ public class TestActaDermatoVenereologicaNLMHelper extends LockssTestCase {
 
         String xpathArticleTitleExpression = "/PubmedArticleSet/PubmedArticle/MedlineCitation/Article/ArticleTitle";
         String xpathPaginationExpression = "/PubmedArticleSet/PubmedArticle/MedlineCitation/Article/Pagination/MedlinePgn";
-        String xpathDoiExpression = "/PubmedArticleSet/PubmedArticle/MedlineCitation/Article/ELocationID";
+        String xpathDoiExpression = "/PubmedArticleSet/PubmedArticle/MedlineCitation/Article/ELocationID[@EIdType=\"doi\"]";
         String xpathAuthorExpression = "/PubmedArticleSet/PubmedArticle/MedlineCitation/Article/AuthorList/Author";
         String xpathPubTitleExpression = "/PubmedArticleSet/PubmedArticle/MedlineCitation/Article/Journal/Title";
         String xpathPubDateExpression = "/PubmedArticleSet/PubmedArticle/MedlineCitation/Article/Journal/JournalIssue/PubDate";
-        String xpathEISSNExpression = "/PubmedArticleSet/PubmedArticle/MedlineCitation/Article/Journal/ISSN";
+        String xpathEISSNExpression = "/PubmedArticleSet/PubmedArticle/MedlineCitation/Article/Journal/ISSN[@IssnType=\"Electronic\"]";
 
         evaluateXPath(document, xpathArticleTitleExpression);
         evaluatePaginationXPath(document, xpathPaginationExpression);

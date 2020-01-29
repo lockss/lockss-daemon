@@ -91,29 +91,6 @@ public class ActaDermatoVenereologicaNLMXmlHelper implements SourceXmlSchemaHelp
     };
 
     /*
-    <Pagination>
-        <MedlinePgn>53-57</MedlinePgn>
-    </Pagination>
-     */
-
-    private static final String PAGINATION_PATTERN_STRING = "(\\d+)\\s*(-)?\\s*(\\d+)";
-    private static Pattern PAGINATION_PATTER_PATTERN =  Pattern.compile("^\\s*" + PAGINATION_PATTERN_STRING, Pattern.CASE_INSENSITIVE);
-
-    static private final XmlDomMetadataExtractor.NodeValue PAGE_VALUE = new XmlDomMetadataExtractor.NodeValue() {
-        @Override
-        public String getValue(Node node) {
-            log.debug3("getValue of Acta DerMato Venereologica pagination");
-            String paginationVal = node.getTextContent();
-            Matcher iMat = PAGINATION_PATTER_PATTERN .matcher(paginationVal);
-            if(!iMat.find()){ //use find not match to ignore trailing stuff
-                log.debug3("Acta DerMato Venereologica pagination no match");
-                return null;
-            }
-            return iMat.group(1) + "-" + iMat.group(3);
-        }
-    };
-
-    /*
     <PubDate>
         <Year>2019</Year>
         <Month>01</Month>
@@ -165,12 +142,10 @@ public class ActaDermatoVenereologicaNLMXmlHelper implements SourceXmlSchemaHelp
     // from the immediately preceeding sibling -
     private static String art_title = top + "/MedlineCitation/Article/ArticleTitle";
     private static String art_contrib = top + "/MedlineCitation/Article/AuthorList/Author";
-    private static String art_doi = top + "/MedlineCitation/Article/ELocationID";
+    private static String art_doi = top + "/MedlineCitation/Article/ELocationID[@EIdType=\"doi\"]";
     private static String pub_title = top + "/MedlineCitation/Article/Journal/Title";
     private static String art_publication_date = top + "/MedlineCitation/Article/Journal/JournalIssue/PubDate";
-    private static String art_eissn = top + "/MedlineCitation/Article/Journal/ISSN";
-    //private static String art_start_page = top  + "/MedlineCitation/Article/Pagination/MedlinePgn";
-    private static String art_end_page = top  + "/MedlineCitation/Article/Pagination/MedlinePgn";
+    private static String art_eissn = top + "/MedlineCitation/Article/Journal/ISSN[@IssnType=\"Electronic\"]";
 
     /*
      *  The following 3 variables are needed to use the XPathXmlMetadataParser

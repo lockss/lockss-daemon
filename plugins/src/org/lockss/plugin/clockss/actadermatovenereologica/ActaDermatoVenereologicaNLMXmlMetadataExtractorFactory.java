@@ -8,7 +8,6 @@ import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
-import org.lockss.plugin.gigascience.GigaScienceAPIXmlMetadataExtractorFactory;
 import org.lockss.util.Logger;
 
 import java.util.regex.Matcher;
@@ -50,19 +49,17 @@ public class ActaDermatoVenereologicaNLMXmlMetadataExtractorFactory extends Sour
             if (thisAM.getRaw(ActaDermatoVenereologicaNLMXmlHelper.PAGINATION) != null) {
                 String pages = thisAM.getRaw(ActaDermatoVenereologicaNLMXmlHelper.PAGINATION);
 
-                log.debug3("Fei pages=======" + pages);
-
                 // 53-57
-                String page_pattern_string = "(\\d+)\\s*(-)?\\s*(\\d+)";
+                String page_pattern_string = "(\\d+)(\\s*(-)?\\s*(\\d+))?";
                 Pattern page_pattern = Pattern.compile("^\\s*" + page_pattern_string, Pattern.CASE_INSENSITIVE);
                 Matcher matcher = page_pattern.matcher(pages);
 
                 String start_page = "0";
                 String end_page = "0";
 
-                while (matcher.find()) {
+                if (matcher.find()) {
                     start_page = matcher.group(1);
-                    end_page = matcher.group(3);
+                    end_page = matcher.group(4);
                 }
 
                 thisAM.put(MetadataField.FIELD_START_PAGE, start_page);
