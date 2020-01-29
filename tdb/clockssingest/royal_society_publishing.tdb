@@ -87,7 +87,7 @@
     au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2015 ; Biographical Memoirs of Fellows of the Royal Society Volume 61 ; 61 ; reingest5.clockss.org:8082 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2016 ; Biographical Memoirs of Fellows of the Royal Society Volume 62 ; 62 ; reingest1.clockss.org:8082 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; manifest ; 2017 ; Biographical Memoirs of Fellows of the Royal Society Volume 63 ; 63 ; reingest3.clockss.org:8083 >
-    au < rsp.ClockssRSPDrupalPlugin ; doNotProcess ; doNotProcess ; 2018 ; Biographical Memoirs of Fellows of the Royal Society Volume 64 ; 64 ; >
+    au < rsp.ClockssRSPDrupalPlugin ; superseded ; exists ; 2018 ; Biographical Memoirs of Fellows of the Royal Society Volume 64 [superseded] ; 64 ; >
 
   }
 
