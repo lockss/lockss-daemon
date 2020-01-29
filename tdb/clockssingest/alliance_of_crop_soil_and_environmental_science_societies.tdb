@@ -19,6 +19,8 @@
   # this might mean that ACSESS might need to be rephrased as a Provider in TDB files.
   
   # This publisher also has e-books.
+
+  # move to Wiley in 2020
   
   plugin = org.lockss.plugin.acsess.ClockssACSESSJournalsPlugin
   param[base_url] = https://dl.sciencesocieties.org/
