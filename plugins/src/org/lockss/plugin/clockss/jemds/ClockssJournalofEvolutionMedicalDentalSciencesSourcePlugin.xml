@@ -1,0 +1,67 @@
+<map>
+    <entry>
+        <string>plugin_status</string>
+        <string>development</string>
+    </entry>
+    <entry>
+        <string>plugin_identifier</string>
+        <string>org.lockss.plugin.clockss.jemds.ClockssJournalofEvolutionMedicalDentalSciencesSourcePlugin</string>
+    </entry>
+    <entry>
+        <string>plugin_version</string>
+        <string>1</string>
+    </entry>
+    <entry>
+        <string>plugin_feature_version_map</string>
+        <map>
+            <entry>
+                <string>Metadata</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Substance</string>
+                <string>1</string>
+            </entry>
+        </map>
+    </entry>
+    <entry>
+        <string>plugin_parent</string>
+        <string>org.lockss.plugin.clockss.ClockssSourcePlugin</string>
+    </entry>
+    <entry>
+        <string>plugin_parent_version</string>
+        <string>15</string>
+    </entry>
+    <entry>
+        <string>au_name</string>
+        <string>"Journal of Evolution of Medical and Dental Sciences Source Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
+    </entry>
+    <entry>
+        <string>plugin_name</string>
+        <string>Journal of Evolution of Medical and Dental Sciences Source Plugin (CLOCKSS)</string>
+    </entry>
+    <entry>
+        <string>au_substance_url_pattern</string>
+        <list>
+            <!-- http://content5.lockss.org/sourcefiles/jemds-released/2019/20191213/1-dhakeswar%20singh-jan-21-/1-dhakeswar%20singh-jan-21-.pdf -->
+            <string>"^%s%d/.+\.pdf$", base_url, year</string>
+        </list>
+    </entry>
+    <entry>
+        <string>plugin_article_iterator_factory</string>
+        <string>org.lockss.plugin.clockss.jemds.JournalofEvolutionMedicalDentalSciencesSourcePluginArticleIteratorFactory</string>
+    </entry>
+    <entry>
+        <string>plugin_article_metadata_extractor_factory</string>
+        <string>org.lockss.plugin.clockss.jemds.JournalofEvolutionMedicalDentalSciencesSourcePluginArticleIteratorFactory</string>
+    </entry>
+    <entry>
+        <string>text/xml_metadata_extractor_factory_map</string>
+        <map>
+            <entry>
+                <string>*</string>
+                <string>org.lockss.plugin.clockss.jemds.JournalofEvolutionMedicalDentalSciencesSourcePluginMetadataExtractorFactory</string>
+            </entry>
+        </map>
+    </entry>
+</map>
