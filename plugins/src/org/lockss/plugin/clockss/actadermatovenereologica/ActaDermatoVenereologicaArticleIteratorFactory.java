@@ -43,6 +43,7 @@ public class ActaDermatoVenereologicaArticleIteratorFactory implements ArticleIt
 
         builder.addAspect(XML_PATTERN,
                 XML_REPLACEMENT,
+                ArticleFiles.ROLE_FULL_TEXT_XML,
                 ArticleFiles.ROLE_ARTICLE_METADATA);
 
         builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF,
