@@ -305,7 +305,7 @@
     au < finished ; crawling ; 1994 ; 978-0-89118-932-9 ; Soil Science Education: Philosophy and Perspectives ; soilscienceeduc ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1987 ; 978-0-89118-915-2 ; Soil Survey Techniques ; soilsurveytechn ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 1984 ; 978-0-89118-909-1 ; Soil Taxonomy—Achievements and Challenges ; soiltaxonomyach ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 1967 ; 978-0-89118-897-1 ; Soil Testing and Plant Analysis Part I Soil ready ; soiltestingandp_part1 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 1967 ; 978-0-89118-897-1 ; Soil Testing and Plant Analysis Part I Soil Testing ; soiltestingandp_part1 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1967 ; 978-0-89118-897-1 ; Soil Testing and Plant Analysis Part II Plant Analysis ; soiltestingandp_part2 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 1994 ; 978-0-89118-935-0 ; Soil Testing: Prospects for Improving Nutrient Recommendations ; soiltestingpros ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 1987 ; 978-0-89118-916-9 ; Soil Testing: Sampling, Correlation, Calibration, and Interpretation ; soiltestingsamp ; reingest1.clockss.org:8082 >
@@ -348,12 +348,12 @@
     au < finished ; crawling ; 1966 ; 978-0-89118-887-2 ; Agricultural Anhydrous Ammonia Technology and Use ; agriculturalanh ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 1975 ; 978-0-89118-868-1 ; Agricultural Development Soil, Food, People, Work ; agriculturaldev ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1993 ; 978-0-89118-254-2 ; Agricultural Research in the Northeastern United States: Critical Review and Future Perspectives ; agriculturalres ; reingest5.clockss.org:8082 >
-    au < exists ; exists ; 2016 ; 978-0-89118-965-7 ; Agronomy—Grow with It! ; agronomygrowwithit ; >
+    au < manifest ; exists ; 2016 ; 978-0-89118-965-7 ; Agronomy—Grow with It! ; agronomygrowwithit ; >
     au < finished ; crawling ; 2011 ; 978-0-89118-199-6 ; Alfalfa Management Guide ; alfalfamanageme ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2012 ; 978-0-89118-183-5 ; Analysis of Generalized Linear Mixed Models in the Agricultural and Natural Resources Sciences ; analysisofgener ; reingest2.clockss.org:8085 >
-    au < exists ; exists ; 2017 ; 978-0-89118-358-7 ; Applied Statistics in Agricultural, Biological, and Environmental Sciences ; appliedstatistics ; >
+    au < manifest ; exists ; 2017 ; 978-0-89118-358-7 ; Applied Statistics in Agricultural, Biological, and Environmental Sciences ; appliedstatistics ; >
     au < finished ; crawling ; 1995 ; 978-0-89118-869-8 ; Carbon Forms and Functions in Forest Soils ; carbonformsandf ; reingest4.clockss.org:8082 >
-    au < exists ; exists ; 2017 ; 978-0-89118-363-1 ; A Collection of Case Studies ; casestudies ; >
+    au < manifest ; exists ; 2017 ; 978-0-89118-363-1 ; A Collection of Case Studies ; casestudies ; >
     au < finished ; crawling ; 1968 ; 978-0-89118-870-4 ; Changing Patterns in Fertilizer Use ; changingpattern ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 1993 ; 978-0-89118-575-8 ; Compilation of North American Maize Breeding Germplasm ; compilationofno ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 1995 ; 978-0-89118-612-0 ; Corn silage production, management, and feeding ; cornsilageprodu ; reingest4.clockss.org:8082 >
@@ -382,7 +382,7 @@
     au < finished ; crawling ; 1998 ; 978-0-89118-567-3 ; Intellectual Property Rights III Global Genetic Resources: Access and Property Rights ; intellectualpro3 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 1993 ; 978-0-89118-568-0 ; International Crop Science I ; internationalcr ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 1979 ; 978-0-89118-569-7 ; Introduction to Crop Protection ; introductiontoc ; reingest2.clockss.org:8085 >
-    au < doesNotExist ; exists ; 2014 ;  ; Irrigating Turfgrasses with Recycled Water ; irrigatingturfg ; >
+    au < doNotProcess ; exists ; 2014 ;  ; Irrigating Turfgrasses with Recycled Water ; irrigatingturfg ; > #no pdf, only full text
     au < finished ; crawling ; 2012 ; 978-0-89118-955-8 ; Know Soil Know Life ; knowsoilknowlif ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 1983 ; 978-0-89118-241-2 ; Limitations to Efficient Water Use in Crop Production ; limitationstoef ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 1989 ; 978-0-89118-242-9 ; Lunar Base Agriculture: Soils for Plant Growth ; lunarbaseagricu ; reingest3.clockss.org:8083 >
@@ -435,8 +435,8 @@
     au < finished ; crawling ; 1994 ; 978-0-89118-578-9 ; Turf Weeds and Their Control ; turfweedsandthe ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 1986 ; 978-0-89118-886-5 ; Utilization, Treatment, and Disposal of Waste on Land ; utilizationtrea ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2012 ; 978-0-089118-616-8 ; Urban–Rural Interfaces: Linking People and Nature ; urbanruralinter ; reingest4.clockss.org:8082 >
-    au < exists ; exists ; 2018 ; 978-0-89118-366-2 ; Precision Agriculture Basics ; precisionagbasics ; >
-    au < exists ; exists ; 2018 ; 978-0-89118-968-8 ; Soil-based Wastewater Treatment, Soil-based Wastewater Treatment ; sbwtreatment ; >
+    au < manifest ; exists ; 2018 ; 978-0-89118-366-2 ; Precision Agriculture Basics ; precisionagbasics ; >
+    au < manifest ; exists ; 2018 ; 978-0-89118-968-8 ; Soil-based Wastewater Treatment, Soil-based Wastewater Treatment ; sbwtreatment ; >
   }
   
 }
