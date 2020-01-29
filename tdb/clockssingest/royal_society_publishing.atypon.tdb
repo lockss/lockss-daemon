@@ -89,7 +89,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Biographical Memoirs of Fellows of the Royal Society Volume 61 ; 61 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Biographical Memoirs of Fellows of the Royal Society Volume 62 ; 62 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Biographical Memoirs of Fellows of the Royal Society Volume 63 ; 63 ; >
-    au < frozen ; exists ; 2018 ; Biographical Memoirs of Fellows of the Royal Society Volume 64 ; 64 ; >
+    au < finished ; manifest ; 2018 ; Biographical Memoirs of Fellows of the Royal Society Volume 64 ; 64 ; reingest1.clockss.org:8082 >
     au < manifest ; exists ; 2019 ; Biographical Memoirs of Fellows of the Royal Society Volume 65 ; 65 ; >
 
   }
@@ -114,11 +114,11 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Biology Letters Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Biology Letters Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Biology Letters Volume 9 ; 9 ; >
-    au < frozen ; exists ; 2014 ; Biology Letters Volume 10 ; 10 ; >
+    au < finished ; manifest ; 2014 ; Biology Letters Volume 10 ; 10 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2015 ; Biology Letters Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Biology Letters Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Biology Letters Volume 13 ; 13 ; >
-    au < frozen ; exists ; 2018 ; Biology Letters Volume 14 ; 14 ; >
+    au < finished ; manifest ; 2018 ; Biology Letters Volume 14 ; 14 ; reingest4.clockss.org:8082 >
     au < manifest ; exists ; 2019 ; Biology Letters Volume 15 ; 15 ; >
 
   }
@@ -144,7 +144,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Interface Focus Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Interface Focus Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Interface Focus Volume 7 ; 7 ; >
-    au < frozen ; exists ; 2018 ; Interface Focus Volume 8 ; 8 ; >
+    au < finished ; manifest ; 2018 ; Interface Focus Volume 8 ; 8 ; reingest4.clockss.org:8082 >
     au < manifest ; exists ; 2019 ; Interface Focus Volume 9 ; 9 ; >
 
   }
@@ -174,8 +174,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of the Royal Society Interface Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of the Royal Society Interface Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of the Royal Society Interface Volume 14 ; 14 ; >
-    au < doNotProcess ; doNotProcess ; 2018 ; Journal of the Royal Society Interface Volume 15 ; 15 ; >
-    au < frozen ; exists ; 2018 ; Journal of the Royal Society Interface Volume 15 ; 15 ; >
+    au < finished ; manifest ; 2018 ; Journal of the Royal Society Interface Volume 15 ; 15 ; reingest3.clockss.org:8083 >
     au < manifest ; exists ; 2019 ; Journal of the Royal Society Interface Volume 16 ; 16 ; >
 
   }
@@ -263,7 +262,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Notes and Records the Royal Society Journal of the History of Science Volume 69 ; 69 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Notes and Records the Royal Society Journal of the History of Science Volume 70 ; 70 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Notes and Records the Royal Society Journal of the History of Science Volume 71 ; 71 ; >
-    au < frozen ; exists ; 2018 ; Notes and Records the Royal Society Journal of the History of Science Volume 72 ; 72 ; >
+    au < finished ; manifest ; 2018 ; Notes and Records the Royal Society Journal of the History of Science Volume 72 ; 72 ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 2019 ; Notes and Records the Royal Society Journal of the History of Science Volume 73 ; 73 ; >
 
   }
@@ -285,7 +284,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Open Biology Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Open Biology Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Open Biology Volume 7 ; 7 ; >
-    au < frozen ; exists ; 2018 ; Open Biology Volume 8 ; 8 ; >
+    au < finished ; manifest ; 2018 ; Open Biology Volume 8 ; 8 ; reingest2.clockss.org:8085 >
     au < manifest ; exists ; 2019 ; Open Biology Volume 9 ; 9 ; >
 
   }
@@ -499,7 +498,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 373 ; 373 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 374 ; 374 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 375 ; 375 ; >
-    au < frozen ; exists ; 2018 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 376 ; 376 ; >
+    au < finished ; manifest ; 2018 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 376 ; 376 ; reingest1.clockss.org:8082 >
     au < manifest ; exists ; 2019 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 377 ; 377 ; >
 
   }
@@ -710,7 +709,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 370 ; 370 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 371 ; 371 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 372 ; 372 ; >
-    au < frozen ; exists ; 2018 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 373 ; 373 ; >
+    au < finished ; manifest ; 2018 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 373 ; 373 ; reingest2.clockss.org:8085 >
     au < manifest ; exists ; 2019 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 374 ; 374 ; >
 
   }
@@ -1314,7 +1313,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 471 ; 471 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 472 ; 472 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 473 ; 473 ; >
-    au < frozen ; exists ; 2018 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 474 ; 474 ; >
+    au < finished ; manifest ; 2018 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 474 ; 474 ; reingest3.clockss.org:8083 >
     au < manifest ; exists ; 2019 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 475 ; 475 ; >
 
   }
@@ -1539,7 +1538,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Proceedings of the Royal Society B: Biological Sciences Volume 282 ; 282 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Proceedings of the Royal Society B: Biological Sciences Volume 283 ; 283 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Proceedings of the Royal Society B: Biological Sciences Volume 284 ; 284 ; >
-    au < frozen ; exists ; 2018 ; Proceedings of the Royal Society B: Biological Sciences Volume 285 ; 285 ; >
+    au < finished ; manifest ; 2018 ; Proceedings of the Royal Society B: Biological Sciences Volume 285 ; 285 ; reingest4.clockss.org:8082 >
     au < manifest ; exists ; 2019 ; Proceedings of the Royal Society B: Biological Sciences Volume 286 ; 286 ; >
 
   }
