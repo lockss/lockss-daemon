@@ -195,6 +195,7 @@
   </entry>
   <entry>
     <string>plugin_cache_result_list</string>
+    <!-- org.lockss.plugin.highwire.aaas.ClockssAAASDrupalPlugin and org.lockss.plugin.highwire.elife.ClockssELifeDrupalPlugin have their own rules-->
     <list>
       <!--  starting to see some 403 on supplementary content that isn't just a crawler issue -->
       <string>403=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>      

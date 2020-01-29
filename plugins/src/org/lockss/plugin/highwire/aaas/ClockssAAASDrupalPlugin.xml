@@ -69,6 +69,19 @@
   <entry>
     <string>plugin_cache_result_list</string>
     <list>
+      <!-- Since  "plugin_cache_result_list" rules has not inherit relationship, in order for child to inherit from parent, need to have a copy of parent rules-->
+      <!--  Copy parent level "plugin_cache_result_list" rules starts here -->
+      <string>403=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
+      <string>500=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
+      <string>502=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
+      <string>503=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
+      <string>504=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
+      <string>520=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
+      <string>524=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
+      <string>org.lockss.plugin.ContentValidationException=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
+      <!--  Copy parent level "plugin_cache_result_list" rules ends here -->
+      <!-- The following rule is specific to org.lockss.plugin.highwire.aaas.ClockssAAASDrupalPlugin only to
+      handle  File size (670090) differs from Content-Length header (690668): https://science.sciencemag.org/content/366/6470/eaay3544.long error-->
       <string>org.lockss.plugin.ContentValidationException$WrongLength=org.lockss.util.urlconn.CacheException$WarningOnly</string>
     </list>
   </entry>
