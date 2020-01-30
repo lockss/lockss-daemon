@@ -3,7 +3,7 @@
   publisher <
     name = Wrocław Medical University Press ;
     info[contract] = 2019 ;
-    info[back] = 2014 ;
+    info[back] = 2000 ;
     info[tester] = 5 ;
     info[poller] = 5
   >
@@ -35,6 +35,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Advances in Clinical and Experimental Medicine Volume 26 ; 26 ;  >
     au < crawling ; exists ; 2018 ; 2018 ; Advances in Clinical and Experimental Medicine Volume 27 ; 27 ;  >
     au < crawling ; exists ; 2019 ; 2019 ; Advances in Clinical and Experimental Medicine Volume 28 ; 28 ;  >
+    au < expected ; exists ; 2020 ; 2019 ; Advances in Clinical and Experimental Medicine Volume 29 ; 29 ;  >
 
   }
 
@@ -59,6 +60,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Dental and Medical Problems Volume 54 ; 54 ;  >
     au < crawling ; exists ; 2018 ; 2018 ; Dental and Medical Problems Volume 55 ; 55 ;  >
     au < crawling ; exists ; 2019 ; 2019 ; Dental and Medical Problems Volume 56 ; 56 ;  >
+    au < expected ; exists ; 2020 ; 2020 ; Dental and Medical Problems Volume 57 ; 57 ;  >
 
   }
 
@@ -83,6 +85,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Polymers in Medicine Volume 47 ; 47 ;  >
     au < crawling ; exists ; 2018 ; 2018 ; Polymers in Medicine Volume 48 ; 48 ;  >
     au < crawling ; exists ; 2019 ; 2019 ; Polymers in Medicine Volume 49 ; 49 ;  >
+    au < expected ; exists ; 2020 ; 2020 ; Polymers in Medicine Volume 50 ; 50 ;  >
 
   }
 
@@ -105,6 +108,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Nursing and Public Health Volume 7 ; 7 ;  >
     au < crawling ; exists ; 2018 ; 2018 ; Nursing and Public Health Volume 8 ; 8 ;  >
     au < crawling ; exists ; 2019 ; 2019 ; Nursing and Public Health Volume 9 ; 9 ;  >
+    au < expected ; exists ; 2020 ; 2020 ; Nursing and Public Health Volume 10 ; 10 ;  >
 
   }
 
@@ -116,9 +120,10 @@
     
     param[base_url] = http://www.cems.umed.wroc.pl/
     
-    au < doNotProcess ; exists ; 2018 ; 2018 ; Clinical Education & Medical Simulation Volume 1 ; 1 ;  >
-    au < doNotProcess ; exists ; 2019 ; 2019 ; Clinical Education & Medical Simulation Volume 2 ; 2 ;  >
-    # can't process till it has an issn
+    au < exists ; exists ; 2018 ; 2018 ; Clinical Education & Medical Simulation Volume 1 ; 1 ;  >
+    au < exists ; exists ; 2019 ; 2019 ; Clinical Education & Medical Simulation Volume 2 ; 2 ;  >
+    au < expected ; exists ; 2020 ; 2020 ; Clinical Education & Medical Simulation Volume 3 ; 3 ;  >
+    # still needs an issn
 
   }
 
