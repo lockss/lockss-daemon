@@ -3150,7 +3150,7 @@ while (my $line = <>) {
     #printf("%s\n",$new_title);
     #printf("%s\n",decode_entities($new_title));
   } else {
-    printf("*NO MANIFEST*(%s), %s, %s, %s\n",$result,$vol_title,$auid,$man_url);
+    printf("*NO MANIFEST*(%s), %s, %s, %s\n",$result,$vol_title,$auid_long,$man_url);
     $total_missing = $total_missing + 1;
     #$tmp = "AINS - An&auml;sthesiologie &middot; Intensivmedizin &middot; Notfallmedizin &middot; Schmerztherapie";
     #printf("%s\n",$tmp);
