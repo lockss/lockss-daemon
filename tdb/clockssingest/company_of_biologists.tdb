@@ -162,7 +162,7 @@
     au < biologists.ClockssBiologistsDrupalPlugin ; manifest ; exists ; 1992 ; Development Volume 116 ; 116 ; https://dev.biologists.org/ ; >
     au < biologists.ClockssBiologistsDrupalPlugin ; manifest ; exists ; 1993 ; Development Volume 117 ; 117 ; https://dev.biologists.org/ ; >
     au < biologists.ClockssBiologistsDrupalPlugin ; manifest ; exists ; 1993 ; Development Volume 118 ; 118 ; https://dev.biologists.org/ ; >
-    au < biologists.ClockssBiologistsDrupalPlugin ; finished ; crawling ; 1993 ; Development Volume 119 ; 119 ; http://dev.biologists.org/ ; reingest5.clockss.org:8082 >
+    au < biologists.ClockssBiologistsDrupalPlugin ; finished ; frozen ; 1993 ; Development Volume 119 ; 119 ; http://dev.biologists.org/ ; reingest5.clockss.org:8082 >
     au < biologists.ClockssBiologistsDrupalPlugin ; manifest ; exists ; 1994 ; Development Volume 120 ; 120 ; https://dev.biologists.org/ ; >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1995 ; Development Volume 121 ; 121 ; http://dev.biologists.org/ ; >
     au < biologists.ClockssBiologistsDrupalPlugin ; manifest ; exists ; 1996 ; Development Volume 122 ; 122 ; https://dev.biologists.org/ ; >
@@ -204,7 +204,7 @@
 
     #param[base_url] = http://dmm.biologists.org/
 
-    au < biologists.ClockssBiologistsDrupalPlugin ; finished ; crawling ; 2008 ; Disease Models & Mechanisms Volume 1 ; 1 ; http://dmm.biologists.org/ ; reingest5.clockss.org:8082 >
+    au < biologists.ClockssBiologistsDrupalPlugin ; finished ; frozen ; 2008 ; Disease Models & Mechanisms Volume 1 ; 1 ; http://dmm.biologists.org/ ; reingest5.clockss.org:8082 >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; Disease Models & Mechanisms Volume 2 ; 2 ; http://dmm.biologists.org/ ; >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010 ; Disease Models & Mechanisms Volume 3 ; 3 ; http://dmm.biologists.org/ ; >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Disease Models & Mechanisms Volume 4 ; 4 ; http://dmm.biologists.org/ ; >
@@ -374,7 +374,7 @@
     au < biologists.ClockssBiologistsDrupalPlugin ; finished ; frozen ; 2001 ; Journal of Cell Science Volume 114 ; 114 ; http://jcs.biologists.org/ ; reingest2.clockss.org:8085 >
     au < biologists.ClockssBiologistsDrupalPlugin ; finished ; crawling ; 2002 ; Journal of Cell Science Volume 115 ; 115 ; http://jcs.biologists.org/ ; reingest3.clockss.org:8083 >
     au < biologists.ClockssBiologistsDrupalPlugin ; frozen ; exists ; 2003 ; Journal of Cell Science Volume 116 ; 116 ; http://jcs.biologists.org/ ; >
-    au < biologists.ClockssBiologistsDrupalPlugin ; finished ; crawling ; 2004 ; Journal of Cell Science Volume 117 ; 117 ; http://jcs.biologists.org/ ; reingest4.clockss.org:8082 >
+    au < biologists.ClockssBiologistsDrupalPlugin ; finished ; frozen ; 2004 ; Journal of Cell Science Volume 117 ; 117 ; http://jcs.biologists.org/ ; reingest4.clockss.org:8082 >
     au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2005 ; Journal of Cell Science Volume 118 ; 118 ; http://jcs.biologists.org/ ; reingest5.clockss.org:8082 >
     au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2006 ; Journal of Cell Science Volume 119 ; 119 ; http://jcs.biologists.org/ ; reingest1.clockss.org:8082 >
     au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2007 ; Journal of Cell Science Volume 120 ; 120 ; http://jcs.biologists.org/ ; reingest2.clockss.org:8085 >
@@ -383,7 +383,7 @@
     au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 2010 ; Journal of Cell Science Volume 123 ; 123 ; http://jcs.biologists.org/ ; >
     au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 2011 ; Journal of Cell Science Volume 124 ; 124 ; http://jcs.biologists.org/ ; >
     au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2012 ; Journal of Cell Science Volume 125 ; 125 ; http://jcs.biologists.org/ ; >
-    au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2013 ; Journal of Cell Science Volume 126 ; 126 ; http://jcs.biologists.org/ ; reingest3.clockss.org:8083 >
+    au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2013 ; Journal of Cell Science Volume 126 ; 126 ; http://jcs.biologists.org/ ; reingest3.clockss.org:8083 >
     au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 2014 ; Journal of Cell Science Volume 127 ; 127 ; http://jcs.biologists.org/ ; reingest3.clockss.org:8083 >
     au < biologists.ClockssBiologistsDrupalPlugin ; zapped ; finished ; 2015 ; Journal of Cell Science Volume 128 ; 128 ; http://jcs.biologists.org/ ; reingest2.clockss.org:8085 >
     au < biologists.ClockssBiologistsDrupalPlugin ; finished ; crawling ; 2016 ; Journal of Cell Science Volume 129 ; 129 ; http://jcs.biologists.org/ ; reingest1.clockss.org:8082 >

@@ -59,7 +59,7 @@
     au < finished ; finished ; 2007 ; Vascular Health and Risk Management Volume 3 ; 3 ; 2007 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2008 ; Vascular Health and Risk Management Volume 4 ; 4 ; 2008 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2009 ; Vascular Health and Risk Management Volume 5 ; 5 ; 2009 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2010 ; Vascular Health and Risk Management Volume 6 ; 6 ; 2010 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2010 ; Vascular Health and Risk Management Volume 6 ; 6 ; 2010 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2011 ; Vascular Health and Risk Management Volume 7 ; 7 ; 2011 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Vascular Health and Risk Management Volume 8 ; 8 ; 2012 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Vascular Health and Risk Management Volume 9 ; 9 ; 2013 ; reingest3.clockss.org:8083 >
@@ -675,7 +675,7 @@
     au < finished ; crawling ; 2013 ; International Journal of Nephrology and Renovascular Disease Volume 6 ; 6 ; 2013 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; International Journal of Nephrology and Renovascular Disease Volume 7 ; 7 ; 2014 ; >
     au < finished ; finished ; 2015 ; International Journal of Nephrology and Renovascular Disease Volume 8 ; 8 ; 2015 ; >
-    au < finished ; crawling ; 2016 ; International Journal of Nephrology and Renovascular Disease Volume 9 ; 9 ; 2016 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; International Journal of Nephrology and Renovascular Disease Volume 9 ; 9 ; 2016 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; International Journal of Nephrology and Renovascular Disease Volume 10 ; 10 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; International Journal of Nephrology and Renovascular Disease Volume 11 ; 11 ; 2018 ; >
     au < crawling ; exists ; 2019 ; International Journal of Nephrology and Renovascular Disease Volume 12 ; 12 ; 2019 ; >
@@ -1041,12 +1041,12 @@
     
     param[journal_id] = 53
 
-    au < finished ; crawling ; 2008 ; Psychology Research and Behavior Management Volume 1 ; 1 ; 2008 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2008 ; Psychology Research and Behavior Management Volume 1 ; 1 ; 2008 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2009 ; Psychology Research and Behavior Management Volume 2 ; 2 ; 2009 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2010 ; Psychology Research and Behavior Management Volume 3 ; 3 ; 2010 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2011 ; Psychology Research and Behavior Management Volume 4 ; 4 ; 2011 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2012 ; Psychology Research and Behavior Management Volume 5 ; 5 ; 2012 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2013 ; Psychology Research and Behavior Management Volume 6 ; 6 ; 2013 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2013 ; Psychology Research and Behavior Management Volume 6 ; 6 ; 2013 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Psychology Research and Behavior Management Volume 7 ; 7 ; 2014 ; >
     au < finished ; finished ; 2015 ; Psychology Research and Behavior Management Volume 8 ; 8 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Psychology Research and Behavior Management Volume 9 ; 9 ; 2016 ; reingest1.clockss.org:8082 >
@@ -1072,7 +1072,7 @@
     au < finished ; finished ; 2013 ; Clinical, Cosmetic and Investigational Dentistry Volume 5 ; 5 ; 2013 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Clinical, Cosmetic and Investigational Dentistry Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Clinical, Cosmetic and Investigational Dentistry Volume 7 ; 7 ; 2015 ; >
-    au < finished ; crawling ; 2016 ; Clinical, Cosmetic and Investigational Dentistry Volume 8 ; 8 ; 2016 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Clinical, Cosmetic and Investigational Dentistry Volume 8 ; 8 ; 2016 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Clinical, Cosmetic and Investigational Dentistry Volume 9 ; 9 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Clinical, Cosmetic and Investigational Dentistry Volume 10 ; 10 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Clinical, Cosmetic and Investigational Dentistry Volume 11 ; 11 ; 2019 ; >
@@ -1384,7 +1384,7 @@
     au < finished ; finished ; 2013 ; Nutrition and Dietary Supplements Volume 5 ; 5 ; 2013 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Nutrition and Dietary Supplements Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Nutrition and Dietary Supplements Volume 7 ; 7 ; 2015 ; >
-    au < finished ; crawling ; 2016 ; Nutrition and Dietary Supplements Volume 8 ; 8 ; 2016 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2016 ; Nutrition and Dietary Supplements Volume 8 ; 8 ; 2016 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; Nutrition and Dietary Supplements Volume 9 ; 9 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Nutrition and Dietary Supplements Volume 10 ; 10 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Nutrition and Dietary Supplements Volume 11 ; 11 ; 2019 ; >
@@ -1400,7 +1400,7 @@
     
     param[journal_id] = 72
 
-    au < finished ; crawling ; 2009 ; Orthopedic Research and Reviews Volume 1 ; 1 ; 2009 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2009 ; Orthopedic Research and Reviews Volume 1 ; 1 ; 2009 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2010 ; Orthopedic Research and Reviews Volume 2 ; 2 ; 2010 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2011 ; Orthopedic Research and Reviews Volume 3 ; 3 ; 2011 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2012 ; Orthopedic Research and Reviews Volume 4 ; 4 ; 2012 ; reingest5.clockss.org:8082 >
@@ -1707,7 +1707,7 @@
     
     param[journal_id] = 88
 
-    au < finished ; crawling ; 2005 ; Core Evidence Volume 1 Issues 1 and 2 ; 1 ; 2005 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2005 ; Core Evidence Volume 1 Issues 1 and 2 ; 1 ; 2005 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2006 ; Core Evidence Volume 1 Issues 3 and 4 ; 1 ; 2006 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2007 ; Core Evidence Volume 2 ; 2 ; 2007 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2008 ; Core Evidence Volume 3 ; 3 ; 2008 ; reingest2.clockss.org:8085 >
@@ -1847,7 +1847,7 @@
     au < finished ; finished ; 2010 ; Research and Reports in Biology Volume 1 ; 1 ; 2010 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2011 ; Research and Reports in Biology Volume 2 ; 2 ; 2011 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Research and Reports in Biology Volume 3 ; 3 ; 2012 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2013 ; Research and Reports in Biology Volume 4 ; 4 ; 2013 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Research and Reports in Biology Volume 4 ; 4 ; 2013 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Research and Reports in Biology Volume 5 ; 5 ; 2014 ; >
     au < finished ; finished ; 2015 ; Research and Reports in Biology Volume 6 ; 6 ; 2015 ; >
     au < finished ; frozen ; 2016 ; Research and Reports in Biology Volume 7 ; 7 ; 2016 ; reingest2.clockss.org:8085 >
@@ -2166,7 +2166,7 @@
     au < finished ; finished ; 2013 ; Research and Reports in Nuclear Medicine Volume 3 ; 3 ; 2013 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Research and Reports in Nuclear Medicine Volume 4 ; 4 ; 2014 ; >
     au < finished ; finished ; 2015 ; Research and Reports in Nuclear Medicine Volume 5 ; 5 ; 2015 ; >
-    au < finished ; crawling ; 2016 ; Research and Reports in Nuclear Medicine Volume 6 ; 6 ; 2016 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2016 ; Research and Reports in Nuclear Medicine Volume 6 ; 6 ; 2016 ; reingest2.clockss.org:8085 >
    
   }
 
@@ -2318,7 +2318,7 @@
 
     au < finished ; finished ; 2011 ; Reports in Parasitology Volume 1 ; 1 ; 2011 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2012 ; Reports in Parasitology Volume 2 ; 2 ; 2012 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2013 ; Reports in Parasitology Volume 3 ; 3 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Reports in Parasitology Volume 3 ; 3 ; 2013 ; reingest4.clockss.org:8082 >
     au < doesNotExist ; doesNotExist ; 2014 ; Reports in Parasitology Volume 4 ; 4 ; 2014 ; >
     au < finished ; finished ; 2015 ; Reports in Parasitology Volume 5 ; 5 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Reports in Parasitology Volume 6 ; 6 ; 2016 ; reingest1.clockss.org:8082 >
@@ -2416,7 +2416,7 @@
     #ceased publishing in September 2018
 
     au < finished ; finished ; 2012 ; Neuroscience and Neuroeconomics Volume 1 ; 1 ; 2012 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2013 ; Neuroscience and Neuroeconomics Volume 2 ; 2 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Neuroscience and Neuroeconomics Volume 2 ; 2 ; 2013 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Neuroscience and Neuroeconomics Volume 3 ; 3 ; 2014 ; >
     au < finished ; finished ; 2015 ; Neuroscience and Neuroeconomics Volume 4 ; 4 ; 2015 ; >
     au < finished ; frozen ; 2016 ; Neuroscience and Neuroeconomics Volume 5 ; 5 ; 2016 ; reingest1.clockss.org:8082 >
@@ -2493,7 +2493,7 @@
 
     au < finished ; finished ; 2011 ; Research and Reports in Medicinal Chemistry Volume 1 ; 1 ; 2011 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Research and Reports in Medicinal Chemistry Volume 2 ; 2 ; 2012 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2013 ; Research and Reports in Medicinal Chemistry Volume 3 ; 3 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Research and Reports in Medicinal Chemistry Volume 3 ; 3 ; 2013 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Research and Reports in Medicinal Chemistry Volume 4 ; 4 ; 2014 ; >
     au < finished ; finished ; 2015 ; Research and Reports in Medicinal Chemistry Volume 5 ; 5 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Research and Reports in Medicinal Chemistry Volume 6 ; 6 ; 2016 ; reingest1.clockss.org:8082 >
@@ -2515,7 +2515,7 @@
     au < finished ; finished ; 2013 ; Reports in Organic Chemistry Volume 3 ; 3 ; 2013 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Reports in Organic Chemistry Volume 4 ; 4 ; 2014 ; >
     au < finished ; finished ; 2015 ; Reports in Organic Chemistry Volume 5 ; 5 ; 2015 ; >
-    au < finished ; crawling ; 2016 ; Reports in Organic Chemistry Volume 6 ; 6 ; 2016 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Reports in Organic Chemistry Volume 6 ; 6 ; 2016 ; reingest4.clockss.org:8082 >
    
   }
 
@@ -2532,7 +2532,7 @@
     au < finished ; finished ; 2013 ; Integrated Pharmacy Research and Practice Volume 2 ; 2 ; 2013 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Integrated Pharmacy Research and Practice Volume 3 ; 3 ; 2014 ; >
     au < finished ; finished ; 2015 ; Integrated Pharmacy Research and Practice Volume 4 ; 4 ; 2015 ; >
-    au < finished ; crawling ; 2016 ; Integrated Pharmacy Research and Practice Volume 5 ; 5 ; 2016 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Integrated Pharmacy Research and Practice Volume 5 ; 5 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Integrated Pharmacy Research and Practice Volume 6 ; 6 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Integrated Pharmacy Research and Practice Volume 7 ; 7 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Integrated Pharmacy Research and Practice Volume 8 ; 8 ; 2019 ; >
@@ -2718,7 +2718,7 @@
     au < finished ; finished ; 2013 ; International Journal of Clinical Transfusion Medicine Volume 1 ; 1 ; 2013 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; International Journal of Clinical Transfusion Medicine Volume 2 ; 2 ; 2014 ; >
     au < finished ; finished ; 2015 ; International Journal of Clinical Transfusion Medicine Volume 3 ; 3 ; 2015 ; >
-    au < finished ; crawling ; 2016 ; International Journal of Clinical Transfusion Medicine Volume 4 ; 4 ; 2016 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; International Journal of Clinical Transfusion Medicine Volume 4 ; 4 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; International Journal of Clinical Transfusion Medicine Volume 5 ; 5 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; International Journal of Clinical Transfusion Medicine Volume 6 ; 6 ; 2018 ; >
     au < crawling ; exists ; 2019 ; International Journal of Clinical Transfusion Medicine Volume 7 ; 7 ; 2019 ; >

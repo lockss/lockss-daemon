@@ -1067,7 +1067,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Sibirica Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Sibirica Volume 14 ; 14 ; >
     au < frozen ; exists ; 2016 ; Sibirica Volume 15 ; 15 ; >
-    au < finished ; crawling ; 2017 ; Sibirica Volume 16 ; 16 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2017 ; Sibirica Volume 16 ; 16 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; Sibirica Volume 17 ; 17 ; >
     au < exists ; exists ; 2019 ; Sibirica Volume 18 ; 18 ; >
 
@@ -1099,7 +1099,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Social Analysis Volume 58 ; 58 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Social Analysis Volume 59 ; 59 ; >
     au < frozen ; exists ; 2016 ; Social Analysis Volume 60 ; 60 ; >
-    au < finished ; crawling ; 2017 ; Social Analysis Volume 61 ; 61 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2017 ; Social Analysis Volume 61 ; 61 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Social Analysis Volume 62 ; 62 ; >
     au < exists ; exists ; 2019 ; Social Analysis Volume 63 ; 63 ; >
 

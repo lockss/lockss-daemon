@@ -151,7 +151,7 @@
     param[resource_id] = 174
     param[journal_id] = jamaoncology
     
-    au < finished ; crawling ; 2015 ; JAMA Oncology Volume 1 ; 2015 ; http://jamanetwork.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2015 ; JAMA Oncology Volume 1 ; 2015 ; http://jamanetwork.com/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2016 ; JAMA Oncology Volume 2 ; 2016 ; http://jamanetwork.com/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2017 ; JAMA Oncology Volume 3 ; 2017 ; http://jamanetwork.com/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; JAMA Oncology Volume 4 ; 2018 ; https://jamanetwork.com/ ; reingest2.clockss.org:8085 >
@@ -175,7 +175,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; JAMA Ophthalmology Volume 131 ; 2013 ; https://jamanetwork.com/ ; >
     au < doNotProcess ; doNotProcess ; 2014 ; JAMA Ophthalmology Volume 132 ; 2014 ; https://jamanetwork.com/ ; >
     au < doNotProcess ; doNotProcess ; 2015 ; JAMA Ophthalmology Volume 133 ; 2015 ; https://jamanetwork.com/ ; >
-    au < finished ; crawling ; 2016 ; JAMA Ophthalmology Volume 134 ; 2016 ; http://jamanetwork.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; JAMA Ophthalmology Volume 134 ; 2016 ; http://jamanetwork.com/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; JAMA Ophthalmology Volume 135 ; 2017 ; http://jamanetwork.com/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2018 ; JAMA Ophthalmology Volume 136 ; 2018 ; https://jamanetwork.com/ ; reingest5.clockss.org:8082 >
     au < notReady ; exists ; 2019 ; JAMA Ophthalmology Volume 137 ; 2019 ; https://jamanetwork.com/ ; >

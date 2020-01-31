@@ -178,7 +178,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Hospital Pediatrics Volume 4 ; 4 ; http://hosppeds.aappublications.org/ ; >
       au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2015 ; Hospital Pediatrics Volume 5 [superseded] ; 5 ; http://hosppeds.aappublications.org/ ; >
       au < aap.ClockssAAPDrupalPlugin ; finished ; crawling ; 2015 ; Hospital Pediatrics Volume 5 ; 5 ; http://hosppeds.aappublications.org/ ; reingest1.clockss.org:8082 >
-      au < aap.ClockssAAPDrupalPlugin ; finished ; crawling ; 2016 ; Hospital Pediatrics Volume 6 ; 6 ; http://hosppeds.aappublications.org/ ; reingest4.clockss.org:8082 >
+      au < aap.ClockssAAPDrupalPlugin ; finished ; frozen ; 2016 ; Hospital Pediatrics Volume 6 ; 6 ; http://hosppeds.aappublications.org/ ; reingest4.clockss.org:8082 >
       au < aap.ClockssAAPDrupalPlugin ; deepCrawl ; exists ; 2017 ; Hospital Pediatrics Volume 7 ; 7 ; http://hosppeds.aappublications.org/ ; >
       au < aap.ClockssAAPDrupalPlugin ; deepCrawl ; exists ; 2018 ; Hospital Pediatrics Volume 8 ; 8 ; http://hosppeds.aappublications.org/ ; >
       au < aap.ClockssAAPDrupalPlugin ; crawling ; exists ; 2019 ; Hospital Pediatrics Volume 9 ; 9 ; https://hosppeds.aappublications.org/ ; >
@@ -479,7 +479,7 @@
       au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2013 ; Pediatrics in Review Volume 34 ; 34 ; http://pedsinreview.aappublications.org/ ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Pediatrics in Review Volume 35 ; 35 ; http://pedsinreview.aappublications.org/ ; >
       au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2015 ; Pediatrics in Review Volume 36 [superseded] ; 36 ; http://pedsinreview.aappublications.org/ ; >
-      au < aap.ClockssAAPDrupalPlugin ; finished ; crawling ; 2015 ; Pediatrics in Review Volume 36 ; 36 ; http://pedsinreview.aappublications.org/ ; reingest1.clockss.org:8082 >
+      au < aap.ClockssAAPDrupalPlugin ; finished ; frozen ; 2015 ; Pediatrics in Review Volume 36 ; 36 ; http://pedsinreview.aappublications.org/ ; reingest1.clockss.org:8082 >
       au < aap.ClockssAAPDrupalPlugin ; finished ; frozen ; 2016 ; Pediatrics in Review Volume 37 ; 37 ; http://pedsinreview.aappublications.org/ ; reingest5.clockss.org:8082 > #pdf stamping problem
       au < aap.ClockssAAPDrupalPlugin ; deepCrawl ; exists ; 2017 ; Pediatrics in Review Volume 38 ; 38 ; http://pedsinreview.aappublications.org/ ; >
       au < aap.ClockssAAPDrupalPlugin ; testing ; exists ; 2018 ; Pediatrics in Review Volume 39 ; 39 ; https://pedsinreview.aappublications.org/ ; >

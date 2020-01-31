@@ -3595,7 +3595,7 @@
     au < finished ; crawling ; 2005 ; Bulletin of the London Mathematical Society Volume 37 ; 37 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2006 ; Bulletin of the London Mathematical Society Volume 38 ; 38 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2007 ; Bulletin of the London Mathematical Society Volume 39 ; 39 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2008 ; Bulletin of the London Mathematical Society Volume 40 ; 40 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2008 ; Bulletin of the London Mathematical Society Volume 40 ; 40 ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2009 ; Bulletin of the London Mathematical Society Volume 41 ; 41 ; >
     au < finished ; finished ; 2010 ; Bulletin of the London Mathematical Society Volume 42 ; 42 ; >
     au < finished ; finished ; 2011 ; Bulletin of the London Mathematical Society Volume 43 ; 43 ; >
@@ -7130,7 +7130,7 @@
     au < frozen ; exists ; 2010 ; FEMS Microbiology Letters Volume 308 ; 308 ; >
     au < frozen ; exists ; 2010 ; FEMS Microbiology Letters Volume 309 ; 309 ; >
     au < finished ; crawling ; 2010 ; FEMS Microbiology Letters Volume 310 ; 310 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2010 ; FEMS Microbiology Letters Volume 311 ; 311 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2010 ; FEMS Microbiology Letters Volume 311 ; 311 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2010 ; FEMS Microbiology Letters Volume 312 ; 312 ; >
     au < finished ; crawling ; 2010 ; FEMS Microbiology Letters Volume 313 ; 313 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2011 ; FEMS Microbiology Letters Volume 314 ; 314 ; reingest5.clockss.org:8082 >
@@ -7235,7 +7235,7 @@
     au < frozen ; exists ; 2010 ; FEMS Microbiology Reviews Volume 34 ; 34 ; >
     au < finished ; crawling ; 2011 ; FEMS Microbiology Reviews Volume 35 ; 35 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2012 ; FEMS Microbiology Reviews Volume 36 ; 36 ; >
-    au < finished ; crawling ; 2013 ; FEMS Microbiology Reviews Volume 37 ; 37 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2013 ; FEMS Microbiology Reviews Volume 37 ; 37 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; FEMS Microbiology Reviews Volume 38 ; 38 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; FEMS Microbiology Reviews Volume 39 ; 39 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; exists ; 2016 ; FEMS Microbiology Reviews Volume 40 ; 40 ; >
@@ -13360,7 +13360,7 @@
     au < frozen ; exists ; 2011 ; Journal of Insect Science Volume 11 ; 11 ; >
     au < frozen ; exists ; 2012 ; Journal of Insect Science Volume 12 ; 12 ; >
     au < frozen ; exists ; 2013 ; Journal of Insect Science Volume 13 ; 13 ; >
-    au < finished ; crawling ; 2014 ; Journal of Insect Science Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2014 ; Journal of Insect Science Volume 14 ; 14 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Journal of Insect Science Volume 15 ; 15 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; exists ; 2016 ; Journal of Insect Science Volume 16 ; 16 ; >
 
@@ -17155,7 +17155,7 @@
     au < zapped ; finished ; 2012 ; Monthly Notices of the Royal Astronomical Society Volume 419 ; 419 ; >
     au < zapped ; finished ; 2012 ; Monthly Notices of the Royal Astronomical Society Volume 420 ; 420 ; >
     au < finished ; crawling ; 2012 ; Monthly Notices of the Royal Astronomical Society Volume 421 ; 421 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2012 ; Monthly Notices of the Royal Astronomical Society Volume 422 ; 422 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2012 ; Monthly Notices of the Royal Astronomical Society Volume 422 ; 422 ; reingest5.clockss.org:8082 >
     au < zapped ; finished ; 2012 ; Monthly Notices of the Royal Astronomical Society Volume 423 ; 423 ; >
     au < frozen ; exists ; 2012 ; Monthly Notices of the Royal Astronomical Society Volume 424 ; 424 ; >
     au < frozen ; exists ; 2012 ; Monthly Notices of the Royal Astronomical Society Volume 425 ; 425 ; >
@@ -17260,7 +17260,7 @@
     au < finished ; finished ; 2009 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 400 ; 400 ; >
     au < finished ; finished ; 2010 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 401 ; 401 ; >
     au < finished ; crawling ; 2010 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 402 ; 402 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2010 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 403 ; 403 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2010 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 403 ; 403 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2010 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 404 ; 404 ; >
     au < finished ; finished ; 2010 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 405 ; 405 ; >
     au < finished ; finished ; 2010 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 406 ; 406 ; >
@@ -17803,7 +17803,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Mutagenesis Volume 24 ; 24 ; >
     au < finished ; finished ; 2010 ; Mutagenesis Volume 25 ; 25 ; >
     au < finished ; finished ; 2011 ; Mutagenesis Volume 26 ; 26 ; >
-    au < finished ; crawling ; 2012 ; Mutagenesis Volume 27 ; 27 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2012 ; Mutagenesis Volume 27 ; 27 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; Mutagenesis Volume 28 ; 28 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Mutagenesis Volume 29 ; 29 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Mutagenesis Volume 30 ; 30 ; reingest2.clockss.org:8085 >
@@ -20987,7 +20987,7 @@
     au < doNotProcess ; exists ; 2006 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 59 ; 59 ; >
     au < doNotProcess ; exists ; 2007 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 60 ; 60 ; >
     au < doNotProcess ; exists ; 2008 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 61 ; 61 ; >
-    au < finished ; crawling ; 2009 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 62 ; 62 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2009 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 62 ; 62 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2010 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 63 ; 63 ; >
     au < finished ; finished ; 2011 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 64 ; 64 ; >
     au < finished ; finished ; 2012 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 65 ; 65 ; >
@@ -22586,7 +22586,7 @@
     au < zapped ; finished ; 2009 ; Social Work Research Volume 33 ; 33 ; >
     au < zapped ; finished ; 2010 ; Social Work Research Volume 34 ; 34 ; >
     au < finished ; finished ; 2011 ; Social Work Research Volume 35 ; 35 ; >
-    au < finished ; crawling ; 2012 ; Social Work Research Volume 36 ; 36 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2012 ; Social Work Research Volume 36 ; 36 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; Social Work Research Volume 37 ; 37 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Social Work Research Volume 38 ; 38 ; >
     au < finished ; finished ; 2015 ; Social Work Research Volume 39 ; 39 ; reingest3.clockss.org:8083 >
@@ -23262,7 +23262,7 @@
     au < doNotProcess ; exists ; 2002 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 96 ; 96 ; >
     au < doNotProcess ; exists ; 2003 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 97 ; 97 ; >
     au < doNotProcess ; exists ; 2004 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 98 ; 98 ; >
-    au < finished ; crawling ; 2005 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 99 ; 99 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2005 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 99 ; 99 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2006 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 100 ; 100 ; >
     au < finished ; crawling ; 2008 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 101 ; 101 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2009 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 102 ; 102 ; >
