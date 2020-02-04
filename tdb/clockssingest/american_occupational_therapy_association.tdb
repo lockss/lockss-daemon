@@ -8,7 +8,8 @@
   
 
   #plugin = org.lockss.plugin.silverchair.ClockssSilverchairJournalsPlugin
-  plugin = needs.plugin
+  plugin = org.lockss.plugin.silverchair.iwap.ClockssIwapSilverchairPlugin
+  #plugin = needs.plugin
   implicit < status ; status2 ; year ; name ; param[year] ; param[base_url] ; hidden[proxy] >
 
   {
