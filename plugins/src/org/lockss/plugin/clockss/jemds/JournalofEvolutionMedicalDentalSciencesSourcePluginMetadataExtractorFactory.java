@@ -20,7 +20,7 @@ import java.util.List;
 public class JournalofEvolutionMedicalDentalSciencesSourcePluginMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
     private static final Logger log = Logger.getLogger(JournalofEvolutionMedicalDentalSciencesSourcePluginMetadataExtractorFactory.class);
 
-    private static SourceXmlSchemaHelper InnovativeJatsXmlHelper = null;
+    private static SourceXmlSchemaHelper JournalofEvolutionMedicalDentalSciencesJatsXmlHelper = null;
 
     @Override
     public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
@@ -39,10 +39,10 @@ public class JournalofEvolutionMedicalDentalSciencesSourcePluginMetadataExtracto
         @Override
         protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu, Document doc) {
 
-            if (InnovativeJatsXmlHelper == null) {
-                InnovativeJatsXmlHelper = new JatsPublishingSchemaHelper();
+            if (JournalofEvolutionMedicalDentalSciencesJatsXmlHelper == null) {
+                JournalofEvolutionMedicalDentalSciencesJatsXmlHelper = new JatsPublishingSchemaHelper();
             }
-            return InnovativeJatsXmlHelper;
+            return JournalofEvolutionMedicalDentalSciencesJatsXmlHelper;
         }
 
         @Override

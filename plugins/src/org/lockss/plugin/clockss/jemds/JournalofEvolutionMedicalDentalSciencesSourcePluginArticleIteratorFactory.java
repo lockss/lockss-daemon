@@ -9,7 +9,6 @@ import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArticleFiles;
 import org.lockss.plugin.ArticleIteratorFactory;
 import org.lockss.plugin.SubTreeArticleIteratorBuilder;
-import org.lockss.plugin.clockss.innovativepublication.InnovativePublicationSourcePluginArticleIteratorFactory;
 import org.lockss.util.Logger;
 
 import java.util.Iterator;
