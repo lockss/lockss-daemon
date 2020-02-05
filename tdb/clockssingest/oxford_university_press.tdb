@@ -11772,22 +11772,6 @@
   {
 
     title <
-      name = Journal of the Endocrine Society ;
-      eissn = 2472-1972
-    >
-
-    param[journal_id] = jes
-
-    #this title was ONLY in the publisher listing
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of the Endocrine Society Volume 1 ; 1 ; >
-    au < finished ; crawling ; 2018 ; 2018 ; Journal of the Endocrine Society Volume 2 ; 2 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2019 ; 2019 ; Journal of the Endocrine Society Volume 3 ; 3 ; >
-
-  }
-
-  {
-
-    title <
       name = Journal of the European Economic Association ;
       issn = 1542-4766 ;
       eissn = 1542-4774
