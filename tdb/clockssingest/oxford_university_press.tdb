@@ -5689,7 +5689,7 @@
     param[journal_id] = fqs
 
     #this title was ONLY in the publisher listing
-    au < finished ; crawling ; 2017 ; 2017 ; Food Quality and Safety Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2017 ; 2017 ; Food Quality and Safety Volume 1 ; 1 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Food Quality and Safety Volume 2 ; 2 ; >
     au < crawling ; exists ; 2019 ; 2019 ; Food Quality and Safety Volume 3 ; 3 ; >
 
@@ -13579,7 +13579,7 @@
     au < frozen ; exists ; 2015 ; 2015 ; Neurosurgery Volume 62,76-77 ; 62,76-77 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Neurosurgery Volume 63,78-79 ; 63,78-79 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Neurosurgery Volume 64,80-81 ; 64,80-81 ; >
-    au < finished ; crawling ; 2018 ; 2018 ; Neurosurgery Volume 82-83 ; 82-83 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2018 ; 2018 ; Neurosurgery Volume 82-83 ; 82-83 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2019 ; 2019 ; Neurosurgery Volume 84-85 ; 84-85 ; >
 
   }
@@ -14701,7 +14701,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Pathogens and Disease Volume 73 ; 73 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Pathogens and Disease Volume 74 ; 74 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Pathogens and Disease Volume 75 ; 75 ; >
-    au < finished ; crawling ; 2018 ; 2018 ; Pathogens and Disease Volume 76 ; 76 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2018 ; 2018 ; Pathogens and Disease Volume 76 ; 76 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2019 ; 2019 ; Pathogens and Disease Volume 77 ; 77 ; >
 
   }
