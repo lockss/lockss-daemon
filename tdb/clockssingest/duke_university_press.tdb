@@ -30,7 +30,7 @@
 
 
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2000 ; American Literary Scholarship 2000 ; 1998 ; reingest1.clockss.org:8082 >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2001 ; American Literary Scholarship 2001 ; 1999 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2001 ; American Literary Scholarship 2001 ; 1999 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2002 ; American Literary Scholarship 2002 ; 2000 ; reingest3.clockss.org:8083 >
       au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2003 ; American Literary Scholarship 2003 ; 2001 ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2004 ; American Literary Scholarship 2004 ; 2002 ; reingest5.clockss.org:8082 >
@@ -872,7 +872,7 @@
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1998 ; Journal of Health Politics, Policy and Law Volume 23 ; 23 ; >
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 1999 ; Journal of Health Politics, Policy and Law Volume 24 ; 24 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2000 ; Journal of Health Politics, Policy and Law Volume 25 ; 25 ; reingest3.clockss.org:8083 >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2001 ; Journal of Health Politics, Policy and Law Volume 26 ; 26 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2001 ; Journal of Health Politics, Policy and Law Volume 26 ; 26 ; reingest5.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2002 ; Journal of Health Politics, Policy and Law Volume 27 ; 27 ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2003 ; Journal of Health Politics, Policy and Law Volume 28 ; 28 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2004 ; Journal of Health Politics, Policy and Law Volume 29 ; 29 ; reingest4.clockss.org:8082 >
@@ -912,7 +912,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2005 ; Journal of Medieval and Early Modern Studies Volume 35 ; 35 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2006 ; Journal of Medieval and Early Modern Studies Volume 36 ; 36 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2007 ; Journal of Medieval and Early Modern Studies Volume 37 ; 37 ; reingest4.clockss.org:8082 >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2008 ; Journal of Medieval and Early Modern Studies Volume 38 ; 38 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2008 ; Journal of Medieval and Early Modern Studies Volume 38 ; 38 ; reingest5.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2009 ; Journal of Medieval and Early Modern Studies Volume 39 ; 39 ; reingest3.clockss.org:8083 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2010 ; Journal of Medieval and Early Modern Studies Volume 40 ; 40 ; reingest3.clockss.org:8083 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2011 ; Journal of Medieval and Early Modern Studies Volume 41 ; 41 ; reingest1.clockss.org:8082 >
@@ -996,7 +996,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2008 ; Labor: Studies in Working-Class History of the Americas Volume 5 ; 5 ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2009 ; Labor: Studies in Working-Class History of the Americas Volume 6 ; 6 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2010 ; Labor: Studies in Working-Class History of the Americas Volume 7 ; 7 ; reingest5.clockss.org:8082 >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2011 ; Labor: Studies in Working-Class History of the Americas Volume 8 ; 8 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2011 ; Labor: Studies in Working-Class History of the Americas Volume 8 ; 8 ; reingest5.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Labor: Studies in Working-Class History of the Americas Volume 9 ; 9 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Labor: Studies in Working-Class History of the Americas Volume 10 ; 10 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Labor: Studies in Working-Class History of the Americas Volume 11 ; 11 ; >
@@ -1201,7 +1201,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2007 ; New German Critique Volume 34 ; 34 ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2008 ; New German Critique Volume 35 ; 35 ; reingest3.clockss.org:8083 >
       au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2009 ; New German Critique Volume 36 ; 36 ; reingest5.clockss.org:8082 >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2010 ; New German Critique Volume 37 ; 37 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2010 ; New German Critique Volume 37 ; 37 ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2011 ; New German Critique Volume 38 ; 38 ; reingest5.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; New German Critique Volume 39 ; 39 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; New German Critique Volume 40 ; 40 ; >
