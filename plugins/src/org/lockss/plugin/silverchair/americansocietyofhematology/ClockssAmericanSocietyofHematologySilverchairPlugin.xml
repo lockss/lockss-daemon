@@ -5,7 +5,7 @@
     </entry>
     <entry>
         <string>plugin_identifier</string>
-        <string>org.lockss.plugin.silverchair.portlandpress.ClockssPortlandPressSilverchairPlugin</string>
+        <string>org.lockss.plugin.silverchair.americansocietyofhematology.ClockssAmericanSocietyofHematologySilverchairPlugin</string>
     </entry>
     <entry>
         <string>plugin_version</string>
@@ -30,7 +30,7 @@
     </entry>
     <entry>
         <string>plugin_name</string>
-        <string>Portland Press Plugin (CLOCKSS)</string>
+        <string>American Society of Hematology Plugin (CLOCKSS)</string>
     </entry>
     <entry>
         <string>plugin_config_props</string>
@@ -66,77 +66,49 @@
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"Portland Press Plugin (CLOCKSS), Base URL %s, Journal ID %s,  Year %d", base_url, journal_id, year</string>
+        <string>"American Society of Hematology Plugin (CLOCKSS), Base URL %s, Journal ID %s,  Year %d", base_url, journal_id, year</string>
     </entry>
     <entry>
         <string>au_start_url</string>
         <list>
-            <string>"%s([^/]+/)?%s/issue/browse-by-year/%d", base_url, journal_id, year</string>
+            <string>"%s%s/issue-covers/year/%d", base_url, journal_id, year</string>
         </list>
     </entry>
-   <!-- <entry>
-        <string>au_feature_urls</string>
-        <map>
-            <entry>
-                <string>au_title</string>
-                <string>"%sjournals/%s", base_url, journal_id</string>
-            </entry>
-            <entry>
-                <string>au_issue</string>
-                <string>"%sjournals/%s/issue/%s/%s", base_url, journal_id, volume_name, issue</string>
-            </entry>
-            <entry>
-                <string>au_article</string>
-                <map>
-                    <entry>
-                        <string>pdf</string>
-                        <string>"%sjournals/%s/data/journals/%s/%s/%s.pdf", base_url, journal_id, journal_abbrev, group_id, article</string>
-                    </entry>
-                    <entry>
-                        <string>html</string>
-                        <string>"%sjournals/%s/fullarticle/%s", base_url, journal_id, article</string>
-                    </entry>
-                </map>
-            </entry>
-        </map>
-    </entry>-->
+    <!-- <entry>
+         <string>au_feature_urls</string>
+         <map>
+             <entry>
+                 <string>au_title</string>
+                 <string>"%sjournals/%s", base_url, journal_id</string>
+             </entry>
+             <entry>
+                 <string>au_issue</string>
+                 <string>"%sjournals/%s/issue/%s/%s", base_url, journal_id, volume_name, issue</string>
+             </entry>
+             <entry>
+                 <string>au_article</string>
+                 <map>
+                     <entry>
+                         <string>pdf</string>
+                         <string>"%sjournals/%s/data/journals/%s/%s/%s.pdf", base_url, journal_id, journal_abbrev, group_id, article</string>
+                     </entry>
+                     <entry>
+                         <string>html</string>
+                         <string>"%sjournals/%s/fullarticle/%s", base_url, journal_id, article</string>
+                     </entry>
+                 </map>
+             </entry>
+         </map>
+     </entry>-->
     <entry>
         <string>au_crawlrules</string>
         <list>
             <string>1,"^https?://((fonts|ajax)\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|cdnjs\.cloudflare\.com|s7\.addthis\.com)/"</string>
             <string>1,"^https?://(%s|[^.]+\.(silverchair-?cdn\.com/|cloudfront\.net/|brightcove\.net/)).*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$", url_host(base_url)</string>
-            <!--
-               https://portlandpress.com/bioscirep/article-pdf/38/1/BSR20170862/429223/bsr-2017-0862.pdf
-               PDFs are redirected to: https://port.silverchair-cdn.com/port/content_public/journal/bioscirep/38/1/10.1042_bsr20170862/2/bsr-2017-0862.pdf?Expires=1580947780&Signature=I~FNWeNdbhjwOFlE3QF~YnDULgyScF07ypYiJbQLWOqBU2t4dehutEHZf9PMKcgtkgcl2NfekDB2tEGCwdBjSuBps-SVJ45hxvZZgiLMftEprr~Qy8S4b6cOZRLZDUSDxn~FSvug8AzNwCi8Ex-NLO4kxafHgMvI3~W8uB1vpQioF4cnjgt~jl1tySTrUB-JMqMRKAn1uLo60Z-ysykBOhAv-9q4ns8RpE26K~zmbWTvc5715P~cVDi-dYnn23fYR2mwZ7~dd~VjyBm3MmNNpJ49Xi....
-           -->
-            <string>1,"^https://port\.silverchair-cdn\.com/port/content_public/journal/%s", journal_id</string>
-            <!--Reject issues from other year https://portlandpress.com/bioscirep/issue/browse-by-year/1983-->
-            <string>2,"%s([^/]+/)?%s/issue/browse-by-year/\d{4}", base_url, journal_id</string>
-            <!--Only accept issues from target year-->
-            <string>1,"%s([^/]+/)?%s/issue/browse-by-year/%d", base_url, journal_id, year</string>
-            <!--
-                https://portlandpress.com/bioscirep/issue/38/1
-                https://portlandpress.com/bioscirep/article-abstract/doi/10.1042/BSR20171148/57181/Thiamine-and-selected-thiamine-antivitamins
-                https://portlandpress.com/bioscirep/article/doi/10.1042/BSR20171148/57181/Thiamine-and-selected-thiamine-antivitamins
-                https://portlandpress.com/bioscirep/article-abstract/doi/10.1042/BSR20171265/57126/MiR-29a-a-potential-therapeutic-target-and
-
-                need to be careful here, it can leak to other volumes by the following way:
-                x-lockss-node-url: 	https://portlandpress.com/bioscirep/article/39/1/BSR20180872/212/Identification-of-novel-pathogenic-ABCA4-variants
-                x-lockss-referrer: 	https://portlandpress.com/bioscirep/article/doi/10.1042/BSR20171300/57409/Identification-of-a-novel-mutation-in-the-ABCA4
-            -->
+            <string>1,"^https://ash\.silverchair-cdn\.com/port/content_public/journal/%s", journal_id</string>
             <string>1,"%s([^/]+/)?%s/(issue|article)/", base_url, journal_id</string>
             <string>1,"%s([^/]+/)?%s/article-pdf/.*\.pdf$", base_url, journal_id</string>
-            <!--
-                https://portlandpress.com/Citation/Download?resourceId=57181&resourceType=3&citationFormat=0
-                https://portlandpress.com/Citation/Download?resourceId=57181&resourceType=3&citationFormat=1
-                https://portlandpress.com/Citation/Download?resourceId=57181&resourceType=3&citationFormat=2
-                https://portlandpress.com/Citation/Download?resourceId=57181&resourceType=3&citationFormat=3
-            -->
             <string>1,"%sCitation/Download\?resourceId=", base_url</string>
-            <!--
-                https://portlandpress.com/DownloadFile/DownloadImage.aspx?image=&PPTtype=SlideSet&ar=57181&xsltPath=~/UI/app/XSLT&siteId=1000007
-                https://portlandpress.com/DownloadFile/DownloadImage.aspx?image=https://port.silverchair-cdn.com/port/content_public/journal/bioscirep/38/1/10.1042_bsr20171148/2/bsr-2017-1148i001.jpeg?Expires=1580880546&Signature=BIFjn6azjdjetZUOKJLvo1XJ2RCyN9G46td3W1MwZ~UO5pgEEOtQVxtftnfQtyAza0mf0viJ~lvz6P3TYLPx7Bi84zA0otOpc1N0RRxlVYnhDB0gJAe3bYGoM-s6EXmIGDeDorEuIAAq7KaZbnxDvi7yG9MSzzZdhhztoHlG~MDUjx~zKrq97KbmOrk5gOF4McoZJilk9XaK42goi6rwM5vn-VnSqU5KUlmMiUuGA2nZQd-puRuNoBYj-iJcd2ZpMHJvCy9T8YmcQwj263LaDG15eKHYhDlCake9YDLSeNVh5NNOVc8eUafevzfPIbAM8AoNrTkodn3Qql-ckRBe8g__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA&sec=1503654&ar=57181&xsltPath=~/UI/app/XSLT&imagename=&siteId=1000007
-            -->
             <string>1,"%sDownloadFile/DownloadImage.aspx?image=https", base_url</string>
             <!--
             https://pubs.geoscienceworld.org/downloadimage.aspx?image=&PPTtype=SlideSet&ar=570731&siteId=69
@@ -147,18 +119,13 @@
     <!--
     <entry>
         <string>text/html_link_extractor_factory</string>
-        <string>org.lockss.plugin.silverchair.portlandpress.AmaScHtmlLinkExtractorFactory</string>
+        <string>org.lockss.plugin.silverchair.americansocietyofhematology.AmaScHtmlLinkExtractorFactory</string>
     </entry>
     <entry>
         <string>text/html_crawl_filter_factory</string>
-        <string>org.lockss.plugin.silverchair.portlandpress.AmaScHtmlCrawlFilterFactory</string>
+        <string>org.lockss.plugin.silverchair.americansocietyofhematology.AmaScHtmlCrawlFilterFactory</string>
     </entry>
     -->
-    <!--
-               need to be careful here, it can leak to other volumes by the following way:
-               x-lockss-node-url: 	https://portlandpress.com/bioscirep/article/39/1/BSR20180872/212/Identification-of-novel-pathogenic-ABCA4-variants
-               x-lockss-referrer: 	https://portlandpress.com/bioscirep/article/doi/10.1042/BSR20171300/57409/Identification-of-a-novel-mutation-in-the-ABCA4
-           -->
     <entry>
         <string>au_refetch_depth</string>
         <int>1</int>
@@ -166,7 +133,7 @@
     <!--
     <entry>
         <string>au_url_normalizer</string>
-        <string>org.lockss.plugin.silverchair.portlandpress.AmaScUrlNormalizer</string>
+        <string>org.lockss.plugin.silverchair.americansocietyofhematology.AmaScUrlNormalizer</string>
     </entry>
     -->
     <entry>
@@ -189,7 +156,7 @@
     <!--
     <entry>
         <string>text/html_filter_factory</string>
-        <string>org.lockss.plugin.silverchair.portlandpress.AmaScHtmlHashFilterFactory</string>
+        <string>org.lockss.plugin.silverchair.americansocietyofhematology.AmaScHtmlHashFilterFactory</string>
     </entry>
     -->
     <entry>
@@ -202,11 +169,11 @@
     <!--
     <entry>
         <string>plugin_article_iterator_factory</string>
-        <string>org.lockss.plugin.silverchair.portlandpress.AmaScArticleIteratorFactory</string>
+        <string>org.lockss.plugin.silverchair.americansocietyofhematology.AmaScArticleIteratorFactory</string>
     </entry>
     <entry>
         <string>plugin_article_metadata_extractor_factory</string>
-        <string>org.lockss.plugin.silverchair.portlandpress.AmaScArticleIteratorFactory</string>
+        <string>org.lockss.plugin.silverchair.americansocietyofhematology.AmaScArticleIteratorFactory</string>
     </entry>
     <entry>
         <string>text/html_metadata_extractor_factory_map</string>
@@ -226,7 +193,7 @@
     <!--
     <entry>
         <string>plugin_url_consumer_factory</string>
-        <string>org.lockss.plugin.silverchair.portlandpress.AmaScUrlConsumerFactory</string>
+        <string>org.lockss.plugin.silverchair.americansocietyofhematology.AmaScUrlConsumerFactory</string>
     </entry>
     -->
     <entry>
@@ -246,7 +213,7 @@
             <string>.*\.cloudfront\.net</string>
             <string>cdnjs\.cloudflare\.com</string>
             <string>s7\.addthis\.com</string>
-            <string>port\.silverchair-cdn\.com</string>
+            <string>ash\.silverchair-cdn\.com</string>
         </list>
     </entry>
     <entry>
