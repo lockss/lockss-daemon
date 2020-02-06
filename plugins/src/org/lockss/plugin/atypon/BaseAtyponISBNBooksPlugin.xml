@@ -21,7 +21,7 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Base Atypon ISBN Books Plugin</string>
+    <string>Parent Atypon Books Plugin (Strict ISBN)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -37,7 +37,7 @@
   </entry>  
   <entry>
     <string>au_name</string>
-    <string>"Base Atypon ISBN Books Plugin, Base URL %s, eISBN %s", base_url, book_eisbn</string>
+    <string>"Parent Atypon Books Plugin (Strict ISBN), Base URL %s, eISBN %s", base_url, book_eisbn</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
