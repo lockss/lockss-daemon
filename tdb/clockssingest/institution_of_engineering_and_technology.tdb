@@ -706,12 +706,12 @@
       >
       param[journal_id] = iet-wss
 
-      au < frozen ; exists ; 2011 ; IET Wireless Sensor Systems Volume 1 ; 1 ; http://digital-library.theiet.org/ ; >
-      au < frozen ; exists ; 2012 ; IET Wireless Sensor Systems Volume 2 ; 2 ; http://digital-library.theiet.org/ ; >
-      au < frozen ; exists ; 2013 ; IET Wireless Sensor Systems Volume 3 ; 3 ; http://digital-library.theiet.org/ ; >
-      au < frozen ; exists ; 2014 ; IET Wireless Sensor Systems Volume 4 ; 4 ; http://digital-library.theiet.org/ ; >
-      au < frozen ; exists ; 2015 ; IET Wireless Sensor Systems Volume 5 ; 5 ; http://digital-library.theiet.org/ ; >
-      au < frozen ; exists ; 2016 ; IET Wireless Sensor Systems Volume 6 ; 6 ; http://digital-library.theiet.org/ ; >
+      au < finished ; manifest ; 2011 ; IET Wireless Sensor Systems Volume 1 ; 1 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2012 ; IET Wireless Sensor Systems Volume 2 ; 2 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2013 ; IET Wireless Sensor Systems Volume 3 ; 3 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2014 ; IET Wireless Sensor Systems Volume 4 ; 4 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2015 ; IET Wireless Sensor Systems Volume 5 ; 5 ; http://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; IET Wireless Sensor Systems Volume 6 ; 6 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; IET Wireless Sensor Systems Volume 7 ; 7 ; http://digital-library.theiet.org/ ; >
       au < deepCrawl ; exists ; 2018 ; IET Wireless Sensor Systems Volume 8 ; 8 ; http://digital-library.theiet.org/ ; >
       au < crawling ; exists ; 2019 ; IET Wireless Sensor Systems Volume 9 ; 9 ; https://digital-library.theiet.org/ ; >
@@ -727,17 +727,17 @@
       >
       param[journal_id] = mnl
 
-      au < frozen ; exists ; 2006 ; Micro & Nano Letters Volume 1 ; 1 ; http://digital-library.theiet.org/ ; >
-      au < frozen ; exists ; 2007 ; Micro & Nano Letters Volume 2 ; 2 ; http://digital-library.theiet.org/ ; >
-      au < frozen ; exists ; 2008 ; Micro & Nano Letters Volume 3 ; 3 ; http://digital-library.theiet.org/ ; >
-      au < frozen ; exists ; 2009 ; Micro & Nano Letters Volume 4 ; 4 ; http://digital-library.theiet.org/ ; >
-      au < frozen ; exists ; 2010 ; Micro & Nano Letters Volume 5 ; 5 ; http://digital-library.theiet.org/ ; >
-      au < frozen ; exists ; 2011 ; Micro & Nano Letters Volume 6 ; 6 ; http://digital-library.theiet.org/ ; >
-      au < frozen ; exists ; 2012 ; Micro & Nano Letters Volume 7 ; 7 ; http://digital-library.theiet.org/ ; >
-      au < frozen ; exists ; 2013 ; Micro & Nano Letters Volume 8 ; 8 ; http://digital-library.theiet.org/ ; >
-      au < frozen ; exists ; 2014 ; Micro & Nano Letters Volume 9 ; 9 ; http://digital-library.theiet.org/ ; >
-      au < frozen ; exists ; 2015 ; Micro & Nano Letters Volume 10 ; 10 ; http://digital-library.theiet.org/ ; >
-      au < frozen ; exists ; 2016 ; Micro & Nano Letters Volume 11 ; 11 ; http://digital-library.theiet.org/ ; >
+      au < finished ; manifest ; 2006 ; Micro & Nano Letters Volume 1 ; 1 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2007 ; Micro & Nano Letters Volume 2 ; 2 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2008 ; Micro & Nano Letters Volume 3 ; 3 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2009 ; Micro & Nano Letters Volume 4 ; 4 ; http://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2010 ; Micro & Nano Letters Volume 5 ; 5 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2011 ; Micro & Nano Letters Volume 6 ; 6 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2012 ; Micro & Nano Letters Volume 7 ; 7 ; http://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2013 ; Micro & Nano Letters Volume 8 ; 8 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2014 ; Micro & Nano Letters Volume 9 ; 9 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2015 ; Micro & Nano Letters Volume 10 ; 10 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2016 ; Micro & Nano Letters Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2017 ; Micro & Nano Letters Volume 12 ; 12 ; http://digital-library.theiet.org/ ; >
       au < deepCrawl ; exists ; 2018 ; Micro & Nano Letters Volume 13 ; 13 ; http://digital-library.theiet.org/ ; >
       au < crawling ; exists ; 2019 ; Micro & Nano Letters Volume 14 ; 14 ; https://digital-library.theiet.org/ ; >

@@ -11772,22 +11772,6 @@
   {
 
     title <
-      name = Journal of the Endocrine Society ;
-      eissn = 2472-1972
-    >
-
-    param[journal_id] = jes
-
-    #this title was ONLY in the publisher listing
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of the Endocrine Society Volume 1 ; 1 ; >
-    au < finished ; crawling ; 2018 ; 2018 ; Journal of the Endocrine Society Volume 2 ; 2 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2019 ; 2019 ; Journal of the Endocrine Society Volume 3 ; 3 ; >
-
-  }
-
-  {
-
-    title <
       name = Journal of the European Economic Association ;
       issn = 1542-4766 ;
       eissn = 1542-4774
@@ -12460,7 +12444,7 @@
 #    au < exists ; exists ; 2009 ; 2009 ; Mammalian Species Volume Issue 824-847 ; Issue 824-847 ; >
 
     au < frozen ; exists ; 2010 ; 2010 ; Mammalian Species Volume 42 ; 42 ; >
-    au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Mammalian Species Volume 43 ; 43 ; >
+    au < exists ; exists ; 2011 ; 2011 ; Mammalian Species Volume 43 ; 43 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Mammalian Species Volume 44 ; 44 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Mammalian Species Volume 45 ; 45 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Mammalian Species Volume 46 ; 46 ; >
