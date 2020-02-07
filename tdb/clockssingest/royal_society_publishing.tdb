@@ -168,7 +168,7 @@
     au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2014 ; Journal of the Royal Society Interface Volume 11 ; 11 ; reingest1.clockss.org:8082 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2015 ; Journal of the Royal Society Interface Volume 12 ; 12 ; reingest2.clockss.org:8085 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2016 ; Journal of the Royal Society Interface Volume 13 ; 13 ; reingest5.clockss.org:8082 >
-    au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2017 ; Journal of the Royal Society Interface Volume 14 ; 14 ; reingest3.clockss.org:8083 >
+    au < rsp.ClockssRSPDrupalPlugin ; finished ; frozen ; 2017 ; Journal of the Royal Society Interface Volume 14 ; 14 ; reingest3.clockss.org:8083 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2018 ; Journal of the Royal Society Interface Volume 15 ; 15 ; reingest1.clockss.org:8082 >
 
   }
@@ -1633,7 +1633,7 @@
 
     au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2014 ; Royal Society Open Science Volume 1 ; 1 ; reingest4.clockss.org:8082 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2015 ; Royal Society Open Science Volume 2 ; 2 ; reingest5.clockss.org:8082 >
-    au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2016 ; Royal Society Open Science Volume 3 ; 3 ; reingest1.clockss.org:8082 >
+    au < rsp.ClockssRSPDrupalPlugin ; finished ; frozen ; 2016 ; Royal Society Open Science Volume 3 ; 3 ; reingest1.clockss.org:8082 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2017 ; Royal Society Open Science Volume 4 ; 4 ; reingest1.clockss.org:8082 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2018 ; Royal Society Open Science Volume 5 ; 5 ; reingest2.clockss.org:8085 >
 

@@ -344,7 +344,7 @@
     au < finished ; finished ; 2013 ; 2013 ; Aktuelle Urologie Volume 44 ; 44 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; 2014 ; Aktuelle Urologie Volume 45 ; 45 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; Aktuelle Urologie Volume 46 ; 46 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; 2016 ; Aktuelle Urologie Volume 47 ; 47 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; 2016 ; Aktuelle Urologie Volume 47 ; 47 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Aktuelle Urologie Volume 48 ; 48 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Aktuelle Urologie Volume 49 ; 49 ; >
     au < crawling ; exists ; 2019 ; 2019 ; Aktuelle Urologie Volume 50 ; 50 ; >
@@ -1652,7 +1652,7 @@
    au < finished ; finished ; 2013 ; 2013 ; Experimental and Clinical Endocrinology & Diabetes Volume 121 ; 121 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2014 ; 2014 ; Experimental and Clinical Endocrinology & Diabetes Volume 122 ; 122 ; >
    au < finished ; finished ; 2015 ; 2015 ; Experimental and Clinical Endocrinology & Diabetes Volume 123 ; 123 ; reingest3.clockss.org:8083 >
-   au < finished ; crawling ; 2016 ; 2016 ; Experimental and Clinical Endocrinology & Diabetes Volume 124 ; 124 ; reingest4.clockss.org:8082 >
+   au < finished ; frozen ; 2016 ; 2016 ; Experimental and Clinical Endocrinology & Diabetes Volume 124 ; 124 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Experimental and Clinical Endocrinology & Diabetes Volume 125 ; 125 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Experimental and Clinical Endocrinology & Diabetes Volume 126 ; 126 ; >
    au < crawling ; exists ; 2019 ; 2019 ; Experimental and Clinical Endocrinology & Diabetes Volume 127 ; 127 ; >
@@ -3704,7 +3704,7 @@
     au < finished ; finished ; 2013 ; 2013 ; Neonatologie Scan Volume 1 ; 1 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 2014 ; Neonatologie Scan Volume 2 ; 2 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Neonatologie Scan Volume 3 ; 3 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; 2016 ; Neonatologie Scan Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2016 ; 2016 ; Neonatologie Scan Volume 4 ; 4 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Neonatologie Scan Volume 5 ; 5 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Neonatologie Scan Volume 6 ; 6 ; >
     au < crawling ; exists ; 2019 ; 2019 ; Neonatologie Scan Volume 7 ; 7 ; >
@@ -4879,7 +4879,7 @@
    au < finished ; finished ; 2013 ; 2013 ; retten! Volume 2 ; 2 ; >
    au < finished ; finished ; 2014 ; 2014 ; retten! Volume 3 ; 3 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; retten! Volume 4 ; 4 ; reingest3.clockss.org:8083 >
-   au < finished ; crawling ; 2016 ; 2016 ; retten! Volume 5 ; 5 ; reingest4.clockss.org:8082 >
+   au < finished ; frozen ; 2016 ; 2016 ; retten! Volume 5 ; 5 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; retten! Volume 6 ; 6 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; retten! Volume 7 ; 7 ; >
    au < crawling ; exists ; 2019 ; 2019 ; retten! Volume 8 ; 8 ; >
