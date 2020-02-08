@@ -85,7 +85,7 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
   static final String PLUGIN_ID = "org.lockss.plugin.atypon.BaseAtyponPlugin";
   static final String BOOK_PLUGIN_ID = "org.lockss.plugin.atypon.BaseAtyponBooksPlugin";
   static final String RESTRICTED_BOOK_PLUGIN_ID = "org.lockss.plugin.atypon.BaseAtyponISBNBooksPlugin";
-  static final String PluginName = "Base Atypon Journals Plugin";
+  static final String PluginName = "Parent Atypon Journals Plugin";
 
   public void setUp() throws Exception {
     super.setUp();

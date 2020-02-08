@@ -20253,7 +20253,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < finished ; finished ; 2012 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2012 ; 2012 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2013 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2014 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; exists ; 2016 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2016 ; 2016 ; >
@@ -20457,7 +20457,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Public Opinion Quarterly Volume 73 ; 73 ; >
     au < finished ; finished ; 2010 ; Public Opinion Quarterly Volume 74 ; 74 ; >
     au < finished ; finished ; 2011 ; Public Opinion Quarterly Volume 75 ; 75 ; >
-    au < frozen ; exists ; 2012 ; Public Opinion Quarterly Volume 76 ; 76 ; >
+    au < finished ; manifest ; 2012 ; Public Opinion Quarterly Volume 76 ; 76 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Public Opinion Quarterly Volume 77 ; 77 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Public Opinion Quarterly Volume 78 ; 78 ; >
     au < finished ; finished ; 2015 ; Public Opinion Quarterly Volume 79 ; 79 ; reingest3.clockss.org:8083 >
@@ -20525,8 +20525,8 @@
     au < doNotProcess ; exists ; 2006 ; Publications of the Astronomical Society of Japan Volume 58 ; 58 ; >
     au < doNotProcess ; exists ; 2007 ; Publications of the Astronomical Society of Japan Volume 59 ; 59 ; >
     au < doNotProcess ; exists ; 2008 ; Publications of the Astronomical Society of Japan Volume 60 ; 60 ; >
-    au < frozen ; exists ; 2009 ; Publications of the Astronomical Society of Japan Volume 61 ; 61 ; >
-    au < frozen ; exists ; 2010 ; Publications of the Astronomical Society of Japan Volume 62 ; 62 ; >
+    au < finished ; manifest ; 2009 ; Publications of the Astronomical Society of Japan Volume 61 ; 61 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2010 ; Publications of the Astronomical Society of Japan Volume 62 ; 62 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2011 ; Publications of the Astronomical Society of Japan Volume 63 ; 63 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2012 ; Publications of the Astronomical Society of Japan Volume 64 ; 64 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Publications of the Astronomical Society of Japan Volume 65 ; 65 ; reingest5.clockss.org:8082 >
@@ -21162,7 +21162,7 @@
     au < doNotProcess ; exists ; 2008 ; Radiation Protection Dosimetry Volume 130 ; 130 ; >
     au < doNotProcess ; exists ; 2008 ; Radiation Protection Dosimetry Volume 131 ; 131 ; >
     au < doNotProcess ; exists ; 2008 ; Radiation Protection Dosimetry Volume 132 ; 132 ; >
-    au < frozen ; exists ; 2009 ; Radiation Protection Dosimetry Volume 133 ; 133 ; >
+    au < finished ; manifest ; 2009 ; Radiation Protection Dosimetry Volume 133 ; 133 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2009 ; Radiation Protection Dosimetry Volume 134 ; 134 ; reingest3.clockss.org:8083 >
     au < zapped ; finished ; 2009 ; Radiation Protection Dosimetry Volume 135 ; 135 ; >
     au < finished ; finished ; 2009 ; Radiation Protection Dosimetry Volume 136 ; 136 ; reingest2.clockss.org:8085 >
@@ -21390,7 +21390,7 @@
     au < finished ; finished ; 2009 ; Research Evaluation Volume 18 ; 18 ; >
     au < finished ; finished ; 2010 ; Research Evaluation Volume 19 ; 19 ; >
     au < finished ; finished ; 2011 ; Research Evaluation Volume 20 ; 20 ; >
-    au < frozen ; exists ; 2012 ; Research Evaluation Volume 21 ; 21 ; >
+    au < finished ; manifest ; 2012 ; Research Evaluation Volume 21 ; 21 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2013 ; Research Evaluation Volume 22 ; 22 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Research Evaluation Volume 23 ; 23 ; >
     au < finished ; finished ; 2015 ; Research Evaluation Volume 24 ; 24 ; reingest5.clockss.org:8082 >
@@ -21532,7 +21532,7 @@
     au < finished ; finished ; 2009 ; The Review of Economic Studies Volume 76 ; 76 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2010 ; The Review of Economic Studies Volume 77 ; 77 ; >
     au < finished ; finished ; 2011 ; The Review of Economic Studies Volume 78 ; 78 ; >
-    au < frozen ; exists ; 2012 ; The Review of Economic Studies Volume 79 ; 79 ; >
+    au < finished ; manifest ; 2012 ; The Review of Economic Studies Volume 79 ; 79 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2013 ; The Review of Economic Studies Volume 80 ; 80 ; reingest5.clockss.org:8082 >
     au < zapped ; finished ; 2014 ; The Review of Economic Studies Volume 81 ; 81 ; >
     au < zapped ; finished ; 2015 ; The Review of Economic Studies Volume 82 ; 82 ; reingest3.clockss.org:8083 >
@@ -21786,7 +21786,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; The Review of Financial Studies Volume 22 ; 22 ; >
     au < finished ; finished ; 2010 ; The Review of Financial Studies Volume 23 ; 23 ; >
     au < finished ; finished ; 2011 ; The Review of Financial Studies Volume 24 ; 24 ; >
-    au < frozen ; exists ; 2012 ; The Review of Financial Studies Volume 25 ; 25 ; >
+    au < finished ; manifest ; 2012 ; The Review of Financial Studies Volume 25 ; 25 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2013 ; The Review of Financial Studies Volume 26 ; 26 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; The Review of Financial Studies Volume 27 ; 27 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; The Review of Financial Studies Volume 28 ; 28 ; reingest3.clockss.org:8083 >
@@ -21878,7 +21878,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Rheumatology Volume 48 ; 48 ; >
     au < finished ; finished ; 2010 ; Rheumatology Volume 49 ; 49 ; >
     au < finished ; finished ; 2011 ; Rheumatology Volume 50 ; 50 ; >
-    au < frozen ; exists ; 2012 ; Rheumatology Volume 51 ; 51 ; >
+    au < finished ; manifest ; 2012 ; Rheumatology Volume 51 ; 51 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; Rheumatology Volume 52 ; 52 ; reingest5.clockss.org:8082 >
     au < zapped ; finished ; 2014 ; Rheumatology Volume 53 ; 53 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Rheumatology Volume 54 ; 54 ; reingest3.clockss.org:8083 >
@@ -22125,7 +22125,7 @@
     au < finished ; finished ; 2010 ; Social Cognitive and Affective Neuroscience Volume 5 ; 5 ; >
     au < finished ; finished ; 2011 ; Social Cognitive and Affective Neuroscience Volume 6 ; 6 ; >
     au < finished ; crawling ; 2012 ; Social Cognitive and Affective Neuroscience Volume 7 ; 7 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2013 ; Social Cognitive and Affective Neuroscience Volume 8 ; 8 ; >
+    au < finished ; manifest ; 2013 ; Social Cognitive and Affective Neuroscience Volume 8 ; 8 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Social Cognitive and Affective Neuroscience Volume 9 ; 9 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Social Cognitive and Affective Neuroscience Volume 10 ; 10 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; exists ; 2016 ; Social Cognitive and Affective Neuroscience Volume 11 ; 11 ; >
@@ -23263,13 +23263,13 @@
     au < doNotProcess ; exists ; 2003 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 97 ; 97 ; >
     au < doNotProcess ; exists ; 2004 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 98 ; 98 ; >
     au < finished ; frozen ; 2005 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 99 ; 99 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2006 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 100 ; 100 ; >
+    au < finished ; manifest ; 2006 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 100 ; 100 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2008 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 101 ; 101 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2009 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 102 ; 102 ; >
     au < finished ; crawling ; 2009 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 103 ; 103 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2010 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 104 ; 104 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2011 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 105 ; 105 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2012 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 106 ; 106 ; >
+    au < finished ; manifest ; 2012 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 106 ; 106 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 107 ; 107 ; >
     au < finished ; finished ; 2014 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 108 ; 108 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 109 ; 109 ; reingest2.clockss.org:8085 >
@@ -24283,7 +24283,7 @@
     au < finished ; finished ; 2010 ; Progress of Theoretical Physics Supplement Volume 183 ; 183 ; >
     au < finished ; finished ; 2010 ; Progress of Theoretical Physics Supplement Volume 184 ; 184 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2010 ; Progress of Theoretical Physics Supplement Volume 185 ; 185 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2010 ; Progress of Theoretical Physics Supplement Volume 186 ; 186 ; >
+    au < finished ; manifest ; 2010 ; Progress of Theoretical Physics Supplement Volume 186 ; 186 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2011 ; Progress of Theoretical Physics Supplement Volume 187 ; 187 ; >
     au < finished ; finished ; 2011 ; Progress of Theoretical Physics Supplement Volume 188 ; 188 ; >
     au < finished ; finished ; 2011 ; Progress of Theoretical Physics Supplement Volume 189 ; 189 ; >
@@ -24521,7 +24521,7 @@
     au < doNotProcess ; exists ; 2006 ; Interacting with Computers Volume 18 ; 18 ; >
     au < doNotProcess ; exists ; 2007 ; Interacting with Computers Volume 19 ; 19 ; >
     au < doNotProcess ; exists ; 2008 ; Interacting with Computers Volume 20 ; 20 ; >
-    au < frozen ; exists ; 2009 ; Interacting with Computers Volume 21 ; 21 ; >
+    au < finished ; manifest ; 2009 ; Interacting with Computers Volume 21 ; 21 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2010 ; Interacting with Computers Volume 22 ; 22 ; >
     au < finished ; finished ; 2011 ; Interacting with Computers Volume 23 ; 23 ; >
     au < finished ; finished ; 2012 ; Interacting with Computers Volume 24 ; 24 ; >
@@ -24756,7 +24756,7 @@
     au < finished ; finished ; 2009 ; Poultry Science Volume 88 ; 88 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2010 ; Poultry Science Volume 89 ; 89 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2011 ; Poultry Science Volume 90 ; 90 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2012 ; Poultry Science Volume 91 ; 91 ; >
+    au < finished ; manifest ; 2012 ; Poultry Science Volume 91 ; 91 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Poultry Science Volume 92 ; 92 ; reingest1.clockss.org:8082 >
     au < zapped ; finished ; 2014 ; Poultry Science Volume 93 ; 93 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Poultry Science Volume 94 ; 94 ; reingest2.clockss.org:8085 >
@@ -24873,7 +24873,7 @@
       au < finished ; finished ; 2010 ; Critical Values Volume 3 ; 3 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2011 ; Critical Values Volume 4 ; 4 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2012 ; Critical Values Volume 5 ; 5 ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2013 ; Critical Values Volume 6 ; 6 ; >
+      au < finished ; manifest ; 2013 ; Critical Values Volume 6 ; 6 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2014 ; Critical Values Volume 7 ; 7 ; >
       au < finished ; finished ; 2015 ; Critical Values Volume 8 ; 8 ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2016 ; Critical Values Volume 9 [superseded] ; 9 ; >
@@ -25001,8 +25001,8 @@
       au < finished ; crawling ; 2008 ; Journal of Neuropathology & Experimental Neurology Volume 67 ; 67 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2009 ; Journal of Neuropathology & Experimental Neurology Volume 68 ; 68 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; exists ; 2010 ; Journal of Neuropathology & Experimental Neurology Volume 69 ; 69 ; >
-      au < frozen ; exists ; 2011 ; Journal of Neuropathology & Experimental Neurology Volume 70 ; 70 ; >
-      au < frozen ; exists ; 2012 ; Journal of Neuropathology & Experimental Neurology Volume 71 ; 71 ; >
+      au < finished ; manifest ; 2011 ; Journal of Neuropathology & Experimental Neurology Volume 70 ; 70 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2012 ; Journal of Neuropathology & Experimental Neurology Volume 71 ; 71 ; reingest4.clockss.org:8082 >
       au < doNotProcess ; exists ; 2013 ; Journal of Neuropathology & Experimental Neurology Volume 72 ; 72 ; > #File size differs from Content-Length header 
       au < zapped ; finished ; 2014 ; Journal of Neuropathology & Experimental Neurology Volume 73 ; 73 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2015 ; Journal of Neuropathology & Experimental Neurology Volume 74 ; 74 ; reingest3.clockss.org:8083 >
@@ -25058,10 +25058,10 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       #move to European Association for Cardio-Thoracic Surgery in 2017 
 
-      au < frozen ; exists ; 2005 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2005 ; 2005 ; >
-      au < frozen ; exists ; 2006 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2006 ; 2006 ; >
-      au < frozen ; exists ; 2007 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2007 ; 2007 ; >
-      au < frozen ; exists ; 2008 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2008 ; 2008 ; >
+      au < finished ; manifest ; 2005 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2005 ; 2005 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2006 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2006 ; 2006 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2007 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2007 ; 2007 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2008 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2008 ; 2008 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2009 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2009 ; 2009 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2010 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2010 ; 2010 ; >
       au < finished ; finished ; 2011 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2011 ; 2011 ; reingest2.clockss.org:8085 >
@@ -25120,11 +25120,11 @@
       au < doNotProcess ; exists ; 2006 ; Pain Medicine Volume 7 ; 7 ; >
       au < doNotProcess ; exists ; 2007 ; Pain Medicine Volume 8 ; 8 ; >
       au < doNotProcess ; exists ; 2008 ; Pain Medicine Volume 9 ; 9 ; >
-      au < frozen ; exists ; 2009 ; Pain Medicine Volume 10 ; 10 ; >
+      au < finished ; manifest ; 2009 ; Pain Medicine Volume 10 ; 10 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2010 ; Pain Medicine Volume 11 ; 11 ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2011 ; Pain Medicine Volume 12 ; 12 ; >
+      au < finished ; manifest ; 2011 ; Pain Medicine Volume 12 ; 12 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2012 ; Pain Medicine Volume 13 ; 13 ; >
-      au < frozen ; exists ; 2013 ; Pain Medicine Volume 14 ; 14 ; >
+      au < finished ; manifest ; 2013 ; Pain Medicine Volume 14 ; 14 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Pain Medicine Volume 15 ; 15 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; Pain Medicine Volume 16 ; 16 ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2016 ; Pain Medicine Volume 17 [superseded] ; 17 ; >

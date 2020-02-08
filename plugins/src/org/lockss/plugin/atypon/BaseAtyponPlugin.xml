@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Base Atypon Journals Plugin</string>
+    <string>Parent Atypon Journals Plugin</string>
   </entry>
   <entry>
   <!--  for support of au_url_mime_type_validation_map-->
@@ -45,7 +45,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Base Atypon Journals Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"Parent Atypon Journals Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>au_start_url</string>

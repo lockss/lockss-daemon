@@ -787,7 +787,7 @@
     
     param[journal_id] = 42
 
-    au < finished ; crawling ; 2008 ; Integrated Blood Pressure Control Volume 1 ; 1 ; 2008 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2008 ; Integrated Blood Pressure Control Volume 1 ; 1 ; 2008 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2009 ; Integrated Blood Pressure Control Volume 2 ; 2 ; 2009 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2010 ; Integrated Blood Pressure Control Volume 3 ; 3 ; 2010 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2011 ; Integrated Blood Pressure Control Volume 4 ; 4 ; 2011 ; reingest5.clockss.org:8082 >
@@ -1113,7 +1113,7 @@
 
     au < finished ; finished ; 2008 ; Risk Management and Healthcare Policy Volume 1 ; 1 ; 2008 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2009 ; Risk Management and Healthcare Policy Volume 2 ; 2 ; 2009 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2010 ; Risk Management and Healthcare Policy Volume 3 ; 3 ; 2010 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2010 ; Risk Management and Healthcare Policy Volume 3 ; 3 ; 2010 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2011 ; Risk Management and Healthcare Policy Volume 4 ; 4 ; 2011 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2012 ; Risk Management and Healthcare Policy Volume 5 ; 5 ; 2012 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; Risk Management and Healthcare Policy Volume 6 ; 6 ; 2013 ; reingest1.clockss.org:8082 >
@@ -1286,7 +1286,7 @@
     param[journal_id] = 65
 
     au < finished ; finished ; 2009 ; Clinical Pharmacology: Advances and Applications Volume 1 ; 1 ; 2009 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2010 ; Clinical Pharmacology: Advances and Applications Volume 2 ; 2 ; 2010 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2010 ; Clinical Pharmacology: Advances and Applications Volume 2 ; 2 ; 2010 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2011 ; Clinical Pharmacology: Advances and Applications Volume 3 ; 3 ; 2011 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2012 ; Clinical Pharmacology: Advances and Applications Volume 4 ; 4 ; 2012 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Clinical Pharmacology: Advances and Applications Volume 5 ; 5 ; 2013 ; reingest3.clockss.org:8083 >
@@ -1430,7 +1430,7 @@
     au < finished ; finished ; 2013 ; Nature and Science of Sleep Volume 5 ; 5 ; 2013 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Nature and Science of Sleep Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Nature and Science of Sleep Volume 7 ; 7 ; 2015 ; >
-    au < finished ; crawling ; 2016 ; Nature and Science of Sleep Volume 8 ; 8 ; 2016 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Nature and Science of Sleep Volume 8 ; 8 ; 2016 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Nature and Science of Sleep Volume 9 ; 9 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Nature and Science of Sleep Volume 10 ; 10 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Nature and Science of Sleep Volume 11 ; 11 ; 2019 ; >
@@ -1471,7 +1471,7 @@
 
     au < finished ; finished ; 2009 ; Neurobehavioral HIV Medicine Volume 1 ; 1 ; 2009 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2010 ; Neurobehavioral HIV Medicine Volume 2 ; 2 ; 2010 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2011 ; Neurobehavioral HIV Medicine Volume 3 ; 3 ; 2011 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2011 ; Neurobehavioral HIV Medicine Volume 3 ; 3 ; 2011 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Neurobehavioral HIV Medicine Volume 4 ; 4 ; 2012 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2013 ; Neurobehavioral HIV Medicine Volume 5 ; 5 ; 2013 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Neurobehavioral HIV Medicine Volume 6 ; 6 ; 2015 ; >
@@ -1495,7 +1495,7 @@
     au < finished ; crawling ; 2013 ; Clinical Optometry Volume 5 ; 5 ; 2013 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Clinical Optometry Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Clinical Optometry Volume 7 ; 7 ; 2015 ; >
-    au < finished ; crawling ; 2016 ; Clinical Optometry Volume 8 ; 8 ; 2016 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2016 ; Clinical Optometry Volume 8 ; 8 ; 2016 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; Clinical Optometry Volume 9 ; 9 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Clinical Optometry Volume 10 ; 10 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Clinical Optometry Volume 11 ; 11 ; 2019 ; >
@@ -1651,7 +1651,7 @@
     au < finished ; finished ; 2013 ; Journal of Blood Medicine Volume 4 ; 4 ; 2013 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Journal of Blood Medicine Volume 5 ; 5 ; 2014 ; >
     au < finished ; finished ; 2015 ; Journal of Blood Medicine Volume 6 ; 6 ; 2015 ; >
-    au < finished ; crawling ; 2016 ; Journal of Blood Medicine Volume 7 ; 7 ; 2016 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Journal of Blood Medicine Volume 7 ; 7 ; 2016 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Journal of Blood Medicine Volume 8 ; 8 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Journal of Blood Medicine Volume 9 ; 9 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Journal of Blood Medicine Volume 10 ; 10 ; 2019 ; >
@@ -2435,7 +2435,7 @@
     #ceased publishing in November 2016
 
     au < finished ; crawling ; 2011 ; Reports in Electrochemistry Volume 1 ; 1 ; 2011 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2012 ; Reports in Electrochemistry Volume 2 ; 2 ; 2012 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2012 ; Reports in Electrochemistry Volume 2 ; 2 ; 2012 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2013 ; Reports in Electrochemistry Volume 3 ; 3 ; 2013 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Reports in Electrochemistry Volume 4 ; 4 ; 2014 ; >
     au < finished ; finished ; 2015 ; Reports in Electrochemistry Volume 5 ; 5 ; 2015 ; >
