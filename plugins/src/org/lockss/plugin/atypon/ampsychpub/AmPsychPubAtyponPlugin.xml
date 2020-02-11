@@ -31,7 +31,7 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>American Psychiatric Publishing Plugin</string>
+    <string>American Psychiatric Association Publishing Plugin</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -43,7 +43,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"American Psychiatric Publishing Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"American Psychiatric Association Publishing Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
   <!-- Needed for http links in some html pages -->
   <entry>

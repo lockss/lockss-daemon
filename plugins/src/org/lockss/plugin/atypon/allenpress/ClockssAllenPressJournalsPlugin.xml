@@ -21,11 +21,11 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Allen Press Journals Plugin (CLOCKSS)</string>
+    <string>Allen Press Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Allen Press Journals Plugin (CLOCKSS), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"Allen Press Plugin (CLOCKSS), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
   <!--  override start url from parent to support http to https conversion -->
     <entry>
