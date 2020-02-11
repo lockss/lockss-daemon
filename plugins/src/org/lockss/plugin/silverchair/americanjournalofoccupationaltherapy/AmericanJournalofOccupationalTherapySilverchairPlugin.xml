@@ -190,12 +190,6 @@
         <string>au_permitted_host_pattern</string>
         <string>"(fonts|ajax)\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|ajax\.microsoft\.com|[^.]+\.(silverchair\.netdna-cdn|silverchaircdn)\.com"</string>
     </entry>
-    <!--
-    <entry>
-        <string>plugin_url_fetcher_factory</string>
-        <string>org.lockss.plugin.silverchair.americanjournalofoccupationaltherapy.ScUrlFetcherFactory</string>
-    </entry>
-    -->
     <entry>
         <string>plugin_cache_result_list</string>
         <list>
