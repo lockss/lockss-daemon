@@ -77,7 +77,7 @@
       au < finished ; manifest ; 2014 ; Electronics Letters Volume 50 ; 50 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2015 ; Electronics Letters Volume 51 ; 51 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2016 ; Electronics Letters Volume 52 ; 52 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
-      au < deepCrawl ; exists ; 2017 ; Electronics Letters Volume 53 ; 53 ; http://digital-library.theiet.org/ ; >
+      au < finished ; manifest ; 2017 ; Electronics Letters Volume 53 ; 53 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018 ; Electronics Letters Volume 54 ; 54 ; http://digital-library.theiet.org/ ; >
       au < crawling ; exists ; 2019 ; Electronics Letters Volume 55 ; 55 ; https://digital-library.theiet.org/ ; >
 
@@ -104,8 +104,8 @@
       au < finished ; manifest ; 2014 ; Engineering & Technology Volume 9 ; 9 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2015 ; Engineering & Technology Volume 10 ; 10 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2016 ; Engineering & Technology Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2017 ; Engineering & Technology Volume 12 ; 12 ; http://digital-library.theiet.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; Engineering & Technology Volume 13 ; 13 ; http://digital-library.theiet.org/ ; >
+      au < finished ; manifest ; 2017 ; Engineering & Technology Volume 12 ; 12 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2018 ; Engineering & Technology Volume 13 ; 13 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2019 ; Engineering & Technology Volume 14 ; 14 ; https://digital-library.theiet.org/ ; >
 
 
@@ -126,7 +126,7 @@
       au < finished ; manifest ; 2014 ; IET Biometrics Volume 3 ; 3 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2015 ; IET Biometrics Volume 4 ; 4 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2016 ; IET Biometrics Volume 5 ; 5 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2017 ; IET Biometrics Volume 6 ; 6 ; http://digital-library.theiet.org/ ; >
+      au < finished ; manifest ; 2017 ; IET Biometrics Volume 6 ; 6 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2018 ; IET Biometrics Volume 7 ; 7 ; http://digital-library.theiet.org/ ; >
       au < crawling ; exists ; 2019 ; IET Biometrics Volume 8 ; 8 ; https://digital-library.theiet.org/ ; >
 
@@ -153,7 +153,7 @@
       au < finished ; manifest ; 2014 ; IET Circuits, Devices and Systems Volume 8 ; 8 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2015 ; IET Circuits, Devices and Systems Volume 9 ; 9 ; http://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2016 ; IET Circuits, Devices and Systems Volume 10 ; 10 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2017 ; IET Circuits, Devices and Systems Volume 11 ; 11 ; http://digital-library.theiet.org/ ; >
+      au < finished ; manifest ; 2017 ; IET Circuits, Devices and Systems Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018 ; IET Circuits, Devices and Systems Volume 12 ; 12 ; http://digital-library.theiet.org/ ; >
       au < crawling ; exists ; 2019 ; IET Circuits, Devices and Systems Volume 13 ; 13 ; https://digital-library.theiet.org/ ; >
 
@@ -179,7 +179,7 @@
       au < finished ; manifest ; 2014 ; IET Communications Volume 8 ; 8 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2015 ; IET Communications Volume 9 ; 9 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2016 ; IET Communications Volume 10 ; 10 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
-      au < deepCrawl ; exists ; 2017 ; IET Communications Volume 11 ; 11 ; http://digital-library.theiet.org/ ; >
+      au < finished ; manifest ; 2017 ; IET Communications Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018 ; IET Communications Volume 12 ; 12 ; http://digital-library.theiet.org/ ; >
       au < crawling ; exists ; 2019 ; IET Communications Volume 13 ; 13 ; https://digital-library.theiet.org/ ; >
 
@@ -205,8 +205,8 @@
       au < finished ; manifest ; 2014 ; IET Computers & Digital Techniques Volume 8 ; 8 ; http://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2015 ; IET Computers & Digital Techniques Volume 9 ; 9 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2016 ; IET Computers & Digital Techniques Volume 10 ; 10 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
-      au < deepCrawl ; exists ; 2017 ; IET Computers & Digital Techniques Volume 11 ; 11 ; http://digital-library.theiet.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; IET Computers & Digital Techniques Volume 12 ; 12 ; http://digital-library.theiet.org/ ; >
+      au < finished ; manifest ; 2017 ; IET Computers & Digital Techniques Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; IET Computers & Digital Techniques Volume 12 ; 12 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2019 ; IET Computers & Digital Techniques Volume 13 ; 13 ; https://digital-library.theiet.org/ ; >
 
     }
@@ -231,7 +231,7 @@
       au < finished ; manifest ; 2014 ; IET Computer Vision Volume 8 ; 8 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2015 ; IET Computer Vision Volume 9 ; 9 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2016 ; IET Computer Vision Volume 10 ; 10 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2017 ; IET Computer Vision Volume 11 ; 11 ; http://digital-library.theiet.org/ ; >
+      au < finished ; manifest ; 2017 ; IET Computer Vision Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2018 ; IET Computer Vision Volume 12 ; 12 ; http://digital-library.theiet.org/ ; >
       au < crawling ; exists ; 2019 ; IET Computer Vision Volume 13 ; 13 ; https://digital-library.theiet.org/ ; >
 
@@ -257,7 +257,7 @@
       au < finished ; manifest ; 2014 ; IET Control Theory & Applications Volume 8 ; 8 ; http://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2015 ; IET Control Theory & Applications Volume 9 ; 9 ; http://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2016 ; IET Control Theory & Applications Volume 10 ; 10 ; http://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2017 ; IET Control Theory & Applications Volume 11 ; 11 ; http://digital-library.theiet.org/ ; >
+      au < finished ; manifest ; 2017 ; IET Control Theory & Applications Volume 11 ; 11 ; http://digital-library.theiet.org/ ; >
       au < deepCrawl ; exists ; 2018 ; IET Control Theory & Applications Volume 12 ; 12 ; http://digital-library.theiet.org/ ; >
       au < crawling ; exists ; 2019 ; IET Control Theory & Applications Volume 13 ; 13 ; https://digital-library.theiet.org/ ; >
 
@@ -283,7 +283,7 @@
       au < finished ; manifest ; 2014 ; IET Electric Power Applications Volume 8 ; 8 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2015 ; IET Electric Power Applications Volume 9 ; 9 ; http://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2016 ; IET Electric Power Applications Volume 10 ; 10 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2017 ; IET Electric Power Applications Volume 11 ; 11 ; http://digital-library.theiet.org/ ; >
+      au < finished ; manifest ; 2017 ; IET Electric Power Applications Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2018 ; IET Electric Power Applications Volume 12 ; 12 ; http://digital-library.theiet.org/ ; >
       au < crawling ; exists ; 2019 ; IET Electric Power Applications Volume 13 ; 13 ; https://digital-library.theiet.org/ ; >
 
@@ -331,7 +331,7 @@
       au < finished ; manifest ; 2014 ; IET Generation, Transmission & Distribution Volume 8 ; 8 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2015 ; IET Generation, Transmission & Distribution Volume 9 ; 9 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2016 ; IET Generation, Transmission & Distribution Volume 10 ; 10 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2017 ; IET Generation, Transmission & Distribution Volume 11 ; 11 ; http://digital-library.theiet.org/ ; >
+      au < finished ; manifest ; 2017 ; IET Generation, Transmission & Distribution Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018 ; IET Generation, Transmission & Distribution Volume 12 ; 12 ; http://digital-library.theiet.org/ ; >
       au < crawling ; exists ; 2019 ; IET Generation, Transmission & Distribution Volume 13 ; 13 ; https://digital-library.theiet.org/ ; >
 
