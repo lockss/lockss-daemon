@@ -42,8 +42,8 @@
       au < readySource ; frozen ; 2015 ; Elsevier Source Content 2015 ; 2015 >
       au < zapped ; finished ; 2016 ; Elsevier Source Content 2016 ; 2016 >
       #bringing 2017, 2018 down - will be reprocessing in smaller chunks
-      au < readySource ; zapped ; 2017 ; Elsevier Source Content 2017 ; 2017 > #will redo in smaller chunks; then remove this one
-      au < readySource ; zapped ; 2018 ; Elsevier Source Content 2018 ; 2018 > #will redo in smaller chunks; then remove this one
+      au < readySource ; zapped ; 2017 ; Elsevier Source Content 2017 [to_delete] ; 2017 > #will redo in smaller chunks; then remove this one
+      au < readySource ; zapped ; 2018 ; Elsevier Source Content 2018 [to_delete] ; 2018 > #will redo in smaller chunks; then remove this one
       #no more AUs expected for this plugin
     
     }
@@ -71,12 +71,12 @@
       au < readySource ; finished ; 2018 ; Elsevier Source Content 2018_1 ; 2018_1 >
       au < readySource ; finished ; 2018 ; Elsevier Source Content 2018_2 ; 2018_2 >
       au < readySource ; finished ; 2018 ; Elsevier Source Content 2018_3 ; 2018_3 >
-      au < readySource ; finished ; 2018 ; Elsevier Source Content 2018_4 ; 2018_4 > #never sucess on anu for one file
+      au < readySource ; finished ; 2018 ; Elsevier Source Content 2018_4 ; 2018_4 > #never success on anu for one file
       au < readySource ; finished ; 2018 ; Elsevier Source Content 2018_5 ; 2018_5 >
       au < readySource ; finished ; 2018 ; Elsevier Source Content 2018_6 ; 2018_6 >
-      au < readySource ; finished ; 2018 ; Elsevier Source Content 2018_7 ; 2018_7 > #never sucess on anu for one file
+      au < readySource ; finished ; 2018 ; Elsevier Source Content 2018_7 ; 2018_7 > #never success on anu for one file
       au < readySource ; finished ; 2018 ; Elsevier Source Content 2018_8 ; 2018_8 >
-      au < readySource ; finished ; 2018 ; Elsevier Source Content 2018_9 ; 2018_9 > #never sucess on anu for one file
+      au < readySource ; finished ; 2018 ; Elsevier Source Content 2018_9 ; 2018_9 > #never success on anu for one file
       au < readySource ; finished ; 2018 ; Elsevier Source Content 2018_10 ; 2018_10 >
       au < readySource ; finished ; 2018 ; Elsevier Source Content 2018_11 ; 2018_11 >
       au < readySource ; finished ; 2018 ; Elsevier Source Content 2018_12 ; 2018_12 >
@@ -111,7 +111,7 @@
       hidden[proxy] = DIRECT
       implicit < status ; status2 ; year ; name ; param[year] ; param[directory] >
       
-    #first batch  - Stanford, Alberta, Indiana, HKU
+ # first batch  - Stanford, Alberta, Indiana, HKU
       au < readySource ; finished ; 2017 ; Elsevier Delivered Source Content 2017 HD1_1 ; 2017 ; HD1_1 >
       au < readySource ; finished ; 2017 ; Elsevier Delivered Source Content 2017 HD1_2 ; 2017 ; HD1_2 >
       au < readySource ; frozen ; 2017 ; Elsevier Delivered Source Content 2017 HD1_3 ; 2017 ; HD1_3 >
@@ -137,7 +137,7 @@
       au < readySource ; finished ; 2017 ; Elsevier Delivered Source Content 2017 HD3_4 ; 2017 ; HD3_4 >
       au < readySource ; finished ; 2017 ; Elsevier Delivered Source Content 2017 HD3_5 ; 2017 ; HD3_5 >
 
-	#second batch - Stanford, Alberta, OCLC, Virginia
+ # second batch - Stanford, Alberta, OCLC, Virginia
       au < readySource ; finished ; 2017 ; Elsevier Delivered Source Content 2017 HD4_1 ; 2017 ; HD4_1 >
       au < readySource ; finished ; 2017 ; Elsevier Delivered Source Content 2017 HD4_2 ; 2017 ; HD4_2 >
       au < readySource ; finished ; 2017 ; Elsevier Delivered Source Content 2017 HD4_3 ; 2017 ; HD4_3 >
@@ -159,8 +159,8 @@
       au < readySource ; finished ; 2017 ; Elsevier Delivered Source Content 2017 HD7_4 ; 2017 ; HD7_4 >
       au < readySource ; finished ; 2017 ; Elsevier Delivered Source Content 2017 HD7_5 ; 2017 ; HD7_5 >
 
-	#third batch - all of them on stanford, indiana, alberta
-	# HD9_1..5 on nii; HD9_6..10 on anu, HD8_* on oclc and HD10_* on hku
+ # third batch - all of them on stanford, indiana, alberta
+ # HD9_1..5 on nii; HD9_6..10 on anu, HD8_* on oclc and HD10_* on hku
       au < readySource ; finished ; 2017 ; Elsevier Delivered Source Content 2017 HD8_1 ; 2017 ; HD8_1 >
       au < readySource ; finished ; 2017 ; Elsevier Delivered Source Content 2017 HD8_2 ; 2017 ; HD8_2 >
       au < readySource ; finished ; 2017 ; Elsevier Delivered Source Content 2017 HD8_3 ; 2017 ; HD8_3 >
@@ -175,27 +175,27 @@
       au < readySource ; finished ; 2017 ; Elsevier Delivered Source Content 2017 HD9_7 ; 2017 ; HD9_7 >
       au < readySource ; finished ; 2017 ; Elsevier Delivered Source Content 2017 HD9_8 ; 2017 ; HD9_8 >
       au < readySource ; finished ; 2017 ; Elsevier Delivered Source Content 2017 HD9_9 ; 2017 ; HD9_9 >
-      au < readySource ; finished ; 2017 ; Elsevier Delivered Source Content 2017 HD9_10 ; 2017 ; HD9_10 >      
+      au < readySource ; finished ; 2017 ; Elsevier Delivered Source Content 2017 HD9_10 ; 2017 ; HD9_10 >
       au < readySource ; finished ; 2017 ; Elsevier Delivered Source Content 2017 HD10_1 ; 2017 ; HD10_1 >
       au < readySource ; finished ; 2017 ; Elsevier Delivered Source Content 2017 HD10_2 ; 2017 ; HD10_2 >
       au < readySource ; finished ; 2017 ; Elsevier Delivered Source Content 2017 HD10_3 ; 2017 ; HD10_3 >
       au < readySource ; finished ; 2017 ; Elsevier Delivered Source Content 2017 HD10_4 ; 2017 ; HD10_4 >
-      au < readySource ; finished ; 2017 ; Elsevier Delivered Source Content 2017 HD10_5 ; 2017 ; HD10_5 >	
+      au < readySource ; finished ; 2017 ; Elsevier Delivered Source Content 2017 HD10_5 ; 2017 ; HD10_5 >
 
-	#final batch - Stanford, Alberta, Indiana, HKU
+ # final batch - Stanford, Alberta, Indiana, HKU
       au < readySource ; finished ; 2017 ; Elsevier Delivered Source Content 2017 HD11_1 ; 2017 ; HD11_1 >
       au < readySource ; finished ; 2017 ; Elsevier Delivered Source Content 2017 HD11_2 ; 2017 ; HD11_2 >
       au < readySource ; finished ; 2017 ; Elsevier Delivered Source Content 2017 HD11_3 ; 2017 ; HD11_3 >
       au < readySource ; finished ; 2017 ; Elsevier Delivered Source Content 2017 HD11_4 ; 2017 ; HD11_4 >
-      au < readySource ; finished ; 2017 ; Elsevier Delivered Source Content 2017 HD11_5 ; 2017 ; HD11_5 >	
+      au < readySource ; finished ; 2017 ; Elsevier Delivered Source Content 2017 HD11_5 ; 2017 ; HD11_5 >
       au < readySource ; finished ; 2017 ; Elsevier Delivered Source Content 2017 HD12_1 ; 2017 ; HD12_1 >
       au < readySource ; finished ; 2017 ; Elsevier Delivered Source Content 2017 HD12_2 ; 2017 ; HD12_2 >
       au < readySource ; finished ; 2017 ; Elsevier Delivered Source Content 2017 HD12_3 ; 2017 ; HD12_3 >
       au < readySource ; finished ; 2017 ; Elsevier Delivered Source Content 2017 HD12_4 ; 2017 ; HD12_4 >
-      au < readySource ; finished ; 2017 ; Elsevier Delivered Source Content 2017 HD12_5 ; 2017 ; HD12_5 >	
-	
-	# the last little bit
-      au < readySource ; finished ; 2017 ; Elsevier Delivered Source Content 2017 HD13_1 ; 2017 ; HD13_1 >	#needed on oclc
+      au < readySource ; finished ; 2017 ; Elsevier Delivered Source Content 2017 HD12_5 ; 2017 ; HD12_5 >
+
+ # the last little bit
+      au < readySource ; finished ; 2017 ; Elsevier Delivered Source Content 2017 HD13_1 ; 2017 ; HD13_1 >   #needed on oclc
       #no more AUs expected at this time
 
     } 
