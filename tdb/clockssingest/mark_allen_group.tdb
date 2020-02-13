@@ -616,6 +616,7 @@
 
     comment[base_url] = http://www.nurseprescribing.com/
     param[journal_id] = npre
+    #continued_by = 2631-8385
 
     au < manifest ; exists ; 2008 ; Nurse Prescribing Volume 6 ; 6 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2009 ; Nurse Prescribing Volume 7 ; 7 ; https://www.magonlinelibrary.com/ ; >
@@ -628,7 +629,21 @@
     au < deepCrawl ; exists ; 2016 ; Nurse Prescribing Volume 14 ; 14 ; http://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Nurse Prescribing Volume 15 ; 15 ; http://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2018 ; Nurse Prescribing Volume 16 ; 16 ; https://www.magonlinelibrary.com/ ; >
-    au < expected ; exists ; 2019 ; Nurse Prescribing Volume 17 ; 17 ; https://www.magonlinelibrary.com/ ; >
+
+  }
+
+  {
+    title <
+      name = Journal of Prescribing Practice ;
+      issn = 2631-8385 ;
+      eissn = 2631-8385
+    >
+
+    comment[base_url] = http://www.nurseprescribing.com/
+    param[journal_id] = jprp
+    #continues = 1479-9189
+
+    au < exists ; exists ; 2019 ; Journal of Prescribing Practice Volume 1 ; 1 ; https://www.magonlinelibrary.com/ ; >
 
   }
 
@@ -968,7 +983,6 @@
     au < deepCrawl ; exists ; 2016 ; Primary Teacher Update Volume 2016 ; 2016 ; http://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Primary Teacher Update Volume 2017 ; 2017 ; http://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2018 ; Primary Teacher Update Volume 2018 ; 2018 ; https://www.magonlinelibrary.com/ ; >
-    au < expected ; exists ; 2019 ; Primary Teacher Update Volume 2019 ; 2019 ; https://www.magonlinelibrary.com/ ; >
 
   }
 

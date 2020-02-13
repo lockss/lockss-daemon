@@ -622,7 +622,21 @@
     au < released ; 2016 ; Nurse Prescribing Volume 14 ; 14 ; http://www.magonlinelibrary.com/ >
     au < released ; 2017 ; Nurse Prescribing Volume 15 ; 15 ; https://www.magonlinelibrary.com/ >
     au < released ; 2018 ; Nurse Prescribing Volume 16 ; 16 ; https://www.magonlinelibrary.com/ >
-    au < expected ; 2019 ; Nurse Prescribing Volume 17 ; 17 ; https://www.magonlinelibrary.com/ >
+
+  }
+
+  {
+    title <
+      name = Journal of Prescribing Practice ;
+      issn = 2631-8385 ;
+      eissn = 2631-8385
+    >
+
+    comment[base_url] = http://www.nurseprescribing.com/
+    param[journal_id] = jprp
+    #continues = 1479-9189
+
+    au < exists ; 2019 ; Journal of Prescribing Practice Volume 1 ; 1 ; https://www.magonlinelibrary.com/ >
 
   }
 
@@ -958,7 +972,6 @@
     au < released ; 2016 ; Primary Teacher Update Volume 2016 ; 2016 ; http://www.magonlinelibrary.com/ >
     au < released ; 2017 ; Primary Teacher Update Volume 2017 ; 2017 ; https://www.magonlinelibrary.com/ >
     au < released ; 2018 ; Primary Teacher Update Volume 2018 ; 2018 ; https://www.magonlinelibrary.com/ >
-    au < expected ; 2019 ; Primary Teacher Update Volume 2019 ; 2019 ; https://www.magonlinelibrary.com/ >
 
   }
 
