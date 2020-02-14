@@ -560,7 +560,7 @@
       param[journal_abbr] = hbr
 
       au < finished ; crawling ; 2017-2018 ; Human Behavior Research Volume 1 ; 1 ; reingest3.clockss.org:8083 >
-      au < boost ; down ; 2019 ; Human Behavior Research Volume 2 ; 2 ; reingest4.clockss.org:8082 >
+      au < crawling ; down ; 2019 ; Human Behavior Research Volume 2 ; 2 ; reingest4.clockss.org:8082 >
 
   }
 
