@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>ready</string>
+    <string>deprecated</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -23,7 +23,7 @@
         <string>1</string>
       </entry>
     </map>
-  </entry>  
+  </entry>
   <entry>
     <string>plugin_parent</string>
     <string>org.lockss.plugin.clockss.ClockssSourcePlugin</string>
@@ -34,16 +34,16 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Nature Publishing Group Source Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
+    <string>"Nature Publishing Group Source Plugin (deprecated) (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Nature Publishing Group Source Plugin (CLOCKSS)</string>
+    <string>Nature Publishing Group Source Plugin (deprecated) (CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_archive_file_types</string>
     <string>standard</string>
-  </entry>  
+  </entry>
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
@@ -75,5 +75,5 @@
         <string>org.lockss.plugin.clockss.nature.NpgXmlMetadataExtractorFactory</string>
       </entry>
     </map>
-  </entry>    
-</map>    
+  </entry>
+</map>
