@@ -1,0 +1,30 @@
+{
+
+  publisher <
+    name = International Bone & Mineral Society ;
+    info[contract] = 2008 ;
+    info[tester] = S ;
+    info[poller] = 3
+  >
+
+    provider = Nature Publishing Group 
+
+  {
+  
+    title <
+      name = BoneKEy Reports Source Content
+    >
+    
+    plugin = org.lockss.plugin.clockss.nature.ClockssNaturePublishingGroupSourcePlugin
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/bonekey-released/
+    hidden[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[year] >
+    
+    au < zapped ; finished ; 2016 ; BoneKEy Reports Source Content 2016 ; 2016 >
+    #the Knowledge Environment portion of the BoneKEy site to come in 2017
+    au < zapped ; finished ; 2017 ; BoneKEy Reports Source Content 2017 ; 2017 >
+    #no more AUs expected
+    
+  }
+
+}  
