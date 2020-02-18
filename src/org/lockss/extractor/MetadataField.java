@@ -35,6 +35,7 @@ package org.lockss.extractor;
 
 import java.util.*;
 import org.lockss.util.*;
+import org.apache.commons.lang3.StringEscapeUtils;
 import org.apache.commons.lang3.StringUtils;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
