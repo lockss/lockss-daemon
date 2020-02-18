@@ -1,0 +1,28 @@
+{
+
+  publisher <
+    name = American Society of Civil Engineers ;
+    info[contract] = 2010 ;
+    info[tester] = S
+  >
+  
+  comment[contract] = Contract is 2010. 2010-2012 have already been collected by ftp. After 2012, use harvest.
+
+  {
+  
+    title <
+      name = American Society of Civil Engineers Source Content
+    >
+    
+    plugin = org.lockss.plugin.americansocietyofcivilengineers.ClockssAmericanSocietyOfCivilEngineersSourcePlugin
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/asce-released/
+    hidden[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[year] >
+    
+    au < zapped ; finished ; 2010 ; American Society of Civil Engineers Source Content 2010 ; 2010 >
+    au < zapped ; finished ; 2011 ; American Society of Civil Engineers Source Content 2011 ; 2011 >
+    au < zapped ; finished ; 2012 ; American Society of Civil Engineers Source Content 2012 ; 2012 >
+    #moved to harvest 2012
+  }
+
+}

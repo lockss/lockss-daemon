@@ -62,11 +62,20 @@
                 <definitional>true</definitional>
                 <defaultOnly>false</defaultOnly>
             </org.lockss.daemon.ConfigParamDescr>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>resource_id</key>
+                <displayName>Resource ID</displayName>
+                <description>Internal resource ID</description>
+                <type>6</type>
+                <size>8</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
         </list>
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"American Journal of Occupational Therapy, Base URL %s, Year %d", base_url, year</string>
+        <string>"American Journal of Occupational Therapy, Base URL %s, Resource ID %d, Year %d", base_url, resource_id, year</string>
     </entry>
     <entry>
         <string>au_start_url</string>
@@ -77,16 +86,15 @@
         <string>au_crawlrules</string>
         <list>
             <!--
-
             Article Images:
             https://ajot.aota.org/downloadimage.aspx?image=https://aota.silverchair-cdn.com/aota/content_public/journal/ajot/934184/6904210020p1fig1.png?Expires=2147483647&Signature=OOO9SNtrRBPqC2wx~VjNkWG4B4Zjx9uiWnYblwIkQe0tih42sTU3r~8ldmL~k~KeeGO-Ed9xobFjvqYgBctfO0I8oruldzHRsQW6OWRoaYReIXwQTARbl-0V2bjQxatlvLriTw3e7k15uJe6qM0CuPE9YoJWemYkoJPLXxNr4kRdRzepherfjH5sNB0LUbHIFUXGI9JHOgWgttaePiTAJUPdyDH1eXrHWogpwQvh~PKmWJPFFvC7ke2GSOG5s7Dt6kQwy1eqJsJbnHpo~ZERLVx1~~zkETQwp7Sq2p7aZkb3JJ7DT4dGIEmQkqJSBvKDLOw-JLIg8aA....
-
             -->
             <string>1,"^https?://((fonts|ajax)\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|cdnjs\.cloudflare\.com|s7\.addthis\.com)/"</string>
             <string>1,"https://cdn1.readspeaker.com/script/.*.js"</string>
             <string>1,"^https?://(%s|[^.]+\.(silverchair-?cdn\.com/|cloudfront\.net/|brightcove\.net/)).*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$", url_host(base_url)</string>
             <string>1,"^https://aota\.silverchair-cdn\.com", journal_id</string>
             <string>1,"%sWebResource.axd", base_url</string>
+            <!--     <input ID="ResourceIdAJOT_Get_Alerts" id="ResourceId" name="ResourceId" type="hidden" value="2360691" /> -->
             <!--https://ajot.aota.org/issue.aspx?issueid=934184&journalid=167#issueid=934184-->
             <string>1,"%sissue.aspx\?issueid=", base_url</string>
 
@@ -120,22 +128,6 @@
         </list>
     </entry>
     <entry>
-        <string>text/html_link_extractor_factory</string>
-        <string>org.lockss.plugin.silverchair.ScHtmlLinkExtractorFactory</string>
-    </entry>
-    <entry>
-        <string>text/html_crawl_filter_factory</string>
-        <string>org.lockss.plugin.silverchair.ScHtmlCrawlFilterFactory</string>
-    </entry>
-    <entry>
-        <string>au_url_normalizer</string>
-        <string>org.lockss.plugin.silverchair.ScUrlNormalizer</string>
-    </entry>
-    <entry>
-        <string>text/html_link_rewriter_factory</string>
-        <string>org.lockss.plugin.silverchair.ScHtmlLinkRewriterFactory</string>
-    </entry>
-    <entry>
         <string>au_refetch_depth</string>
         <int>2</int>
     </entry>
@@ -153,39 +145,45 @@
         <string>key:Silverchair</string>
     </entry>
     -->
-    <!--
     <entry>
-        <string>text/*_content_validator_factory</string>
-        <string>org.lockss.plugin.silverchair.americanjournalofoccupationaltherapy.BaseScContentValidatorFactory</string>
-    </entry>
-    <entry>
-        <string>text/html_filter_factory</string>
-        <string>org.lockss.plugin.silverchair.americanjournalofoccupationaltherapy.BaseScHtmlHashFilterFactory</string>
-    </entry>
-    <entry>
-        <string>au_substance_url_pattern</string>
-        <list>
-            <string>"^%spdfaccess\.ashx\?ResourceID=(\d+)&amp;PDFSource=(\d+)$", base_url</string>
-        </list>
+        <string>text/html_link_extractor_factory</string>
+        <string>org.lockss.plugin.silverchair.americanjournalofoccupationaltherapy.AmericanJournalofOccupationalTherapySilverchairHtmlLinkExtractorFactory</string>
     </entry>
     <entry>
         <string>plugin_article_iterator_factory</string>
-        <string>org.lockss.plugin.silverchair.americanjournalofoccupationaltherapy.ScBooksArticleIteratorFactory</string>
+        <string>org.lockss.plugin.silverchair.americanjournalofoccupationaltherapy.AmericanJournalofOccupationalTherapySilverchairArticleIteratorFactory</string>
     </entry>
     <entry>
         <string>plugin_article_metadata_extractor_factory</string>
-        <string>org.lockss.plugin.silverchair.americanjournalofoccupationaltherapy.ScBooksArticleIteratorFactory</string>
+        <string>org.lockss.plugin.silverchair.americanjournalofoccupationaltherapy.AmericanJournalofOccupationalTherapySilverchairArticleIteratorFactory</string>
     </entry>
     <entry>
         <string>text/html_metadata_extractor_factory_map</string>
         <map>
             <entry>
                 <string>*</string>
-                <string>org.lockss.plugin.silverchair.americanjournalofoccupationaltherapy.ScBooksHtmlMetadataExtractorFactory</string>
+                <string>org.lockss.plugin.silverchair.ScHtmlMetadataExtractorFactory</string>
             </entry>
         </map>
     </entry>
-    -->
+    <entry>
+        <string>text/plain_metadata_extractor_factory_map</string>
+        <map>
+            <entry>
+                <string>*;RIS</string>
+                <string>org.lockss.plugin.silverchair.ScRisMetadataExtractorFactory</string>
+            </entry>
+        </map>
+    </entry>
+    <entry>
+        <string>application/x-research-info-systems_metadata_extractor_factory_map</string>
+        <map>
+            <entry>
+                <string>*;RIS</string>
+                <string>org.lockss.plugin.silverchair.ScRisMetadataExtractorFactory</string>
+            </entry>
+        </map>
+    </entry>
     <entry>
         <string>au_permitted_host_pattern</string>
         <string>"(fonts|ajax)\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|ajax\.microsoft\.com|[^.]+\.(silverchair\.netdna-cdn|silverchaircdn)\.com"</string>

@@ -784,7 +784,7 @@
       au < finished ; finished ; 2014 ; International Journal of Artificial Intelligence and Soft Computing Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2015-2016 ; International Journal of Artificial Intelligence and Soft Computing Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2017-2018 ; International Journal of Artificial Intelligence and Soft Computing Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < expected ; exists ; 2019-2020 ; International Journal of Artificial Intelligence and Soft Computing Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2019-2020 ; International Journal of Artificial Intelligence and Soft Computing Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -9326,7 +9326,7 @@
       au < finished ; crawling ; 2018 ; International Journal of Vehicle Design Volume 77 ; 77 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2018 ; International Journal of Vehicle Design Volume 78 ; 78 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2019 ; International Journal of Vehicle Design Volume 79 ; 79 ; https://www.inderscienceonline.com/ ; >
-      au < expected ; exists ; 2019 ; International Journal of Vehicle Design Volume 80 ; 80 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2019 ; International Journal of Vehicle Design Volume 80 ; 80 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2019 ; International Journal of Vehicle Design Volume 81 ; 81 ; https://www.inderscienceonline.com/ ; >
 
     }

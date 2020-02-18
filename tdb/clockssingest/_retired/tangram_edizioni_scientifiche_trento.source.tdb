@@ -1,0 +1,26 @@
+{
+
+  publisher <
+    name = Tangram Edizioni Scientifiche Trento ;
+    info[contract] = 2012 ;
+    info[tester] = S
+  >
+  
+  
+  {
+  
+    title <
+      name = Tangram Edizioni Scientifiche Trento Source Content
+    >
+
+    plugin = org.lockss.plugin.clockss.tangram.ClockssTangramEdizioniScientificheSourcePlugin
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/tangram-released/
+    hidden[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[year] >
+    
+    au < zapped ; finished ; 2014 ; Tangram Edizioni Scientifiche Trento Source Content 2014 ; 2014 >
+    # No longer participating
+    
+  }
+
+}
