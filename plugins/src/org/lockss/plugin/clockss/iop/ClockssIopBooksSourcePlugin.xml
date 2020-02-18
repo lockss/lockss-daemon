@@ -23,41 +23,18 @@
         <string>1</string>
       </entry>
     </map>
-  </entry>
-  <entry>
-    <string>plugin_config_props</string>
-    <list>
-      <org.lockss.daemon.ConfigParamDescr>
-        <key>base_url</key>
-        <displayName>Base URL</displayName>
-        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
-        <type>3</type>
-        <size>40</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
-      <org.lockss.daemon.ConfigParamDescr>
-        <key>directory</key>
-        <displayName>Directory</displayName>
-        <description>Directory Name (e.g., 2019_1)</description>
-        <type>1</type>
-        <size>40</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
-    </list>
-  </entry>
+  </entry>  
   <entry>
     <string>plugin_parent</string>
-    <string>org.lockss.plugin.clockss.ClockssDirSourcePlugin</string>
+    <string>org.lockss.plugin.clockss.ClockssSourcePlugin</string>
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>1</string>
+    <string>15</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"IOP Publishing Books Source Plugin (CLOCKSS), Base URL %s, Directory %s", base_url, directory</string>
+    <string>"IOP Publishing Books Source Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -66,7 +43,7 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%s%s/.+\.pdf$", base_url, directory</string>
+      <string>"^%s%d/.+\.pdf$", base_url, year</string>
     </list>
   </entry>
   <entry>
