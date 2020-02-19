@@ -99,9 +99,39 @@
            https://www.ace-eco.org/issues/ref.php/1383/rm
            https://www.ace-eco.org/issues/article.php/997
            https://www.ace-eco.org/issues/authors.php/A
+           https://www.ace-eco.org/issues/search.php
+            https://www.ace-eco.org/issues/view.php/feature/1
+            https://www.ace-eco.org/issues/view.php/feature/2
+            https://www.ace-eco.org/issues/view.php/feature/3
+            https://www.ace-eco.org/issues/view.php/feature/4
+            https://www.ace-eco.org/issues/view.php/feature/5
+            https://www.ace-eco.org/issues/view.php/feature/7
+            https://www.ace-eco.org/viewissue.php?sf=7
+            https://www.ace-eco.org/issues/discussion.php/517
+            https://www.ace-eco.org/issues/discussion.php/557
+            https://www.ace-eco.org/issues/erratum.php/1467
+            https://www.ace-eco.org/issues/index.php/features
             -->
-            <string>2,"%sissues/authors\.", base_url</string>
-            <string>1,"%sissues/", base_url</string>
+            <string>2,"%sissues/(authors|search|view|discussion|erratum|index|articles)", base_url</string>
+            <!--
+            https://www.ace-eco.org/common/lc1_base.css
+            https://www.ace-eco.org/common/journal.css
+            https://www.ace-eco.org/srv/jquery-ui/jquery-ui.min.css
+            https://www.ace-eco.org/common/jquery/jquery-1.9.0.js
+            https://www.ace-eco.org/srv/jquery-ui/jquery-ui.min.js
+            https://www.ace-eco.org/srv/lc1.js
+            https://www.ace-eco.org/srv/ajax_dlg.js
+            https://www.ace-eco.org/common/scripts.js
+            https://www.ace-eco.org/srv/json.php/GET_DATA/g_sp_abbrev
+            https://www.ace-eco.org/images/custom/ace_title_left.jpg
+            https://www.ace-eco.org/styles/journal.css
+            -->
+            <string>1,"%s(issues|common|srv|images|styles)/", base_url</string>
+            <!--
+            https://www.ace-eco.org/vol14/iss2/art1/appendix1.xlsm
+            https://www.ace-eco.org/vol14/iss1/art1/appendix3.xlsx
+            -->
+            <string>2,"%svol%s/.*\.xlsx?", base_url, volume_name</string>
             <string>1,"%svol%s", base_url, volume_name</string>
             <!--citation ris file does not have volume/issue info
             https://www.ace-eco.org/issues/ref.php/1408/rm
@@ -118,15 +148,39 @@
             <string>"%svol%s/.*/.*\.pdf$", base_url, volume_name</string>
         </list>
     </entry>
-    <!--
-    <entry>
-        <string>text/html_link_extractor_factory</string>
-        <string>org.lockss.plugin.resiliencealliance.BadResilenceAllianceHtmlLinkExtractorFactory</string>
-    </entry>
-    -->
     <entry>
         <string>text/javascript_link_rewriter_factory</string>
         <string>org.lockss.plugin.resiliencealliance.ResilienceAllianceJavaScriptLinkRewriterFactory</string>
+    </entry>
+    <entry>
+        <string>plugin_article_iterator_factory</string>
+        <string>org.lockss.plugin.resiliencealliance.ResilienceAllianceArticleIteratorFactory</string>
+    </entry>
+    <entry>
+        <string>plugin_article_metadata_extractor_factory</string>
+        <string>org.lockss.plugin.resiliencealliance.ResilienceAllianceArticleIteratorFactory</string>
+    </entry>
+    <entry>
+        <string>text/html_metadata_extractor_factory_map</string>
+        <map>
+            <entry>
+                <string>*</string>
+                <string>org.lockss.plugin.resiliencealliance.ResilienceAllianceMetadataExtractorFactory</string>
+            </entry>
+        </map>
+    </entry>
+    <entry>
+        <string>au_repair_from_peer_if_missing_url_pattern</string>
+        <list>
+            <string>.+[.](bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)(\?.*)?$"</string>
+        </list>
+    </entry>
+    <entry>
+        <!-- these will not count towards poll results but will replicate from peer if above -->
+        <string>au_url_poll_result_weight</string>
+        <list>
+            <string>".+[.](bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)(\?.*)?$", 0</string>
+        </list>
     </entry>
     <!--Comment out for local crawl
     <entry>
