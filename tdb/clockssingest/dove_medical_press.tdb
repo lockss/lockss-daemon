@@ -1025,7 +1025,7 @@
     au < finished ; crawling ; 2013 ; International Journal of Wine Research Volume 5 ; 5 ; 2013 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; International Journal of Wine Research Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; International Journal of Wine Research Volume 7 ; 7 ; 2015 ; >
-    au < finished ; crawling ; 2016 ; International Journal of Wine Research Volume 8 ; 8 ; 2016 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; International Journal of Wine Research Volume 8 ; 8 ; 2016 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; International Journal of Wine Research Volume 9 ; 9 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; International Journal of Wine Research Volume 10 ; 10 ; 2018 ; >
     au < crawling ; exists ; 2019 ; International Journal of Wine Research Volume 11 ; 11 ; 2019 ; >
@@ -1764,7 +1764,7 @@
     au < finished ; finished ; 2013 ; Patient Intelligence Volume 5 ; 5 ; 2013 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Patient Intelligence Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Patient Intelligence Volume 7 ; 7 ; 2015 ; >
-    au < finished ; crawling ; 2016 ; Patient Intelligence Volume 8 ; 8 ; 2016 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Patient Intelligence Volume 8 ; 8 ; 2016 ; reingest1.clockss.org:8082 >
     
   }
 
@@ -1872,7 +1872,7 @@
     au < finished ; crawling ; 2013 ; Pragmatic and Observational Research Volume 4 ; 4 ; 2013 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Pragmatic and Observational Research Volume 5 ; 5 ; 2014 ; >
     au < finished ; finished ; 2015 ; Pragmatic and Observational Research Volume 6 ; 6 ; 2015 ; >
-    au < finished ; crawling ; 2016 ; Pragmatic and Observational Research Volume 7 ; 7 ; 2016 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Pragmatic and Observational Research Volume 7 ; 7 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Pragmatic and Observational Research Volume 8 ; 8 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Pragmatic and Observational Research Volume 9 ; 9 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Pragmatic and Observational Research Volume 10 ; 10 ; 2019 ; >
@@ -2199,7 +2199,7 @@
     param[journal_id] = 111
     #ceased publishing in November 2016
 
-    au < finished ; crawling ; 2011 ; Vaccine: Development and Therapy Volume 1 ; 1 ; 2011 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2011 ; Vaccine: Development and Therapy Volume 1 ; 1 ; 2011 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2012 ; Vaccine: Development and Therapy Volume 2 ; 2 ; 2012 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Vaccine: Development and Therapy Volume 3 ; 3 ; 2013 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Vaccine: Development and Therapy Volume 4 ; 4 ; 2014 ; >
@@ -2380,7 +2380,7 @@
     au < finished ; crawling ; 2016 ; Open Access Medical Statistics Volume 6 ; 6 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Open Access Medical Statistics Volume 7 ; 7 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Open Access Medical Statistics Volume 8 ; 8 ; 2018 ; >
-    au < expected ; exists ; 2019 ; Open Access Medical Statistics Volume 9 ; 9 ; 2019 ; >
+    au < manifest ; exists ; 2019 ; Open Access Medical Statistics Volume 9 ; 9 ; 2019 ; >
 
   }
 
