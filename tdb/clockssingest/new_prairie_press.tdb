@@ -215,7 +215,7 @@
       au < finished ; crawling ; 2016 ; Kansas Library Association College and University Libraries Section Proceedings Volume 6 ; 6 ; http://newprairiepress.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2017 ; Kansas Library Association College and University Libraries Section Proceedings Volume 7 ; 7 ; http://newprairiepress.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2018 ; Kansas Library Association College and University Libraries Section Proceedings Volume 8 ; 8 ; https://newprairiepress.org/ ; reingest2.clockss.org:8085 >
-      au < ready ; exists ; 2019 ; Kansas Library Association College and University Libraries Section Proceedings Volume 9 ; 9 ; https://newprairiepress.org/ ; >
+      au < crawling ; exists ; 2019 ; Kansas Library Association College and University Libraries Section Proceedings Volume 9 ; 9 ; https://newprairiepress.org/ ; >
 
     }
   }
@@ -688,7 +688,7 @@
       param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = kaesrr
 
-      au < ready ; exists ; 1993-2014 ; Cattleman's Day 1993-2014 Volume 0 ; 0 ; >
+      au < crawling ; exists ; 1993-2014 ; Cattleman's Day 1993-2014 Volume 0 ; 0 ; >
       au < finished ; crawling ; 2015 ; Kansas Agricultural Experiment Station Research Reports Volume 1 ; 1 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; Kansas Agricultural Experiment Station Research Reports Volume 2 ; 2 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; Kansas Agricultural Experiment Station Research Reports Volume 3 ; 3 ; reingest2.clockss.org:8085 >
