@@ -305,6 +305,7 @@
     param[resource_id] = 67
     param[journal_id] = jama
     
+    au < exists ; exists ; 1957 ; Journal of the American Medical Association Volume 163 ; 163 ; > #never collection on HW platform.
     au < doNotProcess ; doNotProcess ; 2011 ; JAMA: The Journal of the American Medical Association Volume 305-306 ; 2011 ; https://jamanetwork.com/ ; >
     au < doNotProcess ; doNotProcess ; 2012 ; JAMA: The Journal of the American Medical Association Volume 307-308 ; 2012 ; https://jamanetwork.com/ ; >
     au < doNotProcess ; doNotProcess ; 2013 ; JAMA: The Journal of the American Medical Association Volume 309-310 ; 2013 ; https://jamanetwork.com/ ; >
