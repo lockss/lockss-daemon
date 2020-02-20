@@ -8,6 +8,7 @@
   >
 
     plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+    #attr[start_stem] = journals/index.php/ #example manifest page https://ojs.aut.ac.nz/applied-finance-letters/gateway/clockss?year=2012
     implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
     
     #manifest pages don't include index.php.
