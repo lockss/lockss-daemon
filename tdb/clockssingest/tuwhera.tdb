@@ -7,7 +7,7 @@
     info[poller] = 8
   >
 
-    plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
+    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
     implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
     
     #manifest pages don't include index.php.
