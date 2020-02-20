@@ -65,11 +65,11 @@
     param[journal_id] = cpc
     implicit < status ; status2 ; year ; param[year] ; name ; volume ; hidden[proxy] >
 
-    au < frozen ; exists ; 2006 ; 2006 ; Coactivity: Philosophy, Communication Volume 14 ; 14 ; >
+    au < finished ; manifest ; 2006 ; 2006 ; Coactivity: Philosophy, Communication Volume 14 ; 14 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2007 ; 2007 ; Coactivity: Philosophy, Communication Volume 15 ; 15 ; >
-    au < frozen ; exists ; 2008 ; 2008 ; Coactivity: Philosophy, Communication Volume 16 ; 16 ; >
-    au < frozen ; exists ; 2009 ; 2009 ; Coactivity: Philosophy, Communication Volume 17 ; 17 ; >
-    au < frozen ; exists ; 2010 ; 2010 ; Coactivity: Philosophy, Communication Volume 18 ; 18 ; >
+    au < finished ; manifest ; 2008 ; 2008 ; Coactivity: Philosophy, Communication Volume 16 ; 16 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2009 ; 2009 ; Coactivity: Philosophy, Communication Volume 17 ; 17 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2010 ; 2010 ; Coactivity: Philosophy, Communication Volume 18 ; 18 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2011 ; 2011 ; Coactivity: Philosophy, Communication Volume 19 ; 19 ; >
     au < finished ; finished ; 2012 ; 2012 ; Coactivity: Philosophy, Communication Volume 20 ; 20 ; >
     au < frozen ; exists ; 2013 ; 2013 ; Coactivity: Philosophy, Communication Volume 21 ; 21 ; >
@@ -93,16 +93,16 @@
     implicit < status ; status2 ; year ; param[year] ; name ; volume ; hidden[proxy] >
 
     au < frozen ; exists ; 2006 ; 2006 ; Coactivity: Philology, Educology Volume 14 ; 14 ; >
-    au < frozen ; exists ; 2007 ; 2007 ; Coactivity: Philology, Educology Volume 15 ; 15 ; >
+    au < finished ; manifest ; 2007 ; 2007 ; Coactivity: Philology, Educology Volume 15 ; 15 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2008 ; 2008 ; Coactivity: Philology, Educology Volume 16 ; 16 ; >
-    au < frozen ; exists ; 2009 ; 2009 ; Coactivity: Philology, Educology Volume 17 ; 17 ; >
-    au < frozen ; exists ; 2010 ; 2010 ; Coactivity: Philology, Educology Volume 18 ; 18 ; >
-    au < frozen ; exists ; 2011 ; 2011 ; Coactivity: Philology, Educology Volume 19 ; 19 ; >
+    au < finished ; manifest ; 2009 ; 2009 ; Coactivity: Philology, Educology Volume 17 ; 17 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2010 ; 2010 ; Coactivity: Philology, Educology Volume 18 ; 18 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2011 ; 2011 ; Coactivity: Philology, Educology Volume 19 ; 19 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2012 ; 2012 ; Coactivity: Philology, Educology Volume 20 ; 20 ; >
     au < frozen ; exists ; 2013 ; 2013 ; Coactivity: Philology, Educology Volume 21 ; 21 ; >
     au < finished ; finished ; 2014 ; 2014 ; Coactivity: Philology, Educology Volume 22 ; 22 ; >
     au < finished ; finished ; 2015 ; 2015 ; Coactivity: Philology, Educology Volume 23 ; 23 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2016 ; 2016 ; Coactivity: Philology, Educology Volume 24 ; 24 ; >
+    au < finished ; manifest ; 2016 ; 2016 ; Coactivity: Philology, Educology Volume 24 ; 24 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Coactivity: Philology, Educology Volume 25 ; 25 ; >
 
   }
@@ -119,14 +119,14 @@
     param[journal_id] = mla
     implicit < status ; status2 ; year ; param[year] ; name ; volume ; hidden[proxy] >
 
-    au < frozen ; exists ; 2009 ; 2009 ; Science - Future of Lithuania Volume 1 ; 1 ; >
-    au < frozen ; exists ; 2010 ; 2010 ; Science - Future of Lithuania Volume 2 ; 2 ; >
-    au < frozen ; exists ; 2011 ; 2011 ; Science - Future of Lithuania Volume 3 ; 3 ; >
+    au < finished ; manifest ; 2009 ; 2009 ; Science - Future of Lithuania Volume 1 ; 1 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2010 ; 2010 ; Science - Future of Lithuania Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2011 ; 2011 ; Science - Future of Lithuania Volume 3 ; 3 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2012 ; 2012 ; Science - Future of Lithuania Volume 4 ; 4 ; >
     au < finished ; finished ; 2013 ; 2013 ; Science - Future of Lithuania Volume 5 ; 5 ; >
     au < finished ; finished ; 2014 ; 2014 ; Science - Future of Lithuania Volume 6 ; 6 ; >
     au < finished ; finished ; 2015 ; 2015 ; Science - Future of Lithuania Volume 7 ; 7 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2016 ; 2016 ; Science - Future of Lithuania Volume 8 ; 8 ; >
+    au < finished ; manifest ; 2016 ; 2016 ; Science - Future of Lithuania Volume 8 ; 8 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Science - Future of Lithuania Volume 9 ; 9 ; >
 
   }
@@ -143,9 +143,9 @@
     param[journal_id] = est
     implicit < status ; status2 ; year ; param[year] ; name ; volume ; hidden[proxy] >
 
-    au < frozen ; exists ; 2009 ; 2009 ; Evolution of Science and Technology Volume 1 ; 1 ; >
+    au < finished ; manifest ; 2009 ; 2009 ; Evolution of Science and Technology Volume 1 ; 1 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2010 ; 2010 ; Evolution of Science and Technology Volume 2 ; 2 ; >
-    au < frozen ; exists ; 2011 ; 2011 ; Evolution of Science and Technology Volume 3 ; 3 ; >
+    au < finished ; manifest ; 2011 ; 2011 ; Evolution of Science and Technology Volume 3 ; 3 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2012 ; 2012 ; Evolution of Science and Technology Volume 4 ; 4 ; >
     au < finished ; finished ; 2013 ; 2013 ; Evolution of Science and Technology Volume 5 ; 5 ; >
 
