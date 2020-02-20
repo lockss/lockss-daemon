@@ -36,7 +36,8 @@ public class ScientificVideoProtocolsRisMetadataExtractorFactory implements File
         ScientificVideoProtocolsRisMetadataExtractor ris = new ScientificVideoProtocolsRisMetadataExtractor();
 
         ris.addRisTag("DA", MetadataField.FIELD_DATE);
-        ris.addRisTag("TI", MetadataField.FIELD_PUBLICATION_TITLE);
+        ris.addRisTag("JO", MetadataField.FIELD_PUBLISHER);
+        ris.addRisTag("TI", MetadataField.FIELD_ARTICLE_TITLE);
         ris.addRisTag("SP", MetadataField.FIELD_START_PAGE);
         ris.addRisTag("VL", MetadataField.FIELD_VOLUME);
         ris.addRisTag("IS", MetadataField.FIELD_ISSUE);
