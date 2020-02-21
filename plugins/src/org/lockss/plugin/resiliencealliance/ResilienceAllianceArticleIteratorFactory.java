@@ -20,10 +20,10 @@ public class ResilienceAllianceArticleIteratorFactory implements ArticleIterator
     protected static Logger log = Logger.getLogger(ResilienceAllianceArticleIteratorFactory .class);
 
     /*
-    https://www.ace-eco.org/vol14/iss1/art1
-    https://www.ace-eco.org/vol14/iss1/art1/ACE-ECO-2018-1293.pdf
-    https://www.ace-eco.org/vol14/iss1/art1/appendix1.pdf
-    https://www.ace-eco.org/vol14/iss2/art9/eqn1.gif -- this one will throw exception
+    Since we will not be able to guess our the PDF pattern from html pattern, use html as the article count instead
+    Article: https://www.ace-eco.org/vol14/iss1/art1
+    Article related PDF: https://www.ace-eco.org/vol14/iss1/art1/ACE-ECO-2018-1293.pdf
+    Other Appendix: https://www.ace-eco.org/vol14/iss1/art1/appendix1.pdf
      */
 
     protected static final String ROOT_TEMPLATE = "\"%s\", base_url";
@@ -45,7 +45,7 @@ public class ResilienceAllianceArticleIteratorFactory implements ArticleIterator
         builder.setSpec(target,
                 ROOT_TEMPLATE,
                 PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
-        
+
         builder.addAspect(
                 HTML_PATTERN,
                 HTML_REPLACEMENT,
