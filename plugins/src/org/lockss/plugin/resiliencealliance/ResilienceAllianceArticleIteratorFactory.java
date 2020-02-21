@@ -28,17 +28,13 @@ public class ResilienceAllianceArticleIteratorFactory implements ArticleIterator
 
     protected static final String ROOT_TEMPLATE = "\"%s\", base_url";
     protected static final String PATTERN_TEMPLATE =
-            "\"%s(vol%s/iss[^/]+/art\\.*)\", base_url, volume_name";
+            "\"%svol%s/iss[^/]+/art[^/]+$\", base_url, volume_name";
 
     private static final Pattern HTML_PATTERN = Pattern.compile(
-            "/(vol[^/]+/iss[^/]+/art[^/]+)",
+            "/(vol[^/]+/iss[^/]+/art[^/]+)$",
             Pattern.CASE_INSENSITIVE);
     private static final String HTML_REPLACEMENT = "/$1";
 
-    private static final Pattern PDF_PATTERN = Pattern.compile(
-            "/(vol[^/]+/iss[^/]+/art[^/]+)(/ACE.*\\.pdf)",
-            Pattern.CASE_INSENSITIVE);
-    private static final String PDF_REPLACEMENT = "/$1/$2";
 
 
     @Override
@@ -49,20 +45,13 @@ public class ResilienceAllianceArticleIteratorFactory implements ArticleIterator
         builder.setSpec(target,
                 ROOT_TEMPLATE,
                 PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
-
-        builder.addAspect(
-                PDF_PATTERN,
-                PDF_REPLACEMENT,
-                ArticleFiles.ROLE_FULL_TEXT_PDF);
-
+        
         builder.addAspect(
                 HTML_PATTERN,
                 HTML_REPLACEMENT,
                 ArticleFiles.ROLE_ABSTRACT,
                 ArticleFiles.ROLE_FULL_TEXT_HTML,
                 ArticleFiles.ROLE_ARTICLE_METADATA);
-
-        builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF);
 
         return builder.getSubTreeArticleIterator();
     }
