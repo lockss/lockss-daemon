@@ -328,7 +328,7 @@
       param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = crossingborders
 
-      au < finished ; crawling ; 2015 ; Crossing Borders: An Undergraduate Journal of Interdisciplinary Scholarship Volume 1 ; 1 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2015 ; Crossing Borders: An Undergraduate Journal of Interdisciplinary Scholarship Volume 1 ; 1 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2017 ; Crossing Borders: An Undergraduate Journal of Interdisciplinary Scholarship Volume 2 ; 2 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2018 ; Crossing Borders: An Undergraduate Journal of Interdisciplinary Scholarship Volume 3 ; 3 ; reingest4.clockss.org:8082 >
 
@@ -515,7 +515,7 @@
       au < manifest ; exists ; 2003 ; Fungal Genetics Newsletter Volume 50 ; 50 ; >
       au < manifest ; exists ; 2004 ; Fungal Genetics Newsletter Volume 51 ; 51 ; >
       au < finished ; crawling ; 2005 ; Fungal Genetics Newsletter Volume 52 ; 52 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2006 ; Fungal Genetics Newsletter Volume 53 ; 53 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2006 ; Fungal Genetics Newsletter Volume 53 ; 53 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2007 ; Fungal Genetics Newsletter Volume 54 ; 54 ; reingest4.clockss.org:8082 >
 
   }
@@ -647,7 +647,7 @@
       au < finished ; crawling ; 2015 ; Journal of Applied Communications Volume 98 ; 98 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2016 ; Journal of Applied Communications Volume 99 ; 99 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; Journal of Applied Communications Volume 100 ; 100 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2018 ; Journal of Applied Communications Volume 101 ; 101 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2018 ; Journal of Applied Communications Volume 101 ; 101 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2019 ; Journal of Applied Communications Volume 102 ; 102 ; >
 
   }
@@ -711,7 +711,7 @@
       param[journal_abbr] = ksulibraries
 
       au < finished ; crawling ; 2015 ; Kansas State University Libraries Volume 1 ; 1 ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2016 ; Kansas State University Libraries Volume 2 ; 2 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2016 ; Kansas State University Libraries Volume 2 ; 2 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; Kansas State University Libraries Volume 3 ; 3 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; Kansas State University Libraries Volume 4 ; 4 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2017 ; Kansas State University Libraries Volume 5 ; 5 ; reingest3.clockss.org:8083 >
