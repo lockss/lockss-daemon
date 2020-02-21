@@ -5,20 +5,20 @@
     info[contract] = 2008 ;
     info[tester] = S
   >
-  
+
   {
-  
+
     title <
       name = Elsevier Source Content
     >
-    
+
     {
-    
+
       plugin = org.lockss.plugin.elsevier.ClockssElsevierSourcePlugin
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/elsevier-released/
       hidden[proxy] = DIRECT
       implicit < status ; status2 ; year ; name ; param[year] >
-      
+
       # 2008 not on oclc or nii - down/not crawling
       au < zapped ; finished ; 2008 ; Elsevier Source Content 2008 ; 2008 >
       au < zapped ; finished ; 2009 ; Elsevier Source Content 2009 ; 2009 >
@@ -37,7 +37,7 @@
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/elsevierdtd5-released/
       hidden[proxy] = DIRECT
       implicit < status ; status2 ; year ; name ; param[year] >
-      
+
       au < zapped ; finished ; 2014 ; Elsevier Source Content 2014 ; 2014 >
       au < readySource ; frozen ; 2015 ; Elsevier Source Content 2015 ; 2015 >
       au < zapped ; finished ; 2016 ; Elsevier Source Content 2016 ; 2016 >
@@ -45,16 +45,16 @@
       au < readySource ; zapped ; 2017 ; Elsevier Source Content 2017 [to_delete] ; 2017 > #will redo in smaller chunks; then remove this one
       au < readySource ; zapped ; 2018 ; Elsevier Source Content 2018 [to_delete] ; 2018 > #will redo in smaller chunks; then remove this one
       #no more AUs expected for this plugin
-    
+
     }
-    
+
     {
 
       plugin = org.lockss.plugin.elsevier.ClockssElsevierDirSourcePlugin
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/elsevierdtd5-released/
       hidden[proxy] = DIRECT
       implicit < status ; status2 ; year ; name ; param[directory] >
-      
+
       au < zapped ; finished ; 2017 ; Elsevier Source Content 2017_1 ; 2017_1 >
       au < zapped ; finished ; 2017 ; Elsevier Source Content 2017_2 ; 2017_2 >
       au < zapped ; finished ; 2017 ; Elsevier Source Content 2017_3 ; 2017_3 >
@@ -84,33 +84,45 @@
       au < readySource ; crawling ; 2019 ; Elsevier Source Content 2019_1 ; 2019_1 >
       au < readySource ; crawling ; 2019 ; Elsevier Source Content 2019_2 ; 2019_2 >
       au < readySource ; crawling ; 2019 ; Elsevier Source Content 2019_3 ; 2019_3 >
-      au < readySource ; crawling ; 2019 ; Elsevier Source Content 2019_4 ; 2019_4 > 
+      au < readySource ; crawling ; 2019 ; Elsevier Source Content 2019_4 ; 2019_4 >
       au < readySource ; crawling ; 2019 ; Elsevier Source Content 2019_5 ; 2019_5 >
       au < readySource ; crawling ; 2019 ; Elsevier Source Content 2019_6 ; 2019_6 >
-      au < readySource ; crawling ; 2019 ; Elsevier Source Content 2019_7 ; 2019_7 > 
+      au < readySource ; crawling ; 2019 ; Elsevier Source Content 2019_7 ; 2019_7 >
       au < readySource ; crawling ; 2019 ; Elsevier Source Content 2019_8 ; 2019_8 >
-      au < readySource ; crawling ; 2019 ; Elsevier Source Content 2019_9 ; 2019_9 > 
+      au < readySource ; crawling ; 2019 ; Elsevier Source Content 2019_9 ; 2019_9 >
       au < readySource ; crawling ; 2019 ; Elsevier Source Content 2019_10 ; 2019_10 >
       au < readySource ; crawling ; 2019 ; Elsevier Source Content 2019_11 ; 2019_11 >
       au < readySource ; crawling ; 2019 ; Elsevier Source Content 2019_12 ; 2019_12 >
-    
-    }    
-    
+      au < readySource ; crawling ; 2020 ; Elsevier Source Content 2020_1 ; 2020_1 >
+      au < readySource ; crawling ; 2020 ; Elsevier Source Content 2020_2 ; 2020_2 >
+      au < manifest ; exists ; 2020 ; Elsevier Source Content 2020_3 ; 2020_3 >
+      au < manifest ; exists ; 2020 ; Elsevier Source Content 2020_4 ; 2020_4 >
+      au < manifest ; exists ; 2020 ; Elsevier Source Content 2020_5 ; 2020_5 >
+      au < manifest ; exists ; 2020 ; Elsevier Source Content 2020_6 ; 2020_6 >
+      au < manifest ; exists ; 2020 ; Elsevier Source Content 2020_7 ; 2020_7 >
+      au < manifest ; exists ; 2020 ; Elsevier Source Content 2020_8 ; 2020_8 >
+      au < manifest ; exists ; 2020 ; Elsevier Source Content 2020_9 ; 2020_9 >
+      au < manifest ; exists ; 2020 ; Elsevier Source Content 2020_10 ; 2020_10 >
+      au < manifest ; exists ; 2020 ; Elsevier Source Content 2020_11 ; 2020_11 >
+      au < manifest ; exists ; 2020 ; Elsevier Source Content 2020_12 ; 2020_12 >
+
+    }
+
   }
-  
+
   {
-  
+
     title <
       name = Elsevier Delivered Source Content
     >
-    
+
     {
-    
+
       plugin = org.lockss.plugin.elsevier.ClockssElsevierDeliveredSourcePlugin
       param[base_url] = http://clockss-staged.clockss.org/sourcefiles/elsevier-delivered/
       hidden[proxy] = DIRECT
       implicit < status ; status2 ; year ; name ; param[year] ; param[directory] >
-      
+
  # first batch  - Stanford, Alberta, Indiana, HKU
       au < readySource ; finished ; 2017 ; Elsevier Delivered Source Content 2017 HD1_1 ; 2017 ; HD1_1 >
       au < readySource ; finished ; 2017 ; Elsevier Delivered Source Content 2017 HD1_2 ; 2017 ; HD1_2 >
@@ -198,7 +210,7 @@
       au < readySource ; finished ; 2017 ; Elsevier Delivered Source Content 2017 HD13_1 ; 2017 ; HD13_1 >   #needed on oclc
       #no more AUs expected at this time
 
-    } 
-  } 
- 
+    }
+  }
+
 }
