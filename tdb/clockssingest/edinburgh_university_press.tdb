@@ -318,7 +318,7 @@
 
     param[journal_id] = bjj
 
-    au < finished ; crawling ; 2000 ; Ben Jonson Journal Volume 7 ; 7 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2000 ; Ben Jonson Journal Volume 7 ; 7 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2001 ; Ben Jonson Journal Volume 8 ; 8 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2002 ; Ben Jonson Journal Volume 9 ; 9 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2003 ; Ben Jonson Journal Volume 10 ; 10 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
@@ -450,7 +450,7 @@
     au < finished ; crawling ; 2012 ; Cultural History Volume 1 ; 1 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2013 ; Cultural History Volume 2 ; 2 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2014 ; Cultural History Volume 3 ; 3 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2015 ; Cultural History Volume 4 ; 4 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Cultural History Volume 4 ; 4 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Cultural History Volume 5 ; 5 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Cultural History Volume 6 ; 6 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2018 ; Cultural History Volume 7 ; 7 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
@@ -868,7 +868,7 @@
       au < deepCrawl ; exists ; 2013 ; Irish University Review Volume 43 ; 43 ; http://www.euppublishing.com/ ; >
       au < finished ; finished ; 2014 ; Irish University Review Volume 44 ; 44 ; http://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; Irish University Review Volume 45 ; 45 ; http://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2016 ; Irish University Review Volume 46 ; 46 ; http://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2016 ; Irish University Review Volume 46 ; 46 ; http://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; Irish University Review Volume 47 ; 47 ; http://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2018 ; Irish University Review Volume 48 ; 48 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2019 ; Irish University Review Volume 49 ; 49 ; https://www.euppublishing.com/ ; >

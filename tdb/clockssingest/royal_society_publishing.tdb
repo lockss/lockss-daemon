@@ -136,10 +136,10 @@
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Interface Focus Volume 1 ; 1 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Interface Focus Volume 2 ; 2 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2013 ; Interface Focus Volume 3 ; 3 ; reingest3.clockss.org:8083 >
-    au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2014 ; Interface Focus Volume 4 ; 4 ; reingest5.clockss.org:8082 >
+    au < rsp.ClockssRSPDrupalPlugin ; finished ; frozen ; 2014 ; Interface Focus Volume 4 ; 4 ; reingest5.clockss.org:8082 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2015 ; Interface Focus Volume 5 ; 5 ; reingest5.clockss.org:8082 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; frozen ; 2016 ; Interface Focus Volume 6 ; 6 ; reingest5.clockss.org:8082 >
-    au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2017 ; Interface Focus Volume 7 ; 7 ; reingest4.clockss.org:8082 >
+    au < rsp.ClockssRSPDrupalPlugin ; finished ; frozen ; 2017 ; Interface Focus Volume 7 ; 7 ; reingest4.clockss.org:8082 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2018 ; Interface Focus Volume 8 ; 8 ; reingest5.clockss.org:8082 >
 
   }
@@ -274,7 +274,7 @@
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Open Biology Volume 2 ; 2 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2013 ; Open Biology Volume 3 [superseded] ; 3 ; reingest1.clockss.org:8082 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; frozen ; 2013 ; Open Biology Volume 3 ; 3 ; reingest5.clockss.org:8082 >
-    au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2014 ; Open Biology Volume 4 ; 4 ; reingest2.clockss.org:8085 >
+    au < rsp.ClockssRSPDrupalPlugin ; finished ; frozen ; 2014 ; Open Biology Volume 4 ; 4 ; reingest2.clockss.org:8085 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2015 ; Open Biology Volume 5 ; 5 ; reingest3.clockss.org:8083 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2016 ; Open Biology Volume 6 ; 6 ; reingest4.clockss.org:8082 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2017 ; Open Biology Volume 7 ; 7 ; reingest4.clockss.org:8082 >
