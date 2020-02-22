@@ -25,14 +25,14 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = jche
       
-      au < frozen ; exists ; 2005 ; Current Herpetology Volume 24 ; 24 ; >
-      au < frozen ; exists ; 2006 ; Current Herpetology Volume 25 ; 25 ; >
-      au < frozen ; exists ; 2007 ; Current Herpetology Volume 26 ; 26 ; >
-      au < frozen ; exists ; 2008 ; Current Herpetology Volume 27 ; 27 ; >
-      au < frozen ; exists ; 2009 ; Current Herpetology Volume 28 ; 28 ; >
-      au < frozen ; exists ; 2010 ; Current Herpetology Volume 29 ; 29 ; >
+      au < finished ; manifest ; 2005 ; Current Herpetology Volume 24 ; 24 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2006 ; Current Herpetology Volume 25 ; 25 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2007 ; Current Herpetology Volume 26 ; 26 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2008 ; Current Herpetology Volume 27 ; 27 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2009 ; Current Herpetology Volume 28 ; 28 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2010 ; Current Herpetology Volume 29 ; 29 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2011 ; Current Herpetology Volume 30 ; 30 ; >
-      au < frozen ; exists ; 2012 ; Current Herpetology Volume 31 ; 31 ; >
+      au < finished ; manifest ; 2012 ; Current Herpetology Volume 31 ; 31 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2013 ; Current Herpetology Volume 32 ; 32 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Current Herpetology Volume 33 ; 33 ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2015 ; Current Herpetology Volume 34 ; 34 ; reingest1.clockss.org:8082 >
