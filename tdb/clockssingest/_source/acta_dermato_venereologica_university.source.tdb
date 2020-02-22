@@ -1,0 +1,23 @@
+{
+
+  publisher <
+    name = Acta dermato-venereologica ;
+    info[contract] = 2019; # not sure
+    info[tester] = S
+  >
+
+  {
+
+    title <
+      name = Acta dermato-venereologica Source Content
+    >
+
+    plugin = org.lockss.plugin.clockss.actadermatovenereologica.ClockssActaDermatoVenereologicaNLMSourcePlugin
+    param[base_url] = http://content5.lockss.org/sourcefiles/actadv-released/ ##this is test location, need update
+    hidden[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[year] >
+
+    au < manifest ; exists ; 2019 ; Acta dermato-venereologica Source Content 2019 ; 2019 >
+  }
+
+}

@@ -1,0 +1,23 @@
+{
+
+  publisher <
+    name = Scientific Video Protocols ;
+    info[contract] = 2019; # not sure
+    info[tester] = S
+  >
+
+  {
+
+    title <
+      name = Scientific Video Protocols
+    >
+
+    plugin = org.lockss.plugin.clockss.scientificvideoprotocols.ClockssScientificVideoProtocolsSourcePlugin
+    param[base_url] = http://content5.lockss.org/sourcefiles/scivpro-released/ ##this is test location, need update
+    hidden[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[year] >
+
+    au < manifest ; exists ; 2019 ; Scientific Video Protocols 2019 ; 2019 >
+  }
+
+}

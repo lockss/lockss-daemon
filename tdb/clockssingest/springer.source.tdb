@@ -5,20 +5,20 @@
     info[contract] = 2008 ;
     info[tester] = S
   >
-  
+
   {
-  
+
     title <
       name = Springer Source Content
     >
-    
+
     {
 
       plugin = org.lockss.plugin.springer.ClockssSpringerSourcePlugin
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/springer-released/
       hidden[proxy] = DIRECT
       implicit < status ; status2 ; year ; name ; param[year] >
-      
+
       au < zapped ; finished ; 2009 ; Springer Source Content 2009 ; 2009 >
       au < zapped ; finished ; 2010 ; Springer Source Content 2010 ; 2010 >
       au < zapped ; finished ; 2011 ; Springer Source Content 2011 ; 2011 >
@@ -29,16 +29,16 @@
       au < zapped ; finished ; 2016 ; Springer Source Content 2016 ; 2016 >
       au < zapped ; finished ; 2017 ; Springer Source Content 2017 ; 2017 >
    	#no more AUs expected using this plugin
-      
+
     }
 
     {
-      
+
       plugin = org.lockss.plugin.springer.ClockssSpringerDirSourcePlugin
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/springer-released/
       hidden[proxy] = DIRECT
       implicit < status ; status2 ; year ; name ; param[directory] >
-      
+
       au < readySource ; finished ; 2018 ; Springer Source Content 2018_1 ; 2018_1 >
       au < readySource ; finished ; 2018 ; Springer Source Content 2018_2 ; 2018_2 >
       au < readySource ; finished ; 2018 ; Springer Source Content 2018_3 ; 2018_3 >
@@ -52,35 +52,46 @@
       au < readySource ; crawling ; 2019 ; Springer Source Content 2019_4 ; 2019_4 >
       au < readySource ; crawling ; 2019 ; Springer Source Content 2019_5 (Legacy) ; 2019_5 >
    	#no more AUs expected using this plugin
-      
+
     }
 
     {
-      
+
       plugin = org.lockss.plugin.springer.ClockssSpringerJatsSourcePlugin
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/springerjats-released/
       hidden[proxy] = DIRECT
       implicit < status ; status2 ; year ; name ; param[directory] >
-      
+
       au < readySource ; crawling ; 2019 ; Springer Source Content 2019_5 (JATS) ; 2019_5 >
       au < readySource ; crawling ; 2019 ; Springer Source Content 2019_6 ; 2019_6 >
-      au < manifest ; exists ; 2020 ; Springer Source Content 2020_1 ; 2020_1 >
+      au < readySource ; crawling ; 2020 ; Springer Source Content 2020_1 ; 2020_1 >
+      au < readySource ; crawling ; 2020 ; Springer Source Content 2020_2 ; 2020_2 >
+      au < expected ; exists ; 2020 ; Springer Source Content 2020_3 ; 2020_3 >
+      au < expected ; exists ; 2020 ; Springer Source Content 2020_4 ; 2020_4 >
+      au < expected ; exists ; 2020 ; Springer Source Content 2020_5 ; 2020_5 >
+      au < expected ; exists ; 2020 ; Springer Source Content 2020_6 ; 2020_6 >
+      au < expected ; exists ; 2020 ; Springer Source Content 2020_7 ; 2020_7 >
+      au < expected ; exists ; 2020 ; Springer Source Content 2020_8 ; 2020_8 >
+      au < expected ; exists ; 2020 ; Springer Source Content 2020_9 ; 2020_9 >
+      au < expected ; exists ; 2020 ; Springer Source Content 2020_10 ; 2020_10 >
+      au < expected ; exists ; 2020 ; Springer Source Content 2020_11 ; 2020_11 >
+      au < expected ; exists ; 2020 ; Springer Source Content 2020_11 ; 2020_12 >
 
     }
 
   }
 
   {
-  
+
     title <
       name = Springer Delivered Source Content
     >
-    
+
     plugin = org.lockss.plugin.springer.ClockssSpringerDeliveredSourcePlugin
     param[base_url] = http://clockss-staged.clockss.org/sourcefiles/springer-delivered/
     hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[year] ; param[directory] >
-      
+
     au < readySource ; finished ; 2018 ; Springer Delivered Source Content 2018 HD1_1 ; 2018 ; HD1_1 >
     au < readySource ; finished ; 2018 ; Springer Delivered Source Content 2018 HD1_2 ; 2018 ; HD1_2 >
     au < readySource ; finished ; 2018 ; Springer Delivered Source Content 2018 HD1_3 ; 2018 ; HD1_3 >
@@ -97,9 +108,8 @@
     au < readySource ; crawling ; 2019 ; Springer Delivered Source Content 2019 HD1_4 ; 2019 ; HD1_4 >
     au < readySource ; crawling ; 2019 ; Springer Delivered Source Content 2019 HD1_5 ; 2019 ; HD1_5 >
     au < readySource ; crawling ; 2019 ; Springer Delivered Source Content 2019 HD1_6 ; 2019 ; HD1_6 >
-    
-    
+
+
   }
 
 }
-

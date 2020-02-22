@@ -34,9 +34,9 @@
 
        au < doNotProcess ; exists ; 2006 ; Ancient Asia Volume 1 ; 1 ; 2006 ; >
        au < doNotProcess ; exists ; 2010 ; Ancient Asia Volume 2 ; 2 ; 2010 ; >
-       au < frozen ; exists ; 2012 ; Ancient Asia Volume 3 ; 3 ; 2012 ; >
-       au < frozen ; exists ; 2013 ; Ancient Asia Volume 4 ; 4 ; 2013 ; >
-       au < frozen ; exists ; 2014 ; Ancient Asia Volume 5 ; 5 ; 2014 ; >
+       au < finished ; manifest ; 2012 ; Ancient Asia Volume 3 ; 3 ; 2012 ; reingest2.clockss.org:8085 >
+       au < finished ; manifest ; 2013 ; Ancient Asia Volume 4 ; 4 ; 2013 ; reingest1.clockss.org:8082 >
+       au < finished ; manifest ; 2014 ; Ancient Asia Volume 5 ; 5 ; 2014 ; reingest4.clockss.org:8082 >
        au < doNotProcess ; exists ; 2015 ; Ancient Asia Volume 6 ; 6 ; 2015 ; >
     }
   }
@@ -63,10 +63,10 @@
        au < doNotProcess ; exists ; 2007-2008 ; Archaeology International Volume 11 ; 11 ; 2007 ; >
        au < doNotProcess ; exists ; 2008-2009 ; Archaeology International Volume 12 ; 12 ; 2008 ; >
        au < finished ; finished ; 2009-2011 ; Archaeology International Volume 13/14 ; 13/14 ; 2009 ; >
-       au < frozen ; exists ; 2011-2012 ; Archaeology International Volume 15 [to delete] ; 15 ; 2011 ; >
-       au < frozen ; exists ; 2011-2012 ; Archaeology International Volume 15 ; 15 ; 2012 ; >
-       au < frozen ; exists ; 2012-2013 ; Archaeology International Volume 16 ; 16 ; 2013 ; >
-       au < frozen ; exists ; 2013-2014 ; Archaeology International Volume 17 ; 17 ; 2014 ; >
+       au < superseded ; exists ; 2011-2012 ; Archaeology International Volume 15 [to delete] ; 15 ; 2011 ; >
+       au < finished ; manifest ; 2011-2012 ; Archaeology International Volume 15 ; 15 ; 2012 ; reingest4.clockss.org:8082 >
+       au < finished ; manifest ; 2012-2013 ; Archaeology International Volume 16 ; 16 ; 2013 ; reingest2.clockss.org:8085 >
+       au < finished ; manifest ; 2013-2014 ; Archaeology International Volume 17 ; 17 ; 2014 ; reingest5.clockss.org:8082 >
     }
   }
   
@@ -128,10 +128,10 @@
        au < doNotProcess ; exists ; 2008 ; Bulletin of the History of Archaeology Volume 18 ; 18 ; 2008 ; >
        au < doNotProcess ; exists ; 2009 ; Bulletin of the History of Archaeology Volume 19 ; 19 ; 2009 ; >
        au < doNotProcess ; exists ; 2010 ; Bulletin of the History of Archaeology Volume 20 ; 20 ; 2010 ; >
-       au < frozen ; exists ; 2011 ; Bulletin of the History of Archaeology Volume 21 ; 21 ; 2011 ; >
-       au < frozen ; exists ; 2012 ; Bulletin of the History of Archaeology Volume 22 ; 22 ; 2012 ; >
-       au < frozen ; exists ; 2013 ; Bulletin of the History of Archaeology Volume 23 ; 23 ; 2013 ; >
-       au < frozen ; exists ; 2014 ; Bulletin of the History of Archaeology Volume 24 ; 24 ; 2014 ; >
+       au < finished ; manifest ; 2011 ; Bulletin of the History of Archaeology Volume 21 ; 21 ; 2011 ; reingest1.clockss.org:8082 >
+       au < finished ; manifest ; 2012 ; Bulletin of the History of Archaeology Volume 22 ; 22 ; 2012 ; reingest2.clockss.org:8085 >
+       au < finished ; manifest ; 2013 ; Bulletin of the History of Archaeology Volume 23 ; 23 ; 2013 ; reingest4.clockss.org:8082 >
+       au < finished ; manifest ; 2014 ; Bulletin of the History of Archaeology Volume 24 ; 24 ; 2014 ; reingest3.clockss.org:8083 >
        au < doNotProcess ; exists ; 2015 ; Bulletin of the History of Archaeology Volume 25 ; 25 ; 2015 ; >
     }
   }
@@ -147,7 +147,7 @@
     param[base_url] = http://www.govafricajournal.org/
     param[journal_id] = gaj
     
-    au < frozen ; exists ; 2014 ; Governance in Africa Volume 1 ; 1 ; 2014 ; >
+    au < finished ; manifest ; 2014 ; Governance in Africa Volume 1 ; 1 ; 2014 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; exists ; 2015 ; Governance in Africa Volume 2 ; 2 ; 2015 ; >
 
   }
@@ -179,8 +179,8 @@
        au < doNotProcess ; exists ; 2002 ; Journal of Conservation and Museum Studies Volume 8 ; 8 ; 2002 ; >
        au < finished ; finished ; 2011 ; Journal of Conservation and Museum Studies Volume 9 ; 9 ; 2011 ; >
        au < finished ; finished ; 2012 ; Journal of Conservation and Museum Studies Volume 10 ; 10 ; 2012 ; >
-       au < frozen ; exists ; 2013 ; Journal of Conservation and Museum Studies Volume 11 ; 11 ; 2013 ; >
-       au < frozen ; exists ; 2014 ; Journal of Conservation and Museum Studies Volume 12 ; 12 ; 2014 ; >
+       au < finished ; manifest ; 2013 ; Journal of Conservation and Museum Studies Volume 11 ; 11 ; 2013 ; reingest3.clockss.org:8083 >
+       au < finished ; manifest ; 2014 ; Journal of Conservation and Museum Studies Volume 12 ; 12 ; 2014 ; reingest5.clockss.org:8082 >
        au < doNotProcess ; exists ; 2015 ; Journal of Conservation and Museum Studies Volume 13 ; 13 ; 2015 ; >
     }
   }
@@ -201,13 +201,13 @@
     au < doNotProcess ; exists ; 2005 ; Journal of Circadian Rhythms Volume 3 ; 3 ; 2005 ; >
     au < doNotProcess ; exists ; 2006 ; Journal of Circadian Rhythms Volume 4 ; 4 ; 2006 ; >
     au < doNotProcess ; exists ; 2007 ; Journal of Circadian Rhythms Volume 5 ; 5 ; 2007 ; >
-    au < frozen ; exists ; 2008 ; Journal of Circadian Rhythms Volume 6 ; 6 ; 2008 ; >
-    au < frozen ; exists ; 2009 ; Journal of Circadian Rhythms Volume 7 ; 7 ; 2009 ; >
-    au < frozen ; exists ; 2010 ; Journal of Circadian Rhythms Volume 8 ; 8 ; 2010 ; >
-    au < frozen ; exists ; 2011 ; Journal of Circadian Rhythms Volume 9 ; 9 ; 2011 ; >
-    au < frozen ; exists ; 2012 ; Journal of Circadian Rhythms Volume 10 ; 10 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Journal of Circadian Rhythms Volume 11 ; 11 ; 2013 ; >
-    au < frozen ; exists ; 2014 ; Journal of Circadian Rhythms Volume 12 ; 12 ; 2014 ; >
+    au < finished ; manifest ; 2008 ; Journal of Circadian Rhythms Volume 6 ; 6 ; 2008 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2009 ; Journal of Circadian Rhythms Volume 7 ; 7 ; 2009 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2010 ; Journal of Circadian Rhythms Volume 8 ; 8 ; 2010 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2011 ; Journal of Circadian Rhythms Volume 9 ; 9 ; 2011 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2012 ; Journal of Circadian Rhythms Volume 10 ; 10 ; 2012 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2013 ; Journal of Circadian Rhythms Volume 11 ; 11 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2014 ; Journal of Circadian Rhythms Volume 12 ; 12 ; 2014 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; exists ; 2015 ; Journal of Circadian Rhythms Volume 13 ; 13 ; 2015 ; >
 
   }
@@ -226,9 +226,9 @@
 
     au < doNotProcess ; exists ; 2009 ; Journal of European Psychology Students Volume 1 ; 1 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; Journal of European Psychology Students Volume 2 ; 2 ; 2010 ; >
-    au < frozen ; exists ; 2012 ; Journal of European Psychology Students Volume 3 ; 3 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Journal of European Psychology Students Volume 4 ; 4 ; 2013 ; >
-    au < frozen ; exists ; 2014 ; Journal of European Psychology Students Volume 5 ; 5 ; 2014 ; >
+    au < finished ; manifest ; 2012 ; Journal of European Psychology Students Volume 3 ; 3 ; 2012 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2013 ; Journal of European Psychology Students Volume 4 ; 4 ; 2013 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2014 ; Journal of European Psychology Students Volume 5 ; 5 ; 2014 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; exists ; 2015 ; Journal of European Psychology Students Volume 6 ; 6 ; 2015 ; >
     
   }
@@ -244,9 +244,9 @@
     param[base_url] = http://openarchaeologydata.metajnl.com/
     param[journal_id] = joad
 
-    au < frozen ; exists ; 2012 ; Journal of Open Archaeology Data Volume 1 ; 1 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Journal of Open Archaeology Data Volume 2 ; 2 ; 2013 ; >
-    au < frozen ; exists ; 2014 ; Journal of Open Archaeology Data Volume 3 ; 3 ; 2014 ; >
+    au < finished ; manifest ; 2012 ; Journal of Open Archaeology Data Volume 1 ; 1 ; 2012 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2013 ; Journal of Open Archaeology Data Volume 2 ; 2 ; 2013 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2014 ; Journal of Open Archaeology Data Volume 3 ; 3 ; 2014 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; exists ; 2015 ; Journal of Open Archaeology Data Volume 4 ; 4 ; 2015 ; >
 
   }
@@ -262,8 +262,8 @@
     param[base_url] = http://openhealthdata.metajnl.com/
     param[journal_id] = jophd
     
-    au < frozen ; exists ; 2013 ; Journal of Open Public Health Data Volume 1 ; 1 ; 2013 ; >
-    au < frozen ; exists ; 2014 ; Journal of Open Public Health Data Volume 2 ; 2 ; 2014 ; >
+    au < finished ; manifest ; 2013 ; Journal of Open Public Health Data Volume 1 ; 1 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2014 ; Journal of Open Public Health Data Volume 2 ; 2 ; 2014 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; exists ; 2015 ; Journal of Open Public Health Data Volume 3 ; 3 ; 2015 ; >
 
   }
@@ -279,8 +279,8 @@
     param[base_url] = http://openpsychologydata.metajnl.com/
     param[journal_id] = jopd
     
-    au < frozen ; exists ; 2013 ; Journal of Open Psychology Data Volume 1 ; 1 ; 2013 ; >
-    au < frozen ; exists ; 2014 ; Journal of Open Psychology Data Volume 2 ; 2 ; 2014 ; >
+    au < finished ; manifest ; 2013 ; Journal of Open Psychology Data Volume 1 ; 1 ; 2013 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2014 ; Journal of Open Psychology Data Volume 2 ; 2 ; 2014 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; exists ; 2015 ; Journal of Open Psychology Data Volume 3 ; 3 ; 2015 ; >
 
   }
@@ -296,8 +296,8 @@
     param[base_url] = http://openresearchsoftware.metajnl.com/
     param[journal_id] = jors
     
-    au < frozen ; exists ; 2013 ; Journal of Open Research Software Volume 1 ; 1 ; 2013 ; >
-    au < frozen ; exists ; 2014 ; Journal of Open Research Software Volume 2 ; 2 ; 2014 ; >
+    au < finished ; manifest ; 2013 ; Journal of Open Research Software Volume 1 ; 1 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2014 ; Journal of Open Research Software Volume 2 ; 2 ; 2014 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; exists ; 2015 ; Journal of Open Research Software Volume 3 ; 3 ; 2015 ; >
 
   }
@@ -347,8 +347,8 @@
        au < doNotProcess ; exists ; 2010 ; Opticon1826 Volume 8-9 ; 8-9 ; 2010 ; >
        au < finished ; finished ; 2011 ; Opticon1826 Volume 10-11 ; 10-11 ; 2011 ; >
        au < finished ; finished ; 2012 ; Opticon1826 Volume 12 ; 12 ; 2012 ; >
-       au < frozen ; exists ; 2013 ; Opticon1826 Volume 13 ; 13 ; 2013 ; >
-       au < frozen ; exists ; 2014 ; Opticon1826 Volume 14 ; 14 ; 2014 ; >
+       au < finished ; manifest ; 2013 ; Opticon1826 Volume 13 ; 13 ; 2013 ; reingest1.clockss.org:8082 >
+       au < finished ; manifest ; 2014 ; Opticon1826 Volume 14 ; 14 ; 2014 ; reingest2.clockss.org:8085 >
        au < doNotProcess ; exists ; 2015 ; Opticon1826 Volume 15 ; 15 ; 2015 ; >
     }
   }
@@ -412,9 +412,9 @@
       au < doNotProcess ; exists ; 2009 ; Papers from the Institute of Archaeology Volume 19 ; 19 ; 2009 ; >
       au < doNotProcess ; exists ; 2010 ; Papers from the Institute of Archaeology Volume 20 ; 20 ; 2010 ; >
       au < finished ; finished ; 2011 ; Papers from the Institute of Archaeology Volume 21 ; 21 ; 2011 ; >
-      au < frozen ; exists ; 2012 ; Papers from the Institute of Archaeology Volume 22 ; 22 ; 2012 ; >
-      au < frozen ; exists ; 2013 ; Papers from the Institute of Archaeology Volume 23 ; 23 ; 2013 ; >
-      au < frozen ; exists ; 2014 ; Papers from the Institute of Archaeology Volume 24 ; 24 ; 2014 ; >
+      au < finished ; manifest ; 2012 ; Papers from the Institute of Archaeology Volume 22 ; 22 ; 2012 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2013 ; Papers from the Institute of Archaeology Volume 23 ; 23 ; 2013 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2014 ; Papers from the Institute of Archaeology Volume 24 ; 24 ; 2014 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; exists ; 2015 ; Papers from the Institute of Archaeology Volume 25 ; 25 ; 2015 ; >
     }
   }
@@ -430,7 +430,7 @@
     param[base_url] = http://openbioresources.metajnl.com/
     param[journal_id] = ojb
     
-    au < frozen ; exists ; 2014 ; Open Journal of Bioresources Volume 1 ; 1 ; 2014 ; >
+    au < finished ; manifest ; 2014 ; Open Journal of Bioresources Volume 1 ; 1 ; 2014 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; exists ; 2015 ; Open Journal of Bioresources Volume 2 ; 2 ; 2015 ; >
     
   }
@@ -459,8 +459,8 @@
       au < doNotProcess ; exists ; 2010 ; Present Pasts Volume 2 ; 2 ; 2010 ; >
       au < finished ; finished ; 2011 ; Present Pasts Volume 3 ; 3 ; 2011 ; >
       au < finished ; finished ; 2012 ; Present Pasts Volume 4 ; 4 ; 2012 ; >
-      au < frozen ; exists ; 2013 ; Present Pasts Volume 5 ; 5 ; 2013 ; >
-      au < frozen ; exists ; 2014 ; Present Pasts Volume 6 ; 6 ; 2014 ; >
+      au < finished ; manifest ; 2013 ; Present Pasts Volume 5 ; 5 ; 2013 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2014 ; Present Pasts Volume 6 ; 6 ; 2014 ; reingest4.clockss.org:8082 >
       au < doNotProcess ; exists ; 2015 ; Present Pasts Volume 7 ; 7 ; 2015 ; >
     }
   }
@@ -483,10 +483,10 @@
     au < doNotProcess ; exists ; 2008 ; Psychologica Belgica Volume 48 ; 48 ; 2008 ; >
     au < doNotProcess ; exists ; 2009 ; Psychologica Belgica Volume 49 ; 49 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; Psychologica Belgica Volume 50 ; 50 ; 2010 ; >
-    au < frozen ; exists ; 2011 ; Psychologica Belgica Volume 51 ; 51 ; 2011 ; >
-    au < frozen ; exists ; 2012 ; Psychologica Belgica Volume 52 ; 52 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Psychologica Belgica Volume 53 ; 53 ; 2013 ; >
-    au < frozen ; exists ; 2014 ; Psychologica Belgica Volume 54 ; 54 ; 2014 ; >
+    au < finished ; manifest ; 2011 ; Psychologica Belgica Volume 51 ; 51 ; 2011 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2012 ; Psychologica Belgica Volume 52 ; 52 ; 2012 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2013 ; Psychologica Belgica Volume 53 ; 53 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2014 ; Psychologica Belgica Volume 54 ; 54 ; 2014 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; exists ; 2015 ; Psychologica Belgica Volume 55 ; 55 ; 2015 ; >
 
   }
@@ -502,9 +502,9 @@
     param[base_url] = http://www.secularismandnonreligion.org/
     param[journal_id] = snr
     
-    au < frozen ; exists ; 2012 ; Secularism and Nonreligion Volume 1 ; 1 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Secularism and Nonreligion Volume 2 ; 2 ; 2013 ; >
-    au < frozen ; exists ; 2014 ; Secularism and Nonreligion Volume 3 ; 3 ; 2014 ; >
+    au < finished ; manifest ; 2012 ; Secularism and Nonreligion Volume 1 ; 1 ; 2012 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2013 ; Secularism and Nonreligion Volume 2 ; 2 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2014 ; Secularism and Nonreligion Volume 3 ; 3 ; 2014 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; exists ; 2015 ; Secularism and Nonreligion Volume 4 ; 4 ; 2015 ; >
 
   }
@@ -521,9 +521,9 @@
     param[journal_id] = sta
     # moved to new platform.
 
-    au < frozen ; exists ; 2012 ; Stability: International Journal of Security & Development Volume 1 ; 1 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Stability: International Journal of Security & Development Volume 2 ; 2 ; 2013 ; >
-    au < frozen ; exists ; 2014 ; Stability: International Journal of Security & Development Volume 3 ; 3 ; 2014 ; >
+    au < finished ; manifest ; 2012 ; Stability: International Journal of Security & Development Volume 1 ; 1 ; 2012 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2013 ; Stability: International Journal of Security & Development Volume 2 ; 2 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2014 ; Stability: International Journal of Security & Development Volume 3 ; 3 ; 2014 ; reingest5.clockss.org:8082 >
     
   }
 
@@ -539,10 +539,10 @@
     param[journal_id] = ujil
 
     au < doNotProcess ; exists ; 2010 ; Utrecht Journal of International and European Law Volume 26 ; 26 ; 2010 ; >
-    au < frozen ; exists ; 2011 ; Utrecht Journal of International and European Law Volume 27 ; 27 ; 2011 ; >
-    au < frozen ; exists ; 2012 ; Utrecht Journal of International and European Law Volume 28 ; 28 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Utrecht Journal of International and European Law Volume 29 ; 29 ; 2013 ; >
-    au < frozen ; exists ; 2014 ; Utrecht Journal of International and European Law Volume 30 ; 30 ; 2014 ; >
+    au < finished ; manifest ; 2011 ; Utrecht Journal of International and European Law Volume 27 ; 27 ; 2011 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2012 ; Utrecht Journal of International and European Law Volume 28 ; 28 ; 2012 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2013 ; Utrecht Journal of International and European Law Volume 29 ; 29 ; 2013 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2014 ; Utrecht Journal of International and European Law Volume 30 ; 30 ; 2014 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; exists ; 2015 ; Utrecht Journal of International and European Law Volume 31 ; 31 ; 2015 ; >
 
   }
