@@ -619,9 +619,9 @@ while (my $line = <>) {
                 $result = "--REQ_FAIL--"
             }
         }
-        sleep(4);
+        sleep(4); 
 
-# thin child of ClockssOJS2 but with a different start_url and no permission_url        
+# thin child of ClockssOJS2 but with a different start_url and no permission_url
   } elsif ($plugin eq "ClockssJidcOJS2Plugin" || $plugin eq "ClockssOjs3Plugin") {
     #OJS3 allows an attr to define variants for location of manifest
         if ($param{base_url} =~ m/scholarworks/) {
@@ -641,6 +641,51 @@ while (my $line = <>) {
                 $vol_title = $resp->request->uri;
                 $result = "Redirected";
             } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && (($man_contents =~ m/\($param{year}\)/) || ($man_contents =~ m/: $param{year}/))) {
+                if ($man_contents =~ m/<title>([^<>]*)<\/title>/si) {
+                    $vol_title = $1;
+                    $vol_title =~ s/\s*\n\s*/ /g;
+                    if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
+                        $vol_title = "\"" . $vol_title . "\"";
+                    }
+                }
+                $result = "Manifest"
+            } else {
+                #$result = "--NO_TAG--";
+                if (!defined($man_contents)) {
+                    $result = "--NO_CONT--";
+                } elsif (($man_contents !~ m/$clockss_tag/) && ($man_contents !~ m/$oa_tag/)) {
+                    $result = "--NO_TAG--";
+                } elsif (($man_contents !~ m/\($param{year}\)/) && ($man_contents !~ m/: $param{year}/)) {
+                    $result = "--NO_YEAR--";
+                } else {
+                    $result = "--MYST--";
+                }
+            }
+        } else {
+            $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+        }
+        sleep(4);
+
+# thin child of OJS2 but with a different start_url and no permission_url
+  } elsif ($plugin eq "Ojs3Plugin") {
+    #OJS3 allows an attr to define variants for location of manifest
+        if ($param{base_url} =~ m/scholarworks/) {
+            $url = sprintf("%sjournals/index.php/%s/gateway/clockss?year=%d",
+            $param{base_url}, $param{journal_id}, $param{year});
+        } else {
+          #default behavior
+          $url = sprintf("%sindex.php/%s/gateway/clockss?year=%d",
+          $param{base_url}, $param{journal_id}, $param{year});
+        }
+        $man_url = uri_unescape($url);
+        my $req = HTTP::Request->new(GET, $man_url);
+        my $resp = $ua->request($req);
+        if ($resp->is_success) {
+            my $man_contents = $resp->content;
+            if ($req->url ne $resp->request->uri) {
+                $vol_title = $resp->request->uri;
+                $result = "Redirected";
+            } elsif (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && (($man_contents =~ m/\($param{year}\)/) || ($man_contents =~ m/: $param{year}/))) {
                 if ($man_contents =~ m/<title>([^<>]*)<\/title>/si) {
                     $vol_title = $1;
                     $vol_title =~ s/\s*\n\s*/ /g;
