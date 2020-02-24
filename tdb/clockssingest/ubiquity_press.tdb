@@ -2704,7 +2704,7 @@
       comment[publisher] = Scandinavian Military Studies
 #      param[base_url] = https://sjms.nu/
 
-      au < crawling ; exists ; 2018 ; 1 ; Scandinavian Military Studies Volume 2018 ; 2018 ; https://sjms.nu/ ; >
+      au < frozen ; exists ; 2018 ; 1 ; Scandinavian Military Studies Volume 2018 ; 2018 ; https://sjms.nu/ ; >
       au < crawling ; exists ; 2019 ; 2 ; Scandinavian Military Studies Volume 2019 ; 2019 ; https://sjms.nu/ ; >
 
   }
