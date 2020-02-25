@@ -56,6 +56,9 @@ public class MedknowLoginPageChecker implements LoginPageChecker {
    */
   
   //Darn. Found an oddball that has Download PDFs</title>, so use regexp to identify...
+  // The following page has "Download PDF", but it is not a login page
+  // http://www.wjcs.us.com/downloadpdf.asp?issn=1941-8213;year=2018;volume=7;issue=1;spage=1;epage=7;aulast=Stringfield;type=2
+  // http://www.wjtcm.net/article.asp?issn=2311-8571;year=2018;volume=4;issue=4;spage=135;epage=136;aulast=Li;type=2
   protected static final String DOWNLOAD_TITLE_PATTERN_STRING = ":\\s+Download PDF[^<]*</title>";
   protected static final Pattern DOWNLOAD_TITLE_PATTERN = Pattern.compile(DOWNLOAD_TITLE_PATTERN_STRING, Pattern.CASE_INSENSITIVE);
   

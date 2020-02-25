@@ -137,9 +137,9 @@ public class MedknowArticleIteratorFactory
 
     // set the ROLE_ARTICLE_METADATA to the first one that exists 
     builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA,
-        ArticleFiles.ROLE_CITATION_RIS,
+        ArticleFiles.ROLE_FULL_TEXT_HTML,
         ArticleFiles.ROLE_ABSTRACT,
-        ArticleFiles.ROLE_FULL_TEXT_HTML);
+        ArticleFiles.ROLE_CITATION_RIS);
 
     return builder.getSubTreeArticleIterator();
   }
