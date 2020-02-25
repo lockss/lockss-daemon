@@ -10,6 +10,7 @@
   plugin = org.lockss.plugin.atypon.aps.ClockssAmPhysSocAtyponPlugin
   implicit < status ; status2 ; year ; name ; param[volume_name] ; param[base_url] ; hidden[proxy] >
   #param[base_url] = http://www.physiology.org/
+  # moved to https://journals.physiology.org/
   
   comment[titles0] = Moved to Atypon 2017
 
@@ -27,8 +28,9 @@
     {
 
       au < finished ; crawling ; 2017 ; Advances in Physiology Education Volume 41 ; 41 ; http://www.physiology.org/ ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2018 ; Advances in Physiology Education Volume 42 ; 42 ; https://www.physiology.org/ ; >
-      au < crawling ; exists ; 2019 ; Advances in Physiology Education Volume 43 ; 43 ; https://www.physiology.org/ ; >
+      au < frozen ; exists ; 2018 ; Advances in Physiology Education Volume 42 ; 42 ; https://www.physiology.org/ ; >
+      au < superseded ; exists ; 2019 ; Advances in Physiology Education Volume 43 [superseded] ; 43 ; https://www.physiology.org/ ; >
+      au < exists ; exists ; 2019 ; Advances in Physiology Education Volume 43 ; 43 ; https://journals.physiology.org/ ; >
 
     }
 
@@ -49,10 +51,12 @@
 
       au < finished ; finished ; 2017 ; American Journal of Physiology - Cell Physiology Volume 312 ; 312 ; http://www.physiology.org/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2017 ; American Journal of Physiology - Cell Physiology Volume 313 ; 313 ; http://www.physiology.org/ ; reingest3.clockss.org:8083 >
-      au < deepCrawl ; exists ; 2018 ; American Journal of Physiology - Cell Physiology Volume 314 ; 314 ; https://www.physiology.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; American Journal of Physiology - Cell Physiology Volume 315 ; 315 ; https://www.physiology.org/ ; >
-      au < crawling ; exists ; 2019 ; American Journal of Physiology - Cell Physiology Volume 316 ; 316 ; https://www.physiology.org/ ; >
-      au < crawling ; exists ; 2019 ; American Journal of Physiology - Cell Physiology Volume 317 ; 317 ; https://www.physiology.org/ ; >
+      au < frozen ; exists ; 2018 ; American Journal of Physiology - Cell Physiology Volume 314 ; 314 ; https://www.physiology.org/ ; >
+      au < frozen ; exists ; 2018 ; American Journal of Physiology - Cell Physiology Volume 315 ; 315 ; https://www.physiology.org/ ; >
+      au < superseded ; exists ; 2019 ; American Journal of Physiology - Cell Physiology Volume 316 [superseded] ; 316 ; https://www.physiology.org/ ; >
+      au < superseded ; exists ; 2019 ; American Journal of Physiology - Cell Physiology Volume 317 [superseded] ; 317 ; https://www.physiology.org/ ; >
+      au < exists ; exists ; 2019 ; American Journal of Physiology - Cell Physiology Volume 316 ; 316 ; https://journals.physiology.org/ ; >
+      au < exists ; exists ; 2019 ; American Journal of Physiology - Cell Physiology Volume 317 ; 317 ; https://journals.physiology.org/ ; >
 
     }
 
@@ -73,10 +77,12 @@
 
       au < finished ; crawling ; 2017 ; American Journal of Physiology - Endocrinology and Metabolism Volume 312 ; 312 ; http://www.physiology.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; American Journal of Physiology - Endocrinology and Metabolism Volume 313 ; 313 ; http://www.physiology.org/ ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2018 ; American Journal of Physiology - Endocrinology and Metabolism Volume 314 ; 314 ; https://www.physiology.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; American Journal of Physiology - Endocrinology and Metabolism Volume 315 ; 315 ; https://www.physiology.org/ ; >
-      au < crawling ; exists ; 2019 ; American Journal of Physiology - Endocrinology and Metabolism Volume 316 ; 316 ; https://www.physiology.org/ ; >
-      au < crawling ; exists ; 2019 ; American Journal of Physiology - Endocrinology and Metabolism Volume 317 ; 317 ; https://www.physiology.org/ ; >
+      au < frozen ; exists ; 2018 ; American Journal of Physiology - Endocrinology and Metabolism Volume 314 ; 314 ; https://www.physiology.org/ ; >
+      au < frozen ; exists ; 2018 ; American Journal of Physiology - Endocrinology and Metabolism Volume 315 ; 315 ; https://www.physiology.org/ ; >
+      au < superseded ; exists ; 2019 ; American Journal of Physiology - Endocrinology and Metabolism Volume 316 [superseded] ; 316 ; https://www.physiology.org/ ; >
+      au < superseded ; exists ; 2019 ; American Journal of Physiology - Endocrinology and Metabolism Volume 317 [superseded] ; 317 ; https://www.physiology.org/ ; >
+      au < exists ; exists ; 2019 ; American Journal of Physiology - Endocrinology and Metabolism Volume 316 ; 316 ; https://journals.physiology.org/ ; >
+      au < exists ; exists ; 2019 ; American Journal of Physiology - Endocrinology and Metabolism Volume 317 ; 317 ; https://journals.physiology.org/ ; >
 
     }
 
@@ -97,10 +103,12 @@
 
       au < finished ; crawling ; 2017 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 312 ; 312 ; http://www.physiology.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 313 ; 313 ; http://www.physiology.org/ ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2018 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 314 ; 314 ; https://www.physiology.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 315 ; 315 ; https://www.physiology.org/ ; >
-      au < crawling ; exists ; 2019 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 316 ; 316 ; https://www.physiology.org/ ; >
-      au < crawling ; exists ; 2019 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 317 ; 317 ; https://www.physiology.org/ ; >
+      au < frozen ; exists ; 2018 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 314 ; 314 ; https://www.physiology.org/ ; >
+      au < frozen ; exists ; 2018 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 315 ; 315 ; https://www.physiology.org/ ; >
+      au < superseded ; exists ; 2019 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 316 [superseded] ; 316 ; https://www.physiology.org/ ; >
+      au < superseded ; exists ; 2019 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 317 [superseded] ; 317 ; https://www.physiology.org/ ; >
+      au < exists ; exists ; 2019 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 316 ; 316 ; https://journals.physiology.org/ ; >
+      au < exists ; exists ; 2019 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 317 ; 317 ; https://journals.physiology.org/ ; >
 
     }
 
@@ -121,10 +129,12 @@
 
       au < finished ; crawling ; 2017 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 312 ; 312 ; http://www.physiology.org/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2017 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 313 ; 313 ; http://www.physiology.org/ ; reingest3.clockss.org:8083 >
-      au < deepCrawl ; exists ; 2018 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 314 ; 314 ; https://www.physiology.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 315 ; 315 ; https://www.physiology.org/ ; >
-      au < crawling ; exists ; 2019 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 316 ; 316 ; https://www.physiology.org/ ; >
-      au < crawling ; exists ; 2019 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 317 ; 317 ; https://www.physiology.org/ ; >
+      au < frozen ; exists ; 2018 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 314 ; 314 ; https://www.physiology.org/ ; >
+      au < frozen ; exists ; 2018 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 315 ; 315 ; https://www.physiology.org/ ; >
+      au < superseded ; exists ; 2019 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 316 [superseded] ; 316 ; https://www.physiology.org/ ; >
+      au < superseded ; exists ; 2019 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 317 [superseded] ; 317 ; https://www.physiology.org/ ; >
+      au < exists ; exists ; 2019 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 316 ; 316 ; https://journals.physiology.org/ ; >
+      au < exists ; exists ; 2019 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 317 ; 317 ; https://journals.physiology.org/ ; >
 
     }
 
@@ -145,10 +155,12 @@
 
       au < finished ; frozen ; 2017 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 312 ; 312 ; http://www.physiology.org/ ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2017 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 313 ; 313 ; http://www.physiology.org/ ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2018 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 314 ; 314 ; https://www.physiology.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 315 ; 315 ; https://www.physiology.org/ ; >
-      au < crawling ; exists ; 2019 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 316 ; 316 ; https://www.physiology.org/ ; >
-      au < crawling ; exists ; 2019 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 317 ; 317 ; https://www.physiology.org/ ; >
+      au < frozen ; exists ; 2018 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 314 ; 314 ; https://www.physiology.org/ ; >
+      au < frozen ; exists ; 2018 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 315 ; 315 ; https://www.physiology.org/ ; >
+      au < superseded ; exists ; 2019 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 316 [superseded] ; 316 ; https://www.physiology.org/ ; >
+      au < superseded ; exists ; 2019 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 317 [superseded] ; 317 ; https://www.physiology.org/ ; >
+      au < exists ; exists ; 2019 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 316 ; 316 ; https://journals.physiology.org/ ; >
+      au < exists ; exists ; 2019 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 317 ; 317 ; https://journals.physiology.org/ ; >
 
     }
 
@@ -169,10 +181,12 @@
 
       au < finished ; crawling ; 2017 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 312 ; 312 ; http://www.physiology.org/ ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2017 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 313 ; 313 ; http://www.physiology.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 314 ; 314 ; https://www.physiology.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 315 ; 315 ; https://www.physiology.org/ ; >
-      au < crawling ; exists ; 2019 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 316 ; 316 ; https://www.physiology.org/ ; >
-      au < crawling ; exists ; 2019 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 317 ; 317 ; https://www.physiology.org/ ; >
+      au < frozen ; exists ; 2018 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 314 ; 314 ; https://www.physiology.org/ ; >
+      au < frozen ; exists ; 2018 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 315 ; 315 ; https://www.physiology.org/ ; >
+      au < superseded ; exists ; 2019 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 316 [superseded] ; 316 ; https://www.physiology.org/ ; >
+      au < superseded ; exists ; 2019 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 317 [superseded] ; 317 ; https://www.physiology.org/ ; >
+      au < exists ; exists ; 2019 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 316 ; 316 ; https://journals.physiology.org/ ; >
+      au < exists ; exists ; 2019 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 317 ; 317 ; https://journals.physiology.org/ ; >
 
     }
 
@@ -194,10 +208,12 @@
 
       au < frozen ; exists ; 2017 ; American Journal of Physiology - Renal Physiology Volume 312 ; 312 ; http://www.physiology.org/ ; >
       au < frozen ; exists ; 2017 ; American Journal of Physiology - Renal Physiology Volume 313 ; 313 ; http://www.physiology.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; American Journal of Physiology - Renal Physiology Volume 314 ; 314 ; https://www.physiology.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; American Journal of Physiology - Renal Physiology Volume 315 ; 315 ; https://www.physiology.org/ ; >
-      au < crawling ; exists ; 2019 ; American Journal of Physiology - Renal Physiology Volume 316 ; 316 ; https://www.physiology.org/ ; >
-      au < crawling ; exists ; 2019 ; American Journal of Physiology - Renal Physiology Volume 317 ; 317 ; https://www.physiology.org/ ; >
+      au < frozen ; exists ; 2018 ; American Journal of Physiology - Renal Physiology Volume 314 ; 314 ; https://www.physiology.org/ ; >
+      au < frozen ; exists ; 2018 ; American Journal of Physiology - Renal Physiology Volume 315 ; 315 ; https://www.physiology.org/ ; >
+      au < superseded ; exists ; 2019 ; American Journal of Physiology - Renal Physiology Volume 316 [superseded] ; 316 ; https://www.physiology.org/ ; >
+      au < superseded ; exists ; 2019 ; American Journal of Physiology - Renal Physiology Volume 317 [superseded] ; 317 ; https://www.physiology.org/ ; >
+      au < exists ; exists ; 2019 ; American Journal of Physiology - Renal Physiology Volume 316 ; 316 ; https://journals.physiology.org/ ; >
+      au < exists ; exists ; 2019 ; American Journal of Physiology - Renal Physiology Volume 317 ; 317 ; https://journals.physiology.org/ ; >
 
     }
 
@@ -219,10 +235,12 @@
 
       au < frozen ; exists ; 2017 ; Journal of Applied Physiology Volume 122 ; 122 ; http://www.physiology.org/ ; >
       au < frozen ; exists ; 2017 ; Journal of Applied Physiology Volume 123 ; 123 ; http://www.physiology.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; Journal of Applied Physiology Volume 124 ; 124 ; https://www.physiology.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; Journal of Applied Physiology Volume 125 ; 125 ; https://www.physiology.org/ ; >
-      au < crawling ; exists ; 2019 ; Journal of Applied Physiology Volume 126 ; 126 ; https://www.physiology.org/ ; >
-      au < crawling ; exists ; 2019 ; Journal of Applied Physiology Volume 127 ; 127 ; https://www.physiology.org/ ; >
+      au < frozen ; exists ; 2018 ; Journal of Applied Physiology Volume 124 ; 124 ; https://www.physiology.org/ ; >
+      au < frozen ; exists ; 2018 ; Journal of Applied Physiology Volume 125 ; 125 ; https://www.physiology.org/ ; >
+      au < superseded ; exists ; 2019 ; Journal of Applied Physiology Volume 126 ; 126 ; https://www.physiology.org/ ; >
+      au < superseded ; exists ; 2019 ; Journal of Applied Physiology Volume 127 ; 127 ; https://www.physiology.org/ ; >
+      au < exists ; exists ; 2019 ; Journal of Applied Physiology Volume 126 [superseded] ; 126 ; https://journals.physiology.org/ ; >
+      au < exists ; exists ; 2019 ; Journal of Applied Physiology Volume 127 [superseded] ; 127 ; https://journals.physiology.org/ ; >
 
     }
 
@@ -244,10 +262,12 @@
 
       au < frozen ; exists ; 2017 ; Journal of Neurophysiology Volume 117 ; 117 ; http://www.physiology.org/ ; >
       au < frozen ; exists ; 2017 ; Journal of Neurophysiology Volume 118 ; 118 ; http://www.physiology.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; Journal of Neurophysiology Volume 119 ; 119 ; https://www.physiology.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; Journal of Neurophysiology Volume 120 ; 120 ; https://www.physiology.org/ ; >
-      au < crawling ; exists ; 2019 ; Journal of Neurophysiology Volume 121 ; 121 ; https://www.physiology.org/ ; >
-      au < crawling ; exists ; 2019 ; Journal of Neurophysiology Volume 122 ; 122 ; https://www.physiology.org/ ; >
+      au < frozen ; exists ; 2018 ; Journal of Neurophysiology Volume 119 ; 119 ; https://www.physiology.org/ ; >
+      au < frozen ; exists ; 2018 ; Journal of Neurophysiology Volume 120 ; 120 ; https://www.physiology.org/ ; >
+      au < superseded ; exists ; 2019 ; Journal of Neurophysiology Volume 121 [superseded] ; 121 ; https://www.physiology.org/ ; >
+      au < superseded ; exists ; 2019 ; Journal of Neurophysiology Volume 122 [superseded] ; 122 ; https://www.physiology.org/ ; >
+      au < exists ; exists ; 2019 ; Journal of Neurophysiology Volume 121 ; 121 ; https://journals.physiology.org/ ; >
+      au < exists ; exists ; 2019 ; Journal of Neurophysiology Volume 122 ; 122 ; https://journals.physiology.org/ ; >
 
     }
 
@@ -267,8 +287,9 @@
     {
 
       au < frozen ; exists ; 2017 ; Physiological Genomics Volume 49 ; 49 ; http://www.physiology.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; Physiological Genomics Volume 50 ; 50 ; https://www.physiology.org/ ; >
-      au < crawling ; exists ; 2019 ; Physiological Genomics Volume 51 ; 51 ; https://www.physiology.org/ ; >
+      au < frozen ; exists ; 2018 ; Physiological Genomics Volume 50 ; 50 ; https://www.physiology.org/ ; >
+      au < superseded ; exists ; 2019 ; Physiological Genomics Volume 51 [superseded] ; 51 ; https://www.physiology.org/ ; >
+      au < exists ; exists ; 2019 ; Physiological Genomics Volume 51 ; 51 ; https://journals.physiology.org/ ; >
 
     }
 
@@ -288,8 +309,9 @@
     {
 
       au < frozen ; exists ; 2017 ; Physiological Reviews Volume 97 ; 97 ; http://www.physiology.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; Physiological Reviews Volume 98 ; 98 ; https://www.physiology.org/ ; >
-      au < crawling ; exists ; 2019 ; Physiological Reviews Volume 99 ; 99 ; https://www.physiology.org/ ; >
+      au < frozen ; exists ; 2018 ; Physiological Reviews Volume 98 ; 98 ; https://www.physiology.org/ ; >
+      au < superseded ; exists ; 2019 ; Physiological Reviews Volume 99 [superseded] ; 99 ; https://www.physiology.org/ ; >
+      au < exists ; exists ; 2019 ; Physiological Reviews Volume 99 ; 99 ; https://journals.physiology.org/ ; >
 
     }
 
@@ -309,8 +331,9 @@
     {
 
       au < frozen ; exists ; 2017 ; Physiology Volume 32 ; 32 ; http://www.physiology.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; Physiology Volume 33 ; 33 ; https://www.physiology.org/ ; >
-      au < crawling ; exists ; 2019 ; Physiology Volume 34 ; 34 ; https://www.physiology.org/ ; >
+      au < frozen ; exists ; 2018 ; Physiology Volume 33 ; 33 ; https://www.physiology.org/ ; >
+      au < superseded ; exists ; 2019 ; Physiology Volume 34 [superseded] ; 34 ; https://www.physiology.org/ ; >
+      au < exists ; exists ; 2019 ; Physiology Volume 34 ; 34 ; https://journals.physiology.org/ ; >
 
     }
 

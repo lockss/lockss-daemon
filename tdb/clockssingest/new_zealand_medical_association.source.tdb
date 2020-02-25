@@ -5,23 +5,24 @@
     info[contract] = 2017 ;
     info[tester] = S
   >
-  
+
   {
-  
+
     title <
        name = New Zealand Medical Journal ;
        issn = 1175-8716
     >
-    
+
     plugin = org.lockss.plugin.clockss.nzma.ClockssNZMASourcePlugin
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/nzma-released/
-    
+
     hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[year] >
 
     au < zapped ; finished ; 2017 ; New Zealand Medical Journal Source Content 2017 ; 2017 >
     au < readySource ; finished ; 2018 ; New Zealand Medical Journal Source Content 2018 ; 2018 >
     au < readySource ; crawling ; 2019 ; New Zealand Medical Journal Source Content 2019 ; 2019 >
+    au < readySource ; crawling ; 2020 ; New Zealand Medical Journal Source Content 2020 ; 2020 >
 
   }
 
