@@ -12,7 +12,7 @@
        name = Casalini
     >
 
-    plugin = org.lockss.plugin.clockss.casalini.ClockssCasaliniSourcePlugin
+    plugin = org.lockss.plugin.clockss.casalini.ClockssCasaliniLibriMarcSourcePlugin
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/casalini-released/
 
     hidden[proxy] = DIRECT
