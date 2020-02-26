@@ -1781,7 +1781,7 @@
 
    }
 
-  {
+   {
     title <
       name = The Cryosphere ;
       issn = 1994-0416 ;
@@ -1830,7 +1830,7 @@
 #
 #   }
 
-  {
+   {
     title <
       name = Web Ecology ;
       issn = 2193-3081 ;
@@ -1862,7 +1862,7 @@
 
    }
 
-  {
+   {
     title <
       name = Wind Energy Science ;
       issn = 2366-7443 ;
@@ -1876,6 +1876,17 @@
       au < deepCrawl ; exists ; 2017 ; 2017 ; Wind Energy Science Volume 2 ; 2 ; https://www.wind-energ-sci.net/ ; https://www.wind-energy-science.net/ ; >
       au < deepCrawl ; exists ; 2018 ; 2018 ; Wind Energy Science Volume 3 ; 3 ; https://www.wind-energ-sci.net/ ; https://www.wind-energy-science.net/ ; >
       au < crawling ; exists ; 2019 ; 2019 ; Wind Energy Science Volume 4 ; 4 ; https://www.wind-energ-sci.net/ ; https://www.wind-energy-science.net/ ; >
+
+   }
+
+   {
+    title <
+      name = Geochronology: Advances in Gechronological Science
+    >
+      attr[journal_id] = GChron
+
+      au < exists ; exists ; 2019 ; 2019 ; Geochronology: Advances in Gechronological Science Volume 1 ; 1 ; https://www.geochronology.net/ ; https://www.geochronology.net/ ; >
+      au < exists ; exists ; 2020 ; 2020 ; Geochronology: Advances in Gechronological Science Volume 2 ; 2 ; https://www.geochronology.net/ ; https://www.geochronology.net/ ; >
 
    }
 
