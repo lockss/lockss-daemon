@@ -184,7 +184,7 @@
     au < finished ; crawling ; 1998 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 2 ; 1998 ; http://www.ams.org/ ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 1999 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 3 ; 1999 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2000 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 4 ; 2000 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2001 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 5 ; 2001 ; http://www.ams.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2001 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 5 ; 2001 ; http://www.ams.org/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2002 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 6 ; 2002 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2003 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 7 ; 2003 ; http://www.ams.org/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2004 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 8 ; 2004 ; http://www.ams.org/ ; reingest4.clockss.org:8082 >
@@ -393,7 +393,7 @@
     param[journal_id] = proc
       
     au < finished ; crawling ; 2007 ; Proceedings of the American Mathematical Society Volume 135 ; 2007 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2008 ; Proceedings of the American Mathematical Society Volume 136 ; 2008 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2008 ; Proceedings of the American Mathematical Society Volume 136 ; 2008 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2009 ; Proceedings of the American Mathematical Society Volume 137 ; 2009 ; http://www.ams.org/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2010 ; Proceedings of the American Mathematical Society Volume 138 ; 2010 ; http://www.ams.org/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2011 ; Proceedings of the American Mathematical Society Volume 139 ; 2011 ; http://www.ams.org/ ; reingest3.clockss.org:8083 >
@@ -590,7 +590,7 @@
     au < finished ; crawling ; 2005 ; Transactions of the Moscow Mathematical Society Volume 66 ; 2005 ; http://www.ams.org/ ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2006 ; Transactions of the Moscow Mathematical Society Volume 67 ; 2006 ; http://www.ams.org/ ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2007 ; Transactions of the Moscow Mathematical Society Volume 68 ; 2007 ; http://www.ams.org/ ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2008 ; Transactions of the Moscow Mathematical Society Volume 69 ; 2008 ; http://www.ams.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2008 ; Transactions of the Moscow Mathematical Society Volume 69 ; 2008 ; http://www.ams.org/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2009 ; Transactions of the Moscow Mathematical Society Volume 70 ; 2009 ; http://www.ams.org/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2010 ; Transactions of the Moscow Mathematical Society Volume 71 ; 2010 ; http://www.ams.org/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2011 ; Transactions of the Moscow Mathematical Society Volume 72 ; 2011 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
