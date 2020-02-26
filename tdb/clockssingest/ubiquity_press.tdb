@@ -296,7 +296,7 @@
       au < finished ; finished ; 2014 ; 4 ; The Comics Grid: Journal of Comics Scholarship Volume 2014 ; 2014 ; http://www.comicsgrid.com/ ; >
       au < finished ; finished ; 2015 ; 5 ; The Comics Grid: Journal of Comics Scholarship Volume 2015 ; 2015 ; http://www.comicsgrid.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; 6 ; The Comics Grid: Journal of Comics Scholarship Volume 2016 ; 2016 ; http://www.comicsgrid.com/ ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2017 ; 7 ; The Comics Grid: Journal of Comics Scholarship Volume 2017 ; 2017 ; http://www.comicsgrid.com/ ; >
+      au < finished ; manifest ; 2017 ; 7 ; The Comics Grid: Journal of Comics Scholarship Volume 2017 ; 2017 ; http://www.comicsgrid.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2018 ; 8 ; The Comics Grid: Journal of Comics Scholarship Volume 2018 ; 2018 ; https://www.comicsgrid.com/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2019 ; 9 ; The Comics Grid: Journal of Comics Scholarship Volume 2019 ; 2019 ; https://www.comicsgrid.com/ ; >
 
@@ -926,7 +926,7 @@
 #      param[base_url] = http://theoryandpractice.citizenscienceassociation.org/
 
       au < finished ; crawling ; 2016 ; 1 ; Citizen Science: Theory and Practice Volume 2016 ; 2016 ; http://theoryandpractice.citizenscienceassociation.org/ ; reingest3.clockss.org:8083 >
-      au < deepCrawl ; exists ; 2017 ; 2 ; Citizen Science: Theory and Practice Volume 2017 ; 2017 ; http://theoryandpractice.citizenscienceassociation.org/ ; >
+      au < finished ; manifest ; 2017 ; 2 ; Citizen Science: Theory and Practice Volume 2017 ; 2017 ; http://theoryandpractice.citizenscienceassociation.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 3 ; Citizen Science: Theory and Practice Volume 2018 ; 2018 ; https://theoryandpractice.citizenscienceassociation.org/ ; reingest2.clockss.org:8085 >
       au < manifest ; exists ; 2019 ; 4 ; Citizen Science: Theory and Practice Volume 2019 ; 2019 ; https://theoryandpractice.citizenscienceassociation.org/ ; >
 
@@ -1038,8 +1038,8 @@
       au < finished ; crawling ; 2014 ; 15 ; International Journal of Integrated Care Volume 2014 ; 2014 ; http://www.ijic.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; 16 ; International Journal of Integrated Care Volume 2015 ; 2015 ; http://www.ijic.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; 17 ; International Journal of Integrated Care Volume 2016 ; 2016 ; http://www.ijic.org/ ; reingest3.clockss.org:8083 >
-      au < deepCrawl ; exists ; 2017 ; 18 ; International Journal of Integrated Care Volume 2017 ; 2017 ; http://www.ijic.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; 19 ; International Journal of Integrated Care Volume 2018 ; 2018 ; https://www.ijic.org/ ; >
+      au < finished ; manifest ; 2017 ; 18 ; International Journal of Integrated Care Volume 2017 ; 2017 ; http://www.ijic.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; 19 ; International Journal of Integrated Care Volume 2018 ; 2018 ; https://www.ijic.org/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2019 ; 20 ; International Journal of Integrated Care Volume 2019 ; 2019 ; https://www.ijic.org/ ; >
 
   }
@@ -1056,7 +1056,7 @@
 
       au < finished ; crawling ; 2016 ; 1 ; International Review of Social Psychology Volume 2016 ; 2016 ; http://www.rips-irsp.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; 2 ; International Review of Social Psychology Volume 2017 ; 2017 ; http://www.rips-irsp.com/ ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2018 ; 3 ; International Review of Social Psychology Volume 2018 ; 2018 ; https://www.rips-irsp.com/ ; >
+      au < finished ; manifest ; 2018 ; 3 ; International Review of Social Psychology Volume 2018 ; 2018 ; https://www.rips-irsp.com/ ; reingest4.clockss.org:8082 >
       au < expected ; exists ; 2019 ; 4 ; International Review of Social Psychology Volume 2019 ; 2019 ; https://www.rips-irsp.com/ ; >
 
   }
@@ -1327,7 +1327,7 @@
       au < finished ; finished ; 2015 ; 3 ; Journal of Open Research Software Volume 2015 ; 2015 ; http://openresearchsoftware.metajnl.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2016 ; 4 ; Journal of Open Research Software Volume 2016 ; 2016 ; http://openresearchsoftware.metajnl.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2017 ; 5 ; Journal of Open Research Software Volume 2017 ; 2017 ; http://openresearchsoftware.metajnl.com/ ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2018 ; 6 ; Journal of Open Research Software Volume 2018 ; 2018 ; https://openresearchsoftware.metajnl.com/ ; >
+      au < finished ; manifest ; 2018 ; 6 ; Journal of Open Research Software Volume 2018 ; 2018 ; https://openresearchsoftware.metajnl.com/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2019 ; 7 ; Journal of Open Research Software Volume 2019 ; 2019 ; https://openresearchsoftware.metajnl.com/ ; >
 
   }
@@ -1383,7 +1383,7 @@
 
       au < finished ; crawling ; 2015 ; 99 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2015 ; 2015 ; http://www.jbsr.be/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2016 ; 100 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2016 ; 2016 ; http://www.jbsr.be/ ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2017 ; 101 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2017 ; 2017 ; http://www.jbsr.be/ ; >
+      au < finished ; manifest ; 2017 ; 101 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2017 ; 2017 ; http://www.jbsr.be/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 102 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2018 ; 2018 ; https://www.jbsr.be/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2019 ; 103 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2019 ; 2019 ; https://www.jbsr.be/ ; >
 
@@ -2087,8 +2087,8 @@
       au < finished ; crawling ; 2014 ; 45 ; BMGN - Low Countries Historical Review Volume 2014 ; 2014 ; http://www.bmgn-lchr.nl/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; 46 ; BMGN - Low Countries Historical Review Volume 2015 ; 2015 ; http://www.bmgn-lchr.nl/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2016 ; 47 ; BMGN - Low Countries Historical Review Volume 2016 ; 2016 ; http://www.bmgn-lchr.nl/ ; reingest3.clockss.org:8083 >
-      au < deepCrawl ; exists ; 2017 ; 48 ; BMGN - Low Countries Historical Review Volume 2017 ; 2017 ; http://www.bmgn-lchr.nl/ ; >
-      au < deepCrawl ; exists ; 2018 ; 49 ; BMGN - Low Countries Historical Review Volume 2018 ; 2018 ; https://www.bmgn-lchr.nl/ ; >
+      au < finished ; manifest ; 2017 ; 48 ; BMGN - Low Countries Historical Review Volume 2017 ; 2017 ; http://www.bmgn-lchr.nl/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2018 ; 49 ; BMGN - Low Countries Historical Review Volume 2018 ; 2018 ; https://www.bmgn-lchr.nl/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2019 ; 50 ; BMGN - Low Countries Historical Review Volume 2019 ; 2019 ; https://www.bmgn-lchr.nl/ ; >
 
   }
@@ -2154,8 +2154,8 @@
       au < finished ; crawling ; 2014 ; 12 ; ERLACS Volume 2014 ; 2014 ; http://www.erlacs.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; 13 ; ERLACS Volume 2015 ; 2015 ; http://www.erlacs.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; 14 ; ERLACS Volume 2016 ; 2016 ; http://www.erlacs.org/ ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2017 ; 15 ; ERLACS Volume 2017 ; 2017 ; http://www.erlacs.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; 16 ; ERLACS Volume 2018 ; 2018 ; https://www.erlacs.org/ ; >
+      au < finished ; manifest ; 2017 ; 15 ; ERLACS Volume 2017 ; 2017 ; http://www.erlacs.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; 16 ; ERLACS Volume 2018 ; 2018 ; https://www.erlacs.org/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2019 ; 17 ; ERLACS Volume 2019 ; 2019 ; https://www.erlacs.org/ ; >
 
   }
@@ -2176,8 +2176,8 @@
       au < finished ; crawling ; 2014 ; 29 ; Incontri. Rivista europea di studi italiani Volume 2014 ; 2014 ; http://www.rivista-incontri.nl/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; 30 ; Incontri. Rivista europea di studi italiani Volume 2015 ; 2015 ; http://www.rivista-incontri.nl/ ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2016 ; 31 ; Incontri. Rivista europea di studi italiani Volume 2016 ; 2016 ; http://www.rivista-incontri.nl/ ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2017 ; 32 ; Incontri. Rivista europea di studi italiani Volume 2017 ; 2017 ; http://www.rivista-incontri.nl/ ; >
-      au < deepCrawl ; exists ; 2018 ; 33 ; Incontri. Rivista europea di studi italiani Volume 2018 ; 2018 ; https://www.rivista-incontri.nl/ ; > #no substance, but does have manifest page
+      au < finished ; manifest ; 2017 ; 32 ; Incontri. Rivista europea di studi italiani Volume 2017 ; 2017 ; http://www.rivista-incontri.nl/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2018 ; 33 ; Incontri. Rivista europea di studi italiani Volume 2018 ; 2018 ; https://www.rivista-incontri.nl/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2019 ; 34 ; Incontri. Rivista europea di studi italiani Volume 2019 ; 2019 ; https://www.rivista-incontri.nl/ ; >
 
   }
@@ -2482,7 +2482,7 @@
       au < finished ; finished ; 2014 ; 3 ; Insights: the UKSG journal Volume 2014 ; 2014 ; http://insights.uksg.org/ ; >
       au < finished ; finished ; 2015 ; 4 ; Insights: the UKSG journal Volume 2015 ; 2015 ; http://insights.uksg.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; 5 ; Insights: the UKSG journal Volume 2016 ; 2016 ; http://insights.uksg.org/ ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2017 ; 6 ; Insights: the UKSG journal Volume 2017 ; 2017 ; http://insights.uksg.org/ ; >
+      au < finished ; manifest ; 2017 ; 6 ; Insights: the UKSG journal Volume 2017 ; 2017 ; http://insights.uksg.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 7 ; Insights: the UKSG journal Volume 2018 ; 2018 ; https://insights.uksg.org/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2019 ; 8 ; Insights: the UKSG journal Volume 2019 ; 2019 ; https://insights.uksg.org/ ; >
 
