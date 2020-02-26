@@ -284,13 +284,17 @@
     #Archives of Surgery years 1960-2012 issn 1538-3644. After 2013: JAMA Surgery years 2013-present eissn 2168-6262. 
     param[resource_id] = 76
     param[journal_id] = jamasurgery
+    #content 1920 to 2011 had be processed on HW platform
     
-    au < exists ; exists ; 1922 ; Archives of Surgery Volume 5 ; 5 ; https://jamanetwork.com/ ; >
-    au < exists ; exists ; 1922 ; Archives of Surgery Volume 6 ; 6 ; https://jamanetwork.com/ ; >
-    au < exists ; exists ; 1976 ; Archives of Surgery Volume 111 ; 1976 ; https://jamanetwork.com/ ; >
-    au < exists ; exists ; 1999 ; Archives of Surgery Volume 134 ; 1999 ; https://jamanetwork.com/ ; >
-    au < exists ; exists ; 2012 ; Archives of Surgery Volume 147 ; 2012 ; https://jamanetwork.com/ ; >
-  
+    au < exists ; exists ; 2012 ; Archives of Surgery Volume 147 ; 2012 ; https://jamanetwork.com/ ; > #no manifest page
+    au < manifest ; exists ; 2013 ; Archives of Surgery Volume 148 ; 2013 ; https://jamanetwork.com/ ; >
+    au < manifest ; exists ; 2014 ; Archives of Surgery Volume 149 ; 2014 ; https://jamanetwork.com/ ; >
+    au < manifest ; exists ; 2015 ; Archives of Surgery Volume 150 ; 2015 ; https://jamanetwork.com/ ; >
+    au < manifest ; exists ; 2016 ; Archives of Surgery Volume 151 ; 2016 ; https://jamanetwork.com/ ; >
+    au < manifest ; exists ; 2017 ; Archives of Surgery Volume 152 ; 2017 ; https://jamanetwork.com/ ; >
+    au < manifest ; exists ; 2018 ; Archives of Surgery Volume 153 ; 2018 ; https://jamanetwork.com/ ; >
+    au < manifest ; exists ; 2019 ; Archives of Surgery Volume 154 ; 2019 ; https://jamanetwork.com/ ; >
+
   }
 
   {
@@ -305,7 +309,7 @@
     param[resource_id] = 67
     param[journal_id] = jama
     
-    au < exists ; exists ; 1957 ; Journal of the American Medical Association Volume 163 ; 163 ; https://jamanetwork.com/ ; > #never collection on HW platform.
+    au < exists ; exists ; 1957 ; Journal of the American Medical Association Volume 163-165 ; 1957 ; https://jamanetwork.com/ ; > #never collection on HW platform.
     au < doNotProcess ; doNotProcess ; 2011 ; JAMA: The Journal of the American Medical Association Volume 305-306 ; 2011 ; https://jamanetwork.com/ ; >
     au < doNotProcess ; doNotProcess ; 2012 ; JAMA: The Journal of the American Medical Association Volume 307-308 ; 2012 ; https://jamanetwork.com/ ; >
     au < doNotProcess ; doNotProcess ; 2013 ; JAMA: The Journal of the American Medical Association Volume 309-310 ; 2013 ; https://jamanetwork.com/ ; >
@@ -331,14 +335,7 @@
 
     param[resource_id] = 91
     param[journal_id] = archneurpsyc
-
-    au < exists ; exists ; 1923 ; AMA Archives of Neurology and Psychiatry Volume 9 ; 9 ; https://jamanetwork.com/ ; >
-    au < exists ; exists ; 1929 ; AMA Archives of Neurology and Psychiatry Volume 21 ; 21 ; https://jamanetwork.com/ ; >
-    au < exists ; exists ; 1933 ; AMA Archives of Neurology and Psychiatry Volume 29 ; 29 ; https://jamanetwork.com/ ; >
-    au < exists ; exists ; 1939 ; AMA Archives of Neurology and Psychiatry Volume 41 ; 41 ; https://jamanetwork.com/ ; >
-    au < exists ; exists ; 1945 ; AMA Archives of Neurology and Psychiatry Volume 53 ; 53 ; https://jamanetwork.com/ ; >
-    au < exists ; exists ; 1951 ; AMA Archives of Neurology and Psychiatry Volume 65 ; 65 ; https://jamanetwork.com/ ; >
-    au < exists ; exists ; 1957 ; AMA Archives of Neurology and Psychiatry Volume 77 ; 1957 ; https://jamanetwork.com/ ; >
+    #content from 1919 to 1959 had been processed on HW platform
 
   }
 
