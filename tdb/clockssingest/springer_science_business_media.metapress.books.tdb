@@ -13,6 +13,7 @@
 
   plugin = org.lockss.plugin.springer.ClockssSpringerLinkBookPlugin
   param[base_url] = http://www.springerlink.com/
+  #platform and base_url no longer exists
 
   {
 
