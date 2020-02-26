@@ -1851,4 +1851,17 @@
 
    }
 
+   {
+    title <
+      name = Geochronology: Advances in Gechronological Science ;
+      issn = 2628-3697 ;
+      eissn = 2628-3719 
+    >
+      attr[journal_id] = GChron
+
+      au < exists ; 2019 ; 2019 ; Geochronology: Advances in Gechronological Science Volume 1 ; 1 ; https://www.geochronology.net/ ; https://www.geochronology.net/ >
+      au < exists ; 2020 ; 2020 ; Geochronology: Advances in Gechronological Science Volume 2 ; 2 ; https://www.geochronology.net/ ; https://www.geochronology.net/ >
+
+   }
+
 }
