@@ -1,4 +1,4 @@
-package org.lockss.plugin.innovativemedicalresearchpress;
+package org.lockss.plugin.clockss.innovativemedicalresearchpress;
 
 import org.apache.commons.io.FileUtils;
 import org.lockss.daemon.ShouldNotHappenException;
@@ -32,7 +32,7 @@ public class TestInnovativeMedicalResearchPressMetadataExtractor extends SourceX
         try {
             String currentDirectory = System.getProperty("user.dir");
             String pathname = currentDirectory +
-                    "/plugins/test/src/org/lockss/plugin/innovativemedicalresearchpress/" + fname;
+                    "/plugins/test/src/org/lockss/plugin/clockss/innovativemedicalresearchpress/" + fname;
             xmlContent = FileUtils.readFileToString(new File(pathname), Constants.DEFAULT_ENCODING);
         } catch(IOException e) {
             e.printStackTrace();
@@ -56,17 +56,17 @@ public class TestInnovativeMedicalResearchPressMetadataExtractor extends SourceX
         assertNotEmpty(mdlist);
         ArticleMetadata md = mdlist.get(0);
         assertNotNull(md);
-        assertEquals("10.31083/j.jmcm.2018.02.012", md.get(MetadataField.FIELD_DOI));
-        assertEquals("2018", md.get(MetadataField.FIELD_DATE));
-        assertEquals("114", md.get(MetadataField.FIELD_END_PAGE));
-        assertEquals("107", md.get(MetadataField.FIELD_START_PAGE));
-        assertEquals("2617-5282", md.get(MetadataField.FIELD_ISSN));
+        assertEquals("10.31083/j.jin.2019.01.105", md.get(MetadataField.FIELD_DOI));
+        assertEquals("2019", md.get(MetadataField.FIELD_DATE));
+        assertEquals("10", md.get(MetadataField.FIELD_END_PAGE));
+        assertEquals("1", md.get(MetadataField.FIELD_START_PAGE));
+        assertEquals("1757-448X", md.get(MetadataField.FIELD_ISSN));
         assertEquals(null, md.get(MetadataField.FIELD_EISSN));
-        assertEquals("1", md.get(MetadataField.FIELD_VOLUME));
-        assertEquals("2", md.get(MetadataField.FIELD_ISSUE));
-        assertEquals("Jiriys, George Ginini", md.get(MetadataField.FIELD_AUTHOR));
-        assertEquals("Low Intensity Pulsed Ultrasound for Accelerating Distraction Osteogenesis: A Systematic Review of Experimental Animal Studies", md.get(MetadataField.FIELD_ARTICLE_TITLE));
-        assertEquals("1545898240238-1078607897.pdf", md.getRaw(JatsPublishingSchemaHelper.JATS_article_related_pdf));
+        assertEquals("18", md.get(MetadataField.FIELD_VOLUME));
+        assertEquals("1", md.get(MetadataField.FIELD_ISSUE));
+        assertEquals("R. R., Poznanski", md.get(MetadataField.FIELD_AUTHOR));
+        assertEquals("Theorizing how the brain encodes consciousness based on negentropic entanglement", md.get(MetadataField.FIELD_ARTICLE_TITLE));
+        assertEquals("1555335526845-369563756.pdf", md.getRaw(JatsPublishingSchemaHelper.JATS_article_related_pdf));
 
     }
 

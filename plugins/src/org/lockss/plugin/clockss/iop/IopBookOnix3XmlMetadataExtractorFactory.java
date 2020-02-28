@@ -32,21 +32,14 @@ public class IopBookOnix3XmlMetadataExtractorFactory extends SourceXmlMetadataEx
 
         @Override
         protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
+
+            log.debug3("Fei: IopBook Onix3BooksSchemaHelper");
+
+
             if (Onix3Helper == null) {
                 Onix3Helper = new Onix3BooksSchemaHelper();
             }
             return Onix3Helper;
-        }
-
-        /*
-         * (non-Javadoc)
-         * Do not verify the existence of content. Just emit for each article/book
-         * defined in the XML
-         */
-        @Override
-        protected boolean preEmitCheck(SourceXmlSchemaHelper schemaHelper,
-                                       CachedUrl cu, ArticleMetadata thisAM) {
-            return true;
         }
 
         /*
@@ -60,6 +53,8 @@ public class IopBookOnix3XmlMetadataExtractorFactory extends SourceXmlMetadataEx
         @Override
         protected void postCookProcess(SourceXmlSchemaHelper schemaHelper,
                                        CachedUrl cu, ArticleMetadata thisAM) {
+
+            log.debug3("Fei: in IopBook postCookProcess");
 
             String access = thisAM.getRaw(Onix3BooksSchemaHelper.ONIX_idtype_proprietary);
             if (access != null) {
@@ -78,9 +73,17 @@ public class IopBookOnix3XmlMetadataExtractorFactory extends SourceXmlMetadataEx
         protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
                                                                 ArticleMetadata oneAM) {
 
+            log.debug3("Fei: in IopBook getFilenamesAssociatedWithRecord");
 
-            String filenameValue = oneAM.getRaw(Onix3BooksSchemaHelper.ONIX_RR);
+            String filenameValue = oneAM.getRaw(Onix3BooksSchemaHelper.ONIX_Record_Reference);
             String cuBase = FilenameUtils.getFullPath(cu.getUrl());
+
+            if (filenameValue != null) {
+                log.debug3("Fei: PDF file path is : " + cuBase + filenameValue);
+            } else {
+                log.debug3("Fei: PDF file path not found : " + cuBase);
+            }
+
             String fullPathFile = UrlUtil.minimallyEncodeUrl(cuBase + filenameValue + ".pdf");
             List<String> returnList = new ArrayList<String>();
             returnList.add(fullPathFile);

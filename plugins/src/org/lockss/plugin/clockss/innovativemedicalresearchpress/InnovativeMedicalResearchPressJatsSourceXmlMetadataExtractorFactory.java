@@ -1,4 +1,4 @@
-package org.lockss.plugin.innovativemedicalresearchpress;
+package org.lockss.plugin.clockss.innovativemedicalresearchpress;
 
 import org.apache.commons.io.FilenameUtils;
 import org.lockss.daemon.PluginException;
@@ -58,6 +58,7 @@ public class InnovativeMedicalResearchPressJatsSourceXmlMetadataExtractorFactory
             //XML and PDF are located inside the same directory but using different naming convension.
             //XML is named as 2617-5282-1-2-115.xml
             //PDF is referenced inside each xml as an element like below
+            //<related-article related-article-type="pdf" specific-use="online">1555335526845-369563756.pdf</related-article>
             //<related-article related-article-type="pdf" specific-use="online">1545898248855-1818078335.pdf</related-article>
             if (url_string.indexOf(".xml") > -1) {
                 String md_url = cu.getUrl();
@@ -68,6 +69,8 @@ public class InnovativeMedicalResearchPressJatsSourceXmlMetadataExtractorFactory
                 if (filenameValue != null) {
                     log.debug3("PDF file path is : " + cuBase + filenameValue);
                     returnList.add(cuBase + filenameValue);
+                } else {
+                    log.debug3("Fei : PDF file path not found : " + cuBase);
                 }
             }
             return returnList;
