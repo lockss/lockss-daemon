@@ -376,7 +376,7 @@
     param[journal_id] = qmj
 
     au < doNotProcess ; exists ; 1997 ; Qatar Medical Journal Volume 1997 ; 1997 ; ># no substance?
-    au < finished ; crawling ; 1998 ; Qatar Medical Journal Volume 1998 ; 1998 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1998 ; Qatar Medical Journal Volume 1998 ; 1998 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2000 ; Qatar Medical Journal Volume 2000 ; 2000 ; >
     au < doNotProcess ; doNotProcess ; 2001 ; Qatar Medical Journal Volume 2001 ; 2001 ; >
     au < doNotProcess ; doNotProcess ; 2002 ; Qatar Medical Journal Volume 2002 ; 2002 ; >
