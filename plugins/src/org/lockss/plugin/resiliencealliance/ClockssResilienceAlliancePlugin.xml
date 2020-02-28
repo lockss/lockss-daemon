@@ -149,6 +149,10 @@
         </list>
     </entry>
     <entry>
+        <string>text/html_filter_factory</string>
+        <string>org.lockss.plugin.resiliencealliance.ResilienceAllianceHashFilterFactory</string>
+    </entry>
+    <entry>
         <string>text/javascript_link_rewriter_factory</string>
         <string>org.lockss.plugin.resiliencealliance.ResilienceAllianceJavaScriptLinkRewriterFactory</string>
     </entry>
@@ -176,13 +180,11 @@
         </list>
     </entry>
     <entry>
-        <!-- these will not count towards poll results but will replicate from peer if above -->
         <string>au_url_poll_result_weight</string>
         <list>
             <string>".+[.](bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)(\?.*)?$", 0</string>
         </list>
     </entry>
-    <!--Comment out for local crawl
     <entry>
         <string>clockss_override</string>
         <map>
@@ -192,5 +194,4 @@
             </entry>
         </map>
     </entry>
-    -->
 </map>
