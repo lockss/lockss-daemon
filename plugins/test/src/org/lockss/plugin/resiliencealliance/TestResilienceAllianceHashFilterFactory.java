@@ -1,15 +1,11 @@
 package org.lockss.plugin.resiliencealliance;
 
-import org.apache.commons.io.FileUtils;
-import org.lockss.plugin.pub2web.ms.TestMsResponseHandler;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockArchivalUnit;
 import org.lockss.test.StringInputStream;
 import org.lockss.util.Constants;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
-
-import java.io.File;
 import java.io.InputStream;
 
 public class TestResilienceAllianceHashFilterFactory extends LockssTestCase {
@@ -189,28 +185,14 @@ public class TestResilienceAllianceHashFilterFactory extends LockssTestCase {
             "\n" +
             "</body>\n" +
             "</html>";
-
-
+    
     public void testFilterA() throws Exception {
         InputStream actIn;
 
-        // viewed-by test
         actIn = fact.createFilteredInputStream(mau,
                 new StringInputStream(HtmlHash), ENC);
         String filteredStr = StringUtil.fromInputStream(actIn);
-
-        /*
-        log.info("filtered = " + filteredStr);
-
-        String currentDirectory = System.getProperty("user.dir");
-        String pathname = currentDirectory +
-                "/plugins/test/src/org/lockss/plugin/resiliencealliance/generated.html";
-        if (filteredStr.length() > 0) {
-            FileUtils.writeStringToFile(new File(pathname), filteredStr, Constants.DEFAULT_ENCODING);
-        } else {
-            FileUtils.writeStringToFile(new File(pathname), "Empty", Constants.DEFAULT_ENCODING);
-        }
-         */
+        
         assertEquals(HtmlHashFiltered, filteredStr);
     }
 }
