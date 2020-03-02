@@ -33,10 +33,10 @@
       hidden[proxy] = DIRECT
       implicit < status ; status2 ; year ; name ; param[directory] >
   
-      au < readySource ; crawling ; 2019 ; IOP Publishing Source Content 2019_1 ; 2019_1 >
-      au < readySource ; crawling ; 2019 ; IOP Publishing Source Content 2019_2 ; 2019_2 >
-      au < readySource ; crawling ; 2019 ; IOP Publishing Source Content 2019_3 ; 2019_3 >
-      au < readySource ; crawling ; 2019 ; IOP Publishing Source Content 2019_4 ; 2019_4 >
+      au < readySource ; frozen ; 2019 ; IOP Publishing Source Content 2019_1 ; 2019_1 >
+      au < readySource ; frozen ; 2019 ; IOP Publishing Source Content 2019_2 ; 2019_2 >
+      au < readySource ; frozen ; 2019 ; IOP Publishing Source Content 2019_3 ; 2019_3 >
+      au < readySource ; frozen ; 2019 ; IOP Publishing Source Content 2019_4 ; 2019_4 >
       au < readySource ; crawling ; 2020 ; IOP Publishing Source Content 2020_1 ; 2020_1 >
       au < exists ; exists ; 2020 ; IOP Publishing Source Content 2020_2 ; 2020_2 >
       au < exists ; exists ; 2020 ; IOP Publishing Source Content 2020_3 ; 2020_3 >
