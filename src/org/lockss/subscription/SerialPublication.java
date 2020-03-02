@@ -1,6 +1,6 @@
 /*
 
- Copyright (c) 2013-2019 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2020 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -255,14 +255,21 @@ public class SerialPublication {
   }
 
   public int getAuCount() {
-    if (auCount < 0 && tdbTitle == null) {
-      getTdbTitle();
+    final String DEBUG_HEADER = "getAuCount(): ";
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auCount = " + auCount);
+    if (auCount < 0) {
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "tdbTitle = " + tdbTitle);
+      if (tdbTitle == null) {
+	getTdbTitle();
+      }
 
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "tdbTitle = " + tdbTitle);
       if (tdbTitle != null) {
 	auCount = tdbTitle.getTdbAuCount();
       }
     }
 
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auCount = " + auCount);
     return auCount;
   }
 
