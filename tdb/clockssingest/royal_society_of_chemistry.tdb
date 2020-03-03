@@ -38,7 +38,7 @@
       au < manifest ; exists ; 2007 ; The Analyst Volume 132 ; 132 ; 2007 ; https://pubs.rsc.org/ ; >
       au < doNotProcess ; doNotProcess ; 2008 ; The Analyst Volume 133 ; 133 ; 2008 ; https://pubs.rsc.org/ ; >
       au < doNotProcess ; doNotProcess ; 2009 ; The Analyst Volume 134 ; 134 ; 2009 ; https://pubs.rsc.org/ ; >
-      au < frozen ; exists ; 2010 ; The Analyst Volume 135 ; 135 ; 2010 ; http://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2010 ; The Analyst Volume 135 ; 135 ; 2010 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2011 ; The Analyst Volume 136 ; 136 ; 2011 ; http://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2012 ; The Analyst Volume 137 ; 137 ; 2012 ; http://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2013 ; The Analyst Volume 138 ; 138 ; 2013 ; http://pubs.rsc.org/ ; >
@@ -63,8 +63,8 @@
 
       au < finished ; finished ; 2010 ; Analytical Methods Volume 2 ; 2 ; 2010 ; http://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2011 ; Analytical Methods Volume 3 ; 3 ; 2011 ; http://pubs.rsc.org/ ; >
-      au < frozen ; exists ; 2012 ; Analytical Methods Volume 4 ; 4 ; 2012 ; http://pubs.rsc.org/ ; >
-      au < frozen ; exists ; 2013 ; Analytical Methods Volume 5 ; 5 ; 2013 ; http://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2012 ; Analytical Methods Volume 4 ; 4 ; 2012 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2013 ; Analytical Methods Volume 5 ; 5 ; 2013 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2014 ; Analytical Methods Volume 6 ; 6 ; 2014 ; http://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2015 ; Analytical Methods Volume 7 ; 7 ; 2015 ; http://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2016 ; Analytical Methods Volume 8 ; 8 ; 2016 ; http://pubs.rsc.org/ ; >
@@ -123,7 +123,7 @@
       au < finished ; finished ; 2010 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 106 ; 106 ; 2010 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2011 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 107 ; 107 ; 2011 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2012 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 108 ; 108 ; 2012 ; http://pubs.rsc.org/ ; >
-      au < frozen ; exists ; 2013 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 109 ; 109 ; 2013 ; http://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2013 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 109 ; 109 ; 2013 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
 
   }
 
@@ -182,7 +182,7 @@
       param[journal_code] = cs
 
       au < zapped ; finished ; 2010 ; Chemical Society Reviews Volume 39 ; 39 ; 2010 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2011 ; Chemical Society Reviews Volume 40 ; 40 ; 2011 ; http://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2011 ; Chemical Society Reviews Volume 40 ; 40 ; 2011 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2012 ; Chemical Society Reviews Volume 41 ; 41 ; 2012 ; http://pubs.rsc.org/ ; >
       au < finished ; crawling ; 2013 ; Chemical Society Reviews Volume 42 ; 42 ; 2013 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < zapped ; finished ; 2014 ; Chemical Society Reviews Volume 43 ; 43 ; 2014 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
@@ -203,7 +203,7 @@
 
       param[journal_code] = rp
 
-      au < frozen ; exists ; 2010 ; Chemistry Education Research and Practice Volume 11 ; 11 ; 2010 ; http://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2010 ; Chemistry Education Research and Practice Volume 11 ; 11 ; 2010 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2011 ; Chemistry Education Research and Practice Volume 12 ; 12 ; 2011 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2012 ; Chemistry Education Research and Practice Volume 13 ; 13 ; 2012 ; http://pubs.rsc.org/ ; >
       au < finished ; finished ; 2013 ; Chemistry Education Research and Practice Volume 14 ; 14 ; 2013 ; http://pubs.rsc.org/ ; >
@@ -228,7 +228,7 @@
 
       au < frozen ; exists ; 2010 ; CrystEngComm Volume 12 ; 12 ; 2010 ; http://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2011 ; CrystEngComm Volume 13 ; 13 ; 2011 ; http://pubs.rsc.org/ ; >
-      au < frozen ; exists ; 2012 ; CrystEngComm Volume 14 ; 14 ; 2012 ; http://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2012 ; CrystEngComm Volume 14 ; 14 ; 2012 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2013 ; CrystEngComm Volume 15 ; 15 ; 2013 ; http://pubs.rsc.org/ ; >
       au < zapped ; finished ; 2014 ; CrystEngComm Volume 16 ; 16 ; 2014 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2015 ; CrystEngComm Volume 17 ; 17 ; 2015 ; http://pubs.rsc.org/ ; >
