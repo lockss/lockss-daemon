@@ -1,10 +1,6 @@
 /*
- * $Id: IdentifierListOaiPmhCrawlSeed.java 39864 2015-02-18 09:10:24Z thib_gc $
- */
 
-/*
-
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2020 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,15 +30,13 @@ package org.lockss.plugin.dspace;
 
 import java.io.IOException;
 import java.util.*;
-
+import org.dspace.xoai.model.oaipmh.Header;
+import org.dspace.xoai.serviceprovider.exceptions.BadArgumentException;
+import org.dspace.xoai.serviceprovider.parameters.ListIdentifiersParameters;
 import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.daemon.*;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 import org.lockss.util.Logger;
-
-import com.lyncode.xoai.model.oaipmh.Header;
-import com.lyncode.xoai.serviceprovider.exceptions.BadArgumentException;
-import com.lyncode.xoai.serviceprovider.parameters.ListIdentifiersParameters;
 
 public class IdentifierListOaiPmhCrawlSeed extends BaseOaiPmhCrawlSeed {
   private static final Logger log = 

@@ -1,10 +1,6 @@
 /*
- * $Id:$
- */
 
-/*
-
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2020 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,7 +31,9 @@ package org.lockss.plugin.dspace;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.BitSet;
-
+import org.dspace.xoai.serviceprovider.client.OAIClient;
+import org.dspace.xoai.serviceprovider.exceptions.HttpException;
+import org.dspace.xoai.serviceprovider.parameters.Parameters;
 import org.lockss.crawler.CrawlUrlData;
 import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.daemon.LockssWatchdog;
@@ -52,10 +50,6 @@ import org.lockss.util.IOUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 import org.lockss.util.urlconn.CacheException;
-
-import com.lyncode.xoai.serviceprovider.client.OAIClient;
-import com.lyncode.xoai.serviceprovider.exceptions.HttpException;
-import com.lyncode.xoai.serviceprovider.parameters.Parameters;
 
 public class UrlFetcherOaiClient implements OAIClient{
   private static final Logger log = Logger.getLogger(UrlFetcherOaiClient.class);

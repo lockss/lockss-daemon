@@ -1,10 +1,6 @@
 /*
- * $Id:$
- */
 
-/*
-
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2020 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,9 +28,9 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.respediatrica;
 
-import com.lyncode.xoai.serviceprovider.client.OAIClient;
-import com.lyncode.xoai.serviceprovider.exceptions.HttpException;
-import com.lyncode.xoai.serviceprovider.parameters.Parameters;
+import org.dspace.xoai.serviceprovider.client.OAIClient;
+import org.dspace.xoai.serviceprovider.exceptions.HttpException;
+import org.dspace.xoai.serviceprovider.parameters.Parameters;
 import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.plugin.UrlCacher;
 import org.lockss.plugin.UrlFetcher;
