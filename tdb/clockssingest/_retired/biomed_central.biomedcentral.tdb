@@ -3288,12 +3288,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2006 ; Journal of Inflammation Volume 3 ; 3 ; >
       au < doNotProcess ; exists ; 2007 ; Journal of Inflammation Volume 4 ; 4 ; >
       au < finished ; finished ; 2008 ; Journal of Inflammation Volume 5 ; 5 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2009 ; Journal of Inflammation Volume 6 ; 6 ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2010 ; Journal of Inflammation Volume 7 ; 7 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2011 ; Journal of Inflammation Volume 8 ; 8 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2009 ; Journal of Inflammation Volume 6 ; 6 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2010 ; Journal of Inflammation Volume 7 ; 7 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2011 ; Journal of Inflammation Volume 8 ; 8 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2012 ; Journal of Inflammation Volume 9 ; 9 ; >
       au < frozen ; exists ; 2013 ; Journal of Inflammation Volume 10 ; 10 ; >
-      au < finished ; crawling ; 2014 ; Journal of Inflammation Volume 11 ; 11 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2014 ; Journal of Inflammation Volume 11 ; 11 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; exists ; 2015 ; Journal of Inflammation Volume 12 ; 12 ; >
       
     }
@@ -3309,7 +3309,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 2052-0492
 
       au < finished ; finished ; 2013 ; Journal of Intensive Care Volume 1 ; 1 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2014 ; Journal of Intensive Care Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; Journal of Intensive Care Volume 2 ; 2 ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; Journal of Intensive Care Volume 3 [superseded] ; 3 ; >
       
     }
@@ -3325,13 +3325,13 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 1752-1947
 
       au < doNotProcess ; exists ; 2007 ; Journal of Medical Case Reports Volume 1 ; 1 ; >
-      au < finished ; crawling ; 2008 ; Journal of Medical Case Reports Volume 2 ; 2 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2009 ; Journal of Medical Case Reports Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2008 ; Journal of Medical Case Reports Volume 2 ; 2 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2009 ; Journal of Medical Case Reports Volume 3 ; 3 ; reingest2.clockss.org:8085 >
       au < zapped ; finished ; 2010 ; Journal of Medical Case Reports Volume 4 ; 4 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2011 ; Journal of Medical Case Reports Volume 5 ; 5 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2012 ; Journal of Medical Case Reports Volume 6 ; 6 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2011 ; Journal of Medical Case Reports Volume 5 ; 5 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2012 ; Journal of Medical Case Reports Volume 6 ; 6 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2013 ; Journal of Medical Case Reports Volume 7 ; 7 ; >
-      au < finished ; crawling ; 2014 ; Journal of Medical Case Reports Volume 8 ; 8 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; Journal of Medical Case Reports Volume 8 ; 8 ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; Journal of Medical Case Reports Volume 9 [superseded] ; 9 ; >
 
     }
@@ -3390,13 +3390,13 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2005 ; Journal of Nanobiotechnology Volume 3 ; 3 ; >
       au < doNotProcess ; exists ; 2006 ; Journal of Nanobiotechnology Volume 4 ; 4 ; >
       au < doNotProcess ; exists ; 2007 ; Journal of Nanobiotechnology Volume 5 ; 5 ; >
-      au < finished ; crawling ; 2008 ; Journal of Nanobiotechnology Volume 6 ; 6 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2009 ; Journal of Nanobiotechnology Volume 7 ; 7 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2008 ; Journal of Nanobiotechnology Volume 6 ; 6 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2009 ; Journal of Nanobiotechnology Volume 7 ; 7 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2010 ; Journal of Nanobiotechnology Volume 8 ; 8 ; >
-      au < finished ; crawling ; 2011 ; Journal of Nanobiotechnology Volume 9 ; 9 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2011 ; Journal of Nanobiotechnology Volume 9 ; 9 ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2012 ; Journal of Nanobiotechnology Volume 10 ; 10 ; >
-      au < finished ; crawling ; 2013 ; Journal of Nanobiotechnology Volume 11 ; 11 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2014 ; Journal of Nanobiotechnology Volume 12 ; 12 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2013 ; Journal of Nanobiotechnology Volume 11 ; 11 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2014 ; Journal of Nanobiotechnology Volume 12 ; 12 ; reingest3.clockss.org:8083 >
       au < superseded ; exists ; 2015 ; Journal of Nanobiotechnology Volume 13 [superseded] ; 13 ; >
 
     }
@@ -3417,13 +3417,13 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2005 ; Journal of Negative Results in Biomedicine Volume 4 ; 4 ; >
       au < doNotProcess ; exists ; 2006 ; Journal of Negative Results in Biomedicine Volume 5 ; 5 ; >
       au < doNotProcess ; exists ; 2007 ; Journal of Negative Results in Biomedicine Volume 6 ; 6 ; >
-      au < finished ; crawling ; 2008 ; Journal of Negative Results in Biomedicine Volume 7 ; 7 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2008 ; Journal of Negative Results in Biomedicine Volume 7 ; 7 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2009 ; Journal of Negative Results in Biomedicine Volume 8 ; 8 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2010 ; Journal of Negative Results in Biomedicine Volume 9 ; 9 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2011 ; Journal of Negative Results in Biomedicine Volume 10 ; 10 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2010 ; Journal of Negative Results in Biomedicine Volume 9 ; 9 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2011 ; Journal of Negative Results in Biomedicine Volume 10 ; 10 ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2012 ; Journal of Negative Results in Biomedicine Volume 11 ; 11 ; >
       au < finished ; finished ; 2013 ; Journal of Negative Results in BioMedicine Volume 12 ; 12 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; Journal of Negative Results in BioMedicine Volume 13 ; 13 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; Journal of Negative Results in BioMedicine Volume 13 ; 13 ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; Journal of Negative Results in BioMedicine Volume 14 [superseded] ; 14 ; >
 
     }
@@ -3440,9 +3440,9 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.jneurodevdisorders.com/
       param[journal_issn] = 1866-1955
 
-      au < finished ; crawling ; 2012 ; Journal of Neurodevelopmental Disorders Volume 4 ; 4 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2012 ; Journal of Neurodevelopmental Disorders Volume 4 ; 4 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2013 ; Journal of Neurodevelopmental Disorders Volume 5 ; 5 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2014 ; Journal of Neurodevelopmental Disorders Volume 6 ; 6 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; Journal of Neurodevelopmental Disorders Volume 6 ; 6 ; reingest4.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; Journal of Neurodevelopmental Disorders Volume 7 [superseded] ; 7 ; >
 
     }
@@ -3462,12 +3462,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2006 ; Journal of NeuroEngineering and Rehabilitation Volume 3 ; 3 ; >
       au < doNotProcess ; exists ; 2007 ; Journal of NeuroEngineering and Rehabilitation Volume 4 ; 4 ; >
       au < frozen ; exists ; 2008 ; Journal of NeuroEngineering and Rehabilitation Volume 5 ; 5 ; >
-      au < finished ; crawling ; 2009 ; Journal of NeuroEngineering and Rehabilitation Volume 6 ; 6 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2010 ; Journal of NeuroEngineering and Rehabilitation Volume 7 ; 7 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2009 ; Journal of NeuroEngineering and Rehabilitation Volume 6 ; 6 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2010 ; Journal of NeuroEngineering and Rehabilitation Volume 7 ; 7 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2011 ; Journal of NeuroEngineering and Rehabilitation Volume 8 ; 8 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2012 ; Journal of NeuroEngineering and Rehabilitation Volume 9 ; 9 ; >
       au < zapped ; finished ; 2013 ; Journal of NeuroEngineering and Rehabilitation Volume 10 ; 10 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; Journal of NeuroEngineering and Rehabilitation Volume 11 ; 11 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; Journal of NeuroEngineering and Rehabilitation Volume 11 ; 11 ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; Journal of NeuroEngineering and Rehabilitation Volume 12 [superseded] ; 12 ; >
 
     }
@@ -3486,13 +3486,13 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2005 ; Journal of Neuroinflammation Volume 2 ; 2 ; >
       au < doNotProcess ; exists ; 2006 ; Journal of Neuroinflammation Volume 3 ; 3 ; >
       au < doNotProcess ; exists ; 2007 ; Journal of Neuroinflammation Volume 4 ; 4 ; >
-      au < finished ; crawling ; 2008 ; Journal of Neuroinflammation Volume 5 ; 5 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2008 ; Journal of Neuroinflammation Volume 5 ; 5 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2009 ; Journal of Neuroinflammation Volume 6 ; 6 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2010 ; Journal of Neuroinflammation Volume 7 ; 7 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2010 ; Journal of Neuroinflammation Volume 7 ; 7 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2011 ; Journal of Neuroinflammation Volume 8 ; 8 ; >
       au < frozen ; exists ; 2012 ; Journal of Neuroinflammation Volume 9 ; 9 ; >
       au < zapped ; finished ; 2013 ; Journal of Neuroinflammation Volume 10 ; 10 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2014 ; Journal of Neuroinflammation Volume 11 ; 11 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; Journal of Neuroinflammation Volume 11 ; 11 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; exists ; 2015 ; Journal of Neuroinflammation Volume 12 ; 12 ; >
 
     }
@@ -3511,11 +3511,11 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2007 ; Journal of Occupational Medicine and Toxicology Volume 2 ; 2 ; >
       au < finished ; finished ; 2008 ; Journal of Occupational Medicine and Toxicology Volume 3 ; 3 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2009 ; Journal of Occupational Medicine and Toxicology Volume 4 ; 4 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2010 ; Journal of Occupational Medicine and Toxicology Volume 5 ; 5 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2010 ; Journal of Occupational Medicine and Toxicology Volume 5 ; 5 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2011 ; Journal of Occupational Medicine and Toxicology Volume 6 ; 6 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2012 ; Journal of Occupational Medicine and Toxicology Volume 7 ; 7 ; >
       au < finished ; finished ; 2013 ; Journal of Occupational Medicine and Toxicology Volume 8 ; 8 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2014 ; Journal of Occupational Medicine and Toxicology Volume 9 ; 9 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; Journal of Occupational Medicine and Toxicology Volume 9 ; 9 ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; Journal of Occupational Medicine and Toxicology Volume 10 [superseded] ; 10 ; >
 
     }
@@ -3537,7 +3537,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; finished ; 2009 ; Journal of Orthopaedic Surgery and Research Volume 4 ; 4 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2010 ; Journal of Orthopaedic Surgery and Research Volume 5 ; 5 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2011 ; Journal of Orthopaedic Surgery and Research Volume 6 ; 6 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2012 ; Journal of Orthopaedic Surgery and Research Volume 7 ; 7 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2012 ; Journal of Orthopaedic Surgery and Research Volume 7 ; 7 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2013 ; Journal of Orthopaedic Surgery and Research Volume 8 ; 8 ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2014 ; Journal of Orthopaedic Surgery and Research Volume 9 [superseded] ; 9 ; >
       au < superseded ; exists ; 2015 ; Journal of Orthopaedic Surgery and Research Volume 10 [superseded] ; 10 ; >
@@ -3572,11 +3572,11 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       comment[moved] = to new platform
 
       au < finished ; finished ; 2008 ; Journal of Ovarian Research Volume 1 ; 1 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2009 ; Journal of Ovarian Research Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2009 ; Journal of Ovarian Research Volume 2 ; 2 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2010 ; Journal of Ovarian Research Volume 3 ; 3 ; >
-      au < finished ; crawling ; 2011 ; Journal of Ovarian Research Volume 4 ; 4 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2011 ; Journal of Ovarian Research Volume 4 ; 4 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2012 ; Journal of Ovarian Research Volume 5 ; 5 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2013 ; Journal of Ovarian Research Volume 6 ; 6 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2013 ; Journal of Ovarian Research Volume 6 ; 6 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Journal of Ovarian Research Volume 7 ; 7 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; exists ; 2015 ; Journal of Ovarian Research Volume 8 ; 8 ; >
 
@@ -3591,8 +3591,8 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.joppp.org/
       param[journal_issn] = 2052-3211
 
-      au < finished ; crawling ; 2013 ; Journal of Pharmaceutical Policy and Practice Volume 6 ; 6 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; Journal of Pharmaceutical Policy and Practice Volume 7 ; 7 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2013 ; Journal of Pharmaceutical Policy and Practice Volume 6 ; 6 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; Journal of Pharmaceutical Policy and Practice Volume 7 ; 7 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; exists ; 2015 ; Journal of Pharmaceutical Policy and Practice Volume 8 ; 8 ; >
 
     }
@@ -3610,7 +3610,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       au < finished ; finished ; 2012 ; Journal of Physiological Anthropology Volume 31 ; 31 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2013 ; Journal of Physiological Anthropology Volume 32 ; 32 ; >
-      au < finished ; crawling ; 2014 ; Journal of Physiological Anthropology Volume 33 ; 33 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; Journal of Physiological Anthropology Volume 33 ; 33 ; reingest4.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; Journal of Physiological Anthropology Volume 34 [superseded] ; 34 ; >
 
     }
@@ -3635,7 +3635,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < frozen ; exists ; 2011 ; Journal of the International Society of Sports Nutrition Volume 8 ; 8 ; >
       au < frozen ; exists ; 2012 ; Journal of the International Society of Sports Nutrition Volume 9 ; 9 ; >
       au < frozen ; exists ; 2013 ; Journal of the International Society of Sports Nutrition Volume 10 ; 10 ; >
-      au < finished ; crawling ; 2014 ; Journal of the International Society of Sports Nutrition Volume 11 ; 11 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2014 ; Journal of the International Society of Sports Nutrition Volume 11 ; 11 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; exists ; 2015 ; Journal of the International Society of Sports Nutrition Volume 12 ; 12 ; >
 
     }
@@ -3651,7 +3651,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 2050-5736
 
       au < finished ; finished ; 2013 ; Journal of Therapeutic Ultrasound Volume 1 ; 1 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2014 ; Journal of Therapeutic Ultrasound Volume 2 ; 2 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; Journal of Therapeutic Ultrasound Volume 2 ; 2 ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; Journal of Therapeutic Ultrasound Volume 3 [superseded] ; 3 ; >
 
     }
@@ -3677,7 +3677,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < frozen ; exists ; 2011 ; Journal of Translational Medicine Volume 9 ; 9 ; >
       au < frozen ; exists ; 2012 ; Journal of Translational Medicine Volume 10 ; 10 ; >
       au < frozen ; exists ; 2013 ; Journal of Translational Medicine Volume 11 ; 11 ; >
-      au < finished ; crawling ; 2014 ; Journal of Translational Medicine Volume 12 ; 12 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2014 ; Journal of Translational Medicine Volume 12 ; 12 ; reingest3.clockss.org:8083 >
       au < superseded ; exists ; 2015 ; Journal of Translational Medicine Volume 13 [superseded] ; 13 ; >
 
     }
@@ -3699,7 +3699,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; finished ; 2011 ; Journal of Trauma Management & Outcomes Volume 5 ; 5 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2012 ; Journal of Trauma Management & Outcomes Volume 6 ; 6 ; >
       au < finished ; finished ; 2013 ; Journal of Trauma Management & Outcomes Volume 7 ; 7 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; Journal of Trauma Management & Outcomes Volume 8 ; 8 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; Journal of Trauma Management & Outcomes Volume 8 ; 8 ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; Journal of Trauma Management & Outcomes Volume 9 [superseded] ; 9 ; >
 
     }
@@ -3742,7 +3742,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < zapped ; finished ; 2011 ; Lipids in Health and Disease Volume 10 ; 10 ; >
       au < frozen ; exists ; 2012 ; Lipids in Health and Disease Volume 11 ; 11 ; >
       au < zapped ; finished ; 2013 ; Lipids in Health and Disease Volume 12 ; 12 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; Lipids in Health and Disease Volume 13 ; 13 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; Lipids in Health and Disease Volume 13 ; 13 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; exists ; 2015 ; Lipids in Health and Disease Volume 14 ; 14 ; >
 
     }
@@ -3759,7 +3759,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       au < finished ; finished ; 2012 ; Longevity & Healthspan Volume 1 ; 1 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2013 ; Longevity & Healthspan Volume 2 ; 2 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2014 ; Longevity & Healthspan Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2014 ; Longevity & Healthspan Volume 3 ; 3 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -3785,7 +3785,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; finished ; 2011 ; Malaria Journal Volume 10 ; 10 ; >
       au < frozen ; exists ; 2012 ; Malaria Journal Volume 11 ; 11 ; >
       au < frozen ; exists ; 2013 ; Malaria Journal Volume 12 ; 12 ; >
-      au < finished ; crawling ; 2014 ; Malaria Journal Volume 13 ; 13 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; Malaria Journal Volume 13 ; 13 ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; Malaria Journal Volume 14 [superseded] ; 14 ; >
 
     }
@@ -3802,9 +3802,9 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       #moving to Wolters Kluwer Health 2016
 
       au < finished ; finished ; 2011 ; Medical Gas Research Volume 1 ; 1 ; >
-      au < finished ; crawling ; 2012 ; Medical Gas Research Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2012 ; Medical Gas Research Volume 2 ; 2 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2013 ; Medical Gas Research Volume 3 ; 3 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2014 ; Medical Gas Research Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2014 ; Medical Gas Research Volume 4 ; 4 ; reingest3.clockss.org:8083 >
       au < superseded ; exists ; 2015 ; Medical Gas Research Volume 5 [superseded] ; 5 ; >
 
     }
@@ -3825,13 +3825,13 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2005 ; Microbial Cell Factories Volume 4 ; 4 ; >
       au < doNotProcess ; exists ; 2006 ; Microbial Cell Factories Volume 5 ; 5 ; >
       au < doNotProcess ; exists ; 2007 ; Microbial Cell Factories Volume 6 ; 6 ; >
-      au < finished ; crawling ; 2008 ; Microbial Cell Factories Volume 7 ; 7 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2009 ; Microbial Cell Factories Volume 8 ; 8 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2010 ; Microbial Cell Factories Volume 9 ; 9 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2008 ; Microbial Cell Factories Volume 7 ; 7 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2009 ; Microbial Cell Factories Volume 8 ; 8 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2010 ; Microbial Cell Factories Volume 9 ; 9 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2011 ; Microbial Cell Factories Volume 10 ; 10 ; >
       au < frozen ; exists ; 2012 ; Microbial Cell Factories Volume 11 ; 11 ; >
       au < finished ; finished ; 2013 ; Microbial Cell Factories Volume 12 ; 12 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; Microbial Cell Factories Volume 13 ; 13 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; Microbial Cell Factories Volume 13 ; 13 ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; Microbial Cell Factories Volume 14 [superseded] ; 14 ; >
 
     }
@@ -3865,7 +3865,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 2049-2618
 
       au < finished ; finished ; 2013 ; Microbiome Volume 1 ; 1 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; Microbiome Volume 2 ; 2 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; Microbiome Volume 2 ; 2 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; exists ; 2015 ; Microbiome Volume 3 ; 3 ; >
 
     }
@@ -3880,7 +3880,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.mmrjournal.org/
       param[journal_issn] = 2054-9369
 
-      au < finished ; crawling ; 2014 ; Military Medical Research Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; Military Medical Research Volume 1 ; 1 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; exists ; 2015 ; Military Medical Research Volume 2 ; 2 ; >
 
     }
@@ -3899,7 +3899,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; finished ; 2011 ; Mobile DNA Volume 2 ; 2 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2012 ; Mobile DNA Volume 3 ; 3 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2013 ; Mobile DNA Volume 4 ; 4 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; Mobile DNA Volume 5 ; 5 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2014 ; Mobile DNA Volume 5 ; 5 ; reingest2.clockss.org:8085 >
       au < superseded ; exists ; 2015 ; Mobile DNA Volume 6 [superseded] ; 6 ; >
 
     }
@@ -3914,11 +3914,11 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.molecularautism.com/
       param[journal_issn] = 2040-2392
 
-      au < finished ; crawling ; 2010 ; Molecular Autism Volume 1 ; 1 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2011 ; Molecular Autism Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2010 ; Molecular Autism Volume 1 ; 1 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2011 ; Molecular Autism Volume 2 ; 2 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2012 ; Molecular Autism Volume 3 ; 3 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2013 ; Molecular Autism Volume 4 ; 4 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; Molecular Autism Volume 5 ; 5 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; Molecular Autism Volume 5 ; 5 ; reingest4.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; Molecular Autism Volume 6 [superseded] ; 6 ; >
 
     }
@@ -3934,7 +3934,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 2052-8426
 
       au < finished ; finished ; 2013 ; Molecular and Cellular Therapies Volume 1 ; 1 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; Molecular and Cellular Therapies Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2014 ; Molecular and Cellular Therapies Volume 2 ; 2 ; reingest3.clockss.org:8083 >
       au < superseded ; exists ; 2015 ; Molecular and Cellular Therapies Volume 3 [superseded] ; 3 ; >
 
     }
@@ -3955,7 +3955,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; finished ; 2011 ; Molecular Brain Volume 4 ; 4 ; >
       au < frozen ; exists ; 2012 ; Molecular Brain Volume 5 ; 5 ; >
       au < zapped ; finished ; 2013 ; Molecular Brain Volume 6 ; 6 ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; Molecular Brain Volume 7 ; 7 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; Molecular Brain Volume 7 ; 7 ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; Molecular Brain Volume 8 [superseded] ; 8 ; >
 
     }
@@ -3983,7 +3983,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; frozen ; 2011 ; Molecular Cancer Volume 10 ; 10 ; >
       au < frozen ; exists ; 2012 ; Molecular Cancer Volume 11 ; 11 ; >
       au < finished ; finished ; 2013 ; Molecular Cancer Volume 12 ; 12 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; Molecular Cancer Volume 13 ; 13 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; Molecular Cancer Volume 13 ; 13 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; exists ; 2015 ; Molecular Cancer Volume 14 ; 14 ; >
 
     }
@@ -4004,7 +4004,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; finished ; 2011 ; Molecular Cytogenetics Volume 4 ; 4 ; >
       au < frozen ; exists ; 2012 ; Molecular Cytogenetics Volume 5 ; 5 ; >
       au < finished ; finished ; 2013 ; Molecular Cytogenetics Volume 6 ; 6 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; Molecular Cytogenetics Volume 7 ; 7 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; Molecular Cytogenetics Volume 7 ; 7 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; exists ; 2015 ; Molecular Cytogenetics Volume 8 ; 8 ; >
 
     }
@@ -4027,7 +4027,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; finished ; 2011 ; Molecular Neurodegeneration Volume 6 ; 6 ; >
       au < frozen ; exists ; 2012 ; Molecular Neurodegeneration Volume 7 ; 7 ; >
       au < frozen ; exists ; 2013 ; Molecular Neurodegeneration Volume 8 ; 8 ; >
-      au < finished ; crawling ; 2014 ; Molecular Neurodegeneration Volume 9 ; 9 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2014 ; Molecular Neurodegeneration Volume 9 ; 9 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; exists ; 2015 ; Molecular Neurodegeneration Volume 10 ; 10 ; >
       
     }
@@ -4086,7 +4086,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; finished ; 2011 ; Multidisciplinary Respiratory Medicine Volume 6 ; 6 ; >
       au < frozen ; exists ; 2012 ; Multidisciplinary Respiratory Medicine Volume 7 ; 7 ; >
       au < finished ; finished ; 2013 ; Multidisciplinary Respiratory Medicine Volume 8 ; 8 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; Multidisciplinary Respiratory Medicine Volume 9 ; 9 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2014 ; Multidisciplinary Respiratory Medicine Volume 9 ; 9 ; reingest3.clockss.org:8083 >
       au < superseded ; exists ; 2015 ; Multidisciplinary Respiratory Medicine Volume 10 [superseded] ; 10 ; >
 
     }
@@ -4127,7 +4127,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       au < doNotProcess ; exists ; 2007 ; Nonlinear Biomedical Physics Volume 1 ; 1 ; >
       au < finished ; finished ; 2008 ; Nonlinear Biomedical Physics Volume 2 ; 2 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2009 ; Nonlinear Biomedical Physics Volume 3 ; 3 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2009 ; Nonlinear Biomedical Physics Volume 3 ; 3 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2010 ; Nonlinear Biomedical Physics Volume 4 ; 4 ; >
       au < finished ; finished ; 2011 ; Nonlinear Biomedical Physics Volume 5 ; 5 ; >
       au < finished ; finished ; 2012 ; Nonlinear Biomedical Physics Volume 6 ; 6 ; reingest3.clockss.org:8083 >
@@ -4179,9 +4179,9 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; finished ; 2009 ; Nutrition Journal Volume 8 ; 8 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2010 ; Nutrition Journal Volume 9 ; 9 ; >
       au < finished ; finished ; 2011 ; Nutrition Journal Volume 10 ; 10 ; >
-      au < finished ; crawling ; 2012 ; Nutrition Journal Volume 11 ; 11 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2012 ; Nutrition Journal Volume 11 ; 11 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2013 ; Nutrition Journal Volume 12 ; 12 ; >
-      au < finished ; crawling ; 2014 ; Nutrition Journal Volume 13 ; 13 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; Nutrition Journal Volume 13 ; 13 ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; Nutrition Journal Volume 14 [superseded] ; 14 ; >
       
     }
@@ -4204,7 +4204,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; finished ; 2011 ; Orphanet Journal of Rare Diseases Volume 6 ; 6 ; >
       au < frozen ; exists ; 2012 ; Orphanet Journal of Rare Diseases Volume 7 ; 7 ; >
       au < zapped ; finished ; 2013 ; Orphanet Journal of Rare Diseases Volume 8 ; 8 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; Orphanet Journal of Rare Diseases Volume 9 ; 9 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; Orphanet Journal of Rare Diseases Volume 9 ; 9 ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; Orphanet Journal of Rare Diseases Volume 10 [superseded] ; 10 ; >
 
     }
@@ -4286,12 +4286,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       au < doNotProcess ; exists ; 2007 ; Patient Safety in Surgery Volume 1 ; 1 ; >
       au < finished ; finished ; 2008 ; Patient Safety in Surgery Volume 2 ; 2 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2009 ; Patient Safety in Surgery Volume 3 ; 3 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2009 ; Patient Safety in Surgery Volume 3 ; 3 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2010 ; Patient Safety in Surgery Volume 4 ; 4 ; >
       au < finished ; finished ; 2011 ; Patient Safety in Surgery Volume 5 ; 5 ; >
       au < finished ; finished ; 2012 ; Patient Safety in Surgery Volume 6 ; 6 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2013 ; Patient Safety in Surgery Volume 7 ; 7 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; Patient Safety in Surgery Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2014 ; Patient Safety in Surgery Volume 8 ; 8 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; exists ; 2015 ; Patient Safety in Surgery Volume 9 ; 9 ; >
 
     }
@@ -4312,12 +4312,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2006 ; Pediatric Rheumatology Volume 4 ; 4 ; >
       au < doNotProcess ; exists ; 2007 ; Pediatric Rheumatology Volume 5 ; 5 ; >
       au < frozen ; exists ; 2008 ; Pediatric Rheumatology Volume 6 ; 6 ; >
-      au < finished ; crawling ; 2009 ; Pediatric Rheumatology Volume 7 ; 7 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2009 ; Pediatric Rheumatology Volume 7 ; 7 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2010 ; Pediatric Rheumatology Volume 8 ; 8 ; >
       au < finished ; finished ; 2011 ; Pediatric Rheumatology Volume 9 ; 9 ; >
       au < frozen ; exists ; 2012 ; Pediatric Rheumatology Volume 10 ; 10 ; >
       au < frozen ; exists ; 2013 ; Pediatric Rheumatology Volume 11 ; 11 ; >
-      au < finished ; crawling ; 2014 ; Pediatric Rheumatology Volume 12 ; 12 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2014 ; Pediatric Rheumatology Volume 12 ; 12 ; reingest2.clockss.org:8085 >
       au < superseded ; exists ; 2015 ; Pediatric Rheumatology Volume 13 [superseded] ; 13 ; >
 
     }
@@ -4335,7 +4335,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       au < finished ; finished ; 2012 ; Perioperative Medicine Volume 1 ; 1 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2013 ; Perioperative Medicine Volume 2 ; 2 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2014 ; Perioperative Medicine Volume 3 ; 3 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; Perioperative Medicine Volume 3 ; 3 ; reingest4.clockss.org:8082 >
       au < doNotProcess ; exists ; 2015 ; Perioperative Medicine Volume 4 ; 4 ; >
 
     }
@@ -4358,7 +4358,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; finished ; 2011 ; Philosophy, Ethics, and Humanities in Medicine Volume 6 ; 6 ; >
       au < finished ; finished ; 2012 ; Philosophy, Ethics, and Humanities in Medicine Volume 7 ; 7 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2013 ; Philosophy, Ethics, and Humanities in Medicine Volume 8 ; 8 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2014 ; Philosophy, Ethics, and Humanities in Medicine Volume 9 ; 9 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2014 ; Philosophy, Ethics, and Humanities in Medicine Volume 9 ; 9 ; reingest3.clockss.org:8083 >
       au < superseded ; exists ; 2015 ; Philosophy, Ethics, and Humanities in Medicine Volume 10 [superseded] ; 10 ; >
 
     }
@@ -4381,8 +4381,8 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; finished ; 2010 ; Plant Methods Volume 6 ; 6 ; >
       au < finished ; finished ; 2011 ; Plant Methods Volume 7 ; 7 ; >
       au < finished ; finished ; 2012 ; Plant Methods Volume 8 ; 8 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2013 ; Plant Methods Volume 9 ; 9 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; Plant Methods Volume 10 ; 10 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2013 ; Plant Methods Volume 9 ; 9 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; Plant Methods Volume 10 ; 10 ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; Plant Methods Volume 11 [superseded] ; 11 ; >
 
     }
@@ -4407,8 +4407,8 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < frozen ; exists ; 2010 ; Population Health Metrics Volume 8 ; 8 ; >
       au < finished ; finished ; 2011 ; Population Health Metrics Volume 9 ; 9 ; >
       au < frozen ; exists ; 2012 ; Population Health Metrics Volume 10 ; 10 ; >
-      au < finished ; crawling ; 2013 ; Population Health Metrics Volume 11 ; 11 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; Population Health Metrics Volume 12 ; 12 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2013 ; Population Health Metrics Volume 11 ; 11 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; Population Health Metrics Volume 12 ; 12 ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; Population Health Metrics Volume 13 [superseded] ; 13 ; >
 
     }
@@ -4434,7 +4434,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < zapped ; finished ; 2011 ; Proteome Science Volume 9 ; 9 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2012 ; Proteome Science Volume 10 ; 10 ; >
       au < frozen ; exists ; 2013 ; Proteome Science Volume 11 ; 11 ; >
-      au < finished ; crawling ; 2014 ; Proteome Science Volume 12 ; 12 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2014 ; Proteome Science Volume 12 ; 12 ; reingest2.clockss.org:8085 >
       au < superseded ; exists ; 2015 ; Proteome Science Volume 13 [superseded] ; 13 ; >
 
     }
@@ -4457,7 +4457,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < zapped ; finished ; 2011 ; Radiation Oncology Volume 6 ; 6 ; >
       au < frozen ; exists ; 2012 ; Radiation Oncology Volume 7 ; 7 ; >
       au < frozen ; exists ; 2013 ; Radiation Oncology Volume 8 ; 8 ; >
-      au < finished ; crawling ; 2014 ; Radiation Oncology Volume 9 ; 9 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2014 ; Radiation Oncology Volume 9 ; 9 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; exists ; 2015 ; Radiation Oncology Volume 10 ; 10 ; >
 
     }
@@ -4500,7 +4500,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; finished ; 2011 ; Reproductive Biology and Endocrinology Volume 9 ; 9 ; >
       au < frozen ; exists ; 2012 ; Reproductive Biology and Endocrinology Volume 10 ; 10 ; >
       au < frozen ; exists ; 2013 ; Reproductive Biology and Endocrinology Volume 11 ; 11 ; >
-      au < finished ; crawling ; 2014 ; Reproductive Biology and Endocrinology Volume 12 ; 12 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; Reproductive Biology and Endocrinology Volume 12 ; 12 ; reingest4.clockss.org:8082 >
       au < doNotProcess ; exists ; 2015 ; Reproductive Biology and Endocrinology Volume 13 ; 13 ; >
 
     }
@@ -4570,7 +4570,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; finished ; 2008 ; Respiratory Research Volume 9 ; 9 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2009 ; Respiratory Research Volume 10 ; 10 ; reingest3.clockss.org:8083 >
       au < zapped ; finished ; 2010 ; Respiratory Research Volume 11 ; 11 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2011 ; Respiratory Research Volume 12 ; 12 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2011 ; Respiratory Research Volume 12 ; 12 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2012 ; Respiratory Research Volume 13 ; 13 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2013 ; Respiratory Research Volume 14 ; 14 ; >
       }
@@ -4596,7 +4596,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; finished ; 2011 ; Retrovirology Volume 8 ; 8 ; >
       au < frozen ; exists ; 2012 ; Retrovirology Volume 9 ; 9 ; >
       au < frozen ; exists ; 2013 ; Retrovirology Volume 10 ; 10 ; >
-      au < finished ; crawling ; 2014 ; Retrovirology Volume 11 ; 11 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; Retrovirology Volume 11 ; 11 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; exists ; 2015 ; Retrovirology Volume 12 ; 12 ; >
 
     }
@@ -4661,7 +4661,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < frozen ; exists ; 2011 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 19 ; 19 ; >
       au < frozen ; exists ; 2012 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 20 ; 20 ; >
       au < frozen ; exists ; 2013 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 21 ; 21 ; >
-      au < finished ; crawling ; 2014 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 22 ; 22 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 22 ; 22 ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 23 [superseded] ; 23 ; >
 
     }
@@ -4721,7 +4721,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < zapped ; finished ; 2011 ; Skeletal Muscle Volume 1 ; 1 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2012 ; Skeletal Muscle Volume 2 ; 2 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2013 ; Skeletal Muscle Volume 3 ; 3 ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; Skeletal Muscle Volume 4 ; 4 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; Skeletal Muscle Volume 4 ; 4 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; exists ; 2015 ; Skeletal Muscle Volume 5 ; 5 ; >
 
     }
@@ -4738,13 +4738,13 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       au < doNotProcess ; exists ; 2006 ; Source Code for Biology and Medicine Volume 1 ; 1 ; >
       au < doNotProcess ; exists ; 2007 ; Source Code for Biology and Medicine Volume 2 ; 2 ; >
-      au < finished ; crawling ; 2008 ; Source Code for Biology and Medicine Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2008 ; Source Code for Biology and Medicine Volume 3 ; 3 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2009 ; Source Code for Biology and Medicine Volume 4 ; 4 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2010 ; Source Code for Biology and Medicine Volume 5 ; 5 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2011 ; Source Code for Biology and Medicine Volume 6 ; 6 ; >
       au < finished ; finished ; 2012 ; Source Code for Biology and Medicine Volume 7 ; 7 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2013 ; Source Code for Biology and Medicine Volume 8 ; 8 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2014 ; Source Code for Biology and Medicine Volume 9 ; 9 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2014 ; Source Code for Biology and Medicine Volume 9 ; 9 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; exists ; 2015 ; Source Code for Biology and Medicine Volume 10 ; 10 ; >
 
     }
@@ -4792,10 +4792,10 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2006 ; Substance Abuse Treatment, Prevention, and Policy Volume 1 ; 1 ; >
       au < doNotProcess ; exists ; 2007 ; Substance Abuse Treatment, Prevention, and Policy Volume 2 ; 2 ; >
       au < frozen ; exists ; 2008 ; Substance Abuse Treatment, Prevention, and Policy Volume 3 ; 3 ; >
-      au < finished ; crawling ; 2009 ; Substance Abuse Treatment, Prevention, and Policy Volume 4 ; 4 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2009 ; Substance Abuse Treatment, Prevention, and Policy Volume 4 ; 4 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2010 ; Substance Abuse Treatment, Prevention, and Policy Volume 5 ; 5 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2011 ; Substance Abuse Treatment, Prevention, and Policy Volume 6 ; 6 ; >
-      au < finished ; crawling ; 2012 ; Substance Abuse Treatment, Prevention, and Policy Volume 7 ; 7 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2012 ; Substance Abuse Treatment, Prevention, and Policy Volume 7 ; 7 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2013 ; Substance Abuse Treatment, Prevention, and Policy Volume 8 ; 8 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Substance Abuse Treatment, Prevention, and Policy Volume 9 ; 9 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; exists ; 2015 ; Substance Abuse Treatment, Prevention, and Policy Volume 10 ; 10 ; >
@@ -4815,7 +4815,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       au < finished ; finished ; 2012 ; Systematic Reviews Volume 1 ; 1 ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2013 ; Systematic Reviews Volume 2 ; 2 ; >
-      au < finished ; crawling ; 2014 ; Systematic Reviews Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2014 ; Systematic Reviews Volume 3 ; 3 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; exists ; 2015 ; Systematic Reviews Volume 4 ; 4 ; >
 
     }
@@ -4840,7 +4840,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; frozen ; 2011 ; Theoretical Biology and Medical Modelling Volume 8 ; 8 ; >
       au < frozen ; exists ; 2012 ; Theoretical Biology and Medical Modelling Volume 9 ; 9 ; >
       au < zapped ; finished ; 2013 ; Theoretical Biology and Medical Modelling Volume 10 ; 10 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; Theoretical Biology and Medical Modelling Volume 11 ; 11 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; Theoretical Biology and Medical Modelling Volume 11 ; 11 ; reingest4.clockss.org:8082 >
       au < doNotProcess ; exists ; 2015 ; Theoretical Biology and Medical Modelling Volume 12 ; 12 ; >
 
     }
@@ -4866,7 +4866,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; finished ; 2011 ; Thrombosis Journal Volume 9 ; 9 ; >
       au < frozen ; exists ; 2012 ; Thrombosis Journal Volume 10 ; 10 ; >
       au < finished ; finished ; 2013 ; Thrombosis Journal Volume 11 ; 11 ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; Thrombosis Journal Volume 12 ; 12 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; Thrombosis Journal Volume 12 ; 12 ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; Thrombosis Journal Volume 13 [superseded] ; 13 ; >
 
     }
@@ -4887,7 +4887,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; finished ; 2011 ; Thyroid Research Volume 4 ; 4 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2012 ; Thyroid Research Volume 5 ; 5 ; >
       au < frozen ; exists ; 2013 ; Thyroid Research Volume 6 ; 6 ; >
-      au < finished ; crawling ; 2014 ; Thyroid Research Volume 7 ; 7 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; Thyroid Research Volume 7 ; 7 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; exists ; 2015 ; Thyroid Research Volume 8 ; 8 ; >
 
     }
@@ -4905,7 +4905,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2002-2003 ; Tobacco Induced Diseases Volume 1 ; 1 ; >
       au < doNotProcess ; exists ; 2004 ; Tobacco Induced Diseases Volume 2 ; 2 ; >
       au < doNotProcess ; exists ; 2005-2007 ; Tobacco Induced Diseases Volume 3 ; 3 ; >
-      au < finished ; crawling ; 2008 ; Tobacco Induced Diseases Volume 4 ; 4 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2008 ; Tobacco Induced Diseases Volume 4 ; 4 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2009 ; Tobacco Induced Diseases Volume 5 ; 5 ; reingest4.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 0 ; Tobacco Induced Diseases Volume 6 ; 6 ; > #malformed
       au < doNotProcess ; doNotProcess ; 0 ; Tobacco Induced Diseases Volume 7 ; 7 ; > #malformed
@@ -4913,7 +4913,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; finished ; 2011 ; Tobacco Induced Diseases Volume 9 ; 9 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2012 ; Tobacco Induced Diseases Volume 10 ; 10 ; >
       au < finished ; finished ; 2013 ; Tobacco Induced Diseases Volume 11 ; 11 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; Tobacco Induced Diseases Volume 12 ; 12 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2014 ; Tobacco Induced Diseases Volume 12 ; 12 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; exists ; 2015 ; Tobacco Induced Diseases Volume 13 ; 13 ; >
 
     }
@@ -4930,7 +4930,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       au < finished ; finished ; 2012 ; Translational Neurodegeneration Volume 1 ; 1 ; >
       au < finished ; finished ; 2013 ; Translational Neurodegeneration Volume 2 ; 2 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; Translational Neurodegeneration Volume 3 ; 3 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; Translational Neurodegeneration Volume 3 ; 3 ; reingest4.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; Translational Neurodegeneration Volume 4 [superseded] ; 4 ; >
 
     }
@@ -4948,7 +4948,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       au < finished ; finished ; 2012 ; Transplantation Research Volume 1 ; 1 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2013 ; Transplantation Research Volume 2 ; 2 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2014 ; Transplantation Research Volume 3 ; 3 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; Transplantation Research Volume 3 ; 3 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; exists ; 2015 ; Transplantation Research Volume 4 ; 4 ; >
 
     }
@@ -4973,13 +4973,13 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2005 ; Trials Volume 6 ; 6 ; >
       au < doNotProcess ; exists ; 2006 ; Trials Volume 7 ; 7 ; >
       au < doNotProcess ; exists ; 2007 ; Trials Volume 8 ; 8 ; >
-      au < finished ; crawling ; 2008 ; Trials Volume 9 ; 9 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2008 ; Trials Volume 9 ; 9 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2009 ; Trials Volume 10 ; 10 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2010 ; Trials Volume 11 ; 11 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2010 ; Trials Volume 11 ; 11 ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2011 ; Trials Volume 12 ; 12 ; >
       au < frozen ; exists ; 2012 ; Trials Volume 13 ; 13 ; >
       au < frozen ; exists ; 2013 ; Trials Volume 14 ; 14 ; >
-      au < finished ; crawling ; 2014 ; Trials Volume 15 ; 15 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2014 ; Trials Volume 15 ; 15 ; reingest2.clockss.org:8085 >
       au < superseded ; exists ; 2015 ; Trials Volume 16 [superseded] ; 16 ; >
 
     }
@@ -4999,7 +4999,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; finished ; 2011 ; Vascular Cell Volume 3 ; 3 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2012 ; Vascular Cell Volume 4 ; 4 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2013 ; Vascular Cell Volume 5 ; 5 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; Vascular Cell Volume 6 ; 6 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2014 ; Vascular Cell Volume 6 ; 6 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; exists ; 2015 ; Vascular Cell Volume 7 ; 7 ; >
 
     }
@@ -5017,7 +5017,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; finished ; 2011 ; Veterinary Research Volume 42 ; 42 ; >
       au < frozen ; exists ; 2012 ; Veterinary Research Volume 43 ; 43 ; >
       au < zapped ; finished ; 2013 ; Veterinary Research Volume 44 ; 44 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; Veterinary Research Volume 45 ; 45 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; Veterinary Research Volume 45 ; 45 ; reingest4.clockss.org:8082 >
       au < doNotProcess ; exists ; 2015 ; Veterinary Research Volume 46 ; 46 ; >
 
     }
@@ -5037,12 +5037,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2006 ; Virology Journal Volume 3 ; 3 ; >
       au < doNotProcess ; exists ; 2007 ; Virology Journal Volume 4 ; 4 ; >
       au < zapped ; finished ; 2008 ; Virology Journal Volume 5 ; 5 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2009 ; Virology Journal Volume 6 ; 6 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2009 ; Virology Journal Volume 6 ; 6 ; reingest5.clockss.org:8082 >
       au < zapped ; finished ; 2010 ; Virology Journal Volume 7 ; 7 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2011 ; Virology Journal Volume 8 ; 8 ; >
       au < frozen ; exists ; 2012 ; Virology Journal Volume 9 ; 9 ; >
       au < frozen ; exists ; 2013 ; Virology Journal Volume 10 ; 10 ; >
-      au < finished ; crawling ; 2014 ; Virology Journal Volume 11 ; 11 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; Virology Journal Volume 11 ; 11 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; exists ; 2015 ; Virology Journal Volume 12 ; 12 ; >
 
     }
@@ -5105,7 +5105,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; finished ; 2011 ; World Journal of Emergency Surgery Volume 6 ; 6 ; >
       au < finished ; finished ; 2012 ; World Journal of Emergency Surgery Volume 7 ; 7 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2013 ; World Journal of Emergency Surgery Volume 8 ; 8 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; World Journal of Emergency Surgery Volume 9 ; 9 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2014 ; World Journal of Emergency Surgery Volume 9 ; 9 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; exists ; 2015 ; World Journal of Emergency Surgery Volume 10 ; 10 ; >
 
     }
@@ -5132,7 +5132,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; finished ; 2011 ; World Journal of Surgical Oncology Volume 9 ; 9 ; >
       au < zapped ; finished ; 2012 ; World Journal of Surgical Oncology Volume 10 ; 10 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2013 ; World Journal of Surgical Oncology Volume 11 ; 11 ; >
-      au < finished ; crawling ; 2014 ; World Journal of Surgical Oncology Volume 12 ; 12 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; World Journal of Surgical Oncology Volume 12 ; 12 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; exists ; 2015 ; World Journal of Surgical Oncology Volume 13 ; 13 ; >
 
     }
@@ -5166,7 +5166,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 2053-7166
       comment[platform] = BioMedCentral
 
-      au < finished ; crawling ; 2014 ; Avian Research Volume 5 ; 5 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2014 ; Avian Research Volume 5 ; 5 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; exists ; 2015 ; Avian Research Volume 6 ; 6 ; >
 
     }
@@ -5199,7 +5199,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       comment[platform] = BioMedCentral
       comment[moved] = to new platform
 
-      au < finished ; crawling ; 2014 ; Climate Change Responses Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; Climate Change Responses Volume 1 ; 1 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; exists ; 2015 ; Climate Change Responses Volume 2 ; 2 ; >
 
     }
@@ -5215,7 +5215,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 2326-0254
       comment[platform] = BioMedCentral
 
-      au < finished ; crawling ; 2014 ; Eye and Vision Volume 1 ; 1 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; Eye and Vision Volume 1 ; 1 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; exists ; 2015 ; Eye and Vision Volume 2 ; 2 ; >
 
     }
@@ -5299,7 +5299,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 1944-3277
       comment[platform] = BioMedCentral
 
-      au < finished ; crawling ; 2014 ; Standards in Genomic Sciences Volume 9 ; 9 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2014 ; Standards in Genomic Sciences Volume 9 ; 9 ; reingest2.clockss.org:8085 >
 
     }
   
