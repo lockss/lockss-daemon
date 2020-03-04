@@ -858,6 +858,21 @@
   {
 
       title <
+        name = Anglo Saxonica ;
+        eissn = 2184-6006
+      >
+
+      comment[publisher] = Ubiquity Press
+#      param[base_url] = https://www.revista-anglo-saxonica.org/
+
+      au < exists ; exists ; 2019 ; 17 ; Architectural Histories Volume 2019 ; 2019 ; https://www.revista-anglo-saxonica.org/ ; >
+      au < exists ; exists ; 2020 ; 18 ; Architectural Histories Volume 2020 ; 2020 ; https://www.revista-anglo-saxonica.org/ ; >
+
+  }
+
+  {
+
+      title <
         name = ARENA Journal of Architectural Research ;
         eissn = 2397-0820
       >
@@ -1453,6 +1468,75 @@
 #      param[base_url] = https://journalofmore.org/
 
       au < finished ; crawling ; 2016 ; 4 ; Journal of Montessori Research & Education Volume 2016 ; 2016 ; https://journalofmore.org/ ; reingest3.clockss.org:8083 >
+
+  }
+
+  {
+
+      title <
+        name = Continuity in Education ;
+        eissn = 2631-9179
+      >
+
+      comment[publisher] = Ubiquity Press
+#      param[base_url] = https://continuityineducation.org/
+
+      au < exists ; exists ; 2020 ; 1 ; Continuity in Education Volume 2020 ; 2020 ; https://continuityineducation.org/ ; >
+
+  }
+
+  {
+
+      title <
+        name = International Journal of the Commons ;
+        eissn = 1875-0281
+      >
+
+      comment[publisher] = Ubiquity Press
+#      param[base_url] =  https://www.thecommonsjournal.org/
+
+      au < exists ; exists ; 2007 ; 1 ; Continuity in Education Volume 2007 ; 2007 ;  https://www.thecommonsjournal.org/ ; >
+      au < exists ; exists ; 2008 ; 2 ; Continuity in Education Volume 2008 ; 2008 ;  https://www.thecommonsjournal.org/ ; >
+      au < exists ; exists ; 2009 ; 3 ; Continuity in Education Volume 2009 ; 2009 ;  https://www.thecommonsjournal.org/ ; >
+      au < exists ; exists ; 2010 ; 4 ; Continuity in Education Volume 2010 ; 2010 ;  https://www.thecommonsjournal.org/ ; >
+      au < exists ; exists ; 2011 ; 5 ; Continuity in Education Volume 2011 ; 2011 ;  https://www.thecommonsjournal.org/ ; >
+      au < exists ; exists ; 2012 ; 6 ; Continuity in Education Volume 2012 ; 2012 ;  https://www.thecommonsjournal.org/ ; >
+      au < exists ; exists ; 2013 ; 7 ; Continuity in Education Volume 2013 ; 2013 ;  https://www.thecommonsjournal.org/ ; >
+      au < exists ; exists ; 2014 ; 8 ; Continuity in Education Volume 2014 ; 2014 ;  https://www.thecommonsjournal.org/ ; >
+      au < exists ; exists ; 2015 ; 9 ; Continuity in Education Volume 2015 ; 2015 ;  https://www.thecommonsjournal.org/ ; >
+      au < exists ; exists ; 2016 ; 10 ; Continuity in Education Volume 2016 ; 2016 ;  https://www.thecommonsjournal.org/ ; >
+      au < exists ; exists ; 2017 ; 11 ; Continuity in Education Volume 2017 ; 2017 ;  https://www.thecommonsjournal.org/ ; >
+      au < exists ; exists ; 2018 ; 12 ; Continuity in Education Volume 2018 ; 2018 ;  https://www.thecommonsjournal.org/ ; >
+      au < exists ; exists ; 2019 ; 13 ; Continuity in Education Volume 2019 ; 2019 ;  https://www.thecommonsjournal.org/ ; >
+      au < exists ; exists ; 2020 ; 14 ; Continuity in Education Volume 2020 ; 2020 ;  https://www.thecommonsjournal.org/ ; >
+
+  }
+
+  {
+
+      title <
+        name = Global Heart ;
+        eissn = 2211-8179
+      >
+
+      comment[publisher] = Ubiquity Press
+#      param[base_url] =  https://globalheartjournal.com/
+
+      au < exists ; exists ; 2006 ; 1 ; Global Heart Volume 2006 ; 2006 ;  https://globalheartjournal.com/ ; >
+      au < exists ; exists ; 2007 ; 2 ; Global Heart Volume 2007 ; 2007 ;  https://globalheartjournal.com/ ; >
+      au < exists ; exists ; 2008 ; 3 ; Global Heart Volume 2008 ; 2008 ;  https://globalheartjournal.com/ ; >
+      au < exists ; exists ; 2009 ; 4 ; Global Heart Volume 2009 ; 2009 ;  https://globalheartjournal.com/ ; >
+      au < exists ; exists ; 2010 ; 5 ; Global Heart Volume 2010 ; 2010 ;  https://globalheartjournal.com/ ; >
+      au < exists ; exists ; 2011 ; 6 ; Global Heart Volume 2011 ; 2011 ;  https://globalheartjournal.com/ ; >
+      au < exists ; exists ; 2012 ; 7 ; Global Heart Volume 2012 ; 2012 ;  https://globalheartjournal.com/ ; >
+      au < exists ; exists ; 2013 ; 8 ; Global Heart Volume 2013 ; 2013 ;  https://globalheartjournal.com/ ; >
+      au < exists ; exists ; 2014 ; 9 ; Global Heart Volume 2014 ; 2014 ;  https://globalheartjournal.com/ ; >
+      au < exists ; exists ; 2015 ; 10 ; Global Heart Volume 2015 ; 2015 ;  https://globalheartjournal.com/ ; >
+      au < exists ; exists ; 2016 ; 11 ; Global Heart Volume 2016 ; 2016 ;  https://globalheartjournal.com/ ; >
+      au < exists ; exists ; 2017 ; 12 ; Global Heart Volume 2017 ; 2017 ;  https://globalheartjournal.com/ ; >
+      au < exists ; exists ; 2018 ; 13 ; Global Heart Volume 2018 ; 2018 ;  https://globalheartjournal.com/ ; >
+      au < exists ; exists ; 2019 ; 14 ; Global Heart Volume 2019 ; 2019 ;  https://globalheartjournal.com/ ; >
+      au < exists ; exists ; 2020 ; 15 ; Global Heart Volume 2020 ; 2020 ;  https://globalheartjournal.com/ ; >
 
   }
 
