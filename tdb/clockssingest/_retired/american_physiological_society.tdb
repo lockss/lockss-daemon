@@ -102,10 +102,10 @@
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2010 ; Advances in Physiology Education Volume 34 ; 34 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Advances in Physiology Education Volume 35 ; 35 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Advances in Physiology Education Volume 36 ; 36 ; >
-      au < aps.ClockssAPSDrupalPlugin ; finished ; crawling ; 2013 ; Advances in Physiology Education Volume 37 ; 37 ; reingest5.clockss.org:8082 >
+      au < aps.ClockssAPSDrupalPlugin ; finished ; frozen ; 2013 ; Advances in Physiology Education Volume 37 ; 37 ; reingest5.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; finished ; finished ; 2014 ; Advances in Physiology Education Volume 38 ; 38 ; reingest4.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; finished ; finished ; 2015 ; Advances in Physiology Education Volume 39 ; 39 ; reingest1.clockss.org:8082 >
-      au < aps.ClockssAPSDrupalPlugin ; finished ; crawling ; 2016 ; Advances in Physiology Education Volume 40 ; 40 ; reingest1.clockss.org:8082 >
+      au < aps.ClockssAPSDrupalPlugin ; finished ; frozen ; 2016 ; Advances in Physiology Education Volume 40 ; 40 ; reingest1.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; superseded ; exists ; 2017 ; Advances in Physiology Education Volume 41 [superseded] ; 41 ; >
 
     }
@@ -760,13 +760,13 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; American Journal of Physiology - Cell Physiology Volume 302 ; 302 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; American Journal of Physiology - Cell Physiology Volume 303 ; 303 ; >
       au < aps.ClockssAPSDrupalPlugin ; finished ; finished ; 2013 ; American Journal of Physiology - Cell Physiology Volume 304 ; 304 ; reingest2.clockss.org:8085 >
-      au < aps.ClockssAPSDrupalPlugin ; finished ; crawling ; 2013 ; American Journal of Physiology - Cell Physiology Volume 305 ; 305 ; reingest5.clockss.org:8082 >
+      au < aps.ClockssAPSDrupalPlugin ; finished ; frozen ; 2013 ; American Journal of Physiology - Cell Physiology Volume 305 ; 305 ; reingest5.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; zapped ; finished ; 2014 ; American Journal of Physiology - Cell Physiology Volume 306 ; 306 ; reingest1.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; zapped ; finished ; 2014 ; American Journal of Physiology - Cell Physiology Volume 307 ; 307 ; reingest1.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; finished ; finished ; 2015 ; American Journal of Physiology - Cell Physiology Volume 308 ; 308 ; reingest1.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; finished ; finished ; 2015 ; American Journal of Physiology - Cell Physiology Volume 309 ; 309 ; reingest1.clockss.org:8082 >
-      au < aps.ClockssAPSDrupalPlugin ; finished ; crawling ; 2016 ; American Journal of Physiology - Cell Physiology Volume 310 ; 310 ; reingest5.clockss.org:8082 >
-      au < aps.ClockssAPSDrupalPlugin ; finished ; crawling ; 2016 ; American Journal of Physiology - Cell Physiology Volume 311 ; 311 ; reingest1.clockss.org:8082 >
+      au < aps.ClockssAPSDrupalPlugin ; finished ; frozen ; 2016 ; American Journal of Physiology - Cell Physiology Volume 310 ; 310 ; reingest5.clockss.org:8082 >
+      au < aps.ClockssAPSDrupalPlugin ; finished ; frozen ; 2016 ; American Journal of Physiology - Cell Physiology Volume 311 ; 311 ; reingest1.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; superseded ; exists ; 2017 ; American Journal of Physiology - Cell Physiology Volume 312 [superseded] ; 312 ; >
       au < aps.ClockssAPSDrupalPlugin ; superseded ; exists ; 2017 ; American Journal of Physiology - Cell Physiology Volume 313 [superseded] ; 313 ; >
 
@@ -935,14 +935,14 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; American Journal of Physiology - Endocrinology and Metabolism Volume 301 ; 301 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; American Journal of Physiology - Endocrinology and Metabolism Volume 302 ; 302 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; American Journal of Physiology - Endocrinology and Metabolism Volume 303 ; 303 ; >
-      au < aps.ClockssAPSDrupalPlugin ; finished ; crawling ; 2013 ; American Journal of Physiology - Endocrinology and Metabolism Volume 304 ; 304 ; reingest5.clockss.org:8082 >
-      au < aps.ClockssAPSDrupalPlugin ; finished ; crawling ; 2013 ; American Journal of Physiology - Endocrinology and Metabolism Volume 305 ; 305 ; reingest5.clockss.org:8082 >
+      au < aps.ClockssAPSDrupalPlugin ; finished ; frozen ; 2013 ; American Journal of Physiology - Endocrinology and Metabolism Volume 304 ; 304 ; reingest5.clockss.org:8082 >
+      au < aps.ClockssAPSDrupalPlugin ; finished ; frozen ; 2013 ; American Journal of Physiology - Endocrinology and Metabolism Volume 305 ; 305 ; reingest5.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; zapped ; finished ; 2014 ; American Journal of Physiology - Endocrinology and Metabolism Volume 306 ; 306 ; reingest1.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; finished ; finished ; 2014 ; American Journal of Physiology - Endocrinology and Metabolism Volume 307 ; 307 ; reingest2.clockss.org:8085 >
       au < aps.ClockssAPSDrupalPlugin ; finished ; finished ; 2015 ; American Journal of Physiology - Endocrinology and Metabolism Volume 308 ; 308 ; reingest2.clockss.org:8085 >
       au < aps.ClockssAPSDrupalPlugin ; finished ; finished ; 2015 ; American Journal of Physiology - Endocrinology and Metabolism Volume 309 ; 309 ; reingest2.clockss.org:8085 >
-      au < aps.ClockssAPSDrupalPlugin ; finished ; crawling ; 2016 ; American Journal of Physiology - Endocrinology and Metabolism Volume 310 ; 310 ; reingest2.clockss.org:8085 >
-      au < aps.ClockssAPSDrupalPlugin ; finished ; crawling ; 2016 ; American Journal of Physiology - Endocrinology and Metabolism Volume 311 ; 311 ; reingest5.clockss.org:8082 >
+      au < aps.ClockssAPSDrupalPlugin ; finished ; frozen ; 2016 ; American Journal of Physiology - Endocrinology and Metabolism Volume 310 ; 310 ; reingest2.clockss.org:8085 >
+      au < aps.ClockssAPSDrupalPlugin ; finished ; frozen ; 2016 ; American Journal of Physiology - Endocrinology and Metabolism Volume 311 ; 311 ; reingest5.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; superseded ; exists ; 2017 ; American Journal of Physiology - Endocrinology and Metabolism Volume 312 [superseded] ; 312 ; >
       au < aps.ClockssAPSDrupalPlugin ; superseded ; exists ; 2017 ; American Journal of Physiology - Endocrinology and Metabolism Volume 313 [superseded] ; 313 ; >
 
@@ -1112,14 +1112,14 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 301 ; 301 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 302 ; 302 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 303 ; 303 ; >
-      au < aps.ClockssAPSDrupalPlugin ; finished ; crawling ; 2013 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 304 ; 304 ; reingest5.clockss.org:8082 >
-      au < aps.ClockssAPSDrupalPlugin ; finished ; crawling ; 2013 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 305 ; 305 ; reingest5.clockss.org:8082 >
+      au < aps.ClockssAPSDrupalPlugin ; finished ; frozen ; 2013 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 304 ; 304 ; reingest5.clockss.org:8082 >
+      au < aps.ClockssAPSDrupalPlugin ; finished ; frozen ; 2013 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 305 ; 305 ; reingest5.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; zapped ; finished ; 2014 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 306 ; 306 ; reingest2.clockss.org:8085 >
       au < aps.ClockssAPSDrupalPlugin ; zapped ; finished ; 2014 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 307 ; 307 ; reingest1.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; zapped ; finished ; 2015 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 308 ; 308 ; reingest1.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; zapped ; finished ; 2015 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 309 ; 309 ; reingest1.clockss.org:8082 >
-      au < aps.ClockssAPSDrupalPlugin ; finished ; crawling ; 2016 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 310 ; 310 ; reingest4.clockss.org:8082 >
-      au < aps.ClockssAPSDrupalPlugin ; finished ; crawling ; 2016 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 311 ; 311 ; reingest1.clockss.org:8082 >
+      au < aps.ClockssAPSDrupalPlugin ; finished ; frozen ; 2016 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 310 ; 310 ; reingest4.clockss.org:8082 >
+      au < aps.ClockssAPSDrupalPlugin ; finished ; frozen ; 2016 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 311 ; 311 ; reingest1.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; superseded ; exists ; 2017 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 312 [superseded] ; 312 ; >
       au < aps.ClockssAPSDrupalPlugin ; superseded ; exists ; 2017 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 313 [superseded] ; 313 ; >
 
@@ -1289,13 +1289,13 @@
       au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 2012 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 302 ; 302 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 303 ; 303 ; >
       au < aps.ClockssAPSDrupalPlugin ; zapped ; finished ; 2013 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 304 ; 304 ; reingest2.clockss.org:8085 >
-      au < aps.ClockssAPSDrupalPlugin ; finished ; crawling ; 2013 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 305 ; 305 ; reingest5.clockss.org:8082 >
+      au < aps.ClockssAPSDrupalPlugin ; finished ; frozen ; 2013 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 305 ; 305 ; reingest5.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; zapped ; finished ; 2014 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 306 ; 306 ; reingest1.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; zapped ; finished ; 2014 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 307 ; 307 ; reingest1.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; zapped ; finished ; 2015 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 308 ; 308 ; reingest1.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; zapped ; finished ; 2015 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 309 ; 309 ; reingest2.clockss.org:8085 >
-      au < aps.ClockssAPSDrupalPlugin ; finished ; crawling ; 2016 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 310 ; 310 ; reingest2.clockss.org:8085 >
-      au < aps.ClockssAPSDrupalPlugin ; finished ; crawling ; 2016 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 311 ; 311 ; reingest5.clockss.org:8082 >
+      au < aps.ClockssAPSDrupalPlugin ; finished ; frozen ; 2016 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 310 ; 310 ; reingest2.clockss.org:8085 >
+      au < aps.ClockssAPSDrupalPlugin ; finished ; frozen ; 2016 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 311 ; 311 ; reingest5.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; superseded ; exists ; 2017 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 312 [superseded] ; 312 ; >
       au < aps.ClockssAPSDrupalPlugin ; superseded ; exists ; 2017 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 313 [superseded] ; 313 ; >
 
@@ -1414,14 +1414,14 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 301 ; 301 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 302 ; 302 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 303 ; 303 ; >
-      au < aps.ClockssAPSDrupalPlugin ; finished ; crawling ; 2013 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 304 ; 304 ; reingest5.clockss.org:8082 >
+      au < aps.ClockssAPSDrupalPlugin ; finished ; frozen ; 2013 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 304 ; 304 ; reingest5.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; finished ; finished ; 2013 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 305 ; 305 ; reingest5.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; zapped ; finished ; 2014 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 306 ; 306 ; reingest2.clockss.org:8085 >
       au < aps.ClockssAPSDrupalPlugin ; finished ; finished ; 2014 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 307 ; 307 ; reingest2.clockss.org:8085 >
       au < aps.ClockssAPSDrupalPlugin ; zapped ; finished ; 2015 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 308 ; 308 ; reingest2.clockss.org:8085 >
       au < aps.ClockssAPSDrupalPlugin ; zapped ; finished ; 2015 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 309 ; 309 ; reingest2.clockss.org:8085 >
-      au < aps.ClockssAPSDrupalPlugin ; finished ; crawling ; 2016 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 310 ; 310 ; reingest2.clockss.org:8085 >
-      au < aps.ClockssAPSDrupalPlugin ; finished ; crawling ; 2016 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 311 ; 311 ; reingest4.clockss.org:8082 >
+      au < aps.ClockssAPSDrupalPlugin ; finished ; frozen ; 2016 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 310 ; 310 ; reingest2.clockss.org:8085 >
+      au < aps.ClockssAPSDrupalPlugin ; finished ; frozen ; 2016 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 311 ; 311 ; reingest4.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; superseded ; exists ; 2017 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 312 [superseded] ; 312 ; >
       au < aps.ClockssAPSDrupalPlugin ; superseded ; exists ; 2017 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 313 [superseded] ; 313 ; >
 
@@ -1596,8 +1596,8 @@
       au < aps.ClockssAPSDrupalPlugin ; zapped ; finished ; 2014 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 307 ; 307 ; reingest2.clockss.org:8085 >
       au < aps.ClockssAPSDrupalPlugin ; finished ; finished ; 2015 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 308 ; 308 ; reingest2.clockss.org:8085 >
       au < aps.ClockssAPSDrupalPlugin ; finished ; finished ; 2015 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 309 ; 309 ; reingest2.clockss.org:8085 >
-      au < aps.ClockssAPSDrupalPlugin ; finished ; crawling ; 2016 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 310 ; 310 ; reingest1.clockss.org:8082 >
-      au < aps.ClockssAPSDrupalPlugin ; finished ; crawling ; 2016 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 311 ; 311 ; reingest5.clockss.org:8082 >
+      au < aps.ClockssAPSDrupalPlugin ; finished ; frozen ; 2016 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 310 ; 310 ; reingest1.clockss.org:8082 >
+      au < aps.ClockssAPSDrupalPlugin ; finished ; frozen ; 2016 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 311 ; 311 ; reingest5.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; superseded ; exists ; 2017 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 312 [superseded] ; 312 ; >
       au < aps.ClockssAPSDrupalPlugin ; superseded ; exists ; 2017 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 313 [superseded] ; 313 ; >
 
@@ -1767,14 +1767,14 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; American Journal of Physiology - Renal Physiology Volume 301 ; 301 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; American Journal of Physiology - Renal Physiology Volume 302 ; 302 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; American Journal of Physiology - Renal Physiology Volume 303 ; 303 ; >
-      au < aps.ClockssAPSDrupalPlugin ; finished ; crawling ; 2013 ; American Journal of Physiology - Renal Physiology Volume 304 ; 304 ; reingest5.clockss.org:8082 >
+      au < aps.ClockssAPSDrupalPlugin ; finished ; frozen ; 2013 ; American Journal of Physiology - Renal Physiology Volume 304 ; 304 ; reingest5.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; zapped ; finished ; 2013 ; American Journal of Physiology - Renal Physiology Volume 305 ; 305 ; reingest2.clockss.org:8085 >
       au < aps.ClockssAPSDrupalPlugin ; zapped ; finished ; 2014 ; American Journal of Physiology - Renal Physiology Volume 306 ; 306 ; reingest5.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; zapped ; finished ; 2014 ; American Journal of Physiology - Renal Physiology Volume 307 ; 307 ; reingest5.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; zapped ; finished ; 2015 ; American Journal of Physiology - Renal Physiology Volume 308 ; 308 ; reingest5.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; zapped ; finished ; 2015 ; American Journal of Physiology - Renal Physiology Volume 309 ; 309 ; reingest5.clockss.org:8082 >
-      au < aps.ClockssAPSDrupalPlugin ; finished ; crawling ; 2016 ; American Journal of Physiology - Renal Physiology Volume 310 ; 310 ; reingest2.clockss.org:8085 >
-      au < aps.ClockssAPSDrupalPlugin ; finished ; crawling ; 2016 ; American Journal of Physiology - Renal Physiology Volume 311 ; 311 ; reingest4.clockss.org:8082 >
+      au < aps.ClockssAPSDrupalPlugin ; finished ; frozen ; 2016 ; American Journal of Physiology - Renal Physiology Volume 310 ; 310 ; reingest2.clockss.org:8085 >
+      au < aps.ClockssAPSDrupalPlugin ; finished ; frozen ; 2016 ; American Journal of Physiology - Renal Physiology Volume 311 ; 311 ; reingest4.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; superseded ; exists ; 2017 ; American Journal of Physiology - Renal Physiology Volume 312 [superseded] ; 312 ; >
       au < aps.ClockssAPSDrupalPlugin ; superseded ; exists ; 2017 ; American Journal of Physiology - Renal Physiology Volume 313 [superseded] ; 313 ; >
 
@@ -2025,14 +2025,14 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Journal of Applied Physiology Volume 112 ; 112 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Journal of Applied Physiology Volume 113 ; 113 ; >
       #error with probe links possibly fixed 20170411
-      au < aps.ClockssAPSDrupalPlugin ; finished ; crawling ; 2013 ; Journal of Applied Physiology Volume 114 ; 114 ; reingest5.clockss.org:8082 > #Unable to fetch probe permission page with lockss user-agent
+      au < aps.ClockssAPSDrupalPlugin ; finished ; frozen ; 2013 ; Journal of Applied Physiology Volume 114 ; 114 ; reingest5.clockss.org:8082 > #Unable to fetch probe permission page with lockss user-agent
       au < aps.ClockssAPSDrupalPlugin ; finished ; frozen ; 2013 ; Journal of Applied Physiology Volume 115 ; 115 ; reingest5.clockss.org:8082 > #Unable to fetch probe permission page
-      au < aps.ClockssAPSDrupalPlugin ; finished ; crawling ; 2014 ; Journal of Applied Physiology Volume 116 ; 116 ; reingest5.clockss.org:8082 > #Unable to fetch probe permission page
-      au < aps.ClockssAPSDrupalPlugin ; finished ; crawling ; 2014 ; Journal of Applied Physiology Volume 117 ; 117 ; reingest5.clockss.org:8082 > #Unable to fetch probe permission page
-      au < aps.ClockssAPSDrupalPlugin ; finished ; crawling ; 2015 ; Journal of Applied Physiology Volume 118 ; 118 ; reingest5.clockss.org:8082 >
-      au < aps.ClockssAPSDrupalPlugin ; finished ; crawling ; 2015 ; Journal of Applied Physiology Volume 119 ; 119 ; reingest5.clockss.org:8082 > #UrlConsumer changed files collected
-      au < aps.ClockssAPSDrupalPlugin ; finished ; crawling ; 2016 ; Journal of Applied Physiology Volume 120 ; 120 ; reingest1.clockss.org:8082 >
-      au < aps.ClockssAPSDrupalPlugin ; finished ; crawling ; 2016 ; Journal of Applied Physiology Volume 121 ; 121 ; reingest1.clockss.org:8082 >
+      au < aps.ClockssAPSDrupalPlugin ; finished ; frozen ; 2014 ; Journal of Applied Physiology Volume 116 ; 116 ; reingest5.clockss.org:8082 > #Unable to fetch probe permission page
+      au < aps.ClockssAPSDrupalPlugin ; finished ; frozen ; 2014 ; Journal of Applied Physiology Volume 117 ; 117 ; reingest5.clockss.org:8082 > #Unable to fetch probe permission page
+      au < aps.ClockssAPSDrupalPlugin ; finished ; frozen ; 2015 ; Journal of Applied Physiology Volume 118 ; 118 ; reingest5.clockss.org:8082 >
+      au < aps.ClockssAPSDrupalPlugin ; finished ; frozen ; 2015 ; Journal of Applied Physiology Volume 119 ; 119 ; reingest5.clockss.org:8082 > #UrlConsumer changed files collected
+      au < aps.ClockssAPSDrupalPlugin ; finished ; frozen ; 2016 ; Journal of Applied Physiology Volume 120 ; 120 ; reingest1.clockss.org:8082 >
+      au < aps.ClockssAPSDrupalPlugin ; finished ; frozen ; 2016 ; Journal of Applied Physiology Volume 121 ; 121 ; reingest1.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; superseded ; exists ; 2017 ; Journal of Applied Physiology Volume 122 [superseded] ; 122 ; > #Unable to fetch probe permission page
       au < aps.ClockssAPSDrupalPlugin ; superseded ; exists ; 2017 ; Journal of Applied Physiology Volume 123 [superseded] ; 123 ; >
 
@@ -2268,19 +2268,19 @@
       au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2009 ; Journal of Neurophysiology Volume 101 ; 101 ; >
       au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2009 ; Journal of Neurophysiology Volume 102 ; 102 ; >
       au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2010 ; Journal of Neurophysiology Volume 103 ; 103 ; >
-      au < aps.ClockssAPSDrupalPlugin ; finished ; crawling ; 2010 ; Journal of Neurophysiology Volume 104 ; 104 ; reingest5.clockss.org:8082 >
+      au < aps.ClockssAPSDrupalPlugin ; finished ; frozen ; 2010 ; Journal of Neurophysiology Volume 104 ; 104 ; reingest5.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Journal of Neurophysiology Volume 105 ; 105 ; >
       au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 2011 ; Journal of Neurophysiology Volume 106 ; 106 ; >
       au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 2012 ; Journal of Neurophysiology Volume 107 ; 107 ; >
       au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 2012 ; Journal of Neurophysiology Volume 108 ; 108 ; >
-      au < aps.ClockssAPSDrupalPlugin ; finished ; crawling ; 2013 ; Journal of Neurophysiology Volume 109 ; 109 ; reingest5.clockss.org:8082 >
+      au < aps.ClockssAPSDrupalPlugin ; finished ; frozen ; 2013 ; Journal of Neurophysiology Volume 109 ; 109 ; reingest5.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2013 ; Journal of Neurophysiology Volume 110 ; 110 ; reingest1.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; zapped ; finished ; 2014 ; Journal of Neurophysiology Volume 111 ; 111 ; reingest5.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; zapped ; finished ; 2014 ; Journal of Neurophysiology Volume 112 ; 112 ; reingest5.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; zapped ; finished ; 2015 ; Journal of Neurophysiology Volume 113 ; 113 ; reingest5.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; zapped ; finished ; 2015 ; Journal of Neurophysiology Volume 114 ; 114 ; reingest5.clockss.org:8082 >
-      au < aps.ClockssAPSDrupalPlugin ; finished ; crawling ; 2016 ; Journal of Neurophysiology Volume 115 ; 115 ; reingest1.clockss.org:8082 >
-      au < aps.ClockssAPSDrupalPlugin ; finished ; crawling ; 2016 ; Journal of Neurophysiology Volume 116 ; 116 ; reingest5.clockss.org:8082 >
+      au < aps.ClockssAPSDrupalPlugin ; finished ; frozen ; 2016 ; Journal of Neurophysiology Volume 115 ; 115 ; reingest1.clockss.org:8082 >
+      au < aps.ClockssAPSDrupalPlugin ; finished ; frozen ; 2016 ; Journal of Neurophysiology Volume 116 ; 116 ; reingest5.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; superseded ; exists ; 2017 ; Journal of Neurophysiology Volume 117 [superseded] ; 117 ; >
       au < aps.ClockssAPSDrupalPlugin ; superseded ; exists ; 2017 ; Journal of Neurophysiology Volume 118 [superseded] ; 118 ; >
 
@@ -2399,7 +2399,7 @@
       au < aps.ClockssAPSDrupalPlugin ; zapped ; finished ; 2013 ; Physiological Genomics Volume 45 ; 45 ; reingest1.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; finished ; finished ; 2014 ; Physiological Genomics Volume 46 ; 46 ; reingest3.clockss.org:8083 >
       au < aps.ClockssAPSDrupalPlugin ; finished ; finished ; 2015 ; Physiological Genomics Volume 47 ; 47 ; reingest5.clockss.org:8082 >
-      au < aps.ClockssAPSDrupalPlugin ; finished ; crawling ; 2016 ; Physiological Genomics Volume 48 ; 48 ; reingest2.clockss.org:8085 >
+      au < aps.ClockssAPSDrupalPlugin ; finished ; frozen ; 2016 ; Physiological Genomics Volume 48 ; 48 ; reingest2.clockss.org:8085 >
       au < aps.ClockssAPSDrupalPlugin ; superseded ; exists ; 2017 ; Physiological Genomics Volume 49 [superseded] ; 49 ; >
 
     }
@@ -2608,10 +2608,10 @@
       au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2010 ; Physiological Reviews Volume 90 ; 90 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Physiological Reviews Volume 91 ; 91 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Physiological Reviews Volume 92 ; 92 ; >
-      au < aps.ClockssAPSDrupalPlugin ; finished ; crawling ; 2013 ; Physiological Reviews Volume 93 ; 93 ; reingest5.clockss.org:8082 >
+      au < aps.ClockssAPSDrupalPlugin ; finished ; frozen ; 2013 ; Physiological Reviews Volume 93 ; 93 ; reingest5.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; finished ; finished ; 2014 ; Physiological Reviews Volume 94 ; 94 ; reingest5.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; finished ; finished ; 2015 ; Physiological Reviews Volume 95 ; 95 ; reingest5.clockss.org:8082 >
-      au < aps.ClockssAPSDrupalPlugin ; finished ; crawling ; 2016 ; Physiological Reviews Volume 96 ; 96 ; reingest1.clockss.org:8082 >
+      au < aps.ClockssAPSDrupalPlugin ; finished ; frozen ; 2016 ; Physiological Reviews Volume 96 ; 96 ; reingest1.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; superseded ; exists ; 2017 ; Physiological Reviews Volume 97 [superseded] ; 97 ; >
 
     }
@@ -2693,7 +2693,7 @@
       au < aps.ClockssAPSDrupalPlugin ; finished ; finished ; 2013 ; Physiology Volume 28 ; 28 ; >
       au < aps.ClockssAPSDrupalPlugin ; finished ; finished ; 2014 ; Physiology Volume 29 ; 29 ; reingest1.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; finished ; finished ; 2015 ; Physiology Volume 30 ; 30 ; reingest5.clockss.org:8082 >
-      au < aps.ClockssAPSDrupalPlugin ; finished ; crawling ; 2016 ; Physiology Volume 31 ; 31 ; reingest4.clockss.org:8082 >
+      au < aps.ClockssAPSDrupalPlugin ; finished ; frozen ; 2016 ; Physiology Volume 31 ; 31 ; reingest4.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; superseded ; exists ; 2017 ; Physiology Volume 32 [superseded] ; 32 ; >
 
     }
