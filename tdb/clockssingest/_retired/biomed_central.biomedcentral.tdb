@@ -1061,7 +1061,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2006 ; Cell Division Volume 1 ; 1 ; >
       au < doNotProcess ; exists ; 2007 ; Cell Division Volume 2 ; 2 ; >
       au < finished ; finished ; 2008 ; Cell Division Volume 3 ; 3 ; >
-      au < finished ; crawling ; 2009 ; Cell Division Volume 4 ; 4 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2009 ; Cell Division Volume 4 ; 4 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2010 ; Cell Division Volume 5 ; 5 ; >
       au < finished ; finished ; 2011 ; Cell Division Volume 6 ; 6 ; >
       au < finished ; crawling ; 2012 ; Cell Division Volume 7 ; 7 ; reingest2.clockss.org:8085 >
@@ -1138,7 +1138,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       au < doNotProcess ; exists ; 2007 ; Child and Adolescent Psychiatry and Mental Health Volume 1 ; 1 ; >
       au < finished ; crawling ; 2008 ; Child and Adolescent Psychiatry and Mental Health Volume 2 ; 2 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2009 ; Child and Adolescent Psychiatry and Mental Health Volume 3 ; 3 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2009 ; Child and Adolescent Psychiatry and Mental Health Volume 3 ; 3 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2010 ; Child and Adolescent Psychiatry and Mental Health Volume 4 ; 4 ; >
       au < finished ; finished ; 2011 ; Child and Adolescent Psychiatry and Mental Health Volume 5 ; 5 ; >
       au < finished ; crawling ; 2012 ; Child and Adolescent Psychiatry and Mental Health Volume 6 ; 6 ; reingest3.clockss.org:8083 >
@@ -1577,7 +1577,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2006 ; Diagnostic Pathology Volume 1 ; 1 ; >
       au < doNotProcess ; exists ; 2007 ; Diagnostic Pathology Volume 2 ; 2 ; >
       au < frozen ; exists ; 2008 ; Diagnostic Pathology Volume 3 ; 3 ; >
-      au < finished ; crawling ; 2009 ; Diagnostic Pathology Volume 4 ; 4 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2009 ; Diagnostic Pathology Volume 4 ; 4 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2010 ; Diagnostic Pathology Volume 5 ; 5 ; >
       au < frozen ; exists ; 2011 ; Diagnostic Pathology Volume 6 ; 6 ; >
       au < frozen ; exists ; 2012 ; Diagnostic Pathology Volume 7 ; 7 ; >
@@ -1859,7 +1859,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; crawling ; 2008 ; Fibrogenesis & Tissue Repair Volume 1 ; 1 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2009 ; Fibrogenesis & Tissue Repair Volume 2 ; 2 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2010 ; Fibrogenesis & Tissue Repair Volume 3 ; 3 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2011 ; Fibrogenesis & Tissue Repair Volume 4 ; 4 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2011 ; Fibrogenesis & Tissue Repair Volume 4 ; 4 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2012 ; Fibrogenesis & Tissue Repair Volume 5 ; 5 ; >
       au < finished ; crawling ; 2013 ; Fibrogenesis & Tissue Repair Volume 6 ; 6 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2014 ; Fibrogenesis & Tissue Repair Volume 7 ; 7 ; reingest5.clockss.org:8082 >
@@ -1917,7 +1917,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2005 ; Frontiers in Zoology Volume 2 ; 2 ; >
       au < doNotProcess ; exists ; 2006 ; Frontiers in Zoology Volume 3 ; 3 ; >
       au < doNotProcess ; exists ; 2007 ; Frontiers in Zoology Volume 4 ; 4 ; >
-      au < finished ; crawling ; 2008 ; Frontiers in Zoology Volume 5 ; 5 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2008 ; Frontiers in Zoology Volume 5 ; 5 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2009 ; Frontiers in Zoology Volume 6 ; 6 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2010 ; Frontiers in Zoology Volume 7 ; 7 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2011 ; Frontiers in Zoology Volume 8 ; 8 ; reingest3.clockss.org:8083 >
@@ -2335,7 +2335,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       au < finished ; crawling ; 2010 ; Herpesviridae Volume 1 ; 1 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2011 ; Herpesviridae Volume 2 ; 2 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2012 ; Herpesviridae Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2012 ; Herpesviridae Volume 3 ; 3 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2013 ; Herpesviridae Volume 4 ; 4 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2014 ; Herpesviridae Volume 5 ; 5 ; reingest5.clockss.org:8082 >
 
@@ -2406,7 +2406,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2007 ; Immunity & Ageing Volume 4 ; 4 ; >
       au < finished ; crawling ; 2008 ; Immunity & Ageing Volume 5 ; 5 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2009 ; Immunity & Ageing Volume 6 ; 6 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2010 ; Immunity & Ageing Volume 7 ; 7 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2010 ; Immunity & Ageing Volume 7 ; 7 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2011 ; Immunity & Ageing Volume 8 ; 8 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2012 ; Immunity & Ageing Volume 9 ; 9 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2013 ; Immunity & Ageing Volume 10 ; 10 ; >
@@ -2562,7 +2562,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2007 ; International Journal for Equity in Health Volume 6 ; 6 ; >
       au < finished ; crawling ; 2008 ; International Journal for Equity in Health Volume 7 ; 7 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2009 ; International Journal for Equity in Health Volume 8 ; 8 ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2010 ; International Journal for Equity in Health Volume 9 ; 9 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2010 ; International Journal for Equity in Health Volume 9 ; 9 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2011 ; International Journal for Equity in Health Volume 10 ; 10 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2012 ; International Journal for Equity in Health Volume 11 ; 11 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2013 ; International Journal for Equity in Health Volume 12 ; 12 ; >
@@ -2659,7 +2659,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.ijpeonline.com/
       param[journal_issn] = 1687-9856
 
-      au < finished ; crawling ; 2009 ; International Journal of Pediatric Endocrinology Volume 2009 ; 2009 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2009 ; International Journal of Pediatric Endocrinology Volume 2009 ; 2009 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2010 ; International Journal of Pediatric Endocrinology Volume 2010 ; 2010 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2011 ; International Journal of Pediatric Endocrinology Volume 2011 ; 2011 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2012 ; International Journal of Pediatric Endocrinology Volume 2012 ; 2012 ; >
@@ -3555,7 +3555,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 1916-0216
 
       au < finished ; finished ; 2013 ; Journal of Otolaryngology - Head and Neck Surgery Volume 42 ; 42 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2014 ; Journal of Otolaryngology - Head and Neck Surgery Volume 43 ; 43 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2014 ; Journal of Otolaryngology - Head and Neck Surgery Volume 43 ; 43 ; reingest3.clockss.org:8083 >
       au < superseded ; exists ; 2015 ; Journal of Otolaryngology - Head and Neck Surgery Volume 44 [superseded] ; 44 ; >
 
     }
@@ -5080,7 +5080,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
         au < doNotProcess ; exists ; 2011 ; World Allergy Organization Journal Volume 4 ; 4 ; >
         au < doNotProcess ; exists ; 2012 ; World Allergy Organization Journal Volume 5 ; 5 ; >
         au < frozen ; exists ; 2013 ; World Allergy Organization Journal Volume 6 ; 6 ; >
-        au < finished ; crawling ; 2014 ; World Allergy Organization Journal Volume 7 ; 7 ; reingest1.clockss.org:8082 >
+        au < finished ; frozen ; 2014 ; World Allergy Organization Journal Volume 7 ; 7 ; reingest1.clockss.org:8082 >
         au < doNotProcess ; exists ; 2015 ; World Allergy Organization Journal Volume 8 ; 8 ; >
       
       }

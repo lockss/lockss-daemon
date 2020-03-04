@@ -96,7 +96,7 @@
       au < frozen ; exists ; 2011 ; BMC Bioinformatics Volume 12 ; 12 ; >
       au < frozen ; exists ; 2012 ; BMC Bioinformatics Volume 13 ; 13 ; >
       au < frozen ; exists ; 2013 ; BMC Bioinformatics Volume 14 ; 14 ; >
-      au < finished ; crawling ; 2014 ; BMC Bioinformatics Volume 15 ; 15 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; BMC Bioinformatics Volume 15 ; 15 ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; BMC Bioinformatics Volume 16 [superseded] ; 16 ; >
 
     }
@@ -848,7 +848,7 @@
       au < finished ; finished ; 2011 ; BMC Infectious Diseases Volume 11 ; 11 ; >
       au < frozen ; exists ; 2012 ; BMC Infectious Diseases Volume 12 ; 12 ; >
       au < frozen ; exists ; 2013 ; BMC Infectious Diseases Volume 13 ; 13 ; >
-      au < finished ; crawling ; 2014 ; BMC Infectious Diseases Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; BMC Infectious Diseases Volume 14 ; 14 ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; BMC Infectious Diseases Volume 15 [superseded] ; 15 ; >
 
     }
@@ -962,7 +962,7 @@
       au < finished ; frozen ; 2011 ; BMC Medical Genetics Volume 12 ; 12 ; >
       au < finished ; finished ; 2012 ; BMC Medical Genetics Volume 13 ; 13 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2013 ; BMC Medical Genetics Volume 14 ; 14 ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; BMC Medical Genetics Volume 15 ; 15 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2014 ; BMC Medical Genetics Volume 15 ; 15 ; reingest3.clockss.org:8083 >
       au < superseded ; exists ; 2015 ; BMC Medical Genetics Volume 16 [superseded] ; 16 ; >
 
     }
@@ -1011,7 +1011,7 @@
       au < finished ; finished ; 2011 ; BMC Medical Imaging Volume 11 ; 11 ; >
       au < finished ; crawling ; 2012 ; BMC Medical Imaging Volume 12 ; 12 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2013 ; BMC Medical Imaging Volume 13 ; 13 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2014 ; BMC Medical Imaging Volume 14 ; 14 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2014 ; BMC Medical Imaging Volume 14 ; 14 ; reingest2.clockss.org:8085 >
       au < superseded ; exists ; 2015 ; BMC Medical Imaging Volume 15 [superseded] ; 15 ; >
 
     }
@@ -1067,7 +1067,7 @@
       au < finished ; frozen ; 2011 ; BMC Medical Research Methodology Volume 11 ; 11 ; >
       au < finished ; finished ; 2012 ; BMC Medical Research Methodology Volume 12 ; 12 ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2013 ; BMC Medical Research Methodology Volume 13 ; 13 ; >
-      au < finished ; crawling ; 2014 ; BMC Medical Research Methodology Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; BMC Medical Research Methodology Volume 14 ; 14 ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; BMC Medical Research Methodology Volume 15 [superseded] ; 15 ; >
 
     }

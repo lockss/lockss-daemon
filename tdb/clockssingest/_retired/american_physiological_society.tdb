@@ -2026,7 +2026,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Journal of Applied Physiology Volume 113 ; 113 ; >
       #error with probe links possibly fixed 20170411
       au < aps.ClockssAPSDrupalPlugin ; finished ; crawling ; 2013 ; Journal of Applied Physiology Volume 114 ; 114 ; reingest5.clockss.org:8082 > #Unable to fetch probe permission page with lockss user-agent
-      au < aps.ClockssAPSDrupalPlugin ; finished ; crawling ; 2013 ; Journal of Applied Physiology Volume 115 ; 115 ; reingest5.clockss.org:8082 > #Unable to fetch probe permission page
+      au < aps.ClockssAPSDrupalPlugin ; finished ; frozen ; 2013 ; Journal of Applied Physiology Volume 115 ; 115 ; reingest5.clockss.org:8082 > #Unable to fetch probe permission page
       au < aps.ClockssAPSDrupalPlugin ; finished ; crawling ; 2014 ; Journal of Applied Physiology Volume 116 ; 116 ; reingest5.clockss.org:8082 > #Unable to fetch probe permission page
       au < aps.ClockssAPSDrupalPlugin ; finished ; crawling ; 2014 ; Journal of Applied Physiology Volume 117 ; 117 ; reingest5.clockss.org:8082 > #Unable to fetch probe permission page
       au < aps.ClockssAPSDrupalPlugin ; finished ; crawling ; 2015 ; Journal of Applied Physiology Volume 118 ; 118 ; reingest5.clockss.org:8082 >
