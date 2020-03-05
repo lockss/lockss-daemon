@@ -1,0 +1,171 @@
+diff --git a/xoai-service-provider/src/main/java/org/dspace/xoai/serviceprovider/handler/ListRecordHandler.java b/xoai-service-provider/src/main/java/org/dspace/xoai/serviceprovider/handler/ListRecordHandler.java
+index e520ebb..e7a74f5 100644
+--- a/xoai-service-provider/src/main/java/org/dspace/xoai/serviceprovider/handler/ListRecordHandler.java
++++ b/xoai-service-provider/src/main/java/org/dspace/xoai/serviceprovider/handler/ListRecordHandler.java
+@@ -35,6 +35,7 @@ import static org.hamcrest.CoreMatchers.equalTo;
+ import static org.hamcrest.core.AllOf.allOf;
+ 
+ public class ListRecordHandler implements Source<Record> {
++  private static final int DEFAULT_RETRIES = 5;
+     private Context context;
+     private ListRecordsParameters parameters;
+     private OAIClient client;
+@@ -49,48 +50,65 @@ public class ListRecordHandler implements Source<Record> {
+ 
+     @Override
+     public List<Record> nextIteration() {
++      int retries = DEFAULT_RETRIES;
++      while (retries > 0) {
++	try {
++	  return getNextIteration();
++	} catch (XmlReaderException e) {
++	  if (retries > 0) {
++	    retries = retries - 1;
++	  } else {
++	    throw new InvalidOAIResponse(e);
++	  }
++	} catch (OAIRequestException e) {
++	  if (retries > 0) {
++	    retries = retries - 1;
++	  } else {
++	    throw new InvalidOAIResponse(e);
++	  }
++	} catch (IOException e) {
++	  throw new InvalidOAIResponse(e);
++	}
++      }
++      throw new InvalidOAIResponse(
++	  "Failed on retries in a way that should not happen");
++    }
++
++    private List<Record> getNextIteration()
++	throws OAIRequestException, XmlReaderException, IOException {
+     	//TODO - refactor - this and ListIdentifierHandler are pretty similar.
+-        List<Record> records = new ArrayList<Record>();
+-        InputStream stream = null;
+-        try {
+-            if (resumptionToken == null) { // First call
+-                stream = client.execute(parameters()
+-                        .withVerb(ListRecords)
+-                        .include(parameters));
+-            } else { // Resumption calls
+-                stream = client.execute(parameters()
+-                        .withVerb(ListRecords)
+-                        .include(parameters)
+-                        .withResumptionToken(resumptionToken));
+-            }
++    	List<Record> records = new ArrayList<Record>();
++    	InputStream stream = null;
++    	if (resumptionToken == null) { // First call
++    	  stream = client.execute(parameters()
++    	      .withVerb(ListRecords)
++    	      .include(parameters));
++    	} else { // Resumption calls
++    	  stream = client.execute(parameters()
++    	      .withVerb(ListRecords)
++    	      .include(parameters)
++    	      .withResumptionToken(resumptionToken));
++    	}
++
++    	XmlReader reader = new XmlReader(stream);
++    	ListRecordsParser parser = new ListRecordsParser(reader,
++    	    context, parameters.getMetadataPrefix());
++    	while (parser.hasNext())
++    	  records.add(parser.next());
+ 
+-            XmlReader reader = new XmlReader(stream);
+-            ListRecordsParser parser = new ListRecordsParser(reader,
+-                    context, parameters.getMetadataPrefix());
+-            while (parser.hasNext())
+-                records.add(parser.next());
++    	if (reader.current(resumptionToken())) {
++    	  if (reader.next(text(), anEndElement()).current(text())) {
++    	    String text = reader.getText();
++    	    if (text == null || "".equals(text.trim())
++    		|| text.equals(resumptionToken))
++    	      ended = true;
++    	    else
++    	      resumptionToken = text;
++    	  } else ended = true;
++    	} else ended = true;
+ 
+-            if (reader.current(resumptionToken())) {
+-                if (reader.next(text(), anEndElement()).current(text())) {
+-                    String text = reader.getText();
+-                    if (text == null || "".equals(text.trim()))
+-                        ended = true;
+-                    else
+-                        resumptionToken = text;
+-                } else ended = true;
+-            } else ended = true;
+-			
+-            stream.close();
+-            return records;
+-        } catch (XmlReaderException e) {
+-            throw new InvalidOAIResponse(e);
+-        } catch (OAIRequestException e) {
+-            throw new InvalidOAIResponse(e);
+-        } catch (IOException e) {
+-            throw new InvalidOAIResponse(e);
+-        } finally {
+-            IOUtils.closeQuietly(stream);
+-        }
++    	stream.close();
++    	return records;
+     }
+ 
+     private Matcher<XMLEvent> resumptionToken() {
+diff --git a/xoai-service-provider/src/main/java/org/dspace/xoai/serviceprovider/lazy/ItemIterator.java b/xoai-service-provider/src/main/java/org/dspace/xoai/serviceprovider/lazy/ItemIterator.java
+index a18b41a..e843206 100644
+--- a/xoai-service-provider/src/main/java/org/dspace/xoai/serviceprovider/lazy/ItemIterator.java
++++ b/xoai-service-provider/src/main/java/org/dspace/xoai/serviceprovider/lazy/ItemIterator.java
+@@ -29,7 +29,8 @@ public class ItemIterator<T> implements Iterator<T> {
+         else {
+             if (source.endReached()) return false;
+             else {
+-                items.addAll(source.nextIteration());
++                items = source.nextIteration();
++                position = 0;
+                 return hasNext();
+             }
+         }
+diff --git a/xoai-service-provider/src/main/java/org/dspace/xoai/serviceprovider/parsers/MetadataParser.java b/xoai-service-provider/src/main/java/org/dspace/xoai/serviceprovider/parsers/MetadataParser.java
+index f4ef0d0..2616e4a 100644
+--- a/xoai-service-provider/src/main/java/org/dspace/xoai/serviceprovider/parsers/MetadataParser.java
++++ b/xoai-service-provider/src/main/java/org/dspace/xoai/serviceprovider/parsers/MetadataParser.java
+@@ -39,7 +39,7 @@ public class MetadataParser {
+ 
+     private Element parseElement(XmlReader reader) throws XmlReaderException {
+         Element element = new Element(reader.getAttributeValue(name()));
+-        while (reader.next(startElement(), startField(), endOfMetadata()).current(startElement())) {
++        while (reader.next(startElement(), startField(), endOfMetadata(), endElement()).current(startElement())) {
+             element.withElement(parseElement(reader));
+         }
+ 
+diff --git a/xoai-service-provider/src/test/java/org/dspace/xoai/serviceprovider/parsers/MetadataParserTest.java b/xoai-service-provider/src/test/java/org/dspace/xoai/serviceprovider/parsers/MetadataParserTest.java
+index bef3669..4c70997 100644
+--- a/xoai-service-provider/src/test/java/org/dspace/xoai/serviceprovider/parsers/MetadataParserTest.java
++++ b/xoai-service-provider/src/test/java/org/dspace/xoai/serviceprovider/parsers/MetadataParserTest.java
+@@ -26,6 +26,7 @@ public class MetadataParserTest {
+         MetadataSearch<String> searcher = metadata.searcher();
+         assertThat(metadata.getElements().size(), equalTo(1));
+         assertThat(searcher.findOne("dc.creator"), equalTo("Sousa, Jesus Maria Angélica Fernandes"));
++        assertThat(searcher.findOne("dc.date.submitted"), equalTo("1995"));
+         assertThat(searcher.findAll("dc.subject").size(), equalTo(5));
+     }
+     
+diff --git a/xoai-service-provider/src/test/resources/test/xoai.xml b/xoai-service-provider/src/test/resources/test/xoai.xml
+index 9875ba4..43a4d0a 100644
+--- a/xoai-service-provider/src/test/resources/test/xoai.xml
++++ b/xoai-service-provider/src/test/resources/test/xoai.xml
+@@ -12,7 +12,9 @@
+             <field name="value">Sousa, Jesus Maria Angélica Fernandes</field>
+         </element>
+         <element name="date">
+-            <field name="value">1995</field>
++            <element name="submitted">
++                <field name="value">1995</field>
++            </element>
+         </element>
+         <element name="identifier">
+             <field name="value">http://www.rcaap.pt/detail.jsp?id=oai:digituma.uma.pt:10400.13/9</field>
