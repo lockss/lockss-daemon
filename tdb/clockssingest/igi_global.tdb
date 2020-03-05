@@ -65,6 +65,7 @@
       issnl = 2156-1710
     >
     param[journal_issn] = 2156-1710
+    #Out of print
 
     au < finished ; finished ; 2012 ; International Journal of 3-D Information Modeling (IJ3DIM) Volume 1 ; 1 ; http://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2013 ; International Journal of 3-D Information Modeling (IJ3DIM) Volume 2 ; 2 ; http://www.igi-global.com/ ; > 
@@ -73,7 +74,6 @@
     au < deepCrawl ; exists ; 2016 ; International Journal of 3-D Information Modeling (IJ3DIM) Volume 5 ; 5 ; http://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2017 ; International Journal of 3-D Information Modeling (IJ3DIM) Volume 6 ; 6 ; http://www.igi-global.com/ ; > 
     au < frozen ; exists ; 2018 ; International Journal of 3-D Information Modeling (IJ3DIM) Volume 7 ; 7 ; https://www.igi-global.com/ ; > 
-    au < expected ; exists ; 2019 ; International Journal of 3-D Information Modeling (IJ3DIM) Volume 8 ; 8 ; https://www.igi-global.com/ ; > 
 
   }
 
@@ -429,6 +429,7 @@
       issnl = 1947-3087
     >
     param[journal_issn] = 1947-3087
+    #Out of print
 
     au < manifest ; exists ; 2010 ; International Journal of Artificial Life Research (IJALR) Volume 1 ; 1 ; https://www.igi-global.com/ ; > 
     au < finished ; finished ; 2011 ; International Journal of Artificial Life Research (IJALR) Volume 2 ; 2 ; http://www.igi-global.com/ ; > 
@@ -438,7 +439,6 @@
     au < finished ; crawling ; 2016 ; International Journal of Artificial Life Research (IJALR) Volume 6 ; 6 ; http://www.igi-global.com/ ; reingest2.clockss.org:8085 > 
     au < deepCrawl ; exists ; 2017 ; International Journal of Artificial Life Research (IJALR) Volume 7 ; 7 ; http://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2018 ; International Journal of Artificial Life Research (IJALR) Volume 8 ; 8 ; https://www.igi-global.com/ ; > 
-    au < expected ; exists ; 2019 ; International Journal of Artificial Life Research (IJALR) Volume 9 ; 9 ; https://www.igi-global.com/ ; > 
 
   }
 
@@ -2095,6 +2095,7 @@
       issnl = 1947-9115
     >
     param[journal_issn] = 1947-9115
+    #Out of print
 
     au < manifest ; exists ; 2010 ; International Journal of Knowledge Discovery in Bioinformatics (IJKDB) Volume 1 ; 1 ; https://www.igi-global.com/ ; > 
     au < finished ; finished ; 2011 ; International Journal of Knowledge Discovery in Bioinformatics (IJKDB) Volume 2 ; 2 ; http://www.igi-global.com/ ; > 
@@ -2104,7 +2105,6 @@
     au < deepCrawl ; exists ; 2016 ; International Journal of Knowledge Discovery in Bioinformatics (IJKDB) Volume 6 ; 6 ; http://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2017 ; International Journal of Knowledge Discovery in Bioinformatics (IJKDB) Volume 7 ; 7 ; http://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2018 ; International Journal of Knowledge Discovery in Bioinformatics (IJKDB) Volume 8 ; 8 ; https://www.igi-global.com/ ; > 
-    au < expected ; exists ; 2019 ; International Journal of Knowledge Discovery in Bioinformatics (IJKDB) Volume 9 ; 9 ; https://www.igi-global.com/ ; > 
 
   }
 
@@ -2211,15 +2211,15 @@
       issnl = 2156-1737
     >
     param[journal_issn] = 2156-1737
+    #Out of print
 
     au < finished ; finished ; 2011 ; International Journal of Measurement Technologies and Instrumentation Engineering (IJMTIE) Volume 1 ; 1 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2012 ; International Journal of Measurement Technologies and Instrumentation Engineering (IJMTIE) Volume 2 ; 2 ; http://www.igi-global.com/ ; >
     au < deepCrawl ; exists ; 2013 ; International Journal of Measurement Technologies and Instrumentation Engineering (IJMTIE) Volume 3 ; 3 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2014 ; International Journal of Measurement Technologies and Instrumentation Engineering (IJMTIE) Volume 4 ; 4 ; http://www.igi-global.com/ ; reingest2.clockss.org:8085 > 
-    au < finished ; crawling ; 2015 ; International Journal of Measurement Technologies and Instrumentation Engineering (IJMTIE) Volume 5 ; 5 ; http://www.igi-global.com/ ; reingest2.clockss.org:8085 > 
+    au < finished ; frozen ; 2015 ; International Journal of Measurement Technologies and Instrumentation Engineering (IJMTIE) Volume 5 ; 5 ; http://www.igi-global.com/ ; reingest2.clockss.org:8085 > 
     au < frozen ; exists ; 2017 ; International Journal of Measurement Technologies and Instrumentation Engineering (IJMTIE) Volume 6 ; 6 ; http://www.igi-global.com/ ; >
     au < frozen ; exists ; 2018 ; International Journal of Measurement Technologies and Instrumentation Engineering (IJMTIE) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
-    au < expected ; exists ; 2019 ; International Journal of Measurement Technologies and Instrumentation Engineering (IJMTIE) Volume 8 ; 8 ; https://www.igi-global.com/ ; >
 
   }
 
@@ -2324,8 +2324,7 @@
     param[journal_issn] = 2640-4079
     #continues = 2166-7241
 
-    au < expected ; exists ; 2018 ; International Journal of Applied Research on Smart Surveillance Technologies and Society (IJARSSTS) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
-    au < expected ; exists ; 2019 ; International Journal of Applied Research on Smart Surveillance Technologies and Society (IJARSSTS) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
+    au < exists ; exists ; 2019 ; International Journal of Applied Research on Smart Surveillance Technologies and Society (IJARSSTS) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
 
   }
 
@@ -2898,7 +2897,7 @@
     au < deepCrawl ; exists ; 2016 ; International Journal of Standardization Research (IJSR) Volume 14 ; 14 ; http://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2017 ; International Journal of Standardization Research (IJSR) Volume 15 ; 15 ; http://www.igi-global.com/ ; > 
     au < frozen ; exists ; 2018 ; International Journal of Standardization Research (IJSR) Volume 16 ; 16 ; https://www.igi-global.com/ ; > 
-    au < manifest ; exists ; 2019 ; International Journal of Standardization Research (IJSR) Volume 17 ; 17 ; https://www.igi-global.com/ ; > 
+    au < crawling ; exists ; 2019 ; International Journal of Standardization Research (IJSR) Volume 17 ; 17 ; https://www.igi-global.com/ ; >
 
   }
 
@@ -3128,6 +3127,7 @@
       issnl = 2155-5605
     >
     param[journal_issn] = 2155-5605
+    #Out of print
 
     au < finished ; frozen ; 2011 ; International Journal of Technology and Educational Marketing (IJTEM) Volume 1 ; 1 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2012 ; International Journal of Technology and Educational Marketing (IJTEM) Volume 2 ; 2 ; http://www.igi-global.com/ ; > 
@@ -3137,7 +3137,6 @@
     au < deepCrawl ; exists ; 2016 ; International Journal of Technology and Educational Marketing (IJTEM) Volume 6 ; 6 ; http://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2017 ; International Journal of Technology and Educational Marketing (IJTEM) Volume 7 ; 7 ; http://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2018 ; International Journal of Technology and Educational Marketing (IJTEM) Volume 8 ; 8 ; https://www.igi-global.com/ ; > 
-    au < expected ; exists ; 2019 ; International Journal of Technology and Educational Marketing (IJTEM) Volume 9 ; 9 ; https://www.igi-global.com/ ; > 
 
   }
 
@@ -3201,16 +3200,16 @@
       issnl = 2156-1818
     >
     param[journal_issn] = 2156-1818
+    #Out of print
 
     au < finished ; finished ; 2011 ; International Journal of User-Driven Healthcare (IJUDH) Volume 1 ; 1 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2012 ; International Journal of User-Driven Healthcare (IJUDH) Volume 2 ; 2 ; http://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2013 ; International Journal of User-Driven Healthcare (IJUDH) Volume 3 ; 3 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2014 ; International Journal of User-Driven Healthcare (IJUDH) Volume 4 ; 4 ; http://www.igi-global.com/ ; reingest1.clockss.org:8082 > 
-    au < finished ; crawling ; 2015 ; International Journal of User-Driven Healthcare (IJUDH) Volume 5 ; 5 ; http://www.igi-global.com/ ; reingest5.clockss.org:8082 > 
-    au < finished ; crawling ; 2016 ; International Journal of User-Driven Healthcare (IJUDH) Volume 6 ; 6 ; http://www.igi-global.com/ ; reingest4.clockss.org:8082 > 
+    au < finished ; frozen ; 2015 ; International Journal of User-Driven Healthcare (IJUDH) Volume 5 ; 5 ; http://www.igi-global.com/ ; reingest5.clockss.org:8082 > 
+    au < finished ; frozen ; 2016 ; International Journal of User-Driven Healthcare (IJUDH) Volume 6 ; 6 ; http://www.igi-global.com/ ; reingest4.clockss.org:8082 > 
     au < deepCrawl ; exists ; 2017 ; International Journal of User-Driven Healthcare (IJUDH) Volume 7 ; 7 ; http://www.igi-global.com/ ; > 
     au < frozen ; exists ; 2018 ; International Journal of User-Driven Healthcare (IJUDH) Volume 8 ; 8 ; https://www.igi-global.com/ ; > 
-    au < expected ; exists ; 2019 ; International Journal of User-Driven Healthcare (IJUDH) Volume 9 ; 9 ; https://www.igi-global.com/ ; > 
 
   }
 
@@ -3245,9 +3244,10 @@
       issnl = 1942-9010
     >
     param[journal_issn] = 1942-9010
+    #continued_by = 2642-2247
 
     au < frozen ; exists ; 2009 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 1 ; 1 ; http://www.igi-global.com/ ; > 
-    au < frozen ; exists ; 2010 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 2 ; 2 ; http://www.igi-global.com/ ; > 
+    au < frozen ; exists ; 2010 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 2 ; 2 ; http://www.igi-global.com/ ; >
     au < finished ; finished ; 2011 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 3 ; 3 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2012 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 4 ; 4 ; http://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2013 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 5 ; 5 ; http://www.igi-global.com/ ; > 
@@ -3256,7 +3256,21 @@
     au < deepCrawl ; exists ; 2016 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 8 ; 8 ; http://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2017 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 9 ; 9 ; http://www.igi-global.com/ ; > 
     au < frozen ; exists ; 2018 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 10 ; 10 ; https://www.igi-global.com/ ; >
-    au < expected ; exists ; 2019 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 11 ; 11 ; https://www.igi-global.com/ ; >
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Social Media and Online Communities (IJSMOC) ;
+      issn = 2642-2247 ;
+      eissn = 2642-2255 ;
+      issnl = 2642-2247
+    >
+    param[journal_issn] = 2642-2247
+    #continues = 1942-9010
+
+    au < expected ; exists ; 2019 ; International Journal of Social Media and Online Communities (IJSMOC) Volume 11 ; 11 ; https://www.igi-global.com/ ; >
 
   }
 

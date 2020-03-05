@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>down. Plugin in progress</string>
+    <string>testing</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>34</string>
+    <string>35</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -24,7 +24,7 @@
     <map>
       <entry>
         <string>Metadata</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -159,7 +159,9 @@
     <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.medknow.MedknowArticleIteratorFactory</string>
   </entry>
+  <!-- Since some of their RIS files are incomplete or incorrect, extract metadate from html instead of ris-->
   <!--  RIS files can be "text/plain" -->
+  <!--
   <entry>
     <string>text/plain_metadata_extractor_factory_map</string>
     <map>
@@ -169,7 +171,9 @@
       </entry>
     </map>
   </entry>
+  -->
   <!--  but also could be the correct RIS type -->
+  <!--
   <entry>
     <string>application/x-research-info-systems_metadata_extractor_factory_map</string>
     <map>
@@ -179,6 +183,7 @@
       </entry>
     </map>
   </entry>
+  -->
   <entry>
     <string>text/html_metadata_extractor_factory_map</string>
     <map>
@@ -195,14 +200,24 @@
   <entry>
     <string>plugin_url_consumer_factory</string>
     <string>org.lockss.plugin.medknow.MedknowUrlConsumerFactory</string>
-  </entry>  
+  </entry>
+  <!--
+  http://www.wjcs.us.com/article.asp?issn=1941-8213;year=2018;volume=7;issue=1;spage=1;epage=7;aulast=Stringfield;type=2
+  http://www.wjtcm.net/article.asp?issn=2311-8571;year=2018;volume=4;issue=4;spage=135;epage=136;aulast=Li;type=2
+  http://www.wjtcm.net/article.asp?issn=2311-8571;year=2018;volume=4;issue=2;spage=62;epage=68;aulast=Liang;type=2
+  http://www.e-urol-sci.com/article.asp?issn=1879-5226;year=2018;volume=29;issue=6;spage=265;epage=265;aulast=Yang;type=2 Found a login page for pdf
+  http://www.tnoajosr.com/article.asp?issn=2589-4528;year=2018;volume=56;issue=4;spage=213;epage=214;aulast=Vadivelu;type=2
+  All these links will redirected to PDF download link, they are not login page
+-->
+  <!--
   <entry>
     <string>au_login_page_checker</string>
     <string>org.lockss.plugin.medknow.MedknowLoginPageChecker</string>
   </entry>
+  -->
   <entry>
     <string>au_def_pause_time</string>
-    <long>6000</long>
+    <long>3000</long>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>

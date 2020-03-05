@@ -108,7 +108,7 @@
     
     param[journal_id] = 4
 
-    au < finished ; crawling ; 2006 ; Clinical Interventions in Aging Volume 1 ; 1 ; 2006 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2006 ; Clinical Interventions in Aging Volume 1 ; 1 ; 2006 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2007 ; Clinical Interventions in Aging Volume 2 ; 2 ; 2007 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2008 ; Clinical Interventions in Aging Volume 3 ; 3 ; 2008 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2009 ; Clinical Interventions in Aging Volume 4 ; 4 ; 2009 ; reingest2.clockss.org:8085 >
@@ -118,7 +118,7 @@
     au < finished ; finished ; 2013 ; Clinical Interventions in Aging Volume 8 ; 8 ; 2013 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Clinical Interventions in Aging Volume 9 ; 9 ; 2014 ; >
     au < finished ; finished ; 2015 ; Clinical Interventions in Aging Volume 10 ; 10 ; 2015 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Clinical Interventions in Aging Volume 11 ; 11 ; 2016 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Clinical Interventions in Aging Volume 11 ; 11 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Clinical Interventions in Aging Volume 12 ; 12 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Clinical Interventions in Aging Volume 13 ; 13 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Clinical Interventions in Aging Volume 14 ; 14 ; 2019 ; >
@@ -294,7 +294,7 @@
     au < finished ; crawling ; 2013 ; Drug Design, Development and Therapy Volume 7 ; 7 ; 2013 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Drug Design, Development and Therapy Volume 8 ; 8 ; 2014 ; >
     au < finished ; frozen ; 2015 ; Drug Design, Development and Therapy Volume 9 ; 9 ; 2015 ; >
-    au < finished ; crawling ; 2016 ; Drug Design, Development and Therapy Volume 10 ; 10 ; 2016 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Drug Design, Development and Therapy Volume 10 ; 10 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Drug Design, Development and Therapy Volume 11 ; 11 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Drug Design, Development and Therapy Volume 12 ; 12 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Drug Design, Development and Therapy Volume 13 ; 13 ; 2019 ; >
@@ -391,7 +391,7 @@
     au < finished ; finished ; 2013 ; Advances and Applications in Bioinformatics and Chemistry Volume 6 ; 6 ; 2013 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Advances and Applications in Bioinformatics and Chemistry Volume 7 ; 7 ; 2014 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Advances and Applications in Bioinformatics and Chemistry Volume 8 ; 8 ; 2015 ; >
-    au < finished ; crawling ; 2016 ; Advances and Applications in Bioinformatics and Chemistry Volume 9 ; 9 ; 2016 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Advances and Applications in Bioinformatics and Chemistry Volume 9 ; 9 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Advances and Applications in Bioinformatics and Chemistry Volume 10 ; 10 ; 2017 ; >
 
   }
@@ -413,7 +413,7 @@
     au < finished ; frozen ; 2013 ; Stem Cells and Cloning: Advances and Applications Volume 6 ; 6 ; 2013 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Stem Cells and Cloning: Advances and Applications Volume 7 ; 7 ; 2014 ; >
     au < finished ; finished ; 2015 ; Stem Cells and Cloning: Advances and Applications Volume 8 ; 8 ; 2015 ; >
-    au < finished ; crawling ; 2016 ; Stem Cells and Cloning: Advances and Applications Volume 9 ; 9 ; 2016 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Stem Cells and Cloning: Advances and Applications Volume 9 ; 9 ; 2016 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Stem Cells and Cloning: Advances and Applications Volume 10 ; 10 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Stem Cells and Cloning: Advances and Applications Volume 11 ; 11 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Stem Cells and Cloning: Advances and Applications Volume 12 ; 12 ; 2019 ; >
@@ -579,7 +579,7 @@
     au < finished ; finished ; 2013 ; Clinical, Cosmetic and Investigational Dermatology Volume 6 ; 6 ; 2013 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Clinical, Cosmetic and Investigational Dermatology Volume 7 ; 7 ; 2014 ; >
     au < finished ; finished ; 2015 ; Clinical, Cosmetic and Investigational Dermatology Volume 8 ; 8 ; 2015 ; >
-    au < finished ; crawling ; 2016 ; Clinical, Cosmetic and Investigational Dermatology Volume 9 ; 9 ; 2016 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Clinical, Cosmetic and Investigational Dermatology Volume 9 ; 9 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Clinical, Cosmetic and Investigational Dermatology Volume 10 ; 10 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Clinical, Cosmetic and Investigational Dermatology Volume 11 ; 11 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Clinical, Cosmetic and Investigational Dermatology Volume 12 ; 12 ; 2019 ; >
@@ -932,7 +932,7 @@
     au < finished ; finished ; 2010 ; International Journal of Interferon, Cytokine and Mediator Research Volume 2 ; 2 ; 2010 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2011 ; International Journal of Interferon, Cytokine and Mediator Research Volume 3 ; 3 ; 2011 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2012 ; International Journal of Interferon, Cytokine and Mediator Research Volume 4 ; 4 ; 2012 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2013 ; International Journal of Interferon, Cytokine and Mediator Research Volume 5 ; 5 ; 2013 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2013 ; International Journal of Interferon, Cytokine and Mediator Research Volume 5 ; 5 ; 2013 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; International Journal of Interferon, Cytokine and Mediator Research Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; International Journal of Interferon, Cytokine and Mediator Research Volume 7 ; 7 ; 2015 ; >
     au < finished ; finished ; 2016 ; International Journal of Interferon, Cytokine and Mediator Research Volume 8 ; 8 ; 2016 ; reingest1.clockss.org:8082 >
@@ -996,7 +996,7 @@
     param[journal_id] = 51
 
     au < finished ; finished ; 2009 ; Open Access Journal of Clinical Trials Volume 1 ; 1 ; 2009 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2010 ; Open Access Journal of Clinical Trials Volume 2 ; 2 ; 2010 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2010 ; Open Access Journal of Clinical Trials Volume 2 ; 2 ; 2010 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2011 ; Open Access Journal of Clinical Trials Volume 3 ; 3 ; 2011 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Open Access Journal of Clinical Trials Volume 4 ; 4 ; 2012 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; Open Access Journal of Clinical Trials Volume 5 ; 5 ; 2013 ; reingest1.clockss.org:8082 >
@@ -1019,10 +1019,10 @@
     param[journal_id] = 52
 
     au < finished ; finished ; 2009 ; International Journal of Wine Research Volume 1 ; 1 ; 2009 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2010 ; International Journal of Wine Research Volume 2 ; 2 ; 2010 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2010 ; International Journal of Wine Research Volume 2 ; 2 ; 2010 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2011 ; International Journal of Wine Research Volume 3 ; 3 ; 2011 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2012 ; International Journal of Wine Research Volume 4 ; 4 ; 2012 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2013 ; International Journal of Wine Research Volume 5 ; 5 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2013 ; International Journal of Wine Research Volume 5 ; 5 ; 2013 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; International Journal of Wine Research Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; International Journal of Wine Research Volume 7 ; 7 ; 2015 ; >
     au < finished ; frozen ; 2016 ; International Journal of Wine Research Volume 8 ; 8 ; 2016 ; reingest4.clockss.org:8082 >
@@ -1288,7 +1288,7 @@
     au < finished ; finished ; 2009 ; Clinical Pharmacology: Advances and Applications Volume 1 ; 1 ; 2009 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2010 ; Clinical Pharmacology: Advances and Applications Volume 2 ; 2 ; 2010 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2011 ; Clinical Pharmacology: Advances and Applications Volume 3 ; 3 ; 2011 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2012 ; Clinical Pharmacology: Advances and Applications Volume 4 ; 4 ; 2012 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2012 ; Clinical Pharmacology: Advances and Applications Volume 4 ; 4 ; 2012 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Clinical Pharmacology: Advances and Applications Volume 5 ; 5 ; 2013 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Clinical Pharmacology: Advances and Applications Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Clinical Pharmacology: Advances and Applications Volume 7 ; 7 ; 2015 ; >
@@ -1718,7 +1718,7 @@
     au < finished ; finished ; 2013 ; Core Evidence Volume 8 ; 8 ; 2013 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Core Evidence Volume 9 ; 9 ; 2014 ; >
     au < finished ; finished ; 2015 ; Core Evidence Volume 10 ; 10 ; 2015 ; >
-    au < finished ; crawling ; 2016 ; Core Evidence Volume 11 ; 11 ; 2016 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Core Evidence Volume 11 ; 11 ; 2016 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Core Evidence Volume 12 ; 12 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Core Evidence Volume 13 ; 13 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Core Evidence Volume 14 ; 14 ; 2019 ; >
@@ -1760,7 +1760,7 @@
     au < finished ; finished ; 2009 ; Patient Intelligence Volume 1 ; 1 ; 2009 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2010 ; Patient Intelligence Volume 2 ; 2 ; 2010 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2011 ; Patient Intelligence Volume 3 ; 3 ; 2011 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2012 ; Patient Intelligence Volume 4 ; 4 ; 2012 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2012 ; Patient Intelligence Volume 4 ; 4 ; 2012 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Patient Intelligence Volume 5 ; 5 ; 2013 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Patient Intelligence Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Patient Intelligence Volume 7 ; 7 ; 2015 ; >
@@ -2380,7 +2380,7 @@
     au < finished ; crawling ; 2016 ; Open Access Medical Statistics Volume 6 ; 6 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Open Access Medical Statistics Volume 7 ; 7 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Open Access Medical Statistics Volume 8 ; 8 ; 2018 ; >
-    au < manifest ; exists ; 2019 ; Open Access Medical Statistics Volume 9 ; 9 ; 2019 ; >
+    au < expected ; exists ; 2019 ; Open Access Medical Statistics Volume 9 ; 9 ; 2019 ; >
 
   }
 
@@ -2734,7 +2734,7 @@
     
     param[journal_id] = 147
 
-    au < finished ; crawling ; 2011 ; Journal of Parkinsonism & Restless Legs Syndrome Volume 1 ; 1 ; 2011 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2011 ; Journal of Parkinsonism & Restless Legs Syndrome Volume 1 ; 1 ; 2011 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Journal of Parkinsonism & Restless Legs Syndrome Volume 2 ; 2 ; 2012 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2013 ; Journal of Parkinsonism & Restless Legs Syndrome Volume 3 ; 3 ; 2013 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Journal of Parkinsonism & Restless Legs Syndrome Volume 4 ; 4 ; 2014 ; >

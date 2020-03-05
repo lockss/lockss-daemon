@@ -32,13 +32,13 @@
       au < doNotProcess ; exists ; 2005 ; BMC Anesthesiology Volume 5 ; 5 ; >
       au < doNotProcess ; exists ; 2006 ; BMC Anesthesiology Volume 6 ; 6 ; >
       au < doNotProcess ; exists ; 2007 ; BMC Anesthesiology Volume 7 ; 7 ; >
-      au < finished ; crawling ; 2008 ; BMC Anesthesiology Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2008 ; BMC Anesthesiology Volume 8 ; 8 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2009 ; BMC Anesthesiology Volume 9 ; 9 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2010 ; BMC Anesthesiology Volume 10 ; 10 ; >
       au < finished ; finished ; 2011 ; BMC Anesthesiology Volume 11 ; 11 ; >
-      au < finished ; crawling ; 2012 ; BMC Anesthesiology Volume 12 ; 12 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2012 ; BMC Anesthesiology Volume 12 ; 12 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2013 ; BMC Anesthesiology Volume 13 ; 13 ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; BMC Anesthesiology Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; BMC Anesthesiology Volume 14 ; 14 ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; BMC Anesthesiology Volume 15 [superseded] ; 15 ; >
       
     }
@@ -96,7 +96,7 @@
       au < frozen ; exists ; 2011 ; BMC Bioinformatics Volume 12 ; 12 ; >
       au < frozen ; exists ; 2012 ; BMC Bioinformatics Volume 13 ; 13 ; >
       au < frozen ; exists ; 2013 ; BMC Bioinformatics Volume 14 ; 14 ; >
-      au < finished ; crawling ; 2014 ; BMC Bioinformatics Volume 15 ; 15 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; BMC Bioinformatics Volume 15 ; 15 ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; BMC Bioinformatics Volume 16 [superseded] ; 16 ; >
 
     }
@@ -122,7 +122,7 @@
       au < finished ; finished ; 2011 ; BMC Biology Volume 9 ; 9 ; >
       au < frozen ; exists ; 2012 ; BMC Biology Volume 10 ; 10 ; >
       au < frozen ; exists ; 2013 ; BMC Biology Volume 11 ; 11 ; >
-      au < finished ; crawling ; 2014 ; BMC Biology Volume 12 ; 12 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; BMC Biology Volume 12 ; 12 ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; BMC Biology Volume 13 [superseded] ; 13 ; >
 
     }
@@ -149,10 +149,10 @@
         au < doNotProcess ; exists ; 2008 ; BMC Biophysics Volume 1 ; 1 ; >
         au < superseded ; exists ; 2009 ; BMC Biophysics Volume 2 [superseded] ; 2 ; >
         au < doNotProcess ; exists ; 2010 ; BMC Biophysics Volume 3 ; 3 ; >
-        au < finished ; crawling ; 2011 ; BMC Biophysics Volume 4 ; 4 ; reingest1.clockss.org:8082 >
+        au < finished ; frozen ; 2011 ; BMC Biophysics Volume 4 ; 4 ; reingest1.clockss.org:8082 >
         au < finished ; finished ; 2012 ; BMC Biophysics Volume 5 ; 5 ; reingest1.clockss.org:8082 >
         au < finished ; finished ; 2013 ; BMC Biophysics Volume 6 ; 6 ; reingest1.clockss.org:8082 >
-        au < finished ; crawling ; 2014 ; BMC Biophysics Volume 7 ; 7 ; reingest3.clockss.org:8083 >
+        au < finished ; frozen ; 2014 ; BMC Biophysics Volume 7 ; 7 ; reingest3.clockss.org:8083 >
         au < superseded ; exists ; 2015 ; BMC Biophysics Volume 8 [superseded] ; 8 ; >
       
       }
@@ -180,9 +180,9 @@
       au < zapped ; finished ; 2009 ; BMC Biotechnology Volume 9 ; 9 ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2010 ; BMC Biotechnology Volume 10 ; 10 ; >
       au < zapped ; finished ; 2011 ; BMC Biotechnology Volume 11 ; 11 ; >
-      au < finished ; crawling ; 2012 ; BMC Biotechnology Volume 12 ; 12 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2012 ; BMC Biotechnology Volume 12 ; 12 ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2013 ; BMC Biotechnology Volume 13 ; 13 ; >
-      au < finished ; crawling ; 2014 ; BMC Biotechnology Volume 14 ; 14 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2014 ; BMC Biotechnology Volume 14 ; 14 ; reingest2.clockss.org:8085 >
       au < superseded ; exists ; 2015 ; BMC Biotechnology Volume 15 [superseded] ; 15 ; >
 
     }
@@ -253,7 +253,7 @@
       au < finished ; finished ; 2011 ; BMC Cancer Volume 11 ; 11 ; >
       au < frozen ; exists ; 2012 ; BMC Cancer Volume 12 ; 12 ; >
       au < frozen ; exists ; 2013 ; BMC Cancer Volume 13 ; 13 ; >
-      au < finished ; crawling ; 2014 ; BMC Cancer Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; BMC Cancer Volume 14 ; 14 ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; BMC Cancer Volume 15 [superseded] ; 15 ; >
 
     }
@@ -305,13 +305,13 @@
       au < doNotProcess ; exists ; 2005 ; BMC Cell Biology Volume 6 ; 6 ; >
       au < doNotProcess ; exists ; 2006 ; BMC Cell Biology Volume 7 ; 7 ; >
       au < doNotProcess ; exists ; 2007 ; BMC Cell Biology Volume 8 ; 8 ; >
-      au < finished ; crawling ; 2008 ; BMC Cell Biology Volume 9 ; 9 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2008 ; BMC Cell Biology Volume 9 ; 9 ; reingest5.clockss.org:8082 >
       au < zapped ; finished ; 2009 ; BMC Cell Biology Volume 10 ; 10 ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2010 ; BMC Cell Biology Volume 11 ; 11 ; >
       au < finished ; finished ; 2011 ; BMC Cell Biology Volume 12 ; 12 ; >
       au < frozen ; exists ; 2012 ; BMC Cell Biology Volume 13 ; 13 ; >
       au < zapped ; finished ; 2013 ; BMC Cell Biology Volume 14 ; 14 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; BMC Cell Biology Volume 15 ; 15 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; BMC Cell Biology Volume 15 ; 15 ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; BMC Cell Biology Volume 16 [superseded] ; 16 ; >
 
     }
@@ -366,7 +366,7 @@
       au < finished ; finished ; 2011 ; BMC Clinical Pathology Volume 11 ; 11 ; >
       au < finished ; finished ; 2012 ; BMC Clinical Pathology Volume 12 ; 12 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2013 ; BMC Clinical Pathology Volume 13 ; 13 ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; BMC Clinical Pathology Volume 14 ; 14 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2014 ; BMC Clinical Pathology Volume 14 ; 14 ; reingest2.clockss.org:8085 >
       au < superseded ; exists ; 2015 ; BMC Clinical Pathology Volume 15 [superseded] ; 15 ; >
 
     }
@@ -418,7 +418,7 @@
       au < doNotProcess ; exists ; 2005 ; BMC Complementary and Alternative Medicine Volume 5 ; 5 ; >
       au < doNotProcess ; exists ; 2006 ; BMC Complementary and Alternative Medicine Volume 6 ; 6 ; >
       au < doNotProcess ; exists ; 2007 ; BMC Complementary and Alternative Medicine Volume 7 ; 7 ; >
-      au < finished ; crawling ; 2008 ; BMC Complementary and Alternative Medicine Volume 8 ; 8 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2008 ; BMC Complementary and Alternative Medicine Volume 8 ; 8 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2009 ; BMC Complementary and Alternative Medicine Volume 9 ; 9 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2010 ; BMC Complementary and Alternative Medicine Volume 10 ; 10 ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2011 ; BMC Complementary and Alternative Medicine Volume 11 ; 11 ; >
@@ -480,7 +480,7 @@
       au < finished ; finished ; 2011 ; BMC Developmental Biology Volume 11 ; 11 ; >
       au < zapped ; finished ; 2012 ; BMC Developmental Biology Volume 12 ; 12 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2013 ; BMC Developmental Biology Volume 13 ; 13 ; >
-      au < finished ; crawling ; 2014 ; BMC Developmental Biology Volume 14 ; 14 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; BMC Developmental Biology Volume 14 ; 14 ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; BMC Developmental Biology Volume 15 [superseded] ; 15 ; >
      
     }
@@ -508,7 +508,7 @@
       au < finished ; finished ; 2011 ; BMC Ear, Nose and Throat Disorders Volume 11 ; 11 ; >
       au < finished ; finished ; 2012 ; BMC Ear, Nose and Throat Disorders Volume 12 ; 12 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2013 ; BMC Ear, Nose and Throat Disorders Volume 13 ; 13 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2014 ; BMC Ear, Nose and Throat Disorders Volume 14 ; 14 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; BMC Ear, Nose and Throat Disorders Volume 14 ; 14 ; reingest4.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; BMC Ear, Nose and Throat Disorders Volume 15 [superseded] ; 15 ; >
 
     }
@@ -535,8 +535,8 @@
       au < finished ; finished ; 2010 ; BMC Ecology Volume 10 ; 10 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2011 ; BMC Ecology Volume 11 ; 11 ; >
       au < frozen ; exists ; 2012 ; BMC Ecology Volume 12 ; 12 ; >
-      au < finished ; crawling ; 2013 ; BMC Ecology Volume 13 ; 13 ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; BMC Ecology Volume 14 ; 14 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2013 ; BMC Ecology Volume 13 ; 13 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; BMC Ecology Volume 14 ; 14 ; reingest3.clockss.org:8083 >
       au < superseded ; exists ; 2015 ; BMC Ecology Volume 15 [superseded] ; 15 ; >
 
     }
@@ -588,11 +588,11 @@
       au < doNotProcess ; exists ; 2007 ; BMC Endocrine Disorders Volume 7 ; 7 ; >
       au < finished ; finished ; 2008 ; BMC Endocrine Disorders Volume 8 ; 8 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2009 ; BMC Endocrine Disorders Volume 9 ; 9 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2010 ; BMC Endocrine Disorders Volume 10 ; 10 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2010 ; BMC Endocrine Disorders Volume 10 ; 10 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2011 ; BMC Endocrine Disorders Volume 11 ; 11 ; >
       au < finished ; finished ; 2012 ; BMC Endocrine Disorders Volume 12 ; 12 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2013 ; BMC Endocrine Disorders Volume 13 ; 13 ; >
-      au < finished ; crawling ; 2014 ; BMC Endocrine Disorders Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; BMC Endocrine Disorders Volume 14 ; 14 ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; BMC Endocrine Disorders Volume 15 [superseded] ; 15 ; >
 
     }
@@ -620,7 +620,7 @@
       au < frozen ; exists ; 2011 ; BMC Evolutionary Biology Volume 11 ; 11 ; >
       au < zapped ; finished ; 2012 ; BMC Evolutionary Biology Volume 12 ; 12 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2013 ; BMC Evolutionary Biology Volume 13 ; 13 ; >
-      au < finished ; crawling ; 2014 ; BMC Evolutionary Biology Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; BMC Evolutionary Biology Volume 14 ; 14 ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; BMC Evolutionary Biology Volume 15 [superseded] ; 15 ; >
 
     }
@@ -671,13 +671,13 @@
       au < doNotProcess ; exists ; 2005 ; BMC Gastroenterology Volume 5 ; 5 ; >
       au < doNotProcess ; exists ; 2006 ; BMC Gastroenterology Volume 6 ; 6 ; >
       au < doNotProcess ; exists ; 2007 ; BMC Gastroenterology Volume 7 ; 7 ; >
-      au < finished ; crawling ; 2008 ; BMC Gastroenterology Volume 8 ; 8 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2009 ; BMC Gastroenterology Volume 9 ; 9 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2008 ; BMC Gastroenterology Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2009 ; BMC Gastroenterology Volume 9 ; 9 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2010 ; BMC Gastroenterology Volume 10 ; 10 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2011 ; BMC Gastroenterology Volume 11 ; 11 ; >
       au < zapped ; finished ; 2012 ; BMC Gastroenterology Volume 12 ; 12 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2013 ; BMC Gastroenterology Volume 13 ; 13 ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; BMC Gastroenterology Volume 14 ; 14 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2013 ; BMC Gastroenterology Volume 13 ; 13 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; BMC Gastroenterology Volume 14 ; 14 ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; BMC Gastroenterology Volume 15 [superseded] ; 15 ; >
 
     }
@@ -757,8 +757,8 @@
       au < doNotProcess ; exists ; 2005 ; BMC Geriatrics Volume 5 ; 5 ; >
       au < doNotProcess ; exists ; 2006 ; BMC Geriatrics Volume 6 ; 6 ; >
       au < doNotProcess ; exists ; 2007 ; BMC Geriatrics Volume 7 ; 7 ; >
-      au < finished ; crawling ; 2008 ; BMC Geriatrics Volume 8 ; 8 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2009 ; BMC Geriatrics Volume 9 ; 9 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2008 ; BMC Geriatrics Volume 8 ; 8 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2009 ; BMC Geriatrics Volume 9 ; 9 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2010 ; BMC Geriatrics Volume 10 ; 10 ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2011 ; BMC Geriatrics Volume 11 ; 11 ; >
       au < finished ; finished ; 2012 ; BMC Geriatrics Volume 12 ; 12 ; reingest5.clockss.org:8082 >
@@ -791,7 +791,7 @@
       au < finished ; frozen ; 2011 ; BMC Health Services Research Volume 11 ; 11 ; >
       au < frozen ; exists ; 2012 ; BMC Health Services Research Volume 12 ; 12 ; >
       au < frozen ; exists ; 2013 ; BMC Health Services Research Volume 13 ; 13 ; >
-      au < finished ; crawling ; 2014 ; BMC Health Services Research Volume 14 ; 14 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; BMC Health Services Research Volume 14 ; 14 ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; BMC Health Services Research Volume 15 [superseded] ; 15 ; >
 
     }
@@ -816,11 +816,11 @@
       au < doNotProcess ; exists ; 2007 ; BMC Immunology Volume 8 ; 8 ; >
       au < frozen ; exists ; 2008 ; BMC Immunology Volume 9 ; 9 ; >
       au < finished ; finished ; 2009 ; BMC Immunology Volume 10 ; 10 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2010 ; BMC Immunology Volume 11 ; 11 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2010 ; BMC Immunology Volume 11 ; 11 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2011 ; BMC Immunology Volume 12 ; 12 ; >
       au < finished ; finished ; 2012 ; BMC Immunology Volume 13 ; 13 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2013 ; BMC Immunology Volume 14 ; 14 ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; BMC Immunology Volume 15 ; 15 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2013 ; BMC Immunology Volume 14 ; 14 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; BMC Immunology Volume 15 ; 15 ; reingest2.clockss.org:8085 >
       au < superseded ; exists ; 2015 ; BMC Immunology Volume 16 [superseded] ; 16 ; >
 
     }
@@ -848,7 +848,7 @@
       au < finished ; finished ; 2011 ; BMC Infectious Diseases Volume 11 ; 11 ; >
       au < frozen ; exists ; 2012 ; BMC Infectious Diseases Volume 12 ; 12 ; >
       au < frozen ; exists ; 2013 ; BMC Infectious Diseases Volume 13 ; 13 ; >
-      au < finished ; crawling ; 2014 ; BMC Infectious Diseases Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; BMC Infectious Diseases Volume 14 ; 14 ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; BMC Infectious Diseases Volume 15 [superseded] ; 15 ; >
 
     }
@@ -876,7 +876,7 @@
       au < finished ; finished ; 2011 ; BMC International Health and Human Rights Volume 11 ; 11 ; >
       au < finished ; finished ; 2012 ; BMC International Health and Human Rights Volume 12 ; 12 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2013 ; BMC International Health and Human Rights Volume 13 ; 13 ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; BMC International Health and Human Rights Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; BMC International Health and Human Rights Volume 14 ; 14 ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; BMC International Health and Human Rights Volume 15 [superseded] ; 15 ; >
 
     }
@@ -904,7 +904,7 @@
       au < finished ; finished ; 2011 ; BMC Medical Education Volume 11 ; 11 ; >
       au < finished ; finished ; 2012 ; BMC Medical Education Volume 12 ; 12 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2013 ; BMC Medical Education Volume 13 ; 13 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2014 ; BMC Medical Education Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; BMC Medical Education Volume 14 ; 14 ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; BMC Medical Education Volume 15 [superseded] ; 15 ; >
 
     }
@@ -962,7 +962,7 @@
       au < finished ; frozen ; 2011 ; BMC Medical Genetics Volume 12 ; 12 ; >
       au < finished ; finished ; 2012 ; BMC Medical Genetics Volume 13 ; 13 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2013 ; BMC Medical Genetics Volume 14 ; 14 ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; BMC Medical Genetics Volume 15 ; 15 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2014 ; BMC Medical Genetics Volume 15 ; 15 ; reingest3.clockss.org:8083 >
       au < superseded ; exists ; 2015 ; BMC Medical Genetics Volume 16 [superseded] ; 16 ; >
 
     }
@@ -983,7 +983,7 @@
       au < zapped ; finished ; 2011 ; BMC Medical Genomics Volume 4 ; 4 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2012 ; BMC Medical Genomics Volume 5 ; 5 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2013 ; BMC Medical Genomics Volume 6 ; 6 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; BMC Medical Genomics Volume 7 ; 7 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2014 ; BMC Medical Genomics Volume 7 ; 7 ; reingest2.clockss.org:8085 >
       au < superseded ; exists ; 2015 ; BMC Medical Genomics Volume 8 [superseded] ; 8 ; >
 
     }
@@ -1009,9 +1009,9 @@
       au < finished ; finished ; 2009 ; BMC Medical Imaging Volume 9 ; 9 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2010 ; BMC Medical Imaging Volume 10 ; 10 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2011 ; BMC Medical Imaging Volume 11 ; 11 ; >
-      au < finished ; crawling ; 2012 ; BMC Medical Imaging Volume 12 ; 12 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2012 ; BMC Medical Imaging Volume 12 ; 12 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2013 ; BMC Medical Imaging Volume 13 ; 13 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2014 ; BMC Medical Imaging Volume 14 ; 14 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2014 ; BMC Medical Imaging Volume 14 ; 14 ; reingest2.clockss.org:8085 >
       au < superseded ; exists ; 2015 ; BMC Medical Imaging Volume 15 [superseded] ; 15 ; >
 
     }
@@ -1038,8 +1038,8 @@
       au < finished ; finished ; 2010 ; BMC Medical Informatics and Decision Making Volume 10 ; 10 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2011 ; BMC Medical Informatics and Decision Making Volume 11 ; 11 ; >
       au < frozen ; exists ; 2012 ; BMC Medical Informatics and Decision Making Volume 12 ; 12 ; >
-      au < finished ; crawling ; 2013 ; BMC Medical Informatics and Decision Making Volume 13 ; 13 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; BMC Medical Informatics and Decision Making Volume 14 ; 14 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2013 ; BMC Medical Informatics and Decision Making Volume 13 ; 13 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; BMC Medical Informatics and Decision Making Volume 14 ; 14 ; reingest3.clockss.org:8083 >
       au < superseded ; exists ; 2015 ; BMC Medical Informatics and Decision Making Volume 15 [superseded] ; 15 ; >
 
     }
@@ -1067,7 +1067,7 @@
       au < finished ; frozen ; 2011 ; BMC Medical Research Methodology Volume 11 ; 11 ; >
       au < finished ; finished ; 2012 ; BMC Medical Research Methodology Volume 12 ; 12 ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2013 ; BMC Medical Research Methodology Volume 13 ; 13 ; >
-      au < finished ; crawling ; 2014 ; BMC Medical Research Methodology Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; BMC Medical Research Methodology Volume 14 ; 14 ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; BMC Medical Research Methodology Volume 15 [superseded] ; 15 ; >
 
     }
@@ -1115,7 +1115,7 @@
       au < finished ; frozen ; 2011 ; BMC Medicine Volume 9 ; 9 ; >
       au < frozen ; exists ; 2012 ; BMC Medicine Volume 10 ; 10 ; >
       au < frozen ; exists ; 2013 ; BMC Medicine Volume 11 ; 11 ; >
-      au < finished ; crawling ; 2014 ; BMC Medicine Volume 12 ; 12 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; BMC Medicine Volume 12 ; 12 ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; BMC Medicine Volume 13 [superseded] ; 13 ; >
 
     }
@@ -1143,7 +1143,7 @@
       au < finished ; frozen ; 2011 ; BMC Microbiology Volume 11 ; 11 ; >
       au < frozen ; exists ; 2012 ; BMC Microbiology Volume 12 ; 12 ; >
       au < frozen ; exists ; 2013 ; BMC Microbiology Volume 13 ; 13 ; >
-      au < finished ; crawling ; 2014 ; BMC Microbiology Volume 14 ; 14 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2014 ; BMC Microbiology Volume 14 ; 14 ; reingest2.clockss.org:8085 >
       au < superseded ; exists ; 2015 ; BMC Microbiology Volume 15 [superseded] ; 15 ; >
 
     }
@@ -1171,8 +1171,8 @@
       au < zapped ; finished ; 2010 ; BMC Molecular Biology Volume 11 ; 11 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2011 ; BMC Molecular Biology Volume 12 ; 12 ; >
       au < finished ; finished ; 2012 ; BMC Molecular Biology Volume 13 ; 13 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2013 ; BMC Molecular Biology Volume 14 ; 14 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2014 ; BMC Molecular Biology Volume 15 ; 15 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2013 ; BMC Molecular Biology Volume 14 ; 14 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2014 ; BMC Molecular Biology Volume 15 ; 15 ; reingest3.clockss.org:8083 >
       au < superseded ; exists ; 2015 ; BMC Molecular Biology Volume 16 [superseded] ; 16 ; >
 
     }
@@ -1201,7 +1201,7 @@
       au < finished ; frozen ; 2011 ; BMC Musculoskeletal Disorders Volume 12 ; 12 ; >
       au < zapped ; finished ; 2012 ; BMC Musculoskeletal Disorders Volume 13 ; 13 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2013 ; BMC Musculoskeletal Disorders Volume 14 ; 14 ; >
-      au < finished ; crawling ; 2014 ; BMC Musculoskeletal Disorders Volume 15 ; 15 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; BMC Musculoskeletal Disorders Volume 15 ; 15 ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; BMC Musculoskeletal Disorders Volume 16 [superseded] ; 16 ; >
 
     }
@@ -1225,12 +1225,12 @@
       au < doNotProcess ; exists ; 2006 ; BMC Nephrology Volume 7 ; 7 ; >
       au < doNotProcess ; exists ; 2007 ; BMC Nephrology Volume 8 ; 8 ; >
       au < frozen ; exists ; 2008 ; BMC Nephrology Volume 9 ; 9 ; >
-      au < finished ; crawling ; 2009 ; BMC Nephrology Volume 10 ; 10 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2009 ; BMC Nephrology Volume 10 ; 10 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2010 ; BMC Nephrology Volume 11 ; 11 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2011 ; BMC Nephrology Volume 12 ; 12 ; >
       au < finished ; finished ; 2012 ; BMC Nephrology Volume 13 ; 13 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2013 ; BMC Nephrology Volume 14 ; 14 ; >
-      au < finished ; crawling ; 2014 ; BMC Nephrology Volume 15 ; 15 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; BMC Nephrology Volume 15 ; 15 ; reingest4.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; BMC Nephrology Volume 16 [superseded] ; 16 ; >
 
     }
@@ -1258,7 +1258,7 @@
       au < finished ; frozen ; 2011 ; BMC Neurology Volume 11 ; 11 ; >
       au < frozen ; exists ; 2012 ; BMC Neurology Volume 12 ; 12 ; >
       au < frozen ; exists ; 2013 ; BMC Neurology Volume 13 ; 13 ; >
-      au < finished ; crawling ; 2014 ; BMC Neurology Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; BMC Neurology Volume 14 ; 14 ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; BMC Neurology Volume 15 [superseded] ; 15 ; >
 
     }
@@ -1281,13 +1281,13 @@
       au < doNotProcess ; exists ; 2005 ; BMC Neuroscience Volume 6 ; 6 ; >
       au < doNotProcess ; exists ; 2006 ; BMC Neuroscience Volume 7 ; 7 ; >
       au < doNotProcess ; exists ; 2007 ; BMC Neuroscience Volume 8 ; 8 ; >
-      au < finished ; crawling ; 2008 ; BMC Neuroscience Volume 9 ; 9 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2008 ; BMC Neuroscience Volume 9 ; 9 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2009 ; BMC Neuroscience Volume 10 ; 10 ; >
       au < finished ; finished ; 2010 ; BMC Neuroscience Volume 11 ; 11 ; reingest5.clockss.org:8082 >
       au < zapped ; finished ; 2011 ; BMC Neuroscience Volume 12 ; 12 ; >
       au < finished ; finished ; 2012 ; BMC Neuroscience Volume 13 ; 13 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2013 ; BMC Neuroscience Volume 14 ; 14 ; >
-      au < finished ; crawling ; 2014 ; BMC Neuroscience Volume 15 ; 15 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; BMC Neuroscience Volume 15 ; 15 ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; BMC Neuroscience Volume 16 [superseded] ; 16 ; >
 
     }
@@ -1340,7 +1340,7 @@
       au < finished ; finished ; 2011 ; BMC Nursing Volume 10 ; 10 ; >
       au < finished ; finished ; 2012 ; BMC Nursing Volume 11 ; 11 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2013 ; BMC Nursing Volume 12 ; 12 ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; BMC Nursing Volume 13 ; 13 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; BMC Nursing Volume 13 ; 13 ; reingest4.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; BMC Nursing Volume 14 [superseded] ; 14 ; >
 
     }
@@ -1409,9 +1409,9 @@
       au < finished ; finished ; 2009 ; BMC Oral Health Volume 9 ; 9 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2010 ; BMC Oral Health Volume 10 ; 10 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2011 ; BMC Oral Health Volume 11 ; 11 ; >
-      au < finished ; crawling ; 2012 ; BMC Oral Health Volume 12 ; 12 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2012 ; BMC Oral Health Volume 12 ; 12 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2013 ; BMC Oral Health Volume 13 ; 13 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2014 ; BMC Oral Health Volume 14 ; 14 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; BMC Oral Health Volume 14 ; 14 ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; BMC Oral Health Volume 15 [superseded] ; 15 ; >
 
     }
@@ -1460,12 +1460,12 @@
       au < doNotProcess ; exists ; 2006 ; BMC Pediatrics Volume 6 ; 6 ; >
       au < doNotProcess ; exists ; 2007 ; BMC Pediatrics Volume 7 ; 7 ; >
       au < finished ; finished ; 2008 ; BMC Pediatrics Volume 8 ; 8 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2009 ; BMC Pediatrics Volume 9 ; 9 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2009 ; BMC Pediatrics Volume 9 ; 9 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2010 ; BMC Pediatrics Volume 10 ; 10 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2011 ; BMC Pediatrics Volume 11 ; 11 ; >
       au < frozen ; exists ; 2012 ; BMC Pediatrics Volume 12 ; 12 ; >
       au < finished ; finished ; 2013 ; BMC Pediatrics Volume 13 ; 13 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; BMC Pediatrics Volume 14 ; 14 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; BMC Pediatrics Volume 14 ; 14 ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; BMC Pediatrics Volume 15 [superseded] ; 15 ; >
 
     }
@@ -1514,7 +1514,7 @@
       au < superseded ; exists ; 2011 ; BMC Pharmacology and Toxicology Volume 12 [to delete] ; 12 ; >
       au < frozen ; exists ; 2012 ; BMC Pharmacology and Toxicology Volume 13 ; 13 ; >
       au < finished ; finished ; 2013 ; BMC Pharmacology and Toxicology Volume 14 ; 14 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; BMC Pharmacology and Toxicology Volume 15 ; 15 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; BMC Pharmacology and Toxicology Volume 15 ; 15 ; reingest4.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; BMC Pharmacology and Toxicology Volume 16 [superseded] ; 16 ; >
 
     }
@@ -1536,13 +1536,13 @@
       au < doNotProcess ; exists ; 2005 ; BMC Physiology Volume 5 ; 5 ; >
       au < doNotProcess ; exists ; 2006 ; BMC Physiology Volume 6 ; 6 ; >
       au < doNotProcess ; exists ; 2007 ; BMC Physiology Volume 7 ; 7 ; >
-      au < finished ; crawling ; 2008 ; BMC Physiology Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2008 ; BMC Physiology Volume 8 ; 8 ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2009 ; BMC Physiology Volume 9 ; 9 ; >
-      au < finished ; crawling ; 2010 ; BMC Physiology Volume 10 ; 10 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2010 ; BMC Physiology Volume 10 ; 10 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2011 ; BMC Physiology Volume 11 ; 11 ; >
-      au < finished ; crawling ; 2012 ; BMC Physiology Volume 12 ; 12 ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2013 ; BMC Physiology Volume 13 ; 13 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; BMC Physiology Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2012 ; BMC Physiology Volume 12 ; 12 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2013 ; BMC Physiology Volume 13 ; 13 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; BMC Physiology Volume 14 ; 14 ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; BMC Physiology Volume 15 [superseded] ; 15 ; >
 
     }
@@ -1570,7 +1570,7 @@
       au < finished ; frozen ; 2011 ; BMC Plant Biology Volume 11 ; 11 ; >
       au < frozen ; exists ; 2012 ; BMC Plant Biology Volume 12 ; 12 ; >
       au < frozen ; exists ; 2013 ; BMC Plant Biology Volume 13 ; 13 ; >
-      au < finished ; crawling ; 2014 ; BMC Plant Biology Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; BMC Plant Biology Volume 14 ; 14 ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; BMC Plant Biology Volume 15 [superseded] ; 15 ; >
 
     }
@@ -1598,7 +1598,7 @@
       au < finished ; frozen ; 2011 ; BMC Pregnancy and Childbirth Volume 11 ; 11 ; >
       au < frozen ; exists ; 2012 ; BMC Pregnancy and Childbirth Volume 12 ; 12 ; >
       au < frozen ; exists ; 2013 ; BMC Pregnancy and Childbirth Volume 13 ; 13 ; >
-      au < finished ; crawling ; 2014 ; BMC Pregnancy and Childbirth Volume 14 ; 14 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; BMC Pregnancy and Childbirth Volume 14 ; 14 ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; BMC Pregnancy and Childbirth Volume 15 [superseded] ; 15 ; >
 
     }
@@ -1624,9 +1624,9 @@
       au < finished ; finished ; 2009 ; BMC Psychiatry Volume 9 ; 9 ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2010 ; BMC Psychiatry Volume 10 ; 10 ; >
       au < finished ; finished ; 2011 ; BMC Psychiatry Volume 11 ; 11 ; >
-      au < finished ; crawling ; 2012 ; BMC Psychiatry Volume 12 ; 12 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2012 ; BMC Psychiatry Volume 12 ; 12 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2013 ; BMC Psychiatry Volume 13 ; 13 ; >
-      au < finished ; crawling ; 2014 ; BMC Psychiatry Volume 14 ; 14 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2014 ; BMC Psychiatry Volume 14 ; 14 ; reingest2.clockss.org:8085 >
       au < superseded ; exists ; 2015 ; BMC Psychiatry Volume 15 [superseded] ; 15 ; >
 
     }
@@ -1642,7 +1642,7 @@
       comment[journal_code] = bmcpsychology
 
       au < finished ; finished ; 2013 ; BMC Psychology Volume 1 ; 1 ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; BMC Psychology Volume 2 ; 2 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; BMC Psychology Volume 2 ; 2 ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; BMC Psychology Volume 3 [superseded] ; 3 ; >
 
     }
@@ -1670,7 +1670,7 @@
       au < finished ; frozen ; 2011 ; BMC Public Health Volume 11 ; 11 ; >
       au < frozen ; exists ; 2012 ; BMC Public Health Volume 12 ; 12 ; >
       au < frozen ; exists ; 2013 ; BMC Public Health Volume 13 ; 13 ; >
-      au < finished ; crawling ; 2014 ; BMC Public Health Volume 14 ; 14 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2014 ; BMC Public Health Volume 14 ; 14 ; reingest3.clockss.org:8083 >
       au < superseded ; exists ; 2015 ; BMC Public Health Volume 15 [superseded] ; 15 ; >
 
     }
@@ -1698,7 +1698,7 @@
       au < finished ; finished ; 2011 ; BMC Pulmonary Medicine Volume 11 ; 11 ; >
       au < finished ; finished ; 2012 ; BMC Pulmonary Medicine Volume 12 ; 12 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2013 ; BMC Pulmonary Medicine Volume 13 ; 13 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; BMC Pulmonary Medicine Volume 14 ; 14 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; BMC Pulmonary Medicine Volume 14 ; 14 ; reingest4.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; BMC Pulmonary Medicine Volume 15 [superseded] ; 15 ; >
 
     }
@@ -1713,7 +1713,7 @@
       param[journal_issn] = 1756-0500
       comment[journal_code] = bmcresnotes
 
-      au < finished ; crawling ; 2008 ; BMC Research Notes Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2008 ; BMC Research Notes Volume 1 ; 1 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2009 ; BMC Research Notes Volume 2 ; 2 ; >
       au < zapped ; finished ; 2010 ; BMC Research Notes Volume 3 ; 3 ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2011 ; BMC Research Notes Volume 4 ; 4 ; >
@@ -1738,14 +1738,14 @@
         au < finished ; finished ; 2009 ; BMC Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 1 ; 1 ; reingest3.clockss.org:8083 >
         au < finished ; finished ; 2010 ; BMC Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 2 ; 2 ; >
         au < finished ; finished ; 2011 ; BMC Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 3 ; 3 ; reingest1.clockss.org:8082 >
-        au < finished ; crawling ; 2012 ; BMC Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+        au < finished ; frozen ; 2012 ; BMC Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 4 ; 4 ; reingest3.clockss.org:8083 >
       }
       
       {
         param[journal_issn] = 2052-1847 
         
         au < finished ; finished ; 2013 ; BMC Sports Science, Medicine and Rehabilitation Volume 5 ; 5 ; >
-        au < finished ; crawling ; 2014 ; BMC Sports Science, Medicine and Rehabilitation Volume 6 ; 6 ; reingest1.clockss.org:8082 >
+        au < finished ; frozen ; 2014 ; BMC Sports Science, Medicine and Rehabilitation Volume 6 ; 6 ; reingest1.clockss.org:8082 >
         au < superseded ; exists ; 2015 ; BMC Sports Science, Medicine and Rehabilitation Volume 7 [superseded] ; 7 ; >
 
       }
@@ -1774,7 +1774,7 @@
       au < zapped ; finished ; 2011 ; BMC Structural Biology Volume 11 ; 11 ; >
       au < finished ; finished ; 2012 ; BMC Structural Biology Volume 12 ; 12 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2013 ; BMC Structural Biology Volume 13 ; 13 ; >
-      au < finished ; crawling ; 2014 ; BMC Structural Biology Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; BMC Structural Biology Volume 14 ; 14 ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; BMC Structural Biology Volume 15 [superseded] ; 15 ; >
 
     }
@@ -1801,8 +1801,8 @@
       au < finished ; finished ; 2010 ; BMC Surgery Volume 10 ; 10 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2011 ; BMC Surgery Volume 11 ; 11 ; >
       au < frozen ; exists ; 2012 ; BMC Surgery Volume 12 ; 12 ; >
-      au < finished ; crawling ; 2013 ; BMC Surgery Volume 13 ; 13 ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; BMC Surgery Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2013 ; BMC Surgery Volume 13 ; 13 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; BMC Surgery Volume 14 ; 14 ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; BMC Surgery Volume 15 [superseded] ; 15 ; >
 
     }
@@ -1852,7 +1852,7 @@
       au < finished ; finished ; 2011 ; BMC Urology Volume 11 ; 11 ; >
       au < finished ; finished ; 2012 ; BMC Urology Volume 12 ; 12 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2013 ; BMC Urology Volume 13 ; 13 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2014 ; BMC Urology Volume 14 ; 14 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; BMC Urology Volume 14 ; 14 ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; BMC Urology Volume 15 [superseded] ; 15 ; >
 
     }
@@ -1876,7 +1876,7 @@
       au < finished ; finished ; 2011 ; BMC Veterinary Research Volume 7 ; 7 ; >
       au < frozen ; exists ; 2012 ; BMC Veterinary Research Volume 8 ; 8 ; >
       au < frozen ; exists ; 2013 ; BMC Veterinary Research Volume 9 ; 9 ; >
-      au < finished ; crawling ; 2014 ; BMC Veterinary Research Volume 10 ; 10 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; BMC Veterinary Research Volume 10 ; 10 ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; BMC Veterinary Research Volume 11 [superseded] ; 11 ; >
 
     }
@@ -1903,8 +1903,8 @@
       au < finished ; finished ; 2010 ; BMC Women's Health Volume 10 ; 10 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2011 ; BMC Women's Health Volume 11 ; 11 ; >
       au < frozen ; exists ; 2012 ; BMC Women's Health Volume 12 ; 12 ; >
-      au < finished ; crawling ; 2013 ; BMC Women's Health Volume 13 ; 13 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2014 ; BMC Women's Health Volume 14 ; 14 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2013 ; BMC Women's Health Volume 13 ; 13 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2014 ; BMC Women's Health Volume 14 ; 14 ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; BMC Women's Health Volume 15 [superseded] ; 15 ; >
 
     }

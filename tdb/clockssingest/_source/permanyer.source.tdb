@@ -1,0 +1,28 @@
+{
+
+  publisher <
+    name = Permanyer Publications ;
+    info[contract] = 2017 ;
+    info[tester] = S
+  >
+
+
+  {
+
+    title <
+      name = Permanyer Publications Source Content
+    >
+
+    plugin = org.lockss.plugin.clockss.permanyer.ClockssPermanyerSourcePlugin
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/permanyer-released/
+    hidden[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[year] >
+
+    au < zapped ; finished ; 2017 ; Permanyer Publications Source Content 2017 ; 2017 >
+    au < readySource ; finished ; 2018 ; Permanyer Publications Source Content 2018 ; 2018 >
+    au < readySource ; frozen ; 2019 ; Permanyer Publications Source Content 2019 ; 2019 >
+    au < readySource ; crawling ; 2020 ; Permanyer Publications Source Content 2020 ; 2020 >
+    
+  }
+
+}

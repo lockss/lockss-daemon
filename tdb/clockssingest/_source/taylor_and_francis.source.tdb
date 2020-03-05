@@ -1,0 +1,51 @@
+{
+
+  publisher <
+    name = Taylor & Francis ;
+    info[contract] = 2013 ;
+    info[tester] = S
+  >
+  
+  
+  {
+  
+    title <
+      name = Taylor & Francis Source Content
+    >
+    
+    plugin = org.lockss.plugin.taylorandfrancis.ClockssTaylorAndFrancisSourcePlugin
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/taylorfrancis-released/
+    hidden[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[year] >
+    
+    # this was for 2 triggered titles only
+    au < zapped ; finished ; 2013 ; Taylor & Francis Source Content 2013 ; 2013 >
+
+  }
+  
+  {
+  
+    title <
+      name = Taylor & Francis Source Content
+    >
+    
+    plugin = org.lockss.plugin.taylorandfrancis.ClockssTaylorAndFrancisDirSourcePlugin
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/taylorfrancis-released/
+    hidden[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[directory] >
+    
+    #For all ongoing T&F deliveries - uses an arbitrary directory name, not year
+    au < readySource ; finished ; 2018 ; Taylor & Francis Source Content 2018_A ; 2018_A >
+    au < readySource ; finished ; 2018 ; Taylor & Francis Source Content 2018_B ; 2018_B >
+    au < readySource ; finished ; 2018 ; Taylor & Francis Source Content 2018_C ; 2018_C >
+
+    au < readySource ; frozen ; 2019 ; Taylor & Francis Source Content 2019_1 ; 2019_1 >
+    au < readySource ; frozen ; 2019 ; Taylor & Francis Source Content 2019_2 ; 2019_2 >
+    au < readySource ; frozen ; 2019 ; Taylor & Francis Source Content 2019_3 ; 2019_3 >
+    au < readySource ; crawling ; 2019 ; Taylor & Francis Source Content 2019_4 ; 2019_4 >
+    au < readySource ; crawling ; 2019 ; Taylor & Francis Source Content 2019_5 ; 2019_5 >
+    
+
+  }
+  
+}

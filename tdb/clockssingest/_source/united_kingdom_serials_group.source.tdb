@@ -1,0 +1,27 @@
+{
+  publisher <
+    name = United Kingdom Serials Group ;
+    info[back] = 2011 ;
+    info[contract] = 2011 ;
+    info[tester] = S 
+  >
+
+  {
+    title <
+      name = United Kingdom Serials Group Books WARC Content
+    >
+    
+    # This content was collected using wget and provided for preservation as a
+    # set of WARC files
+    
+    plugin = org.lockss.plugin.clockss.warc.ClockssWarcPlugin
+    param[base_url] = http://clockss-ingest.lockss.org/warcfiles/uksg-books-released/
+    hidden[proxy] = DIRECT 
+    implicit < status ; status2 ; year ; name ; param[year] >    
+
+    #currently there is only one books, found at https://www.uksg.org/publications/ermh
+    au < manifest ; exists ; 2019 ; United Kingdom Serials Group Books WARC Content ; 2019 >
+
+  }   
+
+}

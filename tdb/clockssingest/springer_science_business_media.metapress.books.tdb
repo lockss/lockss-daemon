@@ -13,6 +13,7 @@
 
   plugin = org.lockss.plugin.springer.ClockssSpringerLinkBookPlugin
   param[base_url] = http://www.springerlink.com/
+  #platform and base_url no longer exists
 
   {
 
@@ -761,7 +762,7 @@
       au < finished ; finished ; 978-3-540-46248-4 ; 978-3-540-46249-1 ; 2006 ; 4000 ; Resource Allocation in Wireless Networks (978-3-540-46248-4) ; 978-3-540-46248-4 ; >
       au < finished ; finished ; 978-3-540-34652-4 ; 978-3-540-34653-1 ; 2006 ; 4001 ; Advanced Information Systems Engineering (978-3-540-34652-4) ; 978-3-540-34652-4 ; >
       au < superseded ; exists ; 978-3-540-35467-3 ; 978-3-540-35469-7 ; 2006 ; 4002 ; Finite-State Methods and Natural Language Processing (978-3-540-35467-3) [superseded] ; 978-3-540-35467-3 ; >
-      au < finished ; crawling ; 978-3-540-34429-2 ; 978-3-540-34430-8 ; 2006 ; 4003 ; Next Generation Teletraffic and Wired/Wireless Advanced Networking (978-3-540-34429-2) ; 978-3-540-34429-2 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 978-3-540-34429-2 ; 978-3-540-34430-8 ; 2006 ; 4003 ; Next Generation Teletraffic and Wired/Wireless Advanced Networking (978-3-540-34429-2) ; 978-3-540-34429-2 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-34546-6 ; 978-3-540-34547-3 ; 2006 ; 4004 ; Advances in Cryptology - EUROCRYPT 2006 (978-3-540-34546-6) ; 978-3-540-34546-6 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 978-3-540-35294-5 ; 978-3-540-35296-9 ; 2006 ; 4005 ; Learning Theory (978-3-540-35294-5) ; 978-3-540-35294-5 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 978-3-540-34663-0 ; 978-3-540-34664-7 ; 2006 ; 4006 ; Reliable Software Technologies - Ada-Europe 2006 (978-3-540-34663-0) ; 978-3-540-34663-0 ; reingest4.clockss.org:8082 >
@@ -813,9 +814,9 @@
       au < finished ; finished ; 978-3-540-35159-7 ; 978-3-540-35160-3 ; 2006 ; 4053 ; Intelligent Tutoring Systems (978-3-540-35159-7) ; 978-3-540-35159-7 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-35362-1 ; 978-3-540-35365-2 ; 2006 ; 4054 ; Formal Methods and Stochastic Models for Performance Evaluation (978-3-540-35362-1) ; 978-3-540-35362-1 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-35440-6 ; 978-3-540-35441-3 ; 2006 ; 4055 ; Data Engineering Issues in E-Commerce and Services (978-3-540-35440-6) ; 978-3-540-35440-6 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 978-3-540-35474-1 ; 978-3-540-35475-8 ; 2006 ; 4056 ; Structural Information and Communication Complexity (978-3-540-35474-1) ; 978-3-540-35474-1 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 978-3-540-35474-1 ; 978-3-540-35475-8 ; 2006 ; 4056 ; Structural Information and Communication Complexity (978-3-540-35474-1) ; 978-3-540-35474-1 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 978-3-540-35648-6 ; 978-3-540-35649-3 ; 2006 ; 4057 ; Biomedical Image Registration (978-3-540-35648-6) ; 978-3-540-35648-6 ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-540-35458-1 ; 978-3-540-35459-8 ; 2006 ; 4058 ; Information Security and Privacy (978-3-540-35458-1) ; 978-3-540-35458-1 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 978-3-540-35458-1 ; 978-3-540-35459-8 ; 2006 ; 4058 ; Information Security and Privacy (978-3-540-35458-1) ; 978-3-540-35458-1 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 978-3-540-35753-7 ; 978-3-540-35755-1 ; 2006 ; 4059 ; Algorithm Theory - SWAT 2006 (978-3-540-35753-7) ; 978-3-540-35753-7 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-35462-8 ; 978-3-540-35464-2 ; 2006 ; 4060 ; Algebra, Meaning, and Computation (978-3-540-35462-8) ; 978-3-540-35462-8 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 978-3-540-36020-9 ; 978-3-540-36021-6 ; 2006 ; 4061 ; Computers Helping People with Special Needs (978-3-540-36020-9) ; 978-3-540-36020-9 ; reingest3.clockss.org:8083 >
@@ -886,7 +887,7 @@
       au < finished ; crawling ; 978-3-540-37595-1 ; 978-3-540-37596-8 ; 2006 ; 4129 ; Haptic and Audio Interaction Design (978-3-540-37595-1) ; 978-3-540-37595-1 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 978-3-540-37187-8 ; 978-3-540-37188-5 ; 2006 ; 4130 ; Automated Reasoning (978-3-540-37187-8) ; 978-3-540-37187-8 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 978-3-540-38625-4 ; 978-3-540-38627-8 ; 2006 ; 4131 ; Artificial Neural Networks - ICANN 2006 (978-3-540-38625-4) ; 978-3-540-38625-4 ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-540-38871-5 ; 978-3-540-38873-9 ; 2006 ; 4132 ; Artificial Neural Networks - ICANN 2006 (978-3-540-38871-5) ; 978-3-540-38871-5 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 978-3-540-38871-5 ; 978-3-540-38873-9 ; 2006 ; 4132 ; Artificial Neural Networks - ICANN 2006 (978-3-540-38871-5) ; 978-3-540-38871-5 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-37593-7 ; 978-3-540-37594-4 ; 2006 ; 4133 ; Intelligent Virtual Agents (978-3-540-37593-7) ; 978-3-540-37593-7 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-37756-6 ; 978-3-540-37758-0 ; 2006 ; 4134 ; Static Analysis (978-3-540-37756-6) ; 978-3-540-37756-6 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 978-3-540-38593-6 ; 978-3-540-38594-3 ; 2006 ; 4135 ; Unconventional Computation (978-3-540-38593-6) ; 978-3-540-38593-6 ; reingest3.clockss.org:8083 >
@@ -953,19 +954,19 @@
       au < finished ; crawling ; 978-3-540-44526-5 ; 978-3-540-44528-9 ; 2006 ; 4197 ; Geographic Information Science (978-3-540-44526-5) ; 978-3-540-44526-5 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 978-3-540-46346-7 ; 978-3-540-46348-1 ; 2006 ; 4198 ; Advances in Web Mining and Web Usage Analysis (978-3-540-46346-7) ; 978-3-540-46346-7 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-45772-5 ; 978-3-540-45773-2 ; 2006 ; 4199 ; Model Driven Engineering Languages and Systems (978-3-540-45772-5) ; 978-3-540-45772-5 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-540-46246-0 ; 978-3-540-46247-7 ; 2006 ; 4200 ; Intelligent Computing in Engineering and Architecture (978-3-540-46246-0) ; 978-3-540-46246-0 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 978-3-540-46246-0 ; 978-3-540-46247-7 ; 2006 ; 4200 ; Intelligent Computing in Engineering and Architecture (978-3-540-46246-0) ; 978-3-540-46246-0 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 978-3-540-45264-5 ; 978-3-540-45265-2 ; 2006 ; 4201 ; Grammatical Inference: Algorithms and Applications (978-3-540-45264-5) ; 978-3-540-45264-5 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 978-3-540-45026-9 ; 978-3-540-45031-3 ; 2006 ; 4202 ; Formal Modeling and Analysis of Timed Systems (978-3-540-45026-9) ; 978-3-540-45026-9 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-45764-0 ; 978-3-540-45766-4 ; 2006 ; 4203 ; Foundations of Intelligent Systems (978-3-540-45764-0) ; 978-3-540-45764-0 ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 978-3-540-46267-5 ; 978-3-540-46268-2 ; 2006 ; 4204 ; Principles and Practice of Constraint Programming - CP 2006 (978-3-540-46267-5) ; 978-3-540-46267-5 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-44529-6 ; 978-3-540-44530-2 ; 2006 ; 4205 ; Comparative Genomics (978-3-540-44529-6) ; 978-3-540-44529-6 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 978-3-540-39634-5 ; 978-3-540-39635-2 ; 2006 ; 4206 ; UbiComp 2006: Ubiquitous Computing (978-3-540-39634-5) ; 978-3-540-39634-5 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 978-3-540-39634-5 ; 978-3-540-39635-2 ; 2006 ; 4206 ; UbiComp 2006: Ubiquitous Computing (978-3-540-39634-5) ; 978-3-540-39634-5 ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 978-3-540-45458-8 ; 978-3-540-45459-5 ; 2006 ; 4207 ; Computer Science Logic (978-3-540-45458-8) ; 978-3-540-45458-8 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-39368-9 ; 978-3-540-39372-6 ; 2006 ; 4208 ; High Performance Computing and Communications (978-3-540-39368-9) ; 978-3-540-39368-9 ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 978-3-540-45774-9 ; 978-3-540-45775-6 ; 2006 ; 4209 ; String Processing and Information Retrieval (978-3-540-45774-9) ; 978-3-540-45774-9 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 978-3-540-46166-1 ; 978-3-540-46167-8 ; 2006 ; 4210 ; Computational Methods in Systems Biology (978-3-540-46166-1) ; 978-3-540-46166-1 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 978-3-540-45769-5 ; 978-3-540-45771-8 ; 2006 ; 4211 ; Symbol Grounding and Beyond (978-3-540-45769-5) ; 978-3-540-45769-5 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 978-3-540-45375-8 ; 978-3-540-46056-5 ; 2006 ; 4212 ; Machine Learning: ECML 2006 (978-3-540-45375-8) ; 978-3-540-45375-8 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 978-3-540-45375-8 ; 978-3-540-46056-5 ; 2006 ; 4212 ; Machine Learning: ECML 2006 (978-3-540-45375-8) ; 978-3-540-45375-8 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 978-3-540-45374-1 ; 978-3-540-46048-0 ; 2006 ; 4213 ; Knowledge Discovery in Databases: PKDD 2006 (978-3-540-45374-1) ; 978-3-540-45374-1 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-48819-4 ; 978-3-540-48820-0 ; 2006 ; 4214 ; Quality of Software Architectures (978-3-540-48819-4) ; 978-3-540-48819-4 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-47224-7 ; 978-3-540-47227-8 ; 2006 ; 4215 ; Conceptual Modeling - ER 2006 (978-3-540-47224-7) ; 978-3-540-47224-7 ; reingest2.clockss.org:8085 >
@@ -1011,14 +1012,14 @@
       au < finished ; crawling ; 978-3-540-48105-8 ; 978-3-540-48107-2 ; 2006 ; 4255 ; Web Information Systems - WISE 2006 (978-3-540-48105-8) ; 978-3-540-48105-8 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 978-3-540-47663-4 ; 978-3-540-47664-1 ; 2006 ; 4256 ; Web Information Systems - WISE 2006 Workshops (978-3-540-47663-4) ; 978-3-540-47663-4 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 978-3-540-47695-5 ; 978-3-540-47696-2 ; 2006 ; 4257 ; Software Process Improvement (978-3-540-47695-5) ; 978-3-540-47695-5 ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-540-68790-0 ; 978-3-540-68793-1 ; 2006 ; 4258 ; Privacy Enhancing Technologies (978-3-540-68790-0) ; 978-3-540-68790-0 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 978-3-540-68790-0 ; 978-3-540-68793-1 ; 2006 ; 4258 ; Privacy Enhancing Technologies (978-3-540-68790-0) ; 978-3-540-68790-0 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 978-3-540-47693-1 ; 978-3-540-49842-1 ; 2006 ; 4259 ; Rough Sets and Current Trends in Computing (978-3-540-47693-1) ; 978-3-540-47693-1 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-47460-9 ; 978-3-540-47462-3 ; 2006 ; 4260 ; Formal Methods and Software Engineering (978-3-540-47460-9) ; 978-3-540-47460-9 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 978-3-540-48766-1 ; 978-3-540-48769-2 ; 2006 ; 4261 ; Advances in Multimedia Information Processing - PCM 2006 (978-3-540-48766-1) ; 978-3-540-48766-1 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 978-3-540-49699-1 ; 978-3-540-49703-5 ; 2006 ; 4262 ; Formal Approaches to Software Testing and Runtime Verification (978-3-540-49699-1) ; 978-3-540-49699-1 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-47242-1 ; 978-3-540-47243-8 ; 2006 ; 4263 ; Computer and Information Sciences - ISCIS 2006 (978-3-540-47242-1) ; 978-3-540-47242-1 ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 978-3-540-46649-9 ; 978-3-540-46650-5 ; 2006 ; 4264 ; Algorithmic Learning Theory (978-3-540-46649-9) ; 978-3-540-46649-9 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-540-46491-4 ; 978-3-540-46493-8 ; 2006 ; 4265 ; Discovery Science (978-3-540-46491-4) ; 978-3-540-46491-4 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 978-3-540-46491-4 ; 978-3-540-46493-8 ; 2006 ; 4265 ; Discovery Science (978-3-540-46491-4) ; 978-3-540-46491-4 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 978-3-540-47699-3 ; 978-3-540-47700-6 ; 2006 ; 4266 ; Advances in Information and Computer Security (978-3-540-47699-3) ; 978-3-540-47699-3 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 978-3-540-47654-2 ; 978-3-540-47655-9 ; 2006 ; 4267 ; Autonomic Management of Mobile Multimedia Services (978-3-540-47654-2) ; 978-3-540-47654-2 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-47701-3 ; 978-3-540-47702-0 ; 2006 ; 4268 ; Autonomic Principles of IP Operations and Management (978-3-540-47701-3) ; 978-3-540-47701-3 ; reingest5.clockss.org:8082 >
@@ -1027,8 +1028,8 @@
       au < finished ; crawling ; 978-3-540-48381-6 ; 978-3-540-48382-3 ; 2006 ; 4271 ; Graph-Theoretic Concepts in Computer Science (978-3-540-48381-6) ; 978-3-540-48381-6 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 978-3-540-47842-3 ; 978-3-540-47845-4 ; 2006 ; 4272 ; Smart Sensing and Context (978-3-540-47842-3) ; 978-3-540-47842-3 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-49029-6 ; 978-3-540-49055-5 ; 2006 ; 4273 ; The Semantic Web - ISWC 2006 (978-3-540-49029-6) ; 978-3-540-49029-6 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-540-49665-6 ; 978-3-540-49666-3 ; 2006 ; 4274 ; Chinese Spoken Language Processing (978-3-540-49665-6) ; 978-3-540-49665-6 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-540-48287-1 ; 978-3-540-48289-5 ; 2006 ; 4275 ; On the Move to Meaningful Internet Systems 2006: CoopIS, DOA, GADA, and ODBASE (978-3-540-48287-1) ; 978-3-540-48287-1 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 978-3-540-49665-6 ; 978-3-540-49666-3 ; 2006 ; 4274 ; Chinese Spoken Language Processing (978-3-540-49665-6) ; 978-3-540-49665-6 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 978-3-540-48287-1 ; 978-3-540-48289-5 ; 2006 ; 4275 ; On the Move to Meaningful Internet Systems 2006: CoopIS, DOA, GADA, and ODBASE (978-3-540-48287-1) ; 978-3-540-48287-1 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 978-3-540-48274-1 ; 978-3-540-48283-3 ; 2006 ; 4276 ; On the Move to Meaningful Internet Systems 2006: CoopIS, DOA, GADA, and ODBASE (978-3-540-48274-1) ; 978-3-540-48274-1 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 978-3-540-48269-7 ; 978-3-540-48272-7 ; 2006 ; 4277 ; On the Move to Meaningful Internet Systems 2006: OTM 2006 Workshops (978-3-540-48269-7) ; 978-3-540-48269-7 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-48273-4 ; 978-3-540-48276-5 ; 2006 ; 4278 ; On the Move to Meaningful Internet Systems 2006: OTM 2006 Workshops (978-3-540-48273-4) ; 978-3-540-48273-4 ; reingest5.clockss.org:8082 >
@@ -1038,7 +1039,7 @@
       au < finished ; crawling ; 978-3-540-49776-9 ; 978-3-540-49779-0 ; 2006 ; 4282 ; Advances in Artificial Reality and Tele-Existence (978-3-540-49776-9) ; 978-3-540-49776-9 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-48825-5 ; 978-3-540-48827-9 ; 2006 ; 4283 ; Digital Watermarking (978-3-540-48825-5) ; 978-3-540-48825-5 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-49475-1 ; 978-3-540-49476-8 ; 2006 ; 4284 ; Advances in Cryptology - ASIACRYPT 2006 (978-3-540-49475-1) ; 978-3-540-49475-1 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-540-49667-0 ; 978-3-540-49668-7 ; 2006 ; 4285 ; Computer Processing of Oriental Languages. Beyond the Orient: The Research Challenges Ahead (978-3-540-49667-0) ; 978-3-540-49667-0 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 978-3-540-49667-0 ; 978-3-540-49668-7 ; 2006 ; 4285 ; Computer Processing of Oriental Languages. Beyond the Orient: The Research Challenges Ahead (978-3-540-49667-0) ; 978-3-540-49667-0 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 978-3-540-68138-0 ; 978-3-540-68141-0 ; 2006 ; 4286 ; Internet and Network Economics (978-3-540-68138-0) ; 978-3-540-68138-0 ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 978-3-540-49024-1 ; 978-3-540-68423-7 ; 2006 ; 4287 ; DNA Computing (978-3-540-49024-1) ; 978-3-540-49024-1 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-49694-6 ; 978-3-540-49696-0 ; 2006 ; 4288 ; Algorithms and Computation (978-3-540-49694-6) ; 978-3-540-49694-6 ; reingest5.clockss.org:8082 >
@@ -1047,17 +1048,17 @@
       au < finished ; crawling ; 978-3-540-48628-2 ; 978-3-540-48631-2 ; 2006 ; 4291 ; Advances in Visual Computing (978-3-540-48628-2) ; 978-3-540-48628-2 ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 978-3-540-48626-8 ; 978-3-540-48627-5 ; 2006 ; 4292 ; Advances in Visual Computing (978-3-540-48626-8) ; 978-3-540-48626-8 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-49026-5 ; 978-3-540-49058-6 ; 2006 ; 4293 ; MICAI 2006: Advances in Artificial Intelligence (978-3-540-49026-5) ; 978-3-540-49026-5 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-540-68147-2 ; 978-3-540-68148-9 ; 2006 ; 4294 ; Service-Oriented Computing - ICSOC 2006 (978-3-540-68147-2) ; 978-3-540-68147-2 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 978-3-540-68147-2 ; 978-3-540-68148-9 ; 2006 ; 4294 ; Service-Oriented Computing - ICSOC 2006 (978-3-540-68147-2) ; 978-3-540-68147-2 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 978-3-540-49466-9 ; 978-3-540-49467-6 ; 2006 ; 4295 ; Web and Wireless Geographical Information Systems (978-3-540-49466-9) ; 978-3-540-49466-9 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 978-3-540-49112-5 ; 978-3-540-49114-9 ; 2006 ; 4296 ; Information Security and Cryptology - ICISC 2006 (978-3-540-49112-5) ; 978-3-540-49112-5 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 978-3-540-68039-0 ; 978-3-540-68040-6 ; 2006 ; 4297 ; High Performance Computing - HiPC 2006 (978-3-540-68039-0) ; 978-3-540-68039-0 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 978-3-540-69267-6 ; 978-3-540-69268-3 ; 2006 ; 4299 ; Machine Learning for Multimodal Interaction (978-3-540-69267-6) ; 978-3-540-69267-6 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-49071-5 ; 978-3-540-49072-2 ; 2006 ; 4300 ; Transactions on Data Hiding and Multimedia Security I (978-3-540-49071-5) ; 978-3-540-49071-5 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-540-49462-1 ; 978-3-540-49463-8 ; 2006 ; 4301 ; Cryptology and Network Security (978-3-540-49462-1) ; 978-3-540-49462-1 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 978-3-540-49462-1 ; 978-3-540-49463-8 ; 2006 ; 4301 ; Cryptology and Network Security (978-3-540-49462-1) ; 978-3-540-49462-1 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 978-3-540-49330-3 ; 978-3-540-49332-7 ; 2006 ; 4302 ; Privacy in Statistical Databases (978-3-540-49330-3) ; 978-3-540-49330-3 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 978-3-540-68955-3 ; 978-3-540-68957-7 ; 2006 ; 4303 ; Advances in Knowledge Acquisition and Management (978-3-540-68955-3) ; 978-3-540-68955-3 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-49787-5 ; 978-3-540-49788-2 ; 2006 ; 4304 ; AI 2006: Advances in Artificial Intelligence (978-3-540-49787-5) ; 978-3-540-49787-5 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-540-49990-9 ; 978-3-540-49991-6 ; 2006 ; 4305 ; Principles of Distributed Systems (978-3-540-49990-9) ; 978-3-540-49990-9 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 978-3-540-49990-9 ; 978-3-540-49991-6 ; 2006 ; 4305 ; Principles of Distributed Systems (978-3-540-49990-9) ; 978-3-540-49990-9 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-49335-8 ; 978-3-540-49337-2 ; 2006 ; 4306 ; Semantic Multimedia (978-3-540-49335-8) ; 978-3-540-49335-8 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 978-3-540-49496-6 ; 978-3-540-49497-3 ; 2006 ; 4307 ; Information and Communications Security (978-3-540-49496-6) ; 978-3-540-49496-6 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 978-3-540-68139-7 ; 978-3-540-68140-3 ; 2006 ; 4308 ; Distributed Computing and Networking (978-3-540-68139-7) ; 978-3-540-68139-7 ; reingest4.clockss.org:8082 >
@@ -1138,7 +1139,7 @@
       au < finished ; frozen ; 978-3-540-72226-7 ; 978-3-540-72337-0 ; 2007 ; 4375 ; Euro-Par 2006: Parallel Processing (978-3-540-72226-7) ; 978-3-540-72226-7 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-71034-9 ; 978-3-540-71035-6 ; 2007 ; 4376 ; Job Scheduling Strategies for Parallel Processing (978-3-540-71034-9) ; 978-3-540-71034-9 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 978-3-540-70880-3 ; 978-3-540-70881-0 ; 2007 ; 4378 ; Perspectives of Systems Informatics (978-3-540-70880-3) ; 978-3-540-70880-3 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 978-3-540-71772-0 ; 978-3-540-71774-4 ; 2007 ; 4379 ; Object-Oriented Technology. ECOOP 2006 Workshop Reader (978-3-540-71772-0) ; 978-3-540-71772-0 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 978-3-540-71772-0 ; 978-3-540-71774-4 ; 2007 ; 4379 ; Object-Oriented Technology. ECOOP 2006 Workshop Reader (978-3-540-71772-0) ; 978-3-540-71772-0 ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 978-3-540-70663-2 ; 978-3-540-70664-9 ; 2007 ; 4380 ; Journal on Data Semantics VIII (978-3-540-70663-2) ; 978-3-540-70663-2 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-70665-6 ; 978-3-540-70666-3 ; 2007 ; 4381 ; Discrete Geometry, Combinatorics and Graph Theory (978-3-540-70665-6) ; 978-3-540-70665-6 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-72520-6 ; 978-3-540-72521-3 ; 2007 ; 4382 ; Languages and Compilers for Parallel Computing (978-3-540-72520-6) ; 978-3-540-72520-6 ; reingest2.clockss.org:8085 >
@@ -1153,7 +1154,7 @@
       au < finished ; crawling ; 978-3-540-70935-0 ; 978-3-540-70936-7 ; 2007 ; 4392 ; Theory of Cryptography (978-3-540-70935-0) ; 978-3-540-70935-0 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-70917-6 ; 978-3-540-70918-3 ; 2007 ; 4393 ; STACS 2007 (978-3-540-70917-6) ; 978-3-540-70917-6 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 978-3-540-70938-1 ; 978-3-540-70939-8 ; 2007 ; 4394 ; Computational Linguistics and Intelligent Text Processing (978-3-540-70938-1) ; 978-3-540-70938-1 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 978-3-540-71350-0 ; 978-3-540-71351-7 ; 2007 ; 4395 ; High Performance Computing for Computational Science - VECPAR 2006 (978-3-540-71350-0) ; 978-3-540-71350-0 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 978-3-540-71350-0 ; 978-3-540-71351-7 ; 2007 ; 4395 ; High Performance Computing for Computational Science - VECPAR 2006 (978-3-540-71350-0) ; 978-3-540-71350-0 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-70968-8 ; 978-3-540-70969-5 ; 2007 ; 4396 ; Wireless Systems and Mobility in Next Generation Internet (978-3-540-70968-8) ; 978-3-540-70968-8 ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 978-3-540-71024-0 ; 978-3-540-71025-7 ; 2007 ; 4397 ; Universal Access in Ambient Intelligence Environments (978-3-540-71024-0) ; 978-3-540-71024-0 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-71544-3 ; 978-3-540-71545-0 ; 2007 ; 4398 ; Adaptive Multimedia Retrieval: User, Context, and Feedback (978-3-540-71544-3) ; 978-3-540-71544-3 ; reingest2.clockss.org:8085 >
@@ -1190,7 +1191,7 @@
       au < finished ; crawling ; 978-3-540-71548-1 ; 978-3-540-71549-8 ; 2007 ; 4430 ; Intelligence and Security Informatics (978-3-540-71548-1) ; 978-3-540-71548-1 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 978-3-540-71589-4 ; 978-3-540-71618-1 ; 2007 ; 4431 ; Adaptive and Natural Computing Algorithms (978-3-540-71589-4) ; 978-3-540-71589-4 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-71590-0 ; 978-3-540-71629-7 ; 2007 ; 4432 ; Adaptive and Natural Computing Algorithms (978-3-540-71590-0) ; 978-3-540-71590-0 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-540-71540-5 ; 978-3-540-71541-2 ; 2007 ; 4433 ; Swarm Robotics (978-3-540-71540-5) ; 978-3-540-71540-5 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 978-3-540-71540-5 ; 978-3-540-71541-2 ; 2007 ; 4433 ; Swarm Robotics (978-3-540-71540-5) ; 978-3-540-71540-5 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 978-3-540-74023-0 ; 978-3-540-74024-7 ; 2007 ; 4434 ; RoboCup 2006: Robot Soccer World Cup X (978-3-540-74023-0) ; 978-3-540-74023-0 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 978-3-540-77504-1 ; 978-3-540-77505-8 ; 2007 ; 4435 ; Advances in Computer Science - ASIAN 2006. Secure Software and Related Issues (978-3-540-77504-1) ; 978-3-540-77504-1 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 978-3-540-73479-6 ; 978-3-540-73482-6 ; 2007 ; 4436 ; Foundations of Genetic Algorithms (978-3-540-73479-6) ; 978-3-540-73479-6 ; reingest4.clockss.org:8082 >
@@ -1235,7 +1236,7 @@
       au < finished ; crawling ; 978-3-540-72838-2 ; 978-3-540-72839-9 ; 2007 ; 4476 ; Autonomous Intelligent Systems: Multi-Agents and Data Mining (978-3-540-72838-2) ; 978-3-540-72838-2 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 978-3-540-72846-7 ; 978-3-540-72847-4 ; 2007 ; 4477 ; Pattern Recognition and Image Analysis (978-3-540-72846-7) ; 978-3-540-72846-7 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 978-3-540-72848-1 ; 978-3-540-72849-8 ; 2007 ; 4478 ; Pattern Recognition and Image Analysis (978-3-540-72848-1) ; 978-3-540-72848-1 ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-540-72605-0 ; 978-3-540-72606-7 ; 2007 ; 4479 ; NETWORKING 2007. Ad Hoc and Sensor Networks, Wireless Networks, Next Generation Internet (978-3-540-72605-0) ; 978-3-540-72605-0 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 978-3-540-72605-0 ; 978-3-540-72606-7 ; 2007 ; 4479 ; NETWORKING 2007. Ad Hoc and Sensor Networks, Wireless Networks, Next Generation Internet (978-3-540-72605-0) ; 978-3-540-72605-0 ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 978-3-540-72036-2 ; 978-3-540-72037-9 ; 2007 ; 4480 ; Pervasive Computing (978-3-540-72036-2) ; 978-3-540-72036-2 ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 978-3-540-72457-5 ; 978-3-540-72458-2 ; 2007 ; 4481 ; Rough Sets and Knowledge Technology (978-3-540-72457-5) ; 978-3-540-72457-5 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 978-3-540-72529-9 ; 978-3-540-72530-5 ; 2007 ; 4482 ; Rough Sets, Fuzzy Sets, Data Mining and Granular Computing (978-3-540-72529-9) ; 978-3-540-72529-9 ; reingest3.clockss.org:8083 >
@@ -1291,7 +1292,7 @@
       au < finished ; crawling ; 978-3-540-73059-0 ; 978-3-540-73060-6 ; 2007 ; 4532 ; Systems Biology and Computational Proteomics (978-3-540-73059-0) ; 978-3-540-73059-0 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 978-3-540-73447-5 ; 978-3-540-73449-9 ; 2007 ; 4533 ; Term Rewriting and Applications (978-3-540-73447-5) ; 978-3-540-73447-5 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 978-3-540-72729-3 ; 978-3-540-72731-6 ; 2007 ; 4534 ; Optical Network Design and Modeling (978-3-540-72729-3) ; 978-3-540-72729-3 ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-540-73100-9 ; 978-3-540-73101-6 ; 2007 ; 4536 ; Agile Processes in Software Engineering and Extreme Programming (978-3-540-73100-9) ; 978-3-540-73100-9 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 978-3-540-73100-9 ; 978-3-540-73101-6 ; 2007 ; 4536 ; Agile Processes in Software Engineering and Extreme Programming (978-3-540-73100-9) ; 978-3-540-73100-9 ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 978-3-540-72908-2 ; 978-3-540-72909-9 ; 2007 ; 4537 ; Advances in Web and Network Technologies, and Information Management (978-3-540-72908-2) ; 978-3-540-72908-2 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-72902-0 ; 978-3-540-72903-7 ; 2007 ; 4538 ; Graph-Based Representations in Pattern Recognition (978-3-540-72902-0) ; 978-3-540-72902-0 ; reingest2.clockss.org:8085 >
       au < superseded ; exists ; 978-3-540-72925-9 ; 978-3-540-72927-3 ; 2007 ; 4539 ; Learning Theory (978-3-540-72925-9) [superseded] ; 978-3-540-72925-9 ; >
@@ -1351,7 +1352,7 @@
       au < finished ; crawling ; 978-3-540-73598-4 ; 978-3-540-73599-1 ; 2007 ; 4594 ; Artificial Intelligence in Medicine (978-3-540-73598-4) ; 978-3-540-73598-4 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 978-3-540-73369-0 ; 978-3-540-73370-6 ; 2007 ; 4595 ; Model Checking Software (978-3-540-73369-0) ; 978-3-540-73369-0 ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 978-3-540-73419-2 ; 978-3-540-73420-8 ; 2007 ; 4596 ; Automata, Languages and Programming (978-3-540-73419-2) ; 978-3-540-73419-2 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 978-3-540-73434-5 ; 978-3-540-73435-2 ; 2007 ; 4597 ; Advances in Data Mining. Theoretical Aspects and Applications (978-3-540-73434-5) ; 978-3-540-73434-5 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 978-3-540-73434-5 ; 978-3-540-73435-2 ; 2007 ; 4597 ; Advances in Data Mining. Theoretical Aspects and Applications (978-3-540-73434-5) ; 978-3-540-73434-5 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 978-3-540-73544-1 ; 978-3-540-73545-8 ; 2007 ; 4598 ; Computing and Combinatorics (978-3-540-73544-1) ; 978-3-540-73544-1 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-73622-6 ; 978-3-540-73625-7 ; 2007 ; 4599 ; Embedded Computer Systems: Architectures, Modeling, and Simulation (978-3-540-73622-6) ; 978-3-540-73622-6 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-73146-7 ; 978-3-540-73147-4 ; 2007 ; 4600 ; Rewriting, Computation and Proof (978-3-540-73146-7) ; 978-3-540-73146-7 ; reingest1.clockss.org:8082 >
@@ -1447,7 +1448,7 @@
       au < finished ; crawling ; 978-3-540-74817-5 ; 978-3-540-74819-9 ; 2007 ; 4692 ; Knowledge-Based Intelligent Information and Engineering Systems (978-3-540-74817-5) ; 978-3-540-74817-5 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-74826-7 ; 978-3-540-74827-4 ; 2007 ; 4693 ; Knowledge-Based Intelligent Information and Engineering Systems (978-3-540-74826-7) ; 978-3-540-74826-7 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-74828-1 ; 978-3-540-74829-8 ; 2007 ; 4694 ; Knowledge-Based Intelligent Information and Engineering Systems (978-3-540-74828-1) ; 978-3-540-74828-1 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 978-3-540-75139-7 ; 978-3-540-75140-3 ; 2007 ; 4695 ; Computational Methods in Systems Biology (978-3-540-75139-7) ; 978-3-540-75139-7 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 978-3-540-75139-7 ; 978-3-540-75140-3 ; 2007 ; 4695 ; Computational Methods in Systems Biology (978-3-540-75139-7) ; 978-3-540-75139-7 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 978-3-540-75253-0 ; 978-3-540-75254-7 ; 2007 ; 4696 ; Multi-Agent Systems and Applications V (978-3-540-75253-0) ; 978-3-540-75253-0 ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 978-3-540-74308-8 ; 978-3-540-74309-5 ; 2007 ; 4697 ; Advances in Computer Systems Architecture (978-3-540-74308-8) ; 978-3-540-74308-8 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-75519-7 ; 978-3-540-75520-3 ; 2007 ; 4698 ; Algorithms - ESA 2007 (978-3-540-75519-7) ; 978-3-540-75519-7 ; reingest1.clockss.org:8082 >
@@ -1468,7 +1469,7 @@
       au < finished ; frozen ; 978-3-540-74933-2 ; 978-3-540-74936-3 ; 2007 ; 4713 ; Pattern Recognition (978-3-540-74933-2) ; 978-3-540-74933-2 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-75182-3 ; 978-3-540-75183-0 ; 2007 ; 4714 ; Business Process Management (978-3-540-75182-3) ; 978-3-540-75182-3 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 978-3-540-74811-3 ; 978-3-540-74812-0 ; 2007 ; 4715 ; Groupware: Design, Implementation, and Use (978-3-540-74811-3) ; 978-3-540-74811-3 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 978-3-540-75541-8 ; 978-3-540-75542-5 ; 2007 ; 4716 ; Software Engineering Approaches for Offshore and Outsourced Development (978-3-540-75541-8) ; 978-3-540-75541-8 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 978-3-540-75541-8 ; 978-3-540-75542-5 ; 2007 ; 4716 ; Software Engineering Approaches for Offshore and Outsourced Development (978-3-540-75541-8) ; 978-3-540-75541-8 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-74852-6 ; 978-3-540-74853-3 ; 2007 ; 4717 ; UbiComp 2007: Ubiquitous Computing (978-3-540-74852-6) ; 978-3-540-74852-6 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-75159-5 ; 978-3-540-75160-1 ; 2007 ; 4718 ; Location- and Context-Awareness (978-3-540-75159-5) ; 978-3-540-75159-5 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-76785-5 ; 978-3-540-76786-2 ; 2007 ; 4719 ; Datatype-Generic Programming (978-3-540-76785-5) ; 978-3-540-76785-5 ; reingest2.clockss.org:8085 >
@@ -1477,14 +1478,14 @@
       au < finished ; frozen ; 978-3-540-74996-7 ; 978-3-540-74997-4 ; 2007 ; 4722 ; Intelligent Virtual Agents (978-3-540-74996-7) ; 978-3-540-74996-7 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-74824-3 ; 978-3-540-74825-0 ; 2007 ; 4723 ; Advances in Intelligent Data Analysis VII (978-3-540-74824-3) ; 978-3-540-74824-3 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-75255-4 ; 978-3-540-75256-1 ; 2007 ; 4724 ; Symbolic and Quantitative Approaches to Reasoning with Uncertainty (978-3-540-75255-4) ; 978-3-540-75255-4 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 978-3-540-74916-5 ; 978-3-540-74917-2 ; 2007 ; 4725 ; Self-Organizing Systems (978-3-540-74916-5) ; 978-3-540-74916-5 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 978-3-540-74916-5 ; 978-3-540-74917-2 ; 2007 ; 4725 ; Self-Organizing Systems (978-3-540-74916-5) ; 978-3-540-74916-5 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 978-3-540-75529-6 ; 978-3-540-75530-2 ; 2007 ; 4726 ; String Processing and Information Retrieval (978-3-540-75529-6) ; 978-3-540-75529-6 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-74734-5 ; 978-3-540-74735-2 ; 2007 ; 4727 ; Cryptographic Hardware and Embedded Systems - CHES 2007 (978-3-540-74734-5) ; 978-3-540-74734-5 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-75413-8 ; 978-3-540-75414-5 ; 2007 ; 4728 ; Algebraic Informatics (978-3-540-75413-8) ; 978-3-540-75413-8 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-540-75554-8 ; 978-3-540-75555-5 ; 2007 ; 4729 ; Advances in Brain, Vision, and Artificial Intelligence (978-3-540-75554-8) ; 978-3-540-75554-8 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 978-3-540-75554-8 ; 978-3-540-75555-5 ; 2007 ; 4729 ; Advances in Brain, Vision, and Artificial Intelligence (978-3-540-75554-8) ; 978-3-540-75554-8 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 978-3-540-74998-1 ; 978-3-540-74999-8 ; 2007 ; 4730 ; Evaluation of Multilingual and Multi-modal Information Retrieval (978-3-540-74998-1) ; 978-3-540-74998-1 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 978-3-540-75141-0 ; 978-3-540-75142-7 ; 2007 ; 4731 ; Distributed Computing (978-3-540-75141-0) ; 978-3-540-75141-0 ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-540-74590-7 ; 978-3-540-74591-4 ; 2007 ; 4732 ; Theorem Proving in Higher Order Logics (978-3-540-74590-7) ; 978-3-540-74590-7 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 978-3-540-74590-7 ; 978-3-540-74591-4 ; 2007 ; 4732 ; Theorem Proving in Higher Order Logics (978-3-540-74590-7) ; 978-3-540-74590-7 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-74781-9 ; 978-3-540-74782-6 ; 2007 ; 4733 ; AI*IA 2007: Artificial Intelligence and Human-Oriented Computing (978-3-540-74781-9) ; 978-3-540-74781-9 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-74834-2 ; 978-3-540-74835-9 ; 2007 ; 4734 ; Computer Security - ESORICS 2007 (978-3-540-74834-2) ; 978-3-540-74834-2 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 978-3-540-75208-0 ; 978-3-540-75209-7 ; 2007 ; 4735 ; Model Driven Engineering Languages and Systems (978-3-540-75208-0) ; 978-3-540-75208-0 ; reingest3.clockss.org:8083 >
@@ -1503,13 +1504,13 @@
       au < finished ; frozen ; 978-3-540-75210-3 ; 978-3-540-75211-0 ; 2007 ; 4748 ; Formal Methods and Stochastic Models for Performance Evaluation (978-3-540-75210-3) ; 978-3-540-75210-3 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-74973-8 ; 978-3-540-74974-5 ; 2007 ; 4749 ; Service-Oriented Computing - ICSOC 2007 (978-3-540-74973-8) ; 978-3-540-74973-8 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 978-3-540-74959-2 ; 978-3-540-74960-8 ; 2007 ; 4751 ; Comparative Genomics (978-3-540-74959-2) ; 978-3-540-74959-2 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 978-3-540-75650-7 ; 978-3-540-75651-4 ; 2007 ; 4752 ; Advances in Information and Computer Security (978-3-540-75650-7) ; 978-3-540-75650-7 ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-540-75194-6 ; 978-3-540-75195-3 ; 2007 ; 4753 ; Creating New Learning Experiences on a Global Scale (978-3-540-75194-6) ; 978-3-540-75194-6 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 978-3-540-75650-7 ; 978-3-540-75651-4 ; 2007 ; 4752 ; Advances in Information and Computer Security (978-3-540-75650-7) ; 978-3-540-75650-7 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 978-3-540-75194-6 ; 978-3-540-75195-3 ; 2007 ; 4753 ; Creating New Learning Experiences on a Global Scale (978-3-540-75194-6) ; 978-3-540-75194-6 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 978-3-540-75224-0 ; 978-3-540-75225-7 ; 2007 ; 4754 ; Algorithmic Learning Theory (978-3-540-75224-0) ; 978-3-540-75224-0 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-75487-9 ; 978-3-540-75488-6 ; 2007 ; 4755 ; Discovery Science (978-3-540-75487-9) ; 978-3-540-75487-9 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 978-3-540-76724-4 ; 978-3-540-76725-1 ; 2007 ; 4756 ; Progress in Pattern Recognition, Image Analysis and Applications (978-3-540-76724-4) ; 978-3-540-76724-4 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 978-3-540-75415-2 ; 978-3-540-75416-9 ; 2007 ; 4757 ; Recent Advances in Parallel Virtual Machine and Message Passing Interface (978-3-540-75415-2) ; 978-3-540-75415-2 ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-540-75131-1 ; 978-3-540-75132-8 ; 2007 ; 4758 ; Software Architecture (978-3-540-75131-1) ; 978-3-540-75131-1 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 978-3-540-75131-1 ; 978-3-540-75132-8 ; 2007 ; 4758 ; Software Architecture (978-3-540-75131-1) ; 978-3-540-75131-1 ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 978-3-540-75663-7 ; 978-3-540-75664-4 ; 2007 ; 4761 ; Software Technologies for Embedded and Ubiquitous Systems (978-3-540-75663-7) ; 978-3-540-75663-7 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-75595-1 ; 978-3-540-75596-8 ; 2007 ; 4762 ; Automated Technology for Verification and Analysis (978-3-540-75595-1) ; 978-3-540-75595-1 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 978-3-540-75453-4 ; 978-3-540-75454-1 ; 2007 ; 4763 ; Formal Modeling and Analysis of Timed Systems (978-3-540-75453-4) ; 978-3-540-75453-4 ; reingest3.clockss.org:8083 >
@@ -1518,14 +1519,14 @@
       au < finished ; crawling ; 978-3-540-75525-8 ; 978-3-540-75526-5 ; 2007 ; 4766 ; Argumentation in Multi-Agent Systems (978-3-540-75525-8) ; 978-3-540-75525-8 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-75697-2 ; 978-3-540-75698-9 ; 2007 ; 4767 ; International Symposium on Fundamentals of Software Engineering (978-3-540-75697-2) ; 978-3-540-75697-2 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 978-3-540-74838-0 ; 978-3-540-74839-7 ; 2007 ; 4769 ; Graph-Theoretic Concepts in Computer Science (978-3-540-74838-0) ; 978-3-540-74838-0 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 978-3-540-75186-1 ; 978-3-540-75187-8 ; 2007 ; 4770 ; Computer Algebra in Scientific Computing (978-3-540-75186-1) ; 978-3-540-75186-1 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 978-3-540-75186-1 ; 978-3-540-75187-8 ; 2007 ; 4770 ; Computer Algebra in Scientific Computing (978-3-540-75186-1) ; 978-3-540-75186-1 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-75513-5 ; 978-3-540-75514-2 ; 2007 ; 4771 ; Hybrid Metaheuristics (978-3-540-75513-5) ; 978-3-540-75513-5 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-75407-7 ; 978-3-540-75410-7 ; 2007 ; 4772 ; Scalable Uncertainty Management (978-3-540-75407-7) ; 978-3-540-75407-7 ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 978-3-540-75475-6 ; 978-3-540-75476-3 ; 2007 ; 4773 ; Managing Next Generation Networks and Services (978-3-540-75475-6) ; 978-3-540-75475-6 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 978-3-540-75285-1 ; 978-3-540-75286-8 ; 2007 ; 4774 ; Pattern Recognition in Bioinformatics (978-3-540-75285-1) ; 978-3-540-75285-1 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 978-3-540-76441-0 ; 978-3-540-76442-7 ; 2007 ; 4775 ; Verbal and Nonverbal Communication Behaviours (978-3-540-76441-0) ; 978-3-540-76441-0 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-75550-0 ; 978-3-540-75551-7 ; 2007 ; 4776 ; Privacy Enhancing Technologies (978-3-540-75550-0) ; 978-3-540-75550-0 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-540-75511-1 ; 978-3-540-75512-8 ; 2007 ; 4777 ; Databases in Networked Information Systems (978-3-540-75511-1) ; 978-3-540-75511-1 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 978-3-540-75511-1 ; 978-3-540-75512-8 ; 2007 ; 4777 ; Databases in Networked Information Systems (978-3-540-75511-1) ; 978-3-540-75511-1 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-75689-7 ; 978-3-540-75690-3 ; 2007 ; 4778 ; Analysis and Modeling of Faces and Gestures (978-3-540-75689-7) ; 978-3-540-75689-7 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 978-3-540-75495-4 ; 978-3-540-75496-1 ; 2007 ; 4779 ; Information Security (978-3-540-75495-4) ; 978-3-540-75495-4 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 978-3-540-76638-4 ; 978-3-540-76639-1 ; 2007 ; 4780 ; Transactions on Computational Systems Biology VIII (978-3-540-76638-4) ; 978-3-540-76638-4 ; reingest4.clockss.org:8082 >
@@ -1561,7 +1562,7 @@
       au < finished ; crawling ; 978-3-540-77484-6 ; 978-3-540-77485-3 ; 2007 ; 4811 ; Advances in Web Mining and Web Usage Analysis (978-3-540-77484-6) ; 978-3-540-77484-6 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 978-3-540-77085-5 ; 978-3-540-77086-2 ; 2007 ; 4812 ; Information Systems Security (978-3-540-77085-5) ; 978-3-540-77085-5 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-76701-5 ; 978-3-540-76702-2 ; 2007 ; 4813 ; Haptic and Audio Interaction Design (978-3-540-76701-5) ; 978-3-540-76701-5 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-540-75702-3 ; 978-3-540-75703-0 ; 2007 ; 4814 ; Human Motion - Understanding, Modeling, Capture and Animation (978-3-540-75702-3) ; 978-3-540-75702-3 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 978-3-540-75702-3 ; 978-3-540-75703-0 ; 2007 ; 4814 ; Human Motion - Understanding, Modeling, Capture and Animation (978-3-540-75702-3) ; 978-3-540-75702-3 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-77045-9 ; 978-3-540-77046-6 ; 2007 ; 4815 ; Pattern Recognition and Machine Intelligence (978-3-540-77045-9) ; 978-3-540-77045-9 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 978-3-540-77033-6 ; 978-3-540-77051-0 ; 2007 ; 4816 ; Semantic Multimedia (978-3-540-77033-6) ; 978-3-540-77033-6 ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 978-3-540-76787-9 ; 978-3-540-76788-6 ; 2007 ; 4817 ; Information Security and Cryptology - ICISC 2007 (978-3-540-76787-9) ; 978-3-540-76787-9 ; reingest4.clockss.org:8082 >
@@ -1573,9 +1574,9 @@
       au < finished ; frozen ; 978-3-540-76630-8 ; 978-3-540-76631-5 ; 2007 ; 4827 ; MICAI 2007: Advances in Artificial Intelligence (978-3-540-76630-8) ; 978-3-540-76630-8 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-76930-9 ; 978-3-540-76931-6 ; 2007 ; 4828 ; Progress in Artificial Life (978-3-540-76930-9) ; 978-3-540-76930-9 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-77350-4 ; 978-3-540-77351-1 ; 2007 ; 4829 ; Software Composition (978-3-540-77350-4) ; 978-3-540-77350-4 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 978-3-540-76926-2 ; 978-3-540-76928-6 ; 2007 ; 4830 ; AI 2007: Advances in Artificial Intelligence (978-3-540-76926-2) ; 978-3-540-76926-2 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 978-3-540-76926-2 ; 978-3-540-76928-6 ; 2007 ; 4830 ; AI 2007: Advances in Artificial Intelligence (978-3-540-76926-2) ; 978-3-540-76926-2 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 978-3-540-76992-7 ; 978-3-540-76993-4 ; 2007 ; 4831 ; Web Information Systems Engineering - WISE 2007 (978-3-540-76992-7) ; 978-3-540-76992-7 ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-540-77009-1 ; 978-3-540-77010-7 ; 2007 ; 4832 ; Web Information Systems Engineering - WISE 2007 Workshops (978-3-540-77009-1) ; 978-3-540-77009-1 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 978-3-540-77009-1 ; 978-3-540-77010-7 ; 2007 ; 4832 ; Web Information Systems Engineering - WISE 2007 Workshops (978-3-540-77009-1) ; 978-3-540-77009-1 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-76899-9 ; 978-3-540-76900-2 ; 2007 ; 4833 ; Advances in Cryptology - ASIACRYPT 2007 (978-3-540-76899-9) ; 978-3-540-76899-9 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 978-3-540-76777-0 ; 978-3-540-76778-7 ; 2007 ; 4834 ; Middleware 2007 (978-3-540-76777-0) ; 978-3-540-76777-0 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 978-3-540-77118-0 ; 978-3-540-77120-3 ; 2007 ; 4835 ; Algorithms and Computation (978-3-540-77118-0) ; 978-3-540-77118-0 ; reingest3.clockss.org:8083 >
@@ -1583,7 +1584,7 @@
       au < finished ; frozen ; 978-3-540-76626-1 ; 978-3-540-76627-8 ; 2007 ; 4838 ; Stabilization, Safety, and Security of Distributed Systems (978-3-540-76626-1) ; 978-3-540-76626-1 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-77394-8 ; 978-3-540-77395-5 ; 2007 ; 4839 ; Runtime Verification (978-3-540-77394-8) ; 978-3-540-77394-8 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-77342-9 ; 978-3-540-77343-6 ; 2007 ; 4840 ; Attention in Cognitive Systems. Theories and Systems from an Interdisciplinary Viewpoint (978-3-540-77342-9) ; 978-3-540-77342-9 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 978-3-540-76857-9 ; 978-3-540-76858-6 ; 2007 ; 4841 ; Advances in Visual Computing (978-3-540-76857-9) ; 978-3-540-76857-9 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 978-3-540-76857-9 ; 978-3-540-76858-6 ; 2007 ; 4841 ; Advances in Visual Computing (978-3-540-76857-9) ; 978-3-540-76857-9 ; reingest3.clockss.org:8083 >
       au < superseded ; exists ; 978-3-540-76855-5 ; 978-3-540-76856-2 ; 2007 ; 4842 ; Advances in Visual Computing (978-3-540-76855-5) [superseded] ; 978-3-540-76855-5 ; >
       au < finished ; crawling ; 978-3-540-76385-7 ; 978-3-540-76386-4 ; 2007 ; 4843 ; Computer Vision - ACCV 2007 (978-3-540-76385-7) ; 978-3-540-76385-7 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 978-3-540-76389-5 ; 978-3-540-76390-1 ; 2007 ; 4844 ; Computer Vision - ACCV 2007 (978-3-540-76389-5) ; 978-3-540-76389-5 ; reingest5.clockss.org:8082 >
@@ -1680,7 +1681,7 @@
       au < finished ; crawling ; 978-3-540-69016-0 ; 978-3-540-69019-1 ; 2008 ; 4920 ; Transactions on Data Hiding and Multimedia Security III (978-3-540-69016-0) ; 978-3-540-69016-0 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-77890-5 ; 978-3-540-77891-2 ; 2008 ; 4921 ; WALCOM: Algorithms and Computation (978-3-540-77890-5) ; 978-3-540-77890-5 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-70929-9 ; 978-3-540-70930-5 ; 2008 ; 4922 ; Model-Driven Development of Reliable Automotive Services (978-3-540-70929-9) ; 978-3-540-70929-9 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-540-78920-8 ; 978-3-540-78921-5 ; 2008 ; 4923 ; Concept Lattices and Their Applications (978-3-540-78920-8) ; 978-3-540-78920-8 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 978-3-540-78920-8 ; 978-3-540-78921-5 ; 2008 ; 4923 ; Concept Lattices and Their Applications (978-3-540-78920-8) ; 978-3-540-78920-8 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 978-3-540-78623-8 ; 978-3-540-78624-5 ; 2008 ; 4924 ; Knowledge Management for Health Care Procedures (978-3-540-78623-8) ; 978-3-540-78623-8 ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 978-3-540-88593-1 ; 978-3-540-88594-8 ; 2008 ; 4925 ; Semantics in Data and Knowledge Bases (978-3-540-88593-1) ; 978-3-540-88593-1 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-79304-5 ; 978-3-540-79305-2 ; 2008 ; 4926 ; Artificial Evolution (978-3-540-79304-5) ; 978-3-540-79304-5 ; reingest5.clockss.org:8082 >
@@ -1690,7 +1691,7 @@
       au < finished ; crawling ; 978-3-540-79036-5 ; 978-3-540-79037-2 ; 2008 ; 4930 ; Modeling Communication with Robots and Virtual Humans (978-3-540-79036-5) ; 978-3-540-79036-5 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-78156-1 ; 978-3-540-78157-8 ; 2008 ; 4931 ; Robot Vision (978-3-540-78156-1) ; 978-3-540-78156-1 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 978-3-540-77683-3 ; 978-3-540-77684-0 ; 2008 ; 4932 ; Foundations of Information and Knowledge Systems (978-3-540-77683-3) ; 978-3-540-77683-3 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-540-78136-3 ; 978-3-540-78137-0 ; 2008 ; 4933 ; Formal Concept Analysis (978-3-540-78136-3) ; 978-3-540-78136-3 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 978-3-540-78136-3 ; 978-3-540-78137-0 ; 2008 ; 4933 ; Formal Concept Analysis (978-3-540-78136-3) ; 978-3-540-78136-3 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 978-3-540-78152-3 ; 978-3-540-78153-0 ; 2008 ; 4934 ; Architecture of Computing Systems - ARCS 2008 (978-3-540-78152-3) ; 978-3-540-78152-3 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 978-3-540-69302-4 ; 978-3-540-69303-1 ; 2008 ; 4935 ; A Practical Programming Model for the Multi-Core Era (978-3-540-69302-4) ; 978-3-540-69302-4 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-78807-2 ; 978-3-540-78808-9 ; 2008 ; 4936 ; Algorithms and Models for the Web-Graph (978-3-540-78807-2) ; 978-3-540-78807-2 ; reingest5.clockss.org:8082 >
@@ -1714,7 +1715,7 @@
       au < finished ; frozen ; 978-3-540-78788-4 ; 978-3-540-78789-1 ; 2008 ; 4954 ; Software Composition (978-3-540-78788-4) ; 978-3-540-78788-4 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 978-3-540-78838-6 ; 978-3-540-78839-3 ; 2008 ; 4955 ; Research in Computational Molecular Biology (978-3-540-78838-6) ; 978-3-540-78838-6 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-78645-0 ; 978-3-540-78646-7 ; 2008 ; 4956 ; Advances in Information Retrieval (978-3-540-78645-0) ; 978-3-540-78645-0 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-540-78772-3 ; 978-3-540-78773-0 ; 2008 ; 4957 ; LATIN 2008: Theoretical Informatics (978-3-540-78772-3) ; 978-3-540-78772-3 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 978-3-540-78772-3 ; 978-3-540-78773-0 ; 2008 ; 4957 ; LATIN 2008: Theoretical Informatics (978-3-540-78772-3) ; 978-3-540-78772-3 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-78274-2 ; 978-3-540-78275-9 ; 2008 ; 4958 ; Combinatorial Image Analysis (978-3-540-78274-2) ; 978-3-540-78274-2 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 978-3-540-78790-7 ; 978-3-540-78791-4 ; 2008 ; 4959 ; Compiler Construction (978-3-540-78790-7) ; 978-3-540-78790-7 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 978-3-540-78738-9 ; 978-3-540-78739-6 ; 2008 ; 4960 ; Programming Languages and Systems (978-3-540-78738-9) ; 978-3-540-78738-9 ; reingest4.clockss.org:8082 >
@@ -1740,7 +1741,7 @@
       au < finished ; finished ; 978-3-540-78928-4 ; 978-3-540-78929-1 ; 2008 ; 4981 ; Hybrid Systems: Computation and Control (978-3-540-78928-4) ; 978-3-540-78928-4 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 978-3-540-79548-3 ; 978-3-540-79549-0 ; 2008 ; 4982 ; NETWORKING 2008 Ad Hoc and Sensor Networks, Wireless Networks, Next Generation Internet (978-3-540-79548-3) ; 978-3-540-79548-3 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-79449-3 ; 978-3-540-79450-9 ; 2008 ; 4983 ; Bioinformatics Research and Applications (978-3-540-79449-3) ; 978-3-540-79449-3 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-540-69154-9 ; 978-3-540-69158-7 ; 2008 ; 4984 ; Neural Information Processing (978-3-540-69154-9) ; 978-3-540-69154-9 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 978-3-540-69154-9 ; 978-3-540-69158-7 ; 2008 ; 4984 ; Neural Information Processing (978-3-540-69154-9) ; 978-3-540-69154-9 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-69159-4 ; 978-3-540-69162-4 ; 2008 ; 4985 ; Neural Information Processing (978-3-540-69159-4) ; 978-3-540-69159-4 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 978-3-540-68350-6 ; 978-3-540-68351-3 ; 2008 ; 4986 ; New Stream Cipher Designs (978-3-540-68350-6) ; 978-3-540-68350-6 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 978-3-540-79489-9 ; 978-3-540-79490-5 ; 2008 ; 4987 ; Medical Imaging and Informatics (978-3-540-79489-9) ; 978-3-540-79489-9 ; reingest4.clockss.org:8082 >
@@ -1790,7 +1791,7 @@
       au < finished ; frozen ; 978-3-540-68805-1 ; 978-3-540-68807-5 ; 2008 ; 5031 ; Wired/Wireless Internet Communications (978-3-540-68805-1) ; 978-3-540-68805-1 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-68821-1 ; 978-3-540-68825-9 ; 2008 ; 5032 ; Advances in Artificial Intelligence (978-3-540-68821-1) ; 978-3-540-68821-1 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 978-3-540-68500-5 ; 978-3-540-68504-3 ; 2008 ; 5033 ; Persuasive Technology (978-3-540-68500-5) ; 978-3-540-68500-5 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 978-3-540-68865-5 ; 978-3-540-68880-8 ; 2008 ; 5034 ; Algorithmic Aspects in Information and Management (978-3-540-68865-5) ; 978-3-540-68865-5 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 978-3-540-68865-5 ; 978-3-540-68880-8 ; 2008 ; 5034 ; Algorithmic Aspects in Information and Management (978-3-540-68865-5) ; 978-3-540-68865-5 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 978-3-540-68886-0 ; 978-3-540-68891-4 ; 2008 ; 5035 ; Integer Programming and Combinatorial Optimization (978-3-540-68886-0) ; 978-3-540-68886-0 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-68081-9 ; 978-3-540-68083-3 ; 2008 ; 5036 ; Advances in Grid and Pervasive Computing (978-3-540-68081-9) ; 978-3-540-68081-9 ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 978-3-540-68913-3 ; 978-3-540-68914-0 ; 2008 ; 5037 ; Applied Cryptography and Network Security (978-3-540-68913-3) ; 978-3-540-68913-3 ; reingest2.clockss.org:8085 >
@@ -1878,7 +1879,7 @@
       au < finished ; crawling ; 978-3-540-69900-2 ; 978-3-540-69903-3 ; 2008 ; 5124 ; Algorithm Theory - SWAT 2008 (978-3-540-69900-2) ; 978-3-540-69900-2 ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 978-3-540-70574-1 ; 978-3-540-70575-8 ; 2008 ; 5125 ; Automata, Languages and Programming (978-3-540-70574-1) ; 978-3-540-70574-1 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-70582-6 ; 978-3-540-70583-3 ; 2008 ; 5126 ; Automata, Languages and Programming (978-3-540-70582-6) ; 978-3-540-70582-6 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-540-70586-4 ; 978-3-540-70587-1 ; 2008 ; 5127 ; Resilient Networks and Services (978-3-540-70586-4) ; 978-3-540-70586-4 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 978-3-540-70586-4 ; 978-3-540-70587-1 ; 2008 ; 5127 ; Resilient Networks and Services (978-3-540-70586-4) ; 978-3-540-70586-4 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 978-3-540-79981-8 ; 978-3-540-79982-5 ; 2008 ; 5128 ; Medical Imaging and Augmented Reality (978-3-540-79981-8) ; 978-3-540-79981-8 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 978-3-540-89811-5 ; 978-3-540-89812-2 ; 2008 ; 5129 ; Recent Advances in Constraints (978-3-540-89811-5) ; 978-3-540-89811-5 ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 978-3-540-69498-4 ; 978-3-540-69499-1 ; 2008 ; 5130 ; Arithmetic of Finite Fields (978-3-540-69498-4) ; 978-3-540-69498-4 ; reingest5.clockss.org:8082 >
@@ -1892,7 +1893,7 @@
       au < finished ; frozen ; 978-3-540-87880-3 ; 978-3-540-87881-0 ; 2008 ; 5138 ; Artificial Intelligence: Theories, Models and Applications (978-3-540-87880-3) ; 978-3-540-87880-3 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 978-3-540-88191-9 ; 978-3-540-88192-6 ; 2008 ; 5139 ; Advanced Data Mining and Applications (978-3-540-88191-9) ; 978-3-540-88191-9 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-79979-5 ; 978-3-540-79980-1 ; 2008 ; 5140 ; Algebraic Methodology and Software Technology (978-3-540-79979-5) ; 978-3-540-79979-5 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-540-89095-9 ; 978-3-540-89173-4 ; 2008 ; 5141 ; Critical Information Infrastructures Security (978-3-540-89095-9) ; 978-3-540-89095-9 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 978-3-540-89095-9 ; 978-3-540-89173-4 ; 2008 ; 5141 ; Critical Information Infrastructures Security (978-3-540-89095-9) ; 978-3-540-89095-9 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-70591-8 ; 978-3-540-70592-5 ; 2008 ; 5142 ; ECOOP 2008 - Object-Oriented Programming (978-3-540-70591-8) ; 978-3-540-70591-8 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 978-3-540-85229-2 ; 978-3-540-85230-8 ; 2008 ; 5143 ; Financial Cryptography and Data Security (978-3-540-85229-2) ; 978-3-540-85229-2 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 978-3-540-85109-7 ; 978-3-540-85110-3 ; 2008 ; 5144 ; Intelligent Computer Mathematics (978-3-540-85109-7) ; 978-3-540-85109-7 ; reingest4.clockss.org:8082 >
@@ -1941,8 +1942,8 @@
       au < finished ; frozen ; 978-3-540-85175-2 ; 978-3-540-85176-9 ; 2008 ; 5187 ; Data Management in Grid and Peer-to-Peer Systems (978-3-540-85175-2) ; 978-3-540-85175-2 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 978-3-540-85890-4 ; 978-3-540-85891-1 ; 2008 ; 5188 ; Visual Information Systems. Web-Based Visual Information Search and Management (978-3-540-85890-4) ; 978-3-540-85890-4 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 978-3-540-85892-8 ; 978-3-540-85893-5 ; 2008 ; 5189 ; Smart Card Research and Advanced Applications (978-3-540-85892-8) ; 978-3-540-85892-8 ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-540-85979-6 ; 978-3-540-85980-2 ; 2008 ; 5190 ; Computational Processing of the Portuguese Language (978-3-540-85979-6) ; 978-3-540-85979-6 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-540-79991-7 ; 978-3-540-79992-4 ; 2008 ; 5191 ; Cellular Automata (978-3-540-79991-7) ; 978-3-540-79991-7 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 978-3-540-85979-6 ; 978-3-540-85980-2 ; 2008 ; 5190 ; Computational Processing of the Portuguese Language (978-3-540-85979-6) ; 978-3-540-85979-6 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 978-3-540-79991-7 ; 978-3-540-79992-4 ; 2008 ; 5191 ; Cellular Automata (978-3-540-79991-7) ; 978-3-540-79991-7 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-87604-5 ; 978-3-540-87605-2 ; 2008 ; 5192 ; Times of Convergence. Technologies Across Learning Contexts (978-3-540-87604-5) ; 978-3-540-87604-5 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 978-3-540-87743-1 ; 978-3-540-87744-8 ; 2008 ; 5193 ; Algorithms - ESA 2008 (978-3-540-87743-1) ; 978-3-540-87743-1 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 978-3-540-85927-7 ; 978-3-540-85928-4 ; 2008 ; 5194 ; Inductive Logic Programming (978-3-540-85927-7) ; 978-3-540-85927-7 ; reingest4.clockss.org:8082 >
@@ -1969,7 +1970,7 @@
       au < finished ; finished ; 978-3-540-85777-8 ; 978-3-540-85778-5 ; 2008 ; 5215 ; Formal Modeling and Analysis of Timed Systems (978-3-540-85777-8) ; 978-3-540-85777-8 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-85856-0 ; 978-3-540-85857-7 ; 2008 ; 5216 ; Evolvable Systems: From Biology to Hardware (978-3-540-85856-0) ; 978-3-540-85856-0 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-87526-0 ; 978-3-540-87527-7 ; 2008 ; 5217 ; Ant Colony Optimization and Swarm Intelligence (978-3-540-87526-0) ; 978-3-540-87526-0 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-540-87778-3 ; 978-3-540-87779-0 ; 2008 ; 5218 ; Distributed Computing (978-3-540-87778-3) ; 978-3-540-87778-3 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 978-3-540-87778-3 ; 978-3-540-87779-0 ; 2008 ; 5218 ; Distributed Computing (978-3-540-87778-3) ; 978-3-540-87778-3 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 978-3-540-87697-7 ; 978-3-540-87698-4 ; 2008 ; 5219 ; Computer Safety, Reliability, and Security (978-3-540-87697-7) ; 978-3-540-87697-7 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 978-3-540-88010-3 ; 978-3-540-88011-0 ; 2008 ; 5220 ; Cooperative Design, Visualization, and Engineering (978-3-540-88010-3) ; 978-3-540-88010-3 ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 978-3-540-85286-5 ; 978-3-540-85287-2 ; 2008 ; 5221 ; Advances in Natural Language Processing (978-3-540-85286-5) ; 978-3-540-85286-5 ; reingest5.clockss.org:8082 >
@@ -1978,7 +1979,7 @@
       au < finished ; crawling ; 978-3-540-85656-6 ; 978-3-540-85658-0 ; 2008 ; 5224 ; Reasoning Web (978-3-540-85656-6) ; 978-3-540-85656-6 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 978-3-540-87701-1 ; 978-3-540-87702-8 ; 2008 ; 5225 ; The Challenge of Anticipation (978-3-540-87701-1) ; 978-3-540-87701-1 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-87440-9 ; 978-3-540-87442-3 ; 2008 ; 5226 ; Advanced Intelligent Computing Theories and Applications. With Aspects of Theoretical and Methodological Issues (978-3-540-87440-9) ; 978-3-540-87440-9 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-540-85983-3 ; 978-3-540-85984-0 ; 2008 ; 5227 ; Advanced Intelligent Computing Theories and Applications. With Aspects of Artificial Intelligence (978-3-540-85983-3) ; 978-3-540-85983-3 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 978-3-540-85983-3 ; 978-3-540-85984-0 ; 2008 ; 5227 ; Advanced Intelligent Computing Theories and Applications. With Aspects of Artificial Intelligence (978-3-540-85983-3) ; 978-3-540-85983-3 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-87447-8 ; 978-3-540-87448-5 ; 2008 ; 5228 ; Coding Theory and Applications (978-3-540-87447-8) ; 978-3-540-87447-8 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 978-3-540-85854-6 ; 978-3-540-85855-3 ; 2008 ; 5229 ; Security and Cryptography for Networks (978-3-540-85854-6) ; 978-3-540-85854-6 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 978-3-540-87402-7 ; 978-3-540-87403-4 ; 2008 ; 5230 ; Recent Advances in Intrusion Detection (978-3-540-87402-7) ; 978-3-540-87402-7 ; reingest4.clockss.org:8082 >
@@ -1986,7 +1987,7 @@
       au < finished ; crawling ; 978-3-540-87990-9 ; 978-3-540-87991-6 ; 2008 ; 5232 ; Advances in Conceptual Modeling - Challenges and Opportunities (978-3-540-87990-9) ; 978-3-540-87990-9 ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 978-3-540-85260-5 ; 978-3-540-85261-2 ; 2008 ; 5234 ; Languages and Compilers for Parallel Computing (978-3-540-85260-5) ; 978-3-540-85260-5 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 978-3-540-88642-6 ; 978-3-540-88643-3 ; 2008 ; 5235 ; Generative and Transformational Techniques in Software Engineering II (978-3-540-88642-6) ; 978-3-540-88642-6 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 978-3-540-92718-1 ; 978-3-540-92719-8 ; 2008 ; 5236 ; Computer Supported Cooperative Work in Design IV (978-3-540-92718-1) ; 978-3-540-92718-1 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 978-3-540-92718-1 ; 978-3-540-92719-8 ; 2008 ; 5236 ; Computer Supported Cooperative Work in Design IV (978-3-540-92718-1) ; 978-3-540-92718-1 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-85852-2 ; 978-3-540-85853-9 ; 2008 ; 5237 ; Machine Learning for Multimodal Interaction (978-3-540-85852-2) ; 978-3-540-85852-2 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-87602-1 ; 978-3-540-87603-8 ; 2008 ; 5238 ; Abstract State Machines, B and Z (978-3-540-87602-1) ; 978-3-540-87602-1 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-85501-9 ; 978-3-540-85502-6 ; 2008 ; 5239 ; Advances in Case-Based Reasoning (978-3-540-85501-9) ; 978-3-540-85501-9 ; reingest2.clockss.org:8085 >
@@ -2017,7 +2018,7 @@
       au < finished ; finished ; 978-3-540-87733-2 ; 978-3-540-87734-9 ; 2008 ; 5264 ; Advances in Neural Networks - ISNN 2008 (978-3-540-87733-2) ; 978-3-540-87733-2 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 978-3-540-88434-7 ; 978-3-540-88436-1 ; 2008 ; 5265 ; Pattern Recognition in Bioinformatics (978-3-540-88434-7) ; 978-3-540-88434-7 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 978-3-540-87472-0 ; 978-3-540-87473-7 ; 2008 ; 5266 ; Geographic Information Science (978-3-540-87472-0) ; 978-3-540-87472-0 ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-540-87988-6 ; 978-3-540-87989-3 ; 2008 ; 5267 ; Comparative Genomics (978-3-540-87988-6) ; 978-3-540-87988-6 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 978-3-540-87988-6 ; 978-3-540-87989-3 ; 2008 ; 5267 ; Comparative Genomics (978-3-540-87988-6) ; 978-3-540-87988-6 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-87695-3 ; 978-3-540-87696-0 ; 2008 ; 5268 ; Knowledge Engineering: Practice and Patterns (978-3-540-87695-3) ; 978-3-540-87695-3 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-87882-7 ; 978-3-540-87883-4 ; 2008 ; 5270 ; Haptic and Audio Interaction Design (978-3-540-87882-7) ; 978-3-540-87882-7 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 978-3-540-87655-7 ; 978-3-540-87656-4 ; 2008 ; 5271 ; Hybrid Artificial Intelligence Systems (978-3-540-87655-7) ; 978-3-540-87655-7 ; reingest3.clockss.org:8083 >
@@ -2074,7 +2075,7 @@
       au < finished ; crawling ; 978-3-540-89764-4 ; 978-3-540-89765-1 ; 2008 ; 5327 ; Uncertainty Reasoning for the Semantic Web I (978-3-540-89764-4) ; 978-3-540-89764-4 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-89961-7 ; 978-3-540-89962-4 ; 2008 ; 5328 ; Advances in Blended Learning (978-3-540-89961-7) ; 978-3-540-89961-7 ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 978-3-540-92780-8 ; 978-3-540-92781-5 ; 2008 ; 5329 ; Cognitive Vision (978-3-540-92780-8) ; 978-3-540-92780-8 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-540-89438-4 ; 978-3-540-89439-1 ; 2008 ; 5330 ; Logic for Programming, Artificial Intelligence, and Reasoning (978-3-540-89438-4) ; 978-3-540-89438-4 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 978-3-540-89438-4 ; 978-3-540-89439-1 ; 2008 ; 5330 ; Logic for Programming, Artificial Intelligence, and Reasoning (978-3-540-89438-4) ; 978-3-540-89438-4 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 978-3-540-88870-3 ; 978-3-540-88871-0 ; 2008 ; 5331 ; On the Move to Meaningful Internet Systems: OTM 2008 (978-3-540-88870-3) ; 978-3-540-88870-3 ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 978-3-540-88872-7 ; 978-3-540-88873-4 ; 2008 ; 5332 ; On the Move to Meaningful Internet Systems: OTM 2008 (978-3-540-88872-7) ; 978-3-540-88872-7 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-88874-1 ; 978-3-540-88875-8 ; 2008 ; 5333 ; On the Move to Meaningful Internet Systems: OTM 2008 Workshops (978-3-540-88874-1) ; 978-3-540-88874-1 ; reingest5.clockss.org:8082 >
@@ -2116,8 +2117,8 @@
       au < finished ; crawling ; 978-3-540-89896-2 ; 978-3-540-89897-9 ; 2008 ; 5377 ; Towards a Service-Based Internet (978-3-540-89896-2) ; 978-3-540-89896-2 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-89436-0 ; 978-3-540-89437-7 ; 2008 ; 5380 ; Software-Intensive Systems and New Computing Paradigms (978-3-540-89436-0) ; 978-3-540-89436-0 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 978-3-540-92187-5 ; 978-3-540-92188-2 ; 2008 ; 5382 ; Formal Methods for Components and Objects (978-3-540-92187-5) ; 978-3-540-92187-5 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 978-3-540-92147-9 ; 978-3-540-92148-6 ; 2008 ; 5383 ; Journal on Data Semantics XI (978-3-540-92147-9) ; 978-3-540-92147-9 ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-540-92184-4 ; 978-3-540-92185-1 ; 2008 ; 5385 ; Internet and Network Economics (978-3-540-92184-4) ; 978-3-540-92184-4 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 978-3-540-92147-9 ; 978-3-540-92148-6 ; 2008 ; 5383 ; Journal on Data Semantics XI (978-3-540-92147-9) ; 978-3-540-92147-9 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 978-3-540-92184-4 ; 978-3-540-92185-1 ; 2008 ; 5385 ; Internet and Network Economics (978-3-540-92184-4) ; 978-3-540-92184-4 ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 978-3-540-92242-1 ; 978-3-540-92243-8 ; 2008 ; 5388 ; Constraint Handling Rules (978-3-540-92242-1) ; 978-3-540-92242-1 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-92861-4 ; 978-3-540-92862-1 ; 2008 ; 5389 ; Algorithmic Aspects of Wireless Sensor Networks (978-3-540-92861-4) ; 978-3-540-92861-4 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 978-3-540-89875-7 ; 978-3-540-89876-4 ; 2008 ; 5390 ; Transactions on Rough Sets IX (978-3-540-89875-7) ; 978-3-540-89875-7 ; reingest3.clockss.org:8083 >
@@ -2130,7 +2131,7 @@
 
       au < finished ; crawling ; 978-3-642-03337-7 ; 978-3-642-03339-1 ; 2009 ; 4078 ; Multi-Agent Systems for Society (978-3-642-03337-7) ; 978-3-642-03337-7 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 978-3-642-04878-4 ; 978-3-642-04879-1 ; 2009 ; 4324 ; Safety and Security in Multiagent Systems (978-3-642-04878-4) ; 978-3-642-04878-4 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-642-00971-6 ; 978-3-642-00972-3 ; 2009 ; 4388 ; Active and Programmable Networks (978-3-642-00971-6) ; 978-3-642-00971-6 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 978-3-642-00971-6 ; 978-3-642-00972-3 ; 2009 ; 4388 ; Active and Programmable Networks (978-3-642-00971-6) ; 978-3-642-00971-6 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 978-3-642-01349-2 ; 978-3-642-01350-8 ; 2009 ; 4879 ; Advanced Internet Based Systems and Applications (978-3-642-01349-2) ; 978-3-642-01349-2 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 978-3-642-10229-5 ; 978-3-642-10230-1 ; 2009 ; 4883 ; Information Theoretic Security (978-3-642-10229-5) ; 978-3-642-10229-5 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-89783-5 ; 978-3-540-89784-2 ; 2009 ; 4891 ; Advances in Web Semantics I (978-3-540-89783-5) ; 978-3-540-89783-5 ; reingest5.clockss.org:8082 >
@@ -2138,14 +2139,14 @@
       au < finished ; frozen ; 978-3-642-01638-7 ; 978-3-642-01639-4 ; 2009 ; 5044 ; Agent Computing and Multi-Agent Systems (978-3-642-01638-7) ; 978-3-642-01638-7 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 978-3-642-03060-4 ; 978-3-642-03061-1 ; 2009 ; 5064 ; Statistical and Geometrical Approaches to Visual Motion Analysis (978-3-642-03060-4) ; 978-3-642-03060-4 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 978-3-642-04734-3 ; 978-3-642-04735-0 ; 2009 ; 5070 ; Aspects of Natural Language Processing (978-3-642-04734-3) ; 978-3-642-04734-3 ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-540-92864-5 ; 978-3-540-92865-2 ; 2009 ; 5085 ; Gesture-Based Human-Computer Interaction and Simulation (978-3-540-92864-5) ; 978-3-540-92864-5 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 978-3-540-92864-5 ; 978-3-540-92865-2 ; 2009 ; 5085 ; Gesture-Based Human-Computer Interaction and Simulation (978-3-540-92864-5) ; 978-3-540-92864-5 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 978-3-642-04903-3 ; 978-3-642-04904-0 ; 2009 ; 5087 ; Security Protocols (978-3-642-04903-3) ; 978-3-642-04903-3 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 978-3-642-11446-5 ; 978-3-642-11447-2 ; 2009 ; 5115 ; Rigorous Methods for Software Construction and Analysis (978-3-642-11446-5) ; 978-3-642-11446-5 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 978-3-642-01990-6 ; 978-3-642-01991-3 ; 2009 ; 5269 ; Multi-Agent-Based Simulation IX (978-3-642-01990-6) ; 978-3-642-01990-6 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 978-3-540-89096-6 ; 978-3-540-89097-3 ; 2009 ; 5280 ; String Processing and Information Retrieval (978-3-540-89096-6) ; 978-3-540-89096-6 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 978-3-642-00211-3 ; 978-3-642-00212-0 ; 2009 ; 5300 ; Transactions on Computational Science III (978-3-642-00211-3) ; 978-3-642-00211-3 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-89221-2 ; 978-3-540-89222-9 ; 2009 ; 5309 ; Entertainment Computing - ICEC 2008 (978-3-540-89221-2) ; 978-3-540-89221-2 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-642-02275-3 ; 978-3-642-02276-0 ; 2009 ; 5322 ; Computer-Mediated Social Networking (978-3-642-02275-3) ; 978-3-642-02275-3 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 978-3-642-02275-3 ; 978-3-642-02276-0 ; 2009 ; 5322 ; Computer-Mediated Social Networking (978-3-642-02275-3) ; 978-3-642-02275-3 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 978-3-642-02344-6 ; 978-3-642-02345-3 ; 2009 ; 5337 ; Computer Vision and Graphics (978-3-642-02344-6) ; 978-3-642-02344-6 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 978-3-642-03075-8 ; 978-3-642-03076-5 ; 2009 ; 5347 ; DNA Computing (978-3-642-03075-8) ; 978-3-642-03075-8 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 978-3-642-00430-8 ; 978-3-642-00431-5 ; 2009 ; 5348 ; Model Checking and Artificial Intelligence (978-3-642-00430-8) ; 978-3-642-00430-8 ; reingest5.clockss.org:8082 >
@@ -2161,7 +2162,7 @@
       au < finished ; crawling ; 978-3-642-01337-9 ; 978-3-642-01338-6 ; 2009 ; 5386 ; Agent-Oriented Software Engineering IX (978-3-642-01337-9) ; 978-3-642-01337-9 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 978-3-642-01363-8 ; 978-3-642-01364-5 ; 2009 ; 5387 ; Web Services and Formal Methods (978-3-642-01363-8) ; 978-3-642-01363-8 ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 978-3-540-95884-0 ; 978-3-540-95885-7 ; 2009 ; 5391 ; Membrane Computing (978-3-540-95884-0) ; 978-3-540-95884-0 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 978-3-642-01701-8 ; 978-3-642-01702-5 ; 2009 ; 5394 ; Hardware and Software: Verification and Testing (978-3-642-01701-8) ; 978-3-642-01701-8 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 978-3-642-01701-8 ; 978-3-642-01702-5 ; 2009 ; 5394 ; Hardware and Software: Verification and Testing (978-3-642-01701-8) ; 978-3-642-01701-8 ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 978-3-642-00581-7 ; 978-3-642-00582-4 ; 2009 ; 5395 ; Attention in Cognitive Systems (978-3-642-00581-7) ; 978-3-642-00581-7 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 978-3-540-93919-1 ; 978-3-540-93920-7 ; 2009 ; 5397 ; Declarative Agent Languages and Technologies VI (978-3-540-93919-1) ; 978-3-540-93919-1 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 978-3-642-00524-4 ; 978-3-642-00525-1 ; 2009 ; 5398 ; Multimodal Signals: Cognitive and Algorithmic Issues (978-3-642-00524-4) ; 978-3-642-00524-4 ; reingest1.clockss.org:8082 >
@@ -2214,7 +2215,7 @@
       au < finished ; crawling ; 978-3-642-00974-7 ; 978-3-642-00975-4 ; 2009 ; 5448 ; Passive and Active Network Measurement (978-3-642-00974-7) ; 978-3-642-00974-7 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 978-3-642-00381-3 ; 978-3-642-00382-0 ; 2009 ; 5449 ; Computational Linguistics and Intelligent Text Processing (978-3-642-00381-3) ; 978-3-642-00381-3 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 978-3-642-04437-3 ; 978-3-642-04438-0 ; 2009 ; 5450 ; Digital Watermarking (978-3-642-04437-3) ; 978-3-642-04437-3 ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-642-00842-9 ; 978-3-642-00843-6 ; 2009 ; 5451 ; Information Security Practice and Experience (978-3-642-00842-9) ; 978-3-642-00842-9 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 978-3-642-00842-9 ; 978-3-642-00843-6 ; 2009 ; 5451 ; Information Security Practice and Experience (978-3-642-00842-9) ; 978-3-642-00842-9 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 978-3-642-00433-9 ; 978-3-642-00434-6 ; 2009 ; 5452 ; Software Language Engineering (978-3-642-00433-9) ; 978-3-642-00433-9 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 978-3-642-00640-1 ; 978-3-642-00641-8 ; 2009 ; 5453 ; Reconfigurable Computing: Architectures, Tools and Applications (978-3-642-00640-1) ; 978-3-642-00640-1 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 978-3-642-00866-5 ; 978-3-642-00867-2 ; 2009 ; 5454 ; Methods, Models and Tools for Fault Tolerance (978-3-642-00866-5) ; 978-3-642-00866-5 ; reingest3.clockss.org:8083 >
@@ -2233,7 +2234,7 @@
       au < finished ; frozen ; 978-3-642-01019-4 ; 978-3-642-01020-0 ; 2009 ; 5467 ; Evolutionary Multi-Criterion Optimization (978-3-642-01019-4) ; 978-3-642-01019-4 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 978-3-642-00984-6 ; 978-3-642-00985-3 ; 2009 ; 5468 ; Future Internet - FIS 2008 (978-3-642-00984-6) ; 978-3-642-00984-6 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 978-3-642-00601-2 ; 978-3-642-00602-9 ; 2009 ; 5469 ; Hybrid Systems: Computation and Control (978-3-642-00601-2) ; 978-3-642-00601-2 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 978-3-642-00903-7 ; 978-3-642-00904-4 ; 2009 ; 5470 ; Transactions on High-Performance Embedded Architectures and Compilers II (978-3-642-00903-7) ; 978-3-642-00903-7 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 978-3-642-00903-7 ; 978-3-642-00904-4 ; 2009 ; 5470 ; Transactions on High-Performance Embedded Architectures and Compilers II (978-3-642-00903-7) ; 978-3-642-00903-7 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 978-3-642-00586-2 ; 978-3-642-00587-9 ; 2009 ; 5471 ; Trusted Computing (978-3-642-00586-2) ; 978-3-642-00586-2 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 978-3-642-01246-4 ; 978-3-642-01247-1 ; 2009 ; 5472 ; Service-Oriented Computing - ICSOC 2008 Workshops (978-3-642-01246-4) ; 978-3-642-01246-4 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 978-3-642-00861-0 ; 978-3-642-00862-7 ; 2009 ; 5473 ; Topics in Cryptology - CT-RSA 2009 (978-3-642-00861-0) ; 978-3-642-00861-0 ; reingest2.clockss.org:8085 >
@@ -2259,7 +2260,7 @@
       au < finished ; finished ; 978-3-642-02517-4 ; 978-3-642-02518-1 ; 2009 ; 5493 ; Computer Music Modeling and Retrieval. Genesis of Meaning in Sound and Music (978-3-642-02517-4) ; 978-3-642-02517-4 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 978-3-642-00833-7 ; 978-3-642-00834-4 ; 2009 ; 5494 ; Quantum Interaction (978-3-642-00833-7) ; 978-3-642-00833-7 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 978-3-642-04920-0 ; 978-3-642-04921-7 ; 2009 ; 5495 ; Adaptive and Natural Computing Algorithms (978-3-642-04920-0) ; 978-3-642-04920-0 ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-642-01810-7 ; 978-3-642-01811-4 ; 2009 ; 5496 ; Computer Vision/Computer Graphics CollaborationTechniques (978-3-642-01810-7) ; 978-3-642-01810-7 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 978-3-642-01810-7 ; 978-3-642-01811-4 ; 2009 ; 5496 ; Computer Vision/Computer Graphics CollaborationTechniques (978-3-642-01810-7) ; 978-3-642-01810-7 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 978-3-642-02443-6 ; 978-3-642-02444-3 ; 2009 ; 5497 ; Types for Proofs and Programs (978-3-642-02443-6) ; 978-3-642-02443-6 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 978-3-642-02564-8 ; 978-3-642-02565-5 ; 2009 ; 5499 ; Anticipatory Behavior in Adaptive Learning Systems (978-3-642-02564-8) ; 978-3-642-02564-8 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 978-3-642-04580-6 ; 978-3-642-04581-3 ; 2009 ; 5500 ; Semantic Techniques for the Web (978-3-642-04580-6) ; 978-3-642-04580-6 ; reingest3.clockss.org:8083 >
@@ -2270,7 +2271,7 @@
       au < finished ; crawling ; 978-3-642-00767-5 ; 978-3-642-00768-2 ; 2009 ; 5505 ; Tools and Algorithms for the Construction and Analysis of Systems (978-3-642-00767-5) ; 978-3-642-00767-5 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 978-3-642-02489-4 ; 978-3-642-02490-0 ; 2009 ; 5506 ; Advances in Neuro-Information Processing (978-3-642-02489-4) ; 978-3-642-02489-4 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 978-3-642-03039-0 ; 978-3-642-03040-6 ; 2009 ; 5507 ; Advances in Neuro-Information Processing (978-3-642-03039-0) ; 978-3-642-03039-0 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-642-03551-7 ; 978-3-642-03552-4 ; 2009 ; 5508 ; Critical Information Infrastructure Security (978-3-642-03551-7) ; 978-3-642-03551-7 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 978-3-642-03551-7 ; 978-3-642-03552-4 ; 2009 ; 5508 ; Critical Information Infrastructure Security (978-3-642-03551-7) ; 978-3-642-03551-7 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 978-3-642-04792-3 ; 978-3-642-04793-0 ; 2009 ; 5509 ; Multimodal Corpora (978-3-642-04792-3) ; 978-3-642-04792-3 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 978-3-642-01756-8 ; 978-3-642-01757-5 ; 2009 ; 5510 ; Transactions on Data Hiding and Multimedia Security IV (978-3-642-01756-8) ; 978-3-642-01756-8 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 978-3-642-03458-9 ; 978-3-642-03459-6 ; 2009 ; 5511 ; Foundations and Applications of Security Analysis (978-3-642-03458-9) ; 978-3-642-03458-9 ; reingest4.clockss.org:8082 >
@@ -2295,7 +2296,7 @@
       au < finished ; crawling ; 978-3-642-03097-0 ; 978-3-642-03098-7 ; 2009 ; 5530 ; Journal on Data Semantics XIII (978-3-642-03097-0) ; 978-3-642-03097-0 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 978-3-642-02114-5 ; 978-3-642-02115-2 ; 2009 ; 5531 ; Smart Graphics (978-3-642-02114-5) ; 978-3-642-02114-5 ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 978-3-642-02016-2 ; 978-3-642-02017-9 ; 2009 ; 5532 ; Theory and Applications of Models of Computation (978-3-642-02016-2) ; 978-3-642-02016-2 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-642-01747-6 ; 978-3-642-01748-3 ; 2009 ; 5533 ; Languages: From Formal to Natural (978-3-642-01747-6) ; 978-3-642-01747-6 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 978-3-642-01747-6 ; 978-3-642-01748-3 ; 2009 ; 5533 ; Languages: From Formal to Natural (978-3-642-01747-6) ; 978-3-642-01747-6 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 978-3-642-02123-7 ; 978-3-642-02124-4 ; 2009 ; 5534 ; Graph-Based Representations in Pattern Recognition (978-3-642-02123-7) ; 978-3-642-02123-7 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 978-3-642-02246-3 ; 978-3-642-02247-0 ; 2009 ; 5535 ; User Modeling, Adaptation, and Personalization (978-3-642-02246-3) ; 978-3-642-02246-3 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 978-3-642-01956-2 ; 978-3-642-01957-9 ; 2009 ; 5536 ; Applied Cryptography and Network Security (978-3-642-01956-2) ; 978-3-642-01956-2 ; reingest4.clockss.org:8082 >
@@ -2305,7 +2306,7 @@
       au < finished ; crawling ; 978-3-642-02096-4 ; 978-3-642-02097-1 ; 2009 ; 5540 ; Transactions on Computational Science V (978-3-642-02096-4) ; 978-3-642-02096-4 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 978-3-642-02007-0 ; 978-3-642-02008-7 ; 2009 ; 5541 ; Research in Computational Molecular Biology (978-3-642-02007-0) ; 978-3-642-02007-0 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 978-3-642-01550-2 ; 978-3-642-01551-9 ; 2009 ; 5542 ; Bioinformatics Research and Applications (978-3-642-01550-2) ; 978-3-642-01550-2 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-642-01679-0 ; 978-3-642-01680-6 ; 2009 ; 5543 ; Trustworthy Software Development Processes (978-3-642-01679-0) ; 978-3-642-01679-0 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 978-3-642-01679-0 ; 978-3-642-01680-6 ; 2009 ; 5543 ; Trustworthy Software Development Processes (978-3-642-01679-0) ; 978-3-642-01679-0 ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 978-3-642-01969-2 ; 978-3-642-01970-8 ; 2009 ; 5544 ; Computational Science - ICCS 2009 (978-3-642-01969-2) ; 978-3-642-01969-2 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 978-3-642-01972-2 ; 978-3-642-01973-9 ; 2009 ; 5545 ; Computational Science - ICCS 2009 (978-3-642-01972-2) ; 978-3-642-01972-2 ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 978-3-642-02117-6 ; 978-3-642-02118-3 ; 2009 ; 5546 ; Wired/Wireless Internet Communications (978-3-642-02117-6) ; 978-3-642-02117-6 ; reingest4.clockss.org:8082 >
@@ -2342,14 +2343,14 @@
       au < finished ; finished ; 978-3-642-02440-5 ; 978-3-642-02441-2 ; 2009 ; 5577 ; Combinatorial Pattern Matching (978-3-642-02440-5) ; 978-3-642-02440-5 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 978-3-642-02651-5 ; 978-3-642-02652-2 ; 2009 ; 5578 ; Model Checking Software (978-3-642-02651-5) ; 978-3-642-02651-5 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 978-3-642-02567-9 ; 978-3-642-02568-6 ; 2009 ; 5579 ; Next-Generation Applied Intelligence (978-3-642-02567-9) ; 978-3-642-02567-9 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-642-02383-5 ; 978-3-642-02384-2 ; 2009 ; 5580 ; Progress in Cryptology - AFRICACRYPT 2009 (978-3-642-02383-5) ; 978-3-642-02383-5 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 978-3-642-02383-5 ; 978-3-642-02384-2 ; 2009 ; 5580 ; Progress in Cryptology - AFRICACRYPT 2009 (978-3-642-02383-5) ; 978-3-642-02383-5 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 978-3-642-02350-7 ; 978-3-642-02351-4 ; 2009 ; 5581 ; Architectures for Adaptive Software Systems (978-3-642-02350-7) ; 978-3-642-02350-7 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 978-3-642-02413-9 ; 978-3-642-02414-6 ; 2009 ; 5582 ; Component-Based Software Engineering (978-3-642-02413-9) ; 978-3-642-02413-9 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 978-3-642-02736-9 ; 978-3-642-02737-6 ; 2009 ; 5583 ; Developments in Language Theory (978-3-642-02736-9) ; 978-3-642-02736-9 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 978-3-642-02776-5 ; 978-3-642-02777-2 ; 2009 ; 5584 ; Theory and Applications of Satisfiability Testing - SAT 2009 (978-3-642-02776-5) ; 978-3-642-02776-5 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 978-3-642-02829-8 ; 978-3-642-02830-4 ; 2009 ; 5585 ; Ubiquitous Intelligence and Computing (978-3-642-02829-8) ; 978-3-642-02829-8 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 978-3-642-02703-1 ; 978-3-642-02704-8 ; 2009 ; 5586 ; Autonomic and Trusted Computing (978-3-642-02703-1) ; 978-3-642-02703-1 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 978-3-642-02917-2 ; 978-3-642-02918-9 ; 2009 ; 5587 ; Detection of Intrusions and Malware, and Vulnerability Assessment (978-3-642-02917-2) ; 978-3-642-02917-2 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 978-3-642-02917-2 ; 978-3-642-02918-9 ; 2009 ; 5587 ; Detection of Intrusions and Malware, and Vulnerability Assessment (978-3-642-02917-2) ; 978-3-642-02917-2 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 978-3-642-02842-7 ; 978-3-642-02843-4 ; 2009 ; 5588 ; Dataspace: The Final Frontier (978-3-642-02842-7) ; 978-3-642-02842-7 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 978-3-642-02961-5 ; 978-3-642-02962-2 ; 2009 ; 5589 ; Rough Sets and Knowledge Technology (978-3-642-02961-5) ; 978-3-642-02961-5 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 978-3-642-02905-9 ; 978-3-642-02906-6 ; 2009 ; 5590 ; Symbolic and Quantitative Approaches to Reasoning with Uncertainty (978-3-642-02905-9) ; 978-3-642-02905-9 ; reingest2.clockss.org:8085 >
@@ -2402,12 +2403,12 @@
       au < finished ; crawling ; 978-3-642-02727-7 ; 978-3-642-02728-4 ; 2009 ; 5639 ; Engineering Psychology and Cognitive Ergonomics (978-3-642-02727-7) ; 978-3-642-02727-7 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 978-3-642-03225-7 ; 978-3-642-03226-4 ; 2009 ; 5640 ; Artificial Intelligence An International Perspective (978-3-642-03225-7) ; 978-3-642-03225-7 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 978-3-642-03319-3 ; 978-3-642-03320-9 ; 2009 ; 5641 ; Cross-Modal Analysis of Speech, Gestures, Gaze and Facial Expressions (978-3-642-03319-3) ; 978-3-642-03319-3 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-642-02978-3 ; 978-3-642-02979-0 ; 2009 ; 5642 ; Implementation and Application of Automata (978-3-642-02978-3) ; 978-3-642-02978-3 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 978-3-642-02978-3 ; 978-3-642-02979-0 ; 2009 ; 5642 ; Implementation and Application of Automata (978-3-642-02978-3) ; 978-3-642-02978-3 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 978-3-642-02657-7 ; 978-3-642-02658-4 ; 2009 ; 5643 ; Computer Aided Verification (978-3-642-02657-7) ; 978-3-642-02657-7 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 978-3-642-02981-3 ; 978-3-642-02982-0 ; 2009 ; 5644 ; Advances in Spatial and Temporal Databases (978-3-642-02981-3) ; 978-3-642-02981-3 ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-642-03006-2 ; 978-3-642-03007-9 ; 2009 ; 5645 ; Data and Applications Security XXIII (978-3-642-03006-2) ; 978-3-642-03006-2 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-642-03264-6 ; 978-3-642-03265-3 ; 2009 ; 5646 ; Computational Color Imaging (978-3-642-03264-6) ; 978-3-642-03264-6 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-642-02878-6 ; 978-3-642-02879-3 ; 2009 ; 5647 ; Data Integration in the Life Sciences (978-3-642-02878-6) ; 978-3-642-02878-6 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 978-3-642-03006-2 ; 978-3-642-03007-9 ; 2009 ; 5645 ; Data and Applications Security XXIII (978-3-642-03006-2) ; 978-3-642-03006-2 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 978-3-642-03264-6 ; 978-3-642-03265-3 ; 2009 ; 5646 ; Computational Color Imaging (978-3-642-03264-6) ; 978-3-642-03264-6 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 978-3-642-02878-6 ; 978-3-642-02879-3 ; 2009 ; 5647 ; Data Integration in the Life Sciences (978-3-642-02878-6) ; 978-3-642-02878-6 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 978-3-642-02817-5 ; 978-3-642-02818-2 ; 2009 ; 5648 ; Web Engineering (978-3-642-02817-5) ; 978-3-642-02817-5 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 978-3-642-02845-8 ; 978-3-642-02846-5 ; 2009 ; 5649 ; Logic Programming (978-3-642-02845-8) ; 978-3-642-02845-8 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 978-3-642-02997-4 ; 978-3-642-02998-1 ; 2009 ; 5650 ; Case-Based Reasoning Research and Development (978-3-642-02997-4) ; 978-3-642-02997-4 ; reingest5.clockss.org:8082 >
@@ -2416,7 +2417,7 @@
       au < finished ; frozen ; 978-3-642-03012-3 ; 978-3-642-03013-0 ; 2009 ; 5653 ; ECOOP 2009 - Object-Oriented Programming (978-3-642-03012-3) ; 978-3-642-03012-3 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 978-3-642-03595-1 ; 978-3-642-03596-8 ; 2009 ; 5654 ; Mathematics of Surfaces XIII (978-3-642-03595-1) ; 978-3-642-03595-1 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 978-3-642-03250-9 ; 978-3-642-03251-6 ; 2009 ; 5655 ; Recent Advances in Constraints (978-3-642-03250-9) ; 978-3-642-03250-9 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-642-03280-6 ; 978-3-642-03281-3 ; 2009 ; 5656 ; Transactions on Rough Sets X (978-3-642-03280-6) ; 978-3-642-03280-6 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 978-3-642-03280-6 ; 978-3-642-03281-3 ; 2009 ; 5656 ; Transactions on Rough Sets X (978-3-642-03280-6) ; 978-3-642-03280-6 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 978-3-642-03137-3 ; 978-3-642-03138-0 ; 2009 ; 5657 ; Embedded Computer Systems: Architectures, Modeling, and Simulation (978-3-642-03137-3) ; 978-3-642-03137-3 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 978-3-642-03033-8 ; 978-3-642-03034-5 ; 2009 ; 5658 ; Domain-Specific Languages (978-3-642-03033-8) ; 978-3-642-03033-8 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 978-3-642-02902-8 ; 978-3-642-02903-5 ; 2009 ; 5659 ; GeoSensor Networks (978-3-642-02902-8) ; 978-3-642-02902-8 ; reingest4.clockss.org:8082 >
@@ -2448,12 +2449,12 @@
       au < finished ; crawling ; 978-3-642-03684-2 ; 978-3-642-03685-9 ; 2009 ; 5687 ; Approximation, Randomization, and Combinatorial Optimization. Algorithms and Techniques (978-3-642-03684-2) ; 978-3-642-03684-2 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 978-3-642-03844-0 ; 978-3-642-03845-7 ; 2009 ; 5688 ; Computational Methods in Systems Biology (978-3-642-03844-0) ; 978-3-642-03844-0 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 978-3-642-03753-5 ; 978-3-642-03754-2 ; 2009 ; 5689 ; Reasoning Web. Semantic Technologies for Information Systems (978-3-642-03753-5) ; 978-3-642-03753-5 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-642-03572-2 ; 978-3-642-03573-9 ; 2009 ; 5690 ; Database and Expert Systems Applications (978-3-642-03572-2) ; 978-3-642-03572-2 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 978-3-642-03572-2 ; 978-3-642-03573-9 ; 2009 ; 5690 ; Database and Expert Systems Applications (978-3-642-03572-2) ; 978-3-642-03572-2 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 978-3-642-03729-0 ; 978-3-642-03730-6 ; 2009 ; 5691 ; Data Warehousing and Knowledge Discovery (978-3-642-03729-0) ; 978-3-642-03729-0 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 978-3-642-03963-8 ; 978-3-642-03964-5 ; 2009 ; 5692 ; E-Commerce and Web Technologies (978-3-642-03963-8) ; 978-3-642-03963-8 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 978-3-642-03515-9 ; 978-3-642-03516-6 ; 2009 ; 5693 ; Electronic Government (978-3-642-03515-9) ; 978-3-642-03515-9 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 978-3-642-03780-1 ; 978-3-642-03781-8 ; 2009 ; 5694 ; Electronic Participation (978-3-642-03780-1) ; 978-3-642-03780-1 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-642-03747-4 ; 978-3-642-03748-1 ; 2009 ; 5695 ; Trust, Privacy and Security in Digital Business (978-3-642-03747-4) ; 978-3-642-03747-4 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 978-3-642-03747-4 ; 978-3-642-03748-1 ; 2009 ; 5695 ; Trust, Privacy and Security in Digital Business (978-3-642-03747-4) ; 978-3-642-03747-4 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 978-3-642-03666-8 ; 978-3-642-03668-2 ; 2009 ; 5696 ; Holonic and Multi-Agent Systems for Manufacturing (978-3-642-03666-8) ; 978-3-642-03666-8 ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 978-3-642-03714-6 ; 978-3-642-03715-3 ; 2009 ; 5697 ; Data Management in Grid and Peer-to-Peer Systems (978-3-642-03714-6) ; 978-3-642-03714-6 ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 978-3-642-03274-5 ; 978-3-642-03275-2 ; 2009 ; 5698 ; Parallel Computing Technologies (978-3-642-03274-5) ; 978-3-642-03274-5 ; reingest5.clockss.org:8082 >
@@ -2479,7 +2480,7 @@
       au < finished ; frozen ; 978-3-642-04553-0 ; 978-3-642-04554-7 ; 2009 ; 5719 ; SDL 2009: Design for Motes and Mobiles (978-3-642-04553-0) ; 978-3-642-04553-0 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 978-3-642-03612-5 ; 978-3-642-03613-2 ; 2009 ; 5720 ; Mathematical Morphology and Its Application to Signal and Image Processing (978-3-642-03612-5) ; 978-3-642-03612-5 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 978-3-642-03783-2 ; 978-3-642-03784-9 ; 2009 ; 5721 ; String Processing and Information Retrieval (978-3-642-03783-2) ; 978-3-642-03783-2 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 978-3-642-04124-2 ; 978-3-642-04125-9 ; 2009 ; 5722 ; Foundations of Intelligent Systems (978-3-642-04124-2) ; 978-3-642-04124-2 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 978-3-642-04124-2 ; 978-3-642-04125-9 ; 2009 ; 5722 ; Foundations of Intelligent Systems (978-3-642-04124-2) ; 978-3-642-04124-2 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 978-3-642-04240-9 ; 978-3-642-04241-6 ; 2009 ; 5724 ; Algorithms in Bioinformatics (978-3-642-04240-9) ; 978-3-642-04240-9 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 978-3-642-03563-0 ; 978-3-642-03564-7 ; 2009 ; 5725 ; Algebraic Informatics (978-3-642-03563-0) ; 978-3-642-03563-0 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 978-3-642-03654-5 ; 978-3-642-03655-2 ; 2009 ; 5726 ; Human-Computer Interaction - INTERACT 2009 (978-3-642-03654-5) ; 978-3-642-03654-5 ; reingest1.clockss.org:8082 >
@@ -2568,7 +2569,7 @@
       au < finished ; crawling ; 978-3-642-04666-7 ; 978-3-642-04667-4 ; 2009 ; 5815 ; Computer Vision Systems (978-3-642-04666-7) ; 978-3-642-04666-7 ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 978-3-642-04685-8 ; 978-3-642-04686-5 ; 2009 ; 5816 ; Progress in Artificial Intelligence (978-3-642-04685-8) ; 978-3-642-04685-8 ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 978-3-642-04743-5 ; 978-3-642-04744-2 ; 2009 ; 5817 ; Comparative Genomics (978-3-642-04743-5) ; 978-3-642-04743-5 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-642-04917-0 ; 978-3-642-04918-7 ; 2009 ; 5818 ; Hybrid Metaheuristics (978-3-642-04917-0) ; 978-3-642-04917-0 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 978-3-642-04917-0 ; 978-3-642-04918-7 ; 2009 ; 5818 ; Hybrid Metaheuristics (978-3-642-04917-0) ; 978-3-642-04917-0 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 978-3-642-04953-8 ; 978-3-642-04954-5 ; 2009 ; 5819 ; Brain Informatics (978-3-642-04953-8) ; 978-3-642-04953-8 ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 978-3-642-04874-6 ; 978-3-642-04875-3 ; 2009 ; 5820 ; Active Media Technology (978-3-642-04874-6) ; 978-3-642-04874-6 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 978-3-642-04842-5 ; 978-3-642-04843-2 ; 2009 ; 5821 ; Advances in Computation and Intelligence (978-3-642-04842-5) ; 978-3-642-04842-5 ; reingest5.clockss.org:8082 >
@@ -2599,7 +2600,7 @@
       au < finished ; crawling ; 978-3-642-04641-4 ; 978-3-642-04642-1 ; 2009 ; 5848 ; Provable Security (978-3-642-04641-4) ; 978-3-642-04641-4 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 978-3-642-05088-6 ; 978-3-642-05089-3 ; 2009 ; 5850 ; FM 2009: Formal Methods (978-3-642-05088-6) ; 978-3-642-05088-6 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 978-3-642-11168-6 ; 978-3-642-11169-3 ; 2009 ; 5851 ; Learning and Intelligent Optimization (978-3-642-11168-6) ; 978-3-642-11168-6 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 978-3-642-10208-0 ; 978-3-642-10210-3 ; 2009 ; 5852 ; Combinatorial Image Analysis (978-3-642-10208-0) ; 978-3-642-10208-0 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 978-3-642-10208-0 ; 978-3-642-10210-3 ; 2009 ; 5852 ; Combinatorial Image Analysis (978-3-642-10208-0) ; 978-3-642-10208-0 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 978-3-642-05249-1 ; 978-3-642-05250-7 ; 2009 ; 5854 ; Web Information Systems and Mining (978-3-642-05249-1) ; 978-3-642-05249-1 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 978-3-642-05252-1 ; 978-3-642-05253-8 ; 2009 ; 5855 ; Artificial Intelligence and Computational Intelligence (978-3-642-05252-1) ; 978-3-642-05252-1 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 978-3-642-10267-7 ; 978-3-642-10268-4 ; 2009 ; 5856 ; Progress in Pattern Recognition, Image Analysis, Computer Vision, and Applications (978-3-642-10267-7) ; 978-3-642-10267-7 ; reingest1.clockss.org:8082 >
@@ -2638,7 +2639,7 @@
       au < finished ; crawling ; 978-3-642-10435-0 ; 978-3-642-10436-7 ; 2009 ; 5892 ; GeoSpatial Semantics (978-3-642-10435-0) ; 978-3-642-10435-0 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 978-3-642-10405-3 ; 978-3-642-10406-0 ; 2009 ; 5894 ; Network Control and Optimization (978-3-642-10405-3) ; 978-3-642-10405-3 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 978-3-642-10423-7 ; 978-3-642-10424-4 ; 2009 ; 5895 ; Performance Evaluation and Benchmarking (978-3-642-10423-7) ; 978-3-642-10423-7 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-642-10444-2 ; 978-3-642-10445-9 ; 2009 ; 5896 ; Middleware 2009 (978-3-642-10444-2) ; 978-3-642-10444-2 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 978-3-642-10444-2 ; 978-3-642-10445-9 ; 2009 ; 5896 ; Middleware 2009 (978-3-642-10444-2) ; 978-3-642-10444-2 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 978-3-642-10508-1 ; 978-3-642-10509-8 ; 2009 ; 5899 ; Future Generation Information Technology (978-3-642-10508-1) ; 978-3-642-10508-1 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 978-3-642-10382-7 ; 978-3-642-10383-4 ; 2009 ; 5900 ; Service-Oriented Computing (978-3-642-10382-7) ; 978-3-642-10382-7 ; reingest4.clockss.org:8082 >
       au < superseded ; exists ; 978-3-642-10451-0 ; 978-3-642-10452-7 ; 2009 ; 5902 ; Formal Methods: Foundations and Applications (978-3-642-10451-0) [superseded] ; 978-3-642-10451-0 ; >
@@ -2653,7 +2654,7 @@
       au < finished ; crawling ; 978-3-642-10621-7 ; 978-3-642-10622-4 ; 2009 ; 5913 ; Advances in Computer Science - ASIAN 2009. Information Security and Privacy (978-3-642-10621-7) ; 978-3-642-10621-7 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 978-3-642-10487-9 ; 978-3-642-10488-6 ; 2009 ; 5914 ; Knowledge Science, Engineering and Management (978-3-642-10487-9) ; 978-3-642-10487-9 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 978-3-642-10642-2 ; 978-3-642-10643-9 ; 2009 ; 5915 ; Interactive Storytelling (978-3-642-10642-2) ; 978-3-642-10642-2 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-642-11268-3 ; 978-3-642-11269-0 ; 2009 ; 5917 ; Parameterized and Exact Computation (978-3-642-11268-3) ; 978-3-642-11268-3 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 978-3-642-11268-3 ; 978-3-642-11269-0 ; 2009 ; 5917 ; Parameterized and Exact Computation (978-3-642-11268-3) ; 978-3-642-11268-3 ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 978-3-642-10864-8 ; 978-3-642-10865-5 ; 2009 ; 5918 ; Self-Organizing Systems (978-3-642-10864-8) ; 978-3-642-10864-8 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 978-3-642-11197-6 ; 978-3-642-11198-3 ; 2009 ; 5920 ; Agents for Games and Simulations (978-3-642-11197-6) ; 978-3-642-11197-6 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 978-3-642-10867-9 ; 978-3-642-10868-6 ; 2009 ; 5921 ; Cryptography and Coding (978-3-642-10867-9) ; 978-3-642-10867-9 ; reingest4.clockss.org:8082 >
@@ -2664,7 +2665,7 @@
       au < finished ; crawling ; 978-3-642-11144-0 ; 978-3-642-11145-7 ; 2009 ; 5927 ; Information and Communications Security (978-3-642-11144-0) ; 978-3-642-11144-0 ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 978-3-642-10816-7 ; 978-3-642-10817-4 ; 2009 ; 5928 ; Intelligent Robotics and Applications (978-3-642-10816-7) ; 978-3-642-10816-7 ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 978-3-642-10840-2 ; 978-3-642-10841-9 ; 2009 ; 5929 ; Internet and Network Economics (978-3-642-10840-2) ; 978-3-642-10840-2 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 978-3-642-10664-4 ; 978-3-642-10665-1 ; 2009 ; 5931 ; Cloud Computing (978-3-642-10664-4) ; 978-3-642-10664-4 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 978-3-642-10664-4 ; 978-3-642-10665-1 ; 2009 ; 5931 ; Cloud Computing (978-3-642-10664-4) ; 978-3-642-10664-4 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 978-3-642-10837-2 ; 978-3-642-10838-9 ; 2009 ; 5932 ; Information Security Applications (978-3-642-10837-2) ; 978-3-642-10837-2 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 978-3-642-11244-7 ; 978-3-642-11245-4 ; 2009 ; 5940 ; Transactions on Edutainment III (978-3-642-11244-7) ; 978-3-642-11244-7 ; reingest4.clockss.org:8082 >
  

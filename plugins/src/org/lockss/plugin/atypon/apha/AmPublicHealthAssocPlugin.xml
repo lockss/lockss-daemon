@@ -3,7 +3,7 @@
     <string>plugin_status</string>
     <string>ready</string>
   </entry>
-  <!-- https transition enabled -->  
+  <!-- https transition enabled -->
   <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.atypon.apha.AmPublicHealthAssocPlugin</string>
@@ -14,7 +14,7 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>American Journal of Public Health Plugin</string>
+    <string>American Public Health Association Plugin</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -23,10 +23,10 @@
    <entry>
     <string>plugin_parent_version</string>
     <string>101</string>
-  </entry> 
+  </entry>
   <entry>
     <string>au_name</string>
-    <string>"American Journal of Public Health Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"American Public Health Association Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
   <!--  override start url from parent to support http to https conversion -->
   <entry>
@@ -48,8 +48,8 @@
   <entry>
     <string>plugin_url_consumer_factory</string>
     <string>org.lockss.plugin.atypon.BaseAtyponHttpToHttpsUrlConsumerFactory</string>
-  </entry>  
-<!-- end changes for https conversion -->     
+  </entry>
+<!-- end changes for https conversion -->
   <!--  The base plugin does not have an HTML hash filter or HTML crawl filter - child plugin must provide one if needed -->
   <entry>
     <string>text/html_filter_factory</string>
@@ -58,6 +58,6 @@
   <entry>
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.atypon.apha.AmPublicHealthAssocHtmlCrawlFilterFactory</string>
-  </entry>  
+  </entry>
   <!--  The base plugin DOES provide ArticleIterator, htmlMetadataExtractor, PdfFilter and UrlNormalizer - remove those you don't want. -->
  </map>

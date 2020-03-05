@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>ready</string>
+    <string>deprecated</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -62,5 +62,5 @@
         <string>org.lockss.plugin.clockss.alpsp.AlpspOnix3XmlMetadataExtractorFactory</string>
       </entry>
     </map>
-  </entry>    
-</map>    
+  </entry>
+</map>

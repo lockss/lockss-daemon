@@ -1,0 +1,27 @@
+{
+
+  publisher <
+    name = BraDypUS ;
+    info[contract] = 2013 ;
+    info[tester] = S
+  >
+
+    plugin = org.lockss.plugin.clockss.bradypus.ClockssBradypusBooksSourcePlugin
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/bradypus-released/
+    hidden[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[year] >
+
+    {
+      title <
+      name = BraDypUS Books Source Content ;
+      type = bookSeries
+      >
+ 
+      au < zapped ; finished ; 2016 ; BraDypUS Books Source Content 2016 ; 2016 >
+      au < zapped ; finished ; 2017 ; BraDypUS Books Source Content 2017 ; 2017 >
+      au < readySource ; finished ; 2018 ; BraDypUS Books Source Content 2018 ; 2018 >
+      au < readySource ; frozen ; 2019 ; BraDypUS Books Source Content 2019 ; 2019 >
+
+    }
+
+}
