@@ -63,7 +63,7 @@ public class MsHtmlFormExtractor extends HtmlFormExtractor {
 
             String srcUrl = node.baseUri();
 
-            log.debug3("Fei: MsHtmlFormExtractor custom tagBegin for " + srcUrl);
+            log.debug3("Fei: MsHtmlFormExtractor custom tagBegin for" + srcUrl);
 
             if (node.hasAttr(ACTION_ATTR)) {
                 if ("action".equalsIgnoreCase((node.attr(ACTION_ATTR)))) {
