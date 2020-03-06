@@ -30,7 +30,7 @@
       au < finished ; crawling ; 2017 ; Advances in Physiology Education Volume 41 ; 41 ; http://www.physiology.org/ ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2018 ; Advances in Physiology Education Volume 42 ; 42 ; https://www.physiology.org/ ; >
       au < superseded ; exists ; 2019 ; Advances in Physiology Education Volume 43 [superseded] ; 43 ; https://www.physiology.org/ ; >
-      au < manifest ; exists ; 2019 ; Advances in Physiology Education Volume 43 ; 43 ; https://journals.physiology.org/ ; >
+      au < ready ; exists ; 2019 ; Advances in Physiology Education Volume 43 ; 43 ; https://journals.physiology.org/ ; >
 
     }
 
@@ -56,7 +56,7 @@
       au < superseded ; exists ; 2019 ; American Journal of Physiology - Cell Physiology Volume 316 [superseded] ; 316 ; https://www.physiology.org/ ; >
       au < superseded ; exists ; 2019 ; American Journal of Physiology - Cell Physiology Volume 317 [superseded] ; 317 ; https://www.physiology.org/ ; >
       au < crawling ; exists ; 2019 ; American Journal of Physiology - Cell Physiology Volume 316 ; 316 ; https://journals.physiology.org/ ; >
-      au < manifest ; exists ; 2019 ; American Journal of Physiology - Cell Physiology Volume 317 ; 317 ; https://journals.physiology.org/ ; >
+      au < ready ; exists ; 2019 ; American Journal of Physiology - Cell Physiology Volume 317 ; 317 ; https://journals.physiology.org/ ; >
 
     }
 
@@ -81,7 +81,7 @@
       au < frozen ; exists ; 2018 ; American Journal of Physiology - Endocrinology and Metabolism Volume 315 ; 315 ; https://www.physiology.org/ ; >
       au < superseded ; exists ; 2019 ; American Journal of Physiology - Endocrinology and Metabolism Volume 316 [superseded] ; 316 ; https://www.physiology.org/ ; >
       au < superseded ; exists ; 2019 ; American Journal of Physiology - Endocrinology and Metabolism Volume 317 [superseded] ; 317 ; https://www.physiology.org/ ; >
-      au < manifest ; exists ; 2019 ; American Journal of Physiology - Endocrinology and Metabolism Volume 316 ; 316 ; https://journals.physiology.org/ ; >
+      au < ready ; exists ; 2019 ; American Journal of Physiology - Endocrinology and Metabolism Volume 316 ; 316 ; https://journals.physiology.org/ ; >
       au < manifest ; exists ; 2019 ; American Journal of Physiology - Endocrinology and Metabolism Volume 317 ; 317 ; https://journals.physiology.org/ ; >
 
     }
@@ -133,8 +133,8 @@
       au < frozen ; exists ; 2018 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 315 ; 315 ; https://www.physiology.org/ ; >
       au < superseded ; exists ; 2019 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 316 [superseded] ; 316 ; https://www.physiology.org/ ; >
       au < superseded ; exists ; 2019 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 317 [superseded] ; 317 ; https://www.physiology.org/ ; >
-      au < manifest ; exists ; 2019 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 316 ; 316 ; https://journals.physiology.org/ ; >
-      au < manifest ; exists ; 2019 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 317 ; 317 ; https://journals.physiology.org/ ; >
+      au < ready ; exists ; 2019 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 316 ; 316 ; https://journals.physiology.org/ ; >
+      au < ready ; exists ; 2019 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 317 ; 317 ; https://journals.physiology.org/ ; >
 
     }
 
@@ -212,7 +212,7 @@
       au < frozen ; exists ; 2018 ; American Journal of Physiology - Renal Physiology Volume 315 ; 315 ; https://www.physiology.org/ ; >
       au < superseded ; exists ; 2019 ; American Journal of Physiology - Renal Physiology Volume 316 [superseded] ; 316 ; https://www.physiology.org/ ; >
       au < superseded ; exists ; 2019 ; American Journal of Physiology - Renal Physiology Volume 317 [superseded] ; 317 ; https://www.physiology.org/ ; >
-      au < manifest ; exists ; 2019 ; American Journal of Physiology - Renal Physiology Volume 316 ; 316 ; https://journals.physiology.org/ ; >
+      au < ready ; exists ; 2019 ; American Journal of Physiology - Renal Physiology Volume 316 ; 316 ; https://journals.physiology.org/ ; >
       au < crawling ; exists ; 2019 ; American Journal of Physiology - Renal Physiology Volume 317 ; 317 ; https://journals.physiology.org/ ; >
 
     }
@@ -266,8 +266,8 @@
       au < frozen ; exists ; 2018 ; Journal of Neurophysiology Volume 120 ; 120 ; https://www.physiology.org/ ; >
       au < superseded ; exists ; 2019 ; Journal of Neurophysiology Volume 121 [superseded] ; 121 ; https://www.physiology.org/ ; >
       au < superseded ; exists ; 2019 ; Journal of Neurophysiology Volume 122 [superseded] ; 122 ; https://www.physiology.org/ ; >
-      au < manifest ; exists ; 2019 ; Journal of Neurophysiology Volume 121 ; 121 ; https://journals.physiology.org/ ; >
-      au < manifest ; exists ; 2019 ; Journal of Neurophysiology Volume 122 ; 122 ; https://journals.physiology.org/ ; >
+      au < ready ; exists ; 2019 ; Journal of Neurophysiology Volume 121 ; 121 ; https://journals.physiology.org/ ; >
+      au < ready ; exists ; 2019 ; Journal of Neurophysiology Volume 122 ; 122 ; https://journals.physiology.org/ ; >
 
     }
 
@@ -333,7 +333,7 @@
       au < frozen ; exists ; 2017 ; Physiology Volume 32 ; 32 ; http://www.physiology.org/ ; >
       au < frozen ; exists ; 2018 ; Physiology Volume 33 ; 33 ; https://www.physiology.org/ ; >
       au < superseded ; exists ; 2019 ; Physiology Volume 34 [superseded] ; 34 ; https://www.physiology.org/ ; >
-      au < manifest ; exists ; 2019 ; Physiology Volume 34 ; 34 ; https://journals.physiology.org/ ; >
+      au < ready ; exists ; 2019 ; Physiology Volume 34 ; 34 ; https://journals.physiology.org/ ; >
 
     }
 
