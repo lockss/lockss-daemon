@@ -163,14 +163,6 @@ public class Pub2WebUrlConsumerFactory implements UrlConsumerFactory {
 			// which will also handle http to https as part of longer redirect chain
 			// because the patterns checked are independent of protocol
 
-			log.debug3("Fei: shouldStoreAtOrigUrl originalUrl = " + fud.origUrl + ", fetchUrl = " + fud.fetchUrl);
-
-			if (fud.redirectUrls != null && fud.redirectUrls.size() >= 1) {
-				for (String redirectUrl : fud.redirectUrls) {
-					log.debug3("Fei: shouldStoreAtOrigUrl redirectUrl= " + redirectUrl);
-				}
-			}
-
 			if (!should) {
 				should =  fud.redirectUrls != null
 						&& fud.redirectUrls.size() >= 1
@@ -188,8 +180,6 @@ public class Pub2WebUrlConsumerFactory implements UrlConsumerFactory {
 		Same as super shouldStoreAtOrigUrl but allow for multiple hops.
 		 */
 		protected boolean shouldStoreRedirectsAtOrigUrl() {
-
-			log.debug3("Fei: shouldStoreRedirectsAtOrigUrl originalUrl = " + fud.origUrl + ", fetchUrl = " + fud.fetchUrl);
 
 			if (fud.redirectUrls != null && fud.redirectUrls.size() >= 1) {
 				for (String redirectUrl : fud.redirectUrls) {
