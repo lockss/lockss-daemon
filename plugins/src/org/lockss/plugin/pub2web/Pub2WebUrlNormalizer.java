@@ -51,7 +51,7 @@ public class Pub2WebUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
   
   protected static final Pattern FULLTEXT_URL_PATTERN =
       //<base>/deliver/fulltext/<jid>/<vol>/<issue>/<stuff>.(pdf|html)?itemId="/content/journal/<jid>/...fooo...&mimeType=pdf&isFastTrackArticle=
-      Pattern.compile("^(https?://[^/]+)/deliver/fulltext/[^/]+/[^?]+\\.(pdf|html)\\?itemId=(/content/(book|journals?)/[^&]+)&mimeType=([^&]+)(&fmt=ahah)?(&isFastTrackArticle=)?$", Pattern.CASE_INSENSITIVE); 
+      Pattern.compile("^(https?://[^/]+)/deliver/fulltext/[^/]+/[^?]+\\.(pdf|html)\\?itemId=(/content/(book|journal)/[^&]+)&mimeType=([^&]+)(&fmt=ahah)?(&isFastTrackArticle=)?$", Pattern.CASE_INSENSITIVE); 
 
    
 /*
