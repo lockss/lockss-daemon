@@ -1891,8 +1891,8 @@
     au < finished ; finished ; 2012 ; Leukemia Volume 26 ; 2012 ; 26 ; >
     au < finished ; manifest ; 2013 ; Leukemia Volume 27 ; 2013 ; 27 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2014 ; Leukemia Volume 28 ; 2014 ; 28 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2015 ; Leukemia Volume 29 ; 2015 ; 29 ; >
-    au < frozen ; exists ; 2016 ; Leukemia Volume 30 ; 2016 ; 30 ; >
+    au < finished ; manifest ; 2015 ; Leukemia Volume 29 ; 2015 ; 29 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2016 ; Leukemia Volume 30 ; 2016 ; 30 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; Leukemia Volume 31 ; 2017 ; 31 ; >
 
   }
@@ -2476,7 +2476,7 @@
     au < frozen ; exists ; 2015 ; Nature Volume 527 ; 2015 ; 527 ; >
     au < frozen ; exists ; 2015 ; Nature Volume 528 ; 2015 ; 528 ; >
     au < frozen ; exists ; 2016 ; Nature Volume 529 ; 2016 ; 529 ; >
-    au < frozen ; exists ; 2016 ; Nature Volume 530 ; 2016 ; 530 ; >
+    au < finished ; manifest ; 2016 ; Nature Volume 530 ; 2016 ; 530 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Nature Volume 531 ; 2016 ; 531 ; >
     au < frozen ; exists ; 2016 ; Nature Volume 532 ; 2016 ; 532 ; >
     au < frozen ; exists ; 2016 ; Nature Volume 533 ; 2016 ; 533 ; >
@@ -2601,7 +2601,7 @@
     au < zapped ; finished ; 2008 ; Nature Chemical Biology Volume 4 ; 2008 ; 4 ; >
     au < zapped ; finished ; 2009 ; Nature Chemical Biology Volume 5 ; 2009 ; 5 ; >
     au < finished ; finished ; 2010 ; Nature Chemical Biology Volume 6 ; 2010 ; 6 ; >
-    au < frozen ; exists ; 2011 ; Nature Chemical Biology Volume 7 ; 2011 ; 7 ; >
+    au < finished ; manifest ; 2011 ; Nature Chemical Biology Volume 7 ; 2011 ; 7 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2012 ; Nature Chemical Biology Volume 8 ; 2012 ; 8 ; >
     au < frozen ; exists ; 2013 ; Nature Chemical Biology Volume 9 ; 2013 ; 9 ; >
     au < finished ; frozen ; 2014 ; Nature Chemical Biology Volume 10 ; 2014 ; 10 ; reingest2.clockss.org:8085 >
@@ -2876,7 +2876,7 @@
     au < zapped ; finished ; 2008 ; Nature Medicine Volume 14 ; 2008 ; 14 ; >
     au < zapped ; finished ; 2009 ; Nature Medicine Volume 15 ; 2009 ; 15 ; >
     au < finished ; frozen ; 2010 ; Nature Medicine Volume 16 ; 2010 ; 16 ; >
-    au < frozen ; exists ; 2011 ; Nature Medicine Volume 17 ; 2011 ; 17 ; >
+    au < finished ; manifest ; 2011 ; Nature Medicine Volume 17 ; 2011 ; 17 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2012 ; Nature Medicine Volume 18 ; 2012 ; 18 ; >
     au < frozen ; exists ; 2013 ; Nature Medicine Volume 19 ; 2013 ; 19 ; >
     au < frozen ; exists ; 2014 ; Nature Medicine Volume 20 ; 2014 ; 20 ; >
@@ -3044,7 +3044,7 @@
     au < zapped ; finished ; 2009 ; Nature Protocols Volume 4 ; 2009 ; 4 ; >
     au < finished ; finished ; 2010 ; Nature Protocols Volume 5 ; 2010 ; 5 ; >
     au < finished ; finished ; 2011 ; Nature Protocols Volume 6 ; 2011 ; 6 ; >
-    au < frozen ; exists ; 2012 ; Nature Protocols Volume 7 ; 2012 ; 7 ; >
+    au < finished ; manifest ; 2012 ; Nature Protocols Volume 7 ; 2012 ; 7 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2013 ; Nature Protocols Volume 8 ; 2013 ; 8 ; >
     au < zapped ; finished ; 2014 ; Nature Protocols Volume 9 ; 2014 ; 9 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2015 ; Nature Protocols Volume 10 ; 2015 ; 10 ; >
