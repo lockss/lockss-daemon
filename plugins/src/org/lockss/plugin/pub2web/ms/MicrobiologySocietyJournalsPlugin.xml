@@ -41,12 +41,19 @@
     <string>org.lockss.plugin.pub2web.ms.MsHtmlLinkExtractorFactory</string>
   </entry>
   <entry>
-    <string>text/html_link_extractor_factory</string>
-    <string>org.lockss.plugin.pub2web.ms.MsHtmlFormExtractorFactory</string>
-  </entry>
-  <entry>
     <string>text/html_link_rewriter_factory</string>
     <string>org.lockss.plugin.pub2web.ms.MsHtmlLinkRewriterFactory</string>
   </entry>
   <!--au_url_mime_validation_map logic moved to parent plugin-->
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <!--
+       Microbiology Socienty example since 3/2020:
+       Supplement PDF Link: https://www.microbiologyresearch.org/deliver/fulltext/micro/165/1/000732.pdf?itemId=/content/suppdata/micro/10.1099/mic.0.000732-1&mimeType=pdf
+       PDF Link: https://www.microbiologyresearch.org/deliver/fulltext/micro/165/1/102_micro000743.pdf?itemId=/content/journal/micro/10.1099/mic.0.000743&mimeType=pdf&containerItemId=content/journal/micro
+      -->
+    <list>
+      <string>"^%sdeliver/fulltext/%s/[^?]+\.pdf",  base_url, journal_id</string>
+    </list>
+  </entry>
 </map>

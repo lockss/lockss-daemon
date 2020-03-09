@@ -20,6 +20,16 @@
 <div class="itemFullTextLoading">
 <img src="foo/spinner.gif" alt="Loading full text...">
 <p>Full text loading...</p>
+  <form action="/deliver/fulltext/micro/165/3/254_micro000750.pdf?itemId=%2Fcontent%2Fjournal%2Fmicro%2F10.1099%2Fmic.0.000750&mimeType=pdf&containerItemId=content/journal/micro"
+  target="/content/journal/micro/10.1099/mic.0.000750-pdf"
+  data-title="Download"
+  data-itemId="http://instance.metastore.ingenta.com/content/journal/micro/10.1099/mic.0.000750"
+  class="ft-download-content__form ft-download-content__form--pdf js-ft-download-form " >
+  <input type="hidden" name="pending" value="false" >
+  <i class="fa fa-file-pdf-o
+  access-options-icon" aria-hidden="true"></i>
+  <span class="hidden-xxs">PDF</span>
+  </form>
 </div>
 <div id="itemFullTextId" class="itemFullTextHtml retrieveFullTextHtml hidden-js-div" data-fulltexturl="/deliver/fulltext/jgv/96/11/3204.html?itemId=/content/journal/jgv/10.1099/foo.blah.000280&amp;mimeType=html&amp;fmt=ahah">
 /deliver/fulltext/jgv/96/11/3204.html?itemId=/content/journal/jgv/10.1099/foo.blah.000280&amp;mimeType=html&amp;fmt=ahah
@@ -43,4 +53,5 @@
 </div>
 </li>
 </ul></div>
-</div></body></html>
+</div>
+</body></html>
