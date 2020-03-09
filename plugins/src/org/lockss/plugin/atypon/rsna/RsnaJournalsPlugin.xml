@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Radiological Society of North America Journals Plugin</string>
+    <string>Radiological Society of North America Plugin</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -25,7 +25,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Radiological Society of North America Journals Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"Radiological Society of North America Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>au_url_normalizer</string>
@@ -36,7 +36,7 @@
     <string>org.lockss.plugin.atypon.rsna.RsnaHtmlHashFilterFactory</string>
   </entry>
   <entry>
-    <string>text/html_crawl_filter_factory</string> 
+    <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.atypon.rsna.RsnaHtmlCrawlFilterFactory</string>
   </entry>
   <entry>
