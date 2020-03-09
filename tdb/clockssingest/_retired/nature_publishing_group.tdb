@@ -1926,8 +1926,8 @@
     au < finished ; finished ; 2012 ; Light: Science & Applications Volume 1 ; 2012 ; 1 ; >
     au < finished ; finished ; 2013 ; Light: Science & Applications Volume 2 ; 2013 ; 2 ; >
     au < finished ; finished ; 2014 ; Light: Science & Applications Volume 3 ; 2014 ; 3 ; >
-    au < frozen ; exists ; 2015 ; Light: Science & Applications Volume 4 ; 2015 ; 4 ; >
-    au < frozen ; exists ; 2016 ; Light: Science & Applications Volume 5 ; 2016 ; 5 ; >
+    au < finished ; manifest ; 2015 ; Light: Science & Applications Volume 4 ; 2015 ; 4 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2016 ; Light: Science & Applications Volume 5 ; 2016 ; 5 ; reingest2.clockss.org:8085 >
     au < superseded ; exists ; 2017 ; Light: Science & Applications Volume 6 [superseded] ; 2017 ; 6 ; >
 
   }
@@ -1959,8 +1959,8 @@
     au < finished ; finished ; 2012 ; Modern Pathology Volume 25 ; 2012 ; 25 ; >
     au < finished ; finished ; 2013 ; Modern Pathology Volume 26 ; 2013 ; 26 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Modern Pathology Volume 27 ; 2014 ; 27 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2015 ; Modern Pathology Volume 28 ; 2015 ; 28 ; >
-    au < frozen ; exists ; 2016 ; Modern Pathology Volume 29 ; 2016 ; 29 ; >
+    au < finished ; manifest ; 2015 ; Modern Pathology Volume 28 ; 2015 ; 28 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2016 ; Modern Pathology Volume 29 ; 2016 ; 29 ; reingest4.clockss.org:8082 >
     au < superseded ; exists ; 2017 ; Modern Pathology Volume 30 [superseded] ; 2017 ; 30 ; >
 
   }
@@ -1994,7 +1994,7 @@
     au < finished ; finished ; 2012 ; Molecular Psychiatry Volume 17 ; 2012 ; 17 ; >
     au < zapped ; finished ; 2013 ; Molecular Psychiatry Volume 18 ; 2013 ; 18 ; reingest2.clockss.org:8085 >
     au < zapped ; finished ; 2014 ; Molecular Psychiatry Volume 19 ; 2014 ; 19 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2015 ; Molecular Psychiatry Volume 20 ; 2015 ; 20 ; >
+    au < finished ; manifest ; 2015 ; Molecular Psychiatry Volume 20 ; 2015 ; 20 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Molecular Psychiatry Volume 21 ; 2016 ; 21 ; >
     au < superseded ; exists ; 2017 ; Molecular Psychiatry Volume 22 [superseded] ; 2017 ; 22 ; >
 
