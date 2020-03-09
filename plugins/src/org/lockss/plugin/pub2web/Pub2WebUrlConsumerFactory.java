@@ -66,8 +66,7 @@ public class Pub2WebUrlConsumerFactory implements UrlConsumerFactory {
 	 * </p>
 	 * 
 	 * BOOKS: 
-	 * the link on the page is:
-	 *   https://www.asmscience.org/deliver/fulltext/10.1128/9781683670247/9781683670230_FM.pdf?itemId=/content/book/10.1128/9781683670247.cont01&mimeType=pdf
+	 * the link on the page is: 
 	 *   http://www.asmscience.org/deliver/fulltext/10.1128/9781555818357/9781555819101_Chap09.pdf?itemId=/content/book/10.1128/9781555818357.chap9&mimeType=pdf
 	 * it redirects to a one-time expiring URL under docserver
 	 *   http://www.asmscience.org/docserver/fulltext/10.1128/9781555818357/9781555819101_Chap09.pdf?expires=1426886854&id=id&accname=4398&checksum=B4D5048F55C46BDB558351CDD802FC1D
@@ -162,7 +161,6 @@ public class Pub2WebUrlConsumerFactory implements UrlConsumerFactory {
 			// If that failed, then see if this case should be part of pub2web specific consumption
 			// which will also handle http to https as part of longer redirect chain
 			// because the patterns checked are independent of protocol
-
 			if (!should) {
 				should =  fud.redirectUrls != null
 						&& fud.redirectUrls.size() >= 1
@@ -181,12 +179,6 @@ public class Pub2WebUrlConsumerFactory implements UrlConsumerFactory {
 		 */
 		protected boolean shouldStoreRedirectsAtOrigUrl() {
 
-			if (fud.redirectUrls != null && fud.redirectUrls.size() >= 1) {
-				for (String redirectUrl : fud.redirectUrls) {
-					log.debug3("Fei: shouldStoreRedirectsAtOrigUrl redirectUrl= " + redirectUrl);
-				}
-			}
-
 			boolean should = AuUtil.isBaseUrlHttp(au)
 							&& fud.redirectUrls != null
 							&& fud.redirectUrls.size() >= 1
@@ -195,7 +187,7 @@ public class Pub2WebUrlConsumerFactory implements UrlConsumerFactory {
 							&& UrlUtil.stripProtocol(fud.origUrl).equals(UrlUtil.stripProtocol(fud.fetchUrl));
 
 			if (!should) {
-				log.debug3("NOT swallowing this redirect by shouldStoreRedirectsAtOrigUrl originalUrl = " + fud.origUrl + ", fetchUrl = " + fud.fetchUrl );
+				log.debug3("NOT swallowing this redirect by shouldStoreRedirectsAtOrigUrl");
 			}
 			return should;
 		}
