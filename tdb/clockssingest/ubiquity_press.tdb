@@ -866,7 +866,7 @@
 #      param[base_url] = https://www.revista-anglo-saxonica.org/
 
       au < exists ; exists ; 2019 ; 17 ; Architectural Histories Volume 2019 ; 2019 ; https://www.revista-anglo-saxonica.org/ ; >
-      au < exists ; exists ; 2020 ; 18 ; Architectural Histories Volume 2020 ; 2020 ; https://www.revista-anglo-saxonica.org/ ; >
+      au < manifest ; exists ; 2020 ; 18 ; Architectural Histories Volume 2020 ; 2020 ; https://www.revista-anglo-saxonica.org/ ; >
 
   }
 
@@ -1481,7 +1481,7 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://continuityineducation.org/
 
-      au < exists ; exists ; 2020 ; 1 ; Continuity in Education Volume 2020 ; 2020 ; https://continuityineducation.org/ ; >
+      au < manifest ; exists ; 2020 ; 1 ; Continuity in Education Volume 2020 ; 2020 ; https://continuityineducation.org/ ; >
 
   }
 
@@ -1508,7 +1508,7 @@
       au < exists ; exists ; 2017 ; 11 ; Continuity in Education Volume 2017 ; 2017 ;  https://www.thecommonsjournal.org/ ; >
       au < exists ; exists ; 2018 ; 12 ; Continuity in Education Volume 2018 ; 2018 ;  https://www.thecommonsjournal.org/ ; >
       au < exists ; exists ; 2019 ; 13 ; Continuity in Education Volume 2019 ; 2019 ;  https://www.thecommonsjournal.org/ ; >
-      au < exists ; exists ; 2020 ; 14 ; Continuity in Education Volume 2020 ; 2020 ;  https://www.thecommonsjournal.org/ ; >
+      au < manifest ; exists ; 2020 ; 14 ; Continuity in Education Volume 2020 ; 2020 ;  https://www.thecommonsjournal.org/ ; >
 
   }
 
@@ -1535,8 +1535,8 @@
       au < exists ; exists ; 2016 ; 11 ; Global Heart Volume 2016 ; 2016 ;  https://globalheartjournal.com/ ; >
       au < exists ; exists ; 2017 ; 12 ; Global Heart Volume 2017 ; 2017 ;  https://globalheartjournal.com/ ; >
       au < exists ; exists ; 2018 ; 13 ; Global Heart Volume 2018 ; 2018 ;  https://globalheartjournal.com/ ; >
-      au < exists ; exists ; 2019 ; 14 ; Global Heart Volume 2019 ; 2019 ;  https://globalheartjournal.com/ ; >
-      au < exists ; exists ; 2020 ; 15 ; Global Heart Volume 2020 ; 2020 ;  https://globalheartjournal.com/ ; >
+      au < manifest ; exists ; 2019 ; 14 ; Global Heart Volume 2019 ; 2019 ;  https://globalheartjournal.com/ ; >
+      au < manifest ; exists ; 2020 ; 15 ; Global Heart Volume 2020 ; 2020 ;  https://globalheartjournal.com/ ; >
 
   }
 
