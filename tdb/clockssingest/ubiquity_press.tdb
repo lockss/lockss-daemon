@@ -1,5 +1,95 @@
 {
   publisher <
+    name = Ganzaga Library Publishing ;
+    info[contract] = 2011 ;
+    info[back] = 2000 ;
+    info[tester] = 8 ;
+    info[poller] = 8
+  >
+
+    provider = Ubiquity Press
+    plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
+    implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
+
+  {
+
+      title <
+        name = Journal of Hate Studies ;
+        eissn = 2169-7442
+      >
+
+      comment[publisher] = Ganzaga Library Publishing
+#      param[base_url] = https://jhs.press.gonzaga.edu/
+
+      au < exists ; exists ; 2002 ; 1 ; Journal of Hate Studies Volume 2002 ; 2002 ; https://jhs.press.gonzaga.edu/ ; >
+      au < exists ; exists ; 2003 ; 2 ; Journal of Hate Studies Volume 2003 ; 2003 ; https://jhs.press.gonzaga.edu/ ; >
+      au < exists ; exists ; 2004 ; 3 ; Journal of Hate Studies Volume 2004 ; 2004 ; https://jhs.press.gonzaga.edu/ ; >
+      au < exists ; exists ; 2005 ; 4 ; Journal of Hate Studies Volume 2005 ; 2005 ; https://jhs.press.gonzaga.edu/ ; >
+      au < exists ; exists ; 2006 ; 5 ; Journal of Hate Studies Volume 2006 ; 2006 ; https://jhs.press.gonzaga.edu/ ; >
+      au < exists ; exists ; 2007 ; 6 ; Journal of Hate Studies Volume 2007 ; 2007 ; https://jhs.press.gonzaga.edu/ ; >
+      au < exists ; exists ; 2009 ; 7 ; Journal of Hate Studies Volume 2009 ; 2009 ; https://jhs.press.gonzaga.edu/ ; >
+      au < manifest ; exists ; 2010 ; 8 ; Journal of Hate Studies Volume 2010 ; 2010 ; https://jhs.press.gonzaga.edu/ ; >
+      au < manifest ; exists ; 2011 ; 9 ; Journal of Hate Studies Volume 2011 ; 2011 ; https://jhs.press.gonzaga.edu/ ; >
+      au < manifest ; exists ; 2012 ; 10 ; Journal of Hate Studies Volume 2012 ; 2012 ; https://jhs.press.gonzaga.edu/ ; >
+      au < exists ; exists ; 2013 ; 11 ; Journal of Hate Studies Volume 2013 ; 2013 ; https://jhs.press.gonzaga.edu/ ; >
+      au < exists ; exists ; 2014 ; 12 ; Journal of Hate Studies Volume 2014 ; 2014 ; https://jhs.press.gonzaga.edu/ ; >
+      au < exists ; exists ; 2016 ; 13 ; Journal of Hate Studies Volume 2016 ; 2016 ; https://jhs.press.gonzaga.edu/ ; >
+      au < exists ; exists ; 2019 ; 14-15 ; Journal of Hate Studies Volume 2019 ; 2019 ; https://jhs.press.gonzaga.edu/ ; >
+
+  }
+}
+
+{
+  publisher <
+    name = Helsinki University Press ;
+    info[contract] = 2011 ;
+    info[back] = 2000 ;
+    info[tester] = 8 ;
+    info[poller] = 8
+  >
+
+    provider = Ubiquity Press
+    plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
+    implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
+
+  {
+
+      title <
+        name = Redescriptions: Political Thought, Conceptual History and Feminist Theory ;
+        eissn = 2308-0914
+      >
+
+      comment[publisher] = Helsinki University Press
+#      param[base_url] =  https://journal-redescriptions.org/
+
+      au < exists ; exists ; 1997 ; 1 ; Redescriptions Volume 1997 ; 1997 ; https://journal-redescriptions.org/ ; >
+      au < exists ; exists ; 1998 ; 2 ; Redescriptions Volume 1998 ; 1998 ; https://journal-redescriptions.org/ ; >
+      au < exists ; exists ; 1999 ; 3 ; Redescriptions Volume 1999 ; 1999 ; https://journal-redescriptions.org/ ; >
+      au < exists ; exists ; 2000 ; 4 ; Redescriptions Volume 2000 ; 2000 ; https://journal-redescriptions.org/ ; >
+      au < exists ; exists ; 2001 ; 5 ; Redescriptions Volume 2001 ; 2001 ; https://journal-redescriptions.org/ ; >
+      au < exists ; exists ; 2002 ; 6 ; Redescriptions Volume 2002 ; 2002 ; https://journal-redescriptions.org/ ; >
+      au < exists ; exists ; 2003 ; 7 ; Redescriptions Volume 2003 ; 2003 ; https://journal-redescriptions.org/ ; >
+      au < exists ; exists ; 2004 ; 8 ; Redescriptions Volume 2004 ; 2004 ; https://journal-redescriptions.org/ ; >
+      au < exists ; exists ; 2005 ; 9 ; Redescriptions Volume 2005 ; 2005 ; https://journal-redescriptions.org/ ; >
+      au < exists ; exists ; 2006 ; 10 ; Redescriptions Volume 2006 ; 2006 ; https://journal-redescriptions.org/ ; >
+      au < exists ; exists ; 2007 ; 11 ; Redescriptions Volume 2007 ; 2007 ; https://journal-redescriptions.org/ ; >
+      au < exists ; exists ; 2008 ; 12 ; Redescriptions Volume 2008 ; 2008 ; https://journal-redescriptions.org/ ; >
+      au < exists ; exists ; 2009 ; 13 ; Redescriptions Volume 2009 ; 2009 ; https://journal-redescriptions.org/ ; >
+      au < exists ; exists ; 2010 ; 14 ; Redescriptions Volume 2010 ; 2010 ; https://journal-redescriptions.org/ ; >
+      au < exists ; exists ; 2011 ; 15 ; Redescriptions Volume 2011 ; 2011 ; https://journal-redescriptions.org/ ; >
+      au < exists ; exists ; 2012 ; 16 ; Redescriptions Volume 2012 ; 2012 ; https://journal-redescriptions.org/ ; >
+      au < exists ; exists ; 2013 ; 17 ; Redescriptions Volume 2013 ; 2013 ; https://journal-redescriptions.org/ ; >
+      au < exists ; exists ; 2014 ; 18 ; Redescriptions Volume 2014 ; 2014 ; https://journal-redescriptions.org/ ; >
+      au < exists ; exists ; 2016 ; 19 ; Redescriptions Volume 2016 ; 2016 ; https://journal-redescriptions.org/ ; >
+      au < exists ; exists ; 2017 ; 20 ; Redescriptions Volume 2017 ; 2017 ; https://journal-redescriptions.org/ ; >
+      au < exists ; exists ; 2018 ; 21 ; Redescriptions Volume 2018 ; 2018 ; https://journal-redescriptions.org/ ; >
+      au < manifest ; exists ; 2019 ; 22 ; Redescriptions Volume 2019 ; 2019 ; https://journal-redescriptions.org/ ; >
+
+  }
+}
+
+{
+  publisher <
     name = IJS Publishing Group ;
     info[contract] = 2011 ;
     info[back] = 2000 ;
@@ -332,13 +422,13 @@
 
       au < doesNotExist ; doesNotExist ; 1991 ; 1 ; Theoretical Roman Archaeology Conference Volume 1991 ; 1991 ; https://traj.openlibhums.org/ ; >
       au < doesNotExist ; doesNotExist ; 1992 ; 2 ; Theoretical Roman Archaeology Conference Volume 1992 ; 1992 ; https://traj.openlibhums.org/ ; >
-      au < manifest ; exists ; 1993 ; 3 ; Theoretical Roman Archaeology Conference Volume 1993 ; 1993 ; https://traj.openlibhums.org/ ; ># 1991 articles
+      au < exists ; exists ; 1993 ; 3 ; Theoretical Roman Archaeology Conference Volume 1993 ; 1993 ; https://traj.openlibhums.org/ ; ># 1991 articles
       au < doesNotExist ; doesNotExist ; 1994 ; 4 ; Theoretical Roman Archaeology Conference Volume 1994 ; 1994 ; https://traj.openlibhums.org/ ; >
-      au < manifest ; exists ; 1995 ; 5 ; Theoretical Roman Archaeology Conference Volume 1995 ; 1995 ; https://traj.openlibhums.org/ ; ># 1992 and 1994 articles
+      au < exists ; exists ; 1995 ; 5 ; Theoretical Roman Archaeology Conference Volume 1995 ; 1995 ; https://traj.openlibhums.org/ ; ># 1992 and 1994 articles
       au < doesNotExist ; doesNotExist ; 1996 ; 6 ; Theoretical Roman Archaeology Conference Volume 1996 ; 1996 ; https://traj.openlibhums.org/ ; >
-      au < manifest ; exists ; 1997 ; 7 ; Theoretical Roman Archaeology Conference Volume 1997 ; 1997 ; https://traj.openlibhums.org/ ; ># 1996 articles
-      au < manifest ; exists ; 1998 ; 8 ; Theoretical Roman Archaeology Conference Volume 1998 ; 1998 ; https://traj.openlibhums.org/ ; >
-      au < manifest ; exists ; 1999 ; 9 ; Theoretical Roman Archaeology Conference Volume 1999 ; 1999 ; https://traj.openlibhums.org/ ; >
+      au < exists ; exists ; 1997 ; 7 ; Theoretical Roman Archaeology Conference Volume 1997 ; 1997 ; https://traj.openlibhums.org/ ; ># 1996 articles
+      au < exists ; exists ; 1998 ; 8 ; Theoretical Roman Archaeology Conference Volume 1998 ; 1998 ; https://traj.openlibhums.org/ ; >
+      au < exists ; exists ; 1999 ; 9 ; Theoretical Roman Archaeology Conference Volume 1999 ; 1999 ; https://traj.openlibhums.org/ ; >
       au < finished ; crawling ; 2000 ; 10 ; Theoretical Roman Archaeology Conference Volume 2000 ; 2000 ; https://traj.openlibhums.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2001 ; 11 ; Theoretical Roman Archaeology Conference Volume 2001 ; 2001 ; https://traj.openlibhums.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2002 ; 12 ; Theoretical Roman Archaeology Conference Volume 2002 ; 2002 ; https://traj.openlibhums.org/ ; reingest2.clockss.org:8085 >
@@ -524,27 +614,27 @@
       #implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
       #1979 to 2009
 
-      au < manifest ; exists ; 1979 ; 1 ; Pynchon Notes Volume 1979 ; 1979 ; https://pynchonnotes.openlibhums.org/ ; >
-      au < manifest ; exists ; 1980 ; 2 ; Pynchon Notes Volume 1980 ; 1980 ; https://pynchonnotes.openlibhums.org/ ; >
-      au < manifest ; exists ; 1981 ; 3 ; Pynchon Notes Volume 1981 ; 1981 ; https://pynchonnotes.openlibhums.org/ ; >
-      au < manifest ; exists ; 1982 ; 4 ; Pynchon Notes Volume 1982 ; 1982 ; https://pynchonnotes.openlibhums.org/ ; >
-      au < manifest ; exists ; 1983 ; 5 ; Pynchon Notes Volume 1983 ; 1983 ; https://pynchonnotes.openlibhums.org/ ; >
-      au < manifest ; exists ; 1984 ; 6 ; Pynchon Notes Volume 1984 ; 1984 ; https://pynchonnotes.openlibhums.org/ ; >
-      au < manifest ; exists ; 1985 ; 7 ; Pynchon Notes Volume 1985 ; 1985 ; https://pynchonnotes.openlibhums.org/ ; >
-      au < manifest ; exists ; 1986 ; 8 ; Pynchon Notes Volume 1986 ; 1986 ; https://pynchonnotes.openlibhums.org/ ; >
-      au < manifest ; exists ; 1987 ; 9 ; Pynchon Notes Volume 1987 ; 1987 ; https://pynchonnotes.openlibhums.org/ ; >
-      au < manifest ; exists ; 1988 ; 10 ; Pynchon Notes Volume 1988 ; 1988 ; https://pynchonnotes.openlibhums.org/ ; >
-      au < manifest ; exists ; 1989 ; 11 ; Pynchon Notes Volume 1989 ; 1989 ; https://pynchonnotes.openlibhums.org/ ; >
-      au < manifest ; exists ; 1990 ; 12 ; Pynchon Notes Volume 1990 ; 1990 ; https://pynchonnotes.openlibhums.org/ ; >
-      au < manifest ; exists ; 1991 ; 13 ; Pynchon Notes Volume 1991 ; 1991 ; https://pynchonnotes.openlibhums.org/ ; >
-      au < manifest ; exists ; 1992 ; 14 ; Pynchon Notes Volume 1992 ; 1992 ; https://pynchonnotes.openlibhums.org/ ; >
-      au < manifest ; exists ; 1993 ; 15 ; Pynchon Notes Volume 1993 ; 1993 ; https://pynchonnotes.openlibhums.org/ ; >
-      au < manifest ; exists ; 1994 ; 16 ; Pynchon Notes Volume 1994 ; 1994 ; https://pynchonnotes.openlibhums.org/ ; >
+      au < exists ; exists ; 1979 ; 1 ; Pynchon Notes Volume 1979 ; 1979 ; https://pynchonnotes.openlibhums.org/ ; >
+      au < exists ; exists ; 1980 ; 2 ; Pynchon Notes Volume 1980 ; 1980 ; https://pynchonnotes.openlibhums.org/ ; >
+      au < exists ; exists ; 1981 ; 3 ; Pynchon Notes Volume 1981 ; 1981 ; https://pynchonnotes.openlibhums.org/ ; >
+      au < exists ; exists ; 1982 ; 4 ; Pynchon Notes Volume 1982 ; 1982 ; https://pynchonnotes.openlibhums.org/ ; >
+      au < exists ; exists ; 1983 ; 5 ; Pynchon Notes Volume 1983 ; 1983 ; https://pynchonnotes.openlibhums.org/ ; >
+      au < exists ; exists ; 1984 ; 6 ; Pynchon Notes Volume 1984 ; 1984 ; https://pynchonnotes.openlibhums.org/ ; >
+      au < exists ; exists ; 1985 ; 7 ; Pynchon Notes Volume 1985 ; 1985 ; https://pynchonnotes.openlibhums.org/ ; >
+      au < exists ; exists ; 1986 ; 8 ; Pynchon Notes Volume 1986 ; 1986 ; https://pynchonnotes.openlibhums.org/ ; >
+      au < exists ; exists ; 1987 ; 9 ; Pynchon Notes Volume 1987 ; 1987 ; https://pynchonnotes.openlibhums.org/ ; >
+      au < exists ; exists ; 1988 ; 10 ; Pynchon Notes Volume 1988 ; 1988 ; https://pynchonnotes.openlibhums.org/ ; >
+      au < exists ; exists ; 1989 ; 11 ; Pynchon Notes Volume 1989 ; 1989 ; https://pynchonnotes.openlibhums.org/ ; >
+      au < exists ; exists ; 1990 ; 12 ; Pynchon Notes Volume 1990 ; 1990 ; https://pynchonnotes.openlibhums.org/ ; >
+      au < exists ; exists ; 1991 ; 13 ; Pynchon Notes Volume 1991 ; 1991 ; https://pynchonnotes.openlibhums.org/ ; >
+      au < exists ; exists ; 1992 ; 14 ; Pynchon Notes Volume 1992 ; 1992 ; https://pynchonnotes.openlibhums.org/ ; >
+      au < exists ; exists ; 1993 ; 15 ; Pynchon Notes Volume 1993 ; 1993 ; https://pynchonnotes.openlibhums.org/ ; >
+      au < exists ; exists ; 1994 ; 16 ; Pynchon Notes Volume 1994 ; 1994 ; https://pynchonnotes.openlibhums.org/ ; >
       au < doesNotExist ; doesNotExist ; 1995 ; 17 ; Pynchon Notes Volume 1995 ; 1995 ; https://pynchonnotes.openlibhums.org/ ; >
-      au < manifest ; exists ; 1996 ; 18 ; Pynchon Notes Volume 1996 ; 1996 ; https://pynchonnotes.openlibhums.org/ ; >
-      au < manifest ; exists ; 1997 ; 19 ; Pynchon Notes Volume 1997 ; 1997 ; https://pynchonnotes.openlibhums.org/ ; >
-      au < manifest ; exists ; 1998 ; 20 ; Pynchon Notes Volume 1998 ; 1998 ; https://pynchonnotes.openlibhums.org/ ; >
-      au < manifest ; exists ; 1999 ; 21 ; Pynchon Notes Volume 1999 ; 1999 ; https://pynchonnotes.openlibhums.org/ ; >
+      au < exists ; exists ; 1996 ; 18 ; Pynchon Notes Volume 1996 ; 1996 ; https://pynchonnotes.openlibhums.org/ ; >
+      au < exists ; exists ; 1997 ; 19 ; Pynchon Notes Volume 1997 ; 1997 ; https://pynchonnotes.openlibhums.org/ ; >
+      au < exists ; exists ; 1998 ; 20 ; Pynchon Notes Volume 1998 ; 1998 ; https://pynchonnotes.openlibhums.org/ ; >
+      au < exists ; exists ; 1999 ; 21 ; Pynchon Notes Volume 1999 ; 1999 ; https://pynchonnotes.openlibhums.org/ ; >
       au < doesNotExist ; doesNotExist ; 2000 ; 22 ; Pynchon Notes Volume 2000 ; 2000 ; https://pynchonnotes.openlibhums.org/ ; >
       au < finished ; crawling ; 2001 ; 23 ; Pynchon Notes Volume 2001 ; 2001 ; https://pynchonnotes.openlibhums.org/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2002 ; 24 ; Pynchon Notes Volume 2002 ; 2002 ; https://pynchonnotes.openlibhums.org/ ; reingest3.clockss.org:8083 >
@@ -645,7 +735,7 @@
 
       #publisher = Stockholm University Press
 
-    au < manifest ; exists ; 1999 ; 1 ; Scandinavian Journal of Disability Research Volume 1 ; 1999 ; https://www.sjdr.se/ ; >
+    au < exists ; exists ; 1999 ; 1 ; Scandinavian Journal of Disability Research Volume 1 ; 1999 ; https://www.sjdr.se/ ; >
     au < finished ; crawling ; 2000 ; 2 ; Scandinavian Journal of Disability Research Volume 2 ; 2000 ; https://www.sjdr.se/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2001 ; 3 ; Scandinavian Journal of Disability Research Volume 3 ; 2001 ; https://www.sjdr.se/ ; reingest2.clockss.org:8085 >
     au < doesNotExist ; doesNotExist ; 2002 ; 4 ; Scandinavian Journal of Disability Research Volume 4 ; 2002 ; https://www.sjdr.se/ ; >
@@ -729,6 +819,21 @@
 
       au < finished ; manifest ; 2018 ; 1 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2018 ; 2018 ; https://franorfon.org/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2019 ; 2 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2019 ; 2019 ; https://franorfon.org/ ; >
+
+  }
+  {
+
+      title <
+        name = Journal of Home Language Research ;
+        eissn = 2537-7043
+      >
+
+      comment[publisher] = Stockholm University Press
+#      param[base_url] = https://jhlr.org/
+
+      au < exists ; exists ; 2016 ; 1 ; Journal of Home Language Research Volume 2016 ; 2016 ; https://jhlr.org/ ; >
+      au < exists ; exists ; 2017 ; 2 ; Journal of Home Language Research Volume 2017 ; 2017 ; https://jhlr.org/ ; >
+      au < exists ; exists ; 2018 ; 3 ; Journal of Home Language Research Volume 2018 ; 2018 ; https://jhlr.org/ ; >
 
   }
 }
@@ -1493,22 +1598,22 @@
       >
 
       comment[publisher] = Ubiquity Press
-#      param[base_url] =  https://www.thecommonsjournal.org/
+#      param[base_url] = https://www.thecommonsjournal.org/
 
-      au < exists ; exists ; 2007 ; 1 ; Continuity in Education Volume 2007 ; 2007 ;  https://www.thecommonsjournal.org/ ; >
-      au < exists ; exists ; 2008 ; 2 ; Continuity in Education Volume 2008 ; 2008 ;  https://www.thecommonsjournal.org/ ; >
-      au < exists ; exists ; 2009 ; 3 ; Continuity in Education Volume 2009 ; 2009 ;  https://www.thecommonsjournal.org/ ; >
-      au < exists ; exists ; 2010 ; 4 ; Continuity in Education Volume 2010 ; 2010 ;  https://www.thecommonsjournal.org/ ; >
-      au < exists ; exists ; 2011 ; 5 ; Continuity in Education Volume 2011 ; 2011 ;  https://www.thecommonsjournal.org/ ; >
-      au < exists ; exists ; 2012 ; 6 ; Continuity in Education Volume 2012 ; 2012 ;  https://www.thecommonsjournal.org/ ; >
-      au < exists ; exists ; 2013 ; 7 ; Continuity in Education Volume 2013 ; 2013 ;  https://www.thecommonsjournal.org/ ; >
-      au < exists ; exists ; 2014 ; 8 ; Continuity in Education Volume 2014 ; 2014 ;  https://www.thecommonsjournal.org/ ; >
-      au < exists ; exists ; 2015 ; 9 ; Continuity in Education Volume 2015 ; 2015 ;  https://www.thecommonsjournal.org/ ; >
-      au < exists ; exists ; 2016 ; 10 ; Continuity in Education Volume 2016 ; 2016 ;  https://www.thecommonsjournal.org/ ; >
-      au < exists ; exists ; 2017 ; 11 ; Continuity in Education Volume 2017 ; 2017 ;  https://www.thecommonsjournal.org/ ; >
-      au < exists ; exists ; 2018 ; 12 ; Continuity in Education Volume 2018 ; 2018 ;  https://www.thecommonsjournal.org/ ; >
-      au < exists ; exists ; 2019 ; 13 ; Continuity in Education Volume 2019 ; 2019 ;  https://www.thecommonsjournal.org/ ; >
-      au < manifest ; exists ; 2020 ; 14 ; Continuity in Education Volume 2020 ; 2020 ;  https://www.thecommonsjournal.org/ ; >
+      au < finished ; crawling ; 2007 ; 1 ; International Journal of the Commons Volume 2007 ; 2007 ; https://www.thecommonsjournal.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2008 ; 2 ; International Journal of the Commons Volume 2008 ; 2008 ; https://www.thecommonsjournal.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2009 ; 3 ; International Journal of the Commons Volume 2009 ; 2009 ; https://www.thecommonsjournal.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2010 ; 4 ; International Journal of the Commons Volume 2010 ; 2010 ; https://www.thecommonsjournal.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2011 ; 5 ; International Journal of the Commons Volume 2011 ; 2011 ; https://www.thecommonsjournal.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2012 ; 6 ; International Journal of the Commons Volume 2012 ; 2012 ; https://www.thecommonsjournal.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2013 ; 7 ; International Journal of the Commons Volume 2013 ; 2013 ; https://www.thecommonsjournal.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2014 ; 8 ; International Journal of the Commons Volume 2014 ; 2014 ; https://www.thecommonsjournal.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; 9 ; International Journal of the Commons Volume 2015 ; 2015 ; https://www.thecommonsjournal.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2016 ; 10 ; International Journal of the Commons Volume 2016 ; 2016 ; https://www.thecommonsjournal.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2017 ; 11 ; International Journal of the Commons Volume 2017 ; 2017 ; https://www.thecommonsjournal.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; 12 ; International Journal of the Commons Volume 2018 ; 2018 ; https://www.thecommonsjournal.org/ ; reingest2.clockss.org:8085 >
+      au < crawling ; exists ; 2019 ; 13 ; International Journal of the Commons Volume 2019 ; 2019 ; https://www.thecommonsjournal.org/ ; >
+      au < exists ; exists ; 2020 ; 14 ; International Journal of the Commons Volume 2019 ; 2019 ; https://www.thecommonsjournal.org/ ; >
 
   }
 
@@ -2100,6 +2205,21 @@
 
   }
 
+  {
+
+      title <
+        name = Silk Road ;
+        eissn = 2631-682X
+      >
+
+      comment[publisher] = University of Westminster Press
+#      param[base_url] = https://silkroadjournal.online/
+
+      au < manifest ; exists ; 2019 ; 1 ; Silk Road Volume 2019 ; 2019 ; https://silkroadjournal.online/ ; >
+      au < manifest ; exists ; 2020 ; 2 ; Silk Road Volume 2020 ; 2020 ; https://silkroadjournal.online/ ; >
+
+  }
+
 }
 {
   publisher <
@@ -2309,32 +2429,6 @@
       au < finished ; manifest ; 2017 ; 5 ; International Journal for History, Culture and Modernity Volume 2017 ; 2017 ; https://www.history-culture-modernity.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2018 ; 6 ; International Journal for History, Culture and Modernity Volume 2018 ; 2018 ; https://www.history-culture-modernity.org/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2019 ; 7 ; International Journal for History, Culture and Modernity Volume 2019 ; 2019 ; https://www.history-culture-modernity.org/ ; >
-
-  }
-
-  {
-
-      title <
-        name = International Journal of the Commons ;
-        eissn = 1875-0281
-      >
-
-      comment[publisher] = Utrecht University Library
-#      param[base_url] = https://www.thecommonsjournal.org/
-
-      au < finished ; crawling ; 2007 ; 1 ; International Journal of the Commons Volume 2007 ; 2007 ; https://www.thecommonsjournal.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2008 ; 2 ; International Journal of the Commons Volume 2008 ; 2008 ; https://www.thecommonsjournal.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2009 ; 3 ; International Journal of the Commons Volume 2009 ; 2009 ; https://www.thecommonsjournal.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2010 ; 4 ; International Journal of the Commons Volume 2010 ; 2010 ; https://www.thecommonsjournal.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2011 ; 5 ; International Journal of the Commons Volume 2011 ; 2011 ; https://www.thecommonsjournal.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2012 ; 6 ; International Journal of the Commons Volume 2012 ; 2012 ; https://www.thecommonsjournal.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2013 ; 7 ; International Journal of the Commons Volume 2013 ; 2013 ; https://www.thecommonsjournal.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; 8 ; International Journal of the Commons Volume 2014 ; 2014 ; https://www.thecommonsjournal.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2015 ; 9 ; International Journal of the Commons Volume 2015 ; 2015 ; https://www.thecommonsjournal.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2016 ; 10 ; International Journal of the Commons Volume 2016 ; 2016 ; https://www.thecommonsjournal.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2017 ; 11 ; International Journal of the Commons Volume 2017 ; 2017 ; https://www.thecommonsjournal.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2018 ; 12 ; International Journal of the Commons Volume 2018 ; 2018 ; https://www.thecommonsjournal.org/ ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2019 ; 13 ; International Journal of the Commons Volume 2019 ; 2019 ; https://www.thecommonsjournal.org/ ; >
 
   }
 
