@@ -15,10 +15,9 @@ import java.util.Iterator;
 import java.util.regex.Pattern;
 
 public class ScienceOpenSourceZipXmlArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory  {
-
-    //https://clockss-test.lockss.org/sourcefiles/scienceopen-released/2020/0003c012-d129-47a7-95ca-23a5647cd8e8.zip
-    //https://clockss-test.lockss.org/sourcefiles/scienceopen-released/2020/0003c012-d129-47a7-95ca-23a5647cd8e8.zip/0003c012-d129-47a7-95ca-23a5647cd8e8.xml
-    //https://clockss-test.lockss.org/sourcefiles/scienceopen-released/2020/0003c012-d129-47a7-95ca-23a5647cd8e8.zip/0003c012-d129-47a7-95ca-23a5647cd8e8.pdf
+    
+    //https://clockss-test.lockss.org/sourcefiles/scienceopen-released/2020/0003c012-d129-47a7-95ca-23a5647cd8e8.zip!/0003c012-d129-47a7-95ca-23a5647cd8e8.xml
+    //https://clockss-test.lockss.org/sourcefiles/scienceopen-released/2020/0003c012-d129-47a7-95ca-23a5647cd8e8.zip!/0003c012-d129-47a7-95ca-23a5647cd8e8.pdf
     
     protected static Logger log = Logger.getLogger(ScienceOpenSourceZipXmlArticleIteratorFactory.class);
 
