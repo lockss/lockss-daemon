@@ -1995,7 +1995,7 @@
     au < zapped ; finished ; 2013 ; Molecular Psychiatry Volume 18 ; 2013 ; 18 ; reingest2.clockss.org:8085 >
     au < zapped ; finished ; 2014 ; Molecular Psychiatry Volume 19 ; 2014 ; 19 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2015 ; Molecular Psychiatry Volume 20 ; 2015 ; 20 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2016 ; Molecular Psychiatry Volume 21 ; 2016 ; 21 ; >
+    au < finished ; manifest ; 2016 ; Molecular Psychiatry Volume 21 ; 2016 ; 21 ; reingest1.clockss.org:8082 >
     au < superseded ; exists ; 2017 ; Molecular Psychiatry Volume 22 [superseded] ; 2017 ; 22 ; >
 
   }
@@ -2064,7 +2064,7 @@
     param[journal_id] = mtna
 
     au < finished ; finished ; 2012 ; Molecular Therapy - Nucleic Acids Volume 1 ; 2012 ; 1 ; >
-    au < frozen ; exists ; 2013 ; Molecular Therapy - Nucleic Acids Volume 2 ; 2013 ; 2 ; >
+    au < finished ; manifest ; 2013 ; Molecular Therapy - Nucleic Acids Volume 2 ; 2013 ; 2 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Molecular Therapy - Nucleic Acids Volume 3 ; 2014 ; 3 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2015 ; Molecular Therapy - Nucleic Acids Volume 4 ; 2015 ; 4 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2016 ; Molecular Therapy - Nucleic Acids Volume 5 ; 2016 ; 5 ; reingest3.clockss.org:8083 >
@@ -2088,10 +2088,10 @@
     au < finished ; finished ; 2010 ; Mucosal Immunology Volume 3 ; 2010 ; 3 ; >
     au < finished ; finished ; 2011 ; Mucosal Immunology Volume 4 ; 2011 ; 4 ; >
     au < finished ; finished ; 2012 ; Mucosal Immunology Volume 5 ; 2012 ; 5 ; >
-    au < frozen ; exists ; 2013 ; Mucosal Immunology Volume 6 ; 2013 ; 6 ; >
+    au < finished ; manifest ; 2013 ; Mucosal Immunology Volume 6 ; 2013 ; 6 ; reingest3.clockss.org:8083 >
     au < zapped ; finished ; 2014 ; Mucosal Immunology Volume 7 ; 2014 ; 7 ; >
-    au < frozen ; exists ; 2015 ; Mucosal Immunology Volume 8 ; 2015 ; 8 ; >
-    au < frozen ; exists ; 2016 ; Mucosal Immunology Volume 9 ; 2016 ; 9 ; >
+    au < finished ; manifest ; 2015 ; Mucosal Immunology Volume 8 ; 2015 ; 8 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2016 ; Mucosal Immunology Volume 9 ; 2016 ; 9 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; Mucosal Immunology Volume 10 ; 2017 ; 10 ; >
 
   }
@@ -2449,7 +2449,7 @@
     au < frozen ; exists ; 2013 ; Nature Volume 500 ; 2013 ; 500 ; >
     au < frozen ; exists ; 2013 ; Nature Volume 501 ; 2013 ; 501 ; >
     au < frozen ; exists ; 2013 ; Nature Volume 502 ; 2013 ; 502 ; >
-    au < frozen ; exists ; 2013 ; Nature Volume 503 ; 2013 ; 503 ; >
+    au < finished ; manifest ; 2013 ; Nature Volume 503 ; 2013 ; 503 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2013 ; Nature Volume 504 ; 2013 ; 504 ; >
     au < frozen ; exists ; 2014 ; Nature Volume 505 ; 2014 ; 505 ; >
     au < frozen ; exists ; 2014 ; Nature Volume 506 ; 2014 ; 506 ; >
@@ -2475,16 +2475,16 @@
     au < frozen ; exists ; 2015 ; Nature Volume 526 ; 2015 ; 526 ; >
     au < frozen ; exists ; 2015 ; Nature Volume 527 ; 2015 ; 527 ; >
     au < frozen ; exists ; 2015 ; Nature Volume 528 ; 2015 ; 528 ; >
-    au < frozen ; exists ; 2016 ; Nature Volume 529 ; 2016 ; 529 ; >
+    au < finished ; manifest ; 2016 ; Nature Volume 529 ; 2016 ; 529 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2016 ; Nature Volume 530 ; 2016 ; 530 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2016 ; Nature Volume 531 ; 2016 ; 531 ; >
+    au < finished ; manifest ; 2016 ; Nature Volume 531 ; 2016 ; 531 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2016 ; Nature Volume 532 ; 2016 ; 532 ; >
-    au < frozen ; exists ; 2016 ; Nature Volume 533 ; 2016 ; 533 ; >
+    au < finished ; manifest ; 2016 ; Nature Volume 533 ; 2016 ; 533 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Nature Volume 534 ; 2016 ; 534 ; >
     au < frozen ; exists ; 2016 ; Nature Volume 535 ; 2016 ; 535 ; >
     au < frozen ; exists ; 2016 ; Nature Volume 536 ; 2016 ; 536 ; >
     au < frozen ; exists ; 2016 ; Nature Volume 537 ; 2016 ; 537 ; >
-    au < frozen ; exists ; 2016 ; Nature Volume 538 ; 2016 ; 538 ; >
+    au < finished ; manifest ; 2016 ; Nature Volume 538 ; 2016 ; 538 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Nature Volume 539 ; 2016 ; 539 ; >
     au < frozen ; exists ; 2016 ; Nature Volume 540 ; 2016 ; 540 ; >
     au < doNotProcess ; exists ; 2017 ; Nature Volume 541 ; 2017 ; 541 ; >
@@ -2546,7 +2546,7 @@
     au < frozen ; exists ; 2013 ; Nature Biotechnology Volume 31 ; 2013 ; 31 ; >
     au < frozen ; exists ; 2014 ; Nature Biotechnology Volume 32 ; 2014 ; 32 ; >
     au < frozen ; exists ; 2015 ; Nature Biotechnology Volume 33 ; 2015 ; 33 ; >
-    au < frozen ; exists ; 2016 ; Nature Biotechnology Volume 34 ; 2016 ; 34 ; >
+    au < finished ; manifest ; 2016 ; Nature Biotechnology Volume 34 ; 2016 ; 34 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; Nature Biotechnology Volume 35 ; 2017 ; 35 ; >
 
   }
@@ -2576,7 +2576,7 @@
     au < finished ; finished ; 2010 ; Nature Cell Biology Volume 12 ; 2010 ; 12 ; >
     au < finished ; frozen ; 2011 ; Nature Cell Biology Volume 13 ; 2011 ; 13 ; >
     au < frozen ; exists ; 2012 ; Nature Cell Biology Volume 14 ; 2012 ; 14 ; >
-    au < frozen ; exists ; 2013 ; Nature Cell Biology Volume 15 ; 2013 ; 15 ; >
+    au < finished ; manifest ; 2013 ; Nature Cell Biology Volume 15 ; 2013 ; 15 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2014 ; Nature Cell Biology Volume 16 ; 2014 ; 16 ; >
     au < frozen ; exists ; 2015 ; Nature Cell Biology Volume 17 ; 2015 ; 17 ; >
     au < frozen ; exists ; 2016 ; Nature Cell Biology Volume 18 ; 2016 ; 18 ; >
@@ -2646,8 +2646,8 @@
 
     au < finished ; finished ; 2011 ; Nature Climate Change Volume 1 ; 2011 ; 1 ; >
     au < finished ; finished ; 2012 ; Nature Climate Change Volume 2 ; 2012 ; 2 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2013 ; Nature Climate Change Volume 3 ; 2013 ; 3 ; >
-    au < frozen ; exists ; 2014 ; Nature Climate Change Volume 4 ; 2014 ; 4 ; >
+    au < finished ; manifest ; 2013 ; Nature Climate Change Volume 3 ; 2013 ; 3 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2014 ; Nature Climate Change Volume 4 ; 2014 ; 4 ; reingest4.clockss.org:8082 >
     au < zapped ; finished ; 2015 ; Nature Climate Change Volume 5 ; 2015 ; 5 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2016 ; Nature Climate Change Volume 6 ; 2016 ; 6 ; >
     au < doNotProcess ; exists ; 2017 ; Nature Climate Change Volume 7 ; 2017 ; 7 ; >
@@ -2758,7 +2758,7 @@
     au < frozen ; exists ; 2013 ; Nature Genetics Volume 45 ; 2013 ; 45 ; >
     au < zapped ; finished ; 2014 ; Nature Genetics Volume 46 ; 2014 ; 46 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2015 ; Nature Genetics Volume 47 ; 2015 ; 47 ; >
-    au < frozen ; exists ; 2016 ; Nature Genetics Volume 48 ; 2016 ; 48 ; >
+    au < finished ; manifest ; 2016 ; Nature Genetics Volume 48 ; 2016 ; 48 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; Nature Genetics Volume 49 ; 2017 ; 49 ; >
 
   }
@@ -2782,7 +2782,7 @@
     au < frozen ; exists ; 2013 ; Nature Geoscience Volume 6 ; 2013 ; 6 ; >
     au < zapped ; finished ; 2014 ; Nature Geoscience Volume 7 ; 2014 ; 7 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2015 ; Nature Geoscience Volume 8 ; 2015 ; 8 ; >
-    au < frozen ; exists ; 2016 ; Nature Geoscience Volume 9 ; 2016 ; 9 ; >
+    au < finished ; manifest ; 2016 ; Nature Geoscience Volume 9 ; 2016 ; 9 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; Nature Geoscience Volume 10 ; 2017 ; 10 ; >
 
   }
@@ -2814,7 +2814,7 @@
     au < frozen ; exists ; 2013 ; Nature Immunology Volume 14 ; 2013 ; 14 ; >
     au < frozen ; exists ; 2014 ; Nature Immunology Volume 15 ; 2014 ; 15 ; >
     au < frozen ; exists ; 2015 ; Nature Immunology Volume 16 ; 2015 ; 16 ; >
-    au < frozen ; exists ; 2016 ; Nature Immunology Volume 17 ; 2016 ; 17 ; >
+    au < finished ; manifest ; 2016 ; Nature Immunology Volume 17 ; 2016 ; 17 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; exists ; 2017 ; Nature Immunology Volume 18 ; 2017 ; 18 ; >
 
   }
@@ -2844,7 +2844,7 @@
     au < frozen ; exists ; 2013 ; Nature Materials Volume 12 ; 2013 ; 12 ; >
     au < zapped ; finished ; 2014 ; Nature Materials Volume 13 ; 2014 ; 13 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2015 ; Nature Materials Volume 14 ; 2015 ; 14 ; >
-    au < frozen ; exists ; 2016 ; Nature Materials Volume 15 ; 2016 ; 15 ; >
+    au < finished ; manifest ; 2016 ; Nature Materials Volume 15 ; 2016 ; 15 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; exists ; 2017 ; Nature Materials Volume 16 ; 2017 ; 16 ; >
 
   }
