@@ -83,10 +83,10 @@
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Biographical Memoirs of Fellows of the Royal Society Volume 57 ; 57 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Biographical Memoirs of Fellows of the Royal Society Volume 58 ; 58 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2013 ; Biographical Memoirs of Fellows of the Royal Society Volume 59 ; 59 ; reingest1.clockss.org:8082 >
-    au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2014 ; Biographical Memoirs of Fellows of the Royal Society Volume 60 ; 60 ; reingest2.clockss.org:8085 >
-    au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2015 ; Biographical Memoirs of Fellows of the Royal Society Volume 61 ; 61 ; reingest5.clockss.org:8082 >
-    au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2016 ; Biographical Memoirs of Fellows of the Royal Society Volume 62 ; 62 ; reingest1.clockss.org:8082 >
-    au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2017 ; Biographical Memoirs of Fellows of the Royal Society Volume 63 ; 63 ; reingest3.clockss.org:8083 >
+    au < rsp.ClockssRSPDrupalPlugin ; finished ; frozen ; 2014 ; Biographical Memoirs of Fellows of the Royal Society Volume 60 ; 60 ; reingest2.clockss.org:8085 >
+    au < rsp.ClockssRSPDrupalPlugin ; finished ; frozen ; 2015 ; Biographical Memoirs of Fellows of the Royal Society Volume 61 ; 61 ; reingest5.clockss.org:8082 >
+    au < rsp.ClockssRSPDrupalPlugin ; finished ; frozen ; 2016 ; Biographical Memoirs of Fellows of the Royal Society Volume 62 ; 62 ; reingest1.clockss.org:8082 >
+    au < rsp.ClockssRSPDrupalPlugin ; finished ; frozen ; 2017 ; Biographical Memoirs of Fellows of the Royal Society Volume 63 ; 63 ; reingest3.clockss.org:8083 >
     au < rsp.ClockssRSPDrupalPlugin ; superseded ; exists ; 2018 ; Biographical Memoirs of Fellows of the Royal Society Volume 64 [superseded] ; 64 ; >
 
   }
@@ -112,10 +112,10 @@
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Biology Letters Volume 8 ; 8 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2013 ; Biology Letters Volume 9 ; 9 ; reingest4.clockss.org:8082 >
     au < rsp.ClockssRSPDrupalPlugin ; doNotProcess ; doNotProcess ; 2014 ; Biology Letters Volume 10 ; 10 ; > #Try again. xml error: See http://rsbl.royalsocietypublishing.org/highwire/filestream/25839/field_highwire_adjunct_files/2/rsbl20140479supp3.xml
-    au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2015 ; Biology Letters Volume 11 ; 11 ; reingest5.clockss.org:8082 >
-    au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2016 ; Biology Letters Volume 12 ; 12 ; reingest1.clockss.org:8082 >
-    au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2017 ; Biology Letters Volume 13 ; 13 ; reingest1.clockss.org:8082 >
-    au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2018 ; Biology Letters Volume 14 ; 14 ; reingest2.clockss.org:8085 >
+    au < rsp.ClockssRSPDrupalPlugin ; finished ; frozen ; 2015 ; Biology Letters Volume 11 ; 11 ; reingest5.clockss.org:8082 >
+    au < rsp.ClockssRSPDrupalPlugin ; finished ; frozen ; 2016 ; Biology Letters Volume 12 ; 12 ; reingest1.clockss.org:8082 >
+    au < rsp.ClockssRSPDrupalPlugin ; finished ; frozen ; 2017 ; Biology Letters Volume 13 ; 13 ; reingest1.clockss.org:8082 >
+    au < rsp.ClockssRSPDrupalPlugin ; finished ; frozen ; 2018 ; Biology Letters Volume 14 ; 14 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -137,10 +137,10 @@
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Interface Focus Volume 2 ; 2 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2013 ; Interface Focus Volume 3 ; 3 ; reingest3.clockss.org:8083 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; frozen ; 2014 ; Interface Focus Volume 4 ; 4 ; reingest5.clockss.org:8082 >
-    au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2015 ; Interface Focus Volume 5 ; 5 ; reingest5.clockss.org:8082 >
+    au < rsp.ClockssRSPDrupalPlugin ; finished ; frozen ; 2015 ; Interface Focus Volume 5 ; 5 ; reingest5.clockss.org:8082 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; frozen ; 2016 ; Interface Focus Volume 6 ; 6 ; reingest5.clockss.org:8082 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; frozen ; 2017 ; Interface Focus Volume 7 ; 7 ; reingest4.clockss.org:8082 >
-    au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2018 ; Interface Focus Volume 8 ; 8 ; reingest5.clockss.org:8082 >
+    au < rsp.ClockssRSPDrupalPlugin ; finished ; frozen ; 2018 ; Interface Focus Volume 8 ; 8 ; reingest5.clockss.org:8082 >
 
   }
   
@@ -165,11 +165,11 @@
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Journal of the Royal Society Interface Volume 8 ; 8 ; >
     au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 2012 ; Journal of the Royal Society Interface Volume 9 ; 9 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2013 ; Journal of the Royal Society Interface Volume 10 ; 10 ; reingest5.clockss.org:8082 >
-    au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2014 ; Journal of the Royal Society Interface Volume 11 ; 11 ; reingest1.clockss.org:8082 >
-    au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2015 ; Journal of the Royal Society Interface Volume 12 ; 12 ; reingest2.clockss.org:8085 >
-    au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2016 ; Journal of the Royal Society Interface Volume 13 ; 13 ; reingest5.clockss.org:8082 >
+    au < rsp.ClockssRSPDrupalPlugin ; finished ; frozen ; 2014 ; Journal of the Royal Society Interface Volume 11 ; 11 ; reingest1.clockss.org:8082 >
+    au < rsp.ClockssRSPDrupalPlugin ; finished ; frozen ; 2015 ; Journal of the Royal Society Interface Volume 12 ; 12 ; reingest2.clockss.org:8085 >
+    au < rsp.ClockssRSPDrupalPlugin ; finished ; frozen ; 2016 ; Journal of the Royal Society Interface Volume 13 ; 13 ; reingest5.clockss.org:8082 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; frozen ; 2017 ; Journal of the Royal Society Interface Volume 14 ; 14 ; reingest3.clockss.org:8083 >
-    au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2018 ; Journal of the Royal Society Interface Volume 15 ; 15 ; reingest1.clockss.org:8082 >
+    au < rsp.ClockssRSPDrupalPlugin ; finished ; frozen ; 2018 ; Journal of the Royal Society Interface Volume 15 ; 15 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -252,8 +252,8 @@
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Notes and Records of the Royal Society Volume 65 ; 65 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Notes and Records of the Royal Society Volume 66 ; 66 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2013 ; Notes and Records of the Royal Society Volume 67 ; 67 ; reingest4.clockss.org:8082 >
-    au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2014 ; Notes and Records the Royal Society Journal of the History of Science Volume 68 ; 68 ; reingest5.clockss.org:8082 >
-    au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2015 ; Notes and Records the Royal Society Journal of the History of Science Volume 69 ; 69 ; reingest5.clockss.org:8082 >
+    au < rsp.ClockssRSPDrupalPlugin ; finished ; frozen ; 2014 ; Notes and Records the Royal Society Journal of the History of Science Volume 68 ; 68 ; reingest5.clockss.org:8082 >
+    au < rsp.ClockssRSPDrupalPlugin ; finished ; frozen ; 2015 ; Notes and Records the Royal Society Journal of the History of Science Volume 69 ; 69 ; reingest5.clockss.org:8082 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2016 ; Notes and Records the Royal Society Journal of the History of Science Volume 70 ; 70 ; reingest2.clockss.org:8085 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2017 ; Notes and Records the Royal Society Journal of the History of Science Volume 71 ; 71 ; reingest5.clockss.org:8082 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; crawling ; 2018 ; Notes and Records the Royal Society Journal of the History of Science Volume 72 ; 72 ; reingest2.clockss.org:8085 >
