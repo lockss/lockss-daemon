@@ -14,16 +14,16 @@ import org.lockss.util.Logger;
 import java.util.Iterator;
 import java.util.regex.Pattern;
 
-public class ScienceOpenJatsSourceZipXmlArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory  {
+public class ScienceOpenSourceZipXmlArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory  {
 
     //https://clockss-test.lockss.org/sourcefiles/scienceopen-released/2020/0003c012-d129-47a7-95ca-23a5647cd8e8.zip
+    //https://clockss-test.lockss.org/sourcefiles/scienceopen-released/2020/0003c012-d129-47a7-95ca-23a5647cd8e8.zip/0003c012-d129-47a7-95ca-23a5647cd8e8.xml
+    //https://clockss-test.lockss.org/sourcefiles/scienceopen-released/2020/0003c012-d129-47a7-95ca-23a5647cd8e8.zip/0003c012-d129-47a7-95ca-23a5647cd8e8.pdf
     
-    protected static Logger log = Logger.getLogger(ScienceOpenJatsSourceZipXmlArticleIteratorFactory.class);
-    private static String ARTICLE_METADATA_JATS_META_ROLE = "ArticleMetadataJatsMeta";
-    private static String ARTICLE_METADATA_JATS_XML_ROLE = "ArticleMetadataJatsXml";
+    protected static Logger log = Logger.getLogger(ScienceOpenSourceZipXmlArticleIteratorFactory.class);
 
     protected static final String ALL_ZIP_XML_PATTERN_TEMPLATE =
-            "\"%s[^/]+/.*\\.zip!/(.*)_(Article|OnlinePDF)(_\\d+)?\\.pdf$\", base_url";
+            "\"%s[^/]+/.*\\.zip!/(.*)\\.(xml|pdf)$\", base_url";
 
     // Be sure to exclude all nested archives in case supplemental data is provided this way
     protected static final Pattern SUB_NESTED_ARCHIVE_PATTERN =
@@ -38,12 +38,10 @@ public class ScienceOpenJatsSourceZipXmlArticleIteratorFactory implements Articl
         return ALL_ZIP_XML_PATTERN_TEMPLATE;
     }
 
-    protected static final Pattern PDF_PATTERN = Pattern.compile("/BodyRef/PDF/(.*)_(Article|OnlinePDF)(_\\d+)?\\.pdf$");
-    protected static final String PDF_REPLACEMENT = "/BodyRef/PDF/$1.pdf";
-
-    protected static final String XML_REPLACEMENT = "/$1_Article$3_nlm.xml";
-
-    protected static final String XML_META_REPLACEMENT = "/$1_Article$3_nlm.xml.Meta";
+    public static final Pattern XML_PATTERN = Pattern.compile("/(.*)\\.xml$", Pattern.CASE_INSENSITIVE);
+    public static final Pattern PDF_PATTERN = Pattern.compile("/(.*)\\.pdf$", Pattern.CASE_INSENSITIVE);
+    public static final String XML_REPLACEMENT = "/$1.xml";
+    private static final String PDF_REPLACEMENT = "/$1.pdf";
 
     @Override
     public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
@@ -51,31 +49,24 @@ public class ScienceOpenJatsSourceZipXmlArticleIteratorFactory implements Articl
             throws PluginException {
         SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
 
+        // no need to limit to ROOT_TEMPLATE
         builder.setSpec(builder.newSpec()
                 .setTarget(target)
                 .setPatternTemplate(getIncludePatternTemplate(), Pattern.CASE_INSENSITIVE)
                 .setExcludeSubTreePattern(getExcludeSubTreePattern())
+                .setVisitArchiveMembers(true)
                 .setVisitArchiveMembers(getIsArchive()));
 
-        //The order of how Aspect defined is important here.
-        
         builder.addAspect(PDF_PATTERN,
-                          PDF_REPLACEMENT,
-                          ArticleFiles.ROLE_FULL_TEXT_PDF);
+                PDF_REPLACEMENT,
+                ArticleFiles.ROLE_FULL_TEXT_PDF);
 
-        builder.addAspect(XML_REPLACEMENT,
-                          ARTICLE_METADATA_JATS_XML_ROLE);
+        builder.addAspect(XML_PATTERN,
+                XML_REPLACEMENT,
+                ArticleFiles.ROLE_ARTICLE_METADATA);
 
-        builder.addAspect(XML_META_REPLACEMENT,
-                          ARTICLE_METADATA_JATS_META_ROLE);
-
-        builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF);
-        
-        //ArticleMetadata may be provided by both .xml and .xml.Meta file in case of Journals
-        //For book/book series, ArticleMetadata is provided by .xml
-        builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA,
-                                      ARTICLE_METADATA_JATS_META_ROLE,
-                                      ARTICLE_METADATA_JATS_XML_ROLE);
+        builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF,
+                ArticleFiles.ROLE_ARTICLE_METADATA);
 
         return builder.getSubTreeArticleIterator();
     }

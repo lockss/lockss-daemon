@@ -42,18 +42,13 @@ import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.JatsPublishingSchemaHelper;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
-import org.lockss.plugin.springer.SpringerBitsPublishingSchemaHelper;
 import org.lockss.util.Logger;
 import org.w3c.dom.Document;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class ScienceOpenJatsSourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
-    static Logger log = Logger.getLogger(ScienceOpenJatsSourceXmlMetadataExtractorFactory.class);
+public class ScienceOpenSourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
+    static Logger log = Logger.getLogger(ScienceOpenSourceXmlMetadataExtractorFactory.class);
 
     private static SourceXmlSchemaHelper JatsPublishingHelper = null;
-    private static SourceXmlSchemaHelper BitsPublishingHelper = null;
 
     @Override
     public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
@@ -77,46 +72,11 @@ public class ScienceOpenJatsSourceXmlMetadataExtractorFactory extends SourceXmlM
         @Override
         protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu, Document xmlDoc) {
             String url = cu.getUrl();
-            // book is using BITS format
-            if ((url != null) && url.indexOf("BOK") > -1) {
-                log.debug3("Setup Bits schema helper for url " + url);
-                if (BitsPublishingHelper == null) {
-                    BitsPublishingHelper = new SpringerBitsPublishingSchemaHelper();
-                }
-                return BitsPublishingHelper;
-            } else {
-                log.debug3("Setup Jats schema helper for url " + url);
-                // journal  material is using JATS format
-                if (JatsPublishingHelper == null) {
-                    JatsPublishingHelper = new JatsPublishingSchemaHelper();
-                }
-                return JatsPublishingHelper;
+            log.debug3("Setup Jats schema helper for url " + url);
+            if (JatsPublishingHelper == null) {
+                JatsPublishingHelper = new JatsPublishingSchemaHelper();
             }
-        }
-
-        @Override
-        protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
-                                                                ArticleMetadata oneAM) {
-
-            String pdfPath = "";
-            String url_string = cu.getUrl();
-            String replacement = "";
-            if (url_string.indexOf(".xml.Meta") > -1) {
-                replacement = "_nlm.xml.Meta";
-            } else if (url_string.indexOf("BOK") > -1 && url_string.indexOf(".xml") > -1) {
-                replacement = "_nlm.xml";
-            }
-
-            int index = url_string.lastIndexOf("/");
-            String dirPath = url_string.substring(0,index);
-            String fileName = url_string.substring(index);
-            int fileNameExtensionIndex =  fileName.length() - replacement.length();
-            pdfPath = dirPath + "/BodyRef/PDF" + fileName.replace(replacement, ".pdf");
-
-            log.debug3("pdfPath is " + pdfPath);
-            List<String> returnList = new ArrayList<String>();
-            returnList.add(pdfPath);
-            return returnList;
+            return JatsPublishingHelper;
         }
 
         @Override
