@@ -2542,10 +2542,10 @@
     au < zapped ; finished ; 2009 ; Nature Biotechnology Volume 27 ; 2009 ; 27 ; >
     au < finished ; frozen ; 2010 ; Nature Biotechnology Volume 28 ; 2010 ; 28 ; >
     au < finished ; finished ; 2011 ; Nature Biotechnology Volume 29 ; 2011 ; 29 ; >
-    au < frozen ; exists ; 2012 ; Nature Biotechnology Volume 30 ; 2012 ; 30 ; >
-    au < frozen ; exists ; 2013 ; Nature Biotechnology Volume 31 ; 2013 ; 31 ; >
-    au < frozen ; exists ; 2014 ; Nature Biotechnology Volume 32 ; 2014 ; 32 ; >
-    au < frozen ; exists ; 2015 ; Nature Biotechnology Volume 33 ; 2015 ; 33 ; >
+    au < finished ; manifest ; 2012 ; Nature Biotechnology Volume 30 ; 2012 ; 30 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2013 ; Nature Biotechnology Volume 31 ; 2013 ; 31 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2014 ; Nature Biotechnology Volume 32 ; 2014 ; 32 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2015 ; Nature Biotechnology Volume 33 ; 2015 ; 33 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2016 ; Nature Biotechnology Volume 34 ; 2016 ; 34 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; Nature Biotechnology Volume 35 ; 2017 ; 35 ; >
 
@@ -2575,11 +2575,11 @@
     au < zapped ; finished ; 2009 ; Nature Cell Biology Volume 11 ; 2009 ; 11 ; >
     au < finished ; finished ; 2010 ; Nature Cell Biology Volume 12 ; 2010 ; 12 ; >
     au < finished ; frozen ; 2011 ; Nature Cell Biology Volume 13 ; 2011 ; 13 ; >
-    au < frozen ; exists ; 2012 ; Nature Cell Biology Volume 14 ; 2012 ; 14 ; >
+    au < finished ; manifest ; 2012 ; Nature Cell Biology Volume 14 ; 2012 ; 14 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2013 ; Nature Cell Biology Volume 15 ; 2013 ; 15 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2014 ; Nature Cell Biology Volume 16 ; 2014 ; 16 ; >
-    au < frozen ; exists ; 2015 ; Nature Cell Biology Volume 17 ; 2015 ; 17 ; >
-    au < frozen ; exists ; 2016 ; Nature Cell Biology Volume 18 ; 2016 ; 18 ; >
+    au < finished ; manifest ; 2014 ; Nature Cell Biology Volume 16 ; 2014 ; 16 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2015 ; Nature Cell Biology Volume 17 ; 2015 ; 17 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2016 ; Nature Cell Biology Volume 18 ; 2016 ; 18 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; exists ; 2017 ; Nature Cell Biology Volume 19 ; 2017 ; 19 ; >
 
   }
@@ -2602,11 +2602,11 @@
     au < zapped ; finished ; 2009 ; Nature Chemical Biology Volume 5 ; 2009 ; 5 ; >
     au < finished ; finished ; 2010 ; Nature Chemical Biology Volume 6 ; 2010 ; 6 ; >
     au < finished ; manifest ; 2011 ; Nature Chemical Biology Volume 7 ; 2011 ; 7 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2012 ; Nature Chemical Biology Volume 8 ; 2012 ; 8 ; >
-    au < frozen ; exists ; 2013 ; Nature Chemical Biology Volume 9 ; 2013 ; 9 ; >
+    au < finished ; manifest ; 2012 ; Nature Chemical Biology Volume 8 ; 2012 ; 8 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2013 ; Nature Chemical Biology Volume 9 ; 2013 ; 9 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2014 ; Nature Chemical Biology Volume 10 ; 2014 ; 10 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2015 ; Nature Chemical Biology Volume 11 ; 2015 ; 11 ; >
-    au < frozen ; exists ; 2016 ; Nature Chemical Biology Volume 12 ; 2016 ; 12 ; >
+    au < finished ; manifest ; 2015 ; Nature Chemical Biology Volume 11 ; 2015 ; 11 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2016 ; Nature Chemical Biology Volume 12 ; 2016 ; 12 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; Nature Chemical Biology Volume 13 ; 2017 ; 13 ; >
 
   }
