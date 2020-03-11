@@ -39,6 +39,7 @@ import java.util.regex.Pattern;
 
 import org.apache.commons.lang.StringUtils;
 import org.jsoup.nodes.Node;
+import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.extractor.*;
 import org.lockss.extractor.JsoupHtmlLinkExtractor.SimpleTagLinkExtractor;
 import org.lockss.extractor.LinkExtractor.Callback;
@@ -66,9 +67,39 @@ implements LinkExtractorFactory {
   private static final String DIV_TAG = "div";
   private static final String ID_ATTR = "id";
 
+  private static final String FORM_TAG = "form";
+  private static final String ACTION_ATTR = "action";
+
   //main journal article landing page - extract other information from tags here
   //http://jgv.microbiologyresearch.org/content/journal/jgv/10.1099/vir.0.069286-0
-  protected static final Pattern PATTERN_ARTICLE_LANDING_URL = Pattern.compile("^(https?://[^/]+)/content/journal/[^/]+/[0-9]{2}\\.[0-9]{4}/[^/?&]+$", Pattern.CASE_INSENSITIVE); 
+  protected static final Pattern PATTERN_ARTICLE_LANDING_URL = Pattern.compile("^(https?://[^/]+)/content/journal/[^/]+/[0-9]{2}\\.[0-9]{4}/[^/?&]+$", Pattern.CASE_INSENSITIVE);
+  /*
+  PDF link used to be a href link
+  <a href="/deliver/fulltext/jmmcr/3/2/jmmcr000086.pdf?itemId=/content/journal/jmmcr/10.1099/jmmcr.0.000086&amp;mimeType=pdf&amp;isFastTrackArticle=" title="" rel="external" class="externallink pdf
+  list-group-item list-group-item-info" ><div class="fa fa-file-pdf-o full-text-icon"></div>PDF
+  <div class="fulltextsize ">
+  539.07
+  Kb
+  </div></a>
+
+
+  PDF link embedded into form action since 3/2020
+
+  <form action="/deliver/fulltext/micro/165/3/254_micro000750.pdf?itemId=%2Fcontent%2Fjournal%2Fmicro%2F10.1099%2Fmic.0.000750&mimeType=pdf&containerItemId=content/journal/micro"
+  target="/content/journal/micro/10.1099/mic.0.000750-pdf"
+  data-title="Download"
+  data-itemId="http://instance.metastore.ingenta.com/content/journal/micro/10.1099/mic.0.000750"
+  class="ft-download-content__form ft-download-content__form--pdf js-ft-download-form " >
+  <input type="hidden" name="pending" value="false" >
+  <i class="fa fa-file-pdf-o
+  access-options-icon" aria-hidden="true"></i>
+  <span class="hidden-xxs">PDF</span>
+  </form>
+   */
+
+  protected static final Pattern FORM_ACTION_PDF_URL = Pattern.compile("^/deliver/fulltext/[^/]+/[^.]+\\.pdf\\?itemId=.*", Pattern.CASE_INSENSITIVE);
+
+  /*
   
   /*
    * FUL-TEXT HTML:
@@ -103,6 +134,7 @@ implements LinkExtractorFactory {
 
   protected void registerExtractors(JsoupHtmlLinkExtractor extractor) {
     extractor.registerTagExtractor(DIV_TAG, new MsDivTagLinkExtractor(ID_ATTR));
+    extractor.registerTagExtractor(FORM_TAG, new MsFormActionExtractor(ACTION_ATTR));
   }
 
   public static class MsDivTagLinkExtractor extends SimpleTagLinkExtractor {
@@ -152,5 +184,39 @@ implements LinkExtractorFactory {
     }
       
   }
-  
+
+  // Extract PDF link from form action since the website change of 3/2020
+  public static class MsFormActionExtractor extends SimpleTagLinkExtractor {
+
+    // nothing needed in the constructor - just call the parent
+    public MsFormActionExtractor(String attr) {
+      super(attr);
+    }
+
+    public void tagBegin(Node node, ArchivalUnit au, Callback cb) {
+      String srcUrl = node.baseUri();
+
+      if ((srcUrl != null)) {
+        if (FORM_TAG.equals(node.nodeName())) {
+          String actionLink = node.attr(ACTION_ATTR);
+
+          Matcher pdfLinkMat = FORM_ACTION_PDF_URL.matcher(actionLink);
+
+          if (pdfLinkMat.matches()) {
+
+            String base = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
+            String newUrl = base + actionLink;
+
+            log.debug3("MsHtmlFormExtractor PDF link: " + newUrl);
+            
+            cb.foundLink(newUrl);
+          }
+        }
+        log.debug3("now calling the super tagBegin " + srcUrl + ", node name for " + node.nodeName());
+        super.tagBegin(node, au, cb);
+      }
+    }
+
+  }
+
 }

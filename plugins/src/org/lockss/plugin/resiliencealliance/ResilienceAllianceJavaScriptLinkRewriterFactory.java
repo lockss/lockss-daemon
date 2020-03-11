@@ -48,16 +48,14 @@ public class ResilienceAllianceJavaScriptLinkRewriterFactory implements LinkRewr
 
                     String found1 = mat.group(1);
                     String found2 = mat.group(2);
-                    String found3 = mat.group(3);
 
-                    logger.debug3("Fei: line = " + line + " + , #found1 = " + found1 + ", #found2 = " + found2 + ", #found3 = " + found3);
+                    logger.debug3("line = " + line + " + , #found1 = " + found1 + ", #found2 = " + found2);
 
                     String replacement = "/ServeContent?url=" + baseUrl.substring(0, baseUrl.length() - 1) + mat.group(2);
 
                     StringBuilder replacedUrl = new StringBuilder();
                     replacedUrl.append(found1);
                     replacedUrl.append(replacement);
-                    replacedUrl.append(found3);
 
                     logger.debug3("srcUrl = " + srcUrl + ", replacedUrl = " + replacedUrl);
 

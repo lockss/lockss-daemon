@@ -72,7 +72,7 @@
       au < gsw.ClockssGSWDrupalPlugin ; frozen ; exists ; 2013 ; Clay Minerals Volume 48 ; 48 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Clay Minerals Volume 49 ; 49 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Clay Minerals Volume 50 ; 50 ; reingest5.clockss.org:8082 >
-      au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 2016 ; Clay Minerals Volume 51 ; 51 ; reingest1.clockss.org:8082 >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; frozen ; 2016 ; Clay Minerals Volume 51 ; 51 ; reingest1.clockss.org:8082 >
       au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; exists ; 2017 ; Clay Minerals Volume 52 ; 52 ; >
 
     }
@@ -122,7 +122,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Mineralogical Magazine Volume 78 ; 78 ; >
       au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2015 ; Mineralogical Magazine Volume 79 [superseded] ; 79 ; >
       au < gsw.ClockssGSWDrupalPlugin ; finished ; finished ; 2015 ; Mineralogical Magazine Volume 79 ; 79 ; reingest1.clockss.org:8082 >
-      au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 2016 ; Mineralogical Magazine Volume 80 ; 80 ; reingest1.clockss.org:8082 >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; frozen ; 2016 ; Mineralogical Magazine Volume 80 ; 80 ; reingest1.clockss.org:8082 >
       au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; exists ; 2017 ; Mineralogical Magazine Volume 81 ; 81 ; >
 
     }

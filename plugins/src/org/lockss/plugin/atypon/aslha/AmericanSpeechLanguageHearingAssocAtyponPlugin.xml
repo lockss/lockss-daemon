@@ -30,7 +30,7 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>American Speech Language Hearing Association Journals Plugin</string>
+    <string>American Speech-Language-Hearing Association Plugin</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -42,7 +42,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"American Speech Language Hearing Association Journals Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"American Speech-Language-Hearing Association Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>text/html_filter_factory</string>

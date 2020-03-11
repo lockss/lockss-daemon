@@ -76,7 +76,7 @@
    au < finished ; finished ; 1981 ;  ; 9781560802518 ; 9781560802518 ; SQUID Applications to Geophysics (9781560802518) ; http://library.seg.org/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 1982 ;  ; 9781560802778 ; 9781560802778 ; Concepts and Techniques in Oil and Gas Exploration (9781560802778) ; http://library.seg.org/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 1985 ;  ; 9781560802723 ; 9781560802723 ; The Utility of Regional Gravity and Magnetic Anomaly Maps (9781560802723) ; http://library.seg.org/ ;  >
-   au < exists ; exists ; 1985 ; 0931830346 ; 0931830346 ; 0931830346 ; The Utility of Regional Gravity and Magnetic Anomaly Maps (0931830346) ; https://library.seg.org/ ;  >
+   au < manifest ; exists ; 1985 ; 0931830346 ; 0931830346 ; 0931830346 ; The Utility of Regional Gravity and Magnetic Anomaly Maps (0931830346) ; https://library.seg.org/ ;  >
    au < finished ; finished ; 1989 ;  ; 9781560802389 ; 9781560802389 ; 50 Years of Geophysical Ideas (9781560802389) ; http://library.seg.org/ ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 1990 ;  ; 9781560802457 ; 9781560802457 ; Reflections of a Seismic Interpreter (9781560802457) ; http://library.seg.org/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 1994 ;  ; 9781560802617 ; 9781560802617 ; Theory of Seismic Diffractions (9781560802617) ; http://library.seg.org/ ;  >
@@ -192,8 +192,8 @@
    type = bookSeries
   >
    au < finished ; finished ; 1988 ;  ; 9781560802631 ; 9781560802631 ; Electromagnetic Methods in Applied Geophysics: Volume 1, Theory (9781560802631) ; http://library.seg.org/ ; reingest1.clockss.org:8082 >
-   au < exists ; exists ; 1990 ;  ; 9781560802785.1 ; 9781560802785.1 ; Geotechnical and Environmental Geophysics: Volume I: Review and Tutorial (9781560802785) ; http://library.seg.org/ ; >
-   au < finished ; finished ; 1990 ;  ; 9781560802785 ; 9781560802785 ; Geotechnical and Environmental Geophysics: Volume II: Environmental and Groundwater (9781560802785.2) ; https://library.seg.org/ ; reingest2.clockss.org:8085 >
+   au < exists ; exists ; 1990 ;  ; 9781560802785.1 ; 9781560802785.1 ; Geotechnical and Environmental Geophysics: Volume I: Review and Tutorial (9781560802785) ; https://library.seg.org/ ; >
+   au < finished ; finished ; 1990 ;  ; 9781560802785 ; 9781560802785 ; Geotechnical and Environmental Geophysics: Volume II: Environmental and Groundwater (9781560802785.2) ; http://library.seg.org/ ; reingest2.clockss.org:8085 >
    au < exists ; exists ; 1990 ;  ; 9781560802785.3 ; 9781560802785.3 ; Geotechnical and Environmental Geophysics: Volume III: Geotechnical (9781560802785.3) ; https://library.seg.org/ ;  >
    au < finished ; finished ; 1990 ;  ; 9781560802594 ; 9781560802594 ; Induced Polarization Applications and Case Histories (9781560802594) ; http://library.seg.org/ ;  >
    au < finished ; finished ; 1991 ;  ; 9781560802686 ; 9781560802686 ; Electromagnetic Methods in Applied Geophysics: Volume 2, Application, Parts A and B (9781560802686) ; http://library.seg.org/ ;  >

@@ -1,0 +1,171 @@
+{
+
+  publisher <
+    name = American Psychiatric Association Publishing
+  >
+
+  comment[platform] = Atypon
+  plugin = org.lockss.plugin.atypon.ampsychpub.AmPsychPubAtyponPlugin
+  implicit < status ; year ; name ; param[volume_name] >
+
+
+    {
+      title <
+        name = The American Journal of Psychiatry ;
+        issn = 0002-953X ;
+        eissn = 1535-7228 ;
+        issnl = 0002-953X
+      >
+
+
+      param[base_url] = https://ajp.psychiatryonline.org/
+      param[journal_id] = ajp
+      # content starts from 1844 to current
+
+      au < doNotProcess ; 1997 ; The American Journal of Psychiatry Volume 154 ; 154 >
+      au < doNotProcess ; 1998 ; The American Journal of Psychiatry Volume 155 ; 155 >
+      au < doNotProcess ; 1999 ; The American Journal of Psychiatry Volume 156 ; 156 >
+      au < doNotProcess ; 2000 ; The American Journal of Psychiatry Volume 157 ; 157 >
+      au < doNotProcess ; 2001 ; The American Journal of Psychiatry Volume 158 ; 158 >
+      au < doNotProcess ; 2002 ; The American Journal of Psychiatry Volume 159 ; 159 >
+      au < doNotProcess ; 2003 ; The American Journal of Psychiatry Volume 160 ; 160 >
+      au < doNotProcess ; 2004 ; The American Journal of Psychiatry Volume 161 ; 161 >
+      au < doNotProcess ; 2005 ; The American Journal of Psychiatry Volume 162 ; 162 >
+      au < doNotProcess ; 2006 ; The American Journal of Psychiatry Volume 163 ; 163 >
+      au < doNotProcess ; 2007 ; The American Journal of Psychiatry Volume 164 ; 164 >
+      au < doNotProcess ; 2008 ; The American Journal of Psychiatry Volume 165 ; 165 >
+      au < doNotProcess ; 2009 ; The American Journal of Psychiatry Volume 166 ; 166 >
+      au < doNotProcess ; 2010 ; The American Journal of Psychiatry Volume 167 ; 167 >
+      au < doNotProcess ; 2011 ; The American Journal of Psychiatry Volume 168 ; 168 >
+      au < released ; 2011 ; The American Journal of Psychiatry Volume 168 ; 168 >
+      au < released ; 2012 ; The American Journal of Psychiatry Volume 169 ; 169 >
+      au < released ; 2013 ; The American Journal of Psychiatry Volume 170 ; 170 >
+      au < released ; 2014 ; The American Journal of Psychiatry Volume 171 ; 171 >
+      au < released ; 2015 ; The American Journal of Psychiatry Volume 172 ; 172 >
+      au < released ; 2016 ; The American Journal of Psychiatry Volume 173 ; 173 >
+      au < released ; 2017 ; The American Journal of Psychiatry Volume 174 ; 174 >
+      au < notReady ; 2018 ; The American Journal of Psychiatry Volume 175 ; 175 > #500 Internal Server Error
+      au < manifest ; 2019 ; The American Journal of Psychiatry Volume 176 ; 176 >
+
+    }
+
+    {
+      title <
+        name = Focus ;
+        issn = 1541-4094 ;
+        eissn = 1541-4108 ;
+        issnl = 1541-4094
+      >
+
+      param[base_url] = https://focus.psychiatryonline.org/
+      param[journal_id] = foc
+
+      au < doNotProcess ; 2003 ; Focus Volume 1 ; 1 >
+      au < doNotProcess ; 2004 ; Focus Volume 2 ; 2 >
+      au < doNotProcess ; 2005 ; Focus Volume 3 ; 3 >
+      au < doNotProcess ; 2006 ; Focus Volume 4 ; 4 >
+      au < doNotProcess ; 2007 ; Focus Volume 5 ; 5 >
+      au < doNotProcess ; 2008 ; Focus Volume 6 ; 6 >
+      au < doNotProcess ; 2009 ; Focus Volume 7 ; 7 >
+      au < doNotProcess ; 2010 ; Focus Volume 8 ; 8 >
+      au < doNotProcess ; 2011 ; Focus Volume 9 ; 9 >
+      au < released ; 2012 ; FOCUS Volume 10 ; 10 >
+      au < released ; 2013 ; FOCUS Volume 11 ; 11 >
+      au < released ; 2014 ; FOCUS Volume 12 ; 12 >
+      au < released ; 2015 ; FOCUS Volume 13 ; 13 >
+      au < released ; 2016 ; FOCUS Volume 14 ; 14 >
+      au < released ; 2017 ; FOCUS Volume 15 ; 15 >
+      au < notReady ; 2018 ; FOCUS Volume 16 ; 16 > #500 Internal Server Error
+      au < manifest ; 2019 ; FOCUS Volume 17 ; 17 >
+
+    }
+
+    {
+      title <
+        name = Journal of Neuropsychiatry and Clinical Neurosciences ;
+        issn = 0895-0172 ;
+        eissn = 1545-7222 ;
+        issnl = 0895-0172
+      >
+
+      param[base_url] = https://neuro.psychiatryonline.org/
+      param[journal_id] = jnp
+      # content starts from 1989 to current
+
+      au < doNotProcess ; 1998 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 10 ; 10 >
+      au < doNotProcess ; 1999 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 11 ; 11 >
+      au < doNotProcess ; 2000 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 12 ; 12 >
+      au < doNotProcess ; 2001 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 13 ; 13 >
+      au < doNotProcess ; 2002 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 14 ; 14 >
+      au < doNotProcess ; 2003 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 15 ; 15 >
+      au < doNotProcess ; 2004 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 16 ; 16 >
+      au < doNotProcess ; 2005 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 17 ; 17 >
+      au < doNotProcess ; 2006 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 18 ; 18 >
+      au < doNotProcess ; 2007 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 19 ; 19 >
+      au < doNotProcess ; 2008 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 20 ; 20 >
+      au < doNotProcess ; 2009 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 21 ; 21 >
+      au < doNotProcess ; 2010 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 22 ; 22 >
+      au < doNotProcess ; 2011 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 23 ; 23 >
+      au < released ; 2012 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 24 ; 24 >
+      au < released ; 2013 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 25 ; 25 >
+      au < released ; 2014 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 26 ; 26 >
+      au < released ; 2015 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 27 ; 27 >
+      au < released ; 2016 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 28 ; 28 >
+      au < released ; 2017 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 29 ; 29 >
+      au < notReady ; 2018 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 30 ; 30 > #500 Internal Server Error
+      au < manifest ; 2019 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 31 ; 31 >
+
+    }
+
+    {
+      title <
+        name = Psychiatric Services ;
+        issn = 1075-2730 ;
+        eissn = 1557-9700 ;
+        issnl = 1075-2730
+      >
+
+      param[base_url] = https://ps.psychiatryonline.org/
+      param[journal_id] = ps
+      # content starts from year 1950 to current
+
+      au < doNotProcess ; 1998 ; Psychiatric Services Volume 49 ; 49 >
+      au < doNotProcess ; 1999 ; Psychiatric Services Volume 50 ; 50 >
+      au < doNotProcess ; 2000 ; Psychiatric Services Volume 51 ; 51 >
+      au < doNotProcess ; 2001 ; Psychiatric Services Volume 52 ; 52 >
+      au < doNotProcess ; 2002 ; Psychiatric Services Volume 53 ; 53 >
+      au < doNotProcess ; 2003 ; Psychiatric Services Volume 54 ; 54 >
+      au < doNotProcess ; 2004 ; Psychiatric Services Volume 55 ; 55 >
+      au < doNotProcess ; 2005 ; Psychiatric Services Volume 56 ; 56 >
+      au < doNotProcess ; 2006 ; Psychiatric Services Volume 57 ; 57 >
+      au < doNotProcess ; 2007 ; Psychiatric Services Volume 58 ; 58 >
+      au < doNotProcess ; 2008 ; Psychiatric Services Volume 59 ; 59 >
+      au < doNotProcess ; 2009 ; Psychiatric Services Volume 60 ; 60 >
+      au < doNotProcess ; 2010 ; Psychiatric Services Volume 61 ; 61 >
+      au < doNotProcess ; 2011 ; Psychiatric Services Volume 62 ; 62 >
+      au < released ; 2012 ; Psychiatric Services Volume 63 ; 63 >
+      au < released ; 2013 ; Psychiatric Services Volume 64 ; 64 >
+      au < released ; 2014 ; Psychiatric Services Volume 65 ; 65 >
+      au < released ; 2015 ; Psychiatric Services Volume 66 ; 66 >
+      au < released ; 2016 ; Psychiatric Services Volume 67 ; 67 >
+      au < released ; 2017 ; Psychiatric Services Volume 68 ; 68 >
+      au < notReady ; 2018 ; Psychiatric Services Volume 69 ; 69 > #500 Internal Server Error
+      au < manifest ; 2019 ; Psychiatric Services Volume 70 ; 70 >
+
+    }
+    {
+      title <
+        name = Psychiatric Research and Clinical Practice ;
+        eissn = 2575-5609
+      >
+
+      param[base_url] = https://prcp.psychiatryonline.org/
+      param[journal_id] = prcp
+      # content starts from year 2018
+
+      au < notReady ; 2018 ; Psychiatric Research and Clinical Practice Volume 1 ; 1 > #500 Internal Server Error
+      au < expected ; 2019 ; Psychiatric Research and Clinical Practice Volume 2 ; 2 >
+
+    }
+
+}

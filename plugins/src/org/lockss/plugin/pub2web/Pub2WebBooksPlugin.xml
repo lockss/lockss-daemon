@@ -113,6 +113,8 @@
   </entry>
   <entry>
   <!-- http://www.asmscience.org/content/book/10.1128/9781555817992.chap3?crawler=true&mimetype=application/pdf-->
+    <!-- PDF link changed to this on 3/2020:
+    https://www.asmscience.org/deliver/fulltext/10.1128/9781683670247/9781683670230_FM.pdf?itemId=/content/book/10.1128/9781683670247.cont01&mimeType=pdf -->
     <string>au_substance_url_pattern</string>
     <string>"^%scontent/book/%s[^?/]*\?crawler=true&amp;mimetype=application/pdf$", base_url, doi</string>
   </entry>

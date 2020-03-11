@@ -1,0 +1,125 @@
+<map>
+    <entry>
+        <string>plugin_status</string>
+        <string>development</string>
+    </entry>
+    <entry>
+        <string>plugin_identifier</string>
+        <string>org.lockss.plugin.highwire.ers.ClockssERSBookPlugin</string>
+    </entry>
+    <entry>
+        <string>plugin_name</string>
+        <string>European Respiratory Society Plugin (CLOCKSS)</string>
+    </entry>
+    <entry>
+        <string>plugin_version</string>
+        <string>1</string>
+    </entry>
+    <entry>
+        <string>plugin_feature_version_map</string>
+        <map>
+            <entry>
+                <string>Substance</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Poll</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Metadata</string>
+                <string>1</string>
+            </entry>
+        </map>
+    </entry>
+    <entry>
+        <string>au_start_url</string>
+        <string>"%slockss-manifest/books_manifest.html", base_url</string>
+    </entry>
+    <entry>
+        <string>au_name</string>
+        <string>"European Respiratory Society Book Plugin (CLOCKSS), Base URL %s, eISBN %s", base_url, book_eisbn</string>
+    </entry>
+    <entry>
+        <string>plugin_config_props</string>
+        <list>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>base_url</key>
+                <displayName>Base URL</displayName>
+                <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+                <type>3</type>
+                <size>40</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>book_eisbn</key>
+                <displayName>Book eISBN</displayName>
+                <description>International Standard Book Number</description>
+                <type>1</type>
+                <size>40</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+        </list>
+    </entry>
+    <entry>
+        <string>au_crawlrules</string>
+        <list>
+            <string>1,"^%slockss-manifest/", base_url</string>
+            <string>1,"^%s(lookup|content|sites|misc)/", base_url</string>
+        </list>
+    </entry>
+    <entry>
+        <string>au_refetch_depth</string>
+        <int>2</int>
+    </entry>
+    <entry>
+        <string>plugin_cache_result_list</string>
+        <list>
+            <!--  starting to see some 403 on supplementary content that isn't just a crawler issue -->
+            <string>403=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
+            <string>500=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
+            <string>502=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
+            <string>503=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
+            <string>504=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
+            <string>520=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
+            <string>524=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
+            <!-- Invalid content-type file; retry. Captures cases of html returned instead of PDF
+              This usually was an html page with backend error message
+              Make no store/no_fail due to article html returned for http://caseconnector.jbjs.org/content/2/2/e16
+              we will count on polls to catch errors where no content was stored -->
+            <string>org.lockss.plugin.ContentValidationException=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
+        </list>
+    </entry>
+    <entry>
+        <string>au_repair_from_peer_if_missing_url_pattern</string>
+        <list>
+            <string>.+[.](bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)(\?.*)?$"</string>
+            <string>fonts\.googleapis\.com/css\?</string>
+        </list>
+    </entry>
+    <entry>
+        <string>au_url_poll_result_weight</string>
+        <list>
+            <string>".+[.](bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)(\?.*)?$", 0</string>
+            <string>"fonts\.googleapis\.com/css\?", 0</string>
+        </list>
+    </entry>
+    <!--
+       https://fonts.googleapis.com/css?family=PT+Sans:700,700italic,italic,regular%7CPT+Sans+Caption:700,regular%7CPT+Sans+Narrow:700,regular&subset=latin
+        https://www.googletagservices.com/tag/js/gpt.js
+        https://cdn.foxycart.com/erspublications.ecommerce.highwire.org/loader.js
+        https://cdn.jsdelivr.net/qtip2/2.2.1/jquery.qtip.min.css
+        https://cdn.jsdelivr.net/qtip2/2.2.1/jquery.qtip.min.js
+    -->
+    <entry>
+        <string>au_permitted_host_pattern</string>
+        <list>
+            <string>(fonts|ajax)\.googleapis\.com</string>
+            <string>"cdnjs\.cloudflare\.com"</string>
+            <string>"fonts\.gstatic\.com</string>
+            <string>cdn\.jsdelivr\.net</string>
+        </list>
+    </entry>
+</map>

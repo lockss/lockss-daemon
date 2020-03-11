@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>British Institute of Radiology Publishing Plugin</string>
+    <string>British Institute of Radiology Plugin</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -42,7 +42,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"British Institute of Radiology Publishing Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"British Institute of Radiology Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
   <!--  override start url from parent to support http to https conversion -->
   <entry>
@@ -64,8 +64,8 @@
   <entry>
     <string>plugin_url_consumer_factory</string>
     <string>org.lockss.plugin.atypon.BaseAtyponHttpToHttpsUrlConsumerFactory</string>
-  </entry>  
-<!-- end changes for https conversion -->    
+  </entry>
+<!-- end changes for https conversion -->
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.atypon.bir.BIRAtyponHtmlHashFilterFactory</string>

@@ -35,7 +35,7 @@
     au < released ; 2016 ; Agricultural & Environmental Letters Volume 1 ; 1 >
     au < released ; 2017 ; Agricultural & Environmental Letters Volume 2 ; 2 >
     au < released ; 2018 ; Agricultural & Environmental Letters Volume 3 ; 3 >
-    au < manifest ; 2019 ; Agricultural & Environmental Letters Volume 4 ; 4 >
+    au < testing ; 2019 ; Agricultural & Environmental Letters Volume 4 ; 4 >
 
   }
 
@@ -67,7 +67,7 @@
     au < released ; 2016 ; Agronomy Journal Volume 108 ; 108 >
     au < released ; 2017 ; Agronomy Journal Volume 109 ; 109 >
     au < released ; 2018 ; Agronomy Journal Volume 110 ; 110 >
-    au < manifest ; 2019 ; Agronomy Journal Volume 111 ; 111 >
+    au < testing ; 2019 ; Agronomy Journal Volume 111 ; 111 >
 
   }
 
@@ -98,7 +98,7 @@
     au < released ; 2016 ; Crops & Soils Magazine Volume 49 ; 49 >
     au < released ; 2017 ; Crops & Soils Magazine Volume 50 ; 50 >
     au < released ; 2018 ; Crops & Soils Magazine Volume 51 ; 51 >
-    au < manifest ; 2019 ; Crops & Soils Magazine Volume 52 ; 52 >
+    au < testing ; 2019 ; Crops & Soils Magazine Volume 52 ; 52 >
 
 
   }
@@ -122,15 +122,15 @@
     au < released ; 2008 ; Crop Science Volume 48 ; 48 >
     au < released ; 2009 ; Crop Science Volume 49 ; 49 >
     au < released ; 2010 ; Crop Science Volume 50 ; 50 >
-    au < manifest ; 2011 ; Crop Science Volume 51 ; 51 >
-    au < manifest ; 2012 ; Crop Science Volume 52 ; 52 >
+    au < testing ; 2011 ; Crop Science Volume 51 ; 51 >
+    au < testing ; 2012 ; Crop Science Volume 52 ; 52 >
     au < released ; 2013 ; Crop Science Volume 53 ; 53 >
     au < released ; 2014 ; Crop Science Volume 54 ; 54 >
     au < released ; 2015 ; Crop Science Volume 55 ; 55 >
     au < released ; 2016 ; Crop Science Volume 56 ; 56 >
     au < released ; 2017 ; Crop Science Volume 57 ; 57 >
     au < released ; 2018 ; Crop Science Volume 58 ; 58 >
-    au < manifest ; 2019 ; Crop Science Volume 59 ; 59 >
+    au < testing ; 2019 ; Crop Science Volume 59 ; 59 >
 
   }
 
@@ -161,7 +161,7 @@
     au < released ; 2016 ; CSA News Volume 61 ; 61 >
     au < released ; 2017 ; CSA News Volume 62 ; 62 >
     au < released ; 2018 ; CSA News Volume 63 ; 63 >
-    au < manifest ; 2019 ; CSA News Volume 64 ; 64 >
+    au < testing ; 2019 ; CSA News Volume 64 ; 64 >
 
   }
 
@@ -193,7 +193,7 @@
     au < released ; 2016 ; Journal of Environmental Quality Volume 45 ; 45 >
     au < released ; 2017 ; Journal of Environmental Quality Volume 46 ; 46 >
     au < released ; 2018 ; Journal of Environmental Quality Volume 47 ; 47 >
-    au < manifest ; 2019 ; Journal of Environmental Quality Volume 48 ; 48 >
+    au < testing ; 2019 ; Journal of Environmental Quality Volume 48 ; 48 >
 
 
   }
@@ -222,7 +222,7 @@
     au < released ; 2016 ; Journal of Plant Registrations Volume 10 ; 10 >
     au < released ; 2017 ; Journal of Plant Registrations Volume 11 ; 11 >
     au < released ; 2018 ; Journal of Plant Registrations Volume 12 ; 12 >
-    au < manifest ; 2019 ; Journal of Plant Registrations Volume 13 ; 13 >
+    au < testing ; 2019 ; Journal of Plant Registrations Volume 13 ; 13 >
 
   }
 
@@ -239,8 +239,8 @@
 
     param[journal_id] = jpa
 
-    au < manifest ; 1998 ; Journal of Production Agriculture Volume 11 ; 11 >
-    au < manifest ; 1999 ; Journal of Production Agriculture Volume 12 ; 12 >
+    au < testing ; 1998 ; Journal of Production Agriculture Volume 11 ; 11 >
+    au < testing ; 1999 ; Journal of Production Agriculture Volume 12 ; 12 >
 
   }
 
@@ -270,7 +270,7 @@
     au < released ; 2016 ; Natural Sciences Education Volume 45 ; 45 >
     au < released ; 2017 ; Natural Sciences Education Volume 46 ; 46 >
     au < released ; 2018 ; Natural Sciences Education Volume 47 ; 47 >
-    au < manifest ; 2019 ; Natural Sciences Education Volume 48 ; 48 >
+    au < testing ; 2019 ; Natural Sciences Education Volume 48 ; 48 >
 
   }
 
@@ -297,7 +297,7 @@
     au < released ; 2016 ; The Plant Genome Volume 9 ; 9 >
     au < released ; 2017 ; The Plant Genome Volume 10 ; 10 >
     au < released ; 2018 ; The Plant Genome Volume 11 ; 11 >
-    au < manifest ; 2019 ; The Plant Genome Volume 12 ; 12 >
+    au < testing ; 2019 ; The Plant Genome Volume 12 ; 12 >
 
   }
 
@@ -313,10 +313,10 @@
     
     param[journal_id] = sh
 
-    au < manifest ; 2005 ; Soil Horizons Volume 46 ; 46 >
-    au < manifest ; 2006 ; Soil Horizons Volume 47 ; 47 >
-    au < manifest ; 2007 ; Soil Horizons Volume 48 ; 48 >
-    au < manifest ; 2008 ; Soil Horizons Volume 49 ; 49 >
+    au < testing ; 2005 ; Soil Horizons Volume 46 ; 46 >
+    au < testing ; 2006 ; Soil Horizons Volume 47 ; 47 >
+    au < testing ; 2007 ; Soil Horizons Volume 48 ; 48 >
+    au < testing ; 2008 ; Soil Horizons Volume 49 ; 49 >
     au < released ; 2009 ; Soil Horizons Volume 50 ; 50 >
     au < released ; 2010 ; Soil Horizons Volume 51 ; 51 >
     au < released ; 2011 ; Soil Horizons Volume 52 ; 52 >
@@ -341,11 +341,11 @@
     
     param[journal_id] = sssaj
 
-    au < manifest ; 2005 ; Soil Science Society of America Journal Volume 69 ; 69 >
-    au < manifest ; 2006 ; Soil Science Society of America Journal Volume 70 ; 70 >
-    au < manifest ; 2007 ; Soil Science Society of America Journal Volume 71 ; 71 >
-    au < manifest ; 2008 ; Soil Science Society of America Journal Volume 72 ; 72 >
-    au < manifest ; 2009 ; Soil Science Society of America Journal Volume 73 ; 73 >
+    au < testing ; 2005 ; Soil Science Society of America Journal Volume 69 ; 69 >
+    au < testing ; 2006 ; Soil Science Society of America Journal Volume 70 ; 70 >
+    au < testing ; 2007 ; Soil Science Society of America Journal Volume 71 ; 71 >
+    au < testing ; 2008 ; Soil Science Society of America Journal Volume 72 ; 72 >
+    au < testing ; 2009 ; Soil Science Society of America Journal Volume 73 ; 73 >
     au < released ; 2010 ; Soil Science Society of America Journal Volume 74 ; 74 >
     au < released ; 2011 ; Soil Science Society of America Journal Volume 75 ; 75 >
     au < released ; 2012 ; Soil Science Society of America Journal Volume 76 ; 76 >
@@ -355,7 +355,7 @@
     au < released ; 2016 ; Soil Science Society of America Journal Volume 80 ; 80 >
     au < released ; 2017 ; Soil Science Society of America Journal Volume 81 ; 81 >
     au < released ; 2018 ; Soil Science Society of America Journal Volume 82 ; 82 >
-    au < manifest ; 2019 ; Soil Science Society of America Journal Volume 83 ; 83 >
+    au < testing ; 2019 ; Soil Science Society of America Journal Volume 83 ; 83 >
 
   }
 
@@ -386,7 +386,7 @@
     au < released ; 2016 ; Vadose Zone Journal Volume 15 ; 15 >
     au < released ; 2017 ; Vadose Zone Journal Volume 16 ; 16 >
     au < released ; 2018 ; Vadose Zone Journal Volume 17 ; 17 >
-    au < manifest ; 2019 ; Vadose Zone Journal Volume 18 ; 18 >
+    au < testing ; 2019 ; Vadose Zone Journal Volume 18 ; 18 >
 
   }
 
