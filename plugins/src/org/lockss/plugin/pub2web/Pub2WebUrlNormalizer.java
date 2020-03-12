@@ -93,6 +93,27 @@ public class Pub2WebUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
  *     content/journal/jgv/10.1099/vir.0.067363-0/figures?fmt=ahah 
  *     
  */
+
+ /*
+  The following code will cause redirect loop, please see the log:
+  """
+  > Warning         https://www.asmscience.org/content/book/10.1128/9781683670247.cont01?crawler=true&mimetype=application/pdf              302 Found
+
+  This is in the log:
+
+  11:06:50.274: Warning: 1622-BaseUrlFetcher: Max redirects hit, not redirecting https://www.asmscience.org/content/book/10.1128/9781683670247.cont01?crawler=true&mimetype=application/pdf past https://www.asmscience.org/content/book/10.1128/9781683670247.cont01?crawler=true&mimetype=application/pdf
+
+  It will follow a maxinum of 10 redirects, but as both URLs in the
+
+  message are the same it looks like a redirect loop.
+  """
+
+  15:16:07.588: Debug3: 9-JsoupHtmlLinkExtractor: FoundLink (before resolver):https://www.asmscience.org/deliver/fulltext/10.1128/9781683670247/9781683670230_FM.pdf?itemId=/content/book/10.1128/9781683670247.cont01&mimeType=pdf
+  15:16:07.588: Debug3: 9-Pub2WebUrlNormalizer: about to norm: https://www.asmscience.org/deliver/fulltext/10.1128/9781683670247/9781683670230_FM.pdf?itemId=/content/book/10.1128/9781683670247.cont01&mimeType=pdf
+  15:16:07.588: Debug3: 9-Pub2WebUrlNormalizer: full text url: https://www.asmscience.org/deliver/fulltext/10.1128/9781683670247/9781683670230_FM.pdf?itemId=/content/book/10.1128/9781683670247.cont01&mimeType=pdf
+  15:16:07.588: Debug3: 9-Pub2WebUrlNormalizer: normalized to: https://www.asmscience.org/content/book/10.1128/9781683670247.cont01?crawler=true&mimetype=application/pdf
+  15:16:07.588: Debug3: 9-UrlUtil: Normalizing https://www.asmscience.org/content/book/10.1128/9781683670247.cont01?crawler=true&mimetype=application/pdf
+  */
   @Override
   public String additionalNormalization(String url, ArchivalUnit au) throws PluginException {
 

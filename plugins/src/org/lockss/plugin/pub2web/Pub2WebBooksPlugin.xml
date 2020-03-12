@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>13</string>
+    <string>14</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Substance</string>
-        <string>7</string>
+        <string>8</string>
       </entry>
     </map>
   </entry>
@@ -100,6 +100,10 @@
      This is the link we extract and noralize to the crawler version
        /deliver/fulltext/10.1128/9781555817992/chap3.html
           ?itemId=/content/book/10.1128/9781555817992.chap3&mimeType=html&fmt=ahah
+
+    The following is the updated debug infor on 3/2020:
+    https://www.asmscience.org/deliver/fulltext/10.1128/9781683670247/9781683670230_FM.pdf?itemId=/content/book/10.1128/9781683670247.cont01&mimeType=pdf
+    Redirected to excluded URL: http://www.asmscience.org/docserver/fulltext/10.1128/9781683670247/9781683670230_FM.pdf?expires=1584036624&id=id&accname=guest&checksum=7CA1F1DECA1B70D4D119F77ED0716819
     -->
     <list>
       <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff.?)(\?([0-9]+|config=|v=).*)?$", url_host(base_url)</string>
@@ -108,7 +112,7 @@
       <!--  the version we allow ends in '&fmt=ahah' -->
       <!-- <string>2,"^%sdeliver/fulltext/%s/[^?/]+\.html\?itemId=[^&amp;]+&amp;mimeType=html(&amp;isFastTrackArticle=)?$", base_url, doi</string>-->
       <string>1,"^%sdeliver/fulltext/%s", base_url, doi</string>
-      <string>1,"^%sdocserver(/ahah)?/fulltext/%s", base_url, doi</string>
+      <string>1,"^^https?://%s/docserver(/ahah)?/fulltext/%s", url_host(base_url), doi</string>
     </list>
   </entry>
   <entry>
@@ -116,7 +120,7 @@
     <!-- PDF link changed to this on 3/2020:
     https://www.asmscience.org/deliver/fulltext/10.1128/9781683670247/9781683670230_FM.pdf?itemId=/content/book/10.1128/9781683670247.cont01&mimeType=pdf -->
     <string>au_substance_url_pattern</string>
-    <string>"^%scontent/book/%s[^?/]*\?crawler=true&amp;mimetype=application/pdf$", base_url, doi</string>
+    <string>"^%sdeliver/fulltext/%s/[^./]+\.pdf\?itemId=.*", base_url, doi</string>
   </entry>
   <!--  au_crawl_depth is default, 1...the start url is the book landing page  -->
   <!-- repair from peer
@@ -161,10 +165,17 @@
     <string>application/pdf_filter_factory</string>
     <string>org.lockss.plugin.pub2web.Pub2WebPdfFilterFactory</string>
   </entry>
+  <!--By 3/2020, the following UrlNormalizer will cause redirect loop for the PDF link  like this:
+  <a href="/deliver/fulltext/10.1128/9781683670247/9781683670230_FM.pdf?itemId=/content/book/10.1128/9781683670247.cont01&amp;mimeType=pdf" title=""
+  class="externallink pdf" ><h2>Click Here to Take a Look</h2>
+  <img class="cover fleft" src="/docserver/fulltext/10.1128/9781683670247/9781683670230_smallcover.gif"
+  alt="image of Regulating with RNA in Bacteria and Archaea"
+  title="image of Regulating with RNA in Bacteria and Archaea" /></a>
   <entry>
     <string>au_url_normalizer</string>
     <string>org.lockss.plugin.pub2web.Pub2WebUrlNormalizer</string>
   </entry>
+  -->
 <!--  child plugins should define their own crawl filter/html filter until we see patterns -->
 <!--  child plugins will also probably need their own link extractor  -->
   <entry>
