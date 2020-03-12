@@ -2505,7 +2505,7 @@
 #      param[base_url] = https://www.revue-relief.org/
 
       au < finished ; crawling ; 2007 ; 1 ; RELIEF Volume 2007 ; 2007 ; https://www.revue-relief.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2008 ; 2 ; RELIEF Volume 2008 ; 2008 ; https://www.revue-relief.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2008 ; 2 ; RELIEF Volume 2008 ; 2008 ; https://www.revue-relief.org/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2009 ; 3 ; RELIEF Volume 2009 ; 2009 ; https://www.revue-relief.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2010 ; 4 ; RELIEF Volume 2010 ; 2010 ; https://www.revue-relief.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2011 ; 5 ; RELIEF Volume 2011 ; 2011 ; https://www.revue-relief.org/ ; reingest5.clockss.org:8082 >
