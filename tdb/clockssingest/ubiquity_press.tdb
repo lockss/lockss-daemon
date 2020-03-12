@@ -970,8 +970,8 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://www.revista-anglo-saxonica.org/
 
-      au < exists ; exists ; 2019 ; 17 ; Architectural Histories Volume 2019 ; 2019 ; https://www.revista-anglo-saxonica.org/ ; >
-      au < manifest ; exists ; 2020 ; 18 ; Architectural Histories Volume 2020 ; 2020 ; https://www.revista-anglo-saxonica.org/ ; >
+      au < exists ; exists ; 2019 ; 17 ; Anglo Saxonica Volume 2019 ; 2019 ; https://www.revista-anglo-saxonica.org/ ; >
+      au < manifest ; exists ; 2020 ; 18 ; Anglo Saxonica Volume 2020 ; 2020 ; https://www.revista-anglo-saxonica.org/ ; >
 
   }
 
@@ -1613,7 +1613,7 @@
       au < finished ; manifest ; 2017 ; 11 ; International Journal of the Commons Volume 2017 ; 2017 ; https://www.thecommonsjournal.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 12 ; International Journal of the Commons Volume 2018 ; 2018 ; https://www.thecommonsjournal.org/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2019 ; 13 ; International Journal of the Commons Volume 2019 ; 2019 ; https://www.thecommonsjournal.org/ ; >
-      au < exists ; exists ; 2020 ; 14 ; International Journal of the Commons Volume 2019 ; 2019 ; https://www.thecommonsjournal.org/ ; >
+      au < exists ; exists ; 2020 ; 14 ; International Journal of the Commons Volume 2020 ; 2020 ; https://www.thecommonsjournal.org/ ; >
 
   }
 
@@ -2505,7 +2505,7 @@
 #      param[base_url] = https://www.revue-relief.org/
 
       au < finished ; crawling ; 2007 ; 1 ; RELIEF Volume 2007 ; 2007 ; https://www.revue-relief.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2008 ; 2 ; RELIEF Volume 2008 ; 2008 ; https://www.revue-relief.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2008 ; 2 ; RELIEF Volume 2008 ; 2008 ; https://www.revue-relief.org/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2009 ; 3 ; RELIEF Volume 2009 ; 2009 ; https://www.revue-relief.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2010 ; 4 ; RELIEF Volume 2010 ; 2010 ; https://www.revue-relief.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2011 ; 5 ; RELIEF Volume 2011 ; 2011 ; https://www.revue-relief.org/ ; reingest5.clockss.org:8082 >

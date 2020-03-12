@@ -23,10 +23,10 @@
 
     au < finished ; frozen ; 2008 ; 978-0-89118-188-0 ; Response of Crops to Limited Water: Understanding and Modeling Water Stress Effects on Plant Growth Processes ; responseofcrops ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2011 ; 978-0-89118-196-5 ; Methods of Introducing System Models into Agricultural Research ; methodsofintrod ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2013 ; 978-0-89118-339-6 ; Enhancing Understanding and Quantification of Soil–Root Growth Interactions ; enhancingunder ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2013 ; 978-0-89118-957-2 ; Quantifying and Modeling Soil Structure Dynamics ; quantifyingandm ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; 978-0-89118-339-6 ; Enhancing Understanding and Quantification of Soil–Root Growth Interactions ; enhancingunder ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2013 ; 978-0-89118-957-2 ; Quantifying and Modeling Soil Structure Dynamics ; quantifyingandm ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 978-0-89118-344-0 ; Practical Applications of Agricultural System Models to Optimize the Use of Limited Water ; practicalapplic ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; 978-0-89118-352-5 ; Improving Modeling Tools to Assess Climate Change Effects on Crop Response ; advagricsystmodel7 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2016 ; 978-0-89118-352-5 ; Improving Modeling Tools to Assess Climate Change Effects on Crop Response ; advagricsystmodel7 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2016 ; 978-0-89118-346-4 ; Synthesis and Modeling of Greenhouse Gas Emissions and Carbon Storage in Agricultural and Forest Systems to Guide Mitigation and Adaptation ; advagricsystmodel6 ; reingest2.clockss.org:8085 >
 
   }
@@ -40,35 +40,35 @@
     
     param[series_id] = agronomymonogra
     
-    au < finished ; crawling ; 1957 ; 978-0-89118-200-9 ; Drainage of Agricultural Lands ; drainageofagric ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 1961 ; 978-0-89118-201-6 ; Oats and Oat Improvement ; oatsandoatimpro ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 1965 ; 978-0-89118-205-4 ; Soil Nitrogen ; soilnitrogen ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 1965 ; 978-0-89118-202-3 ; Methods of Soil Analysis. Part 1. Physical and Mineralogical Properties, Including Statistics of Measurement and Sampling ; methodsofsoilana ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 1957 ; 978-0-89118-200-9 ; Drainage of Agricultural Lands ; drainageofagric ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1961 ; 978-0-89118-201-6 ; Oats and Oat Improvement ; oatsandoatimpro ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1965 ; 978-0-89118-205-4 ; Soil Nitrogen ; soilnitrogen ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 1965 ; 978-0-89118-202-3 ; Methods of Soil Analysis. Part 1. Physical and Mineralogical Properties, Including Statistics of Measurement and Sampling ; methodsofsoilana ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 1965 ; 978-0-89118-204-7 ; Methods of Soil Analysis. Part 2. Chemical and Microbiological Properties ; methodsofsoilanb ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 1967 ; 978-0-89118-206-1 ; Irrigation of Agricultural Lands ; irrigationofagr ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 1967 ; 978-0-89118-206-1 ; Irrigation of Agricultural Lands ; irrigationofagr ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 1969 ; 978-0-89118-209-2 ; Turfgrass Science ; turfgrassscienc ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1972 ; 978-0-89118-210-8 ; Alfalfa Science and Technology ; alfalfasciencet ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 1972 ; 978-0-89118-210-8 ; Alfalfa Science and Technology ; alfalfasciencet ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 1974 ; 978-0-89118-211-5 ; Drainage for Agriculture ; drainageforagri ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 1978 ; 978-0-89118-213-9 ; Sunflower Science and Technology ; sunflowerscienc ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 1979 ; 978-0-89118-215-3 ; Planning the Uses and Management of Land ; planningtheuses ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1979 ; 978-0-89118-215-3 ; Planning the Uses and Management of Land ; planningtheuses ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 1979 ; 978-0-89118-214-6 ; Tall Fescue ; tallfescue ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 1982 ; 978-0-89118-865-0 ; Methods of Soil Analysis. Part 2. Microbiological and Biochemical Properties ; methodsofsoilan2 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1982 ; 978-0-89118-865-0 ; Methods of Soil Analysis. Part 2. Microbiological and Biochemical Properties ; methodsofsoilan2 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 1982 ; 978-0-89118-216-0 ; Nitrogen in Agricultural Soils ; nitrogeninagrics ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 1984 ; 978-0-89118-217-7 ; Cotton ; cotton ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 1984 ; 978-0-89118-207-8 ; Soil Acidity and Liming ; soilacidityandl ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 1985 ; 978-0-89118-219-1 ; Barley ; barley ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1985 ; 978-0-89118-219-1 ; Barley ; barley ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 1985 ; 978-0-89118-218-4 ; Clover Science and Technology ; cloversciencean ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 1986 ; 978-0-89118-220-7 ; Sulfur in Agriculture ; sulfurinagricul ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 1987 ; 978-0-89118-208-5 ; Wheat and Wheat Improvement ; wheatandwheatim ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1986 ; 978-0-89118-220-7 ; Sulfur in Agriculture ; sulfurinagricul ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1987 ; 978-0-89118-208-5 ; Wheat and Wheat Improvement ; wheatandwheatim ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 1987 ; 978-0-89118-221-4 ; Nutritional Quality of Cereal Grains: Genetic and Agronomic Improvement ; nutritionalqual ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 1988 ; 978-0-89118-222-1 ; Alfalfa and Alfalfa Improvement ; alfalfaandalfal ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 1988 ; 978-0-89118-212-2 ; Corn and Corn Improvement ; cornandcornimpr ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 1991 ; 978-0-89118-223-8 ; Modeling Plant and Soil Systems ; modelingplantan ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 1992 ; 978-0-89118-225-2 ; Oat Science and Technology ; oatscienceandte ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1988 ; 978-0-89118-222-1 ; Alfalfa and Alfalfa Improvement ; alfalfaandalfal ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1988 ; 978-0-89118-212-2 ; Corn and Corn Improvement ; cornandcornimpr ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1991 ; 978-0-89118-223-8 ; Modeling Plant and Soil Systems ; modelingplantan ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 1992 ; 978-0-89118-225-2 ; Oat Science and Technology ; oatscienceandte ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 1992 ; 978-0-89118-224-5 ; Turfgrass ; turfgrass ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 1996 ; 978-0-89118-226-9 ; Cool-Season Forage Grasses ; coolseasonforag ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1997 ; 978-0-89118-227-6 ; Sunflower Technology and Production ; sunflowertechno ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 1998 ; 978-0-89118-228-3 ; Plant and Nematode Interactions ; plantandnematod ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1997 ; 978-0-89118-227-6 ; Sunflower Technology and Production ; sunflowertechno ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1998 ; 978-0-89118-228-3 ; Plant and Nematode Interactions ; plantandnematod ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 1999 ; 978-0-89118-229-0 ; Bioremediation of Contaminated Soils ; bioremediationo ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 1999 ; 978-0-89118-230-6 ; Agricultural Drainage ; agriculturaldra ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2000 ; 978-0-89118-232-0 ; Designing Crops for Added Value ; designingcropsf ; reingest4.clockss.org:8082 >
@@ -188,7 +188,7 @@
     
     au < finished ; crawling ; 1993 ; 978-0-89118-600-7 ; Intellectual Property Rights: Protection of Plant Materials ; intellectualpro ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 1973 ; 978-0-89118-583-3 ; Anti-Quality Components of Forages ; antiqualitycomp ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2004 ; 978-0-89118-611-3 ; Challenges and Strategies of Dryland Agriculture ; challengesandst ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2004 ; 978-0-89118-611-3 ; Challenges and Strategies of Dryland Agriculture ; challengesandst ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 1998 ; 978-0-89118-604-5 ; Concepts and Breeding of Heterosis in Crop Plants ; conceptsandbree ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1984 ; 978-0-89118-587-1 ; Conservation of Crop Germplasm—An International Perspective ; conservationofc ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 1989 ; 978-0-89118-594-9 ; Contributions from Breeding Forage and Turf Grasses ; contributionsfr ; reingest1.clockss.org:8082 >
@@ -294,7 +294,7 @@
     au < finished ; finished ; 1990 ; 978-0-89118-920-6 ; Scaling in Soil Physics: Principles and Applications ; scalinginsoilph ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 1967 ; 978-0-89118-896-4 ; Selected Papers in Soil Formation & Classification ; selectedpapersi ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 1989 ; 978-0-89118-918-3 ; Selenium in Agriculture and the Environment ; seleniuminagric ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2010 ; 978-0-89118-852-0 ; Soil and Water Conservation Advances in the United States ; soilandwatercon ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2010 ; 978-0-89118-852-0 ; Soil and Water Conservation Advances in the United States ; soilandwatercon ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 1994 ; 978-0-89118-936-7 ; Soil and Water Science: Key to Understanding Our Global Environment ; soilandwatersci ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 1998 ; 978-0-89118-947-3 ; Soil Chemistry and Ecosystem Health ; soilchemistryan ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 1993 ; 978-0-89118-926-8 ; Soil Color ; soilcolor ; reingest1.clockss.org:8082 >
@@ -345,7 +345,7 @@
     param[series_id] = acsesspublicati
     
     au < finished ; finished ; 2014 ; 978-0-89118-342-6 ; Aflatoxin Control: Safeguarding Animal Feed with Calcium Smectite ; aflatoxincontro ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 1966 ; 978-0-89118-887-2 ; Agricultural Anhydrous Ammonia Technology and Use ; agriculturalanh ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1966 ; 978-0-89118-887-2 ; Agricultural Anhydrous Ammonia Technology and Use ; agriculturalanh ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 1975 ; 978-0-89118-868-1 ; Agricultural Development Soil, Food, People, Work ; agriculturaldev ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1993 ; 978-0-89118-254-2 ; Agricultural Research in the Northeastern United States: Critical Review and Future Perspectives ; agriculturalres ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; 978-0-89118-965-7 ; Agronomy—Grow with It! ; agronomygrowwithit ; >
