@@ -2624,12 +2624,12 @@
 
     au < finished ; finished ; 2009 ; Nature Chemistry Volume 1 ; 2009 ; 1 ; >
     au < finished ; finished ; 2010 ; Nature Chemistry Volume 2 ; 2010 ; 2 ; >
-    au < frozen ; exists ; 2011 ; Nature Chemistry Volume 3 ; 2011 ; 3 ; >
-    au < frozen ; exists ; 2012 ; Nature Chemistry Volume 4 ; 2012 ; 4 ; >
-    au < frozen ; exists ; 2013 ; Nature Chemistry Volume 5 ; 2013 ; 5 ; >
-    au < frozen ; exists ; 2014 ; Nature Chemistry Volume 6 ; 2014 ; 6 ; >
-    au < frozen ; exists ; 2015 ; Nature Chemistry Volume 7 ; 2015 ; 7 ; >
-    au < frozen ; exists ; 2016 ; Nature Chemistry Volume 8 ; 2016 ; 8 ; >
+    au < finished ; manifest ; 2011 ; Nature Chemistry Volume 3 ; 2011 ; 3 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2012 ; Nature Chemistry Volume 4 ; 2012 ; 4 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2013 ; Nature Chemistry Volume 5 ; 2013 ; 5 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2014 ; Nature Chemistry Volume 6 ; 2014 ; 6 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2015 ; Nature Chemistry Volume 7 ; 2015 ; 7 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2016 ; Nature Chemistry Volume 8 ; 2016 ; 8 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; exists ; 2017 ; Nature Chemistry Volume 9 ; 2017 ; 9 ; >
 
   }
@@ -2649,7 +2649,7 @@
     au < finished ; manifest ; 2013 ; Nature Climate Change Volume 3 ; 2013 ; 3 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2014 ; Nature Climate Change Volume 4 ; 2014 ; 4 ; reingest4.clockss.org:8082 >
     au < zapped ; finished ; 2015 ; Nature Climate Change Volume 5 ; 2015 ; 5 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2016 ; Nature Climate Change Volume 6 ; 2016 ; 6 ; >
+    au < finished ; manifest ; 2016 ; Nature Climate Change Volume 6 ; 2016 ; 6 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; Nature Climate Change Volume 7 ; 2017 ; 7 ; >
 
   }
@@ -2689,13 +2689,13 @@
     au < doNotProcess ; doNotProcess ; 2007 ; Nature Digest Volume 4 ; 2007 ; 4 ; >
     au < zapped ; finished ; 2008 ; Nature Digest Volume 5 ; 2008 ; 5 ; >
     au < zapped ; finished ; 2009 ; Nature Digest Volume 6 ; 2009 ; 6 ; >
-    au < frozen ; down ; 2010 ; Nature Digest Volume 7 ; 2010 ; 7 ; >
+    au < finished ; crawling ; 2010 ; Nature Digest Volume 7 ; 2010 ; 7 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2011 ; Nature Digest Volume 8 ; 2011 ; 8 ; >
     au < finished ; finished ; 2012 ; Nature Digest Volume 9 ; 2012 ; 9 ; >
     au < finished ; finished ; 2013 ; Nature Digest Volume 10 ; 2013 ; 10 ; >
     au < finished ; crawling ; 2014 ; Nature Digest Volume 11 ; 2014 ; 11 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2015 ; Nature Digest Volume 12 ; 2015 ; 12 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2016 ; Nature Digest Volume 13 ; 2016 ; 13 ; >
+    au < finished ; manifest ; 2016 ; Nature Digest Volume 13 ; 2016 ; 13 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; exists ; 2017 ; Nature Digest Volume 14 ; 2017 ; 14 ; >
 
   }
@@ -2754,10 +2754,10 @@
     au < zapped ; finished ; 2009 ; Nature Genetics Volume 41 ; 2009 ; 41 ; >
     au < finished ; finished ; 2010 ; Nature Genetics Volume 42 ; 2010 ; 42 ; >
     au < finished ; finished ; 2011 ; Nature Genetics Volume 43 ; 2011 ; 43 ; >
-    au < frozen ; exists ; 2012 ; Nature Genetics Volume 44 ; 2012 ; 44 ; >
-    au < frozen ; exists ; 2013 ; Nature Genetics Volume 45 ; 2013 ; 45 ; >
+    au < finished ; manifest ; 2012 ; Nature Genetics Volume 44 ; 2012 ; 44 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2013 ; Nature Genetics Volume 45 ; 2013 ; 45 ; reingest1.clockss.org:8082 >
     au < zapped ; finished ; 2014 ; Nature Genetics Volume 46 ; 2014 ; 46 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2015 ; Nature Genetics Volume 47 ; 2015 ; 47 ; >
+    au < finished ; manifest ; 2015 ; Nature Genetics Volume 47 ; 2015 ; 47 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2016 ; Nature Genetics Volume 48 ; 2016 ; 48 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; Nature Genetics Volume 49 ; 2017 ; 49 ; >
 
@@ -2778,10 +2778,10 @@
     au < zapped ; finished ; 2009 ; Nature Geoscience Volume 2 ; 2009 ; 2 ; >
     au < finished ; finished ; 2010 ; Nature Geoscience Volume 3 ; 2010 ; 3 ; >
     au < finished ; finished ; 2011 ; Nature Geoscience Volume 4 ; 2011 ; 4 ; >
-    au < frozen ; exists ; 2012 ; Nature Geoscience Volume 5 ; 2012 ; 5 ; >
-    au < frozen ; exists ; 2013 ; Nature Geoscience Volume 6 ; 2013 ; 6 ; >
+    au < finished ; manifest ; 2012 ; Nature Geoscience Volume 5 ; 2012 ; 5 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2013 ; Nature Geoscience Volume 6 ; 2013 ; 6 ; reingest5.clockss.org:8082 >
     au < zapped ; finished ; 2014 ; Nature Geoscience Volume 7 ; 2014 ; 7 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2015 ; Nature Geoscience Volume 8 ; 2015 ; 8 ; >
+    au < finished ; manifest ; 2015 ; Nature Geoscience Volume 8 ; 2015 ; 8 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2016 ; Nature Geoscience Volume 9 ; 2016 ; 9 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; Nature Geoscience Volume 10 ; 2017 ; 10 ; >
 
@@ -2809,11 +2809,11 @@
     au < finished ; finished ; 2008 ; Nature Immunology Volume 9 ; 2008 ; 9 ; >
     au < finished ; finished ; 2009 ; Nature Immunology Volume 10 ; 2009 ; 10 ; >
     au < finished ; finished ; 2010 ; Nature Immunology Volume 11 ; 2010 ; 11 ; >
-    au < frozen ; exists ; 2011 ; Nature Immunology Volume 12 ; 2011 ; 12 ; >
-    au < frozen ; exists ; 2012 ; Nature Immunology Volume 13 ; 2012 ; 13 ; >
-    au < frozen ; exists ; 2013 ; Nature Immunology Volume 14 ; 2013 ; 14 ; >
-    au < frozen ; exists ; 2014 ; Nature Immunology Volume 15 ; 2014 ; 15 ; >
-    au < frozen ; exists ; 2015 ; Nature Immunology Volume 16 ; 2015 ; 16 ; >
+    au < finished ; manifest ; 2011 ; Nature Immunology Volume 12 ; 2011 ; 12 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2012 ; Nature Immunology Volume 13 ; 2012 ; 13 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2013 ; Nature Immunology Volume 14 ; 2013 ; 14 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2014 ; Nature Immunology Volume 15 ; 2014 ; 15 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2015 ; Nature Immunology Volume 16 ; 2015 ; 16 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2016 ; Nature Immunology Volume 17 ; 2016 ; 17 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; exists ; 2017 ; Nature Immunology Volume 18 ; 2017 ; 18 ; >
 
@@ -2840,10 +2840,10 @@
     au < zapped ; finished ; 2009 ; Nature Materials Volume 8 ; 2009 ; 8 ; >
     au < finished ; finished ; 2010 ; Nature Materials Volume 9 ; 2010 ; 9 ; >
     au < finished ; finished ; 2011 ; Nature Materials Volume 10 ; 2011 ; 10 ; >
-    au < frozen ; exists ; 2012 ; Nature Materials Volume 11 ; 2012 ; 11 ; >
-    au < frozen ; exists ; 2013 ; Nature Materials Volume 12 ; 2013 ; 12 ; >
+    au < finished ; manifest ; 2012 ; Nature Materials Volume 11 ; 2012 ; 11 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2013 ; Nature Materials Volume 12 ; 2013 ; 12 ; reingest5.clockss.org:8082 >
     au < zapped ; finished ; 2014 ; Nature Materials Volume 13 ; 2014 ; 13 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2015 ; Nature Materials Volume 14 ; 2015 ; 14 ; >
+    au < finished ; manifest ; 2015 ; Nature Materials Volume 14 ; 2015 ; 14 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2016 ; Nature Materials Volume 15 ; 2016 ; 15 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; exists ; 2017 ; Nature Materials Volume 16 ; 2017 ; 16 ; >
 
@@ -2877,11 +2877,11 @@
     au < zapped ; finished ; 2009 ; Nature Medicine Volume 15 ; 2009 ; 15 ; >
     au < finished ; frozen ; 2010 ; Nature Medicine Volume 16 ; 2010 ; 16 ; >
     au < finished ; manifest ; 2011 ; Nature Medicine Volume 17 ; 2011 ; 17 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2012 ; Nature Medicine Volume 18 ; 2012 ; 18 ; >
-    au < frozen ; exists ; 2013 ; Nature Medicine Volume 19 ; 2013 ; 19 ; >
-    au < frozen ; exists ; 2014 ; Nature Medicine Volume 20 ; 2014 ; 20 ; >
-    au < frozen ; exists ; 2015 ; Nature Medicine Volume 21 ; 2015 ; 21 ; >
-    au < frozen ; exists ; 2016 ; Nature Medicine Volume 22 ; 2016 ; 22 ; >
+    au < finished ; manifest ; 2012 ; Nature Medicine Volume 18 ; 2012 ; 18 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2013 ; Nature Medicine Volume 19 ; 2013 ; 19 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2014 ; Nature Medicine Volume 20 ; 2014 ; 20 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2015 ; Nature Medicine Volume 21 ; 2015 ; 21 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2016 ; Nature Medicine Volume 22 ; 2016 ; 22 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; exists ; 2017 ; Nature Medicine Volume 23 ; 2017 ; 23 ; >
 
   }
@@ -2905,11 +2905,11 @@
     au < zapped ; finished ; 2009 ; Nature Methods Volume 6 ; 2009 ; 6 ; >
     au < finished ; frozen ; 2010 ; Nature Methods Volume 7 ; 2010 ; 7 ; >
     au < finished ; finished ; 2011 ; Nature Methods Volume 8 ; 2011 ; 8 ; >
-    au < frozen ; exists ; 2012 ; Nature Methods Volume 9 ; 2012 ; 9 ; >
-    au < frozen ; exists ; 2013 ; Nature Methods Volume 10 ; 2013 ; 10 ; >
-    au < frozen ; exists ; 2014 ; Nature Methods Volume 11 ; 2014 ; 11 ; >
-    au < frozen ; exists ; 2015 ; Nature Methods Volume 12 ; 2015 ; 12 ; >
-    au < frozen ; exists ; 2016 ; Nature Methods Volume 13 ; 2016 ; 13 ; >
+    au < finished ; manifest ; 2012 ; Nature Methods Volume 9 ; 2012 ; 9 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2013 ; Nature Methods Volume 10 ; 2013 ; 10 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2014 ; Nature Methods Volume 11 ; 2014 ; 11 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2015 ; Nature Methods Volume 12 ; 2015 ; 12 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2016 ; Nature Methods Volume 13 ; 2016 ; 13 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; Nature Methods Volume 14 ; 2017 ; 14 ; >
 
   }
