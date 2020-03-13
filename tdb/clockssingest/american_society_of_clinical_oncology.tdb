@@ -68,6 +68,7 @@
       au < deepCrawl ; exists ; 2018 ; Journal of Clinical Oncology Volume 36 ; 36 ; http://ascopubs.org/ ; >
       au < crawling ; exists ; 2019 ; Journal of Clinical Oncology Volume 37 ; 37 ; https://ascopubs.org/ ; >
       au < manifest ; exists ; 2020 ; Journal of Clinical Oncology Volume 38 ; 38 ; https://ascopubs.org/ ; >
+      au < expected ; exists ; 2021 ; Journal of Clinical Oncology Volume 39 ; 39 ; https://ascopubs.org/ ; >
 
   }
 
@@ -83,6 +84,7 @@
 
       au < exists ; exists ; 2019 ; JCO Global Oncology Volume 5 ; 5 ; https://ascopubs.org/ ; >
       au < manifest ; exists ; 2020 ; JCO Global Oncology Volume 6 ; 6 ; https://ascopubs.org/ ; >
+      au < expected ; exists ; 2021 ; JCO Global Oncology Volume 7 ; 7 ; https://ascopubs.org/ ; >
 
   }
 
@@ -119,6 +121,7 @@
       #title changed as of 2020
       au < exists ; exists ; 2019 ; JCO Oncology Practice Volume 15 ; 15 ; https://ascopubs.org/ ; >
       au < manifest ; exists ; 2020 ; JCO Oncology Practice Volume 16 ; 16 ; https://ascopubs.org/ ; >
+      au < expected ; exists ; 2021 ; JCO Oncology Practice Volume 17 ; 17 ; https://ascopubs.org/ ; >
   }
 
   {
@@ -163,6 +166,7 @@
       au < deepCrawl ; exists ; 2018 ; JCO Clinical Cancer Informatics Volume 2 ; 2 ; http://ascopubs.org/ ; >
       au < crawling ; exists ; 2019 ; JCO Clinical Cancer Informatics Volume 3 ; 3 ; https://ascopubs.org/ ; >
       au < manifest ; exists ; 2020 ; JCO Clinical Cancer Informatics Volume 4 ; 4 ; https://ascopubs.org/ ; >
+      au < expected ; exists ; 2021 ; JCO Clinical Cancer Informatics Volume 5 ; 5 ; https://ascopubs.org/ ; >
 
   }
 
@@ -179,6 +183,7 @@
       au < deepCrawl ; exists ; 2018 ; JCO Precision Oncology Volume 2 ; 2 ; http://ascopubs.org/ ; >
       au < crawling ; exists ; 2019 ; JCO Precision Oncology Volume 3 ; 3 ; https://ascopubs.org/ ; >
       au < manifest ; exists ; 2020 ; JCO Precision Oncology Volume 4 ; 4 ; https://ascopubs.org/ ; >
+      au < expected ; exists ; 2021 ; JCO Precision Oncology Volume 5 ; 5 ; https://ascopubs.org/ ; >
 
   }
 
