@@ -3189,10 +3189,10 @@
     au < finished ; frozen ; 2010 ; Nature Reviews Endocrinology Volume 6 ; 2010 ; 6 ; >
     au < finished ; finished ; 2011 ; Nature Reviews Endocrinology Volume 7 ; 2011 ; 7 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Nature Reviews Endocrinology Volume 8 ; 2012 ; 8 ; >
-    au < frozen ; exists ; 2013 ; Nature Reviews Endocrinology Volume 9 ; 2013 ; 9 ; >
+    au < finished ; manifest ; 2013 ; Nature Reviews Endocrinology Volume 9 ; 2013 ; 9 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Nature Reviews Endocrinology Volume 10 ; 2014 ; 10 ; >
-    au < frozen ; exists ; 2015 ; Nature Reviews Endocrinology Volume 11 ; 2015 ; 11 ; >
-    au < frozen ; exists ; 2016 ; Nature Reviews Endocrinology Volume 12 ; 2016 ; 12 ; >
+    au < finished ; manifest ; 2015 ; Nature Reviews Endocrinology Volume 11 ; 2015 ; 11 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2016 ; Nature Reviews Endocrinology Volume 12 ; 2016 ; 12 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; Nature Reviews Endocrinology Volume 13 ; 2017 ; 13 ; >
 
   }
@@ -3218,8 +3218,8 @@
     au < finished ; finished ; 2011 ; Nature Reviews Gastroenterology and Hepatology Volume 8 ; 2011 ; 8 ; >
     au < finished ; finished ; 2012 ; Nature Reviews Gastroenterology and Hepatology Volume 9 ; 2012 ; 9 ; >
     au < finished ; manifest ; 2013 ; Nature Reviews Gastroenterology and Hepatology Volume 10 ; 2013 ; 10 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2014 ; Nature Reviews Gastroenterology and Hepatology Volume 11 ; 2014 ; 11 ; >
-    au < frozen ; exists ; 2015 ; Nature Reviews Gastroenterology and Hepatology Volume 12 ; 2015 ; 12 ; >
+    au < finished ; manifest ; 2014 ; Nature Reviews Gastroenterology and Hepatology Volume 11 ; 2014 ; 11 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2015 ; Nature Reviews Gastroenterology and Hepatology Volume 12 ; 2015 ; 12 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2016 ; Nature Reviews Gastroenterology and Hepatology Volume 13 ; 2016 ; 13 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; Nature Reviews Gastroenterology and Hepatology Volume 14 ; 2017 ; 14 ; >
 
@@ -3235,7 +3235,6 @@
     >
 
     param[journal_id] = nrg
-    comment[notReady] = no permission from publisher
 
     au < doNotProcess ; exists ; 2000 ; Nature Reviews Genetics Volume 1 ; 2000 ; 1 ; >
     au < doNotProcess ; exists ; 2001 ; Nature Reviews Genetics Volume 2 ; 2001 ; 2 ; >
@@ -3250,9 +3249,9 @@
     au < finished ; frozen ; 2010 ; Nature Reviews Genetics Volume 11 ; 2010 ; 11 ; >
     au < finished ; finished ; 2011 ; Nature Reviews Genetics Volume 12 ; 2011 ; 12 ; >
     au < finished ; frozen ; 2012 ; Nature Reviews Genetics Volume 13 ; 2012 ; 13 ; >
-    au < frozen ; exists ; 2013 ; Nature Reviews Genetics Volume 14 ; 2013 ; 14 ; >
+    au < finished ; manifest ; 2013 ; Nature Reviews Genetics Volume 14 ; 2013 ; 14 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; exists ; 2014 ; Nature Reviews Genetics Volume 15 ; 2014 ; 15 ; >
-    au < frozen ; exists ; 2015 ; Nature Reviews Genetics Volume 16 ; 2015 ; 16 ; >
+    au < finished ; manifest ; 2015 ; Nature Reviews Genetics Volume 16 ; 2015 ; 16 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2016 ; Nature Reviews Genetics Volume 17 ; 2016 ; 17 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; exists ; 2017 ; Nature Reviews Genetics Volume 18 ; 2017 ; 18 ; >
 
@@ -3280,10 +3279,10 @@
     au < zapped ; finished ; 2009 ; Nature Reviews Immunology Volume 9 ; 2009 ; 9 ; >
     au < finished ; finished ; 2010 ; Nature Reviews Immunology Volume 10 ; 2010 ; 10 ; >
     au < finished ; finished ; 2011 ; Nature Reviews Immunology Volume 11 ; 2011 ; 11 ; >
-    au < frozen ; exists ; 2012 ; Nature Reviews Immunology Volume 12 ; 2012 ; 12 ; >
-    au < frozen ; exists ; 2013 ; Nature Reviews Immunology Volume 13 ; 2013 ; 13 ; >
+    au < finished ; manifest ; 2012 ; Nature Reviews Immunology Volume 12 ; 2012 ; 12 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2013 ; Nature Reviews Immunology Volume 13 ; 2013 ; 13 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2014 ; Nature Reviews Immunology Volume 14 ; 2014 ; 14 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2015 ; Nature Reviews Immunology Volume 15 ; 2015 ; 15 ; >
+    au < finished ; manifest ; 2015 ; Nature Reviews Immunology Volume 15 ; 2015 ; 15 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2016 ; Nature Reviews Immunology Volume 16 ; 2016 ; 16 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; exists ; 2017 ; Nature Reviews Immunology Volume 17 ; 2017 ; 17 ; >
 
@@ -3310,10 +3309,10 @@
     au < finished ; finished ; 2010 ; Nature Reviews Microbiology Volume 8 ; 2010 ; 8 ; >
     au < finished ; finished ; 2011 ; Nature Reviews Microbiology Volume 9 ; 2011 ; 9 ; >
     au < finished ; manifest ; 2012 ; Nature Reviews Microbiology Volume 10 ; 2012 ; 10 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2013 ; Nature Reviews Microbiology Volume 11 ; 2013 ; 11 ; >
+    au < finished ; manifest ; 2013 ; Nature Reviews Microbiology Volume 11 ; 2013 ; 11 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Nature Reviews Microbiology Volume 12 ; 2014 ; 12 ; >
-    au < frozen ; exists ; 2015 ; Nature Reviews Microbiology Volume 13 ; 2015 ; 13 ; >
-    au < frozen ; exists ; 2016 ; Nature Reviews Microbiology Volume 14 ; 2016 ; 14 ; >
+    au < finished ; manifest ; 2015 ; Nature Reviews Microbiology Volume 13 ; 2015 ; 13 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2016 ; Nature Reviews Microbiology Volume 14 ; 2016 ; 14 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; Nature Reviews Microbiology Volume 15 ; 2017 ; 15 ; >
 
   }
@@ -3342,10 +3341,10 @@
     au < finished ; finished ; 2010 ; Nature Reviews Molecular Cell Biology Volume 11 ; 2010 ; 11 ; >
     au < finished ; finished ; 2011 ; Nature Reviews Molecular Cell Biology Volume 12 ; 2011 ; 12 ; >
     au < finished ; manifest ; 2012 ; Nature Reviews Molecular Cell Biology Volume 13 ; 2012 ; 13 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2013 ; Nature Reviews Molecular Cell Biology Volume 14 ; 2013 ; 14 ; >
+    au < finished ; manifest ; 2013 ; Nature Reviews Molecular Cell Biology Volume 14 ; 2013 ; 14 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Nature Reviews Molecular Cell Biology Volume 15 ; 2014 ; 15 ; >
-    au < frozen ; exists ; 2015 ; Nature Reviews Molecular Cell Biology Volume 16 ; 2015 ; 16 ; >
-    au < frozen ; exists ; 2016 ; Nature Reviews Molecular Cell Biology Volume 17 ; 2016 ; 17 ; >
+    au < finished ; manifest ; 2015 ; Nature Reviews Molecular Cell Biology Volume 16 ; 2015 ; 16 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2016 ; Nature Reviews Molecular Cell Biology Volume 17 ; 2016 ; 17 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; exists ; 2017 ; Nature Reviews Molecular Cell Biology Volume 18 ; 2017 ; 18 ; >
 
   }
