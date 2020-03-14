@@ -3776,20 +3776,20 @@
     au < finished ; finished ; 2008 ; Pediatric Research Volume 64 ; 2008 ; 64 ; >
     au < finished ; finished ; 2009 ; Pediatric Research Volume 65 ; 2009 ; 65 ; >
     au < finished ; finished ; 2009 ; Pediatric Research Volume 66 ; 2009 ; 66 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2010 ; Pediatric Research Volume 67 ; 2010 ; 67 ; >
+    au < finished ; manifest ; 2010 ; Pediatric Research Volume 67 ; 2010 ; 67 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2010 ; Pediatric Research Volume 68 ; 2010 ; 68 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2011 ; Pediatric Research Volume 69 ; 2011 ; 69 ; >
-    au < frozen ; exists ; 2011 ; Pediatric Research Volume 70 ; 2011 ; 70 ; >
+    au < finished ; manifest ; 2011 ; Pediatric Research Volume 70 ; 2011 ; 70 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2012 ; Pediatric Research Volume 71 ; 2012 ; 71 ; >
-    au < frozen ; exists ; 2012 ; Pediatric Research Volume 72 ; 2012 ; 72 ; >
+    au < finished ; manifest ; 2012 ; Pediatric Research Volume 72 ; 2012 ; 72 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Pediatric Research Volume 73 ; 2013 ; 73 ; >
-    au < frozen ; exists ; 2013 ; Pediatric Research Volume 74 ; 2013 ; 74 ; >
+    au < finished ; manifest ; 2013 ; Pediatric Research Volume 74 ; 2013 ; 74 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Pediatric Research Volume 75 ; 2014 ; 75 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Pediatric Research Volume 76 ; 2014 ; 76 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2015 ; Pediatric Research Volume 77 ; 2015 ; 77 ; >
-    au < frozen ; exists ; 2015 ; Pediatric Research Volume 78 ; 2015 ; 78 ; >
-    au < frozen ; exists ; 2016 ; Pediatric Research Volume 79 ; 2016 ; 79 ; >
-    au < frozen ; exists ; 2016 ; Pediatric Research Volume 80 ; 2016 ; 80 ; >
+    au < finished ; manifest ; 2015 ; Pediatric Research Volume 77 ; 2015 ; 77 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2015 ; Pediatric Research Volume 78 ; 2015 ; 78 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2016 ; Pediatric Research Volume 79 ; 2016 ; 79 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2016 ; Pediatric Research Volume 80 ; 2016 ; 80 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; exists ; 2017 ; Pediatric Research Volume 81 ; 2017 ; 81 ; >
     au < doNotProcess ; exists ; 2017 ; Pediatric Research Volume 82 ; 2017 ; 82 ; >
 
@@ -3820,8 +3820,8 @@
     au < finished ; finished ; 2012 ; The Pharmacogenomics Journal Volume 12 ; 2012 ; 12 ; >
     au < finished ; finished ; 2013 ; The Pharmacogenomics Journal Volume 13 ; 2013 ; 13 ; >
     au < finished ; finished ; 2014 ; The Pharmacogenomics Journal Volume 14 ; 2014 ; 14 ; >
-    au < frozen ; exists ; 2015 ; The Pharmacogenomics Journal Volume 15 ; 2015 ; 15 ; >
-    au < frozen ; exists ; 2016 ; The Pharmacogenomics Journal Volume 16 ; 2016 ; 16 ; >
+    au < finished ; manifest ; 2015 ; The Pharmacogenomics Journal Volume 15 ; 2015 ; 15 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2016 ; The Pharmacogenomics Journal Volume 16 ; 2016 ; 16 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; The Pharmacogenomics Journal Volume 17 ; 2017 ; 17 ; >
 
   }
@@ -3845,8 +3845,8 @@
     au < finished ; finished ; 2012 ; Polymer Journal Volume 44 ; 2012 ; 44 ; >
     au < finished ; finished ; 2013 ; Polymer Journal Volume 45 ; 2013 ; 45 ; >
     au < finished ; finished ; 2014 ; Polymer Journal Volume 46 ; 2014 ; 46 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2015 ; Polymer Journal Volume 47 ; 2015 ; 47 ; >
-    au < frozen ; exists ; 2016 ; Polymer Journal Volume 48 ; 2016 ; 48 ; >
+    au < finished ; manifest ; 2015 ; Polymer Journal Volume 47 ; 2015 ; 47 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2016 ; Polymer Journal Volume 48 ; 2016 ; 48 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; Polymer Journal Volume 49 ; 2017 ; 49 ; >
 
   }
@@ -3878,10 +3878,10 @@
     au < finished ; frozen ; 2010 ; Prostate Cancer and Prostatic Diseases Volume 13 ; 2010 ; 13 ; >
     au < finished ; finished ; 2011 ; Prostate Cancer and Prostatic Diseases Volume 14 ; 2011 ; 14 ; >
     au < finished ; finished ; 2012 ; Prostate Cancer and Prostatic Diseases Volume 15 ; 2012 ; 15 ; >
-    au < frozen ; exists ; 2013 ; Prostate Cancer and Prostatic Diseases Volume 16 ; 2013 ; 16 ; >
+    au < finished ; manifest ; 2013 ; Prostate Cancer and Prostatic Diseases Volume 16 ; 2013 ; 16 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Prostate Cancer and Prostatic Diseases Volume 17 ; 2014 ; 17 ; >
-    au < frozen ; exists ; 2015 ; Prostate Cancer and Prostatic Diseases Volume 18 ; 2015 ; 18 ; >
-    au < frozen ; exists ; 2016 ; Prostate Cancer and Prostatic Diseases Volume 19 ; 2016 ; 19 ; >
+    au < finished ; manifest ; 2015 ; Prostate Cancer and Prostatic Diseases Volume 18 ; 2015 ; 18 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2016 ; Prostate Cancer and Prostatic Diseases Volume 19 ; 2016 ; 19 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; Prostate Cancer and Prostatic Diseases Volume 20 ; 2017 ; 20 ; >
 
   }
@@ -4054,10 +4054,10 @@
     au < finished ; finished ; 2010 ; Spinal Cord Volume 48 ; 2010 ; 48 ; >
     au < finished ; finished ; 2011 ; Spinal Cord Volume 49 ; 2011 ; 49 ; >
     au < finished ; finished ; 2012 ; Spinal Cord Volume 50 ; 2012 ; 50 ; >
-    au < frozen ; exists ; 2013 ; Spinal Cord Volume 51 ; 2013 ; 51 ; >
+    au < finished ; manifest ; 2013 ; Spinal Cord Volume 51 ; 2013 ; 51 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Spinal Cord Volume 52 ; 2014 ; 52 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2015 ; Spinal Cord Volume 53 ; 2015 ; 53 ; >
-    au < frozen ; exists ; 2016 ; Spinal Cord Volume 54 ; 2016 ; 54 ; >
+    au < finished ; manifest ; 2015 ; Spinal Cord Volume 53 ; 2015 ; 53 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2016 ; Spinal Cord Volume 54 ; 2016 ; 54 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; exists ; 2017 ; Spinal Cord Volume 55 ; 2017 ; 55 ; >
 
   }
