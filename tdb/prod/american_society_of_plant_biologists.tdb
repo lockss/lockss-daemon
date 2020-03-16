@@ -285,13 +285,13 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = arbo.j
 
-      au < manifest ; 2002 ; The Arabidopsis Book Volume 1 ; 1 >
-      au < manifest ; 2003 ; The Arabidopsis Book Volume 2 ; 2 >
-      au < manifest ; 2004 ; The Arabidopsis Book Volume 3 ; 3 >
-      au < manifest ; 2006 ; The Arabidopsis Book Volume 4 ; 4 >
-      au < manifest ; 2007 ; The Arabidopsis Book Volume 5 ; 5 >
-      au < manifest ; 2008 ; The Arabidopsis Book Volume 6 ; 6 >
-      au < manifest ; 2009 ; The Arabidopsis Book Volume 7 ; 7 >
+      au < doNotProcess ; 2002 ; The Arabidopsis Book Volume 1 ; 1 >
+      au < doNotProcess ; 2003 ; The Arabidopsis Book Volume 2 ; 2 >
+      au < doNotProcess ; 2004 ; The Arabidopsis Book Volume 3 ; 3 >
+      au < doNotProcess ; 2006 ; The Arabidopsis Book Volume 4 ; 4 >
+      au < doNotProcess ; 2007 ; The Arabidopsis Book Volume 5 ; 5 >
+      au < doNotProcess ; 2008 ; The Arabidopsis Book Volume 6 ; 6 >
+      au < doNotProcess ; 2009 ; The Arabidopsis Book Volume 7 ; 7 >
       au < down ; 2010 ; The Arabidopsis Book Volume 8 ; 8 >
       au < down ; 2011 ; The Arabidopsis Book Volume 9 ; 9 >
       au < down ; 2012 ; The Arabidopsis Book Volume 10 ; 10 >
@@ -299,9 +299,9 @@
       au < down ; 2014 ; The Arabidopsis Book Volume 12 ; 12 >
       au < down ; 2015 ; The Arabidopsis Book Volume 13 ; 13 >
       au < down ; 2016 ; The Arabidopsis Book Volume 14 ; 14 >
-      au < manifest ; 2017 ; The Arabidopsis Book Volume 15 ; 15 >
-      au < manifest ; 2018 ; The Arabidopsis Book Volume 16 ; 16 >
-      au < expected ; 2019 ; The Arabidopsis Book Volume 17 ; 17 >
+      au < doNotProcess ; 2017 ; The Arabidopsis Book Volume 15 ; 15 >
+      au < doNotProcess ; 2018 ; The Arabidopsis Book Volume 16 ; 16 >
+      au < doNotProcess ; 2019 ; The Arabidopsis Book Volume 17 ; 17 >
     }
 
   }
