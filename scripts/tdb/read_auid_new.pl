@@ -3182,7 +3182,32 @@ while (my $line = <>) {
 
     sleep(4);
 
-  } # End Spandidos plugin check
+  # End Spandidos plugin check
+  } elsif ($plugin eq "ClockssGigaSciencePlugin") {
+      $url = sprintf("%s/api/list?start_date=%d-01-01&end_date=%d-12-31",
+      $param{base_url}, $param{year}, $param{year});
+      $man_url = uri_unescape($url);
+      my $req = HTTP::Request->new(GET, $man_url);
+      my $resp = $ua->request($req);
+      if ($resp->is_success) {
+          my $man_contents = $resp->content;
+          #no lockss permission statement on start page. Permission statement is here: http://gigadb.org/lockss.txt
+          if ($req->url ne $resp->request->uri) {
+            $vol_title = "Giga Science " . $param{year};
+            $result = "Redirected";
+          } elsif (defined($man_contents)) {
+              if ($man_contents =~ m/<doi>(.*)<\/doi>/si) {
+                  $vol_title= "Giga Science " . $param{year};
+              }
+              $result = "Manifest"
+          } else {
+              $result = "--"
+          }
+      } else {
+          $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+      }
+      sleep(4);
+   } # End of Giga Science
   
   if($result eq "Plugin Unknown") {
     printf("*PLUGIN UNKNOWN*, %s, %s\n",$auid,$man_url);
