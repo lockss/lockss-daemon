@@ -84,32 +84,6 @@
             <string>"%s%s/list-of-issues/%d", base_url, journal_id, year</string>
         </list>
     </entry>
-    <!-- <entry>
-         <string>au_feature_urls</string>
-         <map>
-             <entry>
-                 <string>au_title</string>
-                 <string>"%sjournals/%s", base_url, journal_id</string>
-             </entry>
-             <entry>
-                 <string>au_issue</string>
-                 <string>"%sjournals/%s/issue/%s/%s", base_url, journal_id, volume_name, issue</string>
-             </entry>
-             <entry>
-                 <string>au_article</string>
-                 <map>
-                     <entry>
-                         <string>pdf</string>
-                         <string>"%sjournals/%s/data/journals/%s/%s/%s.pdf", base_url, journal_id, journal_abbrev, group_id, article</string>
-                     </entry>
-                     <entry>
-                         <string>html</string>
-                         <string>"%sjournals/%s/fullarticle/%s", base_url, journal_id, article</string>
-                     </entry>
-                 </map>
-             </entry>
-         </map>
-     </entry>-->
     <entry>
         <string>au_crawlrules</string>
         <list>
@@ -150,34 +124,6 @@
             <string>1,"%sdownloadimage.aspx?image=", base_url</string>
         </list>
     </entry>
-    <!--
-    <entry>
-        <string>text/html_link_extractor_factory</string>
-        <string>org.lockss.plugin.silverchair.geoscienceworld.AmaScHtmlLinkExtractorFactory</string>
-    </entry>
-    <entry>
-        <string>text/html_crawl_filter_factory</string>
-        <string>org.lockss.plugin.silverchair.geoscienceworld.AmaScHtmlCrawlFilterFactory</string>
-    </entry>
-    -->
-    <entry>
-        <string>au_refetch_depth</string>
-        <int>2</int>
-    </entry>
-    <!--
-    <entry>
-        <string>au_def_new_content_crawl</string>
-        <long>1209600000</long>
-    </entry>
-    <entry>
-        <string>au_def_pause_time</string>
-        <long>3000</long>
-    </entry>
-        <entry>
-        <string>plugin_fetch_rate_limiter_source</string>
-        <string>host:base_url</string>
-    </entry>
-    -->
     <entry>
         <!-- Validator factory for text MIME types -->
         <string>text/*_content_validator_factory</string>
@@ -220,12 +166,10 @@
         <string>plugin_url_fetcher_factory</string>
         <string>org.lockss.plugin.base.HttpToHttpsUrlFetcherFactory</string>
     </entry>
-    <!--
     <entry>
         <string>plugin_url_consumer_factory</string>
-        <string>org.lockss.plugin.silverchair.geoscienceworld.AmaScUrlConsumerFactory</string>
+        <string>org.lockss.plugin.silverchair.SilverchairCommonThemeUrlConsumerFactory</string>
     </entry>
-    -->
     <entry>
         <string>plugin_cache_result_list</string>
         <list>
@@ -260,15 +204,22 @@
             <string>"(%s|silverchair-?cdn\.com/)UI/app/", base_url, 0</string>
         </list>
     </entry>
-    <!--Comment out for local crawl
     <entry>
-        <string>clockss_override</string>
-        <map>
-            <entry>
-                <string>au_def_pause_time</string>
-                <long>100</long>
-            </entry>
-        </map>
+        <string>au_refetch_depth</string>
+        <int>2</int>
+    </entry>
+    <!--
+    <entry>
+        <string>au_def_new_content_crawl</string>
+        <long>1209600000</long>
+    </entry>
+    <entry>
+        <string>au_def_pause_time</string>
+        <long>3000</long>
+    </entry>
+        <entry>
+        <string>plugin_fetch_rate_limiter_source</string>
+        <string>host:base_url</string>
     </entry>
     -->
 </map>
