@@ -49,7 +49,7 @@
       au < HighWirePressH20Plugin ; down ; 2013 ; AAP Grand Rounds Volume 29 ; 29 ; http://aapgrandrounds.aappublications.org/ >
       au < HighWirePressH20Plugin ; down ; 2013 ; AAP Grand Rounds Volume 30 ; 30 ; http://aapgrandrounds.aappublications.org/ >
       au < HighWirePressH20Plugin ; down ; 2014 ; AAP Grand Rounds Volume 31 ; 31 ; http://aapgrandrounds.aappublications.org/ >
-      au < aap.AAPDrupalPlugin ; ready ; 2014 ; AAP Grand Rounds Volume 32 ; 32 ; https://aapgrandrounds.aappublications.org/ >
+      au < aap.AAPDrupalPlugin ; released ; 2014 ; AAP Grand Rounds Volume 32 ; 32 ; https://aapgrandrounds.aappublications.org/ >
       au < aap.AAPDrupalPlugin ; released ; 2015 ; AAP Grand Rounds Volume 33 ; 33 ; http://aapgrandrounds.aappublications.org/ >
       au < aap.AAPDrupalPlugin ; released ; 2015 ; AAP Grand Rounds Volume 34 ; 34 ; http://aapgrandrounds.aappublications.org/ >
       au < aap.AAPDrupalPlugin ; released ; 2016 ; AAP Grand Rounds Volume 35 ; 35 ; http://aapgrandrounds.aappublications.org/ >
@@ -57,8 +57,8 @@
       au < aap.AAPDrupalPlugin ; released ; 2017 ; AAP Grand Rounds Volume 37 ; 37 ; https://aapgrandrounds.aappublications.org/ >
       au < aap.AAPDrupalPlugin ; released ; 2017 ; AAP Grand Rounds Volume 38 ; 38 ; https://aapgrandrounds.aappublications.org/ >
       au < aap.AAPDrupalPlugin ; released ; 2018 ; AAP Grand Rounds Volume 39 ; 39 ; https://aapgrandrounds.aappublications.org/ >
-      au < aap.AAPDrupalPlugin ; ready ; 2018 ; AAP Grand Rounds Volume 40 ; 40 ; https://aapgrandrounds.aappublications.org/ >
-      au < aap.AAPDrupalPlugin ; ready ; 2019 ; AAP Grand Rounds Volume 41 ; 41 ; https://aapgrandrounds.aappublications.org/ >
+      au < aap.AAPDrupalPlugin ; released ; 2018 ; AAP Grand Rounds Volume 40 ; 40 ; https://aapgrandrounds.aappublications.org/ >
+      au < aap.AAPDrupalPlugin ; released ; 2019 ; AAP Grand Rounds Volume 41 ; 41 ; https://aapgrandrounds.aappublications.org/ >
       au < aap.AAPDrupalPlugin ; notReady ; 2019 ; AAP Grand Rounds Volume 42 ; 42 ; https://aapgrandrounds.aappublications.org/ > # Probe url: https://aapgrand.smart01.highwire.org/content/42/3/35 outside of crawl spec
 
     }
@@ -146,7 +146,7 @@
       au < aap.AAPDrupalPlugin ; released ; 2016 ; Hospital Pediatrics Volume 6 ; 6 ; http://hosppeds.aappublications.org/ >
       au < aap.AAPDrupalPlugin ; released ; 2017 ; Hospital Pediatrics Volume 7 ; 7 ; https://hosppeds.aappublications.org/ >
       au < aap.AAPDrupalPlugin ; released ; 2018 ; Hospital Pediatrics Volume 8 ; 8 ; https://hosppeds.aappublications.org/ >
-      au < aap.AAPDrupalPlugin ; ready ; 2019 ; Hospital Pediatrics Volume 9 ; 9 ; https://hosppeds.aappublications.org/ >
+      au < aap.AAPDrupalPlugin ; released ; 2019 ; Hospital Pediatrics Volume 9 ; 9 ; https://hosppeds.aappublications.org/ >
 
     }
     
@@ -185,7 +185,7 @@
       au < aap.AAPDrupalPlugin ; released ; 2016 ; NeoReviews Volume 17 ; 17 ; http://neoreviews.aappublications.org/ >
       au < aap.AAPDrupalPlugin ; released ; 2017 ; NeoReviews Volume 18 ; 18 ; http://neoreviews.aappublications.org/ >
       au < aap.AAPDrupalPlugin ; released ; 2018 ; NeoReviews Volume 19 ; 19 ; http://neoreviews.aappublications.org/ >
-      au < aap.AAPDrupalPlugin ; ready ; 2019 ; NeoReviews Volume 20 ; 20 ; https://neoreviews.aappublications.org/ >
+      au < aap.AAPDrupalPlugin ; released ; 2019 ; NeoReviews Volume 20 ; 20 ; https://neoreviews.aappublications.org/ >
 
     }
 
@@ -347,7 +347,7 @@
       au < aap.AAPDrupalPlugin ; released ; 2017 ; Pediatrics Volume 140 ; 140 ; https://pediatrics.aappublications.org/ >
       au < aap.AAPDrupalPlugin ; released ; 2018 ; Pediatrics Volume 141 ; 141 ; https://pediatrics.aappublications.org/ >
       au < aap.AAPDrupalPlugin ; released ; 2018 ; Pediatrics Volume 142 ; 142 ; https://pediatrics.aappublications.org/ >
-      au < aap.AAPDrupalPlugin ; ready ; 2019 ; Pediatrics Volume 143 ; 143 ; https://pediatrics.aappublications.org/ >
+      au < aap.AAPDrupalPlugin ; released ; 2019 ; Pediatrics Volume 143 ; 143 ; https://pediatrics.aappublications.org/ >
       au < aap.AAPDrupalPlugin ; testing ; 2019 ; Pediatrics Volume 144 ; 144 ; https://pediatrics.aappublications.org/ >
 
     }
@@ -401,13 +401,13 @@
       au < HighWirePressH20Plugin ; down ; 2010 ; Pediatrics in Review Volume 31 ; 31 ; http://pedsinreview.aappublications.org/ >
       au < HighWirePressH20Plugin ; down ; 2011 ; Pediatrics in Review Volume 32 ; 32 ; http://pedsinreview.aappublications.org/ >
       au < HighWirePressH20Plugin ; down ; 2012 ; Pediatrics in Review Volume 33 ; 33 ; http://pedsinreview.aappublications.org/ >
-      au < aap.AAPDrupalPlugin ; ready ; 2013 ; Pediatrics in Review Volume 34 ; 34 ; https://pedsinreview.aappublications.org/ >
+      au < aap.AAPDrupalPlugin ; released ; 2013 ; Pediatrics in Review Volume 34 ; 34 ; https://pedsinreview.aappublications.org/ >
       au < aap.AAPDrupalPlugin ; released ; 2014 ; Pediatrics in Review Volume 35 ; 35 ; http://pedsinreview.aappublications.org/ >
       au < aap.AAPDrupalPlugin ; released ; 2015 ; Pediatrics in Review Volume 36 ; 36 ; http://pedsinreview.aappublications.org/ >
       au < aap.AAPDrupalPlugin ; released ; 2016 ; Pediatrics in Review Volume 37 ; 37 ; http://pedsinreview.aappublications.org/ >
       au < aap.AAPDrupalPlugin ; released ; 2017 ; Pediatrics in Review Volume 38 ; 38 ; https://pedsinreview.aappublications.org/ >
-      au < aap.AAPDrupalPlugin ; ready ; 2018 ; Pediatrics in Review Volume 39 ; 39 ; https://pedsinreview.aappublications.org/ >
-      au < aap.AAPDrupalPlugin ; manifest ; 2019 ; Pediatrics in Review Volume 40 ; 40 ; https://pedsinreview.aappublications.org/ >
+      au < aap.AAPDrupalPlugin ; released ; 2018 ; Pediatrics in Review Volume 39 ; 39 ; https://pedsinreview.aappublications.org/ >
+      au < aap.AAPDrupalPlugin ; released ; 2019 ; Pediatrics in Review Volume 40 ; 40 ; https://pedsinreview.aappublications.org/ >
 
     }
 

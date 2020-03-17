@@ -161,10 +161,10 @@
 
       param[base_url] = https://prcp.psychiatryonline.org/
       param[journal_id] = prcp
-      # content starts from year 2018
+      # content starts from year 2019
 
-      au < notReady ; 2018 ; Psychiatric Research and Clinical Practice Volume 1 ; 1 > #500 Internal Server Error
-      au < expected ; 2019 ; Psychiatric Research and Clinical Practice Volume 2 ; 2 >
+      au < exists ; 2019 ; Psychiatric Research and Clinical Practice Volume 1 ; 1 > #500 Internal Server Error
+      au < expected ; 2020 ; Psychiatric Research and Clinical Practice Volume 2 ; 2 >
 
     }
 

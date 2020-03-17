@@ -1,7 +1,11 @@
 {
 
   publisher <
-    name = American Psychiatric Association Publishing
+    name = American Psychiatric Association Publishing ;
+    info[contract] = 2019 ;
+    info[back] = 2010 ;
+    info[tester] = 5 ;
+    info[poller] = 5
   >
   
   comment[platform] = Atypon
@@ -22,29 +26,30 @@
       param[journal_id] = ajp
       # content starts from 1844 to current
 
-      au < exists ; exists ; 1997 ; The American Journal of Psychiatry Volume 154 ; 154 ; >
-      au < exists ; exists ; 1998 ; The American Journal of Psychiatry Volume 155 ; 155 ; >
-      au < exists ; exists ; 1999 ; The American Journal of Psychiatry Volume 156 ; 156 ; >
-      au < exists ; exists ; 2000 ; The American Journal of Psychiatry Volume 157 ; 157 ; >
-      au < exists ; exists ; 2001 ; The American Journal of Psychiatry Volume 158 ; 158 ; >
-      au < exists ; exists ; 2002 ; The American Journal of Psychiatry Volume 159 ; 159 ; >
-      au < exists ; exists ; 2003 ; The American Journal of Psychiatry Volume 160 ; 160 ; >
-      au < exists ; exists ; 2004 ; The American Journal of Psychiatry Volume 161 ; 161 ; >
-      au < exists ; exists ; 2005 ; The American Journal of Psychiatry Volume 162 ; 162 ; >
-      au < exists ; exists ; 2006 ; The American Journal of Psychiatry Volume 163 ; 163 ; >
-      au < exists ; exists ; 2007 ; The American Journal of Psychiatry Volume 164 ; 164 ; >
-      au < exists ; exists ; 2008 ; The American Journal of Psychiatry Volume 165 ; 165 ; >
-      au < exists ; exists ; 2009 ; The American Journal of Psychiatry Volume 166 ; 166 ; >
-      au < exists ; exists ; 2010 ; The American Journal of Psychiatry Volume 167 ; 167 ; >
-      au < exists ; exists ; 2011 ; The American Journal of Psychiatry Volume 168 ; 168 ; >
-      au < exists ; exists ; 2012 ; The American Journal of Psychiatry Volume 169 ; 169 ; >
-      au < exists ; exists ; 2013 ; The American Journal of Psychiatry Volume 170 ; 170 ; >
-      au < exists ; exists ; 2014 ; The American Journal of Psychiatry Volume 171 ; 171 ; >
-      au < exists ; exists ; 2015 ; The American Journal of Psychiatry Volume 172 ; 172 ; >
-      au < exists ; exists ; 2016 ; The American Journal of Psychiatry Volume 173 ; 173 ; >
-      au < exists ; exists ; 2017 ; The American Journal of Psychiatry Volume 174 ; 174 ; >
-      au < exists ; exists ; 2018 ; The American Journal of Psychiatry Volume 175 ; 175 ; >
-      au < exists ; exists ; 2019 ; The American Journal of Psychiatry Volume 176 ; 176 ; >
+      au < manifest ; exists ; 1997 ; The American Journal of Psychiatry Volume 154 ; 154 ; >
+      au < manifest ; exists ; 1998 ; The American Journal of Psychiatry Volume 155 ; 155 ; >
+      au < manifest ; exists ; 1999 ; The American Journal of Psychiatry Volume 156 ; 156 ; >
+      au < manifest ; exists ; 2000 ; The American Journal of Psychiatry Volume 157 ; 157 ; >
+      au < manifest ; exists ; 2001 ; The American Journal of Psychiatry Volume 158 ; 158 ; >
+      au < manifest ; exists ; 2002 ; The American Journal of Psychiatry Volume 159 ; 159 ; >
+      au < manifest ; exists ; 2003 ; The American Journal of Psychiatry Volume 160 ; 160 ; >
+      au < manifest ; exists ; 2004 ; The American Journal of Psychiatry Volume 161 ; 161 ; >
+      au < manifest ; exists ; 2005 ; The American Journal of Psychiatry Volume 162 ; 162 ; >
+      au < manifest ; exists ; 2006 ; The American Journal of Psychiatry Volume 163 ; 163 ; >
+      au < manifest ; exists ; 2007 ; The American Journal of Psychiatry Volume 164 ; 164 ; >
+      au < manifest ; exists ; 2008 ; The American Journal of Psychiatry Volume 165 ; 165 ; >
+      au < manifest ; exists ; 2009 ; The American Journal of Psychiatry Volume 166 ; 166 ; >
+      au < manifest ; exists ; 2010 ; The American Journal of Psychiatry Volume 167 ; 167 ; >
+      au < manifest ; exists ; 2011 ; The American Journal of Psychiatry Volume 168 ; 168 ; >
+      au < manifest ; exists ; 2012 ; The American Journal of Psychiatry Volume 169 ; 169 ; >
+      au < manifest ; exists ; 2013 ; The American Journal of Psychiatry Volume 170 ; 170 ; >
+      au < manifest ; exists ; 2014 ; The American Journal of Psychiatry Volume 171 ; 171 ; >
+      au < manifest ; exists ; 2015 ; The American Journal of Psychiatry Volume 172 ; 172 ; >
+      au < manifest ; exists ; 2016 ; The American Journal of Psychiatry Volume 173 ; 173 ; >
+      au < manifest ; exists ; 2017 ; The American Journal of Psychiatry Volume 174 ; 174 ; >
+      au < manifest ; exists ; 2018 ; The American Journal of Psychiatry Volume 175 ; 175 ; >
+      au < manifest ; exists ; 2019 ; The American Journal of Psychiatry Volume 176 ; 176 ; >
+      au < manifest ; exists ; 2020 ; The American Journal of Psychiatry Volume 177 ; 177 ; >
 
     }
     
@@ -59,23 +64,24 @@
       param[base_url] = https://focus.psychiatryonline.org/
       param[journal_id] = foc
 
-      au < exists ; exists ; 2003 ; Focus Volume 1 ; 1 ; >
-      au < exists ; exists ; 2004 ; Focus Volume 2 ; 2 ; >
-      au < exists ; exists ; 2005 ; Focus Volume 3 ; 3 ; >
-      au < exists ; exists ; 2006 ; Focus Volume 4 ; 4 ; >
-      au < exists ; exists ; 2007 ; Focus Volume 5 ; 5 ; >
-      au < exists ; exists ; 2008 ; Focus Volume 6 ; 6 ; >
-      au < exists ; exists ; 2009 ; Focus Volume 7 ; 7 ; >
-      au < exists ; exists ; 2010 ; Focus Volume 8 ; 8 ; >
-      au < exists ; exists ; 2011 ; Focus Volume 9 ; 9 ; >
-      au < exists ; exists ; 2012 ; FOCUS Volume 10 ; 10 ; >
-      au < exists ; exists ; 2013 ; FOCUS Volume 11 ; 11 ; >
-      au < exists ; exists ; 2014 ; FOCUS Volume 12 ; 12 ; >
-      au < exists ; exists ; 2015 ; FOCUS Volume 13 ; 13 ; >
-      au < exists ; exists ; 2016 ; FOCUS Volume 14 ; 14 ; >
-      au < exists ; exists ; 2017 ; FOCUS Volume 15 ; 15 ; >
-      au < exists ; exists ; 2018 ; FOCUS Volume 16 ; 16 ; >
-      au < exists ; exists ; 2019 ; FOCUS Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2003 ; Focus Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2004 ; Focus Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2005 ; Focus Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2006 ; Focus Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2007 ; Focus Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2008 ; Focus Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2009 ; Focus Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2010 ; Focus Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2011 ; Focus Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2012 ; FOCUS Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2013 ; FOCUS Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2014 ; FOCUS Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2015 ; FOCUS Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2016 ; FOCUS Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2017 ; FOCUS Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2018 ; FOCUS Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2019 ; FOCUS Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2020 ; FOCUS Volume 18 ; 18 ; >
 
     }
 
@@ -91,28 +97,29 @@
       param[journal_id] = jnp
       # content starts from 1989 to current
 
-      au < exists ; exists ; 1998 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 10 ; 10 ; >
-      au < exists ; exists ; 1999 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 11 ; 11 ; >
-      au < exists ; exists ; 2000 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 12 ; 12 ; >
-      au < exists ; exists ; 2001 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 13 ; 13 ; >
-      au < exists ; exists ; 2002 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 14 ; 14 ; >
-      au < exists ; exists ; 2003 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 15 ; 15 ; >
-      au < exists ; exists ; 2004 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 16 ; 16 ; >
-      au < exists ; exists ; 2005 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 17 ; 17 ; >
-      au < exists ; exists ; 2006 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 18 ; 18 ; >
-      au < exists ; exists ; 2007 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 19 ; 19 ; >
-      au < exists ; exists ; 2008 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 20 ; 20 ; >
-      au < exists ; exists ; 2009 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 21 ; 21 ; >
-      au < exists ; exists ; 2010 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 22 ; 22 ; >
-      au < exists ; exists ; 2011 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 23 ; 23 ; >
-      au < exists ; exists ; 2012 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 24 ; 24 ; >
-      au < exists ; exists ; 2013 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 25 ; 25 ; >
-      au < exists ; exists ; 2014 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 26 ; 26 ; >
-      au < exists ; exists ; 2015 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 27 ; 27 ; >
-      au < exists ; exists ; 2016 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 28 ; 28 ; >
-      au < exists ; exists ; 2017 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 29 ; 29 ; >
-      au < exists ; exists ; 2018 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 30 ; 30 ; >
-      au < exists ; exists ; 2019 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 31 ; 31 ; >
+      au < manifest ; exists ; 1998 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1999 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2000 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2001 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2002 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2003 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2004 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2005 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2006 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2007 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2008 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2009 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2010 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2011 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2012 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2013 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2014 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 26 ; 26 ; >
+      au < manifest ; exists ; 2015 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 27 ; 27 ; >
+      au < manifest ; exists ; 2016 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2017 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 29 ; 29 ; >
+      au < manifest ; exists ; 2018 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 30 ; 30 ; >
+      au < manifest ; exists ; 2019 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 31 ; 31 ; >
+      au < manifest ; exists ; 2020 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 32 ; 32 ; >
 
     }
 
@@ -128,28 +135,29 @@
       param[journal_id] = ps
       # content starts from year 1950 to current
 
-      au < exists ; exists ; 1998 ; Psychiatric Services Volume 49 ; 49 ; >
-      au < exists ; exists ; 1999 ; Psychiatric Services Volume 50 ; 50 ; >
-      au < exists ; exists ; 2000 ; Psychiatric Services Volume 51 ; 51 ; >
-      au < exists ; exists ; 2001 ; Psychiatric Services Volume 52 ; 52 ; >
-      au < exists ; exists ; 2002 ; Psychiatric Services Volume 53 ; 53 ; >
-      au < exists ; exists ; 2003 ; Psychiatric Services Volume 54 ; 54 ; >
-      au < exists ; exists ; 2004 ; Psychiatric Services Volume 55 ; 55 ; >
-      au < exists ; exists ; 2005 ; Psychiatric Services Volume 56 ; 56 ; >
-      au < exists ; exists ; 2006 ; Psychiatric Services Volume 57 ; 57 ; >
-      au < exists ; exists ; 2007 ; Psychiatric Services Volume 58 ; 58 ; >
-      au < exists ; exists ; 2008 ; Psychiatric Services Volume 59 ; 59 ; >
-      au < exists ; exists ; 2009 ; Psychiatric Services Volume 60 ; 60 ; >
-      au < exists ; exists ; 2010 ; Psychiatric Services Volume 61 ; 61 ; >
-      au < exists ; exists ; 2011 ; Psychiatric Services Volume 62 ; 62 ; >
-      au < exists ; exists ; 2012 ; Psychiatric Services Volume 63 ; 63 ; >
-      au < exists ; exists ; 2013 ; Psychiatric Services Volume 64 ; 64 ; >
-      au < exists ; exists ; 2014 ; Psychiatric Services Volume 65 ; 65 ; >
-      au < exists ; exists ; 2015 ; Psychiatric Services Volume 66 ; 66 ; >
-      au < exists ; exists ; 2016 ; Psychiatric Services Volume 67 ; 67 ; >
-      au < exists ; exists ; 2017 ; Psychiatric Services Volume 68 ; 68 ; >
-      au < exists ; exists ; 2018 ; Psychiatric Services Volume 69 ; 69 ; >
-      au < exists ; exists ; 2019 ; Psychiatric Services Volume 70 ; 70 ; >
+      au < manifest ; exists ; 1998 ; Psychiatric Services Volume 49 ; 49 ; >
+      au < manifest ; exists ; 1999 ; Psychiatric Services Volume 50 ; 50 ; >
+      au < manifest ; exists ; 2000 ; Psychiatric Services Volume 51 ; 51 ; >
+      au < manifest ; exists ; 2001 ; Psychiatric Services Volume 52 ; 52 ; >
+      au < manifest ; exists ; 2002 ; Psychiatric Services Volume 53 ; 53 ; >
+      au < manifest ; exists ; 2003 ; Psychiatric Services Volume 54 ; 54 ; >
+      au < manifest ; exists ; 2004 ; Psychiatric Services Volume 55 ; 55 ; >
+      au < manifest ; exists ; 2005 ; Psychiatric Services Volume 56 ; 56 ; >
+      au < manifest ; exists ; 2006 ; Psychiatric Services Volume 57 ; 57 ; >
+      au < manifest ; exists ; 2007 ; Psychiatric Services Volume 58 ; 58 ; >
+      au < manifest ; exists ; 2008 ; Psychiatric Services Volume 59 ; 59 ; >
+      au < manifest ; exists ; 2009 ; Psychiatric Services Volume 60 ; 60 ; >
+      au < manifest ; exists ; 2010 ; Psychiatric Services Volume 61 ; 61 ; >
+      au < manifest ; exists ; 2011 ; Psychiatric Services Volume 62 ; 62 ; >
+      au < manifest ; exists ; 2012 ; Psychiatric Services Volume 63 ; 63 ; >
+      au < manifest ; exists ; 2013 ; Psychiatric Services Volume 64 ; 64 ; >
+      au < manifest ; exists ; 2014 ; Psychiatric Services Volume 65 ; 65 ; >
+      au < manifest ; exists ; 2015 ; Psychiatric Services Volume 66 ; 66 ; >
+      au < manifest ; exists ; 2016 ; Psychiatric Services Volume 67 ; 67 ; >
+      au < manifest ; exists ; 2017 ; Psychiatric Services Volume 68 ; 68 ; >
+      au < manifest ; exists ; 2018 ; Psychiatric Services Volume 69 ; 69 ; >
+      au < manifest ; exists ; 2019 ; Psychiatric Services Volume 70 ; 70 ; >
+      au < manifest ; exists ; 2020 ; Psychiatric Services Volume 71 ; 71 ; >
 
     }
     {
@@ -160,10 +168,10 @@
 
       param[base_url] = https://prcp.psychiatryonline.org/
       param[journal_id] = prcp
-      # content starts from year 2018
+      # content starts from year 2019
 
-      au < exists ; exists ; 2018 ; Psychiatric Research and Clinical Practice Volume 1 ; 1 ; >
-      au < expected ; exists ; 2019 ; Psychiatric Research and Clinical Practice Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2019 ; Psychiatric Research and Clinical Practice Volume 1 ; 1 ; >
+      au < expected ; exists ; 2020 ; Psychiatric Research and Clinical Practice Volume 2 ; 2 ; >
 
     }
 

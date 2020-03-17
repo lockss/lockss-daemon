@@ -46,7 +46,7 @@
     au < released ; 2016 ; 4 ; Biodiversity Data Journal Volume 2016 ; 2016 ; https://bdj.pensoft.net/ >
     au < released ; 2017 ; 5 ; Biodiversity Data Journal Volume 2017 ; 2017 ; https://bdj.pensoft.net/ >
     au < released ; 2018 ; 6 ; Biodiversity Data Journal Volume 2018 ; 2018 ; https://bdj.pensoft.net/ >
-    au < manifest ; 2019 ; 6 ; Biodiversity Data Journal Volume 2019 ; 2019 ; https://bdj.pensoft.net/ >
+    au < released ; 2019 ; 6 ; Biodiversity Data Journal Volume 2019 ; 2019 ; https://bdj.pensoft.net/ >
 
    }
 
@@ -72,7 +72,7 @@
     au < released ; 2016 ; 11 ; BioRisk Volume 2016 ; 2016 ; https://biorisk.pensoft.net/ >
     au < released ; 2017 ; 12 ; BioRisk Volume 2017 ; 2017 ; https://biorisk.pensoft.net/ >
     au < released ; 2018 ; 13 ; BioRisk Volume 2018 ; 2018 ; https://biorisk.pensoft.net/ >
-    au < manifest ; 2019 ; 13 ; BioRisk Volume 2019 ; 2019 ; https://biorisk.pensoft.net/ >
+    au < released ; 2019 ; 13 ; BioRisk Volume 2019 ; 2019 ; https://biorisk.pensoft.net/ >
 
    }
 
@@ -202,7 +202,7 @@
     au < released ; 2016 ; 28-31 ; NeoBiota Volume 2016 ; 2016 ; https://neobiota.pensoft.net/ >
     au < released ; 2017 ; 32-36 ; NeoBiota Volume 2017 ; 2017 ; https://neobiota.pensoft.net/ >
     au < released ; 2018 ; 37-41 ; NeoBiota Volume 2018 ; 2018 ; https://neobiota.pensoft.net/ >
-    au < manifest ; 2019 ; 37-41 ; NeoBiota Volume 2019 ; 2019 ; https://neobiota.pensoft.net/ >
+    au < released ; 2019 ; 37-41 ; NeoBiota Volume 2019 ; 2019 ; https://neobiota.pensoft.net/ >
 
    }
 
@@ -299,7 +299,7 @@
     au < released ; 2016 ; 549-641 ; ZooKeys Volume 2016 ; 2016 ; https://zookeys.pensoft.net/ >
     au < released ; 2017 ; 642-725 ; ZooKeys Volume 2017 ; 2017 ; https://zookeys.pensoft.net/ >
     au < released ; 2018 ; 726-810 ; ZooKeys Volume 2018 ; 2018 ; https://zookeys.pensoft.net/ >
-    au < manifest ; 2019 ; 726-810 ; ZooKeys Volume 2019 ; 2019 ; https://zookeys.pensoft.net/ >
+    au < released ; 2019 ; 726-810 ; ZooKeys Volume 2019 ; 2019 ; https://zookeys.pensoft.net/ >
 
    }
    
@@ -336,7 +336,7 @@
 
       au < released ; 2017 ; 2017 ; Alpine Entomology Volume 2017 ; 2017 ; https://alpineentomology.pensoft.net/ >
       au < released ; 2018 ; 2018 ; Alpine Entomology Volume 2018 ; 2018 ; https://alpineentomology.pensoft.net/ >
-      au < manifest ; 2019 ; 2019 ; Alpine Entomology Volume 2019 ; 2019 ; https://alpineentomology.pensoft.net/ >
+      au < released ; 2019 ; 2019 ; Alpine Entomology Volume 2019 ; 2019 ; https://alpineentomology.pensoft.net/ >
 
   }
 
@@ -366,7 +366,7 @@
       param[au_oai_set] = aca
 
       au < released ; 2018 ; 2018 ; ARPHA Conference Abstracts Volume 2018 ; 2018 ; https://aca.pensoft.net/ >
-      au < manifest ; 2019 ; 2019 ; ARPHA Conference Abstracts Volume 2019 ; 2019 ; https://aca.pensoft.net/ >
+      au < released ; 2019 ; 2019 ; ARPHA Conference Abstracts Volume 2019 ; 2019 ; https://aca.pensoft.net/ >
 
   }
 
@@ -460,7 +460,7 @@
 
       param[au_oai_set] = fmj
 
-      au < manifest ; 2019 ; 2019 ; Food Modeling Journal (FMJ) Volume 2019 ; 2019 ; https://fmj.pensoft.net/ >
+      au < released ; 2019 ; 2019 ; Food Modeling Journal (FMJ) Volume 2019 ; 2019 ; https://fmj.pensoft.net/ >
 
   }
 
@@ -619,7 +619,7 @@
       au < released ; 2016 ; 2016 ; One Ecosystem Volume 2016 ; 2016 ; https://oneecosystem.pensoft.net/ >
       au < released ; 2017 ; 2017 ; One Ecosystem Volume 2017 ; 2017 ; https://oneecosystem.pensoft.net/ >
       au < released ; 2018 ; 2018 ; One Ecosystem Volume 2018 ; 2018 ; https://oneecosystem.pensoft.net/ >
-      au < manifest ; 2019 ; 2019 ; One Ecosystem Volume 2019 ; 2019 ; https://oneecosystem.pensoft.net/ >
+      au < released ; 2019 ; 2019 ; One Ecosystem Volume 2019 ; 2019 ; https://oneecosystem.pensoft.net/ >
 
   }
 
@@ -739,7 +739,7 @@
 
       au < released ; 2017 ; 34 ; Zoologia Volume 2017 ; 2017 ; https://zoologia.pensoft.net/ >
       au < released ; 2018 ; 35 ; Zoologia Volume 2018 ; 2018 ; https://zoologia.pensoft.net/ >
-      au < manifest ; 2019 ; 36 ; Zoologia Volume 2019 ; 2019 ; https://zoologia.pensoft.net/ >
+      au < released ; 2019 ; 36 ; Zoologia Volume 2019 ; 2019 ; https://zoologia.pensoft.net/ >
 
   }
 
