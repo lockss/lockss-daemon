@@ -112,7 +112,7 @@
       <!--  the version we allow ends in '&fmt=ahah' -->
       <!-- <string>2,"^%sdeliver/fulltext/%s/[^?/]+\.html\?itemId=[^&amp;]+&amp;mimeType=html(&amp;isFastTrackArticle=)?$", base_url, doi</string>-->
       <string>1,"^%sdeliver/fulltext/%s", base_url, doi</string>
-      <string>1,"^^https?://%s/docserver(/ahah)?/fulltext/%s", url_host(base_url), doi</string>
+      <string>1,"^%sdocserver/fulltext/%s", base_url, doi</string>
     </list>
   </entry>
   <entry>
