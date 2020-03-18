@@ -3193,7 +3193,7 @@ while (my $line = <>) {
           my $man_contents = $resp->content;
           #no lockss permission statement on start page. Permission statement is here: http://gigadb.org/lockss.txt
           if ($req->url ne $resp->request->uri) {
-            $vol_title = "Giga Science " . $param{year};"Giga Science " . $param{year};
+            $vol_title = "Giga Science " . $param{year};
             $result = "Redirected";
           } elsif (defined($man_contents)) {
               if ($man_contents =~ m/<doi>(.*)<\/doi>/si) {
