@@ -6,10 +6,12 @@
     info[poller] = 3
   >
 
-    comment[moved] = from HW to Pub2Web
-  #base_url change to https://www.microbiologyresearch.org
-    
-    # Formerly: Society for General Microbiology
+   comment[moved] = from HW to Pub2Web
+   #param[base_url] = https://www.microbiologyresearch.org/
+   implicit < status ; status2 ; year ; name ; param[volume_name] ; param[base_url] ; hidden[proxy] >
+   plugin = org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin
+
+   # Formerly: Society for General Microbiology
 
   {
   
@@ -21,148 +23,73 @@
      
       comment[continued_by] = International Journal of Systematic Bacteriology 0020-7713
 
-    {
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
-      implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
-      param[base_url] = http://ijs.sgmjournals.org/
-      
-      au < doNotProcess ; doNotProcess ; 1951 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 1 ; 1 ; >
-      au < doNotProcess ; doNotProcess ; 1952 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 2 ; 2 ; >
-      au < doNotProcess ; doNotProcess ; 1953 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 3 ; 3 ; >
-      au < doNotProcess ; doNotProcess ; 1954 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 4 ; 4 ; >
-      au < doNotProcess ; doNotProcess ; 1955 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 5 ; 5 ; >
-      au < doNotProcess ; doNotProcess ; 1956 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 6 ; 6 ; >
-      au < doNotProcess ; doNotProcess ; 1957 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 7 ; 7 ; >
-      au < doNotProcess ; doNotProcess ; 1958 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 8 ; 8 ; >
-      au < doNotProcess ; doNotProcess ; 1959 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 9 ; 9 ; >
-      au < doNotProcess ; doNotProcess ; 1960 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 10 ; 10 ; >
-      au < doNotProcess ; doNotProcess ; 1961 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 11 ; 11 ; >
-      au < doNotProcess ; doNotProcess ; 1962 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 12 ; 12 ; >
-      au < doNotProcess ; doNotProcess ; 1963 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 13 ; 13 ; >
-      au < doNotProcess ; doNotProcess ; 1964 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 14 ; 14 ; >
-      au < doNotProcess ; doNotProcess ; 1965 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 15 ; 15 ; >
-
-    }
-
-    {
-      plugin = org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin
-      implicit < status ; status2 ; year ; name ; param[volume_name] ; param[base_url] ; hidden[proxy] >
-      #param[base_url] = http://ijs.microbiologyresearch.org/
       param[journal_id] = ijsem
       
-      au < doNotProcess ; exists ; 1951 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 1 ; 1 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1952 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 2 ; 2 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1953 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 3 ; 3 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1954 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 4 ; 4 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1955 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 5 ; 5 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1956 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 6 ; 6 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1957 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 7 ; 7 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1958 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 8 ; 8 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1959 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 9 ; 9 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1960 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 10 ; 10 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1961 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 11 ; 11 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1962 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 12 ; 12 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1963 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 13 ; 13 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1964 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 14 ; 14 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1965 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 15 ; 15 ; https://ijs.microbiologyresearch.org/ ; >
-
-    }
+      au < exists ; exists ; 1951 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 1 ; 1 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1952 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 2 ; 2 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1953 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 3 ; 3 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1954 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 4 ; 4 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1955 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 5 ; 5 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1956 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 6 ; 6 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1957 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 7 ; 7 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1958 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 8 ; 8 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1959 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 9 ; 9 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1960 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 10 ; 10 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1961 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 11 ; 11 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1962 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 12 ; 12 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1963 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 13 ; 13 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1964 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 14 ; 14 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1965 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 15 ; 15 ; https://www.microbiologyresearch.org/ ; >
 
   }
 
   {
-  
+
     title <
       name = International Journal of Systematic Bacteriology ;
       issn = 0020-7713 ;
       issnl = 0020-7713
       >
-  
+
       comment[continues] = International Bulletin of Bacterial Nomenclature and Taxonomy 0096-266X
       comment[continued_by] = International Journal of Systematic and Evolutionary Bacteriology 1466-5026
-      
-    {
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
-      implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
-      param[base_url] = http://ijs.sgmjournals.org/
 
-      au < doNotProcess ; doNotProcess ; 1966 ; International Journal of Systematic Bacteriology Volume 16 ; 16 ; >
-      au < doNotProcess ; doNotProcess ; 1967 ; International Journal of Systematic Bacteriology Volume 17 ; 17 ; >
-      au < doNotProcess ; doNotProcess ; 1968 ; International Journal of Systematic Bacteriology Volume 18 ; 18 ; >
-      au < doNotProcess ; doNotProcess ; 1969 ; International Journal of Systematic Bacteriology Volume 19 ; 19 ; >
-      au < doNotProcess ; doNotProcess ; 1970 ; International Journal of Systematic Bacteriology Volume 20 ; 20 ; >
-      au < doNotProcess ; doNotProcess ; 1971 ; International Journal of Systematic Bacteriology Volume 21 ; 21 ; >
-      au < doNotProcess ; doNotProcess ; 1972 ; International Journal of Systematic Bacteriology Volume 22 ; 22 ; >
-      au < doNotProcess ; doNotProcess ; 1973 ; International Journal of Systematic Bacteriology Volume 23 ; 23 ; >
-      au < doNotProcess ; doNotProcess ; 1974 ; International Journal of Systematic Bacteriology Volume 24 ; 24 ; >
-      au < doNotProcess ; doNotProcess ; 1975 ; International Journal of Systematic Bacteriology Volume 25 ; 25 ; >
-      au < doNotProcess ; doNotProcess ; 1976 ; International Journal of Systematic Bacteriology Volume 26 ; 26 ; >
-      au < doNotProcess ; doNotProcess ; 1977 ; International Journal of Systematic Bacteriology Volume 27 ; 27 ; >
-      au < doNotProcess ; doNotProcess ; 1978 ; International Journal of Systematic Bacteriology Volume 28 ; 28 ; >
-      au < doNotProcess ; doNotProcess ; 1979 ; International Journal of Systematic Bacteriology Volume 29 ; 29 ; >
-      au < doNotProcess ; doNotProcess ; 1980 ; International Journal of Systematic Bacteriology Volume 30 ; 30 ; >
-      au < doNotProcess ; doNotProcess ; 1981 ; International Journal of Systematic Bacteriology Volume 31 ; 31 ; >
-      au < doNotProcess ; doNotProcess ; 1982 ; International Journal of Systematic Bacteriology Volume 32 ; 32 ; >
-      au < doNotProcess ; doNotProcess ; 1983 ; International Journal of Systematic Bacteriology Volume 33 ; 33 ; >
-      au < doNotProcess ; doNotProcess ; 1984 ; International Journal of Systematic Bacteriology Volume 34 ; 34 ; >
-      au < doNotProcess ; doNotProcess ; 1985 ; International Journal of Systematic Bacteriology Volume 35 ; 35 ; >
-      au < doNotProcess ; doNotProcess ; 1986 ; International Journal of Systematic Bacteriology Volume 36 ; 36 ; >
-      au < doNotProcess ; doNotProcess ; 1987 ; International Journal of Systematic Bacteriology Volume 37 ; 37 ; >
-      au < doNotProcess ; doNotProcess ; 1988 ; International Journal of Systematic Bacteriology Volume 38 ; 38 ; >
-      au < doNotProcess ; doNotProcess ; 1989 ; International Journal of Systematic Bacteriology Volume 39 ; 39 ; >
-      au < doNotProcess ; doNotProcess ; 1990 ; International Journal of Systematic Bacteriology Volume 40 ; 40 ; >
-      au < doNotProcess ; doNotProcess ; 1991 ; International Journal of Systematic Bacteriology Volume 41 ; 41 ; >
-      au < doNotProcess ; doNotProcess ; 1992 ; International Journal of Systematic Bacteriology Volume 42 ; 42 ; >
-      au < doNotProcess ; doNotProcess ; 1993 ; International Journal of Systematic Bacteriology Volume 43 ; 43 ; >
-      au < doNotProcess ; doNotProcess ; 1994 ; International Journal of Systematic Bacteriology Volume 44 ; 44 ; >
-      au < doNotProcess ; doNotProcess ; 1995 ; International Journal of Systematic Bacteriology Volume 45 ; 45 ; >
-      au < doNotProcess ; doNotProcess ; 1996 ; International Journal of Systematic Bacteriology Volume 46 ; 46 ; >
-      au < doNotProcess ; doNotProcess ; 1997 ; International Journal of Systematic Bacteriology Volume 47 ; 47 ; >
-      au < doNotProcess ; doNotProcess ; 1998 ; International Journal of Systematic Bacteriology Volume 48 ; 48 ; >
-      au < doNotProcess ; doNotProcess ; 1999 ; International Journal of Systematic Bacteriology Volume 49 ; 49 ; >
-    }
-      
-    {
-      plugin = org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin
-      implicit < status ; status2 ; year ; name ; param[volume_name] ; param[base_url] ; hidden[proxy] >
-      #param[base_url] = http://ijs.microbiologyresearch.org/
       param[journal_id] = ijsem
 
-      au < doNotProcess ; exists ; 1966 ; International Journal of Systematic Bacteriology Volume 16 ; 16 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1967 ; International Journal of Systematic Bacteriology Volume 17 ; 17 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1968 ; International Journal of Systematic Bacteriology Volume 18 ; 18 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1969 ; International Journal of Systematic Bacteriology Volume 19 ; 19 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1970 ; International Journal of Systematic Bacteriology Volume 20 ; 20 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1971 ; International Journal of Systematic Bacteriology Volume 21 ; 21 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1972 ; International Journal of Systematic Bacteriology Volume 22 ; 22 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1973 ; International Journal of Systematic Bacteriology Volume 23 ; 23 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1974 ; International Journal of Systematic Bacteriology Volume 24 ; 24 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1975 ; International Journal of Systematic Bacteriology Volume 25 ; 25 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1976 ; International Journal of Systematic Bacteriology Volume 26 ; 26 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1977 ; International Journal of Systematic Bacteriology Volume 27 ; 27 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1978 ; International Journal of Systematic Bacteriology Volume 28 ; 28 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1979 ; International Journal of Systematic Bacteriology Volume 29 ; 29 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1980 ; International Journal of Systematic Bacteriology Volume 30 ; 30 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1981 ; International Journal of Systematic Bacteriology Volume 31 ; 31 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1982 ; International Journal of Systematic Bacteriology Volume 32 ; 32 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1983 ; International Journal of Systematic Bacteriology Volume 33 ; 33 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1984 ; International Journal of Systematic Bacteriology Volume 34 ; 34 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1985 ; International Journal of Systematic Bacteriology Volume 35 ; 35 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1986 ; International Journal of Systematic Bacteriology Volume 36 ; 36 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1987 ; International Journal of Systematic Bacteriology Volume 37 ; 37 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1988 ; International Journal of Systematic Bacteriology Volume 38 ; 38 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1989 ; International Journal of Systematic Bacteriology Volume 39 ; 39 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1990 ; International Journal of Systematic Bacteriology Volume 40 ; 40 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1991 ; International Journal of Systematic Bacteriology Volume 41 ; 41 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1992 ; International Journal of Systematic Bacteriology Volume 42 ; 42 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1993 ; International Journal of Systematic Bacteriology Volume 43 ; 43 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1994 ; International Journal of Systematic Bacteriology Volume 44 ; 44 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1995 ; International Journal of Systematic Bacteriology Volume 45 ; 45 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1996 ; International Journal of Systematic Bacteriology Volume 46 ; 46 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1997 ; International Journal of Systematic Bacteriology Volume 47 ; 47 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1998 ; International Journal of Systematic Bacteriology Volume 48 ; 48 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1999 ; International Journal of Systematic Bacteriology Volume 49 ; 49 ; https://ijs.microbiologyresearch.org/ ; >
-    }
+      au < exists ; exists ; 1966 ; International Journal of Systematic Bacteriology Volume 16 ; 16 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1967 ; International Journal of Systematic Bacteriology Volume 17 ; 17 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1968 ; International Journal of Systematic Bacteriology Volume 18 ; 18 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1969 ; International Journal of Systematic Bacteriology Volume 19 ; 19 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1970 ; International Journal of Systematic Bacteriology Volume 20 ; 20 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1971 ; International Journal of Systematic Bacteriology Volume 21 ; 21 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1972 ; International Journal of Systematic Bacteriology Volume 22 ; 22 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1973 ; International Journal of Systematic Bacteriology Volume 23 ; 23 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1974 ; International Journal of Systematic Bacteriology Volume 24 ; 24 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1975 ; International Journal of Systematic Bacteriology Volume 25 ; 25 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1976 ; International Journal of Systematic Bacteriology Volume 26 ; 26 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1977 ; International Journal of Systematic Bacteriology Volume 27 ; 27 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1978 ; International Journal of Systematic Bacteriology Volume 28 ; 28 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1979 ; International Journal of Systematic Bacteriology Volume 29 ; 29 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1980 ; International Journal of Systematic Bacteriology Volume 30 ; 30 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1981 ; International Journal of Systematic Bacteriology Volume 31 ; 31 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1982 ; International Journal of Systematic Bacteriology Volume 32 ; 32 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1983 ; International Journal of Systematic Bacteriology Volume 33 ; 33 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1984 ; International Journal of Systematic Bacteriology Volume 34 ; 34 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1985 ; International Journal of Systematic Bacteriology Volume 35 ; 35 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1986 ; International Journal of Systematic Bacteriology Volume 36 ; 36 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1987 ; International Journal of Systematic Bacteriology Volume 37 ; 37 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1988 ; International Journal of Systematic Bacteriology Volume 38 ; 38 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1989 ; International Journal of Systematic Bacteriology Volume 39 ; 39 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1990 ; International Journal of Systematic Bacteriology Volume 40 ; 40 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1991 ; International Journal of Systematic Bacteriology Volume 41 ; 41 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1992 ; International Journal of Systematic Bacteriology Volume 42 ; 42 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1993 ; International Journal of Systematic Bacteriology Volume 43 ; 43 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1994 ; International Journal of Systematic Bacteriology Volume 44 ; 44 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1995 ; International Journal of Systematic Bacteriology Volume 45 ; 45 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1996 ; International Journal of Systematic Bacteriology Volume 46 ; 46 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1997 ; International Journal of Systematic Bacteriology Volume 47 ; 47 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1998 ; International Journal of Systematic Bacteriology Volume 48 ; 48 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1999 ; International Journal of Systematic Bacteriology Volume 49 ; 49 ; https://www.microbiologyresearch.org/ ; >
 
   }
 
@@ -176,59 +103,28 @@
 
       comment[continues] = International Journal of Systematic Bacteriology 0020-7713
 
-    {
-      
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
-      implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
-      param[base_url] = http://ijs.sgmjournals.org/
-
-      au < doNotProcess ; exists ; 2000 ; International Journal of Systematic and Evolutionary Microbiology Volume 50 ; 50 ; >
-      au < doNotProcess ; exists ; 2001 ; International Journal of Systematic and Evolutionary Microbiology Volume 51 ; 51 ; >
-      au < doNotProcess ; exists ; 2002 ; International Journal of Systematic and Evolutionary Microbiology Volume 52 ; 52 ; >
-      au < doNotProcess ; exists ; 2003 ; International Journal of Systematic and Evolutionary Microbiology Volume 53 ; 53 ; >
-      au < doNotProcess ; exists ; 2004 ; International Journal of Systematic and Evolutionary Microbiology Volume 54 ; 54 ; >
-      au < doNotProcess ; exists ; 2005 ; International Journal of Systematic and Evolutionary Microbiology Volume 55 ; 55 ; >
-      au < doNotProcess ; exists ; 2006 ; International Journal of Systematic and Evolutionary Microbiology Volume 56 ; 56 ; >
-      au < doNotProcess ; exists ; 2007 ; International Journal of Systematic and Evolutionary Microbiology Volume 57 ; 57 ; >
-      au < doNotProcess ; exists ; 2008 ; International Journal of Systematic and Evolutionary Microbiology Volume 58 ; 58 ; >
-      au < doNotProcess ; exists ; 2009 ; International Journal of Systematic and Evolutionary Microbiology Volume 59 ; 59 ; >
-      au < doNotProcess ; exists ; 2010 ; International Journal of Systematic and Evolutionary Microbiology Volume 60 ; 60 ; >
-      au < doNotProcess ; exists ; 2011 ; International Journal of Systematic and Evolutionary Microbiology Volume 61 ; 61 ; >
-      au < finished ; finished ; 2012 ; International Journal of Systematic and Evolutionary Microbiology Volume 62 ; 62 ; >
-      au < frozen ; exists ; 2013 ; International Journal of Systematic and Evolutionary Microbiology Volume 63 ; 63 ; >
-      au < zapped ; finished ; 2014 ; International Journal of Systematic and Evolutionary Microbiology Volume 64 ; 64 ; reingest1.clockss.org:8082 >
-      au < doNotProcess ; exists ; 2015 ; International Journal of Systematic and Evolutionary Microbiology Volume 65 ; 65 ; >
-    }
-
-    {
-      
-      plugin = org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin
-      implicit < status ; status2 ; year ; name ; param[volume_name] ; param[base_url] ; hidden[proxy] >
-      #param[base_url] = http://ijs.microbiologyresearch.org/
       param[journal_id] = ijsem
 
-      au < doNotProcess ; exists ; 2000 ; International Journal of Systematic and Evolutionary Microbiology Volume 50 ; 50 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2001 ; International Journal of Systematic and Evolutionary Microbiology Volume 51 ; 51 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2002 ; International Journal of Systematic and Evolutionary Microbiology Volume 52 ; 52 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2003 ; International Journal of Systematic and Evolutionary Microbiology Volume 53 ; 53 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2004 ; International Journal of Systematic and Evolutionary Microbiology Volume 54 ; 54 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2005 ; International Journal of Systematic and Evolutionary Microbiology Volume 55 ; 55 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2006 ; International Journal of Systematic and Evolutionary Microbiology Volume 56 ; 56 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2007 ; International Journal of Systematic and Evolutionary Microbiology Volume 57 ; 57 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2008 ; International Journal of Systematic and Evolutionary Microbiology Volume 58 ; 58 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2009 ; International Journal of Systematic and Evolutionary Microbiology Volume 59 ; 59 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2010 ; International Journal of Systematic and Evolutionary Microbiology Volume 60 ; 60 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2011 ; International Journal of Systematic and Evolutionary Microbiology Volume 61 ; 61 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Systematic and Evolutionary Microbiology Volume 62 ; 62 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Systematic and Evolutionary Microbiology Volume 63 ; 63 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Systematic and Evolutionary Microbiology Volume 64 ; 64 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2015 ; International Journal of Systematic and Evolutionary Microbiology Volume 65 ; 65 ; https://ijs.microbiologyresearch.org/ ; > #fetch error, duplicates PDF have been collected
-      au < doNotProcess ; exists ; 2016 ; International Journal of Systematic and Evolutionary Microbiology Volume 66 ; 66 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2017 ; International Journal of Systematic and Evolutionary Microbiology Volume 67 ; 67 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2018 ; International Journal of Systematic and Evolutionary Microbiology Volume 68 ; 68 ; https://ijs.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2019 ; International Journal of Systematic and Evolutionary Microbiology Volume 69 ; 69 ; https://ijs.microbiologyresearch.org/ ; >
-
-    }
+      au < exists ; exists ; 2000 ; International Journal of Systematic and Evolutionary Microbiology Volume 50 ; 50 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2001 ; International Journal of Systematic and Evolutionary Microbiology Volume 51 ; 51 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2002 ; International Journal of Systematic and Evolutionary Microbiology Volume 52 ; 52 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2003 ; International Journal of Systematic and Evolutionary Microbiology Volume 53 ; 53 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2004 ; International Journal of Systematic and Evolutionary Microbiology Volume 54 ; 54 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2005 ; International Journal of Systematic and Evolutionary Microbiology Volume 55 ; 55 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2006 ; International Journal of Systematic and Evolutionary Microbiology Volume 56 ; 56 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2007 ; International Journal of Systematic and Evolutionary Microbiology Volume 57 ; 57 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2008 ; International Journal of Systematic and Evolutionary Microbiology Volume 58 ; 58 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2009 ; International Journal of Systematic and Evolutionary Microbiology Volume 59 ; 59 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2010 ; International Journal of Systematic and Evolutionary Microbiology Volume 60 ; 60 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2011 ; International Journal of Systematic and Evolutionary Microbiology Volume 61 ; 61 ; https://www.microbiologyresearch.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Systematic and Evolutionary Microbiology Volume 62 ; 62 ; https://www.microbiologyresearch.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Systematic and Evolutionary Microbiology Volume 63 ; 63 ; https://www.microbiologyresearch.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Systematic and Evolutionary Microbiology Volume 64 ; 64 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2015 ; International Journal of Systematic and Evolutionary Microbiology Volume 65 ; 65 ; https://www.microbiologyresearch.org/ ; > #fetch error, duplicates PDF have been collected
+      au < exists ; exists ; 2016 ; International Journal of Systematic and Evolutionary Microbiology Volume 66 ; 66 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2017 ; International Journal of Systematic and Evolutionary Microbiology Volume 67 ; 67 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2018 ; International Journal of Systematic and Evolutionary Microbiology Volume 68 ; 68 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2019 ; International Journal of Systematic and Evolutionary Microbiology Volume 69 ; 69 ; https://www.microbiologyresearch.org/ ; >
 
   }
 
@@ -241,299 +137,147 @@
 
       comment[continued_by] = Microbiology 1350-0872 as of Jan 1994
 
-    {
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
-      implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
-      param[base_url] = http://mic.sgmjournals.org/
-
-      au < doNotProcess ; doNotProcess ; 1947 ; Journal of General Microbiology Volume 1 ; 1 ; >
-      au < doNotProcess ; doNotProcess ; 1948 ; Journal of General Microbiology Volume 2 ; 2 ; >
-      au < doNotProcess ; doNotProcess ; 1949 ; Journal of General Microbiology Volume 3 ; 3 ; >
-      au < doNotProcess ; doNotProcess ; 1950 ; Journal of General Microbiology Volume 4 ; 4 ; >
-      au < doNotProcess ; doNotProcess ; 1951 ; Journal of General Microbiology Volume 5 ; 5 ; >
-      au < doNotProcess ; doNotProcess ; 1952 ; Journal of General Microbiology Volume 6 ; 6 ; >
-      au < doNotProcess ; doNotProcess ; 1952 ; Journal of General Microbiology Volume 7 ; 7 ; >
-      au < doNotProcess ; doNotProcess ; 1953 ; Journal of General Microbiology Volume 8 ; 8 ; >
-      au < doNotProcess ; doNotProcess ; 1953 ; Journal of General Microbiology Volume 9 ; 9 ; >
-      au < doNotProcess ; doNotProcess ; 1954 ; Journal of General Microbiology Volume 10 ; 10 ; >
-      au < doNotProcess ; doNotProcess ; 1954 ; Journal of General Microbiology Volume 11 ; 11 ; >
-      au < doNotProcess ; doNotProcess ; 1955 ; Journal of General Microbiology Volume 12 ; 12 ; >
-      au < doNotProcess ; doNotProcess ; 1955 ; Journal of General Microbiology Volume 13 ; 13 ; >
-      au < doNotProcess ; doNotProcess ; 1956 ; Journal of General Microbiology Volume 14 ; 14 ; >
-      au < doNotProcess ; doNotProcess ; 1956 ; Journal of General Microbiology Volume 15 ; 15 ; >
-      au < doNotProcess ; doNotProcess ; 1957 ; Journal of General Microbiology Volume 16 ; 16 ; >
-      au < doNotProcess ; doNotProcess ; 1957 ; Journal of General Microbiology Volume 17 ; 17 ; >
-      au < doNotProcess ; doNotProcess ; 1958 ; Journal of General Microbiology Volume 18 ; 18 ; >
-      au < doNotProcess ; doNotProcess ; 1958 ; Journal of General Microbiology Volume 19 ; 19 ; >
-      au < doNotProcess ; doNotProcess ; 1959 ; Journal of General Microbiology Volume 20 ; 20 ; >
-      au < doNotProcess ; doNotProcess ; 1959 ; Journal of General Microbiology Volume 21 ; 21 ; >
-      au < doNotProcess ; doNotProcess ; 1960 ; Journal of General Microbiology Volume 22 ; 22 ; >
-      au < doNotProcess ; doNotProcess ; 1960 ; Journal of General Microbiology Volume 23 ; 23 ; >
-      au < doNotProcess ; doNotProcess ; 1961 ; Journal of General Microbiology Volume 24 ; 24 ; >
-      au < doNotProcess ; doNotProcess ; 1961 ; Journal of General Microbiology Volume 25 ; 25 ; >
-      au < doNotProcess ; doNotProcess ; 1961 ; Journal of General Microbiology Volume 26 ; 26 ; >
-      au < doNotProcess ; doNotProcess ; 1962 ; Journal of General Microbiology Volume 27 ; 27 ; >
-      au < doNotProcess ; doNotProcess ; 1962 ; Journal of General Microbiology Volume 28 ; 28 ; >
-      au < doNotProcess ; doNotProcess ; 1962 ; Journal of General Microbiology Volume 29 ; 29 ; >
-      au < doNotProcess ; doNotProcess ; 1963 ; Journal of General Microbiology Volume 30 ; 30 ; >
-      au < doNotProcess ; doNotProcess ; 1963 ; Journal of General Microbiology Volume 31 ; 31 ; >
-      au < doNotProcess ; doNotProcess ; 1963 ; Journal of General Microbiology Volume 32 ; 32 ; >
-      au < doNotProcess ; doNotProcess ; 1963 ; Journal of General Microbiology Volume 33 ; 33 ; >
-      au < doNotProcess ; doNotProcess ; 1964 ; Journal of General Microbiology Volume 34 ; 34 ; >
-      au < doNotProcess ; doNotProcess ; 1964 ; Journal of General Microbiology Volume 35 ; 35 ; >
-      au < doNotProcess ; doNotProcess ; 1964 ; Journal of General Microbiology Volume 36 ; 36 ; >
-      au < doNotProcess ; doNotProcess ; 1964 ; Journal of General Microbiology Volume 37 ; 37 ; >
-      au < doNotProcess ; doNotProcess ; 1965 ; Journal of General Microbiology Volume 38 ; 38 ; >
-      au < doNotProcess ; doNotProcess ; 1965 ; Journal of General Microbiology Volume 39 ; 39 ; >
-      au < doNotProcess ; doNotProcess ; 1965 ; Journal of General Microbiology Volume 40 ; 40 ; >
-      au < doNotProcess ; doNotProcess ; 1965 ; Journal of General Microbiology Volume 41 ; 41 ; >
-      au < doNotProcess ; doNotProcess ; 1966 ; Journal of General Microbiology Volume 42 ; 42 ; >
-      au < doNotProcess ; doNotProcess ; 1966 ; Journal of General Microbiology Volume 43 ; 43 ; >
-      au < doNotProcess ; doNotProcess ; 1966 ; Journal of General Microbiology Volume 44 ; 44 ; >
-      au < doNotProcess ; doNotProcess ; 1966 ; Journal of General Microbiology Volume 45 ; 45 ; >
-      au < doNotProcess ; doNotProcess ; 1967 ; Journal of General Microbiology Volume 46 ; 46 ; >
-      au < doNotProcess ; doNotProcess ; 1967 ; Journal of General Microbiology Volume 47 ; 47 ; >
-      au < doNotProcess ; doNotProcess ; 1967 ; Journal of General Microbiology Volume 48 ; 48 ; >
-      au < doNotProcess ; doNotProcess ; 1967 ; Journal of General Microbiology Volume 49 ; 49 ; >
-      au < doNotProcess ; doNotProcess ; 1968 ; Journal of General Microbiology Volume 50 ; 50 ; >
-      au < doNotProcess ; doNotProcess ; 1968 ; Journal of General Microbiology Volume 51 ; 51 ; >
-      au < doNotProcess ; doNotProcess ; 1968 ; Journal of General Microbiology Volume 52 ; 52 ; >
-      au < doNotProcess ; doNotProcess ; 1968 ; Journal of General Microbiology Volume 53 ; 53 ; >
-      au < doNotProcess ; doNotProcess ; 1968 ; Journal of General Microbiology Volume 54 ; 54 ; >
-      au < doNotProcess ; doNotProcess ; 1969 ; Journal of General Microbiology Volume 55 ; 55 ; >
-      au < doNotProcess ; doNotProcess ; 1969 ; Journal of General Microbiology Volume 56 ; 56 ; >
-      au < doNotProcess ; doNotProcess ; 1969 ; Journal of General Microbiology Volume 57 ; 57 ; >
-      au < doNotProcess ; doNotProcess ; 1969 ; Journal of General Microbiology Volume 58 ; 58 ; >
-      au < doNotProcess ; doNotProcess ; 1969 ; Journal of General Microbiology Volume 59 ; 59 ; >
-      au < doNotProcess ; doNotProcess ; 1970 ; Journal of General Microbiology Volume 60 ; 60 ; >
-      au < doNotProcess ; doNotProcess ; 1970 ; Journal of General Microbiology Volume 61 ; 61 ; >
-      au < doNotProcess ; doNotProcess ; 1970 ; Journal of General Microbiology Volume 62 ; 62 ; >
-      au < doNotProcess ; doNotProcess ; 1970 ; Journal of General Microbiology Volume 63 ; 63 ; >
-      au < doNotProcess ; doNotProcess ; 1970 ; Journal of General Microbiology Volume 64 ; 64 ; >
-      au < doNotProcess ; doNotProcess ; 1971 ; Journal of General Microbiology Volume 65 ; 65 ; >
-      au < doNotProcess ; doNotProcess ; 1971 ; Journal of General Microbiology Volume 66 ; 66 ; >
-      au < doNotProcess ; doNotProcess ; 1971 ; Journal of General Microbiology Volume 67 ; 67 ; >
-      au < doNotProcess ; doNotProcess ; 1971 ; Journal of General Microbiology Volume 68 ; 68 ; >
-      au < doNotProcess ; doNotProcess ; 1971 ; Journal of General Microbiology Volume 69 ; 69 ; >
-      au < doNotProcess ; doNotProcess ; 1972 ; Journal of General Microbiology Volume 70 ; 70 ; >
-      au < doNotProcess ; doNotProcess ; 1972 ; Journal of General Microbiology Volume 71 ; 71 ; >
-      au < doNotProcess ; doNotProcess ; 1972 ; Journal of General Microbiology Volume 72 ; 72 ; >
-      au < doNotProcess ; doNotProcess ; 1972 ; Journal of General Microbiology Volume 73 ; 73 ; >
-      au < doNotProcess ; doNotProcess ; 1973 ; Journal of General Microbiology Volume 74 ; 74 ; >
-      au < doNotProcess ; doNotProcess ; 1973 ; Journal of General Microbiology Volume 75 ; 75 ; >
-      au < doNotProcess ; doNotProcess ; 1973 ; Journal of General Microbiology Volume 76 ; 76 ; >
-      au < doNotProcess ; doNotProcess ; 1973 ; Journal of General Microbiology Volume 77 ; 77 ; >
-      au < doNotProcess ; doNotProcess ; 1973 ; Journal of General Microbiology Volume 78 ; 78 ; >
-      au < doNotProcess ; doNotProcess ; 1973 ; Journal of General Microbiology Volume 79 ; 79 ; >
-      au < doNotProcess ; doNotProcess ; 1974 ; Journal of General Microbiology Volume 80 ; 80 ; >
-      au < doNotProcess ; doNotProcess ; 1974 ; Journal of General Microbiology Volume 81 ; 81 ; >
-      au < doNotProcess ; doNotProcess ; 1974 ; Journal of General Microbiology Volume 82 ; 82 ; >
-      au < doNotProcess ; doNotProcess ; 1974 ; Journal of General Microbiology Volume 83 ; 83 ; >
-      au < doNotProcess ; doNotProcess ; 1974 ; Journal of General Microbiology Volume 84 ; 84 ; >
-      au < doNotProcess ; doNotProcess ; 1974 ; Journal of General Microbiology Volume 85 ; 85 ; >
-      au < doNotProcess ; doNotProcess ; 1975 ; Journal of General Microbiology Volume 86 ; 86 ; >
-      au < doNotProcess ; doNotProcess ; 1975 ; Journal of General Microbiology Volume 87 ; 87 ; >
-      au < doNotProcess ; doNotProcess ; 1975 ; Journal of General Microbiology Volume 88 ; 88 ; >
-      au < doNotProcess ; doNotProcess ; 1975 ; Journal of General Microbiology Volume 89 ; 89 ; >
-      au < doNotProcess ; doNotProcess ; 1975 ; Journal of General Microbiology Volume 90 ; 90 ; >
-      au < doNotProcess ; doNotProcess ; 1975 ; Journal of General Microbiology Volume 91 ; 91 ; >
-      au < doNotProcess ; doNotProcess ; 1976 ; Journal of General Microbiology Volume 92 ; 92 ; >
-      au < doNotProcess ; doNotProcess ; 1976 ; Journal of General Microbiology Volume 93 ; 93 ; >
-      au < doNotProcess ; doNotProcess ; 1976 ; Journal of General Microbiology Volume 94 ; 94 ; >
-      au < doNotProcess ; doNotProcess ; 1976 ; Journal of General Microbiology Volume 95 ; 95 ; >
-      au < doNotProcess ; doNotProcess ; 1976 ; Journal of General Microbiology Volume 96 ; 96 ; >
-      au < doNotProcess ; doNotProcess ; 1976 ; Journal of General Microbiology Volume 97 ; 97 ; >
-      au < doNotProcess ; doNotProcess ; 1977 ; Journal of General Microbiology Volume 98 ; 98 ; >
-      au < doNotProcess ; doNotProcess ; 1977 ; Journal of General Microbiology Volume 99 ; 99 ; >
-      au < doNotProcess ; doNotProcess ; 1977 ; Journal of General Microbiology Volume 100 ; 100 ; >
-      au < doNotProcess ; doNotProcess ; 1977 ; Journal of General Microbiology Volume 101 ; 101 ; >
-      au < doNotProcess ; doNotProcess ; 1977 ; Journal of General Microbiology Volume 102 ; 102 ; >
-      au < doNotProcess ; doNotProcess ; 1977 ; Journal of General Microbiology Volume 103 ; 103 ; >
-      au < doNotProcess ; doNotProcess ; 1978 ; Journal of General Microbiology Volume 104 ; 104 ; >
-      au < doNotProcess ; doNotProcess ; 1978 ; Journal of General Microbiology Volume 105 ; 105 ; >
-      au < doNotProcess ; doNotProcess ; 1978 ; Journal of General Microbiology Volume 106 ; 106 ; >
-      au < doNotProcess ; doNotProcess ; 1978 ; Journal of General Microbiology Volume 107 ; 107 ; >
-      au < doNotProcess ; doNotProcess ; 1978 ; Journal of General Microbiology Volume 108 ; 108 ; >
-      au < doNotProcess ; doNotProcess ; 1978 ; Journal of General Microbiology Volume 109 ; 109 ; >
-      au < doNotProcess ; doNotProcess ; 1979 ; Journal of General Microbiology Volume 110 ; 110 ; >
-      au < doNotProcess ; doNotProcess ; 1979 ; Journal of General Microbiology Volume 111 ; 111 ; >
-      au < doNotProcess ; doNotProcess ; 1979 ; Journal of General Microbiology Volume 112 ; 112 ; >
-      au < doNotProcess ; doNotProcess ; 1979 ; Journal of General Microbiology Volume 113 ; 113 ; >
-      au < doNotProcess ; doNotProcess ; 1979 ; Journal of General Microbiology Volume 114 ; 114 ; >
-      au < doNotProcess ; doNotProcess ; 1979 ; Journal of General Microbiology Volume 115 ; 115 ; >
-      au < doNotProcess ; doNotProcess ; 1980 ; Journal of General Microbiology Volume 116 ; 116 ; >
-      au < doNotProcess ; doNotProcess ; 1980 ; Journal of General Microbiology Volume 117 ; 117 ; >
-      au < doNotProcess ; doNotProcess ; 1980 ; Journal of General Microbiology Volume 118 ; 118 ; >
-      au < doNotProcess ; doNotProcess ; 1980 ; Journal of General Microbiology Volume 119 ; 119 ; >
-      au < doNotProcess ; doNotProcess ; 1980 ; Journal of General Microbiology Volume 120 ; 120 ; >
-      au < doNotProcess ; doNotProcess ; 1980 ; Journal of General Microbiology Volume 121 ; 121 ; >
-      au < doNotProcess ; doNotProcess ; 1981 ; Journal of General Microbiology Volume 122 ; 122 ; >
-      au < doNotProcess ; doNotProcess ; 1981 ; Journal of General Microbiology Volume 123 ; 123 ; >
-      au < doNotProcess ; doNotProcess ; 1981 ; Journal of General Microbiology Volume 124 ; 124 ; >
-      au < doNotProcess ; doNotProcess ; 1981 ; Journal of General Microbiology Volume 125 ; 125 ; >
-      au < doNotProcess ; doNotProcess ; 1981 ; Journal of General Microbiology Volume 126 ; 126 ; >
-      au < doNotProcess ; doNotProcess ; 1981 ; Journal of General Microbiology Volume 127 ; 127 ; >
-      au < doNotProcess ; doNotProcess ; 1982 ; Journal of General Microbiology Volume 128 ; 128 ; >
-      au < doNotProcess ; doNotProcess ; 1983 ; Journal of General Microbiology Volume 129 ; 129 ; >
-      au < doNotProcess ; doNotProcess ; 1984 ; Journal of General Microbiology Volume 130 ; 130 ; >
-      au < doNotProcess ; doNotProcess ; 1985 ; Journal of General Microbiology Volume 131 ; 131 ; >
-      au < doNotProcess ; doNotProcess ; 1986 ; Journal of General Microbiology Volume 132 ; 132 ; >
-      au < doNotProcess ; doNotProcess ; 1987 ; Journal of General Microbiology Volume 133 ; 133 ; >
-      au < doNotProcess ; doNotProcess ; 1988 ; Journal of General Microbiology Volume 134 ; 134 ; >
-      au < doNotProcess ; doNotProcess ; 1989 ; Journal of General Microbiology Volume 135 ; 135 ; >
-      au < doNotProcess ; doNotProcess ; 1990 ; Journal of General Microbiology Volume 136 ; 136 ; >
-      au < doNotProcess ; doNotProcess ; 1991 ; Journal of General Microbiology Volume 137 ; 137 ; >
-      au < doNotProcess ; doNotProcess ; 1992 ; Journal of General Microbiology Volume 138 ; 138 ; >
-      au < doNotProcess ; doNotProcess ; 1993 ; Journal of General Microbiology Volume 139 ; 139 ; >
-    }
-      
-    {
-      plugin = org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin
-      implicit < status ; status2 ; year ; name ; param[volume_name] ; param[base_url] ; hidden[proxy] >
-      #param[base_url] = http://mic.microbiologyresearch.org/
       param[journal_id] = micro
 
-      au < doNotProcess ; exists ; 1947 ; Journal of General Microbiology Volume 1 ; 1 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1948 ; Journal of General Microbiology Volume 2 ; 2 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1949 ; Journal of General Microbiology Volume 3 ; 3 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1950 ; Journal of General Microbiology Volume 4 ; 4 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1951 ; Journal of General Microbiology Volume 5 ; 5 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1952 ; Journal of General Microbiology Volume 6 ; 6 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1952 ; Journal of General Microbiology Volume 7 ; 7 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1953 ; Journal of General Microbiology Volume 8 ; 8 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1953 ; Journal of General Microbiology Volume 9 ; 9 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1954 ; Journal of General Microbiology Volume 10 ; 10 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1954 ; Journal of General Microbiology Volume 11 ; 11 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1955 ; Journal of General Microbiology Volume 12 ; 12 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1955 ; Journal of General Microbiology Volume 13 ; 13 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1956 ; Journal of General Microbiology Volume 14 ; 14 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1956 ; Journal of General Microbiology Volume 15 ; 15 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1957 ; Journal of General Microbiology Volume 16 ; 16 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1957 ; Journal of General Microbiology Volume 17 ; 17 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1958 ; Journal of General Microbiology Volume 18 ; 18 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1958 ; Journal of General Microbiology Volume 19 ; 19 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1959 ; Journal of General Microbiology Volume 20 ; 20 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1959 ; Journal of General Microbiology Volume 21 ; 21 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1960 ; Journal of General Microbiology Volume 22 ; 22 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1960 ; Journal of General Microbiology Volume 23 ; 23 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1961 ; Journal of General Microbiology Volume 24 ; 24 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1961 ; Journal of General Microbiology Volume 25 ; 25 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1961 ; Journal of General Microbiology Volume 26 ; 26 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1962 ; Journal of General Microbiology Volume 27 ; 27 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1962 ; Journal of General Microbiology Volume 28 ; 28 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1962 ; Journal of General Microbiology Volume 29 ; 29 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1963 ; Journal of General Microbiology Volume 30 ; 30 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1963 ; Journal of General Microbiology Volume 31 ; 31 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1963 ; Journal of General Microbiology Volume 32 ; 32 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1963 ; Journal of General Microbiology Volume 33 ; 33 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1964 ; Journal of General Microbiology Volume 34 ; 34 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1964 ; Journal of General Microbiology Volume 35 ; 35 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1964 ; Journal of General Microbiology Volume 36 ; 36 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1964 ; Journal of General Microbiology Volume 37 ; 37 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1965 ; Journal of General Microbiology Volume 38 ; 38 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1965 ; Journal of General Microbiology Volume 39 ; 39 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1965 ; Journal of General Microbiology Volume 40 ; 40 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1965 ; Journal of General Microbiology Volume 41 ; 41 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1966 ; Journal of General Microbiology Volume 42 ; 42 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1966 ; Journal of General Microbiology Volume 43 ; 43 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1966 ; Journal of General Microbiology Volume 44 ; 44 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1966 ; Journal of General Microbiology Volume 45 ; 45 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1967 ; Journal of General Microbiology Volume 46 ; 46 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1967 ; Journal of General Microbiology Volume 47 ; 47 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1967 ; Journal of General Microbiology Volume 48 ; 48 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1967 ; Journal of General Microbiology Volume 49 ; 49 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1968 ; Journal of General Microbiology Volume 50 ; 50 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1968 ; Journal of General Microbiology Volume 51 ; 51 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1968 ; Journal of General Microbiology Volume 52 ; 52 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1968 ; Journal of General Microbiology Volume 53 ; 53 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1968 ; Journal of General Microbiology Volume 54 ; 54 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1969 ; Journal of General Microbiology Volume 55 ; 55 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1969 ; Journal of General Microbiology Volume 56 ; 56 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1969 ; Journal of General Microbiology Volume 57 ; 57 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1969 ; Journal of General Microbiology Volume 58 ; 58 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1969 ; Journal of General Microbiology Volume 59 ; 59 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1970 ; Journal of General Microbiology Volume 60 ; 60 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1970 ; Journal of General Microbiology Volume 61 ; 61 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1970 ; Journal of General Microbiology Volume 62 ; 62 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1970 ; Journal of General Microbiology Volume 63 ; 63 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1970 ; Journal of General Microbiology Volume 64 ; 64 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1971 ; Journal of General Microbiology Volume 65 ; 65 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1971 ; Journal of General Microbiology Volume 66 ; 66 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1971 ; Journal of General Microbiology Volume 67 ; 67 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1971 ; Journal of General Microbiology Volume 68 ; 68 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1971 ; Journal of General Microbiology Volume 69 ; 69 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1972 ; Journal of General Microbiology Volume 70 ; 70 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1972 ; Journal of General Microbiology Volume 71 ; 71 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1972 ; Journal of General Microbiology Volume 72 ; 72 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1972 ; Journal of General Microbiology Volume 73 ; 73 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1973 ; Journal of General Microbiology Volume 74 ; 74 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1973 ; Journal of General Microbiology Volume 75 ; 75 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1973 ; Journal of General Microbiology Volume 76 ; 76 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1973 ; Journal of General Microbiology Volume 77 ; 77 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1973 ; Journal of General Microbiology Volume 78 ; 78 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1973 ; Journal of General Microbiology Volume 79 ; 79 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1974 ; Journal of General Microbiology Volume 80 ; 80 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1974 ; Journal of General Microbiology Volume 81 ; 81 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1974 ; Journal of General Microbiology Volume 82 ; 82 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1974 ; Journal of General Microbiology Volume 83 ; 83 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1974 ; Journal of General Microbiology Volume 84 ; 84 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1974 ; Journal of General Microbiology Volume 85 ; 85 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1975 ; Journal of General Microbiology Volume 86 ; 86 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1975 ; Journal of General Microbiology Volume 87 ; 87 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1975 ; Journal of General Microbiology Volume 88 ; 88 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1975 ; Journal of General Microbiology Volume 89 ; 89 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1975 ; Journal of General Microbiology Volume 90 ; 90 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1975 ; Journal of General Microbiology Volume 91 ; 91 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1976 ; Journal of General Microbiology Volume 92 ; 92 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1976 ; Journal of General Microbiology Volume 93 ; 93 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1976 ; Journal of General Microbiology Volume 94 ; 94 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1976 ; Journal of General Microbiology Volume 95 ; 95 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1976 ; Journal of General Microbiology Volume 96 ; 96 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1976 ; Journal of General Microbiology Volume 97 ; 97 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1977 ; Journal of General Microbiology Volume 98 ; 98 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1977 ; Journal of General Microbiology Volume 99 ; 99 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1977 ; Journal of General Microbiology Volume 100 ; 100 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1977 ; Journal of General Microbiology Volume 101 ; 101 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1977 ; Journal of General Microbiology Volume 102 ; 102 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1977 ; Journal of General Microbiology Volume 103 ; 103 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1978 ; Journal of General Microbiology Volume 104 ; 104 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1978 ; Journal of General Microbiology Volume 105 ; 105 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1978 ; Journal of General Microbiology Volume 106 ; 106 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1978 ; Journal of General Microbiology Volume 107 ; 107 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1978 ; Journal of General Microbiology Volume 108 ; 108 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1978 ; Journal of General Microbiology Volume 109 ; 109 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1979 ; Journal of General Microbiology Volume 110 ; 110 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1979 ; Journal of General Microbiology Volume 111 ; 111 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1979 ; Journal of General Microbiology Volume 112 ; 112 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1979 ; Journal of General Microbiology Volume 113 ; 113 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1979 ; Journal of General Microbiology Volume 114 ; 114 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1979 ; Journal of General Microbiology Volume 115 ; 115 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1980 ; Journal of General Microbiology Volume 116 ; 116 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1980 ; Journal of General Microbiology Volume 117 ; 117 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1980 ; Journal of General Microbiology Volume 118 ; 118 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1980 ; Journal of General Microbiology Volume 119 ; 119 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1980 ; Journal of General Microbiology Volume 120 ; 120 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1980 ; Journal of General Microbiology Volume 121 ; 121 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1981 ; Journal of General Microbiology Volume 122 ; 122 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1981 ; Journal of General Microbiology Volume 123 ; 123 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1981 ; Journal of General Microbiology Volume 124 ; 124 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1981 ; Journal of General Microbiology Volume 125 ; 125 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1981 ; Journal of General Microbiology Volume 126 ; 126 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1981 ; Journal of General Microbiology Volume 127 ; 127 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1982 ; Journal of General Microbiology Volume 128 ; 128 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1983 ; Journal of General Microbiology Volume 129 ; 129 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1984 ; Journal of General Microbiology Volume 130 ; 130 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1985 ; Journal of General Microbiology Volume 131 ; 131 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1986 ; Journal of General Microbiology Volume 132 ; 132 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1987 ; Journal of General Microbiology Volume 133 ; 133 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1988 ; Journal of General Microbiology Volume 134 ; 134 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1989 ; Journal of General Microbiology Volume 135 ; 135 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1990 ; Journal of General Microbiology Volume 136 ; 136 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1991 ; Journal of General Microbiology Volume 137 ; 137 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1992 ; Journal of General Microbiology Volume 138 ; 138 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1993 ; Journal of General Microbiology Volume 139 ; 139 ; https://mic.microbiologyresearch.org/ ; >
-
-    }
+      au < exists ; exists ; 1947 ; Journal of General Microbiology Volume 1 ; 1 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1948 ; Journal of General Microbiology Volume 2 ; 2 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1949 ; Journal of General Microbiology Volume 3 ; 3 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1950 ; Journal of General Microbiology Volume 4 ; 4 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1951 ; Journal of General Microbiology Volume 5 ; 5 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1952 ; Journal of General Microbiology Volume 6 ; 6 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1952 ; Journal of General Microbiology Volume 7 ; 7 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1953 ; Journal of General Microbiology Volume 8 ; 8 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1953 ; Journal of General Microbiology Volume 9 ; 9 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1954 ; Journal of General Microbiology Volume 10 ; 10 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1954 ; Journal of General Microbiology Volume 11 ; 11 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1955 ; Journal of General Microbiology Volume 12 ; 12 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1955 ; Journal of General Microbiology Volume 13 ; 13 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1956 ; Journal of General Microbiology Volume 14 ; 14 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1956 ; Journal of General Microbiology Volume 15 ; 15 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1957 ; Journal of General Microbiology Volume 16 ; 16 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1957 ; Journal of General Microbiology Volume 17 ; 17 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1958 ; Journal of General Microbiology Volume 18 ; 18 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1958 ; Journal of General Microbiology Volume 19 ; 19 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1959 ; Journal of General Microbiology Volume 20 ; 20 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1959 ; Journal of General Microbiology Volume 21 ; 21 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1960 ; Journal of General Microbiology Volume 22 ; 22 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1960 ; Journal of General Microbiology Volume 23 ; 23 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1961 ; Journal of General Microbiology Volume 24 ; 24 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1961 ; Journal of General Microbiology Volume 25 ; 25 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1961 ; Journal of General Microbiology Volume 26 ; 26 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1962 ; Journal of General Microbiology Volume 27 ; 27 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1962 ; Journal of General Microbiology Volume 28 ; 28 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1962 ; Journal of General Microbiology Volume 29 ; 29 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1963 ; Journal of General Microbiology Volume 30 ; 30 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1963 ; Journal of General Microbiology Volume 31 ; 31 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1963 ; Journal of General Microbiology Volume 32 ; 32 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1963 ; Journal of General Microbiology Volume 33 ; 33 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1964 ; Journal of General Microbiology Volume 34 ; 34 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1964 ; Journal of General Microbiology Volume 35 ; 35 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1964 ; Journal of General Microbiology Volume 36 ; 36 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1964 ; Journal of General Microbiology Volume 37 ; 37 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1965 ; Journal of General Microbiology Volume 38 ; 38 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1965 ; Journal of General Microbiology Volume 39 ; 39 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1965 ; Journal of General Microbiology Volume 40 ; 40 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1965 ; Journal of General Microbiology Volume 41 ; 41 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1966 ; Journal of General Microbiology Volume 42 ; 42 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1966 ; Journal of General Microbiology Volume 43 ; 43 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1966 ; Journal of General Microbiology Volume 44 ; 44 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1966 ; Journal of General Microbiology Volume 45 ; 45 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1967 ; Journal of General Microbiology Volume 46 ; 46 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1967 ; Journal of General Microbiology Volume 47 ; 47 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1967 ; Journal of General Microbiology Volume 48 ; 48 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1967 ; Journal of General Microbiology Volume 49 ; 49 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1968 ; Journal of General Microbiology Volume 50 ; 50 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1968 ; Journal of General Microbiology Volume 51 ; 51 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1968 ; Journal of General Microbiology Volume 52 ; 52 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1968 ; Journal of General Microbiology Volume 53 ; 53 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1968 ; Journal of General Microbiology Volume 54 ; 54 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1969 ; Journal of General Microbiology Volume 55 ; 55 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1969 ; Journal of General Microbiology Volume 56 ; 56 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1969 ; Journal of General Microbiology Volume 57 ; 57 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1969 ; Journal of General Microbiology Volume 58 ; 58 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1969 ; Journal of General Microbiology Volume 59 ; 59 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1970 ; Journal of General Microbiology Volume 60 ; 60 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1970 ; Journal of General Microbiology Volume 61 ; 61 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1970 ; Journal of General Microbiology Volume 62 ; 62 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1970 ; Journal of General Microbiology Volume 63 ; 63 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1970 ; Journal of General Microbiology Volume 64 ; 64 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1971 ; Journal of General Microbiology Volume 65 ; 65 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1971 ; Journal of General Microbiology Volume 66 ; 66 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1971 ; Journal of General Microbiology Volume 67 ; 67 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1971 ; Journal of General Microbiology Volume 68 ; 68 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1971 ; Journal of General Microbiology Volume 69 ; 69 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1972 ; Journal of General Microbiology Volume 70 ; 70 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1972 ; Journal of General Microbiology Volume 71 ; 71 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1972 ; Journal of General Microbiology Volume 72 ; 72 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1972 ; Journal of General Microbiology Volume 73 ; 73 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1973 ; Journal of General Microbiology Volume 74 ; 74 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1973 ; Journal of General Microbiology Volume 75 ; 75 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1973 ; Journal of General Microbiology Volume 76 ; 76 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1973 ; Journal of General Microbiology Volume 77 ; 77 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1973 ; Journal of General Microbiology Volume 78 ; 78 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1973 ; Journal of General Microbiology Volume 79 ; 79 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1974 ; Journal of General Microbiology Volume 80 ; 80 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1974 ; Journal of General Microbiology Volume 81 ; 81 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1974 ; Journal of General Microbiology Volume 82 ; 82 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1974 ; Journal of General Microbiology Volume 83 ; 83 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1974 ; Journal of General Microbiology Volume 84 ; 84 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1974 ; Journal of General Microbiology Volume 85 ; 85 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1975 ; Journal of General Microbiology Volume 86 ; 86 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1975 ; Journal of General Microbiology Volume 87 ; 87 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1975 ; Journal of General Microbiology Volume 88 ; 88 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1975 ; Journal of General Microbiology Volume 89 ; 89 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1975 ; Journal of General Microbiology Volume 90 ; 90 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1975 ; Journal of General Microbiology Volume 91 ; 91 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1976 ; Journal of General Microbiology Volume 92 ; 92 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1976 ; Journal of General Microbiology Volume 93 ; 93 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1976 ; Journal of General Microbiology Volume 94 ; 94 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1976 ; Journal of General Microbiology Volume 95 ; 95 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1976 ; Journal of General Microbiology Volume 96 ; 96 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1976 ; Journal of General Microbiology Volume 97 ; 97 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1977 ; Journal of General Microbiology Volume 98 ; 98 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1977 ; Journal of General Microbiology Volume 99 ; 99 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1977 ; Journal of General Microbiology Volume 100 ; 100 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1977 ; Journal of General Microbiology Volume 101 ; 101 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1977 ; Journal of General Microbiology Volume 102 ; 102 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1977 ; Journal of General Microbiology Volume 103 ; 103 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1978 ; Journal of General Microbiology Volume 104 ; 104 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1978 ; Journal of General Microbiology Volume 105 ; 105 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1978 ; Journal of General Microbiology Volume 106 ; 106 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1978 ; Journal of General Microbiology Volume 107 ; 107 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1978 ; Journal of General Microbiology Volume 108 ; 108 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1978 ; Journal of General Microbiology Volume 109 ; 109 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1979 ; Journal of General Microbiology Volume 110 ; 110 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1979 ; Journal of General Microbiology Volume 111 ; 111 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1979 ; Journal of General Microbiology Volume 112 ; 112 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1979 ; Journal of General Microbiology Volume 113 ; 113 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1979 ; Journal of General Microbiology Volume 114 ; 114 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1979 ; Journal of General Microbiology Volume 115 ; 115 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1980 ; Journal of General Microbiology Volume 116 ; 116 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1980 ; Journal of General Microbiology Volume 117 ; 117 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1980 ; Journal of General Microbiology Volume 118 ; 118 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1980 ; Journal of General Microbiology Volume 119 ; 119 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1980 ; Journal of General Microbiology Volume 120 ; 120 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1980 ; Journal of General Microbiology Volume 121 ; 121 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1981 ; Journal of General Microbiology Volume 122 ; 122 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1981 ; Journal of General Microbiology Volume 123 ; 123 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1981 ; Journal of General Microbiology Volume 124 ; 124 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1981 ; Journal of General Microbiology Volume 125 ; 125 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1981 ; Journal of General Microbiology Volume 126 ; 126 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1981 ; Journal of General Microbiology Volume 127 ; 127 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1982 ; Journal of General Microbiology Volume 128 ; 128 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1983 ; Journal of General Microbiology Volume 129 ; 129 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1984 ; Journal of General Microbiology Volume 130 ; 130 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1985 ; Journal of General Microbiology Volume 131 ; 131 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1986 ; Journal of General Microbiology Volume 132 ; 132 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1987 ; Journal of General Microbiology Volume 133 ; 133 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1988 ; Journal of General Microbiology Volume 134 ; 134 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1989 ; Journal of General Microbiology Volume 135 ; 135 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1990 ; Journal of General Microbiology Volume 136 ; 136 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1991 ; Journal of General Microbiology Volume 137 ; 137 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1992 ; Journal of General Microbiology Volume 138 ; 138 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1993 ; Journal of General Microbiology Volume 139 ; 139 ; https://www.microbiologyresearch.org/ ; >
 
   }
 
@@ -545,217 +289,108 @@
       issnl = 0022-1317
     >
 
-    {
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
-      implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
-      param[base_url] = http://vir.sgmjournals.org/
-
-      au < doNotProcess ; doNotProcess ; 1967 ; Journal of General Virology Volume 1 ; 1 ; >
-      au < doNotProcess ; doNotProcess ; 1968 ; Journal of General Virology Volume 2 ; 2 ; >
-      au < doNotProcess ; doNotProcess ; 1968 ; Journal of General Virology Volume 3 ; 3 ; >
-      au < doNotProcess ; doNotProcess ; 1969 ; Journal of General Virology Volume 4 ; 4 ; >
-      au < doNotProcess ; doNotProcess ; 1969 ; Journal of General Virology Volume 5 ; 5 ; >
-      au < doNotProcess ; doNotProcess ; 1970 ; Journal of General Virology Volume 6 ; 6 ; >
-      au < doNotProcess ; doNotProcess ; 1970 ; Journal of General Virology Volume 7 ; 7 ; >
-      au < doNotProcess ; doNotProcess ; 1970 ; Journal of General Virology Volume 8 ; 8 ; >
-      au < doNotProcess ; doNotProcess ; 1970 ; Journal of General Virology Volume 9 ; 9 ; >
-      au < doNotProcess ; doNotProcess ; 1971 ; Journal of General Virology Volume 10 ; 10 ; >
-      au < doNotProcess ; doNotProcess ; 1971 ; Journal of General Virology Volume 11 ; 11 ; >
-      au < doNotProcess ; doNotProcess ; 1971 ; Journal of General Virology Volume 12 ; 12 ; >
-      au < doNotProcess ; doNotProcess ; 1971 ; Journal of General Virology Volume 13 ; 13 ; >
-      au < doNotProcess ; doNotProcess ; 1972 ; Journal of General Virology Volume 14 ; 14 ; >
-      au < doNotProcess ; doNotProcess ; 1972 ; Journal of General Virology Volume 15 ; 15 ; >
-      au < doNotProcess ; doNotProcess ; 1972 ; Journal of General Virology Volume 16 ; 16 ; >
-      au < doNotProcess ; doNotProcess ; 1972 ; Journal of General Virology Volume 17 ; 17 ; >
-      au < doNotProcess ; doNotProcess ; 1973 ; Journal of General Virology Volume 18 ; 18 ; >
-      au < doNotProcess ; doNotProcess ; 1973 ; Journal of General Virology Volume 19 ; 19 ; >
-      au < doNotProcess ; doNotProcess ; 1973 ; Journal of General Virology Volume 20 ; 20 ; >
-      au < doNotProcess ; doNotProcess ; 1973 ; Journal of General Virology Volume 21 ; 21 ; >
-      au < doNotProcess ; doNotProcess ; 1974 ; Journal of General Virology Volume 22 ; 22 ; >
-      au < doNotProcess ; doNotProcess ; 1974 ; Journal of General Virology Volume 23 ; 23 ; >
-      au < doNotProcess ; doNotProcess ; 1974 ; Journal of General Virology Volume 24 ; 24 ; >
-      au < doNotProcess ; doNotProcess ; 1974 ; Journal of General Virology Volume 25 ; 25 ; >
-      au < doNotProcess ; doNotProcess ; 1975 ; Journal of General Virology Volume 26 ; 26 ; >
-      au < doNotProcess ; doNotProcess ; 1975 ; Journal of General Virology Volume 27 ; 27 ; >
-      au < doNotProcess ; doNotProcess ; 1975 ; Journal of General Virology Volume 28 ; 28 ; >
-      au < doNotProcess ; doNotProcess ; 1975 ; Journal of General Virology Volume 29 ; 29 ; >
-      au < doNotProcess ; doNotProcess ; 1976 ; Journal of General Virology Volume 30 ; 30 ; >
-      au < doNotProcess ; doNotProcess ; 1976 ; Journal of General Virology Volume 31 ; 31 ; >
-      au < doNotProcess ; doNotProcess ; 1976 ; Journal of General Virology Volume 32 ; 32 ; >
-      au < doNotProcess ; doNotProcess ; 1976 ; Journal of General Virology Volume 33 ; 33 ; >
-      au < doNotProcess ; doNotProcess ; 1977 ; Journal of General Virology Volume 34 ; 34 ; >
-      au < doNotProcess ; doNotProcess ; 1977 ; Journal of General Virology Volume 35 ; 35 ; >
-      au < doNotProcess ; doNotProcess ; 1977 ; Journal of General Virology Volume 36 ; 36 ; >
-      au < doNotProcess ; doNotProcess ; 1977 ; Journal of General Virology Volume 37 ; 37 ; >
-      au < doNotProcess ; doNotProcess ; 1978 ; Journal of General Virology Volume 38 ; 38 ; >
-      au < doNotProcess ; doNotProcess ; 1978 ; Journal of General Virology Volume 39 ; 39 ; >
-      au < doNotProcess ; doNotProcess ; 1978 ; Journal of General Virology Volume 40 ; 40 ; >
-      au < doNotProcess ; doNotProcess ; 1978 ; Journal of General Virology Volume 41 ; 41 ; >
-      au < doNotProcess ; doNotProcess ; 1979 ; Journal of General Virology Volume 42 ; 42 ; >
-      au < doNotProcess ; doNotProcess ; 1979 ; Journal of General Virology Volume 43 ; 43 ; >
-      au < doNotProcess ; doNotProcess ; 1979 ; Journal of General Virology Volume 44 ; 44 ; >
-      au < doNotProcess ; doNotProcess ; 1979 ; Journal of General Virology Volume 45 ; 45 ; >
-      au < doNotProcess ; doNotProcess ; 1980 ; Journal of General Virology Volume 46 ; 46 ; >
-      au < doNotProcess ; doNotProcess ; 1980 ; Journal of General Virology Volume 47 ; 47 ; >
-      au < doNotProcess ; doNotProcess ; 1980 ; Journal of General Virology Volume 48 ; 48 ; >
-      au < doNotProcess ; doNotProcess ; 1980 ; Journal of General Virology Volume 49 ; 49 ; >
-      au < doNotProcess ; doNotProcess ; 1980 ; Journal of General Virology Volume 50 ; 50 ; >
-      au < doNotProcess ; doNotProcess ; 1980 ; Journal of General Virology Volume 51 ; 51 ; >
-      au < doNotProcess ; doNotProcess ; 1981 ; Journal of General Virology Volume 52 ; 52 ; >
-      au < doNotProcess ; doNotProcess ; 1981 ; Journal of General Virology Volume 53 ; 53 ; >
-      au < doNotProcess ; doNotProcess ; 1981 ; Journal of General Virology Volume 54 ; 54 ; >
-      au < doNotProcess ; doNotProcess ; 1981 ; Journal of General Virology Volume 55 ; 55 ; >
-      au < doNotProcess ; doNotProcess ; 1981 ; Journal of General Virology Volume 56 ; 56 ; >
-      au < doNotProcess ; doNotProcess ; 1981 ; Journal of General Virology Volume 57 ; 57 ; >
-      au < doNotProcess ; doNotProcess ; 1982 ; Journal of General Virology Volume 58 ; 58 ; >
-      au < doNotProcess ; doNotProcess ; 1982 ; Journal of General Virology Volume 59 ; 59 ; >
-      au < doNotProcess ; doNotProcess ; 1982 ; Journal of General Virology Volume 60 ; 60 ; >
-      au < doNotProcess ; doNotProcess ; 1982 ; Journal of General Virology Volume 61 ; 61 ; >
-      au < doNotProcess ; doNotProcess ; 1982 ; Journal of General Virology Volume 62 ; 62 ; >
-      au < doNotProcess ; doNotProcess ; 1982 ; Journal of General Virology Volume 63 ; 63 ; >
-      au < doNotProcess ; doNotProcess ; 1983 ; Journal of General Virology Volume 64 ; 64 ; >
-      au < doNotProcess ; doNotProcess ; 1984 ; Journal of General Virology Volume 65 ; 65 ; >
-      au < doNotProcess ; doNotProcess ; 1985 ; Journal of General Virology Volume 66 ; 66 ; >
-      au < doNotProcess ; doNotProcess ; 1986 ; Journal of General Virology Volume 67 ; 67 ; >
-      au < doNotProcess ; doNotProcess ; 1987 ; Journal of General Virology Volume 68 ; 68 ; >
-      au < doNotProcess ; doNotProcess ; 1988 ; Journal of General Virology Volume 69 ; 69 ; >
-      au < doNotProcess ; doNotProcess ; 1989 ; Journal of General Virology Volume 70 ; 70 ; >
-      au < doNotProcess ; doNotProcess ; 1990 ; Journal of General Virology Volume 71 ; 71 ; >
-      au < doNotProcess ; doNotProcess ; 1991 ; Journal of General Virology Volume 72 ; 72 ; >
-      au < doNotProcess ; doNotProcess ; 1992 ; Journal of General Virology Volume 73 ; 73 ; >
-      au < doNotProcess ; doNotProcess ; 1993 ; Journal of General Virology Volume 74 ; 74 ; >
-      au < doNotProcess ; doNotProcess ; 1994 ; Journal of General Virology Volume 75 ; 75 ; >
-      au < doNotProcess ; doNotProcess ; 1995 ; Journal of General Virology Volume 76 ; 76 ; >
-      au < doNotProcess ; doNotProcess ; 1996 ; Journal of General Virology Volume 77 ; 77 ; >
-      au < doNotProcess ; doNotProcess ; 1997 ; Journal of General Virology Volume 78 ; 78 ; >
-      au < doNotProcess ; doNotProcess ; 1998 ; Journal of General Virology Volume 79 ; 79 ; >
-      au < doNotProcess ; doNotProcess ; 1999 ; Journal of General Virology Volume 80 ; 80 ; >
-      au < doNotProcess ; doNotProcess ; 2000 ; Journal of General Virology Volume 81 ; 81 ; >
-      au < doNotProcess ; doNotProcess ; 2001 ; Journal of General Virology Volume 82 ; 82 ; >
-      au < doNotProcess ; doNotProcess ; 2002 ; Journal of General Virology Volume 83 ; 83 ; >
-      au < doNotProcess ; doNotProcess ; 2003 ; Journal of General Virology Volume 84 ; 84 ; >
-      au < doNotProcess ; doNotProcess ; 2004 ; Journal of General Virology Volume 85 ; 85 ; >
-      au < doNotProcess ; doNotProcess ; 2005 ; Journal of General Virology Volume 86 ; 86 ; >
-      au < doNotProcess ; doNotProcess ; 2006 ; Journal of General Virology Volume 87 ; 87 ; >
-      au < doNotProcess ; doNotProcess ; 2007 ; Journal of General Virology Volume 88 ; 88 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; Journal of General Virology Volume 89 ; 89 ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; Journal of General Virology Volume 90 ; 90 ; >
-      au < doNotProcess ; doNotProcess ; 2010 ; Journal of General Virology Volume 91 ; 91 ; >
-      au < doNotProcess ; doNotProcess ; 2011 ; Journal of General Virology Volume 92 ; 92 ; >
-      au < finished ; finished ; 2012 ; Journal of General Virology Volume 93 ; 93 ; >
-      au < frozen ; exists ; 2013 ; Journal of General Virology Volume 94 ; 94 ; >
-      au < zapped ; finished ; 2014 ; Journal of General Virology Volume 95 ; 95 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; Journal of General Virology Volume 96 ; 96 ; >
-    }
-
-    {
-      plugin = org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin
-      implicit < status ; status2 ; year ; name ; param[volume_name] ; param[base_url] ; hidden[proxy] >
-      #param[base_url] = http://jgv.microbiologyresearch.org/
       param[journal_id] = jgv
 
-      au < doNotProcess ; exists ; 1967 ; Journal of General Virology Volume 1 ; 1 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1968 ; Journal of General Virology Volume 2 ; 2 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1968 ; Journal of General Virology Volume 3 ; 3 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1969 ; Journal of General Virology Volume 4 ; 4 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1969 ; Journal of General Virology Volume 5 ; 5 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1970 ; Journal of General Virology Volume 6 ; 6 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1970 ; Journal of General Virology Volume 7 ; 7 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1970 ; Journal of General Virology Volume 8 ; 8 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1970 ; Journal of General Virology Volume 9 ; 9 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1971 ; Journal of General Virology Volume 10 ; 10 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1971 ; Journal of General Virology Volume 11 ; 11 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1971 ; Journal of General Virology Volume 12 ; 12 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1971 ; Journal of General Virology Volume 13 ; 13 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1972 ; Journal of General Virology Volume 14 ; 14 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1972 ; Journal of General Virology Volume 15 ; 15 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1972 ; Journal of General Virology Volume 16 ; 16 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1972 ; Journal of General Virology Volume 17 ; 17 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1973 ; Journal of General Virology Volume 18 ; 18 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1973 ; Journal of General Virology Volume 19 ; 19 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1973 ; Journal of General Virology Volume 20 ; 20 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1973 ; Journal of General Virology Volume 21 ; 21 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1974 ; Journal of General Virology Volume 22 ; 22 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1974 ; Journal of General Virology Volume 23 ; 23 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1974 ; Journal of General Virology Volume 24 ; 24 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1974 ; Journal of General Virology Volume 25 ; 25 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1975 ; Journal of General Virology Volume 26 ; 26 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1975 ; Journal of General Virology Volume 27 ; 27 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1975 ; Journal of General Virology Volume 28 ; 28 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1975 ; Journal of General Virology Volume 29 ; 29 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1976 ; Journal of General Virology Volume 30 ; 30 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1976 ; Journal of General Virology Volume 31 ; 31 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1976 ; Journal of General Virology Volume 32 ; 32 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1976 ; Journal of General Virology Volume 33 ; 33 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1977 ; Journal of General Virology Volume 34 ; 34 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1977 ; Journal of General Virology Volume 35 ; 35 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1977 ; Journal of General Virology Volume 36 ; 36 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1977 ; Journal of General Virology Volume 37 ; 37 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1978 ; Journal of General Virology Volume 38 ; 38 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1978 ; Journal of General Virology Volume 39 ; 39 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1978 ; Journal of General Virology Volume 40 ; 40 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1978 ; Journal of General Virology Volume 41 ; 41 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1979 ; Journal of General Virology Volume 42 ; 42 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1979 ; Journal of General Virology Volume 43 ; 43 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1979 ; Journal of General Virology Volume 44 ; 44 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1979 ; Journal of General Virology Volume 45 ; 45 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1980 ; Journal of General Virology Volume 46 ; 46 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1980 ; Journal of General Virology Volume 47 ; 47 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1980 ; Journal of General Virology Volume 48 ; 48 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1980 ; Journal of General Virology Volume 49 ; 49 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1980 ; Journal of General Virology Volume 50 ; 50 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1980 ; Journal of General Virology Volume 51 ; 51 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1981 ; Journal of General Virology Volume 52 ; 52 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1981 ; Journal of General Virology Volume 53 ; 53 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1981 ; Journal of General Virology Volume 54 ; 54 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1981 ; Journal of General Virology Volume 55 ; 55 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1981 ; Journal of General Virology Volume 56 ; 56 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1981 ; Journal of General Virology Volume 57 ; 57 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1982 ; Journal of General Virology Volume 58 ; 58 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1982 ; Journal of General Virology Volume 59 ; 59 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1982 ; Journal of General Virology Volume 60 ; 60 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1982 ; Journal of General Virology Volume 61 ; 61 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1982 ; Journal of General Virology Volume 62 ; 62 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1982 ; Journal of General Virology Volume 63 ; 63 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1983 ; Journal of General Virology Volume 64 ; 64 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1984 ; Journal of General Virology Volume 65 ; 65 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1985 ; Journal of General Virology Volume 66 ; 66 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1986 ; Journal of General Virology Volume 67 ; 67 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1987 ; Journal of General Virology Volume 68 ; 68 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1988 ; Journal of General Virology Volume 69 ; 69 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1989 ; Journal of General Virology Volume 70 ; 70 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1990 ; Journal of General Virology Volume 71 ; 71 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1991 ; Journal of General Virology Volume 72 ; 72 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1992 ; Journal of General Virology Volume 73 ; 73 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1993 ; Journal of General Virology Volume 74 ; 74 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1994 ; Journal of General Virology Volume 75 ; 75 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1995 ; Journal of General Virology Volume 76 ; 76 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1996 ; Journal of General Virology Volume 77 ; 77 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1997 ; Journal of General Virology Volume 78 ; 78 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1998 ; Journal of General Virology Volume 79 ; 79 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1999 ; Journal of General Virology Volume 80 ; 80 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2000 ; Journal of General Virology Volume 81 ; 81 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2001 ; Journal of General Virology Volume 82 ; 82 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2002 ; Journal of General Virology Volume 83 ; 83 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2003 ; Journal of General Virology Volume 84 ; 84 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2004 ; Journal of General Virology Volume 85 ; 85 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2005 ; Journal of General Virology Volume 86 ; 86 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2006 ; Journal of General Virology Volume 87 ; 87 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2007 ; Journal of General Virology Volume 88 ; 88 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2008 ; Journal of General Virology Volume 89 ; 89 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2009 ; Journal of General Virology Volume 90 ; 90 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2010 ; Journal of General Virology Volume 91 ; 91 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2011 ; Journal of General Virology Volume 92 ; 92 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; Journal of General Virology Volume 93 ; 93 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; Journal of General Virology Volume 94 ; 94 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; Journal of General Virology Volume 95 ; 95 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2015 ; Journal of General Virology Volume 96 ; 96 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2016 ; Journal of General Virology Volume 97 ; 97 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2017 ; Journal of General Virology Volume 98 ; 98 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2018 ; Journal of General Virology Volume 99 ; 99 ; https://jgv.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2019 ; Journal of General Virology Volume 100 ; 100 ; https://jgv.microbiologyresearch.org/ ; >
-
-    }
+      au < exists ; exists ; 1967 ; Journal of General Virology Volume 1 ; 1 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1968 ; Journal of General Virology Volume 2 ; 2 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1968 ; Journal of General Virology Volume 3 ; 3 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1969 ; Journal of General Virology Volume 4 ; 4 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1969 ; Journal of General Virology Volume 5 ; 5 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1970 ; Journal of General Virology Volume 6 ; 6 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1970 ; Journal of General Virology Volume 7 ; 7 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1970 ; Journal of General Virology Volume 8 ; 8 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1970 ; Journal of General Virology Volume 9 ; 9 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1971 ; Journal of General Virology Volume 10 ; 10 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1971 ; Journal of General Virology Volume 11 ; 11 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1971 ; Journal of General Virology Volume 12 ; 12 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1971 ; Journal of General Virology Volume 13 ; 13 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1972 ; Journal of General Virology Volume 14 ; 14 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1972 ; Journal of General Virology Volume 15 ; 15 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1972 ; Journal of General Virology Volume 16 ; 16 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1972 ; Journal of General Virology Volume 17 ; 17 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1973 ; Journal of General Virology Volume 18 ; 18 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1973 ; Journal of General Virology Volume 19 ; 19 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1973 ; Journal of General Virology Volume 20 ; 20 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1973 ; Journal of General Virology Volume 21 ; 21 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1974 ; Journal of General Virology Volume 22 ; 22 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1974 ; Journal of General Virology Volume 23 ; 23 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1974 ; Journal of General Virology Volume 24 ; 24 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1974 ; Journal of General Virology Volume 25 ; 25 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1975 ; Journal of General Virology Volume 26 ; 26 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1975 ; Journal of General Virology Volume 27 ; 27 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1975 ; Journal of General Virology Volume 28 ; 28 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1975 ; Journal of General Virology Volume 29 ; 29 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1976 ; Journal of General Virology Volume 30 ; 30 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1976 ; Journal of General Virology Volume 31 ; 31 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1976 ; Journal of General Virology Volume 32 ; 32 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1976 ; Journal of General Virology Volume 33 ; 33 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1977 ; Journal of General Virology Volume 34 ; 34 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1977 ; Journal of General Virology Volume 35 ; 35 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1977 ; Journal of General Virology Volume 36 ; 36 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1977 ; Journal of General Virology Volume 37 ; 37 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1978 ; Journal of General Virology Volume 38 ; 38 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1978 ; Journal of General Virology Volume 39 ; 39 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1978 ; Journal of General Virology Volume 40 ; 40 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1978 ; Journal of General Virology Volume 41 ; 41 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1979 ; Journal of General Virology Volume 42 ; 42 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1979 ; Journal of General Virology Volume 43 ; 43 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1979 ; Journal of General Virology Volume 44 ; 44 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1979 ; Journal of General Virology Volume 45 ; 45 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1980 ; Journal of General Virology Volume 46 ; 46 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1980 ; Journal of General Virology Volume 47 ; 47 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1980 ; Journal of General Virology Volume 48 ; 48 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1980 ; Journal of General Virology Volume 49 ; 49 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1980 ; Journal of General Virology Volume 50 ; 50 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1980 ; Journal of General Virology Volume 51 ; 51 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1981 ; Journal of General Virology Volume 52 ; 52 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1981 ; Journal of General Virology Volume 53 ; 53 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1981 ; Journal of General Virology Volume 54 ; 54 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1981 ; Journal of General Virology Volume 55 ; 55 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1981 ; Journal of General Virology Volume 56 ; 56 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1981 ; Journal of General Virology Volume 57 ; 57 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1982 ; Journal of General Virology Volume 58 ; 58 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1982 ; Journal of General Virology Volume 59 ; 59 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1982 ; Journal of General Virology Volume 60 ; 60 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1982 ; Journal of General Virology Volume 61 ; 61 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1982 ; Journal of General Virology Volume 62 ; 62 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1982 ; Journal of General Virology Volume 63 ; 63 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1983 ; Journal of General Virology Volume 64 ; 64 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1984 ; Journal of General Virology Volume 65 ; 65 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1985 ; Journal of General Virology Volume 66 ; 66 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1986 ; Journal of General Virology Volume 67 ; 67 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1987 ; Journal of General Virology Volume 68 ; 68 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1988 ; Journal of General Virology Volume 69 ; 69 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1989 ; Journal of General Virology Volume 70 ; 70 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1990 ; Journal of General Virology Volume 71 ; 71 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1991 ; Journal of General Virology Volume 72 ; 72 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1992 ; Journal of General Virology Volume 73 ; 73 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1993 ; Journal of General Virology Volume 74 ; 74 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1994 ; Journal of General Virology Volume 75 ; 75 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1995 ; Journal of General Virology Volume 76 ; 76 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1996 ; Journal of General Virology Volume 77 ; 77 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1997 ; Journal of General Virology Volume 78 ; 78 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1998 ; Journal of General Virology Volume 79 ; 79 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1999 ; Journal of General Virology Volume 80 ; 80 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2000 ; Journal of General Virology Volume 81 ; 81 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2001 ; Journal of General Virology Volume 82 ; 82 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2002 ; Journal of General Virology Volume 83 ; 83 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2003 ; Journal of General Virology Volume 84 ; 84 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2004 ; Journal of General Virology Volume 85 ; 85 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2005 ; Journal of General Virology Volume 86 ; 86 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2006 ; Journal of General Virology Volume 87 ; 87 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2007 ; Journal of General Virology Volume 88 ; 88 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2008 ; Journal of General Virology Volume 89 ; 89 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2009 ; Journal of General Virology Volume 90 ; 90 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2010 ; Journal of General Virology Volume 91 ; 91 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2011 ; Journal of General Virology Volume 92 ; 92 ; https://www.microbiologyresearch.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; Journal of General Virology Volume 93 ; 93 ; https://www.microbiologyresearch.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; Journal of General Virology Volume 94 ; 94 ; https://www.microbiologyresearch.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; Journal of General Virology Volume 95 ; 95 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2015 ; Journal of General Virology Volume 96 ; 96 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2016 ; Journal of General Virology Volume 97 ; 97 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2017 ; Journal of General Virology Volume 98 ; 98 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2018 ; Journal of General Virology Volume 99 ; 99 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2019 ; Journal of General Virology Volume 100 ; 100 ; https://www.microbiologyresearch.org/ ; >
 
   }
 
@@ -767,154 +402,76 @@
       issnl = 0022-2615
     >
 
-    {
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
-      implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
-      param[base_url] = http://jmm.sgmjournals.org/
-
-      au < doNotProcess ; doNotProcess ; 1968 ; Journal of Medical Microbiology Volume 1 ; 1 ; >
-      au < doNotProcess ; doNotProcess ; 1969 ; Journal of Medical Microbiology Volume 2 ; 2 ; >
-      au < doNotProcess ; doNotProcess ; 1970 ; Journal of Medical Microbiology Volume 3 ; 3 ; >
-      au < doNotProcess ; doNotProcess ; 1971 ; Journal of Medical Microbiology Volume 4 ; 4 ; >
-      au < doNotProcess ; doNotProcess ; 1972 ; Journal of Medical Microbiology Volume 5 ; 5 ; >
-      au < doNotProcess ; doNotProcess ; 1973 ; Journal of Medical Microbiology Volume 6 ; 6 ; >
-      au < doNotProcess ; doNotProcess ; 1974 ; Journal of Medical Microbiology Volume 7 ; 7 ; >
-      au < doNotProcess ; doNotProcess ; 1975 ; Journal of Medical Microbiology Volume 8 ; 8 ; >
-      au < doNotProcess ; doNotProcess ; 1976 ; Journal of Medical Microbiology Volume 9 ; 9 ; >
-      au < doNotProcess ; doNotProcess ; 1977 ; Journal of Medical Microbiology Volume 10 ; 10 ; >
-      au < doNotProcess ; doNotProcess ; 1978 ; Journal of Medical Microbiology Volume 11 ; 11 ; >
-      au < doNotProcess ; doNotProcess ; 1979 ; Journal of Medical Microbiology Volume 12 ; 12 ; >
-      au < doNotProcess ; doNotProcess ; 1980 ; Journal of Medical Microbiology Volume 13 ; 13 ; >
-      au < doNotProcess ; doNotProcess ; 1981 ; Journal of Medical Microbiology Volume 14 ; 14 ; >
-      au < doNotProcess ; doNotProcess ; 1982 ; Journal of Medical Microbiology Volume 15 ; 15 ; >
-      au < doNotProcess ; doNotProcess ; 1983 ; Journal of Medical Microbiology Volume 16 ; 16 ; >
-      au < doNotProcess ; doNotProcess ; 1984 ; Journal of Medical Microbiology Volume 17 ; 17 ; >
-      au < doNotProcess ; doNotProcess ; 1984 ; Journal of Medical Microbiology Volume 18 ; 18 ; >
-      au < doNotProcess ; doNotProcess ; 1985 ; Journal of Medical Microbiology Volume 19 ; 19 ; >
-      au < doNotProcess ; doNotProcess ; 1985 ; Journal of Medical Microbiology Volume 20 ; 20 ; >
-      au < doNotProcess ; doNotProcess ; 1986 ; Journal of Medical Microbiology Volume 21 ; 21 ; >
-      au < doNotProcess ; doNotProcess ; 1986 ; Journal of Medical Microbiology Volume 22 ; 22 ; >
-      au < doNotProcess ; doNotProcess ; 1987 ; Journal of Medical Microbiology Volume 23 ; 23 ; >
-      au < doNotProcess ; doNotProcess ; 1987 ; Journal of Medical Microbiology Volume 24 ; 24 ; >
-      au < doNotProcess ; doNotProcess ; 1988 ; Journal of Medical Microbiology Volume 25 ; 25 ; >
-      au < doNotProcess ; doNotProcess ; 1988 ; Journal of Medical Microbiology Volume 26 ; 26 ; >
-      au < doNotProcess ; doNotProcess ; 1988 ; Journal of Medical Microbiology Volume 27 ; 27 ; >
-      au < doNotProcess ; doNotProcess ; 1989 ; Journal of Medical Microbiology Volume 28 ; 28 ; >
-      au < doNotProcess ; doNotProcess ; 1989 ; Journal of Medical Microbiology Volume 29 ; 29 ; >
-      au < doNotProcess ; doNotProcess ; 1989 ; Journal of Medical Microbiology Volume 30 ; 30 ; >
-      au < doNotProcess ; doNotProcess ; 1990 ; Journal of Medical Microbiology Volume 31 ; 31 ; >
-      au < doNotProcess ; doNotProcess ; 1990 ; Journal of Medical Microbiology Volume 32 ; 32 ; >
-      au < doNotProcess ; doNotProcess ; 1990 ; Journal of Medical Microbiology Volume 33 ; 33 ; >
-      au < doNotProcess ; doNotProcess ; 1991 ; Journal of Medical Microbiology Volume 34 ; 34 ; >
-      au < doNotProcess ; doNotProcess ; 1991 ; Journal of Medical Microbiology Volume 35 ; 35 ; >
-      au < doNotProcess ; doNotProcess ; 1992 ; Journal of Medical Microbiology Volume 36 ; 36 ; >
-      au < doNotProcess ; doNotProcess ; 1992 ; Journal of Medical Microbiology Volume 37 ; 37 ; >
-      au < doNotProcess ; doNotProcess ; 1993 ; Journal of Medical Microbiology Volume 38 ; 38 ; >
-      au < doNotProcess ; doNotProcess ; 1993 ; Journal of Medical Microbiology Volume 39 ; 39 ; >
-      au < doNotProcess ; doNotProcess ; 1994 ; Journal of Medical Microbiology Volume 40 ; 40 ; >
-      au < doNotProcess ; doNotProcess ; 1994 ; Journal of Medical Microbiology Volume 41 ; 41 ; >
-      au < doNotProcess ; doNotProcess ; 1995 ; Journal of Medical Microbiology Volume 42 ; 42 ; >
-      au < doNotProcess ; doNotProcess ; 1995 ; Journal of Medical Microbiology Volume 43 ; 43 ; >
-      au < doNotProcess ; doNotProcess ; 1996 ; Journal of Medical Microbiology Volume 44 ; 44 ; >
-      au < doNotProcess ; doNotProcess ; 1996 ; Journal of Medical Microbiology Volume 45 ; 45 ; >
-      au < doNotProcess ; doNotProcess ; 1997 ; Journal of Medical Microbiology Volume 46 ; 46 ; >
-      au < doNotProcess ; doNotProcess ; 1998 ; Journal of Medical Microbiology Volume 47 ; 47 ; >
-      au < doNotProcess ; doNotProcess ; 1999 ; Journal of Medical Microbiology Volume 48 ; 48 ; >
-      au < doNotProcess ; doNotProcess ; 2000 ; Journal of Medical Microbiology Volume 49 ; 49 ; >
-      au < doNotProcess ; doNotProcess ; 2001 ; Journal of Medical Microbiology Volume 50 ; 50 ; >
-      au < doNotProcess ; doNotProcess ; 2002 ; Journal of Medical Microbiology Volume 51 ; 51 ; >
-      au < doNotProcess ; doNotProcess ; 2003 ; Journal of Medical Microbiology Volume 52 ; 52 ; >
-      au < doNotProcess ; doNotProcess ; 2004 ; Journal of Medical Microbiology Volume 53 ; 53 ; >
-      au < doNotProcess ; doNotProcess ; 2005 ; Journal of Medical Microbiology Volume 54 ; 54 ; >
-      au < doNotProcess ; doNotProcess ; 2006 ; Journal of Medical Microbiology Volume 55 ; 55 ; >
-      au < doNotProcess ; doNotProcess ; 2007 ; Journal of Medical Microbiology Volume 56 ; 56 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; Journal of Medical Microbiology Volume 57 ; 57 ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; Journal of Medical Microbiology Volume 58 ; 58 ; >
-      au < doNotProcess ; doNotProcess ; 2010 ; Journal of Medical Microbiology Volume 59 ; 59 ; >
-      au < doNotProcess ; doNotProcess ; 2011 ; Journal of Medical Microbiology Volume 60 ; 60 ; >
-      au < finished ; finished ; 2012 ; Journal of Medical Microbiology Volume 61 ; 61 ; >
-      au < frozen ; exists ; 2013 ; Journal of Medical Microbiology Volume 62 ; 62 ; >
-      au < finished ; finished ; 2014 ; Journal of Medical Microbiology Volume 63 ; 63 ; reingest1.clockss.org:8082 >
-      au < doNotProcess ; doNotProcess ; 2015 ; Journal of Medical Microbiology Volume 64 ; 64 ; >
-
-    }
-    
-    {
-      plugin = org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin
-      implicit < status ; status2 ; year ; name ; param[volume_name] ; param[base_url] ; hidden[proxy] >
-      #param[base_url] = http://jmm.microbiologyresearch.org/
       param[journal_id] = jmm
 
-      au < doNotProcess ; exists ; 1968 ; Journal of Medical Microbiology Volume 1 ; 1 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1969 ; Journal of Medical Microbiology Volume 2 ; 2 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1970 ; Journal of Medical Microbiology Volume 3 ; 3 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1971 ; Journal of Medical Microbiology Volume 4 ; 4 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1972 ; Journal of Medical Microbiology Volume 5 ; 5 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1973 ; Journal of Medical Microbiology Volume 6 ; 6 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1974 ; Journal of Medical Microbiology Volume 7 ; 7 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1975 ; Journal of Medical Microbiology Volume 8 ; 8 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1976 ; Journal of Medical Microbiology Volume 9 ; 9 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1977 ; Journal of Medical Microbiology Volume 10 ; 10 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1978 ; Journal of Medical Microbiology Volume 11 ; 11 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1979 ; Journal of Medical Microbiology Volume 12 ; 12 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1980 ; Journal of Medical Microbiology Volume 13 ; 13 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1981 ; Journal of Medical Microbiology Volume 14 ; 14 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1982 ; Journal of Medical Microbiology Volume 15 ; 15 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1983 ; Journal of Medical Microbiology Volume 16 ; 16 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1984 ; Journal of Medical Microbiology Volume 17 ; 17 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1984 ; Journal of Medical Microbiology Volume 18 ; 18 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1985 ; Journal of Medical Microbiology Volume 19 ; 19 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1985 ; Journal of Medical Microbiology Volume 20 ; 20 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1986 ; Journal of Medical Microbiology Volume 21 ; 21 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1986 ; Journal of Medical Microbiology Volume 22 ; 22 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1987 ; Journal of Medical Microbiology Volume 23 ; 23 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1987 ; Journal of Medical Microbiology Volume 24 ; 24 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1988 ; Journal of Medical Microbiology Volume 25 ; 25 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1988 ; Journal of Medical Microbiology Volume 26 ; 26 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1988 ; Journal of Medical Microbiology Volume 27 ; 27 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1989 ; Journal of Medical Microbiology Volume 28 ; 28 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1989 ; Journal of Medical Microbiology Volume 29 ; 29 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1989 ; Journal of Medical Microbiology Volume 30 ; 30 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1990 ; Journal of Medical Microbiology Volume 31 ; 31 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1990 ; Journal of Medical Microbiology Volume 32 ; 32 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1990 ; Journal of Medical Microbiology Volume 33 ; 33 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1991 ; Journal of Medical Microbiology Volume 34 ; 34 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1991 ; Journal of Medical Microbiology Volume 35 ; 35 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1992 ; Journal of Medical Microbiology Volume 36 ; 36 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1992 ; Journal of Medical Microbiology Volume 37 ; 37 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1993 ; Journal of Medical Microbiology Volume 38 ; 38 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1993 ; Journal of Medical Microbiology Volume 39 ; 39 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1994 ; Journal of Medical Microbiology Volume 40 ; 40 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1994 ; Journal of Medical Microbiology Volume 41 ; 41 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1995 ; Journal of Medical Microbiology Volume 42 ; 42 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1995 ; Journal of Medical Microbiology Volume 43 ; 43 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1996 ; Journal of Medical Microbiology Volume 44 ; 44 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1996 ; Journal of Medical Microbiology Volume 45 ; 45 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1997 ; Journal of Medical Microbiology Volume 46 ; 46 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1998 ; Journal of Medical Microbiology Volume 47 ; 47 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1999 ; Journal of Medical Microbiology Volume 48 ; 48 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2000 ; Journal of Medical Microbiology Volume 49 ; 49 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2001 ; Journal of Medical Microbiology Volume 50 ; 50 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2002 ; Journal of Medical Microbiology Volume 51 ; 51 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2003 ; Journal of Medical Microbiology Volume 52 ; 52 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2004 ; Journal of Medical Microbiology Volume 53 ; 53 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2005 ; Journal of Medical Microbiology Volume 54 ; 54 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2006 ; Journal of Medical Microbiology Volume 55 ; 55 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2007 ; Journal of Medical Microbiology Volume 56 ; 56 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2008 ; Journal of Medical Microbiology Volume 57 ; 57 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2009 ; Journal of Medical Microbiology Volume 58 ; 58 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2010 ; Journal of Medical Microbiology Volume 59 ; 59 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2011 ; Journal of Medical Microbiology Volume 60 ; 60 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; Journal of Medical Microbiology Volume 61 ; 61 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; Journal of Medical Microbiology Volume 62 ; 62 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; Journal of Medical Microbiology Volume 63 ; 63 ; https://jmm.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1968 ; Journal of Medical Microbiology Volume 1 ; 1 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1969 ; Journal of Medical Microbiology Volume 2 ; 2 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1970 ; Journal of Medical Microbiology Volume 3 ; 3 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1971 ; Journal of Medical Microbiology Volume 4 ; 4 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1972 ; Journal of Medical Microbiology Volume 5 ; 5 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1973 ; Journal of Medical Microbiology Volume 6 ; 6 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1974 ; Journal of Medical Microbiology Volume 7 ; 7 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1975 ; Journal of Medical Microbiology Volume 8 ; 8 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1976 ; Journal of Medical Microbiology Volume 9 ; 9 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1977 ; Journal of Medical Microbiology Volume 10 ; 10 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1978 ; Journal of Medical Microbiology Volume 11 ; 11 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1979 ; Journal of Medical Microbiology Volume 12 ; 12 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1980 ; Journal of Medical Microbiology Volume 13 ; 13 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1981 ; Journal of Medical Microbiology Volume 14 ; 14 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1982 ; Journal of Medical Microbiology Volume 15 ; 15 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1983 ; Journal of Medical Microbiology Volume 16 ; 16 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1984 ; Journal of Medical Microbiology Volume 17 ; 17 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1984 ; Journal of Medical Microbiology Volume 18 ; 18 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1985 ; Journal of Medical Microbiology Volume 19 ; 19 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1985 ; Journal of Medical Microbiology Volume 20 ; 20 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1986 ; Journal of Medical Microbiology Volume 21 ; 21 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1986 ; Journal of Medical Microbiology Volume 22 ; 22 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1987 ; Journal of Medical Microbiology Volume 23 ; 23 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1987 ; Journal of Medical Microbiology Volume 24 ; 24 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1988 ; Journal of Medical Microbiology Volume 25 ; 25 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1988 ; Journal of Medical Microbiology Volume 26 ; 26 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1988 ; Journal of Medical Microbiology Volume 27 ; 27 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1989 ; Journal of Medical Microbiology Volume 28 ; 28 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1989 ; Journal of Medical Microbiology Volume 29 ; 29 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1989 ; Journal of Medical Microbiology Volume 30 ; 30 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1990 ; Journal of Medical Microbiology Volume 31 ; 31 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1990 ; Journal of Medical Microbiology Volume 32 ; 32 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1990 ; Journal of Medical Microbiology Volume 33 ; 33 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1991 ; Journal of Medical Microbiology Volume 34 ; 34 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1991 ; Journal of Medical Microbiology Volume 35 ; 35 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1992 ; Journal of Medical Microbiology Volume 36 ; 36 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1992 ; Journal of Medical Microbiology Volume 37 ; 37 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1993 ; Journal of Medical Microbiology Volume 38 ; 38 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1993 ; Journal of Medical Microbiology Volume 39 ; 39 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1994 ; Journal of Medical Microbiology Volume 40 ; 40 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1994 ; Journal of Medical Microbiology Volume 41 ; 41 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1995 ; Journal of Medical Microbiology Volume 42 ; 42 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1995 ; Journal of Medical Microbiology Volume 43 ; 43 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1996 ; Journal of Medical Microbiology Volume 44 ; 44 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1996 ; Journal of Medical Microbiology Volume 45 ; 45 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1997 ; Journal of Medical Microbiology Volume 46 ; 46 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1998 ; Journal of Medical Microbiology Volume 47 ; 47 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1999 ; Journal of Medical Microbiology Volume 48 ; 48 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2000 ; Journal of Medical Microbiology Volume 49 ; 49 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2001 ; Journal of Medical Microbiology Volume 50 ; 50 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2002 ; Journal of Medical Microbiology Volume 51 ; 51 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2003 ; Journal of Medical Microbiology Volume 52 ; 52 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2004 ; Journal of Medical Microbiology Volume 53 ; 53 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2005 ; Journal of Medical Microbiology Volume 54 ; 54 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2006 ; Journal of Medical Microbiology Volume 55 ; 55 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2007 ; Journal of Medical Microbiology Volume 56 ; 56 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2008 ; Journal of Medical Microbiology Volume 57 ; 57 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2009 ; Journal of Medical Microbiology Volume 58 ; 58 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2010 ; Journal of Medical Microbiology Volume 59 ; 59 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2011 ; Journal of Medical Microbiology Volume 60 ; 60 ; https://www.microbiologyresearch.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; Journal of Medical Microbiology Volume 61 ; 61 ; https://www.microbiologyresearch.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; Journal of Medical Microbiology Volume 62 ; 62 ; https://www.microbiologyresearch.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; Journal of Medical Microbiology Volume 63 ; 63 ; https://www.microbiologyresearch.org/ ; >
       au < finished ; finished ; 2015 ; Journal of Medical Microbiology Volume 64 ; 64 ; http://jmm.microbiologyresearch.org/ ; reingest1.clockss.org:8082 >
-      au < doNotProcess ; exists ; 2016 ; Journal of Medical Microbiology Volume 65 ; 65 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2017 ; Journal of Medical Microbiology Volume 66 ; 66 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2018 ; Journal of Medical Microbiology Volume 67 ; 67 ; https://jmm.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2019 ; Journal of Medical Microbiology Volume 68 ; 68 ; https://jmm.microbiologyresearch.org/ ; >
-
-    }
+      au < exists ; exists ; 2016 ; Journal of Medical Microbiology Volume 65 ; 65 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2017 ; Journal of Medical Microbiology Volume 66 ; 66 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2018 ; Journal of Medical Microbiology Volume 67 ; 67 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2019 ; Journal of Medical Microbiology Volume 68 ; 68 ; https://www.microbiologyresearch.org/ ; >
 
   }
 
@@ -924,44 +481,32 @@
       eissn = 2053-3721
     >
 
-    {
       rights = openaccess
-      plugin = org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin
-      implicit < status ; status2 ; year ; name ; param[volume_name] ; param[base_url] ; hidden[proxy] >
-      #param[base_url] = http://jmmcr.microbiologyresearch.org/
       param[journal_id] = jmmcr
 
-      au < doNotProcess ; exists ; 2014 ; JMM Case Reports Volume 1 ; 1 ; https://jmmcr.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2014 ; JMM Case Reports Volume 1 ; 1 ; https://www.microbiologyresearch.org/ ; >
       au < finished ; finished ; 2015 ; JMM Case Reports Volume 2 ; 2 ; http://jmmcr.microbiologyresearch.org/ ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2016 ; JMM Case Reports Volume 3 ; 3 ; http://jmmcr.microbiologyresearch.org/ ; reingest3.clockss.org:8083 >
-      au < doNotProcess ; exists ; 2017 ; JMM Case Reports Volume 4 ; 4 ; https://jmmcr.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2018 ; JMM Case Reports Volume 5 ; 5 ; https://jmmcr.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2019 ; JMM Case Reports Volume 6 ; 6 ; https://jmmcr.microbiologyresearch.org/ ; >
-
-    }
+      au < exists ; exists ; 2017 ; JMM Case Reports Volume 4 ; 4 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2018 ; JMM Case Reports Volume 5 ; 5 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2019 ; JMM Case Reports Volume 6 ; 6 ; https://www.microbiologyresearch.org/ ; >
 
   }
 
   {
     title <
       name = Microbial Genomics ;
-      eissn = 
+      eissn =
     >
 
-    {
       rights = openaccess
-      plugin = org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin
-      implicit < status ; status2 ; year ; name ; param[volume_name] ; param[base_url] ; hidden[proxy] >
-      #param[base_url] = http://mgen.microbiologyresearch.org/
       param[journal_id] = mgen
 
       au < finished ; finished ; 2015 ; Microbial Genomics Volume 1 ; 1 ; http://mgen.microbiologyresearch.org/ ; reingest5.clockss.org:8082 >
-      au < doNotProcess ; exists ; 2016 ; Microbial Genomics Volume 2 ; 2 ; https://mgen.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2017 ; Microbial Genomics Volume 3 ; 3 ; https://mgen.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2018 ; Microbial Genomics Volume 4 ; 4 ; https://mgen.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2019 ; Microbial Genomics Volume 5 ; 5 ; https://mgen.microbiologyresearch.org/ ; >
-
-    }
+      au < exists ; exists ; 2016 ; Microbial Genomics Volume 2 ; 2 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2017 ; Microbial Genomics Volume 3 ; 3 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2018 ; Microbial Genomics Volume 4 ; 4 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2019 ; Microbial Genomics Volume 5 ; 5 ; https://www.microbiologyresearch.org/ ; >
 
   }
 
@@ -972,73 +517,37 @@
       eissn = 1465-2080 ;
       issnl = 1350-0872
     >
-    
+
       comment[continues] = Journal of General Microbiology 0022-1287 as of Jan 1994
 
-    {
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
-      implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
-      param[base_url] = http://mic.sgmjournals.org/
-
-      au < doNotProcess ; doNotProcess ; 1994 ; Microbiology Volume 140 ; 140 ; >
-      au < doNotProcess ; doNotProcess ; 1995 ; Microbiology Volume 141 ; 141 ; >
-      au < doNotProcess ; doNotProcess ; 1996 ; Microbiology Volume 142 ; 142 ; >
-      au < doNotProcess ; doNotProcess ; 1997 ; Microbiology Volume 143 ; 143 ; >
-      au < doNotProcess ; doNotProcess ; 1998 ; Microbiology Volume 144 ; 144 ; >
-      au < doNotProcess ; doNotProcess ; 1999 ; Microbiology Volume 145 ; 145 ; >
-      au < doNotProcess ; doNotProcess ; 2000 ; Microbiology Volume 146 ; 146 ; >
-      au < doNotProcess ; doNotProcess ; 2001 ; Microbiology Volume 147 ; 147 ; >
-      au < doNotProcess ; doNotProcess ; 2002 ; Microbiology Volume 148 ; 148 ; >
-      au < doNotProcess ; doNotProcess ; 2003 ; Microbiology Volume 149 ; 149 ; >
-      au < doNotProcess ; doNotProcess ; 2004 ; Microbiology Volume 150 ; 150 ; >
-      au < doNotProcess ; doNotProcess ; 2005 ; Microbiology Volume 151 ; 151 ; >
-      au < doNotProcess ; doNotProcess ; 2006 ; Microbiology Volume 152 ; 152 ; >
-      au < doNotProcess ; doNotProcess ; 2007 ; Microbiology Volume 153 ; 153 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; Microbiology Volume 154 ; 154 ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; Microbiology Volume 155 ; 155 ; >
-      au < doNotProcess ; doNotProcess ; 2010 ; Microbiology Volume 156 ; 156 ; >
-      au < doNotProcess ; doNotProcess ; 2011 ; Microbiology Volume 157 ; 157 ; >
-      au < finished ; finished ; 2012 ; Microbiology Volume 158 ; 158 ; >
-      au < frozen ; exists ; 2013 ; Microbiology Volume 159 ; 159 ; >
-      au < finished ; finished ; 2014 ; Microbiology Volume 160 ; 160 ; reingest5.clockss.org:8082 >
-      au < doNotProcess ; doNotProcess ; 2015 ; Microbiology Volume 161 ; 161 ; >
-
-    }
-
-    {
-      plugin = org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin
-      implicit < status ; status2 ; year ; name ; param[volume_name] ; param[base_url] ; hidden[proxy] >
-      #param[base_url] = http://mic.microbiologyresearch.org/
       param[journal_id] = micro
 
-      au < doNotProcess ; exists ; 1994 ; Microbiology Volume 140 ; 140 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1995 ; Microbiology Volume 141 ; 141 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1996 ; Microbiology Volume 142 ; 142 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1997 ; Microbiology Volume 143 ; 143 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1998 ; Microbiology Volume 144 ; 144 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 1999 ; Microbiology Volume 145 ; 145 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2000 ; Microbiology Volume 146 ; 146 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2001 ; Microbiology Volume 147 ; 147 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2002 ; Microbiology Volume 148 ; 148 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2003 ; Microbiology Volume 149 ; 149 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2004 ; Microbiology Volume 150 ; 150 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2005 ; Microbiology Volume 151 ; 151 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2006 ; Microbiology Volume 152 ; 152 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2007 ; Microbiology Volume 153 ; 153 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2008 ; Microbiology Volume 154 ; 154 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2009 ; Microbiology Volume 155 ; 155 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2010 ; Microbiology Volume 156 ; 156 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2011 ; Microbiology Volume 157 ; 157 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; Microbiology Volume 158 ; 158 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; Microbiology Volume 159 ; 159 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; Microbiology Volume 160 ; 160 ; https://mic.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1994 ; Microbiology Volume 140 ; 140 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1995 ; Microbiology Volume 141 ; 141 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1996 ; Microbiology Volume 142 ; 142 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1997 ; Microbiology Volume 143 ; 143 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1998 ; Microbiology Volume 144 ; 144 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 1999 ; Microbiology Volume 145 ; 145 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2000 ; Microbiology Volume 146 ; 146 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2001 ; Microbiology Volume 147 ; 147 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2002 ; Microbiology Volume 148 ; 148 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2003 ; Microbiology Volume 149 ; 149 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2004 ; Microbiology Volume 150 ; 150 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2005 ; Microbiology Volume 151 ; 151 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2006 ; Microbiology Volume 152 ; 152 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2007 ; Microbiology Volume 153 ; 153 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2008 ; Microbiology Volume 154 ; 154 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2009 ; Microbiology Volume 155 ; 155 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2010 ; Microbiology Volume 156 ; 156 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2011 ; Microbiology Volume 157 ; 157 ; https://www.microbiologyresearch.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; Microbiology Volume 158 ; 158 ; https://www.microbiologyresearch.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; Microbiology Volume 159 ; 159 ; https://www.microbiologyresearch.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; Microbiology Volume 160 ; 160 ; https://www.microbiologyresearch.org/ ; >
       au < zapped ; finished ; 2015 ; Microbiology Volume 161 ; 161 ; http://mic.microbiologyresearch.org/ ; reingest2.clockss.org:8085 >
-      au < doNotProcess ; exists ; 2016 ; Microbiology Volume 162 ; 162 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2017 ; Microbiology Volume 163 ; 163 ; https://mic.microbiologyresearch.org/ ; >
-      au < doNotProcess ; exists ; 2018 ; Microbiology Volume 164 ; 164 ; https://mic.microbiologyresearch.org/ ; >
-      au < testing ; exists ; 2019 ; Microbiology Volume 165 ; 165 ; https://mic.microbiologyresearch.org/ ; >
-
-    }
+      au < exists ; exists ; 2016 ; Microbiology Volume 162 ; 162 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2017 ; Microbiology Volume 163 ; 163 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2018 ; Microbiology Volume 164 ; 164 ; https://www.microbiologyresearch.org/ ; >
+      au < exists ; exists ; 2019 ; Microbiology Volume 165 ; 165 ; https://www.microbiologyresearch.org/ ; >
 
   }
 
