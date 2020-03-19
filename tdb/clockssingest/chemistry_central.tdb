@@ -24,14 +24,14 @@
       param[journal_issn] = 1752-153X
       
       au < doNotProcess ; exists ; 2007 ; Chemistry Central Journal Volume 1 ; 1 ; >
-      au < frozen ; exists ; 2008 ; Chemistry Central Journal Volume 2 ; 2 ; >
+      au < finished ; manifest ; 2008 ; Chemistry Central Journal Volume 2 ; 2 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2009 ; Chemistry Central Journal Volume 3 ; 3 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2010 ; Chemistry Central Journal Volume 4 ; 4 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2011 ; Chemistry Central Journal Volume 5 ; 5 ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2012 ; Chemistry Central Journal Volume 6 ; 6 ; >
-      au < frozen ; exists ; 2013 ; Chemistry Central Journal Volume 7 ; 7 ; >
+      au < finished ; manifest ; 2012 ; Chemistry Central Journal Volume 6 ; 6 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2013 ; Chemistry Central Journal Volume 7 ; 7 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2014 ; Chemistry Central Journal Volume 8 ; 8 ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2015 ; Chemistry Central Journal Volume 9 ; 9 ; >
+      au < finished ; manifest ; 2015 ; Chemistry Central Journal Volume 9 ; 9 ; reingest2.clockss.org:8085 >
       
   }
   
@@ -77,7 +77,7 @@
     
     au < finished ; manifest ; 2013 ; Heritage Science Volume 1 ; 1 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Heritage Science Volume 2 ; 2 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2015 ; Heritage Science Volume 3 ; 3 ; >
+    au < finished ; manifest ; 2015 ; Heritage Science Volume 3 ; 3 ; reingest3.clockss.org:8083 >
 
   }
   
@@ -96,9 +96,9 @@
     au < finished ; manifest ; 2010 ; Journal of Cheminformatics Volume 2 ; 2 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2011 ; Journal of Cheminformatics Volume 3 ; 3 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2012 ; Journal of Cheminformatics Volume 4 ; 4 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2013 ; Journal of Cheminformatics Volume 5 ; 5 ; >
+    au < finished ; manifest ; 2013 ; Journal of Cheminformatics Volume 5 ; 5 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2014 ; Journal of Cheminformatics Volume 6 ; 6 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2015 ; Journal of Cheminformatics Volume 7 ; 7 ; >
+    au < finished ; manifest ; 2015 ; Journal of Cheminformatics Volume 7 ; 7 ; reingest3.clockss.org:8083 >
 
   }
   
