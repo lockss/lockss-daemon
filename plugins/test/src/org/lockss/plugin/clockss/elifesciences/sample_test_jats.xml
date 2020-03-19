@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN" "JATS-archivearticle1.dtd">
+<article xmlns:ali="http://www.niso.org/schemas/ali/1.0/" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" dtd-version="1.1">
+    <front>
+        <journal-meta>
+            <journal-id journal-id-type="nlm-ta">elife</journal-id>
+            <journal-id journal-id-type="publisher-id">eLife</journal-id>
+            <journal-title-group>
+                <journal-title>eLife</journal-title>
+            </journal-title-group>
+            <issn pub-type="epub" publication-format="electronic">2050-084X</issn>
+            <publisher>
+                <publisher-name>eLife Sciences Publications, Ltd</publisher-name>
+            </publisher>
+        </journal-meta>
+        <article-meta>
+            <article-id pub-id-type="publisher-id">47946</article-id>
+            <article-id pub-id-type="doi">10.7554/eLife.47946</article-id>
+            <article-categories>
+                <subj-group subj-group-type="display-channel">
+                    <subject>Research Article</subject>
+                </subj-group>
+                <subj-group subj-group-type="heading">
+                    <subject>Structural Biology and Molecular Biophysics</subject>
+                </subj-group>
+            </article-categories>
+            <title-group>
+                <article-title>Effect of helical kink in antimicrobial peptides on membrane pore formation</article-title>
+            </title-group>
+            <contrib-group>
+                <contrib contrib-type="author" equal-contrib="yes" id="author-140440">
+                    <name>
+                        <surname>Tuerkova</surname>
+                        <given-names>Alzbeta</given-names>
+                    </name>
+                    <contrib-id authenticated="true" contrib-id-type="orcid">https://orcid.org/0000-0001-7235-9029</contrib-id>
+                    <xref ref-type="aff" rid="aff1">1</xref>
+                    <xref ref-type="aff" rid="aff2">2</xref>
+                    <xref ref-type="fn" rid="equal-contrib1">†</xref>
+                    <xref ref-type="other" rid="fund1" />
+                    <xref ref-type="other" rid="fund3" />
+                    <xref ref-type="other" rid="fund4" />
+                    <xref ref-type="other" rid="fund5" />
+                    <xref ref-type="other" rid="fund6" />
+                    <xref ref-type="fn" rid="con1" />
+                    <xref ref-type="fn" rid="conf1" />
+                    <xref ref-type="fn" rid="pa1">‡</xref>
+                </contrib>
+                <contrib contrib-type="author" equal-contrib="yes" id="author-140441">
+                    <name>
+                        <surname>Kabelka</surname>
+                        <given-names>Ivo</given-names>
+                    </name>
+                    <xref ref-type="aff" rid="aff1">1</xref>
+                    <xref ref-type="aff" rid="aff2">2</xref>
+                    <xref ref-type="fn" rid="equal-contrib1">†</xref>
+                    <xref ref-type="other" rid="fund1" />
+                    <xref ref-type="other" rid="fund3" />
+                    <xref ref-type="other" rid="fund4" />
+                    <xref ref-type="other" rid="fund5" />
+                    <xref ref-type="other" rid="fund6" />
+                    <xref ref-type="fn" rid="con2" />
+                    <xref ref-type="fn" rid="conf1" />
+                </contrib>
+                <contrib contrib-type="author" id="author-140442">
+                    <name>
+                        <surname>Králová</surname>
+                        <given-names>Tereza</given-names>
+                    </name>
+                    <xref ref-type="aff" rid="aff1">1</xref>
+                    <xref ref-type="other" rid="fund1" />
+                    <xref ref-type="other" rid="fund3" />
+                    <xref ref-type="other" rid="fund4" />
+                    <xref ref-type="other" rid="fund5" />
+                    <xref ref-type="other" rid="fund6" />
+                    <xref ref-type="fn" rid="con3" />
+                    <xref ref-type="fn" rid="conf1" />
+                </contrib>
+                <contrib contrib-type="author" id="author-140443">
+                    <name>
+                        <surname>Sukeník</surname>
+                        <given-names>Lukáš</given-names>
+                    </name>
+                    <xref ref-type="aff" rid="aff1">1</xref>
+                    <xref ref-type="aff" rid="aff3">3</xref>
+                    <xref ref-type="other" rid="fund1" />
+                    <xref ref-type="other" rid="fund3" />
+                    <xref ref-type="other" rid="fund4" />
+                    <xref ref-type="other" rid="fund5" />
+                    <xref ref-type="other" rid="fund6" />
+                    <xref ref-type="fn" rid="con4" />
+                    <xref ref-type="fn" rid="conf1" />
+                </contrib>
+                <contrib contrib-type="author" id="author-140444">
+                    <name>
+                        <surname>Pokorná</surname>
+                        <given-names>Šárka</given-names>
+                    </name>
+                    <xref ref-type="aff" rid="aff4">4</xref>
+                    <xref ref-type="other" rid="fund2" />
+                    <xref ref-type="fn" rid="con5" />
+                    <xref ref-type="fn" rid="conf1" />
+                </contrib>
+                <contrib contrib-type="author" id="author-140445">
+                    <name>
+                        <surname>Hof</surname>
+                        <given-names>Martin</given-names>
+                    </name>
+                    <contrib-id authenticated="true" contrib-id-type="orcid">https://orcid.org/0000-0003-2884-3037</contrib-id>
+                    <xref ref-type="aff" rid="aff4">4</xref>
+                    <xref ref-type="other" rid="fund2" />
+                    <xref ref-type="fn" rid="con6" />
+                    <xref ref-type="fn" rid="conf1" />
+                </contrib>
+                <contrib contrib-type="author" corresp="yes" id="author-139308">
+                    <name>
+                        <surname>Vácha</surname>
+                        <given-names>Robert</given-names>
+                    </name>
+                    <contrib-id authenticated="true" contrib-id-type="orcid">https://orcid.org/0000-0001-7610-658X</contrib-id>
+                    <email>robert.vacha@mail.muni.cz</email>
+                    <xref ref-type="aff" rid="aff1">1</xref>
+                    <xref ref-type="aff" rid="aff2">2</xref>
+                    <xref ref-type="aff" rid="aff3">3</xref>
+                    <xref ref-type="other" rid="fund1" />
+                    <xref ref-type="other" rid="fund3" />
+                    <xref ref-type="other" rid="fund4" />
+                    <xref ref-type="other" rid="fund5" />
+                    <xref ref-type="other" rid="fund6" />
+                    <xref ref-type="fn" rid="con7" />
+                    <xref ref-type="fn" rid="conf1" />
+                </contrib>
+                <aff id="aff1">
+                    <label>1</label>
+                    <institution>CEITEC – Central European Institute of Technology, Masaryk University</institution>
+                    <addr-line>
+                        <named-content content-type="city">Kamenice</named-content>
+                    </addr-line>
+                    <country>Czech Republic</country>
+                </aff>
+                <aff id="aff2">
+                    <label>2</label>
+                    <institution>National Centre for Biomolecular Research, Faculty of Science, Masaryk University</institution>
+                    <addr-line>
+                        <named-content content-type="city">Kamenice</named-content>
+                    </addr-line>
+                    <country>Czech Republic</country>
+                </aff>
+                <aff id="aff3">
+                    <label>3</label>
+                    <institution>Department of Condensed Matter Physics, Faculty of Science, Masaryk University</institution>
+                    <addr-line>
+                        <named-content content-type="city">Kotlářská</named-content>
+                    </addr-line>
+                    <country>Czech Republic</country>
+                </aff>
+                <aff id="aff4">
+                    <label>4</label>
+                    <institution content-type="dept">J. Heyrovsky Institute of Physical Chemistry</institution>
+                    <institution>Czech Academy of Sciences</institution>
+                    <addr-line>
+                        <named-content content-type="city">Prague</named-content>
+                    </addr-line>
+                    <country>Czech Republic</country>
+                </aff>
+            </contrib-group>
+            <contrib-group content-type="section">
+                <contrib contrib-type="editor">
+                    <name>
+                        <surname>Bassereau</surname>
+                        <given-names>Patricia</given-names>
+                    </name>
+                    <role>Reviewing Editor</role>
+                    <aff>
+                        <institution>Institut Curie</institution>
+                        <country>France</country>
+                    </aff>
+                </contrib>
+                <contrib contrib-type="senior_editor">
+                    <name>
+                        <surname>Boudker</surname>
+                        <given-names>Olga</given-names>
+                    </name>
+                    <role>Senior Editor</role>
+                    <aff>
+                        <institution>Weill Cornell Medicine</institution>
+                        <country>United States</country>
+                    </aff>
+                </contrib>
+            </contrib-group>
+            <author-notes>
+                <fn fn-type="present-address" id="pa1">
+                    <label>‡</label>
+                    <p>Department of Pharmaceutical Chemistry, University of Vienna, Vienna, Austria</p>
+                </fn>
+                <fn fn-type="con" id="equal-contrib1">
+                    <label>†</label>
+                    <p>These authors contributed equally to this work</p>
+                </fn>
+            </author-notes>
+            <pub-date date-type="publication" publication-format="electronic">
+                <day>13</day>
+                <month>03</month>
+                <year>2020</year>
+            </pub-date>
+            <pub-date pub-type="collection">
+                <year>2020</year>
+            </pub-date>
+            <volume>9</volume>
+            <elocation-id>e47946</elocation-id>
+            <history>
+                <date date-type="received" iso-8601-date="2019-04-25">
+                    <day>25</day>
+                    <month>04</month>
+                    <year>2019</year>
+                </date>
+                <date date-type="accepted" iso-8601-date="2020-02-18">
+                    <day>18</day>
+                    <month>02</month>
+                    <year>2020</year>
+                </date>
+            </history>
+            <permissions>
+                <copyright-statement>© 2020, Tuerkova et al</copyright-statement>
+                <copyright-year>2020</copyright-year>
+                <copyright-holder>Tuerkova et al</copyright-holder>
+                <ali:free_to_read />
+                <license xlink:href="http://creativecommons.org/licenses/by/4.0/">
+                    <ali:license_ref>http://creativecommons.org/licenses/by/4.0/</ali:license_ref>
+                    <license-p>
+                        This article is distributed under the terms of the
+                        <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License</ext-link>
+                        , which permits unrestricted use and redistribution provided that the original author and source are credited.
+                    </license-p>
+                </license>
+            </permissions>
+            <self-uri content-type="pdf" xlink:href="elife-47946.pdf" />
+            <abstract>
+                <p>Every cell is protected by a semipermeable membrane. Peptides with the right properties, for example Antimicrobial peptides (AMPs), can disrupt this protective barrier by formation of leaky pores. Unfortunately, matching peptide properties with their ability to selectively form pores in bacterial membranes remains elusive. In particular, the proline/glycine kink in helical peptides was reported to both increase and decrease antimicrobial activity. We used computer simulations and fluorescence experiments to show that a kink in helices affects the formation of membrane pores by stabilizing toroidal pores but disrupting barrel-stave pores. The position of the proline/glycine kink in the sequence further controls the specific structure of toroidal pore. Moreover, we demonstrate that two helical peptides can form a kink-like connection with similar behavior as one long helical peptide with a kink. The provided molecular-level insight can be utilized for design and modification of pore-forming antibacterial peptides or toxins.</p>
+            </abstract>
+            <kwd-group kwd-group-type="author-keywords">
+                <kwd>membrane transport</kwd>
+                <kwd>antibiotics</kwd>
+                <kwd>membrane structure</kwd>
+                <kwd>fluorescent probes</kwd>
+            </kwd-group>
+            <kwd-group kwd-group-type="research-organism">
+                <title>Research organism</title>
+                <kwd>None</kwd>
+            </kwd-group>
+            <funding-group>
+                <award-group id="fund1">
+                    <funding-source>
+                        <institution-wrap>
+                            <institution-id institution-id-type="FundRef">http://dx.doi.org/10.13039/501100001824</institution-id>
+                            <institution>Czech Science Foundation</institution>
+                        </institution-wrap>
+                    </funding-source>
+                    <award-id>GA17-11571S</award-id>
+                    <principal-award-recipient>
+                        <name>
+                            <surname>Tuerkova</surname>
+                            <given-names>Alzbeta</given-names>
+                        </name>
+                        <name>
+                            <surname>Kabelka</surname>
+                            <given-names>Ivo</given-names>
+                        </name>
+                        <name>
+                            <surname>Králová</surname>
+                            <given-names>Tereza</given-names>
+                        </name>
+                        <name>
+                            <surname>Sukeník</surname>
+                            <given-names>Lukáš</given-names>
+                        </name>
+                        <name>
+                            <surname>Vácha</surname>
+                            <given-names>Robert</given-names>
+                        </name>
+                    </principal-award-recipient>
+                </award-group>
+                <award-group id="fund2">
+                    <funding-source>
+                        <institution-wrap>
+                            <institution-id institution-id-type="FundRef">http://dx.doi.org/10.13039/501100001824</institution-id>
+                            <institution>Czech Science Foundation</institution>
+                        </institution-wrap>
+                    </funding-source>
+                    <award-id>19-26854X</award-id>
+                    <principal-award-recipient>
+                        <name>
+                            <surname>Pokorná</surname>
+                            <given-names>Šárka</given-names>
+                        </name>
+                        <name>
+                            <surname>Hof</surname>
+                            <given-names>Martin</given-names>
+                        </name>
+                    </principal-award-recipient>
+                </award-group>
+                <award-group id="fund3">
+                    <funding-source>
+                        <institution-wrap>
+                            <institution>Ministry of Education, Youth and Sports of the Czech Republic</institution>
+                        </institution-wrap>
+                    </funding-source>
+                    <award-id>LQ1601</award-id>
+                    <principal-award-recipient>
+                        <name>
+                            <surname>Türková</surname>
+                            <given-names>Alžběta</given-names>
+                        </name>
+                        <name>
+                            <surname>Kabelka</surname>
+                            <given-names>Ivo</given-names>
+                        </name>
+                        <name>
+                            <surname>Králová</surname>
+                            <given-names>Tereza</given-names>
+                        </name>
+                        <name>
+                            <surname>Sukeník</surname>
+                            <given-names>Lukáš</given-names>
+                        </name>
+                        <name>
+                            <surname>Vácha</surname>
+                            <given-names>Robert</given-names>
+                        </name>
+                    </principal-award-recipient>
+                </award-group>
+                <award-group id="fund4">
+                    <funding-source>
+                        <institution-wrap>
+                            <institution>Ministry of Education, Youth and Sports of the Czech Republic</institution>
+                        </institution-wrap>
+                    </funding-source>
+                    <award-id>LM2015070</award-id>
+                    <principal-award-recipient>
+                        <name>
+                            <surname>Türková</surname>
+                            <given-names>Alžběta</given-names>
+                        </name>
+                        <name>
+                            <surname>Kabelka</surname>
+                            <given-names>Ivo</given-names>
+                        </name>
+                        <name>
+                            <surname>Králová</surname>
+                            <given-names>Tereza</given-names>
+                        </name>
+                        <name>
+                            <surname>Sukeník</surname>
+                            <given-names>Lukáš</given-names>
+                        </name>
+                        <name>
+                            <surname>Vácha</surname>
+                            <given-names>Robert</given-names>
+                        </name>
+                    </principal-award-recipient>
+                </award-group>
+                <award-group id="fund5">
+                    <funding-source>
+                        <institution-wrap>
+                            <institution>Ministry of Education, Youth and Sports of the Czech Republic</institution>
+                        </institution-wrap>
+                    </funding-source>
+                    <award-id>LM2015085</award-id>
+                    <principal-award-recipient>
+                        <name>
+                            <surname>Türková</surname>
+                            <given-names>Alžběta</given-names>
+                        </name>
+                        <name>
+                            <surname>Kabelka</surname>
+                            <given-names>Ivo</given-names>
+                        </name>
+                        <name>
+                            <surname>Králová</surname>
+                            <given-names>Tereza</given-names>
+                        </name>
+                        <name>
+                            <surname>Sukeník</surname>
+                            <given-names>Lukáš</given-names>
+                        </name>
+                        <name>
+                            <surname>Vácha</surname>
+                            <given-names>Robert</given-names>
+                        </name>
+                    </principal-award-recipient>
+                </award-group>
+                <award-group id="fund6">
+                    <funding-source>
+                        <institution-wrap>
+                            <institution>Ministry of Education, Youth and Sports of the Czech Republic</institution>
+                        </institution-wrap>
+                    </funding-source>
+                    <award-id>LM2015042</award-id>
+                    <principal-award-recipient>
+                        <name>
+                            <surname>Türková</surname>
+                            <given-names>Alžběta</given-names>
+                        </name>
+                        <name>
+                            <surname>Kabelka</surname>
+                            <given-names>Ivo</given-names>
+                        </name>
+                        <name>
+                            <surname>Králová</surname>
+                            <given-names>Tereza</given-names>
+                        </name>
+                        <name>
+                            <surname>Sukeník</surname>
+                            <given-names>Lukáš</given-names>
+                        </name>
+                        <name>
+                            <surname>Vácha</surname>
+                            <given-names>Robert</given-names>
+                        </name>
+                    </principal-award-recipient>
+                </award-group>
+                <funding-statement>The funders had no role in study design, data collection and interpretation, or the decision to submit the work for publication.</funding-statement>
+            </funding-group>
+            <custom-meta-group>
+                <custom-meta specific-use="meta-only">
+                    <meta-name>Author impact statement</meta-name>
+                    <meta-value>Proline/glycine kink in the helical peptides affects the peptide ability to form membrane pores by stabilising toroidal pore structures but disrupting barrel-stave pore structures.</meta-value>
+                </custom-meta>
+            </custom-meta-group>
+        </article-meta>
+    </front>
+</article>
