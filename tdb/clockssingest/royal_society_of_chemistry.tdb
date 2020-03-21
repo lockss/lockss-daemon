@@ -42,11 +42,11 @@
       au < finished ; manifest ; 2011 ; The Analyst Volume 136 ; 136 ; 2011 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2012 ; The Analyst Volume 137 ; 137 ; 2012 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2013 ; The Analyst Volume 138 ; 138 ; 2013 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2014 ; The Analyst Volume 139 ; 139 ; 2014 ; http://pubs.rsc.org/ ; >
-      au < deepCrawl ; exists ; 2015 ; The Analyst Volume 140 ; 140 ; 2015 ; http://pubs.rsc.org/ ; >
-      au < deepCrawl ; exists ; 2016 ; The Analyst Volume 141 ; 141 ; 2016 ; http://pubs.rsc.org/ ; >
-      au < deepCrawl ; exists ; 2017 ; The Analyst Volume 142 ; 142 ; 2017 ; http://pubs.rsc.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; The Analyst Volume 143 ; 143 ; 2018 ; http://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2014 ; The Analyst Volume 139 ; 139 ; 2014 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2015 ; The Analyst Volume 140 ; 140 ; 2015 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; The Analyst Volume 141 ; 141 ; 2016 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2017 ; The Analyst Volume 142 ; 142 ; 2017 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; The Analyst Volume 143 ; 143 ; 2018 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2019 ; The Analyst Volume 144 ; 144 ; 2019 ; https://pubs.rsc.org/ ; >
 
   }
@@ -65,11 +65,11 @@
       au < finished ; manifest ; 2011 ; Analytical Methods Volume 3 ; 3 ; 2011 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2012 ; Analytical Methods Volume 4 ; 4 ; 2012 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2013 ; Analytical Methods Volume 5 ; 5 ; 2013 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2014 ; Analytical Methods Volume 6 ; 6 ; 2014 ; http://pubs.rsc.org/ ; >
-      au < deepCrawl ; exists ; 2015 ; Analytical Methods Volume 7 ; 7 ; 2015 ; http://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2014 ; Analytical Methods Volume 6 ; 6 ; 2014 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2015 ; Analytical Methods Volume 7 ; 7 ; 2015 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2016 ; Analytical Methods Volume 8 ; 8 ; 2016 ; http://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2017 ; Analytical Methods Volume 9 ; 9 ; 2017 ; http://pubs.rsc.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; Analytical Methods Volume 10 ; 10 ; 2018 ; http://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2018 ; Analytical Methods Volume 10 ; 10 ; 2018 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2019 ; Analytical Methods Volume 11 ; 11 ; 2019 ; https://pubs.rsc.org/ ; >
 
   }
@@ -139,7 +139,7 @@
 
       au < finished ; crawling ; 2013 ; CBiomaterials Science Volume 1 ; 1 ; 2013 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2014 ; CBiomaterials Science Volume 2 ; 2 ; 2014 ; http://pubs.rsc.org/ ; >
-      au < deepCrawl ; exists ; 2015 ; CBiomaterials Science Volume 3 ; 3 ; 2015 ; http://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2015 ; CBiomaterials Science Volume 3 ; 3 ; 2015 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2016 ; CBiomaterials Science Volume 4 ; 4 ; 2016 ; http://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2017 ; CBiomaterials Science Volume 5 ; 5 ; 2017 ; http://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2018 ; CBiomaterials Science Volume 6 ; 6 ; 2018 ; http://pubs.rsc.org/ ; >
@@ -163,7 +163,7 @@
       au < finished ; manifest ; 2013 ; Chemical Communications Volume 49 ; 49 ; 2013 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < zapped ; finished ; 2014 ; Chemical Communications Volume 50 ; 50 ; 2014 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2015 ; Chemical Communications Volume 51 ; 51 ; 2015 ; http://pubs.rsc.org/ ; >
-      au < deepCrawl ; exists ; 2016 ; Chemical Communications Volume 52 ; 52 ; 2016 ; http://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2016 ; Chemical Communications Volume 52 ; 52 ; 2016 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2017 ; Chemical Communications Volume 53 ; 53 ; 2017 ; http://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2018 ; Chemical Communications Volume 54 ; 54 ; 2018 ; http://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2019 ; Chemical Communications Volume 55 ; 55 ; 2019 ; https://pubs.rsc.org/ ; >
