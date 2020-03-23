@@ -1456,7 +1456,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; Injury Prevention Volume 23 ; 23 ; https://injuryprevention.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; manifest ; 2018 ; Injury Prevention Volume 24 ; 24 ; https://injuryprevention.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; manifest ; 2019 ; Injury Prevention Volume 25 ; 25 ; https://injuryprevention.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; expected ; 2020 ; Injury Prevention Volume 26 ; 26 ; https://injuryprevention.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; manifest ; 2020 ; Injury Prevention Volume 26 ; 26 ; https://injuryprevention.bmj.com/ >
 
     }
 
@@ -1745,7 +1745,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; Journal of Medical Ethics Volume 43 ; 43 ; https://jme.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2018 ; Journal of Medical Ethics Volume 44 ; 44 ; https://jme.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2019 ; Journal of Medical Ethics Volume 45 ; 45 ; https://jme.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; expected ; 2020 ; Journal of Medical Ethics Volume 46 ; 46 ; https://jme.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2020 ; Journal of Medical Ethics Volume 46 ; 46 ; https://jme.bmj.com/ >
 
   }
 
@@ -1815,7 +1815,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; Journal of Medical Genetics Volume 54 ; 54 ; https://jmg.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2018 ; Journal of Medical Genetics Volume 55 ; 55 ; https://jmg.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2019 ; Journal of Medical Genetics Volume 56 ; 56 ; https://jmg.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; expected ; 2020 ; Journal of Medical Genetics Volume 57 ; 57 ; https://jmg.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2020 ; Journal of Medical Genetics Volume 57 ; 57 ; https://jmg.bmj.com/ >
 
   }
 
@@ -2189,7 +2189,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; Medical Humanities Volume 43 ; 43 ; https://mh.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2018 ; Medical Humanities Volume 44 ; 44 ; https://mh.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2019 ; Medical Humanities Volume 45 ; 45 ; https://mh.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; expected ; 2020 ; Medical Humanities Volume 46 ; 46 ; https://mh.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2020 ; Medical Humanities Volume 46 ; 46 ; https://mh.bmj.com/ >
 
   }
 
@@ -2626,7 +2626,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; Sexually Transmitted Infections Volume 93 ; 93 ; https://sti.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2018 ; Sexually Transmitted Infections Volume 94 ; 94 ; https://sti.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2019 ; Sexually Transmitted Infections Volume 95 ; 95 ; https://sti.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; expected ; 2020 ; Sexually Transmitted Infections Volume 96 ; 96 ; https://sti.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2020 ; Sexually Transmitted Infections Volume 96 ; 96 ; https://sti.bmj.com/ >
 
   }
 
@@ -2768,7 +2768,7 @@ comment[tc15] = recursive URL structure
       au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; Tobacco Control Volume 26 ; 26 ; https://tobaccocontrol.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; manifest ; 2018 ; Tobacco Control Volume 27 ; 27 ; https://tobaccocontrol.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; manifest ; 2019 ; Tobacco Control Volume 28 ; 28 ; https://tobaccocontrol.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; expected ; 2020 ; Tobacco Control Volume 29 ; 29 ; https://tobaccocontrol.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; manifest ; 2020 ; Tobacco Control Volume 29 ; 29 ; https://tobaccocontrol.bmj.com/ >
 
     }
 
