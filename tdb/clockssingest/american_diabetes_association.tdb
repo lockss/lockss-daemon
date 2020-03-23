@@ -224,7 +224,7 @@
       au < ada.ClockssADADrupalPlugin ; deepCrawl ; exists ; 2017 ; Diabetes Spectrum Volume 30 ; 30 ; http://spectrum.diabetesjournals.org/ ; >
       au < ada.ClockssADADrupalPlugin ; deepCrawl ; exists ; 2018 ; Diabetes Spectrum Volume 31 ; 31 ; http://spectrum.diabetesjournals.org/ ; >
       au < ada.ClockssADADrupalPlugin ; crawling ; exists ; 2019 ; Diabetes Spectrum Volume 32 ; 32 ; http://spectrum.diabetesjournals.org/ ; >
-      au < ada.ClockssADADrupalPlugin ; expected ; exists ; 2020 ; Diabetes Spectrum Volume 33 ; 33 ; https://spectrum.diabetesjournals.org/ ; >
+      au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2020 ; Diabetes Spectrum Volume 33 ; 33 ; https://spectrum.diabetesjournals.org/ ; >
 
     }
 
