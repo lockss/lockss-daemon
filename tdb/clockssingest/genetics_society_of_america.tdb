@@ -27,8 +27,9 @@
     au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 2015 ; G3: Genes, Genomes, Genetics Volume 5 ; 5 ; >
     au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 2016 ; G3: Genes, Genomes, Genetics Volume 6 ; 6 ; >
     au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 2017 ; G3: Genes, Genomes, Genetics Volume 7 ; 7 ; >
-    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ;exists ; 2018 ; G3: Genes, Genomes, Genetics Volume 8 ; 8 ; >
-    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ;exists ; 2019 ; G3: Genes, Genomes, Genetics Volume 9 ; 9 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 2018 ; G3: Genes, Genomes, Genetics Volume 8 ; 8 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 2019 ; G3: Genes, Genomes, Genetics Volume 9 ; 9 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; expected ; exists ; 2020 ; G3: Genes, Genomes, Genetics Volume 10 ; 10 ; >
 
   }
     
@@ -256,6 +257,9 @@
     au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 2019 ; Genetics Volume 211 ; 211 ; >
     au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 2019 ; Genetics Volume 212 ; 212 ; >
     au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 2019 ; Genetics Volume 213 ; 213 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; expected ; exists ; 2020 ; Genetics Volume 214 ; 214 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; expected ; exists ; 2020 ; Genetics Volume 215 ; 215 ; >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; expected ; exists ; 2020 ; Genetics Volume 216 ; 216 ; >
 
   }
 
