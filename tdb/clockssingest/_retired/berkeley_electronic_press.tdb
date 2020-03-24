@@ -45,7 +45,7 @@
     au < zapped ; finished ; 2003 ; Advances in Economic Analysis & Policy Volume 3 ; 3 ; >
     au < finished ; finished ; 2004 ; Advances in Economic Analysis & Policy Volume 4 ; 4 ; >
     au < zapped ; finished ; 2005 ; Advances in Economic Analysis & Policy Volume 5 ; 5 ; >
-    au < zapped ; finished ; 2006 ; Advances in Economic Analysis & Policy Volume 6 ; 6 ; >    
+    au < zapped ; finished ; 2006 ; Advances in Economic Analysis & Policy Volume 6 ; 6 ; > 
 
   }
 
@@ -63,11 +63,11 @@
     comment[merged] = with 1534-5998, 1534-6005 and 1534-0621 into 1555-0486 in 2007
 
     au < finished ; finished ; 2001 ; Advances in Macroeconomics Volume 1 ; 1 ; >
-    au < finished ; crawling ; 2002 ; Advances in Macroeconomics Volume 2 ; 2 ; >
+    au < finished ; down ; 2002 ; Advances in Macroeconomics Volume 2 ; 2 ; > #no substance on production machine.
     au < zapped ; finished ; 2003 ; Advances in Macroeconomics Volume 3 ; 3 ; >
     au < zapped ; finished ; 2004 ; Advances in Macroeconomics Volume 4 ; 4 ; >
     au < zapped ; finished ; 2005 ; Advances in Macroeconomics Volume 5 ; 5 ; >
-    au < zapped ; finished ; 2006 ; Advances in Macroeconomics Volume 6 ; 6 ; >    
+    au < zapped ; finished ; 2006 ; Advances in Macroeconomics Volume 6 ; 6 ; >
 
   }
 
@@ -89,7 +89,7 @@
     au < zapped ; finished ; 2003 ; Advances in Theoretical Economics Volume 3 ; 3 ; >
     au < finished ; finished ; 2004 ; Advances in Theoretical Economics Volume 4 ; 4 ; >
     au < zapped ; finished ; 2005 ; Advances in Theoretical Economics Volume 5 ; 5 ; >
-    au < zapped ; finished ; 2006 ; Advances in Theoretical Economics Volume 6 ; 6 ; >    
+    au < zapped ; finished ; 2006 ; Advances in Theoretical Economics Volume 6 ; 6 ; > 
 
   }
 
@@ -194,7 +194,7 @@
     au < doNotProcess ; doNotProcess ; 2005 ; The B.E. Journal of Economic Analysis & Policy Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2006 ; The B.E. Journal of Economic Analysis & Policy Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2006 ; The B.E. Journal of Economic Analysis & Policy Volume 6 ; 6 ; >
-    au < finished ; finished ; 2007 ; The B.E. Journal of Economic Analysis & Policy Volume 7 ; 7 ; >    
+    au < finished ; finished ; 2007 ; The B.E. Journal of Economic Analysis & Policy Volume 7 ; 7 ; > 
     au < zapped ; finished ; 2008 ; The B.E. Journal of Economic Analysis & Policy Volume 8 ; 8 ; >
     au < zapped ; finished ; 2009 ; The B.E. Journal of Economic Analysis & Policy Volume 9 ; 9 ; >
     au < zapped ; finished ; 2010 ; The B.E. Journal of Economic Analysis & Policy Volume 10 ; 10 ; >
@@ -223,10 +223,10 @@
     au < doesNotExist ; doesNotExist ; 2004 ; The B.E. Journal of Macroeconomics Volume 4 ; 4 ; >
     au < doesNotExist ; doesNotExist ; 2005 ; The B.E. Journal of Macroeconomics Volume 5 ; 5 ; >
     au < doesNotExist ; doesNotExist ; 2006 ; The B.E. Journal of Macroeconomics Volume 6 ; 6 ; >
-    au < zapped ; finished ; 2007 ; The B.E. Journal of Macroeconomics Volume 7 ; 7 ; >    
+    au < zapped ; finished ; 2007 ; The B.E. Journal of Macroeconomics Volume 7 ; 7 ; > 
     au < zapped ; finished ; 2008 ; The B.E. Journal of Macroeconomics Volume 8 ; 8 ; >
     au < zapped ; finished ; 2009 ; The B.E. Journal of Macroeconomics Volume 9 ; 9 ; >
-    au < zapped ; finished ; 2010 ; The B.E. Journal of Macroeconomics Volume 10 ; 10 ; >    
+    au < zapped ; finished ; 2010 ; The B.E. Journal of Macroeconomics Volume 10 ; 10 ; > 
     au < zapped ; finished ; 2011 ; The B.E. Journal of Macroeconomics Volume 11 ; 11 ; >
     
   }
@@ -361,11 +361,11 @@
     comment[merged] = with 1538-0629, 1538-0637 and 1538-0653 into 1555-0494 in 2007
     comment[year] = vol 1 website label is 2001 but articles are dated 2002
 
-    au < zapped ; finished ; 2002 ; Contributions to Economic Analysis & Policy Volume 1 ; 1 ; >    
+    au < zapped ; finished ; 2002 ; Contributions to Economic Analysis & Policy Volume 1 ; 1 ; >
     au < finished ; finished ; 2003 ; Contributions to Economic Analysis & Policy Volume 2 ; 2 ; >
-    au < zapped ; finished ; 2004 ; Contributions to Economic Analysis & Policy Volume 3 ; 3 ; >    
+    au < zapped ; finished ; 2004 ; Contributions to Economic Analysis & Policy Volume 3 ; 3 ; >
     au < zapped ; finished ; 2005 ; Contributions to Economic Analysis & Policy Volume 4 ; 4 ; >
-    au < zapped ; finished ; 2006 ; Contributions to Economic Analysis & Policy Volume 5 ; 5 ; >    
+    au < zapped ; finished ; 2006 ; Contributions to Economic Analysis & Policy Volume 5 ; 5 ; >
 
   }
 
@@ -382,12 +382,12 @@
     param[journal_section] = contributions
     comment[merged] = with 1534-5998, 1534-6013 and 1534-6021 into 1555-0486 in 2007
 
-    au < zapped ; finished ; 2001 ; Contributions to Macroeconomics Volume 1 ; 1 ; >    
-    au < finished ; crawling ; 2002 ; Contributions to Macroeconomics Volume 2 ; 2 ; >
-    au < zapped ; finished ; 2003 ; Contributions to Macroeconomics Volume 3 ; 3 ; >    
+    au < zapped ; finished ; 2001 ; Contributions to Macroeconomics Volume 1 ; 1 ; >
+    au < finished ; down ; 2002 ; Contributions to Macroeconomics Volume 2 ; 2 ; > #no substance on production machine
+    au < zapped ; finished ; 2003 ; Contributions to Macroeconomics Volume 3 ; 3 ; >
     au < finished ; finished ; 2004 ; Contributions to Macroeconomics Volume 4 ; 4 ; >
-    au < zapped ; finished ; 2005 ; Contributions to Macroeconomics Volume 5 ; 5 ; >    
-    au < zapped ; finished ; 2006 ; Contributions to Macroeconomics Volume 6 ; 6 ; > 
+    au < zapped ; finished ; 2005 ; Contributions to Macroeconomics Volume 5 ; 5 ; >
+    au < zapped ; finished ; 2006 ; Contributions to Macroeconomics Volume 6 ; 6 ; >
 
   }
 
@@ -404,11 +404,11 @@
     param[journal_section] = contributions
     comment[merged] = with 1534-5955, 1534-5963 and 1534-598X into 1555-0478 in 2007
 
-    au < zapped ; finished ; 2001 ; Contributions to Theoretical Economics Volume 1 ; 1 ; >    
+    au < zapped ; finished ; 2001 ; Contributions to Theoretical Economics Volume 1 ; 1 ; > 
     au < finished ; finished ; 2002 ; Contributions to Theoretical Economics Volume 2 ; 2 ; >
-    au < zapped ; finished ; 2003 ; Contributions to Theoretical Economics Volume 3 ; 3 ; >    
+    au < zapped ; finished ; 2003 ; Contributions to Theoretical Economics Volume 3 ; 3 ; > 
     au < zapped ; finished ; 2004 ; Contributions to Theoretical Economics Volume 4 ; 4 ; >
-    au < finished ; finished ; 2005 ; Contributions to Theoretical Economics Volume 5 ; 5 ; >    
+    au < finished ; finished ; 2005 ; Contributions to Theoretical Economics Volume 5 ; 5 ; > 
     au < zapped ; finished ; 2006 ; Contributions to Theoretical Economics Volume 6 ; 6 ; > 
 
   }
@@ -550,7 +550,7 @@
     comment[merged] = with 1534-5963, 1534-5971 and 1534-598X into 1555-0478 in 2007
     comment[year] = vol 1 website label is 2001 but article is dated 2002
     
-    au < zapped ; finished ; 2002 ; Frontiers of Theoretical Economics Volume 1 ; 1 ; >    
+    au < zapped ; finished ; 2002 ; Frontiers of Theoretical Economics Volume 1 ; 1 ; > 
     au < zapped ; finished ; 2006 ; Frontiers of Theoretical Economics Volume 2 ; 2 ; >
 
   }
@@ -758,9 +758,9 @@
     au < zapped ; finished ; 2000 ; Journal des Economistes et des Etudes Humaines Volume 10 ; 10 ; >
     au < zapped ; finished ; 2001 ; Journal des Economistes et des Etudes Humaines Volume 11 ; 11 ; >
     au < zapped ; finished ; 2002 ; Journal des Economistes et des Etudes Humaines Volume 12 ; 12 ; >
-    au < zapped ; finished ; 2003 ; Journal des Economistes et des Etudes Humaines Volume 13 ; 13 ; >    
+    au < zapped ; finished ; 2003 ; Journal des Economistes et des Etudes Humaines Volume 13 ; 13 ; > 
     au < finished ; finished ; 2004 ; Journal des Economistes et des Etudes Humaines Volume 14 ; 14 ; >
-    au < zapped ; finished ; 2009 ; Journal des Economistes et des Etudes Humaines Volume 15 ; 15 ; >    
+    au < zapped ; finished ; 2009 ; Journal des Economistes et des Etudes Humaines Volume 15 ; 15 ; > 
     au < finished ; finished ; 2010 ; Journal des Economistes et des Etudes Humaines Volume 16 ; 16 ; >
     au < zapped ; finished ; 2011 ; Journal des Economistes et des Etudes Humaines Volume 17 ; 17 ; >
     
@@ -1144,7 +1144,7 @@
     au < zapped ; finished ; 2007 ; Muslim World Journal of Human Rights Volume 4 ; 4 ; >
     au < zapped ; finished ; 2008 ; Muslim World Journal of Human Rights Volume 5 ; 5 ; >
     au < doesNotExist ; doesNotExist ; 2009 ; Muslim World Journal of Human Rights Volume 6 ; 6 ; >
-    au < finished ; finished ; 2010-2011 ; Muslim World Journal of Human Rights Volume 7 ; 7 ; >   
+    au < finished ; finished ; 2010-2011 ; Muslim World Journal of Human Rights Volume 7 ; 7 ; > 
 
   }
   
@@ -1399,7 +1399,7 @@
     au < zapped ; finished ; 2008 ; The Rhodes Cook Letter Volume 9 ; 9 ; >
     au < zapped ; finished ; 2009 ; The Rhodes Cook Letter Volume 10 ; 10 ; >
     au < zapped ; finished ; 2010 ; The Rhodes Cook Letter Volume 11 ; 11 ; >
-    au < zapped ; finished ; 2011 ; The Rhodes Cook Letter Volume 12 ; 12 ; >    
+    au < zapped ; finished ; 2011 ; The Rhodes Cook Letter Volume 12 ; 12 ; > 
 
   }
 
@@ -1570,7 +1570,7 @@
     au < zapped ; finished ; 2003 ; Topics in Economic Analysis & Policy Volume 3 ; 3 ; >
     au < zapped ; finished ; 2004 ; Topics in Economic Analysis & Policy Volume 4 ; 4 ; >
     au < zapped ; finished ; 2005 ; Topics in Economic Analysis & Policy Volume 5 ; 5 ; >
-    au < zapped ; finished ; 2006 ; Topics in Economic Analysis & Policy Volume 6 ; 6 ; >    
+    au < zapped ; finished ; 2006 ; Topics in Economic Analysis & Policy Volume 6 ; 6 ; >
 
   }
 
@@ -1588,11 +1588,11 @@
     comment[merged] = with 1534-6005, 1534-6013, 1534-6021 and into 1555-0486 in 2007
 
     au < finished ; finished ; 2001 ; Topics in Macroeconomics Volume 1 ; 1 ; >
-    au < finished ; crawling ; 2002 ; Topics in Macroeconomics Volume 2 ; 2 ; >
+    au < finished ; down ; 2002 ; Topics in Macroeconomics Volume 2 ; 2 ; > #no substance on production machine
     au < zapped ; finished ; 2003 ; Topics in Macroeconomics Volume 3 ; 3 ; >
     au < zapped ; finished ; 2004 ; Topics in Macroeconomics Volume 4 ; 4 ; >
     au < zapped ; finished ; 2005 ; Topics in Macroeconomics Volume 5 ; 5 ; >
-    au < zapped ; finished ; 2006 ; Topics in Macroeconomics Volume 6 ; 6 ; >    
+    au < zapped ; finished ; 2006 ; Topics in Macroeconomics Volume 6 ; 6 ; >
 
   }
 
@@ -1614,7 +1614,7 @@
     au < zapped ; finished ; 2003 ; Topics in Theoretical Economics Volume 3 ; 3 ; >
     au < zapped ; finished ; 2004 ; Topics in Theoretical Economics Volume 4 ; 4 ; >
     au < zapped ; finished ; 2005 ; Topics in Theoretical Economics Volume 5 ; 5 ; >
-    au < zapped ; finished ; 2006 ; Topics in Theoretical Economics Volume 6 ; 6 ; >    
+    au < zapped ; finished ; 2006 ; Topics in Theoretical Economics Volume 6 ; 6 ; > 
 
   }
 
