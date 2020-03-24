@@ -71,7 +71,7 @@
     au < doNotProcess ; exists ; 2012 ; Hydrology Research Volume 43 ; 43 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Hydrology Research Volume 44 ; 44 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Hydrology Research Volume 45 ; 45 ; >
-    au < frozen ; exists ; 2015 ; Hydrology Research Volume 46 ; 46 ; >
+    au < finished ; manifest ; 2015 ; Hydrology Research Volume 46 ; 46 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Hydrology Research Volume 47 ; 47 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Hydrology Research Volume 48 ; 48 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; exists ; 2018 ; Hydrology Research Volume 49 ; 49 ; >
@@ -126,7 +126,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Water and Health Volume 12 ; 12 ; >
     au < finished ; finished ; 2015 ; Journal of Water and Health Volume 13 ; 13 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2016 ; Journal of Water and Health Volume 14 ; 14 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2017 ; Journal of Water and Health Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2017 ; Journal of Water and Health Volume 15 ; 15 ; >
     au < doNotProcess ; exists ; 2018 ; Journal of Water and Health Volume 16 ; 16 ; >
 
   }
@@ -316,7 +316,7 @@
     au < doNotProcess ; exists ; 2012 ; Water Quality Research Journal of Canada Volume 47 ; 47 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Water Quality Research Journal of Canada Volume 48 ; 48 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Water Quality Research Journal of Canada Volume 49 ; 49 ; >
-    au < frozen ; exists ; 2015 ; Water Quality Research Journal of Canada Volume 50 ; 50 ; >
+    au < finished ; manifest ; 2015 ; Water Quality Research Journal of Canada Volume 50 ; 50 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2016 ; Water Quality Research Journal of Canada Volume 51 ; 51 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Water Quality Research Journal of Canada Volume 52 ; 52 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; exists ; 2018 ; Water Quality Research Journal of Canada Volume 53 ; 53 ; >
@@ -392,7 +392,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Water Science and Technology Volume 69 ; 69 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Water Science and Technology Volume 70 ; 70 ; >
     au < finished ; finished ; 2015 ; Water Science and Technology Volume 71 ; 71 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2015 ; Water Science and Technology Volume 72 ; 72 ; >
+    au < finished ; manifest ; 2015 ; Water Science and Technology Volume 72 ; 72 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2016 ; Water Science and Technology Volume 73 ; 73 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2016 ; Water Science and Technology Volume 74 ; 74 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2017 ; Water Science and Technology Volume 75 ; 75 ; reingest3.clockss.org:8083 >
@@ -427,7 +427,7 @@
     au < doNotProcess ; exists ; 2012 ; Water Science and Technology: Water Supply Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Water Science and Technology: Water Supply Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Water Science and Technology: Water Supply Volume 14 ; 14 ; >
-    au < frozen ; exists ; 2015 ; Water Science and Technology: Water Supply Volume 15 ; 15 ; >
+    au < finished ; manifest ; 2015 ; Water Science and Technology: Water Supply Volume 15 ; 15 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2016 ; Water Science and Technology: Water Supply Volume 16 ; 16 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Water Science and Technology: Water Supply Volume 17 ; 17 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; exists ; 2018 ; Water Science and Technology: Water Supply Volume 18 ; 18 ; >
