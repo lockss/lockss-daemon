@@ -1490,7 +1490,7 @@
       au < doNotProcess ; doNotProcess ; 2006 ; BMC Pharmacology Volume 6 ; 6 ; >
       au < doNotProcess ; doNotProcess ; 2007 ; BMC Pharmacology Volume 7 ; 7 ; >
       au < frozen ; exists ; 2008 ; BMC Pharmacology Volume 8 ; 8 ; >
-      au < finished ; crawling ; 2009 ; BMC Pharmacology Volume 9 ; 9 ; reingest5.clockss.org:8082 >
+      au < superseded ; down ; 2009 ; BMC Pharmacology Volume 9 [superseded] ; 9 ; reingest5.clockss.org:8082 > #no substance on production
       au < superseded ; down ; 2010 ; BMC Pharmacology Volume 10 [superseded] ; 10 ; >
       au < superseded ; down ; 2011 ; BMC Pharmacology Volume 11 [superseded] ; 11 ; >
 

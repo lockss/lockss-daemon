@@ -411,7 +411,7 @@
       au < finished ; finished ; 2011 ; Arthritis Research & Therapy Volume 13 ; 13 ; >
       au < superseded ; exists ; 2012 ; Arthritis Research & Therapy Volume 14 [superseded] ; 14 ; >
       au < finished ; frozen ; 2013 ; Arthritis Research & Therapy Volume 15 ; 15 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; Arthritis Research & Therapy Volume 16 ; 16 ; reingest2.clockss.org:8085 >
+      au < finished ; down ; 2014 ; Arthritis Research & Therapy Volume 16 ; 16 ; reingest2.clockss.org:8085 >
       }
     }
 
@@ -1694,7 +1694,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
         param[base_url] = http://www.epi-perspectives.com/
         param[journal_issn] = 1742-5573
 
-        au < finished ; crawling ; 2010 ; Epidemiologic Perspectives & Innovations Volume 7 ; 7 ; >
+        au < finished ; down ; 2010 ; Epidemiologic Perspectives & Innovations Volume 7 ; 7 ; >
       
       }
       
@@ -2513,10 +2513,10 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       # moved to iMedPub on 2014-12-31
 
       au < frozen ; exists ; 2008 ; International Archives of Medicine Volume 1 ; 1 ; >
-      au < finished ; crawling ; 2009 ; International Archives of Medicine Volume 2 ; 2 ; reingest5.clockss.org:8082 >
+      au < finished ; down ; 2009 ; International Archives of Medicine Volume 2 ; 2 ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2010 ; International Archives of Medicine Volume 3 ; 3 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2011 ; International Archives of Medicine Volume 4 ; 4 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2012 ; International Archives of Medicine Volume 5 ; 5 ; reingest4.clockss.org:8082 >
+      au < finished ; down ; 2011 ; International Archives of Medicine Volume 4 ; 4 ; reingest5.clockss.org:8082 >
+      au < finished ; down ; 2012 ; International Archives of Medicine Volume 5 ; 5 ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2013 ; International Archives of Medicine Volume 6 ; 6 ; reingest5.clockss.org:8082 >
 
     }
@@ -3019,10 +3019,10 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       au < doNotProcess ; exists ; 2006 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 1 ; 1 ; >
       au < doNotProcess ; exists ; 2007 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2 ; 2 ; >
-      au < finished ; crawling ; 2008 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 3 ; 3 ; reingest5.clockss.org:8082 >
+      au < finished ; down ; 2008 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 3 ; 3 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2009 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 4 ; 4 ; >
       au < frozen ; exists ; 2010 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 5 ; 5 ; >
-      au < finished ; crawling ; 2011 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 6 ; 6 ; reingest5.clockss.org:8082 >
+      au < finished ; down ; 2011 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 6 ; 6 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2012 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 7 ; 7 ; >
       au < frozen ; exists ; 2013 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 8 ; 8 ; >
       au < doNotProcess ; exists ; 2014 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 9 ; 9 ; >
@@ -3367,11 +3367,11 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; doNotProcess ; 2006 ; Journal of Molecular Signaling Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2007 ; Journal of Molecular Signaling Volume 2 ; 2 ; >
       au < finished ; finished ; 2008 ; Journal of Molecular Signaling Volume 3 ; 3 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2009 ; Journal of Molecular Signaling Volume 4 ; 4 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2010 ; Journal of Molecular Signaling Volume 5 ; 5 ; reingest5.clockss.org:8082 >
+      au < finished ; down ; 2009 ; Journal of Molecular Signaling Volume 4 ; 4 ; reingest5.clockss.org:8082 >
+      au < finished ; down ; 2010 ; Journal of Molecular Signaling Volume 5 ; 5 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2011 ; Journal of Molecular Signaling Volume 6 ; 6 ; >
       au < frozen ; exists ; 2012 ; Journal of Molecular Signaling Volume 7 ; 7 ; >
-      au < finished ; crawling ; 2013 ; Journal of Molecular Signaling Volume 8 ; 8 ; reingest5.clockss.org:8082 >
+      au < finished ; down ; 2013 ; Journal of Molecular Signaling Volume 8 ; 8 ; reingest5.clockss.org:8082 >
 
     }
 
