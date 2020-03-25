@@ -97,7 +97,7 @@
       param[journal_issn] = 1741-6418
       
       au < finished ; manifest ; 2005-2007 ; Atoms for Peace: an International Journal Volume 1 ; 1 ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2008-2009 ; Atoms for Peace: an International Journal Volume 2 ; 2 ; >
+      au < finished ; manifest ; 2008-2009 ; Atoms for Peace: an International Journal Volume 2 ; 2 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2010-2013 ; Atoms for Peace: an International Journal Volume 3 ; 3 ; >
 
     }
@@ -1480,7 +1480,7 @@
       
       au < finished ; finished ; 2009-2010 ; International Journal of Collaborative Enterprise Volume 1 ; 1 ; >
       au < zapped ; finished ; 2011 ; International Journal of Collaborative Enterprise Volume 2 ; 2 ; >
-      au < frozen ; exists ; 2012-2013 ; International Journal of Collaborative Enterprise Volume 3 ; 3 ; >
+      au < finished ; manifest ; 2012-2013 ; International Journal of Collaborative Enterprise Volume 3 ; 3 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; exists ; 2014 ; International Journal of Collaborative Enterprise Volume 4 ; 4 ; >
 
     }
@@ -1505,7 +1505,7 @@
       au < zapped ; finished ; 2011 ; International Journal of Communication Networks and Distributed Systems Volume 7 ; 7 ; >
       au < zapped ; finished ; 2012 ; International Journal of Communication Networks and Distributed Systems Volume 8 ; 8 ; >
       au < finished ; manifest ; 2012 ; International Journal of Communication Networks and Distributed Systems Volume 9 ; 9 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2013 ; International Journal of Communication Networks and Distributed Systems Volume 10 ; 10 ; >
+      au < finished ; manifest ; 2013 ; International Journal of Communication Networks and Distributed Systems Volume 10 ; 10 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2013 ; International Journal of Communication Networks and Distributed Systems Volume 11 ; 11 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; exists ; 2014 ; International Journal of Communication Networks and Distributed Systems Volume 12 ; 12 ; >
       au < doNotProcess ; exists ; 2014 ; International Journal of Communication Networks and Distributed Systems Volume 13 ; 13 ; >
@@ -2192,7 +2192,7 @@
       au < finished ; manifest ; 2009-2010 ; International Journal of Electric and Hybrid Vehicles Volume 2 ; 2 ; reingest5.clockss.org:8082 >
       au < zapped ; finished ; 2011 ; International Journal of Electric and Hybrid Vehicles Volume 3 ; 3 ; >
       au < zapped ; finished ; 2012 ; International Journal of Electric and Hybrid Vehicles Volume 4 ; 4 ; >
-      au < frozen ; exists ; 2013 ; International Journal of Electric and Hybrid Vehicles Volume 5 ; 5 ; >
+      au < finished ; manifest ; 2013 ; International Journal of Electric and Hybrid Vehicles Volume 5 ; 5 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; exists ; 2014 ; International Journal of Electric and Hybrid Vehicles Volume 6 ; 6 ; >
 
     }
@@ -2291,7 +2291,7 @@
       au < finished ; manifest ; 2010 ; International Journal of Electronic Finance Volume 4 ; 4 ; reingest4.clockss.org:8082 >
       au < zapped ; finished ; 2011 ; International Journal of Electronic Finance Volume 5 ; 5 ; >
       au < zapped ; finished ; 2012 ; International Journal of Electronic Finance Volume 6 ; 6 ; >
-      au < frozen ; exists ; 2013 ; International Journal of Electronic Finance Volume 7 ; 7 ; >
+      au < finished ; manifest ; 2013 ; International Journal of Electronic Finance Volume 7 ; 7 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; exists ; 2014 ; International Journal of Electronic Finance Volume 8 ; 8 ; >
 
     }
@@ -2408,7 +2408,7 @@
       au < doNotProcess ; exists ; 2006 ; International Journal of Embedded Systems Volume 2 ; 2 ; >
       au < doNotProcess ; exists ; 2007-2008 ; International Journal of Embedded Systems Volume 3 ; 3 ; >
       au < finished ; manifest ; 2009-2010 ; International Journal of Embedded Systems Volume 4 ; 4 ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2013 ; International Journal of Embedded Systems Volume 5 ; 5 ; >
+      au < finished ; manifest ; 2013 ; International Journal of Embedded Systems Volume 5 ; 5 ; reingest4.clockss.org:8082 >
       au < doNotProcess ; exists ; 2014 ; International Journal of Embedded Systems Volume 6 ; 6 ; >
 
     }
@@ -2694,7 +2694,7 @@
       au < finished ; finished ; 2012 ; International Journal of Environment and Pollution Volume 50 ; 50 ; >
       au < finished ; manifest ; 2013 ; International Journal of Environment and Pollution Volume 51 ; 51 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2013 ; International Journal of Environment and Pollution Volume 52 ; 52 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2013 ; International Journal of Environment and Pollution Volume 53 ; 53 ; >
+      au < finished ; manifest ; 2013 ; International Journal of Environment and Pollution Volume 53 ; 53 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; exists ; 2014 ; International Journal of Environment and Pollution Volume 54 ; 54 ; >
       au < doNotProcess ; exists ; 2014 ; International Journal of Environment and Pollution Volume 55 ; 55 ; >
 
@@ -3913,7 +3913,7 @@
 
       param[journal_issn] = 1745-3240
       
-      au < frozen ; exists ; 2007-2012 ; International Journal of Intelligent Enterprise Volume 1 ; 1 ; >
+      au < finished ; manifest ; 2007-2012 ; International Journal of Intelligent Enterprise Volume 1 ; 1 ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2013 ; International Journal of Intelligent Enterprise Volume 2 [superseded] ; 2 ; >
 
     }
@@ -4789,7 +4789,7 @@
       au < finished ; finished ; 2012 ; International Journal of Materials and Product Technology Volume 44 ; 44 ; >
       au < finished ; finished ; 2012 ; International Journal of Materials and Product Technology Volume 45 ; 45 ; >
       au < finished ; manifest ; 2013 ; International Journal of Materials and Product Technology Volume 46 ; 46 ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2013 ; International Journal of Materials and Product Technology Volume 47 ; 47 ; >
+      au < finished ; manifest ; 2013 ; International Journal of Materials and Product Technology Volume 47 ; 47 ; reingest4.clockss.org:8082 >
       au < doNotProcess ; exists ; 2014 ; International Journal of Materials and Product Technology Volume 48 ; 48 ; >
       au < doNotProcess ; exists ; 2014 ; International Journal of Materials and Product Technology Volume 49 ; 49 ; >
 
@@ -5519,7 +5519,7 @@
       au < finished ; finished ; 2012 ; International Journal of Operational Research Volume 13 ; 13 ; >
       au < finished ; finished ; 2012 ; International Journal of Operational Research Volume 14 ; 14 ; >
       au < finished ; finished ; 2012 ; International Journal of Operational Research Volume 15 ; 15 ; >
-      au < frozen ; exists ; 2013 ; International Journal of Operational Research Volume 16 ; 16 ; >
+      au < finished ; manifest ; 2013 ; International Journal of Operational Research Volume 16 ; 16 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2013 ; International Journal of Operational Research Volume 17 ; 17 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2013 ; International Journal of Operational Research Volume 18 ; 18 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; exists ; 2014 ; International Journal of Operational Research Volume 19 ; 19 ; >
@@ -6039,7 +6039,7 @@
       au < finished ; manifest ; 2010 ; International Journal of Reasoning-based Intelligent Systems Volume 2 ; 2 ; reingest4.clockss.org:8082 >
       au < zapped ; finished ; 2011 ; International Journal of Reasoning-based Intelligent Systems Volume 3 ; 3 ; >
       au < zapped ; finished ; 2012 ; International Journal of Reasoning-based Intelligent Systems Volume 4 ; 4 ; >
-      au < frozen ; exists ; 2013 ; International Journal of Reasoning-based Intelligent Systems Volume 5 ; 5 ; >
+      au < finished ; manifest ; 2013 ; International Journal of Reasoning-based Intelligent Systems Volume 5 ; 5 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; exists ; 2014 ; International Journal of Reasoning-based Intelligent Systems Volume 6 ; 6 ; >
 
     }
@@ -6102,7 +6102,7 @@
       au < finished ; manifest ; 2010 ; International Journal of Revenue Management Volume 4 ; 4 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2011 ; International Journal of Revenue Management Volume 5 ; 5 ; >
       au < finished ; finished ; 2012 ; International Journal of Revenue Management Volume 6 ; 6 ; >
-      au < frozen ; exists ; 2013 ; International Journal of Revenue Management Volume 7 ; 7 ; >
+      au < finished ; manifest ; 2013 ; International Journal of Revenue Management Volume 7 ; 7 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; exists ; 2014 ; International Journal of Revenue Management Volume 8 ; 8 ; >
 
     }
@@ -6432,7 +6432,7 @@
       au < doNotProcess ; exists ; 2009 ; International Journal of Simulation and Process Modelling Volume 5 ; 5 ; >
       au < finished ; finished ; 2010-2011 ; International Journal of Simulation and Process Modelling Volume 6 ; 6 ; >
       au < zapped ; finished ; 2012 ; International Journal of Simulation and Process Modelling Volume 7 ; 7 ; >
-      au < frozen ; exists ; 2013 ; International Journal of Simulation and Process Modelling Volume 8 ; 8 ; >
+      au < finished ; manifest ; 2013 ; International Journal of Simulation and Process Modelling Volume 8 ; 8 ; reingest4.clockss.org:8082 >
       au < doNotProcess ; exists ; 2014 ; International Journal of Simulation and Process Modelling Volume 9 ; 9 ; >
 
     }
@@ -6811,7 +6811,7 @@
       au < finished ; finished ; 2010 ; International Journal of Sustainable Society Volume 2 ; 2 ; >
       au < zapped ; finished ; 2011 ; International Journal of Sustainable Society Volume 3 ; 3 ; >
       au < finished ; finished ; 2012 ; International Journal of Sustainable Society Volume 4 ; 4 ; >
-      au < frozen ; exists ; 2013 ; International Journal of Sustainable Society Volume 5 ; 5 ; >
+      au < finished ; manifest ; 2013 ; International Journal of Sustainable Society Volume 5 ; 5 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; exists ; 2014 ; International Journal of Sustainable Society Volume 6 ; 6 ; >
 
     }
@@ -7533,7 +7533,7 @@
       au < finished ; finished ; 2010 ; International Journal of Vehicle Systems Modelling and Testing Volume 5 ; 5 ; >
       au < zapped ; finished ; 2011 ; International Journal of Vehicle Systems Modelling and Testing Volume 6 ; 6 ; >
       au < finished ; finished ; 2012 ; International Journal of Vehicle Systems Modelling and Testing Volume 7 ; 7 ; >
-      au < frozen ; exists ; 2013 ; International Journal of Vehicle Systems Modelling and Testing Volume 8 ; 8 ; >
+      au < finished ; manifest ; 2013 ; International Journal of Vehicle Systems Modelling and Testing Volume 8 ; 8 ; reingest4.clockss.org:8082 >
       au < doNotProcess ; exists ; 2014 ; International Journal of Vehicle Systems Modelling and Testing Volume 9 ; 9 ; >
 
     }
