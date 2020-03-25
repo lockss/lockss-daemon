@@ -121,11 +121,15 @@
     </list>
   </entry>
   <entry>
-  <!-- http://www.asmscience.org/content/book/10.1128/9781555817992.chap3?crawler=true&mimetype=application/pdf-->
-    <!-- PDF link changed to this on 3/2020:
-    https://www.asmscience.org/deliver/fulltext/10.1128/9781683670247/9781683670230_FM.pdf?itemId=/content/book/10.1128/9781683670247.cont01&mimeType=pdf -->
-    <string>au_substance_url_pattern</string>
-    <string>"^^https?://%s/docserver/fulltext/%s/[^./]+\.pdf\?itemId=.*", url_host(base_url), doi</string>
+    <!--
+         https://www.asmscience.org/deliver/fulltext/10.1128/9781683670247/9781683670230_FM.pdf?itemId=/content/book/10.1128/9781683670247.cont01&mimeType=pdf
+         Redirected to excluded URL: http://www.asmscience.org/docserver/fulltext/10.1128/9781683670247/9781683670230_FM.pdf?expires=1584561617&id=id&accname=guest&checksum=D77C3DDDE52653FE70D9B2D056625128
+         Notice the difference, it is redirected from "https" to "http" at 3/2020, maybe in the future, it will change to "https" to "https"
+      -->
+    <list>
+      <string>"^%sdeliver/fulltext/%s/[^./]+\.pdf", base_url, doi</string>
+      <string>"^https?://%s/docserver/fulltext/%s/[^./]+\.pdf", url_host(base_url), doi</string>
+    </list>
   </entry>
   <!--  au_crawl_depth is default, 1...the start url is the book landing page  -->
   <!-- repair from peer
