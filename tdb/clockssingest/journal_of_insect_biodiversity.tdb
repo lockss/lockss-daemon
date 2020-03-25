@@ -24,7 +24,10 @@
 
       au < manifest ; exists ; 2018 ; Journal of Insect Biodiversity Volume 6 ; 6 ; 2018 ; >
       au < manifest ; exists ; 2019 ; Journal of Insect Biodiversity Volume 7 ; 7 ; 2019 ; >
+      au < expected ; exists ; 2020 ; Journal of Insect Biodiversity Volume 8 ; 8 ; 2020 ; >
+
     }
+
     {
       param[base_url] = http://www.insectbiodiversity.org/
       param[journal_id] = jib

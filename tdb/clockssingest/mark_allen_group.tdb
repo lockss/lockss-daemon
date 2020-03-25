@@ -209,7 +209,7 @@
     au < manifest ; exists ; 2010 ; British Journal of Midwifery Volume 18 ; 18 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2011 ; British Journal of Midwifery Volume 19 ; 19 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2012 ; British Journal of Midwifery Volume 20 ; 20 ; https://www.magonlinelibrary.com/ ; >
-    au < finished ; frozen ; 2013 ; British Journal of Midwifery Volume 21 ; 21 ; http://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; British Journal of Midwifery Volume 21 ; 21 ; http://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; British Journal of Midwifery Volume 22 ; 22 ; http://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; British Journal of Midwifery Volume 23 ; 23 ; http://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2016 ; British Journal of Midwifery Volume 24 ; 24 ; http://www.magonlinelibrary.com/ ; >
@@ -234,9 +234,9 @@
     au < manifest ; exists ; 2010 ; British Journal of Neuroscience Nursing Volume 6 ; 6 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2011 ; British Journal of Neuroscience Nursing Volume 7 ; 7 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2012 ; British Journal of Neuroscience Nursing Volume 8 ; 8 ; https://www.magonlinelibrary.com/ ; >
-    au < finished ; frozen ; 2013 ; British Journal of Neuroscience Nursing Volume 9 ; 9 ; http://www.magonlinelibrary.com/ ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 2014 ; British Journal of Neuroscience Nursing Volume 10 ; 10 ; http://www.magonlinelibrary.com/ ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 2015 ; British Journal of Neuroscience Nursing Volume 11 ; 11 ; http://www.magonlinelibrary.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; British Journal of Neuroscience Nursing Volume 9 ; 9 ; http://www.magonlinelibrary.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; British Journal of Neuroscience Nursing Volume 10 ; 10 ; http://www.magonlinelibrary.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; British Journal of Neuroscience Nursing Volume 11 ; 11 ; http://www.magonlinelibrary.com/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; British Journal of Neuroscience Nursing Volume 12 ; 12 ; http://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2017 ; British Journal of Neuroscience Nursing Volume 13 ; 13 ; http://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2018 ; British Journal of Neuroscience Nursing Volume 14 ; 14 ; https://www.magonlinelibrary.com/ ; >
@@ -259,8 +259,8 @@
     au < manifest ; exists ; 2010 ; British Journal of Nursing Volume 19 ; 19 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2011 ; British Journal of Nursing Volume 20 ; 20 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2012 ; British Journal of Nursing Volume 21 ; 21 ; https://www.magonlinelibrary.com/ ; >
-    au < finished ; frozen ; 2013 ; British Journal of Nursing Volume 22 ; 22 ; http://www.magonlinelibrary.com/ ; reingest3.clockss.org:8083 >
-    au < finished ; frozen ; 2014 ; British Journal of Nursing Volume 23 ; 23 ; http://www.magonlinelibrary.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2013 ; British Journal of Nursing Volume 22 ; 22 ; http://www.magonlinelibrary.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2014 ; British Journal of Nursing Volume 23 ; 23 ; http://www.magonlinelibrary.com/ ; reingest3.clockss.org:8083 >
     au < zapped ; finished ; 2015 ; British Journal of Nursing Volume 24 ; 24 ; http://www.magonlinelibrary.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2016 ; British Journal of Nursing Volume 25 ; 25 ; http://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2017 ; British Journal of Nursing Volume 26 ; 26 ; http://www.magonlinelibrary.com/ ; >
@@ -287,7 +287,7 @@
     au < manifest ; exists ; 2011 ; British Journal of School Nursing Volume 6 ; 6 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2012 ; British Journal of School Nursing Volume 7 ; 7 ; https://www.magonlinelibrary.com/ ; >
     au < finished ; finished ; 2013 ; British Journal of School Nursing Volume 8 ; 8 ; http://www.magonlinelibrary.com/ ; reingest3.clockss.org:8083 >
-    au < finished ; frozen ; 2014 ; British Journal of School Nursing Volume 9 ; 9 ; http://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; British Journal of School Nursing Volume 9 ; 9 ; http://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; British Journal of School Nursing Volume 10 ; 10 ; http://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; British Journal of School Nursing Volume 11 ; 11 ; http://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2017 ; British Journal of School Nursing Volume 12 ; 12 ; http://www.magonlinelibrary.com/ ; >

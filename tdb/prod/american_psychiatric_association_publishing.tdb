@@ -163,7 +163,7 @@
       param[journal_id] = prcp
       # content starts from year 2019
 
-      au < exists ; 2019 ; Psychiatric Research and Clinical Practice Volume 1 ; 1 > #500 Internal Server Error
+      au < manifest ; 2019 ; Psychiatric Research and Clinical Practice Volume 1 ; 1 > #500 Internal Server Error
       au < expected ; 2020 ; Psychiatric Research and Clinical Practice Volume 2 ; 2 >
 
     }

@@ -417,7 +417,7 @@
       au < finished ; crawling ; 2016 ; Science Volume 351 ; 351 ; http://science.sciencemag.org/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2016 ; Science Volume 352 ; 352 ; http://science.sciencemag.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2016 ; Science Volume 353 ; 353 ; http://science.sciencemag.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2016 ; Science Volume 354 ; 354 ; http://science.sciencemag.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2016 ; Science Volume 354 ; 354 ; http://science.sciencemag.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2017 ; Science Volume 355 ; 355 ; http://science.sciencemag.org/ ; >
       au < deepCrawl ; exists ; 2017 ; Science Volume 356 ; 356 ; http://science.sciencemag.org/ ; >
       au < deepCrawl ; exists ; 2017 ; Science Volume 357 ; 357 ; http://science.sciencemag.org/ ; >
@@ -455,7 +455,7 @@
       au < frozen ; exists ; 2013 ; Science Signaling Volume 6 ; 6 ; http://stke.sciencemag.org/ ; >
       au < finished ; finished ; 2014 ; Science Signaling Volume 7 ; 7 ; http://stke.sciencemag.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; Science Signaling Volume 8 ; 8 ; http://stke.sciencemag.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; frozen ; 2016 ; Science Signaling Volume 9 ; 9 ; http://stke.sciencemag.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2016 ; Science Signaling Volume 9 ; 9 ; http://stke.sciencemag.org/ ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2017 ; Science Signaling Volume 10 ; 10 ; http://stke.sciencemag.org/ ; >
       au < deepCrawl ; exists ; 2018 ; Science Signaling Volume 11 ; 11 ; http://stke.sciencemag.org/ ; >
       au < manifest ; exists ; 2019 ; Science Signaling Volume 12 ; 12 ; https://stke.sciencemag.org/ ; >
@@ -480,7 +480,7 @@
       au < frozen ; exists ; 2013 ; Science Translational Medicine Volume 5 ; 5 ; http://stm.sciencemag.org/ ; >
       au < finished ; finished ; 2014 ; Science Translational Medicine Volume 6 ; 6 ; http://stm.sciencemag.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; Science Translational Medicine Volume 7 ; 7 ; http://stm.sciencemag.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2016 ; Science Translational Medicine Volume 8 ; 8 ; http://stm.sciencemag.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2016 ; Science Translational Medicine Volume 8 ; 8 ; http://stm.sciencemag.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; Science Translational Medicine Volume 9 ; 9 ; http://stm.sciencemag.org/ ; >
       au < deepCrawl ; exists ; 2018 ; Science Translational Medicine Volume 10 ; 10 ; http://stm.sciencemag.org/ ; >
       au < manifest ; exists ; 2019 ; Science Translational Medicine Volume 11 ; 11 ; https://stm.sciencemag.org/ ; >

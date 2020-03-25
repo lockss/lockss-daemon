@@ -31,7 +31,7 @@
     au < finished ; finished ; 2011 ; Acta Pharmacologica Sinica Volume 32 ; 2011 ; 32 ; >
     au < finished ; finished ; 2012 ; Acta Pharmacologica Sinica Volume 33 ; 2012 ; 33 ; >
     au < finished ; finished ; 2013 ; Acta Pharmacologica Sinica Volume 34 ; 2013 ; 34 ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2014 ; Acta Pharmacologica Sinica Volume 35 ; 2014 ; 35 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2014 ; Acta Pharmacologica Sinica Volume 35 ; 2014 ; 35 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2015 ; Acta Pharmacologica Sinica Volume 36 ; 2015 ; 36 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2016 ; Acta Pharmacologica Sinica Volume 37 ; 2016 ; 37 ; reingest2.clockss.org:8085 >
     au < superseded ; exists ; 2017 ; Acta Pharmacologica Sinica Volume 38 [superseded] ; 2017 ; 38 ; >
@@ -67,7 +67,7 @@
     au < superseded ; exists ; 2013 ; American Journal of Gastroenterology Volume 107 [to delete] ; 2013 ; 107 ; >
     au < finished ; manifest ; 2013 ; American Journal of Gastroenterology Volume 108 ; 2013 ; 108 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; American Journal of Gastroenterology Volume 109 ; 2014 ; 109 ; >
-    au < finished ; finished ; 2015 ; American Journal of Gastroenterology Volume 110 ; 2015 ; 110 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2015 ; American Journal of Gastroenterology Volume 110 ; 2015 ; 110 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2016 ; American Journal of Gastroenterology Volume 111 ; 2016 ; 111 ; reingest4.clockss.org:8082 >
     au < superseded ; exists ; 2017 ; American Journal of Gastroenterology Volume 112 [superseded] ; 2017 ; 112 ; >
 
@@ -1212,14 +1212,14 @@
     au < doNotProcess ; doNotProcess ; 1997 ; Immunology & Cell Biology Volume 75 ; 1997 ; 75 ; >
     au < doNotProcess ; doNotProcess ; 1998 ; Immunology & Cell Biology Volume 76 ; 1998 ; 76 ; >
     au < doNotProcess ; doNotProcess ; 1999 ; Immunology & Cell Biology Volume 77 ; 1999 ; 77 ; >
-    au < finished ; frozen ; 2000 ; Immunology & Cell Biology Volume 78 ; 2000 ; 78 ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2001 ; Immunology & Cell Biology Volume 79 ; 2001 ; 79 ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2002 ; Immunology & Cell Biology Volume 80 ; 2002 ; 80 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2000 ; Immunology & Cell Biology Volume 78 ; 2000 ; 78 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2001 ; Immunology & Cell Biology Volume 79 ; 2001 ; 79 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2002 ; Immunology & Cell Biology Volume 80 ; 2002 ; 80 ; reingest5.clockss.org:8082 >
     au < superseded ; exists ; 2003 ; Immunology & Cell Biology Volume 81 [superseded] ; 2003 ; 81 ; > #never completed a crawl
-    au < finished ; frozen ; 2004 ; Immunology & Cell Biology Volume 82 ; 2004 ; 82 ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2005 ; Immunology & Cell Biology Volume 83 ; 2005 ; 83 ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2006 ; Immunology & Cell Biology Volume 84 ; 2006 ; 84 ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 2007 ; Immunology & Cell Biology Volume 85 ; 2007 ; 85 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2004 ; Immunology & Cell Biology Volume 82 ; 2004 ; 82 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2005 ; Immunology & Cell Biology Volume 83 ; 2005 ; 83 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2006 ; Immunology & Cell Biology Volume 84 ; 2006 ; 84 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2007 ; Immunology & Cell Biology Volume 85 ; 2007 ; 85 ; reingest1.clockss.org:8082 >
     au < zapped ; finished ; 2008 ; Immunology & Cell Biology Volume 86 ; 2008 ; 86 ; >
     au < zapped ; finished ; 2009 ; Immunology & Cell Biology Volume 87 ; 2009 ; 87 ; >
     au < finished ; finished ; 2010 ; Immunology & Cell Biology Volume 88 ; 2010 ; 88 ; >
@@ -2438,7 +2438,7 @@
     au < finished ; manifest ; 2012 ; Nature Volume 489 ; 2012 ; 489 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2012 ; Nature Volume 490 ; 2012 ; 490 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2012 ; Nature Volume 491 ; 2012 ; 491 ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 2012 ; Nature Volume 492 ; 2012 ; 492 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2012 ; Nature Volume 492 ; 2012 ; 492 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2013 ; Nature Volume 493 ; 2013 ; 493 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2013 ; Nature Volume 494 ; 2013 ; 494 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2013 ; Nature Volume 495 ; 2013 ; 495 ; reingest3.clockss.org:8083 >
@@ -2574,7 +2574,7 @@
     au < zapped ; finished ; 2008 ; Nature Cell Biology Volume 10 ; 2008 ; 10 ; >
     au < zapped ; finished ; 2009 ; Nature Cell Biology Volume 11 ; 2009 ; 11 ; >
     au < finished ; finished ; 2010 ; Nature Cell Biology Volume 12 ; 2010 ; 12 ; >
-    au < finished ; frozen ; 2011 ; Nature Cell Biology Volume 13 ; 2011 ; 13 ; >
+    au < finished ; finished ; 2011 ; Nature Cell Biology Volume 13 ; 2011 ; 13 ; >
     au < finished ; manifest ; 2012 ; Nature Cell Biology Volume 14 ; 2012 ; 14 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2013 ; Nature Cell Biology Volume 15 ; 2013 ; 15 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2014 ; Nature Cell Biology Volume 16 ; 2014 ; 16 ; reingest3.clockss.org:8083 >
@@ -2604,7 +2604,7 @@
     au < finished ; manifest ; 2011 ; Nature Chemical Biology Volume 7 ; 2011 ; 7 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2012 ; Nature Chemical Biology Volume 8 ; 2012 ; 8 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2013 ; Nature Chemical Biology Volume 9 ; 2013 ; 9 ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2014 ; Nature Chemical Biology Volume 10 ; 2014 ; 10 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Nature Chemical Biology Volume 10 ; 2014 ; 10 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2015 ; Nature Chemical Biology Volume 11 ; 2015 ; 11 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2016 ; Nature Chemical Biology Volume 12 ; 2016 ; 12 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; Nature Chemical Biology Volume 13 ; 2017 ; 13 ; >
@@ -2689,12 +2689,12 @@
     au < doNotProcess ; doNotProcess ; 2007 ; Nature Digest Volume 4 ; 2007 ; 4 ; >
     au < zapped ; finished ; 2008 ; Nature Digest Volume 5 ; 2008 ; 5 ; >
     au < zapped ; finished ; 2009 ; Nature Digest Volume 6 ; 2009 ; 6 ; >
-    au < finished ; frozen ; 2010 ; Nature Digest Volume 7 ; 2010 ; 7 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2011 ; Nature Digest Volume 8 ; 2011 ; 8 ; >
+    au < finished ; finished ; 2010 ; Nature Digest Volume 7 ; 2010 ; 7 ; reingest4.clockss.org:8082 >
+    au < finished ; down ; 2011 ; Nature Digest Volume 8 ; 2011 ; 8 ; > #no substance on production
     au < finished ; finished ; 2012 ; Nature Digest Volume 9 ; 2012 ; 9 ; >
     au < finished ; finished ; 2013 ; Nature Digest Volume 10 ; 2013 ; 10 ; >
-    au < finished ; crawling ; 2014 ; Nature Digest Volume 11 ; 2014 ; 11 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Nature Digest Volume 12 ; 2015 ; 12 ; reingest5.clockss.org:8082 >
+    au < finished ; down ; 2014 ; Nature Digest Volume 11 ; 2014 ; 11 ; reingest1.clockss.org:8082 > #no substance on production
+    au < finished ; down ; 2015 ; Nature Digest Volume 12 ; 2015 ; 12 ; reingest5.clockss.org:8082 > #no substance on production
     au < finished ; manifest ; 2016 ; Nature Digest Volume 13 ; 2016 ; 13 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; exists ; 2017 ; Nature Digest Volume 14 ; 2017 ; 14 ; >
 
@@ -3281,7 +3281,7 @@
     au < finished ; finished ; 2011 ; Nature Reviews Immunology Volume 11 ; 2011 ; 11 ; >
     au < finished ; manifest ; 2012 ; Nature Reviews Immunology Volume 12 ; 2012 ; 12 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2013 ; Nature Reviews Immunology Volume 13 ; 2013 ; 13 ; reingest3.clockss.org:8083 >
-    au < finished ; frozen ; 2014 ; Nature Reviews Immunology Volume 14 ; 2014 ; 14 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Nature Reviews Immunology Volume 14 ; 2014 ; 14 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2015 ; Nature Reviews Immunology Volume 15 ; 2015 ; 15 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2016 ; Nature Reviews Immunology Volume 16 ; 2016 ; 16 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; exists ; 2017 ; Nature Reviews Immunology Volume 17 ; 2017 ; 17 ; >

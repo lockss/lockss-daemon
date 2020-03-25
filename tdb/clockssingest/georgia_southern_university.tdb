@@ -23,6 +23,7 @@
       au < finished ; crawling ; 2017 ; Armstrong Undergraduate Journal of History Volume 7 ; 7 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2018 ; Armstrong Undergraduate Journal of History Volume 8 ; 8 ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2019 ; Armstrong Undergraduate Journal of History Volume 9 ; 9 ; >
+      au < expected ; exists ; 2020 ; Armstrong Undergraduate Journal of History Volume 10 ; 10 ; >
 
   }
 
@@ -39,6 +40,7 @@
 
       au < finished ; frozen ; 2018 ; Becoming: Journal of the Georgia Middle School Association Volume 29 ; 29 ; reingest5.clockss.org:8082 >
       au < testing ; exists ; 2019 ; Becoming: Journal of the Georgia Middle School Association Volume 30 ; 30 ; >
+      au < expected ; exists ; 2020 ; Becoming: Journal of the Georgia Middle School Association Volume 31 ; 31 ; >
 
   }
 
@@ -54,6 +56,7 @@
       param[journal_abbr] = cimle
 
       au < crawling ; exists ; 2019 ; Current Issues in Middle Level Education Volume 24 ; 24 ; >
+      au < expected ; exists ; 2020 ; Current Issues in Middle Level Education Volume 25 ; 25 ; >
 
   }
 
@@ -85,6 +88,7 @@
       au < finished ; crawling ; 2017 ; Georgia Educational Researcher Volume 15 ; 15 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2018 ; Georgia Educational Researcher Volume 16 ; 16 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2019 ; Georgia Educational Researcher Volume 17 ; 17 ; >
+      au < expected ; exists ; 2020 ; Georgia Educational Researcher Volume 18 ; 18 ; >
 
   }
 
@@ -129,8 +133,9 @@
       au < finished ; crawling ; 2015 ; International Journal for the Scholarship of Teaching & Learning Volume 9 ; 9 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; International Journal for the Scholarship of Teaching & Learning Volume 10 ; 10 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; International Journal for the Scholarship of Teaching & Learning Volume 11 ; 11 ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2018 ; International Journal for the Scholarship of Teaching & Learning Volume 12 ; 12 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2018 ; International Journal for the Scholarship of Teaching & Learning Volume 12 ; 12 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2019 ; International Journal for the Scholarship of Teaching & Learning Volume 13 ; 13 ; >
+      au < expected ; exists ; 2020 ; International Journal for the Scholarship of Teaching & Learning Volume 14 ; 14 ; >
 
   }
 
@@ -165,6 +170,7 @@
       au < finished ; crawling ; 2016-2017 ; National Youth-At-Risk Journal Volume 2 ; 2 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2018 ; National Youth-At-Risk Journal Volume 3 ; 3 ; reingest1.clockss.org:8082 >
       au < expected ; exists ; 2019 ; National Youth-At-Risk Journal Volume 4 ; 4 ; >
+      au < expected ; exists ; 2020 ; National Youth-At-Risk Journal Volume 5 ; 5 ; >
 
   }
 
@@ -182,6 +188,7 @@
       au < finished ; crawling ; 2017 ; Proceedings of the Interdisciplinary STEM Teaching and Learning Conference Volume 1 ; 1 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2018 ; Proceedings of the Interdisciplinary STEM Teaching and Learning Conference Volume 2 ; 2 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2019 ; Proceedings of the Interdisciplinary STEM Teaching and Learning Conference Volume 3 ; 3 ; >
+      au < expected ; exists ; 2020 ; Proceedings of the Interdisciplinary STEM Teaching and Learning Conference Volume 4 ; 4 ; >
 
   }
 
@@ -208,6 +215,7 @@
       au < finished ; crawling ; 2017-2018 ; The Coastal Review Volume 9 ; 9 ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2018-2019 ; The Coastal Review Volume 10 ; 10 ; >
       au < manifest ; exists ; 2019-2020 ; The Coastal Review Volume 11 ; 11 ; >
+      au < expected ; exists ; 2020-2021 ; The Coastal Review Volume 12 ; 12 ; >
 
   }
 
@@ -224,6 +232,7 @@
       param[journal_abbr] = jssw
 
       au < crawling ; exists ; 2017-2019 ; The Journal of Student Success in Writing Volume 1 ; 1 ; >
+      au < expected ; exists ; 2018-2020 ; The Journal of Student Success in Writing Volume 2 ; 2 ; >
 
   }
 
@@ -244,6 +253,7 @@
       au < finished ; crawling ; 2017 ; Theory and Applications of Graphs Volume 3 ; 3 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2018 ; Theory and Applications of Graphs Volume 4 ; 4 ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2019 ; Theory and Applications of Graphs Volume 5 ; 5 ; >
+      au < expected ; exists ; 2020 ; Theory and Applications of Graphs Volume 6 ; 6 ; >
 
   }
 
