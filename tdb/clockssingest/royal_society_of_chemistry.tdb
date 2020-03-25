@@ -299,61 +299,61 @@
       param[journal_code] = fd
       comment[overcrawl] = overcrawl due to broken manifest pages, multiple volumes per year
 
-      au < finished ; frozen ; 2010 ; Faraday Discussions Volume 144 ; 144 ; 2010 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; Faraday Discussions Volume 144 ; 144 ; 2010 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2010 ; Faraday Discussions Volume 145 ; 145 ; 2010 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2010 ; Faraday Discussions Volume 146 ; 146 ; 2010 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2010 ; Faraday Discussions Volume 146 ; 146 ; 2010 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2010 ; Faraday Discussions Volume 147 ; 147 ; 2010 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
 
       au < finished ; finished ; 2011 ; Faraday Discussions Volume 148 ; 148 ; 2011 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2011 ; Faraday Discussions Volume 149 ; 149 ; 2011 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2011 ; Faraday Discussions Volume 150 ; 150 ; 2011 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2011 ; Faraday Discussions Volume 151 ; 151 ; 2011 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2011 ; Faraday Discussions Volume 152 ; 152 ; 2011 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2011 ; Faraday Discussions Volume 152 ; 152 ; 2011 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2011 ; Faraday Discussions Volume 153 ; 153 ; 2011 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
 
-      au < finished ; frozen ; 2012 ; Faraday Discussions Volume 154 ; 154 ; 2012 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2012 ; Faraday Discussions Volume 154 ; 154 ; 2012 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2012 ; Faraday Discussions Volume 155 ; 155 ; 2012 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2012 ; Faraday Discussions Volume 156 ; 156 ; 2012 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2012 ; Faraday Discussions Volume 157 ; 157 ; 2012 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2012 ; Faraday Discussions Volume 156 ; 156 ; 2012 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2012 ; Faraday Discussions Volume 157 ; 157 ; 2012 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2012 ; Faraday Discussions Volume 158 ; 158 ; 2012 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2012 ; Faraday Discussions Volume 159 ; 159 ; 2012 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2012 ; Faraday Discussions Volume 159 ; 159 ; 2012 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
 
-      au < finished ; frozen ; 2013 ; Faraday Discussions Volume 160 ; 160 ; 2013 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2013 ; Faraday Discussions Volume 161 ; 161 ; 2013 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2013 ; Faraday Discussions Volume 162 ; 162 ; 2013 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2013 ; Faraday Discussions Volume 160 ; 160 ; 2013 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2013 ; Faraday Discussions Volume 161 ; 161 ; 2013 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2013 ; Faraday Discussions Volume 162 ; 162 ; 2013 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2013 ; Faraday Discussions Volume 163 ; 163 ; 2013 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2013 ; Faraday Discussions Volume 164 ; 164 ; 2013 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2013 ; Faraday Discussions Volume 165 ; 165 ; 2013 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2013 ; Faraday Discussions Volume 166 ; 166 ; 2013 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; frozen ; 2013 ; Faraday Discussions Volume 167 ; 167 ; 2013 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2013 ; Faraday Discussions Volume 165 ; 165 ; 2013 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2013 ; Faraday Discussions Volume 166 ; 166 ; 2013 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2013 ; Faraday Discussions Volume 167 ; 167 ; 2013 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
 
       au < finished ; crawling ; 2014 ; Faraday Discussions Volume 168 ; 168 ; 2014 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2014 ; Faraday Discussions Volume 169 ; 169 ; 2014 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2014 ; Faraday Discussions Volume 170 ; 170 ; 2014 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2014 ; Faraday Discussions Volume 171 ; 171 ; 2014 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; Faraday Discussions Volume 169 ; 169 ; 2014 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; Faraday Discussions Volume 170 ; 170 ; 2014 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; Faraday Discussions Volume 171 ; 171 ; 2014 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2014 ; Faraday Discussions Volume 172 ; 172 ; 2014 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2014 ; Faraday Discussions Volume 173 ; 173 ; 2014 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2014 ; Faraday Discussions Volume 174 ; 174 ; 2014 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; frozen ; 2014 ; Faraday Discussions Volume 175 ; 175 ; 2014 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2014 ; Faraday Discussions Volume 176 ; 176 ; 2014 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; Faraday Discussions Volume 175 ; 175 ; 2014 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; Faraday Discussions Volume 176 ; 176 ; 2014 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
 
-      au < finished ; frozen ; 2015 ; Faraday Discussions Volume 177 ; 177 ; 2015 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2015 ; Faraday Discussions Volume 178 ; 178 ; 2015 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2015 ; Faraday Discussions Volume 177 ; 177 ; 2015 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; Faraday Discussions Volume 178 ; 178 ; 2015 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2015 ; Faraday Discussions Volume 179 ; 179 ; 2015 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2015 ; Faraday Discussions Volume 180 ; 180 ; 2015 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2015 ; Faraday Discussions Volume 180 ; 180 ; 2015 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2015 ; Faraday Discussions Volume 181 ; 181 ; 2015 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2015 ; Faraday Discussions Volume 182 ; 182 ; 2015 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2015 ; Faraday Discussions Volume 183 ; 183 ; 2015 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; Faraday Discussions Volume 182 ; 182 ; 2015 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2015 ; Faraday Discussions Volume 183 ; 183 ; 2015 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; Faraday Discussions Volume 184 ; 184 ; 2015 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; Faraday Discussions Volume 185 ; 185 ; 2015 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
 
       au < finished ; finished ; 2016 ; Faraday Discussions Volume 186 ; 186 ; 2016 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2016 ; Faraday Discussions Volume 187 ; 187 ; 2016 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; frozen ; 2016 ; Faraday Discussions Volume 188 ; 188 ; 2016 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2016 ; Faraday Discussions Volume 189 ; 189 ; 2016 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2016 ; Faraday Discussions Volume 188 ; 188 ; 2016 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2016 ; Faraday Discussions Volume 189 ; 189 ; 2016 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; Faraday Discussions Volume 190 ; 190 ; 2016 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2016 ; Faraday Discussions Volume 191 ; 191 ; 2016 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2016 ; Faraday Discussions Volume 192 ; 192 ; 2016 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2016 ; Faraday Discussions Volume 192 ; 192 ; 2016 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; Faraday Discussions Volume 193 ; 193 ; 2016 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; Faraday Discussions Volume 194 ; 194 ; 2016 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2016 ; Faraday Discussions Volume 195 ; 195 ; 2016 ; http://pubs.rsc.org/ ; >
@@ -432,7 +432,7 @@
       au < frozen ; exists ; 2011 ; Integrative Biology Volume 3 ; 3 ; 2011 ; http://pubs.rsc.org/ ; >
       au < finished ; finished ; 2012 ; Integrative Biology Volume 4 ; 4 ; 2012 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2013 ; Integrative Biology Volume 5 ; 5 ; 2013 ; http://pubs.rsc.org/ ; >
-      au < finished ; frozen ; 2014 ; Integrative Biology Volume 6 ; 6 ; 2014 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2014 ; Integrative Biology Volume 6 ; 6 ; 2014 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2015 ; Integrative Biology Volume 7 ; 7 ; 2015 ; http://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2016 ; Integrative Biology Volume 8 ; 8 ; 2016 ; http://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2017 ; Integrative Biology Volume 9 ; 9 ; 2017 ; http://pubs.rsc.org/ ; >

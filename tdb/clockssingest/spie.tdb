@@ -44,7 +44,7 @@
     param[base_url] = http://astronomicaltelescopes.spiedigitallibrary.org/
     param[resource_id] = 166
 
-    au < finished ; frozen ; 2015 ; Journal of Astronomical Telescopes, Instruments, and Systems Volume 1 ; 2015 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Journal of Astronomical Telescopes, Instruments, and Systems Volume 1 ; 2015 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Journal of Astronomical Telescopes, Instruments, and Systems Volume 2 ; 2016 ; reingest2.clockss.org:8085 >
 
     }
@@ -116,8 +116,8 @@
     au < zapped ; finished ; 2012 ; Journal of Electronic Imaging Volume 21 ; 2012 ; reingest2.clockss.org:8085 >
     au < zapped ; finished ; 2013 ; Journal of Electronic Imaging Volume 22 ; 2013 ; reingest1.clockss.org:8082 >
     au < zapped ; finished ; 2014 ; Journal of Electronic Imaging Volume 23 ; 2014 ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2015 ; Journal of Electronic Imaging Volume 24 ; 2015 ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2016 ; Journal of Electronic Imaging Volume 25 ; 2016 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Journal of Electronic Imaging Volume 24 ; 2015 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; Journal of Electronic Imaging Volume 25 ; 2016 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -133,7 +133,7 @@
 
     au < finished ; finished ; 2014 ; Journal of Medical Imaging Volume 1 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Journal of Medical Imaging Volume 2 ; 2015 ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2016 ; Journal of Medical Imaging Volume 3 ; 2016 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2016 ; Journal of Medical Imaging Volume 3 ; 2016 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -160,7 +160,7 @@
     au < finished ; finished ; 2012 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 11 ; 2012 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 12 ; 2013 ; reingest1.clockss.org:8082 >
     au < zapped ; finished ; 2014 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 13 ; 2014 ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2015 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 14 ; 2015 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 14 ; 2015 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 15 ; 2016 ; reingest2.clockss.org:8085 >
 
     }
@@ -183,7 +183,7 @@
     au < finished ; finished ; 2013 ; Journal of Nanophotonics Volume 7 ; 2013 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Journal of Nanophotonics Volume 8 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Journal of Nanophotonics Volume 9 ; 2015 ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2016 ; Journal of Nanophotonics Volume 10 ; 2016 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2016 ; Journal of Nanophotonics Volume 10 ; 2016 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -199,7 +199,7 @@
     au < finished ; finished ; 2011 ; Journal of Photonics for Energy Volume 1 ; 2011 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Journal of Photonics for Energy Volume 2 ; 2012 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; Journal of Photonics for Energy Volume 3 ; 2013 ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2014 ; Journal of Photonics for Energy Volume 4 ; 2014 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Journal of Photonics for Energy Volume 4 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Journal of Photonics for Energy Volume 5 ; 2015 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Journal of Photonics for Energy Volume 6 ; 2016 ; reingest2.clockss.org:8085 >
 
@@ -216,8 +216,8 @@
     param[resource_id] = 169
 
     au < finished ; finished ; 2014 ; Neurophotonics Volume 1 ; 2014 ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2015 ; Neurophotonics Volume 2 ; 2015 ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2016 ; Neurophotonics Volume 3 ; 2016 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2015 ; Neurophotonics Volume 2 ; 2015 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; Neurophotonics Volume 3 ; 2016 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -266,7 +266,7 @@
     au < finished ; finished ; 1994 ; Optical Engineering Volume 33 ; 1994 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 1995 ; Optical Engineering Volume 34 ; 1995 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 1996 ; Optical Engineering Volume 35 ; 1996 ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 1997 ; Optical Engineering Volume 36 ; 1997 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1997 ; Optical Engineering Volume 36 ; 1997 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 1998 ; Optical Engineering Volume 37 ; 1998 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 1999 ; Optical Engineering Volume 38 ; 1999 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2000 ; Optical Engineering Volume 39 ; 2000 ; reingest2.clockss.org:8085 >
@@ -285,7 +285,7 @@
     au < zapped ; finished ; 2013 ; Optical Engineering Volume 52 ; 2013 ; reingest1.clockss.org:8082 >
     au < zapped ; finished ; 2014 ; Optical Engineering Volume 53 ; 2014 ; reingest2.clockss.org:8085 >
     au < zapped ; finished ; 2015 ; Optical Engineering Volume 54 ; 2015 ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2016 ; Optical Engineering Volume 55 ; 2016 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2016 ; Optical Engineering Volume 55 ; 2016 ; reingest2.clockss.org:8085 >
 
     }
 

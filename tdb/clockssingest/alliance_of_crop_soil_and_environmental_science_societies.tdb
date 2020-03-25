@@ -127,7 +127,7 @@
     au < finished ; finished ; 2007 ; Crop Science Volume 47 ; 47 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2008 ; Crop Science Volume 48 ; 48 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2009 ; Crop Science Volume 49 ; 49 ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2010 ; Crop Science Volume 50 ; 50 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2010 ; Crop Science Volume 50 ; 50 ; reingest1.clockss.org:8082 >
     au < notReady ; exists ; 2011 ; Crop Science Volume 51 ; 51 ; > #403 error. likely malformed url. https://dl.sciencesocieties.org/images/publications/cs/51/5/.jpeg
     au < notReady ; exists ; 2012 ; Crop Science Volume 52 ; 52 ; > #403 error. likely malformed url. https://dl.sciencesocieties.org/images/publications/cs/52/3/.jpeg
     au < finished ; finished ; 2013 ; Crop Science Volume 53 ; 53 ; reingest2.clockss.org:8085 >
@@ -187,7 +187,7 @@
     
     param[journal_id] = jeq
 
-    au < finished ; frozen ; 2005 ; Journal of Environmental Quality Volume 34 ; 34 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2005 ; Journal of Environmental Quality Volume 34 ; 34 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2006 ; Journal of Environmental Quality Volume 35 ; 35 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2007 ; Journal of Environmental Quality Volume 36 ; 36 ; >
     au < finished ; finished ; 2008 ; Journal of Environmental Quality Volume 37 ; 37 ; reingest5.clockss.org:8082 >
@@ -219,7 +219,7 @@
     param[journal_id] = jpr
 
     au < finished ; finished ; 2007 ; Journal of Plant Registrations Volume 1 ; 1 ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2008 ; Journal of Plant Registrations Volume 2 ; 2 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2008 ; Journal of Plant Registrations Volume 2 ; 2 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2009 ; Journal of Plant Registrations Volume 3 ; 3 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2010 ; Journal of Plant Registrations Volume 4 ; 4 ; >
     au < finished ; finished ; 2011 ; Journal of Plant Registrations Volume 5 ; 5 ; >
@@ -303,7 +303,7 @@
     au < finished ; finished ; 2012 ; The Plant Genome Volume 5 ; 5 ; >
     au < finished ; finished ; 2013 ; The Plant Genome Volume 6 ; 6 ; >
     au < finished ; crawling ; 2014 ; The Plant Genome Volume 7 ; 7 ; reingest4.clockss.org:8082 >
-    au < finished ; frozen ; 2015 ; The Plant Genome Volume 8 ; 8 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2015 ; The Plant Genome Volume 8 ; 8 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2016 ; The Plant Genome Volume 9 ; 9 ; >
     au < frozen ; exists ; 2017 ; The Plant Genome Volume 10 ; 10 ; >
     au < frozen ; exists ; 2018 ; The Plant Genome Volume 11 ; 11 ; >
@@ -357,7 +357,7 @@
     au < manifest ; exists ; 2008 ; Soil Science Society of America Journal Volume 72 ; 72 ; >
     au < manifest ; exists ; 2009 ; Soil Science Society of America Journal Volume 73 ; 73 ; >
     au < finished ; crawling ; 2010 ; Soil Science Society of America Journal Volume 74 ; 74 ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 2011 ; Soil Science Society of America Journal Volume 75 ; 75 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2011 ; Soil Science Society of America Journal Volume 75 ; 75 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Soil Science Society of America Journal Volume 76 ; 76 ; >
     au < zapped ; finished ; 2013 ; Soil Science Society of America Journal Volume 77 ; 77 ; >
     au < finished ; finished ; 2014 ; Soil Science Society of America Journal Volume 78 ; 78 ; reingest2.clockss.org:8085 >
