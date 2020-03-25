@@ -154,7 +154,7 @@
       au < finished ; crawling ; 1999 ; 978-1-56576-319-7 ; Siliciclastic Sequence Stratigraphy: Concepts and Applications Volume 7 ; sepcosil ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2005 ; 978-1-56576-132-2 ; Carbonate Sedimentology and Sequence Stratigraphy Volume 8 ; sepcocar ; reingest3.clockss.org:8083 >
       # no substance for Outcrops Revitalized.
-      au < superseded ; superseded ; 2011 ; 978-1-56576-306-7 ; Outcrops Revitalized: Tools, Techniques and Applications Volume 10 [superseded] ; sepcoout ; >
+      au < superseded ; exists ; 2011 ; 978-1-56576-306-7 ; Outcrops Revitalized: Tools, Techniques and Applications Volume 10 [superseded] ; sepcoout ; >
       # the PDFs for the next AU is not accessible - goes to log in page
       au < doNotProcess ; doNotProcess ; 2013 ; 978-1-56576-281-7 ; Phanerozoic Paleoclimate: An Atlas of Lithologic Indicators of Climate Volume 11 ; sepcopha ; >
 
@@ -183,7 +183,7 @@
       au < finished ; crawling ; 1983 ; 978-1-56576-241-1 ; Platform Margin and Deep Water Carbonates Volume 12 ; sepscpla ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 1986 ; 978-1-56576-242-8 ; Shelf Sands and Sandstone Reservoirs Volume 13 ; sepscshe ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 1984 ; 978-1-56576-243-5 ; Modern and Ancient Deep-Sea Fan Sedimentation Volume 14 ; sepscmod ; reingest2.clockss.org:8085 >
-      au < superseded ; superseded ; 1984 ; 978-1-56576-244-2 ; Ichnology: The Use of Trace Fossils in Sedimentology and Stratigraphy Volume 15 [superseded] ; sepscich ; >#no substance
+      au < superseded ; exists ; 1984 ; 978-1-56576-244-2 ; Ichnology: The Use of Trace Fossils in Sedimentology and Stratigraphy Volume 15 [superseded] ; sepscich ; >#no substance
       au < finished ; crawling ; 1985 ; 978-1-56576-245-9 ; Glacial Sedimentary Environments Volume 16 ; sepscgla ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 1985 ; 978-1-56576-246-6 ; Relationship of Organic Matter and Mineral Diagenesis Volume 17 ; sepscrel ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 1986 ; 978-1-56576-247-3 ; Paleoclimates and Economic Geology Volume 18 ; sepscpeg ; reingest5.clockss.org:8082 >
