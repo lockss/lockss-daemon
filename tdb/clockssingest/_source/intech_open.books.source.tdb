@@ -1,0 +1,25 @@
+{
+
+  publisher <
+    name = Liverpool University Press ;
+    info[contract] = 2020 ; # this need to be double check
+    info[tester] = S
+  >
+  
+  {
+  
+    title <
+       name = Intech Open Books
+    >
+    
+    plugin = org.lockss.plugin.clockss.intechopen.ClockssIntechOpenBooksSourcePlugin
+    param[base_url] = https://clockss-test.lockss.org/sourcefiles/intechopen-released/ #this is the testing site
+    
+    hidden[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[year] >
+
+    au < exist ; exist ; 2020 ; Intech Open Books Content 2020 ; 2020 >
+
+  }
+
+}
