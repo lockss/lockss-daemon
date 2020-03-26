@@ -33,7 +33,7 @@ public class IntechOpenBookOnix3XmlMetadataExtractorFactory extends SourceXmlMet
         @Override
         protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
             if (Onix3Helper == null) {
-                Onix3Helper = new Onix3BooksSchemaHelper();
+                Onix3Helper = new IntechOpenOnix3BooksSchemaHelper();
             }
             return Onix3Helper;
         }
@@ -48,22 +48,16 @@ public class IntechOpenBookOnix3XmlMetadataExtractorFactory extends SourceXmlMet
                                        CachedUrl cu, ArticleMetadata thisAM) {
             return true;
         }
-
-        /*
-         * (non-Javadoc)
-         * WARC XML files are a little non-standard in that they store the actual access.url
-         * location in the "self-uri" field for Jats and the proprietary ID field
-         * for ONIX
-         * set the access_url depending on the schema
-         * set the publisher as well. It may get replaced by the TDB value
-         */
+        
         @Override
         protected void postCookProcess(SourceXmlSchemaHelper schemaHelper,
                                        CachedUrl cu, ArticleMetadata thisAM) {
 
-            String access = thisAM.getRaw(Onix3BooksSchemaHelper.ONIX_idtype_proprietary);
+            String access = thisAM.getRaw(Onix3BooksSchemaHelper.ONIX_RR);
+            String cuBase = FilenameUtils.getFullPath(cu.getUrl());
+            String fullPathFile = UrlUtil.minimallyEncodeUrl(cuBase + access + ".pdf");
             if (access != null) {
-                thisAM.replace(MetadataField.FIELD_ACCESS_URL, access);
+                thisAM.replace(MetadataField.FIELD_ACCESS_URL, fullPathFile);
             }
             if (thisAM.get(MetadataField.FIELD_DATE)== null) {
                 String copydate = thisAM.getRaw(Onix3BooksSchemaHelper.ONIX_copy_date);
