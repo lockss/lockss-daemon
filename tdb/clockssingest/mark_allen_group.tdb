@@ -349,7 +349,7 @@
     au < manifest ; exists ; 2011 ; Gastrointestinal Nursing Volume 9 ; 9 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2012 ; Gastrointestinal Nursing Volume 10 ; 10 ; https://www.magonlinelibrary.com/ ; >
     au < finished ; finished ; 2013 ; Gastrointestinal Nursing Volume 11 ; 11 ; http://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2014 ; Gastrointestinal Nursing Volume 12 ; 12 ; http://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2014 ; Gastrointestinal Nursing Volume 12 ; 12 ; http://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
     au < ready ; exists ; 2015 ; Gastrointestinal Nursing Volume 13 ; 13 ; https://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2016 ; Gastrointestinal Nursing Volume 14 ; 14 ; http://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Gastrointestinal Nursing Volume 15 ; 15 ; http://www.magonlinelibrary.com/ ; >
@@ -374,7 +374,7 @@
     au < manifest ; exists ; 2010 ; Independent Nurse Volume 2010 ; 2010 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2011 ; Independent Nurse Volume 2011 ; 2011 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2012 ; Independent Nurse Volume 2012 ; 2012 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2013 ; Independent Nurse Volume 2013 ; 2013 ; http://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2013 ; Independent Nurse Volume 2013 ; 2013 ; http://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Independent Nurse Volume 2014 ; 2014 ; http://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Independent Nurse Volume 2015 ; 2015 ; http://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2016 ; Independent Nurse Volume 2016 ; 2016 ; http://www.magonlinelibrary.com/ ; >
@@ -419,7 +419,7 @@
     au < manifest ; exists ; 2010 ; International Journal of Palliative Nursing Volume 16 ; 16 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2011 ; International Journal of Palliative Nursing Volume 17 ; 17 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2012 ; International Journal of Palliative Nursing Volume 18 ; 18 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2013 ; International Journal of Palliative Nursing Volume 19 ; 19 ; http://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2013 ; International Journal of Palliative Nursing Volume 19 ; 19 ; http://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; International Journal of Palliative Nursing Volume 20 ; 20 ; http://www.magonlinelibrary.com/ ; >
     au < finished ; finished ; 2015 ; International Journal of Palliative Nursing Volume 21 ; 21 ; http://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; International Journal of Palliative Nursing Volume 22 ; 22 ; http://www.magonlinelibrary.com/ ; >
@@ -445,9 +445,9 @@
     au < manifest ; exists ; 2010 ; International Journal of Therapy and Rehabilitation Volume 17 ; 17 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2011 ; International Journal of Therapy and Rehabilitation Volume 18 ; 18 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2012 ; International Journal of Therapy and Rehabilitation Volume 19 ; 19 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2013 ; International Journal of Therapy and Rehabilitation Volume 20 ; 20 ; http://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2013 ; International Journal of Therapy and Rehabilitation Volume 20 ; 20 ; http://www.magonlinelibrary.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; International Journal of Therapy and Rehabilitation Volume 21 ; 21 ; http://www.magonlinelibrary.com/ ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2015 ; International Journal of Therapy and Rehabilitation Volume 22 ; 22 ; http://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2015 ; International Journal of Therapy and Rehabilitation Volume 22 ; 22 ; http://www.magonlinelibrary.com/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; International Journal of Therapy and Rehabilitation Volume 23 ; 23 ; http://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2017 ; International Journal of Therapy and Rehabilitation Volume 24 ; 24 ; http://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2018 ; International Journal of Therapy and Rehabilitation Volume 25 ; 25 ; https://www.magonlinelibrary.com/ ; >
@@ -470,7 +470,7 @@
 
     au < manifest ; exists ; 2011 ; International Paramedic Practice Volume 1 ; 1 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2012 ; International Paramedic Practice Volume 2 ; 2 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2013 ; International Paramedic Practice Volume 3 ; 3 ; http://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2013 ; International Paramedic Practice Volume 3 ; 3 ; http://www.magonlinelibrary.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; International Paramedic Practice Volume 4 ; 4 ; http://www.magonlinelibrary.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; International Paramedic Practice Volume 5 ; 5 ; http://www.magonlinelibrary.com/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; International Paramedic Practice Volume 6 ; 6 ; http://www.magonlinelibrary.com/ ; >
@@ -492,8 +492,8 @@
     param[journal_id] = joan
 
     au < manifest ; exists ; 2012 ; Journal of Aesthetic Nursing Volume 1 ; 1 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2013 ; Journal of Aesthetic Nursing Volume 2 ; 2 ; http://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2014 ; Journal of Aesthetic Nursing Volume 3 ; 3 ; http://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2013 ; Journal of Aesthetic Nursing Volume 2 ; 2 ; http://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2014 ; Journal of Aesthetic Nursing Volume 3 ; 3 ; http://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Journal of Aesthetic Nursing Volume 4 ; 4 ; http://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; Journal of Aesthetic Nursing Volume 5 ; 5 ; http://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Journal of Aesthetic Nursing Volume 6 ; 6 ; http://www.magonlinelibrary.com/ ; >
@@ -528,8 +528,8 @@
     comment[base_url] = http://www.journalofhealthvisiting.com/
     param[journal_id] = johv
 
-    au < frozen ; exists ; 2013 ; Journal of Health Visiting Volume 1 ; 1 ; http://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2014 ; Journal of Health Visiting Volume 2 ; 2 ; http://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2013 ; Journal of Health Visiting Volume 1 ; 1 ; http://www.magonlinelibrary.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2014 ; Journal of Health Visiting Volume 2 ; 2 ; http://www.magonlinelibrary.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Journal of Health Visiting Volume 3 ; 3 ; http://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; Journal of Health Visiting Volume 4 ; 4 ; http://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Journal of Health Visiting Volume 5 ; 5 ; http://www.magonlinelibrary.com/ ; >
@@ -553,7 +553,7 @@
     au < manifest ; exists ; 2010 ; Journal of Paramedic Practice Volume 2 ; 2 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2011 ; Journal of Paramedic Practice Volume 3 ; 3 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2012 ; Journal of Paramedic Practice Volume 4 ; 4 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2013 ; Journal of Paramedic Practice Volume 5 ; 5 ; http://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2013 ; Journal of Paramedic Practice Volume 5 ; 5 ; http://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Journal of Paramedic Practice Volume 6 ; 6 ; http://www.magonlinelibrary.com/ ; >
     au < ready ; exists ; 2015 ; Journal of Paramedic Practice Volume 7 ; 7 ; https://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2016 ; Journal of Paramedic Practice Volume 8 ; 8 ; http://www.magonlinelibrary.com/ ; >
@@ -618,9 +618,9 @@
     au < manifest ; exists ; 2010 ; Journal of Wound Care Volume 19 ; 19 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2011 ; Journal of Wound Care Volume 20 ; 20 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2012 ; Journal of Wound Care Volume 21 ; 21 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2013 ; Journal of Wound Care Volume 22 ; 22 ; http://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2013 ; Journal of Wound Care Volume 22 ; 22 ; http://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Journal of Wound Care Volume 23 ; 23 ; http://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2015 ; Journal of Wound Care Volume 24 ; 24 ; http://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2015 ; Journal of Wound Care Volume 24 ; 24 ; http://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; Journal of Wound Care Volume 25 ; 25 ; http://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Journal of Wound Care Volume 26 ; 26 ; http://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2018 ; Journal of Wound Care Volume 27 ; 27 ; https://www.magonlinelibrary.com/ ; >
@@ -645,7 +645,7 @@
     au < manifest ; exists ; 2010 ; Nurse Prescribing Volume 8 ; 8 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2011 ; Nurse Prescribing Volume 9 ; 9 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2012 ; Nurse Prescribing Volume 10 ; 10 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2013 ; Nurse Prescribing Volume 11 ; 11 ; http://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2013 ; Nurse Prescribing Volume 11 ; 11 ; http://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Nurse Prescribing Volume 12 ; 12 ; http://www.magonlinelibrary.com/ ; >
     au < finished ; finished ; 2015 ; Nurse Prescribing Volume 13 ; 13 ; http://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2016 ; Nurse Prescribing Volume 14 ; 14 ; http://www.magonlinelibrary.com/ ; >
@@ -688,9 +688,9 @@
     au < finished ; down ; 2010 ; Nursing and Residential Care Volume 12 ; 12 ; http://www.magonlinelibrary.com/ ; >
     au < ready ; exists ; 2011 ; Nursing and Residential Care Volume 13 ; 13 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2012 ; Nursing and Residential Care Volume 14 ; 14 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2013 ; Nursing and Residential Care Volume 15 ; 15 ; http://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2013 ; Nursing and Residential Care Volume 15 ; 15 ; http://www.magonlinelibrary.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Nursing and Residential Care Volume 16 ; 16 ; http://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2015 ; Nursing and Residential Care Volume 17 ; 17 ; http://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2015 ; Nursing and Residential Care Volume 17 ; 17 ; http://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; Nursing and Residential Care Volume 18 ; 18 ; http://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Nursing and Residential Care Volume 19 ; 19 ; http://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2018 ; Nursing and Residential Care Volume 20 ; 20 ; https://www.magonlinelibrary.com/ ; >
@@ -714,7 +714,7 @@
     au < manifest ; exists ; 2010 ; Practice Nursing Volume 21 ; 21 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2011 ; Practice Nursing Volume 22 ; 22 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2012 ; Practice Nursing Volume 23 ; 23 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2013 ; Practice Nursing Volume 24 ; 24 ; http://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2013 ; Practice Nursing Volume 24 ; 24 ; http://www.magonlinelibrary.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Practice Nursing Volume 25 ; 25 ; http://www.magonlinelibrary.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; Practice Nursing Volume 26 ; 26 ; http://www.magonlinelibrary.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2016 ; Practice Nursing Volume 27 ; 27 ; http://www.magonlinelibrary.com/ ; >
@@ -741,9 +741,9 @@
     au < finished ; finished ; 2014 ; Companion Animal Volume 19 ; 19 ; http://www.magonlinelibrary.com/ ; >
     au < finished ; finished ; 2015 ; Companion Animal Volume 20 ; 20 ; http://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
     au < superseded ; exists ; 2016 ; Companion Animal Volume 21 [superseded] ; 21 ; http://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2016 ; Companion Animal Volume 21 ; 21 ; https://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2016 ; Companion Animal Volume 21 ; 21 ; https://www.magonlinelibrary.com/ ; reingest3.clockss.org:8083 >
     au < superseded ; exists ; 2017 ; Companion Animal Volume 22 [superseded] ; 22 ; http://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2017 ; Companion Animal Volume 22 ; 22 ; https://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2017 ; Companion Animal Volume 22 ; 22 ; https://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Companion Animal Volume 23 ; 23 ; https://www.magonlinelibrary.com/ ; >
     au < crawling ; exists ; 2019 ; Companion Animal Volume 24 ; 24 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2020 ; Companion Animal Volume 25 ; 25 ; https://www.magonlinelibrary.com/ ; >
@@ -763,7 +763,7 @@
     au < exists ; exists ; 2010 ; Equine Health Volume 2010 ; 2010 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2011 ; Equine Health Volume 2011 ; 2011 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2012 ; Equine Health Volume 2012 ; 2012 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2013 ; Equine Health Volume 2013 ; 2013 ; http://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2013 ; Equine Health Volume 2013 ; 2013 ; http://www.magonlinelibrary.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Equine Health Volume 2014 ; 2014 ; http://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Equine Health Volume 2015 ; 2015 ; http://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; Equine Health Volume 2016 ; 2016 ; http://www.magonlinelibrary.com/ ; >
@@ -790,9 +790,9 @@
     au < finished ; finished ; 2014 ; Livestock Volume 19 ; 19 ; http://www.magonlinelibrary.com/ ; >
     au < finished ; finished ; 2015 ; Livestock Volume 20 ; 20 ; http://www.magonlinelibrary.com/ ; reingest3.clockss.org:8083 >
     au < superseded ; exists ; 2016 ; Livestock Volume 21 [superseded] ; 21 ; http://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2016 ; Livestock Volume 21 ; 21 ; https://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2016 ; Livestock Volume 21 ; 21 ; https://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
     au < superseded ; exists ; 2017 ; Livestock Volume 22 [superseded] ; 22 ; http://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2017 ; Livestock Volume 22 ; 22 ; https://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2017 ; Livestock Volume 22 ; 22 ; https://www.magonlinelibrary.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2018 ; Livestock Volume 23 ; 23 ; https://www.magonlinelibrary.com/ ; >
     au < crawling ; exists ; 2019 ; Livestock Volume 24 ; 24 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2020 ; Livestock Volume 25 ; 25 ; https://www.magonlinelibrary.com/ ; >
@@ -812,7 +812,7 @@
     au < manifest ; exists ; 2010 ; The Veterinary Nurse Volume 1 ; 1 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2011 ; The Veterinary Nurse Volume 2 ; 2 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2012 ; The Veterinary Nurse Volume 3 ; 3 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2013 ; The Veterinary Nurse Volume 4 ; 4 ; http://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2013 ; The Veterinary Nurse Volume 4 ; 4 ; http://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; The Veterinary Nurse Volume 5 ; 5 ; http://www.magonlinelibrary.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; The Veterinary Nurse Volume 6 ; 6 ; http://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2016 ; The Veterinary Nurse Volume 7 ; 7 ; http://www.magonlinelibrary.com/ ; >
@@ -887,7 +887,7 @@
     au < manifest ; exists ; 2009-2010 ; Early Years Educator (EYE) Volume 11 ; 11 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2010-2011 ; Early Years Educator (EYE) Volume 12 ; 12 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2011-2012 ; Early Years Educator (EYE) Volume 13 ; 13 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2012-2013 ; Early Years Educator (EYE) Volume 14 ; 14 ; http://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2012-2013 ; Early Years Educator (EYE) Volume 14 ; 14 ; http://www.magonlinelibrary.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2013-2014 ; Early Years Educator (EYE) Volume 15 ; 15 ; http://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
     au < zapped ; finished ; 2014-2015 ; Early Years Educator (EYE) Volume 16 ; 16 ; http://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015-2016 ; Early Years Educator (EYE) Volume 17 ; 17 ; http://www.magonlinelibrary.com/ ; >
@@ -914,7 +914,7 @@
     au < manifest ; exists ; 2008 ; Fundraising for Schools Volume 2008 ; 2008 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2009 ; Fundraising for Schools Volume 2009 ; 2009 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2010 ; Fundraising for Schools Volume 2010 ; 2010 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2013 ; Fundraising for Schools Volume 2013 ; 2013 ; http://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2013 ; Fundraising for Schools Volume 2013 ; 2013 ; http://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Fundraising for Schools Volume 2014 ; 2014 ; http://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Fundraising for Schools Volume 2015 ; 2015 ; http://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
 
@@ -987,7 +987,7 @@
     au < manifest ; exists ; 2010 ; Practical Pre-School Volume 2010 ; 2010 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2011 ; Practical Pre-School Volume 2011 ; 2011 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2012 ; Practical Pre-School Volume 2012 ; 2012 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2013 ; Practical Pre-School Volume 2013 ; 2013 ; http://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2013 ; Practical Pre-School Volume 2013 ; 2013 ; http://www.magonlinelibrary.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Practical Pre-School Volume 2014 ; 2014 ; http://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
     au < ready ; exists ; 2015 ; Practical Pre-School Volume 2015 ; 2015 ; https://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2016 ; Practical Pre-School Volume 2016 ; 2016 ; http://www.magonlinelibrary.com/ ; >
@@ -1011,7 +1011,7 @@
     au < manifest ; exists ; 2010 ; Primary Teacher Update Volume 2010 ; 2010 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2011 ; Primary Teacher Update Volume 2011 ; 2011 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2012 ; Primary Teacher Update Volume 2012 ; 2012 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2013 ; Primary Teacher Update Volume 2013 ; 2013 ; http://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2013 ; Primary Teacher Update Volume 2013 ; 2013 ; http://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Primary Teacher Update Volume 2014 ; 2014 ; http://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
     au < zapped ; finished ; 2015 ; Primary Teacher Update Volume 2015 ; 2015 ; http://www.magonlinelibrary.com/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; Primary Teacher Update Volume 2016 ; 2016 ; http://www.magonlinelibrary.com/ ; >
@@ -1034,7 +1034,7 @@
     au < exists ; exists ; 2010 ; SecEd Volume 2010 ; 2010 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2011 ; SecEd Volume 2011 ; 2011 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2012 ; SecEd Volume 2012 ; 2012 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2013 ; SecEd Volume 2013 ; 2013 ; http://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2013 ; SecEd Volume 2013 ; 2013 ; http://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; SecEd Volume 2014 ; 2014 ; http://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; SecEd Volume 2015 ; 2015 ; http://www.magonlinelibrary.com/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; SecEd Volume 2016 ; 2016 ; http://www.magonlinelibrary.com/ ; >
