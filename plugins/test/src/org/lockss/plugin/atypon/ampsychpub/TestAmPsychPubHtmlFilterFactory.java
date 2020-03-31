@@ -610,12 +610,12 @@ public class TestAmPsychPubHtmlFilterFactory extends LockssTestCase {
       "        <a id=\"top-content-scroll\"></a>\n" + 
       "        <div class=\"tab tab-pane active\">\n" + 
       "    <article class=\"article\">\n" + 
-      "      <p class=\"fulltext\"></p>\n" + 
-      "      <!-- abstract content -->\n" + 
-      "      <div class=\"hlFld-Abstract\">\n" + 
-      "    <p class=\"fulltext\"></p>\n" + 
-      "      </div>\n" + 
-      "      <!-- /abstract content --><!-- fulltext content -->\n" + 
+      "      <p class=\"fulltext\"></p>\n" +
+      "      <!-- abstract content -->\n" +
+      "      <div class=\"hlFld-Abstract\">\n" +
+      "    <p class=\"fulltext\"></p>\n" +
+      "      </div>\n" +
+      "      <!-- /abstract content --><!-- fulltext content -->\n" +
       "      <div class=\"hlFld-Fulltext\">\n" + 
       "    <p>The <i>Journal</i> was notified about a complaint (" +
       "<a class=\"ext-link\" href=\"http://ajp.psychiatryonline.org/doi/full/10.1176/appi.ajp.158.6.906\" target=\"_blank\">" +
@@ -1097,16 +1097,6 @@ public class TestAmPsychPubHtmlFilterFactory extends LockssTestCase {
       "    <br>\n" + 
       "    <hr>\n" + 
       "  </div>";
-
-  private static String hlFldFulltext = "<div class=\"other\">other unrelated content</div><div class=\"hlFld-Fulltext\">Full text content here</div>";
-  private static final String hlFldFulltextHashFiltered = "<div class=\"hlFld-Fulltext\">Full text content here</div>";
-
-  private static String hlFldAbstract = "<div class=\"hlFld-Abstract\"> Abstract content here</div><div class=\"other\">other unrelated content</div>";
-  private static final String hlFldAbstractHashFiltered = "<div class=\"hlFld-Abstract\"> Abstract content here</div>";
-
-  private static String issueItem = "<div class=\"other\">other unrelated content</div><div class=\"issue-item\">issue item content here</div><div class=\"other\">other unrelated content</div>";
-  private static final String issueItemHashFiltered = "<div class=\"issue-item\">issue item content here</div>";
-
    /*
   private static final String citContentHashFiltered = 
       " Download article citation data for:" + 
@@ -1141,13 +1131,7 @@ public class TestAmPsychPubHtmlFilterFactory extends LockssTestCase {
 
     String hashed = StringUtil.fromInputStream(actIn);
 
-    log.info("========raw is here=========");
-    log.info(hashed);
-
-    //log.info("========hashed is here=========");
-    //log.info(expectedStr);
-
-    //assertEquals(expectedStr, hashed);
+    assertEquals(expectedStr, hashed);
   }
   
   public void startMockDaemon() {
@@ -1186,10 +1170,6 @@ public class TestAmPsychPubHtmlFilterFactory extends LockssTestCase {
       doFilterTest(mau, variantFact, tocContent, tocContentHashFiltered);
       doFilterTest(mau, variantFact, art1Content, art1ContentHashFiltered);
       doFilterTest(mau, variantFact, citContent, citContentHashFiltered);
-      
-      doFilterTest(mau, variantFact, hlFldFulltext, hlFldFulltextHashFiltered);
-      doFilterTest(mau, variantFact, hlFldAbstract, hlFldAbstractHashFiltered);
-      doFilterTest(mau, variantFact, issueItem, issueItemHashFiltered);
      }
    }
   
