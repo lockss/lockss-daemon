@@ -665,7 +665,7 @@
     param[journal_id] = jprp
     #continues = 1479-9189
 
-    au < testing ; exists ; 2019 ; Journal of Prescribing Practice Volume 1 ; 1 ; https://www.magonlinelibrary.com/ ; >
+    au < ready ; exists ; 2019 ; Journal of Prescribing Practice Volume 1 ; 1 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2020 ; Journal of Prescribing Practice Volume 2 ; 2 ; https://www.magonlinelibrary.com/ ; >
 
   }
