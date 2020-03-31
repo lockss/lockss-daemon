@@ -128,7 +128,7 @@
     au < finished ; crawling ; 2016 ; Somatechnics Volume 6 ; 6 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Somatechnics Volume 7 ; 7 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; Somatechnics Volume 8 ; 8 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2019 ; Somatechnics Volume 9 ; 9 ; https://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2019 ; Somatechnics Volume 9 ; 9 ; https://www.euppublishing.com/ ; >
     au < manifest ; exists ; 2020 ; Somatechnics Volume 10 ; 10 ; https://www.euppublishing.com/ ; >
 
   }
@@ -467,7 +467,7 @@
     au < finished ; frozen ; 2016 ; Cultural History Volume 5 ; 5 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Cultural History Volume 6 ; 6 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2018 ; Cultural History Volume 7 ; 7 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2019 ; Cultural History Volume 8 ; 8 ; https://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2019 ; Cultural History Volume 8 ; 8 ; https://www.euppublishing.com/ ; >
     au < manifest ; exists ; 2020 ; Cultural History Volume 9 ; 9 ; https://www.euppublishing.com/ ; >
 
   }

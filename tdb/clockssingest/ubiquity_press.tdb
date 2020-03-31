@@ -326,7 +326,7 @@
       au < finished ; crawling ; 2016 ; 1 ; Glossa: a journal of general linguistics Volume 2016 ; 2016 ; http://www.glossa-journal.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; 2 ; Glossa: a journal of general linguistics Volume 2017 ; 2017 ; http://www.glossa-journal.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 3 ; Glossa: a journal of general linguistics Volume 2018 ; 2018 ; https://www.glossa-journal.org/ ; reingest4.clockss.org:8082 > #no permission statement 7.31.2018
-      au < crawling ; exists ; 2019 ; 4 ; Glossa: a journal of general linguistics Volume 2019 ; 2019 ; https://www.glossa-journal.org/ ; > #no permission statement 7.31.2019
+      au < deepCrawl ; exists ; 2019 ; 4 ; Glossa: a journal of general linguistics Volume 2019 ; 2019 ; https://www.glossa-journal.org/ ; > #no permission statement 7.31.2019
 
   }
 
@@ -720,7 +720,7 @@
       au < finished ; crawling ; 2016 ; 3 ; Rural Landscapes: Society, Environment, History Volume 2016 ; 2016 ; http://www.rurallandscapesjournal.com/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; 4 ; Rural Landscapes: Society, Environment, History Volume 2017 ; 2017 ; http://www.rurallandscapesjournal.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 5 ; Rural Landscapes: Society, Environment, History Volume 2018 ; 2018 ; https://www.rurallandscapesjournal.com/ ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2019 ; 6 ; Rural Landscapes: Society, Environment, History Volume 2019 ; 2019 ; https://www.rurallandscapesjournal.com/ ; >
+      au < deepCrawl ; exists ; 2019 ; 6 ; Rural Landscapes: Society, Environment, History Volume 2019 ; 2019 ; https://www.rurallandscapesjournal.com/ ; >
 
   }
 
@@ -869,7 +869,7 @@
       au < finished ; crawling ; 2016 ; 7 ; Ancient Asia Volume 2016 ; 2016 ; http://www.ancient-asia-journal.com/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; 8 ; Ancient Asia Volume 2017 ; 2017 ; http://www.ancient-asia-journal.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2018 ; 9 ; Ancient Asia Volume 2018 ; 2018 ; https://www.ancient-asia-journal.com/ ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2019 ; 10 ; Ancient Asia Volume 2019 ; 2019 ; https://www.ancient-asia-journal.com/ ; >
+      au < deepCrawl ; exists ; 2019 ; 10 ; Ancient Asia Volume 2019 ; 2019 ; https://www.ancient-asia-journal.com/ ; >
 
   }
 
@@ -2382,7 +2382,7 @@
       au < finished ; finished ; 2016 ; 31 ; Incontri. Rivista europea di studi italiani Volume 2016 ; 2016 ; http://www.rivista-incontri.nl/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2017 ; 32 ; Incontri. Rivista europea di studi italiani Volume 2017 ; 2017 ; http://www.rivista-incontri.nl/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2018 ; 33 ; Incontri. Rivista europea di studi italiani Volume 2018 ; 2018 ; https://www.rivista-incontri.nl/ ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2019 ; 34 ; Incontri. Rivista europea di studi italiani Volume 2019 ; 2019 ; https://www.rivista-incontri.nl/ ; >
+      au < deepCrawl ; exists ; 2019 ; 34 ; Incontri. Rivista europea di studi italiani Volume 2019 ; 2019 ; https://www.rivista-incontri.nl/ ; >
 
   }
 
@@ -2565,7 +2565,7 @@
       au < finished ; crawling ; 2016 ; 9 ; Studium Volume 2016 ; 2016 ; http://www.gewina-studium.nl/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2017 ; 10 ; Studium Volume 2017 ; 2017 ; http://www.gewina-studium.nl/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2018 ; 11 ; Studium Volume 2018 ; 2018 ; https://www.gewina-studium.nl/ ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2019 ; 12 ; Studium Volume 2019 ; 2019 ; https://www.gewina-studium.nl/ ; >
+      au < deepCrawl ; exists ; 2019 ; 12 ; Studium Volume 2019 ; 2019 ; https://www.gewina-studium.nl/ ; >
 
   }
 
@@ -2790,7 +2790,7 @@
       au < finished ; crawling ; 2015 ; 12 ; British and Irish Orthoptic Journal Volume 2015 ; 2015 ; https://www.bioj-online.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2016 ; 13 ; British and Irish Orthoptic Journal Volume 2016 ; 2016 ; https://www.bioj-online.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2018 ; 14 ; British and Irish Orthoptic Journal Volume 2018 ; 2018 ; https://www.bioj-online.com/ ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2019 ; 15 ; British and Irish Orthoptic Journal Volume 2019 ; 2019 ; https://www.bioj-online.com/ ; >
+      au < deepCrawl ; exists ; 2019 ; 15 ; British and Irish Orthoptic Journal Volume 2019 ; 2019 ; https://www.bioj-online.com/ ; >
 
   }
 
@@ -2821,7 +2821,7 @@
 #      param[base_url] = https://www.ujpir-journal.com/
 
       au < finished ; manifest ; 2018 ; 1 ; Undergraduate Journal of Politics and International Relations Volume 2018 ; 2018 ; https://www.ujpir-journal.com/ ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2019 ; 2 ; Undergraduate Journal of Politics and International Relations Volume 2019 ; 2019 ; https://www.ujpir-journal.com/ ; >
+      au < deepCrawl ; exists ; 2019 ; 2 ; Undergraduate Journal of Politics and International Relations Volume 2019 ; 2019 ; https://www.ujpir-journal.com/ ; >
 
   }
 }
@@ -2855,7 +2855,7 @@
       au < finished ; crawling ; 2016 ; 5 ; Stability: International Journal of Security & Development Volume 2016 ; 2016 ; http://www.stabilityjournal.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; 6 ; Stability: International Journal of Security & Development Volume 2017 ; 2017 ; http://www.stabilityjournal.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2018 ; 7 ; Stability: International Journal of Security & Development Volume 2018 ; 2018 ; https://www.stabilityjournal.org/ ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2019 ; 8 ; Stability: International Journal of Security & Development Volume 2019 ; 2019 ; https://www.stabilityjournal.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; 8 ; Stability: International Journal of Security & Development Volume 2019 ; 2019 ; https://www.stabilityjournal.org/ ; >
 
   }
 }

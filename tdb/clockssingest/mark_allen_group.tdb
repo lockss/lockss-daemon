@@ -598,7 +598,7 @@
     au < ready ; exists ; 2016 ; Journal of Kidney Care Volume 1 ; 1 ; https://www.magonlinelibrary.com/ ; > #500 error
     au < ready ; exists ; 2017 ; Journal of Kidney Care Volume 2 ; 2 ; https://www.magonlinelibrary.com/ ; > #500 error
     au < notReady ; exists ; 2018 ; Journal of Kidney Care Volume 3 ; 3 ; https://www.magonlinelibrary.com/ ; > #500 error
-    au < crawling ; exists ; 2019 ; Journal of Kidney Care Volume 4 ; 4 ; https://www.magonlinelibrary.com/ ; >
+    au < deepCrawl ; exists ; 2019 ; Journal of Kidney Care Volume 4 ; 4 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2020 ; Journal of Kidney Care Volume 5 ; 5 ; https://www.magonlinelibrary.com/ ; >
 
   }
@@ -694,7 +694,7 @@
     au < deepCrawl ; exists ; 2016 ; Nursing and Residential Care Volume 18 ; 18 ; http://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Nursing and Residential Care Volume 19 ; 19 ; http://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2018 ; Nursing and Residential Care Volume 20 ; 20 ; https://www.magonlinelibrary.com/ ; >
-    au < crawling ; exists ; 2019 ; Nursing and Residential Care Volume 21 ; 21 ; https://www.magonlinelibrary.com/ ; >
+    au < deepCrawl ; exists ; 2019 ; Nursing and Residential Care Volume 21 ; 21 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2020 ; Nursing and Residential Care Volume 22 ; 22 ; https://www.magonlinelibrary.com/ ; >
 
   }

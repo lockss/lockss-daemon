@@ -234,7 +234,7 @@
       au < aap.ClockssAAPDrupalPlugin ; finished ; crawling ; 2016 ; NeoReviews Volume 17 ; 17 ; http://neoreviews.aappublications.org/ ; reingest1.clockss.org:8082 >
       au < aap.ClockssAAPDrupalPlugin ; deepCrawl ; exists ; 2017 ; NeoReviews Volume 18 ; 18 ; http://neoreviews.aappublications.org/ ; > #probe link empty
       au < aap.ClockssAAPDrupalPlugin ; frozen ; exists ; 2018 ; NeoReviews Volume 19 ; 19 ; http://neoreviews.aappublications.org/ ; >
-      au < aap.ClockssAAPDrupalPlugin ; crawling ; exists ; 2019 ; NeoReviews Volume 20 ; 20 ; https://neoreviews.aappublications.org/ ; >
+      au < aap.ClockssAAPDrupalPlugin ; deepCrawl ; exists ; 2019 ; NeoReviews Volume 20 ; 20 ; https://neoreviews.aappublications.org/ ; >
       au < aap.ClockssAAPDrupalPlugin ; manifest ; exists ; 2020 ; NeoReviews Volume 21 ; 21 ; https://neoreviews.aappublications.org/ ; >
 
     }

@@ -39,7 +39,7 @@
     au < finished ; manifest ; 2016 ; Archives Volume 51 ; 51 ; https://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Archives Volume 52 ; 52 ; https://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Archives Volume 53 ; 53 ; https://online.liverpooluniversitypress.co.uk/ ; >
-    au < crawling ; exists ; 2019 ; Archives Volume 54 ; 54 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < deepCrawl ; exists ; 2019 ; Archives Volume 54 ; 54 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < expected ; exists ; 2020 ; Archives Volume 55 ; 55 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
@@ -462,7 +462,7 @@
     au < finished ; manifest ; 2016 ; Historical Studies in Industrial Relations Volume 37 ; 37 ; http://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2017 ; Historical Studies in Industrial Relations Volume 38 ; 38 ; http://online.liverpooluniversitypress.co.uk/ ; >
     au < deepCrawl ; exists ; 2018 ; Historical Studies in Industrial Relations Volume 39 ; 39 ; https://online.liverpooluniversitypress.co.uk/ ; >
-    au < crawling ; exists ; 2019 ; Historical Studies in Industrial Relations Volume 40 ; 40 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < deepCrawl ; exists ; 2019 ; Historical Studies in Industrial Relations Volume 40 ; 40 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < expected ; exists ; 2020 ; Historical Studies in Industrial Relations Volume 41 ; 41 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
@@ -568,7 +568,7 @@
     au < finished ; manifest ; 2016 ; Journal of Literary & Cultural Disability Studies Volume 10 ; 10 ; http://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; Journal of Literary & Cultural Disability Studies Volume 11 ; 11 ; http://online.liverpooluniversitypress.co.uk/ ; >
     au < deepCrawl ; exists ; 2018 ; Journal of Literary & Cultural Disability Studies Volume 12 ; 12 ; https://online.liverpooluniversitypress.co.uk/ ; >
-    au < crawling ; exists ; 2019 ; Journal of Literary & Cultural Disability Studies Volume 13 ; 13 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < deepCrawl ; exists ; 2019 ; Journal of Literary & Cultural Disability Studies Volume 13 ; 13 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < manifest ; exists ; 2020 ; Journal of Literary & Cultural Disability Studies Volume 14 ; 14 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
@@ -867,7 +867,7 @@
     au < finished ; manifest ; 2016 ; Music, Sound, and the Moving Image Volume 10 ; 10 ; http://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2017 ; Music, Sound, and the Moving Image Volume 11 ; 11 ; http://online.liverpooluniversitypress.co.uk/ ; >
     au < deepCrawl ; exists ; 2018 ; Music, Sound, and the Moving Image Volume 12 ; 12 ; https://online.liverpooluniversitypress.co.uk/ ; >
-    au < crawling ; exists ; 2019 ; Music, Sound, and the Moving Image Volume 13 ; 13 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < deepCrawl ; exists ; 2019 ; Music, Sound, and the Moving Image Volume 13 ; 13 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < expected ; exists ; 2020 ; Music, Sound, and the Moving Image Volume 14 ; 14 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
