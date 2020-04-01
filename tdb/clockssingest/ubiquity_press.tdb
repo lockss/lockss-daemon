@@ -309,7 +309,7 @@
       au < finished ; crawling ; 2016 ; 23 ; ASIANetwork Exchange Volume 2016 ; 2016 ; http://www.asianetworkexchange.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2017 ; 24 ; ASIANetwork Exchange Volume 2017 ; 2017 ; http://www.asianetworkexchange.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 25 ; ASIANetwork Exchange Volume 2018 ; 2018 ; https://www.asianetworkexchange.org/ ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2019 ; 26 ; ASIANetwork Exchange Volume 2019 ; 2019 ; https://www.asianetworkexchange.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; 26 ; ASIANetwork Exchange Volume 2019 ; 2019 ; https://www.asianetworkexchange.org/ ; >
 
   }
 
@@ -344,7 +344,7 @@
       au < finished ; crawling ; 2016 ; 2 ; Open Library of Humanities Volume 2016 ; 2016 ; https://olh.openlibhums.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; 3 ; Open Library of Humanities Volume 2017 ; 2017 ; https://olh.openlibhums.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2018 ; 4 ; Open Library of Humanities Volume 2018 ; 2018 ; https://olh.openlibhums.org/ ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2019 ; 5 ; Open Library of Humanities Volume 2019 ; 2019 ; https://olh.openlibhums.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; 5 ; Open Library of Humanities Volume 2019 ; 2019 ; https://olh.openlibhums.org/ ; >
 
   }
 
@@ -448,7 +448,7 @@
       au < doesNotExist ; doesNotExist ; 2016 ; 26 ; Theoretical Roman Archaeology Journal Volume 2016 ; 2016 ; https://traj.openlibhums.org/ ; >
       au < doesNotExist ; doesNotExist ; 2017 ; 27 ; Theoretical Roman Archaeology Journal Volume 2017 ; 2017 ; https://traj.openlibhums.org/ ; >
       au < finished ; manifest ; 2018 ; 28 ; Theoretical Roman Archaeology Journal Volume 2018 ; 2018 ; https://traj.openlibhums.org/ ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2019 ; 29 ; Theoretical Roman Archaeology Journal Volume 2019 ; 2019 ; https://traj.openlibhums.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; 29 ; Theoretical Roman Archaeology Journal Volume 2019 ; 2019 ; https://traj.openlibhums.org/ ; >
 
   }
 
@@ -1160,7 +1160,7 @@
       au < finished ; crawling ; 2016 ; 17 ; International Journal of Integrated Care Volume 2016 ; 2016 ; http://www.ijic.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2017 ; 18 ; International Journal of Integrated Care Volume 2017 ; 2017 ; http://www.ijic.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 19 ; International Journal of Integrated Care Volume 2018 ; 2018 ; https://www.ijic.org/ ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2019 ; 20 ; International Journal of Integrated Care Volume 2019 ; 2019 ; https://www.ijic.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; 20 ; International Journal of Integrated Care Volume 2019 ; 2019 ; https://www.ijic.org/ ; >
 
   }
 
@@ -2883,7 +2883,7 @@
 #      param[base_url] = https://sjms.nu/
 
       au < frozen ; exists ; 2018 ; 1 ; Scandinavian Military Studies Volume 2018 ; 2018 ; https://sjms.nu/ ; >
-      au < crawling ; exists ; 2019 ; 2 ; Scandinavian Military Studies Volume 2019 ; 2019 ; https://sjms.nu/ ; >
+      au < deepCrawl ; exists ; 2019 ; 2 ; Scandinavian Military Studies Volume 2019 ; 2019 ; https://sjms.nu/ ; >
 
   }
 }

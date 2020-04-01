@@ -47,7 +47,7 @@
     au < frozen ; exists ; 2016 ; 4 ; Biodiversity Data Journal Volume 2016 ; 2016 ; https://bdj.pensoft.net/ ; >
     au < frozen ; exists ; 2017 ; 5 ; Biodiversity Data Journal Volume 2017 ; 2017 ; https://bdj.pensoft.net/ ; >
     au < finished ; crawling ; 2018 ; 6 ; Biodiversity Data Journal Volume 2018 ; 2018 ; https://bdj.pensoft.net/ ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2019 ; 6 ; Biodiversity Data Journal Volume 2019 ; 2019 ; https://bdj.pensoft.net/ ; >
+    au < deepCrawl ; exists ; 2019 ; 6 ; Biodiversity Data Journal Volume 2019 ; 2019 ; https://bdj.pensoft.net/ ; >
 
    }
 
@@ -341,7 +341,7 @@
 
       au < frozen ; exists ; 2017 ; 2017 ; Alpine Entomology Volume 2017 ; 2017 ; https://alpineentomology.pensoft.net/ ; >
       au < frozen ; exists ; 2018 ; 2018 ; Alpine Entomology Volume 2018 ; 2018 ; https://alpineentomology.pensoft.net/ ; >
-      au < crawling ; exists ; 2019 ; 2019 ; Alpine Entomology Volume 2019 ; 2019 ; https://alpineentomology.pensoft.net/ ; >
+      au < deepCrawl ; exists ; 2019 ; 2019 ; Alpine Entomology Volume 2019 ; 2019 ; https://alpineentomology.pensoft.net/ ; >
 
   }
 

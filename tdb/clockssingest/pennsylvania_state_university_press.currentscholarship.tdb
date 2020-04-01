@@ -272,7 +272,7 @@
       au < frozen ; exists ; 2016 ; The Journal of Ayn Rand Studies Volume 16 ; 2016 ; http://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2017 ; The Journal of Ayn Rand Studies Volume 17 ; 2017 ; http://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2018 ; The Journal of Ayn Rand Studies Volume 18 ; 2018 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2019 ; The Journal of Ayn Rand Studies Volume 19 ; 2019 ; https://www.jstor.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; The Journal of Ayn Rand Studies Volume 19 ; 2019 ; https://www.jstor.org/ ; >
 
   }
 
@@ -489,7 +489,7 @@
       au < frozen ; exists ; 2016 ; Mediterranean Studies Volume 24 ; 2016 ; http://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2017 ; Mediterranean Studies Volume 25 ; 2017 ; http://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2018 ; Mediterranean Studies Volume 26 ; 2018 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2019 ; Mediterranean Studies Volume 27 ; 2019 ; https://www.jstor.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; Mediterranean Studies Volume 27 ; 2019 ; https://www.jstor.org/ ; >
 
   }
 
@@ -634,7 +634,7 @@
       au < frozen ; exists ; 2016 ; SHAW: The Journal of Bernard Shaw Studies Volume 36 ; 2016 ; http://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2017 ; SHAW: The Journal of Bernard Shaw Studies Volume 37 ; 2017 ; http://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2018 ; SHAW: The Journal of Bernard Shaw Studies Volume 38 ; 2018 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2019 ; SHAW: The Journal of Bernard Shaw Studies Volume 39 ; 2019 ; https://www.jstor.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; SHAW: The Journal of Bernard Shaw Studies Volume 39 ; 2019 ; https://www.jstor.org/ ; >
 
   }
 
@@ -706,7 +706,7 @@
       au < frozen ; exists ; 2016 ; Studies in American Jewish Literature Volume 35 ; 2016 ; http://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2017 ; Studies in American Jewish Literature Volume 36 ; 2017 ; http://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2018 ; Studies in American Jewish Literature Volume 37 ; 2018 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2019 ; Studies in American Jewish Literature Volume 38 ; 2019 ; https://www.jstor.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; Studies in American Jewish Literature Volume 38 ; 2019 ; https://www.jstor.org/ ; >
 
   }
 
@@ -881,7 +881,7 @@
 
       param[journal_id] = caliope
 
-      au < crawling ; exists ; 2019 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
 
   }
 
@@ -1813,7 +1813,7 @@
       au < frozen ; exists ; 2016 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 2016 ; 2016 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2017 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2018 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2019 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
 
   }
 
@@ -1892,7 +1892,7 @@
       au < frozen ; exists ; 2016 ; William Carlos Williams Review Volume 2016 ; 2016 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2017 ; William Carlos Williams Review Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2018 ; William Carlos Williams Review Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2019 ; William Carlos Williams Review Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; William Carlos Williams Review Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
 
   }
 

@@ -389,7 +389,7 @@
       au < finished ; manifest ; 2016 ; Extrapolation Volume 57 ; 57 ; http://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2017 ; Extrapolation Volume 58 ; 58 ; http://online.liverpooluniversitypress.co.uk/ ; >
       au < deepCrawl ; exists ; 2018 ; Extrapolation Volume 59 ; 59 ; https://online.liverpooluniversitypress.co.uk/ ; >
-      au < crawling ; exists ; 2019 ; Extrapolation Volume 60 ; 60 ; https://online.liverpooluniversitypress.co.uk/ ; >
+      au < deepCrawl ; exists ; 2019 ; Extrapolation Volume 60 ; 60 ; https://online.liverpooluniversitypress.co.uk/ ; >
       au < expected ; exists ; 2020 ; Extrapolation Volume 61 ; 61 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
@@ -523,7 +523,7 @@
     au < finished ; manifest ; 2016 ; International Development Planning Review Volume 38 ; 38 ; http://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; International Development Planning Review Volume 39 ; 39 ; http://online.liverpooluniversitypress.co.uk/ ; >
     au < deepCrawl ; exists ; 2018 ; International Development Planning Review Volume 40 ; 40 ; https://online.liverpooluniversitypress.co.uk/ ; >
-    au < crawling ; exists ; 2019 ; International Development Planning Review Volume 41 ; 41 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < deepCrawl ; exists ; 2019 ; International Development Planning Review Volume 41 ; 41 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < manifest ; exists ; 2020 ; International Development Planning Review Volume 42 ; 42 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
