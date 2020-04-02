@@ -87,7 +87,7 @@
     ALSO - possibly supplementary data or something will use this to swallow a redirect
        /deliver/fulltext/10.1128/9781555817992/9781555812058_Chap03.pdf?itemId=/content/book/10.1128/9781555817992.chap3&mimeType=pdf&isFastTrackArticle=
        http://www.asmscience.org/deliver/fulltext/10.1128/9781555816896/9781555815370_Chap05.pdf
-     and the landing pages for images and tables without 'book' subdir in url 
+     and the landing pages for images and tables without 'book' subdir in url
        http://www.asmscience.org/content/10.1128/9781555816896.ch05.ch05fig01(fig*|.tab*|.T*)
        http://www.asmscience.org/docserver/ahah/fulltext/10.1128/9781555816896/f0101-01_thmb.gif
      thumbnails and full-sized versions of images
@@ -126,9 +126,9 @@
          Redirected to excluded URL: http://www.asmscience.org/docserver/fulltext/10.1128/9781683670247/9781683670230_FM.pdf?expires=1584561617&id=id&accname=guest&checksum=D77C3DDDE52653FE70D9B2D056625128
          Notice the difference, it is redirected from "https" to "http" at 3/2020, maybe in the future, it will change to "https" to "https"
       -->
+    <string>au_substance_url_pattern</string>
     <list>
       <string>"^%sdeliver/fulltext/%s/[^./]+\.pdf", base_url, doi</string>
-      <string>"^https?://%s/docserver/fulltext/%s/[^./]+\.pdf", url_host(base_url), doi</string>
     </list>
   </entry>
   <!--  au_crawl_depth is default, 1...the start url is the book landing page  -->
@@ -145,9 +145,9 @@
       <string>/docserver/preview/.*\.gif$</string>
     </list>
   </entry>
-  <!-- don't worry about polling for those low-importance files that will 
+  <!-- don't worry about polling for those low-importance files that will
        repair from peer in time (eg due to versioning, etc)  -->
-   <entry>
+  <entry>
     <string>au_url_poll_result_weight</string>
     <list>
       <string>(://[^/]+/(css|files|images|js|marketing)/), 0</string>
@@ -164,7 +164,7 @@
   </entry>
   <entry>
     <string>plugin_fetch_rate_limiter_source</string>
-      <string>plugin</string>
+    <string>plugin</string>
   </entry>
   <entry>
     <string>plugin_url_consumer_factory</string>
@@ -185,8 +185,8 @@
     <string>org.lockss.plugin.pub2web.Pub2WebUrlNormalizer</string>
   </entry>
   -->
-<!--  child plugins should define their own crawl filter/html filter until we see patterns -->
-<!--  child plugins will also probably need their own link extractor  -->
+  <!--  child plugins should define their own crawl filter/html filter until we see patterns -->
+  <!--  child plugins will also probably need their own link extractor  -->
   <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.pub2web.Pub2WebArticleIteratorFactory</string>
@@ -195,7 +195,7 @@
     <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.pub2web.Pub2WebArticleIteratorFactory</string>
   </entry>
-   <entry>
+  <entry>
     <string>text/html_metadata_extractor_factory_map</string>
     <map>
       <entry>
@@ -203,5 +203,5 @@
         <string>org.lockss.plugin.pub2web.Pub2WebHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
-  </entry> 
+  </entry>
 </map>
