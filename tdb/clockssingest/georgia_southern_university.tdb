@@ -22,7 +22,7 @@
 
       au < finished ; crawling ; 2017 ; Armstrong Undergraduate Journal of History Volume 7 ; 7 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2018 ; Armstrong Undergraduate Journal of History Volume 8 ; 8 ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2019 ; Armstrong Undergraduate Journal of History Volume 9 ; 9 ; >
+      au < deepCrawl ; exists ; 2019 ; Armstrong Undergraduate Journal of History Volume 9 ; 9 ; >
       au < expected ; exists ; 2020 ; Armstrong Undergraduate Journal of History Volume 10 ; 10 ; >
 
   }

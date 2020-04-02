@@ -532,7 +532,7 @@
     au < finished ; crawling ; 2016 ; Theory of Probability and Mathematical Statistics Volume 88 ; 2016 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Theory of Probability and Mathematical Statistics Volume 89 ; 2017 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; Theory of Probability and Mathematical Statistics Volume 90 ; 2018 ; http://www.ams.org/ ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2019 ; Theory of Probability and Mathematical Statistics Volume 91 ; 2019 ; https://www.ams.org/ ; >
+    au < deepCrawl ; exists ; 2019 ; Theory of Probability and Mathematical Statistics Volume 91 ; 2019 ; https://www.ams.org/ ; >
     au < expected ; exists ; 2020 ; Theory of Probability and Mathematical Statistics Volume 92 ; 2020 ; https://www.ams.org/ ; >
 
   }   
@@ -627,7 +627,7 @@
       
     au < finished ; crawling ; 2017 ; Sugaku Expositions Volume 30 ; 2017 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2018 ; Sugaku Expositions Volume 31 ; 2018 ; http://www.ams.org/ ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2019 ; Sugaku Expositions Volume 32 ; 2019 ; https://www.ams.org/ ; >
+    au < deepCrawl ; exists ; 2019 ; Sugaku Expositions Volume 32 ; 2019 ; https://www.ams.org/ ; >
     au < expected ; exists ; 2020 ; Sugaku Expositions Volume 33 ; 2020 ; https://www.ams.org/ ; >
 
   }
