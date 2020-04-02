@@ -916,8 +916,9 @@ while (my $line = <>) {
             if ($req->url ne $resp->request->uri) {
               $vol_title = $resp->request->uri;
               $result = "Redirected";
-            } elsif (defined($man_contents)) {
-		#<h1>CLOCKSS - Published Issues: Biosimilars 2015</h1>
+            } elsif (defined($man_contents) && ($man_contents =~ m/<h1>CLOCKSS - Published Issues: (.*) $param{year}/) && ($man_contents =~ m/href=\"[^\"]*\">$1/)) { 
+                #<h1>CLOCKSS - Published Issues: Biosimilars 2015</h1>
+                #if ($man_contents =~ m/<h1>CLOCKSS - Published Issues: (.*) $param{year}<\/h1>/si) {
                 if ($man_contents =~ m/<h1>CLOCKSS - Published Issues: (.*) $param{year}<\/h1>/si) {
                     $vol_title = $1
                 }
