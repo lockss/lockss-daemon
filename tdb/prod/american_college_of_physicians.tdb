@@ -13,7 +13,8 @@
       issnl = 0003-4819
     >
     
-    comment[down] = Left HIGHWIRE for Silverchair April 2012
+    comment[down1] = HIGHWIRE -> Silverchair April 2012
+    comment[dowm2] = Silverchair -> Atypon May 2020
 
   {
   
@@ -182,18 +183,25 @@
   
   {
     
-    plugin = org.lockss.plugin.silverchair.SilverchairJournalsPlugin
+    ##plugin = org.lockss.plugin.silverchair.SilverchairJournalsPlugin
+    ##param[base_url] = http://annals.org/
+    ##param[resource_id] = 90
+    ##implicit < status ; year ; name ; param[year] >
+
+    plugin = org.lockss.plugin.atypon.GenericAtyponPlugin
     param[base_url] = http://annals.org/
-    param[resource_id] = 90
-    implicit < status ; year ; name ; param[year] >
+    implicit < status ; year ; name ; param[volume_name] >
     
-    au < exists ; 2010 ; Annals of Internal Medicine Volume 152-153 ; 2010 >
-    au < exists ; 2011 ; Annals of Internal Medicine Volume 154-155 ; 2011 >
-    au < exists ; 2012 ; Annals of Internal Medicine Volume 156-157 ; 2012 >
-    au < exists ; 2013 ; Annals of Internal Medicine Volume 158-159 ; 2013 >
-    au < exists ; 2014 ; Annals of Internal Medicine Volume 160-161 ; 2014 >
-    au < exists ; 2015 ; Annals of Internal Medicine Volume 162-163 ; 2015 >
-    au < exists ; 2016 ; Annals of Internal Medicine Volume 164-165 ; 2016 >
+    param[journal_id] = aim
+    
+    au < exists ; 2013 ; Annals of Internal Medicine Volume 157 ; 157 >
+    au < exists ; 2014 ; Annals of Internal Medicine Volume 158 ; 158 >
+    au < exists ; 2015 ; Annals of Internal Medicine Volume 159 ; 159 >
+    au < exists ; 2016 ; Annals of Internal Medicine Volume 160 ; 160 >
+    au < exists ; 2017 ; Annals of Internal Medicine Volume 161 ; 161 >
+    au < exists ; 2018 ; Annals of Internal Medicine Volume 162 ; 162 >
+    au < exists ; 2019 ; Annals of Internal Medicine Volume 163 ; 163 >
+    au < exists ; 2020 ; Annals of Internal Medicine Volume 164 ; 164 >
     
   }
 
