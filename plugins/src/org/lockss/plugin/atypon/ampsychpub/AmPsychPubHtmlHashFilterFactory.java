@@ -85,14 +85,6 @@ public class AmPsychPubHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFac
         HtmlNodeFilters.tagWithAttribute("div", "class", "articleList"),
         // showPopup&citid=citart1
         HtmlNodeFilters.tagWithAttributeRegex("body", "class", "popupBody"),
-        // Need to include the following because of html source change, 3/2020
-        // https://focus.psychiatryonline.org/doi/10.1176/appi.focus.160201
-        // https://focus.psychiatryonline.org/doi/full/10.1176/appi.focus.160201
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "hlFld-Fulltext"),
-        // https://focus.psychiatryonline.org/doi/abs/10.1176/appi.focus.160201, it is not guaranteed it has content, some of them has an image onlys
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "hlFld-Abstract"),
-        // https://focus.psychiatryonline.org/toc/foc/16/1
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "issue-item"),
     };
     
     // handled by parent: script, sfxlink, stylesheet, pdfplus file sise
