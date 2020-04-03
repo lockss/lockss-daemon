@@ -24,18 +24,18 @@
     #misorder below because of fixing a conflict. Feel free to fix.
     param[base_url] = http://jcb.rupress.org/
 
-    au < rup.ClockssRUPDrupalPlugin ; finished ; crawling ; 1992 ; The Journal of Cell Biology Volume 118 ; 118 ; reingest1.clockss.org:8082 >
-    au < rup.ClockssRUPDrupalPlugin ; finished ; crawling ; 1992 ; The Journal of Cell Biology Volume 119 ; 119 ; reingest2.clockss.org:8085 >
+    au < rup.ClockssRUPDrupalPlugin ; finished ; frozen ; 1992 ; The Journal of Cell Biology Volume 118 ; 118 ; reingest1.clockss.org:8082 >
+    au < rup.ClockssRUPDrupalPlugin ; finished ; frozen ; 1992 ; The Journal of Cell Biology Volume 119 ; 119 ; reingest2.clockss.org:8085 >
     au < rup.ClockssRUPDrupalPlugin ; finished ; frozen ; 1993 ; The Journal of Cell Biology Volume 120 ; 120 ; reingest3.clockss.org:8083 >
-    au < rup.ClockssRUPDrupalPlugin ; finished ; crawling ; 1993 ; The Journal of Cell Biology Volume 121 ; 121 ; reingest4.clockss.org:8082 >
+    au < rup.ClockssRUPDrupalPlugin ; finished ; frozen ; 1993 ; The Journal of Cell Biology Volume 121 ; 121 ; reingest4.clockss.org:8082 >
     au < rup.ClockssRUPDrupalPlugin ; finished ; frozen ; 1993 ; The Journal of Cell Biology Volume 122 ; 122 ; reingest5.clockss.org:8082 >
-    au < rup.ClockssRUPDrupalPlugin ; finished ; crawling ; 1993 ; The Journal of Cell Biology Volume 123 ; 123 ; reingest1.clockss.org:8082 >
-    au < rup.ClockssRUPDrupalPlugin ; finished ; crawling ; 1994 ; The Journal of Cell Biology Volume 124 ; 124 ; reingest2.clockss.org:8085 >
-    au < rup.ClockssRUPDrupalPlugin ; finished ; crawling ; 1994 ; The Journal of Cell Biology Volume 125 ; 125 ; reingest3.clockss.org:8083 >
-    au < rup.ClockssRUPDrupalPlugin ; finished ; crawling ; 1994 ; The Journal of Cell Biology Volume 126 ; 126 ; reingest4.clockss.org:8082 >
-    au < rup.ClockssRUPDrupalPlugin ; finished ; crawling ; 1994 ; The Journal of Cell Biology Volume 127 ; 127 ; reingest5.clockss.org:8082 >
-    au < rup.ClockssRUPDrupalPlugin ; finished ; crawling ; 1995 ; The Journal of Cell Biology Volume 128 ; 128 ; reingest1.clockss.org:8082 >
-    au < rup.ClockssRUPDrupalPlugin ; finished ; crawling ; 1995 ; The Journal of Cell Biology Volume 129 ; 129 ; reingest2.clockss.org:8085 >
+    au < rup.ClockssRUPDrupalPlugin ; finished ; frozen ; 1993 ; The Journal of Cell Biology Volume 123 ; 123 ; reingest1.clockss.org:8082 >
+    au < rup.ClockssRUPDrupalPlugin ; finished ; frozen ; 1994 ; The Journal of Cell Biology Volume 124 ; 124 ; reingest2.clockss.org:8085 >
+    au < rup.ClockssRUPDrupalPlugin ; finished ; frozen ; 1994 ; The Journal of Cell Biology Volume 125 ; 125 ; reingest3.clockss.org:8083 >
+    au < rup.ClockssRUPDrupalPlugin ; finished ; frozen ; 1994 ; The Journal of Cell Biology Volume 126 ; 126 ; reingest4.clockss.org:8082 >
+    au < rup.ClockssRUPDrupalPlugin ; finished ; frozen ; 1994 ; The Journal of Cell Biology Volume 127 ; 127 ; reingest5.clockss.org:8082 >
+    au < rup.ClockssRUPDrupalPlugin ; finished ; frozen ; 1995 ; The Journal of Cell Biology Volume 128 ; 128 ; reingest1.clockss.org:8082 >
+    au < rup.ClockssRUPDrupalPlugin ; finished ; frozen ; 1995 ; The Journal of Cell Biology Volume 129 ; 129 ; reingest2.clockss.org:8085 >
     au < rup.ClockssRUPDrupalPlugin ; finished ; frozen ; 1995 ; The Journal of Cell Biology Volume 130 ; 130 ; reingest3.clockss.org:8083 >
     au < rup.ClockssRUPDrupalPlugin ; finished ; frozen ; 1995 ; The Journal of Cell Biology Volume 131 ; 131 ; reingest4.clockss.org:8082 >
     au < rup.ClockssRUPDrupalPlugin ; finished ; frozen ; 1996 ; The Journal of Cell Biology Volume 132 ; 132 ; reingest5.clockss.org:8082 >
