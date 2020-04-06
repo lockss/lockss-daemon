@@ -445,7 +445,7 @@
     au < finished ; frozen ; 2017 ; Corpora Volume 12 ; 12 ; http://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2018 ; Corpora Volume 13 ; 13 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2019 ; Corpora Volume 14 ; 14 ; https://www.euppublishing.com/ ; >
-    au < expected ; exists ; 2020 ; Corpora Volume 15 ; 15 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 2020 ; Corpora Volume 15 ; 15 ; https://www.euppublishing.com/ ; >
 
   }
   
@@ -1499,7 +1499,7 @@
     au < finished ; crawling ; 2017 ; Psychoanalysis and History Volume 19 ; 19 ; http://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2018 ; Psychoanalysis and History Volume 20 ; 20 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2019 ; Psychoanalysis and History Volume 21 ; 21 ; https://www.euppublishing.com/ ; >
-    au < expected ; exists ; 2020 ; Psychoanalysis and History Volume 22 ; 22 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 2020 ; Psychoanalysis and History Volume 22 ; 22 ; https://www.euppublishing.com/ ; >
 
   }
 
@@ -1782,7 +1782,7 @@
     au < finished ; crawling ; 2017 ; Scottish Historical Review Volume 96 ; 96 ; http://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2018 ; Scottish Historical Review Volume 97 ; 97 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2019 ; Scottish Historical Review Volume 98 ; 98 ; https://www.euppublishing.com/ ; >
-    au < expected ; exists ; 2020 ; Scottish Historical Review Volume 99 ; 99 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 2020 ; Scottish Historical Review Volume 99 ; 99 ; https://www.euppublishing.com/ ; >
 
   }
 

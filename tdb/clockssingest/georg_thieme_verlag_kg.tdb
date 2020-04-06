@@ -580,7 +580,7 @@
    au < deepCrawl ; exists ; 2017 ; 2017 ; Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery Volume 36 ; 36 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery Volume 37 ; 37 ; >
    au < crawling ; exists ; 2019 ; 2019 ; Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery Volume 38 ; 38 ; >
-   au < expected ; exists ; 2020 ; 2020 ; Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery Volume 39 ; 39 ; >
+   au < manifest ; exists ; 2020 ; 2020 ; Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery Volume 39 ; 39 ; >
 
    }
 
@@ -943,7 +943,7 @@
    au < deepCrawl ; exists ; 2017 ; 2017 ; Deutsche Zeitschrift für Onkologie Volume 49 ; 49 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Deutsche Zeitschrift für Onkologie Volume 50 ; 50 ; >
    au < deepCrawl ; exists ; 2019 ; 2019 ; Deutsche Zeitschrift für Onkologie Volume 51 ; 51 ; >
-   au < expected ; exists ; 2020 ; 2020 ; Deutsche Zeitschrift für Onkologie Volume 52 ; 52 ; >
+   au < manifest ; exists ; 2020 ; 2020 ; Deutsche Zeitschrift für Onkologie Volume 52 ; 52 ; >
 
   }
 
@@ -7733,7 +7733,7 @@
     comment[years] = 2019-current
 
     au < crawling ; exists ; 2019 ; 2019 ; Yearbook of Medical Informatics Volume 83 ; 83 ; >
-    au < expected ; exists ; 2020 ; 2020 ; Yearbook of Medical Informatics Volume 84 ; 84 ; >
+    au < manifest ; exists ; 2020 ; 2020 ; Yearbook of Medical Informatics Volume 84 ; 84 ; >
 
   }
 }
