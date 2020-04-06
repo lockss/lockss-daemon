@@ -60,6 +60,7 @@ public class NewHindawiHtmlHashFilterFactory implements FilterFactory {
             new TagNameFilter("header"),
             new TagNameFilter("footer"),
 
+            // article page: https://www.hindawi.com/journals/aag/2019/9862543
             HtmlNodeFilters.tagWithAttribute("div", "id", "header__padding"),
             HtmlNodeFilters.tagWithAttribute("div", "id", "journal__navigation"),
             HtmlNodeFilters.tagWithAttribute("div", "id", "leftSectionMenu"),
@@ -67,6 +68,12 @@ public class NewHindawiHtmlHashFilterFactory implements FilterFactory {
             HtmlNodeFilters.tagWithAttribute("div", "class", "article_sticky_top_toolbar"),
             HtmlNodeFilters.tagWithAttribute("div", "class", "article_sticky_bottom_toolbar"),
 
+            // toc page: https://www.hindawi.com/journals/aag/contents/year/2019/page/1
+            HtmlNodeFilters.tagWithAttribute("ul", "id", "scrollable_area"),
+            HtmlNodeFilters.tagWithAttribute("div", "class", "advWrapper"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pagination"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "toolbar_part"),
+            
     };
     InputStream filteredStream = new HtmlFilterInputStream(in, encoding,
             HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
