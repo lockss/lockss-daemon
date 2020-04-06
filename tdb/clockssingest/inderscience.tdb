@@ -1926,7 +1926,7 @@
 
       param[journal_id] = ijcast
 
-      au < crawling ; exists ; 2016 ; International Journal of Complexity in Applied Science and Engineering Volume 1 [partial] ; 1 ; http://www.inderscienceonline.com/ ; > #issue 2, 3 & 4 not online yet
+      au < frozen ; exists ; 2016 ; International Journal of Complexity in Applied Science and Engineering Volume 1 [partial] ; 1 ; http://www.inderscienceonline.com/ ; > #issue 2, 3 & 4 not online yet
 
     }
 
@@ -8442,7 +8442,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Social Entrepreneurship and Innovation Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2014-2015 ; International Journal of Social Entrepreneurship and Innovation Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2016-2017 ; International Journal of Social Entrepreneurship and Innovation Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2018 ; International Journal of Social Entrepreneurship and Innovation Volume 5 [partial] ; 5 ; https://www.inderscienceonline.com/ ; > #issue 3, 4 not online
+      au < frozen ; exists ; 2018 ; International Journal of Social Entrepreneurship and Innovation Volume 5 [partial] ; 5 ; https://www.inderscienceonline.com/ ; > #issue 3, 4 not online
 
     }
 
