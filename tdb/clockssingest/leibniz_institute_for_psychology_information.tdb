@@ -80,7 +80,7 @@
       au < ojs2.ClockssOJS2Plugin ; finished ; finished ; 2015 ; Interpersona: An International Journal on Personal Relationships Volume 9 ; 9 ; 2015 ; http://interpersona.psychopen.eu/ ; reingest2.clockss.org:8085 >
       au < ojs2.ClockssOJS2Plugin ; finished ; crawling ; 2016 ; Interpersona: An International Journal on Personal Relationships Volume 10 ; 10 ; 2016 ; http://interpersona.psychopen.eu/ ; reingest3.clockss.org:8083 >
       au < ojs2.ClockssOJS2Plugin ; finished ; manifest ; 2017 ; Interpersona: An International Journal on Personal Relationships Volume 11 ; 11 ; 2017 ; https://interpersona.psychopen.eu/ ; reingest4.clockss.org:8082 >
-      au < ojs2.ClockssOJS2Plugin ; deepCrawl ; exists ; 2018 ; Interpersona: An International Journal on Personal Relationships Volume 12 ; 12 ; 2018 ; https://interpersona.psychopen.eu/ ; >
+      au < ojs2.ClockssOJS2Plugin ; finished ; manifest ; 2018 ; Interpersona: An International Journal on Personal Relationships Volume 12 ; 12 ; 2018 ; https://interpersona.psychopen.eu/ ; reingest5.clockss.org:8082 >
       au < ojs2.ClockssOJS2Plugin ; manifest ; exists ; 2019 ; Interpersona: An International Journal on Personal Relationships Volume 13 ; 13 ; 2019 ; https://interpersona.psychopen.eu/ ; >
 
   }
@@ -117,7 +117,7 @@
       au < ojs2.ClockssOJS2Plugin ; finished ; manifest ; 2015 ; Journal of Social and Political Psychology Volume 3 ; 3 ; 2015 ; http://jspp.psychopen.eu/ ; reingest5.clockss.org:8082 >
       au < ojs2.ClockssOJS2Plugin ; finished ; finished ; 2016 ; Journal of Social and Political Psychology Volume 4 ; 4 ; 2016 ; http://jspp.psychopen.eu/ ; reingest1.clockss.org:8082 >
       au < ojs2.ClockssOJS2Plugin ; deepCrawl ; exists ; 2017 ; Journal of Social and Political Psychology Volume 5 ; 5 ; 2017 ; https://jspp.psychopen.eu/ ; >
-      au < ojs2.ClockssOJS2Plugin ; deepCrawl ; exists ; 2018 ; Journal of Social and Political Psychology Volume 6 ; 6 ; 2018 ; https://jspp.psychopen.eu/ ; >
+      au < ojs2.ClockssOJS2Plugin ; finished ; manifest ; 2018 ; Journal of Social and Political Psychology Volume 6 ; 6 ; 2018 ; https://jspp.psychopen.eu/ ; reingest3.clockss.org:8083 >
       au < ojs2.ClockssOJS2Plugin ; crawling ; exists ; 2019 ; Journal of Social and Political Psychology Volume 7 ; 7 ; 2019 ; https://jspp.psychopen.eu/ ; >
 
   }
@@ -157,7 +157,7 @@
       au < ojs2.ClockssOJS2Plugin ; finished ; finished ; 2015 ; Psychology, Community & Health Volume 4 ; 4 ; 2015 ; http://pch.psychopen.eu/ ; reingest2.clockss.org:8085 >
       au < ojs2.ClockssOJS2Plugin ; finished ; crawling ; 2016 ; Psychology, Community & Health Volume 5 ; 5 ; 2016 ; http://pch.psychopen.eu/ ; reingest1.clockss.org:8082 >
       au < ojs2.ClockssOJS2Plugin ; deepCrawl ; exists ; 2017 ; Psychology, Community & Health Volume 6 ; 6 ; 2017 ; https://pch.psychopen.eu/ ; >
-      au < ojs2.ClockssOJS2Plugin ; deepCrawl ; exists ; 2018 ; Psychology, Community & Health Volume 7 ; 7 ; 2018 ; https://pch.psychopen.eu/ ; >
+      au < ojs2.ClockssOJS2Plugin ; finished ; manifest ; 2018 ; Psychology, Community & Health Volume 7 ; 7 ; 2018 ; https://pch.psychopen.eu/ ; reingest4.clockss.org:8082 >
       au < ojs2.ClockssOJS2Plugin ; manifest ; exists ; 2019 ; Psychology, Community & Health Volume 8 ; 8 ; 2019 ; https://pch.psychopen.eu/ ; >
 
   }

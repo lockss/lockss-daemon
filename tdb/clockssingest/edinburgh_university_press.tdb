@@ -152,7 +152,7 @@
     au < finished ; crawling ; 2016 ; Victoriographies – A Journal of Nineteenth-Century Writing, 1790-1914 Volume 6 ; 6 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Victoriographies – A Journal of Nineteenth-Century Writing, 1790-1914 Volume 7 ; 7 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2018 ; Victoriographies – A Journal of Nineteenth-Century Writing, 1790-1914 Volume 8 ; 8 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2019 ; Victoriographies – A Journal of Nineteenth-Century Writing, 1790-1914 Volume 9 ; 9 ; https://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2019 ; Victoriographies – A Journal of Nineteenth-Century Writing, 1790-1914 Volume 9 ; 9 ; https://www.euppublishing.com/ ; >
     au < manifest ; exists ; 2020 ; Victoriographies – A Journal of Nineteenth-Century Writing, 1790-1914 Volume 10 ; 10 ; https://www.euppublishing.com/ ; >
 
   }
@@ -445,7 +445,7 @@
     au < finished ; frozen ; 2017 ; Corpora Volume 12 ; 12 ; http://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2018 ; Corpora Volume 13 ; 13 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2019 ; Corpora Volume 14 ; 14 ; https://www.euppublishing.com/ ; >
-    au < expected ; exists ; 2020 ; Corpora Volume 15 ; 15 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 2020 ; Corpora Volume 15 ; 15 ; https://www.euppublishing.com/ ; >
 
   }
   
@@ -651,7 +651,7 @@
      au < finished ; crawling ; 2016 ; Film-Philosophy Volume 20 ; 20 ; http://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
      au < finished ; crawling ; 2017 ; Film-Philosophy Volume 21 ; 21 ; http://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
      au < finished ; crawling ; 2018 ; Film-Philosophy Volume 22 ; 22 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
-     au < crawling ; exists ; 2019 ; Film-Philosophy Volume 23 ; 23 ; https://www.euppublishing.com/ ; >
+     au < deepCrawl ; exists ; 2019 ; Film-Philosophy Volume 23 ; 23 ; https://www.euppublishing.com/ ; >
      au < manifest ; exists ; 2020 ; Film-Philosophy Volume 24 ; 24 ; https://www.euppublishing.com/ ; >
 
   }
@@ -1051,7 +1051,7 @@
     au < finished ; crawling ; 2016 ; Journal of Qur'anic Studies Volume 18 ; 18 ; http://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Journal of Qur'anic Studies Volume 19 ; 19 ; http://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2018 ; Journal of Qur'anic Studies Volume 20 ; 20 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2019 ; Journal of Qur'anic Studies Volume 21 ; 21 ; https://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2019 ; Journal of Qur'anic Studies Volume 21 ; 21 ; https://www.euppublishing.com/ ; >
     au < manifest ; exists ; 2020 ; Journal of Qur'anic Studies Volume 22 ; 22 ; https://www.euppublishing.com/ ; >
 
   }
@@ -1201,7 +1201,7 @@
     au < finished ; crawling ; 2016 ; Modernist Cultures Volume 11 ; 11 ; http://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2017 ; Modernist Cultures Volume 12 ; 12 ; http://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; Modernist Cultures Volume 13 ; 13 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2019 ; Modernist Cultures Volume 14 ; 14 ; https://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2019 ; Modernist Cultures Volume 14 ; 14 ; https://www.euppublishing.com/ ; >
     au < manifest ; exists ; 2020 ; Modernist Cultures Volume 15 ; 15 ; https://www.euppublishing.com/ ; >
 
   }
@@ -1462,7 +1462,7 @@
     au < finished ; crawling ; 2016 ; Paragraph Volume 39 ; 39 ; http://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2017 ; Paragraph Volume 40 ; 40 ; http://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2018 ; Paragraph Volume 41 ; 41 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2019 ; Paragraph Volume 42 ; 42 ; https://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2019 ; Paragraph Volume 42 ; 42 ; https://www.euppublishing.com/ ; >
     au < manifest ; exists ; 2020 ; Paragraph Volume 43 ; 43 ; https://www.euppublishing.com/ ; >
 
   }
@@ -1498,8 +1498,8 @@
     au < finished ; crawling ; 2016 ; Psychoanalysis and History Volume 18 ; 18 ; http://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Psychoanalysis and History Volume 19 ; 19 ; http://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2018 ; Psychoanalysis and History Volume 20 ; 20 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2019 ; Psychoanalysis and History Volume 21 ; 21 ; https://www.euppublishing.com/ ; >
-    au < expected ; exists ; 2020 ; Psychoanalysis and History Volume 22 ; 22 ; https://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2019 ; Psychoanalysis and History Volume 21 ; 21 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 2020 ; Psychoanalysis and History Volume 22 ; 22 ; https://www.euppublishing.com/ ; >
 
   }
 
@@ -1636,7 +1636,7 @@
       au < finished ; crawling ; 2016 ; Scottish Affairs Volume 25 ; 25 ; http://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2017 ; Scottish Affairs Volume 26 ; 26 ; http://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2018 ; Scottish Affairs Volume 27 ; 27 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2019 ; Scottish Affairs Volume 28 ; 28 ; https://www.euppublishing.com/ ; >
+      au < deepCrawl ; exists ; 2019 ; Scottish Affairs Volume 28 ; 28 ; https://www.euppublishing.com/ ; >
       au < manifest ; exists ; 2020 ; Scottish Affairs Volume 29 ; 29 ; https://www.euppublishing.com/ ; >
 
   }
@@ -1782,7 +1782,7 @@
     au < finished ; crawling ; 2017 ; Scottish Historical Review Volume 96 ; 96 ; http://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2018 ; Scottish Historical Review Volume 97 ; 97 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2019 ; Scottish Historical Review Volume 98 ; 98 ; https://www.euppublishing.com/ ; >
-    au < expected ; exists ; 2020 ; Scottish Historical Review Volume 99 ; 99 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 2020 ; Scottish Historical Review Volume 99 ; 99 ; https://www.euppublishing.com/ ; >
 
   }
 

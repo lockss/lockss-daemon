@@ -143,7 +143,7 @@
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Geological Society of London Memoirs Volume 44 ; 44 ; http://mem.lyellcollection.org/ ; reingest1.clockss.org:8082 >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Geological Society of London Memoirs Volume 45 ; 45 ; http://mem.lyellcollection.org/ ; reingest2.clockss.org:8085 >
     au < ClockssHighWirePressH20Plugin ; finished ; manifest ; 2016 ; Geological Society of London Memoirs Volume 46 ; 46 ; http://mem.lyellcollection.org/ ; reingest4.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; deepCrawl ; exists ; 2017 ; Geological Society of London Memoirs Volume 47 ; 47 ; http://mem.lyellcollection.org/ ;  >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2017 ; Geological Society of London Memoirs Volume 47 ; 47 ; http://mem.lyellcollection.org/ ;  reingest3.clockss.org:8083 >
     au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2017 ; Geological Society of London Memoirs Volume 48 ; 48 ; http://mem.lyellcollection.org/ ; reingest5.clockss.org:8082 >
     au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 2019 ; Geological Society of London Memoirs Volume 49 ; 49 ; https://mem.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 2019 ; Geological Society of London Memoirs Volume 50 ; 50 ; https://mem.lyellcollection.org/ ;  >
@@ -635,7 +635,7 @@
     au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 2019 ; Geological Society of London Special Publications Volume 470 ; 470 ; https://sp.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 2019 ; Geological Society of London Special Publications Volume 471 ; 471 ; https://sp.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2018 ; Geological Society of London Special Publications Volume 472 ; 472 ; https://sp.lyellcollection.org/ ; reingest3.clockss.org:8083 >
-    au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 2019 ; Geological Society of London Special Publications Volume 473 ; 473 ; https://sp.lyellcollection.org/ ;  >
+    au < gsl.ClockssGSLDrupalPlugin ; deepCrawl ; exists ; 2019 ; Geological Society of London Special Publications Volume 473 ; 473 ; https://sp.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 2019 ; Geological Society of London Special Publications Volume 474 ; 474 ; https://sp.lyellcollection.org/ ; >
     au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 2019 ; Geological Society of London Special Publications Volume 475 ; 475 ; https://sp.lyellcollection.org/ ; >
     au < gsl.ClockssGSLDrupalPlugin ; expected ; exists ; 2019 ; Geological Society of London Special Publications Volume 476 ; 476 ; https://sp.lyellcollection.org/ ; >
@@ -751,7 +751,7 @@
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Journal of the Geological Society of London Volume 172 ; 172 ; http://jgs.lyellcollection.org/ ; reingest2.clockss.org:8085 >
     au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2016 ; Journal of the Geological Society of London Volume 173 ; 173 ; http://jgs.lyellcollection.org/ ; reingest5.clockss.org:8082 >
     au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2017 ; Journal of the Geological Society of London Volume 174 ; 174 ; http://jgs.lyellcollection.org/ ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; deepCrawl ; exists ; 2018 ; Journal of the Geological Society of London Volume 175 ; 175 ; http://jgs.lyellcollection.org/ ;  >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2018 ; Journal of the Geological Society of London Volume 175 ; 175 ; http://jgs.lyellcollection.org/ ; reingest3.clockss.org:8083 >
     au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 2019 ; Journal of the Geological Society of London Volume 176 ; 176 ; https://jgs.lyellcollection.org/ ; >
     au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 2020 ; Journal of the Geological Society of London Volume 177 ; 177 ; https://jgs.lyellcollection.org/ ; >
 

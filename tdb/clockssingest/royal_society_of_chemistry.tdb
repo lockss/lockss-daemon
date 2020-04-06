@@ -67,8 +67,8 @@
       au < finished ; manifest ; 2013 ; Analytical Methods Volume 5 ; 5 ; 2013 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2014 ; Analytical Methods Volume 6 ; 6 ; 2014 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2015 ; Analytical Methods Volume 7 ; 7 ; 2015 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2016 ; Analytical Methods Volume 8 ; 8 ; 2016 ; http://pubs.rsc.org/ ; >
-      au < deepCrawl ; exists ; 2017 ; Analytical Methods Volume 9 ; 9 ; 2017 ; http://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2016 ; Analytical Methods Volume 8 ; 8 ; 2016 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2017 ; Analytical Methods Volume 9 ; 9 ; 2017 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; Analytical Methods Volume 10 ; 10 ; 2018 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2019 ; Analytical Methods Volume 11 ; 11 ; 2019 ; https://pubs.rsc.org/ ; >
 
@@ -138,9 +138,9 @@
       param[journal_code] = bm
 
       au < finished ; crawling ; 2013 ; CBiomaterials Science Volume 1 ; 1 ; 2013 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2014 ; CBiomaterials Science Volume 2 ; 2 ; 2014 ; http://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2014 ; CBiomaterials Science Volume 2 ; 2 ; 2014 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2015 ; CBiomaterials Science Volume 3 ; 3 ; 2015 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2016 ; CBiomaterials Science Volume 4 ; 4 ; 2016 ; http://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2016 ; CBiomaterials Science Volume 4 ; 4 ; 2016 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2017 ; CBiomaterials Science Volume 5 ; 5 ; 2017 ; http://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2018 ; CBiomaterials Science Volume 6 ; 6 ; 2018 ; http://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2019 ; CBiomaterials Science Volume 7 ; 7 ; 2019 ; https://pubs.rsc.org/ ; >
@@ -162,9 +162,9 @@
       au < finished ; manifest ; 2012 ; Chemical Communications Volume 48 ; 48 ; 2012 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2013 ; Chemical Communications Volume 49 ; 49 ; 2013 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < zapped ; finished ; 2014 ; Chemical Communications Volume 50 ; 50 ; 2014 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2015 ; Chemical Communications Volume 51 ; 51 ; 2015 ; http://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2015 ; Chemical Communications Volume 51 ; 51 ; 2015 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2016 ; Chemical Communications Volume 52 ; 52 ; 2016 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2017 ; Chemical Communications Volume 53 ; 53 ; 2017 ; http://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2017 ; Chemical Communications Volume 53 ; 53 ; 2017 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018 ; Chemical Communications Volume 54 ; 54 ; 2018 ; http://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2019 ; Chemical Communications Volume 55 ; 55 ; 2019 ; https://pubs.rsc.org/ ; >
 
@@ -410,7 +410,7 @@
       au < finished ; finished ; 2013 ; Green Chemistry Volume 15 ; 15 ; 2013 ; http://pubs.rsc.org/ ; >
       au < finished ; finished ; 2014 ; Green Chemistry Volume 16 ; 16 ; 2014 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2015 ; Green Chemistry Volume 17 ; 17 ; 2015 ; http://pubs.rsc.org/ ; >
-      au < deepCrawl ; exists ; 2016 ; Green Chemistry Volume 18 ; 18 ; 2016 ; http://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2016 ; Green Chemistry Volume 18 ; 18 ; 2016 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2017 ; Green Chemistry Volume 19 ; 19 ; 2017 ; http://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2018 ; Green Chemistry Volume 20 ; 20 ; 2018 ; http://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2019 ; Green Chemistry Volume 21 ; 21 ; 2019 ; https://pubs.rsc.org/ ; >
@@ -614,7 +614,7 @@
       au < deepCrawl ; exists ; 2015 ; Nanoscale Volume 7 ; 7 ; 2015 ; http://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2016 ; Nanoscale Volume 8 ; 8 ; 2016 ; http://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2017 ; Nanoscale Volume 9 ; 9 ; 2017 ; http://pubs.rsc.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; Nanoscale Volume 10 ; 10 ; 2018 ; https://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2018 ; Nanoscale Volume 10 ; 10 ; 2018 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2019 ; Nanoscale Volume 11 ; 11 ; 2019 ; https://pubs.rsc.org/ ; >
 
   }
@@ -688,7 +688,7 @@
       au < deepCrawl ; exists ; 2015 ; Organic & Biomolecular Chemistry Volume 13 ; 13 ; 2015 ; http://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2016 ; Organic & Biomolecular Chemistry Volume 14 ; 14 ; 2016 ; http://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2017 ; Organic & Biomolecular Chemistry Volume 15 ; 15 ; 2017 ; http://pubs.rsc.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; Organic & Biomolecular Chemistry Volume 16 ; 16 ; 2018 ; https://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2018 ; Organic & Biomolecular Chemistry Volume 16 ; 16 ; 2018 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2019 ; Organic & Biomolecular Chemistry Volume 17 ; 17 ; 2019 ; https://pubs.rsc.org/ ; >
 
   }
@@ -712,7 +712,7 @@
       au < deepCrawl ; exists ; 2015 ; Photochemical & Photobiological Sciences Volume 14 ; 14 ; 2015 ; http://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2016 ; Photochemical & Photobiological Sciences Volume 15 ; 15 ; 2016 ; http://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2017 ; Photochemical & Photobiological Sciences Volume 16 ; 16 ; 2017 ; http://pubs.rsc.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; Photochemical & Photobiological Sciences Volume 17 ; 17 ; 2018 ; https://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2018 ; Photochemical & Photobiological Sciences Volume 17 ; 17 ; 2018 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2019 ; Photochemical & Photobiological Sciences Volume 18 ; 18 ; 2019 ; https://pubs.rsc.org/ ; >
 
   }
@@ -758,7 +758,7 @@
       au < deepCrawl ; exists ; 2015 ; Soft Matter Volume 11 ; 11 ; 2015 ; http://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2016 ; Soft Matter Volume 12 ; 12 ; 2016 ; http://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2017 ; Soft Matter Volume 13 ; 13 ; 2017 ; http://pubs.rsc.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; Soft Matter Volume 14 ; 14 ; 2018 ; https://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2018 ; Soft Matter Volume 14 ; 14 ; 2018 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2019 ; Soft Matter Volume 15 ; 15 ; 2019 ; https://pubs.rsc.org/ ; >
 
   }
@@ -1006,7 +1006,7 @@
       au < finished ; manifest ; 2015 ; Catalysis Science & Technology Volume 5 ; 5 ; 2015 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2016 ; Catalysis Science & Technology Volume 6 ; 6 ; 2016 ; http://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2017 ; Catalysis Science & Technology Volume 7 ; 7 ; 2017 ; http://pubs.rsc.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; Catalysis Science & Technology Volume 8 ; 8 ; 2018 ; https://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2018 ; Catalysis Science & Technology Volume 8 ; 8 ; 2018 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2019 ; Catalysis Science & Technology Volume 9 ; 9 ; 2019 ; https://pubs.rsc.org/ ; >
 
   }
@@ -1048,7 +1048,7 @@
       au < finished ; manifest ; 2015 ; Chemical Science Volume 6 ; 6 ; 2015 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2016 ; Chemical Science Volume 7 ; 7 ; 2016 ; http://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2017 ; Chemical Science Volume 8 ; 8 ; 2017 ; http://pubs.rsc.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; Chemical Science Volume 9 ; 9 ; 2018 ; https://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2018 ; Chemical Science Volume 9 ; 9 ; 2018 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2019 ; Chemical Science Volume 10 ; 10 ; 2019 ; https://pubs.rsc.org/ ; >
 
   }
@@ -1166,7 +1166,7 @@
       au < deepCrawl ; exists ; 2016 ; Environmental Science: Water Research & Technology Volume 2 ; 2 ; 2016 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; Environmental Science: Water Research & Technology Volume 3 ; 3 ; 2017 ; http://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2018 ; Environmental Science: Water Research & Technology Volume 4 ; 4 ; 2018 ; https://pubs.rsc.org/ ; >
-      au < crawling ; exists ; 2019 ; Environmental Science: Water Research & Technology Volume 5 ; 5 ; 2019 ; https://pubs.rsc.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; Environmental Science: Water Research & Technology Volume 5 ; 5 ; 2019 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -1301,7 +1301,7 @@
       au < finished ; manifest ; 2014 ; Inorganic Chemistry Frontiers Volume 1 ; 1 ; 2014 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2015 ; Inorganic Chemistry Frontiers Volume 2 ; 2 ; 2015 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2016 ; Inorganic Chemistry Frontiers Volume 3 ; 3 ; 2016 ; http://pubs.rsc.org/ ; >
-      au < deepCrawl ; exists ; 2017 ; Inorganic Chemistry Frontiers Volume 4 ; 4 ; 2017 ; http://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2017 ; Inorganic Chemistry Frontiers Volume 4 ; 4 ; 2017 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2018 ; Inorganic Chemistry Frontiers Volume 5 ; 5 ; 2018 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2019 ; Inorganic Chemistry Frontiers Volume 6 ; 6 ; 2019 ; https://pubs.rsc.org/ ; >
 
@@ -1386,7 +1386,7 @@
       au < finished ; manifest ; 2015 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 3 ; 3 ; 2015 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2016 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 4 ; 4 ; 2016 ; http://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2017 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 5 ; 5 ; 2017 ; http://pubs.rsc.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 6 ; 6 ; 2018 ; https://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2018 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 6 ; 6 ; 2018 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2019 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 7 ; 7 ; 2019 ; https://pubs.rsc.org/ ; >
 
   }
@@ -1428,7 +1428,7 @@
       au < finished ; manifest ; 2015 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 3 ; 3 ; 2015 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2016 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 4 ; 4 ; 2016 ; http://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2017 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 5 ; 5 ; 2017 ; http://pubs.rsc.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 6 ; 6 ; 2018 ; https://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2018 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 6 ; 6 ; 2018 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2019 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 7 ; 7 ; 2019 ; https://pubs.rsc.org/ ; >
 
   }
@@ -2166,7 +2166,7 @@
       au < frozen ; exists ; 2015 ; Polymer Chemistry Volume 6 ; 6 ; 2015 ; http://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2016 ; Polymer Chemistry Volume 7 ; 7 ; 2016 ; http://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2017 ; Polymer Chemistry Volume 8 ; 8 ; 2017 ; http://pubs.rsc.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; Polymer Chemistry Volume 9 ; 9 ; 2018 ; https://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2018 ; Polymer Chemistry Volume 9 ; 9 ; 2018 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2019 ; Polymer Chemistry Volume 10 ; 10 ; 2019 ; https://pubs.rsc.org/ ; >
 
   }
@@ -2419,7 +2419,7 @@
       au < finished ; manifest ; 2015 ; RSC Advances Volume 5 ; 5 ; 2015 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2016 ; RSC Advances Volume 6 ; 6 ; 2016 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; RSC Advances Volume 7 ; 7 ; 2017 ; http://pubs.rsc.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; RSC Advances Volume 8 ; 8 ; 2018 ; https://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2018 ; RSC Advances Volume 8 ; 8 ; 2018 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2019 ; RSC Advances Volume 9 ; 9 ; 2019 ; https://pubs.rsc.org/ ; >
 
   }

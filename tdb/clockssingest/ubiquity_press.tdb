@@ -206,7 +206,7 @@
       au < finished ; crawling ; 2016 ; 3 ; Annals of Global Health Volume 2016 ; 2016 ; https://www.annalsofglobalhealth.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; 4 ; Annals of Global Health Volume 2017 ; 2017 ; https://www.annalsofglobalhealth.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 5 ; Annals of Global Health Volume 2018 ; 2018 ; https://www.annalsofglobalhealth.org/ ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2019 ; 6 ; Annals of Global Health Volume 2019 ; 2019 ; https://www.annalsofglobalhealth.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; 6 ; Annals of Global Health Volume 2019 ; 2019 ; https://www.annalsofglobalhealth.org/ ; >
 
   }
 
@@ -269,7 +269,7 @@
       au < finished ; crawling ; 2016 ; 3 ; Modern Languages Open Volume 2016 ; 2016 ; https://www.modernlanguagesopen.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; 4 ; Modern Languages Open Volume 2017 ; 2017 ; https://www.modernlanguagesopen.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 5 ; Modern Languages Open Volume 2018 ; 2018 ; https://www.modernlanguagesopen.org/ ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2019 ; 6 ; Modern Languages Open Volume 2019 ; 2019 ; https://www.modernlanguagesopen.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; 6 ; Modern Languages Open Volume 2019 ; 2019 ; https://www.modernlanguagesopen.org/ ; >
 
   }
 
@@ -368,7 +368,7 @@
       au < finished ; crawling ; 2016 ; 8 ; Studies in the Maternal Volume 2016 ; 2016 ; http://www.mamsie.bbk.ac.uk/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2017 ; 9 ; Studies in the Maternal Volume 2017 ; 2017 ; https://www.mamsie.bbk.ac.uk/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 10 ; Studies in the Maternal Volume 2018 ; 2018 ; https://www.mamsie.bbk.ac.uk/ ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2019 ; 11 ; Studies in the Maternal Volume 2019 ; 2019 ; https://www.mamsie.bbk.ac.uk/ ; >
+      au < deepCrawl ; exists ; 2019 ; 11 ; Studies in the Maternal Volume 2019 ; 2019 ; https://www.mamsie.bbk.ac.uk/ ; >
 
   }
 
@@ -682,7 +682,7 @@
       au < finished ; crawling ; 2016 ; 8 ; Designs for Learning Volume 2016 ; 2016 ; http://www.designsforlearning.nu/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; 9 ; Designs for Learning Volume 2017 ; 2017 ; http://www.designsforlearning.nu/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 10 ; Designs for Learning Volume 2018 ; 2018 ; https://www.designsforlearning.nu/ ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2019 ; 11 ; Designs for Learning Volume 2019 ; 2019 ; https://www.designsforlearning.nu/ ; >
+      au < deepCrawl ; exists ; 2019 ; 11 ; Designs for Learning Volume 2019 ; 2019 ; https://www.designsforlearning.nu/ ; >
 
   }
 
@@ -772,7 +772,7 @@
       au < finished ; crawling ; 2016 ; 1 ; Scandinavian Journal of Work and Organizational Psychology Volume 2016 ; 2016 ; http://www.sjwop.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2017 ; 2 ; Scandinavian Journal of Work and Organizational Psychology Volume 2017 ; 2017 ; http://www.sjwop.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2018 ; 3 ; Scandinavian Journal of Work and Organizational Psychology Volume 2018 ; 2018 ; https://www.sjwop.com/ ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2019 ; 4 ; Scandinavian Journal of Work and Organizational Psychology Volume 2019 ; 2019 ; https://www.sjwop.com/ ; >
+      au < deepCrawl ; exists ; 2019 ; 4 ; Scandinavian Journal of Work and Organizational Psychology Volume 2019 ; 2019 ; https://www.sjwop.com/ ; >
 
   }
 
@@ -818,7 +818,7 @@
 #      param[base_url] = https://franorfon.org/
 
       au < finished ; manifest ; 2018 ; 1 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2018 ; 2018 ; https://franorfon.org/ ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2019 ; 2 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2019 ; 2019 ; https://franorfon.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; 2 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2019 ; 2019 ; https://franorfon.org/ ; >
 
   }
   {
@@ -1031,7 +1031,7 @@
       au < finished ; crawling ; 2016 ; 26 ; Bulletin of the History of Archaeology Volume 2016 ; 2016 ; http://www.archaeologybulletin.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2017 ; 27 ; Bulletin of the History of Archaeology Volume 2017 ; 2017 ; http://www.archaeologybulletin.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2018 ; 28 ; Bulletin of the History of Archaeology Volume 2018 ; 2018 ; https://www.archaeologybulletin.org/ ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2019 ; 29 ; Bulletin of the History of Archaeology Volume 2019 ; 2019 ; https://www.archaeologybulletin.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; 29 ; Bulletin of the History of Archaeology Volume 2019 ; 2019 ; https://www.archaeologybulletin.org/ ; >
 
   }
 
@@ -1887,7 +1887,7 @@
 
       au < finished ; manifest ; 2017 ; 1 ; Health Psychology Bulletin Volume 2017 ; 2017 ; https://www.healthpsychologybulletin.com/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 2 ; Health Psychology Bulletin Volume 2018 ; 2018 ; https://www.healthpsychologybulletin.com/ ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2019 ; 3 ; Health Psychology Bulletin Volume 2019 ; 2019 ; https://www.healthpsychologybulletin.com/ ; >
+      au < deepCrawl ; exists ; 2019 ; 3 ; Health Psychology Bulletin Volume 2019 ; 2019 ; https://www.healthpsychologybulletin.com/ ; >
 
   }
 
@@ -2027,7 +2027,7 @@
 #      param[base_url] = https://metaphysicsjournal.com/
 
       au < finished ; manifest ; 2018 ; 1 ; Metaphysics Volume 2018 ; 2018 ; https://metaphysicsjournal.com/ ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2019 ; 2 ; Metaphysics Volume 2019 ; 2019 ; https://metaphysicsjournal.com/ ; >
+      au < deepCrawl ; exists ; 2019 ; 2 ; Metaphysics Volume 2019 ; 2019 ; https://metaphysicsjournal.com/ ; >
 
   }
 
@@ -2065,7 +2065,7 @@
       au < finished ; crawling ; 2016 ; 5 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2016 ; 2016 ; https://tilburglawreview.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; 6 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2017 ; 2017 ; https://tilburglawreview.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2018 ; 7 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2018 ; 2018 ; https://tilburglawreview.com/ ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2019 ; 8 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2019 ; 2019 ; https://tilburglawreview.com/ ; >
+      au < deepCrawl ; exists ; 2019 ; 8 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2019 ; 2019 ; https://tilburglawreview.com/ ; >
 
   }
 
@@ -2733,7 +2733,7 @@
       au < finished ; crawling ; 2016 ; 2 ; Collabra: Psychology Volume 2016 ; 2016 ; https://www.collabra.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2017 ; 3 ; Collabra: Psychology Volume 2017 ; 2017 ; https://www.collabra.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 4 ; Collabra: Psychology Volume 2018 ; 2018 ; https://www.collabra.org/ ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2019 ; 5 ; Collabra: Psychology Volume 2019 ; 2019 ; https://www.collabra.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; 5 ; Collabra: Psychology Volume 2019 ; 2019 ; https://www.collabra.org/ ; >
 
   }
 
@@ -2806,7 +2806,7 @@
 
       au < finished ; crawling ; 2017 ; 1 ; Journal of the European Second Language Association Volume 2017 ; 2017 ; https://www.euroslajournal.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2018 ; 2 ; Journal of the European Second Language Association Volume 2018 ; 2018 ; https://www.euroslajournal.org/ ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2019 ; 3 ; Journal of the European Second Language Association Volume 2019 ; 2019 ; https://www.euroslajournal.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; 3 ; Journal of the European Second Language Association Volume 2019 ; 2019 ; https://www.euroslajournal.org/ ; >
 
   }
 

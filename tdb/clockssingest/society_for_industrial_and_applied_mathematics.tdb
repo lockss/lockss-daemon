@@ -390,7 +390,7 @@
     au < finished ; manifest ; 2016 ; Journal on Numerical Analysis Volume 54 ; 54 ; http://epubs.siam.org/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2017 ; Journal on Numerical Analysis Volume 55 ; 55 ; http://epubs.siam.org/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2018 ; Journal on Numerical Analysis Volume 56 ; 56 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2019 ; Journal on Numerical Analysis Volume 57 ; 57 ; https://epubs.siam.org/ ; >
+    au < deepCrawl ; exists ; 2019 ; Journal on Numerical Analysis Volume 57 ; 57 ; https://epubs.siam.org/ ; >
 
   }
 
