@@ -344,7 +344,7 @@
     au < finished ; crawling ; 2016 ; Mathematics of Computation Volume 85 ; 2016 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Mathematics of Computation Volume 86 ; 2017 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; Mathematics of Computation Volume 87 ; 2018 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2019 ; Mathematics of Computation Volume 88 ; 2019 ; https://www.ams.org/ ; >
+    au < deepCrawl ; exists ; 2019 ; Mathematics of Computation Volume 88 ; 2019 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2020 ; Mathematics of Computation Volume 89 ; 2020 ; https://www.ams.org/ ; >
 
   }

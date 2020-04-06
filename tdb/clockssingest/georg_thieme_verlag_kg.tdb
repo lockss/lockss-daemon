@@ -559,7 +559,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; AORTA Volume 4 ; 4 ; >
     au < frozen ; exists ; 2017 ; 2017 ; AORTA Volume 5 ; 5 ; >
     au < frozen ; exists ; 2018 ; 2018 ; AORTA Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; AORTA Volume 7 ; 7 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; AORTA Volume 7 ; 7 ; >
     au < expected ; exists ; 2020 ; 2020 ; AORTA Volume 8 ; 8 ; >
 
    }
@@ -978,7 +978,7 @@
 
    au < deepCrawl ; exists ; 2017 ; 2017 ; Digestive Disease Interventions Volume 1 ; 1 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Digestive Disease Interventions Volume 2 ; 2 ; >
-   au < crawling ; exists ; 2019 ; 2019 ; Digestive Disease Interventions Volume 3 ; 3 ; >
+   au < deepCrawl ; exists ; 2019 ; 2019 ; Digestive Disease Interventions Volume 3 ; 3 ; >
    au < expected ; exists ; 2020 ; 2020 ; Digestive Disease Interventions Volume 4 ; 4 ; >
 
   }
@@ -1453,7 +1453,7 @@
    au < finished ; crawling ; 2016 ; 2016 ; Erfahrungsheilkunde Volume 65 ; 65 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Erfahrungsheilkunde Volume 66 ; 66 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Erfahrungsheilkunde Volume 67 ; 67 ; >
-   au < crawling ; exists ; 2019 ; 2019 ; Erfahrungsheilkunde Volume 68 ; 68 ; >
+   au < deepCrawl ; exists ; 2019 ; 2019 ; Erfahrungsheilkunde Volume 68 ; 68 ; >
    au < manifest ; exists ; 2020 ; 2020 ; Erfahrungsheilkunde Volume 69 ; 69 ; >
 
   }
@@ -2013,7 +2013,7 @@
    au < deepCrawl ; exists ; 2016 ; 2016 ; Gesundheitsökonomie & Qualitätsmanagement Volume 21 ; 21 ; >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Gesundheitsökonomie & Qualitätsmanagement Volume 22 ; 22 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Gesundheitsökonomie & Qualitätsmanagement Volume 23 ; 23 ; >
-   au < crawling ; exists ; 2019 ; 2019 ; Gesundheitsökonomie & Qualitätsmanagement Volume 24 ; 24 ; >
+   au < deepCrawl ; exists ; 2019 ; 2019 ; Gesundheitsökonomie & Qualitätsmanagement Volume 24 ; 24 ; >
    au < manifest ; exists ; 2020 ; 2020 ; Gesundheitsökonomie & Qualitätsmanagement Volume 25 ; 25 ; >
 
   }
@@ -2048,7 +2048,7 @@
    au < finished ; finished ; 2016 ; 2016 ; Gesundheitswesen Das Volume 80 ; 80 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Gesundheitswesen Das Volume 81 ; 81 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Gesundheitswesen Das Volume 82 ; 82 ; >
-   au < crawling ; exists ; 2019 ; 2019 ; Gesundheitswesen Das Volume 83 ; 83 ; >
+   au < deepCrawl ; exists ; 2019 ; 2019 ; Gesundheitswesen Das Volume 83 ; 83 ; >
    au < manifest ; exists ; 2020 ; 2020 ; Gesundheitswesen Das Volume 84 ; 84 ; >
 
   }
@@ -2436,7 +2436,7 @@
     au < finished ; crawling ; 2016 ; 2016 ; intensiv Volume 24 ; 24 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; intensiv Volume 25 ; 25 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; intensiv Volume 26 ; 26 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; intensiv Volume 27 ; 27 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; intensiv Volume 27 ; 27 ; >
     au < manifest ; exists ; 2020 ; 2020 ; intensiv Volume 28 ; 28 ; >
 
   }
@@ -2534,7 +2534,7 @@
     au < deepCrawl ; exists ; 2016 ; 2016 ; International Journal of Angiology Volume 25 ; 25 ; >
     au < deepCrawl ; exists ; 2017 ; 2017 ; International Journal of Angiology Volume 26 ; 26 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; International Journal of Angiology Volume 27 ; 27 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; International Journal of Angiology Volume 28 ; 28 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; International Journal of Angiology Volume 28 ; 28 ; >
     au < manifest ; exists ; 2020 ; 2020 ; International Journal of Angiology Volume 29 ; 29 ; >
 
   }
@@ -2926,7 +2926,7 @@
     au < deepCrawl ; exists ; 2016 ; 2016 ; Journal of Neurological Surgery Reports Volume 77 ; 77 ; >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Journal of Neurological Surgery Reports Volume 78 ; 78 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Journal of Neurological Surgery Reports Volume 79 ; 79 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Journal of Neurological Surgery Reports Volume 80 ; 80 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Neurological Surgery Reports Volume 80 ; 80 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Journal of Neurological Surgery Reports Volume 81 ; 81 ; >
 
   }
@@ -2971,7 +2971,7 @@
     au < deepCrawl ; down ; 2016 ; 2016 ; Journal of Pediatric Epilepsy Volume 5 ; 5 ;  >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Journal of Pediatric Epilepsy Volume 6 ; 6 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Journal of Pediatric Epilepsy Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Journal of Pediatric Epilepsy Volume 8 ; 8 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Pediatric Epilepsy Volume 8 ; 8 ; >
     au < expected ; exists ; 2020 ; 2020 ; Journal of Pediatric Epilepsy Volume 9 ; 9 ; >
 
   }
@@ -3025,7 +3025,7 @@
     au < finished ; finished ; 2016 ; 2016 ; Journal of Pediatric Infectious Diseases Volume 11 ; 11 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Journal of Pediatric Infectious Diseases Volume 12 ; 12 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Journal of Pediatric Infectious Diseases Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Journal of Pediatric Infectious Diseases Volume 14 ; 14 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Pediatric Infectious Diseases Volume 14 ; 14 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Journal of Pediatric Infectious Diseases Volume 15 ; 15 ; >
 
   }
@@ -3198,7 +3198,7 @@
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Journal of Social Health and Diabetes Volume 4 ; 4 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Journal of Social Health and Diabetes Volume 5 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Journal of Social Health and Diabetes Volume 6 ; 6 ; >
-      au < crawling ; exists ; 2019 ; 2019 ; Journal of Social Health and Diabetes Volume 7 ; 7 ; >
+      au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Social Health and Diabetes Volume 7 ; 7 ; >
       au < expected ; exists ; 2020 ; 2020 ; Journal of Social Health and Diabetes Volume 8 ; 8 ; >
 
   }
@@ -3503,7 +3503,7 @@
     au < finished ; finished ; 2016 ; 2016 ; Klinische Pädiatrie Volume 228 ; 228 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Klinische Pädiatrie Volume 229 ; 229 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Klinische Pädiatrie Volume 230 ; 230 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Klinische Pädiatrie Volume 231 ; 231 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Klinische Pädiatrie Volume 231 ; 231 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Klinische Pädiatrie Volume 232 ; 232 ; >
 
   }
@@ -3892,7 +3892,7 @@
     au < deepCrawl ; down ; 2016 ; 2016 ; Neuropediatrics Volume 47 ; 47 ;  >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Neuropediatrics Volume 48 ; 48 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Neuropediatrics Volume 49 ; 49 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Neuropediatrics Volume 50 ; 50 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Neuropediatrics Volume 50 ; 50 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Neuropediatrics Volume 51 ; 51 ; >
 
   }
@@ -4313,7 +4313,7 @@
     au < finished ; finished ; 2016 ; 2016 ; pferde spiegel Volume 19 ; 19 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; pferde spiegel Volume 20 ; 20 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; pferde spiegel Volume 21 ; 21 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; pferde spiegel Volume 22 ; 22 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; pferde spiegel Volume 22 ; 22 ; >
     au < manifest ; exists ; 2020 ; 2020 ; pferde spiegel Volume 23 ; 23 ; >
 
   }
@@ -4381,7 +4381,7 @@
     au < finished ; crawling ; 2016 ; 2016 ; Pharmacopsychiatry Volume 49 ; 49 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Pharmacopsychiatry Volume 50 ; 50 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Pharmacopsychiatry Volume 51 ; 51 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Pharmacopsychiatry Volume 52 ; 52 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Pharmacopsychiatry Volume 52 ; 52 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Pharmacopsychiatry Volume 53 ; 53 ; >
 
   }
@@ -5595,7 +5595,7 @@
     au < finished ; crawling ; 2016 ; 2016 ; Seminars in Speech and Language Volume 37 ; 37 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Seminars in Speech and Language Volume 38 ; 38 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Seminars in Speech and Language Volume 39 ; 39 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Seminars in Speech and Language Volume 40 ; 40 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Seminars in Speech and Language Volume 40 ; 40 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Seminars in Speech and Language Volume 41 ; 41 ; >
 
   }
@@ -5863,7 +5863,7 @@
    au < finished ; finished ; 2016 ; 2016 ; Sportverletzung - Sportschaden Volume 30 ; 30 ; reingest2.clockss.org:8085 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Sportverletzung - Sportschaden Volume 31 ; 31 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Sportverletzung - Sportschaden Volume 32 ; 32 ; >
-   au < crawling ; exists ; 2019 ; 2019 ; Sportverletzung - Sportschaden Volume 33 ; 33 ; >
+   au < deepCrawl ; exists ; 2019 ; 2019 ; Sportverletzung - Sportschaden Volume 33 ; 33 ; >
    au < manifest ; exists ; 2020 ; 2020 ; Sportverletzung - Sportschaden Volume 34 ; 34 ; >
 
    }
@@ -6034,7 +6034,7 @@
    au < finished ; crawling ; 2016 ; 2016 ; SYNLETT Volume 27 ; 27 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; SYNLETT Volume 28 ; 28 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; SYNLETT Volume 29 ; 29 ; >
-   au < crawling ; exists ; 2019 ; 2019 ; SYNLETT Volume 30 ; 30 ; >
+   au < deepCrawl ; exists ; 2019 ; 2019 ; SYNLETT Volume 30 ; 30 ; >
    au < manifest ; exists ; 2020 ; 2020 ; SYNLETT Volume 31 ; 31 ; >
 
   }
@@ -6099,7 +6099,7 @@
    au < deepCrawl ; exists ; 2016 ; 2016 ; SYNTHESIS Volume 48 ; 48 ; >
    au < deepCrawl ; exists ; 2017 ; 2017 ; SYNTHESIS Volume 49 ; 49 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; SYNTHESIS Volume 50 ; 50 ; >
-   au < crawling ; exists ; 2019 ; 2019 ; SYNTHESIS Volume 51 ; 51 ; >
+   au < deepCrawl ; exists ; 2019 ; 2019 ; SYNTHESIS Volume 51 ; 51 ; >
    au < manifest ; exists ; 2020 ; 2020 ; SYNTHESIS Volume 52 ; 52 ; >
 
   }
@@ -6364,7 +6364,7 @@
     au < finished ; finished ; 2016 ; 2016 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 37 ; 37 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 38 ; 38 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 39 ; 39 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 40 ; 40 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 40 ; 40 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 41 ; 41 ; >
 
   }
@@ -7118,7 +7118,7 @@
     au < deepCrawl ; exists ; 2016 ; 2016 ; ZWR - Das Deutsche Zahnärzteblatt Volume 125 ; 125 ; >
     au < deepCrawl ; exists ; 2017 ; 2017 ; ZWR - Das Deutsche Zahnärzteblatt Volume 126 ; 126 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; ZWR - Das Deutsche Zahnärzteblatt Volume 127 ; 127 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; ZWR - Das Deutsche Zahnärzteblatt Volume 128 ; 128 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; ZWR - Das Deutsche Zahnärzteblatt Volume 128 ; 128 ; >
     au < manifest ; exists ; 2020 ; 2020 ; ZWR - Das Deutsche Zahnärzteblatt Volume 129 ; 129 ; >
 
   }
