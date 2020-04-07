@@ -353,7 +353,7 @@
     au < finished ; finished ; 2016 ; 2016 ; Aktuelle Urologie Volume 47 ; 47 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Aktuelle Urologie Volume 48 ; 48 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Aktuelle Urologie Volume 49 ; 49 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Aktuelle Urologie Volume 50 ; 50 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Aktuelle Urologie Volume 50 ; 50 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Aktuelle Urologie Volume 51 ; 51 ; >
 
    }
@@ -827,7 +827,7 @@
     au < deepCrawl ; exists ; 2016 ; 2016 ; Craniomaxillofacial Trauma & Reconstruction Volume 9 ; 9 ; >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Craniomaxillofacial Trauma & Reconstruction Volume 10 ; 10 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Craniomaxillofacial Trauma & Reconstruction Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Craniomaxillofacial Trauma & Reconstruction Volume 12 ; 12 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Craniomaxillofacial Trauma & Reconstruction Volume 12 ; 12 ; >
     au < expected ; exists ; 2020 ; 2020 ; Craniomaxillofacial Trauma & Reconstruction Volume 13 ; 13 ; >
 
   }
@@ -1368,7 +1368,7 @@
    au < finished ; crawling ; 2016 ; 2016 ; Endoscopy Volume 48 ; 48 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Endoscopy Volume 49 ; 49 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Endoscopy Volume 50 ; 50 ; >
-   au < crawling ; exists ; 2019 ; 2019 ; Endoscopy Volume 51 ; 51 ; >
+   au < deepCrawl ; exists ; 2019 ; 2019 ; Endoscopy Volume 51 ; 51 ; >
    au < manifest ; exists ; 2020 ; 2020 ; Endoscopy Volume 52 ; 52 ; >
 
   }
@@ -2106,7 +2106,7 @@
    au < deepCrawl ; down ; 2016 ; 2016 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 48 ; 48 ;  >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 49 ; 49 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 50 ; 50 ; >
-   au < crawling ; exists ; 2019 ; 2019 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 51 ; 51 ; >
+   au < deepCrawl ; exists ; 2019 ; 2019 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 51 ; 51 ; >
    au < manifest ; exists ; 2020 ; 2020 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 52 ; 52 ; >
 
   }
@@ -2129,7 +2129,7 @@
     au < finished ; crawling ; 2016 ; 2016 ; Handchirurgie Scan Volume 5 ; 5 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Handchirurgie Scan Volume 6 ; 6 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Handchirurgie Scan Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Handchirurgie Scan Volume 8 ; 8 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Handchirurgie Scan Volume 8 ; 8 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Handchirurgie Scan Volume 9 ; 9 ; >
 
   }
@@ -2590,7 +2590,7 @@
     au < deepCrawl ; down ; 2016 ; 2016 ; International Journal of Sports Medicine Volume 37 ; 37 ;  >
     au < deepCrawl ; exists ; 2017 ; 2017 ; International Journal of Sports Medicine Volume 38 ; 38 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; International Journal of Sports Medicine Volume 39 ; 39 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; International Journal of Sports Medicine Volume 40 ; 40 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; International Journal of Sports Medicine Volume 40 ; 40 ; >
     au < manifest ; exists ; 2020 ; 2020 ; International Journal of Sports Medicine Volume 41 ; 41 ; >
 
   }
@@ -2652,7 +2652,7 @@
     au < deepCrawl ; down ; 2016 ; 2016 ; Journal Club AINS Volume 5 ; 5 ;  >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Journal Club AINS Volume 6 ; 6 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Journal Club AINS Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Journal Club AINS Volume 8 ; 8 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Journal Club AINS Volume 8 ; 8 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Journal Club AINS Volume 9 ; 9 ; >
 
   }
@@ -3276,7 +3276,7 @@
     au < finished ; crawling ; 2016 ; 2016 ; Kardiologie up2date Volume 12 ; 12 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Kardiologie up2date Volume 13 ; 13 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Kardiologie up2date Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Kardiologie up2date Volume 15 ; 15 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Kardiologie up2date Volume 15 ; 15 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Kardiologie up2date Volume 16 ; 16 ; >
 
   }
@@ -3448,7 +3448,7 @@
     au < finished ; finished ; 2016 ; 2016 ; Klinische Neurophysiologie Volume 47 ; 47 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Klinische Neurophysiologie Volume 48 ; 48 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Klinische Neurophysiologie Volume 49 ; 49 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Klinische Neurophysiologie Volume 50 ; 50 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Klinische Neurophysiologie Volume 50 ; 50 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Klinische Neurophysiologie Volume 51 ; 51 ; >
 
   }
@@ -4457,7 +4457,7 @@
     au < finished ; finished ; 2016 ; 2016 ; physiopraxis Volume 14 ; 14 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; physiopraxis Volume 15 ; 15 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; physiopraxis Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; physiopraxis Volume 17 ; 17 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; physiopraxis Volume 17 ; 17 ; >
     au < manifest ; exists ; 2020 ; 2020 ; physiopraxis Volume 18 ; 18 ; >
 
   }
@@ -5325,7 +5325,7 @@
    au < finished ; crawling ; 2016 ; 2016 ; Seminars in Musculoskeletal Radiology Volume 20 ; 20 ; reingest1.clockss.org:8082 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Seminars in Musculoskeletal Radiology Volume 21 ; 21 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Seminars in Musculoskeletal Radiology Volume 22 ; 22 ; >
-   au < crawling ; exists ; 2019 ; 2019 ; Seminars in Musculoskeletal Radiology Volume 23 ; 23 ; >
+   au < deepCrawl ; exists ; 2019 ; 2019 ; Seminars in Musculoskeletal Radiology Volume 23 ; 23 ; >
    au < manifest ; exists ; 2020 ; 2020 ; Seminars in Musculoskeletal Radiology Volume 24 ; 24 ; >
 
   }
@@ -5956,7 +5956,7 @@
     au < finished ; crawling ; 2016 ; 2016 ; The Surgery Journal Volume 2 ; 2 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; The Surgery Journal Volume 3 ; 3 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; The Surgery Journal Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; The Surgery Journal Volume 5 ; 5 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; The Surgery Journal Volume 5 ; 5 ; >
     au < manifest ; exists ; 2020 ; 2020 ; The Surgery Journal Volume 6 ; 6 ; >
 
   }
@@ -6308,7 +6308,7 @@
     au < finished ; crawling ; 2016 ; 2016 ; TumorDiagnostik & Therapie Volume 39 ; 39 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; TumorDiagnostik & Therapie Volume 40 ; 40 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; TumorDiagnostik & Therapie Volume 41 ; 41 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; TumorDiagnostik & Therapie Volume 42 ; 42 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; TumorDiagnostik & Therapie Volume 42 ; 42 ; >
     au < manifest ; exists ; 2020 ; 2020 ; TumorDiagnostik & Therapie Volume 43 ; 43 ; >
 
   }
@@ -6578,7 +6578,7 @@
     au < finished ; crawling ; 2016 ; 2016 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 30 ; 30 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 31 ; 31 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 32 ; 32 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 33 ; 33 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 33 ; 33 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 34 ; 34 ; >
 
   }
@@ -6895,7 +6895,7 @@
     au < finished ; crawling ; 2016 ; 2016 ; Zeitschrift für Palliativmedizin Volume 17 ; 17 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Zeitschrift für Palliativmedizin Volume 18 ; 18 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Zeitschrift für Palliativmedizin Volume 19 ; 19 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Zeitschrift für Palliativmedizin Volume 20 ; 20 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Zeitschrift für Palliativmedizin Volume 20 ; 20 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Zeitschrift für Palliativmedizin Volume 21 ; 21 ; >
 
   }
@@ -7223,7 +7223,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Arthritis und Rheuma Volume 36 ; 36 ; >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Arthritis und Rheuma Volume 37 ; 37 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Arthritis und Rheuma Volume 38 ; 38 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Arthritis und Rheuma Volume 39 ; 39 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Arthritis und Rheuma Volume 39 ; 39 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Arthritis und Rheuma Volume 40 ; 40 ; >
 
   }
@@ -7296,7 +7296,7 @@
 
     au < deepCrawl ; exists ; 2017 ; 2017 ; Indian Journal of Cardiovascular Disease in Women WINCARS Volume 1 ; 1 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Indian Journal of Cardiovascular Disease in Women WINCARS Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Indian Journal of Cardiovascular Disease in Women WINCARS Volume 3 ; 3 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Indian Journal of Cardiovascular Disease in Women WINCARS Volume 3 ; 3 ; >
     au < expected ; exists ; 2020 ; 2020 ; Indian Journal of Cardiovascular Disease in Women WINCARS Volume 4 ; 4 ; >
 
   }
@@ -7561,7 +7561,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Phlebologie Volume 45 ; 45 ; >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Phlebologie Volume 46 ; 46 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Phlebologie Volume 47 ; 47 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Phlebologie Volume 48 ; 48 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Phlebologie Volume 48 ; 48 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Phlebologie Volume 49 ; 49 ; >
 
   }

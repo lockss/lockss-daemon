@@ -329,7 +329,7 @@
     au < frozen ; exists ; 2016 ; Journal of Climate Volume 29 ; 29 ; http://journals.ametsoc.org/ ; >
     au < deepCrawl ; exists ; 2017 ; Journal of Climate Volume 30 ; 30 ; http://journals.ametsoc.org/ ; >
     au < deepCrawl ; exists ; 2018 ; Journal of Climate Volume 31 ; 31 ; https://journals.ametsoc.org/ ; >
-    au < crawling ; exists ; 2019 ; Journal of Climate Volume 32 ; 32 ; https://journals.ametsoc.org/ ; >
+    au < deepCrawl ; exists ; 2019 ; Journal of Climate Volume 32 ; 32 ; https://journals.ametsoc.org/ ; >
     au < manifest ; exists ; 2020 ; Journal of Climate Volume 33 ; 33 ; https://journals.ametsoc.org/ ; >
 
   }
@@ -429,7 +429,7 @@
     au < frozen ; exists ; 2016 ; Journal of Physical Oceanography Volume 46 ; 46 ; http://journals.ametsoc.org/ ; >
     au < deepCrawl ; exists ; 2017 ; Journal of Physical Oceanography Volume 47 ; 47 ; http://journals.ametsoc.org/ ; >
     au < deepCrawl ; exists ; 2018 ; Journal of Physical Oceanography Volume 48 ; 48 ; https://journals.ametsoc.org/ ; >
-    au < crawling ; exists ; 2019 ; Journal of Physical Oceanography Volume 49 ; 49 ; https://journals.ametsoc.org/ ; >
+    au < deepCrawl ; exists ; 2019 ; Journal of Physical Oceanography Volume 49 ; 49 ; https://journals.ametsoc.org/ ; >
     au < manifest ; exists ; 2020 ; Journal of Physical Oceanography Volume 50 ; 50 ; https://journals.ametsoc.org/ ; >
 
   }
@@ -791,7 +791,7 @@
     au < deepCrawl ; exists ; 2017 ; Weather and Forecasting Volume 32 ; 32 ; http://journals.ametsoc.org/ ; >
     au < deepCrawl ; exists ; 2018 ; Weather and Forecasting Volume 33 ; 33 ; https://journals.ametsoc.org/ ; >
     
-    au < crawling ; exists ; 2019 ; Weather and Forecasting Volume 34 ; 34 ; https://journals.ametsoc.org/ ; >
+    au < deepCrawl ; exists ; 2019 ; Weather and Forecasting Volume 34 ; 34 ; https://journals.ametsoc.org/ ; >
     au < manifest ; exists ; 2020 ; Weather and Forecasting Volume 35 ; 35 ; https://journals.ametsoc.org/ ; >
   }
 

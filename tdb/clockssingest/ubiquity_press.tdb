@@ -221,7 +221,7 @@
 #      param[base_url] = https://www.journalofaltmetrics.org/
 
       au < manifest ; exists ; 2018 ; 1 ; Journal of Altmetrics Volume 2018 ; 2018 ; https://www.journalofaltmetrics.org/ ; >
-      au < crawling ; exists ; 2019 ; 2 ; Journal of Altmetrics Volume 2019 ; 2019 ; https://www.journalofaltmetrics.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; 2 ; Journal of Altmetrics Volume 2019 ; 2019 ; https://www.journalofaltmetrics.org/ ; >
 
   }
 
@@ -1522,7 +1522,7 @@
       au < finished ; crawling ; 2016 ; 1 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2016 ; 2016 ; http://www.journal-labphon.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; 2 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2017 ; 2017 ; http://www.journal-labphon.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2018 ; 3 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2018 ; 2018 ; https://www.journal-labphon.org/ ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2019 ; 4 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2019 ; 2019 ; https://www.journal-labphon.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; 4 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2019 ; 2019 ; https://www.journal-labphon.org/ ; >
 
   }
 
@@ -1612,7 +1612,7 @@
       au < finished ; crawling ; 2016 ; 10 ; International Journal of the Commons Volume 2016 ; 2016 ; https://www.thecommonsjournal.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2017 ; 11 ; International Journal of the Commons Volume 2017 ; 2017 ; https://www.thecommonsjournal.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 12 ; International Journal of the Commons Volume 2018 ; 2018 ; https://www.thecommonsjournal.org/ ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2019 ; 13 ; International Journal of the Commons Volume 2019 ; 2019 ; https://www.thecommonsjournal.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; 13 ; International Journal of the Commons Volume 2019 ; 2019 ; https://www.thecommonsjournal.org/ ; >
       au < manifest ; exists ; 2020 ; 14 ; International Journal of the Commons Volume 2020 ; 2020 ; https://www.thecommonsjournal.org/ ; >
 
   }
@@ -2490,7 +2490,7 @@
       au < finished ; crawling ; 2016 ; 18 ; LIBER Quarterly Volume 2016 ; 2016 ; https://www.liberquarterly.eu/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; 19 ; LIBER Quarterly Volume 2017 ; 2017 ; https://www.liberquarterly.eu/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2018 ; 20 ; LIBER Quarterly Volume 2018 ; 2018 ; https://www.liberquarterly.eu/ ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2019 ; 21 ; LIBER Quarterly Volume 2019 ; 2019 ; https://www.liberquarterly.eu/ ; >
+      au < deepCrawl ; exists ; 2019 ; 21 ; LIBER Quarterly Volume 2019 ; 2019 ; https://www.liberquarterly.eu/ ; >
 
   }
 
@@ -2662,7 +2662,7 @@
       au < finished ; crawling ; 2016 ; 5 ; Insights: the UKSG journal Volume 2016 ; 2016 ; http://insights.uksg.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2017 ; 6 ; Insights: the UKSG journal Volume 2017 ; 2017 ; http://insights.uksg.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 7 ; Insights: the UKSG journal Volume 2018 ; 2018 ; https://insights.uksg.org/ ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2019 ; 8 ; Insights: the UKSG journal Volume 2019 ; 2019 ; https://insights.uksg.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; 8 ; Insights: the UKSG journal Volume 2019 ; 2019 ; https://insights.uksg.org/ ; >
 
   }
 
