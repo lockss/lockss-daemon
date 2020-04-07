@@ -1620,10 +1620,10 @@
     au < doNotProcess ; doNotProcess ; 2008 ; International Heat Treatment and Surface Engineering Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; International Heat Treatment and Surface Engineering Volume 3 ; 3 ; >
     au < finished ; finished ; 2010 ; International Heat Treatment and Surface Engineering Volume 4 ; 4 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2011 ; International Heat Treatment and Surface Engineering Volume 5 ; 5 ; >
+    au < finished ; manifest ; 2011 ; International Heat Treatment and Surface Engineering Volume 5 ; 5 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2012 ; International Heat Treatment and Surface Engineering Volume 6 ; 6 ; >
-    au < frozen ; exists ; 2013 ; International Heat Treatment and Surface Engineering Volume 7 ; 7 ; >
-    au < frozen ; exists ; 2014 ; International Heat Treatment and Surface Engineering Volume 8 ; 8 ; >
+    au < finished ; manifest ; 2013 ; International Heat Treatment and Surface Engineering Volume 7 ; 7 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2014 ; International Heat Treatment and Surface Engineering Volume 8 ; 8 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; exists ; 2015 ; International Heat Treatment and Surface Engineering Volume 9 ; 9 ; >
 
   }
@@ -1644,8 +1644,8 @@
     au < doNotProcess ; doNotProcess ; 2010 ; International Journal for the History of Engineering & Technology Volume 80 ; 80 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; International Journal for the History of Engineering & Technology Volume 81 ; 81 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; International Journal for the History of Engineering & Technology Volume 82 ; 82 ; >
-    au < frozen ; exists ; 2013 ; International Journal for the History of Engineering & Technology Volume 83 ; 83 ; >
-    au < frozen ; exists ; 2014 ; International Journal for the History of Engineering & Technology Volume 84 ; 84 ; >
+    au < finished ; manifest ; 2013 ; International Journal for the History of Engineering & Technology Volume 83 ; 83 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2014 ; International Journal for the History of Engineering & Technology Volume 84 ; 84 ; >
     au < finished ; finished ; 2015 ; International Journal for the History of Engineering & Technology Volume 85 ; 85 ; reingest5.clockss.org:8082 >
 
   }
@@ -1670,7 +1670,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; International Journal of Cast Metals Research Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Cast Metals Research Volume 22 ; 22 ; >
     au < finished ; finished ; 2010 ; International Journal of Cast Metals Research Volume 23 ; 23 ; >
-    au < frozen ; exists ; 2011 ; International Journal of Cast Metals Research Volume 24 ; 24 ; >
+    au < finished ; manifest ; 2011 ; International Journal of Cast Metals Research Volume 24 ; 24 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Cast Metals Research Volume 25 ; 25 ; >
     au < finished ; manifest ; 2013 ; International Journal of Cast Metals Research Volume 26 ; 26 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; International Journal of Cast Metals Research Volume 27 ; 27 ; reingest2.clockss.org:8085 >
@@ -1792,7 +1792,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; International Materials Reviews Volume 57 ; 57 ; >
     au < finished ; finished ; 2013 ; International Materials Reviews Volume 58 ; 58 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; International Materials Reviews Volume 59 ; 59 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2015 ; International Materials Reviews Volume 60 ; 60 ; >
+    au < finished ; manifest ; 2015 ; International Materials Reviews Volume 60 ; 60 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -2179,7 +2179,7 @@
     au < doNotProcess ; doNotProcess ; 2006-2007 ; Journal of Care Services Management Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2007-2008 ; Journal of Care Services Management Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2008-2009 ; Journal of Care Services Management Volume 3 ; 3 ; >
-    au < frozen ; exists ; 2009-2010 ; Journal of Care Services Management Volume 4 ; 4 ; >
+    au < finished ; manifest ; 2009-2010 ; Journal of Care Services Management Volume 4 ; 4 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2011 ; Journal of Care Services Management Volume 5 ; 5 ; reingest5.clockss.org:8082 > 
     au < finished ; manifest ; 2012 ; Journal of Care Services Management Volume 6 ; 6 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2013 ; Journal of Care Services Management Volume 7 ; 7 ; reingest2.clockss.org:8085 >
@@ -2217,7 +2217,7 @@
     au < finished ; manifest ; 2012 ; Journal of Chemotherapy Volume 24 ; 24 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2013 ; Journal of Chemotherapy Volume 25 ; 25 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Journal of Chemotherapy Volume 26 ; 26 ; >
-    au < frozen ; exists ; 2015 ; Journal of Chemotherapy Volume 27 ; 27 ; >
+    au < finished ; manifest ; 2015 ; Journal of Chemotherapy Volume 27 ; 27 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -2315,7 +2315,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of Field Archaeology Volume 37 ; 37 ; >
     au < finished ; manifest ; 2013 ; Journal of Field Archaeology Volume 38 ; 38 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Journal of Field Archaeology Volume 39 ; 39 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2015 ; Journal of Field Archaeology Volume 40 ; 40 ; >
+    au < finished ; manifest ; 2015 ; Journal of Field Archaeology Volume 40 ; 40 ; reingest5.clockss.org:8082 >
 
   }
 
@@ -2367,7 +2367,7 @@
     au < finished ; finished ; 2012 ; Journal of Histotechnology Volume 35 ; 35 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Journal of Histotechnology Volume 36 ; 36 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Journal of Histotechnology Volume 37 ; 37 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2015 ; Journal of Histotechnology Volume 38 ; 38 ; >
+    au < finished ; manifest ; 2015 ; Journal of Histotechnology Volume 38 ; 38 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -2533,10 +2533,10 @@
     au < doNotProcess ; doNotProcess ; 2007 ; Journal of the Energy Institute Volume 80 ; 80 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of the Energy Institute Volume 81 ; 81 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of the Energy Institute Volume 82 ; 82 ; >
-    au < frozen ; exists ; 2010 ; Journal of the Energy Institute Volume 83 ; 83 ; >
-    au < frozen ; exists ; 2011 ; Journal of the Energy Institute Volume 84 ; 84 ; >
+    au < finished ; manifest ; 2010 ; Journal of the Energy Institute Volume 83 ; 83 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2011 ; Journal of the Energy Institute Volume 84 ; 84 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of the Energy Institute Volume 85 ; 85 ; >
-    au < frozen ; exists ; 2013 ; Journal of the Energy Institute Volume 86 ; 86 ; >
+    au < finished ; manifest ; 2013 ; Journal of the Energy Institute Volume 86 ; 86 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -2638,7 +2638,7 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Language & History Volume 53 ; 53 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Language & History Volume 54 ; 54 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Language & History Volume 55 ; 55 ; >
-    au < frozen ; exists ; 2013 ; Language & History Volume 56 ; 56 ; >
+    au < finished ; manifest ; 2013 ; Language & History Volume 56 ; 56 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Language & History Volume 57 ; 57 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Language & History Volume 58 ; 58 ; reingest1.clockss.org:8082 >
 
@@ -2697,9 +2697,9 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Levant Volume 40 ; 40 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Levant Volume 41 ; 41 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Levant Volume 42 ; 42 ; >
-    au < frozen ; exists ; 2011 ; Levant Volume 43 ; 43 ; >
+    au < finished ; manifest ; 2011 ; Levant Volume 43 ; 43 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2012 ; Levant Volume 44 ; 44 ; >
-    au < frozen ; exists ; 2013 ; Levant Volume 45 ; 45 ; >
+    au < finished ; manifest ; 2013 ; Levant Volume 45 ; 45 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Levant Volume 46 ; 46 ; >
     au < finished ; finished ; 2015 ; Levant Volume 47 ; 47 ; reingest5.clockss.org:8082 >
 
@@ -2792,7 +2792,7 @@
     au < doNotProcess ; doNotProcess ; 2010 ; The London Journal Volume 35 ; 35 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; The London Journal Volume 36 ; 36 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; The London Journal Volume 37 ; 37 ; >
-    au < frozen ; exists ; 2013 ; The London Journal Volume 38 ; 38 ; >
+    au < finished ; manifest ; 2013 ; The London Journal Volume 38 ; 38 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; The London Journal Volume 39 ; 39 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; The London Journal Volume 40 ; 40 ; reingest4.clockss.org:8082 >
 
@@ -2814,12 +2814,12 @@
     au < doNotProcess ; doNotProcess ; 2007 ; Materials Research Innovations Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Materials Research Innovations Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Materials Research Innovations Volume 13 ; 13 ; >
-    au < frozen ; exists ; 2010 ; Materials Research Innovations Volume 14 ; 14 ; >
-    au < frozen ; exists ; 2011 ; Materials Research Innovations Volume 15 ; 15 ; >
+    au < finished ; manifest ; 2010 ; Materials Research Innovations Volume 14 ; 14 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2011 ; Materials Research Innovations Volume 15 ; 15 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2012 ; Materials Research Innovations Volume 16 ; 16 ; >
     au < finished ; finished ; 2013 ; Materials Research Innovations Volume 17 ; 17 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Materials Research Innovations Volume 18 ; 18 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2015 ; Materials Research Innovations Volume 19 ; 19 ; >
+    au < finished ; manifest ; 2015 ; Materials Research Innovations Volume 19 ; 19 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -2861,12 +2861,12 @@
     au < doNotProcess ; doNotProcess ; 2007 ; Materials Science and Technology Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Materials Science and Technology Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Materials Science and Technology Volume 25 ; 25 ; >
-    au < frozen ; exists ; 2010 ; Materials Science and Technology Volume 26 ; 26 ; >
+    au < finished ; manifest ; 2010 ; Materials Science and Technology Volume 26 ; 26 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2011 ; Materials Science and Technology Volume 27 ; 27 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2012 ; Materials Science and Technology Volume 28 ; 28 ; >
     au < finished ; finished ; 2013 ; Materials Science and Technology Volume 29 ; 29 ; reingest1.clockss.org:8082 >
     au < zapped ; finished ; 2014 ; Materials Science and Technology Volume 30 ; 30 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2015 ; Materials Science and Technology Volume 31 ; 31 ; >
+    au < finished ; manifest ; 2015 ; Materials Science and Technology Volume 31 ; 31 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -2886,8 +2886,8 @@
     au < doNotProcess ; doNotProcess ; 2007 ; Materials Technology: Advanced Performance Materials Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Materials Technology: Advanced Performance Materials Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Materials Technology: Advanced Performance Materials Volume 24 ; 24 ; >
-    au < frozen ; exists ; 2010 ; Materials Technology: Advanced Performance Materials Volume 25 ; 25 ; >
-    au < frozen ; exists ; 2011 ; Materials Technology: Advanced Performance Materials Volume 26 ; 26 ; >
+    au < finished ; manifest ; 2010 ; Materials Technology: Advanced Performance Materials Volume 25 ; 25 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2011 ; Materials Technology: Advanced Performance Materials Volume 26 ; 26 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2012 ; Materials Technology: Advanced Performance Materials Volume 27 ; 27 ; >
     au < finished ; finished ; 2013 ; Materials Technology: Advanced Performance Materials Volume 28 ; 28 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Materials Technology: Advanced Performance Materials Volume 29 ; 29 ; reingest1.clockss.org:8082 >
@@ -2906,8 +2906,8 @@
 
     param[journal_id] = mew 
 
-    au < frozen ; exists ; 2012 ; Medical Writing Volume 21 ; 21 ; >
-    au < frozen ; exists ; 2013 ; Medical Writing Volume 22 ; 22 ; >
+    au < finished ; manifest ; 2012 ; Medical Writing Volume 21 ; 21 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2013 ; Medical Writing Volume 22 ; 22 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Medical Writing Volume 23 ; 23 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Medical Writing Volume 24 ; 24 ; reingest5.clockss.org:8082 >
 
