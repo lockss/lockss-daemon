@@ -9,7 +9,6 @@ import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArticleFiles;
 import org.lockss.plugin.ArticleIteratorFactory;
 import org.lockss.plugin.SubTreeArticleIteratorBuilder;
-import org.lockss.plugin.clockss.scienceopen.ScienceOpenSourceZipXmlArticleIteratorFactory;
 import org.lockss.util.Logger;
 
 import java.util.Iterator;
@@ -21,7 +20,7 @@ public class ElifeSciencesXmlSourceArticleIteratorFactory implements ArticleIter
     //https://clockss-test.lockss.org/sourcefiles/elife-released/2020/elife-47946-xml-pdf.zip!/elife-47946.xml
     //https://clockss-test.lockss.org/sourcefiles/elife-released/2020/elife-47946-xml-pdf.zip!/elife-47946.pdf
 
-    protected static Logger log = Logger.getLogger(ScienceOpenSourceZipXmlArticleIteratorFactory.class);
+    protected static Logger log = Logger.getLogger(ElifeSciencesXmlSourceArticleIteratorFactory.class);
 
     protected static final String ALL_ZIP_XML_PATTERN_TEMPLATE =
             "\"%s[^/]+/.*\\.zip!/(\\w+\\-\\d+)\\.(xml|pdf)$\", base_url";
