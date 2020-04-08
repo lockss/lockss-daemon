@@ -3077,7 +3077,7 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Midland History Volume 35 ; 35 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Midland History Volume 36 ; 36 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Midland History Volume 37 ; 37 ; >
-    au < frozen ; exists ; 2013 ; Midland History Volume 38 ; 38 ; >
+    au < finished ; manifest ; 2013 ; Midland History Volume 38 ; 38 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Midland History Volume 39 ; 39 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Midland History Volume 40 ; 40 ; reingest2.clockss.org:8085 >
 
@@ -3106,8 +3106,8 @@
     au < doNotProcess ; doNotProcess ; 2007 ; Mineral Processing and Extractive Metallurgy Volume 116 ; 116 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Mineral Processing and Extractive Metallurgy Volume 117 ; 117 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Mineral Processing and Extractive Metallurgy Volume 118 ; 118 ; >
-    au < frozen ; exists ; 2010 ; Mineral Processing and Extractive Metallurgy Volume 119 ; 119 ; >
-    au < frozen ; exists ; 2011 ; Mineral Processing and Extractive Metallurgy Volume 120 ; 120 ; > 
+    au < finished ; manifest ; 2010 ; Mineral Processing and Extractive Metallurgy Volume 119 ; 119 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2011 ; Mineral Processing and Extractive Metallurgy Volume 120 ; 120 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2012 ; Mineral Processing and Extractive Metallurgy Volume 121 ; 121 ; >
     au < finished ; finished ; 2013 ; Mineral Processing and Extractive Metallurgy Volume 122 ; 122 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Mineral Processing and Extractive Metallurgy Volume 123 ; 123 ; reingest1.clockss.org:8082 >
@@ -3164,7 +3164,7 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Ming Studies Volume 2010 ; 2010 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Ming Studies Volume 2011 ; 2011 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Ming Studies Volume 2012 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; Ming Studies Volume 2013 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Ming Studies Volume 2013 ; 2013 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Ming Studies Volume 2014 ; 2014 ; >
     au < finished ; finished ; 2015 ; Ming Studies Volume 2015 ; 2015 ; reingest2.clockss.org:8085 >
 
@@ -3196,7 +3196,7 @@
     au < finished ; finished ; 2010 ; Mining Technology Volume 119 ; 119 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2011 ; Mining Technology Volume 120 ; 120 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Mining Technology Volume 121 ; 121 ; >
-    au < frozen ; exists ; 2013 ; Mining Technology Volume 122 ; 122 ; >
+    au < finished ; manifest ; 2013 ; Mining Technology Volume 122 ; 122 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Mining Technology Volume 123 ; 123 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Mining Technology Volume 124 ; 124 ; reingest5.clockss.org:8082 >
 
@@ -3302,9 +3302,9 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Neurological Research Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Neurological Research Volume 31 ; 31 ; >
     au < finished ; manifest ; 2010 ; Neurological Research Volume 32 ; 32 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2011 ; Neurological Research Volume 33 ; 33 ; >
+    au < finished ; manifest ; 2011 ; Neurological Research Volume 33 ; 33 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2012 ; Neurological Research Volume 34 ; 34 ; >
-    au < frozen ; exists ; 2013 ; Neurological Research Volume 35 ; 35 ; >
+    au < finished ; manifest ; 2013 ; Neurological Research Volume 35 ; 35 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Neurological Research Volume 36 ; 36 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Neurological Research Volume 37 ; 37 ; reingest4.clockss.org:8082 >
 
@@ -3321,7 +3321,7 @@
     param[journal_id] = njb
     comment[dnp] = released for old plugin
 
-    au < frozen ; exists ; 2011 ; New Journal of Botany Volume 1 ; 1 ; >
+    au < finished ; manifest ; 2011 ; New Journal of Botany Volume 1 ; 1 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2012 ; New Journal of Botany Volume 2 ; 2 ; >
     au < finished ; finished ; 2013 ; New Journal of Botany Volume 3 ; 3 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; New Journal of Botany Volume 4 ; 4 ; reingest1.clockss.org:8082 >
@@ -3391,7 +3391,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Northern History Volume 49 ; 49 ; >
     au < finished ; manifest ; 2013 ; Northern History Volume 50 ; 50 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Northern History Volume 51 ; 51 ; >
-    au < frozen ; exists ; 2015 ; Northern History Volume 52 ; 52 ; >
+    au < finished ; manifest ; 2015 ; Northern History Volume 52 ; 52 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -3505,7 +3505,7 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Packaging, Transport, Storage & Security of Radioactive Material Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Packaging, Transport, Storage & Security of Radioactive Material Volume 23 ; 23 ; >
     au < finished ; finished ; 2013 ; Packaging, Transport, Storage & Security of Radioactive Material Volume 24 ; 24 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2014 ; Packaging, Transport, Storage & Security of Radioactive Material Volume 25 ; 25 ; >
+    au < finished ; manifest ; 2014 ; Packaging, Transport, Storage & Security of Radioactive Material Volume 25 ; 25 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; exists ; 2015 ; Packaging, Transport, Storage & Security of Radioactive Material Volume 26 ; 26 ; >
 
   }
@@ -3697,7 +3697,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Plastics, Rubber and Composites Volume 41 ; 41 ; >
     au < finished ; finished ; 2013 ; Plastics, Rubber and Composites Volume 42 ; 42 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Plastics, Rubber and Composites Volume 43 ; 43 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2015 ; Plastics, Rubber and Composites Volume 44 ; 44 ; >
+    au < finished ; manifest ; 2015 ; Plastics, Rubber and Composites Volume 44 ; 44 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -3721,7 +3721,7 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Post-Medieval Archaeology Volume 45 ; 45 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Post-Medieval Archaeology Volume 46 ; 46 ; >
     au < finished ; finished ; 2013 ; Post-Medieval Archaeology Volume 47 ; 47 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2014 ; Post-Medieval Archaeology Volume 48 ; 48 ; >
+    au < finished ; manifest ; 2014 ; Post-Medieval Archaeology Volume 48 ; 48 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Post-Medieval Archaeology Volume 49 ; 49 ; reingest3.clockss.org:8083 >
 
   }
