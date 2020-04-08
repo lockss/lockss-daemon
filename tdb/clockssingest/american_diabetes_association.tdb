@@ -188,7 +188,7 @@
         au < ada.ClockssADADrupalPlugin ; finished ; crawling ; 2016 ; Diabetes Care Volume 39 ; 39 ; http://care.diabetesjournals.org/ ; reingest4.clockss.org:8082 >
         au < ada.ClockssADADrupalPlugin ; deepCrawl ; exists ; 2017 ; Diabetes Care Volume 40 ; 40 ; http://care.diabetesjournals.org/ ; >
         au < ada.ClockssADADrupalPlugin ; deepCrawl ; exists ; 2018 ; Diabetes Care Volume 41 ; 41 ; http://care.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; crawling ; exists ; 2019 ; Diabetes Care Volume 42 ; 42 ; https://care.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; deepCrawl ; exists ; 2019 ; Diabetes Care Volume 42 ; 42 ; https://care.diabetesjournals.org/ ; >
         au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2020 ; Diabetes Care Volume 43 ; 43 ; https://care.diabetesjournals.org/ ; >
 
       }

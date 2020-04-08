@@ -112,7 +112,7 @@
     au < finished ; crawling ; 2016 ; 2016 ; Aktuelle Dermatologie Volume 42 ; 42 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Aktuelle Dermatologie Volume 43 ; 43 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Aktuelle Dermatologie Volume 44 ; 44 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Aktuelle Dermatologie Volume 45 ; 45 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Aktuelle Dermatologie Volume 45 ; 45 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Aktuelle Dermatologie Volume 46 ; 46 ; >
 
   }
@@ -960,7 +960,7 @@
 
    au < deepCrawl ; exists ; 2017 ; 2017 ; Die Wirbelsäule Volume 1 ; 1 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Die Wirbelsäule Volume 2 ; 2 ; >
-   au < crawling ; exists ; 2019 ; 2019 ; Die Wirbelsäule Volume 3 ; 3 ; >
+   au < deepCrawl ; exists ; 2019 ; 2019 ; Die Wirbelsäule Volume 3 ; 3 ; >
    au < manifest ; exists ; 2020 ; 2020 ; Die Wirbelsäule Volume 4 ; 4 ; >
 
   }
@@ -1390,7 +1390,7 @@
     au < finished ; crawling ; 2016 ; 2016 ; Endoscopy international open Volume 4 ; 4 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Endoscopy international open Volume 5 ; 5 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Endoscopy international open Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Endoscopy international open Volume 7 ; 7 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Endoscopy international open Volume 7 ; 7 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Endoscopy international open Volume 8 ; 8 ; >
 
   }
@@ -1580,7 +1580,7 @@
    au < deepCrawl ; exists ; 2016 ; 2016 ; European Journal of Pediatric Surgery Volume 26 ; 26 ; >
    au < deepCrawl ; exists ; 2017 ; 2017 ; European Journal of Pediatric Surgery Volume 27 ; 27 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; European Journal of Pediatric Surgery Volume 28 ; 28 ; >
-   au < crawling ; exists ; 2019 ; 2019 ; European Journal of Pediatric Surgery Volume 29 ; 29 ; >
+   au < deepCrawl ; exists ; 2019 ; 2019 ; European Journal of Pediatric Surgery Volume 29 ; 29 ; >
    au < manifest ; exists ; 2020 ; 2020 ; European Journal of Pediatric Surgery Volume 30 ; 30 ; >
 
   }
@@ -1693,7 +1693,7 @@
    au < finished ; finished ; 2016 ; 2016 ; Experimental and Clinical Endocrinology & Diabetes Volume 124 ; 124 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Experimental and Clinical Endocrinology & Diabetes Volume 125 ; 125 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Experimental and Clinical Endocrinology & Diabetes Volume 126 ; 126 ; >
-   au < crawling ; exists ; 2019 ; 2019 ; Experimental and Clinical Endocrinology & Diabetes Volume 127 ; 127 ; >
+   au < deepCrawl ; exists ; 2019 ; 2019 ; Experimental and Clinical Endocrinology & Diabetes Volume 127 ; 127 ; >
    au < manifest ; exists ; 2020 ; 2020 ; Experimental and Clinical Endocrinology & Diabetes Volume 128 ; 128 ; >
 
   }
@@ -1845,7 +1845,7 @@
    au < finished ; crawling ; 2016 ; 2016 ; Fortschritte der Neurologie - Psychiatrie Volume 84 ; 84 ; reingest2.clockss.org:8085 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Fortschritte der Neurologie - Psychiatrie Volume 85 ; 85 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Fortschritte der Neurologie - Psychiatrie Volume 86 ; 86 ; >
-   au < crawling ; exists ; 2019 ; 2019 ; Fortschritte der Neurologie - Psychiatrie Volume 87 ; 87 ; >
+   au < deepCrawl ; exists ; 2019 ; 2019 ; Fortschritte der Neurologie - Psychiatrie Volume 87 ; 87 ; >
    au < manifest ; exists ; 2020 ; 2020 ; Fortschritte der Neurologie - Psychiatrie Volume 88 ; 88 ; >
 
   }
@@ -2490,7 +2490,7 @@
    au < finished ; crawling ; 2016 ; 2016 ; International Archives of Otorhinolaryngology Volume 20 ; 20 ; reingest2.clockss.org:8085 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; International Archives of Otorhinolaryngology Volume 21 ; 21 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; International Archives of Otorhinolaryngology Volume 22 ; 22 ; >
-   au < crawling ; exists ; 2019 ; 2019 ; International Archives of Otorhinolaryngology Volume 23 ; 23 ; >
+   au < deepCrawl ; exists ; 2019 ; 2019 ; International Archives of Otorhinolaryngology Volume 23 ; 23 ; >
    au < manifest ; exists ; 2020 ; 2020 ; International Archives of Otorhinolaryngology Volume 24 ; 24 ; >
 
   }
@@ -2809,7 +2809,7 @@
     
     au < deepCrawl ; exists ; 2017 ; 2017 ; The Journal of Hip Surgery  Volume 1 ; 1 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; The Journal of Hip Surgery  Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; The Journal of Hip Surgery  Volume 3 ; 3 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; The Journal of Hip Surgery  Volume 3 ; 3 ; >
     au < expected ; exists ; 2020 ; 2020 ; The Journal of Hip Surgery  Volume 4 ; 4 ; >
 
   }
@@ -3082,7 +3082,7 @@
     au < finished ; crawling ; 2016 ; 2016 ; Journal of Pediatric Neurology Volume 14 ; 14 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Journal of Pediatric Neurology Volume 15 ; 15 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Journal of Pediatric Neurology Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Journal of Pediatric Neurology Volume 17 ; 17 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Pediatric Neurology Volume 17 ; 17 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Journal of Pediatric Neurology Volume 18 ; 18 ; >
 
   }
@@ -3175,7 +3175,7 @@
     au < finished ; crawling ; 2016 ; 2016 ; Journal of Reconstructive Microsurgery Open Volume 1 ; 1 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Journal of Reconstructive Microsurgery Open Volume 2 ; 2 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Journal of Reconstructive Microsurgery Open Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Journal of Reconstructive Microsurgery Open Volume 4 ; 4 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Reconstructive Microsurgery Open Volume 4 ; 4 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Journal of Reconstructive Microsurgery Open Volume 5 ; 5 ; >
 
   }
@@ -4175,7 +4175,7 @@
     au < deepCrawl ; exists ; 2016 ; 2016 ; Orthopädie und Unfallchirurgie up2date Volume 11 ; 11 ; >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Orthopädie und Unfallchirurgie up2date Volume 12 ; 12 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Orthopädie und Unfallchirurgie up2date Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Orthopädie und Unfallchirurgie up2date Volume 14 ; 14 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Orthopädie und Unfallchirurgie up2date Volume 14 ; 14 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Orthopädie und Unfallchirurgie up2date Volume 15 ; 15 ; >
 
   }
@@ -4487,7 +4487,7 @@
     au < finished ; finished ; 2016 ; 2016 ; physioscience Volume 12 ; 12 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; physioscience Volume 13 ; 13 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; physioscience Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; physioscience Volume 15 ; 15 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; physioscience Volume 15 ; 15 ; >
     au < manifest ; exists ; 2020 ; 2020 ; physioscience Volume 16 ; 16 ; >
 
   }
@@ -5899,7 +5899,7 @@
    au < finished ; finished ; 2016 ; 2016 ; Sprache Stimme Gehör Volume 40 ; 40 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Sprache Stimme Gehör Volume 41 ; 41 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Sprache Stimme Gehör Volume 42 ; 42 ; >
-   au < crawling ; exists ; 2019 ; 2019 ; Sprache Stimme Gehör Volume 43 ; 43 ; >
+   au < deepCrawl ; exists ; 2019 ; 2019 ; Sprache Stimme Gehör Volume 43 ; 43 ; >
    au < manifest ; exists ; 2020 ; 2020 ; Sprache Stimme Gehör Volume 44 ; 44 ; >
 
   }
@@ -6204,7 +6204,7 @@
     au < finished ; crawling ; 2016 ; 2016 ; The Thoracic and Cardiovascular Surgeon Volume 64 ; 64 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; The Thoracic and Cardiovascular Surgeon Volume 65 ; 65 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; The Thoracic and Cardiovascular Surgeon Volume 66 ; 66 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; The Thoracic and Cardiovascular Surgeon Volume 67 ; 67 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; The Thoracic and Cardiovascular Surgeon Volume 67 ; 67 ; >
     au < manifest ; exists ; 2020 ; 2020 ; The Thoracic and Cardiovascular Surgeon Volume 68 ; 68 ; >
 
   }
@@ -6435,7 +6435,7 @@
     au < deepCrawl ; down ; 2016 ; 2016 ; veterinär spiegel Volume 26 ; 26 ;  >
     au < deepCrawl ; exists ; 2017 ; 2017 ; veterinär spiegel Volume 27 ; 27 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; veterinär spiegel Volume 28 ; 28 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; veterinär spiegel Volume 29 ; 29 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; veterinär spiegel Volume 29 ; 29 ; >
     au < manifest ; exists ; 2020 ; 2020 ; veterinär spiegel Volume 30 ; 30 ; >
 
   }
@@ -6815,7 +6815,7 @@
     au < finished ; finished ; 2016 ; 2016 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 154 ; 154 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 155 ; 155 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 156 ; 156 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 157 ; 157 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 157 ; 157 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 158 ; 158 ; >
 
   }
@@ -7463,7 +7463,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Nuklearmedizin Volume 55 ; 55 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Nuklearmedizin Volume 56 ; 56 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Nuklearmedizin Volume 57 ; 57 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Nuklearmedizin Volume 58 ; 58 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Nuklearmedizin Volume 58 ; 58 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Nuklearmedizin Volume 59 ; 59 ; >
 
   }
@@ -7663,7 +7663,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 44 ; 44 ; >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 45 ; 45 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 46 ; 46 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 47 ; 47 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 47 ; 47 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 48 ; 48 ; >
 
   }

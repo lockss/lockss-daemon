@@ -142,7 +142,7 @@
 #      param[base_url] = https://ijops.com/
 
       au < finished ; manifest ; 2018 ; 1 ; International Journal of Orthoplastic Surgery Volume 2018 ; 2018 ; https://ijops.com/ ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2019 ; 2 ; International Journal of Orthoplastic Surgery Volume 2019 ; 2019 ; https://ijops.com/ ; >
+      au < deepCrawl ; exists ; 2019 ; 2 ; International Journal of Orthoplastic Surgery Volume 2019 ; 2019 ; https://ijops.com/ ; >
 
   }
 
@@ -173,7 +173,7 @@
 
       au < finished ; crawling ; 2017 ; 1 ; Latin American Research Review Volume 2017 ; 2017 ; https://larrlasa.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 2 ; Latin American Research Review Volume 2018 ; 2018 ; https://larrlasa.org/ ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2019 ; 3 ; Latin American Research Review Volume 2019 ; 2019 ; https://larrlasa.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; 3 ; Latin American Research Review Volume 2019 ; 2019 ; https://larrlasa.org/ ; >
 
   }
 
@@ -804,7 +804,7 @@
       au < finished ; crawling ; 2016 ; 46 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2016 ; 2016 ; https://www.iberoamericana.se/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2017 ; 47 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2017 ; 2017 ; https://www.iberoamericana.se/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 48 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2018 ; 2018 ; https://www.iberoamericana.se/ ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2019 ; 49 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2019 ; 2019 ; https://www.iberoamericana.se/ ; >
+      au < deepCrawl ; exists ; 2019 ; 49 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2019 ; 2019 ; https://www.iberoamericana.se/ ; >
 
   }
   {
@@ -1390,7 +1390,7 @@
       au < finished ; finished ; 2015 ; 3 ; Open Health Data Volume 2015 ; 2015 ; http://openhealthdata.metajnl.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; 4 ; Open Health Data Volume 2016 ; 2016 ; http://openhealthdata.metajnl.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 5 ; Open Health Data Volume 2018 ; 2018 ; https://openhealthdata.metajnl.com/ ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2019 ; 6 ; Open Health Data Volume 2019 ; 2019 ; https://openhealthdata.metajnl.com/ ; >
+      au < deepCrawl ; exists ; 2019 ; 6 ; Open Health Data Volume 2019 ; 2019 ; https://openhealthdata.metajnl.com/ ; >
 
   }
 
@@ -1926,7 +1926,7 @@
       au < finished ; crawling ; 2016 ; 9 ; Cultural Science Journal Volume 2016 ; 2016 ; https://culturalscience.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; 10 ; Cultural Science Journal Volume 2017 ; 2017 ; https://culturalscience.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 11 ; Cultural Science Journal Volume 2018 ; 2018 ; https://culturalscience.org/ ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2019 ; 12 ; Cultural Science Journal Volume 2019 ; 2019 ; https://culturalscience.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; 12 ; Cultural Science Journal Volume 2019 ; 2019 ; https://culturalscience.org/ ; >
 
   }
 
@@ -2360,7 +2360,7 @@
       au < finished ; crawling ; 2016 ; 14 ; ERLACS Volume 2016 ; 2016 ; http://www.erlacs.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2017 ; 15 ; ERLACS Volume 2017 ; 2017 ; http://www.erlacs.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 16 ; ERLACS Volume 2018 ; 2018 ; https://www.erlacs.org/ ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2019 ; 17 ; ERLACS Volume 2019 ; 2019 ; https://www.erlacs.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; 17 ; ERLACS Volume 2019 ; 2019 ; https://www.erlacs.org/ ; >
 
   }
 
@@ -2428,7 +2428,7 @@
       au < finished ; crawling ; 2016 ; 4 ; International Journal for History, Culture and Modernity Volume 2016 ; 2016 ; https://www.history-culture-modernity.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2017 ; 5 ; International Journal for History, Culture and Modernity Volume 2017 ; 2017 ; https://www.history-culture-modernity.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2018 ; 6 ; International Journal for History, Culture and Modernity Volume 2018 ; 2018 ; https://www.history-culture-modernity.org/ ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2019 ; 7 ; International Journal for History, Culture and Modernity Volume 2019 ; 2019 ; https://www.history-culture-modernity.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; 7 ; International Journal for History, Culture and Modernity Volume 2019 ; 2019 ; https://www.history-culture-modernity.org/ ; >
 
   }
 

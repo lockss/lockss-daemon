@@ -46,7 +46,7 @@
     au < finished ; finished ; 2016 ; Scottish Church History Volume 45 ; 45 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Scottish Church History Volume 46 ; 46 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; Scottish Church History Volume 47 ; 47 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2019 ; Scottish Church History Volume 48 ; 48 ; https://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2019 ; Scottish Church History Volume 48 ; 48 ; https://www.euppublishing.com/ ; >
     au < manifest ; exists ; 2020 ; Scottish Church History Volume 49 ; 49 ; https://www.euppublishing.com/ ; >
   }
 
@@ -346,7 +346,7 @@
     au < finished ; crawling ; 2016 ; Ben Jonson Journal Volume 23 ; 23 ; http://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2017 ; Ben Jonson Journal Volume 24 ; 24 ; http://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2018 ; Ben Jonson Journal Volume 25 ; 25 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2019 ; Ben Jonson Journal Volume 26 ; 26 ; https://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2019 ; Ben Jonson Journal Volume 26 ; 26 ; https://www.euppublishing.com/ ; >
     au < expected ; exists ; 2020 ; Ben Jonson Journal Volume 27 ; 27 ; https://www.euppublishing.com/ ; >
 
   }
@@ -444,7 +444,7 @@
     au < finished ; crawling ; 2016 ; Corpora Volume 11 ; 11 ; http://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2017 ; Corpora Volume 12 ; 12 ; http://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2018 ; Corpora Volume 13 ; 13 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2019 ; Corpora Volume 14 ; 14 ; https://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2019 ; Corpora Volume 14 ; 14 ; https://www.euppublishing.com/ ; >
     au < manifest ; exists ; 2020 ; Corpora Volume 15 ; 15 ; https://www.euppublishing.com/ ; >
 
   }
@@ -689,7 +689,7 @@
      au < finished ; frozen ; 2016 ; Gothic Studies Volume 18 ; 18 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
      au < finished ; crawling ; 2017 ; Gothic Studies Volume 19 ; 19 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
      au < finished ; finished ; 2018 ; Gothic Studies Volume 20 ; 20 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
-     au < crawling ; exists ; 2019 ; Gothic Studies Volume 21 ; 21 ; https://www.euppublishing.com/ ; >
+     au < deepCrawl ; exists ; 2019 ; Gothic Studies Volume 21 ; 21 ; https://www.euppublishing.com/ ; >
      au < manifest ; exists ; 2020 ; Gothic Studies Volume 22 ; 22 ; https://www.euppublishing.com/ ; >
 
   }
@@ -1118,7 +1118,7 @@
     au < finished ; crawling ; 2016 ; Journal of Scottish Historical Studies Volume 36 ; 36 ; http://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Journal of Scottish Historical Studies Volume 37 ; 37 ; http://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2018 ; Journal of Scottish Historical Studies Volume 38 ; 38 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2019 ; Journal of Scottish Historical Studies Volume 39 ; 39 ; https://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2019 ; Journal of Scottish Historical Studies Volume 39 ; 39 ; https://www.euppublishing.com/ ; >
     au < expected ; exists ; 2020 ; Journal of Scottish Historical Studies Volume 40 ; 40 ; https://www.euppublishing.com/ ; >
 
   }
@@ -1427,7 +1427,7 @@
     au < finished ; crawling ; 2016 ; Oxford Literary Review Volume 38 ; 38 ; http://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Oxford Literary Review Volume 39 ; 39 ; http://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2018 ; Oxford Literary Review Volume 40 ; 40 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2019 ; Oxford Literary Review Volume 41 ; 41 ; https://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2019 ; Oxford Literary Review Volume 41 ; 41 ; https://www.euppublishing.com/ ; >
     au < expected ; exists ; 2020 ; Oxford Literary Review Volume 42 ; 42 ; https://www.euppublishing.com/ ; >
 
   }

@@ -384,7 +384,7 @@
       au < crawling ; exists ; 2019 ; Faraday Discussions Volume 217 ; 217 ; 2019 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2019 ; Faraday Discussions Volume 218 ; 218 ; 2019 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2019 ; Faraday Discussions Volume 219 ; 219 ; 2019 ; https://pubs.rsc.org/ ; >
-      au < crawling ; exists ; 2019 ; Faraday Discussions Volume 220 ; 220 ; 2019 ; https://pubs.rsc.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; Faraday Discussions Volume 220 ; 220 ; 2019 ; https://pubs.rsc.org/ ; >
       au < expected ; exists ; 2019 ; Faraday Discussions Volume 221 ; 221 ; 2019 ; https://pubs.rsc.org/ ; >
       au < expected ; exists ; 2019 ; Faraday Discussions Volume 222 ; 222 ; 2019 ; https://pubs.rsc.org/ ; >
       au < expected ; exists ; 2019 ; Faraday Discussions Volume 223 ; 223 ; 2019 ; https://pubs.rsc.org/ ; >
@@ -413,7 +413,7 @@
       au < finished ; manifest ; 2016 ; Green Chemistry Volume 18 ; 18 ; 2016 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2017 ; Green Chemistry Volume 19 ; 19 ; 2017 ; http://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2018 ; Green Chemistry Volume 20 ; 20 ; 2018 ; http://pubs.rsc.org/ ; >
-      au < crawling ; exists ; 2019 ; Green Chemistry Volume 21 ; 21 ; 2019 ; https://pubs.rsc.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; Green Chemistry Volume 21 ; 21 ; 2019 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -774,7 +774,7 @@
 
       au < deepCrawl ; exists ; 2017 ; Sustainable Energy & Fuels Volume 1 ; 1 ; 2017 ; http://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2018 ; Sustainable Energy & Fuels Volume 2 ; 2 ; 2018 ; https://pubs.rsc.org/ ; >
-      au < crawling ; exists ; 2019 ; Sustainable Energy & Fuels Volume 3 ; 3 ; 2019 ; https://pubs.rsc.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; Sustainable Energy & Fuels Volume 3 ; 3 ; 2019 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -1303,7 +1303,7 @@
       au < deepCrawl ; exists ; 2016 ; Inorganic Chemistry Frontiers Volume 3 ; 3 ; 2016 ; http://pubs.rsc.org/ ; >
       au < finished ; manifest ; 2017 ; Inorganic Chemistry Frontiers Volume 4 ; 4 ; 2017 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2018 ; Inorganic Chemistry Frontiers Volume 5 ; 5 ; 2018 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2019 ; Inorganic Chemistry Frontiers Volume 6 ; 6 ; 2019 ; https://pubs.rsc.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; Inorganic Chemistry Frontiers Volume 6 ; 6 ; 2019 ; https://pubs.rsc.org/ ; >
 
   }
 
