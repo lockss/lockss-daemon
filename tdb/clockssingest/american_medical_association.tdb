@@ -185,7 +185,7 @@
     au < finished ; finished ; 2016 ; JAMA Ophthalmology Volume 134 ; 2016 ; http://jamanetwork.com/ ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2017 ; JAMA Ophthalmology Volume 135 ; 2017 ; http://jamanetwork.com/ ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2018 ; JAMA Ophthalmology Volume 136 ; 2018 ; https://jamanetwork.com/ ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2019 ; JAMA Ophthalmology Volume 137 ; 2019 ; https://jamanetwork.com/ ; >
+    au < frozen ; exists ; 2019 ; JAMA Ophthalmology Volume 137 ; 2019 ; https://jamanetwork.com/ ; >
     au < manifest ; exists ; 2020 ; JAMA Ophthalmology Volume 138 ; 2020 ; https://jamanetwork.com/ ; >
 
   }
@@ -233,7 +233,7 @@
     au < finished ; finished ; 2016 ; JAMA Pediatrics Volume 170 ; 2016 ; http://jamanetwork.com/ ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2017 ; JAMA Pediatrics Volume 171 ; 2017 ; http://jamanetwork.com/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; JAMA Pediatrics Volume 172 ; 2018 ; https://jamanetwork.com/ ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2019 ; JAMA Pediatrics Volume 173 ; 2019 ; https://jamanetwork.com/ ; >
+    au < frozen ; exists ; 2019 ; JAMA Pediatrics Volume 173 ; 2019 ; https://jamanetwork.com/ ; >
     au < manifest ; exists ; 2020 ; JAMA Pediatrics Volume 174 ; 2020 ; https://jamanetwork.com/ ; >
 
   }
@@ -323,7 +323,7 @@
     au < finished ; finished ; 2016 ; JAMA: The Journal of the American Medical Association Volume 315-316 ; 2016 ; http://jamanetwork.com/ ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2017 ; JAMA: The Journal of the American Medical Association Volume 317-318 ; 2017 ; http://jamanetwork.com/ ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2018 ; JAMA: The Journal of the American Medical Association Volume 319-320 ; 2018 ; https://jamanetwork.com/ ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2019 ; JAMA: The Journal of the American Medical Association Volume 321-322 ; 2019 ; https://jamanetwork.com/ ; >
+    au < frozen ; exists ; 2019 ; JAMA: The Journal of the American Medical Association Volume 321-322 ; 2019 ; https://jamanetwork.com/ ; >
     au < manifest ; exists ; 2020 ; JAMA: The Journal of the American Medical Association Volume 323-324 ; 2020 ; https://jamanetwork.com/ ; >
 
   }

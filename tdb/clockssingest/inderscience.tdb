@@ -938,7 +938,7 @@
 
       au < doNotProcess ; doNotProcess ; 2009-2010 ; International Journal of Autonomic Computing Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < finished ; crawling ; 2014-2017 ; International Journal of Autonomic Computing Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2018 ; International Journal of Autonomic Computing Volume 3 [partial] ; 3 ; https://www.inderscienceonline.com/ ; > #issue 3, 4 not online
+      au < frozen ; exists ; 2018 ; International Journal of Autonomic Computing Volume 3 [partial] ; 3 ; https://www.inderscienceonline.com/ ; > #issue 3, 4 not online
 
     }
 
@@ -3885,7 +3885,7 @@
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Food Safety, Nutrition and Public Health Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Food Safety, Nutrition and Public Health Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2014-2015 ; International Journal of Food Safety, Nutrition and Public Health Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; >
-      au < crawling ; exists ; 2016 ; International Journal of Food Safety, Nutrition and Public Health Volume 6 [partial] ; 6 ; http://www.inderscienceonline.com/ ; > #issue 2, 3 & 4 not online
+      au < frozen ; exists ; 2016 ; International Journal of Food Safety, Nutrition and Public Health Volume 6 [partial] ; 6 ; http://www.inderscienceonline.com/ ; > #issue 2, 3 & 4 not online
 
     }
 
@@ -4491,7 +4491,7 @@
 
       au < finished ; finished ; 2015 ; International Journal of Image Mining Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2016-2017 ; International Journal of Image Mining Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2018 ; International Journal of Image Mining Volume 3 [partial] ; 3 ; https://www.inderscienceonline.com/ ; > #issue 3, 4 not online
+      au < frozen ; exists ; 2018 ; International Journal of Image Mining Volume 3 [partial] ; 3 ; https://www.inderscienceonline.com/ ; > #issue 3, 4 not online
 
     }
 
@@ -10407,7 +10407,7 @@
       param[journal_id] = ijhem
 
       au < finished ; crawling ; 2014-2016 ; International Journal of Hospitality and Event Management Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2018 ; International Journal of Hospitality and Event Management Volume 2 [partial] ; 2 ; https://www.inderscienceonline.com/ ; >  #issue 2, 3, 4 not online
+      au < frozen ; exists ; 2018 ; International Journal of Hospitality and Event Management Volume 2 [partial] ; 2 ; https://www.inderscienceonline.com/ ; >  #issue 2, 3, 4 not online
 
   }
 

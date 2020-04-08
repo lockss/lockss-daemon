@@ -292,7 +292,7 @@
       au < superseded ; exists ; 2019 ; Journal of Neurophysiology Volume 121 [superseded] ; 121 ; https://www.physiology.org/ ; >
       au < superseded ; exists ; 2019 ; Journal of Neurophysiology Volume 122 [superseded] ; 122 ; https://www.physiology.org/ ; >
       au < crawling ; exists ; 2019 ; Journal of Neurophysiology Volume 121 ; 121 ; https://journals.physiology.org/ ; >
-      au < crawling ; exists ; 2019 ; Journal of Neurophysiology Volume 122 ; 122 ; https://journals.physiology.org/ ; >
+      au < frozen ; exists ; 2019 ; Journal of Neurophysiology Volume 122 ; 122 ; https://journals.physiology.org/ ; >
       au < manifest ; exists ; 2020 ; Journal of Neurophysiology Volume 123 ; 123 ; https://journals.physiology.org/ ; >
       au < expected ; exists ; 2020 ; Journal of Neurophysiology Volume 124 ; 124 ; https://journals.physiology.org/ ; >
       au < expected ; exists ; 2020 ; Journal of Neurophysiology Volume 125 ; 125 ; https://journals.physiology.org/ ; >
@@ -340,7 +340,7 @@
       au < finished ; manifest ; 2017 ; Physiological Reviews Volume 97 ; 97 ; http://www.physiology.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2018 ; Physiological Reviews Volume 98 ; 98 ; https://www.physiology.org/ ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2019 ; Physiological Reviews Volume 99 [superseded] ; 99 ; https://www.physiology.org/ ; >
-      au < crawling ; exists ; 2019 ; Physiological Reviews Volume 99 ; 99 ; https://journals.physiology.org/ ; >
+      au < frozen ; exists ; 2019 ; Physiological Reviews Volume 99 ; 99 ; https://journals.physiology.org/ ; >
       au < manifest ; exists ; 2020 ; Physiological Reviews Volume 100 ; 100 ; https://journals.physiology.org/ ; >
 
     }
@@ -363,7 +363,7 @@
       au < finished ; manifest ; 2017 ; Physiology Volume 32 ; 32 ; http://www.physiology.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2018 ; Physiology Volume 33 ; 33 ; https://www.physiology.org/ ; reingest3.clockss.org:8083 >
       au < superseded ; exists ; 2019 ; Physiology Volume 34 [superseded] ; 34 ; https://www.physiology.org/ ; >
-      au < crawling ; exists ; 2019 ; Physiology Volume 34 ; 34 ; https://journals.physiology.org/ ; >
+      au < frozen ; exists ; 2019 ; Physiology Volume 34 ; 34 ; https://journals.physiology.org/ ; >
       au < manifest ; exists ; 2020 ; Physiology Volume 35 ; 35 ; https://journals.physiology.org/ ; >
 
     }
