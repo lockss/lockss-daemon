@@ -595,9 +595,9 @@
     param[journal_id] = jokc
     #continues = 2041-1448
 
-    au < crawling ; exists ; 2016 ; Journal of Kidney Care Volume 1 ; 1 ; https://www.magonlinelibrary.com/ ; > #500 error
-    au < crawling ; exists ; 2017 ; Journal of Kidney Care Volume 2 ; 2 ; https://www.magonlinelibrary.com/ ; > #500 error
-    au < notReady ; exists ; 2018 ; Journal of Kidney Care Volume 3 ; 3 ; https://www.magonlinelibrary.com/ ; > #500 error
+    au < crawling ; exists ; 2016 ; Journal of Kidney Care Volume 1 ; 1 ; https://www.magonlinelibrary.com/ ; >
+    au < crawling ; exists ; 2017 ; Journal of Kidney Care Volume 2 ; 2 ; https://www.magonlinelibrary.com/ ; >
+    au < ready ; exists ; 2018 ; Journal of Kidney Care Volume 3 ; 3 ; https://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2019 ; Journal of Kidney Care Volume 4 ; 4 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2020 ; Journal of Kidney Care Volume 5 ; 5 ; https://www.magonlinelibrary.com/ ; >
 
