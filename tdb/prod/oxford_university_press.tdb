@@ -2388,6 +2388,7 @@
     >
 
     param[journal_id] = biohorizons
+    #ceasing publication at the end of 2018
 
     au < manifest ; 2008 ; 2008 ; Bioscience Horizons: The International Journal of Student Research Volume 1 ; 1 >
     au < manifest ; 2009 ; 2009 ; Bioscience Horizons: The International Journal of Student Research Volume 2 ; 2 >
@@ -2400,7 +2401,6 @@
     au < released ; 2016 ; 2016 ; Bioscience Horizons: The International Journal of Student Research Volume 9 ; 9 >
     au < released ; 2017 ; 2017 ; Bioscience Horizons: The International Journal of Student Research Volume 10 ; 10 >
     au < manifest ; 2018 ; 2018 ; Bioscience Horizons: The International Journal of Student Research Volume 11 ; 11 >
-    au < expected ; 2019 ; 2019 ; Bioscience Horizons: The International Journal of Student Research Volume 12 ; 12 >
 
   }
 
@@ -6541,10 +6541,12 @@
     >
 
     param[journal_id] = globalsummitry
+    #ceased publishing at the end of 2019
 
     au < released ; 2015 ; 2015 ; Global Summitry Volume 1 ; 1 >
     au < released ; 2016 ; 2016 ; Global Summitry Volume 2 ; 2 >
     au < released ; 2017 ; 2017 ; Global Summitry Volume 3 ; 3 >
+    au < exists ; 2018 ; 2018 ; Global Summitry Volume 4 ; 4 >
 
   }
 
