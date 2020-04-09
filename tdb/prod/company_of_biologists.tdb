@@ -17,9 +17,11 @@
 
     #param[base_url] = http://bio.biologists.org/
 
-    au < HighWirePressH20Plugin ; down ; 2012 ; Biology Open Volume 1 ; 1 ; http://bio.biologists.org/ >
+    au < HighWirePressH20Plugin ; superseded ; 2012 ; Biology Open Volume 1 [superseded] ; 1 ; http://bio.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; exists ; 2012 ; Biology Open Volume 1 ; 1 ; https://bio.biologists.org/ >
     au < biologists.BiologistsDrupalPlugin ; manifest ; 2013 ; Biology Open Volume 2 ; 2 ; https://bio.biologists.org/ >
-    au < HighWirePressH20Plugin ; down ; 2014 ; Biology Open Volume 3 ; 3 ; http://bio.biologists.org/ >
+    au < HighWirePressH20Plugin ; superseded ; 2014 ; Biology Open Volume 3 [superseded] ; 3 ; http://bio.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; exists ; 2014 ; Biology Open Volume 3 ; 3 ; https://bio.biologists.org/ >
     au < biologists.BiologistsDrupalPlugin ; released ; 2015 ; Biology Open Volume 4 ; 4 ; http://bio.biologists.org/ >
     au < biologists.BiologistsDrupalPlugin ; released ; 2016 ; Biology Open Volume 5 ; 5 ; http://bio.biologists.org/ >
     au < biologists.BiologistsDrupalPlugin ; released ; 2017 ; Biology Open Volume 6 ; 6 ; http://bio.biologists.org/ >
@@ -217,7 +219,8 @@
     au < HighWirePressH20Plugin ; down ; 2011 ; Disease Models & Mechanisms Volume 4 ; 4 ; http://dmm.biologists.org/ >
     au < HighWirePressH20Plugin ; down ; 2012 ; Disease Models & Mechanisms Volume 5 ; 5 ; http://dmm.biologists.org/ >
     au < biologists.BiologistsDrupalPlugin ; manifest ; 2013 ; Disease Models & Mechanisms Volume 6 ; 6 ; https://dmm.biologists.org/ >
-    au < HighWirePressH20Plugin ; down ; 2014 ; Disease Models & Mechanisms Volume 7 ; 7 ; http://dmm.biologists.org/ >
+    au < HighWirePressH20Plugin ; superseded ; 2014 ; Disease Models & Mechanisms Volume 7 [superseded] ; 7 ; http://dmm.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; exists ; 2014 ; Disease Models & Mechanisms Volume 7 ; 7 ; https://dmm.biologists.org/ >
     au < biologists.BiologistsDrupalPlugin ; released ; 2015 ; Disease Models & Mechanisms Volume 8 ; 8 ; http://dmm.biologists.org/ >
     au < biologists.BiologistsDrupalPlugin ; released ; 2016 ; Disease Models & Mechanisms Volume 9 ; 9 ; http://dmm.biologists.org/ >
     au < biologists.BiologistsDrupalPlugin ; released ; 2017 ; Disease Models & Mechanisms Volume 10 ; 10 ; http://dmm.biologists.org/ >
