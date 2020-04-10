@@ -1125,6 +1125,7 @@
       attr[journal_id] = isprsannals
 #      param[base_url] = http://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/
 #      param[home_url] = http://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/
+      #needs communication with publisher see LXQUEUE-1055
 
       au < finished ; finished ; 2012 ; 2012 ; ISPRS Annals Volume I-2 ; I-2 ; http://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; http://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
       au < finished ; finished ; 2012 ; 2012 ; ISPRS Annals Volume I-3 ; I-3 ; http://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; http://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
@@ -1185,6 +1186,7 @@
 #      param[base_url] = http://www.isprs.org/proceedings/
 #      param[home_url] = http://www.isprs.org/proceedings/
       # needs review on file directory on website
+      #needs communication with publisher see LXQUEUE-1055
 
       au < exists ; exists ; 1976 ; 1976 ; ISPRS Archives Volume XXI ; XXI ; http://www.isprs.org/proceedings/ ; http://www.isprs.org/proceedings/ ; >
       au < doesNotExist ; doesNotExist ; 1978 ; 1978 ; ISPRS Archives Volume XXII ; XXII ; http://www.isprs.org/proceedings/ ; http://www.isprs.org/proceedings/ ; >
