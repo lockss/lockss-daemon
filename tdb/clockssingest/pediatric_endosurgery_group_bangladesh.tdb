@@ -11,6 +11,7 @@
   
   plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
   param[base_url] = http://bjendo.org/
+  #website no longer available
   implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
   
   {
@@ -25,7 +26,7 @@
     
     comment[down] = journal gone from base_url. Not a member of clockss. Do not process further content.
     
-    au < frozen ; exists ; 2013 ; Bangladesh Journal of Endosurgery Volume 1 ; 1 ; 2013 ; >
+    au < finished ; manifest ; 2013 ; Bangladesh Journal of Endosurgery Volume 1 ; 1 ; 2013 ; reingest3.clockss.org:8083 >
    
   }
 

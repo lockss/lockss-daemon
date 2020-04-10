@@ -121,7 +121,7 @@
     au < HighWirePressH20Plugin ; released ; 2016 ; Canadian Medical Association Journal Volume 188 ; 188 >
     au < HighWireDrupalPlugin ; exists ; 2017 ; Canadian Medical Association Journal Volume 189 ; 189 >
     au < HighWireDrupalPlugin ; exists ; 2018 ; Canadian Medical Association Journal Volume 190 ; 190 >
-    au < HighWireDrupalPlugin ; expected ; 2019 ; Canadian Medical Association Journal Volume 191 ; 191 >
+    au < HighWireDrupalPlugin ; exists ; 2019 ; Canadian Medical Association Journal Volume 191 ; 191 >
 
   }
 
@@ -145,6 +145,7 @@
       au < released ; 2017 ; CMAJ Open Volume 5 ; 5 >
       au < released ; 2018 ; CMAJ Open Volume 6 ; 6 >
       au < manifest ; 2019 ; CMAJ Open Volume 7 ; 7 >
+      au < manifest ; 2020 ; CMAJ Open Volume 8 ; 8 >
     }
     {
       param[base_url] = http://www.cmajopen.ca/

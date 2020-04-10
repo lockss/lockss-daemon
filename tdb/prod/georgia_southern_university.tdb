@@ -68,13 +68,13 @@
       param[base_url] = https://digitalcommons.georgiasouthern.edu/
       param[journal_abbr] = gerjournal
 
-      au < manifest ; 2003 ; Georgia Educational Researcher Volume 1 ; 1 >
-      au < manifest ; 2004 ; Georgia Educational Researcher Volume 2 ; 2 >
-      au < manifest ; 2005 ; Georgia Educational Researcher Volume 3 ; 3 >
-      au < manifest ; 2006 ; Georgia Educational Researcher Volume 4 ; 4 >
-      au < manifest ; 2007 ; Georgia Educational Researcher Volume 5 ; 5 >
-      au < manifest ; 2008 ; Georgia Educational Researcher Volume 6 ; 6 >
-      au < manifest ; 2009 ; Georgia Educational Researcher Volume 7 ; 7 >
+      au < ready ; 2003 ; Georgia Educational Researcher Volume 1 ; 1 >
+      au < ready ; 2004 ; Georgia Educational Researcher Volume 2 ; 2 >
+      au < ready ; 2005 ; Georgia Educational Researcher Volume 3 ; 3 >
+      au < ready ; 2006 ; Georgia Educational Researcher Volume 4 ; 4 >
+      au < ready ; 2007 ; Georgia Educational Researcher Volume 5 ; 5 >
+      au < ready ; 2008 ; Georgia Educational Researcher Volume 6 ; 6 >
+      au < ready ; 2009 ; Georgia Educational Researcher Volume 7 ; 7 >
       au < ready ; 2010 ; Georgia Educational Researcher Volume 8 ; 8 >
       au < ready ; 2011 ; Georgia Educational Researcher Volume 9 ; 9 >
       au < ready ; 2012 ; Georgia Educational Researcher Volume 10 ; 10 >
@@ -116,9 +116,9 @@
       param[base_url] = https://digitalcommons.georgiasouthern.edu/
       param[journal_abbr] = ij-sotl
 
-      au < manifest ; 2007 ; International Journal for the Scholarship of Teaching & Learning Volume 1 ; 1 >
-      au < manifest ; 2008 ; International Journal for the Scholarship of Teaching & Learning Volume 2 ; 2 >
-      au < manifest ; 2009 ; International Journal for the Scholarship of Teaching & Learning Volume 3 ; 3 >
+      au < ready ; 2007 ; International Journal for the Scholarship of Teaching & Learning Volume 1 ; 1 >
+      au < ready ; 2008 ; International Journal for the Scholarship of Teaching & Learning Volume 2 ; 2 >
+      au < ready ; 2009 ; International Journal for the Scholarship of Teaching & Learning Volume 3 ; 3 >
       au < ready ; 2010 ; International Journal for the Scholarship of Teaching & Learning Volume 4 ; 4 >
       au < ready ; 2011 ; International Journal for the Scholarship of Teaching & Learning Volume 5 ; 5 >
       au < ready ; 2012 ; International Journal for the Scholarship of Teaching & Learning Volume 6 ; 6 >
@@ -195,8 +195,8 @@
       param[journal_abbr] = thecoastalreview
 
       au < ready ; 2017 ; The Coastal Review Special Issue ; 0 >
-      au < manifest ; 2007 ; The Coastal Review Volume 1 ; 1 >
-      au < manifest ; 2008 ; The Coastal Review Volume 2 ; 2 >
+      au < ready ; 2007 ; The Coastal Review Volume 1 ; 1 >
+      au < ready ; 2008 ; The Coastal Review Volume 2 ; 2 >
       au < ready ; 2011 ; The Coastal Review Volume 3 ; 3 >
       au < ready ; 2013 ; The Coastal Review Volume 4 ; 4 >
       au < doesNotExist ; 2012 ; The Coastal Review Volume 5 ; 5 >
@@ -221,7 +221,7 @@
       param[base_url] = https://digitalcommons.georgiasouthern.edu/
       param[journal_abbr] = jssw
 
-      au < manifest ; 2017-2019 ; The Journal of Student Success in Writing Volume 1 ; 1 >
+      au < ready ; 2017-2019 ; The Journal of Student Success in Writing Volume 1 ; 1 >
 
   }
 
@@ -236,12 +236,12 @@
       param[base_url] = https://digitalcommons.georgiasouthern.edu/
       param[journal_abbr] = tag
 
-      au < manifest ; 2014 ; Theory and Applications of Graphs Volume 0 ; 0 >
-      au < manifest ; 2015 ; Theory and Applications of Graphs Volume 1 ; 1 >
-      au < manifest ; 2016 ; Theory and Applications of Graphs Volume 2 ; 2 >
-      au < manifest ; 2017 ; Theory and Applications of Graphs Volume 3 ; 3 >
-      au < manifest ; 2018 ; Theory and Applications of Graphs Volume 4 ; 4 >
-      au < manifest ; 2019 ; Theory and Applications of Graphs Volume 5 ; 5 >
+      au < ready ; 2014 ; Theory and Applications of Graphs Volume 0 ; 0 >
+      au < ready ; 2015 ; Theory and Applications of Graphs Volume 1 ; 1 >
+      au < ready ; 2016 ; Theory and Applications of Graphs Volume 2 ; 2 >
+      au < ready ; 2017 ; Theory and Applications of Graphs Volume 3 ; 3 >
+      au < ready ; 2018 ; Theory and Applications of Graphs Volume 4 ; 4 >
+      au < ready ; 2019 ; Theory and Applications of Graphs Volume 5 ; 5 >
 
   }
 
