@@ -695,7 +695,7 @@
       param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = kaesrr
 
-      au < frozen ; exists ; 1993-2014 ; Cattleman's Day 1993-2014 Volume 0 ; 0 ; >
+      au < finished ; manifest ; 1993-2014 ; Cattleman's Day 1993-2014 Volume 0 ; 0 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; Kansas Agricultural Experiment Station Research Reports Volume 1 ; 1 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; Kansas Agricultural Experiment Station Research Reports Volume 2 ; 2 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; Kansas Agricultural Experiment Station Research Reports Volume 3 ; 3 ; reingest2.clockss.org:8085 >
@@ -927,7 +927,7 @@
       au < manifest ; exists ; 2002 ; Studies in 20th & 21st Century Literature Volume 26 ; 26 ; >
       au < manifest ; exists ; 2003 ; Studies in 20th & 21st Century Literature Volume 27 ; 27 ; >
       au < manifest ; exists ; 2004 ; Studies in 20th & 21st Century Literature Volume 28 ; 28 ; >
-      au < frozen ; exists ; 2005 ; Studies in 20th & 21st Century Literature Volume 29 ; 29 ; >
+      au < finished ; manifest ; 2005 ; Studies in 20th & 21st Century Literature Volume 29 ; 29 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2006 ; Studies in 20th & 21st Century Literature Volume 30 ; 30 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2007 ; Studies in 20th & 21st Century Literature Volume 31 ; 31 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2008 ; Studies in 20th & 21st Century Literature Volume 32 ; 32 ; reingest1.clockss.org:8082 >

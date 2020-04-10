@@ -16,6 +16,7 @@
     pluginPrefix = org.lockss.plugin.highwire.
     #param[base_url] = http://egsp.lyellcollection.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] ; param[base_url] >
+    #no content after 2017
 
     au < gsl.GSLDrupalPlugin ; doesNotExist ; 1986 ; Engineering Geology Special Publications Volume 1 ; 1 ; https://egsp.lyellcollection.org/ >
     au < HighWirePressPlugin ; down ; 1986 ; Engineering Geology Special Publications Volume 2 ; 2 ; http://egsp.lyellcollection.org/ >
@@ -80,6 +81,7 @@
     au < gsl.GSLDrupalPlugin ; released ; 2017 ; Geochemistry: Exploration, Environment, Analysis Volume 17 ; 17 ; http://geea.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; released ; 2018 ; Geochemistry: Exploration, Environment, Analysis Volume 18 ; 18 ; https://geea.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; released ; 2019 ; Geochemistry: Exploration, Environment, Analysis Volume 19 ; 19 ; https://geea.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; expected ; 2020 ; Geochemistry: Exploration, Environment, Analysis Volume 20 ; 20 ; https://geea.lyellcollection.org/ >
 
   }
 
@@ -145,7 +147,7 @@
     au < gsl.GSLDrupalPlugin ; released ; 2017 ; Geological Society of London Memoirs Volume 47 ; 47 ; http://mem.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; released ; 2017 ; Geological Society of London Memoirs Volume 48 ; 48 ; https://mem.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; released ; 2019 ; Geological Society of London Memoirs Volume 49 ; 49 ; https://mem.lyellcollection.org/ >
-    au < gsl.GSLDrupalPlugin ; manifest ; 2019 ; Geological Society of London Memoirs Volume 50 ; 50 ; https://mem.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; expected ; 2020 ; Geological Society of London Memoirs Volume 50 ; 50 ; https://mem.lyellcollection.org/ >
 
   }
 
@@ -649,7 +651,9 @@
     au < gsl.GSLDrupalPlugin ; expected ; 2019 ; Geological Society of London Special Publications Volume 485 ; 485 ; https://sp.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; expected ; 2019 ; Geological Society of London Special Publications Volume 486 ; 486 ; https://sp.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; manifest ; 2019 ; Geological Society of London Special Publications Volume 487 ; 487 ; https://sp.lyellcollection.org/ >
-    au < gsl.GSLDrupalPlugin ; released ; 2019 ; Geological Society of London Special Publications Volume 488 ; 488 ; https://sp.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; released ; 2020 ; Geological Society of London Special Publications Volume 488 ; 488 ; https://sp.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; expected ; 2020 ; Geological Society of London Special Publications Volume 489 ; 489 ; https://sp.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; expected ; 2020 ; Geological Society of London Special Publications Volume 490 ; 490 ; https://sp.lyellcollection.org/ >
 
   }
 
@@ -857,6 +861,7 @@
     au < gsl.GSLDrupalPlugin ; released ; 2017 ; Journal of the Geological Society of London Volume 174 ; 174 ; http://jgs.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; released ; 2018 ; Journal of the Geological Society of London Volume 175 ; 175 ; https://jgs.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; manifest ; 2019 ; Journal of the Geological Society of London Volume 176 ; 176 ; https://jgs.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; expected ; 2020 ; Journal of the Geological Society of London Volume 177 ; 177 ; https://jgs.lyellcollection.org/ >
 
   }
 
@@ -897,6 +902,7 @@
       au < gsl.GSLDrupalPlugin ; released ; 2017 ; Petroleum Geoscience Volume 23 ; 23 ; http://pg.lyellcollection.org/ >
       au < gsl.GSLDrupalPlugin ; released ; 2018 ; Petroleum Geoscience Volume 24 ; 24 ; https://pg.lyellcollection.org/ >
       au < gsl.GSLDrupalPlugin ; released ; 2019 ; Petroleum Geoscience Volume 25 ; 25 ; https://pg.lyellcollection.org/ >
+      au < gsl.GSLDrupalPlugin ; expected ; 2020 ; Petroleum Geoscience Volume 26 ; 26 ; https://pg.lyellcollection.org/ >
 
   }
 
@@ -910,6 +916,7 @@
       pluginPrefix = org.lockss.plugin.highwire.
       #param[base_url] = https://pgc.lyellcollection.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] ; param[base_url] >
+      #nothing for 2019
 
       au < gsl.GSLDrupalPlugin ; manifest ; 1993 ; Petroleum Geology Conference Series Volume 4 ; 4 ; https://pgc.lyellcollection.org/ >
       au < gsl.GSLDrupalPlugin ; manifest ; 1999 ; Petroleum Geology Conference Series Volume 5 ; 5 ; https://pgc.lyellcollection.org/ >
@@ -984,6 +991,7 @@
       au < gsl.GSLDrupalPlugin ; released ; 2017 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 50 ; 50 ; http://qjegh.lyellcollection.org/ >
       au < gsl.GSLDrupalPlugin ; released ; 2018 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 51 ; 51 ; https://qjegh.lyellcollection.org/ >
       au < gsl.GSLDrupalPlugin ; manifest ; 2019 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 52 ; 52 ; https://qjegh.lyellcollection.org/ >
+      au < gsl.GSLDrupalPlugin ; expected ; 2020 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 53 ; 53 ; https://qjegh.lyellcollection.org/ >
 
   }
 

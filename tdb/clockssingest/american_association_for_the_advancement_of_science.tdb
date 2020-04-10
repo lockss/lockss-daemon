@@ -412,10 +412,10 @@
       au < finished ; finished ; 2014 ; Science Volume 346 ; 346 ; http://science.sciencemag.org/ ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2015 ; Science Volume 347 ; 347 ; http://science.sciencemag.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; Science Volume 348 ; 348 ; http://science.sciencemag.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2015 ; Science Volume 349 ; 349 ; http://science.sciencemag.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2015 ; Science Volume 349 ; 349 ; http://science.sciencemag.org/ ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2015 ; Science Volume 350 ; 350 ; http://science.sciencemag.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2016 ; Science Volume 351 ; 351 ; http://science.sciencemag.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2016 ; Science Volume 352 ; 352 ; http://science.sciencemag.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2016 ; Science Volume 351 ; 351 ; http://science.sciencemag.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2016 ; Science Volume 352 ; 352 ; http://science.sciencemag.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2016 ; Science Volume 353 ; 353 ; http://science.sciencemag.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2016 ; Science Volume 354 ; 354 ; http://science.sciencemag.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2017 ; Science Volume 355 ; 355 ; http://science.sciencemag.org/ ; >
@@ -479,7 +479,7 @@
       au < frozen ; exists ; 2012 ; Science Translational Medicine Volume 4 ; 4 ; http://stm.sciencemag.org/ ; >
       au < frozen ; exists ; 2013 ; Science Translational Medicine Volume 5 ; 5 ; http://stm.sciencemag.org/ ; >
       au < finished ; finished ; 2014 ; Science Translational Medicine Volume 6 ; 6 ; http://stm.sciencemag.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2015 ; Science Translational Medicine Volume 7 ; 7 ; http://stm.sciencemag.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2015 ; Science Translational Medicine Volume 7 ; 7 ; http://stm.sciencemag.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2016 ; Science Translational Medicine Volume 8 ; 8 ; http://stm.sciencemag.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; Science Translational Medicine Volume 9 ; 9 ; http://stm.sciencemag.org/ ; >
       au < deepCrawl ; exists ; 2018 ; Science Translational Medicine Volume 10 ; 10 ; http://stm.sciencemag.org/ ; >
@@ -498,7 +498,7 @@
       #param[base_url] = http://advances.sciencemag.org/
 
       au < zapped ; finished ; 2015 ; Science Advances Volume 1 ; 1 ; http://advances.sciencemag.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2016 ; Science Advances Volume 2 ; 2 ; http://advances.sciencemag.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2016 ; Science Advances Volume 2 ; 2 ; http://advances.sciencemag.org/ ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2017 ; Science Advances Volume 3 ; 3 ; http://advances.sciencemag.org/ ; >
       au < deepCrawl ; exists ; 2018 ; Science Advances Volume 4 ; 4 ; http://advances.sciencemag.org/ ; >
       au < manifest ; exists ; 2019 ; Science Advances Volume 5 ; 5 ; https://advances.sciencemag.org/ ; >
@@ -516,7 +516,7 @@
       #param[base_url] = http://robotics.sciencemag.org/
 
       au < frozen ; exists ; 2016 ; Science Robotics Volume 1 ; 1 ; http://robotics.sciencemag.org/ ; >
-      au < finished ; crawling ; 2017 ; Science Robotics Volume 2 ; 2 ; http://robotics.sciencemag.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2017 ; Science Robotics Volume 2 ; 2 ; http://robotics.sciencemag.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018 ; Science Robotics Volume 3 ; 3 ; http://robotics.sciencemag.org/ ; >
       au < manifest ; exists ; 2019 ; Science Robotics Volume 4 ; 4 ; https://robotics.sciencemag.org/ ; >
       au < expected ; exists ; 2020 ; Science Robotics Volume 5 ; 5 ; https://robotics.sciencemag.org/ ; >
