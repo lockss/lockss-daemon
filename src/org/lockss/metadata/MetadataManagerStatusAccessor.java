@@ -82,6 +82,7 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
   private static final String UPDATE_DURATION_COL_NAME = "update_dur";
   private static final String INDEX_STATUS_COL_NAME = "status";
   private static final String NUM_INDEXED_COL_NAME = "num_indexed";
+  private static final String NUM_ERROR_COL_NAME = "num_error";
   private static final String NUM_UPDATED_COL_NAME = "num_updated";
   // Sort keys, not visible columns
   private static final String SORT_KEY1 = "sort1";
@@ -112,6 +113,8 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
                              "Duration of metadata indexing, including"
                              + " scanning articles and extracting metadata."),
         new ColumnDescriptor(NUM_INDEXED_COL_NAME, "Articles Indexed",
+                             ColumnDescriptor.TYPE_INT),
+        new ColumnDescriptor(NUM_ERROR_COL_NAME, "Errors",
                              ColumnDescriptor.TYPE_INT),
         new ColumnDescriptor(UPDATE_DURATION_COL_NAME, "Update Duration",
                              ColumnDescriptor.TYPE_TIME_INTERVAL,
@@ -472,6 +475,7 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
       long endTime = task.getEndTime();
       ReindexingStatus indexStatus = task.getReindexingStatus();
       long numIndexed = task.getIndexedArticleCount();
+      long numError = task.getErrorArticleCount();
       long numUpdated = task.getUpdatedArticleCount();
       long curTime = TimeBase.nowMs();
       
@@ -494,6 +498,7 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
         row.put(INDEX_DURATION_COL_NAME, curTime-startTime);
         row.put(INDEX_STATUS_COL_NAME, "Indexing");
         row.put(NUM_INDEXED_COL_NAME, numIndexed);
+        row.put(NUM_ERROR_COL_NAME, numError);
         // invisible keys for sorting
         row.put(SORT_KEY1, SORT_BASE_INDEXING);
         row.put(SORT_KEY2, startTime);
@@ -504,6 +509,7 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
         row.put(UPDATE_DURATION_COL_NAME, curTime-startUpdateTime);
         row.put(INDEX_STATUS_COL_NAME, "Updating");
         row.put(NUM_INDEXED_COL_NAME, numIndexed);
+        row.put(NUM_ERROR_COL_NAME, numError);
         row.put(NUM_UPDATED_COL_NAME, numUpdated);
         // invisible keys for sorting
         row.put(SORT_KEY1, SORT_BASE_INDEXING);
@@ -547,6 +553,7 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
         }
 
         row.put(NUM_INDEXED_COL_NAME, numIndexed);
+        row.put(NUM_ERROR_COL_NAME, numError);
         row.put(NUM_UPDATED_COL_NAME, numUpdated);
 
         // invisible keys for sorting
