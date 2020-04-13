@@ -201,12 +201,6 @@ public class TestSEGNewHtmlHashFilterFactory extends LockssTestCase {
             "                                        </div>\n" +
             "                                        <div class=\"toc-container\">\n" +
             "                                            <div class=\"actionsbar actionsbar__has__sections fixed-element\">\n" +
-            "                                                <ul class=\"rlist sections-navigation fixed-element\">\n" +
-            "                                                    <li class=\"sections-block-container not-visible\">\n" +
-            "                                                        <a href=\"#\" data-db-target-for=\"sectionsNavigation\" data-slide-target=\"#sectionsNavigation_Pop\" data-slide-clone=\"self\" class=\"w-slide__btn\"><i aria-hidden=\"true\" class=\"icon-list\"></i>Sections</a>\n" +
-            "                                                        <ul data-db-target-of=\"sectionsNavigation\" id=\"sectionsNavigation_Pop\" class=\"rlist sections-block\"></ul>\n" +
-            "                                                    </li>\n" +
-            "                                                </ul>\n" +
             "                                            </div>\n" +
             "                                            <!--totalCount38--><!--modified:1585829677000-->\n" +
             "                                            <div class=\"table-of-content\">       table-of-content </div>\n" +
@@ -417,7 +411,7 @@ public class TestSEGNewHtmlHashFilterFactory extends LockssTestCase {
                 Constants.DEFAULT_ENCODING);
 
         String filteredContent = StringUtil.fromInputStream(actIn);
-
+        
         assertEquals(tocHtmlKept, filteredContent);
     }
     
