@@ -23,26 +23,26 @@
     param[base_url] = http://dmd.aspetjournals.org/
 
     au < aspet.ClockssASPETDrupalPlugin ; finished ; finished ; 1973 ; Drug Metabolism and Disposition Volume 1 ; 1 ; reingest1.clockss.org:8082 >
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1974 ; Drug Metabolism and Disposition Volume 2 ; 2 ; reingest2.clockss.org:8085 >
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1975 ; Drug Metabolism and Disposition Volume 3 ; 3 ; reingest3.clockss.org:8083 >
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1976 ; Drug Metabolism and Disposition Volume 4 ; 4 ; reingest4.clockss.org:8082 >
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1977 ; Drug Metabolism and Disposition Volume 5 ; 5 ; reingest5.clockss.org:8082 >
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1978 ; Drug Metabolism and Disposition Volume 6 ; 6 ; reingest1.clockss.org:8082 >
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1979 ; Drug Metabolism and Disposition Volume 7 ; 7 ; reingest2.clockss.org:8085 >
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1980 ; Drug Metabolism and Disposition Volume 8 ; 8 ; reingest3.clockss.org:8083 >
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1981 ; Drug Metabolism and Disposition Volume 9 ; 9 ; reingest4.clockss.org:8082 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 1974 ; Drug Metabolism and Disposition Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 1975 ; Drug Metabolism and Disposition Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 1976 ; Drug Metabolism and Disposition Volume 4 ; 4 ; reingest4.clockss.org:8082 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 1977 ; Drug Metabolism and Disposition Volume 5 ; 5 ; reingest5.clockss.org:8082 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 1978 ; Drug Metabolism and Disposition Volume 6 ; 6 ; reingest1.clockss.org:8082 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 1979 ; Drug Metabolism and Disposition Volume 7 ; 7 ; reingest2.clockss.org:8085 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 1980 ; Drug Metabolism and Disposition Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 1981 ; Drug Metabolism and Disposition Volume 9 ; 9 ; reingest4.clockss.org:8082 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; finished ; 1982 ; Drug Metabolism and Disposition Volume 10 ; 10 ; reingest5.clockss.org:8082 >
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1983 ; Drug Metabolism and Disposition Volume 11 ; 11 ; reingest1.clockss.org:8082 >
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1984 ; Drug Metabolism and Disposition Volume 12 ; 12 ; reingest2.clockss.org:8085 >
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1985 ; Drug Metabolism and Disposition Volume 13 ; 13 ; reingest3.clockss.org:8083 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 1983 ; Drug Metabolism and Disposition Volume 11 ; 11 ; reingest1.clockss.org:8082 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 1984 ; Drug Metabolism and Disposition Volume 12 ; 12 ; reingest2.clockss.org:8085 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 1985 ; Drug Metabolism and Disposition Volume 13 ; 13 ; reingest3.clockss.org:8083 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; finished ; 1986 ; Drug Metabolism and Disposition Volume 14 ; 14 ; reingest4.clockss.org:8082 >
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1987 ; Drug Metabolism and Disposition Volume 15 ; 15 ; reingest5.clockss.org:8082 >
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1988 ; Drug Metabolism and Disposition Volume 16 ; 16 ; reingest1.clockss.org:8082 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 1987 ; Drug Metabolism and Disposition Volume 15 ; 15 ; reingest5.clockss.org:8082 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 1988 ; Drug Metabolism and Disposition Volume 16 ; 16 ; reingest1.clockss.org:8082 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; finished ; 1989 ; Drug Metabolism and Disposition Volume 17 ; 17 ; reingest2.clockss.org:8085 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; finished ; 1990 ; Drug Metabolism and Disposition Volume 18 ; 18 ; reingest3.clockss.org:8083 >
-    au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 1991 ; Drug Metabolism and Disposition Volume 19 ; 19 ; reingest1.clockss.org:8082 >
+    au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 1991 ; Drug Metabolism and Disposition Volume 19 ; 19 ; reingest1.clockss.org:8082 >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1992 ; Drug Metabolism and Disposition Volume 20 ; 20 ; >
-    au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 1993 ; Drug Metabolism and Disposition Volume 21 ; 21 ; reingest2.clockss.org:8085 >
+    au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 1993 ; Drug Metabolism and Disposition Volume 21 ; 21 ; reingest2.clockss.org:8085 >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1994 ; Drug Metabolism and Disposition Volume 22 ; 22 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1995 ; Drug Metabolism and Disposition Volume 23 ; 23 ; reingest3.clockss.org:8083 >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1996 ; Drug Metabolism and Disposition Volume 24 ; 24 ; >
@@ -64,11 +64,11 @@
     au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2012 ; Drug Metabolism and Disposition Volume 40 ; 40 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Drug Metabolism and Disposition Volume 41 ; 41 ; reingest1.clockss.org:8082 >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Drug Metabolism and Disposition Volume 42 ; 42 ; >
-    au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2015 ; Drug Metabolism and Disposition Volume 43 ; 43 ; reingest4.clockss.org:8082 >
+    au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2015 ; Drug Metabolism and Disposition Volume 43 ; 43 ; reingest4.clockss.org:8082 >
     au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2016 ; Drug Metabolism and Disposition Volume 44 [superseded] ; 44 ; >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; finished ; 2016 ; Drug Metabolism and Disposition Volume 44 ; 44 ; reingest4.clockss.org:8082 >
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 2017 ; Drug Metabolism and Disposition Volume 45 ; 45 ; reingest3.clockss.org:8083 >
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 2018 ; Drug Metabolism and Disposition Volume 46 ; 46 ; reingest2.clockss.org:8085 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 2017 ; Drug Metabolism and Disposition Volume 45 ; 45 ; reingest3.clockss.org:8083 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 2018 ; Drug Metabolism and Disposition Volume 46 ; 46 ; reingest2.clockss.org:8085 >
     au < aspet.ClockssASPETDrupalPlugin ; crawling ; exists ; 2019 ; Drug Metabolism and Disposition Volume 47 ; 47 ; >
     au < aspet.ClockssASPETDrupalPlugin ; manifest ; exists ; 2020 ; Drug Metabolism and Disposition Volume 48 ; 48 ; >
 
@@ -87,63 +87,63 @@
 
     {
     
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1909-1910 ; Journal of Pharmacology and Experimental Therapeutics Volume 1 ; 1 ; reingest5.clockss.org:8082 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 1909-1910 ; Journal of Pharmacology and Experimental Therapeutics Volume 1 ; 1 ; reingest5.clockss.org:8082 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; finished ; 1910-1911 ; Journal of Pharmacology and Experimental Therapeutics Volume 2 ; 2 ; reingest1.clockss.org:8082 >
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1911-1912 ; Journal of Pharmacology and Experimental Therapeutics Volume 3 ; 3 ; reingest2.clockss.org:8085 >
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1912-1913 ; Journal of Pharmacology and Experimental Therapeutics Volume 4 ; 4 ; reingest3.clockss.org:8083 >
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1913-1914 ; Journal of Pharmacology and Experimental Therapeutics Volume 5 ; 5 ; reingest4.clockss.org:8082 >
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1914-1915 ; Journal of Pharmacology and Experimental Therapeutics Volume 6 ; 6 ; reingest5.clockss.org:8082 >
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1915 ; Journal of Pharmacology and Experimental Therapeutics Volume 7 ; 7 ; reingest1.clockss.org:8082 >
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1916 ; Journal of Pharmacology and Experimental Therapeutics Volume 8 ; 8 ; reingest2.clockss.org:8085 >
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1916-1917 ; Journal of Pharmacology and Experimental Therapeutics Volume 9 ; 9 ; reingest3.clockss.org:8083 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 1911-1912 ; Journal of Pharmacology and Experimental Therapeutics Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 1912-1913 ; Journal of Pharmacology and Experimental Therapeutics Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 1913-1914 ; Journal of Pharmacology and Experimental Therapeutics Volume 5 ; 5 ; reingest4.clockss.org:8082 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 1914-1915 ; Journal of Pharmacology and Experimental Therapeutics Volume 6 ; 6 ; reingest5.clockss.org:8082 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 1915 ; Journal of Pharmacology and Experimental Therapeutics Volume 7 ; 7 ; reingest1.clockss.org:8082 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 1916 ; Journal of Pharmacology and Experimental Therapeutics Volume 8 ; 8 ; reingest2.clockss.org:8085 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 1916-1917 ; Journal of Pharmacology and Experimental Therapeutics Volume 9 ; 9 ; reingest3.clockss.org:8083 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; finished ; 1917-1918 ; Journal of Pharmacology and Experimental Therapeutics Volume 10 ; 10 ; reingest4.clockss.org:8082 >
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1918 ; Journal of Pharmacology and Experimental Therapeutics Volume 11 ; 11 ; reingest5.clockss.org:8082 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 1918 ; Journal of Pharmacology and Experimental Therapeutics Volume 11 ; 11 ; reingest5.clockss.org:8082 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; finished ; 1918-1919 ; Journal of Pharmacology and Experimental Therapeutics Volume 12 ; 12 ; reingest1.clockss.org:8082 >
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1919 ; Journal of Pharmacology and Experimental Therapeutics Volume 13 ; 13 ; reingest2.clockss.org:8085 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 1919 ; Journal of Pharmacology and Experimental Therapeutics Volume 13 ; 13 ; reingest2.clockss.org:8085 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; finished ; 1919 ; Journal of Pharmacology and Experimental Therapeutics Volume 14 ; 14 ; reingest3.clockss.org:8083 >
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1920 ; Journal of Pharmacology and Experimental Therapeutics Volume 15 ; 15 ; reingest4.clockss.org:8082 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 1920 ; Journal of Pharmacology and Experimental Therapeutics Volume 15 ; 15 ; reingest4.clockss.org:8082 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; finished ; 1920 ; Journal of Pharmacology and Experimental Therapeutics Volume 16 ; 16 ; reingest5.clockss.org:8082 >
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1921 ; Journal of Pharmacology and Experimental Therapeutics Volume 17 ; 17 ; reingest1.clockss.org:8082 >
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1921 ; Journal of Pharmacology and Experimental Therapeutics Volume 18 ; 18 ; reingest2.clockss.org:8085 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 1921 ; Journal of Pharmacology and Experimental Therapeutics Volume 17 ; 17 ; reingest1.clockss.org:8082 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 1921 ; Journal of Pharmacology and Experimental Therapeutics Volume 18 ; 18 ; reingest2.clockss.org:8085 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; finished ; 1922 ; Journal of Pharmacology and Experimental Therapeutics Volume 19 ; 19 ; reingest3.clockss.org:8083 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; finished ; 1922-1923 ; Journal of Pharmacology and Experimental Therapeutics Volume 20 ; 20 ; reingest4.clockss.org:8082 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; finished ; 1923 ; Journal of Pharmacology and Experimental Therapeutics Volume 21 ; 21 ; reingest5.clockss.org:8082 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; finished ; 1923 ; Journal of Pharmacology and Experimental Therapeutics Volume 22 ; 22 ; reingest1.clockss.org:8082 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; finished ; 1924 ; Journal of Pharmacology and Experimental Therapeutics Volume 23 ; 23 ; reingest2.clockss.org:8085 >
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1924-1925 ; Journal of Pharmacology and Experimental Therapeutics Volume 24 ; 24 ; reingest3.clockss.org:8083 >
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1925 ; Journal of Pharmacology and Experimental Therapeutics Volume 25 ; 25 ; reingest4.clockss.org:8082 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 1924-1925 ; Journal of Pharmacology and Experimental Therapeutics Volume 24 ; 24 ; reingest3.clockss.org:8083 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 1925 ; Journal of Pharmacology and Experimental Therapeutics Volume 25 ; 25 ; reingest4.clockss.org:8082 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; finished ; 1925-1926 ; Journal of Pharmacology and Experimental Therapeutics Volume 26 ; 26 ; reingest5.clockss.org:8082 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; finished ; 1926 ; Journal of Pharmacology and Experimental Therapeutics Volume 27 ; 27 ; reingest1.clockss.org:8082 >
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1926 ; Journal of Pharmacology and Experimental Therapeutics Volume 28 ; 28 ; reingest2.clockss.org:8085 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 1926 ; Journal of Pharmacology and Experimental Therapeutics Volume 28 ; 28 ; reingest2.clockss.org:8085 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; finished ; 1926 ; Journal of Pharmacology and Experimental Therapeutics Volume 29 ; 29 ; reingest3.clockss.org:8083 >
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1926-1927 ; Journal of Pharmacology and Experimental Therapeutics Volume 30 ; 30 ; reingest4.clockss.org:8082 >
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1927 ; Journal of Pharmacology and Experimental Therapeutics Volume 31 ; 31 ; reingest5.clockss.org:8082 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 1926-1927 ; Journal of Pharmacology and Experimental Therapeutics Volume 30 ; 30 ; reingest4.clockss.org:8082 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 1927 ; Journal of Pharmacology and Experimental Therapeutics Volume 31 ; 31 ; reingest5.clockss.org:8082 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; finished ; 1927-1928 ; Journal of Pharmacology and Experimental Therapeutics Volume 32 ; 32 ; reingest1.clockss.org:8082 >
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1928 ; Journal of Pharmacology and Experimental Therapeutics Volume 33 ; 33 ; reingest2.clockss.org:8085 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 1928 ; Journal of Pharmacology and Experimental Therapeutics Volume 33 ; 33 ; reingest2.clockss.org:8085 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; finished ; 1928 ; Journal of Pharmacology and Experimental Therapeutics Volume 34 ; 34 ; reingest3.clockss.org:8083 >
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1929 ; Journal of Pharmacology and Experimental Therapeutics Volume 35 ; 35 ; reingest4.clockss.org:8082 >
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1929 ; Journal of Pharmacology and Experimental Therapeutics Volume 36 ; 36 ; reingest5.clockss.org:8082 >
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1929 ; Journal of Pharmacology and Experimental Therapeutics Volume 37 ; 37 ; reingest1.clockss.org:8082 >
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1930 ; Journal of Pharmacology and Experimental Therapeutics Volume 38 ; 38 ; reingest2.clockss.org:8085 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 1929 ; Journal of Pharmacology and Experimental Therapeutics Volume 35 ; 35 ; reingest4.clockss.org:8082 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 1929 ; Journal of Pharmacology and Experimental Therapeutics Volume 36 ; 36 ; reingest5.clockss.org:8082 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 1929 ; Journal of Pharmacology and Experimental Therapeutics Volume 37 ; 37 ; reingest1.clockss.org:8082 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 1930 ; Journal of Pharmacology and Experimental Therapeutics Volume 38 ; 38 ; reingest2.clockss.org:8085 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; finished ; 1930 ; Journal of Pharmacology and Experimental Therapeutics Volume 39 ; 39 ; reingest3.clockss.org:8083 >
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1930 ; Journal of Pharmacology and Experimental Therapeutics Volume 40 ; 40 ; reingest4.clockss.org:8082 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 1930 ; Journal of Pharmacology and Experimental Therapeutics Volume 40 ; 40 ; reingest4.clockss.org:8082 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; finished ; 1931 ; Journal of Pharmacology and Experimental Therapeutics Volume 41 ; 41 ; reingest5.clockss.org:8082 >
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1931 ; Journal of Pharmacology and Experimental Therapeutics Volume 42 ; 42 ; reingest1.clockss.org:8082 >
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1931 ; Journal of Pharmacology and Experimental Therapeutics Volume 43 ; 43 ; reingest2.clockss.org:8085 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 1931 ; Journal of Pharmacology and Experimental Therapeutics Volume 42 ; 42 ; reingest1.clockss.org:8082 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 1931 ; Journal of Pharmacology and Experimental Therapeutics Volume 43 ; 43 ; reingest2.clockss.org:8085 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; finished ; 1932 ; Journal of Pharmacology and Experimental Therapeutics Volume 44 ; 44 ; reingest3.clockss.org:8083 >
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1932 ; Journal of Pharmacology and Experimental Therapeutics Volume 45 ; 45 ; reingest4.clockss.org:8082 >
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1932 ; Journal of Pharmacology and Experimental Therapeutics Volume 46 ; 46 ; reingest5.clockss.org:8082 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 1932 ; Journal of Pharmacology and Experimental Therapeutics Volume 45 ; 45 ; reingest4.clockss.org:8082 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 1932 ; Journal of Pharmacology and Experimental Therapeutics Volume 46 ; 46 ; reingest5.clockss.org:8082 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; finished ; 1933 ; Journal of Pharmacology and Experimental Therapeutics Volume 47 ; 47 ; reingest1.clockss.org:8082 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; finished ; 1933 ; Journal of Pharmacology and Experimental Therapeutics Volume 48 ; 48 ; reingest2.clockss.org:8085 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; finished ; 1933 ; Journal of Pharmacology and Experimental Therapeutics Volume 49 ; 49 ; reingest3.clockss.org:8083 >
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1934 ; Journal of Pharmacology and Experimental Therapeutics Volume 50 ; 50 ; reingest4.clockss.org:8082 >
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1934 ; Journal of Pharmacology and Experimental Therapeutics Volume 51 ; 51 ; reingest5.clockss.org:8082 >
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1934 ; Journal of Pharmacology and Experimental Therapeutics Volume 52 ; 52 ; reingest1.clockss.org:8082 >
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1935 ; Journal of Pharmacology and Experimental Therapeutics Volume 53 ; 53 ; reingest1.clockss.org:8082 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 1934 ; Journal of Pharmacology and Experimental Therapeutics Volume 50 ; 50 ; reingest4.clockss.org:8082 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 1934 ; Journal of Pharmacology and Experimental Therapeutics Volume 51 ; 51 ; reingest5.clockss.org:8082 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 1934 ; Journal of Pharmacology and Experimental Therapeutics Volume 52 ; 52 ; reingest1.clockss.org:8082 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 1935 ; Journal of Pharmacology and Experimental Therapeutics Volume 53 ; 53 ; reingest1.clockss.org:8082 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; finished ; 1935 ; Journal of Pharmacology and Experimental Therapeutics Volume 54 ; 54 ; reingest2.clockss.org:8085 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; finished ; 1935 ; Journal of Pharmacology and Experimental Therapeutics Volume 55 ; 55 ; reingest3.clockss.org:8083 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; finished ; 1936 ; Journal of Pharmacology and Experimental Therapeutics Volume 56 ; 56 ; reingest4.clockss.org:8082 >
-    au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1936 ; Journal of Pharmacology and Experimental Therapeutics Volume 57 ; 57 ; reingest5.clockss.org:8082 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; frozen ; 1936 ; Journal of Pharmacology and Experimental Therapeutics Volume 57 ; 57 ; reingest5.clockss.org:8082 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 1936 ; Journal of Pharmacology and Experimental Therapeutics Volume 58 ; 58 ; reingest1.clockss.org:8082 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; finished ; 1937 ; Journal of Pharmacology and Experimental Therapeutics Volume 59 ; 59 ; reingest2.clockss.org:8085 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; finished ; 1937 ; Journal of Pharmacology and Experimental Therapeutics Volume 60 ; 60 ; reingest3.clockss.org:8083 >
