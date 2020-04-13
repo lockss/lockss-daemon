@@ -496,7 +496,7 @@
       rights = openaccess
       param[journal_id] = mgen
 
-      au < testing ; 2015 ; Microbial Genomics Volume 1 ; 1 >#test when plugin is ready.
+      au < ready ; 2015 ; Microbial Genomics Volume 1 ; 1 >#test when plugin is ready.
       au < ready ; 2016 ; Microbial Genomics Volume 2 ; 2 >#test when plugin is ready.
 
   }
@@ -534,9 +534,9 @@
       au < doNotProcess ; 2011 ; Microbiology Volume 157 ; 157 >
       au < doNotProcess ; 2012 ; Microbiology Volume 158 ; 158 >
       au < ready ; 2013 ; Microbiology Volume 159 ; 159 >#test when plugin is ready.
-      au < testing ; 2014 ; Microbiology Volume 160 ; 160 >#test when plugin is ready.
-      au < testing ; 2015 ; Microbiology Volume 161 ; 161 >#test when plugin is ready.
-      au < testing ; 2016 ; Microbiology Volume 162 ; 162 >#test when plugin is ready.
+      au < ready ; 2014 ; Microbiology Volume 160 ; 160 >#test when plugin is ready.
+      au < ready ; 2015 ; Microbiology Volume 161 ; 161 >#test when plugin is ready.
+      au < ready ; 2016 ; Microbiology Volume 162 ; 162 >#test when plugin is ready.
 
   }
 
