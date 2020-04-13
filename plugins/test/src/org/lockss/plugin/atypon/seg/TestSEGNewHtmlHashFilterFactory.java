@@ -14,8 +14,6 @@ import org.lockss.test.StringInputStream;
 import org.lockss.util.Constants;
 import org.lockss.util.StringUtil;
 
-import java.io.File;
-import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 

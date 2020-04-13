@@ -1,0 +1,30 @@
+{
+
+  publisher <
+    name = Resilience Alliance ;
+    info[contract] = 2020 ;
+    info[tester] = 8
+  >
+
+  plugin = org.lockss.plugin.resiliencealliance.ClockssResilienceAlliancePlugin
+  implicit < status ; status2 ; param[year] ; name ; param[volume_name] ; param[base_url] >
+
+  {
+  
+    title <
+      name = Avian Conservation and Ecology
+    >
+
+    au < manifest ; exists ; 2015 ; Avian Conservation and Ecology 14 ; 14 ; https://www.ace-eco.org/ >
+
+  }
+
+  {
+      title <
+        name = Ecology and Society Ecology and Society
+      >
+
+      au < manifest ; exists ; 2019 ;  Ecology and Society Ecology and Society  1 ; 1 ; https://www.ecologyandsociety.org/ >
+
+    }
+}

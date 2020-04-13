@@ -1,0 +1,30 @@
+{
+  publisher <
+    name = Microbiology Society ;
+    info[contract] = 2012 ;
+    info[tester] = 5 ;
+    info[poller] = 3
+  >
+
+   comment[moved] = from HW to Pub2Web
+   #param[base_url] = https://www.microbiologyresearch.org/
+   implicit < status ; year ; name ; param[volume_name] ; param[base_url] ; hidden[proxy] >
+   plugin = org.lockss.plugin.pub2web.ms.MicrobiologySocietyJournalsPlugin
+
+  {
+    title <
+      name = Microbiology ;
+      issn = 1350-0872 ;
+      eissn = 1465-2080 ;
+      issnl = 1350-0872
+    >
+
+      comment[continues] = Journal of General Microbiology 0022-1287 as of Jan 1994
+
+      param[journal_id] = micro
+
+      au < manifest ; 2019 ; Microbiology Volume 165 ; 165 ; https://www.microbiologyresearch.org/ ; >
+
+  }
+
+}
