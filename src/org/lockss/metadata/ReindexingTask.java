@@ -203,6 +203,9 @@ public class ReindexingTask extends StepTask {
       ArticleFiles af = articleIterator.next();
       try {
         ae.extract(MetadataTarget.OpenURL(), af, emitter);
+      } catch (org.lockss.repository.LockssRepository.RepositoryStateException ex) {
+        log.error("Error extracting metadata for full text URL, continuing: "
+                      + af.getFullTextUrl(), ex);
       } catch (IOException ex) {
         log.error("Failed to index metadata for full text URL: "
                       + af.getFullTextUrl(), ex);
