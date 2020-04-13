@@ -690,7 +690,7 @@
     au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 2016 ; Pharmacological Reviews Volume 68 ; 68 ; reingest1.clockss.org:8082 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; finished ; 2017 ; Pharmacological Reviews Volume 69 ; 69 ; reingest5.clockss.org:8082 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; crawling ; 2018 ; Pharmacological Reviews Volume 70 ; 70 ; reingest4.clockss.org:8082 >
-    au < aspet.ClockssASPETDrupalPlugin ; crawling ; exists ; 2019 ; Pharmacological Reviews Volume 71 ; 71 ; >
+    au < aspet.ClockssASPETDrupalPlugin ; deepCrawl ; exists ; 2019 ; Pharmacological Reviews Volume 71 ; 71 ; >
     au < aspet.ClockssASPETDrupalPlugin ; manifest ; exists ; 2020 ; Pharmacological Reviews Volume 72 ; 72 ; >
 
   }
