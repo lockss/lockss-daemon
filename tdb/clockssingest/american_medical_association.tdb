@@ -99,7 +99,7 @@
     au < finished ; finished ; 2016 ; JAMA Internal Medicine Volume 176 ; 2016 ; http://jamanetwork.com/ ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2017 ; JAMA Internal Medicine Volume 177 ; 2017 ; http://jamanetwork.com/ ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2018 ; JAMA Internal Medicine Volume 178 ; 2018 ; https://jamanetwork.com/ ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2019 ; JAMA Internal Medicine Volume 179 ; 2019 ; https://jamanetwork.com/ ; >
+    au < frozen ; exists ; 2019 ; JAMA Internal Medicine Volume 179 ; 2019 ; https://jamanetwork.com/ ; >
     au < manifest ; exists ; 2020 ; JAMA Internal Medicine Volume 180 ; 2020 ; https://jamanetwork.com/ ; >
 
   }
@@ -140,7 +140,7 @@
     au < finished ; finished ; 2016 ; JAMA Neurology Volume 73 ; 2016 ; http://jamanetwork.com/ ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2017 ; JAMA Neurology Volume 74 ; 2017 ; http://jamanetwork.com/ ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2018 ; JAMA Neurology Volume 75 ; 2018 ; https://jamanetwork.com/ ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2019 ; JAMA Neurology Volume 76 ; 2019 ; https://jamanetwork.com/ ; >
+    au < frozen ; exists ; 2019 ; JAMA Neurology Volume 76 ; 2019 ; https://jamanetwork.com/ ; >
     au < manifest ; exists ; 2020 ; JAMA Neurology Volume 77 ; 2020 ; https://jamanetwork.com/ ; >
 
   }
