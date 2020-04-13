@@ -30,7 +30,7 @@
 
  */
 
-package org.lockss.plugin.newhindawi;
+package org.lockss.plugin.hindawi;
 
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
@@ -43,7 +43,7 @@ import org.lockss.util.Logger;
 
 import java.io.IOException;
 
-public class NewHindawiHtmlMetadataExtractorFactory implements
+public class HindawiHtmlMetadataExtractorFactory implements
     FileMetadataExtractorFactory {
   static Logger log = Logger.getLogger(NewHindawiHtmlMetadataExtractorFactory.class);
 

@@ -30,7 +30,7 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.newhindawi;
+package org.lockss.plugin.hindawi;
 
 import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.PluginException;

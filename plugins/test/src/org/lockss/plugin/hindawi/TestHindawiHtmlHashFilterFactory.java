@@ -5,26 +5,24 @@ import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.definable.DefinableArchivalUnit;
 import org.lockss.plugin.definable.DefinablePlugin;
+import org.lockss.plugin.hindawi.Hindawi2020HtmlHashFilterFactory;
 import org.lockss.test.ConfigurationUtil;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.StringInputStream;
 import org.lockss.util.Constants;
 import org.lockss.util.StringUtil;
-import org.apache.commons.io.FileUtils;
 
-import java.io.File;
-import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
 public class TestNewHindawiHtmlHashFilterFactory extends LockssTestCase {
-    private NewHindawiHtmlHashFilterFactory fact;
+    private Hindawi2020HtmlHashFilterFactory fact;
 
     private ArchivalUnit mau;
 
     public void setUp() throws Exception {
         super.setUp();
-        fact = new NewHindawiHtmlHashFilterFactory();
+        fact = new Hindawi2020HtmlHashFilterFactory();
         //the hash filter (for backIssues.asp) requires au information
         Properties props = new Properties();
         props.setProperty(ConfigParamDescr.YEAR.getKey(), "2019");
