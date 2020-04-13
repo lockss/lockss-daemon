@@ -540,8 +540,8 @@
 
     au < finished ; finished ; 2015 ; Hunter Gatherer Research Volume 1 ; 1 ; http://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2016-2017 ; Hunter Gatherer Research Volume 2 ; 2 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
-    au < ingNotReady ; exists ; 2017-2019 ; Hunter Gatherer Research Volume 3 ; 3 ; http://online.liverpooluniversitypress.co.uk/ ; > #issue 3, 4 not online
-    au < expected ; exists ; 2018-2020 ; Hunter Gatherer Research Volume 4 ; 4 ; http://online.liverpooluniversitypress.co.uk/ ; >
+    au < crawling ; exists ; 2017-2019 ; Hunter Gatherer Research Volume 3 ; 3 ; http://online.liverpooluniversitypress.co.uk/ ; >
+    au < manifest ; exists ; 2019-2020 ; Hunter Gatherer Research Volume 4 ; 4 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
 
