@@ -794,21 +794,56 @@
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Indiana University South Bend Graduate Research Journal Volume 2014 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Indiana University South Bend Graduate Research Journal Volume 2015 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Indiana University South Bend Graduate Research Journal Volume 2016 ; 3 ; >
+      au < exists ; exists ; 2017 ; 2017 ; Indiana University South Bend Graduate Research Journal Volume 2017 ; 4 ; >
+      au < exists ; exists ; 2018 ; 2018 ; Indiana University South Bend Graduate Research Journal Volume 2018 ; 5 ; >
+      au < exists ; exists ; 2019 ; 2019 ; Indiana University South Bend Graduate Research Journal Volume 2019 ; 6 ; >
 
   }
 
   {
 
       title <
-        name = IU South Bend Undergraduate Research Journal
+        name = IU South Bend Undergraduate Research Journal ;
+        eissn = 2642-0627
       >
+      #2015-2017 already processed on previous platform. OJS2
+      {
+         param[journal_id] = iusburj
 
-      param[journal_id] = iujur
+         au < exists ; exists ; 2000 ; 2000 ; IU South Bend Undergraduate Research Journal Volume 2000 ; 3 ; >
+         au < exists ; exists ; 2001 ; 2001 ; IU South Bend Undergraduate Research Journal Volume 2001 ; 4 ; >
+         au < exists ; exists ; 2002 ; 2002 ; IU South Bend Undergraduate Research Journal Volume 2002 ; 5 ; >
+         au < exists ; exists ; 2003 ; 2003 ; IU South Bend Undergraduate Research Journal Volume 2003 ; 6 ; >
+         au < exists ; exists ; 2008 ; 2008 ; IU South Bend Undergraduate Research Journal Volume 2008 ; 8 ; >
+         au < exists ; exists ; 2009 ; 2009 ; IU South Bend Undergraduate Research Journal Volume 2009 ; 9 ; >
+         au < exists ; exists ; 2010 ; 2010 ; IU South Bend Undergraduate Research Journal Volume 2010 ; 10 ; >
+         au < exists ; exists ; 2011 ; 2011 ; IU South Bend Undergraduate Research Journal Volume 2011 ; 11 ; >
+         au < exists ; exists ; 2012 ; 2012 ; IU South Bend Undergraduate Research Journal Volume 2012 ; 12 ; >
+         au < exists ; exists ; 2013 ; 2013 ; IU South Bend Undergraduate Research Journal Volume 2013 ; 13 ; >
+         au < exists ; exists ; 2014 ; 2014 ; IU South Bend Undergraduate Research Journal Volume 2014 ; 14 ; >
+         au < exists ; exists ; 2015 ; 2015 ; IU South Bend Undergraduate Research Journal Volume 2015 ; 15 ; >
+         au < exists ; exists ; 2016 ; 2016 ; IU South Bend Undergraduate Research Journal Volume 2016 ; 16 ; >
+         au < exists ; exists ; 2017 ; 2017 ; IU South Bend Undergraduate Research Journal Volume 2017 ; 17 ; >
+         au < exists ; exists ; 2018 ; 2018 ; IU South Bend Undergraduate Research Journal Volume 2018 ; 18 ; >
+         au < exists ; exists ; 2019 ; 2019 ; IU South Bend Undergraduate Research Journal Volume 2019 ; 19 ; >
+      }
+  }
 
-      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; IU South Bend Undergraduate Research Journal Volume 2015 ; 1 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; IU South Bend Undergraduate Research Journal Volume 2016 ; 2 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; IU South Bend Undergraduate Research Journal Volume 2017 ; 3 ; >
+  {
 
+      title <
+        name = Indiana University Undergraduate Research Journal
+      >
+      #2015-2017 already processed on previous platform. OJS2
+      {
+         param[journal_id] = iujur
+
+         au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Indiana University Undergraduate Research Journal Volume 2015 ; 1 ; >
+         au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Indiana University Undergraduate Research Journal Volume 2016 ; 2 ; >
+         au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Indiana University Undergraduate Research Journal Volume 2017 ; 3 ; >
+         au < exists ; exists ; 2018 ; 2018 ; Indiana University Undergraduate Research Journal Volume 2018 ; 4 ; >
+         au < expected ; exists ; 2019 ; 2019 ; Indiana University Undergraduate Research Journal Volume 2019 ; 5 ; >
+      }
   }
 
   {
