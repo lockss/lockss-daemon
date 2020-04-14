@@ -1390,7 +1390,7 @@
       au < finished ; crawling ; 2016 ; Nottingham French Studies Volume 55 ; 55 ; http://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2017 ; Nottingham French Studies Volume 56 ; 56 ; http://www.euppublishing.com/ ; reingest1.clockss.org:8082  >
       au < finished ; crawling ; 2018 ; Nottingham French Studies Volume 57 ; 57 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2019 ; Nottingham French Studies Volume 58 ; 58 ; https://www.euppublishing.com/ ; >
+      au < deepCrawl ; exists ; 2019 ; Nottingham French Studies Volume 58 ; 58 ; https://www.euppublishing.com/ ; >
       au < manifest ; exists ; 2020 ; Nottingham French Studies Volume 59 ; 59 ; https://www.euppublishing.com/ ; >
 
     }
@@ -1816,7 +1816,7 @@
     au < finished ; crawling ; 2016 ; Studies in World Christianity Volume 22 ; 22 ; http://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2017 ; Studies in World Christianity Volume 23 ; 23 ; http://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; Studies in World Christianity Volume 24 ; 24 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2019 ; Studies in World Christianity Volume 25 ; 25 ; https://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2019 ; Studies in World Christianity Volume 25 ; 25 ; https://www.euppublishing.com/ ; >
     au < manifest ; exists ; 2020 ; Studies in World Christianity Volume 26 ; 26 ; https://www.euppublishing.com/ ; >
 
   }
@@ -1851,7 +1851,7 @@
     au < frozen ; exists ; 2016 ; Translation and Literature Volume 25 ; 25 ; http://www.euppublishing.com/ ; >
     au < finished ; crawling ; 2017 ; Translation and Literature Volume 26 ; 26 ; http://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2018 ; Translation and Literature Volume 27 ; 27 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2019 ; Translation and Literature Volume 28 ; 28 ; https://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2019 ; Translation and Literature Volume 28 ; 28 ; https://www.euppublishing.com/ ; >
     au < manifest ; exists ; 2020 ; Translation and Literature Volume 29 ; 29 ; https://www.euppublishing.com/ ; >
 
   }
