@@ -261,7 +261,7 @@
       au < finished ; crawling ; 2017 ; Online Journal of Rural Research & Policy Volume 12 ; 12 ; http://newprairiepress.org/ ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2018 ; Online Journal of Rural Research & Policy Volume 13 ; 13 ; http://newprairiepress.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2019 ; Online Journal of Rural Research & Policy Volume 14 ; 14 ; https://newprairiepress.org/ ; >
-      au < expected ; exists ; 2020 ; Online Journal of Rural Research & Policy Volume 15 ; 15 ; https://newprairiepress.org/ ; >
+      au < manifest ; exists ; 2020 ; Online Journal of Rural Research & Policy Volume 15 ; 15 ; https://newprairiepress.org/ ; >
 
     }
   }
@@ -395,7 +395,7 @@
       au < finished ; crawling ; 2014-2015 ; Educational Considerations Volume 42 ; 42 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2015-2016 ; Educational Considerations Volume 43 ; 43 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2018-2019 ; Educational Considerations Volume 44 ; 44 ; >
-      au < exists ; exists ; 2019-2020 ; Educational Considerations Volume 45 ; 45 ; >
+      au < manifest ; exists ; 2019-2020 ; Educational Considerations Volume 45 ; 45 ; >
 
   }
 
@@ -586,7 +586,7 @@
       au < finished ; crawling ; 2017 ; International Journal of School Social Work Volume 2 ; 2 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2018 ; International Journal of School Social Work Volume 3 ; 3 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2019 ; International Journal of School Social Work Volume 4 ; 4 ; >
-      au < expected ; exists ; 2020 ; International Journal of School Social Work Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2020 ; International Journal of School Social Work Volume 5 ; 5 ; >
 
   }
 
@@ -655,7 +655,7 @@
       au < finished ; crawling ; 2017 ; Journal of Applied Communications Volume 100 ; 100 ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2018 ; Journal of Applied Communications Volume 101 ; 101 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2019 ; Journal of Applied Communications Volume 102 ; 102 ; >
-      au < expected ; exists ; 2020 ; Journal of Applied Communications Volume 103 ; 103 ; >
+      au < manifest ; exists ; 2020 ; Journal of Applied Communications Volume 103 ; 103 ; >
 
   }
 
@@ -701,7 +701,7 @@
       au < finished ; crawling ; 2017 ; Kansas Agricultural Experiment Station Research Reports Volume 3 ; 3 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2018 ; Kansas Agricultural Experiment Station Research Reports Volume 4 ; 4 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2019 ; Kansas Agricultural Experiment Station Research Reports Volume 5 ; 5 ; >
-      au < expected ; exists ; 2020 ; Kansas Agricultural Experiment Station Research Reports Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2020 ; Kansas Agricultural Experiment Station Research Reports Volume 6 ; 6 ; >
 
   }
 
@@ -764,7 +764,7 @@
       au < finished ; crawling ; 2017 ; Networks: An Online Journal for Teacher Research Volume 19 ; 19 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2018 ; Networks: An Online Journal for Teacher Research Volume 20 ; 20 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2019 ; Networks: An Online Journal for Teacher Research Volume 21 ; 21 ; >
-      au < expected ; exists ; 2020 ; Networks: An Online Journal for Teacher Research Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2020 ; Networks: An Online Journal for Teacher Research Volume 22 ; 22 ; >
 
   }
 

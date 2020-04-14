@@ -70,7 +70,7 @@
     au < finished ; manifest ; 2016 ; Australian Journal of French Studies Volume 53 ; 53 ; http://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; Australian Journal of French Studies Volume 54 ; 54 ; http://online.liverpooluniversitypress.co.uk/ ; >
     au < deepCrawl ; exists ; 2018 ; Australian Journal of French Studies Volume 55 ; 55 ; https://online.liverpooluniversitypress.co.uk/ ; >
-    au < crawling ; exists ; 2019 ; Australian Journal of French Studies Volume 56 ; 56 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < deepCrawl ; exists ; 2019 ; Australian Journal of French Studies Volume 56 ; 56 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < manifest ; exists ; 2020 ; Australian Journal of French Studies Volume 57 ; 57 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
@@ -296,7 +296,7 @@
     au < deepCrawl ; exists ; 2017 ; Contemporary French Civilization Volume 42 ; 42 ; http://online.liverpooluniversitypress.co.uk/ ; >
     au < deepCrawl ; exists ; 2018 ; Contemporary French Civilization Volume 43 ; 43 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < deepCrawl ; exists ; 2019 ; Contemporary French Civilization Volume 44 ; 44 ; https://online.liverpooluniversitypress.co.uk/ ; >
-    au < expected ; exists ; 2020 ; Contemporary French Civilization Volume 45 ; 45 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < manifest ; exists ; 2020 ; Contemporary French Civilization Volume 45 ; 45 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
 
@@ -363,7 +363,7 @@
     au < deepCrawl ; exists ; 2017 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 9 ; 9 ; http://online.liverpooluniversitypress.co.uk/ ; >
     au < deepCrawl ; exists ; 2018 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 10 ; 10 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < crawling ; exists ; 2019 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 11 ; 11 ; https://online.liverpooluniversitypress.co.uk/ ; >
-    au < expected ; exists ; 2020 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 12 ; 12 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < manifest ; exists ; 2020 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 12 ; 12 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
 
@@ -540,8 +540,8 @@
 
     au < finished ; finished ; 2015 ; Hunter Gatherer Research Volume 1 ; 1 ; http://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2016-2017 ; Hunter Gatherer Research Volume 2 ; 2 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
-    au < ingNotReady ; exists ; 2017-2019 ; Hunter Gatherer Research Volume 3 ; 3 ; http://online.liverpooluniversitypress.co.uk/ ; > #issue 3, 4 not online
-    au < expected ; exists ; 2018-2020 ; Hunter Gatherer Research Volume 4 ; 4 ; http://online.liverpooluniversitypress.co.uk/ ; >
+    au < deepCrawl ; exists ; 2017-2019 ; Hunter Gatherer Research Volume 3 ; 3 ; http://online.liverpooluniversitypress.co.uk/ ; >
+    au < manifest ; exists ; 2019-2020 ; Hunter Gatherer Research Volume 4 ; 4 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
 
@@ -731,7 +731,7 @@
     au < finished ; manifest ; 2017 ; Labour History: A Journal of Labour and Social History Volume 113 ; 113 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2018 ; Labour History: A Journal of Labour and Social History Volume 114 ; 114 ; https://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2018 ; Labour History: A Journal of Labour and Social History Volume 115 ; 115 ; https://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2019 ; Labour History: A Journal of Labour and Social History Volume 116 ; 116 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < deepCrawl ; exists ; 2019 ; Labour History: A Journal of Labour and Social History Volume 116 ; 116 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < manifest ; exists ; 2019 ; Labour History: A Journal of Labour and Social History Volume 117 ; 117 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < expected ; exists ; 2020 ; Labour History: A Journal of Labour and Social History Volume 118 ; 118 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < expected ; exists ; 2020 ; Labour History: A Journal of Labour and Social History Volume 119 ; 119 ; https://online.liverpooluniversitypress.co.uk/ ; >
@@ -764,7 +764,7 @@
     au < deepCrawl ; exists ; 2017 ; Labour History Review Volume 82 [Atypon] ; 82 ; http://online.liverpooluniversitypress.co.uk/ ; >
     au < deepCrawl ; exists ; 2018 ; Labour History Review Volume 83 [Atypon] ; 83 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < deepCrawl ; exists ; 2019 ; Labour History Review Volume 84 [Atypon] ; 84 ; https://online.liverpooluniversitypress.co.uk/ ; >
-    au < expected ; exists ; 2020 ; Labour History Review Volume 85 [Atypon] ; 85 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < manifest ; exists ; 2020 ; Labour History Review Volume 85 [Atypon] ; 85 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
 
@@ -1048,7 +1048,7 @@
     au < finished ; manifest ; 2016 ; Sculpture Journal Volume 25 ; 25 ; http://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Sculpture Journal Volume 26 ; 26 ; http://online.liverpooluniversitypress.co.uk/ ; >
     au < deepCrawl ; exists ; 2018 ; Sculpture Journal Volume 27 ; 27 ; https://online.liverpooluniversitypress.co.uk/ ; >
-    au < crawling ; exists ; 2019 ; Sculpture Journal Volume 28 ; 28 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < deepCrawl ; exists ; 2019 ; Sculpture Journal Volume 28 ; 28 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < expected ; exists ; 2020 ; Sculpture Journal Volume 29 ; 29 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }

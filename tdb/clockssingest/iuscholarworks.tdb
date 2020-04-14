@@ -788,15 +788,15 @@
   {
 
       title <
-        name = IU South Bend Undergraduate Research Journal
+        name = Indiana University Undergraduate Research Journal
       >
 
       comment[publisher] = IUScholarWorks
       param[journal_id] = iujur
 
-      au < finished ; manifest ; 2015 ; 2015 ; IU South Bend Undergraduate Research Journal Volume 2015 ; 1 ; https://scholarworks.iu.edu/journals/ ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2016 ; 2016 ; IU South Bend Undergraduate Research Journal Volume 2016 ; 2 ; https://scholarworks.iu.edu/journals/ ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2017 ; 2017 ; IU South Bend Undergraduate Research Journal Volume 2017 ; 3 ; https://scholarworks.iu.edu/journals/ ; >
+      au < finished ; manifest ; 2015 ; 2015 ; Indiana University Undergraduate Research Journal Volume 2015 ; 1 ; https://scholarworks.iu.edu/journals/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; 2016 ; Indiana University Undergraduate Research Journal Volume 2016 ; 2 ; https://scholarworks.iu.edu/journals/ ; reingest2.clockss.org:8085 >
+      au < frozen ; exists ; 2017 ; 2017 ; Indiana University Undergraduate Research Journal Volume 2017 ; 3 ; https://scholarworks.iu.edu/journals/ ; >
 
   }
 
@@ -959,5 +959,5 @@
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The Undergraduate Journal of Law & Disorder Volume 5 ; 5 ; https://scholarworks.iu.edu/journals/ ; >
 
   }
-
+  
 }

@@ -10,7 +10,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>17</string>
+    <string>18</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -65,16 +65,18 @@
   <entry>
     <string>plugin_url_consumer_factory</string>
     <string>org.lockss.plugin.atypon.BaseAtyponHttpToHttpsUrlConsumerFactory</string>
-  </entry>  
-<!-- end changes for https conversion -->      
+  </entry>
+<!-- end changes for https conversion -->
  <entry>
     <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.atypon.seg.SEGHtmlHashFilterFactory</string>
+    <string>org.lockss.plugin.atypon.seg.SEGNewHtmlHashFilterFactory</string>
   </entry>
+  <!--
   <entry>
     <string>text/html_crawl_filter_factory</string>
-    <string>org.lockss.plugin.atypon.seg.SEGHtmlCrawlFilterFactory</string>
+    <string>org.lockss.plugin.atypon.seg.SEGNewHtmlHashFilterFactory</string>
   </entry>
+  -->
   <entry>
     <string>application/pdf_filter_factory</string>
     <string>org.lockss.plugin.atypon.seg.SEGPdfFilterFactory</string>

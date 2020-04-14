@@ -27,9 +27,9 @@
       au < crawling ; exists ; 2005 ; 4 ; Journal of Hate Studies Volume 2005 ; 2005 ; https://jhs.press.gonzaga.edu/ ; >
       au < crawling ; exists ; 2006 ; 5 ; Journal of Hate Studies Volume 2006 ; 2006 ; https://jhs.press.gonzaga.edu/ ; >
       au < crawling ; exists ; 2007 ; 6 ; Journal of Hate Studies Volume 2007 ; 2007 ; https://jhs.press.gonzaga.edu/ ; >
-      au < crawling ; exists ; 2009 ; 7 ; Journal of Hate Studies Volume 2009 ; 2009 ; https://jhs.press.gonzaga.edu/ ; >
+      au < frozen ; exists ; 2009 ; 7 ; Journal of Hate Studies Volume 2009 ; 2009 ; https://jhs.press.gonzaga.edu/ ; >
       au < crawling ; exists ; 2010 ; 8 ; Journal of Hate Studies Volume 2010 ; 2010 ; https://jhs.press.gonzaga.edu/ ; >
-      au < crawling ; exists ; 2011 ; 9 ; Journal of Hate Studies Volume 2011 ; 2011 ; https://jhs.press.gonzaga.edu/ ; >
+      au < frozen ; exists ; 2011 ; 9 ; Journal of Hate Studies Volume 2011 ; 2011 ; https://jhs.press.gonzaga.edu/ ; >
       au < crawling ; exists ; 2012 ; 10 ; Journal of Hate Studies Volume 2012 ; 2012 ; https://jhs.press.gonzaga.edu/ ; >
       au < crawling ; exists ; 2013 ; 11 ; Journal of Hate Studies Volume 2013 ; 2013 ; https://jhs.press.gonzaga.edu/ ; >
       au < crawling ; exists ; 2014 ; 12 ; Journal of Hate Studies Volume 2014 ; 2014 ; https://jhs.press.gonzaga.edu/ ; >
@@ -67,20 +67,20 @@
       au < manifest ; exists ; 1999 ; 3 ; Redescriptions Volume 1999 ; 1999 ; https://journal-redescriptions.org/ ; >
       au < crawling ; exists ; 2000 ; 4 ; Redescriptions Volume 2000 ; 2000 ; https://journal-redescriptions.org/ ; >
       au < crawling ; exists ; 2001 ; 5 ; Redescriptions Volume 2001 ; 2001 ; https://journal-redescriptions.org/ ; >
-      au < crawling ; exists ; 2002 ; 6 ; Redescriptions Volume 2002 ; 2002 ; https://journal-redescriptions.org/ ; >
+      au < frozen ; exists ; 2002 ; 6 ; Redescriptions Volume 2002 ; 2002 ; https://journal-redescriptions.org/ ; >
       au < crawling ; exists ; 2003 ; 7 ; Redescriptions Volume 2003 ; 2003 ; https://journal-redescriptions.org/ ; >
       au < crawling ; exists ; 2004 ; 8 ; Redescriptions Volume 2004 ; 2004 ; https://journal-redescriptions.org/ ; >
-      au < crawling ; exists ; 2005 ; 9 ; Redescriptions Volume 2005 ; 2005 ; https://journal-redescriptions.org/ ; >
+      au < frozen ; exists ; 2005 ; 9 ; Redescriptions Volume 2005 ; 2005 ; https://journal-redescriptions.org/ ; >
       au < crawling ; exists ; 2006 ; 10 ; Redescriptions Volume 2006 ; 2006 ; https://journal-redescriptions.org/ ; >
-      au < crawling ; exists ; 2007 ; 11 ; Redescriptions Volume 2007 ; 2007 ; https://journal-redescriptions.org/ ; >
-      au < crawling ; exists ; 2008 ; 12 ; Redescriptions Volume 2008 ; 2008 ; https://journal-redescriptions.org/ ; >
+      au < frozen ; exists ; 2007 ; 11 ; Redescriptions Volume 2007 ; 2007 ; https://journal-redescriptions.org/ ; >
+      au < frozen ; exists ; 2008 ; 12 ; Redescriptions Volume 2008 ; 2008 ; https://journal-redescriptions.org/ ; >
       au < crawling ; exists ; 2009 ; 13 ; Redescriptions Volume 2009 ; 2009 ; https://journal-redescriptions.org/ ; >
-      au < crawling ; exists ; 2010 ; 14 ; Redescriptions Volume 2010 ; 2010 ; https://journal-redescriptions.org/ ; >
+      au < frozen ; exists ; 2010 ; 14 ; Redescriptions Volume 2010 ; 2010 ; https://journal-redescriptions.org/ ; >
       au < crawling ; exists ; 2011 ; 15 ; Redescriptions Volume 2011 ; 2011 ; https://journal-redescriptions.org/ ; >
       au < exists ; exists ; 2012 ; 16 ; Redescriptions Volume 2012 ; 2012 ; https://journal-redescriptions.org/ ; >
-      au < crawling ; exists ; 2013 ; 17 ; Redescriptions Volume 2013 ; 2013 ; https://journal-redescriptions.org/ ; >
-      au < crawling ; exists ; 2014 ; 18 ; Redescriptions Volume 2014 ; 2014 ; https://journal-redescriptions.org/ ; >
-      au < crawling ; exists ; 2016 ; 19 ; Redescriptions Volume 2016 ; 2016 ; https://journal-redescriptions.org/ ; >
+      au < frozen ; exists ; 2013 ; 17 ; Redescriptions Volume 2013 ; 2013 ; https://journal-redescriptions.org/ ; >
+      au < frozen ; exists ; 2014 ; 18 ; Redescriptions Volume 2014 ; 2014 ; https://journal-redescriptions.org/ ; >
+      au < frozen ; exists ; 2016 ; 19 ; Redescriptions Volume 2016 ; 2016 ; https://journal-redescriptions.org/ ; >
       au < crawling ; exists ; 2017 ; 20 ; Redescriptions Volume 2017 ; 2017 ; https://journal-redescriptions.org/ ; >
       au < crawling ; exists ; 2018 ; 21 ; Redescriptions Volume 2018 ; 2018 ; https://journal-redescriptions.org/ ; >
       au < crawling ; exists ; 2019 ; 22 ; Redescriptions Volume 2019 ; 2019 ; https://journal-redescriptions.org/ ; >
@@ -484,7 +484,7 @@
       au < finished ; crawling ; 2016 ; 2016 ; Body, Space & Technology Volume 2016 ; 2016 ; https://www.bstjournal.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2017 ; 2017 ; Body, Space & Technology Volume 2017 ; 2017 ; https://www.bstjournal.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2018 ; 2018 ; Body, Space & Technology Volume 2018 ; 2018 ; https://www.bstjournal.com/ ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2019 ; 2019 ; Body, Space & Technology Volume 2019 ; 2019 ; https://www.bstjournal.com/ ; >
+      au < frozen ; exists ; 2019 ; 2019 ; Body, Space & Technology Volume 2019 ; 2019 ; https://www.bstjournal.com/ ; >
 
   }
 
@@ -755,7 +755,7 @@
     au < finished ; crawling ; 2016 ; 18 ; Scandinavian Journal of Disability Research Volume 18 ; 2016 ; https://www.sjdr.se/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; 19 ; Scandinavian Journal of Disability Research Volume 19 ; 2017 ; https://www.sjdr.se/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2018 ; 20 ; Scandinavian Journal of Disability Research Volume 20 ; 2018 ; https://www.sjdr.se/ ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2019 ; 21 ; Scandinavian Journal of Disability Research Volume 21 ; 2019 ; https://www.sjdr.se/ ; >
+    au < deepCrawl ; exists ; 2019 ; 21 ; Scandinavian Journal of Disability Research Volume 21 ; 2019 ; https://www.sjdr.se/ ; >
 
   }
 
@@ -970,7 +970,8 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://www.revista-anglo-saxonica.org/
 
-      au < exists ; exists ; 2019 ; 17 ; Anglo Saxonica Volume 2019 ; 2019 ; https://www.revista-anglo-saxonica.org/ ; >
+      #2019 AUs are published on the 2020 manifest page. See https://www.revista-anglo-saxonica.org/lockss/year/2020/
+      au < doNotProcess ; doNotProcess ; 2019 ; 17 ; Anglo Saxonica Volume 2019 ; 2019 ; https://www.revista-anglo-saxonica.org/ ; >
       au < manifest ; exists ; 2020 ; 18 ; Anglo Saxonica Volume 2020 ; 2020 ; https://www.revista-anglo-saxonica.org/ ; >
 
   }
@@ -1428,7 +1429,7 @@
       au < finished ; crawling ; 2016 ; 4 ; Journal of Open Psychology Data Volume 2016 ; 2016 ; http://openpsychologydata.metajnl.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; 5 ; Journal of Open Psychology Data Volume 2017 ; 2017 ; http://openpsychologydata.metajnl.com/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 6 ; Journal of Open Psychology Data Volume 2018 ; 2018 ; https://openpsychologydata.metajnl.com/ ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2019 ; 7 ; Journal of Open Psychology Data Volume 2019 ; 2019 ; https://openpsychologydata.metajnl.com/ ; >
+      au < deepCrawl ; exists ; 2019 ; 7 ; Journal of Open Psychology Data Volume 2019 ; 2019 ; https://openpsychologydata.metajnl.com/ ; >
 
   }
 
@@ -1629,7 +1630,7 @@
 
       au < crawling ; exists ; 2006 ; 1 ; Global Heart Volume 2006 ; 2006 ;  https://globalheartjournal.com/ ; >
       au < exists ; exists ; 2007 ; 2 ; Global Heart Volume 2007 ; 2007 ;  https://globalheartjournal.com/ ; >
-      au < crawling ; exists ; 2008 ; 3 ; Global Heart Volume 2008 ; 2008 ;  https://globalheartjournal.com/ ; >
+      au < frozen ; exists ; 2008 ; 3 ; Global Heart Volume 2008 ; 2008 ;  https://globalheartjournal.com/ ; >
       au < crawling ; exists ; 2009 ; 4 ; Global Heart Volume 2009 ; 2009 ;  https://globalheartjournal.com/ ; >
       au < manifest ; exists ; 2010 ; 5 ; Global Heart Volume 2010 ; 2010 ;  https://globalheartjournal.com/ ; >
       au < crawling ; exists ; 2011 ; 6 ; Global Heart Volume 2011 ; 2011 ;  https://globalheartjournal.com/ ; >
@@ -1637,9 +1638,9 @@
       au < crawling ; exists ; 2013 ; 8 ; Global Heart Volume 2013 ; 2013 ;  https://globalheartjournal.com/ ; >
       au < crawling ; exists ; 2014 ; 9 ; Global Heart Volume 2014 ; 2014 ;  https://globalheartjournal.com/ ; >
       au < crawling ; exists ; 2015 ; 10 ; Global Heart Volume 2015 ; 2015 ;  https://globalheartjournal.com/ ; >
-      au < crawling ; exists ; 2016 ; 11 ; Global Heart Volume 2016 ; 2016 ;  https://globalheartjournal.com/ ; >
+      au < frozen ; exists ; 2016 ; 11 ; Global Heart Volume 2016 ; 2016 ;  https://globalheartjournal.com/ ; >
       au < crawling ; exists ; 2017 ; 12 ; Global Heart Volume 2017 ; 2017 ;  https://globalheartjournal.com/ ; >
-      au < crawling ; exists ; 2018 ; 13 ; Global Heart Volume 2018 ; 2018 ;  https://globalheartjournal.com/ ; >
+      au < frozen ; exists ; 2018 ; 13 ; Global Heart Volume 2018 ; 2018 ;  https://globalheartjournal.com/ ; >
       au < crawling ; exists ; 2019 ; 14 ; Global Heart Volume 2019 ; 2019 ;  https://globalheartjournal.com/ ; >
       au < manifest ; exists ; 2020 ; 15 ; Global Heart Volume 2020 ; 2020 ;  https://globalheartjournal.com/ ; >
 
@@ -1748,7 +1749,7 @@
       au < doNotProcess ; exists ; 2015 ; 7 ; Present Pasts Volume 2015 ; 2015 ; https://presentpasts.info/ ; >
       au < finished ; crawling ; 2016 ; 8 ; Present Pasts Volume 2016 ; 2016 ; https://presentpasts.info/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; 9 ; Present Pasts Volume 2017 ; 2017 ; https://presentpasts.info/ ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2019 ; 10 ; Present Pasts Volume 2019 ; 2019 ; https://presentpasts.info/ ; >
+      au < deepCrawl ; exists ; 2019 ; 10 ; Present Pasts Volume 2019 ; 2019 ; https://presentpasts.info/ ; >
 
     }
   }
@@ -1947,7 +1948,7 @@
       au < finished ; crawling ; 2016 ; 4 ; eGEMs Volume 2016 ; 2016 ; https://egems.academyhealth.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; 5 ; eGEMs Volume 2017 ; 2017 ; https://egems.academyhealth.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 6 ; eGEMs Volume 2018 ; 2018 ; https://egems.academyhealth.org/ ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2019 ; 7 ; eGEMs Volume 2019 ; 2019 ; https://egems.academyhealth.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; 7 ; eGEMs Volume 2019 ; 2019 ; https://egems.academyhealth.org/ ; >
 
   }
 
@@ -1996,7 +1997,7 @@
 #      param[base_url] = https://journal.caa-international.org/
 
       au < finished ; manifest ; 2018 ; 1 ; Journal of Computer Applications in Archaeology Volume 2018 ; 2018 ; https://journal.caa-international.org/ ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2019 ; 2 ; Journal of Computer Applications in Archaeology Volume 2019 ; 2019 ; https://journal.caa-international.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; 2 ; Journal of Computer Applications in Archaeology Volume 2019 ; 2019 ; https://journal.caa-international.org/ ; >
 
   }
 
@@ -2012,7 +2013,7 @@
 
       au < finished ; crawling ; 2017 ; 1 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2017 ; 2017 ; https://kula.uvic.ca/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 2 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2018 ; 2018 ; https://kula.uvic.ca/ ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2019 ; 3 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2019 ; 2019 ; https://kula.uvic.ca/ ; >
+      au < deepCrawl ; exists ; 2019 ; 3 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2019 ; 2019 ; https://kula.uvic.ca/ ; >
 
   }
 
@@ -2043,7 +2044,7 @@
 
       au < finished ; crawling ; 2017 ; 1 ; Physical Activity and Health Volume 2017 ; 2017 ; https://paahjournal.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 2 ; Physical Activity and Health Volume 2018 ; 2018 ; https://paahjournal.com/ ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2019 ; 3 ; Physical Activity and Health Volume 2019 ; 2019 ; https://paahjournal.com/ ; >
+      au < deepCrawl ; exists ; 2019 ; 3 ; Physical Activity and Health Volume 2019 ; 2019 ; https://paahjournal.com/ ; >
 
   }
 
@@ -2178,7 +2179,7 @@
       au < finished ; crawling ; 2016 ; 14 ; Entertainment and Sports Law Journal Volume 2016 ; 2016 ; http://www.entsportslawjournal.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; 15 ; Entertainment and Sports Law Journal Volume 2017 ; 2017 ; http://www.entsportslawjournal.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 16 ; Entertainment and Sports Law Journal Volume 2018 ; 2018 ; https://www.entsportslawjournal.com/ ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2019 ; 17 ; Entertainment and Sports Law Journal Volume 2019 ; 2019 ; https://www.entsportslawjournal.com/ ; >
+      au < frozen ; exists ; 2019 ; 17 ; Entertainment and Sports Law Journal Volume 2019 ; 2019 ; https://www.entsportslawjournal.com/ ; >
 
   }
 
@@ -2407,7 +2408,8 @@
       au < finished ; finished ; 2016 ; 9 ; International Journal for Court Administration Volume 2016 ; 2016 ; http://www.iacajournal.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2017 ; 10 ; International Journal for Court Administration Volume 2017 ; 2017 ; http://www.iacajournal.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 11 ; International Journal for Court Administration Volume 2018 ; 2018 ; https://www.iacajournal.org/ ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2019 ; 12 ; International Journal for Court Administration Volume 2019 ; 2019 ; https://www.iacajournal.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; 12 ; International Journal for Court Administration Volume 2019 ; 2019 ; https://www.iacajournal.org/ ; >
+      au < expected ; exists ; 2020 ; 13 ; International Journal for Court Administration Volume 2020 ; 2020 ; https://www.iacajournal.org/ ; >
 
   }
 
@@ -2429,6 +2431,7 @@
       au < finished ; manifest ; 2017 ; 5 ; International Journal for History, Culture and Modernity Volume 2017 ; 2017 ; https://www.history-culture-modernity.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2018 ; 6 ; International Journal for History, Culture and Modernity Volume 2018 ; 2018 ; https://www.history-culture-modernity.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2019 ; 7 ; International Journal for History, Culture and Modernity Volume 2019 ; 2019 ; https://www.history-culture-modernity.org/ ; >
+      au < expected ; exists ; 2020 ; 8 ; International Journal for History, Culture and Modernity Volume 2020 ; 2020 ; https://www.history-culture-modernity.org/ ; >
 
   }
 
@@ -2457,6 +2460,7 @@
       au < finished ; manifest ; 2017 ; 13 ; Journal of Social Intervention Volume 2017 ; 2017 ; https://www.journalsi.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 14 ; Journal of Social Intervention Volume 2018 ; 2018 ; https://www.journalsi.org/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2019 ; 15 ; Journal of Social Intervention Volume 2019 ; 2019 ; https://www.journalsi.org/ ; >
+      au < expected ; exists ; 2020 ; 16 ; Journal of Social Intervention Volume 2020 ; 2020 ; https://www.journalsi.org/ ; >
 
   }
 
@@ -2491,6 +2495,7 @@
       au < finished ; manifest ; 2017 ; 19 ; LIBER Quarterly Volume 2017 ; 2017 ; https://www.liberquarterly.eu/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2018 ; 20 ; LIBER Quarterly Volume 2018 ; 2018 ; https://www.liberquarterly.eu/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2019 ; 21 ; LIBER Quarterly Volume 2019 ; 2019 ; https://www.liberquarterly.eu/ ; >
+      au < expected ; exists ; 2020 ; 22 ; LIBER Quarterly Volume 2020 ; 2020 ; https://www.liberquarterly.eu/ ; >
 
   }
 
@@ -2517,6 +2522,7 @@
       au < finished ; manifest ; 2017 ; 11 ; RELIEF Volume 2017 ; 2017 ; https://www.revue-relief.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 12 ; RELIEF Volume 2018 ; 2018 ; https://www.revue-relief.org/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2019 ; 13 ; RELIEF Volume 2019 ; 2019 ; https://www.revue-relief.org/ ; >
+      au < expected ; exists ; 2020 ; 14 ; RELIEF Volume 2020 ; 2020 ; https://www.revue-relief.org/ ; >
 
   }
 
@@ -2566,6 +2572,7 @@
       au < finished ; manifest ; 2017 ; 10 ; Studium Volume 2017 ; 2017 ; http://www.gewina-studium.nl/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2018 ; 11 ; Studium Volume 2018 ; 2018 ; https://www.gewina-studium.nl/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2019 ; 12 ; Studium Volume 2019 ; 2019 ; https://www.gewina-studium.nl/ ; >
+      au < expected ; exists ; 2020 ; 13 ; Studium Volume 2020 ; 2020 ; https://www.gewina-studium.nl/ ; >
 
   }
 
@@ -2626,6 +2633,7 @@
       au < finished ; manifest ; 2017 ; 13 ; Utrecht Law Review Volume 2017 ; 2017 ; https://www.utrechtlawreview.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 14 ; Utrecht Law Review Volume 2018 ; 2018 ; https://www.utrechtlawreview.org/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2019 ; 15 ; Utrecht Law Review Volume 2019 ; 2019 ; https://www.utrechtlawreview.org/ ; >
+      au < expected ; exists ; 2020 ; 16 ; Utrecht Law Review Volume 2020 ; 2020 ; https://www.utrechtlawreview.org/ ; >
 
   }
 
@@ -2663,6 +2671,7 @@
       au < finished ; manifest ; 2017 ; 6 ; Insights: the UKSG journal Volume 2017 ; 2017 ; http://insights.uksg.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 7 ; Insights: the UKSG journal Volume 2018 ; 2018 ; https://insights.uksg.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2019 ; 8 ; Insights: the UKSG journal Volume 2019 ; 2019 ; https://insights.uksg.org/ ; >
+      au < expected ; exists ; 2020 ; 9 ; Insights: the UKSG journal Volume 2020 ; 2020 ; https://insights.uksg.org/ ; >
 
   }
 
@@ -2734,6 +2743,7 @@
       au < finished ; crawling ; 2017 ; 3 ; Collabra: Psychology Volume 2017 ; 2017 ; https://www.collabra.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 4 ; Collabra: Psychology Volume 2018 ; 2018 ; https://www.collabra.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2019 ; 5 ; Collabra: Psychology Volume 2019 ; 2019 ; https://www.collabra.org/ ; >
+      au < expected ; exists ; 2020 ; 6 ; Collabra: Psychology Volume 2020 ; 2020 ; https://www.collabra.org/ ; >
 
   }
 
@@ -2754,6 +2764,7 @@
       au < finished ; crawling ; 2017 ; 5 ; Elementa: Science of the Anthropocene Volume 2017 ; 2017 ; https://www.elementascience.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 6 ; Elementa: Science of the Anthropocene Volume 2018 ; 2018 ; https://www.elementascience.org/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2019 ; 7 ; Elementa: Science of the Anthropocene Volume 2019 ; 2019 ; https://www.elementascience.org/ ; >
+      au < expected ; exists ; 2020 ; 8 ; Elementa: Science of the Anthropocene Volume 2020 ; 2020 ; https://www.elementascience.org/ ; >
 
   }
 
@@ -2791,6 +2802,7 @@
       au < finished ; crawling ; 2016 ; 13 ; British and Irish Orthoptic Journal Volume 2016 ; 2016 ; https://www.bioj-online.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2018 ; 14 ; British and Irish Orthoptic Journal Volume 2018 ; 2018 ; https://www.bioj-online.com/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2019 ; 15 ; British and Irish Orthoptic Journal Volume 2019 ; 2019 ; https://www.bioj-online.com/ ; >
+      au < expected ; exists ; 2020 ; 16 ; British and Irish Orthoptic Journal Volume 2020 ; 2020 ; https://www.bioj-online.com/ ; >
 
   }
 
@@ -2807,6 +2819,7 @@
       au < finished ; crawling ; 2017 ; 1 ; Journal of the European Second Language Association Volume 2017 ; 2017 ; https://www.euroslajournal.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2018 ; 2 ; Journal of the European Second Language Association Volume 2018 ; 2018 ; https://www.euroslajournal.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2019 ; 3 ; Journal of the European Second Language Association Volume 2019 ; 2019 ; https://www.euroslajournal.org/ ; >
+      au < expected ; exists ; 2020 ; 4 ; Journal of the European Second Language Association Volume 2020 ; 2020 ; https://www.euroslajournal.org/ ; >
 
   }
 
@@ -2822,6 +2835,7 @@
 
       au < finished ; manifest ; 2018 ; 1 ; Undergraduate Journal of Politics and International Relations Volume 2018 ; 2018 ; https://www.ujpir-journal.com/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2019 ; 2 ; Undergraduate Journal of Politics and International Relations Volume 2019 ; 2019 ; https://www.ujpir-journal.com/ ; >
+      au < expected ; exists ; 2020 ; 3 ; Undergraduate Journal of Politics and International Relations Volume 2020 ; 2020 ; https://www.ujpir-journal.com/ ; >
 
   }
 }
@@ -2856,6 +2870,7 @@
       au < finished ; manifest ; 2017 ; 6 ; Stability: International Journal of Security & Development Volume 2017 ; 2017 ; http://www.stabilityjournal.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2018 ; 7 ; Stability: International Journal of Security & Development Volume 2018 ; 2018 ; https://www.stabilityjournal.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2019 ; 8 ; Stability: International Journal of Security & Development Volume 2019 ; 2019 ; https://www.stabilityjournal.org/ ; >
+      au < expected ; exists ; 2020 ; 9 ; Stability: International Journal of Security & Development Volume 2020 ; 2020 ; https://www.stabilityjournal.org/ ; >
 
   }
 }
@@ -2884,6 +2899,7 @@
 
       au < frozen ; exists ; 2018 ; 1 ; Scandinavian Military Studies Volume 2018 ; 2018 ; https://sjms.nu/ ; >
       au < deepCrawl ; exists ; 2019 ; 2 ; Scandinavian Military Studies Volume 2019 ; 2019 ; https://sjms.nu/ ; >
+      au < expected ; exists ; 2020 ; 3 ; Scandinavian Military Studies Volume 2020 ; 2020 ; https://sjms.nu/ ; >
 
   }
 }
@@ -2910,6 +2926,7 @@
 #      param[base_url] = https://jmphil.org/
 
       au < crawling ; exists ; 2019 ; 1 ; Journal of Modern Philosophy Volume 2019 ; 2019 ; https://jmphil.org/ ; >
+      au < expected ; exists ; 2020 ; 2 ; Journal of Modern Philosophy Volume 2020 ; 2020 ; https://jmphil.org/ ; >
 
   }
 
