@@ -38,7 +38,7 @@
     au < finished ; manifest ; 2016 ; Multiscale Modeling and Simulation Volume 14 ; 14 ; http://epubs.siam.org/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Multiscale Modeling and Simulation Volume 15 ; 15 ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2018 ; Multiscale Modeling and Simulation Volume 16 ; 16 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2019 ; Multiscale Modeling and Simulation Volume 17 ; 17 ; https://epubs.siam.org/ ; >
+    au < deepCrawl ; exists ; 2019 ; Multiscale Modeling and Simulation Volume 17 ; 17 ; https://epubs.siam.org/ ; >
 
   }
 
