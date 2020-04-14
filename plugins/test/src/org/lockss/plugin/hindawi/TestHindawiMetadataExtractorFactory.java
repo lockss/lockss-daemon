@@ -28,19 +28,13 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.hindawi;
 
-import java.io.*;
 import java.util.*;
-import java.util.regex.*;
 
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
-import org.lockss.daemon.*;
-import org.lockss.crawler.*;
-import org.lockss.repository.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.base.*;
 import org.lockss.plugin.simulated.*;
 
 /**
@@ -162,7 +156,7 @@ public class TestHindawiMetadataExtractorFactory extends LockssTestCase {
     goodAuthors.add(goodAuthorA);
     goodAuthors.add(goodAuthorB);
     FileMetadataExtractor me =
-      new HindawiHtmlMetadataExtractorFactory.HindawiHtmlMetadataExtractor();
+      new Hindawi2020HtmlMetadataExtractorFactory.HindawiHtmlMetadataExtractor();
     assertNotNull(me);
     log.debug3("Extractor: " + me.toString());
     FileMetadataListExtractor mle =
@@ -196,7 +190,7 @@ public class TestHindawiMetadataExtractorFactory extends LockssTestCase {
     cu.setContent(badContent);
     cu.setContentSize(badContent.length());
     FileMetadataExtractor me =
-      new HindawiHtmlMetadataExtractorFactory.HindawiHtmlMetadataExtractor();
+      new Hindawi2020HtmlMetadataExtractorFactory.HindawiHtmlMetadataExtractor();
     assertNotNull(me);
     log.debug3("Extractor: " + me.toString());
     FileMetadataListExtractor mle =
