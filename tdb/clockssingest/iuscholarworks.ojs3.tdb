@@ -84,8 +84,8 @@
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Artifact Volume 3 (2014) ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Artifact Volume 3 (2015) ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Artifact Volume 4 ; 4 ; >
-      #no 2018 as of 3/14/19
-      au < exists ; exists ; 2019 ; 2019 ; Artifact Volume 5 ; 5 ; > 
+      #no 2018 or 2019 as of 4/14/2020
+      au < expected ; exists ; 2020 ; 2020 ; Artifact Volume 5 ; 5 ; > 
 
   }
 
@@ -247,8 +247,8 @@
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 13 ; 13 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 14 ; 14 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 15 ; 15 ; >
-      #no 2018 as of 3/14/19      
-      au < exists ; exists ; 2019 ; 2019 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 16 ; 16 ; > 
+      #no 2018 or 2019 as of 4/14/2020      
+      au < expected ; exists ; 2020 ; 2020 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 16 ; 16 ; > 
 
   }
 
@@ -469,23 +469,15 @@
 
       param[journal_id] = lsj
 
-      au < exists ; exists ; 1969 ; 1969 ; Liberian Studies Journal Volume 1 (1968) ; 1 ; >
-      au < manifest ; exists ; 1970 ; 1970 ; Liberian Studies Journal Volume 1 (1969) ; 1 ; >
-      au < manifest ; exists ; 1971 ; 1971 ; Liberian Studies Journal Volume 3 ; 3 ; >
-      au < manifest ; exists ; 1972 ; 1972 ; Liberian Studies Journal Volume 3-4 ; 3-4 ; >
-      au < exists ; exists ; 1973 ; 1973 ; Liberian Studies Journal Volume 4-5 ; 4-5 ; >
-      au < exists ; exists ; 1974 ; 1974 ; Liberian Studies Journal Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1970 ; 1970 ; Liberian Studies Journal Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1971 ; 1971 ; Liberian Studies Journal Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1972 ; 1972 ; Liberian Studies Journal Volume 5 ; 5 ; >
       au < manifest ; exists ; 1975 ; 1975 ; Liberian Studies Journal Volume 6 ; 6 ; >
-      au < manifest ; exists ; 1976 ; 1976 ; Liberian Studies Journal Volume 7 (1976) ; 7 ; >
-      au < exists ; exists ; 1977 ; 1977 ; Liberian Studies Journal Volume 7 (1977) ; 7 ; >
-      au < manifest ; exists ; 1978 ; 1978 ; Liberian Studies Journal Volume 8 (1978) ; 8 ; >
-      au < exists ; exists ; 1979 ; 1979 ; Liberian Studies Journal Volume 8 (1979) ; 8 ; >
-      au < manifest ; exists ; 1980 ; 1980 ; Liberian Studies Journal Volume 9 (1980) ; 9 ; >
-      au < exists ; exists ; 1981 ; 1981 ; Liberian Studies Journal Volume 9 (1981) ; 9 ; >
+      au < manifest ; exists ; 1976 ; 1976 ; Liberian Studies Journal Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1978 ; 1978 ; Liberian Studies Journal Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1980 ; 1980 ; Liberian Studies Journal Volume 9 ; 9 ; >
       au < manifest ; exists ; 1982 ; 1982 ; Liberian Studies Journal Volume 10 (1982) ; 10 ; >
-      au < exists ; exists ; 1983 ; 1983 ; Liberian Studies Journal Volume 10 (1983) ; 10 ; >
       au < manifest ; exists ; 1984 ; 1984 ; Liberian Studies Journal Volume 10 (1984) ; 10 ; >
-      au < exists ; exists ; 1985 ; 1985 ; Liberian Studies Journal Volume 10 (1985) ; 10 ; >
       au < manifest ; exists ; 1986 ; 1986 ; Liberian Studies Journal Volume 11 ; 11 ; >
       au < manifest ; exists ; 1987 ; 1987 ; Liberian Studies Journal Volume 12 ; 12 ; >
       au < manifest ; exists ; 1988 ; 1988 ; Liberian Studies Journal Volume 13 ; 13 ; >
@@ -794,9 +786,10 @@
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Indiana University South Bend Graduate Research Journal Volume 2014 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Indiana University South Bend Graduate Research Journal Volume 2015 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Indiana University South Bend Graduate Research Journal Volume 2016 ; 3 ; >
-      au < exists ; exists ; 2017 ; 2017 ; Indiana University South Bend Graduate Research Journal Volume 2017 ; 4 ; >
-      au < exists ; exists ; 2018 ; 2018 ; Indiana University South Bend Graduate Research Journal Volume 2018 ; 5 ; >
-      au < exists ; exists ; 2019 ; 2019 ; Indiana University South Bend Graduate Research Journal Volume 2019 ; 6 ; >
+      au < manifest ; exists ; 2017 ; 2017 ; Indiana University South Bend Graduate Research Journal Volume 2017 ; 4 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; Indiana University South Bend Graduate Research Journal Volume 2018 ; 5 ; >
+      au < manifest ; exists ; 2019 ; 2019 ; Indiana University South Bend Graduate Research Journal Volume 2019 ; 6 ; >
+      au < expected ; exists ; 2020 ; 2020 ; Indiana University South Bend Graduate Research Journal Volume 2020 ; 7 ; >
 
   }
 
@@ -810,18 +803,17 @@
       {
          param[journal_id] = iusburj
 
-         au < exists ; exists ; 2000 ; 2000 ; IU South Bend Undergraduate Research Journal Volume 2000 ; 3 ; >
-         au < exists ; exists ; 2001 ; 2001 ; IU South Bend Undergraduate Research Journal Volume 2001 ; 4 ; >
-         au < exists ; exists ; 2002 ; 2002 ; IU South Bend Undergraduate Research Journal Volume 2002 ; 5 ; >
-         au < exists ; exists ; 2003 ; 2003 ; IU South Bend Undergraduate Research Journal Volume 2003 ; 6 ; >
-         au < exists ; exists ; 2008 ; 2008 ; IU South Bend Undergraduate Research Journal Volume 2008 ; 8 ; >
-         au < exists ; exists ; 2009 ; 2009 ; IU South Bend Undergraduate Research Journal Volume 2009 ; 9 ; >
-         au < exists ; exists ; 2010 ; 2010 ; IU South Bend Undergraduate Research Journal Volume 2010 ; 10 ; >
-         au < exists ; exists ; 2011 ; 2011 ; IU South Bend Undergraduate Research Journal Volume 2011 ; 11 ; >
-         au < exists ; exists ; 2012 ; 2012 ; IU South Bend Undergraduate Research Journal Volume 2012 ; 12 ; >
-         au < exists ; exists ; 2013 ; 2013 ; IU South Bend Undergraduate Research Journal Volume 2013 ; 13 ; >
-         au < exists ; exists ; 2014 ; 2014 ; IU South Bend Undergraduate Research Journal Volume 2014 ; 14 ; >
-         au < exists ; exists ; 2015 ; 2015 ; IU South Bend Undergraduate Research Journal Volume 2015 ; 15 ; >
+         au < manifest ; exists ; 2000 ; 2000 ; IU South Bend Undergraduate Research Journal Volume 2000 ; 3 ; >
+         au < manifest ; exists ; 2001 ; 2001 ; IU South Bend Undergraduate Research Journal Volume 2001 ; 4 ; >
+         au < manifest ; exists ; 2002 ; 2002 ; IU South Bend Undergraduate Research Journal Volume 2002 ; 5 ; >
+         au < manifest ; exists ; 2003 ; 2003 ; IU South Bend Undergraduate Research Journal Volume 2003 ; 6 ; >
+         au < manifest ; exists ; 2008 ; 2008 ; IU South Bend Undergraduate Research Journal Volume 2008 ; 8 ; >
+         au < manifest ; exists ; 2009 ; 2009 ; IU South Bend Undergraduate Research Journal Volume 2009 ; 9 ; >
+         au < manifest ; exists ; 2010 ; 2010 ; IU South Bend Undergraduate Research Journal Volume 2010 ; 10 ; >
+         au < manifest ; exists ; 2011 ; 2011 ; IU South Bend Undergraduate Research Journal Volume 2011 ; 11 ; >
+         au < manifest ; exists ; 2012 ; 2012 ; IU South Bend Undergraduate Research Journal Volume 2012 ; 12 ; >
+         au < manifest ; exists ; 2014 ; 2014 ; IU South Bend Undergraduate Research Journal Volume 2014 ; 14 ; >
+         au < manifest ; exists ; 2015 ; 2015 ; IU South Bend Undergraduate Research Journal Volume 2015 ; 15 ; >
          au < exists ; exists ; 2016 ; 2016 ; IU South Bend Undergraduate Research Journal Volume 2016 ; 16 ; >
          au < exists ; exists ; 2017 ; 2017 ; IU South Bend Undergraduate Research Journal Volume 2017 ; 17 ; >
          au < exists ; exists ; 2018 ; 2018 ; IU South Bend Undergraduate Research Journal Volume 2018 ; 18 ; >
