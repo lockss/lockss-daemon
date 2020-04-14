@@ -36,10 +36,11 @@
     # See https://dl.sciencesocieties.org/publications/ael
     param[journal_id] = ael
 
-    au < deepCrawl ; exists ; 2016 ; Agricultural & Environmental Letters Volume 1 ; 1 ; >
-    au < deepCrawl ; exists ; 2017 ; Agricultural & Environmental Letters Volume 2 ; 2 ; >
-    au < deepCrawl ; exists ; 2018 ; Agricultural & Environmental Letters Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2019 ; Agricultural & Environmental Letters Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2016 ; Agricultural & Environmental Letters Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2017 ; Agricultural & Environmental Letters Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2018 ; Agricultural & Environmental Letters Volume 3 ; 3 ; >
+    au < deepCrawl ; exists ; 2019 ; Agricultural & Environmental Letters Volume 4 ; 4 ; >
+    au < expected ; exists ; 2020 ; Agricultural & Environmental Letters Volume 5 ; 5 ; >
 
   }
 
@@ -62,16 +63,17 @@
     au < finished ; finished ; 2007 ; Agronomy Journal Volume 99 ; 99 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2008 ; Agronomy Journal Volume 100 ; 100 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2009 ; Agronomy Journal Volume 101 ; 101 ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2010 ; Agronomy Journal Volume 102 ; 102 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2011 ; Agronomy Journal Volume 103 ; 103 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2012 ; Agronomy Journal Volume 104 ; 104 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2010 ; Agronomy Journal Volume 102 ; 102 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2011 ; Agronomy Journal Volume 103 ; 103 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2012 ; Agronomy Journal Volume 104 ; 104 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Agronomy Journal Volume 105 ; 105 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Agronomy Journal Volume 106 ; 106 ; >
     au < finished ; finished ; 2015 ; Agronomy Journal Volume 107 ; 107 ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2016 ; Agronomy Journal Volume 108 ; 108 ; >
-    au < deepCrawl ; exists ; 2017 ; Agronomy Journal Volume 109 ; 109 ; >
-    au < deepCrawl ; exists ; 2018 ; Agronomy Journal Volume 110 ; 110 ; >
+    au < frozen ; exists ; 2016 ; Agronomy Journal Volume 108 ; 108 ; >
+    au < frozen ; exists ; 2017 ; Agronomy Journal Volume 109 ; 109 ; >
+    au < frozen ; exists ; 2018 ; Agronomy Journal Volume 110 ; 110 ; >
     au < crawling ; exists ; 2019 ; Agronomy Journal Volume 111 ; 111 ; >
+    au < expected ; exists ; 2020 ; Agronomy Journal Volume 112 ; 112 ; >
 
   }
 
@@ -99,10 +101,11 @@
     au < finished ; finished ; 2013 ; Crops & Soils Magazine Volume 46 ; 46 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Crops & Soils Magazine Volume 47 ; 47 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; Crops & Soils Magazine Volume 48 ; 48 ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2016 ; Crops & Soils Magazine Volume 49 ; 49 ; >
-    au < deepCrawl ; exists ; 2017 ; Crops & Soils Magazine Volume 50 ; 50 ; >
-    au < deepCrawl ; exists ; 2018 ; Crops & Soils Magazine Volume 51 ; 51 ; >
-    au < crawling ; exists ; 2019 ; Crops & Soils Magazine Volume 52 ; 52 ; >
+    au < frozen ; exists ; 2016 ; Crops & Soils Magazine Volume 49 ; 49 ; >
+    au < frozen ; exists ; 2017 ; Crops & Soils Magazine Volume 50 ; 50 ; >
+    au < frozen ; exists ; 2018 ; Crops & Soils Magazine Volume 51 ; 51 ; >
+    au < deepCrawl ; exists ; 2019 ; Crops & Soils Magazine Volume 52 ; 52 ; >
+    au < expected ; exists ; 2020 ; Crops & Soils Magazine Volume 53 ; 53 ; >
 
   }
 
@@ -124,16 +127,17 @@
     au < finished ; finished ; 2007 ; Crop Science Volume 47 ; 47 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2008 ; Crop Science Volume 48 ; 48 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2009 ; Crop Science Volume 49 ; 49 ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2010 ; Crop Science Volume 50 ; 50 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2010 ; Crop Science Volume 50 ; 50 ; reingest1.clockss.org:8082 >
     au < notReady ; exists ; 2011 ; Crop Science Volume 51 ; 51 ; > #403 error. likely malformed url. https://dl.sciencesocieties.org/images/publications/cs/51/5/.jpeg
     au < notReady ; exists ; 2012 ; Crop Science Volume 52 ; 52 ; > #403 error. likely malformed url. https://dl.sciencesocieties.org/images/publications/cs/52/3/.jpeg
     au < finished ; finished ; 2013 ; Crop Science Volume 53 ; 53 ; reingest2.clockss.org:8085 >
     au < zapped ; finished ; 2014 ; Crop Science Volume 54 ; 54 ; >
     au < zapped ; finished ; 2015 ; Crop Science Volume 55 ; 55 ; reingest1.clockss.org:8082 > #malformed url. 403 error
-    au < deepCrawl ; exists ; 2016 ; Crop Science Volume 56 ; 56 ; >
-    au < deepCrawl ; exists ; 2017 ; Crop Science Volume 57 ; 57 ; >
-    au < deepCrawl ; exists ; 2018 ; Crop Science Volume 58 ; 58 ; >
+    au < frozen ; exists ; 2016 ; Crop Science Volume 56 ; 56 ; >
+    au < frozen ; exists ; 2017 ; Crop Science Volume 57 ; 57 ; >
+    au < frozen ; exists ; 2018 ; Crop Science Volume 58 ; 58 ; >
     au < crawling ; exists ; 2019 ; Crop Science Volume 59 ; 59 ; >
+    au < expected ; exists ; 2020 ; Crop Science Volume 60 ; 60 ; >
 
   }
 
@@ -161,10 +165,11 @@
     au < finished ; finished ; 2013 ; CSA News Volume 58 ; 58 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; CSA News Volume 59 ; 59 ; >
     au < zapped ; finished ; 2015 ; CSA News Volume 60 ; 60 ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2016 ; CSA News Volume 61 ; 61 ; >
-    au < deepCrawl ; exists ; 2017 ; CSA News Volume 62 ; 62 ; >
-    au < deepCrawl ; exists ; 2018 ; CSA News Volume 63 ; 63 ; >
-    au < crawling ; exists ; 2019 ; CSA News Volume 64 ; 64 ; >
+    au < frozen ; exists ; 2016 ; CSA News Volume 61 ; 61 ; >
+    au < frozen ; exists ; 2017 ; CSA News Volume 62 ; 62 ; >
+    au < frozen ; exists ; 2018 ; CSA News Volume 63 ; 63 ; >
+    au < deepCrawl ; exists ; 2019 ; CSA News Volume 64 ; 64 ; >
+    au < expected ; exists ; 2020 ; CSA News Volume 65 ; 65 ; >
 
   }
 
@@ -182,21 +187,22 @@
     
     param[journal_id] = jeq
 
-    au < finished ; frozen ; 2005 ; Journal of Environmental Quality Volume 34 ; 34 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2005 ; Journal of Environmental Quality Volume 34 ; 34 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2006 ; Journal of Environmental Quality Volume 35 ; 35 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2007 ; Journal of Environmental Quality Volume 36 ; 36 ; >
     au < finished ; finished ; 2008 ; Journal of Environmental Quality Volume 37 ; 37 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2009 ; Journal of Environmental Quality Volume 38 ; 38 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2010 ; Journal of Environmental Quality Volume 39 ; 39 ; >
-    au < finished ; crawling ; 2011 ; Journal of Environmental Quality Volume 40 ; 40 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2011 ; Journal of Environmental Quality Volume 40 ; 40 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Journal of Environmental Quality Volume 41 ; 41 ; >
     au < finished ; finished ; 2013 ; Journal of Environmental Quality Volume 42 ; 42 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Journal of Environmental Quality Volume 43 ; 43 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Journal of Environmental Quality Volume 44 ; 44 ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2016 ; Journal of Environmental Quality Volume 45 ; 45 ; >
-    au < deepCrawl ; exists ; 2017 ; Journal of Environmental Quality Volume 46 ; 46 ; >
-    au < deepCrawl ; exists ; 2018 ; Journal of Environmental Quality Volume 47 ; 47 ; >
+    au < frozen ; exists ; 2016 ; Journal of Environmental Quality Volume 45 ; 45 ; >
+    au < frozen ; exists ; 2017 ; Journal of Environmental Quality Volume 46 ; 46 ; >
+    au < frozen ; exists ; 2018 ; Journal of Environmental Quality Volume 47 ; 47 ; >
     au < crawling ; exists ; 2019 ; Journal of Environmental Quality Volume 48 ; 48 ; >
+    au < expected ; exists ; 2020 ; Journal of Environmental Quality Volume 49 ; 49 ; >
 
   }
   
@@ -213,7 +219,7 @@
     param[journal_id] = jpr
 
     au < finished ; finished ; 2007 ; Journal of Plant Registrations Volume 1 ; 1 ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2008 ; Journal of Plant Registrations Volume 2 ; 2 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2008 ; Journal of Plant Registrations Volume 2 ; 2 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2009 ; Journal of Plant Registrations Volume 3 ; 3 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2010 ; Journal of Plant Registrations Volume 4 ; 4 ; >
     au < finished ; finished ; 2011 ; Journal of Plant Registrations Volume 5 ; 5 ; >
@@ -221,10 +227,11 @@
     au < finished ; finished ; 2013 ; Journal of Plant Registrations Volume 7 ; 7 ; >
     au < finished ; finished ; 2014 ; Journal of Plant Registrations Volume 8 ; 8 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; Journal of Plant Registrations Volume 9 ; 9 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Journal of Plant Registrations Volume 10 ; 10 ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2017 ; Journal of Plant Registrations Volume 11 ; 11 ; >
-    au < deepCrawl ; exists ; 2018 ; Journal of Plant Registrations Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2019 ; Journal of Plant Registrations Volume 13 ; 13 ; >
+    au < finished ; frozen ; 2016 ; Journal of Plant Registrations Volume 10 ; 10 ; reingest1.clockss.org:8082 >
+    au < frozen ; exists ; 2017 ; Journal of Plant Registrations Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2018 ; Journal of Plant Registrations Volume 12 ; 12 ; >
+    au < deepCrawl ; exists ; 2019 ; Journal of Plant Registrations Volume 13 ; 13 ; >
+    au < expected ; exists ; 2020 ; Journal of Plant Registrations Volume 14 ; 14 ; >
 
   }
 
@@ -264,15 +271,16 @@
     au < finished ; finished ; 2008 ; Natural Sciences Education Volume 37 ; 37 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2009 ; Natural Sciences Education Volume 38 ; 38 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2010 ; Natural Sciences Education Volume 39 ; 39 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2011 ; Natural Sciences Education Volume 40 ; 40 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2011 ; Natural Sciences Education Volume 40 ; 40 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Natural Sciences Education Volume 41 ; 41 ; >
     au < finished ; finished ; 2013 ; Natural Sciences Education Volume 42 ; 42 ; >
     au < finished ; finished ; 2014 ; Natural Sciences Education Volume 43 ; 43 ; >
     au < finished ; finished ; 2015 ; Natural Sciences Education Volume 44 ; 44 ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2016 ; Natural Sciences Education Volume 45 ; 45 ; >
-    au < deepCrawl ; exists ; 2017 ; Natural Sciences Education Volume 46 ; 46 ; >
-    au < deepCrawl ; exists ; 2018 ; Natural Sciences Education Volume 47 ; 47 ; >
-    au < crawling ; exists ; 2019 ; Natural Sciences Education Volume 48 ; 48 ; >
+    au < frozen ; exists ; 2016 ; Natural Sciences Education Volume 45 ; 45 ; >
+    au < frozen ; exists ; 2017 ; Natural Sciences Education Volume 46 ; 46 ; >
+    au < frozen ; exists ; 2018 ; Natural Sciences Education Volume 47 ; 47 ; >
+    au < deepCrawl ; exists ; 2019 ; Natural Sciences Education Volume 48 ; 48 ; >
+    au < expected ; exists ; 2020 ; Natural Sciences Education Volume 49 ; 49 ; >
 
   }
 
@@ -288,18 +296,18 @@
     
     param[journal_id] = tpg
 
-    au < finished ; crawling ; 2008 ; The Plant Genome Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2008 ; The Plant Genome Volume 1 ; 1 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2009 ; The Plant Genome Volume 2 ; 2 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2010 ; The Plant Genome Volume 3 ; 3 ; >
-    au < finished ; crawling ; 2011 ; The Plant Genome Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2011 ; The Plant Genome Volume 4 ; 4 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2012 ; The Plant Genome Volume 5 ; 5 ; >
     au < finished ; finished ; 2013 ; The Plant Genome Volume 6 ; 6 ; >
-    au < finished ; crawling ; 2014 ; The Plant Genome Volume 7 ; 7 ; reingest4.clockss.org:8082 >
-    au < finished ; frozen ; 2015 ; The Plant Genome Volume 8 ; 8 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2016 ; The Plant Genome Volume 9 ; 9 ; >
-    au < deepCrawl ; exists ; 2017 ; The Plant Genome Volume 10 ; 10 ; >
-    au < deepCrawl ; exists ; 2018 ; The Plant Genome Volume 11 ; 11 ; >
-    au < testing ; exists ; 2019 ; The Plant Genome Volume 12 ; 12 ; >
+    au < finished ; frozen ; 2014 ; The Plant Genome Volume 7 ; 7 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; The Plant Genome Volume 8 ; 8 ; reingest2.clockss.org:8085 >
+    au < frozen ; exists ; 2016 ; The Plant Genome Volume 9 ; 9 ; >
+    au < frozen ; exists ; 2017 ; The Plant Genome Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2018 ; The Plant Genome Volume 11 ; 11 ; >
+    au < doNotProcess ; exists ; 2019 ; The Plant Genome Volume 12 ; 12 ; > #can't crawl https://dl.sciencesocieties.org/images/publications/tpg/12/1/.jpeg
 
   }
 
@@ -322,7 +330,7 @@
     au < finished ; finished ; 2009 ; Soil Horizons Volume 50 ; 50 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2010 ; Soil Horizons Volume 51 ; 51 ; >
     au < finished ; finished ; 2011 ; Soil Horizons Volume 52 ; 52 ; >
-    au < finished ; crawling ; 2012 ; Soil Horizons Volume 53 ; 53 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2012 ; Soil Horizons Volume 53 ; 53 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; Soil Horizons Volume 54 ; 54 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Soil Horizons Volume 55 ; 55 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Soil Horizons Volume 56 ; 56 ; reingest5.clockss.org:8082 >
@@ -348,16 +356,17 @@
     au < manifest ; exists ; 2007 ; Soil Science Society of America Journal Volume 71 ; 71 ; >
     au < manifest ; exists ; 2008 ; Soil Science Society of America Journal Volume 72 ; 72 ; >
     au < manifest ; exists ; 2009 ; Soil Science Society of America Journal Volume 73 ; 73 ; >
-    au < finished ; crawling ; 2010 ; Soil Science Society of America Journal Volume 74 ; 74 ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 2011 ; Soil Science Society of America Journal Volume 75 ; 75 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2010 ; Soil Science Society of America Journal Volume 74 ; 74 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2011 ; Soil Science Society of America Journal Volume 75 ; 75 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Soil Science Society of America Journal Volume 76 ; 76 ; >
     au < zapped ; finished ; 2013 ; Soil Science Society of America Journal Volume 77 ; 77 ; >
     au < finished ; finished ; 2014 ; Soil Science Society of America Journal Volume 78 ; 78 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Soil Science Society of America Journal Volume 79 ; 79 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2016 ; Soil Science Society of America Journal Volume 80 ; 80 ; >
-    au < deepCrawl ; exists ; 2017 ; Soil Science Society of America Journal Volume 81 ; 81 ; >
-    au < deepCrawl ; exists ; 2018 ; Soil Science Society of America Journal Volume 82 ; 82 ; >
+    au < frozen ; exists ; 2016 ; Soil Science Society of America Journal Volume 80 ; 80 ; >
+    au < frozen ; exists ; 2017 ; Soil Science Society of America Journal Volume 81 ; 81 ; >
+    au < frozen ; exists ; 2018 ; Soil Science Society of America Journal Volume 82 ; 82 ; >
     au < crawling ; exists ; 2019 ; Soil Science Society of America Journal Volume 83 ; 83 ; >
+    au < expected ; exists ; 2020 ; Soil Science Society of America Journal Volume 84 ; 84 ; >
 
   }
 
@@ -375,20 +384,21 @@
     param[journal_id] = vzj
 
     au < finished ; finished ; 2005 ; Vadose Zone Journal Volume 4 ; 4 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2006 ; Vadose Zone Journal Volume 5 ; 5 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2006 ; Vadose Zone Journal Volume 5 ; 5 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2007 ; Vadose Zone Journal Volume 6 ; 6 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2008 ; Vadose Zone Journal Volume 7 ; 7 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2009 ; Vadose Zone Journal Volume 8 ; 8 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2010 ; Vadose Zone Journal Volume 9 ; 9 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2010 ; Vadose Zone Journal Volume 9 ; 9 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2011 ; Vadose Zone Journal Volume 10 ; 10 ; >
     au < finished ; finished ; 2012 ; Vadose Zone Journal Volume 11 ; 11 ; >
     au < finished ; finished ; 2013 ; Vadose Zone Journal Volume 12 ; 12 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Vadose Zone Journal Volume 13 ; 13 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Vadose Zone Journal Volume 14 ; 14 ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2016 ; Vadose Zone Journal Volume 15 ; 15 ; >
-    au < deepCrawl ; exists ; 2017 ; Vadose Zone Journal Volume 16 ; 16 ; >
-    au < deepCrawl ; exists ; 2018 ; Vadose Zone Journal Volume 17 ; 17 ; >
-    au < crawling ; exists ; 2019 ; Vadose Zone Journal Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2016 ; Vadose Zone Journal Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2017 ; Vadose Zone Journal Volume 16 ; 16 ; >
+    au < frozen ; exists ; 2018 ; Vadose Zone Journal Volume 17 ; 17 ; >
+    au < deepCrawl ; exists ; 2019 ; Vadose Zone Journal Volume 18 ; 18 ; >
+    au < expected ; exists ; 2020 ; Vadose Zone Journal Volume 19 ; 19 ; >
 
   }
 

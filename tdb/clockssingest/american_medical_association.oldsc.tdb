@@ -40,8 +40,8 @@
     
     au < frozen ; exists ; 2012 ; JAMA Dermatology Volume 148 ; 2012 ; >
     au < frozen ; exists ; 2013 ; JAMA Dermatology Volume 149 ; 2013 ; >
-    au < finished ; frozen ; 2014 ; JAMA Dermatology Volume 150 ; 2014 ; reingest3.clockss.org:8083 >
-    au < finished ; frozen ; 2015 ; JAMA Dermatology Volume 151 ; 2015 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; JAMA Dermatology Volume 150 ; 2014 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2015 ; JAMA Dermatology Volume 151 ; 2015 ; reingest1.clockss.org:8082 >
     au < superseded ; exists ; 2016 ; JAMA Dermatology Volume 152 [superseded] ; 2016 ; >
   
   }
@@ -60,7 +60,7 @@
     
     au < frozen ; exists ; 2012 ; JAMA Facial Plastic Surgery Volume 14 ; 2012 ; >
     au < frozen ; exists ; 2013 ; JAMA Facial Plastic Surgery Volume 15 ; 2013 ; >
-    au < finished ; frozen ; 2014 ; JAMA Facial Plastic Surgery Volume 16 ; 2014 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2014 ; JAMA Facial Plastic Surgery Volume 16 ; 2014 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; JAMA Facial Plastic Surgery Volume 17 ; 2015 ; reingest3.clockss.org:8083 >
     au < superseded ; exists ; 2016 ; JAMA Facial Plastic Surgery Volume 18 [superseded] ; 2016 ; >
   
@@ -100,8 +100,8 @@
     
     au < frozen ; exists ; 2012 ; JAMA Neurology Volume 69 ; 2012 ; >
     au < frozen ; exists ; 2013 ; JAMA Neurology Volume 70 ; 2013 ; >
-    au < finished ; frozen ; 2014 ; JAMA Neurology Volume 71 ; 2014 ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2015 ; JAMA Neurology Volume 72 ; 2015 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; JAMA Neurology Volume 71 ; 2014 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; JAMA Neurology Volume 72 ; 2015 ; reingest1.clockss.org:8082 >
     au < superseded ; exists ; 2016 ; JAMA Neurology Volume 73 [superseded] ; 2016 ; >
   
   }
@@ -137,8 +137,8 @@
         
     au < frozen ; exists ; 2012 ; JAMA Ophthalmology Volume 130 ; 2012 ; >
     au < frozen ; exists ; 2013 ; JAMA Ophthalmology Volume 131 ; 2013 ; >
-    au < finished ; frozen ; 2014 ; JAMA Ophthalmology Volume 132 ; 2014 ; reingest4.clockss.org:8082 >
-    au < finished ; frozen ; 2015 ; JAMA Ophthalmology Volume 133 ; 2015 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; JAMA Ophthalmology Volume 132 ; 2014 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; JAMA Ophthalmology Volume 133 ; 2015 ; reingest2.clockss.org:8085 >
     au < superseded ; exists ; 2016 ; JAMA Ophthalmology Volume 134 [superseded] ; 2016 ; >
     
   }
@@ -157,8 +157,8 @@
         
     au < frozen ; exists ; 2012 ; JAMA Otolaryngology - Head & Neck Surgery Volume 138 ; 2012 ; >
     au < frozen ; exists ; 2013 ; JAMA Otolaryngology - Head & Neck Surgery Volume 139 ; 2013 ; >
-    au < finished ; frozen ; 2014 ; JAMA Otolaryngology - Head & Neck Surgery Volume 140 ; 2014 ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2015 ; JAMA Otolaryngology - Head & Neck Surgery Volume 141 ; 2015 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; JAMA Otolaryngology - Head & Neck Surgery Volume 140 ; 2014 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2015 ; JAMA Otolaryngology - Head & Neck Surgery Volume 141 ; 2015 ; reingest4.clockss.org:8082 >
     au < superseded ; exists ; 2016 ; JAMA Otolaryngology - Head & Neck Surgery Volume 142 [superseded] ; 2016 ; >
     
   }
@@ -178,7 +178,7 @@
     au < frozen ; exists ; 2012 ; JAMA Pediatrics Volume 166 ; 2012 ; >
     au < frozen ; exists ; 2013 ; JAMA Pediatrics Volume 167 ; 2013 ; >
     au < finished ; frozen ; 2014 ; JAMA Pediatrics Volume 168 ; 2014 ; reingest3.clockss.org:8083 >
-    au < finished ; frozen ; 2015 ; JAMA Pediatrics Volume 169 ; 2015 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; JAMA Pediatrics Volume 169 ; 2015 ; reingest4.clockss.org:8082 >
     au < superseded ; exists ; 2016 ; JAMA Pediatrics Volume 170 [superseded] ; 2016 ; >
     
   }
@@ -198,7 +198,7 @@
     au < frozen ; exists ; 2012 ; JAMA Psychiatry Volume 69 ; 2012 ; >
     au < frozen ; exists ; 2013 ; JAMA Psychiatry Volume 70 ; 2013 ; >
     au < finished ; finished ; 2014 ; JAMA Psychiatry Volume 71 ; 2014 ; reingest4.clockss.org:8082 >
-    au < finished ; frozen ; 2015 ; JAMA Psychiatry Volume 72 ; 2015 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; JAMA Psychiatry Volume 72 ; 2015 ; reingest1.clockss.org:8082 >
     au < superseded ; exists ; 2016 ; JAMA Psychiatry Volume 73 [superseded] ; 2016 ; >
   
   }
@@ -216,8 +216,8 @@
     param[resource_id] = 76
     
     au < superseded ; exists ; 2013 ; JAMA Surgery Volume 148 [superseded] ; 2013 ; >
-    au < finished ; frozen ; 2014 ; JAMA Surgery Volume 149 ; 2014 ; reingest4.clockss.org:8082 >
-    au < finished ; frozen ; 2015 ; JAMA Surgery Volume 150 ; 2015 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; JAMA Surgery Volume 149 ; 2014 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; JAMA Surgery Volume 150 ; 2015 ; reingest1.clockss.org:8082 >
     au < superseded ; exists ; 2016 ; JAMA Surgery Volume 151 [superseded] ; 2016 ; >
   
   }

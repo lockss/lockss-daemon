@@ -34,7 +34,7 @@
     au < finished ; crawling ; 2016 ; 2016 ; Advances in Clinical and Experimental Medicine Volume 25 ; 25 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; 2017 ; Advances in Clinical and Experimental Medicine Volume 26 ; 26 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Advances in Clinical and Experimental Medicine Volume 27 ; 27 ;  >
-    au < crawling ; exists ; 2019 ; 2019 ; Advances in Clinical and Experimental Medicine Volume 28 ; 28 ;  >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Advances in Clinical and Experimental Medicine Volume 28 ; 28 ;  >
     au < expected ; exists ; 2020 ; 2020 ; Advances in Clinical and Experimental Medicine Volume 29 ; 29 ;  >
 
   }
@@ -84,7 +84,7 @@
     au < finished ; crawling ; 2016 ; 2016 ; Polymers in Medicine Volume 46 ; 46 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2017 ; 2017 ; Polymers in Medicine Volume 47 ; 47 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2018 ; 2018 ; Polymers in Medicine Volume 48 ; 48 ;  >
-    au < crawling ; exists ; 2019 ; 2019 ; Polymers in Medicine Volume 49 ; 49 ;  >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Polymers in Medicine Volume 49 ; 49 ;  >
     au < expected ; exists ; 2020 ; 2020 ; Polymers in Medicine Volume 50 ; 50 ;  >
 
   }

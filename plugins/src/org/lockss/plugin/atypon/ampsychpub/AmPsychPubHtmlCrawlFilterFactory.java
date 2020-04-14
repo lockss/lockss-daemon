@@ -68,6 +68,13 @@ public class AmPsychPubHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterF
       // never want these links, excluded lists was too long
       HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/servlet/linkout[?](suffix|type)="),
       HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/author/"),
+
+      // Need to filter out the right side, like related article, metric and references, all those will cause over crawl
+      // https://neuro.psychiatryonline.org/doi/10.1176/appi.neuropsych.15090221
+      HtmlNodeFilters.tagWithAttribute("div", "id", "trendmd-suggestions"),
+      HtmlNodeFilters.tagWithAttribute("section", "class", "article__metrics"),
+      HtmlNodeFilters.tagWithAttribute("div", "class", "border-bottom"),
+      HtmlNodeFilters.tagWithAttribute("div", "class", "body-references"),
       
       // Avoid following links in a Related Articles section
       // Some links are only differentiated by the title <h1 class="widget-header header-regular ">Related Articles</h1>

@@ -75,7 +75,7 @@ public class IopBookOnix3XmlMetadataExtractorFactory extends SourceXmlMetadataEx
 
             log.debug3("Fei: in IopBook getFilenamesAssociatedWithRecord");
 
-            String filenameValue = oneAM.getRaw(Onix3BooksSchemaHelper.ONIX_Record_Reference);
+            String filenameValue = oneAM.getRaw(Onix3BooksSchemaHelper.ONIX_RR);
             String cuBase = FilenameUtils.getFullPath(cu.getUrl());
 
             if (filenameValue != null) {

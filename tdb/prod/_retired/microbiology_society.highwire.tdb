@@ -1,0 +1,530 @@
+{
+  publisher <
+    name = Microbiology Society [PENDING] ;
+    info[tester] = 5 ;
+    info[down] = pending
+  >
+  
+  # Formerly: Society for General Microbiology
+  comment[platform] = Pub2Web
+  #base_url change to https://www.microbiologyresearch.org
+
+  {
+  
+    title <
+      name = International Bulletin of Bacterial Nomenclature and Taxonomy ;
+      issn = 0096-266X ;
+      issnl = 0096-266X
+     >
+     
+      comment[continued_by] = International Journal of Systematic Bacteriology 0020-7713
+
+    {
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://ijs.sgmjournals.org/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < down ; 1951 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 1 ; 1 >
+      au < down ; 1952 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 2 ; 2 >
+      au < down ; 1953 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 3 ; 3 >
+      au < down ; 1954 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 4 ; 4 >
+      au < down ; 1955 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 5 ; 5 >
+      au < down ; 1956 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 6 ; 6 >
+      au < down ; 1957 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 7 ; 7 >
+      au < down ; 1958 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 8 ; 8 >
+      au < down ; 1959 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 9 ; 9 >
+      au < down ; 1960 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 10 ; 10 >
+      au < down ; 1961 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 11 ; 11 >
+      au < down ; 1962 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 12 ; 12 >
+      au < down ; 1963 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 13 ; 13 >
+      au < down ; 1964 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 14 ; 14 >
+      au < down ; 1965 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 15 ; 15 >
+    }
+
+  }
+
+  {
+  
+    title <
+      name = International Journal of Systematic Bacteriology ;
+      issn = 0020-7713 ;
+      issnl = 0020-7713
+      >
+      
+      comment[continues] = International Bulletin of Bacterial Nomenclature and Taxonomy 0096-266X
+      comment[continued_by] = International Journal of Systematic and Evolutionary Bacteriology 1466-5026
+      
+    {  
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://ijs.sgmjournals.org/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < down ; 1966 ; International Journal of Systematic Bacteriology Volume 16 ; 16 >
+      au < down ; 1967 ; International Journal of Systematic Bacteriology Volume 17 ; 17 >
+      au < down ; 1968 ; International Journal of Systematic Bacteriology Volume 18 ; 18 >
+      au < down ; 1969 ; International Journal of Systematic Bacteriology Volume 19 ; 19 >
+      au < down ; 1970 ; International Journal of Systematic Bacteriology Volume 20 ; 20 >
+      au < down ; 1971 ; International Journal of Systematic Bacteriology Volume 21 ; 21 >
+      au < down ; 1972 ; International Journal of Systematic Bacteriology Volume 22 ; 22 >
+      au < down ; 1973 ; International Journal of Systematic Bacteriology Volume 23 ; 23 >
+      au < down ; 1974 ; International Journal of Systematic Bacteriology Volume 24 ; 24 >
+      au < down ; 1975 ; International Journal of Systematic Bacteriology Volume 25 ; 25 >
+      au < down ; 1976 ; International Journal of Systematic Bacteriology Volume 26 ; 26 >
+      au < down ; 1977 ; International Journal of Systematic Bacteriology Volume 27 ; 27 >
+      au < down ; 1978 ; International Journal of Systematic Bacteriology Volume 28 ; 28 >
+      au < down ; 1979 ; International Journal of Systematic Bacteriology Volume 29 ; 29 >
+      au < down ; 1980 ; International Journal of Systematic Bacteriology Volume 30 ; 30 >
+      au < down ; 1981 ; International Journal of Systematic Bacteriology Volume 31 ; 31 >
+      au < down ; 1982 ; International Journal of Systematic Bacteriology Volume 32 ; 32 >
+      au < down ; 1983 ; International Journal of Systematic Bacteriology Volume 33 ; 33 >
+      au < down ; 1984 ; International Journal of Systematic Bacteriology Volume 34 ; 34 >
+      au < down ; 1985 ; International Journal of Systematic Bacteriology Volume 35 ; 35 >
+      au < down ; 1986 ; International Journal of Systematic Bacteriology Volume 36 ; 36 >
+      au < down ; 1987 ; International Journal of Systematic Bacteriology Volume 37 ; 37 >
+      au < down ; 1988 ; International Journal of Systematic Bacteriology Volume 38 ; 38 >
+      au < down ; 1989 ; International Journal of Systematic Bacteriology Volume 39 ; 39 >
+      au < down ; 1990 ; International Journal of Systematic Bacteriology Volume 40 ; 40 >
+      au < down ; 1991 ; International Journal of Systematic Bacteriology Volume 41 ; 41 >
+      au < down ; 1992 ; International Journal of Systematic Bacteriology Volume 42 ; 42 >
+      au < down ; 1993 ; International Journal of Systematic Bacteriology Volume 43 ; 43 >
+      au < down ; 1994 ; International Journal of Systematic Bacteriology Volume 44 ; 44 >
+      au < down ; 1995 ; International Journal of Systematic Bacteriology Volume 45 ; 45 >
+      au < down ; 1996 ; International Journal of Systematic Bacteriology Volume 46 ; 46 >
+      au < down ; 1997 ; International Journal of Systematic Bacteriology Volume 47 ; 47 >
+      au < down ; 1998 ; International Journal of Systematic Bacteriology Volume 48 ; 48 >
+      au < down ; 1999 ; International Journal of Systematic Bacteriology Volume 49 ; 49 >
+    }
+
+  }
+   
+  {
+    title <
+      name = International Journal of Systematic and Evolutionary Microbiology ;
+      issn = 1466-5026 ;
+      eissn = 1466-5034 ;
+      issnl = 1466-5026
+    >
+
+      comment[continues] = International Journal of Systematic Bacteriology 0020-7713
+
+    {
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://ijs.sgmjournals.org/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < down ; 2000 ; International Journal of Systematic and Evolutionary Microbiology Volume 50 ; 50 >
+      au < down ; 2001 ; International Journal of Systematic and Evolutionary Microbiology Volume 51 ; 51 >
+      au < down ; 2002 ; International Journal of Systematic and Evolutionary Microbiology Volume 52 ; 52 >
+      au < down ; 2003 ; International Journal of Systematic and Evolutionary Microbiology Volume 53 ; 53 >
+      au < down ; 2004 ; International Journal of Systematic and Evolutionary Microbiology Volume 54 ; 54 >
+      au < down ; 2005 ; International Journal of Systematic and Evolutionary Microbiology Volume 55 ; 55 >
+      au < down ; 2006 ; International Journal of Systematic and Evolutionary Microbiology Volume 56 ; 56 >
+      au < down ; 2007 ; International Journal of Systematic and Evolutionary Microbiology Volume 57 ; 57 >
+      au < down ; 2008 ; International Journal of Systematic and Evolutionary Microbiology Volume 58 ; 58 >
+      au < down ; 2009 ; International Journal of Systematic and Evolutionary Microbiology Volume 59 ; 59 >
+      au < down ; 2010 ; International Journal of Systematic and Evolutionary Microbiology Volume 60 ; 60 >
+      au < down ; 2011 ; International Journal of Systematic and Evolutionary Microbiology Volume 61 ; 61 >
+      au < down ; 2012 ; International Journal of Systematic and Evolutionary Microbiology Volume 62 ; 62 >
+      au < doNotProcess ; 2013 ; International Journal of Systematic and Evolutionary Microbiology Volume 63 ; 63 >
+      au < doNotProcess ; 2014 ; International Journal of Systematic and Evolutionary Microbiology Volume 64 ; 64 >
+      au < doNotProcess ; 2015 ; International Journal of Systematic and Evolutionary Microbiology Volume 65 ; 65 >
+    }
+    
+  }
+
+  {
+    title <
+      name = Journal of General Microbiology ;
+      issn = 0022-1287 ;
+      issnl = 0022-1287
+    >
+
+      comment[continued_by] = Microbiology 1350-0872 as of Jan 1994
+
+    {
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://mic.sgmjournals.org/
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+      au < HighWirePressH20Plugin ; down ; 1947 ; Journal of General Microbiology Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; down ; 1948 ; Journal of General Microbiology Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; down ; 1949 ; Journal of General Microbiology Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; down ; 1950 ; Journal of General Microbiology Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; down ; 1951 ; Journal of General Microbiology Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; down ; 1952 ; Journal of General Microbiology Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; down ; 1952 ; Journal of General Microbiology Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; down ; 1953 ; Journal of General Microbiology Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; down ; 1953 ; Journal of General Microbiology Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; down ; 1954 ; Journal of General Microbiology Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; down ; 1954 ; Journal of General Microbiology Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; down ; 1955 ; Journal of General Microbiology Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; down ; 1955 ; Journal of General Microbiology Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; down ; 1956 ; Journal of General Microbiology Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; down ; 1956 ; Journal of General Microbiology Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; down ; 1957 ; Journal of General Microbiology Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; down ; 1957 ; Journal of General Microbiology Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; down ; 1958 ; Journal of General Microbiology Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; down ; 1958 ; Journal of General Microbiology Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; down ; 1959 ; Journal of General Microbiology Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; down ; 1959 ; Journal of General Microbiology Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; down ; 1960 ; Journal of General Microbiology Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; down ; 1960 ; Journal of General Microbiology Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; down ; 1961 ; Journal of General Microbiology Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; down ; 1961 ; Journal of General Microbiology Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; down ; 1961 ; Journal of General Microbiology Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; down ; 1962 ; Journal of General Microbiology Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; down ; 1962 ; Journal of General Microbiology Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; down ; 1962 ; Journal of General Microbiology Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; down ; 1963 ; Journal of General Microbiology Volume 30 ; 30 >
+      au < HighWirePressH20Plugin ; down ; 1963 ; Journal of General Microbiology Volume 31 ; 31 >
+      au < HighWirePressH20Plugin ; down ; 1963 ; Journal of General Microbiology Volume 32 ; 32 >
+      au < HighWirePressH20Plugin ; down ; 1963 ; Journal of General Microbiology Volume 33 ; 33 >
+      au < HighWirePressH20Plugin ; down ; 1964 ; Journal of General Microbiology Volume 34 ; 34 >
+      au < HighWirePressH20Plugin ; down ; 1964 ; Journal of General Microbiology Volume 35 ; 35 >
+      au < HighWirePressH20Plugin ; down ; 1964 ; Journal of General Microbiology Volume 36 ; 36 >
+      au < HighWirePressH20Plugin ; down ; 1964 ; Journal of General Microbiology Volume 37 ; 37 >
+      au < HighWirePressH20Plugin ; down ; 1965 ; Journal of General Microbiology Volume 38 ; 38 >
+      au < HighWirePressH20Plugin ; down ; 1965 ; Journal of General Microbiology Volume 39 ; 39 >
+      au < HighWirePressH20Plugin ; down ; 1965 ; Journal of General Microbiology Volume 40 ; 40 >
+      au < HighWirePressH20Plugin ; down ; 1965 ; Journal of General Microbiology Volume 41 ; 41 >
+      au < HighWirePressH20Plugin ; down ; 1966 ; Journal of General Microbiology Volume 42 ; 42 >
+      au < HighWirePressH20Plugin ; down ; 1966 ; Journal of General Microbiology Volume 43 ; 43 >
+      au < HighWirePressH20Plugin ; down ; 1966 ; Journal of General Microbiology Volume 44 ; 44 >
+      au < HighWirePressH20Plugin ; down ; 1966 ; Journal of General Microbiology Volume 45 ; 45 >
+      au < HighWirePressH20Plugin ; down ; 1967 ; Journal of General Microbiology Volume 46 ; 46 >
+      au < HighWirePressH20Plugin ; down ; 1967 ; Journal of General Microbiology Volume 47 ; 47 >
+      au < HighWirePressH20Plugin ; down ; 1967 ; Journal of General Microbiology Volume 48 ; 48 >
+      au < HighWirePressH20Plugin ; down ; 1967 ; Journal of General Microbiology Volume 49 ; 49 >
+      au < HighWirePressH20Plugin ; down ; 1968 ; Journal of General Microbiology Volume 50 ; 50 >
+      au < HighWirePressH20Plugin ; down ; 1968 ; Journal of General Microbiology Volume 51 ; 51 >
+      au < HighWirePressH20Plugin ; down ; 1968 ; Journal of General Microbiology Volume 52 ; 52 >
+      au < HighWirePressH20Plugin ; down ; 1968 ; Journal of General Microbiology Volume 53 ; 53 >
+      au < HighWirePressH20Plugin ; down ; 1968 ; Journal of General Microbiology Volume 54 ; 54 >
+      au < HighWirePressH20Plugin ; down ; 1969 ; Journal of General Microbiology Volume 55 ; 55 >
+      au < HighWirePressH20Plugin ; down ; 1969 ; Journal of General Microbiology Volume 56 ; 56 >
+      au < HighWirePressH20Plugin ; down ; 1969 ; Journal of General Microbiology Volume 57 ; 57 >
+      au < HighWirePressH20Plugin ; down ; 1969 ; Journal of General Microbiology Volume 58 ; 58 >
+      au < HighWirePressH20Plugin ; down ; 1969 ; Journal of General Microbiology Volume 59 ; 59 >
+      au < HighWirePressH20Plugin ; down ; 1970 ; Journal of General Microbiology Volume 60 ; 60 >
+      au < HighWirePressH20Plugin ; down ; 1970 ; Journal of General Microbiology Volume 61 ; 61 >
+      au < HighWirePressH20Plugin ; down ; 1970 ; Journal of General Microbiology Volume 62 ; 62 >
+      au < HighWirePressH20Plugin ; down ; 1970 ; Journal of General Microbiology Volume 63 ; 63 >
+      au < HighWirePressH20Plugin ; down ; 1970 ; Journal of General Microbiology Volume 64 ; 64 >
+      au < HighWirePressH20Plugin ; down ; 1971 ; Journal of General Microbiology Volume 65 ; 65 >
+      au < HighWirePressH20Plugin ; down ; 1971 ; Journal of General Microbiology Volume 66 ; 66 >
+      au < HighWirePressH20Plugin ; down ; 1971 ; Journal of General Microbiology Volume 67 ; 67 >
+      au < HighWirePressH20Plugin ; down ; 1971 ; Journal of General Microbiology Volume 68 ; 68 >
+      au < HighWirePressH20Plugin ; down ; 1971 ; Journal of General Microbiology Volume 69 ; 69 >
+      au < HighWirePressH20Plugin ; down ; 1972 ; Journal of General Microbiology Volume 70 ; 70 >
+      au < HighWirePressH20Plugin ; down ; 1972 ; Journal of General Microbiology Volume 71 ; 71 >
+      au < HighWirePressH20Plugin ; down ; 1972 ; Journal of General Microbiology Volume 72 ; 72 >
+      au < HighWirePressH20Plugin ; down ; 1972 ; Journal of General Microbiology Volume 73 ; 73 >
+      au < HighWirePressH20Plugin ; down ; 1973 ; Journal of General Microbiology Volume 74 ; 74 >
+      au < HighWirePressH20Plugin ; down ; 1973 ; Journal of General Microbiology Volume 75 ; 75 >
+      au < HighWirePressH20Plugin ; down ; 1973 ; Journal of General Microbiology Volume 76 ; 76 >
+      au < HighWirePressH20Plugin ; down ; 1973 ; Journal of General Microbiology Volume 77 ; 77 >
+      au < HighWirePressH20Plugin ; down ; 1973 ; Journal of General Microbiology Volume 78 ; 78 >
+      au < HighWirePressH20Plugin ; down ; 1973 ; Journal of General Microbiology Volume 79 ; 79 >
+      au < HighWirePressH20Plugin ; down ; 1974 ; Journal of General Microbiology Volume 80 ; 80 >
+      au < HighWirePressH20Plugin ; down ; 1974 ; Journal of General Microbiology Volume 81 ; 81 >
+      au < HighWirePressH20Plugin ; down ; 1974 ; Journal of General Microbiology Volume 82 ; 82 >
+      au < HighWirePressH20Plugin ; down ; 1974 ; Journal of General Microbiology Volume 83 ; 83 >
+      au < HighWirePressH20Plugin ; down ; 1974 ; Journal of General Microbiology Volume 84 ; 84 >
+      au < HighWirePressH20Plugin ; down ; 1974 ; Journal of General Microbiology Volume 85 ; 85 >
+      au < HighWirePressH20Plugin ; down ; 1975 ; Journal of General Microbiology Volume 86 ; 86 >
+      au < HighWirePressH20Plugin ; down ; 1975 ; Journal of General Microbiology Volume 87 ; 87 >
+      au < HighWirePressH20Plugin ; down ; 1975 ; Journal of General Microbiology Volume 88 ; 88 >
+      au < HighWirePressH20Plugin ; down ; 1975 ; Journal of General Microbiology Volume 89 ; 89 >
+      au < HighWirePressH20Plugin ; down ; 1975 ; Journal of General Microbiology Volume 90 ; 90 >
+      au < HighWirePressH20Plugin ; down ; 1975 ; Journal of General Microbiology Volume 91 ; 91 >
+      au < HighWirePressH20Plugin ; down ; 1976 ; Journal of General Microbiology Volume 92 ; 92 >
+      au < HighWirePressH20Plugin ; down ; 1976 ; Journal of General Microbiology Volume 93 ; 93 >
+      au < HighWirePressH20Plugin ; down ; 1976 ; Journal of General Microbiology Volume 94 ; 94 >
+      au < HighWirePressH20Plugin ; down ; 1976 ; Journal of General Microbiology Volume 95 ; 95 >
+      au < HighWirePressH20Plugin ; down ; 1976 ; Journal of General Microbiology Volume 96 ; 96 >
+      au < HighWirePressH20Plugin ; down ; 1976 ; Journal of General Microbiology Volume 97 ; 97 >
+      au < HighWirePressH20Plugin ; down ; 1977 ; Journal of General Microbiology Volume 98 ; 98 >
+      au < HighWirePressH20Plugin ; down ; 1977 ; Journal of General Microbiology Volume 99 ; 99 >
+      au < HighWirePressH20Plugin ; down ; 1977 ; Journal of General Microbiology Volume 100 ; 100 >
+      au < HighWirePressH20Plugin ; down ; 1977 ; Journal of General Microbiology Volume 101 ; 101 >
+      au < HighWirePressH20Plugin ; down ; 1977 ; Journal of General Microbiology Volume 102 ; 102 >
+      au < HighWirePressH20Plugin ; down ; 1977 ; Journal of General Microbiology Volume 103 ; 103 >
+      au < HighWirePressH20Plugin ; down ; 1978 ; Journal of General Microbiology Volume 104 ; 104 >
+      au < HighWirePressH20Plugin ; down ; 1978 ; Journal of General Microbiology Volume 105 ; 105 >
+      au < HighWirePressH20Plugin ; down ; 1978 ; Journal of General Microbiology Volume 106 ; 106 >
+      au < HighWirePressH20Plugin ; down ; 1978 ; Journal of General Microbiology Volume 107 ; 107 >
+      au < HighWirePressH20Plugin ; down ; 1978 ; Journal of General Microbiology Volume 108 ; 108 >
+      au < HighWirePressH20Plugin ; down ; 1978 ; Journal of General Microbiology Volume 109 ; 109 >
+      au < HighWirePressH20Plugin ; down ; 1979 ; Journal of General Microbiology Volume 110 ; 110 >
+      au < HighWirePressH20Plugin ; down ; 1979 ; Journal of General Microbiology Volume 111 ; 111 >
+      au < HighWirePressH20Plugin ; down ; 1979 ; Journal of General Microbiology Volume 112 ; 112 >
+      au < HighWirePressH20Plugin ; down ; 1979 ; Journal of General Microbiology Volume 113 ; 113 >
+      au < HighWirePressH20Plugin ; down ; 1979 ; Journal of General Microbiology Volume 114 ; 114 >
+      au < HighWirePressH20Plugin ; down ; 1979 ; Journal of General Microbiology Volume 115 ; 115 >
+      au < HighWirePressH20Plugin ; down ; 1980 ; Journal of General Microbiology Volume 116 ; 116 >
+      au < HighWirePressH20Plugin ; down ; 1980 ; Journal of General Microbiology Volume 117 ; 117 >
+      au < HighWirePressH20Plugin ; down ; 1980 ; Journal of General Microbiology Volume 118 ; 118 >
+      au < HighWirePressH20Plugin ; down ; 1980 ; Journal of General Microbiology Volume 119 ; 119 >
+      au < HighWirePressH20Plugin ; down ; 1980 ; Journal of General Microbiology Volume 120 ; 120 >
+      au < HighWirePressH20Plugin ; down ; 1980 ; Journal of General Microbiology Volume 121 ; 121 >
+      au < HighWirePressH20Plugin ; down ; 1981 ; Journal of General Microbiology Volume 122 ; 122 >
+      au < HighWirePressH20Plugin ; down ; 1981 ; Journal of General Microbiology Volume 123 ; 123 >
+      au < HighWirePressH20Plugin ; down ; 1981 ; Journal of General Microbiology Volume 124 ; 124 >
+      au < HighWirePressH20Plugin ; down ; 1981 ; Journal of General Microbiology Volume 125 ; 125 >
+      au < HighWirePressH20Plugin ; down ; 1981 ; Journal of General Microbiology Volume 126 ; 126 >
+      au < HighWirePressH20Plugin ; down ; 1981 ; Journal of General Microbiology Volume 127 ; 127 >
+      au < HighWirePressH20Plugin ; down ; 1982 ; Journal of General Microbiology Volume 128 ; 128 >
+      au < HighWirePressH20Plugin ; down ; 1983 ; Journal of General Microbiology Volume 129 ; 129 >
+      au < HighWirePressH20Plugin ; down ; 1984 ; Journal of General Microbiology Volume 130 ; 130 >
+      au < HighWirePressH20Plugin ; down ; 1985 ; Journal of General Microbiology Volume 131 ; 131 >
+      au < HighWirePressH20Plugin ; down ; 1986 ; Journal of General Microbiology Volume 132 ; 132 >
+      au < HighWirePressH20Plugin ; down ; 1987 ; Journal of General Microbiology Volume 133 ; 133 >
+      au < HighWirePressH20Plugin ; down ; 1988 ; Journal of General Microbiology Volume 134 ; 134 >
+      au < HighWirePressH20Plugin ; down ; 1989 ; Journal of General Microbiology Volume 135 ; 135 >
+      au < HighWirePressH20Plugin ; down ; 1990 ; Journal of General Microbiology Volume 136 ; 136 >
+      au < HighWirePressH20Plugin ; down ; 1991 ; Journal of General Microbiology Volume 137 ; 137 >
+      au < HighWirePressH20Plugin ; down ; 1992 ; Journal of General Microbiology Volume 138 ; 138 >
+      au < HighWirePressH20Plugin ; down ; 1993 ; Journal of General Microbiology Volume 139 ; 139 >
+    }
+
+  }
+
+  {
+    title <
+      name = Journal of General Virology ;
+      issn = 0022-1317 ;
+      eissn = 1465-2099 ;
+      issnl = 0022-1317
+    >
+
+    {
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://vir.sgmjournals.org/
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+      au < HighWirePressH20Plugin ; down ; 1967 ; Journal of General Virology Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; down ; 1968 ; Journal of General Virology Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; down ; 1968 ; Journal of General Virology Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; down ; 1969 ; Journal of General Virology Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; down ; 1969 ; Journal of General Virology Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; down ; 1970 ; Journal of General Virology Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; down ; 1970 ; Journal of General Virology Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; down ; 1970 ; Journal of General Virology Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; down ; 1970 ; Journal of General Virology Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; down ; 1971 ; Journal of General Virology Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; down ; 1971 ; Journal of General Virology Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; down ; 1971 ; Journal of General Virology Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; down ; 1971 ; Journal of General Virology Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; down ; 1972 ; Journal of General Virology Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; down ; 1972 ; Journal of General Virology Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; down ; 1972 ; Journal of General Virology Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; down ; 1972 ; Journal of General Virology Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; down ; 1973 ; Journal of General Virology Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; down ; 1973 ; Journal of General Virology Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; down ; 1973 ; Journal of General Virology Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; down ; 1973 ; Journal of General Virology Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; down ; 1974 ; Journal of General Virology Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; down ; 1974 ; Journal of General Virology Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; down ; 1974 ; Journal of General Virology Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; down ; 1974 ; Journal of General Virology Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; down ; 1975 ; Journal of General Virology Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; down ; 1975 ; Journal of General Virology Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; down ; 1975 ; Journal of General Virology Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; down ; 1975 ; Journal of General Virology Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; down ; 1976 ; Journal of General Virology Volume 30 ; 30 >
+      au < HighWirePressH20Plugin ; down ; 1976 ; Journal of General Virology Volume 31 ; 31 >
+      au < HighWirePressH20Plugin ; down ; 1976 ; Journal of General Virology Volume 32 ; 32 >
+      au < HighWirePressH20Plugin ; down ; 1976 ; Journal of General Virology Volume 33 ; 33 >
+      au < HighWirePressH20Plugin ; down ; 1977 ; Journal of General Virology Volume 34 ; 34 >
+      au < HighWirePressH20Plugin ; down ; 1977 ; Journal of General Virology Volume 35 ; 35 >
+      au < HighWirePressH20Plugin ; down ; 1977 ; Journal of General Virology Volume 36 ; 36 >
+      au < HighWirePressH20Plugin ; down ; 1977 ; Journal of General Virology Volume 37 ; 37 >
+      au < HighWirePressH20Plugin ; down ; 1978 ; Journal of General Virology Volume 38 ; 38 >
+      au < HighWirePressH20Plugin ; down ; 1978 ; Journal of General Virology Volume 39 ; 39 >
+      au < HighWirePressH20Plugin ; down ; 1978 ; Journal of General Virology Volume 40 ; 40 >
+      au < HighWirePressH20Plugin ; down ; 1978 ; Journal of General Virology Volume 41 ; 41 >
+      au < HighWirePressH20Plugin ; down ; 1979 ; Journal of General Virology Volume 42 ; 42 >
+      au < HighWirePressH20Plugin ; down ; 1979 ; Journal of General Virology Volume 43 ; 43 >
+      au < HighWirePressH20Plugin ; down ; 1979 ; Journal of General Virology Volume 44 ; 44 >
+      au < HighWirePressH20Plugin ; down ; 1979 ; Journal of General Virology Volume 45 ; 45 >
+      au < HighWirePressH20Plugin ; down ; 1980 ; Journal of General Virology Volume 46 ; 46 >
+      au < HighWirePressH20Plugin ; down ; 1980 ; Journal of General Virology Volume 47 ; 47 >
+      au < HighWirePressH20Plugin ; down ; 1980 ; Journal of General Virology Volume 48 ; 48 >
+      au < HighWirePressH20Plugin ; down ; 1980 ; Journal of General Virology Volume 49 ; 49 >
+      au < HighWirePressH20Plugin ; down ; 1980 ; Journal of General Virology Volume 50 ; 50 >
+      au < HighWirePressH20Plugin ; down ; 1980 ; Journal of General Virology Volume 51 ; 51 >
+      au < HighWirePressH20Plugin ; down ; 1981 ; Journal of General Virology Volume 52 ; 52 >
+      au < HighWirePressH20Plugin ; down ; 1981 ; Journal of General Virology Volume 53 ; 53 >
+      au < HighWirePressH20Plugin ; down ; 1981 ; Journal of General Virology Volume 54 ; 54 >
+      au < HighWirePressH20Plugin ; down ; 1981 ; Journal of General Virology Volume 55 ; 55 >
+      au < HighWirePressH20Plugin ; down ; 1981 ; Journal of General Virology Volume 56 ; 56 >
+      au < HighWirePressH20Plugin ; down ; 1981 ; Journal of General Virology Volume 57 ; 57 >
+      au < HighWirePressH20Plugin ; down ; 1982 ; Journal of General Virology Volume 58 ; 58 >
+      au < HighWirePressH20Plugin ; down ; 1982 ; Journal of General Virology Volume 59 ; 59 >
+      au < HighWirePressH20Plugin ; down ; 1982 ; Journal of General Virology Volume 60 ; 60 >
+      au < HighWirePressH20Plugin ; down ; 1982 ; Journal of General Virology Volume 61 ; 61 >
+      au < HighWirePressH20Plugin ; down ; 1982 ; Journal of General Virology Volume 62 ; 62 >
+      au < HighWirePressH20Plugin ; down ; 1982 ; Journal of General Virology Volume 63 ; 63 >
+      au < HighWirePressH20Plugin ; down ; 1983 ; Journal of General Virology Volume 64 ; 64 >
+      au < HighWirePressH20Plugin ; down ; 1984 ; Journal of General Virology Volume 65 ; 65 >
+      au < HighWirePressH20Plugin ; down ; 1985 ; Journal of General Virology Volume 66 ; 66 >
+      au < HighWirePressH20Plugin ; down ; 1986 ; Journal of General Virology Volume 67 ; 67 >
+      au < HighWirePressH20Plugin ; down ; 1987 ; Journal of General Virology Volume 68 ; 68 >
+      au < HighWirePressH20Plugin ; down ; 1988 ; Journal of General Virology Volume 69 ; 69 >
+      au < HighWirePressH20Plugin ; down ; 1989 ; Journal of General Virology Volume 70 ; 70 >
+      au < HighWirePressH20Plugin ; down ; 1990 ; Journal of General Virology Volume 71 ; 71 >
+      au < HighWirePressH20Plugin ; down ; 1991 ; Journal of General Virology Volume 72 ; 72 >
+      au < HighWirePressH20Plugin ; down ; 1992 ; Journal of General Virology Volume 73 ; 73 >
+      au < HighWirePressH20Plugin ; down ; 1993 ; Journal of General Virology Volume 74 ; 74 >
+      au < HighWirePressH20Plugin ; down ; 1994 ; Journal of General Virology Volume 75 ; 75 >
+      au < HighWirePressH20Plugin ; down ; 1995 ; Journal of General Virology Volume 76 ; 76 >
+      au < HighWirePressH20Plugin ; down ; 1996 ; Journal of General Virology Volume 77 ; 77 >
+      au < HighWirePressH20Plugin ; down ; 1997 ; Journal of General Virology Volume 78 ; 78 >
+      au < HighWirePressH20Plugin ; down ; 1998 ; Journal of General Virology Volume 79 ; 79 >
+      au < HighWirePressH20Plugin ; down ; 1999 ; Journal of General Virology Volume 80 ; 80 >
+      au < HighWirePressH20Plugin ; down ; 2000 ; Journal of General Virology Volume 81 ; 81 >
+      au < HighWirePressH20Plugin ; down ; 2001 ; Journal of General Virology Volume 82 ; 82 >
+      au < HighWirePressH20Plugin ; down ; 2002 ; Journal of General Virology Volume 83 ; 83 >
+      au < HighWirePressH20Plugin ; down ; 2003 ; Journal of General Virology Volume 84 ; 84 >
+      au < HighWirePressH20Plugin ; down ; 2004 ; Journal of General Virology Volume 85 ; 85 >
+      au < HighWireStrVolPlugin ; down ; 2005 ; Journal of General Virology Volume 86 ; 86 >
+      au < HighWireStrVolPlugin ; down ; 2006 ; Journal of General Virology Volume 87 ; 87 >
+      au < HighWirePressH20Plugin ; down ; 2007 ; Journal of General Virology Volume 88 ; 88 >
+      au < HighWirePressH20Plugin ; down ; 2008 ; Journal of General Virology Volume 89 ; 89 >
+      au < HighWirePressH20Plugin ; down ; 2009 ; Journal of General Virology Volume 90 ; 90 >
+      au < HighWirePressH20Plugin ; down ; 2010 ; Journal of General Virology Volume 91 ; 91 >
+      au < HighWirePressH20Plugin ; down ; 2011 ; Journal of General Virology Volume 92 ; 92 >
+      au < HighWirePressH20Plugin ; down ; 2012 ; Journal of General Virology Volume 93 ; 93 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; Journal of General Virology Volume 94 ; 94 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; Journal of General Virology Volume 95 ; 95 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Journal of General Virology Volume 96 ; 96 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Journal of Medical Microbiology ;
+      issn = 0022-2615 ;
+      eissn = 1473-5644 ;
+      issnl = 0022-2615
+    >
+
+    {
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://jmm.sgmjournals.org/
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+      au < HighWirePressH20Plugin ; down ; 1968 ; Journal of Medical Microbiology Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; down ; 1969 ; Journal of Medical Microbiology Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; down ; 1970 ; Journal of Medical Microbiology Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; down ; 1971 ; Journal of Medical Microbiology Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; down ; 1972 ; Journal of Medical Microbiology Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; down ; 1973 ; Journal of Medical Microbiology Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; down ; 1974 ; Journal of Medical Microbiology Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; down ; 1975 ; Journal of Medical Microbiology Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; down ; 1976 ; Journal of Medical Microbiology Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; down ; 1977 ; Journal of Medical Microbiology Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; down ; 1978 ; Journal of Medical Microbiology Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; down ; 1979 ; Journal of Medical Microbiology Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; down ; 1980 ; Journal of Medical Microbiology Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; down ; 1981 ; Journal of Medical Microbiology Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; down ; 1982 ; Journal of Medical Microbiology Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; down ; 1983 ; Journal of Medical Microbiology Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; down ; 1984 ; Journal of Medical Microbiology Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; down ; 1984 ; Journal of Medical Microbiology Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; down ; 1985 ; Journal of Medical Microbiology Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; down ; 1985 ; Journal of Medical Microbiology Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; down ; 1986 ; Journal of Medical Microbiology Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; down ; 1986 ; Journal of Medical Microbiology Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; down ; 1987 ; Journal of Medical Microbiology Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; down ; 1987 ; Journal of Medical Microbiology Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; down ; 1988 ; Journal of Medical Microbiology Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; down ; 1988 ; Journal of Medical Microbiology Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; down ; 1988 ; Journal of Medical Microbiology Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; down ; 1989 ; Journal of Medical Microbiology Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; down ; 1989 ; Journal of Medical Microbiology Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; down ; 1989 ; Journal of Medical Microbiology Volume 30 ; 30 >
+      au < HighWirePressH20Plugin ; down ; 1990 ; Journal of Medical Microbiology Volume 31 ; 31 >
+      au < HighWirePressH20Plugin ; down ; 1990 ; Journal of Medical Microbiology Volume 32 ; 32 >
+      au < HighWirePressH20Plugin ; down ; 1990 ; Journal of Medical Microbiology Volume 33 ; 33 >
+      au < HighWirePressH20Plugin ; down ; 1991 ; Journal of Medical Microbiology Volume 34 ; 34 >
+      au < HighWirePressH20Plugin ; down ; 1991 ; Journal of Medical Microbiology Volume 35 ; 35 >
+      au < HighWirePressH20Plugin ; down ; 1992 ; Journal of Medical Microbiology Volume 36 ; 36 >
+      au < HighWirePressH20Plugin ; down ; 1992 ; Journal of Medical Microbiology Volume 37 ; 37 >
+      au < HighWirePressH20Plugin ; down ; 1993 ; Journal of Medical Microbiology Volume 38 ; 38 >
+      au < HighWirePressH20Plugin ; down ; 1993 ; Journal of Medical Microbiology Volume 39 ; 39 >
+      au < HighWirePressH20Plugin ; down ; 1994 ; Journal of Medical Microbiology Volume 40 ; 40 >
+      au < HighWirePressH20Plugin ; down ; 1994 ; Journal of Medical Microbiology Volume 41 ; 41 >
+      au < HighWirePressH20Plugin ; down ; 1995 ; Journal of Medical Microbiology Volume 42 ; 42 >
+      au < HighWirePressH20Plugin ; down ; 1995 ; Journal of Medical Microbiology Volume 43 ; 43 >
+      au < HighWirePressH20Plugin ; down ; 1996 ; Journal of Medical Microbiology Volume 44 ; 44 >
+      au < HighWirePressH20Plugin ; down ; 1996 ; Journal of Medical Microbiology Volume 45 ; 45 >
+      au < HighWirePressH20Plugin ; down ; 1997 ; Journal of Medical Microbiology Volume 46 ; 46 >
+      au < HighWirePressH20Plugin ; down ; 1998 ; Journal of Medical Microbiology Volume 47 ; 47 >
+      au < HighWirePressH20Plugin ; down ; 1999 ; Journal of Medical Microbiology Volume 48 ; 48 >
+      au < HighWirePressH20Plugin ; down ; 2000 ; Journal of Medical Microbiology Volume 49 ; 49 >
+      au < HighWirePressH20Plugin ; down ; 2001 ; Journal of Medical Microbiology Volume 50 ; 50 >
+      au < HighWirePressH20Plugin ; down ; 2002 ; Journal of Medical Microbiology Volume 51 ; 51 >
+      au < HighWirePressH20Plugin ; down ; 2003 ; Journal of Medical Microbiology Volume 52 ; 52 >
+      au < HighWirePressH20Plugin ; down ; 2004 ; Journal of Medical Microbiology Volume 53 ; 53 >
+      au < HighWireStrVolPlugin ; down ; 2005 ; Journal of Medical Microbiology Volume 54 ; 54 >
+      au < HighWireStrVolPlugin ; down ; 2006 ; Journal of Medical Microbiology Volume 55 ; 55 >
+      au < HighWirePressH20Plugin ; down ; 2007 ; Journal of Medical Microbiology Volume 56 ; 56 >
+      au < HighWirePressH20Plugin ; down ; 2008 ; Journal of Medical Microbiology Volume 57 ; 57 >
+      au < HighWirePressH20Plugin ; down ; 2009 ; Journal of Medical Microbiology Volume 58 ; 58 >
+      au < HighWirePressH20Plugin ; down ; 2010 ; Journal of Medical Microbiology Volume 59 ; 59 >
+      au < HighWirePressH20Plugin ; down ; 2011 ; Journal of Medical Microbiology Volume 60 ; 60 >
+      au < HighWirePressH20Plugin ; down ; 2012 ; Journal of Medical Microbiology Volume 61 ; 61 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; Journal of Medical Microbiology Volume 62 ; 62 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; Journal of Medical Microbiology Volume 63 ; 63 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Journal of Medical Microbiology Volume 64 ; 64 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Microbiology ;
+      issn = 1350-0872 ;
+      eissn = 1465-2080 ;
+      issnl = 1350-0872
+    >
+
+      comment[continues] = Journal of General Microbiology 0022-1287 as of Jan 1994
+
+    {
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://mic.sgmjournals.org/
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+      au < HighWirePressH20Plugin ; down ; 1994 ; Microbiology Volume 140 ; 140 >
+      au < HighWirePressH20Plugin ; down ; 1995 ; Microbiology Volume 141 ; 141 >
+      au < HighWirePressH20Plugin ; down ; 1996 ; Microbiology Volume 142 ; 142 >
+      au < HighWirePressH20Plugin ; down ; 1997 ; Microbiology Volume 143 ; 143 >
+      au < HighWirePressH20Plugin ; down ; 1998 ; Microbiology Volume 144 ; 144 >
+      au < HighWirePressH20Plugin ; down ; 1999 ; Microbiology Volume 145 ; 145 >
+      au < HighWirePressH20Plugin ; down ; 2000 ; Microbiology Volume 146 ; 146 >
+      au < HighWirePressH20Plugin ; down ; 2001 ; Microbiology Volume 147 ; 147 >
+      au < HighWirePressH20Plugin ; down ; 2002 ; Microbiology Volume 148 ; 148 >
+      au < HighWirePressH20Plugin ; down ; 2003 ; Microbiology Volume 149 ; 149 >
+      au < HighWirePressH20Plugin ; down ; 2004 ; Microbiology Volume 150 ; 150 >
+      au < HighWireStrVolPlugin ; down ; 2005 ; Microbiology Volume 151 ; 151 >
+      au < HighWireStrVolPlugin ; down ; 2006 ; Microbiology Volume 152 ; 152 >
+      au < HighWirePressH20Plugin ; down ; 2007 ; Microbiology Volume 153 ; 153 >
+      au < HighWirePressH20Plugin ; down ; 2008 ; Microbiology Volume 154 ; 154 >
+      au < HighWirePressH20Plugin ; down ; 2009 ; Microbiology Volume 155 ; 155 >
+      au < HighWirePressH20Plugin ; down ; 2010 ; Microbiology Volume 156 ; 156 >
+      au < HighWirePressH20Plugin ; down ; 2011 ; Microbiology Volume 157 ; 157 >
+      au < HighWirePressH20Plugin ; down ; 2012 ; Microbiology Volume 158 ; 158 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; Microbiology Volume 159 ; 159 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; Microbiology Volume 160 ; 160 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Microbiology Volume 161 ; 161 >
+
+    }
+      
+  }
+
+}

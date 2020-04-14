@@ -290,8 +290,7 @@ implements SourceXmlSchemaHelper {
    *  ONIX specific XPATH key definitions that we care about
    */
 
-  public static String ONIX_RR = "RecordReference|a001";
-  public static String ONIX_Record_Reference = "RecordReference";
+  public static String ONIX_RR = "RecordReference | a001";
   /* Under an item node, the interesting bits live at these relative locations */
   protected static String ONIX_idtype_isbn13 =
       "ProductIdentifier[ProductIDType='15'] | productidentifier[b221='15']";

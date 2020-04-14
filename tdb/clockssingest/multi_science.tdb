@@ -23,14 +23,14 @@
     param[journal_id] = ast
     # purchased by Sage 11/15 (moved to H20)
 
-    au < frozen ; exists ; 2000 ; Adsorption Science & Technology Volume 18 ; 18 ; >
-    au < frozen ; exists ; 2001 ; Adsorption Science & Technology Volume 19 ; 19 ; >
-    au < frozen ; exists ; 2002 ; Adsorption Science & Technology Volume 20 ; 20 ; >
-    au < frozen ; exists ; 2003 ; Adsorption Science & Technology Volume 21 ; 21 ; >
-    au < frozen ; exists ; 2004 ; Adsorption Science & Technology Volume 22 ; 22 ; >
-    au < frozen ; exists ; 2005 ; Adsorption Science & Technology Volume 23 ; 23 ; >
-    au < frozen ; exists ; 2006 ; Adsorption Science & Technology Volume 24 ; 24 ; >
-    au < frozen ; exists ; 2007 ; Adsorption Science & Technology Volume 25 ; 25 ; >
+    au < finished ; manifest ; 2000 ; Adsorption Science & Technology Volume 18 ; 18 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2001 ; Adsorption Science & Technology Volume 19 ; 19 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2002 ; Adsorption Science & Technology Volume 20 ; 20 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2003 ; Adsorption Science & Technology Volume 21 ; 21 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2004 ; Adsorption Science & Technology Volume 22 ; 22 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2005 ; Adsorption Science & Technology Volume 23 ; 23 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2006 ; Adsorption Science & Technology Volume 24 ; 24 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2007 ; Adsorption Science & Technology Volume 25 ; 25 ; reingest3.clockss.org:8083 >
     au < superseded ; exists ; 2008 ; Adsorption Science & Technology Volume 26 [superseded] ; 26 ; >
     au < superseded ; exists ; 2009 ; Adsorption Science & Technology Volume 27 [superseded] ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Adsorption Science & Technology Volume 28 ; 28 ; >
@@ -53,11 +53,11 @@
     param[journal_id] = ase
     # purchased by Sage 11/15
 
-    au < frozen ; exists ; 2000 ; Advances in Structural Engineering Volume 3 ; 3 ; >
+    au < finished ; manifest ; 2000 ; Advances in Structural Engineering Volume 3 ; 3 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2001 ; Advances in Structural Engineering Volume 4 ; 4 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2002 ; Advances in Structural Engineering Volume 5 ; 5 ; >
-    au < frozen ; exists ; 2003 ; Advances in Structural Engineering Volume 6 ; 6 ; >
-    au < frozen ; exists ; 2004 ; Advances in Structural Engineering Volume 7 ; 7 ; >
+    au < finished ; manifest ; 2002 ; Advances in Structural Engineering Volume 5 ; 5 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2003 ; Advances in Structural Engineering Volume 6 ; 6 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2004 ; Advances in Structural Engineering Volume 7 ; 7 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2005 ; Advances in Structural Engineering Volume 8 ; 8 ; >
     au < frozen ; exists ; 2006 ; Advances in Structural Engineering Volume 9 ; 9 ; >
     au < frozen ; exists ; 2007 ; Advances in Structural Engineering Volume 10 ; 10 ; >

@@ -86,7 +86,7 @@
         <string>"%s%s", base_url, journal_id</string>
       </entry>
       <entry>
-        <string>au_volume</string>https://iwaponline.com/hr/issue/browse-by-year/2017
+        <string>au_volume</string>
         <string>"%s%s/issue/browse-by-year/%d", base_url, journal_id, year</string>
       </entry>
       <entry>

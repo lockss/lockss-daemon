@@ -71,7 +71,7 @@
     <entry>
         <string>au_start_url</string>
         <list>
-            <string>"%s([^/]+/)?%s/issue/browse-by-year/%d", base_url, journal_id, year</string>
+            <string>"%s%s/issue/browse-by-year/%d", base_url, journal_id, year</string>
         </list>
     </entry>
    <!-- <entry>

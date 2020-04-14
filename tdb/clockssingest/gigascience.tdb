@@ -1,0 +1,26 @@
+{
+
+  publisher <
+    name = GigaScience ;
+    info[contract] = 2019 ;
+    info[tester] = S
+  >
+  
+  plugin = org.lockss.plugin.gigascience.ClockssGigaSciencePlugin
+  implicit < status ; status2 ; year ; name ; param[year] >
+  
+  {
+
+    title <
+      name = GigaDB
+    >
+
+    param[base_url] = http://gigadb.org/
+
+    au < crawling ; exists ; 2018 ; GigaDB 2018 ; 2018 >
+    au < crawling ; exists ; 2019 ; GigaDB 2019 ; 2019 >
+    au < crawling ; exists ; 2020 ; GigaDB 2020 ; 2020 >
+
+  }
+
+}

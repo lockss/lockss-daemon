@@ -66,7 +66,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Analytical Chemistry Insights Volume 9 ; 9 ; acia ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Analytical Chemistry Insights Volume 10 ; 10 ; acia ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2016 ; Analytical Chemistry Insights Volume 11 ; 11 ; acia ; http://journals.sagepub.com/ ; >
-    au < finished ; frozen ; 2017 ; Analytical Chemistry Insights Volume 12 ; 12 ; acia ; http://journals.sagepub.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2017 ; Analytical Chemistry Insights Volume 12 ; 12 ; acia ; http://journals.sagepub.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Analytical Chemistry Insights Volume 13 ; 13 ; acia ; http://journals.sagepub.com/ ; >
 
   }
@@ -330,7 +330,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 7 ; 7 ; amda ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 8 ; 8 ; amda ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 9 ; 9 ; amda ; http://journals.sagepub.com/ ; >
-    au < finished ; frozen ; 2017 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 10 ; 10 ; amda ; http://journals.sagepub.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2017 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 10 ; 10 ; amda ; http://journals.sagepub.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 11 ; 11 ; amda ; http://journals.sagepub.com/ ; >
 
   }
@@ -525,7 +525,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Clinical Medicine Insights: Oncology Volume 8 ; 8 ; onca ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Medicine Insights: Oncology Volume 9 ; 9 ; onca ; http://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2016 ; Clinical Medicine Insights: Oncology Volume 10 ; 10 ; onca ; http://journals.sagepub.com/ ; >
-    au < finished ; frozen ; 2017 ; Clinical Medicine Insights: Oncology Volume 11 ; 11 ; onca ; http://journals.sagepub.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2017 ; Clinical Medicine Insights: Oncology Volume 11 ; 11 ; onca ; http://journals.sagepub.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; Clinical Medicine Insights: Oncology Volume 12 ; 12 ; onca ; http://journals.sagepub.com/ ; >
 
   }

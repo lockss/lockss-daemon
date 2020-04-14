@@ -50,8 +50,8 @@
       au < finished ; crawling ; 2015 ; Fordham Environmental Law Review Volume 27 ; 27 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; Fordham Environmental Law Review Volume 28 ; 28 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; Fordham Environmental Law Review Volume 29 ; 29 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2018 ; Fordham Environmental Law Review Volume 30 ; 30 ; reingest2.clockss.org:8085 >
-      au < expected ; exists ; 2019 ; Fordham Environmental Law Review Volume 31 ; 31 ; >
+      au < crawling ; down ; 2018-2019 ; Fordham Environmental Law Review Volume 30 ; 30 ; reingest2.clockss.org:8085 >
+      au < expected ; exists ; 2020 ; Fordham Environmental Law Review Volume 31 ; 31 ; >
 
   }
 
@@ -88,14 +88,15 @@
       au < manifest ; exists ; 2009 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 20 ; 20 ; >
       au < manifest ; exists ; 2010 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 21 ; 21 ; >
       au < manifest ; exists ; 2011 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 22 ; 22 ; >
-      au < finished ; frozen ; 2012 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 23 ; 23 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2012 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 23 ; 23 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2013 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 24 ; 24 ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2014 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 25 ; 25 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 25 ; 25 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 26 ; 26 ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2016 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 27 ; 27 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2017 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 28 ; 28 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2018 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 29 ; 29 ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2019 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 30 ; 30 ; >
+      au < deepCrawl ; exists ; 2019 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 30 ; 30 ; >
+      au < expected ; exists ; 2020 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 31 ; 31 ; >
 
   }
 
@@ -152,7 +153,8 @@
       au < finished ; crawling ; 2016 ; Fordham International Law Journal Volume 40 ; 40 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; Fordham International Law Journal Volume 41 ; 41 ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2018 ; Fordham International Law Journal Volume 42 ; 42 ; reingest1.clockss.org:8082 >
-      au < testing ; exists ; 2019 ; Fordham International Law Journal Volume 43 ; 43 ; >
+      au < frozen ; exists ; 2019 ; Fordham International Law Journal Volume 43 ; 43 ; >
+      au < expected ; exists ; 2020 ; Fordham International Law Journal Volume 44 ; 44 ; >
 
   }
 
@@ -190,7 +192,8 @@
       au < finished ; crawling ; 2016 ; Fordham Journal of Corporate & Finance Law Volume 21 ; 21 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; Fordham Journal of Corporate & Finance Law Volume 22 ; 22 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2018 ; Fordham Journal of Corporate & Finance Law Volume 23 ; 23 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2019 ; Fordham Journal of Corporate & Finance Law Volume 24 ; 24 ; >
+      au < deepCrawl ; exists ; 2019 ; Fordham Journal of Corporate & Finance Law Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2020 ; Fordham Journal of Corporate & Finance Law Volume 25 ; 25 ; >
 
   }
 
@@ -292,6 +295,7 @@
       au < finished ; crawling ; 2016-2017 ; Fordham Law Review Volume 85 ; 85 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2017-2018 ; Fordham Law Review Volume 86 ; 86 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2018-2019 ; Fordham Law Review Volume 87 ; 87 ; >
+      au < manifest ; exists ; 2019-2020 ; Fordham Law Review Volume 88 ; 88 ; >
 
   }
 
@@ -344,14 +348,15 @@
       au < manifest ; exists ; 2009 ; Fordham Urban Law Journal Volume 36 ; 36 ; >
       au < manifest ; exists ; 2010-2011 ; Fordham Urban Law Journal Volume 37 ; 37 ; >
       au < finished ; crawling ; 2010-2012 ; Fordham Urban Law Journal Volume 38 ; 38 ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2011-2012 ; Fordham Urban Law Journal Volume 39 ; 39 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2011-2012 ; Fordham Urban Law Journal Volume 39 ; 39 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2012-2013 ; Fordham Urban Law Journal Volume 40 ; 40 ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2013-2014 ; Fordham Urban Law Journal Volume 41 ; 41 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2014-2015 ; Fordham Urban Law Journal Volume 42 ; 42 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; Fordham Urban Law Journal Volume 43 ; 43 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; Fordham Urban Law Journal Volume 44 ; 44 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2017-2019 ; Fordham Urban Law Journal Volume 45 ; 45 ; >
-      au < crawling ; exists ; 2019 ; Fordham Urban Law Journal Volume 46 ; 46 ; >
+      au < deepCrawl ; exists ; 2019 ; Fordham Urban Law Journal Volume 46 ; 46 ; >
+      au < manifest ; exists ; 2019-2020 ; Fordham Urban Law Journal Volume 47 ; 47 ; >
 
   }
 

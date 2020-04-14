@@ -54,7 +54,8 @@
       plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
       param[journal_id] = main
 
-      au < crawling ; exists ; 2019 ; BIO-Complexity Volume 2019 ; 2019 ; 2019 ; >
+      au < deepCrawl ; exists ; 2019 ; BIO-Complexity Volume 2019 ; 2019 ; 2019 ; >
+      au < manifest ; exists ; 2020 ; BIO-Complexity Volume 2020 ; 2020 ; 2020 ; >
 
     }
     

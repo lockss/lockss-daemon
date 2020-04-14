@@ -17,27 +17,27 @@
     param[journal_abbr] = lajm
     implicit < status ; year ; name ; param[volume] ; param[base_url] >
 
-    au < manifest ; 1985 ; Language Arts Journal of Michigan Volume 1 ; 1 ; https://scholarworks.gvsu.edu/ >
-    au < manifest ; 1986 ; Language Arts Journal of Michigan Volume 2 ; 2 ; https://scholarworks.gvsu.edu/ >
-    au < manifest ; 1987 ; Language Arts Journal of Michigan Volume 3 ; 3 ; https://scholarworks.gvsu.edu/ >
-    au < manifest ; 1988 ; Language Arts Journal of Michigan Volume 4 ; 4 ; https://scholarworks.gvsu.edu/ >
-    au < manifest ; 1989-1990 ; Language Arts Journal of Michigan Volume 5 ; 5 ; https://scholarworks.gvsu.edu/ >
-    au < manifest ; 1990 ; Language Arts Journal of Michigan Volume 6 ; 6 ; https://scholarworks.gvsu.edu/ >
-    au < manifest ; 1991 ; Language Arts Journal of Michigan Volume 7 ; 7 ; https://scholarworks.gvsu.edu/ >
-    au < manifest ; 1992 ; Language Arts Journal of Michigan Volume 8 ; 8 ; https://scholarworks.gvsu.edu/ >
-    au < manifest ; 1993 ; Language Arts Journal of Michigan Volume 9 ; 9 ; https://scholarworks.gvsu.edu/ >
-    au < manifest ; 1994 ; Language Arts Journal of Michigan Volume 10 ; 10 ; https://scholarworks.gvsu.edu/ >
-    au < manifest ; 1995 ; Language Arts Journal of Michigan Volume 11 ; 11 ; https://scholarworks.gvsu.edu/ >
-    au < manifest ; 1996 ; Language Arts Journal of Michigan Volume 12 ; 12 ; https://scholarworks.gvsu.edu/ >
-    au < manifest ; 1997 ; Language Arts Journal of Michigan Volume 13 ; 13 ; https://scholarworks.gvsu.edu/ >
-    au < manifest ; 1998 ; Language Arts Journal of Michigan Volume 14 ; 14 ; https://scholarworks.gvsu.edu/ >
-    au < manifest ; 1999 ; Language Arts Journal of Michigan Volume 15 ; 15 ; https://scholarworks.gvsu.edu/ >
-    au < manifest ; 2000 ; Language Arts Journal of Michigan Volume 16 ; 16 ; https://scholarworks.gvsu.edu/ >
-    au < manifest ; 2001 ; Language Arts Journal of Michigan Volume 17 ; 17 ; https://scholarworks.gvsu.edu/ >
-    au < manifest ; 2002 ; Language Arts Journal of Michigan Volume 18 ; 18 ; https://scholarworks.gvsu.edu/ >
-    au < manifest ; 2003 ; Language Arts Journal of Michigan Volume 19 ; 19 ; https://scholarworks.gvsu.edu/ >
-    au < manifest ; 2004 ; Language Arts Journal of Michigan Volume 20 ; 20 ; https://scholarworks.gvsu.edu/ >
-    au < manifest ; 2005 ; Language Arts Journal of Michigan Volume 21 ; 21 ; https://scholarworks.gvsu.edu/ >
+    au < ready ; 1985 ; Language Arts Journal of Michigan Volume 1 ; 1 ; https://scholarworks.gvsu.edu/ >
+    au < ready ; 1986 ; Language Arts Journal of Michigan Volume 2 ; 2 ; https://scholarworks.gvsu.edu/ >
+    au < ready ; 1987 ; Language Arts Journal of Michigan Volume 3 ; 3 ; https://scholarworks.gvsu.edu/ >
+    au < ready ; 1988 ; Language Arts Journal of Michigan Volume 4 ; 4 ; https://scholarworks.gvsu.edu/ >
+    au < ready ; 1989-1990 ; Language Arts Journal of Michigan Volume 5 ; 5 ; https://scholarworks.gvsu.edu/ >
+    au < ready ; 1990 ; Language Arts Journal of Michigan Volume 6 ; 6 ; https://scholarworks.gvsu.edu/ >
+    au < ready ; 1991 ; Language Arts Journal of Michigan Volume 7 ; 7 ; https://scholarworks.gvsu.edu/ >
+    au < ready ; 1992 ; Language Arts Journal of Michigan Volume 8 ; 8 ; https://scholarworks.gvsu.edu/ >
+    au < ready ; 1993 ; Language Arts Journal of Michigan Volume 9 ; 9 ; https://scholarworks.gvsu.edu/ >
+    au < ready ; 1994 ; Language Arts Journal of Michigan Volume 10 ; 10 ; https://scholarworks.gvsu.edu/ >
+    au < ready ; 1995 ; Language Arts Journal of Michigan Volume 11 ; 11 ; https://scholarworks.gvsu.edu/ >
+    au < ready ; 1996 ; Language Arts Journal of Michigan Volume 12 ; 12 ; https://scholarworks.gvsu.edu/ >
+    au < ready ; 1997 ; Language Arts Journal of Michigan Volume 13 ; 13 ; https://scholarworks.gvsu.edu/ >
+    au < ready ; 1998 ; Language Arts Journal of Michigan Volume 14 ; 14 ; https://scholarworks.gvsu.edu/ >
+    au < ready ; 1999 ; Language Arts Journal of Michigan Volume 15 ; 15 ; https://scholarworks.gvsu.edu/ >
+    au < ready ; 2000 ; Language Arts Journal of Michigan Volume 16 ; 16 ; https://scholarworks.gvsu.edu/ >
+    au < ready ; 2001 ; Language Arts Journal of Michigan Volume 17 ; 17 ; https://scholarworks.gvsu.edu/ >
+    au < ready ; 2002 ; Language Arts Journal of Michigan Volume 18 ; 18 ; https://scholarworks.gvsu.edu/ >
+    au < ready ; 2003 ; Language Arts Journal of Michigan Volume 19 ; 19 ; https://scholarworks.gvsu.edu/ >
+    au < ready ; 2004 ; Language Arts Journal of Michigan Volume 20 ; 20 ; https://scholarworks.gvsu.edu/ >
+    au < ready ; 2005 ; Language Arts Journal of Michigan Volume 21 ; 21 ; https://scholarworks.gvsu.edu/ >
     au < manifest ; 2006 ; Language Arts Journal of Michigan Volume 22 ; 22 ; https://scholarworks.gvsu.edu/ >
     au < manifest ; 2007-2008 ; Language Arts Journal of Michigan Volume 23 ; 23 ; https://scholarworks.gvsu.edu/ >
     au < manifest ; 2008-2009 ; Language Arts Journal of Michigan Volume 24 ; 24 ; https://scholarworks.gvsu.edu/ >

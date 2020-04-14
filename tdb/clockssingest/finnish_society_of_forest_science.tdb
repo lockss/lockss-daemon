@@ -25,10 +25,11 @@
     implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
     au < finished ; crawling ; 2016 ; Silva Fennica vol. 50 ; 50 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2017 ; Silva Fennica vol. 51 ; 51 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2017 ; Silva Fennica vol. 51 ; 51 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Silva Fennica vol. 52 ; 52 ; >
     au < manifest ; exists ; 2019 ; Silva Fennica vol. 53 ; 53 ; >
     
+    au < manifest ; exists ; 2020 ; Silva Fennica vol. 54 ; 54 ; >
   }
 
   {
@@ -61,6 +62,7 @@
     au < finished ; crawling ; 2018 ; Dissertationes Forestales 2018 ; 2018 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2019 ; Dissertationes Forestales 2019 ; 2019 ; >
     
+    au < manifest ; exists ; 2020 ; Dissertationes Forestales 2020 ; 2020 ; >
   }
   
   {
@@ -99,9 +101,10 @@
     au < finished ; crawling ; 2014 ; Metsätieteen aikakauskirja vuosikerta 2014 ; 2014 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2015 ; Metsätieteen aikakauskirja vuosikerta 2015 ; 2015 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Metsätieteen aikakauskirja vuosikerta 2016 ; 2016 ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2017 ; Metsätieteen aikakauskirja vuosikerta 2017 ; 2017 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2017 ; Metsätieteen aikakauskirja vuosikerta 2017 ; 2017 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2018 ; Metsätieteen aikakauskirja vuosikerta 2018 ; 2018 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2019 ; Metsätieteen aikakauskirja vuosikerta 2019 ; 2019 ; >
+    au < deepCrawl ; exists ; 2019 ; Metsätieteen aikakauskirja vuosikerta 2019 ; 2019 ; >
     
+    au < manifest ; exists ; 2020 ; Metsätieteen aikakauskirja vuosikerta 2020 ; 2020 ; >
   }
 }

@@ -59,10 +59,10 @@
       au < doNotProcess ; exists ; 2010 ; Endocrine Reviews Volume 31 ; 31 ; >
       au < doNotProcess ; exists ; 2011 ; Endocrine Reviews Volume 32 ; 32 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Endocrine Reviews Volume 33 ; 33 ; >
-      au < frozen ; exists ; 2013 ; Endocrine Reviews Volume 34 ; 34 ; >
+      au < finished ; manifest ; 2013 ; Endocrine Reviews Volume 34 ; 34 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2014 ; Endocrine Reviews Volume 35 ; 35 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; Endocrine Reviews Volume 36 ; 36 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2016 ; Endocrine Reviews Volume 37 ; 37 ; >
+      au < finished ; manifest ; 2016 ; Endocrine Reviews Volume 37 ; 37 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -233,12 +233,12 @@
       au < doNotProcess ; exists ; 2008 ; Endocrinology Volume 149 ; 149 ; >
       au < doNotProcess ; exists ; 2009 ; Endocrinology Volume 150 ; 150 ; >
       au < doNotProcess ; exists ; 2010 ; Endocrinology Volume 151 ; 151 ; >
-      au < frozen ; exists ; 2011 ; Endocrinology Volume 152 ; 152 ; > # OK to ignore PDF Hash Error (X X). PD-1296
+      au < finished ; manifest ; 2011 ; Endocrinology Volume 152 ; 152 ; reingest5.clockss.org:8082 > # OK to ignore PDF Hash Error (X X). PD-1296
       au < doNotProcess ; doNotProcess ; 2012 ; Endocrinology Volume 153 ; 153 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Endocrinology Volume 154 ; 154 ; >
       au < zapped ; finished ; 2014 ; Endocrinology Volume 155 ; 155 ; reingest1.clockss.org:8082 >
       au < zapped ; finished ; 2015 ; Endocrinology Volume 156 ; 156 ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2016 ; Endocrinology Volume 157 ; 157 ; >
+      au < finished ; manifest ; 2016 ; Endocrinology Volume 157 ; 157 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -353,12 +353,12 @@
       au < doNotProcess ; exists ; 2008 ; Journal of Clinical Endocrinology & Metabolism Volume 93 ; 93 ; >
       au < doNotProcess ; exists ; 2009 ; Journal of Clinical Endocrinology & Metabolism Volume 94 ; 94 ; >
       au < doNotProcess ; exists ; 2010 ; Journal of Clinical Endocrinology & Metabolism Volume 95 ; 95 ; >
-      au < frozen ; exists ; 2011 ; Journal of Clinical Endocrinology & Metabolism Volume 96 ; 96 ; >
+      au < finished ; manifest ; 2011 ; Journal of Clinical Endocrinology & Metabolism Volume 96 ; 96 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2012 ; Journal of Clinical Endocrinology & Metabolism Volume 97 ; 97 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Journal of Clinical Endocrinology & Metabolism Volume 98 ; 98 ; >
       au < zapped ; finished ; 2014 ; Journal of Clinical Endocrinology & Metabolism Volume 99 ; 99 ; reingest4.clockss.org:8082 >
       au < zapped ; finished ; 2015 ; Journal of Clinical Endocrinology & Metabolism Volume 100 ; 100 ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2016 ; Journal of Clinical Endocrinology & Metabolism Volume 101 ; 101 ; >
+      au < finished ; manifest ; 2016 ; Journal of Clinical Endocrinology & Metabolism Volume 101 ; 101 ; reingest5.clockss.org:8082 >
 
     }
 
@@ -380,36 +380,36 @@
 
 #adding all of the AUs to the ingest machines becuase of likely 2017 trigger
 #even recollecting the 2012/2013
-      au < frozen ; exists ; 1987 ; Molecular Endocrinology Volume 1 ; 1 ; >
-      au < frozen ; exists ; 1988 ; Molecular Endocrinology Volume 2 ; 2 ; >
-      au < frozen ; exists ; 1989 ; Molecular Endocrinology Volume 3 ; 3 ; >
-      au < frozen ; exists ; 1990 ; Molecular Endocrinology Volume 4 ; 4 ; >
-      au < frozen ; exists ; 1991 ; Molecular Endocrinology Volume 5 ; 5 ; >
-      au < frozen ; exists ; 1992 ; Molecular Endocrinology Volume 6 ; 6 ; >
-      au < frozen ; exists ; 1993 ; Molecular Endocrinology Volume 7 ; 7 ; >
-      au < frozen ; exists ; 1994 ; Molecular Endocrinology Volume 8 ; 8 ; >
-      au < frozen ; exists ; 1995 ; Molecular Endocrinology Volume 9 ; 9 ; >
-      au < frozen ; exists ; 1996 ; Molecular Endocrinology Volume 10 ; 10 ; >
-      au < frozen ; exists ; 1997 ; Molecular Endocrinology Volume 11 ; 11 ; >
-      au < frozen ; exists ; 1998 ; Molecular Endocrinology Volume 12 ; 12 ; >
-      au < frozen ; exists ; 1999 ; Molecular Endocrinology Volume 13 ; 13 ; >
-      au < frozen ; exists ; 2000 ; Molecular Endocrinology Volume 14 ; 14 ; >
-      au < frozen ; exists ; 2001 ; Molecular Endocrinology Volume 15 ; 15 ; >
-      au < frozen ; exists ; 2002 ; Molecular Endocrinology Volume 16 ; 16 ; >
-      au < frozen ; exists ; 2003 ; Molecular Endocrinology Volume 17 ; 17 ; >
-      au < frozen ; exists ; 2004 ; Molecular Endocrinology Volume 18 ; 18 ; >
-      au < frozen ; exists ; 2005 ; Molecular Endocrinology Volume 19 ; 19 ; >
-      au < frozen ; exists ; 2006 ; Molecular Endocrinology Volume 20 ; 20 ; >
-      au < frozen ; exists ; 2007 ; Molecular Endocrinology Volume 21 ; 21 ; >
-      au < frozen ; exists ; 2008 ; Molecular Endocrinology Volume 22 ; 22 ; >
-      au < frozen ; exists ; 2009 ; Molecular Endocrinology Volume 23 ; 23 ; >
-      au < frozen ; exists ; 2010 ; Molecular Endocrinology Volume 24 ; 24 ; >
-      au < frozen ; exists ; 2011 ; Molecular Endocrinology Volume 25 ; 25 ; >
-      au < frozen ; exists ; 2012 ; Molecular Endocrinology Volume 26 ; 26 ; >
-      au < frozen ; exists ; 2013 ; Molecular Endocrinology Volume 27 ; 27 ; >
+      au < finished ; manifest ; 1987 ; Molecular Endocrinology Volume 1 ; 1 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1988 ; Molecular Endocrinology Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1989 ; Molecular Endocrinology Volume 3 ; 3 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1990 ; Molecular Endocrinology Volume 4 ; 4 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1991 ; Molecular Endocrinology Volume 5 ; 5 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1992 ; Molecular Endocrinology Volume 6 ; 6 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1993 ; Molecular Endocrinology Volume 7 ; 7 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1994 ; Molecular Endocrinology Volume 8 ; 8 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1995 ; Molecular Endocrinology Volume 9 ; 9 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1996 ; Molecular Endocrinology Volume 10 ; 10 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1997 ; Molecular Endocrinology Volume 11 ; 11 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1998 ; Molecular Endocrinology Volume 12 ; 12 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1999 ; Molecular Endocrinology Volume 13 ; 13 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2000 ; Molecular Endocrinology Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2001 ; Molecular Endocrinology Volume 15 ; 15 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2002 ; Molecular Endocrinology Volume 16 ; 16 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2003 ; Molecular Endocrinology Volume 17 ; 17 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2004 ; Molecular Endocrinology Volume 18 ; 18 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2005 ; Molecular Endocrinology Volume 19 ; 19 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2006 ; Molecular Endocrinology Volume 20 ; 20 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2007 ; Molecular Endocrinology Volume 21 ; 21 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2008 ; Molecular Endocrinology Volume 22 ; 22 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2009 ; Molecular Endocrinology Volume 23 ; 23 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2010 ; Molecular Endocrinology Volume 24 ; 24 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2011 ; Molecular Endocrinology Volume 25 ; 25 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2012 ; Molecular Endocrinology Volume 26 ; 26 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2013 ; Molecular Endocrinology Volume 27 ; 27 ; reingest3.clockss.org:8083 >
       au < zapped ; finished ; 2014 ; Molecular Endocrinology Volume 28 ; 28 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; Molecular Endocrinology Volume 29 ; 29 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2016 ; Molecular Endocrinology Volume 30 ; 30 ; >
+      au < finished ; manifest ; 2016 ; Molecular Endocrinology Volume 30 ; 30 ; reingest4.clockss.org:8082 >
 
     }
 

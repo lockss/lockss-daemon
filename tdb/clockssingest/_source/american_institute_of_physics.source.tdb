@@ -34,8 +34,6 @@
     hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[year] >
 
-    #this first 2013 AU shouldn't exist and has been deleted from production machines. There was never JATS content for 2013.
-    au < readySource ; down ; 2013 ; American Institute of Physics JATS Source Content 2013 ; 2013 >
     au < zapped ; finished ; 2014 ; American Institute of Physics JATS Source Content 2014 ; 2014 >
     au < zapped ; finished ; 2015 ; American Institute of Physics JATS Source Content 2015 ; 2015 >
     au < zapped ; finished ; 2016 ; American Institute of Physics JATS Source Content 2016 ; 2016 >

@@ -35,7 +35,10 @@
       au < manifest ; exists ; 2017 ; Anti-Trafficking Review Number 7 ; 7 ; 2017 ; >
       au < manifest ; exists ; 2018 ; Anti-Trafficking Review Number 8 ; 8 ; 2018 ; >
       au < manifest ; exists ; 2019 ; Anti-Trafficking Review Number 9 ; 9 ; 2019 ; >
+      au < expected ; exists ; 2020 ; Anti-Trafficking Review Number 10 ; 10 ; 2020 ; >
+
      }
+
      {
       plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
       param[base_url] = http://www.antitraffickingreview.org/

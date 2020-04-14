@@ -174,7 +174,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; International Review of Law Volume DomesticViolence ; DomesticViolence ; > #doesNotExist
     au < finished ; finished ; 2014 ; International Review of Law Volume 2014 ; 2014 ; >
     au < finished ; finished ; 2015 ; International Review of Law Volume 2015 ; 2015 ; reingest4.clockss.org:8082 >
-    au < finished ; frozen ; 2016 ; International Review of Law Volume 2016 ; 2016 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2016 ; International Review of Law Volume 2016 ; 2016 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2017 ; International Review of Law Volume 2017 ; 2017 ; reingest4.clockss.org:8082 >
 
   }
@@ -224,7 +224,7 @@
     plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
     param[journal_id] = jist
 
-    au < finished ; frozen ; 2018 ; Journal of Information Studies & Technology Volume 2018 ; 2018 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2018 ; Journal of Information Studies & Technology Volume 2018 ; 2018 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; exists ; 2019 ; Journal of Information Studies & Technology Volume 2019 ; 2019 ; >
 
   }
@@ -392,9 +392,9 @@
     au < finished ; finished ; 2012 ; Qatar Medical Journal Volume 2012 ; 2012 ; >
     au < finished ; finished ; 2013 ; Qatar Medical Journal Volume 2013 ; 2013 ; >
     au < finished ; crawling ; 2014 ; Qatar Medical Journal Volume 2014 ; 2014 ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2015 ; Qatar Medical Journal Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 2016 ; Qatar Medical Journal Volume 2016 ; 2016 ; reingest4.clockss.org:8082 >
-    au < finished ; frozen ; 2017 ; Qatar Medical Journal Volume 2017 ; 2017 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Qatar Medical Journal Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; Qatar Medical Journal Volume 2016 ; 2016 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2017 ; Qatar Medical Journal Volume 2017 ; 2017 ; reingest5.clockss.org:8082 >
 
   }
 
@@ -417,11 +417,11 @@
 
       au < doNotProcess ; doNotProcess ; 2011 ; QScience Connect Volume 2011 ; 2011 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; QScience Connect Volume 2012 ; 2012 ; >
-      au < finished ; frozen ; 2013 ; QScience Connect Volume 2013 ; 2013 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2013 ; QScience Connect Volume 2013 ; 2013 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2014 ; QScience Connect Volume 2014 ; 2014 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2015 ; QScience Connect Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; QScience Connect Volume 2016 ; 2016 ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2017 ; QScience Connect Volume 2017 ; 2017 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2017 ; QScience Connect Volume 2017 ; 2017 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2018 ; QScience Connect Volume 2018 ; 2018 ; reingest1.clockss.org:8082 >
 
     }

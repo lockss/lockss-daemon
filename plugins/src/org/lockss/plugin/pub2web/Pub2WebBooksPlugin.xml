@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>13</string>
+    <string>14</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Substance</string>
-        <string>7</string>
+        <string>8</string>
       </entry>
     </map>
   </entry>
@@ -87,7 +87,7 @@
     ALSO - possibly supplementary data or something will use this to swallow a redirect
        /deliver/fulltext/10.1128/9781555817992/9781555812058_Chap03.pdf?itemId=/content/book/10.1128/9781555817992.chap3&mimeType=pdf&isFastTrackArticle=
        http://www.asmscience.org/deliver/fulltext/10.1128/9781555816896/9781555815370_Chap05.pdf
-     and the landing pages for images and tables without 'book' subdir in url 
+     and the landing pages for images and tables without 'book' subdir in url
        http://www.asmscience.org/content/10.1128/9781555816896.ch05.ch05fig01(fig*|.tab*|.T*)
        http://www.asmscience.org/docserver/ahah/fulltext/10.1128/9781555816896/f0101-01_thmb.gif
      thumbnails and full-sized versions of images
@@ -100,6 +100,10 @@
      This is the link we extract and noralize to the crawler version
        /deliver/fulltext/10.1128/9781555817992/chap3.html
           ?itemId=/content/book/10.1128/9781555817992.chap3&mimeType=html&fmt=ahah
+
+    The following is the updated debug infor on 3/2020:
+    https://www.asmscience.org/deliver/fulltext/10.1128/9781683670247/9781683670230_FM.pdf?itemId=/content/book/10.1128/9781683670247.cont01&mimeType=pdf
+    Redirected to excluded URL: http://www.asmscience.org/docserver/fulltext/10.1128/9781683670247/9781683670230_FM.pdf?expires=1584036624&id=id&accname=guest&checksum=7CA1F1DECA1B70D4D119F77ED0716819
     -->
     <list>
       <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff.?)(\?([0-9]+|config=|v=).*)?$", url_host(base_url)</string>
@@ -108,13 +112,24 @@
       <!--  the version we allow ends in '&fmt=ahah' -->
       <!-- <string>2,"^%sdeliver/fulltext/%s/[^?/]+\.html\?itemId=[^&amp;]+&amp;mimeType=html(&amp;isFastTrackArticle=)?$", base_url, doi</string>-->
       <string>1,"^%sdeliver/fulltext/%s", base_url, doi</string>
-      <string>1,"^%sdocserver(/ahah)?/fulltext/%s", base_url, doi</string>
+      <!--
+         https://www.asmscience.org/deliver/fulltext/10.1128/9781683670247/9781683670230_FM.pdf?itemId=/content/book/10.1128/9781683670247.cont01&mimeType=pdf
+         Redirected to excluded URL: http://www.asmscience.org/docserver/fulltext/10.1128/9781683670247/9781683670230_FM.pdf?expires=1584561617&id=id&accname=guest&checksum=D77C3DDDE52653FE70D9B2D056625128
+         Notice the difference, it is redirected from "https" to "http" at 3/2020, maybe in the future, it will change to "https" to "https"
+      -->
+      <string>1,"^https?://%s/docserver/fulltext/%s", url_host(base_url), doi</string>
     </list>
   </entry>
   <entry>
-  <!-- http://www.asmscience.org/content/book/10.1128/9781555817992.chap3?crawler=true&mimetype=application/pdf-->
+    <!--
+         https://www.asmscience.org/deliver/fulltext/10.1128/9781683670247/9781683670230_FM.pdf?itemId=/content/book/10.1128/9781683670247.cont01&mimeType=pdf
+         Redirected to excluded URL: http://www.asmscience.org/docserver/fulltext/10.1128/9781683670247/9781683670230_FM.pdf?expires=1584561617&id=id&accname=guest&checksum=D77C3DDDE52653FE70D9B2D056625128
+         Notice the difference, it is redirected from "https" to "http" at 3/2020, maybe in the future, it will change to "https" to "https"
+      -->
     <string>au_substance_url_pattern</string>
-    <string>"^%scontent/book/%s[^?/]*\?crawler=true&amp;mimetype=application/pdf$", base_url, doi</string>
+    <list>
+      <string>"^%sdeliver/fulltext/%s/[^./]+\.pdf", base_url, doi</string>
+    </list>
   </entry>
   <!--  au_crawl_depth is default, 1...the start url is the book landing page  -->
   <!-- repair from peer
@@ -130,9 +145,9 @@
       <string>/docserver/preview/.*\.gif$</string>
     </list>
   </entry>
-  <!-- don't worry about polling for those low-importance files that will 
+  <!-- don't worry about polling for those low-importance files that will
        repair from peer in time (eg due to versioning, etc)  -->
-   <entry>
+  <entry>
     <string>au_url_poll_result_weight</string>
     <list>
       <string>(://[^/]+/(css|files|images|js|marketing)/), 0</string>
@@ -149,7 +164,7 @@
   </entry>
   <entry>
     <string>plugin_fetch_rate_limiter_source</string>
-      <string>plugin</string>
+    <string>plugin</string>
   </entry>
   <entry>
     <string>plugin_url_consumer_factory</string>
@@ -159,12 +174,19 @@
     <string>application/pdf_filter_factory</string>
     <string>org.lockss.plugin.pub2web.Pub2WebPdfFilterFactory</string>
   </entry>
+  <!--By 3/2020, the following UrlNormalizer will cause redirect loop for the PDF link  like this:
+  <a href="/deliver/fulltext/10.1128/9781683670247/9781683670230_FM.pdf?itemId=/content/book/10.1128/9781683670247.cont01&amp;mimeType=pdf" title=""
+  class="externallink pdf" ><h2>Click Here to Take a Look</h2>
+  <img class="cover fleft" src="/docserver/fulltext/10.1128/9781683670247/9781683670230_smallcover.gif"
+  alt="image of Regulating with RNA in Bacteria and Archaea"
+  title="image of Regulating with RNA in Bacteria and Archaea" /></a>
   <entry>
     <string>au_url_normalizer</string>
     <string>org.lockss.plugin.pub2web.Pub2WebUrlNormalizer</string>
   </entry>
-<!--  child plugins should define their own crawl filter/html filter until we see patterns -->
-<!--  child plugins will also probably need their own link extractor  -->
+  -->
+  <!--  child plugins should define their own crawl filter/html filter until we see patterns -->
+  <!--  child plugins will also probably need their own link extractor  -->
   <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.pub2web.Pub2WebArticleIteratorFactory</string>
@@ -173,7 +195,7 @@
     <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.pub2web.Pub2WebArticleIteratorFactory</string>
   </entry>
-   <entry>
+  <entry>
     <string>text/html_metadata_extractor_factory_map</string>
     <map>
       <entry>
@@ -181,5 +203,5 @@
         <string>org.lockss.plugin.pub2web.Pub2WebHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
-  </entry> 
+  </entry>
 </map>

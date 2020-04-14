@@ -89,7 +89,7 @@ while (my $line = <>) {
           $result = "Redirected";
         }
         #$result = "Redirected";
-      } elsif (defined($man_contents) && (($man_contents =~ m/\/cgi\/reprint\/$param{volume_name}\//) || ($man_contents =~ m/$base_url_short" lockss-probe/))) {
+      } elsif (defined($man_contents) && (($man_contents =~ m/\/cgi\/reprint\/$param{volume_name}\//) || ($man_contents =~ m/$base_url_short" lockss-probe/))) { #"
           $result = "CGI_probe_link";
           if ($man_contents =~ m/<title>\s*(.*)\s+C?LOCKSS\s+Manifest\s+Page.*<\/title>/si) {
             $vol_title = $1;
@@ -138,7 +138,7 @@ while (my $line = <>) {
                 $result = "Redirected";
               }
               #$result = "Redirected";
-            } elsif (defined($man_contents) && (($man_contents =~ m/\/cgi\/reprint\/$param{volume_name}\//) || ($man_contents =~ m/$base_url_short" lockss-probe/))) {
+            } elsif (defined($man_contents) && (($man_contents =~ m/\/cgi\/reprint\/$param{volume_name}\//) || ($man_contents =~ m/$base_url_short" lockss-probe/))) { #"
                 $result = "CGI_probe_link";
                 if ($man_contents =~ m/<title>\s*(.*)\s+C?LOCKSS\s+Manifest\s+Page.*<\/title>/si) {
                     $vol_title = $1;
@@ -180,7 +180,7 @@ while (my $line = <>) {
             if ($req->url ne $resp->request->uri) {
               $vol_title = $resp->request->uri;
               $result = "Redirected";
-            } elsif (defined($man_contents) && (($man_contents =~ m/\/cgi\/reprint\/$param{volume_name}\//) || ($man_contents =~ m/$base_url_short" lockss-probe/))) {
+            } elsif (defined($man_contents) && (($man_contents =~ m/\/cgi\/reprint\/$param{volume_name}\//) || ($man_contents =~ m/$base_url_short" lockss-probe/))) { #"
                 $result = "CGI_probe_link";
                 if ($man_contents =~ m/<title>\s*(.*)\s+C?LOCKSS\s+Manifest\s+Page.*<\/title>/si) {
                     $vol_title = $1;
@@ -198,7 +198,7 @@ while (my $line = <>) {
                         $vol_title = "\"" . $vol_title . "\"";
                     }
                 }
-                if ($man_contents =~ m/="([^"]*)" lockss-probe="true"/si) {
+                if ($man_contents =~ m/="([^"]*)" lockss-probe="true"/si) { #"
                     my $pl_url = $1;
                     #printf("probe-link=%s\n",$pl_url);  #debug
                     my $req_pl = HTTP::Request->new(GET, $pl_url);
@@ -406,7 +406,7 @@ while (my $line = <>) {
                   $vol_title = $1;
               }
               my $man_contents = $resp->content;
-              if (defined($man_contents) && ($man_contents =~ m/\/volume\//)) {
+              if (defined($man_contents) && ($man_contents =~ m/\/volume\//) && ($man_contents =~ m/\($param{year}\)/)) {
                   $result = "Manifest";
               } else {
                   $result = "--NO_CONT--";
@@ -916,8 +916,9 @@ while (my $line = <>) {
             if ($req->url ne $resp->request->uri) {
               $vol_title = $resp->request->uri;
               $result = "Redirected";
-            } elsif (defined($man_contents)) {
-		#<h1>CLOCKSS - Published Issues: Biosimilars 2015</h1>
+            } elsif (defined($man_contents) && ($man_contents =~ m/<h1>CLOCKSS - Published Issues: (.*) $param{year}/) && ($man_contents =~ m/href=\"[^\"]*\">$1/)) { 
+                #<h1>CLOCKSS - Published Issues: Biosimilars 2015</h1>
+                #if ($man_contents =~ m/<h1>CLOCKSS - Published Issues: (.*) $param{year}<\/h1>/si) {
                 if ($man_contents =~ m/<h1>CLOCKSS - Published Issues: (.*) $param{year}<\/h1>/si) {
                     $vol_title = $1
                 }
@@ -1000,6 +1001,7 @@ while (my $line = <>) {
            ($plugin eq "ClockssAMetSocPlugin") ||
            ($plugin eq "ClockssAmmonsScientificPlugin") ||
            ($plugin eq "ClockssAmPhysSocAtyponPlugin") ||
+           ($plugin eq "ClockssAmPsychPubAtyponPlugin") ||
            ($plugin eq "ClockssASCEPlugin") ||
            ($plugin eq "ClockssAscoJournalsPlugin") ||
            ($plugin eq "ClockssBIRAtyponPlugin") ||
@@ -3181,7 +3183,32 @@ while (my $line = <>) {
 
     sleep(4);
 
-  } # End Spandidos plugin check
+  # End Spandidos plugin check
+  } elsif ($plugin eq "ClockssGigaSciencePlugin") {
+      $url = sprintf("%s/api/list?start_date=%d-01-01&end_date=%d-12-31",
+      $param{base_url}, $param{year}, $param{year});
+      $man_url = uri_unescape($url);
+      my $req = HTTP::Request->new(GET, $man_url);
+      my $resp = $ua->request($req);
+      if ($resp->is_success) {
+          my $man_contents = $resp->content;
+          #no lockss permission statement on start page. Permission statement is here: http://gigadb.org/lockss.txt
+          if ($req->url ne $resp->request->uri) {
+            $vol_title = "Giga Science " . $param{year};
+            $result = "Redirected";
+          } elsif (defined($man_contents)) {
+              if ($man_contents =~ m/<doi>(.*)<\/doi>/si) {
+                  $vol_title= "Giga Science " . $param{year};
+              }
+              $result = "Manifest"
+          } else {
+              $result = "--"
+          }
+      } else {
+          $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+      }
+      sleep(4);
+   } # End of Giga Science
   
   if($result eq "Plugin Unknown") {
     printf("*PLUGIN UNKNOWN*, %s, %s\n",$auid,$man_url);

@@ -85,7 +85,6 @@ public class AmPsychPubHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFac
         HtmlNodeFilters.tagWithAttribute("div", "class", "articleList"),
         // showPopup&citid=citart1
         HtmlNodeFilters.tagWithAttributeRegex("body", "class", "popupBody"),
-        
     };
     
     // handled by parent: script, sfxlink, stylesheet, pdfplus file sise

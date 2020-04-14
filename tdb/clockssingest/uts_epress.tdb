@@ -72,7 +72,7 @@
     au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2017 ; 2017 ; Construction Economics and Building Volume 17 ; 17 ; https://epress.lib.uts.edu.au/journals/ ; >
     au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2018 ; 2018 ; Construction Economics and Building Volume 18 ; 18 ; https://epress.lib.uts.edu.au/journals/ ; >
     au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2019 ; 2019 ; Construction Economics and Building Volume 19 ; 19 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; expected ; exists ; 2020 ; 2020 ; Construction Economics and Building Volume 20 ; 20 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2020 ; 2020 ; Construction Economics and Building Volume 20 ; 20 ; https://epress.lib.uts.edu.au/journals/ ; >
 
   }
 
@@ -158,9 +158,9 @@
 
     param[journal_id] = ijrlp
 
-    au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2011 ; 2011 ; International Journal of Rural Law and Policy Volume 2011 ; 2011 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2012 ; 2012 ; International Journal of Rural Law and Policy Volume 2012 ; 2012 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2013 ; 2013 ; International Journal of Rural Law and Policy Volume 2013 ; 2013 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2011 ; 2011 ; International Journal of Rural Law and Policy Volume 2011 ; 2011 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2012 ; 2012 ; International Journal of Rural Law and Policy Volume 2012 ; 2012 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2013 ; 2013 ; International Journal of Rural Law and Policy Volume 2013 ; 2013 ; https://epress.lib.uts.edu.au/journals/ ; >
     au < ojs2.ClockssOJS2Plugin ; finished ; finished ; 2014 ; 2014 ; International Journal of Rural Law and Policy Volume 2014 ; 2014 ; http://epress.lib.uts.edu.au/journals/ ; reingest2.clockss.org:8085 >
     au < ojs2.ClockssOJS2Plugin ; frozen ; exists ; 2015 ; 2015 ; International Journal of Rural Law and Policy Volume 2015 ; 2015 ; http://epress.lib.uts.edu.au/journals/ ; >
     au < ojs2.ClockssOJS2Plugin ; superseded ; exists ; 2017 ; 2017 ; International Journal of Rural Law and Policy Volume 2017 [superseded] ; 2017 ; http://epress.lib.uts.edu.au/journals/ ; >
@@ -277,7 +277,7 @@
     au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2017 ; 2017 ; Public History Review Volume 24 ; 24 ; https://epress.lib.uts.edu.au/journals/ ; >
     au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2018 ; 2018 ; Public History Review Volume 25 ; 25 ; https://epress.lib.uts.edu.au/journals/ ; >
     au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2019 ; 2019 ; Public History Review Volume 26 ; 26 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; expected ; exists ; 2020 ; 2020 ; Public History Review Volume 27 ; 27 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2020 ; 2020 ; Public History Review Volume 27 ; 27 ; https://epress.lib.uts.edu.au/journals/ ; >
 
   }
 

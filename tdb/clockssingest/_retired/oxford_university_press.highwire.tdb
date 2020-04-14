@@ -120,7 +120,7 @@
     au < finished ; crawling ; 2010 ; Aesthetic Surgery Journal Volume 30 ; 30 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2011 ; Aesthetic Surgery Journal Volume 31 ; 31 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2012 ; Aesthetic Surgery Journal Volume 32 ; 32 ; reingest4.clockss.org:8082 >
-    au < finished ; frozen ; 2013 ; Aesthetic Surgery Journal Volume 33 ; 33 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2013 ; Aesthetic Surgery Journal Volume 33 ; 33 ; reingest2.clockss.org:8085 >
     au < zapped ; finished ; 2014 ; Aesthetic Surgery Journal Volume 34 ; 34 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2015 ; Aesthetic Surgery Journal Volume 35 ; 35 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; exists ; 2016 ; Aesthetic Surgery Journal Volume 36 ; 36 ; >
@@ -414,7 +414,7 @@
     au < doNotProcess ; exists ; 2006 ; Alcohol and Alcoholism Volume 41 ; 41 ; >
     au < doNotProcess ; exists ; 2007 ; Alcohol and Alcoholism Volume 42 ; 42 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Alcohol and Alcoholism Volume 43 ; 43 ; >
-    au < finished ; frozen ; 2009 ; Alcohol and Alcoholism Volume 44 ; 44 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2009 ; Alcohol and Alcoholism Volume 44 ; 44 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2010 ; Alcohol and Alcoholism Volume 45 ; 45 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Alcohol and Alcoholism Volume 46 ; 46 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Alcohol and Alcoholism Volume 47 ; 47 ; >
@@ -1028,7 +1028,7 @@
     au < doNotProcess ; exists ; 2006 ; American Journal of Hypertension Volume 19 ; 19 ; >
     au < doNotProcess ; exists ; 2007 ; American Journal of Hypertension Volume 20 ; 20 ; >
     au < doNotProcess ; exists ; 2008 ; American Journal of Hypertension Volume 21 ; 21 ; >
-    au < finished ; frozen ; 2009 ; American Journal of Hypertension Volume 22 ; 22 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2009 ; American Journal of Hypertension Volume 22 ; 22 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2010 ; American Journal of Hypertension Volume 23 ; 23 ; >
     au < finished ; finished ; 2011 ; American Journal of Hypertension Volume 24 ; 24 ; >
     au < finished ; crawling ; 2012 ; American Journal of Hypertension Volume 25 ; 25 ; reingest5.clockss.org:8082 >
@@ -1531,7 +1531,7 @@
     au < doNotProcess ; exists ; 2007 ; Annals of Botany Volume 99 ; 99 ; >
     au < doNotProcess ; exists ; 2007 ; Annals of Botany Volume 100 ; 100 ; >
     au < finished ; finished ; 2008 ; Annals of Botany Volume 101 ; 101 ; >
-    au < finished ; frozen ; 2008 ; Annals of Botany Volume 102 ; 102 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2008 ; Annals of Botany Volume 102 ; 102 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2009 ; Annals of Botany Volume 103 ; 103 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2009 ; Annals of Botany Volume 104 ; 104 ; >
     au < finished ; finished ; 2010 ; Annals of Botany Volume 105 ; 105 ; >
@@ -2066,9 +2066,9 @@
     au < doNotProcess ; exists ; 2008 ; Arthropod Management Tests Volume 33 ; 33 ; >
     au < finished ; finished ; 2009 ; Arthropod Management Tests Volume 34 ; 34 ; >
     au < finished ; crawling ; 2010 ; Arthropod Management Tests Volume 35 ; 35 ; reingest3.clockss.org:8083 >
-    au < finished ; frozen ; 2011 ; Arthropod Management Tests Volume 36 ; 36 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2011 ; Arthropod Management Tests Volume 36 ; 36 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2012 ; Arthropod Management Tests Volume 37 ; 37 ; reingest4.clockss.org:8082 >
-    au < finished ; frozen ; 2013 ; Arthropod Management Tests Volume 38 ; 38 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; Arthropod Management Tests Volume 38 ; 38 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Arthropod Management Tests Volume 39 ; 39 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; exists ; 2015 ; Arthropod Management Tests Volume 40 ; 40 ; >
     au < doNotProcess ; exists ; 2016 ; Arthropod Management Tests Volume 41 ; 41 ; >
@@ -2154,7 +2154,7 @@
     au < doNotProcess ; exists ; 2007 ; Behavioral Ecology Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Behavioral Ecology Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Behavioral Ecology Volume 20 ; 20 ; >
-    au < finished ; frozen ; 2010 ; Behavioral Ecology Volume 21 ; 21 ; >
+    au < finished ; finished ; 2010 ; Behavioral Ecology Volume 21 ; 21 ; >
     au < finished ; finished ; 2011 ; Behavioral Ecology Volume 22 ; 22 ; >
     au < finished ; finished ; 2012 ; Behavioral Ecology Volume 23 ; 23 ; >
     au < finished ; finished ; 2013 ; Behavioral Ecology Volume 24 ; 24 ; reingest1.clockss.org:8082 >
@@ -2627,7 +2627,7 @@
     au < doNotProcess ; exists ; 2006 ; Brain Volume 129 ; 129 ; >
     au < doNotProcess ; exists ; 2007 ; Brain Volume 130 ; 130 ; >
     au < doNotProcess ; exists ; 2008 ; Brain Volume 131 ; 131 ; >
-    au < finished ; frozen ; 2009 ; Brain Volume 132 ; 132 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2009 ; Brain Volume 132 ; 132 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2010 ; Brain Volume 133 ; 133 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Brain Volume 134 ; 134 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Brain Volume 135 ; 135 ; >
@@ -3595,7 +3595,7 @@
     au < finished ; crawling ; 2005 ; Bulletin of the London Mathematical Society Volume 37 ; 37 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2006 ; Bulletin of the London Mathematical Society Volume 38 ; 38 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2007 ; Bulletin of the London Mathematical Society Volume 39 ; 39 ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2008 ; Bulletin of the London Mathematical Society Volume 40 ; 40 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2008 ; Bulletin of the London Mathematical Society Volume 40 ; 40 ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2009 ; Bulletin of the London Mathematical Society Volume 41 ; 41 ; >
     au < finished ; finished ; 2010 ; Bulletin of the London Mathematical Society Volume 42 ; 42 ; >
     au < finished ; finished ; 2011 ; Bulletin of the London Mathematical Society Volume 43 ; 43 ; >
@@ -5194,7 +5194,7 @@
     au < finished ; crawling ; 2009 ; Economic Policy Volume 24 ; 24 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2010 ; Economic Policy Volume 25 ; 25 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2011 ; Economic Policy Volume 26 ; 26 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2012 ; Economic Policy Volume 27 ; 27 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2012 ; Economic Policy Volume 27 ; 27 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2013 ; Economic Policy Volume 28 ; 28 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2014 ; Economic Policy Volume 29 ; 29 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Economic Policy Volume 30 ; 30 ; reingest4.clockss.org:8082 >
@@ -6842,7 +6842,7 @@
     au < finished ; crawling ; 2009 ; FEMS Immunology & Medical Microbiology Volume 55 ; 55 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2009 ; FEMS Immunology & Medical Microbiology Volume 56 ; 56 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2009 ; FEMS Immunology & Medical Microbiology Volume 57 ; 57 ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 2010 ; FEMS Immunology & Medical Microbiology Volume 58 ; 58 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2010 ; FEMS Immunology & Medical Microbiology Volume 58 ; 58 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2010 ; FEMS Immunology & Medical Microbiology Volume 59 ; 59 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2010 ; FEMS Immunology & Medical Microbiology Volume 60 ; 60 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2011 ; FEMS Immunology & Medical Microbiology Volume 61 ; 61 ; reingest3.clockss.org:8083 >
@@ -6933,7 +6933,7 @@
     au < doNotProcess ; exists ; 2008 ; FEMS Microbiology Ecology Volume 65 ; 65 ; >
     au < doNotProcess ; exists ; 2008 ; FEMS Microbiology Ecology Volume 66 ; 66 ; >
     au < finished ; crawling ; 2009 ; FEMS Microbiology Ecology Volume 67 ; 67 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2009 ; FEMS Microbiology Ecology Volume 68 ; 68 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2009 ; FEMS Microbiology Ecology Volume 68 ; 68 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2009 ; FEMS Microbiology Ecology Volume 69 ; 69 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2009 ; FEMS Microbiology Ecology Volume 70 ; 70 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2010 ; FEMS Microbiology Ecology Volume 71 ; 71 ; reingest3.clockss.org:8083 >
@@ -7113,7 +7113,7 @@
     au < finished ; crawling ; 2009 ; FEMS Microbiology Letters Volume 291 ; 291 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2009 ; FEMS Microbiology Letters Volume 292 ; 292 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2009 ; FEMS Microbiology Letters Volume 293 ; 293 ; >
-    au < finished ; frozen ; 2009 ; FEMS Microbiology Letters Volume 294 ; 294 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2009 ; FEMS Microbiology Letters Volume 294 ; 294 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2009 ; FEMS Microbiology Letters Volume 295 ; 295 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2009 ; FEMS Microbiology Letters Volume 296 ; 296 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2009 ; FEMS Microbiology Letters Volume 297 ; 297 ; reingest5.clockss.org:8082 >
@@ -7130,7 +7130,7 @@
     au < finished ; crawling ; 2010 ; FEMS Microbiology Letters Volume 308 ; 308 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2010 ; FEMS Microbiology Letters Volume 309 ; 309 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2010 ; FEMS Microbiology Letters Volume 310 ; 310 ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 2010 ; FEMS Microbiology Letters Volume 311 ; 311 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2010 ; FEMS Microbiology Letters Volume 311 ; 311 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2010 ; FEMS Microbiology Letters Volume 312 ; 312 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2010 ; FEMS Microbiology Letters Volume 313 ; 313 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2011 ; FEMS Microbiology Letters Volume 314 ; 314 ; reingest5.clockss.org:8082 >
@@ -7166,15 +7166,15 @@
     au < finished ; crawling ; 2013 ; FEMS Microbiology Letters Volume 344 ; 344 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2013 ; FEMS Microbiology Letters Volume 345 ; 345 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2013 ; FEMS Microbiology Letters Volume 346 ; 346 ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 2013 ; FEMS Microbiology Letters Volume 347 ; 347 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2013 ; FEMS Microbiology Letters Volume 347 ; 347 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2013 ; FEMS Microbiology Letters Volume 348 ; 348 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; FEMS Microbiology Letters Volume 349 ; 349 ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 2014 ; FEMS Microbiology Letters Volume 350 ; 350 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; FEMS Microbiology Letters Volume 350 ; 350 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; FEMS Microbiology Letters Volume 351 ; 351 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; FEMS Microbiology Letters Volume 352 ; 352 ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 2014 ; FEMS Microbiology Letters Volume 353 ; 353 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; FEMS Microbiology Letters Volume 353 ; 353 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; FEMS Microbiology Letters Volume 354 ; 354 ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2014 ; FEMS Microbiology Letters Volume 355 ; 355 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; FEMS Microbiology Letters Volume 355 ; 355 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; FEMS Microbiology Letters Volume 356 ; 356 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; exists ; 2014 ; FEMS Microbiology Letters Volume 357 ; 357 ; >
     au < doNotProcess ; exists ; 2014 ; FEMS Microbiology Letters Volume 358 ; 358 ; >
@@ -7235,7 +7235,7 @@
     au < finished ; crawling ; 2010 ; FEMS Microbiology Reviews Volume 34 ; 34 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2011 ; FEMS Microbiology Reviews Volume 35 ; 35 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2012 ; FEMS Microbiology Reviews Volume 36 ; 36 ; reingest4.clockss.org:8082 >
-    au < finished ; frozen ; 2013 ; FEMS Microbiology Reviews Volume 37 ; 37 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2013 ; FEMS Microbiology Reviews Volume 37 ; 37 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; FEMS Microbiology Reviews Volume 38 ; 38 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; FEMS Microbiology Reviews Volume 39 ; 39 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; exists ; 2016 ; FEMS Microbiology Reviews Volume 40 ; 40 ; >
@@ -7999,7 +7999,7 @@
     au < finished ; crawling ; 2009 ; Geophysical Journal International Volume 176 ; 176 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2009 ; Geophysical Journal International Volume 177 ; 177 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2009 ; Geophysical Journal International Volume 178 ; 178 ; reingest3.clockss.org:8083 >
-    au < finished ; frozen ; 2009 ; Geophysical Journal International Volume 179 ; 179 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2009 ; Geophysical Journal International Volume 179 ; 179 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2010 ; Geophysical Journal International Volume 180 ; 180 ; reingest1.clockss.org:8082 >
     au < zapped ; finished ; 2010 ; Geophysical Journal International Volume 181 ; 181 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2010 ; Geophysical Journal International Volume 182 ; 182 ; reingest2.clockss.org:8085 >
@@ -10189,7 +10189,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; International Journal of Lexicography Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Lexicography Volume 22 ; 22 ; >
     au < zapped ; finished ; 2010 ; International Journal of Lexicography Volume 23 ; 23 ; >
-    au < finished ; frozen ; 2011 ; International Journal of Lexicography Volume 24 ; 24 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2011 ; International Journal of Lexicography Volume 24 ; 24 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2012 ; International Journal of Lexicography Volume 25 ; 25 ; >
     au < finished ; finished ; 2013 ; International Journal of Lexicography Volume 26 ; 26 ; >
     au < finished ; finished ; 2014 ; International Journal of Lexicography Volume 27 ; 27 ; reingest2.clockss.org:8085 >
@@ -10265,7 +10265,7 @@
     au < doNotProcess ; exists ; 2008 ; International Journal of Neuropsychopharmacology Volume 11 ; 11 ; >
     au < finished ; crawling ; 2009 ; International Journal of Neuropsychopharmacology Volume 12 ; 12 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2010 ; International Journal of Neuropsychopharmacology Volume 13 ; 13 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2011 ; International Journal of Neuropsychopharmacology Volume 14 ; 14 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2011 ; International Journal of Neuropsychopharmacology Volume 14 ; 14 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2012 ; International Journal of Neuropsychopharmacology Volume 15 ; 15 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2013 ; International Journal of Neuropsychopharmacology Volume 16 ; 16 ; reingest5.clockss.org:8082 >
     au < zapped ; finished ; 2014 ; International Journal of Neuropsychopharmacology Volume 17 ; 17 ; reingest1.clockss.org:8082 >
@@ -11273,7 +11273,7 @@
     au < finished ; crawling ; 2010 ; Journal of the American Medical Informatics Association Volume 17 ; 17 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2011 ; Journal of the American Medical Informatics Association Volume 18 ; 18 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2012 ; Journal of the American Medical Informatics Association Volume 19 ; 19 ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 2013 ; Journal of the American Medical Informatics Association Volume 20 ; 20 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2013 ; Journal of the American Medical Informatics Association Volume 20 ; 20 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2014 ; Journal of the American Medical Informatics Association Volume 21 ; 21 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; Journal of the American Medical Informatics Association Volume 22 ; 22 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; exists ; 2016 ; Journal of the American Medical Informatics Association Volume 23 ; 23 ; >
@@ -11468,7 +11468,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Antimicrobial Chemotherapy Volume 61 ; 61 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Antimicrobial Chemotherapy Volume 62 ; 62 ; >
     au < finished ; finished ; 2009 ; Journal of Antimicrobial Chemotherapy Volume 63 ; 63 ; >
-    au < finished ; frozen ; 2009 ; Journal of Antimicrobial Chemotherapy Volume 64 ; 64 ; >
+    au < finished ; finished ; 2009 ; Journal of Antimicrobial Chemotherapy Volume 64 ; 64 ; >
     au < finished ; finished ; 2010 ; Journal of Antimicrobial Chemotherapy Volume 65 ; 65 ; >
     au < finished ; finished ; 2011 ; Journal of Antimicrobial Chemotherapy Volume 66 ; 66 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Journal of Antimicrobial Chemotherapy Volume 67 ; 67 ; >
@@ -11936,7 +11936,7 @@
     au < doNotProcess ; exists ; 2004-2005 ; Journal of Consumer Research Volume 31 ; 31 ; >
     au < doNotProcess ; exists ; 2005-2006 ; Journal of Consumer Research Volume 32 ; 32 ; >
     au < doNotProcess ; exists ; 2006-2007 ; Journal of Consumer Research Volume 33 ; 33 ; >
-    au < finished ; frozen ; 2007-2008 ; Journal of Consumer Research Volume 34 ; 34 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2007-2008 ; Journal of Consumer Research Volume 34 ; 34 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2008-2009 ; Journal of Consumer Research Volume 35 ; 35 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2009-2010 ; Journal of Consumer Research Volume 36 ; 36 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2010-2011 ; Journal of Consumer Research Volume 37 ; 37 ; reingest5.clockss.org:8082 >
@@ -13360,7 +13360,7 @@
     au < finished ; crawling ; 2011 ; Journal of Insect Science Volume 11 ; 11 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2012 ; Journal of Insect Science Volume 12 ; 12 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2013 ; Journal of Insect Science Volume 13 ; 13 ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2014 ; Journal of Insect Science Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Journal of Insect Science Volume 14 ; 14 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Journal of Insect Science Volume 15 ; 15 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; exists ; 2016 ; Journal of Insect Science Volume 16 ; 16 ; >
 
@@ -13977,7 +13977,7 @@
     au < finished ; finished ; 2010 ; Journal of Mammalogy Volume 91 ; 91 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2011 ; Journal of Mammalogy Volume 92 ; 92 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2012 ; Journal of Mammalogy Volume 93 ; 93 ; reingest4.clockss.org:8082 >
-    au < finished ; frozen ; 2013 ; Journal of Mammalogy Volume 94 ; 94 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; Journal of Mammalogy Volume 94 ; 94 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Journal of Mammalogy Volume 95 ; 95 ; reingest2.clockss.org:8085 >
     au < zapped ; finished ; 2015 ; Journal of Mammalogy Volume 96 ; 96 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; exists ; 2016 ; Journal of Mammalogy Volume 97 ; 97 ; >
@@ -16991,7 +16991,7 @@
     au < finished ; crawling ; 2010 ; The Monist Volume 93 ; 93 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2011 ; The Monist Volume 94 ; 94 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2012 ; The Monist Volume 95 ; 95 ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2013 ; The Monist Volume 96 ; 96 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2013 ; The Monist Volume 96 ; 96 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; The Monist Volume 97 ; 97 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; The Monist Volume 98 ; 98 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; exists ; 2016 ; The Monist Volume 99 ; 99 ; >
@@ -17139,14 +17139,14 @@
     au < finished ; crawling ; 2010 ; Monthly Notices of the Royal Astronomical Society Volume 403 ; 403 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2010 ; Monthly Notices of the Royal Astronomical Society Volume 404 ; 404 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2010 ; Monthly Notices of the Royal Astronomical Society Volume 405 ; 405 ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2010 ; Monthly Notices of the Royal Astronomical Society Volume 406 ; 406 ; reingest4.clockss.org:8082 >
-    au < finished ; frozen ; 2010 ; Monthly Notices of the Royal Astronomical Society Volume 407 ; 407 ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 2010 ; Monthly Notices of the Royal Astronomical Society Volume 408 ; 408 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2010 ; Monthly Notices of the Royal Astronomical Society Volume 406 ; 406 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2010 ; Monthly Notices of the Royal Astronomical Society Volume 407 ; 407 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2010 ; Monthly Notices of the Royal Astronomical Society Volume 408 ; 408 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2010 ; Monthly Notices of the Royal Astronomical Society Volume 409 ; 409 ; reingest5.clockss.org:8082 >
     au < zapped ; finished ; 2011 ; Monthly Notices of the Royal Astronomical Society Volume 410 ; 410 ; >
     au < zapped ; finished ; 2011 ; Monthly Notices of the Royal Astronomical Society Volume 411 ; 411 ; >
     au < finished ; crawling ; 2011 ; Monthly Notices of the Royal Astronomical Society Volume 412 ; 412 ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2011 ; Monthly Notices of the Royal Astronomical Society Volume 413 ; 413 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2011 ; Monthly Notices of the Royal Astronomical Society Volume 413 ; 413 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2011 ; Monthly Notices of the Royal Astronomical Society Volume 414 ; 414 ; reingest1.clockss.org:8082 >
     au < zapped ; finished ; 2011 ; Monthly Notices of the Royal Astronomical Society Volume 415 ; 415 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2011 ; Monthly Notices of the Royal Astronomical Society Volume 416 ; 416 ; reingest1.clockss.org:8082 >
@@ -17155,7 +17155,7 @@
     au < zapped ; finished ; 2012 ; Monthly Notices of the Royal Astronomical Society Volume 419 ; 419 ; >
     au < zapped ; finished ; 2012 ; Monthly Notices of the Royal Astronomical Society Volume 420 ; 420 ; >
     au < finished ; crawling ; 2012 ; Monthly Notices of the Royal Astronomical Society Volume 421 ; 421 ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2012 ; Monthly Notices of the Royal Astronomical Society Volume 422 ; 422 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2012 ; Monthly Notices of the Royal Astronomical Society Volume 422 ; 422 ; reingest5.clockss.org:8082 >
     au < zapped ; finished ; 2012 ; Monthly Notices of the Royal Astronomical Society Volume 423 ; 423 ; >
     au < finished ; crawling ; 2012 ; Monthly Notices of the Royal Astronomical Society Volume 424 ; 424 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2012 ; Monthly Notices of the Royal Astronomical Society Volume 425 ; 425 ; reingest5.clockss.org:8082 >
@@ -17260,7 +17260,7 @@
     au < finished ; finished ; 2009 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 400 ; 400 ; >
     au < finished ; finished ; 2010 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 401 ; 401 ; >
     au < finished ; crawling ; 2010 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 402 ; 402 ; reingest3.clockss.org:8083 >
-    au < finished ; frozen ; 2010 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 403 ; 403 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2010 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 403 ; 403 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2010 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 404 ; 404 ; >
     au < finished ; finished ; 2010 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 405 ; 405 ; >
     au < finished ; finished ; 2010 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 406 ; 406 ; >
@@ -17443,7 +17443,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Music and Letters Volume 90 ; 90 ; >
     au < finished ; finished ; 2010 ; Music and Letters Volume 91 ; 91 ; >
     au < finished ; finished ; 2011 ; Music and Letters Volume 92 ; 92 ; >
-    au < finished ; frozen ; 2012 ; Music and Letters Volume 93 ; 93 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2012 ; Music and Letters Volume 93 ; 93 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Music and Letters Volume 94 ; 94 ; >
     au < finished ; finished ; 2014 ; Music and Letters Volume 95 ; 95 ; >
     au < finished ; finished ; 2015 ; Music and Letters Volume 96 ; 96 ; reingest1.clockss.org:8082 >
@@ -17625,7 +17625,7 @@
     au < finished ; finished ; 2009 ; Music Theory Spectrum Volume 31 ; 31 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2010 ; Music Theory Spectrum Volume 32 ; 32 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2011 ; Music Theory Spectrum Volume 33 ; 33 ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 2012 ; Music Theory Spectrum Volume 34 ; 34 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2012 ; Music Theory Spectrum Volume 34 ; 34 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Music Theory Spectrum Volume 35 ; 35 ; >
     au < zapped ; finished ; 2014 ; Music Theory Spectrum Volume 36 ; 36 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; Music Theory Spectrum Volume 37 ; 37 ; reingest2.clockss.org:8085 >
@@ -17803,7 +17803,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Mutagenesis Volume 24 ; 24 ; >
     au < finished ; finished ; 2010 ; Mutagenesis Volume 25 ; 25 ; >
     au < finished ; finished ; 2011 ; Mutagenesis Volume 26 ; 26 ; >
-    au < finished ; frozen ; 2012 ; Mutagenesis Volume 27 ; 27 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2012 ; Mutagenesis Volume 27 ; 27 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; Mutagenesis Volume 28 ; 28 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Mutagenesis Volume 29 ; 29 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Mutagenesis Volume 30 ; 30 ; reingest2.clockss.org:8085 >
@@ -18845,7 +18845,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Oxford Art Journal Volume 32 ; 32 ; >
     au < finished ; finished ; 2010 ; Oxford Art Journal Volume 33 ; 33 ; >
     au < finished ; finished ; 2011 ; Oxford Art Journal Volume 34 ; 34 ; >
-    au < finished ; frozen ; 2012 ; Oxford Art Journal Volume 35 ; 35 ; >
+    au < finished ; finished ; 2012 ; Oxford Art Journal Volume 35 ; 35 ; >
     au < finished ; finished ; 2013 ; Oxford Art Journal Volume 36 ; 36 ; >
     au < finished ; finished ; 2014 ; Oxford Art Journal Volume 37 ; 37 ; >
     au < finished ; finished ; 2015 ; Oxford Art Journal Volume 38 ; 38 ; reingest2.clockss.org:8085 >
@@ -19142,7 +19142,7 @@
     param[base_url] = http://femspd.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
 
-    au < finished ; frozen ; 2013 ; Pathogens and Disease Volume 67 ; 67 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; Pathogens and Disease Volume 67 ; 67 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2013 ; Pathogens and Disease Volume 68 ; 68 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2013 ; Pathogens and Disease Volume 69 ; 69 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Pathogens and Disease Volume 70 ; 70 ; reingest2.clockss.org:8085 >
@@ -20987,7 +20987,7 @@
     au < doNotProcess ; exists ; 2006 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 59 ; 59 ; >
     au < doNotProcess ; exists ; 2007 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 60 ; 60 ; >
     au < doNotProcess ; exists ; 2008 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 61 ; 61 ; >
-    au < finished ; frozen ; 2009 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 62 ; 62 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2009 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 62 ; 62 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2010 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 63 ; 63 ; >
     au < finished ; finished ; 2011 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 64 ; 64 ; >
     au < finished ; finished ; 2012 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 65 ; 65 ; >
@@ -22084,7 +22084,7 @@
     au < zapped ; finished ; 2009 ; Screen Volume 50 ; 50 ; >
     au < finished ; finished ; 2010 ; Screen Volume 51 ; 51 ; >
     au < finished ; finished ; 2011 ; Screen Volume 52 ; 52 ; >
-    au < finished ; frozen ; 2012 ; Screen Volume 53 ; 53 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2012 ; Screen Volume 53 ; 53 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Screen Volume 54 ; 54 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Screen Volume 55 ; 55 ; >
     au < finished ; finished ; 2015 ; Screen Volume 56 ; 56 ; reingest3.clockss.org:8083 >
@@ -22469,7 +22469,7 @@
     au < finished ; finished ; 2009 ; Social Science Japan Journal Volume 12 ; 12 ; >
     au < finished ; finished ; 2010 ; Social Science Japan Journal Volume 13 ; 13 ; >
     au < finished ; finished ; 2011 ; Social Science Japan Journal Volume 14 ; 14 ; >
-    au < finished ; frozen ; 2012 ; Social Science Japan Journal Volume 15 ; 15 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2012 ; Social Science Japan Journal Volume 15 ; 15 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Social Science Japan Journal Volume 16 ; 16 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Social Science Japan Journal Volume 17 ; 17 ; >
     au < finished ; finished ; 2015 ; Social Science Japan Journal Volume 18 ; 18 ; reingest3.clockss.org:8083 >
@@ -22586,7 +22586,7 @@
     au < zapped ; finished ; 2009 ; Social Work Research Volume 33 ; 33 ; >
     au < zapped ; finished ; 2010 ; Social Work Research Volume 34 ; 34 ; >
     au < finished ; finished ; 2011 ; Social Work Research Volume 35 ; 35 ; >
-    au < finished ; frozen ; 2012 ; Social Work Research Volume 36 ; 36 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2012 ; Social Work Research Volume 36 ; 36 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; Social Work Research Volume 37 ; 37 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Social Work Research Volume 38 ; 38 ; >
     au < finished ; finished ; 2015 ; Social Work Research Volume 39 ; 39 ; reingest3.clockss.org:8083 >
@@ -23262,7 +23262,7 @@
     au < doNotProcess ; exists ; 2002 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 96 ; 96 ; >
     au < doNotProcess ; exists ; 2003 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 97 ; 97 ; >
     au < doNotProcess ; exists ; 2004 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 98 ; 98 ; >
-    au < finished ; frozen ; 2005 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 99 ; 99 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2005 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 99 ; 99 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2006 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 100 ; 100 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2008 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 101 ; 101 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2009 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 102 ; 102 ; >
@@ -24998,7 +24998,7 @@
       au < doNotProcess ; exists ; 2005 ; Journal of Neuropathology & Experimental Neurology Volume 64 ; 64 ; >
       au < doNotProcess ; exists ; 2006 ; Journal of Neuropathology & Experimental Neurology Volume 65 ; 65 ; >
       au < doNotProcess ; exists ; 2007 ; Journal of Neuropathology & Experimental Neurology Volume 66 ; 66 ; >
-      au < finished ; frozen ; 2008 ; Journal of Neuropathology & Experimental Neurology Volume 67 ; 67 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2008 ; Journal of Neuropathology & Experimental Neurology Volume 67 ; 67 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2009 ; Journal of Neuropathology & Experimental Neurology Volume 68 ; 68 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; exists ; 2010 ; Journal of Neuropathology & Experimental Neurology Volume 69 ; 69 ; >
       au < finished ; crawling ; 2011 ; Journal of Neuropathology & Experimental Neurology Volume 70 ; 70 ; reingest3.clockss.org:8083 >
@@ -25038,7 +25038,7 @@
       au < doNotProcess ; exists ; 2008 ; Journal of Travel Medicine Volume 15 ; 15 ; >
       au < finished ; finished ; 2009 ; Journal of Travel Medicine Volume 16 ; 16 ; >
       au < finished ; crawling ; 2010 ; Journal of Travel Medicine Volume 17 ; 17 ; reingest3.clockss.org:8083 >
-      au < finished ; frozen ; 2011 ; Journal of Travel Medicine Volume 18 ; 18 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2011 ; Journal of Travel Medicine Volume 18 ; 18 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2012 ; Journal of Travel Medicine Volume 19 ; 19 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2013 ; Journal of Travel Medicine Volume 20 ; 20 ; >
       au < finished ; finished ; 2014 ; Journal of Travel Medicine Volume 21 ; 21 ; reingest5.clockss.org:8082 >

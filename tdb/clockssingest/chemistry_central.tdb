@@ -24,14 +24,14 @@
       param[journal_issn] = 1752-153X
       
       au < doNotProcess ; exists ; 2007 ; Chemistry Central Journal Volume 1 ; 1 ; >
-      au < frozen ; exists ; 2008 ; Chemistry Central Journal Volume 2 ; 2 ; >
-      au < frozen ; exists ; 2009 ; Chemistry Central Journal Volume 3 ; 3 ; >
-      au < frozen ; exists ; 2010 ; Chemistry Central Journal Volume 4 ; 4 ; >
-      au < frozen ; exists ; 2011 ; Chemistry Central Journal Volume 5 ; 5 ; >
-      au < frozen ; exists ; 2012 ; Chemistry Central Journal Volume 6 ; 6 ; >
-      au < frozen ; exists ; 2013 ; Chemistry Central Journal Volume 7 ; 7 ; >
-      au < frozen ; exists ; 2014 ; Chemistry Central Journal Volume 8 ; 8 ; >
-      au < frozen ; exists ; 2015 ; Chemistry Central Journal Volume 9 ; 9 ; >
+      au < finished ; manifest ; 2008 ; Chemistry Central Journal Volume 2 ; 2 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2009 ; Chemistry Central Journal Volume 3 ; 3 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2010 ; Chemistry Central Journal Volume 4 ; 4 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2011 ; Chemistry Central Journal Volume 5 ; 5 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2012 ; Chemistry Central Journal Volume 6 ; 6 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2013 ; Chemistry Central Journal Volume 7 ; 7 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2014 ; Chemistry Central Journal Volume 8 ; 8 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2015 ; Chemistry Central Journal Volume 9 ; 9 ; reingest2.clockss.org:8085 >
       
   }
   
@@ -53,14 +53,14 @@
     au < doNotProcess ; exists ; 2005 ; Geochemical Transactions Volume 6 ; 6 ; >
     au < doNotProcess ; exists ; 2006 ; Geochemical Transactions Volume 7 ; 7 ; >
     au < doNotProcess ; exists ; 2007 ; Geochemical Transactions Volume 8 ; 8 ; >
-    au < frozen ; exists ; 2008 ; Geochemical Transactions Volume 9 ; 9 ; >
-    au < frozen ; exists ; 2009 ; Geochemical Transactions Volume 10 ; 10 ; >
+    au < finished ; manifest ; 2008 ; Geochemical Transactions Volume 9 ; 9 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2009 ; Geochemical Transactions Volume 10 ; 10 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2010 ; Geochemical Transactions Volume 11 ; 11 ; >
-    au < frozen ; exists ; 2011 ; Geochemical Transactions Volume 12 ; 12 ; >
-    au < frozen ; exists ; 2012 ; Geochemical Transactions Volume 13 ; 13 ; >
-    au < frozen ; exists ; 2013 ; Geochemical Transactions Volume 14 ; 14 ; >
-    au < frozen ; exists ; 2014 ; Geochemical Transactions Volume 15 ; 15 ; >
-    au < frozen ; exists ; 2015 ; Geochemical Transactions Volume 16 ; 16 ; >
+    au < finished ; manifest ; 2011 ; Geochemical Transactions Volume 12 ; 12 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2012 ; Geochemical Transactions Volume 13 ; 13 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2013 ; Geochemical Transactions Volume 14 ; 14 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2014 ; Geochemical Transactions Volume 15 ; 15 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2015 ; Geochemical Transactions Volume 16 ; 16 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -75,9 +75,9 @@
     param[base_url] = http://www.heritagesciencejournal.com/
     param[journal_issn] = 2050-7445
     
-    au < frozen ; exists ; 2013 ; Heritage Science Volume 1 ; 1 ; >
+    au < finished ; manifest ; 2013 ; Heritage Science Volume 1 ; 1 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Heritage Science Volume 2 ; 2 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2015 ; Heritage Science Volume 3 ; 3 ; >
+    au < finished ; manifest ; 2015 ; Heritage Science Volume 3 ; 3 ; reingest3.clockss.org:8083 >
 
   }
   
@@ -92,13 +92,13 @@
     param[base_url] = http://www.jcheminf.com/
     param[journal_issn] = 1758-2946
     
-    au < frozen ; exists ; 2009 ; Journal of Cheminformatics Volume 1 ; 1 ; >
-    au < frozen ; exists ; 2010 ; Journal of Cheminformatics Volume 2 ; 2 ; >
-    au < frozen ; exists ; 2011 ; Journal of Cheminformatics Volume 3 ; 3 ; >
-    au < frozen ; exists ; 2012 ; Journal of Cheminformatics Volume 4 ; 4 ; >
-    au < frozen ; exists ; 2013 ; Journal of Cheminformatics Volume 5 ; 5 ; >
-    au < frozen ; exists ; 2014 ; Journal of Cheminformatics Volume 6 ; 6 ; >
-    au < frozen ; exists ; 2015 ; Journal of Cheminformatics Volume 7 ; 7 ; >
+    au < finished ; manifest ; 2009 ; Journal of Cheminformatics Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2010 ; Journal of Cheminformatics Volume 2 ; 2 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2011 ; Journal of Cheminformatics Volume 3 ; 3 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2012 ; Journal of Cheminformatics Volume 4 ; 4 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2013 ; Journal of Cheminformatics Volume 5 ; 5 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2014 ; Journal of Cheminformatics Volume 6 ; 6 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2015 ; Journal of Cheminformatics Volume 7 ; 7 ; reingest3.clockss.org:8083 >
 
   }
   
@@ -113,12 +113,12 @@
     param[base_url] = http://www.jsystchem.com/
     param[journal_issn] = 1759-2208
     
-    au < frozen ; exists ; 2010 ; Journal of Systems Chemistry Volume 1 ; 1 ; >
-    au < frozen ; exists ; 2011 ; Journal of Systems Chemistry Volume 2 ; 2 ; >
-    au < frozen ; exists ; 2012 ; Journal of Systems Chemistry Volume 3 ; 3 ; >
-    au < frozen ; exists ; 2013 ; Journal of Systems Chemistry Volume 4 ; 4 ; >
-    au < frozen ; exists ; 2014 ; Journal of Systems Chemistry Volume 5 ; 5 ; >
-    au < frozen ; exists ; 2015 ; Journal of Systems Chemistry Volume 6 ; 6 ; >
+    au < finished ; manifest ; 2010 ; Journal of Systems Chemistry Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2011 ; Journal of Systems Chemistry Volume 2 ; 2 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2012 ; Journal of Systems Chemistry Volume 3 ; 3 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2013 ; Journal of Systems Chemistry Volume 4 ; 4 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2014 ; Journal of Systems Chemistry Volume 5 ; 5 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2015 ; Journal of Systems Chemistry Volume 6 ; 6 ; reingest3.clockss.org:8083 >
 
   }
   
@@ -133,9 +133,9 @@
     param[base_url] = http://www.sustainablechemicalprocesses.com/
     param[journal_issn] = 2043-7129
     
-    au < frozen ; exists ; 2013 ; Sustainable Chemical Processes Volume 1 ; 1 ; >
-    au < frozen ; exists ; 2014 ; Sustainable Chemical Processes Volume 2 ; 2 ; >
-    au < frozen ; exists ; 2015 ; Sustainable Chemical Processes Volume 3 ; 3 ; >
+    au < finished ; manifest ; 2013 ; Sustainable Chemical Processes Volume 1 ; 1 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2014 ; Sustainable Chemical Processes Volume 2 ; 2 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2015 ; Sustainable Chemical Processes Volume 3 ; 3 ; reingest1.clockss.org:8082 >
 
   }
   

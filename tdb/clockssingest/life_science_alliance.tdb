@@ -8,7 +8,7 @@
   >
 
   plugin = org.lockss.plugin.highwire.lsa.ClockssLifeScienceAllianceDrupalPlugin
-  implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
+  implicit < status ; status2 ; year ; name ; param[volume_name] ; param[base_url] ; hidden[proxy] >
   #Alliance between Rockefeller University Press, EMBO Press, and Cold Spring Harbor Lab Press 
 
   {
@@ -18,10 +18,11 @@
       issn = 2575-1077
     >
 
-    param[base_url] = http://www.life-science-alliance.org/
+    #param[base_url] = http://www.life-science-alliance.org/
 
-    au < frozen ; exists ; 2018 ; Life Science Alliance Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2019 ; Life Science Alliance Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2018 ; Life Science Alliance Volume 1 ; 1 ; http://www.life-science-alliance.org/ ; >
+    au < deepCrawl ; exists ; 2019 ; Life Science Alliance Volume 2 ; 2 ; http://www.life-science-alliance.org/ ; >
+    au < expected ; exists ; 2020 ; Life Science Alliance Volume 3 ; 3 ; https://www.life-science-alliance.org/ ; >
 
   }
 
