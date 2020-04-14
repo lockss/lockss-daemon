@@ -566,20 +566,6 @@
 
   {
     title <
-      name = Journal of Prescribing Practice ;
-      issn = 2631-8385 ;
-      eissn = 2631-8393
-    >
-
-    param[journal_id] = jprp
-
-    au < manifest ; exists ; 2019 ; Journal of Prescribing Practice Volume 1 ; 1 ; https://www.magonlinelibrary.com/ ; >
-    au < manifest ; exists ; 2020 ; Journal of Prescribing Practice Volume 2 ; 2 ; https://www.magonlinelibrary.com/ ; >
-
-  }
-
-  {
-    title <
       name = Journal of Renal Nursing ;
       issn = 2041-1448 ;
       eissn = 2052-2894
