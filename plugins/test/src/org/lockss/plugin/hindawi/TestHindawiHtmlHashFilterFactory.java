@@ -1,4 +1,4 @@
-package org.lockss.plugin.hindawi;
+package org.lockss.plugin.newhindawi;
 
 import org.lockss.config.Configuration;
 import org.lockss.daemon.ConfigParamDescr;
@@ -15,7 +15,7 @@ import org.lockss.util.StringUtil;
 import java.io.InputStream;
 import java.util.Properties;
 
-public class TestHindawiHtmlHashFilterFactory extends LockssTestCase {
+public class TestNewHindawiHtmlHashFilterFactory extends LockssTestCase {
     private Hindawi2020HtmlHashFilterFactory fact;
 
     private ArchivalUnit mau;

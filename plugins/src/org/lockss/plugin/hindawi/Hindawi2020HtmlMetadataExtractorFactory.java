@@ -43,9 +43,9 @@ import org.lockss.util.Logger;
 
 import java.io.IOException;
 
-public class Hindawi2020HtmlMetadataExtractorFactory implements
+public class HindawiHtmlMetadataExtractorFactory implements
     FileMetadataExtractorFactory {
-  static Logger log = Logger.getLogger(Hindawi2020HtmlMetadataExtractorFactory.class);
+  static Logger log = Logger.getLogger(NewHindawiHtmlMetadataExtractorFactory.class);
 
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(
