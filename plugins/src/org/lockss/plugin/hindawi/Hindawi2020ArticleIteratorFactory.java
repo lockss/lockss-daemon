@@ -47,7 +47,7 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.regex.Pattern;
 
-public class NewHindawiArticleIteratorFactory
+public class Hindawi2020ArticleIteratorFactory
     implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
 
   protected static final String ROOT_TEMPLATE_HTML = "\"%sjournals/%s/%d/\", base_url, journal_id, year";

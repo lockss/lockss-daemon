@@ -1,13 +1,11 @@
 package org.lockss.plugin.atypon.seg;
 
-import org.apache.commons.io.FileUtils;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.definable.DefinableArchivalUnit;
 import org.lockss.plugin.definable.DefinablePlugin;
-import org.lockss.plugin.newhindawi.NewHindawiHtmlHashFilterFactory;
 import org.lockss.test.ConfigurationUtil;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.StringInputStream;

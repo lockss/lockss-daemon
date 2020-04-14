@@ -159,7 +159,7 @@
     <map>
       <entry>
         <string>*</string>
-        <string>org.lockss.plugin.hindawi.HindawiHtmlMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.hindawi.Hindawi2020HtmlMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>  
@@ -168,7 +168,7 @@
     <map>
       <entry>
         <string>*</string>
-        <string>org.lockss.plugin.hindawi.HindawiHtmlMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.hindawi.Hindawi2020HtmlMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>
