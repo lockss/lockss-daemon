@@ -611,7 +611,7 @@
     au < finished ; manifest ; 2014 ; Bioscience Reports Volume 34 ; 34 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2015 ; Bioscience Reports Volume 35 ; 35 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2016 ; Bioscience Reports Volume 36 ; 36 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; Bioscience Reports Volume 37 ; 37 ; >
+    au < finished ; manifest ; 2017 ; Bioscience Reports Volume 37 ; 37 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2018 ; Bioscience Reports Volume 38 ; 38 ; >
     au < doNotProcess ; exists ; 2019 ; Bioscience Reports Volume 39 ; 39 ; >
 
@@ -766,7 +766,7 @@
 
     param[base_url] = http://www.neuronalsignaling.org/
 
-    au < frozen ; exists ; 2017 ; Neuronal Signaling Volume 1 ; 1 ; >
+    au < finished ; manifest ; 2017 ; Neuronal Signaling Volume 1 ; 1 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2018 ; Neuronal Signaling Volume 2 ; 2 ; >
     au < doNotProcess ; exists ; 2019 ; Neuronal Signaling Volume 3 ; 3 ; >
 
