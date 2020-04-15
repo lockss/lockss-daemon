@@ -403,7 +403,7 @@
 #      param[base_url] = https://openscreensjournal.com/
 
       au < finished ; manifest ; 2018 ; 1 ; Open Screens Volume 2018 ; 2018 ; https://openscreensjournal.com/ ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2019 ; 2 ; Open Screens Volume 2019 ; 2019 ; https://openscreensjournal.com/ ; >
+      au < deepCrawl ; exists ; 2019 ; 2 ; Open Screens Volume 2019 ; 2019 ; https://openscreensjournal.com/ ; >
 
   }
 
@@ -1080,7 +1080,7 @@
       au < finished ; crawling ; 2016 ; 15 ; Data Science Journal Volume 2016 ; 2016 ; http://datascience.codata.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; 16 ; Data Science Journal Volume 2017 ; 2017 ; http://datascience.codata.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 17 ; Data Science Journal Volume 2018 ; 2018 ; https://datascience.codata.org/ ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2019 ; 18 ; Data Science Journal Volume 2019 ; 2019 ; https://datascience.codata.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; 18 ; Data Science Journal Volume 2019 ; 2019 ; https://datascience.codata.org/ ; >
 
   }
 
@@ -1357,7 +1357,7 @@
       au < finished ; finished ; 2015 ; 4 ; Journal of Open Archaeology Data Volume 2015 ; 2015 ; http://openarchaeologydata.metajnl.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; 5 ; Journal of Open Archaeology Data Volume 2016 ; 2016 ; http://openarchaeologydata.metajnl.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2018 ; 6 ; Journal of Open Archaeology Data Volume 2018 ; 2018 ; https://openarchaeologydata.metajnl.com/ ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2019 ; 7 ; Journal of Open Archaeology Data Volume 2019 ; 2019 ; https://openarchaeologydata.metajnl.com/ ; >
+      au < deepCrawl ; exists ; 2019 ; 7 ; Journal of Open Archaeology Data Volume 2019 ; 2019 ; https://openarchaeologydata.metajnl.com/ ; >
 
   }
 
@@ -1506,7 +1506,7 @@
       au < finished ; crawling ; 2016 ; 100 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2016 ; 2016 ; http://www.jbsr.be/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; 101 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2017 ; 2017 ; http://www.jbsr.be/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 102 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2018 ; 2018 ; https://www.jbsr.be/ ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2019 ; 103 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2019 ; 2019 ; https://www.jbsr.be/ ; >
+      au < deepCrawl ; exists ; 2019 ; 103 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2019 ; 2019 ; https://www.jbsr.be/ ; >
 
   }
 
@@ -1832,7 +1832,7 @@
       au < finished ; crawling ; 2016 ; 5 ; Secularism and Nonreligion Volume 2016 ; 2016 ; https://secularismandnonreligion.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2017 ; 6 ; Secularism and Nonreligion Volume 2017 ; 2017 ; https://secularismandnonreligion.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 7 ; Secularism and Nonreligion Volume 2018 ; 2018 ; https://secularismandnonreligion.org/ ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2019 ; 8 ; Secularism and Nonreligion Volume 2019 ; 2019 ; https://secularismandnonreligion.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; 8 ; Secularism and Nonreligion Volume 2019 ; 2019 ; https://secularismandnonreligion.org/ ; >
 
     }
   }
@@ -2459,7 +2459,7 @@
       au < finished ; crawling ; 2016 ; 12 ; Journal of Social Intervention Volume 2016 ; 2016 ; https://www.journalsi.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; 13 ; Journal of Social Intervention Volume 2017 ; 2017 ; https://www.journalsi.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 14 ; Journal of Social Intervention Volume 2018 ; 2018 ; https://www.journalsi.org/ ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2019 ; 15 ; Journal of Social Intervention Volume 2019 ; 2019 ; https://www.journalsi.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; 15 ; Journal of Social Intervention Volume 2019 ; 2019 ; https://www.journalsi.org/ ; >
       au < expected ; exists ; 2020 ; 16 ; Journal of Social Intervention Volume 2020 ; 2020 ; https://www.journalsi.org/ ; >
 
   }
@@ -2632,7 +2632,7 @@
       au < finished ; crawling ; 2016 ; 12 ; Utrecht Law Review Volume 2016 ; 2016 ; https://www.utrechtlawreview.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; 13 ; Utrecht Law Review Volume 2017 ; 2017 ; https://www.utrechtlawreview.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 14 ; Utrecht Law Review Volume 2018 ; 2018 ; https://www.utrechtlawreview.org/ ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2019 ; 15 ; Utrecht Law Review Volume 2019 ; 2019 ; https://www.utrechtlawreview.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; 15 ; Utrecht Law Review Volume 2019 ; 2019 ; https://www.utrechtlawreview.org/ ; >
       au < expected ; exists ; 2020 ; 16 ; Utrecht Law Review Volume 2020 ; 2020 ; https://www.utrechtlawreview.org/ ; >
 
   }

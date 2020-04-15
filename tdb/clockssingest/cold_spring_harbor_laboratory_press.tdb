@@ -429,7 +429,7 @@
       au < finished ; crawling ; 2016 ; RNA Volume 22 ; 22 ; http://rnajournal.cshlp.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; RNA Volume 23 ; 23 ; http://rnajournal.cshlp.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2018 ; RNA Volume 24 ; 24 ; http://rnajournal.cshlp.org/ ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2019 ; RNA Volume 25 ; 25 ; https://rnajournal.cshlp.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; RNA Volume 25 ; 25 ; https://rnajournal.cshlp.org/ ; >
       au < manifest ; exists ; 2020 ; RNA Volume 26 ; 26 ; https://rnajournal.cshlp.org/ ; >
 
     }

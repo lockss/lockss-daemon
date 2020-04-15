@@ -133,7 +133,7 @@
       au < finished ; manifest ; 2016 ; The Eugene O'Neill Review Volume 37 ; 2016 ; http://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; The Eugene O'Neill Review Volume 38 ; 2017 ; http://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2018 ; The Eugene O'Neill Review Volume 39 ; 2018 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2019 ; The Eugene O'Neill Review Volume 40 ; 2019 ; https://www.jstor.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; The Eugene O'Neill Review Volume 40 ; 2019 ; https://www.jstor.org/ ; >
       au < expected ; exists ; 2020 ; The Eugene O'Neill Review Volume 41 ; 2020 ; https://www.jstor.org/ ; >
 
   }
@@ -304,7 +304,7 @@
       au < finished ; manifest ; 2016 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 4 ; 2016 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 5 ; 2017 ; http://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2018 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 6 ; 2018 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2019 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 7 ; 2019 ; https://www.jstor.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 7 ; 2019 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2020 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 8 ; 2020 ; https://www.jstor.org/ ; >
 
   }
@@ -784,7 +784,7 @@
       au < frozen ; exists ; 2016 ; Utopian Studies Volume 27 ; 2016 ; http://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2017 ; Utopian Studies Volume 28 ; 2017 ; http://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2018 ; Utopian Studies Volume 29 ; 2018 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2019 ; Utopian Studies Volume 30 ; 2019 ; https://www.jstor.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; Utopian Studies Volume 30 ; 2019 ; https://www.jstor.org/ ; >
       au < expected ; exists ; 2020 ; Utopian Studies Volume 31 ; 2020 ; https://www.jstor.org/ ; >
 
   }
@@ -871,7 +871,7 @@
       au < frozen ; exists ; 2016 ; Bustan - The Middle East Book Review Volume 2016 ; 2016 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2017 ; Bustan - The Middle East Book Review Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2018 ; Bustan - The Middle East Book Review Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2019 ; Bustan - The Middle East Book Review Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; Bustan - The Middle East Book Review Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
       au < expected ; exists ; 2020 ; Bustan - The Middle East Book Review Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
 
   }
@@ -1012,7 +1012,7 @@
       au < exists ; exists ; 2016 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 2016 ; 2016 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2017 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2018 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2019 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2020 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
 
   }
@@ -1315,7 +1315,7 @@
 
       au < frozen ; exists ; 2017 ; Journal of Posthuman Studies Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2018 ; Journal of Posthuman Studies Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2019 ; Journal of Posthuman Studies Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; Journal of Posthuman Studies Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
       au < expected ; exists ; 2020 ; Journal of Posthuman Studies Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
 
   }
@@ -1380,7 +1380,7 @@
       au < frozen ; exists ; 2016 ; Journal of Theological Interpretation Volume 2016 ; 2016 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2017 ; Journal of Theological Interpretation Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2018 ; Journal of Theological Interpretation Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2019 ; Journal of Theological Interpretation Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; Journal of Theological Interpretation Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
       au < expected ; exists ; 2020 ; Journal of Theological Interpretation Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
 
   }
@@ -1737,7 +1737,7 @@
       au < frozen ; exists ; 2016 ; The Journal of World Christianity Volume 2016 ; 2016 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2017 ; The Journal of World Christianity Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2018 ; The Journal of World Christianity Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2019 ; The Journal of World Christianity Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; The Journal of World Christianity Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
       au < expected ; exists ; 2020 ; The Journal of World Christianity Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
 
   }

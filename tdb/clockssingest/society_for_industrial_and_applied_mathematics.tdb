@@ -481,7 +481,7 @@
     au < finished ; manifest ; 2016 ; Journal on Uncertainty Quantification Volume 4 ; 4 ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2017 ; Journal on Uncertainty Quantification Volume 5 ; 5 ; http://epubs.siam.org/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2018 ; Journal on Uncertainty Quantification Volume 6 ; 6 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2019 ; Journal on Uncertainty Quantification Volume 7 ; 7 ; https://epubs.siam.org/ ; >
+    au < deepCrawl ; exists ; 2019 ; Journal on Uncertainty Quantification Volume 7 ; 7 ; https://epubs.siam.org/ ; >
     au < expected ; exists ; 2020 ; Journal on Uncertainty Quantification Volume 8 ; 8 ; https://epubs.siam.org/ ; >
 
   }
