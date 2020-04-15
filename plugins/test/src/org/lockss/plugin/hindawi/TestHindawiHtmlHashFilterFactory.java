@@ -33,7 +33,7 @@ public class TestHindawiHtmlHashFilterFactory extends LockssTestCase {
 
         DefinablePlugin ap = new DefinablePlugin();
         ap.initPlugin(getMockLockssDaemon(),
-                "org.lockss.plugin.newhindawi.ClockssNewHindawiPublishingCorporationPlugin");
+                "org.lockss.plugin.hindawi.ClockssHindawiPlugin");
         mau = (DefinableArchivalUnit) ap.createAu(config);
     }
 
