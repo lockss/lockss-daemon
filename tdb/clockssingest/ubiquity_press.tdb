@@ -21,11 +21,11 @@
       comment[publisher] = Ganzaga Library Publishing
 #      param[base_url] = https://jhs.press.gonzaga.edu/
 
-      au < crawling ; exists ; 2002 ; 1 ; Journal of Hate Studies Volume 2002 ; 2002 ; https://jhs.press.gonzaga.edu/ ; >
+      au < frozen ; exists ; 2002 ; 1 ; Journal of Hate Studies Volume 2002 ; 2002 ; https://jhs.press.gonzaga.edu/ ; >
       au < crawling ; exists ; 2003 ; 2 ; Journal of Hate Studies Volume 2003 ; 2003 ; https://jhs.press.gonzaga.edu/ ; >
       au < crawling ; exists ; 2004 ; 3 ; Journal of Hate Studies Volume 2004 ; 2004 ; https://jhs.press.gonzaga.edu/ ; >
       au < crawling ; exists ; 2005 ; 4 ; Journal of Hate Studies Volume 2005 ; 2005 ; https://jhs.press.gonzaga.edu/ ; >
-      au < crawling ; exists ; 2006 ; 5 ; Journal of Hate Studies Volume 2006 ; 2006 ; https://jhs.press.gonzaga.edu/ ; >
+      au < frozen ; exists ; 2006 ; 5 ; Journal of Hate Studies Volume 2006 ; 2006 ; https://jhs.press.gonzaga.edu/ ; >
       au < crawling ; exists ; 2007 ; 6 ; Journal of Hate Studies Volume 2007 ; 2007 ; https://jhs.press.gonzaga.edu/ ; >
       au < frozen ; exists ; 2009 ; 7 ; Journal of Hate Studies Volume 2009 ; 2009 ; https://jhs.press.gonzaga.edu/ ; >
       au < crawling ; exists ; 2010 ; 8 ; Journal of Hate Studies Volume 2010 ; 2010 ; https://jhs.press.gonzaga.edu/ ; >
@@ -33,7 +33,7 @@
       au < crawling ; exists ; 2012 ; 10 ; Journal of Hate Studies Volume 2012 ; 2012 ; https://jhs.press.gonzaga.edu/ ; >
       au < crawling ; exists ; 2013 ; 11 ; Journal of Hate Studies Volume 2013 ; 2013 ; https://jhs.press.gonzaga.edu/ ; >
       au < crawling ; exists ; 2014 ; 12 ; Journal of Hate Studies Volume 2014 ; 2014 ; https://jhs.press.gonzaga.edu/ ; >
-      au < crawling ; exists ; 2016 ; 13 ; Journal of Hate Studies Volume 2016 ; 2016 ; https://jhs.press.gonzaga.edu/ ; >
+      au < frozen ; exists ; 2016 ; 13 ; Journal of Hate Studies Volume 2016 ; 2016 ; https://jhs.press.gonzaga.edu/ ; >
       au < crawling ; exists ; 2019 ; 14-15 ; Journal of Hate Studies Volume 2019 ; 2019 ; https://jhs.press.gonzaga.edu/ ; >
 
   }
@@ -65,13 +65,13 @@
       au < manifest ; exists ; 1997 ; 1 ; Redescriptions Volume 1997 ; 1997 ; https://journal-redescriptions.org/ ; >
       au < manifest ; exists ; 1998 ; 2 ; Redescriptions Volume 1998 ; 1998 ; https://journal-redescriptions.org/ ; >
       au < manifest ; exists ; 1999 ; 3 ; Redescriptions Volume 1999 ; 1999 ; https://journal-redescriptions.org/ ; >
-      au < crawling ; exists ; 2000 ; 4 ; Redescriptions Volume 2000 ; 2000 ; https://journal-redescriptions.org/ ; >
+      au < frozen ; exists ; 2000 ; 4 ; Redescriptions Volume 2000 ; 2000 ; https://journal-redescriptions.org/ ; >
       au < crawling ; exists ; 2001 ; 5 ; Redescriptions Volume 2001 ; 2001 ; https://journal-redescriptions.org/ ; >
       au < frozen ; exists ; 2002 ; 6 ; Redescriptions Volume 2002 ; 2002 ; https://journal-redescriptions.org/ ; >
       au < crawling ; exists ; 2003 ; 7 ; Redescriptions Volume 2003 ; 2003 ; https://journal-redescriptions.org/ ; >
       au < crawling ; exists ; 2004 ; 8 ; Redescriptions Volume 2004 ; 2004 ; https://journal-redescriptions.org/ ; >
       au < frozen ; exists ; 2005 ; 9 ; Redescriptions Volume 2005 ; 2005 ; https://journal-redescriptions.org/ ; >
-      au < crawling ; exists ; 2006 ; 10 ; Redescriptions Volume 2006 ; 2006 ; https://journal-redescriptions.org/ ; >
+      au < frozen ; exists ; 2006 ; 10 ; Redescriptions Volume 2006 ; 2006 ; https://journal-redescriptions.org/ ; >
       au < frozen ; exists ; 2007 ; 11 ; Redescriptions Volume 2007 ; 2007 ; https://journal-redescriptions.org/ ; >
       au < frozen ; exists ; 2008 ; 12 ; Redescriptions Volume 2008 ; 2008 ; https://journal-redescriptions.org/ ; >
       au < crawling ; exists ; 2009 ; 13 ; Redescriptions Volume 2009 ; 2009 ; https://journal-redescriptions.org/ ; >
@@ -579,7 +579,7 @@
       au < finished ; crawling ; 2016 ; 2 ; Le foucaldien Volume 2016 ; 2016 ; https://foucaldien.net/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; 3 ; Le foucaldien Volume 2017 ; 2017 ; https://foucaldien.net/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 4 ; Le foucaldien Volume 2018 ; 2018 ; https://foucaldien.net/ ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2019 ; 5 ; Le foucaldien Volume 2019 ; 2019 ; https://foucaldien.net/ ; >
+      au < frozen ; exists ; 2019 ; 5 ; Le foucaldien Volume 2019 ; 2019 ; https://foucaldien.net/ ; >
 
   }
 
@@ -1636,7 +1636,7 @@
       au < crawling ; exists ; 2011 ; 6 ; Global Heart Volume 2011 ; 2011 ;  https://globalheartjournal.com/ ; >
       au < crawling ; exists ; 2012 ; 7 ; Global Heart Volume 2012 ; 2012 ;  https://globalheartjournal.com/ ; >
       au < crawling ; exists ; 2013 ; 8 ; Global Heart Volume 2013 ; 2013 ;  https://globalheartjournal.com/ ; >
-      au < crawling ; exists ; 2014 ; 9 ; Global Heart Volume 2014 ; 2014 ;  https://globalheartjournal.com/ ; >
+      au < frozen ; exists ; 2014 ; 9 ; Global Heart Volume 2014 ; 2014 ;  https://globalheartjournal.com/ ; >
       au < crawling ; exists ; 2015 ; 10 ; Global Heart Volume 2015 ; 2015 ;  https://globalheartjournal.com/ ; >
       au < frozen ; exists ; 2016 ; 11 ; Global Heart Volume 2016 ; 2016 ;  https://globalheartjournal.com/ ; >
       au < crawling ; exists ; 2017 ; 12 ; Global Heart Volume 2017 ; 2017 ;  https://globalheartjournal.com/ ; >
