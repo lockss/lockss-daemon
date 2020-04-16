@@ -1641,7 +1641,7 @@
       au < superseded ; exists ; 2016 ; 2016 ; Proceedings of the International Association of Hydrological Sciences Volume 373 [superseded] ; 373 ; http://www.proc-iahs.net/ ; http://www.proceedings-international-association-of-hydrological-sciences.net/ ; >
       au < frozen ; exists ; 2016 ; 2016 ; Proceedings of the International Association of Hydrological Sciences Volume 373 ; 373 ; https://www.proc-iahs.net/ ; https://www.proceedings-iahs.net/ ; >
       au < frozen ; exists ; 2016 ; 2016 ; Proceedings of the International Association of Hydrological Sciences Volume 374 ; 374 ; https://www.proc-iahs.net/ ; https://www.proceedings-iahs.net/ ; >
-      au < finished ; crawling ; 2017 ; 2017 ; Proceedings of the International Association of Hydrological Sciences Volume 375 ; 375 ; https://www.proc-iahs.net/ ; https://www.proceedings-iahs.net/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2017 ; 2017 ; Proceedings of the International Association of Hydrological Sciences Volume 375 ; 375 ; https://www.proc-iahs.net/ ; https://www.proceedings-iahs.net/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018 ; 2018 ; Proceedings of the International Association of Hydrological Sciences Volume 376 ; 376 ; https://www.proc-iahs.net/ ; https://www.proceedings-iahs.net/ ; >
       au < crawling ; exists ; 2019 ; 2019 ; Proceedings of the International Association of Hydrological Sciences Volume 377 ; 377 ; https://www.proc-iahs.net/ ; https://www.proceedings-iahs.net/ ; >
       au < manifest ; exists ; 2020 ; 2020 ; Proceedings of the International Association of Hydrological Sciences Volume 378 ; 378 ; https://www.proc-iahs.net/ ; https://www.proceedings-iahs.net/ ; >
@@ -1678,7 +1678,7 @@
       au < finished ; finished ; 2014 ; 2014 ; Scientific Drilling Volume 17 ; 17 ; http://www.sci-dril.net/ ; http://www.scientific-drilling.net/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2014 ; 2014 ; Scientific Drilling Volume 18 ; 18 ; http://www.sci-dril.net/ ; http://www.scientific-drilling.net/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Scientific Drilling Volume 19 ; 19 ; http://www.sci-dril.net/ ; http://www.scientific-drilling.net/ ; >
-      au < finished ; crawling ; 2016 ; 2016 ; Scientific Drilling Volume 20 ; 20 ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2016 ; 2016 ; Scientific Drilling Volume 20 ; 20 ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; 2017 ; Scientific Drilling Volume 21 ; 21 ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ ; >
       au < deepCrawl ; exists ; 2018 ; 2018 ; Scientific Drilling Volume 22 ; 22 ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ ; >
       au < crawling ; exists ; 2019 ; 2019 ; Scientific Drilling Volume 23 ; 23 ; https://www.sci-dril.net/ ; https://www.scientific-drilling.net/ ; >
@@ -1833,10 +1833,10 @@
       au < manifest ; exists ; 2010 ; 2010 ; The Cryosphere Volume 4 ; 4 ; https://www.the-cryosphere.net/ ; https://www.the-cryosphere.net/ ; >
       au < manifest ; exists ; 2011 ; 2011 ; The Cryosphere Volume 5 ; 5 ; https://www.the-cryosphere.net/ ; https://www.the-cryosphere.net/ ; >
       au < finished ; finished ; 2012 ; 2012 ; The Cryosphere Volume 6 ; 6 ; http://www.the-cryosphere.net/ ; http://www.the-cryosphere.net/ ; >
-      au < finished ; crawling ; 2013 ; 2013 ; The Cryosphere Volume 7 ; 7 ; http://www.the-cryosphere.net/ ; http://www.the-cryosphere.net/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2013 ; 2013 ; The Cryosphere Volume 7 ; 7 ; http://www.the-cryosphere.net/ ; http://www.the-cryosphere.net/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2014 ; 2014 ; The Cryosphere Volume 8 ; 8 ; http://www.the-cryosphere.net/ ; http://www.the-cryosphere.net/ ; >
       au < zapped ; finished ; 2015 ; 2015 ; The Cryosphere Volume 9 ; 9 ; http://www.the-cryosphere.net/ ; http://www.the-cryosphere.net/ ; >
-      au < finished ; crawling ; 2016 ; 2016 ; The Cryosphere Volume 10 ; 10 ; http://www.the-cryosphere.net/ ; http://www.the-cryosphere.net/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2016 ; 2016 ; The Cryosphere Volume 10 ; 10 ; http://www.the-cryosphere.net/ ; http://www.the-cryosphere.net/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; 2017 ; The Cryosphere Volume 11 ; 11 ; https://www.the-cryosphere.net/ ; https://www.the-cryosphere.net/ ; >
       au < deepCrawl ; exists ; 2018 ; 2018 ; The Cryosphere Volume 12 ; 12 ; https://www.the-cryosphere.net/ ; https://www.the-cryosphere.net/ ; >
       au < crawling ; exists ; 2019 ; 2019 ; The Cryosphere Volume 13 ; 13 ; https://www.the-cryosphere.net/ ; https://www.the-cryosphere.net/ ; >
@@ -1892,7 +1892,7 @@
       au < finished ; finished ; 2013 ; 2013 ; Web Ecology Volume 13 ; 13 ; http://www.web-ecol.net/ ; http://www.web-ecology.net/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2014 ; 2014 ; Web Ecology Volume 14 ; 14 ; http://www.web-ecol.net/ ; http://www.web-ecology.net/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Web Ecology Volume 15 ; 15 ; http://www.web-ecol.net/ ; http://www.web-ecology.net/ ; >
-      au < finished ; crawling ; 2016 ; 2016 ; Web Ecology Volume 16 ; 16 ; https://www.web-ecol.net/ ; https://www.web-ecology.net/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2016 ; 2016 ; Web Ecology Volume 16 ; 16 ; https://www.web-ecol.net/ ; https://www.web-ecology.net/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; 2017 ; Web Ecology Volume 17 ; 17 ; https://www.web-ecol.net/ ; https://www.web-ecology.net/ ; >
       au < deepCrawl ; exists ; 2018 ; 2018 ; Web Ecology Volume 18 ; 18 ; https://www.web-ecol.net/ ; https://www.web-ecology.net/ ; >
       au < crawling ; exists ; 2019 ; 2019 ; Web Ecology Volume 19 ; 19 ; https://www.web-ecol.net/ ; https://www.web-ecology.net/ ; >
@@ -1910,7 +1910,7 @@
 #      param[base_url] = http://www.wind-energ-sci.net/
 #      param[home_url] = http://www.wind-energy-science.net/
 
-      au < finished ; crawling ; 2016 ; 2016 ; Wind Energy Science Volume 1 ; 1 ; https://www.wind-energ-sci.net/ ; https://www.wind-energy-science.net/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2016 ; 2016 ; Wind Energy Science Volume 1 ; 1 ; https://www.wind-energ-sci.net/ ; https://www.wind-energy-science.net/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2017 ; 2017 ; Wind Energy Science Volume 2 ; 2 ; https://www.wind-energ-sci.net/ ; https://www.wind-energy-science.net/ ; >
       au < deepCrawl ; exists ; 2018 ; 2018 ; Wind Energy Science Volume 3 ; 3 ; https://www.wind-energ-sci.net/ ; https://www.wind-energy-science.net/ ; >
       au < crawling ; exists ; 2019 ; 2019 ; Wind Energy Science Volume 4 ; 4 ; https://www.wind-energ-sci.net/ ; https://www.wind-energy-science.net/ ; >

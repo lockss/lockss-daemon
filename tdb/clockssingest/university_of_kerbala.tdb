@@ -21,8 +21,10 @@
     param[base_url] = https://kijoms.uokerbala.edu.iq/
     param[journal_abbr] = home
     implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+    #volume 1 to 4 available on https://www.sciencedirect.com/journal/karbala-international-journal-of-modern-science/issues
 
     au < deepCrawl ; exists ; 2019 ; Karbala International Journal of Modern Science Volume 5 ; 5 ; >
+    au < exists ; exists ; 2020 ; Karbala International Journal of Modern Science Volume 6 ; 6 ; >
 
   }
 

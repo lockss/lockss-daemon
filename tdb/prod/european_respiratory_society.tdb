@@ -33,6 +33,7 @@
     au < ers.ERSDrupalPlugin ; released ; 2017 ; Breathe Volume 13 ; 13 ; http://breathe.ersjournals.com/ >
     au < ers.ERSDrupalPlugin ; released ; 2018 ; Breathe Volume 14 ; 14 ; https://breathe.ersjournals.com/ >
     au < ers.ERSDrupalPlugin ; released ; 2019 ; Breathe Volume 15 ; 15 ; https://breathe.ersjournals.com/ >
+    au < ers.ERSDrupalPlugin ; expected ; 2020 ; Breathe Volume 16 ; 16 ; https://breathe.ersjournals.com/ >
     
   }
 
@@ -51,6 +52,7 @@
     au < ers.ERSDrupalPlugin ; released ; 2017 ; ERJ Open Research Volume 3 ; 3 ; https://openres.ersjournals.com/ >
     au < ers.ERSDrupalPlugin ; released ; 2018 ; ERJ Open Research Volume 4 ; 4 ; https://openres.ersjournals.com/ >
     au < ers.ERSDrupalPlugin ; released ; 2019 ; ERJ Open Research Volume 5 ; 5 ; https://openres.ersjournals.com/ >
+    au < ers.ERSDrupalPlugin ; expected ; 2020 ; ERJ Open Research Volume 6 ; 6 ; https://openres.ersjournals.com/ >
     
   }
 
@@ -124,6 +126,8 @@
     au < ers.ERSDrupalPlugin ; released ; 2018 ; European Respiratory Journal Volume 52 ; 52 ; https://erj.ersjournals.com/ >
     au < ers.ERSDrupalPlugin ; manifest ; 2019 ; European Respiratory Journal Volume 53 ; 53 ; https://erj.ersjournals.com/ >
     au < ers.ERSDrupalPlugin ; released ; 2019 ; European Respiratory Journal Volume 54 ; 54 ; https://erj.ersjournals.com/ >
+    au < ers.ERSDrupalPlugin ; expected ; 2020 ; European Respiratory Journal Volume 55 ; 55 ; https://erj.ersjournals.com/ >
+    au < ers.ERSDrupalPlugin ; expected ; 2020 ; European Respiratory Journal Volume 56 ; 56 ; https://erj.ersjournals.com/ >
 
   }
 
@@ -153,6 +157,7 @@
     au < ers.ERSDrupalPlugin ; released ; 2017 ; European Respiratory Review Volume 26 ; 26 ; http://err.ersjournals.com/ >
     au < ers.ERSDrupalPlugin ; released ; 2018 ; European Respiratory Review Volume 27 ; 27 ; https://err.ersjournals.com/ >
     au < ers.ERSDrupalPlugin ; released ; 2019 ; European Respiratory Review Volume 28 ; 28 ; https://err.ersjournals.com/ >
+    au < ers.ERSDrupalPlugin ; expected ; 2020 ; European Respiratory Review Volume 29 ; 29 ; https://err.ersjournals.com/ >
 
   }
 
