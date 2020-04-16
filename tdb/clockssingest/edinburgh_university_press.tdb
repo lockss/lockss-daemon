@@ -415,7 +415,7 @@
     au < finished ; crawling ; 2016 ; Comparative Critical Studies Volume 13 ; 13 ; http://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Comparative Critical Studies Volume 14 ; 14 ; http://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2018 ; Comparative Critical Studies Volume 15 ; 15 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2019 ; Comparative Critical Studies Volume 16 ; 16 ; https://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2019 ; Comparative Critical Studies Volume 16 ; 16 ; https://www.euppublishing.com/ ; >
     au < manifest ; exists ; 2020 ; Comparative Critical Studies Volume 17 ; 17 ; https://www.euppublishing.com/ ; >
 
   }
@@ -868,7 +868,7 @@
     au < finished ; crawling ; 2016 ; International Research in Children's Literature Volume 9 ; 9 ; http://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2017 ; International Research in Children's Literature Volume 10 ; 10 ; http://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; International Research in Children's Literature Volume 11 ; 11 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2019 ; International Research in Children's Literature Volume 12 ; 12 ; https://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2019 ; International Research in Children's Literature Volume 12 ; 12 ; https://www.euppublishing.com/ ; >
     au < expected ; exists ; 2020 ; International Research in Children's Literature Volume 13 ; 13 ; https://www.euppublishing.com/ ; >
 
   }
@@ -893,7 +893,7 @@
       au < finished ; frozen ; 2016 ; Irish University Review Volume 46 ; 46 ; http://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; Irish University Review Volume 47 ; 47 ; http://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2018 ; Irish University Review Volume 48 ; 48 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2019 ; Irish University Review Volume 49 ; 49 ; https://www.euppublishing.com/ ; >
+      au < deepCrawl ; exists ; 2019 ; Irish University Review Volume 49 ; 49 ; https://www.euppublishing.com/ ; >
       au < expected ; exists ; 2020 ; Irish University Review Volume 50 ; 50 ; https://www.euppublishing.com/ ; >
 
     }
@@ -1150,7 +1150,7 @@
     au < finished ; crawling ; 2016 ; Journal of Scottish Philosophy Volume 14 ; 14 ; http://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Journal of Scottish Philosophy Volume 15 ; 15 ; http://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; Journal of Scottish Philosophy Volume 16 ; 16 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2019 ; Journal of Scottish Philosophy Volume 17 ; 17 ; https://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2019 ; Journal of Scottish Philosophy Volume 17 ; 17 ; https://www.euppublishing.com/ ; >
     au < manifest ; exists ; 2020 ; Journal of Scottish Philosophy Volume 18 ; 18 ; https://www.euppublishing.com/ ; >
 
   }
