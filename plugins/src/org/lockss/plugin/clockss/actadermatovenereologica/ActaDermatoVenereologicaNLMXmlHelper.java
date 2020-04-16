@@ -64,6 +64,7 @@ public class ActaDermatoVenereologicaNLMXmlHelper implements SourceXmlSchemaHelp
     private static String art_doi = top + "/MedlineCitation/Article/ELocationID[@EIdType=\"doi\"]";
     private static String pub_title = top + "/MedlineCitation/Article/Journal/Title";
     private static String art_eissn = top + "/MedlineCitation/Article/Journal/ISSN[@IssnType=\"Electronic\"]";
+    private static String art_issn = top + "/MedlineCitation/MedlineJournalInfo/ISSNLinking";
 
     /*
      *  The following 3 variables are needed to use the XPathXmlMetadataParser
@@ -80,6 +81,7 @@ public class ActaDermatoVenereologicaNLMXmlHelper implements SourceXmlSchemaHelp
         articleMap.put(art_doi, XmlDomMetadataExtractor.TEXT_VALUE);
         articleMap.put(art_publication_date, PUBDATE_VALUE);
         articleMap.put(art_eissn, XmlDomMetadataExtractor.TEXT_VALUE);
+        articleMap.put(art_issn, XmlDomMetadataExtractor.TEXT_VALUE);
     }
 
     /* 2.  Top level per-article node - optional div level*/
@@ -99,11 +101,13 @@ public class ActaDermatoVenereologicaNLMXmlHelper implements SourceXmlSchemaHelp
     protected static final MultiValueMap cookMap = new MultiValueMap();
 
     static {
+        cookMap.put(pub_title, MetadataField.FIELD_PUBLICATION_TITLE);
         cookMap.put(art_contrib,new MetadataField(MetadataField.FIELD_AUTHOR, MetadataField.splitAt(AUTHOR_SPLIT_CH)));
         cookMap.put(art_doi, MetadataField.FIELD_DOI);
         cookMap.put(art_title, MetadataField.FIELD_ARTICLE_TITLE);
         cookMap.put(art_publication_date, MetadataField.FIELD_DATE);
         cookMap.put(art_eissn, MetadataField.FIELD_EISSN);
+        cookMap.put(art_issn, MetadataField.FIELD_ISSN);
     }
 
     /**
