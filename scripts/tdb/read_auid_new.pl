@@ -3208,7 +3208,35 @@ while (my $line = <>) {
           $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
       }
       sleep(4);
-   } # End of Giga Science
+   # End of Giga Science
+   } elsif ($plugin eq "ClockssResilienceAlliancePlugin") {
+         $url = sprintf("%sissues/",
+         $param{base_url});
+         $man_url = uri_unescape($url);
+         my $req = HTTP::Request->new(GET, $man_url);
+         my $resp = $ua->request($req);
+         if ($resp->is_success) {
+             my $man_contents = $resp->content;
+             # It does not volume based manifest page.
+             # The collective issue page provide both permission statement and links to all volume and issues: {base_url}issues/
+             if ($req->url ne $resp->request->uri) {
+               $vol_title = "Resilience Alliance All Issues"
+               $result = "Redirected";
+             } elsif (defined($man_contents)) {
+                 # <td style="text-align: center; vertical-align: middle" rowspan="2">14</td> - volume "14"
+                 if ($man_contents =~ m/<td[^>]+>(\d+)</td>/si) {
+                     $volume_name = $1
+                     $vol_title= "Resilience Alliance " . $volume_name;
+                 }
+                 $result = "Manifest"
+             } else {
+                 $result = "--"
+             }
+         } else {
+             $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+         }
+         sleep(4);
+    } # End of Resilience Alliance
   
   if($result eq "Plugin Unknown") {
     printf("*PLUGIN UNKNOWN*, %s, %s\n",$auid,$man_url);
