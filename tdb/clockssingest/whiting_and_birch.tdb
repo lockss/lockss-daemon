@@ -32,8 +32,8 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 18 ; 18 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 19 ; 19 ; >
       au < doNotProcess ; doNotProcess ; 2010 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 20 ; 20 ; >
-      au < frozen ; exists ; 2011 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 21 ; 21 ; >
-      au < frozen ; exists ; 2012 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 22 ; 22 ; >
+      au < finished ; manifest ; 2011 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 21 ; 21 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2012 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 22 ; 22 ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2013 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 23 ; 23 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 24 ; 24 ; >
   
@@ -59,7 +59,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 2013 ; 2013 ; https://journals.whitingbirch.net/ ; >
       au < finished ; finished ; 2014 ; 2014 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 2014 ; 2014 ; http://journals.whitingbirch.net/ ; >
       au < finished ; finished ; 2015 ; 2015 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 2015 ; 2015 ; http://journals.whitingbirch.net/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2016 ; 2016 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 2016 ; 2016 ; https://journals.whitingbirch.net/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; 2016 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 2016 ; 2016 ; https://journals.whitingbirch.net/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2017 ; 2017 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 2017 ; 2017 ; https://journals.whitingbirch.net/ ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2018 ; 2018 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 2018 ; 2018 ; https://journals.whitingbirch.net/ ; reingest2.clockss.org:8085 > #no successful crawl on ingest3
 
@@ -85,8 +85,8 @@
       au < doNotProcess ; doNotProcess ; 2006 ; The Journal of Practice Teaching and Learning Volume 7 ; 7 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; The Journal of Practice Teaching and Learning Volume 8 ; 8 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; The Journal of Practice Teaching and Learning Volume 9 ; 9 ; >
-      au < frozen ; exists ; 2010-2011 ; The Journal of Practice Teaching and Learning Volume 10 ; 10 ; >
-      au < frozen ; exists ; 2011-2013 ; The Journal of Practice Teaching and Learning Volume 11 ; 11 ; >
+      au < finished ; manifest ; 2010-2011 ; The Journal of Practice Teaching and Learning Volume 10 ; 10 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2011-2013 ; The Journal of Practice Teaching and Learning Volume 11 ; 11 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2013-2014 ; The Journal of Practice Teaching and Learning Volume 12 ; 12 ; reingest4.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2014-2015 ; The Journal of Practice Teaching and Learning Volume 13 ; 13 ; >
     
@@ -111,7 +111,7 @@
       au < finished ; finished ; 2014 ; 2014 ; The Journal of Practice Teaching and Learning Volume 2014 ; 13 ; http://journals.whitingbirch.net/ ; >
 
       au < superseded ; exists ; 2016 ; 2016 ; The Journal of Practice Teaching and Learning Volume 2016 [superseded] ; 14 ; http://journals.whitingbirch.net/ ; >
-      au < frozen ; exists ; 2016 ; 2016 ; The Journal of Practice Teaching and Learning Volume 2016 ; 14 ; https://journals.whitingbirch.net/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; 2016 ; The Journal of Practice Teaching and Learning Volume 2016 ; 14 ; https://journals.whitingbirch.net/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2017 ; 2017 ; The Journal of Practice Teaching and Learning Volume 2017 ; 15 ; https://journals.whitingbirch.net/ ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2018 ; 2018 ; The Journal of Practice Teaching and Learning Volume 2018 ; 16 ; https://journals.whitingbirch.net/ ; reingest1.clockss.org:8082 >
       au < exists ; exists ; 2019 ; 2019 ; The Journal of Practice Teaching and Learning Volume 2019 ; 17 ; https://journals.whitingbirch.net/ ; >
@@ -138,8 +138,8 @@
       au < doNotProcess ; doNotProcess ; 2004 ; Social Work and Social Sciences Review Volume 11 ; 11 ; >
       au < doNotProcess ; doNotProcess ; 2005-2007 ; Social Work and Social Sciences Review Volume 12 ; 12 ; >
       au < doNotProcess ; doNotProcess ; 2007-2008 ; Social Work and Social Sciences Review Volume 13 ; 13 ; >
-      au < frozen ; exists ; 2010-2011 ; Social Work and Social Sciences Review Volume 14 ; 14 ; >
-      au < frozen ; exists ; 2011-2012 ; Social Work and Social Sciences Review Volume 15 ; 15 ; >
+      au < finished ; manifest ; 2010-2011 ; Social Work and Social Sciences Review Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2011-2012 ; Social Work and Social Sciences Review Volume 15 ; 15 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2012-2013 ; Social Work and Social Sciences Review Volume 16 ; 16 ; >
       au < finished ; crawling ; 2013-2014 ; Social Work and Social Sciences Review Volume 17 ; 17 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; doNotProcess ; 2014-2015 ; Social Work and Social Sciences Review Volume 18 ; 18 ; >
@@ -185,7 +185,7 @@
       implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
       param[journal_issn] = 1987-8710
 
-      au < frozen ; exists ; 2012-2013 ; Journal of Social Policy and Social Work in Transition Volume 3 ; 3 ; >
+      au < finished ; manifest ; 2012-2013 ; Journal of Social Policy and Social Work in Transition Volume 3 ; 3 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Social Policy and Social Work in Transition Volume 4 ; 4 ; >
     
     }
@@ -197,7 +197,7 @@
       param[journal_id] = JSPW
       
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Journal of Social Policy and Social Work in Transition Volume 2012 ; 2012 ; https://journals.whitingbirch.net/ ; >
-      au < frozen ; exists ; 2013 ; 2013 ; Journal of Social Policy and Social Work in Transition Volume 2013 ; 2013 ; http://journals.whitingbirch.net/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2013 ; 2013 ; Journal of Social Policy and Social Work in Transition Volume 2013 ; 2013 ; http://journals.whitingbirch.net/ ; reingest1.clockss.org:8082 >
 
     }
     
