@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>8</string>
+    <string>9</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -25,7 +25,7 @@
     <map>
       <entry>
         <string>Metadata</string>
-        <string>2</string>
+        <string>1</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -82,6 +82,36 @@
     <list>
       <string>"https://www.dividedsociety.org/4e566d92-3778-41c0-b7d7-c9fe7bd71aa9/ip_access"</string>
       <string>"%sarchive/journals", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <!--
+  https://dl.dropboxusercontent.com/s/vhxgqdyi106h47c/ALU_001_003.pdf
+  https://dl.dropboxusercontent.com/s/fec6k2qjqdw0h15/TIM_001_026.pdf
+  https://dl.dropboxusercontent.com/s/w6tnq4bflaq9abn/UND_001_020.pdf
+  https://dl.dropboxusercontent.com/s/unhbg7v8zv2435g/VOI3_001_002.pdf
+  https://dl.dropboxusercontent.com/s/smaj6tem5tsut1s/SCE3_001_004.pdf
+  -->
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"https://dl.dropboxusercontent.com/.*\.pdf"</string>
     </list>
   </entry>
   <entry>
