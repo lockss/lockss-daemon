@@ -3220,12 +3220,12 @@ while (my $line = <>) {
              # It does not volume based manifest page.
              # The collective issue page provide both permission statement and links to all volume and issues: {base_url}issues/
              if ($req->url ne $resp->request->uri) {
-               $vol_title = "Resilience Alliance All Issues"
+               $vol_title = "Resilience Alliance All Issues";
                $result = "Redirected";
              } elsif (defined($man_contents)) {
                  # <td style="text-align: center; vertical-align: middle" rowspan="2">14</td> - volume "14"
-                 if ($man_contents =~ m/<td[^>]+>(\d+)</td>/si) {
-                     $volume_name = $1
+                 if ($man_contents =~ m/<td[^>]+>(\d+)<\td>/si) {
+                     $volume_name = $1;
                      $vol_title= "Resilience Alliance " . $volume_name;
                  }
                  $result = "Manifest"
