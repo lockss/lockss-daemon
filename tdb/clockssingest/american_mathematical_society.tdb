@@ -165,7 +165,7 @@
     au < finished ; frozen ; 2016 ; Bulletin of the American Mathematical Society Volume 53 (2016) ; 2016 ; http://www.ams.org/ ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2017 ; Bulletin of the American Mathematical Society Volume 54 (2017) ; 2017 ; http://www.ams.org/ ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2018 ; Bulletin of the American Mathematical Society Volume 55 (2018) ; 2018 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2019 ; Bulletin of the American Mathematical Society Volume 55 (2019) ; 2019 ; https://www.ams.org/ ; >
+    au < deepCrawl ; exists ; 2019 ; Bulletin of the American Mathematical Society Volume 55 (2019) ; 2019 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2020 ; Bulletin of the American Mathematical Society Volume 55 (2020) ; 2020 ; https://www.ams.org/ ; >
 
   }
@@ -561,7 +561,7 @@
     au < finished ; finished ; 2016 ; Transactions of the American Mathematical Society Volume 368 ; 2016 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2017 ; Transactions of the American Mathematical Society Volume 369 ; 2017 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2018 ; Transactions of the American Mathematical Society Volume 370 ; 2018 ; http://www.ams.org/ ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2019 ; Transactions of the American Mathematical Society Volume 371 ; 2019 ; https://www.ams.org/ ; >
+    au < deepCrawl ; exists ; 2019 ; Transactions of the American Mathematical Society Volume 371 ; 2019 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2020 ; Transactions of the American Mathematical Society Volume 372 ; 2020 ; https://www.ams.org/ ; >
 
   }

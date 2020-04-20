@@ -464,7 +464,7 @@
       au < finished ; crawling ; 2016 ; IET Nanotechnology Volume 10 ; 10 ; http://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; IET Nanotechnology Volume 11 ; 11 ; http://digital-library.theiet.org/ ; >
       au < deepCrawl ; exists ; 2018 ; IET Nanotechnology Volume 12 ; 12 ; http://digital-library.theiet.org/ ; >
-      au < crawling ; exists ; 2019 ; IET Nanotechnology Volume 13 ; 13 ; https://digital-library.theiet.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; IET Nanotechnology Volume 13 ; 13 ; https://digital-library.theiet.org/ ; >
 
     }
 
@@ -640,7 +640,7 @@
       au < finished ; crawling ; 2016 ; IET Signal Processing Volume 10 ; 10 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; IET Signal Processing Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2018 ; IET Signal Processing Volume 12 ; 12 ; http://digital-library.theiet.org/ ; >
-      au < crawling ; exists ; 2019 ; IET Signal Processing Volume 13 ; 13 ; https://digital-library.theiet.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; IET Signal Processing Volume 13 ; 13 ; https://digital-library.theiet.org/ ; >
 
     }
 

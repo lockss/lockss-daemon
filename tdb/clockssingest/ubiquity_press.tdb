@@ -701,7 +701,7 @@
       au < finished ; crawling ; 2015 ; 2 ; Karib: Nordic Journal for Caribbean Studies Volume 2015 ; 2015 ; https://www.karib.no/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2017 ; 3 ; Karib: Nordic Journal for Caribbean Studies Volume 2017 ; 2017 ; https://www.karib.no/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 4 ; Karib: Nordic Journal for Caribbean Studies Volume 2018 ; 2018 ; https://www.karib.no/ ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2019 ; 5 ; Karib: Nordic Journal for Caribbean Studies Volume 2019 ; 2019 ; https://www.karib.no/ ; >
+      au < deepCrawl ; exists ; 2019 ; 5 ; Karib: Nordic Journal for Caribbean Studies Volume 2019 ; 2019 ; https://www.karib.no/ ; >
 
   }
 
@@ -1236,7 +1236,7 @@
       au < finished ; crawling ; 2016 ; 14 ; Journal of Conservation and Museum Studies Volume 2016 ; 2016 ; http://www.jcms-journal.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; 15 ; Journal of Conservation and Museum Studies Volume 2017 ; 2017 ; https://www.jcms-journal.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 16 ; Journal of Conservation and Museum Studies Volume 2018 ; 2018 ; https://www.jcms-journal.com/ ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2019 ; 17 ; Journal of Conservation and Museum Studies Volume 2019 ; 2019 ; https://www.jcms-journal.com/ ; >
+      au < deepCrawl ; exists ; 2019 ; 17 ; Journal of Conservation and Museum Studies Volume 2019 ; 2019 ; https://www.jcms-journal.com/ ; >
 
   }
 
@@ -1540,7 +1540,7 @@
       au < finished ; crawling ; 2016 ; 1 ; MaHKUscript: Journal of Fine Art Research Volume 2016 ; 2016 ; http://www.mahkuscript.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; 2 ; MaHKUscript: Journal of Fine Art Research Volume 2017 ; 2017 ; https://www.mahkuscript.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 3 ; MaHKUscript: Journal of Fine Art Research Volume 2018 ; 2018 ; https://www.mahkuscript.com/ ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2019 ; 4 ; MaHKUscript: Journal of Fine Art Research Volume 2019 ; 2019 ; https://www.mahkuscript.com/ ; >
+      au < deepCrawl ; exists ; 2019 ; 4 ; MaHKUscript: Journal of Fine Art Research Volume 2019 ; 2019 ; https://www.mahkuscript.com/ ; >
 
   }
 
@@ -1797,7 +1797,7 @@
       au < finished ; crawling ; 2016 ; 12 ; Psychologica Belgica Volume 2016 ; 2016 ; https://www.psychologicabelgica.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2017 ; 13 ; Psychologica Belgica Volume 2017 ; 2017 ; https://www.psychologicabelgica.com/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 14 ; Psychologica Belgica Volume 2018 ; 2018 ; https://www.psychologicabelgica.com/ ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2019 ; 15 ; Psychologica Belgica Volume 2019 ; 2019 ; https://www.psychologicabelgica.com/ ; >
+      au < deepCrawl ; exists ; 2019 ; 15 ; Psychologica Belgica Volume 2019 ; 2019 ; https://www.psychologicabelgica.com/ ; >
 
     }
   }
@@ -2089,7 +2089,7 @@
       au < finished ; crawling ; 2016 ; 7 ; Yearbook of Swiss Administrative Science Volume 2016 ; 2016 ; https://www.ssas-yearbook.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; 8 ; Yearbook of Swiss Administrative Science Volume 2017 ; 2017 ; https://www.ssas-yearbook.com/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 9 ; Yearbook of Swiss Administrative Science Volume 2018 ; 2018 ; https://www.ssas-yearbook.com/ ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2019 ; 10 ; Yearbook of Swiss Administrative Science Volume 2019 ; 2019 ; https://www.ssas-yearbook.com/ ; >
+      au < deepCrawl ; exists ; 2019 ; 10 ; Yearbook of Swiss Administrative Science Volume 2019 ; 2019 ; https://www.ssas-yearbook.com/ ; >
 
   }
 
@@ -2202,7 +2202,7 @@
       au < finished ; crawling ; 2016 ; 11 ; Westminster Papers in Communication and Culture Volume 2016 ; 2016 ; http://www.westminsterpapers.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; 12 ; Westminster Papers in Communication and Culture Volume 2017 ; 2017 ; http://www.westminsterpapers.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 13 ; Westminster Papers in Communication and Culture Volume 2018 ; 2018 ; https://www.westminsterpapers.org/ ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2019 ; 14 ; Westminster Papers in Communication and Culture Volume 2019 ; 2019 ; https://www.westminsterpapers.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; 14 ; Westminster Papers in Communication and Culture Volume 2019 ; 2019 ; https://www.westminsterpapers.org/ ; >
 
   }
 
