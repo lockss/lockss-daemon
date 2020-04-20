@@ -5980,7 +5980,7 @@
       param[journal_id] = ijmd
 
       au < finished ; crawling ; 2011-2016 ; International Journal of Management Development Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < testing ; exists ; 2018 ; International Journal of Management Development Volume 2 [partial] ; 2 ; https://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
+      au < crawling ; exists ; 2018 ; International Journal of Management Development Volume 2 [partial] ; 2 ; https://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
 
     }
 
