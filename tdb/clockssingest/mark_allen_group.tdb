@@ -555,7 +555,7 @@
     au < manifest ; exists ; 2012 ; Journal of Paramedic Practice Volume 4 ; 4 ; https://www.magonlinelibrary.com/ ; >
     au < finished ; manifest ; 2013 ; Journal of Paramedic Practice Volume 5 ; 5 ; http://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Journal of Paramedic Practice Volume 6 ; 6 ; http://www.magonlinelibrary.com/ ; >
-    au < crawling ; exists ; 2015 ; Journal of Paramedic Practice Volume 7 ; 7 ; https://www.magonlinelibrary.com/ ; >
+    au < frozen ; exists ; 2015 ; Journal of Paramedic Practice Volume 7 ; 7 ; https://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2016 ; Journal of Paramedic Practice Volume 8 ; 8 ; http://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Journal of Paramedic Practice Volume 9 ; 9 ; http://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2018 ; Journal of Paramedic Practice Volume 10 ; 10 ; https://www.magonlinelibrary.com/ ; >
@@ -597,7 +597,7 @@
 
     au < frozen ; exists ; 2016 ; Journal of Kidney Care Volume 1 ; 1 ; https://www.magonlinelibrary.com/ ; >
     au < frozen ; exists ; 2017 ; Journal of Kidney Care Volume 2 ; 2 ; https://www.magonlinelibrary.com/ ; >
-    au < crawling ; exists ; 2018 ; Journal of Kidney Care Volume 3 ; 3 ; https://www.magonlinelibrary.com/ ; >
+    au < frozen ; exists ; 2018 ; Journal of Kidney Care Volume 3 ; 3 ; https://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2019 ; Journal of Kidney Care Volume 4 ; 4 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2020 ; Journal of Kidney Care Volume 5 ; 5 ; https://www.magonlinelibrary.com/ ; >
 
@@ -665,7 +665,7 @@
     param[journal_id] = jprp
     #continues = 1479-9189
 
-    au < crawling ; exists ; 2019 ; Journal of Prescribing Practice Volume 1 ; 1 ; https://www.magonlinelibrary.com/ ; >
+    au < frozen ; exists ; 2019 ; Journal of Prescribing Practice Volume 1 ; 1 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2020 ; Journal of Prescribing Practice Volume 2 ; 2 ; https://www.magonlinelibrary.com/ ; >
 
   }
