@@ -29,7 +29,7 @@
     au < biologists.ClockssBiologistsDrupalPlugin ; finished ; frozen ; 2016 ; Biology Open Volume 5 ; 5 ; http://bio.biologists.org/ ; reingest5.clockss.org:8082 >
     au < biologists.ClockssBiologistsDrupalPlugin ; deepCrawl ; exists ; 2017 ; Biology Open Volume 6 ; 6 ; http://bio.biologists.org/ ; >
     au < biologists.ClockssBiologistsDrupalPlugin ; deepCrawl ; exists ; 2018 ; Biology Open Volume 7 ; 7 ; http://bio.biologists.org/ ; >
-    au < biologists.ClockssBiologistsDrupalPlugin ; crawling ; exists ; 2019 ; Biology Open Volume 8 ; 8 ; https://bio.biologists.org/ ; >
+    au < biologists.ClockssBiologistsDrupalPlugin ; deepCrawl ; exists ; 2019 ; Biology Open Volume 8 ; 8 ; https://bio.biologists.org/ ; >
     au < biologists.ClockssBiologistsDrupalPlugin ; manifest ; exists ; 2020 ; Biology Open Volume 9 ; 9 ; https://bio.biologists.org/ ; >
 
   }
@@ -217,7 +217,7 @@
     au < biologists.ClockssBiologistsDrupalPlugin ; finished ; frozen ; 2016 ; Disease Models & Mechanisms Volume 9 ; 9 ; http://dmm.biologists.org/ ; reingest5.clockss.org:8082 >
     au < biologists.ClockssBiologistsDrupalPlugin ; deepCrawl ; exists ; 2017 ; Disease Models & Mechanisms Volume 10 ; 10 ; http://dmm.biologists.org/ ; >
     au < biologists.ClockssBiologistsDrupalPlugin ; deepCrawl ; exists ; 2018 ; Disease Models & Mechanisms Volume 11 ; 11 ; http://dmm.biologists.org/ ; >
-    au < biologists.ClockssBiologistsDrupalPlugin ; crawling ; exists ; 2019 ; Disease Models & Mechanisms Volume 12 ; 12 ; https://dmm.biologists.org/ ; >
+    au < biologists.ClockssBiologistsDrupalPlugin ; deepCrawl ; exists ; 2019 ; Disease Models & Mechanisms Volume 12 ; 12 ; https://dmm.biologists.org/ ; >
     au < biologists.ClockssBiologistsDrupalPlugin ; manifest ; exists ; 2020 ; Disease Models & Mechanisms Volume 13 ; 13 ; https://dmm.biologists.org/ ; >
 
   }

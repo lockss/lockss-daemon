@@ -471,7 +471,7 @@
 
       param[au_oai_set] = fmj
 
-      au < crawling ; exists ; 2019 ; 2019 ; Food Modeling Journal (FMJ) Volume 2019 ; 2019 ; https://fmj.pensoft.net/ ; >
+      au < deepCrawl ; exists ; 2019 ; 2019 ; Food Modeling Journal (FMJ) Volume 2019 ; 2019 ; https://fmj.pensoft.net/ ; >
       au < expected ; exists ; 2020 ; 2020 ; Food Modeling Journal (FMJ) Volume 2020 ; 2020 ; https://fmj.pensoft.net/ ; >
 
   }
@@ -695,7 +695,7 @@
       au < frozen ; exists ; 2016 ; 2016 ; Rethinking Ecology Volume 2016 ; 2016 ; https://rethinkingecology.pensoft.net/ ; >
       au < frozen ; exists ; 2017 ; 2017 ; Rethinking Ecology Volume 2017 ; 2017 ; https://rethinkingecology.pensoft.net/ ; >
       au < frozen ; exists ; 2018 ; 2018 ; Rethinking Ecology Volume 2018 ; 2018 ; https://rethinkingecology.pensoft.net/ ; >
-      au < crawling ; exists ; 2019 ; 2019 ; Rethinking Ecology Volume 2019 ; 2019 ; https://rethinkingecology.pensoft.net/ ; >
+      au < deepCrawl ; exists ; 2019 ; 2019 ; Rethinking Ecology Volume 2019 ; 2019 ; https://rethinkingecology.pensoft.net/ ; >
       au < expected ; exists ; 2020 ; 2020 ; Rethinking Ecology Volume 2020 ; 2020 ; https://rethinkingecology.pensoft.net/ ; >
 
   }

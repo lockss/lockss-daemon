@@ -60,7 +60,7 @@
       au < finished ; frozen ; 2016 ; Cold Spring Harbor Perspectives in Biology Volume 8 ; 8 ; http://cshperspectives.cshlp.org/ ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2017 ; Cold Spring Harbor Perspectives in Biology Volume 9 ; 9 ; http://cshperspectives.cshlp.org/ ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2018 ; Cold Spring Harbor Perspectives in Biology Volume 10 ; 10 ; http://cshperspectives.cshlp.org/ ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2019 ; Cold Spring Harbor Perspectives in Biology Volume 11 ; 11 ; https://cshperspectives.cshlp.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; Cold Spring Harbor Perspectives in Biology Volume 11 ; 11 ; https://cshperspectives.cshlp.org/ ; >
       au < manifest ; exists ; 2020 ; Cold Spring Harbor Perspectives in Biology Volume 12 ; 12 ; https://cshperspectives.cshlp.org/ ; >
 
     }
@@ -336,7 +336,7 @@
       au < deepCrawl ; exists ; 2016 ; Genome Research Volume 26 ; 26 ; http://genome.cshlp.org/ ; >
       au < finished ; finished ; 2017 ; Genome Research Volume 27 ; 27 ; http://genome.cshlp.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2018 ; Genome Research Volume 28 ; 28 ; https://genome.cshlp.org/ ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2019 ; Genome Research Volume 29 ; 29 ; https://genome.cshlp.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; Genome Research Volume 29 ; 29 ; https://genome.cshlp.org/ ; >
       au < manifest ; exists ; 2020 ; Genome Research Volume 30 ; 30 ; https://genome.cshlp.org/ ; >
 
     }

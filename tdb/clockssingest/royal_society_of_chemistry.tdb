@@ -71,7 +71,7 @@
       au < finished ; manifest ; 2016 ; Analytical Methods Volume 8 ; 8 ; 2016 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2017 ; Analytical Methods Volume 9 ; 9 ; 2017 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; Analytical Methods Volume 10 ; 10 ; 2018 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2019 ; Analytical Methods Volume 11 ; 11 ; 2019 ; https://pubs.rsc.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; Analytical Methods Volume 11 ; 11 ; 2019 ; https://pubs.rsc.org/ ; >
       au < expected ; exists ; 2020 ; Analytical Methods Volume 12 ; 12 ; 2020 ; https://pubs.rsc.org/ ; >
 
   }
@@ -291,7 +291,7 @@
       au < deepCrawl ; exists ; 2016 ; Energy & Environmental Science Volume 9 ; 9 ; 2016 ; http://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2017 ; Energy & Environmental Science Volume 10 ; 10 ; 2017 ; http://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2018 ; Energy & Environmental Science Volume 11 ; 11 ; 2018 ; http://pubs.rsc.org/ ; >
-      au < crawling ; exists ; 2019 ; Energy & Environmental Science Volume 12 ; 12 ; 2019 ; https://pubs.rsc.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; Energy & Environmental Science Volume 12 ; 12 ; 2019 ; https://pubs.rsc.org/ ; >
       au < expected ; exists ; 2020 ; Energy & Environmental Science Volume 13 ; 13 ; 2020 ; https://pubs.rsc.org/ ; >
 
   }
