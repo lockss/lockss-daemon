@@ -2715,7 +2715,7 @@
       param[journal_id] = ijdh
 
       au < finished ; crawling ; 2015-2016 ; International Journal of the Digital Human Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2018 ; International Journal of the Digital Human Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; > # issue 3, 4 not online
+      au < frozen ; exists ; 2018 ; International Journal of the Digital Human Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; > # issue 3, 4 not online
 
     }
 
@@ -5980,7 +5980,7 @@
       param[journal_id] = ijmd
 
       au < finished ; crawling ; 2011-2016 ; International Journal of Management Development Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2018 ; International Journal of Management Development Volume 2 [partial] ; 2 ; https://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
+      au < frozen ; exists ; 2018 ; International Journal of Management Development Volume 2 [partial] ; 2 ; https://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
 
     }
 
@@ -6308,7 +6308,7 @@
       au < finished ; finished ; 2015 ; International Journal of Mathematical Modelling and Numerical Optimisation Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2016 ; International Journal of Mathematical Modelling and Numerical Optimisation Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2017-2018 ; International Journal of Mathematical Modelling and Numerical Optimisation Volume 8 ; 8 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2019 ; International Journal of Mathematical Modelling and Numerical Optimisation Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
+      au < frozen ; exists ; 2019 ; International Journal of Mathematical Modelling and Numerical Optimisation Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2020 ; International Journal of Mathematical Modelling and Numerical Optimisation Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -6806,7 +6806,7 @@
       au < finished ; finished ; 2014 ; International Journal of Nano and Biomaterials Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2015-2016 ; International Journal of Nano and Biomaterials Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2017-2018 ; International Journal of Nano and Biomaterials Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2019 ; International Journal of Nano and Biomaterials Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; >
+      au < frozen ; exists ; 2019 ; International Journal of Nano and Biomaterials Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2020 ; International Journal of Nano and Biomaterials Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -10795,7 +10795,7 @@
 
       au < finished ; frozen ; 2017 ; International Journal of Intelligent Systems Design and Computing Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2018 ; International Journal of Intelligent Systems Design and Computing Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2019 ; International Journal of Intelligent Systems Design and Computing Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
+      au < frozen ; exists ; 2019 ; International Journal of Intelligent Systems Design and Computing Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2020 ; International Journal of Intelligent Systems Design and Computing Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
 
   }
