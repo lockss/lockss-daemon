@@ -21,14 +21,6 @@
   comment[doNotInclude4] = Russian Chemical Reviews 0036-021X, Russian Mathematical Surveys 0036-0279,
   comment[doNotInclude5] = Sbornik: Mathematics 1064-5616, 
   
-  
-  
-  
-  
-  
-  
-  
-  
   {
 
     title <
@@ -133,7 +125,7 @@
     au < finished ; finished ; 2011 ; Bioinspiration & Biomimetics Volume 6 ; 6 ; > 
     au < finished ; finished ; 2012 ; Bioinspiration & Biomimetics Volume 7 ; 7 ; > 
     au < finished ; finished ; 2013 ; Bioinspiration & Biomimetics Volume 8 ; 8 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2014 ; Bioinspiration & Biomimetics Volume 9 ; 9 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2014 ; Bioinspiration & Biomimetics Volume 9 ; 9 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2015 ; Bioinspiration & Biomimetics Volume 10 ; 10 ; > 
 
   }
@@ -772,7 +764,7 @@
     au < finished ; finished ; 2011 ; Fluid Dynamics Research Volume 43 ; 43 ; > 
     au < finished ; frozen ; 2012 ; Fluid Dynamics Research Volume 44 ; 44 ; > 
     au < finished ; frozen ; 2013 ; Fluid Dynamics Research Volume 45 ; 45 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2014 ; Fluid Dynamics Research Volume 46 ; 46 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2014 ; Fluid Dynamics Research Volume 46 ; 46 ; reingest2.clockss.org:8085 >
     au < superseded ; exists ; 2015; Fluid Dynamics Research Volume 47 [superseded] ; 47 ; > #no substance
 
   }
@@ -1025,7 +1017,7 @@
     au < finished ; frozen ; 2011 ; Japanese Journal of Applied Physics Volume 50 ; 50 ; reingest1.clockss.org:8082 >
     au < zapped ; finished ; 2012 ; Japanese Journal of Applied Physics Volume 51 ; 51 ; >
     au < finished ; frozen ; 2013 ; Japanese Journal of Applied Physics Volume 52 ; 52 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2014 ; Japanese Journal of Applied Physics Volume 53 ; 53 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2014 ; Japanese Journal of Applied Physics Volume 53 ; 53 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2015 ; Japanese Journal of Applied Physics Volume 54 ; 54 ; >
     
   }
@@ -1208,7 +1200,7 @@
     au < finished ; finished ; 2011 ; Journal of Micromechanics and Microengineering Volume 21 ; 21 ; > 
     au < finished ; crawling ; 2012 ; Journal of Micromechanics and Microengineering Volume 22 ; 22 ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2013 ; Journal of Micromechanics and Microengineering Volume 23 ; 23 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2014 ; Journal of Micromechanics and Microengineering Volume 24 ; 24 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2014 ; Journal of Micromechanics and Microengineering Volume 24 ; 24 ; reingest4.clockss.org:8082 >
     au < superseded ; exists ; 2015 ; Journal of Micromechanics and Microengineering Volume 25 [superseded] ; 25 ; > #no substance
 
   }
@@ -1235,7 +1227,7 @@
     au < finished ; finished ; 2011 ; Journal of Neural Engineering Volume 8 ; 8 ; > 
     au < finished ; finished ; 2012 ; Journal of Neural Engineering Volume 9 ; 9 ; > 
     au < finished ; frozen ; 2013 ; Journal of Neural Engineering Volume 10 ; 10 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2014 ; Journal of Neural Engineering Volume 11 ; 11 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2014 ; Journal of Neural Engineering Volume 11 ; 11 ; reingest1.clockss.org:8082 >
     au < superseded ; exists ; 2015; Journal of Neural Engineering Volume 12 [superseded] ; 12 ; > #no substance
 
   }
@@ -1657,7 +1649,7 @@
     au < finished ; frozen ; 2011 ; Journal of Physics D: Applied Physics Volume 44 ; 44 ; > 
     au < finished ; frozen ; 2012 ; Journal of Physics D: Applied Physics Volume 45 ; 45 ; > 
     au < finished ; frozen ; 2013 ; Journal of Physics D: Applied Physics Volume 46 ; 46 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2014 ; Journal of Physics D: Applied Physics Volume 47 ; 47 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2014 ; Journal of Physics D: Applied Physics Volume 47 ; 47 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; exists ; 2015 ; Journal of Physics D: Applied Physics Volume 48 ; 48 ; > #PD-1361 login required
 
   }
@@ -2598,7 +2590,7 @@
     au < finished ; finished ; 2011 ; Journal of Statistical Mechanics: Theory and Experiment Volume 2011 ; 2011 ; > 
     au < finished ; crawling ; 2012 ; Journal of Statistical Mechanics: Theory and Experiment Volume 2012 ; 2012 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Journal of Statistical Mechanics: Theory and Experiment Volume 2013 ; 2013 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2014 ; Journal of Statistical Mechanics: Theory and Experiment Volume 2014 ; 2014 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2014 ; Journal of Statistical Mechanics: Theory and Experiment Volume 2014 ; 2014 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Statistical Mechanics: Theory and Experiment Volume 2015 ; 2015 ; > 
 
   }
@@ -2636,7 +2628,7 @@
     param[journal_issn] = 1555-6611
     comment[param] = eissn preferred
 
-    au < finished ; crawling ; 2013 ; Laser Physics Volume 23 ; 23 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2013 ; Laser Physics Volume 23 ; 23 ; reingest2.clockss.org:8085 >
     au < zapped ; finished ; 2014 ; Laser Physics Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Laser Physics Volume 25 ; 25 ; >
 
@@ -2914,7 +2906,7 @@
     au < finished ; frozen ; 2011 ; New Journal of Physics Volume 13 ; 13 ; > 
     au < finished ; crawling ; 2012 ; New Journal of Physics Volume 14 ; 14 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2013 ; New Journal of Physics Volume 15 ; 15 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2014 ; New Journal of Physics Volume 16 ; 16 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2014 ; New Journal of Physics Volume 16 ; 16 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2015 ; New Journal of Physics Volume 17 ; 17 ; > 
 
   }
@@ -3556,7 +3548,7 @@
     au < finished ; frozen ; 2011 ; Plasma Sources Science and Technology Volume 20 ; 20 ; > 
     au < finished ; frozen ; 2012 ; Plasma Sources Science and Technology Volume 21 ; 21 ; > 
     au < finished ; frozen ; 2013 ; Plasma Sources Science and Technology Volume 22 ; 22 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2014 ; Plasma Sources Science and Technology Volume 23 ; 23 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2014 ; Plasma Sources Science and Technology Volume 23 ; 23 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2015 ; Plasma Sources Science and Technology Volume 24 ; 24 ; > 
 
   }
