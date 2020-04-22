@@ -38,19 +38,19 @@
     au < ready ; 2003 ; Language Arts Journal of Michigan Volume 19 ; 19 ; https://scholarworks.gvsu.edu/ >
     au < ready ; 2004 ; Language Arts Journal of Michigan Volume 20 ; 20 ; https://scholarworks.gvsu.edu/ >
     au < ready ; 2005 ; Language Arts Journal of Michigan Volume 21 ; 21 ; https://scholarworks.gvsu.edu/ >
-    au < manifest ; 2006 ; Language Arts Journal of Michigan Volume 22 ; 22 ; https://scholarworks.gvsu.edu/ >
-    au < manifest ; 2007-2008 ; Language Arts Journal of Michigan Volume 23 ; 23 ; https://scholarworks.gvsu.edu/ >
-    au < manifest ; 2008-2009 ; Language Arts Journal of Michigan Volume 24 ; 24 ; https://scholarworks.gvsu.edu/ >
-    au < manifest ; 2009-2010 ; Language Arts Journal of Michigan Volume 25 ; 25 ; https://scholarworks.gvsu.edu/ >
-    au < manifest ; 2010-2011 ; Language Arts Journal of Michigan Volume 26 ; 26 ; https://scholarworks.gvsu.edu/ >
+    au < ready ; 2006 ; Language Arts Journal of Michigan Volume 22 ; 22 ; https://scholarworks.gvsu.edu/ >
+    au < ready ; 2007-2008 ; Language Arts Journal of Michigan Volume 23 ; 23 ; https://scholarworks.gvsu.edu/ >
+    au < ready ; 2008-2009 ; Language Arts Journal of Michigan Volume 24 ; 24 ; https://scholarworks.gvsu.edu/ >
+    au < ready ; 2009-2010 ; Language Arts Journal of Michigan Volume 25 ; 25 ; https://scholarworks.gvsu.edu/ >
+    au < ready ; 2010-2011 ; Language Arts Journal of Michigan Volume 26 ; 26 ; https://scholarworks.gvsu.edu/ >
     au < released ; 2011-2012 ; Language Arts Journal of Michigan Volume 27 ; 27 ; http://scholarworks.gvsu.edu/ >
     au < released ; 2012-2013 ; Language Arts Journal of Michigan Volume 28 ; 28 ; http://scholarworks.gvsu.edu/ >
     au < released ; 2013-2014 ; Language Arts Journal of Michigan Volume 29 ; 29 ; http://scholarworks.gvsu.edu/ >
     au < released ; 2014-2015 ; Language Arts Journal of Michigan Volume 30 ; 30 ; http://scholarworks.gvsu.edu/ >
     au < released ; 2015-2016 ; Language Arts Journal of Michigan Volume 31 ; 31 ; http://scholarworks.gvsu.edu/ >
-    au < manifest ; 2016-2017 ; Language Arts Journal of Michigan Volume 32 ; 32 ; https://scholarworks.gvsu.edu/ >
-    au < manifest ; 2018 ; Language Arts Journal of Michigan Volume 33 ; 33 ; https://scholarworks.gvsu.edu/ >
-    au < manifest ; 2018-2019 ; Language Arts Journal of Michigan Volume 34 ; 34 ; https://scholarworks.gvsu.edu/ >
+    au < ready ; 2016-2017 ; Language Arts Journal of Michigan Volume 32 ; 32 ; https://scholarworks.gvsu.edu/ >
+    au < ready ; 2018 ; Language Arts Journal of Michigan Volume 33 ; 33 ; https://scholarworks.gvsu.edu/ >
+    au < ready ; 2018-2019 ; Language Arts Journal of Michigan Volume 34 ; 34 ; https://scholarworks.gvsu.edu/ >
 
   }
 
@@ -66,14 +66,14 @@
     param[journal_abbr] = jti
     implicit < status ; year ; name ; param[volume] ; param[base_url] >
 
-    au < manifest ; 2011 ; The Journal of Tourism Insights Volume 1 ; 1 ; https://scholarworks.gvsu.edu/ >
-    au < manifest ; 2011 ; The Journal of Tourism Insights Volume 2 ; 2 ; https://scholarworks.gvsu.edu/ >
+    au < ready ; 2011 ; The Journal of Tourism Insights Volume 1 ; 1 ; https://scholarworks.gvsu.edu/ >
+    au < ready ; 2011 ; The Journal of Tourism Insights Volume 2 ; 2 ; https://scholarworks.gvsu.edu/ >
     au < released ; 2012 ; The Journal of Tourism Insights Volume 3 ; 3 ; http://scholarworks.gvsu.edu/ >
     au < released ; 2013 ; The Journal of Tourism Insights Volume 4 ; 4 ; http://scholarworks.gvsu.edu/ >
     au < released ; 2014 ; The Journal of Tourism Insights Volume 5 ; 5 ; http://scholarworks.gvsu.edu/ >
     au < released ; 2015 ; The Journal of Tourism Insights Volume 6 ; 6 ; http://scholarworks.gvsu.edu/ >
     au < released ; 2016 ; The Journal of Tourism Insights Volume 7 ; 7 ; http://scholarworks.gvsu.edu/ >
-    au < manifest ; 2017 ; The Journal of Tourism Insights Volume 8 ; 8 ; https://scholarworks.gvsu.edu/ >
+    au < ready ; 2017 ; The Journal of Tourism Insights Volume 8 ; 8 ; https://scholarworks.gvsu.edu/ >
 
   } 
   

@@ -83,6 +83,9 @@ public class ReindexingTask extends StepTask {
   // The number of articles indexed by this task.
   private volatile long indexedArticleCount = 0;
 
+  // The number of articles that got errors
+  private volatile long errorArticleCount = 0;
+
   // The number of articles updated by this task.
   private volatile long updatedArticleCount = 0;
 
@@ -203,6 +206,10 @@ public class ReindexingTask extends StepTask {
       ArticleFiles af = articleIterator.next();
       try {
         ae.extract(MetadataTarget.OpenURL(), af, emitter);
+      } catch (org.lockss.repository.LockssRepository.RepositoryStateException ex) {
+        log.error("Error extracting metadata for full text URL, continuing: "
+                      + af.getFullTextUrl(), ex);
+	errorArticleCount++;
       } catch (IOException ex) {
         log.error("Failed to index metadata for full text URL: "
                       + af.getFullTextUrl(), ex);
@@ -359,6 +366,15 @@ public class ReindexingTask extends StepTask {
    */
   long getIndexedArticleCount() {
     return indexedArticleCount;
+  }
+
+  /**
+   * Returns the number of articles that weren't extracted due to an error
+   *
+   * @return a long with the number of errors
+   */
+  long getErrorArticleCount() {
+    return errorArticleCount;
   }
 
   /**

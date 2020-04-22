@@ -40,7 +40,7 @@
       au < readySource ; crawling ; 2020 ; IOP Publishing Source Content 2020_1 ; 2020_1 >
       au < exists ; exists ; 2020 ; IOP Publishing Source Content 2020_2 ; 2020_2 >
       au < exists ; exists ; 2020 ; IOP Publishing Source Content 2020_3 ; 2020_3 >
-      au < exists ; exists ; 2020 ; IOP Publishing Source Content 2020_4 ; 2020_4 >     
+      au < exists ; exists ; 2020 ; IOP Publishing Source Content 2020_4 ; 2020_4 >
 
     }
   }  
@@ -76,8 +76,11 @@
     hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[year] >
     
+    #4-17-2020: content delivered for 2018-2020, but still requires fixes from the publisher.
     au < zapped ; finished ; 2017 ; IOP Publishing Books Source Content 2017 ; 2017 >
-    #no content since 2017 through this pipeline
+    au < notReady ; exists ; 2018 ; IOP Publishing Books Source Content 2018 ; 2018 >
+    au < notReady ; exists ; 2019 ; IOP Publishing Books Source Content 2019 ; 2019 >
+    au < notReady ; exists ; 2020 ; IOP Publishing Books Source Content 2020 ; 2020 >
 
   }
 
