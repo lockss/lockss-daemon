@@ -121,7 +121,7 @@
     
   	  #2006 needed recollection in new layout
       au < finished ; finished ; 2006 ; Agenda - A Journal of Policy Analysis and Reform Volume 13 ; 13 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2019 ; Agenda - A Journal of Policy Analysis and Reform Volume 26 ; 26 ; >
+      au < deepCrawl ; exists ; 2019 ; Agenda - A Journal of Policy Analysis and Reform Volume 26 ; 26 ; >
       au < manifest ; exists ; 2020 ; Agenda - A Journal of Policy Analysis and Reform Volume 27 ; 27 ; >
 
     }
@@ -137,7 +137,7 @@
     
     param[journal_id] = anu-historical-journal
 
-    au < crawling ; exists ; 2019 ; ANU Historical Journal II: Number 1 ; 1 ; >
+    au < deepCrawl ; exists ; 2019 ; ANU Historical Journal II: Number 1 ; 1 ; >
     au < manifest ; exists ; 2020 ; ANU Historical Journal II: Number 2 ; 2 ; >
 
   }

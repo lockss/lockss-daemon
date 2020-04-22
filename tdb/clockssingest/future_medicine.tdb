@@ -53,7 +53,7 @@
     au < frozen ; exists ; 2016 ; Biomarkers in Medicine Volume 10 ; 10 ; http://www.futuremedicine.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Biomarkers in Medicine Volume 11 ; 11 ; https://www.futuremedicine.com/ ; >
     au < deepCrawl ; exists ; 2018 ; Biomarkers in Medicine Volume 12 ; 12 ; https://www.futuremedicine.com/ ; >
-    au < crawling ; exists ; 2019 ; Biomarkers in Medicine Volume 13 ; 13 ; https://www.futuremedicine.com/ ; >
+    au < deepCrawl ; exists ; 2019 ; Biomarkers in Medicine Volume 13 ; 13 ; https://www.futuremedicine.com/ ; >
     au < manifest ; exists ; 2020 ; Biomarkers in Medicine Volume 14 ; 14 ; https://www.futuremedicine.com/ ; >
 
   }
@@ -170,7 +170,7 @@
     au < frozen ; exists ; 2016 ; Colorectal Cancer Volume 5 ; 5 ; http://www.futuremedicine.com/ ; >
     au < frozen ; exists ; 2017 ; Colorectal Cancer Volume 6 ; 6 ; https://www.futuremedicine.com/ ; >
     au < deepCrawl ; exists ; 2018 ; Colorectal Cancer Volume 7 ; 7 ; https://www.futuremedicine.com/ ; >
-    au < crawling ; exists ; 2019 ; Colorectal Cancer Volume 8 ; 8 ; https://www.futuremedicine.com/ ; >
+    au < deepCrawl ; exists ; 2019 ; Colorectal Cancer Volume 8 ; 8 ; https://www.futuremedicine.com/ ; >
     au < expected ; exists ; 2020 ; Colorectal Cancer Volume 9 ; 9 ; https://www.futuremedicine.com/ ; >
 
   }

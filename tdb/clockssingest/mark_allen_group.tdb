@@ -248,7 +248,7 @@
     au < finished ; manifest ; 2016 ; British Journal of Neuroscience Nursing Volume 12 ; 12 ; http://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2017 ; British Journal of Neuroscience Nursing Volume 13 ; 13 ; http://www.magonlinelibrary.com/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; British Journal of Neuroscience Nursing Volume 14 ; 14 ; https://www.magonlinelibrary.com/ ; >
-    au < crawling ; exists ; 2019 ; British Journal of Neuroscience Nursing Volume 15 ; 15 ; https://www.magonlinelibrary.com/ ; >
+    au < deepCrawl ; exists ; 2019 ; British Journal of Neuroscience Nursing Volume 15 ; 15 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2020 ; British Journal of Neuroscience Nursing Volume 16 ; 16 ; https://www.magonlinelibrary.com/ ; >
 
   }
@@ -498,7 +498,7 @@
     au < finished ; manifest ; 2016 ; Journal of Aesthetic Nursing Volume 5 ; 5 ; http://www.magonlinelibrary.com/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Journal of Aesthetic Nursing Volume 6 ; 6 ; http://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Journal of Aesthetic Nursing Volume 7 ; 7 ; https://www.magonlinelibrary.com/ ; >
-    au < crawling ; exists ; 2019 ; Journal of Aesthetic Nursing Volume 8 ; 8 ; https://www.magonlinelibrary.com/ ; >
+    au < deepCrawl ; exists ; 2019 ; Journal of Aesthetic Nursing Volume 8 ; 8 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2020 ; Journal of Aesthetic Nursing Volume 9 ; 9 ; https://www.magonlinelibrary.com/ ; >
 
   }
@@ -859,7 +859,7 @@
     au < finished ; manifest ; 2016 ; Child Care Volume 13 ; 13 ; http://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2017 ; Child Care Volume 14 ; 14 ; http://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Child Care Volume 15 ; 15 ; https://www.magonlinelibrary.com/ ; >
-    au < crawling ; exists ; 2019 ; Child Care Volume 16 ; 16 ; https://www.magonlinelibrary.com/ ; >
+    au < deepCrawl ; exists ; 2019 ; Child Care Volume 16 ; 16 ; https://www.magonlinelibrary.com/ ; >
     au < expected ; exists ; 2020 ; Child Care Volume 17 ; 17 ; https://www.magonlinelibrary.com/ ; >
 
   }
@@ -1040,7 +1040,7 @@
     au < finished ; manifest ; 2016 ; SecEd Volume 2016 ; 2016 ; http://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2017 ; SecEd Volume 2017 ; 2017 ; http://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; SecEd Volume 2018 ; 2018 ; https://www.magonlinelibrary.com/ ; >
-    au < crawling ; exists ; 2019 ; SecEd Volume 2019 ; 2019 ; https://www.magonlinelibrary.com/ ; >
+    au < deepCrawl ; exists ; 2019 ; SecEd Volume 2019 ; 2019 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2020 ; SecEd Volume 2020 ; 2020 ; https://www.magonlinelibrary.com/ ; >
 
   }

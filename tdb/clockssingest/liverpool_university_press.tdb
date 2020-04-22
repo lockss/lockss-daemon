@@ -210,7 +210,7 @@
     au < finished ; manifest ; 2016 ; The Byron Journal Volume 44 ; 44 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; The Byron Journal Volume 45 ; 45 ; http://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2018 ; The Byron Journal Volume 46 ; 46 ; https://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2019 ; The Byron Journal Volume 47 ; 47 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < deepCrawl ; exists ; 2019 ; The Byron Journal Volume 47 ; 47 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < expected ; exists ; 2020 ; The Byron Journal Volume 48 ; 48 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
@@ -604,7 +604,7 @@
     au < finished ; manifest ; 2017 ; Journal of Romance Studies Volume 17 ; 17 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2018 ; Journal of Romance Studies Volume 18 ; 18 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
     
-    au < crawling ; exists ; 2019 ; Journal of Romance Studies Volume 19 ; 19 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < deepCrawl ; exists ; 2019 ; Journal of Romance Studies Volume 19 ; 19 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < manifest ; exists ; 2020 ; Journal of Romance Studies Volume 20 ; 20 ; https://online.liverpooluniversitypress.co.uk/ ; >
   }
 

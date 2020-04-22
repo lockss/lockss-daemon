@@ -169,7 +169,7 @@
     au < finished ; finished ; 2016 ; 2016 ; Aktuelle Kardiologie Volume 5 ; 5 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Aktuelle Kardiologie Volume 6 ; 6 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Aktuelle Kardiologie Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Aktuelle Kardiologie Volume 8 ; 8 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Aktuelle Kardiologie Volume 8 ; 8 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Aktuelle Kardiologie Volume 9 ; 9 ; >
 
   }
@@ -1480,7 +1480,7 @@
    au < deepCrawl ; exists ; 2016 ; 2016 ; Ergopraxis Volume 9 ; 9 ; >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Ergopraxis Volume 10 ; 10 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Ergopraxis Volume 11 ; 11 ; >
-   au < crawling ; exists ; 2019 ; 2019 ; Ergopraxis Volume 12 ; 12 ; >
+   au < deepCrawl ; exists ; 2019 ; 2019 ; Ergopraxis Volume 12 ; 12 ; >
    au < manifest ; exists ; 2020 ; 2020 ; Ergopraxis Volume 13 ; 13 ; >
 
   }
@@ -2160,7 +2160,7 @@
    au < deepCrawl ; down ; 2016 ; 2016 ; Hebamme Die Volume 29 ; 29 ;  >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Hebamme Die Volume 30 ; 30 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Hebamme Die Volume 31 ; 31 ; >
-   au < crawling ; exists ; 2019 ; 2019 ; Hebamme Die Volume 32 ; 32 ; >
+   au < deepCrawl ; exists ; 2019 ; 2019 ; Hebamme Die Volume 32 ; 32 ; >
    au < manifest ; exists ; 2020 ; 2020 ; Hebamme Die Volume 33 ; 33 ; >
 
   }
@@ -2205,7 +2205,7 @@
    au < finished ; finished ; 2016 ; 2016 ; Homoeopathic Links Volume 29 ; 29 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Homoeopathic Links Volume 30 ; 30 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Homoeopathic Links Volume 31 ; 31 ; >
-   au < crawling ; exists ; 2019 ; 2019 ; Homoeopathic Links Volume 32 ; 32 ; >
+   au < deepCrawl ; exists ; 2019 ; 2019 ; Homoeopathic Links Volume 32 ; 32 ; >
    au < manifest ; exists ; 2020 ; 2020 ; Homoeopathic Links Volume 33 ; 33 ; >
 
   }
@@ -2385,7 +2385,7 @@
    au < deepCrawl ; down ; 2016 ; 2016 ; Informationen aus Orthodontie & Kieferorthopädie Volume 48 ; 48 ;  >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Informationen aus Orthodontie & Kieferorthopädie Volume 49 ; 49 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Informationen aus Orthodontie & Kieferorthopädie Volume 50 ; 50 ; >
-   au < crawling ; exists ; 2019 ; 2019 ; Informationen aus Orthodontie & Kieferorthopädie Volume 51 ; 51 ; >
+   au < deepCrawl ; exists ; 2019 ; 2019 ; Informationen aus Orthodontie & Kieferorthopädie Volume 51 ; 51 ; >
    au < manifest ; exists ; 2020 ; 2020 ; Informationen aus Orthodontie & Kieferorthopädie Volume 52 ; 52 ; >
 
   }
@@ -2841,7 +2841,7 @@
     au < deepCrawl ; exists ; 2016 ; 2016 ; Journal of Knee Surgery Volume 29 ; 29 ; >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Journal of Knee Surgery Volume 30 ; 30 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Journal of Knee Surgery Volume 31 ; 31 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Journal of Knee Surgery Volume 32 ; 32 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Knee Surgery Volume 32 ; 32 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Journal of Knee Surgery Volume 33 ; 33 ; >
 
   }
@@ -3563,7 +3563,7 @@
     au < finished ; crawling ; 2016 ; 2016 ; Krankenhaushygiene up2date Volume 11 ; 11 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Krankenhaushygiene up2date Volume 12 ; 12 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Krankenhaushygiene up2date Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Krankenhaushygiene up2date Volume 14 ; 14 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Krankenhaushygiene up2date Volume 14 ; 14 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Krankenhaushygiene up2date Volume 15 ; 15 ; >
 
   }
@@ -4629,7 +4629,7 @@
    au < finished ; crawling ; 2016 ; 2016 ; Planta Medica Volume 82 ; 82 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Planta Medica Volume 83 ; 83 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Planta Medica Volume 84 ; 84 ; >
-   au < crawling ; exists ; 2019 ; 2019 ; Planta Medica Volume 85 ; 85 ; >
+   au < deepCrawl ; exists ; 2019 ; 2019 ; Planta Medica Volume 85 ; 85 ; >
    au < manifest ; exists ; 2020 ; 2020 ; Planta Medica Volume 86 ; 86 ; >
 
   }
@@ -6229,7 +6229,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; The Thoracic and Cardiovascular Surgeon Reports Volume 5 ; 5 ; >
     au < deepCrawl ; exists ; 2017 ; 2017 ; The Thoracic and Cardiovascular Surgeon Reports Volume 6 ; 6 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; The Thoracic and Cardiovascular Surgeon Reports Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; The Thoracic and Cardiovascular Surgeon Reports Volume 8 ; 8 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; The Thoracic and Cardiovascular Surgeon Reports Volume 8 ; 8 ; >
     au < manifest ; exists ; 2020 ; 2020 ; The Thoracic and Cardiovascular Surgeon Reports Volume 9 ; 9 ; >
 
   }
@@ -7136,7 +7136,7 @@
 
     au < deepCrawl ; exists ; 2017 ; 2017 ; ACI Open Volume 1 ; 1 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; ACI Open Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; ACI Open Volume 3 ; 3 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; ACI Open Volume 3 ; 3 ; >
     au < manifest ; exists ; 2020 ; 2020 ; ACI Open Volume 4 ; 4 ; >
 
   }
@@ -7278,7 +7278,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Hämostaseologie Volume 36 ; 36 ; >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Hämostaseologie Volume 37 ; 37 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Hämostaseologie Volume 38 ; 38 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Hämostaseologie Volume 39 ; 39 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Hämostaseologie Volume 39 ; 39 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Hämostaseologie Volume 40 ; 40 ; >
 
   }
@@ -7332,7 +7332,7 @@
 
     au < deepCrawl ; exists ; 2017 ; 2017 ; Journal of Child Science Volume 7 ; 7 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Journal of Child Science Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Journal of Child Science Volume 9 ; 9 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Child Science Volume 9 ; 9 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Journal of Child Science Volume 10 ; 10 ; >
 
   }

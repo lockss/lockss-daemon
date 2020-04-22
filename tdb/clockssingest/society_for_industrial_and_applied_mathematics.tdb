@@ -228,7 +228,7 @@
     au < finished ; manifest ; 2016 ; Journal on Control and Optimization Volume 54 ; 54 ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2017 ; Journal on Control and Optimization Volume 55 ; 55 ; http://epubs.siam.org/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2018 ; Journal on Control and Optimization Volume 56 ; 56 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2019 ; Journal on Control and Optimization Volume 57 ; 57 ; https://epubs.siam.org/ ; >
+    au < deepCrawl ; exists ; 2019 ; Journal on Control and Optimization Volume 57 ; 57 ; https://epubs.siam.org/ ; >
     au < manifest ; exists ; 2020 ; Journal on Control and Optimization Volume 58 ; 58 ; https://epubs.siam.org/ ; >
 
   }
@@ -369,7 +369,7 @@
     au < finished ; manifest ; 2016 ; Journal on Matrix Analysis and Application Volume 37 ; 37 ; http://epubs.siam.org/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Journal on Matrix Analysis and Application Volume 38 ; 38 ; http://epubs.siam.org/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2018 ; Journal on Matrix Analysis and Application Volume 39 ; 39 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2019 ; Journal on Matrix Analysis and Application Volume 40 ; 40 ; https://epubs.siam.org/ ; >
+    au < deepCrawl ; exists ; 2019 ; Journal on Matrix Analysis and Application Volume 40 ; 40 ; https://epubs.siam.org/ ; >
     au < manifest ; exists ; 2020 ; Journal on Matrix Analysis and Application Volume 41 ; 41 ; https://epubs.siam.org/ ; >
 
   }
@@ -557,7 +557,7 @@
 
     param[journal_id] = sjmdaq
 
-    au < crawling ; exists ; 2019 ; Journal on Mathematics of Data Science Volume 1 ; 1 ; https://epubs.siam.org/ ; >
+    au < deepCrawl ; exists ; 2019 ; Journal on Mathematics of Data Science Volume 1 ; 1 ; https://epubs.siam.org/ ; >
     au < manifest ; exists ; 2020 ; Journal on Mathematics of Data Science Volume 2 ; 2 ; https://epubs.siam.org/ ; >
 
   }

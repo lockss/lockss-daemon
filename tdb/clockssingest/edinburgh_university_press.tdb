@@ -170,7 +170,7 @@
     param[journal_id] = dlgs
     #no volumes before 2018. See comment above.
     au < finished ; frozen ; 2018 ; Deleuze and Guattari Studies Volume 12 ; 12 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2019 ; Deleuze and Guattari Studies Volume 13 ; 13 ; https://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2019 ; Deleuze and Guattari Studies Volume 13 ; 13 ; https://www.euppublishing.com/ ; >
     au < manifest ; exists ; 2020 ; Deleuze and Guattari Studies Volume 14 ; 14 ; https://www.euppublishing.com/ ; >
 
   }
@@ -311,7 +311,7 @@
     au < finished ; frozen ; 2016 ; Archives of Natural History Volume 43 ; 43 ; http://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2017 ; Archives of Natural History Volume 44 ; 44 ; http://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2018 ; Archives of Natural History Volume 45 ; 45 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2019 ; Archives of Natural History Volume 46 ; 46 ; https://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2019 ; Archives of Natural History Volume 46 ; 46 ; https://www.euppublishing.com/ ; >
     au < manifest ; exists ; 2020 ; Archives of Natural History Volume 47 ; 47 ; https://www.euppublishing.com/ ; >
 
   }
@@ -742,7 +742,7 @@
      au < finished ; frozen ; 2016 ; Journal of Holy Land and Palestine Studies Volume 15 ; 15 ; http://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
      au < finished ; finished ; 2017 ; Journal of Holy Land and Palestine Studies Volume 16 ; 16 ; http://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
      au < finished ; crawling ; 2018 ; Journal of Holy Land and Palestine Studies Volume 17 ; 17 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
-     au < crawling ; exists ; 2019 ; Journal of Holy Land and Palestine Studies Volume 18 ; 18 ; https://www.euppublishing.com/ ; >
+     au < deepCrawl ; exists ; 2019 ; Journal of Holy Land and Palestine Studies Volume 18 ; 18 ; https://www.euppublishing.com/ ; >
      au < expected ; exists ; 2020 ; Journal of Holy Land and Palestine Studies Volume 19 ; 19 ; https://www.euppublishing.com/ ; >
 
   }
@@ -1781,7 +1781,7 @@
     au < finished ; crawling ; 2016 ; Scottish Historical Review Volume 95 ; 95 ; http://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2017 ; Scottish Historical Review Volume 96 ; 96 ; http://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2018 ; Scottish Historical Review Volume 97 ; 97 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2019 ; Scottish Historical Review Volume 98 ; 98 ; https://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2019 ; Scottish Historical Review Volume 98 ; 98 ; https://www.euppublishing.com/ ; >
     au < manifest ; exists ; 2020 ; Scottish Historical Review Volume 99 ; 99 ; https://www.euppublishing.com/ ; >
 
   }

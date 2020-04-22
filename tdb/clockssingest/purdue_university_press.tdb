@@ -214,7 +214,7 @@
     au < finished ; crawling ; 2016 ; Journal of Pre-College Engineering Education Research Volume 6 ; 6 ; http://docs.lib.purdue.edu/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Journal of Pre-College Engineering Education Research Volume 7 ; 7 ; http://docs.lib.purdue.edu/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2018 ; Journal of Pre-College Engineering Education Research Volume 8 ; 8 ; https://docs.lib.purdue.edu/ ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2019 ; Journal of Pre-College Engineering Education Research Volume 9 ; 9 ; https://docs.lib.purdue.edu/ ; >
+    au < deepCrawl ; exists ; 2019 ; Journal of Pre-College Engineering Education Research Volume 9 ; 9 ; https://docs.lib.purdue.edu/ ; >
     au < manifest ; exists ; 2020 ; Journal of Pre-College Engineering Education Research Volume 10 ; 10 ; https://docs.lib.purdue.edu/ ; >
 
   }
