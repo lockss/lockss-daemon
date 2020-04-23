@@ -71,7 +71,7 @@
     au < frozen ; exists ; 2016 ; Agronomy Journal Volume 108 ; 108 ; >
     au < frozen ; exists ; 2017 ; Agronomy Journal Volume 109 ; 109 ; >
     au < frozen ; exists ; 2018 ; Agronomy Journal Volume 110 ; 110 ; >
-    au < crawling ; exists ; 2019 ; Agronomy Journal Volume 111 ; 111 ; >
+    au < frozen ; exists ; 2019 ; Agronomy Journal Volume 111 ; 111 ; >
 
   }
 
@@ -125,8 +125,8 @@
     au < finished ; finished ; 2008 ; Crop Science Volume 48 ; 48 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2009 ; Crop Science Volume 49 ; 49 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2010 ; Crop Science Volume 50 ; 50 ; reingest1.clockss.org:8082 >
-    au < notReady ; exists ; 2011 ; Crop Science Volume 51 ; 51 ; > #403 error. likely malformed url. https://dl.sciencesocieties.org/images/publications/cs/51/5/.jpeg
-    au < notReady ; exists ; 2012 ; Crop Science Volume 52 ; 52 ; > #403 error. likely malformed url. https://dl.sciencesocieties.org/images/publications/cs/52/3/.jpeg
+    au < doNotProcess ; exists ; 2011 ; Crop Science Volume 51 ; 51 ; > #403 error. likely malformed url. https://dl.sciencesocieties.org/images/publications/cs/51/5/.jpeg
+    au < doNotProcess ; exists ; 2012 ; Crop Science Volume 52 ; 52 ; > #403 error. likely malformed url. https://dl.sciencesocieties.org/images/publications/cs/52/3/.jpeg
     au < finished ; finished ; 2013 ; Crop Science Volume 53 ; 53 ; reingest2.clockss.org:8085 >
     au < zapped ; finished ; 2014 ; Crop Science Volume 54 ; 54 ; >
     au < zapped ; finished ; 2015 ; Crop Science Volume 55 ; 55 ; reingest1.clockss.org:8082 > #malformed url. 403 error
@@ -241,8 +241,8 @@
 
     param[journal_id] = jpa
 
-    au < manifest ; exists ; 1998 ; Journal of Production Agriculture Volume 11 ; 11 ; >
-    au < manifest ; exists ; 1999 ; Journal of Production Agriculture Volume 12 ; 12 ; >
+    au < doNotProcess ; exists ; 1998 ; Journal of Production Agriculture Volume 11 ; 11 ; >
+    au < doNotProcess ; exists ; 1999 ; Journal of Production Agriculture Volume 12 ; 12 ; >
 
   }
 
@@ -315,10 +315,10 @@
     
     param[journal_id] = sh
 
-    au < manifest ; exists ; 2005 ; Soil Horizons Volume 46 ; 46 ; >
-    au < manifest ; exists ; 2006 ; Soil Horizons Volume 47 ; 47 ; >
-    au < manifest ; exists ; 2007 ; Soil Horizons Volume 48 ; 48 ; >
-    au < manifest ; exists ; 2008 ; Soil Horizons Volume 49 ; 49 ; >
+    au < doNotProcess ; exists ; 2005 ; Soil Horizons Volume 46 ; 46 ; >
+    au < doNotProcess ; exists ; 2006 ; Soil Horizons Volume 47 ; 47 ; >
+    au < doNotProcess ; exists ; 2007 ; Soil Horizons Volume 48 ; 48 ; >
+    au < doNotProcess ; exists ; 2008 ; Soil Horizons Volume 49 ; 49 ; >
     au < finished ; finished ; 2009 ; Soil Horizons Volume 50 ; 50 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2010 ; Soil Horizons Volume 51 ; 51 ; >
     au < finished ; finished ; 2011 ; Soil Horizons Volume 52 ; 52 ; >
@@ -343,11 +343,11 @@
     
     param[journal_id] = sssaj
 
-    au < manifest ; exists ; 2005 ; Soil Science Society of America Journal Volume 69 ; 69 ; >
-    au < manifest ; exists ; 2006 ; Soil Science Society of America Journal Volume 70 ; 70 ; >
-    au < manifest ; exists ; 2007 ; Soil Science Society of America Journal Volume 71 ; 71 ; >
-    au < manifest ; exists ; 2008 ; Soil Science Society of America Journal Volume 72 ; 72 ; >
-    au < manifest ; exists ; 2009 ; Soil Science Society of America Journal Volume 73 ; 73 ; >
+    au < doNotProcess ; exists ; 2005 ; Soil Science Society of America Journal Volume 69 ; 69 ; >
+    au < doNotProcess ; exists ; 2006 ; Soil Science Society of America Journal Volume 70 ; 70 ; >
+    au < doNotProcess ; exists ; 2007 ; Soil Science Society of America Journal Volume 71 ; 71 ; >
+    au < doNotProcess ; exists ; 2008 ; Soil Science Society of America Journal Volume 72 ; 72 ; >
+    au < doNotProcess ; exists ; 2009 ; Soil Science Society of America Journal Volume 73 ; 73 ; >
     au < finished ; finished ; 2010 ; Soil Science Society of America Journal Volume 74 ; 74 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2011 ; Soil Science Society of America Journal Volume 75 ; 75 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Soil Science Society of America Journal Volume 76 ; 76 ; >
@@ -357,7 +357,7 @@
     au < frozen ; exists ; 2016 ; Soil Science Society of America Journal Volume 80 ; 80 ; >
     au < frozen ; exists ; 2017 ; Soil Science Society of America Journal Volume 81 ; 81 ; >
     au < frozen ; exists ; 2018 ; Soil Science Society of America Journal Volume 82 ; 82 ; >
-    au < deepCrawl ; exists ; 2019 ; Soil Science Society of America Journal Volume 83 ; 83 ; >
+    au < frozen ; exists ; 2019 ; Soil Science Society of America Journal Volume 83 ; 83 ; >
 
   }
 
