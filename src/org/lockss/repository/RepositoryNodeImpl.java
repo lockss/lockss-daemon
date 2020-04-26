@@ -1901,7 +1901,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
     }
 
     @Override
-    public void release() {
+    public synchronized void release() {
       for (InputStream is : streams) {
         IOUtil.safeClose(is);
       }
@@ -1996,6 +1996,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
   class RepositoryNodeContentsImpl implements RepositoryNodeContents {
     private Properties props;
     private InputStream is;
+    List<InputStream> streams = new ArrayList<InputStream>();
 
     private RepositoryNodeContentsImpl() {
     }
@@ -2067,16 +2068,12 @@ public class RepositoryNodeImpl implements RepositoryNode {
     }
 
     public synchronized void release() {
-      if (is != null) {
-	if (CurrentConfig.getBooleanParam(PARAM_ENABLE_RELEASE,
-	                                  DEFAULT_ENABLE_RELEASE)) {
-	  try {
-	    is.close();
-	  } catch (IOException e) {
-	    logger.warning("Error closing RNC stream", e);
-	  }
+      if (CurrentConfig.getBooleanParam(PARAM_ENABLE_RELEASE,
+					DEFAULT_ENABLE_RELEASE)) {
+	for (InputStream is : streams) {
+	  IOUtil.safeClose(is);
 	}
-	is = null;
+	streams = new ArrayList<InputStream>();
       }
     }
 
@@ -2114,6 +2111,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
 	                                    DEFAULT_MONITOR_INPUT_STREAMS)) {
 	    is = new MonitoringInputStream(is, getContentFile().toString());
 	  }
+	  streams.add(is);
 	  props = getProps();
 	} catch (IOException e) {
 	  logger.error("Couldn't get inputstream for '" +
