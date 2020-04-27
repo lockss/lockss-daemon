@@ -9,7 +9,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>1</string>
+        <string>2</string>
     </entry>
     <entry>
         <string>plugin_feature_version_map</string>
@@ -78,7 +78,7 @@
         <string>au_crawlrules</string>
         <list>
             <!--
-            https://www.ace-eco.org/issues/
+            cissues/
             https://www.ace-eco.org/vol14/iss2/
             https://www.ace-eco.org/vol14/iss2/art2/
             https://www.ace-eco.org/vol14/iss2/art2/ACE-ECO-2019-1408.pdf
@@ -126,16 +126,19 @@
             https://www.ace-eco.org/images/custom/ace_title_left.jpg
             https://www.ace-eco.org/styles/journal.css
             -->
+            <!--citation ris file does not have volume/issue info
+            https://www.ace-eco.org/issues/ref.php/1408/rm
+            -->
             <string>1,"%s(issues|common|srv|images|styles)/", base_url</string>
             <!--
             https://www.ace-eco.org/vol14/iss2/art1/appendix1.xlsm
             https://www.ace-eco.org/vol14/iss1/art1/appendix3.xlsx
             -->
             <string>2,"%svol%s/.*\.xlsx?", base_url, volume_name</string>
+            <string>2, ""%svol%s/iss[^/]+/art[^/]+/(survey|inline)", base_url, volume_name</string>
+            <!-- Limit only to the targeted volume -->
+            <string>2,"%svol[^%s]", base_url, volume_name</string>
             <string>1,"%svol%s", base_url, volume_name</string>
-            <!--citation ris file does not have volume/issue info
-            https://www.ace-eco.org/issues/ref.php/1408/rm
-            -->
         </list>
     </entry>
     <entry>
@@ -172,6 +175,12 @@
                 <string>org.lockss.plugin.resiliencealliance.ResilienceAllianceMetadataExtractorFactory</string>
             </entry>
         </map>
+    </entry>
+    <entry>
+        <string>plugin_cache_result_list</string>
+        <list>
+            <string>500=org.lockss.util.urlconn.CacheException$NoRetryDeadLinkException</string>
+        </list>
     </entry>
     <entry>
         <string>au_repair_from_peer_if_missing_url_pattern</string>

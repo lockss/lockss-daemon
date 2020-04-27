@@ -50,7 +50,7 @@ import org.lockss.util.Logger;
 
 public class HindawiHtmlMetadataExtractorFactory implements
     FileMetadataExtractorFactory {
-  static Logger log = Logger.getLogger(HindawiHtmlMetadataExtractorFactory.class);
+  static Logger log = Logger.getLogger(Hindawi2020HtmlMetadataExtractorFactory.class);
 
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(

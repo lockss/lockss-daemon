@@ -146,7 +146,7 @@
     au < finished ; finished ; 2016 ; 2016 ; Aktuelle Ernährungsmedizin Volume 41 ; 41 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Aktuelle Ernährungsmedizin Volume 42 ; 42 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Aktuelle Ernährungsmedizin Volume 43 ; 43 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Aktuelle Ernährungsmedizin Volume 44 ; 44 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Aktuelle Ernährungsmedizin Volume 44 ; 44 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Aktuelle Ernährungsmedizin Volume 45 ; 45 ; >
 
   }
@@ -169,7 +169,7 @@
     au < finished ; finished ; 2016 ; 2016 ; Aktuelle Kardiologie Volume 5 ; 5 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Aktuelle Kardiologie Volume 6 ; 6 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Aktuelle Kardiologie Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Aktuelle Kardiologie Volume 8 ; 8 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Aktuelle Kardiologie Volume 8 ; 8 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Aktuelle Kardiologie Volume 9 ; 9 ; >
 
   }
@@ -277,7 +277,7 @@
     au < finished ; crawling ; 2016 ; 2016 ; Aktuelle Rheumatologie Volume 43 ; 43 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Aktuelle Rheumatologie Volume 44 ; 44 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Aktuelle Rheumatologie Volume 45 ; 45 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Aktuelle Rheumatologie Volume 46 ; 46 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Aktuelle Rheumatologie Volume 46 ; 46 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Aktuelle Rheumatologie Volume 47 ; 47 ; >
 
   }
@@ -522,7 +522,7 @@
     au < deepCrawl ; exists ; 2016 ; 2016 ; American Journal of Perinatology Reports Volume 6 ; 6 ; >
     au < deepCrawl ; exists ; 2017 ; 2017 ; American Journal of Perinatology Reports Volume 7 ; 7 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; American Journal of Perinatology Reports Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; American Journal of Perinatology Reports Volume 9 ; 9 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; American Journal of Perinatology Reports Volume 9 ; 9 ; >
     au < manifest ; exists ; 2020 ; 2020 ; American Journal of Perinatology Reports Volume 10 ; 10 ; >
 
    }
@@ -538,7 +538,7 @@
     comment[years] = 2018-current
 
     au < frozen ; exists ; 2018 ; 2018 ; Annals of Otology and Neurotology Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Annals of Otology and Neurotology Volume 2 ; 2 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Annals of Otology and Neurotology Volume 2 ; 2 ; >
     au < expected ; exists ; 2020 ; 2020 ; Annals of Otology and Neurotology Volume 3 ; 3 ; >
 
    }
@@ -579,7 +579,7 @@
    au < finished ; finished ; 2016 ; 2016 ; Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery Volume 35 ; 35 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery Volume 36 ; 36 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery Volume 37 ; 37 ; >
-   au < crawling ; exists ; 2019 ; 2019 ; Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery Volume 38 ; 38 ; >
+   au < deepCrawl ; exists ; 2019 ; 2019 ; Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery Volume 38 ; 38 ; >
    au < manifest ; exists ; 2020 ; 2020 ; Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery Volume 39 ; 39 ; >
 
    }
@@ -648,7 +648,7 @@
     au < deepCrawl ; exists ; 2016 ; 2016 ; Drug Research Volume 66 ; 66 ; >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Drug Research Volume 67 ; 67 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Drug Research Volume 68 ; 68 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Drug Research Volume 69 ; 69 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Drug Research Volume 69 ; 69 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Drug Research Volume 70 ; 70 ; >
 
    }
@@ -672,7 +672,7 @@
     au < deepCrawl ; exists ; 2016 ; 2016 ; Augenheilkunde up2date Volume 6 ; 6 ; >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Augenheilkunde up2date Volume 7 ; 7 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Augenheilkunde up2date Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Augenheilkunde up2date Volume 9 ; 9 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Augenheilkunde up2date Volume 9 ; 9 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Augenheilkunde up2date Volume 10 ; 10 ; >
 
   }
@@ -799,7 +799,7 @@
     au < finished ; finished ; 2016 ; 2016 ; Clinics in Colon and Rectal Surgery Volume 29 ; 29 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Clinics in Colon and Rectal Surgery Volume 30 ; 30 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Clinics in Colon and Rectal Surgery Volume 31 ; 31 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Clinics in Colon and Rectal Surgery Volume 32 ; 32 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Clinics in Colon and Rectal Surgery Volume 32 ; 32 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Clinics in Colon and Rectal Surgery Volume 33 ; 33 ; >
 
   }
@@ -845,7 +845,7 @@
 
     au < deepCrawl ; exists ; 2017 ; 2017 ; Craniomaxillofacial Trauma & Reconstruction Open Volume 1 ; 1 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Craniomaxillofacial Trauma & Reconstruction Open Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Craniomaxillofacial Trauma & Reconstruction Open Volume 3 ; 3 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Craniomaxillofacial Trauma & Reconstruction Open Volume 3 ; 3 ; >
     au < expected ; exists ; 2020 ; 2020 ; Craniomaxillofacial Trauma & Reconstruction Open Volume 4 ; 4 ; >
 
   }
@@ -1021,7 +1021,7 @@
    au < deepCrawl ; exists ; 2016 ; 2016 ; Diabetes aktuell Volume 14 ; 14 ; >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Diabetes aktuell Volume 15 ; 15 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Diabetes aktuell Volume 16 ; 16 ; >
-   au < crawling ; exists ; 2019 ; 2019 ; Diabetes aktuell Volume 17 ; 17 ; >
+   au < deepCrawl ; exists ; 2019 ; 2019 ; Diabetes aktuell Volume 17 ; 17 ; >
    au < manifest ; exists ; 2020 ; 2020 ; Diabetes aktuell Volume 18 ; 18 ; >
 
   }
@@ -1050,7 +1050,7 @@
    au < deepCrawl ; down ; 2016 ; 2016 ; Diabetologie und Stoffwechsel Volume 11 ; 11 ;  >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Diabetologie und Stoffwechsel Volume 12 ; 12 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Diabetologie und Stoffwechsel Volume 13 ; 13 ; >
-   au < crawling ; exists ; 2019 ; 2019 ; Diabetologie und Stoffwechsel Volume 14 ; 14 ; >
+   au < deepCrawl ; exists ; 2019 ; 2019 ; Diabetologie und Stoffwechsel Volume 14 ; 14 ; >
    au < manifest ; exists ; 2020 ; 2020 ; Diabetologie und Stoffwechsel Volume 15 ; 15 ; >
 
   }
@@ -1238,7 +1238,7 @@
    au < finished ; crawling ; 2016 ; 2016 ; DMW - Deutsche Medizinische Wochenschrift Volume 142 ; 142 ; reingest2.clockss.org:8085 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; DMW - Deutsche Medizinische Wochenschrift Volume 143 ; 143 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; DMW - Deutsche Medizinische Wochenschrift Volume 144 ; 144 ; >
-   au < crawling ; exists ; 2019 ; 2019 ; DMW - Deutsche Medizinische Wochenschrift Volume 145 ; 145 ; >
+   au < deepCrawl ; exists ; 2019 ; 2019 ; DMW - Deutsche Medizinische Wochenschrift Volume 145 ; 145 ; >
    au < manifest ; exists ; 2020 ; 2020 ; DMW - Deutsche Medizinische Wochenschrift Volume 146 ; 146 ; >
 
   }
@@ -1271,7 +1271,7 @@
    au < finished ; finished ; 2016 ; 2016 ; Deutsche Zeitschrift für Osteopathie Volume 14 ; 14 ; reingest2.clockss.org:8085 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Deutsche Zeitschrift für Osteopathie Volume 15 ; 15 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Deutsche Zeitschrift für Osteopathie Volume 16 ; 16 ; >
-   au < crawling ; exists ; 2019 ; 2019 ; Deutsche Zeitschrift für Osteopathie Volume 17 ; 17 ; >
+   au < deepCrawl ; exists ; 2019 ; 2019 ; Deutsche Zeitschrift für Osteopathie Volume 17 ; 17 ; >
    au < manifest ; exists ; 2020 ; 2020 ; Deutsche Zeitschrift für Osteopathie Volume 18 ; 18 ; >
 
   }
@@ -1480,7 +1480,7 @@
    au < deepCrawl ; exists ; 2016 ; 2016 ; Ergopraxis Volume 9 ; 9 ; >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Ergopraxis Volume 10 ; 10 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Ergopraxis Volume 11 ; 11 ; >
-   au < crawling ; exists ; 2019 ; 2019 ; Ergopraxis Volume 12 ; 12 ; >
+   au < deepCrawl ; exists ; 2019 ; 2019 ; Ergopraxis Volume 12 ; 12 ; >
    au < manifest ; exists ; 2020 ; 2020 ; Ergopraxis Volume 13 ; 13 ; >
 
   }
@@ -1762,7 +1762,7 @@
    au < finished ; crawling ; 2016 ; 2016 ; Facial Plastic Surgery Volume 32 ; 32 ; reingest1.clockss.org:8082 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Facial Plastic Surgery Volume 33 ; 33 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Facial Plastic Surgery Volume 34 ; 34 ; >
-   au < crawling ; exists ; 2019 ; 2019 ; Facial Plastic Surgery Volume 35 ; 35 ; >
+   au < deepCrawl ; exists ; 2019 ; 2019 ; Facial Plastic Surgery Volume 35 ; 35 ; >
    au < manifest ; exists ; 2020 ; 2020 ; Facial Plastic Surgery Volume 36 ; 36 ; >
 
   }
@@ -1979,7 +1979,7 @@
    au < finished ; crawling ; 2016 ; 2016 ; Gefäßmedizin Scan Volume 3 ; 3 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Gefäßmedizin Scan Volume 4 ; 4 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Gefäßmedizin Scan Volume 5 ; 5 ; >
-   au < crawling ; exists ; 2019 ; 2019 ; Gefäßmedizin Scan Volume 6 ; 6 ; >
+   au < deepCrawl ; exists ; 2019 ; 2019 ; Gefäßmedizin Scan Volume 6 ; 6 ; >
    au < manifest ; exists ; 2020 ; 2020 ; Gefäßmedizin Scan Volume 7 ; 7 ; >
 
   }
@@ -2160,7 +2160,7 @@
    au < deepCrawl ; down ; 2016 ; 2016 ; Hebamme Die Volume 29 ; 29 ;  >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Hebamme Die Volume 30 ; 30 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Hebamme Die Volume 31 ; 31 ; >
-   au < crawling ; exists ; 2019 ; 2019 ; Hebamme Die Volume 32 ; 32 ; >
+   au < deepCrawl ; exists ; 2019 ; 2019 ; Hebamme Die Volume 32 ; 32 ; >
    au < manifest ; exists ; 2020 ; 2020 ; Hebamme Die Volume 33 ; 33 ; >
 
   }
@@ -2205,7 +2205,7 @@
    au < finished ; finished ; 2016 ; 2016 ; Homoeopathic Links Volume 29 ; 29 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Homoeopathic Links Volume 30 ; 30 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Homoeopathic Links Volume 31 ; 31 ; >
-   au < crawling ; exists ; 2019 ; 2019 ; Homoeopathic Links Volume 32 ; 32 ; >
+   au < deepCrawl ; exists ; 2019 ; 2019 ; Homoeopathic Links Volume 32 ; 32 ; >
    au < manifest ; exists ; 2020 ; 2020 ; Homoeopathic Links Volume 33 ; 33 ; >
 
   }
@@ -2272,7 +2272,7 @@
    au < finished ; crawling ; 2016 ; 2016 ; Hormone and Metabolic Research Volume 48 ; 48 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Hormone and Metabolic Research Volume 49 ; 49 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Hormone and Metabolic Research Volume 50 ; 50 ; >
-   au < crawling ; exists ; 2019 ; 2019 ; Hormone and Metabolic Research Volume 51 ; 51 ; >
+   au < deepCrawl ; exists ; 2019 ; 2019 ; Hormone and Metabolic Research Volume 51 ; 51 ; >
    au < manifest ; exists ; 2020 ; 2020 ; Hormone and Metabolic Research Volume 52 ; 52 ; >
 
   }
@@ -2319,7 +2319,7 @@
    au < deepCrawl ; down ; 2016 ; 2016 ; Indian Journal of Neurosurgery Volume 5 ; 5 ;  >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Indian Journal of Neurosurgery Volume 6 ; 6 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Indian Journal of Neurosurgery Volume 7 ; 7 ; >
-   au < crawling ; exists ; 2019 ; 2019 ; Indian Journal of Neurosurgery Volume 8 ; 8 ; >
+   au < deepCrawl ; exists ; 2019 ; 2019 ; Indian Journal of Neurosurgery Volume 8 ; 8 ; >
    au < expected ; exists ; 2020 ; 2020 ; Indian Journal of Neurosurgery Volume 9 ; 9 ; >
 
   }
@@ -2385,7 +2385,7 @@
    au < deepCrawl ; down ; 2016 ; 2016 ; Informationen aus Orthodontie & Kieferorthopädie Volume 48 ; 48 ;  >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Informationen aus Orthodontie & Kieferorthopädie Volume 49 ; 49 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Informationen aus Orthodontie & Kieferorthopädie Volume 50 ; 50 ; >
-   au < crawling ; exists ; 2019 ; 2019 ; Informationen aus Orthodontie & Kieferorthopädie Volume 51 ; 51 ; >
+   au < deepCrawl ; exists ; 2019 ; 2019 ; Informationen aus Orthodontie & Kieferorthopädie Volume 51 ; 51 ; >
    au < manifest ; exists ; 2020 ; 2020 ; Informationen aus Orthodontie & Kieferorthopädie Volume 52 ; 52 ; >
 
   }
@@ -2466,7 +2466,7 @@
     au < finished ; finished ; 2016 ; 2016 ; Intensivmedizin up2date Volume 12 ; 12 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Intensivmedizin up2date Volume 13 ; 13 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Intensivmedizin up2date Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Intensivmedizin up2date Volume 15 ; 15 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Intensivmedizin up2date Volume 15 ; 15 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Intensivmedizin up2date Volume 16 ; 16 ; >
 
   }
@@ -2628,7 +2628,7 @@
 
     au < deepCrawl ; exists ; 2017 ; 2017 ; Joints Volume 1 ; 1 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Joints Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Joints Volume 3 ; 3 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Joints Volume 3 ; 3 ; >
     au < expected ; exists ; 2020 ; 2020 ; Joints Volume 4 ; 4 ; >
 
   }
@@ -2771,7 +2771,7 @@
 
     au < deepCrawl ; exists ; 2017 ; 2017 ; Journal of Clinical Interventional Radiology Volume 1 ; 1 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Journal of Clinical Interventional Radiology Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Journal of Clinical Interventional Radiology Volume 3 ; 3 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Clinical Interventional Radiology Volume 3 ; 3 ; >
     au < expected ; exists ; 2020 ; 2020 ; Journal of Clinical Interventional Radiology Volume 4 ; 4 ; >
 
   }
@@ -2810,7 +2810,7 @@
     au < deepCrawl ; exists ; 2017 ; 2017 ; The Journal of Hip Surgery  Volume 1 ; 1 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; The Journal of Hip Surgery  Volume 2 ; 2 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; The Journal of Hip Surgery  Volume 3 ; 3 ; >
-    au < expected ; exists ; 2020 ; 2020 ; The Journal of Hip Surgery  Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2020 ; 2020 ; The Journal of Hip Surgery  Volume 4 ; 4 ; >
 
   }
 
@@ -2841,7 +2841,7 @@
     au < deepCrawl ; exists ; 2016 ; 2016 ; Journal of Knee Surgery Volume 29 ; 29 ; >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Journal of Knee Surgery Volume 30 ; 30 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Journal of Knee Surgery Volume 31 ; 31 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Journal of Knee Surgery Volume 32 ; 32 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Knee Surgery Volume 32 ; 32 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Journal of Knee Surgery Volume 33 ; 33 ; >
 
   }
@@ -2995,7 +2995,7 @@
     au < finished ; crawling ; 2016 ; 2016 ; Journal of Pediatric Genetics Volume 5 ; 5 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Journal of Pediatric Genetics Volume 6 ; 6 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Journal of Pediatric Genetics Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Journal of Pediatric Genetics Volume 8 ; 8 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Pediatric Genetics Volume 8 ; 8 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Journal of Pediatric Genetics Volume 9 ; 9 ; >
 
   }
@@ -3049,7 +3049,7 @@
     au < finished ; crawling ; 2016 ; 2016 ; Journal of Pediatric Intensive Care Volume 5 ; 5 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Journal of Pediatric Intensive Care Volume 6 ; 6 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Journal of Pediatric Intensive Care Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Journal of Pediatric Intensive Care Volume 8 ; 8 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Pediatric Intensive Care Volume 8 ; 8 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Journal of Pediatric Intensive Care Volume 9 ; 9 ; >
 
   }
@@ -3222,7 +3222,7 @@
     au < finished ; crawling ; 2016 ; 2016 ; Journal of Wrist Surgery Volume 5 ; 5 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Journal of Wrist Surgery Volume 6 ; 6 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Journal of Wrist Surgery Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Journal of Wrist Surgery Volume 8 ; 8 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Wrist Surgery Volume 8 ; 8 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Journal of Wrist Surgery Volume 9 ; 9 ; >
 
   }
@@ -3246,7 +3246,7 @@
     au < deepCrawl ; exists ; 2016 ; 2016 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 5 ; 5 ; >
     au < deepCrawl ; exists ; 2017 ; 2017 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 6 ; 6 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 8 ; 8 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 8 ; 8 ; >
     au < manifest ; exists ; 2020 ; 2020 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 9 ; 9 ; >
 
   }
@@ -3304,7 +3304,7 @@
     au < finished ; finished ; 2016 ; 2016 ; kleintier konkret Volume 19 ; 19 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; kleintier konkret Volume 20 ; 20 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; kleintier konkret Volume 21 ; 21 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; kleintier konkret Volume 22 ; 22 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; kleintier konkret Volume 22 ; 22 ; >
     au < manifest ; exists ; 2020 ; 2020 ; kleintier konkret Volume 23 ; 23 ; >
 
   }
@@ -3336,7 +3336,7 @@
     au < finished ; finished ; 2016 ; 2016 ; Klinikarzt Der Volume 45 ; 45 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Klinikarzt Der Volume 46 ; 46 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Klinikarzt Der Volume 47 ; 47 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Klinikarzt Der Volume 48 ; 48 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Klinikarzt Der Volume 48 ; 48 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Klinikarzt Der Volume 49 ; 49 ; >
 
   }
@@ -3391,7 +3391,7 @@
     au < deepCrawl ; exists ; 2016 ; 2016 ; Klinische Monatsblätter für Augenheilkunde Volume 233 ; 233 ; >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Klinische Monatsblätter für Augenheilkunde Volume 234 ; 234 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Klinische Monatsblätter für Augenheilkunde Volume 235 ; 235 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Klinische Monatsblätter für Augenheilkunde Volume 236 ; 236 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Klinische Monatsblätter für Augenheilkunde Volume 236 ; 236 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Klinische Monatsblätter für Augenheilkunde Volume 237 ; 237 ; >
 
   }
@@ -3563,7 +3563,7 @@
     au < finished ; crawling ; 2016 ; 2016 ; Krankenhaushygiene up2date Volume 11 ; 11 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Krankenhaushygiene up2date Volume 12 ; 12 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Krankenhaushygiene up2date Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Krankenhaushygiene up2date Volume 14 ; 14 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Krankenhaushygiene up2date Volume 14 ; 14 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Krankenhaushygiene up2date Volume 15 ; 15 ; >
 
   }
@@ -3917,7 +3917,7 @@
     au < finished ; finished ; 2016 ; 2016 ; Neuroradiologie Scan Volume 6 ; 6 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Neuroradiologie Scan Volume 7 ; 7 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Neuroradiologie Scan Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Neuroradiologie Scan Volume 9 ; 9 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Neuroradiologie Scan Volume 9 ; 9 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Neuroradiologie Scan Volume 10 ; 10 ; >
 
   }
@@ -3979,7 +3979,7 @@
     au < finished ; finished ; 2016 ; 2016 ; Notarzt Der Volume 32 ; 32 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Notarzt Der Volume 33 ; 33 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Notarzt Der Volume 34 ; 34 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Notarzt Der Volume 35 ; 35 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Notarzt Der Volume 35 ; 35 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Notarzt Der Volume 36 ; 36 ; >
 
   }
@@ -4265,7 +4265,7 @@
     au < finished ; crawling ; 2016 ; 2016 ; Pädiatrie up2date Volume 11 ; 11 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Pädiatrie up2date Volume 12 ; 12 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Pädiatrie up2date Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Pädiatrie up2date Volume 14 ; 14 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Pädiatrie up2date Volume 14 ; 14 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Pädiatrie up2date Volume 15 ; 15 ; >
 
   }
@@ -4522,7 +4522,7 @@
     au < finished ; crawling ; 2016 ; 2016 ; PiD - Psychotherapie im Dialog Volume 17 ; 17 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; PiD - Psychotherapie im Dialog Volume 18 ; 18 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; PiD - Psychotherapie im Dialog Volume 19 ; 19 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; PiD - Psychotherapie im Dialog Volume 20 ; 20 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; PiD - Psychotherapie im Dialog Volume 20 ; 20 ; >
     au < manifest ; exists ; 2020 ; 2020 ; PiD - Psychotherapie im Dialog Volume 21 ; 21 ; >
 
   }
@@ -4629,7 +4629,7 @@
    au < finished ; crawling ; 2016 ; 2016 ; Planta Medica Volume 82 ; 82 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Planta Medica Volume 83 ; 83 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Planta Medica Volume 84 ; 84 ; >
-   au < crawling ; exists ; 2019 ; 2019 ; Planta Medica Volume 85 ; 85 ; >
+   au < deepCrawl ; exists ; 2019 ; 2019 ; Planta Medica Volume 85 ; 85 ; >
    au < manifest ; exists ; 2020 ; 2020 ; Planta Medica Volume 86 ; 86 ; >
 
   }
@@ -4647,7 +4647,7 @@
    au < finished ; crawling ; 2016 ; 2016 ; Planta Medica International Open Volume 1 ; 1 ; reingest1.clockss.org:8082 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Planta Medica International Open Volume 2 ; 2 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Planta Medica International Open Volume 3 ; 3 ; >
-   au < crawling ; exists ; 2019 ; 2019 ; Planta Medica International Open Volume 4 ; 4 ; >
+   au < deepCrawl ; exists ; 2019 ; 2019 ; Planta Medica International Open Volume 4 ; 4 ; >
    au < manifest ; exists ; 2020 ; 2020 ; Planta Medica International Open Volume 5 ; 5 ; >
 
   }
@@ -4791,7 +4791,7 @@
    au < deepCrawl ; exists ; 2016 ; 2016 ; Psych Pflege Heute Volume 22 ; 22 ; >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Psych Pflege Heute Volume 23 ; 23 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Psych Pflege Heute Volume 24 ; 24 ; >
-   au < crawling ; exists ; 2019 ; 2019 ; Psych Pflege Heute Volume 25 ; 25 ; >
+   au < deepCrawl ; exists ; 2019 ; 2019 ; Psych Pflege Heute Volume 25 ; 25 ; >
    au < manifest ; exists ; 2020 ; 2020 ; Psych Pflege Heute Volume 26 ; 26 ; >
 
   }
@@ -4978,7 +4978,7 @@
    au < deepCrawl ; exists ; 2016 ; 2016 ; Rehabilitation Die Volume 55 ; 55 ; >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Rehabilitation Die Volume 56 ; 56 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Rehabilitation Die Volume 57 ; 57 ; >
-   au < crawling ; exists ; 2019 ; 2019 ; Rehabilitation Die Volume 58 ; 58 ; >
+   au < deepCrawl ; exists ; 2019 ; 2019 ; Rehabilitation Die Volume 58 ; 58 ; >
    au < manifest ; exists ; 2020 ; 2020 ; Rehabilitation Die Volume 59 ; 59 ; >
 
   }
@@ -5022,7 +5022,7 @@
    au < finished ; finished ; 2016 ; 2016 ; Revista Brasileira de Ginecologia e Obstetrícia Volume 38 ; 38 ; reingest2.clockss.org:8085 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Revista Brasileira de Ginecologia e Obstetrícia Volume 39 ; 39 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Revista Brasileira de Ginecologia e Obstetrícia Volume 40 ; 40 ; >
-   au < crawling ; exists ; 2019 ; 2019 ; Revista Brasileira de Ginecologia e Obstetrícia Volume 41 ; 41 ; >
+   au < deepCrawl ; exists ; 2019 ; 2019 ; Revista Brasileira de Ginecologia e Obstetrícia Volume 41 ; 41 ; >
    au < manifest ; exists ; 2020 ; 2020 ; Revista Brasileira de Ginecologia e Obstetrícia Volume 42 ; 42 ; >
 
   }
@@ -5039,7 +5039,7 @@
 
    au < deepCrawl ; exists ; 2017 ; 2017 ; Revista Chilena de Ortopedia y Traumatología Volume 1 ; 1 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Revista Chilena de Ortopedia y Traumatología Volume 2 ; 2 ; >
-   au < crawling ; exists ; 2019 ; 2019 ; Revista Chilena de Ortopedia y Traumatología Volume 3 ; 3 ; >
+   au < deepCrawl ; exists ; 2019 ; 2019 ; Revista Chilena de Ortopedia y Traumatología Volume 3 ; 3 ; >
    au < expected ; exists ; 2020 ; 2020 ; Revista Chilena de Ortopedia y Traumatología Volume 4 ; 4 ; >
 
   }
@@ -5126,7 +5126,7 @@
     au < finished ; finished ; 2016 ; 2016 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 188 ; 188 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 189 ; 189 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 190 ; 190 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 191 ; 191 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 191 ; 191 ; >
     au < manifest ; exists ; 2020 ; 2020 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 192 ; 192 ; >
 
   }
@@ -5380,7 +5380,7 @@
    au < finished ; crawling ; 2016 ; 2016 ; Seminars in Neurology Volume 36 ; 36 ; reingest2.clockss.org:8085 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Seminars in Neurology Volume 37 ; 37 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Seminars in Neurology Volume 38 ; 38 ; >
-   au < crawling ; exists ; 2019 ; 2019 ; Seminars in Neurology Volume 39 ; 39 ; >
+   au < deepCrawl ; exists ; 2019 ; 2019 ; Seminars in Neurology Volume 39 ; 39 ; >
    au < manifest ; exists ; 2020 ; 2020 ; Seminars in Neurology Volume 40 ; 40 ; >
 
   }
@@ -5543,7 +5543,7 @@
    au < finished ; crawling ; 2016 ; 2016 ; Seminars in Respiratory and Critical Care Medicine Volume 37 ; 37 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Seminars in Respiratory and Critical Care Medicine Volume 38 ; 38 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Seminars in Respiratory and Critical Care Medicine Volume 39 ; 39 ; >
-   au < crawling ; exists ; 2019 ; 2019 ; Seminars in Respiratory and Critical Care Medicine Volume 40 ; 40 ; >
+   au < deepCrawl ; exists ; 2019 ; 2019 ; Seminars in Respiratory and Critical Care Medicine Volume 40 ; 40 ; >
    au < manifest ; exists ; 2020 ; 2020 ; Seminars in Respiratory and Critical Care Medicine Volume 41 ; 41 ; >
 
   }
@@ -5657,7 +5657,7 @@
     au < finished ; finished ; 2016 ; 2016 ; Seminars in Thrombosis and Hemostasis Volume 42 ; 42 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Seminars in Thrombosis and Hemostasis Volume 43 ; 43 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Seminars in Thrombosis and Hemostasis Volume 44 ; 44 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Seminars in Thrombosis and Hemostasis Volume 45 ; 45 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Seminars in Thrombosis and Hemostasis Volume 45 ; 45 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Seminars in Thrombosis and Hemostasis Volume 46 ; 46 ; >
 
   }
@@ -5709,7 +5709,7 @@
     au < finished ; crawling ; 2016 ; 2016 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 13 ; 13 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 14 ; 14 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 16 ; 16 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 16 ; 16 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 17 ; 17 ; >
 
   }
@@ -5935,7 +5935,7 @@
    au < finished ; crawling ; 2016 ; 2016 ; Suchttherapie Volume 17 ; 17 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Suchttherapie Volume 18 ; 18 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Suchttherapie Volume 19 ; 19 ; >
-   au < crawling ; exists ; 2019 ; 2019 ; Suchttherapie Volume 20 ; 20 ; >
+   au < deepCrawl ; exists ; 2019 ; 2019 ; Suchttherapie Volume 20 ; 20 ; >
    au < manifest ; exists ; 2020 ; 2020 ; Suchttherapie Volume 21 ; 21 ; >
 
   }
@@ -5987,7 +5987,7 @@
    au < deepCrawl ; exists ; 2016 ; 2016 ; SYNFACTS Volume 12 ; 12 ; >
    au < deepCrawl ; exists ; 2017 ; 2017 ; SYNFACTS Volume 13 ; 13 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; SYNFACTS Volume 14 ; 14 ; >
-   au < crawling ; exists ; 2019 ; 2019 ; SYNFACTS Volume 15 ; 15 ; >
+   au < deepCrawl ; exists ; 2019 ; 2019 ; SYNFACTS Volume 15 ; 15 ; >
    au < manifest ; exists ; 2020 ; 2020 ; SYNFACTS Volume 16 ; 16 ; >
 
   }
@@ -6147,7 +6147,7 @@
    au < finished ; finished ; 2016 ; 2016 ; team-konkret Volume 12 ; 12 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; team-konkret Volume 13 ; 13 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; team-konkret Volume 14 ; 14 ; >
-   au < crawling ; exists ; 2019 ; 2019 ; team-konkret Volume 15 ; 15 ; >
+   au < deepCrawl ; exists ; 2019 ; 2019 ; team-konkret Volume 15 ; 15 ; >
    au < manifest ; exists ; 2020 ; 2020 ; team-konkret Volume 16 ; 16 ; >
 
   }
@@ -6229,7 +6229,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; The Thoracic and Cardiovascular Surgeon Reports Volume 5 ; 5 ; >
     au < deepCrawl ; exists ; 2017 ; 2017 ; The Thoracic and Cardiovascular Surgeon Reports Volume 6 ; 6 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; The Thoracic and Cardiovascular Surgeon Reports Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; The Thoracic and Cardiovascular Surgeon Reports Volume 8 ; 8 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; The Thoracic and Cardiovascular Surgeon Reports Volume 8 ; 8 ; >
     au < manifest ; exists ; 2020 ; 2020 ; The Thoracic and Cardiovascular Surgeon Reports Volume 9 ; 9 ; >
 
   }
@@ -6384,7 +6384,7 @@
    au < finished ; finished ; 2016 ; 2016 ; Ultrasound International Open Volume 2 ; 2 ; reingest1.clockss.org:8082 >
    au < deepCrawl ; exists ; 2017 ; 2017 ; Ultrasound International Open Volume 3 ; 3 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Ultrasound International Open Volume 4 ; 4 ; >
-   au < crawling ; exists ; 2019 ; 2019 ; Ultrasound International Open Volume 5 ; 5 ; >
+   au < deepCrawl ; exists ; 2019 ; 2019 ; Ultrasound International Open Volume 5 ; 5 ; >
    au < expected ; exists ; 2020 ; 2020 ; Ultrasound International Open Volume 6 ; 6 ; >
 
   }
@@ -6502,7 +6502,7 @@
     au < finished ; crawling ; 2016 ; 2016 ; VPT Magazin Volume 2 ; 2 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; VPT Magazin Volume 3 ; 3 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; VPT Magazin Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; VPT Magazin Volume 5 ; 5 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; VPT Magazin Volume 5 ; 5 ; >
     au < manifest ; exists ; 2020 ; 2020 ; VPT Magazin Volume 6 ; 6 ; >
 
   }
@@ -6549,7 +6549,7 @@
     au < finished ; crawling ; 2016 ; 2016 ; Zahnmedizin up2date Volume 10 ; 10 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Zahnmedizin up2date Volume 11 ; 11 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Zahnmedizin up2date Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Zahnmedizin up2date Volume 13 ; 13 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Zahnmedizin up2date Volume 13 ; 13 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Zahnmedizin up2date Volume 14 ; 14 ; >
 
   }
@@ -6786,7 +6786,7 @@
     au < finished ; finished ; 2016 ; 2016 ; Zeitschrift für Orthomolekulare Medizin Volume 14 ; 14 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Zeitschrift für Orthomolekulare Medizin Volume 15 ; 15 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Zeitschrift für Orthomolekulare Medizin Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Zeitschrift für Orthomolekulare Medizin Volume 17 ; 17 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Zeitschrift für Orthomolekulare Medizin Volume 17 ; 17 ; >
     au < expected ; exists ; 2020 ; 2020 ; Zeitschrift für Orthomolekulare Medizin Volume 18 ; 18 ; >
 
   }
@@ -6926,7 +6926,7 @@
     au < finished ; finished ; 2016 ; 2016 ; Zeitschrift für Phytotherapie Volume 37 ; 37 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Zeitschrift für Phytotherapie Volume 38 ; 38 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Zeitschrift für Phytotherapie Volume 39 ; 39 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Zeitschrift für Phytotherapie Volume 40 ; 40 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Zeitschrift für Phytotherapie Volume 40 ; 40 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Zeitschrift für Phytotherapie Volume 41 ; 41 ; >
 
   }
@@ -6961,7 +6961,7 @@
     au < finished ; crawling ; 2016 ; 2016 ; Zeitschrift für Sexualforschung Volume 29 ; 29 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Zeitschrift für Sexualforschung Volume 30 ; 30 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Zeitschrift für Sexualforschung Volume 31 ; 31 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Zeitschrift für Sexualforschung Volume 32 ; 32 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Zeitschrift für Sexualforschung Volume 32 ; 32 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Zeitschrift für Sexualforschung Volume 33 ; 33 ; >
 
   }
@@ -6997,7 +6997,7 @@
     au < finished ; finished ; 2016 ; 2016 ; Zeitschrift für Chirurgie Volume 141 ; 141 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Zeitschrift für Chirurgie Volume 142 ; 142 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Zeitschrift für Chirurgie Volume 143 ; 143 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Zeitschrift für Chirurgie Volume 144 ; 144 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Zeitschrift für Chirurgie Volume 144 ; 144 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Zeitschrift für Chirurgie Volume 145 ; 145 ; >
 
   }
@@ -7136,7 +7136,7 @@
 
     au < deepCrawl ; exists ; 2017 ; 2017 ; ACI Open Volume 1 ; 1 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; ACI Open Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; ACI Open Volume 3 ; 3 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; ACI Open Volume 3 ; 3 ; >
     au < manifest ; exists ; 2020 ; 2020 ; ACI Open Volume 4 ; 4 ; >
 
   }
@@ -7191,7 +7191,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Applied Clinical Informatics Volume 7 ; 7 ; >
     au < finished ; finished ; 2017 ; 2017 ; Applied Clinical Informatics Volume 8 ; 8 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Applied Clinical Informatics Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Applied Clinical Informatics Volume 10 ; 10 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Applied Clinical Informatics Volume 10 ; 10 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Applied Clinical Informatics Volume 11 ; 11 ; >
 
   }
@@ -7278,7 +7278,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Hämostaseologie Volume 36 ; 36 ; >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Hämostaseologie Volume 37 ; 37 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Hämostaseologie Volume 38 ; 38 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Hämostaseologie Volume 39 ; 39 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Hämostaseologie Volume 39 ; 39 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Hämostaseologie Volume 40 ; 40 ; >
 
   }
@@ -7332,7 +7332,7 @@
 
     au < deepCrawl ; exists ; 2017 ; 2017 ; Journal of Child Science Volume 7 ; 7 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Journal of Child Science Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Journal of Child Science Volume 9 ; 9 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Child Science Volume 9 ; 9 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Journal of Child Science Volume 10 ; 10 ; >
 
   }
@@ -7427,7 +7427,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Nervenheilkunde Volume 35 ; 35 ; >
     au < finished ; finished ; 2017 ; 2017 ; Nervenheilkunde Volume 36 ; 36 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Nervenheilkunde Volume 37 ; 37 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Nervenheilkunde Volume 38 ; 38 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Nervenheilkunde Volume 38 ; 38 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Nervenheilkunde Volume 39 ; 39 ; >
 
   }
@@ -7489,7 +7489,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Onkologische Welt Volume 7 ; 7 ; >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Onkologische Welt Volume 8 ; 8 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Onkologische Welt Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Onkologische Welt Volume 10 ; 10 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Onkologische Welt Volume 10 ; 10 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Onkologische Welt Volume 11 ; 11 ; >
 
   }
@@ -7696,7 +7696,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 14 ; 14 ; >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 15 ; 15 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 17 ; 17 ; >
+    au < deepCrawl ; exists ; 2019 ; 2019 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 17 ; 17 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 18 ; 18 ; >
 
   }

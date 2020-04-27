@@ -64,7 +64,7 @@
       au < finished ; manifest ; 2016 ; Comparative Literature Studies Volume 53 ; 2016 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2017 ; Comparative Literature Studies Volume 54 ; 2017 ; http://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2018 ; Comparative Literature Studies Volume 55 ; 2018 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2019 ; Comparative Literature Studies Volume 56 ; 2019 ; https://www.jstor.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; Comparative Literature Studies Volume 56 ; 2019 ; https://www.jstor.org/ ; >
       au < expected ; exists ; 2020 ; Comparative Literature Studies Volume 57 ; 2020 ; https://www.jstor.org/ ; >
 
   }
@@ -110,7 +110,7 @@
       au < finished ; manifest ; 2016 ; The Edgar Allan Poe Review Volume 17 ; 2016 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; The Edgar Allan Poe Review Volume 18 ; 2017 ; http://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2018 ; The Edgar Allan Poe Review Volume 19 ; 2018 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2019 ; The Edgar Allan Poe Review Volume 20 ; 2019 ; https://www.jstor.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; The Edgar Allan Poe Review Volume 20 ; 2019 ; https://www.jstor.org/ ; >
       au < expected ; exists ; 2020 ; The Edgar Allan Poe Review Volume 21 ; 2020 ; https://www.jstor.org/ ; >
 
   }
@@ -133,8 +133,8 @@
       au < finished ; manifest ; 2016 ; The Eugene O'Neill Review Volume 37 ; 2016 ; http://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; The Eugene O'Neill Review Volume 38 ; 2017 ; http://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2018 ; The Eugene O'Neill Review Volume 39 ; 2018 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2019 ; The Eugene O'Neill Review Volume 40 ; 2019 ; https://www.jstor.org/ ; >
-      au < expected ; exists ; 2020 ; The Eugene O'Neill Review Volume 41 ; 2020 ; https://www.jstor.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; The Eugene O'Neill Review Volume 40 ; 2019 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2020 ; The Eugene O'Neill Review Volume 41 ; 2020 ; https://www.jstor.org/ ; >
 
   }
 
@@ -304,7 +304,7 @@
       au < finished ; manifest ; 2016 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 4 ; 2016 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 5 ; 2017 ; http://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2018 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 6 ; 2018 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2019 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 7 ; 2019 ; https://www.jstor.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 7 ; 2019 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2020 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 8 ; 2020 ; https://www.jstor.org/ ; >
 
   }
@@ -534,8 +534,8 @@
       au < frozen ; exists ; 2016 ; Pacific Coast Philology Volume 51 ; 2016 ; http://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2017 ; Pacific Coast Philology Volume 52 ; 2017 ; http://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2018 ; Pacific Coast Philology Volume 53 ; 2018 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2019 ; Pacific Coast Philology Volume 54 ; 2019 ; https://www.jstor.org/ ; >
-      au < expected ; exists ; 2020 ; Pacific Coast Philology Volume 55 ; 2020 ; https://www.jstor.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; Pacific Coast Philology Volume 54 ; 2019 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2020 ; Pacific Coast Philology Volume 55 ; 2020 ; https://www.jstor.org/ ; >
 
   }
 
@@ -606,7 +606,7 @@
       au < frozen ; exists ; 2016 ; Preternature: Critical and Historical Studies on the Preternatural Volume 5 ; 2016 ; http://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2017 ; Preternature: Critical and Historical Studies on the Preternatural Volume 6 ; 2017 ; http://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2018 ; Preternature: Critical and Historical Studies on the Preternatural Volume 7 ; 2018 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2019 ; Preternature: Critical and Historical Studies on the Preternatural Volume 8 ; 2019 ; https://www.jstor.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; Preternature: Critical and Historical Studies on the Preternatural Volume 8 ; 2019 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2020 ; Preternature: Critical and Historical Studies on the Preternatural Volume 9 ; 2020 ; https://www.jstor.org/ ; >
 
   }
@@ -784,8 +784,8 @@
       au < frozen ; exists ; 2016 ; Utopian Studies Volume 27 ; 2016 ; http://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2017 ; Utopian Studies Volume 28 ; 2017 ; http://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2018 ; Utopian Studies Volume 29 ; 2018 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2019 ; Utopian Studies Volume 30 ; 2019 ; https://www.jstor.org/ ; >
-      au < expected ; exists ; 2020 ; Utopian Studies Volume 31 ; 2020 ; https://www.jstor.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; Utopian Studies Volume 30 ; 2019 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2020 ; Utopian Studies Volume 31 ; 2020 ; https://www.jstor.org/ ; >
 
   }
 
@@ -846,7 +846,7 @@
       au < frozen ; exists ; 2016 ; Bulletin for Biblical Research Volume 2016 ; 2016 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2017 ; Bulletin for Biblical Research Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2018 ; Bulletin for Biblical Research Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2019 ; Bulletin for Biblical Research Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; Bulletin for Biblical Research Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
       au < expected ; exists ; 2020 ; Bulletin for Biblical Research Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
 
   }
@@ -871,7 +871,7 @@
       au < frozen ; exists ; 2016 ; Bustan - The Middle East Book Review Volume 2016 ; 2016 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2017 ; Bustan - The Middle East Book Review Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2018 ; Bustan - The Middle East Book Review Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2019 ; Bustan - The Middle East Book Review Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; Bustan - The Middle East Book Review Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
       au < expected ; exists ; 2020 ; Bustan - The Middle East Book Review Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
 
   }
@@ -900,7 +900,7 @@
       au < frozen ; exists ; 2016 ; The Arthur Miller Journal Volume 2016 ; 2016 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2017 ; The Arthur Miller Journal Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2018 ; The Arthur Miller Journal Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2019 ; The Arthur Miller Journal Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; The Arthur Miller Journal Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2020 ; The Arthur Miller Journal Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
 
   }
@@ -1012,7 +1012,7 @@
       au < exists ; exists ; 2016 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 2016 ; 2016 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2017 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2018 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2019 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2020 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
 
   }
@@ -1127,7 +1127,7 @@
       au < frozen ; exists ; 2016 ; George Eliot-George Henry Lewes Studies Volume 2016 ; 2016 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2017 ; George Eliot-George Henry Lewes Studies Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2018 ; George Eliot-George Henry Lewes Studies Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2019 ; George Eliot-George Henry Lewes Studies Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; George Eliot-George Henry Lewes Studies Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
       au < expected ; exists ; 2020 ; George Eliot-George Henry Lewes Studies Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
 
   }
@@ -1165,7 +1165,7 @@
       au < frozen ; exists ; 2016 ; Gestalt Review Volume 2016 ; 2016 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2017 ; Gestalt Review Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2018 ; Gestalt Review Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2019 ; Gestalt Review Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; Gestalt Review Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
       au < expected ; exists ; 2020 ; Gestalt Review Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
 
   }
@@ -1184,7 +1184,7 @@
       au < frozen ; exists ; 2016 ; International Journal of Persian Literature Volume 2016 ; 2016 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2017 ; International Journal of Persian Literature Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2018 ; International Journal of Persian Literature Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2019 ; International Journal of Persian Literature Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; International Journal of Persian Literature Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
       au < expected ; exists ; 2020 ; International Journal of Persian Literature Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
 
   }
@@ -1227,7 +1227,7 @@
       au < frozen ; exists ; 2016 ; Journal of Asia-Pacific Pop Culture Volume 2016 ; 2016 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2017 ; Journal of Asia-Pacific Pop Culture Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2018 ; Journal of Asia-Pacific Pop Culture Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2019 ; Journal of Asia-Pacific Pop Culture Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; Journal of Asia-Pacific Pop Culture Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
       au < expected ; exists ; 2020 ; Journal of Asia-Pacific Pop Culture Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
 
   }
@@ -1315,7 +1315,7 @@
 
       au < frozen ; exists ; 2017 ; Journal of Posthuman Studies Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2018 ; Journal of Posthuman Studies Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2019 ; Journal of Posthuman Studies Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; Journal of Posthuman Studies Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
       au < expected ; exists ; 2020 ; Journal of Posthuman Studies Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
 
   }
@@ -1352,7 +1352,7 @@
       au < frozen ; exists ; 2016 ; Journal of the Pennsylvania Academy of Science Volume 2016 ; 2016 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2017 ; Journal of the Pennsylvania Academy of Science Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2018 ; Journal of the Pennsylvania Academy of Science Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2019 ; Journal of the Pennsylvania Academy of Science Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; Journal of the Pennsylvania Academy of Science Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
       au < expected ; exists ; 2020 ; Journal of the Pennsylvania Academy of Science Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
 
   }
@@ -1380,7 +1380,7 @@
       au < frozen ; exists ; 2016 ; Journal of Theological Interpretation Volume 2016 ; 2016 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2017 ; Journal of Theological Interpretation Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2018 ; Journal of Theological Interpretation Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2019 ; Journal of Theological Interpretation Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; Journal of Theological Interpretation Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
       au < expected ; exists ; 2020 ; Journal of Theological Interpretation Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
 
   }
@@ -1692,7 +1692,7 @@
 
       au < frozen ; exists ; 2017 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2018 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2019 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
       au < expected ; exists ; 2020 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
 
   }
@@ -1737,8 +1737,8 @@
       au < frozen ; exists ; 2016 ; The Journal of World Christianity Volume 2016 ; 2016 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2017 ; The Journal of World Christianity Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2018 ; The Journal of World Christianity Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2019 ; The Journal of World Christianity Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
-      au < expected ; exists ; 2020 ; The Journal of World Christianity Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; The Journal of World Christianity Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2020 ; The Journal of World Christianity Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
 
   }
 
@@ -1777,7 +1777,7 @@
       au < frozen ; exists ; 2016 ; The Korean Language in America Volume 2016 ; 2016 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2017 ; The Korean Language in America Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2018 ; The Korean Language in America Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2019 ; The Korean Language in America Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; The Korean Language in America Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
       au < expected ; exists ; 2020 ; The Korean Language in America Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
 
   }

@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>15</string>
+    <string>16</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -42,5 +42,16 @@
   <entry>
     <string>text/html_link_rewriter_factory</string>
     <string>org.lockss.plugin.pub2web.asm.AsmHtmlLinkRewriterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <!--
+      Handle the following error:
+      https://www.asmscience.org/deliver/fulltext/10.1128/9781555819743/9781555819736_FM.pdf?itemId=/content/book/10.1128/9781555819743.s0-3&mimeType=pdf&isFastTrackArticle=
+      File size (260312) differs from Content-Length header (260293): https://www.asmscience.org/deliver/fulltext/10.1128/9781555819743/9781555819736_FM.pdf?itemId=/content/book/10.1128/9781555819743.s0-3&mimeType=pdf&isFastTrackArticle=
+      -->
+      <string>org.lockss.plugin.ContentValidationException$WrongLength=org.lockss.util.urlconn.CacheException$WarningOnly</string>
+    </list>
   </entry>
 </map>

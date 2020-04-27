@@ -107,6 +107,7 @@ public class MonitoringInputStream extends InputStream {
       if (closeAbortTrace != null) {
 	log.warning("Close threw: " + closeAbortTrace);
       }
+      IOUtil.safeClose(in);
     }
   }
 }

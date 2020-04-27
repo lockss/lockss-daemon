@@ -46,7 +46,7 @@ import org.lockss.util.ReaderInputStream;
 import java.io.InputStream;
 import java.io.Reader;
 
-public class HindawiHtmlHashFilterFactory implements FilterFactory {
+public class Hindawi2020HtmlHashFilterFactory implements FilterFactory {
 
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
