@@ -57,7 +57,7 @@
     au < released ; 2016 ; Claremont-UC Undergraduate Research Conference Journal Volume 2016 ; 2016 ; http://scholarship.claremont.edu/ >
     au < released ; 2017 ; Claremont-UC Undergraduate Research Conference Journal Volume 2017 ; 2017 ; http://scholarship.claremont.edu/ >
     au < released ; 2018 ; Claremont-UC Undergraduate Research Conference Journal Volume 2018 ; 2018 ; https://scholarship.claremont.edu/ >
-    au < ready ; 2019 ; Claremont-UC Undergraduate Research Conference Journal Volume 2019 ; 2019 ; https://scholarship.claremont.edu/ >
+    au < releasing ; 2019 ; Claremont-UC Undergraduate Research Conference Journal Volume 2019 ; 2019 ; https://scholarship.claremont.edu/ >
 
   }
 
@@ -92,7 +92,7 @@
     au < released ; 2016 ; Journal of Humanistic Mathematics Volume 6 ; 6 ; http://scholarship.claremont.edu/ >
     au < released ; 2017 ; Journal of Humanistic Mathematics Volume 7 ; 7 ; http://scholarship.claremont.edu/ >
     au < released ; 2018 ; Journal of Humanistic Mathematics Volume 8 ; 8 ; https://scholarship.claremont.edu/ >
-    au < ready ; 2019 ; Journal of Humanistic Mathematics Volume 9 ; 9 ; https://scholarship.claremont.edu/ >
+    au < releasing ; 2019 ; Journal of Humanistic Mathematics Volume 9 ; 9 ; https://scholarship.claremont.edu/ >
 
   }
 
@@ -155,13 +155,13 @@
     
     param[journal_abbr] = ppr
 
-    au < ready ; 1988 ; Performance Practice Review Volume 1 ; 1 ; https://scholarship.claremont.edu/ >
-    au < ready ; 1989 ; Performance Practice Review Volume 2 ; 2 ; https://scholarship.claremont.edu/ >
-    au < ready ; 1990 ; Performance Practice Review Volume 3 ; 3 ; https://scholarship.claremont.edu/ >
-    au < ready ; 1991 ; Performance Practice Review Volume 4 ; 4 ; https://scholarship.claremont.edu/ >
-    au < ready ; 1992 ; Performance Practice Review Volume 5 ; 5 ; https://scholarship.claremont.edu/ >
-    au < ready ; 1993 ; Performance Practice Review Volume 6 ; 6 ; https://scholarship.claremont.edu/ >
-    au < ready ; 1994 ; Performance Practice Review Volume 7 ; 7 ; https://scholarship.claremont.edu/ >
+    au < releasing ; 1988 ; Performance Practice Review Volume 1 ; 1 ; https://scholarship.claremont.edu/ >
+    au < releasing ; 1989 ; Performance Practice Review Volume 2 ; 2 ; https://scholarship.claremont.edu/ >
+    au < releasing ; 1990 ; Performance Practice Review Volume 3 ; 3 ; https://scholarship.claremont.edu/ >
+    au < releasing ; 1991 ; Performance Practice Review Volume 4 ; 4 ; https://scholarship.claremont.edu/ >
+    au < releasing ; 1992 ; Performance Practice Review Volume 5 ; 5 ; https://scholarship.claremont.edu/ >
+    au < releasing ; 1993 ; Performance Practice Review Volume 6 ; 6 ; https://scholarship.claremont.edu/ >
+    au < releasing ; 1994 ; Performance Practice Review Volume 7 ; 7 ; https://scholarship.claremont.edu/ >
     au < released ; 1995 ; Performance Practice Review Volume 8 ; 8 ; http://scholarship.claremont.edu/ >
     au < released ; 1996 ; Performance Practice Review Volume 9 ; 9 ; http://scholarship.claremont.edu/ >
     au < released ; 1997 ; Performance Practice Review Volume 10 ; 10 ; http://scholarship.claremont.edu/ >
@@ -193,7 +193,7 @@
     au < released ; 2014 ; The STEAM Journal Volume 1 ; 1 ; http://scholarship.claremont.edu/ >
     au < released ; 2015-2016 ; The STEAM Journal Volume 2 ; 2 ; http://scholarship.claremont.edu/ >
     au < released ; 2017-2018 ; The STEAM Journal Volume 3 ; 3 ; http://scholarship.claremont.edu/ >
-    au < ready ; 2019-2020 ; The STEAM Journal Volume 4 ; 4 ; https://scholarship.claremont.edu/ >
+    au < releasing ; 2019-2020 ; The STEAM Journal Volume 4 ; 4 ; https://scholarship.claremont.edu/ >
 
   }
 
