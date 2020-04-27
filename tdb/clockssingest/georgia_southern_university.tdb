@@ -87,7 +87,7 @@
       au < finished ; frozen ; 2016 ; Georgia Educational Researcher Volume 14 ; 14 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; Georgia Educational Researcher Volume 15 ; 15 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2018 ; Georgia Educational Researcher Volume 16 ; 16 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2019 ; Georgia Educational Researcher Volume 17 ; 17 ; >
+      au < deepCrawl ; exists ; 2019 ; Georgia Educational Researcher Volume 17 ; 17 ; >
       au < expected ; exists ; 2020 ; Georgia Educational Researcher Volume 18 ; 18 ; >
 
   }
@@ -231,7 +231,7 @@
       param[base_url] = https://digitalcommons.georgiasouthern.edu/
       param[journal_abbr] = jssw
 
-      au < crawling ; exists ; 2017-2019 ; The Journal of Student Success in Writing Volume 1 ; 1 ; >
+      au < deepCrawl ; exists ; 2017-2019 ; The Journal of Student Success in Writing Volume 1 ; 1 ; >
       au < expected ; exists ; 2018-2020 ; The Journal of Student Success in Writing Volume 2 ; 2 ; >
 
   }

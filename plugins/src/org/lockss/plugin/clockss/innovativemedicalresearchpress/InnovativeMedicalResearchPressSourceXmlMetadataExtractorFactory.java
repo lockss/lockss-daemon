@@ -17,8 +17,8 @@ import org.w3c.dom.Document;
 import java.util.ArrayList;
 import java.util.List;
 
-public class InnovativeMedicalResearchPressJatsSourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
-    static Logger log = Logger.getLogger(InnovativeMedicalResearchPressJatsSourceXmlMetadataExtractorFactory.class);
+public class InnovativeMedicalResearchPressSourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
+    static Logger log = Logger.getLogger(InnovativeMedicalResearchPressSourceXmlMetadataExtractorFactory.class);
 
     private static SourceXmlSchemaHelper JatsPublishingHelper = null;
 
@@ -69,9 +69,7 @@ public class InnovativeMedicalResearchPressJatsSourceXmlMetadataExtractorFactory
                 if (filenameValue != null) {
                     log.debug3("PDF file path is : " + cuBase + filenameValue);
                     returnList.add(cuBase + filenameValue);
-                } else {
-                    log.debug3("Fei : PDF file path not found : " + cuBase);
-                }
+                } 
             }
             return returnList;
         }

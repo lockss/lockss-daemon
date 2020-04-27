@@ -102,6 +102,8 @@ public class ContentServiceImpl implements ContentService {
       log.debug2(DEBUG_HEADER + "version = " + version);
     }
 
+    boolean cuInUse = false;
+
     if (StringUtil.isNullString(url)) {
       throw new LockssWebServicesFault("Missing required URL");
     }
@@ -199,13 +201,18 @@ public class ContentServiceImpl implements ContentService {
 	  new InputStreamDataSource(cu.getUnfilteredInputStream(), mimeType,
 	      url)));
 
+      // Cannot release CU when return as DataHandler will read from (and
+      // then close) the InputStream in the InputStreamDataSource
+      cuInUse = true;
       if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
       return result;
     } catch (Exception e) {
       log.error(e.getMessage(), e);
       throw new LockssWebServicesFault(e);
     } finally {
-      AuUtil.safeRelease(cu);
+      if (!cuInUse) {
+	AuUtil.safeRelease(cu);
+      }
     }
   }
 

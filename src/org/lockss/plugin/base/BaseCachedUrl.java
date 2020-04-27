@@ -375,14 +375,14 @@ public class BaseCachedUrl implements CachedUrl {
     return ret;
   }
 
-  public void release() {
+  public synchronized void release() {
     if (rnc != null) {
       rnc.release();
       rnc = null;
     }
   }
 
-  protected void ensureRnc() {
+  protected synchronized void ensureRnc() {
     if (rnc == null) {
       rnc = getNodeVersion().getNodeContents();
     }

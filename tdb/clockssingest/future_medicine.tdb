@@ -53,7 +53,7 @@
     au < frozen ; exists ; 2016 ; Biomarkers in Medicine Volume 10 ; 10 ; http://www.futuremedicine.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Biomarkers in Medicine Volume 11 ; 11 ; https://www.futuremedicine.com/ ; >
     au < deepCrawl ; exists ; 2018 ; Biomarkers in Medicine Volume 12 ; 12 ; https://www.futuremedicine.com/ ; >
-    au < crawling ; exists ; 2019 ; Biomarkers in Medicine Volume 13 ; 13 ; https://www.futuremedicine.com/ ; >
+    au < deepCrawl ; exists ; 2019 ; Biomarkers in Medicine Volume 13 ; 13 ; https://www.futuremedicine.com/ ; >
     au < manifest ; exists ; 2020 ; Biomarkers in Medicine Volume 14 ; 14 ; https://www.futuremedicine.com/ ; >
 
   }
@@ -170,7 +170,7 @@
     au < frozen ; exists ; 2016 ; Colorectal Cancer Volume 5 ; 5 ; http://www.futuremedicine.com/ ; >
     au < frozen ; exists ; 2017 ; Colorectal Cancer Volume 6 ; 6 ; https://www.futuremedicine.com/ ; >
     au < deepCrawl ; exists ; 2018 ; Colorectal Cancer Volume 7 ; 7 ; https://www.futuremedicine.com/ ; >
-    au < crawling ; exists ; 2019 ; Colorectal Cancer Volume 8 ; 8 ; https://www.futuremedicine.com/ ; >
+    au < deepCrawl ; exists ; 2019 ; Colorectal Cancer Volume 8 ; 8 ; https://www.futuremedicine.com/ ; >
     au < expected ; exists ; 2020 ; Colorectal Cancer Volume 9 ; 9 ; https://www.futuremedicine.com/ ; >
 
   }
@@ -500,7 +500,7 @@
     au < frozen ; exists ; 2016 ; International Journal of Endocrine Oncology Volume 3 ; 3 ; http://www.futuremedicine.com/ ; >
     au < deepCrawl ; exists ; 2017 ; International Journal of Endocrine Oncology Volume 4 ; 4 ; https://www.futuremedicine.com/ ; >
     au < deepCrawl ; exists ; 2018 ; International Journal of Endocrine Oncology Volume 5 ; 5 ; https://www.futuremedicine.com/ ; >
-    au < crawling ; exists ; 2019 ; International Journal of Endocrine Oncology Volume 6 ; 6 ; https://www.futuremedicine.com/ ; >
+    au < deepCrawl ; exists ; 2019 ; International Journal of Endocrine Oncology Volume 6 ; 6 ; https://www.futuremedicine.com/ ; >
     au < manifest ; exists ; 2020 ; International Journal of Endocrine Oncology Volume 7 ; 7 ; https://www.futuremedicine.com/ ; >
 
   }
@@ -668,7 +668,7 @@
     au < frozen ; exists ; 2016 ; Neurodegenerative Disease Management Volume 6 ; 6 ; http://www.futuremedicine.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Neurodegenerative Disease Management Volume 7 ; 7 ; https://www.futuremedicine.com/ ; >
     au < deepCrawl ; exists ; 2018 ; Neurodegenerative Disease Management Volume 8 ; 8 ; https://www.futuremedicine.com/ ; >
-    au < crawling ; exists ; 2019 ; Neurodegenerative Disease Management Volume 9 ; 9 ; https://www.futuremedicine.com/ ; >
+    au < deepCrawl ; exists ; 2019 ; Neurodegenerative Disease Management Volume 9 ; 9 ; https://www.futuremedicine.com/ ; >
     au < manifest ; exists ; 2020 ; Neurodegenerative Disease Management Volume 10 ; 10 ; https://www.futuremedicine.com/ ; >
 
   }
@@ -816,7 +816,7 @@
     au < frozen ; exists ; 2016 ; Regenerative Medicine Volume 11 ; 11 ; http://www.futuremedicine.com/ ; >
     au < deepCrawl ; exists ; 2017 ; Regenerative Medicine Volume 12 ; 12 ; https://www.futuremedicine.com/ ; >
     au < deepCrawl ; exists ; 2018 ; Regenerative Medicine Volume 13 ; 13 ; https://www.futuremedicine.com/ ; >
-    au < crawling ; exists ; 2019 ; Regenerative Medicine Volume 14 ; 14 ; https://www.futuremedicine.com/ ; >
+    au < deepCrawl ; exists ; 2019 ; Regenerative Medicine Volume 14 ; 14 ; https://www.futuremedicine.com/ ; >
     au < manifest ; exists ; 2020 ; Regenerative Medicine Volume 15 ; 15 ; https://www.futuremedicine.com/ ; >
 
   }

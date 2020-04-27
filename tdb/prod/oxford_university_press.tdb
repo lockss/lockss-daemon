@@ -432,6 +432,7 @@
     >
 
     param[journal_id] = ajae
+    #move to Wiley
 
     au < doNotProcess ; 1919 ; 1919 ; American Journal of Agricultural Economics Volume 1 ; 1 >
     au < doNotProcess ; 1920 ; 1920 ; American Journal of Agricultural Economics Volume 2 ; 2 >
@@ -1387,6 +1388,7 @@
     >
 
     param[journal_id] = aepp
+    #move to Wiley
 
     au < doNotProcess ; 1988 ; 1988 ; Applied Economic Perspectives and Policy Volume 10 ; 10 >
     au < doNotProcess ; 1989 ; 1989 ; Applied Economic Perspectives and Policy Volume 11 ; 11 >

@@ -5,7 +5,7 @@
     </entry>
     <entry>
         <string>plugin_identifier</string>
-        <string>org.lockss.plugin.clockss.innovativemedicalresearchpress.ClockssInnovativeMedicalResearchPressJatsSourcePlugin</string>
+        <string>org.lockss.plugin.clockss.innovativemedicalresearchpress.ClockssInnovativeMedicalResearchPressSourcePlugin</string>
     </entry>
     <entry>
         <string>plugin_version</string>
@@ -38,11 +38,11 @@
     </entry>
     <entry>
         <string>plugin_name</string>
-        <string>Innovative Medical Research Press JATS Source Plugin (CLOCKSS)</string>
+        <string>Innovative Medical Research Press Source Plugin (CLOCKSS)</string>
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"Innovative Medical Research Press JATS Source Plugin (CLOCKSS), Base URL %s, , Year %d", base_url, year</string>
+        <string>"Innovative Medical Research Press Source Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
     </entry>
     <entry>
         <string>au_substance_url_pattern</string>
@@ -69,7 +69,7 @@
         <map>
             <entry>
                 <string>*</string>
-                <string>org.lockss.plugin.clockss.innovativemedicalresearchpress.InnovativeMedicalResearchPressJatsSourceXmlMetadataExtractorFactory</string>
+                <string>org.lockss.plugin.clockss.innovativemedicalresearchpress.InnovativeMedicalResearchPressSourceXmlMetadataExtractorFactory</string>
             </entry>
         </map>
     </entry>
@@ -78,7 +78,7 @@
         <map>
             <entry>
                 <string>*</string>
-                <string>org.lockss.plugin.clockss.innovativemedicalresearchpress.InnovativeMedicalResearchPressJatsSourceXmlMetadataExtractorFactory</string>
+                <string>org.lockss.plugin.clockss.innovativemedicalresearchpress.InnovativeMedicalResearchPressSourceXmlMetadataExtractorFactory</string>
             </entry>
         </map>
     </entry>
