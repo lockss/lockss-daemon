@@ -233,7 +233,7 @@
       au < finished ; crawling ; 2016 ; IET Computer Vision Volume 10 ; 10 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; IET Computer Vision Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2018 ; IET Computer Vision Volume 12 ; 12 ; http://digital-library.theiet.org/ ; >
-      au < crawling ; exists ; 2019 ; IET Computer Vision Volume 13 ; 13 ; https://digital-library.theiet.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; IET Computer Vision Volume 13 ; 13 ; https://digital-library.theiet.org/ ; >
 
     }
 
@@ -285,7 +285,7 @@
       au < finished ; crawling ; 2016 ; IET Electric Power Applications Volume 10 ; 10 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; IET Electric Power Applications Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2018 ; IET Electric Power Applications Volume 12 ; 12 ; http://digital-library.theiet.org/ ; >
-      au < crawling ; exists ; 2019 ; IET Electric Power Applications Volume 13 ; 13 ; https://digital-library.theiet.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; IET Electric Power Applications Volume 13 ; 13 ; https://digital-library.theiet.org/ ; >
 
     }
 
@@ -411,7 +411,7 @@
       au < finished ; crawling ; 2016 ; IET Intelligent Transport Systems Volume 10 ; 10 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; IET Intelligent Transport Systems Volume 11 ; 11 ; http://digital-library.theiet.org/ ; >
       au < deepCrawl ; exists ; 2018 ; IET Intelligent Transport Systems Volume 12 ; 12 ; http://digital-library.theiet.org/ ; >
-      au < crawling ; exists ; 2019 ; IET Intelligent Transport Systems Volume 13 ; 13 ; https://digital-library.theiet.org/ ; >
+      au < deepCrawl ; exists ; 2019 ; IET Intelligent Transport Systems Volume 13 ; 13 ; https://digital-library.theiet.org/ ; >
 
 
     }
