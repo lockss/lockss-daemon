@@ -60,7 +60,7 @@
 
      {
        plugin = org.lockss.plugin.associationforcomputingmachinery.ClockssACMJatsSourcePlugin
-       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/acm-released/
+       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/acmjats-released/
        hidden[proxy] = DIRECT
 
        implicit < status ; status2 ; year ; name ; param[directory] >
