@@ -35,7 +35,7 @@ package org.lockss.plugin.hindawi;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.*;
 
-public class HindawiPublishingCorporationUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
+public class HindawiUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
 
   public String additionalNormalization(String url, ArchivalUnit au)
       throws PluginException {

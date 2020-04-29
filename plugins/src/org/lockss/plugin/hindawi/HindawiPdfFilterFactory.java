@@ -37,9 +37,9 @@ import org.lockss.pdf.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.Logger;
 
-public class HindawiPublishingCorporationPdfFilterFactory extends ExtractingPdfFilterFactory {
+public class HindawiPdfFilterFactory extends ExtractingPdfFilterFactory {
 
-  private static final Logger logger = Logger.getLogger(HindawiPublishingCorporationPdfFilterFactory.class);
+  private static final Logger logger = Logger.getLogger(HindawiPdfFilterFactory.class);
   
   protected static class LastPageRecognizer extends PdfTokenStreamWorker {
     
