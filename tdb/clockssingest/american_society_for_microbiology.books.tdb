@@ -10,6 +10,7 @@
   #param[base_url] = http://www.asmscience.org/
   implicit < status ; status2 ; year ; isbn ; eisbn ; param[doi] ; param[base_url] ; name ; hidden[proxy] >
 
+  #doesNotExist = move to Wiley. www.Wiley.com/ASMBooks
 
  {
   title <
@@ -199,7 +200,6 @@
    au < finished ; finished ; 2011 ; 9781555815035 ; 9781555817107 ; 10.1128/9781555817107 ; http://www.asmscience.org/ ; Oral Microbial Communities: Genomic Inquiry and Interspecies Communication ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2011 ; 9781555815134 ; 9781555817138 ; 10.1128/9781555817138 ; http://www.asmscience.org/ ; Tuberculosis and Nontuberculous Mycobacterial Infections, Sixth Edition ; reingest4.clockss.org:8082 >
    au < zapped ; finished ; 2011 ; 9781555814632 ; 9781555816728 ; 10.1128/9781555816728 ; http://www.asmscience.org/ ; Manual of Clinical Microbiology, Tenth Edition, Digital Edition ; reingest2.clockss.org:8085 >
-   au < expected ; exists ; 2011 ; 9781555816797 ; 9781555816797 ; 10.1128/9781555816797 ; https://www.asmscience.org/ ; Manual of Clinical Microbiology, Tenth Edition: Image Library ;  >
    au < finished ; finished ; 2011 ; 9781555815165 ; 9781555817152 ; 10.1128/9781555817152 ; http://www.asmscience.org/ ; Yeast Research: A Historical Overview ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2011 ; 9781555815356 ; 9781555817114 ; 10.1128/9781555817114 ; http://www.asmscience.org/ ; Population Genetics of Bacteria: A Tribute to Thomas S. Whittam ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2011 ; 9781555815424 ; 9781555817121 ; 10.1128/9781555817121 ; http://www.asmscience.org/ ; Rapid Detection, Characterization, and Enumeration of Foodborne Pathogens ; reingest3.clockss.org:8083 >
@@ -229,9 +229,9 @@
    au < finished ; finished ; 2014 ; 9781555815868 ; 9781555818593 ; 10.1128/9781555818593 ; http://www.asmscience.org/ ; Cheese and Microbes ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2014 ; 9781555818425 ; 9781555818432 ; 10.1128/9781555818432 ; http://www.asmscience.org/ ; One Health ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2014 ; 9781555817275 ; 9781555817282 ; 10.1128/9781555817282 ; http://www.asmscience.org/ ; Clinical Laboratory Management, Second Edition ; reingest2.clockss.org:8085 >
-   au < exists ; exists ; 2014 ; 9781555816612 ; 9781555818487 ; 10.1128/9781555818487 ; https://www.asmscience.org/ ; Scientific Integrity, Fourth Edition ;  >
-   au < exists ; exists ; 2014 ; 9781555818685 ; 9781555818678 ; 10.1128/9781555818678 ; https://www.asmscience.org/ ; Cases in Medical Microbiology and Infectious Diseases, Fourth Edition ;  >
-   au < exists ; exists ; 2014 ; 9781555817053 ; 9781555818890 ; 10.1128/9781555818890 ; https://www.asmscience.org/ ; Medical Biotechnology ;  >
+   au < doesNotExist ; doesNotExist ; 2014 ; 9781555816612 ; 9781555818487 ; 10.1128/9781555818487 ; https://www.asmscience.org/ ; Scientific Integrity, Fourth Edition ;  >
+   au < doesNotExist ; doesNotExist ; 2014 ; 9781555818685 ; 9781555818678 ; 10.1128/9781555818678 ; https://www.asmscience.org/ ; Cases in Medical Microbiology and Infectious Diseases, Fourth Edition ;  >
+   au < doesNotExist ; doesNotExist ; 2014 ; 9781555817053 ; 9781555818890 ; 10.1128/9781555818890 ; https://www.asmscience.org/ ; Medical Biotechnology ;  >
    au < exists ; exists ; 2014 ; 9781555816735 ; 9781555818906 ; 10.1128/9781555818906 ; https://www.asmscience.org/ ; Oral Microbiology and Immunology, Second Edition ;  >
    au < finished ; finished ; 2015 ; 9781555817350 ; 9781555817411 ; 10.1128/9781555817411 ; http://www.asmscience.org/ ; Antibodies for Infectious Diseases ; reingest2.clockss.org:8085 >
    au < zapped ; finished ; 2015 ; 9781555819200 ; 9781555819217 ; 10.1128/9781555819217 ; http://www.asmscience.org/ ; Mobile DNA III ; reingest5.clockss.org:8082 >
@@ -240,12 +240,12 @@
    au < finished ; finished ; 2015 ; 9781555818784 ; 9781555818791 ; 10.1128/9781555818791 ; http://www.asmscience.org/ ; Enterohemorrhagic Escherichia coli and Other Shiga Toxin-Producing E. coli ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 9781555817459 ; 9781555817466 ; 10.1128/9781555817466 ; http://www.asmscience.org/ ; Microbial Biofilms, Second Edition ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2015 ; 9781555818869 ; 9781555818883 ; 10.1128/9781555818883 ; http://www.asmscience.org/ ; Metabolism and Bacterial Pathogenesis ; reingest4.clockss.org:8082 >
-   au < exists ; exists ; 2015 ; 9781555819330 ; 9781555818951 ; 10.1128/9781555818951 ; https://www.asmscience.org/ ; Principles of Virology, Volume I: Molecular Biology, Fourth Edition ;  >
-   au < exists ; exists ; 2015 ; 9781555819347 ; 9781555818968 ; 10.1128/9781555818968 ; https://www.asmscience.org/ ; Principles of Virology, Volume II: Pathogenesis & Control, Fourth Edition ;  >
+   au < doesNotExist ; doesNotExist ; 2015 ; 9781555819330 ; 9781555818951 ; 10.1128/9781555818951 ; https://www.asmscience.org/ ; Principles of Virology, Volume I: Molecular Biology, Fourth Edition ;  >
+   au < doesNotExist ; doesNotExist ; 2015 ; 9781555819347 ; 9781555818968 ; 10.1128/9781555818968 ; https://www.asmscience.org/ ; Principles of Virology, Volume II: Pathogenesis & Control, Fourth Edition ;  >
    au < exists ; exists ; 2015 ; 9781555819484 ; 9781555819491 ; 10.1128/9781555819491 ; https://www.asmscience.org/ ; Perspectives on Research Integrity ;  >
-   au < exists ; exists ; 2015 ; 9781555819514 ; 9781555819521 ; 10.1128/9781555819521 ; https://www.asmscience.org/ ; Principles of Virology, Fourth Edition, Bundle ;  >
+   au < doesNotExist ; doesNotExist ; 2015 ; 9781555819514 ; 9781555819521 ; 10.1128/9781555819521 ; https://www.asmscience.org/ ; Principles of Virology, Fourth Edition, Bundle ;  >
    au < zapped ; finished ; 2016 ; 9781555818999 ; 9781555819002 ; 10.1128/9781555819002 ; http://www.asmscience.org/ ; Diagnostic Medical Parasitology ; reingest3.clockss.org:8083 >
-   au < ingNotReady ; exists ; 2016 ; 9781555819255 ; 9781555819262 ; 10.1128/9781555819262 ; http://www.asmscience.org/ ; Zoonoses ; > #no substance, no articles, doi's etc
+   au < crawling ; exists ; 2016 ; 9781555819255 ; 9781555819262 ; 10.1128/9781555819262 ; http://www.asmscience.org/ ; Zoonoses ; > #no substance, no articles, doi's etc
    au < finished ; finished ; 2016 ; 9781555816759 ; 9781555819323 ; 10.1128/9781555819323 ; http://www.asmscience.org/ ; The Bacterial Spore ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2016 ; 9781555818715 ; 9781555818722 ; 10.1128/9781555818722 ; http://www.asmscience.org/ ; Manual of Molecular and Clinical Laboratory Immunology ; reingest1.clockss.org:8082 >
    au < zapped ; finished ; 2016 ; 9781555818807 ; 9781555818814 ; 10.1128/9781555818814 ; http://www.asmscience.org/ ; Clinical Microbiology Procedures Handbook, 4th Edition ; reingest2.clockss.org:8085 >
@@ -258,11 +258,11 @@
    au < finished ; finished ; 2016 ; 9781555819309 ; 9781555819316 ; 10.1128/9781555819316 ; http://www.asmscience.org/ ; Antibiotics: Challenges, Mechanisms, Opportunities ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2016 ; 9781555819446 ; 9781555819453 ; 10.1128/9781555819453 ; http://www.asmscience.org/ ; Emerging infections 10 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2016 ; 9781555819590 ; 9781555819606 ; 10.1128/9781555819606 ; http://www.asmscience.org/ ; In the Company of Microbes: 10 Years of Small Things Considered ; reingest2.clockss.org:8085 >
-   au < exists ; exists ; 2016 ; 9781555819125 ; 9781555819132 ; 10.1128/9781555819132 ; https://www.asmscience.org/ ; Microbe, Second Edition ;  >
+   au < doesNotExist ; doesNotExist ; 2016 ; 9781555819125 ; 9781555819132 ; 10.1128/9781555819132 ; https://www.asmscience.org/ ; Microbe, Second Edition ;  >
    au < finished ; finished ; 2017 ; 9781555817398 ; 9781555817404 ; 10.1128/9781555817404 ; http://www.asmscience.org/ ; Urinary Tract Infections ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2017 ; 9781555819859 ; 9781555819866 ; 10.1128/9781555819866 ; http://www.asmscience.org/ ; Tuberculosis and Nontuberculous Mycobacterial Infections, Seventh Edition ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2017 ; 9781683670001 ; 9781683670018 ; 10.1128/9781683670018 ; http://www.asmscience.org/ ; The Power of Plagues, Second Edition ; reingest5.clockss.org:8082 >
-   au < exists ; exists ; 2017 ; 9781555819361 ; 9781555819378 ; 10.1128/9781555819378 ; https://www.asmscience.org/ ; Molecular Biotechnology: Principles and Applications of Recombinant DNA, Fifth Edition ;  >
+   au < doesNotExist ; doesNotExist ; 2017 ; 9781555819361 ; 9781555819378 ; 10.1128/9781555819378 ; https://www.asmscience.org/ ; Molecular Biotechnology: Principles and Applications of Recombinant DNA, Fifth Edition ;  >
    au < finished ; finished ; 2017 ; 9781555819613 ; 9781555819620 ; 10.1128/9781555819620 ; http://www.asmscience.org/ ; A Guide to Specimen Management in Clinical Microbiology, Third Edition ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2017 ; 9781555816209 ; 9781555819637 ; 10.1128/9781555819637 ; http://www.asmscience.org/ ; Biological Safety: Principles and Practices, Fifth Edition ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2017 ; 9781555819163 ; 9781555819170 ; 10.1128/9781555819170 ; http://www.asmscience.org/ ; Paleomicrobiology of Humans ; reingest5.clockss.org:8082 >
@@ -271,22 +271,27 @@
    au < frozen ; exists ; 2017 ; 9781555819576 ; 9781555819583 ; 10.1128/9781555819583 ; https://www.asmscience.org/ ; The Fungal Kingdom ; >
    au < frozen ; exists ; 2017 ; 9781555819675 ; 9781555819682 ; 10.1128/9781555819682 ; https://www.asmscience.org/ ; Antisepsis, Disinfection, and Sterilization: Types, Action, and Resistance, Second Edition ;  >
    au < frozen ; exists ; 2017 ; 9781555819811 ; 9781555819828 ; 10.1128/9781555819828 ; https://www.asmscience.org/ ; The Dark Art of Blood Cultures ;  >
-   au < exists ; exists ; 2017 ; 9781555819385 ; 9781555819392 ; 10.1128/9781555819392 ; https://www.asmscience.org/ ; Food Microbiology: An Introduction, Fourth Edition ;  >
+   au < doesNotExist ; doesNotExist ; 2017 ; 9781555819385 ; 9781555819392 ; 10.1128/9781555819392 ; https://www.asmscience.org/ ; Food Microbiology: An Introduction, Fourth Edition ;  >
    au < frozen ; exists ; 2017 ; 9781555819552 ; 9781555819569 ; 10.1128/9781555819569 ; https://www.asmscience.org/ ; Tuberculosis and the Tubercle Bacillus, Second Edition ;  >
    au < frozen ; exists ; 2018 ; 9781555819798 ; 9781555819804 ; 10.1128/9781555819804 ; https://www.asmscience.org/ ; Antimicrobial Resistance in Bacteria from Livestock and Companion Animals ;  >
    au < frozen ; exists ; 2018 ; 9781555817077 ; 9781555819644 ; 10.1128/9781555819644 ; https://www.asmscience.org/ ; Preharvest Food Safety ;  >
    au < frozen ; exists ; 2018 ; 9781555819538 ; 9781555819545 ; 10.1128/9781555819545 ; https://www.asmscience.org/ ; Women in Microbiology ;  >
    au < frozen ; exists ; 2018 ; 9781555815042 ; 9781555818852 ; 10.1128/9781555818852 ; https://www.asmscience.org/ ; Environmental Microbial Forensics ;  >
-   au < exists ; exists ; 2018 ; 9781555819927 ; 9781555819958 ; 10.1128/9781555819958 ; https://www.asmscience.org/ ; Challenges of the Unseen World: A Laboratory Course in Microbiology ;  >
+   au < doesNotExist ; doesNotExist ; 2018 ; 9781555819927 ; 9781555819958 ; 10.1128/9781555819958 ; https://www.asmscience.org/ ; Challenges of the Unseen World: A Laboratory Course in Microbiology ;  >
    au < frozen ; exists ; 2018 ; 9781683670063 ; 9781683670070 ; 10.1128/9781683670070 ; https://www.asmscience.org/ ; Pocket Guide to Clinical Microbiology, Fourth Edition ;  >
    au < frozen ; exists ; 2018 ; 9781683670100 ; 9781683670117 ; 10.1128/9781683670117 ; https://www.asmscience.org/ ; The New Microbiology: From Microbiomes to CRISPR ;  >
    au < frozen ; exists ; 2018 ; 9781555819699 ; 9781555819705 ; 10.1128/9781555819705 ; https://www.asmscience.org/ ; Bugs as Drugs: Therapeutic Microbes for the Prevention and Treatment of Disease ;  >
    au < frozen ; exists ; 2018 ; 9781555819873 ; 9781555819880 ; 10.1128/9781555819880 ; https://www.asmscience.org/ ; Larone’s Medically Important Fungi: A Guide to Identification, Sixth Edition ;  >
-   au < exists ; exists ; 2018 ; 9781683670025 ; 9781683670025 ; 10.1128/9781683670025 ; https://www.asmscience.org/ ; Computational Biology: A Hypertextbook ;  >
-   au < exists ; exists ; 2019 ; 9781555819989 ; 9781555819996 ; 10.1128/9781555819996 ; https://www.asmscience.org/ ; Oral Microbiology and Immunology, Third Edition ;  >
-   au < exists ; exists ; 2019 ; 9781555819910 ; 9781555819941 ; 10.1128/9781555819941 ; https://www.asmscience.org/ ; Guide to Clinical and Diagnostic Virology ;  >
+   au < doesNotExist ; doesNotExist ; 2018 ; 9781683670025 ; 9781683670025 ; 10.1128/9781683670025 ; https://www.asmscience.org/ ; Computational Biology: A Hypertextbook ;  >
+   au < doesNotExist ; doesNotExist ; 2019 ; 9781555819989 ; 9781555819996 ; 10.1128/9781555819996 ; https://www.asmscience.org/ ; Oral Microbiology and Immunology, Third Edition ;  >
+   au < doesNotExist ; doesNotExist ; 2019 ; 9781555819910 ; 9781555819941 ; 10.1128/9781555819941 ; https://www.asmscience.org/ ; Guide to Clinical and Diagnostic Virology ;  >
    au < manifest ; exists ; 2019 ; 9781555819736 ; 9781555819743 ; 10.1128/9781555819743 ; https://www.asmscience.org/ ; Microbial Transmission ;  >
    au < manifest ; exists ; 2019 ; 9781683670230 ; 9781683670247 ; 10.1128/9781683670247 ; https://www.asmscience.org/ ; Regulating with RNA in Bacteria and Archaea ;  >
+   au < exists ; exists ; 2019 ; 9781683670278 ; 9781683670285 ; 10.1128/9781683670285 ; https://www.asmscience.org/ ; Protein Secretion in Bacteria ;  >
+   au < exists ; exists ; 2019 ; 9781683670254 ; 9781683670261 ; 10.1128/9781683670261 ; https://www.asmscience.org/ ; Bacteria and Intracellularity ;  >
+   au < exists ; exists ; 2019 ; 9781683670124 ; 9781683670131 ; 10.1128/9781683670131 ; https://www.asmscience.org/ ; Gram-Positive Pathogens, Third Edition ;  >
+   au < exists ; exists ; 2019 ; 9781555819965 ; 9781555819972 ; 10.1128/9781555819972 ; https://www.asmscience.org/ ; Food Microbiology: Fundamentals and Frontiers, 5th Edition ;  >
+   au < exists ; exists ; 2020 ; 9781683670148 ; 9781683670179 ; 10.1128/9781683670179 ; https://www.asmscience.org/ ; Prepare and Protect: Safer Behaviors in Laboratories and Clinical Containment Settings ;  >
 
  }
 
