@@ -11604,8 +11604,8 @@
     au < down ; exists ; 2013 ; Strategic HR Review Volume 12 ; 12 ; https://www.emeraldinsight.com/ ; >
     au < finished ; finished ; 2014 ; Strategic HR Review Volume 13 ; 13 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; Strategic HR Review Volume 14 ; 14 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Strategic HR Review Volume 15 ; 15 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2017 ; Strategic HR Review Volume 16 ; 16 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Strategic HR Review Volume 15 ; 15 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2017 ; Strategic HR Review Volume 16 ; 16 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Strategic HR Review Volume 17 ; 17 ; https://www.emeraldinsight.com/ ; >
     au < doNotProcess ; exists ; 2019 ; Strategic HR Review Volume 18 ; 18 ; https://www.emeraldinsight.com/ ; >
 
@@ -11631,7 +11631,7 @@
     au < down ; exists ; 2013 ; Strategic Outsourcing: An international Journal Volume 6 ; 6 ; https://www.emeraldinsight.com/ ; >
     au < finished ; finished ; 2014 ; Strategic Outsourcing: An international Journal Volume 7 ; 7 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; Strategic Outsourcing: An international Journal Volume 8 ; 8 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Strategic Outsourcing: An international Journal Volume 9 ; 9 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Strategic Outsourcing: An international Journal Volume 9 ; 9 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
 
   }
 
@@ -11718,10 +11718,10 @@
     au < doNotProcess ; exists ; 2011 ; Strategy & Leadership Volume 39 ; 39 ; https://www.emeraldinsight.com/ ; >
     au < down ; exists ; 2012 ; Strategy & Leadership Volume 40 ; 40 ; https://www.emeraldinsight.com/ ; >
     au < down ; exists ; 2013 ; Strategy & Leadership Volume 41 ; 41 ; https://www.emeraldinsight.com/ ; >
-    au < finished ; crawling ; 2014 ; Strategy & Leadership Volume 42 ; 42 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2014 ; Strategy & Leadership Volume 42 ; 42 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Strategy & Leadership Volume 43 ; 43 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Strategy & Leadership Volume 44 ; 44 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2017 ; Strategy & Leadership Volume 45 ; 45 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Strategy & Leadership Volume 44 ; 44 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2017 ; Strategy & Leadership Volume 45 ; 45 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Strategy & Leadership Volume 46 ; 46 ; https://www.emeraldinsight.com/ ; >
     au < doNotProcess ; exists ; 2019 ; Strategy & Leadership Volume 47 ; 47 ; https://www.emeraldinsight.com/ ; >
 
@@ -11772,7 +11772,7 @@
     au < down ; exists ; 2013 ; Structural Survey Volume 31 ; 31 ; https://www.emeraldinsight.com/ ; >
     au < finished ; finished ; 2014 ; Structural Survey Volume 32 ; 32 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Structural Survey Volume 33 ; 33 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Structural Survey Volume 34 ; 34 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Structural Survey Volume 34 ; 34 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
 
   }
 
@@ -11836,7 +11836,7 @@
     au < down ; exists ; 2013 ; Studies in Economics and Finance Volume 30 ; 30 ; https://www.emeraldinsight.com/ ; >
     au < finished ; finished ; 2014 ; Studies in Economics and Finance Volume 31 ; 31 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Studies in Economics and Finance Volume 32 ; 32 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Studies in Economics and Finance Volume 33 ; 33 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2016 ; Studies in Economics and Finance Volume 33 ; 33 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2017 ; Studies in Economics and Finance Volume 34 ; 34 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Studies in Economics and Finance Volume 35 ; 35 ; https://www.emeraldinsight.com/ ; >
     au < doNotProcess ; exists ; 2019 ; Studies in Economics and Finance Volume 36 ; 36 ; https://www.emeraldinsight.com/ ; >
@@ -11875,7 +11875,7 @@
     au < finished ; finished ; 2014 ; Supply Chain Management: An International Journal Volume 19 ; 19 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Supply Chain Management: An International Journal Volume 20 ; 20 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2016 ; Supply Chain Management: An International Journal Volume 21 ; 21 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2017 ; Supply Chain Management: An International Journal Volume 22 ; 22 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2017 ; Supply Chain Management: An International Journal Volume 22 ; 22 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Supply Chain Management: An International Journal Volume 23 ; 23 ; https://www.emeraldinsight.com/ ; >
     au < doNotProcess ; exists ; 2019 ; Supply Chain Management: An International Journal Volume 24 ; 24 ; https://www.emeraldinsight.com/ ; >
 
@@ -11898,7 +11898,7 @@
     au < down ; exists ; 2013 ; Sustainability Accounting, Management and Policy Journal Volume 4 ; 4 ; https://www.emeraldinsight.com/ ; >
     au < finished ; finished ; 2014 ; Sustainability Accounting, Management and Policy Journal Volume 5 ; 5 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Sustainability Accounting, Management and Policy Journal Volume 6 ; 6 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Sustainability Accounting, Management and Policy Journal Volume 7 ; 7 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2016 ; Sustainability Accounting, Management and Policy Journal Volume 7 ; 7 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2017 ; Sustainability Accounting, Management and Policy Journal Volume 8 ; 8 ; http://www.emeraldinsight.com/ ; >
     au < deepCrawl ; exists ; 2018 ; Sustainability Accounting, Management and Policy Journal Volume 9 ; 9 ; https://www.emeraldinsight.com/ ; >
     au < doNotProcess ; exists ; 2019 ; Sustainability Accounting, Management and Policy Journal Volume 10 ; 10 ; https://www.emeraldinsight.com/ ; >
@@ -11938,7 +11938,7 @@
     au < finished ; finished ; 2014 ; Team Performance Management Volume 20 ; 20 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; Team Performance Management Volume 21 ; 21 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2016 ; Team Performance Management Volume 22 ; 22 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2017 ; Team Performance Management Volume 23 ; 23 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2017 ; Team Performance Management Volume 23 ; 23 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; Team Performance Management Volume 24 ; 24 ; https://www.emeraldinsight.com/ ; >
     au < doNotProcess ; exists ; 2019 ; Team Performance Management Volume 25 ; 25 ; https://www.emeraldinsight.com/ ; >
 
@@ -11973,10 +11973,10 @@
     au < doNotProcess ; exists ; 2011 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 16 ; 16 ; https://www.emeraldinsight.com/ ; >
     au < down ; exists ; 2012 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 17 ; 17 ; https://www.emeraldinsight.com/ ; >
     au < down ; exists ; 2013 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 18 ; 18 ; https://www.emeraldinsight.com/ ; >
-    au < finished ; crawling ; 2014 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 19 ; 19 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2014 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 19 ; 19 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 20 ; 20 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2016 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 21 ; 21 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2017 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 22 ; 22 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2017 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 22 ; 22 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 23 ; 23 ; https://www.emeraldinsight.com/ ; >
     au < doNotProcess ; exists ; 2019 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 24 ; 24 ; https://www.emeraldinsight.com/ ; >
 
@@ -11998,7 +11998,7 @@
     au < finished ; finished ; 2014 ; Therapeutic Communities: The International Journal of Therapeutic Communities Volume 35 ; 35 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Therapeutic Communities: The International Journal of Therapeutic Communities Volume 36 ; 36 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2016 ; Therapeutic Communities: The International Journal of Therapeutic Communities Volume 37 ; 37 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2017 ; Therapeutic Communities: The International Journal of Therapeutic Communities Volume 38 ; 38 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2017 ; Therapeutic Communities: The International Journal of Therapeutic Communities Volume 38 ; 38 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Therapeutic Communities: The International Journal of Therapeutic Communities Volume 39 ; 39 ; https://www.emeraldinsight.com/ ; >
     au < doNotProcess ; exists ; 2019 ; Therapeutic Communities: The International Journal of Therapeutic Communities Volume 40 ; 40 ; https://www.emeraldinsight.com/ ; >
 
@@ -12085,8 +12085,8 @@
     au < down ; exists ; 2013 ; Tourism Review Volume 68 ; 68 ; https://www.emeraldinsight.com/ ; >
     au < finished ; finished ; 2014 ; Tourism Review Volume 69 ; 69 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Tourism Review Volume 70 ; 70 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Tourism Review Volume 71 ; 71 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2017 ; Tourism Review Volume 72 ; 72 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2016 ; Tourism Review Volume 71 ; 71 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2017 ; Tourism Review Volume 72 ; 72 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2018 ; Tourism Review Volume 73 ; 73 ; https://www.emeraldinsight.com/ ; >
     au < doNotProcess ; exists ; 2019 ; Tourism Review Volume 74 ; 74 ; https://www.emeraldinsight.com/ ; >
 
@@ -12211,7 +12211,7 @@
     au < frozen ; exists ; 2013 ; Transforming Government: People, Process and Policy Volume 7 ; 7 ; https://www.emeraldinsight.com/ ; >
     au < finished ; finished ; 2014 ; Transforming Government: People, Process and Policy Volume 8 ; 8 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Transforming Government: People, Process and Policy Volume 9 ; 9 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Transforming Government: People, Process and Policy Volume 10 ; 10 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Transforming Government: People, Process and Policy Volume 10 ; 10 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Transforming Government: People, Process and Policy Volume 11 ; 11 ; http://www.emeraldinsight.com/ ; >
     au < deepCrawl ; exists ; 2018 ; Transforming Government: People, Process and Policy Volume 12 ; 12 ; https://www.emeraldinsight.com/ ; >
     au < doNotProcess ; exists ; 2019 ; Transforming Government: People, Process and Policy Volume 13 ; 13 ; https://www.emeraldinsight.com/ ; >
@@ -12273,7 +12273,7 @@
     au < down ; exists ; 2012 ; VINE Volume 42 ; 42 ; https://www.emeraldinsight.com/ ; >
     au < down ; exists ; 2013 ; VINE Volume 43 ; 43 ; https://www.emeraldinsight.com/ ; >
     au < finished ; finished ; 2014 ; VINE Volume 44 ; 44 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2015 ; VINE Volume 45 ; 45 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; VINE Volume 45 ; 45 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
 
   }
 
@@ -12407,7 +12407,7 @@
     au < down ; exists ; 2013 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 17 ; 17 ; https://www.emeraldinsight.com/ ; >
     au < finished ; finished ; 2014 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 18 ; 18 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 19 ; 19 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 20 ; 20 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 20 ; 20 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 21 ; 21 ; http://www.emeraldinsight.com/ ; >
     au < deepCrawl ; exists ; 2018 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 22 ; 22 ; https://www.emeraldinsight.com/ ; >
     au < doNotProcess ; exists ; 2019 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 23 ; 23 ; https://www.emeraldinsight.com/ ; >
@@ -12446,8 +12446,8 @@
     au < down ; exists ; 2013 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 9 ; 9 ; https://www.emeraldinsight.com/ ; >
     au < finished ; finished ; 2014 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 10 ; 10 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 11 ; 11 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2016 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 12 ; 12 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2017 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 13 ; 13 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 12 ; 12 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2017 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 13 ; 13 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 14 ; 14 ; https://www.emeraldinsight.com/ ; >
     au < doNotProcess ; exists ; 2019 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 15 ; 15 ; https://www.emeraldinsight.com/ ; >
 
@@ -12467,9 +12467,9 @@
       au < doNotProcess ; exists ; 2011 ; World Journal of Science, Technology and Sustainable Development Volume 8 ; 8 ; https://www.emeraldinsight.com/ ; >
       au < down ; exists ; 2012 ; World Journal of Science, Technology and Sustainable Development Volume 9 ; 9 ; https://www.emeraldinsight.com/ ; >
       au < down ; exists ; 2013 ; World Journal of Science, Technology and Sustainable Development Volume 10 ; 10 ; https://www.emeraldinsight.com/ ; >
-      au < finished ; crawling ; 2014 ; World Journal of Science, Technology and Sustainable Development Volume 11 ; 11 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; World Journal of Science, Technology and Sustainable Development Volume 11 ; 11 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; World Journal of Science, Technology and Sustainable Development Volume 12 ; 12 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2016 ; World Journal of Science, Technology and Sustainable Development Volume 13 ; 13 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2016 ; World Journal of Science, Technology and Sustainable Development Volume 13 ; 13 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2017 ; World Journal of Science, Technology and Sustainable Development Volume 14 ; 14 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018 ; World Journal of Science, Technology and Sustainable Development Volume 15 ; 15 ; https://www.emeraldinsight.com/ ; >
       au < doNotProcess ; exists ; 2019 ; World Journal of Science, Technology and Sustainable Development Volume 16 ; 16 ; https://www.emeraldinsight.com/ ; >
@@ -12494,8 +12494,8 @@
     au < down ; exists ; 2013 ; Worldwide Hospitality and Tourism Themes Volume 5 ; 5 ; https://www.emeraldinsight.com/ ; >
     au < finished ; finished ; 2014 ; Worldwide Hospitality and Tourism Themes Volume 6 ; 6 ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; Worldwide Hospitality and Tourism Themes Volume 7 ; 7 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Worldwide Hospitality and Tourism Themes Volume 8 ; 8 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2017 ; Worldwide Hospitality and Tourism Themes Volume 9 ; 9 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Worldwide Hospitality and Tourism Themes Volume 8 ; 8 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2017 ; Worldwide Hospitality and Tourism Themes Volume 9 ; 9 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Worldwide Hospitality and Tourism Themes Volume 10 ; 10 ; https://www.emeraldinsight.com/ ; >
     au < doNotProcess ; exists ; 2019 ; Worldwide Hospitality and Tourism Themes Volume 11 ; 11 ; https://www.emeraldinsight.com/ ; >
 

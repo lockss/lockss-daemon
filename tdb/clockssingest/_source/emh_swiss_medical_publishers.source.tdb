@@ -5,21 +5,22 @@
     info[contract] = 2018 ;
     info[tester] = S
   >
-  
+
   {
-  
+
     title <
        name = EMH Swiss Publishers Ltd Source Content
     >
-    
+
     plugin = org.lockss.plugin.clockss.emhswiss.ClockssEmhSwissMedicalSourcePlugin
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/emh-released/
-    
+
     hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[directory] >
 
     au < readySource ; finished ; 2018 ; EMH Swiss Medical Publishers Source Content 2018 ; 2018 >
     au < readySource ; finished ; 2019 ; EMH Swiss Medical Publishers Source Content 2019 ; 2019 >
+    au < readySource ; crawling ; 2020 ; EMH Swiss Medical Publishers Source Content 2020 ; 2020 >
 
   }
 
