@@ -39,11 +39,11 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Hindawi Plugin(Legacy), Base URL %s, Download URL %s, Journal ID %s, Volume %s", base_url, download_url, journal_id, volume_name</string>
+    <string>"Hindawi Plugin (Legacy), Base URL %s, Download URL %s, Journal ID %s, Volume %s", base_url, download_url, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Hindawi Plugin(Legacy)</string>
+    <string>Hindawi Plugin (Legacy)</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -159,7 +159,7 @@
     <map>
       <entry>
         <string>*</string>
-        <string>org.lockss.plugin.hindawi.Hindawi2020HtmlMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.hindawi.HindawiHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>  
@@ -168,7 +168,7 @@
     <map>
       <entry>
         <string>*</string>
-        <string>org.lockss.plugin.hindawi.Hindawi2020HtmlMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.hindawi.HindawiHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>
