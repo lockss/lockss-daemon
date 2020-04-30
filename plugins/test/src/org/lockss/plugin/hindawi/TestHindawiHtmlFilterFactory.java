@@ -37,13 +37,13 @@ import java.io.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
 
-public class TestHindawiPublishingCorporationHtmlFilterFactory extends LockssTestCase {
+public class TestHindawiHtmlFilterFactory extends LockssTestCase {
   
-  private HindawiPublishingCorporationHtmlFilterFactory fact;
+  private HindawiHtmlFilterFactory fact;
   
   public void setUp() throws Exception {
     super.setUp();
-    fact = new HindawiPublishingCorporationHtmlFilterFactory();
+    fact = new HindawiHtmlFilterFactory();
   }
   
   private static final String[] DOCTYPE_STATEMENTS = {

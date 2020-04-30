@@ -5,13 +5,13 @@
     info[contract] = 2016 ;
     info[tester] = S
   >
-  
+
   {
-  
+
     title <
        name = Hellenic Psychiatric Association Source Content
     >
-    
+
     plugin = org.lockss.plugin.clockss.hellenic.ClockssHellenicPsychiatricAssociationSourcePlugin
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/hpa-released/
     hidden[proxy] = DIRECT
@@ -21,6 +21,7 @@
     au < zapped ; finished ; 2017 ; Hellenic Psychiatric Association Source Content 2017 ; 2017 >
     au < readySource ; finished ; 2018 ; Hellenic Psychiatric Association Source Content 2018 ; 2018 >
     au < readySource ; finished ; 2019 ; Hellenic Psychiatric Association Source Content 2019 ; 2019 >
+    au < readySource ; crawling ; 2020 ; Hellenic Psychiatric Association Source Content 2020 ; 2020 >
 
   }
 

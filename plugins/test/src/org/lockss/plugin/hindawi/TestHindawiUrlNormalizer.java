@@ -40,7 +40,7 @@ import org.lockss.test.ConfigurationUtil;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockArchivalUnit;
 
-public class TestHindawiPublishingCorporationUrlNormalizer extends LockssTestCase {
+public class TestHindawiUrlNormalizer extends LockssTestCase {
   
   private final String PLUGIN_NAME = "org.lockss.plugin.hindawi.HindawiPublishingCorporationPlugin";
   
@@ -73,7 +73,7 @@ public class TestHindawiPublishingCorporationUrlNormalizer extends LockssTestCas
   }
   
   public void testUrlNormalizer() throws Exception {
-    UrlNormalizer normalizer = new HindawiPublishingCorporationUrlNormalizer();
+    UrlNormalizer normalizer = new HindawiUrlNormalizer();
     assertEquals("http://www.example.com/foo/bar/123.gif",
         normalizer.normalizeUrl("http://www.example.com/foo/bar/123.gif", m_mau));
     assertEquals("http://www.example.com/foo/bar/123.gif",

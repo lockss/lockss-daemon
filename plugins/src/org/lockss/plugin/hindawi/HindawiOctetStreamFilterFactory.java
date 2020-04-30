@@ -39,11 +39,11 @@ import org.lockss.daemon.PluginException;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 
-public class HindawiPublishingCorporationOctetStreamFilterFactory implements FilterFactory {
+public class HindawiOctetStreamFilterFactory implements FilterFactory {
 
-  private static final Logger logger = Logger.getLogger(HindawiPublishingCorporationOctetStreamFilterFactory.class);
+  private static final Logger logger = Logger.getLogger(HindawiOctetStreamFilterFactory.class);
   
-  protected FilterFactory pdfFilterFactory = new HindawiPublishingCorporationPdfFilterFactory();
+  protected FilterFactory pdfFilterFactory = new HindawiPdfFilterFactory();
 
   public static class PdfPeekInputStream extends ProxyInputStream {
 

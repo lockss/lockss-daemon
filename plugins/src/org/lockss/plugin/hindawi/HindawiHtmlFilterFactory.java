@@ -45,7 +45,7 @@ import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
 
-public class HindawiPublishingCorporationHtmlFilterFactory implements FilterFactory {
+public class HindawiHtmlFilterFactory implements FilterFactory {
   
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
