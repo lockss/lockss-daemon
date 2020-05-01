@@ -15,105 +15,103 @@
    name = ANU Press Books ;
    type = bookSeries
   >
-   au < finished ; finished ; 2003 ; ; 1 9209421 0 6 ; In the Service of the Company - Vol 2 ;  ; service-company-vol-2 ; reingest1.clockss.org:8082 >
-   au < finished ; finished ; 2003 ; ; 0 9751229 0 8 ; Out of the Ashes ;  ; out-ashes ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2003 ; 9781920942113 ; 9781920942106 ; In the Service of the Company - Vol 2 ;  ; service-company-vol-2 ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2003 ; 9780975122914 ; 9780975122907 ; Out of the Ashes ;  ; out-ashes ; reingest2.clockss.org:8085 >
 
-   au < finished ; finished ; 2004 ; ; 1 9209420 3 3 ; Aboriginal Population Profiles for Development Planning in the Northern East Kimberley ; centre-aboriginal-economic-policy-research-caepr ; series/centre-aboriginal-economic-policy-research-caepr/aboriginal-population-profiles ; reingest2.clockss.org:8085 >
-   au < finished ; finished ; 2004 ; ; 0 9751229 6 7 ; Black Words White Page ;  ; black-words-white-page ; reingest3.clockss.org:8083 >
-   au < finished ; finished ; 2004 ; ; 1 9209421 4 9 ; Health Expenditure, Income and Health Status Among Indigenous and Other Australians ; centre-aboriginal-economic-policy-research-caepr ; series/centre-aboriginal-economic-policy-research-caepr/health-expenditure-income-and ; reingest4.clockss.org:8082 > # https://press-files.anu.edu.au/images/titles/b-thumb-c21.gif,"500 Internal Server Error"
-   au < finished ; finished ; 2004 ; ; 0 9751229 8 3 ; Humanities Research Centre ;  ; humanities-research-centre ; reingest5.clockss.org:8082 >
-   au < finished ; finished ; 2004 ; ; 1 9209420 2 5 ; Making Sense of the Census ; centre-aboriginal-economic-policy-research-caepr ; series/centre-aboriginal-economic-policy-research-caepr/making-sense-census ; reingest1.clockss.org:8082 >
-   au < finished ; finished ; 2004 ; ; 1 9209421 2 2 ; Social Indicators for Aboriginal Governance ; centre-aboriginal-economic-policy-research-caepr ; series/centre-aboriginal-economic-policy-research-caepr/social-indicators-aboriginal ; reingest2.clockss.org:8085 >
-   au < finished ; finished ; 2004 ; ; 1 9209420 5 X ; State and Society in Papua New Guinea ;  ; state-and-society-papua-new-guinea ; reingest3.clockss.org:8083 >
-   au < finished ; finished ; 2004 ; ; 0 9751229 3 2 ; The Indigenous Welfare Economy and the CDEP Scheme ; centre-aboriginal-economic-policy-research-caepr ; series/centre-aboriginal-economic-policy-research-caepr/indigenous-welfare-economy-and ; reingest4.clockss.org:8082 >
-   au < finished ; finished ; 2004 ; ; 1 9209420 0 9 ; The Military and Democracy in Asia and the Pacific ;  ; military-and-democracy-asia-and-pacific ; reingest5.clockss.org:8082 >
-   au < finished ; finished ; 2004 ; ; 1 920942 16 5 ; The Spanish Lake ;  ; spanish-lake ; reingest1.clockss.org:8082 > # https://press-files.anu.edu.au/images/titles/spanish_lake_thumb.gif,"500 Internal Server Error"
-   au < finished ; finished ; 2004 ; ; 0975122924 ; Viet Nam — a Transition Tiger? ;  ; viet-nam-%E2%80%94-transition-tiger ; reingest2.clockss.org:8085 >
-   au < exists ; exists ; 2004 ; ; 9781920942151 ; "Health Expenditure, Income and Health Status Among Indigenous and Other Australians »" ; caepr ; series/caepr/health-expenditure-income-and-health-status-among-indigenous-and-other ;  >
-   au < exists ; exists ; 2004 ; ; 9781920942083 ; Aboriginal Population Profiles for Development Planning in the Northern East Kimberley ; caepr ; series/caepr/aboriginal-population-profiles-development-planning-northern-east ;  >
+   au < finished ; finished ; 2004 ; 9781920942083 ; 9781920942038 ; Aboriginal Population Profiles for Development Planning in the Northern East Kimberley ; centre-aboriginal-economic-policy-research-caepr ; series/centre-aboriginal-economic-policy-research-caepr/aboriginal-population-profiles ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2004 ; 9780975122952 ; 9780975122969 ; Black Words White Page ;  ; black-words-white-page ; reingest3.clockss.org:8083 >
+   au < finished ; finished ; 2004 ; 9781920942151 ; 9781920942144 ; Health Expenditure, Income and Health Status Among Indigenous and Other Australians ; centre-aboriginal-economic-policy-research-caepr ; series/centre-aboriginal-economic-policy-research-caepr/health-expenditure-income-and ; reingest4.clockss.org:8082 > # https://press-files.anu.edu.au/images/titles/b-thumb-c21.gif,"500 Internal Server Error"
+   au < finished ; finished ; 2004 ; 9780975122976 ; 9780975122983 ; Humanities Research Centre ;  ; humanities-research-centre ; reingest5.clockss.org:8082 >
+   au < finished ; finished ; 2004 ; 9780975122945 ; 9781920942021 ; Making Sense of the Census ; centre-aboriginal-economic-policy-research-caepr ; series/centre-aboriginal-economic-policy-research-caepr/making-sense-census ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2004 ; 9781920942137 ; 9781920942120 ; Social Indicators for Aboriginal Governance ; centre-aboriginal-economic-policy-research-caepr ; series/centre-aboriginal-economic-policy-research-caepr/social-indicators-aboriginal ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2004 ; 9781920942069 ; 9781920942052 ; State and Society in Papua New Guinea ;  ; state-and-society-papua-new-guinea ; reingest3.clockss.org:8083 >
+   au < finished ; finished ; 2004 ; 9781920942045 ; 9780975122938 ; The Indigenous Welfare Economy and the CDEP Scheme ; centre-aboriginal-economic-policy-research-caepr ; series/centre-aboriginal-economic-policy-research-caepr/indigenous-welfare-economy-and ; reingest4.clockss.org:8082 >
+   au < finished ; finished ; 2004 ; 9781920942014 ; 9781920942007 ; The Military and Democracy in Asia and the Pacific ;  ; military-and-democracy-asia-and-pacific ; reingest5.clockss.org:8082 >
+   au < finished ; finished ; 2004 ; 9781920942175 ; 9781920942168 ; The Spanish Lake ;  ; spanish-lake ; reingest1.clockss.org:8082 > # https://press-files.anu.edu.au/images/titles/spanish_lake_thumb.gif,"500 Internal Server Error"
+   au < finished ; finished ; 2004 ; 9780975122990 ; 9780975122921 ; Viet Nam — a Transition Tiger? ;  ; viet-nam-%E2%80%94-transition-tiger ; reingest2.clockss.org:8085 >
 
-   au < finished ; finished ; 2005 ; ; 1 9209 4227 0 ; Asian Socialism and Legal Change ;  ; asian-socialism-and-legal-change ; reingest3.clockss.org:8083 >
-   au < finished ; finished ; 2005 ; ; 1 920942 22 X ; Culture and Sustainable Development in the Pacific ;  ; culture-and-sustainable-development-pacific ; reingest4.clockss.org:8082 >
-   au < finished ; finished ; 2005 ; ; 1 920942 26 2 ; Ethics and Auditing ;  ; ethics-and-auditing ; reingest5.clockss.org:8082 >
-   au < finished ; finished ; 2005 ; ; 1 920942 20 3 ; Information Systems Foundations: Constructing and Criticising ; information-systems-foundations ; series/information-systems-foundations/information-systems-foundations-constructing-and ; reingest1.clockss.org:8082 >
-   au < finished ; finished ; 2005 ; ; 1 920942 29 7 ; In the Service of the Company - Vol 1 ;  ; service-company-vol-1 ; reingest2.clockss.org:8085 >
-   au < finished ; finished ; 2005 ; ; 192094253X ; Pacific Islands Regional Integration and Governance ;  ; pacific-islands-regional-integration-and-governance ; reingest3.clockss.org:8083 >
-   au < finished ; finished ; 2005 ; ; 1 9209 4246 7 ; Pacific Regional Order ;  ; pacific-regional-order ; reingest4.clockss.org:8082 >
-   au < finished ; finished ; 2005 ; ; 1 920942 55 6 ; Rule of Law, Legitimate Governance & Development in the Pacific ;  ; rule-law-legitimate-governance-development-pacific ; reingest5.clockss.org:8082 >
-   au < doNotProcess ; exists ; 2005 ; ; 1 920942 24 6 (CD) ; The Art of Narritjin Maymuru ;  ; art-narritjin-maymuru ; > # no preservable content
-   au < finished ; finished ; 2005 ; ; 1 9209 4241 6 ; The China Boom and its Discontents ; china-update-series ; series/china-update-series/china-boom-and-its-discontents ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2005 ; 9780731537150 ; 9781920942274 ; Asian Socialism and Legal Change ;  ; asian-socialism-and-legal-change ; reingest3.clockss.org:8083 >
+   au < finished ; finished ; 2005 ; 9781920942236 ; 9781920942229 ; Culture and Sustainable Development in the Pacific ;  ; culture-and-sustainable-development-pacific ; reingest4.clockss.org:8082 >
+   au < finished ; finished ; 2005 ; 9781920942250 ; 9781920942267 ; Ethics and Auditing ;  ; ethics-and-auditing ; reingest5.clockss.org:8082 >
+   au < finished ; finished ; 2005 ; 9781920942212 ; 9781920942205 ; Information Systems Foundations: Constructing and Criticising ; information-systems-foundations ; series/information-systems-foundations/information-systems-foundations-constructing-and ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2005 ; 9781920942281 ; 9781920942298 ; In the Service of the Company - Vol 1 ;  ; service-company-vol-1 ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2005 ; 9780731537396 ; 9781920942533 ; Pacific Islands Regional Integration and Governance ;  ; pacific-islands-regional-integration-and-governance ; reingest3.clockss.org:8083 >
+   au < finished ; finished ; 2005 ; 9780731537334 ; 9781920942465 ; Pacific Regional Order ;  ; pacific-regional-order ; reingest4.clockss.org:8082 >
+   au < finished ; finished ; 2005 ; 9780731537211 ; 9781920942557 ; Rule of Law, Legitimate Governance & Development in the Pacific ;  ; rule-law-legitimate-governance-development-pacific ; reingest5.clockss.org:8082 >
+   au < doNotProcess ; exists ; 2005 ; 9781920942243(CD) ;  ; The Art of Narritjin Maymuru ;  ; art-narritjin-maymuru ; > # no preservable content
+   au < finished ; finished ; 2005 ; 9780731537273 ; 9781920942410 ; The China Boom and its Discontents ; china-update-series ; series/china-update-series/china-boom-and-its-discontents ; reingest1.clockss.org:8082 >
 
-   au < finished ; finished ; 2006 ; ; 1 920942 64 5 ; Assessing the Evidence on Indigenous Socioeconomic Outcomes ; centre-aboriginal-economic-policy-research-caepr ; series/centre-aboriginal-economic-policy-research-caepr/assessing-evidence-indigenous ; reingest2.clockss.org:8085 >
-   au < finished ; finished ; 2006 ; ; 1 920942 83 1 ; Australian Department Heads Under Howard: Career Paths and Practice ; australia-and-new-zealand-school-government-anzsog ; series/australia-and-new-zealand-school-government-anzsog/australian-department-heads ; reingest3.clockss.org:8083 >
-   au < finished ; finished ; 2006 ; ; 1 920942 74 2 ; Australian Political Lives ; australia-and-new-zealand-school-government-anzsog ; series/australia-and-new-zealand-school-government-anzsog/australian-political-lives ; reingest4.clockss.org:8082 >
-   au < finished ; finished ; 2006 ; ; 1 920942 96 3 ; Coastal Themes (Terra Australis 24) ; terra-australis ; series/terra-australis/coastal-themes-terra-australis-24 ; reingest5.clockss.org:8082 >
-   au < finished ; finished ; 2006 ; ; 1 920942 39 4 ; Complex Science for a Complex World ;  ; complex-science-complex-world ; reingest1.clockss.org:8082 >
-   au < finished ; finished ; 2006 ; ; 1 920942 45 9 ; Connected Worlds ;  ; connected-worlds ; reingest2.clockss.org:8085 >
-   au < finished ; finished ; 2006 ; ; 1 920942 37 8 ; Dislocating the Frontier ;  ; dislocating-frontier ; reingest3.clockss.org:8083 >
-   au < finished ; finished ; 2006 ; ; 1 920942 57 2 ; El Lago Español ;  ; el-lago-espa%C3%B1ol ; reingest4.clockss.org:8082 >
-   au < finished ; finished ; 2006 ; ; 1 920942 50 5 ; Giblin's Platoon ;  ; giblins-platoon ; reingest5.clockss.org:8082 >
-   au < finished ; finished ; 2006 ; ; 1 920942 98 X ; Globalisation and Governance in the Pacific Islands ; state-society-and-governance-melanesia ; series/state-society-and-governance-melanesia/globalisation-and-governance-pacific ; reingest1.clockss.org:8082 >
-   au < finished ; finished ; 2006 ; ; 1 9209425 4 8 ; Indigenous People and the Pilbara Mining Boom ; centre-aboriginal-economic-policy-research-caepr ; series/centre-aboriginal-economic-policy-research-caepr/indigenous-people-and-pilbara ; reingest2.clockss.org:8085 >
-   au < finished ; finished ; 2006 ; ; 1 920942 66 1 ; Informative Psychometric Filters ;  ; informative-psychometric-filters ; reingest3.clockss.org:8083 >
-   au < finished ; finished ; 2006 ; ; 1 920942 84 X ; Inside Austronesian Houses ; comparative-austronesian-series ; series/comparative-austronesian-series/inside-austronesian-houses ; reingest4.clockss.org:8082 >
-   au < finished ; finished ; 2006 ; ; 1 920942 68 8 ; Interpreting Chekhov ;  ; interpreting-chekhov ; reingest5.clockss.org:8082 >
-   au < finished ; finished ; 2006 ; ; 1 920942 75 0 ; Islands of Turmoil ;  ; islands-turmoil ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2006 ; 9781920942649 ; 9781920942199 ; Assessing the Evidence on Indigenous Socioeconomic Outcomes ; centre-aboriginal-economic-policy-research-caepr ; series/centre-aboriginal-economic-policy-research-caepr/assessing-evidence-indigenous ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2006 ; 9781920942823 ; 9781920942830 ; Australian Department Heads Under Howard: Career Paths and Practice ; australia-and-new-zealand-school-government-anzsog ; series/australia-and-new-zealand-school-government-anzsog/australian-department-heads ; reingest3.clockss.org:8083 >
+   au < finished ; finished ; 2006 ; 9781920942731 ; 9781920942748 ; Australian Political Lives ; australia-and-new-zealand-school-government-anzsog ; series/australia-and-new-zealand-school-government-anzsog/australian-political-lives ; reingest4.clockss.org:8082 >
+   au < finished ; finished ; 2006 ; 9781920942939 ; 9781920942960 ; Coastal Themes (Terra Australis 24) ; terra-australis ; series/terra-australis/coastal-themes-terra-australis-24 ; reingest5.clockss.org:8082 >
+   au < finished ; finished ; 2006 ; 9781920942380 ; 9781920942397 ; Complex Science for a Complex World ;  ; complex-science-complex-world ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2006 ; 9781920942441 ; 9781920942458 ; Connected Worlds ;  ; connected-worlds ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2006 ; 9781920942366 ; 9781920942373 ; Dislocating the Frontier ;  ; dislocating-frontier ; reingest3.clockss.org:8083 >
+   au < finished ; finished ; 2006 ; 9781920942564 ; 9781920942571 ; El Lago Español ;  ; el-lago-espa%C3%B1ol ; reingest4.clockss.org:8082 >
+   au < finished ; finished ; 2006 ; 9781920942502 ; 9781920942496 ; Giblin's Platoon ;  ; giblins-platoon ; reingest5.clockss.org:8082 >
+   au < finished ; finished ; 2006 ; 9781920942977 ; 9781920942984 ; Globalisation and Governance in the Pacific Islands ; state-society-and-governance-melanesia ; series/state-society-and-governance-melanesia/globalisation-and-governance-pacific ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2006 ; 9781920942403 ; 9781920942540 ; Indigenous People and the Pilbara Mining Boom ; centre-aboriginal-economic-policy-research-caepr ; series/centre-aboriginal-economic-policy-research-caepr/indigenous-people-and-pilbara ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2006 ; 9781920942663 ; 9781920942656 ; Informative Psychometric Filters ;  ; informative-psychometric-filters ; reingest3.clockss.org:8083 >
+   au < finished ; finished ; 2006 ; 9780731515950 ; 9781920942847 ; Inside Austronesian Houses ; comparative-austronesian-series ; series/comparative-austronesian-series/inside-austronesian-houses ; reingest4.clockss.org:8082 >
+   au < finished ; finished ; 2006 ; 9781920942670 ; 9781920942687 ; Interpreting Chekhov ;  ; interpreting-chekhov ; reingest5.clockss.org:8082 >
+   au < finished ; finished ; 2006 ; 9780731537518 ; 9781920942755 ; Islands of Turmoil ;  ; islands-turmoil ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2006 ; ; 1 920942 81 5 ; Managing Consultants (2006) ; australia-and-new-zealand-school-government-anzsog ; series/australia-and-new-zealand-school-government-anzsog/managing-consultants ; reingest2.clockss.org:8085 >
-   au < finished ; finished ; 2006 ; ; 1920942 59 9 ; Maverick Mathematician ;  ; maverick-mathematician ; reingest3.clockss.org:8083 >
-   au < finished ; finished ; 2006 ; ; 1 920942 63 7 ; Nature, Nurture and Chance ;  ; nature-nurture-and-chance ; reingest4.clockss.org:8082 >
-   au < finished ; finished ; 2006 ; ; 1 920942 48 3 ; Negotiating the Sacred ;  ; negotiating-sacred ; reingest5.clockss.org:8082 >
-   au < finished ; finished ; 2006 ; ; 1 9209 4218 1 ; NGOs and Post-Conflict Recovery ;  ; ngos-and-post-conflict-recovery ; reingest1.clockss.org:8082 >
-   au < finished ; finished ; 2006 ; ; 1 920942 87 4 ; Origins, Ancestry and Alliance ; comparative-austronesian-series ; series/comparative-austronesian-series/origins-ancestry-and-alliance ; reingest2.clockss.org:8085 >
-   au < finished ; finished ; 2006 ; ; 1 920942 79 3 ; Performance Measurement, Reporting, Obstacles and Accountability ; australia-and-new-zealand-school-government-anzsog ; series/australia-and-new-zealand-school-government-anzsog/performance-measurement ; reingest3.clockss.org:8083 >
-   au < finished ; finished ; 2006 ; ; 1 920942 33 5 ; Power and Pork ;  ; power-and-pork ; reingest4.clockss.org:8082 >
-   au < finished ; finished ; 2006 ; ; 1 920942 70 X ; Sharing the Earth, Dividing the Land ; comparative-austronesian-series ; series/comparative-austronesian-series/sharing-earth-dividing-land ; reingest5.clockss.org:8082 >
-   au < finished ; finished ; 2006 ; ; 1 9209425 2 1 ; State, Communities and Forests In Contemporary Borneo ; asia-pacific-environment-monographs ; series/asia-pacific-environment-monographs/state-communities-and-forests-contemporary ; reingest1.clockss.org:8082 >
-   au < finished ; finished ; 2006 ; ; 1 920942 85 8 ; The Austronesians ; comparative-austronesian-series ; series/comparative-austronesian-series/austronesians ; reingest2.clockss.org:8085 >
-   au < finished ; finished ; 2006 ; ; 1 920942 72 6 ; The First Ten K R Narayanan Orations ;  ; first-ten-k-r-narayanan-orations ; reingest3.clockss.org:8083 >
-   au < finished ; finished ; 2006 ; ; 1 920942 31 9 ; The Islamic Traditions of Cirebon ; islam-southeast-asia ; series/islam-southeast-asia/islamic-traditions-cirebon ; reingest4.clockss.org:8082 >
-   au < finished ; finished ; 2006 ; ; 1920942866 ; The Poetic Power of Place ; comparative-austronesian-series ; series/comparative-austronesian-series/poetic-power-place ; reingest5.clockss.org:8082 >
-   au < finished ; finished ; 2006 ; ; 1 920942 76 9 ; The Turning Point in China's Economic Development ; china-update-series ; series/china-update-series/turning-point-chinas-economic-development ; reingest1.clockss.org:8082 >
-   au < finished ; finished ; 2006 ; ; 1 920942 91 2 ; What Good Condition? ;  ; aboriginal-history-monographs/what-good-condition ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2006 ; 9781920942588 ; 9781920942595 ; Maverick Mathematician ;  ; maverick-mathematician ; reingest3.clockss.org:8083 >
+   au < finished ; finished ; 2006 ; 9781920942625 ; 9781920942632 ; Nature, Nurture and Chance ;  ; nature-nurture-and-chance ; reingest4.clockss.org:8082 >
+   au < finished ; finished ; 2006 ; 9781920942472 ; 9781920942489 ; Negotiating the Sacred ;  ; negotiating-sacred ; reingest5.clockss.org:8082 >
+   au < finished ; finished ; 2006 ; 9780731537457 ; 9781920942182 ; NGOs and Post-Conflict Recovery ;  ; ngos-and-post-conflict-recovery ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2006 ; 9780731524327 ; 9781920942878 ; Origins, Ancestry and Alliance ; comparative-austronesian-series ; series/comparative-austronesian-series/origins-ancestry-and-alliance ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2006 ; 9781920942786 ; 9781920942793 ; Performance Measurement, Reporting, Obstacles and Accountability ; australia-and-new-zealand-school-government-anzsog ; series/australia-and-new-zealand-school-government-anzsog/performance-measurement ; reingest3.clockss.org:8083 >
+   au < finished ; finished ; 2006 ; 9780731537570 ; 9781920942335 ; Power and Pork ;  ; power-and-pork ; reingest4.clockss.org:8082 >
+   au < finished ; finished ; 2006 ; 9781920942694 ; 9781920942700 ; Sharing the Earth, Dividing the Land ; comparative-austronesian-series ; series/comparative-austronesian-series/sharing-earth-dividing-land ; reingest5.clockss.org:8082 >
+   au < finished ; finished ; 2006 ; 9781920942519 ; 9781920942526 ; State, Communities and Forests In Contemporary Borneo ; asia-pacific-environment-monographs ; series/asia-pacific-environment-monographs/state-communities-and-forests-contemporary ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2006 ; 9780731521326 ; 9781920942854 ; The Austronesians ; comparative-austronesian-series ; series/comparative-austronesian-series/austronesians ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2006 ; 9781920942717 ; 9781920942724 ; The First Ten K R Narayanan Orations ;  ; first-ten-k-r-narayanan-orations ; reingest3.clockss.org:8083 >
+   au < finished ; finished ; 2006 ; 9781920942304 ; 9781920942311 ; The Islamic Traditions of Cirebon ; islam-southeast-asia ; series/islam-southeast-asia/islamic-traditions-cirebon ; reingest4.clockss.org:8082 >
+   au < finished ; finished ; 2006 ; 9780731528417 ; 9781920942861 ; The Poetic Power of Place ; comparative-austronesian-series ; series/comparative-austronesian-series/poetic-power-place ; reingest5.clockss.org:8082 >
+   au < finished ; finished ; 2006 ; 9780731537631 ; 9781920942762 ; The Turning Point in China's Economic Development ; china-update-series ; series/china-update-series/turning-point-chinas-economic-development ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2006 ; 9781920942908 ; 9781920942915 ; What Good Condition? ; aboriginal-history ; aboriginal-history-monographs/what-good-condition ; reingest2.clockss.org:8085 >
 
    au < finished ; finished ; 2007 ; 9781921313202 ; 9781921313219 ; 'The Axe Had Never Sounded' ; aboriginal-history ; aboriginal-history-monographs/axe-had-never-sounded ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2007 ; 9781921313585 ; 9781921313592 ; Agency, Contingency and Census Process ; centre-aboriginal-economic-policy-research-caepr ; series/centre-aboriginal-economic-policy-research-caepr/agency-contingency-and-census ; reingest4.clockss.org:8082 >
-   au < finished ; finished ; 2007 ; ; 9781921313356 ; A Passion for Policy ; australia-and-new-zealand-school-government-anzsog ; series/australia-and-new-zealand-school-government-anzsog/passion-policy ; reingest5.clockss.org:8082 >
-   au < finished ; finished ; 2007 ; ; 9781921313080 ; A Quest for True Islam ; islam-southeast-asia ; series/islam-southeast-asia/quest-true-islam ; reingest1.clockss.org:8082 >
-   au < finished ; finished ; 2007 ; ; 9781921313172 ; Arndt's Story ;  ; arndts-story ; reingest2.clockss.org:8085 >
-   au < finished ; finished ; 2007 ; ; 9781920942953 ; Boats to Burn ; asia-pacific-environment-monographs ; series/asia-pacific-environment-monographs/boats-burn ; reingest3.clockss.org:8083 >
+   au < finished ; finished ; 2007 ; 9781921313349 ; 9781921313356 ; A Passion for Policy ; australia-and-new-zealand-school-government-anzsog ; series/australia-and-new-zealand-school-government-anzsog/passion-policy ; reingest5.clockss.org:8082 >
+   au < finished ; finished ; 2007 ; 9781920942328 ; 9781921313080 ; A Quest for True Islam ; islam-southeast-asia ; series/islam-southeast-asia/quest-true-islam ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2007 ; 9780731538102 ; 9781921313172 ; Arndt's Story ;  ; arndts-story ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2007 ; 9781920942946 ; 9781920942953 ; Boats to Burn ; asia-pacific-environment-monographs ; series/asia-pacific-environment-monographs/boats-burn ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2007 ; ; 9781921313509 ; Caretaker Conventions in Australasia (2007) ; australia-and-new-zealand-school-government-anzsog ; series/australia-and-new-zealand-school-government-anzsog/caretaker-conventions ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2007 ; 9780731538133 ; 9781921313387 ; China - Linking Markets for Growth ; china-update-series ; series/china-update-series/china-linking-markets-growth ; reingest5.clockss.org:8082 >
    au < finished ; frozen ; 2007 ; 9781921313455 ; 9781921313462 ; Conflict and Resource Development ; state-society-and-governance-melanesia ; series/state-society-and-governance-melanesia/conflict-and-resource-development ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2007 ; 9781921313240 ; 9781921313257 ; Culture in Translation ; aboriginal-history ; aboriginal-history-monographs/culture-translation ; reingest2.clockss.org:8085 >
-   au < finished ; finished ; 2007 ; ; 9781921313271 ; Customary Land Tenure & Registration in Australia and Papua New Guinea ; asia-pacific-environment-monographs ; series/asia-pacific-environment-monographs/customary-land-tenure-registration-australia ; reingest3.clockss.org:8083 >
-   au < finished ; finished ; 2007 ; ; 9781921313103 ; Electronic Engagement ; australia-and-new-zealand-school-government-anzsog ; series/australia-and-new-zealand-school-government-anzsog/electronic-engagement ; reingest4.clockss.org:8082 >
-   au < finished ; finished ; 2007 ; ; 9781921313424 ; Federalism and Regionalism in Australia ; australia-and-new-zealand-school-government-anzsog ; series/australia-and-new-zealand-school-government-anzsog/federalism-and-regionalism ; reingest5.clockss.org:8082 >
-   au < finished ; finished ; 2007 ; ; 9781921313363 ; From Election to Coup in Fiji ;  ; election-coup-fiji ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2007 ; 9781921313264 ; 9781921313271 ; Customary Land Tenure & Registration in Australia and Papua New Guinea ; asia-pacific-environment-monographs ; series/asia-pacific-environment-monographs/customary-land-tenure-registration-australia ; reingest3.clockss.org:8083 >
+   au < finished ; finished ; 2007 ; 9781921313097 ; 9781921313103 ; Electronic Engagement ; australia-and-new-zealand-school-government-anzsog ; series/australia-and-new-zealand-school-government-anzsog/electronic-engagement ; reingest4.clockss.org:8082 >
+   au < finished ; finished ; 2007 ; 9781921313417 ; 9781921313424 ; Federalism and Regionalism in Australia ; australia-and-new-zealand-school-government-anzsog ; series/australia-and-new-zealand-school-government-anzsog/federalism-and-regionalism ; reingest5.clockss.org:8082 >
+   au < finished ; finished ; 2007 ; 9780731538126 ; 9781921313363 ; From Election to Coup in Fiji ;  ; election-coup-fiji ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2007 ; 9781921313554 ; 9781921313561 ; History as Policy ; strategic-and-defence-studies-centre-sdsc ; series/strategic-and-defence-studies-centre-sdsc/history-policy ; reingest2.clockss.org:8085 >
-   au < finished ; finished ; 2007 ; ; 9781921313028 ; Improving Implementation ; australia-and-new-zealand-school-government-anzsog ; series/australia-and-new-zealand-school-government-anzsog/improving-implementation ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2007 ; 9781921313011 ; 9781921313028 ; Improving Implementation ; australia-and-new-zealand-school-government-anzsog ; series/australia-and-new-zealand-school-government-anzsog/improving-implementation ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2007 ; 9781921313134 ; 9781921313141 ; Information Systems Foundations: Theory, Representation and Reality ; information-systems-foundations ; series/information-systems-foundations/information-systems-foundations-theory ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2007 ; 9780731538157 ; 9781921313622 ; Japan's Future in East Asia and the Pacific ;  ; japans-future-east-asia-and-pacific ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2007 ; 9781921313288 ; 9781921313295 ; Lithics in the Land of the Lightning Brothers (Terra Australis 25) ; terra-australis ; series/terra-australis/lithics-land-lightning-brothers-terra-australis-25 ; reingest5.clockss.org:8082 >
    au < finished ; frozen ; 2007 ; 9780731538119 ; 9781921313370 ; Myanmar ;  ; myanmar ; reingest1.clockss.org:8082 >
-   au < finished ; finished ; 2007 ; ; 9781921313004 ; Numinous Subjects ;  ; numinous-subjects ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2007 ; 9781920942922 ; 9781921313004 ; Numinous Subjects ;  ; numinous-subjects ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2007 ; 9781921313325 ; 9781921313332 ; Oceanic Explorations (Terra Australis 26) ; terra-australis ; series/terra-australis/oceanic-explorations-terra-australis-26 ; reingest3.clockss.org:8083 >
-   au < finished ; finished ; 2007 ; ; 978 1 921313 03 5 ; Pieces of the Vanuatu Puzzle (Terra Australis 23) ; terra-australis ; series/terra-australis/pieces-vanuatu-puzzle-terra-australis-23 ; reingest4.clockss.org:8082 >
-   au < finished ; finished ; 2007 ; ; 9781921313127 ; Prehistory of the Indo-Malaysian Archipelago ;  ; prehistory-indo-malaysian-archipelago ; reingest5.clockss.org:8082 >
+   au < finished ; finished ; 2007 ; 9781740760935 ; 9781921313035 ; Pieces of the Vanuatu Puzzle (Terra Australis 23) ; terra-australis ; series/terra-australis/pieces-vanuatu-puzzle-terra-australis-23 ; reingest4.clockss.org:8082 >
+   au < finished ; finished ; 2007 ; 9781921313110 ; 9781921313127 ; Prehistory of the Indo-Malaysian Archipelago ;  ; prehistory-indo-malaysian-archipelago ; reingest5.clockss.org:8082 >
    au < finished ; frozen ; 2007 ; 9781920942601 ; 9781920942618 ; Public Sector Employment in the Twenty-First Century ;  ; public-sector-employment-twenty-first-century ; reingest1.clockss.org:8082 >
-   au < finished ; finished ; 2007 ; ; 1 920942 35 1 ; Reformist Muslims in a Yogyakarta Village ; islam-southeast-asia ; series/islam-southeast-asia/reformist-muslims-yogyakarta-village ; reingest2.clockss.org:8085 >
-   au < finished ; finished ; 2007 ; ; 9781921313394 ; Re-Visioning Arts and Cultural Policy ; australia-and-new-zealand-school-government-anzsog ; series/australia-and-new-zealand-school-government-anzsog/re-visioning-arts-and ; reingest3.clockss.org:8083 >
-   au < finished ; finished ; 2007 ; ; 9781921313233 ; Statistical Mechanics of Nonequilibrium Liquids ;  ; statistical-mechanics-nonequilibrium-liquids ; reingest4.clockss.org:8082 >
+   au < finished ; finished ; 2007 ; 9781920942342 ; 9781920942359 ; Reformist Muslims in a Yogyakarta Village ; islam-southeast-asia ; series/islam-southeast-asia/reformist-muslims-yogyakarta-village ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2007 ; 9781921313400 ; 9781921313394 ; Re-Visioning Arts and Cultural Policy ; australia-and-new-zealand-school-government-anzsog ; series/australia-and-new-zealand-school-government-anzsog/re-visioning-arts-and ; reingest3.clockss.org:8083 >
+   au < finished ; finished ; 2007 ; 9781921313226 ; 9781921313233 ; Statistical Mechanics of Nonequilibrium Liquids ;  ; statistical-mechanics-nonequilibrium-liquids ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2007 ; 9781920942427 ; 9781920942434 ; Struggling for the Umma ; islam-southeast-asia ; series/islam-southeast-asia/struggling-umma ; reingest5.clockss.org:8082 >
    au < finished ; frozen ; 2007 ; 9781921313479 ; 9781921313486 ; Talking and Listening in the Age of Modernity ;  ; talking-and-listening-age-modernity ; reingest1.clockss.org:8082 >
-   au < finished ; finished ; 2007 ; ; 978 1 921313 04 2 ; The Archaeology of the Aru Islands, Eastern Indonesia (Terra Australis 22) ; terra-australis ; series/terra-australis/archaeology-aru-islands-eastern-indonesia-terra-australis-22 ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2007 ; 9781740761130 ; 9781921313042 ; The Archaeology of the Aru Islands, Eastern Indonesia (Terra Australis 22) ; terra-australis ; series/terra-australis/archaeology-aru-islands-eastern-indonesia-terra-australis-22 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2007 ; 9781921313530 ; 9781921313547 ; The Cult of the Market ;  ; cult-market ; reingest3.clockss.org:8083 >
-   au < finished ; finished ; 2007 ; ; 9781921313073 ; The Journey of a Book ;  ; journey-book ; reingest4.clockss.org:8082 >
-   au < finished ; finished ; 2007 ; ; 9781921313196 ; The Lexicon of Proto Oceanic ;  ; lexicon-proto-oceanic ; reingest5.clockss.org:8082 >
-   au < finished ; finished ; 2007 ; ; 9781921313318 ; The Nature of Northern Australia ;  ; nature-northern-australia ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2007 ; 9781921313066 ; 9781921313073 ; The Journey of a Book ;  ; journey-book ; reingest4.clockss.org:8082 >
+   au < finished ; finished ; 2007 ; 9781921313189 ; 9781921313196 ; The Lexicon of Proto Oceanic ;  ; lexicon-proto-oceanic ; reingest5.clockss.org:8082 >
+   au < finished ; finished ; 2007 ; 9781921313301 ; 9781921313318 ; The Nature of Northern Australia ;  ; nature-northern-australia ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2007 ; 9781921313516 ; 9781921313523 ; The Social Effects of Native Title ; centre-aboriginal-economic-policy-research-caepr ; series/centre-aboriginal-economic-policy-research-caepr/social-effects-native-title ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2007 ; 9780958156066 ; 9781921313578 ; Three Creative Fellows ;  ; three-creative-fellows ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2007 ; 9781921313448 ; 9781921313431 ; Transgressions ;  ; aboriginal-history-monographs/transgressions ; reingest4.clockss.org:8082 >
-   au < finished ; finished ; 2007 ; ; 978 1 921313 05 9 ; What's Changing: Population Size or Land-Use Patterns? (Terra Australis 21) ; terra-australis ; series/terra-australis/whats-changing-population-size-or-land-use-patterns-terra ; reingest5.clockss.org:8082 >
+   au < finished ; finished ; 2007 ; 9781740761161 ; 9781921313059 ; What's Changing: Population Size or Land-Use Patterns? (Terra Australis 21) ; terra-australis ; series/terra-australis/whats-changing-population-size-or-land-use-patterns-terra ; reingest5.clockss.org:8082 >
 
    au < finished ; finished ; 2008 ; 9780731538171 ; 9781921313646 ; Agriculture and Food Security in China ;  ; agriculture-and-food-security-china ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2008 ; 9781921313608 ; 9781921313615 ; A Time Bomb Lies Buried ; state-society-and-governance-melanesia ; series/state-society-and-governance-melanesia/time-bomb-lies-buried ; reingest2.clockss.org:8085 >
