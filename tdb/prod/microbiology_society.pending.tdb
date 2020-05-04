@@ -387,9 +387,9 @@
       au < doNotProcess ; 2011 ; Journal of General Virology Volume 92 ; 92 >
       au < doNotProcess ; 2012 ; Journal of General Virology Volume 93 ; 93 >
       au < testing ; 2013 ; Journal of General Virology Volume 94 ; 94 >#test when plugin is ready
-      au < ready ; 2014 ; Journal of General Virology Volume 95 ; 95 >#test when plugin is ready
-      au < ready ; 2015 ; Journal of General Virology Volume 96 ; 96 >#test when plugin is ready
-      au < ready ; 2016 ; Journal of General Virology Volume 97 ; 97 >#test when plugin is ready
+      au < released ; 2014 ; Journal of General Virology Volume 95 ; 95 >#test when plugin is ready
+      au < released ; 2015 ; Journal of General Virology Volume 96 ; 96 >#test when plugin is ready
+      au < released ; 2016 ; Journal of General Virology Volume 97 ; 97 >#test when plugin is ready
 
   }
 
@@ -465,10 +465,10 @@
       au < doNotProcess ; 2010 ; Journal of Medical Microbiology Volume 59 ; 59 >
       au < doNotProcess ; 2011 ; Journal of Medical Microbiology Volume 60 ; 60 >
       au < doNotProcess ; 2012 ; Journal of Medical Microbiology Volume 61 ; 61 >
-      au < ready ; 2013 ; Journal of Medical Microbiology Volume 62 ; 62 >#test when plugin is ready.
-      au < ready ; 2014 ; Journal of Medical Microbiology Volume 63 ; 63 >#test when plugin is ready.
+      au < released ; 2013 ; Journal of Medical Microbiology Volume 62 ; 62 >#test when plugin is ready.
+      au < released ; 2014 ; Journal of Medical Microbiology Volume 63 ; 63 >#test when plugin is ready.
       au < testing ; 2015 ; Journal of Medical Microbiology Volume 64 ; 64 >#test when plugin is ready.
-      au < ready ; 2016 ; Journal of Medical Microbiology Volume 65 ; 65 >#test when plugin is ready.
+      au < released ; 2016 ; Journal of Medical Microbiology Volume 65 ; 65 >#test when plugin is ready.
 
   }
 
@@ -481,9 +481,9 @@
       rights = openaccess
       param[journal_id] = jmmcr
 
-      au < ready ; 2014 ; JMM Case Reports Volume 1 ; 1 >#test when plugin is ready.
-      au < ready ; 2015 ; JMM Case Reports Volume 2 ; 2 >#test when plugin is ready.
-      au < ready ; 2016 ; JMM Case Reports Volume 3 ; 3 >#test when plugin is ready.
+      au < released ; 2014 ; JMM Case Reports Volume 1 ; 1 >#test when plugin is ready.
+      au < released ; 2015 ; JMM Case Reports Volume 2 ; 2 >#test when plugin is ready.
+      au < released ; 2016 ; JMM Case Reports Volume 3 ; 3 >#test when plugin is ready.
 
   }
 
@@ -496,8 +496,8 @@
       rights = openaccess
       param[journal_id] = mgen
 
-      au < ready ; 2015 ; Microbial Genomics Volume 1 ; 1 >#test when plugin is ready.
-      au < ready ; 2016 ; Microbial Genomics Volume 2 ; 2 >#test when plugin is ready.
+      au < released ; 2015 ; Microbial Genomics Volume 1 ; 1 >#test when plugin is ready.
+      au < released ; 2016 ; Microbial Genomics Volume 2 ; 2 >#test when plugin is ready.
 
   }
 
@@ -533,10 +533,10 @@
       au < doNotProcess ; 2010 ; Microbiology Volume 156 ; 156 >
       au < doNotProcess ; 2011 ; Microbiology Volume 157 ; 157 >
       au < doNotProcess ; 2012 ; Microbiology Volume 158 ; 158 >
-      au < ready ; 2013 ; Microbiology Volume 159 ; 159 >#test when plugin is ready.
-      au < ready ; 2014 ; Microbiology Volume 160 ; 160 >#test when plugin is ready.
-      au < ready ; 2015 ; Microbiology Volume 161 ; 161 >#test when plugin is ready.
-      au < ready ; 2016 ; Microbiology Volume 162 ; 162 >#test when plugin is ready.
+      au < released ; 2013 ; Microbiology Volume 159 ; 159 >#test when plugin is ready.
+      au < released ; 2014 ; Microbiology Volume 160 ; 160 >#test when plugin is ready.
+      au < released ; 2015 ; Microbiology Volume 161 ; 161 >#test when plugin is ready.
+      au < released ; 2016 ; Microbiology Volume 162 ; 162 >#test when plugin is ready.
 
   }
 

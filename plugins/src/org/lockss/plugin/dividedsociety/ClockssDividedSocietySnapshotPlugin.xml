@@ -25,7 +25,7 @@
     <map>
       <entry>
         <string>Metadata</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -33,7 +33,7 @@
       </entry>
       <entry>
         <string>Substance</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
     </map>
   </entry>
@@ -83,23 +83,6 @@
       <string>"https://www.dividedsociety.org/4e566d92-3778-41c0-b7d7-c9fe7bd71aa9/ip_access"</string>
       <string>"%sarchive/journals", base_url</string>
     </list>
-  </entry>
-  <entry>
-    <string>plugin_feature_version_map</string>
-    <map>
-      <entry>
-        <string>Metadata</string>
-        <string>1</string>
-      </entry>
-      <entry>
-        <string>Poll</string>
-        <string>1</string>
-      </entry>
-      <entry>
-        <string>Substance</string>
-        <string>1</string>
-      </entry>
-    </map>
   </entry>
   <!--
   https://dl.dropboxusercontent.com/s/vhxgqdyi106h47c/ALU_001_003.pdf

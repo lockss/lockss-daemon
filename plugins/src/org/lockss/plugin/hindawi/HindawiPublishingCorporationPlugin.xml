@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>ready</string>
+    <string>deprecated</string>
   </entry>
   <!-- https transition enabled -->  
   <entry>
@@ -39,11 +39,11 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Hindawi Publishing Corporation Plugin, Base URL %s, Download URL %s, Journal ID %s, Volume %s", base_url, download_url, journal_id, volume_name</string>
+    <string>"Hindawi Plugin (Legacy), Base URL %s, Download URL %s, Journal ID %s, Volume %s", base_url, download_url, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Hindawi Publishing Corporation Plugin</string>
+    <string>Hindawi Plugin (Legacy)</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -159,7 +159,7 @@
     <map>
       <entry>
         <string>*</string>
-        <string>org.lockss.plugin.hindawi.Hindawi2020HtmlMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.hindawi.HindawiHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>  
@@ -168,29 +168,29 @@
     <map>
       <entry>
         <string>*</string>
-        <string>org.lockss.plugin.hindawi.Hindawi2020HtmlMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.hindawi.HindawiHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.hindawi.HindawiPublishingCorporationHtmlFilterFactory</string>
+    <string>org.lockss.plugin.hindawi.HindawiHtmlFilterFactory</string>
   </entry>
   <entry>
     <string>application/xhtml+xml_filter_factory</string>
-    <string>org.lockss.plugin.hindawi.HindawiPublishingCorporationHtmlFilterFactory</string>
+    <string>org.lockss.plugin.hindawi.HindawiHtmlFilterFactory</string>
   </entry>
   <entry>
     <string>application/pdf_filter_factory</string>
-    <string>org.lockss.plugin.hindawi.HindawiPublishingCorporationPdfFilterFactory</string>
+    <string>org.lockss.plugin.hindawi.HindawiPdfFilterFactory</string>
   </entry>
   <entry>
     <string>application/octet-stream_filter_factory</string>
-    <string>org.lockss.plugin.hindawi.HindawiPublishingCorporationOctetStreamFilterFactory</string>
+    <string>org.lockss.plugin.hindawi.HindawiOctetStreamFilterFactory</string>
   </entry>
   <entry>
     <string>au_url_normalizer</string>
-    <string>org.lockss.plugin.hindawi.HindawiPublishingCorporationUrlNormalizer</string>
+    <string>org.lockss.plugin.hindawi.HindawiUrlNormalizer</string>
   </entry>
   <entry>
     <string>plugin_cache_result_list</string>

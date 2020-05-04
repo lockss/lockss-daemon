@@ -2772,7 +2772,7 @@
     au < deepCrawl ; exists ; 2017 ; 2017 ; Journal of Clinical Interventional Radiology Volume 1 ; 1 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Journal of Clinical Interventional Radiology Volume 2 ; 2 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Clinical Interventional Radiology Volume 3 ; 3 ; >
-    au < expected ; exists ; 2020 ; 2020 ; Journal of Clinical Interventional Radiology Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2020 ; 2020 ; Journal of Clinical Interventional Radiology Volume 4 ; 4 ; >
 
   }
 
@@ -2972,7 +2972,7 @@
     au < deepCrawl ; exists ; 2017 ; 2017 ; Journal of Pediatric Epilepsy Volume 6 ; 6 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Journal of Pediatric Epilepsy Volume 7 ; 7 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Pediatric Epilepsy Volume 8 ; 8 ; >
-    au < expected ; exists ; 2020 ; 2020 ; Journal of Pediatric Epilepsy Volume 9 ; 9 ; >
+    au < manifest ; exists ; 2020 ; 2020 ; Journal of Pediatric Epilepsy Volume 9 ; 9 ; >
 
   }
 
@@ -4128,7 +4128,7 @@
     au < deepCrawl ; exists ; 2017 ; 2017 ; OP-Journal Volume 33 ; 33 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; OP-Journal Volume 34 ; 34 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; OP-Journal Volume 35 ; 35 ; >
-    au < expected ; exists ; 2020 ; 2020 ; OP-Journal Volume 36 ; 36 ; >
+    au < manifest ; exists ; 2020 ; 2020 ; OP-Journal Volume 36 ; 36 ; >
 
   }
 
@@ -5040,7 +5040,7 @@
    au < deepCrawl ; exists ; 2017 ; 2017 ; Revista Chilena de Ortopedia y Traumatología Volume 1 ; 1 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Revista Chilena de Ortopedia y Traumatología Volume 2 ; 2 ; >
    au < deepCrawl ; exists ; 2019 ; 2019 ; Revista Chilena de Ortopedia y Traumatología Volume 3 ; 3 ; >
-   au < expected ; exists ; 2020 ; 2020 ; Revista Chilena de Ortopedia y Traumatología Volume 4 ; 4 ; >
+   au < manifest ; exists ; 2020 ; 2020 ; Revista Chilena de Ortopedia y Traumatología Volume 4 ; 4 ; >
 
   }
 
@@ -6787,7 +6787,7 @@
     au < deepCrawl ; exists ; 2017 ; 2017 ; Zeitschrift für Orthomolekulare Medizin Volume 15 ; 15 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Zeitschrift für Orthomolekulare Medizin Volume 16 ; 16 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Zeitschrift für Orthomolekulare Medizin Volume 17 ; 17 ; >
-    au < expected ; exists ; 2020 ; 2020 ; Zeitschrift für Orthomolekulare Medizin Volume 18 ; 18 ; >
+    au < manifest ; exists ; 2020 ; 2020 ; Zeitschrift für Orthomolekulare Medizin Volume 18 ; 18 ; >
 
   }
 
@@ -7297,7 +7297,7 @@
     au < deepCrawl ; exists ; 2017 ; 2017 ; Indian Journal of Cardiovascular Disease in Women WINCARS Volume 1 ; 1 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Indian Journal of Cardiovascular Disease in Women WINCARS Volume 2 ; 2 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Indian Journal of Cardiovascular Disease in Women WINCARS Volume 3 ; 3 ; >
-    au < expected ; exists ; 2020 ; 2020 ; Indian Journal of Cardiovascular Disease in Women WINCARS Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2020 ; 2020 ; Indian Journal of Cardiovascular Disease in Women WINCARS Volume 4 ; 4 ; >
 
   }
 
@@ -7314,7 +7314,7 @@
 
     au < deepCrawl ; exists ; 2017 ; 2017 ; Journal of Cardiac Critical Care TSS Volume 1 ; 1 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Journal of Cardiac Critical Care TSS Volume 2 ; 2 ; >
-    au < frozen ; exists ; 2019 ; 2019 ; Journal of Cardiac Critical Care TSS Volume 3 ; 3 ; >
+    au < finished ; manifest ; 2019 ; 2019 ; Journal of Cardiac Critical Care TSS Volume 3 ; 3 ; reingest3.clockss.org:8083 >
     au < expected ; exists ; 2020 ; 2020 ; Journal of Cardiac Critical Care TSS Volume 4 ; 4 ; >
 
   }

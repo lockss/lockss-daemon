@@ -13,15 +13,9 @@
 #NEW - not in previous tdb; confirm and then add
 #bbsr Bulletin Bibliographique de la Société Rencesvals Vol1 (1958) - Vol42 (2010)
 #cfr Children's Folklore Review vol1 (1979) - Vol 38 (2017)
-#iusburj IU South Bend Undergraduate Research Journal 1998 - 2016
-#jaa Journal of Academic Advising volume 1 - 2018
-#joget Global Engagement and Transformation V1,No1-2 2017, V1, No3 2018
 #psource Primary Source Vol1 (2011) - Vol5 (2015)
-#risky The Risky Academy Vol1 (2013) - Vol7 (2019)
 
 #NEW at site but not enabled
-#gjte Global Journal of Transformative Education NO ISSUES
-#IJES Indiana Journal of Earth Sciences	NO ISSUES
 #IJLCLE IJLCLE	NO CLOCKSS MANIFEST
 #iulcwp IULC Working Papers NO CLOCKSS MANIFEST
 #iwpsalc Indiana Working Papers in South Asian Languages and Cultures - NO ISSUES
@@ -1258,19 +1252,6 @@
       au < manifest ; exists ; 2005 ; 2005 ; ReSOUND Volume 2005 ; 24 ; >
       au < manifest ; exists ; 2006 ; 2006 ; ReSOUND Volume 2006 ; 25 ; >
       au < manifest ; exists ; 2007 ; 2007 ; ReSOUND Volume 2007 ; 26 ; >
-      au < exists ; exists ; 2008 ; 2008 ; ReSOUND Volume 2008 ; 27 ; >
-      au < exists ; exists ; 2009 ; 2009 ; ReSOUND Volume 2009 ; 28 ; >
-      au < exists ; exists ; 2010 ; 2010 ; ReSOUND Volume 2010 ; 29 ; >
-      au < exists ; exists ; 2011 ; 2011 ; ReSOUND Volume 2011 ; 30 ; >
-      au < exists ; exists ; 2012 ; 2012 ; ReSOUND Volume 2012 ; 31 ; >
-      au < exists ; exists ; 2013 ; 2013 ; ReSOUND Volume 2013 ; 32 ; >
-      au < exists ; exists ; 2014 ; 2014 ; ReSOUND Volume 2014 ; 33 ; >
-      au < exists ; exists ; 2015 ; 2015 ; ReSOUND Volume 2015 ; 34 ; >
-      au < exists ; exists ; 2016 ; 2016 ; ReSOUND Volume 2016 ; 35 ; >
-      au < exists ; exists ; 2017 ; 2017 ; ReSOUND Volume 2017 ; 36 ; >
-      au < exists ; exists ; 2018 ; 2018 ; ReSOUND Volume 2018 ; 37 ; >
-      au < exists ; exists ; 2019 ; 2019 ; ReSOUND Volume 2019 ; 38 ; >
-      au < exists ; exists ; 2020 ; 2020 ; ReSOUND Volume 2020 ; 39 ; >
 
   }
 
@@ -1289,6 +1270,23 @@
       au < exists ; exists ; 2018 ; 2018 ; The VAD Journal Volume 2018 ; 4 ; >
       au < exists ; exists ; 2019 ; 2019 ; The VAD Journal Volume 2019 ; 5 ; >
       au < exists ; exists ; 2020 ; 2020 ; The VAD Journal Volume 2020 ; 6 ; >
+
+  }
+
+  {
+
+      title <
+        name = Primary Source: The Undergraduate Journal of History at Indiana University ;
+        eissn = 2379-206X
+      >
+
+      param[journal_id] = psource
+
+      au < manifest ; exists ; 2011 ; 2011 ; Primary Source Volume 2011 ; 1 ; >
+      au < manifest ; exists ; 2012 ; 2012 ; Primary Source Volume 2012 ; 2 ; >
+      au < manifest ; exists ; 2013 ; 2013 ; Primary Source Volume 2013 ; 3 ; >
+      au < manifest ; exists ; 2014 ; 2014 ; Primary Source Volume 2014 ; 4 ; >
+      au < manifest ; exists ; 2015 ; 2015 ; Primary Source Volume 2015 ; 5 ; >
 
   }
 

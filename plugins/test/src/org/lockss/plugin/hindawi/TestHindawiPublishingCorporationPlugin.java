@@ -109,7 +109,7 @@ public class TestHindawiPublishingCorporationPlugin extends LockssTestCase {
     String starturl =
         BASE_URL + "journals/" + JOURNAL_ID + "/" + VOLUME_NAME + "/";
     au = (DefinableArchivalUnit)plugin.configureAu(AU_CONFIG, null);
-    assertEquals("Hindawi Publishing Corporation Plugin, Base URL " + BASE_URL + 
+    assertEquals("Hindawi Plugin (Legacy), Base URL " + BASE_URL +
         ", Download URL " + DOWNLOAD_URL +
         ", Journal ID " + JOURNAL_ID +
         ", Volume " + VOLUME_NAME, au.getName());

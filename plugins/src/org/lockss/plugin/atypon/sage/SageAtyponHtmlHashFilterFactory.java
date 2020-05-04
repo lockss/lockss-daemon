@@ -100,7 +100,10 @@ public class SageAtyponHtmlHashFilterFactory
 	   HtmlNodeFilters.tagWithAttributeRegex("div","class"," articleContent "),
 	//https://journals.sagepub.com/doi/abs/10.1606/1044-3894.2016.97.18, need the div to get abstracted content
 	//https://journals.sagepub.com/doi/abs/10.1606/1044-3894.2016.97.1, it is not guaranteed each article has Abstract content
+	// on 05/2020, the skin changed, "div", "hlFld-Abstract" section only displays an image of first page of PDF file.
 	HtmlNodeFilters.tagWithAttributeRegex("div","class","hlFld-Abstract"),
+	HtmlNodeFilters.tagWithAttributeRegex("div","class","hlFld-Title"),
+	HtmlNodeFilters.tagWithAttributeRegex("span","class","publicationContentEpubDate")
 
 	};
     NodeFilter[] excludeNodes = new NodeFilter[] {

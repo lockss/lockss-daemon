@@ -1,0 +1,64 @@
+{
+
+  publisher <
+    name = Endocrine Society ;
+    info[contract] = 2012 ;
+    info[back] = 1900 ;
+    info[tester] = 8 ;
+    info[poller] = 3 ;
+    comment[platform] = Atypon 
+  >
+
+  plugin = org.lockss.plugin.atypon.endocrinesociety.ClockssEndocrineSocietyBooksPlugin
+  param[base_url] = http://press.endocrine.org/
+  #no longer exists, did not move to oup
+  implicit < status ; status2 ; year ; isbn ; eisbn ; param[book_eisbn] ; name ; hidden[proxy] >  
+
+  {
+  
+    title <
+      name = Endocrine Society Books ;
+      type = bookSeries
+    >
+
+    au < finished ; finished ; 2010 ; 9781879225701 ; 9781936704606 ; 9781936704606 ; A Clinical Approach to Endocrine & Metabolic Diseases Volume 1 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2012 ; 9781936704057 ; 9781936704613 ; 9781936704613 ; A Clinical Approach to Endocrine & Metabolic Diseases Volume 2 ; >
+    au < finished ; finished ; 2015 ; 9781936704859 ; 9781936704866 ; 9781936704866 ; A Clinical Approach to Endocrine & Metabolic Diseases, Volume 3 ; reingest1.clockss.org:8082 >
+
+    au < finished ; finished ; 2013 ; 9781936704132 ; 9781936704668 ; 9781936704668 ; Compendium of Clinical Practice Guidelines 2013 ; >
+    au < finished ; finished ; 2011 ; 9781879225879 ; 9781936704583 ; 9781936704583 ; Diagnostic Dilemmas: Images in Endocrinology 1st Edition ; >
+    au < finished ; finished ; 2013 ; 9781936704156 ; 9781936704590 ; 9781936704590 ; Diagnostic Dilemmas: Images in Endocrinology 2nd Edition ; >
+    au < finished ; finished ; 2015 ; 9781936704774 ; 9781936704811 ; 9781936704811 ; Endocrine and Metabolic Medical Emergencies: A Clinician's Guide ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; 9781936704828 ; 9781936704842 ; 9781936704842 ; Molecular Nutrition: The Practical Guide ; reingest5.clockss.org:8082 > 
+
+    au < finished ; finished ; 2012 ; 9781936704095 ; 9781936704729 ; 9781936704729 ; 2012 Meet-The-Professor: Endocrine Case Management ; >
+    au < finished ; finished ; 2013 ; 9781936704163 ; 9781936704637 ; 9781936704637 ; 2013 Meet-The-Professor: Endocrine Case Management ; >
+    au < finished ; finished ; 2014 ; 9781936704781 ; 9781936704835 ; 9781936704835 ; 2014 Meet-The-Professor: Endocrine Case Management ; >
+    au < finished ; finished ; 2015 ; 9781936704934 ; 9781936704941 ; 9781936704941 ; 2015 Meet-The-Professor: Endocrine Case Management ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2016 ; 9781943550029 ; 9781943550043 ; 9781943550043 ; 2016 Meet-The-Professor: Endocrine Case Management ;  reingest3.clockss.org:8083 >
+    au < doNotProcess ; exists ; 2017 ; 9781879225329 ; 9781879225343 ; 9781879225343 ; 2017 Meet-The-Professor: Endocrine Case Management ;  >
+    au < doNotProcess ; exists ; 2018 ; 9781879225398 ; 9781879225404 ; 9781879225404 ; 2018 Meet-The-Professor: Endocrine Case Management ;  >
+    au < doNotProcess ; exists ; 2019 ; 9781879225459 ; 9781879225466 ; 9781879225466 ; 2019 Meet-The-Professor: Endocrine Case Management ;  >
+    
+  }
+  {
+  
+    title <
+      name = Translational Endocrinology & Metabolism ;
+      issn = 1948-9536 ;
+      eissn = 1948-9544 ;
+      type = bookSeries
+    >
+
+    au < finished ; finished ; 2010 ; ; 9781879225718 ; 9781879225718 ; Osteoporosis Update 2010 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2011 ; ; 9781879225824 ; 9781879225824 ; Type 2 Diabetes Update 2011 ; >
+    au < finished ; finished ; 2011 ; ; 9781879225831 ; 9781879225831 ; Aging Update 2011 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2011 ; ; 9781879225848 ; 9781879225848 ; Vitamin D Update, 2011 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2011 ; ; 9781879225855 ; 9781879225855 ; Neoplasia Update, 2011 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2012 ; ; 9781936704064 ; 9781936704064 ; Breast Cancer Update, 2012 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2012 ; ; 9781936704071 ; 9781936704071 ; Metabolic Surgery Update, 2012 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2012 ; ; 9781936704194 ; 9781936704194 ; Posterior Pituitary Update, 2012 ; >
+    au < finished ; finished ; 2012 ; ; 9781936704200 ; 9781936704200 ; Hypoglycemia in Diabetes Update, 2012 ; reingest1.clockss.org:8082 >
+    
+  }
+}
