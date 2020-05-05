@@ -33,10 +33,88 @@
 
  {
   title <
+   name = Case Study ;
+   type = bookSeries
+  >
+   #series = cst
+
+   au < finished ; finished ; 1984 ; 978-1-85339-053-1 ; 978-1-78044-207-5 ; 9781780442075 ; Educational Wooden Toys in Sri Lanka (978-1-78044-207-5) ; http://www.developmentbookshelf.com/ ; reingest4.clockss.org:8082 >
+   au < finished ; finished ; 1986 ; 978-0-946688-57-9 ; 978-1-78044-321-8 ; 9781780443218 ; Scrap Metal Recovery (978-1-78044-321-8) ; http://www.developmentbookshelf.com/ ; reingest4.clockss.org:8082 >
+   au < finished ; finished ; 1986 ; 978-0-946688-62-3 ; 978-1-78044-371-3 ; 9781780443713 ; Upgrading Micro Hydro in Sri Lanka (978-1-78044-371-3) ; http://www.developmentbookshelf.com/ ; reingest3.clockss.org:8083 >
+   au < finished ; finished ; 1988 ; 978-1-85339-001-2 ; 978-1-78044-314-0 ; 9781780443140 ; Rural Enterprise (978-1-78044-314-0) ; http://www.developmentbookshelf.com/ ; reingest4.clockss.org:8082 >
+   au < finished ; finished ; 1991 ; 978-1-85339-039-5 ; 978-1-78044-368-3 ; 9781780443683 ; Try Drying It! (978-1-78044-368-3) ; http://www.developmentbookshelf.com/ ; reingest4.clockss.org:8082 >
+   au < finished ; finished ; 1991 ; 978-1-85339-092-0 ; 978-1-78044-375-1 ; 9781780443751 ; Village Animal Healthcare (978-1-78044-375-1) ; http://www.developmentbookshelf.com/ ; reingest3.clockss.org:8083 >
+   au < finished ; frozen ; 1994 ; 978-1-85339-245-0 ; 978-1-78044-191-7 ; 9781780441917 ; Animal Healthcare Training (978-1-78044-191-7) ; http://www.developmentbookshelf.com/ ; reingest4.clockss.org:8082 >
+
+ }
+
+ {
+  title <
    name = Critical Development Studies ;
    type = bookSeries
   >
-   au < frozen ; exists ; 2018 ; 9781788530057 ; 9781780447117 ; 9781780447117 ; Critical Development Studies ; https://www.developmentbookshelf.com/ ;  >
+   #series = cds
+
+   au < exists ; exists ; 2019 ; 978-1-788530-712 ; 9781788530743 ; 9781788530743 ; Politics Rules: Power, Globalization and Development ; https://www.developmentbookshelf.com/ ; >
+   au < exists ; exists ; 2019 ; 978-1-78853-092-7 ; 9781788530941 ; 9781788530941 ; Development in Latin America: Toward a New Future ; https://www.developmentbookshelf.com/ ; >
+
+ }
+
+ {
+  title <
+   name = Development in Practice Reader ;
+   type = bookSeries
+  >
+   #series = dpr
+
+   au < finished ; finished ; 1996 ; 978-0-85598-343-7 ; 978-0-85598-696-4 ; 9780855986964 ; Development and Social Diversity (978-0-85598-696-4) ; http://www.developmentbookshelf.com/ ;  >
+   au < finished ; finished ; 1996 ; 978-0-85598-344-4 ; 978-0-85598-699-5 ; 9780855986995 ; Development in States of War (978-0-85598-699-5) ; http://www.developmentbookshelf.com/ ; reingest3.clockss.org:8083 >
+   au < finished ; finished ; 1997 ; 978-0-85598-376-5 ; 978-0-85598-693-3 ; 9780855986933 ; Development and Patronage (978-0-85598-693-3) ; http://www.developmentbookshelf.com/ ;  >
+   au < finished ; finished ; 1998 ; 978-0-85598-406-9 ; 978-0-85598-694-0 ; 9780855986940 ; Development and Rights (978-0-85598-694-0) ; http://www.developmentbookshelf.com/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1999 ; 978-0-85598-415-1 ; 978-0-85598-695-7 ; 9780855986957 ; Development and Social Action (978-0-85598-695-7) ; http://www.developmentbookshelf.com/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1999 ; 978-0-85598-419-9 ; 978-0-85598-702-2 ; 9780855987022 ; Development with Women (978-0-85598-702-2) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2000 ; 978-0-85598-442-7 ; 978-0-85598-701-5 ; 9780855987015 ; Development, NGOs and Civil Society (978-0-85598-701-5) ; http://www.developmentbookshelf.com/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2001 ; 978-0-85598-444-1 ; 978-0-85598-685-8 ; 9780855986858 ; Debating Development (978-0-85598-685-8) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2002 ; 978-0-85598-463-2 ; 978-0-85598-688-9 ; 9780855986889 ; Development and Advocacy (978-0-85598-688-9) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2002 ; 978-0-85598-464-9 ; 978-0-85598-689-6 ; 9780855986896 ; Development and Agroforestry (978-0-85598-689-6) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2002 ; 978-0-85598-465-6 ; 978-0-85598-690-2 ; 9780855986902 ; Development and Cities (978-0-85598-690-2) ; http://www.developmentbookshelf.com/ ; reingest3.clockss.org:8083 >
+   au < finished ; finished ; 2002 ; 978-0-85598-472-4 ; 978-0-85598-691-9 ; 9780855986919 ; Development and Culture (978-0-85598-691-9) ; http://www.developmentbookshelf.com/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2003 ; 978-0-85598-494-6 ; 978-0-85598-700-8 ; 9780855987008 ; Development Methods and Approaches (978-0-85598-700-8) ; http://www.developmentbookshelf.com/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2004 ; 978-0-85598-487-8 ; 978-0-85598-703-9 ; 9780855987039 ; Development, Women and War (978-0-85598-703-9) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
+
+ }
+
+ {
+  title <
+   name = Earth Construction Series ;
+   type = bookSeries
+  >
+   #series = ecs
+
+   au < finished ; frozen ; 1989 ; 978-1-85339-193-4 ; 978-1-78044-482-6 ; 9781780444826 ; Earth Construction (978-1-78044-482-6) ; http://www.developmentbookshelf.com/ ; reingest3.clockss.org:8083 >
+
+ }
+
+ {
+  title <
+   name = Energy and Environment Technology Source Books ;
+   type = bookSeries
+  >
+   #series = eet
+
+   au < finished ; finished ; 1987 ; 978-1-85339-032-6 ; 978-1-78044-316-4 ; 9781780443164 ; Rural Transport Services (978-1-78044-316-4) ; http://www.developmentbookshelf.com/ ; reingest3.clockss.org:8083 >
+   au < finished ; finished ; 1988 ; 978-1-85339-050-0 ; 978-1-78044-229-7 ; 9781780442297 ; Groundwater Dams for Small-Scale Water Supply (978-1-78044-229-7) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 1999 ; 978-1-85339-446-1 ; 978-1-78044-403-1 ; 9781780444031 ; Energy Efficiency for Small and Medium Enterprises (978-1-78044-403-1) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2001 ; 978-1-85339-501-7 ; 978-1-78044-318-8 ; 9781780443188 ; Electricity in Households and Microenterprises (978-1-78044-318-8) ; http://www.developmentbookshelf.com/ ; reingest3.clockss.org:8083 >
+
+ }
+
+ {
+  title <
+   name = Experience and Learning in International Co-operation ;
+   type = bookSeries
+  >
+   #series = elc
 
  }
 
@@ -147,7 +225,6 @@
    au < finished ; finished ; 1984 ; 978-1-85339-044-9 ; 978-1-78044-595-3 ; 9781780445953 ; Small-scale Recycling of Plastics (978-1-78044-595-3) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 1984 ; 978-1-85339-049-4 ; 978-1-78044-334-8 ; 9781780443348 ; Small-scale Gold Mining (978-1-78044-334-8) ; http://www.developmentbookshelf.com/ ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 1984 ; 978-1-85339-051-7 ; 978-1-78044-424-6 ; 9781780444246 ; Rice Husk Ash Cement (978-1-78044-424-6) ; http://www.developmentbookshelf.com/ ;  >
-   au < finished ; finished ; 1984 ; 978-1-85339-053-1 ; 978-1-78044-207-5 ; 9781780442075 ; Educational Wooden Toys in Sri Lanka (978-1-78044-207-5) ; http://www.developmentbookshelf.com/ ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 1984 ; 978-1-85339-076-0 ; 978-1-78044-339-3 ; 9781780443393 ; Small-Scale Production (978-1-78044-339-3) ; http://www.developmentbookshelf.com/ ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 1984 ; 978-1-85339-105-7 ; 978-1-78044-388-1 ; 9781780443881 ; Women in Development (978-1-78044-388-1) ; http://www.developmentbookshelf.com/ ; reingest4.clockss.org:8082 >
    au < finished ; crawling ; 1984 ; 978-1-85339-353-2 ; 978-1-78044-627-1 ; 9781780446271 ; Training for Transformation 1-3 (978-1-78044-627-1) ; http://www.developmentbookshelf.com/ ; reingest3.clockss.org:8083 >
@@ -191,8 +268,6 @@
    au < finished ; finished ; 1986 ; 978-0-946688-47-0 ; 978-1-78044-245-7 ; 9781780442457 ; How To Run a Small Development Project (978-1-78044-245-7) ; http://www.developmentbookshelf.com/ ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 1986 ; 978-0-946688-52-4 ; 978-1-78044-194-8 ; 9781780441948 ; The Design and Manufacture of Animal Drawn Carts (978-1-78044-194-8) ; http://www.developmentbookshelf.com/ ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 1986 ; 978-0-946688-53-1 ; 978-1-78044-516-8 ; 9781780445168 ; How to Make Twelve Woodworking Tools (978-1-78044-516-8) ; http://www.developmentbookshelf.com/ ; reingest3.clockss.org:8083 >
-   au < finished ; finished ; 1986 ; 978-0-946688-57-9 ; 978-1-78044-321-8 ; 9781780443218 ; Scrap Metal Recovery (978-1-78044-321-8) ; http://www.developmentbookshelf.com/ ; reingest4.clockss.org:8082 >
-   au < finished ; finished ; 1986 ; 978-0-946688-62-3 ; 978-1-78044-371-3 ; 9781780443713 ; Upgrading Micro Hydro in Sri Lanka (978-1-78044-371-3) ; http://www.developmentbookshelf.com/ ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 1986 ; 978-0-946688-77-7 ; 978-1-78044-370-6 ; 9781780443706 ; Understanding Natural Fibre Concrete (978-1-78044-370-6) ; http://www.developmentbookshelf.com/ ;  >
    au < finished ; finished ; 1986 ; 978-0-946688-82-1 ; 978-1-78044-220-4 ; 9781780442204 ; Financing Small Enterprise (978-1-78044-220-4) ; http://www.developmentbookshelf.com/ ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 1986 ; 978-0-946688-97-5 ; 978-1-78044-401-7 ; 9781780444017 ; The Design of Bicycle Trailers (978-1-78044-401-7) ; http://www.developmentbookshelf.com/ ; reingest2.clockss.org:8085 >
@@ -216,7 +291,6 @@
    au < finished ; finished ; 1987 ; 978-0-946688-92-0 ; 978-1-78044-177-1 ; 9781780441771 ; Building Maintenance (978-1-78044-177-1) ; http://www.developmentbookshelf.com/ ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 1987 ; 978-0-946688-98-2 ; 978-1-78044-515-1 ; 9781780445151 ; How to Make Planes, Cramps and Vices (978-1-78044-515-1) ; http://www.developmentbookshelf.com/ ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 1987 ; 978-1-85339-016-6 ; 978-1-78044-016-3 ; 9781780440163 ; Microenterprises in Developing Countries (978-1-78044-016-3) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
-   au < finished ; finished ; 1987 ; 978-1-85339-032-6 ; 978-1-78044-316-4 ; 9781780443164 ; Rural Transport Services (978-1-78044-316-4) ; http://www.developmentbookshelf.com/ ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 1987 ; 978-1-85339-134-7 ; 978-1-78044-419-2 ; 9781780444192 ; Oil Processing (978-1-78044-419-2) ; http://www.developmentbookshelf.com/ ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 1988 ; 978-0-946688-29-6 ; 978-1-78044-358-4 ; 9781780443584 ; Technology Transfer (978-1-78044-358-4) ; http://www.developmentbookshelf.com/ ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 1988 ; 978-0-946688-39-5 ; 978-1-78044-344-7 ; 9781780443447 ; Solar-Powered Electricity (978-1-78044-344-7) ; http://www.developmentbookshelf.com/ ; reingest2.clockss.org:8085 >
@@ -225,14 +299,12 @@
    au < finished ; finished ; 1988 ; 978-0-946688-74-6 ; 978-1-78044-293-8 ; 9781780442938 ; Operation and Maintenance of Small Irrigation Schemes (978-1-78044-293-8) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 1988 ; 978-0-946688-89-0 ; 978-1-78044-353-9 ; 9781780443539 ; Sustainable Industrial Development (978-1-78044-353-9) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 1988 ; 978-0-946688-94-4 ; 978-1-78044-301-0 ; 9781780443010 ; Power from the People (978-1-78044-301-0) ; http://www.developmentbookshelf.com/ ;  >
-   au < finished ; finished ; 1988 ; 978-1-85339-001-2 ; 978-1-78044-314-0 ; 9781780443140 ; Rural Enterprise (978-1-78044-314-0) ; http://www.developmentbookshelf.com/ ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 1988 ; 978-1-85339-005-0 ; 978-1-78044-381-2 ; 9781780443812 ; Wealth Ranking in Smallholder Communities (978-1-78044-381-2) ; http://www.developmentbookshelf.com/ ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 1988 ; 978-1-85339-006-7 ; 978-1-78044-221-1 ; 9781780442211 ; Forest Farm Husbandry (978-1-78044-221-1) ; http://www.developmentbookshelf.com/ ;  >
    au < finished ; finished ; 1988 ; 978-1-85339-035-7 ; 978-1-78044-345-4 ; 9781780443454 ; Spinning (978-1-78044-345-4) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 1988 ; 978-1-85339-037-1 ; 978-1-78044-172-6 ; 9781780441726 ; Barefoot Revolution (978-1-78044-172-6) ; http://www.developmentbookshelf.com/ ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 1988 ; 978-1-85339-040-1 ; 978-1-78044-319-5 ; 9781780443195 ; Science and Technology Council (978-1-78044-319-5) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 1988 ; 978-1-85339-045-6 ; 978-1-78044-285-3 ; 9781780442853 ; Mobilizing Appropriate Technology (978-1-78044-285-3) ; http://www.developmentbookshelf.com/ ; reingest5.clockss.org:8082 >
-   au < finished ; finished ; 1988 ; 978-1-85339-050-0 ; 978-1-78044-229-7 ; 9781780442297 ; Groundwater Dams for Small-Scale Water Supply (978-1-78044-229-7) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 1988 ; 978-1-85339-055-5 ; 978-1-78044-387-4 ; 9781780443874 ; Women and the Food Cycle Technology (978-1-78044-387-4) ; http://www.developmentbookshelf.com/ ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 1988 ; 978-1-85339-060-9 ; 978-1-78044-435-2 ; 9781780444352 ; Thatching (978-1-78044-435-2) ; http://www.developmentbookshelf.com/ ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 1988 ; 978-1-85339-070-8 ; 978-1-78044-195-5 ; 9781780441955 ; Design and Manufacture of Low-Cost Motorized Vehicles (978-1-78044-195-5) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
@@ -254,7 +326,6 @@
    au < finished ; finished ; 1989 ; 978-1-85339-038-8 ; 978-1-78044-406-2 ; 9781780444062 ; Gypsum Plaster (978-1-78044-406-2) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 1989 ; 978-1-85339-047-0 ; 978-1-78044-623-3 ; 9781780446233 ; To the Hands of the Poor (978-1-78044-623-3) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 1989 ; 978-1-85339-065-4 ; 978-1-78044-534-2 ; 9781780445342 ; Low Cost Printing for Development (978-1-78044-534-2) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
-   au < finished ; frozen ; 1989 ; 978-1-85339-193-4 ; 978-1-78044-482-6 ; 9781780444826 ; Earth Construction (978-1-78044-482-6) ; http://www.developmentbookshelf.com/ ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 1989 ; 978-1-85339-226-9 ; 978-1-78044-176-4 ; 9781780441764 ; Building in Partnership with the Maasai (978-1-78044-176-4) ; http://www.developmentbookshelf.com/ ;  >
    au < finished ; finished ; 1989 ; 978-1-85339-268-9 ; 978-1-78044-165-8 ; 9781780441658 ; Appropriate Paper-based Technology (APT) (978-1-78044-165-8) ; http://www.developmentbookshelf.com/ ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 1989 ; 978-1-85339-313-6 ; 978-1-78044-604-2 ; 9781780446042 ; Stone (978-1-78044-604-2) ; http://www.developmentbookshelf.com/ ; reingest2.clockss.org:8085 >
@@ -289,7 +360,6 @@
    au < finished ; finished ; 1991 ; 978-0-903031-79-0 ; 978-1-78044-391-1 ; 9781780443911 ; Work from Waste (978-1-78044-391-1) ; http://www.developmentbookshelf.com/ ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 1991 ; 978-0-906156-63-6 ; 978-1-90901-356-8 ; 9781909013568 ; Brazil: War on Children (978-1-90901-356-8) ; http://www.developmentbookshelf.com/ ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 1991 ; 978-1-85339-029-6 ; 978-1-78044-281-5 ; 9781780442815 ; Micro-hydro Power (978-1-78044-281-5) ; http://www.developmentbookshelf.com/ ; reingest3.clockss.org:8083 >
-   au < finished ; finished ; 1991 ; 978-1-85339-039-5 ; 978-1-78044-368-3 ; 9781780443683 ; Try Drying It! (978-1-78044-368-3) ; http://www.developmentbookshelf.com/ ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 1991 ; 978-1-85339-069-2 ; 978-1-78044-393-5 ; 9781780443935 ; Worth of Water (978-1-78044-393-5) ; http://www.developmentbookshelf.com/ ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 1991 ; 978-1-85339-077-7 ; 978-1-78044-382-9 ; 9781780443829 ; When Aid is No Help (978-1-78044-382-9) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 1991 ; 978-1-85339-079-1 ; 978-1-78044-384-3 ; 9781780443843 ; Where Credit is Due (978-1-78044-384-3) ; http://www.developmentbookshelf.com/ ; reingest2.clockss.org:8085 >
@@ -297,7 +367,6 @@
    au < finished ; finished ; 1991 ; 978-1-85339-087-6 ; 978-1-78044-363-8 ; 9781780443638 ; To Cure All Hunger (978-1-78044-363-8) ; http://www.developmentbookshelf.com/ ;  >
    au < finished ; finished ; 1991 ; 978-1-85339-088-3 ; 978-1-78044-576-2 ; 9781780445762 ; Renewable Energy Technologies (978-1-78044-576-2) ; http://www.developmentbookshelf.com/ ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 1991 ; 978-1-85339-091-3 ; 978-1-78044-342-3 ; 9781780443423 ; Solar Photovoltaic Products (978-1-78044-342-3) ; http://www.developmentbookshelf.com/ ; reingest3.clockss.org:8083 >
-   au < finished ; finished ; 1991 ; 978-1-85339-092-0 ; 978-1-78044-375-1 ; 9781780443751 ; Village Animal Healthcare (978-1-78044-375-1) ; http://www.developmentbookshelf.com/ ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 1991 ; 978-1-85339-098-2 ; 978-1-78044-423-9 ; 9781780444239 ; Action and Knowledge (978-1-78044-423-9) ; http://www.developmentbookshelf.com/ ;  >
    au < finished ; finished ; 1991 ; 978-1-85339-101-9 ; 978-1-78044-258-7 ; 9781780442587 ; Joining Farmers' Experiments (978-1-78044-258-7) ; http://www.developmentbookshelf.com/ ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 1991 ; 978-1-85339-102-6 ; 978-1-78044-287-7 ; 9781780442877 ; More Innovations For Development (978-1-78044-287-7) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
@@ -402,7 +471,6 @@
    au < finished ; finished ; 1994 ; 978-1-85339-224-5 ; 978-1-78044-466-6 ; 9781780444666 ; Community Assessment (978-1-78044-466-6) ; http://www.developmentbookshelf.com/ ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 1994 ; 978-1-85339-237-5 ; 978-1-78044-237-2 ; 9781780442372 ; Beyond Farmer First (978-1-78044-237-2) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 1994 ; 978-1-85339-242-9 ; 978-1-78044-596-0 ; 9781780445960 ; Solar Energy for Rural Communities (978-1-78044-596-0) ; http://www.developmentbookshelf.com/ ; reingest2.clockss.org:8085 >
-   au < finished ; frozen ; 1994 ; 978-1-85339-245-0 ; 978-1-78044-191-7 ; 9781780441917 ; Animal Healthcare Training (978-1-78044-191-7) ; http://www.developmentbookshelf.com/ ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 1994 ; 978-1-85339-246-7 ; 978-1-78044-454-3 ; 9781780444543 ; Bangladesh (978-1-78044-454-3) ; http://www.developmentbookshelf.com/ ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 1994 ; 978-1-85339-252-8 ; 978-1-78044-493-2 ; 9781780444932 ; Farmer Participatory Research (978-1-78044-493-2) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 1994 ; 978-1-85339-266-5 ; 978-1-78044-398-0 ; 9781780443980 ; Clay Testing (978-1-78044-398-0) ; http://www.developmentbookshelf.com/ ;  >
@@ -468,8 +536,6 @@
    au < finished ; finished ; 1996 ; 978-0-85598-290-4 ; 978-0-85598-804-3 ; 9780855988043 ; Nepal (978-0-85598-804-3) ; http://www.developmentbookshelf.com/ ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 1996 ; 978-0-85598-316-1 ; 978-0-85598-856-2 ; 9780855988562 ; Sudan (978-0-85598-856-2) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 1996 ; 978-0-85598-342-0 ; 978-0-85598-657-5 ; 9780855986575 ; Basic Accounting for Credit and Savings Schemes (978-0-85598-657-5) ; http://www.developmentbookshelf.com/ ; reingest3.clockss.org:8083 >
-   au < finished ; finished ; 1996 ; 978-0-85598-343-7 ; 978-0-85598-696-4 ; 9780855986964 ; Development and Social Diversity (978-0-85598-696-4) ; http://www.developmentbookshelf.com/ ;  >
-   au < finished ; finished ; 1996 ; 978-0-85598-344-4 ; 978-0-85598-699-5 ; 9780855986995 ; Development in States of War (978-0-85598-699-5) ; http://www.developmentbookshelf.com/ ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 1996 ; 978-0-85598-352-9 ; 978-0-85598-876-0 ; 9780855988760 ; Women and the Family (978-0-85598-876-0) ; http://www.developmentbookshelf.com/ ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 1996 ; 978-0-85598-364-2 ; 978-0-85598-878-4 ; 9780855988784 ; Women, Employment and Exclusion (978-0-85598-878-4) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 1996 ; 978-0-85598-496-0 ; 978-0-85598-813-5 ; 9780855988135 ; Pakistan (978-0-85598-813-5) ; http://www.developmentbookshelf.com/ ;  >
@@ -512,7 +578,6 @@
    au < finished ; crawling ; 1997 ; 978-0-85598-366-6 ; 978-0-85598-673-5 ; 9780855986735 ; Capacity-Building (978-0-85598-673-5) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 1997 ; 978-0-85598-369-7 ; 978-0-85598-800-5 ; 9780855988005 ; Microfinance and Poverty Reduction (978-0-85598-800-5) ; http://www.developmentbookshelf.com/ ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 1997 ; 978-0-85598-373-4 ; 978-0-85598-706-0 ; 9780855987060 ; Disabled Children in a Society at War (978-0-85598-706-0) ; http://www.developmentbookshelf.com/ ;  >
-   au < finished ; finished ; 1997 ; 978-0-85598-376-5 ; 978-0-85598-693-3 ; 9780855986933 ; Development and Patronage (978-0-85598-693-3) ; http://www.developmentbookshelf.com/ ;  >
    au < finished ; finished ; 1997 ; 978-0-85598-377-2 ; 978-0-85598-796-1 ; 9780855987961 ; Men and Masculinity (978-0-85598-796-1) ; http://www.developmentbookshelf.com/ ;  >
    au < finished ; finished ; 1997 ; 978-0-85598-386-4 ; 978-0-85598-847-0 ; 9780855988470 ; Safer Future (978-0-85598-847-0) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 1997 ; 978-0-85598-391-8 ; 978-0-85598-683-4 ; 9780855986834 ; Contested Lands in Southern and Eastern Africa (978-0-85598-683-4) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
@@ -556,7 +621,6 @@
    au < finished ; finished ; 1998 ; 978-0-85598-399-4 ; 978-0-85598-729-9 ; 9780855987299 ; Gender and Migration (978-0-85598-729-9) ; http://www.developmentbookshelf.com/ ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 1998 ; 978-0-85598-401-4 ; 978-0-85598-868-5 ; 9780855988685 ; Violence against Women (978-0-85598-868-5) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 1998 ; 978-0-85598-402-1 ; 978-0-85598-646-9 ; 9780855986469 ; Acceptability and Use of Cereal-Based Foods in Refugee Camps (978-0-85598-646-9) ; http://www.developmentbookshelf.com/ ; reingest3.clockss.org:8083 >
-   au < finished ; finished ; 1998 ; 978-0-85598-406-9 ; 978-0-85598-694-0 ; 9780855986940 ; Development and Rights (978-0-85598-694-0) ; http://www.developmentbookshelf.com/ ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 1998 ; 978-0-85598-411-3 ; 978-0-85598-765-7 ; 9780855987657 ; Health and Livelihoods in Rural Angola (978-0-85598-765-7) ; http://www.developmentbookshelf.com/ ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 1998 ; 978-0-85598-426-7 ; 978-0-85598-754-1 ; 9780855987541 ; Gender, Religion and Spirituality (978-0-85598-754-1) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 1998 ; 978-1-85339-020-3 ; 978-1-78044-312-6 ; 9781780443126 ; Rural Credit (978-1-78044-312-6) ; http://www.developmentbookshelf.com/ ; reingest3.clockss.org:8083 >
@@ -598,9 +662,7 @@
    au < finished ; finished ; 1999 ; 978-0-85598-405-2 ; 978-0-85598-829-6 ; 9780855988296 ; Post-war Reconstruction in Central America (978-0-85598-829-6) ; http://www.developmentbookshelf.com/ ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 1999 ; 978-0-85598-407-6 ; 978-0-85598-757-2 ; 9780855987572 ; Gender Works (978-0-85598-757-2) ; http://www.developmentbookshelf.com/ ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 1999 ; 978-0-85598-413-7 ; 978-0-85598-832-6 ; 9780855988326 ; Poverty, Social Exclusion and Microfinance in Britain (978-0-85598-832-6) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
-   au < finished ; finished ; 1999 ; 978-0-85598-415-1 ; 978-0-85598-695-7 ; 9780855986957 ; Development and Social Action (978-0-85598-695-7) ; http://www.developmentbookshelf.com/ ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 1999 ; 978-0-85598-418-2 ; 978-0-85598-770-1 ; 9780855987701 ; Impact Assessment for Development Agencies (978-0-85598-770-1) ; http://www.developmentbookshelf.com/ ;  >
-   au < finished ; finished ; 1999 ; 978-0-85598-419-9 ; 978-0-85598-702-2 ; 9780855987022 ; Development with Women (978-0-85598-702-2) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 1999 ; 978-0-85598-421-2 ; 978-0-85598-879-1 ; 9780855988791 ; Women, Land and Agriculture (978-0-85598-879-1) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 1999 ; 978-0-85598-422-9 ; 978-0-85598-731-2 ; 9780855987312 ; Gender and Technology (978-0-85598-731-2) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 1999 ; 978-0-85598-423-6 ; 978-0-85598-669-8 ; 9780855986698 ; Building Sustainable Peace (978-0-85598-669-8) ; http://www.developmentbookshelf.com/ ; reingest5.clockss.org:8082 >
@@ -608,7 +670,6 @@
    au < finished ; finished ; 1999 ; 978-1-85339-389-1 ; 978-1-78044-496-3 ; 9781780444963 ; Fertile Ground (978-1-78044-496-3) ; http://www.developmentbookshelf.com/ ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 1999 ; 978-1-85339-397-6 ; 978-1-78044-543-4 ; 9781780445434 ; Cultural and Spiritual Values of Biodiversity (978-1-78044-543-4) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 1999 ; 978-1-85339-443-0 ; 978-1-78044-457-4 ; 9781780444574 ; Biological and Cultural Diversity (978-1-78044-457-4) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
-   au < finished ; finished ; 1999 ; 978-1-85339-446-1 ; 978-1-78044-403-1 ; 9781780444031 ; Energy Efficiency for Small and Medium Enterprises (978-1-78044-403-1) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 1999 ; 978-1-85339-450-8 ; 978-1-78044-581-6 ; 9781780445816 ; Running Water (978-1-78044-581-6) ; http://www.developmentbookshelf.com/ ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 1999 ; 978-1-85339-451-5 ; 978-1-78044-540-3 ; 9781780445403 ; Managing the Globalized Environment (978-1-78044-540-3) ; http://www.developmentbookshelf.com/ ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 1999 ; 978-1-85339-454-6 ; 978-1-78044-268-6 ; 9781780442686 ; Low-cost Electrification (978-1-78044-268-6) ; http://www.developmentbookshelf.com/ ; reingest2.clockss.org:8085 >
@@ -643,7 +704,6 @@
    au < finished ; finished ; 2000 ; 978-0-85598-437-3 ; 978-0-85598-784-8 ; 9780855987848 ; Listening to the Displaced (978-0-85598-784-8) ; http://www.developmentbookshelf.com/ ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2000 ; 978-0-85598-439-7 ; 978-0-85598-681-0 ; 9780855986810 ; Community Forest Management (978-0-85598-681-0) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2000 ; 978-0-85598-440-3 ; 978-0-85598-715-2 ; 9780855987152 ; Environments and Livelihoods (978-0-85598-715-2) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
-   au < finished ; finished ; 2000 ; 978-0-85598-442-7 ; 978-0-85598-701-5 ; 9780855987015 ; Development, NGOs and Civil Society (978-0-85598-701-5) ; http://www.developmentbookshelf.com/ ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2000 ; 978-0-85598-450-2 ; 978-0-85598-728-2 ; 9780855987282 ; Gender and Lifecycles (978-0-85598-728-2) ; http://www.developmentbookshelf.com/ ;  >
    au < finished ; finished ; 2000 ; 978-0-85598-451-9 ; 978-0-85598-791-6 ; 9780855987916 ; Mainstreaming Men into Gender and Development (978-0-85598-791-6) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2000 ; 978-0-85598-452-6 ; 978-0-85598-873-9 ; 9780855988739 ; Women and Leadership (978-0-85598-873-9) ; http://www.developmentbookshelf.com/ ; reingest4.clockss.org:8082 >
@@ -664,7 +724,6 @@
    au < finished ; finished ; 2000 ; 978-1-899365-32-6 ; 978-1-90901-317-9 ; 9781909013179 ; Faces of The Caribbean (978-1-90901-317-9) ; http://www.developmentbookshelf.com/ ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2000 ; 978-1-899365-40-1 ; 978-1-90901-328-5 ; 9781909013285 ; Jamaica In Focus - 2nd Edition (978-1-90901-328-5) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2000 ; 978-1-899365-41-8 ; 978-1-90901-338-4 ; 9781909013384 ; Pinochet (978-1-90901-338-4) ; http://www.developmentbookshelf.com/ ; reingest4.clockss.org:8082 >
-   au < finished ; finished ; 2001 ; 978-0-85598-444-1 ; 978-0-85598-685-8 ; 9780855986858 ; Debating Development (978-0-85598-685-8) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2001 ; 978-0-85598-453-3 ; 978-0-85598-742-8 ; 9780855987428 ; Gender, Development, and Money (978-0-85598-742-8) ; http://www.developmentbookshelf.com/ ;  >
    au < finished ; finished ; 2001 ; 978-0-85598-454-0 ; 978-0-85598-862-3 ; 9780855988623 ; Uganda (978-0-85598-862-3) ; http://www.developmentbookshelf.com/ ;  >
    au < finished ; finished ; 2001 ; 978-0-85598-455-7 ; 978-0-85598-665-0 ; 9780855986650 ; Bolivia (978-0-85598-665-0) ; http://www.developmentbookshelf.com/ ; reingest2.clockss.org:8085 >
@@ -676,7 +735,6 @@
    au < finished ; crawling ; 2001 ; 978-0-85598-471-7 ; 978-0-85598-647-6 ; 9780855986476 ; Access to Health and Education Services in Ethiopia (978-0-85598-647-6) ; http://www.developmentbookshelf.com/ ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2001 ; 978-0-85598-474-8 ; 978-0-85598-661-2 ; 9780855986612 ; Beyond Civil Rights (978-0-85598-661-2) ; http://www.developmentbookshelf.com/ ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2001 ; 978-1-85339-496-6 ; 978-1-78044-385-0 ; 9781780443850 ; Small Business Services in Asian Countries (978-1-78044-385-0) ; http://www.developmentbookshelf.com/ ; reingest2.clockss.org:8085 >
-   au < finished ; finished ; 2001 ; 978-1-85339-501-7 ; 978-1-78044-318-8 ; 9781780443188 ; Electricity in Households and Microenterprises (978-1-78044-318-8) ; http://www.developmentbookshelf.com/ ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2001 ; 978-1-85339-503-1 ; 978-1-78044-115-3 ; 9781780441153 ; A Field Manual of Camel Diseases (978-1-78044-115-3) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2001 ; 978-1-85339-522-2 ; 978-1-78044-114-6 ; 9781780441146 ; Ethnoveterinary Medicine (978-1-78044-114-6) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2001 ; 978-1-85339-523-9 ; 978-1-78044-017-0 ; 9781780440170 ; Food Security in Sub-Saharan Africa (978-1-78044-017-0) ; http://www.developmentbookshelf.com/ ; reingest4.clockss.org:8082 >
@@ -689,10 +747,6 @@
    au < finished ; finished ; 2001 ; 978-1-85339-533-8 ; 978-1-78044-179-5 ; 9781780441795 ; Building credibility, the foundation for fundraising (978-1-78044-179-5) ; http://www.developmentbookshelf.com/ ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2001 ; 978-1-85339-534-5 ; 978-1-78044-501-4 ; 9781780445014 ; Building Structures and Skills for Fundraising (978-1-78044-501-4) ; http://www.developmentbookshelf.com/ ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2001 ; 978-1-85339-535-2 ; 978-1-78044-488-8 ; 9781780444888 ; Building Fundraising Programs to Attract Community Support (978-1-78044-488-8) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
-   au < finished ; finished ; 2002 ; 978-0-85598-463-2 ; 978-0-85598-688-9 ; 9780855986889 ; Development and Advocacy (978-0-85598-688-9) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
-   au < finished ; finished ; 2002 ; 978-0-85598-464-9 ; 978-0-85598-689-6 ; 9780855986896 ; Development and Agroforestry (978-0-85598-689-6) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
-   au < finished ; finished ; 2002 ; 978-0-85598-465-6 ; 978-0-85598-690-2 ; 9780855986902 ; Development and Cities (978-0-85598-690-2) ; http://www.developmentbookshelf.com/ ; reingest3.clockss.org:8083 >
-   au < finished ; finished ; 2002 ; 978-0-85598-472-4 ; 978-0-85598-691-9 ; 9780855986919 ; Development and Culture (978-0-85598-691-9) ; http://www.developmentbookshelf.com/ ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2002 ; 978-0-85598-477-9 ; 978-0-85598-857-9 ; 9780855988579 ; Supporting Communities Affected by Violence (978-0-85598-857-9) ; http://www.developmentbookshelf.com/ ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2002 ; 978-0-85598-478-6 ; 978-0-85598-755-8 ; 9780855987558 ; Gender, Trafficking, and Slavery (978-0-85598-755-8) ; http://www.developmentbookshelf.com/ ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2002 ; 978-0-85598-479-3 ; 978-0-85598-737-4 ; 9780855987374 ; Gender, Development, and Climate Change (978-0-85598-737-4) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
@@ -726,7 +780,6 @@
    au < finished ; finished ; 2003 ; 978-0-85598-485-4 ; 978-0-85598-704-6 ; 9780855987046 ; Disability, Equality and Human Rights (978-0-85598-704-6) ; http://www.developmentbookshelf.com/ ;  >
    au < finished ; finished ; 2003 ; 978-0-85598-492-2 ; 978-0-85598-881-4 ; 9780855988814 ; Women Reinventing Globalisation (978-0-85598-881-4) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2003 ; 978-0-85598-493-9 ; 978-0-85598-833-3 ; 9780855988333 ; Practising Gender Analysis in Education (978-0-85598-833-3) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
-   au < finished ; finished ; 2003 ; 978-0-85598-494-6 ; 978-0-85598-700-8 ; 9780855987008 ; Development Methods and Approaches (978-0-85598-700-8) ; http://www.developmentbookshelf.com/ ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2003 ; 978-0-85598-497-7 ; 978-0-85598-649-0 ; 9780855986490 ; Action Against Small Arms (978-0-85598-649-0) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2003 ; 978-0-85598-502-8 ; 978-0-85598-795-4 ; 9780855987954 ; Measuring Poverty in Nigeria (978-0-85598-795-4) ; http://www.developmentbookshelf.com/ ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2003 ; 978-0-85598-504-2 ; 978-0-85598-741-1 ; 9780855987411 ; Gender, Development, and Marriage (978-0-85598-741-1) ; http://www.developmentbookshelf.com/ ; reingest3.clockss.org:8083 >
@@ -748,7 +801,6 @@
    au < finished ; finished ; 2003 ; 978-1-899365-53-1 ; 978-1-90901-320-9 ; 9781909013209 ; Gender in Latin America (978-1-90901-320-9) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2003 ; 978-1-899365-58-6 ; 978-1-90901-374-2 ; 9781909013742 ; Inside Colombia (978-1-90901-374-2) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2003 ; 978-1-899365-63-0 ; 978-1-90901-348-3 ; 9781909013483 ; We Are Millions (978-1-90901-348-3) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
-   au < finished ; finished ; 2004 ; 978-0-85598-487-8 ; 978-0-85598-703-9 ; 9780855987039 ; Development, Women and War (978-0-85598-703-9) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2004 ; 978-0-85598-495-3 ; 978-0-85598-776-3 ; 9780855987763 ; India (978-0-85598-776-3) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2004 ; 978-0-85598-503-5 ; 978-0-85598-651-3 ; 9780855986513 ; Afghanistan (978-0-85598-651-3) ; http://www.developmentbookshelf.com/ ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2004 ; 978-0-85598-505-9 ; 978-0-85598-736-7 ; 9780855987367 ; Gender, Development and Citizenship (978-0-85598-736-7) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
@@ -1060,6 +1112,7 @@
    au < frozen ; exists ; 2018 ; 9781788530194 ; 9781780449630 ; 9781780449630 ; Normas mínimas para la recuperación económica 3rd Edition ; https://www.developmentbookshelf.com/ ;  >
    au < frozen ; exists ; 2018 ; 9781788530200 ; 9781780449647 ; 9781780449647 ; Normes minimales pour le relèvement économique 3rd Edition ; https://www.developmentbookshelf.com/ ;  >
    au < frozen ; exists ; 2018 ; 9781853399992 ; 9781780449982 ; 9781780449982 ; Participatory Development Practice ; https://www.developmentbookshelf.com/ ;  >
+   au < frozen ; exists ; 2018 ; 9781788530057 ; 9781780447117 ; 9781780447117 ; Critical Development Studies ; https://www.developmentbookshelf.com/ ; >
 
  }
 
