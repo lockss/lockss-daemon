@@ -17,10 +17,17 @@
    name = Agrarian Change and Peasant Studies ;
    type = bookSeries
   >
+   #series = acps
+
+   au < finished ; finished ; 2013 ; 978-1-85339-876-6 ; 978-1-78044-876-3 ; 9781780448763 ; Peasants and the Art of Farming (978-1-78044-876-3) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2013 ; 978-1-85339-878-0 ; 978-1-78044-879-4 ; 9781780448794 ; Food Regimes and Agrarian Questions (978-1-78044-879-4) ; http://www.developmentbookshelf.com/ ; >
+   au < exists ; exists ; 2015 ; 9781780448749 ; 9781780448756 ; 9781780448749 ; Sustainable Livelihoods and Rural Development ; https://www.developmentbookshelf.com/ ;  >
    au < frozen ; exists ; 2016 ; 9781853399169 ; 9781780449166 ; 9781780449166 ; "Agrarian Change, Migration and Development" ; https://www.developmentbookshelf.com/ ;  >
-   au < frozen ; exists ; 2016 ; 9781853399145 ; 9781780449142 ; 9781780449142 ; Political Dynamics of Transnational Agrarian Movements ; https://www.developmentbookshelf.com/ ;  >
-   au < frozen ; exists ; 2017 ; 9781853399954 ; 9781780449944 ; 9781780449944 ; Agroecology: Science and Politics ; https://www.developmentbookshelf.com/ ;  >
-   au < frozen ; exists ; 2018 ; 9781853399930 ; 9781780449920 ; 9781780449920 ; Speculative Harvests ; https://www.developmentbookshelf.com/ ;  >
+   au < frozen ; exists ; 2016 ; 9781853399145 ; 9781780449142 ; 9781780449142 ; Political Dynamics of Transnational Agrarian Movements ; https://www.developmentbookshelf.com/ ; >
+   au < frozen ; exists ; 2017 ; 9781853399954 ; 9781780449944 ; 9781780449944 ; Agroecology: Science and Politics ; https://www.developmentbookshelf.com/ ; >
+   au < frozen ; exists ; 2018 ; 9781853399930 ; 9781780449920 ; 9781780449920 ; Speculative Harvests ; https://www.developmentbookshelf.com/ ; >
+   au < exists ; exists ; 2019 ; 9781788530514 ; 9781788530538 ; 9781788530538 ; Counterrevolution: The Global Rise of the Far Right ; https://www.developmentbookshelf.com/ ; >
+   au < exists ; exists ; 2020 ; 9781788530101 ; 9781780447421 ; 9781780447421 ; Agriculture and the Generation Problem  ; https://www.developmentbookshelf.com/ ;  >
 
  }
 
@@ -944,8 +951,6 @@
    au < finished ; finished ; 2013 ; 978-1-85339-802-5 ; 978-1-78044-802-2 ; 9781780448022 ; Grass Roots Injury Prevention (978-1-78044-802-2) ; http://www.developmentbookshelf.com/ ;  >
    au < finished ; finished ; 2013 ; 978-1-85339-804-9 ; 978-1-78044-804-6 ; 9781780448046 ; Feminists in Development Organizations (978-1-78044-804-6) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2013 ; 978-1-85339-809-4 ; 978-1-78044-809-1 ; 9781780448091 ; As Though People Mattered (978-1-78044-809-1) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
-   au < finished ; finished ; 2013 ; 978-1-85339-876-6 ; 978-1-78044-876-3 ; 9781780448763 ; Peasants and the Art of Farming (978-1-78044-876-3) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
-   au < finished ; finished ; 2013 ; 978-1-85339-878-0 ; 978-1-78044-879-4 ; 9781780448794 ; Food Regimes and Agrarian Questions (978-1-78044-879-4) ; http://www.developmentbookshelf.com/ ;  >
    au < finished ; finished ; 2014 ; 978-1-85339-571-0 ; 978-1-78044-119-1 ; 9781780441191 ; Indigenous Knowledge Inquiries (978-1-78044-119-1) ; http://www.developmentbookshelf.com/ ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2014 ; 978-1-85339-657-1 ; 978-1-78044-152-8 ; 9781780441528 ; Partnerships in Urban Planning (978-1-78044-152-8) ; http://www.developmentbookshelf.com/ ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2014 ; 978-1-85339-672-4 ; 978-1-78044-672-1 ; 9781780446721 ; Disaster Risk Management and Reconstruction in Latin America (978-1-78044-672-1) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
