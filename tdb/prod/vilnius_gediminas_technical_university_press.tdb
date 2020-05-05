@@ -13,9 +13,6 @@
     # Journal of Environmental Engineering and Landscape Management, Mathematical Modelling and Analysis,
     # Technological and Economic Development of Economy, Transport
 
-    #OJS3
-    attr[start_stem] = index.php/
-
 #  {
 #
 #      title <
@@ -24,7 +21,6 @@
 #        eissn = 1822-4288 ;
 #        issnl = 1822-427X
 #      >
-#    param[base_url] = http://www.bjrbe.vgtu.lt/
 #    #preserved as a warc in clockss. not in gln.
 #  }
 
@@ -120,16 +116,6 @@
     implicit < status ; year ; param[year] ; name ; volume >
 
     {
-    param[base_url] = https://www.mla.vgtu.lt/
-    param[journal_id] = MLA
-    plugin = org.lockss.plugin.ojs3.Ojs3Plugin
-
-    au < exists ; 2016 ; 2016 ; Science - Future of Lithuania Volume 8 ; 8 >
-    au < exists ; 2017 ; 2017 ; Science - Future of Lithuania Volume 9 ; 9 >
-    au < exists ; 2018 ; 2018 ; Science - Future of Lithuania Volume 10 ; 10 >
-    au < exists ; 2019 ; 2019 ; Science - Future of Lithuania Volume 11 ; 11 >
-    }
-    {
     param[base_url] = http://www.mla.vgtu.lt/
     param[journal_id] = mla
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
@@ -174,16 +160,6 @@
     
     implicit < status ; year ; param[year] ; name ; volume >
     {
-    plugin = org.lockss.plugin.ojs3.Ojs3Plugin
-    param[base_url] = https://www.bme.vgtu.lt/
-    param[journal_id] = BME
-
-    au < exists ; 2016 ; 2016 ; Business, Management and Education Volume 14 ; 14 >
-    au < exists ; 2017 ; 2017 ; Business, Management and Education Volume 15 ; 15 >
-    au < exists ; 2018 ; 2018 ; Business, Management and Education Volume 16 ; 16 >
-    au < exists ; 2019 ; 2019 ; Business, Management and Education Volume 17 ; 17 >
-    }
-    {
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
     param[base_url] = http://www.bme.vgtu.lt/
     param[journal_id] = bme
@@ -197,22 +173,5 @@
     au < superseded ; 2016 ; 2016 ; Business, Management and Education Volume 14 [superseded] ; 14 > #no content crawl on delta machines
     }
   }
-
-#  {
-#    title <
-#      name = Aviation technologies ;
-#      eissn = 2029-9974
-#    >
-#    
-#    plugin = org.lockss.plugin.ojs2.OJS2Plugin
-#    param[base_url] = http://www.at.vgtu.lt/
-#    param[journal_id] = at
-#    implicit < status ; year ; param[year] ; name ; volume >
-#    #publisher does not wish to include this.
-#
-#    au < exists ; 2013 ; 2013 ; Aviation technologies Volume 1 ; 1 >
-#    au < exists ; 2014 ; 2014 ; Aviation technologies Volume 2 ; 2 >
-#
-#  }
   
 }
