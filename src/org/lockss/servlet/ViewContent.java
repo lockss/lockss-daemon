@@ -301,18 +301,22 @@ public class ViewContent extends LockssServlet {
     }
 
     CachedUrl cu = au.makeCachedUrl(url);
-    if (cu.hasContent()) {
-      if (au.getLinkExtractor(cu.getContentType()) != null) {
-	tbl.newRow();
-	tbl.newCell("align=left");
-	Link extrlnk =
-	  new Link(srvURL(AdminServletManager.SERVLET_LIST_OBJECTS,
-			  PropUtil.fromArgs("type", "extracturls",
-					    "auid", au.getAuId(),
-					    "url", url)),
-		   "Extract URLs");
-	tbl.add(extrlnk);
+    try {
+      if (cu.hasContent()) {
+	if (au.getLinkExtractor(cu.getContentType()) != null) {
+	  tbl.newRow();
+	  tbl.newCell("align=left");
+	  Link extrlnk =
+	    new Link(srvURL(AdminServletManager.SERVLET_LIST_OBJECTS,
+			    PropUtil.fromArgs("type", "extracturls",
+					      "auid", au.getAuId(),
+					      "url", url)),
+		     "Extract URLs");
+	  tbl.add(extrlnk);
+	}
       }
+    } finally {
+      AuUtil.safeRelease(cu);
     }
 
     page.add(tbl);

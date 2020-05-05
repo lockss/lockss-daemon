@@ -1610,19 +1610,23 @@ public class ArchivalUnitStatus
 	int curRow = -1;
 	int curVer = curCu.getVersion() + 1;
 	for (CachedUrl cu : cuVersions) {
-	  curRow++;
-	  curVer--;
-	  if (curRow < startRow) {
-	    continue;
+	  try {
+	    curRow++;
+	    curVer--;
+	    if (curRow < startRow) {
+	      continue;
+	    }
+	    if (curRow >= endRow1) {
+	      // add 'next'
+	      rowL.add(makeOtherRowsLink(true, endRow1, au.getAuId(), url));
+	      break;
+	    }
+	    Map row = makeRow(au, cu, curVer);
+	    row.put("sort", curRow);
+	    rowL.add(row);
+	  } finally {
+	    AuUtil.safeRelease(cu);
 	  }
-	  if (curRow >= endRow1) {
-	    // add 'next'
-	    rowL.add(makeOtherRowsLink(true, endRow1, au.getAuId(), url));
-	    break;
-	  }
-	  Map row = makeRow(au, cu, curVer);
-	  row.put("sort", curRow);
-	  rowL.add(row);
 	}
 	return rowL;
       } finally {
@@ -1644,9 +1648,12 @@ public class ArchivalUnitStatus
       rowMap.put("Version", val);
       rowMap.put("Size", cu.getContentSize());
       Properties cuProps = cu.getProperties();
-      long collected =
-	Long.parseLong(cuProps.getProperty(CachedUrl.PROPERTY_FETCH_TIME));
-      rowMap.put("DateCollected", collected);
+      try {
+	long collected =
+	  Long.parseLong(cuProps.getProperty(CachedUrl.PROPERTY_FETCH_TIME));
+	rowMap.put("DateCollected", collected);
+      } catch (NumberFormatException ignore) {
+      }
       return rowMap;
     }
 

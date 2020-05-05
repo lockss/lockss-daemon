@@ -245,7 +245,7 @@
    au < exists ; exists ; 2015 ; 9781555819484 ; 9781555819491 ; 10.1128/9781555819491 ; https://www.asmscience.org/ ; Perspectives on Research Integrity ;  >
    au < doesNotExist ; doesNotExist ; 2015 ; 9781555819514 ; 9781555819521 ; 10.1128/9781555819521 ; https://www.asmscience.org/ ; Principles of Virology, Fourth Edition, Bundle ;  >
    au < zapped ; finished ; 2016 ; 9781555818999 ; 9781555819002 ; 10.1128/9781555819002 ; http://www.asmscience.org/ ; Diagnostic Medical Parasitology ; reingest3.clockss.org:8083 >
-   au < frozen ; exists ; 2016 ; 9781555819255 ; 9781555819262 ; 10.1128/9781555819262 ; http://www.asmscience.org/ ; Zoonoses ; > #no substance, no articles, doi's etc
+   au < finished ; manifest ; 2016 ; 9781555819255 ; 9781555819262 ; 10.1128/9781555819262 ; http://www.asmscience.org/ ; Zoonoses ; reingest4.clockss.org:8082 > #no substance, no articles, doi's etc
    au < finished ; finished ; 2016 ; 9781555816759 ; 9781555819323 ; 10.1128/9781555819323 ; http://www.asmscience.org/ ; The Bacterial Spore ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2016 ; 9781555818715 ; 9781555818722 ; 10.1128/9781555818722 ; http://www.asmscience.org/ ; Manual of Molecular and Clinical Laboratory Immunology ; reingest1.clockss.org:8082 >
    au < zapped ; finished ; 2016 ; 9781555818807 ; 9781555818814 ; 10.1128/9781555818814 ; http://www.asmscience.org/ ; Clinical Microbiology Procedures Handbook, 4th Edition ; reingest2.clockss.org:8085 >
@@ -287,11 +287,11 @@
    au < doesNotExist ; doesNotExist ; 2019 ; 9781555819910 ; 9781555819941 ; 10.1128/9781555819941 ; https://www.asmscience.org/ ; Guide to Clinical and Diagnostic Virology ;  >
    au < manifest ; exists ; 2019 ; 9781555819736 ; 9781555819743 ; 10.1128/9781555819743 ; https://www.asmscience.org/ ; Microbial Transmission ;  >
    au < manifest ; exists ; 2019 ; 9781683670230 ; 9781683670247 ; 10.1128/9781683670247 ; https://www.asmscience.org/ ; Regulating with RNA in Bacteria and Archaea ;  >
-   au < exists ; exists ; 2019 ; 9781683670278 ; 9781683670285 ; 10.1128/9781683670285 ; https://www.asmscience.org/ ; Protein Secretion in Bacteria ;  >
-   au < exists ; exists ; 2019 ; 9781683670254 ; 9781683670261 ; 10.1128/9781683670261 ; https://www.asmscience.org/ ; Bacteria and Intracellularity ;  >
-   au < exists ; exists ; 2019 ; 9781683670124 ; 9781683670131 ; 10.1128/9781683670131 ; https://www.asmscience.org/ ; Gram-Positive Pathogens, Third Edition ;  >
-   au < exists ; exists ; 2019 ; 9781555819965 ; 9781555819972 ; 10.1128/9781555819972 ; https://www.asmscience.org/ ; Food Microbiology: Fundamentals and Frontiers, 5th Edition ;  >
-   au < exists ; exists ; 2020 ; 9781683670148 ; 9781683670179 ; 10.1128/9781683670179 ; https://www.asmscience.org/ ; Prepare and Protect: Safer Behaviors in Laboratories and Clinical Containment Settings ;  >
+   au < manifest ; exists ; 2019 ; 9781683670278 ; 9781683670285 ; 10.1128/9781683670285 ; https://www.asmscience.org/ ; Protein Secretion in Bacteria ;  >
+   au < manifest ; exists ; 2019 ; 9781683670254 ; 9781683670261 ; 10.1128/9781683670261 ; https://www.asmscience.org/ ; Bacteria and Intracellularity ;  >
+   au < manifest ; exists ; 2019 ; 9781683670124 ; 9781683670131 ; 10.1128/9781683670131 ; https://www.asmscience.org/ ; Gram-Positive Pathogens, Third Edition ;  >
+   au < manifest ; exists ; 2019 ; 9781555819965 ; 9781555819972 ; 10.1128/9781555819972 ; https://www.asmscience.org/ ; Food Microbiology: Fundamentals and Frontiers, 5th Edition ;  >
+   au < manifest ; exists ; 2020 ; 9781683670148 ; 9781683670179 ; 10.1128/9781683670179 ; https://www.asmscience.org/ ; Prepare and Protect: Safer Behaviors in Laboratories and Clinical Containment Settings ;  >
 
  }
 
