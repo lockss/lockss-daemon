@@ -11,6 +11,7 @@
   param[publisher_id] = mmso
   implicit < status ; status2 ; year ; isbn ; eisbn ; param[book_isbn] ; name ; hidden[proxy] >
 
+  #move to new platform
 
  {
   title <
@@ -59,8 +60,8 @@
 
   {
    param[base_url] = https://www.ingentaconnect.com/
-   au < manifest ; exists ; 2018 ; 9781526119162 ;  ; 9781526119162 ; Noble society ;  >
-   au < manifest ; exists ; 2018 ; 9781526135193 ;  ; 9781526135193 ; Towns in medieval England ;  >
+   au < doNotProcess ; exists ; 2018 ; 9781526119162 ;  ; 9781526119162 ; Noble society ;  >
+   au < doNotProcess ; exists ; 2018 ; 9781526135193 ;  ; 9781526135193 ; Towns in medieval England ;  >
   }
 
  }
