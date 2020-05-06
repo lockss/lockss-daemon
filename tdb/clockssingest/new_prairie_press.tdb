@@ -285,7 +285,7 @@
       au < manifest ; exists ; 2004 ; Transactions of the Burgon Society Volume 4 ; 4 ; https://newprairiepress.org/ ; >
       au < finished ; crawling ; 2005 ; Transactions of the Burgon Society Volume 5 ; 5 ; https://newprairiepress.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2006 ; Transactions of the Burgon Society Volume 6 ; 6 ; https://newprairiepress.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2007 ; Transactions of the Burgon Society Volume 7 ; 7 ; https://newprairiepress.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2007 ; Transactions of the Burgon Society Volume 7 ; 7 ; https://newprairiepress.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2008 ; Transactions of the Burgon Society Volume 8 ; 8 ; https://newprairiepress.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2009 ; Transactions of the Burgon Society Volume 9 ; 9 ; https://newprairiepress.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2010 ; Transactions of the Burgon Society Volume 10 ; 10 ; https://newprairiepress.org/ ; reingest1.clockss.org:8082 >
@@ -387,7 +387,7 @@
       au < finished ; crawling ; 2006-2007 ; Educational Considerations Volume 34 ; 34 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2007-2008 ; Educational Considerations Volume 35 ; 35 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2008-2009 ; Educational Considerations Volume 36 ; 36 ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2009-2010 ; Educational Considerations Volume 37 ; 37 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2009-2010 ; Educational Considerations Volume 37 ; 37 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2010-2011 ; Educational Considerations Volume 38 ; 38 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2011-2012 ; Educational Considerations Volume 39 ; 39 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2012-2013 ; Educational Considerations Volume 40 ; 40 ; reingest3.clockss.org:8083 >
@@ -644,7 +644,7 @@
       au < finished ; crawling ; 2006 ; Journal of Applied Communications Volume 89 ; 89 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2007 ; Journal of Applied Communications Volume 90 ; 90 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2008 ; Journal of Applied Communications Volume 91 ; 91 ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2009 ; Journal of Applied Communications Volume 92 ; 92 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2009 ; Journal of Applied Communications Volume 92 ; 92 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2010 ; Journal of Applied Communications Volume 93 ; 93 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2011 ; Journal of Applied Communications Volume 94 ; 94 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2012 ; Journal of Applied Communications Volume 95 ; 95 ; reingest5.clockss.org:8082 >
@@ -719,7 +719,7 @@
       param[journal_abbr] = ksulibraries
 
       au < finished ; crawling ; 2015 ; Kansas State University Libraries Volume 1 ; 1 ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2016 ; Kansas State University Libraries Volume 2 ; 2 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2016 ; Kansas State University Libraries Volume 2 ; 2 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; Kansas State University Libraries Volume 3 ; 3 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; Kansas State University Libraries Volume 4 ; 4 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2017 ; Kansas State University Libraries Volume 5 ; 5 ; reingest3.clockss.org:8083 >
