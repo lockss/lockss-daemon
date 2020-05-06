@@ -11,6 +11,9 @@
   plugin = org.lockss.plugin.ans.ClockssAnsPlugin
   param[base_url] = http://www.ans.org/
   param[download_url] = http://epubs.ans.org/
+  
+  #Moved to T&F.
+  #Successful crawls on ingest. No substance on production machines.
 
 
     {
