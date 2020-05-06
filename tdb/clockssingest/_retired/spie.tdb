@@ -29,8 +29,8 @@
     au < zapped ; finished ; 2012 ; Journal of Applied Remote Sensing Volume 6 ; 2012 ; reingest2.clockss.org:8085 >
     au < zapped ; finished ; 2013 ; Journal of Applied Remote Sensing Volume 7 ; 2013 ; reingest1.clockss.org:8082 >
     au < zapped ; finished ; 2014 ; Journal of Applied Remote Sensing Volume 8 ; 2014 ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2015 ; Journal of Applied Remote Sensing Volume 9 ; 2015 ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2016 ; Journal of Applied Remote Sensing Volume 10 ; 2016 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Journal of Applied Remote Sensing Volume 9 ; 2015 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; Journal of Applied Remote Sensing Volume 10 ; 2016 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -45,7 +45,7 @@
     param[resource_id] = 166
 
     au < finished ; finished ; 2015 ; Journal of Astronomical Telescopes, Instruments, and Systems Volume 1 ; 2015 ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2016 ; Journal of Astronomical Telescopes, Instruments, and Systems Volume 2 ; 2016 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2016 ; Journal of Astronomical Telescopes, Instruments, and Systems Volume 2 ; 2016 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -79,7 +79,7 @@
     au < zapped ; finished ; 2013 ; Journal of Biomedical Optics Volume 18 ; 2013 ; reingest1.clockss.org:8082 >
     au < zapped ; finished ; 2014 ; Journal of Biomedical Optics Volume 19 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Journal of Biomedical Optics Volume 20 ; 2015 ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2016 ; Journal of Biomedical Optics Volume 21 ; 2016 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2016 ; Journal of Biomedical Optics Volume 21 ; 2016 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -161,7 +161,7 @@
     au < finished ; finished ; 2013 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 12 ; 2013 ; reingest1.clockss.org:8082 >
     au < zapped ; finished ; 2014 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 13 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 14 ; 2015 ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2016 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 15 ; 2016 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2016 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 15 ; 2016 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -201,7 +201,7 @@
     au < finished ; finished ; 2013 ; Journal of Photonics for Energy Volume 3 ; 2013 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Journal of Photonics for Energy Volume 4 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Journal of Photonics for Energy Volume 5 ; 2015 ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2016 ; Journal of Photonics for Energy Volume 6 ; 2016 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2016 ; Journal of Photonics for Energy Volume 6 ; 2016 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -242,7 +242,7 @@
     au < finished ; finished ; 1970 ; Optical Engineering Volume 8-9 ; 1970 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 1971 ; Optical Engineering Volume 9-10 ; 1971 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 1972 ; Optical Engineering Volume 11 ; 1972 ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 1973 ; Optical Engineering Volume 12 ; 1973 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1973 ; Optical Engineering Volume 12 ; 1973 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 1974 ; Optical Engineering Volume 13 ; 1974 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 1975 ; Optical Engineering Volume 14 ; 1975 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 1976 ; Optical Engineering Volume 15 ; 1976 ; reingest2.clockss.org:8085 >

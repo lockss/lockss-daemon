@@ -1,0 +1,393 @@
+{
+
+  publisher <
+    name = Alliance of Crop, Soil, and Environmental Science Societies
+  >
+
+  # There are a few other titles:
+  # - Applied Turfgrass Science (ASA and CSSA): https://dl.sciencesocieties.org/publications/ats
+  # - Crop Management (ASA and CSSA): https://dl.sciencesocieties.org/publications/cm
+  # - Forage & Grazinglands (ASA and CSSA): https://dl.sciencesocieties.org/publications/fg
+  #
+  # The three combined into Crop, Forage & Turfgrass Management (ASA and CSSA) in 2015: https://dl.sciencesocieties.org/publications/cftm
+  #
+  # There is also the Journal of Animal Science: https://dl.sciencesocieties.org/publications/jas
+  # on behalf of the American Society of Animal Science (ASAS), not ASA/CSSA/SSSA;
+  # this might mean that ACSESS might need to be rephrased as a Provider in TDB files.
+  
+  # move to Wiley in 2020
+
+  plugin = org.lockss.plugin.acsess.ACSESSJournalsPlugin
+  param[base_url] = https://dl.sciencesocieties.org/
+  implicit < status ; year ; name ; param[volume_name] >
+
+  {
+
+    title <
+      name = Agricultural & Environmental Letters ;
+      eissn = 2471-9625
+    >
+
+    # See https://dl.sciencesocieties.org/publications/ael
+    
+    param[journal_id] = ael
+
+    au < down ; 2016 ; Agricultural & Environmental Letters Volume 1 ; 1 >
+    au < down ; 2017 ; Agricultural & Environmental Letters Volume 2 ; 2 >
+    au < down ; 2018 ; Agricultural & Environmental Letters Volume 3 ; 3 >
+    au < doNotProcess ; 2019 ; Agricultural & Environmental Letters Volume 4 ; 4 >
+
+  }
+
+  {
+
+    title <
+      name = Agronomy Journal ;
+      issn = 0002-1962 ;
+      eissn = 1435-0645 ;
+      issnl = 0002-1962
+    >
+
+    # On behalf of American Society of Agronomy
+    # See https://dl.sciencesocieties.org/publications/aj
+    
+    param[journal_id] = aj
+
+    au < down ; 2005 ; Agronomy Journal Volume 97 ; 97 >
+    au < down ; 2006 ; Agronomy Journal Volume 98 ; 98 >
+    au < down ; 2007 ; Agronomy Journal Volume 99 ; 99 >
+    au < down ; 2008 ; Agronomy Journal Volume 100 ; 100 >
+    au < down ; 2009 ; Agronomy Journal Volume 101 ; 101 >
+    au < down ; 2010 ; Agronomy Journal Volume 102 ; 102 >
+    au < down ; 2011 ; Agronomy Journal Volume 103 ; 103 >
+    au < down ; 2012 ; Agronomy Journal Volume 104 ; 104 >
+    au < down ; 2013 ; Agronomy Journal Volume 105 ; 105 >
+    au < down ; 2014 ; Agronomy Journal Volume 106 ; 106 >
+    au < down ; 2015 ; Agronomy Journal Volume 107 ; 107 >
+    au < down ; 2016 ; Agronomy Journal Volume 108 ; 108 >
+    au < down ; 2017 ; Agronomy Journal Volume 109 ; 109 >
+    au < down ; 2018 ; Agronomy Journal Volume 110 ; 110 >
+    au < doNotProcess ; 2019 ; Agronomy Journal Volume 111 ; 111 >
+
+  }
+
+  {
+  
+    title <
+      name = Crops & Soils ;
+      issn = 0162-5098 ;
+      eissn = 2325-3606
+    >
+
+    # On behalf of American Society of Agronomy
+    # See https://dl.sciencesocieties.org/publications/crops-and-soils
+    
+    param[journal_id] = cns
+
+    au < doNotProcess ; 2005 ; Crops & Soils Magazine Volume 38 ; 38 > #no issues on manifest page.
+    au < doNotProcess ; 2006 ; Crops & Soils Magazine Volume 39 ; 39 > #no issues on manifest page.
+    au < doNotProcess ; 2007 ; Crops & Soils Magazine Volume 40 ; 40 > #no issues on manifest page.
+    au < doNotProcess ; 2008 ; Crops & Soils Magazine Volume 41 ; 41 > #no issues on manifest page.
+    au < doNotProcess ; 2009 ; Crops & Soils Magazine Volume 42 ; 42 > #no issues on manifest page.
+    au < doNotProcess ; 2010 ; Crops & Soils Magazine Volume 43 ; 43 > #no issues on manifest page.
+    au < doNotProcess ; 2011 ; Crops & Soils Magazine Volume 44 ; 44 > #no issues on manifest page.
+    au < doNotProcess ; 2012 ; Crops & Soils Magazine Volume 45 ; 45 > #no issues on manifest page.
+    au < down ; 2013 ; Crops & Soils Magazine Volume 46 ; 46 >
+    au < down ; 2014 ; Crops & Soils Magazine Volume 47 ; 47 >
+    au < down ; 2015 ; Crops & Soils Magazine Volume 48 ; 48 >
+    au < down ; 2016 ; Crops & Soils Magazine Volume 49 ; 49 >
+    au < down ; 2017 ; Crops & Soils Magazine Volume 50 ; 50 >
+    au < down ; 2018 ; Crops & Soils Magazine Volume 51 ; 51 >
+    au < doNotProcess ; 2019 ; Crops & Soils Magazine Volume 52 ; 52 >
+
+
+  }
+
+  {
+
+    title <
+      name = Crop Science ;
+      issn = 0011-183X ;
+      eissn = 1435-0653
+    >
+
+    # On behalf of Crop Science Society of America
+    # See https://dl.sciencesocieties.org/publications/cs
+
+    param[journal_id] = cs
+
+    au < down ; 2005 ; Crop Science Volume 45 ; 45 >
+    au < down ; 2006 ; Crop Science Volume 46 ; 46 >
+    au < down ; 2007 ; Crop Science Volume 47 ; 47 >
+    au < down ; 2008 ; Crop Science Volume 48 ; 48 >
+    au < down ; 2009 ; Crop Science Volume 49 ; 49 >
+    au < down ; 2010 ; Crop Science Volume 50 ; 50 >
+    au < doNotProcess ; 2011 ; Crop Science Volume 51 ; 51 >
+    au < doNotProcess ; 2012 ; Crop Science Volume 52 ; 52 >
+    au < down ; 2013 ; Crop Science Volume 53 ; 53 >
+    au < down ; 2014 ; Crop Science Volume 54 ; 54 >
+    au < down ; 2015 ; Crop Science Volume 55 ; 55 >
+    au < down ; 2016 ; Crop Science Volume 56 ; 56 >
+    au < down ; 2017 ; Crop Science Volume 57 ; 57 >
+    au < down ; 2018 ; Crop Science Volume 58 ; 58 >
+    au < doNotProcess ; 2019 ; Crop Science Volume 59 ; 59 >
+
+  }
+
+  {
+  
+    title <
+      name = CSA News ;
+      issn = 1529-9163 ;
+      eissn = 2325-3584
+    >
+
+    # On joint behalf of American Society of Agronomy, Crop Science Society of America and Soil Science Society of America
+    # See https://dl.sciencesocieties.org/publications/csa-news
+    
+    param[journal_id] = csa
+
+    au < doNotProcess ; 2005 ; CSA News Volume 50 ; 50 > # no issues on manifest page
+    au < doNotProcess ; 2006 ; CSA News Volume 51 ; 51 > # no issues on manifest page
+    au < doNotProcess ; 2007 ; CSA News Volume 52 ; 52 > # no issues on manifest page
+    au < doNotProcess ; 2008 ; CSA News Volume 53 ; 53 > # no issues on manifest page
+    au < doNotProcess ; 2009 ; CSA News Volume 54 ; 54 > # no issues on manifest page
+    au < doNotProcess ; 2010 ; CSA News Volume 55 ; 55 > # no issues on manifest page
+    au < doNotProcess ; 2011 ; CSA News Volume 56 ; 56 > # no issues on manifest page
+    au < doNotProcess ; 2012 ; CSA News Volume 57 ; 57 > # no issues on manifest page
+    au < down ; 2013 ; CSA News Volume 58 ; 58 >
+    au < down ; 2014 ; CSA News Volume 59 ; 59 >
+    au < down ; 2015 ; CSA News Volume 60 ; 60 >
+    au < down ; 2016 ; CSA News Volume 61 ; 61 >
+    au < down ; 2017 ; CSA News Volume 62 ; 62 >
+    au < down ; 2018 ; CSA News Volume 63 ; 63 >
+    au < doNotProcess ; 2019 ; CSA News Volume 64 ; 64 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Environmental Quality ;
+      issn = 0047-2425 ;
+      eissn = 1537-2537 ;
+      issnl = 0047-2425
+    >
+
+    # On joint behalf of American Society of Agronomy, Crop Science Society of America and Soil Science Society of America
+    # See https://dl.sciencesocieties.org/publications/jeq
+    
+    param[journal_id] = jeq
+
+    au < down ; 2005 ; Journal of Environmental Quality Volume 34 ; 34 >
+    au < down ; 2006 ; Journal of Environmental Quality Volume 35 ; 35 >
+    au < down ; 2007 ; Journal of Environmental Quality Volume 36 ; 36 >
+    au < down ; 2008 ; Journal of Environmental Quality Volume 37 ; 37 >
+    au < down ; 2009 ; Journal of Environmental Quality Volume 38 ; 38 >
+    au < down ; 2010 ; Journal of Environmental Quality Volume 39 ; 39 >
+    au < down ; 2011 ; Journal of Environmental Quality Volume 40 ; 40 >
+    au < down ; 2012 ; Journal of Environmental Quality Volume 41 ; 41 >
+    au < down ; 2013 ; Journal of Environmental Quality Volume 42 ; 42 >
+    au < down ; 2014 ; Journal of Environmental Quality Volume 43 ; 43 >
+    au < down ; 2015 ; Journal of Environmental Quality Volume 44 ; 44 >
+    au < down ; 2016 ; Journal of Environmental Quality Volume 45 ; 45 >
+    au < down ; 2017 ; Journal of Environmental Quality Volume 46 ; 46 >
+    au < down ; 2018 ; Journal of Environmental Quality Volume 47 ; 47 >
+    au < doNotProcess ; 2019 ; Journal of Environmental Quality Volume 48 ; 48 >
+
+
+  }
+  
+  {
+  
+    title <
+      name = Journal of Plant Registrations ;
+      eissn = 1940-3496
+    >
+
+    # On behalf of Crop Science Society of America
+    # See https://dl.sciencesocieties.org/publications/jpr
+    
+    param[journal_id] = jpr
+
+    au < down ; 2007 ; Journal of Plant Registrations Volume 1 ; 1 >
+    au < down ; 2008 ; Journal of Plant Registrations Volume 2 ; 2 >
+    au < down ; 2009 ; Journal of Plant Registrations Volume 3 ; 3 >
+    au < down ; 2010 ; Journal of Plant Registrations Volume 4 ; 4 >
+    au < down ; 2011 ; Journal of Plant Registrations Volume 5 ; 5 >
+    au < down ; 2012 ; Journal of Plant Registrations Volume 6 ; 6 >
+    au < down ; 2013 ; Journal of Plant Registrations Volume 7 ; 7 >
+    au < down ; 2014 ; Journal of Plant Registrations Volume 8 ; 8 >
+    au < down ; 2015 ; Journal of Plant Registrations Volume 9 ; 9 >
+    au < down ; 2016 ; Journal of Plant Registrations Volume 10 ; 10 >
+    au < down ; 2017 ; Journal of Plant Registrations Volume 11 ; 11 >
+    au < down ; 2018 ; Journal of Plant Registrations Volume 12 ; 12 >
+    au < doNotProcess ; 2019 ; Journal of Plant Registrations Volume 13 ; 13 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Production Agriculture ;
+      eissn = 0890-8524
+    >
+
+    # On behalf of Soil Science Society of America
+    # See https://dl.sciencesocieties.org/publications/jpa
+    # stopped publication after 1999
+
+    param[journal_id] = jpa
+
+    au < doNotProcess ; 1998 ; Journal of Production Agriculture Volume 11 ; 11 >
+    au < doNotProcess ; 1999 ; Journal of Production Agriculture Volume 12 ; 12 >
+
+  }
+
+  {
+
+    title <
+      name = Natural Sciences Education ;
+      eissn = 2168-8281
+    >
+
+    # On joint behalf of American Society of Agronomy, Crop Science Society of America and Soil Science Society of America
+    # See https://dl.sciencesocieties.org/publications/nse
+    
+    param[journal_id] = nse
+
+    au < doNotProcess ; 2005 ; Natural Sciences Education Volume 34 ; 34 > # no issues on manifest page
+    au < down ; 2006 ; Natural Sciences Education Volume 35 ; 35 >
+    au < down ; 2007 ; Natural Sciences Education Volume 36 ; 36 >
+    au < down ; 2008 ; Natural Sciences Education Volume 37 ; 37 >
+    au < down ; 2009 ; Natural Sciences Education Volume 38 ; 38 >
+    au < down ; 2010 ; Natural Sciences Education Volume 39 ; 39 >
+    au < down ; 2011 ; Natural Sciences Education Volume 40 ; 40 >
+    au < down ; 2012 ; Natural Sciences Education Volume 41 ; 41 >
+    au < down ; 2013 ; Natural Sciences Education Volume 42 ; 42 >
+    au < down ; 2014 ; Natural Sciences Education Volume 43 ; 43 >
+    au < down ; 2015 ; Natural Sciences Education Volume 44 ; 44 >
+    au < down ; 2016 ; Natural Sciences Education Volume 45 ; 45 >
+    au < down ; 2017 ; Natural Sciences Education Volume 46 ; 46 >
+    au < down ; 2018 ; Natural Sciences Education Volume 47 ; 47 >
+    au < doNotProcess ; 2019 ; Natural Sciences Education Volume 48 ; 48 >
+
+  }
+
+  {
+
+    title <
+      name = The Plant Genome ;
+      eissn = 1940-3372
+    >
+
+    # On behalf of Crop Science Society of America
+    # See https://dl.sciencesocieties.org/publications/tpg
+    
+    param[journal_id] = tpg
+
+    au < down ; 2008 ; The Plant Genome Volume 1 ; 1 >
+    au < down ; 2009 ; The Plant Genome Volume 2 ; 2 >
+    au < down ; 2010 ; The Plant Genome Volume 3 ; 3 >
+    au < down ; 2011 ; The Plant Genome Volume 4 ; 4 >
+    au < down ; 2012 ; The Plant Genome Volume 5 ; 5 >
+    au < down ; 2013 ; The Plant Genome Volume 6 ; 6 >
+    au < down ; 2014 ; The Plant Genome Volume 7 ; 7 >
+    au < down ; 2015 ; The Plant Genome Volume 8 ; 8 >
+    au < down ; 2016 ; The Plant Genome Volume 9 ; 9 >
+    au < down ; 2017 ; The Plant Genome Volume 10 ; 10 >
+    au < down ; 2018 ; The Plant Genome Volume 11 ; 11 >
+    au < doNotProcess ; 2019 ; The Plant Genome Volume 12 ; 12 >
+
+  }
+
+  {
+
+    title <
+      name = Soil Horizons ;
+      eissn = 2163-2812
+    >
+
+    # On behalf of Soil Science Society of America
+    # See https://dl.sciencesocieties.org/publications/sh
+    
+    param[journal_id] = sh
+
+    au < doNotProcess ; 2005 ; Soil Horizons Volume 46 ; 46 >
+    au < doNotProcess ; 2006 ; Soil Horizons Volume 47 ; 47 >
+    au < doNotProcess ; 2007 ; Soil Horizons Volume 48 ; 48 >
+    au < doNotProcess ; 2008 ; Soil Horizons Volume 49 ; 49 >
+    au < down ; 2009 ; Soil Horizons Volume 50 ; 50 >
+    au < down ; 2010 ; Soil Horizons Volume 51 ; 51 >
+    au < down ; 2011 ; Soil Horizons Volume 52 ; 52 >
+    au < down ; 2012 ; Soil Horizons Volume 53 ; 53 >
+    au < down ; 2013 ; Soil Horizons Volume 54 ; 54 >
+    au < down ; 2014 ; Soil Horizons Volume 55 ; 55 >
+    au < down ; 2015 ; Soil Horizons Volume 56 ; 56 >
+
+  }
+
+  {
+
+    title <
+      name = Soil Science Society of America Journal ;
+      issn = 0361-5995 ;
+      eissn = 1435-0661 ;
+      issnl = 0361-5995
+    >
+    
+    # On behalf of Soil Science Society of America
+    # See https://dl.sciencesocieties.org/publications/sssaj
+    
+    param[journal_id] = sssaj
+
+    au < doNotProcess ; 2005 ; Soil Science Society of America Journal Volume 69 ; 69 >
+    au < doNotProcess ; 2006 ; Soil Science Society of America Journal Volume 70 ; 70 >
+    au < doNotProcess ; 2007 ; Soil Science Society of America Journal Volume 71 ; 71 >
+    au < doNotProcess ; 2008 ; Soil Science Society of America Journal Volume 72 ; 72 >
+    au < doNotProcess ; 2009 ; Soil Science Society of America Journal Volume 73 ; 73 >
+    au < down ; 2010 ; Soil Science Society of America Journal Volume 74 ; 74 >
+    au < down ; 2011 ; Soil Science Society of America Journal Volume 75 ; 75 >
+    au < down ; 2012 ; Soil Science Society of America Journal Volume 76 ; 76 >
+    au < down ; 2013 ; Soil Science Society of America Journal Volume 77 ; 77 >
+    au < down ; 2014 ; Soil Science Society of America Journal Volume 78 ; 78 >
+    au < down ; 2015 ; Soil Science Society of America Journal Volume 79 ; 79 >
+    au < down ; 2016 ; Soil Science Society of America Journal Volume 80 ; 80 >
+    au < down ; 2017 ; Soil Science Society of America Journal Volume 81 ; 81 >
+    au < down ; 2018 ; Soil Science Society of America Journal Volume 82 ; 82 >
+    au < doNotProcess ; 2019 ; Soil Science Society of America Journal Volume 83 ; 83 >
+
+  }
+
+  {
+
+    title <
+      name = Vadose Zone Journal ;
+      eissn = 1539-1663 ;
+      issnl = 1539-1663
+    >
+
+    # On behalf of Soil Science Society of America
+    # See https://dl.sciencesocieties.org/publications/vzj
+    
+    param[journal_id] = vzj
+
+    au < down ; 2005 ; Vadose Zone Journal Volume 4 ; 4 >
+    au < down ; 2006 ; Vadose Zone Journal Volume 5 ; 5 >
+    au < down ; 2007 ; Vadose Zone Journal Volume 6 ; 6 >
+    au < down ; 2008 ; Vadose Zone Journal Volume 7 ; 7 >
+    au < down ; 2009 ; Vadose Zone Journal Volume 8 ; 8 >
+    au < down ; 2010 ; Vadose Zone Journal Volume 9 ; 9 >
+    au < down ; 2011 ; Vadose Zone Journal Volume 10 ; 10 >
+    au < down ; 2012 ; Vadose Zone Journal Volume 11 ; 11 >
+    au < down ; 2013 ; Vadose Zone Journal Volume 12 ; 12 >
+    au < down ; 2014 ; Vadose Zone Journal Volume 13 ; 13 >
+    au < down ; 2015 ; Vadose Zone Journal Volume 14 ; 14 >
+    au < down ; 2016 ; Vadose Zone Journal Volume 15 ; 15 >
+    au < down ; 2017 ; Vadose Zone Journal Volume 16 ; 16 >
+    au < down ; 2018 ; Vadose Zone Journal Volume 17 ; 17 >
+    au < doNotProcess ; 2019 ; Vadose Zone Journal Volume 18 ; 18 >
+
+  }
+
+}
