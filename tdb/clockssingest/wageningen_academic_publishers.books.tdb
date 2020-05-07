@@ -28,6 +28,8 @@
    au < finished ; finished ; 2010 ; 9789086861590 ; 9789086867158 ; 9789086867158 ; Gender, AIDS and food security: Culture and vulnerability in rural Cote d'Ivoire (9789086867158) ; http://www.wageningenacademic.com/ ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2010 ; 9789086861583 ; 9789086867141 ; 9789086867141 ; Intrahousehold resource allocation and well-being: The case of rural households in Senegal (9789086867141) ; http://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 9789086861460 ; 9789086867004 ; 9789086867004 ; Single women, land and livelihood vulnerability in a communal area in Zimbabwe (9789086867004) ; http://www.wageningenacademic.com/ ;  >
+   au < exists ; exists ; 2010 ; 9789086861583 ; 9789086867141 ; 9789086867141 ;  Intrahousehold resource allocation and well-being (9789086867141); https://www.wageningenacademic.com/ ; >
+   au < exists ; exists ; 2010 ; 9789086861590 ; 9789086867158 ; 9789086867158 ; Gender, AIDS and food security (9789086867158) ; https://www.wageningenacademic.com/ ; >
 
  }
 
@@ -133,6 +135,7 @@
    au < finished ; finished ; 2010 ; 9789086860913 ; 9789086866984 ; 9789086866984 ; Olfaction in vector-host interactions (9789086866984) ; http://www.wageningenacademic.com/ ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2013 ; 9789086861880 ; 9789086867448 ; 9789086867448 ; Ecology of parasite-vector interactions (9789086867448) ; http://www.wageningenacademic.com/ ;  >
    au < finished ; finished ; 2018 ; 9789086868636 ; 9789086863150 ; 9789086863150 ; Pests and vector-borne diseases in the livestock industry (9789086863150) ; https://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
+   au < expected ; exists ; 2020 ; 9789086863440 ; 9789086868957 ; 9789086868957 ; Innovative strategies for vector control (9789086868957) ; https://www.wageningenacademic.com/ ; >
 
  }
 
@@ -169,8 +172,9 @@
    au < finished ; finished ; 2012 ; 9789086861941 ; 9789086867509 ; 9789086867509 ; Regulating food law: Risk analysis and the precautionary principle as general principles of EU food law (9789086867509) ; http://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2013 ; 9789086862399 ; 9789086867912 ; 9789086867912 ; The enforceability of the human right to adequate food: A comparative study (9789086867912) ; http://www.wageningenacademic.com/ ;  >
    au < finished ; finished ; 2014 ; 9789086862511 ; 9789086868018 ; 9789086868018 ; From agricultural to food law: The new scenario (9789086868018) ; http://www.wageningenacademic.com/ ;  >
-   au < exists ; exists ; 2014 ; 9789086862467 ; 9789086862467 ; 9789086862467 ; EU Food Law Handbook (9789086862467) ; https://www.wageningenacademic.com/ ;  >
+   au < exists ; exists ; 2014 ; 9789086862467 ; 9789086862467 ; 9789086862467 ; EU Food Law Handbook (9789086862467) ; https://www.wageningenacademic.com/ ; >
    au < deepCrawl ; exists ; 2019 ; 9789086868858 ; 9789086863341 ; 9789086863341 ; The functional field of food law (9789086863341) ; https://www.wageningenacademic.com/ ;  >
+   au < exists ; exists ; 2020 ; 9789086863464 ; 9789086868971 ; 9789086868971 ; The pursuit of sustainable agriculture in EU free trade agreements (9789086868971) ; https://www.wageningenacademic.com/ ;  >
 
  }
 
@@ -205,8 +209,8 @@
   >
    au < finished ; finished ; 2007 ; 9789086860500 ; 9789086866205 ; 9789086866205 ; Environmental management in the Dutch food and beverage industry: A longitudinal study into the joint impact of business network and firm characteristics on the adoption of environmental management capabilities (9789086866205) ; http://www.wageningenacademic.com/ ;  >
    au < finished ; finished ; 2007 ; 9789086860562 ; 9789086866281 ; 9789086866281 ; Strategic alignment of innovation to business: Balancing technology and markets in technology-based industries (9789086866281) ; http://www.wageningenacademic.com/ ; reingest2.clockss.org:8085 >
-   au < finished ; finished ; 2009 ; 9789086861316 ; 9789086866786 ; 9789086866786 ; Product innovation in the Dutch food and beverage industry: A study on the impact of the innovation process, strategy and network on the product’s short and long term market performance (9789086866786) ; http://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2009 ; 9789086861019 ; 9789086866557 ; 9789086866557 ; Profiting from external knowledge: How firms use different knowledge acquisition strategies to improve their innovation performance (9789086866557) ; http://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2009 ; 9789086861316 ; 9789086866786 ; 9789086866786 ; Product innovation in the Dutch food and beverage industry: A study on the impact of the innovation process, strategy and network on the product’s short and long term market performance (9789086866786) ; http://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
 
  }
 
@@ -216,14 +220,14 @@
    eissn = 1874-7663 ;
    type = bookSeries
   >
-   au < finished ; finished ; 2007 ; 9789086860494 ; 9789086866199 ; 9789086866199 ; Headquarters-subsidiary relationship governance in emerging markets of Central Eastern Europe: A study in Poland (9789086866199) ; http://www.wageningenacademic.com/ ;  >
-   au < finished ; finished ; 2007 ; 9789086860555 ; 9789086866274 ; 9789086866274 ; Integration and self regulation of quality management in Dutch agri-food supply chains: A cross-chain analysis of the poultry meat, the fruit and vegetable and the flower and potted plant chains (9789086866274) ; http://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
-   au < finished ; finished ; 2007 ; 9789086860548 ; 9789086866212 ; 9789086866212 ; Quality management and strategic alliances in the mango supply chain from Costa Rica: An interdisciplinary approach for analysing coordination, incentives and governance (9789086866212) ; http://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2007 ; 9789086860388 ; 9789086866021 ; 9789086866021 ; The role of Guanxi in buyer-seller relationships in China: A survey of vegetable supply chains in Jiangsu Province (9789086866021) ; http://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2007 ; 9789086860494 ; 9789086866199 ; 9789086866199 ; Headquarters-subsidiary relationship governance in emerging markets of Central Eastern Europe: A study in Poland (9789086866199) ; http://www.wageningenacademic.com/ ;  >
+   au < finished ; finished ; 2007 ; 9789086860548 ; 9789086866212 ; 9789086866212 ; Quality management and strategic alliances in the mango supply chain from Costa Rica: An interdisciplinary approach for analysing coordination, incentives and governance (9789086866212) ; http://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2007 ; 9789086860555 ; 9789086866274 ; 9789086866274 ; Integration and self regulation of quality management in Dutch agri-food supply chains: A cross-chain analysis of the poultry meat, the fruit and vegetable and the flower and potted plant chains (9789086866274) ; http://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2009 ; 9789086860920 ; 9789086866540 ; 9789086866540 ; Cooperation for competition: Linking Ethiopian farmers to markets (9789086866540) ; http://www.wageningenacademic.com/ ;  >
-   au < finished ; finished ; 2009 ; 9789086861118 ; 9789086866762 ; 9789086866762 ; Logistics outsourcing in the food processing industry: A study in the Netherlands and Taiwan (9789086866762) ; http://www.wageningenacademic.com/ ; reingest2.clockss.org:8085 >
-   au < finished ; finished ; 2009 ; 9789086861101 ; 9789086866847 ; 9789086866847 ; Supply chain integration, quality management and firm performance of pork processing industry in China (9789086866847) ; http://www.wageningenacademic.com/ ;  >
    au < finished ; finished ; 2009 ; 9789086861026 ; 9789086866595 ; 9789086866595 ; The organisation of transactions: Studying supply networks using gaming simulation (9789086866595) ; http://www.wageningenacademic.com/ ;  >
+   au < finished ; finished ; 2009 ; 9789086861101 ; 9789086866847 ; 9789086866847 ; Supply chain integration, quality management and firm performance of pork processing industry in China (9789086866847) ; http://www.wageningenacademic.com/ ;  >
+   au < finished ; finished ; 2009 ; 9789086861118 ; 9789086866762 ; 9789086866762 ; Logistics outsourcing in the food processing industry: A study in the Netherlands and Taiwan (9789086866762) ; http://www.wageningenacademic.com/ ; reingest2.clockss.org:8085 >
 
  }
 
@@ -234,14 +238,14 @@
    type = bookSeries
   >
    au < finished ; finished ; 2006 ; 9789076998961 ; 9789086865888 ; 9789086865888 ; Heterodox views on economics and the economy of the global society (9789086865888) ; http://www.wageningenacademic.com/ ; reingest5.clockss.org:8082 >
-   au < finished ; finished ; 2007 ; 9789086860517 ; 9789086866243 ; 9789086866243 ; Changing families and their lifestyles (9789086866243) ; http://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
-   au < finished ; finished ; 2007 ; 9789086860470 ; 9789086866182 ; 9789086866182 ; Development economics between markets and institutions: Incentives for growth, food security and sustainable use of the environment (9789086866182) ; http://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
-   au < finished ; finished ; 2007 ; 9789086860395 ; 9789086866250 ; 9789086866250 ; Imaging the future: Geo-visualisation for participatory spatial planning in Europe (9789086866250) ; http://www.wageningenacademic.com/ ; reingest3.clockss.org:8083 >
    au < exists ; exists ; 2007 ; 9789086860012 ; 9789086860012 ; 9789086860012 ; Decision science (9789086860012) ; https://www.wageningenacademic.com/ ;  >
+   au < finished ; finished ; 2007 ; 9789086860395 ; 9789086866250 ; 9789086866250 ; Imaging the future: Geo-visualisation for participatory spatial planning in Europe (9789086866250) ; http://www.wageningenacademic.com/ ; reingest3.clockss.org:8083 >
+   au < finished ; finished ; 2007 ; 9789086860470 ; 9789086866182 ; 9789086866182 ; Development economics between markets and institutions: Incentives for growth, food security and sustainable use of the environment (9789086866182) ; http://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2007 ; 9789086860517 ; 9789086866243 ; 9789086866243 ; Changing families and their lifestyles (9789086866243) ; http://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2009 ; 9789086860876 ; 9789086866816 ; 9789086866816 ; Research in action: Theories and practices for innovation and social change (9789086866816) ; http://www.wageningenacademic.com/ ; reingest3.clockss.org:8083 >
+   au < exists ; exists ; 2010 ; 9789086860975 ; 9789086860975 ; 9789086860975 ; Space and economics (9789086860975) ; https://www.wageningenacademic.com/ ;  >
    au < finished ; finished ; 2010 ; 9789086861330 ; 9789086866939 ; 9789086866939 ; Five centuries of farming: A short history of Dutch agriculture 1500 - 2000 (9789086866939) ; http://www.wageningenacademic.com/ ;  >
    au < finished ; finished ; 2010 ; 9789086861392 ; 9789086866717 ; 9789086866717 ; Food, diversity, vulnerability and social change: Research findings from insular Southeast Asia (9789086866717) ; http://www.wageningenacademic.com/ ; reingest2.clockss.org:8085 >
-   au < exists ; exists ; 2010 ; 9789086860975 ; 9789086860975 ; 9789086860975 ; Space and economics (9789086860975) ; https://www.wageningenacademic.com/ ;  >
    au < finished ; finished ; 2011 ; 9789086861675 ; 9789086867240 ; 9789086867240 ; Knowledge in action: The search for collaborative research for sustainable landscape development (9789086867240) ; http://www.wageningenacademic.com/ ;  >
    au < finished ; finished ; 2012 ; 9789086861347 ; 9789086861682 ; 9789086861682 ; Unlocking markets to smallholders: Lessons from  South Africa (9789086861682) ; http://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2013 ; 9789086862214 ; 9789086867752 ; 9789086867752 ; The arena of everyday life (9789086867752) ; http://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
@@ -255,9 +259,9 @@
    type = bookSeries
   >
    au < finished ; finished ; 2004 ; 9789076998473 ; 9789086865338 ; 9789086865338 ; WAAP Book of the year 2003: A review of Livestock Systems Developments and Researches (9789086865338) ; http://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
-   au < finished ; finished ; 2005 ; 9789076998671 ; 9789086865642 ; 9789086865642 ; Animal production and animal science worldwide: WAAP Book of the Year 2005 (9789086865642) ; http://www.wageningenacademic.com/ ;  >
-   au < finished ; finished ; 2007 ; 9789086860340 ; 9789086866151 ; 9789086866151 ; Animal production and animal science worldwide: WAAP book of the year 2006 (9789086866151) ; http://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
-   au < finished ; finished ; 2009 ; 9789086860685 ; 9789086866564 ; 9789086866564 ; Animal production and animal science worldwide: WAAP book of the year 2007 (9789086866564) ; http://www.wageningenacademic.com/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2005 ; 9789076998671 ; 9789086865642 ; 9789086865642 ; WAAP Book of the Year 2005 (9789086865642) ; http://www.wageningenacademic.com/ ;  >
+   au < finished ; finished ; 2007 ; 9789086860340 ; 9789086866151 ; 9789086866151 ; WAAP book of the year 2006 (9789086866151) ; http://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2009 ; 9789086860685 ; 9789086866564 ; 9789086866564 ; WAAP book of the year 2007 (9789086866564) ; http://www.wageningenacademic.com/ ; reingest2.clockss.org:8085 >
 
  }
 
