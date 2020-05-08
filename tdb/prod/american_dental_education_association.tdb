@@ -17,6 +17,7 @@
     param[base_url] = http://www.jdentaled.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
+    #move to Wiley
 
     au < HighWirePressH20Plugin ; released ; 1965 ; Journal of Dental Education Volume 29 [tables of contents only] ; 29 >
     au < HighWirePressH20Plugin ; released ; 1966 ; Journal of Dental Education Volume 30 [tables of contents only] ; 30 >
@@ -76,8 +77,8 @@
     au < HighWirePressH20Plugin ; released ; 2015 ; Journal of Dental Education Volume 79 ; 79 >
     au < HighWirePressH20Plugin ; released ; 2016 ; Journal of Dental Education Volume 80 ; 80 >
     au < HighWirePressH20Plugin ; released ; 2017 ; Journal of Dental Education Volume 81 ; 81 >
-    au < HighWireDrupalPlugin ; exists ; 2018 ; Journal of Dental Education Volume 82 ; 82 >
-    au < HighWireDrupalPlugin ; exists ; 2019 ; Journal of Dental Education Volume 83 ; 83 >
+    au < HighWireDrupalPlugin ; doNotProcess ; 2018 ; Journal of Dental Education Volume 82 ; 82 >
+    au < HighWireDrupalPlugin ; doNotProcess ; 2019 ; Journal of Dental Education Volume 83 ; 83 >
 
   }
 
