@@ -8,7 +8,7 @@
     info[poller] = 5
   >
   
-  #20200324. Many AUs marked notReady because of 0 hash on abstracts page, full text page, and toc.
+  #20200324. Many AUs marked notReady because of 0 hash on abstracts page, full text page, and toc. See LXPLUG-1992
   #Released 2019 AUs because preservation does not depend on perfect hashing.
   
   comment[platform] = Atypon
