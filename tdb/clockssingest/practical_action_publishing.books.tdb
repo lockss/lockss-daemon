@@ -21,13 +21,13 @@
 
    au < finished ; finished ; 2013 ; 9781853398766 ; 9781780448763 ; 9781780448763 ; Peasants and the Art of Farming (9781780448763) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2013 ; 9781853398780 ; 9781780448794 ; 9781780448794 ; Food Regimes and Agrarian Questions (9781780448794) ; http://www.developmentbookshelf.com/ ; >
-   au < exists ; exists ; 2015 ; 9781780448749 ; 9781780448756 ; 9781780448749 ; Sustainable Livelihoods and Rural Development ; https://www.developmentbookshelf.com/ ;  >
+   au < manifest ; exists ; 2015 ; 9781780448749 ; 9781780448756 ; 9781780448749 ; Sustainable Livelihoods and Rural Development ; https://www.developmentbookshelf.com/ ;  >
    au < frozen ; exists ; 2016 ; 9781853399169 ; 9781780449166 ; 9781780449166 ; Agrarian Change, Migration and Development ; https://www.developmentbookshelf.com/ ;  >
    au < frozen ; exists ; 2016 ; 9781853399145 ; 9781780449142 ; 9781780449142 ; Political Dynamics of Transnational Agrarian Movements ; https://www.developmentbookshelf.com/ ; >
    au < frozen ; exists ; 2017 ; 9781853399954 ; 9781780449944 ; 9781780449944 ; Agroecology: Science and Politics ; https://www.developmentbookshelf.com/ ; >
    au < frozen ; exists ; 2018 ; 9781853399930 ; 9781780449920 ; 9781780449920 ; Speculative Harvests ; https://www.developmentbookshelf.com/ ; >
-   au < exists ; exists ; 2019 ; 9781788530514 ; 9781788530538 ; 9781788530538 ; Counterrevolution: The Global Rise of the Far Right ; https://www.developmentbookshelf.com/ ; >
-   au < exists ; exists ; 2020 ; 9781788530101 ; 9781780447421 ; 9781780447421 ; Agriculture and the Generation Problem  ; https://www.developmentbookshelf.com/ ;  >
+   au < manifest ; exists ; 2019 ; 9781788530514 ; 9781788530538 ; 9781788530538 ; Counterrevolution: The Global Rise of the Far Right ; https://www.developmentbookshelf.com/ ; >
+   au < manifest ; exists ; 2020 ; 9781788530101 ; 9781780447421 ; 9781780447421 ; Agriculture and the Generation Problem  ; https://www.developmentbookshelf.com/ ;  >
 
  }
 
@@ -55,8 +55,8 @@
   >
    #series = cds
 
-   au < exists ; exists ; 2019 ; 9781788530712 ; 9781788530743 ; 9781788530743 ; Politics Rules: Power, Globalization and Development ; https://www.developmentbookshelf.com/ ; >
-   au < exists ; exists ; 2019 ; 9781788530927 ; 9781788530941 ; 9781788530941 ; Development in Latin America: Toward a New Future ; https://www.developmentbookshelf.com/ ; >
+   au < manifest ; exists ; 2019 ; 9781788530712 ; 9781788530743 ; 9781788530743 ; Politics Rules: Power, Globalization and Development ; https://www.developmentbookshelf.com/ ; >
+   au < manifest ; exists ; 2019 ; 9781788530927 ; 9781788530941 ; 9781788530941 ; Development in Latin America: Toward a New Future ; https://www.developmentbookshelf.com/ ; >
 
  }
 
@@ -579,12 +579,12 @@
    au < frozen ; exists ; 2017 ; 9781853399602 ; 9781780446660 ; 9781780446660 ; Perspectives énergétiques des populations pauvres 2016 ; https://www.developmentbookshelf.com/ ;  >
    au < frozen ; exists ; 2017 ; 9781853399848 ; 9781780446868 ; 9781780446868 ; Perspectives énergétiques des populations pauvres 2017 ; https://www.developmentbookshelf.com/ ;  >
    au < frozen ; exists ; 2017 ; 9781853399831 ; 9781780446813 ; 9781780446813 ; Poor People's Energy Outlook 2017 ; https://www.developmentbookshelf.com/ ; >
-   au < exists ; exists ; 2018 ; 9781788530323 ; 9781780447568 ; 9781780447568 ; Panorama energético de los pobres 2018 ; https://www.developmentbookshelf.com/ ; >
-   au < exists ; exists ; 2018 ; 9781788530309 ; 9781780447544 ; 9781780447544 ; Poor people’s energy outlook 2018 ; https://www.developmentbookshelf.com/ ; >
-   au < exists ; exists ; 2018 ; 9781788530316 ; 9781780447551 ; 9781780447551 ; Perspectives énergétiques des populations pauvres 2018 ; https://www.developmentbookshelf.com/ ; >
-   au < exists ; exists ; 2019 ; 9781788530378 ; 9781780447834 ; 9781780447834 ; Poor people's energy outlook 2019 ; https://www.developmentbookshelf.com/ ; >
-   au < exists ; exists ; 2019 ; 9781788530385 ; 9781780447841 ; 9781780447841 ; Perspectives énergétiques des populations pauvres 2019 ; https://www.developmentbookshelf.com/ ; >
-   au < exists ; exists ; 2019 ; 9781788530392 ; 9781780447858 ; 9781780447858 ; Panorama de la pobreza energética 2019 ; https://www.developmentbookshelf.com/ ; >
+   au < manifest ; exists ; 2018 ; 9781788530323 ; 9781780447568 ; 9781780447568 ; Panorama energético de los pobres 2018 ; https://www.developmentbookshelf.com/ ; >
+   au < manifest ; exists ; 2018 ; 9781788530309 ; 9781780447544 ; 9781780447544 ; Poor people’s energy outlook 2018 ; https://www.developmentbookshelf.com/ ; >
+   au < manifest ; exists ; 2018 ; 9781788530316 ; 9781780447551 ; 9781780447551 ; Perspectives énergétiques des populations pauvres 2018 ; https://www.developmentbookshelf.com/ ; >
+   au < manifest ; exists ; 2019 ; 9781788530378 ; 9781780447834 ; 9781780447834 ; Poor people's energy outlook 2019 ; https://www.developmentbookshelf.com/ ; >
+   au < manifest ; exists ; 2019 ; 9781788530385 ; 9781780447841 ; 9781780447841 ; Perspectives énergétiques des populations pauvres 2019 ; https://www.developmentbookshelf.com/ ; >
+   au < manifest ; exists ; 2019 ; 9781788530392 ; 9781780447858 ; 9781780447858 ; Panorama de la pobreza energética 2019 ; https://www.developmentbookshelf.com/ ; >
 
  }
 
@@ -741,8 +741,8 @@
    au < finished ; finished ; 2011 ; 9781853397264 ; 9781780440217 ; 9781780440217 ; Gender, Faith and Development (9781780440217) ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
    au < frozen ; exists ; 2018 ; 9781788530071 ; 9781780447162 ; 9781780447162 ; Gender, Business and Enterprise ; https://www.developmentbookshelf.com/ ; >
    au < frozen ; exists ; 2018 ; 9781788530095 ; 9781780447186 ; 9781780447186 ; Gender, Development and Care ; https://www.developmentbookshelf.com/ ; >
-   au < exists ; exists ; 2018 ; 9781788530132 ; 9781780447278 ; 9781780447278 ; Gender and Inequalities ; https://www.developmentbookshelf.com/ ; >
-   au < exists ; exists ; 2019 ; 9781788530484 ; 9781780448664 ; 9781780448664 ; Working with Men for Gender Equality ; https://www.developmentbookshelf.com/ ; >
+   au < manifest ; exists ; 2018 ; 9781788530132 ; 9781780447278 ; 9781780447278 ; Gender and Inequalities ; https://www.developmentbookshelf.com/ ; >
+   au < manifest ; exists ; 2019 ; 9781788530484 ; 9781780448664 ; 9781780448664 ; Working with Men for Gender Equality ; https://www.developmentbookshelf.com/ ; >
 
  }
 
