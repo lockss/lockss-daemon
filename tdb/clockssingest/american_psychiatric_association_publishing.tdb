@@ -8,6 +8,9 @@
     info[poller] = 5
   >
   
+  #20200324. Many AUs marked notReady because of 0 hash on abstracts page, full text page, and toc. See LXPLUG-1992
+  #Released 2019 AUs because preservation does not depend on perfect hashing.
+  
   comment[platform] = Atypon
   plugin = org.lockss.plugin.atypon.ampsychpub.ClockssAmPsychPubAtyponPlugin
   implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
@@ -48,8 +51,48 @@
       au < notReady ; exists ; 2016 ; The American Journal of Psychiatry Volume 173 ; 173 ; >
       au < notReady ; exists ; 2017 ; The American Journal of Psychiatry Volume 174 ; 174 ; >
       au < notReady ; exists ; 2018 ; The American Journal of Psychiatry Volume 175 ; 175 ; >
-      au < notReady ; exists ; 2019 ; The American Journal of Psychiatry Volume 176 ; 176 ; >
+      au < crawling ; exists ; 2019 ; The American Journal of Psychiatry Volume 176 ; 176 ; >
       au < manifest ; exists ; 2020 ; The American Journal of Psychiatry Volume 177 ; 177 ; >
+
+    }
+    
+    {
+      title <
+        name = The American Journal of Psychotherapy ;
+        issn = 0002-9564 ;
+        eissn = 2575-6559 ;
+        issnl = 0002-9564
+      >
+
+        
+      param[base_url] = https://psychotherapy.psychiatryonline.org/
+      param[journal_id] = apt
+      # content starts from 1947 to current
+
+      au < manifest ; exists ; 1997 ; The American Journal of Psychiatry Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1998 ; The American Journal of Psychiatry Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1999 ; The American Journal of Psychiatry Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2000 ; The American Journal of Psychiatry Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2001 ; The American Journal of Psychiatry Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2002 ; The American Journal of Psychiatry Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2003 ; The American Journal of Psychiatry Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2004 ; The American Journal of Psychiatry Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2005 ; The American Journal of Psychiatry Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2006 ; The American Journal of Psychiatry Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2007 ; The American Journal of Psychiatry Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2008 ; The American Journal of Psychiatry Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2009 ; The American Journal of Psychiatry Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2010 ; The American Journal of Psychiatry Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2011 ; The American Journal of Psychiatry Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2012 ; The American Journal of Psychiatry Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2013 ; The American Journal of Psychiatry Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2014 ; The American Journal of Psychiatry Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2015 ; The American Journal of Psychiatry Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2016 ; The American Journal of Psychiatry Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2017 ; The American Journal of Psychiatry Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2018 ; The American Journal of Psychiatry Volume 22 ; 22 ; >
+      au < crawling ; exists ; 2019 ; The American Journal of Psychiatry Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2020 ; The American Journal of Psychiatry Volume 24 ; 24 ; >
 
     }
     
@@ -80,7 +123,7 @@
       au < notReady ; exists ; 2016 ; FOCUS Volume 14 ; 14 ; >
       au < notReady ; exists ; 2017 ; FOCUS Volume 15 ; 15 ; >
       au < notReady ; exists ; 2018 ; FOCUS Volume 16 ; 16 ; >
-      au < notReady ; exists ; 2019 ; FOCUS Volume 17 ; 17 ; >
+      au < crawling ; exists ; 2019 ; FOCUS Volume 17 ; 17 ; >
       au < manifest ; exists ; 2020 ; FOCUS Volume 18 ; 18 ; >
 
     }
@@ -118,7 +161,7 @@
       au < notReady ; exists ; 2016 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 28 ; 28 ; >
       au < notReady ; exists ; 2017 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 29 ; 29 ; >
       au < notReady ; exists ; 2018 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 30 ; 30 ; >
-      au < notReady ; exists ; 2019 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 31 ; 31 ; >
+      au < crawling ; exists ; 2019 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 31 ; 31 ; >
       au < manifest ; exists ; 2020 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 32 ; 32 ; >
 
     }
@@ -156,7 +199,7 @@
       au < notReady ; exists ; 2016 ; Psychiatric Services Volume 67 ; 67 ; >
       au < notReady ; exists ; 2017 ; Psychiatric Services Volume 68 ; 68 ; >
       au < notReady ; exists ; 2018 ; Psychiatric Services Volume 69 ; 69 ; >
-      au < notReady ; exists ; 2019 ; Psychiatric Services Volume 70 ; 70 ; >
+      au < crawling ; exists ; 2019 ; Psychiatric Services Volume 70 ; 70 ; >
       au < manifest ; exists ; 2020 ; Psychiatric Services Volume 71 ; 71 ; >
 
     }
@@ -170,7 +213,7 @@
       param[journal_id] = prcp
       # content starts from year 2019
 
-      au < notReady ; exists ; 2019 ; Psychiatric Research and Clinical Practice Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2019 ; Psychiatric Research and Clinical Practice Volume 1 ; 1 ; >
       au < expected ; exists ; 2020 ; Psychiatric Research and Clinical Practice Volume 2 ; 2 ; >
 
     }
