@@ -10,7 +10,7 @@
   #  param[base_url] = http://www.igi-global.com/
   implicit < status ; status2 ; year ; eisbn ; param[book_isbn] ; doi ; param[volume] ; name ; author ; param[base_url] ; hidden[proxy] >
   comment[down] = content not online, but AU has been added on ingest machines
-
+  #find a list of books from https://www.igi-global.com/distributors/books/title-list/
 
  {
   title <
