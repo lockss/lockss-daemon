@@ -85,6 +85,14 @@ public class AmPsychPubHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFac
         HtmlNodeFilters.tagWithAttribute("div", "class", "articleList"),
         // showPopup&citid=citart1
         HtmlNodeFilters.tagWithAttributeRegex("body", "class", "popupBody"),
+        // Starting 05/2020, the webpage no longer provide text for abstract and full text
+        // Instead, it just provide an image of their PDF file. Only article title and pubdate is in text.
+        // https://focus.psychiatryonline.org/doi/abs/10.1176/foc.7.4.foc475
+        HtmlNodeFilters.tagWithAttributeRegex("h1", "class", "citation__title"),
+        HtmlNodeFilters.tagWithAttributeRegex("body", "class", "epub-section"),
+        // https://focus.psychiatryonline.org/doi/full/10.1176/foc.7.4.foc475
+        HtmlNodeFilters.tagWithAttributeRegex("body", "class", "hlFld-Fulltext"),
+        HtmlNodeFilters.tagWithAttributeRegex("body", "class", "table-of-content")
     };
     
     // handled by parent: script, sfxlink, stylesheet, pdfplus file sise
