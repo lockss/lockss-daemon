@@ -1,10 +1,6 @@
 /*
- * $Id: IdentifierListOaiPmhCrawlSeed.java 39864 2015-02-18 09:10:24Z thib_gc $
- */
 
-/*
-
- Copyright (c) 2017 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2017-2020 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -38,20 +34,17 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.regex.Pattern;
-
+import org.dspace.xoai.model.oaipmh.Record;
+import org.dspace.xoai.serviceprovider.exceptions.BadArgumentException;
+import org.dspace.xoai.serviceprovider.model.Context;
+import org.dspace.xoai.serviceprovider.model.Context.KnownTransformer;
+import org.dspace.xoai.serviceprovider.parameters.ListRecordsParameters;
+import org.dspace.xoai.services.api.MetadataSearch;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 import org.lockss.util.Logger;
-
-import com.lyncode.xoai.model.oaipmh.Record;
-import com.lyncode.xoai.serviceprovider.exceptions.BadArgumentException;
-import com.lyncode.xoai.serviceprovider.model.Context;
-import com.lyncode.xoai.serviceprovider.model.Context.KnownTransformer;
-import com.lyncode.xoai.serviceprovider.parameters.ListRecordsParameters;
-import com.lyncode.xoai.services.api.MetadataSearch;
-
 
 public abstract class RecordFilteringOaiPmhCrawlSeed extends BaseOaiPmhCrawlSeed {
   private static Logger logger =

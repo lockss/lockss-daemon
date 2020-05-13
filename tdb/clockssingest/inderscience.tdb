@@ -7541,7 +7541,7 @@
       au < finished ; finished ; 2015 ; International Journal of Product Development Volume 20 ; 20 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; International Journal of Product Development Volume 21 ; 21 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2017-2018 ; International Journal of Product Development Volume 22 ; 22 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2019 ; International Journal of Product Development Volume 23 ; 23 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2019 ; International Journal of Product Development Volume 23 ; 23 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < manifest ; exists ; 2020 ; International Journal of Product Development Volume 24 ; 24 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -7745,7 +7745,7 @@
       au < doNotProcess ; doNotProcess ; 2009-2011 ; International Journal of Quality and Innovation Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2012-2014 ; International Journal of Quality and Innovation Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; >
       au < finished ; crawling ; 2016-2017 ; International Journal of Quality and Innovation Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2019 ; International Journal of Quality and Innovation Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2019 ; International Journal of Quality and Innovation Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < expected ; exists ; 2020 ; International Journal of Quality and Innovation Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
 
     }

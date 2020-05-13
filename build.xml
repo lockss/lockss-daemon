@@ -6,7 +6,7 @@
  Ant build file for LOCKSS daemon
 ========================================================================
 
-Copyright (c) 2000-2018 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2020 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -326,12 +326,13 @@ Args:
   <property name="ant-contrib.jar"      value="${lib}/ant-contrib-0.6.jar"/>
 
   <!-- Needed by XOAI -->
-  <property name="xoai-common.jar" value="${lib}/xoai-common-4.1.0.jar"/>
-  <property name="xoai-service-provider.jar" value="${lib}/xoai-service-provider-4.1.0-p2.jar"/>
+  <property name="xoai-common.jar" value="${lib}/xoai-common-4.2.0.jar"/>
+  <property name="xoai-service-provider.jar" value="${lib}/xoai-service-provider-4.2.0-p1.jar"/>
   <property name="xml-io.jar" value="${lib}/xml-io-1.0.3-p2.jar"/>
   <property name="httpcore.jar" value="${lib}/httpcore-4.3.2.jar"/>
   <property name="hamcrest-all.jar" value="${lib}/hamcrest-all-1.3.jar"/>
   <property name="stax2-api.jar" value="${lib}/stax2-api-3.0.4.jar"/>
+  <property name="woodstox-core-asl.jar" value="${lib}/woodstox-core-asl-4.4.1.jar"/>
   <property name="test-support.jar" value="${lib}/test-support-1.0.4.jar"/>
   <property name="httpclient.jar" value="${lib}/httpclient-4.3.1.jar"/>
 
@@ -591,6 +592,7 @@ Args:
     <pathelement path="${httpcore.jar}" />
     <pathelement path="${hamcrest-all.jar}" />
     <pathelement path="${stax2-api.jar}" />
+    <pathelement path="${woodstox-core-asl.jar}" />
     <pathelement path="${test-support.jar}" />
     <pathelement path="${httpclient.jar}" />
     <!-- Needed by OIOSAML -->
