@@ -991,66 +991,68 @@ public class TestAmPsychPubHtmlFilterFactory extends LockssTestCase {
       "  </body>\n" + 
       "</html>";
   
-  private static final String art1ContentHashFiltered = 
-      "<div class=\"widget literatumPublicationContentWidget none  widget-none  widget-compact-all\" >\n" + 
-      "               <div class=\"wrapped \">\n" + 
-      "                 <div class=\"widget-body body body-none  body-compact-all\">\n" + 
-      "                   <div class=\"articleMeta ja\">\n" + 
-      "                     <div class=\"tocHeading\">\n" + 
-      "                       <b>Editor's Note</b>\n" + 
-      "                     </div>\n" + 
-      "                     <div class=\"publicationContentTitle\">\n" + 
-      "                       <h1>\n" + 
-      "        EDITOR'S NOTE\n" + 
-      "                       </h1>\n" + 
-      "                     </div>\n" + 
-      "                     \n" + 
-      "                     <div class=\"publicationContentAuthors\">\n" + 
-      "                       <div class=\"hlFld-ContribAuthor\"></div>\n" + 
-      "                     </div>\n" + 
-      "                     \n" + 
-      "                     <div class=\"authInfo authInfoLink\" style=\"display: none;\"><a href=\"#\" onclick=\"scrollToAuthAndArtInformation();\">View Author and Article Information</a></div>\n" + 
-      "                     <div>\n" + 
-      "                     </div>\n" + 
-      "                     <div class=\"publicationContentDoi publicationContentEpubDate\">\n" + 
-      "                       Published online: March 01, 2017\n" + 
-      "                       &nbsp;|&nbsp;\n" + 
-      "                       <a href=\"https://doi.org/10.1176/appi.ajp.2017.1743editor\">https://doi.org/10.1176/appi.ajp.2017.1743editor</a>\n" + 
-      "                     </div>\n" + 
-      "                   </div>\n" + 
-      "                   <div class=\"articleToolsDropZone\" data-pb-dropzone=\"articleToolsDropZone\">\n" + 
-      "                   </div>\n" + 
-      "                   <div class=\"publication-tabs ja\">\n" + 
-      "                     <div class=\"tabs tabs-widget\">\n" + 
-      "                       \n" + 
-      "                       <div class=\"tab-content \">\n" + 
-      "        <a ></a>\n" + 
-      "        <div class=\"tab tab-pane active\">\n" + 
-      "    <article class=\"article\">\n" + 
-      "      <p class=\"fulltext\"></p>\n" + 
-      "      \n" + 
-      "      <div class=\"hlFld-Abstract\">\n" + 
-      "    <p class=\"fulltext\"></p>\n" + 
-      "      </div>\n" + 
-      "      \n" + 
-      "      <div class=\"hlFld-Fulltext\">\n" + 
-      "    <p>The <i>Journal</i> was notified about a complaint (" +
-      "<a class=\"ext-link\" href=\"http://ajp.psychiatryonline.org/doi/full/10.1176/appi.ajp.158.6.906\" target=\"_blank\">" +
-      "http://dx.doi.org/10.1176/appi.ajp.158.6.906</a>).</p>\n" + 
-      "      </div>\n" + 
-      "      \n" + 
-      "      \n" + 
-      "    </article>\n" + 
-      "        </div>\n" + 
-      "        \n" + 
-      "        \n" + 
-      "                       </div>\n" + 
-      "                     </div>\n" + 
-      "                   </div>\n" + 
-      "                   <input  value=\"View Large Image\" type=\"hidden\">\n" + 
-      "                 </div>\n" + 
-      "               </div>\n" + 
-      "             </div>";
+  private static final String art1ContentHashFiltered = "<div class=\"widget literatumPublicationContentWidget none  widget-none  widget-compact-all\" >\n" +
+          "               <div class=\"wrapped \">\n" +
+          "                 <div class=\"widget-body body body-none  body-compact-all\">\n" +
+          "                   <div class=\"articleMeta ja\">\n" +
+          "                     <div class=\"tocHeading\">\n" +
+          "                       <b>Editor's Note</b>\n" +
+          "                     </div>\n" +
+          "                     <div class=\"publicationContentTitle\">\n" +
+          "                       <h1>\n" +
+          "        EDITOR'S NOTE\n" +
+          "                       </h1>\n" +
+          "                     </div>\n" +
+          "                     \n" +
+          "                     <div class=\"publicationContentAuthors\">\n" +
+          "                       <div class=\"hlFld-ContribAuthor\"></div>\n" +
+          "                     </div>\n" +
+          "                     \n" +
+          "                     <div class=\"authInfo authInfoLink\" style=\"display: none;\"><a href=\"#\" onclick=\"scrollToAuthAndArtInformation();\">View Author and Article Information</a></div>\n" +
+          "                     <div>\n" +
+          "                     </div>\n" +
+          "                     <div class=\"publicationContentDoi publicationContentEpubDate\">\n" +
+          "                       Published online: March 01, 2017\n" +
+          "                       &nbsp;|&nbsp;\n" +
+          "                       <a href=\"https://doi.org/10.1176/appi.ajp.2017.1743editor\">https://doi.org/10.1176/appi.ajp.2017.1743editor</a>\n" +
+          "                     </div>\n" +
+          "                   </div>\n" +
+          "                   <div class=\"articleToolsDropZone\" data-pb-dropzone=\"articleToolsDropZone\">\n" +
+          "                   </div>\n" +
+          "                   <div class=\"publication-tabs ja\">\n" +
+          "                     <div class=\"tabs tabs-widget\">\n" +
+          "                       \n" +
+          "                       <div class=\"tab-content \">\n" +
+          "        <a ></a>\n" +
+          "        <div class=\"tab tab-pane active\">\n" +
+          "    <article class=\"article\">\n" +
+          "      <p class=\"fulltext\"></p>\n" +
+          "      \n" +
+          "      <div class=\"hlFld-Abstract\">\n" +
+          "    <p class=\"fulltext\"></p>\n" +
+          "      </div>\n" +
+          "      \n" +
+          "      <div class=\"hlFld-Fulltext\">\n" +
+          "    <p>The <i>Journal</i> was notified about a complaint (<a class=\"ext-link\" href=\"http://ajp.psychiatryonline.org/doi/full/10.1176/appi.ajp.158.6.906\" target=\"_blank\">http://dx.doi.org/10.1176/appi.ajp.158.6.906</a>).</p>\n" +
+          "      </div>\n" +
+          "      \n" +
+          "      \n" +
+          "    </article>\n" +
+          "        </div>\n" +
+          "        \n" +
+          "        \n" +
+          "                       </div>\n" +
+          "                     </div>\n" +
+          "                   </div>\n" +
+          "                   <input  value=\"View Large Image\" type=\"hidden\">\n" +
+          "                 </div>\n" +
+          "               </div>\n" +
+          "             </div><div class=\"hlFld-Abstract\">\n" +
+          "    <p class=\"fulltext\"></p>\n" +
+          "      </div><div class=\"hlFld-Fulltext\">\n" +
+          "    <p>The <i>Journal</i> was notified about a complaint (<a class=\"ext-link\" href=\"http://ajp.psychiatryonline.org/doi/full/10.1176/appi.ajp.158.6.906\" target=\"_blank\">http://dx.doi.org/10.1176/appi.ajp.158.6.906</a>).</p>\n" +
+          "      </div>";
+
    /*
   private static final String art1ContentHashFiltered = 
       "" + 
@@ -1107,8 +1109,18 @@ public class TestAmPsychPubHtmlFilterFactory extends LockssTestCase {
       " 99 : 9 ," + 
       " ";
    */
+
+  // Publisher updated their html source on 05/2020
+  private static final String updateHtmlSource = "" +
+          "<h1 class=\"citation__title\">h1 title</h1>\n" +
+          "<div class=\"epub-section\">Article title</div>\n" +
+          "<div class=\"hlFld-Abstract\">Abstracted content</div>\n" +
+          "<div class=\"hlFld-Fulltext\">Full text content</div>\n" +
+          "<div class=\"table-of-content\">Toc page content</div>";
   
-  
+  private static final String filteredUpdateHtmlSource = "<h1 class=\"citation__title\">h1 title</h1><div class=\"epub-section\">Article title</div><div class=\"hlFld-Abstract\">Abstracted content</div><div class=\"hlFld-Fulltext\">Full text content</div><div class=\"table-of-content\">Toc page content</div>";
+
+
   protected ArchivalUnit createAu()
       throws ArchivalUnit.ConfigurationException {
     return PluginTestUtil.createAndStartAu(PLUGIN_ID, thisAuConfig());
@@ -1130,7 +1142,7 @@ public class TestAmPsychPubHtmlFilterFactory extends LockssTestCase {
         new StringInputStream(nameToHash), Constants.ENCODING_UTF_8);
 
     String hashed = StringUtil.fromInputStream(actIn);
-
+    
     assertEquals(expectedStr, hashed);
   }
   
@@ -1170,6 +1182,7 @@ public class TestAmPsychPubHtmlFilterFactory extends LockssTestCase {
       doFilterTest(mau, variantFact, tocContent, tocContentHashFiltered);
       doFilterTest(mau, variantFact, art1Content, art1ContentHashFiltered);
       doFilterTest(mau, variantFact, citContent, citContentHashFiltered);
+      doFilterTest(mau, variantFact, updateHtmlSource, filteredUpdateHtmlSource);
      }
    }
   
