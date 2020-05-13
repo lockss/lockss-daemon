@@ -1,10 +1,6 @@
 /*
- * $Id: TestFollowLinkCrawler2.java 41835 2015-05-04 06:27:00Z tlipkis $
- */
 
-/*
-
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2020 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -52,8 +48,6 @@ import org.lockss.test.MockCrawler.MockCrawlerFacade;
 import org.lockss.state.*;
 import org.lockss.alert.*;
 import org.lockss.util.urlconn.*;
-
-import com.lyncode.xoai.model.oaipmh.Header.Status;
 
 import org.lockss.extractor.*;
 

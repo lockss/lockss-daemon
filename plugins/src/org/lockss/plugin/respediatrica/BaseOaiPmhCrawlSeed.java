@@ -1,10 +1,6 @@
 /*
- * $Id: BaseOaiPmhCrawlSeed.java,v 1.1 2014-11-12 20:11:23 wkwilson Exp $
- */
 
-/*
-
-Copyright (c) 2017 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2017-2020 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,9 +28,9 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.respediatrica;
 
-import com.lyncode.xoai.model.oaipmh.Granularity;
-import com.lyncode.xoai.serviceprovider.ServiceProvider;
-import com.lyncode.xoai.serviceprovider.model.Context;
+import org.dspace.xoai.model.oaipmh.Granularity;
+import org.dspace.xoai.serviceprovider.ServiceProvider;
+import org.dspace.xoai.serviceprovider.model.Context;
 import org.lockss.config.Configuration;
 import org.lockss.config.Configuration.InvalidParam;
 import org.lockss.crawler.BaseCrawlSeed;

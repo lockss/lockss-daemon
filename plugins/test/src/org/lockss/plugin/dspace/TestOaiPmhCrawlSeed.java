@@ -1,10 +1,6 @@
 /*
- * $Id: TestOaiPmhCrawlSeed.java 40241 2015-03-05 21:05:30Z thib_gc $
- */
 
-/*
-
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2020 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,8 +31,9 @@ package org.lockss.plugin.dspace;
 import java.io.IOException;
 import java.text.*;
 import java.util.*;
-
 import org.apache.commons.collections.ListUtils;
+import org.dspace.xoai.model.oaipmh.Header;
+import org.dspace.xoai.serviceprovider.ServiceProvider;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
@@ -46,9 +43,6 @@ import org.lockss.plugin.*;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 import org.lockss.test.*;
 import org.lockss.util.*;
-
-import com.lyncode.xoai.model.oaipmh.Header;
-import com.lyncode.xoai.serviceprovider.ServiceProvider;
 
 public class TestOaiPmhCrawlSeed extends LockssTestCase {
   
