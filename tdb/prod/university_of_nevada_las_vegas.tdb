@@ -6,36 +6,67 @@
   >
   
   {
-  
-    title < 
+
+    title <
+      name = Asian/Pacific Island Nursing Journal ;
+      eissn = 2373-6658 ;
+      issnl = 2373-6658
+    >
+
+    plugin = org.lockss.plugin.bepress.BePressPlugin
+    param[base_url] = http://digitalscholarship.unlv.edu/
+    param[journal_abbr] = apin
+    implicit < status ; year ; name ; param[volume] >
+
+      #move to University of Hawai'i Press, 2018
+
+      au < exists ; 2016 ; Asian/Pacific Island Nursing Journal Volume 1 ; 1 >
+      au < exists ; 2017 ; Asian/Pacific Island Nursing Journal Volume 2 ; 2 >
+      au < exists ; 2018 ; Asian/Pacific Island Nursing Journal Volume 3 ; 3 >
+
+  }
+
+  {
+    title <
       name = Journal of Praxis in Multicultural Education ;
       issn = 1931-0242 ;
       eissn = 2161-2978
     >
     
     plugin = org.lockss.plugin.bepress.BePressPlugin 
-    param[base_url] = http://digitalscholarship.unlv.edu/
+    #param[base_url] = http://digitalscholarship.unlv.edu/
     param[journal_abbr] = jpme
+    implicit < status ; year ; name ; param[volume] ; param[base_url] >
+
+    au < exists ; 2006 ; Journal of Praxis in Multicultural Education Volume 1 ; 1 ; https://digitalscholarship.unlv.edu/ >
+    au < exists ; 2007 ; Journal of Praxis in Multicultural Education Volume 2 ; 2 ; https://digitalscholarship.unlv.edu/ >
+    au < exists ; 2008 ; Journal of Praxis in Multicultural Education Volume 3 ; 3 ; https://digitalscholarship.unlv.edu/ >
+    au < exists ; 2009 ; Journal of Praxis in Multicultural Education Volume 4 ; 4 ; https://digitalscholarship.unlv.edu/ >
+    au < exists ; 2010 ; Journal of Praxis in Multicultural Education Volume 5 ; 5 ; https://digitalscholarship.unlv.edu/ >
+    au < exists ; 2011 ; Journal of Praxis in Multicultural Education Volume 6 ; 6 ; https://digitalscholarship.unlv.edu/ >
+    au < released ; 2012 ; Journal of Praxis in Multicultural Education Volume 7 ; 7 ; http://digitalscholarship.unlv.edu/ >
+    au < released ; 2013-2014 ; Journal of Praxis in Multicultural Education Volume 8 ; 8 ; http://digitalscholarship.unlv.edu/ >
+    au < released ; 2014 ; Journal of Praxis in Multicultural Education Volume 9 ; 9 ; http://digitalscholarship.unlv.edu/ >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Research in Technical Careers ;
+      eissn = 2578-2118
+    >
+
+    plugin = org.lockss.plugin.bepress.BePressPlugin
+    param[base_url] = https://digitalscholarship.unlv.edu/
+    param[journal_abbr] = jrtc
     implicit < status ; year ; name ; param[volume] >
 
-    {
-    param[base_url] = http://digitalscholarship.unlv.edu/
-    au < released ; 2012 ; Journal of Praxis in Multicultural Education Volume 7 ; 7 >
-    au < released ; 2013-2014 ; Journal of Praxis in Multicultural Education Volume 8 ; 8 >
-    au < released ; 2014 ; Journal of Praxis in Multicultural Education Volume 9 ; 9 >
-    }
-    {
-    param[base_url] = https://digitalscholarship.unlv.edu/
-    au < exists ; 2006 ; Journal of Praxis in Multicultural Education Volume 1 ; 1 >
-    au < exists ; 2007 ; Journal of Praxis in Multicultural Education Volume 2 ; 2 >
-    au < exists ; 2008 ; Journal of Praxis in Multicultural Education Volume 3 ; 3 >
-    au < exists ; 2009 ; Journal of Praxis in Multicultural Education Volume 4 ; 4 >
-    au < exists ; 2010 ; Journal of Praxis in Multicultural Education Volume 5 ; 5 >
-    au < exists ; 2011 ; Journal of Praxis in Multicultural Education Volume 6 ; 6 >
-    au < doNotProcess ; 2012 ; Journal of Praxis in Multicultural Education Volume 7 ; 7 >
-    au < doNotProcess ; 2013-2014 ; Journal of Praxis in Multicultural Education Volume 8 ; 8 >
-    au < doNotProcess ; 2014 ; Journal of Praxis in Multicultural Education Volume 9 ; 9 >
-    }
+    au < exists ; 2017 ; Journal of Research in Technical Careers Volume 1 ; 1 >
+    au < exists ; 2018 ; Journal of Research in Technical Careers Volume 2 ; 2 >
+    au < exists ; 2019 ; Journal of Research in Technical Careers Volume 3 ; 3 >
+    au < exists ; 2020 ; Journal of Research in Technical Careers Volume 4 ; 4 >
+
   }
 
 }

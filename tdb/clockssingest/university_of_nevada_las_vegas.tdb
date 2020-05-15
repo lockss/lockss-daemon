@@ -10,6 +10,25 @@
   # Do not add any titles with the DigitalCommons/BePress Plugin without Vicky's approval. Document Vicky's approval in PD-36.
 
   {
+    title <
+      name = Asian/Pacific Island Nursing Journal ;
+      eissn = 2373-6658 ;
+      issnl = 2373-6658
+    >
+
+      plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+      param[base_url] = https://digitalscholarship.unlv.edu/
+      param[journal_abbr] = apin
+      implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+      #move to University of Hawai'i Press, 2018
+
+      au < doNotProcess ; doNotProcess ; 2016 ; Asian/Pacific Island Nursing Journal Volume 1 ; 1 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; Asian/Pacific Island Nursing Journal Volume 2 ; 2 ; >
+      au < exists ; exists ; 2018 ; Asian/Pacific Island Nursing Journal Volume 3 ; 3 ; >
+
+  }
+
+  {
   
     title < 
       name = Journal of Praxis in Multicultural Education ;
