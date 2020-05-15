@@ -3,7 +3,7 @@
   publisher <
     name = Resilience Alliance ;
     info[contract] = 2020 ;
-    info[back] = 2019 ;
+    info[back] = 2006 ;
     info[tester] = 8
   >
 
@@ -16,15 +16,15 @@
       name = Avian Conservation and Ecology
     >
 
-    au < manifest ; exists ; 2006 ; Avian Conservation and Ecology Volume 1 ; 1 ; https://www.ace-eco.org/ >
-    au < manifest ; exists ; 2007 ; Avian Conservation and Ecology Volume 2 ; 2 ; https://www.ace-eco.org/ >
-    au < manifest ; exists ; 2008 ; Avian Conservation and Ecology Volume 3 ; 3 ; https://www.ace-eco.org/ >
-    au < manifest ; exists ; 2009 ; Avian Conservation and Ecology Volume 4 ; 4 ; https://www.ace-eco.org/ >
-    au < manifest ; exists ; 2010 ; Avian Conservation and Ecology Volume 5 ; 5 ; https://www.ace-eco.org/ >
-    au < manifest ; exists ; 2011 ; Avian Conservation and Ecology Volume 6 ; 6 ; https://www.ace-eco.org/ >
-    au < manifest ; exists ; 2012 ; Avian Conservation and Ecology Volume 7 ; 7 ; https://www.ace-eco.org/ >
-    au < manifest ; exists ; 2013 ; Avian Conservation and Ecology Volume 8 ; 8 ; https://www.ace-eco.org/ >
-    au < manifest ; exists ; 2014 ; Avian Conservation and Ecology Volume 9 ; 9 ; https://www.ace-eco.org/ >
+    au < ready ; exists ; 2006 ; Avian Conservation and Ecology Volume 1 ; 1 ; https://www.ace-eco.org/ >
+    au < ready ; exists ; 2007 ; Avian Conservation and Ecology Volume 2 ; 2 ; https://www.ace-eco.org/ >
+    au < ready ; exists ; 2008 ; Avian Conservation and Ecology Volume 3 ; 3 ; https://www.ace-eco.org/ >
+    au < ready ; exists ; 2009 ; Avian Conservation and Ecology Volume 4 ; 4 ; https://www.ace-eco.org/ >
+    au < ready ; exists ; 2010 ; Avian Conservation and Ecology Volume 5 ; 5 ; https://www.ace-eco.org/ >
+    au < ready ; exists ; 2011 ; Avian Conservation and Ecology Volume 6 ; 6 ; https://www.ace-eco.org/ >
+    au < ready ; exists ; 2012 ; Avian Conservation and Ecology Volume 7 ; 7 ; https://www.ace-eco.org/ >
+    au < ready ; exists ; 2013 ; Avian Conservation and Ecology Volume 8 ; 8 ; https://www.ace-eco.org/ >
+    au < ready ; exists ; 2014 ; Avian Conservation and Ecology Volume 9 ; 9 ; https://www.ace-eco.org/ >
     au < manifest ; exists ; 2015 ; Avian Conservation and Ecology Volume 10 ; 10 ; https://www.ace-eco.org/ >
     au < manifest ; exists ; 2016 ; Avian Conservation and Ecology Volume 11 ; 11 ; https://www.ace-eco.org/ >
     au < manifest ; exists ; 2017 ; Avian Conservation and Ecology Volume 12 ; 12 ; https://www.ace-eco.org/ >
@@ -39,11 +39,11 @@
         name = Ecology and Society
       >
 
-      au < manifest ; exists ; 2010 ; Ecology and Society Volume 15 ; 15 ; https://www.ecologyandsociety.org/ >
-      au < manifest ; exists ; 2011 ; Ecology and Society Volume 16 ; 16 ; https://www.ecologyandsociety.org/ >
-      au < manifest ; exists ; 2012 ; Ecology and Society Volume 17 ; 17 ; https://www.ecologyandsociety.org/ >
-      au < manifest ; exists ; 2013 ; Ecology and Society Volume 18 ; 18 ; https://www.ecologyandsociety.org/ >
-      au < manifest ; exists ; 2014 ; Ecology and Society Volume 19 ; 19 ; https://www.ecologyandsociety.org/ >
+      au < ready ; exists ; 2010 ; Ecology and Society Volume 15 ; 15 ; https://www.ecologyandsociety.org/ >
+      au < ready ; exists ; 2011 ; Ecology and Society Volume 16 ; 16 ; https://www.ecologyandsociety.org/ >
+      au < ready ; exists ; 2012 ; Ecology and Society Volume 17 ; 17 ; https://www.ecologyandsociety.org/ >
+      au < ready ; exists ; 2013 ; Ecology and Society Volume 18 ; 18 ; https://www.ecologyandsociety.org/ >
+      au < ready ; exists ; 2014 ; Ecology and Society Volume 19 ; 19 ; https://www.ecologyandsociety.org/ >
       au < manifest ; exists ; 2015 ; Ecology and Society Volume 20 ; 20 ; https://www.ecologyandsociety.org/ >
       au < manifest ; exists ; 2016 ; Ecology and Society Volume 21 ; 21 ; https://www.ecologyandsociety.org/ >
       au < manifest ; exists ; 2017 ; Ecology and Society Volume 22 ; 22 ; https://www.ecologyandsociety.org/ >
