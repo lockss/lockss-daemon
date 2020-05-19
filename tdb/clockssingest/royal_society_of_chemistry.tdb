@@ -388,7 +388,7 @@
       au < deepCrawl ; exists ; 2018 ; Faraday Discussions Volume 212 ; 212 ; 2018 ; https://pubs.rsc.org/ ; >
 
       au < testing ; exists ; 2019 ; Faraday Discussions Volume 213 ; 213 ; 2019 ; https://pubs.rsc.org/ ; >
-      au < crawling ; exists ; 2019 ; Faraday Discussions Volume 214 ; 214 ; 2019 ; https://pubs.rsc.org/ ; >
+      au < frozen ; exists ; 2019 ; Faraday Discussions Volume 214 ; 214 ; 2019 ; https://pubs.rsc.org/ ; >
       au < finished ; manifest ; 2019 ; Faraday Discussions Volume 215 ; 215 ; 2019 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2019 ; Faraday Discussions Volume 216 ; 216 ; 2019 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2019 ; Faraday Discussions Volume 217 ; 217 ; 2019 ; https://pubs.rsc.org/ ; >
@@ -1308,7 +1308,7 @@
       au < deepCrawl ; exists ; 2016 ; Food & Function Volume 7 ; 7 ; 2016 ; http://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2017 ; Food & Function Volume 8 ; 8 ; 2017 ; http://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2018 ; Food & Function Volume 9 ; 9 ; 2018 ; https://pubs.rsc.org/ ; >
-      au < crawling ; exists ; 2019 ; Food & Function Volume 10 ; 10 ; 2019 ; https://pubs.rsc.org/ ; >
+      au < frozen ; exists ; 2019 ; Food & Function Volume 10 ; 10 ; 2019 ; https://pubs.rsc.org/ ; >
       au < expected ; exists ; 2020 ; Food & Function Volume 11 ; 11 ; 2020 ; https://pubs.rsc.org/ ; >
 
   }
@@ -2489,7 +2489,7 @@
       au < frozen ; exists ; 2016 ; Reaction Chemistry & Engineering Volume 1 ; 1 ; 2016 ; http://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2017 ; Reaction Chemistry & Engineering Volume 2 ; 2 ; 2017 ; http://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2018 ; Reaction Chemistry & Engineering Volume 3 ; 3 ; 2018 ; https://pubs.rsc.org/ ; >
-      au < crawling ; exists ; 2019 ; Reaction Chemistry & Engineering Volume 4 ; 4 ; 2019 ; https://pubs.rsc.org/ ; >
+      au < frozen ; exists ; 2019 ; Reaction Chemistry & Engineering Volume 4 ; 4 ; 2019 ; https://pubs.rsc.org/ ; >
       au < expected ; exists ; 2020 ; Reaction Chemistry & Engineering Volume 5 ; 5 ; 2020 ; https://pubs.rsc.org/ ; >
 
   }
