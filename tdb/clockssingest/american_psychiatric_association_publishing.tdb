@@ -91,7 +91,7 @@
       au < manifest ; exists ; 2016 ; The American Journal of Psychiatry Volume 20 ; 20 ; >
       au < manifest ; exists ; 2017 ; The American Journal of Psychiatry Volume 21 ; 21 ; >
       au < manifest ; exists ; 2018 ; The American Journal of Psychiatry Volume 22 ; 22 ; >
-      au < crawling ; exists ; 2019 ; The American Journal of Psychiatry Volume 23 ; 23 ; >
+      au < frozen ; exists ; 2019 ; The American Journal of Psychiatry Volume 23 ; 23 ; >
       au < manifest ; exists ; 2020 ; The American Journal of Psychiatry Volume 24 ; 24 ; >
 
     }
@@ -123,7 +123,7 @@
       au < notReady ; exists ; 2016 ; FOCUS Volume 14 ; 14 ; >
       au < notReady ; exists ; 2017 ; FOCUS Volume 15 ; 15 ; >
       au < notReady ; exists ; 2018 ; FOCUS Volume 16 ; 16 ; >
-      au < crawling ; exists ; 2019 ; FOCUS Volume 17 ; 17 ; >
+      au < frozen ; exists ; 2019 ; FOCUS Volume 17 ; 17 ; >
       au < manifest ; exists ; 2020 ; FOCUS Volume 18 ; 18 ; >
 
     }
@@ -161,7 +161,7 @@
       au < notReady ; exists ; 2016 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 28 ; 28 ; >
       au < notReady ; exists ; 2017 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 29 ; 29 ; >
       au < notReady ; exists ; 2018 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 30 ; 30 ; >
-      au < crawling ; exists ; 2019 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 31 ; 31 ; >
+      au < frozen ; exists ; 2019 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 31 ; 31 ; >
       au < manifest ; exists ; 2020 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 32 ; 32 ; >
 
     }
@@ -199,7 +199,7 @@
       au < notReady ; exists ; 2016 ; Psychiatric Services Volume 67 ; 67 ; >
       au < notReady ; exists ; 2017 ; Psychiatric Services Volume 68 ; 68 ; >
       au < notReady ; exists ; 2018 ; Psychiatric Services Volume 69 ; 69 ; >
-      au < crawling ; exists ; 2019 ; Psychiatric Services Volume 70 ; 70 ; >
+      au < frozen ; exists ; 2019 ; Psychiatric Services Volume 70 ; 70 ; >
       au < manifest ; exists ; 2020 ; Psychiatric Services Volume 71 ; 71 ; >
 
     }
@@ -213,7 +213,7 @@
       param[journal_id] = prcp
       # content starts from year 2019
 
-      au < crawling ; exists ; 2019 ; Psychiatric Research and Clinical Practice Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2019 ; Psychiatric Research and Clinical Practice Volume 1 ; 1 ; >
       au < expected ; exists ; 2020 ; Psychiatric Research and Clinical Practice Volume 2 ; 2 ; >
 
     }

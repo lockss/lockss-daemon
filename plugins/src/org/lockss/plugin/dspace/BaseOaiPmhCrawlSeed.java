@@ -1,10 +1,6 @@
 /*
- * $Id: BaseOaiPmhCrawlSeed.java,v 1.1 2014-11-12 20:11:23 wkwilson Exp $
- */
 
-/*
-
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2020 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,7 +31,9 @@ package org.lockss.plugin.dspace;
 import java.io.IOException;
 import java.text.*;
 import java.util.*;
-
+import org.dspace.xoai.model.oaipmh.Granularity;
+import org.dspace.xoai.serviceprovider.ServiceProvider;
+import org.dspace.xoai.serviceprovider.model.Context;
 import org.lockss.config.Configuration;
 import org.lockss.config.Configuration.InvalidParam;
 import org.lockss.crawler.BaseCrawlSeed;
@@ -46,11 +44,6 @@ import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 import org.lockss.util.Logger;
 import org.lockss.util.TimeZoneUtil;
-
-import com.lyncode.xoai.model.oaipmh.Granularity;
-import com.lyncode.xoai.serviceprovider.ServiceProvider;
-import com.lyncode.xoai.serviceprovider.client.HttpOAIClient;
-import com.lyncode.xoai.serviceprovider.model.Context;
 
 /**
  * CrawlSeed that uses an OAI library to fetch a list of article URLs
