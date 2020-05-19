@@ -596,7 +596,7 @@
     #continues = 2041-1448
 
     au < finished ; manifest ; 2016 ; Journal of Kidney Care Volume 1 ; 1 ; https://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; Journal of Kidney Care Volume 2 ; 2 ; https://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2017 ; Journal of Kidney Care Volume 2 ; 2 ; https://www.magonlinelibrary.com/ ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; Journal of Kidney Care Volume 3 ; 3 ; https://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2019 ; Journal of Kidney Care Volume 4 ; 4 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2020 ; Journal of Kidney Care Volume 5 ; 5 ; https://www.magonlinelibrary.com/ ; >
