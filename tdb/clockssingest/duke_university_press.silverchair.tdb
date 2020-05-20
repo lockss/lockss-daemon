@@ -8,6 +8,7 @@
     info[poller] = 6
   >
     plugin = org.lockss.plugin.silverchair.dup.ClockssDupSilverchairPlugin
+    #plugin = org.lockss.plugin.silverchair.iwap.ClockssIwapSilverchairPlugin
     implicit < status ; status2 ; year ; param[year] ; param[journal_id] ; name ; volume ; hidden[proxy] >
     param[base_url] = https://read.dukeupress.edu/
     
@@ -21,8 +22,8 @@
       eissn = 1527-2125 ;
       issnl = 0065-9142
     >
-      # need journal_id
-      #au < notReady ; exists ; 2018 ; 2018 ; American Literary Scholarship 2018 ; 2018 ; >
+
+      au < notReady ; exists ; 2018 ; 2018 ; am-lit-scholarship ; American Literary Scholarship 2018 ; 2018 ; >
   }
 
   {
