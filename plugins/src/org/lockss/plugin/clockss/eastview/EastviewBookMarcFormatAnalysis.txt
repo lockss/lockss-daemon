@@ -1,0 +1,343 @@
+==========================================================================
+    001 - Control Number Full | Concise
+    003 - Control Number Identifier Full | Concise
+    005 - Date and Time of Latest Transaction Full | Concise
+    006 - Fixed-Length Data Elements - Additional Material Characteristics Full | Concise
+    007 - Physical Description Fixed Field Full | Concise
+    008 - Fixed-Length Data Elements Full | Concise
+
+    <marc:controlfield tag="001">1275770BO</marc:controlfield>
+      <marc:controlfield tag="003">RuMoEVIS</marc:controlfield>
+      <marc:controlfield tag="005">20200506161925.0</marc:controlfield>
+      <marc:controlfield tag="006">m     o  d</marc:controlfield>
+      <marc:controlfield tag="007">cr  n</marc:controlfield>
+    <marc:controlfield tag="008">190929s2018    bw      o  d        rus d</marc:controlfield>
+
+==========================================================================
+
+  040 - Cataloging Source (NR)
+  Subfield Codes
+  $a - Original cataloging agency (NR)
+  $b - Language of cataloging (NR)
+  $c - Transcribing agency (NR)
+  $d - Modifying agency (R)
+  $e - Description conventions (R)
+  $6 - Linkage (NR)
+  $8 - Field link and sequence number (R)
+
+  <marc:datafield tag="040" ind1=" " ind2=" ">
+    <marc:subfield code="a">RuMoEVIS</marc:subfield>
+    <marc:subfield code="b">eng</marc:subfield>
+    <marc:subfield code="e">rda</marc:subfield>
+    <marc:subfield code="c">RuMoEVIS</marc:subfield>
+  </marc:datafield>
+
+==========================================================================
+
+  245 - Title Statement (NR)
+  Subfield Codes
+  $a - Title (NR)
+  $b - Remainder of title (NR)
+  $c - Statement of responsibility, etc. (NR)
+  $f - Inclusive dates (NR)
+  $g - Bulk dates (NR)
+  $h - Medium (NR)	$k - Form (R)
+  $n - Number of part/section of a work (R)
+  $p - Name of part/section of a work (R)
+  $s - Version (NR)
+  $6 - Linkage (NR)
+  $8 - Field link and sequence number (R)
+
+  <marc:datafield tag="245" ind1="0" ind2="0">
+      <marc:subfield code="6">880-01</marc:subfield>
+      <marc:subfield code="a">Soedinennye Shtaty Ameriki :</marc:subfield>
+      <marc:subfield code="b">istorii︠a︡, politika, kulʹtura : sbornik nauchnykh stateĭ /</marc:subfield>
+      <marc:subfield code="c">Gl. red. A.A. Kovaleni︠a︡.</marc:subfield>
+  </marc:datafield>
+
+==========================================================================
+
+  264 - Production, Publication, Distribution, Manufacture, and Copyright Notice (R)
+  Subfield Codes
+  $a - Place of production, publication, distribution, manufacture (R)
+  $b - Name of producer, publisher, distributor, manufacturer (R)
+  $c - Date of production, publication, distribution, manufacture, or copyright notice (R)
+  $3 - Materials specified (NR)
+  $6 - Linkage (NR)
+  $8 - Field link and sequence number (R)
+
+   <marc:datafield tag="264" ind1=" " ind2="1">
+      <marc:subfield code="6">880-02</marc:subfield>
+      <marc:subfield code="a">Minsk :</marc:subfield>
+      <marc:subfield code="b">Belarusskai︠a︡ nauka,</marc:subfield>
+      <marc:subfield code="c">2018.</marc:subfield>
+   </marc:datafield>
+
+==========================================================================
+
+  300 - Physical Description (R)
+
+  Subfield Codes
+  $a - Extent (R)
+  $b - Other physical details (NR)
+  $c - Dimensions (R)
+  $e - Accompanying material (NR)
+  $f - Type of unit (R)
+  $g - Size of unit (R)
+  $3 - Materials specified (NR)
+  $6 - Linkage (NR)
+  $8 - Field link and sequence number (R)
+
+  <marc:datafield tag="300" ind1=" " ind2=" ">
+    <marc:subfield code="a">1 online resource (277 pages)</marc:subfield>
+  </marc:datafield>
+
+==========================================================================
+
+  336 - Content Type (R)
+  Subfield Codes
+  $a - Content type term (R)
+  $b - Content type code (R)
+  $0 - Authority record control number or standard number (R)
+  $1 - Real World Object URI (R)
+  $2 - Source (NR)
+  $3 - Materials specified (NR)
+  $6 - Linkage (NR)
+  $8 - Field link and sequence number (R)
+
+  <marc:datafield tag="336" ind1=" " ind2=" ">
+    <marc:subfield code="a">text</marc:subfield>
+    <marc:subfield code="b">txt</marc:subfield>
+    <marc:subfield code="2">rdacontent</marc:subfield>
+  </marc:datafield>
+
+==========================================================================
+
+  337 - Media Type (R)
+  Subfield Codes
+  $a - Media type term (R)
+  $b - Media type code (R)
+  $0 - Authority record control number or standard number (R)
+  $1 - Real World Object URI (R)
+  $2 - Source (NR)
+  $3 - Materials specified (NR)
+  $6 - Linkage (NR)
+  $8 - Field link and sequence number (R)
+
+  <marc:datafield tag="337" ind1=" " ind2=" ">
+    <marc:subfield code="a">computer</marc:subfield>
+    <marc:subfield code="b">c</marc:subfield>
+    <marc:subfield code="2">rdamedia</marc:subfield>
+  </marc:datafield>
+
+==========================================================================
+
+  338 - Carrier Type (R)
+  Subfield Codes
+  $a - Carrier type term (R)
+  $b - Carrier type code (R)
+  $0 - Authority record control number or standard number (R)
+  $1 - Real World Object URI (R)
+  $2 - Source (NR)
+  $3 - Materials specified (NR)
+  $6 - Linkage (NR)
+  $8 - Field link and sequence number (R)
+  FIELD DEFINITION AND SCOPE
+
+  <marc:datafield tag="338" ind1=" " ind2=" ">
+      <marc:subfield code="a">online resource</marc:subfield>
+      <marc:subfield code="b">cr</marc:subfield>
+      <marc:subfield code="2">rdacarrier</marc:subfield>
+  </marc:datafield>
+
+==========================================================================
+
+  533 - Reproduction Note (R)
+  Subfield Codes
+  $a - Type of reproduction (NR)
+  $b - Place of reproduction (R)
+  $c - Agency responsible for reproduction (R)
+  $d - Date of reproduction (NR)
+  $e - Physical description of reproduction (NR)
+  $f - Series statement of reproduction (R)
+  $m - Dates and/or sequential designation of issues reproduced (R)
+  $n - Note about reproduction (R)
+  $3 - Materials specified (NR)
+  $5 - Institution to which field applies (NR)
+  $7 - Fixed-length data elements of reproduction (NR)
+      /0 - Type of date/Publication status
+      /1-4 - Date 1
+      /5-8 - Date 2
+      /9-11 - Place of publication, production, or execution
+      /12 - Frequency
+      /13 - Regularity
+      /14 - Form of item
+  $6 - Linkage (NR)
+  $8 - Field link and sequence number (R)
+
+   <marc:datafield tag="533" ind1=" " ind2=" ">
+      <marc:subfield code="b">Minsk :</marc:subfield>
+      <marc:subfield code="c">Belarusskai︠a︡ nauka,</marc:subfield>
+      <marc:subfield code="d">2019.</marc:subfield>
+   </marc:datafield>
+
+==========================================================================
+
+  653 - Index Term-Uncontrolled (R)
+  Subfield Codes
+  $a - Uncontrolled term (R)
+  $6 - Linkage (NR)
+  $8 - Field link and sequence number (R)
+
+  <marc:datafield tag="653" ind1="0" ind2=" ">
+      <marc:subfield code="a">America.</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="653" ind1="0" ind2=" ">
+      <marc:subfield code="a">History (General)</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="653" ind1="0" ind2=" ">
+      <marc:subfield code="a">United States.</marc:subfield>
+  </marc:datafield>
+
+==========================================================================
+
+  700 - Added Entry-Personal Name (R)
+
+  Subfield Codes
+  $a - Personal name (NR)
+  $b - Numeration (NR)
+  $c - Titles and other words associated with a name (R)
+  $d - Dates associated with a name (NR)
+  $e - Relator term (R)
+  $f - Date of a work (NR)
+  $g - Miscellaneous information (R)
+  $h - Medium (NR)
+  $i - Relationship information (R)
+  $j - Attribution qualifier (R)
+  $k - Form subheading (R)
+  $l - Language of a work (NR)
+  $m - Medium of performance for music (R)
+  $n - Number of part/section of a work (R)
+  $o - Arranged statement for music (NR)
+  $p - Name of part/section of a work (R)
+  $q - Fuller form of name (NR)
+  $r - Key for music (NR)
+  $s - Version (R)
+  $t - Title of a work (NR)
+  $u - Affiliation (NR)
+  $x - International Standard Serial Number (NR)
+  $0 - Authority record control number or standard number (R)
+  $1 - Real World Object URI (R)
+  $2 - Source of heading or term (NR)
+  $3 - Materials specified (NR)
+  $4 - Relationship (R)
+  $5 - Institution to which field applies (NR)
+  $6 - Linkage (NR)
+  $8 - Field link and sequence number (R)
+
+  <marc:datafield tag="700" ind1="1" ind2=" ">
+      <marc:subfield code="6">880-03</marc:subfield>
+      <marc:subfield code="a">Kovaleni︠a︡, A. A.,</marc:subfield>
+      <marc:subfield code="e">editor.</marc:subfield>
+  </marc:datafield>
+
+==========================================================================
+
+  776 - Additional Physical Form Entry (R)
+  Subfield Codes
+  $a - Main entry heading (NR)
+  $b - Edition (NR)
+  $c - Qualifying information (NR)
+  $d - Place, publisher, and date of publication (NR)
+  $g - Related parts (R)
+  $h - Physical description (NR)
+  $i - Relationship information (R)
+  $k - Series data for related item (R)
+  $m - Material-specific details (NR)
+  $n - Note (R)
+  $o - Other item identifier (R)
+  $r - Report number (R)
+  $s - Uniform title (NR)
+  $t - Title (NR)
+  $u - Standard Technical Report Number (NR)
+  $w - Record control number (R)
+  $x - International Standard Serial Number (NR)
+  $y - CODEN designation (NR)
+  $z - International Standard Book Number (R)
+  $4 - Relationship (R)
+  $6 - Linkage (NR)
+  $7 - Control subfield (NR)
+       /0 - Type of main entry heading
+       /1 - Form of name
+       /2 - Type of record
+       /3 - Bibliographic level
+  $8 - Field link and sequence number (R)
+
+ <marc:datafield tag="776" ind1="1" ind2=" ">
+      <marc:subfield code="z">9789850822628</marc:subfield>
+  </marc:datafield>
+
+==========================================================================
+
+  856 - Electronic Location and Access (R)
+  Subfield Codes
+  $a - Host name (R)
+  $b - Access number (R)
+  $c - Compression information (R)
+  $d - Path (R)
+  $f - Electronic name (R)
+  $h - Processor of request (NR)
+  $i - Instruction (R)
+  $j - Bits per second (NR)
+  $k - Password (NR)
+  $l - Logon (NR)
+  $m - Contact for access assistance (R)
+  $n - Name of location of host (NR)
+  $o - Operating system (NR)
+  $p - Port (NR)
+  $q - Electronic format type (NR)
+  $r - Settings (NR)
+  $s - File size (R)
+  $t - Terminal emulation (R)
+  $u - Uniform Resource Identifier (R)
+  $v - Hours access method available (R)
+  $w - Record control number (R)
+  $x - Nonpublic note (R)
+  $y - Link text (R)
+  $z - Public note (R)
+  $2 - Access method (NR)
+  $3 - Materials specified (NR)
+  $6 - Linkage (NR)
+  $7 - Access status (NR)
+  $8 - Field link and sequence number (R)
+
+  <marc:datafield tag="856" ind1="4" ind2="0">
+      <marc:subfield code="u">https://dlib.eastview.com/browse/book/109986</marc:subfield>
+  </marc:datafield>
+
+==========================================================================
+
+  880 - Alternate Graphic Representation (R)
+  Subfield Codes
+  $a-z - Same as associated field
+  $0-5 - Same as associated field
+  $6 - Linkage (NR)
+  $7-9 - Same as associated field
+
+    <marc:datafield tag="880" ind1="0" ind2="0">
+        <marc:subfield code="6">245-01</marc:subfield>
+        <marc:subfield code="a">Соединенные Штаты Америки :</marc:subfield>
+        <marc:subfield code="b">история, политика, культура : сборник научных статей /</marc:subfield>
+        <marc:subfield code="c">Гл. ред. А.А. Коваленя.</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="880" ind1=" " ind2="1">
+        <marc:subfield code="6">264-02</marc:subfield>
+        <marc:subfield code="a">Мінск :</marc:subfield>
+        <marc:subfield code="b">Беларусская наука,</marc:subfield>
+        <marc:subfield code="c">2018.</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="880" ind1="1" ind2=" ">
+        <marc:subfield code="6">700-03</marc:subfield>
+        <marc:subfield code="a">Коваленя, А. А.,</marc:subfield>
+        <marc:subfield code="e">editor.</marc:subfield>
+    </marc:datafield>

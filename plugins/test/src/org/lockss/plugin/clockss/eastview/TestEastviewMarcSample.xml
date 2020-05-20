@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<marc:collection xmlns:marc="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+    <marc:record>
+        <marc:leader>01295nam a22003012i 4500</marc:leader>
+        <marc:controlfield tag="001">1275770BO</marc:controlfield>
+        <marc:controlfield tag="003">RuMoEVIS</marc:controlfield>
+        <marc:controlfield tag="005">20200506161925.0</marc:controlfield>
+        <marc:controlfield tag="006">m     o  d</marc:controlfield>
+        <marc:controlfield tag="007">cr  n</marc:controlfield>
+        <marc:controlfield tag="008">190929s2018    bw      o  d        rus d</marc:controlfield>
+        <marc:datafield tag="040" ind1=" " ind2=" ">
+            <marc:subfield code="a">RuMoEVIS</marc:subfield>
+            <marc:subfield code="b">eng</marc:subfield>
+            <marc:subfield code="e">rda</marc:subfield>
+            <marc:subfield code="c">RuMoEVIS</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="245" ind1="0" ind2="0">
+            <marc:subfield code="6">880-01</marc:subfield>
+            <marc:subfield code="a">Soedinennye Shtaty Ameriki :</marc:subfield>
+            <marc:subfield code="b">istorii︠a︡, politika, kulʹtura : sbornik nauchnykh stateĭ /</marc:subfield>
+            <marc:subfield code="c">Gl. red. A.A. Kovaleni︠a︡.</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="264" ind1=" " ind2="1">
+            <marc:subfield code="6">880-02</marc:subfield>
+            <marc:subfield code="a">Minsk :</marc:subfield>
+            <marc:subfield code="b">Belarusskai︠a︡ nauka,</marc:subfield>
+            <marc:subfield code="c">2018.</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="300" ind1=" " ind2=" ">
+            <marc:subfield code="a">1 online resource (277 pages)</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="336" ind1=" " ind2=" ">
+            <marc:subfield code="a">text</marc:subfield>
+            <marc:subfield code="b">txt</marc:subfield>
+            <marc:subfield code="2">rdacontent</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="337" ind1=" " ind2=" ">
+            <marc:subfield code="a">computer</marc:subfield>
+            <marc:subfield code="b">c</marc:subfield>
+            <marc:subfield code="2">rdamedia</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="338" ind1=" " ind2=" ">
+            <marc:subfield code="a">online resource</marc:subfield>
+            <marc:subfield code="b">cr</marc:subfield>
+            <marc:subfield code="2">rdacarrier</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="533" ind1=" " ind2=" ">
+            <marc:subfield code="b">Minsk :</marc:subfield>
+            <marc:subfield code="c">Belarusskai︠a︡ nauka,</marc:subfield>
+            <marc:subfield code="d">2019.</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="653" ind1="0" ind2=" ">
+            <marc:subfield code="a">America.</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="653" ind1="0" ind2=" ">
+            <marc:subfield code="a">History (General)</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="653" ind1="0" ind2=" ">
+            <marc:subfield code="a">United States.</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="700" ind1="1" ind2=" ">
+            <marc:subfield code="6">880-03</marc:subfield>
+            <marc:subfield code="a">Kovaleni︠a︡, A. A.,</marc:subfield>
+            <marc:subfield code="e">editor.</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="776" ind1="1" ind2=" ">
+            <marc:subfield code="z">9789850822628</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="856" ind1="4" ind2="0">
+            <marc:subfield code="u">https://dlib.eastview.com/browse/book/109986</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="880" ind1="0" ind2="0">
+            <marc:subfield code="6">245-01</marc:subfield>
+            <marc:subfield code="a">Соединенные Штаты Америки :</marc:subfield>
+            <marc:subfield code="b">история, политика, культура : сборник научных статей /</marc:subfield>
+            <marc:subfield code="c">Гл. ред. А.А. Коваленя.</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="880" ind1=" " ind2="1">
+            <marc:subfield code="6">264-02</marc:subfield>
+            <marc:subfield code="a">Мінск :</marc:subfield>
+            <marc:subfield code="b">Беларусская наука,</marc:subfield>
+            <marc:subfield code="c">2018.</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="880" ind1="1" ind2=" ">
+            <marc:subfield code="6">700-03</marc:subfield>
+            <marc:subfield code="a">Коваленя, А. А.,</marc:subfield>
+            <marc:subfield code="e">editor.</marc:subfield>
+        </marc:datafield>
+    </marc:record>
+</marc:collection>
