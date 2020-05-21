@@ -5,7 +5,7 @@
     </entry>
     <entry>
         <string>plugin_identifier</string>
-        <string>org.lockss.plugin.clockss.eastview.ClockssEastviewBookMarcSourcePlugin</string>
+        <string>org.lockss.plugin.clockss.eastview.ClockssEastviewBookSourcePlugin</string>
     </entry>
     <entry>
         <string>plugin_version</string>
@@ -42,18 +42,18 @@
     </entry>
     <entry>
         <string>plugin_article_iterator_factory</string>
-        <string>org.lockss.plugin.clockss.eastview.EastviewMarcBookSourceXmlArticleIteratorFactory</string>
+        <string>org.lockss.plugin.clockss.eastview.EastviewBookSourceXmlArticleIteratorFactory</string>
     </entry>
     <entry>
         <string>plugin_article_metadata_extractor_factory</string>
-        <string>org.lockss.plugin.clockss.eastview.EastviewMarcBookSourceXmlArticleIteratorFactory</string>
+        <string>org.lockss.plugin.clockss.eastview.EastviewBookSourceXmlArticleIteratorFactory</string>
     </entry>
     <entry>
         <string>text/xml_metadata_extractor_factory_map</string>
         <map>
             <entry>
                 <string>*</string>
-                <string>org.lockss.plugin.clockss.eastview.EastviewMarcBookXmlMetadataExtractorFactory</string>
+                <string>org.lockss.plugin.clockss.eastview.EastviewBookXmlMetadataExtractorFactory</string>
             </entry>
         </map>
     </entry>
@@ -62,7 +62,7 @@
         <map>
             <entry>
                 <string>*</string>
-                <string>org.lockss.plugin.clockss.eastview.EastviewMarcBookXmlMetadataExtractorFactory</string>
+                <string>org.lockss.plugin.clockss.eastview.EastviewBookXmlMetadataExtractorFactory</string>
             </entry>
         </map>
     </entry>
