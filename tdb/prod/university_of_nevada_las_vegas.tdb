@@ -14,7 +14,7 @@
     >
 
     plugin = org.lockss.plugin.bepress.BePressPlugin
-    param[base_url] = http://digitalscholarship.unlv.edu/
+    param[base_url] = https://digitalscholarship.unlv.edu/
     param[journal_abbr] = apin
     implicit < status ; year ; name ; param[volume] >
 
