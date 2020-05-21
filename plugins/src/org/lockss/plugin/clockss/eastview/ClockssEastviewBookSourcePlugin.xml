@@ -12,19 +12,6 @@
         <string>1</string>
     </entry>
     <entry>
-        <string>plugin_feature_version_map</string>
-        <map>
-            <entry>
-                <string>Metadata</string>
-                <string>1</string>
-            </entry>
-            <entry>
-                <string>Substance</string>
-                <string>1</string>
-            </entry>
-        </map>
-    </entry>
-    <entry>
         <string>plugin_parent</string>
         <string>org.lockss.plugin.clockss.ClockssSourcePlugin</string>
     </entry>
@@ -39,6 +26,25 @@
     <entry>
         <string>plugin_name</string>
         <string>East View Information Services Book Source Plugin (CLOCKSS)</string>
+    </entry>
+    <entry>
+        <string>plugin_feature_version_map</string>
+        <map>
+            <entry>
+                <string>Metadata</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Substance</string>
+                <string>1</string>
+            </entry>
+        </map>
+    </entry>
+    <entry>
+        <string>au_substance_url_pattern</string>
+        <list>
+            <string>"^%s%d/.+\.pdf", base_url, year</string>
+        </list>
     </entry>
     <entry>
         <string>plugin_article_iterator_factory</string>

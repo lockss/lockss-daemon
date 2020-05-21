@@ -14,12 +14,12 @@ import org.lockss.util.Logger;
 import java.util.Iterator;
 import java.util.regex.Pattern;
 
-public class EastviewMarcBookSourceXmlArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
+public class EastviewBookSourceXmlArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
 
-    protected static Logger log = Logger.getLogger(EastviewMarcBookSourceXmlArticleIteratorFactory.class);
+    protected static Logger log = Logger.getLogger(EastviewBookSourceXmlArticleIteratorFactory.class);
 
     protected static final String ROOT_TEMPLATE = "\"%s%d\",base_url,year";
-    private static final String PATTERN_TEMPLATE = "\"%s%d.*/[^/]+\",base_url,year";
+    private static final String PATTERN_TEMPLATE = "\"%s%d\",base_url,year";
 
     // The delivery does not have one-pdf-to-one-xml matching relationship,
     // All the article metadata is inside articles_xml. However they may update other xmls or even Excel/CVS
