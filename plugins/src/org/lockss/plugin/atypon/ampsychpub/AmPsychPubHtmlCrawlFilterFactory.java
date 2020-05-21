@@ -75,6 +75,9 @@ public class AmPsychPubHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterF
       HtmlNodeFilters.tagWithAttribute("section", "class", "article__metrics"),
       HtmlNodeFilters.tagWithAttribute("div", "class", "border-bottom"),
       HtmlNodeFilters.tagWithAttribute("div", "class", "body-references"),
+      // Need to filter out the "prev", "next" links to the articles
+      // https://ps.psychiatryonline.org/doi/full/10.1176/appi.ps.51.10.1320
+      HtmlNodeFilters.tagWithAttribute("div", "class", "book-chapter__nav"),
       
       // Avoid following links in a Related Articles section
       // Some links are only differentiated by the title <h1 class="widget-header header-regular ">Related Articles</h1>
