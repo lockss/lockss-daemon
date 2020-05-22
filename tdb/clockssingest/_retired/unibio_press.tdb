@@ -35,7 +35,7 @@
       au < finished ; frozen ; 2012 ; Current Herpetology Volume 31 ; 31 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2013 ; Current Herpetology Volume 32 ; 32 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Current Herpetology Volume 33 ; 33 ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2015 ; Current Herpetology Volume 34 ; 34 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; Current Herpetology Volume 34 ; 34 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2016 ; Current Herpetology Volume 35 ; 35 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2017 ; Current Herpetology Volume 36 ; 36 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2018 ; Current Herpetology Volume 37 ; 37 ; reingest2.clockss.org:8085 >
@@ -124,7 +124,7 @@
       au < finished ; finished ; 2009 ; Mammal Study Volume 34 ; 34 ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2010 ; Mammal Study Volume 35 ; 35 ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2011 ; Mammal Study Volume 36 ; 36 ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2012 ; Mammal Study Volume 37 ; 37 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2012 ; Mammal Study Volume 37 ; 37 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2013 ; Mammal Study Volume 38 ; 38 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Mammal Study Volume 39 ; 39 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2015 ; Mammal Study Volume 40 ; 40 ; reingest5.clockss.org:8082 >
@@ -161,12 +161,12 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = jorn
   
-      au < finished ; frozen ; 2005 ; Ornithological Science Volume 4 ; 4 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2005 ; Ornithological Science Volume 4 ; 4 ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2006 ; Ornithological Science Volume 5 ; 5 ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2007 ; Ornithological Science Volume 6 ; 6 ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2008 ; Ornithological Science Volume 7 ; 7 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2009 ; Ornithological Science Volume 8 ; 8 ; reingest3.clockss.org:8083 >
-      au < finished ; frozen ; 2010 ; Ornithological Science Volume 9 ; 9 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; Ornithological Science Volume 9 ; 9 ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2011 ; Ornithological Science Volume 10 ; 10 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2012 ; Ornithological Science Volume 11 ; 11 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2013 ; Ornithological Science Volume 12 ; 12 ; reingest1.clockss.org:8082 >
@@ -174,7 +174,7 @@
       au < finished ; frozen ; 2015 ; Ornithological Science Volume 14 ; 14 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2016 ; Ornithological Science Volume 15 ; 15 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2017 ; Ornithological Science Volume 16 ; 16 ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2018 ; Ornithological Science Volume 17 ; 17 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2018 ; Ornithological Science Volume 17 ; 17 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; exists ; 2019 ; Ornithological Science Volume 18 ; 18 ; >
 
     }
@@ -262,11 +262,11 @@
       au < finished ; frozen ; 2000 ; Zoological Science Volume 17 ; 17 ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2001 ; Zoological Science Volume 18 ; 18 ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2002 ; Zoological Science Volume 19 ; 19 ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2003 ; Zoological Science Volume 20 ; 20 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2003 ; Zoological Science Volume 20 ; 20 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2004 ; Zoological Science Volume 21 ; 21 ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2005 ; Zoological Science Volume 22 ; 22 ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2006 ; Zoological Science Volume 23 ; 23 ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2007 ; Zoological Science Volume 24 ; 24 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2006 ; Zoological Science Volume 23 ; 23 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2007 ; Zoological Science Volume 24 ; 24 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2008 ; Zoological Science Volume 25 ; 25 ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2009 ; Zoological Science Volume 26 ; 26 ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2010 ; Zoological Science Volume 27 ; 27 ; reingest4.clockss.org:8082 >
@@ -277,7 +277,7 @@
       au < finished ; frozen ; 2015 ; Zoological Science Volume 32 ; 32 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2016 ; Zoological Science Volume 33 ; 33 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2017 ; Zoological Science Volume 34 ; 34 ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2018 ; Zoological Science Volume 35 ; 35 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2018 ; Zoological Science Volume 35 ; 35 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; exists ; 2019 ; Zoological Science Volume 36 ; 36 ; >
 
     }
