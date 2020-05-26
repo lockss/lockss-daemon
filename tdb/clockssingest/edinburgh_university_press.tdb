@@ -191,7 +191,7 @@
     au < finished ; finished ; 2017 ; CounterText Volume 3 ; 3 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2018 ; CounterText Volume 4 ; 4 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2019 ; CounterText Volume 5 ; 5 ; https://www.euppublishing.com/ ; >
-    au < expected ; exists ; 2020 ; CounterText Volume 6 ; 6 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 2020 ; CounterText Volume 6 ; 6 ; https://www.euppublishing.com/ ; >
 
   }
 
@@ -556,7 +556,7 @@
     au < finished ; finished ; 2017 ; Derrida Today Volume 10 ; 10 ; http://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2018 ; Derrida Today Volume 11 ; 11 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; Derrida Today Volume 12 ; 12 ; https://www.euppublishing.com/ ; >
-    au < expected ; exists ; 2020 ; Derrida Today Volume 13 ; 13 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 2020 ; Derrida Today Volume 13 ; 13 ; https://www.euppublishing.com/ ; >
 
   }
 
@@ -778,7 +778,7 @@
     au < finished ; crawling ; 2017 ; The Innes Review Volume 68 ; 68 ; http://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; The Innes Review Volume 69 ; 69 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2019 ; The Innes Review Volume 70 ; 70 ; https://www.euppublishing.com/ ; >
-    au < expected ; exists ; 2020 ; The Innes Review Volume 71 ; 71 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 2020 ; The Innes Review Volume 71 ; 71 ; https://www.euppublishing.com/ ; >
 
   }
 
@@ -894,7 +894,7 @@
       au < finished ; frozen ; 2017 ; Irish University Review Volume 47 ; 47 ; http://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2018 ; Irish University Review Volume 48 ; 48 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2019 ; Irish University Review Volume 49 ; 49 ; https://www.euppublishing.com/ ; >
-      au < expected ; exists ; 2020 ; Irish University Review Volume 50 ; 50 ; https://www.euppublishing.com/ ; >
+      au < manifest ; exists ; 2020 ; Irish University Review Volume 50 ; 50 ; https://www.euppublishing.com/ ; >
 
     }
   
@@ -1119,7 +1119,7 @@
     au < finished ; frozen ; 2017 ; Journal of Scottish Historical Studies Volume 37 ; 37 ; http://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2018 ; Journal of Scottish Historical Studies Volume 38 ; 38 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2019 ; Journal of Scottish Historical Studies Volume 39 ; 39 ; https://www.euppublishing.com/ ; >
-    au < expected ; exists ; 2020 ; Journal of Scottish Historical Studies Volume 40 ; 40 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 2020 ; Journal of Scottish Historical Studies Volume 40 ; 40 ; https://www.euppublishing.com/ ; >
 
   }
 
