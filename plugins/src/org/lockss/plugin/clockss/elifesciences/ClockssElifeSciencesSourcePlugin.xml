@@ -13,15 +13,15 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>1</string>
+        <string>2</string>
     </entry>
     <entry>
         <string>plugin_parent</string>
-        <string>org.lockss.plugin.clockss.ClockssDirSourcePlugin</string>
+        <string>org.lockss.plugin.clockss.ClockssSourcePlugin</string>
     </entry>
     <entry>
         <string>plugin_parent_version</string>
-        <string>1</string>
+        <string>15</string>
     </entry>
     <entry>
         <string>plugin_feature_version_map</string>
@@ -42,18 +42,18 @@
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"eLife Sciences Source Plugin (CLOCKSS), Base URL %s, Directory %s", base_url, directory</string>
+        <string>"eLife Sciences Source Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
     </entry>
     <entry>
         <string>au_substance_url_pattern</string>
         <list>
-            <string>"^%s%s/.+\.zip", base_url, directory</string>
+            <string>"^%s%d/.+\.zip", base_url, year</string>
         </list>
     </entry>
     <entry>
         <string>au_crawlrules</string>
         <list>
-            <string>1,"^%s%s/", base_url, directory</string>
+            <string>1,"^%s%d/", base_url, year</string>
         </list>
     </entry>
     <entry>
