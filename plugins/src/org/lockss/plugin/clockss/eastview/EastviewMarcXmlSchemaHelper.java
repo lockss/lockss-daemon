@@ -208,7 +208,7 @@ implements SourceXmlSchemaHelper {
 
    */
 
-  private static final String PUBLISHER_TAG ="245";
+  private static final String PUBLISHER_TAG ="264";
   private static final String publisher_title_code ="b";
   private static final String publisher_date_code ="c";
 
@@ -313,8 +313,8 @@ implements SourceXmlSchemaHelper {
       <marc:subfield code="z">9789850822628</marc:subfield>
   </marc:datafield>
    */
-  private static final String ISSN_TAG ="776";
-  private static final String issn_code ="z";
+  private static final String ISBN_TAG = "776";
+  private static final String isbn_code = "z";
 
   /*
   856 - Electronic Location and Access (R)
@@ -385,8 +385,8 @@ implements SourceXmlSchemaHelper {
     </marc:datafield>
    */
 
-  private static String AUTHOR_TAG = "800";
-  private static String author_name_code = "e";
+  private static String AUTHOR_TAG = "880";
+  private static String author_name_code = "a";
 
 
   // A top level for the worksheet table is
@@ -394,7 +394,7 @@ implements SourceXmlSchemaHelper {
 
   // these are all relative to the record
   public static String MARC_pdf =
-      "controlfield[[@tag = \"" + PDF_TAG_CODE + "\"]";
+      "controlfield[@tag = \"" + PDF_TAG_CODE + "\"]";
   public static String MARC_publisher =
           "datafield[@tag = \"" + PUBLISHER_TAG + "\"]" +
                   "/subfield[@code = \"" + publisher_title_code + "\"]";
@@ -404,11 +404,11 @@ implements SourceXmlSchemaHelper {
   public static String MARC_title = 
       "datafield[@tag = \"" + TITLE_TAG + "\"]" +
           "/subfield[@code=\"" + title_code + "\"]";
-  public static String MARC_issn =
-          "datafield[@tag = \"" + ISSN_TAG + "\"]" +
-                  "/subfield[@code = \"" + issn_code + "\"]";
+  public static String MARC_isbn =
+          "datafield[@tag = \"" + ISBN_TAG + "\"]" +
+                  "/subfield[@code = \"" + isbn_code + "\"]";
   public static String MARC_author =
-          "datafield[@tag = \"" + AUTHOR_TAG + "\"]" +
+          "datafield[@tag = \"" + AUTHOR_TAG + "\" and @ind1=\"1\" and @ind2=\" \" ]" +
                   "/subfield[@code = \"" + author_name_code + "\"]";
   
   /*
@@ -416,20 +416,20 @@ implements SourceXmlSchemaHelper {
    */
 
   /* 1.  MAP associating xpath with value type with evaluator */
-  static private final Map<String,XPathValue> casalini_articleMap =
+  static private final Map<String,XPathValue> eastview_articleMap =
       new HashMap<String,XPathValue>();
   static {
-    casalini_articleMap.put(MARC_publisher, XmlDomMetadataExtractor.TEXT_VALUE);
-    casalini_articleMap.put(MARC_pub_date,  XmlDomMetadataExtractor.TEXT_VALUE);
-    casalini_articleMap.put(MARC_title, XmlDomMetadataExtractor.TEXT_VALUE);
-    casalini_articleMap.put(MARC_pdf, XmlDomMetadataExtractor.TEXT_VALUE);
-    casalini_articleMap.put(MARC_issn, XmlDomMetadataExtractor.TEXT_VALUE);
-    casalini_articleMap.put(MARC_author, XmlDomMetadataExtractor.TEXT_VALUE);
+    eastview_articleMap.put(MARC_publisher, XmlDomMetadataExtractor.TEXT_VALUE);
+    eastview_articleMap.put(MARC_pub_date,  XmlDomMetadataExtractor.TEXT_VALUE);
+    eastview_articleMap.put(MARC_title, XmlDomMetadataExtractor.TEXT_VALUE);
+    eastview_articleMap.put(MARC_pdf, XmlDomMetadataExtractor.TEXT_VALUE);
+    eastview_articleMap.put(MARC_isbn, XmlDomMetadataExtractor.TEXT_VALUE);
+    eastview_articleMap.put(MARC_author, XmlDomMetadataExtractor.TEXT_VALUE);
 
   }
 
   /* 2. there is only one XML file */
-  static private final String casalini_recordNode = MARC_record;
+  static private final String eastview_recordNode = MARC_record;
 
   /* 3. in MARCXML there is no global information we care about */
   static private final Map<String,XPathValue> MARC_globalMap = null;
@@ -439,10 +439,11 @@ implements SourceXmlSchemaHelper {
    */
   private static final MultiValueMap cookMap = new MultiValueMap();
   static {
-    cookMap.put(MARC_title, MetadataField.FIELD_PUBLICATION_TITLE);
-    cookMap.put(MARC_publisher, MetadataField.FIELD_PUBLISHER);
-    cookMap.put(MARC_pub_date, MetadataField.FIELD_DATE);
-    cookMap.put(MARC_author, MetadataField.FIELD_AUTHOR);
+    //cookMap.put(MARC_title, MetadataField.FIELD_PUBLICATION_TITLE);
+    //cookMap.put(MARC_publisher, MetadataField.FIELD_PUBLISHER);
+    //cookMap.put(MARC_pub_date, MetadataField.FIELD_DATE);
+    //cookMap.put(MARC_author, MetadataField.FIELD_AUTHOR);
+    cookMap.put(MARC_isbn, MetadataField.FIELD_ISBN);
   }
 
 
@@ -460,7 +461,7 @@ implements SourceXmlSchemaHelper {
    */
   @Override
   public Map<String, XPathValue> getArticleMetaMap() {
-    return casalini_articleMap;
+    return eastview_articleMap;
   }
 
   /**
@@ -468,7 +469,7 @@ implements SourceXmlSchemaHelper {
    */
   @Override
   public String getArticleNode() {
-    return casalini_recordNode;
+    return eastview_recordNode;
   }
 
   /**

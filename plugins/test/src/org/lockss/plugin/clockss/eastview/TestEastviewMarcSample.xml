@@ -23,7 +23,7 @@
         <marc:datafield tag="264" ind1=" " ind2="1">
             <marc:subfield code="6">880-02</marc:subfield>
             <marc:subfield code="a">Minsk :</marc:subfield>
-            <marc:subfield code="b">Belarusskai︠a︡ nauka,</marc:subfield>
+            <marc:subfield code="b">publisher name</marc:subfield>
             <marc:subfield code="c">2018.</marc:subfield>
         </marc:datafield>
         <marc:datafield tag="300" ind1=" " ind2=" ">
@@ -46,7 +46,7 @@
         </marc:datafield>
         <marc:datafield tag="533" ind1=" " ind2=" ">
             <marc:subfield code="b">Minsk :</marc:subfield>
-            <marc:subfield code="c">Belarusskai︠a︡ nauka,</marc:subfield>
+            <marc:subfield code="c">publisher name</marc:subfield>
             <marc:subfield code="d">2019.</marc:subfield>
         </marc:datafield>
         <marc:datafield tag="653" ind1="0" ind2=" ">
@@ -83,7 +83,7 @@
         </marc:datafield>
         <marc:datafield tag="880" ind1="1" ind2=" ">
             <marc:subfield code="6">700-03</marc:subfield>
-            <marc:subfield code="a">Коваленя, А. А.,</marc:subfield>
+            <marc:subfield code="a">author name</marc:subfield>
             <marc:subfield code="e">editor.</marc:subfield>
         </marc:datafield>
     </marc:record>

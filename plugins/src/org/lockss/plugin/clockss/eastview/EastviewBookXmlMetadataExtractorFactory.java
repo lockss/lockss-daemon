@@ -99,7 +99,22 @@ public class EastviewBookXmlMetadataExtractorFactory extends SourceXmlMetadataEx
 
             if (thisAM.getRaw(EastviewMarcXmlSchemaHelper.MARC_author) != null) {
                 String author = thisAM.getRaw(EastviewMarcXmlSchemaHelper.MARC_author);
-                thisAM.put(MetadataField.FIELD_AUTHOR, author.replace(".", ""));
+                thisAM.put(MetadataField.FIELD_AUTHOR, author.replace(":", ""));
+            }
+
+            if (thisAM.getRaw(EastviewMarcXmlSchemaHelper.MARC_pub_date) != null) {
+                String pub_date = thisAM.getRaw(EastviewMarcXmlSchemaHelper.MARC_pub_date);
+                thisAM.put(MetadataField.FIELD_DATE, pub_date.replace(".", ""));
+            }
+
+            if (thisAM.getRaw(EastviewMarcXmlSchemaHelper.MARC_publisher) != null) {
+                String publisher = thisAM.getRaw(EastviewMarcXmlSchemaHelper.MARC_publisher);
+                thisAM.put(MetadataField.FIELD_PUBLISHER, publisher.replace(":", ""));
+            }
+
+            if (thisAM.getRaw(EastviewMarcXmlSchemaHelper.MARC_title) != null) {
+                String title = thisAM.getRaw(EastviewMarcXmlSchemaHelper.MARC_title);
+                thisAM.put(MetadataField.FIELD_PUBLICATION_TITLE, title.replace(":", ""));
             }
         }
     }
