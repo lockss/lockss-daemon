@@ -189,7 +189,7 @@
     ##implicit < status ; year ; name ; param[year] >
 
     plugin = org.lockss.plugin.atypon.GenericAtyponPlugin
-    param[base_url] = http://annals.org/
+    param[base_url] = https://www.acpjournals.org/
     implicit < status ; year ; name ; param[volume_name] >
     
     param[journal_id] = aim
