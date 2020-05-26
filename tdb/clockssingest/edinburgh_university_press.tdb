@@ -42,7 +42,7 @@
     au < frozen ; exists ; 2012 ; Scottish Church History Volume 41 ; 41 ; https://www.euppublishing.com/ ; >
     au < finished ; finished ; 2013 ; Scottish Church History Volume 42 ; 42 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2014 ; Scottish Church History Volume 43 ; 43 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2015 ; Scottish Church History Volume 44 ; 44 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2015 ; Scottish Church History Volume 44 ; 44 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2016 ; Scottish Church History Volume 45 ; 45 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2017 ; Scottish Church History Volume 46 ; 46 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2018 ; Scottish Church History Volume 47 ; 47 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
@@ -123,8 +123,8 @@
     au < finished ; frozen ; 2011 ; Somatechnics Volume 1 ; 1 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2012 ; Somatechnics Volume 2 ; 2 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Somatechnics Volume 3 ; 3 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2014 ; Somatechnics Volume 4 ; 4 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2015 ; Somatechnics Volume 5 ; 5 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2014 ; Somatechnics Volume 4 ; 4 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2015 ; Somatechnics Volume 5 ; 5 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2016 ; Somatechnics Volume 6 ; 6 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2017 ; Somatechnics Volume 7 ; 7 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2018 ; Somatechnics Volume 8 ; 8 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
@@ -169,7 +169,7 @@
 
     param[journal_id] = dlgs
     #no volumes before 2018. See comment above.
-    au < finished ; frozen ; 2018 ; Deleuze and Guattari Studies Volume 12 ; 12 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2018 ; Deleuze and Guattari Studies Volume 12 ; 12 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2019 ; Deleuze and Guattari Studies Volume 13 ; 13 ; https://www.euppublishing.com/ ; >
     au < manifest ; exists ; 2020 ; Deleuze and Guattari Studies Volume 14 ; 14 ; https://www.euppublishing.com/ ; >
 
@@ -191,7 +191,7 @@
     au < finished ; finished ; 2017 ; CounterText Volume 3 ; 3 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2018 ; CounterText Volume 4 ; 4 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2019 ; CounterText Volume 5 ; 5 ; https://www.euppublishing.com/ ; >
-    au < expected ; exists ; 2020 ; CounterText Volume 6 ; 6 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 2020 ; CounterText Volume 6 ; 6 ; https://www.euppublishing.com/ ; >
 
   }
 
@@ -238,7 +238,7 @@
     au < finished ; crawling ; 2013 ; African Journal of International and Comparative Law Volume 21 ; 21 ; http://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; African Journal of International and Comparative Law Volume 22 ; 22 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2015 ; African Journal of International and Comparative Law Volume 23 ; 23 ; http://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
-    au < finished ; frozen ; 2016 ; African Journal of International and Comparative Law Volume 24 ; 24 ; http://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2016 ; African Journal of International and Comparative Law Volume 24 ; 24 ; http://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2017 ; African Journal of International and Comparative Law Volume 25 ; 25 ; http://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2018 ; African Journal of International and Comparative Law Volume 26 ; 26 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; African Journal of International and Comparative Law Volume 27 ; 27 ; https://www.euppublishing.com/ ; >
@@ -329,9 +329,9 @@
 
     au < finished ; finished ; 2000 ; Ben Jonson Journal Volume 7 ; 7 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2001 ; Ben Jonson Journal Volume 8 ; 8 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2002 ; Ben Jonson Journal Volume 9 ; 9 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2002 ; Ben Jonson Journal Volume 9 ; 9 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2003 ; Ben Jonson Journal Volume 10 ; 10 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
-    au < finished ; frozen ; 2004 ; Ben Jonson Journal Volume 11 ; 11 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2004 ; Ben Jonson Journal Volume 11 ; 11 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2005 ; Ben Jonson Journal Volume 12 ; 12 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2006 ; Ben Jonson Journal Volume 13 ; 13 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2007 ; Ben Jonson Journal Volume 14 ; 14 ; http://www.euppublishing.com/ ; >
@@ -413,7 +413,7 @@
     au < finished ; finished ; 2014 ; Comparative Critical Studies Volume 11 ; 11 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2015 ; Comparative Critical Studies Volume 12 ; 12 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2016 ; Comparative Critical Studies Volume 13 ; 13 ; http://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
-    au < finished ; frozen ; 2017 ; Comparative Critical Studies Volume 14 ; 14 ; http://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2017 ; Comparative Critical Studies Volume 14 ; 14 ; http://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2018 ; Comparative Critical Studies Volume 15 ; 15 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2019 ; Comparative Critical Studies Volume 16 ; 16 ; https://www.euppublishing.com/ ; >
     au < manifest ; exists ; 2020 ; Comparative Critical Studies Volume 17 ; 17 ; https://www.euppublishing.com/ ; >
@@ -442,7 +442,7 @@
     au < finished ; finished ; 2014 ; Corpora Volume 9 ; 9 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2015 ; Corpora Volume 10 ; 10 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2016 ; Corpora Volume 11 ; 11 ; http://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 2017 ; Corpora Volume 12 ; 12 ; http://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2017 ; Corpora Volume 12 ; 12 ; http://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2018 ; Corpora Volume 13 ; 13 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2019 ; Corpora Volume 14 ; 14 ; https://www.euppublishing.com/ ; >
     au < manifest ; exists ; 2020 ; Corpora Volume 15 ; 15 ; https://www.euppublishing.com/ ; >
@@ -528,7 +528,7 @@
     au < deepCrawl ; exists ; 2013 ; Deleuze Studies Volume 7 ; 7 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2014 ; Deleuze Studies Volume 8 ; 8 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2015 ; Deleuze Studies Volume 9 ; 9 ; http://www.euppublishing.com/ ; >
-    au < finished ; frozen ; 2016 ; Deleuze Studies Volume 10 ; 10 ; http://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2016 ; Deleuze Studies Volume 10 ; 10 ; http://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2017 ; Deleuze Studies Volume 11 ; 11 ; http://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
     #no volumes after 2017. See note above.
   }
@@ -554,9 +554,9 @@
     au < finished ; finished ; 2015 ; Derrida Today Volume 8 ; 8 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2016 ; Derrida Today Volume 9 ; 9 ; http://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2017 ; Derrida Today Volume 10 ; 10 ; http://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
-    au < finished ; frozen ; 2018 ; Derrida Today Volume 11 ; 11 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2018 ; Derrida Today Volume 11 ; 11 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; Derrida Today Volume 12 ; 12 ; https://www.euppublishing.com/ ; >
-    au < expected ; exists ; 2020 ; Derrida Today Volume 13 ; 13 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 2020 ; Derrida Today Volume 13 ; 13 ; https://www.euppublishing.com/ ; >
 
   }
 
@@ -573,7 +573,7 @@
 
     au < finished ; finished ; 2000 ; Edinburgh Law Review Volume 4 ; 4 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2001 ; Edinburgh Law Review Volume 5 ; 5 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 2002 ; Edinburgh Law Review Volume 6 ; 6 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2002 ; Edinburgh Law Review Volume 6 ; 6 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2003 ; Edinburgh Law Review Volume 7 ; 7 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2004 ; Edinburgh Law Review Volume 8 ; 8 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2005 ; Edinburgh Law Review Volume 9 ; 9 ; http://www.euppublishing.com/ ; >
@@ -631,14 +631,14 @@
     
      au < finished ; finished ; 1997 ; Film-Philosophy Volume 1 ; 1 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
      au < finished ; frozen ; 1998 ; Film-Philosophy Volume 2 ; 2 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
-     au < finished ; frozen ; 1999 ; Film-Philosophy Volume 3 ; 3 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
+     au < finished ; finished ; 1999 ; Film-Philosophy Volume 3 ; 3 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
      au < finished ; frozen ; 2000 ; Film-Philosophy Volume 4 ; 4 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
      au < finished ; finished ; 2001 ; Film-Philosophy Volume 5 ; 5 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
      au < finished ; frozen ; 2002 ; Film-Philosophy Volume 6 ; 6 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
      au < finished ; finished ; 2003 ; Film-Philosophy Volume 7 ; 7 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
      au < finished ; frozen ; 2004 ; Film-Philosophy Volume 8 ; 8 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
      au < finished ; finished ; 2005 ; Film-Philosophy Volume 9 ; 9 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
-     au < finished ; frozen ; 2006 ; Film-Philosophy Volume 10 ; 10 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 > 
+     au < finished ; finished ; 2006 ; Film-Philosophy Volume 10 ; 10 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 > 
      au < finished ; finished ; 2007 ; Film-Philosophy Volume 11 ; 11 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
      au < finished ; finished ; 2008 ; Film-Philosophy Volume 12 ; 12 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
      au < finished ; frozen ; 2009 ; Film-Philosophy Volume 13 ; 13 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
@@ -646,7 +646,7 @@
      au < finished ; finished ; 2011 ; Film-Philosophy Volume 15 ; 15 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
      au < finished ; frozen ; 2012 ; Film-Philosophy Volume 16 ; 16 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
      au < finished ; frozen ; 2013 ; Film-Philosophy Volume 17 ; 17 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
-     au < finished ; frozen ; 2014 ; Film-Philosophy Volume 18 ; 18 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
+     au < finished ; finished ; 2014 ; Film-Philosophy Volume 18 ; 18 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
      au < finished ; frozen ; 2015 ; Film-Philosophy Volume 19 ; 19 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
      au < finished ; frozen ; 2016 ; Film-Philosophy Volume 20 ; 20 ; http://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
      au < finished ; finished ; 2017 ; Film-Philosophy Volume 21 ; 21 ; http://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
@@ -671,10 +671,10 @@
 
      au < finished ; finished ; 1999 ; Gothic Studies Volume 1 ; 1 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
      au < finished ; frozen ; 2000 ; Gothic Studies Volume 2 ; 2 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
-     au < finished ; frozen ; 2001 ; Gothic Studies Volume 3 ; 3 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
+     au < finished ; finished ; 2001 ; Gothic Studies Volume 3 ; 3 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
      au < finished ; finished ; 2002 ; Gothic Studies Volume 4 ; 4 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
      au < finished ; finished ; 2003 ; Gothic Studies Volume 5 ; 5 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
-     au < finished ; frozen ; 2004 ; Gothic Studies Volume 6 ; 6 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
+     au < finished ; finished ; 2004 ; Gothic Studies Volume 6 ; 6 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
      au < doesNotExist ; doesNotExist ; 2005 ; Gothic Studies Volume 7 ; 7 ; https://www.euppublishing.com/ ; >
      au < finished ; frozen ; 2006 ; Gothic Studies Volume 8 ; 8 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
      au < finished ; frozen ; 2007 ; Gothic Studies Volume 9 ; 9 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
@@ -684,7 +684,7 @@
      au < finished ; frozen ; 2011 ; Gothic Studies Volume 13 ; 13 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
      au < finished ; frozen ; 2012 ; Gothic Studies Volume 14 ; 14 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
      au < finished ; frozen ; 2013 ; Gothic Studies Volume 15 ; 15 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
-     au < finished ; frozen ; 2014 ; Gothic Studies Volume 16 ; 16 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
+     au < finished ; finished ; 2014 ; Gothic Studies Volume 16 ; 16 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
      au < finished ; frozen ; 2015 ; Gothic Studies Volume 17 ; 17 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
      au < finished ; frozen ; 2016 ; Gothic Studies Volume 18 ; 18 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
      au < finished ; finished ; 2017 ; Gothic Studies Volume 19 ; 19 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
@@ -778,7 +778,7 @@
     au < finished ; crawling ; 2017 ; The Innes Review Volume 68 ; 68 ; http://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; The Innes Review Volume 69 ; 69 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2019 ; The Innes Review Volume 70 ; 70 ; https://www.euppublishing.com/ ; >
-    au < expected ; exists ; 2020 ; The Innes Review Volume 71 ; 71 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 2020 ; The Innes Review Volume 71 ; 71 ; https://www.euppublishing.com/ ; >
 
   }
 
@@ -867,7 +867,7 @@
     au < finished ; finished ; 2015 ; International Research in Children's Literature Volume 8 ; 8 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2016 ; International Research in Children's Literature Volume 9 ; 9 ; http://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2017 ; International Research in Children's Literature Volume 10 ; 10 ; http://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
-    au < finished ; frozen ; 2018 ; International Research in Children's Literature Volume 11 ; 11 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2018 ; International Research in Children's Literature Volume 11 ; 11 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2019 ; International Research in Children's Literature Volume 12 ; 12 ; https://www.euppublishing.com/ ; >
     au < expected ; exists ; 2020 ; International Research in Children's Literature Volume 13 ; 13 ; https://www.euppublishing.com/ ; >
 
@@ -894,7 +894,7 @@
       au < finished ; frozen ; 2017 ; Irish University Review Volume 47 ; 47 ; http://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2018 ; Irish University Review Volume 48 ; 48 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2019 ; Irish University Review Volume 49 ; 49 ; https://www.euppublishing.com/ ; >
-      au < expected ; exists ; 2020 ; Irish University Review Volume 50 ; 50 ; https://www.euppublishing.com/ ; >
+      au < manifest ; exists ; 2020 ; Irish University Review Volume 50 ; 50 ; https://www.euppublishing.com/ ; >
 
     }
   
@@ -918,7 +918,7 @@
     au < finished ; finished ; 2004 ; Journal of Beckett Studies Volume 13 ; 13 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2005 ; Journal of Beckett Studies Volume 14 ; 14 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2006 ; Journal of Beckett Studies Volume 15 ; 15 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2007 ; Journal of Beckett Studies Volume 16 ; 16 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2007 ; Journal of Beckett Studies Volume 16 ; 16 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2008 ; Journal of Beckett Studies Volume 17 ; 17 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2009 ; Journal of Beckett Studies Volume 18 ; 18 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2010 ; Journal of Beckett Studies Volume 19 ; 19 ; http://www.euppublishing.com/ ; >
@@ -1119,7 +1119,7 @@
     au < finished ; frozen ; 2017 ; Journal of Scottish Historical Studies Volume 37 ; 37 ; http://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2018 ; Journal of Scottish Historical Studies Volume 38 ; 38 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2019 ; Journal of Scottish Historical Studies Volume 39 ; 39 ; https://www.euppublishing.com/ ; >
-    au < expected ; exists ; 2020 ; Journal of Scottish Historical Studies Volume 40 ; 40 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 2020 ; Journal of Scottish Historical Studies Volume 40 ; 40 ; https://www.euppublishing.com/ ; >
 
   }
 
@@ -1148,7 +1148,7 @@
     au < finished ; finished ; 2014 ; Journal of Scottish Philosophy Volume 12 ; 12 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2015 ; Journal of Scottish Philosophy Volume 13 ; 13 ; http://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2016 ; Journal of Scottish Philosophy Volume 14 ; 14 ; http://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2017 ; Journal of Scottish Philosophy Volume 15 ; 15 ; http://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2017 ; Journal of Scottish Philosophy Volume 15 ; 15 ; http://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2018 ; Journal of Scottish Philosophy Volume 16 ; 16 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2019 ; Journal of Scottish Philosophy Volume 17 ; 17 ; https://www.euppublishing.com/ ; >
     au < manifest ; exists ; 2020 ; Journal of Scottish Philosophy Volume 18 ; 18 ; https://www.euppublishing.com/ ; >
@@ -1377,7 +1377,7 @@
       au < finished ; finished ; 2003 ; Nottingham French Studies Volume 42 ; 42 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2004 ; Nottingham French Studies Volume 43 ; 43 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2005 ; Nottingham French Studies Volume 44 ; 44 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2006 ; Nottingham French Studies Volume 45 ; 45 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2006 ; Nottingham French Studies Volume 45 ; 45 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2007 ; Nottingham French Studies Volume 46 ; 46 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2008 ; Nottingham French Studies Volume 47 ; 47 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2009 ; Nottingham French Studies Volume 48 ; 48 ; http://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
@@ -1740,7 +1740,7 @@
     au < finished ; finished ; 2008 ; Scottish Archaeological Journal Volume 30 ; 30 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2009 ; Scottish Archaeological Journal Volume 31 ; 31 ; http://www.euppublishing.com/ ; >
     au < finished ; finished ; 2010 ; Scottish Archaeological Journal Volume 32 ; 32 ; http://www.euppublishing.com/ ; >
-    au < finished ; frozen ; 2011 ; Scottish Archaeological Journal Volume 33 ; 33 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2011 ; Scottish Archaeological Journal Volume 33 ; 33 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2012 ; Scottish Archaeological Journal Volume 34-35 ; 34-35 ; https://www.euppublishing.com/ ; >
     au < frozen ; exists ; 2014 ; Scottish Archaeological Journal Volume 36-37 ; 36-37 ; https://www.euppublishing.com/ ; >
     au < finished ; frozen ; 2016 ; Scottish Archaeological Journal Volume 38 ; 38 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
@@ -1928,7 +1928,7 @@
        au < manifest ; exists ; 1997 ; Costume Volume 31 ; 31 ; https://www.euppublishing.com/ ; >
        au < manifest ; exists ; 1998 ; Costume Volume 32 ; 32 ; https://www.euppublishing.com/ ; >
        au < manifest ; exists ; 1999 ; Costume Volume 33 ; 33 ; https://www.euppublishing.com/ ; >
-       au < finished ; frozen ; 2000 ; Costume Volume 34 ; 34 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
+       au < finished ; finished ; 2000 ; Costume Volume 34 ; 34 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
        au < finished ; finished ; 2001 ; Costume Volume 35 ; 35 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
        au < finished ; finished ; 2002 ; Costume Volume 36 ; 36 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
        au < finished ; finished ; 2003 ; Costume Volume 37 ; 37 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
@@ -1946,7 +1946,7 @@
        au < doNotProcess ; doNotProcess ; 2015 ; Costume Volume 49 ; 49 ; https://www.euppublishing.com/ ; >
        au < doNotProcess ; exists ; 2016 ; Costume Volume 50 ; 50 ; https://www.euppublishing.com/ ; >
        au < finished ; frozen ; 2017 ; Costume Volume 51 ; 51 ; http://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
-       au < finished ; frozen ; 2018 ; Costume Volume 52 ; 52 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
+       au < finished ; finished ; 2018 ; Costume Volume 52 ; 52 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
        au < deepCrawl ; exists ; 2019 ; Costume Volume 53 ; 53 ; https://www.euppublishing.com/ ; >
        au < manifest ; exists ; 2020 ; Costume Volume 54 ; 54 ; https://www.euppublishing.com/ ; >
 

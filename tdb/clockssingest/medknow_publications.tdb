@@ -8634,7 +8634,7 @@
       param[base_url] = http://www.ijsshortreports.com/
 
       au < manifest ; exists ; 2016 ; IJS Short Reports Volume 1 ; 2016 ; 1 ; ; >
-      au < manifest ; exists ; 2017 ; IJS Short Reports Volume 2 ; 2017 ; 2 ; ; >
+      au < notReady ; exists ; 2017 ; IJS Short Reports Volume 2 ; 2017 ; 2 ; ; > #Unable to fetch permission page
       au < manifest ; exists ; 2018 ; IJS Short Reports Volume 3 ; 2018 ; 3 ; ; >
 
   }
@@ -8652,7 +8652,7 @@
       param[base_url] = http://www.e-ijas.org/
 
       au < manifest ; exists ; 2016 ; Imam Journal of Applied Sciences Volume 1 ; 2016 ; 1 ; ; >
-      au < manifest ; exists ; 2017 ; Imam Journal of Applied Sciences Volume 2 ; 2017 ; 2 ; ; >
+      au < notReady ; exists ; 2017 ; Imam Journal of Applied Sciences Volume 2 ; 2017 ; 2 ; ; > #no substance
       au < manifest ; exists ; 2018 ; Imam Journal of Applied Sciences Volume 3 ; 2018 ; 3 ; ; >
 
   }
@@ -8785,7 +8785,7 @@
       param[journal_issn] = WKMP-0139
       param[base_url] = http://www.ijcpc.org/
 
-      au < manifest ; exists ; 2017 ; International Journal of Clinicopathological Correlation Volume 1 ; 2017 ; 1 ; ; >
+      au < notReady ; exists ; 2017 ; International Journal of Clinicopathological Correlation Volume 1 ; 2017 ; 1 ; ; > #no substance
       au < manifest ; exists ; 2018 ; International Journal of Clinicopathological Correlation Volume 2 ; 2018 ; 2 ; ; >
 
   }

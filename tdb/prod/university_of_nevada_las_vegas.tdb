@@ -14,15 +14,15 @@
     >
 
     plugin = org.lockss.plugin.bepress.BePressPlugin
-    param[base_url] = http://digitalscholarship.unlv.edu/
+    param[base_url] = https://digitalscholarship.unlv.edu/
     param[journal_abbr] = apin
     implicit < status ; year ; name ; param[volume] >
 
       #move to University of Hawai'i Press, 2018
 
-      au < exists ; 2016 ; Asian/Pacific Island Nursing Journal Volume 1 ; 1 >
-      au < exists ; 2017 ; Asian/Pacific Island Nursing Journal Volume 2 ; 2 >
-      au < exists ; 2018 ; Asian/Pacific Island Nursing Journal Volume 3 ; 3 >
+      au < manifest ; 2016 ; Asian/Pacific Island Nursing Journal Volume 1 ; 1 >
+      au < manifest ; 2017 ; Asian/Pacific Island Nursing Journal Volume 2 ; 2 >
+      au < manifest ; 2018 ; Asian/Pacific Island Nursing Journal Volume 3 ; 3 >
 
   }
 
@@ -62,10 +62,10 @@
     param[journal_abbr] = jrtc
     implicit < status ; year ; name ; param[volume] >
 
-    au < exists ; 2017 ; Journal of Research in Technical Careers Volume 1 ; 1 >
-    au < exists ; 2018 ; Journal of Research in Technical Careers Volume 2 ; 2 >
-    au < exists ; 2019 ; Journal of Research in Technical Careers Volume 3 ; 3 >
-    au < exists ; 2020 ; Journal of Research in Technical Careers Volume 4 ; 4 >
+    au < manifest ; 2017 ; Journal of Research in Technical Careers Volume 1 ; 1 >
+    au < manifest ; 2018 ; Journal of Research in Technical Careers Volume 2 ; 2 >
+    au < manifest ; 2019 ; Journal of Research in Technical Careers Volume 3 ; 3 >
+    au < manifest ; 2020 ; Journal of Research in Technical Careers Volume 4 ; 4 >
 
   }
 
