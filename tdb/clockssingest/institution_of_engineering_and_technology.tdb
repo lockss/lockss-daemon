@@ -146,14 +146,14 @@
       au < finished ; frozen ; 2007 ; IET Circuits, Devices and Systems Volume 1 ; 1 ; http://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2008 ; IET Circuits, Devices and Systems Volume 2 ; 2 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2009 ; IET Circuits, Devices and Systems Volume 3 ; 3 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2010 ; IET Circuits, Devices and Systems Volume 4 ; 4 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2011 ; IET Circuits, Devices and Systems Volume 5 ; 5 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2012 ; IET Circuits, Devices and Systems Volume 6 ; 6 ; http://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2013 ; IET Circuits, Devices and Systems Volume 7 ; 7 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2014 ; IET Circuits, Devices and Systems Volume 8 ; 8 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2010 ; IET Circuits, Devices and Systems Volume 4 ; 4 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2011 ; IET Circuits, Devices and Systems Volume 5 ; 5 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2012 ; IET Circuits, Devices and Systems Volume 6 ; 6 ; http://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2013 ; IET Circuits, Devices and Systems Volume 7 ; 7 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2014 ; IET Circuits, Devices and Systems Volume 8 ; 8 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2015 ; IET Circuits, Devices and Systems Volume 9 ; 9 ; http://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2016 ; IET Circuits, Devices and Systems Volume 10 ; 10 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2017 ; IET Circuits, Devices and Systems Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2016 ; IET Circuits, Devices and Systems Volume 10 ; 10 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2017 ; IET Circuits, Devices and Systems Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018 ; IET Circuits, Devices and Systems Volume 12 ; 12 ; http://digital-library.theiet.org/ ; >
       au < deepCrawl ; exists ; 2019 ; IET Circuits, Devices and Systems Volume 13 ; 13 ; https://digital-library.theiet.org/ ; >
 
@@ -169,17 +169,17 @@
       >
       param[journal_id] = iet-com
 
-      au < finished ; crawling ; 2007 ; IET Communications Volume 1 ; 1 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2008 ; IET Communications Volume 2 ; 2 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2009 ; IET Communications Volume 3 ; 3 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2010 ; IET Communications Volume 4 ; 4 ; http://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2011 ; IET Communications Volume 5 ; 5 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2012 ; IET Communications Volume 6 ; 6 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2013 ; IET Communications Volume 7 ; 7 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2014 ; IET Communications Volume 8 ; 8 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2015 ; IET Communications Volume 9 ; 9 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2016 ; IET Communications Volume 10 ; 10 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2017 ; IET Communications Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2007 ; IET Communications Volume 1 ; 1 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2008 ; IET Communications Volume 2 ; 2 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2009 ; IET Communications Volume 3 ; 3 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2010 ; IET Communications Volume 4 ; 4 ; http://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2011 ; IET Communications Volume 5 ; 5 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2012 ; IET Communications Volume 6 ; 6 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2013 ; IET Communications Volume 7 ; 7 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2014 ; IET Communications Volume 8 ; 8 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2015 ; IET Communications Volume 9 ; 9 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2016 ; IET Communications Volume 10 ; 10 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2017 ; IET Communications Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018 ; IET Communications Volume 12 ; 12 ; http://digital-library.theiet.org/ ; >
       au < deepCrawl ; exists ; 2019 ; IET Communications Volume 13 ; 13 ; https://digital-library.theiet.org/ ; >
 
@@ -195,18 +195,18 @@
       >
       param[journal_id] = iet-cdt
 
-      au < finished ; crawling ; 2007 ; IET Computers & Digital Techniques Volume 1 ; 1 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2008 ; IET Computers & Digital Techniques Volume 2 ; 2 ; http://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2009 ; IET Computers & Digital Techniques Volume 3 ; 3 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2010 ; IET Computers & Digital Techniques Volume 4 ; 4 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2011 ; IET Computers & Digital Techniques Volume 5 ; 5 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2012 ; IET Computers & Digital Techniques Volume 6 ; 6 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2013 ; IET Computers & Digital Techniques Volume 7 ; 7 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; IET Computers & Digital Techniques Volume 8 ; 8 ; http://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2015 ; IET Computers & Digital Techniques Volume 9 ; 9 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2016 ; IET Computers & Digital Techniques Volume 10 ; 10 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2017 ; IET Computers & Digital Techniques Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2018 ; IET Computers & Digital Techniques Volume 12 ; 12 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2007 ; IET Computers & Digital Techniques Volume 1 ; 1 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2008 ; IET Computers & Digital Techniques Volume 2 ; 2 ; http://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2009 ; IET Computers & Digital Techniques Volume 3 ; 3 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2010 ; IET Computers & Digital Techniques Volume 4 ; 4 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2011 ; IET Computers & Digital Techniques Volume 5 ; 5 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2012 ; IET Computers & Digital Techniques Volume 6 ; 6 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2013 ; IET Computers & Digital Techniques Volume 7 ; 7 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; IET Computers & Digital Techniques Volume 8 ; 8 ; http://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2015 ; IET Computers & Digital Techniques Volume 9 ; 9 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2016 ; IET Computers & Digital Techniques Volume 10 ; 10 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2017 ; IET Computers & Digital Techniques Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2018 ; IET Computers & Digital Techniques Volume 12 ; 12 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2019 ; IET Computers & Digital Techniques Volume 13 ; 13 ; https://digital-library.theiet.org/ ; >
 
     }
@@ -221,13 +221,13 @@
       >
       param[journal_id] = iet-cvi
 
-      au < finished ; crawling ; 2007 ; IET Computer Vision Volume 1 ; 1 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2008 ; IET Computer Vision Volume 2 ; 2 ; http://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2009 ; IET Computer Vision Volume 3 ; 3 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2010 ; IET Computer Vision Volume 4 ; 4 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2011 ; IET Computer Vision Volume 5 ; 5 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2012 ; IET Computer Vision Volume 6 ; 6 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2013 ; IET Computer Vision Volume 7 ; 7 ; http://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2007 ; IET Computer Vision Volume 1 ; 1 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2008 ; IET Computer Vision Volume 2 ; 2 ; http://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2009 ; IET Computer Vision Volume 3 ; 3 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2010 ; IET Computer Vision Volume 4 ; 4 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2011 ; IET Computer Vision Volume 5 ; 5 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2012 ; IET Computer Vision Volume 6 ; 6 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2013 ; IET Computer Vision Volume 7 ; 7 ; http://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2014 ; IET Computer Vision Volume 8 ; 8 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; IET Computer Vision Volume 9 ; 9 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2016 ; IET Computer Vision Volume 10 ; 10 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
