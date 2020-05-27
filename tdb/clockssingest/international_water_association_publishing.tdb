@@ -333,6 +333,7 @@
     >
 
     param[journal_id] = wqrj
+    #param[base_url] = http://wqrjc.iwaponline.com/
 #      name = Water Quality Research Journal of Canada ; title removed the of Canada in 2018
 
     au < doNotProcess ; exists ; 2011 ; 2011 ; Water Quality Research Journal of Canada Volume 46 ; 46 ; >
@@ -368,57 +369,63 @@
     au < doNotProcess ; exists ; 1989 ; 1989 ; Water Science and Technology Volume 21 ; 21 ; >
     au < doNotProcess ; exists ; 1990 ; 1990 ; Water Science and Technology Volume 22 ; 22 ; >
     au < doNotProcess ; exists ; 1991 ; 1991 ; Water Science and Technology Volume 23 ; 23 ; >
-#fix volumes to be spans     
-#    au < doNotProcess ; exists ; 1991 ; 1991 ; Water Science and Technology Volume 24 ; 24 ; >
+    au < doNotProcess ; exists ; 1991 ; 1991 ; Water Science and Technology Volume 24 ; 24 ; >
     au < doNotProcess ; exists ; 1992 ; 1992 ; Water Science and Technology Volume 25 ; 25 ; >
-#    au < doNotProcess ; exists ; 1992 ; 1992 ; Water Science and Technology Volume 26 ; 26 ; >
+    au < doNotProcess ; exists ; 1992 ; 1992 ; Water Science and Technology Volume 26 ; 26 ; >
     au < doNotProcess ; exists ; 1993 ; 1993 ; Water Science and Technology Volume 27 ; 27 ; >
-#    au < doNotProcess ; exists ; 1993 ; 1993 ; Water Science and Technology Volume 28 ; 28 ; >
+    au < doNotProcess ; exists ; 1993 ; 1993 ; Water Science and Technology Volume 28 ; 28 ; >
     au < doNotProcess ; exists ; 1994 ; 1994 ; Water Science and Technology Volume 29 ; 29 ; >
-#    au < doNotProcess ; exists ; 1994 ; 1994 ; Water Science and Technology Volume 30 ; 30 ; >
+    au < doNotProcess ; exists ; 1994 ; 1994 ; Water Science and Technology Volume 30 ; 30 ; >
     au < doNotProcess ; exists ; 1995 ; 1995 ; Water Science and Technology Volume 31 ; 31 ; >
-#    au < doNotProcess ; exists ; 1995 ; 1995 ; Water Science and Technology Volume 32 ; 32 ; >
+    au < doNotProcess ; exists ; 1995 ; 1995 ; Water Science and Technology Volume 32 ; 32 ; >
     au < doNotProcess ; exists ; 1996 ; 1996 ; Water Science and Technology Volume 33 ; 33 ; >
-#    au < doNotProcess ; exists ; 1996 ; 1996 ; Water Science and Technology Volume 34 ; 34 ; >
+    au < doNotProcess ; exists ; 1996 ; 1996 ; Water Science and Technology Volume 34 ; 34 ; >
     au < doNotProcess ; exists ; 1997 ; 1997 ; Water Science and Technology Volume 35 ; 35 ; >
-#    au < doNotProcess ; exists ; 1997 ; 1997 ; Water Science and Technology Volume 36 ; 36 ; >
+    au < doNotProcess ; exists ; 1997 ; 1997 ; Water Science and Technology Volume 36 ; 36 ; >
     au < doNotProcess ; exists ; 1998 ; 1998 ; Water Science and Technology Volume 37 ; 37 ; >
-#    au < doNotProcess ; exists ; 1998 ; 1998 ; Water Science and Technology Volume 38 ; 38 ; >
+    au < doNotProcess ; exists ; 1998 ; 1998 ; Water Science and Technology Volume 38 ; 38 ; >
     au < doNotProcess ; exists ; 1999 ; 1999 ; Water Science and Technology Volume 39 ; 39 ; >
-#    au < doNotProcess ; exists ; 1999 ; 1999 ; Water Science and Technology Volume 40 ; 40 ; >
+    au < doNotProcess ; exists ; 1999 ; 1999 ; Water Science and Technology Volume 40 ; 40 ; >
     au < doNotProcess ; exists ; 2000 ; 2000 ; Water Science and Technology Volume 41 ; 41 ; >
-#    au < doNotProcess ; exists ; 2000 ; 2000 ; Water Science and Technology Volume 42 ; 42 ; >
+    au < doNotProcess ; exists ; 2000 ; 2000 ; Water Science and Technology Volume 42 ; 42 ; >
     au < doNotProcess ; exists ; 2001 ; 2001 ; Water Science and Technology Volume 43 ; 43 ; >
-#    au < doNotProcess ; exists ; 2001 ; 2001 ; Water Science and Technology Volume 44 ; 44 ; >
+    au < doNotProcess ; exists ; 2001 ; 2001 ; Water Science and Technology Volume 44 ; 44 ; >
     au < doNotProcess ; exists ; 2002 ; 2002 ; Water Science and Technology Volume 45 ; 45 ; >
-#    au < doNotProcess ; exists ; 2002 ; 2002 ; Water Science and Technology Volume 46 ; 46 ; >
+    au < doNotProcess ; exists ; 2002 ; 2002 ; Water Science and Technology Volume 46 ; 46 ; >
     au < doNotProcess ; exists ; 2003 ; 2003 ; Water Science and Technology Volume 47 ; 47 ; >
-#    au < doNotProcess ; exists ; 2003 ; 2003 ; Water Science and Technology Volume 48 ; 48 ; >
+    au < doNotProcess ; exists ; 2003 ; 2003 ; Water Science and Technology Volume 48 ; 48 ; >
     au < doNotProcess ; exists ; 2004 ; 2004 ; Water Science and Technology Volume 49 ; 49 ; >
-#    au < doNotProcess ; exists ; 2004 ; 2004 ; Water Science and Technology Volume 50 ; 50 ; >
+    au < doNotProcess ; exists ; 2004 ; 2004 ; Water Science and Technology Volume 50 ; 50 ; >
     au < doNotProcess ; exists ; 2005 ; 2005 ; Water Science and Technology Volume 51 ; 51 ; >
-#    au < doNotProcess ; exists ; 2005 ; 2005 ; Water Science and Technology Volume 52 ; 52 ; >
+    au < doNotProcess ; exists ; 2005 ; 2005 ; Water Science and Technology Volume 52 ; 52 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Water Science and Technology Volume 53 ; 53 ; >
-#    au < doNotProcess ; exists ; 2006 ; 2006 ; Water Science and Technology Volume 54 ; 54 ; >
+    au < doNotProcess ; exists ; 2006 ; 2006 ; Water Science and Technology Volume 54 ; 54 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Water Science and Technology Volume 55 ; 55 ; >
-#    au < doNotProcess ; exists ; 2007 ; 2007 ; Water Science and Technology Volume 56 ; 56 ; >
+    au < doNotProcess ; exists ; 2007 ; 2007 ; Water Science and Technology Volume 56 ; 56 ; >
     au < doNotProcess ; exists ; 2008 ; 2008 ; Water Science and Technology Volume 57 ; 57 ; >
-#    au < doNotProcess ; exists ; 2008 ; 2008 ; Water Science and Technology Volume 58 ; 58 ; >
+    au < doNotProcess ; exists ; 2008 ; 2008 ; Water Science and Technology Volume 58 ; 58 ; >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Water Science and Technology Volume 59 ; 59 ; >
-#    au < doNotProcess ; exists ; 2009 ; 2009 ; Water Science and Technology Volume 60 ; 60 ; >
+    au < doNotProcess ; exists ; 2009 ; 2009 ; Water Science and Technology Volume 60 ; 60 ; >
     au < doNotProcess ; exists ; 2010 ; 2010 ; Water Science and Technology Volume 61 ; 61 ; >
-#    au < doNotProcess ; exists ; 2010 ; 2010 ; Water Science and Technology Volume 62 ; 62 ; >
+    au < doNotProcess ; exists ; 2010 ; 2010 ; Water Science and Technology Volume 62 ; 62 ; >
     au < doNotProcess ; exists ; 2011 ; 2011 ; Water Science and Technology Volume 63 ; 63 ; >
-#    au < doNotProcess ; exists ; 2011 ; 2011 ; Water Science and Technology Volume 64 ; 64 ; >
+    au < doNotProcess ; exists ; 2011 ; 2011 ; Water Science and Technology Volume 64 ; 64 ; >
     au < doNotProcess ; exists ; 2012 ; 2012 ; Water Science and Technology Volume 65 ; 65 ; >
-#    au < doNotProcess ; exists ; 2012 ; 2012 ; Water Science and Technology Volume 66 ; 66 ; >
-    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Water Science and Technology Volume 67-68 ; 67-68 ; >
-    au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Water Science and Technology Volume 69-70 ; 69-70 ; >
-    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Water Science and Technology Volume 71-72 ; 71-72 ; > #IWADrupal plugin
-    au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Water Science and Technology Volume 73-74 ; 73-74 ; > #IWADrupal plugin
-    au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Water Science and Technology Volume 75-76 ; 75-76 ; > #IWADrupal plugin
-    au < exists ; exists ; 2018 ; 2018 ; Water Science and Technology Volume 77-78,2017 ; 77-78,2017 ; > # yes, really, Volume 2017 in 2018
-    au < exists ; exists ; 2019 ; 2019 ; Water Science and Technology Volume 79-80,2018 ; 79-80,2018 ; > 
+    au < doNotProcess ; exists ; 2012 ; 2012 ; Water Science and Technology Volume 66 ; 66 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Water Science and Technology Volume 67 ; 67 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Water Science and Technology Volume 68 ; 68 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Water Science and Technology Volume 69 ; 69 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Water Science and Technology Volume 70 ; 70 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Water Science and Technology Volume 71 ; 71 ; > #IWADrupal plugin
+    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Water Science and Technology Volume 72 ; 72 ; > #IWADrupal plugin
+    au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Water Science and Technology Volume 73 ; 73 ; > #IWADrupal plugin
+    au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Water Science and Technology Volume 74 ; 74 ; > #IWADrupal plugin
+    au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Water Science and Technology Volume 75 ; 75 ; > #IWADrupal plugin
+    au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Water Science and Technology Volume 76 ; 76 ; > #IWADrupal plugin
+    au < exists ; exists ; 2018 ; 2018 ; Water Science and Technology Volume 77 ; 77 ; >
+    au < exists ; exists ; 2018 ; 2018 ; Water Science and Technology Volume 78 ; 78 ; >
+    au < exists ; exists ; 2019 ; 2019 ; Water Science and Technology Volume 79 ; 79 ; > 
+    au < exists ; exists ; 2019 ; 2019 ; Water Science and Technology Volume 80 ; 80 ; > 
 
   }
   
@@ -454,6 +461,5 @@
     au < exists ; exists ; 2019 ; 2019 ; Water Science and Technology: Water Supply Volume 19 ; 19 ; >
 
   }
-  
   
 }
