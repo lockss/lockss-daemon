@@ -395,24 +395,17 @@
       au < deepCrawl ; exists ; 2019 ; Faraday Discussions Volume 218 ; 218 ; 2019 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2019 ; Faraday Discussions Volume 219 ; 219 ; 2019 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2019 ; Faraday Discussions Volume 220 ; 220 ; 2019 ; https://pubs.rsc.org/ ; >
-      au < expected ; exists ; 2019 ; Faraday Discussions Volume 221 ; 221 ; 2019 ; https://pubs.rsc.org/ ; >
-      au < expected ; exists ; 2019 ; Faraday Discussions Volume 222 ; 222 ; 2019 ; https://pubs.rsc.org/ ; >
-      au < expected ; exists ; 2019 ; Faraday Discussions Volume 223 ; 223 ; 2019 ; https://pubs.rsc.org/ ; >
-      au < expected ; exists ; 2019 ; Faraday Discussions Volume 224 ; 224 ; 2019 ; https://pubs.rsc.org/ ; >
-      au < expected ; exists ; 2019 ; Faraday Discussions Volume 225 ; 225 ; 2019 ; https://pubs.rsc.org/ ; >
+
+      au < exists ; exists ; 2020 ; Faraday Discussions Volume 221 ; 221 ; 2020 ; https://pubs.rsc.org/ ; >
+      au < expected ; exists ; 2020 ; Faraday Discussions Volume 222 ; 222 ; 2020 ; https://pubs.rsc.org/ ; >
+      au < expected ; exists ; 2020 ; Faraday Discussions Volume 223 ; 223 ; 2020 ; https://pubs.rsc.org/ ; >
+      au < expected ; exists ; 2020 ; Faraday Discussions Volume 224 ; 224 ; 2020 ; https://pubs.rsc.org/ ; >
+      au < expected ; exists ; 2020 ; Faraday Discussions Volume 225 ; 225 ; 2020 ; https://pubs.rsc.org/ ; >
       au < expected ; exists ; 2020 ; Faraday Discussions Volume 226 ; 226 ; 2020 ; https://pubs.rsc.org/ ; >
       au < expected ; exists ; 2020 ; Faraday Discussions Volume 227 ; 227 ; 2020 ; https://pubs.rsc.org/ ; >
       au < expected ; exists ; 2020 ; Faraday Discussions Volume 228 ; 228 ; 2020 ; https://pubs.rsc.org/ ; >
       au < expected ; exists ; 2020 ; Faraday Discussions Volume 229 ; 229 ; 2020 ; https://pubs.rsc.org/ ; >
       au < expected ; exists ; 2020 ; Faraday Discussions Volume 230 ; 230 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < expected ; exists ; 2020 ; Faraday Discussions Volume 231 ; 231 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < expected ; exists ; 2020 ; Faraday Discussions Volume 232 ; 232 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < expected ; exists ; 2020 ; Faraday Discussions Volume 233 ; 233 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < expected ; exists ; 2020 ; Faraday Discussions Volume 234 ; 234 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < expected ; exists ; 2020 ; Faraday Discussions Volume 235 ; 235 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < expected ; exists ; 2020 ; Faraday Discussions Volume 236 ; 236 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < expected ; exists ; 2020 ; Faraday Discussions Volume 237 ; 237 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < expected ; exists ; 2020 ; Faraday Discussions Volume 238 ; 238 ; 2020 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -451,6 +444,7 @@
     >
 
       param[journal_code] = ib
+      #last volume 2018
 
       au < finished ; finished ; 2010 ; Integrative Biology Volume 2 ; 2 ; 2010 ; http://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2011 ; Integrative Biology Volume 3 ; 3 ; 2011 ; http://pubs.rsc.org/ ; >
@@ -461,8 +455,6 @@
       au < deepCrawl ; exists ; 2016 ; Integrative Biology Volume 8 ; 8 ; 2016 ; http://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2017 ; Integrative Biology Volume 9 ; 9 ; 2017 ; http://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2018 ; Integrative Biology Volume 10 ; 10 ; 2018 ; https://pubs.rsc.org/ ; >
-      au < expected ; exists ; 2019 ; Integrative Biology Volume 11 ; 11 ; 2019 ; https://pubs.rsc.org/ ; >
-      au < expected ; exists ; 2020 ; Integrative Biology Volume 12 ; 12 ; 2020 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -1406,10 +1398,13 @@
 
       comment[years] = Published 1997-1999
       param[journal_code] = jc
+      #manifest page has a different format
+      #example: https://pubs.rsc.org/en/journals/lockss?journalcode=jc&year=1997
+      #instead of: https://pubs.rsc.org/en/journals/lockss?journalcode=jc&volume=1&year=1997
 
-      au < exists ; exists ; 1997 ; Journal of Chemical Research, Synopses Volume 1997 ; 1997 ; 1997 ; https://pubs.rsc.org/ ; >
-      au < exists ; exists ; 1998 ; Journal of Chemical Research, Synopses Volume 1998 ; 1998 ; 1998 ; https://pubs.rsc.org/ ; >
-      au < exists ; exists ; 1999 ; Journal of Chemical Research, Synopses Volume 1999 ; 1999 ; 1999 ; https://pubs.rsc.org/ ; >
+      au < notReady ; exists ; 1997 ; Journal of Chemical Research, Synopses Volume 1997 ; 1997 ; 1997 ; https://pubs.rsc.org/ ; >
+      au < notReady ; exists ; 1998 ; Journal of Chemical Research, Synopses Volume 1998 ; 1998 ; 1998 ; https://pubs.rsc.org/ ; >
+      au < notReady ; exists ; 1999 ; Journal of Chemical Research, Synopses Volume 1999 ; 1999 ; 1999 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -1741,11 +1736,16 @@
         eissn = 1364-5447
       >
 
-      comment[years] = Published 2001-2002
+      comment[years] = Published 1996-2009
       param[journal_code] = dt
+      #manifest page has a different format
+      #example: https://pubs.rsc.org/en/journals/lockss?journalcode=jc&year=1997
+      #instead of: https://pubs.rsc.org/en/journals/lockss?journalcode=jc&volume=1&year=1997
+      
+      #title continued under the name "Dalton Transactions"
 
-      au < exists ; exists ; 2001 ; Journal of the Chemical Society, Dalton Transactions Volume 2001 ; 2001 ; 2001 ; https://pubs.rsc.org/ ; >
-      au < exists ; exists ; 2002 ; Journal of the Chemical Society, Dalton Transactions Volume 2002 ; 2002 ; 2002 ; https://pubs.rsc.org/ ; >
+      au < notReady ; exists ; 2001 ; Journal of the Chemical Society, Dalton Transactions Volume 2001 ; 2001 ; 2001 ; https://pubs.rsc.org/ ; >
+      au < notReady ; exists ; 2002 ; Journal of the Chemical Society, Dalton Transactions Volume 2002 ; 2002 ; 2002 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -1820,8 +1820,9 @@
 
       comment[years] = Published 2000-2000
       param[journal_code] = p1
+      #manifest page in different format. No volume code
 
-      au < exists ; exists ; 2000 ; Journal of the Chemical Society, Perkin Transactions 1 Volume 2000 ; 2000 ; 2000 ; https://pubs.rsc.org/ ; >
+      au < notReady ; exists ; 2000 ; Journal of the Chemical Society, Perkin Transactions 1 Volume 2000 ; 2000 ; 2000 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -1835,9 +1836,10 @@
 
       comment[years] = Published 2001-2002
       param[journal_code] = p1
+      #manifest page in different format. No volume code
 
-      au < exists ; exists ; 2001 ; Journal of the Chemical Society, Perkin Transactions 1 Volume 2001 ; 2001 ; 2001 ; https://pubs.rsc.org/ ; >
-      au < exists ; exists ; 2002 ; Journal of the Chemical Society, Perkin Transactions 1 Volume 2002 ; 2002 ; 2002 ; https://pubs.rsc.org/ ; >
+      au < notReady ; exists ; 2001 ; Journal of the Chemical Society, Perkin Transactions 1 Volume 2001 ; 2001 ; 2001 ; https://pubs.rsc.org/ ; >
+      au < notReady ; exists ; 2002 ; Journal of the Chemical Society, Perkin Transactions 1 Volume 2002 ; 2002 ; 2002 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -1851,6 +1853,7 @@
 
       comment[years] = Published 1972-1999
       param[journal_code] = p1
+      #manifest page in different format. No volume code
 
       au < doNotProcess ; exists ; 1972 ; Journal of the Chemical Society, Perkin Transactions 1: Organic and Bio-organic Chemistry Volume 1972 ; 1972 ; 1972 ; https://pubs.rsc.org/ ; >
       au < doNotProcess ; exists ; 1973 ; Journal of the Chemical Society, Perkin Transactions 1: Organic and Bio-organic Chemistry Volume 1973 ; 1973 ; 1973 ; https://pubs.rsc.org/ ; >
@@ -1876,10 +1879,10 @@
       au < doNotProcess ; exists ; 1993 ; Journal of the Chemical Society, Perkin Transactions 1: Organic and Bio-organic Chemistry Volume 1993 ; 1993 ; 1993 ; https://pubs.rsc.org/ ; >
       au < doNotProcess ; exists ; 1994 ; Journal of the Chemical Society, Perkin Transactions 1: Organic and Bio-organic Chemistry Volume 1994 ; 1994 ; 1994 ; https://pubs.rsc.org/ ; >
       au < doNotProcess ; exists ; 1995 ; Journal of the Chemical Society, Perkin Transactions 1: Organic and Bio-organic Chemistry Volume 1995 ; 1995 ; 1995 ; https://pubs.rsc.org/ ; >
-      au < exists ; exists ; 1996 ; Journal of the Chemical Society, Perkin Transactions 1: Organic and Bio-organic Chemistry Volume 1996 ; 1996 ; 1996 ; https://pubs.rsc.org/ ; >
-      au < exists ; exists ; 1997 ; Journal of the Chemical Society, Perkin Transactions 1: Organic and Bio-organic Chemistry Volume 1997 ; 1997 ; 1997 ; https://pubs.rsc.org/ ; >
-      au < exists ; exists ; 1998 ; Journal of the Chemical Society, Perkin Transactions 1: Organic and Bio-organic Chemistry Volume 1998 ; 1998 ; 1998 ; https://pubs.rsc.org/ ; >
-      au < exists ; exists ; 1999 ; Journal of the Chemical Society, Perkin Transactions 1: Organic and Bio-organic Chemistry Volume 1999 ; 1999 ; 1999 ; https://pubs.rsc.org/ ; >
+      au < notReady ; exists ; 1996 ; Journal of the Chemical Society, Perkin Transactions 1: Organic and Bio-organic Chemistry Volume 1996 ; 1996 ; 1996 ; https://pubs.rsc.org/ ; >
+      au < notReady ; exists ; 1997 ; Journal of the Chemical Society, Perkin Transactions 1: Organic and Bio-organic Chemistry Volume 1997 ; 1997 ; 1997 ; https://pubs.rsc.org/ ; >
+      au < notReady ; exists ; 1998 ; Journal of the Chemical Society, Perkin Transactions 1: Organic and Bio-organic Chemistry Volume 1998 ; 1998 ; 1998 ; https://pubs.rsc.org/ ; >
+      au < notReady ; exists ; 1999 ; Journal of the Chemical Society, Perkin Transactions 1: Organic and Bio-organic Chemistry Volume 1999 ; 1999 ; 1999 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -1892,8 +1895,9 @@
 
       comment[years] = Published 2000-2000
       param[journal_code] = p2
+      #manifest page in different format. No volume code
 
-      au < exists ; exists ; 2000 ; Journal of the Chemical Society, Perkin Transactions 2 Volume 2000 ; 2000 ; 2000 ; https://pubs.rsc.org/ ; >
+      au < notReady ; exists ; 2000 ; Journal of the Chemical Society, Perkin Transactions 2 Volume 2000 ; 2000 ; 2000 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -1907,9 +1911,10 @@
 
       comment[years] = Published 2001-2002
       param[journal_code] = p2
+      #manifest page in different format. No volume code
 
-      au < exists ; exists ; 2001 ; Journal of the Chemical Society, Perkin Transactions 2 Volume 2001 ; 2001 ; 2001 ; https://pubs.rsc.org/ ; >
-      au < exists ; exists ; 2002 ; Journal of the Chemical Society, Perkin Transactions 2 Volume 2002 ; 2002 ; 2002 ; https://pubs.rsc.org/ ; >
+      au < notReady ; exists ; 2001 ; Journal of the Chemical Society, Perkin Transactions 2 Volume 2001 ; 2001 ; 2001 ; https://pubs.rsc.org/ ; >
+      au < notReady ; exists ; 2002 ; Journal of the Chemical Society, Perkin Transactions 2 Volume 2002 ; 2002 ; 2002 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -1922,6 +1927,7 @@
 
       comment[years] = Published 1972-1999
       param[journal_code] = p2
+      #manifest page in different format. No volume code
 
       au < doNotProcess ; exists ; 1972 ; Journal of the Chemical Society, Perkin Transactions 2: Physical Organic Chemistry Volume 1972 ; 1972 ; 1972 ; https://pubs.rsc.org/ ; >
       au < doNotProcess ; exists ; 1973 ; Journal of the Chemical Society, Perkin Transactions 2: Physical Organic Chemistry Volume 1973 ; 1973 ; 1973 ; https://pubs.rsc.org/ ; >
@@ -1947,10 +1953,10 @@
       au < doNotProcess ; exists ; 1993 ; Journal of the Chemical Society, Perkin Transactions 2: Physical Organic Chemistry Volume 1993 ; 1993 ; 1993 ; https://pubs.rsc.org/ ; >
       au < doNotProcess ; exists ; 1994 ; Journal of the Chemical Society, Perkin Transactions 2: Physical Organic Chemistry Volume 1994 ; 1994 ; 1994 ; https://pubs.rsc.org/ ; >
       au < doNotProcess ; exists ; 1995 ; Journal of the Chemical Society, Perkin Transactions 2: Physical Organic Chemistry Volume 1995 ; 1995 ; 1995 ; https://pubs.rsc.org/ ; >
-      au < exists ; exists ; 1996 ; Journal of the Chemical Society, Perkin Transactions 2: Physical Organic Chemistry Volume 1996 ; 1996 ; 1996 ; https://pubs.rsc.org/ ; >
-      au < exists ; exists ; 1997 ; Journal of the Chemical Society, Perkin Transactions 2: Physical Organic Chemistry Volume 1997 ; 1997 ; 1997 ; https://pubs.rsc.org/ ; >
-      au < exists ; exists ; 1998 ; Journal of the Chemical Society, Perkin Transactions 2: Physical Organic Chemistry Volume 1998 ; 1998 ; 1998 ; https://pubs.rsc.org/ ; >
-      au < exists ; exists ; 1999 ; Journal of the Chemical Society, Perkin Transactions 2: Physical Organic Chemistry Volume 1999 ; 1999 ; 1999 ; https://pubs.rsc.org/ ; >
+      au < notReady ; exists ; 1996 ; Journal of the Chemical Society, Perkin Transactions 2: Physical Organic Chemistry Volume 1996 ; 1996 ; 1996 ; https://pubs.rsc.org/ ; >
+      au < notReady ; exists ; 1997 ; Journal of the Chemical Society, Perkin Transactions 2: Physical Organic Chemistry Volume 1997 ; 1997 ; 1997 ; https://pubs.rsc.org/ ; >
+      au < notReady ; exists ; 1998 ; Journal of the Chemical Society, Perkin Transactions 2: Physical Organic Chemistry Volume 1998 ; 1998 ; 1998 ; https://pubs.rsc.org/ ; >
+      au < notReady ; exists ; 1999 ; Journal of the Chemical Society, Perkin Transactions 2: Physical Organic Chemistry Volume 1999 ; 1999 ; 1999 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -2171,11 +2177,12 @@
 
       comment[years] = Published 2000-2003
       param[journal_code] = po
+      #manifest page in different format. No volume code
 
-      au < exists ; exists ; 2000 ; Pesticide Outlook Volume 2000 ; 2000 ; 2000 ; https://pubs.rsc.org/ ; >
-      au < exists ; exists ; 2001 ; Pesticide Outlook Volume 2001 ; 2001 ; 2001 ; https://pubs.rsc.org/ ; >
-      au < exists ; exists ; 2002 ; Pesticide Outlook Volume 2002 ; 2002 ; 2002 ; https://pubs.rsc.org/ ; >
-      au < exists ; exists ; 2003 ; Pesticide Outlook Volume 2003 ; 2003 ; 2003 ; https://pubs.rsc.org/ ; >
+      au < notReady ; exists ; 2000 ; Pesticide Outlook Volume 2000 ; 2000 ; 2000 ; https://pubs.rsc.org/ ; >
+      au < notReady ; exists ; 2001 ; Pesticide Outlook Volume 2001 ; 2001 ; 2001 ; https://pubs.rsc.org/ ; >
+      au < notReady ; exists ; 2002 ; Pesticide Outlook Volume 2002 ; 2002 ; 2002 ; https://pubs.rsc.org/ ; >
+      au < notReady ; exists ; 2003 ; Pesticide Outlook Volume 2003 ; 2003 ; 2003 ; https://pubs.rsc.org/ ; >
 
   }
 

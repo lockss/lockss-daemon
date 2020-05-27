@@ -2068,7 +2068,13 @@ while (my $line = <>) {
         }
         $result = "Manifest"
       } else {
-        $result = "--NO_TAG--"
+        if ($man_contents =~ m/Access Denied/) {
+          $result = "--ACCESS_DENIED--";
+        } elsif ($man_contents !~ m/$lockss_tag/) {
+          $result = "--NO_TAG--";
+        } else {
+          $result = "--NO_ISSUE--";
+        }
       }
     } else {
       $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
@@ -2096,7 +2102,13 @@ while (my $line = <>) {
         }
         $result = "Manifest"
       } else {
-        $result = "--NO_TAG--"
+        if ($man_contents =~ m/Access Denied/) {
+          $result = "--ACCESS_DENIED--";
+        } elsif ($man_contents !~ m/$lockss_tag/) {
+          $result = "--NO_TAG--";
+        } else {
+          $result = "--NO_ISSUE--";
+        }
       }
     } else {
       $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
