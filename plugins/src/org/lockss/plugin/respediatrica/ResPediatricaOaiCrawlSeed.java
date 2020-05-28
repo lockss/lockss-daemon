@@ -57,7 +57,7 @@ public class ResPediatricaOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
   public static final String DEFAULT_IDENTIFIER_TAG = "dc.identifier";
   protected Collection<String> startUrls;
   protected int year;
-  protected Pattern yearPattern = Pattern.compile("^([0-9]{4})$");
+  protected Pattern yearPattern = Pattern.compile("^([0-9]{4})-[0-9]{2}-[0-9]{2}");
   public static final String OAI_DC_METADATA_PREFIX = "oai_dc";
   private static Logger logger =
 	      Logger.getLogger(ResPediatricaOaiCrawlSeed.class);
@@ -80,53 +80,78 @@ public class ResPediatricaOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
       throws PluginException, ConfigurationException, IOException {
     super.initialize();
   }
-  
+
+  /*
+  15:04:08.520: Warning: 9-FollowLinkCrawler: Unexpected exception, should have been caught lower: org.dspace.xoai.serviceprovider.exceptions.InvalidOAIResponse: OAI responded with code: badArgument
+    	at org.dspace.xoai.serviceprovider.parsers.ListRecordsParser.hasNext(ListRecordsParser.java:47)
+	at org.dspace.xoai.serviceprovider.handler.ListRecordHandler.getNextIteration(ListRecordHandler.java:96)
+	at org.dspace.xoai.serviceprovider.handler.ListRecordHandler.nextIteration(ListRecordHandler.java:56)
+	at org.dspace.xoai.serviceprovider.lazy.ItemIterator.hasNext(ItemIterator.java:32)
+	at org.lockss.plugin.respediatrica.ResPediatricaOaiCrawlSeed.getRecordList(ResPediatricaOaiCrawlSeed.java:103)
+	at org.lockss.plugin.respediatrica.RecordFilteringOaiPmhCrawlSeed.doGetStartUrls(RecordFilteringOaiPmhCrawlSeed.java:165)
+	at org.lockss.crawler.BaseCrawlSeed.getStartUrls(BaseCrawlSeed.java:85)
+	at org.lockss.crawler.FollowLinkCrawler.enqueueStartUrls(FollowLinkCrawler.java:494)
+	at org.lockss.crawler.FollowLinkCrawler.doCrawl0(FollowLinkCrawler.java:313)
+	at org.lockss.crawler.BaseCrawler.doCrawl(BaseCrawler.java:403)
+	at org.lockss.crawler.CrawlManagerImpl$CrawlRunner.lockssRun(CrawlManagerImpl.java:1470)
+	at org.lockss.daemon.LockssRunnable.run(LockssRunnable.java:437)
+	at EDU.oswego.cs.dl.util.concurrent.PooledExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+15:04:08.520: Debug3: 9-FollowLinkCrawler: Start URLs: []
+   */
   @Override
   protected Collection<String> getRecordList(ListRecordsParameters params)
 		  throws ConfigurationException, IOException {
       logger.debug3("Fei - auid: " + au.getAuId() + ", encoded auid:" + UrlUtil.encodeUrl(au.getAuId()));
+
+      String url = UrlUtil.encodeUrl(au.getAuId());
+
       String storeUrl = baseUrl + "auid=" + UrlUtil.encodeUrl(au.getAuId());
+
+      logger.debug3("Fei: baseUrl = " + baseUrl + ", url = " + url + ", storeUrl = " + storeUrl);
+
       String link;
       Boolean error = false;
       Set<String> idSet = new HashSet<String>();
       try {
-        /*
-	      for (Iterator<Record> recIter = getServiceProvider().listRecords(params);
-	           recIter.hasNext();) {
-	        Record rec = recIter.next();
-	        MetadataSearch<String> metaSearch = 
-	            rec.getMetadata().getValue().searcher();
-	        if (checkMetaRules(metaSearch)) {
-	        	link = findRecordArticleLink(rec);
-	        	if(link != null) {
-	        		idSet.add(link);
-	        	}
-	        }
-	      }
-	      Iterator<Record> recIter = getServiceProvider().listRecords(params);
-         */
-        Iterator<Record> recIter = getServiceProvider().listRecords(params);
-        while (recIter.hasNext()) {
-          Record rec = recIter.next();
-          MetadataSearch<String> metaSearch =
-                  rec.getMetadata().getValue().searcher();
-          if (checkMetaRules(metaSearch)) {
-            link = findRecordArticleLink(rec);
-            if(link != null) {
-              idSet.add(link);
-            }
+          logger.debug3("Fei: - inside Try ");
+          Iterator<Record> recIter = getServiceProvider().listRecords(params);
+          if (recIter != null) {
+              logger.debug3("Fei: - recIter is not null");
+              while (recIter.hasNext()) {
+                  Record rec = recIter.next();
+                  if (rec != null) {
+                      MetadataSearch<String> metaSearch =
+                              rec.getMetadata().getValue().searcher();
+                      logger.debug3("Fei: - inside Try , inside for");
+                      if (checkMetaRules(metaSearch)) {
+                          link = findRecordArticleLink(rec);
+                          if (link != null) {
+                              logger.debug3("Fei: - link = %s" + link);
+                              idSet.add(link);
+                          } else {
+                              logger.debug3("Fei: - empty link");
+                          }
+                      }
+                  } else {
+                      logger.debug3("Fei: - recIter is not null, but rec is null");
+                  }
+              }
+          }  else {
+              logger.debug3("Fei: - recIter is null");
           }
-        }
-
       } catch (InvalidOAIResponse e) {
     	  if(e.getCause() != null && e.getCause().getMessage().contains("LOCKSS")) {
     		  error = true;
-    		  logger.debug("OAI result errored due to LOCKSS audit proxy. Trying alternate start Url", e);
+    		  logger.debug3("OAI result errored due to LOCKSS audit proxy. Trying alternate start Url", e);
     	  } else {
     		  throw e;
     	  }
       } catch (BadArgumentException e) {
     	  throw new ConfigurationException("Incorrectly formatted OAI parameter", e);
+      }  catch (Exception e) {
+          logger.debug3("Fei: Unexpected exception when trying to getRecordList"); 
+          logger.debug("Unexpected exception when trying to getRecordList");
       }
       
       List<String> idList = new ArrayList<String>();
@@ -161,7 +186,7 @@ public class ResPediatricaOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
     if(idTags != null && !idTags.isEmpty()) {
       for(String value : idTags) {
         if (value.startsWith(baseUrl)) {
-          logger.debug("To Follow: " + value);
+          logger.debug3("Fei To Follow: " + value);
           return value;
         }
       }
@@ -195,28 +220,27 @@ public class ResPediatricaOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
           Matcher yearMatch = yearPattern.matcher(value);
           if(yearMatch.find()) {
             subYear = yearMatch.group(1);
+            logger.debug3("Fei: subYear = " + subYear + " value = " + value + ", expected year = " + year);
+            /*
+            Comment out year comparision
             if(year == Integer.parseInt(subYear)) {
               return true;
             }
+            */
+              return true;
           }
         } catch(NumberFormatException|IllegalStateException ex) {
-          //wasn't a correctly formatted date, so we ignore it
-          //log here
+            logger.debug3("Fei: yearPattern match does not expectation");
         }
       }
+    } else if (matchingTags!= null) {
+        logger.debug3("Fei: matchingTags is not null, checkMetaRules metaSearch = " + metaSearch);
+        for(String value : matchingTags) {
+            logger.debug3("Fei: checkMetaRules metaSearch value = " + value);
+        }
+    } else if (matchingTags == null) {
+        logger.debug3("Fei: matchingTags is NULL, checkMetaRules metaSearch = " + metaSearch);
     }
     return false;
-  }
-  
-  /**
-   * Override this to provide different logic to convert OAI PMH ids to
-   * corresponding article urls
-   * 
-   * @param id
-   * @param url
-   * @return
-   */
-  public Collection<String> idsToUrls(Collection<String> ids) {
-    return ids;
   }
 }

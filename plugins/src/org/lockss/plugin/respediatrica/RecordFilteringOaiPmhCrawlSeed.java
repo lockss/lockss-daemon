@@ -52,8 +52,8 @@ public abstract class RecordFilteringOaiPmhCrawlSeed extends BaseOaiPmhCrawlSeed
   private static Logger logger =
       Logger.getLogger(RecordFilteringOaiPmhCrawlSeed.class);
 
-  protected boolean usesDateRange = true;
-  protected boolean usesSet = true;
+  protected boolean usesDateRange = false;
+  protected boolean usesSet = false;
   protected Map<String, Pattern> metadataRules;
   public static final String KEY_AU_OAI_FILTER_RULES = "au_oai_filter_rules";
   public static final String KEY_AU_OAI_DATE = "au_oai_date";
@@ -90,8 +90,7 @@ public abstract class RecordFilteringOaiPmhCrawlSeed extends BaseOaiPmhCrawlSeed
   @Override
   protected Context buildContext(String url) {
     Context con = super.buildContext(url);
-//    con.withMetadataTransformer("oai_dc", KnownTransformer.OAI_DC);
-    con.withMetadataTransformer("oai_lockss", KnownTransformer.OAI_DC);
+    con.withMetadataTransformer("oai_dc", KnownTransformer.OAI_DC);
     return con;
   }
 
@@ -161,31 +160,35 @@ public abstract class RecordFilteringOaiPmhCrawlSeed extends BaseOaiPmhCrawlSeed
   @Override
   public Collection<String> doGetStartUrls() throws ConfigurationException,
                                           PluginException, IOException {
+    logger.debug3("Fei: doGetStartUrls...");
+    //return getRecordList(buildParams());
     return idsToUrls(getRecordList(buildParams()));
   }
 
   /**
-   * Override this to provide different logic to convert OAI PMH ids to
-   * corresponding article urls
-   * 
+   * Override this to provide different logic to convert OAI PMH ids
+   * to corresponding article urls
    * @param id
    * @param url
    * @return
    */
-  public Collection<String> idsToUrls(Collection<String> ids) {
+  public Collection<String> idsToUrls(Collection<String> urls) {
     Collection<String> urlList = new ArrayList<String>();
-    for (String id : ids) {
-      if (id.contains(":") && !id.endsWith(":")) {
+    for(String url : urls){
+      logger.debug3("Fei: idsToUrls url = " + url);
+      /*
+      if(url.contains(":") && !id.endsWith(":")) {
+        String id_num = id.substring(id.lastIndexOf(':') + 1);
         if(permUrls.isEmpty()) {
-          permUrls.add(baseUrl + oaiUrlPostfix + "?verb=GetRecord&identifier=" + 
-              id + "&metadataPrefix=" + metadataPrefix);
-          logger.debug3("Fei - url :" + baseUrl + oaiUrlPostfix + "?verb=GetRecord&identifier=" +
+          permUrls.add(baseUrl + oaiUrlPostfix + "?verb=GetRecord&identifier=" +
                   id + "&metadataPrefix=" + metadataPrefix);
         }
-        String id_num = id.substring(id.lastIndexOf(':') + 1);
-        logger.debug3("Fei url handle:" +  baseUrl + "handle/" + id_num);
-        urlList.add(baseUrl + "handle/" + id_num);
+        urlList.add(baseUrl + "xmlui/handle/" + id_num);
       }
+      */
+    }
+    if (logger.isDebug3()) {
+      logger.debug3("Fei: Start URLs: " + urlList.toString());
     }
     return urlList;
   }

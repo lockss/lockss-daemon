@@ -81,7 +81,8 @@ public abstract class BaseOaiPmhCrawlSeed extends BaseCrawlSeed {
   protected String set;
   protected Granularity granularity = DEFAULT_GRANULARITY;
   //The OAI pmh accepted format for the metadata response
-  protected String metadataPrefix = DEFAULT_METADATA_PREFIX;
+  //protected String metadataPrefix = DEFAULT_METADATA_PREFIX;
+  protected String metadataPrefix = KEY_AU_OAI_METADATA_PREFIX;
   //The path to the home of the OAI PMH server from the base url
   protected String oaiUrlPostfix = DEFAULT_OAI_URL_POSTFIX;
   protected boolean usesDateRange = true;
@@ -134,12 +135,15 @@ public abstract class BaseOaiPmhCrawlSeed extends BaseCrawlSeed {
       usesSet=false;
     }
     if(config.containsKey(KEY_AU_OAI_URL_POSTFIX)) {
+      logger.debug3("Fei: KEY_AU_OAI_URL_POSTFIX is set");
       if(!setUrlPostfix(config.get(KEY_AU_OAI_URL_POSTFIX))){
         throw new ConfigurationException(KEY_AU_OAI_URL_POSTFIX +
                                          " must not be null");
       }
-        
+    } else {
+      logger.debug3("Fei: KEY_AU_OAI_URL_POSTFIX does NOT set");
     }
+
     if(config.containsKey(KEY_AU_OAI_METADATA_PREFIX)) {
       if(!setMetadataPrefix(config.get(KEY_AU_OAI_METADATA_PREFIX))) {
         throw new ConfigurationException(KEY_AU_OAI_METADATA_PREFIX +
@@ -177,10 +181,12 @@ public abstract class BaseOaiPmhCrawlSeed extends BaseCrawlSeed {
   protected void setDates(String from, String until)
       throws ConfigurationException {
     TimeZone utc = TimeZoneUtil.getExactTimeZone("UTC");
-    DateFormat df = new SimpleDateFormat(DATETIME_FORMAT);
+    DateFormat df = new SimpleDateFormat(DATE_FORMAT);
     df.setTimeZone(utc);
     this.from = parseDate(from, df, "from");
     this.until = parseDate(until, df, "until");
+
+    logger.debug3("Fei - setRange:  from = " + this.from + ", until = " + this.until);
   }
   
   protected Date parseDate(String date, DateFormat df, String name) 
