@@ -1,0 +1,253 @@
+{
+
+  publisher <
+    name = American Society of Hematology
+  >
+
+# move to SilverChair 2019
+  {
+
+    title <
+      name = Blood ;
+      issn = 0006-4971 ;
+      eissn = 1528-0020 ;
+      issnl = 0006-4971
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePlugin
+      param[base_url] = http://www.bloodjournal.org/
+      implicit < status ; year ; name ; param[volume] >
+
+      au < down ; 2005 ; Blood Volume 106 ; 106 >
+
+    }
+
+    {
+
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://bloodjournal.hematologylibrary.org/
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+      au < HighWirePressH20Plugin ; down ; 1946 ; Blood Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; down ; 1947 ; Blood Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; down ; 1948 ; Blood Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; down ; 1949 ; Blood Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; down ; 1950 ; Blood Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; down ; 1951 ; Blood Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; down ; 1952 ; Blood Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; down ; 1953 ; Blood Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; down ; 1954 ; Blood Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; down ; 1955 ; Blood Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; down ; 1956 ; Blood Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; down ; 1957 ; Blood Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; down ; 1958 ; Blood Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; down ; 1959 ; Blood Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; down ; 1960 ; Blood Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; down ; 1960 ; Blood Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; down ; 1961 ; Blood Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; down ; 1961 ; Blood Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; down ; 1962 ; Blood Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; down ; 1962 ; Blood Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; down ; 1963 ; Blood Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; down ; 1963 ; Blood Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; down ; 1964 ; Blood Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; down ; 1964 ; Blood Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; down ; 1965 ; Blood Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; down ; 1965 ; Blood Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; down ; 1966 ; Blood Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; down ; 1966 ; Blood Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; down ; 1967 ; Blood Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; down ; 1967 ; Blood Volume 30 ; 30 >
+      au < HighWirePressH20Plugin ; down ; 1968 ; Blood Volume 31 ; 31 >
+      au < HighWirePressH20Plugin ; down ; 1968 ; Blood Volume 32 ; 32 >
+      au < HighWirePressH20Plugin ; down ; 1969 ; Blood Volume 33 ; 33 >
+      au < HighWirePressH20Plugin ; down ; 1969 ; Blood Volume 34 ; 34 >
+      au < HighWirePressH20Plugin ; down ; 1970 ; Blood Volume 35 ; 35 >
+      au < HighWirePressH20Plugin ; down ; 1970 ; Blood Volume 36 ; 36 >
+      au < HighWirePressH20Plugin ; down ; 1971 ; Blood Volume 37 ; 37 >
+      au < HighWirePressH20Plugin ; down ; 1971 ; Blood Volume 38 ; 38 >
+      au < HighWirePressH20Plugin ; down ; 1972 ; Blood Volume 39 ; 39 >
+      au < HighWirePressH20Plugin ; down ; 1972 ; Blood Volume 40 ; 40 >
+      au < HighWirePressH20Plugin ; down ; 1973 ; Blood Volume 41 ; 41 >
+      au < HighWirePressH20Plugin ; down ; 1973 ; Blood Volume 42 ; 42 >
+      au < HighWirePressH20Plugin ; down ; 1974 ; Blood Volume 43 ; 43 >
+      au < HighWirePressH20Plugin ; down ; 1974 ; Blood Volume 44 ; 44 >
+      au < HighWirePressH20Plugin ; down ; 1975 ; Blood Volume 45 ; 45 >
+      au < HighWirePressH20Plugin ; down ; 1975 ; Blood Volume 46 ; 46 >
+      au < HighWirePressH20Plugin ; down ; 1976 ; Blood Volume 47 ; 47 >
+      au < HighWirePressH20Plugin ; down ; 1976 ; Blood Volume 48 ; 48 >
+      au < HighWirePressH20Plugin ; down ; 1977 ; Blood Volume 49 ; 49 >
+      au < HighWirePressH20Plugin ; down ; 1977 ; Blood Volume 50 ; 50 >
+      au < HighWirePressH20Plugin ; down ; 1978 ; Blood Volume 51 ; 51 >
+      au < HighWirePressH20Plugin ; down ; 1978 ; Blood Volume 52 ; 52 >
+      au < HighWirePressH20Plugin ; down ; 1979 ; Blood Volume 53 ; 53 >
+      au < HighWirePressH20Plugin ; down ; 1979 ; Blood Volume 54 ; 54 >
+      au < HighWirePressH20Plugin ; down ; 1980 ; Blood Volume 55 ; 55 >
+      au < HighWirePressH20Plugin ; down ; 1980 ; Blood Volume 56 ; 56 >
+      au < HighWirePressH20Plugin ; down ; 1981 ; Blood Volume 57 ; 57 >
+      au < HighWirePressH20Plugin ; down ; 1981 ; Blood Volume 58 ; 58 >
+      au < HighWirePressH20Plugin ; down ; 1982 ; Blood Volume 59 ; 59 >
+      au < HighWirePressH20Plugin ; down ; 1982 ; Blood Volume 60 ; 60 >
+      au < HighWirePressH20Plugin ; down ; 1983 ; Blood Volume 61 ; 61 >
+      au < HighWirePressH20Plugin ; down ; 1983 ; Blood Volume 62 ; 62 >
+      au < HighWirePressH20Plugin ; down ; 1984 ; Blood Volume 63 ; 63 >
+      au < HighWirePressH20Plugin ; down ; 1984 ; Blood Volume 64 ; 64 >
+      au < HighWirePressH20Plugin ; down ; 1985 ; Blood Volume 65 ; 65 >
+      au < HighWirePressH20Plugin ; down ; 1985 ; Blood Volume 66 ; 66 >
+      au < HighWirePressH20Plugin ; down ; 1986 ; Blood Volume 67 ; 67 >
+      au < HighWirePressH20Plugin ; down ; 1986 ; Blood Volume 68 ; 68 >
+      au < HighWirePressH20Plugin ; down ; 1987 ; Blood Volume 69 ; 69 >
+      au < HighWirePressH20Plugin ; down ; 1987 ; Blood Volume 70 ; 70 >
+      au < HighWirePressH20Plugin ; down ; 1988 ; Blood Volume 71 ; 71 >
+      au < HighWirePressH20Plugin ; down ; 1988 ; Blood Volume 72 ; 72 >
+      au < HighWirePressH20Plugin ; down ; 1989 ; Blood Volume 73 ; 73 >
+      au < HighWirePressH20Plugin ; down ; 1989 ; Blood Volume 74 ; 74 >
+      au < HighWirePressH20Plugin ; down ; 1990 ; Blood Volume 75 ; 75 >
+      au < HighWirePressH20Plugin ; down ; 1990 ; Blood Volume 76 ; 76 >
+      au < HighWirePressH20Plugin ; down ; 1991 ; Blood Volume 77 ; 77 >
+      au < HighWirePressH20Plugin ; down ; 1991 ; Blood Volume 78 ; 78 >
+      au < HighWirePressH20Plugin ; down ; 1992 ; Blood Volume 79 ; 79 >
+      au < HighWirePressH20Plugin ; down ; 1992 ; Blood Volume 80 ; 80 >
+      au < HighWirePressH20Plugin ; superseded ; 1993 ; Blood Volume 81 [superseded] ; 81 >
+      au < HighWirePressH20Plugin ; superseded ; 1993 ; Blood Volume 82 [superseded] ; 82 >
+      au < HighWirePressH20Plugin ; superseded ; 1994 ; Blood Volume 83 [superseded] ; 83 >
+      au < HighWirePressH20Plugin ; superseded ; 1994 ; Blood Volume 84 [superseded] ; 84 >
+      au < HighWirePressH20Plugin ; superseded ; 1995 ; Blood Volume 85 [superseded] ; 85 >
+      au < HighWirePressH20Plugin ; superseded ; 1995 ; Blood Volume 86 [superseded] ; 86 >
+      au < HighWirePressH20Plugin ; superseded ; 1996 ; Blood Volume 87 [superseded] ; 87 >
+      au < HighWirePressH20Plugin ; superseded ; 1996 ; Blood Volume 88 [superseded] ; 88 >
+      au < HighWirePressH20Plugin ; superseded ; 1997 ; Blood Volume 89 [superseded] ; 89 >
+      au < HighWirePressH20Plugin ; superseded ; 1997 ; Blood Volume 90 [superseded] ; 90 >
+      au < HighWirePressH20Plugin ; superseded ; 1998 ; Blood Volume 91 [superseded] ; 91 >
+      au < HighWirePressH20Plugin ; superseded ; 1998 ; Blood Volume 92 [superseded] ; 92 >
+      au < HighWirePressH20Plugin ; superseded ; 1999 ; Blood Volume 93 [superseded] ; 93 >
+      au < HighWirePressH20Plugin ; superseded ; 1999 ; Blood Volume 94 [superseded] ; 94 >
+      au < HighWirePressH20Plugin ; superseded ; 2000 ; Blood Volume 95 [superseded] ; 95 >
+      au < HighWirePressH20Plugin ; superseded ; 2000 ; Blood Volume 96 [superseded] ; 96 >
+      au < HighWirePressH20Plugin ; superseded ; 2001 ; Blood Volume 97 [superseded] ; 97 >
+      au < HighWirePressH20Plugin ; superseded ; 2001 ; Blood Volume 98 [superseded] ; 98 >
+      au < HighWirePressH20Plugin ; superseded ; 2002 ; Blood Volume 99 [superseded] ; 99 >
+      au < HighWirePressH20Plugin ; superseded ; 2002 ; Blood Volume 100 [superseded] ; 100 >
+      au < HighWirePressH20Plugin ; superseded ; 2003 ; Blood Volume 101 [superseded] ; 101 >
+      au < HighWirePressH20Plugin ; superseded ; 2003 ; Blood Volume 102 [superseded] ; 102 >
+      au < HighWirePressH20Plugin ; superseded ; 2004 ; Blood Volume 103 [superseded] ; 103 >
+      au < HighWirePressH20Plugin ; superseded ; 2004 ; Blood Volume 104 [superseded] ; 104 >
+      au < HighWirePressH20Plugin ; superseded ; 2005 ; Blood Volume 105 [superseded] ; 105 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; Blood Volume 106 ; 106 >
+      au < HighWirePressH20Plugin ; superseded ; 2006 ; Blood Volume 107 [superseded] ; 107 >
+      au < HighWirePressH20Plugin ; superseded ; 2006 ; Blood Volume 108 [superseded] ; 108 >
+      au < HighWirePressH20Plugin ; superseded ; 2007 ; Blood Volume 109 [superseded] ; 109 >
+      au < HighWirePressH20Plugin ; superseded ; 2007 ; Blood Volume 110 [superseded] ; 110 >
+      au < HighWirePressH20Plugin ; superseded ; 2008 ; Blood Volume 111 [superseded] ; 111 >
+      au < HighWirePressH20Plugin ; superseded ; 2008 ; Blood Volume 112 [superseded] ; 112 >
+      au < HighWirePressH20Plugin ; superseded ; 2009 ; Blood Volume 113 [superseded] ; 113 >
+      au < HighWirePressH20Plugin ; superseded ; 2009 ; Blood Volume 114 [superseded] ; 114 >
+      au < HighWirePressH20Plugin ; superseded ; 2010 ; Blood Volume 115 [superseded] ; 115 >
+      au < HighWirePressH20Plugin ; superseded ; 2010 ; Blood Volume 116 [superseded] ; 116 >
+      au < HighWirePressH20Plugin ; superseded ; 2011 ; Blood Volume 117 [superseded] ; 117 >
+      au < HighWirePressH20Plugin ; superseded ; 2011 ; Blood Volume 118 [superseded] ; 118 >
+      au < HighWirePressH20Plugin ; superseded ; 2012 ; Blood Volume 119 [superseded] ; 119 >
+      au < HighWirePressH20Plugin ; superseded ; 2012 ; Blood Volume 120 [superseded] ; 120 >
+    }
+
+    {
+
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://www.bloodjournal.org/
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+      au < ash.ASHDrupalPlugin ; down ; 1993 ; Blood Volume 81 ; 81 >
+      au < ash.ASHDrupalPlugin ; down ; 1993 ; Blood Volume 82 ; 82 >
+      au < ash.ASHDrupalPlugin ; down ; 1994 ; Blood Volume 83 ; 83 >
+      au < ash.ASHDrupalPlugin ; down ; 1994 ; Blood Volume 84 ; 84 >
+      au < ash.ASHDrupalPlugin ; down ; 1995 ; Blood Volume 85 ; 85 >
+      au < ash.ASHDrupalPlugin ; down ; 1995 ; Blood Volume 86 ; 86 >
+      au < ash.ASHDrupalPlugin ; down ; 1996 ; Blood Volume 87 ; 87 >
+      au < ash.ASHDrupalPlugin ; down ; 1996 ; Blood Volume 88 ; 88 >
+      au < ash.ASHDrupalPlugin ; down ; 1997 ; Blood Volume 89 ; 89 >
+      au < ash.ASHDrupalPlugin ; down ; 1997 ; Blood Volume 90 ; 90 >
+      au < ash.ASHDrupalPlugin ; down ; 1998 ; Blood Volume 91 ; 91 >
+      au < ash.ASHDrupalPlugin ; down ; 1998 ; Blood Volume 92 ; 92 >
+      au < ash.ASHDrupalPlugin ; down ; 1999 ; Blood Volume 93 ; 93 >
+      au < ash.ASHDrupalPlugin ; down ; 1999 ; Blood Volume 94 ; 94 >
+      au < ash.ASHDrupalPlugin ; down ; 2000 ; Blood Volume 95 ; 95 >
+      au < ash.ASHDrupalPlugin ; down ; 2000 ; Blood Volume 96 ; 96 >
+      au < ash.ASHDrupalPlugin ; down ; 2001 ; Blood Volume 97 ; 97 >
+      au < ash.ASHDrupalPlugin ; down ; 2001 ; Blood Volume 98 ; 98 >
+      au < ash.ASHDrupalPlugin ; down ; 2002 ; Blood Volume 99 ; 99 >
+      au < ash.ASHDrupalPlugin ; down ; 2002 ; Blood Volume 100 ; 100 >
+      au < ash.ASHDrupalPlugin ; down ; 2003 ; Blood Volume 101 ; 101 >
+      au < ash.ASHDrupalPlugin ; down ; 2003 ; Blood Volume 102 ; 102 >
+      au < ash.ASHDrupalPlugin ; down ; 2004 ; Blood Volume 103 ; 103 >
+      au < ash.ASHDrupalPlugin ; down ; 2004 ; Blood Volume 104 ; 104 >
+      au < ash.ASHDrupalPlugin ; down ; 2005 ; Blood Volume 105 ; 105 >
+      au < ash.ASHDrupalPlugin ; down ; 2005 ; Blood Volume 106 ; 106 >
+      au < ash.ASHDrupalPlugin ; down ; 2006 ; Blood Volume 107 ; 107 >
+      au < ash.ASHDrupalPlugin ; down ; 2006 ; Blood Volume 108 ; 108 >
+      au < ash.ASHDrupalPlugin ; down ; 2007 ; Blood Volume 109 ; 109 >
+      au < ash.ASHDrupalPlugin ; down ; 2007 ; Blood Volume 110 ; 110 >
+      au < ash.ASHDrupalPlugin ; down ; 2008 ; Blood Volume 111 ; 111 >
+      au < ash.ASHDrupalPlugin ; down ; 2008 ; Blood Volume 112 ; 112 >
+      au < ash.ASHDrupalPlugin ; down ; 2009 ; Blood Volume 113 ; 113 >
+      au < ash.ASHDrupalPlugin ; down ; 2009 ; Blood Volume 114 ; 114 >
+      au < ash.ASHDrupalPlugin ; down ; 2010 ; Blood Volume 115 ; 115 >
+      au < ash.ASHDrupalPlugin ; down ; 2010 ; Blood Volume 116 ; 116 >
+      au < ash.ASHDrupalPlugin ; down ; 2011 ; Blood Volume 117 ; 117 >
+      au < ash.ASHDrupalPlugin ; down ; 2011 ; Blood Volume 118 ; 118 >
+      au < ash.ASHDrupalPlugin ; down ; 2012 ; Blood Volume 119 ; 119 >
+      au < ash.ASHDrupalPlugin ; down ; 2012 ; Blood Volume 120 ; 120 >
+      au < ash.ASHDrupalPlugin ; down ; 2013 ; Blood Volume 121 ; 121 >
+      au < ash.ASHDrupalPlugin ; down ; 2013 ; Blood Volume 122 ; 122 >
+      au < ash.ASHDrupalPlugin ; down ; 2014 ; Blood Volume 123 ; 123 >
+      au < ash.ASHDrupalPlugin ; down ; 2014 ; Blood Volume 124 ; 124 >
+      au < ash.ASHDrupalPlugin ; down ; 2015 ; Blood Volume 125 ; 125 >
+      au < ash.ASHDrupalPlugin ; down ; 2015 ; Blood Volume 126 ; 126 >
+      au < ash.ASHDrupalPlugin ; down ; 2016 ; Blood Volume 127 ; 127 >
+      au < ash.ASHDrupalPlugin ; down ; 2016 ; Blood Volume 128 ; 128 >
+      au < ash.ASHDrupalPlugin ; down ; 2017 ; Blood Volume 129 ; 129 >
+      au < ash.ASHDrupalPlugin ; down ; 2017 ; Blood Volume 130 ; 130 >
+      au < ash.ASHDrupalPlugin ; down ; 2018 ; Blood Volume 131 ; 131 >
+      au < ash.ASHDrupalPlugin ; down ; 2018 ; Blood Volume 132 ; 132 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Hematology: ASH Education Program Book ;
+      issn = 1520-4391 ;
+      eissn = 1520-4383 ;
+      issnl = 1520-4383
+    >
+
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    param[base_url] = http://asheducationbook.hematologylibrary.org/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < down ; 2000 ; Hematology: ASH Education Program Book Volume 2000 ; 2000 >
+    au < down ; 2001 ; Hematology: ASH Education Program Book Volume 2001 ; 2001 >
+    au < down ; 2002 ; Hematology: ASH Education Program Book Volume 2002 ; 2002 >
+    au < down ; 2003 ; Hematology: ASH Education Program Book Volume 2003 ; 2003 >
+    au < down ; 2004 ; Hematology: ASH Education Program Book Volume 2004 ; 2004 >
+    au < down ; 2005 ; Hematology: ASH Education Program Book Volume 2005 ; 2005 >
+    au < down ; 2006 ; Hematology: ASH Education Program Book Volume 2006 ; 2006 >
+    au < down ; 2007 ; Hematology: ASH Education Program Book Volume 2007 ; 2007 >
+    au < down ; 2008 ; Hematology: ASH Education Program Book Volume 2008 ; 2008 >
+    au < down ; 2009 ; Hematology: ASH Education Program Book Volume 2009 ; 2009 >
+    au < down ; 2010 ; Hematology: ASH Education Program Book Volume 2010 ; 2010 >
+    au < down ; 2011 ; Hematology: ASH Education Program Book Volume 2011 ; 2011 >
+    au < down ; 2012 ; Hematology: ASH Education Program Book Volume 2012 ; 2012 >
+    au < down ; 2013 ; Hematology: ASH Education Program Book Volume 2013 ; 2013 >
+    au < down ; 2014 ; Hematology: ASH Education Program Book Volume 2014 ; 2014 >
+    au < down ; 2015 ; Hematology: ASH Education Program Book Volume 2015 ; 2015 >
+    au < down ; 2016 ; Hematology: ASH Education Program Book Volume 2016 ; 2016 >
+    au < down ; 2017 ; Hematology: ASH Education Program Book Volume 2017 ; 2017 >
+    au < down ; 2018 ; Hematology: ASH Education Program Book Volume 2018 ; 2018 >
+
+  }
+
+}

@@ -2068,7 +2068,13 @@ while (my $line = <>) {
         }
         $result = "Manifest"
       } else {
-        $result = "--NO_TAG--"
+        if ($man_contents =~ m/Access Denied/) {
+          $result = "--ACCESS_DENIED--";
+        } elsif ($man_contents !~ m/$lockss_tag/) {
+          $result = "--NO_TAG--";
+        } else {
+          $result = "--NO_ISSUE--";
+        }
       }
     } else {
       $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
@@ -2096,7 +2102,13 @@ while (my $line = <>) {
         }
         $result = "Manifest"
       } else {
-        $result = "--NO_TAG--"
+        if ($man_contents =~ m/Access Denied/) {
+          $result = "--ACCESS_DENIED--";
+        } elsif ($man_contents !~ m/$lockss_tag/) {
+          $result = "--NO_TAG--";
+        } else {
+          $result = "--NO_ISSUE--";
+        }
       }
     } else {
       $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
@@ -2680,6 +2692,56 @@ while (my $line = <>) {
     }
     sleep(4);
 
+  } elsif ($plugin eq "EuropeanMathematicalSocietyBooksPlugin") {
+    $url = sprintf("%sbooks/book.php?proj_nr=%s",
+      $param{base_url}, $param{book_number});
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    if ($resp->is_success) {
+      my $man_contents = $resp->content;
+#      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && (man_contents =~ m/issn=$param{journal_issn}.vol=$param{volume_name}/)) {
+      if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+      } elsif (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && ($man_contents =~ m/proj_nr=$param{book_number}/)) {
+        if ($man_contents =~ m/<h4>([^<]*)<\/h4>/si) {
+          $vol_title = $1;
+        }
+        $result = "Manifest"
+      } else {
+        $result = "--NO_TAG--"
+      }
+    } else {
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+    }
+    sleep(4);
+
+  } elsif ($plugin eq "ClockssEuropeanMathematicalSocietyBooksPlugin") {
+    $url = sprintf("%sbooks/book.php?proj_nr=%s",
+      $param{base_url}, $param{book_number});
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    if ($resp->is_success) {
+      my $man_contents = $resp->content;
+#      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && (man_contents =~ m/issn=$param{journal_issn}.vol=$param{volume_name}/)) {
+      if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+      } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/proj_nr=$param{book_number}/)) {
+        if ($man_contents =~ m/<h4>([^<]*)<\/h4>/si) {
+          $vol_title = $1;
+        }
+        $result = "Manifest"
+      } else {
+        $result = "--NO_TAG--"
+      }
+    } else {
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+    }
+    sleep(4);
+
   } elsif ($plugin eq "SilverchairJournalsPlugin") {
     $url = sprintf("%sLOCKSS/ListOfIssues.aspx?resourceId=%d&year=%d",
       $param{base_url}, $param{resource_id}, $param{year});
@@ -2898,6 +2960,32 @@ while (my $line = <>) {
               $result = "Redirected";
       } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
         if ($man_contents =~ m/<title>(.*) [|] IWA Publishing<\/title>/si) {
+          $vol_title = $1;
+          $vol_title =~ s/\s*\n\s*/ /g;
+        }
+        $result = "Manifest"
+      } else {
+        $result = "--NO_TAG--"
+      }
+    } else {
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+    }
+    sleep(4);
+    
+  } elsif (($plugin eq "ClockssDupSilverchairPlugin")) {
+    $url = sprintf("%s%s/list-of-issues/%d",
+      $param{base_url}, $param{journal_id}, $param{year});
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    #printf("resp is %s\n",$resp->status_line);
+    if ($resp->is_success) {
+      my $man_contents = $resp->content;
+      if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+      } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
+        if ($man_contents =~ m/<title>(.*) [|] Duke University Press<\/title>/si) {
           $vol_title = $1;
           $vol_title =~ s/\s*\n\s*/ /g;
         }

@@ -59,11 +59,11 @@
       au < HighWirePressH20Plugin ; down ; 2013 ; American Journal of Neuroradiology Volume 34 ; 34 >
       au < HighWirePressH20Plugin ; down ; 2014 ; American Journal of Neuroradiology Volume 35 ; 35 >
       au < HighWirePressH20Plugin ; down ; 2015 ; American Journal of Neuroradiology Volume 36 ; 36 >
-      au < HWDrupalPlugin ; manifest ; 2016 ; American Journal of Neuroradiology Volume 37 ; 37 >
-      au < HWDrupalPlugin ; manifest ; 2017 ; American Journal of Neuroradiology Volume 38 ; 38 >
-      au < HWDrupalPlugin ; manifest ; 2018 ; American Journal of Neuroradiology Volume 39 ; 39 >
-      au < HWDrupalPlugin ; manifest ; 2019 ; American Journal of Neuroradiology Volume 40 ; 40 >
-      au < HWDrupalPlugin ; manifest ; 2020 ; American Journal of Neuroradiology Volume 41 ; 41 >
+      au < HWDrupalPlugin ; exists ; 2016 ; American Journal of Neuroradiology Volume 37 ; 37 >
+      au < HWDrupalPlugin ; exists ; 2017 ; American Journal of Neuroradiology Volume 38 ; 38 >
+      au < HWDrupalPlugin ; exists ; 2018 ; American Journal of Neuroradiology Volume 39 ; 39 >
+      au < HWDrupalPlugin ; exists ; 2019 ; American Journal of Neuroradiology Volume 40 ; 40 >
+      au < HWDrupalPlugin ; exists ; 2020 ; American Journal of Neuroradiology Volume 41 ; 41 >
 
     }
 
@@ -105,6 +105,7 @@
       au < notReady ; 2017 ; Neurographics Volume 7 ; 7 > #Unable to fetch permission page, https://www.ingentaconnect.com/content/1541-6593?format=lockss&volume=7
       au < exists ; 2018 ; Neurographics Volume 8 ; 8 >
       au < expected ; 2019 ; Neurographics Volume 9 ; 9 >
+      au < expected ; 2020 ; Neurographics Volume 10 ; 10 >
 
     }
 

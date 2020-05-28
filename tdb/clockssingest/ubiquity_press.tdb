@@ -1968,7 +1968,7 @@
       au < finished ; crawling ; 2016 ; 3 ; European Journal of Molecular and Clinical Medicine Volume 2016 ; 2016 ; https://www.ejmcm.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2017 ; 4 ; European Journal of Molecular and Clinical Medicine Volume 2017 ; 2017 ; https://www.ejmcm.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 5 ; European Journal of Molecular and Clinical Medicine Volume 2018 ; 2018 ; https://www.ejmcm.com/ ; reingest4.clockss.org:8082 >
-      au < manifest ; exists ; 2019 ; 6 ; European Journal of Molecular and Clinical Medicine Volume 2019 ; 2019 ; https://www.ejmcm.com/ ; >
+      au < notReady ; exists ; 2019 ; 6 ; European Journal of Molecular and Clinical Medicine Volume 2019 ; 2019 ; https://www.ejmcm.com/ ; > #Unable to fetch permission page
 
   }
 
