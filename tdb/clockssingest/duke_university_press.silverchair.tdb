@@ -22,8 +22,8 @@
       eissn = 1527-2125 ;
       issnl = 0065-9142
     >
-
-      au < notReady ; exists ; 2018 ; 2018 ; am-lit-scholarship ; American Literary Scholarship 2018 ; 2018 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; am-lit-scholarship ; American Literary Scholarship 2018 ; 2018 ; >
+      au < exists ; exists ; 2019 ; 2019 ; am-lit-scholarship ; American Literary Scholarship 2019 ; 2019 ; >
   }
 
   {
@@ -34,7 +34,8 @@
       eissn = 1527-2117 ;
       issnl = 0002-9831
     >
-      au < notReady ; exists ; 2018 ; 2018 ;  american-literature ; American Literature Volume 90 ; 90 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; american-literature ; American Literature Volume 90 ; 90 ; >
+      au < exists ; exists ; 2019 ; 2019 ; american-literature ; American Literature Volume 91 ; 91 ; >
   }
 
   {
@@ -45,7 +46,8 @@
       eissn = 1527-2133 ;
       issnl = 0003-1283
     >
-      au < notReady ; exists ; 2018 ; 2018 ;  american-speech ; American Speech Volume 93 ; 93 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; american-speech ; American Speech Volume 93 ; 93 ; >
+      au < exists ; exists ; 2019 ; 2019 ; american-speech ; American Speech Volume 94 ; 94 ; >
   }
 
   {
@@ -56,7 +58,8 @@
       eissn = 1527-2141 ;
       issnl = 0190-3659
     >
-      au < notReady ; exists ; 2018 ; 2018 ;  boundary-2 ; boundary 2 Volume 45 ; 45 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; boundary-2 ; boundary 2 Volume 45 ; 45 ; >
+      au < exists ; exists ; 2019 ; 2019 ; boundary-2 ; boundary 2 Volume 46 ; 46 ; >
   }
 
   {
@@ -67,7 +70,8 @@
       eissn = 2640-9879 ;
       issnl = 1043-9455
     >
-      au < notReady ; exists ; 1995 ; 1995 ;  boundary-2 ; Black Sacred Music Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1995 ; 1995 ; boundary-2 ; Black Sacred Music Volume 9 ; 9 ; >
+      au < exists ; exists ; 1996 ; 1996 ; boundary-2 ; Black Sacred Music Volume 10 ; 10 ; >
   }
 
   {
@@ -78,8 +82,8 @@
       eissn = 1529-1510 ;
       issnl = 0270-5346
     >
-      # Need journal_id
-      #au < notReady ; exists ; 2018 ; 2018 ;  Camera Obscura: Feminism, Culture, and Media Studies Volume 33 ; 33 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; camera-obscura ; Camera Obscura: Feminism, Culture, and Media Studies Volume 33 ; 33 ; >
+      au < exists ; exists ; 2019 ; 2019 ; camera-obscura ; Camera Obscura: Feminism, Culture, and Media Studies Volume 34 ; 34 ; >
 
   }
 
@@ -101,7 +105,8 @@
       eissn = 1538-4578 ;
       issnl = 0961-754X
     >
-      au < notReady ; exists ; 2018 ; 2018 ;  common-knowledge ; Common Knowledge Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; common-knowledge ; Common Knowledge Volume 23 ; 23 ; >
+      au < exists ; exists ; 2019 ; 2019 ; common-knowledge ; Common Knowledge Volume 24 ; 24 ; >
   }
 
   {
@@ -112,7 +117,8 @@
       eissn = 1945-8517 ;
       issnl = 0010-4124
     >
-      au < notReady ; exists ; 2018 ; 2018 ;  comparative-literature ; Comparative Literature Volume 69 ; 69 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; comparative-literature ; Comparative Literature Volume 69 ; 69 ; >
+      au < exists ; exists ; 2019 ; 2019 ; comparative-literature ; Comparative Literature Volume 70 ; 70 ; >
   }
 
   {
@@ -123,7 +129,8 @@
       eissn = 1548-226X ;
       issnl = 1089-201X
     >
-      au < notReady ; exists ; 2018 ; 2018 ;  cssaame ; Comparative Studies of South Asia, Africa and the Middle East Volume 37 ; 37 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; cssaame ; Comparative Studies of South Asia, Africa and the Middle East Volume 37 ; 37 ; >
+      au < exists ; exists ; 2019 ; 2019 ; cssaame ; Comparative Studies of South Asia, Africa and the Middle East Volume 38 ; 38 ; >
   }
 
   {
@@ -134,7 +141,8 @@
       eissn = 1751-7435 ;
       issnl = 1743-2197
     >
-      au < notReady ; exists ; 2018 ; 2018 ;  cultural-politics ; Cultural Politics Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; cultural-politics ; Cultural Politics Volume 13 ; 13 ; >
+      au < exists ; exists ; 2019 ; 2019 ; cultural-politics ; Cultural Politics Volume 14 ; 14 ; >
   }
 
   {
@@ -145,8 +153,8 @@
       eissn = 1527-1986 ;
       issnl = 1040-7391
     >
-      # need journal_id
-      #au < notReady ; exists ; 2018 ; 2018 ;  differences: A Journal of Feminist Cultural Studies Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; differences ; differences: A Journal of Feminist Cultural Studies Volume 28 ; 28 ; >
+      au < exists ; exists ; 2019 ; 2019 ; differences ; differences: A Journal of Feminist Cultural Studies Volume 29 ; 29 ; >
   }
 
   {
@@ -157,8 +165,8 @@
       eissn = 1875-2152 ;
       issnl = 1875-2160
     >
-      # need journal_id
-      #au < notReady ; exists ; 2018 ; 2018 ;  East Asian Science, Technology and Society: An International Journal Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; easts ; East Asian Science, Technology and Society: An International Journal Volume 11 ; 11 ; >
+      au < exists ; exists ; 2019 ; 2019 ; easts ; East Asian Science, Technology and Society: An International Journal Volume 12 ; 12 ; >
   }
 
   {
@@ -169,7 +177,8 @@
       eissn = 1086-3192 ;
       issnl = 0098-2601
     >
-      au < notReady ; exists ; 2018 ; 2018 ; eighteenth-century-life ;  Eighteenth-Century Life Volume 41 ; 41 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; eighteenth-century-life ; Eighteenth-Century Life Volume 41 ; 41 ; >
+      au < exists ; exists ; 2019 ; 2019 ; eighteenth-century-life ; Eighteenth-Century Life Volume 42 ; 42 ; >
   }
 
   {
@@ -180,7 +189,8 @@
       issnl = 2201-1919
     >
 
-      au < notReady ; exists ; 2018 ; 2018 ; environmental-humanities ;  Environmental Humanities Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; environmental-humanities ; Environmental Humanities Volume 9 ; 9 ; >
+      au < exists ; exists ; 2019 ; 2019 ; environmental-humanities ; Environmental Humanities Volume 10 ; 10 ; >
 
   }
 
@@ -192,7 +202,8 @@
       eissn = 1527-5477
 
     >
-      au < notReady ; exists ; 2018 ; 2018 ; ethnohistory ;  Ethnohistory Volume 64 ; 64 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; ethnohistory ; Ethnohistory Volume 64 ; 64 ; >
+      au < exists ; exists ; 2019 ; 2019 ; ethnohistory ; Ethnohistory Volume 65 ; 65 ; >
   }
 
   {
@@ -203,7 +214,8 @@
       eissn =  1527-5493
 
     >
-      au < notReady ; exists ; 2018 ; 2018 ; french-historical-studies ;  French Historical Studies Volume 40 ; 40 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; french-historical-studies ; French Historical Studies Volume 40 ; 40 ; >
+      au < exists ; exists ; 2019 ; 2019 ; french-historical-studies ; French Historical Studies Volume 41 ; 41 ; >
   }
 
   {
@@ -214,8 +226,8 @@
       eissn =  2160-0228
 
   >
-      # need journal_id
-      #au < notReady ; exists ; 2018 ; 2018 ;  Genre: Forms of Discourse and Culture Volume 50 ; 50 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; genre ; Genre: Forms of Discourse and Culture Volume 50 ; 50 ; >
+      au < exists ; exists ; 2019 ; 2019 ; genre ; Genre: Forms of Discourse and Culture Volume 51 ; 51 ; >
 
   }
 
@@ -226,8 +238,8 @@
       issn = 1064-2684 ;
       eissn = 1527-9375
       >
-      # need journal_id
-      #au < notReady ; exists ; 2018 ; 2018 ;  GLQ: A Journal of Lesbian and Gay Studies Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; glq ; GLQ: A Journal of Lesbian and Gay Studies Volume 23 ; 23 ; >
+      au < exists ; exists ; 2019 ; 2019 ; glq ; GLQ: A Journal of Lesbian and Gay Studies Volume 24 ; 24 ; >
 
     }
 
@@ -237,10 +249,9 @@
       name = Hispanic American Historical Review ;
       issn = 0018-2168 ;
       eissn = 1527-1900
-
       >
-
-      au < notReady ; exists ; 2018 ; 2018 ;  hahr ; Hispanic American Historical Review Volume 97 ; 97 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; hahr ; Hispanic American Historical Review Volume 97 ; 97 ; >
+      au < exists ; exists ; 2019 ; 2019 ; hahr ; Hispanic American Historical Review Volume 98 ; 98 ; >
 
     }
 
@@ -250,10 +261,10 @@
       name = History of Political Economy ;
       issn = 0018-2702 ;
       eissn = 1527-1919
-
    >
 
-      au < notReady ; exists ; 2018 ; 2018 ;  hope ; History of Political Economy Volume 49 ; 49 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; hope ; History of Political Economy Volume 49 ; 49 ; >
+      au < exists ; exists ; 2019 ; 2019 ; hope ; History of Political Economy Volume 50 ; 50 ; >
 
     }
 
@@ -264,7 +275,8 @@
       eissn = 2329-0056 
     >
 
-     au < notReady ; exists ; 2018 ; 2018 ;  jclc ; Journal of Chinese Literature and Culture Volume 4 ; 4 ; >
+     au < manifest ; exists ; 2018 ; 2018 ; jclc ; Journal of Chinese Literature and Culture Volume 4 ; 4 ; >
+     au < exists ; exists ; 2019 ; 2019 ; jclc ; Journal of Chinese Literature and Culture Volume 5 ; 5 ; >
 
   }
 
@@ -274,10 +286,9 @@
       name = Journal of Health Politics, Policy and Law ;
       issn = 0361-6878 ;
       eissn = 1527-1927
-
 >
-
-      au < notReady ; exists ; 2018 ; 2018 ;  jhppl ; Journal of Health Politics, Policy and Law Volume 42 ; 42 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; jhppl ; Journal of Health Politics, Policy and Law Volume 42 ; 42 ; >
+      au < exists ; exists ; 2019 ; 2019 ; jhppl ; Journal of Health Politics, Policy and Law Volume 43 ; 43 ; >
 
     }
 
@@ -287,10 +298,9 @@
       name = Journal of Medieval and Early Modern Studies ;
       issn = 1082-9636 ;
       eissn = 1527-8263
-
 >
-
-      au < notReady ; exists ; 2018 ; 2018 ;  jmems ; Journal of Medieval and Early Modern Studies Volume 47 ; 47 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; jmems ; Journal of Medieval and Early Modern Studies Volume 47 ; 47 ; >
+      au < exists ; exists ; 2019 ; 2019 ; jmems ; Journal of Medieval and Early Modern Studies Volume 48 ; 48 ; >
 
    }
 
@@ -300,10 +310,9 @@
       name = Journal of Middle East Women's Studies ;
       issn = 1552-5864 ;
       eissn = 1558-9579
-
    >
-
-      au < notReady ; exists ; 2018 ; 2018 ;  jmews ; Journal of Middle East Women's Studies Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; jmews ; Journal of Middle East Women's Studies Volume 13 ; 13 ; >
+      au < exists ; exists ; 2019 ; 2019 ; jmews ; Journal of Middle East Women's Studies Volume 14 ; 14 ; >
 
    }
 
@@ -313,10 +322,9 @@
       name = Journal of Music Theory ;
       issn = 0022-2909 ;
       eissn = 1941-7497
-
    >
-
-      au < notReady ; exists ; 2018 ; 2018 ; journal-of-music-theory ;  Journal of Music Theory Volume 61 ; 61 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; journal-of-music-theory ; Journal of Music Theory Volume 61 ; 61 ; >
+      au < exists ; exists ; 2019 ; 2019 ; journal-of-music-theory ; Journal of Music Theory Volume 62 ; 62 ; >
 
     }
 
@@ -326,22 +334,21 @@
       name = Labor: Studies in Working-Class History of the Americas ;
       issn = 1547-6715 ;
       eissn = 1558-1454
-
 >
-      # need journal_id
-      #au < notReady ; exists ; 2018 ; 2018 ;  laborLabor: Studies in Working-Class History of the Americas Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; labor ; Labor: Studies in Working-Class History of the Americas Volume 14 ; 14 ; >
+      au < exists ; exists ; 2019 ; 2019 ; labor ; Labor: Studies in Working-Class History of the Americas Volume 14 ; 14 ; >
 
     }
 
-    {
-
-    title <
-      name = Limnology and Oceanography: Fluids and Environments ;
-      eissn = 2157-3689
-
-    >
-
-    }
+#    {
+#
+#    title <
+#      name = Limnology and Oceanography: Fluids and Environments ;
+#      eissn = 2157-3689
+#
+#    >
+#
+#    }
 
     {
 
@@ -349,10 +356,9 @@
       name = Mediterranean Quarterly ;
       issn = 1047-4552 ;
       eissn = 1527-1935
-
     >
-
-      au < notReady ; exists ; 2018 ; 2018 ; mediterranean-quarterly ;  Mediterranean Quarterly Volume 28 ; 28 ; >
+      au < exists ; exists ; 2018 ; 2018 ; mediterranean-quarterly ; Mediterranean Quarterly Volume 29 ; 29 ; >
+      au < exists ; exists ; 2019 ; 2019 ; mediterranean-quarterly ; Mediterranean Quarterly Volume 30 ; 30 ; >
 
      }
 
@@ -362,10 +368,10 @@
       name = The Minnesota Review ;
       issn = 0026-5667 ;
       eissn = 2157-4189
-
 >
-      # need journal_id
-      #au < notReady ; exists ; 2018 ; 2018 ;  The Minnesota Review Volume FOO ; FOO ; >
+
+      au < manifest ; exists ; 2018 ; 2018 ; the-minnesota-review ; The Minnesota Review Volume 2018 ; 2018 ; >
+      au < exists ; exists ; 2019 ; 2019 ; the-minnesota-review ; The Minnesota Review Volume 2019 ; 2019 ; >
 
     }
 
@@ -375,10 +381,9 @@
       name = MLQ: Modern Language Quarterly ;
       issn = 0026-7929 ;
       eissn = 1527-1943
-
      >
-
-      au < notReady ; exists ; 2018 ; 2018 ; modern-language-quarterly ; MLQ: Modern Language Quarterly Volume 78 ; 78 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; modern-language-quarterly ; MLQ: Modern Language Quarterly Volume 78 ; 78 ; >
+      au < exists ; exists ; 2019 ; 2019 ; modern-language-quarterly ; MLQ: Modern Language Quarterly Volume 79 ; 79 ; >
 
     }
 
@@ -388,10 +393,9 @@
       name = New German Critique ;
       issn = 0094-033X ;
       eissn = 1558-1462
-
      >
-
-      au < notReady ; exists ; 2018 ; 2018 ; new-german-critique ;  New German Critique Volume 44 ; 44 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; new-german-critique ; New German Critique Volume 44 ; 44 ; >
+      au < exists ; exists ; 2019 ; 2019 ; new-german-critique ; New German Critique Volume 45 ; 45 ; >
 
      }
 
@@ -401,10 +405,9 @@
       name = Nka: Journal of Contemporary African Art ;
       issn = 1075-7163 ;
       eissn = 2152-7792
-
      >
-      # need journal_id
-      #au < notReady ; exists ; 2018 ; 2018 ;  Nka: Journal of Contemporary African Art Volume FOO ; FOO ; >
+      au < manifest ; exists ; 2018 ; 2018 ; nka ; Nka: Journal of Contemporary African Art Volume 2018 ; 2018 ; >
+      au < exists ; exists ; 2019 ; 2019 ; nka ; Nka: Journal of Contemporary African Art Volume 2019 ; 2019 ; >
 
     }
 
@@ -414,10 +417,9 @@
       name = Novel: A Forum on Fiction ;
       issn = 0029-5132 ;
       eissn = 1945-8509
-
      >
-      #journal_id
-      #au < notReady ; exists ; 2018 ; 2018 ;  Novel: A Forum on Fiction Volume 50 ; 50 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; novel ; Novel: A Forum on Fiction Volume 50 ; 50 ; >
+      au < exists ; exists ; 2019 ; 2019 ; novel ; Novel: A Forum on Fiction Volume 51 ; 51 ; >
 
     }
 
@@ -427,10 +429,9 @@
       name = Pedagogy ;
       issn = 1531-4200 ;
       eissn =  1533-6255
-
       >
-
-      au < notReady ; exists ; 2018 ; 2018 ; pedagogy ;  Pedagogy Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; pedagogy ; Pedagogy Volume 17 ; 17 ; >
+      au < exists ; exists ; 2018 ; 2018 ; pedagogy ; Pedagogy Volume 17 ; 17 ; >
 
     }
 
@@ -440,36 +441,32 @@
       name = Philosophical Review ;
       issn = 0031-8108 ;
       eissn = 1558-1470
-
       >
-
-      au < notReady ; exists ; 2018 ; 2018 ; the-philosophical-review ; Philosophical Review Volume 126 ; 126 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; the-philosophical-review ; Philosophical Review Volume 126 ; 126 ; >
+      au < exists ; exists ; 2019 ; 2019 ; the-philosophical-review ; Philosophical Review Volume 127 ; 127 ; >
 
   }
 
-      {
+  {
 
     title <
       name = Poetics Today ;
       issn =  0333-5372 ;
       eissn = 1527-5507
-
      >
+      au < manifest ; exists ; 2018 ; 2018 ; poetics-today ; Poetics Today Volume 38 ; 38 ; >
+      au < exists ; exists ; 2019 ; 2019 ; poetics-today ; Poetics Today Volume 39 ; 39 ; >
 
-      au < notReady ; exists ; 2018 ; 2018 ; poetics-today ;  Poetics Today Volume 38 ; 38 ; >
+  }
 
-     }
-
-         {
-
+  {
     title <
       name = positions: east asia cultures critique ;
       issn = 1067-9847 ;
       eissn = 1527-8271
-
->
-      # need journal_id
-      #au < notReady ; exists ; 2018 ; 2018 ;  positions: asia critique Volume 25 ; 25 ; >
+    >
+      au < manifest ; exists ; 2018 ; 2018 ; positions ; positions: asia critique Volume 25 ; 25 ; >
+      au < exists ; exists ; 2019 ; 2019 ; positions ; positions: asia critique Volume 26 ; 26 ; >
 
   }
 
@@ -478,11 +475,9 @@
       name = Publication of the American Dialect Society ;
       issn = 2157-6114 ;
       eissn = 0002-8207
-
     >
-
-
-      au < notReady ; exists ; 2018 ; 2018 ; pads ; Publication of the American Dialect Society Volume 101 ; 101 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; pads ; Publication of the American Dialect Society Volume 101 ; 101 ; >
+      au < exists ; exists ; 2019 ; 2019 ; pads ; Publication of the American Dialect Society Volume 102 ; 102 ; >
 
   }
 
@@ -492,10 +487,9 @@
       name = Public Culture ;
       issn = 0899-2363 ;
       eissn = 1527-8018
-
       >
-
-      au < notReady ; exists ; 2018 ; 2018 ; public-culture ;  Public Culture Volume 29 ; 29 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; public-culture ; Public Culture Volume 29 ; 29 ; >
+      au < exists ; exists ; 2019 ; 2019 ; public-culture ; Public Culture Volume 30 ; 30 ; >
 
     }
 
@@ -505,10 +499,9 @@
       name = Radical History Review ;
       issn = 0163-6545 ;
       eissn = 1534-1453
-
->
-
-      au < notReady ; exists ; 2018 ; 2018 ; radical-history-review ;  Radical History Review Volume FOO ; FOO ; >
+      >
+      au < manifest ; exists ; 2018 ; 2018 ; radical-history-review ; Radical History Review Volume 2018 ; 2018 ; >
+      au < exists ; exists ; 2019 ; 2019 ; radical-history-review ; Radical History Review Volume 2019 ; 2019 ; >
 
       }
 
@@ -518,24 +511,11 @@
       name = Small Axe ;
       issn = 0799-0537 ;
       eissn = 1534-6714
-
       >
-
-      au < notReady ; exists ; 2018 ; 2018 ; small-axe ;  Small Axe Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; small-axe ; Small Axe Volume 21 ; 21 ; >
+      au < exists ; exists ; 2019 ; 2019 ; small-axe ; Small Axe Volume 22 ; 22 ; >
 
     }
-
-    {
-
-    title <
-      name = Social Science History ;
-      issn = 0145-5532 ;
-      eissn = 1527-8034
-      >
-
-      #move to Cambridge
-
-     }
 
      {
 
@@ -543,10 +523,10 @@
       name = Social Text ;
       issn = 0164-2472 ;
       eissn = 1527-1951
-
       >
 
-      au < notReady ; exists ; 2018 ; 2018 ; social-text ; Social Text Volume 35 ; 35 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; social-text ; Social Text Volume 35 ; 35 ; >
+      au < exists ; exists ; 2019 ; 2019 ; social-text ; Social Text Volume 36 ; 36 ; >
 
      }
 
@@ -556,10 +536,10 @@
       name = South Atlantic Quarterly ;
       issn = 0038-2876 ;
       eissn = 1527-8026
-
       >
 
-      au < notReady ; exists ; 2018 ; 2018 ; south-atlantic-quarterly ; South Atlantic Quarterly Volume 116 ; 116 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; south-atlantic-quarterly ; South Atlantic Quarterly Volume 116 ; 116 ; >
+      au < exists ; exists ; 2019 ; 2019 ; south-atlantic-quarterly ; South Atlantic Quarterly Volume 117 ; 117 ; >
 
      }
 
@@ -569,10 +549,10 @@
       name = Theater ;
       issn = 0161-0775 ;
       eissn = 1527-196X
-
       >
 
-      au < notReady ; exists ; 2018 ; 2018 ; theater ;  Theater Volume 47 ; 47 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; theater ; Theater Volume 47 ; 47 ; >
+      au < exists ; exists ; 2019 ; 2019 ; theater ; Theater Volume 48 ; 48 ; >
 
     }
 
@@ -582,21 +562,21 @@
       name = Tikkun ;
       issn = 0887-9982 ;
       eissn = 2164-0041
-
 >
-
-      au < notReady ; exists ; 2018 ; 2018 ; tikkun ;  Tikkun Volume 32 ; 32 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; tikkun ; Tikkun Volume 32 ; 32 ; >
+      au < exists ; exists ; 2019 ; 2019 ; tikkun ; Tikkun Volume 33 ; 33 ; >
 
   }
 
     {
     title <
-      name = Transgender Studies Quarterly ;
+      name = TSQ: Transgender Studies Quarterly ;
       issn = 2328-9252 ;
       eissn = 2328-9260 ;
       issnl = 2328-9252
     >
-
+      au < manifest ; exists ; 2018 ; 2018 ; tsq ; TSQ: Transgender Studies Quarterly Volume 5 ; 5 ; >
+      au < exists ; exists ; 2019 ; 2019 ; tsq ; TSQ: Transgender Studies Quarterly Volume 6 ; 6 ; >
 
     }
 
@@ -607,7 +587,8 @@
       eissn = 2325-8101 ;
       issnl = 0041-462X
     >
-      au < notReady ; exists ; 2018 ; 2018 ; twentieth-century-lit ;  Twentieth-Century Literature Volume 63 ; 63 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; twentieth-century-lit ; Twentieth-Century Literature Volume 64 ; 64 ; >
+      au < exists ; exists ; 2019 ; 2019 ; twentieth-century-lit ; Twentieth-Century Literature Volume 65 ; 65 ; >
 
   }
   {
@@ -617,10 +598,10 @@
       issn = 0740-2775 ;
       eissn = 1936-0924
     >
-
       #move from Oxford University Press 
 
-      au < notReady ; exists ; 2018 ; 2018 ; world-policy-journal ;  World Policy Journal Volume 34 ; 34 ; >
+      au < exists ; exists ; 2018 ; 2018 ; world-policy-journal ; World Policy Journal Volume 35 ; 35 ; >
+      au < exists ; exists ; 2019 ; 2019 ; world-policy-journal ; World Policy Journal Volume 36 ; 36 ; >
 
   }
 }
