@@ -64,6 +64,10 @@ public class Ojs3HtmlHashFilterFactory implements FilterFactory {
 	        HtmlNodeFilters.tagWithAttribute("article", "class", "article-details"),
 	        // pdf landing page - just get the header with title and link information
 	        HtmlNodeFilters.tagWithAttribute("header", "class", "header_view"),
+            // article page, https://journals.vgtu.lt/index.php/BME/article/view/10292
+            HtmlNodeFilters.tagWithAttribute("h2", "class", "headings"),
+            HtmlNodeFilters.tagWithAttribute("div", "class", "authors"),
+            HtmlNodeFilters.tagWithAttribute("div", "id", "article_tab"),
 	    };
   
   private static final NodeFilter[] excludeNodes = new NodeFilter[] {
