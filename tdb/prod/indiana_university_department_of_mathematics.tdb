@@ -8,6 +8,7 @@
 
   plugin = org.lockss.plugin.iumj.IUMJPlugin
   param[base_url] = http://www.iumj.indiana.edu/
+    #NO MANIFEST PAGE CHECKER
 
   {
 
@@ -85,6 +86,7 @@
       au < exists ; 2017 ; 2017 ; Indiana University Mathematics Journal Volume 66 ; 66 >
       au < exists ; 2018 ; 2018 ; Indiana University Mathematics Journal Volume 67 ; 67 >
       au < expected ; 2019 ; 2019 ; Indiana University Mathematics Journal Volume 68 ; 68 >
+      au < expected ; 2020 ; 2020 ; Indiana University Mathematics Journal Volume 69 ; 69 >
 
   }
 
