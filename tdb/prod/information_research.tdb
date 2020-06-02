@@ -7,7 +7,7 @@
   {
   
     title <
-      name = International Research ;
+      name = Information Research ;
       eissn = 1368-1613 ;
       issnl = 1368-1613
     >
@@ -16,6 +16,7 @@
     plugin = uk.org.lockss.plugin.informationresearch.InformationResearchPlugin
     param[base_url] = http://www.informationr.net/ir/
     implicit < status ; year ; name ; param[volume_name] >
+    #NO MANIFEST PAGE CHECKER
 
     au < released ; 1995-1996 ; Information Research Volume 1 ; 1 >
     au < released ; 1996-1997 ; Information Research Volume 2 ; 2 >
@@ -34,13 +35,14 @@
     au < released ; 2010 ; Information Research Volume 15 ; 15 >
     au < released ; 2011 ; Information Research Volume 16 ; 16 >
     au < released ; 2012 ; Information Research Volume 17 ; 17 >
-    au < exists ; 2013 ; Information Research Volume 18 ; 18 >
-    au < exists ; 2014 ; Information Research Volume 19 ; 19 >
-    au < exists ; 2015 ; Information Research Volume 20 ; 20 >
-    au < exists ; 2016 ; Information Research Volume 21 ; 21 >
-    au < exists ; 2017 ; Information Research Volume 22 ; 22 >
-    au < exists ; 2018 ; Information Research Volume 23 ; 23 >
-    au < expected ; 2019 ; Information Research Volume 24 ; 24 >
+    au < manifest ; 2013 ; Information Research Volume 18 ; 18 >
+    au < manifest ; 2014 ; Information Research Volume 19 ; 19 >
+    au < manifest ; 2015 ; Information Research Volume 20 ; 20 >
+    au < manifest ; 2016 ; Information Research Volume 21 ; 21 >
+    au < manifest ; 2017 ; Information Research Volume 22 ; 22 >
+    au < manifest ; 2018 ; Information Research Volume 23 ; 23 >
+    au < manifest ; 2019 ; Information Research Volume 24 ; 24 >
+    au < manifest ; 2020 ; Information Research Volume 25 ; 25 >
 
   }
   

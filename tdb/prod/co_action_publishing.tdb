@@ -44,6 +44,8 @@
     #param[base_url] = http://www.childlitaesthetics.net/
     param[journal_id] = zblf20
 
+    #Published by Universitetsforlaget AS from 2019
+
     au < doNotProcess ; 2010 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 1 ; 1 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2011 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 2 ; 2 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2012 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 3 ; 3 ; https://www.tandfonline.com/ >
@@ -53,7 +55,6 @@
     au < released ; 2016 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 7 ; 7 ; http://www.tandfonline.com/ >
     au < released ; 2017 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 8 ; 8 ; http://www.tandfonline.com/ >
     au < released ; 2018 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 9 ; 9 ; https://www.tandfonline.com/ >
-    au < expected ; 2019 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 10 ; 10 ; https://www.tandfonline.com/ >
 
   }
 
@@ -78,8 +79,9 @@
       au < released ; 2016 ; Diabetic Foot & Ankle [including Supplements] Volume 7 ; 7 ; http://www.tandfonline.com/ >
       au < released ; 2017 ; Diabetic Foot & Ankle [including Supplements] Volume 8 ; 8 ; http://www.tandfonline.com/ >
       au < released ; 2018 ; Diabetic Foot & Ankle [including Supplements] Volume 9 ; 9 ; https://www.tandfonline.com/ >
-      
       au < manifest ; 2019 ; Diabetic Foot & Ankle [including Supplements] Volume 10 ; 10 ; https://www.tandfonline.com/ >
+      au < expected ; 2020 ; Diabetic Foot & Ankle [including Supplements] Volume 11 ; 11 ; https://www.tandfonline.com/ >
+
     }
   }
 
@@ -104,6 +106,7 @@
     au < released ; 2017 ; Education Inquiry Volume 8 ; 8 ; http://www.tandfonline.com/ >
     au < released ; 2018 ; Education Inquiry Volume 9 ; 9 ; https://www.tandfonline.com/ >
     au < manifest ; 2019 ; Education Inquiry Volume 10 ; 10 ; https://www.tandfonline.com/ >
+    au < expected ; 2020 ; Education Inquiry Volume 11 ; 11 ; https://www.tandfonline.com/ >
 
   }
 
@@ -130,8 +133,9 @@
     au < released ; 2016 ; Ethics & Global Politics Volume 9 ; 9 ; http://www.tandfonline.com/ >
     au < superseded ; 2017 ; Ethics & Global Politics Volume 10 [superseded] ; 10 ; http://www.tandfonline.com/  >
     au < released ; 2017 ; Ethics & Global Politics Volume 10 ; 10 ; https://www.tandfonline.com/  >
-    au < testing ; 2018 ; Ethics & Global Politics Volume 11 ; 11 ; https://www.tandfonline.com/  >
+    au < manifest ; 2018 ; Ethics & Global Politics Volume 11 ; 11 ; https://www.tandfonline.com/  >
     au < manifest ; 2019 ; Ethics & Global Politics Volume 12 ; 12 ; https://www.tandfonline.com/  >
+    au < expected ; 2020 ; Ethics & Global Politics Volume 13 ; 13 ; https://www.tandfonline.com/  >
 
   }
     
@@ -152,6 +156,7 @@
     au < released ; 2017 ; European Clinical Respiratory Journal Volume 4 ; 4 ; http://www.tandfonline.com/ >
     au < released ; 2018 ; European Clinical Respiratory Journal Volume 5 ; 5 ; https://www.tandfonline.com/ >
     au < manifest ; 2019 ; European Clinical Respiratory Journal Volume 6 ; 6 ; https://www.tandfonline.com/ >
+    au < expected ; 2020 ; European Clinical Respiratory Journal Volume 7 ; 7 ; https://www.tandfonline.com/ >
 
   }
 
@@ -181,6 +186,7 @@
     au < released ; 2017 ; European Journal of Psychotraumatology [including Supplements] Volume 8 ; 8 ; http://www.tandfonline.com/ >
     au < released ; 2018 ; European Journal of Psychotraumatology [including Supplements] Volume 9 ; 9 ; https://www.tandfonline.com/ >
     au < manifest ; 2019 ; European Journal of Psychotraumatology [including Supplements] Volume 10 ; 10 ; https://www.tandfonline.com/ >
+    au < expected ; 2020 ; European Journal of Psychotraumatology [including Supplements] Volume 11 ; 11 ; https://www.tandfonline.com/ >
 
   }
   
@@ -237,6 +243,7 @@
     au < released ; 2017 ; Global Health Action [including Supplements] Volume 10 ; 10 ; http://www.tandfonline.com/ >
     au < released ; 2018 ; Global Health Action [including Supplements] Volume 11 ; 11 ; https://www.tandfonline.com/ >
     au < manifest ; 2019 ; Global Health Action [including Supplements] Volume 12 ; 12 ; https://www.tandfonline.com/ >
+    au < expected ; 2020 ; Global Health Action [including Supplements] Volume 13 ; 13 ; https://www.tandfonline.com/ >
 
   }
 
@@ -259,6 +266,7 @@
     au < released ; 2017 ; Infection Ecology & Epidemiology [including Supplements] Volume 7 ; 7 ; http://www.tandfonline.com/ >
     au < released ; 2018 ; Infection Ecology & Epidemiology [including Supplements] Volume 8 ; 8 ; https://www.tandfonline.com/ >
     au < manifest ; 2019 ; Infection Ecology & Epidemiology [including Supplements] Volume 9 ; 9 ; https://www.tandfonline.com/ >
+    au < expected ; 2020 ; Infection Ecology & Epidemiology [including Supplements] Volume 10 ; 10 ; https://www.tandfonline.com/ >
 
   }
 
@@ -294,6 +302,7 @@
     au < released ; 2017 ; International Journal of Circumpolar Health Volume 76 ; 76 ; http://www.tandfonline.com/ >
     au < released ; 2018 ; International Journal of Circumpolar Health Volume 77 ; 77 ; https://www.tandfonline.com/ >
     au < manifest ; 2019 ; International Journal of Circumpolar Health Volume 78 ; 78 ; https://www.tandfonline.com/ >
+    au < expected ; 2020 ; International Journal of Circumpolar Health Volume 79 ; 79 ; https://www.tandfonline.com/ >
 
   }
 
@@ -323,6 +332,7 @@
     au < released ; 2017 ; International Journal of Qualitative Studies on Health and Well-being Volume 12 ; 12 ; http://www.tandfonline.com/ >
     au < released ; 2018 ; International Journal of Qualitative Studies on Health and Well-being Volume 13 ; 13 ; https://www.tandfonline.com/ >
     au < manifest ; 2019 ; International Journal of Qualitative Studies on Health and Well-being Volume 14 ; 14 ; https://www.tandfonline.com/ >
+    au < expected ; 2020 ; International Journal of Qualitative Studies on Health and Well-being Volume 15 ; 15 ; https://www.tandfonline.com/ >
 
   }
 
@@ -348,6 +358,7 @@
     au < released ; 2017 ; Journal of Aesthetics & Culture Volume 9 ; 9 ; http://www.tandfonline.com/ >
     au < released ; 2018 ; Journal of Aesthetics & Culture Volume 10 ; 10 ; https://www.tandfonline.com/ >
     au < manifest ; 2019 ; Journal of Aesthetics & Culture Volume 11 ; 11 ; https://www.tandfonline.com/ >
+    au < expected ; 2020 ; Journal of Aesthetics & Culture Volume 12 ; 12 ; https://www.tandfonline.com/ >
   }
 
   {
@@ -370,6 +381,7 @@
     au < released ; 2017 ; Journal of Community Hospital Internal Medicine Perspectives Volume 7 ; 7 ; http://www.tandfonline.com/ >
     au < released ; 2018 ; Journal of Community Hospital Internal Medicine Perspectives Volume 8 ; 8 ; https://www.tandfonline.com/ >
     au < manifest ; 2019 ; Journal of Community Hospital Internal Medicine Perspectives Volume 9 ; 9 ; https://www.tandfonline.com/ >
+    au < expected ; 2020 ; Journal of Community Hospital Internal Medicine Perspectives Volume 10 ; 10 ; https://www.tandfonline.com/ >
   }
 
   {
@@ -391,6 +403,7 @@
     au < released ; 2017 ; Journal of European Continuing Medical Education Volume 6 ; 6 ; http://www.tandfonline.com/ >
     au < released ; 2018 ; Journal of European Continuing Medical Education Volume 7 ; 7 ; https://www.tandfonline.com/ >
     au < manifest ; 2019 ; Journal of European Continuing Medical Education Volume 8 ; 8 ; https://www.tandfonline.com/ >
+    au < expected ; 2020 ; Journal of European Continuing Medical Education Volume 9 ; 9 ; https://www.tandfonline.com/ >
 
   }
 
@@ -412,6 +425,7 @@
     au < released ; 2017 ; Journal of Market Access & Health Policy Volume 5 ; 5 ; http://www.tandfonline.com/ >
     au < released ; 2018 ; Journal of Market Access & Health Policy Volume 6 ; 6 ; https://www.tandfonline.com/ >
     au < manifest ; 2019 ; Journal of Market Access & Health Policy Volume 7 ; 7 ; https://www.tandfonline.com/ >
+    au < expected ; 2020 ; Journal of Market Access & Health Policy Volume 8 ; 8 ; https://www.tandfonline.com/ >
 
   }
 
@@ -437,6 +451,7 @@
     au < released ; 2017 ; Journal of Oral Microbiology Volume 9 ; 9 ; http://www.tandfonline.com/ >
     au < released ; 2018 ; Journal of Oral Microbiology Volume 10 ; 10 ; https://www.tandfonline.com/ >
     au < manifest ; 2019 ; Journal of Oral Microbiology Volume 11 ; 11 ; https://www.tandfonline.com/ >
+    au < expected ; 2020 ; Journal of Oral Microbiology Volume 12 ; 12 ; https://www.tandfonline.com/ >
 
   }
 
@@ -466,6 +481,7 @@
     au < released ; 2017 ; Libyan Journal of Medicine [including Supplements] Volume 12 ; 12 ; http://www.tandfonline.com/ >
     au < released ; 2018 ; Libyan Journal of Medicine [including Supplements] Volume 13 ; 13 ; https://www.tandfonline.com/ >
     au < manifest ; 2019 ; Libyan Journal of Medicine [including Supplements] Volume 14 ; 14 ; https://www.tandfonline.com/ >
+    au < expected ; 2020 ; Libyan Journal of Medicine [including Supplements] Volume 15 ; 15 ; https://www.tandfonline.com/ >
 
   }
 
@@ -524,6 +540,7 @@
     au < released ; 2017 ; Medical Education Online Volume 22 ; 22 ; http://www.tandfonline.com/ >
     au < released ; 2018 ; Medical Education Online Volume 23 ; 23 ; https://www.tandfonline.com/ >
     au < manifest ; 2019 ; Medical Education Online Volume 24 ; 24 ; https://www.tandfonline.com/ >
+    au < expected ; 2020 ; Medical Education Online Volume 25 ; 25 ; https://www.tandfonline.com/ >
     }
 
   }
@@ -570,6 +587,7 @@
     au < released ; 2017 ; Microbial Ecology in Health and Disease Volume 28 ; 28 ; http://www.tandfonline.com/ >
     au < released ; 2018 ; Microbial Ecology in Health and Disease Volume 29 ; 29 ; https://www.tandfonline.com/ >
     au < expected ; 2019 ; Microbial Ecology in Health and Disease Volume 30 ; 30 ; https://www.tandfonline.com/ >
+    au < expected ; 2020 ; Microbial Ecology in Health and Disease Volume 31 ; 31 ; https://www.tandfonline.com/ >
 
   }
 
@@ -610,6 +628,7 @@
     au < released ; 2017 ; Nano Reviews & Experiments [including Supplements] Volume 8 ; 8 ; http://www.tandfonline.com/ >
     au < released ; 2018 ; Nano Reviews & Experiments [including Supplements] Volume 9 ; 9 ; https://www.tandfonline.com/ >
     au < expected ; 2019 ; Nano Reviews & Experiments [including Supplements] Volume 10 ; 10 ; https://www.tandfonline.com/ >
+    au < expected ; 2020 ; Nano Reviews & Experiments [including Supplements] Volume 11 ; 11 ; https://www.tandfonline.com/ >
 
   }
 
@@ -633,6 +652,7 @@
     au < released ; 2017 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 7 ; 7 ; http://www.tandfonline.com/ >
     au < released ; 2018 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 8 ; 8 ; https://www.tandfonline.com/ >
     au < manifest ; 2019 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 9 ; 9 ; https://www.tandfonline.com/ >
+    au < expected ; 2020 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 10 ; 10 ; https://www.tandfonline.com/ >
 
   }
 
@@ -687,6 +707,7 @@
     au < released ; 2017 ; Polar Research [including Supplements] Volume 36 ; 36 ; http://www.tandfonline.com/ >
     au < released ; 2018 ; Polar Research [including Supplements] Volume 37 ; 37 ; https://www.tandfonline.com/ >
     au < expected ; 2019 ; Polar Research [including Supplements] Volume 38 ; 38 ; https://www.tandfonline.com/ >
+    au < expected ; 2020 ; Polar Research [including Supplements] Volume 39 ; 39 ; https://www.tandfonline.com/ >
 
   }
 
@@ -806,6 +827,7 @@
       au < released ; 2017 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 7 ; 7 ; http://www.tandfonline.com/ >
       au < released ; 2018 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 8 ; 8 ; https://www.tandfonline.com/ >
       au < expected ; 2019 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 9 ; 9 ; https://www.tandfonline.com/ >
+      au < expected ; 2020 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 10 ; 10 ; https://www.tandfonline.com/ >
 
   }
   
@@ -907,6 +929,7 @@
     au < released ; 2017 ; Tellus A: Dynamic Meteorology and Oceanography Volume 69 ; 69 ; http://www.tandfonline.com/ >
     au < released ; 2018 ; Tellus A: Dynamic Meteorology and Oceanography Volume 70 ; 70 ; https://www.tandfonline.com/ >
     au < manifest ; 2019 ; Tellus A: Dynamic Meteorology and Oceanography Volume 71 ; 71 ; https://www.tandfonline.com/ >
+    au < expected ; 2020 ; Tellus A: Dynamic Meteorology and Oceanography Volume 72 ; 72 ; https://www.tandfonline.com/ >
 
   }
 
@@ -961,6 +984,7 @@
     au < released ; 2017 ; Tellus B: Chemical and Physical Meteorology Volume 69 ; 69 ; http://www.tandfonline.com/ >
     au < released ; 2018 ; Tellus B: Chemical and Physical Meteorology Volume 70 ; 70 ; https://www.tandfonline.com/ >
     au < manifest ; 2019 ; Tellus B: Chemical and Physical Meteorology Volume 71 ; 71 ; https://www.tandfonline.com/ >
+    au < expected ; 2020 ; Tellus B: Chemical and Physical Meteorology Volume 72 ; 72 ; https://www.tandfonline.com/ >
 
   }
 
@@ -981,6 +1005,7 @@
     au < released ; 2017 ; Society, Health & Vulnerability Volume 8 ; 8 ; https://www.tandfonline.com/ >
     au < released ; 2018 ; Society, Health & Vulnerability Volume 9 ; 9 ; https://www.tandfonline.com/ >
     au < manifest ; 2019 ; Society, Health & Vulnerability Volume 10 ; 10 ; https://www.tandfonline.com/ >
+    au < expected ; 2020 ; Society, Health & Vulnerability Volume 11 ; 11 ; https://www.tandfonline.com/ >
 
   }
 

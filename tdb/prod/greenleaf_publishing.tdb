@@ -26,10 +26,10 @@
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
 
-    au < released ; 2013 ; Building Sustainable Legacies: The New Frontier Of Societal Value Co-Creation Volume 2013 ; 2013 >
-    au < released ; 2014 ; Building Sustainable Legacies: The New Frontier Of Societal Value Co-Creation Volume 2014 ; 2014 >
-    au < released ; 2015 ; Building Sustainable Legacies: The New Frontier Of Societal Value Co-Creation Volume 2015 ; 2015 >
-    au < released ; 2016 ; Building Sustainable Legacies: The New Frontier Of Societal Value Co-Creation Volume 2016 ; 2016 >
+    au < down ; 2013 ; Building Sustainable Legacies: The New Frontier Of Societal Value Co-Creation Volume 2013 ; 2013 >
+    au < down ; 2014 ; Building Sustainable Legacies: The New Frontier Of Societal Value Co-Creation Volume 2014 ; 2014 >
+    au < down ; 2015 ; Building Sustainable Legacies: The New Frontier Of Societal Value Co-Creation Volume 2015 ; 2015 >
+    au < down ; 2016 ; Building Sustainable Legacies: The New Frontier Of Societal Value Co-Creation Volume 2016 ; 2016 >
 
   }
 
@@ -46,10 +46,10 @@
      param[base_url] = http://www.ingentaconnect.com/
      param[api_url] = http://api.ingentaconnect.com/
 
-    au < released ; 2013 ; Business, Peace and Sustainable Development Volume 2013 ; 2013 >
-    au < released ; 2014 ; Business, Peace and Sustainable Development Volume 2014 ; 2014 >
-    au < released ; 2015 ; Business, Peace and Sustainable Development Volume 2015 ; 2015 >
-    au < released ; 2016 ; Business, Peace and Sustainable Development Volume 2016 ; 2016 >
+    au < down ; 2013 ; Business, Peace and Sustainable Development Volume 2013 ; 2013 >
+    au < down ; 2014 ; Business, Peace and Sustainable Development Volume 2014 ; 2014 >
+    au < down ; 2015 ; Business, Peace and Sustainable Development Volume 2015 ; 2015 >
+    au < down ; 2016 ; Business, Peace and Sustainable Development Volume 2016 ; 2016 >
 
     }
 
@@ -57,7 +57,7 @@
      param[base_url] = https://www.ingentaconnect.com/
      param[api_url] = https://api.ingentaconnect.com/
 
-    au < manifest ; 2017 ; Business, Peace and Sustainable Development Volume 2017 ; 2017 >
+    au < doNotProcess ; 2017 ; Business, Peace and Sustainable Development Volume 2017 ; 2017 >
     }
 
   }
@@ -74,15 +74,15 @@
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
 
-    au < released ; 1999 ; Greener Management International Volume 1999 ; 1999 >
-    au < released ; 2000 ; Greener Management International Volume 2000 ; 2000 >
-    au < released ; 2001 ; Greener Management International Volume 2001 ; 2001 >
-    au < released ; 2002 ; Greener Management International Volume 2002 ; 2002 >
-    au < released ; 2003 ; Greener Management International Volume 2003 ; 2003 >
-    au < released ; 2004 ; Greener Management International Volume 2004 ; 2004 >
-    au < released ; 2005 ; Greener Management International Volume 2005 ; 2005 >
-    au < released ; 2006 ; Greener Management International Volume 2006 ; 2006 >
-    au < released ; 2007 ; Greener Management International Volume 2007 ; 2007 >
+    au < down ; 1999 ; Greener Management International Volume 1999 ; 1999 >
+    au < down ; 2000 ; Greener Management International Volume 2000 ; 2000 >
+    au < down ; 2001 ; Greener Management International Volume 2001 ; 2001 >
+    au < down ; 2002 ; Greener Management International Volume 2002 ; 2002 >
+    au < down ; 2003 ; Greener Management International Volume 2003 ; 2003 >
+    au < down ; 2004 ; Greener Management International Volume 2004 ; 2004 >
+    au < down ; 2005 ; Greener Management International Volume 2005 ; 2005 >
+    au < down ; 2006 ; Greener Management International Volume 2006 ; 2006 >
+    au < down ; 2007 ; Greener Management International Volume 2007 ; 2007 >
 
   }
 
@@ -100,25 +100,25 @@
      param[base_url] = http://www.ingentaconnect.com/
      param[api_url] = http://api.ingentaconnect.com/
 
-    au < released ; 2005 ; Journal of Corporate Citizenship Volume 2005 ; 2005 >
-    au < released ; 2006 ; Journal of Corporate Citizenship Volume 2006 ; 2006 >
-    au < released ; 2007 ; Journal of Corporate Citizenship Volume 2007 ; 2007 >
-    au < released ; 2008 ; Journal of Corporate Citizenship Volume 2008 ; 2008 >
-    au < released ; 2009 ; Journal of Corporate Citizenship Volume 2009 ; 2009 >
-    au < released ; 2010 ; Journal of Corporate Citizenship Volume 2010 ; 2010 >
-    au < released ; 2011 ; Journal of Corporate Citizenship Volume 2011 ; 2011 >
-    au < released ; 2012 ; Journal of Corporate Citizenship Volume 2012 ; 2012 >
-    au < released ; 2013 ; Journal of Corporate Citizenship Volume 2013 ; 2013 >
-    au < released ; 2014 ; Journal of Corporate Citizenship Volume 2014 ; 2014 >
-    au < released ; 2015 ; Journal of Corporate Citizenship Volume 2015 ; 2015 >
-    au < released ; 2016 ; Journal of Corporate Citizenship Volume 2016 ; 2016 >
+    au < down ; 2005 ; Journal of Corporate Citizenship Volume 2005 ; 2005 >
+    au < down ; 2006 ; Journal of Corporate Citizenship Volume 2006 ; 2006 >
+    au < down ; 2007 ; Journal of Corporate Citizenship Volume 2007 ; 2007 >
+    au < down ; 2008 ; Journal of Corporate Citizenship Volume 2008 ; 2008 >
+    au < down ; 2009 ; Journal of Corporate Citizenship Volume 2009 ; 2009 >
+    au < down ; 2010 ; Journal of Corporate Citizenship Volume 2010 ; 2010 >
+    au < down ; 2011 ; Journal of Corporate Citizenship Volume 2011 ; 2011 >
+    au < down ; 2012 ; Journal of Corporate Citizenship Volume 2012 ; 2012 >
+    au < down ; 2013 ; Journal of Corporate Citizenship Volume 2013 ; 2013 >
+    au < down ; 2014 ; Journal of Corporate Citizenship Volume 2014 ; 2014 >
+    au < down ; 2015 ; Journal of Corporate Citizenship Volume 2015 ; 2015 >
+    au < down ; 2016 ; Journal of Corporate Citizenship Volume 2016 ; 2016 >
     }
 
     {
      param[base_url] = https://www.ingentaconnect.com/
      param[api_url] = https://api.ingentaconnect.com/
 
-    au < manifest ; 2017 ; Journal of Corporate Citizenship Volume 2017 ; 2017 >
+    au < doNotProcess ; 2017 ; Journal of Corporate Citizenship Volume 2017 ; 2017 >
     }
 
   }
@@ -134,9 +134,9 @@
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
 
-    au < released ; 2014 ; The Journal of Sustainable Mobility Volume 1 ; 1 >
-    au < released ; 2015 ; The Journal of Sustainable Mobility Volume 2 ; 2 >
-    au < released ; 2016 ; The Journal of Sustainable Mobility Volume 3 ; 3 >
+    au < down ; 2014 ; The Journal of Sustainable Mobility Volume 1 ; 1 >
+    au < down ; 2015 ; The Journal of Sustainable Mobility Volume 2 ; 2 >
+    au < down ; 2016 ; The Journal of Sustainable Mobility Volume 3 ; 3 >
 
   }
 
