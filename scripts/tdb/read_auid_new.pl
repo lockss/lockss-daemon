@@ -2514,6 +2514,36 @@ while (my $line = <>) {
     }
     sleep(4);
 
+  } elsif (($plugin eq "HindawiPlugin") || ($plugin eq "ClockssHindawiPlugin")) {
+        $url = sprintf("%sjournals/%s/contents/year/%d/",
+          $param{base_url}, $param{journal_id}, $param{year});
+        $man_url = uri_unescape($url);
+        my $req = HTTP::Request->new(GET, $man_url);
+        my $resp = $ua->request($req);
+        if ($resp->is_success) {
+          my $man_contents = $resp->content;
+          if ($req->url ne $resp->request->uri) {
+            $vol_title = $resp->request->uri;
+            $result = "Redirected";
+          } elsif (defined($man_contents) && ($man_contents =~ m/journals\/$param{journal_id}\/$param{year}/)) {
+            if ($man_contents =~ m/<title>(.*)<\/title>/si) {
+              $vol_title = $1;
+              #$vol_title =~ s/ \| / /g;
+              $vol_title =~ s/\s*\n\s*/ /g;
+              $vol_title =~ s/An Open Access Journal//;
+              $vol_title =~ s/\s+/ /g;
+              $vol_title =~ s/&#8212;/Year $param{year}/g;
+
+            }
+            $result = "Manifest"
+          } else {
+            $result = "--NO_TAG--"
+          }
+        } else {
+          $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+        }
+        sleep(4);
+
   } elsif (($plugin eq "MedknowPlugin") || ($plugin eq "ClockssMedknowPlugin")) {
     $url = sprintf("%sbackissues.asp", $param{base_url});
     $man_url = uri_unescape($url);

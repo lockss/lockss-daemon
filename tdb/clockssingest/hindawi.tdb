@@ -1,0 +1,31 @@
+{
+  publisher <
+    name = Hindawi ;
+    info[contract] = 2013 ;
+    info[tester] = 8 ;
+    info[poller] = 5
+  >
+
+  #the publisher requested that their name be listed simply as "Hindawi." see RT8402
+
+  rights = openaccess
+  plugin = org.lockss.plugin.hindawi.ClockssHindawiPlugin
+#  param[base_url] = http://www.hindawi.com/
+  #download_url is still http
+  param[download_url] = http://downloads.hindawi.com/
+  implicit < status ; status2 ; year ; name ; param[volume_name] ; volume ; param[base_url] >
+
+  {
+      title <
+        name = Advances in Agriculture ;
+        issn = 2356-654X ;
+        eissn = 2314-7539 ;
+        issnl = 2356-654X
+      >
+
+      param[journal_id] = aag
+
+      au < manifest ; exists ; 2019 ; Advances in Agriculture Volume 2014 ; 2019 ; 2019 ; http://www.hindawi.com/ >
+
+    }
+}
