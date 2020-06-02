@@ -53,6 +53,13 @@
       au < released ; Bryn Mawr Classical Review 2013 ; 2013 >
       au < released ; Bryn Mawr Classical Review 2014 ; 2014 >
       au < released ; Bryn Mawr Classical Review 2015 ; 2015 >
+
+    }
+
+    {
+
+      param[base_url] = https://bmcr.brynmawr.edu/
+
       au < expected ; Bryn Mawr Classical Review 2016 ; 2016 >
       au < expected ; Bryn Mawr Classical Review 2017 ; 2017 >
       au < expected ; Bryn Mawr Classical Review 2018 ; 2018 >
