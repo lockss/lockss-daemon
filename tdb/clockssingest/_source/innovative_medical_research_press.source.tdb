@@ -12,7 +12,7 @@
       name = Innovative Medical Research Press Source Content
     >
 
-    plugin = org.lockss.plugin.clockss.innovativemedicalresearchpress.ClockssInnovativeMedicalResearchPressJatsSourcePlugin
+    plugin = org.lockss.plugin.clockss.innovativemedicalresearchpress.ClockssInnovativeMedicalResearchPressSourcePlugin
     # The just changed their file delivery structure, plugin need to change accordinglys
     param[base_url] = http://content5.lockss.org/sourcefiles/imrpress-released/ ##this is test location, need update
     hidden[proxy] = DIRECT
