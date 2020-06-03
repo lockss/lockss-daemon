@@ -16,8 +16,9 @@
     plugin = uk.org.lockss.plugin.jelit.JeLitPlugin
     param[base_url] = http://www.jelit.org/
     implicit < status ; year ; name ; volume >
+    #content not available
     
-    au < released ; 2004-2005 ; JeLit: Journal of eLiteracy ; 1-2 >
+    au < down ; 2004-2005 ; JeLit: Journal of eLiteracy ; 1-2 >
   
   }
 
