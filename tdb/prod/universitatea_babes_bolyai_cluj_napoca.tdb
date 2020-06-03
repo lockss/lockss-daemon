@@ -18,11 +18,13 @@
     
     rights = openaccess
     plugin = org.lockss.plugin.bepress.BePressPlugin 
-    param[base_url] = http://scholarcommons.usf.edu/
     param[journal_abbr] = geologia
     implicit < status ; year ; name ; param[volume] >
 
     #This journal is leaving Digital Commons. Do not process any further content.
+
+    {
+    param[base_url] = http://scholarcommons.usf.edu/
 
     au < released ; 2007 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 52 ; 52 >
     au < released ; 2008 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 53 ; 53 >
@@ -30,6 +32,19 @@
     au < released ; 2010 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 55 ; 55 >
     au < released ; 2011 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 56 ; 56 >
     au < released ; 2012 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 57 ; 57 >
+    }
+
+    {
+    param[base_url] = https://scholarcommons.usf.edu/
+
+    au < exists ; 2013 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 58 ; 58 >
+    au < exists ; 2014 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 59 ; 59 >
+    au < exists ; 2016 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 60 ; 60 >
+    au < exists ; 2017 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 61 ; 61 >
+    au < exists ; 2018 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 62 ; 62 >
+    au < exists ; 2020 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 63 ; 63 >
+
+    }
 
   }
 
