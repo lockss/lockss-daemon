@@ -833,7 +833,6 @@
     >
 
     comment[base_url] = http://www.practicalpreschool.com/magazine/childcare.shtml
-    # need to update base_url, website is down 
     param[journal_id] = chca
 
     au < manifest ; 2007-2008 ; Child Care Volume 4 ; 4 ; https://www.magonlinelibrary.com/ >
