@@ -16,30 +16,31 @@
     plugin = edu.upenn.library.plugin.annualofurdustudies.AnnualOfUrduStudiesPlugin
     param[base_url] = http://www.urdustudies.com/
     implicit < status ; year ; name ; param[volume] >
+    #website gone.
     
     au < doNotProcess ; 1981-1990 ; Annual of Urdu Studies Volume 1-7 ; 00 >
-    au < released ; 1993 ; Annual of Urdu Studies Volume 8 ; 08 >
-    au < released ; 1994 ; Annual of Urdu Studies Volume 9 ; 09 >
-    au < released ; 1995 ; Annual of Urdu Studies Volume 10 ; 10 >
-    au < released ; 1996 ; Annual of Urdu Studies Volume 11 ; 11 >
-    au < released ; 1997 ; Annual of Urdu Studies Volume 12 ; 12 >
-    au < released ; 1998 ; Annual of Urdu Studies Volume 13 ; 13 >
-    au < released ; 1999 ; Annual of Urdu Studies Volume 14 ; 14 >
-    au < released ; 2000 ; Annual of Urdu Studies Volume 15 ; 15 >
-    au < released ; 2001 ; Annual of Urdu Studies Volume 16 ; 16 >
-    au < released ; 2002 ; Annual of Urdu Studies Volume 17 ; 17 >
-    au < released ; 2003 ; Annual of Urdu Studies Volume 18 ; 18 >
-    au < released ; 2004 ; Annual of Urdu Studies Volume 19 ; 19 >
-    au < released ; 2005 ; Annual of Urdu Studies Volume 20 ; 20 >
-    au < released ; 2006 ; Annual of Urdu Studies Volume 21 ; 21 >
-    au < released ; 2007 ; Annual of Urdu Studies Volume 22 ; 22 >
-    au < released ; 2008 ; Annual of Urdu Studies Volume 23 ; 23 >
-    au < released ; 2009 ; Annual of Urdu Studies Volume 24 ; 24 >
-    au < released ; 2010 ; Annual of Urdu Studies Volume 25 ; 25 >
-    au < released ; 2011 ; Annual of Urdu Studies Volume 26 ; 26 >
-    au < released ; 2012 ; Annual of Urdu Studies Volume 27 ; 27 >
-    au < released ; 2013 ; Annual of Urdu Studies Volume 28 ; 28 >
-    au < released ; 2014 ; Annual of Urdu Studies Volume 29 ; 29 >
+    au < down ; 1993 ; Annual of Urdu Studies Volume 8 ; 08 >
+    au < down ; 1994 ; Annual of Urdu Studies Volume 9 ; 09 >
+    au < down ; 1995 ; Annual of Urdu Studies Volume 10 ; 10 >
+    au < down ; 1996 ; Annual of Urdu Studies Volume 11 ; 11 >
+    au < down ; 1997 ; Annual of Urdu Studies Volume 12 ; 12 >
+    au < down ; 1998 ; Annual of Urdu Studies Volume 13 ; 13 >
+    au < down ; 1999 ; Annual of Urdu Studies Volume 14 ; 14 >
+    au < down ; 2000 ; Annual of Urdu Studies Volume 15 ; 15 >
+    au < down ; 2001 ; Annual of Urdu Studies Volume 16 ; 16 >
+    au < down ; 2002 ; Annual of Urdu Studies Volume 17 ; 17 >
+    au < down ; 2003 ; Annual of Urdu Studies Volume 18 ; 18 >
+    au < down ; 2004 ; Annual of Urdu Studies Volume 19 ; 19 >
+    au < down ; 2005 ; Annual of Urdu Studies Volume 20 ; 20 >
+    au < down ; 2006 ; Annual of Urdu Studies Volume 21 ; 21 >
+    au < down ; 2007 ; Annual of Urdu Studies Volume 22 ; 22 >
+    au < down ; 2008 ; Annual of Urdu Studies Volume 23 ; 23 >
+    au < down ; 2009 ; Annual of Urdu Studies Volume 24 ; 24 >
+    au < down ; 2010 ; Annual of Urdu Studies Volume 25 ; 25 >
+    au < down ; 2011 ; Annual of Urdu Studies Volume 26 ; 26 >
+    au < down ; 2012 ; Annual of Urdu Studies Volume 27 ; 27 >
+    au < down ; 2013 ; Annual of Urdu Studies Volume 28 ; 28 >
+    au < down ; 2014 ; Annual of Urdu Studies Volume 29 ; 29 >
 
   }
 

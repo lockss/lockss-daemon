@@ -19,11 +19,12 @@
     # missing manifest pages requested RT4367
     
     comment[review] = nothing online after 2/2011 as of 1/2014. No response from publisher. 
+    #content not available
     
-    au < released ; 2000 ; La Petite Zine 2000 ; 2000 ; 1-5 >
-    au < released ; 2001 ; La Petite Zine 2001 ; 2001 ; 6-8 >
-    au < released ; 2002 ; La Petite Zine 2002 ; 2002 ; 9-11 >
-    au < released ; 2003 ; La Petite Zine 2003 ; 2003 ; 12-14 >
+    au < down ; 2000 ; La Petite Zine 2000 ; 2000 ; 1-5 >
+    au < down ; 2001 ; La Petite Zine 2001 ; 2001 ; 6-8 >
+    au < down ; 2002 ; La Petite Zine 2002 ; 2002 ; 9-11 >
+    au < down ; 2003 ; La Petite Zine 2003 ; 2003 ; 12-14 >
     au < doNotProcess ; 2004 ; La Petite Zine 2004 ; 2004 ; 15-16 >
     au < doNotProcess ; 2005 ; La Petite Zine 2005 ; 2005 ; 17 >
     au < doNotProcess ; 2006 ; La Petite Zine 2006 ; 2006 ; 18-19 >

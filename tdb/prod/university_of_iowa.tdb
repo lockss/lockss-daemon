@@ -29,6 +29,8 @@
       au < released ; 2016 ; Annals at Iowa Volume 75 ; 75 ; http://ir.uiowa.edu/ >
       au < released ; 2017 ; Annals at Iowa Volume 76 ; 76 ; https://ir.uiowa.edu/ >
       au < released ; 2018 ; Annals at Iowa Volume 77 ; 77 ; https://ir.uiowa.edu/ >
+      au < exists ; 2019 ; Annals at Iowa Volume 78 ; 78 ; https://ir.uiowa.edu/ >
+      au < expected ; 2020 ; Annals at Iowa Volume 79 ; 79 ; https://ir.uiowa.edu/ >
 
     }
     
@@ -70,7 +72,7 @@
       >
 
       plugin = org.lockss.plugin.bepress.BePressPlugin
-      param[base_url] = http://ir.uiowa.edu/
+      param[base_url] = https://ir.uiowa.edu/
       param[journal_abbr] = bsides
       implicit < status ; year ; name ; param[volume] >
 
@@ -264,6 +266,7 @@
       au < released ; 2017 ; Iowa Journal of Cultural Studies Volume 17 ; 17 ; https://ir.uiowa.edu/ >
       au < released ; 2018 ; Iowa Journal of Cultural Studies Volume 18 ; 18 ; https://ir.uiowa.edu/ >
       au < released ; 2019 ; Iowa Journal of Cultural Studies Volume 19 ; 19 ; https://ir.uiowa.edu/ >
+      au < expected ; 2020 ; Iowa Journal of Cultural Studies Volume 20 ; 20 ; https://ir.uiowa.edu/ >
 
     }
     
@@ -335,6 +338,8 @@
       au < released ; 2016 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2016 ; 2016 ; http://ir.uiowa.edu/ >
       au < released ; 2017 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2017 ; 2017 ; https://ir.uiowa.edu/ >
       au < released ; 2018 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2018 ; 2018 ; https://ir.uiowa.edu/ >
+      au < exists ; 2019 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2019 ; 2019 ; https://ir.uiowa.edu/ >
+      au < expected ; 2020 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2020 ; 2020 ; https://ir.uiowa.edu/ >
 
     }
     
@@ -404,7 +409,7 @@
       au < released ; 2016 ; Medieval Feminist Forum Volume 52 ; 52 ; http://ir.uiowa.edu/ >
       au < notReady ; 2017-2018 ; Medieval Feminist Forum Volume 53 ; 53 ; https://ir.uiowa.edu/ > #login page LXQUEUE-1550
       au < notReady ; 2018 ; Medieval Feminist Forum Volume 54 ; 54 ; https://ir.uiowa.edu/ > #login page LXQUEUE-1550
-      au < released ; 2019 ; Medieval Feminist Forum Volume 55 ; 55 ; https://ir.uiowa.edu/ >
+      au < released ; 2019-2020 ; Medieval Feminist Forum Volume 55 ; 55 ; https://ir.uiowa.edu/ >
 
     }
     
@@ -432,7 +437,8 @@
       au < released ; 2015 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 11 ; 11 ; http://ir.uiowa.edu/ >
       au < released ; 2016 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 12 ; 12 ; http://ir.uiowa.edu/ >
       au < released ; 2017 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 13 ; 13 ; https://ir.uiowa.edu/ >
-      au < released ; 2018-2019 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 14 ; 14 ; https://ir.uiowa.edu/ >
+      au < released ; 2018 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 14 ; 14 ; https://ir.uiowa.edu/ >
+      au < exists ; 2018-2020 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 15 ; 15 ; https://ir.uiowa.edu/ >
 
     }
     
@@ -456,6 +462,7 @@
       au < released ; 2017 ; Proceedings in Obstetrics and Gynecology Volume 7 ; 7 ; https://ir.uiowa.edu/ >
       au < released ; 2018 ; Proceedings in Obstetrics and Gynecology Volume 8 ; 8 ; https://ir.uiowa.edu/ >
       au < released ; 2019 ; Proceedings in Obstetrics and Gynecology Volume 9 ; 9 ; https://ir.uiowa.edu/ >
+      au < expected ; 2020 ; Proceedings in Obstetrics and Gynecology Volume 10 ; 10 ; https://ir.uiowa.edu/ >
 
     }
     
@@ -572,6 +579,7 @@
       au < released ; 2017-2018 ; Walt Whitman Quarterly Review Volume 35 ; 35 ; https://ir.uiowa.edu/ >
       au < released ; 2018-2019 ; Walt Whitman Quarterly Review Volume 36 ; 36 ; https://ir.uiowa.edu/ >
       au < released ; 2019-2020 ; Walt Whitman Quarterly Review Volume 37 ; 37 ; https://ir.uiowa.edu/ >
+      au < expected ; 2020-2021 ; Walt Whitman Quarterly Review Volume 38 ; 38 ; https://ir.uiowa.edu/ >
 
     }
     
