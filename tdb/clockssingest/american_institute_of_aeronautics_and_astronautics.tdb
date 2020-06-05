@@ -32,13 +32,13 @@
     param[journal_id] = aiaaj
 
     au < finished ; finished ; 1963 ; AIAA Journal Volume 1 ; 1 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 1964 ; AIAA Journal Volume 2 ; 2 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1964 ; AIAA Journal Volume 2 ; 2 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 1965 ; AIAA Journal Volume 3 ; 3 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 1966 ; AIAA Journal Volume 4 ; 4 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 1967 ; AIAA Journal Volume 5 ; 5 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
-    au < finished ; frozen ; 1968 ; AIAA Journal Volume 6 ; 6 ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 1968 ; AIAA Journal Volume 6 ; 6 ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 1969 ; AIAA Journal Volume 7 ; 7 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 1970 ; AIAA Journal Volume 8 ; 8 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1970 ; AIAA Journal Volume 8 ; 8 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 1971 ; AIAA Journal Volume 9 ; 9 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 1972 ; AIAA Journal Volume 10 ; 10 ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 1973 ; AIAA Journal Volume 11 ; 11 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
@@ -48,7 +48,7 @@
     au < finished ; frozen ; 1977 ; AIAA Journal Volume 15 ; 15 ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 1978 ; AIAA Journal Volume 16 ; 16 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 1979 ; AIAA Journal Volume 17 ; 17 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
-    au < finished ; frozen ; 1980 ; AIAA Journal Volume 18 ; 18 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1980 ; AIAA Journal Volume 18 ; 18 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 1981 ; AIAA Journal Volume 19 ; 19 ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 1982 ; AIAA Journal Volume 20 ; 20 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 1983 ; AIAA Journal Volume 21 ; 21 ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
@@ -77,7 +77,7 @@
     au < finished ; finished ; 2006 ; AIAA Journal Volume 44 ; 44 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < zapped ; finished ; 2007 ; AIAA Journal Volume 45 ; 45 ; http://arc.aiaa.org/ ; >
     au < finished ; frozen ; 2008 ; AIAA Journal Volume 46 ; 46 ; http://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
-    au < finished ; frozen ; 2009 ; AIAA Journal Volume 47 ; 47 ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2009 ; AIAA Journal Volume 47 ; 47 ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2010 ; AIAA Journal Volume 48 ; 48 ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2011 ; AIAA Journal Volume 49 ; 49 ; http://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2012 ; AIAA Journal Volume 50 ; 50 ; http://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
@@ -105,17 +105,17 @@
 
     au < finished ; frozen ; 1993 ; Air Traffic Control Quarterly Volume 1 ; 1 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 1994 ; Air Traffic Control Quarterly Volume 2 ; 2 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 1995 ; Air Traffic Control Quarterly Volume 3 ; 3 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1995 ; Air Traffic Control Quarterly Volume 3 ; 3 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 1996 ; Air Traffic Control Quarterly Volume 4 ; 4 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 1997 ; Air Traffic Control Quarterly Volume 5 ; 5 ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 1998 ; Air Traffic Control Quarterly Volume 6 ; 6 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 1999 ; Air Traffic Control Quarterly Volume 7 ; 7 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2000 ; Air Traffic Control Quarterly Volume 8 ; 8 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2001 ; Air Traffic Control Quarterly Volume 9 ; 9 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2002 ; Air Traffic Control Quarterly Volume 10 ; 10 ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
-    au < finished ; frozen ; 2003 ; Air Traffic Control Quarterly Volume 11 ; 11 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2002 ; Air Traffic Control Quarterly Volume 10 ; 10 ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2003 ; Air Traffic Control Quarterly Volume 11 ; 11 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2004 ; Air Traffic Control Quarterly Volume 12 ; 12 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 2005 ; Air Traffic Control Quarterly Volume 13 ; 13 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2005 ; Air Traffic Control Quarterly Volume 13 ; 13 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2006 ; Air Traffic Control Quarterly Volume 14 ; 14 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2007 ; Air Traffic Control Quarterly Volume 15 ; 15 ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2008 ; Air Traffic Control Quarterly Volume 16 ; 16 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
@@ -140,7 +140,7 @@
     param[journal_id] = jacic
     comment[continued_by] = 2327-3097
 
-    au < finished ; frozen ; 2004 ; Journal of Aerospace Computing, Information, and Communication Volume 1 ; 1 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2004 ; Journal of Aerospace Computing, Information, and Communication Volume 1 ; 1 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2005 ; Journal of Aerospace Computing, Information, and Communication Volume 2 ; 2 ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2006 ; Journal of Aerospace Computing, Information, and Communication Volume 3 ; 3 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2007 ; Journal of Aerospace Computing, Information, and Communication Volume 4 ; 4 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
@@ -185,7 +185,7 @@
     
 
 
-    au < finished ; frozen ; 2016 ; Journal of Air Transportation Volume 24 ; 24 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; Journal of Air Transportation Volume 24 ; 24 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2017 ; Journal of Air Transportation Volume 25 ; 25 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2018 ; Journal of Air Transportation Volume 26 ; 26 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2019 ; Journal of Air Transportation Volume 27 ; 27 ; https://arc.aiaa.org/ ; >
@@ -207,13 +207,13 @@
     au < finished ; finished ; 1965 ; Journal of Aircraft Volume 2 ; 2 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 1966 ; Journal of Aircraft Volume 3 ; 3 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 1967 ; Journal of Aircraft Volume 4 ; 4 ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
-    au < finished ; frozen ; 1968 ; Journal of Aircraft Volume 5 ; 5 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1968 ; Journal of Aircraft Volume 5 ; 5 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 1969 ; Journal of Aircraft Volume 6 ; 6 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 1970 ; Journal of Aircraft Volume 7 ; 7 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 1971 ; Journal of Aircraft Volume 8 ; 8 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 1972 ; Journal of Aircraft Volume 9 ; 9 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1972 ; Journal of Aircraft Volume 9 ; 9 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 1973 ; Journal of Aircraft Volume 10 ; 10 ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
-    au < finished ; frozen ; 1974 ; Journal of Aircraft Volume 11 ; 11 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1974 ; Journal of Aircraft Volume 11 ; 11 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 1975 ; Journal of Aircraft Volume 12 ; 12 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 1976 ; Journal of Aircraft Volume 13 ; 13 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 1977 ; Journal of Aircraft Volume 14 ; 14 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
