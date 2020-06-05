@@ -185,8 +185,8 @@
   >
    au < manifest ; exists ; 1955 ; 9783131998040 ; 9783131962140 ; 10.1055/b-003-125737 ; Physikalische Methoden [Forschungsmethoden] (9783131962140) ; >
    au < manifest ; exists ; 1983 ; 9783132136045 ; 9783131960344 ; 10.1055/b-004-135634 ; Organobor-Verbindungen (9783131960344) ; >
-   au < finished ; frozen ; 2002 ; 9781588900876 ; 9781604064247 ; 10.1055/b-002-52050 ; Internal Fixation in Osteoporotic Bone (9781604064247) ; reingest5.clockss.org:8082 >
-   au < finished ; frozen ; 2003 ; 9781588901637 ; 9783131607317 ; 10.1055/b-002-52055 ; Middle Ear and Mastoid Microsurgery (9783131607317) ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2002 ; 9781588900876 ; 9781604064247 ; 10.1055/b-002-52050 ; Internal Fixation in Osteoporotic Bone (9781604064247) ; reingest5.clockss.org:8082 >
+   au < finished ; finished ; 2003 ; 9781588901637 ; 9783131607317 ; 10.1055/b-002-52055 ; Middle Ear and Mastoid Microsurgery (9783131607317) ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2004 ; 9783131186614 ; 9783131836618 ; 10.1055/b-003-121809 ; Category 2, Hetarenes and Related Ring Systems (9783131836618) ; reingest1.clockss.org:8082 >
    au < finished ; frozen ; 2004 ; 9783131187819 ; 9783131837912 ; 10.1055/b-003-125723 ; Category 4, Compounds with Two Carbon Heteroatom Bonds (9783131837912) ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2004 ; 9783830441526 ; 9783132424951 ; 10.1055/b-006-149396 ; Lehrbuch der Anatomie der Haustiere (9783132424951) ; reingest3.clockss.org:8083 >
@@ -305,7 +305,7 @@
    au < finished ; finished ; 2008 ; 9781588906106 ; 9781604064681 ; 10.1055/b-002-57144 ; Ultrasonography in Vascular Diseases: A Practical Approach to Clinical Problems (9781604064681) ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2008 ; 9781588904058 ; 9783131620323 ; 10.1055/b-002-72193 ; Ultrasound: A Practical Approach to Clinical Problems (9783131620323) ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2008 ; 9783131068224 ; 9783131863126 ; 10.1055/b-001-1076 ; Versorgung und Rehabilitation mit Hörgeräten (9783131863126) ; reingest2.clockss.org:8085 >
-   au < finished ; frozen ; 2008 ; 9783131484918 ; 9783131841018 ; 10.1055/b-003-125706 ; Cumulative Index (9783131841018) ; reingest5.clockss.org:8082 >
+   au < finished ; finished ; 2008 ; 9783131484918 ; 9783131841018 ; 10.1055/b-003-125706 ; Cumulative Index (9783131841018) ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2009 ; 9783131263469 ; 9783131853769 ; 10.1055/b-002-6234 ; Allgemein- und Viszeralchirurgie essentials: Intensivkurs zur Weiterbildung (9783131853769) ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2009 ; 9783131148629 ; 9783131849021 ; 10.1055/b-001-2165 ; Anästhesiologie (9783131849021) ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2009 ; 9783131382627 ; 9783131849328 ; 10.1055/b-002-37743 ; Anästhesiologische Pharmakotherapie: Von den Grundlagen der Pharmakologie zur Medikamentenpraxis (9783131849328) ; reingest5.clockss.org:8082 >
@@ -428,7 +428,7 @@
    au < finished ; finished ; 2009 ; 9783131177834 ; 9783131892539 ; 10.1055/b-001-3198 ; Verhaltenstherapie: Grundlagen – Methoden – Anwendungen (9783131892539) ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2009 ; 9783131468611 ; 9783131872715 ; 10.1055/b-002-41837 ; Zeitzeuge der Medizin: Im Gespräch mit dem Internisten Walter Siegenthaler (9783131872715) ; reingest5.clockss.org:8082 >
    au < finished ; frozen ; 2009 ; 9783131485212 ; 9783131841315 ; 10.1055/b-003-125709 ; Cumulative Index (9783131841315) ; reingest1.clockss.org:8082 >
-   au < finished ; frozen ; 2009 ; 9783131485113 ; 9783131841216 ; 10.1055/b-003-125708 ; Cumulative Index (9783131841216) ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2009 ; 9783131485113 ; 9783131841216 ; 10.1055/b-003-125708 ; Cumulative Index (9783131841216) ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2009 ; 9783830410348 ; 9783132405530 ; 10.1055/b-004-129750 ; Giftige Pflanzen für Klein- und Heimtiere  (9783132405530) ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2010 ; 9783830492337 ; 9783132405844 ; 10.1055/b-004-129962 ; Akupunktur und Phytotherapie beim Pferd (9783132405844) ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 9783135315065 ; 9783131893062 ; 10.1055/b-002-46965 ; Allgemeine Psychopathologie: Eine Einführung (9783131893062) ; reingest2.clockss.org:8085 >
@@ -1314,20 +1314,20 @@
    au < finished ; finished ; 2016 ; 9781626236622 ; 9781626237506 ; 10.1055/b-004-140250 ; Wide Awake Hand Surgery (9781626237506) ; reingest2.clockss.org:8085 >
    au < finished ; frozen ; 2016 ; 9783131102331 ; 9783132407374 ; 10.1055/b-004-132215 ; Anästhesie bei Kindern (9783132407374) ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2016 ; 9783131770516 ; 9783132407299 ; 10.1055/b-004-132206 ; Angiografie für MTRA/RT (9783132407299) ; reingest1.clockss.org:8082 >
-   au < finished ; frozen ; 2016 ; 9783132192911 ; 9783132403949 ; 10.1055/b-004-129580 ; Aromatherapie für Pflege- und Heilberufe (9783132403949) ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2016 ; 9783132192911 ; 9783132403949 ; 10.1055/b-004-129580 ; Aromatherapie für Pflege- und Heilberufe (9783132403949) ; reingest2.clockss.org:8085 >
    au < finished ; frozen ; 2016 ; 9783132004719 ; 9783132004818 ; 10.1055/b-004-138012 ; Arterial Variations in Humans: Key Reference for Radiologists and Surgeons (9783132004818) ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2016 ; 9783131729613 ; 9783132407015 ; 10.1055/b-004-129983 ; Atlas der arteriellen Variationen (9783132407015) ; reingest4.clockss.org:8082 >
-   au < finished ; frozen ; 2016 ; 9781626236844 ; 9781626236981 ; 10.1055/b-005-143332 ; Auricular Reconstruction (9781626236981) ; reingest5.clockss.org:8082 >
+   au < finished ; finished ; 2016 ; 9781626236844 ; 9781626236981 ; 10.1055/b-005-143332 ; Auricular Reconstruction (9781626236981) ; reingest5.clockss.org:8082 >
    au < finished ; frozen ; 2016 ; 9781626232648 ; 9781626232655 ; 10.1055/b-006-149730 ; Endoscopic Spine Surgery (9781626232655) ; reingest1.clockss.org:8082 >
-   au < finished ; frozen ; 2016 ; 9783132208315 ; 9783132403697 ; 10.1055/b-003-129343 ; Knowledge Updates 2016/1 (9783132403697) ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2016 ; 9783132208315 ; 9783132403697 ; 10.1055/b-003-129343 ; Knowledge Updates 2016/1 (9783132403697) ; reingest2.clockss.org:8085 >
    au < finished ; frozen ; 2016 ; 9783132208711 ; 9783132403680 ; 10.1055/b-003-129344 ; Knowledge Updates 2016/2 (9783132403680) ; reingest3.clockss.org:8083 >
    au < finished ; frozen ; 2016 ; 9783132209114 ; 9783132403703 ; 10.1055/b-003-129346 ; Knowledge Updates 2016/3 (9783132403703) ; reingest4.clockss.org:8082 >
    au < finished ; frozen ; 2016 ; 9783131998613 ; 9783132403406 ; 10.1055/b-003-129294 ; Metal-Catalyzed Cyclization Reactions 1 (9783132403406) ; reingest5.clockss.org:8082 >
    au < finished ; frozen ; 2016 ; 9783131998118 ; 9783132404823 ; 10.1055/b-004-129734 ; Metal-Catalyzed Cyclization Reactions 2 (9783132404823) ; reingest1.clockss.org:8082 >
    au < finished ; frozen ; 2016 ; 9783132016316 ; 9783132016415 ; 10.1055/b-004-140241 ; Modern Management of Spinal Deformities (9783132016415) ; reingest2.clockss.org:8085 >
-   au < finished ; frozen ; 2016 ; 9783132012813 ; 9783132407633 ; 10.1055/b-004-132254 ; N-Heterocyclic Carbenes in Catalytic Organic Synthesis (9783132407633) ; reingest3.clockss.org:8083 >
+   au < finished ; finished ; 2016 ; 9783132012813 ; 9783132407633 ; 10.1055/b-004-132254 ; N-Heterocyclic Carbenes in Catalytic Organic Synthesis (9783132407633) ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2017 ; 9783132052512 ; 9783132407329 ; 10.1055/b-004-132209 ; Anästhesie in der Gefäßchirurgie (9783132407329) ; reingest4.clockss.org:8082 >
-   au < finished ; frozen ; 2017 ; 9781604067002 ; 9781604067026 ; 10.1055/b-004-138011 ; Differential Diagnosis in Neuroimaging: Brain and Meninges (9781604067026) ; reingest5.clockss.org:8082 >
+   au < finished ; finished ; 2017 ; 9781604067002 ; 9781604067026 ; 10.1055/b-004-138011 ; Differential Diagnosis in Neuroimaging: Brain and Meninges (9781604067026) ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2017 ; 9783131180353 ; 9783131687258 ; 10.1055/b-003-125768 ; Das Drogentaschenbuch (9783131687258) ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2017 ; 9783134758078 ; 9783132402539 ; 10.1055/b-003-128227 ; EKG im Kindes- und Jugendalter (9783132402539) ; reingest2.clockss.org:8085 >
    au < finished ; frozen ; 2017 ; 9783131748713 ; 9783132403819 ; 10.1055/b-003-129349 ; Fetoneonatale Lunge (9783132403819) ; reingest3.clockss.org:8083 >
@@ -1341,7 +1341,7 @@
    au < finished ; finished ; 2017 ; 9781626230965 ; 9781626230972 ; 10.1055/b-004-135649 ; Pediatric Neuroradiology: Clinical Practice Essentials (9781626230972) ; reingest1.clockss.org:8082 >
    au < finished ; frozen ; 2017 ; 9783132400580 ; 9783132407268 ; 10.1055/b-004-132238 ; Pflegeplanung: Formulierungen für Altenheim – Ambulante Pflege – Krankenhaus (9783132407268) ; reingest2.clockss.org:8085 > #redirect to eref.thieme.de
    au < finished ; frozen ; 2017 ; 9781626233201 ; 9781626233218 ; 10.1055/b-004-140239 ; Physical Examination of the Spine (9781626233218) ; reingest3.clockss.org:8083 >
-   au < finished ; frozen ; 2017 ; 9783132046214 ; 9783132407428 ; 10.1055/b-004-132218 ; Rekonstruktive und Ästhetische Intimchirurgie (9783132407428) ; reingest4.clockss.org:8082 >
+   au < finished ; finished ; 2017 ; 9783132046214 ; 9783132407428 ; 10.1055/b-004-132218 ; Rekonstruktive und Ästhetische Intimchirurgie (9783132407428) ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2017 ; 9783132407459 ; 9783132407527 ; 10.1055/b-004-140698 ; Psychotherapie nach Flucht und Vertreibung (9783132407527) ; reingest5.clockss.org:8082 >
    au < finished ; frozen ; 2017 ; 9783132401396 ; 9783132415775 ; 10.1055/b-004-140651 ; Neurologische Notfälle (9783132415775) ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2017 ; 9783132214811 ; 9783132415645 ; 10.1055/b-004-140268 ; Computertomografie für MTRA/RT (9783132415645) ; reingest2.clockss.org:8085 >
@@ -1354,24 +1354,24 @@
    au < finished ; frozen ; 2017 ; 9781626232105 ; 9781626232112 ; 10.1055/b-005-143627 ; Endoscopic Sinonasal Dissection Guide (9781626232112) ; reingest4.clockss.org:8082 >
    au < finished ; frozen ; 2017 ; 9783132053915 ; 9783132054011 ; 10.1055/b-005-143333 ; Nasoseptal Perforations: Endoscopic Repair Techniques (9783132054011) ; reingest1.clockss.org:8082 >
    au < finished ; frozen ; 2017 ; 9781626230279 ; 9781626230286 ; 10.1055/b-005-143331 ; Color Atlas of Brainstem Surgery (9781626230286) ; reingest2.clockss.org:8085 >
-   au < finished ; frozen ; 2017 ; 9783132408722 ; 9783132203716 ; 10.1055/b-005-143324 ; Encyclopedia of Football Medicine, Volume 3 (9783132203716) ; reingest3.clockss.org:8083 >
+   au < finished ; finished ; 2017 ; 9783132408722 ; 9783132203716 ; 10.1055/b-005-143324 ; Encyclopedia of Football Medicine, Volume 3 (9783132203716) ; reingest3.clockss.org:8083 >
    au < finished ; frozen ; 2017 ; 9783132203419 ; 9783132203518 ; 10.1055/b-005-143323 ; Encyclopedia of Football Medicine, Volume 2 (9783132203518) ; reingest4.clockss.org:8082 >
-   au < finished ; frozen ; 2017 ; 9783132203211 ; 9783132203310 ; 10.1055/b-005-143322 ; Encyclopedia of Football Medicine, Volume 1 (9783132203310) ; reingest5.clockss.org:8082 >
+   au < finished ; finished ; 2017 ; 9783132203211 ; 9783132203310 ; 10.1055/b-005-143322 ; Encyclopedia of Football Medicine, Volume 1 (9783132203310) ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2017 ; 9781626236837 ; 9781626236998 ; 10.1055/b-005-143630 ; Gender Affirmation (9781626236998) ; reingest1.clockss.org:8082 >
    au < finished ; frozen ; 2017 ; 9781626232501 ; 9781626232518 ; 10.1055/b-005-143336 ; Biological Approaches to Spinal Disc Repair and Regeneration for Clinicians (9781626232518) ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2017 ; 9781626236912 ; 9781626237643 ; 10.1055/b-005-143325 ; Partial Breast Reconstruction (9781626237643) ; reingest3.clockss.org:8083 >
-   au < finished ; frozen ; 2017 ; 9783131994219 ; 9783131994318 ; 10.1055/b-004-138013 ; Interdisciplinary Management of Orbital Diseases (9783131994318) ; reingest4.clockss.org:8082 >
+   au < finished ; finished ; 2017 ; 9783131994219 ; 9783131994318 ; 10.1055/b-004-138013 ; Interdisciplinary Management of Orbital Diseases (9783131994318) ; reingest4.clockss.org:8082 >
    au < finished ; crawling ; 2017 ; 9783131319128 ; 9783131628121 ; 10.1055/b-005-143328 ; Essentials of Septorhinoplasty (9783131628121) ; reingest1.clockss.org:8082 >
    au < finished ; frozen ; 2017 ; 9781626232044 ; 9781626232051 ; 10.1055/b-005-143329 ; Vertigo and Disequilibrium (9781626232051) ; reingest5.clockss.org:8082 >
    au < finished ; frozen ; 2017 ; 9781626234512 ; 9781626234529 ; 10.1055/b-005-143326 ; Endothelial Keratoplasty (9781626234529) ; reingest1.clockss.org:8082 >
-   au < finished ; frozen ; 2017 ; 9781626232686 ; 9781626232693 ; 10.1055/b-005-143330 ; MRI of the Prostate (9781626232693) ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2017 ; 9781626232686 ; 9781626232693 ; 10.1055/b-005-143330 ; MRI of the Prostate (9781626232693) ; reingest2.clockss.org:8085 >
    au < finished ; frozen ; 2017 ; 9781626232662 ; 9781626232679 ; 10.1055/b-005-143335 ; Epiduroscopy (9781626232679) ; reingest3.clockss.org:8083 >
    au < finished ; frozen ; 2017 ; 9781626234772 ; 9781626234789 ; 10.1055/b-004-138007 ; Differential Diagnosis in Neuroimaging (9781626234789) ; reingest4.clockss.org:8082 >
    au < finished ; frozen ; 2017 ; 9781626234758 ; 9781626234765 ; 10.1055/b-004-138009 ; Differential Diagnosis in Neuroimaging (9781626234765) ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2017 ; 9781626231153 ; 9781626231160 ; 10.1055/b-005-143327 ; Plastic Surgery Emergencies (9781626231160) ; reingest1.clockss.org:8082 >
    au < finished ; frozen ; 2017 ; 9781626230125 ; 9781626230132 ; 10.1055/b-004-129575 ; Varicose Veins (9781626230132) ; reingest5.clockss.org:8082 >
    au < finished ; frozen ; 2017 ; 9783131699015 ; 9783131699114 ; 10.1055/b-004-135637 ; Pediatric Otolaryngology (9783131699114) ; reingest2.clockss.org:8085 >
-   au < finished ; frozen ; 2017 ; 9783132402881 ; 9783132402911 ; 10.1055/b-005-143301 ; Handbuch der Biochemie nach Dr. Schüßler (9783132402911) ; reingest3.clockss.org:8083 >
+   au < finished ; finished ; 2017 ; 9783132402881 ; 9783132402911 ; 10.1055/b-005-143301 ; Handbuch der Biochemie nach Dr. Schüßler (9783132402911) ; reingest3.clockss.org:8083 >
    au < finished ; frozen ; 2017 ; 9783132402843 ; 9783132402874 ; 10.1055/b-004-140267 ; Manuelle Pferdetherapie (9783132402874) ; reingest4.clockss.org:8082 >
    au < finished ; frozen ; 2017 ; 9783132212213 ; 9783132415959 ; 10.1055/b-004-140271 ; Differenzialdiagnose Innere Medizin beim Pferd (9783132415959) ; reingest5.clockss.org:8082 >
    au < finished ; frozen ; 2017 ; 9781626231931 ; 9781626231948 ; 10.1055/b-005-143632 ; Abbreviated MRI of the Breast (9781626231948) ; reingest1.clockss.org:8082 >
@@ -1385,7 +1385,7 @@
    au < exists ; exists ; 2017 ; 9783132402706 ; 9783132402737 ; 10.1055/b-004-140660 ; Altenpflege in Lernfeldern (9783132402737) ; >
    au < finished ; frozen ; 2017 ; 9783132038813 ; 9783132408210 ; 10.1055/b-004-132257 ; Anamnese und Befund bei psychischen Erkrankungen (9783132408210) ; reingest5.clockss.org:8082 >
    au < exists ; exists ; 2017 ; 9783132417526 ; 9783132417557 ; 10.1055/b-005-143674 ; Anatomie (9783132417557) ; >
-   au < finished ; frozen ; 2017 ; 9783132419131 ; 9783132419162 ; 10.1055/b-005-145247 ; Antlitzanalyse in der Biochemie nach Dr. Schüßler (9783132419162) ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2017 ; 9783132419131 ; 9783132419162 ; 10.1055/b-005-145247 ; Antlitzanalyse in der Biochemie nach Dr. Schüßler (9783132419162) ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2017 ; 9783132053014 ; 9783132419575 ; 10.1055/b-005-145222 ; Atlas der arthroskopischen Anatomie (9783132419575) ; reingest2.clockss.org:8085 >
    au < finished ; frozen ; 2017 ; 9783132416796 ; 9783132416826 ; 10.1055/b-005-143310 ; Atlas der Urogynäkologischen und Proktokologischen Operationstechniken (9783132416826) ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2017 ; 9783131376107 ; 9783132417137 ; 10.1055/b-004-140689 ; Atmen - Atemhilfen (9783132417137) ; reingest4.clockss.org:8082 >
@@ -1400,7 +1400,7 @@
    au < finished ; frozen ; 2017 ; 9783132401693 ; 9783132401723 ; 10.1055/b-005-143302 ; Checkliste Osteopathie Pferd (9783132401723) ; reingest2.clockss.org:8085 >
    au < exists ; exists ; 2017 ; 9783132406681 ; 9783132406858 ; 10.1055/b-005-143666 ; Checkliste Psychiatrie und Psychotherapie (9783132406858) ; >
    au < exists ; exists ; 2017 ; 9783132404373 ; 9783132404434 ; 10.1055/b-005-143670 ; Chirurgie für Pflegeberufe (9783132404434) ; >
-   au < finished ; frozen ; 2017 ; 9783131735812 ; 9783132407145 ; 10.1055/b-004-132229 ; Chirurgie und Bildgebung (9783132407145) ; reingest3.clockss.org:8083 >
+   au < finished ; finished ; 2017 ; 9783131735812 ; 9783132407145 ; 10.1055/b-004-132229 ; Chirurgie und Bildgebung (9783132407145) ; reingest3.clockss.org:8083 >
    au < finished ; frozen ; 2017 ; 9781626232082 ; 9781626232099 ; 10.1055/b-005-143628 ; Clinical Breast Tomosynthesis (9781626232099) ; reingest4.clockss.org:8082 >
    au < finished ; frozen ; 2017 ; 9783132415232 ; 9783132415249 ; 10.1055/b-005-143673 ; Color Atlas of Endo-Otoscopy (9783132415249) ; reingest5.clockss.org:8082 >
    au < finished ; frozen ; 2017 ; 9781604068818 ; 9781604068825 ; 10.1055/b-003-125788 ; Controversies in Spine Surgery: MIS versus OPEN (9781604068825) ; reingest1.clockss.org:8082 >
@@ -1411,7 +1411,7 @@
    au < exists ; exists ; 2017 ; 9783132407992 ; 9783132408081 ; 10.1055/b-005-143650 ; EKG-Kurs für Isabel (9783132408081) ; >
    au < finished ; frozen ; 2017 ; 9783131002952 ; 9783132407763 ; 10.1055/b-004-132260 ; Ernährungsmedizin (9783132407763) ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2017 ; 9783132010512 ; 9783132407657 ; 10.1055/b-004-132249 ; Expertise Hüfte (9783132407657) ; reingest4.clockss.org:8082 >
-   au < finished ; frozen ; 2017 ; 9783132008717 ; 9783132415713 ; 10.1055/b-004-140275 ; Expertise Leber, Gallenwege (9783132415713) ; reingest5.clockss.org:8082 >
+   au < finished ; finished ; 2017 ; 9783132008717 ; 9783132415713 ; 10.1055/b-004-140275 ; Expertise Leber, Gallenwege (9783132415713) ; reingest5.clockss.org:8082 >
    au < finished ; frozen ; 2017 ; 9783132002517 ; 9783132407220 ; 10.1055/b-004-132226 ; Expertise Pankreas (9783132407220) ; reingest1.clockss.org:8082 >
    au < finished ; frozen ; 2017 ; 9783132409675 ; 9783132409705 ; 10.1055/b-004-140270 ; FAQ: Arzneimittelrecht für Tierärzte (9783132409705) ; reingest2.clockss.org:8085 >
    au < finished ; frozen ; 2017 ; 9781626236752 ; 9781626238862 ; 10.1055/b-005-143639 ; Fat Injection (9781626238862) ; reingest3.clockss.org:8083 >
@@ -1490,14 +1490,14 @@
    au < exists ; exists ; 2017 ; 9783132402935 ; 9783132402980 ; 10.1055/b-004-140670 ; Thiemes Pflege (9783132402980) ; >
    au < finished ; finished ; 2017 ; 9781626234093 ; 9781626234109 ; 10.1055/b-006-149751 ; Top Score for the Radiology Boards (9781626234109) ; reingest3.clockss.org:8083 >
    au < exists ; exists ; 2017 ; 9783132409750 ; 9783132409781 ; 10.1055/b-005-145223 ; Traumatisierte Frauen begleiten (9783132409781) ; >
-   au < finished ; frozen ; 2017 ; 9781626236882 ; 9781626238879 ; 10.1055/b-005-143636 ; Ultrasound of the Hand and Upper Extremity (9781626238879) ; reingest4.clockss.org:8082 >
-   au < finished ; frozen ; 2017 ; 9783132402003 ; 9783132402201 ; 10.1055/b-005-143661 ; Versorgung mit Hörgeräten und Hörimplantaten (9783132402201) ; reingest5.clockss.org:8082 >
+   au < finished ; finished ; 2017 ; 9781626236882 ; 9781626238879 ; 10.1055/b-005-143636 ; Ultrasound of the Hand and Upper Extremity (9781626238879) ; reingest4.clockss.org:8082 >
+   au < finished ; finished ; 2017 ; 9783132402003 ; 9783132402201 ; 10.1055/b-005-143661 ; Versorgung mit Hörgeräten und Hörimplantaten (9783132402201) ; reingest5.clockss.org:8082 >
    au < finished ; frozen ; 2017 ; 9781626231337 ; 9781626233300 ; 10.1055/b-005-143340 ; Vitreoretinal Disease (9781626233300) ; reingest1.clockss.org:8082 >
    au < exists ; exists ; 2017 ; 9783132406520 ; 9783132406544 ; 10.1055/b-005-143657 ; Wahrnehmen und Beobachten (9783132406544) ; >
    au < finished ; finished ; 2017 ; 9783132402010 ; 9783132402157 ; 10.1055/b-005-143303 ; Wiederherstellung der HNO-Funktion durch plastisch-rekonstruktive Chirurgie (9783132402157) ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2017 ; 9781626232938 ; 9781626232945 ; 10.1055/b-005-143343 ; Wills Eye Handbook of Ocular Genetics (9781626232945) ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2017 ; 9781626237964 ; 9781626235045 ; 10.1055/b-006-149768 ; Audiology Answers for Otolaryngologists (9781626235045) ; reingest4.clockss.org:8082 >
-   au < finished ; frozen ; 2017 ; 9781626232341 ; 9781626232358 ; 10.1055/b-006-149769 ; Neurological Intensive Care (9781626232358) ; reingest5.clockss.org:8082 >
+   au < finished ; finished ; 2017 ; 9781626232341 ; 9781626232358 ; 10.1055/b-006-149769 ; Neurological Intensive Care (9781626232358) ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2018 ; 9783132405974 ; 9783132406001 ; 10.1055/b-005-145216 ; Alles Wissenswerte über Staat, Bürger, Recht (9783132406001) ; reingest1.clockss.org:8082 >
    au < finished ; frozen ; 2018 ; 9783132407817 ; 9783132407848 ; 10.1055/b-005-145229 ; Arzneimittellehre für Heilpraktiker (9783132407848) ; reingest2.clockss.org:8085 >
    au < finished ; frozen ; 2018 ; 9783132407480 ; 9783132407558 ; 10.1055/b-005-145212 ; Erfahrungsschatz Neurologie (9783132407558) ; reingest3.clockss.org:8083 >
@@ -1533,13 +1533,13 @@
    au < finished ; frozen ; 2018 ; 9783132424012 ; 9783132424043 ; 10.1055/b-006-149286 ; PraxisSkills Allgemeinmedizin (9783132424043) ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2018 ; 9783132420342 ; 9783132420373 ; 10.1055/b-006-160192 ; Prüfungsfragen Osteopathie (9783132420373) ; reingest1.clockss.org:8082 >
    au < finished ; frozen ; 2018 ; 9783132425507 ; 9783132425668 ; 10.1055/b-006-149722 ; Schwierige Diagnosen in der Skelettradiologie (9783132425668) ; reingest2.clockss.org:8085 >
-   au < finished ; frozen ; 2018 ; 9781626232969 ; 9781626232976 ; 10.1055/b-006-149763 ; Skull Base Cancer Imaging (9781626232976) ; reingest3.clockss.org:8083 >
+   au < finished ; finished ; 2018 ; 9781626232969 ; 9781626232976 ; 10.1055/b-006-149763 ; Skull Base Cancer Imaging (9781626232976) ; reingest3.clockss.org:8083 >
    au < exists ; exists ; 2018 ; 9783132424340 ; 9783132424395 ; 10.1055/b-006-149924 ; Sportphysiotherapie (9783132424395) ; >
    au < finished ; frozen ; 2018 ; 9783132400078 ; 9783132414495 ; 10.1055/b-006-149766 ; Surgery for Rheumatic Diseases (9783132414495) ; reingest4.clockss.org:8082 >
    au < exists ; exists ; 2018 ; 9783132410305 ; 9783132410336 ; 10.1055/b-006-149287 ; Taschenatlas Physiologie (9783132410336) ; >
    au < finished ; frozen ; 2018 ; 9783132424753 ; 9783132424777 ; 10.1055/b-006-149392 ; Trainer Thoraxdiagnostik (9783132424777) ; reingest5.clockss.org:8082 >
    au < finished ; frozen ; 2018 ; 9783132424784 ; 9783132424890 ; 10.1055/b-006-149285 ; Transösophageale Echokardiografie (9783132424890) ; reingest1.clockss.org:8082 >
-   au < finished ; frozen ; 2018 ; 9781626237162 ; 9781626237179 ; 10.1055/b-006-149756 ; Video Atlas of Ophthalmic Suturing (9781626237179) ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2018 ; 9781626237162 ; 9781626237179 ; 10.1055/b-006-149756 ; Video Atlas of Ophthalmic Suturing (9781626237179) ; reingest2.clockss.org:8085 >
    au < manifest ; exists ; 1987 ;   ; 9783132067141 ; 10.1055/b-003-128289 ; Register der Stoffklassen (9783132067141) ; >
    au < finished ; manifest ; 2004 ; 9783830441007 ; 9783132414501 ; 10.1055/b-004-139127 ; Atlas der Röntgenanatomie der Katze (9783132414501) ; reingest2.clockss.org:8085 >
    au < finished ; manifest ; 2004 ; 9783830441533 ; 9783132424968 ; 10.1055/b-006-149399 ; Lehrbuch der Anatomie der Haustiere Band V (9783132424968) ; reingest5.clockss.org:8082 >
@@ -1553,7 +1553,7 @@
    au < finished ; manifest ; 2011 ; 9783794526932 ; 9783132427891 ; 10.1055/b-005-148990 ; Atlas der Zahnheilkunde beim Pferd (9783132427891) ; reingest5.clockss.org:8082 >
    au < finished ; manifest ; 2012 ; 9783794527816 ; 9783132428065 ; 10.1055/b-005-148991 ; Anästhesie und Analgesie beim Klein- und Heimtier (9783132428065) ; reingest4.clockss.org:8082 >
    au < finished ; manifest ; 2012 ; 9783830411895 ; 9783132414525 ; 10.1055/b-004-138016 ; Atlas der Röntgenanatomie des Hundes (9783132414525) ; reingest5.clockss.org:8082 >
-   au < testing ; exists ; 2012 ; 9783794528127 ; 9783132427914 ; 10.1055/b-005-148989 ; Röntgendiagnostik in der Kleintierpraxis (9783132427914) ; >
+   au < crawling ; exists ; 2012 ; 9783794528127 ; 9783132427914 ; 10.1055/b-005-148989 ; Röntgendiagnostik in der Kleintierpraxis (9783132427914) ; >
    au < testing ; exists ; 2012 ; 9783794526796 ; 9783132427884 ; 10.1055/b-005-149004 ; VetSkills (9783132427884) ; >
    au < finished ; manifest ; 2014 ; 9783794527373 ; 9783132427952 ; 10.1055/b-005-148987 ; Klinische Labordiagnostik in der Tiermedizin (9783132427952) ; reingest3.clockss.org:8083 >
    au < finished ; manifest ; 2014 ; 9783794530595 ; 9783132428027 ; 10.1055/b-005-149003 ; Leitsymptome und Leitbefunde bei Hund und Katze (9783132428027) ; reingest5.clockss.org:8082 >
@@ -1999,14 +1999,14 @@
    au < finished ; finished ; 1979 ; 9783132039049 ; 9783131964045 ; 10.1055/b-003-109650 ; Alkohole (9783131964045) ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 1979 ; 9783132065048 ; 9783131973948 ; 10.1055/b-003-109672 ; Chinone (9783131973948) ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 1979 ; 9783132064041 ; 9783131973849 ; 10.1055/b-003-125690 ; Chinone, Teil 2 (9783131973849) ; reingest4.clockss.org:8082 >
-   au < finished ; frozen ; 1980 ; 9783132040045 ; 9783131964144 ; 10.1055/b-003-109651 ; Alkohole (9783131964144) ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 1980 ; 9783132040045 ; 9783131964144 ; 10.1055/b-003-109651 ; Alkohole (9783131964144) ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 1980 ; 9783132141049 ; 9783131960641 ; 10.1055/b-003-125749 ; Organo-Silicium-Verbindungen (9783131960641) ; reingest3.clockss.org:8083 >
    au < finished ; frozen ; 1980 ; 9783132009042 ; 9783131962447 ; 10.1055/b-003-109655 ; Reduktion (9783131962447) ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 1981 ; 9783132027046 ; 9783131963642 ; 10.1055/b-003-109657 ; Arene und Arine (9783131963642) ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 1981 ; 9783132007048 ; 9783131962249 ; 10.1055/b-003-108612 ; Oxidation (9783131962249) ; reingest3.clockss.org:8083 >
    au < finished ; frozen ; 1981 ; 9783132011045 ; 9783131962546 ; 10.1055/b-003-109679 ; Reduktion (9783131962546) ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 1982 ; 9783132171046 ; 9783131973245 ; 10.1055/b-003-109662 ; Organische Phosphor-Verbindungen (9783131973245) ; reingest3.clockss.org:8083 >
-   au < finished ; frozen ; 1982 ; 9783132172043 ; 9783131973344 ; 10.1055/b-003-109667 ; Organische Phosphor-Verbindungen (9783131973344) ; reingest5.clockss.org:8082 >
+   au < finished ; finished ; 1982 ; 9783132172043 ; 9783131973344 ; 10.1055/b-003-109667 ; Organische Phosphor-Verbindungen (9783131973344) ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 1982 ; 9783132135048 ; 9783131960245 ; 10.1055/b-003-125747 ; Organobor-Verbindungen (9783131960245) ; reingest5.clockss.org:8082 >
    au < finished ; frozen ; 1983 ; 9783132173040 ; 9783131973443 ; 10.1055/b-003-109674 ; Aldehyde (9783131973443) ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 1983 ; 9783132174047 ; 9783131973542 ; 10.1055/b-003-111704 ; Kohlensäure-Derivate (9783131973542) ; reingest3.clockss.org:8083 >
@@ -2077,7 +2077,7 @@
    au < finished ; finished ; 1997 ; 9783131030917 ; 9783131842510 ; 10.1055/b-003-108608 ; Transition Metals Part 2 (9783131842510) ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 1998 ; 9783131103628 ; 9783131876126 ; 10.1055/b-001-2116 ; Adipositastherapie (9783131876126) ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 1998 ; 9783131030610 ; 9783131842213 ; 10.1055/b-003-125702 ; Copper, Silver, Gold, Zinc, Cadmium and Mercury (9783131842213) ; reingest5.clockss.org:8082 >
-   au < finished ; frozen ; 1998 ; 9783137783046 ; 9783131966247 ; 10.1055/b-003-111712 ; Hetarenes (9783131966247) ; reingest4.clockss.org:8082 >
+   au < finished ; finished ; 1998 ; 9783137783046 ; 9783131966247 ; 10.1055/b-003-111712 ; Hetarenes (9783131966247) ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 1998 ; 9783131016249 ; 9783131966643 ; 10.1055/b-003-111701 ; Hetarenes (9783131966643) ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 1998 ; 9783131016645 ; 9783131970749 ; 10.1055/b-003-115777 ; Index of Experimental Procedures of Classes of Substances and Individual Compounds (9783131970749) ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 1998 ; 9783132191044 ; 9783131970640 ; 10.1055/b-003-125738 ; Index of Experimental Procedures of Classes of Substances and individual Compounds (CH…Index) (9783131970640) ; reingest2.clockss.org:8085 >
@@ -2125,7 +2125,7 @@
    au < finished ; finished ; 2000 ; 9783131116345 ; 9783131971142 ; 10.1055/b-003-113732 ; Houben-Weyl Methods of Organic Chemistry Vol. E 23d/1, 4th Edition Supplement (9783131971142) ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2000 ; 9783131265333 ; 9783131891037 ; 10.1055/b-002-5218 ; Kinderpsychologische Tests (9783131891037) ; reingest4.clockss.org:8082 >
    au < finished ; crawling ; 2000 ; 9783136748022 ; 9783131870421 ; 10.1055/b-002-11352 ; Kinderurologie in Klinik und Praxis (9783131870421) ; reingest1.clockss.org:8082 >
-   au < finished ; frozen ; 2000 ; 9783131181015 ; 9783131904416 ; 10.1055/b-002-13413 ; Kinderzahnmedizin (9783131904416) ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2000 ; 9783131181015 ; 9783131904416 ; 10.1055/b-002-13413 ; Kinderzahnmedizin (9783131904416) ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2000 ; 9783131181213 ; 9783131868015 ; 10.1055/b-001-3192 ; Klinik, Diagnostik und Diffentialtherapie Erkrankungen endokriner Organe (9783131868015) ; reingest1.clockss.org:8082 >
    au < finished ; frozen ; 2000 ; 9783131249814 ; 9783131859815 ; 10.1055/b-002-5203 ; Managed Care - Eine Perspektive für die GKV ? (9783131859815) ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2000 ; 9783131180612 ; 9783131862419 ; 10.1055/b-002-5208 ; Mehrlingsschwangerschaft und Mehrlingsgeburt (9783131862419) ; reingest2.clockss.org:8085 >
@@ -2174,7 +2174,7 @@
    au < finished ; frozen ; 2001 ; 9780865778535 ; 9781588905864 ; 10.1055/b-002-51013 ; Controversies in Otolaryngology (9781588905864) ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2001 ; 9783131057617 ; 9783131875815 ; 10.1055/b-001-1088 ; Der EKG-Lotse (9783131875815) ; reingest3.clockss.org:8083 >
    au < finished ; frozen ; 2001 ; 9783131269416 ; 9783131904010 ; 10.1055/b-002-6258 ; Die prophylaktisch orientierte Versorgung mit Teilprothesen (9783131904010) ; reingest2.clockss.org:8085 >
-   au < finished ; frozen ; 2001 ; 9783131281418 ; 9783131893710 ; 10.1055/b-002-8299 ; Einnässen im Kindesalter (9783131893710) ; reingest3.clockss.org:8083 >
+   au < finished ; finished ; 2001 ; 9783131281418 ; 9783131893710 ; 10.1055/b-002-8299 ; Einnässen im Kindesalter (9783131893710) ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2001 ; 9783131273024 ; 9783131861726 ; 10.1055/b-002-6256 ; Geburtshilfe (9783131861726) ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2001 ; 9783131284549 ; 9783131972347 ; 10.1055/b-003-113754 ; Houben-Weyl Methods of Organic Chemistry Vol. E 23n, 4th Edition Supplement (9783131972347) ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2001 ; 9783131167149 ; 9783131961143 ; 10.1055/b-003-106493 ; Indexes to the Complete E-Series (9783131961143) ; reingest3.clockss.org:8083 >
@@ -2192,7 +2192,7 @@
    au < finished ; finished ; 2001 ; 9783131087829 ; 9783131899828 ; 10.1055/b-002-11356 ; Psychotherapie der Eßstörungen (9783131899828) ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2001 ; 9783131264312 ; 9783131900319 ; 10.1055/b-002-6242 ; Psychotherapie der Psychosen (9783131900319) ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2001 ; 9783131268716 ; 9783131900418 ; 10.1055/b-002-6248 ; Psychotherapie der Somatisierungsstörungen (9783131900418) ; reingest5.clockss.org:8082 >
-   au < finished ; frozen ; 2001 ; 9783131258915 ; 9783131859914 ; 10.1055/b-002-11348 ; Qualitätsförderung in Praxis und Klinik (9783131859914) ; reingest3.clockss.org:8083 >
+   au < finished ; finished ; 2001 ; 9783131258915 ; 9783131859914 ; 10.1055/b-002-11348 ; Qualitätsförderung in Praxis und Klinik (9783131859914) ; reingest3.clockss.org:8083 >
    au < finished ; frozen ; 2001 ; 9783131242716 ; 9783131904317 ; 10.1055/b-002-5214 ; Schnittbilddiagnostik in MKG-Chirurgie und Zahnmedizin (9783131904317) ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2001 ; 9783131245915 ; 9783131856012 ; 10.1055/b-001-2134 ; Sonographie für Chirurgen (9783131856012) ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2001 ; 9783131296511 ; 9783131861214 ; 10.1055/b-001-3189 ; Sonographische Fehlbildungsdiagnostik (9783131861214) ; reingest2.clockss.org:8085 >
@@ -2214,12 +2214,12 @@
    au < finished ; frozen ; 2002 ; 9783131329714 ; 9783131939012 ; 10.1055/b-002-21535 ; Akuttherapie schizophrener Patienten (9783131939012) ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2002 ; 9783135315058 ; 9783131896759 ; 10.1055/b-002-46961 ; Allgemeine Psychopathologie (9783131896759) ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 2002 ; 9783131047328 ; 9783131868329 ; 10.1055/b-001-1083 ; Asthma bronchiale (9783131868329) ; reingest1.clockss.org:8082 >
-   au < finished ; frozen ; 2002 ; 9783131283122 ; 9783131906823 ; 10.1055/b-002-10325 ; Augenheilkunde (9783131906823) ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2002 ; 9783131283122 ; 9783131906823 ; 10.1055/b-002-10325 ; Augenheilkunde (9783131906823) ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2002 ; 9781588901095 ; 9781604064452 ; 10.1055/b-002-79385 ; Breast Imaging (9781604064452) ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2002 ; 9783131121813 ; 9783131835314 ; 10.1055/b-003-121794 ; Category 1, Organometallics (9783131835314) ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2002 ; 9783131121417 ; 9783131834911 ; 10.1055/b-003-121792 ; Category 1, Organometallics (9783131834911) ; reingest3.clockss.org:8083 >
    au < finished ; frozen ; 2002 ; 9783131122711 ; 9783131836212 ; 10.1055/b-003-121803 ; Category 2, Hetarenes and Related Ring Systems (9783131836212) ; reingest3.clockss.org:8083 >
-   au < finished ; frozen ; 2002 ; 9783131063328 ; 9783131910929 ; 10.1055/b-001-1087 ; Checkliste Nephrologie (9783131910929) ; reingest4.clockss.org:8082 >
+   au < finished ; finished ; 2002 ; 9783131063328 ; 9783131910929 ; 10.1055/b-001-1087 ; Checkliste Nephrologie (9783131910929) ; reingest4.clockss.org:8082 >
    au < finished ; frozen ; 2002 ; 9783133572118 ; 9783131868114 ; 10.1055/b-002-43896 ; Cortisontherapie (9783131868114) ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2002 ; 9783131317513 ; 9783131874412 ; 10.1055/b-002-11368 ; Das Gerinnungskompendium (9783131874412) ; reingest1.clockss.org:8082 >
    au < finished ; frozen ; 2002 ; 9783131353313 ; 9783131869517 ; 10.1055/b-002-19466 ; Das Gerinnungskonsil (9783131869517) ; reingest1.clockss.org:8082 >
@@ -2227,13 +2227,13 @@
    au < finished ; finished ; 2002 ; 9783131076328 ; 9783131893222 ; 10.1055/b-001-3172 ; Demenzen (9783131893222) ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2002 ; 9783131289711 ; 9783131894519 ; 10.1055/b-002-11363 ; Demenzen Grundlagen und Klinik (9783131894519) ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2002 ; 9783131046628 ; 9783131899729 ; 10.1055/b-001-1077 ; Depression - Diagnose und Pharmakotherapie (9783131899729) ; reingest4.clockss.org:8082 >
-   au < finished ; frozen ; 2002 ; 9783131306111 ; 9783131891211 ; 10.1055/b-002-13403 ; Drogen bei Kindern und Jugendlichen (9783131891211) ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2002 ; 9783131306111 ; 9783131891211 ; 10.1055/b-002-13403 ; Drogen bei Kindern und Jugendlichen (9783131891211) ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2002 ; 9783131071620 ; 9783131861429 ; 10.1055/b-001-2160 ; Endokrinologie, Reproduktionsmedizin, Andrologie (9783131861429) ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2002 ; 9781588901187 ; 9781604064513 ; 10.1055/b-002-54067 ; Facial Paralysis (9781604064513) ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2002 ; 9783131021335 ; 9783131884138 ; 10.1055/b-001-49 ; Farbkodierte Duplexsonographie der hirnversorgenden Arterien mit CD-ROM (9783131884138) ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2002 ; 9781588900166 ; 9781604060683 ; 10.1055/b-002-41835 ; Functional and Selective Neck Dissection (9781604060683) ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2002 ; 9783131262417 ; 9783131856913 ; 10.1055/b-002-15440 ; Fuß (9783131856913) ; reingest5.clockss.org:8082 >
-   au < finished ; frozen ; 2002 ; 9780865779150 ; 9781588905918 ; 10.1055/b-002-51008 ; Glaucoma (9781588905918) ; reingest5.clockss.org:8082 >
+   au < finished ; finished ; 2002 ; 9780865779150 ; 9781588905918 ; 10.1055/b-002-51008 ; Glaucoma (9781588905918) ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2002 ; 9783131310910 ; 9783131861917 ; 10.1055/b-002-19467 ; Gynäkologische Zytodiagnostik (9783131861917) ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2002 ; 9783131291813 ; 9783131847317 ; 10.1055/b-002-7266 ; Hyperakusis (9783131847317) ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2002 ; 9783131263919 ; 9783131890818 ; 10.1055/b-002-11374 ; Kinder- und Jugendsportmedizin (9783131890818) ; reingest3.clockss.org:8083 >
@@ -2267,7 +2267,7 @@
    au < finished ; frozen ; 2003 ; 9781588901323 ; 9783131607218 ; 10.1055/b-002-51026 ; Contact Lens Complications (9783131607218) ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2003 ; 9781588900050 ; 9783131606419 ; 10.1055/b-002-85461 ; Diabetic Neuropathy (9783131606419) ; reingest3.clockss.org:8083 >
    au < finished ; frozen ; 2003 ; 9781588900814 ; 9781604060102 ; 10.1055/b-002-40814 ; Functional Reconstructive Nasal Surgery (9781604060102) ; reingest2.clockss.org:8085 >
-   au < finished ; frozen ; 2003 ; 9781588901507 ; 9783131606358 ; 10.1055/b-002-85526 ; Koehler/Zimmer's Borderlands of Normal and Early Pathological Findings in Skeletal Radiography (9783131606358) ; reingest3.clockss.org:8083 >
+   au < finished ; finished ; 2003 ; 9781588901507 ; 9783131606358 ; 10.1055/b-002-85526 ; Koehler/Zimmer's Borderlands of Normal and Early Pathological Findings in Skeletal Radiography (9783131606358) ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2003 ; 9781588901378 ; 9783131606815 ; 10.1055/b-002-51016 ; MR Imaging of the Lumbar Spine (9783131606815) ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2003 ; 9780865778702 ; 9783131607119 ; 10.1055/b-002-79382 ; Spiral and Multislice Computed Tomography of the Body (9783131607119) ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2003 ; 9783131052827 ; 9783131874122 ; 10.1055/b-001-1067 ; Atemwegsinfektionen (9783131874122) ; reingest5.clockss.org:8082 >
@@ -2277,7 +2277,7 @@
    au < finished ; finished ; 2003 ; 9781588901866 ; 9781604064599 ; 10.1055/b-002-46975 ; Biological and Chemical Terrorism (9781604064599) ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2003 ; 9783134004199 ; 9783131876294 ; 10.1055/b-002-44929 ; Blut- und Knochenmarksmorphologie (9783131876294) ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2003 ; 9783131331519 ; 9783131876416 ; 10.1055/b-002-19471 ; Calcium plus Vitamin D (9783131876416) ; reingest2.clockss.org:8085 >
-   au < finished ; frozen ; 2003 ; 9783131121615 ; 9783131835116 ; 10.1055/b-003-121791 ; Category 1, Organometallics (9783131835116) ; reingest5.clockss.org:8082 >
+   au < finished ; finished ; 2003 ; 9783131121615 ; 9783131835116 ; 10.1055/b-003-121791 ; Category 1, Organometallics (9783131835116) ; reingest5.clockss.org:8082 >
    au < finished ; frozen ; 2003 ; 9783131186713 ; 9783131836717 ; 10.1055/b-003-121805 ; Category 2, Hetarenes and Related Ring Systems (9783131836717) ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2003 ; 9783131186416 ; 9783131836410 ; 10.1055/b-003-121801 ; Category 2, Hetarenes and Related Ring Systems (9783131836410) ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2003 ; 9783131122810 ; 9783131836311 ; 10.1055/b-003-121802 ; Category 2, Hetarenes and Related Ring Systems (9783131836311) ; reingest4.clockss.org:8082 >
@@ -2294,12 +2294,12 @@
    au < finished ; finished ; 2003 ; 9783134977066 ; 9783131867063 ; 10.1055/b-002-26616 ; Dialyseverfahren in Klinik und Praxis (9783131867063) ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2003 ; 9783134488074 ; 9783131877574 ; 10.1055/b-002-44941 ; Die Lungenfunktion (9783131877574) ; reingest3.clockss.org:8083 >
    au < finished ; frozen ; 2003 ; 9783131271860 ; 9783131903662 ; 10.1055/b-002-7274 ; Die Praxis der zahnmedizinischen Prophylaxe (9783131903662) ; reingest4.clockss.org:8082 >
-   au < finished ; frozen ; 2003 ; 9783131367129 ; 9783131900722 ; 10.1055/b-002-26627 ; Ejaculatio praecox (9783131900722) ; reingest5.clockss.org:8082 >
+   au < finished ; finished ; 2003 ; 9783131367129 ; 9783131900722 ; 10.1055/b-002-26627 ; Ejaculatio praecox (9783131900722) ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2003 ; 9783131307385 ; 9783131866288 ; 10.1055/b-002-13405 ; Ernährungs- und Infusionstherapie (9783131866288) ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2003 ; 9783131282217 ; 9783131893918 ; 10.1055/b-002-8305 ; Essstörungen (9783131893918) ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2003 ; 9783131356819 ; 9783131874214 ; 10.1055/b-002-33696 ; Evidenz-basierte Medizin (9783131874214) ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2003 ; 9783131363718 ; 9783131907110 ; 10.1055/b-002-37742 ; Fallbuch Gynäkologie und Geburtshilfe (9783131907110) ; reingest1.clockss.org:8082 >
-   au < finished ; frozen ; 2003 ; 9781588901415 ; 9781604064506 ; 10.1055/b-002-51012 ; Foot and Ankle Disorders (9781604064506) ; reingest3.clockss.org:8083 >
+   au < finished ; finished ; 2003 ; 9781588901415 ; 9781604064506 ; 10.1055/b-002-51012 ; Foot and Ankle Disorders (9781604064506) ; reingest3.clockss.org:8083 >
    au < finished ; frozen ; 2003 ; 9783137024040 ; 9783131891440 ; 10.1055/b-002-54079 ; Frühkindliches psychoorganisches Syndrom - POS, ADS (9783131891440) ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2003 ; 9783131311610 ; 9783131847713 ; 10.1055/b-002-19468 ; Funktionell-ästhetische Chirurgie der Nase (9783131847713) ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2003 ; 9783131238511 ; 9783131855312 ; 10.1055/b-001-2149 ; Fußchirurgie (9783131855312) ; reingest2.clockss.org:8085 >
@@ -2310,7 +2310,7 @@
    au < finished ; finished ; 2003 ; 9783131316912 ; 9783131877116 ; 10.1055/b-002-8319 ; Infektionskrankheiten (9783131877116) ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2003 ; 9783131054524 ; 9783131886224 ; 10.1055/b-002-11358 ; Interaktionen und Wirkmechanismen ausgewählter Psychopharmaka (9783131886224) ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2003 ; 9783131322814 ; 9783131869210 ; 10.1055/b-002-19455 ; Interstitielle Lungenerkrankungen (9783131869210) ; reingest3.clockss.org:8083 >
-   au < finished ; frozen ; 2003 ; 9783131282613 ; 9783131894311 ; 10.1055/b-002-19489 ; Kompendium Sucht (9783131894311) ; reingest3.clockss.org:8083 >
+   au < finished ; finished ; 2003 ; 9783131282613 ; 9783131894311 ; 10.1055/b-002-19489 ; Kompendium Sucht (9783131894311) ; reingest3.clockss.org:8083 >
    au < finished ; frozen ; 2003 ; 9783131291615 ; 9783131853219 ; 10.1055/b-002-7261 ; Komplikationsmanagement in der Traumatologie (9783131853219) ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2003 ; 9783131356710 ; 9783131884619 ; 10.1055/b-002-33680 ; Kopfschmerzen (9783131884619) ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2003 ; 9780865778733 ; 9781604060669 ; 10.1055/b-002-40816 ; MasterCases in Shoulder and Elbow Surgery (9781604060669) ; reingest5.clockss.org:8082 >
