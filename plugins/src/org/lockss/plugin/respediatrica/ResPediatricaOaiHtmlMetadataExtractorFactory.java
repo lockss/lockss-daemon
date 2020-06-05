@@ -54,21 +54,44 @@ public class ResPediatricaOaiHtmlMetadataExtractorFactory
     return new PediatricaOaiHtmlMetadataExtractor();
   }
 
+  /*
+  <meta xmlns="" name="citation_journal_title" content="" />
+  <meta xmlns="" name="citation_journal_title_abbrev" content="" />
+  <meta xmlns="" name="citation_publisher" content="" />
+  <meta xmlns="" name="citation_title" content="Paraneoplastic Nephrotic Syndrome and Hodgkin’s Lymphoma: A Case Report" />
+  <meta xmlns="" name="citation_publication_date" content="2018" />
+  <meta xmlns="" name="citation_volume" content="8" />
+  <meta xmlns="" name="citation_issue" content="2" />
+  <meta xmlns="" name="citation_issn" content="2236-6814" />
+  <meta xmlns="" name="citation_doi" content="10.25060/residpediatr-2018.v8n2-08" />
+  <meta xmlns="" name="citation_fulltext_html_url" content="http://residenciapediatrica.com.br/detalhes/323" />
+  <meta xmlns="" name="citation_pdf_url" content="http://residenciapediatrica.com.br//ExportarPDF/323/v8n2a08.pdf" />
+  <meta xmlns="" name="citation_author" content="Dassi, Natalia" />
+  <meta xmlns="" name="citation_author" content="Garcia, Clotilde" />
+  <meta xmlns="" name="citation_author" content="Silva, Roberta" />
+  <meta xmlns="" name="citation_author" content="Júnior, Cláudio" />
+
+  <meta xmlns="" name="citation_firstpage" content="96" />
+  <meta xmlns="" name="citation_lastpage" content="98" />
+  <meta xmlns="" name="citation_id" content="10.25060/residpediatr-2018.v8n2-08" />
+   */
+
   public static class PediatricaOaiHtmlMetadataExtractor
     extends SimpleHtmlMetaTagMetadataExtractor {
     private static MultiMap tagMap = new MultiValueMap();
     static {
       tagMap.put("citation_author", MetadataField.FIELD_AUTHOR);
-      tagMap.put("citation_date", MetadataField.FIELD_DATE);
+      tagMap.put("citation_publication_date", MetadataField.FIELD_DATE);
       tagMap.put("citation_title", MetadataField.FIELD_ARTICLE_TITLE);
       tagMap.put("citation_journal_title", MetadataField. FIELD_PUBLICATION_TITLE);
       tagMap.put("citation_volume", MetadataField.FIELD_VOLUME);
       tagMap.put("citation_issue", MetadataField.FIELD_ISSUE);
       tagMap.put("citation_firstpage", MetadataField.FIELD_START_PAGE);
+      tagMap.put("citation_lastpage", MetadataField.FIELD_END_PAGE);
       tagMap.put("citation_doi", MetadataField.FIELD_DOI);
       tagMap.put("citation_issn", MetadataField.FIELD_ISSN);
       tagMap.put("citation_isbn", MetadataField.FIELD_ISBN);
-      tagMap.put("citation_abtract_html_url", MetadataField.FIELD_ACCESS_URL);
+      tagMap.put("citation_fulltext_html_url", MetadataField.FIELD_ACCESS_URL);
     }
 
     @Override

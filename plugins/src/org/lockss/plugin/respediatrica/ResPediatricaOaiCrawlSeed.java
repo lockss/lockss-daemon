@@ -114,31 +114,24 @@ public class ResPediatricaOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
       Boolean error = false;
       Set<String> idSet = new HashSet<String>();
       try {
-          logger.debug3("Fei: - inside Try ");
-          Iterator<Record> recIter = getServiceProvider().listRecords(params);
-          if (recIter != null) {
-              logger.debug3("Fei: - recIter is not null");
-              while (recIter.hasNext()) {
-                  Record rec = recIter.next();
-                  if (rec != null) {
-                      MetadataSearch<String> metaSearch =
-                              rec.getMetadata().getValue().searcher();
-                      logger.debug3("Fei: - inside Try , inside for");
-                      if (checkMetaRules(metaSearch)) {
-                          link = findRecordArticleLink(rec);
-                          if (link != null) {
-                              logger.debug3("Fei: - link = %s" + link);
-                              idSet.add(link);
-                          } else {
-                              logger.debug3("Fei: - empty link");
-                          }
+          for (Iterator<Record> recIter = getServiceProvider().listRecords(params); recIter.hasNext();) {
+              Record rec = recIter.next();
+              if (rec != null) {
+                  MetadataSearch<String> metaSearch =
+                          rec.getMetadata().getValue().searcher();
+                  logger.debug3("Fei: - inside Try , inside for");
+                  if (checkMetaRules(metaSearch)) {
+                      link = findRecordArticleLink(rec);
+                      if (link != null) {
+                          logger.debug3("Fei: - link = %s" + link);
+                          idSet.add(link);
+                      } else {
+                          logger.debug3("Fei: - empty link");
                       }
-                  } else {
-                      logger.debug3("Fei: - recIter is not null, but rec is null");
                   }
+              } else {
+                  logger.debug3("Fei: - recIter is not null, but rec is null");
               }
-          }  else {
-              logger.debug3("Fei: - recIter is null");
           }
       } catch (InvalidOAIResponse e) {
     	  if(e.getCause() != null && e.getCause().getMessage().contains("LOCKSS")) {
@@ -150,7 +143,6 @@ public class ResPediatricaOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
       } catch (BadArgumentException e) {
     	  throw new ConfigurationException("Incorrectly formatted OAI parameter", e);
       }  catch (Exception e) {
-          logger.debug3("Fei: Unexpected exception when trying to getRecordList"); 
           logger.debug("Unexpected exception when trying to getRecordList");
       }
       
@@ -170,6 +162,7 @@ public class ResPediatricaOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
 	  sb.append("<html>\n");
 	  for (String u : urlList) {
 		  sb.append("<a href=\"" + u + "\">" + u + "</a><br/>\n");
+          logger.debug3(" storeStartUrl = %s" + u);
 	  }
 	  sb.append("</html>");
 	  CIProperties headers = new CIProperties();

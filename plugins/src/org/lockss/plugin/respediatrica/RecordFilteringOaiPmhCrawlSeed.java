@@ -161,35 +161,6 @@ public abstract class RecordFilteringOaiPmhCrawlSeed extends BaseOaiPmhCrawlSeed
   public Collection<String> doGetStartUrls() throws ConfigurationException,
                                           PluginException, IOException {
     logger.debug3("Fei: doGetStartUrls...");
-    //return getRecordList(buildParams());
-    return idsToUrls(getRecordList(buildParams()));
-  }
-
-  /**
-   * Override this to provide different logic to convert OAI PMH ids
-   * to corresponding article urls
-   * @param id
-   * @param url
-   * @return
-   */
-  public Collection<String> idsToUrls(Collection<String> urls) {
-    Collection<String> urlList = new ArrayList<String>();
-    for(String url : urls){
-      logger.debug3("Fei: idsToUrls url = " + url);
-      /*
-      if(url.contains(":") && !id.endsWith(":")) {
-        String id_num = id.substring(id.lastIndexOf(':') + 1);
-        if(permUrls.isEmpty()) {
-          permUrls.add(baseUrl + oaiUrlPostfix + "?verb=GetRecord&identifier=" +
-                  id + "&metadataPrefix=" + metadataPrefix);
-        }
-        urlList.add(baseUrl + "xmlui/handle/" + id_num);
-      }
-      */
-    }
-    if (logger.isDebug3()) {
-      logger.debug3("Fei: Start URLs: " + urlList.toString());
-    }
-    return urlList;
+    return getRecordList(buildParams());
   }
 }

@@ -58,24 +58,19 @@ public class ResPediatricaOaiHtmlHashFilterFactory implements FilterFactory {
      new TagNameFilter("script"),
      new TagNameFilter("style"),
      new TagNameFilter("head"),
-     
-     HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
-     //popup stuff may change
-     HtmlNodeFilters.tagWithAttribute("div", "id", "feedback-popup"),
-     HtmlNodeFilters.tagWithAttribute("div", "id", "P-Post-Review-Form-Poll"),
-     HtmlNodeFilters.tagWithAttribute("div", "class", "popup-background"),
-     HtmlNodeFilters.tagWithAttribute("div", "class", "P-Article-References-For-Baloon"),
-     HtmlNodeFilters.tagWithAttribute("div", "id", "ArticleBaloon"),
-     HtmlNodeFilters.tagWithAttribute("div", "class", "P-clear"),
-     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "reflist"),
-     HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "references"),
+     new TagNameFilter("header"),
+     new TagNameFilter("footer"),
+     new TagNameFilter("aside"),
 
-     HtmlNodeFilters.tagWithAttribute("link", "type", "text/css"),
-     
+     // http://residenciapediatrica.com.br/detalhes/4
+     HtmlNodeFilters.tagWithAttribute("div", "class", "top-menu"),
+     HtmlNodeFilters.tagWithAttribute("div", "class", "wr-main-header"),
+     HtmlNodeFilters.tagWithAttribute("div", "class", "wr-searchbox"),
+     HtmlNodeFilters.tagWithAttribute("div", "class", "wr-main-menu"),
+     HtmlNodeFilters.tagWithAttribute("section", "class", "bottom"),
     };
     InputStream filteredStream = new HtmlFilterInputStream(in, encoding,
         HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
-    //Reader httpFilter = new StringFilter(FilterUtil.getReader(filteredStream, encoding), "http:", "https:");
     Reader httpFilter = FilterUtil.getReader(filteredStream, encoding);
     return new ReaderInputStream(httpFilter);
   }

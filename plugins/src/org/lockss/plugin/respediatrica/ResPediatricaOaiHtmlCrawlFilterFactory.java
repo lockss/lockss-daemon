@@ -48,10 +48,8 @@ public class ResPediatricaOaiHtmlCrawlFilterFactory implements FilterFactory {
                                                String encoding)
       throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
-      //overcrawls on home page, so filter what we can
-      HtmlNodeFilters.tagWithAttribute("div", "class", "homepage"),
-      HtmlNodeFilters.tagWithAttribute("div", "class", "latest_aticles_holder"),
-      HtmlNodeFilters.tagWithAttribute("a", "class", "latest_aticles"),
+      HtmlNodeFilters.tagWithAttribute("div", "class", "wr-main-menu"),
+      HtmlNodeFilters.tagWithAttribute("section", "class", "bottom"),
 
     };
     return new 

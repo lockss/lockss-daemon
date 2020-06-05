@@ -88,33 +88,20 @@
         <string>"%s", base_url</string>
     </entry>
     <entry>
-        <string>au_additional_url_stems</string>
-        <list>
-            <string>"%s", base_url</string>
-        </list>
-    </entry>
-    <entry>
         <string>au_crawlrules</string>
         <list>
-            <string>2,"%soai?verb=ListRecords&amp;resumptionToken=", base_url</string>
             <string>1,"%s", base_url</string>
         </list>
     </entry>
-    <!--
     <entry>
         <string>au_substance_url_pattern</string>
         <list>
-            <string>"^http?://%s/article/[0-9]+/download/pdf(/|/[0-9]+)?$", url_host(base_url)</string>
+            <string>"%s/exportar-pdf/.*\.pdf", base_url</string>
         </list>
     </entry>
-    -->
     <entry>
         <string>plugin_crawl_seed_factory</string>
         <string>org.lockss.plugin.respediatrica.ResPediatricaOaiCrawlSeedFactory</string>
-    </entry>
-    <entry>
-        <string>text/html_link_extractor_factory</string>
-        <string>org.lockss.plugin.respediatrica.ResPediatricaOaiHtmlLinkExtractor$Factory</string>
     </entry>
     <entry>
         <string>text/html_filter_factory</string>
@@ -124,7 +111,6 @@
         <string>text/html_crawl_filter_factory</string>
         <string>org.lockss.plugin.respediatrica.ResPediatricaOaiHtmlCrawlFilterFactory</string>
     </entry>
-    <!--
     <entry>
         <string>plugin_article_iterator_factory</string>
         <string>org.lockss.plugin.respediatrica.ResPediatricaOaiArticleIteratorFactory</string>
@@ -142,11 +128,6 @@
             </entry>
         </map>
     </entry>
-    <entry>
-        <string>plugin_url_consumer_factory</string>
-        <string>org.lockss.plugin.respediatrica.ResPediatricaOaiUrlConsumerFactory</string>
-    </entry>
-    -->
     <entry>
         <string>au_repair_from_peer_if_missing_url_pattern</string>
         <list>
