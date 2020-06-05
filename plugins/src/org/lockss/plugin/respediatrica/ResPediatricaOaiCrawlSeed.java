@@ -80,25 +80,7 @@ public class ResPediatricaOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
       throws PluginException, ConfigurationException, IOException {
     super.initialize();
   }
-
-  /*
-  15:04:08.520: Warning: 9-FollowLinkCrawler: Unexpected exception, should have been caught lower: org.dspace.xoai.serviceprovider.exceptions.InvalidOAIResponse: OAI responded with code: badArgument
-    	at org.dspace.xoai.serviceprovider.parsers.ListRecordsParser.hasNext(ListRecordsParser.java:47)
-	at org.dspace.xoai.serviceprovider.handler.ListRecordHandler.getNextIteration(ListRecordHandler.java:96)
-	at org.dspace.xoai.serviceprovider.handler.ListRecordHandler.nextIteration(ListRecordHandler.java:56)
-	at org.dspace.xoai.serviceprovider.lazy.ItemIterator.hasNext(ItemIterator.java:32)
-	at org.lockss.plugin.respediatrica.ResPediatricaOaiCrawlSeed.getRecordList(ResPediatricaOaiCrawlSeed.java:103)
-	at org.lockss.plugin.respediatrica.RecordFilteringOaiPmhCrawlSeed.doGetStartUrls(RecordFilteringOaiPmhCrawlSeed.java:165)
-	at org.lockss.crawler.BaseCrawlSeed.getStartUrls(BaseCrawlSeed.java:85)
-	at org.lockss.crawler.FollowLinkCrawler.enqueueStartUrls(FollowLinkCrawler.java:494)
-	at org.lockss.crawler.FollowLinkCrawler.doCrawl0(FollowLinkCrawler.java:313)
-	at org.lockss.crawler.BaseCrawler.doCrawl(BaseCrawler.java:403)
-	at org.lockss.crawler.CrawlManagerImpl$CrawlRunner.lockssRun(CrawlManagerImpl.java:1470)
-	at org.lockss.daemon.LockssRunnable.run(LockssRunnable.java:437)
-	at EDU.oswego.cs.dl.util.concurrent.PooledExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Thread.java:748)
-15:04:08.520: Debug3: 9-FollowLinkCrawler: Start URLs: []
-   */
+  
   @Override
   protected Collection<String> getRecordList(ListRecordsParameters params)
 		  throws ConfigurationException, IOException {
@@ -179,7 +161,6 @@ public class ResPediatricaOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
     if(idTags != null && !idTags.isEmpty()) {
       for(String value : idTags) {
         if (value.startsWith(baseUrl)) {
-          logger.debug3("Fei To Follow: " + value);
           return value;
         }
       }
@@ -214,13 +195,11 @@ public class ResPediatricaOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
           if(yearMatch.find()) {
             subYear = yearMatch.group(1);
             logger.debug3("Fei: subYear = " + subYear + " value = " + value + ", expected year = " + year);
-            /*
-            Comment out year comparision
             if(year == Integer.parseInt(subYear)) {
+                logger.debug3("Fei: subYear = " + subYear + " value = " + value + " === expected year = " + year);
               return true;
             }
-            */
-              return true;
+            return false;
           }
         } catch(NumberFormatException|IllegalStateException ex) {
             logger.debug3("Fei: yearPattern match does not expectation");

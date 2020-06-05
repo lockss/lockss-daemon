@@ -59,9 +59,7 @@ public abstract class BaseOaiPmhCrawlSeed extends BaseCrawlSeed {
   private static final Logger logger = 
       Logger.getLogger(BaseOaiPmhCrawlSeed.class);
   
-  public static final String DEFAULT_METADATA_PREFIX = "oai_lockss";
   public static final String DATE_FORMAT = "yyyy-MM-dd";
-  public static final String DATETIME_FORMAT = "yyyy-MM-dd'T'hh:mm:ss";
   public static final String KEY_AU_OAI_FROM_DATE = "oai_from_date";
   public static final String KEY_AU_OAI_UNTIL_DATE = "oai_until_date";
   public static final String KEY_AU_OAI_SET = "au_oai_set";

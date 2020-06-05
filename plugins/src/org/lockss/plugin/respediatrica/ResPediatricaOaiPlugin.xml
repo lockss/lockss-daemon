@@ -1,11 +1,15 @@
 <map>
     <entry>
         <string>plugin_status</string>
-        <string>ready</string>
+        <string>development</string>
     </entry>
     <entry>
         <string>plugin_identifier</string>
         <string>org.lockss.plugin.respediatrica.ResPediatricaOaiPlugin</string>
+    </entry>
+    <entry>
+        <string>plugin_name</string>
+        <string>ResPediatrica OAI Plugin</string>
     </entry>
     <entry>
         <string>plugin_version</string>
@@ -29,44 +33,13 @@
         </map>
     </entry>
     <entry>
-        <string>plugin_name</string>
-        <string>ResPediatrica OAI Plugin</string>
-    </entry>
-    <entry>
-        <string>au_name</string>
-        <string>"ResPediatrica OAI Plugin, Base URL %s", base_url</string>
-    </entry>
-    <entry>
-        <string>au_start_url</string>
-        <string>"%soai?verb=ListRecords&amp;metadataPrefix=oai_dc", base_url</string>
-    </entry>
-    <entry>
         <string>plugin_config_props</string>
         <list>
             <org.lockss.daemon.ConfigParamDescr>
                 <key>base_url</key>
-                <displayName>Base URL</displayName>
+                <displayName>Base URLs</displayName>
                 <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
                 <type>3</type>
-                <size>40</size>
-                <definitional>true</definitional>
-                <defaultOnly>false</defaultOnly>
-            </org.lockss.daemon.ConfigParamDescr>
-            <!--
-            <org.lockss.daemon.ConfigParamDescr>
-                <key>au_oai_set</key>
-                <displayName>OAI Set</displayName>
-                <description>OAI PMH set of this AU. [NONE] if you would like to include all sets</description>
-                <type>1</type>
-                <size>20</size>
-                <definitional>true</definitional>
-                <defaultOnly>false</defaultOnly>
-            </org.lockss.daemon.ConfigParamDescr>
-            <org.lockss.daemon.ConfigParamDescr>
-                <key>au_oai_date</key>
-                <displayName>OAI Date</displayName>
-                <description>Rules to filter records based upon metadata</description>
-                <type>1</type>
                 <size>40</size>
                 <definitional>true</definitional>
                 <defaultOnly>false</defaultOnly>
@@ -80,8 +53,16 @@
                 <definitional>true</definitional>
                 <defaultOnly>false</defaultOnly>
             </org.lockss.daemon.ConfigParamDescr>
-            -->
         </list>
+    </entry>
+    <entry>
+        <string>au_name</string>
+        <string>"ResPediatrica OAI Plugin, Base URL %s, Year %d", base_url, year</string>
+    </entry>
+    <entry>
+        <string>au_start_url</string>
+        <!--http://residenciapediatrica.com.br/oai?verb=ListRecords&metadataPrefix=oai_dc&from=2012-01-01&until=2012-12-31-->
+        <string>"%soai?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;from=%d-01-01&amp;until=%d-12-31", base_url, year, year</string>
     </entry>
     <entry>
         <string>au_permission_url</string>
@@ -136,7 +117,6 @@
         </list>
     </entry>
     <entry>
-        <!-- these will not count towards poll results but will replicate from peer if above -->
         <string>au_url_poll_result_weight</string>
         <list>
             <string>"[.](css|js|svg)([?].+)?$", 0</string>
