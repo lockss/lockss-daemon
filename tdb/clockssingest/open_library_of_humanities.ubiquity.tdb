@@ -52,7 +52,8 @@
       au < exists ; exists ; 2016 ; 5 ; Orbit: A Journal of American Literature Volume 2016 ; 2016 ; https://orbit.openlibhums.org/ ; >
       au < exists ; exists ; 2017 ; 6 ; Orbit: A Journal of American Literature Volume 2017 ; 2017 ; https://orbit.openlibhums.org/ ; >
       au < exists ; exists ; 2018 ; 7 ; Orbit: A Journal of American Literature Volume 2018 ; 2018 ; https://orbit.openlibhums.org/ ; >
-      au < expected ; exists ; 2019 ; 8 ; Orbit: A Journal of American Literature Volume 2019 ; 2019 ; https://orbit.openlibhums.org/ ; >
+      au < exists ; exists ; 2019 ; 8 ; Orbit: A Journal of American Literature Volume 2019 ; 2019 ; https://orbit.openlibhums.org/ ; >
+      au < expected ; exists ; 2020 ; 9 ; Orbit: A Journal of American Literature Volume 2020 ; 2020 ; https://orbit.openlibhums.org/ ; >
 
   }
 
@@ -80,7 +81,8 @@
          #moved to janeway platform
 
          au < exists ; exists ; 2018 ; 6 ; C21 Literature: journal of 21st-century writings Volume 2018 ; 2018 ; https://c21.openlibhums.org/ ; >
-         au < expected ; exists ; 2019 ; 7 ; C21 Literature: journal of 21st-century writings Volume 2019 ; 2019 ; https://c21.openlibhums.org/ ; >
+         au < exists ; exists ; 2019 ; 7 ; C21 Literature: journal of 21st-century writings Volume 2019 ; 2019 ; https://c21.openlibhums.org/ ; >
+         au < expected ; exists ; 2020 ; 8 ; C21 Literature: journal of 21st-century writings Volume 2020 ; 2020 ; https://c21.openlibhums.org/ ; >
 
       }
   }
@@ -149,7 +151,7 @@
 
       comment[publisher] = Open Library of Humanities
 #      param[base_url] = https://ee.openlibhums.org/
-      plugin = needs.plugin
+      plugin = needs.plugin  ##probably janeway
       implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
 
       au < exists ; exists ; 2000 ; 30 ; Ethnologia Europaea Volume 2000 ; 2000 ; https://ee.openlibhums.org/ ; >
