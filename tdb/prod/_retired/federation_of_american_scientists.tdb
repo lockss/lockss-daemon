@@ -12,13 +12,29 @@
       issnl = 1939-1986
     >
     
-    comment[moved] = appears that at minimum base_url has changed, removing www. Plugin needs review.
+    comment[moved] = appears that at minimum base_url has changed. Plugin needs review.
     
     rights = openaccess
-    plugin = org.lockss.plugin.secrecynews.SecrecyNewsPlugin
-    param[base_url] = http://www.fas.org/
     implicit < status ; year ; name ; param[year] >
     comment[down] = site has moved
+    
+    {
+    plugin = needs.plugin
+    param[base_url] = https://fas.org/sgp/news/secrecy/
+
+    au < exists ; 2012 ; Secrecy News 2012 ; 2012 >
+    au < exists ; 2013 ; Secrecy News 2013 ; 2013 >
+    au < exists ; 2014 ; Secrecy News 2014 ; 2014 >
+    au < exists ; 2015 ; Secrecy News 2015 ; 2015 >
+    au < exists ; 2016 ; Secrecy News 2016 ; 2016 >
+    au < exists ; 2017 ; Secrecy News 2017 ; 2017 >
+    au < exists ; 2018 ; Secrecy News 2018 ; 2018 >
+    au < exists ; 2019 ; Secrecy News 2019 ; 2019 >
+    au < exists ; 2020 ; Secrecy News 2020 ; 2020 >
+    }
+    {
+    plugin = org.lockss.plugin.secrecynews.SecrecyNewsPlugin
+    param[base_url] = http://www.fas.org/
 
     au < down ; 2000 ; Secrecy News 2000 ; 2000 >
     au < down ; 2001 ; Secrecy News 2001 ; 2001 >
@@ -32,10 +48,7 @@
     au < down ; 2009 ; Secrecy News 2009 ; 2009 >
     au < down ; 2010 ; Secrecy News 2010 ; 2010 >
     au < down ; 2011 ; Secrecy News 2011 ; 2011 >
-    au < doNotProcess ; 2012 ; Secrecy News 2012 ; 2012 >
-    au < doNotProcess ; 2013 ; Secrecy News 2013 ; 2013 >
-    au < doNotProcess ; 2014 ; Secrecy News 2014 ; 2014 >
-  
+    }
   }
 
 }
