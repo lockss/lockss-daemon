@@ -13,19 +13,37 @@
     >  
     
     rights = openaccess
+    # Plugin needs review. Journal has moved to http://www.applevalleyreview.com/.
+    
+    {
+    plugin = needs.plugin
+    implicit < status ; name ; volume ; param[year] >
+    param[base_url] = http://www.applevalleyreview.com/
+    
+
+    au < exists ; Apple Valley Review Volume 4 ; 4 ; 2009 >
+    au < exists ; Apple Valley Review Volume 5 ; 5 ; 2010 >
+    au < exists ; Apple Valley Review Volume 6 ; 6 ; 2011 >
+    au < exists ; Apple Valley Review Volume 7 ; 7 ; 2012 >
+    au < exists ; Apple Valley Review Volume 8 ; 8 ; 2013 >
+    au < exists ; Apple Valley Review Volume 9 ; 9 ; 2014 >
+    au < exists ; Apple Valley Review Volume 10 ; 10 ; 2015 >
+    au < exists ; Apple Valley Review Volume 11 ; 11 ; 2016 >
+    au < exists ; Apple Valley Review Volume 12 ; 12 ; 2017 >
+    au < exists ; Apple Valley Review Volume 13 ; 13 ; 2018 >
+    au < exists ; Apple Valley Review Volume 14 ; 14 ; 2019 >
+    au < exists ; Apple Valley Review Volume 15 ; 15 ; 2020 >
+    }
+    {
     plugin = org.lockss.plugin.applevalleyreview.AppleValleyReviewPlugin
     implicit < status ; name ; volume ; param[year] >
     param[base_url] = http://www.leahbrowning.net/
     
-    # Plugin needs review. Journal has moved to http://www.applevalleyreview.com/.
 
-    au < released ; Apple Valley Review Volume 1 ; 1 ; 2006 >
-    au < released ; Apple Valley Review Volume 2 ; 2 ; 2007 >
-    au < released ; Apple Valley Review Volume 3 ; 3 ; 2008 >
-    au < doNotProcess ; Apple Valley Review Volume 4 ; 4 ; 2009 >
-    au < doNotProcess ; Apple Valley Review Volume 5 ; 5 ; 2010 >
-    au < doNotProcess ; Apple Valley Review Volume 6 ; 6 ; 2011 >
-  
+    au < down ; Apple Valley Review Volume 1 ; 1 ; 2006 >
+    au < down ; Apple Valley Review Volume 2 ; 2 ; 2007 >
+    au < down ; Apple Valley Review Volume 3 ; 3 ; 2008 >
+    }
   }
   
 }

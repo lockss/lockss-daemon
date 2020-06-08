@@ -13,10 +13,34 @@
 
     rights = openaccess
     
+    {
+    
+      plugin = needs.plugin
+      param[base_url] = http://www.bigbridge.org/
+      implicit < status ; name ; param[volume] ; param[num_issue_range] >
+
+      au < exists ; Big Bridge Volume 3 ; 3 ; 1-4 >
+      au < exists ; Big Bridge Volume 4 ; 4 ; 1-4 >
+      au < exists ; Big Bridge Volume 5 ; 5 ; 1-4 >
+    
+    }
+  
+    {
+    
+      plugin = edu.wisc.library.plugin.BigBridgePlugin
+      param[base_url] = http://www.bigbridge.org/
+      implicit < status ; name ; param[volume] ; param[num_issue_range] >
+      
+      comment[plugin] = plugin needs review and possible revision.
+
+      au < released ; Big Bridge Volume 2 ; 2 ; 5-8 >
+    
+    }
+  
     { 
 
       plugin = edu.wisc.library.plugin.BigBridgeVol1Plugin
-      param[base_url] = http://www.bigbridge.org/  
+      param[base_url] = http://www.bigbridge.org/
       implicit < status ; name ; volume >
       
       comment[plugin] = plugin needs review and possible revision.
@@ -25,18 +49,6 @@
       
     }
     
-    {
-    
-      plugin = edu.wisc.library.plugin.BigBridgePlugin
-      param[base_url] = http://www.bigbridge.org/  
-      implicit < status ; name ; param[volume] ; param[num_issue_range] >
-      
-      comment[plugin] = plugin needs review and possible revision.
-
-      au < released ; Big Bridge Volume 2 ; 2 ; 5-8 >    
-    
-    }
-  
   }
   
 }
