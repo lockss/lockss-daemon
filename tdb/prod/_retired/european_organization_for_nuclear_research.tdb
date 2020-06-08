@@ -13,11 +13,11 @@
     >  
 
     rights = openaccess
-    plugin =  edu.nyu.plugin.heplwebzine.HEPLwebzine
     implicit < status ; year ; name ; param[issue_no] >
 
     {  
       
+      plugin =  edu.nyu.plugin.heplwebzine.HEPLwebzine
       param[base_url] = http://library.cern.ch/
     
       au < down ; 2000 ; High Energy Physics Libraries Webzine Issue 1 ; 1 >
@@ -36,12 +36,13 @@
 
     {  
       
+      plugin =  needs.plugin
       param[base_url] = http://webzine.web.cern.ch/
       comment[plugin] = Plugin needs review.
     
       au < doNotProcess ; 2006 ; High Energy Physics Libraries Webzine Issue 12 ; 12 >
       au < doNotProcess ; 2006 ; High Energy Physics Libraries Webzine Issue 13 ; 13 >
-      
+      #webzine ceased in 2007.
     
     }
     
