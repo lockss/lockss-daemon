@@ -81,13 +81,13 @@
     >
     
     rights = openaccess
-    plugin = org.lockss.plugin.prok.ProkPlugin
-    implicit < status ; year ; name ; param[volume_name] >
 
     # year: listed copyright year from meta tag since volumes lack years
 
     {
     
+      plugin = org.lockss.plugin.prok.ProkPlugin
+      implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://prok.princeton.edu/
       
       au < superseded ; 2009 ; Princeton Report on Knowledge Volume 1 [superseded] ; 1 >
@@ -97,6 +97,8 @@
     
     {
     
+      plugin = needs.plugin
+      implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.princeton.edu/prok/
       
       # Plugin needs review.
