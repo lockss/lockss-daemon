@@ -413,7 +413,7 @@
     au < finished ; manifest ; 2017 ; Francosphères Volume 6 ; 6 ; http://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2018 ; Francosphères Volume 7 ; 7 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2019 ; Francosphères Volume 8 ; 8 ; https://online.liverpooluniversitypress.co.uk/ ; >
-    au < expected ; exists ; 2020 ; Francosphères Volume 9 ; 9 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < manifest ; exists ; 2020 ; Francosphères Volume 9 ; 9 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
 
@@ -914,7 +914,7 @@
     au < finished ; manifest ; 2017-2018 ; Quaker Studies Volume 22 ; 22 ; https://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2018-2019 ; Quaker Studies Volume 23 ; 23 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < manifest ; exists ; 2019-2020 ; Quaker Studies Volume 24 ; 24 ; https://online.liverpooluniversitypress.co.uk/ ; >
-    au < expected ; exists ; 2020-2021 ; Quaker Studies Volume 25 ; 25 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < manifest ; exists ; 2020-2021 ; Quaker Studies Volume 25 ; 25 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
 
