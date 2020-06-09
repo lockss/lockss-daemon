@@ -4,6 +4,7 @@
     name = Poetry Bay
   >
   
+    rights = openaccess
   {
   
     title <
@@ -11,29 +12,40 @@
       eissn = 1939-2052 ;
       issnl = 1939-2052
     >
-    
-    rights = openaccess
+    #plugin needs review
+    {
+    plugin = needs.plugin
+    param[base_url] = http://www.poetrybay.com/
+    implicit < status ; year ; name ; param[year] >
+
+    au < exists ; 2006 ; Poetry Bay Volume 2006 ; 2006 >
+    au < exists ; 2007 ; Poetry Bay Volume 2007 ; 2007 >
+    au < exists ; 2008 ; Poetry Bay Volume 2008 ; 2008 >
+    au < exists ; 2009 ; Poetry Bay Volume 2009 ; 2009 >
+    au < exists ; 2010 ; Poetry Bay Volume 2010 ; 2010 >
+    au < exists ; 2011 ; Poetry Bay Volume 2011 ; 2011 >
+    au < exists ; 2012 ; Poetry Bay Volume 2012 ; 2012 >
+    au < exists ; 2013 ; Poetry Bay Volume 2013 ; 2013 >
+    au < exists ; 2014 ; Poetry Bay Volume 2014 ; 2014 >
+    au < exists ; 2015 ; Poetry Bay Volume 2015 ; 2015 >
+    au < exists ; 2016 ; Poetry Bay Volume 2016 ; 2016 >
+    au < exists ; 2017 ; Poetry Bay Volume 2017 ; 2017 >
+    au < exists ; 2018 ; Poetry Bay Volume 2018 ; 2018 >
+    au < exists ; 2019 ; Poetry Bay Volume 2019 ; 2019 >
+    au < expected ; 2020 ; Poetry Bay Volume 2020 ; 2020 >
+    }
+    {
     plugin = org.nypl.plugin.PoetryBayPlugin
     param[base_url] = http://www.poetrybay.com/
     implicit < status ; year ; name ; param[year] >
-    
-    comment[plugin] = plugin needs review.
 
-    au < released ; 2000 ; Poetry Bay 2000 ; 2000 >
-    au < released ; 2001 ; Poetry Bay 2001 ; 2001 >
-    au < released ; 2002 ; Poetry Bay 2002 ; 2002 >
-    au < released ; 2003 ; Poetry Bay 2003 ; 2003 >
-    au < released ; 2004 ; Poetry Bay 2004 ; 2004 >
-    au < released ; 2005 ; Poetry Bay 2005 ; 2005 >
-    au < doNotProcess ; 2006 ; Poetry Bay 2006 ; 2006 >
-    au < doNotProcess ; 2007 ; Poetry Bay 2007 ; 2007 >
-    au < doNotProcess ; 2008 ; Poetry Bay 2008 ; 2008 >
-    au < doNotProcess ; 2009 ; Poetry Bay 2009 ; 2009 >
-    au < doNotProcess ; 2010 ; Poetry Bay 2010 ; 2010 >
-    au < doNotProcess ; 2011 ; Poetry Bay 2011 ; 2011 >
-    au < doNotProcess ; 2012 ; Poetry Bay 2012 ; 2012 >
-    au < doNotProcess ; 2013 ; Poetry Bay 2013 ; 2013 >
-
+    au < down ; 2000 ; Poetry Bay Volume 2000 ; 2000 >
+    au < down ; 2001 ; Poetry Bay Volume 2001 ; 2001 >
+    au < down ; 2002 ; Poetry Bay Volume 2002 ; 2002 >
+    au < down ; 2003 ; Poetry Bay Volume 2003 ; 2003 >
+    au < down ; 2004 ; Poetry Bay Volume 2004 ; 2004 >
+    au < down ; 2005 ; Poetry Bay Volume 2005 ; 2005 >
+    }
   }
 
 }
