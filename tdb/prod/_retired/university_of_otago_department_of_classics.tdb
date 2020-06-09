@@ -16,8 +16,9 @@
     plugin = nz.ac.otago.plugin.scholia.ScholiaPlugin
     param[base_url] = http://www.otago.ac.nz/
     implicit < status ; year ; name ; param[volume] >
-    comment[doNotProcess] = Plugin needs update and review
-    comment[publisher] = may have stopped publishing in 2011. http://www.otago.ac.nz/classics/scholia/
+
+    comment[publisher] = stopped publishing in 2011. http://www.otago.ac.nz/classics/scholia/
+    #See http://ancientworldonline.blogspot.com/2013/03/open-access-journal-scholia-studies-in.html
     
     au < down ; 1992 ; Scholia Volume 1 ; 1 >
     au < down ; 1993 ; Scholia Volume 2 ; 2 >
