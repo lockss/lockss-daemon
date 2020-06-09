@@ -4,7 +4,8 @@
     name = Rocky Mountain Mathematics Consortium
   >
   
-  plugin = org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin
+  plugin = needs.plugin
+  #plugin = org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin
   param[base_url] = http://rmmc.asu.edu/
   implicit < status ; year ; name ; param[volume_name] >
   
