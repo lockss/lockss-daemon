@@ -97,6 +97,17 @@
       comment[publisher] = Open Library of Humanities
 #      param[base_url] = http://www.19.bbk.ac.uk/
       {
+        plugin = needs.plugin
+        implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
+        #moved to janeway platform as of 2019.
+
+        au < doNotProcess ; exists ; 2016 ; 12 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2016 ; 2016 ; https://19.bbk.ac.uk/ ; >
+        au < exists ; exists ; 2017 ; 13 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2017 ; 2017 ; https://19.bbk.ac.uk/ ; >
+        au < exists ; exists ; 2018 ; 14 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2018 ; 2018 ; https://19.bbk.ac.uk/ ; >
+        au < exists ; exists ; 2019 ; 15 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2019 ; 2019 ; https://19.bbk.ac.uk/ ; >
+        au < expected ; exists ; 2020 ; 16 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2020 ; 2020 ; https://19.bbk.ac.uk/ ; >
+      }
+      {
         plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
         implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
         #moved to janeway platform as of 2019.
@@ -115,29 +126,6 @@
         au < frozen ; exists ; 2016 ; 12 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2016 ; 2016 ; http://www.19.bbk.ac.uk/ ; >
         au < superseded ; exists ; 2017 ; 13 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2017 [superseded] ; 2017 ; http://www.19.bbk.ac.uk/ ; >
         au < superseded ; exists ; 2018 ; 14 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2018 [superseded] ; 2018 ; https://www.19.bbk.ac.uk/ ; >
-
-      }
-      {
-        plugin = needs.plugin
-        implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
-        #moved to janeway platform as of 2019.
-
-        au < doNotProcess ; exists ; 2005 ; 1 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2005 ; 2005 ; https://19.bbk.ac.uk/ ; >
-        au < doNotProcess ; exists ; 2006 ; 2 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2006 ; 2006 ; https://19.bbk.ac.uk/ ; >
-        au < doNotProcess ; exists ; 2007 ; 3 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2007 ; 2007 ; https://19.bbk.ac.uk/ ; >
-        au < doNotProcess ; exists ; 2008 ; 4 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2008 ; 2008 ; https://19.bbk.ac.uk/ ; >
-        au < doNotProcess ; exists ; 2009 ; 5 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2009 ; 2009 ; https://19.bbk.ac.uk/ ; >
-        au < doNotProcess ; exists ; 2010 ; 6 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2010 ; 2010 ; https://19.bbk.ac.uk/ ; >
-        au < doNotProcess ; exists ; 2011 ; 7 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2011 ; 2011 ; https://19.bbk.ac.uk/ ; >
-        au < doNotProcess ; exists ; 2012 ; 8 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2012 ; 2012 ; https://19.bbk.ac.uk/ ; >
-        au < doNotProcess ; exists ; 2013 ; 9 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2013 ; 2013 ; https://19.bbk.ac.uk/ ; >
-        au < doNotProcess ; exists ; 2014 ; 10 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2014 ; 2014 ; https://19.bbk.ac.uk/ ; >
-        au < doNotProcess ; exists ; 2015 ; 11 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2015 ; 2015 ; https://19.bbk.ac.uk/ ; >
-        au < doNotProcess ; exists ; 2016 ; 12 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2016 ; 2016 ; https://19.bbk.ac.uk/ ; >
-        au < exists ; exists ; 2017 ; 13 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2017 ; 2017 ; https://19.bbk.ac.uk/ ; >
-        au < exists ; exists ; 2018 ; 14 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2018 ; 2018 ; https://19.bbk.ac.uk/ ; >
-        au < exists ; exists ; 2019 ; 15 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2019 ; 2019 ; https://19.bbk.ac.uk/ ; >
-        au < expected ; exists ; 2020 ; 16 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2020 ; 2020 ; https://19.bbk.ac.uk/ ; >
 
       }
   }
@@ -188,16 +176,6 @@
       #moved to janeway platform as of 2019.
 
       {
-        plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
-        implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
-
-        au < finished ; finished ; 2015 ; 1 ; Journal of British and Irish Innovative Poetry Volume 2015 ; 2015 ; https://poetry.openlibhums.org/ ; reingest5.clockss.org:8082 >
-        au < frozen ; exists ; 2016 ; 2 ; Journal of British and Irish Innovative Poetry Volume 2016 ; 2016 ; https://poetry.openlibhums.org/ ; >
-        au < superseded ; exists ; 2017 ; 3 ; Journal of British and Irish Innovative Poetry Volume 2017 [superseded] ; 2017 ; https://poetry.openlibhums.org/ ; >
-        au < superseded ; exists ; 2018 ; 4 ; Journal of British and Irish Innovative Poetry Volume 2018 [superseded] ; 2018 ; https://poetry.openlibhums.org/ ; >
-        au < expected ; exists ; 2019 ; 5 ; Journal of British and Irish Innovative Poetry Volume 2019 ; 2019 ; https://poetry.openlibhums.org/ ; >
-      }
-      {
         plugin = needs.plugin
         implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
 
@@ -205,7 +183,17 @@
         au < doNotProcess ; exists ; 2016 ; 2 ; Journal of British and Irish Innovative Poetry Volume 2016 ; 2016 ; https://poetry.openlibhums.org/ ; >
         au < exists ; exists ; 2017 ; 3 ; Journal of British and Irish Innovative Poetry Volume 2017 [superseded] ; 2017 ; https://poetry.openlibhums.org/ ; >
         au < exists ; exists ; 2018 ; 4 ; Journal of British and Irish Innovative Poetry Volume 2018 [superseded] ; 2018 ; https://poetry.openlibhums.org/ ; >
-        au < expected ; exists ; 2019 ; 5 ; Journal of British and Irish Innovative Poetry Volume 2019 ; 2019 ; https://poetry.openlibhums.org/ ; >
+        au < exists ; exists ; 2019 ; 5 ; Journal of British and Irish Innovative Poetry Volume 2019 ; 2019 ; https://poetry.openlibhums.org/ ; >
+        au < expected ; exists ; 2020 ; 6 ; Journal of British and Irish Innovative Poetry Volume 2020 ; 2020 ; https://poetry.openlibhums.org/ ; >
+      }
+      {
+        plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
+        implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
+
+        au < finished ; finished ; 2015 ; 1 ; Journal of British and Irish Innovative Poetry Volume 2015 ; 2015 ; https://poetry.openlibhums.org/ ; reingest5.clockss.org:8082 >
+        au < frozen ; exists ; 2016 ; 2 ; Journal of British and Irish Innovative Poetry Volume 2016 ; 2016 ; https://poetry.openlibhums.org/ ; >
+        au < superseded ; exists ; 2017 ; 3 ; Journal of British and Irish Innovative Poetry Volume 2017 [superseded] ; 2017 ; https://poetry.openlibhums.org/ ; >
+        au < superseded ; exists ; 2018 ; 4 ; Journal of British and Irish Innovative Poetry Volume 2018 [superseded] ; 2018 ; https://poetry.openlibhums.org/ ; >
       }
   }
 
