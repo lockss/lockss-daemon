@@ -11,6 +11,9 @@
       eissn = 1477-3643 ;
       issnl = 1477-3643
     >  
+    #This journal is no longer available online. Preserved in Internet Archive.
+    #See http://ancientworldonline.blogspot.com/2011/10/open-access-journal-leeds-international.html
+    #See https://web.archive.org/web/20141129211647/http://lics.leeds.ac.uk/volumes.html#10
 
     rights = openaccess
     plugin = edu.nyu.plugin.LeedsICSPlugin
@@ -18,19 +21,14 @@
     comment[base_url] = The plugin was written such that the base URL doesn't have a trailing slash
     
     {
-    
     param[base_url] = http://www.leeds.ac.uk/classics/lics
   
     au < superseded ; 1 ; Leeds International Classical Studies 2002 [superseded] ; 2002 ; 2002 >
     au < superseded ; 2 ; Leeds International Classical Studies 2003 [superseded] ; 2003 ; 2003 >
     au < superseded ; 3 ; Leeds International Classical Studies 2003-2004 [superseded] ; 2004 ; 200304 >
-    
     }
     
     {
-    
-    comment[plugin] = plugin needs review
-    
     param[base_url] = http://lics.leeds.ac.uk
 
     au < doNotProcess ; 1 ; Leeds International Classical Studies 2002 ; 2002 ; 2002 >
@@ -44,8 +42,7 @@
     au < released ; 9 ; Leeds International Classical Studies 2010 ; 2010 ; 2010 >
     au < released ; 10 ; Leeds International Classical Studies 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 11 ; Leeds International Classical Studies 2013 ; 2013 ; 2013 >
-    
-    }    
+    }
   
   }
   
