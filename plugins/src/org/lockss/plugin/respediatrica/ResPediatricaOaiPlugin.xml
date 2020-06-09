@@ -47,8 +47,8 @@
             <org.lockss.daemon.ConfigParamDescr>
                 <key>year</key>
                 <displayName>Year</displayName>
-                <description>Year will set to "from" Year-01-01 "to" Year-12-31</description>
-                <type>1</type>
+                <description>Four digit year (e.g., 2004)</description>
+                <type>4</type>
                 <size>4</size>
                 <definitional>true</definitional>
                 <defaultOnly>false</defaultOnly>
