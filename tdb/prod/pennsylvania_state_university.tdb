@@ -18,6 +18,7 @@
     implicit < status ; year ; name ; volume ; param[year] >
     
     param[journal_id] = jgb
+    #Need to request manifest pages. 20200609
     
     au < exists ; 2006 ; Journal of Global Buddhism Volume 7 ; 7 ; 2006 >
     au < exists ; 2007 ; Journal of Global Buddhism Volume 8 ; 8 ; 2007 >

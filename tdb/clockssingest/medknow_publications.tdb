@@ -5921,8 +5921,7 @@
 
       param[journal_issn] = 0976-0105
       param[base_url] = http://www.jbclinpharm.org/
-      # moved to new platform. https://www.jbclinpharm.org/archive.html
-      # needs a fairly simple but new plugin, article url pattern very different
+      # moved to new platform. https://www.jbclinpharm.org/archive.html. No longer at Medknow.
 
       au < superseded ; exists ; 2011 ; Journal of Basic and Clinical Pharmacy Volume 2 [superseded] ; 2011 ; 2 ; ; >
       au < superseded ; exists ; 2012 ; Journal of Basic and Clinical Pharmacy Volume 3 [superseded] ; 2012 ; 3 ; ; >
