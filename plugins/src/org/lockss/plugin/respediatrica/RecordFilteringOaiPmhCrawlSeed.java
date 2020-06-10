@@ -51,7 +51,7 @@ public abstract class RecordFilteringOaiPmhCrawlSeed extends BaseOaiPmhCrawlSeed
   private static Logger logger =
       Logger.getLogger(RecordFilteringOaiPmhCrawlSeed.class);
 
-  protected boolean usesDateRange = false;
+  protected boolean usesDateRange = true;
   protected boolean usesSet = false;
   protected Map<String, Pattern> metadataRules;
   public static final String KEY_AU_OAI_FILTER_RULES = "au_oai_filter_rules";

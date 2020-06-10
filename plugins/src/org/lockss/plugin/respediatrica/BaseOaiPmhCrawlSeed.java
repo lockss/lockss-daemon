@@ -28,6 +28,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.respediatrica;
 
+import org.apache.commons.lang.time.DateUtils;
 import org.dspace.xoai.model.oaipmh.Granularity;
 import org.dspace.xoai.serviceprovider.ServiceProvider;
 import org.dspace.xoai.serviceprovider.model.Context;
@@ -45,6 +46,10 @@ import java.io.IOException;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
@@ -84,7 +89,7 @@ public abstract class BaseOaiPmhCrawlSeed extends BaseCrawlSeed {
   //The path to the home of the OAI PMH server from the base url
   protected String oaiUrlPostfix = DEFAULT_OAI_URL_POSTFIX;
   protected boolean usesDateRange = true;
-  protected boolean usesSet = true;
+  protected boolean usesSet = false;
   protected CrawlerFacade facade;
   protected Collection<String> permUrls = new ArrayList<String>();
   
@@ -133,15 +138,11 @@ public abstract class BaseOaiPmhCrawlSeed extends BaseCrawlSeed {
       usesSet=false;
     }
     if(config.containsKey(KEY_AU_OAI_URL_POSTFIX)) {
-      logger.debug3("Fei: KEY_AU_OAI_URL_POSTFIX is set");
       if(!setUrlPostfix(config.get(KEY_AU_OAI_URL_POSTFIX))){
         throw new ConfigurationException(KEY_AU_OAI_URL_POSTFIX +
                                          " must not be null");
       }
-    } else {
-      logger.debug3("Fei: KEY_AU_OAI_URL_POSTFIX does NOT set");
     }
-
     if(config.containsKey(KEY_AU_OAI_METADATA_PREFIX)) {
       if(!setMetadataPrefix(config.get(KEY_AU_OAI_METADATA_PREFIX))) {
         throw new ConfigurationException(KEY_AU_OAI_METADATA_PREFIX +
@@ -186,20 +187,21 @@ public abstract class BaseOaiPmhCrawlSeed extends BaseCrawlSeed {
 
     logger.debug3("Fei - setRange:  from = " + this.from + ", until = " + this.until);
   }
+
   
   protected Date parseDate(String date, DateFormat df, String name) 
       throws ConfigurationException {
     Date ret;
+    
+    DateTimeFormatter formatter = new DateTimeFormatterBuilder()
+            .parseLenient().appendPattern("yyyy-MM-dd").toFormatter();
+    LocalDate localDate = LocalDate.parse(date, formatter);
 
-    if(date.length() == 10) {
-      date = date + "T00:00:00";
-    }
-    try {
-      ret = df.parse(date);
-    } catch (ParseException e) {
-      throw new ConfigurationException(
-        "Incorrectly formatted OAI " + name + " date", e);
-    }
+    logger.debug3("Fei - LocalDate :  date = " + localDate);
+
+    ret = java.sql.Date.valueOf(localDate);
+    logger.debug3("Fei - LocalDate converted to date :  date = " + ret);
+
     return ret;
   }
   

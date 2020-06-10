@@ -8,7 +8,7 @@
   >
 
     rights = openaccess
-    implicit < status ; status2 ; year ; volume ; name ; param[au_oai_date] ; hidden[proxy] >
+    implicit < status ; status2 ; year ; volume ; name ; param[year] ; hidden[proxy] >
     plugin = org.lockss.plugin.respediatrica.ResPediatricaOaiPlugin
     param[base_url] = http://residenciapediatrica.com.br/
 

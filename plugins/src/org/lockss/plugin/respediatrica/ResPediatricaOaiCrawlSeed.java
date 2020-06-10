@@ -96,23 +96,27 @@ public class ResPediatricaOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
       Boolean error = false;
       Set<String> idSet = new HashSet<String>();
       try {
-          for (Iterator<Record> recIter = getServiceProvider().listRecords(params); recIter.hasNext();) {
-              Record rec = recIter.next();
-              if (rec != null) {
-                  MetadataSearch<String> metaSearch =
-                          rec.getMetadata().getValue().searcher();
-                  logger.debug3("Fei: - inside Try , inside for");
-                  if (checkMetaRules(metaSearch)) {
-                      link = findRecordArticleLink(rec);
-                      if (link != null) {
-                          logger.debug3("Fei: - link = %s" + link);
-                          idSet.add(link);
-                      } else {
-                          logger.debug3("Fei: - empty link");
+          Iterator<Record> recIter = getServiceProvider().listRecords(params);
+          //for (Iterator<Record> recIter = getServiceProvider().listRecords(params); recIter.hasNext();) {
+          if (recIter != null) {
+              while (recIter.hasNext()) {
+                  Record rec = recIter.next();
+                  if (rec != null) {
+                      MetadataSearch<String> metaSearch =
+                              rec.getMetadata().getValue().searcher();
+                      logger.debug3("Fei: - inside Try , inside for");
+                      if (checkMetaRules(metaSearch)) {
+                          link = findRecordArticleLink(rec);
+                          if (link != null) {
+                              logger.debug3("Fei: - link = %s" + link);
+                              idSet.add(link);
+                          } else {
+                              logger.debug3("Fei: - empty link");
+                          }
                       }
+                  } else {
+                      logger.debug3("Fei: - recIter is not null, but rec is null");
                   }
-              } else {
-                  logger.debug3("Fei: - recIter is not null, but rec is null");
               }
           }
       } catch (InvalidOAIResponse e) {
