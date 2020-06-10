@@ -1,0 +1,1828 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE article SYSTEM "http://ej.iop.org/dtd/iopv1_5_1.dtd">
+<article artid="cm204160">
+    <article-metadata>
+        <jnl-data jnlid="cm">
+            <jnl-fullname>Journal of Physics: Condensed Matter</jnl-fullname>
+            <jnl-abbreviation>J. Phys.: Condens. Matter</jnl-abbreviation>
+            <jnl-shortname>JPhysCM</jnl-shortname>
+            <jnl-issn>0953-8984</jnl-issn>
+            <jnl-coden>JCOMEL</jnl-coden>
+            <jnl-imprint>Institute of Physics Publishing</jnl-imprint>
+            <jnl-web-address>stacks.iop.org/JPhysCM</jnl-web-address>
+        </jnl-data>
+        <volume-data>
+            <year-publication>2005</year-publication>
+            <volume-number>17</volume-number>
+        </volume-data>
+        <issue-data>
+            <issue-number>37</issue-number>
+            <coverdate>21 September 2005</coverdate>
+        </issue-data>
+        <article-data>
+            <article-type type="paper" sort="regular"></article-type>
+            <type-number type="paper" artnum="012">12</type-number>
+            <article-number>204160</article-number>
+            <first-page>5757</first-page>
+            <last-page>5769</last-page>
+            <length>13</length>
+            <pii>S0953-8984(05)04160-3</pii>
+            <doi>10.1088/0953-8984/17/37/012</doi>
+            <copyright>IOP Publishing Ltd</copyright>
+            <ccc>0953-8984/05/375757&plus;13&dollar;30.00</ccc>
+            <printed>Printed in the UK</printed>
+            <features colour="global"/>
+        </article-data>
+    </article-metadata>
+    <header>
+        <title-group>
+            <title>Using <smallcap>ONETEP</smallcap> for accurate and efficient <inline-eqn><?TeX \mathcal {O}(N) ?>
+                <inline-graphic format="GIF" filename="images/cm204160ieqn1.gif"/>
+            </inline-eqn> density functional calculations</title>
+            <short-title>Order-<italic>N</italic>density functional calculations with <smallcap>ONETEP</smallcap>
+            </short-title>
+            <ej-title>Using ONETEP for accurate and efficient O(N) density functional calculations
+            </ej-title>
+        </title-group>
+        <author-group>
+            <author address="cm204160ad1" alt-address="cm204160ad3" email="cm204160ea1"><first-names>Chris-Kriton</first-names><second-name>Skylaris</second-name></author>
+            <author address="cm204160ad2"><first-names>Peter D</first-names><second-name>Haynes</second-name></author>
+            <author address="cm204160ad2"><first-names>Arash A</first-names><second-name>Mostofi</second-name></author>
+            <author address="cm204160ad2"><first-names>Mike C</first-names><second-name>Payne</second-name></author>
+            <short-author-list>C-K Skylaris <italic>et al</italic> </short-author-list>
+        </author-group>
+        <address-group>
+            <address id="cm204160ad1"><orgname>Physical and Theoretical Chemistry Laboratory</orgname>, South Parks Road, Oxford OX1
+                3QZ,
+                <country>UK</country>
+            </address>
+            <address id="cm204160ad2"><orgname>Theory of Condensed Matter, Cavendish Laboratory</orgname>, J J Thomson Avenue, Cambridge
+                CB3 0HE,
+                <country>UK</country>
+            </address>
+            <address id="cm204160ad3" alt="yes">Author to whom any correspondence should be addressed.
+                <webref url="http://www.chem.ox.ac.uk/researchguide/ckskylaris.html">http://www.chem.ox.ac.uk/researchguide/ckskylaris.html</webref></address>
+            <e-address id="cm204160ea1">
+                <email mailto="chris-kriton.skylaris@chem.ox.ac.uk">chris-kriton.skylaris@chem.ox.ac.uk</email></e-address></address-group>
+        <history received="19 July 2005" finalform="16 August 2005" online="2 September 2005"/>
+        <abstract-group>
+            <abstract>
+                <heading>Abstract</heading>
+                <p indent="no">We present a detailed comparison between <smallcap>ONETEP</smallcap>, our linear-scaling density functional
+                    method, and the conventional pseudopotential plane wave approach in order to
+                    demonstrate its high accuracy. Further comparison with all-electron calculations shows that
+                    only the largest available Gaussian basis sets can match the accuracy of routine
+                    <smallcap>ONETEP</smallcap> calculations. Results indicate that our minimization procedure is not ill
+                    conditioned and that convergence to self-consistency is achieved efficiently. Finally, we
+                    present calculations with <smallcap>ONETEP</smallcap>, on systems of about 1000&nbsp;atoms, of electronic,
+                    structural and chemical properties of a wide variety of materials such as metallic
+                    and semiconducting carbon nanotubes, crystalline silicon and a protein complex.
+                </p>
+            </abstract>
+        </abstract-group>
+        <classifications>
+            <class-codes scheme="pacs">
+                <code>71.15.Ap</code>
+                <code>73.22.-f</code>
+                <code>31.15.-p</code>
+                <code>31.15.Ew</code>
+            </class-codes>
+        </classifications>
+    </header>
+    <body refstyle="numeric">
+        <sec-level1 id="cm204160s1" label="1">
+            <heading>Introduction</heading>
+            <p indent="no">The formalism of Kohn&ndash;Sham density functional theory (DFT)&nbsp;[<cite linkend="cm204160bib1">1</cite>, <cite linkend="cm204160bib2">2</cite>] for
+                electronic structure calculations has become established as an approach that provides a
+                good description of electronic correlation while keeping the size of calculations
+                tractable. Nevertheless, the computational time taken by a conventional DFT
+                calculation increases with the cube of the number of atoms. This scaling limits
+                the size of problems that can be tackled to a few hundred atoms at most. As a
+                consequence, many exciting problems which lie at the interface between the microscopic
+                and mesoscopic worlds, particularly in the fields of biophysics and nanoscience,
+                are out of the reach of DFT calculations. Progress towards the goal of bringing
+                the predictive power of DFT to bear on these problems can be made only by
+                developing approaches for DFT calculations that have linear-scaling or <inline-eqn><?TeX \mathcal
+                        {O}(N) ?>
+                    <inline-graphic format="GIF" filename="images/cm204160ieqn1.gif"/>
+                </inline-eqn> instead of cubic-scaling computational cost.</p>
+            <p>Even though there have been numerous theoretical developments, so far linear-scaling
+                methods have not lived up to their early promise. Linear-scaling approaches are still
+                described as &lsquo;experimental&rsquo;&nbsp;[<cite linkend="cm204160bib3">3</cite>] and so far there are few examples of successful
+                application to problems of interest in materials or biological sciences&nbsp;[<cite linkend="cm204160bib4">4</cite>].
+                For a review see&nbsp;[<cite linkend="cm204160bib5">5</cite>, <cite linkend="cm204160bib6">6</cite>]. Our <smallcap>ONETEP</smallcap> linear-scaling method for
+                DFT calculations allows for the systematic control of both truncation errors and
+                variational freedom in the basis set. For full details, including demonstration of
+                the linear-scaling behaviour, see&nbsp;[<cite linkend="cm204160bib7">7</cite>] and references therein. Here we
+                demonstrate that <smallcap>ONETEP</smallcap> can be used to solve real problems with the same
+                level of confidence and general applicability as conventional cubic-scaling DFT
+                approaches.</p>
+            <p>In section&nbsp;<secref linkend="cm204160s2">2</secref> we begin with a brief presentation of the formalism for linear-scaling DFT on which
+                <smallcap>ONETEP</smallcap> is based. In section&nbsp;<secref linkend="cm204160s3">3</secref> we compare <smallcap>ONETEP</smallcap> with conventional well established cubic-scaling methods with
+                emphasis on the case of systematic improvement in the basis set, and hence in accuracy,
+                and in the speed of self-consistent convergence. In section&nbsp;<secref linkend="cm204160s4">4</secref> we show how <smallcap>ONETEP</smallcap> can be used to explore a range of materials with thousands of
+                atoms ranging from nanostructures to bulk solids to biomolecules. Finally, in
+                section&nbsp;<secref linkend="cm204160s5">5</secref> we present our conclusions.</p></sec-level1><sec-level1 id="cm204160s2" label="2">
+        <heading>Overview of theory</heading>
+        <p indent="no">Kohn&ndash;Sham DFT enables the problem of many interacting electrons in a static external
+            potential to be mapped onto a fictitious system of non-interacting particles. Self-consistent
+            solution of the resulting set of single-particle Schr&ouml;dinger equations gives the ground-state
+            energy and density of the original interacting problem. All the information about
+            the ground state of the system is contained in the single-particle density matrix
+            &rho;(<bold>r</bold>,<bold>r</bold>&prime;)
+            which, provided there is a bandgap in the material, decays exponentially&nbsp;[<cite linkend="cm204160bib8" range="cm204160bib8,cm204160bib9,cm204160bib10,cm204160bib11,cm204160bib12">8&ndash;12</cite>] as a function of the distance
+            between <bold>r</bold>&prime;
+            and <bold>r</bold>. This property can be exploited to truncate the density matrix so that the amount of
+            information it contains increases only linearly with the number of atoms. To
+            perform this truncation in a practical way, the density matrix is expressed as
+            <display-eqn id="cm204160eqn1" textype="equation" eqnnum="1"><?TeX \begin{equation}
+                    \rho(\mathbf{r}, \mathbf{r}')=\sum_{\alpha\beta}
+                    \phi_{\alpha}(\mathbf{r})K^{\alpha \beta} \phi_{\beta}^{*}(\mathbf{r}')
+                    \end{equation} ?>
+                <eqn-graphic format="GIF" filename="images/cm204160eqn1.gif"/>
+            </display-eqn>
+            where the {&phis;<sub>&alpha;</sub>}
+            are a set of spatially localized, non-orthogonal generalized Wannier functions (NGWFs)&nbsp;[<cite linkend="cm204160bib13">13</cite>] and
+            the matrix <bold>K</bold>
+            is called the density kernel&nbsp;[<cite linkend="cm204160bib14">14</cite>].
+            <bold>K</bold>
+            can be made sparse by enforcing the condition
+            <italic>K</italic><sup>&alpha;&beta;</sup> &equals; 0 when
+            |<bold>R</bold><sub>&alpha;</sub>&minus;<bold>R</bold><sub>&beta;</sub>|&gt;<italic>r</italic><sub>cut</sub>,
+            where <bold>R</bold><sub>&alpha;</sub>
+            and <bold>R</bold><sub>&beta;</sub>
+            are the centres of the localization regions of NGWFs
+            &phis;<sub>&alpha;</sub>(<bold>r</bold>)
+            and &phis;<sub>&beta;</sub>(<bold>r</bold>), respectively.</p>
+        <p><smallcap>ONETEP</smallcap> belongs to the category of methods that aim for high accuracy
+            by optimizing the energy self-consistently not only with respect to
+            <bold>K</bold>
+            but also with respect to the NGWFs&nbsp;[<cite linkend="cm204160bib15" range="cm204160bib15,cm204160bib16,cm204160bib17,cm204160bib18,cm204160bib19,cm204160bib20">15&ndash;20</cite>].
+            In <smallcap>ONETEP</smallcap> the NGWFs are expanded in a basis set of periodic cardinal sine (psinc)
+            functions&nbsp;[<cite linkend="cm204160bib13">13</cite>, <cite linkend="cm204160bib21">21</cite>], also known as Dirichlet or Fourier Lagrange-mesh
+            functions&nbsp;[<cite linkend="cm204160bib22">22</cite>, <cite linkend="cm204160bib23">23</cite>]. Each psinc function is centred on a particular point of a
+            regular real-space grid. Figure&nbsp;<figref linkend="cm204160fig1">1</figref> shows how this property is used to impose localization on the NGWFs
+            within predefined spherical regions and&nbsp;[<cite linkend="cm204160bib24">24</cite>] describes in detail our
+            methodology for the computation of each term (including the Hartree potential) in the
+            total energy with <inline-eqn><?TeX \mathcal {O}(N) ?>
+                <inline-graphic format="GIF" filename="images/cm204160ieqn1.gif"/>
+            </inline-eqn> cost.
+            <figure id="cm204160fig1" parts="single" width="column" position="float" pageposition="top" printstyle="normal" orientation="port">
+                <graphic>
+                    <graphic-file version="print" format="EPS" scale="100" filename="images/0416001.eps"/>
+                    <graphic-file version="ej" format="JPEG" filename="images/0416001.jpg"/>
+                </graphic>
+                <caption id="cm204160fc1" type="figure" label="Figure 1">
+                    <p indent="no">Imposing localization on an NGWF
+                        (&phis;<sub>&alpha;</sub>). The NGWF is expanded only in the psinc functions whose centres fall inside its
+                        localization sphere.</p>
+                </caption>
+            </figure></p></sec-level1><sec-level1 id="cm204160s3" label="3">
+        <heading>Basis set convergence</heading>
+        <p indent="no">Since the computational cost of a DFT calculation increases with the size of the basis set it
+            is important to be able to converge calculated properties to the desired accuracy using the
+            smallest possible basis set. The most convenient way to achieve this is to improve the basis
+            set systematically. For instance, the quality of a plane wave basis&nbsp;[<cite linkend="cm204160bib25">25</cite>] is
+            increased via a single parameter, the kinetic energy cut-off. At the other end of
+            the spectrum are atomic orbital (AO) basis sets which do not span space in a
+            uniform manner and whose systematic refinement is not straightforward. An
+            AO basis is defined by a number of independent features, such as the number of
+            functions per atom, and their radial and angular shapes. Furthermore, unlike plane
+            waves, AO basis sets are not orthogonal and consequently the undesired effect of
+            linear dependence can often hinder efforts to improve their quality. Nevertheless,
+            numerous careful attempts have been made to construct series of atomic basis sets
+            which demonstrate systematic improvement to varying degrees&nbsp;[<cite linkend="cm204160bib26" range="cm204160bib26,cm204160bib27,cm204160bib28,cm204160bib29">26&ndash;29</cite>]. Particular
+            attention has been paid to Gaussian&nbsp;[<cite linkend="cm204160bib30">30</cite>] functions where the series of
+            even-tempered&nbsp;[<cite linkend="cm204160bib31">31</cite>] and correlation-consistent&nbsp;[<cite linkend="cm204160bib32">32</cite>] basis sets
+            are amongst the best known cases of AO bases with systematic behaviour. In
+            <smallcap>ONETEP</smallcap> our psinc basis is constructed from plane waves in such a way that it fully
+            retains their desirable properties of orthogonality and systematicity whilst being
+            localized.</p>
+        <p>It is important to note that the set of plane waves which constitute the psinc functions is
+            different from that in a typical plane wave calculation. The relation between the two is
+            clarified in figure&nbsp;<figref linkend="cm204160fig2">2</figref>. The psinc basis set is constructed from plane waves <inline-eqn><?TeX \rme^{\rmi \mathbf
+                    {G}\bdot \mathbf {r}} ?>
+                <inline-graphic format="GIF" filename="images/cm204160ieqn2.gif"/>
+            </inline-eqn> with wavevectors <bold>G</bold> belonging
+            to a cube of side-length 2<bold>G</bold><sub>upper</sub>
+            in reciprocal space. On the other hand, conventional plane wave approaches&nbsp;[<cite linkend="cm204160bib25">25</cite>]
+            such as the <smallcap>CASTEP</smallcap> code&nbsp;[<cite linkend="cm204160bib33">33</cite>] construct their basis from a sphere of
+            <bold>G</bold>
+            vectors. Therefore, to compare <smallcap>ONETEP</smallcap> calculations with a code such as <smallcap>CASTEP</smallcap>, we
+            need to decide first on the most appropriate sphere of wavevectors. Figure&nbsp;<figref linkend="cm204160fig2">2</figref> shows some choices for the radius of this sphere:
+            <bold>G</bold><sub>upper</sub>
+            (sphere inscribed in cube, the <smallcap>CASTEP</smallcap> basis is a subset of the <smallcap>ONETEP</smallcap> basis),
+            <bold>G</bold><sub>eqv</sub>
+            (sphere has equal volume with cube, <smallcap>ONETEP</smallcap> and <smallcap>CASTEP</smallcap> basis sets
+            have an equal number of functions with most of them in common) and
+            <bold>G</bold><sub>lower</sub>
+            (sphere circumscribes the cube, the <smallcap>CASTEP</smallcap> basis is a superset of the <smallcap>ONETEP</smallcap>
+            basis).
+            <figure id="cm204160fig2" parts="single" width="column" position="float" pageposition="bottom" printstyle="normal" orientation="port">
+                <graphic>
+                    <graphic-file version="print" format="EPS" scale="100" filename="images/0416002.eps"/>
+                    <graphic-file version="ej" format="JPEG" filename="images/0416002.jpg"/>
+                </graphic>
+                <caption id="cm204160fc2" type="figure" label="Figure 2">
+                    <p indent="no">The psinc basis of <smallcap>ONETEP</smallcap> is constructed from a cube of wavevectors. Conventional plane
+                        wave approaches such as <smallcap>CASTEP</smallcap> define their plane wave basis from a sphere of
+                        wavevectors. Three choices of such spheres that could be used to compare <smallcap>ONETEP</smallcap> and
+                        <smallcap>CASTEP</smallcap> calculations are shown.</p>
+                </caption>
+            </figure></p>
+        <p>In order to examine the strengths and weaknesses of <smallcap>ONETEP</smallcap> compared to conventional
+            plane wave and AO approaches we have carried out a series of tests on the hydrogen bond
+            in the formaldehyde&ndash;water complex shown in figure&nbsp;<figref linkend="cm204160fig3">3</figref>. This is a rather sensitive test as hydrogen bonds are amongst the weakest
+            and longest chemical bonds, yet they are very important because they are commonly
+            encountered as major contributors to the structural stability and function of most
+            biological macromolecules such as proteins, DNA and sugars&nbsp;[<cite linkend="cm204160bib34">34</cite>]. For
+            the purpose of comparison we have used the local density approximation (LDA)&nbsp;[<cite linkend="cm204160bib35">35</cite>, <cite linkend="cm204160bib36">36</cite>] exchange&ndash;correlation (XC) functional.
+            <figure id="cm204160fig3" parts="single" width="column" position="float" pageposition="top" printstyle="normal" orientation="port">
+                <graphic>
+                    <graphic-file version="print" format="EPS" scale="70" filename="images/0416003.eps"/>
+                    <graphic-file version="ej" format="JPEG" filename="images/0416003.jpg"/>
+                </graphic>
+                <caption id="cm204160fc3" type="figure" label="Figure 3">
+                    <p indent="no">The molecular structure of the formaldehyde&ndash;water hydrogen bonded complex used in our
+                        tests (not equilibrium geometry).</p>
+                </caption>
+            </figure></p>
+        <p>Table&nbsp;<tabref linkend="cm204160tab1">1</tabref> shows the binding energies we obtained from calculations with <smallcap>CASTEP</smallcap>
+            for the three kinetic energy cut-offs in figure&nbsp;<figref linkend="cm204160fig2">2</figref>. Also shown is the total energy of the bound complex. The core
+            electrons in these calculations were replaced by norm-conserving pseudopotentials&nbsp;[<cite linkend="cm204160bib37" range="cm204160bib37,cm204160bib38,cm204160bib39">37&ndash;39</cite>]. Periodic boundary
+            conditions were used and the molecule was placed in a very large cubic simulation cell
+            (30&nbsp;&Aring; &times; 30&nbsp;&Aring; &times; 30&nbsp;&Aring;)
+            to ensure that the supercell approximation&nbsp;[<cite linkend="cm204160bib25">25</cite>] holds extremely
+            well.</p><table id="cm204160tab1" place="top">
+        <caption id="tc1" label="Table 1">
+            <p indent="no">Calculations on the formaldehyde&ndash;water complex with <smallcap>CASTEP</smallcap>, [<cite linkend="cm204160bib33">33</cite>].</p></caption>
+        <tgroup cols="3">
+            <colspec colnum="1" colname="col1" align="left"/>
+            <colspec colnum="2" colname="col2" align="left"/>
+            <colspec colnum="3" colname="col3" align="left"/>
+            <thead>
+                <row>
+                    <entry>Kinetic energy</entry>
+                    <entry>Total energy</entry>
+                    <entry>Binding energy</entry>
+                </row>
+                <row>
+                    <entry>cut-off (eV)</entry>
+                    <entry>(eV/atom)
+                    </entry>
+                    <entry>(meV)</entry>
+                </row>
+            </thead>
+            <tbody>
+                <row>
+                    <entry>608 <inline-eqn><?TeX ({\propto } \mathbf {G}_{\mathrm {upper}}^2) ?>
+                        <inline-graphic format="GIF" filename="images/cm204160ieqn3.gif"/>
+                    </inline-eqn></entry>
+                    <entry>&minus;154.444
+                    </entry>
+                    <entry>145</entry>
+                </row>
+                <row>
+                    <entry>935 <inline-eqn><?TeX ({\propto } \mathbf {G}_{\mathrm {eqv}}^2) ?>
+                        <inline-graphic format="GIF" filename="images/cm204160ieqn4.gif"/>
+                    </inline-eqn></entry>
+                    <entry>&minus;155.044
+                    </entry>
+                    <entry>149</entry>
+                </row>
+                <row>
+                    <entry>1823 <inline-eqn><?TeX ({\propto } \mathbf {G}_{\mathrm {lower}}^2) ?>
+                        <inline-graphic format="GIF" filename="images/cm204160ieqn5.gif"/>
+                    </inline-eqn></entry>
+                    <entry>&minus;155.082
+                    </entry>
+                    <entry>148</entry>
+                </row>
+            </tbody>
+        </tgroup>
+    </table>
+        <p>The corresponding <smallcap>ONETEP</smallcap> results are shown in table&nbsp;<tabref linkend="cm204160tab2">2</tabref> for the same periodic simulation cell, pseudopotentials and
+            LDA XC functional. A total of 16&nbsp;NGWFs were used for the hydrogen bonded
+            complex, one on each H&nbsp;atom and four on each C and O atom. We have
+            performed calculations for a wide range of NGWF localization sphere radii
+            <italic>r</italic><sub>loc</sub>
+            and we observe that the binding energy agrees with the converged <smallcap>CASTEP</smallcap> value<fnref linkend="cm204160fn4" override="no"><sup>4</sup></fnref> to 1&nbsp;meV, for
+            <italic>r</italic><sub>loc</sub>
+            as small as 3.7&nbsp;&Aring;. The total energy converges rapidly from above as a function of
+            <italic>r</italic><sub>loc</sub>, as
+            expected for a basis set variational method&nbsp;[<cite linkend="cm204160bib40">40</cite>]. We note that, once we are converged with
+            respect to <italic>r</italic><sub>loc</sub>, the <smallcap>ONETEP</smallcap> result lies between the <smallcap>CASTEP</smallcap> bounds shown in table&nbsp;<tabref linkend="cm204160tab1">1</tabref> and, as one would expect, agrees closely with the 935&nbsp;eV cut-off result
+            (<bold>G</bold><sub>eqv</sub>
+            sphere in figure&nbsp;<figref linkend="cm204160fig2">2</figref>). From here on we define the psinc kinetic energy cut-off to be the kinetic
+            energy cut-off of the plane wave sphere with the same volume as the cube of our psinc
+            basis.</p>
+        <table id="cm204160tab2" place="top">
+            <caption id="tc2" label="Table 2">
+                <p indent="no">Calculations on the formaldehyde&ndash;water complex with <smallcap>ONETEP</smallcap>&nbsp;[<cite linkend="cm204160bib7">7</cite>].</p></caption>
+            <tgroup cols="4">
+                <colspec colnum="1" colname="col1" align="left"/>
+                <colspec colnum="2" colname="col2" align="left"/>
+                <colspec colnum="3" colname="col3" align="left"/>
+                <colspec colnum="4" colname="col4" align="left"/>
+                <thead>
+                    <row>
+                        <entry></entry>
+                        <entry>Number of</entry>
+                        <entry>Total energy</entry>
+                        <entry>Binding energy</entry>
+                    </row>
+                    <row>
+                        <entry><italic>r</italic><sub>loc</sub>&nbsp;(&Aring;)</entry>
+                        <entry>iterations</entry>
+                        <entry>(eV/atom)
+                        </entry>
+                        <entry>(meV)</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>2.6</entry>
+                        <entry>13</entry>
+                        <entry>&minus;154.789
+                        </entry>
+                        <entry>168</entry>
+                    </row>
+                    <row>
+                        <entry>3.2</entry>
+                        <entry>13</entry>
+                        <entry>&minus;154.890
+                        </entry>
+                        <entry>155</entry>
+                    </row>
+                    <row>
+                        <entry>3.7</entry>
+                        <entry>11</entry>
+                        <entry>&minus;154.914
+                        </entry>
+                        <entry>150</entry>
+                    </row>
+                    <row>
+                        <entry>4.2</entry>
+                        <entry>11</entry>
+                        <entry>&minus;154.921
+                        </entry>
+                        <entry>148</entry>
+                    </row>
+                    <row>
+                        <entry>4.8</entry>
+                        <entry>12</entry>
+                        <entry>&minus;154.924
+                        </entry>
+                        <entry>148</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+        <p>Table&nbsp;<tabref linkend="cm204160tab2">2</tabref> also shows the number of self-consistency iterations taken to converge the total
+            energy, and we make the observation that this is independent of the localization region radius
+            <italic>r</italic><sub>loc</sub>, which demonstrates that our method does not suffer from the &lsquo;superposition ill
+            conditioning&rsquo; described in&nbsp;[<cite linkend="cm204160bib41">41</cite>].</p>
+        <p>To complete our comparison we present in table&nbsp;<tabref linkend="cm204160tab3">3</tabref> calculations with the AO approach as implemented in the NWChem&nbsp;[<cite linkend="cm204160bib42">42</cite>] quantum chemistry program which uses Gaussian basis sets and a closely
+            related formula&nbsp;[<cite linkend="cm204160bib35">35</cite>, <cite linkend="cm204160bib50">50</cite>] for the LDA XC functional. In this approach the
+            core electrons are treated explicitly and the molecules are virtually isolated in space as the
+            calculations are done with open boundary conditions. The total number of AOs (contracted
+            Gaussian functions) for the whole formaldehyde&ndash;water complex for each basis set is also
+            shown in table&nbsp;<tabref linkend="cm204160tab3">3</tabref>.</p><table id="cm204160tab3" place="top">
+        <caption id="tc3" label="Table 3">
+            <p indent="no">Calculations on the formaldehyde&ndash;water complex with NWChem&nbsp;[<cite linkend="cm204160bib42">42</cite>] using
+                Gaussian basis sets of increasing size.</p></caption>
+        <tgroup cols="4">
+            <colspec colnum="1" colname="col1" align="left"/>
+            <colspec colnum="2" colname="col2" align="left"/>
+            <colspec colnum="3" colname="col3" align="left"/>
+            <colspec colnum="4" colname="col4" align="left"/>
+            <thead>
+                <row>
+                    <entry></entry>
+                    <entry>Number</entry>
+                    <entry>Binding energy</entry>
+                    <entry>Counterpoise-corrected</entry>
+                </row>
+                <row>
+                    <entry>Basis name</entry>
+                    <entry>of AOs</entry>
+                    <entry>(meV)</entry>
+                    <entry>binding energy (meV)</entry>
+                </row>
+            </thead>
+            <tbody>
+                <row>
+                    <entry>STO-3G&nbsp;[<cite linkend="cm204160bib43">43</cite>]</entry>
+                    <entry>19</entry>
+                    <entry>91</entry>
+                    <entry>39</entry>
+                </row>
+                <row>
+                    <entry>3-21G&nbsp;[<cite linkend="cm204160bib44">44</cite>]</entry>
+                    <entry>35</entry>
+                    <entry>186</entry>
+                    <entry>92</entry>
+                </row>
+                <row>
+                    <entry>6-31G&nbsp;[<cite linkend="cm204160bib45">45</cite>]</entry>
+                    <entry>35</entry>
+                    <entry>171</entry>
+                    <entry>128</entry>
+                </row>
+                <row>
+                    <entry>6-31&plus;G<sup>*</sup>&nbsp;[<cite linkend="cm204160bib46">46</cite>, <cite linkend="cm204160bib47">47</cite>]</entry>
+                    <entry>65</entry>
+                    <entry>159</entry>
+                    <entry>143</entry>
+                </row>
+                <row>
+                    <entry>6-31&plus;&plus;G<sup>**</sup>&nbsp;[<cite linkend="cm204160bib46">46</cite>, <cite linkend="cm204160bib47">47</cite>]</entry>
+                    <entry>81</entry>
+                    <entry>162</entry>
+                    <entry>147</entry>
+                </row>
+                <row>
+                    <entry>cc-pVDZ &amp; diffuse&nbsp;[<cite linkend="cm204160bib48">48</cite>, <cite linkend="cm204160bib49">49</cite>]</entry>
+                    <entry>111</entry>
+                    <entry>153</entry>
+                    <entry>146</entry>
+                </row>
+                <row>
+                    <entry>cc-pVTZ&nbsp;[<cite linkend="cm204160bib48">48</cite>]</entry>
+                    <entry>165</entry>
+                    <entry>157</entry>
+                    <entry>133</entry>
+                </row>
+                <row>
+                    <entry>cc-pVTZ &amp; diffuse&nbsp;[<cite linkend="cm204160bib48">48</cite>, <cite linkend="cm204160bib49">49</cite>]</entry>
+                    <entry>265</entry>
+                    <entry>149</entry>
+                    <entry>147</entry>
+                </row>
+                <row>
+                    <entry>cc-pVQZ&nbsp;[<cite linkend="cm204160bib48">48</cite>]</entry>
+                    <entry>350</entry>
+                    <entry>151</entry>
+                    <entry>140</entry>
+                </row>
+                <row>
+                    <entry>cc-pVQZ &amp; diffuse&nbsp;[<cite linkend="cm204160bib48">48</cite>, <cite linkend="cm204160bib49">49</cite>]</entry>
+                    <entry>535</entry>
+                    <entry>148</entry>
+                    <entry>147</entry>
+                </row>
+            </tbody>
+        </tgroup>
+    </table>
+        <p>From table&nbsp;<tabref linkend="cm204160tab3">3</tabref> we observe that the convergence of the total energy of the complex is
+            neither uniform nor rapid, as a consequence of the fact that the different features, e.g.,
+            diffuse functions etc, introduced to the basis set affect the energy to different extents. We
+            also note that the size of the basis set required to reach the same level of accuracy as
+            <smallcap>ONETEP</smallcap> is very large. The calculations with the Gaussian basis set suffer from basis set
+            superposition error (BSSE) and thus in table&nbsp;<tabref linkend="cm204160tab3">3</tabref> we also give a column with binding energies calculated with the counterpoise
+            correction method of Boys and Bernardi&nbsp;[<cite linkend="cm204160bib51">51</cite>]. This costly correction procedure
+            significantly improves the binding energies obtained with the medium sized basis sets
+            (6-31&plus;G *
+            and 6-31&plus;&plus;G **).</p></sec-level1><sec-level1 id="cm204160s4" label="4">
+        <heading>Nanostructures, crystals and biomolecules</heading>
+        <p indent="no">In this section we present several examples of calculations on systems with around 1000
+            atoms. Materials and molecules with this number of atoms are usually beyond the
+            capabilities of conventional cubic-scaling approaches.
+        </p><sec-level2 id="cm204160s4.1" label="4.1">
+        <heading>Nanostructures: carbon nanotubes</heading>
+        <p indent="no">Carbon nanotubes are at the centre of many nanotechnology applications because
+            of their unique electronic and mechanical properties&nbsp;[<cite linkend="cm204160bib52">52</cite>]. From a
+            structural point of view nanotubes are seamless cylinders of graphene, which
+            can be either semiconducting or metallic. A method such as <smallcap>ONETEP</smallcap> where
+            linear scaling is achieved by taking advantage of the exponential decay of the
+            density matrix present in insulators is not expected to be efficient on metallic
+            systems where the decay is only algebraic&nbsp;[<cite linkend="cm204160bib11">11</cite>]. Metallic systems
+            therefore present a significant challenge and carbon nanotubes are an ideal test case
+            that can provide us with insight into how switching from a non-metallic to a
+            metallic system (while keeping all other factors essentially unchanged) affects
+            calculations where density matrix truncation is applied. We have studied segments of
+            metallic (10, 10) armchair and semiconducting (20, 0) zigzag carbon nanotubes&nbsp;[<cite linkend="cm204160bib52">52</cite>, <cite linkend="cm204160bib53">53</cite>].</p>
+        <p>The (10, 10) nanotube segments are constructed by repeating identical units of 40 atoms
+            while the (20, 0) segments are made of units of 80 atoms. For the (10, 10) nanotube we
+            performed <smallcap>ONETEP</smallcap> calculations on segments consisting of 8, 15, 16, 30 and 32 units
+            ranging from 320 to 1280 atoms. For the (20, 0) nanotube we used segments of 8 and 16
+            units with 640 and 1280 atoms respectively. As our nanotube segments were made of
+            repeated identical units we were able to perform with <smallcap>CASTEP</smallcap> calculations equivalent to
+            <smallcap>ONETEP</smallcap> by using only a single unit but equivalent Brillouin zone sampling. The same
+            LDA&nbsp;[<cite linkend="cm204160bib35">35</cite>, <cite linkend="cm204160bib36">36</cite>] XC functional and pseudopotential were used by both codes.
+            The plane wave kinetic energy cut-off of <smallcap>CASTEP</smallcap> was set to 410&nbsp;eV as was the
+            psinc kinetic energy cut-off of <smallcap>ONETEP</smallcap>. In the <smallcap>ONETEP</smallcap> calculations the radii
+            <italic>r</italic><sub>loc</sub>
+            of the carbon NGWF localization spheres were 3.3&nbsp;&Aring;. The nanotube segments
+            were placed in orthorhombic simulation cells with their axis aligned with the
+            <italic>z</italic>-axis. The dimensions
+            of the cells along the <italic>x</italic>-&nbsp;and <italic>y</italic>-axes
+            were 30&nbsp;&Aring; &times; 30&nbsp;&Aring;. These simulation cells ensured negligible interaction of the nanotubes with their periodic
+            images as the diameter of the (10, 10) tubes is just 13.6&nbsp;&Aring;&nbsp;and that of the (20, 0) tubes is 15.6&nbsp;&Aring;.
+            In order to perform a detailed comparison of the results between the two codes we
+            diagonalized the converged <smallcap>ONETEP</smallcap> Hamiltonian in the NGWF representation and
+            obtained canonical molecular orbitals. From these we constructed the density of states
+            (DOS) by smearing with Gaussians with a halfwidth of 0.1&nbsp;eV. Our results are shown in
+            figure&nbsp;<figref linkend="cm204160fig4">4</figref>. The two codes give virtually identical DOS in the important regions of 1&nbsp;eV
+            below and above the Fermi level and very close agreement in the region below
+            &minus;1&nbsp;eV. In the region above 1&nbsp;eV the agreement deteriorates rapidly. This is not surprising as the
+            NGWFs of <smallcap>ONETEP</smallcap> are specifically optimized to describe the density matrix which is
+            composed of occupied bands and no emphasis is placed on the description of the
+            conduction bands. It is still remarkable that the low-lying conduction band DOS is
+            calculated correctly with <smallcap>ONETEP</smallcap>.
+            <figure id="cm204160fig4" parts="single" width="column" position="float" pageposition="top" printstyle="normal" orientation="port">
+                <graphic>
+                    <graphic-file version="print" format="EPS" scale="100" filename="images/0416004.eps"/>
+                    <graphic-file version="ej" format="JPEG" filename="images/0416004.jpg"/>
+                </graphic>
+                <caption id="cm204160fc4" type="figure" label="Figure 4">
+                    <p indent="no">Top panel: the density of states (DOS) of a 30-unit segment of a (10, 10)
+                        metallic nanotube as calculated with <smallcap>ONETEP</smallcap> and <smallcap>CASTEP</smallcap>. On the right the
+                        <smallcap>ONETEP</smallcap>&nbsp;(30&nbsp;&Aring; &times; 30&nbsp;&Aring; &times; 73.30&nbsp;&Aring;)
+                        and <smallcap>CASTEP</smallcap>&nbsp;(30&nbsp;&Aring; &times; 30&nbsp;&Aring; &times; 2.44&nbsp;&Aring;)
+                        simulation cells are shown. Bottom panel: the density of states (DOS) of a 16-unit segment of a
+                        (20, 0) semiconducting nanotube as calculated with <smallcap>ONETEP</smallcap> and <smallcap>CASTEP</smallcap>. On the right the
+                        <smallcap>ONETEP</smallcap>&nbsp;(30&nbsp;&Aring; &times; 30&nbsp;&Aring; &times; 67.78&nbsp;&Aring;)
+                        and <smallcap>CASTEP</smallcap>&nbsp;(30&nbsp;&Aring; &times; 30&nbsp;&Aring; &times; 4.24&nbsp;&Aring;)
+                        simulation cells are shown.</p>
+                </caption>
+            </figure></p>
+        <p>As we make our (10, 10) nanotube segments longer, we increase the number of closely spaced
+            <bold>k</bold>-points from the metallic band structure of the nanotube that we fold into our equivalent
+            &Gamma;
+            point description of the band structure and the density matrix. We
+            have found that as the number of segments increases it becomes more
+            and more difficult to impose a finite density kernel cut-off threshold
+            <italic>r</italic><sub>cut</sub> in
+            <smallcap>ONETEP</smallcap> while maintaining any degree of accuracy. With the 30-&nbsp;and 32-unit segments an infinite
+            <italic>r</italic><sub>cut</sub>
+            becomes essential in order to obtain useful results. In contrast, the (20, 0) nanotube
+            remains amenable to density kernel truncation as the length of its segments is increased.
+            For example, in figure&nbsp;<figref linkend="cm204160fig4">4</figref> we show the DOS for the 16&nbsp;unit segment generated with <inline-eqn><?TeX r_{\mathrm {
+                    cut}}=\infty ?>
+                <inline-graphic format="GIF" filename="images/cm204160ieqn6.gif"/>
+            </inline-eqn> and with <italic>r</italic><sub>cut</sub> &equals; 15.9&nbsp;&Aring;&nbsp;and the two curves essentially coincide. Our observations are thus consistent with expected
+            behaviour regarding the decay of the density matrix in metallic and non-metallic systems
+            at zero temperature.</p>
+        <p><smallcap>ONETEP</smallcap> calculations with <inline-eqn><?TeX r_{\mathrm { cut}}=\infty ?>
+            <inline-graphic format="GIF" filename="images/cm204160ieqn6.gif"/>
+        </inline-eqn>, while not linear scaling, are still perfectly feasible. In particular, most computationally
+            intensive steps such as the construction of the Hamiltonian matrix in the
+            NGWF representation, the construction of the electronic charge density and the
+            calculation of the derivatives of the NGWFs with respect to the expansion
+            coefficients in the psinc basis depend only on the NGWF localization sphere radii
+            <italic>r</italic><sub>loc</sub>
+            and are always perfectly linear scaling independently of the value of
+            <italic>r</italic><sub>cut</sub>. The only step that stops being linear scaling when the density kernel
+            <bold>K</bold> is no longer sparse is
+            the optimization of <bold>K</bold>
+            which is carried out by using variants of the Li&ndash;Nunes&ndash;Vanderbilt&nbsp;[<cite linkend="cm204160bib54">54</cite>] method
+            and Haynes&rsquo;&nbsp;[<cite linkend="cm204160bib55">55</cite>] penalty functional method which involve matrix
+            multiplications.</p>
+        <p>It is also worth noting that unlike conventional plane wave approaches where the memory
+            and computation grows with the entire volume of the simulation cell without distinction
+            between vacuum and atomic regions, <smallcap>ONETEP</smallcap> uses algorithms&nbsp;[<cite linkend="cm204160bib24">24</cite>, <cite linkend="cm204160bib56">56</cite>]
+            which avoid computation and storage in vacuum regions, thus making possible calculations
+            in very large simulation cells as in this section.
+        </p></sec-level2><sec-level2 id="cm204160s4.2" label="4.2">
+        <heading>Solids: crystalline silicon</heading>
+        <p indent="no">Here we examine properties of pure crystalline silicon as calculated by <smallcap>ONETEP</smallcap> and
+            <smallcap>CASTEP</smallcap>. For these calculations we have used the LDA with a norm-conserving
+            pseudopotential and plane wave and psinc kinetic energy cut-offs of 283&nbsp;eV. A cubic
+            unit cell of 1000 atoms was used in the <smallcap>ONETEP</smallcap> calculations and a cubic unit
+            cell of eight atoms was used in the <smallcap>CASTEP</smallcap> calculations, with an equivalent
+            5 &times; 5 &times; 5&nbsp;<bold>k</bold>-point mesh. The two cells are shown in figure&nbsp;<figref linkend="cm204160fig5">5</figref>. We should note that in a code like <smallcap>CASTEP</smallcap> there are
+            two ways to define the basis set while varying the energy with respect
+            to the lattice parameter. One can either keep the kinetic energy cut-off
+            <italic>E</italic><sub>cut</sub>
+            constant or keep the number of plane wave basis functions
+            <italic>N</italic><sub>PW</sub>
+            constant. The latter approach is conceptually closer to the way the <smallcap>ONETEP</smallcap> calculations
+            are performed in these cases as it is the number of psinc functions that is kept constant,
+            which is equivalent to keeping constant the number of plane waves in the cube of
+            figure&nbsp;<figref linkend="cm204160fig2">2</figref>. Furthermore, in the <smallcap>ONETEP</smallcap> calculations, when varying the lattice parameter, it is important
+            to scale <italic>r</italic><sub>loc</sub>
+            and <italic>r</italic><sub>cut</sub>
+            proportionately. Throughout this section the values we report for these quantities
+            correspond to a lattice parameter of 5.43&nbsp;&Aring;.
+            <figure id="cm204160fig5" parts="single" width="column" position="float" pageposition="bottom" printstyle="normal" orientation="port">
+                <graphic>
+                    <graphic-file version="print" format="EPS" scale="100" filename="images/0416005.eps"/>
+                    <graphic-file version="ej" format="JPEG" filename="images/0416005.jpg"/>
+                </graphic>
+                <caption id="cm204160fc5" type="figure" label="Figure 5">
+                    <p indent="no">Periodic crystalline silicon. Left: the eight-atom cubic simulation cell used in the
+                        calculations with <smallcap>CASTEP</smallcap>. Right: the 1000-atom cubic simulation cell used in the
+                        calculations with <smallcap>ONETEP</smallcap>.</p>
+                </caption>
+            </figure></p>
+        <p>In figure&nbsp;<figref linkend="cm204160fig6">6</figref> we show <smallcap>CASTEP</smallcap>
+            constant-<italic>N</italic><sub>PW</sub>
+            plots of the total energy per eight-atom cell as a function of the lattice parameter for
+            kinetic energy cut-offs which correspond to the &lsquo;upper bound&rsquo; (184&nbsp;eV), &lsquo;equivalent&rsquo; (283&nbsp;eV)
+            and &lsquo;lower bound&rsquo; (551&nbsp;eV) cases of figure&nbsp;<figref linkend="cm204160fig2">2</figref>. The two <smallcap>ONETEP</smallcap> curves lie higher in energy than the <smallcap>CASTEP</smallcap> curves
+            because the NGWF radii we used were only 3.2&nbsp;&Aring;&nbsp;and the total energy is not yet completely
+            converged with respect to them. Nevertheless, the physical properties that we calculate are
+            already converged to a very satisfactory level.
+            <figure id="cm204160fig6" parts="single" width="column" position="float" pageposition="top" printstyle="normal" orientation="port">
+                <graphic>
+                    <graphic-file version="print" format="EPS" scale="100" filename="images/0416006.eps"/>
+                    <graphic-file version="ej" format="JPEG" filename="images/0416006.jpg"/>
+                </graphic>
+                <caption id="cm204160fc6" type="figure" label="Figure 6">
+                    <p indent="no">The total energy per eight-atom unit cell of silicon as a function of the lattice parameter for
+                        calculations with <smallcap>CASTEP</smallcap> and <smallcap>ONETEP</smallcap>.</p>
+                </caption>
+            </figure></p>
+        <p>By fitting the calculated energies as a function of the lattice parameter to the
+            Birch&ndash;Murnaghan equation of state&nbsp;[<cite linkend="cm204160bib57">57</cite>] we obtained values for the lattice
+            constants and bulk moduli of crystalline silicon which we show in table&nbsp;<tabref linkend="cm204160tab4">4</tabref>. There is excellent agreement between the <smallcap>ONETEP</smallcap> and <smallcap>CASTEP</smallcap>
+            constant-<italic>N</italic><sub>PW</sub>
+            results at 283&nbsp;eV. For the case of the infinite
+            <italic>r</italic><sub>cut</sub>
+            the lattice constants agree to 0.5&percnt; and the bulk moduli to 3.6&percnt; while for the case of the
+            9.5&nbsp;&Aring;&nbsp;<italic>r</italic><sub>cut</sub>
+            the lattice constants agree to 0.8&percnt; and bulk moduli to 3.5&percnt;.</p><table id="cm204160tab4" place="top">
+        <caption id="tc4" label="Table 4">
+            <p indent="no">Lattice constant and bulk modulus of perfect crystalline silicon as calculated by <smallcap>CASTEP</smallcap>,
+                <smallcap>ONETEP</smallcap> and experiment.</p></caption>
+        <tgroup cols="4">
+            <colspec colnum="1" colname="col1" align="left"/>
+            <colspec colnum="2" colname="col2" align="left"/>
+            <colspec colnum="3" colname="col3" align="left"/>
+            <colspec colnum="4" colname="col4" align="left"/>
+            <thead>
+                <row>
+                    <entry></entry>
+                    <entry>Kinetic energy</entry>
+                    <entry>Lattice constant</entry>
+                    <entry>Bulk modulus</entry>
+                </row>
+                <row>
+                    <entry>Method</entry>
+                    <entry>cut-off (eV)</entry>
+                    <entry>(&Aring;)</entry>
+                    <entry>(GPa)</entry>
+                </row>
+            </thead>
+            <tbody>
+                <row>
+                    <entry><smallcap>CASTEP</smallcap>, constant <italic>E</italic><sub>cut</sub>
+                    </entry>
+                    <entry>184</entry>
+                    <entry>5.410</entry>
+                    <entry>94.7</entry>
+                </row>
+                <row>
+                    <entry></entry>
+                    <entry>283</entry>
+                    <entry>5.392</entry>
+                    <entry>94.4</entry>
+                </row>
+                <row>
+                    <entry></entry>
+                    <entry>551</entry>
+                    <entry>5.383</entry>
+                    <entry>95.9</entry>
+                </row>
+                <row>
+                    <entry></entry>
+                </row>
+                <row>
+                    <entry><smallcap>CASTEP</smallcap>, constant <italic>N</italic><sub>PW</sub>
+                    </entry>
+                    <entry>184</entry>
+                    <entry>5.359</entry>
+                    <entry>109.1</entry>
+                </row>
+                <row>
+                    <entry></entry>
+                    <entry>283</entry>
+                    <entry>5.380</entry>
+                    <entry>96.1</entry>
+                </row>
+                <row>
+                    <entry></entry>
+                    <entry>551</entry>
+                    <entry>5.382</entry>
+                    <entry>96.6</entry>
+                </row>
+                <row>
+                    <entry></entry>
+                </row>
+                <row>
+                    <entry><smallcap>ONETEP</smallcap>, constant <italic>N</italic><sub>psinc</sub>, <inline-eqn><?TeX r_{\mathrm {cut } }=\infty ?>
+                        <inline-graphic format="GIF" filename="images/cm204160ieqn6.gif"/>
+                    </inline-eqn></entry>
+                    <entry>283</entry>
+                    <entry>5.406</entry>
+                    <entry>99.6</entry>
+                </row>
+                <row>
+                    <entry><smallcap>ONETEP</smallcap>, constant <italic>N</italic><sub>psinc</sub>, <italic>r</italic><sub>cut</sub> &equals; 9.5&nbsp;&Aring;
+                    </entry>
+                    <entry>283</entry>
+                    <entry>5.421</entry>
+                    <entry>99.5</entry>
+                </row>
+                <row>
+                    <entry></entry>
+                </row>
+                <row>
+                    <entry>Experiment</entry>
+                    <entry></entry>
+                    <entry>5.430</entry>
+                    <entry>100.0</entry>
+                </row>
+            </tbody>
+        </tgroup>
+    </table>
+        <p>The bulk modulus is a quantity which is sensitive to calculation parameters and difficult to
+            converge. Even between the <smallcap>CASTEP</smallcap> calculations with the highest cut-off of 551&nbsp;eV there
+            remains a difference of 0.7&percnt; between the bulk modulus values obtained with constant
+            <italic>E</italic><sub>cut</sub> and
+            constant <italic>N</italic><sub>PW</sub>
+            while the lattice constant difference in this case is reduced to only 0.02&percnt;.
+        </p></sec-level2><sec-level2 id="cm204160s4.3" label="4.3">
+        <heading>Biomolecules: breast cancer susceptibility proteins</heading>
+        <p indent="no">Biomolecules are generally too large for conventional DFT calculations. Nevertheless, a
+            number of insightful studies have been carried out where a small fragment can be
+            isolated from the rest of the biomolecule&nbsp;[<cite linkend="cm204160bib58">58</cite>, <cite linkend="cm204160bib59">59</cite>]. Obviously this
+            approach cannot be applied in cases where the interactions extend over a large
+            area, e.g., the case of two large proteins bound to each other. <smallcap>ONETEP</smallcap> can offer
+            great advantages in the study of such molecules since it allows one to perform
+            calculations either on entire biomolecules or at least on segments large enough
+            to contain the entire area of interaction. An example of the latter case is the
+            RAD51&ndash;BRCA2 protein complex, for which we present preliminary results in this
+            section.</p>
+        <p>The breast cancer susceptibility protein&nbsp;[<cite linkend="cm204160bib60">60</cite>] BRCA2 regulates the
+            function of RAD51, an enzyme involved in DNA recombination. Crucial to this
+            process is the specific interaction between RAD51 and a BRC motif (sub-region) in
+            BRCA2. There are eight slightly different versions of the BRC motif in a single
+            BRCA2 protein and each of these motifs can interact with a RAD51 protein.
+            Recently the structure of RAD51 bound to one of the BRC motifs (BRC4) has been
+            elucidated by high resolution x-ray diffraction, revealing in a qualitative manner
+            the nature of the interactions at the site of contact between the two proteins&nbsp;[<cite linkend="cm204160bib61">61</cite>]. Amino acids with both polar and hydrophobic side chains are
+            involved in these interactions. With this crystal structure as our starting point,
+            we have used calculations with <smallcap>ONETEP</smallcap> to predict the strength of the binding
+            between the two proteins. The 988-atom protein segment we have studied here
+            (figure&nbsp;<figref linkend="cm204160fig8">8</figref>) consists of the entire BRC4 motif and only the A5
+            &alpha;-helix of the RAD51. According to Pellegrini <italic>et al</italic> [<cite linkend="cm204160bib61">61</cite>] the major bonding
+            interaction between A5 and BRC4 is a polar interaction involving hydrogen bonding
+            between the side chains of arginine 250 of A5 and glutamic acid 1548 of BRC4. We have
+            first studied just this interaction in isolation by cutting a very small 97-atom segment from
+            the crystal structure of the proteins (figure&nbsp;<figref linkend="cm204160fig7">7</figref>) which contains the relevant amino acids Arg 205 and Glu 1548. The two
+            hydrogen bonds between the cationic side chain of the arginine and the anionic chain of the
+            glutamic acid of the segment are depicted in figure&nbsp;<figref linkend="cm204160fig7">7</figref>. For this segment we were able to perform calculations with both
+            <smallcap>ONETEP</smallcap> and <smallcap>CASTEP</smallcap>. We have used norm-conserving pseudopotentials,
+            plane wave and psinc kinetic energy cut-offs of 608&nbsp;eV, cubic simulation cells of
+            25&nbsp;&Aring; &times; 25&nbsp;&Aring; &times; 25&nbsp;&Aring;&nbsp;and
+            the Perdew&ndash;Burke&ndash;Ernzerhof (PBE)&nbsp;[<cite linkend="cm204160bib62">62</cite>] exchange&ndash;correlation functional. The radii
+            <italic>r</italic><sub>loc</sub>
+            of the NGWF localization spheres were set to 3.2&nbsp;&Aring;&nbsp;for the hydrogen atoms and
+            3.6&nbsp;&Aring;&nbsp;for all other atoms. The binding energies between these two fragments as
+            calculated by <smallcap>CASTEP</smallcap> and <smallcap>ONETEP</smallcap> are 2.78 and 2.79&nbsp;eV respectively. Besides
+            the excellent agreement between the two codes it is worth observing that this
+            binding energy is large in comparison to the energy of two regular hydrogen bonds
+            (which individually range from about 100 to 300&nbsp;meV). It appears that the bulk of
+            the binding strength comes from the electrostatic interaction between the
+            &plus;1 charge of the arginine
+            side group and the &minus;1
+            charge of the carboxyl of the glutamic acid. Indeed, the classical electrostatic energy of a system of two point
+            charges of &plus;1
+            and &minus;1
+            atomic units separated by the same distance as the centres of the side
+            chains of these amino acids is about 3.10&nbsp;eV, which is rather close to the
+            calculated binding energy. Calculations with the NWChem code with the
+            6-31&plus;G<sup>*</sup>
+            Gaussian basis set and the PBE functional produced a binding energy of 2.87&nbsp;eV which
+            after the counterpoise correction for BSSE became 2.82&nbsp;eV, in very good agreement with
+            <smallcap>CASTEP</smallcap> and <smallcap>ONETEP</smallcap> given the level of accuracy that can be reached with a Gaussian
+            basis set of this quality (section&nbsp;<secref linkend="cm204160s3">3</secref>).
+            <figure id="cm204160fig7" parts="single" width="column" position="float" pageposition="top" printstyle="normal" orientation="port">
+                <graphic>
+                    <graphic-file version="print" format="EPS" scale="100" filename="images/0416007.eps"/>
+                    <graphic-file version="ej" format="JPEG" filename="images/0416007.jpg"/>
+                </graphic>
+                <caption id="cm204160fc7" type="figure" label="Figure 7">
+                    <p indent="no">97-atom segment which includes the bonding interactions between the Arg 250&ndash;Glu
+                        1548 residues of the BRCA2-RAD51 complex. Left: stick model of the atomic
+                        structure. Middle: isosurface of the electronic change density at a value of
+                        0.02&nbsp;e<sup>&minus;</sup>/<italic>a</italic><sub>0</sub><sup>3</sup> from
+                        the <smallcap>ONETEP</smallcap> calculation. Right: isosurface of the electronic charge density difference due to bonding at a
+                        value of 0.00075&nbsp;e<sup>&minus;</sup>/<italic>a</italic><sub>0</sub><sup>3</sup>
+                        from the <smallcap>ONETEP</smallcap> calculation.</p>
+                </caption>
+            </figure>
+            <figure id="cm204160fig8" parts="single" width="column" position="float" pageposition="top" printstyle="normal" orientation="port">
+                <graphic>
+                    <graphic-file version="print" format="EPS" scale="100" filename="images/0416008.eps"/>
+                    <graphic-file version="ej" format="JPEG" filename="images/0416008.jpg"/>
+                </graphic>
+                <caption id="cm204160fc8" type="figure" label="Figure 8">
+                    <p indent="no">The 988-atom A5-BRC4 complex. Left: tertiary structure. Middle: stick model
+                        in atomic detail with the side groups of Arg 250 and Glu 1548 shown in
+                        space-filling form. Right: isosurface of the electronic charge density at a value of
+                        0.02&nbsp;e<sup>&minus;</sup>/<italic>a</italic><sub>0</sub><sup>3</sup>
+                        from the <smallcap>ONETEP</smallcap> calculation.</p>
+                </caption>
+            </figure></p>
+        <p>For the BRC4-A5 complex of figure&nbsp;<figref linkend="cm204160fig8">8</figref> the same calculation parameters as for the 97-atom segment were used except for the
+            orthorhombic 60&nbsp;&Aring; &times; 50&nbsp;&Aring; &times; 60&nbsp;&Aring;&nbsp;simulation cell. The binding energy between the whole A5 helix and the BRC4 motif that
+            we obtained from our calculations with <smallcap>ONETEP</smallcap> is 5.67&nbsp;eV. This is about twice as much as
+            the binding energy of the small segment of figure&nbsp;<figref linkend="cm204160fig7">7</figref> and it shows that the remaining interactions between A5 and BRC4, though
+            small individually, cannot be neglected.
+        </p></sec-level2></sec-level1><sec-level1 id="cm204160s5" label="5">
+        <heading>Conclusions</heading>
+        <p indent="no">In comparison with two well established cubic-scaling density functional methods, we
+            have demonstrated that <smallcap>ONETEP</smallcap> can routinely achieve the highest levels of
+            accuracy that are possible with these methods. Amongst the factors that make this
+            possible is the fact that in <smallcap>ONETEP</smallcap> the calculated properties converge rapidly
+            with the radii of the localization spheres of non-orthogonal generalized Wannier
+            functions (NGWFs) and the rate of self-consistent convergence is affected neither by
+            the size of these regions nor the number of atoms. Next we have demonstrated
+            the wide applicability of the method by presenting exploratory calculations in
+            systems of about 1000 atoms from a wide variety of materials. We have studied
+            semiconducting and metallic nanotubes, crystalline silicon, and the complex of two
+            bound proteins that can play a role in the development of breast cancer. In all
+            these cases we have managed to obtain excellent agreement with <smallcap>CASTEP</smallcap> in
+            comparing either smaller systems of the same material or, where possible by the use of
+            <bold>k</bold>-points, systems of equivalent size. These results confirm that <smallcap>ONETEP</smallcap> is a robust, highly
+            accurate linear-scaling density functional approach, which makes possible a whole new level
+            of large scale simulation in systems of interest to nanotechnology, biophysics and condensed
+            matter physics.</p></sec-level1>
+        <acknowledgment>
+            <heading>Acknowledgments</heading>
+            <p indent="no">C-KS&nbsp;would like to thank the Royal Society for a University Research Fellowship.
+                PDH&nbsp;would like to thank Sidney Sussex College Cambridge for a Research Fellowship. AAM
+                would like to thank Christ&rsquo;s College Cambridge for a Research Fellowship. We are indebted
+                to Professor Ashok Venkitaraman for introducing us to the BRCA2-RAD51 problem.
+                C-KS&nbsp;would like to thank Pamela Schartau for useful discussions on the theory of protein
+                structure. The computing resources of the Cambridge&ndash;Cranfield High Performance
+                Computing Facility have been essential for this work.
+            </p></acknowledgment>
+    </body>
+    <back>
+        <references>
+            <heading>References</heading>
+            <reference-list type="numeric">
+                <journal-ref id="cm204160bib1" num="1">
+                    <authors>
+                        <au><second-name>Hohenberg</second-name>
+                            <first-names>P</first-names>
+                        </au>
+                        <au><second-name>Kohn</second-name>
+                            <first-names>W</first-names>
+                        </au></authors>
+                    <year>1964</year>
+                    <jnl-title>Phys. Rev.</jnl-title>
+                    <volume>136</volume>
+                    <pages>B864</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib2" num="2">
+                    <authors>
+                        <au><second-name>Kohn</second-name>
+                            <first-names>W</first-names>
+                        </au>
+                        <au><second-name>Sham</second-name>
+                            <first-names>L J</first-names>
+                        </au></authors>
+                    <year>1965</year>
+                    <jnl-title>Phys. Rev.</jnl-title>
+                    <volume>140</volume>
+                    <pages>A1133</pages>
+                </journal-ref>
+                <book-ref id="cm204160bib3" num="3">
+                    <authors>
+                        <au><second-name>Martin</second-name>
+                            <first-names>R M</first-names>
+                        </au></authors>
+                    <year>2004</year>
+                    <book-title>Electronic Structure. Basic Theory and Practical Methods</book-title>
+                    <publication><place>Cambridge</place>
+                        <publisher>Cambridge University Press</publisher></publication>
+                </book-ref>
+                <journal-ref id="cm204160bib4" num="4">
+                    <authors>
+                        <au><second-name>Artacho</second-name>
+                            <first-names>E</first-names>
+                        </au>
+                        <au><second-name>Machado</second-name>
+                            <first-names>M</first-names>
+                        </au>
+                        <au><second-name>S&aacute;nchez-Portal</second-name>
+                            <first-names>D</first-names>
+                        </au>
+                        <au><second-name>Ordej&oacute;n</second-name>
+                            <first-names>P</first-names>
+                        </au>
+                        <au><second-name>Soler</second-name>
+                            <first-names>J M</first-names>
+                        </au></authors>
+                    <year>2003</year>
+                    <jnl-title>Mol. Phys.</jnl-title>
+                    <volume>101</volume>
+                    <pages>1587</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib5" num="5">
+                    <authors>
+                        <au><second-name>Galli</second-name>
+                            <first-names>G</first-names>
+                        </au></authors>
+                    <year>1996</year>
+                    <jnl-title>Curr. Opin. Solid State Mater. Sci.</jnl-title>
+                    <volume>1</volume>
+                    <pages>864</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib6" num="6">
+                    <authors>
+                        <au><second-name>Goedecker</second-name>
+                            <first-names>S</first-names>
+                        </au></authors>
+                    <year>1999</year>
+                    <jnl-title>Rev. Mod. Phys.</jnl-title>
+                    <volume>71</volume>
+                    <pages>1085</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib7" num="7">
+                    <authors>
+                        <au><second-name>Skylaris</second-name>
+                            <first-names>C-K</first-names>
+                        </au>
+                        <au><second-name>Haynes</second-name>
+                            <first-names>P D</first-names>
+                        </au>
+                        <au><second-name>Mostofi</second-name>
+                            <first-names>A A</first-names>
+                        </au>
+                        <au><second-name>Payne</second-name>
+                            <first-names>M C</first-names>
+                        </au></authors>
+                    <year>2005</year>
+                    <jnl-title>J. Chem. Phys.</jnl-title>
+                    <volume>122</volume>
+                    <pages>084119</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib8" num="8">
+                    <authors>
+                        <au><second-name>Kohn</second-name>
+                            <first-names>W</first-names>
+                        </au></authors>
+                    <year>1959</year>
+                    <jnl-title>Phys. Rev.</jnl-title>
+                    <volume>115</volume>
+                    <pages>809</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib9" num="9">
+                    <authors>
+                        <au><second-name>Des Cloizeaux</second-name>
+                            <first-names>J</first-names>
+                        </au></authors>
+                    <year>1964</year>
+                    <jnl-title>Phys. Rev.</jnl-title>
+                    <volume>135</volume>
+                    <pages>A685</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib10" num="10">
+                    <authors>
+                        <au><second-name>Baer</second-name>
+                            <first-names>R</first-names>
+                        </au>
+                        <au><second-name>Head-Gordon</second-name>
+                            <first-names>M</first-names>
+                        </au></authors>
+                    <year>1997</year>
+                    <jnl-title>Phys. Rev. Lett.</jnl-title>
+                    <volume>79</volume>
+                    <pages>3962</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib11" num="11">
+                    <authors>
+                        <au><second-name>Ismail-Beigi</second-name>
+                            <first-names>S</first-names>
+                        </au>
+                        <au><second-name>Arias</second-name>
+                            <first-names>T A</first-names>
+                        </au></authors>
+                    <year>1999</year>
+                    <jnl-title>Phys. Rev. Lett.</jnl-title>
+                    <volume>82</volume>
+                    <pages>2127</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib12" num="12">
+                    <authors>
+                        <au><second-name>He</second-name>
+                            <first-names>L</first-names>
+                        </au>
+                        <au><second-name>Vanderbilt</second-name>
+                            <first-names>D</first-names>
+                        </au></authors>
+                    <year>2001</year>
+                    <jnl-title>Phys. Rev. Lett.</jnl-title>
+                    <volume>86</volume>
+                    <pages>5341</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib13" num="13">
+                    <authors>
+                        <au><second-name>Skylaris</second-name>
+                            <first-names>C-K</first-names>
+                        </au>
+                        <au><second-name>Mostofi</second-name>
+                            <first-names>A A</first-names>
+                        </au>
+                        <au><second-name>Haynes</second-name>
+                            <first-names>P D</first-names>
+                        </au>
+                        <au><second-name>Di&eacute;guez</second-name>
+                            <first-names>O</first-names>
+                        </au>
+                        <au><second-name>Payne</second-name>
+                            <first-names>M C</first-names>
+                        </au></authors>
+                    <year>2002</year>
+                    <jnl-title>Phys. Rev.</jnl-title>
+                    <part>B</part>
+                    <volume>66</volume>
+                    <pages>035119</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib14" num="14">
+                    <authors>
+                        <au><second-name>McWeeny</second-name>
+                            <first-names>R</first-names>
+                        </au></authors>
+                    <year>1960</year>
+                    <jnl-title>Rev. Mod. Phys.</jnl-title>
+                    <volume>32</volume>
+                    <pages>335</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib15" num="15">
+                    <authors>
+                        <au><second-name>Hern&aacute;ndez</second-name>
+                            <first-names>E</first-names>
+                        </au>
+                        <au><second-name>Gillan</second-name>
+                            <first-names>M J</first-names>
+                        </au></authors>
+                    <year>1995</year>
+                    <jnl-title>Phys. Rev.</jnl-title>
+                    <part>B</part>
+                    <volume>51</volume>
+                    <pages>10157</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib16" num="16">
+                    <authors>
+                        <au><second-name>Goringe</second-name>
+                            <first-names>C M</first-names>
+                        </au>
+                        <au><second-name>Hern&aacute;ndez</second-name>
+                            <first-names>E</first-names>
+                        </au>
+                        <au><second-name>Gillan</second-name>
+                            <first-names>M J</first-names>
+                        </au>
+                        <au><second-name>Bush</second-name>
+                            <first-names>I J</first-names>
+                        </au></authors>
+                    <year>1997</year>
+                    <jnl-title>Comput. Phys. Commun.</jnl-title>
+                    <volume>102</volume>
+                    <pages>1</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib17" num="17">
+                    <authors>
+                        <au><second-name>Haynes</second-name>
+                            <first-names>P D</first-names>
+                        </au>
+                        <au><second-name>Payne</second-name>
+                            <first-names>M C</first-names>
+                        </au></authors>
+                    <year>1997</year>
+                    <jnl-title>Comput. Phys. Commun.</jnl-title>
+                    <volume>102</volume>
+                    <pages>17</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib18" num="18">
+                    <authors>
+                        <au><second-name>Fattebert</second-name>
+                            <first-names>J-L</first-names>
+                        </au>
+                        <au><second-name>Bernholc</second-name>
+                            <first-names>J</first-names>
+                        </au></authors>
+                    <year>2000</year>
+                    <jnl-title>Phys. Rev.</jnl-title>
+                    <part>B</part>
+                    <volume>62</volume>
+                    <pages>1713</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib19" num="19">
+                    <authors>
+                        <au><second-name>Fattebert</second-name>
+                            <first-names>J-L</first-names>
+                        </au>
+                        <au><second-name>Gygi</second-name>
+                            <first-names>F</first-names>
+                        </au></authors>
+                    <year>2004</year>
+                    <jnl-title>Comput. Phys. Commun.</jnl-title>
+                    <volume>162</volume>
+                    <pages>24</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib20" num="20">
+                    <authors>
+                        <au><second-name>Pask</second-name>
+                            <first-names>J E</first-names>
+                        </au>
+                        <au><second-name>Sterne</second-name>
+                            <first-names>P A</first-names>
+                        </au></authors>
+                    <year>2005</year>
+                    <jnl-title>Modelling Simul. Mater. Sci. Eng.</jnl-title>
+                    <volume>13</volume>
+                    <pages>R71</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib21" num="21">
+                    <authors>
+                        <au><second-name>Mostofi</second-name>
+                            <first-names>A A</first-names>
+                        </au>
+                        <au><second-name>Haynes</second-name>
+                            <first-names>P D</first-names>
+                        </au>
+                        <au><second-name>Skylaris</second-name>
+                            <first-names>C-K</first-names>
+                        </au>
+                        <au><second-name>Payne</second-name>
+                            <first-names>M C</first-names>
+                        </au></authors>
+                    <year>2003</year>
+                    <jnl-title>J. Chem. Phys.</jnl-title>
+                    <volume>119</volume>
+                    <pages>8842</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib22" num="22">
+                    <authors>
+                        <au><second-name>Baye</second-name>
+                            <first-names>D</first-names>
+                        </au>
+                        <au><second-name>Heenen</second-name>
+                            <first-names>P-H</first-names>
+                        </au></authors>
+                    <year>1986</year>
+                    <jnl-title>J. Phys. A: Math. Gen.</jnl-title>
+                    <volume>19</volume>
+                    <pages>2041</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib23" num="23">
+                    <authors>
+                        <au><second-name>Varga</second-name>
+                            <first-names>K</first-names>
+                        </au>
+                        <au><second-name>Zhang</second-name>
+                            <first-names>Z</first-names>
+                        </au>
+                        <au><second-name>Pantelides</second-name>
+                            <first-names>S T</first-names>
+                        </au></authors>
+                    <year>2004</year>
+                    <jnl-title>Phys. Rev. Lett.</jnl-title>
+                    <volume>93</volume>
+                    <pages>176403</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib24" num="24">
+                    <authors>
+                        <au><second-name>Mostofi</second-name>
+                            <first-names>A A</first-names>
+                        </au>
+                        <au><second-name>Skylaris</second-name>
+                            <first-names>C-K</first-names>
+                        </au>
+                        <au><second-name>Haynes</second-name>
+                            <first-names>P D</first-names>
+                        </au>
+                        <au><second-name>Payne</second-name>
+                            <first-names>M C</first-names>
+                        </au></authors>
+                    <year>2002</year>
+                    <jnl-title>Comput. Phys. Commun.</jnl-title>
+                    <volume>147</volume>
+                    <pages>788</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib25" num="25">
+                    <authors>
+                        <au><second-name>Payne</second-name>
+                            <first-names>M C</first-names>
+                        </au>
+                        <au><second-name>Teter</second-name>
+                            <first-names>M P</first-names>
+                        </au>
+                        <au><second-name>Allan</second-name>
+                            <first-names>D C</first-names>
+                        </au>
+                        <au><second-name>Arias</second-name>
+                            <first-names>T A</first-names>
+                        </au>
+                        <au><second-name>Joannopoulos</second-name>
+                            <first-names>J D</first-names>
+                        </au></authors>
+                    <year>1992</year>
+                    <jnl-title>Rev. Mod. Phys.</jnl-title>
+                    <volume>64</volume>
+                    <pages>1045</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib26" num="26">
+                    <authors>
+                        <au><second-name>Sankey</second-name>
+                            <first-names>O F</first-names>
+                        </au>
+                        <au><second-name>Niklewski</second-name>
+                            <first-names>D J</first-names>
+                        </au></authors>
+                    <year>1989</year>
+                    <jnl-title>Phys. Rev.</jnl-title>
+                    <part>B</part>
+                    <volume>40</volume>
+                    <pages>3979</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib27" num="27">
+                    <authors>
+                        <au><second-name>Kenny</second-name>
+                            <first-names>S D</first-names>
+                        </au>
+                        <au><second-name>Horsfield</second-name>
+                            <first-names>A P</first-names>
+                        </au>
+                        <au><second-name>Fujitani</second-name>
+                            <first-names>H</first-names>
+                        </au></authors>
+                    <year>2000</year>
+                    <jnl-title>Phys. Rev.</jnl-title>
+                    <part>B</part>
+                    <volume>62</volume>
+                    <pages>4899</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib28" num="28">
+                    <authors>
+                        <au><second-name>Junquera</second-name>
+                            <first-names>J</first-names>
+                        </au>
+                        <au><second-name>Paz</second-name>
+                            <first-names>O</first-names>
+                        </au>
+                        <au><second-name>S&aacute;nchez-Portal</second-name>
+                            <first-names>D</first-names>
+                        </au>
+                        <au><second-name>Artacho</second-name>
+                            <first-names>E</first-names>
+                        </au></authors>
+                    <year>2001</year>
+                    <jnl-title>Phys. Rev.</jnl-title>
+                    <part>B</part>
+                    <volume>64</volume>
+                    <pages>235111</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib29" num="29">
+                    <authors>
+                        <au><second-name>Anglada</second-name>
+                            <first-names>E</first-names>
+                        </au>
+                        <au><second-name>Soler</second-name>
+                            <first-names>J M</first-names>
+                        </au>
+                        <au><second-name>Junquera</second-name>
+                            <first-names>J</first-names>
+                        </au>
+                        <au><second-name>Artacho</second-name>
+                            <first-names>E</first-names>
+                        </au></authors>
+                    <year>2002</year>
+                    <jnl-title>Phys. Rev.</jnl-title>
+                    <part>B</part>
+                    <volume>66</volume>
+                    <pages>205101</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib30" num="30">
+                    <authors>
+                        <au><second-name>Davidson</second-name>
+                            <first-names>E R</first-names>
+                        </au>
+                        <au><second-name>Feller</second-name>
+                            <first-names>D</first-names>
+                        </au></authors>
+                    <year>1986</year>
+                    <jnl-title>Chem. Rev.</jnl-title>
+                    <volume>86</volume>
+                    <pages>681</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib31" num="31">
+                    <authors>
+                        <au><second-name>Bardo</second-name>
+                            <first-names>R D</first-names>
+                        </au>
+                        <au><second-name>Ruedenberg</second-name>
+                            <first-names>K</first-names>
+                        </au></authors>
+                    <year>1974</year>
+                    <jnl-title>J. Chem. Phys.</jnl-title>
+                    <volume>60</volume>
+                    <pages>918</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib32" num="32">
+                    <authors>
+                        <au><second-name>Dunning</second-name>
+                            <first-names>T H</first-names>
+                            <name-suffix>Jr</name-suffix>
+                        </au></authors>
+                    <year>1989</year>
+                    <jnl-title>J. Chem. Phys.</jnl-title>
+                    <volume>90</volume>
+                    <pages>1007</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib33" num="33">
+                    <authors>
+                        <au><second-name>Segall</second-name>
+                            <first-names>M D</first-names>
+                        </au>
+                        <au><second-name>Lindan</second-name>
+                            <first-names>P J D</first-names>
+                        </au>
+                        <au><second-name>Probert</second-name>
+                            <first-names>M J</first-names>
+                        </au>
+                        <au><second-name>Pickard</second-name>
+                            <first-names>C J</first-names>
+                        </au>
+                        <au><second-name>Hasnip</second-name>
+                            <first-names>P J</first-names>
+                        </au>
+                        <au><second-name>Clark</second-name>
+                            <first-names>S J</first-names>
+                        </au>
+                        <au><second-name>Payne</second-name>
+                            <first-names>M C</first-names>
+                        </au></authors>
+                    <year>2002</year>
+                    <jnl-title>J. Phys.: Condens. Matter</jnl-title>
+                    <volume>14</volume>
+                    <pages>2717</pages>
+                </journal-ref>
+                <book-ref id="cm204160bib34" num="34">
+                    <authors>
+                        <au><second-name>Branden</second-name>
+                            <first-names>C</first-names>
+                        </au>
+                        <au><second-name>Tooze</second-name>
+                            <first-names>J</first-names>
+                        </au></authors>
+                    <year>1998</year>
+                    <book-title>Introduction to Protein Structure</book-title>
+                    <edition>2nd edn</edition>
+                    <publication><place>New York</place>
+                        <publisher>Garland Publishing</publisher></publication>
+                </book-ref>
+                <journal-ref id="cm204160bib35" num="35">
+                    <authors>
+                        <au><second-name>Ceperley</second-name>
+                            <first-names>D M</first-names>
+                        </au>
+                        <au><second-name>Alder</second-name>
+                            <first-names>B J</first-names>
+                        </au></authors>
+                    <year>1980</year>
+                    <jnl-title>Phys. Rev. Lett.</jnl-title>
+                    <volume>45</volume>
+                    <pages>566</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib36" num="36">
+                    <authors>
+                        <au><second-name>Perdew</second-name>
+                            <first-names>J P</first-names>
+                        </au>
+                        <au><second-name>Zunger</second-name>
+                            <first-names>A</first-names>
+                        </au></authors>
+                    <year>1981</year>
+                    <jnl-title>Phys. Rev.</jnl-title>
+                    <part>B</part>
+                    <volume>23</volume>
+                    <pages>5048</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib37" num="37">
+                    <authors>
+                        <au><second-name>Hamann</second-name>
+                            <first-names>D R</first-names>
+                        </au>
+                        <au><second-name>Schl&uuml;ter</second-name>
+                            <first-names>M</first-names>
+                        </au>
+                        <au><second-name>Chiang</second-name>
+                            <first-names>C</first-names>
+                        </au></authors>
+                    <year>1979</year>
+                    <jnl-title>Phys. Rev. Lett.</jnl-title>
+                    <volume>43</volume>
+                    <pages>1494</pages>
+                </journal-ref>
+                <misc-ref id="cm204160bib38" num="38">
+                    <authors>
+                        <au><second-name>Lee</second-name>
+                            <first-names>M-H</first-names>
+                        </au>
+                        <au><second-name>Lin</second-name>
+                            <first-names>J-S</first-names>
+                        </au>
+                        <au><second-name>Payne</second-name>
+                            <first-names>M C</first-names>
+                        </au>
+                        <au><second-name>Heine</second-name>
+                            <first-names>V</first-names>
+                        </au>
+                        <au><second-name>Milman</second-name>
+                            <first-names>V</first-names>
+                        </au>
+                        <au><second-name>Crampin</second-name>
+                            <first-names>S</first-names>
+                        </au></authors>
+                    <year>2004</year>
+                    <art-title>Kinetic energy tuning for optimising pseudopotenials and projectior reduction</art-title>
+                    <misc-title>Psi-k Network Scientific Highlight of the Month 12</misc-title>
+                    <misc-text><webref url="http://psi-k.dl.ac.uk/index.html?highlights">http://psi-k.dl.ac.uk/index.html?highlights</webref></misc-text>
+                </misc-ref>
+                <journal-ref id="cm204160bib39" num="39">
+                    <authors>
+                        <au><second-name>Milman</second-name>
+                            <first-names>V</first-names>
+                        </au>
+                        <au><second-name>Lee</second-name>
+                            <first-names>M-H</first-names>
+                        </au></authors>
+                    <year>1996</year>
+                    <jnl-title>J. Phys. Chem.</jnl-title>
+                    <volume>100</volume>
+                    <pages>6093</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib40" num="40">
+                    <authors>
+                        <au><second-name>Skylaris</second-name>
+                            <first-names>C-K</first-names>
+                        </au>
+                        <au><second-name>Di&eacute;guez</second-name>
+                            <first-names>O</first-names>
+                        </au>
+                        <au><second-name>Haynes</second-name>
+                            <first-names>P&nbsp;D</first-names>
+                        </au>
+                        <au><second-name>Payne</second-name>
+                            <first-names>M C</first-names>
+                        </au></authors>
+                    <year>2002</year>
+                    <jnl-title>Phys. Rev.</jnl-title>
+                    <part>B</part>
+                    <volume>66</volume>
+                    <pages>073103</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib41" num="41">
+                    <authors>
+                        <au><second-name>Bowler</second-name>
+                            <first-names>D R</first-names>
+                        </au>
+                        <au><second-name>Gillan</second-name>
+                            <first-names>M J</first-names>
+                        </au></authors>
+                    <year>1998</year>
+                    <jnl-title>Comput. Phys. Commun.</jnl-title>
+                    <volume>112</volume>
+                    <pages>103</pages>
+                </journal-ref>
+                <misc-ref id="cm204160bib42" num="42">
+                    <authors>
+                        <au><second-name>Straatsma</second-name>
+                            <first-names>T P</first-names>
+                        </au> <others><italic>et al</italic> </others></authors>
+                    <year>2003</year>
+                    <misc-title>NWChem, A Computational Chemistry Package for Parallel Computers, Version
+                        4.5</misc-title>
+                    <publication><place>Richland, WA</place>
+                        <publisher>Pacific Northwest National Laboratory</publisher></publication>
+                </misc-ref>
+                <journal-ref id="cm204160bib43" num="43">
+                    <authors>
+                        <au><second-name>Hehre</second-name>
+                            <first-names>W J</first-names>
+                        </au>
+                        <au><second-name>Stewart</second-name>
+                            <first-names>R F</first-names>
+                        </au>
+                        <au><second-name>Pople</second-name>
+                            <first-names>J A</first-names>
+                        </au></authors>
+                    <year>1969</year>
+                    <jnl-title>J. Chem. Phys.</jnl-title>
+                    <volume>51</volume>
+                    <pages>2657</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib44" num="44">
+                    <authors>
+                        <au><second-name>Binkley</second-name>
+                            <first-names>J S</first-names>
+                        </au>
+                        <au><second-name>Pople</second-name>
+                            <first-names>J A</first-names>
+                        </au>
+                        <au><second-name>Hehre</second-name>
+                            <first-names>W J</first-names>
+                        </au></authors>
+                    <year>1980</year>
+                    <jnl-title>J. Am. Chem. Soc.</jnl-title>
+                    <volume>102</volume>
+                    <pages>939</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib45" num="45">
+                    <authors>
+                        <au><second-name>Hehre</second-name>
+                            <first-names>W J</first-names>
+                        </au>
+                        <au><second-name>Ditchfield</second-name>
+                            <first-names>R</first-names>
+                        </au>
+                        <au><second-name>Pople</second-name>
+                            <first-names>J A</first-names>
+                        </au></authors>
+                    <year>1972</year>
+                    <jnl-title>J. Chem. Phys.</jnl-title>
+                    <volume>56</volume>
+                    <pages>2257</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib46" num="46">
+                    <authors>
+                        <au><second-name>Clark</second-name>
+                            <first-names>T</first-names>
+                        </au>
+                        <au><second-name>Chandrasekhar</second-name>
+                            <first-names>J</first-names>
+                        </au>
+                        <au><second-name>Schleyer</second-name>
+                            <first-names>P V R</first-names>
+                        </au></authors>
+                    <year>1983</year>
+                    <jnl-title>J. Comput. Chem.</jnl-title>
+                    <volume>4</volume>
+                    <pages>294</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib47" num="47">
+                    <authors>
+                        <au><second-name>Hariharan</second-name>
+                            <first-names>P C</first-names>
+                        </au>
+                        <au><second-name>Pople</second-name>
+                            <first-names>J A</first-names>
+                        </au></authors>
+                    <year>1973</year>
+                    <jnl-title>Theor. Chim. Acta</jnl-title>
+                    <volume>28</volume>
+                    <pages>213</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib48" num="48">
+                    <authors>
+                        <au><second-name>Dunning</second-name>
+                            <first-names>T H</first-names>
+                        </au></authors>
+                    <year>1989</year>
+                    <jnl-title>J. Chem. Phys.</jnl-title>
+                    <volume>90</volume>
+                    <pages>1007</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib49" num="49">
+                    <authors>
+                        <au><second-name>Kendall</second-name>
+                            <first-names>R A</first-names>
+                        </au>
+                        <au><second-name>Dunning</second-name>
+                            <first-names>T H</first-names>
+                            <name-suffix>Jr</name-suffix>
+                        </au>
+                        <au><second-name>Harrison</second-name>
+                            <first-names>R J</first-names>
+                        </au></authors>
+                    <year>1992</year>
+                    <jnl-title>J. Chem. Phys.</jnl-title>
+                    <volume>96</volume>
+                    <pages>6769</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib50" num="50">
+                    <authors>
+                        <au><second-name>Vosko</second-name>
+                            <first-names>S J</first-names>
+                        </au>
+                        <au><second-name>Wilk</second-name>
+                            <first-names>L</first-names>
+                        </au>
+                        <au><second-name>Nusair</second-name>
+                            <first-names>M</first-names>
+                        </au></authors>
+                    <year>1980</year>
+                    <jnl-title>Can. J. Phys.</jnl-title>
+                    <volume>58</volume>
+                    <pages>1200</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib51" num="51">
+                    <authors>
+                        <au><second-name>Boys</second-name>
+                            <first-names>S F</first-names>
+                        </au>
+                        <au><second-name>Bernardi</second-name>
+                            <first-names>F</first-names>
+                        </au></authors>
+                    <year>1970</year>
+                    <jnl-title>Mol. Phys.</jnl-title>
+                    <volume>19</volume>
+                    <pages>553</pages>
+                </journal-ref>
+                <book-ref id="cm204160bib52" num="52">
+                    <authors>
+                        <au><second-name>Saito</second-name>
+                            <first-names>R</first-names>
+                        </au>
+                        <au><second-name>Dresselhaus</second-name>
+                            <first-names>G</first-names>
+                        </au>
+                        <au><second-name>Dresselhaus</second-name>
+                            <first-names>M S</first-names>
+                        </au></authors>
+                    <year>1998</year>
+                    <book-title>Physical Properties of Carbon Nanotubes</book-title>
+                    <publication><place>London</place>
+                        <publisher>Imperial College Press</publisher></publication>
+                </book-ref>
+                <journal-ref id="cm204160bib53" num="53">
+                    <authors>
+                        <au><second-name>Odom</second-name>
+                            <first-names>T W</first-names>
+                        </au>
+                        <au><second-name>Huang</second-name>
+                            <first-names>J-L</first-names>
+                        </au>
+                        <au><second-name>Kim</second-name>
+                            <first-names>P</first-names>
+                        </au>
+                        <au><second-name>Lieber</second-name>
+                            <first-names>C M</first-names>
+                        </au></authors>
+                    <year>2000</year>
+                    <jnl-title>J. Phys. Chem.</jnl-title>
+                    <part>B</part>
+                    <volume>104</volume>
+                    <pages>2794</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib54" num="54">
+                    <authors>
+                        <au><second-name>Li</second-name>
+                            <first-names>X P</first-names>
+                        </au>
+                        <au><second-name>Nunes</second-name>
+                            <first-names>R W</first-names>
+                        </au>
+                        <au><second-name>Vanderbilt</second-name>
+                            <first-names>D</first-names>
+                        </au></authors>
+                    <year>1993</year>
+                    <jnl-title>Phys. Rev.</jnl-title>
+                    <part>B</part>
+                    <volume>47</volume>
+                    <pages>10891</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib55" num="55">
+                    <authors>
+                        <au><second-name>Haynes</second-name>
+                            <first-names>P D</first-names>
+                        </au>
+                        <au><second-name>Payne</second-name>
+                            <first-names>M C</first-names>
+                        </au></authors>
+                    <year>1999</year>
+                    <jnl-title>Phys. Rev.</jnl-title>
+                    <part>B</part>
+                    <volume>59</volume>
+                    <pages>12173</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib56" num="56">
+                    <authors>
+                        <au><second-name>Skylaris</second-name>
+                            <first-names>C-K</first-names>
+                        </au>
+                        <au><second-name>Mostofi</second-name>
+                            <first-names>A A</first-names>
+                        </au>
+                        <au><second-name>Haynes</second-name>
+                            <first-names>P D</first-names>
+                        </au>
+                        <au><second-name>Pickard</second-name>
+                            <first-names>C J</first-names>
+                        </au>
+                        <au><second-name>Payne</second-name>
+                            <first-names>M C</first-names>
+                        </au></authors>
+                    <year>2001</year>
+                    <jnl-title>Comput. Phys. Commun.</jnl-title>
+                    <volume>140</volume>
+                    <pages>315</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib57" num="57">
+                    <authors>
+                        <au><second-name>Murnaghan</second-name>
+                            <first-names>F D</first-names>
+                        </au></authors>
+                    <year>1944</year>
+                    <jnl-title>Proc. Natl Acad. Sci.</jnl-title>
+                    <volume>30</volume>
+                    <pages>244</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib58" num="58">
+                    <authors>
+                        <au><second-name>Molteni</second-name>
+                            <first-names>C</first-names>
+                        </au>
+                        <au><second-name>Frank</second-name>
+                            <first-names>I</first-names>
+                        </au>
+                        <au><second-name>Parrinello</second-name>
+                            <first-names>M</first-names>
+                        </au></authors>
+                    <year>1999</year>
+                    <jnl-title>J. Am. Chem. Soc.</jnl-title>
+                    <volume>121</volume>
+                    <pages>12177</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib59" num="59">
+                    <authors>
+                        <au><second-name>Segall</second-name>
+                            <first-names>M D</first-names>
+                        </au></authors>
+                    <year>2002</year>
+                    <jnl-title>J. Phys.: Condens. Matter</jnl-title>
+                    <volume>14</volume>
+                    <pages>2957</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib60" num="60">
+                    <authors>
+                        <au><second-name>Venkitaraman</second-name>
+                            <first-names>A R</first-names>
+                        </au></authors>
+                    <year>2002</year>
+                    <jnl-title>Cell</jnl-title>
+                    <volume>108</volume>
+                    <pages>171</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib61" num="61">
+                    <authors>
+                        <au><second-name>Pellegrini</second-name>
+                            <first-names>L</first-names>
+                        </au>
+                        <au><second-name>Yu</second-name>
+                            <first-names>D S</first-names>
+                        </au>
+                        <au><second-name>Lo</second-name>
+                            <first-names>T</first-names>
+                        </au>
+                        <au><second-name>Anand</second-name>
+                            <first-names>S</first-names>
+                        </au>
+                        <au><second-name>Lee</second-name>
+                            <first-names>M</first-names>
+                        </au>
+                        <au><second-name>Blundell</second-name>
+                            <first-names>T L</first-names>
+                        </au>
+                        <au><second-name>Venkitaraman</second-name>
+                            <first-names>A</first-names>
+                        </au></authors>
+                    <year>2002</year>
+                    <jnl-title>Nature</jnl-title>
+                    <volume>420</volume>
+                    <pages>287</pages>
+                </journal-ref>
+                <journal-ref id="cm204160bib62" num="62">
+                    <authors>
+                        <au><second-name>Perdew</second-name>
+                            <first-names>J P</first-names>
+                        </au>
+                        <au><second-name>Burke</second-name>
+                            <first-names>K</first-names>
+                        </au>
+                        <au><second-name>Ernzerhof</second-name>
+                            <first-names>M</first-names>
+                        </au></authors>
+                    <year>1996</year>
+                    <jnl-title>Phys. Rev. Lett.</jnl-title>
+                    <volume>77</volume>
+                    <pages>3865</pages>
+                </journal-ref>
+            </reference-list>
+        </references>
+        <footnotes>
+            <footnote id="cm204160fn4" source="text">
+                <p>One kcal&nbsp;mol<sup>&minus;1</sup>
+                    is equal to 43.36 meV.</p></footnote>
+        </footnotes>
+    </back>
+</article>
