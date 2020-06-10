@@ -66,7 +66,7 @@ public class XmlFilteringInputStream extends FilterInputStream {
   // in Java an integer is always 32 bits
   private static int INVALID_LOW_CHAR_MASK = (~((1<<9) | (1 <<10) | (1 << 13) )); 
 
-  protected XmlFilteringInputStream(InputStream in) {
+  public XmlFilteringInputStream(InputStream in) {
     super(in);
   }
 

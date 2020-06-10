@@ -248,12 +248,12 @@ public class IopArticleXmlMetadataExtractorFactory extends SourceXmlMetadataExtr
         @Override
         protected InputStream getInputStreamFromCU(CachedUrl cu) {
           if (isDoXmlFiltering()) {
-            return new ReaderInputStream(new LineRewritingReader(new InputStreamReader(cu.getUnfilteredInputStream())) {
+            return new XmlFilteringInputStream(new ReaderInputStream(new LineRewritingReader(new InputStreamReader(cu.getUnfilteredInputStream())) {
               @Override
               public String rewriteLine(String line) {
-                return StringEscapeUtils.escapeHtml4(line);
+                return StringEscapeUtils.unescapeHtml4(line);
               }
-            });
+            }));
           }
           else { 
             return cu.getUnfilteredInputStream();
