@@ -46,10 +46,6 @@ import java.io.IOException;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.ZoneId;
-import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeFormatterBuilder;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
@@ -196,15 +192,15 @@ public abstract class BaseOaiPmhCrawlSeed extends BaseCrawlSeed {
       throws ConfigurationException {
     Date ret;
     
-    DateTimeFormatter formatter = new DateTimeFormatterBuilder()
-            .parseLenient().appendPattern("yyyy-MM-dd").toFormatter();
-    LocalDate localDate = LocalDate.parse(date, formatter);
-
-    logger.debug3("Fei - LocalDate :  date = " + localDate);
-
-    ret = java.sql.Date.valueOf(localDate);
-    logger.debug3("Fei - LocalDate converted to date :  date = " + ret);
-
+    if(date.length() == 10) {
+      date = date + "T00:00:00";
+    }
+    try {
+      ret = df.parse(date);
+    } catch (ParseException e) {
+      throw new ConfigurationException(
+              "Incorrectly formatted OAI " + name + " date", e);
+    }
     return ret;
   }
   
