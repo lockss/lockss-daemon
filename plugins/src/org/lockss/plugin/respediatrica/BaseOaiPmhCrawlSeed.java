@@ -74,7 +74,7 @@ public abstract class BaseOaiPmhCrawlSeed extends BaseCrawlSeed {
   public static final String DEFAULT_OAI_URL_POSTFIX = "oai/request";
   public static final String YEAR_START_POSTFIX = "-01-01";
   public static final String YEAR_END_POSTFIX = "-12-31";
-  public static final Granularity DEFAULT_GRANULARITY = Granularity.Second;
+  public static final Granularity DEFAULT_GRANULARITY = Granularity.Day;
   public static final String NULL_SET = "[NONE]";
   
   protected ServiceProvider sp;
@@ -150,10 +150,13 @@ public abstract class BaseOaiPmhCrawlSeed extends BaseCrawlSeed {
       }
     }
     if(config.containsKey(KEY_AU_OAI_GRANULARITY)) {
+      logger.debug3("Fei - KEY_AU_OAI_GRANULARITY is set");
       if(!setGranularity(config.get(KEY_AU_OAI_GRANULARITY))) {
         throw new ConfigurationException(KEY_AU_OAI_GRANULARITY + 
                                          " must be " + Granularity.Day + 
                                          " or " + Granularity.Second);
+      }  else {
+        logger.debug3("Fei - granularity is set to : " + config.get(KEY_AU_OAI_GRANULARITY));
       }
     }
       

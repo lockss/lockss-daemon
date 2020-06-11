@@ -35,6 +35,7 @@ import org.dspace.xoai.serviceprovider.model.Context.KnownTransformer;
 import org.dspace.xoai.serviceprovider.parameters.ListRecordsParameters;
 import org.dspace.xoai.services.api.MetadataSearch;
 import org.lockss.config.Configuration;
+import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
@@ -53,9 +54,11 @@ public abstract class RecordFilteringOaiPmhCrawlSeed extends BaseOaiPmhCrawlSeed
 
   protected boolean usesDateRange = true;
   protected boolean usesSet = false;
+  protected boolean usesGranularity = true;
   protected Map<String, Pattern> metadataRules;
   public static final String KEY_AU_OAI_FILTER_RULES = "au_oai_filter_rules";
   public static final String KEY_AU_OAI_DATE = "au_oai_date";
+  public static final String KEY_AU_OAI_GRANULARITY = "oai_granularity";
   public static final String DEFAULT_FILTERING_METADATAPREFIX = "oai_lockss";
 
   public RecordFilteringOaiPmhCrawlSeed(CrawlerFacade cf) {
@@ -77,6 +80,8 @@ public abstract class RecordFilteringOaiPmhCrawlSeed extends BaseOaiPmhCrawlSeed
       parseRules(config.get(KEY_AU_OAI_DATE));
     } else if (config.containsKey(KEY_AU_OAI_FILTER_RULES)) {
       parseRules(config.get(KEY_AU_OAI_FILTER_RULES));
+    } else if (usesDateRange) {
+      parseRules(config.get(ConfigParamDescr.YEAR.getKey()));
     }
   }
   
@@ -106,6 +111,7 @@ public abstract class RecordFilteringOaiPmhCrawlSeed extends BaseOaiPmhCrawlSeed
    * @param from
    * @param until
    * @param set
+   * @param granularity
    * @param metadataPrefix
    * @return ListIdentifiersParameters
    */
@@ -115,9 +121,15 @@ public abstract class RecordFilteringOaiPmhCrawlSeed extends BaseOaiPmhCrawlSeed
     if (usesDateRange) {
       lip.withFrom(from);
       lip.withUntil(until);
+
+      logger.debug3("Fei - buildParams from = " + from + ", until = " + until);
     }
     if (usesSet && !set.equals(NULL_SET)) {
       lip.withSetSpec(set);
+    }
+    if (usesGranularity) {
+      lip.withGranularity("YYYY-MM-DD");
+      logger.debug3("Fei - buildParams granularity set granularity");
     }
     return lip;
   }
