@@ -483,8 +483,8 @@
       au < bmj.BMJDrupalPlugin ; manifest ; 2018 ; BMJ Volume 362 ; 362 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; manifest ; 2018 ; BMJ Volume 363 ; 363 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; expected ; 2019 ; BMJ Volume 364 ; 364 ; https://www.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; manifest ; 2019 ; BMJ Volume 365 ; 365 ; https://www.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; manifest ; 2019 ; BMJ Volume 366 ; 366 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; ready ; 2019 ; BMJ Volume 365 ; 365 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; ready ; 2019 ; BMJ Volume 366 ; 366 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; ready ; 2019 ; BMJ Volume 367 ; 367 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; expected ; 2020 ; BMJ Volume 368 ; 368 ; https://www.bmj.com/ >
 
@@ -564,7 +564,7 @@
       au < HighWirePressH20Plugin ; down ; 2014 ; BMJ Open Diabetes Research & Care Volume 2 ; 2 ; http://drc.bmj.com/ >
       au < HighWirePressH20Plugin ; down ; 2015 ; BMJ Open Diabetes Research & Care Volume 3 ; 3 ; http://drc.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; released ; 2016 ; BMJ Open Diabetes Research & Care Volume 4 ; 4 ; https://drc.bmj.com/ > # Unable to fetch probe permission page
-      au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; BMJ Open Diabetes Research & Care Volume 5 ; 5 ; https://drc.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; ready ; 2017 ; BMJ Open Diabetes Research & Care Volume 5 ; 5 ; https://drc.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; released ; 2018 ; BMJ Open Diabetes Research & Care Volume 6 ; 6 ; https://drc.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; released ; 2019 ; BMJ Open Diabetes Research & Care Volume 7 ; 7 ; https://drc.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; expected ; 2020 ; BMJ Open Diabetes Research & Care Volume 8 ; 8 ; https://drc.bmj.com/ >
@@ -637,7 +637,7 @@
     #param[base_url] = http://stel.bmj.com/
     
     au < HighWirePressH20Plugin ; down ; 2014-2015 ; BMJ Simulation & Technology Enhanced Learning Volume 1 ; 1 ; http://stel.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; manifest ; 2016 ; BMJ Simulation & Technology Enhanced Learning Volume 2 ; 2 ; https://stel.bmj.com/ > # Unable to fetch probe permission page
+    au < bmj.BMJDrupalPlugin ; ready ; 2016 ; BMJ Simulation & Technology Enhanced Learning Volume 2 ; 2 ; https://stel.bmj.com/ > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; BMJ Simulation & Technology Enhanced Learning Volume 3 ; 3 ; https://stel.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2018 ; BMJ Simulation & Technology Enhanced Learning Volume 4 ; 4 ; https://stel.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2019 ; BMJ Simulation & Technology Enhanced Learning Volume 5 ; 5 ; https://stel.bmj.com/ >
@@ -1194,7 +1194,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; released ; 2016 ; Evidence-Based Mental Health Volume 19 ; 19 ; https://ebmh.bmj.com/ > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; Evidence-Based Mental Health Volume 20 ; 20 ; https://ebmh.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2018 ; Evidence-Based Mental Health Volume 21 ; 21 ; https://ebmh.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; manifest ; 2019 ; Evidence-Based Mental Health Volume 22 ; 22 ; https://ebmh.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; ready ; 2019 ; Evidence-Based Mental Health Volume 22 ; 22 ; https://ebmh.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2020 ; Evidence-Based Mental Health Volume 23 ; 23 ; https://ebmh.bmj.com/ >
 
   }
@@ -1769,7 +1769,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; released ; 2016 ; Journal of Medical Ethics Volume 42 ; 42 ; https://jme.bmj.com/ > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; Journal of Medical Ethics Volume 43 ; 43 ; https://jme.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2018 ; Journal of Medical Ethics Volume 44 ; 44 ; https://jme.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; manifest ; 2019 ; Journal of Medical Ethics Volume 45 ; 45 ; https://jme.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; ready ; 2019 ; Journal of Medical Ethics Volume 45 ; 45 ; https://jme.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2020 ; Journal of Medical Ethics Volume 46 ; 46 ; https://jme.bmj.com/ >
 
   }
