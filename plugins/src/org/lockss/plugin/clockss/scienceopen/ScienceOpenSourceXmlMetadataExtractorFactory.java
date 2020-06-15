@@ -34,16 +34,16 @@ package org.lockss.plugin.clockss.scienceopen;
 
 import org.lockss.daemon.PluginException;
 import org.lockss.daemon.ShouldNotHappenException;
-import org.lockss.extractor.ArticleMetadata;
-import org.lockss.extractor.FileMetadataExtractor;
-import org.lockss.extractor.MetadataField;
-import org.lockss.extractor.MetadataTarget;
+import org.lockss.extractor.*;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.JatsPublishingSchemaHelper;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 import org.lockss.util.Logger;
 import org.w3c.dom.Document;
+import org.w3c.dom.Node;
+
+import java.util.regex.Matcher;
 
 public class ScienceOpenSourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
     static Logger log = Logger.getLogger(ScienceOpenSourceXmlMetadataExtractorFactory.class);
@@ -72,12 +72,14 @@ public class ScienceOpenSourceXmlMetadataExtractorFactory extends SourceXmlMetad
         @Override
         protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu, Document xmlDoc) {
             String url = cu.getUrl();
-            log.debug3("Setup Jats schema helper for url " + url);
             if (JatsPublishingHelper == null) {
-                JatsPublishingHelper = new JatsPublishingSchemaHelper();
+                log.debug3("Fei - Setup ScienceOpenSchemaHelper helper for url " + url);
+                JatsPublishingHelper = new ScienceOpenSchemaHelper();
             }
             return JatsPublishingHelper;
         }
+
+
 
         @Override
         protected void postCookProcess(SourceXmlSchemaHelper schemaHelper,
