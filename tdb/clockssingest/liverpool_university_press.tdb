@@ -413,7 +413,7 @@
     au < finished ; manifest ; 2017 ; Francosphères Volume 6 ; 6 ; http://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2018 ; Francosphères Volume 7 ; 7 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2019 ; Francosphères Volume 8 ; 8 ; https://online.liverpooluniversitypress.co.uk/ ; >
-    au < expected ; exists ; 2020 ; Francosphères Volume 9 ; 9 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < manifest ; exists ; 2020 ; Francosphères Volume 9 ; 9 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
 
@@ -733,7 +733,7 @@
     au < finished ; manifest ; 2018 ; Labour History: A Journal of Labour and Social History Volume 115 ; 115 ; https://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; Labour History: A Journal of Labour and Social History Volume 116 ; 116 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < manifest ; exists ; 2019 ; Labour History: A Journal of Labour and Social History Volume 117 ; 117 ; https://online.liverpooluniversitypress.co.uk/ ; >
-    au < expected ; exists ; 2020 ; Labour History: A Journal of Labour and Social History Volume 118 ; 118 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < manifest ; exists ; 2020 ; Labour History: A Journal of Labour and Social History Volume 118 ; 118 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < expected ; exists ; 2020 ; Labour History: A Journal of Labour and Social History Volume 119 ; 119 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
@@ -914,7 +914,7 @@
     au < finished ; manifest ; 2017-2018 ; Quaker Studies Volume 22 ; 22 ; https://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2018-2019 ; Quaker Studies Volume 23 ; 23 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < manifest ; exists ; 2019-2020 ; Quaker Studies Volume 24 ; 24 ; https://online.liverpooluniversitypress.co.uk/ ; >
-    au < expected ; exists ; 2020-2021 ; Quaker Studies Volume 25 ; 25 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < manifest ; exists ; 2020-2021 ; Quaker Studies Volume 25 ; 25 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
 
@@ -949,7 +949,7 @@
     au < finished ; manifest ; 2017 ; Romani Studies Volume 27 ; 27 ; http://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2018 ; Romani Studies Volume 28 ; 28 ; https://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; Romani Studies Volume 29 ; 29 ; https://online.liverpooluniversitypress.co.uk/ ; >
-    au < expected ; exists ; 2020 ; Romani Studies Volume 30 ; 30 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < manifest ; exists ; 2020 ; Romani Studies Volume 30 ; 30 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
 
@@ -1049,7 +1049,7 @@
     au < finished ; manifest ; 2017 ; Sculpture Journal Volume 26 ; 26 ; http://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2018 ; Sculpture Journal Volume 27 ; 27 ; https://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; Sculpture Journal Volume 28 ; 28 ; https://online.liverpooluniversitypress.co.uk/ ; >
-    au < expected ; exists ; 2020 ; Sculpture Journal Volume 29 ; 29 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < manifest ; exists ; 2020 ; Sculpture Journal Volume 29 ; 29 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
 
@@ -1110,7 +1110,7 @@
     au < finished ; manifest ; 2017 ; Theory & Struggle Volume 118 ; 118 ; https://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2018 ; Theory & Struggle Volume 119 ; 119 ; https://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 2019 ; Theory & Struggle Volume 120 ; 120 ; https://online.liverpooluniversitypress.co.uk/ ; >
-    au < expected ; exists ; 2020 ; Theory & Struggle Volume 121 ; 121 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < manifest ; exists ; 2020 ; Theory & Struggle Volume 121 ; 121 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
 
   }

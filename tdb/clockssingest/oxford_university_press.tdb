@@ -1285,6 +1285,7 @@
     >
 
     param[journal_id] = annonc
+    #move to Elsevier
 
     au < doNotProcess ; exists ; 1990 ; 1990 ; Annals of Oncology Volume 1 ; 1 ; >
     au < doNotProcess ; exists ; 1991 ; 1991 ; Annals of Oncology Volume 2 ; 2 ; >
@@ -1312,11 +1313,11 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Annals of Oncology Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Annals of Oncology Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Annals of Oncology Volume 26 ; 26 ; >
-    au < frozen ; exists ; 2016 ; 2016 ; Annals of Oncology Volume 27 ; 27 ; >
-    au < frozen ; exists ; 2017 ; 2017 ; Annals of Oncology Volume 28 ; 28 ; >
-    au < frozen ; exists ; 2018 ; 2018 ; Annals of Oncology Volume 29 ; 29 ; >
-    au < down ; exists ; 2019 ; 2019 ; Annals of Oncology Volume 30 ; 30 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; Annals of Oncology Volume 31 ; 31 ; >
+    au < finished ; manifest ; 2016 ; 2016 ; Annals of Oncology Volume 27 ; 27 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2017 ; 2017 ; Annals of Oncology Volume 28 ; 28 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2018 ; 2018 ; Annals of Oncology Volume 29 ; 29 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; 2019 ; Annals of Oncology Volume 30 ; 30 ; reingest5.clockss.org:8082 >
+    au < doNotProcess ; exists ; 2020 ; 2020 ; Annals of Oncology Volume 31 ; 31 ; >
 
   }
 
@@ -13439,7 +13440,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Music Theory Spectrum Volume 37 ; 37 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Music Theory Spectrum Volume 38 ; 38 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Music Theory Spectrum Volume 39 ; 39 ; >
-    au < finished ; frozen ; 2018 ; 2018 ; Music Theory Spectrum Volume 40 ; 40 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2018 ; 2018 ; Music Theory Spectrum Volume 40 ; 40 ; reingest4.clockss.org:8082 >
     au < down ; exists ; 2019 ; 2019 ; Music Theory Spectrum Volume 41 ; 41 ; >
     au < notReady ; exists ; 2020 ; 2020 ; Music Theory Spectrum Volume 42 ; 42 ; >
 
@@ -15078,7 +15079,7 @@
 
     param[journal_id] = ppmg
 
-    au < finished ; frozen ; 2018 ; 2018 ; Perspectives on Public Management and Governance Volume 1 ; 1 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2018 ; 2018 ; Perspectives on Public Management and Governance Volume 1 ; 1 ; reingest4.clockss.org:8082 >
     au < down ; exists ; 2019 ; 2019 ; Perspectives on Public Management and Governance Volume 2 ; 2 ; >
     au < notReady ; exists ; 2020 ; 2020 ; Perspectives on Public Management and Governance Volume 3 ; 3 ; >
 
@@ -15323,6 +15324,7 @@
     >
 
     param[journal_id] = ps
+    #move to Sciencedirect
 
     au < doNotProcess ; exists ; 1908 ; 1908 ; Poultry Science Volume 1-1 ; 1-1 ; >
 #    au < doNotProcess ; exists ; 1914-1915 ; Poultry Science Volume 2-1 ; 2-1 ; >
@@ -15418,7 +15420,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Poultry Science Volume 84 ; 84 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Poultry Science Volume 85 ; 85 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Poultry Science Volume 86 ; 86 ; >
-    au < notReady ; exists ; 2008 ; 2008 ; Poultry Science Volume 87 ; 87 ; >
+    au < doNotProcess ; exists ; 2008 ; 2008 ; Poultry Science Volume 87 ; 87 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Poultry Science Volume 88 ; 88 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Poultry Science Volume 89 ; 89 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Poultry Science Volume 90 ; 90 ; >
@@ -15426,11 +15428,11 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Poultry Science Volume 92 ; 92 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Poultry Science Volume 93 ; 93 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Poultry Science Volume 94 ; 94 ; >
-    au < frozen ; exists ; 2016 ; 2016 ; Poultry Science Volume 95 ; 95 ; >
-    au < frozen ; exists ; 2017 ; 2017 ; Poultry Science Volume 96 ; 96 ; >
-    au < frozen ; exists ; 2018 ; 2018 ; Poultry Science Volume 97 ; 97 ; >
-    au < notReady ; exists ; 2019 ; 2019 ; Poultry Science Volume 98 ; 98 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; Poultry Science Volume 99 ; 99 ; >
+    au < finished ; manifest ; 2016 ; 2016 ; Poultry Science Volume 95 ; 95 ; reingest2.clockss.org:8085>
+    au < finished ; manifest ; 2017 ; 2017 ; Poultry Science Volume 96 ; 96 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2018 ; 2018 ; Poultry Science Volume 97 ; 97 ; reingest4.clockss.org:8082 >
+    au < doNotProcess ; exists ; 2019 ; 2019 ; Poultry Science Volume 98 ; 98 ; >
+    au < doNotProcess ; exists ; 2020 ; 2020 ; Poultry Science Volume 99 ; 99 ; >
 
   }
 
@@ -16645,7 +16647,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Screen Volume 56 ; 56 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Screen Volume 57 ; 57 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Screen Volume 58 ; 58 ; >
-    au < finished ; frozen ; 2018 ; 2018 ; Screen Volume 59 ; 59 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2018 ; 2018 ; Screen Volume 59 ; 59 ; reingest3.clockss.org:8083 >
     au < down ; exists ; 2019 ; 2019 ; Screen Volume 60 ; 60 ; >
     au < notReady ; exists ; 2020 ; 2020 ; Screen Volume 61 ; 61 ; >
 
@@ -18576,6 +18578,7 @@
     >
 
     param[journal_id] = japr
+    #move to Sciencedirect
 
     au < doNotProcess ; exists ; 1992 ; 1992 ; The Journal of Applied Poultry Research Volume 1 ; 1 ; >
     au < doNotProcess ; exists ; 1993 ; 1993 ; The Journal of Applied Poultry Research Volume 2 ; 2 ; >
@@ -18593,7 +18596,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; The Journal of Applied Poultry Research Volume 14 ; 14 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; The Journal of Applied Poultry Research Volume 15 ; 15 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; The Journal of Applied Poultry Research Volume 16 ; 16 ; >
-    au < notReady ; exists ; 2008 ; 2008 ; The Journal of Applied Poultry Research Volume 17 ; 17 ; >
+    au < doNotProcess ; exists ; 2008 ; 2008 ; The Journal of Applied Poultry Research Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; The Journal of Applied Poultry Research Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; The Journal of Applied Poultry Research Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; The Journal of Applied Poultry Research Volume 20 ; 20 ; >
@@ -18601,11 +18604,11 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; The Journal of Applied Poultry Research Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; The Journal of Applied Poultry Research Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The Journal of Applied Poultry Research Volume 24 ; 24 ; >
-    au < frozen ; exists ; 2016 ; 2016 ; The Journal of Applied Poultry Research Volume 25 ; 25 ; >
-    au < frozen ; exists ; 2017 ; 2017 ; The Journal of Applied Poultry Research Volume 26 ; 26 ; >
-    au < frozen ; exists ; 2018 ; 2018 ; The Journal of Applied Poultry Research Volume 27 ; 27 ; >
-    au < down ; exists ; 2019 ; 2019 ; The Journal of Applied Poultry Research Volume 28 ; 28 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; The Journal of Applied Poultry Research Volume 29 ; 29 ; >
+    au < finished ; manifest ; 2016 ; 2016 ; The Journal of Applied Poultry Research Volume 25 ; 25 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2017 ; 2017 ; The Journal of Applied Poultry Research Volume 26 ; 26 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2018 ; 2018 ; The Journal of Applied Poultry Research Volume 27 ; 27 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; 2019 ; The Journal of Applied Poultry Research Volume 28 ; 28 ; reingest2.clockss.org:8085 >
+    au < doNotProcess ; exists ; 2020 ; 2020 ; The Journal of Applied Poultry Research Volume 29 ; 29 ; >
 
   }
 
@@ -19717,8 +19720,8 @@
     au < frozen ; exists ; 2016 ; 2016 ; The Opera Quarterly Volume 32 ; 32 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The Opera Quarterly Volume 33 ; 33 ; >
     au < frozen ; exists ; 2018 ; 2018 ; The Opera Quarterly Volume 34 ; 34 ; >
-    au < notReady ; exists ; 2019 ; 2019 ; The Opera Quarterly Volume 35 ; 35 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; The Opera Quarterly Volume 36 ; 36 ; >
+    au < notReady ; exists ; 2019 ; 2019 ; The Opera Quarterly Volume 35 (2019) ; 35 ; >
+    au < notReady ; exists ; 2020 ; 2020 ; The Opera Quarterly Volume 35 (2020) ; 36 ; >
 
   }
 
@@ -19776,11 +19779,11 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; The Oral History Review Volume 40 ; 40 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; The Oral History Review Volume 41 ; 41 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The Oral History Review Volume 42 ; 42 ; >
-    au < frozen ; exists ; 2016 ; 2016 ; The Oral History Review Volume 43 ; 43 ; >
-    au < frozen ; exists ; 2017 ; 2017 ; The Oral History Review Volume 44 ; 44 ; >
-    au < frozen ; exists ; 2018 ; 2018 ; The Oral History Review Volume 45 ; 45 ; >
-    au < down ; exists ; 2019 ; 2019 ; The Oral History Review Volume 46 ; 46 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; The Oral History Review Volume 47 ; 47 ; >
+    au < finished ; manifest ; 2016 ; 2016 ; The Oral History Review Volume 43 ; 43 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2017 ; 2017 ; The Oral History Review Volume 44 ; 44 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2018 ; 2018 ; The Oral History Review Volume 45 ; 45 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; 2019 ; The Oral History Review Volume 46 ; 46 ; reingest3.clockss.org:8083 >
+    au < doNotProcess ; exists ; 2020 ; 2020 ; The Oral History Review Volume 47 ; 47 ; >
 
   }
 

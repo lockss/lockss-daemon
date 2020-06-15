@@ -43,12 +43,6 @@ public class TestEastviewMarcXmlMetadataExtractorFactory extends SourceXmlMetada
     }
 
     public void testExtractArticleXmlSchema() throws Exception {
-        assertNotNull("placeholder");
-    }
-
-    /*
-    
-    public void testExtractArticleXmlSchema() throws Exception {
 
         String fname = "TestEastviewMarcSample.xml";
         String journalXml = getXmlFileContent(fname);
@@ -80,13 +74,12 @@ public class TestEastviewMarcXmlMetadataExtractorFactory extends SourceXmlMetada
         assertEquals(1, mdlist.size());
         ArticleMetadata md = mdlist.get(0);
         assertNotNull(md);
-        assertEquals("10.1400/64564", md.get(MetadataField.FIELD_DOI));
-        assertEquals("Romano, Cesare.", md.get(MetadataField.FIELD_AUTHOR));
-        assertEquals("37", md.get(MetadataField.FIELD_END_PAGE));
-        assertEquals("1", md.get(MetadataField.FIELD_START_PAGE));
-        assertEquals("Il piccolo Hans e la fobia del professor Freud.", md.get(MetadataField.FIELD_PUBLICATION_TITLE));
-        assertEquals("Franco Angeli,", md.get(MetadataField.FIELD_PUBLISHER));
-        assertEquals("2000.", md.get(MetadataField.FIELD_DATE));
+        assertEquals("author name", md.get(MetadataField.FIELD_AUTHOR));
+        assertEquals("Soedinennye Shtaty Ameriki ", md.get(MetadataField.FIELD_PUBLICATION_TITLE));
+        assertEquals("publisher name", md.get(MetadataField.FIELD_PUBLISHER));
+        assertEquals("2018", md.get(MetadataField.FIELD_DATE));
+        assertEquals("9789850822628", md.get(MetadataField.FIELD_ISBN));
+
     }
 
     private class MyEastViewMarcXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
@@ -110,8 +103,6 @@ public class TestEastviewMarcXmlMetadataExtractorFactory extends SourceXmlMetada
                 return EastViewHelper;
             }
 
-            // It is not clear which one can be used as "volume" of the PDF file, we use the above "4"
-            // we also assume it is single digit number between 1-9
             @Override
             protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper,
                                                                     CachedUrl cu,
@@ -135,10 +126,25 @@ public class TestEastviewMarcXmlMetadataExtractorFactory extends SourceXmlMetada
 
                 if (thisAM.getRaw(EastviewMarcXmlSchemaHelper.MARC_author) != null) {
                     String author = thisAM.getRaw(EastviewMarcXmlSchemaHelper.MARC_author);
-                    thisAM.put(MetadataField.FIELD_AUTHOR, author.replace(".", ""));
+                    thisAM.put(MetadataField.FIELD_AUTHOR, author.replace(":", ""));
+                }
+
+                if (thisAM.getRaw(EastviewMarcXmlSchemaHelper.MARC_pub_date) != null) {
+                    String pub_date = thisAM.getRaw(EastviewMarcXmlSchemaHelper.MARC_pub_date);
+                    thisAM.put(MetadataField.FIELD_DATE, pub_date.replace(".", ""));
+                }
+
+                if (thisAM.getRaw(EastviewMarcXmlSchemaHelper.MARC_publisher) != null) {
+                    String publisher = thisAM.getRaw(EastviewMarcXmlSchemaHelper.MARC_publisher);
+                    thisAM.put(MetadataField.FIELD_PUBLISHER, publisher.replace(":", ""));
+                }
+
+                if (thisAM.getRaw(EastviewMarcXmlSchemaHelper.MARC_title) != null) {
+                    String title = thisAM.getRaw(EastviewMarcXmlSchemaHelper.MARC_title);
+                    thisAM.put(MetadataField.FIELD_PUBLICATION_TITLE, title.replace(":", ""));
                 }
             }
         }
-    }*/
+    }
 }
 

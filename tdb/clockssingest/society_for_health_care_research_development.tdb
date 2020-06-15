@@ -1,0 +1,44 @@
+{
+
+  publisher <
+    name = Society for Health Care Research Development ;
+    info[contract] = 2020 ;
+    info[back] = 2015 ;
+    info[tester] = 8 ;
+    info[poller] = 8
+  >
+  
+  implicit < status ; status2 ; year ; param[year] ; name ; volume ; hidden[proxy] >
+  
+  {
+ 
+    title <
+      name = Asian Journal of Medical Research ;
+      issn = 2347-3398 ;
+      eissn = 2277-7253
+    >
+    
+    param[journal_id] = ajmr
+
+    {
+    param[base_url] = https://www.aijournals.com/
+    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+    attr[start_stem] = index.php/
+    
+    #published 2012-present
+
+    au < manifest ; exists ; 2012 ; 2012 ; Lecturas de Economia Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2013 ; 2013 ; Lecturas de Economia Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2014 ; 2014 ; Lecturas de Economia Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2015 ; 2015 ; Lecturas de Economia Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2016 ; 2016 ; Lecturas de Economia Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2017 ; 2017 ; Lecturas de Economia Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2018 ; 2018 ; Lecturas de Economia Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2019 ; 2019 ; Lecturas de Economia Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2020 ; 2020 ; Lecturas de Economia Volume 9 ; 9 ; >
+
+    }
+
+  }
+
+}

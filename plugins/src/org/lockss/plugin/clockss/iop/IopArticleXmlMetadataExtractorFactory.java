@@ -32,19 +32,19 @@
 
 package org.lockss.plugin.clockss.iop;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import org.lockss.util.*;
+import org.apache.commons.lang3.StringEscapeUtils;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 
 import org.lockss.plugin.CachedUrl;
-import org.lockss.plugin.clockss.JatsPublishingSchemaHelper;
-import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
-import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
+import org.lockss.plugin.clockss.*;
 
 
 /*
@@ -237,6 +237,38 @@ public class IopArticleXmlMetadataExtractorFactory extends SourceXmlMetadataExtr
     		}
     	}
     }
+    
+    /**
+     * <p>Some IOP XML files contains HTML4 entities, that trip the SAX parser.
+     * Work around them with Apache Commons Lang3.</p> 
+     */
+    @Override
+    protected XPathXmlMetadataParser createXpathXmlMetadataParser() {
+      return new XPathXmlMetadataParser(getDoXmlFiltering()) {
+        @Override
+        protected InputStream getInputStreamFromCU(CachedUrl cu) {
+          if (isDoXmlFiltering()) {
+            return new XmlFilteringInputStream(new ReaderInputStream(new LineRewritingReader(new InputStreamReader(cu.getUnfilteredInputStream())) {
+              @Override
+              public String rewriteLine(String line) {
+                return StringEscapeUtils.unescapeHtml4(line);
+              }
+            }));
+          }
+          else { 
+            return cu.getUnfilteredInputStream();
+          }
+        }
+      };
+    }
 
+    /**
+     * @see #createXpathXmlMetadataParser()
+     */
+    @Override
+    public boolean getDoXmlFiltering() {
+      return true;
+    }
+    
   }
 }

@@ -13,22 +13,42 @@
     >
     
     rights = openaccess
-    plugin = org.lockss.plugin.blackbird.BlackbirdPlugin
-    param[base_url] = http://www.blackbird.vcu.edu/
-    implicit < status ; year ; name ; param[volume] >
     # missing manifest pages requested -- see RU3569 RT4584
     # platform has changed. Plugin down. Site has videos.
     
-    au < released ; 2002 ; Blackbird Volume 1 ; 1 >
-    au < released ; 2003 ; Blackbird Volume 2 ; 2 >
-    au < released ; 2004 ; Blackbird Volume 3 ; 3 >
-    au < released ; 2005 ; Blackbird Volume 4 ; 4 >
-    au < doNotProcess ; 2006 ; Blackbird Volume 5 ; 5 >
-    au < doNotProcess ; 2007 ; Blackbird Volume 6 ; 6 >
-    au < doNotProcess ; 2008 ; Blackbird Volume 7 ; 7 >
-    au < doNotProcess ; 2009 ; Blackbird Volume 8 ; 8 >
-    au < doNotProcess ; 2010 ; Blackbird Volume 9 ; 9 >
-    au < doNotProcess ; 2011 ; Blackbird Volume 10 ; 10 >
+    {
+    plugin = needs.plugin
+    param[base_url] = http://www.blackbird.vcu.edu/
+    implicit < status ; year ; name ; param[volume] >
+    
+    au < exists ; 2006 ; Blackbird Volume 5 ; 5 >
+    au < exists ; 2007 ; Blackbird Volume 6 ; 6 >
+    au < exists ; 2008 ; Blackbird Volume 7 ; 7 >
+    au < exists ; 2009 ; Blackbird Volume 8 ; 8 >
+    au < exists ; 2010 ; Blackbird Volume 9 ; 9 >
+    au < exists ; 2011 ; Blackbird Volume 10 ; 10 >
+    au < exists ; 2012 ; Blackbird Volume 11 ; 11 >
+    au < exists ; 2013 ; Blackbird Volume 12 ; 12 >
+    au < exists ; 2014 ; Blackbird Volume 13 ; 13 >
+    au < exists ; 2015 ; Blackbird Volume 14 ; 14 >
+    au < exists ; 2016 ; Blackbird Volume 15 ; 15 >
+    au < exists ; 2017 ; Blackbird Volume 16 ; 16 >
+    au < exists ; 2018 ; Blackbird Volume 17 ; 17 >
+    au < exists ; 2019 ; Blackbird Volume 18 ; 18 >
+    au < exists ; 2020 ; Blackbird Volume 19 ; 19 >
+
+  }
+  
+    {
+    plugin = org.lockss.plugin.blackbird.BlackbirdPlugin
+    param[base_url] = http://www.blackbird.vcu.edu/
+    implicit < status ; year ; name ; param[volume] >
+    
+    au < down ; 2002 ; Blackbird Volume 1 ; 1 >
+    au < down ; 2003 ; Blackbird Volume 2 ; 2 >
+    au < down ; 2004 ; Blackbird Volume 3 ; 3 >
+    au < down ; 2005 ; Blackbird Volume 4 ; 4 >
+  }
   
   }
 

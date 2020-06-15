@@ -333,7 +333,7 @@ public class TestIopXmlMetadataExtractor extends LockssTestCase {
       String string_input = StringUtil.fromInputStream(file_input);
       IOUtil.safeClose(file_input);
 
-      CIProperties xmlHeader = new CIProperties();    
+      CIProperties xmlHeader = new CIProperties();
       xmlHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
       MockCachedUrl mcu = mau.addUrl(xml_url, true, true, xmlHeader);
 
@@ -344,15 +344,15 @@ public class TestIopXmlMetadataExtractor extends LockssTestCase {
         String tail = pdfIterator.next();
         //System.out.println("adding " + pdf_url_start + tail);
         mau.addUrl(pdf_url_start + tail, true, true, xmlHeader);
-      }    
+      }
 
       mcu.setContent(string_input);
       mcu.setContentSize(string_input.length());
       mcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
 
-      FileMetadataExtractor me = new  IopOnixXmlMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/xml");
+      FileMetadataExtractor me = new IopOnixXmlMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/xml");
       FileMetadataListExtractor mle =
-          new FileMetadataListExtractor(me);
+              new FileMetadataListExtractor(me);
       List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), mcu);
       assertNotEmpty(mdlist);
       assertEquals(3, mdlist.size());
@@ -366,7 +366,53 @@ public class TestIopXmlMetadataExtractor extends LockssTestCase {
         //log.info(mdRecord.ppString(2));
         //compareMetadata(mdRecord);
       }
-    }finally {
+    } finally {
+      IOUtil.safeClose(file_input);
+    }
+  }
+
+  private static final String XMLWithHtmlEntitiesFile = "IOPArticle_with_html_entities.xml";
+
+  public void testHandlingHtmlEntitiesFile() throws Exception {
+    InputStream file_input = null;
+    try {
+      file_input = getResourceAsStream(ThreeShortXMLFile);
+      String string_input = StringUtil.fromInputStream(file_input);
+      IOUtil.safeClose(file_input);
+
+      CIProperties xmlHeader = new CIProperties();
+      xmlHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
+      MockCachedUrl mcu = mau.addUrl(xml_url, true, true, xmlHeader);
+
+      // Now add all the pdf files in our AU since we check for them before emitting
+      String pdf_url_start = BASE_URL + "2015/" + TAR_GZ + "0022-3727/48/35/355104/";
+      Iterator<String> pdfIterator = real_pdflist.iterator();
+      while (pdfIterator.hasNext()) {
+        String tail = pdfIterator.next();
+        //System.out.println("adding " + pdf_url_start + tail);
+        mau.addUrl(pdf_url_start + tail, true, true, xmlHeader);
+      }
+
+      mcu.setContent(string_input);
+      mcu.setContentSize(string_input.length());
+      mcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
+
+      FileMetadataExtractor me = new IopOnixXmlMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/xml");
+      FileMetadataListExtractor mle =
+              new FileMetadataListExtractor(me);
+      List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), mcu);
+      assertNotEmpty(mdlist);
+      assertEquals(3, mdlist.size());
+
+      // check each returned md against expected values
+      Iterator<ArticleMetadata> mdIt = mdlist.iterator();
+      ArticleMetadata mdRecord = null;
+      while (mdIt.hasNext()) {
+        mdRecord = (ArticleMetadata) mdIt.next();
+        //log.info(mdRecord.ppString(2));
+        //compareMetadata(mdRecord);
+      }
+    } finally {
       IOUtil.safeClose(file_input);
     }
   }

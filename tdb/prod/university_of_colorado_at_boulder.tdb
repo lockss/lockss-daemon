@@ -4,6 +4,7 @@
     name = University of Colorado at Boulder
   >
   
+    rights = openaccess
   {
   
     title <
@@ -12,33 +13,36 @@
       issnl = 0894-9832
     >
     
-    rights = openaccess
+    {
+    plugin = org.lockss.plugin.atypon.GenericAtyponPlugin
+    param[base_url] = https://www.utexaspressjournals.org/
+    implicit < status ; year ; name ; param[volume_name] >
+    
+    param[journal_id] = gen
+    #no manifest pages. Able to find the right volume numbers? Manifest pages posted?
+    
+    au < exists ; 1988 ; Genders Volume 1988 ; 1988 >
+    au < exists ; 1989 ; Genders Volume 1989 ; 1989 >
+    au < exists ; 1990 ; Genders Volume 1990 ; 1990 >
+    au < exists ; 1991 ; Genders Volume 1991 ; 1991 >
+    au < exists ; 1992 ; Genders Volume 1992 ; 1992 >
+    au < exists ; 1993 ; Genders Volume 1993 ; 1993 >
+    }
+    {
     plugin = org.lockss.plugin.GendersPlugin
     param[base_url] = http://www.genders.org/
     implicit < status ; year ; name ; param[year] ; param[num_issue_range] >
     
-    comment[doNotProcess] = Plugin needs revision.
-
     comment[doNotProcess_currentyear] = This plugin precludes processing the AU from the year in progress -- wait until the end of the year
 
-    au < released ; 1998 ; Genders 1998 ; 1998 ; 27-28 >
-    au < released ; 1999 ; Genders 1999 ; 1999 ; 29-30 >
-    au < released ; 2000 ; Genders 2000 ; 2000 ; 31-32 >
-    au < released ; 2001 ; Genders 2001 ; 2001 ; 33-34 >
-    au < released ; 2002 ; Genders 2002 ; 2002 ; 35-36 >
-    au < released ; 2003 ; Genders 2003 ; 2003 ; 37-38 >
-    au < released ; 2004 ; Genders 2004 ; 2004 ; 39-40 >
-    au < doNotProcess ; 2005 ; Genders 2005 ; 2005 ; 41-42 >
-    au < doNotProcess ; 2006 ; Genders 2006 ; 2006 ; 43-44 >
-    au < doNotProcess ; 2007 ; Genders 2007 ; 2007 ; 45-46 >
-    au < doNotProcess ; 2008 ; Genders 2008 ; 2008 ; 47-48 >
-    au < doNotProcess ; 2009 ; Genders 2009 ; 2009 ; 49-50 >
-    au < doNotProcess ; 2010 ; Genders 2010 ; 2010 ; 51-52 >
-    au < doNotProcess ; 2011 ; Genders 2011 ; 2011 ; 53-54 >
-    au < doNotProcess ; 2012 ; Genders 2012 ; 2012 ; 55-56 >
-    au < doNotProcess ; 2013 ; Genders 2013 ; 2013 ; 57-58 >
-    au < doNotProcess ; 2014 ; Genders 2014 ; 2014 ; 59-60 >
-    
+    au < down ; 1998 ; Genders Volume 1998 ; 1998 ; 27-28 >
+    au < down ; 1999 ; Genders Volume 1999 ; 1999 ; 29-30 >
+    au < down ; 2000 ; Genders Volume 2000 ; 2000 ; 31-32 >
+    au < down ; 2001 ; Genders Volume 2001 ; 2001 ; 33-34 >
+    au < down ; 2002 ; Genders Volume 2002 ; 2002 ; 35-36 >
+    au < down ; 2003 ; Genders Volume 2003 ; 2003 ; 37-38 >
+    au < down ; 2004 ; Genders Volume 2004 ; 2004 ; 39-40 >
+    }
   }
 
 }

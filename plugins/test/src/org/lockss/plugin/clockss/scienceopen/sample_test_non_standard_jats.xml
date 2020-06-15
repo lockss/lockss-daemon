@@ -1,0 +1,733 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN" "JATS-archivearticle1.dtd">
+<article xmlns:ali="http://www.niso.org/schemas/ali/1.0/" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" article-type="proceedings-article" xml:lang="en">
+    <front>
+        <article-meta>
+            <article-id pub-id-type="doi">10.14236/ewic/EVAC18.26</article-id>
+            <article-categories>
+                <series-title>Electronic Workshops in Computing</series-title>
+            </article-categories>
+            <title-group>
+                <article-title>COSMIC SLOP: Possibilities of Alien Futures (From the Past)</article-title>
+            </title-group>
+            <contrib-group>
+                <contrib contrib-type="author">
+                    <name name-style="western">
+                        <surname>El Hag Ali</surname>
+                        <given-names>Lina Nasr</given-names>
+                    </name>
+                    <email>lhash@yorku.ca</email>
+                    <xref ref-type="aff" rid="aff0001">1</xref>
+                </contrib>
+                <contrib contrib-type="author">
+                    <name name-style="western">
+                        <surname>Kingsmith</surname>
+                        <given-names>A.T.</given-names>
+                    </name>
+                    <email>atking@yorku.ca</email>
+                    <xref ref-type="aff" rid="aff0001">1</xref>
+                </contrib>
+                <aff id="aff0001">
+                    <label>1</label>
+                    York University, Department of Politics
+                    <break />
+                    Ross Building, Room S672
+                    <break />
+                    4700 Keele Street, Toronto, ON
+                    <break />
+                    M3J 1P3, Canada
+                </aff>
+            </contrib-group>
+            <pub-date>
+                <year>2018</year>
+                <month>05</month>
+            </pub-date>
+            <pub-date pub-type="ppub">
+                <year>2018</year>
+                <month>05</month>
+            </pub-date>
+            <fpage>1</fpage>
+            <lpage>8</lpage>
+            <product>
+                <issn>1477-9358</issn>
+                <publisher-name>BCS Learning &amp; Development</publisher-name>
+            </product>
+            <permissions>
+                <copyright-statement>© Ali et al. Published by BCS Learning and Development Ltd. Proceedings of EVA Copenhagen 2018, Denmark</copyright-statement>
+                <copyright-year>2018</copyright-year>
+                <license license-type="open-access" xlink:href="http://creativecommons.org/licenses/by/4.0/">
+                    <license-p>
+                        This work is licensed under a Creative Commons Attribution 4.0 Unported License. To view a copy of this license, visit
+                        <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</ext-link>
+                    </license-p>
+                </license>
+            </permissions>
+            <self-uri content-type="article_page" xlink:href="https://www.scienceopen.com/hosted-document?doi=10.14236/ewic/EVAC18.26" />
+            <self-uri content-type="journal_page" xlink:href="https://ewic.bcs.org/" />
+            <abstract>
+                <p>The elite imaginaries of our world hold a monopoly over the future, drawing power from the particular ‘utopias’ they promote as a kind of currency to induce a psychosomatic investment in a specific future of society. This displaces the material and temporal content of actually lived exploitation today. In considering the ways in which power now operates predictively as much as retrospectively, we explore the conditions for shaping an asymmetrical politics of transformation beyond the hyperbolic tropes of our current future. To this end, we argue that alien-theory can help to conjure new tomorrows through a focus on the creative power of non-being, disconnection, exploitation and alienation. In collecting together critical threads running through ‘science fiction capital’, cyborg theory, Afrofuturism and Xenofeminism, we synthesize a series of ‘alien-on-earth’ approaches to this futures-crisis in the context of a neoliberal present where our relationship with the experience of alienation has been fundamentally changed, altered and reformed. In speaking to the ways in which we can begin to decolonise this future-monopoly, we explore the concept of chronopolitics as a collective effort for unearthing different histories, mapping alternative spatio-temporalities and reshaping our present conditions in the now of time.</p>
+            </abstract>
+            <kwd-group>
+                <kwd>Alien-theory</kwd>
+                <kwd>Futures-industry</kwd>
+                <kwd>SF Capital</kwd>
+                <kwd>Afrofuturism</kwd>
+                <kwd>Xenofeminism</kwd>
+                <kwd>Chronopolitics</kwd>
+            </kwd-group>
+            <conference>
+                <conf-name>Politics of the Machines - Art and After</conf-name>
+                <conf-acronym>EVA Copenhagen</conf-acronym>
+                <conf-sponsor>Electronic Workshops in Computing (eWiC)</conf-sponsor>
+                <conf-theme>Digital arts and culture</conf-theme>
+                <conf-num>7</conf-num>
+                <conf-loc>Aalborg University, Copenhagen, Denmark</conf-loc>
+                <conf-date>15 - 17 May 2018</conf-date>
+            </conference>
+        </article-meta>
+    </front>
+    <back>
+        <ref-list>
+            <title>References</title>
+            <ref>
+                <mixed-citation publication-type="book">
+                    <person-group person-group-type="author">
+                        <name name-style="western">
+                            <surname>Albanese</surname>
+                            <given-names>D</given-names>
+                        </name>
+                    </person-group>
+                    <year>1996</year>
+                    <source>New Science, New World</source>
+                    <publisher-name>Duke University Press</publisher-name>
+                    <publisher-loc>Durham, NC</publisher-loc>
+                </mixed-citation>
+            </ref>
+            <ref>
+                <mixed-citation publication-type="web">
+                    <person-group person-group-type="author">
+                        <name name-style="western">
+                            <surname>Barbrook</surname>
+                            <given-names>R</given-names>
+                        </name>
+                        <name name-style="western">
+                            <surname>Cameron</surname>
+                            <given-names>A</given-names>
+                        </name>
+                    </person-group>
+                    <year>1995</year>
+                    <article-title>The Californian Ideology</article-title>
+                    <source>Mute Magazine</source>
+                    <comment>
+                        <ext-link ext-link-type="uri" xlink:href="http://www.metamute.org /editorial/articles/californian-ideology">http://www.metamute.org /editorial/articles/californian-ideology</ext-link>
+                    </comment>
+                    <date-in-citation content-type="">
+                        <day>29</day>
+                        <month>May</month>
+                        <year>2018</year>
+                    </date-in-citation>
+                </mixed-citation>
+            </ref>
+            <ref>
+                <mixed-citation publication-type="book">
+                    <person-group person-group-type="author">
+                        <name name-style="western">
+                            <surname>Barbrook</surname>
+                            <given-names>R</given-names>
+                        </name>
+                        <name name-style="western">
+                            <surname>Cameron</surname>
+                            <given-names>A</given-names>
+                        </name>
+                    </person-group>
+                    <year>2015</year>
+                    <source>The Internet Revolution: From Dot-com Capitalism to Cybernetic Communism</source>
+                    <person-group person-group-type="editor">
+                        <name name-style="western">
+                            <surname>Lovink</surname>
+                            <given-names>G</given-names>
+                        </name>
+                        <name name-style="western">
+                            <surname>Rasch</surname>
+                            <given-names>M</given-names>
+                        </name>
+                    </person-group>
+                    <source>Network Notebooks</source>
+                    <publisher-name>Institute of Network Cultures</publisher-name>
+                    <publisher-loc>Amsterdam</publisher-loc>
+                </mixed-citation>
+            </ref>
+            <ref>
+                <mixed-citation publication-type="book">
+                    <person-group person-group-type="author">
+                        <name name-style="western">
+                            <surname>Benjamin</surname>
+                            <given-names>W</given-names>
+                        </name>
+                    </person-group>
+                    <year>1936</year>
+                    <source>Art in the Age of Mechanical Reproduction</source>
+                    <person-group person-group-type="editor">
+                        <name name-style="western">
+                            <surname>Benjamin</surname>
+                            <given-names>W</given-names>
+                        </name>
+                    </person-group>
+                    <source>Illuminations</source>
+                    <publisher-name>Random House</publisher-name>
+                    <publisher-loc>London</publisher-loc>
+                </mixed-citation>
+            </ref>
+            <ref>
+                <mixed-citation publication-type="journal">
+                    <person-group person-group-type="author">
+                        <name name-style="western">
+                            <surname>Blackman</surname>
+                            <given-names>L</given-names>
+                        </name>
+                    </person-group>
+                    <year>2017</year>
+                    <article-title>“Loving the alien”: a post– post-human manifesto</article-title>
+                    <source>Subjectivity</source>
+                    <volume>10</volume>
+                    <issue>1</issue>
+                    <fpage>13</fpage>
+                    <lpage>25</lpage>
+                </mixed-citation>
+            </ref>
+            <ref>
+                <mixed-citation publication-type="web">
+                    <person-group person-group-type="author">
+                        <name name-style="western">
+                            <surname>Bollier</surname>
+                            <given-names>D</given-names>
+                        </name>
+                    </person-group>
+                    <year>2009</year>
+                    <article-title>The Stirrings of a ‘Degrowth Movement’</article-title>
+                    <source>On the Commons</source>
+                    <comment>
+                        <ext-link ext-link-type="uri" xlink:href="http://www.onthecommons.org/stirrings-degrowthmovement#sthash.5jIhXYzr.4wA2iRs0.dpbs">http://www.onthecommons.org/stirrings-degrowthmovement#sthash.5jIhXYzr.4wA2iRs0.dpbs</ext-link>
+                    </comment>
+                    <date-in-citation content-type="">
+                        <day>31</day>
+                        <month>May</month>
+                        <year>2018</year>
+                    </date-in-citation>
+                </mixed-citation>
+            </ref>
+            <ref>
+                <mixed-citation publication-type="book">
+                    <person-group person-group-type="author">
+                        <name name-style="western">
+                            <surname>Bookchin</surname>
+                            <given-names>M</given-names>
+                        </name>
+                    </person-group>
+                    <year>2005</year>
+                    <source>The Ecology of Freedom: The Emergence and Dissolution of Hierarchy</source>
+                    <publisher-name>AK Press</publisher-name>
+                    <publisher-loc>Oakland</publisher-loc>
+                </mixed-citation>
+            </ref>
+            <ref>
+                <mixed-citation publication-type="book">
+                    <person-group person-group-type="author">
+                        <name name-style="western">
+                            <surname>Brown</surname>
+                            <given-names>W</given-names>
+                        </name>
+                    </person-group>
+                    <year>2015</year>
+                    <source>Undoing the Demos: Neoliberalism’s Stealth Revolution</source>
+                    <publisher-name>Zone Books</publisher-name>
+                    <publisher-loc>New York</publisher-loc>
+                </mixed-citation>
+            </ref>
+            <ref>
+                <mixed-citation publication-type="book">
+                    <person-group person-group-type="author">
+                        <name name-style="western">
+                            <surname>Eshun</surname>
+                            <given-names>K</given-names>
+                        </name>
+                    </person-group>
+                    <year>1998</year>
+                    <source>More Brilliant Than the Sun: Adventures in Sonic Fiction</source>
+                    <publisher-name>Quartet Books</publisher-name>
+                    <publisher-loc>London</publisher-loc>
+                </mixed-citation>
+            </ref>
+            <ref>
+                <mixed-citation publication-type="journal">
+                    <person-group person-group-type="author">
+                        <name name-style="western">
+                            <surname>Eshun</surname>
+                            <given-names>K</given-names>
+                        </name>
+                    </person-group>
+                    <year>2003</year>
+                    <article-title>Further Considerations on Afrofuturism</article-title>
+                    <source>CR: The New Centennial Review</source>
+                    <volume>3</volume>
+                    <issue>2</issue>
+                    <fpage>287</fpage>
+                    <lpage>302</lpage>
+                </mixed-citation>
+            </ref>
+            <ref>
+                <mixed-citation publication-type="journal">
+                    <person-group person-group-type="author">
+                        <name name-style="western">
+                            <surname>Ferrara</surname>
+                            <given-names>B</given-names>
+                        </name>
+                    </person-group>
+                    <year>2012</year>
+                    <article-title>“My measurement of race is rate of vibration”: Afrofuturism and the ‘molecularization’ of race</article-title>
+                    <source>Dark Matter</source>
+                    <volume>9</volume>
+                    <issue>2</issue>
+                </mixed-citation>
+            </ref>
+            <ref>
+                <mixed-citation publication-type="web">
+                    <person-group person-group-type="author">
+                        <name name-style="western">
+                            <surname>Fernandez</surname>
+                            <given-names>M</given-names>
+                        </name>
+                    </person-group>
+                    <year>2001</year>
+                    <article-title>Whatever Happened to the Cyborg Manifesto?</article-title>
+                    <source>Mute Magazine</source>
+                    <comment>
+                        <ext-link ext-link-type="uri" xlink:href="http://www. metamute.org/editorial/articles/whatever-happened-to-cyborg-manifesto">http://www. metamute.org/editorial/articles/whatever-happened-to-cyborg-manifesto</ext-link>
+                    </comment>
+                    <date-in-citation content-type="">
+                        <day>27</day>
+                        <month>April</month>
+                        <year>2018</year>
+                    </date-in-citation>
+                </mixed-citation>
+            </ref>
+            <ref>
+                <mixed-citation publication-type="book">
+                    <person-group person-group-type="author">
+                        <name name-style="western">
+                            <surname>Fisher</surname>
+                            <given-names>M</given-names>
+                        </name>
+                    </person-group>
+                    <year>2009</year>
+                    <source>Capitalist Realism: Is There No Alternative?</source>
+                    <publisher-name>Zero Books</publisher-name>
+                    <publisher-loc>London</publisher-loc>
+                </mixed-citation>
+            </ref>
+            <ref>
+                <mixed-citation publication-type="book">
+                    <person-group person-group-type="author">
+                        <name name-style="western">
+                            <surname>Gibson</surname>
+                            <given-names>W</given-names>
+                        </name>
+                    </person-group>
+                    <year>1984</year>
+                    <source>Neuromancer</source>
+                    <publisher-name>Ace Books</publisher-name>
+                    <publisher-loc>New York</publisher-loc>
+                </mixed-citation>
+            </ref>
+            <ref>
+                <mixed-citation publication-type="book">
+                    <person-group person-group-type="author">
+                        <name name-style="western">
+                            <surname>Gilroy</surname>
+                            <given-names>P</given-names>
+                        </name>
+                    </person-group>
+                    <year>2013</year>
+                    <source>Between Camps: Nations, Cultures and the Allure of Race</source>
+                    <publisher-name>Taylor &amp; Francis</publisher-name>
+                    :
+                    <publisher-loc>New York</publisher-loc>
+                </mixed-citation>
+            </ref>
+            <ref>
+                <mixed-citation publication-type="book">
+                    <person-group person-group-type="author">
+                        <name name-style="western">
+                            <surname>Goodman</surname>
+                            <given-names>S</given-names>
+                        </name>
+                    </person-group>
+                    <year>2012</year>
+                    <source>Sonic Warfare: Sound, Affect, and the Ecology of Fear</source>
+                    <publisher-name>The MIT Press</publisher-name>
+                    <publisher-loc>Cambridge, MA</publisher-loc>
+                </mixed-citation>
+            </ref>
+            <ref>
+                <mixed-citation publication-type="book">
+                    <person-group person-group-type="author">
+                        <name name-style="western">
+                            <surname>Haraway</surname>
+                            <given-names>D</given-names>
+                        </name>
+                    </person-group>
+                    <year>1991</year>
+                    <article-title>The Cyborg Manifesto</article-title>
+                    <person-group person-group-type="editor">
+                        <name name-style="western">
+                            <surname>Haraway</surname>
+                            <given-names>D</given-names>
+                        </name>
+                    </person-group>
+                    <source>Simians, Cyborgs, and Women: The Reinvention of Nature</source>
+                    <publisher-name>Routledge</publisher-name>
+                    <publisher-loc>New York</publisher-loc>
+                </mixed-citation>
+            </ref>
+            <ref>
+                <mixed-citation publication-type="book">
+                    <person-group person-group-type="author">
+                        <name name-style="western">
+                            <surname>Haraway</surname>
+                            <given-names>D</given-names>
+                        </name>
+                    </person-group>
+                    <year>2003</year>
+                    <source>The Companion Species Manifesto: Dogs, People, and Significant Otherness</source>
+                    <publisher-name>Prickly Paradigm Press</publisher-name>
+                    <publisher-loc>Chicago</publisher-loc>
+                </mixed-citation>
+            </ref>
+            <ref>
+                <mixed-citation publication-type="book">
+                    <person-group person-group-type="author">
+                        <name name-style="western">
+                            <surname>Hester</surname>
+                            <given-names>H</given-names>
+                        </name>
+                    </person-group>
+                    <year>2018</year>
+                    <source>Xenofeminism</source>
+                    <publisher-name>Wiley</publisher-name>
+                    <publisher-loc>London</publisher-loc>
+                </mixed-citation>
+            </ref>
+            <ref>
+                <mixed-citation publication-type="journal">
+                    <person-group person-group-type="author">
+                        <name name-style="western">
+                            <surname>Hoffman</surname>
+                            <given-names>T</given-names>
+                        </name>
+                    </person-group>
+                    <year>2016</year>
+                    <article-title>No Exit, Postmodern Style</article-title>
+                    <source>CTheory: Theory, Technology, Culture</source>
+                    <volume>38</volume>
+                    <issue>3</issue>
+                </mixed-citation>
+            </ref>
+            <ref>
+                <mixed-citation publication-type="book">
+                    <person-group person-group-type="author">
+                        <name name-style="western">
+                            <surname>Jameson</surname>
+                            <given-names>F</given-names>
+                        </name>
+                    </person-group>
+                    <year>2005</year>
+                    <source>Archaeologies of the Future: The Desire Called Utopia and Other Science Fictions</source>
+                    <publisher-name>Verso Books</publisher-name>
+                    <publisher-loc>New York</publisher-loc>
+                </mixed-citation>
+            </ref>
+            <ref>
+                <mixed-citation publication-type="book">
+                    <person-group person-group-type="author">
+                        <name name-style="western">
+                            <surname>Kern</surname>
+                            <given-names>S</given-names>
+                        </name>
+                    </person-group>
+                    <year>2003</year>
+                    <source>The Culture of Time and Space, 1880-1918</source>
+                    <publisher-name>Harvard University Press</publisher-name>
+                    <publisher-loc>Cambridge, MA</publisher-loc>
+                </mixed-citation>
+            </ref>
+            <ref>
+                <mixed-citation publication-type="web">
+                    <person-group person-group-type="author">
+                        <name name-style="western">
+                            <surname>Kirss</surname>
+                            <given-names>S</given-names>
+                        </name>
+                    </person-group>
+                    <year>2017</year>
+                    <article-title>A Repellent Musk</article-title>
+                    <source>Current Affairs</source>
+                    <comment>
+                        <ext-link ext-link-type="uri" xlink:href="https://www.currentaffairs.org/2017/07/a-repellent-musk">https://www.currentaffairs.org/2017/07/a-repellent-musk</ext-link>
+                    </comment>
+                    <date-in-citation content-type="">
+                        <day>30</day>
+                        <month>May</month>
+                        <year>2018</year>
+                    </date-in-citation>
+                </mixed-citation>
+            </ref>
+            <ref>
+                <mixed-citation publication-type="book">
+                    <person-group person-group-type="author">
+                        <name name-style="western">
+                            <surname>Latham</surname>
+                            <given-names>R</given-names>
+                        </name>
+                    </person-group>
+                    <year>2016</year>
+                    <source>The Politics of Evasion: A Post-Globalization Dialogue Along the Edge of the State</source>
+                    <publisher-name>Routledge</publisher-name>
+                    <publisher-loc>New York</publisher-loc>
+                </mixed-citation>
+            </ref>
+            <ref>
+                <mixed-citation publication-type="web">
+                    <collab>Laboria Cuboniks</collab>
+                    <year>2015</year>
+                    <source>Xenofeminism: A Politics for Alienation</source>
+                    <comment>
+                        <ext-link ext-link-type="uri" xlink:href="http://uberty.org/wp-content/uploads/ 2015/06/xenofeminism.pdf">http://uberty.org/wp-content/uploads/ 2015/06/xenofeminism.pdf</ext-link>
+                    </comment>
+                    <date-in-citation content-type="">
+                        <day>25</day>
+                        <month>May</month>
+                        <year>2018</year>
+                    </date-in-citation>
+                </mixed-citation>
+            </ref>
+            <ref>
+                <mixed-citation publication-type="book">
+                    <person-group person-group-type="author">
+                        <name name-style="western">
+                            <surname>Latouche</surname>
+                            <given-names>S</given-names>
+                        </name>
+                    </person-group>
+                    <year>2010</year>
+                    <source>Farewell to Growth</source>
+                    <publisher-name>Polity Press</publisher-name>
+                    <publisher-loc>Cambridge, UK</publisher-loc>
+                </mixed-citation>
+            </ref>
+            <ref>
+                <mixed-citation publication-type="book">
+                    <person-group person-group-type="author">
+                        <name name-style="western">
+                            <surname>Liu</surname>
+                            <given-names>K</given-names>
+                        </name>
+                    </person-group>
+                    <year>2016</year>
+                    <source>Invisible Planets: Contemporary Chinese Science Fiction in Translation</source>
+                    <publisher-name>Macmillan</publisher-name>
+                    <publisher-loc>Basingstoke, UK</publisher-loc>
+                </mixed-citation>
+            </ref>
+            <ref>
+                <mixed-citation publication-type="book">
+                    <person-group person-group-type="author">
+                        <name name-style="western">
+                            <surname>Marx</surname>
+                            <given-names>K</given-names>
+                        </name>
+                    </person-group>
+                    <year>1939</year>
+                    <source>Grundrisse: Foundations of the Critique of Political Economy</source>
+                    <publisher-name>Penguin Books</publisher-name>
+                    <publisher-loc>New York</publisher-loc>
+                </mixed-citation>
+            </ref>
+            <ref>
+                <mixed-citation publication-type="book">
+                    <person-group person-group-type="author">
+                        <name name-style="western">
+                            <surname>Mbiti</surname>
+                            <given-names>JS</given-names>
+                        </name>
+                    </person-group>
+                    <year>1990</year>
+                    <source>African Religions &amp; Philosophy</source>
+                    <publisher-name>Heinemann Publishers</publisher-name>
+                    <publisher-loc>Portsmouth, NH</publisher-loc>
+                </mixed-citation>
+            </ref>
+            <ref>
+                <mixed-citation publication-type="book">
+                    <person-group person-group-type="author">
+                        <name name-style="western">
+                            <surname>Phillips</surname>
+                            <given-names>R</given-names>
+                        </name>
+                    </person-group>
+                    <year>2016</year>
+                    <article-title>Future</article-title>
+                    <person-group person-group-type="editor">
+                        <name name-style="western">
+                            <surname>Fritsch</surname>
+                            <given-names>K</given-names>
+                        </name>
+                        <name name-style="western">
+                            <surname>O'Connor</surname>
+                            <given-names>C</given-names>
+                        </name>
+                        <name name-style="western">
+                            <surname>Thompson</surname>
+                            <given-names>A.K</given-names>
+                        </name>
+                    </person-group>
+                    <source>Keywords for Radicals: The Contested Vocabulary of Late-Capitalist Struggle</source>
+                    <publisher-name>AK Press</publisher-name>
+                    <publisher-loc>Oakland, CA</publisher-loc>
+                </mixed-citation>
+            </ref>
+            <ref>
+                <mixed-citation publication-type="book">
+                    <person-group person-group-type="author">
+                        <name name-style="western">
+                            <surname>Sassower</surname>
+                            <given-names>R</given-names>
+                        </name>
+                    </person-group>
+                    <year>2015</year>
+                    <source>Compromising the Ideals of Science</source>
+                    <publisher-name>Macmillan</publisher-name>
+                    <publisher-loc>Basingstoke, UK</publisher-loc>
+                </mixed-citation>
+            </ref>
+            <ref>
+                <mixed-citation publication-type="book">
+                    <person-group person-group-type="author">
+                        <name name-style="western">
+                            <surname>Shaviro</surname>
+                            <given-names>S</given-names>
+                        </name>
+                    </person-group>
+                    <year>2010</year>
+                    <source>Post Cinematic Affect</source>
+                    <publisher-name>Zero Books</publisher-name>
+                    <publisher-loc>London</publisher-loc>
+                </mixed-citation>
+            </ref>
+            <ref>
+                <mixed-citation publication-type="book">
+                    <person-group person-group-type="author">
+                        <name name-style="western">
+                            <surname>Tally</surname>
+                            <given-names>R</given-names>
+                        </name>
+                    </person-group>
+                    <year>2013</year>
+                    <source>Utopia in the Age of Globalization: Space, Representation, and the World-System</source>
+                    <publisher-name>Macmillan</publisher-name>
+                    <publisher-loc>Basingstoke, UK</publisher-loc>
+                </mixed-citation>
+            </ref>
+            <ref>
+                <mixed-citation publication-type="book">
+                    <collab>The Invisible Committee</collab>
+                    <year>2015</year>
+                    <source>To Our Friends</source>
+                    <publisher-name>The MIT Press</publisher-name>
+                    <publisher-loc>Cambridge, MA</publisher-loc>
+                </mixed-citation>
+            </ref>
+            <ref>
+                <mixed-citation publication-type="book">
+                    <person-group person-group-type="author">
+                        <name name-style="western">
+                            <surname>Toffler</surname>
+                            <given-names>A</given-names>
+                        </name>
+                    </person-group>
+                    <year>1971</year>
+                    <source>Future Shock</source>
+                    <publisher-name>Bantam Books</publisher-name>
+                    <publisher-loc>New York</publisher-loc>
+                </mixed-citation>
+            </ref>
+            <ref>
+                <mixed-citation publication-type="book">
+                    <person-group person-group-type="author">
+                        <name name-style="western">
+                            <surname>van Veen</surname>
+                            <given-names>T</given-names>
+                        </name>
+                    </person-group>
+                    <year>2015</year>
+                    <article-title>The Armageddon Effect: Afrofuturism and the Chronopolitics of Alien Nation</article-title>
+                    <person-group person-group-type="editor">
+                        <name name-style="western">
+                            <surname>Anderson</surname>
+                            <given-names>R</given-names>
+                        </name>
+                        <name name-style="western">
+                            <surname>Jones</surname>
+                            <given-names>C.E</given-names>
+                        </name>
+                    </person-group>
+                    <source>Afrofuturism 2.0: The Rise of Astro-Blackness</source>
+                    <publisher-name>Lexington Books</publisher-name>
+                    <publisher-loc>New York</publisher-loc>
+                </mixed-citation>
+            </ref>
+            <ref>
+                <mixed-citation publication-type="journal">
+                    <person-group person-group-type="author">
+                        <name name-style="western">
+                            <surname>Vint</surname>
+                            <given-names>S</given-names>
+                        </name>
+                    </person-group>
+                    <year>2016</year>
+                    <article-title>Introduction to The Futures Industry</article-title>
+                    <source>Paradoxa</source>
+                    <volume>27</volume>
+                    <issue>1</issue>
+                </mixed-citation>
+            </ref>
+            <ref>
+                <mixed-citation publication-type="book">
+                    <person-group person-group-type="author">
+                        <name name-style="western">
+                            <surname>Virilio</surname>
+                            <given-names>P</given-names>
+                        </name>
+                    </person-group>
+                    <year>1977</year>
+                    <source>Speed and Politics: An Essay on Dromology</source>
+                    <publisher-name>The MIT Press</publisher-name>
+                    <publisher-loc>Cambridge, MA</publisher-loc>
+                </mixed-citation>
+            </ref>
+            <ref>
+                <mixed-citation publication-type="book">
+                    <person-group person-group-type="author">
+                        <name name-style="western">
+                            <surname>Žižek</surname>
+                            <given-names>S</given-names>
+                        </name>
+                    </person-group>
+                    <year>2002</year>
+                    <source>Welcome to the Desert of the Real!: Five Essays on September 11 and Related Dates</source>
+                    <publisher-name>Verso Books</publisher-name>
+                    <publisher-loc>New York</publisher-loc>
+                </mixed-citation>
+            </ref>
+        </ref-list>
+    </back>
+</article>

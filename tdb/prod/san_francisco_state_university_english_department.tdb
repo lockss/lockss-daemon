@@ -5,7 +5,6 @@
   >
   
   {
-  
     title <
       name = Medieval Forum ;
       issn = 1939-0378 ;
@@ -13,20 +12,33 @@
     >
   
     rights = openaccess
+    comment[publisher] = stopped publishing after 2007. Still online 20200609
+    {
+    plugin = needs.plugin
+    param[base_url] = http://www.sfsu.edu/~medieval/
+    implicit < status ; year ; name ; param[volume] >
+    
+    au < doNotProcess ; 2002 ; Medieval Forum Volume 1 ; 1 >
+    au < doNotProcess ; 2003 ; Medieval Forum Volume 2 ; 2 >
+    au < doNotProcess ; 2003 ; Medieval Forum Volume 3 ; 3 >
+    au < doNotProcess ; 2004 ; Medieval Forum Volume 4 ; 4 >
+    au < doNotProcess ; 2006 ; Medieval Forum Volume 5 ; 5 >
+    au < exists ; 2007 ; Medieval Forum Volume 6 ; 6 >
+    }
+    {
     plugin = edu.jhu.library.plugin.MedievalForumPlugin
     param[base_url] = http://www.sfsu.edu/~medieval/
     implicit < status ; year ; name ; param[volume] >
     
-    comment[publisher] = stopped publishing after 2007.
-    comment[doNotProcess] = plugin needs review
+    #fetch errors on crawls in late 2019.
 
-    au < released ; 2002 ; Medieval Forum Volume 1 ; 1 >
-    au < released ; 2003 ; Medieval Forum Volume 2 ; 2 >
-    au < released ; 2003 ; Medieval Forum Volume 3 ; 3 >
-    au < released ; 2004 ; Medieval Forum Volume 4 ; 4 >
-    au < released ; 2006 ; Medieval Forum Volume 5 ; 5 >
+    au < down ; 2002 ; Medieval Forum Volume 1 ; 1 >
+    au < down ; 2003 ; Medieval Forum Volume 2 ; 2 >
+    au < down ; 2003 ; Medieval Forum Volume 3 ; 3 >
+    au < down ; 2004 ; Medieval Forum Volume 4 ; 4 >
+    au < down ; 2006 ; Medieval Forum Volume 5 ; 5 >
     au < doNotProcess ; 2007 ; Medieval Forum Volume 6 ; 6 >
-
+    }
   }
 
 }

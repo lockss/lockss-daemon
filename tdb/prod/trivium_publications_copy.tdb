@@ -20,7 +20,8 @@
 
     {
     
-      plugin = org.lockss.plugin.janushead.JanusHeadPluginLegacy
+      plugin = needs.plugin
+      #plugin = org.lockss.plugin.janushead.JanusHeadPluginLegacy
       param[base_url] = http://www.janushead.org/
       implicit < status ; year ; name ; volume >
     
@@ -30,7 +31,8 @@
     
     {
 
-      plugin = org.lockss.plugin.janushead.JanusHeadPlugin
+      plugin = needs.plugin
+      #plugin = org.lockss.plugin.janushead.JanusHeadPlugin
       param[base_url] = http://www.janushead.org/
       implicit < status ; year ; name ; param[volume] >
     

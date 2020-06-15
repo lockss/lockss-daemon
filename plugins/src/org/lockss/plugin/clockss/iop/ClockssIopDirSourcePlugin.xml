@@ -9,14 +9,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -57,7 +57,7 @@
     <list>
       <string>.*\.article$,text/xml</string>
     </list>
-  </entry>  
+  </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.clockss.iop.IopSourceXmlArticleIteratorFactory</string>

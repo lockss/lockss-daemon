@@ -20,7 +20,7 @@
       param[base_url] = https://digitalcommons.georgiasouthern.edu/
       param[journal_abbr] = aujh
 
-      au < finished ; frozen ; 2017 ; Armstrong Undergraduate Journal of History Volume 7 ; 7 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2017 ; Armstrong Undergraduate Journal of History Volume 7 ; 7 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2018 ; Armstrong Undergraduate Journal of History Volume 8 ; 8 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2019 ; Armstrong Undergraduate Journal of History Volume 9 ; 9 ; >
       au < manifest ; exists ; 2020 ; Armstrong Undergraduate Journal of History Volume 10 ; 10 ; >
@@ -80,11 +80,11 @@
       au < manifest ; exists ; 2009 ; Georgia Educational Researcher Volume 7 ; 7 ; >
       au < manifest ; exists ; 2010 ; Georgia Educational Researcher Volume 8 ; 8 ; >
       au < manifest ; exists ; 2011 ; Georgia Educational Researcher Volume 9 ; 9 ; >
-      au < finished ; frozen ; 2012 ; Georgia Educational Researcher Volume 10 ; 10 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2012 ; Georgia Educational Researcher Volume 10 ; 10 ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2013 ; Georgia Educational Researcher Volume 11 ; 11 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2014 ; Georgia Educational Researcher Volume 12 ; 12 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2015 ; Georgia Educational Researcher Volume 13 ; 13 ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2016 ; Georgia Educational Researcher Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2016 ; Georgia Educational Researcher Volume 14 ; 14 ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2017 ; Georgia Educational Researcher Volume 15 ; 15 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2018 ; Georgia Educational Researcher Volume 16 ; 16 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2019 ; Georgia Educational Researcher Volume 17 ; 17 ; >
@@ -105,7 +105,7 @@
 
       au < superseded ; exists ; 2016 ; Georgia Journal of College Student Affairs Volume 1 [superseded] ; 1 ; > #no substance, empty page
 
-      au < finished ; frozen ; 2013 ; Georgia Journal of College Student Affairs Volume 29 ; 29 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2013 ; Georgia Journal of College Student Affairs Volume 29 ; 29 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2014 ; Georgia Journal of College Student Affairs Volume 30 ; 30 ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2016 ; Georgia Journal of College Student Affairs Volume 32 ; 32 ; reingest5.clockss.org:8082 >
 
@@ -130,12 +130,12 @@
       au < finished ; finished ; 2012 ; International Journal for the Scholarship of Teaching & Learning Volume 6 ; 6 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2013 ; International Journal for the Scholarship of Teaching & Learning Volume 7 ; 7 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2014 ; International Journal for the Scholarship of Teaching & Learning Volume 8 ; 8 ; reingest3.clockss.org:8083 >
-      au < finished ; frozen ; 2015 ; International Journal for the Scholarship of Teaching & Learning Volume 9 ; 9 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; International Journal for the Scholarship of Teaching & Learning Volume 9 ; 9 ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2016 ; International Journal for the Scholarship of Teaching & Learning Volume 10 ; 10 ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2017 ; International Journal for the Scholarship of Teaching & Learning Volume 11 ; 11 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2017 ; International Journal for the Scholarship of Teaching & Learning Volume 11 ; 11 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2018 ; International Journal for the Scholarship of Teaching & Learning Volume 12 ; 12 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2019 ; International Journal for the Scholarship of Teaching & Learning Volume 13 ; 13 ; >
-      au < expected ; exists ; 2020 ; International Journal for the Scholarship of Teaching & Learning Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2020 ; International Journal for the Scholarship of Teaching & Learning Volume 14 ; 14 ; >
 
   }
 
@@ -151,7 +151,7 @@
       param[base_url] = https://digitalcommons.georgiasouthern.edu/
       param[journal_abbr] = iss
 
-      au < finished ; frozen ; 2014-2016 ; Irish Studies South Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2014-2016 ; Irish Studies South Volume 1 ; 1 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -168,7 +168,7 @@
 
       au < finished ; finished ; 2015-2016 ; National Youth-At-Risk Journal Volume 1 ; 1 ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2016-2017 ; National Youth-At-Risk Journal Volume 2 ; 2 ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2018 ; National Youth-At-Risk Journal Volume 3 ; 3 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; National Youth-At-Risk Journal Volume 3 ; 3 ; reingest1.clockss.org:8082 >
       au < expected ; exists ; 2019 ; National Youth-At-Risk Journal Volume 4 ; 4 ; >
       au < expected ; exists ; 2020 ; National Youth-At-Risk Journal Volume 5 ; 5 ; >
 
@@ -186,7 +186,7 @@
       param[journal_abbr] = stem_proceedings
 
       au < finished ; frozen ; 2017 ; Proceedings of the Interdisciplinary STEM Teaching and Learning Conference Volume 1 ; 1 ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2018 ; Proceedings of the Interdisciplinary STEM Teaching and Learning Conference Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2018 ; Proceedings of the Interdisciplinary STEM Teaching and Learning Conference Volume 2 ; 2 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2019 ; Proceedings of the Interdisciplinary STEM Teaching and Learning Conference Volume 3 ; 3 ; >
       au < expected ; exists ; 2020 ; Proceedings of the Interdisciplinary STEM Teaching and Learning Conference Volume 4 ; 4 ; >
 
@@ -207,10 +207,10 @@
       au < manifest ; exists ; 2007 ; The Coastal Review Volume 1 ; 1 ; >
       au < manifest ; exists ; 2008 ; The Coastal Review Volume 2 ; 2 ; >
       au < manifest ; exists ; 2011 ; The Coastal Review Volume 3 ; 3 ; >
-      au < finished ; frozen ; 2013 ; The Coastal Review Volume 4 ; 4 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2013 ; The Coastal Review Volume 4 ; 4 ; reingest5.clockss.org:8082 >
       au < doesNotExist ; doesNotExist ; 2012 ; The Coastal Review Volume 5 ; 5 ; >
       au < finished ; finished ; 2015-2016 ; The Coastal Review Volume 6 ; 6 ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2015-2016 ; The Coastal Review Volume 7 ; 7 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2015-2016 ; The Coastal Review Volume 7 ; 7 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2016-2017 ; The Coastal Review Volume 8 ; 8 ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2017-2018 ; The Coastal Review Volume 9 ; 9 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018-2019 ; The Coastal Review Volume 10 ; 10 ; >
@@ -249,7 +249,7 @@
 
       au < finished ; frozen ; 2014 ; Theory and Applications of Graphs Volume 0 ; 0 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; Theory and Applications of Graphs Volume 1 ; 1 ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2016 ; Theory and Applications of Graphs Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2016 ; Theory and Applications of Graphs Volume 2 ; 2 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2017 ; Theory and Applications of Graphs Volume 3 ; 3 ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2018 ; Theory and Applications of Graphs Volume 4 ; 4 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2019 ; Theory and Applications of Graphs Volume 5 ; 5 ; >

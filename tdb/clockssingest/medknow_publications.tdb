@@ -4913,7 +4913,7 @@
       au < finished ; finished ; 2015 ; Community Acquired Infection Volume 2 ; 2015 ; 2 ; ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2016 ; Community Acquired Infection Volume 3 ; 2016 ; 3 ; ; >
       au < finished ; finished ; 2017 ; Community Acquired Infection Volume 4 ; 2017 ; 4 ; ; reingest4.clockss.org:8082 >
-      au < expected ; exists ; 2018 ; Community Acquired Infection Volume 5 ; 2018 ; 5 ; ; >
+      au < manifest ; exists ; 2018 ; Community Acquired Infection Volume 5 ; 2018 ; 5 ; ; >
 
   }
 
@@ -5921,8 +5921,7 @@
 
       param[journal_issn] = 0976-0105
       param[base_url] = http://www.jbclinpharm.org/
-      # moved to new platform. https://www.jbclinpharm.org/archive.html
-      # needs a fairly simple but new plugin, article url pattern very different
+      # moved to new platform. https://www.jbclinpharm.org/archive.html. No longer at Medknow.
 
       au < superseded ; exists ; 2011 ; Journal of Basic and Clinical Pharmacy Volume 2 [superseded] ; 2011 ; 2 ; ; >
       au < superseded ; exists ; 2012 ; Journal of Basic and Clinical Pharmacy Volume 3 [superseded] ; 2012 ; 3 ; ; >
@@ -5948,7 +5947,7 @@
 
       au < finished ; crawling ; 2012 ; Journal of Basic and Clinical Reproductive Sciences Volume 1 ; 2012 ; 1 ; ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2013 ; Journal of Basic and Clinical Reproductive Sciences Volume 2 ; 2013 ; 2 ; ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2014 ; Journal of Basic and Clinical Reproductive Sciences Volume 3 ; 2014 ; 3 ; ; reingest3.clockss.org:8083 > # needs http-to-https support
+      au < finished ; manifest ; 2014 ; Journal of Basic and Clinical Reproductive Sciences Volume 3 ; 2014 ; 3 ; ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2015 ; Journal of Basic and Clinical Reproductive Sciences Volume 4 ; 2015 ; 4 ; ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2016 ; Journal of Basic and Clinical Reproductive Sciences Volume 5 ; 2016 ; 5 ; ; >
 
@@ -8634,7 +8633,7 @@
       param[base_url] = http://www.ijsshortreports.com/
 
       au < manifest ; exists ; 2016 ; IJS Short Reports Volume 1 ; 2016 ; 1 ; ; >
-      au < manifest ; exists ; 2017 ; IJS Short Reports Volume 2 ; 2017 ; 2 ; ; >
+      au < notReady ; exists ; 2017 ; IJS Short Reports Volume 2 ; 2017 ; 2 ; ; > #Unable to fetch permission page
       au < manifest ; exists ; 2018 ; IJS Short Reports Volume 3 ; 2018 ; 3 ; ; >
 
   }
@@ -8652,7 +8651,7 @@
       param[base_url] = http://www.e-ijas.org/
 
       au < manifest ; exists ; 2016 ; Imam Journal of Applied Sciences Volume 1 ; 2016 ; 1 ; ; >
-      au < manifest ; exists ; 2017 ; Imam Journal of Applied Sciences Volume 2 ; 2017 ; 2 ; ; >
+      au < notReady ; exists ; 2017 ; Imam Journal of Applied Sciences Volume 2 ; 2017 ; 2 ; ; > #no substance
       au < manifest ; exists ; 2018 ; Imam Journal of Applied Sciences Volume 3 ; 2018 ; 3 ; ; >
 
   }
@@ -8785,7 +8784,7 @@
       param[journal_issn] = WKMP-0139
       param[base_url] = http://www.ijcpc.org/
 
-      au < manifest ; exists ; 2017 ; International Journal of Clinicopathological Correlation Volume 1 ; 2017 ; 1 ; ; >
+      au < notReady ; exists ; 2017 ; International Journal of Clinicopathological Correlation Volume 1 ; 2017 ; 1 ; ; > #no substance
       au < manifest ; exists ; 2018 ; International Journal of Clinicopathological Correlation Volume 2 ; 2018 ; 2 ; ; >
 
   }

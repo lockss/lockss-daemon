@@ -24,6 +24,7 @@
     au < doNotProcess ; 2018 ; Journal of Evolution and Health Volume 3 ; 3 ; https://jevohealth.com/ >
     au < doNotProcess ; 2019 ; Journal of Evolution and Health Volume 4 ; 4 ; https://jevohealth.com/ >
     }
+
     {
     param[journal_abbr] = jevohealth
 
@@ -31,6 +32,8 @@
     au < exists ; 2017 ; Journal of Evolution and Health Volume 2 ; 2 ; https://escholarship.org/uc/ >
     au < exists ; 2018 ; Journal of Evolution and Health Volume 3 ; 3 ; https://escholarship.org/uc/ >
     au < exists ; 2019 ; Journal of Evolution and Health Volume 4 ; 4 ; https://escholarship.org/uc/ >
+    au < expected ; 2020 ; Journal of Evolution and Health Volume 5 ; 5 ; https://escholarship.org/uc/ >
+
     }
   }
 

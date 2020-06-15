@@ -3,8 +3,6 @@
     name = eLife Sciences Publications
   >
 
-  plugin = org.lockss.plugin.elifesciences.ELifeSciencesPlugin
-  implicit < status ; year ; name ; param[year_month] >
   #LXQUEUE-569, need plugin
 
   {
@@ -13,6 +11,21 @@
       eissn = 2050-084X
     >
     {
+      plugin = needs.plugin
+      implicit < status ; year ; name ; param[year] >
+      param[base_url] = https://elifesciences.org/
+
+      au < exists ; 2016 ; eLife Volume 2016 ; 2016 >
+      au < exists ; 2017 ; eLife Volume 2017 ; 2017 >
+      au < exists ; 2018 ; eLife Volume 2018 ; 2018 >
+      au < exists ; 2019 ; eLife Volume 2019 ; 2019 >
+      au < exists ; 2020 ; eLife Volume 2020 ; 2020 >
+
+    }
+
+    {
+      plugin = org.lockss.plugin.elifesciences.ELifeSciencesPlugin
+      implicit < status ; year ; name ; param[year_month] >
       param[base_url] = https://elifesciences.org/
 
       au < down ; 2014 ; eLife January 2014 ; 2014/01 >
@@ -47,18 +60,13 @@
       au < down ; 2016 ; eLife April 2016 ; 2016/04 >
       au < down ; 2016 ; eLife May 2016 ; 2016/05 >
       au < down ; 2016 ; eLife June 2016 ; 2016/06 >
-      au < exists ; 2016 ; eLife July 2016 ; 2016/07 >
-      au < exists ; 2016 ; eLife August 2016 ; 2016/08 >
-      au < exists ; 2016 ; eLife September 2016 ; 2016/09 >
-      au < exists ; 2016 ; eLife October 2016 ; 2016/10 >
-      au < exists ; 2016 ; eLife November 2016 ; 2016/11 >
-      au < exists ; 2016 ; eLife December 2016 ; 2016/12 >
+      au < doNotProcess ; 2016 ; eLife July 2016 ; 2016/07 >
+      au < doNotProcess ; 2016 ; eLife August 2016 ; 2016/08 >
+      au < doNotProcess ; 2016 ; eLife September 2016 ; 2016/09 >
+      au < doNotProcess ; 2016 ; eLife October 2016 ; 2016/10 >
+      au < doNotProcess ; 2016 ; eLife November 2016 ; 2016/11 >
+      au < doNotProcess ; 2016 ; eLife December 2016 ; 2016/12 >
 
-    }
-    {
-      param[base_url] = http://elifesciences.org/
-
-      au < doNotProcess ; 2015 ; eLife January 2015 ; 2015/01 >
     }
   }
 }

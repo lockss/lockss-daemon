@@ -18,6 +18,7 @@
     implicit < status ; year ; name ; param[year] ; volume ; nondefparam[issues] >
     
     # AUs down see RU2977 RT2391
+    # web site down, 2020
     
     au < down ; 1996 ; Disputatio 1996 ; 1996 ; ; 001 >
     au < down ; 1997 ; Disputatio 1997 ; 1997 ; ; 002,003 >
@@ -31,11 +32,11 @@
     au < down ; 2005 ; Disputatio 2005 ; 2005 ; I ; 018,019 >
     au < down ; 2006 ; Disputatio 2006 ; 2006 ; I-II ; 020,021 >
     au < down ; 2007 ; Disputatio 2007 ; 2007 ; II ; 022,023 >
-    au < exists ; 2008 ; Disputatio 2008 ; 2008 ; II-III ; 024,025 >
-    au < exists ; 2009 ; Disputatio 2009 ; 2009 ; III ; 026,027 >
-    au < exists ; 2010 ; Disputatio 2010 ; 2010 ; III-IV ; 028,029 >
-    au < exists ; 2011 ; Disputatio 2011 ; 2011 ; IV ; 030,031 >
-    au < exists ; 2012 ; Disputatio 2012 ; 2012 ; IV ; 032,033 >
+    au < doNotProcess ; 2008 ; Disputatio 2008 ; 2008 ; II-III ; 024,025 >
+    au < doNotProcess ; 2009 ; Disputatio 2009 ; 2009 ; III ; 026,027 >
+    au < doNotProcess ; 2010 ; Disputatio 2010 ; 2010 ; III-IV ; 028,029 >
+    au < doNotProcess ; 2011 ; Disputatio 2011 ; 2011 ; IV ; 030,031 >
+    au < doNotProcess ; 2012 ; Disputatio 2012 ; 2012 ; IV ; 032,033 >
 
 
   }

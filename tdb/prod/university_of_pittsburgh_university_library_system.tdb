@@ -23,7 +23,8 @@
     au < released ; 2016 ; 2016 ; BIBLIOS: Librarianship and Information Science Journal Volume 2016 ; 2016 ; http://biblios.pitt.edu/ojs/ >
     au < released ; 2017 ; 2017 ; BIBLIOS: Librarianship and Information Science Journal Volume 2017 ; 2017 ; http://biblios.pitt.edu/ojs/ >
     au < released ; 2018 ; 2018 ; BIBLIOS: Librarianship and Information Science Journal Volume 2018 ; 2018 ; http://biblios.pitt.edu/ojs/ >
-    au < manifest ; 2019 ; 2019 ; BIBLIOS: Librarianship and Information Science Journal Volume 2019 ; 2019 ; http://biblios.pitt.edu/ojs/ >
+    au < manifest ; 2019 ; 2019 ; BIBLIOS: Librarianship and Information Science Journal Volume 2019 ; 2019 ; https://biblios.pitt.edu/ojs/ >
+    au < expected ; 2020 ; 2020 ; BIBLIOS: Librarianship and Information Science Journal Volume 2020 ; 2020 ; https://biblios.pitt.edu/ojs/ >
 
   }
 
@@ -44,7 +45,8 @@
     au < released ; 2015 ; 2015 ; Bolivian Studies Journal Volume 21 ; 21 ; http://bsj.pitt.edu/ojs/ >
     au < released ; 2016 ; 2016 ; Bolivian Studies Journal Volume 22 ; 22 ; http://bsj.pitt.edu/ojs/ >
     au < released ; 2017-2018 ; 2018 ; Bolivian Studies Journal Volume 23-24 ; 23-24 ; http://bsj.pitt.edu/ojs/ >
-    au < expected ; 2019 ; 2019 ; Bolivian Studies Journal Volume 25 ; 25 ; http://bsj.pitt.edu/ojs/ >
+    au < manifest ; 2019 ; 2019 ; Bolivian Studies Journal Volume 25 ; 25 ; https://bsj.pitt.edu/ojs/ >
+    au < expected ; 2020 ; 2020 ; Bolivian Studies Journal Volume 26 ; 26 ; https://bsj.pitt.edu/ojs/ >
 
   }
 
@@ -113,7 +115,8 @@
       au < released ; 2016 ; 2016 ; Catedral Tomada: Revista de crítica literaria latinoamericana Volume 4 ; 4 ; http://catedraltomada.pitt.edu/ojs/ >
       au < released ; 2017 ; 2017 ; Catedral Tomada: Revista de crítica literaria latinoamericana Volume 5 ; 5 ; http://catedraltomada.pitt.edu/ojs/ >
       au < released ; 2018 ; 2018 ; Catedral Tomada: Revista de crítica literaria latinoamericana Volume 6 ; 6 ; http://catedraltomada.pitt.edu/ojs/ >
-      au < manifest ; 2019 ; 2019 ; Catedral Tomada: Revista de crítica literaria latinoamericana Volume 7 ; 7 ; http://catedraltomada.pitt.edu/ojs/ >
+      au < manifest ; 2019 ; 2019 ; Catedral Tomada: Revista de crítica literaria latinoamericana Volume 7 ; 7 ; https://catedraltomada.pitt.edu/ojs/ >
+      au < expected ; 2020 ; 2020 ; Catedral Tomada: Revista de crítica literaria latinoamericana Volume 8 ; 8 ; https://catedraltomada.pitt.edu/ojs/ >
 
   }
 
@@ -128,14 +131,15 @@
       param[journal_id] = cajgh
       # subscription journal.
 
-      au < notReady ; 2012 ; 2012 ; Central Asian Journal of Global Health Volume 1 ; 1 ; http://cajgh.pitt.edu/ojs/ >
-      au < notReady ; 2013 ; 2013 ; Central Asian Journal of Global Health Volume 2 ; 2 ; http://cajgh.pitt.edu/ojs/ >
-      au < notReady ; 2014 ; 2014 ; Central Asian Journal of Global Health Volume 3 ; 3 ; http://cajgh.pitt.edu/ojs/ >
-      au < notReady ; 2015 ; 2015 ; Central Asian Journal of Global Health Volume 4 ; 4 ; http://cajgh.pitt.edu/ojs/ >
-      au < notReady ; 2016 ; 2016 ; Central Asian Journal of Global Health Volume 5 ; 5 ; http://cajgh.pitt.edu/ojs/ >
-      au < notReady ; 2017 ; 2017 ; Central Asian Journal of Global Health Volume 6 ; 6 ; http://cajgh.pitt.edu/ojs/ >
+      au < notReady ; 2012 ; 2012 ; Central Asian Journal of Global Health Volume 1 ; 1 ; https://cajgh.pitt.edu/ojs/ >
+      au < notReady ; 2013 ; 2013 ; Central Asian Journal of Global Health Volume 2 ; 2 ; https://cajgh.pitt.edu/ojs/ >
+      au < notReady ; 2014 ; 2014 ; Central Asian Journal of Global Health Volume 3 ; 3 ; https://cajgh.pitt.edu/ojs/ >
+      au < notReady ; 2015 ; 2015 ; Central Asian Journal of Global Health Volume 4 ; 4 ; https://cajgh.pitt.edu/ojs/ >
+      au < notReady ; 2016 ; 2016 ; Central Asian Journal of Global Health Volume 5 ; 5 ; https://cajgh.pitt.edu/ojs/ >
+      au < notReady ; 2017 ; 2017 ; Central Asian Journal of Global Health Volume 6 ; 6 ; https://cajgh.pitt.edu/ojs/ >
       au < released ; 2018 ; 2018 ; Central Asian Journal of Global Health Volume 7 ; 7 ; http://cajgh.pitt.edu/ojs/ >
-      au < manifest ; 2019 ; 2019 ; Central Asian Journal of Global Health Volume 8 ; 8 ; http://cajgh.pitt.edu/ojs/ >
+      au < manifest ; 2019 ; 2019 ; Central Asian Journal of Global Health Volume 8 ; 8 ; https://cajgh.pitt.edu/ojs/ >
+      au < expected ; 2020 ; 2020 ; Central Asian Journal of Global Health Volume 9 ; 9 ; https://cajgh.pitt.edu/ojs/ >
 
   }
 
@@ -157,7 +161,8 @@
     au < released ; 2016 ; 2016 ; CINEJ Cinema e-Journal Volume 5-6 ; 5-6 ; http://cinej.pitt.edu/ojs/ >
     au < released ; 2017 ; 2017 ; CINEJ Cinema e-Journal Volume 6-7 ; 6-7 ; http://cinej.pitt.edu/ojs/ >
     au < released ; 2018 ; 2018 ; CINEJ Cinema e-Journal Volume 7-8 ; 7-8 ; http://cinej.pitt.edu/ojs/ >
-    au < manifest ; 2019 ; 2019 ; CINEJ Cinema e-Journal Volume 9-10 ; 9-10 ; http://cinej.pitt.edu/ojs/ >
+    au < manifest ; 2019 ; 2019 ; CINEJ Cinema e-Journal Volume 9-10 ; 9-10 ; https://cinej.pitt.edu/ojs/ >
+    au < expected ; 2020 ; 2020 ; CINEJ Cinema e-Journal Volume 11-12 ; 11-12 ; https://cinej.pitt.edu/ojs/ >
 
   }
 
@@ -177,7 +182,8 @@
     au < released ; 2016 ; 2016 ; Contemporaneity: Historical Presence in Visual Culture Volume 5 ; 5 ; http://contemporaneity.pitt.edu/ojs/ >
     au < released ; 2017 ; 2017 ; Contemporaneity: Historical Presence in Visual Culture Volume 6 ; 6 ; http://contemporaneity.pitt.edu/ojs/ >
     au < released ; 2018 ; 2018 ; Contemporaneity: Historical Presence in Visual Culture Volume 7 ; 7 ; http://contemporaneity.pitt.edu/ojs/ >
-    au < expected ; 2019 ; 2019 ; Contemporaneity: Historical Presence in Visual Culture Volume 8 ; 8 ; https://contemporaneity.pitt.edu/ojs/ >
+    au < exists ; 2019 ; 2019 ; Contemporaneity: Historical Presence in Visual Culture Volume 8 ; 8 ; https://contemporaneity.pitt.edu/ojs/ >
+    au < expected ; 2020 ; 2020 ; Contemporaneity: Historical Presence in Visual Culture Volume 9 ; 9 ; https://contemporaneity.pitt.edu/ojs/ >
 
   }
 
@@ -197,7 +203,8 @@
     au < released ; 2016 ; 2016 ; Dentistry 3000 Volume 4 (2016) ; 4 ; http://dentistry3000.pitt.edu/ojs/ >
     au < released ; 2017 ; 2017 ; Dentistry 3000 Volume 5 (2017) ; 5 ; http://dentistry3000.pitt.edu/ojs/ >
     au < released ; 2018 ; 2018 ; Dentistry 3000 Volume 6 (2018) ; 6 ; http://dentistry3000.pitt.edu/ojs/ >
-    au < manifest ; 2019 ; 2019 ; Dentistry 3000 Volume 7 (2019) ; 7 ; http://dentistry3000.pitt.edu/ojs/ >
+    au < manifest ; 2019 ; 2019 ; Dentistry 3000 Volume 7 (2019) ; 7 ; https://dentistry3000.pitt.edu/ojs/ >
+    au < expected ; 2020 ; 2020 ; Dentistry 3000 Volume 8 (2020) ; 8 ; https://dentistry3000.pitt.edu/ojs/ >
 
   }
 
@@ -217,7 +224,8 @@
       au < released ; 2016 ; 2016 ; Dialogic Pedagogy: An International Online Journal Volume 4 ; 4 ; http://dpj.pitt.edu/ojs/ >
       au < released ; 2017 ; 2017 ; Dialogic Pedagogy: An International Online Journal Volume 5 ; 5 ; http://dpj.pitt.edu/ojs/ >
       au < released ; 2018 ; 2018 ; Dialogic Pedagogy: An International Online Journal Volume 6 ; 6 ; http://dpj.pitt.edu/ojs/ >
-      au < manifest ; 2019 ; 2019 ; Dialogic Pedagogy: An International Online Journal Volume 7 ; 7 ; http://dpj.pitt.edu/ojs/ >
+      au < manifest ; 2019 ; 2019 ; Dialogic Pedagogy: An International Online Journal Volume 7 ; 7 ; https://dpj.pitt.edu/ojs/ >
+      au < expected ; 2020 ; 2020 ; Dialogic Pedagogy: An International Online Journal Volume 8 ; 8 ; https://dpj.pitt.edu/ojs/ >
 
   }
 
@@ -239,7 +247,8 @@
     au < released ; 2016 ; 2016 ; EMAJ: Emerging Markets e-Journal of Management Volume 6 (2016) ; 6 ; http://emaj.pitt.edu/ojs/ >
     au < released ; 2017 ; 2017 ; EMAJ: Emerging Markets e-Journal of Management Volume 7 (2017) ; 7 ; http://emaj.pitt.edu/ojs/ >
     au < released ; 2018 ; 2018 ; EMAJ: Emerging Markets e-Journal of Management Volume 8 (2018) ; 8 ; http://emaj.pitt.edu/ojs/ >
-    au < manifest ; 2019 ; 2019 ; EMAJ: Emerging Markets e-Journal of Management Volume 9 (2019) ; 9 ; http://emaj.pitt.edu/ojs/ >
+    au < manifest ; 2019 ; 2019 ; EMAJ: Emerging Markets e-Journal of Management Volume 9 (2019) ; 9 ; https://emaj.pitt.edu/ojs/ >
+    au < expected ; 2020 ; 2020 ; EMAJ: Emerging Markets e-Journal of Management Volume 10 (2020) ; 10 ; https://emaj.pitt.edu/ojs/ >
 
   }
 
@@ -279,7 +288,6 @@
     au < released ; 2015 ; 2015 ; Excellence in Higher Education Volume 6 ; 6 ; http://ehe.pitt.edu/ojs/ >
     au < released ; 2016 ; 2016 ; Excellence in Higher Education Volume 7 ; 7 ; http://ehe.pitt.edu/ojs/ >
     au < released ; 2017-2018 ; 2018 ; Excellence in Higher Education Volume 8-9 ; 8-9 ; http://ehe.pitt.edu/ojs/ >
-    au < expected ; 2019 ; 2019 ; Excellence in Higher Education Volume 10 ; 10 ; http://ehe.pitt.edu/ojs/ >
 
   }
 
@@ -291,6 +299,7 @@
 
 #    param[base_url] = http://forbes5.pitt.edu/ojs/
     param[journal_id] = forbes5
+    #move to http://archive.forbes5.pitt.edu/ojs/index.php/forbes5
 
     au < released ; 2012 ; 2012 ; Forbes and Fifth Volume 1-2 ; 1-2 ; http://forbes5.pitt.edu/ojs/ >
     au < released ; 2013 ; 2013 ; Forbes and Fifth Volume 3-4 ; 3-4 ; http://forbes5.pitt.edu/ojs/ >
@@ -351,7 +360,8 @@
     au < released ; 2016 ; 2016 ; International Journal of Telerehabilitation Volume 8 ; 8 ; http://telerehab.pitt.edu/ojs/ >
     au < released ; 2017 ; 2017 ; International Journal of Telerehabilitation Volume 9 ; 9 ; http://telerehab.pitt.edu/ojs/ >
     au < released ; 2018 ; 2018 ; International Journal of Telerehabilitation Volume 10 ; 10 ; http://telerehab.pitt.edu/ojs/ >
-    au < manifest ; 2019 ; 2019 ; International Journal of Telerehabilitation Volume 11 ; 11 ; http://telerehab.pitt.edu/ojs/ >
+    au < manifest ; 2019 ; 2019 ; International Journal of Telerehabilitation Volume 11 ; 11 ; https://telerehab.pitt.edu/ojs/ >
+    au < expected ; 2020 ; 2020 ; International Journal of Telerehabilitation Volume 12 ; 12 ; https://telerehab.pitt.edu/ojs/ >
 
   }
 
@@ -391,7 +401,8 @@
     au < released ; 2016 ; 2016 ; Journal of French and Francophone Philosophy Volume 24 ; 24 ; http://jffp.pitt.edu/ojs/ >
     au < released ; 2017 ; 2017 ; Journal of French and Francophone Philosophy Volume 25 ; 25 ; http://jffp.pitt.edu/ojs/ >
     au < released ; 2018 ; 2018 ; Journal of French and Francophone Philosophy Volume 26 ; 26 ; http://jffp.pitt.edu/ojs/ >
-    au < manifest ; 2019 ; 2019 ; Journal of French and Francophone Philosophy Volume 27 ; 27 ; http://jffp.pitt.edu/ojs/ >
+    au < manifest ; 2019 ; 2019 ; Journal of French and Francophone Philosophy Volume 27 ; 27 ; https://jffp.pitt.edu/ojs/ >
+    au < expected ; 2020 ; 2020 ; Journal of French and Francophone Philosophy Volume 28 ; 28 ; https://jffp.pitt.edu/ojs/ >
 
   }
 
@@ -417,7 +428,8 @@
       au < released ; 2016 ; 2016 ; Journal of Law and Commerce Volume 34 ; 34 ; http://jlc.law.pitt.edu/ojs/ >
       au < released ; 2017 ; 2017 ; Journal of Law and Commerce Volume 35 ; 35 ; http://jlc.law.pitt.edu/ojs/ >
       au < released ; 2018 ; 2018 ; Journal of Law and Commerce Volume 36 ; 36 ; http://jlc.law.pitt.edu/ojs/ >
-      au < manifest ; 2019 ; 2019 ; Journal of Law and Commerce Volume 37 ; 37 ; http://jlc.law.pitt.edu/ojs/ >
+      au < manifest ; 2019 ; 2019 ; Journal of Law and Commerce Volume 37 ; 37 ; https://jlc.law.pitt.edu/ojs/ >
+      au < expected ; 2020 ; 2020 ; Journal of Law and Commerce Volume 38 ; 38 ; https://jlc.law.pitt.edu/ojs/ >
 
   }
 
@@ -433,7 +445,7 @@
 
       au < released ; 2013 ; 2013 ; Journal of World-Historical Information Volume 1 ; 1 ; http://jwhi.pitt.edu/ojs/ >
       au < released ; 2015 ; 2015 ; Journal of World-Historical Information Volume 2-3 ; 2-3 ; http://jwhi.pitt.edu/ojs/ >
-      au < released ; 2017 ; 2017 ; Journal of World-Historical Information Volume 3-4 ; 3-4 ; http://jwhi.pitt.edu/ojs/ >
+      au < released ; 2016-2017 ; 2017 ; Journal of World-Historical Information Volume 3-4 ; 3-4 ; http://jwhi.pitt.edu/ojs/ >
 
   }
 
@@ -455,6 +467,7 @@
 
     au < doNotProcess ; 2013 ; 2013 ; Linguistic Evidence in Security, Law and Intelligence Volume 1 ; 1 ; http://www.lesli-journal.org/ojs/ >
     au < released ; 2014 ; 2014 ; Linguistic Evidence in Security, Law and Intelligence Volume 2 ; 2 ; http://www.lesli-journal.org/ojs/ >
+    au < manifest ; 2019 ; 2019 ; Linguistic Evidence in Security, Law and Intelligence Volume 3 ; 3 ; https://www.lesli-journal.org/ojs/ >
 
     }
   }
@@ -490,7 +503,8 @@
     au < released ; 2016 ; 2016 ; Pennsylvania Libraries: Research and Practice Volume 4 ; 4 ; http://palrap.pitt.edu/ojs/ >
     au < released ; 2017 ; 2017 ; Pennsylvania Libraries: Research and Practice Volume 5 ; 5 ; http://palrap.pitt.edu/ojs/ >
     au < released ; 2018 ; 2018 ; Pennsylvania Libraries: Research and Practice Volume 6 ; 6 ; http://palrap.pitt.edu/ojs/ >
-    au < manifest ; 2019 ; 2019 ; Pennsylvania Libraries: Research and Practice Volume 7 ; 7 ; http://palrap.pitt.edu/ojs/ >
+    au < manifest ; 2019 ; 2019 ; Pennsylvania Libraries: Research and Practice Volume 7 ; 7 ; https://palrap.pitt.edu/ojs/ >
+    au < manifest ; 2020 ; 2020 ; Pennsylvania Libraries: Research and Practice Volume 8 ; 8 ; https://palrap.pitt.edu/ojs/ >
 
   }
 
@@ -503,8 +517,11 @@
 #    param[base_url] = http://ppr.pitt.edu/ojs/
     param[journal_id] = ppr
 
-    au < released ; 2011 ; 2011 ; Pitt Political Review Volume 8 ; 8 ; http://ppr.pitt.edu/ojs/ >
-    au < released ; 2012 ; 2012 ; Pitt Political Review Volume 9 ; 9 ; http://ppr.pitt.edu/ojs/ >
+    au < released ; 2011 ; 2011 ; Pitt Political Review Volume 8 (2011) ; 8 ; http://ppr.pitt.edu/ojs/ >
+    au < released ; 2012 ; 2012 ; Pitt Political Review Volume 8 (2012) ; 8 ; http://ppr.pitt.edu/ojs/ >
+    au < exists ; 2014 ; 2014 ; Pitt Political Review Volume 11 (2014) ; 11 ; https://ppr.pitt.edu/ojs/ >
+    au < exists ; 2015 ; 2015 ; Pitt Political Review Volume 11 (2015) ; 11 ; https://ppr.pitt.edu/ojs/ >
+    au < exists ; 2016-2017 ; 2017 ; Pitt Political Review Volume 12 ; 12 ; https://ppr.pitt.edu/ojs/ >
 
   }
 
@@ -523,9 +540,9 @@
       au < released ; 2009 ; 2009 ; Pittsburgh Journal of Environmental and Public Health Law Volume 3 ; 3 ; http://pjephl.law.pitt.edu/ojs/ >
       au < released ; 2010 ; 2010 ; Pittsburgh Journal of Environmental and Public Health Law Volume 4 ; 4 ; http://pjephl.law.pitt.edu/ojs/ >
       au < released ; 2011 ; 2011 ; Pittsburgh Journal of Environmental and Public Health Law Volume 5 ; 5 ; http://pjephl.law.pitt.edu/ojs/ >
-      au < released ; 2012 ; 2012 ; Pittsburgh Journal of Environmental and Public Health Law Volume 6 ; 6 ; http://pjephl.law.pitt.edu/ojs/ >
+      au < released ; 2012 ; 2012 ; Pittsburgh Journal of Environmental and Public Health Law Volume 5-6 ; 5-6 ; http://pjephl.law.pitt.edu/ojs/ >
       au < released ; 2013 ; 2013 ; Pittsburgh Journal of Environmental and Public Health Law Volume 7 ; 7 ; http://pjephl.law.pitt.edu/ojs/ >
-      au < released ; 2014 ; 2014 ; Pittsburgh Journal of Environmental and Public Health Law Volume 8 ; 8 ; http://pjephl.law.pitt.edu/ojs/ >
+      au < released ; 2014 ; 2014 ; Pittsburgh Journal of Environmental and Public Health Law Volume 8-9 ; 8-9 ; http://pjephl.law.pitt.edu/ojs/ >
 
   }
 
@@ -560,6 +577,7 @@
       au < released ; 2017 ; 2017 ; Pittsburgh Journal of Technology Law and Policy Volume 17 ; 17 ; https://tlp.law.pitt.edu/ojs/ >
       au < released ; 2018 ; 2018 ; Pittsburgh Journal of Technology Law and Policy Volume 18 ; 18 ; https://tlp.law.pitt.edu/ojs/ >
       au < manifest ; 2019 ; 2019 ; Pittsburgh Journal of Technology Law and Policy Volume 19 ; 19 ; https://tlp.law.pitt.edu/ojs/ >
+      au < expected ; 2020 ; 2020 ; Pittsburgh Journal of Technology Law and Policy Volume 20 ; 20 ; https://tlp.law.pitt.edu/ojs/ >
 
   }
 
@@ -597,7 +615,8 @@
     au < released ; 2016 ; 2016 ; Pittsburgh Tax Review Volume 5 ; 5 ; http://taxreview.law.pitt.edu/ojs/ >
     au < released ; 2017 ; 2017 ; Pittsburgh Tax Review Volume 6 ; 6 ; http://taxreview.law.pitt.edu/ojs/ >
     au < released ; 2018 ; 2018 ; Pittsburgh Tax Review Volume 7 ; 7 ; http://taxreview.law.pitt.edu/ojs/ >
-    au < manifest ; 2019 ; 2019 ; Pittsburgh Tax Review Volume 8 ; 8 ; http://taxreview.law.pitt.edu/ojs/ >
+    au < manifest ; 2019 ; 2019 ; Pittsburgh Tax Review Volume 8 ; 8 ; https://taxreview.law.pitt.edu/ojs/ >
+    au < expected ; 2020 ; 2020 ; Pittsburgh Tax Review Volume 9 ; 9 ; https://taxreview.law.pitt.edu/ojs/ >
 
   }
 
@@ -617,7 +636,8 @@
     au < released ; 2016 ; 2016 ; Radical Teacher Volume 4 ; 4 ; http://radicalteacher.library.pitt.edu/ojs/ >
     au < released ; 2017 ; 2017 ; Radical Teacher Volume 5 ; 5 ; http://radicalteacher.library.pitt.edu/ojs/ >
     au < released ; 2018 ; 2018 ; Radical Teacher Volume 6 ; 6 ; http://radicalteacher.library.pitt.edu/ojs/ >
-    au < manifest ; 2019 ; 2019 ; Radical Teacher Volume 7 ; 7 ; http://radicalteacher.library.pitt.edu/ojs/ >
+    au < manifest ; 2019 ; 2019 ; Radical Teacher Volume 7 ; 7 ; https://radicalteacher.library.pitt.edu/ojs/ >
+    au < expected ; 2020 ; 2020 ; Radical Teacher Volume 8 ; 8 ; https://radicalteacher.library.pitt.edu/ojs/ >
 
   }
 
@@ -712,6 +732,7 @@
     au < released ; 2017 ; 2017 ; Revista Iberoamericana Volume LXXXIII ; LXXXIII ; http://revista-iberoamericana.pitt.edu/ojs/ >
     au < released ; 2018 ; 2018 ; Revista Iberoamericana Volume LXXXIV ; LXXXIV ; http://revista-iberoamericana.pitt.edu/ojs/ >
     au < manifest ; 2019 ; 2019 ; Revista Iberoamericana Volume LXXXV ; LXXXV ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < manifest ; 2020 ; 2020 ; Revista Iberoamericana Volume LXXXVI ; LXXXVI ; http://revista-iberoamericana.pitt.edu/ojs/ >
 
   }
 
@@ -733,7 +754,8 @@
     au < released ; 2016 ; 2016 ; Ricoeur Studies Volume 7 ; 7 ; http://ricoeur.pitt.edu/ojs/ >
     au < released ; 2017 ; 2017 ; Ricoeur Studies Volume 8 ; 8 ; http://ricoeur.pitt.edu/ojs/ >
     au < released ; 2018 ; 2018 ; Ricoeur Studies Volume 9 ; 9 ; http://ricoeur.pitt.edu/ojs/ >
-    au < manifest ; 2019 ; 2019 ; Ricoeur Studies Volume 10 ; 10 ; http://ricoeur.pitt.edu/ojs/ >
+    au < manifest ; 2019 ; 2019 ; Ricoeur Studies Volume 10 ; 10 ; https://ricoeur.pitt.edu/ojs/ >
+    au < expected ; 2020 ; 2020 ; Ricoeur Studies Volume 11 ; 11 ; https://ricoeur.pitt.edu/ojs/ >
 
   }
 
@@ -796,7 +818,8 @@
       au < released ; 2016 ; 2016 ; University of Pittsburgh Law Review Volume 77-78 ; 77-78 ; http://lawreview.law.pitt.edu/ojs/ >
       au < released ; 2017 ; 2017 ; University of Pittsburgh Law Review Volume 78-79 ; 78-79 ; http://lawreview.law.pitt.edu/ojs/ >
       au < released ; 2018 ; 2018 ; University of Pittsburgh Law Review Volume 79-80 ; 79-80 ; http://lawreview.law.pitt.edu/ojs/ >
-      au < manifest ; 2019 ; 2019 ; University of Pittsburgh Law Review Volume 80-81 ; 80-81 ; http://lawreview.law.pitt.edu/ojs/ >
+      au < manifest ; 2019 ; 2019 ; University of Pittsburgh Law Review Volume 80-81 ; 80-81 ; https://lawreview.law.pitt.edu/ojs/ >
+      au < expected ; 2020 ; 2020 ; University of Pittsburgh Law Review Volume 82-83 ; 82-83 ; https://lawreview.law.pitt.edu/ojs/ >
 
   }
 

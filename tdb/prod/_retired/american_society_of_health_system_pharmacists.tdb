@@ -1,0 +1,78 @@
+{
+
+  publisher <
+    name = American Society of Health-System Pharmacists
+  >
+
+  {
+
+    title <
+      name = American Journal of Health-System Pharmacy ;
+      issn = 1079-2082 ;
+      eissn = 1535-2900 ;
+      issnl = 1079-2082
+    >
+
+    pluginPrefix = org.lockss.plugin.highwire.
+    param[base_url] = http://www.ajhp.org/
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    #move to OUP
+
+    au < ashealthsys.AmSocHealthSysDrupalPlugin ; doNotProcess ; 1965 ; American Journal of Health-System Pharmacy Volume 22 (tables of contents only) ; 22 >
+    au < ashealthsys.AmSocHealthSysDrupalPlugin ; doNotProcess ; 1966 ; American Journal of Health-System Pharmacy Volume 23 (tables of contents only) ; 23 >
+    au < ashealthsys.AmSocHealthSysDrupalPlugin ; doNotProcess ; 1967 ; American Journal of Health-System Pharmacy Volume 24 (tables of contents only) ; 24 >
+    au < ashealthsys.AmSocHealthSysDrupalPlugin ; doNotProcess ; 1968 ; American Journal of Health-System Pharmacy Volume 25 (tables of contents only) ; 25 >
+    au < ashealthsys.AmSocHealthSysDrupalPlugin ; doNotProcess ; 1969 ; American Journal of Health-System Pharmacy Volume 26 (tables of contents only) ; 26 >
+    au < ashealthsys.AmSocHealthSysDrupalPlugin ; doNotProcess ; 1970 ; American Journal of Health-System Pharmacy Volume 27 (tables of contents only) ; 27 >
+    au < ashealthsys.AmSocHealthSysDrupalPlugin ; doNotProcess ; 1971 ; American Journal of Health-System Pharmacy Volume 28 (tables of contents only) ; 28 >
+    au < ashealthsys.AmSocHealthSysDrupalPlugin ; doNotProcess ; 1972 ; American Journal of Health-System Pharmacy Volume 29 (tables of contents only) ; 29 >
+    au < ashealthsys.AmSocHealthSysDrupalPlugin ; doNotProcess ; 1973 ; American Journal of Health-System Pharmacy Volume 30 (tables of contents only) ; 30 >
+    au < ashealthsys.AmSocHealthSysDrupalPlugin ; doNotProcess ; 1974 ; American Journal of Health-System Pharmacy Volume 31 (tables of contents only) ; 31 >
+    au < ashealthsys.AmSocHealthSysDrupalPlugin ; doNotProcess ; 1975 ; American Journal of Health-System Pharmacy Volume 32 (abstracts only) ; 32 >
+    au < ashealthsys.AmSocHealthSysDrupalPlugin ; doNotProcess ; 1976 ; American Journal of Health-System Pharmacy Volume 33 (abstracts only) ; 33 >
+    au < ashealthsys.AmSocHealthSysDrupalPlugin ; doNotProcess ; 1977 ; American Journal of Health-System Pharmacy Volume 34 (abstracts only) ; 34 >
+    au < ashealthsys.AmSocHealthSysDrupalPlugin ; doNotProcess ; 1978 ; American Journal of Health-System Pharmacy Volume 35 (abstracts only) ; 35 >
+    au < ashealthsys.AmSocHealthSysDrupalPlugin ; doNotProcess ; 1979 ; American Journal of Health-System Pharmacy Volume 36 (abstracts only) ; 36 >
+    au < ashealthsys.AmSocHealthSysDrupalPlugin ; doNotProcess ; 1980 ; American Journal of Health-System Pharmacy Volume 37 (abstracts only) ; 37 >
+    au < ashealthsys.AmSocHealthSysDrupalPlugin ; doNotProcess ; 1981 ; American Journal of Health-System Pharmacy Volume 38 (abstracts only) ; 38 >
+    au < ashealthsys.AmSocHealthSysDrupalPlugin ; doNotProcess ; 1982 ; American Journal of Health-System Pharmacy Volume 39 (abstracts only) ; 39 >
+    au < ashealthsys.AmSocHealthSysDrupalPlugin ; doNotProcess ; 1983 ; American Journal of Health-System Pharmacy Volume 40 (abstracts only) ; 40 >
+    au < ashealthsys.AmSocHealthSysDrupalPlugin ; doNotProcess ; 1984 ; American Journal of Health-System Pharmacy Volume 41 (abstracts only) ; 41 >
+    au < ashealthsys.AmSocHealthSysDrupalPlugin ; doNotProcess ; 1985 ; American Journal of Health-System Pharmacy Volume 42 (abstracts only) ; 42 >
+    au < ashealthsys.AmSocHealthSysDrupalPlugin ; doNotProcess ; 1986 ; American Journal of Health-System Pharmacy Volume 43 (abstracts only) ; 43 >
+    au < ashealthsys.AmSocHealthSysDrupalPlugin ; doNotProcess ; 1987 ; American Journal of Health-System Pharmacy Volume 44 (abstracts only) ; 44 >
+    au < ashealthsys.AmSocHealthSysDrupalPlugin ; doNotProcess ; 1988 ; American Journal of Health-System Pharmacy Volume 45 (abstracts only) ; 45 >
+    au < ashealthsys.AmSocHealthSysDrupalPlugin ; doNotProcess ; 1989 ; American Journal of Health-System Pharmacy Volume 46 (abstracts only) ; 46 >
+    au < ashealthsys.AmSocHealthSysDrupalPlugin ; doNotProcess ; 1990 ; American Journal of Health-System Pharmacy Volume 47 (abstracts only) ; 47 >
+    au < ashealthsys.AmSocHealthSysDrupalPlugin ; doNotProcess ; 1991 ; American Journal of Health-System Pharmacy Volume 48 (abstracts only) ; 48 >
+    au < ashealthsys.AmSocHealthSysDrupalPlugin ; doNotProcess ; 1992 ; American Journal of Health-System Pharmacy Volume 49 (abstracts only) ; 49 >
+    au < ashealthsys.AmSocHealthSysDrupalPlugin ; doNotProcess ; 1993 ; American Journal of Health-System Pharmacy Volume 50 (abstracts only) ; 50 >
+    au < ashealthsys.AmSocHealthSysDrupalPlugin ; doNotProcess ; 1994 ; American Journal of Health-System Pharmacy Volume 51 (abstracts only) ; 51 >
+    au < ashealthsys.AmSocHealthSysDrupalPlugin ; doNotProcess ; 1995 ; American Journal of Health-System Pharmacy Volume 52 (abstracts only) ; 52 >
+    au < ashealthsys.AmSocHealthSysDrupalPlugin ; doNotProcess ; 1996 ; American Journal of Health-System Pharmacy Volume 53 (abstracts only) ; 53 >
+    au < HighWirePressH20Plugin ; down ; 1997 ; American Journal of Health-System Pharmacy Volume 54 ; 54 >
+    au < HighWirePressH20Plugin ; down ; 1998 ; American Journal of Health-System Pharmacy Volume 55 ; 55 >
+    au < HighWirePressH20Plugin ; down ; 1999 ; American Journal of Health-System Pharmacy Volume 56 ; 56 >
+    au < HighWirePressH20Plugin ; down ; 2000 ; American Journal of Health-System Pharmacy Volume 57 ; 57 >
+    au < HighWirePressH20Plugin ; down ; 2001 ; American Journal of Health-System Pharmacy Volume 58 ; 58 >
+    au < HighWirePressH20Plugin ; down ; 2002 ; American Journal of Health-System Pharmacy Volume 59 ; 59 >
+    au < HighWirePressH20Plugin ; down ; 2003 ; American Journal of Health-System Pharmacy Volume 60 ; 60 >
+    au < HighWirePressH20Plugin ; down ; 2004 ; American Journal of Health-System Pharmacy Volume 61 ; 61 >
+    au < HighWirePressH20Plugin ; down ; 2005 ; American Journal of Health-System Pharmacy Volume 62 ; 62 >
+    au < HighWirePressH20Plugin ; down ; 2006 ; American Journal of Health-System Pharmacy Volume 63 ; 63 >
+    au < HighWirePressH20Plugin ; down ; 2007 ; American Journal of Health-System Pharmacy Volume 64 ; 64 >
+    au < HighWirePressH20Plugin ; down ; 2008 ; American Journal of Health-System Pharmacy Volume 65 ; 65 >
+    au < HighWirePressH20Plugin ; down ; 2009 ; American Journal of Health-System Pharmacy Volume 66 ; 66 >
+    au < HighWirePressH20Plugin ; down ; 2010 ; American Journal of Health-System Pharmacy Volume 67 ; 67 >
+    au < HighWirePressH20Plugin ; down ; 2011 ; American Journal of Health-System Pharmacy Volume 68 ; 68 >
+    au < HighWirePressH20Plugin ; down ; 2012 ; American Journal of Health-System Pharmacy Volume 69 ; 69 >
+    au < HighWirePressH20Plugin ; down ; 2013 ; American Journal of Health-System Pharmacy Volume 70 ; 70 >
+    au < HighWirePressH20Plugin ; down ; 2014 ; American Journal of Health-System Pharmacy Volume 71 ; 71 >
+    au < HighWirePressH20Plugin ; down ; 2015 ; American Journal of Health-System Pharmacy Volume 72 ; 72 >
+    au < ashealthsys.AmSocHealthSysDrupalPlugin ; doNotProcess ; 2016 ; American Journal of Health-System Pharmacy Volume 73 ; 73 >
+    au < ashealthsys.AmSocHealthSysDrupalPlugin ; doNotProcess ; 2017 ; American Journal of Health-System Pharmacy Volume 74 ; 74 >
+    au < ashealthsys.AmSocHealthSysDrupalPlugin ; doNotProcess ; 2018 ; American Journal of Health-System Pharmacy Volume 75 ; 75 >
+
+  }
+
+}

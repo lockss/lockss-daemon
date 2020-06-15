@@ -1,0 +1,45 @@
+{
+
+  publisher <
+    name = Lecturas de Economia ;
+    info[contract] = 2020 ;
+    info[back] = 2015 ;
+    info[tester] = 8 ;
+    info[poller] = 8
+  >
+  
+  implicit < status ; status2 ; year ; param[year] ; name ; volume ; hidden[proxy] >
+  
+  {
+ 
+    title <
+      name = Lecturas de Economia ;
+      eissn = 0120-2596
+    >
+    
+    param[journal_id] = lecturasdeeconomia
+
+    {
+    param[base_url] = https://revistas.udea.edu.co/
+    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+    attr[start_stem] = index.php/
+    
+    #published 1980-present
+
+    au < manifest ; exists ; 2010 ; 2010 ; Lecturas de Economia Volume 2010 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 2011 ; Lecturas de Economia Volume 2011 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 2012 ; Lecturas de Economia Volume 2012 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 2013 ; Lecturas de Economia Volume 2013 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 2014 ; Lecturas de Economia Volume 2014 ; 2014 ; >
+    au < manifest ; exists ; 2015 ; 2015 ; Lecturas de Economia Volume 2015 ; 2015 ; >
+    au < manifest ; exists ; 2016 ; 2016 ; Lecturas de Economia Volume 2016 ; 2016 ; >
+    au < manifest ; exists ; 2017 ; 2017 ; Lecturas de Economia Volume 2017 ; 2017 ; >
+    au < manifest ; exists ; 2018 ; 2018 ; Lecturas de Economia Volume 2018 ; 2018 ; >
+    au < manifest ; exists ; 2019 ; 2019 ; Lecturas de Economia Volume 2019 ; 2019 ; >
+    au < manifest ; exists ; 2020 ; 2020 ; Lecturas de Economia Volume 2020 ; 2020 ; >
+
+    }
+
+  }
+
+}

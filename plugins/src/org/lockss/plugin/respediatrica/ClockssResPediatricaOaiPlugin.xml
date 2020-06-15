@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>ready</string>
+    <string>development</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -25,7 +25,6 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"ResPediatrica OAI Plugin (CLOCKSS), Base URL %s, OAI Set %s, OAI Date %s", base_url, au_oai_set, au_oai_date</string>
+    <string>"ResPediatrica OAI Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
   </entry>
-  <!--http://residenciapediatrica.com.br/oai?verb=ListRecords&from=2012-01-01T08%3A00%3A00Z&until=2012-12-31T08%3A00%3A00Z&metadataPrefix=oai_dc-->
 </map>

@@ -4,6 +4,8 @@
     name = Iowa State University
   >
   
+  rights = openaccess
+
   {
   
     title <
@@ -12,43 +14,56 @@
       issnl = 1097-3087
     >  
   
-    rights = openaccess
-    plugin = org.lockss.plugin.clogic.CulturalLogicPlugin
-    implicit < status ; year ; name ; attr[volume] ; param[year] >
+    {
+    
+      plugin = needs.plugin
+      implicit < status ; year ; name ; attr[volume] ; param[year] >
+      param[base_url] = https://ojs.library.ubc.ca/index.php/clogic  ###ojs
+      
+
+      au < exists ; 2007 ; Cultural Logic Volume 2007 ; 14 ; 2007 >
+      au < exists ; 2008 ; Cultural Logic Volume 2008 ; 15 ; 2008 >
+      au < exists ; 2009 ; Cultural Logic Volume 2009 ; 16 ; 2009 >
+      au < exists ; 2010 ; Cultural Logic Volume 2010 ; 17 ; 2010 >
+      au < exists ; 2011 ; Cultural Logic Volume 2011 ; 18 ; 2011 >
+      au < exists ; 2012 ; Cultural Logic Volume 2012 ; 19 ; 2012 >
+      au < exists ; 2013 ; Cultural Logic Volume 2013 ; 20 ; 2013 >
+      au < exists ; 2014 ; Cultural Logic Volume 2014 ; 21 ; 2014 >
+      au < exists ; 2017 ; Cultural Logic Volume 2017 ; 22 ; 2017 >
+      au < exists ; 2019 ; Cultural Logic Volume 2019 ; 23 ; 2019 >
+    
+    }
   
     {
     
+      plugin = org.lockss.plugin.clogic.CulturalLogicPlugin
+      implicit < status ; year ; name ; attr[volume] ; param[year] >
+      param[base_url] = http://clogic.eserver.org/
+      
+      comment[manifest] = no manifests past 2006 as of 11/2012. No volumes past 2013 as of 11/2014. Plugin needs review.
+
+      au < down ; 1997-1998 ; Cultural Logic Volume 1 ; 1 ; 0001 >
+      au < down ; 1998-1999 ; Cultural Logic Volume 2 ; 2 ; 0002 >
+      au < down ; 1999-2000 ; Cultural Logic Volume 3 ; 3 ; 0003 >
+      au < down ; 2000-2001 ; Cultural Logic Volume 4 ; 4 ; 0004 >
+      au < down ; 2002 ; Cultural Logic Volume 5 ; 5 ; 2002 >
+      au < down ; 2003 ; Cultural Logic Volume 6 ; 6 ; 2003 >
+      au < down ; 2004 ; Cultural Logic Volume 7 ; 7 ; 2004 >
+      au < down ; 2005 ; Cultural Logic Volume 8 ; 8 ; 2005 >
+      au < down ; 2006 ; Cultural Logic Volume 9 ; 9 ; 2006 >
+    
+    }
+  
+    {
+    
+      plugin = org.lockss.plugin.clogic.CulturalLogicPlugin
+      implicit < status ; year ; name ; attr[volume] ; param[year] >
       param[base_url] = http://eserver.org/clogic/
       
       au < superseded ; 2003 ; Cultural Logic 2003 [superseded] ; 6 ; 2003 >
       
     }
     
-    {
-    
-      param[base_url] = http://clogic.eserver.org/
-      
-      comment[manifest] = no manifests past 2006 as of 11/2012. No volumes past 2013 as of 11/2014. Plugin needs review.
-
-      au < released ; 1997-1998 ; Cultural Logic Volume 1 ; 1 ; 0001 >
-      au < released ; 1998-1999 ; Cultural Logic Volume 2 ; 2 ; 0002 >
-      au < released ; 1999-2000 ; Cultural Logic Volume 3 ; 3 ; 0003 >
-      au < released ; 2000-2001 ; Cultural Logic Volume 4 ; 4 ; 0004 >
-      au < released ; 2002 ; Cultural Logic Volume 5 ; 5 ; 2002 >
-      au < released ; 2003 ; Cultural Logic Volume 6 ; 6 ; 2003 >
-      au < released ; 2004 ; Cultural Logic Volume 7 ; 7 ; 2004 >
-      au < released ; 2005 ; Cultural Logic Volume 8 ; 8 ; 2005 >
-      au < released ; 2006 ; Cultural Logic Volume 9 ; 9 ; 2006 >
-      au < doNotProcess ; 2007 ; Cultural Logic 2007 ; ; 2007 >
-      au < doNotProcess ; 2008 ; Cultural Logic 2008 ; ; 2008 >
-      au < doNotProcess ; 2009 ; Cultural Logic 2009 ; ; 2009 >
-      au < doNotProcess ; 2010 ; Cultural Logic 2010 ; ; 2010 >
-      au < doNotProcess ; 2011 ; Cultural Logic 2011 ; ; 2011 >
-      au < doNotProcess ; 2012 ; Cultural Logic 2012 ; ; 2012 >
-      au < doNotProcess ; 2013 ; Cultural Logic 2013 ; ; 2013 >
-    
-    }
-  
   }
   
   {
@@ -59,23 +74,29 @@
       issnl = 1939-0246
     > 
 
-    rights = openaccess
+   {
+    plugin = needs.plugin
+    implicit < status ; year ; name ; param[volume] >
+    param[base_url] = https://tigerprints.clemson.edu/emc/  ###digital commons
+    
+    au < exists ; 2015 ; Early Modern Culture Issue 10 ; 10 >
+    au < exists ; 2016 ; Early Modern Culture Issue 11 ; 11 >
+    au < exists ; 2017 ; Early Modern Culture Issue 12 ; 12 >
+    au < exists ; 2018 ; Early Modern Culture Issue 13 ; 13 >
+    au < exists ; 2019 ; Early Modern Culture Issue 14 ; 14 >
+   }
+   {
     plugin = org.lockss.plugin.emc.EarlyModernCulturePlugin
     implicit < status ; year ; name ; param[volume] >
     param[base_url] = http://emc.eserver.org/
     
     comment[manifests] = no manifests past 2004 as of 11/2012. No issues past V9 as of 11/2014. Plugin needs review.
     
-    au < released ; 2000 ; Early Modern Culture Issue 1 ; 1 >
-    au < released ; 2002 ; Early Modern Culture Issue 2 ; 2 >
-    au < released ; 2003 ; Early Modern Culture Issue 3 ; 3 >
-    au < released ; 2004 ; Early Modern Culture Issue 4 ; 4 >
-    au < doNotProcess ; 2006 ; Early Modern Culture Issue 5 ; 5 >
-    au < doNotProcess ; 2007 ; Early Modern Culture Issue 6 ; 6 >
-    au < doNotProcess ; 2008 ; Early Modern Culture Issue 7 ; 7 >
-    au < doNotProcess ; 2010 ; Early Modern Culture Issue 8 ; 8 >
-    au < doNotProcess ; 2012 ; Early Modern Culture Issue 9 ; 9 >
-  
+    au < down ; 2000 ; Early Modern Culture Issue 1 ; 1 >
+    au < down ; 2002 ; Early Modern Culture Issue 2 ; 2 >
+    au < down ; 2003 ; Early Modern Culture Issue 3 ; 3 >
+    au < down ; 2004 ; Early Modern Culture Issue 4 ; 4 >
+   }
   }
   
 }

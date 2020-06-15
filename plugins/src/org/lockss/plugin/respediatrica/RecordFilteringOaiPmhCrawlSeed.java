@@ -35,15 +35,15 @@ import org.dspace.xoai.serviceprovider.model.Context.KnownTransformer;
 import org.dspace.xoai.serviceprovider.parameters.ListRecordsParameters;
 import org.dspace.xoai.services.api.MetadataSearch;
 import org.lockss.config.Configuration;
+import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 import org.lockss.util.Logger;
-
+import java.util.Iterator;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Iterator;
 import java.util.Map;
 import java.util.regex.Pattern;
 
@@ -53,10 +53,12 @@ public abstract class RecordFilteringOaiPmhCrawlSeed extends BaseOaiPmhCrawlSeed
       Logger.getLogger(RecordFilteringOaiPmhCrawlSeed.class);
 
   protected boolean usesDateRange = true;
-  protected boolean usesSet = true;
+  protected boolean usesSet = false;
+  protected boolean usesGranularity = true;
   protected Map<String, Pattern> metadataRules;
   public static final String KEY_AU_OAI_FILTER_RULES = "au_oai_filter_rules";
   public static final String KEY_AU_OAI_DATE = "au_oai_date";
+  public static final String KEY_AU_OAI_GRANULARITY = "oai_granularity";
   public static final String DEFAULT_FILTERING_METADATAPREFIX = "oai_lockss";
 
   public RecordFilteringOaiPmhCrawlSeed(CrawlerFacade cf) {
@@ -78,6 +80,8 @@ public abstract class RecordFilteringOaiPmhCrawlSeed extends BaseOaiPmhCrawlSeed
       parseRules(config.get(KEY_AU_OAI_DATE));
     } else if (config.containsKey(KEY_AU_OAI_FILTER_RULES)) {
       parseRules(config.get(KEY_AU_OAI_FILTER_RULES));
+    } else if (usesDateRange) {
+      parseRules(config.get(ConfigParamDescr.YEAR.getKey()));
     }
   }
   
@@ -90,8 +94,7 @@ public abstract class RecordFilteringOaiPmhCrawlSeed extends BaseOaiPmhCrawlSeed
   @Override
   protected Context buildContext(String url) {
     Context con = super.buildContext(url);
-//    con.withMetadataTransformer("oai_dc", KnownTransformer.OAI_DC);
-    con.withMetadataTransformer("oai_lockss", KnownTransformer.OAI_DC);
+    con.withMetadataTransformer("oai_dc", KnownTransformer.OAI_DC);
     return con;
   }
 
@@ -108,6 +111,7 @@ public abstract class RecordFilteringOaiPmhCrawlSeed extends BaseOaiPmhCrawlSeed
    * @param from
    * @param until
    * @param set
+   * @param granularity
    * @param metadataPrefix
    * @return ListIdentifiersParameters
    */
@@ -117,9 +121,15 @@ public abstract class RecordFilteringOaiPmhCrawlSeed extends BaseOaiPmhCrawlSeed
     if (usesDateRange) {
       lip.withFrom(from);
       lip.withUntil(until);
+
+      logger.debug3("Fei - buildParams from = " + from + ", until = " + until);
     }
     if (usesSet && !set.equals(NULL_SET)) {
       lip.withSetSpec(set);
+    }
+    if (usesGranularity) {
+      lip.withGranularity("YYYY-MM-DD");
+      logger.debug3("Fei - buildParams granularity set granularity");
     }
     return lip;
   }
@@ -161,32 +171,7 @@ public abstract class RecordFilteringOaiPmhCrawlSeed extends BaseOaiPmhCrawlSeed
   @Override
   public Collection<String> doGetStartUrls() throws ConfigurationException,
                                           PluginException, IOException {
-    return idsToUrls(getRecordList(buildParams()));
-  }
-
-  /**
-   * Override this to provide different logic to convert OAI PMH ids to
-   * corresponding article urls
-   * 
-   * @param id
-   * @param url
-   * @return
-   */
-  public Collection<String> idsToUrls(Collection<String> ids) {
-    Collection<String> urlList = new ArrayList<String>();
-    for (String id : ids) {
-      if (id.contains(":") && !id.endsWith(":")) {
-        if(permUrls.isEmpty()) {
-          permUrls.add(baseUrl + oaiUrlPostfix + "?verb=GetRecord&identifier=" + 
-              id + "&metadataPrefix=" + metadataPrefix);
-          logger.debug3("Fei - url :" + baseUrl + oaiUrlPostfix + "?verb=GetRecord&identifier=" +
-                  id + "&metadataPrefix=" + metadataPrefix);
-        }
-        String id_num = id.substring(id.lastIndexOf(':') + 1);
-        logger.debug3("Fei url handle:" +  baseUrl + "handle/" + id_num);
-        urlList.add(baseUrl + "handle/" + id_num);
-      }
-    }
-    return urlList;
+    logger.debug3("Fei: doGetStartUrls...");
+    return getRecordList(buildParams());
   }
 }

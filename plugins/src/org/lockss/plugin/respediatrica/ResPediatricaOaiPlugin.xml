@@ -1,11 +1,15 @@
 <map>
     <entry>
         <string>plugin_status</string>
-        <string>ready</string>
+        <string>development</string>
     </entry>
     <entry>
         <string>plugin_identifier</string>
         <string>org.lockss.plugin.respediatrica.ResPediatricaOaiPlugin</string>
+    </entry>
+    <entry>
+        <string>plugin_name</string>
+        <string>ResPediatrica OAI Plugin</string>
     </entry>
     <entry>
         <string>plugin_version</string>
@@ -29,61 +33,11 @@
         </map>
     </entry>
     <entry>
-        <string>plugin_name</string>
-        <string>ResPediatrica OAI Plugin</string>
-    </entry>
-    <entry>
-        <string>required_daemon_version</string>
-        <!-- for no store exception-->
-        <string>1.72.0</string>
-    </entry>
-    <entry>
-        <string>au_def_pause_time</string>
-        <long>3000</long>
-    </entry>
-    <entry>
-        <string>au_name</string>
-        <string>"ResPediatrica OAI Plugin, Base URL %s, OAI Set %s, OAI Date %s", base_url, au_oai_set, au_oai_date</string>
-    </entry>
-    <entry>
-        <string>au_start_url</string>
-        <string>"%soai?verb=ListRecords&amp;from=2012-01-01&amp;until=2012-12-31&amp;metadataPrefix=oai_dc", base_url</string>
-    </entry>
-    <entry>
-        <string>au_permission_url</string>
-        <string>"%s", to_http(base_url)</string>
-    </entry>
-    <entry>
-        <string>au_additional_url_stems</string>
-        <list>
-            <string>"%s", to_http(base_url)</string>
-        </list>
-    </entry>
-    <entry>
-        <string>au_def_new_content_crawl</string>
-        <long>1209600000</long>
-    </entry>
-    <entry>
-        <string>au_crawlrules</string>
-        <list>
-            <string>1,"^http://%s/.+[.](bmp|css|gif|ico|jpe?g|js|png|tif?f|eot|svg|ttf|woff.?)([?]v=.*)?$", url_host(base_url)</string>
-            <string>1,"^http://%s", url_host(base_url)</string>
-        </list>
-    </entry>
-    <!--
-    <entry>
-        <string>au_substance_url_pattern</string>
-        <list>
-            <string>"^http?://%s/article/[0-9]+/download/pdf(/|/[0-9]+)?$", url_host(base_url)</string>
-        </list>
-    </entry>
-    -->
-    <entry>
         <string>plugin_config_props</string>
         <list>
             <org.lockss.daemon.ConfigParamDescr>
                 <key>base_url</key>
-                <displayName>Base URL</displayName>
+                <displayName>Base URLs</displayName>
                 <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
                 <type>3</type>
                 <size>40</size>
@@ -91,44 +45,53 @@
                 <defaultOnly>false</defaultOnly>
             </org.lockss.daemon.ConfigParamDescr>
             <org.lockss.daemon.ConfigParamDescr>
-                <key>au_oai_set</key>
-                <displayName>OAI Set</displayName>
-                <description>OAI PMH set of this AU. [NONE] if you would like to include all sets</description>
-                <type>1</type>
-                <size>20</size>
+                <key>year</key>
+                <displayName>Year</displayName>
+                <description>Four digit year (e.g., 2004)</description>
+                <type>4</type>
+                <size>4</size>
                 <definitional>true</definitional>
                 <defaultOnly>false</defaultOnly>
             </org.lockss.daemon.ConfigParamDescr>
-
             <org.lockss.daemon.ConfigParamDescr>
-                <key>au_oai_date</key>
-                <displayName>OAI Date</displayName>
-                <description>Rules to filter records based upon metadata</description>
+                <key>oai_granularity</key>
+                <displayName>OAI Granularity</displayName>
+                <description>Rules to filter records based upon granularity, use "YYYY-MM-DD"</description>
                 <type>1</type>
                 <size>128</size>
                 <definitional>true</definitional>
                 <defaultOnly>false</defaultOnly>
             </org.lockss.daemon.ConfigParamDescr>
-            <!--
-            <org.lockss.daemon.ConfigParamDescr>
-                <key>year</key>
-                <displayName>Year</displayName>
-                <description>Year will set to "from" Year-01-01 "to" Year-12-31</description>
-                <type>1</type>
-                <size>4</size>
-                <definitional>true</definitional>
-                <defaultOnly>false</defaultOnly>
-            </org.lockss.daemon.ConfigParamDescr>
-            -->
+        </list>
+    </entry>
+    <entry>
+        <string>au_name</string>
+        <string>"ResPediatrica OAI Plugin, Base URL %s, Year %d", base_url, year</string>
+    </entry>
+    <entry>
+        <string>au_start_url</string>
+        <!--http://residenciapediatrica.com.br/oai?verb=ListRecords&metadataPrefix=oai_dc&from=2012-01-01&until=2012-12-31-->
+        <string>"%soai?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;from=%d-01-01&amp;until=%d-12-31", base_url, year, year</string>
+    </entry>
+    <entry>
+        <string>au_permission_url</string>
+        <string>"%s", base_url</string>
+    </entry>
+    <entry>
+        <string>au_crawlrules</string>
+        <list>
+            <string>1,"%s", base_url</string>
+        </list>
+    </entry>
+    <entry>
+        <string>au_substance_url_pattern</string>
+        <list>
+            <string>"%s/exportar-pdf/.*\.pdf", base_url</string>
         </list>
     </entry>
     <entry>
         <string>plugin_crawl_seed_factory</string>
         <string>org.lockss.plugin.respediatrica.ResPediatricaOaiCrawlSeedFactory</string>
-    </entry>
-    <entry>
-        <string>text/html_link_extractor_factory</string>
-        <string>org.lockss.plugin.respediatrica.ResPediatricaOaiHtmlLinkExtractor$Factory</string>
     </entry>
     <entry>
         <string>text/html_filter_factory</string>
@@ -138,7 +101,6 @@
         <string>text/html_crawl_filter_factory</string>
         <string>org.lockss.plugin.respediatrica.ResPediatricaOaiHtmlCrawlFilterFactory</string>
     </entry>
-    <!--
     <entry>
         <string>plugin_article_iterator_factory</string>
         <string>org.lockss.plugin.respediatrica.ResPediatricaOaiArticleIteratorFactory</string>
@@ -157,11 +119,6 @@
         </map>
     </entry>
     <entry>
-        <string>plugin_url_consumer_factory</string>
-        <string>org.lockss.plugin.respediatrica.ResPediatricaOaiUrlConsumerFactory</string>
-    </entry>
-    -->
-    <entry>
         <string>au_repair_from_peer_if_missing_url_pattern</string>
         <list>
             <string>[.](css|js|svg)([?].+)?$</string>
@@ -169,7 +126,6 @@
         </list>
     </entry>
     <entry>
-        <!-- these will not count towards poll results but will replicate from peer if above -->
         <string>au_url_poll_result_weight</string>
         <list>
             <string>"[.](css|js|svg)([?].+)?$", 0</string>

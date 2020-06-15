@@ -3,12 +3,12 @@
   publisher <
     name = Annals of Family Medicine ;
     info[contract] = 2017 ;
-    info[back] = 2014 ;
+    info[back] = 2003 ;
     info[tester] = 5 ;
     info[poller] = 6
   >
     pluginPrefix = org.lockss.plugin.highwire.
-    implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
+    implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] ; param[base_url] ; hidden[proxy] >
 
   {
 
@@ -18,26 +18,28 @@
       eissn = 1544-1717 ;
       issnl = 1544-1709
     >
-    param[base_url] = http://www.annfammed.org/
+    #param[base_url] = http://www.annfammed.org/
+    #moved to https.
 
-    au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2003 ; Annals of Family Medicine Volume 1 ; 1 ; >
-    au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2004 ; Annals of Family Medicine Volume 2 ; 2 ; >
-    au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; Annals of Family Medicine Volume 3 ; 3 ; >
-    au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; Annals of Family Medicine Volume 4 ; 4 ; >
-    au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; Annals of Family Medicine Volume 5 ; 5 ; >
-    au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; Annals of Family Medicine Volume 6 ; 6 ; >
-    au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Annals of Family Medicine Volume 7 ; 7 ; >
-    au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Annals of Family Medicine Volume 8 ; 8 ; >
-    au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Annals of Family Medicine Volume 9 ; 9 ; >
-    au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; Annals of Family Medicine Volume 10 ; 10 ; >
-    au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2013 ; Annals of Family Medicine Volume 11 ; 11 ; >
-    au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2014 ; Annals of Family Medicine Volume 12 ; 12 ; >
-    au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2015 ; Annals of Family Medicine Volume 13 ; 13 ; >
-    au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2016 ; Annals of Family Medicine Volume 14 ; 14 ; >
-    au < ClockssHighWirePressH20Plugin ; deepCrawl ; exists ; 2017 ; Annals of Family Medicine Volume 15 ; 15 ; >
-    au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2018 ; Annals of Family Medicine Volume 16 ; 16 ; >
-    au < ClockssHighWirePressH20Plugin ; deepCrawl ; exists ; 2019 ; Annals of Family Medicine Volume 17 ; 17 ; >
-    au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2020 ; Annals of Family Medicine Volume 18 ; 18 ; >
+    au < ClockssHWDrupalPlugin ; manifest ; exists ; 2003 ; Annals of Family Medicine Volume 1 ; 1 ; https://www.annfammed.org/ ; >
+    au < ClockssHWDrupalPlugin ; manifest ; exists ; 2004 ; Annals of Family Medicine Volume 2 ; 2 ; https://www.annfammed.org/ ; >
+    au < ClockssHWDrupalPlugin ; manifest ; exists ; 2005 ; Annals of Family Medicine Volume 3 ; 3 ; https://www.annfammed.org/ ; >
+    au < ClockssHWDrupalPlugin ; manifest ; exists ; 2006 ; Annals of Family Medicine Volume 4 ; 4 ; https://www.annfammed.org/ ; >
+    au < ClockssHWDrupalPlugin ; manifest ; exists ; 2007 ; Annals of Family Medicine Volume 5 ; 5 ; https://www.annfammed.org/ ; >
+    au < ClockssHWDrupalPlugin ; manifest ; exists ; 2008 ; Annals of Family Medicine Volume 6 ; 6 ; https://www.annfammed.org/ ; >
+    au < ClockssHWDrupalPlugin ; manifest ; exists ; 2009 ; Annals of Family Medicine Volume 7 ; 7 ; https://www.annfammed.org/ ; >
+    au < ClockssHWDrupalPlugin ; manifest ; exists ; 2010 ; Annals of Family Medicine Volume 8 ; 8 ; https://www.annfammed.org/ ; >
+    au < ClockssHWDrupalPlugin ; manifest ; exists ; 2011 ; Annals of Family Medicine Volume 9 ; 9 ; https://www.annfammed.org/ ; >
+    au < ClockssHWDrupalPlugin ; manifest ; exists ; 2012 ; Annals of Family Medicine Volume 10 ; 10 ; https://www.annfammed.org/ ; >
+    au < ClockssHWDrupalPlugin ; manifest ; exists ; 2013 ; Annals of Family Medicine Volume 11 ; 11 ; https://www.annfammed.org/ ; >
+    au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2014 ; Annals of Family Medicine Volume 12 ; 12 ; http://www.annfammed.org/ ; >
+    au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2015 ; Annals of Family Medicine Volume 13 ; 13 ; http://www.annfammed.org/ ; >
+    au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2016 ; Annals of Family Medicine Volume 14 ; 14 ; http://www.annfammed.org/ ; >
+    au < ClockssHighWirePressH20Plugin ; deepCrawl ; exists ; 2017 ; Annals of Family Medicine Volume 15 ; 15 ; http://www.annfammed.org/ ; >
+    au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2018 ; Annals of Family Medicine Volume 16 ; 16 ; http://www.annfammed.org/ ; >
+    au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2019 ; Annals of Family Medicine Volume 17 [superseded] ; 17 ; http://www.annfammed.org/ ; >
+    au < ClockssHWDrupalPlugin ; manifest ; exists ; 2019 ; Annals of Family Medicine Volume 17 ; 17 ; https://www.annfammed.org/ ; >
+    au < ClockssHWDrupalPlugin ; manifest ; exists ; 2020 ; Annals of Family Medicine Volume 18 ; 18 ; https://www.annfammed.org/ ; >
 
   }
 

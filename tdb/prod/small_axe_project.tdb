@@ -8,6 +8,7 @@
   implicit < status ; year ; name ; param[issue] >
   param[base_url] = http://smallaxe.net/
 
+  #move to http://archipelagosjournal.org/
 
   {
     title <
@@ -18,8 +19,8 @@
 
     {
 
-      au < released ; 2016 ; SX Archipelagos Issue 01 ; 01 >
-      au < released ; 2017 ; SX Archipelagos Issue 02 ; 02 >
+      au < down ; 2016 ; SX Archipelagos Issue 01 ; 01 >
+      au < down ; 2017 ; SX Archipelagos Issue 02 ; 02 >
 
     }
 

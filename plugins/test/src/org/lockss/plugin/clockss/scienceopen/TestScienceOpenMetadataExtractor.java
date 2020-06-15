@@ -65,7 +65,33 @@ public class TestScienceOpenMetadataExtractor extends SourceXmlMetadataExtractor
         assertEquals("0", md.get(MetadataField.FIELD_VOLUME));
         assertEquals("0", md.get(MetadataField.FIELD_ISSUE));
         assertEquals("Ellina, Maria-Ioanna", md.get(MetadataField.FIELD_AUTHOR));
+        assertEquals("ScienceOpen Research", md.get(MetadataField.FIELD_PUBLICATION_TITLE));
         assertEquals("Epidermal growth factor/epidermal growth factor receptor signaling axis is a significant regulator of the proteasome expression and activity in colon cancer cells", md.get(MetadataField.FIELD_ARTICLE_TITLE));
+
+    }
+
+    public void testExtractArticleXmlSchemaFromNonStandardJATS() throws Exception {
+
+        String fname = "sample_test_non_standard_jats.xml";
+        String journalXml = getXmlFileContent(fname);
+        assertNotNull(journalXml);
+
+        String xml_url = BaseUrl + Directory + "/" + fname;
+
+        FileMetadataExtractor me = new MyJatsPublishingSourceXmlMetadataExtractor();
+        FileMetadataListExtractor mle =
+                new FileMetadataListExtractor(me);
+        List<ArticleMetadata> mdlist = extractFromContent(xml_url, "text/xml", journalXml, mle);
+        assertNotEmpty(mdlist);
+        ArticleMetadata md = mdlist.get(0);
+        assertNotNull(md);
+        assertEquals("10.14236/ewic/EVAC18.26", md.get(MetadataField.FIELD_DOI));
+        assertEquals("2018", md.get(MetadataField.FIELD_DATE));
+        assertEquals("8", md.get(MetadataField.FIELD_END_PAGE));
+        assertEquals("1", md.get(MetadataField.FIELD_START_PAGE));
+        assertEquals("1477-9358", md.get(MetadataField.FIELD_ISSN));
+        assertEquals(null, md.get(MetadataField.FIELD_EISSN));
+        assertEquals("BCS Learning & Development", md.get(MetadataField.FIELD_PUBLICATION_TITLE));
 
     }
 
@@ -81,7 +107,7 @@ public class TestScienceOpenMetadataExtractor extends SourceXmlMetadataExtractor
         @Override
         protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu, Document xmlDoc) {
             if (JatsPublishingHelper == null) {
-                JatsPublishingHelper = new JatsPublishingSchemaHelper();
+                JatsPublishingHelper = new ScienceOpenSchemaHelper();
             }
             return JatsPublishingHelper;
         }
