@@ -3,26 +3,15 @@
   publisher <
     name = UTS ePress ;
     info[contract] = 2014 ;
+    info[back] = 2000 ;
     info[tester] = 8 ;
     info[poller] = 8
   >
 
-  # manifest page checker doesn't work, but testing passes.
   # changed to OJS3
 
-  # Not included because they are precontract.
-  #===============================================
-  # African Journal of Information & Communication Technology. 1449-2679. Last volume is 2013. Precontract.
-  # Journal of Project, Program & Portfolio Management. 1838-7845. Last volume is 2013. Precontract. Superseded by PMRP
-  # Provincial China. Last volume is 2012. Precontract.
-  # Public Communication Review. Last volume is 2012. Precontract.
-  # Public Space: The Journal of Law and Social Justice. Last volume is 2010. Precontract.
-  # Transforming Cultures eJournal. Last volume is 2010. Precontract.
-
   pluginPrefix = org.lockss.plugin.
-  #plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
   implicit < pluginSuffix ; status ; status2 ; year ; param[year] ; name ; volume ; param[base_url] ; hidden[proxy] >
-  #param[base_url] = http://epress.lib.uts.edu.au/journals/
   attr[start_stem] = index.php/
 
   {
@@ -56,7 +45,7 @@
     >
 
     param[journal_id] = AJCEB
-    #Formerly known as: Australasian Journal of Construction Economics and Building 1837-9133
+    #known as: Australasian Journal of Construction Economics and Building 1837-9133 for volumes 2006-2014
 
     au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2006 ; 2006 ; Construction Economics and Building Volume 6 ; 6 ; https://epress.lib.uts.edu.au/journals/ ; >
     au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2007 ; 2007 ; Construction Economics and Building Volume 7 ; 7 ; https://epress.lib.uts.edu.au/journals/ ; >
@@ -96,33 +85,6 @@
     au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2018 ; 2018 ; Cosmopolitan Civil Societies: An Interdisciplinary Journal Volume 10 ; 10 ; https://epress.lib.uts.edu.au/journals/ ; >
     au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2019 ; 2019 ; Cosmopolitan Civil Societies: An Interdisciplinary Journal Volume 11 ; 11 ; https://epress.lib.uts.edu.au/journals/ ; >
     au < ojs3.ClockssOjs3Plugin ; expected ; exists ; 2020 ; 2020 ; Cosmopolitan Civil Societies: An Interdisciplinary Journal Volume 12 ; 12 ; https://epress.lib.uts.edu.au/journals/ ; >
-
-  }
-
-  {
-    title <
-      name = Cultural Studies Review ;
-      eissn = 1837-8692
-    >
-
-    param[journal_id] = csrj
-
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2005 ; 2005 ; Cultural Studies Review Volume 11 ; 11 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2006 ; 2006 ; Cultural Studies Review Volume 12 ; 12 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2007 ; 2007 ; Cultural Studies Review Volume 13 ; 13 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2008 ; 2008 ; Cultural Studies Review Volume 14 ; 14 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2009 ; 2009 ; Cultural Studies Review Volume 15 ; 15 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2010 ; 2010 ; Cultural Studies Review Volume 16 ; 16 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2011 ; 2011 ; Cultural Studies Review Volume 17 ; 17 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2012 ; 2012 ; Cultural Studies Review Volume 18 ; 18 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2013 ; 2013 ; Cultural Studies Review Volume 19 ; 19 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs2.ClockssOJS2Plugin ; finished ; finished ; 2014 ; 2014 ; Cultural Studies Review Volume 20 ; 20 ; http://epress.lib.uts.edu.au/journals/ ; reingest2.clockss.org:8085 >
-    au < ojs2.ClockssOJS2Plugin ; finished ; finished ; 2015 ; 2015 ; Cultural Studies Review Volume 21 ; 21 ; http://epress.lib.uts.edu.au/journals/ ; reingest1.clockss.org:8082 >
-    au < ojs2.ClockssOJS2Plugin ; frozen ; exists ; 2016 ; 2016 ; Cultural Studies Review Volume 22 ; 22 ; http://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2017 ; 2017 ; Cultural Studies Review Volume 23 ; 23 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2018 ; 2018 ; Cultural Studies Review Volume 24 ; 24 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2019 ; 2019 ; Cultural Studies Review Volume 25 ; 25 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; expected ; exists ; 2020 ; 2020 ; Cultural Studies Review Volume 26 ; 26 ; https://epress.lib.uts.edu.au/journals/ ; >
 
   }
 
@@ -199,21 +161,6 @@
 
   {
     title <
-      name = Organisational Project Management ;
-      eissn = 2203-6156
-    >
-
-    param[journal_id] = opm
-
-    au < ojs2.ClockssOJS2Plugin ; finished ; finished ; 2014 ; 2014 ; Organisational Project Management Volume 1 ; 1 ; http://epress.lib.uts.edu.au/journals/ ; reingest2.clockss.org:8085 >
-    au < ojs2.ClockssOJS2Plugin ; finished ; finished ; 2015 ; 2015 ; Organisational Project Management Volume 2 ; 2 ; http://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs2.ClockssOJS2Plugin ; frozen ; exists ; 2016 ; 2016 ; Organisational Project Management Volume 3 ; 3 ; http://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; expected ; exists ; 2020 ; 2020 ; Organisational Project Management Volume 4 ; 4 ; https://epress.lib.uts.edu.au/journals/ ; >
-
-  }
-
-  {
-    title <
       name = PORTAL Journal of Multidisciplinary International Studies ;
       eissn = 1449-2490
     >
@@ -247,6 +194,7 @@
     >
 
     param[journal_id] = PMRP
+    #previous title is pppm
 
     au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2016 ; 2016 ; Project Management Research and Practice Volume 3 ; 3 ; https://epress.lib.uts.edu.au/journals/ ; >
     au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2017 ; 2017 ; Project Management Research and Practice Volume 4 ; 4 ; https://epress.lib.uts.edu.au/journals/ ; >
@@ -280,6 +228,129 @@
     au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2020 ; 2020 ; Public History Review Volume 27 ; 27 ; https://epress.lib.uts.edu.au/journals/ ; >
 
   }
+  
+  #The titles below are archived.
+
+  {
+    title <
+      name = African Journal of Information & Communication Technology ;
+      eissn = 1449-2679
+    >
+
+    param[journal_id] = ajict
+    #Archived. Last volume in 2013.
+
+    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2005 ; 2005 ; African Journal of Information & Communication Technology Volume 1 ; 1 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2006 ; 2006 ; African Journal of Information & Communication Technology Volume 2 ; 2 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2007 ; 2007 ; African Journal of Information & Communication Technology Volume 3 ; 3 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2008 ; 2008 ; African Journal of Information & Communication Technology Volume 4 ; 4 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2009 ; 2009 ; African Journal of Information & Communication Technology Volume 5 ; 5 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2011 ; 2011 ; African Journal of Information & Communication Technology Volume 6 ; 6 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2013 ; 2013 ; African Journal of Information & Communication Technology Volume 7 ; 7 ; https://epress.lib.uts.edu.au/journals/ ; >
+
+  }
+
+  {
+    title <
+      name = Cultural Studies Review ;
+      eissn = 1837-8692
+    >
+
+    param[journal_id] = csrj
+    #Archived. Last volume in 2019.
+
+    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2005 ; 2005 ; Cultural Studies Review Volume 11 ; 11 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2006 ; 2006 ; Cultural Studies Review Volume 12 ; 12 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2007 ; 2007 ; Cultural Studies Review Volume 13 ; 13 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2008 ; 2008 ; Cultural Studies Review Volume 14 ; 14 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2009 ; 2009 ; Cultural Studies Review Volume 15 ; 15 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2010 ; 2010 ; Cultural Studies Review Volume 16 ; 16 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2011 ; 2011 ; Cultural Studies Review Volume 17 ; 17 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2012 ; 2012 ; Cultural Studies Review Volume 18 ; 18 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2013 ; 2013 ; Cultural Studies Review Volume 19 ; 19 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs2.ClockssOJS2Plugin ; finished ; finished ; 2014 ; 2014 ; Cultural Studies Review Volume 20 ; 20 ; http://epress.lib.uts.edu.au/journals/ ; reingest2.clockss.org:8085 >
+    au < ojs2.ClockssOJS2Plugin ; finished ; finished ; 2015 ; 2015 ; Cultural Studies Review Volume 21 ; 21 ; http://epress.lib.uts.edu.au/journals/ ; reingest1.clockss.org:8082 >
+    au < ojs2.ClockssOJS2Plugin ; frozen ; exists ; 2016 ; 2016 ; Cultural Studies Review Volume 22 ; 22 ; http://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2017 ; 2017 ; Cultural Studies Review Volume 23 ; 23 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2018 ; 2018 ; Cultural Studies Review Volume 24 ; 24 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2019 ; 2019 ; Cultural Studies Review Volume 25 ; 25 ; https://epress.lib.uts.edu.au/journals/ ; >
+
+  }
+
+  {
+    title <
+      name = Journal of Project, Program & Portfolio Management ;
+      eissn = 1838-7845
+    >
+
+    param[journal_id] = pppm
+    #Archived. Last volume in 2013.
+    #continued as journal PMRP
+
+    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2010 ; 2010 ; Journal of Project, Program & Portfolio Management Volume 1 ; 1 ; https://epress.lib.uts.edu.au/journals/ ; reingest2.clockss.org:8085 >
+    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2011 ; 2011 ; Journal of Project, Program & Portfolio Management Volume 2 ; 2 ; https://epress.lib.uts.edu.au/journals/ ; reingest2.clockss.org:8085 >
+    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2012 ; 2012 ; Journal of Project, Program & Portfolio Management Volume 3 ; 3 ; https://epress.lib.uts.edu.au/journals/ ; reingest2.clockss.org:8085 >
+    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2013 ; 2013 ; Journal of Project, Program & Portfolio Management Volume 4 ; 4 ; https://epress.lib.uts.edu.au/journals/ ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+    title <
+      name = Organisational Project Management ;
+      eissn = 2203-6156
+    >
+
+    param[journal_id] = opm
+    #Archived. Last volume in 2016.
+
+    au < ojs2.ClockssOJS2Plugin ; finished ; finished ; 2014 ; 2014 ; Organisational Project Management Volume 1 ; 1 ; http://epress.lib.uts.edu.au/journals/ ; reingest2.clockss.org:8085 >
+    au < ojs2.ClockssOJS2Plugin ; finished ; finished ; 2015 ; 2015 ; Organisational Project Management Volume 2 ; 2 ; http://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs2.ClockssOJS2Plugin ; frozen ; exists ; 2016 ; 2016 ; Organisational Project Management Volume 3 ; 3 ; http://epress.lib.uts.edu.au/journals/ ; >
+
+  }
+
+  {
+    title <
+      name = Provincial China
+    >
+
+    param[journal_id] = provincial_china
+    #Archived. Last volume in 2012.
+
+    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2009 ; 2009 ; Provincial China Volume 1 ; 1 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2010 ; 2010 ; Provincial China Volume 2 ; 2 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2011 ; 2011 ; Provincial China Volume 3 ; 3 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2012 ; 2012 ; Provincial China Volume 4 ; 4 ; https://epress.lib.uts.edu.au/journals/ ; >
+
+  }
+
+  {
+    title <
+      name = Public Communication Review
+    >
+
+    param[journal_id] = pcr
+    #Archived. Last volume in 2012.
+
+    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2010 ; 2010 ; Public Communication Review Volume 1 ; 1 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2012 ; 2012 ; Public Communication Review Volume 2 ; 2 ; https://epress.lib.uts.edu.au/journals/ ; >
+
+  }
+
+  {
+    title <
+      name = Public Space: The Journal of Law and Social Justice
+    >
+
+    param[journal_id] = publicspace
+    #Archived. Last volume in 2010.
+
+    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2007 ; 2007 ; Public Space: The Journal of Law and Social Justice Volume 1 ; 1 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2008 ; 2008 ; Public Space: The Journal of Law and Social Justice Volume 2 ; 2 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2009 ; 2009 ; Public Space: The Journal of Law and Social Justice Volume 3-4 ; 3-4 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2010 ; 2010 ; Public Space: The Journal of Law and Social Justice Volume 5 ; 5 ; https://epress.lib.uts.edu.au/journals/ ; >
+
+  }
 
   {
     title <
@@ -288,7 +359,7 @@
     >
 
     param[journal_id] = sydney_journal
-    #This journal has ceased publication after 2017. See https://epress.lib.uts.edu.au/journals/
+    #Archived. Last volume in 2017. See https://epress.lib.uts.edu.au/journals/
 
     au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2008 ; 2008 ; Public History Review Volume 1 ; 1 ; https://epress.lib.uts.edu.au/journals/ ; >
     au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2009 ; 2009 ; Public History Review Volume 2 (2009) ; 2 ; https://epress.lib.uts.edu.au/journals/ ; >
@@ -296,7 +367,22 @@
     au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2011 ; 2011 ; Public History Review Volume 3 (2011) ; 3 ; https://epress.lib.uts.edu.au/journals/ ; >
     au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2013 ; 2013 ; Public History Review Volume 4 ; 4 ; https://epress.lib.uts.edu.au/journals/ ; >
     au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2017 ; 2017 ; Public History Review Volume 5 ; 5 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; expected ; exists ; 2020 ; 2020 ; Public History Review Volume 6 ; 6 ; https://epress.lib.uts.edu.au/journals/ ; >
+
+  }
+
+  {
+    title <
+      name = Transforming Cultures eJournal
+    >
+
+    param[journal_id] = TfC
+    #Archived. Last volume in 2010.
+
+    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2006 ; 2006 ; Public Space: The Journal of Law and Social Justice Volume 1 ; 1 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2007 ; 2007 ; Public Space: The Journal of Law and Social Justice Volume 2 ; 2 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2008 ; 2008 ; Public Space: The Journal of Law and Social Justice Volume 3 ; 3 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2009 ; 2009 ; Public Space: The Journal of Law and Social Justice Volume 4 ; 4 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2010 ; 2010 ; Public Space: The Journal of Law and Social Justice Volume 5 ; 5 ; https://epress.lib.uts.edu.au/journals/ ; >
 
   }
 
