@@ -148,7 +148,7 @@
     au < HighWirePressH20Plugin ; down ; 2015 ; Annals of the Rheumatic Diseases Volume 75 ; 75 ; http://ard.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2016 ; Annals of the Rheumatic Diseases Volume 76 ; 76 ; https://ard.bmj.com/ > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; exists ; 2017 ; Annals of the Rheumatic Diseases Volume 77 ; 77 ; https://ard.bmj.com/ > #login page found on recent page
-    au < bmj.BMJDrupalPlugin ; manifest ; 2018 ; Annals of the Rheumatic Diseases Volume 78 ; 78 ; https://ard.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; exists ; 2018 ; Annals of the Rheumatic Diseases Volume 78 ; 78 ; https://ard.bmj.com/ > #login page
     au < bmj.BMJDrupalPlugin ; exists ; 2019 ; Annals of the Rheumatic Diseases Volume 79 ; 79 ; https://ard.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; expected ; 2020 ; Annals of the Rheumatic Diseases Volume 80 ; 80 ; https://ard.bmj.com/ >
 
@@ -640,7 +640,7 @@
     au < bmj.BMJDrupalPlugin ; ready ; 2016 ; BMJ Simulation & Technology Enhanced Learning Volume 2 ; 2 ; https://stel.bmj.com/ > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; exists ; 2017 ; BMJ Simulation & Technology Enhanced Learning Volume 3 ; 3 ; https://stel.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; exists ; 2018 ; BMJ Simulation & Technology Enhanced Learning Volume 4 ; 4 ; https://stel.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; manifest ; 2019 ; BMJ Simulation & Technology Enhanced Learning Volume 5 ; 5 ; https://stel.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; ready ; 2019 ; BMJ Simulation & Technology Enhanced Learning Volume 5 ; 5 ; https://stel.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2020 ; BMJ Simulation & Technology Enhanced Learning Volume 6 ; 6 ; https://stel.bmj.com/ >
 
   }
@@ -778,7 +778,7 @@
     au < HighWirePressH20Plugin ; down ; 2013 ; British Journal of Ophthalmology Volume 97 ; 97 ; http://bjo.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2014 ; British Journal of Ophthalmology Volume 98 ; 98 ; http://bjo.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2015 ; British Journal of Ophthalmology Volume 99 ; 99 ; http://bjo.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; manifest ; 2016 ; British Journal of Ophthalmology Volume 100 ; 100 ; https://bjo.bmj.com/ > # Unable to fetch probe permission page
+    au < bmj.BMJDrupalPlugin ; ready ; 2016 ; British Journal of Ophthalmology Volume 100 ; 100 ; https://bjo.bmj.com/ > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; exists ; 2017 ; British Journal of Ophthalmology Volume 101 ; 101 ; https://bjo.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; exists ; 2018 ; British Journal of Ophthalmology Volume 102 ; 102 ; https://bjo.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2019 ; British Journal of Ophthalmology Volume 103 ; 103 ; https://bjo.bmj.com/ >
@@ -848,7 +848,7 @@
     au < bmj.BMJDrupalPlugin ; ready ; 2016 ; British Journal of Sports Medicine Volume 50 ; 50 ; https://bjsm.bmj.com/ > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; exists ; 2017 ; British Journal of Sports Medicine Volume 51 ; 51 ; https://bjsm.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; exists ; 2018 ; British Journal of Sports Medicine Volume 52 ; 52 ; https://bjsm.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; manifest ; 2019 ; British Journal of Sports Medicine Volume 53 ; 53 ; https://bjsm.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; ready ; 2019 ; British Journal of Sports Medicine Volume 53 ; 53 ; https://bjsm.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; expected ; 2020 ; British Journal of Sports Medicine Volume 54 ; 54 ; https://bjsm.bmj.com/ >
 
   }
@@ -969,10 +969,10 @@
     au < HighWirePressH20Plugin ; down ; 2013 ; Emergency Medicine Journal Volume 30 ; 30 ; http://emj.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2014 ; Emergency Medicine Journal Volume 31 ; 31 ; http://emj.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2015 ; Emergency Medicine Journal Volume 32 ; 32 ; http://emj.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; manifest ; 2016 ; Emergency Medicine Journal Volume 33 ; 33 ; https://emj.bmj.com/ > # Unable to fetch probe permission page
+    au < bmj.BMJDrupalPlugin ; exists ; 2016 ; Emergency Medicine Journal Volume 33 ; 33 ; https://emj.bmj.com/ > # login page.
     au < bmj.BMJDrupalPlugin ; exists ; 2017 ; Emergency Medicine Journal Volume 34 ; 34 ; https://emj.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; exists ; 2018 ; Emergency Medicine Journal Volume 35 ; 35 ; https://emj.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; manifest ; 2019 ; Emergency Medicine Journal Volume 36 ; 36 ; https://emj.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2019 ; Emergency Medicine Journal Volume 36 ; 36 ; https://emj.bmj.com/ > # login page.
     au < bmj.BMJDrupalPlugin ; expected ; 2020 ; Emergency Medicine Journal Volume 37 ; 37 ; https://emj.bmj.com/ >
 
   }
@@ -1230,7 +1230,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; released ; 2016 ; Evidence-Based Nursing Volume 19 ; 19 ; https://ebn.bmj.com/ > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; exists ; 2017 ; Evidence-Based Nursing Volume 20 ; 20 ; https://ebn.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; exists ; 2018 ; Evidence-Based Nursing Volume 21 ; 21 ; https://ebn.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; manifest ; 2019 ; Evidence-Based Nursing Volume 22 ; 22 ; https://ebn.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; ready ; 2019 ; Evidence-Based Nursing Volume 22 ; 22 ; https://ebn.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; expected ; 2020 ; Evidence-Based Nursing Volume 23 ; 23 ; https://ebn.bmj.com/ >
 
   }
@@ -1431,7 +1431,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; released ; 2016 ; Heart Volume 102 ; 102 ; https://heart.bmj.com/ > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; exists ; 2017 ; Heart Volume 103 ; 103 ; https://heart.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; exists ; 2018 ; Heart Volume 104 ; 104 ; https://heart.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; manifest ; 2019 ; Heart Volume 105 ; 105 ; https://heart.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2019 ; Heart Volume 105 ; 105 ; https://heart.bmj.com/ > #403 forbidden
     au < bmj.BMJDrupalPlugin ; expected ; 2020 ; Heart Volume 106 ; 106 ; https://heart.bmj.com/ >
 
   }
@@ -2327,7 +2327,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; ready ; 2016 ; Occupational and Environmental Medicine Volume 73 ; 73 ; https://oem.bmj.com/ > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; exists ; 2017 ; Occupational and Environmental Medicine Volume 74 ; 74 ; https://oem.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; exists ; 2018 ; Occupational and Environmental Medicine Volume 75 ; 75 ; https://oem.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; manifest ; 2019 ; Occupational and Environmental Medicine Volume 76 ; 76 ; https://oem.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; exists ; 2019 ; Occupational and Environmental Medicine Volume 76 ; 76 ; https://oem.bmj.com/ > #Login page
     au < bmj.BMJDrupalPlugin ; expected ; 2020 ; Occupational and Environmental Medicine Volume 77 ; 77 ; https://oem.bmj.com/ >
 
   }
@@ -2433,7 +2433,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; down ; 2013 ; Postgraduate Medical Journal Volume 89 ; 89 ; http://pmj.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2014 ; Postgraduate Medical Journal Volume 90 ; 90 ; http://pmj.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2015 ; Postgraduate Medical Journal Volume 91 ; 91 ; http://pmj.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; manifest ; 2016 ; Postgraduate Medical Journal Volume 92 ; 92 ; https://pmj.bmj.com/ > # Unable to fetch probe permission page
+    au < bmj.BMJDrupalPlugin ; ready ; 2016 ; Postgraduate Medical Journal Volume 92 ; 92 ; https://pmj.bmj.com/ > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; exists ; 2017 ; Postgraduate Medical Journal Volume 93 ; 93 ; https://pmj.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; exists ; 2018 ; Postgraduate Medical Journal Volume 94 ; 94 ; https://pmj.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2019 ; Postgraduate Medical Journal Volume 95 ; 95 ; https://pmj.bmj.com/ >
@@ -2466,10 +2466,10 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; down ; 2013 ; Practical Neurology Volume 13 ; 13 ; http://pn.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2014 ; Practical Neurology Volume 14 ; 14 ; http://pn.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2015 ; Practical Neurology Volume 15 ; 15 ; http://pn.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; manifest ; 2016 ; Practical Neurology Volume 16 ; 16 ; https://pn.bmj.com/ > # Unable to fetch probe permission page
+    au < bmj.BMJDrupalPlugin ; ready ; 2016 ; Practical Neurology Volume 16 ; 16 ; https://pn.bmj.com/ > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; exists ; 2017 ; Practical Neurology Volume 17 ; 17 ; https://pn.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; exists ; 2018 ; Practical Neurology Volume 18 ; 18 ; https://pn.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; manifest ; 2019 ; Practical Neurology Volume 19 ; 19 ; https://pn.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; ready ; 2019 ; Practical Neurology Volume 19 ; 19 ; https://pn.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; expected ; 2020 ; Practical Neurology Volume 20 ; 20 ; https://pn.bmj.com/ >
 
   }
@@ -2520,7 +2520,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       au < HighWirePressH20Plugin ; down ; 2013 ; BMJ Quality & Safety Volume 22 ; 22 ; http://qualitysafety.bmj.com/ >
       au < HighWirePressH20Plugin ; down ; 2014 ; BMJ Quality & Safety Volume 23 ; 23 ; http://qualitysafety.bmj.com/ >
       au < HighWirePressH20Plugin ; down ; 2015 ; BMJ Quality & Safety Volume 24 ; 24 ; http://qualitysafety.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; manifest ; 2016 ; BMJ Quality & Safety Volume 25 ; 25 ; https://qualitysafety.bmj.com/ > # Unable to fetch probe permission page
+      au < bmj.BMJDrupalPlugin ; ready ; 2016 ; BMJ Quality & Safety Volume 25 ; 25 ; https://qualitysafety.bmj.com/ > # Unable to fetch probe permission page
       au < bmj.BMJDrupalPlugin ; exists ; 2017 ; BMJ Quality & Safety Volume 26 ; 26 ; https://qualitysafety.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; exists ; 2018 ; BMJ Quality & Safety Volume 27 ; 27 ; https://qualitysafety.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; manifest ; 2019 ; BMJ Quality & Safety Volume 28 ; 28 ; https://qualitysafety.bmj.com/ >
@@ -2539,7 +2539,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     #param[base_url] = http://rmdopen.bmj.com/
 
     au < HighWirePressH20Plugin ; down ; 2015 ; RMD Open Volume 1 ; 1 ; http://rmdopen.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; manifest ; 2016 ; RMD Open Volume 2 ; 2 ; https://rmdopen.bmj.com/ > # Unable to fetch probe permission page
+    au < bmj.BMJDrupalPlugin ; ready ; 2016 ; RMD Open Volume 2 ; 2 ; https://rmdopen.bmj.com/ > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; exists ; 2017 ; RMD Open Volume 3 ; 3 ; https://rmdopen.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2018 ; RMD Open Volume 4 ; 4 ; https://rmdopen.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2019 ; RMD Open Volume 5 ; 5 ; https://rmdopen.bmj.com/ >
@@ -2648,7 +2648,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; down ; 2013 ; Sexually Transmitted Infections Volume 89 ; 89 ; http://sti.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2014 ; Sexually Transmitted Infections Volume 90 ; 90 ; http://sti.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2015 ; Sexually Transmitted Infections Volume 91 ; 91 ; http://sti.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; manifest ; 2016 ; Sexually Transmitted Infections Volume 92 ; 92 ; https://sti.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; ready ; 2016 ; Sexually Transmitted Infections Volume 92 ; 92 ; https://sti.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; exists ; 2017 ; Sexually Transmitted Infections Volume 93 ; 93 ; https://sti.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; exists ; 2018 ; Sexually Transmitted Infections Volume 94 ; 94 ; https://sti.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2019 ; Sexually Transmitted Infections Volume 95 ; 95 ; https://sti.bmj.com/ >
@@ -2736,7 +2736,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; down ; 2013 ; Thorax Volume 68 ; 68 ; http://thorax.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2014 ; Thorax Volume 69 ; 69 ; http://thorax.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2015 ; Thorax Volume 70 ; 70 ; http://thorax.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; manifest ; 2016 ; Thorax Volume 71 ; 71 ; https://thorax.bmj.com/ > # Unable to fetch probe permission page
+    au < bmj.BMJDrupalPlugin ; ready ; 2016 ; Thorax Volume 71 ; 71 ; https://thorax.bmj.com/ > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; exists ; 2017 ; Thorax Volume 72 ; 72 ; https://thorax.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; exists ; 2018 ; Thorax Volume 73 ; 73 ; https://thorax.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2019 ; Thorax Volume 74 ; 74 ; https://thorax.bmj.com/ >
@@ -2790,7 +2790,7 @@ comment[tc15] = recursive URL structure
       au < HighWirePressH20Plugin ; down ; 2013 ; Tobacco Control Volume 22 ; 22 ; http://tobaccocontrol.bmj.com/ >
       au < HighWirePressH20Plugin ; down ; 2014 ; Tobacco Control Volume 23 ; 23 ; http://tobaccocontrol.bmj.com/ >
       au < HighWirePressH20Plugin ; down ; 2015 ; Tobacco Control Volume 24 ; 24 ; http://tobaccocontrol.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; manifest ; 2016 ; Tobacco Control Volume 25 ; 25 ; https://tobaccocontrol.bmj.com/ > # Unable to fetch probe permission page
+      au < bmj.BMJDrupalPlugin ; ready ; 2016 ; Tobacco Control Volume 25 ; 25 ; https://tobaccocontrol.bmj.com/ > # Unable to fetch probe permission page
       au < bmj.BMJDrupalPlugin ; exists ; 2017 ; Tobacco Control Volume 26 ; 26 ; https://tobaccocontrol.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; exists ; 2018 ; Tobacco Control Volume 27 ; 27 ; https://tobaccocontrol.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; manifest ; 2019 ; Tobacco Control Volume 28 ; 28 ; https://tobaccocontrol.bmj.com/ >

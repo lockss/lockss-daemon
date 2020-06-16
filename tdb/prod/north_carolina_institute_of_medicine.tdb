@@ -11,19 +11,29 @@
       issnl = 0029-2559
     >
 
+    {
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-    #param[base_url] = http://www.ncmedicaljournal.com/
-    implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
+    param[base_url] = http://www.ncmedicaljournal.com/
+    implicit < status ; year ; name ; param[volume_name] >
     # 2002-2013 content on http://classic.ncmedicaljournal.com/
 
-    au < released ; 2014 ; North Carolina Medical Journal Volume 75 ; 75 ; http://www.ncmedicaljournal.com/ >
-    au < released ; 2015 ; North Carolina Medical Journal Volume 76 ; 76 ; http://www.ncmedicaljournal.com/ >
-    au < released ; 2016 ; North Carolina Medical Journal Volume 77 ; 77 ; http://www.ncmedicaljournal.com/ >
-    au < released ; 2017 ; North Carolina Medical Journal Volume 78 ; 78 ; http://www.ncmedicaljournal.com/ >
-    au < released ; 2018 ; North Carolina Medical Journal Volume 79 ; 79 ; http://www.ncmedicaljournal.com/ >
-    au < manifest ; 2019 ; North Carolina Medical Journal Volume 80 ; 80 ; https://www.ncmedicaljournal.com/ >
-    au < expected ; 2020 ; North Carolina Medical Journal Volume 81 ; 81 ; https://www.ncmedicaljournal.com/ >
+    au < released ; 2014 ; North Carolina Medical Journal Volume 75 ; 75 >
+    au < released ; 2015 ; North Carolina Medical Journal Volume 76 ; 76 >
+    au < released ; 2016 ; North Carolina Medical Journal Volume 77 ; 77 >
+    au < released ; 2017 ; North Carolina Medical Journal Volume 78 ; 78 >
+    au < released ; 2018 ; North Carolina Medical Journal Volume 79 ; 79 >
 
+    }
+
+    {
+    plugin = org.lockss.plugin.highwire.HighWireDrupalPlugin
+    param[base_url] = https://www.ncmedicaljournal.com/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2019 ; North Carolina Medical Journal Volume 80 ; 80 >
+    au < expected ; 2020 ; North Carolina Medical Journal Volume 81 ; 81 >
+
+    }
   }
 
 }
