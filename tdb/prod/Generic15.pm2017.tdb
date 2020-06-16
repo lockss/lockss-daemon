@@ -1,0 +1,27 @@
+{
+  publisher <
+    name = PUBLISHER_NAME
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:PUB_ID
+
+    {
+    title <
+      name = Hitchcock Annual ;
+      issn = ISSN ;
+      eissn = EISSN
+
+    >
+
+      attr[journal_id] = 760
+
+      au < manifest ; 2017 ; Hitchcock Annual Volume 21 [2017] ; 14431 >
+      au < manifest ; 2018 ; Hitchcock Annual Volume 22 [2018] ; 14432 >
+      au < manifest ; 2019 ; Hitchcock Annual Volume 23 [2019] ; 14888 >
+
+    }
+
+}
