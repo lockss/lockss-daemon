@@ -47,7 +47,7 @@ import org.lockss.util.ReaderInputStream;
 import java.io.InputStream;
 import java.io.Reader;
 
-public class ResPediatricaOaiHtmlHashFilterFactory implements FilterFactory {
+public class ResPediatricaHtmlFilterFactory implements FilterFactory {
 
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
