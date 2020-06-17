@@ -1,18 +1,18 @@
 {
   publisher <
-    name = PUBLISHER_NAME
+    name = University of California Press
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
-  #publisher_id:PUB_ID
+  #publisher_id:263
 
     {
     title <
       name = Nova Religio ;
-      issn = ISSN ;
-      eissn = EISSN
+      issn = 1092-6690 ;
+      eissn = 1541-8480
 
     >
 
