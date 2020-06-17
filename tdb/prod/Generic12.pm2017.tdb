@@ -1,0 +1,27 @@
+{
+  publisher <
+    name = PUBLISHER_NAME
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:PUB_ID
+
+    {
+    title <
+      name = Kenyon Review ;
+      issn = ISSN ;
+      eissn = EISSN
+
+    >
+
+      attr[journal_id] = 768
+
+      au < manifest ; 2018 ; Kenyon Review Volume 40 [2018] ; 14467 >
+      au < manifest ; 2019 ; Kenyon Review Volume 41 [2019] ; 14468 >
+      au < manifest ; 2020 ; Kenyon Review Volume 42 [2020] ; 14571 >
+
+    }
+
+}

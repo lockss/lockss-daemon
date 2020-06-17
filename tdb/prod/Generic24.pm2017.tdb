@@ -1,0 +1,35 @@
+{
+  publisher <
+    name = PUBLISHER_NAME
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:PUB_ID
+
+    {
+    title <
+      name = Studies in Romanticism ;
+      issn = ISSN ;
+      eissn = EISSN
+
+    >
+
+      attr[journal_id] = 754
+
+      au < manifest ; 2010 ; Studies in Romanticism Volume 49 [2010] ; 14521 >
+      au < manifest ; 2011 ; Studies in Romanticism Volume 50 [2011] ; 14520 >
+      au < manifest ; 2012 ; Studies in Romanticism Volume 51 [2012] ; 14504 >
+      au < manifest ; 2013 ; Studies in Romanticism Volume 52 [2013] ; 14503 >
+      au < manifest ; 2014 ; Studies in Romanticism Volume 53 [2014] ; 14502 >
+      au < manifest ; 2015 ; Studies in Romanticism Volume 54 [2015] ; 14501 >
+      au < manifest ; 2016 ; Studies in Romanticism Volume 55 [2016] ; 14500 >
+      au < manifest ; 2017 ; Studies in Romanticism Volume 56 [2017] ; 14499 >
+      au < manifest ; 2018 ; Studies in Romanticism Volume 57 [2018] ; 14484 >
+      au < manifest ; 2019 ; Studies in Romanticism Volume 58 [2019] ; 14486 >
+      au < manifest ; 2020 ; Studies in Romanticism Volume 59 [2020] ; 14912 >
+
+    }
+
+}

@@ -1,0 +1,26 @@
+{
+  publisher <
+    name = PUBLISHER_NAME
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:PUB_ID
+
+    {
+    title <
+      name = St. Anselm Journal ;
+      issn = ISSN ;
+      eissn = EISSN
+
+    >
+
+      attr[journal_id] = 767
+
+      au < manifest ; 2018-2019 ; St. Anselm Journal Volume 14 [2018-2019] ; 14466 >
+      au < manifest ; 2019-2020 ; St. Anselm Journal Volume 15 [2019-2020] ; 14565 >
+
+    }
+
+}

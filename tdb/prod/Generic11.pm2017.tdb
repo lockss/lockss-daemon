@@ -1,0 +1,28 @@
+{
+  publisher <
+    name = PUBLISHER_NAME
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:PUB_ID
+
+    {
+    title <
+      name = Acta Musicologica ;
+      issn = ISSN ;
+      eissn = EISSN
+
+    >
+
+      attr[journal_id] = 731
+
+      au < manifest ; 2016 ; Acta Musicologica Volume 88 [2016] ; 13001 >
+      au < manifest ; 2017 ; Acta Musicologica Volume 89 [2017] ; 13002 >
+      au < manifest ; 2018 ; Acta Musicologica Volume 90 [2018] ; 13545 >
+      au < manifest ; 2019 ; Acta Musicologica Volume 91 [2019] ; 14258 >
+
+    }
+
+}
