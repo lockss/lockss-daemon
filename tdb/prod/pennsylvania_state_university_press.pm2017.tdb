@@ -691,6 +691,21 @@
     
     {
     title <
+      name = Edith Wharton Review ;
+      issn = 2330-3980 ;
+      eissn = 2330-3964
+
+    >
+
+      attr[journal_id] = 757
+
+      au < manifest ; 2018 ; Edith Wharton Review Volume 34 [2018] ; 14367 >
+      au < manifest ; 2019 ; Edith Wharton Review Volume 35 [2019] ; 14368 >
+
+    }
+
+    {
+    title <
       name = Eugene O'Neill Review ;
       issn = 1040-9483 ;
       eissn = 2161-4318 ;
