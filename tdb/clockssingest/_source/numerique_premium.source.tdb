@@ -13,6 +13,8 @@
       name = Numerique Premium Books Source Content
     >
     
+    #See RT 10255
+    
     plugin = needs.SourcePlugin
     param[base_url] = https://clockss-test.lockss.org/sourcefiles/numerique-released/
     hidden[proxy] = DIRECT
