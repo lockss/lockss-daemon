@@ -24,8 +24,8 @@
       #content available from 1880 volume os-1 to 2009 volume 326. 4 volumes/year starting 1962. 2 volumes/year starting 1895 volume 1.
       #volume 344 File size (346438) differs from Content-Length header (461302): http://science.sciencemag.org/content/sci/suppl/2014/04/23/344.6182.380.DC1/1249656s-tables.zip
 
-      au < frozen ; exists ; 1880 ; Science Volume os-1 ; os-1 ; http://science.sciencemag.org/ ; >
-      au < frozen ; exists ; 1881 ; Science Volume os-2 ; os-2 ; http://science.sciencemag.org/ ; >
+      au < finished ; manifest ; 1880 ; Science Volume os-1 ; os-1 ; http://science.sciencemag.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1881 ; Science Volume os-2 ; os-2 ; http://science.sciencemag.org/ ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 1882 ; Science Volume os-3 ; os-3 ; http://science.sciencemag.org/ ; >
 
       au < frozen ; exists ; 1883 ; Science Volume ns-1 ; ns-1 ; http://science.sciencemag.org/ ; >
