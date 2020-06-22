@@ -1,18 +1,18 @@
 {
   publisher <
-    name = PUBLISHER_NAME
+    name = Classical Association of South Africa
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
-  #publisher_id:PUB_ID
+  #publisher_id:323
 
     {
     title <
       name = Acta Classica ;
-      issn = ISSN ;
-      eissn = EISSN
+      issn = 0065-1141 ;
+      eissn = 2227-538X
 
     >
 

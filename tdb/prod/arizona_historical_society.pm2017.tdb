@@ -1,18 +1,18 @@
 {
   publisher <
-    name = PUBLISHER_NAME
+    name = Arizona Historical Society
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
-  #publisher_id:PUB_ID
+  #publisher_id:766
 
     {
     title <
       name = Journal of Arizona History ;
-      issn = ISSN ;
-      eissn = EISSN
+      issn = 0021-9053 ;
+      eissn = 2689-3908
 
     >
 

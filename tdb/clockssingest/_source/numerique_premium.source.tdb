@@ -1,0 +1,27 @@
+{
+
+  publisher <
+    name = Numerique Premium ;
+    info[contract] = 2017 ;
+    info[tester] = S
+  >
+
+
+  {
+  
+    title <
+      name = Numerique Premium Books Source Content
+    >
+    
+    #See RT 10255
+    
+    plugin = needs.SourcePlugin
+    param[base_url] = https://clockss-test.lockss.org/sourcefiles/numerique-released/
+    hidden[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[year] >
+    
+    au < doNotProcess ; exists ; 2017 ; Numerique Premium Books Source Content 2017 ; 2017 >
+    
+  }
+
+}

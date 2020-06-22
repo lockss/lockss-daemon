@@ -303,9 +303,36 @@ while (my $line = <>) {
 #  }
 #        sleep(4);
 
-#  } elsif ($plugin eq "ProjectMuse2017Plugin") {
-#      $result = "Checker_stub";
-#      sleep(4);
+  } elsif ($plugin eq "ProjectMuse2017Plugin") {
+    $url = sprintf("%slockss?vid=%s",
+      $param{base_url}, $param{resource_id});
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    if ($resp->is_success) {
+      my $man_contents = $resp->content;
+      if (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) || ($man_contents =~ m/$oa_tag/)) && ($man_contents =~ m/href=\"\/issue\//) && ($man_contents !~ "No issues available.")) {
+        if ($man_contents =~ m/<h1>(.*)<\/h1>/si) {
+          $vol_title = $1;
+          if ($man_contents =~ m/<h2>(.*)<\/h2>/si) {
+            $vol_title = $vol_title . " " . $1;
+          }
+          $vol_title =~ s/\s*\n\s*/ /g;
+          $vol_title =~ s/,//;
+        }
+        $result = "Manifest"
+      } elsif ($man_contents !~ m/$lockss_tag/) {
+        $result = "--NO_TAG--"
+      } elsif ($man_contents =~ m/No issues available/ || $man_contents !~ m/href=\"\/issue\//){
+        $result = "--NO_ISSUES--"
+      } else {
+        $result = "--OTHER_ERROR--"
+      }
+    
+  } else {
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+  }
+      sleep(4);
 
 #  } elsif ($plugin eq "GPOFDSysSitemapsPlugin") {
 #      $url = sprintf("%ssmap/fdsys/sitemap_%d/%d_%s_sitemap.xml",

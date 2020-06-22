@@ -381,6 +381,24 @@
         au < released ; 2018 ; The Velvet Light Trap Number 81 [Spring 2018] ; 13254 >
         au < released ; 2018 ; The Velvet Light Trap Number 82 [Fall 2018] ; 13648 >
         au < exists ; 2019 ; The Velvet Light Trap Number 83 [Spring 2019] ; 13956 >
+        au < exists ; 2019 ; The Velvet Light Trap Number 84 [Fall 2019] ; 14366 >
+        au < exists ; 2020 ; The Velvet Light Trap Number 85 [Spring 2020] ; 14729 >
+
+    }
+
+    {
+    title <
+      name = US Latino & Latina Oral History Journal ;
+      issn = 2574-0180 ;
+      eissn = 2574-0199
+
+    >
+
+      attr[journal_id] = 758
+
+      au < manifest ; 2017 ; US Latino & Latina Oral History Journal Volume 1 [2017] ; 14430 >
+      au < manifest ; 2018 ; US Latino & Latina Oral History Journal Volume 2 [2018] ; 14422 >
+      au < manifest ; 2019 ; US Latino & Latina Oral History Journal Volume 3 [2019] ; 14423 >
 
     }
 

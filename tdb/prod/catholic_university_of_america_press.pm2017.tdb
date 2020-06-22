@@ -224,6 +224,21 @@
 
     {
     title <
+      name = St. Anselm Journal ;
+      issn = 2689-6230 ;
+      eissn = 1545-3367
+
+    >
+
+      attr[journal_id] = 767
+
+      au < manifest ; 2018-2019 ; St. Anselm Journal Volume 14 [2018-2019] ; 14466 >
+      au < manifest ; 2019-2020 ; St. Anselm Journal Volume 15 [2019-2020] ; 14565 >
+
+    }
+
+    {
+    title <
       name = The Thomist: A Speculative Quarterly Review ;
       issn = 0040-6325  ;
       eissn = 2473-3725  ;

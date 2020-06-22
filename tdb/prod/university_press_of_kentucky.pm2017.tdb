@@ -1,18 +1,17 @@
 {
   publisher <
-    name = PUBLISHER_NAME
+    name = The University Press of Kentucky
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
-  #publisher_id:PUB_ID
+  #publisher_id:185
 
     {
     title <
       name = Journal of Appalachian Health ;
-      issn = ISSN ;
-      eissn = EISSN
+      eissn = 2641-7804
 
     >
 
