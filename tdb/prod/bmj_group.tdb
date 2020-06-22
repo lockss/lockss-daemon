@@ -148,7 +148,7 @@
     au < HighWirePressH20Plugin ; down ; 2015 ; Annals of the Rheumatic Diseases Volume 75 ; 75 ; http://ard.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2016 ; Annals of the Rheumatic Diseases Volume 76 ; 76 ; https://ard.bmj.com/ > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; exists ; 2017 ; Annals of the Rheumatic Diseases Volume 77 ; 77 ; https://ard.bmj.com/ > #login page found on recent page
-    au < bmj.BMJDrupalPlugin ; exists ; 2018 ; Annals of the Rheumatic Diseases Volume 78 ; 78 ; https://ard.bmj.com/ > #login page
+    au < bmj.BMJDrupalPlugin ; manifest ; 2018 ; Annals of the Rheumatic Diseases Volume 78 ; 78 ; https://ard.bmj.com/ > #login page
     au < bmj.BMJDrupalPlugin ; exists ; 2019 ; Annals of the Rheumatic Diseases Volume 79 ; 79 ; https://ard.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; expected ; 2020 ; Annals of the Rheumatic Diseases Volume 80 ; 80 ; https://ard.bmj.com/ >
 
@@ -969,7 +969,7 @@
     au < HighWirePressH20Plugin ; down ; 2013 ; Emergency Medicine Journal Volume 30 ; 30 ; http://emj.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2014 ; Emergency Medicine Journal Volume 31 ; 31 ; http://emj.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2015 ; Emergency Medicine Journal Volume 32 ; 32 ; http://emj.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; exists ; 2016 ; Emergency Medicine Journal Volume 33 ; 33 ; https://emj.bmj.com/ > # login page.
+    au < bmj.BMJDrupalPlugin ; manifest ; 2016 ; Emergency Medicine Journal Volume 33 ; 33 ; https://emj.bmj.com/ > # login page.
     au < bmj.BMJDrupalPlugin ; exists ; 2017 ; Emergency Medicine Journal Volume 34 ; 34 ; https://emj.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; exists ; 2018 ; Emergency Medicine Journal Volume 35 ; 35 ; https://emj.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2019 ; Emergency Medicine Journal Volume 36 ; 36 ; https://emj.bmj.com/ > # login page.
@@ -2327,7 +2327,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; ready ; 2016 ; Occupational and Environmental Medicine Volume 73 ; 73 ; https://oem.bmj.com/ > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; exists ; 2017 ; Occupational and Environmental Medicine Volume 74 ; 74 ; https://oem.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; exists ; 2018 ; Occupational and Environmental Medicine Volume 75 ; 75 ; https://oem.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; exists ; 2019 ; Occupational and Environmental Medicine Volume 76 ; 76 ; https://oem.bmj.com/ > #Login page
+    au < bmj.BMJDrupalPlugin ; manifest ; 2019 ; Occupational and Environmental Medicine Volume 76 ; 76 ; https://oem.bmj.com/ > #Login page
     au < bmj.BMJDrupalPlugin ; expected ; 2020 ; Occupational and Environmental Medicine Volume 77 ; 77 ; https://oem.bmj.com/ >
 
   }

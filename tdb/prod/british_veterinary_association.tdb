@@ -198,8 +198,8 @@
     au < bmj.BMJDrupalPlugin ; exists ; 2017 ; Veterinary Record Volume 181 ; 181 ; https://veterinaryrecord.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; exists ; 2018 ; Veterinary Record Volume 182 ; 182 ; https://veterinaryrecord.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; exists ; 2018 ; Veterinary Record Volume 183 ; 183 ; https://veterinaryrecord.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; exists ; 2019 ; Veterinary Record Volume 184 ; 184 ; https://veterinaryrecord.bmj.com/ > #login page
-    au < bmj.BMJDrupalPlugin ; exists ; 2019 ; Veterinary Record Volume 185 ; 185 ; https://veterinaryrecord.bmj.com/ > #unable to fetch probe permission page
+    au < bmj.BMJDrupalPlugin ; manifest ; 2019 ; Veterinary Record Volume 184 ; 184 ; https://veterinaryrecord.bmj.com/ > #login page
+    au < bmj.BMJDrupalPlugin ; manifest ; 2019 ; Veterinary Record Volume 185 ; 185 ; https://veterinaryrecord.bmj.com/ > #unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; expected ; 2020 ; Veterinary Record Volume 186 ; 186 ; https://veterinaryrecord.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; expected ; 2020 ; Veterinary Record Volume 187 ; 187 ; https://veterinaryrecord.bmj.com/ >
 
