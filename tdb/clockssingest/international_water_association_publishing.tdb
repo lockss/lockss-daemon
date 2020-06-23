@@ -379,60 +379,33 @@
     au < manifest ; exists ; 1988 ; 1988 ; Water Science and Technology Volume 20 ; 20 ; >
     au < manifest ; exists ; 1989 ; 1989 ; Water Science and Technology Volume 21 ; 21 ; >
     au < manifest ; exists ; 1990 ; 1990 ; Water Science and Technology Volume 22 ; 22 ; >
-    au < exists ; exists ; 1991 ; 1991 ; Water Science and Technology Volume 23 ; 23 ; >
-    au < manifest ; exists ; 1991 ; 1991 ; Water Science and Technology Volume 24 ; 24 ; >
-    au < exists ; exists ; 1992 ; 1992 ; Water Science and Technology Volume 25 ; 25 ; >
-    au < manifest ; exists ; 1992 ; 1992 ; Water Science and Technology Volume 26 ; 26 ; >
-    au < exists ; exists ; 1993 ; 1993 ; Water Science and Technology Volume 27 ; 27 ; >
-    au < manifest ; exists ; 1993 ; 1993 ; Water Science and Technology Volume 28 ; 28 ; >
-    au < exists ; exists ; 1994 ; 1994 ; Water Science and Technology Volume 29 ; 29 ; >
-    au < manifest ; exists ; 1994 ; 1994 ; Water Science and Technology Volume 30 ; 30 ; >
-    au < exists ; exists ; 1995 ; 1995 ; Water Science and Technology Volume 31 ; 31 ; >
-    au < manifest ; exists ; 1995 ; 1995 ; Water Science and Technology Volume 32 ; 32 ; >
-    au < exists ; exists ; 1996 ; 1996 ; Water Science and Technology Volume 33 ; 33 ; >
-    au < manifest ; exists ; 1996 ; 1996 ; Water Science and Technology Volume 34 ; 34 ; >
-    au < exists ; exists ; 1997 ; 1997 ; Water Science and Technology Volume 35 ; 35 ; >
-    au < manifest ; exists ; 1997 ; 1997 ; Water Science and Technology Volume 36 ; 36 ; >
-    au < exists ; exists ; 1998 ; 1998 ; Water Science and Technology Volume 37 ; 37 ; >
-    au < manifest ; exists ; 1998 ; 1998 ; Water Science and Technology Volume 38 ; 38 ; >
-    au < exists ; exists ; 1999 ; 1999 ; Water Science and Technology Volume 39 ; 39 ; >
-    au < manifest ; exists ; 1999 ; 1999 ; Water Science and Technology Volume 40 ; 40 ; >
-    au < exists ; exists ; 2000 ; 2000 ; Water Science and Technology Volume 41 ; 41 ; >
-    au < manifest ; exists ; 2000 ; 2000 ; Water Science and Technology Volume 42 ; 42 ; >
-    au < exists ; exists ; 2001 ; 2001 ; Water Science and Technology Volume 43 ; 43 ; >
-    au < manifest ; exists ; 2001 ; 2001 ; Water Science and Technology Volume 44 ; 44 ; >
-    au < exists ; exists ; 2002 ; 2002 ; Water Science and Technology Volume 45 ; 45 ; >
-    au < manifest ; exists ; 2002 ; 2002 ; Water Science and Technology Volume 46 ; 46 ; >
-    au < exists ; exists ; 2003 ; 2003 ; Water Science and Technology Volume 47 ; 47 ; >
-    au < manifest ; exists ; 2003 ; 2003 ; Water Science and Technology Volume 48 ; 48 ; >
-    au < exists ; exists ; 2004 ; 2004 ; Water Science and Technology Volume 49 ; 49 ; >
-    au < manifest ; exists ; 2004 ; 2004 ; Water Science and Technology Volume 50 ; 50 ; >
-    au < exists ; exists ; 2005 ; 2005 ; Water Science and Technology Volume 51 ; 51 ; >
-    au < manifest ; exists ; 2005 ; 2005 ; Water Science and Technology Volume 52 ; 52 ; >
-    au < exists ; exists ; 2006 ; 2006 ; Water Science and Technology Volume 53 ; 53 ; >
-    au < manifest ; exists ; 2006 ; 2006 ; Water Science and Technology Volume 54 ; 54 ; >
-    au < exists ; exists ; 2007 ; 2007 ; Water Science and Technology Volume 55 ; 55 ; >
-    au < manifest ; exists ; 2007 ; 2007 ; Water Science and Technology Volume 56 ; 56 ; >
-    au < exists ; exists ; 2008 ; 2008 ; Water Science and Technology Volume 57 ; 57 ; >
-    au < manifest ; exists ; 2008 ; 2008 ; Water Science and Technology Volume 58 ; 58 ; >
-    au < exists ; exists ; 2009 ; 2009 ; Water Science and Technology Volume 59 ; 59 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; Water Science and Technology Volume 60 ; 60 ; >
-    au < exists ; exists ; 2010 ; 2010 ; Water Science and Technology Volume 61 ; 61 ; >
-    au < manifest ; exists ; 2010 ; 2010 ; Water Science and Technology Volume 62 ; 62 ; >
-    au < exists ; exists ; 2011 ; 2011 ; Water Science and Technology Volume 63 ; 63 ; >
-    au < manifest ; exists ; 2011 ; 2011 ; Water Science and Technology Volume 64 ; 64 ; >
-    au < exists ; exists ; 2012 ; 2012 ; Water Science and Technology Volume 65 ; 65 ; >
-    au < manifest ; exists ; 2012 ; 2012 ; Water Science and Technology Volume 66 ; 66 ; >
-    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Water Science and Technology Volume 67 ; 67 ; >
-    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Water Science and Technology Volume 68 ; 68 ; >
-    au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Water Science and Technology Volume 69 ; 69 ; >
-    au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Water Science and Technology Volume 70 ; 70 ; >
-    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Water Science and Technology Volume 71 ; 71 ; > #IWADrupal plugin
-    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Water Science and Technology Volume 72 ; 72 ; > #IWADrupal plugin
-    au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Water Science and Technology Volume 73 ; 73 ; > #IWADrupal plugin
-    au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Water Science and Technology Volume 74 ; 74 ; > #IWADrupal plugin
-    au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Water Science and Technology Volume 75 ; 75 ; > #IWADrupal plugin
-    au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Water Science and Technology Volume 76 ; 76 ; > #IWADrupal plugin
+    au < manifest ; exists ; 1991 ; 1991 ; Water Science and Technology Volume 23-24 ; 23-24 ; >
+    au < manifest ; exists ; 1992 ; 1992 ; Water Science and Technology Volume 25-26 ; 25-26 ; >
+    au < manifest ; exists ; 1993 ; 1993 ; Water Science and Technology Volume 27-28 ; 27-28 ; >
+    au < manifest ; exists ; 1994 ; 1994 ; Water Science and Technology Volume 29-30 ; 29-30 ; >
+    au < manifest ; exists ; 1995 ; 1995 ; Water Science and Technology Volume 31-32 ; 31-32 ; >
+    au < manifest ; exists ; 1996 ; 1996 ; Water Science and Technology Volume 33-34 ; 33-34 ; >
+    au < manifest ; exists ; 1997 ; 1997 ; Water Science and Technology Volume 35-36 ; 35-36 ; >
+    au < manifest ; exists ; 1998 ; 1998 ; Water Science and Technology Volume 37-38 ; 37-38 ; >
+    au < manifest ; exists ; 1999 ; 1999 ; Water Science and Technology Volume 39-40 ; 39-40 ; >
+    au < manifest ; exists ; 2000 ; 2000 ; Water Science and Technology Volume 41-42 ; 41-42 ; >
+    au < manifest ; exists ; 2001 ; 2001 ; Water Science and Technology Volume 43-44 ; 43-44 ; >
+    au < manifest ; exists ; 2002 ; 2002 ; Water Science and Technology Volume 45-46 ; 45-46 ; >
+    au < manifest ; exists ; 2003 ; 2003 ; Water Science and Technology Volume 47-48 ; 47-48 ; >
+    au < manifest ; exists ; 2004 ; 2004 ; Water Science and Technology Volume 49-50 ; 49-50 ; >
+    au < manifest ; exists ; 2005 ; 2005 ; Water Science and Technology Volume 51-52 ; 51-52 ; >
+    au < manifest ; exists ; 2006 ; 2006 ; Water Science and Technology Volume 53-54 ; 53-54 ; >
+    au < manifest ; exists ; 2007 ; 2007 ; Water Science and Technology Volume 55-56 ; 55-56 ; >
+    au < manifest ; exists ; 2008 ; 2008 ; Water Science and Technology Volume 57-58 ; 57-58 ; >
+    au < manifest ; exists ; 2009 ; 2009 ; Water Science and Technology Volume 59-60 ; 59-60 ; >
+    au < manifest ; exists ; 2010 ; 2010 ; Water Science and Technology Volume 61-62 ; 61-62 ; >
+    au < manifest ; exists ; 2011 ; 2011 ; Water Science and Technology Volume 63-64 ; 63-64 ; >
+    au < manifest ; exists ; 2012 ; 2012 ; Water Science and Technology Volume 65-66 ; 65-66 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Water Science and Technology Volume 67-68 ; 67-68 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Water Science and Technology Volume 69-70 ; 69-70 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Water Science and Technology Volume 71-72 ; 71-72 ; > #IWADrupal plugin
+    au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Water Science and Technology Volume 73-74 ; 73-74 ; > #IWADrupal plugin
+    au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Water Science and Technology Volume 75-76 ; 75-76 ; > #IWADrupal plugin
     au < manifest ; exists ; 2018 ; 2018 ; Water Science and Technology Volume 77-78 ; 77-78 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Water Science and Technology Volume 79-80 ; 79-80 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Water Science and Technology Volume 81-82 ; 81-82 ; >
