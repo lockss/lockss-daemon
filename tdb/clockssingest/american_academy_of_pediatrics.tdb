@@ -227,7 +227,7 @@
       au < aap.ClockssAAPDrupalPlugin ; doNotProcess ; doNotProcess ; 2010 ; NeoReviews Volume 11 ; 11 ; https://neoreviews.aappublications.org/ ; >
       au < ClockssHighWirePressH20Plugin ; finished ; manifest ; 2011 ; NeoReviews Volume 12 ; 12 ; http://neoreviews.aappublications.org/ ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; NeoReviews Volume 13 ; 13 ; http://neoreviews.aappublications.org/ ; >
-      au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2013 ; NeoReviews Volume 14 ; 14 ; http://neoreviews.aappublications.org/ ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; manifest ; 2013 ; NeoReviews Volume 14 ; 14 ; http://neoreviews.aappublications.org/ ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; NeoReviews Volume 15 ; 15 ; http://neoreviews.aappublications.org/ ; reingest5.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2015 ; NeoReviews Volume 16 [superseded] ; 16 ; http://neoreviews.aappublications.org/ ; >
       au < aap.ClockssAAPDrupalPlugin ; finished ; finished ; 2015 ; NeoReviews Volume 16 ; 16 ; http://neoreviews.aappublications.org/ ; reingest1.clockss.org:8082 >
@@ -482,7 +482,7 @@
       au < aap.ClockssAAPDrupalPlugin ; doNotProcess ; doNotProcess ; 2010 ; Pediatrics in Review Volume 31 ; 31 ; https://pedsinreview.aappublications.org/ ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Pediatrics in Review Volume 32 ; 32 ; http://pedsinreview.aappublications.org/ ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Pediatrics in Review Volume 33 ; 33 ; http://pedsinreview.aappublications.org/ ; >
-      au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2013 ; Pediatrics in Review Volume 34 ; 34 ; http://pedsinreview.aappublications.org/ ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; manifest ; 2013 ; Pediatrics in Review Volume 34 ; 34 ; http://pedsinreview.aappublications.org/ ; reingest3.clockss.org:8083 >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Pediatrics in Review Volume 35 ; 35 ; http://pedsinreview.aappublications.org/ ; >
       au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2015 ; Pediatrics in Review Volume 36 [superseded] ; 36 ; http://pedsinreview.aappublications.org/ ; >
       au < aap.ClockssAAPDrupalPlugin ; finished ; finished ; 2015 ; Pediatrics in Review Volume 36 ; 36 ; http://pedsinreview.aappublications.org/ ; reingest1.clockss.org:8082 >
