@@ -23,11 +23,11 @@
     au < ers.ERSDrupalPlugin ; manifest ; 2006-2007 ; Breathe Volume 3 ; 3 ; https://breathe.ersjournals.com/ >
     au < ers.ERSDrupalPlugin ; manifest ; 2007-2008 ; Breathe Volume 4 ; 4 ; https://breathe.ersjournals.com/ >
     au < ers.ERSDrupalPlugin ; manifest ; 2008-2009 ; Breathe Volume 5 ; 5 ; https://breathe.ersjournals.com/ >
-    au < ers.ERSDrupalPlugin ; ready ; 2009-2010 ; Breathe Volume 6 ; 6 ; https://breathe.ersjournals.com/ >
-    au < ers.ERSDrupalPlugin ; ready ; 2010-2011 ; Breathe Volume 7 ; 7 ; https://breathe.ersjournals.com/ >
-    au < ers.ERSDrupalPlugin ; ready ; 2011-2012 ; Breathe Volume 8 ; 8 ; https://breathe.ersjournals.com/ >
-    au < ers.ERSDrupalPlugin ; ready ; 2012-2013 ; Breathe Volume 9 ; 9 ; https://breathe.ersjournals.com/ >
-    au < ers.ERSDrupalPlugin ; ready ; 2014 ; Breathe Volume 10 ; 10 ; https://breathe.ersjournals.com/ >
+    au < ers.ERSDrupalPlugin ; releasing ; 2009-2010 ; Breathe Volume 6 ; 6 ; https://breathe.ersjournals.com/ >
+    au < ers.ERSDrupalPlugin ; releasing ; 2010-2011 ; Breathe Volume 7 ; 7 ; https://breathe.ersjournals.com/ >
+    au < ers.ERSDrupalPlugin ; releasing ; 2011-2012 ; Breathe Volume 8 ; 8 ; https://breathe.ersjournals.com/ >
+    au < ers.ERSDrupalPlugin ; releasing ; 2012-2013 ; Breathe Volume 9 ; 9 ; https://breathe.ersjournals.com/ >
+    au < ers.ERSDrupalPlugin ; releasing ; 2014 ; Breathe Volume 10 ; 10 ; https://breathe.ersjournals.com/ >
     au < ers.ERSDrupalPlugin ; released ; 2015 ; Breathe Volume 11 ; 11 ; http://breathe.ersjournals.com/ >
     au < ers.ERSDrupalPlugin ; released ; 2016 ; Breathe Volume 12 ; 12 ; http://breathe.ersjournals.com/ >
     au < ers.ERSDrupalPlugin ; released ; 2017 ; Breathe Volume 13 ; 13 ; http://breathe.ersjournals.com/ >
@@ -112,10 +112,10 @@
     au < HighWirePressH20Plugin ; down ; 2011 ; European Respiratory Journal Volume 38 ; 38 ; http://erj.ersjournals.com/ >
     au < HighWirePressH20Plugin ; down ; 2012 ; European Respiratory Journal Volume 39 ; 39 ; http://erj.ersjournals.com/ >
     au < HighWirePressH20Plugin ; down ; 2012 ; European Respiratory Journal Volume 40 ; 40 ; http://erj.ersjournals.com/ >
-    au < ers.ERSDrupalPlugin ; ready ; 2013 ; European Respiratory Journal Volume 41 ; 41 ; https://erj.ersjournals.com/ >
-    au < ers.ERSDrupalPlugin ; ready ; 2013 ; European Respiratory Journal Volume 42 ; 42 ; https://erj.ersjournals.com/ >
-    au < ers.ERSDrupalPlugin ; ready ; 2014 ; European Respiratory Journal Volume 43 ; 43 ; https://erj.ersjournals.com/ >
-    au < ers.ERSDrupalPlugin ; ready ; 2014 ; European respiratory Journal Volume 44 ; 44 ; https://erj.ersjournals.com/ >
+    au < ers.ERSDrupalPlugin ; releasing ; 2013 ; European Respiratory Journal Volume 41 ; 41 ; https://erj.ersjournals.com/ >
+    au < ers.ERSDrupalPlugin ; releasing ; 2013 ; European Respiratory Journal Volume 42 ; 42 ; https://erj.ersjournals.com/ >
+    au < ers.ERSDrupalPlugin ; releasing ; 2014 ; European Respiratory Journal Volume 43 ; 43 ; https://erj.ersjournals.com/ >
+    au < ers.ERSDrupalPlugin ; releasing ; 2014 ; European respiratory Journal Volume 44 ; 44 ; https://erj.ersjournals.com/ >
     au < ers.ERSDrupalPlugin ; released ; 2015 ; European Respiratory Journal Volume 45 ; 45 ; http://erj.ersjournals.com/ >
     au < ers.ERSDrupalPlugin ; released ; 2015 ; European Respiratory Journal Volume 46 ; 46 ; http://erj.ersjournals.com/ >
     au < ers.ERSDrupalPlugin ; released ; 2016 ; European Respiratory Journal Volume 47 ; 47 ; http://erj.ersjournals.com/ >
@@ -150,8 +150,8 @@
     au < HighWirePressH20Plugin ; down ; 2010 ; European Respiratory Review Volume 19 ; 19 ; http://err.ersjournals.com/ >
     au < HighWirePressH20Plugin ; down ; 2011 ; European Respiratory Review Volume 20 ; 20 ; http://err.ersjournals.com/ >
     au < HighWirePressH20Plugin ; down ; 2012 ; European Respiratory Review Volume 21 ; 21 ; http://err.ersjournals.com/ >
-    au < ers.ERSDrupalPlugin ; ready ; 2013 ; European Respiratory Review Volume 22 ; 22 ; https://err.ersjournals.com/ >
-    au < ers.ERSDrupalPlugin ; ready ; 2014 ; European Respiratory Review Volume 23 ; 23 ; https://err.ersjournals.com/ >
+    au < ers.ERSDrupalPlugin ; releasing ; 2013 ; European Respiratory Review Volume 22 ; 22 ; https://err.ersjournals.com/ >
+    au < ers.ERSDrupalPlugin ; releasing ; 2014 ; European Respiratory Review Volume 23 ; 23 ; https://err.ersjournals.com/ >
     au < ers.ERSDrupalPlugin ; released ; 2015 ; European Respiratory Review Volume 24 ; 24 ; http://err.ersjournals.com/ >
     au < ers.ERSDrupalPlugin ; released ; 2016 ; European Respiratory Review Volume 25 ; 25 ; http://err.ersjournals.com/ >
     au < ers.ERSDrupalPlugin ; released ; 2017 ; European Respiratory Review Volume 26 ; 26 ; http://err.ersjournals.com/ >
