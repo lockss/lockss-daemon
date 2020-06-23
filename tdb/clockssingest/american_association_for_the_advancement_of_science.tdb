@@ -26,58 +26,58 @@
 
       au < finished ; manifest ; 1880 ; Science Volume os-1 ; os-1 ; http://science.sciencemag.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 1881 ; Science Volume os-2 ; os-2 ; http://science.sciencemag.org/ ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 1882 ; Science Volume os-3 ; os-3 ; http://science.sciencemag.org/ ; >
+      au < finished ; manifest ; 1882 ; Science Volume os-3 ; os-3 ; http://science.sciencemag.org/ ; reingest1.clockss.org:8082 >
 
-      au < frozen ; exists ; 1883 ; Science Volume ns-1 ; ns-1 ; http://science.sciencemag.org/ ; >
-      au < frozen ; exists ; 1883 ; Science Volume ns-2 ; ns-2 ; http://science.sciencemag.org/ ; >
-      au < frozen ; exists ; 1884 ; Science Volume ns-3 ; ns-3 ; http://science.sciencemag.org/ ; >
-      au < frozen ; exists ; 1884 ; Science Volume ns-4 ; ns-4 ; http://science.sciencemag.org/ ; >
-      au < frozen ; exists ; 1885 ; Science Volume ns-5 ; ns-5 ; http://science.sciencemag.org/ ; >
-      au < frozen ; exists ; 1885 ; Science Volume ns-6 ; ns-6 ; http://science.sciencemag.org/ ; >
-      au < frozen ; exists ; 1886 ; Science Volume ns-7 ; ns-7 ; http://science.sciencemag.org/ ; >
-      au < frozen ; exists ; 1886 ; Science Volume ns-8 ; ns-8 ; http://science.sciencemag.org/ ; >
-      au < frozen ; exists ; 1887 ; Science Volume ns-9 ; ns-9 ; http://science.sciencemag.org/ ; >
-      au < frozen ; exists ; 1887 ; Science Volume ns-10 ; ns-10 ; http://science.sciencemag.org/ ; >
-      au < frozen ; exists ; 1888 ; Science Volume ns-11 ; ns-11 ; http://science.sciencemag.org/ ; >
-      au < frozen ; exists ; 1888 ; Science Volume ns-12 ; ns-12 ; http://science.sciencemag.org/ ; >
-      au < frozen ; exists ; 1889 ; Science Volume ns-13 ; ns-13 ; http://science.sciencemag.org/ ; >
-      au < frozen ; exists ; 1889 ; Science Volume ns-14 ; ns-14 ; http://science.sciencemag.org/ ; >
-      au < frozen ; exists ; 1890 ; Science Volume ns-15 ; ns-15 ; http://science.sciencemag.org/ ; >
-      au < frozen ; exists ; 1890 ; Science Volume ns-16 ; ns-16 ; http://science.sciencemag.org/ ; >
-      au < frozen ; exists ; 1891 ; Science Volume ns-17 ; ns-17 ; http://science.sciencemag.org/ ; >
-      au < frozen ; exists ; 1891 ; Science Volume ns-18 ; ns-18 ; http://science.sciencemag.org/ ; >
-      au < frozen ; exists ; 1892 ; Science Volume ns-19 ; ns-19 ; http://science.sciencemag.org/ ; >
-      au < frozen ; exists ; 1892 ; Science Volume ns-20 ; ns-20 ; http://science.sciencemag.org/ ; >
-      au < frozen ; exists ; 1893 ; Science Volume ns-21 ; ns-21 ; http://science.sciencemag.org/ ; >
-      au < frozen ; exists ; 1893 ; Science Volume ns-22 ; ns-22 ; http://science.sciencemag.org/ ; >
-      au < frozen ; exists ; 1894 ; Science Volume ns-23 ; ns-23 ; http://science.sciencemag.org/ ; >
+      au < finished ; manifest ; 1883 ; Science Volume ns-1 ; ns-1 ; http://science.sciencemag.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1883 ; Science Volume ns-2 ; ns-2 ; http://science.sciencemag.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1884 ; Science Volume ns-3 ; ns-3 ; http://science.sciencemag.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1884 ; Science Volume ns-4 ; ns-4 ; http://science.sciencemag.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1885 ; Science Volume ns-5 ; ns-5 ; http://science.sciencemag.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1885 ; Science Volume ns-6 ; ns-6 ; http://science.sciencemag.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1886 ; Science Volume ns-7 ; ns-7 ; http://science.sciencemag.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1886 ; Science Volume ns-8 ; ns-8 ; http://science.sciencemag.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1887 ; Science Volume ns-9 ; ns-9 ; http://science.sciencemag.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1887 ; Science Volume ns-10 ; ns-10 ; http://science.sciencemag.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1888 ; Science Volume ns-11 ; ns-11 ; http://science.sciencemag.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1888 ; Science Volume ns-12 ; ns-12 ; http://science.sciencemag.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1889 ; Science Volume ns-13 ; ns-13 ; http://science.sciencemag.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1889 ; Science Volume ns-14 ; ns-14 ; http://science.sciencemag.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1890 ; Science Volume ns-15 ; ns-15 ; http://science.sciencemag.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1890 ; Science Volume ns-16 ; ns-16 ; http://science.sciencemag.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1891 ; Science Volume ns-17 ; ns-17 ; http://science.sciencemag.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1891 ; Science Volume ns-18 ; ns-18 ; http://science.sciencemag.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1892 ; Science Volume ns-19 ; ns-19 ; http://science.sciencemag.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1892 ; Science Volume ns-20 ; ns-20 ; http://science.sciencemag.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1893 ; Science Volume ns-21 ; ns-21 ; http://science.sciencemag.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1893 ; Science Volume ns-22 ; ns-22 ; http://science.sciencemag.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1894 ; Science Volume ns-23 ; ns-23 ; http://science.sciencemag.org/ ; reingest2.clockss.org:8085 >
 
-      au < frozen ; exists ; 1895 ; Science Volume 1 ; 1 ; http://science.sciencemag.org/ ; >
-      au < frozen ; exists ; 1895 ; Science Volume 2 ; 2 ; http://science.sciencemag.org/ ; >
-      au < frozen ; exists ; 1896 ; Science Volume 3 ; 3 ; http://science.sciencemag.org/ ; >
-      au < frozen ; exists ; 1896 ; Science Volume 4 ; 4 ; http://science.sciencemag.org/ ; >
-      au < frozen ; exists ; 1897 ; Science Volume 5 ; 5 ; http://science.sciencemag.org/ ; >
-      au < frozen ; exists ; 1897 ; Science Volume 6 ; 6 ; http://science.sciencemag.org/ ; >
-      au < frozen ; exists ; 1898 ; Science Volume 7 ; 7 ; http://science.sciencemag.org/ ; >
-      au < frozen ; exists ; 1898 ; Science Volume 8 ; 8 ; http://science.sciencemag.org/ ; >
-      au < frozen ; exists ; 1899 ; Science Volume 9 ; 9 ; http://science.sciencemag.org/ ; >
-      au < frozen ; exists ; 1899 ; Science Volume 10 ; 10 ; http://science.sciencemag.org/ ; >
-      au < frozen ; exists ; 1900 ; Science Volume 11 ; 11 ; http://science.sciencemag.org/ ; >
-      au < frozen ; exists ; 1900 ; Science Volume 12 ; 12 ; http://science.sciencemag.org/ ; >
-      au < frozen ; exists ; 1901 ; Science Volume 13 ; 13 ; http://science.sciencemag.org/ ; >
-      au < frozen ; exists ; 1901 ; Science Volume 14 ; 14 ; http://science.sciencemag.org/ ; >
+      au < finished ; manifest ; 1895 ; Science Volume 1 ; 1 ; http://science.sciencemag.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1895 ; Science Volume 2 ; 2 ; http://science.sciencemag.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1896 ; Science Volume 3 ; 3 ; http://science.sciencemag.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1896 ; Science Volume 4 ; 4 ; http://science.sciencemag.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1897 ; Science Volume 5 ; 5 ; http://science.sciencemag.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1897 ; Science Volume 6 ; 6 ; http://science.sciencemag.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1898 ; Science Volume 7 ; 7 ; http://science.sciencemag.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1898 ; Science Volume 8 ; 8 ; http://science.sciencemag.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1899 ; Science Volume 9 ; 9 ; http://science.sciencemag.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1899 ; Science Volume 10 ; 10 ; http://science.sciencemag.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1900 ; Science Volume 11 ; 11 ; http://science.sciencemag.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1900 ; Science Volume 12 ; 12 ; http://science.sciencemag.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1901 ; Science Volume 13 ; 13 ; http://science.sciencemag.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1901 ; Science Volume 14 ; 14 ; http://science.sciencemag.org/ ; reingest1.clockss.org:8082 >
 
-      au < frozen ; exists ; 1902 ; Science Volume 15 ; 15 ; http://science.sciencemag.org/ ; >
-      au < frozen ; exists ; 1902 ; Science Volume 16 ; 16 ; http://science.sciencemag.org/ ; >
-      au < frozen ; exists ; 1903 ; Science Volume 17 ; 17 ; http://science.sciencemag.org/ ; >
-      au < frozen ; exists ; 1903 ; Science Volume 18 ; 18 ; http://science.sciencemag.org/ ; >
-      au < frozen ; exists ; 1904 ; Science Volume 19 ; 19 ; http://science.sciencemag.org/ ; >
-      au < frozen ; exists ; 1904 ; Science Volume 20 ; 20 ; http://science.sciencemag.org/ ; >
-      au < frozen ; exists ; 1905 ; Science Volume 21 ; 21 ; http://science.sciencemag.org/ ; >
-      au < frozen ; exists ; 1905 ; Science Volume 22 ; 22 ; http://science.sciencemag.org/ ; >
-      au < frozen ; exists ; 1906 ; Science Volume 23 ; 23 ; http://science.sciencemag.org/ ; >
-      au < frozen ; exists ; 1906 ; Science Volume 24 ; 24 ; http://science.sciencemag.org/ ; >
-      au < frozen ; exists ; 1907 ; Science Volume 25 ; 25 ; http://science.sciencemag.org/ ; >
+      au < finished ; manifest ; 1902 ; Science Volume 15 ; 15 ; http://science.sciencemag.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1902 ; Science Volume 16 ; 16 ; http://science.sciencemag.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1903 ; Science Volume 17 ; 17 ; http://science.sciencemag.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1903 ; Science Volume 18 ; 18 ; http://science.sciencemag.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1904 ; Science Volume 19 ; 19 ; http://science.sciencemag.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1904 ; Science Volume 20 ; 20 ; http://science.sciencemag.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1905 ; Science Volume 21 ; 21 ; http://science.sciencemag.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1905 ; Science Volume 22 ; 22 ; http://science.sciencemag.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1906 ; Science Volume 23 ; 23 ; http://science.sciencemag.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1906 ; Science Volume 24 ; 24 ; http://science.sciencemag.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1907 ; Science Volume 25 ; 25 ; http://science.sciencemag.org/ ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 1907 ; Science Volume 26 ; 26 ; http://science.sciencemag.org/ ; >
       au < frozen ; exists ; 1908 ; Science Volume 27 ; 27 ; http://science.sciencemag.org/ ; >
       au < frozen ; exists ; 1908 ; Science Volume 28 ; 28 ; http://science.sciencemag.org/ ; >
@@ -378,7 +378,7 @@
       au < frozen ; exists ; 2006 ; Science Volume 312 ; 312 ; http://science.sciencemag.org/ ; >
       au < frozen ; exists ; 2006 ; Science Volume 313 ; 313 ; http://science.sciencemag.org/ ; >
       au < frozen ; exists ; 2006 ; Science Volume 314 ; 314 ; http://science.sciencemag.org/ ; >
-      au < frozen ; exists ; 2007 ; Science Volume 315 ; 315 ; http://science.sciencemag.org/ ; >
+      au < finished ; manifest ; 2007 ; Science Volume 315 ; 315 ; http://science.sciencemag.org/ ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2007 ; Science Volume 316 ; 316 ; http://science.sciencemag.org/ ; >
       au < frozen ; exists ; 2007 ; Science Volume 317 ; 317 ; http://science.sciencemag.org/ ; >
       au < frozen ; exists ; 2007 ; Science Volume 318 ; 318 ; http://science.sciencemag.org/ ; >
