@@ -1,0 +1,157 @@
+<map>
+    <entry>
+        <string>plugin_status</string>
+        <string>development</string>
+    </entry>
+    <entry>
+        <string>plugin_identifier</string>
+        <string>org.lockss.plugin.chinesedeathscape.ClockssChineseDeathscapePlugin</string>
+    </entry>
+    <entry>
+        <string>plugin_version</string>
+        <string>1</string>
+    </entry>
+    <entry>
+        <string>plugin_name</string>
+        <string>Chinese Deathscape Plugin (CLOCKSS)</string>
+    </entry>
+    <entry>
+        <string>plugin_feature_version_map</string>
+        <map>
+            <entry>
+                <string>Substance</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Poll</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Metadata</string>
+                <string>1</string>
+            </entry>
+        </map>
+    </entry>
+    <entry>
+        <string>plugin_config_props</string>
+        <list>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>base_url</key>
+                <displayName>Base URL</displayName>
+                <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+                <type>3</type>
+                <size>40</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+            <!--
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>base_url2</key>
+                <displayName>Second Base URL</displayName>
+                <description>Use if AU spans two hosts</description>
+                <type>3</type>
+                <size>40</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+            -->
+        </list>
+    </entry>
+    <entry>
+        <string>au_name</string>
+        <string>"Chinese Deathscape Plugin (CLOCKSS), Base URL %s", base_url</string>
+    </entry>
+    <entry>
+    <string>au_crawlrules</string>
+        <list>
+            <string>1,"https?://%s/", url_host(base_url)</string>
+            <!--<string>1,"https?://%s/", url_host(base_url2)</string>-->
+            <string>1,"https://files.chinesedeathscape.supdigital.org/"</string>
+            <string>1,"https://use.typekit.com/.*\.js"</string>
+            <string>1,"http://a.tile.openstreetmap.org/.*\.png"</string>
+            <string>1,"http://server.arcgisonline.com/ArcGIS/rest/services/"</string>
+            <string>1,"https://web.archive.org/web/"</string>
+        </list>
+    </entry>
+    <entry>
+        <string>au_start_url</string>
+        <string>"http://%s/", url_host(base_url)</string>
+        <string>"https://%s/", url_host(base_url)</string>
+    </entry>
+    <!--
+    <entry>
+        <string>au_substance_url_pattern</string>
+        <list>
+            <string>"http://%s/pdf/%d/%s/[^/]+/[^/]+.pdf$", url_host(base_url), year, volume_name</string>
+        </list>
+    </entry>
+    -->
+    <entry>
+        <string>plugin_cache_result_list</string>
+        <list>
+            <string>500=org.lockss.util.urlconn.CacheException$NoRetryDeadLinkException</string>
+        </list>
+    </entry>
+    <!--
+    <entry>
+        <string>text/html_link_rewriter_factory</string>
+        <string>org.lockss.plugin.chinesedeathscape.ChineseDeathscapeHtmlLinkRewriterFactory</string>
+    </entry>
+    -->
+    <entry>
+        <string>au_permitted_host_pattern</string>
+        <list>
+            <string>chinesedeathscape\.supdigital\.org</string>
+            <string>files\.chinesedeathscape\.supdigital\.org</string>
+            <!--font url-->
+            <string>use\.typekit\.com</string>
+            <!--
+             all map info
+
+              name: OSM Default (Pinyin)
+              slug: osp-default
+              url: http://a.tile.openstreetmap.org/{z}/{x}/{y}.png
+
+            - name: OSM Grayscale (Pinyin)
+              slug: osp-grayscale
+              url: http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png
+
+            - name: ESRI World Street Map
+              slug: esri-world-street
+              url: http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}
+
+            - name: ESRI DeLorme
+              slug: esri-delorme
+              url: http://server.arcgisonline.com/ArcGIS/rest/services/Specialty/DeLorme_World_Base_Map/MapServer/tile/{z}/{y}/{x}
+
+            - name: ESRI World Topo Map
+              slug: esri-world-topo
+              url: http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}
+
+            - name: ESRI National Geographic World Map
+              slug: esri-natgeo-world
+              url: http://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}
+
+            - name: ESRI World Imagery
+              slug: esri-world-imagery
+              url: http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}
+
+            - name: ESRI World Terrain
+              slug: esri-world-terrain
+              url: http://server.arcgisonline.com/ArcGIS/rest/services/World_Terrain_Base/MapServer/tile/{z}/{y}/{x}
+
+            - name: ESRI World Shaded Relief
+              slug: esri-world-shaded-relief
+              url: http://server.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer/tile/{z}/{y}/{x}
+
+            - name: ESRI World Physical
+              slug: esri-world-physical
+              url: http://server.arcgisonline.com/ArcGIS/rest/services/World_Physical_Map/MapServer/tile/{z}/{y}/{x}
+
+            -->
+            <string>a\.tile.openstreetmap\.org</string>
+            <string>server\.arcgisonline\.com</string>
+            <string>web\.archive\.org</string>
+        </list>
+    </entry>
+</map>
