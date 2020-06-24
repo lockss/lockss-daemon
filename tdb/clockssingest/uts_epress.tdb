@@ -196,9 +196,9 @@
     param[journal_id] = PMRP
     #previous title is pppm
 
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2016 ; 2016 ; Project Management Research and Practice Volume 3 ; 3 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2017 ; 2017 ; Project Management Research and Practice Volume 4 ; 4 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2018 ; 2018 ; Project Management Research and Practice Volume 5 ; 5 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2016 ; 2016 ; Project Management Research and Practice Volume 3 ; 3 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2017 ; 2017 ; Project Management Research and Practice Volume 4 ; 4 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2018 ; 2018 ; Project Management Research and Practice Volume 5 ; 5 ; https://epress.lib.uts.edu.au/journals/ ; >
     au < ojs3.ClockssOjs3Plugin ; expected ; exists ; 2020 ; 2020 ; Project Management Research and Practice Volume 6 ; 6 ; https://epress.lib.uts.edu.au/journals/ ; >
 
   }
@@ -211,21 +211,21 @@
 
     param[journal_id] = phrj
 
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2006 ; 2006 ; Public History Review Volume 12-13 ; 12-13 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2007 ; 2007 ; Public History Review Volume 14 ; 14 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2008 ; 2008 ; Public History Review Volume 15 ; 15 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2009 ; 2009 ; Public History Review Volume 16 ; 16 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2010 ; 2010 ; Public History Review Volume 17 ; 17 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2011 ; 2011 ; Public History Review Volume 18 ; 18 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2012 ; 2012 ; Public History Review Volume 19 ; 19 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2013 ; 2013 ; Public History Review Volume 20 ; 20 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2006 ; 2006 ; Public History Review Volume 12-13 ; 12-13 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2007 ; 2007 ; Public History Review Volume 14 ; 14 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2008 ; 2008 ; Public History Review Volume 15 ; 15 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2009 ; 2009 ; Public History Review Volume 16 ; 16 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2010 ; 2010 ; Public History Review Volume 17 ; 17 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2011 ; 2011 ; Public History Review Volume 18 ; 18 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2012 ; 2012 ; Public History Review Volume 19 ; 19 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2013 ; 2013 ; Public History Review Volume 20 ; 20 ; https://epress.lib.uts.edu.au/journals/ ; >
     au < ojs2.ClockssOJS2Plugin ; finished ; finished ; 2014 ; 2014 ; Public History Review Volume 21 ; 21 ; http://epress.lib.uts.edu.au/journals/ ; reingest1.clockss.org:8082 >
     au < ojs2.ClockssOJS2Plugin ; frozen ; exists ; 2015 ; 2015 ; Public History Review Volume 22 ; 22 ; http://epress.lib.uts.edu.au/journals/ ; >
     au < ojs2.ClockssOJS2Plugin ; frozen ; exists ; 2016 ; 2016 ; Public History Review Volume 23 ; 23 ; http://epress.lib.uts.edu.au/journals/ ; >
     au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2017 ; 2017 ; Public History Review Volume 24 ; 24 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2018 ; 2018 ; Public History Review Volume 25 ; 25 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2019 ; 2019 ; Public History Review Volume 26 ; 26 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2020 ; 2020 ; Public History Review Volume 27 ; 27 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2018 ; 2018 ; Public History Review Volume 25 ; 25 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2019 ; 2019 ; Public History Review Volume 26 ; 26 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2020 ; 2020 ; Public History Review Volume 27 ; 27 ; https://epress.lib.uts.edu.au/journals/ ; >
 
   }
   
@@ -240,13 +240,13 @@
     param[journal_id] = ajict
     #Archived. Last volume in 2013.
 
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2005 ; 2005 ; African Journal of Information & Communication Technology Volume 1 ; 1 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2006 ; 2006 ; African Journal of Information & Communication Technology Volume 2 ; 2 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2007 ; 2007 ; African Journal of Information & Communication Technology Volume 3 ; 3 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2008 ; 2008 ; African Journal of Information & Communication Technology Volume 4 ; 4 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2009 ; 2009 ; African Journal of Information & Communication Technology Volume 5 ; 5 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2011 ; 2011 ; African Journal of Information & Communication Technology Volume 6 ; 6 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2013 ; 2013 ; African Journal of Information & Communication Technology Volume 7 ; 7 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2005 ; 2005 ; African Journal of Information & Communication Technology Volume 1 ; 1 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2006 ; 2006 ; African Journal of Information & Communication Technology Volume 2 ; 2 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2007 ; 2007 ; African Journal of Information & Communication Technology Volume 3 ; 3 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2008 ; 2008 ; African Journal of Information & Communication Technology Volume 4 ; 4 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2009 ; 2009 ; African Journal of Information & Communication Technology Volume 5 ; 5 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2011 ; 2011 ; African Journal of Information & Communication Technology Volume 6 ; 6 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2013 ; 2013 ; African Journal of Information & Communication Technology Volume 7 ; 7 ; https://epress.lib.uts.edu.au/journals/ ; >
 
   }
 
@@ -259,21 +259,21 @@
     param[journal_id] = csrj
     #Archived. Last volume in 2019.
 
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2005 ; 2005 ; Cultural Studies Review Volume 11 ; 11 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2006 ; 2006 ; Cultural Studies Review Volume 12 ; 12 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2007 ; 2007 ; Cultural Studies Review Volume 13 ; 13 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2008 ; 2008 ; Cultural Studies Review Volume 14 ; 14 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2009 ; 2009 ; Cultural Studies Review Volume 15 ; 15 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2010 ; 2010 ; Cultural Studies Review Volume 16 ; 16 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2011 ; 2011 ; Cultural Studies Review Volume 17 ; 17 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2012 ; 2012 ; Cultural Studies Review Volume 18 ; 18 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2013 ; 2013 ; Cultural Studies Review Volume 19 ; 19 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2005 ; 2005 ; Cultural Studies Review Volume 11 ; 11 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2006 ; 2006 ; Cultural Studies Review Volume 12 ; 12 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2007 ; 2007 ; Cultural Studies Review Volume 13 ; 13 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2008 ; 2008 ; Cultural Studies Review Volume 14 ; 14 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2009 ; 2009 ; Cultural Studies Review Volume 15 ; 15 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2010 ; 2010 ; Cultural Studies Review Volume 16 ; 16 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2011 ; 2011 ; Cultural Studies Review Volume 17 ; 17 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2012 ; 2012 ; Cultural Studies Review Volume 18 ; 18 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2013 ; 2013 ; Cultural Studies Review Volume 19 ; 19 ; https://epress.lib.uts.edu.au/journals/ ; >
     au < ojs2.ClockssOJS2Plugin ; finished ; finished ; 2014 ; 2014 ; Cultural Studies Review Volume 20 ; 20 ; http://epress.lib.uts.edu.au/journals/ ; reingest2.clockss.org:8085 >
     au < ojs2.ClockssOJS2Plugin ; finished ; finished ; 2015 ; 2015 ; Cultural Studies Review Volume 21 ; 21 ; http://epress.lib.uts.edu.au/journals/ ; reingest1.clockss.org:8082 >
     au < ojs2.ClockssOJS2Plugin ; frozen ; exists ; 2016 ; 2016 ; Cultural Studies Review Volume 22 ; 22 ; http://epress.lib.uts.edu.au/journals/ ; >
     au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2017 ; 2017 ; Cultural Studies Review Volume 23 ; 23 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2018 ; 2018 ; Cultural Studies Review Volume 24 ; 24 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2019 ; 2019 ; Cultural Studies Review Volume 25 ; 25 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2018 ; 2018 ; Cultural Studies Review Volume 24 ; 24 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2019 ; 2019 ; Cultural Studies Review Volume 25 ; 25 ; https://epress.lib.uts.edu.au/journals/ ; >
 
   }
 
@@ -287,10 +287,10 @@
     #Archived. Last volume in 2013.
     #continued as journal PMRP
 
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2010 ; 2010 ; Journal of Project, Program & Portfolio Management Volume 1 ; 1 ; https://epress.lib.uts.edu.au/journals/ ; reingest2.clockss.org:8085 >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2011 ; 2011 ; Journal of Project, Program & Portfolio Management Volume 2 ; 2 ; https://epress.lib.uts.edu.au/journals/ ; reingest2.clockss.org:8085 >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2012 ; 2012 ; Journal of Project, Program & Portfolio Management Volume 3 ; 3 ; https://epress.lib.uts.edu.au/journals/ ; reingest2.clockss.org:8085 >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2013 ; 2013 ; Journal of Project, Program & Portfolio Management Volume 4 ; 4 ; https://epress.lib.uts.edu.au/journals/ ; reingest2.clockss.org:8085 >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2010 ; 2010 ; Journal of Project, Program & Portfolio Management Volume 1 ; 1 ; https://epress.lib.uts.edu.au/journals/ ; reingest2.clockss.org:8085 >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2011 ; 2011 ; Journal of Project, Program & Portfolio Management Volume 2 ; 2 ; https://epress.lib.uts.edu.au/journals/ ; reingest2.clockss.org:8085 >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2012 ; 2012 ; Journal of Project, Program & Portfolio Management Volume 3 ; 3 ; https://epress.lib.uts.edu.au/journals/ ; reingest2.clockss.org:8085 >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2013 ; 2013 ; Journal of Project, Program & Portfolio Management Volume 4 ; 4 ; https://epress.lib.uts.edu.au/journals/ ; reingest2.clockss.org:8085 >
 
   }
 
@@ -317,10 +317,10 @@
     param[journal_id] = provincial_china
     #Archived. Last volume in 2012.
 
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2009 ; 2009 ; Provincial China Volume 1 ; 1 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2010 ; 2010 ; Provincial China Volume 2 ; 2 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2011 ; 2011 ; Provincial China Volume 3 ; 3 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2012 ; 2012 ; Provincial China Volume 4 ; 4 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2009 ; 2009 ; Provincial China Volume 1 ; 1 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2010 ; 2010 ; Provincial China Volume 2 ; 2 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2011 ; 2011 ; Provincial China Volume 3 ; 3 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2012 ; 2012 ; Provincial China Volume 4 ; 4 ; https://epress.lib.uts.edu.au/journals/ ; >
 
   }
 
@@ -332,8 +332,8 @@
     param[journal_id] = pcr
     #Archived. Last volume in 2012.
 
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2010 ; 2010 ; Public Communication Review Volume 1 ; 1 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2012 ; 2012 ; Public Communication Review Volume 2 ; 2 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2010 ; 2010 ; Public Communication Review Volume 1 ; 1 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2012 ; 2012 ; Public Communication Review Volume 2 ; 2 ; https://epress.lib.uts.edu.au/journals/ ; >
 
   }
 
@@ -347,8 +347,8 @@
 
     au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2007 ; 2007 ; Public Space: The Journal of Law and Social Justice Volume 1 ; 1 ; https://epress.lib.uts.edu.au/journals/ ; >
     au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2008 ; 2008 ; Public Space: The Journal of Law and Social Justice Volume 2 ; 2 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2009 ; 2009 ; Public Space: The Journal of Law and Social Justice Volume 3-4 ; 3-4 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2010 ; 2010 ; Public Space: The Journal of Law and Social Justice Volume 5 ; 5 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2009 ; 2009 ; Public Space: The Journal of Law and Social Justice Volume 3-4 ; 3-4 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2010 ; 2010 ; Public Space: The Journal of Law and Social Justice Volume 5 ; 5 ; https://epress.lib.uts.edu.au/journals/ ; >
 
   }
 
@@ -361,12 +361,12 @@
     param[journal_id] = sydney_journal
     #Archived. Last volume in 2017. See https://epress.lib.uts.edu.au/journals/
 
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2008 ; 2008 ; Public History Review Volume 1 ; 1 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2009 ; 2009 ; Public History Review Volume 2 (2009) ; 2 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2010 ; 2010 ; Public History Review Volume 2-3 (2010) ; 2-3 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2011 ; 2011 ; Public History Review Volume 3 (2011) ; 3 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2013 ; 2013 ; Public History Review Volume 4 ; 4 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2017 ; 2017 ; Public History Review Volume 5 ; 5 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2008 ; 2008 ; Public History Review Volume 1 ; 1 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2009 ; 2009 ; Public History Review Volume 2 (2009) ; 2 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2010 ; 2010 ; Public History Review Volume 2-3 (2010) ; 2-3 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2011 ; 2011 ; Public History Review Volume 3 (2011) ; 3 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2013 ; 2013 ; Public History Review Volume 4 ; 4 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2017 ; 2017 ; Public History Review Volume 5 ; 5 ; https://epress.lib.uts.edu.au/journals/ ; >
 
   }
 
@@ -378,10 +378,10 @@
     param[journal_id] = TfC
     #Archived. Last volume in 2010.
 
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2006 ; 2006 ; Transforming Cultures eJournal Volume 1 ; 1 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2007 ; 2007 ; Transforming Cultures eJournal Volume 2 ; 2 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2008 ; 2008 ; Transforming Cultures eJournal Volume 3 ; 3 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2009 ; 2009 ; Transforming Cultures eJournal Volume 4 ; 4 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2006 ; 2006 ; Transforming Cultures eJournal Volume 1 ; 1 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2007 ; 2007 ; Transforming Cultures eJournal Volume 2 ; 2 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2008 ; 2008 ; Transforming Cultures eJournal Volume 3 ; 3 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2009 ; 2009 ; Transforming Cultures eJournal Volume 4 ; 4 ; https://epress.lib.uts.edu.au/journals/ ; >
     au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2010 ; 2010 ; Transforming Cultures eJournal Volume 5 ; 5 ; https://epress.lib.uts.edu.au/journals/ ; >
 
   }
