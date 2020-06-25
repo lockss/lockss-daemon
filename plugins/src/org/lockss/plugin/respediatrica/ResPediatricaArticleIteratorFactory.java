@@ -32,7 +32,6 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-import java.util.Arrays;
 import java.util.Iterator;
 import java.util.regex.Pattern;
 
@@ -43,14 +42,13 @@ import org.lockss.extractor.BaseArticleMetadataExtractor;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
-import org.lockss.util.UrlUtil;
 
-public class ResPediatricaOaiArticleIteratorFactory
+public class ResPediatricaArticleIteratorFactory
         implements ArticleIteratorFactory,
         ArticleMetadataExtractorFactory {
 
     protected static Logger log =
-            Logger.getLogger(org.lockss.plugin.respediatrica.ResPediatricaOaiArticleIteratorFactory.class);
+            Logger.getLogger(ResPediatricaArticleIteratorFactory.class);
 
     // It only have PDF and html page, no abstract/full-text
     // http://residenciapediatrica.com.br/detalhes/4

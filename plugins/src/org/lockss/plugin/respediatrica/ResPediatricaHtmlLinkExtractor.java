@@ -43,9 +43,9 @@ import org.lockss.util.UrlUtil;
 import java.io.IOException;
 import java.io.InputStream;
 
-public class ResPediatricaOaiHtmlLinkExtractor extends GoslingHtmlLinkExtractor {
+public class ResPediatricaHtmlLinkExtractor extends GoslingHtmlLinkExtractor {
   
-  private static final Logger logger = Logger.getLogger(ResPediatricaOaiHtmlLinkExtractor.class);
+  private static final Logger logger = Logger.getLogger(ResPediatricaHtmlLinkExtractor.class);
   
   @Override
   public void extractUrls(final ArchivalUnit au,
@@ -67,7 +67,7 @@ public class ResPediatricaOaiHtmlLinkExtractor extends GoslingHtmlLinkExtractor 
   
   public static class Factory implements LinkExtractorFactory {
     public LinkExtractor createLinkExtractor(String mimeType) {
-      return new ResPediatricaOaiHtmlLinkExtractor();
+      return new ResPediatricaHtmlLinkExtractor();
     }
   }
   

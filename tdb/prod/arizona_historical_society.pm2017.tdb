@@ -1,0 +1,27 @@
+{
+  publisher <
+    name = Arizona Historical Society
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:766
+
+    {
+    title <
+      name = Journal of Arizona History ;
+      issn = 0021-9053 ;
+      eissn = 2689-3908
+
+    >
+
+      attr[journal_id] = 766
+
+      au < ready ; 2018 ; Journal of Arizona History Volume 59 [2018] ; 14464 >
+      au < manifest ; 2019 ; Journal of Arizona History Volume 60 [2019] ; 14465 >
+      au < manifest ; 2020 ; Journal of Arizona History Volume 61 [2020] ; 14803 >
+
+    }
+
+}

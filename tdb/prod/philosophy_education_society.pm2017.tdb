@@ -1,0 +1,26 @@
+{
+  publisher <
+    name = Philosophy Education Society
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:322
+
+    {
+    title <
+      name = Review of Metaphysics ;
+      issn = 0034-6632 ;
+      eissn = 2154-1302
+
+    >
+
+      attr[journal_id] = 755
+
+      au < manifest ; 2018-2019 ; Review of Metaphysics Volume 72 [2018-2019] ; 14426 >
+      au < manifest ; 2019-2020 ; Review of Metaphysics Volume 73 [2019-2020] ; 14427 >
+
+    }
+
+}

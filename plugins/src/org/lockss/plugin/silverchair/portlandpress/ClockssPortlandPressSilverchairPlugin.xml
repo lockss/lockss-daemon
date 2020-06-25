@@ -12,265 +12,38 @@
         <string>1</string>
     </entry>
     <entry>
-        <string>plugin_feature_version_map</string>
-        <map>
-            <entry>
-                <string>Poll</string>
-                <string>1</string>
-            </entry>
-            <entry>
-                <string>Substance</string>
-                <string>1</string>
-            </entry>
-            <entry>
-                <string>Metadata</string>
-                <string>1</string>
-            </entry>
-        </map>
+        <string>plugin_parent</string>
+        <string>org.lockss.plugin.silverchair.ClockssSilverchairCommonThemePlugin</string>
+    </entry>
+    <entry>
+        <string>plugin_parent_version</string>
+        <string>1</string>
     </entry>
     <entry>
         <string>plugin_name</string>
         <string>Portland Press Plugin (CLOCKSS)</string>
     </entry>
     <entry>
-        <string>plugin_config_props</string>
-        <list>
-            <org.lockss.daemon.ConfigParamDescr>
-                <key>base_url</key>
-                <displayName>Base URL</displayName>
-                <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
-                <type>3</type>
-                <size>40</size>
-                <definitional>true</definitional>
-                <defaultOnly>false</defaultOnly>
-            </org.lockss.daemon.ConfigParamDescr>
-            <org.lockss.daemon.ConfigParamDescr>
-                <key>year</key>
-                <displayName>Year</displayName>
-                <description>Four digit year (e.g., 2004)</description>
-                <type>4</type>
-                <size>4</size>
-                <definitional>true</definitional>
-                <defaultOnly>false</defaultOnly>
-            </org.lockss.daemon.ConfigParamDescr>
-            <org.lockss.daemon.ConfigParamDescr>
-                <key>journal_id</key>
-                <displayName>Journal Identifier</displayName>
-                <description>Identifier for journal</description>
-                <type>1</type>
-                <size>40</size>
-                <definitional>true</definitional>
-                <defaultOnly>false</defaultOnly>
-            </org.lockss.daemon.ConfigParamDescr>
-        </list>
-    </entry>
-    <entry>
         <string>au_name</string>
         <string>"Portland Press Plugin (CLOCKSS), Base URL %s, Journal ID %s,  Year %d", base_url, journal_id, year</string>
     </entry>
+    <!--
+    The following journals have more than one volume per year:
+    https://portlandpress.com/biochemsoctrans/issue/browse-by-year
+    https://portlandpress.com/clinsci/issue/browse-by-year
+    https://portlandpress.com/biochemj/issue/browse-by-year/
+    The following journals have one volume per year:
+    https://portlandpress.com/bioscirep/issue/browse-by-year
+    https://portlandpress.com/neuronalsignal/issue/browse-by-year
+    https://portlandpress.com/biochemsoctrans/issue/browse-by-year
+    https://portlandpress.com/emergtoplifesci/issue/browse-by-year
+
+    https://portlandpress.com/biochemsoctrans/issue/browse-by-year/2020
+    -->
     <entry>
         <string>au_start_url</string>
         <list>
             <string>"%s%s/issue/browse-by-year/%d", base_url, journal_id, year</string>
         </list>
-    </entry>
-   <!-- <entry>
-        <string>au_feature_urls</string>
-        <map>
-            <entry>
-                <string>au_title</string>
-                <string>"%sjournals/%s", base_url, journal_id</string>
-            </entry>
-            <entry>
-                <string>au_issue</string>
-                <string>"%sjournals/%s/issue/%s/%s", base_url, journal_id, volume_name, issue</string>
-            </entry>
-            <entry>
-                <string>au_article</string>
-                <map>
-                    <entry>
-                        <string>pdf</string>
-                        <string>"%sjournals/%s/data/journals/%s/%s/%s.pdf", base_url, journal_id, journal_abbrev, group_id, article</string>
-                    </entry>
-                    <entry>
-                        <string>html</string>
-                        <string>"%sjournals/%s/fullarticle/%s", base_url, journal_id, article</string>
-                    </entry>
-                </map>
-            </entry>
-        </map>
-    </entry>-->
-    <entry>
-        <string>au_crawlrules</string>
-        <list>
-            <string>1,"^https?://((fonts|ajax)\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|cdnjs\.cloudflare\.com|s7\.addthis\.com)/"</string>
-            <string>1,"^https?://(%s|[^.]+\.(silverchair-?cdn\.com/|cloudfront\.net/|brightcove\.net/)).*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$", url_host(base_url)</string>
-            <!--
-               https://portlandpress.com/bioscirep/article-pdf/38/1/BSR20170862/429223/bsr-2017-0862.pdf
-               PDFs are redirected to: https://port.silverchair-cdn.com/port/content_public/journal/bioscirep/38/1/10.1042_bsr20170862/2/bsr-2017-0862.pdf?Expires=1580947780&Signature=I~FNWeNdbhjwOFlE3QF~YnDULgyScF07ypYiJbQLWOqBU2t4dehutEHZf9PMKcgtkgcl2NfekDB2tEGCwdBjSuBps-SVJ45hxvZZgiLMftEprr~Qy8S4b6cOZRLZDUSDxn~FSvug8AzNwCi8Ex-NLO4kxafHgMvI3~W8uB1vpQioF4cnjgt~jl1tySTrUB-JMqMRKAn1uLo60Z-ysykBOhAv-9q4ns8RpE26K~zmbWTvc5715P~cVDi-dYnn23fYR2mwZ7~dd~VjyBm3MmNNpJ49Xi....
-           -->
-            <string>1,"^https://port\.silverchair-cdn\.com/port/content_public/journal/%s", journal_id</string>
-            <!--Reject issues from other year https://portlandpress.com/bioscirep/issue/browse-by-year/1983-->
-            <string>2,"%s([^/]+/)?%s/issue/browse-by-year/\d{4}", base_url, journal_id</string>
-            <!--Only accept issues from target year-->
-            <string>1,"%s([^/]+/)?%s/issue/browse-by-year/%d", base_url, journal_id, year</string>
-            <!--
-                https://portlandpress.com/bioscirep/issue/38/1
-                https://portlandpress.com/bioscirep/article-abstract/doi/10.1042/BSR20171148/57181/Thiamine-and-selected-thiamine-antivitamins
-                https://portlandpress.com/bioscirep/article/doi/10.1042/BSR20171148/57181/Thiamine-and-selected-thiamine-antivitamins
-                https://portlandpress.com/bioscirep/article-abstract/doi/10.1042/BSR20171265/57126/MiR-29a-a-potential-therapeutic-target-and
-
-                need to be careful here, it can leak to other volumes by the following way:
-                x-lockss-node-url: 	https://portlandpress.com/bioscirep/article/39/1/BSR20180872/212/Identification-of-novel-pathogenic-ABCA4-variants
-                x-lockss-referrer: 	https://portlandpress.com/bioscirep/article/doi/10.1042/BSR20171300/57409/Identification-of-a-novel-mutation-in-the-ABCA4
-            -->
-            <string>1,"%s([^/]+/)?%s/(issue|article)/", base_url, journal_id</string>
-            <string>1,"%s([^/]+/)?%s/article-pdf/.*\.pdf$", base_url, journal_id</string>
-            <!--
-                https://portlandpress.com/Citation/Download?resourceId=57181&resourceType=3&citationFormat=0
-                https://portlandpress.com/Citation/Download?resourceId=57181&resourceType=3&citationFormat=1
-                https://portlandpress.com/Citation/Download?resourceId=57181&resourceType=3&citationFormat=2
-                https://portlandpress.com/Citation/Download?resourceId=57181&resourceType=3&citationFormat=3
-            -->
-            <string>1,"%sCitation/Download\?resourceId=", base_url</string>
-            <!--
-                https://portlandpress.com/DownloadFile/DownloadImage.aspx?image=&PPTtype=SlideSet&ar=57181&xsltPath=~/UI/app/XSLT&siteId=1000007
-                https://portlandpress.com/DownloadFile/DownloadImage.aspx?image=https://port.silverchair-cdn.com/port/content_public/journal/bioscirep/38/1/10.1042_bsr20171148/2/bsr-2017-1148i001.jpeg?Expires=1580880546&Signature=BIFjn6azjdjetZUOKJLvo1XJ2RCyN9G46td3W1MwZ~UO5pgEEOtQVxtftnfQtyAza0mf0viJ~lvz6P3TYLPx7Bi84zA0otOpc1N0RRxlVYnhDB0gJAe3bYGoM-s6EXmIGDeDorEuIAAq7KaZbnxDvi7yG9MSzzZdhhztoHlG~MDUjx~zKrq97KbmOrk5gOF4McoZJilk9XaK42goi6rwM5vn-VnSqU5KUlmMiUuGA2nZQd-puRuNoBYj-iJcd2ZpMHJvCy9T8YmcQwj263LaDG15eKHYhDlCake9YDLSeNVh5NNOVc8eUafevzfPIbAM8AoNrTkodn3Qql-ckRBe8g__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA&sec=1503654&ar=57181&xsltPath=~/UI/app/XSLT&imagename=&siteId=1000007
-            -->
-            <string>1,"%sDownloadFile/DownloadImage.aspx?image=https", base_url</string>
-            <!--
-            https://pubs.geoscienceworld.org/downloadimage.aspx?image=&PPTtype=SlideSet&ar=570731&siteId=69
-            -->
-            <string>1,"%sdownloadimage.aspx?image=", base_url</string>
-        </list>
-    </entry>
-    <!--
-    <entry>
-        <string>text/html_link_extractor_factory</string>
-        <string>org.lockss.plugin.silverchair.portlandpress.AmaScHtmlLinkExtractorFactory</string>
-    </entry>
-    <entry>
-        <string>text/html_crawl_filter_factory</string>
-        <string>org.lockss.plugin.silverchair.portlandpress.AmaScHtmlCrawlFilterFactory</string>
-    </entry>
-    -->
-    <!--
-               need to be careful here, it can leak to other volumes by the following way:
-               x-lockss-node-url: 	https://portlandpress.com/bioscirep/article/39/1/BSR20180872/212/Identification-of-novel-pathogenic-ABCA4-variants
-               x-lockss-referrer: 	https://portlandpress.com/bioscirep/article/doi/10.1042/BSR20171300/57409/Identification-of-a-novel-mutation-in-the-ABCA4
-           -->
-    <entry>
-        <string>au_refetch_depth</string>
-        <int>1</int>
-    </entry>
-    <!--
-    <entry>
-        <string>au_url_normalizer</string>
-        <string>org.lockss.plugin.silverchair.portlandpress.AmaScUrlNormalizer</string>
-    </entry>
-    -->
-    <entry>
-        <string>au_def_new_content_crawl</string>
-        <long>1209600000</long>
-    </entry>
-    <entry>
-        <string>au_def_pause_time</string>
-        <long>3000</long>
-    </entry>
-    <entry>
-        <string>plugin_fetch_rate_limiter_source</string>
-        <string>key:Silverchair</string>
-    </entry>
-    <entry>
-        <!-- Validator factory for text MIME types -->
-        <string>text/*_content_validator_factory</string>
-        <string>org.lockss.plugin.silverchair.BaseScContentValidatorFactory</string>
-    </entry>
-    <!--
-    <entry>
-        <string>text/html_filter_factory</string>
-        <string>org.lockss.plugin.silverchair.portlandpress.AmaScHtmlHashFilterFactory</string>
-    </entry>
-    -->
-    <entry>
-        <string>au_substance_url_pattern</string>
-        <!-- long PDF patterns are article PDF, shorter PDF patterns are for supplement PDF -->
-        <list>
-            <string>"%s([^/]+/)?%s/article-pdf/.*\.pdf$", base_url, journal_id</string>
-        </list>
-    </entry>
-    <!--
-    <entry>
-        <string>plugin_article_iterator_factory</string>
-        <string>org.lockss.plugin.silverchair.portlandpress.AmaScArticleIteratorFactory</string>
-    </entry>
-    <entry>
-        <string>plugin_article_metadata_extractor_factory</string>
-        <string>org.lockss.plugin.silverchair.portlandpress.AmaScArticleIteratorFactory</string>
-    </entry>
-    <entry>
-        <string>text/html_metadata_extractor_factory_map</string>
-        <map>
-            <entry>
-                <string>*</string>
-                <string>org.lockss.plugin.silverchair.ScHtmlMetadataExtractorFactory</string>
-            </entry>
-        </map>
-    </entry>
-    -->
-    <!--  for http to https conversion support -->
-    <entry>
-        <string>plugin_url_fetcher_factory</string>
-        <string>org.lockss.plugin.base.HttpToHttpsUrlFetcherFactory</string>
-    </entry>
-    <!--
-    <entry>
-        <string>plugin_url_consumer_factory</string>
-        <string>org.lockss.plugin.silverchair.portlandpress.AmaScUrlConsumerFactory</string>
-    </entry>
-    -->
-    <entry>
-        <string>plugin_cache_result_list</string>
-        <list>
-            <string>org.lockss.plugin.ContentValidationException=org.lockss.plugin.silverchair.BaseScHtmlHttpResponseHandler</string>
-        </list>
-    </entry>
-    <entry>
-        <string>au_permitted_host_pattern</string>
-        <list>
-            <string>(fonts|ajax)\.googleapis\.com</string>
-            <string>(fonts|ajax)\.gstatic\.com</string>
-            <string>.*cdn\.jsdelivr\.net</string>
-            <string>.*silverchair-?cdn\.com</string>
-            <string>.*\.brightcove\.net</string>
-            <string>.*\.cloudfront\.net</string>
-            <string>cdnjs\.cloudflare\.com</string>
-            <string>s7\.addthis\.com</string>
-            <string>port\.silverchair-cdn\.com</string>
-        </list>
-    </entry>
-    <entry>
-        <string>au_repair_from_peer_if_missing_url_pattern</string>
-        <list>
-            <string>[.](css|js)(\?.+)?$</string>
-            <string>"(%s|silverchair-?cdn\.com/)UI/app/", base_url</string>
-        </list>
-    </entry>
-    <entry>
-        <!-- these will not count towards poll results but will replicate from peer if above 1.69.5 -->
-        <string>au_url_poll_result_weight</string>
-        <list>
-            <string>"[.](css|js)(\?.+)?$", 0</string>
-            <string>"(%s|silverchair-?cdn\.com/)UI/app/", base_url, 0</string>
-        </list>
-    </entry>
-    <entry>
-        <string>clockss_override</string>
-        <map>
-            <entry>
-                <string>au_def_pause_time</string>
-                <long>100</long>
-            </entry>
-        </map>
     </entry>
 </map>

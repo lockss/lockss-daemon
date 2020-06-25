@@ -35,8 +35,8 @@
     au < HighWirePressH20Plugin ; released ; 2017 ; Annals of Family Medicine Volume 15 ; 15 ; http://www.annfammed.org/ >
     au < HighWirePressH20Plugin ; released ; 2018 ; Annals of Family Medicine Volume 16 ; 16 ; http://www.annfammed.org/ >
     au < HighWirePressH20Plugin ; superseded ; 2019 ; Annals of Family Medicine Volume 17 [superseded] ; 17 ; http://www.annfammed.org/ >
-    au < HWDrupalPlugin ; exists ; 2019 ; Annals of Family Medicine Volume 17 ; 17 ; https://www.annfammed.org/ >
-    au < HWDrupalPlugin ; expected ; 2020 ; Annals of Family Medicine Volume 18 ; 18 ; https://www.annfammed.org/ >
+    au < HWDrupalPlugin ; manifest ; 2019 ; Annals of Family Medicine Volume 17 ; 17 ; https://www.annfammed.org/ >
+    au < HWDrupalPlugin ; manifest ; 2020 ; Annals of Family Medicine Volume 18 ; 18 ; https://www.annfammed.org/ >
 
   }
 

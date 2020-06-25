@@ -37,15 +37,14 @@ import org.apache.commons.collections.map.MultiValueMap;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
 import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.util.Logger;
 
 import java.io.IOException;
 
-public class ResPediatricaOaiHtmlMetadataExtractorFactory
+public class ResPediatricaHtmlMetadataExtractorFactory
   implements FileMetadataExtractorFactory {
-  private static final Logger log = Logger.getLogger(ResPediatricaOaiHtmlMetadataExtractorFactory.class);
+  private static final Logger log = Logger.getLogger(ResPediatricaHtmlMetadataExtractorFactory.class);
 
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
@@ -92,6 +91,7 @@ public class ResPediatricaOaiHtmlMetadataExtractorFactory
       tagMap.put("citation_issn", MetadataField.FIELD_ISSN);
       tagMap.put("citation_isbn", MetadataField.FIELD_ISBN);
       tagMap.put("citation_fulltext_html_url", MetadataField.FIELD_ACCESS_URL);
+      tagMap.put("citation_journal_title_abbrev", MetadataField.FIELD_PUBLICATION_TITLE);
     }
 
     @Override

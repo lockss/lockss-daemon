@@ -1,0 +1,27 @@
+{
+  publisher <
+    name = University of the West Indies Press
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:313
+
+    {
+    title <
+      name = Journal of Caribbean History ;
+      issn = 0047-2263 ;
+      eissn = 0799-5946
+
+    >
+
+      attr[journal_id] = 746
+
+      au < manifest ; 2017 ; Journal of Caribbean History Volume 51 [2017] ; 14050 >
+      au < manifest ; 2018 ; Journal of Caribbean History Volume 52 [2018] ; 14051 >
+      au < manifest ; 2019 ; Journal of Caribbean History Volume 53 [2019] ; 14355 >
+
+    }
+
+}

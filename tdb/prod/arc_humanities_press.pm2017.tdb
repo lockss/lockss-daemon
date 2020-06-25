@@ -1,0 +1,40 @@
+{
+  publisher <
+    name = Arc Humanities Press
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:306
+
+    {
+    title <
+      name = Early Middle English ;
+      issn = 2516-9084 ;
+      eissn = 2516-9092
+
+    >
+
+      attr[journal_id] = 750
+
+      au < manifest ; 2019 ; Early Middle English Volume 1 [2019] ; 14348 >
+
+    }
+
+    {
+    title <
+      name = The Medieval Globe ;
+      issn = 2377-3561 ;
+      eissn = 2377-3553
+
+    >
+
+      attr[journal_id] = 749
+
+      au < testing ; 2018 ; The Medieval Globe Volume 4 [2018] ; 14329 >
+      au < manifest ; 2019 ; The Medieval Globe Volume 5 [2019] ; 14351 >
+
+    }
+
+}

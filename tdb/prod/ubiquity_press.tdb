@@ -242,8 +242,8 @@
       au < manifest ; 2015 ; 2015 ; Body, Space & Technology Volume 2015 ; 2015 ; https://www.bstjournal.com/ >
       au < manifest ; 2016 ; 2016 ; Body, Space & Technology Volume 2016 ; 2016 ; https://www.bstjournal.com/ >
       au < manifest ; 2017 ; 2017 ; Body, Space & Technology Volume 2017 ; 2017 ; https://www.bstjournal.com/ >
-      au < manifest ; 2018 ; 2018 ; Body, Space & Technology Volume 2018 ; 2018 ; https://www.bstjournal.com/ >
-      au < manifest ; 2019 ; 2019 ; Body, Space & Technology Volume 2019 ; 2019 ; https://www.bstjournal.com/ >
+      au < released ; 2018 ; 2018 ; Body, Space & Technology Volume 2018 ; 2018 ; https://www.bstjournal.com/ >
+      au < released ; 2019 ; 2019 ; Body, Space & Technology Volume 2019 ; 2019 ; https://www.bstjournal.com/ >
       au < manifest ; 2020 ; 2020 ; Body, Space & Technology Volume 2020 ; 2020 ; https://www.bstjournal.com/ >
 
   }
@@ -291,15 +291,15 @@
       #plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
       #implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
 
-      au < manifest ; 2011 ; 2011 ; Digital Studies / Le champ numérique Volume 2011 ; 2011 ; https://www.digitalstudies.org/ >
-      au < manifest ; 2012 ; 2012 ; Digital Studies / Le champ numérique Volume 2012 ; 2012 ; https://www.digitalstudies.org/ >
+      au < released ; 2011 ; 2011 ; Digital Studies / Le champ numérique Volume 2011 ; 2011 ; https://www.digitalstudies.org/ >
+      au < released ; 2012 ; 2012 ; Digital Studies / Le champ numérique Volume 2012 ; 2012 ; https://www.digitalstudies.org/ >
       au < manifest ; 2013 ; 2013 ; Digital Studies / Le champ numérique Volume 2013 ; 2013 ; https://www.digitalstudies.org/ >
-      au < manifest ; 2014 ; 2014 ; Digital Studies / Le champ numérique Volume 2014 ; 2014 ; https://www.digitalstudies.org/ >
-      au < manifest ; 2015 ; 2015 ; Digital Studies / Le champ numérique Volume 2015 ; 2015 ; https://www.digitalstudies.org/ >
-      au < manifest ; 2016 ; 2016 ; Digital Studies / Le champ numérique Volume 2016 ; 2016 ; https://www.digitalstudies.org/ >
-      au < manifest ; 2017 ; 2017 ; Digital Studies / Le champ numérique Volume 2017 ; 2017 ; https://www.digitalstudies.org/ >
-      au < manifest ; 2018 ; 2018 ; Digital Studies / Le champ numérique Volume 2018 ; 2018 ; https://www.digitalstudies.org/ >
-      au < manifest ; 2019 ; 2019 ; Digital Studies / Le champ numérique Volume 2019 ; 2019 ; https://www.digitalstudies.org/ >
+      au < released ; 2014 ; 2014 ; Digital Studies / Le champ numérique Volume 2014 ; 2014 ; https://www.digitalstudies.org/ >
+      au < released ; 2015 ; 2015 ; Digital Studies / Le champ numérique Volume 2015 ; 2015 ; https://www.digitalstudies.org/ >
+      au < released ; 2016 ; 2016 ; Digital Studies / Le champ numérique Volume 2016 ; 2016 ; https://www.digitalstudies.org/ >
+      au < released ; 2017 ; 2017 ; Digital Studies / Le champ numérique Volume 2017 ; 2017 ; https://www.digitalstudies.org/ >
+      au < released ; 2018 ; 2018 ; Digital Studies / Le champ numérique Volume 2018 ; 2018 ; https://www.digitalstudies.org/ >
+      au < released ; 2019 ; 2019 ; Digital Studies / Le champ numérique Volume 2019 ; 2019 ; https://www.digitalstudies.org/ >
       au < manifest ; 2020 ; 2020 ; Digital Studies / Le champ numérique Volume 2020 ; 2020 ; https://www.digitalstudies.org/ >
 
   }
@@ -335,8 +335,8 @@
       #implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
 
 
-      au < manifest ; 2018 ; 1 ; Journal of Embodied Research Volume 2018 ; 2018 ; https://jer.openlibhums.org/ >
-      au < manifest ; 2019 ; 2 ; Journal of Embodied Research Volume 2019 ; 2019 ; https://jer.openlibhums.org/ >
+      au < released ; 2018 ; 1 ; Journal of Embodied Research Volume 2018 ; 2018 ; https://jer.openlibhums.org/ >
+      au < released ; 2019 ; 2 ; Journal of Embodied Research Volume 2019 ; 2019 ; https://jer.openlibhums.org/ >
       au < manifest ; 2020 ; 3 ; Journal of Embodied Research Volume 2020 ; 2020 ; https://jer.openlibhums.org/ >
 
   }
@@ -356,9 +356,9 @@
 
       au < manifest ; 2015 ; 1 ; Le foucaldien Volume 2015 ; 2015 ; https://foucaldien.net/ >
       au < manifest ; 2016 ; 2 ; Le foucaldien Volume 2016 ; 2016 ; https://foucaldien.net/ >
-      au < manifest ; 2017 ; 3 ; Le foucaldien Volume 2017 ; 2017 ; https://foucaldien.net/ >
-      au < manifest ; 2018 ; 4 ; Le foucaldien Volume 2018 ; 2018 ; https://foucaldien.net/ >
-      au < manifest ; 2019 ; 5 ; Le foucaldien Volume 2019 ; 2019 ; https://foucaldien.net/ >
+      au < released ; 2017 ; 3 ; Le foucaldien Volume 2017 ; 2017 ; https://foucaldien.net/ >
+      au < released ; 2018 ; 4 ; Le foucaldien Volume 2018 ; 2018 ; https://foucaldien.net/ >
+      au < released ; 2019 ; 5 ; Le foucaldien Volume 2019 ; 2019 ; https://foucaldien.net/ >
       au < manifest ; 2020 ; 6 ; Le foucaldien Volume 2020 ; 2020 ; https://foucaldien.net/ >
 
   }
@@ -1894,7 +1894,7 @@
       au < released ; 2017 ; 6 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2017 ; 2017 ; https://tilburglawreview.com/ >
       au < released ; 2018 ; 7 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2018 ; 2018 ; https://tilburglawreview.com/ >
       au < released ; 2019 ; 8 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2019 ; 2019 ; https://tilburglawreview.com/ >
-      au < expected ; 2020 ; 9 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2020 ; 2020 ; https://tilburglawreview.com/ >
+      au < manifest ; 2020 ; 9 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2020 ; 2020 ; https://tilburglawreview.com/ >
 
   }
 

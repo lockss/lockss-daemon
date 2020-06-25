@@ -1,0 +1,26 @@
+{
+  publisher <
+    name = Classical Association of South Africa
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:323
+
+    {
+    title <
+      name = Acta Classica ;
+      issn = 0065-1141 ;
+      eissn = 2227-538X
+
+    >
+
+      attr[journal_id] = 759
+
+      au < testing ; 2018 ; Acta Classica Volume 61 [2018] ; 14473 >
+      au < manifest ; 2019 ; Acta Classica Volume 62 [2019] ; 14474 >
+
+    }
+
+}

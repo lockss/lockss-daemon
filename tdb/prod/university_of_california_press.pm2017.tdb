@@ -1,0 +1,55 @@
+{
+  publisher <
+    name = University of California Press
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:263
+
+    {
+    title <
+      name = Mexican Studies ;
+      eissn = 1533-8320
+
+    >
+
+      attr[journal_id] = 762
+
+      au < manifest ; 2018 ; Mexican Studies Volume 34 [2018] ; 14449 >
+      au < manifest ; 2019 ; Mexican Studies Volume 35 [2019] ; 14450 >
+
+    }
+
+    {
+    title <
+      name = Nova Religio ;
+      issn = 1092-6690 ;
+      eissn = 1541-8480
+
+    >
+
+      attr[journal_id] = 764
+
+      au < manifest ; 2018 ; Nova Religio Volume 22 [2018] ; 14451 >
+      au < manifest ; 2019 ; Nova Religio Volume 23 [2019] ; 14452 >
+
+    }
+
+    {
+    title <
+      name = The Public Historian ;
+      issn = 0272-3433 ;
+      eissn = 1533-8576
+
+    >
+
+      attr[journal_id] = 763
+
+      au < manifest ; 2018 ; The Public Historian Volume 40 [2018] ; 14453 >
+      au < manifest ; 2019 ; The Public Historian Volume 41 [2019] ; 14454 >
+      au < manifest ; 2020 ; The Public Historian Volume 42 [2020] ; 14776 >
+
+    }
+}
