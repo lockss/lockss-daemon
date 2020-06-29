@@ -52,6 +52,7 @@
 
     param[journal_id] = sjaday
 
+    au < exists ; exists ; 2002 ; Journal on Applied Dynamical Systems Volume 1 ; 1 ; https://epubs.siam.org/ ; >
     au < finished ; manifest ; 2003 ; Journal on Applied Dynamical Systems Volume 2 ; 2 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2004 ; Journal on Applied Dynamical Systems Volume 3 ; 3 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2005 ; Journal on Applied Dynamical Systems Volume 4 ; 4 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
@@ -102,6 +103,7 @@
     {
       param[journal_id] = smjmap
 
+      #volumes 1-13 are in the previous block.
       au < finished ; manifest ; 1966 ; Journal on Applied Mathematics Volume 14 ; 14 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 > 
       au < finished ; manifest ; 1967 ; Journal on Applied Mathematics Volume 15 ; 15 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 > 
       au < finished ; manifest ; 1968 ; Journal on Applied Mathematics Volume 16 ; 16 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 > 
@@ -183,13 +185,45 @@
 
     param[journal_id] = smjcat
 
-    au < finished ; manifest ; 2003 ; Journal on Computing Volume 33 ; 33 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2004 ; Journal on Computing Volume 34 ; 34 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2005 ; Journal on Computing Volume 35 ; 35 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2006 ; Journal on Computing Volume 36 ; 36 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2007 ; Journal on Computing Volume 37 ; 37 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2008 ; Journal on Computing Volume 38 ; 38 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2009 ; Journal on Computing Volume 39 ; 39 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
+    au < exists ; exists ; 1972 ; Journal on Computing Volume 1 ; 1 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1973 ; Journal on Computing Volume 2 ; 2 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1974 ; Journal on Computing Volume 3 ; 3 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1975 ; Journal on Computing Volume 4 ; 4 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1976 ; Journal on Computing Volume 5 ; 5 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1977 ; Journal on Computing Volume 6 ; 6 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1978 ; Journal on Computing Volume 7 ; 7 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1979 ; Journal on Computing Volume 8 ; 8 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1980 ; Journal on Computing Volume 9 ; 9 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1981 ; Journal on Computing Volume 10 ; 10 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1982 ; Journal on Computing Volume 11 ; 11 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1983 ; Journal on Computing Volume 12 ; 12 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1984 ; Journal on Computing Volume 13 ; 13 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1985 ; Journal on Computing Volume 14 ; 14 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1986 ; Journal on Computing Volume 15 ; 15 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1987 ; Journal on Computing Volume 16 ; 16 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1988 ; Journal on Computing Volume 17 ; 17 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1989 ; Journal on Computing Volume 18 ; 18 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1990 ; Journal on Computing Volume 19 ; 19 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1991 ; Journal on Computing Volume 20 ; 20 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1992 ; Journal on Computing Volume 21 ; 21 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1993 ; Journal on Computing Volume 22 ; 22 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1994 ; Journal on Computing Volume 23 ; 23 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1995 ; Journal on Computing Volume 24 ; 24 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1996 ; Journal on Computing Volume 25 ; 25 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1997 ; Journal on Computing Volume 26 ; 26 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1998 ; Journal on Computing Volume 27 ; 27 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1998-1999 ; Journal on Computing Volume 28 ; 28 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1999-2000 ; Journal on Computing Volume 29 ; 29 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 2000-2001 ; Journal on Computing Volume 30 ; 30 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 2001-2002 ; Journal on Computing Volume 31 ; 31 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 2002-2003 ; Journal on Computing Volume 32 ; 32 ; https://epubs.siam.org/ ; >
+    au < finished ; manifest ; 2003-2004 ; Journal on Computing Volume 33 ; 33 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2004-2005 ; Journal on Computing Volume 34 ; 34 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2005-2006 ; Journal on Computing Volume 35 ; 35 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2006-2007 ; Journal on Computing Volume 36 ; 36 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2007-2008 ; Journal on Computing Volume 37 ; 37 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2008-2009 ; Journal on Computing Volume 38 ; 38 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2009-2010 ; Journal on Computing Volume 39 ; 39 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2011 ; Journal on Computing Volume 40 ; 40 ; http://epubs.siam.org/ ; >
     au < finished ; finished ; 2012 ; Journal on Computing Volume 41 ; 41 ; http://epubs.siam.org/ ; >
     au < finished ; manifest ; 2013 ; Journal on Computing Volume 42 ; 42 ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
@@ -213,8 +247,49 @@
 
     param[journal_id] = sjcodc
 
-    au < finished ; manifest ; 2003 ; Journal on Control and Optimization Volume 42 ; 42 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2004 ; Journal on Control and Optimization Volume 43 ; 43 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+    au < exists ; exists ; 1962-1963 ; Journal on Control and Optimization Volume 1 ; 1 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1964 ; Journal on Control and Optimization Volume 2 ; 2 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1965 ; Journal on Control and Optimization Volume 3 ; 3 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1966 ; Journal on Control and Optimization Volume 4 ; 4 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1967 ; Journal on Control and Optimization Volume 5 ; 5 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1968 ; Journal on Control and Optimization Volume 6 ; 6 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1969 ; Journal on Control and Optimization Volume 7 ; 7 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1970 ; Journal on Control and Optimization Volume 8 ; 8 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1971 ; Journal on Control and Optimization Volume 9 ; 9 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1972 ; Journal on Control and Optimization Volume 10 ; 10 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1973 ; Journal on Control and Optimization Volume 11 ; 11 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1974 ; Journal on Control and Optimization Volume 12 ; 12 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1975 ; Journal on Control and Optimization Volume 13 ; 13 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1976 ; Journal on Control and Optimization Volume 14 ; 14 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1977 ; Journal on Control and Optimization Volume 15 ; 15 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1978 ; Journal on Control and Optimization Volume 16 ; 16 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1979 ; Journal on Control and Optimization Volume 17 ; 17 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1980 ; Journal on Control and Optimization Volume 18 ; 18 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1981 ; Journal on Control and Optimization Volume 19 ; 19 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1982 ; Journal on Control and Optimization Volume 20 ; 20 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1983 ; Journal on Control and Optimization Volume 21 ; 21 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1984 ; Journal on Control and Optimization Volume 22 ; 22 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1985 ; Journal on Control and Optimization Volume 23 ; 23 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1986 ; Journal on Control and Optimization Volume 24 ; 24 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1987 ; Journal on Control and Optimization Volume 25 ; 25 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1988 ; Journal on Control and Optimization Volume 26 ; 26 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1989 ; Journal on Control and Optimization Volume 27 ; 27 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1990 ; Journal on Control and Optimization Volume 28 ; 28 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1991 ; Journal on Control and Optimization Volume 29 ; 29 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1992 ; Journal on Control and Optimization Volume 30 ; 30 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1993 ; Journal on Control and Optimization Volume 31 ; 31 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1994 ; Journal on Control and Optimization Volume 32 ; 32 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1995 ; Journal on Control and Optimization Volume 33 ; 33 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1996 ; Journal on Control and Optimization Volume 34 ; 34 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1997 ; Journal on Control and Optimization Volume 35 ; 35 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1998 ; Journal on Control and Optimization Volume 36 ; 36 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1998-1999 ; Journal on Control and Optimization Volume 37 ; 37 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1999-2000 ; Journal on Control and Optimization Volume 38 ; 38 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 2000-2001 ; Journal on Control and Optimization Volume 39 ; 39 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 2001-2002 ; Journal on Control and Optimization Volume 40 ; 40 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 2002-2003 ; Journal on Control and Optimization Volume 41 ; 41 ; https://epubs.siam.org/ ; >
+    au < finished ; manifest ; 2003-2004 ; Journal on Control and Optimization Volume 42 ; 42 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2004-2005 ; Journal on Control and Optimization Volume 43 ; 43 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2005 ; Journal on Control and Optimization Volume 44 ; 44 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2006 ; Journal on Control and Optimization Volume 45 ; 45 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2007 ; Journal on Control and Optimization Volume 46 ; 46 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
@@ -243,6 +318,21 @@
 
     param[journal_id] = sjdmec
 
+    au < exists ; exists ; 1988 ; Journal on Discrete Mathematics Volume 1 ; 1 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1989 ; Journal on Discrete Mathematics Volume 2 ; 2 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1990 ; Journal on Discrete Mathematics Volume 3 ; 3 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1991 ; Journal on Discrete Mathematics Volume 4 ; 4 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1992 ; Journal on Discrete Mathematics Volume 5 ; 5 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1993 ; Journal on Discrete Mathematics Volume 6 ; 6 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1994 ; Journal on Discrete Mathematics Volume 7 ; 7 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1995 ; Journal on Discrete Mathematics Volume 8 ; 8 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1996 ; Journal on Discrete Mathematics Volume 9 ; 9 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1997 ; Journal on Discrete Mathematics Volume 10 ; 10 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1998 ; Journal on Discrete Mathematics Volume 11 ; 11 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1999 ; Journal on Discrete Mathematics Volume 12 ; 12 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 2000 ; Journal on Discrete Mathematics Volume 13 ; 13 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 2001 ; Journal on Discrete Mathematics Volume 14 ; 14 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 2002 ; Journal on Discrete Mathematics Volume 15 ; 15 ; https://epubs.siam.org/ ; >
     au < finished ; manifest ; 2003 ; Journal on Discrete Mathematics Volume 16 ; 16 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2003 ; Journal on Discrete Mathematics Volume 17 ; 17 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2004 ; Journal on Discrete Mathematics Volume 18 ; 18 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
@@ -323,6 +413,40 @@
 
     param[journal_id] = sjmaah
 
+    au < exists ; exists ; 1970 ; Journal on Mathematical Analysis Volume 1 ; 1 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1971 ; Journal on Mathematical Analysis Volume 2 ; 2 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1972 ; Journal on Mathematical Analysis Volume 3 ; 3 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1973 ; Journal on Mathematical Analysis Volume 4 ; 4 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1974 ; Journal on Mathematical Analysis Volume 5 ; 5 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1975 ; Journal on Mathematical Analysis Volume 6 ; 6 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1976 ; Journal on Mathematical Analysis Volume 7 ; 7 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1977 ; Journal on Mathematical Analysis Volume 8 ; 8 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1978 ; Journal on Mathematical Analysis Volume 9 ; 9 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1979 ; Journal on Mathematical Analysis Volume 10 ; 10 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1980 ; Journal on Mathematical Analysis Volume 11 ; 11 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1981 ; Journal on Mathematical Analysis Volume 12 ; 12 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1982 ; Journal on Mathematical Analysis Volume 13 ; 13 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1983 ; Journal on Mathematical Analysis Volume 14 ; 14 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1984 ; Journal on Mathematical Analysis Volume 15 ; 15 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1985 ; Journal on Mathematical Analysis Volume 16 ; 16 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1986 ; Journal on Mathematical Analysis Volume 17 ; 17 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1987 ; Journal on Mathematical Analysis Volume 18 ; 18 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1988 ; Journal on Mathematical Analysis Volume 19 ; 19 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1989 ; Journal on Mathematical Analysis Volume 20 ; 20 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1990 ; Journal on Mathematical Analysis Volume 21 ; 21 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1991 ; Journal on Mathematical Analysis Volume 22 ; 22 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1992 ; Journal on Mathematical Analysis Volume 23 ; 23 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1993 ; Journal on Mathematical Analysis Volume 24 ; 24 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1994 ; Journal on Mathematical Analysis Volume 25 ; 25 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1995 ; Journal on Mathematical Analysis Volume 26 ; 26 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1996 ; Journal on Mathematical Analysis Volume 27 ; 27 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1997 ; Journal on Mathematical Analysis Volume 28 ; 28 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1998 ; Journal on Mathematical Analysis Volume 29 ; 29 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1999 ; Journal on Mathematical Analysis Volume 30 ; 30 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 2000 ; Journal on Mathematical Analysis Volume 31 ; 31 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 2001 ; Journal on Mathematical Analysis Volume 32 ; 32 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 2002 ; Journal on Mathematical Analysis Volume 33 ; 33 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 2003 ; Journal on Mathematical Analysis Volume 34 ; 34 ; https://epubs.siam.org/ ; >
     au < finished ; manifest ; 2003-2004 ; Journal on Mathematical Analysis Volume 35 ; 35 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2004-2005 ; Journal on Mathematical Analysis Volume 36 ; 36 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2005-2006 ; Journal on Mathematical Analysis Volume 37 ; 37 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
@@ -354,6 +478,30 @@
 
     param[journal_id] = sjmael
 
+    au < exists ; exists ; 1980 ; Journal on Matrix Analysis and Application Volume 1 ; 1 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1981 ; Journal on Matrix Analysis and Application Volume 2 ; 2 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1982 ; Journal on Matrix Analysis and Application Volume 3 ; 3 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1983 ; Journal on Matrix Analysis and Application Volume 4 ; 4 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1984 ; Journal on Matrix Analysis and Application Volume 5 ; 5 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1985 ; Journal on Matrix Analysis and Application Volume 6 ; 6 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1986 ; Journal on Matrix Analysis and Application Volume 7 ; 7 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1987 ; Journal on Matrix Analysis and Application Volume 8 ; 8 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1988 ; Journal on Matrix Analysis and Application Volume 9 ; 9 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1989 ; Journal on Matrix Analysis and Application Volume 10 ; 10 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1990 ; Journal on Matrix Analysis and Application Volume 11 ; 11 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1991 ; Journal on Matrix Analysis and Application Volume 12 ; 12 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1992 ; Journal on Matrix Analysis and Application Volume 13 ; 13 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1993 ; Journal on Matrix Analysis and Application Volume 14 ; 14 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1994 ; Journal on Matrix Analysis and Application Volume 15 ; 15 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1995 ; Journal on Matrix Analysis and Application Volume 16 ; 16 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1996 ; Journal on Matrix Analysis and Application Volume 17 ; 17 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1997 ; Journal on Matrix Analysis and Application Volume 18 ; 18 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1998 ; Journal on Matrix Analysis and Application Volume 19 ; 19 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1999 ; Journal on Matrix Analysis and Application Volume 20 ; 20 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 2000 ; Journal on Matrix Analysis and Application Volume 21 ; 21 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 2001 ; Journal on Matrix Analysis and Application Volume 22 ; 22 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 2002 ; Journal on Matrix Analysis and Application Volume 23 ; 23 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 2003 ; Journal on Matrix Analysis and Application Volume 24 ; 24 ; https://epubs.siam.org/ ; >
     au < finished ; manifest ; 2003 ; Journal on Matrix Analysis and Application Volume 25 ; 25 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2004 ; Journal on Matrix Analysis and Application Volume 26 ; 26 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2005 ; Journal on Matrix Analysis and Application Volume 27 ; 27 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
@@ -384,6 +532,46 @@
 
     param[journal_id] = sjnaam
 
+    au < exists ; exists ; 1964 ; Journal on Numerical Analysis Volume 1 ; 1 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1965 ; Journal on Numerical Analysis Volume 2 ; 2 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1966 ; Journal on Numerical Analysis Volume 3 ; 3 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1967 ; Journal on Numerical Analysis Volume 4 ; 4 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1968 ; Journal on Numerical Analysis Volume 5 ; 5 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1969 ; Journal on Numerical Analysis Volume 6 ; 6 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1970 ; Journal on Numerical Analysis Volume 7 ; 7 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1971 ; Journal on Numerical Analysis Volume 8 ; 8 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1972 ; Journal on Numerical Analysis Volume 9 ; 9 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1973 ; Journal on Numerical Analysis Volume 10 ; 10 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1974 ; Journal on Numerical Analysis Volume 11 ; 11 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1975 ; Journal on Numerical Analysis Volume 12 ; 12 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1976 ; Journal on Numerical Analysis Volume 13 ; 13 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1977 ; Journal on Numerical Analysis Volume 14 ; 14 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1978 ; Journal on Numerical Analysis Volume 15 ; 15 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1979 ; Journal on Numerical Analysis Volume 16 ; 16 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1980 ; Journal on Numerical Analysis Volume 17 ; 17 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1981 ; Journal on Numerical Analysis Volume 18 ; 18 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1982 ; Journal on Numerical Analysis Volume 19 ; 19 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1983 ; Journal on Numerical Analysis Volume 20 ; 20 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1984 ; Journal on Numerical Analysis Volume 21 ; 21 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1985 ; Journal on Numerical Analysis Volume 22 ; 22 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1986 ; Journal on Numerical Analysis Volume 23 ; 23 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1987 ; Journal on Numerical Analysis Volume 24 ; 24 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1988 ; Journal on Numerical Analysis Volume 25 ; 25 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1989 ; Journal on Numerical Analysis Volume 26 ; 26 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1990 ; Journal on Numerical Analysis Volume 27 ; 27 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1991 ; Journal on Numerical Analysis Volume 28 ; 28 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1992 ; Journal on Numerical Analysis Volume 29 ; 29 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1993 ; Journal on Numerical Analysis Volume 30 ; 30 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1994 ; Journal on Numerical Analysis Volume 31 ; 31 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1995 ; Journal on Numerical Analysis Volume 32 ; 32 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1996 ; Journal on Numerical Analysis Volume 33 ; 33 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1997 ; Journal on Numerical Analysis Volume 34 ; 34 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1998 ; Journal on Numerical Analysis Volume 35 ; 35 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1999 ; Journal on Numerical Analysis Volume 36 ; 36 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 2000 ; Journal on Numerical Analysis Volume 37 ; 37 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 2001 ; Journal on Numerical Analysis Volume 38 ; 38 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 2002 ; Journal on Numerical Analysis Volume 39 ; 39 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 2003 ; Journal on Numerical Analysis Volume 40 ; 40 ; https://epubs.siam.org/ ; >
     au < finished ; manifest ; 2003 ; Journal on Numerical Analysis Volume 41 ; 41 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2004 ; Journal on Numerical Analysis Volume 42 ; 42 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2005 ; Journal on Numerical Analysis Volume 43 ; 43 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
@@ -415,6 +603,19 @@
 
     param[journal_id] = sjope8
 
+    au < exists ; exists ; 1991 ; Journal on Optimization Volume 1 ; 1 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1992 ; Journal on Optimization Volume 2 ; 2 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1993 ; Journal on Optimization Volume 3 ; 3 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1994 ; Journal on Optimization Volume 4 ; 4 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1995 ; Journal on Optimization Volume 5 ; 5 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1996 ; Journal on Optimization Volume 6 ; 6 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1997 ; Journal on Optimization Volume 7 ; 7 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1998 ; Journal on Optimization Volume 8 ; 8 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1999 ; Journal on Optimization Volume 9 ; 9 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 2000 ; Journal on Optimization Volume 10 ; 10 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 2001 ; Journal on Optimization Volume 11 ; 11 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 2002 ; Journal on Optimization Volume 12 ; 12 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 2003 ; Journal on Optimization Volume 13 ; 13 ; https://epubs.siam.org/ ; >
     au < finished ; manifest ; 2003 ; Journal on Optimization Volume 14 ; 14 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2004 ; Journal on Optimization Volume 15 ; 15 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2005 ; Journal on Optimization Volume 16 ; 16 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
@@ -445,6 +646,30 @@
 
     param[journal_id] = sjoce3
 
+    au < exists ; exists ; 1980 ; Journal on Scientific Computing Volume 1 ; 1 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1981 ; Journal on Scientific Computing Volume 2 ; 2 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1982 ; Journal on Scientific Computing Volume 3 ; 3 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1983 ; Journal on Scientific Computing Volume 4 ; 4 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1984 ; Journal on Scientific Computing Volume 5 ; 5 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1985 ; Journal on Scientific Computing Volume 6 ; 6 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1986 ; Journal on Scientific Computing Volume 7 ; 7 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1987 ; Journal on Scientific Computing Volume 8 ; 8 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1988 ; Journal on Scientific Computing Volume 9 ; 9 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1989 ; Journal on Scientific Computing Volume 10 ; 10 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1990 ; Journal on Scientific Computing Volume 11 ; 11 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1991 ; Journal on Scientific Computing Volume 12 ; 12 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1992 ; Journal on Scientific Computing Volume 13 ; 13 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1993 ; Journal on Scientific Computing Volume 14 ; 14 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1994 ; Journal on Scientific Computing Volume 15 ; 15 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1995 ; Journal on Scientific Computing Volume 16 ; 16 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1996 ; Journal on Scientific Computing Volume 17 ; 17 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1997 ; Journal on Scientific Computing Volume 18 ; 18 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1998 ; Journal on Scientific Computing Volume 19 ; 19 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1999 ; Journal on Scientific Computing Volume 20 ; 20 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 2000 ; Journal on Scientific Computing Volume 21 ; 21 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 2001 ; Journal on Scientific Computing Volume 22 ; 22 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 2002 ; Journal on Scientific Computing Volume 23 ; 23 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 2003 ; Journal on Scientific Computing Volume 24 ; 24 ; https://epubs.siam.org/ ; >
     au < finished ; manifest ; 2003 ; Journal on Scientific Computing Volume 25 ; 25 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2004 ; Journal on Scientific Computing Volume 26 ; 26 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2005 ; Journal on Scientific Computing Volume 27 ; 27 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
@@ -496,6 +721,50 @@
 
     param[journal_id] = siread
 
+    au < exists ; exists ; 1959 ; SIAM Review Volume 1 ; 1 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1960 ; SIAM Review Volume 2 ; 2 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1961 ; SIAM Review Volume 3 ; 3 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1962 ; SIAM Review Volume 4 ; 4 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1963 ; SIAM Review Volume 5 ; 5 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1964 ; SIAM Review Volume 6 ; 6 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1965 ; SIAM Review Volume 7 ; 7 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1966 ; SIAM Review Volume 8 ; 8 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1967 ; SIAM Review Volume 9 ; 9 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1968 ; SIAM Review Volume 10 ; 10 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1969 ; SIAM Review Volume 11 ; 11 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1970 ; SIAM Review Volume 12 ; 12 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1971 ; SIAM Review Volume 13 ; 13 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1972 ; SIAM Review Volume 14 ; 14 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1973 ; SIAM Review Volume 15 ; 15 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1974 ; SIAM Review Volume 16 ; 16 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1975 ; SIAM Review Volume 17 ; 17 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1976 ; SIAM Review Volume 18 ; 18 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1977 ; SIAM Review Volume 19 ; 19 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1978 ; SIAM Review Volume 20 ; 20 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1979 ; SIAM Review Volume 21 ; 21 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1980 ; SIAM Review Volume 22 ; 22 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1981 ; SIAM Review Volume 23 ; 23 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1982 ; SIAM Review Volume 24 ; 24 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1983 ; SIAM Review Volume 25 ; 25 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1984 ; SIAM Review Volume 26 ; 26 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1985 ; SIAM Review Volume 27 ; 27 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1986 ; SIAM Review Volume 28 ; 28 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1987 ; SIAM Review Volume 29 ; 29 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1988 ; SIAM Review Volume 30 ; 30 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1989 ; SIAM Review Volume 31 ; 31 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1990 ; SIAM Review Volume 32 ; 32 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1991 ; SIAM Review Volume 33 ; 33 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1992 ; SIAM Review Volume 34 ; 34 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1993 ; SIAM Review Volume 35 ; 35 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1994 ; SIAM Review Volume 36 ; 36 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1995 ; SIAM Review Volume 37 ; 37 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1996 ; SIAM Review Volume 38 ; 38 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1997 ; SIAM Review Volume 39 ; 39 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1998 ; SIAM Review Volume 40 ; 40 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1999 ; SIAM Review Volume 41 ; 41 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 2000 ; SIAM Review Volume 42 ; 42 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 2001 ; SIAM Review Volume 43 ; 43 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 2002 ; SIAM Review Volume 44 ; 44 ; https://epubs.siam.org/ ; >
     au < finished ; manifest ; 2003 ; SIAM Review Volume 45 ; 45 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2004 ; SIAM Review Volume 46 ; 46 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2005 ; SIAM Review Volume 47 ; 47 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
@@ -526,7 +795,54 @@
     >
 
     param[journal_id] = tprbau
+    #no volume in 1972
 
+    au < exists ; exists ; 1956 ; Theory of Probability and its Applications Volume 1 ; 1 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1957 ; Theory of Probability and its Applications Volume 2 ; 2 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1958 ; Theory of Probability and its Applications Volume 3 ; 3 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1959 ; Theory of Probability and its Applications Volume 4 ; 4 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1960 ; Theory of Probability and its Applications Volume 5 ; 5 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1961 ; Theory of Probability and its Applications Volume 6 ; 6 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1962 ; Theory of Probability and its Applications Volume 7 ; 7 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1963 ; Theory of Probability and its Applications Volume 8 ; 8 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1964 ; Theory of Probability and its Applications Volume 9 ; 9 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1965 ; Theory of Probability and its Applications Volume 10 ; 10 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1966 ; Theory of Probability and its Applications Volume 11 ; 11 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1967 ; Theory of Probability and its Applications Volume 12 ; 12 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1968 ; Theory of Probability and its Applications Volume 13 ; 13 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1969 ; Theory of Probability and its Applications Volume 14 ; 14 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1970 ; Theory of Probability and its Applications Volume 15 ; 15 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1971 ; Theory of Probability and its Applications Volume 16 ; 16 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1973 ; Theory of Probability and its Applications Volume 17 ; 17 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1974 ; Theory of Probability and its Applications Volume 18 ; 18 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1975 ; Theory of Probability and its Applications Volume 19 ; 19 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1976 ; Theory of Probability and its Applications Volume 20 ; 20 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1977 ; Theory of Probability and its Applications Volume 21 ; 21 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1978 ; Theory of Probability and its Applications Volume 22 ; 22 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1979 ; Theory of Probability and its Applications Volume 23 ; 23 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1980 ; Theory of Probability and its Applications Volume 24 ; 24 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1981 ; Theory of Probability and its Applications Volume 25 ; 25 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1982 ; Theory of Probability and its Applications Volume 26 ; 26 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1983 ; Theory of Probability and its Applications Volume 27 ; 27 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1984 ; Theory of Probability and its Applications Volume 28 ; 28 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1985 ; Theory of Probability and its Applications Volume 29 ; 29 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1986 ; Theory of Probability and its Applications Volume 30 ; 30 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1987 ; Theory of Probability and its Applications Volume 31 ; 31 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1988 ; Theory of Probability and its Applications Volume 32 ; 32 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1989 ; Theory of Probability and its Applications Volume 33 ; 33 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1990 ; Theory of Probability and its Applications Volume 34 ; 34 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1991 ; Theory of Probability and its Applications Volume 35 ; 35 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1992 ; Theory of Probability and its Applications Volume 36 ; 36 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1993 ; Theory of Probability and its Applications Volume 37 ; 37 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1994 ; Theory of Probability and its Applications Volume 38 ; 38 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1995 ; Theory of Probability and its Applications Volume 39 ; 39 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1996 ; Theory of Probability and its Applications Volume 40 ; 40 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1997 ; Theory of Probability and its Applications Volume 41 ; 41 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1998 ; Theory of Probability and its Applications Volume 42 ; 42 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 1999 ; Theory of Probability and its Applications Volume 43 ; 43 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 2000 ; Theory of Probability and its Applications Volume 44 ; 44 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 2001 ; Theory of Probability and its Applications Volume 45 ; 45 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 2002 ; Theory of Probability and its Applications Volume 46 ; 46 ; https://epubs.siam.org/ ; >
     au < finished ; manifest ; 2003 ; Theory of Probability and its Applications Volume 47 ; 47 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2004 ; Theory of Probability and its Applications Volume 48 ; 48 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2005 ; Theory of Probability and its Applications Volume 49 ; 49 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
@@ -569,12 +885,12 @@
       eissn = 2470-6566
     >
 
-    param[journal_id] = SIAGA
+    param[journal_id] = sjaabq
 
     au < exists ; exists ; 2017 ; Journal on Applied Algebra and Geometry Volume 1 ; 1 ; https://epubs.siam.org/ ; >
     au < exists ; exists ; 2018 ; Journal on Applied Algebra and Geometry Volume 2 ; 2 ; https://epubs.siam.org/ ; >
     au < exists ; exists ; 2019 ; Journal on Applied Algebra and Geometry Volume 3 ; 3 ; https://epubs.siam.org/ ; >
-    au < expected ; exists ; 2020 ; Journal on Applied Algebra and Geometry Volume 4 ; 4 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 2020 ; Journal on Applied Algebra and Geometry Volume 4 ; 4 ; https://epubs.siam.org/ ; >
 
   }
 
