@@ -46,8 +46,8 @@
       au < doNotProcess ; doNotProcess ; 2013 ; African Journal of Economic and Sustainable Development Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2014 ; African Journal of Economic and Sustainable Development Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2015 ; African Journal of Economic and Sustainable Development Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2016 ; African Journal of Economic and Sustainable Development Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2017 ; African Journal of Economic and Sustainable Development Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2016 ; African Journal of Economic and Sustainable Development Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2017 ; African Journal of Economic and Sustainable Development Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < ingNotReady ; exists ; 2018-2021 ; African Journal of Economic and Sustainable Development Volume 7 [partial] ; 7 ; https://www.inderscienceonline.com/ ; > #issue 4 not online
 
     }
@@ -69,7 +69,7 @@
       au < doNotProcess ; doNotProcess ; 2012-2013 ; Afro-Asian Journal of Finance and Accounting Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2014 ; Afro-Asian Journal of Finance and Accounting Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2015 ; Afro-Asian Journal of Finance and Accounting Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2016 ; Afro-Asian Journal of Finance and Accounting Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2016 ; Afro-Asian Journal of Finance and Accounting Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; Afro-Asian Journal of Finance and Accounting Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2018 ; Afro-Asian Journal of Finance and Accounting Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2019 ; Afro-Asian Journal of Finance and Accounting Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
