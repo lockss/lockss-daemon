@@ -345,8 +345,8 @@
     param[journal_id] = publicspace
     #Archived. Last volume in 2010.
 
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2007 ; 2007 ; Public Space: The Journal of Law and Social Justice Volume 1 ; 1 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2008 ; 2008 ; Public Space: The Journal of Law and Social Justice Volume 2 ; 2 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2007 ; 2007 ; Public Space: The Journal of Law and Social Justice Volume 1 ; 1 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2008 ; 2008 ; Public Space: The Journal of Law and Social Justice Volume 2 ; 2 ; https://epress.lib.uts.edu.au/journals/ ; >
     au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2009 ; 2009 ; Public Space: The Journal of Law and Social Justice Volume 3-4 ; 3-4 ; https://epress.lib.uts.edu.au/journals/ ; >
     au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2010 ; 2010 ; Public Space: The Journal of Law and Social Justice Volume 5 ; 5 ; https://epress.lib.uts.edu.au/journals/ ; >
 
@@ -382,7 +382,7 @@
     au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2007 ; 2007 ; Transforming Cultures eJournal Volume 2 ; 2 ; https://epress.lib.uts.edu.au/journals/ ; >
     au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2008 ; 2008 ; Transforming Cultures eJournal Volume 3 ; 3 ; https://epress.lib.uts.edu.au/journals/ ; >
     au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2009 ; 2009 ; Transforming Cultures eJournal Volume 4 ; 4 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2010 ; 2010 ; Transforming Cultures eJournal Volume 5 ; 5 ; https://epress.lib.uts.edu.au/journals/ ; >
+    au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2010 ; 2010 ; Transforming Cultures eJournal Volume 5 ; 5 ; https://epress.lib.uts.edu.au/journals/ ; >
 
   }
 

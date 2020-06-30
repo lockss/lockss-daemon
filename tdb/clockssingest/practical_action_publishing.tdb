@@ -24,21 +24,21 @@
     comment[change] = Volume 18 split between new name and old name.
 
     param[journal_id] = edm
+    #move to Practical Action Publishing
 
-    au < manifest ; exists ; 2007 ; Enterprise Development & Microfinance Volume 18 ; 18 ; https://www.developmentbookshelf.com/ ; >
-    au < manifest ; exists ; 2008 ; Enterprise Development & Microfinance Volume 19 ; 19 ; https://www.developmentbookshelf.com/ ; >
-    au < manifest ; exists ; 2009 ; Enterprise Development & Microfinance Volume 20 ; 20 ; https://www.developmentbookshelf.com/ ; >
-    au < manifest ; exists ; 2010 ; Enterprise Development & Microfinance Volume 21 ; 21 ; https://www.developmentbookshelf.com/ ; >
-    au < manifest ; exists ; 2011 ; Enterprise Development & Microfinance Volume 22 ; 22 ; https://www.developmentbookshelf.com/ ; >
-    au < manifest ; exists ; 2012 ; Enterprise Development & Microfinance Volume 23 ; 23 ; https://www.developmentbookshelf.com/ ; >
+    au < doNotProcess ; exists ; 2007 ; Enterprise Development & Microfinance Volume 18 ; 18 ; https://www.developmentbookshelf.com/ ; >
+    au < doNotProcess ; exists ; 2008 ; Enterprise Development & Microfinance Volume 19 ; 19 ; https://www.developmentbookshelf.com/ ; >
+    au < doNotProcess ; exists ; 2009 ; Enterprise Development & Microfinance Volume 20 ; 20 ; https://www.developmentbookshelf.com/ ; >
+    au < doNotProcess ; exists ; 2010 ; Enterprise Development & Microfinance Volume 21 ; 21 ; https://www.developmentbookshelf.com/ ; >
+    au < doNotProcess ; exists ; 2011 ; Enterprise Development & Microfinance Volume 22 ; 22 ; https://www.developmentbookshelf.com/ ; >
+    au < doNotProcess ; exists ; 2012 ; Enterprise Development & Microfinance Volume 23 ; 23 ; https://www.developmentbookshelf.com/ ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Enterprise Development & Microfinance Volume 24 ; 24 ; https://www.developmentbookshelf.com/ ; >
     au < finished ; finished ; 2014 ; Enterprise Development & Microfinance Volume 25 ; 25 ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Enterprise Development & Microfinance Volume 26 ; 26 ; http://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2016 ; Enterprise Development & Microfinance Volume 27 ; 27 ; http://www.developmentbookshelf.com/ ; reingest4.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2017 ; Enterprise Development & Microfinance Volume 28 ; 28 ; http://www.developmentbookshelf.com/ ; >
-    au < deepCrawl ; exists ; 2018 ; Enterprise Development & Microfinance Volume 29 ; 29 ; https://www.developmentbookshelf.com/ ; >
-    au < deepCrawl ; exists ; 2019 ; Enterprise Development & Microfinance Volume 30 ; 30 ; https://www.developmentbookshelf.com/ ; >
-    au < expected ; exists ; 2020 ; Enterprise Development & Microfinance Volume 31 ; 31 ; https://www.developmentbookshelf.com/ ; >
+    au < finished ; manifest ; 2017 ; Enterprise Development & Microfinance Volume 28 ; 28 ; http://www.developmentbookshelf.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2018 ; Enterprise Development & Microfinance Volume 29 ; 29 ; https://www.developmentbookshelf.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; Enterprise Development & Microfinance Volume 30 ; 30 ; https://www.developmentbookshelf.com/ ; reingest5.clockss.org:8082 >
 
   }
 
