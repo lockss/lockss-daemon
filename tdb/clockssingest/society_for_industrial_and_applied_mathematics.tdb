@@ -233,7 +233,7 @@
     au < finished ; manifest ; 2017 ; Journal on Computing Volume 46 ; 46 ; http://epubs.siam.org/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2018 ; Journal on Computing Volume 47 ; 47 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2019 ; Journal on Computing Volume 48 ; 48 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
-    au < manifest ; exists ; 2020 ; Journal on Computing Volume 49 ; 49 ; https://epubs.siam.org/ ; >
+    au < exists ; exists ; 2020 ; Journal on Computing Volume 49 ; 49 ; https://epubs.siam.org/ ; >
 
   }
 
@@ -485,17 +485,20 @@
       eissn = 1095-7162
     >
 
+    {
+    param[journal_id] = sjamdu
+
+    au < manifest ; exists ; 1980 ; Journal on Matrix Analysis and Application Volume 1 ; 1 ; https://epubs.siam.org/ ; >
+    au < manifest ; exists ; 1981 ; Journal on Matrix Analysis and Application Volume 2 ; 2 ; https://epubs.siam.org/ ; >
+    au < manifest ; exists ; 1982 ; Journal on Matrix Analysis and Application Volume 3 ; 3 ; https://epubs.siam.org/ ; >
+    au < manifest ; exists ; 1983 ; Journal on Matrix Analysis and Application Volume 4 ; 4 ; https://epubs.siam.org/ ; >
+    au < manifest ; exists ; 1984 ; Journal on Matrix Analysis and Application Volume 5 ; 5 ; https://epubs.siam.org/ ; >
+    au < manifest ; exists ; 1985 ; Journal on Matrix Analysis and Application Volume 6 ; 6 ; https://epubs.siam.org/ ; >
+    au < manifest ; exists ; 1986 ; Journal on Matrix Analysis and Application Volume 7 ; 7 ; https://epubs.siam.org/ ; >
+    au < manifest ; exists ; 1987 ; Journal on Matrix Analysis and Application Volume 8 ; 8 ; https://epubs.siam.org/ ; >
+    }
+    {
     param[journal_id] = sjmael
-
-    au < exists ; exists ; 1980 ; Journal on Matrix Analysis and Application Volume 1 ; 1 ; https://epubs.siam.org/ ; >
-    au < exists ; exists ; 1981 ; Journal on Matrix Analysis and Application Volume 2 ; 2 ; https://epubs.siam.org/ ; >
-    au < exists ; exists ; 1982 ; Journal on Matrix Analysis and Application Volume 3 ; 3 ; https://epubs.siam.org/ ; >
-    au < exists ; exists ; 1983 ; Journal on Matrix Analysis and Application Volume 4 ; 4 ; https://epubs.siam.org/ ; >
-    au < exists ; exists ; 1984 ; Journal on Matrix Analysis and Application Volume 5 ; 5 ; https://epubs.siam.org/ ; >
-    au < exists ; exists ; 1985 ; Journal on Matrix Analysis and Application Volume 6 ; 6 ; https://epubs.siam.org/ ; >
-    au < exists ; exists ; 1986 ; Journal on Matrix Analysis and Application Volume 7 ; 7 ; https://epubs.siam.org/ ; >
-    au < exists ; exists ; 1987 ; Journal on Matrix Analysis and Application Volume 8 ; 8 ; https://epubs.siam.org/ ; >
-
 
     au < manifest ; exists ; 1988 ; Journal on Matrix Analysis and Application Volume 9 ; 9 ; https://epubs.siam.org/ ; >
     au < manifest ; exists ; 1989 ; Journal on Matrix Analysis and Application Volume 10 ; 10 ; https://epubs.siam.org/ ; >
@@ -530,7 +533,7 @@
     au < finished ; manifest ; 2018 ; Journal on Matrix Analysis and Application Volume 39 ; 39 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; Journal on Matrix Analysis and Application Volume 40 ; 40 ; https://epubs.siam.org/ ; >
     au < manifest ; exists ; 2020 ; Journal on Matrix Analysis and Application Volume 41 ; 41 ; https://epubs.siam.org/ ; >
-
+    }
   }
 
   {
@@ -541,10 +544,14 @@
       eissn = 1095-7170
     >
 
-    param[journal_id] = sjnaam
+    {
+    param[journal_id] = sjnaam.1
 
     au < exists ; exists ; 1964 ; Journal on Numerical Analysis Volume 1 ; 1 ; https://epubs.siam.org/ ; >
     au < exists ; exists ; 1965 ; Journal on Numerical Analysis Volume 2 ; 2 ; https://epubs.siam.org/ ; >
+    }
+    {
+    param[journal_id] = sjnaam
 
     au < manifest ; exists ; 1966 ; Journal on Numerical Analysis Volume 3 ; 3 ; https://epubs.siam.org/ ; >
     au < manifest ; exists ; 1967 ; Journal on Numerical Analysis Volume 4 ; 4 ; https://epubs.siam.org/ ; >
@@ -602,7 +609,7 @@
     au < finished ; manifest ; 2018 ; Journal on Numerical Analysis Volume 56 ; 56 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2019 ; Journal on Numerical Analysis Volume 57 ; 57 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
     au < manifest ; exists ; 2020 ; Journal on Numerical Analysis Volume 58 ; 58 ; https://epubs.siam.org/ ; >
-
+    }
   }
 
    {
@@ -656,21 +663,25 @@
       eissn = 1095-7197
     >
 
-    param[journal_id] = sjoce3
+    {
+    param[journal_id] = sijcd4
 
-    au < exists ; exists ; 1980 ; Journal on Scientific Computing Volume 1 ; 1 ; https://epubs.siam.org/ ; >
-    au < exists ; exists ; 1981 ; Journal on Scientific Computing Volume 2 ; 2 ; https://epubs.siam.org/ ; >
-    au < exists ; exists ; 1982 ; Journal on Scientific Computing Volume 3 ; 3 ; https://epubs.siam.org/ ; >
-    au < exists ; exists ; 1983 ; Journal on Scientific Computing Volume 4 ; 4 ; https://epubs.siam.org/ ; >
-    au < exists ; exists ; 1984 ; Journal on Scientific Computing Volume 5 ; 5 ; https://epubs.siam.org/ ; >
-    au < exists ; exists ; 1985 ; Journal on Scientific Computing Volume 6 ; 6 ; https://epubs.siam.org/ ; >
-    au < exists ; exists ; 1986 ; Journal on Scientific Computing Volume 7 ; 7 ; https://epubs.siam.org/ ; >
-    au < exists ; exists ; 1987 ; Journal on Scientific Computing Volume 8 ; 8 ; https://epubs.siam.org/ ; >
-    au < exists ; exists ; 1988 ; Journal on Scientific Computing Volume 9 ; 9 ; https://epubs.siam.org/ ; >
-    au < exists ; exists ; 1989 ; Journal on Scientific Computing Volume 10 ; 10 ; https://epubs.siam.org/ ; >
-    au < exists ; exists ; 1990 ; Journal on Scientific Computing Volume 11 ; 11 ; https://epubs.siam.org/ ; >
-    au < exists ; exists ; 1991 ; Journal on Scientific Computing Volume 12 ; 12 ; https://epubs.siam.org/ ; >
-    au < exists ; exists ; 1992 ; Journal on Scientific Computing Volume 13 ; 13 ; https://epubs.siam.org/ ; >
+    au < manifest ; exists ; 1980 ; Journal on Scientific Computing Volume 1 ; 1 ; https://epubs.siam.org/ ; >
+    au < manifest ; exists ; 1981 ; Journal on Scientific Computing Volume 2 ; 2 ; https://epubs.siam.org/ ; >
+    au < manifest ; exists ; 1982 ; Journal on Scientific Computing Volume 3 ; 3 ; https://epubs.siam.org/ ; >
+    au < manifest ; exists ; 1983 ; Journal on Scientific Computing Volume 4 ; 4 ; https://epubs.siam.org/ ; >
+    au < manifest ; exists ; 1984 ; Journal on Scientific Computing Volume 5 ; 5 ; https://epubs.siam.org/ ; >
+    au < manifest ; exists ; 1985 ; Journal on Scientific Computing Volume 6 ; 6 ; https://epubs.siam.org/ ; >
+    au < manifest ; exists ; 1986 ; Journal on Scientific Computing Volume 7 ; 7 ; https://epubs.siam.org/ ; >
+    au < manifest ; exists ; 1987 ; Journal on Scientific Computing Volume 8 ; 8 ; https://epubs.siam.org/ ; >
+    au < manifest ; exists ; 1988 ; Journal on Scientific Computing Volume 9 ; 9 ; https://epubs.siam.org/ ; >
+    au < manifest ; exists ; 1989 ; Journal on Scientific Computing Volume 10 ; 10 ; https://epubs.siam.org/ ; >
+    au < manifest ; exists ; 1990 ; Journal on Scientific Computing Volume 11 ; 11 ; https://epubs.siam.org/ ; >
+    au < manifest ; exists ; 1991 ; Journal on Scientific Computing Volume 12 ; 12 ; https://epubs.siam.org/ ; >
+    au < manifest ; exists ; 1992 ; Journal on Scientific Computing Volume 13 ; 13 ; https://epubs.siam.org/ ; >
+    }
+    {
+    param[journal_id] = sjoce3
 
     au < manifest ; exists ; 1993 ; Journal on Scientific Computing Volume 14 ; 14 ; https://epubs.siam.org/ ; >
     au < manifest ; exists ; 1994 ; Journal on Scientific Computing Volume 15 ; 15 ; https://epubs.siam.org/ ; >
@@ -701,7 +712,7 @@
     au < finished ; manifest ; 2018 ; Journal on Scientific Computing Volume 40 ; 40 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2019 ; Journal on Scientific Computing Volume 41 ; 41 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
     au < manifest ; exists ; 2020 ; Journal on Scientific Computing Volume 42 ; 42 ; https://epubs.siam.org/ ; >
-
+    }
   }
 
   {
