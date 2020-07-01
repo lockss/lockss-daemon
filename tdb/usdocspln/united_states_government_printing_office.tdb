@@ -8,6 +8,11 @@
   #before 2019 AUs were released with other plugin
   #this tdb file is 2019+; as well as some previous AUs that weren't released previously. To update use script scripts/tdb/check_usdocs_manifest_pages.sh
   #Release all content in this tdb file, then release back content starting 6/1/2019.
+  
+  #STATUSES. These statuses are asperational. The file is not necessarily accurate.
+  # notReady. AU has a complete manifest page, tested and could not pass.
+  # exists. start page exists, but is not complete
+  # doesNotExist. start page does not exist.
 
   {
 
