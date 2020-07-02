@@ -12,6 +12,8 @@
   param[base_url] = https://dl.sciencesocieties.org/
   implicit < status ; status2 ; year ; isbn ; name ; param[book_id] ; hidden[proxy] >
   # move to Wiley in 2020
+  
+  type = bookSeries
 
   {
 
