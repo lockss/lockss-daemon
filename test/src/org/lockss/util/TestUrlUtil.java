@@ -722,6 +722,10 @@ public class TestUrlUtil extends LockssTestCase {
 		 UrlUtil.resolveUri("http://test.com/foo/bar/baz/xxx.html",
 				    "./a.html"));
 
+    assertEquals("http://test.com/",
+		 UrlUtil.resolveUri("http://test.com/foo/bar/baz/xxx.html",
+				    "/"));
+
     // According to RFC 1808, Firefox, IE, Opera, last component of base
     // path (following final slash) is *not* removed if relative URL has
     // null path.  RFC 2396 disagrees, but we follow the browsers
@@ -749,6 +753,9 @@ public class TestUrlUtil extends LockssTestCase {
     assertEquals("http://test.com/foo/bar/?a=b",
 		 UrlUtil.resolveUri("http://test.com/foo/bar/",
 				    "?a=b"));
+    assertEquals("http://test.com/",
+		 UrlUtil.resolveUri("http://test.com/foo/bar/",
+				    "/"));
 
 
     // truncated base (no slash after hostname)
@@ -777,6 +784,9 @@ public class TestUrlUtil extends LockssTestCase {
     assertEquals("http://test.com/prog.php?foo=bar",
 		 UrlUtil.resolveUri("http://test.com/prog.php?fff=xxx",
 				    "?foo=bar"));
+    assertEquals("http://test.com/",
+		 UrlUtil.resolveUri("http://test.com",
+				    "/"));
     // With URL implementation this threw, URI version doesn't object.
     // Don't think anyone should count on this behavior.
     if (uri) {
