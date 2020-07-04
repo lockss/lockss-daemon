@@ -709,6 +709,80 @@ public class TestJsoupHtmlLinkExtractor extends LockssTestCase {
     assertEquals(SetUtil.set(url1, url2, url3), parseSingleSource(source));
   }
 
+  public void testAlternateDocUrl() throws Exception {
+    String url1 = "http://www.example.com/x/y/link1.html";
+    String url2 = "http://www.example.com/x/y/link2.html";
+    String url3 = "http://www.example.com/x/y/link3.html";
+
+    String source = "<html><head><title>Test</title></head><body>"
+      + "<a href=link1.html>link1</a>"
+      + "Filler, with <b>bold</b> tags and<i>others</i>"
+      + "<a href=link2.html>link2</a>"
+      + "<a href=link3.html>link3</a>";
+    assertEquals(SetUtil.set(url1, url2, url3),
+		 parseSingleSource("http://www.example.com/x/y/", source));
+  }
+
+  public void testAbsBaseTag() throws Exception {
+    String url0 = "http://www.example222.com/link0.html";
+    String url1 = "http://www.example222.com/link1.html";
+    String url2 = "http://www.example222.com/link2.html";
+    String url3 = "http://www.example222.com/link3.html";
+
+    String source = "<html><head><title>Test</title></head><body>"
+      // <base> applies to whole document, including links before it
+      + "<a href=link0.html>link1</a>"
+      + "<base href=http://www.example222.com>"
+      + "<a href=link1.html>link1</a>"
+      + "Filler, with <b>bold</b> tags and<i>others</i>"
+      // only the first base tag should take effect
+      + "<base href=http://www.example2.com>"
+      + "<a href=link2.html>link2</a>"
+      + "<base href=http://www.example3.com>"
+      + "<a href=link3.html>link3</a>";
+    assertEquals(SetUtil.set(url0, url1, url2, url3),
+		 parseSingleSource(source));
+  }
+
+  public void testRelBaseTag1() throws Exception {
+    String url0 = "http://www.example.com/foo/link0.html";
+    String url1 = "http://www.example.com/foo/link1.html";
+    String url2 = "http://www.example.com/foo/link2.html";
+    String url3 = "http://www.example.com/foo/link3.html";
+
+    String source = "<html><head><title>Test</title></head><body>"
+      // <base> applies to whole document, including links before it
+      + "<a href=link0.html>link1</a>"
+      + "<base href=foo/>"
+      + "<a href=link1.html>link1</a>"
+      + "Filler, with <b>bold</b> tags and<i>others</i>"
+      // only the first base tag should take effect
+      + "<base href=http://www.example2.com>"
+      + "<a href=link2.html>link2</a>"
+      + "<base href=http://www.example3.com>"
+      + "<a href=link3.html>link3</a>";
+    assertEquals(SetUtil.set(url0, url1, url2, url3),
+		 parseSingleSource(source));
+  }
+
+  public void testRelBaseTag2() throws Exception {
+    String url0 = "http://www.example.com/link0.html";
+    String url1 = "http://www.example.com/link1.html";
+    String url2 = "http://www.example.com/link2.html";
+    String url3 = "http://www.example.com/link3.html";
+
+    String source = "<html><head><title>Test</title></head><body>"
+      // <base> applies to whole document, including links before it
+      + "<a href=link0.html>link1</a>"
+      + "<base href=/>"
+      + "<a href=link1.html>link1</a>"
+      + "Filler, with <b>bold</b> tags and<i>others</i>"
+      + "<a href=link2.html>link2</a>"
+      + "<a href=link3.html>link3</a>";
+    assertEquals(SetUtil.set(url0, url1, url2, url3),
+		 parseSingleSource("http://www.example.com/x/y/", source));
+  }
+
   // Relative URLs before a malforned base tag should be extracted, as well
   // as any absolute URLs after the malformed base tag
   // set
@@ -936,16 +1010,22 @@ public class TestJsoupHtmlLinkExtractor extends LockssTestCase {
     assertEquals(SetUtil.set(), parseSingleSource(source));
   }
 
-  private java.util.Set<String> parseSingleSource(String source) throws Exception {
+  private java.util.Set<String> parseSingleSource(String source)
+      throws Exception {
+    return parseSingleSource("http://www.example.com", source);
+  }
+
+  private java.util.Set<String> parseSingleSource(String docPath, String source)
+      throws Exception {
     MockArchivalUnit m_mau = new MockArchivalUnit();
     LinkExtractor ue = new RegexpCssLinkExtractor();
     m_mau.setLinkExtractor("text/css", ue);
-    MockCachedUrl mcu = new MockCachedUrl("http://www.example.com", m_mau);
+    MockCachedUrl mcu = new MockCachedUrl(docPath, m_mau);
     mcu.setContent(source);
 
     m_callback.reset();
     m_extractor.extractUrls(m_mau, new StringInputStream(source), ENC,
-                            "http://www.example.com", m_callback);
+                            docPath, m_callback);
     return m_callback.getFoundUrls();
   }
 
