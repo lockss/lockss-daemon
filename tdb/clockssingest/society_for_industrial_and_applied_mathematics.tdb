@@ -233,7 +233,7 @@
     au < finished ; manifest ; 2017 ; Journal on Computing Volume 46 ; 46 ; http://epubs.siam.org/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2018 ; Journal on Computing Volume 47 ; 47 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2019 ; Journal on Computing Volume 48 ; 48 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
-    au < exists ; exists ; 2020 ; Journal on Computing Volume 49 ; 49 ; https://epubs.siam.org/ ; >
+    au < manifest ; exists ; 2020 ; Journal on Computing Volume 49 ; 49 ; https://epubs.siam.org/ ; >
 
   }
 
@@ -248,23 +248,23 @@
     {
     param[journal_id] = sjcodc.1
 
-    au < exists ; exists ; 1962-1963 ; Journal on Control and Optimization Volume 1 ; 1 ; https://epubs.siam.org/ ; >
-    au < exists ; exists ; 1964 ; Journal on Control and Optimization Volume 2 ; 2 ; https://epubs.siam.org/ ; >
-    au < exists ; exists ; 1965 ; Journal on Control and Optimization Volume 3 ; 3 ; https://epubs.siam.org/ ; >
+    au < manifest ; exists ; 1962-1963 ; Journal on Control and Optimization Volume 1 ; 1 ; https://epubs.siam.org/ ; >
+    au < manifest ; exists ; 1964 ; Journal on Control and Optimization Volume 2 ; 2 ; https://epubs.siam.org/ ; >
+    au < manifest ; exists ; 1965 ; Journal on Control and Optimization Volume 3 ; 3 ; https://epubs.siam.org/ ; >
     }
     {
     param[journal_id] = sjcodc.2
 
-    au < exists ; exists ; 1966 ; Journal on Control and Optimization Volume 4 ; 4 ; https://epubs.siam.org/ ; >
-    au < exists ; exists ; 1967 ; Journal on Control and Optimization Volume 5 ; 5 ; https://epubs.siam.org/ ; >
-    au < exists ; exists ; 1968 ; Journal on Control and Optimization Volume 6 ; 6 ; https://epubs.siam.org/ ; >
-    au < exists ; exists ; 1969 ; Journal on Control and Optimization Volume 7 ; 7 ; https://epubs.siam.org/ ; >
-    au < exists ; exists ; 1970 ; Journal on Control and Optimization Volume 8 ; 8 ; https://epubs.siam.org/ ; >
-    au < exists ; exists ; 1971 ; Journal on Control and Optimization Volume 9 ; 9 ; https://epubs.siam.org/ ; >
-    au < exists ; exists ; 1972 ; Journal on Control and Optimization Volume 10 ; 10 ; https://epubs.siam.org/ ; >
-    au < exists ; exists ; 1973 ; Journal on Control and Optimization Volume 11 ; 11 ; https://epubs.siam.org/ ; >
-    au < exists ; exists ; 1974 ; Journal on Control and Optimization Volume 12 ; 12 ; https://epubs.siam.org/ ; >
-    au < exists ; exists ; 1975 ; Journal on Control and Optimization Volume 13 ; 13 ; https://epubs.siam.org/ ; >
+    au < manifest ; exists ; 1966 ; Journal on Control and Optimization Volume 4 ; 4 ; https://epubs.siam.org/ ; >
+    au < manifest ; exists ; 1967 ; Journal on Control and Optimization Volume 5 ; 5 ; https://epubs.siam.org/ ; >
+    au < manifest ; exists ; 1968 ; Journal on Control and Optimization Volume 6 ; 6 ; https://epubs.siam.org/ ; >
+    au < manifest ; exists ; 1969 ; Journal on Control and Optimization Volume 7 ; 7 ; https://epubs.siam.org/ ; >
+    au < manifest ; exists ; 1970 ; Journal on Control and Optimization Volume 8 ; 8 ; https://epubs.siam.org/ ; >
+    au < manifest ; exists ; 1971 ; Journal on Control and Optimization Volume 9 ; 9 ; https://epubs.siam.org/ ; >
+    au < manifest ; exists ; 1972 ; Journal on Control and Optimization Volume 10 ; 10 ; https://epubs.siam.org/ ; >
+    au < manifest ; exists ; 1973 ; Journal on Control and Optimization Volume 11 ; 11 ; https://epubs.siam.org/ ; >
+    au < manifest ; exists ; 1974 ; Journal on Control and Optimization Volume 12 ; 12 ; https://epubs.siam.org/ ; >
+    au < manifest ; exists ; 1975 ; Journal on Control and Optimization Volume 13 ; 13 ; https://epubs.siam.org/ ; >
     }
     {
     param[journal_id] = sjcodc
@@ -547,8 +547,8 @@
     {
     param[journal_id] = sjnaam.1
 
-    au < exists ; exists ; 1964 ; Journal on Numerical Analysis Volume 1 ; 1 ; https://epubs.siam.org/ ; >
-    au < exists ; exists ; 1965 ; Journal on Numerical Analysis Volume 2 ; 2 ; https://epubs.siam.org/ ; >
+    au < manifest ; exists ; 1964 ; Journal on Numerical Analysis Volume 1 ; 1 ; https://epubs.siam.org/ ; >
+    au < manifest ; exists ; 1965 ; Journal on Numerical Analysis Volume 2 ; 2 ; https://epubs.siam.org/ ; >
     }
     {
     param[journal_id] = sjnaam
