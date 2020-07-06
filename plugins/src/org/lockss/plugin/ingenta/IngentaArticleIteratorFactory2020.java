@@ -55,17 +55,17 @@ public class IngentaArticleIteratorFactory2020 implements ArticleIteratorFactory
   publisher id: ascp
   vol. 34, No. 1, 2019
    */
-  // Original link: https://www.ingentaconnect.com/content/ascp/tscp/2019/00000034/00000001/art00002
-  // Article:       https://www.ingentaconnect.com/content/ascp/tscp/2019/00000034/00000001/art00002?crawler=true&mimetype=text/html
-  // PDF:           https://www.ingentaconnect.com/content/ascp/tscp/2019/00000034/00000001/art00002?crawler=true&mimetype=application/pdf
+  // Original link: https://api.ingentaconnect.com/content/ascp/tscp/2019/00000034/00000001/art00002
+  // Article:       https://api.ingentaconnect.com/content/ascp/tscp/2019/00000034/00000001/art00002?crawler=true&mimetype=text/html
+  // PDF:           https://api.ingentaconnect.com/content/ascp/tscp/2019/00000034/00000001/art00002?crawler=true&mimetype=application/pdf
 
 
   protected static final String ROOT_TEMPLATE = "\"%scontent/%s/%s\", api_url, publisher_id, journal_id";
-  private static final String PATTERN_TEMPLATE = "\"^%scontent/%s/%s/([0-9]{4}/\\d+/\\d+/art[0-9]{5})\\?crawler=true\", " +
+  private static final String PATTERN_TEMPLATE = "\"^%scontent/%s/%s/([0-9]{4}/[^/]+/[^/]+/art[0-9]{5})\\?crawler=true\", " +
           "api_url, publisher_id, journal_id";
 
-  public static final Pattern HTML_PATTERN = Pattern.compile("/([0-9]{4}/\\d+/\\d+/art[0-9]{5})\\?crawler=true&mimetype=text/html", Pattern.CASE_INSENSITIVE);
-  public static final Pattern PDF_PATTERN = Pattern.compile("/([0-9]{4}/\\d+/\\d+/art[0-9]{5})\\?crawler=true&mimetype=application/pdf", Pattern.CASE_INSENSITIVE);
+  public static final Pattern HTML_PATTERN = Pattern.compile("/([0-9]{4}/[^/]+/[^/]+/art[0-9]{5})\\?crawler=true&mimetype=text/html", Pattern.CASE_INSENSITIVE);
+  public static final Pattern PDF_PATTERN = Pattern.compile("/([0-9]{4}/[^/]+/[^/]+/art[0-9]{5})\\?crawler=true&mimetype=application/pdf", Pattern.CASE_INSENSITIVE);
   public static final String HTML_REPLACEMENT = "/$1?crawler=true&mimetype=text/html";
   private static final String PDF_REPLACEMENT = "/$1?crawler=true&mimetype=application/pdf";
 
