@@ -14,16 +14,16 @@
     >
 
       # More than one journal
-	  #Duke Mathematical Journal 
+	  #Duke Mathematical Journal
 	  #issn = 0012-7094 ; eissn = 1547-7398
 
       plugin = org.lockss.plugin.clockss.duke.ClockssDukeEuclidSourcePlugin
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/dukeupress-released/
-      
+
       hidden[proxy] = DIRECT
       implicit < status ; status2 ; year ; name ; param[directory] >
 
-      au < readySource ; crawling ; 2018 ; Duke University Press Source Content 2018 ; 2018 >
+      au < readySource ; frozen ; 2018 ; Duke University Press Source Content 2018 ; 2018 >
       au < readySource ; finished ; 2019 ; Duke University Press Source Content 2019 ; 2019 >
 
     }

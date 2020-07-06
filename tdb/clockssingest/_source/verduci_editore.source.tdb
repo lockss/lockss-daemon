@@ -5,20 +5,20 @@
     info[contract] = 2017 ;
     info[tester] = S
   >
-  
+
   {
-  
+
     title <
        name = Verduci Editore Source Content
     >
-    
+
     plugin = org.lockss.plugin.clockss.verduci.ClockssVerduciEditoreSourcePlugin
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/verduci-released/
-    
+
     hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[directory] >
 
-    au < readySource ; crawling ; 2018 ; Verduci Editore Source Content 2018 ; 2018 >
+    au < readySource ; frozen ; 2018 ; Verduci Editore Source Content 2018 ; 2018 >
     au < readySource ; finished ; 2019 ; Verduci Editore Source Content 2019 ; 2019 >
 
   }

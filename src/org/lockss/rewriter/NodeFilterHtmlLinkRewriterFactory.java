@@ -155,7 +155,7 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
       HtmlNodeFilters.linkRegexYesXforms(linkRegex1, ignCase1, rwRegex1,
                                          rwTarget1, getAttrsToRewrite());
 
-    HtmlBaseProcessor base = new HtmlBaseProcessor();
+    HtmlBaseProcessor base = new HtmlBaseProcessor(url);
     List<RelXform> relXforms = new ArrayList<RelXform>();
 
     // Rewrite relative links
@@ -389,10 +389,13 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
   }    
 
   public static class HtmlBaseProcessor extends TagNameFilter {
+    private String origBaseUrl;
     private List<RelXform> xforms;
+    private boolean hasBaseBeenSet = false;
 
-    public HtmlBaseProcessor() {
+    public HtmlBaseProcessor(String baseUrl) {
       super("BASE");
+      origBaseUrl = baseUrl;
     }
 
     public void setXforms(List<RelXform> xforms) {
@@ -403,17 +406,28 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
       if (!super.accept(node)) {
         return false;
       }
+      if (hasBaseBeenSet) {
+	logger.siteWarning("Ignoring 2nd (or later) base tag: " + node);
+	return false;
+      }
       Attribute attr = ((TagNode)node).getAttributeEx("href");
       if (attr != null) {
-        String newbase = attr.getValue();
-        for (RelXform xform : xforms) {
-          try {
-            xform.setBaseUrl(newbase);
-          } catch (MalformedURLException e) {
-            logger.warning("Not resetting rewriter's base URL", e);
-          }
-        }
+        String baseHref = attr.getValue();
+	try {
+	  String newBase = UrlUtil.resolveUri(origBaseUrl, baseHref);
+	  for (RelXform xform : xforms) {
+	    try {
+	      xform.setBaseUrl(newBase);
+	    } catch (MalformedURLException e) {
+	      logger.warning("Not resetting rewriter's base URL", e);
+	    }
+	  }
+	} catch (MalformedURLException e) {
+	  logger.warning("Not resetting rewriter's base URL", e);
+	}
+
       }
+      hasBaseBeenSet = true;
       return false;
     }
   }

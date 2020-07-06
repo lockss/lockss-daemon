@@ -45,8 +45,8 @@
     au < manifest ; 1978 ; AIAA Journal Volume 16 ; 16 ; https://arc.aiaa.org/ >
     au < manifest ; 1979 ; AIAA Journal Volume 17 ; 17 ; https://arc.aiaa.org/ >
     au < manifest ; 1980 ; AIAA Journal Volume 18 ; 18 ; https://arc.aiaa.org/ >
-    au < manifest ; 1981 ; AIAA Journal Volume 19 ; 19 ; https://arc.aiaa.org/ >
-    au < manifest ; 1982 ; AIAA Journal Volume 20 ; 20 ; https://arc.aiaa.org/ >
+    au < testing ; 1981 ; AIAA Journal Volume 19 ; 19 ; https://arc.aiaa.org/ >
+    au < testing ; 1982 ; AIAA Journal Volume 20 ; 20 ; https://arc.aiaa.org/ >
     au < manifest ; 1983 ; AIAA Journal Volume 21 ; 21 ; https://arc.aiaa.org/ >
     au < manifest ; 1984 ; AIAA Journal Volume 22 ; 22 ; https://arc.aiaa.org/ >
     au < manifest ; 1985 ; AIAA Journal Volume 23 ; 23 ; https://arc.aiaa.org/ >
@@ -54,8 +54,8 @@
     au < manifest ; 1987 ; AIAA Journal Volume 25 ; 25 ; https://arc.aiaa.org/ >
     au < manifest ; 1988 ; AIAA Journal Volume 26 ; 26 ; https://arc.aiaa.org/ >
     au < manifest ; 1989 ; AIAA Journal Volume 27 ; 27 ; https://arc.aiaa.org/ >
-    au < manifest ; 1990 ; AIAA Journal Volume 28 ; 28 ; https://arc.aiaa.org/ >
-    au < manifest ; 1991 ; AIAA Journal Volume 29 ; 29 ; https://arc.aiaa.org/ >
+    au < testing ; 1990 ; AIAA Journal Volume 28 ; 28 ; https://arc.aiaa.org/ >
+    au < testing ; 1991 ; AIAA Journal Volume 29 ; 29 ; https://arc.aiaa.org/ >
     au < manifest ; 1992 ; AIAA Journal Volume 30 ; 30 ; https://arc.aiaa.org/ >
     au < manifest ; 1993 ; AIAA Journal Volume 31 ; 31 ; https://arc.aiaa.org/ >
     au < manifest ; 1994 ; AIAA Journal Volume 32 ; 32 ; https://arc.aiaa.org/ >
@@ -99,13 +99,13 @@
     param[journal_id] = atcq
     comment[continued_as] = 2380-9450 #Journal of Air Transportation
 
-    au < testing ; 1993 ; Air Traffic Control Quarterly Volume 1 ; 1 ; https://arc.aiaa.org/ >
+    au < ready ; 1993 ; Air Traffic Control Quarterly Volume 1 ; 1 ; https://arc.aiaa.org/ >
     au < testing ; 1994 ; Air Traffic Control Quarterly Volume 2 ; 2 ; https://arc.aiaa.org/ >
-    au < manifest ; 1995 ; Air Traffic Control Quarterly Volume 3 ; 3 ; https://arc.aiaa.org/ >
-    au < manifest ; 1996 ; Air Traffic Control Quarterly Volume 4 ; 4 ; https://arc.aiaa.org/ >
-    au < testing ; 1997 ; Air Traffic Control Quarterly Volume 5 ; 5 ; https://arc.aiaa.org/ >
-    au < testing ; 1998 ; Air Traffic Control Quarterly Volume 6 ; 6 ; https://arc.aiaa.org/ >
-    au < manifest ; 1999 ; Air Traffic Control Quarterly Volume 7 ; 7 ; https://arc.aiaa.org/ >
+    au < ready ; 1995 ; Air Traffic Control Quarterly Volume 3 ; 3 ; https://arc.aiaa.org/ >
+    au < ready ; 1996 ; Air Traffic Control Quarterly Volume 4 ; 4 ; https://arc.aiaa.org/ >
+    au < ready ; 1997 ; Air Traffic Control Quarterly Volume 5 ; 5 ; https://arc.aiaa.org/ >
+    au < ready ; 1998 ; Air Traffic Control Quarterly Volume 6 ; 6 ; https://arc.aiaa.org/ >
+    au < ready ; 1999 ; Air Traffic Control Quarterly Volume 7 ; 7 ; https://arc.aiaa.org/ >
     au < released ; 2000 ; Air Traffic Control Quarterly Volume 8 ; 8 ; https://arc.aiaa.org/ >
     au < released ; 2001 ; Air Traffic Control Quarterly Volume 9 ; 9 ; https://arc.aiaa.org/ >
     au < released ; 2002 ; Air Traffic Control Quarterly Volume 10 ; 10 ; https://arc.aiaa.org/ >
@@ -199,41 +199,41 @@
     param[journal_id] = ja
 
     au < testing ; 1964 ; Journal of Aircraft Volume 1 ; 1 ; https://arc.aiaa.org/ >
-    au < testing ; 1965 ; Journal of Aircraft Volume 2 ; 2 ; https://arc.aiaa.org/ >
-    au < manifest ; 1966 ; Journal of Aircraft Volume 3 ; 3 ; https://arc.aiaa.org/ >
-    au < manifest ; 1967 ; Journal of Aircraft Volume 4 ; 4 ; https://arc.aiaa.org/ >
-    au < testing ; 1968 ; Journal of Aircraft Volume 5 ; 5 ; https://arc.aiaa.org/ >
-    au < testing ; 1969 ; Journal of Aircraft Volume 6 ; 6 ; https://arc.aiaa.org/ >
-    au < manifest ; 1970 ; Journal of Aircraft Volume 7 ; 7 ; https://arc.aiaa.org/ >
-    au < manifest ; 1971 ; Journal of Aircraft Volume 8 ; 8 ; https://arc.aiaa.org/ >
-    au < manifest ; 1972 ; Journal of Aircraft Volume 9 ; 9 ; https://arc.aiaa.org/ >
-    au < manifest ; 1973 ; Journal of Aircraft Volume 10 ; 10 ; https://arc.aiaa.org/ >
-    au < manifest ; 1974 ; Journal of Aircraft Volume 11 ; 11 ; https://arc.aiaa.org/ >
-    au < manifest ; 1975 ; Journal of Aircraft Volume 12 ; 12 ; https://arc.aiaa.org/ >
-    au < manifest ; 1976 ; Journal of Aircraft Volume 13 ; 13 ; https://arc.aiaa.org/ >
-    au < manifest ; 1977 ; Journal of Aircraft Volume 14 ; 14 ; https://arc.aiaa.org/ >
-    au < manifest ; 1978 ; Journal of Aircraft Volume 15 ; 15 ; https://arc.aiaa.org/ >
-    au < manifest ; 1979 ; Journal of Aircraft Volume 16 ; 16 ; https://arc.aiaa.org/ >
-    au < testing ; 1980 ; Journal of Aircraft Volume 17 ; 17 ; https://arc.aiaa.org/ >
+    au < ready ; 1965 ; Journal of Aircraft Volume 2 ; 2 ; https://arc.aiaa.org/ >
+    au < ready ; 1966 ; Journal of Aircraft Volume 3 ; 3 ; https://arc.aiaa.org/ >
+    au < ready ; 1967 ; Journal of Aircraft Volume 4 ; 4 ; https://arc.aiaa.org/ >
+    au < ready ; 1968 ; Journal of Aircraft Volume 5 ; 5 ; https://arc.aiaa.org/ >
+    au < ready ; 1969 ; Journal of Aircraft Volume 6 ; 6 ; https://arc.aiaa.org/ >
+    au < ready ; 1970 ; Journal of Aircraft Volume 7 ; 7 ; https://arc.aiaa.org/ >
+    au < ready ; 1971 ; Journal of Aircraft Volume 8 ; 8 ; https://arc.aiaa.org/ >
+    au < ready ; 1972 ; Journal of Aircraft Volume 9 ; 9 ; https://arc.aiaa.org/ >
+    au < ready ; 1973 ; Journal of Aircraft Volume 10 ; 10 ; https://arc.aiaa.org/ >
+    au < ready ; 1974 ; Journal of Aircraft Volume 11 ; 11 ; https://arc.aiaa.org/ >
+    au < ready ; 1975 ; Journal of Aircraft Volume 12 ; 12 ; https://arc.aiaa.org/ >
+    au < ready ; 1976 ; Journal of Aircraft Volume 13 ; 13 ; https://arc.aiaa.org/ >
+    au < ready ; 1977 ; Journal of Aircraft Volume 14 ; 14 ; https://arc.aiaa.org/ >
+    au < ready ; 1978 ; Journal of Aircraft Volume 15 ; 15 ; https://arc.aiaa.org/ >
+    au < ready ; 1979 ; Journal of Aircraft Volume 16 ; 16 ; https://arc.aiaa.org/ >
+    au < ready ; 1980 ; Journal of Aircraft Volume 17 ; 17 ; https://arc.aiaa.org/ >
     au < testing ; 1981 ; Journal of Aircraft Volume 18 ; 18 ; https://arc.aiaa.org/ >
-    au < manifest ; 1982 ; Journal of Aircraft Volume 19 ; 19 ; https://arc.aiaa.org/ >
-    au < manifest ; 1983 ; Journal of Aircraft Volume 20 ; 20 ; https://arc.aiaa.org/ >
-    au < manifest ; 1984 ; Journal of Aircraft Volume 21 ; 21 ; https://arc.aiaa.org/ >
-    au < manifest ; 1985 ; Journal of Aircraft Volume 22 ; 22 ; https://arc.aiaa.org/ >
-    au < manifest ; 1986 ; Journal of Aircraft Volume 23 ; 23 ; https://arc.aiaa.org/ >
-    au < manifest ; 1987 ; Journal of Aircraft Volume 24 ; 24 ; https://arc.aiaa.org/ >
-    au < manifest ; 1988 ; Journal of Aircraft Volume 25 ; 25 ; https://arc.aiaa.org/ >
-    au < manifest ; 1989 ; Journal of Aircraft Volume 26 ; 26 ; https://arc.aiaa.org/ >
-    au < manifest ; 1990 ; Journal of Aircraft Volume 27 ; 27 ; https://arc.aiaa.org/ >
-    au < manifest ; 1991 ; Journal of Aircraft Volume 28 ; 28 ; https://arc.aiaa.org/ >
-    au < testing ; 1992 ; Journal of Aircraft Volume 29 ; 29 ; https://arc.aiaa.org/ >
-    au < testing ; 1993 ; Journal of Aircraft Volume 30 ; 30 ; https://arc.aiaa.org/ >
-    au < manifest ; 1994 ; Journal of Aircraft Volume 31 ; 31 ; https://arc.aiaa.org/ >
-    au < manifest ; 1995 ; Journal of Aircraft Volume 32 ; 32 ; https://arc.aiaa.org/ >
-    au < manifest ; 1996 ; Journal of Aircraft Volume 33 ; 33 ; https://arc.aiaa.org/ >
-    au < manifest ; 1997 ; Journal of Aircraft Volume 34 ; 34 ; https://arc.aiaa.org/ >
-    au < manifest ; 1998 ; Journal of Aircraft Volume 35 ; 35 ; https://arc.aiaa.org/ >
-    au < manifest ; 1999 ; Journal of Aircraft Volume 36 ; 36 ; https://arc.aiaa.org/ >
+    au < ready ; 1982 ; Journal of Aircraft Volume 19 ; 19 ; https://arc.aiaa.org/ >
+    au < ready ; 1983 ; Journal of Aircraft Volume 20 ; 20 ; https://arc.aiaa.org/ >
+    au < ready ; 1984 ; Journal of Aircraft Volume 21 ; 21 ; https://arc.aiaa.org/ >
+    au < ready ; 1985 ; Journal of Aircraft Volume 22 ; 22 ; https://arc.aiaa.org/ >
+    au < ready ; 1986 ; Journal of Aircraft Volume 23 ; 23 ; https://arc.aiaa.org/ >
+    au < ready ; 1987 ; Journal of Aircraft Volume 24 ; 24 ; https://arc.aiaa.org/ >
+    au < ready ; 1988 ; Journal of Aircraft Volume 25 ; 25 ; https://arc.aiaa.org/ >
+    au < ready ; 1989 ; Journal of Aircraft Volume 26 ; 26 ; https://arc.aiaa.org/ >
+    au < ready ; 1990 ; Journal of Aircraft Volume 27 ; 27 ; https://arc.aiaa.org/ >
+    au < ready ; 1991 ; Journal of Aircraft Volume 28 ; 28 ; https://arc.aiaa.org/ >
+    au < ready ; 1992 ; Journal of Aircraft Volume 29 ; 29 ; https://arc.aiaa.org/ >
+    au < ready ; 1993 ; Journal of Aircraft Volume 30 ; 30 ; https://arc.aiaa.org/ >
+    au < ready ; 1994 ; Journal of Aircraft Volume 31 ; 31 ; https://arc.aiaa.org/ >
+    au < ready ; 1995 ; Journal of Aircraft Volume 32 ; 32 ; https://arc.aiaa.org/ >
+    au < ready ; 1996 ; Journal of Aircraft Volume 33 ; 33 ; https://arc.aiaa.org/ >
+    au < ready ; 1997 ; Journal of Aircraft Volume 34 ; 34 ; https://arc.aiaa.org/ >
+    au < ready ; 1998 ; Journal of Aircraft Volume 35 ; 35 ; https://arc.aiaa.org/ >
+    au < ready ; 1999 ; Journal of Aircraft Volume 36 ; 36 ; https://arc.aiaa.org/ >
     au < released ; 2000 ; Journal of Aircraft Volume 37 ; 37 ; https://arc.aiaa.org/ >
     au < released ; 2001 ; Journal of Aircraft Volume 38 ; 38 ; https://arc.aiaa.org/ >
     au < released ; 2002 ; Journal of Aircraft Volume 39 ; 39 ; https://arc.aiaa.org/ >
@@ -268,13 +268,13 @@
     >
     param[journal_id] = je
 
-    au < testing ; 1977 ; Journal of Energy Volume 1 ; 1 ; https://arc.aiaa.org/ >
-    au < testing ; 1978 ; Journal of Energy Volume 2 ; 2 ; https://arc.aiaa.org/ >
-    au < manifest ; 1979 ; Journal of Energy Volume 3 ; 3 ; https://arc.aiaa.org/ >
-    au < manifest ; 1980 ; Journal of Energy Volume 4 ; 4 ; https://arc.aiaa.org/ >
-    au < testing ; 1981 ; Journal of Energy Volume 5 ; 5 ; https://arc.aiaa.org/ >
-    au < testing ; 1982 ; Journal of Energy Volume 6 ; 6 ; https://arc.aiaa.org/ >
-    au < testing ; 1983 ; Journal of Energy Volume 7 ; 7 ; https://arc.aiaa.org/ >
+    au < ready ; 1977 ; Journal of Energy Volume 1 ; 1 ; https://arc.aiaa.org/ >
+    au < ready ; 1978 ; Journal of Energy Volume 2 ; 2 ; https://arc.aiaa.org/ >
+    au < ready ; 1979 ; Journal of Energy Volume 3 ; 3 ; https://arc.aiaa.org/ >
+    au < ready ; 1980 ; Journal of Energy Volume 4 ; 4 ; https://arc.aiaa.org/ >
+    au < ready ; 1981 ; Journal of Energy Volume 5 ; 5 ; https://arc.aiaa.org/ >
+    au < ready ; 1982 ; Journal of Energy Volume 6 ; 6 ; https://arc.aiaa.org/ >
+    au < ready ; 1983 ; Journal of Energy Volume 7 ; 7 ; https://arc.aiaa.org/ >
 
   }
 
@@ -290,26 +290,26 @@
 
     au < testing ; 1978 ; Journal of Guidance, Control, and Dynamics Volume 1 ; 1 ; https://arc.aiaa.org/ >
     au < testing ; 1979 ; Journal of Guidance, Control, and Dynamics Volume 2 ; 2 ; https://arc.aiaa.org/ >
-    au < manifest ; 1980 ; Journal of Guidance, Control, and Dynamics Volume 3 ; 3 ; https://arc.aiaa.org/ >
-    au < manifest ; 1981 ; Journal of Guidance, Control, and Dynamics Volume 4 ; 4 ; https://arc.aiaa.org/ >
-    au < manifest ; 1982 ; Journal of Guidance, Control, and Dynamics Volume 5 ; 5 ; https://arc.aiaa.org/ >
+    au < testing ; 1980 ; Journal of Guidance, Control, and Dynamics Volume 3 ; 3 ; https://arc.aiaa.org/ >
+    au < testing ; 1981 ; Journal of Guidance, Control, and Dynamics Volume 4 ; 4 ; https://arc.aiaa.org/ >
+    au < testing ; 1982 ; Journal of Guidance, Control, and Dynamics Volume 5 ; 5 ; https://arc.aiaa.org/ >
     au < manifest ; 1983 ; Journal of Guidance, Control, and Dynamics Volume 6 ; 6 ; https://arc.aiaa.org/ >
     au < manifest ; 1984 ; Journal of Guidance, Control, and Dynamics Volume 7 ; 7 ; https://arc.aiaa.org/ >
     au < manifest ; 1985 ; Journal of Guidance, Control, and Dynamics Volume 8 ; 8 ; https://arc.aiaa.org/ >
-    au < testing ; 1986 ; Journal of Guidance, Control, and Dynamics Volume 9 ; 9 ; https://arc.aiaa.org/ >
-    au < testing ; 1987 ; Journal of Guidance, Control, and Dynamics Volume 10 ; 10 ; https://arc.aiaa.org/ >
-    au < manifest ; 1988 ; Journal of Guidance, Control, and Dynamics Volume 11 ; 11 ; https://arc.aiaa.org/ >
-    au < manifest ; 1989 ; Journal of Guidance, Control, and Dynamics Volume 12 ; 12 ; https://arc.aiaa.org/ >
-    au < manifest ; 1990 ; Journal of Guidance, Control, and Dynamics Volume 13 ; 13 ; https://arc.aiaa.org/ >
-    au < manifest ; 1991 ; Journal of Guidance, Control, and Dynamics Volume 14 ; 14 ; https://arc.aiaa.org/ >
-    au < manifest ; 1992 ; Journal of Guidance, Control, and Dynamics Volume 15 ; 15 ; https://arc.aiaa.org/ >
-    au < manifest ; 1993 ; Journal of Guidance, Control, and Dynamics Volume 16 ; 16 ; https://arc.aiaa.org/ >
-    au < manifest ; 1994 ; Journal of Guidance, Control, and Dynamics Volume 17 ; 17 ; https://arc.aiaa.org/ >
-    au < manifest ; 1995 ; Journal of Guidance, Control, and Dynamics Volume 18 ; 18 ; https://arc.aiaa.org/ >
-    au < testing ; 1996 ; Journal of Guidance, Control, and Dynamics Volume 19 ; 19 ; https://arc.aiaa.org/ >
-    au < testing ; 1997 ; Journal of Guidance, Control, and Dynamics Volume 20 ; 20 ; https://arc.aiaa.org/ >
-    au < manifest ; 1998 ; Journal of Guidance, Control, and Dynamics Volume 21 ; 21 ; https://arc.aiaa.org/ >
-    au < manifest ; 1999 ; Journal of Guidance, Control, and Dynamics Volume 22 ; 22 ; https://arc.aiaa.org/ >
+    au < ready ; 1986 ; Journal of Guidance, Control, and Dynamics Volume 9 ; 9 ; https://arc.aiaa.org/ >
+    au < ready ; 1987 ; Journal of Guidance, Control, and Dynamics Volume 10 ; 10 ; https://arc.aiaa.org/ >
+    au < ready ; 1988 ; Journal of Guidance, Control, and Dynamics Volume 11 ; 11 ; https://arc.aiaa.org/ >
+    au < ready ; 1989 ; Journal of Guidance, Control, and Dynamics Volume 12 ; 12 ; https://arc.aiaa.org/ >
+    au < ready ; 1990 ; Journal of Guidance, Control, and Dynamics Volume 13 ; 13 ; https://arc.aiaa.org/ >
+    au < ready ; 1991 ; Journal of Guidance, Control, and Dynamics Volume 14 ; 14 ; https://arc.aiaa.org/ >
+    au < ready ; 1992 ; Journal of Guidance, Control, and Dynamics Volume 15 ; 15 ; https://arc.aiaa.org/ >
+    au < ready ; 1993 ; Journal of Guidance, Control, and Dynamics Volume 16 ; 16 ; https://arc.aiaa.org/ >
+    au < ready ; 1994 ; Journal of Guidance, Control, and Dynamics Volume 17 ; 17 ; https://arc.aiaa.org/ >
+    au < ready ; 1995 ; Journal of Guidance, Control, and Dynamics Volume 18 ; 18 ; https://arc.aiaa.org/ >
+    au < ready ; 1996 ; Journal of Guidance, Control, and Dynamics Volume 19 ; 19 ; https://arc.aiaa.org/ >
+    au < ready ; 1997 ; Journal of Guidance, Control, and Dynamics Volume 20 ; 20 ; https://arc.aiaa.org/ >
+    au < ready ; 1998 ; Journal of Guidance, Control, and Dynamics Volume 21 ; 21 ; https://arc.aiaa.org/ >
+    au < ready ; 1999 ; Journal of Guidance, Control, and Dynamics Volume 22 ; 22 ; https://arc.aiaa.org/ >
     au < released ; 2000 ; Journal of Guidance, Control, and Dynamics Volume 23 ; 23 ; https://arc.aiaa.org/ >
     au < released ; 2001 ; Journal of Guidance, Control, and Dynamics Volume 24 ; 24 ; https://arc.aiaa.org/ >
     au < released ; 2002 ; Journal of Guidance, Control, and Dynamics Volume 25 ; 25 ; https://arc.aiaa.org/ >
@@ -344,21 +344,21 @@
     >
     param[journal_id] = jh
 
-    au < testing ; 1967 ; Journal of Hydronautics Volume 1 ; 1 ; https://arc.aiaa.org/ >
-    au < testing ; 1968 ; Journal of Hydronautics Volume 2 ; 2 ; https://arc.aiaa.org/ >
-    au < manifest ; 1969 ; Journal of Hydronautics Volume 3 ; 3 ; https://arc.aiaa.org/ >
-    au < manifest ; 1970 ; Journal of Hydronautics Volume 4 ; 4 ; https://arc.aiaa.org/ >
-    au < manifest ; 1971 ; Journal of Hydronautics Volume 5 ; 5 ; https://arc.aiaa.org/ >
-    au < manifest ; 1972 ; Journal of Hydronautics Volume 6 ; 6 ; https://arc.aiaa.org/ >
-    au < testing ; 1973 ; Journal of Hydronautics Volume 7 ; 7 ; https://arc.aiaa.org/ >
-    au < testing ; 1974 ; Journal of Hydronautics Volume 8 ; 8 ; https://arc.aiaa.org/ >
-    au < manifest ; 1975 ; Journal of Hydronautics Volume 9 ; 9 ; https://arc.aiaa.org/ >
-    au < manifest ; 1976 ; Journal of Hydronautics Volume 10 ; 10 ; https://arc.aiaa.org/ >
-    au < manifest ; 1977 ; Journal of Hydronautics Volume 11 ; 11 ; https://arc.aiaa.org/ >
-    au < manifest ; 1978 ; Journal of Hydronautics Volume 12 ; 12 ; https://arc.aiaa.org/ >
-    au < manifest ; 1979 ; Journal of Hydronautics Volume 13 ; 13 ; https://arc.aiaa.org/ >
-    au < testing ; 1980 ; Journal of Hydronautics Volume 14 ; 14 ; https://arc.aiaa.org/ >
-    au < testing ; 1981 ; Journal of Hydronautics Volume 15 ; 15 ; https://arc.aiaa.org/ >
+    au < ready ; 1967 ; Journal of Hydronautics Volume 1 ; 1 ; https://arc.aiaa.org/ >
+    au < ready ; 1968 ; Journal of Hydronautics Volume 2 ; 2 ; https://arc.aiaa.org/ >
+    au < ready ; 1969 ; Journal of Hydronautics Volume 3 ; 3 ; https://arc.aiaa.org/ >
+    au < ready ; 1970 ; Journal of Hydronautics Volume 4 ; 4 ; https://arc.aiaa.org/ >
+    au < ready ; 1971 ; Journal of Hydronautics Volume 5 ; 5 ; https://arc.aiaa.org/ >
+    au < ready ; 1972 ; Journal of Hydronautics Volume 6 ; 6 ; https://arc.aiaa.org/ >
+    au < ready ; 1973 ; Journal of Hydronautics Volume 7 ; 7 ; https://arc.aiaa.org/ >
+    au < ready ; 1974 ; Journal of Hydronautics Volume 8 ; 8 ; https://arc.aiaa.org/ >
+    au < ready ; 1975 ; Journal of Hydronautics Volume 9 ; 9 ; https://arc.aiaa.org/ >
+    au < ready ; 1976 ; Journal of Hydronautics Volume 10 ; 10 ; https://arc.aiaa.org/ >
+    au < ready ; 1977 ; Journal of Hydronautics Volume 11 ; 11 ; https://arc.aiaa.org/ >
+    au < ready ; 1978 ; Journal of Hydronautics Volume 12 ; 12 ; https://arc.aiaa.org/ >
+    au < ready ; 1979 ; Journal of Hydronautics Volume 13 ; 13 ; https://arc.aiaa.org/ >
+    au < ready ; 1980 ; Journal of Hydronautics Volume 14 ; 14 ; https://arc.aiaa.org/ >
+    au < ready ; 1981 ; Journal of Hydronautics Volume 15 ; 15 ; https://arc.aiaa.org/ >
 
   }
 
@@ -381,8 +381,8 @@
     au < manifest ; 1991 ; Journal of Propulsion and Power Volume 7 ; 7 ; https://arc.aiaa.org/ >
     au < manifest ; 1992 ; Journal of Propulsion and Power Volume 8 ; 8 ; https://arc.aiaa.org/ >
     au < manifest ; 1993 ; Journal of Propulsion and Power Volume 9 ; 9 ; https://arc.aiaa.org/ >
-    au < testing ; 1994 ; Journal of Propulsion and Power Volume 10 ; 10 ; https://arc.aiaa.org/ >
-    au < testing ; 1995 ; Journal of Propulsion and Power Volume 11 ; 11 ; https://arc.aiaa.org/ >
+    au < ready ; 1994 ; Journal of Propulsion and Power Volume 10 ; 10 ; https://arc.aiaa.org/ >
+    au < ready ; 1995 ; Journal of Propulsion and Power Volume 11 ; 11 ; https://arc.aiaa.org/ >
     au < manifest ; 1996 ; Journal of Propulsion and Power Volume 12 ; 12 ; https://arc.aiaa.org/ >
     au < manifest ; 1997 ; Journal of Propulsion and Power Volume 13 ; 13 ; https://arc.aiaa.org/ >
     au < manifest ; 1998 ; Journal of Propulsion and Power Volume 14 ; 14 ; https://arc.aiaa.org/ >
@@ -421,14 +421,14 @@
     >
     param[journal_id] = jsr
 
-    au < testing ; 1964 ; Journal of Spacecraft and Rockets Volume 1 ; 1 ; https://arc.aiaa.org/ >
-    au < testing ; 1965 ; Journal of Spacecraft and Rockets Volume 2 ; 2 ; https://arc.aiaa.org/ >
-    au < manifest ; 1966 ; Journal of Spacecraft and Rockets Volume 3 ; 3 ; https://arc.aiaa.org/ >
-    au < manifest ; 1967 ; Journal of Spacecraft and Rockets Volume 4 ; 4 ; https://arc.aiaa.org/ >
-    au < manifest ; 1968 ; Journal of Spacecraft and Rockets Volume 5 ; 5 ; https://arc.aiaa.org/ >
-    au < manifest ; 1969 ; Journal of Spacecraft and Rockets Volume 6 ; 6 ; https://arc.aiaa.org/ >
-    au < testing ; 1970 ; Journal of Spacecraft and Rockets Volume 7 ; 7 ; https://arc.aiaa.org/ >
-    au < testing ; 1971 ; Journal of Spacecraft and Rockets Volume 8 ; 8 ; https://arc.aiaa.org/ >
+    au < ready ; 1964 ; Journal of Spacecraft and Rockets Volume 1 ; 1 ; https://arc.aiaa.org/ >
+    au < ready ; 1965 ; Journal of Spacecraft and Rockets Volume 2 ; 2 ; https://arc.aiaa.org/ >
+    au < ready ; 1966 ; Journal of Spacecraft and Rockets Volume 3 ; 3 ; https://arc.aiaa.org/ >
+    au < ready ; 1967 ; Journal of Spacecraft and Rockets Volume 4 ; 4 ; https://arc.aiaa.org/ >
+    au < ready ; 1968 ; Journal of Spacecraft and Rockets Volume 5 ; 5 ; https://arc.aiaa.org/ >
+    au < ready ; 1969 ; Journal of Spacecraft and Rockets Volume 6 ; 6 ; https://arc.aiaa.org/ >
+    au < ready ; 1970 ; Journal of Spacecraft and Rockets Volume 7 ; 7 ; https://arc.aiaa.org/ >
+    au < ready ; 1971 ; Journal of Spacecraft and Rockets Volume 8 ; 8 ; https://arc.aiaa.org/ >
     au < manifest ; 1972 ; Journal of Spacecraft and Rockets Volume 9 ; 9 ; https://arc.aiaa.org/ >
     au < manifest ; 1973 ; Journal of Spacecraft and Rockets Volume 10 ; 10 ; https://arc.aiaa.org/ >
     au < manifest ; 1974 ; Journal of Spacecraft and Rockets Volume 11 ; 11 ; https://arc.aiaa.org/ >
@@ -447,8 +447,8 @@
     au < manifest ; 1987 ; Journal of Spacecraft and Rockets Volume 24 ; 24 ; https://arc.aiaa.org/ >
     au < manifest ; 1988 ; Journal of Spacecraft and Rockets Volume 25 ; 25 ; https://arc.aiaa.org/ >
     au < manifest ; 1989 ; Journal of Spacecraft and Rockets Volume 26 ; 26 ; https://arc.aiaa.org/ >
-    au < testing ; 1990 ; Journal of Spacecraft and Rockets Volume 27 ; 27 ; https://arc.aiaa.org/ >
-    au < testing ; 1991 ; Journal of Spacecraft and Rockets Volume 28 ; 28 ; https://arc.aiaa.org/ >
+    au < ready ; 1990 ; Journal of Spacecraft and Rockets Volume 27 ; 27 ; https://arc.aiaa.org/ >
+    au < ready ; 1991 ; Journal of Spacecraft and Rockets Volume 28 ; 28 ; https://arc.aiaa.org/ >
     au < manifest ; 1992 ; Journal of Spacecraft and Rockets Volume 29 ; 29 ; https://arc.aiaa.org/ >
     au < manifest ; 1993 ; Journal of Spacecraft and Rockets Volume 30 ; 30 ; https://arc.aiaa.org/ >
     au < manifest ; 1994 ; Journal of Spacecraft and Rockets Volume 31 ; 31 ; https://arc.aiaa.org/ >
@@ -492,15 +492,15 @@
     param[journal_id] = jtht
 
     au < testing ; 1987 ; Journal of Thermophysics and Heat Transfer Volume 1 ; 1 ; https://arc.aiaa.org/ >
-    au < testing ; 1988 ; Journal of Thermophysics and Heat Transfer Volume 2 ; 2 ; https://arc.aiaa.org/ >
+    au < ready ; 1988 ; Journal of Thermophysics and Heat Transfer Volume 2 ; 2 ; https://arc.aiaa.org/ >
     au < manifest ; 1989 ; Journal of Thermophysics and Heat Transfer Volume 3 ; 3 ; https://arc.aiaa.org/ >
     au < manifest ; 1990 ; Journal of Thermophysics and Heat Transfer Volume 4 ; 4 ; https://arc.aiaa.org/ >
     au < manifest ; 1991 ; Journal of Thermophysics and Heat Transfer Volume 5 ; 5 ; https://arc.aiaa.org/ >
     au < manifest ; 1992 ; Journal of Thermophysics and Heat Transfer Volume 6 ; 6 ; https://arc.aiaa.org/ >
     au < manifest ; 1993 ; Journal of Thermophysics and Heat Transfer Volume 7 ; 7 ; https://arc.aiaa.org/ >
     au < manifest ; 1994 ; Journal of Thermophysics and Heat Transfer Volume 8 ; 8 ; https://arc.aiaa.org/ >
-    au < testing ; 1995 ; Journal of Thermophysics and Heat Transfer Volume 9 ; 9 ; https://arc.aiaa.org/ >
-    au < testing ; 1996 ; Journal of Thermophysics and Heat Transfer Volume 10 ; 10 ; https://arc.aiaa.org/ >
+    au < ready ; 1995 ; Journal of Thermophysics and Heat Transfer Volume 9 ; 9 ; https://arc.aiaa.org/ >
+    au < ready ; 1996 ; Journal of Thermophysics and Heat Transfer Volume 10 ; 10 ; https://arc.aiaa.org/ >
     au < manifest ; 1997 ; Journal of Thermophysics and Heat Transfer Volume 11 ; 11 ; https://arc.aiaa.org/ >
     au < manifest ; 1998 ; Journal of Thermophysics and Heat Transfer Volume 12 ; 12 ; https://arc.aiaa.org/ >
     au < manifest ; 1999 ; Journal of Thermophysics and Heat Transfer Volume 13 ; 13 ; https://arc.aiaa.org/ >

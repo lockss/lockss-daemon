@@ -441,24 +441,24 @@
     
     param[journal_id] = atsc
 
-    au < manifest ; 1944 ; Journal of the Atmospheric Sciences Volume 1 ; 1 ; https://journals.ametsoc.org/ >
-    au < manifest ; 1945 ; Journal of the Atmospheric Sciences Volume 2 ; 2 ; https://journals.ametsoc.org/ >
-    au < manifest ; 1946 ; Journal of the Atmospheric Sciences Volume 3 ; 3 ; https://journals.ametsoc.org/ >
-    au < manifest ; 1947 ; Journal of the Atmospheric Sciences Volume 4 ; 4 ; https://journals.ametsoc.org/ >
-    au < manifest ; 1948 ; Journal of the Atmospheric Sciences Volume 5 ; 5 ; https://journals.ametsoc.org/ >
-    au < manifest ; 1949 ; Journal of the Atmospheric Sciences Volume 6 ; 6 ; https://journals.ametsoc.org/ >
-    au < manifest ; 1950 ; Journal of the Atmospheric Sciences Volume 7 ; 7 ; https://journals.ametsoc.org/ >
-    au < manifest ; 1951 ; Journal of the Atmospheric Sciences Volume 8 ; 8 ; https://journals.ametsoc.org/ >
-    au < manifest ; 1952 ; Journal of the Atmospheric Sciences Volume 9 ; 9 ; https://journals.ametsoc.org/ >
-    au < manifest ; 1953 ; Journal of the Atmospheric Sciences Volume 10 ; 10 ; https://journals.ametsoc.org/ >
-    au < manifest ; 1954 ; Journal of the Atmospheric Sciences Volume 11 ; 11 ; https://journals.ametsoc.org/ >
-    au < manifest ; 1955 ; Journal of the Atmospheric Sciences Volume 12 ; 12 ; https://journals.ametsoc.org/ >
-    au < manifest ; 1956 ; Journal of the Atmospheric Sciences Volume 13 ; 13 ; https://journals.ametsoc.org/ >
-    au < manifest ; 1957 ; Journal of the Atmospheric Sciences Volume 14 ; 14 ; https://journals.ametsoc.org/ >
-    au < manifest ; 1958 ; Journal of the Atmospheric Sciences Volume 15 ; 15 ; https://journals.ametsoc.org/ >
-    au < manifest ; 1959 ; Journal of the Atmospheric Sciences Volume 16 ; 16 ; https://journals.ametsoc.org/ >
-    au < manifest ; 1960 ; Journal of the Atmospheric Sciences Volume 17 ; 17 ; https://journals.ametsoc.org/ >
-    au < manifest ; 1961 ; Journal of the Atmospheric Sciences Volume 18 ; 18 ; https://journals.ametsoc.org/ >
+    au < testing ; 1944 ; Journal of the Atmospheric Sciences Volume 1 ; 1 ; https://journals.ametsoc.org/ >
+    au < testing ; 1945 ; Journal of the Atmospheric Sciences Volume 2 ; 2 ; https://journals.ametsoc.org/ >
+    au < testing ; 1946 ; Journal of the Atmospheric Sciences Volume 3 ; 3 ; https://journals.ametsoc.org/ >
+    au < testing ; 1947 ; Journal of the Atmospheric Sciences Volume 4 ; 4 ; https://journals.ametsoc.org/ >
+    au < testing ; 1948 ; Journal of the Atmospheric Sciences Volume 5 ; 5 ; https://journals.ametsoc.org/ >
+    au < testing ; 1949 ; Journal of the Atmospheric Sciences Volume 6 ; 6 ; https://journals.ametsoc.org/ >
+    au < testing ; 1950 ; Journal of the Atmospheric Sciences Volume 7 ; 7 ; https://journals.ametsoc.org/ >
+    au < testing ; 1951 ; Journal of the Atmospheric Sciences Volume 8 ; 8 ; https://journals.ametsoc.org/ >
+    au < testing ; 1952 ; Journal of the Atmospheric Sciences Volume 9 ; 9 ; https://journals.ametsoc.org/ >
+    au < testing ; 1953 ; Journal of the Atmospheric Sciences Volume 10 ; 10 ; https://journals.ametsoc.org/ >
+    au < testing ; 1954 ; Journal of the Atmospheric Sciences Volume 11 ; 11 ; https://journals.ametsoc.org/ >
+    au < testing ; 1955 ; Journal of the Atmospheric Sciences Volume 12 ; 12 ; https://journals.ametsoc.org/ >
+    au < testing ; 1956 ; Journal of the Atmospheric Sciences Volume 13 ; 13 ; https://journals.ametsoc.org/ >
+    au < testing ; 1957 ; Journal of the Atmospheric Sciences Volume 14 ; 14 ; https://journals.ametsoc.org/ >
+    au < testing ; 1958 ; Journal of the Atmospheric Sciences Volume 15 ; 15 ; https://journals.ametsoc.org/ >
+    au < testing ; 1959 ; Journal of the Atmospheric Sciences Volume 16 ; 16 ; https://journals.ametsoc.org/ >
+    au < testing ; 1960 ; Journal of the Atmospheric Sciences Volume 17 ; 17 ; https://journals.ametsoc.org/ >
+    au < testing ; 1961 ; Journal of the Atmospheric Sciences Volume 18 ; 18 ; https://journals.ametsoc.org/ >
     au < released ; 1962 ; Journal of the Atmospheric Sciences Volume 19 ; 19 ; http://journals.ametsoc.org/ >
     au < released ; 1963 ; Journal of the Atmospheric Sciences Volume 20 ; 20 ; http://journals.ametsoc.org/ >
     au < released ; 1964 ; Journal of the Atmospheric Sciences Volume 21 ; 21 ; http://journals.ametsoc.org/ >
@@ -564,15 +564,15 @@
     
     param[journal_id] = mwre
     
-    au < manifest ; 1872 ; Monthly Weather Review Volume 0 ; 0 ; https://journals.ametsoc.org/ >
-    au < manifest ; 1873 ; Monthly Weather Review Volume 1 ; 1 ; https://journals.ametsoc.org/ >
-    au < manifest ; 1874 ; Monthly Weather Review Volume 2 ; 2 ; https://journals.ametsoc.org/ >
-    au < manifest ; 1875 ; Monthly Weather Review Volume 3 ; 3 ; https://journals.ametsoc.org/ >
-    au < manifest ; 1876 ; Monthly Weather Review Volume 4 ; 4 ; https://journals.ametsoc.org/ >
-    au < manifest ; 1877 ; Monthly Weather Review Volume 5 ; 5 ; https://journals.ametsoc.org/ >
-    au < manifest ; 1878 ; Monthly Weather Review Volume 6 ; 6 ; https://journals.ametsoc.org/ >
-    au < manifest ; 1879 ; Monthly Weather Review Volume 7 ; 7 ; https://journals.ametsoc.org/ >
-    au < manifest ; 1880 ; Monthly Weather Review Volume 8 ; 8 ; https://journals.ametsoc.org/ >
+    au < testing ; 1872 ; Monthly Weather Review Volume 0 ; 0 ; https://journals.ametsoc.org/ >
+    au < testing ; 1873 ; Monthly Weather Review Volume 1 ; 1 ; https://journals.ametsoc.org/ >
+    au < testing ; 1874 ; Monthly Weather Review Volume 2 ; 2 ; https://journals.ametsoc.org/ >
+    au < testing ; 1875 ; Monthly Weather Review Volume 3 ; 3 ; https://journals.ametsoc.org/ >
+    au < testing ; 1876 ; Monthly Weather Review Volume 4 ; 4 ; https://journals.ametsoc.org/ >
+    au < testing ; 1877 ; Monthly Weather Review Volume 5 ; 5 ; https://journals.ametsoc.org/ >
+    au < testing ; 1878 ; Monthly Weather Review Volume 6 ; 6 ; https://journals.ametsoc.org/ >
+    au < testing ; 1879 ; Monthly Weather Review Volume 7 ; 7 ; https://journals.ametsoc.org/ >
+    au < testing ; 1880 ; Monthly Weather Review Volume 8 ; 8 ; https://journals.ametsoc.org/ >
     au < manifest ; 1881 ; Monthly Weather Review Volume 9 ; 9 ; https://journals.ametsoc.org/ >
     au < manifest ; 1882 ; Monthly Weather Review Volume 10 ; 10 ; https://journals.ametsoc.org/ >
     au < manifest ; 1883 ; Monthly Weather Review Volume 11 ; 11 ; https://journals.ametsoc.org/ >
@@ -634,16 +634,16 @@
     au < manifest ; 1939 ; Monthly Weather Review Volume 67 ; 67 ; https://journals.ametsoc.org/ >
     au < manifest ; 1940 ; Monthly Weather Review Volume 68 ; 68 ; https://journals.ametsoc.org/ >
     au < manifest ; 1941 ; Monthly Weather Review Volume 69 ; 69 ; https://journals.ametsoc.org/ >
-    au < manifest ; 1942 ; Monthly Weather Review Volume 70 ; 70 ; https://journals.ametsoc.org/ >
-    au < manifest ; 1943 ; Monthly Weather Review Volume 71 ; 71 ; https://journals.ametsoc.org/ >
-    au < manifest ; 1944 ; Monthly Weather Review Volume 72 ; 72 ; https://journals.ametsoc.org/ >
-    au < manifest ; 1945 ; Monthly Weather Review Volume 73 ; 73 ; https://journals.ametsoc.org/ >
-    au < manifest ; 1946 ; Monthly Weather Review Volume 74 ; 74 ; https://journals.ametsoc.org/ >
-    au < manifest ; 1947 ; Monthly Weather Review Volume 75 ; 75 ; https://journals.ametsoc.org/ >
-    au < manifest ; 1948 ; Monthly Weather Review Volume 76 ; 76 ; https://journals.ametsoc.org/ >
-    au < manifest ; 1949 ; Monthly Weather Review Volume 77 ; 77 ; https://journals.ametsoc.org/ >
-    au < manifest ; 1950 ; Monthly Weather Review Volume 78 ; 78 ; https://journals.ametsoc.org/ >
-    au < manifest ; 1951 ; Monthly Weather Review Volume 79 ; 79 ; https://journals.ametsoc.org/ >
+    au < testing ; 1942 ; Monthly Weather Review Volume 70 ; 70 ; https://journals.ametsoc.org/ >
+    au < testing ; 1943 ; Monthly Weather Review Volume 71 ; 71 ; https://journals.ametsoc.org/ >
+    au < testing ; 1944 ; Monthly Weather Review Volume 72 ; 72 ; https://journals.ametsoc.org/ >
+    au < testing ; 1945 ; Monthly Weather Review Volume 73 ; 73 ; https://journals.ametsoc.org/ >
+    au < testing ; 1946 ; Monthly Weather Review Volume 74 ; 74 ; https://journals.ametsoc.org/ >
+    au < testing ; 1947 ; Monthly Weather Review Volume 75 ; 75 ; https://journals.ametsoc.org/ >
+    au < testing ; 1948 ; Monthly Weather Review Volume 76 ; 76 ; https://journals.ametsoc.org/ >
+    au < testing ; 1949 ; Monthly Weather Review Volume 77 ; 77 ; https://journals.ametsoc.org/ >
+    au < testing ; 1950 ; Monthly Weather Review Volume 78 ; 78 ; https://journals.ametsoc.org/ >
+    au < testing ; 1951 ; Monthly Weather Review Volume 79 ; 79 ; https://journals.ametsoc.org/ >
     au < manifest ; 1952 ; Monthly Weather Review Volume 80 ; 80 ; https://journals.ametsoc.org/ >
     au < manifest ; 1953 ; Monthly Weather Review Volume 81 ; 81 ; https://journals.ametsoc.org/ >
     au < manifest ; 1954 ; Monthly Weather Review Volume 82 ; 82 ; https://journals.ametsoc.org/ >
