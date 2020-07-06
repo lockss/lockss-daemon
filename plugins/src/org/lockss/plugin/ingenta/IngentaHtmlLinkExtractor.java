@@ -47,12 +47,19 @@ public class IngentaHtmlLinkExtractor extends GoslingHtmlLinkExtractor {
   protected static final Pattern popupPattern = 
       Pattern.compile("^javascript:popupImage\\(([\"']|%22)(.*)\\1\\)$", 
           Pattern.CASE_INSENSITIVE);
+
+  protected static final Pattern articlePattern =
+          Pattern.compile("^https?://(.*)/[0-9]{4}/\\d+/\\d+/art[0-9]{5}$",
+                  Pattern.CASE_INSENSITIVE);
   
   @Override
   protected String extractLinkFromTag(StringBuffer link,
                                       ArchivalUnit au,
                                       Callback cb)
       throws IOException {
+
+    logger.debug3("extractLinkFromTag, link = " + link.toString());
+
     char ch = link.charAt(0);
     if ((ch == 'a' || ch == 'A') && Character.isWhitespace(link.charAt(1))) {
       String href = getAttributeValue(HREF, link);
@@ -66,11 +73,54 @@ public class IngentaHtmlLinkExtractor extends GoslingHtmlLinkExtractor {
         return resolveUri(baseUrl, mat.group(2));
       }
     }
+
+    /*
+    Some of them have both, some of them only have "CRAWLER.fullTextLink"
+    <meta name="CRAWLER.fullTextHtmlLink" content="https://api.ingentaconnect.com/content/aspt/sb/2019/00000044/00000001?crawler=true&mimetype=text/html"/>
+    <meta name="CRAWLER.fullTextLink" content="https://api.ingentaconnect.com/content/aspt/sb/2019/00000044/00000001?crawler=true"/>
+     */
+
     else if ((ch == 'm' || ch == 'M') && beginsWithTag(link, METATAG)) {
       String key = getAttributeValue("name", link);
-      if (key != null && key.startsWith("CRAWLER.")) {
-        logger.debug3("Found a suitable <meta> tag");
-        return getAttributeValue("content", link);
+      String content =  "";
+
+      // This is the article page
+      logger.debug3("Fei - processing article page metadata " + this.srcUrl);
+
+      Matcher articleMat = articlePattern.matcher(this.srcUrl);
+
+      if (articleMat.find()) {
+        if (key != null && key.startsWith("CRAWLER.fullTextHtmlLink")) {
+          logger.debug3("Found a suitable <meta> tag");
+          content = getAttributeValue("content", link);
+          logger.debug3("Fei - content 1 ");
+        } else if (key != null && key.startsWith("CRAWLER.fullTextLink")) {
+          content = getAttributeValue("content", link);
+          logger.debug3("Fei - content 2 ");
+        }
+
+        if (content != null) {
+          String articleUrl = this.srcUrl;
+          String pdf = articleUrl;
+
+          if (!articleUrl.contains("?crawler=true&mimetype=text/html")) {
+            content = articleUrl + "?crawler=true&mimetype=text/html";
+            pdf = articleUrl + "?crawler=true&mimetype=application/pdf";
+          }
+
+          logger.debug3("Fei - get base_url, articleUrl " + articleUrl + ", content : " + content + ", pdf link = " + pdf);
+          logger.debug3("Fei - base_url: " + au.getConfiguration().get("base_url") + ", api_url: " + au.getConfiguration().get("api_url"));
+          // Replace "base_url" with "api_url"
+          String api_based_article = content.replace(au.getConfiguration().get("base_url"), au.getConfiguration().get("api_url"));
+          String api_based_pdf = pdf.replace(au.getConfiguration().get("base_url"), au.getConfiguration().get("api_url"));
+
+          cb.foundLink(api_based_article);
+          cb.foundLink(api_based_pdf);
+
+          logger.debug3("Fei - get api_url, articleUrl " + api_based_article +  ", pdf link = " + api_based_pdf);
+
+          return content;
+        }
       }
     }
     

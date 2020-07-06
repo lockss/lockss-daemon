@@ -87,12 +87,29 @@ public class IngentaMetadataExtractorFactory2020
             throws IOException {
       ArticleMetadata am = super.extract(target, cu);
       am.cook(tagMap);
-      String url = am.get(MetadataField.FIELD_ACCESS_URL);
+      String url = cu.getUrl();
+
+      String html_appendix = "?crawler=true&mimetype=text/html";
+      String new_access_url = url;
       ArchivalUnit au = cu.getArchivalUnit();
-      if (url == null || url.isEmpty() || !au.makeCachedUrl(url).hasContent()) {
-        url = cu.getUrl();
+
+      CachedUrl potential_cu = cu.getArchivalUnit().makeCachedUrl(new_access_url);
+
+      log.debug3(" Fei - access_url : ");
+      if (url != null && !url.contains(html_appendix)) {
+        new_access_url = url + "?crawler=true&mimetype=text/html";
+        log.debug3(" Fei - access_url, new_access_url : " + new_access_url);
       }
-      am.replace(MetadataField.FIELD_ACCESS_URL,url);
+
+      String pdf = url.replace("?crawler=true&mimetype=text/html", "?crawler=true&mimetype=application/pdf");
+      
+      if ( (potential_cu != null) && (potential_cu.hasContent()) ){
+        if (am.get(MetadataField.FIELD_ACCESS_URL) == null) {
+          am.put(MetadataField.FIELD_ACCESS_URL, new_access_url);
+        } else {
+          am.replace(MetadataField.FIELD_ACCESS_URL, new_access_url);
+        }
+      } 
       return am;
     }
   }

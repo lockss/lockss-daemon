@@ -207,7 +207,7 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%scontent/%s/%s/[0-9]{4}/[^/]+/[^/]+/[^/]+[?]crawler=true&amp;mimetype=application/pdf;", base_url, publisher_id, journal_id, volume_name</string>
+      <string>"^%scontent/%s/%s/[0-9]{4}/[^/]+/[^/]+/[^/]+[?]crawler=true&amp;mimetype=application/pdf", api_url, publisher_id, journal_id, volume_name</string>
     </list>
   </entry>
   <entry>

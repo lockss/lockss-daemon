@@ -60,14 +60,13 @@ public class IngentaArticleIteratorFactory2020 implements ArticleIteratorFactory
   // PDF:           https://www.ingentaconnect.com/content/ascp/tscp/2019/00000034/00000001/art00002?crawler=true&mimetype=application/pdf
 
 
-  protected static final String ROOT_TEMPLATE = "\"%scontent/%s/%s\", base_url, publisher_id, journal_id";
-  private static final String PATTERN_TEMPLATE = "\"^%scontent/%s/%s/([0-9]{4}/\\d+/\\d+/art[0-9]{5})$\", " +
-          "base_url, publisher_id, journal_id";
+  protected static final String ROOT_TEMPLATE = "\"%scontent/%s/%s\", api_url, publisher_id, journal_id";
+  private static final String PATTERN_TEMPLATE = "\"^%scontent/%s/%s/([0-9]{4}/\\d+/\\d+/art[0-9]{5})\\?crawler=true\", " +
+          "api_url, publisher_id, journal_id";
 
-  public static final Pattern HTML_PATTERN = Pattern.compile("/([0-9]{4}/\\d+/\\d+/art[0-9]{5})$", Pattern.CASE_INSENSITIVE);
-  public static final Pattern PDF_PATTERN = Pattern.compile("/([0-9]{4}/\\d+/\\d+/art[0-9]{5})$", Pattern.CASE_INSENSITIVE);
-  //public static final String HTML_REPLACEMENT = "/$1?crawler=true&mimetype=text/html";
-  public static final String HTML_REPLACEMENT = "/$1";
+  public static final Pattern HTML_PATTERN = Pattern.compile("/([0-9]{4}/\\d+/\\d+/art[0-9]{5})\\?crawler=true&mimetype=text/html", Pattern.CASE_INSENSITIVE);
+  public static final Pattern PDF_PATTERN = Pattern.compile("/([0-9]{4}/\\d+/\\d+/art[0-9]{5})\\?crawler=true&mimetype=application/pdf", Pattern.CASE_INSENSITIVE);
+  public static final String HTML_REPLACEMENT = "/$1?crawler=true&mimetype=text/html";
   private static final String PDF_REPLACEMENT = "/$1?crawler=true&mimetype=application/pdf";
 
   @Override
@@ -81,13 +80,13 @@ public class IngentaArticleIteratorFactory2020 implements ArticleIteratorFactory
             PATTERN_TEMPLATE,
             Pattern.CASE_INSENSITIVE);
 
-    builder.addAspect(PDF_PATTERN,
-            PDF_REPLACEMENT,
-            ArticleFiles.ROLE_FULL_TEXT_PDF);
-
     builder.addAspect(HTML_PATTERN,
             HTML_REPLACEMENT,
             ArticleFiles.ROLE_ARTICLE_METADATA);
+
+    builder.addAspect(PDF_PATTERN,
+            PDF_REPLACEMENT,
+            ArticleFiles.ROLE_FULL_TEXT_PDF);
 
     return builder.getSubTreeArticleIterator();
   }
