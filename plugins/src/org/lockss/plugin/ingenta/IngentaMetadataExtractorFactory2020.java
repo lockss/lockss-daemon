@@ -38,9 +38,13 @@ import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrl;
+import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
+import org.lockss.plugin.clockss.casalini.CasaliniMarcXmlSchemaHelper;
 import org.lockss.util.Logger;
 
 import java.io.IOException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class IngentaMetadataExtractorFactory2020
   implements FileMetadataExtractorFactory {
@@ -48,11 +52,14 @@ public class IngentaMetadataExtractorFactory2020
   static Logger log = 
     Logger.getLogger(IngentaArticleIteratorFactory2020.class);
 
+  private static Pattern doiPattern = Pattern.compile("info:doi/(.*)");
+  private static Pattern issnPattern = Pattern.compile("urn:ISSN:(.*)");
+
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
                                                            String contentType)
           throws PluginException {
-    return new AmericanSocietyOfConsultantPharmacistsExtractor();
+    return new IngentaMetadataExtractor();
   }
 
   /*
@@ -68,17 +75,18 @@ public class IngentaMetadataExtractorFactory2020
   <meta name="CRAWLER.fullTextLink" content="https://api.ingentaconnect.com/content/ascp/tscp/2020/00000035/00000004?crawler=true"/>
    */
 
-  public static class AmericanSocietyOfConsultantPharmacistsExtractor
+  public static class IngentaMetadataExtractor
           extends SimpleHtmlMetaTagMetadataExtractor {
     private static MultiMap tagMap = new MultiValueMap();
     static {
-      tagMap.put("DC.title", MetadataField.DC_FIELD_TITLE);
-      tagMap.put("DC.publisher", MetadataField.DC_FIELD_PUBLISHER);
-      tagMap.put("DC.type", MetadataField.DC_FIELD_TYPE);
-      tagMap.put("DC.creator", MetadataField.DC_FIELD_CREATOR);
-      tagMap.put("DC.identifier", MetadataField.DC_FIELD_IDENTIFIER);
-      tagMap.put("DCTERMS.issued", MetadataField.DC_FIELD_DATE);
-      tagMap.put("DCTERMS.isPartOf", MetadataField.DC_FIELD_IDENTIFIER_ISSN);
+      tagMap.put("DC.title", MetadataField.FIELD_ARTICLE_TITLE);
+      tagMap.put("DC.publisher", MetadataField.FIELD_PUBLICATION_TITLE);
+      tagMap.put("DC.creator", MetadataField.FIELD_AUTHOR);
+      tagMap.put("DC.identifier", new MetadataField(
+              MetadataField.FIELD_DOI, MetadataField.extract(doiPattern,1)));
+      tagMap.put("DCTERMS.isPartOf", new MetadataField(
+              MetadataField.FIELD_ISSN, MetadataField.extract(issnPattern,1)));
+      tagMap.put("DCTERMS.issued", MetadataField.FIELD_DATE);
       
     }
 
