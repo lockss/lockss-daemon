@@ -58,8 +58,6 @@ public class IngentaHtmlLinkExtractor extends GoslingHtmlLinkExtractor {
                                       Callback cb)
       throws IOException {
 
-    logger.debug3("extractLinkFromTag, link = " + link.toString());
-
     char ch = link.charAt(0);
     if ((ch == 'a' || ch == 'A') && Character.isWhitespace(link.charAt(1))) {
       String href = getAttributeValue(HREF, link);
@@ -84,19 +82,14 @@ public class IngentaHtmlLinkExtractor extends GoslingHtmlLinkExtractor {
       String key = getAttributeValue("name", link);
       String content =  "";
 
-      // This is the article page
-      logger.debug3("Fei - processing article page metadata " + this.srcUrl);
-
       Matcher articleMat = articlePattern.matcher(this.srcUrl);
 
       if (articleMat.find()) {
         if (key != null && key.startsWith("CRAWLER.fullTextHtmlLink")) {
           logger.debug3("Found a suitable <meta> tag");
           content = getAttributeValue("content", link);
-          logger.debug3("Fei - content 1 ");
         } else if (key != null && key.startsWith("CRAWLER.fullTextLink")) {
           content = getAttributeValue("content", link);
-          logger.debug3("Fei - content 2 ");
         }
 
         if (content != null) {
@@ -108,16 +101,12 @@ public class IngentaHtmlLinkExtractor extends GoslingHtmlLinkExtractor {
             pdf = articleUrl + "?crawler=true&mimetype=application/pdf";
           }
 
-          logger.debug3("Fei - get base_url, articleUrl " + articleUrl + ", content : " + content + ", pdf link = " + pdf);
-          logger.debug3("Fei - base_url: " + au.getConfiguration().get("base_url") + ", api_url: " + au.getConfiguration().get("api_url"));
           // Replace "base_url" with "api_url"
           String api_based_article = content.replace(au.getConfiguration().get("base_url"), au.getConfiguration().get("api_url"));
           String api_based_pdf = pdf.replace(au.getConfiguration().get("base_url"), au.getConfiguration().get("api_url"));
 
           cb.foundLink(api_based_article);
           cb.foundLink(api_based_pdf);
-
-          logger.debug3("Fei - get api_url, articleUrl " + api_based_article +  ", pdf link = " + api_based_pdf);
 
           return content;
         }

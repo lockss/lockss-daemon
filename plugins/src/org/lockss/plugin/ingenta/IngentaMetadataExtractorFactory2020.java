@@ -103,14 +103,10 @@ public class IngentaMetadataExtractorFactory2020
 
       CachedUrl potential_cu = cu.getArchivalUnit().makeCachedUrl(new_access_url);
 
-      log.debug3(" Fei - access_url : ");
       if (url != null && !url.contains(html_appendix)) {
         new_access_url = url + "?crawler=true&mimetype=text/html";
-        log.debug3(" Fei - access_url, new_access_url : " + new_access_url);
       }
 
-      String pdf = url.replace("?crawler=true&mimetype=text/html", "?crawler=true&mimetype=application/pdf");
-      
       if ( (potential_cu != null) && (potential_cu.hasContent()) ){
         if (am.get(MetadataField.FIELD_ACCESS_URL) == null) {
           am.put(MetadataField.FIELD_ACCESS_URL, new_access_url);
