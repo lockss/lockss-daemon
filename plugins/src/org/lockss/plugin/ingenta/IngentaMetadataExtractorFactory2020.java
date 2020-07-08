@@ -38,8 +38,6 @@ import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrl;
-import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
-import org.lockss.plugin.clockss.casalini.CasaliniMarcXmlSchemaHelper;
 import org.lockss.util.Logger;
 
 import java.io.IOException;
