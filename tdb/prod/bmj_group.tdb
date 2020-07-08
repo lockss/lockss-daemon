@@ -474,19 +474,19 @@
     {
       #param[base_url] = https://www.bmj.com/
 
-      au < bmj.BMJDrupalPlugin ; exists ; 2017 ; BMJ Volume 356 ; 356 ; https://www.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; exists ; 2017 ; BMJ Volume 357 ; 357 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; BMJ Volume 356 ; 356 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; BMJ Volume 357 ; 357 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; exists ; 2017 ; BMJ Volume 358 ; 358 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; BMJ Volume 359 ; 359 ; https://www.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; exists ; 2018 ; BMJ Volume 360 ; 360 ; https://www.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; exists ; 2018 ; BMJ Volume 361 ; 361 ; https://www.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; exists ; 2018 ; BMJ Volume 362 ; 362 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; manifest ; 2018 ; BMJ Volume 360 ; 360 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; manifest ; 2018 ; BMJ Volume 361 ; 361 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; manifest ; 2018 ; BMJ Volume 362 ; 362 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; manifest ; 2018 ; BMJ Volume 363 ; 363 ; https://www.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; expected ; 2019 ; BMJ Volume 364 ; 364 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; manifest ; 2019 ; BMJ Volume 364 ; 364 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; released ; 2019 ; BMJ Volume 365 ; 365 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; released ; 2019 ; BMJ Volume 366 ; 366 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; released ; 2019 ; BMJ Volume 367 ; 367 ; https://www.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; expected ; 2020 ; BMJ Volume 368 ; 368 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; manifest ; 2020 ; BMJ Volume 368 ; 368 ; https://www.bmj.com/ >
 
     }
 
