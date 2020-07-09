@@ -64,7 +64,7 @@
     <entry>
     <string>au_crawlrules</string>
         <list>
-            <string>1,"https?://%s/", url_host(base_url)</string>
+            <string>1,"https://%s/", url_host(base_url)</string>
             <!--<string>1,"https?://%s/", url_host(base_url2)</string>-->
             <string>1,"https://files.chinesedeathscape.supdigital.org/"</string>
             <string>1,"https://use.typekit.com/.*\.js"</string>
@@ -75,8 +75,7 @@
     </entry>
     <entry>
         <string>au_start_url</string>
-        <string>"http://%s/", url_host(base_url)</string>
-        <string>"https://%s/", url_host(base_url)</string>
+        <string>"%s", base_url</string>
     </entry>
     <!--
     <entry>

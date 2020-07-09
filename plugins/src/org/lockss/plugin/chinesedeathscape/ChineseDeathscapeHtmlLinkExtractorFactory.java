@@ -92,44 +92,12 @@ public class ChineseDeathscapeHtmlLinkExtractorFactory implements LinkExtractorF
                 String complete_js_url = srcUrl.substring(0, srcUrl.indexOf(".org") + ".org".length()) + readjs_url;
                 log.debug3("Fei - complete_js_url is found: " + complete_js_url);
 
+                String javascript = ((Element)node).html();
+                log.debug3("Fei - read.js content" + javascript);
+
                 cb.foundLink(complete_js_url);
             }
-
         }
-
-        /*
-            "read.js" was compiled to one-line javascript
-
-        public void doFileSets(String srcUrl, Node node, ArchivalUnit au, LinkExtractor.Callback cb) {
-
-            String javascript = ((Element)node).html();
-            if (log.isDebug3()) {
-                log.debug3("<script> contents: " + javascript);
-            }
-            try (BufferedReader br = new BufferedReader(new StringReader(javascript))) {
-                for (String line = br.readLine() ; line != null ; line = br.readLine()) {
-                    log.debug3("Fei - line: " + line);
-
-                    if (line.contains("window.GRAVES = {\"baseLayers\"")) {
-                        log.debug3("Fei - found read.js: " + line);
-
-                        for (String image_url : TUTORIAL_IMAGES) {
-                            if (line.contains(image_url)) {
-                                String complete_image_url = srcUrl.substring(0, srcUrl.indexOf(".org") + ".org".length()) + image_url;
-                                log.debug3("Fei - image_url is found: " + complete_image_url);
-                                cb.foundLink(complete_image_url);
-                            }
-                        }
-                    }
-                }
-            }
-            catch (IOException ioe) {
-                log.debug(String.format("I/O exception while parsing <script> tag in %s", srcUrl), ioe);
-            }
-        }
-
-         */
-
     }
 }
 
