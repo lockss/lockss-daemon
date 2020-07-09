@@ -1,0 +1,52 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>Development</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.highwire.annalsfamilymedicine.ClockssAnnalsFamilyMedicineDrupalPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Annals of Family Medicine Plugin (CLOCKSS)</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>8</string>
+  </entry>
+  <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.highwire.annalsfamilymedicine.AnnalsFamilyMedicineDrupalPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Annals of Family Medicine Plugin (CLOCKSS), Base URL %s, Volume %s", base_url, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%sclockss-manifest/vol_%s_manifest.html", base_url, volume_name</string>
+  </entry>
+  <entry>
+    <string>clockss_override</string>
+    <map>
+      <entry>
+        <string>au_def_pause_time</string>
+        <long>100</long>
+      </entry>
+      <entry>
+        <string>au_mime_rate_limiter_map</string>
+        <map>
+          <entry>
+            <string>application/pdf,text/html,application/vnd.ms-powerpoint</string>
+            <string>1/100</string>
+          </entry>
+        </map>
+      </entry>
+    </map>
+  </entry>
+</map>

@@ -1,0 +1,55 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>Development</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.highwire.annalsfamilymedicine.AnnalsFamilyMedicineDrupalPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Annals of Family Medicine Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.highwire.HighWireDrupalPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent_version</string>
+    <string>75</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Annals of Family Medicine Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
+  </entry>
+  <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.highwire.HighWireDrupalUrlConsumerFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.highwire.annalsfamilymedicine.AnnalsFamilyMedicineDrupalHtmlCrawlFilterFactory</string>
+  </entry>
+</map>
