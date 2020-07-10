@@ -5,18 +5,17 @@ import org.lockss.filter.FilterUtil;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.rewriter.LinkRewriterFactory;
 import org.lockss.servlet.ServletUtil;
-import org.lockss.util.LineEndingBufferedReader;
 import org.lockss.util.LineRewritingReader;
 import org.lockss.util.Logger;
 import org.lockss.util.ReaderInputStream;
 
-import java.io.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.Reader;
 
-public class ChineseDeathscapeJavaScriptLinkRewriterFactory implements LinkRewriterFactory {
+public class ChineseDeathscapeApplicationLinkRewriterFactory implements LinkRewriterFactory {
     static final Logger logger =
-            Logger.getLogger(ChineseDeathscapeJavaScriptLinkRewriterFactory.class);
+            Logger.getLogger(ChineseDeathscapeApplicationLinkRewriterFactory.class);
     
     public InputStream createLinkRewriter(
             String mimeType, ArchivalUnit au, InputStream in,
@@ -24,18 +23,17 @@ public class ChineseDeathscapeJavaScriptLinkRewriterFactory implements LinkRewri
             final ServletUtil.LinkTransform srvLinkXform)
             throws PluginException, IOException {
 
-        logger.debug3("Fei - JavaScriptLinkRewriterFactory src = " + srcUrl + ", mimeType = " + mimeType);
+        logger.debug3("Fei - ChineseDeathscapeApplicationLinkRewriterFactory src = " + srcUrl + ", mimeType = " + mimeType);
 
         String server = "http://localhost:8081/ServeContent?url=http://chinesedeathscape.supdigital.org/";
         String local_read_js_file = "/javascripts/read.js";
-
         
         Reader filteredReader = FilterUtil.getReader(in, encoding);
         LineRewritingReader rewritingReader = new LineRewritingReader(filteredReader) {
             @Override
             public String rewriteLine(String line) {
 
-                logger.debug3("Fei - rewriteLine" + line);
+                logger.debug3("Fei - ChineseDeathscapeApplicationLinkRewriterFactory, rewriteLine" + line);
                 return line;
             }
         };
