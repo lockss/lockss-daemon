@@ -73,7 +73,6 @@ public class ScienceOpenSourceXmlMetadataExtractorFactory extends SourceXmlMetad
         protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu, Document xmlDoc) {
             String url = cu.getUrl();
             if (JatsPublishingHelper == null) {
-                log.debug3("Fei - Setup ScienceOpenSchemaHelper helper for url " + url);
                 JatsPublishingHelper = new ScienceOpenSchemaHelper();
             }
             return JatsPublishingHelper;
