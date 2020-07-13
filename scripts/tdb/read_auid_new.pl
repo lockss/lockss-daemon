@@ -1016,10 +1016,15 @@ while (my $line = <>) {
           } elsif ($man_contents !~ m/$lockss_tag/) {
               $result = "--NO_TAG--"
           } else {
+            $vol_title = "";
             if ($man_contents =~ m/href=([^>]*)>/) {
               $vol_title = $1;
             }
-            $result = "--BAD_JID--"
+            if ($vol_title =~ m/\/$jid\//) {
+              $result = "--BAD_VOL--"
+            } else {
+              $result = "--BAD_JID--"
+            }
           }
       } else {
       $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
@@ -1084,10 +1089,15 @@ while (my $line = <>) {
           } elsif ($man_contents !~ m/$clockss_tag/) {
               $result = "--NO_TAG--"
           } else {
+            $vol_title = "";
             if ($man_contents =~ m/href=([^>]*)>/) {
               $vol_title = $1;
             }
-            $result = "--BAD_JID--"
+            if ($vol_title =~ m/\/$jid\//) {
+              $result = "--BAD_VOL--"
+            } else {
+              $result = "--BAD_JID--"
+            }
           }
       } else {
       $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
