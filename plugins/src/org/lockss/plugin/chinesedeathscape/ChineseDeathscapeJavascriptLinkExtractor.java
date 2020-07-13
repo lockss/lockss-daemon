@@ -18,21 +18,23 @@ public class ChineseDeathscapeJavascriptLinkExtractor implements LinkExtractor {
     private static final Logger log = Logger.getLogger("ChineseDeathscapeJavascriptLinkExtractor");
 
     private static final int MAX_URL_LENGTH = 2100;
-    // Amount of CSS input to buffer up for matcher
     private static final int DEFAULT_MAX_BUF = 32 * 1024;
-    // Amount at end of buffer to rescan at beginning of next bufferfull
     private static final int DEFAULT_OVERLAP = 2 * 1024;
 
-    // Adapted from Heritrix's ExtractorCSS
+    // pattern to get extra js file
     private static final String JS_URI_EXTRACTOR =
             "(https?://[/+])?/javascripts/(.*)";
     private static Pattern JS_URL_PAT = Pattern.compile(JS_URI_EXTRACTOR);
 
-    // Pattern for character escapes to be removed from URLs
+    // pattern to get embedded images for tutorial image model
     private static final String READ_IS_IMAGE_SRC = "src:\"(/images/tutorial/[^./]+.png)\"";
-
     private static Pattern READ_IS_IMAGE_SRC_PAT =
             Pattern.compile(READ_IS_IMAGE_SRC);
+
+    // pattern to get embedded json for time slider model
+    private static final String API_JSON_SRC = "getJSON\\(\"(/api/[^./]+.json)\"";
+    private static Pattern API_JSON_SRC_PAT =
+            Pattern.compile(API_JSON_SRC);
 
     private int maxBuf = DEFAULT_MAX_BUF;
 
@@ -76,21 +78,40 @@ public class ChineseDeathscapeJavascriptLinkExtractor implements LinkExtractor {
 
             try {
                 while (StringUtil.fillFromReader(rdr, sb, maxBuf - sb.length())) {
-                    Matcher m1 = READ_IS_IMAGE_SRC_PAT.matcher(sb);
-                    log.debug3("Fei - read.js before m1 match");
-                    while (m1.find()) {
-                        String url = m1.group(1);
+                    // handle "/image/tutorial/*.png"
+                    Matcher tutorialImagePatternMatch = READ_IS_IMAGE_SRC_PAT.matcher(sb);
+                    log.debug3("Fei - read.js before tutorialImagePatternMatch match");
+                    while (tutorialImagePatternMatch.find()) {
+                        String url = tutorialImagePatternMatch.group(1);
                         if (!StringUtil.isNullString(url)) {
                             try {
                                 String resolved = UrlUtil.resolveUri(baseUrl, url);
-                                log.debug3("Fei - readjs, Found " + url + " which resolves to " + resolved);
+                                log.debug3("Fei - readjs, Found tutorial images: " + url + " which resolves to " + resolved);
                                 cb.foundLink(resolved);
                             } catch (MalformedURLException e) {
-                                log.siteError("Resolving " + url + " in CSS at " + baseUrl
+                                log.siteError("Resolving " + url + " in JS at " + baseUrl
                                         + ": " + e.toString());
                             }
                         }
                     }
+
+                    // handle "/api/*.json"
+                    Matcher apiJsonPatternMatch = API_JSON_SRC_PAT.matcher(sb);
+                    while (apiJsonPatternMatch.find()) {
+                        String url = apiJsonPatternMatch.group(1);
+                        log.debug3(" Fei - json url = " + url);
+                        if (!StringUtil.isNullString(url)) {
+                            try {
+                                String resolved = UrlUtil.resolveUri(baseUrl, url);
+                                log.debug3("Fei - readjs, Found api json " + url + " which resolves to " + resolved);
+                                cb.foundLink(resolved);
+                            } catch (MalformedURLException e) {
+                                log.siteError("Resolving " + url + " in JS at " + baseUrl
+                                        + ": " + e.toString());
+                            }
+                        }
+                    }
+
                     int sblen = sb.length();
                     if (sblen < maxBuf) {
                         break;
