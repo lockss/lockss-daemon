@@ -3,19 +3,17 @@ package org.lockss.plugin.clockss.peercommunityin;
 import org.apache.commons.collections.map.MultiValueMap;
 import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.XmlDomMetadataExtractor;
-import org.lockss.plugin.clockss.CrossRefQuerySchemaHelper;
 import org.lockss.plugin.clockss.SourceXmlParserHelperUtilities;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 import org.lockss.util.Logger;
 import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class PeerCommunityInCrossRefQuerySchemaHelper implements SourceXmlSchemaHelper {
-    private static final Logger log = Logger.getLogger(PeerCommunityInCrossRefQuerySchemaHelper.class);
 
+    private static final Logger log = Logger.getLogger(PeerCommunityInCrossRefQuerySchemaHelper.class);
 
     // this is global for all articles in the file
     private static final String publisher = "/doi_batch/head/registrant";
@@ -29,7 +27,7 @@ public class PeerCommunityInCrossRefQuerySchemaHelper implements SourceXmlSchema
     public static String art_resource = "/doi_batch/body/journal/journal_article/doi_data/resource";
     private static String art_title = "/doi_batch/body/journal/journal_article/titles/title";
     private static String art_date = "/doi_batch/body/journal/journal_article/publication_date";
-    
+
     private final static XmlDomMetadataExtractor.NodeValue AUTHOR_VALUE = new XmlDomMetadataExtractor.NodeValue() {
         @Override
         public String getValue(Node node) {
@@ -151,7 +149,7 @@ public class PeerCommunityInCrossRefQuerySchemaHelper implements SourceXmlSchema
 
     @Override
     public String getFilenameXPathKey() {
-        return art_doi;
+        return null;
     }
 }
 

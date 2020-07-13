@@ -18,17 +18,18 @@ public class PeerCommunityInSourceZipXmlArticleIteratorFactory implements Articl
     
     //https://clockss-test.lockss.org/sourcefiles/pci-released/2020/
     //They may occasionally upload some operating system related files, need to filter out
+    //https://clockss-test.lockss.org/sourcefiles/pci-released/2020/pci.evolbiol.100096.zip!/pci.evolbiol.100096.xml
     //https://clockss-test.lockss.org/sourcefiles/pci-released/2020/pci.evolbiol.100096.zip!/pci.evolbiol.100096.pdf
     //https://clockss-test.lockss.org/sourcefiles/pci-released/2020/pci.evolbiol.100097.zip!/__MACOSX/._pci.evolbiol.100097.pdf
 
     protected static Logger log = Logger.getLogger(PeerCommunityInSourceZipXmlArticleIteratorFactory.class);
 
     protected static final String ALL_ZIP_XML_PATTERN_TEMPLATE =
-            "\"%s[^/]+/.*\\.zip!/(pci.*)\\.(xml|pdf)$\", base_url";
+            "\"%s[^/]+/.*\\.zip!/(pc.*)\\.(xml|pdf)$\", base_url";
 
     // Be sure to exclude all nested archives in case supplemental data is provided this way
     protected static final Pattern SUB_NESTED_ARCHIVE_PATTERN =
-            Pattern.compile(".*/[^/]+\\.zip!/pci.+\\.(zip|tar|gz|tgz|tar\\.gz)$",
+            Pattern.compile(".*/[^/]+\\.zip!/pc.+\\.(zip|tar|gz|tgz|tar\\.gz)$",
                     Pattern.CASE_INSENSITIVE);
 
     protected Pattern getExcludeSubTreePattern() {
@@ -49,15 +50,14 @@ public class PeerCommunityInSourceZipXmlArticleIteratorFactory implements Articl
                                                         MetadataTarget target)
             throws PluginException {
         SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
-
-        // no need to limit to ROOT_TEMPLATE
+        
         builder.setSpec(builder.newSpec()
                 .setTarget(target)
                 .setPatternTemplate(getIncludePatternTemplate(), Pattern.CASE_INSENSITIVE)
                 .setExcludeSubTreePattern(getExcludeSubTreePattern())
                 .setVisitArchiveMembers(true)
                 .setVisitArchiveMembers(getIsArchive()));
-
+        
         builder.addAspect(PDF_PATTERN,
                 PDF_REPLACEMENT,
                 ArticleFiles.ROLE_FULL_TEXT_PDF);
@@ -71,9 +71,7 @@ public class PeerCommunityInSourceZipXmlArticleIteratorFactory implements Articl
 
         return builder.getSubTreeArticleIterator();
     }
-
-    // NOTE - for a child to create their own version of this
-    // indicates if the iterator should descend in to archives (for tar/zip deliveries)
+    
     protected boolean getIsArchive() {
         return true;
     }
