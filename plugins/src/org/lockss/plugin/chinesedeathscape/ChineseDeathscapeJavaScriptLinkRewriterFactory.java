@@ -5,16 +5,11 @@ import org.lockss.filter.FilterUtil;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.rewriter.LinkRewriterFactory;
 import org.lockss.servlet.ServletUtil;
-import org.lockss.util.LineEndingBufferedReader;
-import org.lockss.util.LineRewritingReader;
-import org.lockss.util.Logger;
-import org.lockss.util.ReaderInputStream;
-
+import org.lockss.util.*;
 import java.io.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class ChineseDeathscapeJavaScriptLinkRewriterFactory implements LinkRewriterFactory {
+
     static final Logger logger =
             Logger.getLogger(ChineseDeathscapeJavaScriptLinkRewriterFactory.class);
     
@@ -26,16 +21,35 @@ public class ChineseDeathscapeJavaScriptLinkRewriterFactory implements LinkRewri
 
         logger.debug3("Fei - JavaScriptLinkRewriterFactory src = " + srcUrl + ", mimeType = " + mimeType);
 
-        String server = "http://localhost:8081/ServeContent?url=http://chinesedeathscape.supdigital.org/";
-        String local_read_js_file = "/javascripts/read.js";
+        if (in == null) {
+            throw new IllegalArgumentException("Called with null InputStream");
+        }
 
-        
+        final String local_read_js_file = "/javascripts/read.js";
+        final String image_dir = "/images/tutorial/";
+
         Reader filteredReader = FilterUtil.getReader(in, encoding);
         LineRewritingReader rewritingReader = new LineRewritingReader(filteredReader) {
             @Override
             public String rewriteLine(String line) {
 
-                logger.debug3("Fei - rewriteLine" + line);
+                if (srcUrl.contains(local_read_js_file)) {
+                    logger.debug3("Fei - rewriteLine" + line);
+                    String serveContentUrl =  "/ServeContent?url=" + srcUrl.replace(local_read_js_file, "");
+                    String serverImageUrl = serveContentUrl + image_dir;
+
+                    int imageUrlFound = line.indexOf(image_dir);
+
+                    if (imageUrlFound > -1) {
+                        logger.debug3("imageUrlFound = " + imageUrlFound);
+                        logger.debug3("line = " + line);
+                        logger.debug3("serveContentUrl = " + serveContentUrl + ", serverImageUrl = " + serverImageUrl);
+                        String replacedLine = line.replaceAll(image_dir, serverImageUrl);
+                        logger.debug3("imageUrlFound = " + replacedLine);
+
+                        return replacedLine;
+                    }
+                }
                 return line;
             }
         };

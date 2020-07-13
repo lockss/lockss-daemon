@@ -92,19 +92,19 @@
         </list>
     </entry>
     <entry>
+        <string>text/javascript_link_extractor_factory</string>
+        <string>org.lockss.plugin.chinesedeathscape.ChineseDeathscapeJavascriptLinkExtractorFactory</string>
+    </entry>
+    <entry>
         <string>application/javascript_link_extractor_factory</string>
         <string>org.lockss.plugin.chinesedeathscape.ChineseDeathscapeJavascriptLinkExtractorFactory</string>
     </entry>
-    <!--
-    This one is not invoked
-    <entry>
-        <string>application/javascript_link_rewriter_factory</string>
-        <string>org.lockss.plugin.chinesedeathscape.ChineseDeathscapeApplicationLinkRewriterFactory</string>
-    </entry>
-    -->
-    <!--this one did not invoke on "read.js", since it is "application/javascript" type-->
     <entry>
         <string>text/javascript_link_rewriter_factory</string>
+        <string>org.lockss.plugin.chinesedeathscape.ChineseDeathscapeJavaScriptLinkRewriterFactory</string>
+    </entry>
+    <entry>
+        <string>application/javascript_link_rewriter_factory</string>
         <string>org.lockss.plugin.chinesedeathscape.ChineseDeathscapeJavaScriptLinkRewriterFactory</string>
     </entry>
     <entry>
