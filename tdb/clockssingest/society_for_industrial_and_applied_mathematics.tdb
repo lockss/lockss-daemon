@@ -52,7 +52,7 @@
 
     param[journal_id] = sjaday
 
-    au < manifest ; exists ; 2002 ; Journal on Applied Dynamical Systems Volume 1 ; 1 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 2002 ; Journal on Applied Dynamical Systems Volume 1 ; 1 ; https://epubs.siam.org/ ; >
     au < finished ; manifest ; 2003 ; Journal on Applied Dynamical Systems Volume 2 ; 2 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2004 ; Journal on Applied Dynamical Systems Volume 3 ; 3 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2005 ; Journal on Applied Dynamical Systems Volume 4 ; 4 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
@@ -209,7 +209,7 @@
     au < ready ; exists ; 1993 ; Journal on Computing Volume 22 ; 22 ; https://epubs.siam.org/ ; >
     au < ready ; exists ; 1994 ; Journal on Computing Volume 23 ; 23 ; https://epubs.siam.org/ ; >
     au < ready ; exists ; 1995 ; Journal on Computing Volume 24 ; 24 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1996 ; Journal on Computing Volume 25 ; 25 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1996 ; Journal on Computing Volume 25 ; 25 ; https://epubs.siam.org/ ; >
     au < ready ; exists ; 1997 ; Journal on Computing Volume 26 ; 26 ; https://epubs.siam.org/ ; >
     au < ready ; exists ; 1998 ; Journal on Computing Volume 27 ; 27 ; https://epubs.siam.org/ ; >
     au < ready ; exists ; 1998-1999 ; Journal on Computing Volume 28 ; 28 ; https://epubs.siam.org/ ; >
@@ -246,25 +246,27 @@
     >
 
     {
+    #No metadata collected. doNotProcess.
     param[journal_id] = sjcodc.1
 
-    au < manifest ; exists ; 1962-1963 ; Journal on Control and Optimization Volume 1 ; 1 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1964 ; Journal on Control and Optimization Volume 2 ; 2 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1965 ; Journal on Control and Optimization Volume 3 ; 3 ; https://epubs.siam.org/ ; >
+    au < doNotProcess ; exists ; 1962-1963 ; Journal on Control and Optimization Volume 1 ; 1 ; https://epubs.siam.org/ ; >
+    au < doNotProcess ; exists ; 1964 ; Journal on Control and Optimization Volume 2 ; 2 ; https://epubs.siam.org/ ; >
+    au < doNotProcess ; exists ; 1965 ; Journal on Control and Optimization Volume 3 ; 3 ; https://epubs.siam.org/ ; >
     }
     {
+    #No metadata collected. doNotProcess.
     param[journal_id] = sjcodc.2
 
-    au < manifest ; exists ; 1966 ; Journal on Control and Optimization Volume 4 ; 4 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1967 ; Journal on Control and Optimization Volume 5 ; 5 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1968 ; Journal on Control and Optimization Volume 6 ; 6 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1969 ; Journal on Control and Optimization Volume 7 ; 7 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1970 ; Journal on Control and Optimization Volume 8 ; 8 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1971 ; Journal on Control and Optimization Volume 9 ; 9 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1972 ; Journal on Control and Optimization Volume 10 ; 10 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1973 ; Journal on Control and Optimization Volume 11 ; 11 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1974 ; Journal on Control and Optimization Volume 12 ; 12 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1975 ; Journal on Control and Optimization Volume 13 ; 13 ; https://epubs.siam.org/ ; >
+    au < doNotProcess ; exists ; 1966 ; Journal on Control and Optimization Volume 4 ; 4 ; https://epubs.siam.org/ ; >
+    au < doNotProcess ; exists ; 1967 ; Journal on Control and Optimization Volume 5 ; 5 ; https://epubs.siam.org/ ; >
+    au < doNotProcess ; exists ; 1968 ; Journal on Control and Optimization Volume 6 ; 6 ; https://epubs.siam.org/ ; >
+    au < doNotProcess ; exists ; 1969 ; Journal on Control and Optimization Volume 7 ; 7 ; https://epubs.siam.org/ ; >
+    au < doNotProcess ; exists ; 1970 ; Journal on Control and Optimization Volume 8 ; 8 ; https://epubs.siam.org/ ; >
+    au < doNotProcess ; exists ; 1971 ; Journal on Control and Optimization Volume 9 ; 9 ; https://epubs.siam.org/ ; >
+    au < doNotProcess ; exists ; 1972 ; Journal on Control and Optimization Volume 10 ; 10 ; https://epubs.siam.org/ ; >
+    au < doNotProcess ; exists ; 1973 ; Journal on Control and Optimization Volume 11 ; 11 ; https://epubs.siam.org/ ; >
+    au < doNotProcess ; exists ; 1974 ; Journal on Control and Optimization Volume 12 ; 12 ; https://epubs.siam.org/ ; >
+    au < doNotProcess ; exists ; 1975 ; Journal on Control and Optimization Volume 13 ; 13 ; https://epubs.siam.org/ ; >
     }
     {
     param[journal_id] = sjcodc
