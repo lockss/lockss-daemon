@@ -3,6 +3,7 @@
   publisher <
     name = Royal Society Publishing ;
     info[contract] = 2009 ;
+    info[back] = 2000 ;
     info[tester] = 8 ;
     info[poller] = 2
   >
@@ -90,8 +91,8 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Biographical Memoirs of Fellows of the Royal Society Volume 62 ; 62 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Biographical Memoirs of Fellows of the Royal Society Volume 63 ; 63 ; >
     au < finished ; crawling ; 2018 ; Biographical Memoirs of Fellows of the Royal Society Volume 64 ; 64 ; reingest1.clockss.org:8082 >
-    au < manifest ; exists ; 2019 ; Biographical Memoirs of Fellows of the Royal Society Volume 65 ; 65 ; >
-    au < expected ; exists ; 2020 ; Biographical Memoirs of Fellows of the Royal Society Volume 66 ; 66 ; >
+    au < manifest ; exists ; 2019 ; Biographical Memoirs of Fellows of the Royal Society Volume 65 ; 2019 ; >
+    au < manifest ; exists ; 2020 ; Biographical Memoirs of Fellows of the Royal Society Volume 66 ; 2020 ; >
 
   }
 
@@ -120,8 +121,8 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Biology Letters Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Biology Letters Volume 13 ; 13 ; >
     au < finished ; crawling ; 2018 ; Biology Letters Volume 14 ; 14 ; reingest4.clockss.org:8082 >
-    au < manifest ; exists ; 2019 ; Biology Letters Volume 15 ; 15 ; >
-    au < expected ; exists ; 2020 ; Biology Letters Volume 16 ; 16 ; >
+    au < manifest ; exists ; 2019 ; Biology Letters Volume 15 ; 2019 ; >
+    au < manifest ; exists ; 2020 ; Biology Letters Volume 16 ; 2020 ; >
 
   }
 
@@ -147,8 +148,8 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Interface Focus Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Interface Focus Volume 7 ; 7 ; >
     au < finished ; crawling ; 2018 ; Interface Focus Volume 8 ; 8 ; reingest4.clockss.org:8082 >
-    au < manifest ; exists ; 2019 ; Interface Focus Volume 9 ; 9 ; >
-    au < expected ; exists ; 2020 ; Interface Focus Volume 10 ; 10 ; >
+    au < manifest ; exists ; 2019 ; Interface Focus Volume 9 ; 2019 ; >
+    au < manifest ; exists ; 2020 ; Interface Focus Volume 10 ; 2020 ; >
 
   }
   
@@ -178,8 +179,8 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of the Royal Society Interface Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of the Royal Society Interface Volume 14 ; 14 ; >
     au < finished ; crawling ; 2018 ; Journal of the Royal Society Interface Volume 15 ; 15 ; reingest3.clockss.org:8083 >
-    au < manifest ; exists ; 2019 ; Journal of the Royal Society Interface Volume 16 ; 16 ; >
-    au < expected ; exists ; 2020 ; Journal of the Royal Society Interface Volume 17 ; 17 ; >
+    au < manifest ; exists ; 2019 ; Journal of the Royal Society Interface Volume 16 ; 2019 ; >
+    au < manifest ; exists ; 2020 ; Journal of the Royal Society Interface Volume 17 ; 2020 ; >
 
   }
 
@@ -267,8 +268,8 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Notes and Records the Royal Society Journal of the History of Science Volume 70 ; 70 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Notes and Records the Royal Society Journal of the History of Science Volume 71 ; 71 ; >
     au < finished ; crawling ; 2018 ; Notes and Records the Royal Society Journal of the History of Science Volume 72 ; 72 ; reingest5.clockss.org:8082 >
-    au < manifest ; exists ; 2019 ; Notes and Records the Royal Society Journal of the History of Science Volume 73 ; 73 ; >
-    au < expected ; exists ; 2020 ; Notes and Records the Royal Society Journal of the History of Science Volume 74 ; 74 ; >
+    au < manifest ; exists ; 2019 ; Notes and Records the Royal Society Journal of the History of Science Volume 73 ; 2019 ; >
+    au < manifest ; exists ; 2020 ; Notes and Records the Royal Society Journal of the History of Science Volume 74 ; 2020 ; >
 
   }
 
@@ -290,8 +291,8 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Open Biology Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Open Biology Volume 7 ; 7 ; >
     au < finished ; crawling ; 2018 ; Open Biology Volume 8 ; 8 ; reingest2.clockss.org:8085 >
-    au < manifest ; exists ; 2019 ; Open Biology Volume 9 ; 9 ; >
-    au < expected ; exists ; 2020 ; Open Biology Volume 10 ; 10 ; >
+    au < manifest ; exists ; 2019 ; Open Biology Volume 9 ; 2019 ; >
+    au < manifest ; exists ; 2020 ; Open Biology Volume 10 ; 2020 ; >
 
   }
 
@@ -303,7 +304,7 @@
       eissn = 1471-2962 ;
       issnl = 1364-503X
     >
-
+    {
     param[journal_id] = rsta
     
     au < doNotProcess ; exists ; 1887 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 178 ; 178 ; >
@@ -458,6 +459,10 @@
     au < doNotProcess ; exists ; 1988-1989 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 327 ; 327 ; >
     au < doNotProcess ; exists ; 1989 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 328 ; 328 ; >
     au < doNotProcess ; exists ; 1989 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 329 ; 329 ; >
+    }
+    {
+    param[journal_id] = rsta1990
+    
     au < doNotProcess ; exists ; 1990 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 330 ; 330 ; >
     au < doNotProcess ; exists ; 1990 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 331 ; 331 ; >
     au < doNotProcess ; exists ; 1990 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 332 ; 332 ; >
@@ -482,15 +487,23 @@
     au < doNotProcess ; exists ; 1995 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 351 ; 351 ; >
     au < doNotProcess ; exists ; 1995 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 352 ; 352 ; >
     au < doNotProcess ; exists ; 1995 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 353 ; 353 ; >
+    }
+    {
+    param[journal_id] = rsta1996
+    
     au < doNotProcess ; exists ; 1996 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 354 ; 354 ; >
     au < doNotProcess ; exists ; 1997 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 355 ; 355 ; >
     au < doNotProcess ; exists ; 1998 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 356 ; 356 ; >
     au < doNotProcess ; exists ; 1999 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 357 ; 357 ; >
-    au < exists ; exists ; 2000 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 358 ; 358 ; >
-    au < exists ; exists ; 2001 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 359 ; 359 ; >
-    au < exists ; exists ; 2002 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 360 ; 360 ; >
-    au < exists ; exists ; 2003 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 361 ; 361 ; >
-    au < exists ; exists ; 2004 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 362 ; 362 ; >
+    au < manifest ; exists ; 2000 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 358 ; 358 ; >
+    au < manifest ; exists ; 2001 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 359 ; 359 ; >
+    au < manifest ; exists ; 2002 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 360 ; 360 ; >
+    au < manifest ; exists ; 2003 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 361 ; 361 ; >
+    au < manifest ; exists ; 2004 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 362 ; 362 ; >
+    }
+    {
+    param[journal_id] = rsta
+    
     au < manifest ; exists ; 2005 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 363 ; 363 ; >
     au < doNotProcess ; doNotProcess ; 2006 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 364 ; 364 ; >
     au < doNotProcess ; doNotProcess ; 2007 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 365 ; 365 ; >
@@ -506,8 +519,8 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 375 ; 375 ; >
     au < finished ; crawling ; 2018 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 376 ; 376 ; reingest1.clockss.org:8082 >
     au < manifest ; exists ; 2019 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 377 ; 377 ; >
-    au < expected ; exists ; 2020 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 378 ; 378 ; >
-
+    au < manifest ; exists ; 2020 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 378 ; 378 ; >
+    }
   }
 
   {
@@ -717,8 +730,8 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 371 ; 371 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 372 ; 372 ; >
     au < finished ; finished ; 2018 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 373 ; 373 ; reingest2.clockss.org:8085 >
-    au < manifest ; exists ; 2019 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 374 ; 374 ; >
-    au < expected ; exists ; 2020 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 375 ; 375 ; >
+    au < manifest ; exists ; 2019 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 374 ; 2019 ; >
+    au < manifest ; exists ; 2020 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 375 ; 2020 ; >
 
   }
 
@@ -1322,8 +1335,8 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 472 ; 472 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 473 ; 473 ; >
     au < finished ; crawling ; 2018 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 474 ; 474 ; reingest3.clockss.org:8083 >
-    au < manifest ; exists ; 2019 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 475 ; 475 ; >
-    au < expected ; exists ; 2020 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 476 ; 476 ; >
+    au < exists ; exists ; 2019 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 475 ; 2019 ; >
+    au < exists ; exists ; 2020 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 476 ; 2020 ; >
 
   }
 
@@ -1548,8 +1561,8 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Proceedings of the Royal Society B: Biological Sciences Volume 283 ; 283 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Proceedings of the Royal Society B: Biological Sciences Volume 284 ; 284 ; >
     au < finished ; crawling ; 2018 ; Proceedings of the Royal Society B: Biological Sciences Volume 285 ; 285 ; reingest4.clockss.org:8082 >
-    au < manifest ; exists ; 2019 ; Proceedings of the Royal Society B: Biological Sciences Volume 286 ; 286 ; >
-    au < expected ; exists ; 2020 ; Proceedings of the Royal Society B: Biological Sciences Volume 287 ; 287 ; >
+    au < manifest ; exists ; 2019 ; Proceedings of the Royal Society B: Biological Sciences Volume 286 ; 2019 ; >
+    au < manifest ; exists ; 2020 ; Proceedings of the Royal Society B: Biological Sciences Volume 287 ; 2020 ; >
 
   }
 
@@ -1656,8 +1669,8 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Royal Society Open Science Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Royal Society Open Science Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Royal Society Open Science Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2019 ; Royal Society Open Science Volume 6 ; 6 ; >
-    au < expected ; exists ; 2020 ; Royal Society Open Science Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2019 ; Royal Society Open Science Volume 6 ; 2019 ; >
+    au < manifest ; exists ; 2020 ; Royal Society Open Science Volume 7 ; 2020 ; >
 
   }
 
