@@ -79,9 +79,13 @@ public final class SourceXmlParserHelperUtilities {
                 surname  = partNode.getTextContent();
             } else if ("SurName".equalsIgnoreCase(partName)) {
                 surname = partNode.getTextContent();
+            } else if ("SurName".equalsIgnoreCase(partName)) {
+                surname = partNode.getTextContent();
             } else if ("ForeName".equalsIgnoreCase(partName)) {
                 firstname = partNode.getTextContent();
             } else if ("FirstName".equalsIgnoreCase(partName)) {
+                firstname = partNode.getTextContent();
+            } else if ("given_name".equalsIgnoreCase(partName)) {
                 firstname = partNode.getTextContent();
             }
         }
