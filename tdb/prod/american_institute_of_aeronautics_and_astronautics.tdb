@@ -288,10 +288,10 @@
     param[journal_id] = jgc
     #continued_by = 0731-5090
 
-    au < testing ; 1978 ; Journal of Guidance and Control Volume 1 ; 1 ; https://arc.aiaa.org/ >
-    au < testing ; 1979 ; Journal of Guidance and Control Volume 2 ; 2 ; https://arc.aiaa.org/ >
-    au < testing ; 1980 ; Journal of Guidance and Control Volume 3 ; 3 ; https://arc.aiaa.org/ >
-    au < testing ; 1981 ; Journal of Guidance and Control Volume 4 ; 4 ; https://arc.aiaa.org/ >
+    au < ready ; 1978 ; Journal of Guidance and Control Volume 1 ; 1 ; https://arc.aiaa.org/ >
+    au < ready ; 1979 ; Journal of Guidance and Control Volume 2 ; 2 ; https://arc.aiaa.org/ >
+    au < ready ; 1980 ; Journal of Guidance and Control Volume 3 ; 3 ; https://arc.aiaa.org/ >
+    au < ready ; 1981 ; Journal of Guidance and Control Volume 4 ; 4 ; https://arc.aiaa.org/ >
 
   }
 
@@ -311,9 +311,9 @@
     au < testing ; 1980 ; Journal of Guidance, Control, and Dynamics Volume 3 ; 3 ; https://arc.aiaa.org/ >
     au < testing ; 1981 ; Journal of Guidance, Control, and Dynamics Volume 4 ; 4 ; https://arc.aiaa.org/ >
     au < ready ; 1982 ; Journal of Guidance, Control, and Dynamics Volume 5 ; 5 ; https://arc.aiaa.org/ >
-    au < testing ; 1983 ; Journal of Guidance, Control, and Dynamics Volume 6 ; 6 ; https://arc.aiaa.org/ >
-    au < testing ; 1984 ; Journal of Guidance, Control, and Dynamics Volume 7 ; 7 ; https://arc.aiaa.org/ >
-    au < testing ; 1985 ; Journal of Guidance, Control, and Dynamics Volume 8 ; 8 ; https://arc.aiaa.org/ >
+    au < ready ; 1983 ; Journal of Guidance, Control, and Dynamics Volume 6 ; 6 ; https://arc.aiaa.org/ >
+    au < ready ; 1984 ; Journal of Guidance, Control, and Dynamics Volume 7 ; 7 ; https://arc.aiaa.org/ >
+    au < ready ; 1985 ; Journal of Guidance, Control, and Dynamics Volume 8 ; 8 ; https://arc.aiaa.org/ >
     au < ready ; 1986 ; Journal of Guidance, Control, and Dynamics Volume 9 ; 9 ; https://arc.aiaa.org/ >
     au < ready ; 1987 ; Journal of Guidance, Control, and Dynamics Volume 10 ; 10 ; https://arc.aiaa.org/ >
     au < ready ; 1988 ; Journal of Guidance, Control, and Dynamics Volume 11 ; 11 ; https://arc.aiaa.org/ >
