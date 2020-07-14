@@ -64,7 +64,7 @@
        au < doNotProcess ; exists ; 2008-2009 ; Archaeology International Volume 12 ; 12 ; 2008 ; >
        au < finished ; finished ; 2009-2011 ; Archaeology International Volume 13/14 ; 13/14 ; 2009 ; >
        au < superseded ; exists ; 2011-2012 ; Archaeology International Volume 15 [to delete] ; 15 ; 2011 ; >
-       au < finished ; frozen ; 2011-2012 ; Archaeology International Volume 15 ; 15 ; 2012 ; reingest4.clockss.org:8082 >
+       au < finished ; finished ; 2011-2012 ; Archaeology International Volume 15 ; 15 ; 2012 ; reingest4.clockss.org:8082 >
        au < finished ; finished ; 2012-2013 ; Archaeology International Volume 16 ; 16 ; 2013 ; reingest2.clockss.org:8085 >
        au < finished ; finished ; 2013-2014 ; Archaeology International Volume 17 ; 17 ; 2014 ; reingest5.clockss.org:8082 >
     }
@@ -128,7 +128,7 @@
        au < doNotProcess ; exists ; 2008 ; Bulletin of the History of Archaeology Volume 18 ; 18 ; 2008 ; >
        au < doNotProcess ; exists ; 2009 ; Bulletin of the History of Archaeology Volume 19 ; 19 ; 2009 ; >
        au < doNotProcess ; exists ; 2010 ; Bulletin of the History of Archaeology Volume 20 ; 20 ; 2010 ; >
-       au < finished ; frozen ; 2011 ; Bulletin of the History of Archaeology Volume 21 ; 21 ; 2011 ; reingest1.clockss.org:8082 >
+       au < finished ; finished ; 2011 ; Bulletin of the History of Archaeology Volume 21 ; 21 ; 2011 ; reingest1.clockss.org:8082 >
        au < finished ; finished ; 2012 ; Bulletin of the History of Archaeology Volume 22 ; 22 ; 2012 ; reingest2.clockss.org:8085 >
        au < finished ; finished ; 2013 ; Bulletin of the History of Archaeology Volume 23 ; 23 ; 2013 ; reingest4.clockss.org:8082 >
        au < finished ; finished ; 2014 ; Bulletin of the History of Archaeology Volume 24 ; 24 ; 2014 ; reingest3.clockss.org:8083 >
@@ -147,7 +147,7 @@
     param[base_url] = http://www.govafricajournal.org/
     param[journal_id] = gaj
     
-    au < finished ; frozen ; 2014 ; Governance in Africa Volume 1 ; 1 ; 2014 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Governance in Africa Volume 1 ; 1 ; 2014 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; exists ; 2015 ; Governance in Africa Volume 2 ; 2 ; 2015 ; >
 
   }
@@ -180,7 +180,7 @@
        au < finished ; finished ; 2011 ; Journal of Conservation and Museum Studies Volume 9 ; 9 ; 2011 ; >
        au < finished ; finished ; 2012 ; Journal of Conservation and Museum Studies Volume 10 ; 10 ; 2012 ; >
        au < finished ; finished ; 2013 ; Journal of Conservation and Museum Studies Volume 11 ; 11 ; 2013 ; reingest3.clockss.org:8083 >
-       au < finished ; frozen ; 2014 ; Journal of Conservation and Museum Studies Volume 12 ; 12 ; 2014 ; reingest5.clockss.org:8082 >
+       au < finished ; finished ; 2014 ; Journal of Conservation and Museum Studies Volume 12 ; 12 ; 2014 ; reingest5.clockss.org:8082 >
        au < doNotProcess ; exists ; 2015 ; Journal of Conservation and Museum Studies Volume 13 ; 13 ; 2015 ; >
     }
   }
@@ -204,8 +204,8 @@
     au < finished ; finished ; 2008 ; Journal of Circadian Rhythms Volume 6 ; 6 ; 2008 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2009 ; Journal of Circadian Rhythms Volume 7 ; 7 ; 2009 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2010 ; Journal of Circadian Rhythms Volume 8 ; 8 ; 2010 ; reingest4.clockss.org:8082 >
-    au < finished ; frozen ; 2011 ; Journal of Circadian Rhythms Volume 9 ; 9 ; 2011 ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 2012 ; Journal of Circadian Rhythms Volume 10 ; 10 ; 2012 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2011 ; Journal of Circadian Rhythms Volume 9 ; 9 ; 2011 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2012 ; Journal of Circadian Rhythms Volume 10 ; 10 ; 2012 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2013 ; Journal of Circadian Rhythms Volume 11 ; 11 ; 2013 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Journal of Circadian Rhythms Volume 12 ; 12 ; 2014 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; exists ; 2015 ; Journal of Circadian Rhythms Volume 13 ; 13 ; 2015 ; >
@@ -228,7 +228,7 @@
     au < doNotProcess ; exists ; 2010 ; Journal of European Psychology Students Volume 2 ; 2 ; 2010 ; >
     au < finished ; finished ; 2012 ; Journal of European Psychology Students Volume 3 ; 3 ; 2012 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2013 ; Journal of European Psychology Students Volume 4 ; 4 ; 2013 ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 2014 ; Journal of European Psychology Students Volume 5 ; 5 ; 2014 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Journal of European Psychology Students Volume 5 ; 5 ; 2014 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; exists ; 2015 ; Journal of European Psychology Students Volume 6 ; 6 ; 2015 ; >
     
   }
@@ -245,8 +245,8 @@
     param[journal_id] = joad
 
     au < finished ; finished ; 2012 ; Journal of Open Archaeology Data Volume 1 ; 1 ; 2012 ; reingest4.clockss.org:8082 >
-    au < finished ; frozen ; 2013 ; Journal of Open Archaeology Data Volume 2 ; 2 ; 2013 ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 2014 ; Journal of Open Archaeology Data Volume 3 ; 3 ; 2014 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2013 ; Journal of Open Archaeology Data Volume 2 ; 2 ; 2013 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Journal of Open Archaeology Data Volume 3 ; 3 ; 2014 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; exists ; 2015 ; Journal of Open Archaeology Data Volume 4 ; 4 ; 2015 ; >
 
   }
@@ -348,7 +348,7 @@
        au < finished ; finished ; 2011 ; Opticon1826 Volume 10-11 ; 10-11 ; 2011 ; >
        au < finished ; finished ; 2012 ; Opticon1826 Volume 12 ; 12 ; 2012 ; >
        au < finished ; frozen ; 2013 ; Opticon1826 Volume 13 ; 13 ; 2013 ; reingest1.clockss.org:8082 >
-       au < finished ; frozen ; 2014 ; Opticon1826 Volume 14 ; 14 ; 2014 ; reingest2.clockss.org:8085 >
+       au < finished ; finished ; 2014 ; Opticon1826 Volume 14 ; 14 ; 2014 ; reingest2.clockss.org:8085 >
        au < doNotProcess ; exists ; 2015 ; Opticon1826 Volume 15 ; 15 ; 2015 ; >
     }
   }
@@ -484,8 +484,8 @@
     au < doNotProcess ; exists ; 2009 ; Psychologica Belgica Volume 49 ; 49 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; Psychologica Belgica Volume 50 ; 50 ; 2010 ; >
     au < finished ; finished ; 2011 ; Psychologica Belgica Volume 51 ; 51 ; 2011 ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 2012 ; Psychologica Belgica Volume 52 ; 52 ; 2012 ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2013 ; Psychologica Belgica Volume 53 ; 53 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2012 ; Psychologica Belgica Volume 52 ; 52 ; 2012 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; Psychologica Belgica Volume 53 ; 53 ; 2013 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2014 ; Psychologica Belgica Volume 54 ; 54 ; 2014 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; exists ; 2015 ; Psychologica Belgica Volume 55 ; 55 ; 2015 ; >
 
@@ -539,9 +539,9 @@
     param[journal_id] = ujil
 
     au < doNotProcess ; exists ; 2010 ; Utrecht Journal of International and European Law Volume 26 ; 26 ; 2010 ; >
-    au < finished ; frozen ; 2011 ; Utrecht Journal of International and European Law Volume 27 ; 27 ; 2011 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2011 ; Utrecht Journal of International and European Law Volume 27 ; 27 ; 2011 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2012 ; Utrecht Journal of International and European Law Volume 28 ; 28 ; 2012 ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2013 ; Utrecht Journal of International and European Law Volume 29 ; 29 ; 2013 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2013 ; Utrecht Journal of International and European Law Volume 29 ; 29 ; 2013 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Utrecht Journal of International and European Law Volume 30 ; 30 ; 2014 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; exists ; 2015 ; Utrecht Journal of International and European Law Volume 31 ; 31 ; 2015 ; >
 

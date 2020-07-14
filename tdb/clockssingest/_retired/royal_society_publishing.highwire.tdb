@@ -110,7 +110,7 @@
     au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 2010 ; Biology Letters Volume 6 ; 6 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Biology Letters Volume 7 ; 7 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Biology Letters Volume 8 ; 8 ; >
-    au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2013 ; Biology Letters Volume 9 ; 9 ; reingest4.clockss.org:8082 >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Biology Letters Volume 9 ; 9 ; reingest4.clockss.org:8082 >
     au < rsp.ClockssRSPDrupalPlugin ; doNotProcess ; doNotProcess ; 2014 ; Biology Letters Volume 10 ; 10 ; > #Try again. xml error: See http://rsbl.royalsocietypublishing.org/highwire/filestream/25839/field_highwire_adjunct_files/2/rsbl20140479supp3.xml
     au < rsp.ClockssRSPDrupalPlugin ; finished ; finished ; 2015 ; Biology Letters Volume 11 ; 11 ; reingest5.clockss.org:8082 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; finished ; 2016 ; Biology Letters Volume 12 ; 12 ; reingest1.clockss.org:8082 >
@@ -135,7 +135,7 @@
 
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Interface Focus Volume 1 ; 1 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Interface Focus Volume 2 ; 2 ; >
-    au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2013 ; Interface Focus Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Interface Focus Volume 3 ; 3 ; reingest3.clockss.org:8083 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; finished ; 2014 ; Interface Focus Volume 4 ; 4 ; reingest5.clockss.org:8082 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; finished ; 2015 ; Interface Focus Volume 5 ; 5 ; reingest5.clockss.org:8082 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; finished ; 2016 ; Interface Focus Volume 6 ; 6 ; reingest5.clockss.org:8082 >
@@ -165,10 +165,10 @@
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Journal of the Royal Society Interface Volume 8 ; 8 ; >
     au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 2012 ; Journal of the Royal Society Interface Volume 9 ; 9 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2013 ; Journal of the Royal Society Interface Volume 10 ; 10 ; reingest5.clockss.org:8082 >
-    au < rsp.ClockssRSPDrupalPlugin ; finished ; frozen ; 2014 ; Journal of the Royal Society Interface Volume 11 ; 11 ; reingest1.clockss.org:8082 >
+    au < rsp.ClockssRSPDrupalPlugin ; finished ; finished ; 2014 ; Journal of the Royal Society Interface Volume 11 ; 11 ; reingest1.clockss.org:8082 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; finished ; 2015 ; Journal of the Royal Society Interface Volume 12 ; 12 ; reingest2.clockss.org:8085 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; finished ; 2016 ; Journal of the Royal Society Interface Volume 13 ; 13 ; reingest5.clockss.org:8082 >
-    au < rsp.ClockssRSPDrupalPlugin ; finished ; frozen ; 2017 ; Journal of the Royal Society Interface Volume 14 ; 14 ; reingest3.clockss.org:8083 >
+    au < rsp.ClockssRSPDrupalPlugin ; finished ; finished ; 2017 ; Journal of the Royal Society Interface Volume 14 ; 14 ; reingest3.clockss.org:8083 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; finished ; 2018 ; Journal of the Royal Society Interface Volume 15 ; 15 ; reingest1.clockss.org:8082 >
 
   }
@@ -278,7 +278,7 @@
     au < rsp.ClockssRSPDrupalPlugin ; finished ; finished ; 2015 ; Open Biology Volume 5 ; 5 ; reingest3.clockss.org:8083 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; finished ; 2016 ; Open Biology Volume 6 ; 6 ; reingest4.clockss.org:8082 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; finished ; 2017 ; Open Biology Volume 7 ; 7 ; reingest4.clockss.org:8082 >
-    au < rsp.ClockssRSPDrupalPlugin ; finished ; frozen ; 2018 ; Open Biology Volume 8 ; 8 ; reingest5.clockss.org:8082 >
+    au < rsp.ClockssRSPDrupalPlugin ; finished ; finished ; 2018 ; Open Biology Volume 8 ; 8 ; reingest5.clockss.org:8082 >
 
   }
 
@@ -479,7 +479,7 @@
     au < rsp.ClockssRSPDrupalPlugin ; doNotProcess ; doNotProcess ; 2003 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 361 ; 361 ; >
     au < rsp.ClockssRSPDrupalPlugin ; doNotProcess ; doNotProcess ; 2004 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 362 ; 362 ; >
     au < rsp.ClockssRSPDrupalPlugin ; doNotProcess ; doNotProcess ; 2005 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 363 ; 363 ; >
-    au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2006 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 364 ; 364 ; reingest5.clockss.org:8082 >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2006 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 364 ; 364 ; reingest5.clockss.org:8082 >
     au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2007 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 365 ; 365 ; reingest1.clockss.org:8082 >
     au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 2008 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 366 ; 366 ; >
     au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 2009 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 367 ; 367 ; >
@@ -700,7 +700,7 @@
     au < rsp.ClockssRSPDrupalPlugin ; finished ; frozen ; 2014 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 369 ; 369 ; reingest1.clockss.org:8082 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; finished ; 2015 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 370 ; 370 ; reingest5.clockss.org:8082 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; finished ; 2016 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 371 ; 371 ; reingest4.clockss.org:8082 >
-    au < rsp.ClockssRSPDrupalPlugin ; finished ; frozen ; 2017 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 372 ; 372 ; reingest3.clockss.org:8083 >
+    au < rsp.ClockssRSPDrupalPlugin ; finished ; finished ; 2017 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 372 ; 372 ; reingest3.clockss.org:8083 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; finished ; 2018 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 373 ; 373 ; reingest2.clockss.org:8085 >
 
   }
