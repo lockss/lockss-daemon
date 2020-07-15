@@ -1559,10 +1559,10 @@
    au < finished ; manifest ; 2014 ; 9783794530595 ; 9783132428027 ; 10.1055/b-005-149003 ; Leitsymptome und Leitbefunde bei Hund und Katze (9783132428027) ; reingest5.clockss.org:8082 >
    au < ready ; exists ; 2014 ; 9783794527984 ; 9783132427853 ; 10.1055/b-005-149011 ; Sono-Grundkurs für Tiermediziner (9783132427853) ; >
    au < finished ; manifest ; 2014 ; 9783794529063 ; 9783132427846 ; 10.1055/b-005-148988 ; Der Tierheim-Leitfaden (9783132427846) ; reingest4.clockss.org:8082 >
-   au < ready ; exists ; 2014 ; 9783794529711 ; 9783132428010 ; 10.1055/b-005-149002 ; Untersuchungs-und Behandlungsmethoden bei Hund und Katze (9783132428010) ; >
+   au < crawling ; exists ; 2014 ; 9783794529711 ; 9783132428010 ; 10.1055/b-005-149002 ; Untersuchungs-und Behandlungsmethoden bei Hund und Katze (9783132428010) ; >
    au < exists ; exists ; 2015 ; 9783131150745 ; 9783132401303 ; 10.1055/b-003-127185 ; Checkliste Pneumologie (9783132401303) ; >
    au < finished ; manifest ; 2015 ; 9783794530564 ; 9783132427976 ; 10.1055/b-005-149001 ; DermaSkills (9783132427976) ; reingest3.clockss.org:8083 >
-   au < ready ; exists ; 2015 ; 9783830412427 ; 9783131953735 ; 10.1055/b-003-117815 ; Krankheiten der Katze (9783131953735) ; >
+   au < crawling ; exists ; 2015 ; 9783830412427 ; 9783131953735 ; 10.1055/b-003-117815 ; Krankheiten der Katze (9783131953735) ; >
    au < ready ; exists ; 2015 ; 9783830494416 ; 9783830490043 ; 10.1055/b-003-127008 ; Mykotherapie für Tiere (9783830490043) ; >
    au < ready ; exists ; 2015 ; 9783794530496 ; 9783132428003 ; 10.1055/b-005-148986 ; Notfallchirurgie bei Hund und Katze (9783132428003) ; >
    ###au < manifest ; exists ; 2015 ; 9781604067996 ; 9781804068014 ; 10.1055/b-002-98013 ; Principles and Practice of Pediatric Neurosurgery (9781804068014) ; > #duplicate AU
@@ -1579,23 +1579,23 @@
    au < finished ; manifest ; 2017 ; 9783794531110 ; 9783132427969 ; 10.1055/b-005-148996 ; HeimtierSkills (9783132427969) ; reingest3.clockss.org:8083 >
    au < exists ; exists ; 2017 ; 9783132401129 ; 9783132417755 ; 10.1055/b-004-140694 ; Memorix Zahnmedizin (9783132417755) ; >
    ###au < exists ; exists ; 2017 ; 9783131994417 ; 9783131994516 ; 10.1055/b-003-127183 ; MRT der Leber (9783131994516) ; > #duplicate AU
-   au < ready ; exists ; 2017 ; 9781626230033 ; 9781626230040 ; 10.1055/b-004-135640 ; Robotic Head and Neck Surgery (9781626230040) ; >
+   au < crawling ; exists ; 2017 ; 9781626230033 ; 9781626230040 ; 10.1055/b-004-135640 ; Robotic Head and Neck Surgery (9781626230040) ; >
    au < exists ; exists ; 2017 ;  ; 9783132413740 ; 10.1055/b-005-143306 ; Statistik (9783132413740) ; >
    au < finished ; manifest ; 2017 ; 9783794531127 ; 9783132427983 ; 10.1055/b-005-148981 ; Verhaltensberatung bei kleinen Heimtieren (9783132427983) ; reingest2.clockss.org:8085 >
    au < exists ; exists ; 2017 ; 9783132402270 ; 9783132402300 ; 10.1055/b-004-139120 ; Zellbiologie (9783132402300) ; >
    au < finished ; manifest ; 2018 ; 9783132419902 ; 9783132425804 ; 10.1055/b-006-161652 ; Akupunktur für Hebammen, Geburtshelfer und Gynäkologen (9783132425804) ; reingest4.clockss.org:8082 >
-   au < ready ; exists ; 2018 ; 9783132425996 ; 9783132426023 ; 10.1055/b-006-149717 ; Anästhesie griffbereit (9783132426023) ; >
+   au < crawling ; exists ; 2018 ; 9783132425996 ; 9783132426023 ; 10.1055/b-006-149717 ; Anästhesie griffbereit (9783132426023) ; >
    au < finished ; manifest ; 2018 ; 9783132423091 ; 9783132423107 ; 10.1055/b-006-149767 ; AO Principles of Fracture Management (9783132423107) ; reingest3.clockss.org:8083 >
    au < finished ; manifest ; 2018 ; 9781626234550 ; 9781626234567 ; 10.1055/b-006-149770 ; AOSpine Masters Series, Volume 10: Spinal Infections (9781626234567) ; reingest1.clockss.org:8082 >
    au < exists ; exists ; 2018 ; 9783132420472 ; 9783132425811 ; 10.1055/b-006-161271 ; Arbeitsheft und Prüfungsvorbereitung Altenpflege (9783132425811) ; >
    au < frozen ; exists ; 2018 ; 9783132408661 ; 9783132408654 ; 10.1055/b-006-161678 ; Atlas der gynäkologischen Operationen (9783132408654) ; >
-   au < ready ; exists ; 2018 ; 9783132032514 ; 9783132415362 ; 10.1055/b-004-140654 ; Atlas der Schnittbildanatomie (9783132415362) ; >
+   au < crawling ; exists ; 2018 ; 9783132032514 ; 9783132415362 ; 10.1055/b-004-140654 ; Atlas der Schnittbildanatomie (9783132415362) ; >
    au < finished ; manifest ; 2018 ; 9783132032811 ; 9783132415355 ; 10.1055/b-004-140653 ; Atlas der Schnittbildanatomie (9783132415355) ; reingest3.clockss.org:8083 >
    au < finished ; manifest ; 2018 ; 9783132032217 ; 9783132407237 ; 10.1055/b-004-129999 ; Atlas der Schnittbildanatomie (9783132407237) ; reingest4.clockss.org:8082 >
    au < finished ; manifest ; 2018 ; 9781626236790 ; 9781626238831 ; 10.1055/b-006-149811 ; Atlas of Distal Radius Fractures (9781626238831) ; reingest3.clockss.org:8083 >
    au < finished ; manifest ; 2018 ; 9783132417250 ; 9783132417281 ; 10.1055/b-006-149723 ; Bewegungsapparat Pferd (9783132417281) ; reingest2.clockss.org:8085 >
    au < finished ; manifest ; 2018 ; 9783132402362 ; 9783132402393 ; 10.1055/b-006-149538 ; Bildgebende Diagnostik in der Dermatologie (9783132402393) ; reingest1.clockss.org:8082 >
-   au < ready ; exists ; 2018 ; 9783132054110 ; 9783132054219 ; 10.1055/b-005-143634 ; Body Imaging: Thorax and Abdomen (9783132054219) ; >
+   au < crawling ; exists ; 2018 ; 9783132054110 ; 9783132054219 ; 10.1055/b-005-143634 ; Body Imaging: Thorax and Abdomen (9783132054219) ; >
    au < finished ; manifest ; 2018 ; 9783132406261 ; 9783132406308 ; 10.1055/b-005-145235 ; Catalytic Reduction in Organic Synthesis 2 (9783132406308) ; reingest2.clockss.org:8085 >
    au < exists ; exists ; 2018 ; 9783132419797 ; 9783132419827 ; 10.1055/b-006-160382 ; Checkliste Anamnese und klinische Untersuchung (9783132419827) ; >
    au < exists ; exists ; 2018 ; 9783132420564 ; 9783132420595 ; 10.1055/b-006-160380 ; Checkliste Augenheilkunde (9783132420595) ; >
@@ -1617,17 +1617,17 @@
    au < finished ; manifest ; 2018 ; 9783131767615 ; 9783132419339 ; 10.1055/b-005-143320 ; Gastrointestinale Onkologie (9783132419339) ; reingest2.clockss.org:8085 >
    au < finished ; manifest ; 2018 ; 9781626234079 ; 9781626234086 ; 10.1055/b-006-160147 ; Handbook of Otolaryngology (9781626234086) ; reingest5.clockss.org:8082 >
    au < finished ; manifest ; 2018 ; 9781604068795 ; 9781604068801 ; 10.1055/b-006-160148 ; Handbook of Pediatric Neurosurgery (9781604068801) ; reingest1.clockss.org:8082 >
-   au < ready ; exists ; 2018 ; 9783132413689 ; 9783132413719 ; 10.1055/b-006-161635 ; Hygiene, Infektiologie, Mikrobiologie (9783132413719) ; >
+   au < crawling ; exists ; 2018 ; 9783132413689 ; 9783132413719 ; 10.1055/b-006-161635 ; Hygiene, Infektiologie, Mikrobiologie (9783132413719) ; >
    au < finished ; manifest ; 2018 ; 9783132425170 ; 9783132425200 ; 10.1055/b-006-163308 ; Illustrated Veterinary Anatomical Nomenclature (9783132425200) ; reingest3.clockss.org:8083 >
-   au < ready ; exists ; 2018 ; 9781626232877 ; 9781626232884 ; 10.1055/b-006-160149 ; Key Techniques in Orthopaedic Surgery (9781626232884) ; >
+   au < crawling ; exists ; 2018 ; 9781626232877 ; 9781626232884 ; 10.1055/b-006-160149 ; Key Techniques in Orthopaedic Surgery (9781626232884) ; >
    au < ready ; exists ; 2018 ; 9783132427051 ; 9783132427075 ; 10.1055/b-006-160284 ; Kinderkardiologie (9783132427075) ; >
-   au < ready ; exists ; 2018 ; 9783132423008 ; 9783132423039 ; 10.1055/b-006-161629 ; Kleintiere stressarm behandeln (9783132423039) ; >
+   au < crawling ; exists ; 2018 ; 9783132423008 ; 9783132423039 ; 10.1055/b-006-161629 ; Kleintiere stressarm behandeln (9783132423039) ; >
    au < finished ; manifest ; 2018 ; 9783794532537 ; 9783132433168 ; 10.1055/b-006-166355 ; Klinische Notfälle griffbereit (9783132433168) ; reingest1.clockss.org:8082 >
    au < finished ; manifest ; 2018 ; 9783134496109 ; 9783132407671 ; 10.1055/b-004-132250 ; Klinische Pathophysiologie (9783132407671) ; reingest2.clockss.org:8085 >
    au < finished ; manifest ; 2018 ; 9783132423176 ; 9783132423206 ; 10.1055/b-006-160285 ; Knowledge Updates 2018/2 (9783132423206) ; reingest3.clockss.org:8083 >
    au < ready ; exists ; 2018 ; 9783132423213 ; 9783132423244 ; 10.1055/b-006-161208 ; Knowledge Updates 2018/3 (9783132423244) ; >
    au < testing ; exists ; 2018 ; 9783132419049 ; 9783132419070 ; 10.1055/b-006-161274 ; Kompendium für die Heilpraktikerprüfung (9783132419070) ; >
-   au < ready ; exists ; 2018 ; 9783132419414 ; 9783132419445 ; 10.1055/b-006-161622 ; Körperhaltung (9783132419445) ; >
+   au < crawling ; exists ; 2018 ; 9783132419414 ; 9783132419445 ; 10.1055/b-006-161622 ; Körperhaltung (9783132419445) ; >
    au < finished ; manifest ; 2018 ; 9783132404557 ; 9783132404588 ; 10.1055/b-006-161621 ; Kraniosakrale Osteopathie (9783132404588) ; reingest5.clockss.org:8082 >
    au < finished ; manifest ; 2018 ; 9783131153623 ; 9783132416192 ; 10.1055/b-004-140286 ; Kursbuch Dopplersonografie in Gynäkologie und Geburtshilfe (9783132416192) ; reingest1.clockss.org:8082 >
    au < finished ; manifest ; 2018 ; 9783132425835 ; 9783132425866 ; 10.1055/b-006-161623 ; Kursbuch Endosonografie (9783132425866) ; reingest1.clockss.org:8082 >
@@ -1642,7 +1642,7 @@
    au < finished ; manifest ; 2018 ; 9783132428201 ; 9783132428232 ; 10.1055/b-006-161679 ; Muskelverletzungen im Sport (9783132428232) ; reingest5.clockss.org:8082 >
    au < finished ; manifest ; 2018 ; 9783132403284 ; 9783132403390 ; 10.1055/b-005-149020 ; Neuro-Intensivmedizin (9783132403390) ; reingest3.clockss.org:8083 >
    au < finished ; manifest ; 2018 ; 9781626232600 ; 9781626232617 ; 10.1055/b-004-135647 ; Neuromuscular Spine Deformity (9781626232617) ; reingest5.clockss.org:8082 >
-   au < ready ; exists ; 2018 ; 9783131754417 ; 9783132404717 ; 10.1055/b-004-129720 ; Neuroradiologische Messverfahren, Klassifikationen und Zeichen (9783132404717) ; >
+   au < crawling ; exists ; 2018 ; 9783131754417 ; 9783132404717 ; 10.1055/b-004-129720 ; Neuroradiologische Messverfahren, Klassifikationen und Zeichen (9783132404717) ; >
    au < finished ; manifest ; 2018 ; 9781626231115 ; 9781626231122 ; 10.1055/b-006-160156 ; Neurosurgical Operative Atlas (9781626231122) ; reingest3.clockss.org:8083 >
    au < finished ; manifest ; 2018 ; 9781626233362 ; 9781626233409 ; 10.1055/b-006-160158 ; Neurotrauma and Critical Care of the Brain (9781626233409) ; reingest2.clockss.org:8085 >
    au < frozen ; exists ; 2018 ; 9781626233416 ; 9781626233423 ; 10.1055/b-006-160159 ; Neurotrauma and Critical Care of the Spine (9781626233423) ; >
@@ -1661,24 +1661,24 @@
    au < finished ; manifest ; 2018 ; 9783132420830 ; 9783132420861 ; 10.1055/b-006-149643 ; PROMETHEUS Allgemeine Anatomie und Bewegungssystem (9783132420861) ; reingest4.clockss.org:8082 >
    au < finished ; manifest ; 2018 ; 9783132420878 ; 9783132420908 ; 10.1055/b-006-149645 ; PROMETHEUS Innere Organe (9783132420908) ; reingest5.clockss.org:8082 >
    au < finished ; manifest ; 2018 ; 9783132420915 ; 9783132420946 ; 10.1055/b-006-149644 ; PROMETHEUS LernAtlas der Anatomie (9783132420946) ; reingest1.clockss.org:8082 >
-   au < ready ; exists ; 2018 ; 9781604068269 ; 9781604068276 ; 10.1055/b-006-160170 ; Research Methods in Radiology (9781604068276) ; >
+   au < crawling ; exists ; 2018 ; 9781604068269 ; 9781604068276 ; 10.1055/b-006-160170 ; Research Methods in Radiology (9781604068276) ; >
    au < frozen ; exists ; 2018 ; 9783132036116 ; 9783132422018 ; 10.1055/b-005-145248 ; Schwerverletztenversorgung (9783132422018) ; >
    au < finished ; manifest ; 2018 ; 9781626234833 ; 9781626234840 ; 10.1055/b-006-160171 ; Seven Bypasses (9781626234840) ; reingest5.clockss.org:8082 >
-   au < ready ; exists ; 2018 ; 9783132425958 ; 9783132425989 ; 10.1055/b-006-160282 ; Sonografische Differenzialdiagnose (9783132425989) ; >
+   au < crawling ; exists ; 2018 ; 9783132425958 ; 9783132425989 ; 10.1055/b-006-160282 ; Sonografische Differenzialdiagnose (9783132425989) ; >
    au < finished ; manifest ; 2018 ; 9783132411104 ; 9783132411135 ; 10.1055/b-006-149612 ; SOPs Neurologie (9783132411135) ; reingest2.clockss.org:8085 >
    au < finished ; manifest ; 2018 ; 9783132425910 ; 9783132425941 ; 10.1055/b-006-160996 ; Sport und Ernährung (9783132425941) ; reingest1.clockss.org:8082 >
    au < finished ; manifest ; 2018 ; 9783794531899 ; 9783132427938 ; 10.1055/b-005-149012 ; Stress- und Zeitmanagement für Tierärzte (9783132427938) ; reingest4.clockss.org:8082 >
-   au < ready ; exists ; 2018 ; 9781626238060 ; 9781626238077 ; 10.1055/b-006-160179 ; Surgical Care of the Painful Degenerative Lumbar Spine (9781626238077) ; >
+   au < crawling ; exists ; 2018 ; 9781626238060 ; 9781626238077 ; 10.1055/b-006-160179 ; Surgical Care of the Painful Degenerative Lumbar Spine (9781626238077) ; >
    au < exists ; exists ; 2018 ; 9783132422216 ; 9783132422247 ; 10.1055/b-006-149537 ; Taschenatlas Anatomie, Band 1: Bewegungsapparat (9783132422247) ; >
    au < exists ; exists ; 2018 ; 9783132422667 ; 9783132422681 ; 10.1055/b-006-149536 ; Taschenatlas Anatomie, Band 3: Nervensystem und Sinnesorgane (9783132422681) ; >
    au < exists ; exists ; 2018 ; 9783132422704 ; 9783132422735 ; 10.1055/b-006-149534 ; Taschenatlas der Anatomie Band 2: Innere Organe (9783132422735) ; >
    au < finished ; manifest ; 2018 ; 9783132421790 ; 9783132421813 ; 10.1055/b-006-161676 ; TCM und Akupunktur in Merksätzen (9783132421813) ; reingest2.clockss.org:8085 >
    au < finished ; manifest ; 2018 ; 9783132419346 ; 9783132419353 ; 10.1055/b-006-160182 ; The Temporal Bone (9783132419353) ; reingest4.clockss.org:8082 >
-   au < ready ; exists ; 2018 ; 9783132420434 ; 9783132420465 ; 10.1055/b-006-149646 ; Therapiekonzepte der Anthroposophischen Medizin (9783132420465) ; >
+   au < crawling ; exists ; 2018 ; 9783132420434 ; 9783132420465 ; 10.1055/b-006-149646 ; Therapiekonzepte der Anthroposophischen Medizin (9783132420465) ; >
    au < finished ; manifest ; 2018 ; 9781626232785 ; 9781626232792 ; 10.1055/b-006-160185 ; Top 3 Differentials in Radiology (9781626232792) ; reingest5.clockss.org:8082 >
    au < exists ; exists ; 2018 ; 9783132421660 ; 9783132421691 ; 10.1055/b-006-161661 ; Topografie und Funktion des Bewegungssystems (9783132421691) ; >
    au < finished ; manifest ; 2018 ; 9783132424661 ; 9783132424692 ; 10.1055/b-006-149288 ; Ultraschalldiagnostik in Pädiatrie und Kinderchirurgie (9783132424692) ; reingest3.clockss.org:8083 >
-   au < ready ; exists ; 2018 ; 9783132420519 ; 9783132420540 ; 10.1055/b-006-161634 ; Viszeralosteopathie (9783132420540) ; >
+   au < crawling ; exists ; 2018 ; 9783132420519 ; 9783132420540 ; 10.1055/b-006-161634 ; Viszeralosteopathie (9783132420540) ; >
    au < finished ; manifest ; 2018 ; 9783132025912 ; 9783132407473 ; 10.1055/b-004-132210 ; Zerebralparese (9783132407473) ; reingest4.clockss.org:8082 >
    au < finished ; manifest ; 2019 ; 9783132425873 ; 9783132425903 ; 10.1055/b-006-161665 ; Allgemeinmedizin (9783132425903) ; reingest3.clockss.org:8083 >
    au < finished ; manifest ; 2019 ; 9783132422117 ; 9783132422148 ; 10.1055/b-006-149531 ; Alterstraumatologie (9783132422148) ; reingest2.clockss.org:8085 >
@@ -1703,15 +1703,15 @@
    au < exists ; exists ; 2019 ; 9783132430259 ; 9783132430280 ; 10.1055/b-007-167434 ; Checkliste Medical Skills (9783132430280) ; >
    au < exists ; exists ; 2019 ; 9783132425552 ; 9783132425699 ; 10.1055/b-006-162305 ; Checkliste Neonatologie (9783132425699) ; >
    au < ready ; exists ; 2019 ; 9781626232853 ; 9781626232860 ; 10.1055/b-006-149927 ; Clinical Pathways in Neuro-Ophthalmology (9781626232860) ; >
-   au < ready ; exists ; 2019 ; 9783132412873 ; 9783132413047 ; 10.1055/b-006-160131 ; Complications in Non-vascular Interventional Therapy and Interventional Oncology: Cased-based Solutions (9783132413047) ; >
-   au < ready ; exists ; 2019 ; 9781626233317 ; 9781626233324 ; 10.1055/b-006-164732 ; Comprehensive Management of Vestibular Schwannoma (9781626233324) ; >
+   au < crawling ; exists ; 2019 ; 9783132412873 ; 9783132413047 ; 10.1055/b-006-160131 ; Complications in Non-vascular Interventional Therapy and Interventional Oncology: Cased-based Solutions (9783132413047) ; >
+   au < crawling ; exists ; 2019 ; 9781626233317 ; 9781626233324 ; 10.1055/b-006-164732 ; Comprehensive Management of Vestibular Schwannoma (9781626233324) ; >
    au < ready ; exists ; 2019 ; 9781626231023 ; 9781626231030 ; 10.1055/b-005-148973 ; Comprehensive Neurosurgery Board Review (9781626231030) ; >
    au < finished ; manifest ; 2019 ; 9783132429291 ; 9783132429321 ; 10.1055/b-006-163363 ; Computertomografie für MTRA/RT (9783132429321) ; reingest2.clockss.org:8085 >
    au < finished ; manifest ; 2019 ; 9781626233539 ; 9781626233553 ; 10.1055/b-006-160132 ; Controversies in Neuroendoscopy (9781626233553) ; reingest4.clockss.org:8082 >
    au < finished ; manifest ; 2019 ; 9781626239531 ; 9781626239548 ; 10.1055/b-006-164734 ; Controversies in Skull Base Surgery (9781626239548) ; reingest1.clockss.org:8082 >
    au < finished ; manifest ; 2019 ; 9781626234574 ; 9781626234581 ; 10.1055/b-006-160134 ; Cosmetic Injection Techniques (9781626234581) ; reingest5.clockss.org:8082 >
-   au < ready ; exists ; 2019 ; 9783136726044 ; 9783132418172 ; 10.1055/b-006-160135 ; Cranial Neuroimaging and Clinical Neuroanatomy (9783132418172) ; >
-   au < ready ; exists ; 2019 ; 9783132057913 ; 9783132058019 ; 10.1055/b-006-164730 ; The Craniotomy Atlas (9783132058019) ; >
+   au < crawling ; exists ; 2019 ; 9783136726044 ; 9783132418172 ; 10.1055/b-006-160135 ; Cranial Neuroimaging and Clinical Neuroanatomy (9783132418172) ; >
+   au < crawling ; exists ; 2019 ; 9783132057913 ; 9783132058019 ; 10.1055/b-006-164730 ; The Craniotomy Atlas (9783132058019) ; >
    au < testing ; exists ; 2019 ; 9783132401198 ; 9783132402638 ; 10.1055/b-006-161130 ; Current Concepts of Sleep Apnea Surgery (9783132402638) ; >
    au < finished ; manifest ; 2019 ; 9781626237971 ; 9781626237988 ; 10.1055/b-006-160137 ; Deep Brain Stimulation (9781626237988) ; reingest3.clockss.org:8083 >
    au < finished ; manifest ; 2019 ; 9783132207110 ; 9783132401532 ; 10.1055/b-003-128220 ; Differenzialdiagnosen in der Kinderosteopathie (9783132401532) ; reingest5.clockss.org:8082 >
@@ -1720,11 +1720,11 @@
    au < finished ; manifest ; 2019 ; 9783132431829 ; 9783132431850 ; 10.1055/b-007-168904 ; Das Drogentaschenbuch (9783132431850) ; reingest5.clockss.org:8082 >
    au < finished ; manifest ; 2019 ; 9781684201105 ; 9781684201112 ; 10.1055/b-006-163736 ; Ear Surgery Illustrated (9781684201112) ; reingest1.clockss.org:8082 >
    au < finished ; manifest ; 2019 ; 9783132419865 ; 9783132432451 ; 10.1055/b-006-163266 ; Embryologie der Haustiere (9783132432451) ; reingest2.clockss.org:8085 >
-   au < ready ; exists ; 2019 ; 9781626235052 ; 9781626235069 ; 10.1055/b-006-160139 ; Endoscopic Surgery of the Orbit (9781626235069) ; >
-   au < ready ; exists ; 2019 ; 9783132415621 ; 9783132415638 ; 10.1055/b-006-163742 ; Endoscopic Transnasal Anatomy of the Skull Base and Adjacent Areas (9783132415638) ; >
-   au < ready ; exists ; 2019 ; 9783132415430 ; 9783132415461 ; 10.1055/b-006-149619 ; Erfahrungsschatz Notfallmedizin (9783132415461) ; >
+   au < crawling ; exists ; 2019 ; 9781626235052 ; 9781626235069 ; 10.1055/b-006-160139 ; Endoscopic Surgery of the Orbit (9781626235069) ; >
+   au < crawling ; exists ; 2019 ; 9783132415621 ; 9783132415638 ; 10.1055/b-006-163742 ; Endoscopic Transnasal Anatomy of the Skull Base and Adjacent Areas (9783132415638) ; >
+   au < crawling ; exists ; 2019 ; 9783132415430 ; 9783132415461 ; 10.1055/b-006-149619 ; Erfahrungsschatz Notfallmedizin (9783132415461) ; >
    au < testing ; exists ; 2019 ; 9783132426535 ; 9783132426566 ; 10.1055/b-006-162307 ; Erfolgreich selbstständig als Ernährungsfachkraft (9783132426566) ; >
-   au < ready ; exists ; 2019 ; 9783132422896 ; 9783132423046 ; 10.1055/b-006-161627 ; Erkrankungen der Klauen und Zehen des Rindes (9783132423046) ; >
+   au < crawling ; exists ; 2019 ; 9783132422896 ; 9783132423046 ; 10.1055/b-006-161627 ; Erkrankungen der Klauen und Zehen des Rindes (9783132423046) ; >
    au < finished ; manifest ; 2019 ; 9783132403765 ; 9783132403888 ; 10.1055/b-006-149533 ; Expertise Orthopädie und Unfallchirurgie Wirbelsäule (9783132403888) ; reingest2.clockss.org:8085 >
    au < exists ; exists ; 2019 ; 9783132426177 ; 9783132426191 ; 10.1055/b-006-163260 ; Facharztprüfung Gynäkologie und Geburtshilfe (9783132426191) ; >
    au < finished ; manifest ; 2019 ; 9783132410602 ; 9783132410633 ; 10.1055/b-006-149724 ; Facharztprüfung Neurologie (9783132410633) ; reingest2.clockss.org:8085 >
@@ -1737,15 +1737,15 @@
    au < finished ; manifest ; 2019 ; 9783132401730 ; 9783132401761 ; 10.1055/b-005-145237 ; Funktionelle Differenzialdiagnosen in der Osteopathie (9783132401761) ; reingest2.clockss.org:8085 >
    au < exists ; exists ; 2019 ; 9783132425019 ; 9783132425040 ; 10.1055/b-006-163213 ; Funktionelles Faszientraining in der Physiotherapie (9783132425040) ; >
    au < finished ; manifest ; 2019 ; 9783132406445 ; 9783132406483 ; 10.1055/b-006-149539 ; Gastroenterologie für Hausärzte (9783132406483) ; reingest3.clockss.org:8083 >
-   au < ready ; exists ; 2019 ; 9783132412804 ; 9783132412835 ; 10.1055/b-006-161643 ; Gemmotherapie (9783132412835) ; >
+   au < crawling ; exists ; 2019 ; 9783132412804 ; 9783132412835 ; 10.1055/b-006-161643 ; Gemmotherapie (9783132412835) ; >
    au < exists ; exists ; 2019 ; 9783132415874 ; 9783132415904 ; 10.1055/b-006-163248 ; Gesundheits- und Kinderkrankenpflege (9783132415904) ; >
    au < finished ; manifest ; 2019 ; 9781626234444 ; 9781626234451 ; 10.1055/b-006-160177 ; The Glioma Book (9781626234451) ; reingest5.clockss.org:8082 >
    au < ready ; exists ; 2019 ; 9781626234291 ; 9781626234307 ; 10.1055/b-006-160146 ; Gordon and Nivatvongs? Principles and Practice of Surgery for the Colon, Rectum, and Anus (9781626234307) ; >
    au < exists ; exists ; 2019 ; 9783132417946 ; 9783132417977 ; 10.1055/b-006-163235 ; Grundlagen der Ergotherapie (9783132417977) ; >
    au < finished ; manifest ; 2019 ; 9783132422629 ; 9783132422650 ; 10.1055/b-006-163230 ; Das Gutachten des Hals-Nasen-Ohren-Arztes (9783132422650) ; reingest2.clockss.org:8085 >
-   au < ready ; exists ; 2019 ; 9781626233782 ; 9781626233799 ; 10.1055/b-006-161120 ; Handbook of Neuroscience Nursing (9781626233799) ; >
+   au < crawling ; exists ; 2019 ; 9781626233782 ; 9781626233799 ; 10.1055/b-006-161120 ; Handbook of Neuroscience Nursing (9781626233799) ; >
    au < finished ; manifest ; 2019 ; 9781626239067 ; 9781626239074 ; 10.1055/b-006-163739 ; Handbook of Otolaryngic Allergy (9781626239074) ; reingest5.clockss.org:8082 >
-   au < ready ; exists ; 2019 ; 9781626234314 ; 9781626234321 ; 10.1055/b-006-164721 ; Handbook of Pediatric Orthopaedics (9781626234321) ; >
+   au < crawling ; exists ; 2019 ; 9781626234314 ; 9781626234321 ; 10.1055/b-006-164721 ; Handbook of Pediatric Orthopaedics (9781626234321) ; >
    au < finished ; manifest ; 2019 ; 9781626232310 ; 9781626232327 ; 10.1055/b-006-160189 ; Head and Neck Cancer (9781626232327) ; reingest4.clockss.org:8082 >
    au < finished ; manifest ; 2019 ; 9783132407954 ; 9783132407985 ; 10.1055/b-005-145215 ; Heilpflanzensignaturen (9783132407985) ; reingest4.clockss.org:8082 >
    au < testing ; exists ; 2019 ; 9783132405516 ; 9783132406896 ; 10.1055/b-006-160190 ; Hernia Surgery (9783132406896) ; >
@@ -1766,9 +1766,9 @@
    au < finished ; manifest ; 2019 ; 9783132429598 ; 9783132429628 ; 10.1055/b-006-166042 ; Knowledge Updates 2019/1 (9783132429628) ; reingest1.clockss.org:8082 >
    au < finished ; manifest ; 2019 ; 9783132429635 ; 9783132429666 ; 10.1055/b-006-166043 ; Knowledge Updates 2019/2 (9783132429666) ; reingest2.clockss.org:8085 >
    au < ready ; exists ; 2019 ; 9783132416499 ; 9783132416529 ; 10.1055/b-006-163273 ; Krankheiten der Katze (9783132416529) ; >
-   au < ready ; exists ; 2019 ; 9783132425491 ; 9783132426047 ; 10.1055/b-006-161666 ; Kreißsaal-Kompendium (9783132426047) ; >
+   au < crawling ; exists ; 2019 ; 9783132425491 ; 9783132426047 ; 10.1055/b-006-161666 ; Kreißsaal-Kompendium (9783132426047) ; >
    au < finished ; manifest ; 2019 ; 9783132429475 ; 9783132429505 ; 10.1055/b-006-164738 ; Kursbuch Mammasonografie (9783132429505) ; reingest2.clockss.org:8085 >
-   au < ready ; exists ; 2019 ; 9783131701923 ; 9783132408449 ; 10.1055/b-005-143664 ; Kursbuch Notfallsonografie (9783132408449) ; >
+   au < crawling ; exists ; 2019 ; 9783131701923 ; 9783132408449 ; 10.1055/b-005-143664 ; Kursbuch Notfallsonografie (9783132408449) ; >
    au < exists ; exists ; 2019 ; 9783132428324 ; 9783132428355 ; 10.1055/b-006-161654 ; Kurzlehrbuch Chemie (9783132428355) ; >
    au < exists ; exists ; 2019 ; 9783132433182 ; 9783132433212 ; 10.1055/b-006-166358 ; Kurzlehrbuch Histologie (9783132433212) ; >
    au < exists ; exists ; 2019 ; 9783132432178 ; 9783132432208 ; 10.1055/b-007-167433 ; Kurzlehrbuch Pathologie (9783132432208) ; >
@@ -1777,9 +1777,9 @@
    au < frozen ; exists ; 2019 ; 9783132421011 ; 9783132421042 ; 10.1055/b-006-163263 ; Lahmheitsuntersuchung beim Hund (9783132421042) ; >
    au < finished ; manifest ; 2019 ; 9781684200016 ; 9781684200023 ; 10.1055/b-006-161129 ; Laryngeal Cancer (9781684200023) ; reingest1.clockss.org:8082 >
    au < finished ; manifest ; 2019 ; 9783132414532 ; 9783132414570 ; 10.1055/b-006-161636 ; Lehrbuch Chiropraktik (9783132414570) ; reingest4.clockss.org:8082 >
-   au < ready ; exists ; 2019 ; 9783132428638 ; 9783132428669 ; 10.1055/b-006-163275 ; Lehrbuch Reflexzonentherapie am Fuß (9783132428669) ; >
+   au < crawling ; exists ; 2019 ; 9783132428638 ; 9783132428669 ; 10.1055/b-006-163275 ; Lehrbuch Reflexzonentherapie am Fuß (9783132428669) ; >
    au < finished ; manifest ; 2019 ; 9783132428676 ; 9783132428690 ; 10.1055/b-006-163305 ; Leitsymptome und Leitbefunde bei Hund und Katze (9783132428690) ; reingest1.clockss.org:8082 >
-   au < ready ; exists ; 2019 ; 9783131638113 ; 9783132402126 ; 10.1055/b-006-149440 ; Lexikalische und semantische Störungen bei Aphasie (9783132402126) ; >
+   au < crawling ; exists ; 2019 ; 9783131638113 ; 9783132402126 ; 10.1055/b-006-149440 ; Lexikalische und semantische Störungen bei Aphasie (9783132402126) ; >
    au < finished ; manifest ; 2019 ; 9783132427655 ; 9783132427686 ; 10.1055/b-006-162310 ; Manuelle Therapie nach Mulligan (9783132427686) ; reingest3.clockss.org:8083 >
    au < finished ; manifest ; 2019 ; 9783132428249 ; 9783132428270 ; 10.1055/b-006-163705 ; Medikamente im Rettungsdienst (9783132428270) ; reingest1.clockss.org:8082 >
    au < exists ; exists ; 2019 ; 9783132423558 ; 9783132423589 ; 10.1055/b-006-163249 ; Medizinische Mikrobiologie (9783132423589) ; >
@@ -1793,7 +1793,7 @@
    au < exists ; exists ; 2019 ; 9783897521407 ; 9783897521568 ; 10.1055/b-007-169888 ; NANDA International Pflegediagnosen (9783897521568) ; >
    au < finished ; manifest ; 2019 ; 9781626238343 ; 9781626238350 ; 10.1055/b-006-149687 ; Neck Dissection (9781626238350) ; reingest5.clockss.org:8082 >
    au < frozen ; exists ; 2019 ; 9783131460721 ; 9783132424258 ; 10.1055/b-006-149522 ; Neonatologie (9783132424258) ; >
-   au < ready ; exists ; 2019 ; 9783132426863 ; 9783132426894 ; 10.1055/b-006-163231 ; Neuraltherapie (9783132426894) ; >
+   au < crawling ; exists ; 2019 ; 9783132426863 ; 9783132426894 ; 10.1055/b-006-163231 ; Neuraltherapie (9783132426894) ; >
    au < finished ; manifest ; 2019 ; 9781684201266 ; 9781684201273 ; 10.1055/b-006-164728 ; Neurosurgery Oral Board Review (9781684201273) ; reingest4.clockss.org:8082 >
    au < finished ; manifest ; 2019 ; 9781626239272 ; 9781626239289 ; 10.1055/b-006-160154 ; Neurosurgery Primary Board Review (9781626239289) ; reingest3.clockss.org:8083 >
    au < frozen ; exists ; 2019 ; 9781626234901 ; 9781626234963 ; 10.1055/b-006-161140 ; Neurosurgery Primary Examination Review (9781626234963) ; >
@@ -1818,7 +1818,7 @@
    au < finished ; manifest ; 2019 ; 9781626239234 ; 9781626239241 ; 10.1055/b-006-160167 ; Pocketbook of Clinical IR (9781626239241) ; reingest2.clockss.org:8085 >
    au < exists ; exists ; 2019 ; 9783132416215 ; 9783132416246 ; 10.1055/b-005-145233 ; Praktische Ausbildung in der Physiotherapie (9783132416246) ; >
    au < exists ; exists ; 2019 ; 9783132425057 ; 9783132425088 ; 10.1055/b-006-163220 ; Praxisanleiter (9783132425088) ; >
-   au < ready ; exists ; 2019 ; 9783132429949 ; 9783132430082 ; 10.1055/b-006-166351 ; Praxis der Kardiologie Hund und Katze (9783132430082) ; >
+   au < crawling ; exists ; 2019 ; 9783132429949 ; 9783132430082 ; 10.1055/b-006-166351 ; Praxis der Kardiologie Hund und Katze (9783132430082) ; >
    au < exists ; exists ; 2019 ; 9783132401921 ; 9783132401952 ; 10.1055/b-005-145227 ; Praxishandbuch funktionelles Training II (9783132401952) ; >
    au < finished ; manifest ; 2019 ; 9783132419216 ; 9783132419247 ; 10.1055/b-006-161644 ; Praxishandbuch für Heilpraktiker (9783132419247) ; reingest1.clockss.org:8082 >
    au < frozen ; exists ; 2019 ; 9781626237087 ; 9781626237704 ; 10.1055/b-005-145243 ; Problems in Periorbital Surgery (9781626237704) ; >
@@ -1836,7 +1836,7 @@
    au < finished ; manifest ; 2019 ; 9783132400016 ; 9783132419407 ; 10.1055/b-005-143660 ; Referenz Nephrologie (9783132419407) ; reingest1.clockss.org:8082 >
    au < finished ; manifest ; 2019 ; 9783132413870 ; 9783132413900 ; 10.1055/b-006-163224 ; Referenz Neurologie (9783132413900) ; reingest4.clockss.org:8082 >
    au < finished ; manifest ; 2019 ; 9783132412903 ; 9783132412941 ; 10.1055/b-006-149615 ; Referenz Notfallmedizin (9783132412941) ; reingest1.clockss.org:8082 >
-   au < ready ; exists ; 2019 ; 9783132425385 ; 9783132425415 ; 10.1055/b-006-162303 ; Röntgen Hund und Katze: Thorax und Abdomen (9783132425415) ; >
+   au < crawling ; exists ; 2019 ; 9783132425385 ; 9783132425415 ; 10.1055/b-006-162303 ; Röntgen Hund und Katze: Thorax und Abdomen (9783132425415) ; >
    au < ready ; exists ; 2019 ; 9783132428287 ; 9783132428300 ; 10.1055/b-006-163278 ; Röntgennormalbefunde (9783132428300) ; >
    au < finished ; manifest ; 2019 ; 9781626237322 ; 9781626237339 ; 10.1055/b-006-161173 ; Sagittal Balance of the Spine (9781626237339) ; reingest2.clockss.org:8085 >
    au < frozen ; exists ; 2019 ; 9783132426900 ; 9783132426931 ; 10.1055/b-006-163708 ; Säure-Basen-Haushalt (9783132426931) ; >
@@ -1876,7 +1876,7 @@
    au < ready ; exists ; 2019 ; 9783132427358 ; 9783132427389 ; 10.1055/b-006-166047 ; Vitamine, Spurenelemente und Minerale (9783132427389) ; >
    au < exists ; exists ; 2019 ; 9783132430327 ; 9783132430341 ; 10.1055/b-006-164740 ; Zahnärztliche Chirurgie (9783132430341) ; >
    au < finished ; manifest ; 2019 ; 9783132413955 ; 9783132413986 ; 10.1055/b-006-163257 ; Zusatzweiterbildung Intensivmedizin (9783132413986) ; reingest3.clockss.org:8083 >
-   au < ready ; exists ; 2019 ; 9783132429437 ; 9783132429468 ; 10.1055/b-006-164891 ; Zusatzweiterbildung Notfallmedizin (9783132429468) ; >
+   au < crawling ; exists ; 2019 ; 9783132429437 ; 9783132429468 ; 10.1055/b-006-164891 ; Zusatzweiterbildung Notfallmedizin (9783132429468) ; >
    au < manifest ; exists ; 2020 ; 9783132429710 ; 9783132429758 ; 10.1055/b-006-164898 ; Advances in Organoboron Chemistry towards Organic Synthesis (9783132429758) ; >
    au < manifest ; exists ; 2020 ; 9783132426214 ; 9783132426245 ; 10.1055/b-007-170420 ; Anästhesie bei Kindern (9783132426245) ; >
    au < manifest ; exists ; 2020 ; 9781626235113 ; 9781626235120 ; 10.1055/b-005-148977 ; The Art of Pterygium Surgery (9781626235120) ; >
