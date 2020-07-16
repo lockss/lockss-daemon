@@ -160,6 +160,11 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     "Rel script" +
     "<script type=\"text/javascript\" src=\"/javascript/ajax/utility.js\"></script>\n" +
     "<br>\n" +
+    "Protocol Rel script" +
+    "<script type=\"text/javascript\" src=\"//protorel.com/path/ute.js\"></script>\n" +
+    "Protocol rel href + site rel src" +
+    "<a href=\"//protorel.com/path2/ute.html\" src=\"/siterel/path3/ute.foo\">xxx</a>\n" +
+    "<br>\n" +
     "Abs script" +
     "<script type=\"text/javascript\" src=\"CPROTO://www.example.com/javascript/utility.js\"></script>\n" +
     "<br>\n" +
@@ -293,6 +298,10 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     "<a href=\"CPROTO://www.content.org/index.html\">abs link no rewrite</a>\n" +
     "<br>\n" +
     "Rel script<script type=\"text/javascript\" src=\"LPROTO://lockss.box:9524/ServeContent?url=CPROTO%3A%2F%2Fwww.example.com%2Fjavascript%2Fajax%2Futility.js\"></script>\n" +
+    "<br>\n" +
+    "Protocol Rel script<script type=\"text/javascript\" src=\"LPROTO://lockss.box:9524/ServeContent?url=CPROTO%3A%2F%2Fprotorel.com%2Fpath%2Fute.js\"></script>\n" +
+    "Protocol rel href + site rel src" +
+    "<a href=\"LPROTO://lockss.box:9524/ServeContent?url=CPROTO%3A%2F%2Fprotorel.com%2Fpath2%2Fute.html\" src=\"LPROTO://lockss.box:9524/ServeContent?url=CPROTO%3A%2F%2Fwww.example.com%2Fsiterel%2Fpath3%2Fute.foo\">xxx</a>\n" +
     "<br>\n" +
     "Abs script<script type=\"text/javascript\" src=\"LPROTO://lockss.box:9524/ServeContent?url=CPROTO%3A%2F%2Fwww.example.com%2Fjavascript%2Futility.js\"></script>\n" +
     "<br>\n" +
@@ -815,6 +824,9 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
 
       String src = src0.replace("CPROTO", cproto);
       String exp = exp0.replace("CPROTO", cproto).replace("LPROTO", lproto);
+      Collection stems = au.getUrlStems();
+      stems.add(cproto + "://protorel.com");
+      au.setUrlStems(new ArrayList(stems));
 
       if (hostRel) {
         xform = new ServletUtil.LinkTransform() {
@@ -892,7 +904,7 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
       ConfigurationUtil.addFromArgs(RegexpCssLinkRewriterFactory.PARAM_URL_ENCODE,
   				  "Full");
       testRewriting("CSS abs full encoding", origCss, ISO, xformedCssFull,
-  		  false);
+		    false);
     }
   
     public void testScriptRewritingMinimal() throws Exception {
