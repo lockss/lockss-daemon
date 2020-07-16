@@ -24,10 +24,10 @@ public class EastviewBookSourceXmlArticleIteratorFactory implements ArticleItera
     //https://clockss-test.lockss.org/sourcefiles/eastview-released/2020/Eastview%20Journal%20Content/
 
     protected static final String ROOT_TEMPLATE = "\"%s%d\",base_url,year";
-    private static final String PATTERN_TEMPLATE = "\"%s%d/([^/]+Ebook[^/]+)\",base_url,year";
+    private static final String PATTERN_TEMPLATE = "\"%s%d/([^/]+Ebook.*)\",base_url,year";
 
     // The delivery does not have one-pdf-to-one-xml matching relationship,
-    // All the article metadata is inside articles_xml. However they may update other xmls or even Excel/CVS
+    // All the article metadata is inside articles_xml.
     // So we not use PDF count as # of articles as in other plugin
     protected static final Pattern XML_PATTERN = Pattern.compile("/(.*)\\.xml$");
     protected static final String XML_REPLACEMENT = "/$1.xml";
