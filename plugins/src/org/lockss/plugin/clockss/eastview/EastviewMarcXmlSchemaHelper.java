@@ -439,10 +439,10 @@ implements SourceXmlSchemaHelper {
    */
   private static final MultiValueMap cookMap = new MultiValueMap();
   static {
-    //cookMap.put(MARC_title, MetadataField.FIELD_PUBLICATION_TITLE);
-    //cookMap.put(MARC_publisher, MetadataField.FIELD_PUBLISHER);
-    //cookMap.put(MARC_pub_date, MetadataField.FIELD_DATE);
-    //cookMap.put(MARC_author, MetadataField.FIELD_AUTHOR);
+    cookMap.put(MARC_title, MetadataField.FIELD_PUBLICATION_TITLE);
+    cookMap.put(MARC_publisher, MetadataField.FIELD_PUBLISHER);
+    cookMap.put(MARC_pub_date, MetadataField.FIELD_DATE);
+    cookMap.put(MARC_author, MetadataField.FIELD_AUTHOR);
     cookMap.put(MARC_isbn, MetadataField.FIELD_ISBN);
   }
 
