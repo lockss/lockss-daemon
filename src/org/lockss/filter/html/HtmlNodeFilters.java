@@ -190,7 +190,8 @@ public class HtmlNodeFilters {
    *         non-null and has an ancestor that matches the given ancestor node
    *         filter.
    * @since 1.71
-   */  public static NodeFilter ancestor(final NodeFilter ancestorFilter) {
+   */
+  public static NodeFilter ancestor(final NodeFilter ancestorFilter) {
     return new NodeFilter() {
       @Override
       public boolean accept(Node node) {
@@ -697,6 +698,18 @@ public class HtmlNodeFilters {
       this.attrs = attrs;
     }
 
+    public String toString() {
+      StringBuilder sb = new StringBuilder();
+      sb.append("[If link matches ");
+      sb.append(pat.getPattern());
+      sb.append(" replace ");
+      sb.append(targetPat.getPattern());
+      sb.append(" with ");
+      sb.append(replace);
+      sb.append("]");
+      return sb.toString();
+    }
+
     public boolean accept(Node node) {
       if (node instanceof TagNode &&
 	  !(node instanceof MetaTag)) {
@@ -715,11 +728,14 @@ public class HtmlNodeFilters {
 	      if (!newUrl.equals(url)) {
 		String encoded = urlEncode(newUrl);
 		attribute.setValue(encoded);
+		if (log.isDebug3()) {
+		  log.debug3("setValue: " + encoded);
+		  log.debug3("setAttributeEx: " + attribute);
+		}
 		((TagNode)node).setAttributeEx(attribute);
 		if (log.isDebug3()) log.debug3("new " + encoded);
 	      }
 	    }
-// 	    return false;
 	  }
 	}
       }
