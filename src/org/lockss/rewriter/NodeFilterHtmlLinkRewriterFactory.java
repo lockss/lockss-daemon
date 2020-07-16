@@ -42,6 +42,9 @@ import org.lockss.util.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.definable.*;
 import org.lockss.filter.html.*;
+import org.lockss.filter.html.HtmlNodeFilters.LinkRegexXform;
+import org.lockss.filter.html.HtmlNodeFilters.RefreshRegexXform;
+import org.lockss.filter.html.HtmlNodeFilters.MetaTagRegexXform;
 import org.lockss.servlet.*;
 import org.htmlparser.*;
 import org.htmlparser.nodes.*;
@@ -128,42 +131,44 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
     Collection<String> urlStems = au.getUrlStems();
     int nUrlStem = urlStems.size();
     String defUrlStem = null;
-    int l = nUrlStem;
-    String[] linkRegex1 = new String[l];
-    boolean[] ignCase1 = new boolean[l];
-    String[] rwRegex1 = new String[l];
-    String[] rwTarget1 = new String[l];
     // Rewrite absolute links to urlStem/... to targetStem + urlStem/...
-    int i = 0;
+    List<LinkRegexXform> absLinkXforms = new ArrayList<>();
     for (String urlStem : urlStems) {
       if (defUrlStem == null) {
         defUrlStem = urlStem;
       }
-      linkRegex1[i] = "^" + urlStem;
-      ignCase1[i] = true;
-      rwRegex1[i] = urlStem;
-      rwTarget1[i] = targetStem + urlStem;
-      logger.debug3("if link match " + linkRegex1[i] + " replace " +
-                    rwRegex1[i] + " by " + rwTarget1[i]);
-      i++;
+      absLinkXforms.add(new LinkRegexXform("^" + urlStem, true, urlStem,
+				       targetStem + urlStem,
+				       getAttrsToRewrite()));
     }
     if (defUrlStem == null) {
       throw new PluginException("No default URL stem for " + url);
     }
-    // Create a LinkRegexXform pipeline
-    NodeFilter absLinkXform =
-      HtmlNodeFilters.linkRegexYesXforms(linkRegex1, ignCase1, rwRegex1,
-                                         rwTarget1, getAttrsToRewrite());
 
-    HtmlBaseProcessor base = new HtmlBaseProcessor();
-    List<RelXform> relXforms = new ArrayList<RelXform>();
+    // Transform protocol-relative link URLs.  These are essentially abs
+    // links with no scheme.
+    for (String urlStem : urlStems) {
+      int colon = urlStem.indexOf("://");
+      if (colon < 0) continue;
+      String proto = urlStem.substring(0, colon);
+      String hostPort = urlStem.substring(colon + 3);
+      absLinkXforms.add(new LinkRegexXform("^//" + hostPort, true, "^//",
+				       targetStem + proto + "://",
+				       getAttrsToRewrite()));
+    }
+    logger.debug3("Abs Xforms: " + absLinkXforms);
+
+    HtmlBaseProcessor base = new HtmlBaseProcessor(url);
 
     // Rewrite relative links
+    List<RelXform> relXforms = new ArrayList<RelXform>();
     @SuppressWarnings("serial")
     RelLinkRegexXform relLinkXforms[] = {
       // transforms site-relative link URLs
       new RelLinkRegexXform(protocolOrRefPrefixPat, // negated, matches relative URL
-                            true, "^/", getAttrsToRewrite()) {
+                            true,
+			    "^/($|(?!/))", // match site rel but not proto rel
+			    getAttrsToRewrite()) {
         /** Specify the "replace" property using the baseUrl param */
         public void setBaseUrl(String baseUrl)
             throws MalformedURLException {
@@ -199,57 +204,37 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
     relXforms.add(scriptXform);
 
     // Rewrite <meta http-equiv="refresh" content="url=1; url=...">
-    String[] linkRegex5 = new String[l];
-    boolean[] ignCase5 = new boolean[l];
-    String[] rwRegex5 = new String[l];
-    String[] rwTarget5 = new String[l];
     // Rewrite absolute links to urlStem/... to targetStem + urlStem/...
-    i = 0;
+
+    List<RefreshRegexXform> absRefreshXforms = new ArrayList<>();
     for (String urlStem : urlStems) {
-      linkRegex5[i] = refreshPat + urlStem;
-      ignCase5[i] = true;
-      rwRegex5[i] = "url=" + urlStem;
-      rwTarget5[i] = "url=" + targetStem + urlStem;
-      logger.debug3("if meta match " + linkRegex1[i] + " replace " +
-                    rwRegex1[i] + " by " + rwTarget1[i]);
-      i++;
+      absRefreshXforms.add(new RefreshRegexXform(refreshPat + urlStem, true,
+						 "url=" + urlStem,
+						 "url=" + targetStem + urlStem));
     }
-    NodeFilter absRefreshXform =
-      HtmlNodeFilters.refreshRegexYesXforms(linkRegex5, ignCase5,
-                                            rwRegex5, rwTarget5);
+    logger.debug3("Abs refresh Xforms: " + absRefreshXforms);
 
     // Rewrite URLs in <meta name="name" content="url"> for all names
     // specified by plugin
     List<String> metaNames = getMetaNamesToRewrite(au);
+    List<MetaTagRegexXform> metaTagXforms = new ArrayList<>();
     NodeFilter metaTagXform = null;
     if (metaNames != null && !metaNames.isEmpty()) {
-      String[] linkRegexMeta = new String[l];
-      boolean[] ignCaseMeta = new boolean[l];
-      String[] rwRegexMeta = new String[l];
-      String[] rwTargetMeta = new String[l];
       // Rewrite absolute links to urlStem/... to targetStem + urlStem/...
       String metaAbsPrefix =
 	CurrentConfig.getParam(PARAM_META_TAG_REWRITE_PREFIX,
 			       DEFAULT_META_TAG_REWRITE_PREFIX);
-      i = 0;
       for (String urlStem : urlStems) {
-	linkRegexMeta[i] = "^" + urlStem;
-	ignCaseMeta[i] = true;
-	rwRegexMeta[i] = urlStem;
-	if (metaAbsPrefix != null) {
-	  rwTargetMeta[i] = metaAbsPrefix + targetStem + urlStem;
-	} else {
-	  rwTargetMeta[i] = targetStem + urlStem;
-	}
-	logger.debug3("if meta match " + linkRegexMeta[i] + " replace " +
-		      rwRegexMeta[i] + " by " + rwTargetMeta[i]);
-	i++;
+	metaTagXforms.add(new MetaTagRegexXform("^" + urlStem, true,
+						urlStem,
+						(metaAbsPrefix != null
+						 ? metaAbsPrefix + targetStem + urlStem
+						 : targetStem + urlStem),
+						metaNames));
+
       }
-      metaTagXform =
-	HtmlNodeFilters.metaTagRegexYesXforms(linkRegexMeta, ignCaseMeta,
-					      rwRegexMeta, rwTargetMeta,
-					      metaNames);
     }
+    logger.debug3("Meta xforms: " + metaTagXforms);
 
     @SuppressWarnings("serial")
     RelRefreshRegexXform[] relRefreshXforms = {
@@ -287,17 +272,16 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
     // Combine the pipes
     List<NodeFilter> filters = new ArrayList<NodeFilter>();
     filters.addAll(preXforms);
-    filters.addAll(ListUtil.list(base,
-				 relLinkXform,
-				 absLinkXform,
-				 styleTagXform,
-				 styleAttrXform,
-				 scriptXform,
-				 relRefreshXform,
-				 absRefreshXform));
-    if (metaTagXform != null) {
-      filters.add(metaTagXform);
-    };
+    filters.add(base);
+    filters.add(new OrFilter(relLinkXforms));
+    filters.addAll(absLinkXforms);
+    filters.add(styleTagXform);
+    filters.add(styleAttrXform);
+    filters.add(scriptXform);
+    filters.add(relRefreshXform);
+    filters.addAll(absRefreshXforms);
+    filters.addAll(metaTagXforms);
+
     filters.addAll(postXforms);
 
     NodeFilter linkXform = new OrFilter(filters.toArray(new NodeFilter[0]));
@@ -389,10 +373,13 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
   }    
 
   public static class HtmlBaseProcessor extends TagNameFilter {
+    private String origBaseUrl;
     private List<RelXform> xforms;
+    private boolean hasBaseBeenSet = false;
 
-    public HtmlBaseProcessor() {
+    public HtmlBaseProcessor(String baseUrl) {
       super("BASE");
+      origBaseUrl = baseUrl;
     }
 
     public void setXforms(List<RelXform> xforms) {
@@ -403,17 +390,28 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
       if (!super.accept(node)) {
         return false;
       }
+      if (hasBaseBeenSet) {
+	logger.siteWarning("Ignoring 2nd (or later) base tag: " + node);
+	return false;
+      }
       Attribute attr = ((TagNode)node).getAttributeEx("href");
       if (attr != null) {
-        String newbase = attr.getValue();
-        for (RelXform xform : xforms) {
-          try {
-            xform.setBaseUrl(newbase);
-          } catch (MalformedURLException e) {
-            logger.warning("Not resetting rewriter's base URL", e);
-          }
-        }
+        String baseHref = attr.getValue();
+	try {
+	  String newBase = UrlUtil.resolveUri(origBaseUrl, baseHref);
+	  for (RelXform xform : xforms) {
+	    try {
+	      xform.setBaseUrl(newBase);
+	    } catch (MalformedURLException e) {
+	      logger.warning("Not resetting rewriter's base URL", e);
+	    }
+	  }
+	} catch (MalformedURLException e) {
+	  logger.warning("Not resetting rewriter's base URL", e);
+	}
+
       }
+      hasBaseBeenSet = true;
       return false;
     }
   }

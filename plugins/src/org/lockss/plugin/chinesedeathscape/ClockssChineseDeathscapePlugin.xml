@@ -64,19 +64,18 @@
     <entry>
     <string>au_crawlrules</string>
         <list>
-            <string>1,"https?://%s/", url_host(base_url)</string>
+            <string>1,"https://%s/", url_host(base_url)</string>
             <!--<string>1,"https?://%s/", url_host(base_url2)</string>-->
             <string>1,"https://files.chinesedeathscape.supdigital.org/"</string>
             <string>1,"https://use.typekit.com/.*\.js"</string>
             <string>1,"http://a.tile.openstreetmap.org/.*\.png"</string>
             <string>1,"http://server.arcgisonline.com/ArcGIS/rest/services/"</string>
-            <string>1,"https://web.archive.org/web/"</string>
+            <!--<string>1,"https://web.archive.org/web/"</string>-->
         </list>
     </entry>
     <entry>
         <string>au_start_url</string>
-        <string>"http://%s/", url_host(base_url)</string>
-        <string>"https://%s/", url_host(base_url)</string>
+        <string>"%s", base_url</string>
     </entry>
     <!--
     <entry>
@@ -92,12 +91,22 @@
             <string>500=org.lockss.util.urlconn.CacheException$NoRetryDeadLinkException</string>
         </list>
     </entry>
-    <!--
     <entry>
-        <string>text/html_link_rewriter_factory</string>
-        <string>org.lockss.plugin.chinesedeathscape.ChineseDeathscapeHtmlLinkRewriterFactory</string>
+        <string>text/javascript_link_extractor_factory</string>
+        <string>org.lockss.plugin.chinesedeathscape.ChineseDeathscapeJavascriptLinkExtractorFactory</string>
     </entry>
-    -->
+    <entry>
+        <string>application/javascript_link_extractor_factory</string>
+        <string>org.lockss.plugin.chinesedeathscape.ChineseDeathscapeJavascriptLinkExtractorFactory</string>
+    </entry>
+    <entry>
+        <string>text/javascript_link_rewriter_factory</string>
+        <string>org.lockss.plugin.chinesedeathscape.ChineseDeathscapeJavaScriptLinkRewriterFactory</string>
+    </entry>
+    <entry>
+        <string>application/javascript_link_rewriter_factory</string>
+        <string>org.lockss.plugin.chinesedeathscape.ChineseDeathscapeJavaScriptLinkRewriterFactory</string>
+    </entry>
     <entry>
         <string>au_permitted_host_pattern</string>
         <list>

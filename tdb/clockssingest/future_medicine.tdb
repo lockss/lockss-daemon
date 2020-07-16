@@ -382,7 +382,7 @@
       issn = 1746-9600
     >
     
-    param[journal_id] = hiv
+    param[journal_id] = fht
     comment[continued_by] = 1758-4310
 
     au < exists ; exists ; 2007 ; Future HIV Therapy Volume 1 ; 1 ; https://www.futuremedicine.com/ ; >
@@ -832,13 +832,13 @@
     param[journal_id] = whe
     #move to Sage
 
-    au < exists ; exists ; 2005 ; Women's Health Volume 1 ; 1 ; https://www.futuremedicine.com/ ; >
-    au < exists ; exists ; 2006 ; Women's Health Volume 2 ; 2 ; https://www.futuremedicine.com/ ; >
-    au < exists ; exists ; 2007 ; Women's Health Volume 3 ; 3 ; https://www.futuremedicine.com/ ; >
-    au < exists ; exists ; 2008 ; Women's Health Volume 4 ; 4 ; https://www.futuremedicine.com/ ; >
-    au < exists ; exists ; 2009 ; Women's Health Volume 5 ; 5 ; https://www.futuremedicine.com/ ; >
-    au < exists ; exists ; 2010 ; Women's Health Volume 6 ; 6 ; https://www.futuremedicine.com/ ; >
-    au < exists ; exists ; 2011 ; Women's Health Volume 7 ; 7 ; https://www.futuremedicine.com/ ; >
+    au < doNotProcess ; exists ; 2005 ; Women's Health Volume 1 ; 1 ; https://www.futuremedicine.com/ ; >
+    au < doNotProcess ; exists ; 2006 ; Women's Health Volume 2 ; 2 ; https://www.futuremedicine.com/ ; >
+    au < doNotProcess ; exists ; 2007 ; Women's Health Volume 3 ; 3 ; https://www.futuremedicine.com/ ; >
+    au < doNotProcess ; exists ; 2008 ; Women's Health Volume 4 ; 4 ; https://www.futuremedicine.com/ ; >
+    au < doNotProcess ; exists ; 2009 ; Women's Health Volume 5 ; 5 ; https://www.futuremedicine.com/ ; >
+    au < doNotProcess ; exists ; 2010 ; Women's Health Volume 6 ; 6 ; https://www.futuremedicine.com/ ; >
+    au < doNotProcess ; exists ; 2011 ; Women's Health Volume 7 ; 7 ; https://www.futuremedicine.com/ ; >
     au < frozen ; exists ; 2012 ; Women's Health Volume 8 ; 8 ; http://www.futuremedicine.com/ ; >
     au < frozen ; exists ; 2013 ; Women's Health Volume 9 ; 9 ; http://www.futuremedicine.com/ ; >
     au < finished ; finished ; 2014 ; Women's Health Volume 10 ; 10 ; http://www.futuremedicine.com/ ; >

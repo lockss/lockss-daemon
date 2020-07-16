@@ -99,6 +99,12 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     "</HTML>\n";
 
 
+  // All the tests that change the baseurl with a <base> tag in the middle
+  // are invalid, as <base> is only allowed inside <head>, and it should
+  // apply to *all* relative links in the document, not just those
+  // folliwing it lixecally.  The link rewriter doesn't implement this
+  // correctly, and these tests document that behavior.
+
   /** 
    * The original HTML page; CPROTO is the protocol for the content server.
    */
@@ -153,6 +159,11 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     "<br>\n" +
     "Rel script" +
     "<script type=\"text/javascript\" src=\"/javascript/ajax/utility.js\"></script>\n" +
+    "<br>\n" +
+    "Protocol Rel script" +
+    "<script type=\"text/javascript\" src=\"//protorel.com/path/ute.js\"></script>\n" +
+    "Protocol rel href + site rel src" +
+    "<a href=\"//protorel.com/path2/ute.html\" src=\"/siterel/path3/ute.foo\">xxx</a>\n" +
     "<br>\n" +
     "Abs script" +
     "<script type=\"text/javascript\" src=\"CPROTO://www.example.com/javascript/utility.js\"></script>\n" +
@@ -288,6 +299,10 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     "<br>\n" +
     "Rel script<script type=\"text/javascript\" src=\"LPROTO://lockss.box:9524/ServeContent?url=CPROTO%3A%2F%2Fwww.example.com%2Fjavascript%2Fajax%2Futility.js\"></script>\n" +
     "<br>\n" +
+    "Protocol Rel script<script type=\"text/javascript\" src=\"LPROTO://lockss.box:9524/ServeContent?url=CPROTO%3A%2F%2Fprotorel.com%2Fpath%2Fute.js\"></script>\n" +
+    "Protocol rel href + site rel src" +
+    "<a href=\"LPROTO://lockss.box:9524/ServeContent?url=CPROTO%3A%2F%2Fprotorel.com%2Fpath2%2Fute.html\" src=\"LPROTO://lockss.box:9524/ServeContent?url=CPROTO%3A%2F%2Fwww.example.com%2Fsiterel%2Fpath3%2Fute.foo\">xxx</a>\n" +
+    "<br>\n" +
     "Abs script<script type=\"text/javascript\" src=\"LPROTO://lockss.box:9524/ServeContent?url=CPROTO%3A%2F%2Fwww.example.com%2Fjavascript%2Futility.js\"></script>\n" +
     "<br>\n" +
     "Rel style<style type=\"text/css\" src=\"LPROTO://lockss.box:9524/ServeContent?url=CPROTO%3A%2F%2Fwww.example.com%2Fcss%2Futility.css\"></style>\n" +
@@ -348,6 +363,144 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     "Abs img<img src=\"LPROTO://lockss.box:9524/ServeContent?url=CPROTO%3A%2F%2Fwww.example.com%2Ficons%2Flogo2.gif\" alt=\"BMJ 2\" title=\"BMJ 2\" />\n" +
     "<br>\n" +
     "style attr<span class=\"foo\" style=\"background: url('LPROTO://lockss.box:9524/ServeContent?url=CPROTO://www.example.com/otherdir/images/bar.png') no-repeat 0px -64px;\" />\n" +
+    "<br>\n" +
+
+    "</body>\n" +
+    "</HTML>\n";
+
+  // Similar to previous but <base> element has a relative href
+
+  /**
+   * The original HTML page; CPROTO is the protocol for the content server.
+   */
+  static final String orig_relbase =
+    "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n" +
+    "<html>\n" +
+    "<head>\n" +
+    "<title>example.com website</title>\n" +
+    "</head>\n" +
+    "<body>\n" +
+    "<h1 align=\"center\">example.com website</h1>\n" +
+    "<br>\n" +
+    "<a href=\"CPROTO://www.example.com/content/index.html\">abs link</a>\n" +
+    "<br>\n" +
+
+    // repeat above after changing the base URL
+
+    "<base href=\"/\" />\n" +
+    "<a href=\"CPROTO://www.example.com/content/index.html\">abs link</a>\n" +
+    "<br>\n" +
+    "<a href=\"path/index.html\">rel link</a>\n" +
+    "<br>\n" +
+    "<a href=\"4path/index.html\">rel link</a>\n" +
+    "<br>\n" +
+    "<a href=\"%2fpath/index.html\">rel link</a>\n" +
+    "<br>\n" +
+    // Verify that a second <base> is ignored
+    "<base href=\"/ignore/this/base/path/\" />\n" +
+    "<a href=\"(content)/index.html\">rel link</a>\n" +
+    "<br>\n" +
+    "<a href=\"/more/path/index.html\">rel link</a>\n" +
+    "<br>\n" +
+    "<A HREF=\"../more/path/index.html\">rel link</A>\n" +
+    "<br>\n" +
+    "<A HREF=\"./more/path/index.html\">rel link</A>\n" +
+    "<br>\n" +
+    "<a href=\"?issn=123456789X\">rel query</a>\n" +
+    "<br>\n" +
+    "<a href=\"CPROTO://www.content.org/index.html\">abs link no rewrite</a>\n" +
+    "<br>\n" +
+    "Rel script" +
+    "<script type=\"text/javascript\" src=\"/javascript/ajax/utility.js\"></script>\n" +
+    "<br>\n" +
+    "Abs script" +
+    "<script type=\"text/javascript\" src=\"CPROTO://www.example.com/javascript/utility.js\"></script>\n" +
+    "<br>\n" +
+    "Rel style" +
+    "<style type=\"text/css\" src=\"/css/utility.css\"></style>\n" +
+    "<br>\n" +
+    "Abs style" +
+    "<style type=\"text/css\" src=\"CPROTO://www.example.com/css/utility.css\"></style>\n" +
+    "<br>\n" +
+    "Rel stylesheet" +
+    "<link rel=\"stylesheet\" href=\"/css/basic.css\" type=\"text/css\" media=\"all\">\n" +
+    "<br>\n" +
+    "Rel stylesheet" +
+    "<link rel=\"stylesheet\" href=\"Basic.css\" type=\"text/css\" media=\"all\">\n" +
+    "<br>\n" +
+    "Abs stylesheet" +
+    "<link rel=\"stylesheet\" href=\"CPROTO://www.example.com/css/extra.css\" type=\"text/css\" media=\"all\">\n" +
+    "<br>\n" +
+    "Rel img" +
+    "<img src=\"/icons/logo.gif\" alt=\"BMJ 1\" title=\"BMJ 1\" />\n" +
+    "<br>\n" +
+    "Abs img" +
+    "<img src=\"CPROTO://www.example.com/icons/logo2.gif\" alt=\"BMJ 2\" title=\"BMJ 2\" />\n" +
+    "<br>\n" +
+    "style attr" +
+    "<span class=\"foo\" style=\"background: url('images/bar.png') no-repeat 0px -64px;\" />\n" +
+    "<br>\n" +
+
+    "</body>\n" +
+    "</HTML>\n";
+
+  /**
+   * The transformed HTML page w/ relative <base> change.
+   */
+  static String xformed_relbase =
+    "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n" +
+    "<html>\n" +
+    "<head>\n" +
+    "<title>example.com website</title>\n" +
+    "</head>\n" +
+    "<body>\n" +
+    "<h1 align=\"center\">example.com website</h1>\n" +
+    "<br>\n" +
+    "<a href=\"LPROTO://lockss.box:9524/ServeContent?url=CPROTO%3A%2F%2Fwww.example.com%2Fcontent%2Findex.html\">abs link</a>\n" +
+    "<br>\n" +
+
+    // Base URL change
+    "<base href=\"LPROTO://lockss.box:9524/ServeContent?url=CPROTO%3A%2F%2Fwww.example.com%2F\" />\n" +
+    "<a href=\"LPROTO://lockss.box:9524/ServeContent?url=CPROTO%3A%2F%2Fwww.example.com%2Fcontent%2Findex.html\">abs link</a>\n" +
+    "<br>\n" +
+    "<a href=\"LPROTO://lockss.box:9524/ServeContent?url=CPROTO%3A%2F%2Fwww.example.com%2Fpath%2Findex.html\">rel link</a>\n" +
+    "<br>\n" +
+    "<a href=\"LPROTO://lockss.box:9524/ServeContent?url=CPROTO%3A%2F%2Fwww.example.com%2F4path%2Findex.html\">rel link</a>\n" +
+    "<br>\n" +
+    "<a href=\"LPROTO://lockss.box:9524/ServeContent?url=CPROTO%3A%2F%2Fwww.example.com%2F%252fpath%2Findex.html\">rel link</a>\n" +
+    "<br>\n" +
+    "<base href=\"LPROTO://lockss.box:9524/ServeContent?url=CPROTO%3A%2F%2Fwww.example.com%2Fignore%2Fthis%2Fbase%2Fpath%2F\" />\n" +
+    "<a href=\"LPROTO://lockss.box:9524/ServeContent?url=CPROTO%3A%2F%2Fwww.example.com%2F%28content%29%2Findex.html\">rel link</a>\n" +
+    "<br>\n" +
+    "<a href=\"LPROTO://lockss.box:9524/ServeContent?url=CPROTO%3A%2F%2Fwww.example.com%2Fmore%2Fpath%2Findex.html\">rel link</a>\n" +
+    "<br>\n" +
+    "<A HREF=\"LPROTO://lockss.box:9524/ServeContent?url=CPROTO%3A%2F%2Fwww.example.com%2F..%2Fmore%2Fpath%2Findex.html\">rel link</A>\n" +
+    "<br>\n" +
+    "<A HREF=\"LPROTO://lockss.box:9524/ServeContent?url=CPROTO%3A%2F%2Fwww.example.com%2F.%2Fmore%2Fpath%2Findex.html\">rel link</A>\n" +
+    "<br>\n" +
+    "<a href=\"LPROTO://lockss.box:9524/ServeContent?url=CPROTO%3A%2F%2Fwww.example.com%2F%3Fissn%3D123456789X\">rel query</a>\n" +
+    "<br>\n" +
+    "<a href=\"CPROTO://www.content.org/index.html\">abs link no rewrite</a>\n" +
+    "<br>\n" +
+    "Rel script<script type=\"text/javascript\" src=\"LPROTO://lockss.box:9524/ServeContent?url=CPROTO%3A%2F%2Fwww.example.com%2Fjavascript%2Fajax%2Futility.js\"></script>\n" +
+    "<br>\n" +
+    "Abs script<script type=\"text/javascript\" src=\"LPROTO://lockss.box:9524/ServeContent?url=CPROTO%3A%2F%2Fwww.example.com%2Fjavascript%2Futility.js\"></script>\n" +
+    "<br>\n" +
+    "Rel style<style type=\"text/css\" src=\"LPROTO://lockss.box:9524/ServeContent?url=CPROTO%3A%2F%2Fwww.example.com%2Fcss%2Futility.css\"></style>\n" +
+    "<br>\n" +
+    "Abs style<style type=\"text/css\" src=\"LPROTO://lockss.box:9524/ServeContent?url=CPROTO%3A%2F%2Fwww.example.com%2Fcss%2Futility.css\"></style>\n" +
+    "<br>\n" +
+    "Rel stylesheet<link rel=\"stylesheet\" href=\"LPROTO://lockss.box:9524/ServeContent?url=CPROTO%3A%2F%2Fwww.example.com%2Fcss%2Fbasic.css\" type=\"text/css\" media=\"all\">\n" +
+    "<br>\n" +
+    "Rel stylesheet<link rel=\"stylesheet\" href=\"LPROTO://lockss.box:9524/ServeContent?url=CPROTO%3A%2F%2Fwww.example.com%2FBasic.css\" type=\"text/css\" media=\"all\">\n" +
+    "<br>\n" +
+    "Abs stylesheet<link rel=\"stylesheet\" href=\"LPROTO://lockss.box:9524/ServeContent?url=CPROTO%3A%2F%2Fwww.example.com%2Fcss%2Fextra.css\" type=\"text/css\" media=\"all\">\n" +
+    "<br>\n" +
+    "Rel img<img src=\"LPROTO://lockss.box:9524/ServeContent?url=CPROTO%3A%2F%2Fwww.example.com%2Ficons%2Flogo.gif\" alt=\"BMJ 1\" title=\"BMJ 1\" />\n" +
+    "<br>\n" +
+    "Abs img<img src=\"LPROTO://lockss.box:9524/ServeContent?url=CPROTO%3A%2F%2Fwww.example.com%2Ficons%2Flogo2.gif\" alt=\"BMJ 2\" title=\"BMJ 2\" />\n" +
+    "<br>\n" +
+    "style attr<span class=\"foo\" style=\"background: url('LPROTO://lockss.box:9524/ServeContent?url=CPROTO://www.example.com/images/bar.png') no-repeat 0px -64px;\" />\n" +
     "<br>\n" +
 
     "</body>\n" +
@@ -671,6 +824,9 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
 
       String src = src0.replace("CPROTO", cproto);
       String exp = exp0.replace("CPROTO", cproto).replace("LPROTO", lproto);
+      Collection stems = au.getUrlStems();
+      stems.add(cproto + "://protorel.com");
+      au.setUrlStems(new ArrayList(stems));
 
       if (hostRel) {
         xform = new ServletUtil.LinkTransform() {
@@ -725,6 +881,18 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
       testRewriting("Hostrel", orig, ISO, xformed, true);
     }
   
+    public void testAbsRewritingRelBase() throws Exception {
+      ConfigurationUtil.addFromArgs(RegexpCssLinkRewriterFactory.PARAM_URL_ENCODE,
+  				  "Minimal");
+      testRewriting("Abs", orig_relbase, ISO, xformed_relbase, false);
+    }
+
+    public void testHostRelativeRewritingRelBase() throws Exception {
+      ConfigurationUtil.addFromArgs(RegexpCssLinkRewriterFactory.PARAM_URL_ENCODE,
+  				  "Minimal");
+      testRewriting("Hostrel", orig_relbase, ISO, xformed_relbase, true);
+    }
+
     public void testCssRewritingMinimal() throws Exception {
       ConfigurationUtil.addFromArgs(RegexpCssLinkRewriterFactory.PARAM_URL_ENCODE,
   				  "Minimal");
@@ -736,7 +904,7 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
       ConfigurationUtil.addFromArgs(RegexpCssLinkRewriterFactory.PARAM_URL_ENCODE,
   				  "Full");
       testRewriting("CSS abs full encoding", origCss, ISO, xformedCssFull,
-  		  false);
+		    false);
     }
   
     public void testScriptRewritingMinimal() throws Exception {

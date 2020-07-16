@@ -557,13 +557,15 @@ public class GoslingHtmlLinkExtractor implements LinkExtractor {
       return;
     }
     String newBase = getAttributeValue(HREF, link);
-    if (!UrlUtil.isAbsoluteUrl(newBase)) {
-      logger.siteWarning("Ignoring base tag with relative URL: " + link);
+    if (newBase == null) {
+      logger.debug3("Base tag w/ no href, ignoring: " + link);
       return;
     }
     logger.debug3("Base tag found, setting baseUrl to: " + newBase);
     try {
-      baseUrl = new URL(newBase);
+      baseUrl = new URL(resolveUri(baseUrl, newBase));
+      logger.debug3("Base tag found (" + newBase +
+		    "), setting baseUrl to: " + baseUrl);
       malformedBaseUrl = false;
       hasBaseBeenSet = true;
     } catch (MalformedURLException e) {

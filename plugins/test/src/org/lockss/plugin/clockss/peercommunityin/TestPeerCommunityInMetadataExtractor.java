@@ -31,16 +31,12 @@
 
  */
 
-package org.lockss.plugin.clockss.isecs;
+package org.lockss.plugin.clockss.peercommunityin;
 
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
-import org.lockss.extractor.ArticleMetadata;
-import org.lockss.extractor.FileMetadataExtractor;
-import org.lockss.extractor.FileMetadataListExtractor;
-import org.lockss.extractor.MetadataTarget;
+import org.lockss.extractor.*;
 import org.lockss.plugin.CachedUrl;
-import org.lockss.plugin.clockss.aofoundation.AOFoundationSourceXmlMetadataExtractorFactory;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockArchivalUnit;
 import org.lockss.test.MockCachedUrl;
@@ -55,18 +51,19 @@ import java.util.Iterator;
 import java.util.List;
 
 
-public class TestCrossRefXmlMetadataExtractor extends LockssTestCase {
+public class TestPeerCommunityInMetadataExtractor extends LockssTestCase {
 
-  private static final Logger log = Logger.getLogger(TestCrossRefXmlMetadataExtractor.class);
+  private static final Logger log = Logger.getLogger(TestPeerCommunityInMetadataExtractor.class);
 
   private MockLockssDaemon theDaemon;
   private MockArchivalUnit mau;
 
+  private static String PLUGIN_NAME = "org.lockss.plugin.clockss.peercommunityin.ClockssPeerCommunityInSourcePlugin";
   private static String BASE_URL = "http://www.source.org/";
-  private static final String xml_url = BASE_URL + "2016/vol01/cr4a337132155c63964d2-283c.xml ";
-  private static final String pdf_url1 = BASE_URL + "2016/vol01/vxxxxx1.pdf";
-  private static final String pdf_url2 = BASE_URL + "2016/vol01/vxxxxx2.pdf";
-  private static final String pdf_url3 = BASE_URL + "2016/vol01/vxxxxx3.pdf";
+  private static String YEAR = "2020";
+  private static String ZIP_URL = BASE_URL + YEAR + "/pci.evolbiol.100090.zip!/";
+  private static final String xml_url = ZIP_URL + "pci.evolbiol.100090.xml";
+  private static final String pdf_url1 = ZIP_URL + "pci.evolbiol.100090.pdf";
 
   public void setUp() throws Exception {
     super.setUp();
@@ -96,19 +93,14 @@ public class TestCrossRefXmlMetadataExtractor extends LockssTestCase {
   Configuration auConfig() {
     Configuration conf = ConfigManager.newConfiguration();
     conf.put("base_url", BASE_URL);
-    conf.put("year", "2016");
+    conf.put("year", YEAR);
     return conf;
   }
 
-  public void testFromJatsPublishingXMLFile() {
-    assertTrue(1==1);
-  }
+ 
+  private static final String realXMLFile = "sample.xml";
 
-  
-  private static final String realXMLFile = "CrossRefTest.xml";
-
-  /*
-  public void testFromJatsPublishingXMLFile() throws Exception {
+  public void testFromCRXMLFile() throws Exception {
     InputStream file_input = null;
     try {
       file_input = getResourceAsStream(realXMLFile);
@@ -120,34 +112,40 @@ public class TestCrossRefXmlMetadataExtractor extends LockssTestCase {
       MockCachedUrl mcu = mau.addUrl(xml_url, true, true, xmlHeader);
       // Now add all the pdf files in our AU since we check for them before emitting
       mau.addUrl(pdf_url1, true, true, xmlHeader);
-      mau.addUrl(pdf_url2, true, true, xmlHeader);
-      mau.addUrl(pdf_url3, true, true, xmlHeader);
 
       mcu.setContent(string_input);
       mcu.setContentSize(string_input.length());
       mcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
 
-      FileMetadataExtractor me = new AOFoundationSourceXmlMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/xml");
+      FileMetadataExtractor me = new PeerCommunityInXmlMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/xml");
       FileMetadataListExtractor mle =
           new FileMetadataListExtractor(me);
       List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), mcu);
       assertNotEmpty(mdlist);
-      assertEquals(3, mdlist.size());
+      // only one of the two records had a matching pdf
+      assertEquals(1, mdlist.size());
 
       // check each returned md against expected values
       Iterator<ArticleMetadata> mdIt = mdlist.iterator();
       ArticleMetadata mdRecord = null;
       while (mdIt.hasNext()) {
         mdRecord = (ArticleMetadata) mdIt.next();
-        log.debug3(mdRecord.ppString(2));
-        //compareMetadata(mdRecord);
+        //log.info(mdRecord.ppString(2));
+        compareMetadata(mdRecord);
       }
     }finally {
       IOUtil.safeClose(file_input);
     }
 
   }
+                   
+  String[] authorlist = new String[] {"Hamilton, Alexander", "Burr, Aaron"};
+  // quick and dirty, there are only two records
+  private void compareMetadata(ArticleMetadata AM) {
+    assertEquals("Peer Community In Evolutionary Biology", AM.get(MetadataField.FIELD_PUBLICATION_TITLE));
+    assertEquals("12-9-2019", AM.get(MetadataField.FIELD_DATE));
+    assertEquals("Peer Community In", AM.get(MetadataField.FIELD_PUBLISHER));
+    assertEquals("2551668X", AM.get(MetadataField.FIELD_EISSN));
 
-   */
-
+  }
 }

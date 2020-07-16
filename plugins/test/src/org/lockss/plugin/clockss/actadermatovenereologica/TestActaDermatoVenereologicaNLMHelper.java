@@ -60,11 +60,8 @@ public class TestActaDermatoVenereologicaNLMHelper extends LockssTestCase {
             count = nodes.getLength();
             assertNotEquals(nodes.getLength(), 0);
 
-            //log.info("Expression is " + xpathExpression + ", count ======  " + count);
-
             for (int i = 0; i < count ; i++) {
                 String value = nodes.item(i).getTextContent();
-                log.info("Expression is " + xpathExpression + ", value ===== " + value);
                 assertNotNull(value);
             }
 
@@ -89,13 +86,8 @@ public class TestActaDermatoVenereologicaNLMHelper extends LockssTestCase {
             count = nodes.getLength();
             assertNotEquals(nodes.getLength(), 0);
 
-            //log.info("Expression is " + xpathExpression + ", count ======  " + count);
-
             for (int i = 0; i < count ; i++) {
                 NodeList nameChildren = nodes.item(i).getChildNodes();
-                if (nameChildren == null) {
-                    log.info("nameChildren is null");
-                }
 
                 String surname = null;
                 String firstname = null;

@@ -6,8 +6,8 @@
            xmlns:mml="http://www.w3.org/1998/Math/MathML"
            xsi:schemaLocation="http://www.crossref.org/schema/4.4.2 http://www.crossref.org/schemas/crossref4.4.2.xsd">
     <head>
-        <doi_batch_id>ASEA2</doi_batch_id>
-        <timestamp>1589609771</timestamp>
+        <doi_batch_id>ASEA3</doi_batch_id>
+        <timestamp>1593744965</timestamp>
         <depositor>
             <depositor_name>ISEC Press</depositor_name>
             <email_address>isecsociety.am@gmail.com</email_address>
@@ -23,20 +23,16 @@
             <journal_issue>
                 <contributors>
                     <person_name sequence="additional" contributor_role="editor">
-                        <given_name>Korchoke</given_name>
-                        <surname>Chantawarangul</surname>
+                        <given_name>Hieng Ho</given_name>
+                        <surname>Lau</surname>
                     </person_name>
                     <person_name sequence="additional" contributor_role="editor">
-                        <given_name>Weerakaset</given_name>
-                        <surname>Suanpaga</surname>
+                        <given_name>Fu Ee</given_name>
+                        <surname>Tang</surname>
                     </person_name>
                     <person_name sequence="additional" contributor_role="editor">
-                        <given_name>Siamak</given_name>
-                        <surname>Yazdani</surname>
-                    </person_name>
-                    <person_name sequence="additional" contributor_role="editor">
-                        <given_name>Vanissorn</given_name>
-                        <surname>Vimonsatit</surname>
+                        <given_name>Chee Khoon</given_name>
+                        <surname>Ng</surname>
                     </person_name>
                     <person_name sequence="additional" contributor_role="editor">
                         <given_name>Amarjit</given_name>
@@ -44,214 +40,53 @@
                     </person_name>
                 </contributors>
                 <publication_date>
-                    <month>11</month>
-                    <year>2014</year>
+                    <month>10</month>
+                    <year>2016</year>
                 </publication_date>
                 <journal_volume>
-                    <volume>1</volume>
+                    <volume>3</volume>
                 </journal_volume>
-                <issue>1</issue>
+                <issue>2</issue>
             </journal_issue>
             <journal_article language="en" publication_type="full_text">
                 <titles>
-                    <title>IDENTIFYING THE EFFECTS OF EXCESSIVE DEFLECTION IN REINFORCED CONCRETE BEAMS</title>
+                    <title>FIRE SPREADING ANALYSIS OF A GROUP OF WOODEN HOUSES IN TOWNSCAPE FORMATION DISTRICT</title>
                 </titles>
                 <contributors>
                     <person_name sequence="first" contributor_role="author">
-                        <given_name>E.</given_name>
-                        <surname>Ogbeifun</surname>
-                    </person_name>
-                    <person_name sequence="additional" contributor_role="author">
-                        <given_name>J. H.</given_name>
-                        <surname>Pretorius</surname>
-                    </person_name>
-                    <person_name sequence="additional" contributor_role="author">
-                        <given_name>C.</given_name>
-                        <surname>Mbohwa</surname>
+                        <given_name>Tomiya</given_name>
+                        <surname>Takatani</surname>
                     </person_name>
                     <person_name sequence="additional" contributor_role="editor">
-                        <given_name>Korchoke</given_name>
-                        <surname>Chantawarangul</surname>
+                        <given_name>Hieng Ho</given_name>
+                        <surname>Lau</surname>
                     </person_name>
                     <person_name sequence="additional" contributor_role="editor">
-                        <given_name>Weerakaset</given_name>
-                        <surname>Suanpaga</surname>
+                        <given_name>Fu Ee</given_name>
+                        <surname>Tang</surname>
                     </person_name>
                     <person_name sequence="additional" contributor_role="editor">
-                        <given_name>Siamak</given_name>
-                        <surname>Yazdani</surname>
-                    </person_name>
-                    <person_name sequence="additional" contributor_role="editor">
-                        <given_name>Vanissorn</given_name>
-                        <surname>Vimonsatit</surname>
+                        <given_name>Chee Khoon</given_name>
+                        <surname>Ng</surname>
                     </person_name>
                     <person_name sequence="additional" contributor_role="editor">
                         <given_name>Amarjit</given_name>
                         <surname>Singh</surname>
                     </person_name>
                 </contributors>
-                <jats:abstract xml:lang="en" id="AAE-13">
-                    <jats:p>In framed reinforced concrete structures, the beams transfer the dead and live loads to the column and then to the foundation. When there are observed structural failures in systems supported by the beam, the functional state of the beams should be ascertained before any further detailed investigations are initiated. The correct diagnosis of the source of the problem is essential to design an effective rehabilitation scheme. Simple visual inspections corroborated with field tests for true beam horizontality can provide the lead information that will guide the clients’ scope of further investigations. Case studies addressed the research questions; the research data was collected by reviewing previous investigation reports on a three-story building, then conducting physical inspections and simple site experiments to identify the lead information. The results reveal that multiple cracks observed in the partition walls, especially in the second floors, were as a result of excessive deflections in the beams supporting the first and second floors. Subsequent investigations confirmed this lead information and appropriate rehabilitation schemes were adopted.</jats:p>
+                <jats:abstract xml:lang="en" id="AAE-1">
+                    <jats:p>There was a fire spreading disaster for 18 wooden houses in the historical townscape formation district in a famous spa resort area. In this paper, a fire spreading analysis of a group of wooden houses was carried out under some conditions of wind velocity and direction in order to numerically simulate a fire spreading phenomenon in the spa resort area and also investigate some fire spreading countermeasures for a group of wooden houses and also investigate an appropriate countermeasure for the fire spreading disaster of wooden houses using both fireproof wall and quasi-fireproof wall on wooden houses. As a result, it should be noted that the installation of fireproof wooden wall in every third wooden house can economically reduce a fire spreading area in comparison with the installation of quasi-fireproof wooden wall in every other wooden house.</jats:p>
                 </jats:abstract>
                 <publication_date>
-                    <month>11</month>
-                    <year>2014</year>
+                    <month>10</month>
+                    <year>2016</year>
                 </publication_date>
                 <doi_data>
-                    <doi>10.14455/ISEC.res.2014.17</doi>
-                    <resource>https://www.isec-society.org/ISEC_PRESS/ASEA-SEC_02/pdf/AAE-13_v6_286.pdf</resource>
+                    <doi>10.14455/ISEC.res.2016.115</doi>
+                    <resource>https://www.isec-society.org/ISEC_PRESS/ASEA_SEC_03/html/AAE-1.xml</resource>
                     <collection property='crawler-based'>
                         <item crawler='iParadigms'>
-                            <resource>https://www.isec-society.org/ISEC_PRESS/ASEA-SEC_02/pdf/AAE-13_v6_286.pdf</resource>
-                        </item>
-                    </collection>
-                </doi_data>
-            </journal_article>
-            <journal_article language="en" publication_type="full_text">
-                <titles>
-                    <title>COLLABORATIVE ENGINEERING FOR SUSTAINABLE SOLUTIONS ASSISTED BY VIRTUAL CONSTRUCTION</title>
-                </titles>
-                <contributors>
-                    <person_name sequence="first" contributor_role="author">
-                        <given_name>Barry</given_name>
-                        <surname>Jones</surname>
-                    </person_name>
-                    <person_name sequence="additional" contributor_role="editor">
-                        <given_name>Korchoke</given_name>
-                        <surname>Chantawarangul</surname>
-                    </person_name>
-                    <person_name sequence="additional" contributor_role="editor">
-                        <given_name>Weerakaset</given_name>
-                        <surname>Suanpaga</surname>
-                    </person_name>
-                    <person_name sequence="additional" contributor_role="editor">
-                        <given_name>Siamak</given_name>
-                        <surname>Yazdani</surname>
-                    </person_name>
-                    <person_name sequence="additional" contributor_role="editor">
-                        <given_name>Vanissorn</given_name>
-                        <surname>Vimonsatit</surname>
-                    </person_name>
-                    <person_name sequence="additional" contributor_role="editor">
-                        <given_name>Amarjit</given_name>
-                        <surname>Singh</surname>
-                    </person_name>
-                </contributors>
-                <jats:abstract xml:lang="en" id="AAE-5">
-                    <jats:p>The paper outlines a decision-support environment that actively supports collaboration during decision making and problem solving. A complementary partnership was formed between computer agents and human agents; one brought selected intelligence to the solution process from “unlimited” multi-domain knowledge sources, the other brought human cognitive rationality. In particular, the proposed system articulated how domain knowledge and know-how can be shared, thereby creating a truly integrated construction team. The author’s investigation measured the views of practitioners in the main building professions—architecture, engineering and construction management—before proposing the decision support system. The conclusion of the work is a conceptual model: a definition of the contractors’ construction management computer agents, and a specification based on scenarios of how these agents would interact with design agents. The significance of Virtual Design and Integrated Project Delivery are also discussed in the context of improved collaboration on the construction project. </jats:p>
-                </jats:abstract>
-                <publication_date>
-                    <month>11</month>
-                    <year>2014</year>
-                </publication_date>
-                <doi_data>
-                    <doi>10.14455/ISEC.res.2014.72</doi>
-                    <resource>https://www.isec-society.org/ISEC_PRESS/ASEA-SEC_02/pdf/AAE-5_v6_36.pdf</resource>
-                    <collection property='crawler-based'>
-                        <item crawler='iParadigms'>
-                            <resource>https://www.isec-society.org/ISEC_PRESS/ASEA-SEC_02/pdf/AAE-5_v6_36.pdf</resource>
-                        </item>
-                    </collection>
-                </doi_data>
-            </journal_article>
-            <journal_article language="en" publication_type="full_text">
-                <titles>
-                    <title>DESIGNING FLEXIBLE ARCHITECTURE TO HINDER FUNCTIONAL AND TECHNOLOGICAL OBSOLESCENCE</title>
-                </titles>
-                <contributors>
-                    <person_name sequence="first" contributor_role="author">
-                        <given_name>Michele</given_name>
-                        <surname>Di Sivo</surname>
-                    </person_name>
-                    <person_name sequence="additional" contributor_role="author">
-                        <given_name>Cristiana</given_name>
-                        <surname>Cellucci</surname>
-                    </person_name>
-                    <person_name sequence="additional" contributor_role="editor">
-                        <given_name>Korchoke</given_name>
-                        <surname>Chantawarangul</surname>
-                    </person_name>
-                    <person_name sequence="additional" contributor_role="editor">
-                        <given_name>Weerakaset</given_name>
-                        <surname>Suanpaga</surname>
-                    </person_name>
-                    <person_name sequence="additional" contributor_role="editor">
-                        <given_name>Siamak</given_name>
-                        <surname>Yazdani</surname>
-                    </person_name>
-                    <person_name sequence="additional" contributor_role="editor">
-                        <given_name>Vanissorn</given_name>
-                        <surname>Vimonsatit</surname>
-                    </person_name>
-                    <person_name sequence="additional" contributor_role="editor">
-                        <given_name>Amarjit</given_name>
-                        <surname>Singh</surname>
-                    </person_name>
-                </contributors>
-                <jats:abstract xml:lang="en" id="AAE-6">
-                    <jats:p>Time, uncertainty, flexibility and resilience are the four sides of the same square around which this paper revolves. Hallmark of all complex systems is uncertainty, seen as the lack of full knowledge of current or future evolution of a system. There are various types and sources of uncertainty, but notably the incorrect knowledge of the environment in which a system operates determines the technological obsolescence and functionality of the system. Systems that have the longest life span are able to cope with the unpredictability of their contexts, while rigid and unchanging systems have a shorter lifespan. Uncertainty, traditionally seen as a negative aspect of a system, must therefore be regarded as an opportunity, an incentive to design flexible systems able to absorb changes in the environment in which they operate, in order to create added value for users. The development of “advanced” systems able to prevent that uncertainty generates diseases, commonly referred to as “risks”. This is not new; the selection process of species of Darwin, or the reflections on the life of capital goods of Terborgh, have shown that there are living organisms, human artifacts or resilient complex systems that are better equipped to adapt to changing environments, compared to the rigid systems incapable of reacting to change. In other words, flexibility reduces the exposure of a project uncertainty, provides a solution to mitigate market risks, and also mitigates risks associated with technological obsolescence. Flexibility makes the system resilient, able to absorb shocks and/or disturbances without undergoing major alterations in its functional organization, structure, or identity characteristics. In this paper flexibility is seen as a fundamental property for designing a generally complex system. </jats:p>
-                </jats:abstract>
-                <publication_date>
-                    <month>11</month>
-                    <year>2014</year>
-                </publication_date>
-                <doi_data>
-                    <doi>10.14455/ISEC.res.2014.84</doi>
-                    <resource>https://www.isec-society.org/ISEC_PRESS/ASEA-SEC_02/pdf/AAE-6_v6_115.pdf</resource>
-                    <collection property='crawler-based'>
-                        <item crawler='iParadigms'>
-                            <resource>https://www.isec-society.org/ISEC_PRESS/ASEA-SEC_02/pdf/AAE-6_v6_115.pdf</resource>
-                        </item>
-                    </collection>
-                </doi_data>
-            </journal_article>
-            <journal_article language="en" publication_type="full_text">
-                <titles>
-                    <title>CLIENT SATISFACTION FROM THE SERVICES OF ARCHITECTS ON BUILDING PROJECTS</title>
-                </titles>
-                <contributors>
-                    <person_name sequence="first" contributor_role="author">
-                        <given_name>Aluko</given_name>
-                        <surname>Olusola Ralphael</surname>
-                    </person_name>
-                    <person_name sequence="additional" contributor_role="author">
-                        <given_name>Omoniyi</given_name>
-                        <surname>Sunday Samuel</surname>
-                    </person_name>
-                    <person_name sequence="additional" contributor_role="editor">
-                        <given_name>Korchoke</given_name>
-                        <surname>Chantawarangul</surname>
-                    </person_name>
-                    <person_name sequence="additional" contributor_role="editor">
-                        <given_name>Weerakaset</given_name>
-                        <surname>Suanpaga</surname>
-                    </person_name>
-                    <person_name sequence="additional" contributor_role="editor">
-                        <given_name>Siamak</given_name>
-                        <surname>Yazdani</surname>
-                    </person_name>
-                    <person_name sequence="additional" contributor_role="editor">
-                        <given_name>Vanissorn</given_name>
-                        <surname>Vimonsatit</surname>
-                    </person_name>
-                    <person_name sequence="additional" contributor_role="editor">
-                        <given_name>Amarjit</given_name>
-                        <surname>Singh</surname>
-                    </person_name>
-                </contributors>
-                <jats:abstract xml:lang="en" id="AAE-7">
-                    <jats:p>The concept of satisfaction in the building industry is important, as the industry’s future depends on clients’ satisfaction with their investments. The purpose of this study is to assess the satisfaction levels towards architects who, as the originator of building design, has a lot of responsibility in managing the project to a successful completion. Data are obtained through qualitative and quantitative surveys of a target population of clients and project managers from the clients’ representatives. The variables are ranked with a mean score for both importance and satisfaction feedback regarding architect services. Results indicate higher scores for importance variables. However, many important variables were ranked lower on the satisfaction scale than they were on the importance scale. This research is an ongoing study as part of the authors’ doctoral work. The final outcome is expected to improve the understating of client needs and satisfaction in Nigerian building industry. </jats:p>
-                </jats:abstract>
-                <publication_date>
-                    <month>11</month>
-                    <year>2014</year>
-                </publication_date>
-                <doi_data>
-                    <doi>10.14455/ISEC.res.2014.97</doi>
-                    <resource>https://www.isec-society.org/ISEC_PRESS/ASEA-SEC_02/pdf/AAE-7_v6_119.pdf</resource>
-                    <collection property='crawler-based'>
-                        <item crawler='iParadigms'>
-                            <resource>https://www.isec-society.org/ISEC_PRESS/ASEA-SEC_02/pdf/AAE-7_v6_119.pdf</resource>
+                            <resource>https://www.isec-society.org/ISEC_PRESS/ASEA_SEC_03/pdf/AAE-1_v3_13.pdf</resource>
                         </item>
                     </collection>
                 </doi_data>

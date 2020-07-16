@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>down - temporary aro</string>
+    <string>ready</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>64</string>
+    <string>66</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -207,23 +207,23 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%scontent/%s/%s/[0-9]{4}/0*%s/[^/]+/art[0-9]+[?]crawler=true", api_url, publisher_id, journal_id, volume_name</string>
+      <string>"^%scontent/%s/%s/[0-9]{4}/[^/]+/[^/]+/[^/]+[?]crawler=true&amp;mimetype=application/pdf", api_url, publisher_id, journal_id, volume_name</string>
     </list>
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.ingenta.IngentaArticleIteratorFactory</string>
+    <string>org.lockss.plugin.ingenta.IngentaArticleIteratorFactory2020</string>
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.ingenta.IngentaArticleIteratorFactory</string>
+    <string>org.lockss.plugin.ingenta.IngentaArticleIteratorFactory2020</string>
   </entry>
   <entry>
     <string>text/html_metadata_extractor_factory_map</string>
     <map>
       <entry>
         <string>*;DublinCore</string>
-        <string>org.lockss.plugin.ingenta.IngentaHtmlMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.ingenta.IngentaMetadataExtractorFactory2020</string>
       </entry>
     </map>
   </entry>

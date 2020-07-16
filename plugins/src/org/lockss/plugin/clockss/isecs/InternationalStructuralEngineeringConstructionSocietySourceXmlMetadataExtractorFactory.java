@@ -32,27 +32,18 @@
 
 package org.lockss.plugin.clockss.isecs;
 
-import org.apache.commons.io.FilenameUtils;
 import org.lockss.daemon.PluginException;
-import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.FileMetadataExtractor;
-import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.CachedUrl;
-import org.lockss.plugin.clockss.CrossRefSchemaHelper;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 import org.lockss.util.Logger;
-
-import java.util.ArrayList;
-import java.util.List;
 
 
 public class InternationalStructuralEngineeringConstructionSocietySourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
   private static final Logger log = Logger.getLogger(InternationalStructuralEngineeringConstructionSocietySourceXmlMetadataExtractorFactory.class);
   
-  private static final String ECM_PUBLISHER = "International Structural Engineering Construction Society";
-  private static final String ECM_TITLE = "European Cells and Materials";
   private static SourceXmlSchemaHelper CrossRefHelper = null;
   
   @Override
@@ -70,48 +61,8 @@ public class InternationalStructuralEngineeringConstructionSocietySourceXmlMetad
       if (CrossRefHelper != null) {
         return CrossRefHelper;
       }
-      CrossRefHelper = new CrossRefSchemaHelper();
+      CrossRefHelper = new InternationalStructuralEngineeringConstructionSocietyCrossRefQuerySchemaHelper();
       return CrossRefHelper;
     }
-
-    
-    @Override
-    protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
-        ArticleMetadata oneAM) {
-
-      // filename is just the same a the resource filename with this apth
-      String cuBase = FilenameUtils.getFullPath(cu.getUrl());
-      String resource = oneAM.getRaw(CrossRefSchemaHelper.art_resource);
-      String pdfName = cuBase  + FilenameUtils.getName(resource);
-      log.debug3("looking for pdfName of " + pdfName);
-      List<String> returnList = new ArrayList<String>();
-      returnList.add(pdfName);
-      return returnList;
-    }
-    
-    @Override
-    protected void postCookProcess(SourceXmlSchemaHelper schemaHelper, 
-        CachedUrl cu, ArticleMetadata thisAM) {
-      log.debug("International Structural Engineering Construction Society postcook");
-      // In the IternationalStructuralEngineeringConstructionSociety metadata, the registrant is incorrectly set to WEB-FORM
-      String pname = thisAM.get(MetadataField.FIELD_PUBLISHER);
-      // they cannot seem to avoid spelling errors in the publication name. I'm going to manually set it 
-      // after doing a basic check.  The variants seen so far are:
-      // European Cells and Material,European Cells and Materials,European Cells and Matherials, European Cells a¨nd Materials
-      // European cells amd Material,European cells amd Materials, Europen Cells and Materials,etc
-      String jname = thisAM.get(MetadataField.FIELD_PUBLICATION_TITLE);
-      if (jname == null) {
-        thisAM.put(MetadataField.FIELD_PUBLICATION_TITLE, ECM_TITLE);
-      }
-      else if (jname.startsWith("Euro")) {
-        thisAM.replace(MetadataField.FIELD_PUBLICATION_TITLE, ECM_TITLE);
-      }
-      if ("WEB-FORM".equals(pname)) {
-        // for now this is the only journal handled by this plugin
-        // if ("European Cells and Materials".equals(jname)) {
-          thisAM.replace(MetadataField.FIELD_PUBLISHER,ECM_PUBLISHER);
-      }
-    }
-
   }
 }

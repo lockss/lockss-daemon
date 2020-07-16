@@ -972,6 +972,7 @@
       eissn = 1943-5541
     >
 
+    {
     param[journal_id] = jpepe3
 
     au < manifest ; exists ; 1983 ; Journal of Professional Issues in Engineering Education and Practice Volume 109 ; 109 ; https://ascelibrary.org/ ; >
@@ -1011,8 +1012,12 @@
     au < finished ; finished ; 2017 ; Journal of Professional Issues in Engineering Education and Practice Volume 143 ; 143 ; https://ascelibrary.org/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Journal of Professional Issues in Engineering Education and Practice Volume 144 ; 144 ; https://ascelibrary.org/ ; >
     au < deepCrawl ; exists ; 2019 ; Journal of Professional Issues in Engineering Education and Practice Volume 145 ; 145 ; https://ascelibrary.org/ ; >
-    au < expected ; exists ; 2020 ; Journal of Professional Issues in Engineering Education and Practice Volume 146 ; 146 ; https://ascelibrary.org/ ; >
+    }
+    {
+    param[journal_id] = jceecd
 
+    au < expected ; exists ; 2020 ; Journal of Professional Issues in Engineering Education and Practice Volume 146 ; 146 ; https://ascelibrary.org/ ; >
+    }
   }
 
   {
@@ -1149,6 +1154,7 @@
       eissn = 1943-5436
     >
 
+    {
     param[journal_id] = jtpedi
 
     au < manifest ; exists ; 1983 ; Journal of Transportation Engineering Volume 109 ; 109 ; https://ascelibrary.org/ ; >
@@ -1185,11 +1191,15 @@
     au < zapped ; finished ; 2014 ; Journal of Transportation Engineering Volume 140 ; 140 ; http://ascelibrary.org/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Journal of Transportation Engineering Volume 141 ; 141 ; http://ascelibrary.org/ ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Journal of Transportation Engineering Volume 142 ; 142 ; http://ascelibrary.org/ ; >
+    }
+    {
+    param[journal_id] = jtepbs
+
     au < exists ; exists ; 2017 ; Journal of Transportation Engineering Volume 143 ; 143 ; https://ascelibrary.org/ ; >
     au < exists ; exists ; 2018 ; Journal of Transportation Engineering Volume 144 ; 144 ; https://ascelibrary.org/ ; >
     au < expected ; exists ; 2019 ; Journal of Transportation Engineering Volume 145 ; 145 ; https://ascelibrary.org/ ; >
     au < expected ; exists ; 2020 ; Journal of Transportation Engineering Volume 146 ; 146 ; https://ascelibrary.org/ ; >
-
+    }
   }
 
   {

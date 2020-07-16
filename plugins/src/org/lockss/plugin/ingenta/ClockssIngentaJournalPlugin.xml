@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>down - temporary aro</string>
+    <string>ready</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>64</string>
+    <string>66</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -17,7 +17,7 @@
   </entry>
    <entry>
     <string>plugin_parent_version</string>
-    <string>64</string>
+    <string>66</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -51,6 +51,9 @@
   <entry>
     <string>au_start_url</string>
     <list>
+      <!--
+      https://www.ingentaconnect.com/content/ascp/tscp?format=clockss
+      -->
       <string>"%scontent/%s?format=clockss&amp;volume=%s", base_url, journal_issn, volume_name</string>
       <string>"%scontent/%s?format=clockss&amp;volume=%s", api_url, journal_issn, volume_name</string>
       <!--  no longer (if ever needed) take this out -->

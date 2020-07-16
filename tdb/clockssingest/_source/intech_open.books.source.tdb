@@ -1,14 +1,14 @@
 {
 
   publisher <
-    name = Liverpool University Press ;
+    name = IntechOpen ;
     info[contract] = 2020 ;
     info[tester] = S
   >
 
   {
     title <
-       name = Intech Open Books
+       name = IntechOpen Books
     >
 
     plugin = org.lockss.plugin.clockss.intechopen.ClockssIntechOpenBooksSourcePlugin

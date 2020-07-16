@@ -991,6 +991,7 @@ while (my $line = <>) {
       $url = sprintf("%slockss/%s/%s/index.html",
       $param{base_url}, $param{journal_id}, $param{volume_name});
       $man_url = uri_unescape($url);
+      $jid = uri_unescape($param{journal_id});  #some journal_id's have a dot.
       my $req = HTTP::Request->new(GET, $man_url);
       my $resp = $ua->request($req);
       if ($resp->is_success) {
@@ -1000,9 +1001,9 @@ while (my $line = <>) {
               $vol_title = $resp->request->uri;
               $result = "Redirected";
           } elsif (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) && 
-                  (($man_contents =~ m/\/$param{journal_id}\/$param{volume_name}\//) || 
-                  ($man_contents =~ m/\/toc\/$param{journal_id}\/*$param{volume_name}\"/) || 
-                  ($man_contents =~ m/\/$param{journal_id}\S*volume=$param{volume_name}/)))) {
+                  (($man_contents =~ m/\/$jid\/$param{volume_name}\//) || 
+                  ($man_contents =~ m/\/toc\/$jid\/*$param{volume_name}\"/) || 
+                  ($man_contents =~ m/\/$jid\S*volume=$param{volume_name}/)))) {
               if ($man_contents =~ m/<title>\s*(.*) LOCKSS Manifest Page\s*<\/title>/si) {
                   $vol_title = $1;
                   $vol_title =~ s/\s*\n\s*/ /g;
@@ -1012,12 +1013,22 @@ while (my $line = <>) {
                   }
               }
               $result = "Manifest";
-          } else {
+          } elsif ($man_contents !~ m/$lockss_tag/) {
               $result = "--NO_TAG--"
+          } else {
+            $vol_title = "";
+            if ($man_contents =~ m/href=([^>]*)>/) {
+              $vol_title = $1;
+            }
+            if ($vol_title =~ m/\/$jid\//) {
+              $result = "--BAD_VOL--"
+            } else {
+              $result = "--BAD_JID--"
+            }
           }
       } else {
-          $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
-      }
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+  }
         sleep(4);
 
   } elsif (($plugin eq "ClockssTaylorAndFrancisPlugin") ||
@@ -1053,6 +1064,7 @@ while (my $line = <>) {
       $url = sprintf("%sclockss/%s/%s/index.html",
       $param{base_url}, $param{journal_id}, $param{volume_name});
       $man_url = uri_unescape($url);
+      $jid = uri_unescape($param{journal_id});  #some journal_id's have a dot.
       my $req = HTTP::Request->new(GET, $man_url);
       my $resp = $ua->request($req);
       if ($resp->is_success) {
@@ -1062,9 +1074,9 @@ while (my $line = <>) {
               $vol_title = $resp->request->uri;
               $result = "Redirected";
           } elsif (defined($man_contents) && (($man_contents =~ m/$clockss_tag/) && 
-                  (($man_contents =~ m/\/$param{journal_id}\/$param{volume_name}\//) || 
-                  ($man_contents =~ m/\/toc\/$param{journal_id}\/*$param{volume_name}\"/) || 
-                  ($man_contents =~ m/\/$param{journal_id}\S*volume=$param{volume_name}/)))) {
+                  (($man_contents =~ m/\/$jid\/$param{volume_name}\//) || 
+                  ($man_contents =~ m/\/toc\/$jid\/*$param{volume_name}\"/) || 
+                  ($man_contents =~ m/\/$jid\S*volume=$param{volume_name}/)))) {
               if ($man_contents =~ m/<title>\s*(.*) CLOCKSS Manifest Page\s*<\/title>/si) {
                   $vol_title = $1;
                   $vol_title =~ s/\s*\n\s*/ /g;
@@ -1074,8 +1086,18 @@ while (my $line = <>) {
                   }
               }
               $result = "Manifest";
-          } else {
+          } elsif ($man_contents !~ m/$clockss_tag/) {
               $result = "--NO_TAG--"
+          } else {
+            $vol_title = "";
+            if ($man_contents =~ m/href=([^>]*)>/) {
+              $vol_title = $1;
+            }
+            if ($vol_title =~ m/\/$jid\//) {
+              $result = "--BAD_VOL--"
+            } else {
+              $result = "--BAD_JID--"
+            }
           }
       } else {
       $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();

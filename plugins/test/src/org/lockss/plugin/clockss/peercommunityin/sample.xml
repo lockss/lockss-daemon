@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/4.3.7" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="4.3.7" xsi:schemaLocation="http://www.crossref.org/schema/4.3.7 http://www.crossref.org/schemas/crossref4.3.7.xsd">
+    <head>
+        <doi_batch_id>123456</doi_batch_id>
+        <timestamp>091220191000</timestamp>
+        <depositor>
+            <depositor_name>peercom</depositor_name>
+            <email_address>contact@evolbiol.peercommunityin.org</email_address>
+        </depositor>
+        <registrant>Peer Community In</registrant>
+    </head>
+    <body>
+        <journal>
+            <journal_metadata language="en">
+                <full_title>Peer Community In Evolutionary Biology</full_title>
+                <abbrev_title>PCI Evol Biol</abbrev_title>
+                <issn media_type="electronic">2551668X</issn>
+            </journal_metadata>
+            <journal_issue>
+                <publication_date media_type="online">
+                    <month>12</month>
+                    <day>9</day>
+                    <year>2019</year>
+                </publication_date>
+            </journal_issue>
+            <journal_article publication_type="full_text">
+                <titles>
+                    <title>Trade-offs in fitness components and ecological source-sink dynamics affect host specialisation in two parasites of Artemia shrimps</title>
+                </titles>
+                <contributors>
+                    <person_name sequence="first" contributor_role="author">
+                        <given_name>Frédéric</given_name>
+                        <surname>Guillaume</surname>
+                    </person_name>
+                </contributors>
+                <publication_date media_type="online">
+                    <month>12</month>
+                    <day>9</day>
+                    <year>2019</year>
+                </publication_date>
+                <pages>
+                    <first_page>100090</first_page>
+                </pages>
+                <program xmlns="http://www.crossref.org/relations.xsd">
+                    <related_item>
+                        <description>A recommendation of Lievens, E.J.P., Michalakis, Y. and Lenormand, T. (2019). Trait-specific trade-offs prevent niche expansion in two parasites. bioRxiv, 621581, ver. 4 peer-reviewed and recommended by PCI Evolutionary Biology. doi: 10.1101/621581</description>
+                        <inter_work_relation relationship-type="isReviewOf" identifier-type="doi">10.1101/621581</inter_work_relation>
+                    </related_item>
+                </program>
+                <doi_data>
+                    <doi>10.24072/pci.evolbiol.100090</doi>
+                    <resource>https://evolbiol.peercommunityin.org/public/rec?id=203&amp;reviews=True</resource>
+                    <collection property="crawler-based">
+                        <item crawler="iParadigms">
+                            <resource>https://evolbiol.peercommunityin.org/public/rec?id=203&amp;reviews=True</resource>
+                        </item>
+                    </collection>
+                </doi_data>
+                <citation_list>
+                    <citation key="refunstruc1">
+                        <unstructured_citation>0</unstructured_citation>
+                    </citation>
+                </citation_list>
+            </journal_article>
+        </journal>
+    </body>
+</doi_batch>

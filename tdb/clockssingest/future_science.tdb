@@ -166,6 +166,7 @@
       eissn = 2056-5623
     >
     
+    {
     param[journal_id] = fso
 
     au < finished ; finished ; 2015 ; Future Science OA Volume 1 ; 1 ; http://www.future-science.com/ ; reingest3.clockss.org:8083 >
@@ -173,8 +174,12 @@
     au < deepCrawl ; exists ; 2017 ; Future Science OA Volume 3 ; 3 ; https://www.future-science.com/ ; >
     au < deepCrawl ; exists ; 2018 ; Future Science OA Volume 4 ; 4 ; https://www.future-science.com/ ; >
     au < deepCrawl ; exists ; 2019 ; Future Science OA Volume 5 ; 5 ; https://www.future-science.com/ ; >
-    au < expected ; exists ; 2020 ; Future Science OA Volume 6 ; 6 ; https://www.future-science.com/ ; >
+    }
+    {
+    param[journal_id] = fsoa
 
+    au < expected ; exists ; 2020 ; Future Science OA Volume 6 ; 6 ; https://www.future-science.com/ ; >
+    }
   }
 
   {
