@@ -7,7 +7,7 @@
     info[tester] = 5 ;
     info[poller] = 6
   >
-    pluginPrefix = org.lockss.plugin.highwire.annalsfamilymedicine.ClockssAnnalsFamilyMedicineDrupalPlugin
+    pluginPrefix = org.lockss.plugin.highwire.
     implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] ; param[base_url] ; hidden[proxy] >
 
   {
@@ -38,8 +38,8 @@
     au < ClockssHighWirePressH20Plugin ; deepCrawl ; exists ; 2017 ; Annals of Family Medicine Volume 15 ; 15 ; http://www.annfammed.org/ ; >
     au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2018 ; Annals of Family Medicine Volume 16 ; 16 ; http://www.annfammed.org/ ; >
     au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2019 ; Annals of Family Medicine Volume 17 [superseded] ; 17 ; http://www.annfammed.org/ ; >
-    au < annalsfamilymedicine.ClockssAnnalsFamilyMedicineDrupalPlugin ; manifest ; exists ; 2019 ; Annals of Family Medicine Volume 17 ; 17 ; https://www.annfammed.org/ ; >
-    au < annalsfamilymedicine.ClockssAnnalsFamilyMedicineDrupalPlugin ; manifest ; exists ; 2020 ; Annals of Family Medicine Volume 18 ; 18 ; https://www.annfammed.org/ ; >
+    au < ClockssHWDrupalPlugin ; manifest ; exists ; 2019 ; Annals of Family Medicine Volume 17 ; 17 ; https://www.annfammed.org/ ; >
+    au < ClockssHWDrupalPlugin ; manifest ; exists ; 2020 ; Annals of Family Medicine Volume 18 ; 18 ; https://www.annfammed.org/ ; >
 
   }
 

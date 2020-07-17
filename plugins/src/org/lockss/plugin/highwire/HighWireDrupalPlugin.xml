@@ -45,7 +45,6 @@
         rsp.RSPDrupalPlugin
         rup.RUPDrupalPlugin
         sfn.SFNDrupalPlugin
-        annalsfamilymedicine.AnnalsFamilyMedicineDrupalPlugin
         
         Note: the LOCKSS child is the parent of the CLOCKSS child plugin, therefore
         update the CLOCKSS child plugin_version & plugin_parent_version with 
