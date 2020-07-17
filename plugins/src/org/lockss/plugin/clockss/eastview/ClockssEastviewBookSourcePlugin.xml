@@ -9,7 +9,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>1</string>
+        <string>2</string>
     </entry>
     <entry>
         <string>plugin_parent</string>
@@ -32,10 +32,14 @@
         <map>
             <entry>
                 <string>Metadata</string>
-                <string>1</string>
+                <string>2</string>
             </entry>
             <entry>
                 <string>Substance</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Poll</string>
                 <string>1</string>
             </entry>
         </map>
