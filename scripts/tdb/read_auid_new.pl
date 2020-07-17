@@ -3306,46 +3306,46 @@ while (my $line = <>) {
       my $req = HTTP::Request->new(GET, $man_url);
       my $resp = $ua->request($req);
       if ($resp->is_success) {
-	  my $man_contents = $resp->content;
-	  if ($req->url ne $resp->request->uri) {
-	      $vol_title = $resp->request->uri;
-	      $result = "Redirected";
-	  } elsif (defined($man_contents)) {
-	      my $perm_contents = $resp->content; #same as manifest page
-	      my $lcl_tag = $lockss_tag;
-	      #for CLOCKSS permission is on lockss.txt
-	      if ($plugin eq "ClockssSpandidosPlugin") {
-		  $lcl_tag = $clockss_tag;
-		  my $perm_url_sprintf = sprintf("%slockss.txt",$param{base_url});
-		  my $perm_url = uri_unescape($perm_url_sprintf );
-		  my $perm_req = HTTP::Request->new(GET, $perm_url);
-		  my $perm_resp = $ua->request($perm_req);
-		  #if this fails, it just won't reset - which will fail to have permission - so okay
-		  if ($perm_resp->is_success) {
-		      $perm_contents = $perm_resp->content;
-		  }
-	      }
-	      $lcl_tag =~ s/ /./g;
-	      if (defined($perm_contents) && ($perm_contents =~ m/$lcl_tag/s)) {
-		  #we have a permission statement, do we have a link to <a href="/ijo/39/...." at least one issue of this volume
-		  my $vol_link = sprintf("href=.+/%s/%s/",$param{journal_id},$param{volume_name});
-		  if ($man_contents =~ m/$vol_link/gi) {
-		      $vol_title = $param{journal_id}; #default_value
-		      if ($man_contents =~ m/<title>\s*(.*)\s*<\/title>/si) {
-			  $vol_title = $1; #better value
-		      }
-		      $result = "Manifest";
-		  } else {
-		      #had a manifest page but it had no volume links
-		      $result = "--NO_URL--";
-		  }
-	      } else {
-		  $result = "--TAG_FAIL--";
-	      }
-	  }
+      my $man_contents = $resp->content;
+      if ($req->url ne $resp->request->uri) {
+          $vol_title = $resp->request->uri;
+          $result = "Redirected";
+      } elsif (defined($man_contents)) {
+          my $perm_contents = $resp->content; #same as manifest page
+          my $lcl_tag = $lockss_tag;
+          #for CLOCKSS permission is on lockss.txt
+          if ($plugin eq "ClockssSpandidosPlugin") {
+          $lcl_tag = $clockss_tag;
+          my $perm_url_sprintf = sprintf("%slockss.txt",$param{base_url});
+          my $perm_url = uri_unescape($perm_url_sprintf );
+          my $perm_req = HTTP::Request->new(GET, $perm_url);
+          my $perm_resp = $ua->request($perm_req);
+          #if this fails, it just won't reset - which will fail to have permission - so okay
+          if ($perm_resp->is_success) {
+              $perm_contents = $perm_resp->content;
+          }
+          }
+          $lcl_tag =~ s/ /./g;
+          if (defined($perm_contents) && ($perm_contents =~ m/$lcl_tag/s)) {
+          #we have a permission statement, do we have a link to <a href="/ijo/39/...." at least one issue of this volume
+          my $vol_link = sprintf("href=.+/%s/%s/",$param{journal_id},$param{volume_name});
+          if ($man_contents =~ m/$vol_link/gi) {
+              $vol_title = $param{journal_id}; #default_value
+              if ($man_contents =~ m/<title>\s*(.*)\s*<\/title>/si) {
+              $vol_title = $1; #better value
+              }
+              $result = "Manifest";
+          } else {
+              #had a manifest page but it had no volume links
+              $result = "--NO_URL--";
+          }
+          } else {
+          $result = "--TAG_FAIL--";
+          }
+      }
       } else {
-	  #printf("URL: %s\n", $man_url);
-	  $result = "--REQ_FAIL--";
+      #printf("URL: %s\n", $man_url);
+      $result = "--REQ_FAIL--";
       }
 
     sleep(4);
@@ -3382,18 +3382,17 @@ while (my $line = <>) {
          $man_url = uri_unescape($url);
          my $req = HTTP::Request->new(GET, $man_url);
          my $resp = $ua->request($req);
-         if ($resp->is_success) {
+         if (($resp->is_success)) {
              my $man_contents = $resp->content;
-             # It does not volume based manifest page.
-             # The collective issue page provide both permission statement and links to all volume and issues: {base_url}issues/
+             # There is a single manifest page which lists all volumes and has the permission statement: {base_url}issues/
              if ($req->url ne $resp->request->uri) {
                $vol_title = "Resilience Alliance All Issues";
                $result = "Redirected";
-             } elsif (defined($man_contents)) {
+             } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/\/vol$param{volume_name}\//)) {
                  # <td style="text-align: center; vertical-align: middle" rowspan="2">14</td> - volume "14"
-                 if ($man_contents =~ m/<td[^>]+>(\d+)<\td>/si) {
-                     $volume_name = $1;
-                     $vol_title= "Resilience Alliance " . $volume_name;
+                 if ($man_contents =~ m/>([^>]*) ISSN/si) {
+                     $volume_name = $param{volume_name};
+                     $vol_title= $1 . " Volume " . $volume_name;
                  }
                  $result = "Manifest"
              } else {
