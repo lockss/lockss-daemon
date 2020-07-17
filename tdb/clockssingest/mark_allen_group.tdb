@@ -61,7 +61,7 @@
     au < manifest ; exists ; 2011 ; British Journal of Cardiac Nursing Volume 6 ; 6 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2012 ; British Journal of Cardiac Nursing Volume 7 ; 7 ; https://www.magonlinelibrary.com/ ; >
     au < finished ; down ; 2013 ; British Journal of Cardiac Nursing Volume 8 ; 8 ; http://www.magonlinelibrary.com/ ; >
-    au < finished ; crawling ; 2014 ; British Journal of Cardiac Nursing Volume 9 ; 9 ; http://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2014 ; British Journal of Cardiac Nursing Volume 9 ; 9 ; http://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; British Journal of Cardiac Nursing Volume 10 ; 10 ; http://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2016 ; British Journal of Cardiac Nursing Volume 11 ; 11 ; http://www.magonlinelibrary.com/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; British Journal of Cardiac Nursing Volume 12 ; 12 ; http://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
@@ -89,7 +89,7 @@
     au < manifest ; exists ; 2010 ; British Journal of Community Nursing Volume 15 ; 15 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2011 ; British Journal of Community Nursing Volume 16 ; 16 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2012 ; British Journal of Community Nursing Volume 17 ; 17 ; https://www.magonlinelibrary.com/ ; >
-    au < finished ; crawling ; 2013 ; British Journal of Community Nursing Volume 18 ; 18 ; http://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2013 ; British Journal of Community Nursing Volume 18 ; 18 ; http://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2014 ; British Journal of Community Nursing Volume 19 ; 19 ; http://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
     au < zapped ; finished ; 2015 ; British Journal of Community Nursing Volume 20 ; 20 ; http://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2016 ; British Journal of Community Nursing Volume 21 ; 21 ; http://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
@@ -116,8 +116,8 @@
     au < manifest ; exists ; 2010 ; British Journal of Healthcare Assistants Volume 4 ; 4 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2011 ; British Journal of Healthcare Assistants Volume 5 ; 5 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2012 ; British Journal of Healthcare Assistants Volume 6 ; 6 ; https://www.magonlinelibrary.com/ ; >
-    au < finished ; crawling ; 2013 ; British Journal of Healthcare Assistants Volume 7 ; 7 ; http://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2014 ; British Journal of Healthcare Assistants Volume 8 ; 8 ; http://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; British Journal of Healthcare Assistants Volume 7 ; 7 ; http://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2014 ; British Journal of Healthcare Assistants Volume 8 ; 8 ; http://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; British Journal of Healthcare Assistants Volume 9 ; 9 ; http://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2016 ; British Journal of Healthcare Assistants Volume 10 ; 10 ; http://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; British Journal of Healthcare Assistants Volume 11 ; 11 ; http://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
@@ -168,7 +168,7 @@
     au < manifest ; exists ; 2010 ; British Journal of Hospital Medicine Volume 71 ; 71 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2011 ; British Journal of Hospital Medicine Volume 72 ; 72 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2012 ; British Journal of Hospital Medicine Volume 73 ; 73 ; https://www.magonlinelibrary.com/ ; >
-    au < finished ; crawling ; 2013 ; British Journal of Hospital Medicine Volume 74 ; 74 ; http://www.magonlinelibrary.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2013 ; British Journal of Hospital Medicine Volume 74 ; 74 ; http://www.magonlinelibrary.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; British Journal of Hospital Medicine Volume 75 ; 75 ; http://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
     au < zapped ; finished ; 2015 ; British Journal of Hospital Medicine Volume 76 ; 76 ; http://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2016 ; British Journal of Hospital Medicine Volume 77 ; 77 ; http://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
@@ -322,8 +322,8 @@
     au < manifest ; exists ; 2010 ; Dental Nursing Volume 6 ; 6 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2011 ; Dental Nursing Volume 7 ; 7 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2012 ; Dental Nursing Volume 8 ; 8 ; https://www.magonlinelibrary.com/ ; >
-    au < finished ; crawling ; 2013 ; Dental Nursing Volume 9 ; 9 ; http://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2014 ; Dental Nursing Volume 10 ; 10 ; http://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2013 ; Dental Nursing Volume 9 ; 9 ; http://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2014 ; Dental Nursing Volume 10 ; 10 ; http://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Dental Nursing Volume 11 ; 11 ; http://www.magonlinelibrary.com/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2016 ; Dental Nursing Volume 12 ; 12 ; http://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Dental Nursing Volume 13 ; 13 ; http://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
