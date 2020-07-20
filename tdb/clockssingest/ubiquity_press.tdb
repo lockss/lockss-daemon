@@ -90,15 +90,15 @@
       comment[publisher] = Helsinki University Press
 #      param[base_url] = https://journal-njmr.org/
 
-      au < exists ; exists ; 2011 ; 1 ; Nordic Journal of Migration Research Volume 2011 ; 2011 ; https://journal-njmr.org/ ; >
-      au < exists ; exists ; 2012 ; 2 ; Nordic Journal of Migration Research Volume 2012 ; 2012 ; https://journal-njmr.org/ ; >
-      au < exists ; exists ; 2013 ; 3 ; Nordic Journal of Migration Research Volume 2013 ; 2013 ; https://journal-njmr.org/ ; >
-      au < exists ; exists ; 2014 ; 4 ; Nordic Journal of Migration Research Volume 2014 ; 2014 ; https://journal-njmr.org/ ; >
-      au < exists ; exists ; 2015 ; 5 ; Nordic Journal of Migration Research Volume 2015 ; 2015 ; https://journal-njmr.org/ ; >
-      au < exists ; exists ; 2016 ; 6 ; Nordic Journal of Migration Research Volume 2016 ; 2016 ; https://journal-njmr.org/ ; >
-      au < exists ; exists ; 2017 ; 7 ; Nordic Journal of Migration Research Volume 2017 ; 2017 ; https://journal-njmr.org/ ; >
-      au < exists ; exists ; 2018 ; 8 ; Nordic Journal of Migration Research Volume 2018 ; 2018 ; https://journal-njmr.org/ ; >
-      au < exists ; exists ; 2019 ; 9 ; Nordic Journal of Migration Research Volume 2019 ; 2019 ; https://journal-njmr.org/ ; >
+      au < manifest ; exists ; 2011 ; 1 ; Nordic Journal of Migration Research Volume 2011 ; 2011 ; https://journal-njmr.org/ ; >
+      au < manifest ; exists ; 2012 ; 2 ; Nordic Journal of Migration Research Volume 2012 ; 2012 ; https://journal-njmr.org/ ; >
+      au < manifest ; exists ; 2013 ; 3 ; Nordic Journal of Migration Research Volume 2013 ; 2013 ; https://journal-njmr.org/ ; >
+      au < manifest ; exists ; 2014 ; 4 ; Nordic Journal of Migration Research Volume 2014 ; 2014 ; https://journal-njmr.org/ ; >
+      au < manifest ; exists ; 2015 ; 5 ; Nordic Journal of Migration Research Volume 2015 ; 2015 ; https://journal-njmr.org/ ; >
+      au < manifest ; exists ; 2016 ; 6 ; Nordic Journal of Migration Research Volume 2016 ; 2016 ; https://journal-njmr.org/ ; >
+      au < manifest ; exists ; 2017 ; 7 ; Nordic Journal of Migration Research Volume 2017 ; 2017 ; https://journal-njmr.org/ ; >
+      au < manifest ; exists ; 2018 ; 8 ; Nordic Journal of Migration Research Volume 2018 ; 2018 ; https://journal-njmr.org/ ; >
+      au < manifest ; exists ; 2019 ; 9 ; Nordic Journal of Migration Research Volume 2019 ; 2019 ; https://journal-njmr.org/ ; >
       au < manifest ; exists ; 2020 ; 10 ; Nordic Journal of Migration Research Volume 2020 ; 2020 ; https://journal-njmr.org/ ; >
   }
 
@@ -798,7 +798,7 @@
 
       #publisher = Stockholm University Press
 
-    au < exists ; exists ; 1999 ; 1 ; Scandinavian Journal of Disability Research Volume 1 ; 1999 ; https://www.sjdr.se/ ; >
+    au < manifest ; exists ; 1999 ; 1 ; Scandinavian Journal of Disability Research Volume 1 ; 1999 ; https://www.sjdr.se/ ; >
     au < finished ; crawling ; 2000 ; 2 ; Scandinavian Journal of Disability Research Volume 2 ; 2000 ; https://www.sjdr.se/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2001 ; 3 ; Scandinavian Journal of Disability Research Volume 3 ; 2001 ; https://www.sjdr.se/ ; reingest2.clockss.org:8085 >
     au < doesNotExist ; doesNotExist ; 2002 ; 4 ; Scandinavian Journal of Disability Research Volume 4 ; 2002 ; https://www.sjdr.se/ ; >
@@ -1983,15 +1983,15 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://tremorjournal.org/
 
-      au < exists ; exists ; 2011 ; 1 ; Tremor and Other Hyperkinetic Movements Volume 2011 ; 2011 ; https://tremorjournal.org/ ; >
-      au < exists ; exists ; 2012 ; 2 ; Tremor and Other Hyperkinetic Movements Volume 2012 ; 2012 ; https://tremorjournal.org/ ; >
-      au < exists ; exists ; 2013 ; 3 ; Tremor and Other Hyperkinetic Movements Volume 2013 ; 2013 ; https://tremorjournal.org/ ; >
-      au < exists ; exists ; 2014 ; 4 ; Tremor and Other Hyperkinetic Movements Volume 2014 ; 2014 ; https://tremorjournal.org/ ; >
-      au < exists ; exists ; 2015 ; 5 ; Tremor and Other Hyperkinetic Movements Volume 2015 ; 2015 ; https://tremorjournal.org/ ; >
-      au < exists ; exists ; 2016 ; 6 ; Tremor and Other Hyperkinetic Movements Volume 2016 ; 2016 ; https://tremorjournal.org/ ; >
-      au < exists ; exists ; 2017 ; 7 ; Tremor and Other Hyperkinetic Movements Volume 2017 ; 2017 ; https://tremorjournal.org/ ; >
-      au < exists ; exists ; 2018 ; 8 ; Tremor and Other Hyperkinetic Movements Volume 2018 ; 2018 ; https://tremorjournal.org/ ; >
-      au < exists ; exists ; 2019 ; 9 ; Tremor and Other Hyperkinetic Movements Volume 2019 ; 2019 ; https://tremorjournal.org/ ; >
+      au < manifest ; exists ; 2011 ; 1 ; Tremor and Other Hyperkinetic Movements Volume 2011 ; 2011 ; https://tremorjournal.org/ ; >
+      au < manifest ; exists ; 2012 ; 2 ; Tremor and Other Hyperkinetic Movements Volume 2012 ; 2012 ; https://tremorjournal.org/ ; >
+      au < manifest ; exists ; 2013 ; 3 ; Tremor and Other Hyperkinetic Movements Volume 2013 ; 2013 ; https://tremorjournal.org/ ; >
+      au < manifest ; exists ; 2014 ; 4 ; Tremor and Other Hyperkinetic Movements Volume 2014 ; 2014 ; https://tremorjournal.org/ ; >
+      au < manifest ; exists ; 2015 ; 5 ; Tremor and Other Hyperkinetic Movements Volume 2015 ; 2015 ; https://tremorjournal.org/ ; >
+      au < manifest ; exists ; 2016 ; 6 ; Tremor and Other Hyperkinetic Movements Volume 2016 ; 2016 ; https://tremorjournal.org/ ; >
+      au < manifest ; exists ; 2017 ; 7 ; Tremor and Other Hyperkinetic Movements Volume 2017 ; 2017 ; https://tremorjournal.org/ ; >
+      au < manifest ; exists ; 2018 ; 8 ; Tremor and Other Hyperkinetic Movements Volume 2018 ; 2018 ; https://tremorjournal.org/ ; >
+      au < manifest ; exists ; 2019 ; 9 ; Tremor and Other Hyperkinetic Movements Volume 2019 ; 2019 ; https://tremorjournal.org/ ; >
       au < manifest ; exists ; 2020 ; 10 ; Tremor and Other Hyperkinetic Movements Volume 2020 ; 2020 ; https://tremorjournal.org/ ; >
 
   }
@@ -2296,21 +2296,21 @@
       comment[publisher] = University of Westminster Press
 #      param[base_url] = https://delibdemjournal.org/
 
-      au < exists ; exists ; 2005 ; 1 ; Journal of Deliberative Democracy Volume 2005 ; 2005 ; https://delibdemjournal.org/ ; >
-      au < exists ; exists ; 2006 ; 2 ; Journal of Deliberative Democracy Volume 2006 ; 2006 ; https://delibdemjournal.org/ ; >
-      au < exists ; exists ; 2007 ; 3 ; Journal of Deliberative Democracy Volume 2007 ; 2007 ; https://delibdemjournal.org/ ; >
-      au < exists ; exists ; 2008 ; 4 ; Journal of Deliberative Democracy Volume 2008 ; 2008 ; https://delibdemjournal.org/ ; >
-      au < exists ; exists ; 2009 ; 5 ; Journal of Deliberative Democracy Volume 2009 ; 2009 ; https://delibdemjournal.org/ ; >
-      au < exists ; exists ; 2010 ; 6 ; Journal of Deliberative Democracy Volume 2010 ; 2010 ; https://delibdemjournal.org/ ; >
-      au < exists ; exists ; 2011 ; 7 ; Journal of Deliberative Democracy Volume 2011 ; 2011 ; https://delibdemjournal.org/ ; >
-      au < exists ; exists ; 2012 ; 8 ; Journal of Deliberative Democracy Volume 2012 ; 2012 ; https://delibdemjournal.org/ ; >
-      au < exists ; exists ; 2013 ; 9 ; Journal of Deliberative Democracy Volume 2013 ; 2013 ; https://delibdemjournal.org/ ; >
-      au < exists ; exists ; 2014 ; 10 ; Journal of Deliberative Democracy Volume 2014 ; 2014 ; https://delibdemjournal.org/ ; >
-      au < exists ; exists ; 2015 ; 11 ; Journal of Deliberative Democracy Volume 2015 ; 2015 ; https://delibdemjournal.org/ ; >
-      au < exists ; exists ; 2016 ; 12 ; Journal of Deliberative Democracy Volume 2016 ; 2016 ; https://delibdemjournal.org/ ; >
-      au < exists ; exists ; 2017 ; 13 ; Journal of Deliberative Democracy Volume 2017 ; 2017 ; https://delibdemjournal.org/ ; >
-      au < exists ; exists ; 2018 ; 14 ; Journal of Deliberative Democracy Volume 2018 ; 2018 ; https://delibdemjournal.org/ ; >
-      au < exists ; exists ; 2019 ; 15 ; Journal of Deliberative Democracy Volume 2019 ; 2019 ; https://delibdemjournal.org/ ; >
+      au < manifest ; exists ; 2005 ; 1 ; Journal of Deliberative Democracy Volume 2005 ; 2005 ; https://delibdemjournal.org/ ; >
+      au < manifest ; exists ; 2006 ; 2 ; Journal of Deliberative Democracy Volume 2006 ; 2006 ; https://delibdemjournal.org/ ; >
+      au < manifest ; exists ; 2007 ; 3 ; Journal of Deliberative Democracy Volume 2007 ; 2007 ; https://delibdemjournal.org/ ; >
+      au < manifest ; exists ; 2008 ; 4 ; Journal of Deliberative Democracy Volume 2008 ; 2008 ; https://delibdemjournal.org/ ; >
+      au < manifest ; exists ; 2009 ; 5 ; Journal of Deliberative Democracy Volume 2009 ; 2009 ; https://delibdemjournal.org/ ; >
+      au < manifest ; exists ; 2010 ; 6 ; Journal of Deliberative Democracy Volume 2010 ; 2010 ; https://delibdemjournal.org/ ; >
+      au < manifest ; exists ; 2011 ; 7 ; Journal of Deliberative Democracy Volume 2011 ; 2011 ; https://delibdemjournal.org/ ; >
+      au < manifest ; exists ; 2012 ; 8 ; Journal of Deliberative Democracy Volume 2012 ; 2012 ; https://delibdemjournal.org/ ; >
+      au < manifest ; exists ; 2013 ; 9 ; Journal of Deliberative Democracy Volume 2013 ; 2013 ; https://delibdemjournal.org/ ; >
+      au < manifest ; exists ; 2014 ; 10 ; Journal of Deliberative Democracy Volume 2014 ; 2014 ; https://delibdemjournal.org/ ; >
+      au < manifest ; exists ; 2015 ; 11 ; Journal of Deliberative Democracy Volume 2015 ; 2015 ; https://delibdemjournal.org/ ; >
+      au < manifest ; exists ; 2016 ; 12 ; Journal of Deliberative Democracy Volume 2016 ; 2016 ; https://delibdemjournal.org/ ; >
+      au < manifest ; exists ; 2017 ; 13 ; Journal of Deliberative Democracy Volume 2017 ; 2017 ; https://delibdemjournal.org/ ; >
+      au < manifest ; exists ; 2018 ; 14 ; Journal of Deliberative Democracy Volume 2018 ; 2018 ; https://delibdemjournal.org/ ; >
+      au < manifest ; exists ; 2019 ; 15 ; Journal of Deliberative Democracy Volume 2019 ; 2019 ; https://delibdemjournal.org/ ; >
       au < expected ; exists ; 2020 ; 16 ; Journal of Deliberative Democracy Volume 2020 ; 2020 ; https://delibdemjournal.org/ ; >
 
   }

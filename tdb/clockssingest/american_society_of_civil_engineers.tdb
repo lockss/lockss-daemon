@@ -1016,7 +1016,7 @@
     {
     param[journal_id] = jceecd
 
-    au < expected ; exists ; 2020 ; Journal of Professional Issues in Engineering Education and Practice Volume 146 ; 146 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 2020 ; Journal of Professional Issues in Engineering Education and Practice Volume 146 ; 146 ; https://ascelibrary.org/ ; >
     }
   }
 
@@ -1195,10 +1195,10 @@
     {
     param[journal_id] = jtepbs
 
-    au < exists ; exists ; 2017 ; Journal of Transportation Engineering Volume 143 ; 143 ; https://ascelibrary.org/ ; >
-    au < exists ; exists ; 2018 ; Journal of Transportation Engineering Volume 144 ; 144 ; https://ascelibrary.org/ ; >
-    au < expected ; exists ; 2019 ; Journal of Transportation Engineering Volume 145 ; 145 ; https://ascelibrary.org/ ; >
-    au < expected ; exists ; 2020 ; Journal of Transportation Engineering Volume 146 ; 146 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 2017 ; Journal of Transportation Engineering Volume 143 ; 143 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 2018 ; Journal of Transportation Engineering Volume 144 ; 144 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 2019 ; Journal of Transportation Engineering Volume 145 ; 145 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 2020 ; Journal of Transportation Engineering Volume 146 ; 146 ; https://ascelibrary.org/ ; >
     }
   }
 
