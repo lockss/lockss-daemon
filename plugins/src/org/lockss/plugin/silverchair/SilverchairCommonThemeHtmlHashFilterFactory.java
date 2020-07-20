@@ -1,46 +1,66 @@
 package org.lockss.plugin.silverchair;
 
 import org.htmlparser.NodeFilter;
+import org.htmlparser.filters.OrFilter;
 import org.lockss.daemon.PluginException;
+import org.lockss.filter.html.HtmlFilterInputStream;
+import org.lockss.filter.html.HtmlNodeFilterTransform;
 import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.FilterFactory;
 import org.lockss.util.Logger;
 
 import java.io.InputStream;
 
-public class SilverchairCommonThemeHtmlHashFilterFactory extends BaseScHtmlHashFilterFactory {
+public class SilverchairCommonThemeHtmlHashFilterFactory implements FilterFactory {
+    protected static NodeFilter[] filters = new NodeFilter[]{
+            HtmlNodeFilters.tag("head"),
+            HtmlNodeFilters.tag("script"),
+            HtmlNodeFilters.tag("noscript"),
+            HtmlNodeFilters.tag("style"),
+            HtmlNodeFilters.tag("header"),
+            HtmlNodeFilters.tag("footer"),
+            HtmlNodeFilters.tag("iframe"),
 
-    protected boolean doExtraSpecialFilter() {
-        return false;
-    }
+            HtmlNodeFilters.comment(),
 
-    protected boolean doXForm() {
-        return true;
-    }
-
-    private static final Logger log = Logger.getLogger(SilverchairCommonThemeHtmlHashFilterFactory.class);
+            // https://rupress.org/jem/article/215/2/521/42535/T-cells-provide-the-early-source-of-IFN-to
+            HtmlNodeFilters.tagWithAttributeRegex("section", "class", "master-header"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-instance-SitePageFooter"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "ad-banner"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "id", "gs-casa-r"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "footer_wrap"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-instance-GdprCookieBanner"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-instance-SiteWideModals"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "ss-ui-only"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "site-theme-header"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-instance-SitePageHeader"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "ref-list"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "vt-related-content"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "artmet-views"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "artmet-citations"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "artmet-altmetric"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "artmet-dimensions"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-IssueInfo"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "content-nav"),
+            HtmlNodeFilters.tagWithAttributeRegex("section", "class", "figure-table-wrapper"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "userAlert"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-ArticleNavLinks"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "adblock-wrap"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "panels"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-ArticleDataSupplements"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-instance-SplitView_TabPane"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "authornotes-section-wrapper"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "permissionstatement-section-wrapper"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "toolbar-wrap"),
+            
+    };
 
     @Override
-    public InputStream createFilteredInputStream(final ArchivalUnit au,
-                                                 InputStream in,
-                                                 String encoding)
-            throws PluginException {
+    public InputStream createFilteredInputStream(ArchivalUnit au,
+                                                 InputStream in, String encoding) throws PluginException {
 
-        NodeFilter[] includeFilters = new NodeFilter[] {
-                // <div class="widget-ContentBrowseByYearManifest widget-instance-IssueBrowseByYear">
-                HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-Content.+Manifest"),
-                // <div id="ArticleList">
-                HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-list-resources"),
-                HtmlNodeFilters.tagWithAttributeRegex("div", "id", "ContentColumn"),
-        };
-
-        NodeFilter[] moreExcludeFilters = new NodeFilter[] {
-                HtmlNodeFilters.tagWithAttribute("div","class", "kwd-group"),
-                HtmlNodeFilters.tagWithAttributeRegex("div", "class", "author-info-wrap"),
-                HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pub-history-wrap"),
-        };
-
-        return createFilteredInputStream(au, in, encoding, includeFilters, moreExcludeFilters);
+        return new HtmlFilterInputStream(in, encoding,
+                HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
     }
 }
-
