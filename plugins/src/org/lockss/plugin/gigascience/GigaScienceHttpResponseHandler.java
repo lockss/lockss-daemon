@@ -53,7 +53,8 @@ public class GigaScienceHttpResponseHandler implements CacheResultHandler {
     switch (responseCode) {
       case 500:
         log.debug2("500 error: "+url);
-        if (au.shouldBeCached(url) && url.matches(".*/mathml/M\\d+$")) {
+        // don't completely fail if unable to retrieve a dataset
+        if (url.matches(".*/api/dataset?doi=\\d+$") ) {
           return new CacheException.NoRetryDeadLinkException("500 Internal Server Error (non-fatal)");
         }
         return new CacheException.RetrySameUrlException("500 Internal Server Error");

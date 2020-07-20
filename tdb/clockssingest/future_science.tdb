@@ -95,7 +95,7 @@
     au < deepCrawl ; exists ; 2019 ; BioTechniques Volume 66 ; 66 ; https://www.future-science.com/ ; >
     au < deepCrawl ; exists ; 2019 ; BioTechniques Volume 67 ; 67 ; https://www.future-science.com/ ; >
     au < manifest ; exists ; 2020 ; BioTechniques Volume 68 ; 68 ; https://www.future-science.com/ ; >
-    au < expected ; exists ; 2020 ; BioTechniques Volume 69 ; 69 ; https://www.future-science.com/ ; >
+    au < manifest ; exists ; 2020 ; BioTechniques Volume 69 ; 69 ; https://www.future-science.com/ ; >
 
   }
 
@@ -178,7 +178,7 @@
     {
     param[journal_id] = fsoa
 
-    au < expected ; exists ; 2020 ; Future Science OA Volume 6 ; 6 ; https://www.future-science.com/ ; >
+    au < manifest ; exists ; 2020 ; Future Science OA Volume 6 ; 6 ; https://www.future-science.com/ ; >
     }
   }
 
