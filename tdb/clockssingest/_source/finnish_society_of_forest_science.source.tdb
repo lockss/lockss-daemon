@@ -14,7 +14,7 @@
     title <
       name =  Silva Fennica ;
       issn = 0037-5330 ;
-      eissn = 2242-4075      
+      eissn = 2242-4075
     >
     
     # This content was collected using wget and provided for preservation as a
@@ -27,7 +27,7 @@
     implicit < status ; status2 ; year ; name ; param[year] >    
 
     au < readySource ; finished ; 2016 ; Silva Fennica WARC Content 2016 ; 2016 >
-    au < expected ; exists ; 2019 ; Silva Fennica WARC Content 2019 ; 2019 >
+    #collecting additional content through harvest. Do not add AUs.
     
   }
 
