@@ -1389,7 +1389,7 @@
       au < doNotProcess ; exists ; 2016 ; 2016 ; Journal of Interactive Media in Education Volume 2016 ; 2016 ; https://jime.open.ac.uk/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; 2017 ; Journal of Interactive Media in Education Volume 2017 ; 2017 ; https://jime.open.ac.uk/ ; reingest3.clockss.org:8083 > #no www
       au < finished ; manifest ; 2018 ; 2018 ; Journal of Interactive Media in Education Volume 2018 ; 2018 ; https://jime.open.ac.uk/ ; reingest1.clockss.org:8082 > #no www
-      au < manifest ; exists ; 2019 ; 2019 ; Journal of Interactive Media in Education Volume 2019 ; 2019 ; https://jime.open.ac.uk/ ; >
+      au < exists ; exists ; 2019 ; 2019 ; Journal of Interactive Media in Education Volume 2019 ; 2019 ; https://jime.open.ac.uk/ ; >
     }
   }
 
