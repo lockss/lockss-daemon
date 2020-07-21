@@ -1181,6 +1181,9 @@ public class ServeContent extends LockssServlet {
     // Add a header to the response to identify content from LOCKSS cache
     resp.setHeader(Constants.X_LOCKSS, Constants.X_LOCKSS_FROM_CACHE);
 
+    // Indicate the AU the content came from
+    resp.setHeader(Constants.X_LOCKSS_FROM_AUID, au.getAuId());
+
     // rewrite content from cache
     CharsetUtil.InputStreamAndCharset isc = CharsetUtil.getCharsetStream(cu);
     handleRewriteInputStream(isc.getInStream(), mimeType,
@@ -1401,6 +1404,10 @@ public class ServeContent extends LockssServlet {
     if (contentEncoding != null) {
       resp.setHeader(HttpFields.__ContentEncoding, contentEncoding);
     }
+
+    // Indicate the AU the content was rewritten for, even though it isn't
+    // cached locally
+    resp.setHeader(Constants.X_LOCKSS_REWRITTEN_FOR_AUID, au.getAuId());
 
     String charset = HeaderUtil.getCharsetOrDefaultFromContentType(ctype);
     BufferedInputStream bufRespStrm = new BufferedInputStream(respStrm);

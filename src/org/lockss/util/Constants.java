@@ -124,6 +124,16 @@ public interface Constants {
   /** Header used with proxy to request content from a specific AU */
   public static String X_LOCKSS_AUID = "X-Lockss-Auid";
 
+  /** Header in ServeContent response when it serves content from an AU */
+  public static String X_LOCKSS_FROM_AUID = "X-Lockss-From-Auid";
+
+  /** Header in ServeContent response when it serves content from the
+   * publisher, which has been rewritten because it logically belongs to
+   * the AU, but wasn't actually served from the cache (because it's
+   * missing or the publisher has more recent content */
+  public static String X_LOCKSS_REWRITTEN_FOR_AUID =
+    "X-Lockss-Rewritten-For-Auid";
+
   /** The local address to which to the proxy should bind the socket for
    * outgoing requests */
   public static String X_LOCKSS_LOCAL_ADDRESS = "X-Lockss-Local-Addr";
