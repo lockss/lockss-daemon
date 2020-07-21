@@ -1,5 +1,147 @@
 {
   publisher <
+    name = frommann-holzboog ;
+    info[contract] = 2011 ;
+    info[back] = 2000 ;
+    info[tester] = 8 ;
+    info[poller] = 8
+  >
+
+    provider = Ubiquity Press
+    plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
+    implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
+
+  {
+
+      title <
+        name = Steiner Studies ;
+        eissn = 2698-217X
+      >
+
+      comment[publisher] = frommann-holzboog
+#      param[base_url] = https://steiner-studies.org/
+
+      au < exists ; 2020 ; 1 ; Steiner Studies Volume 2020 ; 2020 ; https://steiner-studies.org/ >
+
+  }
+}
+
+{
+  publisher <
+    name = Ganzaga Library Publishing ;
+    info[contract] = 2011 ;
+    info[back] = 2000 ;
+    info[tester] = 8 ;
+    info[poller] = 8
+  >
+
+    provider = Ubiquity Press
+    plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
+    implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
+
+  {
+
+      title <
+        name = Journal of Hate Studies ;
+        eissn = 2169-7442
+      >
+
+      comment[publisher] = Ganzaga Library Publishing
+#      param[base_url] = https://jhs.press.gonzaga.edu/
+
+      au < exists ; 2002 ; 1 ; Journal of Hate Studies Volume 2002 ; 2002 ; https://jhs.press.gonzaga.edu/ >
+      au < exists ; 2003 ; 2 ; Journal of Hate Studies Volume 2003 ; 2003 ; https://jhs.press.gonzaga.edu/ >
+      au < exists ; 2004 ; 3 ; Journal of Hate Studies Volume 2004 ; 2004 ; https://jhs.press.gonzaga.edu/ >
+      au < exists ; 2005 ; 4 ; Journal of Hate Studies Volume 2005 ; 2005 ; https://jhs.press.gonzaga.edu/ >
+      au < exists ; 2006 ; 5 ; Journal of Hate Studies Volume 2006 ; 2006 ; https://jhs.press.gonzaga.edu/ >
+      au < exists ; 2007 ; 6 ; Journal of Hate Studies Volume 2007 ; 2007 ; https://jhs.press.gonzaga.edu/ >
+      au < exists ; 2009 ; 7 ; Journal of Hate Studies Volume 2009 ; 2009 ; https://jhs.press.gonzaga.edu/ >
+      au < exists ; 2010 ; 8 ; Journal of Hate Studies Volume 2010 ; 2010 ; https://jhs.press.gonzaga.edu/ >
+      au < exists ; 2011 ; 9 ; Journal of Hate Studies Volume 2011 ; 2011 ; https://jhs.press.gonzaga.edu/ >
+      au < exists ; 2012 ; 10 ; Journal of Hate Studies Volume 2012 ; 2012 ; https://jhs.press.gonzaga.edu/ >
+      au < exists ; 2013 ; 11 ; Journal of Hate Studies Volume 2013 ; 2013 ; https://jhs.press.gonzaga.edu/ >
+      au < exists ; 2014 ; 12 ; Journal of Hate Studies Volume 2014 ; 2014 ; https://jhs.press.gonzaga.edu/ >
+      au < exists ; 2016 ; 13 ; Journal of Hate Studies Volume 2016 ; 2016 ; https://jhs.press.gonzaga.edu/ >
+      au < exists ; 2019 ; 14-15 ; Journal of Hate Studies Volume 2019 ; 2019 ; https://jhs.press.gonzaga.edu/ >
+      au < expected ; 2020 ; 16-17 ; Journal of Hate Studies Volume 2020 ; 2020 ; https://jhs.press.gonzaga.edu/ >
+
+  }
+}
+
+{
+  publisher <
+    name = Helsinki University Press ;
+    info[contract] = 2011 ;
+    info[back] = 2000 ;
+    info[tester] = 8 ;
+    info[poller] = 8
+  >
+
+    provider = Ubiquity Press
+    plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
+    implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
+
+  {
+
+      title <
+        name = Nordic Journal of Migration Research ;
+        eissn = 1799-649X
+      >
+
+      comment[publisher] = Helsinki University Press
+#      param[base_url] = https://journal-njmr.org/
+
+      au < exists ; 2011 ; 1 ; Nordic Journal of Migration Research Volume 2011 ; 2011 ; https://journal-njmr.org/ >
+      au < exists ; 2012 ; 2 ; Nordic Journal of Migration Research Volume 2012 ; 2012 ; https://journal-njmr.org/ >
+      au < exists ; 2013 ; 3 ; Nordic Journal of Migration Research Volume 2013 ; 2013 ; https://journal-njmr.org/ >
+      au < exists ; 2014 ; 4 ; Nordic Journal of Migration Research Volume 2014 ; 2014 ; https://journal-njmr.org/ >
+      au < exists ; 2015 ; 5 ; Nordic Journal of Migration Research Volume 2015 ; 2015 ; https://journal-njmr.org/ >
+      au < exists ; 2016 ; 6 ; Nordic Journal of Migration Research Volume 2016 ; 2016 ; https://journal-njmr.org/ >
+      au < exists ; 2017 ; 7 ; Nordic Journal of Migration Research Volume 2017 ; 2017 ; https://journal-njmr.org/ >
+      au < exists ; 2018 ; 8 ; Nordic Journal of Migration Research Volume 2018 ; 2018 ; https://journal-njmr.org/ >
+      au < exists ; 2019 ; 9 ; Nordic Journal of Migration Research Volume 2019 ; 2019 ; https://journal-njmr.org/ >
+      au < exists ; 2020 ; 10 ; Nordic Journal of Migration Research Volume 2020 ; 2020 ; https://journal-njmr.org/ >
+  }
+
+  {
+
+      title <
+        name = Redescriptions: Political Thought, Conceptual History and Feminist Theory ;
+        eissn = 2308-0914
+      >
+
+      comment[publisher] = Helsinki University Press
+#      param[base_url] =  https://journal-redescriptions.org/
+
+      au < exists ; 1997 ; 1 ; Redescriptions Volume 1997 ; 1997 ; https://journal-redescriptions.org/ >
+      au < exists ; 1998 ; 2 ; Redescriptions Volume 1998 ; 1998 ; https://journal-redescriptions.org/ >
+      au < exists ; 1999 ; 3 ; Redescriptions Volume 1999 ; 1999 ; https://journal-redescriptions.org/ >
+      au < exists ; 2000 ; 4 ; Redescriptions Volume 2000 ; 2000 ; https://journal-redescriptions.org/ >
+      au < exists ; 2001 ; 5 ; Redescriptions Volume 2001 ; 2001 ; https://journal-redescriptions.org/ >
+      au < exists ; 2002 ; 6 ; Redescriptions Volume 2002 ; 2002 ; https://journal-redescriptions.org/ >
+      au < exists ; 2003 ; 7 ; Redescriptions Volume 2003 ; 2003 ; https://journal-redescriptions.org/ >
+      au < exists ; 2004 ; 8 ; Redescriptions Volume 2004 ; 2004 ; https://journal-redescriptions.org/ >
+      au < exists ; 2005 ; 9 ; Redescriptions Volume 2005 ; 2005 ; https://journal-redescriptions.org/ >
+      au < exists ; 2006 ; 10 ; Redescriptions Volume 2006 ; 2006 ; https://journal-redescriptions.org/ >
+      au < exists ; 2007 ; 11 ; Redescriptions Volume 2007 ; 2007 ; https://journal-redescriptions.org/ >
+      au < exists ; 2008 ; 12 ; Redescriptions Volume 2008 ; 2008 ; https://journal-redescriptions.org/ >
+      au < exists ; 2009 ; 13 ; Redescriptions Volume 2009 ; 2009 ; https://journal-redescriptions.org/ >
+      au < exists ; 2010 ; 14 ; Redescriptions Volume 2010 ; 2010 ; https://journal-redescriptions.org/ >
+      au < exists ; 2011 ; 15 ; Redescriptions Volume 2011 ; 2011 ; https://journal-redescriptions.org/ >
+      au < doesNotExist ; 2012 ; 16 ; Redescriptions Volume 2012 ; 2012 ; https://journal-redescriptions.org/ >
+      au < exists ; 2013 ; 17 ; Redescriptions Volume 2013 ; 2013 ; https://journal-redescriptions.org/ >
+      au < exists ; 2014 ; 18 ; Redescriptions Volume 2014 ; 2014 ; https://journal-redescriptions.org/ >
+      au < exists ; 2016 ; 19 ; Redescriptions Volume 2016 ; 2016 ; https://journal-redescriptions.org/ >
+      au < exists ; 2017 ; 20 ; Redescriptions Volume 2017 ; 2017 ; https://journal-redescriptions.org/ >
+      au < exists ; 2018 ; 21 ; Redescriptions Volume 2018 ; 2018 ; https://journal-redescriptions.org/ >
+      au < exists ; 2019 ; 22 ; Redescriptions Volume 2019 ; 2019 ; https://journal-redescriptions.org/ >
+      au < expected ; 2020 ; 23 ; Redescriptions Volume 2020 ; 2020 ; https://journal-redescriptions.org/ >
+
+  }
+}
+
+{
+  publisher <
     name = IJS Publishing Group
   >
 
@@ -142,6 +284,21 @@
       au < released ; 2018 ; 1 ; Journal of Scientific Innovation in Medicine Volume 2018 ; 2018 ; https://journalofscientificinnovationinmedicine.org/ >
       au < released ; 2019 ; 2 ; Journal of Scientific Innovation in Medicine Volume 2019 ; 2019 ; https://journalofscientificinnovationinmedicine.org/ >
       au < manifest ; 2020 ; 3 ; Journal of Scientific Innovation in Medicine Volume 2020 ; 2020 ; https://journalofscientificinnovationinmedicine.org/ >
+
+  }
+
+  {
+
+      title <
+        name = Scholarly Assessment Reports ;
+        eissn = 2689-5870
+      >
+
+      comment[publisher] = Levy Library Press
+#      param[base_url] = https://www.scholarlyassessmentreports.org/
+
+      au < exists ; 2019 ; 1 ; Scholarly Assessment Reports Volume 2019 ; 2019 ; https://www.scholarlyassessmentreports.org/ >
+      au < exists ; 2020 ; 2 ; Scholarly Assessment Reports Volume 2020 ; 2020 ; https://www.scholarlyassessmentreports.org/ >
 
   }
 
@@ -414,38 +571,34 @@
       #plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
       #implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
       #1979 to 2009
+      
+      #Moved to Janeway platform
 
-      au < manifest ; 1979 ; 1 ; Pynchon Notes Volume 1979 ; 1979 ; https://pynchonnotes.openlibhums.org/ >
-      au < manifest ; 1980 ; 2 ; Pynchon Notes Volume 1980 ; 1980 ; https://pynchonnotes.openlibhums.org/ >
-      au < manifest ; 1981 ; 3 ; Pynchon Notes Volume 1981 ; 1981 ; https://pynchonnotes.openlibhums.org/ >
-      au < manifest ; 1982 ; 4 ; Pynchon Notes Volume 1982 ; 1982 ; https://pynchonnotes.openlibhums.org/ >
-      au < manifest ; 1983 ; 5 ; Pynchon Notes Volume 1983 ; 1983 ; https://pynchonnotes.openlibhums.org/ >
-      au < manifest ; 1984 ; 6 ; Pynchon Notes Volume 1984 ; 1984 ; https://pynchonnotes.openlibhums.org/ >
-      au < manifest ; 1985 ; 7 ; Pynchon Notes Volume 1985 ; 1985 ; https://pynchonnotes.openlibhums.org/ >
-      au < manifest ; 1986 ; 8 ; Pynchon Notes Volume 1986 ; 1986 ; https://pynchonnotes.openlibhums.org/ >
-      au < manifest ; 1987 ; 9 ; Pynchon Notes Volume 1987 ; 1987 ; https://pynchonnotes.openlibhums.org/ >
-      au < manifest ; 1988 ; 10 ; Pynchon Notes Volume 1988 ; 1988 ; https://pynchonnotes.openlibhums.org/ >
-      au < manifest ; 1989 ; 11 ; Pynchon Notes Volume 1989 ; 1989 ; https://pynchonnotes.openlibhums.org/ >
-      au < manifest ; 1990 ; 12 ; Pynchon Notes Volume 1990 ; 1990 ; https://pynchonnotes.openlibhums.org/ >
-      au < manifest ; 1991 ; 13 ; Pynchon Notes Volume 1991 ; 1991 ; https://pynchonnotes.openlibhums.org/ >
-      au < manifest ; 1992 ; 14 ; Pynchon Notes Volume 1992 ; 1992 ; https://pynchonnotes.openlibhums.org/ >
-      au < manifest ; 1993 ; 15 ; Pynchon Notes Volume 1993 ; 1993 ; https://pynchonnotes.openlibhums.org/ >
-      au < manifest ; 1994 ; 16 ; Pynchon Notes Volume 1994 ; 1994 ; https://pynchonnotes.openlibhums.org/ >
-      au < doesNotExist ; 1995 ; 17 ; Pynchon Notes Volume 1995 ; 1995 ; https://pynchonnotes.openlibhums.org/ >
-      au < manifest ; 1996 ; 18 ; Pynchon Notes Volume 1996 ; 1996 ; https://pynchonnotes.openlibhums.org/ >
-      au < manifest ; 1997 ; 19 ; Pynchon Notes Volume 1997 ; 1997 ; https://pynchonnotes.openlibhums.org/ >
-      au < manifest ; 1998 ; 20 ; Pynchon Notes Volume 1998 ; 1998 ; https://pynchonnotes.openlibhums.org/ >
-      au < manifest ; 1999 ; 21 ; Pynchon Notes Volume 1999 ; 1999 ; https://pynchonnotes.openlibhums.org/ >
-      au < doesNotExist ; 2000 ; 22 ; Pynchon Notes Volume 2000 ; 2000 ; https://pynchonnotes.openlibhums.org/ >
-      au < released ; 2001 ; 23 ; Pynchon Notes Volume 2001 ; 2001 ; https://pynchonnotes.openlibhums.org/ >
-      au < released ; 2002 ; 24 ; Pynchon Notes Volume 2002 ; 2002 ; https://pynchonnotes.openlibhums.org/ >
-      au < released ; 2003 ; 25 ; Pynchon Notes Volume 2003 ; 2003 ; https://pynchonnotes.openlibhums.org/ >
-      au < doesNotExist ; 2004 ; 26 ; Pynchon Notes Volume 2004 ; 2004 ; https://pynchonnotes.openlibhums.org/ >
-      au < doesNotExist ; 2005 ; 27 ; Pynchon Notes Volume 2005 ; 2005 ; https://pynchonnotes.openlibhums.org/ >
-      au < doesNotExist ; 2006 ; 28 ; Pynchon Notes Volume 2006 ; 2006 ; https://pynchonnotes.openlibhums.org/ >
-      au < doesNotExist ; 2007 ; 29 ; Pynchon Notes Volume 2007 ; 2007 ; https://pynchonnotes.openlibhums.org/ >
-      au < released ; 2008 ; 30 ; Pynchon Notes Volume 2008 ; 2008 ; https://pynchonnotes.openlibhums.org/ >
-      au < released ; 2009 ; 31 ; Pynchon Notes Volume 2009 ; 2009 ; https://pynchonnotes.openlibhums.org/ >
+      au < doNotProcess ; 1979 ; 1 ; Pynchon Notes Volume 1979 ; 1979 ; https://pynchonnotes.openlibhums.org/ >
+      au < doNotProcess ; 1980 ; 2 ; Pynchon Notes Volume 1980 ; 1980 ; https://pynchonnotes.openlibhums.org/ >
+      au < doNotProcess ; 1981 ; 3 ; Pynchon Notes Volume 1981 ; 1981 ; https://pynchonnotes.openlibhums.org/ >
+      au < doNotProcess ; 1982 ; 4 ; Pynchon Notes Volume 1982 ; 1982 ; https://pynchonnotes.openlibhums.org/ >
+      au < doNotProcess ; 1983 ; 5 ; Pynchon Notes Volume 1983 ; 1983 ; https://pynchonnotes.openlibhums.org/ >
+      au < doNotProcess ; 1984 ; 6 ; Pynchon Notes Volume 1984 ; 1984 ; https://pynchonnotes.openlibhums.org/ >
+      au < doNotProcess ; 1985 ; 7 ; Pynchon Notes Volume 1985 ; 1985 ; https://pynchonnotes.openlibhums.org/ >
+      au < doNotProcess ; 1986 ; 8 ; Pynchon Notes Volume 1986 ; 1986 ; https://pynchonnotes.openlibhums.org/ >
+      au < doNotProcess ; 1987 ; 9 ; Pynchon Notes Volume 1987 ; 1987 ; https://pynchonnotes.openlibhums.org/ >
+      au < doNotProcess ; 1988 ; 10 ; Pynchon Notes Volume 1988 ; 1988 ; https://pynchonnotes.openlibhums.org/ >
+      au < doNotProcess ; 1989 ; 11 ; Pynchon Notes Volume 1989 ; 1989 ; https://pynchonnotes.openlibhums.org/ >
+      au < doNotProcess ; 1990 ; 12 ; Pynchon Notes Volume 1990 ; 1990 ; https://pynchonnotes.openlibhums.org/ >
+      au < doNotProcess ; 1991 ; 13 ; Pynchon Notes Volume 1991 ; 1991 ; https://pynchonnotes.openlibhums.org/ >
+      au < doNotProcess ; 1992 ; 14 ; Pynchon Notes Volume 1992 ; 1992 ; https://pynchonnotes.openlibhums.org/ >
+      au < doNotProcess ; 1993 ; 15 ; Pynchon Notes Volume 1993 ; 1993 ; https://pynchonnotes.openlibhums.org/ >
+      au < doNotProcess ; 1994 ; 16 ; Pynchon Notes Volume 1994 ; 1994 ; https://pynchonnotes.openlibhums.org/ >
+      au < doNotProcess ; 1996 ; 18 ; Pynchon Notes Volume 1996 ; 1996 ; https://pynchonnotes.openlibhums.org/ >
+      au < doNotProcess ; 1997 ; 19 ; Pynchon Notes Volume 1997 ; 1997 ; https://pynchonnotes.openlibhums.org/ >
+      au < doNotProcess ; 1998 ; 20 ; Pynchon Notes Volume 1998 ; 1998 ; https://pynchonnotes.openlibhums.org/ >
+      au < doNotProcess ; 1999 ; 21 ; Pynchon Notes Volume 1999 ; 1999 ; https://pynchonnotes.openlibhums.org/ >
+      au < down ; 2001 ; 23 ; Pynchon Notes Volume 2001 ; 2001 ; https://pynchonnotes.openlibhums.org/ >
+      au < down ; 2002 ; 24 ; Pynchon Notes Volume 2002 ; 2002 ; https://pynchonnotes.openlibhums.org/ >
+      au < down ; 2003 ; 25 ; Pynchon Notes Volume 2003 ; 2003 ; https://pynchonnotes.openlibhums.org/ >
+      au < down ; 2008 ; 30 ; Pynchon Notes Volume 2008 ; 2008 ; https://pynchonnotes.openlibhums.org/ >
+      au < down ; 2009 ; 31 ; Pynchon Notes Volume 2009 ; 2009 ; https://pynchonnotes.openlibhums.org/ >
 
   }
 
@@ -733,6 +886,21 @@
 
   }
 
+  {
+
+      title <
+        name = Journal of Home Language Research ;
+        eissn = 2537-7043
+      >
+
+      comment[publisher] = Stockholm University Press
+#      param[base_url] = https://jhlr.org/
+
+      au < exists ; 2016 ; 1 ; Journal of Home Language Research Volume 2016 ; 2016 ; https://jhlr.org/ >
+      au < exists ; 2017 ; 2 ; Journal of Home Language Research Volume 2017 ; 2017 ; https://jhlr.org/ >
+      au < exists ; 2018 ; 3 ; Journal of Home Language Research Volume 2018 ; 2018 ; https://jhlr.org/ >
+
+  }
 }
 {
   publisher <
@@ -764,6 +932,20 @@
       au < released ; 2018 ; 9 ; Ancient Asia Volume 2018 ; 2018 ; https://www.ancient-asia-journal.com/ >
       au < released ; 2019 ; 10 ; Ancient Asia Volume 2019 ; 2019 ; https://www.ancient-asia-journal.com/ >
       au < manifest ; 2020 ; 11 ; Ancient Asia Volume 2020 ; 2020 ; https://www.ancient-asia-journal.com/ >
+
+  }
+
+  {
+
+      title <
+        name = Building and Cities ;
+        eissn = 2632-6655
+      >
+
+      comment[publisher] = Ubiquity Press
+#      param[base_url] = https://journal-buildingscities.org/
+
+      au < exists ; 2020 ; 1 ; Building and Cities Volume 2020 ; 2020 ; https://journal-buildingscities.org/ >
 
   }
 
@@ -854,6 +1036,22 @@
       au < released ; 2018 ; 6 ; Architectural Histories Volume 2018 ; 2018 ; https://journal.eahn.org/ >
       au < released ; 2019 ; 7 ; Architectural Histories Volume 2019 ; 2019 ; https://journal.eahn.org/ >
       au < manifest ; 2020 ; 8 ; Architectural Histories Volume 2020 ; 2020 ; https://journal.eahn.org/ >
+
+  }
+
+  {
+
+      title <
+        name = Anglo Saxonica ;
+        eissn = 2184-6006
+      >
+
+      comment[publisher] = Ubiquity Press
+#      param[base_url] = https://www.revista-anglo-saxonica.org/
+
+      #2019 AUs are published on the 2020 manifest page. See https://www.revista-anglo-saxonica.org/lockss/year/2020/
+      au < doNotProcess ; 2019 ; 17 ; Anglo Saxonica Volume 2019 ; 2019 ; https://www.revista-anglo-saxonica.org/ >
+      au < exists ; 2020 ; 18 ; Anglo Saxonica Volume 2020 ; 2020 ; https://www.revista-anglo-saxonica.org/ >
 
   }
 
@@ -978,10 +1176,10 @@
 
       #publisher = Ubiquity Press
 
-      au < doNotProcess ; 2018 ; 1 ; Future Cities and Environment Volume 2018 ; 2018 ; https://futurecitiesandenvironment.com/ >
-      au < manifest ; 2018 ; 1 ; Future Cities and Environment Volume 2018 ; 2018 ; https://www.futurecitiesandenvironment.com/ >
-      au < manifest ; 2019 ; 2 ; Future Cities and Environment Volume 2019 ; 2019 ; https://www.futurecitiesandenvironment.com/ >
-      au < manifest ; 2020 ; 3 ; Future Cities and Environment Volume 2020 ; 2020 ; https://www.futurecitiesandenvironment.com/ >
+      #au < doNotProcess ; 2018 ; 1 ; Future Cities and Environment Volume 2018 ; 2018 ; https://futurecitiesandenvironment.com/ >
+      au < exists ; 2018 ; 1 ; Future Cities and Environment Volume 2018 ; 2018 ; https://futurecitiesandenvironment.com/ >
+      au < exists ; 2019 ; 2 ; Future Cities and Environment Volume 2019 ; 2019 ; https://futurecitiesandenvironment.com/ >
+      au < exists ; 2020 ; 3 ; Future Cities and Environment Volume 2020 ; 2020 ; https://futurecitiesandenvironment.com/ >
 
   }
 
@@ -1485,6 +1683,75 @@
   {
 
       title <
+        name = Continuity in Education ;
+        eissn = 2631-9179
+      >
+
+      comment[publisher] = Ubiquity Press
+#      param[base_url] = https://continuityineducation.org/
+
+      au < exists ; 2020 ; 1 ; Continuity in Education Volume 2020 ; 2020 ; https://continuityineducation.org/ >
+
+  }
+
+  {
+
+      title <
+        name = International Journal of the Commons ;
+        eissn = 1875-0281
+      >
+
+      comment[publisher] = Ubiquity Press
+#      param[base_url] = https://www.thecommonsjournal.org/
+
+      au < released ; 2007 ; 1 ; International Journal of the Commons Volume 2007 ; 2007 ; https://www.thecommonsjournal.org/ >
+      au < released ; 2008 ; 2 ; International Journal of the Commons Volume 2008 ; 2008 ; https://www.thecommonsjournal.org/ >
+      au < released ; 2009 ; 3 ; International Journal of the Commons Volume 2009 ; 2009 ; https://www.thecommonsjournal.org/ >
+      au < released ; 2010 ; 4 ; International Journal of the Commons Volume 2010 ; 2010 ; https://www.thecommonsjournal.org/ >
+      au < released ; 2011 ; 5 ; International Journal of the Commons Volume 2011 ; 2011 ; https://www.thecommonsjournal.org/ >
+      au < released ; 2012 ; 6 ; International Journal of the Commons Volume 2012 ; 2012 ; https://www.thecommonsjournal.org/ >
+      au < released ; 2013 ; 7 ; International Journal of the Commons Volume 2013 ; 2013 ; https://www.thecommonsjournal.org/ >
+      au < released ; 2014 ; 8 ; International Journal of the Commons Volume 2014 ; 2014 ; https://www.thecommonsjournal.org/ >
+      au < released ; 2015 ; 9 ; International Journal of the Commons Volume 2015 ; 2015 ; https://www.thecommonsjournal.org/ >
+      au < released ; 2016 ; 10 ; International Journal of the Commons Volume 2016 ; 2016 ; https://www.thecommonsjournal.org/ >
+      au < released ; 2017 ; 11 ; International Journal of the Commons Volume 2017 ; 2017 ; https://www.thecommonsjournal.org/ >
+      au < released ; 2018 ; 12 ; International Journal of the Commons Volume 2018 ; 2018 ; https://www.thecommonsjournal.org/ >
+      au < released ; 2019 ; 13 ; International Journal of the Commons Volume 2019 ; 2019 ; https://www.thecommonsjournal.org/ >
+      au < manifest ; 2020 ; 14 ; International Journal of the Commons Volume 2020 ; 2020 ; https://www.thecommonsjournal.org/ >
+
+  }
+
+  {
+
+      title <
+        name = Global Heart ;
+        eissn = 2211-8179
+      >
+
+      comment[publisher] = Ubiquity Press
+#      param[base_url] =  https://globalheartjournal.com/
+
+      au < exists ; 2006 ; 1 ; Global Heart Volume 2006 ; 2006 ;  https://globalheartjournal.com/ >
+      au < doesNotExist ; 2007 ; 2 ; Global Heart Volume 2007 ; 2007 ;  https://globalheartjournal.com/ >
+      au < exists ; 2008 ; 3 ; Global Heart Volume 2008 ; 2008 ;  https://globalheartjournal.com/ >
+      au < exists ; 2009 ; 4 ; Global Heart Volume 2009 ; 2009 ;  https://globalheartjournal.com/ >
+      au < exists ; 2010 ; 5 ; Global Heart Volume 2010 ; 2010 ;  https://globalheartjournal.com/ >
+      au < exists ; 2011 ; 6 ; Global Heart Volume 2011 ; 2011 ;  https://globalheartjournal.com/ >
+      au < exists ; 2012 ; 7 ; Global Heart Volume 2012 ; 2012 ;  https://globalheartjournal.com/ >
+      au < exists ; 2013 ; 8 ; Global Heart Volume 2013 ; 2013 ;  https://globalheartjournal.com/ >
+      au < exists ; 2014 ; 9 ; Global Heart Volume 2014 ; 2014 ;  https://globalheartjournal.com/ >
+      au < exists ; 2015 ; 10 ; Global Heart Volume 2015 ; 2015 ;  https://globalheartjournal.com/ >
+      au < exists ; 2016 ; 11 ; Global Heart Volume 2016 ; 2016 ;  https://globalheartjournal.com/ >
+      au < exists ; 2017 ; 12 ; Global Heart Volume 2017 ; 2017 ;  https://globalheartjournal.com/ >
+      au < exists ; 2018 ; 13 ; Global Heart Volume 2018 ; 2018 ;  https://globalheartjournal.com/ >
+      au < exists ; 2019 ; 14 ; Global Heart Volume 2019 ; 2019 ;  https://globalheartjournal.com/ >
+      au < exists ; 2020 ; 15 ; Global Heart Volume 2020 ; 2020 ;  https://globalheartjournal.com/ >
+
+  }
+
+  {
+
+      title <
         name = Open Quaternary ;
         eissn = 2055-298X
       >
@@ -1712,6 +1979,28 @@
   {
 
       title <
+        name = Tremor and Other Hyperkinetic Movements ;
+        eissn = 2160-8288
+      >
+
+      comment[publisher] = Ubiquity Press
+#      param[base_url] = https://tremorjournal.org/
+
+      au < exists ; 2011 ; 1 ; Tremor and Other Hyperkinetic Movements Volume 2011 ; 2011 ; https://tremorjournal.org/ >
+      au < exists ; 2012 ; 2 ; Tremor and Other Hyperkinetic Movements Volume 2012 ; 2012 ; https://tremorjournal.org/ >
+      au < exists ; 2013 ; 3 ; Tremor and Other Hyperkinetic Movements Volume 2013 ; 2013 ; https://tremorjournal.org/ >
+      au < exists ; 2014 ; 4 ; Tremor and Other Hyperkinetic Movements Volume 2014 ; 2014 ; https://tremorjournal.org/ >
+      au < exists ; 2015 ; 5 ; Tremor and Other Hyperkinetic Movements Volume 2015 ; 2015 ; https://tremorjournal.org/ >
+      au < exists ; 2016 ; 6 ; Tremor and Other Hyperkinetic Movements Volume 2016 ; 2016 ; https://tremorjournal.org/ >
+      au < exists ; 2017 ; 7 ; Tremor and Other Hyperkinetic Movements Volume 2017 ; 2017 ; https://tremorjournal.org/ >
+      au < exists ; 2018 ; 8 ; Tremor and Other Hyperkinetic Movements Volume 2018 ; 2018 ; https://tremorjournal.org/ >
+      au < exists ; 2019 ; 9 ; Tremor and Other Hyperkinetic Movements Volume 2019 ; 2019 ; https://tremorjournal.org/ >
+      au < exists ; 2020 ; 10 ; Tremor and Other Hyperkinetic Movements Volume 2020 ; 2020 ; https://tremorjournal.org/ >
+
+  }
+  {
+
+      title <
         name = Journal of Open Hardware ;
         eissn = 2514-1708
       >
@@ -1933,7 +2222,7 @@
 #      param[base_url] = https://www.ijds.eu/
 
       au < released ; 2018 ; 1 ; International Journal of Driving Science Volume 2018 ; 2018 ; https://www.ijds.eu/ >
-      au < expected ; 2019 ; 2 ; International Journal of Driving Science Volume 2019 ; 2019 ; https://www.ijds.eu/ >
+      au < doesNotExist ; 2019 ; 2 ; International Journal of Driving Science Volume 2019 ; 2019 ; https://www.ijds.eu/ >
       au < expected ; 2020 ; 3 ; International Journal of Driving Science Volume 2020 ; 2020 ; https://www.ijds.eu/ >
 
   }
@@ -2078,6 +2367,50 @@
       au < released ; 2018 ; 16 ; Entertainment and Sports Law Journal Volume 2018 ; 2018 ; https://www.entsportslawjournal.com/ >
       au < released ; 2019 ; 17 ; Entertainment and Sports Law Journal Volume 2019 ; 2019 ; https://www.entsportslawjournal.com/ >
       au < manifest ; 2020 ; 18 ; Entertainment and Sports Law Journal Volume 2020 ; 2020 ; https://www.entsportslawjournal.com/ >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Deliberative Democracy ;
+        eissn = 2634-0488
+      >
+
+      comment[publisher] = University of Westminster Press
+#      param[base_url] = https://delibdemjournal.org/
+
+      au < exists ; 2005 ; 1 ; Journal of Deliberative Democracy Volume 2005 ; 2005 ; https://delibdemjournal.org/ >
+      au < exists ; 2006 ; 2 ; Journal of Deliberative Democracy Volume 2006 ; 2006 ; https://delibdemjournal.org/ >
+      au < exists ; 2007 ; 3 ; Journal of Deliberative Democracy Volume 2007 ; 2007 ; https://delibdemjournal.org/ >
+      au < exists ; 2008 ; 4 ; Journal of Deliberative Democracy Volume 2008 ; 2008 ; https://delibdemjournal.org/ >
+      au < exists ; 2009 ; 5 ; Journal of Deliberative Democracy Volume 2009 ; 2009 ; https://delibdemjournal.org/ >
+      au < exists ; 2010 ; 6 ; Journal of Deliberative Democracy Volume 2010 ; 2010 ; https://delibdemjournal.org/ >
+      au < exists ; 2011 ; 7 ; Journal of Deliberative Democracy Volume 2011 ; 2011 ; https://delibdemjournal.org/ >
+      au < exists ; 2012 ; 8 ; Journal of Deliberative Democracy Volume 2012 ; 2012 ; https://delibdemjournal.org/ >
+      au < exists ; 2013 ; 9 ; Journal of Deliberative Democracy Volume 2013 ; 2013 ; https://delibdemjournal.org/ >
+      au < exists ; 2014 ; 10 ; Journal of Deliberative Democracy Volume 2014 ; 2014 ; https://delibdemjournal.org/ >
+      au < exists ; 2015 ; 11 ; Journal of Deliberative Democracy Volume 2015 ; 2015 ; https://delibdemjournal.org/ >
+      au < exists ; 2016 ; 12 ; Journal of Deliberative Democracy Volume 2016 ; 2016 ; https://delibdemjournal.org/ >
+      au < exists ; 2017 ; 13 ; Journal of Deliberative Democracy Volume 2017 ; 2017 ; https://delibdemjournal.org/ >
+      au < exists ; 2018 ; 14 ; Journal of Deliberative Democracy Volume 2018 ; 2018 ; https://delibdemjournal.org/ >
+      au < exists ; 2019 ; 15 ; Journal of Deliberative Democracy Volume 2019 ; 2019 ; https://delibdemjournal.org/ >
+      au < exists ; 2020 ; 16 ; Journal of Deliberative Democracy Volume 2020 ; 2020 ; https://delibdemjournal.org/ >
+
+  }
+
+  {
+
+      title <
+        name = Silk Road ;
+        eissn = 2631-682X
+      >
+
+      comment[publisher] = University of Westminster Press
+#      param[base_url] = https://silkroadjournal.online/
+
+      au < exists ; 2019 ; 1 ; Silk Road Volume 2019 ; 2019 ; https://silkroadjournal.online/ >
+      au < exists ; 2020 ; 2 ; Silk Road Volume 2020 ; 2020 ; https://silkroadjournal.online/ >
 
   }
 
@@ -2322,33 +2655,6 @@
   {
 
       title <
-        name = International Journal of the Commons ;
-        eissn = 1875-0281
-      >
-
-      comment[publisher] = Utrecht University Library
-#      param[base_url] = https://www.thecommonsjournal.org/
-
-      au < released ; 2007 ; 1 ; International Journal of the Commons Volume 2007 ; 2007 ; https://www.thecommonsjournal.org/ >
-      au < released ; 2008 ; 2 ; International Journal of the Commons Volume 2008 ; 2008 ; https://www.thecommonsjournal.org/ >
-      au < released ; 2009 ; 3 ; International Journal of the Commons Volume 2009 ; 2009 ; https://www.thecommonsjournal.org/ >
-      au < released ; 2010 ; 4 ; International Journal of the Commons Volume 2010 ; 2010 ; https://www.thecommonsjournal.org/ >
-      au < released ; 2011 ; 5 ; International Journal of the Commons Volume 2011 ; 2011 ; https://www.thecommonsjournal.org/ >
-      au < released ; 2012 ; 6 ; International Journal of the Commons Volume 2012 ; 2012 ; https://www.thecommonsjournal.org/ >
-      au < released ; 2013 ; 7 ; International Journal of the Commons Volume 2013 ; 2013 ; https://www.thecommonsjournal.org/ >
-      au < released ; 2014 ; 8 ; International Journal of the Commons Volume 2014 ; 2014 ; https://www.thecommonsjournal.org/ >
-      au < released ; 2015 ; 9 ; International Journal of the Commons Volume 2015 ; 2015 ; https://www.thecommonsjournal.org/ >
-      au < released ; 2016 ; 10 ; International Journal of the Commons Volume 2016 ; 2016 ; https://www.thecommonsjournal.org/ >
-      au < released ; 2017 ; 11 ; International Journal of the Commons Volume 2017 ; 2017 ; https://www.thecommonsjournal.org/ >
-      au < released ; 2018 ; 12 ; International Journal of the Commons Volume 2018 ; 2018 ; https://www.thecommonsjournal.org/ >
-      au < released ; 2019 ; 13 ; International Journal of the Commons Volume 2019 ; 2019 ; https://www.thecommonsjournal.org/ >
-      au < manifest ; 2020 ; 14 ; International Journal of the Commons Volume 2020 ; 2020 ; https://www.thecommonsjournal.org/ >
-
-  }
-
-  {
-
-      title <
         name = Journal of Social Intervention ;
         eissn = 1876-8830
       >
@@ -2457,9 +2763,7 @@
       au < released ; 2016 ; 6 ; Religion and Gender Volume 2016 ; 2016 ; https://www.religionandgender.org/ >
       au < released ; 2017 ; 7 ; Religion and Gender Volume 2017 ; 2017 ; https://www.religionandgender.org/ >
       au < manifest ; 2018 ; 8 ; Religion and Gender Volume 2018 ; 2018 ; https://www.religionandgender.org/ >
-      au < expected ; 2019 ; 9 ; Religion and Gender Volume 2019 ; 2019 ; https://www.religionandgender.org/ >
-      au < expected ; 2020 ; 10 ; Religion and Gender Volume 2020 ; 2020 ; https://www.religionandgender.org/ >
-
+      #Moved to Brill
   }
 
   {
