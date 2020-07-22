@@ -736,13 +736,19 @@
     {
     param[journal_id] = ukvc
 
+    au < exists ; exists ; 2006 ; Companion Animal Volume 11 ; 11 ; https://www.magonlinelibrary.com/ ; >
+    au < exists ; exists ; 2007 ; Companion Animal Volume 12 ; 12 ; https://www.magonlinelibrary.com/ ; >
+    au < exists ; exists ; 2008 ; Companion Animal Volume 13 ; 13 ; https://www.magonlinelibrary.com/ ; >
+    au < exists ; exists ; 2009 ; Companion Animal Volume 14 ; 14 ; https://www.magonlinelibrary.com/ ; >
+    au < exists ; exists ; 2010 ; Companion Animal Volume 15 ; 15 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2011 ; Companion Animal Volume 16 ; 16 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2012 ; Companion Animal Volume 17 ; 17 ; https://www.magonlinelibrary.com/ ; >
+    au < exists ; exists ; 2013 ; Companion Animal Volume 18 (ukvc) ; 18 ; https://www.magonlinelibrary.com/ ; >
     }
     {
     param[journal_id] = coan
 
-    au < finished ; finished ; 2013 ; Companion Animal Volume 18 ; 18 ; http://www.magonlinelibrary.com/ ; >
+    au < finished ; finished ; 2013 ; Companion Animal Volume 18 (coan) ; 18 ; http://www.magonlinelibrary.com/ ; >
     au < finished ; finished ; 2014 ; Companion Animal Volume 19 ; 19 ; http://www.magonlinelibrary.com/ ; >
     au < finished ; finished ; 2015 ; Companion Animal Volume 20 ; 20 ; http://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
     au < superseded ; exists ; 2016 ; Companion Animal Volume 21 [superseded] ; 21 ; http://www.magonlinelibrary.com/ ; >
@@ -790,13 +796,19 @@
     {
     param[journal_id] = ukvl
 
+    au < exists ; exists ; 2006 ; Livestock Volume 11 ; 11 ; https://www.magonlinelibrary.com/ ; >
+    au < exists ; exists ; 2007 ; Livestock Volume 12 ; 12 ; https://www.magonlinelibrary.com/ ; >
+    au < exists ; exists ; 2008 ; Livestock Volume 13 ; 13 ; https://www.magonlinelibrary.com/ ; >
+    au < exists ; exists ; 2009 ; Livestock Volume 14 ; 14 ; https://www.magonlinelibrary.com/ ; >
+    au < exists ; exists ; 2010 ; Livestock Volume 15 ; 15 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2011 ; Livestock Volume 16 ; 16 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2012 ; Livestock Volume 17 ; 17 ; https://www.magonlinelibrary.com/ ; >
+    au < exists ; exists ; 2013 ; Livestock Volume 18 (uklv) ; 18 ; https://www.magonlinelibrary.com/ ; >
     }
     {
     param[journal_id] = live
 
-    au < finished ; finished ; 2013 ; Livestock Volume 18 ; 18 ; http://www.magonlinelibrary.com/ ; >
+    au < finished ; finished ; 2013 ; Livestock Volume 18 (live) ; 18 ; http://www.magonlinelibrary.com/ ; >
     au < finished ; finished ; 2014 ; Livestock Volume 19 ; 19 ; http://www.magonlinelibrary.com/ ; >
     au < finished ; finished ; 2015 ; Livestock Volume 20 ; 20 ; http://www.magonlinelibrary.com/ ; reingest3.clockss.org:8083 >
     au < superseded ; exists ; 2016 ; Livestock Volume 21 [superseded] ; 21 ; http://www.magonlinelibrary.com/ ; >
