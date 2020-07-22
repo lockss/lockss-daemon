@@ -1,0 +1,106 @@
+<map>
+    <entry>
+        <string>plugin_status</string>
+        <string>development</string>
+    </entry>
+    <entry>
+        <string>plugin_identifier</string>
+        <string>org.lockss.plugin.blackquotidian.ClockssBlackQuotidianPlugin</string>
+    </entry>
+    <entry>
+        <string>plugin_version</string>
+        <string>1</string>
+    </entry>
+    <entry>
+        <string>plugin_name</string>
+        <string>Black Quotidian Plugin (CLOCKSS)</string>
+    </entry>
+    <entry>
+        <string>plugin_feature_version_map</string>
+        <map>
+            <entry>
+                <string>Substance</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Poll</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Metadata</string>
+                <string>1</string>
+            </entry>
+        </map>
+    </entry>
+    <entry>
+        <string>plugin_config_props</string>
+        <list>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>base_url</key>
+                <displayName>Base URL</displayName>
+                <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+                <type>3</type>
+                <size>40</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+            <!--
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>base_url2</key>
+                <displayName>Second Base URL</displayName>
+                <description>Use if AU spans two hosts</description>
+                <type>3</type>
+                <size>40</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+            -->
+        </list>
+    </entry>
+    <entry>
+        <string>au_name</string>
+        <string>"Black Quotidian Plugin (CLOCKSS), Base URL %s", base_url</string>
+    </entry>
+    <entry>
+    <string>au_crawlrules</string>
+        <list>
+            <string>1,"https://code.jquery.com/jquery[^/]+\.js"</string>
+            <string>1,"https?://fonts.googleapis.com/css"</string>
+            <string>1,"http://%s/", url_host(base_url)</string>
+        </list>
+    </entry>
+    <entry>
+        <string>au_start_url</string>
+        <string>"%s", base_url</string>
+    </entry>
+    <entry>
+        <string>plugin_cache_result_list</string>
+        <list>
+            <string>500=org.lockss.util.urlconn.CacheException$NoRetryDeadLinkException</string>
+        </list>
+    </entry>
+    <entry>
+        <string>text/javascript_link_extractor_factory</string>
+        <string>org.lockss.plugin.blackquotidian.BlackQuotidianJavascriptLinkExtractorFactory</string>
+    </entry>
+    <entry>
+        <string>application/javascript_link_extractor_factory</string>
+        <string>org.lockss.plugin.blackquotidian.BlackQuotidianJavascriptLinkExtractorFactory</string>
+    </entry>
+    <entry>
+        <string>text/javascript_link_rewriter_factory</string>
+        <string>org.lockss.plugin.blackquotidian.BlackQuotidianJavaScriptLinkRewriterFactory</string>
+    </entry>
+    <entry>
+        <string>application/javascript_link_rewriter_factory</string>
+        <string>org.lockss.plugin.blackquotidian.BlackQuotidianJavaScriptLinkRewriterFactory</string>
+    </entry>
+    <entry>
+        <string>au_permitted_host_pattern</string>
+        <list>
+            <string>use\.typekit\.com</string>
+            <string>code\.jquery\.com</string>
+            <string>fonts\.googleapis\.com</string>
+        </list>
+    </entry>
+</map>
