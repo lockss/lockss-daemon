@@ -91,15 +91,18 @@
     <entry>
         <string>au_crawlrules</string>
         <list>
+            <!--https://cdn.publisher.gn1.link/residenciapediatrica.com.br/pdf/v1n1a07.pdf-->
+            <string>1,"https://cdn.publisher.gn1.link/residenciapediatrica.com.br/pdf/"</string>
             <string>1,"https://cdn.gn1.link/residenciapediatrica/.*\.(css|gif|jpe?g|js|png)"</string>
             <string>1,"https://s3-sa-east-1.amazonaws.com/.*\.pdf"</string>
-            <string>1,"%s", base_url</string>
+            <string>1,"%s(detalhes|exportar-pdf)/", base_url</string>
+            <string>1,"%sexportar-citacao/\\d+/ris", base_url</string>
         </list>
     </entry>
     <entry>
         <string>au_substance_url_pattern</string>
         <list>
-            <string>"%s/exportar-pdf/.*\.pdf", base_url</string>
+            <string>"https://cdn.publisher.gn1.link/residenciapediatrica.com.br/pdf/"</string>
         </list>
     </entry>
     <entry>
@@ -132,6 +135,15 @@
         <string>org.lockss.plugin.respediatrica.ResPediatricaUrlNormalizer</string>
     </entry>
     <entry>
+        <string>plugin_cache_result_list</string>
+        <list>
+            <!--https://cdn.gn1.link/residenciapediatrica/Images/head-title-pattern.png-->
+            <string>403=org.lockss.util.urlconn.CacheException$NoRetryDeadLinkException</string>
+            <!--http://residenciapediatrica.com.br/detalhes/sumario/51-->
+            <string>500=org.lockss.util.urlconn.CacheException$NoRetryDeadLinkException</string>
+        </list>
+    </entry>
+    <entry>
         <string>au_repair_from_peer_if_missing_url_pattern</string>
         <list>
             <string>.+\.(css|gif|jpe?g|js|png)</string>
@@ -148,6 +160,7 @@
         <list>
             <string>s3-sa-east-1\.amazonaws\.com</string>
             <string>cdn\.gn1\.link</string>
+            <string>cdn\.publisher\.gn1\.link</string>
         </list>
     </entry>
 </map>

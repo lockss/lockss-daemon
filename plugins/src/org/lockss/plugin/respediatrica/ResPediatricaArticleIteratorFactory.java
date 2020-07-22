@@ -62,7 +62,7 @@ public class ResPediatricaArticleIteratorFactory
             "\"%s(detalhes|exportar-pdf)/(.*)\", base_url";
 
     private static final Pattern HTML_PATTERN = Pattern.compile(
-            "/(detalhes)/(\\d+)",
+            "/(detalhes)/(\\d+)$",
             Pattern.CASE_INSENSITIVE);
     private static final String HTML_REPLACEMENT = "/detalhes/$2";
 

@@ -68,6 +68,8 @@ public class ResPediatricaHtmlFilterFactory implements FilterFactory {
      HtmlNodeFilters.tagWithAttribute("div", "class", "wr-searchbox"),
      HtmlNodeFilters.tagWithAttribute("div", "class", "wr-main-menu"),
      HtmlNodeFilters.tagWithAttribute("section", "class", "bottom"),
+     // http://residenciapediatrica.com.br/, "Newly published articles" section
+     HtmlNodeFilters.tagWithAttribute("section", "id", "block-articles"),
     };
     InputStream filteredStream = new HtmlFilterInputStream(in, encoding,
         HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
