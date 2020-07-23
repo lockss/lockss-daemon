@@ -1,0 +1,29 @@
+{
+
+  publisher <
+    name = Portland Press ;
+    #info[back] = 1850 ;
+    #info[contract] = 2009 ;
+    info[tester] = 8 ;
+    info[poller] = 2
+  >
+
+  param[base_url] = https://pubs.geoscienceworld.org/
+  plugin = org.lockss.plugin.silverchair.geoscienceworld.ClockssGeoscienceWorldSilverchairPlugin
+  implicit < status ; status2 ; year ; param[year] ; name ; volume ; hidden[proxy] >
+
+  {
+
+    title <
+      name = GSA Bulletin ;
+      issn = 0016-7606 ;
+      eissn = 1943-2674
+    >
+
+    param[journal_id] = gsabulletin
+
+    au < exists ; exists ; 2019 ; 2019 ; GSA Bulletin Volume 131 ; 131 ; >
+
+  }
+
+}
