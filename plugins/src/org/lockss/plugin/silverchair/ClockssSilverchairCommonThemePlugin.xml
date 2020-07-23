@@ -64,8 +64,8 @@
                 <defaultOnly>false</defaultOnly>
             </org.lockss.daemon.ConfigParamDescr>
             <org.lockss.daemon.ConfigParamDescr>
-                <key>volume</key>
-                <displayName>Volume</displayName>
+                <key>volume_name</key>
+                <displayName>Volume Name</displayName>
                 <description>Identifier for volume</description>
                 <type>1</type>
                 <size>40</size>
@@ -76,7 +76,7 @@
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"Silverchair Common Theme Plugin (CLOCKSS), Base URL %s, Journal ID %s, Year %d, Volume %s", base_url, journal_id, year, volume</string>
+        <string>"Silverchair Common Theme Plugin (CLOCKSS), Base URL %s, Journal ID %s, Year %d, Volume %s", base_url, journal_id, year, volume_name</string>
     </entry>
     <entry>
         <string>au_start_url</string>
@@ -106,7 +106,7 @@
             https://rupress.org/jem/article/215/1/5/42501/Shared-cancer-neoantigens-Making-private-matters
             https://rupress.org/jem/article/215/1/91/42480/Maternal-IgG-immune-complexes-induce-food-allergen
             -->
-            <string>1,"%s([^/]+/)?%s/(issue|article|article-abstract|article-standard)/%s/", base_url, journal_id, volume</string>
+            <string>1,"%s([^/]+/)?%s/(issue|article|article-abstract|article-standard)/%s/", base_url, journal_id, volume_name</string>
             <!--
             https://pubs.geoscienceworld.org/gsabulletin/article-pdf/132/1-2/3/4907520/3.pdf
             Redirected to excluded URL:
@@ -114,7 +114,7 @@
 
             Rockefeller: https://rupress.org/jem/article-pdf/215/1/1/1018472/jem_20172022.pdf
             -->
-            <string>1,"%s([^/]+/)?%s/article-pdf/%s/.*\.pdf$", base_url, journal_id, volume</string>
+            <string>1,"%s([^/]+/)?%s/article-pdf/%s/.*\.pdf$", base_url, journal_id, volume_name</string>
             <!--
                 citationFormat=0 // ris
                 citationFormat=1 // Endnote
