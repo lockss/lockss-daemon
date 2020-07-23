@@ -20,7 +20,25 @@
       implicit < status ; status2 ; year ; name ; param[year] >
     
       au < zapped ; finished ; 2017 ; East View Information Services Source Content 2017 ; 2017 >
-      au < expected ; exists ; 2019 ; East View Information Services Source Content 2019 ; 2019 >
+
+    }
+
+  }
+
+  {
+  
+    title <
+       name = East View Information Services Book Source Content
+    >
+    
+    {
+    
+      plugin = org.lockss.plugin.clockss.eastview.ClockssEastviewBookSourcePlugin
+      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/eastview-released/
+      hidden[proxy] = DIRECT
+      implicit < status ; status2 ; year ; name ; param[year] >
+    
+      au < expected ; exists ; 2020 ; East View Information Services Book Source Content 2020 ; 2020 >
 
     }
 
