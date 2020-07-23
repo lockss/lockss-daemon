@@ -66,20 +66,11 @@ public class SilverchairCommonThemeUrlConsumerFactory implements UrlConsumerFact
             // first just check for simple http to https transition
             boolean should = super.shouldStoreAtOrigUrl();
 
-            log.debug3("Fei: origUrl = " + fud.origUrl);
+            log.debug3("origUrl = " + fud.origUrl);
             if ((!should) && (fud.redirectUrls != null && fud.redirectUrls.size() >=1)) {
-
-                for (String redirectUrl : fud.redirectUrls) {
-                    log.debug3("Fei: redirectUrl = " + redirectUrl);
-                }
 
                 should =  origPdfPat.matcher(fud.origUrl).find();
 
-                if (should) {
-                    log.debug3("Fei: origUrl matched pattern = " + fud.origUrl);
-                } else {
-                    log.debug3("Fei: origUrl does not matchs pattern = " + fud.origUrl);
-                }
             }
             return should;
         }
