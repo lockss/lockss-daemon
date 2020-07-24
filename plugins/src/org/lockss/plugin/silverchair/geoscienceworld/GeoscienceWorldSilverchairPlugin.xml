@@ -5,7 +5,7 @@
     </entry>
     <entry>
         <string>plugin_identifier</string>
-        <string>org.lockss.plugin.silverchair.geoscienceworld.ClockssGeoscienceWorldSilverchairPlugin</string>
+        <string>org.lockss.plugin.silverchair.geoscienceworld.GeoscienceWorldSilverchairPlugin</string>
     </entry>
     <entry>
         <string>plugin_version</string>
@@ -17,21 +17,15 @@
     </entry>
     <entry>
         <string>plugin_parent</string>
-        <string>org.lockss.plugin.silverchair.geoscienceworld.GeoscienceWorldSilverchairPlugin</string>
+        <string>org.lockss.plugin.silverchair.SilverchairCommonThemePlugin</string>
     </entry>
     <entry>
         <string>plugin_parent_version</string>
-        <string>2</string>
+        <string>1</string>
     </entry>
     <entry>
         <string>au_name</string>
         <string>"Geoscience World Plugin, Base URL %s, Journal ID %s,  Year %d, Volume %s", base_url, journal_id, year, volume_name</string>
     </entry>
     <!--https://pubs.geoscienceworld.org/gsabulletin/list-of-issues/2019-->
-    <entry>
-        <string>au_start_url</string>
-        <list>
-            <string>"%s%s/list-of-issues/%d", base_url, journal_id, year</string>
-        </list>
-    </entry>
 </map>
