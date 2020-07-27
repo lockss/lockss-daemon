@@ -27,23 +27,4 @@
         <string>au_name</string>
         <string>"Portland Press Plugin (CLOCKSS), Base URL %s, Journal ID %s,  Year %d, Volume %s", base_url, journal_id, year, volume_name</string>
     </entry>
-    <!--
-    The following journals have more than one volume per year:
-    https://portlandpress.com/biochemsoctrans/issue/browse-by-year
-    https://portlandpress.com/clinsci/issue/browse-by-year
-    https://portlandpress.com/biochemj/issue/browse-by-year/
-    The following journals have one volume per year:
-    https://portlandpress.com/bioscirep/issue/browse-by-year
-    https://portlandpress.com/neuronalsignal/issue/browse-by-year
-    https://portlandpress.com/biochemsoctrans/issue/browse-by-year
-    https://portlandpress.com/emergtoplifesci/issue/browse-by-year
-
-    https://portlandpress.com/biochemsoctrans/issue/browse-by-year/2020
-    -->
-    <entry>
-        <string>au_start_url</string>
-        <list>
-            <string>"%s%s/issue/browse-by-year/%d", base_url, journal_id, year</string>
-        </list>
-    </entry>
 </map>

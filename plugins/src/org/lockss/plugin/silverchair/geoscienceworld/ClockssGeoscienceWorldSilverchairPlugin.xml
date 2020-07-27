@@ -9,7 +9,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>1</string>
+        <string>2</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -26,12 +26,5 @@
     <entry>
         <string>au_name</string>
         <string>"Geoscience World Plugin (CLOCKSS), Base URL %s, Journal ID %s,  Year %d, Volume %s", base_url, journal_id, year, volume_name</string>
-    </entry>
-    <!--https://pubs.geoscienceworld.org/gsabulletin/list-of-issues/2019-->
-    <entry>
-        <string>au_start_url</string>
-        <list>
-            <string>"%s%s/list-of-issues/%d", base_url, journal_id, year</string>
-        </list>
     </entry>
 </map>
