@@ -9,24 +9,39 @@ import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArticleFiles;
 import org.lockss.plugin.ArticleIteratorFactory;
 import org.lockss.plugin.SubTreeArticleIteratorBuilder;
+import org.lockss.plugin.clockss.scienceopen.ScienceOpenSourceZipXmlArticleIteratorFactory;
 import org.lockss.util.Logger;
 
 import java.util.Iterator;
 import java.util.regex.Pattern;
 
-public class AmericanPodiatricMedicalAssociationXmlSourceArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
+public class AmericanPodiatricMedicalAssociationXmlSourceArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory  {
 
-    //https://clockss-test.lockss.org/sourcefiles/apma-released/2019/i8750-7315-109-5-327.pdf
-    //https://clockss-test.lockss.org/sourcefiles/apma-released/2019/i8750-7315-109-5-327.xml
-    protected static Logger log = Logger.getLogger(AmericanPodiatricMedicalAssociationXmlSourceArticleIteratorFactory.class);
+    //https://clockss-test.lockss.org/sourcefiles/apma-released/2020/apms-110-2.zip!/Assets/i8750-7315-110-2-Article_1.pdf
+    //https://clockss-test.lockss.org/sourcefiles/apma-released/2020/apms-110-2.zip!/XML/i8750-7315-110-2-Article_1.xml
 
-    protected static final String ROOT_TEMPLATE = "\"%s\",base_url";
-    private static final String PATTERN_TEMPLATE = "\"%s%d/(.*)\\.(xml|pdf)$\",base_url, year";
+    protected static Logger log = Logger.getLogger(ScienceOpenSourceZipXmlArticleIteratorFactory.class);
 
-    public static final Pattern XML_PATTERN = Pattern.compile("/(.*)\\.xml$", Pattern.CASE_INSENSITIVE);
-    public static final Pattern PDF_PATTERN = Pattern.compile("/(.*)\\.pdf$", Pattern.CASE_INSENSITIVE);
-    public static final String XML_REPLACEMENT = "/$1.xml";
-    private static final String PDF_REPLACEMENT = "/$1.pdf";
+    protected static final String ALL_ZIP_XML_PATTERN_TEMPLATE =
+            "\"%s%s/.*\\.zip!/(.*Article.*)\\.(xml|pdf)$\", base_url, directory";
+
+    // Be sure to exclude all nested archives in case supplemental data is provided this way
+    protected static final Pattern SUB_NESTED_ARCHIVE_PATTERN =
+            Pattern.compile(".*/[^/]+\\.zip!/.+\\.(zip|tar|gz|tgz|tar\\.gz)$",
+                    Pattern.CASE_INSENSITIVE);
+
+    protected Pattern getExcludeSubTreePattern() {
+        return SUB_NESTED_ARCHIVE_PATTERN;
+    }
+
+    protected String getIncludePatternTemplate() {
+        return ALL_ZIP_XML_PATTERN_TEMPLATE;
+    }
+
+    public static final Pattern XML_PATTERN = Pattern.compile("/XML/(i.*)\\.xml$", Pattern.CASE_INSENSITIVE);
+    public static final Pattern PDF_PATTERN = Pattern.compile("/Assets/(.*Article.*)\\.pdf$", Pattern.CASE_INSENSITIVE);
+    public static final String XML_REPLACEMENT = "/XML/$1.xml";
+    private static final String PDF_REPLACEMENT = "/Assets/$1.pdf";
 
     @Override
     public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
@@ -34,10 +49,13 @@ public class AmericanPodiatricMedicalAssociationXmlSourceArticleIteratorFactory 
             throws PluginException {
         SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
 
-
-        builder.setSpec(target,
-                ROOT_TEMPLATE,
-                PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
+        // no need to limit to ROOT_TEMPLATE
+        builder.setSpec(builder.newSpec()
+                .setTarget(target)
+                .setPatternTemplate(getIncludePatternTemplate(), Pattern.CASE_INSENSITIVE)
+                .setExcludeSubTreePattern(getExcludeSubTreePattern())
+                .setVisitArchiveMembers(true)
+                .setVisitArchiveMembers(getIsArchive()));
 
         builder.addAspect(PDF_PATTERN,
                 PDF_REPLACEMENT,
@@ -54,7 +72,7 @@ public class AmericanPodiatricMedicalAssociationXmlSourceArticleIteratorFactory 
     }
 
     protected boolean getIsArchive() {
-        return false;
+        return true;
     }
 
     @Override
@@ -62,4 +80,5 @@ public class AmericanPodiatricMedicalAssociationXmlSourceArticleIteratorFactory 
             throws PluginException {
         return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
     }
+
 }
