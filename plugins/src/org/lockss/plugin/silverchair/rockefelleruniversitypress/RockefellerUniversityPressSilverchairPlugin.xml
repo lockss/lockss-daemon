@@ -27,4 +27,11 @@
         <string>au_name</string>
         <string>"Rockefeller University Press Plugin, Base URL %s, Journal ID %s,  Year %d, Volume %s", base_url, journal_id, year, volume_name</string>
     </entry>
+    <!--https://rupress.org/jem/issue/browse-by-year/2019-->
+    <entry>
+        <string>au_start_url</string>
+        <list>
+            <string>"%s%s/issue/browse-by-year/%d", base_url, journal_id, year</string>
+        </list>
+    </entry>
 </map>
