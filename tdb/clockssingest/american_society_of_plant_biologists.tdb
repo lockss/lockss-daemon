@@ -25,29 +25,29 @@
 
       param[base_url] = http://www.plantcell.org/
 
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1989 ; The Plant Cell Volume 1 ; 1 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1990 ; The Plant Cell Volume 2 ; 2 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1991 ; The Plant Cell Volume 3 ; 3 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1992 ; The Plant Cell Volume 4 ; 4 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1989 ; The Plant Cell Volume 1 ; 1 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1990 ; The Plant Cell Volume 2 ; 2 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1991 ; The Plant Cell Volume 3 ; 3 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1992 ; The Plant Cell Volume 4 ; 4 ; >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; manifest ; 1993 ; The Plant Cell Volume 5 ; 5 ; reingest1.clockss.org:8082 >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1994 ; The Plant Cell Volume 6 ; 6 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1995 ; The Plant Cell Volume 7 ; 7 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1996 ; The Plant Cell Volume 8 ; 8 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1997 ; The Plant Cell Volume 9 ; 9 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1998 ; The Plant Cell Volume 10 ; 10 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1999 ; The Plant Cell Volume 11 ; 11 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 2000 ; The Plant Cell Volume 12 ; 12 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 2001 ; The Plant Cell Volume 13 ; 13 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 2002 ; The Plant Cell Volume 14 ; 14 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1994 ; The Plant Cell Volume 6 ; 6 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1995 ; The Plant Cell Volume 7 ; 7 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1996 ; The Plant Cell Volume 8 ; 8 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1997 ; The Plant Cell Volume 9 ; 9 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1998 ; The Plant Cell Volume 10 ; 10 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1999 ; The Plant Cell Volume 11 ; 11 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 2000 ; The Plant Cell Volume 12 ; 12 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 2001 ; The Plant Cell Volume 13 ; 13 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 2002 ; The Plant Cell Volume 14 ; 14 ; >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; manifest ; 2003 ; The Plant Cell Volume 15 ; 15 ; reingest2.clockss.org:8085 >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; manifest ; 2004 ; The Plant Cell Volume 16 ; 16 ; reingest3.clockss.org:8083 >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 2005 ; The Plant Cell Volume 17 ; 17 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 2006 ; The Plant Cell Volume 18 ; 18 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 2007 ; The Plant Cell Volume 19 ; 19 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 2005 ; The Plant Cell Volume 17 ; 17 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 2006 ; The Plant Cell Volume 18 ; 18 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 2007 ; The Plant Cell Volume 19 ; 19 ; >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; manifest ; 2008 ; The Plant Cell Volume 20 ; 20 ; reingest4.clockss.org:8082 >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 2009 ; The Plant Cell Volume 21 ; 21 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 2010 ; The Plant Cell Volume 22 ; 22 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 2011 ; The Plant Cell Volume 23 ; 23 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 2009 ; The Plant Cell Volume 21 ; 21 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 2010 ; The Plant Cell Volume 22 ; 22 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 2011 ; The Plant Cell Volume 23 ; 23 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2012 ; The Plant Cell Volume 24 ; 24 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; The Plant Cell Volume 25 ; 25 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 2014 ; The Plant Cell Volume 26 ; 26 ; >
@@ -73,163 +73,163 @@
 
       param[base_url] = http://www.plantphysiol.org/
 
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1926 ; Plant Physiology Volume 1 ; 1 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1927 ; Plant Physiology Volume 2 ; 2 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1928 ; Plant Physiology Volume 3 ; 3 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1929 ; Plant Physiology Volume 4 ; 4 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1926 ; Plant Physiology Volume 1 ; 1 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1927 ; Plant Physiology Volume 2 ; 2 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1928 ; Plant Physiology Volume 3 ; 3 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1929 ; Plant Physiology Volume 4 ; 4 ; >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; manifest ; 1930 ; Plant Physiology Volume 5 ; 5 ; reingest5.clockss.org:8082 >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; manifest ; 1931 ; Plant Physiology Volume 6 ; 6 ; reingest1.clockss.org:8082 >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; manifest ; 1932 ; Plant Physiology Volume 7 ; 7 ; reingest2.clockss.org:8085 >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1933 ; Plant Physiology Volume 8 ; 8 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1934 ; Plant Physiology Volume 9 ; 9 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1935 ; Plant Physiology Volume 10 ; 10 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1933 ; Plant Physiology Volume 8 ; 8 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1934 ; Plant Physiology Volume 9 ; 9 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1935 ; Plant Physiology Volume 10 ; 10 ; >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; manifest ; 1936 ; Plant Physiology Volume 11 ; 11 ; reingest3.clockss.org:8083 >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; manifest ; 1937 ; Plant Physiology Volume 12 ; 12 ; reingest4.clockss.org:8082 >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1938 ; Plant Physiology Volume 13 ; 13 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1939 ; Plant Physiology Volume 14 ; 14 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1940 ; Plant Physiology Volume 15 ; 15 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1941 ; Plant Physiology Volume 16 ; 16 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1942 ; Plant Physiology Volume 17 ; 17 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1943 ; Plant Physiology Volume 18 ; 18 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1938 ; Plant Physiology Volume 13 ; 13 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1939 ; Plant Physiology Volume 14 ; 14 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1940 ; Plant Physiology Volume 15 ; 15 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1941 ; Plant Physiology Volume 16 ; 16 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1942 ; Plant Physiology Volume 17 ; 17 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1943 ; Plant Physiology Volume 18 ; 18 ; >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; manifest ; 1944 ; Plant Physiology Volume 19 ; 19 ; reingest5.clockss.org:8082 >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1945 ; Plant Physiology Volume 20 ; 20 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1946 ; Plant Physiology Volume 21 ; 21 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1945 ; Plant Physiology Volume 20 ; 20 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1946 ; Plant Physiology Volume 21 ; 21 ; >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; manifest ; 1947 ; Plant Physiology Volume 22 ; 22 ; reingest1.clockss.org:8082 >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1948 ; Plant Physiology Volume 23 ; 23 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1948 ; Plant Physiology Volume 23 ; 23 ; >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; manifest ; 1949 ; Plant Physiology Volume 24 ; 24 ; reingest2.clockss.org:8085 >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; manifest ; 1950 ; Plant Physiology Volume 25 ; 25 ; reingest3.clockss.org:8083 >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1951 ; Plant Physiology Volume 26 ; 26 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1952 ; Plant Physiology Volume 27 ; 27 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1953 ; Plant Physiology Volume 28 ; 28 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1954 ; Plant Physiology Volume 29 ; 29 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1951 ; Plant Physiology Volume 26 ; 26 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1952 ; Plant Physiology Volume 27 ; 27 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1953 ; Plant Physiology Volume 28 ; 28 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1954 ; Plant Physiology Volume 29 ; 29 ; >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; manifest ; 1955 ; Plant Physiology Volume 30 ; 30 ; reingest4.clockss.org:8082 >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1956 ; Plant Physiology Volume 31 ; 31 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1957 ; Plant Physiology Volume 32 ; 32 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1958 ; Plant Physiology Volume 33 ; 33 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1959 ; Plant Physiology Volume 34 ; 34 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1960 ; Plant Physiology Volume 35 ; 35 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1956 ; Plant Physiology Volume 31 ; 31 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1957 ; Plant Physiology Volume 32 ; 32 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1958 ; Plant Physiology Volume 33 ; 33 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1959 ; Plant Physiology Volume 34 ; 34 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1960 ; Plant Physiology Volume 35 ; 35 ; >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; manifest ; 1961 ; Plant Physiology Volume 36 ; 36 ; reingest5.clockss.org:8082 >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1962 ; Plant Physiology Volume 37 ; 37 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1962 ; Plant Physiology Volume 37 ; 37 ; >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; manifest ; 1963 ; Plant Physiology Volume 38 ; 38 ; reingest1.clockss.org:8082 >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; manifest ; 1964 ; Plant Physiology Volume 39 ; 39 ; reingest2.clockss.org:8085 >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; manifest ; 1965 ; Plant Physiology Volume 40 ; 40 ; reingest3.clockss.org:8083 >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; manifest ; 1966 ; Plant Physiology Volume 41 ; 41 ; reingest4.clockss.org:8082 >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1967 ; Plant Physiology Volume 42 ; 42 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1968 ; Plant Physiology Volume 43 ; 43 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1967 ; Plant Physiology Volume 42 ; 42 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1968 ; Plant Physiology Volume 43 ; 43 ; >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; manifest ; 1969 ; Plant Physiology Volume 44 ; 44 ; reingest5.clockss.org:8082 >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1970 ; Plant Physiology Volume 45 ; 45 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1970 ; Plant Physiology Volume 46 ; 46 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1971 ; Plant Physiology Volume 47 ; 47 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1971 ; Plant Physiology Volume 48 ; 48 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1972 ; Plant Physiology Volume 49 ; 49 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1970 ; Plant Physiology Volume 45 ; 45 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1970 ; Plant Physiology Volume 46 ; 46 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1971 ; Plant Physiology Volume 47 ; 47 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1971 ; Plant Physiology Volume 48 ; 48 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1972 ; Plant Physiology Volume 49 ; 49 ; >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; manifest ; 1972 ; Plant Physiology Volume 50 ; 50 ; reingest1.clockss.org:8082 >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1973 ; Plant Physiology Volume 51 ; 51 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1973 ; Plant Physiology Volume 52 ; 52 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1973 ; Plant Physiology Volume 51 ; 51 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1973 ; Plant Physiology Volume 52 ; 52 ; >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; manifest ; 1974 ; Plant Physiology Volume 53 ; 53 ; reingest4.clockss.org:8082 >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; manifest ; 1974 ; Plant Physiology Volume 54 ; 54 ; reingest2.clockss.org:8085 >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1975 ; Plant Physiology Volume 55 ; 55 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1975 ; Plant Physiology Volume 56 ; 56 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1976 ; Plant Physiology Volume 57 ; 57 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1975 ; Plant Physiology Volume 55 ; 55 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1975 ; Plant Physiology Volume 56 ; 56 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1976 ; Plant Physiology Volume 57 ; 57 ; >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; manifest ; 1976 ; Plant Physiology Volume 58 ; 58 ; reingest3.clockss.org:8083 >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1977 ; Plant Physiology Volume 59 ; 59 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1977 ; Plant Physiology Volume 60 ; 60 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1977 ; Plant Physiology Volume 59 ; 59 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1977 ; Plant Physiology Volume 60 ; 60 ; >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; manifest ; 1978 ; Plant Physiology Volume 61 ; 61 ; reingest4.clockss.org:8082 >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1978 ; Plant Physiology Volume 62 ; 62 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1979 ; Plant Physiology Volume 63 ; 63 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1979 ; Plant Physiology Volume 64 ; 64 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1980 ; Plant Physiology Volume 65 ; 65 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1980 ; Plant Physiology Volume 66 ; 66 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1981 ; Plant Physiology Volume 67 ; 67 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1981 ; Plant Physiology Volume 68 ; 68 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1978 ; Plant Physiology Volume 62 ; 62 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1979 ; Plant Physiology Volume 63 ; 63 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1979 ; Plant Physiology Volume 64 ; 64 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1980 ; Plant Physiology Volume 65 ; 65 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1980 ; Plant Physiology Volume 66 ; 66 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1981 ; Plant Physiology Volume 67 ; 67 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1981 ; Plant Physiology Volume 68 ; 68 ; >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; manifest ; 1982 ; Plant Physiology Volume 69 ; 69 ; reingest5.clockss.org:8082 >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; manifest ; 1982 ; Plant Physiology Volume 70 ; 70 ; reingest1.clockss.org:8082 >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1983 ; Plant Physiology Volume 71 ; 71 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1983 ; Plant Physiology Volume 72 ; 72 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1983 ; Plant Physiology Volume 71 ; 71 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1983 ; Plant Physiology Volume 72 ; 72 ; >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; manifest ; 1983 ; Plant Physiology Volume 73 ; 73 ; reingest2.clockss.org:8085 >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1984 ; Plant Physiology Volume 74 ; 74 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1984 ; Plant Physiology Volume 75 ; 75 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1984 ; Plant Physiology Volume 74 ; 74 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1984 ; Plant Physiology Volume 75 ; 75 ; >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; manifest ; 1984 ; Plant Physiology Volume 76 ; 76 ; reingest3.clockss.org:8083 >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1985 ; Plant Physiology Volume 77 ; 77 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1985 ; Plant Physiology Volume 78 ; 78 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1985 ; Plant Physiology Volume 79 ; 79 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1986 ; Plant Physiology Volume 80 ; 80 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1986 ; Plant Physiology Volume 81 ; 81 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1986 ; Plant Physiology Volume 82 ; 82 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1987 ; Plant Physiology Volume 83 ; 83 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1987 ; Plant Physiology Volume 84 ; 84 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1987 ; Plant Physiology Volume 85 ; 85 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1988 ; Plant Physiology Volume 86 ; 86 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1988 ; Plant Physiology Volume 87 ; 87 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1988 ; Plant Physiology Volume 88 ; 88 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1989 ; Plant Physiology Volume 89 ; 89 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1989 ; Plant Physiology Volume 90 ; 90 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1989 ; Plant Physiology Volume 91 ; 91 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1990 ; Plant Physiology Volume 92 ; 92 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1990 ; Plant Physiology Volume 93 ; 93 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1990 ; Plant Physiology Volume 94 ; 94 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1985 ; Plant Physiology Volume 77 ; 77 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1985 ; Plant Physiology Volume 78 ; 78 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1985 ; Plant Physiology Volume 79 ; 79 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1986 ; Plant Physiology Volume 80 ; 80 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1986 ; Plant Physiology Volume 81 ; 81 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1986 ; Plant Physiology Volume 82 ; 82 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1987 ; Plant Physiology Volume 83 ; 83 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1987 ; Plant Physiology Volume 84 ; 84 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1987 ; Plant Physiology Volume 85 ; 85 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1988 ; Plant Physiology Volume 86 ; 86 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1988 ; Plant Physiology Volume 87 ; 87 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1988 ; Plant Physiology Volume 88 ; 88 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1989 ; Plant Physiology Volume 89 ; 89 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1989 ; Plant Physiology Volume 90 ; 90 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1989 ; Plant Physiology Volume 91 ; 91 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1990 ; Plant Physiology Volume 92 ; 92 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1990 ; Plant Physiology Volume 93 ; 93 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1990 ; Plant Physiology Volume 94 ; 94 ; >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; manifest ; 1991 ; Plant Physiology Volume 95 ; 95 ; reingest4.clockss.org:8082 >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1991 ; Plant Physiology Volume 96 ; 96 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1991 ; Plant Physiology Volume 96 ; 96 ; >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; manifest ; 1991 ; Plant Physiology Volume 97 ; 97 ; reingest5.clockss.org:8082 >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1992 ; Plant Physiology Volume 98 ; 98 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1992 ; Plant Physiology Volume 99 ; 99 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1992 ; Plant Physiology Volume 100 ; 100 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1992 ; Plant Physiology Volume 98 ; 98 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1992 ; Plant Physiology Volume 99 ; 99 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1992 ; Plant Physiology Volume 100 ; 100 ; >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; manifest ; 1993 ; Plant Physiology Volume 101 ; 101 ; reingest1.clockss.org:8082 >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1993 ; Plant Physiology Volume 102 ; 102 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1993 ; Plant Physiology Volume 103 ; 103 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1994 ; Plant Physiology Volume 104 ; 104 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1993 ; Plant Physiology Volume 102 ; 102 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1993 ; Plant Physiology Volume 103 ; 103 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1994 ; Plant Physiology Volume 104 ; 104 ; >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; manifest ; 1994 ; Plant Physiology Volume 105 ; 105 ; reingest2.clockss.org:8085 >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1994 ; Plant Physiology Volume 106 ; 106 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1995 ; Plant Physiology Volume 107 ; 107 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1995 ; Plant Physiology Volume 108 ; 108 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1994 ; Plant Physiology Volume 106 ; 106 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1995 ; Plant Physiology Volume 107 ; 107 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1995 ; Plant Physiology Volume 108 ; 108 ; >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; manifest ; 1995 ; Plant Physiology Volume 109 ; 109 ; reingest3.clockss.org:8083 >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; manifest ; 1996 ; Plant Physiology Volume 110 ; 110 ; reingest4.clockss.org:8082 >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1996 ; Plant Physiology Volume 111 ; 111 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1996 ; Plant Physiology Volume 112 ; 112 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1996 ; Plant Physiology Volume 111 ; 111 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1996 ; Plant Physiology Volume 112 ; 112 ; >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; manifest ; 1997 ; Plant Physiology Volume 113 ; 113 ; reingest5.clockss.org:8082 >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; manifest ; 1997 ; Plant Physiology Volume 114 ; 114 ; reingest1.clockss.org:8082 >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; manifest ; 1997 ; Plant Physiology Volume 115 ; 115 ; reingest2.clockss.org:8085 >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; manifest ; 1998 ; Plant Physiology Volume 116 ; 116 ; reingest3.clockss.org:8083 >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1998 ; Plant Physiology Volume 117 ; 117 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1998 ; Plant Physiology Volume 118 ; 118 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1999 ; Plant Physiology Volume 119 ; 119 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1999 ; Plant Physiology Volume 120 ; 120 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 1999 ; Plant Physiology Volume 121 ; 121 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1998 ; Plant Physiology Volume 117 ; 117 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1998 ; Plant Physiology Volume 118 ; 118 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1999 ; Plant Physiology Volume 119 ; 119 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1999 ; Plant Physiology Volume 120 ; 120 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 1999 ; Plant Physiology Volume 121 ; 121 ; >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; manifest ; 2000 ; Plant Physiology Volume 122 ; 122 ; reingest4.clockss.org:8082 >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 2000 ; Plant Physiology Volume 123 ; 123 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 2000 ; Plant Physiology Volume 123 ; 123 ; >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; manifest ; 2000 ; Plant Physiology Volume 124 ; 124 ; reingest5.clockss.org:8082 >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; manifest ; 2001 ; Plant Physiology Volume 125 ; 125 ; reingest1.clockss.org:8082 >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; manifest ; 2001 ; Plant Physiology Volume 126 ; 126 ; reingest2.clockss.org:8085 >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 2001 ; Plant Physiology Volume 127 ; 127 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 2002 ; Plant Physiology Volume 128 ; 128 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 2001 ; Plant Physiology Volume 127 ; 127 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 2002 ; Plant Physiology Volume 128 ; 128 ; >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; manifest ; 2002 ; Plant Physiology Volume 129 ; 129 ; reingest3.clockss.org:8083 >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 2002 ; Plant Physiology Volume 130 ; 130 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 2003 ; Plant Physiology Volume 131 ; 131 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 2003 ; Plant Physiology Volume 132 ; 132 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 2003 ; Plant Physiology Volume 133 ; 133 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 2004 ; Plant Physiology Volume 134 ; 134 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 2004 ; Plant Physiology Volume 135 ; 135 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 2004 ; Plant Physiology Volume 136 ; 136 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 2005 ; Plant Physiology Volume 137 ; 137 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 2005 ; Plant Physiology Volume 138 ; 138 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 2005 ; Plant Physiology Volume 139 ; 139 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 2006 ; Plant Physiology Volume 140 ; 140 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 2002 ; Plant Physiology Volume 130 ; 130 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 2003 ; Plant Physiology Volume 131 ; 131 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 2003 ; Plant Physiology Volume 132 ; 132 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 2003 ; Plant Physiology Volume 133 ; 133 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 2004 ; Plant Physiology Volume 134 ; 134 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 2004 ; Plant Physiology Volume 135 ; 135 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 2004 ; Plant Physiology Volume 136 ; 136 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 2005 ; Plant Physiology Volume 137 ; 137 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 2005 ; Plant Physiology Volume 138 ; 138 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 2005 ; Plant Physiology Volume 139 ; 139 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 2006 ; Plant Physiology Volume 140 ; 140 ; >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; manifest ; 2006 ; Plant Physiology Volume 141 ; 141 ; reingest4.clockss.org:8082 >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; manifest ; 2006 ; Plant Physiology Volume 142 ; 142 ; reingest2.clockss.org:8085 >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 2007 ; Plant Physiology Volume 143 ; 143 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 2007 ; Plant Physiology Volume 144 ; 144 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 2007 ; Plant Physiology Volume 143 ; 143 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 2007 ; Plant Physiology Volume 144 ; 144 ; >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; manifest ; 2007 ; Plant Physiology Volume 145 ; 145 ; reingest5.clockss.org:8082 >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 2008 ; Plant Physiology Volume 146 ; 146 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 2008 ; Plant Physiology Volume 147 ; 147 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 2008 ; Plant Physiology Volume 148 ; 148 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 2009 ; Plant Physiology Volume 149 ; 149 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 2009 ; Plant Physiology Volume 150 ; 150 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 2009 ; Plant Physiology Volume 151 ; 151 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 2008 ; Plant Physiology Volume 146 ; 146 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 2008 ; Plant Physiology Volume 147 ; 147 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 2008 ; Plant Physiology Volume 148 ; 148 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 2009 ; Plant Physiology Volume 149 ; 149 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 2009 ; Plant Physiology Volume 150 ; 150 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 2009 ; Plant Physiology Volume 151 ; 151 ; >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; manifest ; 2010 ; Plant Physiology Volume 152 ; 152 ; reingest1.clockss.org:8082 >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; manifest ; 2010 ; Plant Physiology Volume 153 ; 153 ; reingest2.clockss.org:8085 >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 2010 ; Plant Physiology Volume 154 ; 154 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 2011 ; Plant Physiology Volume 155 ; 155 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 2011 ; Plant Physiology Volume 156 ; 156 ; >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 2011 ; Plant Physiology Volume 157 ; 157 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 2010 ; Plant Physiology Volume 154 ; 154 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 2011 ; Plant Physiology Volume 155 ; 155 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 2011 ; Plant Physiology Volume 156 ; 156 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; frozen ; exists ; 2011 ; Plant Physiology Volume 157 ; 157 ; >
       au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 2012 ; Plant Physiology Volume 158 ; 158 ; >
       au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 2012 ; Plant Physiology Volume 159 ; 159 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Plant Physiology Volume 160 ; 160 ; >
