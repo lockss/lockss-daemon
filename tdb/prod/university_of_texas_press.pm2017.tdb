@@ -255,7 +255,7 @@
         au < released ; 2016 ; Latin American Music Review Volume 37 [2016] ; 11236 >
         au < released ; 2017 ; Latin American Music Review Volume 38 [2017] ; 12673 >
         au < released ; 2018 ; Latin American Music Review Volume 39 [2018] ; 13597 >
-        au < manifest ; 2019 ; Latin American Music Review Volume 40 [2019] ; 14278 >
+        au < ready ; 2019 ; Latin American Music Review Volume 40 [2019] ; 14278 >
 
     }
 
@@ -279,7 +279,7 @@
         au < released ; 2016 ; Studies in Latin American Popular Culture Volume 34 [2016] ; 11214 >
         au < released ; 2017 ; Studies in Latin American Popular Culture Volume 35 [2017] ; 12667 >
         au < released ; 2018 ; Studies in Latin American Popular Culture Volume 36 [2018] ; 13537 >
-        au < manifest ; 2019 ; Studies in Latin American Popular Culture Volume 37 [2019] ; 14265 >
+        au < ready ; 2019 ; Studies in Latin American Popular Culture Volume 37 [2019] ; 14265 >
 
     }
     
@@ -312,7 +312,7 @@
         au < released ; 2016 ; Texas Studies in Literature and Language Volume 58 [2016] ; 10959 >
         au < released ; 2017 ; Texas Studies in Literature and Language Volume 59 [2017] ; 12375 >
         au < released ; 2018 ; Texas Studies in Literature and Language Volume 60 [2018] ; 13259 >
-        au < manifest ; 2019 ; Texas Studies in Literature and Language Volume 61 [2019] ; 13951 >
+        au < ready ; 2019 ; Texas Studies in Literature and Language Volume 61 [2019] ; 13951 >
         au < manifest ; 2020 ; Texas Studies in Literature and Language Volume 62 [2020] ; 14678 >
 
     }
@@ -333,7 +333,7 @@
         au < released ; 2016 ; The Journal of Individual Psychology Volume 72 [2016] ; 11241 >
         au < released ; 2017 ; The Journal of Individual Psychology Volume 73 [2017] ; 12410 >
         au < released ; 2018 ; The Journal of Individual Psychology Volume 74 [2018] ; 13302 >
-        au < manifest ; 2019 ; The Journal of Individual Psychology Volume 75 [2019] ; 13935 >
+        au < ready ; 2019 ; The Journal of Individual Psychology Volume 75 [2019] ; 13935 >
 
     }
     
@@ -380,8 +380,8 @@
         au < released ; 2017 ; The Velvet Light Trap Number 80 [Fall 2017] ; 12822 >
         au < released ; 2018 ; The Velvet Light Trap Number 81 [Spring 2018] ; 13254 >
         au < released ; 2018 ; The Velvet Light Trap Number 82 [Fall 2018] ; 13648 >
-        au < manifest ; 2019 ; The Velvet Light Trap Number 83 [Spring 2019] ; 13956 >
-        au < manifest ; 2019 ; The Velvet Light Trap Number 84 [Fall 2019] ; 14366 >
+        au < ready ; 2019 ; The Velvet Light Trap Number 83 [Spring 2019] ; 13956 >
+        au < ready ; 2019 ; The Velvet Light Trap Number 84 [Fall 2019] ; 14366 >
         au < manifest ; 2020 ; The Velvet Light Trap Number 85 [Spring 2020] ; 14729 >
 
     }
@@ -396,9 +396,9 @@
 
       attr[journal_id] = 758
 
-      au < manifest ; 2017 ; US Latino & Latina Oral History Journal Volume 1 [2017] ; 14430 >
-      au < manifest ; 2018 ; US Latino & Latina Oral History Journal Volume 2 [2018] ; 14422 >
-      au < manifest ; 2019 ; US Latino & Latina Oral History Journal Volume 3 [2019] ; 14423 >
+      au < ready ; 2017 ; US Latino & Latina Oral History Journal Volume 1 [2017] ; 14430 >
+      au < ready ; 2018 ; US Latino & Latina Oral History Journal Volume 2 [2018] ; 14422 >
+      au < ready ; 2019 ; US Latino & Latina Oral History Journal Volume 3 [2019] ; 14423 >
 
     }
 
