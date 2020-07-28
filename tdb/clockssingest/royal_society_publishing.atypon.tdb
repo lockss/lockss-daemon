@@ -90,9 +90,18 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Biographical Memoirs of Fellows of the Royal Society Volume 61 ; 61 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Biographical Memoirs of Fellows of the Royal Society Volume 62 ; 62 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Biographical Memoirs of Fellows of the Royal Society Volume 63 ; 63 ; >
+
     au < finished ; crawling ; 2018 ; Biographical Memoirs of Fellows of the Royal Society Volume 64 ; 64 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2019 ; Biographical Memoirs of Fellows of the Royal Society Volume 65 ; 2019 ; >
-    au < manifest ; exists ; 2020 ; Biographical Memoirs of Fellows of the Royal Society Volume 66 ; 2020 ; >
+    au < manifest ; exists ; 2018 ; Biographical Memoirs of Fellows of the Royal Society Volume 65 ; 65 ; >
+    au < manifest ; exists ; 2018 ; Biographical Memoirs of Fellows of the Royal Society Volume 64-65 ; 2018 ; >
+
+    au < manifest ; exists ; 2019 ; Biographical Memoirs of Fellows of the Royal Society Volume 66 ; 66 ; >
+    au < manifest ; exists ; 2019 ; Biographical Memoirs of Fellows of the Royal Society Volume 67 ; 67 ; >
+    au < frozen ; exists ; 2019 ; Biographical Memoirs of Fellows of the Royal Society Volume 66-67 ; 2019 ; >
+
+    au < manifest ; exists ; 2020 ; Biographical Memoirs of Fellows of the Royal Society Volume 68 ; 68 ; >
+    au < expected ; exists ; 2020 ; Biographical Memoirs of Fellows of the Royal Society Volume 69 ; 69 ; >
+    au < manifest ; exists ; 2020 ; Biographical Memoirs of Fellows of the Royal Society Volume 68-69 ; 2020 ; >
 
   }
 
@@ -120,8 +129,14 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Biology Letters Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Biology Letters Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Biology Letters Volume 13 ; 13 ; >
+
     au < finished ; crawling ; 2018 ; Biology Letters Volume 14 ; 14 ; reingest4.clockss.org:8082 >
+    au < manifest ; exists ; 2018 ; Biology Letters Volume 14 ; 2018 ; >
+
+    au < manifest ; exists ; 2019 ; Biology Letters Volume 15 ; 15 ; >
     au < frozen ; exists ; 2019 ; Biology Letters Volume 15 ; 2019 ; >
+
+    au < manifest ; exists ; 2020 ; Biology Letters Volume 16 ; 16 ; >
     au < manifest ; exists ; 2020 ; Biology Letters Volume 16 ; 2020 ; >
 
   }
@@ -147,8 +162,14 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Interface Focus Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Interface Focus Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Interface Focus Volume 7 ; 7 ; >
+
     au < finished ; crawling ; 2018 ; Interface Focus Volume 8 ; 8 ; reingest4.clockss.org:8082 >
+    au < manifest ; exists ; 2018 ; Interface Focus Volume 8 ; 2018 ; >
+
+    au < manifest ; exists ; 2019 ; Interface Focus Volume 9 ; 9 ; >
     au < frozen ; exists ; 2019 ; Interface Focus Volume 9 ; 2019 ; >
+
+    au < manifest ; exists ; 2020 ; Interface Focus Volume 10 ; 10 ; >
     au < manifest ; exists ; 2020 ; Interface Focus Volume 10 ; 2020 ; >
 
   }
@@ -178,8 +199,14 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of the Royal Society Interface Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of the Royal Society Interface Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of the Royal Society Interface Volume 14 ; 14 ; >
+
     au < finished ; crawling ; 2018 ; Journal of the Royal Society Interface Volume 15 ; 15 ; reingest3.clockss.org:8083 >
+    au < manifest ; exists ; 2018 ; Journal of the Royal Society Interface Volume 15 ; 2018 ; >
+
+    au < manifest ; exists ; 2019 ; Journal of the Royal Society Interface Volume 16 ; 16 ; >
     au < frozen ; exists ; 2019 ; Journal of the Royal Society Interface Volume 16 ; 2019 ; >
+
+    au < manifest ; exists ; 2020 ; Journal of the Royal Society Interface Volume 17 ; 17 ; >
     au < manifest ; exists ; 2020 ; Journal of the Royal Society Interface Volume 17 ; 2020 ; >
 
   }
@@ -267,8 +294,14 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Notes and Records the Royal Society Journal of the History of Science Volume 69 ; 69 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Notes and Records the Royal Society Journal of the History of Science Volume 70 ; 70 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Notes and Records the Royal Society Journal of the History of Science Volume 71 ; 71 ; >
+
     au < finished ; crawling ; 2018 ; Notes and Records the Royal Society Journal of the History of Science Volume 72 ; 72 ; reingest5.clockss.org:8082 >
+    au < manifest ; exists ; 2018 ; Notes and Records the Royal Society Journal of the History of Science Volume 72 ; 2018 ; >
+
+    au < manifest ; exists ; 2019 ; Notes and Records the Royal Society Journal of the History of Science Volume 73 ; 73 ; >
     au < frozen ; exists ; 2019 ; Notes and Records the Royal Society Journal of the History of Science Volume 73 ; 2019 ; >
+
+    au < manifest ; exists ; 2020 ; Notes and Records the Royal Society Journal of the History of Science Volume 74 ; 74 ; >
     au < manifest ; exists ; 2020 ; Notes and Records the Royal Society Journal of the History of Science Volume 74 ; 2020 ; >
 
   }
@@ -290,8 +323,14 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Open Biology Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Open Biology Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Open Biology Volume 7 ; 7 ; >
+
     au < finished ; crawling ; 2018 ; Open Biology Volume 8 ; 8 ; reingest2.clockss.org:8085 >
+    au < manifest ; exists ; 2018 ; Open Biology Volume 8 ; 2018 ; >
+
+    au < manifest ; exists ; 2019 ; Open Biology Volume 9 ; 9 ; >
     au < frozen ; exists ; 2019 ; Open Biology Volume 9 ; 2019 ; >
+
+    au < manifest ; exists ; 2020 ; Open Biology Volume 10 ; 10 ; >
     au < manifest ; exists ; 2020 ; Open Biology Volume 10 ; 2020 ; >
 
   }
@@ -517,9 +556,15 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 373 ; 373 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 374 ; 374 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 375 ; 375 ; >
+
     au < finished ; crawling ; 2018 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 376 ; 376 ; reingest1.clockss.org:8082 >
-    au < notReady ; exists ; 2019 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 377 ; 377 ; > # no substance. Using the year instead gets issue 2019 from the year 2013.
+    #au < manifest ; exists ; 2018 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 376 ; 2018 ; >#bad issue url "/toc/rsta/2014/372/2018"
+
+    au < manifest ; exists ; 2019 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 377 ; 377 ; > # no substance. Using the year instead gets issue 2019 from the year 2013.
+    #au < manifest ; exists ; 2019 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 377 ; 2019 ; >#bad issue url "/toc/rsta/2014/372/2019"
+
     au < manifest ; exists ; 2020 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 378 ; 378 ; >
+    #au < manifest ; exists ; 2020 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 378 ; 2020 ; >#bad issue url "/toc/rsta/2014/372/2020"
     }
   }
 
@@ -742,9 +787,16 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 370 ; 370 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 371 ; 371 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 372 ; 372 ; >
+
     au < finished ; finished ; 2018 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 373 ; 373 ; reingest2.clockss.org:8085 >
-    au < notReady ; exists ; 2019 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 374 ; 2019 ; > #overcrawl. 2017, 2018, 2019.
+    au < manifest ; exists ; 2018 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 373 ; 2018 ; >
+
+    au < manifest ; exists ; 2019 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 374 ; 374 ; >
+    au < manifest ; exists ; 2019 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 374 ; 2019 ; > #overcrawl. 2017, 2018, 2019.
+
+    au < manifest ; exists ; 2020 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 375 ; 375 ; >
     au < manifest ; exists ; 2020 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 375 ; 2020 ; >
+
     }
   }
 
@@ -1347,9 +1399,15 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 471 ; 471 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 472 ; 472 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 473 ; 473 ; >
+
     au < finished ; crawling ; 2018 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 474 ; 474 ; reingest3.clockss.org:8083 >
-    au < notReady ; exists ; 2019 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 475 ; 475 ; > #no substance. using 2019 gives a manifest page with one url to issue 2019 from 2002.
+    #au < manifest ; exists ; 2018 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 474 ; 2018 ; >#bad issue url "/toc/rspa1996/2002/458/2018"
+
+    au < manifest ; exists ; 2019 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 475 ; 475 ; > #no substance. using 2019 gives a manifest page with one url to issue 2019 from 2002.
+    #au < manifest ; exists ; 2019 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 475 ; 2019 ; >#bad issue url "/toc/rspa1996/2002/458/2019"
+
     au < manifest ; exists ; 2020 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 476 ; 476 ; >
+    #au < manifest ; exists ; 2020 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 476 ; 2020 ; >#bad issue url "/toc/rspa1996/2002/458/2020"
 
   }
 
@@ -1573,8 +1631,14 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Proceedings of the Royal Society B: Biological Sciences Volume 282 ; 282 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Proceedings of the Royal Society B: Biological Sciences Volume 283 ; 283 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Proceedings of the Royal Society B: Biological Sciences Volume 284 ; 284 ; >
+
     au < finished ; crawling ; 2018 ; Proceedings of the Royal Society B: Biological Sciences Volume 285 ; 285 ; reingest4.clockss.org:8082 >
-    au < notReady ; exists ; 2019 ; Proceedings of the Royal Society B: Biological Sciences Volume 286 ; 2019 ; > #overcrawling. 2017, 2018, 2019. Same manifest page for v286. Would likely get no substance.
+    au < manifest ; exists ; 2018 ; Proceedings of the Royal Society B: Biological Sciences Volume 285 ; 2018 ; >
+
+    au < manifest ; exists ; 2019 ; Proceedings of the Royal Society B: Biological Sciences Volume 286 ; 286 ; > 
+    au < manifest ; exists ; 2019 ; Proceedings of the Royal Society B: Biological Sciences Volume 286 ; 2019 ; > #overcrawling. 2017, 2018, 2019. Same manifest page for v286. Would likely get no substance.
+
+    au < manifest ; exists ; 2020 ; Proceedings of the Royal Society B: Biological Sciences Volume 287 ; 287 ; >
     au < manifest ; exists ; 2020 ; Proceedings of the Royal Society B: Biological Sciences Volume 287 ; 2020 ; >
 
   }
@@ -1589,65 +1653,66 @@
 
     param[journal_id] = rspl
 
-    au < doNotProcess ; exists ; 1800 ; Proceedings of the Royal Society of London Volume 1 ; 1 ; >
-    au < doNotProcess ; exists ; 1815 ; Proceedings of the Royal Society of London Volume 2 ; 2 ; >
-    au < doNotProcess ; exists ; 1830 ; Proceedings of the Royal Society of London Volume 3 ; 3 ; >
-    au < doNotProcess ; exists ; 1837 ; Proceedings of the Royal Society of London Volume 4 ; 4 ; >
-    au < doNotProcess ; exists ; 1843 ; Proceedings of the Royal Society of London Volume 5 ; 5 ; >
-    au < doNotProcess ; exists ; 1850 ; Proceedings of the Royal Society of London Volume 6 ; 6 ; >
-    au < doNotProcess ; exists ; 1854 ; Proceedings of the Royal Society of London Volume 7 ; 7 ; >
-    au < doNotProcess ; exists ; 1856 ; Proceedings of the Royal Society of London Volume 8 ; 8 ; >
-    au < doNotProcess ; exists ; 1857 ; Proceedings of the Royal Society of London Volume 9 ; 9 ; >
-    au < doNotProcess ; exists ; 1859 ; Proceedings of the Royal Society of London Volume 10 ; 10 ; >
-    au < doNotProcess ; exists ; 1860 ; Proceedings of the Royal Society of London Volume 11 ; 11 ; >
-    au < doNotProcess ; exists ; 1862 ; Proceedings of the Royal Society of London Volume 12 ; 12 ; >
-    au < doNotProcess ; exists ; 1863 ; Proceedings of the Royal Society of London Volume 13 ; 13 ; >
-    au < doNotProcess ; exists ; 1865 ; Proceedings of the Royal Society of London Volume 14 ; 14 ; >
-    au < doNotProcess ; exists ; 1866 ; Proceedings of the Royal Society of London Volume 15 ; 15 ; >
-    au < doNotProcess ; exists ; 1867 ; Proceedings of the Royal Society of London Volume 16 ; 16 ; >
-    au < doNotProcess ; exists ; 1868 ; Proceedings of the Royal Society of London Volume 17 ; 17 ; >
-    au < doNotProcess ; exists ; 1869 ; Proceedings of the Royal Society of London Volume 18 ; 18 ; >
-    au < doNotProcess ; exists ; 1870 ; Proceedings of the Royal Society of London Volume 19 ; 19 ; >
-    au < doNotProcess ; exists ; 1871 ; Proceedings of the Royal Society of London Volume 20 ; 20 ; >
-    au < doNotProcess ; exists ; 1872 ; Proceedings of the Royal Society of London Volume 21 ; 21 ; >
-    au < doNotProcess ; exists ; 1873 ; Proceedings of the Royal Society of London Volume 22 ; 22 ; >
-    au < doNotProcess ; exists ; 1874 ; Proceedings of the Royal Society of London Volume 23 ; 23 ; >
-    au < doNotProcess ; exists ; 1875 ; Proceedings of the Royal Society of London Volume 24 ; 24 ; >
-    au < doNotProcess ; exists ; 1876 ; Proceedings of the Royal Society of London Volume 25 ; 25 ; >
-    au < doNotProcess ; exists ; 1877 ; Proceedings of the Royal Society of London Volume 26 ; 26 ; >
-    au < doNotProcess ; exists ; 1878 ; Proceedings of the Royal Society of London Volume 27 ; 27 ; >
-    au < doNotProcess ; exists ; 1878 ; Proceedings of the Royal Society of London Volume 28 ; 28 ; >
-    au < doNotProcess ; exists ; 1879 ; Proceedings of the Royal Society of London Volume 29 ; 29 ; >
-    au < doNotProcess ; exists ; 1879 ; Proceedings of the Royal Society of London Volume 30 ; 30 ; >
-    au < doNotProcess ; exists ; 1880 ; Proceedings of the Royal Society of London Volume 31 ; 31 ; >
-    au < doNotProcess ; exists ; 1881 ; Proceedings of the Royal Society of London Volume 32 ; 32 ; >
-    au < doNotProcess ; exists ; 1881 ; Proceedings of the Royal Society of London Volume 33 ; 33 ; >
-    au < doNotProcess ; exists ; 1882 ; Proceedings of the Royal Society of London Volume 34 ; 34 ; >
-    au < doNotProcess ; exists ; 1883 ; Proceedings of the Royal Society of London Volume 35 ; 35 ; >
-    au < doNotProcess ; exists ; 1883 ; Proceedings of the Royal Society of London Volume 36 ; 36 ; >
-    au < doNotProcess ; exists ; 1884 ; Proceedings of the Royal Society of London Volume 37 ; 37 ; >
-    au < doNotProcess ; exists ; 1884 ; Proceedings of the Royal Society of London Volume 38 ; 38 ; >
-    au < doNotProcess ; exists ; 1885 ; Proceedings of the Royal Society of London Volume 39 ; 39 ; >
-    au < doNotProcess ; exists ; 1886 ; Proceedings of the Royal Society of London Volume 40 ; 40 ; >
-    au < doNotProcess ; exists ; 1886 ; Proceedings of the Royal Society of London Volume 41 ; 41 ; >
-    au < doNotProcess ; exists ; 1887 ; Proceedings of the Royal Society of London Volume 42 ; 42 ; >
-    au < doNotProcess ; exists ; 1887 ; Proceedings of the Royal Society of London Volume 43 ; 43 ; >
-    au < doNotProcess ; exists ; 1888 ; Proceedings of the Royal Society of London Volume 44 ; 44 ; >
-    au < doNotProcess ; exists ; 1888 ; Proceedings of the Royal Society of London Volume 45 ; 45 ; >
-    au < doNotProcess ; exists ; 1889 ; Proceedings of the Royal Society of London Volume 46 ; 46 ; >
-    au < doNotProcess ; exists ; 1889 ; Proceedings of the Royal Society of London Volume 47 ; 47 ; >
-    au < doNotProcess ; exists ; 1890 ; Proceedings of the Royal Society of London Volume 48 ; 48 ; >
-    au < doNotProcess ; exists ; 1890 ; Proceedings of the Royal Society of London Volume 49 ; 49 ; >
-    au < doNotProcess ; exists ; 1891 ; Proceedings of the Royal Society of London Volume 50 ; 50 ; >
-    au < doNotProcess ; exists ; 1892 ; Proceedings of the Royal Society of London Volume 51 ; 51 ; >
-    au < doNotProcess ; exists ; 1892 ; Proceedings of the Royal Society of London Volume 52 ; 52 ; >
-    au < doNotProcess ; exists ; 1893 ; Proceedings of the Royal Society of London Volume 53 ; 53 ; >
-    au < doNotProcess ; exists ; 1893 ; Proceedings of the Royal Society of London Volume 54 ; 54 ; >
-    au < doNotProcess ; exists ; 1894 ; Proceedings of the Royal Society of London Volume 55 ; 55 ; >
-    au < doNotProcess ; exists ; 1894 ; Proceedings of the Royal Society of London Volume 56 ; 56 ; >
-    au < doNotProcess ; exists ; 1894 ; Proceedings of the Royal Society of London Volume 57 ; 57 ; >
-    au < doNotProcess ; exists ; 1895 ; Proceedings of the Royal Society of London Volume 58 ; 58 ; >
-    au < doNotProcess ; exists ; 1895 ; Proceedings of the Royal Society of London Volume 59 ; 59 ; >
+    #1896-1904 processed in HW
+    au < exists ; exists ; 1800 ; Proceedings of the Royal Society of London Volume 1 ; 1 ; >
+    au < exists ; exists ; 1815 ; Proceedings of the Royal Society of London Volume 2 ; 2 ; >
+    au < exists ; exists ; 1830 ; Proceedings of the Royal Society of London Volume 3 ; 3 ; >
+    au < exists ; exists ; 1837 ; Proceedings of the Royal Society of London Volume 4 ; 4 ; >
+    au < exists ; exists ; 1843 ; Proceedings of the Royal Society of London Volume 5 ; 5 ; >
+    au < exists ; exists ; 1850 ; Proceedings of the Royal Society of London Volume 6 ; 6 ; >
+    au < exists ; exists ; 1854 ; Proceedings of the Royal Society of London Volume 7 ; 7 ; >
+    au < exists ; exists ; 1856 ; Proceedings of the Royal Society of London Volume 8 ; 8 ; >
+    au < exists ; exists ; 1857 ; Proceedings of the Royal Society of London Volume 9 ; 9 ; >
+    au < exists ; exists ; 1859 ; Proceedings of the Royal Society of London Volume 10 ; 10 ; >
+    au < exists ; exists ; 1860 ; Proceedings of the Royal Society of London Volume 11 ; 11 ; >
+    au < exists ; exists ; 1862 ; Proceedings of the Royal Society of London Volume 12 ; 12 ; >
+    au < exists ; exists ; 1863 ; Proceedings of the Royal Society of London Volume 13 ; 13 ; >
+    au < exists ; exists ; 1865 ; Proceedings of the Royal Society of London Volume 14 ; 14 ; >
+    au < exists ; exists ; 1866 ; Proceedings of the Royal Society of London Volume 15 ; 15 ; >
+    au < exists ; exists ; 1867 ; Proceedings of the Royal Society of London Volume 16 ; 16 ; >
+    au < exists ; exists ; 1868 ; Proceedings of the Royal Society of London Volume 17 ; 17 ; >
+    au < exists ; exists ; 1869 ; Proceedings of the Royal Society of London Volume 18 ; 18 ; >
+    au < exists ; exists ; 1870 ; Proceedings of the Royal Society of London Volume 19 ; 19 ; >
+    au < exists ; exists ; 1871 ; Proceedings of the Royal Society of London Volume 20 ; 20 ; >
+    au < exists ; exists ; 1872 ; Proceedings of the Royal Society of London Volume 21 ; 21 ; >
+    au < exists ; exists ; 1873 ; Proceedings of the Royal Society of London Volume 22 ; 22 ; >
+    au < exists ; exists ; 1874 ; Proceedings of the Royal Society of London Volume 23 ; 23 ; >
+    au < exists ; exists ; 1875 ; Proceedings of the Royal Society of London Volume 24 ; 24 ; >
+    au < exists ; exists ; 1876 ; Proceedings of the Royal Society of London Volume 25 ; 25 ; >
+    au < exists ; exists ; 1877 ; Proceedings of the Royal Society of London Volume 26 ; 26 ; >
+    au < exists ; exists ; 1878 ; Proceedings of the Royal Society of London Volume 27 ; 27 ; >
+    au < exists ; exists ; 1878 ; Proceedings of the Royal Society of London Volume 28 ; 28 ; >
+    au < exists ; exists ; 1879 ; Proceedings of the Royal Society of London Volume 29 ; 29 ; >
+    au < exists ; exists ; 1879 ; Proceedings of the Royal Society of London Volume 30 ; 30 ; >
+    au < exists ; exists ; 1880 ; Proceedings of the Royal Society of London Volume 31 ; 31 ; >
+    au < exists ; exists ; 1881 ; Proceedings of the Royal Society of London Volume 32 ; 32 ; >
+    au < exists ; exists ; 1881 ; Proceedings of the Royal Society of London Volume 33 ; 33 ; >
+    au < exists ; exists ; 1882 ; Proceedings of the Royal Society of London Volume 34 ; 34 ; >
+    au < exists ; exists ; 1883 ; Proceedings of the Royal Society of London Volume 35 ; 35 ; >
+    au < exists ; exists ; 1883 ; Proceedings of the Royal Society of London Volume 36 ; 36 ; >
+    au < exists ; exists ; 1884 ; Proceedings of the Royal Society of London Volume 37 ; 37 ; >
+    au < exists ; exists ; 1884 ; Proceedings of the Royal Society of London Volume 38 ; 38 ; >
+    au < exists ; exists ; 1885 ; Proceedings of the Royal Society of London Volume 39 ; 39 ; >
+    au < exists ; exists ; 1886 ; Proceedings of the Royal Society of London Volume 40 ; 40 ; >
+    au < exists ; exists ; 1886 ; Proceedings of the Royal Society of London Volume 41 ; 41 ; >
+    au < exists ; exists ; 1887 ; Proceedings of the Royal Society of London Volume 42 ; 42 ; >
+    au < exists ; exists ; 1887 ; Proceedings of the Royal Society of London Volume 43 ; 43 ; >
+    au < exists ; exists ; 1888 ; Proceedings of the Royal Society of London Volume 44 ; 44 ; >
+    au < exists ; exists ; 1888 ; Proceedings of the Royal Society of London Volume 45 ; 45 ; >
+    au < exists ; exists ; 1889 ; Proceedings of the Royal Society of London Volume 46 ; 46 ; >
+    au < exists ; exists ; 1889 ; Proceedings of the Royal Society of London Volume 47 ; 47 ; >
+    au < exists ; exists ; 1890 ; Proceedings of the Royal Society of London Volume 48 ; 48 ; >
+    au < exists ; exists ; 1890 ; Proceedings of the Royal Society of London Volume 49 ; 49 ; >
+    au < exists ; exists ; 1891 ; Proceedings of the Royal Society of London Volume 50 ; 50 ; >
+    au < exists ; exists ; 1892 ; Proceedings of the Royal Society of London Volume 51 ; 51 ; >
+    au < exists ; exists ; 1892 ; Proceedings of the Royal Society of London Volume 52 ; 52 ; >
+    au < exists ; exists ; 1893 ; Proceedings of the Royal Society of London Volume 53 ; 53 ; >
+    au < exists ; exists ; 1893 ; Proceedings of the Royal Society of London Volume 54 ; 54 ; >
+    au < exists ; exists ; 1894 ; Proceedings of the Royal Society of London Volume 55 ; 55 ; >
+    au < exists ; exists ; 1894 ; Proceedings of the Royal Society of London Volume 56 ; 56 ; >
+    au < exists ; exists ; 1894 ; Proceedings of the Royal Society of London Volume 57 ; 57 ; >
+    au < exists ; exists ; 1895 ; Proceedings of the Royal Society of London Volume 58 ; 58 ; >
+    au < exists ; exists ; 1895 ; Proceedings of the Royal Society of London Volume 59 ; 59 ; >
     au < doNotProcess ; doNotProcess ; 1896 ; Proceedings of the Royal Society of London Volume 60 ; 60 ; >
     au < doNotProcess ; doNotProcess ; 1897 ; Proceedings of the Royal Society of London Volume 61 ; 61 ; >
     au < doNotProcess ; doNotProcess ; 1897 ; Proceedings of the Royal Society of London Volume 62 ; 62 ; >
@@ -1677,12 +1742,17 @@
 
     param[journal_id] = rsos
 
+    #2014-2018 processed in HW
     au < doNotProcess ; doNotProcess ; 2014 ; Royal Society Open Science Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Royal Society Open Science Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Royal Society Open Science Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Royal Society Open Science Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Royal Society Open Science Volume 5 ; 5 ; >
+
+    au < manifest ; exists ; 2019 ; Royal Society Open Science Volume 6 ; 6 ; >
     au < frozen ; exists ; 2019 ; Royal Society Open Science Volume 6 ; 2019 ; >
+
+    au < manifest ; exists ; 2020 ; Royal Society Open Science Volume 7 ; 7 ; >
     au < manifest ; exists ; 2020 ; Royal Society Open Science Volume 7 ; 2020 ; >
 
   }
