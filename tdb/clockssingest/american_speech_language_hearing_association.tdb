@@ -43,15 +43,15 @@
       au < manifest ; exists ; 2007 ; American Journal of Audiology Volume 16 ; 16 ; >
       au < manifest ; exists ; 2008 ; American Journal of Audiology Volume 17 ; 17 ; >
       au < manifest ; exists ; 2009 ; American Journal of Audiology Volume 18 ; 18 ; >
-      au < frozen ; exists ; 2010 ; American Journal of Audiology Volume 19 ; 19 ; >
-      au < frozen ; exists ; 2011 ; American Journal of Audiology Volume 20 ; 20 ; >
-      au < frozen ; exists ; 2012 ; American Journal of Audiology Volume 21 ; 21 ; >
-      au < frozen ; exists ; 2013 ; American Journal of Audiology Volume 22 ; 22 ; >
+      au < finished ; manifest ; 2010 ; American Journal of Audiology Volume 19 ; 19 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2011 ; American Journal of Audiology Volume 20 ; 20 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2012 ; American Journal of Audiology Volume 21 ; 21 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2013 ; American Journal of Audiology Volume 22 ; 22 ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2014 ; American Journal of Audiology Volume 23 ; 23 ; >
       au < frozen ; exists ; 2015 ; American Journal of Audiology Volume 24 ; 24 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; American Journal of Audiology Volume 25 ; 25 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; American Journal of Audiology Volume 26 ; 26 ; >
-      au < frozen ; exists ; 2018 ; American Journal of Audiology Volume 27 ; 27 ; >
+      au < finished ; manifest ; 2018 ; American Journal of Audiology Volume 27 ; 27 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2019 ; American Journal of Audiology Volume 28 ; 28 ; >
       au < manifest ; exists ; 2020 ; American Journal of Audiology Volume 29 ; 29 ; >
 
@@ -86,11 +86,11 @@
       au < manifest ; exists ; 2007 ; American Journal of Speech-Language Pathology Volume 16 ; 16 ; >
       au < manifest ; exists ; 2008 ; American Journal of Speech-Language Pathology Volume 17 ; 17 ; >
       au < manifest ; exists ; 2009 ; American Journal of Speech-Language Pathology Volume 18 ; 18 ; >
-      au < frozen ; exists ; 2010 ; American Journal of Speech-Language Pathology Volume 19 ; 19 ; >
-      au < frozen ; exists ; 2011 ; American Journal of Speech-Language Pathology Volume 20 ; 20 ; >
-      au < frozen ; exists ; 2012 ; American Journal of Speech-Language Pathology Volume 21 ; 21 ; >
-      au < frozen ; exists ; 2013 ; American Journal of Speech-Language Pathology Volume 22 ; 22 ; >
-      au < frozen ; exists ; 2014 ; American Journal of Speech-Language Pathology Volume 23 ; 23 ; >
+      au < finished ; manifest ; 2010 ; American Journal of Speech-Language Pathology Volume 19 ; 19 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2011 ; American Journal of Speech-Language Pathology Volume 20 ; 20 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2012 ; American Journal of Speech-Language Pathology Volume 21 ; 21 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2013 ; American Journal of Speech-Language Pathology Volume 22 ; 22 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2014 ; American Journal of Speech-Language Pathology Volume 23 ; 23 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2015 ; American Journal of Speech-Language Pathology Volume 24 ; 24 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; American Journal of Speech-Language Pathology Volume 25 ; 25 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; American Journal of Speech-Language Pathology Volume 26 ; 26 ; >
@@ -267,9 +267,9 @@
       au < manifest ; exists ; 2007 ; Journal of Speech, Language, and Hearing Research Volume 50 ; 50 ; >
       au < manifest ; exists ; 2008 ; Journal of Speech, Language, and Hearing Research Volume 51 ; 51 ; >
       au < manifest ; exists ; 2009 ; Journal of Speech, Language, and Hearing Research Volume 52 ; 52 ; >
-      au < frozen ; exists ; 2010 ; Journal of Speech, Language, and Hearing Research Volume 53 ; 53 ; >
+      au < finished ; manifest ; 2010 ; Journal of Speech, Language, and Hearing Research Volume 53 ; 53 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2011 ; Journal of Speech, Language, and Hearing Research Volume 54 ; 54 ; >
-      au < frozen ; exists ; 2012 ; Journal of Speech, Language, and Hearing Research Volume 55 ; 55 ; >
+      au < finished ; manifest ; 2012 ; Journal of Speech, Language, and Hearing Research Volume 55 ; 55 ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2013 ; Journal of Speech, Language, and Hearing Research Volume 56 ; 56 ; >
       au < frozen ; exists ; 2014 ; Journal of Speech, Language, and Hearing Research Volume 57 ; 57 ; >
       au < frozen ; exists ; 2015 ; Journal of Speech, Language, and Hearing Research Volume 58 ; 58 ; >
@@ -332,7 +332,7 @@
       au < manifest ; exists ; 2007 ; Language, Speech, and Hearing Services in Schools Volume 38 ; 38 ; >
       au < manifest ; exists ; 2008 ; Language, Speech, and Hearing Services in Schools Volume 39 ; 39 ; >
       au < manifest ; exists ; 2009 ; Language, Speech, and Hearing Services in Schools Volume 40 ; 40 ; >
-      au < frozen ; exists ; 2010 ; Language, Speech, and Hearing Services in Schools Volume 41 ; 41 ; >
+      au < finished ; manifest ; 2010 ; Language, Speech, and Hearing Services in Schools Volume 41 ; 41 ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2011 ; Language, Speech, and Hearing Services in Schools Volume 42 ; 42 ; >
       au < frozen ; exists ; 2012 ; Language, Speech, and Hearing Services in Schools Volume 43 ; 43 ; >
       au < frozen ; exists ; 2013 ; Language, Speech, and Hearing Services in Schools Volume 44 ; 44 ; >
@@ -340,7 +340,7 @@
       au < frozen ; exists ; 2015 ; Language, Speech, and Hearing Services in Schools Volume 46 ; 46 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; Language, Speech, and Hearing Services in Schools Volume 47 ; 47 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; Language, Speech, and Hearing Services in Schools Volume 48 ; 48 ; >
-      au < frozen ; exists ; 2018 ; Language, Speech, and Hearing Services in Schools Volume 49 ; 49 ; >
+      au < finished ; manifest ; 2018 ; Language, Speech, and Hearing Services in Schools Volume 49 ; 49 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2019 ; Language, Speech, and Hearing Services in Schools Volume 50 ; 50 ; >
       au < manifest ; exists ; 2020 ; Language, Speech, and Hearing Services in Schools Volume 51 ; 51 ; >
 
@@ -366,7 +366,7 @@
       au < manifest ; exists ; 2007 ; ASHA Leader Volume 12 ; 12 ; >
       au < manifest ; exists ; 2008 ; ASHA Leader Volume 13 ; 13 ; >
       au < manifest ; exists ; 2009 ; ASHA Leader Volume 14 ; 14 ; >
-      au < frozen ; exists ; 2010 ; ASHA Leader Volume 15 ; 15 ; >
+      au < finished ; manifest ; 2010 ; ASHA Leader Volume 15 ; 15 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2011 ; ASHA Leader Volume 16 ; 16 ; >
       au < frozen ; exists ; 2012 ; ASHA Leader Volume 17 ; 17 ; >
       au < frozen ; exists ; 2013 ; ASHA Leader Volume 18 ; 18 ; >
@@ -374,7 +374,7 @@
       au < frozen ; exists ; 2015 ; ASHA Leader Volume 20 ; 20 ; >
       au < frozen ; exists ; 2016 ; ASHA Leader Volume 21 ; 21 ; >
       au < frozen ; exists ; 2017 ; ASHA Leader Volume 22 ; 22 ; >
-      au < frozen ; exists ; 2018 ; ASHA Leader Volume 23 ; 23 ; >
+      au < finished ; manifest ; 2018 ; ASHA Leader Volume 23 ; 23 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2019 ; ASHA Leader Volume 24 ; 24 ; >
       au < manifest ; exists ; 2020 ; ASHA Leader Volume 25 ; 25 ; >
   }
