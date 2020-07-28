@@ -39,18 +39,18 @@
       param[journal_abbr] = biyclc
       # no volume published in 2011
 
-      au < finished ; crawling ; 2005 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 1 ; 1 ; https://newprairiepress.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2006 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 2 ; 2 ; https://newprairiepress.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2007 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 3 ; 3 ; https://newprairiepress.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2008 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 4 ; 4 ; https://newprairiepress.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2009 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 5 ; 5 ; https://newprairiepress.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2010 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 6 ; 6 ; https://newprairiepress.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2005 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 1 ; 1 ; https://newprairiepress.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2006 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 2 ; 2 ; https://newprairiepress.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2007 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 3 ; 3 ; https://newprairiepress.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2008 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 4 ; 4 ; https://newprairiepress.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2009 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 5 ; 5 ; https://newprairiepress.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2010 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 6 ; 6 ; https://newprairiepress.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2012 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 7 ; 7 ; http://newprairiepress.org/ ; >
       au < finished ; finished ; 2013 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 8 ; 8 ; http://newprairiepress.org/ ; >
       au < finished ; finished ; 2014 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 9 ; 9 ; http://newprairiepress.org/ ; >
       au < finished ; finished ; 2015 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 10 ; 10 ; http://newprairiepress.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2016 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 11 ; 11 ; http://newprairiepress.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2017 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 12 ; 12 ; https://newprairiepress.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2016 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 11 ; 11 ; http://newprairiepress.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2017 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 12 ; 12 ; https://newprairiepress.org/ ; reingest3.clockss.org:8083 >
 
     }
   }
@@ -146,14 +146,14 @@
       #param[base_url] = http://newprairiepress.org/
       param[journal_abbr] = jft
 
-      au < finished ; crawling ; 2010 ; Journal of Financial Therapy Volume 1 ; 1 ; https://newprairiepress.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2011 ; Journal of Financial Therapy Volume 2 ; 2 ; https://newprairiepress.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2010 ; Journal of Financial Therapy Volume 1 ; 1 ; https://newprairiepress.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2011 ; Journal of Financial Therapy Volume 2 ; 2 ; https://newprairiepress.org/ ; reingest5.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2012 ; Journal of Financial Therapy Volume 3 ; 3 ; https://newprairiepress.org/ ; >
       au < finished ; finished ; 2013 ; Journal of Financial Therapy Volume 4 ; 4 ; http://newprairiepress.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2014 ; Journal of Financial Therapy Volume 5 ; 5 ; http://newprairiepress.org/ ; >
       au < finished ; finished ; 2015 ; Journal of Financial Therapy Volume 6 ; 6 ; http://newprairiepress.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2016 ; Journal of Financial Therapy Volume 7 ; 7 ; http://newprairiepress.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2017 ; Journal of Financial Therapy Volume 8 ; 8 ; http://newprairiepress.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2016 ; Journal of Financial Therapy Volume 7 ; 7 ; http://newprairiepress.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2017 ; Journal of Financial Therapy Volume 8 ; 8 ; http://newprairiepress.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2018 ; Journal of Financial Therapy Volume 9 ; 9 ; https://newprairiepress.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2019 ; Journal of Financial Therapy Volume 10 ; 10 ; https://newprairiepress.org/ ; >
       au < expected ; exists ; 2020 ; Journal of Financial Therapy Volume 11 ; 11 ; https://newprairiepress.org/ ; >
@@ -208,14 +208,14 @@
       #param[base_url] = http://newprairiepress.org/
       param[journal_abbr] = culsproceedings
 
-      au < finished ; crawling ; 2011 ; Kansas Library Association College and University Libraries Section Proceedings Volume 1 ; 1 ; https://newprairiepress.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2011 ; Kansas Library Association College and University Libraries Section Proceedings Volume 1 ; 1 ; https://newprairiepress.org/ ; reingest2.clockss.org:8085 >
       au < doNotProcess ; doNotProcess ; 2012 ; Kansas Library Association College and University Libraries Section Proceedings Volume 2 ; 2 ; https://newprairiepress.org/ ; >
       au < finished ; finished ; 2013 ; Kansas Library Association College and University Libraries Section Proceedings Volume 3 ; 3 ; http://newprairiepress.org/ ; >
       au < finished ; finished ; 2014 ; Kansas Library Association College and University Libraries Section Proceedings Volume 4 ; 4 ; http://newprairiepress.org/ ; >
       au < finished ; finished ; 2015 ; Kansas Library Association College and University Libraries Section Proceedings Volume 5 ; 5 ; http://newprairiepress.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2016 ; Kansas Library Association College and University Libraries Section Proceedings Volume 6 ; 6 ; http://newprairiepress.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2017 ; Kansas Library Association College and University Libraries Section Proceedings Volume 7 ; 7 ; http://newprairiepress.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2018 ; Kansas Library Association College and University Libraries Section Proceedings Volume 8 ; 8 ; https://newprairiepress.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2016 ; Kansas Library Association College and University Libraries Section Proceedings Volume 6 ; 6 ; http://newprairiepress.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2017 ; Kansas Library Association College and University Libraries Section Proceedings Volume 7 ; 7 ; http://newprairiepress.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2018 ; Kansas Library Association College and University Libraries Section Proceedings Volume 8 ; 8 ; https://newprairiepress.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2019 ; Kansas Library Association College and University Libraries Section Proceedings Volume 9 ; 9 ; https://newprairiepress.org/ ; reingest2.clockss.org:8085 >
       au < expected ; exists ; 2020 ; Kansas Library Association College and University Libraries Section Proceedings Volume 10 ; 10 ; https://newprairiepress.org/ ; >
 
@@ -247,18 +247,18 @@
       #param[base_url] = http://newprairiepress.org/
       param[journal_abbr] = ojrrp
 
-      au < finished ; crawling ; 2006 ; Online Journal of Rural Research & Policy Volume 1 ; 1 ; https://newprairiepress.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2007 ; Online Journal of Rural Research & Policy Volume 2 ; 2 ; https://newprairiepress.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2008 ; Online Journal of Rural Research & Policy Volume 3 ; 3 ; https://newprairiepress.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2009 ; Online Journal of Rural Research & Policy Volume 4 ; 4 ; https://newprairiepress.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2010 ; Online Journal of Rural Research & Policy Volume 5 ; 5 ; https://newprairiepress.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2011 ; Online Journal of Rural Research & Policy Volume 6 ; 6 ; https://newprairiepress.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2006 ; Online Journal of Rural Research & Policy Volume 1 ; 1 ; https://newprairiepress.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2007 ; Online Journal of Rural Research & Policy Volume 2 ; 2 ; https://newprairiepress.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2008 ; Online Journal of Rural Research & Policy Volume 3 ; 3 ; https://newprairiepress.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2009 ; Online Journal of Rural Research & Policy Volume 4 ; 4 ; https://newprairiepress.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2010 ; Online Journal of Rural Research & Policy Volume 5 ; 5 ; https://newprairiepress.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2011 ; Online Journal of Rural Research & Policy Volume 6 ; 6 ; https://newprairiepress.org/ ; reingest4.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2012 ; Online Journal of Rural Research & Policy Volume 7 ; 7 ; https://newprairiepress.org/ ; >
       au < finished ; finished ; 2013 ; Online Journal of Rural Research & Policy Volume 8 ; 8 ; http://newprairiepress.org/ ; >
       au < finished ; finished ; 2014 ; Online Journal of Rural Research & Policy Volume 9 ; 9 ; http://newprairiepress.org/ ; >
       au < finished ; finished ; 2015 ; Online Journal of Rural Research & Policy Volume 10 ; 10 ; http://newprairiepress.org/ ; >
-      au < finished ; crawling ; 2016 ; Online Journal of Rural Research & Policy Volume 11 ; 11 ; http://newprairiepress.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2017 ; Online Journal of Rural Research & Policy Volume 12 ; 12 ; http://newprairiepress.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2016 ; Online Journal of Rural Research & Policy Volume 11 ; 11 ; http://newprairiepress.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2017 ; Online Journal of Rural Research & Policy Volume 12 ; 12 ; http://newprairiepress.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2018 ; Online Journal of Rural Research & Policy Volume 13 ; 13 ; http://newprairiepress.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2019 ; Online Journal of Rural Research & Policy Volume 14 ; 14 ; https://newprairiepress.org/ ; >
       au < manifest ; exists ; 2020 ; Online Journal of Rural Research & Policy Volume 15 ; 15 ; https://newprairiepress.org/ ; >
@@ -283,16 +283,16 @@
       au < manifest ; exists ; 2002 ; Transactions of the Burgon Society Volume 2 ; 2 ; https://newprairiepress.org/ ; >
       au < manifest ; exists ; 2003 ; Transactions of the Burgon Society Volume 3 ; 3 ; https://newprairiepress.org/ ; >
       au < manifest ; exists ; 2004 ; Transactions of the Burgon Society Volume 4 ; 4 ; https://newprairiepress.org/ ; >
-      au < finished ; crawling ; 2005 ; Transactions of the Burgon Society Volume 5 ; 5 ; https://newprairiepress.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2006 ; Transactions of the Burgon Society Volume 6 ; 6 ; https://newprairiepress.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2005 ; Transactions of the Burgon Society Volume 5 ; 5 ; https://newprairiepress.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2006 ; Transactions of the Burgon Society Volume 6 ; 6 ; https://newprairiepress.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2007 ; Transactions of the Burgon Society Volume 7 ; 7 ; https://newprairiepress.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2008 ; Transactions of the Burgon Society Volume 8 ; 8 ; https://newprairiepress.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2009 ; Transactions of the Burgon Society Volume 9 ; 9 ; https://newprairiepress.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2010 ; Transactions of the Burgon Society Volume 10 ; 10 ; https://newprairiepress.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2011 ; Transactions of the Burgon Society Volume 11 ; 11 ; https://newprairiepress.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2012 ; Transactions of the Burgon Society Volume 12 ; 12 ; http://newprairiepress.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2014 ; Transactions of the Burgon Society Volume 13 ; 13 ; http://newprairiepress.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; Transactions of the Burgon Society Volume 14 ; 14 ; http://newprairiepress.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2008 ; Transactions of the Burgon Society Volume 8 ; 8 ; https://newprairiepress.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2009 ; Transactions of the Burgon Society Volume 9 ; 9 ; https://newprairiepress.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2010 ; Transactions of the Burgon Society Volume 10 ; 10 ; https://newprairiepress.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2011 ; Transactions of the Burgon Society Volume 11 ; 11 ; https://newprairiepress.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2012 ; Transactions of the Burgon Society Volume 12 ; 12 ; http://newprairiepress.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2014 ; Transactions of the Burgon Society Volume 13 ; 13 ; http://newprairiepress.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; Transactions of the Burgon Society Volume 14 ; 14 ; http://newprairiepress.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; Transactions of the Burgon Society Volume 15 ; 15 ; http://newprairiepress.org/ ; reingest1.clockss.org:8082 >
 
   }
@@ -310,11 +310,11 @@
       param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = advocate
 
-      au < finished ; crawling ; 2011 ; The Advocate Volume 19 ; 19 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2012 ; The Advocate Volume 20 ; 20 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2013-2014 ; The Advocate Volume 21 ; 21 ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2014-2015 ; The Advocate Volume 22 ; 22 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2015-2018 ; The Advocate Volume 23 ; 23 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2011 ; The Advocate Volume 19 ; 19 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2012 ; The Advocate Volume 20 ; 20 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2013-2014 ; The Advocate Volume 21 ; 21 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2014-2015 ; The Advocate Volume 22 ; 22 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2015-2018 ; The Advocate Volume 23 ; 23 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -332,8 +332,8 @@
       param[journal_abbr] = crossingborders
 
       au < finished ; finished ; 2015 ; Crossing Borders: An Undergraduate Journal of Interdisciplinary Scholarship Volume 1 ; 1 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2017 ; Crossing Borders: An Undergraduate Journal of Interdisciplinary Scholarship Volume 2 ; 2 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2018 ; Crossing Borders: An Undergraduate Journal of Interdisciplinary Scholarship Volume 3 ; 3 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2017 ; Crossing Borders: An Undergraduate Journal of Interdisciplinary Scholarship Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2018 ; Crossing Borders: An Undergraduate Journal of Interdisciplinary Scholarship Volume 3 ; 3 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -382,16 +382,16 @@
       au < manifest ; exists ; 2001-2002 ; Educational Considerations Volume 29 ; 29 ; >
       au < manifest ; exists ; 2002-2003 ; Educational Considerations Volume 30 ; 30 ; >
       au < manifest ; exists ; 2003-2004 ; Educational Considerations Volume 31 ; 31 ; >
-      au < finished ; crawling ; 2004-2005 ; Educational Considerations Volume 32 ; 32 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2005-2006 ; Educational Considerations Volume 33 ; 33 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2006-2007 ; Educational Considerations Volume 34 ; 34 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2007-2008 ; Educational Considerations Volume 35 ; 35 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2008-2009 ; Educational Considerations Volume 36 ; 36 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2004-2005 ; Educational Considerations Volume 32 ; 32 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2005-2006 ; Educational Considerations Volume 33 ; 33 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2006-2007 ; Educational Considerations Volume 34 ; 34 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2007-2008 ; Educational Considerations Volume 35 ; 35 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2008-2009 ; Educational Considerations Volume 36 ; 36 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2009-2010 ; Educational Considerations Volume 37 ; 37 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2010-2011 ; Educational Considerations Volume 38 ; 38 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2011-2012 ; Educational Considerations Volume 39 ; 39 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2012-2013 ; Educational Considerations Volume 40 ; 40 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2013-2014 ; Educational Considerations Volume 41 ; 41 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2010-2011 ; Educational Considerations Volume 38 ; 38 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2011-2012 ; Educational Considerations Volume 39 ; 39 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2012-2013 ; Educational Considerations Volume 40 ; 40 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2013-2014 ; Educational Considerations Volume 41 ; 41 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2014-2015 ; Educational Considerations Volume 42 ; 42 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2015-2016 ; Educational Considerations Volume 43 ; 43 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018-2019 ; Educational Considerations Volume 44 ; 44 ; >
