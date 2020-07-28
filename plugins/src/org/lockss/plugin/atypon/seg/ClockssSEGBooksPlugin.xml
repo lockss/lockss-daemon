@@ -22,7 +22,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>41</string>
+    <string>42</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -62,6 +62,10 @@
     <string>application/pdf_filter_factory</string>
     <string>org.lockss.plugin.atypon.seg.SEGPdfFilterFactory</string>
   </entry>
+    <entry>
+        <string>plugin_url_consumer_factory</string>
+        <string>org.lockss.plugin.atypon.seg.SEGUrlConsumerFactory</string>
+    </entry>
   <entry>
   <!--  CLOCKSS does not need this warning message about registering IP addresses -->
     <string>plugin_au_config_user_msg</string>
