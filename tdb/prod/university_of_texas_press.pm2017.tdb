@@ -33,7 +33,7 @@
         au < released ; 2016 ; Asian Music Volume 47 [2016] ; 10859 >
         au < released ; 2017 ; Asian Music Volume 48 [2017] ; 12234 >
         au < released ; 2018 ; Asian Music Volume 49 [2018] ; 13161 >
-        au < ready ; 2019 ; Asian Music Volume 50 [2019] ; 13835 >
+        au < releasing ; 2019 ; Asian Music Volume 50 [2019] ; 13835 >
         au < manifest ; 2020 ; Asian Music Volume 51 [2020] ; 14588 >
 
     }
@@ -107,7 +107,7 @@
         au < released ; 2016 ; Diálogo Volume 19 [2016] ; 11251 >
         au < released ; 2017 ; Diálogo Volume 20 [2017] ; 12616 >
         au < released ; 2018 ; Diálogo Volume 21 [2018] ; 13379 >
-        au < ready ; 2019 ; Diálogo Volume 22 [2019] ; 14073 >
+        au < releasing ; 2019 ; Diálogo Volume 22 [2019] ; 14073 >
 
     }
 
@@ -154,7 +154,7 @@
         au < released ; 2016 ; Information & Culture: A Journal of History Volume 51 [2016] ; 10887 >
         au < released ; 2017 ; Information & Culture: A Journal of History Volume 52 [2017] ; 12285 >
         au < released ; 2018 ; Information & Culture: A Journal of History Volume 53 [2018] ; 13162 >
-        au < ready ; 2019 ; Information & Culture: A Journal of History Volume 54 [2019] ; 13936 >
+        au < releasing ; 2019 ; Information & Culture: A Journal of History Volume 54 [2019] ; 13936 >
 
     }
 
@@ -187,7 +187,7 @@
         au < released ; 2016 ; Journal of Latin American Geography Volume 15 [2016] ; 11106 >
         au < released ; 2017 ; Journal of Latin American Geography Volume 16 [2017] ; 12534 >
         au < released ; 2018 ; Journal of Latin American Geography Volume 17 [2018] ; 13447 >
-        au < ready ; 2019 ; Journal of Latin American Geography Volume 18 [2019] ; 14025 >
+        au < releasing ; 2019 ; Journal of Latin American Geography Volume 18 [2019] ; 14025 >
         au < manifest ; 2020 ; Journal of Latin American Geography Volume 19 [2020] ; 14551 >
 
     }
@@ -221,7 +221,7 @@
         au < released ; 2016 ; Journal of the History of Sexuality Volume 25 [2016] ; 10866 >
         au < released ; 2017 ; Journal of the History of Sexuality Volume 26 [2017] ; 12265 >
         au < released ; 2018 ; Journal of the History of Sexuality Volume 27 [2018] ; 13163 >
-        au < ready ; 2019 ; Journal of the History of Sexuality Volume 28 [2019] ; 13913 >
+        au < releasing ; 2019 ; Journal of the History of Sexuality Volume 28 [2019] ; 13913 >
         au < manifest ; 2020 ; Journal of the History of Sexuality Volume 29 [2020] ; 14562 >
 
     }
@@ -255,7 +255,7 @@
         au < released ; 2016 ; Latin American Music Review Volume 37 [2016] ; 11236 >
         au < released ; 2017 ; Latin American Music Review Volume 38 [2017] ; 12673 >
         au < released ; 2018 ; Latin American Music Review Volume 39 [2018] ; 13597 >
-        au < ready ; 2019 ; Latin American Music Review Volume 40 [2019] ; 14278 >
+        au < releasing ; 2019 ; Latin American Music Review Volume 40 [2019] ; 14278 >
 
     }
 
@@ -279,7 +279,7 @@
         au < released ; 2016 ; Studies in Latin American Popular Culture Volume 34 [2016] ; 11214 >
         au < released ; 2017 ; Studies in Latin American Popular Culture Volume 35 [2017] ; 12667 >
         au < released ; 2018 ; Studies in Latin American Popular Culture Volume 36 [2018] ; 13537 >
-        au < ready ; 2019 ; Studies in Latin American Popular Culture Volume 37 [2019] ; 14265 >
+        au < releasing ; 2019 ; Studies in Latin American Popular Culture Volume 37 [2019] ; 14265 >
 
     }
     
@@ -312,7 +312,7 @@
         au < released ; 2016 ; Texas Studies in Literature and Language Volume 58 [2016] ; 10959 >
         au < released ; 2017 ; Texas Studies in Literature and Language Volume 59 [2017] ; 12375 >
         au < released ; 2018 ; Texas Studies in Literature and Language Volume 60 [2018] ; 13259 >
-        au < ready ; 2019 ; Texas Studies in Literature and Language Volume 61 [2019] ; 13951 >
+        au < releasing ; 2019 ; Texas Studies in Literature and Language Volume 61 [2019] ; 13951 >
         au < manifest ; 2020 ; Texas Studies in Literature and Language Volume 62 [2020] ; 14678 >
 
     }
@@ -333,7 +333,7 @@
         au < released ; 2016 ; The Journal of Individual Psychology Volume 72 [2016] ; 11241 >
         au < released ; 2017 ; The Journal of Individual Psychology Volume 73 [2017] ; 12410 >
         au < released ; 2018 ; The Journal of Individual Psychology Volume 74 [2018] ; 13302 >
-        au < ready ; 2019 ; The Journal of Individual Psychology Volume 75 [2019] ; 13935 >
+        au < releasing ; 2019 ; The Journal of Individual Psychology Volume 75 [2019] ; 13935 >
 
     }
     
@@ -380,8 +380,8 @@
         au < released ; 2017 ; The Velvet Light Trap Number 80 [Fall 2017] ; 12822 >
         au < released ; 2018 ; The Velvet Light Trap Number 81 [Spring 2018] ; 13254 >
         au < released ; 2018 ; The Velvet Light Trap Number 82 [Fall 2018] ; 13648 >
-        au < ready ; 2019 ; The Velvet Light Trap Number 83 [Spring 2019] ; 13956 >
-        au < ready ; 2019 ; The Velvet Light Trap Number 84 [Fall 2019] ; 14366 >
+        au < releasing ; 2019 ; The Velvet Light Trap Number 83 [Spring 2019] ; 13956 >
+        au < releasing ; 2019 ; The Velvet Light Trap Number 84 [Fall 2019] ; 14366 >
         au < manifest ; 2020 ; The Velvet Light Trap Number 85 [Spring 2020] ; 14729 >
 
     }
@@ -396,9 +396,9 @@
 
       attr[journal_id] = 758
 
-      au < ready ; 2017 ; US Latino & Latina Oral History Journal Volume 1 [2017] ; 14430 >
-      au < ready ; 2018 ; US Latino & Latina Oral History Journal Volume 2 [2018] ; 14422 >
-      au < ready ; 2019 ; US Latino & Latina Oral History Journal Volume 3 [2019] ; 14423 >
+      au < releasing ; 2017 ; US Latino & Latina Oral History Journal Volume 1 [2017] ; 14430 >
+      au < releasing ; 2018 ; US Latino & Latina Oral History Journal Volume 2 [2018] ; 14422 >
+      au < releasing ; 2019 ; US Latino & Latina Oral History Journal Volume 3 [2019] ; 14423 >
 
     }
 

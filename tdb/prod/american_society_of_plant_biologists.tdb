@@ -41,11 +41,11 @@
       au < aspb.ASPBDrupalPlugin ; manifest ; 1997 ; The Plant Cell Volume 9 ; 9 >
       au < aspb.ASPBDrupalPlugin ; manifest ; 1998 ; The Plant Cell Volume 10 ; 10 >
       au < aspb.ASPBDrupalPlugin ; manifest ; 1999 ; The Plant Cell Volume 11 ; 11 >
-      au < aspb.ASPBDrupalPlugin ; ready ; 2000 ; The Plant Cell Volume 12 ; 12 >
-      au < aspb.ASPBDrupalPlugin ; ready ; 2001 ; The Plant Cell Volume 13 ; 13 >
-      au < aspb.ASPBDrupalPlugin ; ready ; 2002 ; The Plant Cell Volume 14 ; 14 >
-      au < aspb.ASPBDrupalPlugin ; ready ; 2003 ; The Plant Cell Volume 15 ; 15 >
-      au < aspb.ASPBDrupalPlugin ; ready ; 2004 ; The Plant Cell Volume 16 ; 16 >
+      au < aspb.ASPBDrupalPlugin ; releasing ; 2000 ; The Plant Cell Volume 12 ; 12 >
+      au < aspb.ASPBDrupalPlugin ; releasing ; 2001 ; The Plant Cell Volume 13 ; 13 >
+      au < aspb.ASPBDrupalPlugin ; releasing ; 2002 ; The Plant Cell Volume 14 ; 14 >
+      au < aspb.ASPBDrupalPlugin ; releasing ; 2003 ; The Plant Cell Volume 15 ; 15 >
+      au < aspb.ASPBDrupalPlugin ; releasing ; 2004 ; The Plant Cell Volume 16 ; 16 >
       au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; The Plant Cell Volume 17 ; 17 >
       au < HighWireStrVolPlugin ; down ; 2006 ; The Plant Cell Volume 18 ; 18 >
       au < HighWirePressPlugin ; superseded ; 2006 ; The Plant Cell Volume 18 [superseded] ; 18 >
@@ -203,21 +203,21 @@
     au < aspb.ASPBDrupalPlugin ; manifest ; 1999 ; Plant Physiology Volume 119 ; 119 >
     au < aspb.ASPBDrupalPlugin ; manifest ; 1999 ; Plant Physiology Volume 120 ; 120 >
     au < aspb.ASPBDrupalPlugin ; manifest ; 1999 ; Plant Physiology Volume 121 ; 121 >
-    au < aspb.ASPBDrupalPlugin ; ready ; 2000 ; Plant Physiology Volume 122 ; 122 >
-    au < aspb.ASPBDrupalPlugin ; ready ; 2000 ; Plant Physiology Volume 123 ; 123 >
-    au < aspb.ASPBDrupalPlugin ; ready ; 2000 ; Plant Physiology Volume 124 ; 124 >
-    au < aspb.ASPBDrupalPlugin ; ready ; 2001 ; Plant Physiology Volume 125 ; 125 >
-    au < aspb.ASPBDrupalPlugin ; ready ; 2001 ; Plant Physiology Volume 126 ; 126 >
-    au < aspb.ASPBDrupalPlugin ; ready ; 2001 ; Plant Physiology Volume 127 ; 127 >
-    au < aspb.ASPBDrupalPlugin ; ready ; 2002 ; Plant Physiology Volume 128 ; 128 >
-    au < aspb.ASPBDrupalPlugin ; ready ; 2002 ; Plant Physiology Volume 129 ; 129 >
-    au < aspb.ASPBDrupalPlugin ; ready ; 2002 ; Plant Physiology Volume 130 ; 130 >
-    au < aspb.ASPBDrupalPlugin ; ready ; 2003 ; Plant Physiology Volume 131 ; 131 >
-    au < aspb.ASPBDrupalPlugin ; ready ; 2003 ; Plant Physiology Volume 132 ; 132 >
-    au < aspb.ASPBDrupalPlugin ; ready ; 2003 ; Plant Physiology Volume 133 ; 133 >
-    au < aspb.ASPBDrupalPlugin ; ready ; 2004 ; Plant Physiology Volume 134 ; 134 >
-    au < aspb.ASPBDrupalPlugin ; ready ; 2004 ; Plant Physiology Volume 135 ; 135 >
-    au < aspb.ASPBDrupalPlugin ; ready ; 2004 ; Plant Physiology Volume 136 ; 136 >
+    au < aspb.ASPBDrupalPlugin ; releasing ; 2000 ; Plant Physiology Volume 122 ; 122 >
+    au < aspb.ASPBDrupalPlugin ; releasing ; 2000 ; Plant Physiology Volume 123 ; 123 >
+    au < aspb.ASPBDrupalPlugin ; releasing ; 2000 ; Plant Physiology Volume 124 ; 124 >
+    au < aspb.ASPBDrupalPlugin ; releasing ; 2001 ; Plant Physiology Volume 125 ; 125 >
+    au < aspb.ASPBDrupalPlugin ; releasing ; 2001 ; Plant Physiology Volume 126 ; 126 >
+    au < aspb.ASPBDrupalPlugin ; releasing ; 2001 ; Plant Physiology Volume 127 ; 127 >
+    au < aspb.ASPBDrupalPlugin ; releasing ; 2002 ; Plant Physiology Volume 128 ; 128 >
+    au < aspb.ASPBDrupalPlugin ; releasing ; 2002 ; Plant Physiology Volume 129 ; 129 >
+    au < aspb.ASPBDrupalPlugin ; releasing ; 2002 ; Plant Physiology Volume 130 ; 130 >
+    au < aspb.ASPBDrupalPlugin ; releasing ; 2003 ; Plant Physiology Volume 131 ; 131 >
+    au < aspb.ASPBDrupalPlugin ; releasing ; 2003 ; Plant Physiology Volume 132 ; 132 >
+    au < aspb.ASPBDrupalPlugin ; releasing ; 2003 ; Plant Physiology Volume 133 ; 133 >
+    au < aspb.ASPBDrupalPlugin ; releasing ; 2004 ; Plant Physiology Volume 134 ; 134 >
+    au < aspb.ASPBDrupalPlugin ; releasing ; 2004 ; Plant Physiology Volume 135 ; 135 >
+    au < aspb.ASPBDrupalPlugin ; releasing ; 2004 ; Plant Physiology Volume 136 ; 136 >
     au < HighWireStrVolPlugin ; down ; 2005 ; Plant Physiology Volume 137 ; 137 >
     au < HighWirePressPlugin ; superseded ; 2005 ; Plant Physiology Volume 137 [superseded] ; 137 >
     au < HighWireStrVolPlugin ; down ; 2005 ; Plant Physiology Volume 138 ; 138 >
