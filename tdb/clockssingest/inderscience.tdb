@@ -411,7 +411,7 @@
       param[journal_id] = ijais
 
       au < doNotProcess ; doNotProcess ; 2009-2010 ; International Journal of Adaptive and Innovative Systems Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < boost ; down ; 2014-2019 ; International Journal of Adaptive and Innovative Systems Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; >
+      au < ingNotReady ; down ; 2014-2019 ; International Journal of Adaptive and Innovative Systems Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2020-2021 ; International Journal of Adaptive and Innovative Systems Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; >
 
     }
@@ -1155,7 +1155,7 @@
 
       au < doNotProcess ; doNotProcess ; 2009-2011 ; International Journal of Biomechatronics and Biomedical Robotics Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Biomechatronics and Biomedical Robotics Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
-      au < boost ; down ; 2014-202- ; International Journal of Biomechatronics and Biomedical Robotics Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; >
+      au < ingNotReady ; down ; 2014-202- ; International Journal of Biomechatronics and Biomedical Robotics Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; >
 
     }
 
@@ -4876,7 +4876,7 @@
 
       au < doNotProcess ; doNotProcess ; 2010-2011 ; International Journal of Information Technology, Communications and Convergence Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2012-2013 ; International Journal of Information Technology, Communications and Convergence Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; >
-      au < boost ; down ; 2014-2019 ; International Journal of Information Technology, Communications and Convergence Volume 3 [partial] ; 3 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 > #issue 4 not online yet
+      au < ingNotReady ; down ; 2014-2019 ; International Journal of Information Technology, Communications and Convergence Volume 3 [partial] ; 3 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 > #issue 4 not online yet
 
     }
 
@@ -9448,7 +9448,7 @@
       au < finished ; finished ; 2013-2014 ; International Journal of Transitions and Innovation Systems Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2015 ; International Journal of Transitions and Innovation Systems Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2016 ; International Journal of Transitions and Innovation Systems Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < boost ; down ; 2018-2020 ; International Journal of Transitions and Innovation Systems Volume 6 [partial] ; 6 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 > #issue 4 not online
+      au < ingNotReady ; down ; 2018-2020 ; International Journal of Transitions and Innovation Systems Volume 6 [partial] ; 6 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 > #issue 4 not online
 
     }
 
@@ -10534,7 +10534,7 @@
 
       au < finished ; finished ; 2015-2016 ; International Journal of Supply Chain and Inventory Management Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2017 ; International Journal of Supply Chain and Inventory Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < boost ; exists ; 2018-2020 ; International Journal of Supply Chain and Inventory Management Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
+      au < ingNotReady ; exists ; 2018-2020 ; International Journal of Supply Chain and Inventory Management Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
 
   }
 
