@@ -96,6 +96,10 @@
         <string>org.lockss.plugin.blackquotidian.BlackQuotidianJavaScriptLinkRewriterFactory</string>
     </entry>
     <entry>
+        <string>text/html_link_extractor_factory</string>
+        <string>org.lockss.plugin.blackquotidian.BlackQuotidianHtmlLinkExtractorFactory</string>
+    </entry>
+    <entry>
         <string>au_permitted_host_pattern</string>
         <list>
             <string>use\.typekit\.com</string>
