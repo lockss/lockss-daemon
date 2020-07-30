@@ -32,11 +32,11 @@
     au < annalsfamilymedicine.ClockssAnnalsFamilyMedicineDrupalPlugin ; manifest ; exists ; 2011 ; Annals of Family Medicine Volume 9 ; 9 ; https://www.annfammed.org/ ; >
     au < annalsfamilymedicine.ClockssAnnalsFamilyMedicineDrupalPlugin ; manifest ; exists ; 2012 ; Annals of Family Medicine Volume 10 ; 10 ; https://www.annfammed.org/ ; >
     au < annalsfamilymedicine.ClockssAnnalsFamilyMedicineDrupalPlugin ; manifest ; exists ; 2013 ; Annals of Family Medicine Volume 11 ; 11 ; https://www.annfammed.org/ ; >
-    au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2014 ; Annals of Family Medicine Volume 12 ; 12 ; http://www.annfammed.org/ ; >
-    au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2015 ; Annals of Family Medicine Volume 13 ; 13 ; http://www.annfammed.org/ ; >
-    au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2016 ; Annals of Family Medicine Volume 14 ; 14 ; http://www.annfammed.org/ ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; manifest ; 2014 ; Annals of Family Medicine Volume 12 ; 12 ; http://www.annfammed.org/ ; reingest1.clockss.org:8082 >
+    au < ClockssHighWirePressH20Plugin ; finished ; manifest ; 2015 ; Annals of Family Medicine Volume 13 ; 13 ; http://www.annfammed.org/ ; reingest2.clockss.org:8085 >
+    au < ClockssHighWirePressH20Plugin ; finished ; manifest ; 2016 ; Annals of Family Medicine Volume 14 ; 14 ; http://www.annfammed.org/ ; reingest3.clockss.org:8083 >
     au < ClockssHighWirePressH20Plugin ; deepCrawl ; exists ; 2017 ; Annals of Family Medicine Volume 15 ; 15 ; http://www.annfammed.org/ ; >
-    au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2018 ; Annals of Family Medicine Volume 16 ; 16 ; http://www.annfammed.org/ ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; manifest ; 2018 ; Annals of Family Medicine Volume 16 ; 16 ; http://www.annfammed.org/ ; reingest4.clockss.org:8082 >
     au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2019 ; Annals of Family Medicine Volume 17 [superseded] ; 17 ; http://www.annfammed.org/ ; >
     au < annalsfamilymedicine.ClockssAnnalsFamilyMedicineDrupalPlugin ; manifest ; exists ; 2019 ; Annals of Family Medicine Volume 17 ; 17 ; https://www.annfammed.org/ ; >
     au < annalsfamilymedicine.ClockssAnnalsFamilyMedicineDrupalPlugin ; manifest ; exists ; 2020 ; Annals of Family Medicine Volume 18 ; 18 ; https://www.annfammed.org/ ; >
