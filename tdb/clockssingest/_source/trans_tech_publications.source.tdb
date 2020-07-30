@@ -18,8 +18,8 @@
     hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[year] >
 
-    au < readySource ; finished ; 2017 ; Trans Tech Publications Source Content 2017 ; 2017 >
-    au < readySource ; finished ; 2018 ; Trans Tech Publications Source Content 2018 ; 2018 >
+    au < zapped ; finished ; 2017 ; Trans Tech Publications Source Content 2017 ; 2017 >
+    au < zapped ; finished ; 2018 ; Trans Tech Publications Source Content 2018 ; 2018 >
     au < readySource ; finished ; 2019 ; Trans Tech Publications Source Content 2019 ; 2019 >
 
   }
