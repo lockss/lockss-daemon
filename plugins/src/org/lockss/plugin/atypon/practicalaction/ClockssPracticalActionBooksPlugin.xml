@@ -1,7 +1,8 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>ready</string>
+      <!-- platform move tracked in RT  #10286 -->
+    <string>down</string>
   </entry>
   <!-- https transition enabled -->  
   <entry>
