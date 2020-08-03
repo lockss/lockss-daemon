@@ -636,9 +636,9 @@
     au < frozen ; exists ; 1998 ; Journal on Optimization Volume 8 ; 8 ; https://epubs.siam.org/ ; >
     au < frozen ; exists ; 1999 ; Journal on Optimization Volume 9 ; 9 ; https://epubs.siam.org/ ; >
     au < ready ; exists ; 2000 ; Journal on Optimization Volume 10 ; 10 ; https://epubs.siam.org/ ; >
-    au < crawling ; exists ; 2001 ; Journal on Optimization Volume 11 ; 11 ; https://epubs.siam.org/ ; >
-    au < crawling ; exists ; 2002 ; Journal on Optimization Volume 12 ; 12 ; https://epubs.siam.org/ ; >
-    au < crawling ; exists ; 2003 ; Journal on Optimization Volume 13 ; 13 ; https://epubs.siam.org/ ; >
+    au < frozen ; exists ; 2001 ; Journal on Optimization Volume 11 ; 11 ; https://epubs.siam.org/ ; >
+    au < frozen ; exists ; 2002 ; Journal on Optimization Volume 12 ; 12 ; https://epubs.siam.org/ ; >
+    au < frozen ; exists ; 2003 ; Journal on Optimization Volume 13 ; 13 ; https://epubs.siam.org/ ; >
     au < finished ; manifest ; 2003 ; Journal on Optimization Volume 14 ; 14 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2004 ; Journal on Optimization Volume 15 ; 15 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2005 ; Journal on Optimization Volume 16 ; 16 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
@@ -654,7 +654,7 @@
     au < finished ; manifest ; 2016 ; Journal on Optimization Volume 26 ; 26 ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2017 ; Journal on Optimization Volume 27 ; 27 ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2018 ; Journal on Optimization Volume 28 ; 28 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2019 ; Journal on Optimization Volume 29 ; 29 ; https://epubs.siam.org/ ; >
+    au < frozen ; exists ; 2019 ; Journal on Optimization Volume 29 ; 29 ; https://epubs.siam.org/ ; >
     au < manifest ; exists ; 2020 ; Journal on Optimization Volume 30 ; 30 ; https://epubs.siam.org/ ; >
 
   }
@@ -688,17 +688,17 @@
     {
     param[journal_id] = sjoce3
 
-    au < crawling ; exists ; 1993 ; Journal on Scientific Computing Volume 14 ; 14 ; https://epubs.siam.org/ ; >
-    au < crawling ; exists ; 1994 ; Journal on Scientific Computing Volume 15 ; 15 ; https://epubs.siam.org/ ; >
-    au < crawling ; exists ; 1995 ; Journal on Scientific Computing Volume 16 ; 16 ; https://epubs.siam.org/ ; >
-    au < crawling ; exists ; 1996 ; Journal on Scientific Computing Volume 17 ; 17 ; https://epubs.siam.org/ ; >
-    au < crawling ; exists ; 1997 ; Journal on Scientific Computing Volume 18 ; 18 ; https://epubs.siam.org/ ; >
-    au < crawling ; exists ; 1998 ; Journal on Scientific Computing Volume 19 ; 19 ; https://epubs.siam.org/ ; >
-    au < crawling ; exists ; 1999 ; Journal on Scientific Computing Volume 20 ; 20 ; https://epubs.siam.org/ ; >
-    au < crawling ; exists ; 2000 ; Journal on Scientific Computing Volume 21 ; 21 ; https://epubs.siam.org/ ; >
-    au < crawling ; exists ; 2001 ; Journal on Scientific Computing Volume 22 ; 22 ; https://epubs.siam.org/ ; >
-    au < crawling ; exists ; 2002 ; Journal on Scientific Computing Volume 23 ; 23 ; https://epubs.siam.org/ ; >
-    au < crawling ; exists ; 2003 ; Journal on Scientific Computing Volume 24 ; 24 ; https://epubs.siam.org/ ; >
+    au < frozen ; exists ; 1993 ; Journal on Scientific Computing Volume 14 ; 14 ; https://epubs.siam.org/ ; >
+    au < frozen ; exists ; 1994 ; Journal on Scientific Computing Volume 15 ; 15 ; https://epubs.siam.org/ ; >
+    au < frozen ; exists ; 1995 ; Journal on Scientific Computing Volume 16 ; 16 ; https://epubs.siam.org/ ; >
+    au < frozen ; exists ; 1996 ; Journal on Scientific Computing Volume 17 ; 17 ; https://epubs.siam.org/ ; >
+    au < frozen ; exists ; 1997 ; Journal on Scientific Computing Volume 18 ; 18 ; https://epubs.siam.org/ ; >
+    au < frozen ; exists ; 1998 ; Journal on Scientific Computing Volume 19 ; 19 ; https://epubs.siam.org/ ; >
+    au < frozen ; exists ; 1999 ; Journal on Scientific Computing Volume 20 ; 20 ; https://epubs.siam.org/ ; >
+    au < frozen ; exists ; 2000 ; Journal on Scientific Computing Volume 21 ; 21 ; https://epubs.siam.org/ ; >
+    au < frozen ; exists ; 2001 ; Journal on Scientific Computing Volume 22 ; 22 ; https://epubs.siam.org/ ; >
+    au < frozen ; exists ; 2002 ; Journal on Scientific Computing Volume 23 ; 23 ; https://epubs.siam.org/ ; >
+    au < frozen ; exists ; 2003 ; Journal on Scientific Computing Volume 24 ; 24 ; https://epubs.siam.org/ ; >
     au < finished ; manifest ; 2003 ; Journal on Scientific Computing Volume 25 ; 25 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2004 ; Journal on Scientific Computing Volume 26 ; 26 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2005 ; Journal on Scientific Computing Volume 27 ; 27 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
@@ -750,42 +750,42 @@
 
     param[journal_id] = siread
 
-    au < crawling ; exists ; 1959 ; SIAM Review Volume 1 ; 1 ; https://epubs.siam.org/ ; >
-    au < crawling ; exists ; 1960 ; SIAM Review Volume 2 ; 2 ; https://epubs.siam.org/ ; >
-    au < crawling ; exists ; 1961 ; SIAM Review Volume 3 ; 3 ; https://epubs.siam.org/ ; >
-    au < crawling ; exists ; 1962 ; SIAM Review Volume 4 ; 4 ; https://epubs.siam.org/ ; >
-    au < crawling ; exists ; 1963 ; SIAM Review Volume 5 ; 5 ; https://epubs.siam.org/ ; >
-    au < crawling ; exists ; 1964 ; SIAM Review Volume 6 ; 6 ; https://epubs.siam.org/ ; >
-    au < crawling ; exists ; 1965 ; SIAM Review Volume 7 ; 7 ; https://epubs.siam.org/ ; >
-    au < crawling ; exists ; 1966 ; SIAM Review Volume 8 ; 8 ; https://epubs.siam.org/ ; >
-    au < crawling ; exists ; 1967 ; SIAM Review Volume 9 ; 9 ; https://epubs.siam.org/ ; >
-    au < crawling ; exists ; 1968 ; SIAM Review Volume 10 ; 10 ; https://epubs.siam.org/ ; >
-    au < crawling ; exists ; 1969 ; SIAM Review Volume 11 ; 11 ; https://epubs.siam.org/ ; >
-    au < crawling ; exists ; 1970 ; SIAM Review Volume 12 ; 12 ; https://epubs.siam.org/ ; >
+    au < frozen ; exists ; 1959 ; SIAM Review Volume 1 ; 1 ; https://epubs.siam.org/ ; >
+    au < frozen ; exists ; 1960 ; SIAM Review Volume 2 ; 2 ; https://epubs.siam.org/ ; >
+    au < frozen ; exists ; 1961 ; SIAM Review Volume 3 ; 3 ; https://epubs.siam.org/ ; >
+    au < frozen ; exists ; 1962 ; SIAM Review Volume 4 ; 4 ; https://epubs.siam.org/ ; >
+    au < frozen ; exists ; 1963 ; SIAM Review Volume 5 ; 5 ; https://epubs.siam.org/ ; >
+    au < frozen ; exists ; 1964 ; SIAM Review Volume 6 ; 6 ; https://epubs.siam.org/ ; >
+    au < frozen ; exists ; 1965 ; SIAM Review Volume 7 ; 7 ; https://epubs.siam.org/ ; >
+    au < frozen ; exists ; 1966 ; SIAM Review Volume 8 ; 8 ; https://epubs.siam.org/ ; >
+    au < frozen ; exists ; 1967 ; SIAM Review Volume 9 ; 9 ; https://epubs.siam.org/ ; >
+    au < frozen ; exists ; 1968 ; SIAM Review Volume 10 ; 10 ; https://epubs.siam.org/ ; >
+    au < frozen ; exists ; 1969 ; SIAM Review Volume 11 ; 11 ; https://epubs.siam.org/ ; >
+    au < frozen ; exists ; 1970 ; SIAM Review Volume 12 ; 12 ; https://epubs.siam.org/ ; >
     au < ready ; exists ; 1971 ; SIAM Review Volume 13 ; 13 ; https://epubs.siam.org/ ; >
-    au < crawling ; exists ; 1972 ; SIAM Review Volume 14 ; 14 ; https://epubs.siam.org/ ; >
-    au < crawling ; exists ; 1973 ; SIAM Review Volume 15 ; 15 ; https://epubs.siam.org/ ; >
-    au < crawling ; exists ; 1974 ; SIAM Review Volume 16 ; 16 ; https://epubs.siam.org/ ; >
-    au < crawling ; exists ; 1975 ; SIAM Review Volume 17 ; 17 ; https://epubs.siam.org/ ; >
-    au < crawling ; exists ; 1976 ; SIAM Review Volume 18 ; 18 ; https://epubs.siam.org/ ; >
-    au < crawling ; exists ; 1977 ; SIAM Review Volume 19 ; 19 ; https://epubs.siam.org/ ; >
-    au < crawling ; exists ; 1978 ; SIAM Review Volume 20 ; 20 ; https://epubs.siam.org/ ; >
-    au < crawling ; exists ; 1979 ; SIAM Review Volume 21 ; 21 ; https://epubs.siam.org/ ; >
-    au < crawling ; exists ; 1980 ; SIAM Review Volume 22 ; 22 ; https://epubs.siam.org/ ; >
-    au < crawling ; exists ; 1981 ; SIAM Review Volume 23 ; 23 ; https://epubs.siam.org/ ; >
-    au < crawling ; exists ; 1982 ; SIAM Review Volume 24 ; 24 ; https://epubs.siam.org/ ; >
-    au < crawling ; exists ; 1983 ; SIAM Review Volume 25 ; 25 ; https://epubs.siam.org/ ; >
-    au < crawling ; exists ; 1984 ; SIAM Review Volume 26 ; 26 ; https://epubs.siam.org/ ; >
-    au < crawling ; exists ; 1985 ; SIAM Review Volume 27 ; 27 ; https://epubs.siam.org/ ; >
-    au < crawling ; exists ; 1986 ; SIAM Review Volume 28 ; 28 ; https://epubs.siam.org/ ; >
-    au < crawling ; exists ; 1987 ; SIAM Review Volume 29 ; 29 ; https://epubs.siam.org/ ; >
-    au < crawling ; exists ; 1988 ; SIAM Review Volume 30 ; 30 ; https://epubs.siam.org/ ; >
-    au < crawling ; exists ; 1989 ; SIAM Review Volume 31 ; 31 ; https://epubs.siam.org/ ; >
-    au < crawling ; exists ; 1990 ; SIAM Review Volume 32 ; 32 ; https://epubs.siam.org/ ; >
-    au < crawling ; exists ; 1991 ; SIAM Review Volume 33 ; 33 ; https://epubs.siam.org/ ; >
-    au < crawling ; exists ; 1992 ; SIAM Review Volume 34 ; 34 ; https://epubs.siam.org/ ; >
-    au < crawling ; exists ; 1993 ; SIAM Review Volume 35 ; 35 ; https://epubs.siam.org/ ; >
-    au < crawling ; exists ; 1994 ; SIAM Review Volume 36 ; 36 ; https://epubs.siam.org/ ; >
+    au < frozen ; exists ; 1972 ; SIAM Review Volume 14 ; 14 ; https://epubs.siam.org/ ; >
+    au < frozen ; exists ; 1973 ; SIAM Review Volume 15 ; 15 ; https://epubs.siam.org/ ; >
+    au < frozen ; exists ; 1974 ; SIAM Review Volume 16 ; 16 ; https://epubs.siam.org/ ; >
+    au < frozen ; exists ; 1975 ; SIAM Review Volume 17 ; 17 ; https://epubs.siam.org/ ; >
+    au < frozen ; exists ; 1976 ; SIAM Review Volume 18 ; 18 ; https://epubs.siam.org/ ; >
+    au < frozen ; exists ; 1977 ; SIAM Review Volume 19 ; 19 ; https://epubs.siam.org/ ; >
+    au < frozen ; exists ; 1978 ; SIAM Review Volume 20 ; 20 ; https://epubs.siam.org/ ; >
+    au < frozen ; exists ; 1979 ; SIAM Review Volume 21 ; 21 ; https://epubs.siam.org/ ; >
+    au < frozen ; exists ; 1980 ; SIAM Review Volume 22 ; 22 ; https://epubs.siam.org/ ; >
+    au < frozen ; exists ; 1981 ; SIAM Review Volume 23 ; 23 ; https://epubs.siam.org/ ; >
+    au < frozen ; exists ; 1982 ; SIAM Review Volume 24 ; 24 ; https://epubs.siam.org/ ; >
+    au < frozen ; exists ; 1983 ; SIAM Review Volume 25 ; 25 ; https://epubs.siam.org/ ; >
+    au < frozen ; exists ; 1984 ; SIAM Review Volume 26 ; 26 ; https://epubs.siam.org/ ; >
+    au < frozen ; exists ; 1985 ; SIAM Review Volume 27 ; 27 ; https://epubs.siam.org/ ; >
+    au < frozen ; exists ; 1986 ; SIAM Review Volume 28 ; 28 ; https://epubs.siam.org/ ; >
+    au < frozen ; exists ; 1987 ; SIAM Review Volume 29 ; 29 ; https://epubs.siam.org/ ; >
+    au < frozen ; exists ; 1988 ; SIAM Review Volume 30 ; 30 ; https://epubs.siam.org/ ; >
+    au < frozen ; exists ; 1989 ; SIAM Review Volume 31 ; 31 ; https://epubs.siam.org/ ; >
+    au < frozen ; exists ; 1990 ; SIAM Review Volume 32 ; 32 ; https://epubs.siam.org/ ; >
+    au < frozen ; exists ; 1991 ; SIAM Review Volume 33 ; 33 ; https://epubs.siam.org/ ; >
+    au < frozen ; exists ; 1992 ; SIAM Review Volume 34 ; 34 ; https://epubs.siam.org/ ; >
+    au < frozen ; exists ; 1993 ; SIAM Review Volume 35 ; 35 ; https://epubs.siam.org/ ; >
+    au < frozen ; exists ; 1994 ; SIAM Review Volume 36 ; 36 ; https://epubs.siam.org/ ; >
     au < manifest ; exists ; 1995 ; SIAM Review Volume 37 ; 37 ; https://epubs.siam.org/ ; >
     au < manifest ; exists ; 1996 ; SIAM Review Volume 38 ; 38 ; https://epubs.siam.org/ ; >
     au < manifest ; exists ; 1997 ; SIAM Review Volume 39 ; 39 ; https://epubs.siam.org/ ; >
