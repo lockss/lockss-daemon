@@ -42,20 +42,20 @@
       >
       #although there is a param[year] it is not used in the crawl rules. So, AUs only need to be specific to volume_name.
 
-      au < manifest ; exists ; 1997 ; 1997 ; Ecology and Society Volume 1 ; 1 ; https://www.ecologyandsociety.org/ ; >
-      au < manifest ; exists ; 1998 ; 1998 ; Ecology and Society Volume 2 ; 2 ; https://www.ecologyandsociety.org/ ; >
-      au < manifest ; exists ; 1999 ; 1999 ; Ecology and Society Volume 3 ; 3 ; https://www.ecologyandsociety.org/ ; >
-      au < manifest ; exists ; 2000 ; 2000 ; Ecology and Society Volume 4 ; 4 ; https://www.ecologyandsociety.org/ ; >
-      au < manifest ; exists ; 2001 ; 2001 ; Ecology and Society Volume 5 ; 5 ; https://www.ecologyandsociety.org/ ; >
-      au < manifest ; exists ; 2002 ; 2002 ; Ecology and Society Volume 6 ; 6 ; https://www.ecologyandsociety.org/ ; >
-      au < manifest ; exists ; 2003 ; 2003 ; Ecology and Society Volume 7 ; 7 ; https://www.ecologyandsociety.org/ ; >
-      au < manifest ; exists ; 2003 ; 2003 ; Ecology and Society Volume 8 ; 8 ; https://www.ecologyandsociety.org/ ; >
-      au < manifest ; exists ; 2004 ; 2004 ; Ecology and Society Volume 9 ; 9 ; https://www.ecologyandsociety.org/ ; >
-      au < manifest ; exists ; 2005 ; 2005 ; Ecology and Society Volume 10 ; 10 ; https://www.ecologyandsociety.org/ ; >
-      au < manifest ; exists ; 2006 ; 2006 ; Ecology and Society Volume 11 ; 11 ; https://www.ecologyandsociety.org/ ; >
-      au < manifest ; exists ; 2007 ; 2007 ; Ecology and Society Volume 12 ; 12 ; https://www.ecologyandsociety.org/ ; >
-      au < manifest ; exists ; 2008 ; 2008 ; Ecology and Society Volume 13 ; 13 ; https://www.ecologyandsociety.org/ ; >
-      au < manifest ; exists ; 2009 ; 2009 ; Ecology and Society Volume 14 ; 14 ; https://www.ecologyandsociety.org/ ; >
+      au < ready ; exists ; 1997 ; 1997 ; Ecology and Society Volume 1 ; 1 ; https://www.ecologyandsociety.org/ ; >
+      au < ready ; exists ; 1998 ; 1998 ; Ecology and Society Volume 2 ; 2 ; https://www.ecologyandsociety.org/ ; >
+      au < ready ; exists ; 1999 ; 1999 ; Ecology and Society Volume 3 ; 3 ; https://www.ecologyandsociety.org/ ; >
+      au < ready ; exists ; 2000 ; 2000 ; Ecology and Society Volume 4 ; 4 ; https://www.ecologyandsociety.org/ ; >
+      au < ready ; exists ; 2001 ; 2001 ; Ecology and Society Volume 5 ; 5 ; https://www.ecologyandsociety.org/ ; >
+      au < ready ; exists ; 2002 ; 2002 ; Ecology and Society Volume 6 ; 6 ; https://www.ecologyandsociety.org/ ; >
+      au < ready ; exists ; 2003 ; 2003 ; Ecology and Society Volume 7 ; 7 ; https://www.ecologyandsociety.org/ ; >
+      au < ready ; exists ; 2003 ; 2003 ; Ecology and Society Volume 8 ; 8 ; https://www.ecologyandsociety.org/ ; >
+      au < ready ; exists ; 2004 ; 2004 ; Ecology and Society Volume 9 ; 9 ; https://www.ecologyandsociety.org/ ; >
+      au < ready ; exists ; 2005 ; 2005 ; Ecology and Society Volume 10 ; 10 ; https://www.ecologyandsociety.org/ ; >
+      au < ready ; exists ; 2006 ; 2006 ; Ecology and Society Volume 11 ; 11 ; https://www.ecologyandsociety.org/ ; >
+      au < ready ; exists ; 2007 ; 2007 ; Ecology and Society Volume 12 ; 12 ; https://www.ecologyandsociety.org/ ; >
+      au < ready ; exists ; 2008 ; 2008 ; Ecology and Society Volume 13 ; 13 ; https://www.ecologyandsociety.org/ ; >
+      au < ready ; exists ; 2009 ; 2009 ; Ecology and Society Volume 14 ; 14 ; https://www.ecologyandsociety.org/ ; >
       au < frozen ; exists ; 2010 ; 2010 ; Ecology and Society Volume 15 ; 15 ; https://www.ecologyandsociety.org/ ; >
       au < frozen ; exists ; 2011 ; 2011 ; Ecology and Society Volume 16 ; 16 ; https://www.ecologyandsociety.org/ ; >
       au < frozen ; exists ; 2012 ; 2012 ; Ecology and Society Volume 17 ; 17 ; https://www.ecologyandsociety.org/ ; >
