@@ -131,6 +131,13 @@
       <string>1,"^https?://%s/na[0-9]+/home/literatum/publisher/[^/]+/journals/[^/]+/%s/", url_host(base_url), journal_id</string>
       <!--royal society publishing has 'year' in their toc url: https://royalsocietypublishing.org/toc/rsos/2019/6/10-->
       <string>1,"^https?://%s/toc/%s(\.[0-9]+)?(/\d+)?/%s($|/)", url_host(base_url), journal_id, volume_name</string>
+      <!--
+         https://royalsocietypublishing.org/toc/rspa/2019/475/2232
+         https://royalsocietypublishing.org/toc/rsta/2019/377/2161
+         https://royalsocietypublishing.org/toc/rspb/2019/286/1894
+         https://royalsocietypublishing.org/toc/rstb/2019/374/1763
+      -->
+      <string>1,"^https?://%s/toc/%s([^/]+)?(/\d+)?/%s($|/)", url_host(base_url), journal_id, volume_name</string>
       <string>2,"^https?://%s/doi/([^/]+/)?[0-9.]+/(null\?|[-.9]+$)", url_host(base_url)</string>
       <string>2,"^https?://%s/doi/.*\?(prevSearch=|queryID=%%24%%7BresultBean.queryID%%7D|tab=permissions)", url_host(base_url)</string>
       <!--

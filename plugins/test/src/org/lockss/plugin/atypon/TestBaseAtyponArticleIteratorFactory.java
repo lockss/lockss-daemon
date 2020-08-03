@@ -120,10 +120,12 @@ public class TestBaseAtyponArticleIteratorFactory extends ArticleIteratorTestCas
     Pattern pat = getPattern(artIter);
     
     // we match to doi/(full|pdf|pdfplus)
-    assertMatchesRE(pat, "http://www.baseatypon.org/doi/pdf/10.1137/100818522"); 
+    assertMatchesRE(pat, "http://www.baseatypon.org/doi/pdf/10.1137/100818522");
+    assertMatchesRE(pat, "http://www.baseatypon.org/doi/epdf/10.1137/100818522");
     assertNotMatchesRE(pat, "http://www.baseatypon.org/doi/abs/10.1137/100818522");
     assertMatchesRE(pat, "http://www.baseatypon.org/doi/full/10.1137/100818522");
     assertMatchesRE(pat, "http://www.baseatypon.org/doi/pdfplus/10.1137/100818522");
+    assertMatchesRE(pat, "http://www.baseatypon.org/doi/epdfplus/10.1137/100818522");
     // prefix of DOI can have additional dots
     assertMatchesRE(pat, "http://www.baseatypon.org/doi/full/10.1137.12.13/100818522");
     // PATTERN will allow this but actual article pattern matches will not allow "/" in 2nd part of DOI

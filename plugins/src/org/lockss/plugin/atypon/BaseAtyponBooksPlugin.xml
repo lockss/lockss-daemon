@@ -18,7 +18,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>41</string>
+    <string>42</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -39,7 +39,7 @@
       </entry>
       <entry>
         <string>Substance</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
     </map>
   </entry>
@@ -73,6 +73,8 @@
     image access: <base>/action/showPopup?citid=citart1&id=ch1-f1.1&doi=10.2217%2Febo.11.115
     citation extraction page: <base>/action/showCitFormats?doi=10.2217%2F9781780840246
     citation RIS page (normalized by us): <base>/action/downloadCitation?doi=10.2217/ebo.11.122&format=ris&include=cit
+
+     Some publisher changed their folder name from "pdf" to "epdf". July/2020
      -->
     <list>
       <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)(_v[0-9]+)?$", url_host(base_url)</string>
@@ -80,7 +82,7 @@
       <string>1,"^https?://%s\.global\.prod\.fastly\.net/[^?]*\.(css|gif|jpe?g|js|png)$", url_host(base_url)</string>
       <string>2,"^https?://%s/doi/[^/]+/[0-9.]+/(null\?|[-.9]+$)", url_host(base_url)</string>
       <string>1,"^https?://%s/doi/book/[0-9.]+/", url_host(base_url)</string>
-      <string>1,"^https?://%s/doi/(abs|full|pdf|pdfplus|ref)/[0-9.]+/", url_host(base_url)</string>
+      <string>1,"^https?://%s/doi/(abs|full|e?pdf|e?pdfplus|ref)/[0-9.]+/", url_host(base_url)</string>
       <string>1,"^https?://%s/action/(showImage|showFullPopup|showCitFormats|showSupplements|showMediaPlayer|showPopup)\?([^=]+=[^&amp;]+&amp;)*doi=", url_host(base_url)</string>
       <string>1,"^https?://%s/action/downloadCitation\?doi=.*&amp;format=ris&amp;include=(cit|abs)$", url_host(base_url)</string>
     </list>
@@ -111,7 +113,7 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^https?://%s/doi/(pdf|pdfplus|full)/[.0-9]+/[^\?&amp;]+$", url_host(base_url)</string>
+      <string>"^https?://%s/doi/(e?pdf|e?pdfplus|full)/[.0-9]+/[^\?&amp;]+$", url_host(base_url)</string>
     </list>
   </entry>
   <entry>
@@ -168,7 +170,7 @@
   <entry>
     <string>au_url_mime_validation_map</string>
     <list>
-      <string>/doi/pdf(plus)?/, application/pdf</string>
+      <string>/doi/e?pdf(plus)?/, application/pdf</string>
       <string>/doi/(abs|full)/, text/html</string>
     </list>
   </entry>

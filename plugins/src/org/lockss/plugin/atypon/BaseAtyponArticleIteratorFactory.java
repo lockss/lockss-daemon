@@ -66,16 +66,18 @@ ArticleMetadataExtractorFactory {
   
   // Only put the 'abs' in the pattern if used for primary; otherwise builder spews errors
   private static final String DEFAULT_PATTERN_TEMPLATE_WITH_ABSTRACT = 
-      "\"^%sdoi/((abs|full|pdf|pdfplus)/)?[.0-9]+/\", base_url";
+      "\"^%sdoi/((abs|full|e?pdf|e?pdfplus)/)?[.0-9]+/\", base_url";
   private static final String DEFAULT_PATTERN_TEMPLATE = 
-      "\"^%sdoi/((full|pdf|pdfplus)/)?[.0-9]+/\", base_url";
+      "\"^%sdoi/((full|e?pdf|e?pdfplus)/)?[.0-9]+/\", base_url";
 
   // various aspects of an article
   // DOI's can have "/"s in the suffix
   private static final Pattern PDF_PATTERN = Pattern.compile("/doi/pdf/([.0-9]+)/([^?&]+)$", Pattern.CASE_INSENSITIVE);
+  private static final Pattern EPDF_PATTERN = Pattern.compile("/doi/epdf/([.0-9]+)/([^?&]+)$", Pattern.CASE_INSENSITIVE);
   private static final Pattern ABSTRACT_PATTERN = Pattern.compile("/doi/abs/([.0-9]+)/([^?&]+)$", Pattern.CASE_INSENSITIVE);
   private static final Pattern HTML_PATTERN = Pattern.compile("/doi/full/([.0-9]+)/([^?&]+)$", Pattern.CASE_INSENSITIVE);
   private static final Pattern PDFPLUS_PATTERN = Pattern.compile("/doi/pdfplus/([.0-9]+)/([^?&]+)$", Pattern.CASE_INSENSITIVE);
+  private static final Pattern EPDFPLUS_PATTERN = Pattern.compile("/doi/epdfplus/([.0-9]+)/([^?&]+)$", Pattern.CASE_INSENSITIVE);
   private static final Pattern DOI_PATTERN = Pattern.compile("/doi/([.0-9]+)/([^?&]+)$", Pattern.CASE_INSENSITIVE);
 
   // how to change from one form (aspect) of article to another
@@ -83,6 +85,8 @@ ArticleMetadataExtractorFactory {
   private static final String ABSTRACT_REPLACEMENT = "/doi/abs/$1/$2";
   private static final String PDF_REPLACEMENT = "/doi/pdf/$1/$2";
   private static final String PDFPLUS_REPLACEMENT = "/doi/pdfplus/$1/$2";
+  private static final String EPDF_REPLACEMENT = "/doi/epdf/$1/$2";
+  private static final String EPDFPLUS_REPLACEMENT = "/doi/epdfplus/$1/$2";
   // in support of books, this is equivalent of full book abstract (landing page)
   private static final String BOOK_REPLACEMENT = "/doi/book/$1/$2";
   private static final String DOI_REPLACEMENT = "/doi/$1/$2";
@@ -148,10 +152,19 @@ ArticleMetadataExtractorFactory {
         PDF_REPLACEMENT,
         ArticleFiles.ROLE_FULL_TEXT_PDF);
 
+    builder.addAspect(EPDF_PATTERN,
+            EPDF_REPLACEMENT,
+            ArticleFiles.ROLE_FULL_TEXT_PDF);
+
+
     // set up PDFPLUS to be an aspect that will trigger an ArticleFiles
     builder.addAspect(PDFPLUS_PATTERN,
         PDFPLUS_REPLACEMENT,
-        ROLE_PDFPLUS); 
+        ROLE_PDFPLUS);
+
+    builder.addAspect(EPDFPLUS_PATTERN,
+            EPDFPLUS_REPLACEMENT,
+            ROLE_PDFPLUS);
 
     // set up full text html to be an aspect that will trigger an ArticleFiles
     builder.addAspect(HTML_PATTERN,
