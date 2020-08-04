@@ -5,7 +5,7 @@
     info[contract] = 2011 ;
     info[tester] = 5 ;
     info[poller] = 3 ;
-    comment[platform] = Atypon
+    comment[platform] = Pub2Web/Ingenta
     
   >
   
@@ -32,6 +32,18 @@
   {
   
     title <
+      name = Arabian Journal of Scientific Research ;
+      eissn = 2708-0463
+    >
+
+    param[journal_id] = ajsr
+
+      au < exists ; exists ; 2020 ; Arabian Journal of Scientific Research Volume 2020 ; 2020 ; > 
+  }
+
+  {
+  
+    title <
       name = Global Cardiology Science and Practice ;
       eissn = 2305-7823
     >
@@ -46,11 +58,11 @@
       param[journal_id] = gcsp
       #move to Global Cardiology Science and Practice has been published by the Magdi Yacoub Institute
  
-      au < doNotProcess ; doNotProcess ; 2011 ; Aswan Heart Centre: Science and Practice Series Volume 2011 ; 2011 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Global Cardiology Science and Practice Volume 2012 ; 2012 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Global Cardiology Science and Practice Volume 2013 ; 2013 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Global Cardiology Science and Practice Volume 2014 ; 2014 ; > 
       au < doNotProcess ; doNotProcess ; 2015 ; Global Cardiology Science and Practice Volume 2015 ; 2015 ; > 
+      #no longer publishing
       
     }
   }
@@ -63,6 +75,7 @@
     >
     {
       param[journal_id] = avi
+      #no longer publishing
 
       au < doNotProcess ; doNotProcess ; 2010 ; Avicenna Volume 2010 ; 2010 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Avicenna Volume 2011 ; 2011 ; >
@@ -84,6 +97,7 @@
     {
      #plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
       param[journal_id] = cis
+      #no longer publishing
 
       au < doNotProcess ; doNotProcess ; 2010 ; Contemporary Islamic Studies Volume 2010 ; 2010 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Contemporary Islamic Studies Volume 2011 ; 2011 ; >
@@ -101,6 +115,7 @@
 
    #plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
     param[journal_id] = difi
+    #no longer publishing
 
     au < doNotProcess ; doNotProcess ; 2013 ; DIFI Family Research and Proceedings Volume 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; DIFI Family Research and Proceedings Volume 2014 ; 2014 ; >
@@ -117,6 +132,7 @@
 
    #plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
     param[journal_id] = eel
+    #no longer publishing
 
     au < doNotProcess ; doNotProcess ; 2015 ; Engineering Education Letters Volume 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Engineering Education Letters Volume 2017 ; 2017 ; >
@@ -132,6 +148,7 @@
 
    #plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
     param[journal_id] = igmhe
+    #no longer publishing
 
     au < doNotProcess ; doNotProcess ; 2013 ; Innovations in Global Medical and Health Education Volume 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Innovations in Global Medical and Health Education Volume 2014 ; 2014 ; >
@@ -147,6 +164,7 @@
 
    #plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
     param[journal_id] = irl
+    #no longer publishing
     
     au < doNotProcess ; doNotProcess ; 2012 ; International Review of Law Volume 2012 ; 2012 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; International Review of Law Volume 2013 ; 2013 ; >
@@ -174,6 +192,9 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2017 ; 2017 ; >
+    au < exists ; exists ; 2018 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2018 ; 2018 ; >
+    au < exists ; exists ; 2019 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2019 ; 2019 ; >
+    au < exists ; exists ; 2020 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2020 ; 2020 ; >
 
   }
 
@@ -186,6 +207,7 @@
 
    #plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
     param[journal_id] = messa
+    #no longer publishing
 
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Georgetown University-Qatar: Middle Eastern Studies Student Association Volume 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Georgetown University-Qatar: Middle Eastern Studies Student Association Volume 2015 ; 2015 ; >
@@ -204,6 +226,7 @@
 
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Information Studies & Technology Volume 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Journal of Information Studies & Technology Volume 2019 ; 2019 ; >
+    au < exists ; exists ; 2020 ; Journal of Information Studies & Technology Volume 2020 ; 2020 ; >
 
   }
   
@@ -233,9 +256,7 @@
    #plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
     param[journal_id] = jlghs
 
-    au < doNotProcess ; doNotProcess ; 2012 ; Journal of Local and Global Health Science Volume 2012 ; 2012 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Journal of Local and Global Health Science Volume 2013 ; 2013 ; >
-    au < doNotProcess ; doNotProcess ; 2014 ; Journal of Local and Global Health Science Volume 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Local and Global Health Science Volume 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Local and Global Health Science Volume 2016 ; 2016 ; >
 
@@ -346,6 +367,9 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Qatar Medical Journal Volume 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Qatar Medical Journal Volume 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Qatar Medical Journal Volume 2017 ; 2017 ; >
+    au < exists ; exists ; 2018 ; Qatar Medical Journal Volume 2018 ; 2018 ; >
+    au < exists ; exists ; 2019 ; Qatar Medical Journal Volume 2019 ; 2019 ; >
+    au < exists ; exists ; 2020 ; Qatar Medical Journal Volume 2020 ; 2020 ; >
 
   }
 
@@ -366,6 +390,8 @@
       au < doNotProcess ; doNotProcess ; 2016 ; QScience Connect Volume 2016 ; 2016 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; QScience Connect Volume 2017 ; 2017 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; QScience Connect Volume 2018 ; 2018 ; >
+      au < exists ; exists ; 2019 ; QScience Connect Volume 2019 ; 2019 ; >
+      au < exists ; exists ; 2020 ; QScience Connect Volume 2020 ; 2020 ; >
 
     }
   }
@@ -388,6 +414,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; QScience Proceedings Volume 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; QScience Proceedings Volume 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; QScience Proceedings Volume 2017 ; 2017 ; >
+    au < exists ; exists ; 2018 ; QScience Proceedings Volume 2018 ; 2018 ; >
   }
 
   {
@@ -401,6 +428,8 @@
     param[journal_id] = rolacc
 
     au < doNotProcess ; doNotProcess ; 2018 ; Rule of Law and Anti-Corruption Center Journal Volume 2018 ; 2018 ; >
+    au < exists ; exists ; 2019 ; Rule of Law and Anti-Corruption Center Journal Volume 2019 ; 2019 ; >
+    au < exists ; exists ; 2020 ; Rule of Law and Anti-Corruption Center Journal Volume 2020 ; 2020 ; >
 
   }
   
@@ -413,7 +442,9 @@
 
    #plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
     param[journal_id] = rels
+    comment[journal] = stopped publishing.
 
+    au < exists ; exists ; 2009 ; Religions: A Scholarly Journal Volume 2009 ; 2009 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Religions: A Scholarly Journal Volume 2012 ; 2012 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Religions: A Scholarly Journal Volume 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Religions: A Scholarly Journal Volume 2015 ; 2015 ; >
@@ -447,6 +478,7 @@
 
    #plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
     param[journal_id] = tasmeem
+    comment[journal] = stopped publishing.
 
     au < doNotProcess ; doNotProcess ; 2014 ; Tasmeem Volume 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Tasmeem Volume 2015 ; 2015 ; >
