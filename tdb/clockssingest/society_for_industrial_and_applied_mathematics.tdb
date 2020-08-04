@@ -786,14 +786,14 @@
     au < frozen ; exists ; 1992 ; SIAM Review Volume 34 ; 34 ; https://epubs.siam.org/ ; >
     au < frozen ; exists ; 1993 ; SIAM Review Volume 35 ; 35 ; https://epubs.siam.org/ ; >
     au < frozen ; exists ; 1994 ; SIAM Review Volume 36 ; 36 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1995 ; SIAM Review Volume 37 ; 37 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1996 ; SIAM Review Volume 38 ; 38 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1997 ; SIAM Review Volume 39 ; 39 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1998 ; SIAM Review Volume 40 ; 40 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1999 ; SIAM Review Volume 41 ; 41 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 2000 ; SIAM Review Volume 42 ; 42 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 2001 ; SIAM Review Volume 43 ; 43 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 2002 ; SIAM Review Volume 44 ; 44 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1995 ; SIAM Review Volume 37 ; 37 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1996 ; SIAM Review Volume 38 ; 38 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1997 ; SIAM Review Volume 39 ; 39 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1998 ; SIAM Review Volume 40 ; 40 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1999 ; SIAM Review Volume 41 ; 41 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 2000 ; SIAM Review Volume 42 ; 42 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 2001 ; SIAM Review Volume 43 ; 43 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 2002 ; SIAM Review Volume 44 ; 44 ; https://epubs.siam.org/ ; >
     au < finished ; manifest ; 2003 ; SIAM Review Volume 45 ; 45 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2004 ; SIAM Review Volume 46 ; 46 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2005 ; SIAM Review Volume 47 ; 47 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
@@ -810,7 +810,7 @@
     au < finished ; manifest ; 2016 ; SIAM Review Volume 58 ; 58 ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2017 ; SIAM Review Volume 59 ; 59 ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2018 ; SIAM Review Volume 60 ; 60 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
-    au < manifest ; exists ; 2019 ; SIAM Review Volume 61 ; 61 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 2019 ; SIAM Review Volume 61 ; 61 ; https://epubs.siam.org/ ; >
     au < manifest ; exists ; 2020 ; SIAM Review Volume 62 ; 62 ; https://epubs.siam.org/ ; >
 
   }
@@ -826,52 +826,52 @@
     param[journal_id] = tprbau
     #no volume in 1972
 
-    au < manifest ; exists ; 1956 ; Theory of Probability and its Applications Volume 1 ; 1 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1957 ; Theory of Probability and its Applications Volume 2 ; 2 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1958 ; Theory of Probability and its Applications Volume 3 ; 3 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1959 ; Theory of Probability and its Applications Volume 4 ; 4 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1960 ; Theory of Probability and its Applications Volume 5 ; 5 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1961 ; Theory of Probability and its Applications Volume 6 ; 6 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1962 ; Theory of Probability and its Applications Volume 7 ; 7 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1963 ; Theory of Probability and its Applications Volume 8 ; 8 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1964 ; Theory of Probability and its Applications Volume 9 ; 9 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1965 ; Theory of Probability and its Applications Volume 10 ; 10 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1966 ; Theory of Probability and its Applications Volume 11 ; 11 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1967 ; Theory of Probability and its Applications Volume 12 ; 12 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1968 ; Theory of Probability and its Applications Volume 13 ; 13 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1969 ; Theory of Probability and its Applications Volume 14 ; 14 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1970 ; Theory of Probability and its Applications Volume 15 ; 15 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1971 ; Theory of Probability and its Applications Volume 16 ; 16 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1973 ; Theory of Probability and its Applications Volume 17 ; 17 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1974 ; Theory of Probability and its Applications Volume 18 ; 18 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1975 ; Theory of Probability and its Applications Volume 19 ; 19 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1976 ; Theory of Probability and its Applications Volume 20 ; 20 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1977 ; Theory of Probability and its Applications Volume 21 ; 21 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1978 ; Theory of Probability and its Applications Volume 22 ; 22 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1979 ; Theory of Probability and its Applications Volume 23 ; 23 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1980 ; Theory of Probability and its Applications Volume 24 ; 24 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1981 ; Theory of Probability and its Applications Volume 25 ; 25 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1982 ; Theory of Probability and its Applications Volume 26 ; 26 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1983 ; Theory of Probability and its Applications Volume 27 ; 27 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1984 ; Theory of Probability and its Applications Volume 28 ; 28 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1985 ; Theory of Probability and its Applications Volume 29 ; 29 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1986 ; Theory of Probability and its Applications Volume 30 ; 30 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1987 ; Theory of Probability and its Applications Volume 31 ; 31 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1988 ; Theory of Probability and its Applications Volume 32 ; 32 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1989 ; Theory of Probability and its Applications Volume 33 ; 33 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1990 ; Theory of Probability and its Applications Volume 34 ; 34 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1991 ; Theory of Probability and its Applications Volume 35 ; 35 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1992 ; Theory of Probability and its Applications Volume 36 ; 36 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1993 ; Theory of Probability and its Applications Volume 37 ; 37 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1994 ; Theory of Probability and its Applications Volume 38 ; 38 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1995 ; Theory of Probability and its Applications Volume 39 ; 39 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1996 ; Theory of Probability and its Applications Volume 40 ; 40 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1997 ; Theory of Probability and its Applications Volume 41 ; 41 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1998 ; Theory of Probability and its Applications Volume 42 ; 42 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 1999 ; Theory of Probability and its Applications Volume 43 ; 43 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 2000 ; Theory of Probability and its Applications Volume 44 ; 44 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 2001 ; Theory of Probability and its Applications Volume 45 ; 45 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 2002 ; Theory of Probability and its Applications Volume 46 ; 46 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1956 ; Theory of Probability and its Applications Volume 1 ; 1 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1957 ; Theory of Probability and its Applications Volume 2 ; 2 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1958 ; Theory of Probability and its Applications Volume 3 ; 3 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1959 ; Theory of Probability and its Applications Volume 4 ; 4 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1960 ; Theory of Probability and its Applications Volume 5 ; 5 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1961 ; Theory of Probability and its Applications Volume 6 ; 6 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1962 ; Theory of Probability and its Applications Volume 7 ; 7 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1963 ; Theory of Probability and its Applications Volume 8 ; 8 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1964 ; Theory of Probability and its Applications Volume 9 ; 9 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1965 ; Theory of Probability and its Applications Volume 10 ; 10 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1966 ; Theory of Probability and its Applications Volume 11 ; 11 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1967 ; Theory of Probability and its Applications Volume 12 ; 12 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1968 ; Theory of Probability and its Applications Volume 13 ; 13 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1969 ; Theory of Probability and its Applications Volume 14 ; 14 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1970 ; Theory of Probability and its Applications Volume 15 ; 15 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1971 ; Theory of Probability and its Applications Volume 16 ; 16 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1973 ; Theory of Probability and its Applications Volume 17 ; 17 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1974 ; Theory of Probability and its Applications Volume 18 ; 18 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1975 ; Theory of Probability and its Applications Volume 19 ; 19 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1976 ; Theory of Probability and its Applications Volume 20 ; 20 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1977 ; Theory of Probability and its Applications Volume 21 ; 21 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1978 ; Theory of Probability and its Applications Volume 22 ; 22 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1979 ; Theory of Probability and its Applications Volume 23 ; 23 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1980 ; Theory of Probability and its Applications Volume 24 ; 24 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1981 ; Theory of Probability and its Applications Volume 25 ; 25 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1982 ; Theory of Probability and its Applications Volume 26 ; 26 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1983 ; Theory of Probability and its Applications Volume 27 ; 27 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1984 ; Theory of Probability and its Applications Volume 28 ; 28 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1985 ; Theory of Probability and its Applications Volume 29 ; 29 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1986 ; Theory of Probability and its Applications Volume 30 ; 30 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1987 ; Theory of Probability and its Applications Volume 31 ; 31 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1988 ; Theory of Probability and its Applications Volume 32 ; 32 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1989 ; Theory of Probability and its Applications Volume 33 ; 33 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1990 ; Theory of Probability and its Applications Volume 34 ; 34 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1991 ; Theory of Probability and its Applications Volume 35 ; 35 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1992 ; Theory of Probability and its Applications Volume 36 ; 36 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1993 ; Theory of Probability and its Applications Volume 37 ; 37 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1994 ; Theory of Probability and its Applications Volume 38 ; 38 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1995 ; Theory of Probability and its Applications Volume 39 ; 39 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1996 ; Theory of Probability and its Applications Volume 40 ; 40 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1997 ; Theory of Probability and its Applications Volume 41 ; 41 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1998 ; Theory of Probability and its Applications Volume 42 ; 42 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1999 ; Theory of Probability and its Applications Volume 43 ; 43 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 2000 ; Theory of Probability and its Applications Volume 44 ; 44 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 2001 ; Theory of Probability and its Applications Volume 45 ; 45 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 2002 ; Theory of Probability and its Applications Volume 46 ; 46 ; https://epubs.siam.org/ ; >
     au < finished ; manifest ; 2003 ; Theory of Probability and its Applications Volume 47 ; 47 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2004 ; Theory of Probability and its Applications Volume 48 ; 48 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2005 ; Theory of Probability and its Applications Volume 49 ; 49 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
@@ -916,9 +916,9 @@
 
     param[journal_id] = sjaabq
 
-    au < manifest ; exists ; 2017 ; Journal on Applied Algebra and Geometry Volume 1 ; 1 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 2018 ; Journal on Applied Algebra and Geometry Volume 2 ; 2 ; https://epubs.siam.org/ ; >
-    au < manifest ; exists ; 2019 ; Journal on Applied Algebra and Geometry Volume 3 ; 3 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 2017 ; Journal on Applied Algebra and Geometry Volume 1 ; 1 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 2018 ; Journal on Applied Algebra and Geometry Volume 2 ; 2 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 2019 ; Journal on Applied Algebra and Geometry Volume 3 ; 3 ; https://epubs.siam.org/ ; >
     au < manifest ; exists ; 2020 ; Journal on Applied Algebra and Geometry Volume 4 ; 4 ; https://epubs.siam.org/ ; >
 
   }
