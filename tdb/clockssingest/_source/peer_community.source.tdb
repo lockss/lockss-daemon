@@ -1,0 +1,22 @@
+{
+
+  publisher <
+    name = Peer Community In ;
+    info[contract] = 2020 ;
+    info[tester] = S
+  >
+
+  {
+
+    title <
+      name = Peer Community In
+    >
+
+    plugin = org.lockss.plugin.clockss.peercommunityin.ClockssPeerCommunityInSourcePlugin
+    param[base_url] = https://clockss-test.lockss.org/sourcefiles/pci-released/ # testing url
+    hidden[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[directory] >
+
+    au < manifest ; exists ; 2020 ; Peer Community In Source Content 2020; 2020 >
+  }
+}
