@@ -1,0 +1,22 @@
+{
+
+  publisher <
+    name = American Podiatric Medical Association ;
+    info[contract] = 2020 ;
+    info[tester] = S
+  >
+
+  {
+
+    title <
+      name = American Podiatric Medical Association
+    >
+
+    plugin = org.lockss.plugin.clockss.apma.ClockssAmericanPodiatricMedicalAssociationSourcePlugin
+    param[base_url] = https://clockss-test.lockss.org/sourcefiles/apma-released/ # testing url
+    hidden[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[directory] >
+
+    au < manifest ; exists ; 2020 ; American Podiatric Medical Association Source Content 2020; 2020 >
+  }
+}
