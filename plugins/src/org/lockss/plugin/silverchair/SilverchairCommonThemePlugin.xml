@@ -10,7 +10,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>2</string>
+        <string>3</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -132,8 +132,10 @@
                     <a id="lnkDownloadAllImages" href="//rup.silverchair-cdn.com/DownloadFile/DownloadImage.aspx?image=&amp;PPTtype=SlideSet&amp;ar=132505&amp;xsltPath=~/UI/app/XSLT&amp;siteId=1000003"></a>
                </div>
                https://pubs.geoscienceworld.org/DownloadFile/DownloadImage.aspx?image=https://gsw.silverchair-cdn.com/gsw/Content_public/Journal/gsabulletin/131/1-2/10.1130_B31906.1/2/43f1.png?Expires=2147483647&Signature=EoPKk7ZpE2Yq5ufO-xl-wktspOeT9X4-BjnU8-OUMvvqv9S7fKDze99NsPGpNB6W9EjbER7DFk88iT56GVwtxUMJ3LHU~S5rzTKD-EDqjTDWOSxtNFMgMZ9kNu5OKbJsPQNvXIivlSdnYwxGQDEx0NcCmJZNBRe6OBLthjdrZIlA3Db~hyhBRfnHNK12JmAKZLO3ZqLMzqPaVNndrtnH4f5Hdnxfetu5piPzsX4G2lb7bk36OYUWqx51TyLUUkc3V5sJdetRwG8bqIJVF~x8j4ggu-cvjqURNryYdJ96mKI~Uk8XS6f3JCTdsRTxk~v9eYuHb8MqzbGLLLh7rqe9fg__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA&sec=119615352&ar=546403&xsltPath=~/UI/app/powerpointXslt&imagename=&siteId=69
+               Both of these will generate one page PPT, which are duplication of "View Large Images", exclude them.
             -->
-            <string>2,"%sDownloadFile/DownloadImage.aspx?image=https", base_url</string>
+            <string>2,"%sDownloadFile", base_url</string>
+            <string>2,"^https?://([^/]+\.silverchair-cdn\.com)/DownloadFile"</string>
             <!--
                Exclude the following ppt file
                https://pubs.geoscienceworld.org/downloadimage.aspx?image=&PPTtype=SlideSet&ar=570731&siteId=69
