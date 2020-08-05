@@ -2694,14 +2694,14 @@
       au < finished ; frozen ; 2006 ; 8 ; LIBER Quarterly Volume 2006 ; 2006 ; https://www.liberquarterly.eu/ ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2007 ; 9 ; LIBER Quarterly Volume 2007 ; 2007 ; https://www.liberquarterly.eu/ ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2008 ; 10 ; LIBER Quarterly Volume 2008 ; 2008 ; https://www.liberquarterly.eu/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2009 ; 11 ; LIBER Quarterly Volume 2009 ; 2009 ; https://www.liberquarterly.eu/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2010 ; 12 ; LIBER Quarterly Volume 2010 ; 2010 ; https://www.liberquarterly.eu/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2011 ; 13 ; LIBER Quarterly Volume 2011 ; 2011 ; https://www.liberquarterly.eu/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2012 ; 14 ; LIBER Quarterly Volume 2012 ; 2012 ; https://www.liberquarterly.eu/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2013 ; 15 ; LIBER Quarterly Volume 2013 ; 2013 ; https://www.liberquarterly.eu/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2014 ; 16 ; LIBER Quarterly Volume 2014 ; 2014 ; https://www.liberquarterly.eu/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2015 ; 17 ; LIBER Quarterly Volume 2015 ; 2015 ; https://www.liberquarterly.eu/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2016 ; 18 ; LIBER Quarterly Volume 2016 ; 2016 ; https://www.liberquarterly.eu/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2009 ; 11 ; LIBER Quarterly Volume 2009 ; 2009 ; https://www.liberquarterly.eu/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2010 ; 12 ; LIBER Quarterly Volume 2010 ; 2010 ; https://www.liberquarterly.eu/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2011 ; 13 ; LIBER Quarterly Volume 2011 ; 2011 ; https://www.liberquarterly.eu/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2012 ; 14 ; LIBER Quarterly Volume 2012 ; 2012 ; https://www.liberquarterly.eu/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2013 ; 15 ; LIBER Quarterly Volume 2013 ; 2013 ; https://www.liberquarterly.eu/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2014 ; 16 ; LIBER Quarterly Volume 2014 ; 2014 ; https://www.liberquarterly.eu/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2015 ; 17 ; LIBER Quarterly Volume 2015 ; 2015 ; https://www.liberquarterly.eu/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2016 ; 18 ; LIBER Quarterly Volume 2016 ; 2016 ; https://www.liberquarterly.eu/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; 19 ; LIBER Quarterly Volume 2017 ; 2017 ; https://www.liberquarterly.eu/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2018 ; 20 ; LIBER Quarterly Volume 2018 ; 2018 ; https://www.liberquarterly.eu/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2019 ; 21 ; LIBER Quarterly Volume 2019 ; 2019 ; https://www.liberquarterly.eu/ ; >
@@ -2719,16 +2719,16 @@
       comment[publisher] = Utrecht University Library
 #      param[base_url] = https://www.revue-relief.org/
 
-      au < finished ; crawling ; 2007 ; 1 ; RELIEF Volume 2007 ; 2007 ; https://www.revue-relief.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2007 ; 1 ; RELIEF Volume 2007 ; 2007 ; https://www.revue-relief.org/ ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2008 ; 2 ; RELIEF Volume 2008 ; 2008 ; https://www.revue-relief.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2009 ; 3 ; RELIEF Volume 2009 ; 2009 ; https://www.revue-relief.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2010 ; 4 ; RELIEF Volume 2010 ; 2010 ; https://www.revue-relief.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2011 ; 5 ; RELIEF Volume 2011 ; 2011 ; https://www.revue-relief.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2012 ; 6 ; RELIEF Volume 2012 ; 2012 ; https://www.revue-relief.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2013 ; 7 ; RELIEF Volume 2013 ; 2013 ; https://www.revue-relief.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2014 ; 8 ; RELIEF Volume 2014 ; 2014 ; https://www.revue-relief.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2015 ; 9 ; RELIEF Volume 2015 ; 2015 ; https://www.revue-relief.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2016 ; 10 ; RELIEF Volume 2016 ; 2016 ; https://www.revue-relief.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2009 ; 3 ; RELIEF Volume 2009 ; 2009 ; https://www.revue-relief.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2010 ; 4 ; RELIEF Volume 2010 ; 2010 ; https://www.revue-relief.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2011 ; 5 ; RELIEF Volume 2011 ; 2011 ; https://www.revue-relief.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2012 ; 6 ; RELIEF Volume 2012 ; 2012 ; https://www.revue-relief.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2013 ; 7 ; RELIEF Volume 2013 ; 2013 ; https://www.revue-relief.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2014 ; 8 ; RELIEF Volume 2014 ; 2014 ; https://www.revue-relief.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2015 ; 9 ; RELIEF Volume 2015 ; 2015 ; https://www.revue-relief.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2016 ; 10 ; RELIEF Volume 2016 ; 2016 ; https://www.revue-relief.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; 11 ; RELIEF Volume 2017 ; 2017 ; https://www.revue-relief.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 12 ; RELIEF Volume 2018 ; 2018 ; https://www.revue-relief.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2019 ; 13 ; RELIEF Volume 2019 ; 2019 ; https://www.revue-relief.org/ ; >
@@ -2748,11 +2748,11 @@
 #      param[base_url] = https://www.religionandgender.org/
       #move to Brill in 2019-01-01
 
-      au < finished ; crawling ; 2011 ; 1 ; Religion and Gender Volume 2011 ; 2011 ; https://www.religionandgender.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2012 ; 2 ; Religion and Gender Volume 2012 ; 2012 ; https://www.religionandgender.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2013 ; 3 ; Religion and Gender Volume 2013 ; 2013 ; https://www.religionandgender.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2014 ; 4 ; Religion and Gender Volume 2014 ; 2014 ; https://www.religionandgender.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2015 ; 5 ; Religion and Gender Volume 2015 ; 2015 ; https://www.religionandgender.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2011 ; 1 ; Religion and Gender Volume 2011 ; 2011 ; https://www.religionandgender.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2012 ; 2 ; Religion and Gender Volume 2012 ; 2012 ; https://www.religionandgender.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2013 ; 3 ; Religion and Gender Volume 2013 ; 2013 ; https://www.religionandgender.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2014 ; 4 ; Religion and Gender Volume 2014 ; 2014 ; https://www.religionandgender.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2015 ; 5 ; Religion and Gender Volume 2015 ; 2015 ; https://www.religionandgender.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; 6 ; Religion and Gender Volume 2016 ; 2016 ; https://www.religionandgender.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; 7 ; Religion and Gender Volume 2017 ; 2017 ; https://www.religionandgender.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2018 ; 8 ; Religion and Gender Volume 2018 ; 2018 ; https://www.religionandgender.org/ ; reingest3.clockss.org:8083 >
@@ -2769,15 +2769,15 @@
       comment[publisher] = Utrecht University Library
 #      param[base_url] = http://www.gewina-studium.nl/
 
-      au < finished ; crawling ; 2008 ; 1 ; Studium Volume 2008 ; 2008 ; https://www.gewina-studium.nl/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2009 ; 2 ; Studium Volume 2009 ; 2009 ; https://www.gewina-studium.nl/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2010 ; 3 ; Studium Volume 2010 ; 2010 ; http://www.gewina-studium.nl/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2011 ; 4 ; Studium Volume 2011 ; 2011 ; http://www.gewina-studium.nl/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2012 ; 5 ; Studium Volume 2012 ; 2012 ; http://www.gewina-studium.nl/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2013 ; 6 ; Studium Volume 2013 ; 2013 ; http://www.gewina-studium.nl/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; 7 ; Studium Volume 2014 ; 2014 ; http://www.gewina-studium.nl/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2015 ; 8 ; Studium Volume 2015 ; 2015 ; http://www.gewina-studium.nl/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2016 ; 9 ; Studium Volume 2016 ; 2016 ; http://www.gewina-studium.nl/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2008 ; 1 ; Studium Volume 2008 ; 2008 ; https://www.gewina-studium.nl/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2009 ; 2 ; Studium Volume 2009 ; 2009 ; https://www.gewina-studium.nl/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2010 ; 3 ; Studium Volume 2010 ; 2010 ; http://www.gewina-studium.nl/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2011 ; 4 ; Studium Volume 2011 ; 2011 ; http://www.gewina-studium.nl/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2012 ; 5 ; Studium Volume 2012 ; 2012 ; http://www.gewina-studium.nl/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2013 ; 6 ; Studium Volume 2013 ; 2013 ; http://www.gewina-studium.nl/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; 7 ; Studium Volume 2014 ; 2014 ; http://www.gewina-studium.nl/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2015 ; 8 ; Studium Volume 2015 ; 2015 ; http://www.gewina-studium.nl/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2016 ; 9 ; Studium Volume 2016 ; 2016 ; http://www.gewina-studium.nl/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2017 ; 10 ; Studium Volume 2017 ; 2017 ; http://www.gewina-studium.nl/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2018 ; 11 ; Studium Volume 2018 ; 2018 ; https://www.gewina-studium.nl/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2019 ; 12 ; Studium Volume 2019 ; 2019 ; https://www.gewina-studium.nl/ ; >
@@ -2827,18 +2827,18 @@
       comment[publisher] = Utrecht University Library
 #      param[base_url] = https://www.utrechtlawreview.org/
 
-      au < finished ; crawling ; 2005 ; 1 ; Utrecht Law Review Volume 2005 ; 2005 ; https://www.utrechtlawreview.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2006 ; 2 ; Utrecht Law Review Volume 2006 ; 2006 ; https://www.utrechtlawreview.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2007 ; 3 ; Utrecht Law Review Volume 2007 ; 2007 ; https://www.utrechtlawreview.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2008 ; 4 ; Utrecht Law Review Volume 2008 ; 2008 ; https://www.utrechtlawreview.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2009 ; 5 ; Utrecht Law Review Volume 2009 ; 2009 ; https://www.utrechtlawreview.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2010 ; 6 ; Utrecht Law Review Volume 2010 ; 2010 ; https://www.utrechtlawreview.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2011 ; 7 ; Utrecht Law Review Volume 2011 ; 2011 ; https://www.utrechtlawreview.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2012 ; 8 ; Utrecht Law Review Volume 2012 ; 2012 ; https://www.utrechtlawreview.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2013 ; 9 ; Utrecht Law Review Volume 2013 ; 2013 ; https://www.utrechtlawreview.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; 10 ; Utrecht Law Review Volume 2014 ; 2014 ; https://www.utrechtlawreview.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2015 ; 11 ; Utrecht Law Review Volume 2015 ; 2015 ; https://www.utrechtlawreview.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2016 ; 12 ; Utrecht Law Review Volume 2016 ; 2016 ; https://www.utrechtlawreview.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2005 ; 1 ; Utrecht Law Review Volume 2005 ; 2005 ; https://www.utrechtlawreview.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2006 ; 2 ; Utrecht Law Review Volume 2006 ; 2006 ; https://www.utrechtlawreview.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2007 ; 3 ; Utrecht Law Review Volume 2007 ; 2007 ; https://www.utrechtlawreview.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2008 ; 4 ; Utrecht Law Review Volume 2008 ; 2008 ; https://www.utrechtlawreview.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2009 ; 5 ; Utrecht Law Review Volume 2009 ; 2009 ; https://www.utrechtlawreview.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2010 ; 6 ; Utrecht Law Review Volume 2010 ; 2010 ; https://www.utrechtlawreview.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2011 ; 7 ; Utrecht Law Review Volume 2011 ; 2011 ; https://www.utrechtlawreview.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2012 ; 8 ; Utrecht Law Review Volume 2012 ; 2012 ; https://www.utrechtlawreview.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2013 ; 9 ; Utrecht Law Review Volume 2013 ; 2013 ; https://www.utrechtlawreview.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; 10 ; Utrecht Law Review Volume 2014 ; 2014 ; https://www.utrechtlawreview.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2015 ; 11 ; Utrecht Law Review Volume 2015 ; 2015 ; https://www.utrechtlawreview.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2016 ; 12 ; Utrecht Law Review Volume 2016 ; 2016 ; https://www.utrechtlawreview.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; 13 ; Utrecht Law Review Volume 2017 ; 2017 ; https://www.utrechtlawreview.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 14 ; Utrecht Law Review Volume 2018 ; 2018 ; https://www.utrechtlawreview.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2019 ; 15 ; Utrecht Law Review Volume 2019 ; 2019 ; https://www.utrechtlawreview.org/ ; >
@@ -2872,11 +2872,11 @@
       comment[publisher] = United Kingdom Serials Group
 #      param[base_url] = http://insights.uksg.org/
 
-      au < finished ; crawling ; 2012 ; 1 ; Insights: the UKSG journal Volume 2012 ; 2012 ; http://insights.uksg.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2013 ; 2 ; Insights: the UKSG journal Volume 2013 ; 2013 ; http://insights.uksg.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2012 ; 1 ; Insights: the UKSG journal Volume 2012 ; 2012 ; http://insights.uksg.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2013 ; 2 ; Insights: the UKSG journal Volume 2013 ; 2013 ; http://insights.uksg.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2014 ; 3 ; Insights: the UKSG journal Volume 2014 ; 2014 ; http://insights.uksg.org/ ; >
       au < finished ; finished ; 2015 ; 4 ; Insights: the UKSG journal Volume 2015 ; 2015 ; http://insights.uksg.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2016 ; 5 ; Insights: the UKSG journal Volume 2016 ; 2016 ; http://insights.uksg.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2016 ; 5 ; Insights: the UKSG journal Volume 2016 ; 2016 ; http://insights.uksg.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2017 ; 6 ; Insights: the UKSG journal Volume 2017 ; 2017 ; http://insights.uksg.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 7 ; Insights: the UKSG journal Volume 2018 ; 2018 ; https://insights.uksg.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2019 ; 8 ; Insights: the UKSG journal Volume 2019 ; 2019 ; https://insights.uksg.org/ ; >
@@ -2908,17 +2908,17 @@
       au < manifest ; exists ; 1998 ; 11 ; Serials: The Journal for the Serials Community Volume 1998 ; 1998 ; https://serials.uksg.org/ ; >
       au < manifest ; exists ; 1999 ; 12 ; Serials: The Journal for the Serials Community Volume 1999 ; 1999 ; https://serials.uksg.org/ ; >
       au < doesNotExist ; doesNotExist ; 2000 ; 13 ; Serials: The Journal for the Serials Community Volume 2000 ; 2000 ; https://serials.uksg.org/ ; > #M exists. No articles for that year.
-      au < finished ; crawling ; 2001 ; 14 ; Serials: The Journal for the Serials Community Volume 2001 ; 2001 ; https://serials.uksg.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2001 ; 14 ; Serials: The Journal for the Serials Community Volume 2001 ; 2001 ; https://serials.uksg.org/ ; reingest3.clockss.org:8083 >
       au < doesNotExist ; doesNotExist ; 2002 ; 15 ; Serials: The Journal for the Serials Community Volume 2002 ; 2002 ; https://serials.uksg.org/ ; > #M exists. No articles for that year.
-      au < finished ; crawling ; 2003 ; 16 ; Serials: The Journal for the Serials Community Volume 2003 ; 2003 ; https://serials.uksg.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2004 ; 17 ; Serials: The Journal for the Serials Community Volume 2004 ; 2004 ; https://serials.uksg.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2005 ; 18 ; Serials: The Journal for the Serials Community Volume 2005 ; 2005 ; https://serials.uksg.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2006 ; 19 ; Serials: The Journal for the Serials Community Volume 2006 ; 2006 ; https://serials.uksg.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2007 ; 20 ; Serials: The Journal for the Serials Community Volume 2007 ; 2007 ; https://serials.uksg.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2008 ; 21 ; Serials: The Journal for the Serials Community Volume 2008 ; 2008 ; https://serials.uksg.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2009 ; 22 ; Serials: The Journal for the Serials Community Volume 2009 ; 2009 ; https://serials.uksg.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2010 ; 23 ; Serials: The Journal for the Serials Community Volume 2010 ; 2010 ; http://serials.uksg.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2011 ; 24 ; Serials: The Journal for the Serials Community Volume 2011 ; 2011 ; http://serials.uksg.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2003 ; 16 ; Serials: The Journal for the Serials Community Volume 2003 ; 2003 ; https://serials.uksg.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2004 ; 17 ; Serials: The Journal for the Serials Community Volume 2004 ; 2004 ; https://serials.uksg.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2005 ; 18 ; Serials: The Journal for the Serials Community Volume 2005 ; 2005 ; https://serials.uksg.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2006 ; 19 ; Serials: The Journal for the Serials Community Volume 2006 ; 2006 ; https://serials.uksg.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2007 ; 20 ; Serials: The Journal for the Serials Community Volume 2007 ; 2007 ; https://serials.uksg.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2008 ; 21 ; Serials: The Journal for the Serials Community Volume 2008 ; 2008 ; https://serials.uksg.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2009 ; 22 ; Serials: The Journal for the Serials Community Volume 2009 ; 2009 ; https://serials.uksg.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2010 ; 23 ; Serials: The Journal for the Serials Community Volume 2010 ; 2010 ; http://serials.uksg.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2011 ; 24 ; Serials: The Journal for the Serials Community Volume 2011 ; 2011 ; http://serials.uksg.org/ ; reingest1.clockss.org:8082 >
 
   }
 
@@ -2947,9 +2947,9 @@
       comment[publisher] = University of California Press
 #      param[base_url] = https://www.collabra.org/
 
-      au < finished ; crawling ; 2015 ; 1 ; Collabra: Psychology Volume 2015 ; 2015 ; https://www.collabra.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2016 ; 2 ; Collabra: Psychology Volume 2016 ; 2016 ; https://www.collabra.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2017 ; 3 ; Collabra: Psychology Volume 2017 ; 2017 ; https://www.collabra.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2015 ; 1 ; Collabra: Psychology Volume 2015 ; 2015 ; https://www.collabra.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2016 ; 2 ; Collabra: Psychology Volume 2016 ; 2016 ; https://www.collabra.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2017 ; 3 ; Collabra: Psychology Volume 2017 ; 2017 ; https://www.collabra.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 4 ; Collabra: Psychology Volume 2018 ; 2018 ; https://www.collabra.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2019 ; 5 ; Collabra: Psychology Volume 2019 ; 2019 ; https://www.collabra.org/ ; >
       au < expected ; exists ; 2020 ; 6 ; Collabra: Psychology Volume 2020 ; 2020 ; https://www.collabra.org/ ; >
@@ -2966,11 +2966,11 @@
       comment[publisher] = University of California Press
 #      param[base_url] = https://www.elementascience.org/
 
-      au < finished ; crawling ; 2013 ; 1 ; Elementa: Science of the Anthropocene Volume 2013 ; 2013 ; https://www.elementascience.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; 2 ; Elementa: Science of the Anthropocene Volume 2014 ; 2014 ; https://www.elementascience.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2015 ; 3 ; Elementa: Science of the Anthropocene Volume 2015 ; 2015 ; https://www.elementascience.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2016 ; 4 ; Elementa: Science of the Anthropocene Volume 2016 ; 2016 ; https://www.elementascience.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2017 ; 5 ; Elementa: Science of the Anthropocene Volume 2017 ; 2017 ; https://www.elementascience.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2013 ; 1 ; Elementa: Science of the Anthropocene Volume 2013 ; 2013 ; https://www.elementascience.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; 2 ; Elementa: Science of the Anthropocene Volume 2014 ; 2014 ; https://www.elementascience.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2015 ; 3 ; Elementa: Science of the Anthropocene Volume 2015 ; 2015 ; https://www.elementascience.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2016 ; 4 ; Elementa: Science of the Anthropocene Volume 2016 ; 2016 ; https://www.elementascience.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2017 ; 5 ; Elementa: Science of the Anthropocene Volume 2017 ; 2017 ; https://www.elementascience.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 6 ; Elementa: Science of the Anthropocene Volume 2018 ; 2018 ; https://www.elementascience.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2019 ; 7 ; Elementa: Science of the Anthropocene Volume 2019 ; 2019 ; https://www.elementascience.org/ ; >
       au < crawling ; exists ; 2020 ; 8 ; Elementa: Science of the Anthropocene Volume 2020 ; 2020 ; https://www.elementascience.org/ ; >
@@ -3001,15 +3001,15 @@
       comment[publisher] = White Rose University Press
 #      param[base_url] = https://www.bioj-online.com/
 
-      au < finished ; crawling ; 2009 ; 6 ; British and Irish Orthoptic Journal Volume 2009 ; 2009 ; https://www.bioj-online.com/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2010 ; 7 ; British and Irish Orthoptic Journal Volume 2010 ; 2010 ; https://www.bioj-online.com/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2011 ; 8 ; British and Irish Orthoptic Journal Volume 2011 ; 2011 ; https://www.bioj-online.com/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2012 ; 9 ; British and Irish Orthoptic Journal Volume 2012 ; 2012 ; https://www.bioj-online.com/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2013 ; 10 ; British and Irish Orthoptic Journal Volume 2013 ; 2013 ; https://www.bioj-online.com/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; 11 ; British and Irish Orthoptic Journal Volume 2014 ; 2014 ; https://www.bioj-online.com/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2015 ; 12 ; British and Irish Orthoptic Journal Volume 2015 ; 2015 ; https://www.bioj-online.com/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2016 ; 13 ; British and Irish Orthoptic Journal Volume 2016 ; 2016 ; https://www.bioj-online.com/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2018 ; 14 ; British and Irish Orthoptic Journal Volume 2018 ; 2018 ; https://www.bioj-online.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2009 ; 6 ; British and Irish Orthoptic Journal Volume 2009 ; 2009 ; https://www.bioj-online.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2010 ; 7 ; British and Irish Orthoptic Journal Volume 2010 ; 2010 ; https://www.bioj-online.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2011 ; 8 ; British and Irish Orthoptic Journal Volume 2011 ; 2011 ; https://www.bioj-online.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2012 ; 9 ; British and Irish Orthoptic Journal Volume 2012 ; 2012 ; https://www.bioj-online.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2013 ; 10 ; British and Irish Orthoptic Journal Volume 2013 ; 2013 ; https://www.bioj-online.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; 11 ; British and Irish Orthoptic Journal Volume 2014 ; 2014 ; https://www.bioj-online.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2015 ; 12 ; British and Irish Orthoptic Journal Volume 2015 ; 2015 ; https://www.bioj-online.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2016 ; 13 ; British and Irish Orthoptic Journal Volume 2016 ; 2016 ; https://www.bioj-online.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2018 ; 14 ; British and Irish Orthoptic Journal Volume 2018 ; 2018 ; https://www.bioj-online.com/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2019 ; 15 ; British and Irish Orthoptic Journal Volume 2019 ; 2019 ; https://www.bioj-online.com/ ; >
       au < crawling ; exists ; 2020 ; 16 ; British and Irish Orthoptic Journal Volume 2020 ; 2020 ; https://www.bioj-online.com/ ; >
 
@@ -3025,7 +3025,7 @@
       comment[publisher] = White Rose University Press
 #      param[base_url] = https://www.euroslajournal.org/
 
-      au < finished ; crawling ; 2017 ; 1 ; Journal of the European Second Language Association Volume 2017 ; 2017 ; https://www.euroslajournal.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2017 ; 1 ; Journal of the European Second Language Association Volume 2017 ; 2017 ; https://www.euroslajournal.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2018 ; 2 ; Journal of the European Second Language Association Volume 2018 ; 2018 ; https://www.euroslajournal.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2019 ; 3 ; Journal of the European Second Language Association Volume 2019 ; 2019 ; https://www.euroslajournal.org/ ; >
       au < crawling ; exists ; 2020 ; 4 ; Journal of the European Second Language Association Volume 2020 ; 2020 ; https://www.euroslajournal.org/ ; >
@@ -3075,7 +3075,7 @@
       au < doNotProcess ; exists ; 2013 ; 2 ; Stability: International Journal of Security & Development Volume 2013 ; 2013 ; https://www.stabilityjournal.org/ ; >
       au < doNotProcess ; exists ; 2014 ; 3 ; Stability: International Journal of Security & Development Volume 2014 ; 2014 ; https://www.stabilityjournal.org/ ; >
       au < finished ; finished ; 2015 ; 4 ; Stability: International Journal of Security & Development Volume 2015 ; 2015 ; http://www.stabilityjournal.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2016 ; 5 ; Stability: International Journal of Security & Development Volume 2016 ; 2016 ; http://www.stabilityjournal.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2016 ; 5 ; Stability: International Journal of Security & Development Volume 2016 ; 2016 ; http://www.stabilityjournal.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; 6 ; Stability: International Journal of Security & Development Volume 2017 ; 2017 ; http://www.stabilityjournal.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2018 ; 7 ; Stability: International Journal of Security & Development Volume 2018 ; 2018 ; https://www.stabilityjournal.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2019 ; 8 ; Stability: International Journal of Security & Development Volume 2019 ; 2019 ; https://www.stabilityjournal.org/ ; >
