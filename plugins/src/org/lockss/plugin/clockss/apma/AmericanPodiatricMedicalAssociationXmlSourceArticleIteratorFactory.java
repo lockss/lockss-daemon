@@ -9,7 +9,6 @@ import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArticleFiles;
 import org.lockss.plugin.ArticleIteratorFactory;
 import org.lockss.plugin.SubTreeArticleIteratorBuilder;
-import org.lockss.plugin.clockss.scienceopen.ScienceOpenSourceZipXmlArticleIteratorFactory;
 import org.lockss.util.Logger;
 
 import java.util.Iterator;
@@ -20,7 +19,7 @@ public class AmericanPodiatricMedicalAssociationXmlSourceArticleIteratorFactory 
     //https://clockss-test.lockss.org/sourcefiles/apma-released/2020/apms-110-2.zip!/Assets/i8750-7315-110-2-Article_1.pdf
     //https://clockss-test.lockss.org/sourcefiles/apma-released/2020/apms-110-2.zip!/XML/i8750-7315-110-2-Article_1.xml
 
-    protected static Logger log = Logger.getLogger(ScienceOpenSourceZipXmlArticleIteratorFactory.class);
+    protected static Logger log = Logger.getLogger(AmericanPodiatricMedicalAssociationXmlSourceArticleIteratorFactory.class);
 
     protected static final String ALL_ZIP_XML_PATTERN_TEMPLATE =
             "\"%s%s/.*\\.zip!/(.*Article.*)\\.(xml|pdf)$\", base_url, directory";
