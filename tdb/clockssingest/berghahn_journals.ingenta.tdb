@@ -325,7 +325,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; European Comic Art Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; European Comic Art Volume 3 ; 3 ; >
     au < finished ; finished ; 2011 ; European Comic Art Volume 4 ; 4 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2012 ; European Comic Art Volume 5 ; 5 ; >
+    au < finished ; manifest ; 2012 ; European Comic Art Volume 5 ; 5 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2013 ; European Comic Art Volume 6 ; 6 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; European Comic Art Volume 7 ; 7 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; European Comic Art Volume 8 ; 8 ; reingest5.clockss.org:8082 >
@@ -904,7 +904,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Social Analysis Volume 53 ; 53 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Social Analysis Volume 54 ; 54 ; >
     au < finished ; manifest ; 2011 ; Social Analysis Volume 55 ; 55 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2012 ; Social Analysis Volume 56 ; 56 ; >
+    au < finished ; manifest ; 2012 ; Social Analysis Volume 56 ; 56 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2013 ; Social Analysis Volume 57 ; 57 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2014 ; Social Analysis Volume 58 ; 58 ; >
     au < frozen ; exists ; 2015 ; Social Analysis Volume 59 ; 59 ; >
