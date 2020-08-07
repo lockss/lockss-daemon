@@ -69,13 +69,13 @@
     au < doNotProcess ; exists ; 2010 ; Bulletin of the American Meteorological Society Volume 91 ; 91 ; https://journals.ametsoc.org/ ; >
     au < doNotProcess ; exists ; 2011 ; Bulletin of the American Meteorological Society Volume 92 ; 92 ; https://journals.ametsoc.org/ ; >
     au < finished ; finished ; 2012 ; Bulletin of the American Meteorological Society Volume 93 ; 93 ; http://journals.ametsoc.org/ ; >
-    au < frozen ; exists ; 2013 ; Bulletin of the American Meteorological Society Volume 94 ; 94 ; http://journals.ametsoc.org/ ; >
+    au < finished ; manifest ; 2013 ; Bulletin of the American Meteorological Society Volume 94 ; 94 ; http://journals.ametsoc.org/ ; reingest5.clockss.org:8082 >
     au < zapped ; finished ; 2014 ; Bulletin of the American Meteorological Society Volume 95 ; 95 ; http://journals.ametsoc.org/ ; >
-    au < frozen ; exists ; 2015 ; Bulletin of the American Meteorological Society Volume 96 ; 96 ; http://journals.ametsoc.org/ ; >
-    au < frozen ; exists ; 2016 ; Bulletin of the American Meteorological Society Volume 97 ; 97 ; http://journals.ametsoc.org/ ; >
-    au < frozen ; exists ; 2017 ; Bulletin of the American Meteorological Society Volume 98 ; 98 ; http://journals.ametsoc.org/ ; >
-    au < frozen ; exists ; 2018 ; Bulletin of the American Meteorological Society Volume 99 ; 99 ; https://journals.ametsoc.org/ ; >
-    au < frozen ; exists ; 2019 ; Bulletin of the American Meteorological Society Volume 100 ; 100 ; https://journals.ametsoc.org/ ; >
+    au < finished ; manifest ; 2015 ; Bulletin of the American Meteorological Society Volume 96 ; 96 ; http://journals.ametsoc.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2016 ; Bulletin of the American Meteorological Society Volume 97 ; 97 ; http://journals.ametsoc.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2017 ; Bulletin of the American Meteorological Society Volume 98 ; 98 ; http://journals.ametsoc.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2018 ; Bulletin of the American Meteorological Society Volume 99 ; 99 ; https://journals.ametsoc.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; Bulletin of the American Meteorological Society Volume 100 ; 100 ; https://journals.ametsoc.org/ ; reingest5.clockss.org:8082 >
     au < doNotProcess ; exists ; 2020 ; Bulletin of the American Meteorological Society Volume 101 ; 101 ; https://journals.ametsoc.org/ ; >
 
   }
@@ -106,13 +106,13 @@
     au < doNotProcess ; exists ; 2010 ; Earth Interactions Volume 14 ; 14 ; https://journals.ametsoc.org/ ; >
     au < doNotProcess ; exists ; 2011 ; Earth Interactions Volume 15 ; 15 ; https://journals.ametsoc.org/ ; >
     au < finished ; finished ; 2012 ; Earth Interactions Volume 16 ; 16 ; http://journals.ametsoc.org/ ; >
-    au < frozen ; exists ; 2013 ; Earth Interactions Volume 17 ; 17 ; http://journals.ametsoc.org/ ; >
+    au < finished ; manifest ; 2013 ; Earth Interactions Volume 17 ; 17 ; http://journals.ametsoc.org/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Earth Interactions Volume 18 ; 18 ; http://journals.ametsoc.org/ ; >
-    au < frozen ; exists ; 2015 ; Earth Interactions Volume 19 ; 19 ; http://journals.ametsoc.org/ ; >
-    au < frozen ; exists ; 2016 ; Earth Interactions Volume 20 ; 20 ; http://journals.ametsoc.org/ ; >
-    au < frozen ; exists ; 2017 ; Earth Interactions Volume 21 ; 21 ; http://journals.ametsoc.org/ ; >
-    au < frozen ; exists ; 2018 ; Earth Interactions Volume 22 ; 22 ; https://journals.ametsoc.org/ ; >
-    au < frozen ; exists ; 2019 ; Earth Interactions Volume 23 ; 23 ; https://journals.ametsoc.org/ ; >
+    au < finished ; manifest ; 2015 ; Earth Interactions Volume 19 ; 19 ; http://journals.ametsoc.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2016 ; Earth Interactions Volume 20 ; 20 ; http://journals.ametsoc.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2017 ; Earth Interactions Volume 21 ; 21 ; http://journals.ametsoc.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2018 ; Earth Interactions Volume 22 ; 22 ; https://journals.ametsoc.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; Earth Interactions Volume 23 ; 23 ; https://journals.ametsoc.org/ ; reingest5.clockss.org:8082 >
     au < doNotProcess ; exists ; 2020 ; Earth Interactions Volume 24 ; 24 ; https://journals.ametsoc.org/ ; >
 
   }
