@@ -2519,11 +2519,25 @@
         issnl = 1756-5669
       >
 
+      param[journal_id] = ijcultm
+      #no content exists
+
+    }
+
+    {
+
+      title <
+        name = International Journal of Comparative Management ;
+        issn = 2514-4111 ;
+        eissn = 2514-412X ;
+        issnl = 2514-4111
+      >
+
       param[journal_id] = ijcm
 
-      au < frozen ; exists ; 2018 ; International Journal of Cultural Management Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < deepCrawl ; exists ; 2019 ; International Journal of Cultural Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2020 ; International Journal of Cultural Management Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
+      au < frozen ; exists ; 2018 ; International Journal of Comparative Management Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < deepCrawl ; exists ; 2019 ; International Journal of Comparative Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2020 ; International Journal of Comparative Management Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
 
     }
 
