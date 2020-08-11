@@ -115,7 +115,7 @@
     param[resource_id] = 187
     param[journal_id] = jamanetworkopen
     
-    au < finished ; frozen ; 2018 ; JAMA Network Open Volume 1 ; 2018 ; https://jamanetwork.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2018 ; JAMA Network Open Volume 1 ; 2018 ; https://jamanetwork.com/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2019 ; JAMA Network Open Volume 2 ; 2019 ; https://jamanetwork.com/ ; reingest1.clockss.org:8082 >
     au < manifest ; exists ; 2020 ; JAMA Network Open Volume 3 ; 2020 ; https://jamanetwork.com/ ; >
 
@@ -139,7 +139,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; JAMA Neurology Volume 72 ; 2015 ; https://jamanetwork.com/ ; >
     au < finished ; finished ; 2016 ; JAMA Neurology Volume 73 ; 2016 ; http://jamanetwork.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2017 ; JAMA Neurology Volume 74 ; 2017 ; http://jamanetwork.com/ ; reingest4.clockss.org:8082 >
-    au < finished ; frozen ; 2018 ; JAMA Neurology Volume 75 ; 2018 ; https://jamanetwork.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2018 ; JAMA Neurology Volume 75 ; 2018 ; https://jamanetwork.com/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2019 ; JAMA Neurology Volume 76 ; 2019 ; https://jamanetwork.com/ ; reingest1.clockss.org:8082 >
     au < manifest ; exists ; 2020 ; JAMA Neurology Volume 77 ; 2020 ; https://jamanetwork.com/ ; >
 
@@ -321,7 +321,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; JAMA: The Journal of the American Medical Association Volume 311-312 ; 2014 ; https://jamanetwork.com/ ; >
     au < doNotProcess ; doNotProcess ; 2015 ; JAMA: The Journal of the American Medical Association Volume 313-314 ; 2015 ; https://jamanetwork.com/ ; >
     au < finished ; finished ; 2016 ; JAMA: The Journal of the American Medical Association Volume 315-316 ; 2016 ; http://jamanetwork.com/ ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2017 ; JAMA: The Journal of the American Medical Association Volume 317-318 ; 2017 ; http://jamanetwork.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2017 ; JAMA: The Journal of the American Medical Association Volume 317-318 ; 2017 ; http://jamanetwork.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2018 ; JAMA: The Journal of the American Medical Association Volume 319-320 ; 2018 ; https://jamanetwork.com/ ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2019 ; JAMA: The Journal of the American Medical Association Volume 321-322 ; 2019 ; https://jamanetwork.com/ ; >
     au < manifest ; exists ; 2020 ; JAMA: The Journal of the American Medical Association Volume 323-324 ; 2020 ; https://jamanetwork.com/ ; >
