@@ -331,7 +331,7 @@
     au < finished ; manifest ; 2016 ; Journal of Climate Volume 29 ; 29 ; http://journals.ametsoc.org/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Journal of Climate Volume 30 ; 30 ; http://journals.ametsoc.org/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2018 ; Journal of Climate Volume 31 ; 31 ; https://journals.ametsoc.org/ ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2019 ; Journal of Climate Volume 32 ; 32 ; https://journals.ametsoc.org/ ; >
+    au < finished ; manifest ; 2019 ; Journal of Climate Volume 32 ; 32 ; https://journals.ametsoc.org/ ; reingest1.clockss.org:8082 >
     au < doNotProcess ; exists ; 2020 ; Journal of Climate Volume 33 ; 33 ; https://journals.ametsoc.org/ ; >
 
   }
@@ -360,14 +360,14 @@
     au < doNotProcess ; exists ; 2009 ; Journal of Hydrometeorology Volume 10 ; 10 ; https://journals.ametsoc.org/ ; >
     au < doNotProcess ; exists ; 2010 ; Journal of Hydrometeorology Volume 11 ; 11 ; https://journals.ametsoc.org/ ; >
     au < doNotProcess ; exists ; 2011 ; Journal of Hydrometeorology Volume 12 ; 12 ; https://journals.ametsoc.org/ ; >
-    au < frozen ; exists ; 2012 ; Journal of Hydrometeorology Volume 13 ; 13 ; http://journals.ametsoc.org/ ; >
+    au < finished ; manifest ; 2012 ; Journal of Hydrometeorology Volume 13 ; 13 ; http://journals.ametsoc.org/ ; reingest2.clockss.org:8085 >
     au < ingNotReady ; exists ; 2013 ; Journal of Hydrometeorology Volume 14 ; 14 ; http://journals.ametsoc.org/ ; >
     au < zapped ; finished ; 2014 ; Journal of Hydrometeorology Volume 15 ; 15 ; http://journals.ametsoc.org/ ; >
     au < ingNotReady ; exists ; 2015 ; Journal of Hydrometeorology Volume 16 ; 16 ; http://journals.ametsoc.org/ ; >
     au < frozen ; exists ; 2016 ; Journal of Hydrometeorology Volume 17 ; 17 ; http://journals.ametsoc.org/ ; >
     au < ingNotReady ; exists ; 2017 ; Journal of Hydrometeorology Volume 18 ; 18 ; http://journals.ametsoc.org/ ; >
     au < frozen ; exists ; 2018 ; Journal of Hydrometeorology Volume 19 ; 19 ; https://journals.ametsoc.org/ ; >
-    au < frozen ; exists ; 2019 ; Journal of Hydrometeorology Volume 20 ; 20 ; https://journals.ametsoc.org/ ; >
+    au < finished ; manifest ; 2019 ; Journal of Hydrometeorology Volume 20 ; 20 ; https://journals.ametsoc.org/ ; reingest3.clockss.org:8083 >
     au < doNotProcess ; exists ; 2020 ; Journal of Hydrometeorology Volume 21 ; 21 ; https://journals.ametsoc.org/ ; >
 
   }
@@ -431,7 +431,7 @@
     au < ingNotReady ; exists ; 2016 ; Journal of Physical Oceanography Volume 46 ; 46 ; http://journals.ametsoc.org/ ; >
     au < frozen ; exists ; 2017 ; Journal of Physical Oceanography Volume 47 ; 47 ; http://journals.ametsoc.org/ ; >
     au < frozen ; exists ; 2018 ; Journal of Physical Oceanography Volume 48 ; 48 ; https://journals.ametsoc.org/ ; >
-    au < frozen ; exists ; 2019 ; Journal of Physical Oceanography Volume 49 ; 49 ; https://journals.ametsoc.org/ ; >
+    au < finished ; manifest ; 2019 ; Journal of Physical Oceanography Volume 49 ; 49 ; https://journals.ametsoc.org/ ; reingest4.clockss.org:8082 >
     au < doNotProcess ; exists ; 2020 ; Journal of Physical Oceanography Volume 50 ; 50 ; https://journals.ametsoc.org/ ; >
 
   }
@@ -522,7 +522,7 @@
     au < ingNotReady ; exists ; 2016 ; Journal of the Atmospheric Sciences Volume 73 ; 73 ; http://journals.ametsoc.org/ ; >
     au < frozen ; exists ; 2017 ; Journal of the Atmospheric Sciences Volume 74 ; 74 ; http://journals.ametsoc.org/ ; >
     au < frozen ; exists ; 2018 ; Journal of the Atmospheric Sciences Volume 75 ; 75 ; https://journals.ametsoc.org/ ; >
-    au < frozen ; exists ; 2019 ; Journal of the Atmospheric Sciences Volume 76 ; 76 ; https://journals.ametsoc.org/ ; >
+    au < finished ; manifest ; 2019 ; Journal of the Atmospheric Sciences Volume 76 ; 76 ; https://journals.ametsoc.org/ ; reingest5.clockss.org:8082 >
     au < doNotProcess ; exists ; 2020 ; Journal of the Atmospheric Sciences Volume 77 ; 77 ; https://journals.ametsoc.org/ ; >
 
   }
@@ -550,10 +550,10 @@
     au < doNotProcess ; exists ; 2003 ; Meteorological Monographs Volume 53 [abstract only] ; 53 ; https://journals.ametsoc.org/ ; >
     au < doNotProcess ; exists ; 2004 ; Meteorological Monographs Volume 54 [abstract only] ; 54 ; https://journals.ametsoc.org/ ; >
     au < doNotProcess ; exists ; 2008 ; Meteorological Monographs Volume 55 [abstract only] ; 55 ; https://journals.ametsoc.org/ ; >
-    au < frozen ; exists ; 2016 ; Meteorological Monographs Volume 56 ; 56 ; http://journals.ametsoc.org/ ; >
-    au < frozen ; exists ; 2016 ; Meteorological Monographs Volume 57 ; 57 ; http://journals.ametsoc.org/ ; >
+    au < finished ; manifest ; 2016 ; Meteorological Monographs Volume 56 ; 56 ; http://journals.ametsoc.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2016 ; Meteorological Monographs Volume 57 ; 57 ; http://journals.ametsoc.org/ ; reingest2.clockss.org:8085 >
     au < ingNotReady ; exists ; 2017 ; Meteorological Monographs Volume 58 ; 58 ; http://journals.ametsoc.org/ ; >
-    au < frozen ; exists ; 2018 ; Meteorological Monographs Volume 59 ; 59 ; https://journals.ametsoc.org/ ; >
+    au < finished ; manifest ; 2018 ; Meteorological Monographs Volume 59 ; 59 ; https://journals.ametsoc.org/ ; reingest3.clockss.org:8083 >
 
   }
 
@@ -741,7 +741,7 @@
     au < frozen ; exists ; 2016 ; Weather, Climate, and Society Volume 8 ; 8 ; http://journals.ametsoc.org/ ; >
     au < frozen ; exists ; 2017 ; Weather, Climate, and Society Volume 9 ; 9 ; http://journals.ametsoc.org/ ; >
     au < frozen ; exists ; 2018 ; Weather, Climate, and Society Volume 10 ; 10 ; https://journals.ametsoc.org/ ; >
-    au < frozen ; exists ; 2019 ; Weather, Climate, and Society Volume 11 ; 11 ; https://journals.ametsoc.org/ ; >
+    au < finished ; manifest ; 2019 ; Weather, Climate, and Society Volume 11 ; 11 ; https://journals.ametsoc.org/ ; reingest4.clockss.org:8082 >
     au < doNotProcess ; exists ; 2020 ; Weather, Climate, and Society Volume 12 ; 12 ; https://journals.ametsoc.org/ ; >
 
   }
@@ -790,7 +790,7 @@
     au < frozen ; exists ; 2016 ; Weather and Forecasting Volume 31 ; 31 ; http://journals.ametsoc.org/ ; >
     au < frozen ; exists ; 2017 ; Weather and Forecasting Volume 32 ; 32 ; http://journals.ametsoc.org/ ; >
     au < frozen ; exists ; 2018 ; Weather and Forecasting Volume 33 ; 33 ; https://journals.ametsoc.org/ ; >
-    au < frozen ; exists ; 2019 ; Weather and Forecasting Volume 34 ; 34 ; https://journals.ametsoc.org/ ; >
+    au < finished ; manifest ; 2019 ; Weather and Forecasting Volume 34 ; 34 ; https://journals.ametsoc.org/ ; reingest5.clockss.org:8082 >
     au < doNotProcess ; exists ; 2020 ; Weather and Forecasting Volume 35 ; 35 ; https://journals.ametsoc.org/ ; >
 
   }
