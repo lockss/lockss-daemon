@@ -93,7 +93,7 @@ public class BlackQuotidianRDFCrawlSeed extends BaseCrawlSeed {
         }
         catch (CacheException ce) {
             if(ce.getCause() != null && ce.getCause().getMessage().contains("LOCKSS")) {
-                log.debug("OAI result errored due to LOCKSS audit proxy. Trying alternate start Url", ce);
+                log.debug("RDF result errored due to LOCKSS audit proxy. Trying alternate start Url", ce);
                 urlList.add(apiStartUrl);
                 return;
             } else {
@@ -127,20 +127,6 @@ public class BlackQuotidianRDFCrawlSeed extends BaseCrawlSeed {
         storeStartUrls(urlList, apiStartUrl);
     }
 
-    /**
-     * <p>
-     * Makes a URL fetcher for the given API request, that will parse the result
-     * using the given GigaScienceDoiLinkExtractor instance.
-     * </p>
-     *
-     * @param ple
-     *          A  GigaScienceDoiLinkExtractor instance to parse the API
-     *          response with.
-     * @param url
-     *          A query URL.
-     * @return A URL fetcher for the given query URL.
-     * @since 1.67.5
-     */
     protected UrlFetcher makeApiUrlFetcher( final BlackQuotidianRDFLinkExtractor ple,
                                             final String url,
                                             final String apiSingleNodeUrl) {
@@ -175,15 +161,15 @@ public class BlackQuotidianRDFCrawlSeed extends BaseCrawlSeed {
                                     url,
                                     new LinkExtractor.Callback() {
                                         @Override
-                                        public void foundLink(String doiUrl) {
-                                            log.debug3("doiUrl is added = " + doiUrl);
-                                            partial.add(apiSingleNodeUrl + doiUrl);
+                                        public void foundLink(String nodeUrl) {
+                                            log.debug3("nodeUrl is added = " + nodeUrl);
+                                            partial.add(nodeUrl);
                                         }
                                     });
                         }
                         catch (IOException ioe) {
                             log.debug2("Link extractor threw", ioe);
-                            throw new IOException("Error while parsing PAM response for " + url, ioe);
+                            throw new IOException("Error while parsing response for " + url, ioe);
                         }
                         finally {
                             // Logging
@@ -205,7 +191,7 @@ public class BlackQuotidianRDFCrawlSeed extends BaseCrawlSeed {
         StringBuilder sb = new StringBuilder();
         sb.append("<html>\n");
         for (String u : urlList) {
-            log.debug3("SINGLE_DOI_API_URL is :"  + u);
+            log.debug3("SINGLE_node_API_URL is :"  + u);
             sb.append("<a href=\"" + u + "\">" + u + "</a><br/>\n");
         }
         sb.append("</html>");

@@ -33,11 +33,16 @@
         <string>au_name</string>
         <string>"Black Quotidian RDF Plugin (CLOCKSS), Base URL %s", base_url</string>
     </entry>
-    <!--
+    <!-- http://blackquotidian.supdigital.org/bq/rdf/instancesof/content -->
     <entry>
         <string>au_start_url</string>
-        <string>"%sapi/", base_url</string>
+        <string>"%sbq/rdf/instancesof/content", base_url</string>
     </entry>
+    <entry>
+        <string>plugin_crawl_seed_factory</string>
+        <string>org.lockss.plugin.blackquotidianrdf.BlackQuotidianRDFCrawlSeedFactory</string>
+    </entry>
+    <!--
     <entry>
         <string>au_permission_url</string>
         <string>"%slockss.txt", base_url</string>
