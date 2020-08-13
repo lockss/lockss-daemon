@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -35,6 +35,10 @@
   <entry>
     <string>au_name</string>
     <string>"Indiana University Mathematics Journal 2018 Plugin, Base URL %s, Year %d, Volume %s", base_url, year, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_permission_url</string>
+    <string>"%s/lockss.txt", base_url</string>
   </entry>
   <entry>
     <string>au_start_url</string>
@@ -63,20 +67,10 @@
       <string>4,"^%s", base_url</string>
       <string>1,"^%sIUMJ/toc.php[?]writeyear=%d", base_url, year</string>
       <string>1,"^%sIUMJ/(ABS|FULLTEXT|FTDLOAD)/%d/", base_url, year</string>
-      <!-- <string>1,"^%sMETA/%d/([^/])+", base_url, year</string>
+      <string>1,"^%sMETA/%d/([^/])+", base_url, year</string>
       <string>1,"^%s(Images|icons)/", base_url</string>
       <string>1,"^%sstylesheet/([^/])+\.css$", base_url</string>
       <string>1,"^%soai/%d/%s/([^/])+/([^/])+", base_url, year, volume_name</string>
-      (YEAR)|
-https://www.iumj.indiana.edu/oai/2017/66/6044/6044.xml
-https://www.iumj.indiana.edu/oai/2017/66/6044/6044.html
-
-https://www.iumj.indiana.edu/IUMJ/ABS/2017/6074
-https://www.iumj.indiana.edu/IUMJ/FTDLOAD/2017/66/6074/pdf
-https://www.iumj.indiana.edu/IUMJ/FTDLOAD/2017/66/6074/ps
-https://www.iumj.indiana.edu/IUMJ/FTDLOAD/2017/66/6074/ps/tgz
-https://www.iumj.indiana.edu/IUMJ/FTDLOAD/2017/66/6074/ps/zip
-       -->
     </list>
   </entry>
   <entry>
