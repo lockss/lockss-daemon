@@ -41,10 +41,7 @@ import org.lockss.plugin.clockss.JatsPublishingSchemaHelper;
 import org.lockss.plugin.clockss.Onix3BooksSchemaHelper;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
-import org.lockss.plugin.elsevier.ElsevierBooksMainDTD5XmlSchemaHelper;
-import org.lockss.plugin.elsevier.ElsevierJournalsMainDTD5XmlSchemaHelper;
 import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 
@@ -61,6 +58,7 @@ import org.w3c.dom.Node;
  */
 
 public class WarcXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
+
   private static final Logger log = Logger.getLogger(WarcXmlMetadataExtractorFactory.class);
 
   private static SourceXmlSchemaHelper WarcJatsPublishingHelper = null;
@@ -73,7 +71,7 @@ public class WarcXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorF
     return new WarcJatsPublishingSourceXmlMetadataExtractor();
   }
 
-  public class WarcJatsPublishingSourceXmlMetadataExtractor extends SourceXmlMetadataExtractor {
+  public static class WarcJatsPublishingSourceXmlMetadataExtractor extends SourceXmlMetadataExtractor {
 
     
     /*
@@ -163,7 +161,7 @@ public class WarcXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorF
       }
 
     }    
-    
-
+  
   }
+  
 }
