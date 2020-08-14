@@ -17,7 +17,7 @@ quiet=""
 
 while true ; do
   case "$1" in
-    "-q" )
+    "-q"|"-quiet" )
       quiet=1  
       shift; continue;;
     "-classpath" )
@@ -49,6 +49,15 @@ while true ; do
       PATH="$JAVA_HOME/bin:$PATH"
       export PATH
       [ -z "$quiet" ] && echo JAVA_HOME="$JAVA_HOME"
+      shift; continue;;
+    "-plugins")
+      for f in lib/lockss-plugins.jar lib/lockss-plugins-test.jar ; do
+        if [ -n "$CLASSPATH" ] ; then
+          CLASSPATH="${CLASSPATH}:"
+        fi
+        CLASSPATH="${CLASSPATH}$(realpath $f)"
+      done
+      [ -z "$quiet" ] && echo "CLASSPATH=$CLASSPATH"
       shift; continue;;
     "-*" )
       args="$args $1"

@@ -1,0 +1,3 @@
+#!/bin/sh
+
+test/scripts/run-class -quiet -plugins org.lockss.plugin.clockss.warc.TestWarcXmlMetadataExtractor "$@"

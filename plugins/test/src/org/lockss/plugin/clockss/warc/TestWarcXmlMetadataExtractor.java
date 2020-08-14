@@ -33,21 +33,20 @@
 
 package org.lockss.plugin.clockss.warc;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.PrintWriter;
+import java.io.*;
 import java.util.*;
 
 import org.lockss.test.*;
 import org.lockss.util.*;
+
+import com.google.common.io.Files;
+
 import org.lockss.config.*;
 import org.lockss.extractor.*;
+import org.lockss.extractor.FileMetadataExtractor.Emitter;
 import org.lockss.plugin.*;
-import org.lockss.plugin.clockss.onixbooks.Onix2LongSourceXmlMetadataExtractorFactory;
-import org.lockss.plugin.definable.DefinablePlugin;
+import org.lockss.plugin.base.BaseCachedUrl;
+import org.lockss.plugin.clockss.warc.WarcXmlMetadataExtractorFactory.WarcJatsPublishingSourceXmlMetadataExtractor;
 
 
 public class TestWarcXmlMetadataExtractor extends LockssTestCase {
@@ -297,6 +296,31 @@ public class TestWarcXmlMetadataExtractor extends LockssTestCase {
       // TODO Auto-generated catch block
       e.printStackTrace();
     }
+  }
+  
+  public static void main(String[] args) throws Exception {
+    final PrintStream out = System.out;
+    final PrintStream err = System.err;
+    if (args.length != 1) {
+      err.format("Expected one argument but got %d%n", args.length);
+      System.exit(1);
+    }
+    String jatsFileStr = args[0];
+    if (!new File(jatsFileStr).exists()) {
+      err.format("File not found: %s%n", jatsFileStr);
+      System.exit(1);
+    }
+    MockCachedUrl cu = new MockCachedUrl("file://" + jatsFileStr, jatsFileStr, false);
+    WarcJatsPublishingSourceXmlMetadataExtractor me = new WarcJatsPublishingSourceXmlMetadataExtractor();
+    me.extract(MetadataTarget.Any(),
+               cu,
+               new Emitter() {
+                 @Override
+                 public void emitMetadata(CachedUrl cu,
+                                          ArticleMetadata metadata) {
+                   out.format("%s%n", metadata.ppString(0));
+                 }      
+               });
   }
   
 }
