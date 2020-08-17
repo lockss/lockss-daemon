@@ -30,20 +30,12 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.blackquotidian;
+package org.lockss.plugin.blackquotidianrdf;
 
 import org.lockss.daemon.PluginException;
-import org.lockss.extractor.JsoupHtmlLinkExtractor;
 import org.lockss.extractor.LinkExtractor;
 import org.lockss.extractor.LinkExtractorFactory;
-import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.Logger;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 
 public class BlackQuotidianHtmlLinkExtractorFactory implements LinkExtractorFactory {
 
@@ -55,28 +47,7 @@ public class BlackQuotidianHtmlLinkExtractorFactory implements LinkExtractorFact
 
 	@Override
 	public LinkExtractor createLinkExtractor(String mimeType) throws PluginException {
-		return new JsoupHtmlLinkExtractor() {
-			@Override
-			public void extractUrls(final ArchivalUnit au,
-					InputStream in,
-					String encoding,
-					final String srcUrl,
-					final Callback cb)
-							throws IOException, PluginException {
-				super.extractUrls(au,in,encoding,srcUrl,
-						new Callback() {
-					@Override
-					public void foundLink(String url) {
-						log.debug3("Fei - found url = " + url);
-						if (url.contains(BOOTSTRAP_CSS_PATH)) {
-							String mapCss = url.replace(BOOTSTRAP_CSS_PATH, BOOTSTRAP_CSS_MAP_PATH);
-							log.debug3("Fei - found bootstrap, mapCss= " + mapCss);
-							cb.foundLink(mapCss);
-						}
-					}
-				});
-			}
-		};
+		return new BlackQuotidianRegexpCssLinkExtractor();
 	}
 
 }

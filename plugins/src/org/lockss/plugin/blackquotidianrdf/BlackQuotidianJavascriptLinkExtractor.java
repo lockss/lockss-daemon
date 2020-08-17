@@ -1,17 +1,15 @@
-package org.lockss.plugin.blackquotidian;
+package org.lockss.plugin.blackquotidianrdf;
 
 import org.lockss.extractor.LinkExtractor;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.IOUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
-import org.lockss.util.UrlUtil;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.Reader;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

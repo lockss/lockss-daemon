@@ -42,30 +42,91 @@
         <string>plugin_crawl_seed_factory</string>
         <string>org.lockss.plugin.blackquotidianrdf.BlackQuotidianRDFCrawlSeedFactory</string>
     </entry>
-    <!--
-    <entry>
-        <string>au_permission_url</string>
-        <string>"%slockss.txt", base_url</string>
-    </entry>
-    <entry>
-        <string>plugin_cache_result_list</string>
-        <list>
-            <string>500=org.lockss.plugin.blackquotidianrdf.BlackQuotidianRDFHttpResponseHandler</string>
-        </list>
-    </entry>
     <entry>
         <string>au_crawlrules</string>
         <list>
-            <string>1,"%sapi/", base_url</string>
+            <string>1,"https?://videos.criticalcommons.org/.*/video_file/.*\.mp4"</string>
+            <string>1,"https://code.jquery.com/jquery[^/]+\.js"</string>
+            <string>1,"https?://fonts.googleapis.com/css"</string>
+            <string>1,"%sbq/rdf/instancesof/content", base_url</string>
+            <!--exclude links with subversion number, like the following
+                http://blackquotidian.supdigital.org/bq/april-1-1950
+                http://blackquotidian.supdigital.org/bq/april-1-1950.7
+                http://blackquotidian.supdigital.org/bq/april-10-1909
+                http://blackquotidian.supdigital.org/bq/april-10-1909.4
+                <string>2,""%sbq/[^\.]+\.\d+$", base_url</string>
+            -->
+            <string>2,"%sbq/1[^\.]+\.\d+$", base_url</string>
+            <string>1,"%sbq/1", base_url</string>
+            <string>2,"%sbq/a[^\.]+\.\d+$", base_url</string>
+            <string>1,"%sbq/a", base_url</string>
+            <string>1,"http://blackquotidian.supdigital.org/system/application/views/"</string>
+            <string>1,"http://blackquotidian.supdigital.org/bq/media/.*\.(jpe?g|png|gif|pdf)"</string>
+            
         </list>
     </entry>
     <entry>
         <string>au_refetch_depth</string>
-        <int>2</int>
+        <int>3</int>
     </entry>
     <entry>
-        <string>plugin_crawl_seed_factory</string>
-        <string>org.lockss.plugin.blackquotidianrdf.BlackQuotidianRDFCrawlSeedFactory</string>
+        <string>plugin_cache_result_list</string>
+        <list>
+            <string>500=org.lockss.util.urlconn.CacheException$NoRetryDeadLinkException</string>
+        </list>
+    </entry>
+    <entry>
+        <string>plugin_article_iterator_factory</string>
+        <string>org.lockss.plugin.blackquotidianrdf.BlackQuotidianArticleIteratorFactory</string>
+    </entry>
+    <entry>
+        <string>plugin_article_metadata_extractor_factory</string>
+        <string>org.lockss.plugin.blackquotidianrdf.BlackQuotidianArticleIteratorFactory</string>
+    </entry>
+    <entry>
+        <string>text/xml_metadata_extractor_factory_map</string>
+        <map>
+            <entry>
+                <string>*</string>
+                <string>org.lockss.plugin.blackquotidianrdf.BlackQuotidianMetadataExtractorFactory</string>
+            </entry>
+        </map>
+    </entry>
+    <entry>
+        <string>text/javascript_link_extractor_factory</string>
+        <string>org.lockss.plugin.blackquotidianrdf.BlackQuotidianJavascriptLinkExtractorFactory</string>
+    </entry>
+    <entry>
+        <string>application/javascript_link_extractor_factory</string>
+        <string>org.lockss.plugin.blackquotidianrdf.BlackQuotidianJavascriptLinkExtractorFactory</string>
+    </entry>
+    <entry>
+        <string>text/javascript_link_rewriter_factory</string>
+        <string>org.lockss.plugin.blackquotidianrdf.BlackQuotidianJavaScriptLinkRewriterFactory</string>
+    </entry>
+    <entry>
+        <string>application/javascript_link_rewriter_factory</string>
+        <string>org.lockss.plugin.blackquotidianrdf.BlackQuotidianJavaScriptLinkRewriterFactory</string>
+    </entry>
+    <!--
+    <entry>
+        <string>text/html_link_extractor_factory</string>
+        <string>org.lockss.plugin.blackquotidianrdf.BlackQuotidianHtmlLinkExtractorFactory</string>
+    </entry>
+    -->
+    <entry>
+        <string>au_permitted_host_pattern</string>
+        <list>
+            <string>use\.typekit\.com</string>
+            <string>code\.jquery\.com</string>
+            <string>fonts\.googleapis\.com</string>
+            <string>videos\.criticalcommons\.org</string>
+        </list>
+    </entry>
+    <!--
+    <entry>
+        <string>au_permission_url</string>
+        <string>"%slockss.txt", base_url</string>
     </entry>
     <entry>
         <string>plugin_article_iterator_factory</string>

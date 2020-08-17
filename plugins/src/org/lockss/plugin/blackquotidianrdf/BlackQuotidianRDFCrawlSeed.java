@@ -80,7 +80,7 @@ public class BlackQuotidianRDFCrawlSeed extends BaseCrawlSeed {
 
         log.debug2("apiStartUrl: " + apiStartUrl);
 
-        BlackQuotidianRDFLinkExtractor ple = new BlackQuotidianRDFLinkExtractor();
+        BlackQuotidianLinkExtractor ple = new BlackQuotidianLinkExtractor();
 
         UrlFetcher uf = makeApiUrlFetcher(ple, apiStartUrl, this.apiSingleNodeUrl);
         log.debug2("Request URL: " + apiStartUrl);
@@ -127,7 +127,7 @@ public class BlackQuotidianRDFCrawlSeed extends BaseCrawlSeed {
         storeStartUrls(urlList, apiStartUrl);
     }
 
-    protected UrlFetcher makeApiUrlFetcher( final BlackQuotidianRDFLinkExtractor ple,
+    protected UrlFetcher makeApiUrlFetcher( final BlackQuotidianLinkExtractor ple,
                                             final String url,
                                             final String apiSingleNodeUrl) {
         // Make a URL fetcher

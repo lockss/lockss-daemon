@@ -1,4 +1,4 @@
-package org.lockss.plugin.blackquotidian;
+package org.lockss.plugin.blackquotidianrdf;
 
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.LinkExtractor;

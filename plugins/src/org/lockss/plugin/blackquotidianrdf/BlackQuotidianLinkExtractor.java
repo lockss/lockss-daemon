@@ -1,17 +1,13 @@
 package org.lockss.plugin.blackquotidianrdf;
 
-import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.lockss.extractor.LinkExtractor;
 import org.lockss.plugin.ArchivalUnit;
-import org.lockss.util.Constants;
 import org.lockss.util.Logger;
-import org.lockss.util.StringUtil;
 import org.lockss.util.XPathUtil;
 import org.lockss.util.urlconn.CacheException;
 import org.springframework.util.xml.SimpleNamespaceContext;
 import org.w3c.dom.Document;
-import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
@@ -20,16 +16,15 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.xpath.*;
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-public class BlackQuotidianRDFLinkExtractor implements LinkExtractor {
+public class BlackQuotidianLinkExtractor implements LinkExtractor {
 
     protected static final XPathExpression LiveNoteDataSets;
 
-    private static final Logger log = Logger.getLogger(BlackQuotidianRDFLinkExtractor.class);
+    private static final Logger log = Logger.getLogger(BlackQuotidianLinkExtractor.class);
 
     /*
         <?xml version="1.0" encoding="UTF-8"?>
