@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:scalar="http://scalar.usc.edu/2012/01/scalar-ns#"
+         xmlns:art="http://simile.mit.edu/2003/10/ontologies/artstor#"
+         xmlns:prov="http://www.w3.org/ns/prov#"
+         xmlns:dcterms="http://purl.org/dc/terms/"
+         xmlns:ov="http://open.vocab.org/terms/"
+         xmlns:sioc="http://rdfs.org/sioc/ns#"
+         xmlns:iptc="http://ns.exiftool.ca/IPTC/IPTC/1.0/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <rdf:Description rdf:about="http://blackquotidian.supdigital.org/bq/acknowledgements">
+        <rdf:type rdf:resource="http://scalar.usc.edu/2012/01/scalar-ns#Composite"/>
+        <scalar:isLive>1</scalar:isLive>
+        <prov:wasAttributedTo rdf:resource="http://blackquotidian.supdigital.org/bq/users/1"/>
+        <dcterms:created>2019-03-12T23:56:18+00:00</dcterms:created>
+        <scalar:urn rdf:resource="urn:scalar:content:3"/>
+        <scalar:version rdf:resource="http://blackquotidian.supdigital.org/bq/acknowledgements.15"/>
+        <dcterms:hasVersion rdf:resource="http://blackquotidian.supdigital.org/bq/acknowledgements.15"/>
+        <scalar:citation>method=instancesof/content;methodNumNodes=1932;</scalar:citation>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://blackquotidian.supdigital.org/bq/acknowledgements.15">
+        <ov:versionnumber>15</ov:versionnumber>
+        <dcterms:title>Acknowledgments</dcterms:title>
+        <sioc:content><em>Black Quotidian </em> is dedicated to my father and grandmother, blah, blah, blah...</sioc:content>
+        <scalar:defaultView>plain</scalar:defaultView>
+        <scalar:editorialState>published</scalar:editorialState>
+        <prov:wasAttributedTo rdf:resource="http://blackquotidian.supdigital.org/bq/users/6"/>
+        <dcterms:created>2019-10-04T20:56:37+00:00</dcterms:created>
+        <scalar:urn rdf:resource="urn:scalar:version:7726"/>
+        <dcterms:isVersionOf rdf:resource="http://blackquotidian.supdigital.org/bq/acknowledgements"/>
+        <rdf:type rdf:resource="http://scalar.usc.edu/2012/01/scalar-ns#Version"/>
+    </rdf:Description>
+</rdf:RDF>
