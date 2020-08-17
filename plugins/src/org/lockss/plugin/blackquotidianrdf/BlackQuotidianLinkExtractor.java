@@ -93,27 +93,6 @@ public class BlackQuotidianRDFLinkExtractor implements LinkExtractor {
                             String srcUrl,
                             Callback cb)
             throws IOException {
-        
-        /*
-        try {
-
-            String filteredStr = StringUtil.fromInputStream(in);
-
-            //Write to a file for easy comparision for debugging purpose
-
-            String currentDirectory = System.getProperty("user.dir");
-            String pathname = currentDirectory +
-                    "/plugins/src/org/lockss/plugin/blackquotidianrdf/generated.xml";
-            if (filteredStr.length() > 0) {
-                FileUtils.writeStringToFile(new File(pathname), filteredStr, Constants.DEFAULT_ENCODING);
-            } else {
-                FileUtils.writeStringToFile(new File(pathname), "Empty", Constants.DEFAULT_ENCODING);
-            }
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        */
 
         String loggerUrl = loggerUrl(srcUrl);
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -124,7 +103,6 @@ public class BlackQuotidianRDFLinkExtractor implements LinkExtractor {
             DocumentBuilder builder = factory.newDocumentBuilder();
             boolean isAware = builder.isNamespaceAware();
             doc = builder.parse(in);
-            doSomething(doc.getDocumentElement());
         }
         catch (ParserConfigurationException pce) {
             throw new CacheException.UnknownExceptionException("Error configuring parser for " + loggerUrl, pce);
@@ -163,18 +141,4 @@ public class BlackQuotidianRDFLinkExtractor implements LinkExtractor {
         return srcUrl;
     }
 
-    public static void doSomething(Node node) {
-        // do something with the current node instead of System.out
-        log.debug3("Fei - node: " + node.getNodeName());
-
-        NodeList nodeList = node.getChildNodes();
-        for (int i = 0; i < nodeList.getLength(); i++) {
-            Node currentNode = nodeList.item(i);
-            if (currentNode.getNodeType() == Node.ELEMENT_NODE) {
-                //calls this method for all the children which is Element
-                log.debug3("Fei - node, Element_Node: " + node.getNodeName());
-                doSomething(currentNode);
-            }
-        }
-    }
 }
