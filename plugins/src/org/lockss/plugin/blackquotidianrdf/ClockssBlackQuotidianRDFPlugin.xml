@@ -56,10 +56,8 @@
                 http://blackquotidian.supdigital.org/bq/april-10-1909.4
                 <string>2,""%sbq/[^\.]+\.\d+$", base_url</string>
             -->
-            <string>2,"%sbq/1[^\.]+\.\d+$", base_url</string>
-            <string>1,"%sbq/1", base_url</string>
-            <string>2,"%sbq/a[^\.]+\.\d+$", base_url</string>
-            <string>1,"%sbq/a", base_url</string>
+            <string>2,"%sbq/[^\.]+\.\d+$", base_url</string>
+            <string>1,"%sbq/", base_url</string>
             <string>1,"http://blackquotidian.supdigital.org/system/application/views/"</string>
             <string>1,"http://blackquotidian.supdigital.org/bq/media/.*\.(jpe?g|png|gif|pdf)"</string>
             
