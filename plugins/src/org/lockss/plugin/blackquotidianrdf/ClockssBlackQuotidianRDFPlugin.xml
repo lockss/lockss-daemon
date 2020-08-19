@@ -13,7 +13,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>1</string>
+        <string>2</string>
     </entry>
     <entry>
         <string>plugin_config_props</string>
@@ -32,6 +32,11 @@
     <entry>
         <string>au_name</string>
         <string>"Black Quotidian RDF Plugin (CLOCKSS), Base URL %s", base_url</string>
+    </entry>
+    <!--  don't currently have one; work around for now -->
+    <entry>
+        <string>au_permission_url</string>
+        <string>"http://clockss-ingest.lockss.org/clockss.txt"</string>
     </entry>
     <!-- http://blackquotidian.supdigital.org/bq/rdf/instancesof/content -->
     <entry>
