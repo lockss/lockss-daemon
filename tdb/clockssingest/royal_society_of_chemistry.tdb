@@ -67,7 +67,7 @@
       param[journal_code] = ay
 
       #complete
-      au < exists ; exists ; 2009 ; Analytical Methods Volume 1 ; 1 ; 2009 ; http://pubs.rsc.org/ ; >
+      au < exists ; exists ; 2009 ; Analytical Methods Volume 1 ; 1 ; 2009 ; https://pubs.rsc.org/ ; >
       au < finished ; finished ; 2010 ; Analytical Methods Volume 2 ; 2 ; 2010 ; http://pubs.rsc.org/ ; >
       au < finished ; manifest ; 2011 ; Analytical Methods Volume 3 ; 3 ; 2011 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2012 ; Analytical Methods Volume 4 ; 4 ; 2012 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
@@ -235,8 +235,7 @@
 
       param[journal_code] = cs
 
-      au < exists ; exists ; 1996 ; Chemical Society Reviews Volume 25 ; 25 ; 1996 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
-
+      au < exists ; exists ; 1996 ; Chemical Society Reviews Volume 25 ; 25 ; 1996 ; https://pubs.rsc.org/ ; >
       au < zapped ; finished ; 2010 ; Chemical Society Reviews Volume 39 ; 39 ; 2010 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2011 ; Chemical Society Reviews Volume 40 ; 40 ; 2011 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2012 ; Chemical Society Reviews Volume 41 ; 41 ; 2012 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
