@@ -67,7 +67,7 @@
       param[journal_code] = ay
 
       #complete
-      au < exists ; exists ; 2009 ; Analytical Methods Volume 1 ; 1 ; 2009 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2009 ; Analytical Methods Volume 1 ; 1 ; 2009 ; https://pubs.rsc.org/ ; >
       au < finished ; finished ; 2010 ; Analytical Methods Volume 2 ; 2 ; 2010 ; http://pubs.rsc.org/ ; >
       au < finished ; manifest ; 2011 ; Analytical Methods Volume 3 ; 3 ; 2011 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2012 ; Analytical Methods Volume 4 ; 4 ; 2012 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
@@ -437,7 +437,7 @@
       au < deepCrawl ; exists ; 2018 ; Faraday Discussions Volume 211 ; 211 ; 2018 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2018 ; Faraday Discussions Volume 212 ; 212 ; 2018 ; https://pubs.rsc.org/ ; >
 
-      au < testing ; exists ; 2019 ; Faraday Discussions Volume 213 ; 213 ; 2019 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2019 ; Faraday Discussions Volume 213 ; 213 ; 2019 ; https://pubs.rsc.org/ ; >
       au < finished ; manifest ; 2019 ; Faraday Discussions Volume 214 ; 214 ; 2019 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2019 ; Faraday Discussions Volume 215 ; 215 ; 2019 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2019 ; Faraday Discussions Volume 216 ; 216 ; 2019 ; https://pubs.rsc.org/ ; >
@@ -738,7 +738,7 @@
       au < deepCrawl ; exists ; 2016 ; New Journal of Chemistry Volume 40 ; 40 ; 2016 ; http://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2017 ; New Journal of Chemistry Volume 41 ; 41 ; 2017 ; http://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2018 ; New Journal of Chemistry Volume 42 ; 42 ; 2018 ; https://pubs.rsc.org/ ; >
-      au < testing ; exists ; 2019 ; New Journal of Chemistry Volume 43 ; 43 ; 2019 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2019 ; New Journal of Chemistry Volume 43 ; 43 ; 2019 ; https://pubs.rsc.org/ ; >
       au < expected ; exists ; 2020 ; New Journal of Chemistry Volume 44 ; 44 ; 2020 ; https://pubs.rsc.org/ ; >
 
   }
@@ -813,7 +813,7 @@
       au < deepCrawl ; exists ; 2016 ; Physical Chemistry Chemical Physics Volume 18 ; 18 ; 2016 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; Physical Chemistry Chemical Physics Volume 19 ; 19 ; 2017 ; http://pubs.rsc.org/ ; >
       au < finished ; manifest ; 2018 ; Physical Chemistry Chemical Physics Volume 20 ; 20 ; 2018 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
-      au < testing ; exists ; 2019 ; Physical Chemistry Chemical Physics Volume 21 ; 21 ; 2019 ; https://pubs.rsc.org/ ; >
+      au <  exists ; exists ; 2019 ; Physical Chemistry Chemical Physics Volume 21 ; 21 ; 2019 ; https://pubs.rsc.org/ ; >
       au < expected ; exists ; 2020 ; Physical Chemistry Chemical Physics Volume 22 ; 22 ; 2020 ; https://pubs.rsc.org/ ; >
 
   }
