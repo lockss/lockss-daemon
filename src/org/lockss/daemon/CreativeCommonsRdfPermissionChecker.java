@@ -126,6 +126,11 @@ public class CreativeCommonsRdfPermissionChecker extends BasePermissionChecker {
     } catch (IOException ex) {
       log.warning("Extracting RDF caused an IOException", ex);
       return false;
+    } catch (ArrayIndexOutOfBoundsException e) {
+      // This can happen if random RDF gets mistakenly gets parsed
+      // (because it isn't actially CC RDF)
+      log.warning("ArrayIndexOutOfBoundsException parsing RDF; assuming it isn't CreativeCommons RDF");
+      return false;
     }
 
     // extractRDF will return null if no RDF is found
