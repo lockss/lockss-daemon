@@ -50,12 +50,9 @@ import org.lockss.util.StringUtil;
 import java.io.IOException;
 import java.io.InputStream;
 
-import org.apache.commons.io.FileUtils;
-import java.io.*;
-
 public class TestSpandidosHtmlHashFilterFactory extends LockssTestCase {
 
-  FilterFactory variantHashFact = new SpandidosHtmlHashFilterFactory();
+  FilterFactory variantHashFact = new SpandidosHtmlFilterFactory();
   ArchivalUnit mau;
   String tempDirPath;
   MockLockssDaemon daemon;

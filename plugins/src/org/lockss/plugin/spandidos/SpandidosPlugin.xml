@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -51,23 +51,40 @@
       https://www.spandidos-publications.com/ISSUE_IMAGES/ol_15_6.jpg
       Sample citation - should not be included, it is other article referenced this one
       https://www.spandidos-publications.com/citation/10.3892/ol.2018.8378/html
+
+      Not every article has fulltext, see the following examples:
+      https://www.spandidos-publications.com/10.3892/ol.2020.11880
+      https://www.spandidos-publications.com/10.3892/ol.2020.11880/abstract
+      https://www.spandidos-publications.com/10.3892/ol.2020.11880/download
+      https://www.spandidos-publications.com/10.3892/ol.2020.11880?text=fulltext
+      https://www.spandidos-publications.com/10.3892/ol.2020.11984
+      https://www.spandidos-publications.com/10.3892/ol.2020.11984/abstract
+      https://www.spandidos-publications.com/10.3892/ol.2020.11984/download
+
+      Although the publisher move the PDF linek to doi based, it still support
+      old volume based article url. This is the way we rely on to prevent overcrawl. 
      -->
     <list>
       <!--https://www.spandidos-publications.com/images/table-icon.jpg-->
+      <string>2,"^%s(downloadForm|pages|morelikethis|var)", base_url</string>
+      <string>2,"^%sISSUE_IMAGES", base_url</string>
+      <string>2,"^%s\d+/downloadSupplementary",base_url</string>
       <string>1,"^%simages/", base_url</string>
       <string>1,"^%sresources/(css|js|images|fontface)/", base_url</string>
       <!--rules further restricted based on journal_id, volume_name-->
-      <string>1,"^%s%s/%s", base_url, journal_id, volume_name</string>
-      <string>1,"^%sarticle_images/%s/%s/", base_url, journal_id, volume_name</string>
+      <string>1,"^%s%s/%s/1", base_url, journal_id, volume_name</string>
+      <string>1,"^%sarticle_images/%s/%s/1", base_url, journal_id, volume_name</string>
       <!--https://www.spandidos-publications.com/ISSUE_IMAGES/ol_15_6.jpg-->
       <string>1,"^%sISSUE_IMAGES/%s_%s_[^/]+.jpe?g", base_url, journal_id, volume_name</string>
+      <string>1,"^%s[^/]+/[^/]+(/download|/abstract)?$", base_url</string>
     </list>
   </entry>
  <entry>
- <!-- https://www.spandidos-publications.com/br/9/4/305?text=fulltext-->
- <!-- https://www.spandidos-publications.com/br/9/4/305/download -->
+   <!-- https://www.spandidos-publications.com/br/9/4/305?text=fulltext-->
+   <!-- https://www.spandidos-publications.com/br/9/4/305/download -->
+   <!--https://www.spandidos-publications.com/10.3892/br.2018.1136/download-->
      <string>au_substance_url_pattern</string>
-       <string>1,"^%s%s/%s/.*/(download|\?text=fulltext)$", base_url, journal_id, volume_name</string>       
+       <string>"^%s[^/]+/[^/]+/download$", base_url</string>
   </entry>  
   <entry>
     <string>plugin_config_props</string>
@@ -132,7 +149,7 @@
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.spandidos.SpandidosHtmlHashFilterFactory</string>
+    <string>org.lockss.plugin.spandidos.SpandidosHtmlFilterFactory</string>
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>

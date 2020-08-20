@@ -52,29 +52,27 @@ public class SpandidosArticleIteratorFactory
           Logger.getLogger(SpandidosArticleIteratorFactory.class);
 
   /*
-  Article variant format
-  https://www.spandidos-publications.com/etm/6/6/1365
-  and
-    https://www.spandidos-publications.com/etm/6/6/1365?text=abstract
-  or
-    https://www.spandidos-publications.com/etm/6/6/1365/abstract
-  https://www.spandidos-publications.com/ol/15/1/1350?text=fulltext
-  https://www.spandidos-publications.com/etm/6/6/1365/download
+  Article variant format, it is not guarantee each article has a fulltext
+  https://www.spandidos-publications.com/10.3892/ol.2020.11880
+  https://www.spandidos-publications.com/10.3892/ol.2020.11880/abstract
+  https://www.spandidos-publications.com/10.3892/ol.2020.11880/download
+  https://www.spandidos-publications.com/10.3892/ol.2020.11880?text=fulltext
+  https://www.spandidos-publications.com/10.3892/ol.2020.11984
+  https://www.spandidos-publications.com/10.3892/ol.2020.11984/abstract
+  https://www.spandidos-publications.com/10.3892/ol.2020.11984/download
   */
 
   // Limit to just journal volume items
-  protected static final String ROOT_TEMPLATE = "\"%s%s/%s\", base_url, journal_id, volume_name";
+  protected static final String ROOT_TEMPLATE = "\"%s\", base_url";
   // Match on only those patters that could be an article
-  protected static final String PATTERN_TEMPLATE = "\"https://[^/]+/[^/]+/[^/]+/[^/]+/[^/?]+(/download|/abstract|\\?text=fulltext|\\?text=abstract)?$\"";
+  protected static final String PATTERN_TEMPLATE = "\"https://[^/]+/([0-9\\.]+/[0-9a-zA-Z\\.]+)$\"";
 
-  public static final Pattern ABSTRACT_PATTERN = Pattern.compile("/(\\d[^/?]+)/abstract$", Pattern.CASE_INSENSITIVE);
-  public static final Pattern ABSTRACT_PATTERN2 = Pattern.compile("/(\\d[^/?]+)\\?text=abstract$", Pattern.CASE_INSENSITIVE);
-  public static final Pattern PDF_PATTERN = Pattern.compile("/(\\d[^/?]+)/download$", Pattern.CASE_INSENSITIVE);
-  public static final Pattern FULLTEXT_PATTERN2 = Pattern.compile("/(\\d[^/?]+)\\?text=fulltext$", Pattern.CASE_INSENSITIVE);
-  public static final Pattern FULLTEXT_PATTERN = Pattern.compile("/(\\d[^/?]+)$", Pattern.CASE_INSENSITIVE);
+  public static final Pattern ABSTRACT_PATTERN = Pattern.compile("/([^/]+/[^/]+)/abstract$", Pattern.CASE_INSENSITIVE);
+  public static final Pattern PDF_PATTERN = Pattern.compile("/([^/]+/[^/]+)/download$", Pattern.CASE_INSENSITIVE);
+  public static final Pattern FULLTEXT_PATTERN2 = Pattern.compile("/([^/]+/[^/]+)\\?text=fulltext$", Pattern.CASE_INSENSITIVE);
+  public static final Pattern FULLTEXT_PATTERN = Pattern.compile("/([^/]+/[^/]+)$", Pattern.CASE_INSENSITIVE);
 
   public static final String ABSTRACT_REPLACEMENT = "/$1/abstract";
-  public static final String ABSTRACT_REPLACEMENT2 = "/$1?text=abstract";
   public static final String PDF_REPLACEMENT = "/$1/download";
   public static final String FULLTEXT_REPLACEMENT2 =  "/$1?text=fulltext";
   public static final String FULLTEXT_REPLACEMENT =  "/$1";
@@ -104,26 +102,13 @@ public class SpandidosArticleIteratorFactory
 
     // set up Abstract to be an aspect that will trigger an ArticleFiles
     builder.addAspect(
-            Arrays.asList(ABSTRACT_PATTERN, ABSTRACT_PATTERN2),
-            Arrays.asList(ABSTRACT_REPLACEMENT, ABSTRACT_REPLACEMENT2),
+            ABSTRACT_PATTERN,
+            ABSTRACT_REPLACEMENT,
             ArticleFiles.ROLE_ABSTRACT);
-
 
     builder.addAspect(
             FULLTEXT_REPLACEMENT2,
             FULL_TEXT_ALTERNATIVE);
-
-    // add metadata role from abstract, html
-    builder.setRoleFromOtherRoles(
-            ArticleFiles.ROLE_ARTICLE_METADATA, ArticleFiles.ROLE_FULL_TEXT_HTML, FULL_TEXT_ALTERNATIVE, ArticleFiles.ROLE_ABSTRACT);
-
-    // The order in which we want to define full_text_cu.
-    // First one that exists will get the job
-    builder.setFullTextFromRoles(
-            ArticleFiles.ROLE_FULL_TEXT_HTML,
-            FULL_TEXT_ALTERNATIVE,
-            ArticleFiles.ROLE_FULL_TEXT_PDF);
-
 
     return builder.getSubTreeArticleIterator();
   }

@@ -104,41 +104,16 @@ public class TestSpandidosArticleIteratorFactory extends ArticleIteratorTestCase
     return
             PluginTestUtil.createAndStartAu(PLUGIN_ID, AU_CONFIG);
   }
-
-
-  public void testRoots() throws Exception {
-    SubTreeArticleIterator artIter = createSubTreeIter();
-    assertEquals(ListUtil.list(BASE_URL + JOURNAL_ID + "/" + VOLUME_NAME),
-            getRootUrls(artIter));
-  }
-
-  //
-  // We are set up to match any of <journal_id>/<volume_name>/start_page*
-  //
+  
   public void testUrls() throws Exception {
     SubTreeArticleIterator artIter = createSubTreeIter();
     Pattern pat = getPattern(artIter);
 
-    // Different variant for articles/abstracts/download should pass
-    assertMatchesRE(pat, "https://www.spandidos-publications.com/ol/6/2/1777?text=abstract");
-    assertMatchesRE(pat, "https://www.spandidos-publications.com/ol/6/2/1777/abstract");
+    assertMatchesRE(pat, "https://www.spandidos-publications.com/10.3892/ol.2020.11880");
+    assertMatchesRE(pat, "https://www.spandidos-publications.com/10.3892/ol.2020.11984");
 
-    assertMatchesRE(pat, "https://www.spandidos-publications.com/ol/6/2/1777/download");
-
-    assertMatchesRE(pat, "https://www.spandidos-publications.com/ol/6/2/1777");
-    assertMatchesRE(pat, "https://www.spandidos-publications.com/ol/6/2/1777?text=fulltext");
-
-    // but not to wrong jid or volume_name or format
-    assertNotMatchesRE(pat, "https://www.spandidos-publications.com/ol/6/2/1777?abstract");
-
-    assertNotMatchesRE(pat, "https://www.spandidos-publications.com/ol/15/2/1777/pdf");
-    assertNotMatchesRE(pat, "https://www.spandidos-publications.com/ol/6/2/1777?text=pdf");
-    assertNotMatchesRE(pat, "https://www.spandidos-publications.com/ol/6/2/1777?text=download");
-
-    assertNotMatchesRE(pat, "https://www.spandidos-publications.com/ol/6/2/1777?");
-    assertNotMatchesRE(pat, "https://www.spandidos-publications.com/ol/8/2/1777/");
-    assertNotMatchesRE(pat, "https://www.spandidos-publications.com/ol/8/2/");
-    assertNotMatchesRE(pat, "https://www.spandidos-publications.com/ol/8/2");
+    assertNotMatchesRE(pat, "https://www.spandidos-publications.com/ol/6/1");
+    assertNotMatchesRE(pat, "https://www.spandidos-publications.com/jid/5/4");
   }
 
 }

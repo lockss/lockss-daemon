@@ -47,7 +47,7 @@ import org.lockss.filter.FilterUtil;
 import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.*;
 
-public class SpandidosHtmlHashFilterFactory implements FilterFactory {
+public class SpandidosHtmlFilterFactory implements FilterFactory {
 
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
