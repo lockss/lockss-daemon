@@ -63,8 +63,9 @@
             -->
             <string>2,"%sbq/[^\.]+\.\d+$", base_url</string>
             <string>1,"%sbq/", base_url</string>
-            <string>1,"http://blackquotidian.supdigital.org/system/application/views/"</string>
-            <string>1,"http://blackquotidian.supdigital.org/bq/media/.*\.(jpe?g|png|gif|pdf)"</string>
+            <string>1,"%ssystem/application/views/", base_url</string>
+            <string>1,"%scover/build/bq/assets", base_url</string>
+            <string>1,"%sbq/media/.*\.(jpe?g|png|gif|pdf)", base_url</string>
             
         </list>
     </entry>
