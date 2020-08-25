@@ -627,10 +627,10 @@
     au < manifest ; 1997 ; Journal on Optimization Volume 7 ; 7 ; https://epubs.siam.org/ >
     au < manifest ; 1998 ; Journal on Optimization Volume 8 ; 8 ; https://epubs.siam.org/ >
     au < manifest ; 1999 ; Journal on Optimization Volume 9 ; 9 ; https://epubs.siam.org/ >
-    au < manifest ; 2000 ; Journal on Optimization Volume 10 ; 10 ; https://epubs.siam.org/ >
-    au < manifest ; 2001 ; Journal on Optimization Volume 11 ; 11 ; https://epubs.siam.org/ >
-    au < manifest ; 2002 ; Journal on Optimization Volume 12 ; 12 ; https://epubs.siam.org/ >
-    au < manifest ; 2003 ; Journal on Optimization Volume 13 ; 13 ; https://epubs.siam.org/ >
+    au < ready ; 2000 ; Journal on Optimization Volume 10 ; 10 ; https://epubs.siam.org/ >
+    au < ready ; 2001 ; Journal on Optimization Volume 11 ; 11 ; https://epubs.siam.org/ >
+    au < ready ; 2002 ; Journal on Optimization Volume 12 ; 12 ; https://epubs.siam.org/ >
+    au < ready ; 2003 ; Journal on Optimization Volume 13 ; 13 ; https://epubs.siam.org/ >
     au < released ; 2003 ; Journal on Optimization Volume 14 ; 14 ; https://epubs.siam.org/ >
     au < released ; 2004 ; Journal on Optimization Volume 15 ; 15 ; https://epubs.siam.org/ >
     au < released ; 2005 ; Journal on Optimization Volume 16 ; 16 ; https://epubs.siam.org/ >
@@ -646,7 +646,7 @@
     au < released ; 2016 ; Journal on Optimization Volume 26 ; 26 ; http://epubs.siam.org/ >
     au < released ; 2017 ; Journal on Optimization Volume 27 ; 27 ; https://epubs.siam.org/ >
     au < released ; 2018 ; Journal on Optimization Volume 28 ; 28 ; https://epubs.siam.org/ >
-    au < manifest ; 2019 ; Journal on Optimization Volume 29 ; 29 ; https://epubs.siam.org/ >
+    au < ready ; 2019 ; Journal on Optimization Volume 29 ; 29 ; https://epubs.siam.org/ >
     au < manifest ; 2020 ; Journal on Optimization Volume 30 ; 30 ; https://epubs.siam.org/ >
 
   }
@@ -686,10 +686,10 @@
     au < manifest ; 1997 ; Journal on Scientific Computing Volume 18 ; 18 ; https://epubs.siam.org/ >
     au < manifest ; 1998 ; Journal on Scientific Computing Volume 19 ; 19 ; https://epubs.siam.org/ >
     au < manifest ; 1999 ; Journal on Scientific Computing Volume 20 ; 20 ; https://epubs.siam.org/ >
-    au < manifest ; 2000 ; Journal on Scientific Computing Volume 21 ; 21 ; https://epubs.siam.org/ >
-    au < manifest ; 2001 ; Journal on Scientific Computing Volume 22 ; 22 ; https://epubs.siam.org/ >
-    au < manifest ; 2002 ; Journal on Scientific Computing Volume 23 ; 23 ; https://epubs.siam.org/ >
-    au < manifest ; 2003 ; Journal on Scientific Computing Volume 24 ; 24 ; https://epubs.siam.org/ >
+    au < ready ; 2000 ; Journal on Scientific Computing Volume 21 ; 21 ; https://epubs.siam.org/ >
+    au < ready ; 2001 ; Journal on Scientific Computing Volume 22 ; 22 ; https://epubs.siam.org/ >
+    au < ready ; 2002 ; Journal on Scientific Computing Volume 23 ; 23 ; https://epubs.siam.org/ >
+    au < ready ; 2003 ; Journal on Scientific Computing Volume 24 ; 24 ; https://epubs.siam.org/ >
     au < released ; 2003 ; Journal on Scientific Computing Volume 25 ; 25 ; https://epubs.siam.org/ >
     au < released ; 2004 ; Journal on Scientific Computing Volume 26 ; 26 ; https://epubs.siam.org/ >
     au < released ; 2005 ; Journal on Scientific Computing Volume 27 ; 27 ; https://epubs.siam.org/ >
@@ -782,9 +782,9 @@
     au < manifest ; 1997 ; SIAM Review Volume 39 ; 39 ; https://epubs.siam.org/ >
     au < manifest ; 1998 ; SIAM Review Volume 40 ; 40 ; https://epubs.siam.org/ >
     au < manifest ; 1999 ; SIAM Review Volume 41 ; 41 ; https://epubs.siam.org/ >
-    au < manifest ; 2000 ; SIAM Review Volume 42 ; 42 ; https://epubs.siam.org/ >
-    au < manifest ; 2001 ; SIAM Review Volume 43 ; 43 ; https://epubs.siam.org/ >
-    au < manifest ; 2002 ; SIAM Review Volume 44 ; 44 ; https://epubs.siam.org/ >
+    au < ready ; 2000 ; SIAM Review Volume 42 ; 42 ; https://epubs.siam.org/ >
+    au < ready ; 2001 ; SIAM Review Volume 43 ; 43 ; https://epubs.siam.org/ >
+    au < ready ; 2002 ; SIAM Review Volume 44 ; 44 ; https://epubs.siam.org/ >
     au < released ; 2003 ; SIAM Review Volume 45 ; 45 ; https://epubs.siam.org/ >
     au < released ; 2004 ; SIAM Review Volume 46 ; 46 ; https://epubs.siam.org/ >
     au < released ; 2005 ; SIAM Review Volume 47 ; 47 ; https://epubs.siam.org/ >
@@ -801,7 +801,7 @@
     au < released ; 2016 ; SIAM Review Volume 58 ; 58 ; http://epubs.siam.org/ >
     au < released ; 2017 ; SIAM Review Volume 59 ; 59 ; https://epubs.siam.org/ >
     au < released ; 2018 ; SIAM Review Volume 60 ; 60 ; https://epubs.siam.org/ >
-    au < manifest ; 2019 ; SIAM Review Volume 61 ; 61 ; https://epubs.siam.org/ >
+    au < ready ; 2019 ; SIAM Review Volume 61 ; 61 ; https://epubs.siam.org/ >
     au < manifest ; 2020 ; SIAM Review Volume 62 ; 62 ; https://epubs.siam.org/ >
 
   }
@@ -860,9 +860,9 @@
     au < manifest ; 1997 ; Theory of Probability and its Applications Volume 41 ; 41 ; https://epubs.siam.org/ >
     au < manifest ; 1998 ; Theory of Probability and its Applications Volume 42 ; 42 ; https://epubs.siam.org/ >
     au < manifest ; 1999 ; Theory of Probability and its Applications Volume 43 ; 43 ; https://epubs.siam.org/ >
-    au < manifest ; 2000 ; Theory of Probability and its Applications Volume 44 ; 44 ; https://epubs.siam.org/ >
-    au < manifest ; 2001 ; Theory of Probability and its Applications Volume 45 ; 45 ; https://epubs.siam.org/ >
-    au < manifest ; 2002 ; Theory of Probability and its Applications Volume 46 ; 46 ; https://epubs.siam.org/ >
+    au < ready ; 2000 ; Theory of Probability and its Applications Volume 44 ; 44 ; https://epubs.siam.org/ >
+    au < ready ; 2001 ; Theory of Probability and its Applications Volume 45 ; 45 ; https://epubs.siam.org/ >
+    au < ready ; 2002 ; Theory of Probability and its Applications Volume 46 ; 46 ; https://epubs.siam.org/ >
     au < released ; 2003 ; Theory of Probability and its Applications Volume 47 ; 47 ; https://epubs.siam.org/ >
     au < released ; 2004 ; Theory of Probability and its Applications Volume 48 ; 48 ; https://epubs.siam.org/ >
     au < released ; 2005 ; Theory of Probability and its Applications Volume 49 ; 49 ; https://epubs.siam.org/ >
@@ -907,9 +907,9 @@
 
     param[journal_id] = sjaabq
 
-    au < manifest ; 2017 ; Journal on Applied Algebra and Geometry Volume 1 ; 1 ; https://epubs.siam.org/ >
-    au < manifest ; 2018 ; Journal on Applied Algebra and Geometry Volume 2 ; 2 ; https://epubs.siam.org/ >
-    au < manifest ; 2019 ; Journal on Applied Algebra and Geometry Volume 3 ; 3 ; https://epubs.siam.org/ >
+    au < ready ; 2017 ; Journal on Applied Algebra and Geometry Volume 1 ; 1 ; https://epubs.siam.org/ >
+    au < ready ; 2018 ; Journal on Applied Algebra and Geometry Volume 2 ; 2 ; https://epubs.siam.org/ >
+    au < ready ; 2019 ; Journal on Applied Algebra and Geometry Volume 3 ; 3 ; https://epubs.siam.org/ >
     au < manifest ; 2020 ; Journal on Applied Algebra and Geometry Volume 4 ; 4 ; https://epubs.siam.org/ >
 
   }
