@@ -408,7 +408,7 @@
       au < finished ; finished ; 2016 ; 2016 ; Biogeosciences Volume 13 ; 13 ; http://www.biogeosciences.net/ ; http://www.biogeosciences.net/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2017 ; 2017 ; Biogeosciences Volume 14 ; 14 ; https://www.biogeosciences.net/ ; https://www.biogeosciences.net/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2018 ; 2018 ; Biogeosciences Volume 15 ; 15 ; https://www.biogeosciences.net/ ; https://www.biogeosciences.net/ ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2019 ; 2019 ; Biogeosciences Volume 16 ; 16 ; https://www.biogeosciences.net/ ; https://www.biogeosciences.net/ ; >
+      au < finished ; manifest ; 2019 ; 2019 ; Biogeosciences Volume 16 ; 16 ; https://www.biogeosciences.net/ ; https://www.biogeosciences.net/ ; reingest5.clockss.org:8082 >
       au < doNotProcess ; exists ; 2020 ; 2020 ; Biogeosciences Volume 17 ; 17 ; https://www.biogeosciences.net/ ; https://www.biogeosciences.net/ ; >
 
    }
@@ -510,9 +510,9 @@
       au < finished ; finished ; 2014 ; 2014 ; Drinking Water Engineering and Science Volume 7 ; 7 ; http://www.drink-water-eng-sci.net/ ; http://www.drinking-water-engineering-and-science.net/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Drinking Water Engineering and Science Volume 8 ; 8 ; http://www.drink-water-eng-sci.net/ ; http://www.drinking-water-engineering-and-science.net/ ; >
       au < finished ; finished ; 2016 ; 2016 ; Drinking Water Engineering and Science Volume 9 ; 9 ; http://www.drink-water-eng-sci.net/ ; http://www.drinking-water-engineering-and-science.net/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2017 ; 2017 ; Drinking Water Engineering and Science Volume 10 ; 10 ; https://www.drink-water-eng-sci.net/ ; https://www.drinking-water-engineering-and-science.net/ ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Drinking Water Engineering and Science Volume 11 ; 11 ; https://www.drink-water-eng-sci.net/ ; https://www.drinking-water-engineering-and-science.net/ ; >
-      au < frozen ; exists ; 2019 ; 2019 ; Drinking Water Engineering and Science Volume 12 ; 12 ; https://www.drink-water-eng-sci.net/ ; https://www.drinking-water-engineering-and-science.net/ ; >
+      au < finished ; manifest ; 2017 ; 2017 ; Drinking Water Engineering and Science Volume 10 ; 10 ; https://www.drink-water-eng-sci.net/ ; https://www.drinking-water-engineering-and-science.net/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; 2018 ; Drinking Water Engineering and Science Volume 11 ; 11 ; https://www.drink-water-eng-sci.net/ ; https://www.drinking-water-engineering-and-science.net/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2019 ; 2019 ; Drinking Water Engineering and Science Volume 12 ; 12 ; https://www.drink-water-eng-sci.net/ ; https://www.drinking-water-engineering-and-science.net/ ; reingest3.clockss.org:8083 >
       au < doNotProcess ; exists ; 2020 ; 2020 ; Drinking Water Engineering and Science Volume 13 ; 13 ; https://www.drink-water-eng-sci.net/ ; https://www.drinking-water-engineering-and-science.net/ ; >
 
    }
@@ -1048,8 +1048,8 @@
       au < finished ; finished ; 2015 ; 2015 ; History of Geo- and Space Sciences Volume 6 ; 6 ; http://www.hist-geo-space-sci.net/ ; http://www.history-of-geo-and-space-sciences.net/ ; >
       au < finished ; finished ; 2016 ; 2016 ; History of Geo- and Space Sciences Volume 7 ; 7 ; http://www.hist-geo-space-sci.net/ ; http://www.history-of-geo-and-space-sciences.net/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2017 ; 2017 ; History of Geo- and Space Sciences Volume 8 ; 8 ; https://www.hist-geo-space-sci.net/ ; https://www.history-of-geo-and-space-sciences.net/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2018 ; 2018 ; History of Geo- and Space Sciences Volume 9 ; 9 ; https://www.hist-geo-space-sci.net/ ; https://www.history-of-geo-and-space-sciences.net/ ; >
-      au < frozen ; exists ; 2019 ; 2019 ; History of Geo- and Space Sciences Volume 10 ; 10 ; https://www.hist-geo-space-sci.net/ ; https://www.history-of-geo-and-space-sciences.net/ ; >
+      au < finished ; manifest ; 2018 ; 2018 ; History of Geo- and Space Sciences Volume 9 ; 9 ; https://www.hist-geo-space-sci.net/ ; https://www.history-of-geo-and-space-sciences.net/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; 2019 ; History of Geo- and Space Sciences Volume 10 ; 10 ; https://www.hist-geo-space-sci.net/ ; https://www.history-of-geo-and-space-sciences.net/ ; reingest1.clockss.org:8082 >
       au < doNotProcess ; exists ; 2020 ; 2020 ; History of Geo- and Space Sciences Volume 11 ; 11 ; https://www.hist-geo-space-sci.net/ ; https://www.history-of-geo-and-space-sciences.net/ ; >
 
    }
@@ -1085,8 +1085,8 @@
       au < finished ; finished ; 2015 ; 2015 ; Hydrology and Earth System Sciences Volume 19 ; 19 ; http://www.hydrol-earth-syst-sci.net/ ; http://www.hydrology-and-earth-system-sciences.net/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2016 ; 2016 ; Hydrology and Earth System Sciences Volume 20 ; 20 ; http://www.hydrol-earth-syst-sci.net/ ; http://www.hydrology-and-earth-system-sciences.net/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; 2017 ; Hydrology and Earth System Sciences Volume 21 ; 21 ; https://www.hydrol-earth-syst-sci.net/ ; https://www.hydrology-and-earth-system-sciences.net/ ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2018 ; 2018 ; Hydrology and Earth System Sciences Volume 22 ; 22 ; https://www.hydrol-earth-syst-sci.net/ ; https://www.hydrology-and-earth-system-sciences.net/ ; >
-      au < frozen ; exists ; 2019 ; 2019 ; Hydrology and Earth System Sciences Volume 23 ; 23 ; https://www.hydrol-earth-syst-sci.net/ ; https://www.hydrology-and-earth-system-sciences.net/ ; >
+      au < finished ; manifest ; 2018 ; 2018 ; Hydrology and Earth System Sciences Volume 22 ; 22 ; https://www.hydrol-earth-syst-sci.net/ ; https://www.hydrology-and-earth-system-sciences.net/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2019 ; 2019 ; Hydrology and Earth System Sciences Volume 23 ; 23 ; https://www.hydrol-earth-syst-sci.net/ ; https://www.hydrology-and-earth-system-sciences.net/ ; reingest5.clockss.org:8082 >
       au < doNotProcess ; exists ; 2020 ; 2020 ; Hydrology and Earth System Sciences Volume 24 ; 24 ; https://www.hydrol-earth-syst-sci.net/ ; https://www.hydrology-and-earth-system-sciences.net/ ; >
 
    }
@@ -1146,22 +1146,22 @@
       au < finished ; finished ; 2014 ; 2014 ; ISPRS Annals Volume II-6 ; II-6 ; http://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; http://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
       au < finished ; finished ; 2014 ; 2014 ; ISPRS Annals Volume II-7 ; II-7 ; http://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; http://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2014 ; 2014 ; ISPRS Annals Volume II-8 ; II-8 ; http://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; http://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
-      au < frozen ; exists ; 2015 ; 2015 ; ISPRS Annals Volume II-1/W1 ; II-1-W1 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
-      au < frozen ; exists ; 2015 ; 2015 ; ISPRS Annals Volume II-2/W2 ; II-2-W2 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
+      au < finished ; manifest ; 2015 ; 2015 ; ISPRS Annals Volume II-1/W1 ; II-1-W1 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2015 ; 2015 ; ISPRS Annals Volume II-2/W2 ; II-2-W2 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; ISPRS Annals Volume II-3/W4 ; II-3-W4 ; http://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; http://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
-      au < frozen ; exists ; 2015 ; 2015 ; ISPRS Annals Volume II-3/W5 ; II-3-W5 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
-      au < frozen ; exists ; 2015 ; 2015 ; ISPRS Annals Volume II-4/W2 ; II-4-W2 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
-      au < frozen ; exists ; 2015 ; 2015 ; ISPRS Annals Volume II-5/W3 ; II-5-W3 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
-      au < frozen ; exists ; 2016 ; 2016 ; ISPRS Annals Volume III-1 ; III-1 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
-      au < frozen ; exists ; 2016 ; 2016 ; ISPRS Annals Volume III-2 ; III-2 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
-      au < frozen ; exists ; 2016 ; 2016 ; ISPRS Annals Volume III-3 ; III-3 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
-      au < frozen ; exists ; 2016 ; 2016 ; ISPRS Annals Volume III-4 ; III-4 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
-      au < frozen ; exists ; 2016 ; 2016 ; ISPRS Annals Volume III-5 ; III-5 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
-      au < frozen ; exists ; 2016 ; 2016 ; ISPRS Annals Volume III-6 ; III-6 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
-      au < frozen ; exists ; 2016 ; 2016 ; ISPRS Annals Volume III-7 ; III-7 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
-      au < frozen ; exists ; 2016 ; 2016 ; ISPRS Annals Volume III-8 ; III-8 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
-      au < frozen ; exists ; 2016 ; 2016 ; ISPRS Annals Volume IV-2/W1 ; IV-2-W1 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
-      au < frozen ; exists ; 2016 ; 2016 ; ISPRS Annals Volume IV-4/W1 ; IV-4-W1 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; >
+      au < finished ; manifest ; 2015 ; 2015 ; ISPRS Annals Volume II-3/W5 ; II-3-W5 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2015 ; 2015 ; ISPRS Annals Volume II-4/W2 ; II-4-W2 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2015 ; 2015 ; ISPRS Annals Volume II-5/W3 ; II-5-W3 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; 2016 ; ISPRS Annals Volume III-1 ; III-1 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; 2016 ; ISPRS Annals Volume III-2 ; III-2 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; 2016 ; ISPRS Annals Volume III-3 ; III-3 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2016 ; 2016 ; ISPRS Annals Volume III-4 ; III-4 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2016 ; 2016 ; ISPRS Annals Volume III-5 ; III-5 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; 2016 ; ISPRS Annals Volume III-6 ; III-6 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; 2016 ; ISPRS Annals Volume III-7 ; III-7 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; 2016 ; ISPRS Annals Volume III-8 ; III-8 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2016 ; 2016 ; ISPRS Annals Volume IV-2/W1 ; IV-2-W1 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2016 ; 2016 ; ISPRS Annals Volume IV-4/W1 ; IV-4-W1 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2017 ; 2017 ; ISPRS Annals Volume IV-1/W1 ; IV-1-W1 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2017 ; 2017 ; ISPRS Annals Volume IV-4/W2 ; IV-4-W2 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2017 ; 2017 ; ISPRS Annals Volume IV-2/W2 ; IV-2-W2 ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/ ; reingest4.clockss.org:8082 >
@@ -1246,7 +1246,7 @@
       au < doNotProcess ; exists ; 2011 ; 2011 ; ISPRS Archives Volume XXXVIII-6/W27 ; XXXVIII-6-W27 ; https://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/ ; >
       au < doNotProcess ; exists ; 2011 ; 2011 ; ISPRS Archives Volume XXXVIII-8/W20 ; XXXVIII-8-W20 ; https://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/ ; https://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/ ; >
       au < finished ; finished ; 2012 ; 2012 ; ISPRS Archives Volume XXXVIII-4/C26 ; XXXVIII-4-C26 ; http://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/ ; http://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/ ; >
-      au < frozen ; exists ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B1 ; XXXIX-B1 ; http://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/ ; http://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/ ; >
+      au < finished ; manifest ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B1 ; XXXIX-B1 ; http://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/ ; http://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B2 ; XXXIX-B2 ; http://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/ ; http://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/ ; >
       au < finished ; finished ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B3 ; XXXIX-B3 ; http://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/ ; http://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/ ; >
       au < finished ; finished ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B4 ; XXXIX-B4 ; http://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/ ; http://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/ ; >
@@ -1365,14 +1365,14 @@
       au < doNotProcess ; exists ; 2009 ; 2009 ; Journal of Micropalaeontology Volume 28 ; 28 ; https://www.j-micropalaeontol.net/ ; https://www.journal-of-micropalaeontology.net/ ; >
       au < doNotProcess ; exists ; 2010 ; 2010 ; Journal of Micropalaeontology Volume 29 ; 29 ; https://www.j-micropalaeontol.net/ ; https://www.journal-of-micropalaeontology.net/ ; >
       au < doNotProcess ; exists ; 2011 ; 2011 ; Journal of Micropalaeontology Volume 30 ; 30 ; https://www.j-micropalaeontol.net/ ; https://www.journal-of-micropalaeontology.net/ ; >
-      au < frozen ; exists ; 2012 ; 2012 ; Journal of Micropalaeontology Volume 31 ; 31 ; https://www.j-micropalaeontol.net/ ; https://www.journal-of-micropalaeontology.net/ ; >
-      au < frozen ; exists ; 2013 ; 2013 ; Journal of Micropalaeontology Volume 32 ; 32 ; https://www.j-micropalaeontol.net/ ; https://www.journal-of-micropalaeontology.net/ ; >
-      au < frozen ; exists ; 2014 ; 2014 ; Journal of Micropalaeontology Volume 33 ; 33 ; https://www.j-micropalaeontol.net/ ; https://www.journal-of-micropalaeontology.net/ ; >
-      au < frozen ; exists ; 2015 ; 2015 ; Journal of Micropalaeontology Volume 34 ; 34 ; https://www.j-micropalaeontol.net/ ; https://www.journal-of-micropalaeontology.net/ ; >
-      au < frozen ; exists ; 2016 ; 2016 ; Journal of Micropalaeontology Volume 35 ; 35 ; https://www.j-micropalaeontol.net/ ; https://www.journal-of-micropalaeontology.net/ ; >
+      au < finished ; manifest ; 2012 ; 2012 ; Journal of Micropalaeontology Volume 31 ; 31 ; https://www.j-micropalaeontol.net/ ; https://www.journal-of-micropalaeontology.net/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2013 ; 2013 ; Journal of Micropalaeontology Volume 32 ; 32 ; https://www.j-micropalaeontol.net/ ; https://www.journal-of-micropalaeontology.net/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2014 ; 2014 ; Journal of Micropalaeontology Volume 33 ; 33 ; https://www.j-micropalaeontol.net/ ; https://www.journal-of-micropalaeontology.net/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2015 ; 2015 ; Journal of Micropalaeontology Volume 34 ; 34 ; https://www.j-micropalaeontol.net/ ; https://www.journal-of-micropalaeontology.net/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2016 ; 2016 ; Journal of Micropalaeontology Volume 35 ; 35 ; https://www.j-micropalaeontol.net/ ; https://www.journal-of-micropalaeontology.net/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2017 ; 2017 ; Journal of Micropalaeontology Volume 36 ; 36 ; https://www.j-micropalaeontol.net/ ; https://www.journal-of-micropalaeontology.net/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2018 ; 2018 ; Journal of Micropalaeontology Volume 37 ; 37 ; https://www.j-micropalaeontol.net/ ; https://www.journal-of-micropalaeontology.net/ ; >
-      au < frozen ; exists ; 2019 ; 2019 ; Journal of Micropalaeontology Volume 38 ; 38 ; https://www.j-micropalaeontol.net/ ; https://www.journal-of-micropalaeontology.net/ ; >
+      au < finished ; manifest ; 2018 ; 2018 ; Journal of Micropalaeontology Volume 37 ; 37 ; https://www.j-micropalaeontol.net/ ; https://www.journal-of-micropalaeontology.net/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; 2019 ; Journal of Micropalaeontology Volume 38 ; 38 ; https://www.j-micropalaeontol.net/ ; https://www.journal-of-micropalaeontology.net/ ; reingest1.clockss.org:8082 >
       au < doNotProcess ; exists ; 2020 ; 2020 ; Journal of Micropalaeontology Volume 39 ; 39 ; https://www.j-micropalaeontol.net/ ; https://www.journal-of-micropalaeontology.net/ ; >
 
   }
@@ -1391,10 +1391,10 @@
       au < finished ; finished ; 2013 ; 2013 ; Journal of Sensors and Sensor Systems Volume 2 ; 2 ; http://www.j-sens-sens-syst.net/ ; http://www.journal-of-sensors-and-sensor-systems.net/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2014 ; 2014 ; Journal of Sensors and Sensor Systems Volume 3 ; 3 ; http://www.j-sens-sens-syst.net/ ; http://www.journal-of-sensors-and-sensor-systems.net/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Journal of Sensors and Sensor Systems Volume 4 ; 4 ; http://www.j-sens-sens-syst.net/ ; http://www.journal-of-sensors-and-sensor-systems.net/ ; >
-      au < frozen ; exists ; 2016 ; 2016 ; Journal of Sensors and Sensor Systems Volume 5 ; 5 ; https://www.j-sens-sens-syst.net/ ; https://www.journal-of-sensors-and-sensor-systems.net/ ; >
-      au < frozen ; exists ; 2017 ; 2017 ; Journal of Sensors and Sensor Systems Volume 6 ; 6 ; https://www.j-sens-sens-syst.net/ ; https://www.journal-of-sensors-and-sensor-systems.net/ ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Journal of Sensors and Sensor Systems Volume 7 ; 7 ; https://www.j-sens-sens-syst.net/ ; https://www.journal-of-sensors-and-sensor-systems.net/ ; >
-      au < frozen ; exists ; 2019 ; 2019 ; Journal of Sensors and Sensor Systems Volume 8 ; 8 ; https://www.j-sens-sens-syst.net/ ; https://www.journal-of-sensors-and-sensor-systems.net/ ; >
+      au < finished ; manifest ; 2016 ; 2016 ; Journal of Sensors and Sensor Systems Volume 5 ; 5 ; https://www.j-sens-sens-syst.net/ ; https://www.journal-of-sensors-and-sensor-systems.net/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2017 ; 2017 ; Journal of Sensors and Sensor Systems Volume 6 ; 6 ; https://www.j-sens-sens-syst.net/ ; https://www.journal-of-sensors-and-sensor-systems.net/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2018 ; 2018 ; Journal of Sensors and Sensor Systems Volume 7 ; 7 ; https://www.j-sens-sens-syst.net/ ; https://www.journal-of-sensors-and-sensor-systems.net/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; 2019 ; Journal of Sensors and Sensor Systems Volume 8 ; 8 ; https://www.j-sens-sens-syst.net/ ; https://www.journal-of-sensors-and-sensor-systems.net/ ; reingest3.clockss.org:8083 >
       au < doNotProcess ; exists ; 2020 ; 2020 ; Journal of Sensors and Sensor Systems Volume 9 ; 9 ; https://www.j-sens-sens-syst.net/ ; https://www.journal-of-sensors-and-sensor-systems.net/ ; >
 
    }
