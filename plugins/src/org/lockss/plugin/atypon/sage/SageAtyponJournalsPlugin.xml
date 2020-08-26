@@ -10,7 +10,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>30</string>
+    <string>31</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -22,7 +22,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>104</string>
+    <string>105</string>
   </entry>
   <!--  override start url from parent to support http to https conversion -->
   <entry>
@@ -63,5 +63,12 @@
   <entry>
     <string>text/html_link_rewriter_factory</string>
     <string>org.lockss.plugin.atypon.sage.SageAtyponHtmlLinkRewriterFactory</string>
+  </entry>
+  <entry>
+    <!-- Exclude a huge PDF file to prevent server crash
+    https://journals.sagepub.com/doi/suppl/10.1177/2331216519887614/suppl_file/TIA887614_Supplemental_Material.pdf
+    -->
+    <string>au_exclude_urls_from_polls_pattern</string>
+      <string>"%sdoi/suppl/10.1177/2331216519887614/suppl_file/TIA887614_Supplemental_Material.pdf",base_url</string>
   </entry>
 </map>
