@@ -1894,8 +1894,8 @@
       au < finished ; finished ; 2015 ; 2015 ; Web Ecology Volume 15 ; 15 ; http://www.web-ecol.net/ ; http://www.web-ecology.net/ ; >
       au < finished ; frozen ; 2016 ; 2016 ; Web Ecology Volume 16 ; 16 ; https://www.web-ecol.net/ ; https://www.web-ecology.net/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; 2017 ; Web Ecology Volume 17 ; 17 ; https://www.web-ecol.net/ ; https://www.web-ecology.net/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2018 ; 2018 ; Web Ecology Volume 18 ; 18 ; https://www.web-ecol.net/ ; https://www.web-ecology.net/ ; >
-      au < frozen ; exists ; 2019 ; 2019 ; Web Ecology Volume 19 ; 19 ; https://www.web-ecol.net/ ; https://www.web-ecology.net/ ; >
+      au < finished ; manifest ; 2018 ; 2018 ; Web Ecology Volume 18 ; 18 ; https://www.web-ecol.net/ ; https://www.web-ecology.net/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2019 ; 2019 ; Web Ecology Volume 19 ; 19 ; https://www.web-ecol.net/ ; https://www.web-ecology.net/ ; reingest3.clockss.org:8083 >
       au < doNotProcess ; exists ; 2020 ; 2020 ; Web Ecology Volume 20 ; 20 ; https://www.web-ecol.net/ ; https://www.web-ecology.net/ ; >
 
    }
