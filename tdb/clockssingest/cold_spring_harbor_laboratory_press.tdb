@@ -308,9 +308,9 @@
 
 #      param[base_url] = http://genome.cshlp.org/
 
-      au < finished ; manifest ; 1991-1992 ; Genome Research Volume 1 ; 1 ; https://genome.cshlp.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 1991-1992 ; Genome Research Volume 1 ; 1 ; https://genome.cshlp.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 1992-1993 ; Genome Research Volume 2 ; 2 ; https://genome.cshlp.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 1993-1994 ; Genome Research Volume 3 ; 3 ; https://genome.cshlp.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 1993-1994 ; Genome Research Volume 3 ; 3 ; https://genome.cshlp.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 1994-1995 ; Genome Research Volume 4 ; 4 ; https://genome.cshlp.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 1995 ; Genome Research Volume 5 ; 5 ; https://genome.cshlp.org/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 1996 ; Genome Research Volume 6  ; 6  ; https://genome.cshlp.org/ ; reingest3.clockss.org:8083 >

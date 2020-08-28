@@ -591,7 +591,7 @@
 
     au < finished ; finished ; 1988 ; Microbial Ecology in Health and Disease Volume 1 ; 1 ; 1988 ; >
     au < finished ; finished ; 1989 ; Microbial Ecology in Health and Disease Volume 2 ; 2 ; 1989 ; >
-    au < finished ; manifest ; 1990 ; Microbial Ecology in Health and Disease Volume 3 ; 3 ; 1990 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 1990 ; Microbial Ecology in Health and Disease Volume 3 ; 3 ; 1990 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 1991 ; Microbial Ecology in Health and Disease Volume 4 ; 4 ; 1991 ; >
     au < finished ; finished ; 1992 ; Microbial Ecology in Health and Disease Volume 5 ; 5 ; 1992 ; >
     au < finished ; finished ; 1993 ; Microbial Ecology in Health and Disease Volume 6 ; 6 ; 1993 ; >
@@ -700,15 +700,15 @@
     param[journal_id] = polar
 
     au < finished ; finished ; 1982 ; Polar Research Volume 1982 ; 1982 ; 1982 ; >
-    au < finished ; manifest ; 1983 ; Polar Research Volume 1 ; 1 ; 1983 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 1984 ; Polar Research Volume 2 ; 2 ; 1984 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 1983 ; Polar Research Volume 1 ; 1 ; 1983 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 1984 ; Polar Research Volume 2 ; 2 ; 1984 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 1985 ; Polar Research Volume 3 ; 3 ; 1985 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 1986 ; Polar Research Volume 4 ; 4 ; 1986 ; >
     au < finished ; finished ; 1987 ; Polar Research Volume 5 ; 5 ; 1987 ; >
     au < finished ; finished ; 1988 ; Polar Research Volume 6 ; 6 ; 1988 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 1989 ; Polar Research Volume 7 ; 7 ; 1989 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 1989 ; Polar Research Volume 7 ; 7 ; 1989 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 1990 ; Polar Research Volume 8 ; 8 ; 1990 ; >
-    au < finished ; manifest ; 1991 ; Polar Research Volumes 9-10 ; 9-10 ; 1991 ; reingest5.clockss.org:8082  >
+    au < finished ; crawling ; 1991 ; Polar Research Volumes 9-10 ; 9-10 ; 1991 ; reingest5.clockss.org:8082  >
     au < finished ; finished ; 1992 ; Polar Research Volume 11 ; 11 ; 1992 ; >
     au < finished ; finished ; 1993 ; Polar Research Volume 12 ; 12 ; 1993 ; >
     au < finished ; finished ; 1994 ; Polar Research Volume 13 ; 13 ; 1994 ; reingest2.clockss.org:8085 >
@@ -749,13 +749,13 @@
     param[base_url] = http://www.researchinlearningtechnology.net/
     param[journal_id] = rlt
 
-    au < finished ; manifest ; 1993 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 1 ; 1 ; 1993; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 1993 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 1 ; 1 ; 1993; reingest1.clockss.org:8082 >
     au < finished ; finished ; 1994 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 2 ; 2 ; 1994; >
     au < finished ; finished ; 1995 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 3 ; 3 ; 1995; >
     au < finished ; finished ; 1996 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 4 ; 4 ; 1996; >
     au < finished ; finished ; 1997 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 5 ; 5 ; 1997; >
     au < finished ; finished ; 1998 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 6 ; 6 ; 1998; >
-    au < finished ; manifest ; 1999 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 7 ; 7 ; 1999; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 1999 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 7 ; 7 ; 1999; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2000 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 8 ; 8 ; 2000; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2001 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 9 ; 9 ; 2001; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2002 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 10 ; 10 ; 2002 ; >

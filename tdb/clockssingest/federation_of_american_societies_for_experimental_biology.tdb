@@ -24,19 +24,19 @@
     param[journal_id] = fasebj
     #move to Wiley
 
-    au < finished ; manifest ; 1987 ; The FASEB Journal Volume 1 ; 1 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 1988 ; The FASEB Journal Volume 2 ; 2 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 1989 ; The FASEB Journal Volume 3 ; 3 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 1990 ; The FASEB Journal Volume 4 ; 4 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 1991 ; The FASEB Journal Volume 5 ; 5 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 1992 ; The FASEB Journal Volume 6 ; 6 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 1993 ; The FASEB Journal Volume 7 ; 7 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 1994 ; The FASEB Journal Volume 8 ; 8 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 1995 ; The FASEB Journal Volume 9 ; 9 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 1996 ; The FASEB Journal Volume 10 ; 10 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 1997 ; The FASEB Journal Volume 11 ; 11 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 1998 ; The FASEB Journal Volume 12 ; 12 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 1999 ; The FASEB Journal Volume 13 ; 13 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 1987 ; The FASEB Journal Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 1988 ; The FASEB Journal Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 1989 ; The FASEB Journal Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 1990 ; The FASEB Journal Volume 4 ; 4 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 1991 ; The FASEB Journal Volume 5 ; 5 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 1992 ; The FASEB Journal Volume 6 ; 6 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 1993 ; The FASEB Journal Volume 7 ; 7 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 1994 ; The FASEB Journal Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 1995 ; The FASEB Journal Volume 9 ; 9 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 1996 ; The FASEB Journal Volume 10 ; 10 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 1997 ; The FASEB Journal Volume 11 ; 11 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 1998 ; The FASEB Journal Volume 12 ; 12 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 1999 ; The FASEB Journal Volume 13 ; 13 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2000 ; The FASEB Journal Volume 14 ; 14 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2001 ; The FASEB Journal Volume 15 ; 15 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2002 ; The FASEB Journal Volume 16 ; 16 ; reingest1.clockss.org:8082 >

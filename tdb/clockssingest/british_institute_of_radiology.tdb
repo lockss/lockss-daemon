@@ -305,7 +305,7 @@
       param[journal_id] = img
       # no issue in 2010-2012
 
-      au < finished ; manifest ; 1999 ; Imaging Volume 11 ; 11 ; http://www.birpublications.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 1999 ; Imaging Volume 11 ; 11 ; http://www.birpublications.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2000 ; Imaging Volume 12 ; 12 ; http://www.birpublications.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2001 ; Imaging Volume 13 ; 13 ; http://www.birpublications.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2002 ; Imaging Volume 14 ; 14 ; http://www.birpublications.org/ ; reingest2.clockss.org:8085 >
