@@ -1,0 +1,31 @@
+<map>
+    <entry>
+        <string>plugin_status</string>
+        <string>development</string>
+    </entry>
+    <entry>
+        <string>plugin_identifier</string>
+        <string>org.lockss.plugin.scalar.whenmelodiesgather.ClockssWhenMelodiesGatherPlugin</string>
+    </entry>
+    <entry>
+        <string>plugin_version</string>
+        <string>1</string>
+    </entry>
+    <entry>
+        <string>plugin_parent</string>
+        <string>org.lockss.plugin.scalar.ClockssScalarRDFPlugin</string>
+    </entry>
+    <entry>
+        <string>plugin_parent_version</string>
+        <string>1</string>
+    </entry>
+    <entry>
+        <string>plugin_name</string>
+        <string>When Melodies Gather Plugin (CLOCKSS)</string>
+    </entry>
+    <entry>
+        <string>plugin_article_iterator_factory</string>
+        <string>org.lockss.plugin.scalar.ScalarArticleWithoutPDFIteratorFactory</string>
+    </entry>
+    <!--this plugin has not metadata -->
+</map>

@@ -1,0 +1,146 @@
+<map>
+    <entry>
+        <string>plugin_status</string>
+        <string>down</string>
+    </entry>
+    <entry>
+        <string>plugin_identifier</string>
+        <string>org.lockss.plugin.scalar.ClockssScalarRDFPlugin</string>
+    </entry>
+    <entry>
+        <string>plugin_name</string>
+        <string>Scalar RDF Plugin (CLOCKSS)</string>
+    </entry>
+    <entry>
+        <string>plugin_version</string>
+        <string>1</string>
+    </entry>
+    <entry>
+        <string>plugin_config_props</string>
+        <list>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>base_url</key>
+                <displayName>Base URL</displayName>
+                <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+                <type>3</type>
+                <size>40</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>journal_id</key>
+                <displayName>Journal Identifier</displayName>
+                <description>Identifier for journal</description>
+                <type>1</type>
+                <size>40</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>collection_type</key>
+                <displayName>Collection Type</displayName>
+                <description>Collection type (one of: content or page)</description>
+                <type>1</type>
+                <size>20</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+        </list>
+    </entry>
+    <entry>
+        <string>au_name</string>
+        <string>"Scalar RDF Plugin (CLOCKSS), Base URL %s, Journal ID %s, Collection Type %s", base_url, journal_id, collection_type</string>
+    </entry>
+    <!--  don't currently have one; work around for now -->
+    <entry>
+        <string>au_permission_url</string>
+        <string>"http://clockss-ingest.lockss.org/clockss.txt"</string>
+    </entry>
+    <!-- http://blackquotidian.supdigital.org/bq/rdf/instancesof/content -->
+    <entry>
+        <string>au_start_url</string>
+        <string>"%s%s/rdf/instancesof/content", base_url, journal_id</string>
+    </entry>
+    <entry>
+        <string>plugin_crawl_seed_factory</string>
+        <string>org.lockss.plugin.scalar.ScalarRDFCrawlSeedFactory</string>
+    </entry>
+    <entry>
+        <string>au_crawlrules</string>
+        <list>
+            <string>1,"https?://videos.criticalcommons.org/.*/video_file/.*\.mp4"</string>
+            <string>1,"https://code.jquery.com/jquery[^/]+\.js"</string>
+            <string>1,"https?://fonts.googleapis.com/css"</string>
+            <string>1,"%s%s/rdf/instancesof/content", base_url, journal_id</string>
+            <!--exclude links with subversion number, like the following
+                http://blackquotidian.supdigital.org/bq/april-1-1950
+                http://blackquotidian.supdigital.org/bq/april-1-1950.7
+                http://blackquotidian.supdigital.org/bq/april-10-1909
+                http://blackquotidian.supdigital.org/bq/april-10-1909.4
+            -->
+            <string>2,"%s%s/[^\.]+\.\d+$", base_url, journal_id</string>
+            <string>1,"%s%s/3", base_url, journal_id</string>
+            <string>1,"%s%s/1", base_url, journal_id</string>
+            <string>1,"%ssystem/application/views/", base_url</string>
+            <string>1,"%scover/build/%s/assets", base_url, journal_id</string>
+            <string>1,"%s%s/media/.*\.(jpe?g|png|gif|pdf)", base_url, journal_id</string>
+            
+        </list>
+    </entry>
+    <entry>
+        <string>au_refetch_depth</string>
+        <int>3</int>
+    </entry>
+    <entry>
+        <string>plugin_cache_result_list</string>
+        <list>
+            <string>500=org.lockss.util.urlconn.CacheException$NoRetryDeadLinkException</string>
+        </list>
+    </entry>
+    <!--
+    <entry>
+        <string>plugin_article_iterator_factory</string>
+        <string>org.lockss.plugin.scalar.ScalarArticleIteratorFactory</string>
+    </entry>
+    <entry>
+        <string>plugin_article_metadata_extractor_factory</string>
+        <string>org.lockss.plugin.scalar.ScalarArticleIteratorFactory</string>
+    </entry>
+    <entry>
+        <string>text/xml_metadata_extractor_factory_map</string>
+        <map>
+            <entry>
+                <string>*</string>
+                <string>org.lockss.plugin.scalar.ScalarMetadataExtractorFactory</string>
+            </entry>
+        </map>
+    </entry>
+    <entry>
+        <string>text/javascript_link_extractor_factory</string>
+        <string>org.lockss.plugin.scalar.ScalarJavascriptLinkExtractorFactory</string>
+    </entry>
+    <entry>
+        <string>application/javascript_link_extractor_factory</string>
+        <string>org.lockss.plugin.scalar.ScalarJavascriptLinkExtractorFactory</string>
+    </entry>
+    <entry>
+        <string>text/javascript_link_rewriter_factory</string>
+        <string>org.lockss.plugin.scalar.ScalarJavaScriptLinkRewriterFactory</string>
+    </entry>
+    <entry>
+        <string>application/javascript_link_rewriter_factory</string>
+        <string>org.lockss.plugin.scalar.ScalarJavaScriptLinkRewriterFactory</string>
+    </entry>
+    -->
+    <entry>
+        <string>au_permitted_host_pattern</string>
+        <list>
+            <string>use\.typekit\.com</string>
+            <string>code\.jquery\.com</string>
+            <string>fonts\.googleapis\.com</string>
+            <string>videos\.criticalcommons\.org</string>
+            <string>blackquotidian\.supdigital\.org</string>
+            <string>constructingthesacred\.supdigital\.org</string>
+        </list>
+    </entry>
+</map>
