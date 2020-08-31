@@ -33,7 +33,7 @@
     au < ojs2.ClockssOJS2Plugin ; frozen ; exists ; 2016 ; 2016 ; Commonwealth Journal of Local Governance Volume 18-19 ; 18-19 ; http://epress.lib.uts.edu.au/journals/ ; >
     au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2017 ; 2017 ; Commonwealth Journal of Local Governance Volume 20 ; 20 ; https://epress.lib.uts.edu.au/journals/ ; >
     au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2018 ; 2018 ; Commonwealth Journal of Local Governance Volume 21 ; 21 ; https://epress.lib.uts.edu.au/journals/ ; >
-    au < ojs3.ClockssOjs3Plugin ; finished ; manifest ; 2019 ; 2019 ; Commonwealth Journal of Local Governance Volume 22 ; 22 ; https://epress.lib.uts.edu.au/journals/ ; reingest2.clockss.org:8085 >
+    au < ojs3.ClockssOjs3Plugin ; finished ; crawling ; 2019 ; 2019 ; Commonwealth Journal of Local Governance Volume 22 ; 22 ; https://epress.lib.uts.edu.au/journals/ ; reingest2.clockss.org:8085 >
     au < ojs3.ClockssOjs3Plugin ; expected ; exists ; 2020 ; 2020 ; Commonwealth Journal of Local Governance Volume 23 ; 23 ; https://epress.lib.uts.edu.au/journals/ ; >
 
   }
@@ -60,7 +60,7 @@
     au < ojs2.ClockssOJS2Plugin ; frozen ; exists ; 2016 ; 2016 ; Construction Economics and Building Volume 16 ; 16 ; http://epress.lib.uts.edu.au/journals/ ; >
     au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2017 ; 2017 ; Construction Economics and Building Volume 17 ; 17 ; https://epress.lib.uts.edu.au/journals/ ; >
     au < ojs3.ClockssOjs3Plugin ; finished ; manifest ; 2018 ; 2018 ; Construction Economics and Building Volume 18 ; 18 ; https://epress.lib.uts.edu.au/journals/ ; reingest1.clockss.org:8082 >
-    au < ojs3.ClockssOjs3Plugin ; finished ; manifest ; 2019 ; 2019 ; Construction Economics and Building Volume 19 ; 19 ; https://epress.lib.uts.edu.au/journals/ ; reingest5.clockss.org:8082 >
+    au < ojs3.ClockssOjs3Plugin ; finished ; crawling ; 2019 ; 2019 ; Construction Economics and Building Volume 19 ; 19 ; https://epress.lib.uts.edu.au/journals/ ; reingest5.clockss.org:8082 >
     au < ojs3.ClockssOjs3Plugin ; crawling ; exists ; 2020 ; 2020 ; Construction Economics and Building Volume 20 ; 20 ; https://epress.lib.uts.edu.au/journals/ ; >
 
   }

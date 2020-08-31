@@ -41,7 +41,7 @@
     au < finished ; finished ; 2016 ; Therapeutics and Clinical Risk Management Volume 12 ; 12 ; 2016 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Therapeutics and Clinical Risk Management Volume 13 ; 13 ; 2017 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2018 ; Therapeutics and Clinical Risk Management Volume 14 ; 14 ; 2018 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; Therapeutics and Clinical Risk Management Volume 15 ; 15 ; 2019 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2019 ; Therapeutics and Clinical Risk Management Volume 15 ; 15 ; 2019 ; reingest2.clockss.org:8085 >
     au < manifest ; exists ; 2020 ; Therapeutics and Clinical Risk Management Volume 16 ; 16 ; 2020 ; >
 
   }
@@ -69,7 +69,7 @@
     au < finished ; finished ; 2016 ; Vascular Health and Risk Management Volume 12 ; 12 ; 2016 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Vascular Health and Risk Management Volume 13 ; 13 ; 2017 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2018 ; Vascular Health and Risk Management Volume 14 ; 14 ; 2018 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2019 ; Vascular Health and Risk Management Volume 15 ; 15 ; 2019 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2019 ; Vascular Health and Risk Management Volume 15 ; 15 ; 2019 ; reingest2.clockss.org:8085 >
     au < manifest ; exists ; 2020 ; Vascular Health and Risk Management Volume 16 ; 16 ; 2020 ; >
 
   }
@@ -97,7 +97,7 @@
     au < finished ; crawling ; 2016 ; Neuropsychiatric Disease and Treatment Volume 12 ; 12 ; 2016 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2017 ; Neuropsychiatric Disease and Treatment Volume 13 ; 13 ; 2017 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2018 ; Neuropsychiatric Disease and Treatment Volume 14 ; 14 ; 2018 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; Neuropsychiatric Disease and Treatment Volume 15 ; 15 ; 2019 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2019 ; Neuropsychiatric Disease and Treatment Volume 15 ; 15 ; 2019 ; reingest3.clockss.org:8083 >
     au < manifest ; exists ; 2020 ; Neuropsychiatric Disease and Treatment Volume 16 ; 16 ; 2020 ; >
 
   }
@@ -124,7 +124,7 @@
     au < finished ; finished ; 2016 ; Clinical Interventions in Aging Volume 11 ; 11 ; 2016 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Clinical Interventions in Aging Volume 12 ; 12 ; 2017 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2018 ; Clinical Interventions in Aging Volume 13 ; 13 ; 2018 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2019 ; Clinical Interventions in Aging Volume 14 ; 14 ; 2019 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Clinical Interventions in Aging Volume 14 ; 14 ; 2019 ; reingest4.clockss.org:8082 >
     au < manifest ; exists ; 2020 ; Clinical Interventions in Aging Volume 15 ; 15 ; 2020 ; >
 
   }
@@ -151,7 +151,7 @@
     au < finished ; finished ; 2016 ; International Journal of Nanomedicine Volume 11 ; 11 ; 2016 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; International Journal of Nanomedicine Volume 12 ; 12 ; 2017 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2018 ; International Journal of Nanomedicine Volume 13 ; 13 ; 2018 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; International Journal of Nanomedicine Volume 14 ; 14 ; 2019 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2019 ; International Journal of Nanomedicine Volume 14 ; 14 ; 2019 ; reingest2.clockss.org:8085 >
     au < manifest ; exists ; 2020 ; International Journal of Nanomedicine Volume 15 ; 15 ; 2020 ; >
 
   }
@@ -178,7 +178,7 @@
     au < finished ; finished ; 2016 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 11 ; 11 ; 2016 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 12 ; 12 ; 2017 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2018 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 13 ; 13 ; 2018 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2019 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 14 ; 14 ; 2019 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 14 ; 14 ; 2019 ; reingest4.clockss.org:8082 >
     au < manifest ; exists ; 2020 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 15 ; 15 ; 2020 ; >
 
   }
@@ -203,7 +203,7 @@
     au < finished ; finished ; 2016 ; Journal of Multidisciplinary Healthcare Volume 9 ; 9 ; 2016 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Journal of Multidisciplinary Healthcare Volume 10 ; 10 ; 2017 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2018 ; Journal of Multidisciplinary Healthcare Volume 11 ; 11 ; 2018 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; Journal of Multidisciplinary Healthcare Volume 12 ; 12 ; 2019 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Journal of Multidisciplinary Healthcare Volume 12 ; 12 ; 2019 ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 2020 ; Journal of Multidisciplinary Healthcare Volume 13 ; 13 ; 2020 ; >
 
   }
@@ -230,7 +230,7 @@
     au < finished ; finished ; 2016 ; Biologics: Targets and Therapy Volume 10 ; 10 ; 2016 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; Biologics: Targets and Therapy Volume 11 ; 11 ; 2017 ; >
     au < finished ; manifest ; 2018 ; Biologics: Targets and Therapy Volume 12 ; 12 ; 2018 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2019 ; Biologics: Targets and Therapy Volume 13 ; 13 ; 2019 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Biologics: Targets and Therapy Volume 13 ; 13 ; 2019 ; reingest1.clockss.org:8082 >
     au < manifest ; exists ; 2020 ; Biologics: Targets and Therapy Volume 14 ; 14 ; 2020 ; >
 
   }
@@ -358,7 +358,7 @@
     au < finished ; finished ; 2016 ; OncoTargets and Therapy Volume 9 ; 9 ; 2016 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; OncoTargets and Therapy Volume 10 ; 10 ; 2017 ; >
     au < finished ; manifest ; 2018 ; OncoTargets and Therapy Volume 11 ; 11 ; 2018 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; OncoTargets and Therapy Volume 12 ; 12 ; 2019 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; OncoTargets and Therapy Volume 12 ; 12 ; 2019 ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 2020 ; OncoTargets and Therapy Volume 13 ; 13 ; 2020 ; >
 
   }
@@ -383,7 +383,7 @@
     au < finished ; finished ; 2016 ; Medical Devices: Evidence and Research Volume 9 ; 9 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Medical Devices: Evidence and Research Volume 10 ; 10 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Medical Devices: Evidence and Research Volume 11 ; 11 ; 2018 ; >
-    au < finished ; manifest ; 2019 ; Medical Devices: Evidence and Research Volume 12 ; 12 ; 2019 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2019 ; Medical Devices: Evidence and Research Volume 12 ; 12 ; 2019 ; reingest2.clockss.org:8085 >
     au < manifest ; exists ; 2020 ; Medical Devices: Evidence and Research Volume 13 ; 13 ; 2020 ; >
 
   }
@@ -430,7 +430,7 @@
     au < finished ; finished ; 2016 ; Stem Cells and Cloning: Advances and Applications Volume 9 ; 9 ; 2016 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Stem Cells and Cloning: Advances and Applications Volume 10 ; 10 ; 2017 ; >
     au < finished ; manifest ; 2018 ; Stem Cells and Cloning: Advances and Applications Volume 11 ; 11 ; 2018 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2019 ; Stem Cells and Cloning: Advances and Applications Volume 12 ; 12 ; 2019 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Stem Cells and Cloning: Advances and Applications Volume 12 ; 12 ; 2019 ; reingest1.clockss.org:8082 >
     au < manifest ; exists ; 2020 ; Stem Cells and Cloning: Advances and Applications Volume 13 ; 13 ; 2020 ; >
 
   }
@@ -480,7 +480,7 @@
     au < finished ; finished ; 2016 ; Infection and Drug Resistance Volume 9 ; 9 ; 2016 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Infection and Drug Resistance Volume 10 ; 10 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Infection and Drug Resistance Volume 11 ; 11 ; 2018 ; >
-    au < finished ; manifest ; 2019 ; Infection and Drug Resistance Volume 12 ; 12 ; 2019 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Infection and Drug Resistance Volume 12 ; 12 ; 2019 ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 2020 ; Infection and Drug Resistance Volume 13 ; 13 ; 2020 ; >
 
   }
@@ -504,7 +504,7 @@
     au < finished ; finished ; 2016 ; ClinicoEconomics and Outcomes Research Volume 8 ; 8 ; 2016 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; ClinicoEconomics and Outcomes Research Volume 9 ; 9 ; 2017 ; >
     au < finished ; manifest ; 2018 ; ClinicoEconomics and Outcomes Research Volume 10 ; 10 ; 2018 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2019 ; ClinicoEconomics and Outcomes Research Volume 11 ; 11 ; 2019 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2019 ; ClinicoEconomics and Outcomes Research Volume 11 ; 11 ; 2019 ; reingest3.clockss.org:8083 >
     au < manifest ; exists ; 2020 ; ClinicoEconomics and Outcomes Research Volume 12 ; 12 ; 2020 ; >
 
   }
@@ -776,7 +776,7 @@
     au < finished ; finished ; 2016 ; Open Access Surgery Volume 9 ; 9 ; 2016 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2017 ; Open Access Surgery Volume 10 ; 10 ; 2017 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Open Access Surgery Volume 11 ; 11 ; 2018 ; >
-    au < finished ; manifest ; 2019 ; Open Access Surgery Volume 12 ; 12 ; 2019 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2019 ; Open Access Surgery Volume 12 ; 12 ; 2019 ; reingest2.clockss.org:8085 >
     au < manifest ; exists ; 2020 ; Open Access Surgery Volume 13 ; 13 ; 2020 ; >
 
   }
@@ -801,7 +801,7 @@
     au < finished ; finished ; 2016 ; Journal of Pain Research Volume 9 ; 9 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Journal of Pain Research Volume 10 ; 10 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Journal of Pain Research Volume 11 ; 11 ; 2018 ; >
-    au < finished ; manifest ; 2019 ; Journal of Pain Research Volume 12 ; 12 ; 2019 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2019 ; Journal of Pain Research Volume 12 ; 12 ; 2019 ; reingest3.clockss.org:8083 >
     au < manifest ; exists ; 2020 ; Journal of Pain Research Volume 13 ; 13 ; 2020 ; >
 
   }
@@ -826,7 +826,7 @@
     au < finished ; finished ; 2016 ; Integrated Blood Pressure Control Volume 9 ; 9 ; 2016 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Integrated Blood Pressure Control Volume 10 ; 10 ; 2017 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Integrated Blood Pressure Control Volume 11 ; 11 ; 2018 ; >
-    au < finished ; manifest ; 2019 ; Integrated Blood Pressure Control Volume 12 ; 12 ; 2019 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Integrated Blood Pressure Control Volume 12 ; 12 ; 2019 ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 2020 ; Integrated Blood Pressure Control Volume 13 ; 13 ; 2020 ; >
 
   }
@@ -874,7 +874,7 @@
     au < finished ; finished ; 2016 ; Drug, Healthcare and Patient Safety Volume 8 ; 8 ; 2016 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Drug, Healthcare and Patient Safety Volume 9 ; 9 ; 2017 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; Drug, Healthcare and Patient Safety Volume 10 ; 10 ; 2018 ; >
-    au < finished ; manifest ; 2019 ; Drug, Healthcare and Patient Safety Volume 11 ; 11 ; 2019 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2019 ; Drug, Healthcare and Patient Safety Volume 11 ; 11 ; 2019 ; reingest3.clockss.org:8083 >
     au < manifest ; exists ; 2020 ; Drug, Healthcare and Patient Safety Volume 12 ; 12 ; 2020 ; >
 
   }
@@ -923,7 +923,7 @@
     au < finished ; crawling ; 2016 ; International Medical Case Reports Journal Volume 9 ; 9 ; 2016 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; International Medical Case Reports Journal Volume 10 ; 10 ; 2017 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; International Medical Case Reports Journal Volume 11 ; 11 ; 2018 ; >
-    au < finished ; manifest ; 2019 ; International Medical Case Reports Journal Volume 12 ; 12 ; 2019 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; International Medical Case Reports Journal Volume 12 ; 12 ; 2019 ; reingest1.clockss.org:8082 >
     au < manifest ; exists ; 2020 ; International Medical Case Reports Journal Volume 13 ; 13 ; 2020 ; >
 
   }
@@ -993,7 +993,7 @@
     au < finished ; finished ; 2016 ; Reports in Medical Imaging Volume 9 ; 9 ; 2016 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Reports in Medical Imaging Volume 10 ; 10 ; 2017 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; Reports in Medical Imaging Volume 11 ; 11 ; 2018 ; >
-    au < finished ; manifest ; 2019 ; Reports in Medical Imaging Volume 12 ; 12 ; 2019 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2019 ; Reports in Medical Imaging Volume 12 ; 12 ; 2019 ; reingest3.clockss.org:8083 >
     au < manifest ; exists ; 2020 ; Reports in Medical Imaging Volume 13 ; 13 ; 2020 ; >
 
   }
@@ -1041,7 +1041,7 @@
     au < finished ; finished ; 2016 ; Open Access Journal of Clinical Trials Volume 8 ; 8 ; 2016 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Open Access Journal of Clinical Trials Volume 9 ; 9 ; 2017 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Open Access Journal of Clinical Trials Volume 10 ; 10 ; 2018 ; >
-    au < finished ; manifest ; 2019 ; Open Access Journal of Clinical Trials Volume 11 ; 11 ; 2019 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Open Access Journal of Clinical Trials Volume 11 ; 11 ; 2019 ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 2020 ; Open Access Journal of Clinical Trials Volume 12 ; 12 ; 2020 ; >
 
   }
@@ -1090,7 +1090,7 @@
     au < finished ; finished ; 2016 ; Psychology Research and Behavior Management Volume 9 ; 9 ; 2016 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Psychology Research and Behavior Management Volume 10 ; 10 ; 2017 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2018 ; Psychology Research and Behavior Management Volume 11 ; 11 ; 2018 ; >
-    au < finished ; manifest ; 2019 ; Psychology Research and Behavior Management Volume 12 ; 12 ; 2019 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Psychology Research and Behavior Management Volume 12 ; 12 ; 2019 ; reingest4.clockss.org:8082 >
     au < manifest ; exists ; 2020 ; Psychology Research and Behavior Management Volume 13 ; 13 ; 2020 ; >
 
   }
@@ -1163,7 +1163,7 @@
     au < finished ; crawling ; 2016 ; Risk Management and Healthcare Policy Volume 9 ; 9 ; 2016 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Risk Management and Healthcare Policy Volume 10 ; 10 ; 2017 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; Risk Management and Healthcare Policy Volume 11 ; 11 ; 2018 ; >
-    au < finished ; manifest ; 2019 ; Risk Management and Healthcare Policy Volume 12 ; 12 ; 2019 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2019 ; Risk Management and Healthcare Policy Volume 12 ; 12 ; 2019 ; reingest3.clockss.org:8083 >
     au < manifest ; exists ; 2020 ; Risk Management and Healthcare Policy Volume 13 ; 13 ; 2020 ; >
 
   }
@@ -1232,7 +1232,7 @@
     au < finished ; finished ; 2016 ; Open Access Rheumatology: Research and Reviews Volume 8 ; 8 ; 2016 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Open Access Rheumatology: Research and Reviews Volume 9 ; 9 ; 2017 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Open Access Rheumatology: Research and Reviews Volume 10 ; 10 ; 2018 ; >
-    au < finished ; manifest ; 2019 ; Open Access Rheumatology: Research and Reviews Volume 11 ; 11 ; 2019 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2019 ; Open Access Rheumatology: Research and Reviews Volume 11 ; 11 ; 2019 ; reingest2.clockss.org:8085 >
     au < manifest ; exists ; 2020 ; Open Access Rheumatology: Research and Reviews Volume 12 ; 12 ; 2020 ; >
 
   }
@@ -1316,7 +1316,7 @@
     au < finished ; finished ; 2016 ; Open Access Journal of Sports Medicine Volume 7 ; 7 ; 2016 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Open Access Journal of Sports Medicine Volume 8 ; 8 ; 2017 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Open Access Journal of Sports Medicine Volume 9 ; 9 ; 2018 ; >
-    au < finished ; manifest ; 2019 ; Open Access Journal of Sports Medicine Volume 10 ; 10 ; 2019 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2019 ; Open Access Journal of Sports Medicine Volume 10 ; 10 ; 2019 ; reingest2.clockss.org:8085 >
     au < manifest ; exists ; 2020 ; Open Access Journal of Sports Medicine Volume 11 ; 11 ; 2020 ; >
 
   }
@@ -1364,7 +1364,7 @@
     au < finished ; finished ; 2016 ; Journal of Experimental Pharmacology Volume 8 ; 8 ; 2016 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Journal of Experimental Pharmacology Volume 9 ; 9 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Journal of Experimental Pharmacology Volume 10 ; 10 ; 2018 ; >
-    au < finished ; manifest ; 2019 ; Journal of Experimental Pharmacology Volume 11 ; 11 ; 2019 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Journal of Experimental Pharmacology Volume 11 ; 11 ; 2019 ; reingest4.clockss.org:8082 >
     au < manifest ; exists ; 2020 ; Journal of Experimental Pharmacology Volume 12 ; 12 ; 2020 ; >
 
   }
@@ -1388,7 +1388,7 @@
     au < finished ; finished ; 2016 ; HIV/AIDS - Research and Palliative Care Volume 8 ; 8 ; 2016 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; HIV/AIDS - Research and Palliative Care Volume 9 ; 9 ; 2017 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; HIV/AIDS - Research and Palliative Care Volume 10 ; 10 ; 2018 ; >
-    au < finished ; manifest ; 2019 ; HIV/AIDS - Research and Palliative Care Volume 11 ; 11 ; 2019 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; HIV/AIDS - Research and Palliative Care Volume 11 ; 11 ; 2019 ; reingest1.clockss.org:8082 >
     au < manifest ; exists ; 2020 ; HIV/AIDS - Research and Palliative Care Volume 12 ; 12 ; 2020 ; >
 
   }
@@ -1412,7 +1412,7 @@
     au < finished ; finished ; 2016 ; Breast Cancer: Targets and Therapy Volume 8 ; 8 ; 2016 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Breast Cancer: Targets and Therapy Volume 9 ; 9 ; 2017 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; Breast Cancer: Targets and Therapy Volume 10 ; 10 ; 2018 ; >
-    au < finished ; manifest ; 2019 ; Breast Cancer: Targets and Therapy Volume 11 ; 11 ; 2019 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2019 ; Breast Cancer: Targets and Therapy Volume 11 ; 11 ; 2019 ; reingest3.clockss.org:8083 >
     au < manifest ; exists ; 2020 ; Breast Cancer: Targets and Therapy Volume 12 ; 12 ; 2020 ; >
 
   }
@@ -1436,7 +1436,7 @@
     au < finished ; finished ; 2016 ; Nutrition and Dietary Supplements Volume 8 ; 8 ; 2016 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2017 ; Nutrition and Dietary Supplements Volume 9 ; 9 ; 2017 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Nutrition and Dietary Supplements Volume 10 ; 10 ; 2018 ; >
-    au < finished ; manifest ; 2019 ; Nutrition and Dietary Supplements Volume 11 ; 11 ; 2019 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Nutrition and Dietary Supplements Volume 11 ; 11 ; 2019 ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 2020 ; Nutrition and Dietary Supplements Volume 12 ; 12 ; 2020 ; >
 
   }
@@ -1460,7 +1460,7 @@
     au < finished ; finished ; 2016 ; Orthopedic Research and Reviews Volume 8 ; 8 ; 2016 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Orthopedic Research and Reviews Volume 9 ; 9 ; 2017 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Orthopedic Research and Reviews Volume 10 ; 10 ; 2018 ; >
-    au < finished ; manifest ; 2019 ; Orthopedic Research and Reviews Volume 11 ; 11 ; 2019 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2019 ; Orthopedic Research and Reviews Volume 11 ; 11 ; 2019 ; reingest2.clockss.org:8085 >
     au < manifest ; exists ; 2020 ; Orthopedic Research and Reviews Volume 12 ; 12 ; 2020 ; >
 
   }
@@ -1507,7 +1507,7 @@
     au < finished ; finished ; 2016 ; Open Access Journal of Contraception Volume 7 ; 7 ; 2016 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Open Access Journal of Contraception Volume 8 ; 8 ; 2017 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Open Access Journal of Contraception Volume 9 ; 9 ; 2018 ; >
-    au < finished ; manifest ; 2019 ; Open Access Journal of Contraception Volume 10 ; 10 ; 2019 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Open Access Journal of Contraception Volume 10 ; 10 ; 2019 ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 2020 ; Open Access Journal of Contraception Volume 11 ; 11 ; 2020 ; >
 
   }
@@ -1575,7 +1575,7 @@
     au < finished ; finished ; 2016 ; Eye and Brain Volume 8 ; 8 ; 2016 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Eye and Brain Volume 9 ; 9 ; 2017 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Eye and Brain Volume 10 ; 10 ; 2018 ; >
-    au < finished ; manifest ; 2019 ; Eye and Brain Volume 11 ; 11 ; 2019 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2019 ; Eye and Brain Volume 11 ; 11 ; 2019 ; reingest2.clockss.org:8085 >
     au < manifest ; exists ; 2020 ; Eye and Brain Volume 12 ; 12 ; 2020 ; >
 
   }
@@ -1599,7 +1599,7 @@
     au < finished ; finished ; 2016 ; Pathology and Laboratory Medicine International Volume 8 ; 8 ; 2016 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Pathology and Laboratory Medicine International Volume 9 ; 9 ; 2017 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2018 ; Pathology and Laboratory Medicine International Volume 10 ; 10 ; 2018 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; Pathology and Laboratory Medicine International Volume 11 ; 11 ; 2019 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Pathology and Laboratory Medicine International Volume 11 ; 11 ; 2019 ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 2020 ; Pathology and Laboratory Medicine International Volume 12 ; 12 ; 2020 ; >
 
   }
@@ -1713,7 +1713,7 @@
     au < finished ; finished ; 2016 ; Journal of Blood Medicine Volume 7 ; 7 ; 2016 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Journal of Blood Medicine Volume 8 ; 8 ; 2017 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Journal of Blood Medicine Volume 9 ; 9 ; 2018 ; >
-    au < finished ; manifest ; 2019 ; Journal of Blood Medicine Volume 10 ; 10 ; 2019 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Journal of Blood Medicine Volume 10 ; 10 ; 2019 ; reingest1.clockss.org:8082 >
     au < manifest ; exists ; 2020 ; Journal of Blood Medicine Volume 11 ; 11 ; 2020 ; >
 
   }
@@ -1781,7 +1781,7 @@
     au < finished ; finished ; 2016 ; Core Evidence Volume 11 ; 11 ; 2016 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Core Evidence Volume 12 ; 12 ; 2017 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2018 ; Core Evidence Volume 13 ; 13 ; 2018 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2019 ; Core Evidence Volume 14 ; 14 ; 2019 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Core Evidence Volume 14 ; 14 ; 2019 ; reingest4.clockss.org:8082 >
     au < manifest ; exists ; 2020 ; Core Evidence Volume 15 ; 15 ; 2020 ; >
 
   }
@@ -1804,7 +1804,7 @@
     au < finished ; finished ; 2016 ; Adolescent Health, Medicine and Therapeutics Volume 7 ; 7 ; 2016 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2017 ; Adolescent Health, Medicine and Therapeutics Volume 8 ; 8 ; 2017 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Adolescent Health, Medicine and Therapeutics Volume 9 ; 9 ; 2018 ; >
-    au < finished ; manifest ; 2019 ; Adolescent Health, Medicine and Therapeutics Volume 10 ; 10 ; 2019 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Adolescent Health, Medicine and Therapeutics Volume 10 ; 10 ; 2019 ; reingest1.clockss.org:8082 >
     au < manifest ; exists ; 2020 ; Adolescent Health, Medicine and Therapeutics Volume 11 ; 11 ; 2020 ; >
 
   }
@@ -1872,7 +1872,7 @@
     au < finished ; crawling ; 2016 ; Advances in Medical Education and Practice Volume 7 ; 7 ; 2016 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Advances in Medical Education and Practice Volume 8 ; 8 ; 2017 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2018 ; Advances in Medical Education and Practice Volume 9 ; 9 ; 2018 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2019 ; Advances in Medical Education and Practice Volume 10 ; 10 ; 2019 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Advances in Medical Education and Practice Volume 10 ; 10 ; 2019 ; reingest4.clockss.org:8082 >
     au < manifest ; exists ; 2020 ; Advances in Medical Education and Practice Volume 11 ; 11 ; 2020 ; >
 
   }
@@ -1895,7 +1895,7 @@
     au < finished ; finished ; 2016 ; Research and Reports in Tropical Medicine Volume 7 ; 7 ; 2016 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Research and Reports in Tropical Medicine Volume 8 ; 8 ; 2017 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Research and Reports in Tropical Medicine Volume 9 ; 9 ; 2018 ; >
-    au < finished ; manifest ; 2019 ; Research and Reports in Tropical Medicine Volume 10 ; 10 ; 2019 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Research and Reports in Tropical Medicine Volume 10 ; 10 ; 2019 ; reingest1.clockss.org:8082 >
     au < manifest ; exists ; 2020 ; Research and Reports in Tropical Medicine Volume 11 ; 11 ; 2020 ; >
 
   }
@@ -1939,7 +1939,7 @@
     au < finished ; finished ; 2016 ; Pragmatic and Observational Research Volume 7 ; 7 ; 2016 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Pragmatic and Observational Research Volume 8 ; 8 ; 2017 ; >
     au < deepCrawl ; exists ; 2018 ; Pragmatic and Observational Research Volume 9 ; 9 ; 2018 ; >
-    au < finished ; manifest ; 2019 ; Pragmatic and Observational Research Volume 10 ; 10 ; 2019 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2019 ; Pragmatic and Observational Research Volume 10 ; 10 ; 2019 ; reingest3.clockss.org:8083 >
     au < manifest ; exists ; 2020 ; Pragmatic and Observational Research Volume 11 ; 11 ; 2020 ; >
 
   }
@@ -2005,7 +2005,7 @@
     au < finished ; finished ; 2016 ; Substance Abuse and Rehabilitation Volume 7 ; 7 ; 2016 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Substance Abuse and Rehabilitation Volume 8 ; 8 ; 2017 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Substance Abuse and Rehabilitation Volume 9 ; 9 ; 2018 ; >
-    au < finished ; manifest ; 2019 ; Substance Abuse and Rehabilitation Volume 10 ; 10 ; 2019 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2019 ; Substance Abuse and Rehabilitation Volume 10 ; 10 ; 2019 ; reingest2.clockss.org:8085 >
     au < manifest ; exists ; 2020 ; Substance Abuse and Rehabilitation Volume 11 ; 11 ; 2020 ; >
 
   }
@@ -2027,7 +2027,7 @@
     au < finished ; finished ; 2016 ; Degenerative Neurological and Neuromuscular Disease Volume 6 ; 6 ; 2016 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2017 ; Degenerative Neurological and Neuromuscular Disease Volume 7 ; 7 ; 2017 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2018 ; Degenerative Neurological and Neuromuscular Disease Volume 8 ; 8 ; 2018 ; >
-    au < finished ; manifest ; 2019 ; Degenerative Neurological and Neuromuscular Disease Volume 9 ; 9 ; 2019 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Degenerative Neurological and Neuromuscular Disease Volume 9 ; 9 ; 2019 ; reingest4.clockss.org:8082 >
     au < manifest ; exists ; 2020 ; Degenerative Neurological and Neuromuscular Disease Volume 10 ; 10 ; 2020 ; >
 
   }
@@ -2069,7 +2069,7 @@
     au < finished ; finished ; 2016 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 6 ; 6 ; 2016 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 7 ; 7 ; 2017 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2018 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 8 ; 8 ; 2018 ; >
-    au < finished ; manifest ; 2019 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 9 ; 9 ; 2019 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 9 ; 9 ; 2019 ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 2020 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 10 ; 10 ; 2020 ; >
 
   }
@@ -2215,7 +2215,7 @@
     au < finished ; finished ; 2016 ; Veterinary Medicine: Research and Reports Volume 7 ; 7 ; 2016 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Veterinary Medicine: Research and Reports Volume 8 ; 8 ; 2017 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2018 ; Veterinary Medicine: Research and Reports Volume 9 ; 9 ; 2018 ; >
-    au < finished ; manifest ; 2019 ; Veterinary Medicine: Research and Reports Volume 10 ; 10 ; 2019 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Veterinary Medicine: Research and Reports Volume 10 ; 10 ; 2019 ; reingest1.clockss.org:8082 >
     au < manifest ; exists ; 2020 ; Veterinary Medicine: Research and Reports Volume 11 ; 11 ; 2020 ; >
 
   }
@@ -2294,7 +2294,7 @@
     au < finished ; finished ; 2016 ; Medicolegal and Bioethics Volume 6 ; 6 ; 2016 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Medicolegal and Bioethics Volume 7 ; 7 ; 2017 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Medicolegal and Bioethics Volume 8 ; 8 ; 2018 ; >
-    au < finished ; manifest ; 2019 ; Medicolegal and Bioethics Volume 9 ; 9 ; 2019 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2019 ; Medicolegal and Bioethics Volume 9 ; 9 ; 2019 ; reingest2.clockss.org:8085 >
     au < manifest ; exists ; 2020 ; Medicolegal and Bioethics Volume 10 ; 10 ; 2020 ; >
 
   }
@@ -2469,7 +2469,7 @@
     au < finished ; finished ; 2016 ; Psoriasis: Targets and Therapy Volume 6 ; 6 ; 2016 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Psoriasis: Targets and Therapy Volume 7 ; 7 ; 2017 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2018 ; Psoriasis: Targets and Therapy Volume 8 ; 8 ; 2018 ; >
-    au < finished ; manifest ; 2019 ; Psoriasis: Targets and Therapy Volume 9 ; 9 ; 2019 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2019 ; Psoriasis: Targets and Therapy Volume 9 ; 9 ; 2019 ; reingest3.clockss.org:8083 >
     au < manifest ; exists ; 2020 ; Psoriasis: Targets and Therapy Volume 10 ; 10 ; 2020 ; >
 
   }
@@ -2546,7 +2546,7 @@
     au < finished ; finished ; 2016 ; Nursing: Research and Reviews Volume 6 ; 6 ; 2016 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2017 ; Nursing: Research and Reviews Volume 7 ; 7 ; 2017 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Nursing: Research and Reviews Volume 8 ; 8 ; 2018 ; >
-    au < finished ; manifest ; 2019 ; Nursing: Research and Reviews Volume 9 ; 9 ; 2019 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Nursing: Research and Reviews Volume 9 ; 9 ; 2019 ; reingest4.clockss.org:8082 >
     au < manifest ; exists ; 2020 ; Nursing: Research and Reviews Volume 10 ; 10 ; 2020 ; >
 
   }
@@ -2605,7 +2605,7 @@
     au < finished ; finished ; 2016 ; Integrated Pharmacy Research and Practice Volume 5 ; 5 ; 2016 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Integrated Pharmacy Research and Practice Volume 6 ; 6 ; 2017 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Integrated Pharmacy Research and Practice Volume 7 ; 7 ; 2018 ; >
-    au < finished ; manifest ; 2019 ; Integrated Pharmacy Research and Practice Volume 8 ; 8 ; 2019 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Integrated Pharmacy Research and Practice Volume 8 ; 8 ; 2019 ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 2020 ; Integrated Pharmacy Research and Practice Volume 9 ; 9 ; 2020 ; >
 
   }
@@ -2664,7 +2664,7 @@
     au < finished ; finished ; 2016 ; ImmunoTargets and Therapy Volume 5 ; 5 ; 2016 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; ImmunoTargets and Therapy Volume 6 ; 6 ; 2017 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2018 ; ImmunoTargets and Therapy Volume 7 ; 7 ; 2018 ; >
-    au < finished ; manifest ; 2019 ; ImmunoTargets and Therapy Volume 8 ; 8 ; 2019 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; ImmunoTargets and Therapy Volume 8 ; 8 ; 2019 ; reingest1.clockss.org:8082 >
     au < manifest ; exists ; 2020 ; ImmunoTargets and Therapy Volume 9 ; 9 ; 2020 ; >
 
   }
@@ -2683,7 +2683,7 @@
     au < finished ; finished ; 2015 ; Smart Homecare Technology and TeleHealth Volume 3 ; 3 ; 2015 ; >
     au < finished ; manifest ; 2017 ; Smart Homecare Technology and TeleHealth Volume 4 ; 4 ; 2017 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Smart Homecare Technology and TeleHealth Volume 5 ; 5 ; 2018 ; >
-    au < finished ; manifest ; 2019 ; Smart Homecare Technology and TeleHealth Volume 6 ; 6 ; 2019 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2019 ; Smart Homecare Technology and TeleHealth Volume 6 ; 6 ; 2019 ; reingest2.clockss.org:8085 >
     au < manifest ; exists ; 2020 ; Smart Homecare Technology and TeleHealth Volume 7 ; 7 ; 2020 ; >
 
   }
@@ -2704,7 +2704,7 @@
     au < finished ; finished ; 2016 ; Oncolytic Virotherapy Volume 5 ; 5 ; 2016 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Oncolytic Virotherapy Volume 6 ; 6 ; 2017 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Oncolytic Virotherapy Volume 7 ; 7 ; 2018 ; >
-    au < finished ; manifest ; 2019 ; Oncolytic Virotherapy Volume 8 ; 8 ; 2019 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2019 ; Oncolytic Virotherapy Volume 8 ; 8 ; 2019 ; reingest3.clockss.org:8083 >
     au < manifest ; exists ; 2020 ; Oncolytic Virotherapy Volume 9 ; 9 ; 2020 ; >
 
   }
@@ -2836,7 +2836,7 @@
     au < finished ; finished ; 2016 ; Journal of Hepatocellular Carcinoma Volume 3 ; 3 ; 2016 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Journal of Hepatocellular Carcinoma Volume 4 ; 4 ; 2017 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Journal of Hepatocellular Carcinoma Volume 5 ; 5 ; 2018 ; >
-    au < finished ; manifest ; 2019 ; Journal of Hepatocellular Carcinoma Volume 6 ; 6 ; 2019 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Journal of Hepatocellular Carcinoma Volume 6 ; 6 ; 2019 ; reingest4.clockss.org:8082 >
     au < manifest ; exists ; 2020 ; Journal of Hepatocellular Carcinoma Volume 7 ; 7 ; 2020 ; >
 
   }
@@ -2856,7 +2856,7 @@
     au < finished ; finished ; 2016 ; Hypoxia Volume 4 ; 4 ; 2016 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Hypoxia Volume 5 ; 5 ; 2017 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2018 ; Hypoxia Volume 6 ; 6 ; 2018 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2019 ; Hypoxia Volume 7 ; 7 ; 2019 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Hypoxia Volume 7 ; 7 ; 2019 ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 2020 ; Hypoxia Volume 8 ; 8 ; 2020 ; >
 
   }
@@ -2875,7 +2875,7 @@
     au < finished ; finished ; 2016 ; Metalloproteinases In Medicine Volume 3 ; 3 ; 2016 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2017 ; Metalloproteinases In Medicine Volume 4 ; 4 ; 2017 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2018 ; Metalloproteinases In Medicine Volume 5 ; 5 ; 2018 ; >
-    au < finished ; manifest ; 2019 ; Metalloproteinases In Medicine Volume 6 ; 6 ; 2019 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Metalloproteinases In Medicine Volume 6 ; 6 ; 2019 ; reingest1.clockss.org:8082 >
     au < manifest ; exists ; 2020 ; Metalloproteinases In Medicine Volume 7 ; 7 ; 2020 ; >
 
   }
@@ -2932,7 +2932,7 @@
     au < finished ; finished ; 2016 ; Chronic Wound Care Management and Research Volume 3 ; 3 ; 2016 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Chronic Wound Care Management and Research Volume 4 ; 4 ; 2017 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Chronic Wound Care Management and Research Volume 5 ; 5 ; 2018 ; >
-    au < finished ; manifest ; 2019 ; Chronic Wound Care Management and Research Volume 6 ; 6 ; 2019 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2019 ; Chronic Wound Care Management and Research Volume 6 ; 6 ; 2019 ; reingest2.clockss.org:8085 >
     au < manifest ; exists ; 2020 ; Chronic Wound Care Management and Research Volume 7 ; 7 ; 2020 ; >
 
   }
@@ -2950,7 +2950,7 @@
     au < finished ; finished ; 2016 ; Robotic Surgery: Research and Reviews Volume 3 ; 3 ; 2016 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Robotic Surgery: Research and Reviews Volume 4 ; 4 ; 2017 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2018 ; Robotic Surgery: Research and Reviews Volume 5 ; 5 ; 2018 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2019 ; Robotic Surgery: Research and Reviews Volume 6 ; 6 ; 2019 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2019 ; Robotic Surgery: Research and Reviews Volume 6 ; 6 ; 2019 ; reingest3.clockss.org:8083 >
     au < manifest ; exists ; 2020 ; Robotic Surgery: Research and Reviews Volume 7 ; 7 ; 2020 ; >
 
   }

@@ -38,7 +38,7 @@
     au < finished ; manifest ; 2016 ; Multiscale Modeling and Simulation Volume 14 ; 14 ; http://epubs.siam.org/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Multiscale Modeling and Simulation Volume 15 ; 15 ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2018 ; Multiscale Modeling and Simulation Volume 16 ; 16 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2019 ; Multiscale Modeling and Simulation Volume 17 ; 17 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2019 ; Multiscale Modeling and Simulation Volume 17 ; 17 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
     au < manifest ; exists ; 2020 ; Multiscale Modeling and Simulation Volume 18 ; 18 ; https://epubs.siam.org/ ; >
 
   }
@@ -69,7 +69,7 @@
     au < finished ; manifest ; 2016 ; Journal on Applied Dynamical Systems Volume 15 ; 15 ; http://epubs.siam.org/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2017 ; Journal on Applied Dynamical Systems Volume 16 ; 16 ; http://epubs.siam.org/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2018 ; Journal on Applied Dynamical Systems Volume 17 ; 17 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; Journal on Applied Dynamical Systems Volume 18 ; 18 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2019 ; Journal on Applied Dynamical Systems Volume 18 ; 18 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
     au < manifest ; exists ; 2020 ; Journal on Applied Dynamical Systems Volume 19 ; 19 ; https://epubs.siam.org/ ; >
 
   }
@@ -169,7 +169,7 @@
       au < finished ; manifest ; 2016 ; Journal on Applied Mathematics Volume 76 ; 76 ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; Journal on Applied Mathematics Volume 77 ; 77 ; http://epubs.siam.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; Journal on Applied Mathematics Volume 78 ; 78 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2019 ; Journal on Applied Mathematics Volume 79 ; 79 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2019 ; Journal on Applied Mathematics Volume 79 ; 79 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
       au < manifest ; exists ; 2020 ; Journal on Applied Mathematics Volume 80 ; 80 ; https://epubs.siam.org/ ; >
     }
 
@@ -232,7 +232,7 @@
     au < finished ; manifest ; 2016 ; Journal on Computing Volume 45 ; 45 ; http://epubs.siam.org/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Journal on Computing Volume 46 ; 46 ; http://epubs.siam.org/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2018 ; Journal on Computing Volume 47 ; 47 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; Journal on Computing Volume 48 ; 48 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Journal on Computing Volume 48 ; 48 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
     au < manifest ; exists ; 2020 ; Journal on Computing Volume 49 ; 49 ; https://epubs.siam.org/ ; >
 
   }
@@ -361,7 +361,7 @@
     au < finished ; manifest ; 2016 ; Journal on Discrete Mathematics Volume 30 ; 30 ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2017 ; Journal on Discrete Mathematics Volume 31 ; 31 ; http://epubs.siam.org/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2018 ; Journal on Discrete Mathematics Volume 32 ; 32 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2019 ; Journal on Discrete Mathematics Volume 33 ; 33 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Journal on Discrete Mathematics Volume 33 ; 33 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
     au < manifest ; exists ; 2020 ; Journal on Discrete Mathematics Volume 34 ; 34 ; https://epubs.siam.org/ ; >
 
   }
@@ -384,7 +384,7 @@
     au < finished ; manifest ; 2016 ; Journal on Financial Mathematics Volume 7 ; 7 ; http://epubs.siam.org/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Journal on Financial Mathematics Volume 8 ; 8 ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2018 ; Journal on Financial Mathematics Volume 9 ; 9 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; Journal on Financial Mathematics Volume 10 ; 10 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Journal on Financial Mathematics Volume 10 ; 10 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 2020 ; Journal on Financial Mathematics Volume 11 ; 11 ; https://epubs.siam.org/ ; >
 
   }
@@ -409,7 +409,7 @@
     au < finished ; manifest ; 2016 ; Journal on Imaging Sciences Volume 9 ; 9 ; http://epubs.siam.org/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Journal on Imaging Sciences Volume 10 ; 10 ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2018 ; Journal on Imaging Sciences Volume 11 ; 11 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2019 ; Journal on Imaging Sciences Volume 12 ; 12 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Journal on Imaging Sciences Volume 12 ; 12 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
     au < manifest ; exists ; 2020 ; Journal on Imaging Sciences Volume 13 ; 13 ; https://epubs.siam.org/ ; >
 
   }
@@ -611,7 +611,7 @@
     au < finished ; manifest ; 2016 ; Journal on Numerical Analysis Volume 54 ; 54 ; http://epubs.siam.org/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2017 ; Journal on Numerical Analysis Volume 55 ; 55 ; http://epubs.siam.org/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2018 ; Journal on Numerical Analysis Volume 56 ; 56 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; Journal on Numerical Analysis Volume 57 ; 57 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2019 ; Journal on Numerical Analysis Volume 57 ; 57 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
     au < manifest ; exists ; 2020 ; Journal on Numerical Analysis Volume 58 ; 58 ; https://epubs.siam.org/ ; >
     }
   }
@@ -654,7 +654,7 @@
     au < finished ; manifest ; 2016 ; Journal on Optimization Volume 26 ; 26 ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2017 ; Journal on Optimization Volume 27 ; 27 ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2018 ; Journal on Optimization Volume 28 ; 28 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2019 ; Journal on Optimization Volume 29 ; 29 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Journal on Optimization Volume 29 ; 29 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
     au < manifest ; exists ; 2020 ; Journal on Optimization Volume 30 ; 30 ; https://epubs.siam.org/ ; >
 
   }
@@ -715,7 +715,7 @@
     au < finished ; manifest ; 2016 ; Journal on Scientific Computing Volume 38 ; 38 ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Journal on Scientific Computing Volume 39 ; 39 ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2018 ; Journal on Scientific Computing Volume 40 ; 40 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; Journal on Scientific Computing Volume 41 ; 41 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2019 ; Journal on Scientific Computing Volume 41 ; 41 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
     au < manifest ; exists ; 2020 ; Journal on Scientific Computing Volume 42 ; 42 ; https://epubs.siam.org/ ; >
     }
   }
@@ -810,7 +810,7 @@
     au < finished ; manifest ; 2016 ; SIAM Review Volume 58 ; 58 ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2017 ; SIAM Review Volume 59 ; 59 ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2018 ; SIAM Review Volume 60 ; 60 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2019 ; SIAM Review Volume 61 ; 61 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; SIAM Review Volume 61 ; 61 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 2020 ; SIAM Review Volume 62 ; 62 ; https://epubs.siam.org/ ; >
 
   }
@@ -888,7 +888,7 @@
     au < finished ; manifest ; 2016 ; Theory of Probability and its Applications Volume 60 ; 60 ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2017 ; Theory of Probability and its Applications Volume 61 ; 61 ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2018 ; Theory of Probability and its Applications Volume 62 ; 62 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; Theory of Probability and its Applications Volume 63 ; 63 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Theory of Probability and its Applications Volume 63 ; 63 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
     au < manifest ; exists ; 2020 ; Theory of Probability and its Applications Volume 64 ; 64 ; https://epubs.siam.org/ ; >
 
   }
@@ -918,7 +918,7 @@
 
     au < finished ; manifest ; 2017 ; Journal on Applied Algebra and Geometry Volume 1 ; 1 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2018 ; Journal on Applied Algebra and Geometry Volume 2 ; 2 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; Journal on Applied Algebra and Geometry Volume 3 ; 3 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Journal on Applied Algebra and Geometry Volume 3 ; 3 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 2020 ; Journal on Applied Algebra and Geometry Volume 4 ; 4 ; https://epubs.siam.org/ ; >
 
   }
