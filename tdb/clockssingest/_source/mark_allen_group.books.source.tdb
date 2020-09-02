@@ -3,24 +3,27 @@
   publisher <
     name = Mark Allen Group ;
     info[contract] = 2013 ;
-    info[tester] = S 
+    info[tester] = S
   >
-  
+
   {
-  
+
     title <
        name = Mark Allen Group Books Source Content
     >
-    
+
     {
-    
+
       plugin = org.lockss.plugin.clockss.markallen.ClockssMarkAllenGroupBooksSourcePlugin
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/markallen-released/
       hidden[proxy] = DIRECT
       implicit < status ; status2 ; year ; name ; param[year] >
-    
+
       au < zapped ; finished ; 2016 ; Mark Allen Group Books Source Content 2016 ; 2016 >
       #no content since before 2017
+      #started sending content again 2020
+      au < exists ; exists ; 2016 ; Mark Allen Group Books Source Content 2016 ; 2016 >
+
 
     }
 
