@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<book>
+    <collection-meta collection-type="book collection">
+        <title-group>
+            <title>Histoire des sciences</title>
+        </title-group>
+    </collection-meta>
+    <book-meta>
+        <book-id book-id-type="doi">10.14375/NP.9782753510180</book-id>
+        <book-title-group>
+            <book-title>Aux origines de la chimie organique</book-title>
+            <subtitle>Méthodes et pratiques des pharmaciens et des chimistes (1785-1835)</subtitle>
+        </book-title-group>
+        <contrib-group content-type="authors">
+            <contrib contrib-type="author">
+                <name>
+                    <surname>Tomic</surname>
+                    <given-names>Sacha</given-names>
+                </name>
+            </contrib>
+        </contrib-group>
+        <pub-date date-type="pub">
+            <day>01</day>
+            <month>01</month>
+            <year>2010</year>
+        </pub-date>
+        <isbn content-type="ppub">9782753510180</isbn>
+        <isbn content-type="epub">9782753522657</isbn>
+        <publisher>
+            <publisher-name>PUR</publisher-name>
+        </publisher>
+        <self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="web-abstract"
+                  xlink:href="http://www.numeriquepremium.com/content/books/9782753510180"/>
+        <self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pdf"
+                  xlink:href="9782753510180.pdf"/>
+        <abstract xml:lang="fr">
+            <p xml:lang="fr">Ce livre retrace la mutation de la chimie végétale et animale en chimie organique, histoire dont les chimistes et les pharmaciens, illustres ou inconnus, sont les principaux acteurs au xviiie et xixe siècles. Au-delà de cet aspect disciplinaire, Sacha Tomic aborde de manière transversale la question de la culture hybride. La collaboration entre chimistes et pharmaciens, l’échange de méthodes et de pratiques s’accompagnent d’une perpétuelle renégociation des rapports qui va finalement profiter aux deux disciplines.</p>
+        </abstract>
+        <kwd-group>
+            <kwd>XVIIIe siècle</kwd>
+            <kwd>médecine</kwd>
+            <kwd>santé </kwd>
+            <kwd>Jacques Léonard</kwd>
+            <kwd>concepts médicaux</kwd>
+            <kwd>maladie</kwd>
+            <kwd>XXe siècle</kwd>
+            <kwd>doctrine médicale</kwd>
+            <kwd>XIXe siècle</kwd>
+            <kwd>homme</kwd>
+        </kwd-group>
+        <counts>
+            <book-page-count count="313"/>
+        </counts>
+    </book-meta>
+</book>
