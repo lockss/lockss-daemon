@@ -16,11 +16,13 @@
   
     {
     
-      plugin = needs.plugin
-      implicit < status ; year ; name ; attr[volume] ; param[year] >
-      param[base_url] = https://ojs.library.ubc.ca/index.php/clogic  ###ojs
+      plugin = org.lockss.plugin.ojs3.Ojs3Plugin
+      implicit < status ; year ; name ; volume ; param[year] >
+      #param[base_url] = https://ojs.library.ubc.ca/index.php/clogic
+      param[base_url] = https://ojs.library.ubc.ca/
+      param[journal_id] = clogic
+      #email sent to Prof Ross to update manifest page settings. U of Brit Col
       
-
       au < exists ; 2007 ; Cultural Logic Volume 2007 ; 14 ; 2007 >
       au < exists ; 2008 ; Cultural Logic Volume 2008 ; 15 ; 2008 >
       au < exists ; 2009 ; Cultural Logic Volume 2009 ; 16 ; 2009 >
@@ -75,15 +77,17 @@
     > 
 
    {
-    plugin = needs.plugin
-    implicit < status ; year ; name ; param[volume] >
-    param[base_url] = https://tigerprints.clemson.edu/emc/  ###digital commons
+      plugin = org.lockss.plugin.bepress.BePressPlugin
+      implicit < status ; year ; name ; param[volume] >
+      param[base_url] = https://tigerprints.clemson.edu/
+      param[journal_abbr] = emc
+      #param[base_url] = https://tigerprints.clemson.edu/emc/
     
-    au < exists ; 2015 ; Early Modern Culture Issue 10 ; 10 >
-    au < exists ; 2016 ; Early Modern Culture Issue 11 ; 11 >
-    au < exists ; 2017 ; Early Modern Culture Issue 12 ; 12 >
-    au < exists ; 2018 ; Early Modern Culture Issue 13 ; 13 >
-    au < exists ; 2019 ; Early Modern Culture Issue 14 ; 14 >
+      au < exists ; 2015 ; Early Modern Culture Issue 10 ; 10 >
+      au < exists ; 2016 ; Early Modern Culture Issue 11 ; 11 >
+      au < exists ; 2017 ; Early Modern Culture Issue 12 ; 12 >
+      au < exists ; 2018 ; Early Modern Culture Issue 13 ; 13 >
+      au < exists ; 2019 ; Early Modern Culture Issue 14 ; 14 >
    }
    {
     plugin = org.lockss.plugin.emc.EarlyModernCulturePlugin
