@@ -15,7 +15,7 @@
 
     #See RT 10255
 
-    plugin = needs.SourcePlugin
+    plugin = org.lockss.plugin.clockss.numeriquepremium.ClockssNumeriquePremiumBooksSourcePlugin
     param[base_url] = https://clockss-test.lockss.org/sourcefiles/numerique-released/ #testing url
     hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[year] >
