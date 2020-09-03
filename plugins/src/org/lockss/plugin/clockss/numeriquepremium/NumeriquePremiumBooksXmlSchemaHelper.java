@@ -99,7 +99,7 @@ implements SourceXmlSchemaHelper {
   private static final String book_publisher = book_meta + "publisher/publisher-name";
   public static final String book_isbn = book_meta + "isbn[@content-type=\"ppub\"]";
   private static final String book_eisbn = book_meta + "isbn[@content-type=\"epub\"]";
-  private static final String book_author = book_meta + "contrib-group/contrib[@contrib-type = 'author']/name";
+  private static final String book_author = book_meta + "contrib-group/contrib[@contrib-type = 'author' or @contrib-type = 'editor']/name";
 
   /*
    *  The following 3 variables are needed to construct the XPathXmlMetadataParser
