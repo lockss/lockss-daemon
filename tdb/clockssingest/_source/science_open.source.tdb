@@ -14,8 +14,8 @@
 
     {
 
-      #this is the testing url
-      param[base_url] = https://clockss-test.lockss.org/sourcefiles/scienceopen-released/
+
+      param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/scienceopen-released/
 
       plugin = org.lockss.plugin.clockss.scienceopen.ClockssScienceOpenSourcePlugin
       hidden[proxy] = DIRECT
