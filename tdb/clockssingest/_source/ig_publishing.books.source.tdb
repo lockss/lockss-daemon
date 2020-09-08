@@ -1,0 +1,25 @@
+{
+
+  publisher <
+    name = IG Publishing ;
+    info[contract] = 2020 ;
+    info[tester] = S
+  >
+
+
+  {
+
+    title <
+      name = IG Publishing Books Source Content
+    >
+
+    plugin = org.lockss.plugin.clockss.igpublishing.ClockssIGPublishingBookSourcePlugin
+    param[base_url] = https://clockss-test.lockss.org/sourcefiles/igroupnet-released/ #testing url
+    hidden[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[directory] >
+
+    #au < notReady ; exists ; 2020 ; IG Publishing Books Source Content 2020 ; 2020 >
+
+  }
+
+}
