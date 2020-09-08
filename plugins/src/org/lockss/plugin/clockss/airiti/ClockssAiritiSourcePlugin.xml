@@ -51,6 +51,12 @@
         </list>
     </entry>
     <entry>
+        <string>au_url_mime_type_map</string>
+        <list>
+            <string>.*\.ris$,application/x-research-info-systems</string>
+        </list>
+    </entry>
+    <entry>
         <string>plugin_article_iterator_factory</string>
         <string>org.lockss.plugin.clockss.airiti.AiritiArticleIteratorFactory</string>
     </entry>
@@ -59,19 +65,19 @@
         <string>org.lockss.plugin.clockss.airiti.AiritiArticleIteratorFactory</string>
     </entry>
     <entry>
-        <string>application/plain_metadata_extractor_factory_map</string>
+        <string>text/plain_metadata_extractor_factory_map</string>
         <map>
             <entry>
-                <string>*</string>
+                <string>*;RIS</string>
                 <string>org.lockss.plugin.clockss.airiti.AiritiMetadataExtractorFactory</string>
             </entry>
         </map>
     </entry>
     <entry>
-        <string>text/plain_metadata_extractor_factory_map</string>
+        <string>application/x-research-info-systems_metadata_extractor_factory_map</string>
         <map>
             <entry>
-                <string>*</string>
+                <string>*;RIS</string>
                 <string>org.lockss.plugin.clockss.airiti.AiritiMetadataExtractorFactory</string>
             </entry>
         </map>
