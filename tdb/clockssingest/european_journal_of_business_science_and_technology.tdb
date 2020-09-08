@@ -16,12 +16,13 @@
       name = European Journal of Business Science and Technology ;
       eissn = 2336-6494 
     >
+    
+    # Moved to new platform -- Actavia
 
     {
-      plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
-      param[base_url] = https://journal.ejobsat.cz/
-      param[journal_id] = ejobsat
-      attr[start_stem] = index.php/
+      plugin = needs.plugin 
+      param[base_url] = https://www.ejobsat.cz/
+      param[journal_id] = ejo
 
       au < exists ; exists ; 2017 ; European Journal of Business Science and Technology Volume 3 ; 3 ; 2017 ; >
       au < exists ; exists ; 2018 ; European Journal of Business Science and Technology Volume 4 ; 4 ; 2018 ; >
