@@ -8,6 +8,7 @@
   >
   
   provider = Journal of Student Science and Technology
+  # Retire after 2020.
 
   {
  
@@ -35,6 +36,7 @@
     au < deepCrawl ; exists ; 2017 ; Journal of Student Science and Technology Volume 10 ; 10 ; 2017 ; >
     au < deepCrawl ; exists ; 2019 ; Journal of Student Science and Technology Volume 11 ; 11 ; 2019 ; >
     au < expected ; exists ; 2020 ; Journal of Student Science and Technology Volume 12 ; 12 ; 2020 ; >
+    #do not collect after 2020.
 
   }
 
