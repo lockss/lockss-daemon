@@ -387,7 +387,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; Journal of General Virology Volume 93 ; 93 ; https://www.microbiologyresearch.org/ ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Journal of General Virology Volume 94 ; 94 ; https://www.microbiologyresearch.org/ ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of General Virology Volume 95 ; 95 ; https://www.microbiologyresearch.org/ ; >
-      au < frozen ; exists ; 2015 ; Journal of General Virology Volume 96 ; 96 ; https://www.microbiologyresearch.org/ ; >
+      au < finished ; manifest ; 2015 ; Journal of General Virology Volume 96 ; 96 ; https://www.microbiologyresearch.org/ ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2016 ; Journal of General Virology Volume 97 ; 97 ; https://www.microbiologyresearch.org/ ; >
       au < crawling ; exists ; 2017 ; Journal of General Virology Volume 98 ; 98 ; https://www.microbiologyresearch.org/ ; >
       au < frozen ; exists ; 2018 ; Journal of General Virology Volume 99 ; 99 ; https://www.microbiologyresearch.org/ ; >
@@ -509,7 +509,7 @@
       au < finished ; finished ; 2015 ; Microbial Genomics Volume 1 ; 1 ; http://mgen.microbiologyresearch.org/ ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2016 ; Microbial Genomics Volume 2 ; 2 ; https://www.microbiologyresearch.org/ ; >
       au < frozen ; exists ; 2017 ; Microbial Genomics Volume 3 ; 3 ; https://www.microbiologyresearch.org/ ; >
-      au < frozen ; exists ; 2018 ; Microbial Genomics Volume 4 ; 4 ; https://www.microbiologyresearch.org/ ; >
+      au < finished ; manifest ; 2018 ; Microbial Genomics Volume 4 ; 4 ; https://www.microbiologyresearch.org/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2019 ; Microbial Genomics Volume 5 ; 5 ; https://www.microbiologyresearch.org/ ; >
       au < manifest ; exists ; 2020 ; Microbial Genomics Volume 6 ; 6 ; https://www.microbiologyresearch.org/ ; >
 
