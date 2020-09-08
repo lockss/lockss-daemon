@@ -697,11 +697,11 @@ while (my $line = <>) {
   } elsif ($plugin eq "Ojs3Plugin") {
     #OJS3 allows an attr to define variants for location of manifest
         if ($param{base_url} =~ m/scholarworks/) {
-            $url = sprintf("%sjournals/index.php/%s/gateway/clockss?year=%d",
+            $url = sprintf("%sjournals/index.php/%s/gateway/lockss?year=%d",
             $param{base_url}, $param{journal_id}, $param{year});
         } else {
           #default behavior
-          $url = sprintf("%sindex.php/%s/gateway/clockss?year=%d",
+          $url = sprintf("%sindex.php/%s/gateway/lockss?year=%d",
           $param{base_url}, $param{journal_id}, $param{year});
         }
         $man_url = uri_unescape($url);
