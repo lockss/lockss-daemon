@@ -377,7 +377,7 @@
       au < finished ; frozen ; 2009 ; 16-17 ; ASIANetwork Exchange Volume 2009 ; 2009 ; https://www.asianetworkexchange.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2010 ; 17-18 ; ASIANetwork Exchange Volume 2010 ; 2010 ; http://www.asianetworkexchange.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2011 ; 18-19 ; ASIANetwork Exchange Volume 2011 ; 2011 ; http://www.asianetworkexchange.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2012 ; 19-20 ; ASIANetwork Exchange Volume 2012 ; 2012 ; http://www.asianetworkexchange.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2012 ; 19-20 ; ASIANetwork Exchange Volume 2012 ; 2012 ; http://www.asianetworkexchange.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2013 ; 20-21 ; ASIANetwork Exchange Volume 2013 ; 2013 ; http://www.asianetworkexchange.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2014 ; 21-22 ; ASIANetwork Exchange Volume 2014 ; 2014 ; http://www.asianetworkexchange.org/ ; >
       au < finished ; finished ; 2015 ; 22 ; ASIANetwork Exchange Volume 2015 ; 2015 ; http://www.asianetworkexchange.org/ ; reingest2.clockss.org:8085 >
@@ -399,7 +399,7 @@
       comment[publisher] = Open Library of Humanities
 #      param[base_url] = http://www.glossa-journal.org/
 
-      au < finished ; frozen ; 2016 ; 1 ; Glossa: a journal of general linguistics Volume 2016 ; 2016 ; http://www.glossa-journal.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2016 ; 1 ; Glossa: a journal of general linguistics Volume 2016 ; 2016 ; http://www.glossa-journal.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; 2 ; Glossa: a journal of general linguistics Volume 2017 ; 2017 ; http://www.glossa-journal.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 3 ; Glossa: a journal of general linguistics Volume 2018 ; 2018 ; https://www.glossa-journal.org/ ; reingest4.clockss.org:8082 > #no permission statement 7.31.2018
       au < deepCrawl ; exists ; 2019 ; 4 ; Glossa: a journal of general linguistics Volume 2019 ; 2019 ; https://www.glossa-journal.org/ ; > #no permission statement 7.31.2019
@@ -550,9 +550,9 @@
       au < finished ; finished ; 2000 ; 2000 ; Body, Space & Technology Volume 2000 ; 2000 ; https://www.bstjournal.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2001 ; 2001 ; Body, Space & Technology Volume 2001 ; 2001 ; https://www.bstjournal.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2002 ; 2002 ; Body, Space & Technology Volume 2002 ; 2002 ; https://www.bstjournal.com/ ; reingest3.clockss.org:8083 >
-      au < finished ; frozen ; 2003 ; 2003 ; Body, Space & Technology Volume 2003 ; 2003 ; https://www.bstjournal.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2003 ; 2003 ; Body, Space & Technology Volume 2003 ; 2003 ; https://www.bstjournal.com/ ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2004 ; 2004 ; Body, Space & Technology Volume 2004 ; 2004 ; https://www.bstjournal.com/ ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2005 ; 2005 ; Body, Space & Technology Volume 2005 ; 2005 ; https://www.bstjournal.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2005 ; 2005 ; Body, Space & Technology Volume 2005 ; 2005 ; https://www.bstjournal.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2006 ; 2006 ; Body, Space & Technology Volume 2006 ; 2006 ; https://www.bstjournal.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2007 ; 2007 ; Body, Space & Technology Volume 2007 ; 2007 ; https://www.bstjournal.com/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2008 ; 2008 ; Body, Space & Technology Volume 2008 ; 2008 ; https://www.bstjournal.com/ ; reingest4.clockss.org:8082 >
@@ -782,7 +782,7 @@
 #      param[base_url] = http://www.karib.no/
       #requested clockss permission statement RT 7992 2/5/2018
 
-      au < finished ; frozen ; 2014 ; 1 ; Karib: Nordic Journal for Caribbean Studies Volume 2014 ; 2014 ; https://www.karib.no/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2014 ; 1 ; Karib: Nordic Journal for Caribbean Studies Volume 2014 ; 2014 ; https://www.karib.no/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2015 ; 2 ; Karib: Nordic Journal for Caribbean Studies Volume 2015 ; 2015 ; https://www.karib.no/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2017 ; 3 ; Karib: Nordic Journal for Caribbean Studies Volume 2017 ; 2017 ; https://www.karib.no/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 4 ; Karib: Nordic Journal for Caribbean Studies Volume 2018 ; 2018 ; https://www.karib.no/ ; reingest1.clockss.org:8082 >
@@ -839,7 +839,7 @@
     au < finished ; finished ; 2013 ; 15 ; Scandinavian Journal of Disability Research Volume 15 ; 2013 ; https://www.sjdr.se/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; 16 ; Scandinavian Journal of Disability Research Volume 16 ; 2014 ; https://www.sjdr.se/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 17 ; Scandinavian Journal of Disability Research Volume 17 ; 2015 ; https://www.sjdr.se/ ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 2016 ; 18 ; Scandinavian Journal of Disability Research Volume 18 ; 2016 ; https://www.sjdr.se/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; 18 ; Scandinavian Journal of Disability Research Volume 18 ; 2016 ; https://www.sjdr.se/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2017 ; 19 ; Scandinavian Journal of Disability Research Volume 19 ; 2017 ; https://www.sjdr.se/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2018 ; 20 ; Scandinavian Journal of Disability Research Volume 20 ; 2018 ; https://www.sjdr.se/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2019 ; 21 ; Scandinavian Journal of Disability Research Volume 21 ; 2019 ; https://www.sjdr.se/ ; >
@@ -1023,7 +1023,7 @@
 #      about page (with permission statement) is at https://ai-journal.com/about/ (no www)
 
       au < finished ; finished ; 2000 ; 4 ; Archaeology International Volume 2000 ; 2000 ; https://ai-journal.com/ ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2001 ; 5 ; Archaeology International Volume 2001 ; 2001 ; https://ai-journal.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2001 ; 5 ; Archaeology International Volume 2001 ; 2001 ; https://ai-journal.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2002 ; 6 ; Archaeology International Volume 2002 ; 2002 ; https://ai-journal.com/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2003 ; 7 ; Archaeology International Volume 2003 ; 2003 ; https://ai-journal.com/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2004 ; 8 ; Archaeology International Volume 2004 ; 2004 ; https://ai-journal.com/ ; reingest5.clockss.org:8082 >
@@ -1271,8 +1271,8 @@
       au < finished ; finished ; 2010 ; 11 ; International Journal of Integrated Care Volume 2010 ; 2010 ; http://www.ijic.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2011 ; 12 ; International Journal of Integrated Care Volume 2011 ; 2011 ; http://www.ijic.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2012 ; 13 ; International Journal of Integrated Care Volume 2012 ; 2012 ; http://www.ijic.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; frozen ; 2013 ; 14 ; International Journal of Integrated Care Volume 2013 ; 2013 ; http://www.ijic.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2014 ; 15 ; International Journal of Integrated Care Volume 2014 ; 2014 ; http://www.ijic.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2013 ; 14 ; International Journal of Integrated Care Volume 2013 ; 2013 ; http://www.ijic.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; 15 ; International Journal of Integrated Care Volume 2014 ; 2014 ; http://www.ijic.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 16 ; International Journal of Integrated Care Volume 2015 ; 2015 ; http://www.ijic.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2016 ; 17 ; International Journal of Integrated Care Volume 2016 ; 2016 ; http://www.ijic.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2017 ; 18 ; International Journal of Integrated Care Volume 2017 ; 2017 ; http://www.ijic.org/ ; reingest4.clockss.org:8082 >
@@ -1449,7 +1449,7 @@
       au < finished ; finished ; 2006 ; 1 ; Journal of Molecular Signaling Volume 2006 ; 2006 ; https://www.jmolecularsignaling.com/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2007 ; 2 ; Journal of Molecular Signaling Volume 2007 ; 2007 ; https://www.jmolecularsignaling.com/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2008 ; 3 ; Journal of Molecular Signaling Volume 2008 ; 2008 ; https://www.jmolecularsignaling.com/ ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2009 ; 4 ; Journal of Molecular Signaling Volume 2009 ; 2009 ; https://www.jmolecularsignaling.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2009 ; 4 ; Journal of Molecular Signaling Volume 2009 ; 2009 ; https://www.jmolecularsignaling.com/ ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2010 ; 5 ; Journal of Molecular Signaling Volume 2010 ; 2010 ; http://www.jmolecularsignaling.com/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2011 ; 6 ; Journal of Molecular Signaling Volume 2011 ; 2011 ; http://www.jmolecularsignaling.com/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2012 ; 7 ; Journal of Molecular Signaling Volume 2012 ; 2012 ; http://www.jmolecularsignaling.com/ ; reingest5.clockss.org:8082 >
@@ -1837,7 +1837,7 @@
       au < finished ; finished ; 2002 ; 13 ; Papers from the Institute of Archaeology Volume 2002 ; 2002 ; https://pia-journal.co.uk/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2003 ; 14 ; Papers from the Institute of Archaeology Volume 2003 ; 2003 ; https://pia-journal.co.uk/ ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2004 ; 15 ; Papers from the Institute of Archaeology Volume 2004 ; 2004 ; https://pia-journal.co.uk/ ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2005 ; 16 ; Papers from the Institute of Archaeology Volume 2005 ; 2005 ; https://pia-journal.co.uk/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2005 ; 16 ; Papers from the Institute of Archaeology Volume 2005 ; 2005 ; https://pia-journal.co.uk/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2006 ; 17 ; Papers from the Institute of Archaeology Volume 2006 ; 2006 ; https://pia-journal.co.uk/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2007 ; 18 ; Papers from the Institute of Archaeology Volume 2007 ; 2007 ; https://pia-journal.co.uk/ ; reingest2.clockss.org:8085 >
       au < doesNotExist ; doesNotExist ; 2008 ; 19 ; Papers from the Institute of Archaeology Volume 2008 ; 2008 ; https://pia-journal.co.uk/ ; > #M exists. No articles for that year.
@@ -1986,7 +1986,7 @@
       #no longer at this url
 #      param[base_url] = http://www.utrechtjournal.org/
 
-      au < finished ; frozen ; 2010 ; 1 ; Utrecht Journal of International and European Law Volume 2010 ; 2010 ; http://www.utrechtjournal.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; 1 ; Utrecht Journal of International and European Law Volume 2010 ; 2010 ; http://www.utrechtjournal.org/ ; reingest4.clockss.org:8082 >
       au < doNotProcess ; exists ; 2011 ; 2 ; Utrecht Journal of International and European Law Volume 2011 ; 2011 ; https://www.utrechtjournal.org/ ; >
       au < doNotProcess ; exists ; 2012 ; 3 ; Utrecht Journal of International and European Law Volume 2012 ; 2012 ; https://www.utrechtjournal.org/ ; >
       au < doNotProcess ; exists ; 2013 ; 4 ; Utrecht Journal of International and European Law Volume 2013 ; 2013 ; https://www.utrechtjournal.org/ ; >
@@ -2005,7 +2005,7 @@
       au < doNotProcess ; exists ; 2013 ; 4 ; Utrecht Journal of International and European Law Volume 2013 ; 2013 ; https://utrechtjournal.org/ ; >
       au < doNotProcess ; exists ; 2014 ; 5 ; Utrecht Journal of International and European Law Volume 2014 ; 2014 ; https://utrechtjournal.org/ ; >
       au < doNotProcess ; exists ; 2015 ; 6 ; Utrecht Journal of International and European Law Volume 2015 ; 2015 ; https://utrechtjournal.org/ ; >
-      au < finished ; frozen ; 2016 ; 7 ; Utrecht Journal of International and European Law Volume 2016 ; 2016 ; https://utrechtjournal.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2016 ; 7 ; Utrecht Journal of International and European Law Volume 2016 ; 2016 ; https://utrechtjournal.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; 8 ; Utrecht Journal of International and European Law Volume 2017 ; 2017 ; https://utrechtjournal.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 9 ; Utrecht Journal of International and European Law Volume 2018 ; 2018 ; https://utrechtjournal.org/ ; reingest1.clockss.org:8082 >
       au < doesNotExist ; doesNotExist ; 2019 ; 10 ; Utrecht Journal of International and European Law Volume 2019 ; 2019 ; https://utrechtjournal.org/ ; >
@@ -2348,7 +2348,7 @@
       au < finished ; finished ; 2010 ; 8 ; Entertainment and Sports Law Journal Volume 2010 ; 2010 ; http://www.entsportslawjournal.com/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2011 ; 9 ; Entertainment and Sports Law Journal Volume 2011 ; 2011 ; http://www.entsportslawjournal.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2012 ; 10 ; Entertainment and Sports Law Journal Volume 2012 ; 2012 ; http://www.entsportslawjournal.com/ ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2013 ; 11 ; Entertainment and Sports Law Journal Volume 2013 ; 2013 ; http://www.entsportslawjournal.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2013 ; 11 ; Entertainment and Sports Law Journal Volume 2013 ; 2013 ; http://www.entsportslawjournal.com/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2014 ; 12 ; Entertainment and Sports Law Journal Volume 2014 ; 2014 ; http://www.entsportslawjournal.com/ ; >
       au < finished ; finished ; 2015 ; 13 ; Entertainment and Sports Law Journal Volume 2015 ; 2015 ; http://www.entsportslawjournal.com/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2016 ; 14 ; Entertainment and Sports Law Journal Volume 2016 ; 2016 ; http://www.entsportslawjournal.com/ ; reingest4.clockss.org:8082 >
@@ -2414,7 +2414,7 @@
 #      param[base_url] = http://www.westminsterpapers.org/
 
       au < finished ; finished ; 2009 ; 6 ; Westminster Papers in Communication and Culture Volume 2009 ; 2009 ; https://www.westminsterpapers.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2010 ; 7 ; Westminster Papers in Communication and Culture Volume 2010 ; 2010 ; http://www.westminsterpapers.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; 7 ; Westminster Papers in Communication and Culture Volume 2010 ; 2010 ; http://www.westminsterpapers.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2011 ; 8 ; Westminster Papers in Communication and Culture Volume 2011 ; 2011 ; http://www.westminsterpapers.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2012 ; 9 ; Westminster Papers in Communication and Culture Volume 2012 ; 2012 ; http://www.westminsterpapers.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2013 ; 9 ; Westminster Papers in Communication and Culture Volume 2013 ; 2013 ; http://www.westminsterpapers.org/ ; reingest4.clockss.org:8082 >
@@ -2485,7 +2485,7 @@
       au < finished ; finished ; 2001 ; 32 ; BMGN - Low Countries Historical Review Volume 2001 ; 2001 ; https://www.bmgn-lchr.nl/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2002 ; 33 ; BMGN - Low Countries Historical Review Volume 2002 ; 2002 ; https://www.bmgn-lchr.nl/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2003 ; 34 ; BMGN - Low Countries Historical Review Volume 2003 ; 2003 ; https://www.bmgn-lchr.nl/ ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2004 ; 35 ; BMGN - Low Countries Historical Review Volume 2004 ; 2004 ; https://www.bmgn-lchr.nl/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2004 ; 35 ; BMGN - Low Countries Historical Review Volume 2004 ; 2004 ; https://www.bmgn-lchr.nl/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2005 ; 36 ; BMGN - Low Countries Historical Review Volume 2005 ; 2005 ; https://www.bmgn-lchr.nl/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2006 ; 37 ; BMGN - Low Countries Historical Review Volume 2006 ; 2006 ; https://www.bmgn-lchr.nl/ ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2007 ; 38 ; BMGN - Low Countries Historical Review Volume 2007 ; 2007 ; https://www.bmgn-lchr.nl/ ; reingest2.clockss.org:8085 >
@@ -2495,7 +2495,7 @@
       au < finished ; finished ; 2011 ; 42 ; BMGN - Low Countries Historical Review Volume 2011 ; 2011 ; http://www.bmgn-lchr.nl/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2012 ; 43 ; BMGN - Low Countries Historical Review Volume 2012 ; 2012 ; http://www.bmgn-lchr.nl/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2013 ; 44 ; BMGN - Low Countries Historical Review Volume 2013 ; 2013 ; http://www.bmgn-lchr.nl/ ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2014 ; 45 ; BMGN - Low Countries Historical Review Volume 2014 ; 2014 ; http://www.bmgn-lchr.nl/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; 45 ; BMGN - Low Countries Historical Review Volume 2014 ; 2014 ; http://www.bmgn-lchr.nl/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 46 ; BMGN - Low Countries Historical Review Volume 2015 ; 2015 ; http://www.bmgn-lchr.nl/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2016 ; 47 ; BMGN - Low Countries Historical Review Volume 2016 ; 2016 ; http://www.bmgn-lchr.nl/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2017 ; 48 ; BMGN - Low Countries Historical Review Volume 2017 ; 2017 ; http://www.bmgn-lchr.nl/ ; reingest2.clockss.org:8085 >
@@ -2834,7 +2834,7 @@
       au < finished ; finished ; 2009 ; 5 ; Utrecht Law Review Volume 2009 ; 2009 ; https://www.utrechtlawreview.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2010 ; 6 ; Utrecht Law Review Volume 2010 ; 2010 ; https://www.utrechtlawreview.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2011 ; 7 ; Utrecht Law Review Volume 2011 ; 2011 ; https://www.utrechtlawreview.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2012 ; 8 ; Utrecht Law Review Volume 2012 ; 2012 ; https://www.utrechtlawreview.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2012 ; 8 ; Utrecht Law Review Volume 2012 ; 2012 ; https://www.utrechtlawreview.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2013 ; 9 ; Utrecht Law Review Volume 2013 ; 2013 ; https://www.utrechtlawreview.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2014 ; 10 ; Utrecht Law Review Volume 2014 ; 2014 ; https://www.utrechtlawreview.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2015 ; 11 ; Utrecht Law Review Volume 2015 ; 2015 ; https://www.utrechtlawreview.org/ ; reingest3.clockss.org:8083 >
@@ -2917,8 +2917,8 @@
       au < finished ; finished ; 2007 ; 20 ; Serials: The Journal for the Serials Community Volume 2007 ; 2007 ; https://serials.uksg.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2008 ; 21 ; Serials: The Journal for the Serials Community Volume 2008 ; 2008 ; https://serials.uksg.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2009 ; 22 ; Serials: The Journal for the Serials Community Volume 2009 ; 2009 ; https://serials.uksg.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2010 ; 23 ; Serials: The Journal for the Serials Community Volume 2010 ; 2010 ; http://serials.uksg.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; frozen ; 2011 ; 24 ; Serials: The Journal for the Serials Community Volume 2011 ; 2011 ; http://serials.uksg.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; 23 ; Serials: The Journal for the Serials Community Volume 2010 ; 2010 ; http://serials.uksg.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2011 ; 24 ; Serials: The Journal for the Serials Community Volume 2011 ; 2011 ; http://serials.uksg.org/ ; reingest1.clockss.org:8082 >
 
   }
 
@@ -2966,7 +2966,7 @@
       comment[publisher] = University of California Press
 #      param[base_url] = https://www.elementascience.org/
 
-      au < finished ; frozen ; 2013 ; 1 ; Elementa: Science of the Anthropocene Volume 2013 ; 2013 ; https://www.elementascience.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2013 ; 1 ; Elementa: Science of the Anthropocene Volume 2013 ; 2013 ; https://www.elementascience.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2014 ; 2 ; Elementa: Science of the Anthropocene Volume 2014 ; 2014 ; https://www.elementascience.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 3 ; Elementa: Science of the Anthropocene Volume 2015 ; 2015 ; https://www.elementascience.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2016 ; 4 ; Elementa: Science of the Anthropocene Volume 2016 ; 2016 ; https://www.elementascience.org/ ; reingest3.clockss.org:8083 >
