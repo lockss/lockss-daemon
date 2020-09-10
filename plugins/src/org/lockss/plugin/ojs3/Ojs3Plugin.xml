@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
    <entry>
     <string>plugin_name</string>
@@ -25,11 +25,11 @@
       <string>1,"^https?://%s.*\.(bmp|css|gif|ico|js|jpe?g|png|tif?f|eot|svg|ttf|woff.?)([?]((itok|v)=)?[^&amp;]+)?$", url_host(base_url)</string>
       <string>1,"^https?://%s.*/css([?]name=stylesheet)?$", url_host(base_url)</string>
       <!--  index.php or journals/index.php are an optional attr so allow but do not require -->
-      <string>1,"^https://%s/(journals/)?(index\.php/)?(%s/)?gateway/c?lockss\?year=%d$", url_host(base_url),journal_id, year</string>
+      <string>1,"^https?://%s/(%s/)?(journals/)?(index\.php/)?(%s/)?gateway/c?lockss\?year=%d$", url_host(base_url),journal_id,journal_id, year</string>
       <string>2,"\?acceptCookies="</string>
       <!--  intentionally https only -->
-      <string>1,"^https://%s/(journals/)?(index\.php/)?(%s/)?(article|issue)/(download(SuppFile)?|view(Article|File|(Download|PDF)Interstitial|RST)?)/", url_host(base_url), journal_id</string>
-      <string>1,"^https://%s/(journals/)?(index\.php/)?(%s/)?rt/(bio|metadata|printerFriendly|suppFileMetadata|suppFiles)/", url_host(base_url), journal_id</string>
+      <string>1,"^https?://%s/(journals/)?(index\.php/)?(%s/)?(article|issue)/(download(SuppFile)?|view(Article|File|(Download|PDF)Interstitial|RST)?)/", url_host(base_url), journal_id</string>
+      <string>1,"^https?://%s/(journals/)?(index\.php/)?(%s/)?rt/(bio|metadata|printerFriendly|suppFileMetadata|suppFiles)/", url_host(base_url), journal_id</string>
       <string>2,"^https?://%s/.*plugins/generic/pdfJsViewer/pdf\.js/web/viewer\.html\?file=https?[%%]25", url_host(base_url)</string>
       <string>1,"^https?://%s/.*plugins/generic/pdfJsViewer/pdf\.js/web/viewer\.html\?file=", url_host(base_url)</string>
     </list>
