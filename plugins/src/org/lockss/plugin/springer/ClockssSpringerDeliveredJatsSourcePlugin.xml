@@ -49,16 +49,6 @@
     <string>standard</string>
   </entry>
   <entry>
-    <string>au_start_url</string>
-    <string>"%s%d/%s/", base_url, year, directory</string>
-  </entry>
-  <entry>
-    <string>au_substance_url_pattern</string>
-    <list>
-      <string>"^%s%d/%s.+\.zip$", base_url, year, directory</string>
-    </list>
-  </entry>
-  <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.springer.SpringerDeliveredJatsSourceZipXmlArticleIteratorFactory</string>
   </entry>
