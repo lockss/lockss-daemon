@@ -87,39 +87,36 @@
       name = Springer Delivered Source Content
     >
 
-    plugin = org.lockss.plugin.springer.ClockssSpringerDeliveredSourcePlugin
     param[base_url] = http://clockss-staged.clockss.org/sourcefiles/springer-delivered/
     hidden[proxy] = DIRECT
-    implicit < status ; status2 ; year ; name ; param[year] ; param[directory] >
 
-    au < readySource ; finished ; 2018 ; Springer Delivered Source Content 2018 HD1_1 ; 2018 ; HD1_1 >
-    au < readySource ; finished ; 2018 ; Springer Delivered Source Content 2018 HD1_2 ; 2018 ; HD1_2 >
-    au < readySource ; finished ; 2018 ; Springer Delivered Source Content 2018 HD1_3 ; 2018 ; HD1_3 >
-    au < readySource ; finished ; 2018 ; Springer Delivered Source Content 2018 HD1_4 ; 2018 ; HD1_4 >
-    au < readySource ; finished ; 2018 ; Springer Delivered Source Content 2018 HD1_5 ; 2018 ; HD1_5 >
-    au < readySource ; finished ; 2018 ; Springer Delivered Source Content 2018 HD1_6 ; 2018 ; HD1_6 >
-    au < readySource ; finished ; 2018 ; Springer Delivered Source Content 2018 HD1_7 ; 2018 ; HD1_7 >
-    au < readySource ; finished ; 2018 ; Springer Delivered Source Content 2018 HD1_8 ; 2018 ; HD1_8 >
-    au < readySource ; finished ; 2018 ; Springer Delivered Source Content 2018 HD1_9 ; 2018 ; HD1_9 >
-    #books came in 2019
-    au < readySource ; finished ; 2019 ; Springer Delivered Source Content 2019 HD1_1 ; 2019 ; HD1_1 >
-    au < readySource ; finished ; 2019 ; Springer Delivered Source Content 2019 HD1_2 ; 2019 ; HD1_2 >
-    au < readySource ; finished ; 2019 ; Springer Delivered Source Content 2019 HD1_3 ; 2019 ; HD1_3 >
-    au < readySource ; finished ; 2019 ; Springer Delivered Source Content 2019 HD1_4 ; 2019 ; HD1_4 >
-    au < readySource ; finished ; 2019 ; Springer Delivered Source Content 2019 HD1_5 ; 2019 ; HD1_5 >
-    au < readySource ; finished ; 2019 ; Springer Delivered Source Content 2019 HD1_6 ; 2019 ; HD1_6 >
+    {
 
+      plugin = org.lockss.plugin.springer.ClockssSpringerDeliveredSourcePlugin
+      implicit < status ; status2 ; year ; name ; param[year] ; param[directory] >
 
-  }
+      au < readySource ; finished ; 2018 ; Springer Delivered Source Content 2018 HD1_1 ; 2018 ; HD1_1 >
+      au < readySource ; finished ; 2018 ; Springer Delivered Source Content 2018 HD1_2 ; 2018 ; HD1_2 >
+      au < readySource ; finished ; 2018 ; Springer Delivered Source Content 2018 HD1_3 ; 2018 ; HD1_3 >
+      au < readySource ; finished ; 2018 ; Springer Delivered Source Content 2018 HD1_4 ; 2018 ; HD1_4 >
+      au < readySource ; finished ; 2018 ; Springer Delivered Source Content 2018 HD1_5 ; 2018 ; HD1_5 >
+      au < readySource ; finished ; 2018 ; Springer Delivered Source Content 2018 HD1_6 ; 2018 ; HD1_6 >
+      au < readySource ; finished ; 2018 ; Springer Delivered Source Content 2018 HD1_7 ; 2018 ; HD1_7 >
+      au < readySource ; finished ; 2018 ; Springer Delivered Source Content 2018 HD1_8 ; 2018 ; HD1_8 >
+      au < readySource ; finished ; 2018 ; Springer Delivered Source Content 2018 HD1_9 ; 2018 ; HD1_9 >
+      #books came in 2019
+      au < readySource ; finished ; 2019 ; Springer Delivered Source Content 2019 HD1_1 ; 2019 ; HD1_1 >
+      au < readySource ; finished ; 2019 ; Springer Delivered Source Content 2019 HD1_2 ; 2019 ; HD1_2 >
+      au < readySource ; finished ; 2019 ; Springer Delivered Source Content 2019 HD1_3 ; 2019 ; HD1_3 >
+      au < readySource ; finished ; 2019 ; Springer Delivered Source Content 2019 HD1_4 ; 2019 ; HD1_4 >
+      au < readySource ; finished ; 2019 ; Springer Delivered Source Content 2019 HD1_5 ; 2019 ; HD1_5 >
+      au < readySource ; finished ; 2019 ; Springer Delivered Source Content 2019 HD1_6 ; 2019 ; HD1_6 >
 
-  {
-      title <
-        name = Springer Delivered Source Content
-      >
+    }
+
+    {
 
       plugin = org.lockss.plugin.springer.ClockssSpringerDeliveredJatsSourcePlugin
-      param[base_url] = http://clockss-staged.clockss.org/sourcefiles/springer-delivered/
-      hidden[proxy] = DIRECT
       implicit < status ; status2 ; year ; name ; param[year] ; param[directory] >
 
       #books came in 2020
@@ -128,7 +125,9 @@
       au < manifest ; exists ; 2020 ; Springer Delivered Source Content 2020 HD1_3 ; 2020 ; HD1_3 >
       au < manifest ; exists ; 2020 ; Springer Delivered Source Content 2020 HD1_4 ; 2020 ; HD1_4 >
       au < expected ; exists ; 2020 ; Springer Delivered Source Content 2020 HD1_5 ; 2020 ; HD1_5 >
-
+    
     }
+
+  }
 
 }
