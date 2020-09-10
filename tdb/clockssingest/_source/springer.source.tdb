@@ -112,4 +112,23 @@
 
   }
 
+  {
+      title <
+        name = Springer Delivered Source Content
+      >
+
+      plugin = org.lockss.plugin.springer.ClockssSpringerDeliveredJatsSourcePlugin
+      param[base_url] = http://clockss-staged.clockss.org/sourcefiles/springer-delivered/
+      hidden[proxy] = DIRECT
+      implicit < status ; status2 ; year ; name ; param[year] ; param[directory] >
+
+      #books came in 2020
+      au < manifest ; exists ; 2020 ; Springer Delivered Source Content 2020 HD1_1 ; 2020 ; HD1_1 >
+      au < manifest ; exists ; 2020 ; Springer Delivered Source Content 2020 HD1_2 ; 2020 ; HD1_2 >
+      au < manifest ; exists ; 2020 ; Springer Delivered Source Content 2020 HD1_3 ; 2020 ; HD1_3 >
+      au < manifest ; exists ; 2020 ; Springer Delivered Source Content 2020 HD1_4 ; 2020 ; HD1_4 >
+      au < expected ; exists ; 2020 ; Springer Delivered Source Content 2020 HD1_5 ; 2020 ; HD1_5 >
+
+    }
+
 }
