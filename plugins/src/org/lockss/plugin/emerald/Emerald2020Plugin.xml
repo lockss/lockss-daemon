@@ -1,0 +1,149 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>development</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.emerald.Emerald2020Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Emerald Group Publishing 2020 Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+      <entry>
+      	<string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_issn</key>
+        <displayName>Journal ISSN</displayName>
+        <description>International Standard Serial Number.</description>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume_name</key>
+        <displayName>Volume</displayName>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Emerald Group Publishing 2020 Plugin, Base URL %s, ISSN %s, Volume %s", base_url, journal_issn, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_permission_url</string>
+    <string>"http://clockss-ingest.lockss.org/clockss.txt"</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <!-- https://www.emerald.com/insight/publication/issn/0260-2288 -->
+    <string>"%sinsight/publication/issn/%s", base_url, journal_issn</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,"https://pro.fontawesome.com/.*\.css"</string>
+      <string>1,"%sinsight/static", base_url</string>
+      <string>1,"%sinsight/proxy/img?link=", base_url</string>
+      <string>1,"%sinsight/publication/issn/%s/vol/%s/iss/1", base_url, journal_issn, volume_name</string>
+      <string>1,"%sinsight/content/doi/", base_url</string>
+    </list>
+  </entry>
+  <!--https://www.emerald.com/insight/content/doi/10.1108/SR-01-2020-0013/full/pdf?title=two-step-calibration-method-for-three-axis-magnetic-sensor-error-based-on-particle-swarm-optimization-->
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"^%sinsight/content/doi/.*/full/pdf\?title=", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.emerald.Emerald2020ArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.emerald.Emerald2020ArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.emerald.Emerald2020MetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <!--
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.emeraldgroup.EmeraldHtmlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.emeraldgroup.EmeraldArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>application/pdf_filter_factory</string>
+    <string>org.lockss.plugin.emeraldgroup.EmeraldPdfFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.emeraldgroup.EmeraldArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+     	<string>*</string>
+        <string>org.lockss.plugin.emeraldgroup.EmeraldHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  -->
+  <entry>
+    <string>au_permitted_host_pattern</string>
+    <list>
+      <string>"https://insight/insight"</string>
+      <string>pro\.fontawesome\.com</string>
+      <string>www\.emerald\.com</string>
+      <string>cdnjs\.cloudflare\.com</string>
+    </list>
+  </entry>
+</map>
