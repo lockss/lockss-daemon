@@ -36,8 +36,6 @@ import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.OrFilter;
 import org.htmlparser.filters.TagNameFilter;
 import org.lockss.filter.FilterUtil;
-import org.lockss.filter.WhiteSpaceFilter;
-import org.lockss.filter.html.HtmlCompoundTransform;
 import org.lockss.filter.html.HtmlFilterInputStream;
 import org.lockss.filter.html.HtmlNodeFilterTransform;
 import org.lockss.filter.html.HtmlNodeFilters;
@@ -67,6 +65,9 @@ public class Emerald2020HtmlFilterFactory implements FilterFactory {
             
             // https://www.emerald.com/insight/content/doi/10.1108/ARLA-01-2018-0028/full/html
             HtmlNodeFilters.tagWithAttributeRegex("div", "id", "trendmd-widget"),
+            HtmlNodeFilters.tagWithAttributeRegex("section", "id", "abstract"),
+            HtmlNodeFilters.tagWithAttributeRegex("section", "id", "keywords_list"),
+            HtmlNodeFilters.tagWithAttributeRegex("section", "class", "Citation"),
 
             // https://www.emerald.com/insight/content/doi/10.1108/978-1-78714-501-620171005/full/html
             HtmlNodeFilters.tagWithAttributeRegex("div", "id", "cookies-consent"),
@@ -75,6 +76,7 @@ public class Emerald2020HtmlFilterFactory implements FilterFactory {
             HtmlNodeFilters.tagWithAttributeRegex("div", "id", "tocscroll"),
             HtmlNodeFilters.tagWithAttributeRegex("section", "class", "References"),
             HtmlNodeFilters.tagWithAttributeRegex("div", "id", "feedback-strip"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "id", "feedback-underlay"),
             HtmlNodeFilters.tagWithAttributeRegex("button", "class", "intent_back_to_top"),
 
 

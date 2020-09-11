@@ -34,18 +34,16 @@ import org.lockss.extractor.ArticleMetadataExtractorFactory;
 import org.lockss.extractor.BaseArticleMetadataExtractor;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.*;
-import org.lockss.plugin.spandidos.SpandidosArticleIteratorFactory;
 import org.lockss.util.Logger;
 
 import java.util.Iterator;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Emerald2020ArticleIteratorFactory implements ArticleIteratorFactory,
         ArticleMetadataExtractorFactory {
 
   protected static Logger log =
-          Logger.getLogger(SpandidosArticleIteratorFactory.class);
+          Logger.getLogger(Emerald2020ArticleIteratorFactory.class);
 
   /*
   https://www.emerald.com/insight/content/doi/10.1108/SR-02-2018-0043/full/html
