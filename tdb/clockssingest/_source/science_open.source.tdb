@@ -12,7 +12,6 @@
       name = Science Open Source Content
     >
 
-    {
 
 
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/scienceopen-released/
@@ -23,7 +22,6 @@
 
       au < readySource ; crawling ; 2020 ; Science Open Source Content 2020 ; 2020 >
 
-    }
 
   }
 
