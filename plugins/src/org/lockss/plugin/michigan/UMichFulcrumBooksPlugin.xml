@@ -9,7 +9,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>10</string>
+        <string>11</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -53,7 +53,7 @@
             <!--  a strange redundant argument that causes a 503 now normalized-->
             <!-- <string>2,"^https?://%s/%s.*\?utf8=", url_host(base_url), book_uri</string>-->
             <string>1,"^https?://%s/%s", url_host(base_url), book_uri</string>
-            <string>1,"^https?://%s/(concern/file_sets|downloads|epubs|image-service)/", url_host(base_url)</string>
+            <string>1,"^https?://%s/(concern/file_sets|downloads|ebooks|epubs|image-service)/", url_host(base_url)</string>
         </list>
     </entry>
     <entry>
