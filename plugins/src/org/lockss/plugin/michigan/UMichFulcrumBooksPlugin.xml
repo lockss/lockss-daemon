@@ -9,7 +9,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>8</string>
+        <string>9</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -27,13 +27,6 @@
     <entry>
         <string>au_permission_url</string>
         <string>"http://clockss-ingest.lockss.org/lockss.txt"</string>
-    </entry>
-    <entry>
-        <string>au_permitted_host_pattern</string>
-        <list>
-            <string>www\.fulcrum\.org</string>
-            <string>"(.+\.cloudfront.net|use\.typekit\.net)"</string>
-        </list>
     </entry>
     <entry>
         <string>au_def_new_content_crawl</string>

@@ -20,26 +20,32 @@ public class TestIiifJsonLinkExtractor extends LockssTestCase {
                        res.add(url);
                      }
                    });
-    assertEquals(Arrays.asList("http://www.example.com/image-service/123456789/full/full/0/default.jpg",
-                               "http://www.example.com/image-service/123456789/0,0,256,256/256,/0/default.jpg",
-                               "http://www.example.com/image-service/123456789/0,256,256,256/256,/0/default.jpg",
-                               "http://www.example.com/image-service/123456789/0,512,256,97/256,/0/default.jpg",
-                               "http://www.example.com/image-service/123456789/256,0,256,256/256,/0/default.jpg",
-                               "http://www.example.com/image-service/123456789/256,256,256,256/256,/0/default.jpg",
-                               "http://www.example.com/image-service/123456789/256,512,256,97/256,/0/default.jpg",
-                               "http://www.example.com/image-service/123456789/512,0,238,256/,256/0/default.jpg",
-                               "http://www.example.com/image-service/123456789/512,256,238,256/,256/0/default.jpg",
-                               "http://www.example.com/image-service/123456789/512,512,238,97/238,/0/default.jpg",
-                               "http://www.example.com/image-service/123456789/full/full/0/default.png",
-                               "http://www.example.com/image-service/123456789/0,0,256,256/256,/0/default.png",
-                               "http://www.example.com/image-service/123456789/0,256,256,256/256,/0/default.png",
-                               "http://www.example.com/image-service/123456789/0,512,256,97/256,/0/default.png",
-                               "http://www.example.com/image-service/123456789/256,0,256,256/256,/0/default.png",
-                               "http://www.example.com/image-service/123456789/256,256,256,256/256,/0/default.png",
-                               "http://www.example.com/image-service/123456789/256,512,256,97/256,/0/default.png",
-                               "http://www.example.com/image-service/123456789/512,0,238,256/,256/0/default.png",
-                               "http://www.example.com/image-service/123456789/512,256,238,256/,256/0/default.png",
-                               "http://www.example.com/image-service/123456789/512,512,238,97/238,/0/default.png"),
+    /*
+     * The 256x256 combinatorics are disabled right now, only get the full-size image
+     */
+//    List<String> exp = Arrays.asList("http://www.example.com/image-service/123456789/full/full/0/default.jpg",
+//                               "http://www.example.com/image-service/123456789/0,0,256,256/256,/0/default.jpg",
+//                               "http://www.example.com/image-service/123456789/0,256,256,256/256,/0/default.jpg",
+//                               "http://www.example.com/image-service/123456789/0,512,256,97/256,/0/default.jpg",
+//                               "http://www.example.com/image-service/123456789/256,0,256,256/256,/0/default.jpg",
+//                               "http://www.example.com/image-service/123456789/256,256,256,256/256,/0/default.jpg",
+//                               "http://www.example.com/image-service/123456789/256,512,256,97/256,/0/default.jpg",
+//                               "http://www.example.com/image-service/123456789/512,0,238,256/,256/0/default.jpg",
+//                               "http://www.example.com/image-service/123456789/512,256,238,256/,256/0/default.jpg",
+//                               "http://www.example.com/image-service/123456789/512,512,238,97/238,/0/default.jpg",
+//                               "http://www.example.com/image-service/123456789/full/full/0/default.png",
+//                               "http://www.example.com/image-service/123456789/0,0,256,256/256,/0/default.png",
+//                               "http://www.example.com/image-service/123456789/0,256,256,256/256,/0/default.png",
+//                               "http://www.example.com/image-service/123456789/0,512,256,97/256,/0/default.png",
+//                               "http://www.example.com/image-service/123456789/256,0,256,256/256,/0/default.png",
+//                               "http://www.example.com/image-service/123456789/256,256,256,256/256,/0/default.png",
+//                               "http://www.example.com/image-service/123456789/256,512,256,97/256,/0/default.png",
+//                               "http://www.example.com/image-service/123456789/512,0,238,256/,256/0/default.png",
+//                               "http://www.example.com/image-service/123456789/512,256,238,256/,256/0/default.png",
+//                               "http://www.example.com/image-service/123456789/512,512,238,97/238,/0/default.png");
+    List<String> exp = Arrays.asList("http://www.example.com/image-service/123456789/full/full/0/default.jpg",
+                                     "http://www.example.com/image-service/123456789/full/full/0/default.png");
+    assertEquals(exp,
                  res);
   }
   

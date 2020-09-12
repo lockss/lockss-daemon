@@ -5,7 +5,6 @@ import java.util.*;
 
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.LinkExtractor;
-import org.lockss.extractor.LinkExtractor.Callback;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.Logger;
 
@@ -129,17 +128,20 @@ public class IiifJsonLinkExtractor implements LinkExtractor {
     for (String format : formats) {
       // Get the full image
       cb.foundLink(String.format("%s/full/full/0/default.%s", id, format));
-      // And get all the 256x256 pixel "tiles" (see above about 256)
-      for (int x = 0 ; x < width ; x += xstep) {
-        int w = (x + xstep <= width) ? xstep : width - x;
-        for (int y = 0 ; y < height ; y += ystep) {
-          int h = (y + ystep <= height) ? ystep : height - y;
-          String iiifSize = (w == xstep) ? String.format("%d,", xstep)
-                          : (h == ystep) ? String.format(",%d", ystep)
-                          : String.format("%d,", w);
-          cb.foundLink(String.format("%s/%d,%d,%d,%d/%s/0/default.%s", id, x, y, w, h, iiifSize, format));
-        }
-      }
+      /*
+       * Disable this for now. One day we'll respond to IIIF requests from the full size images.
+       */
+//      // And get all the 256x256 pixel "tiles" (see above about 256)
+//      for (int x = 0 ; x < width ; x += xstep) {
+//        int w = (x + xstep <= width) ? xstep : width - x;
+//        for (int y = 0 ; y < height ; y += ystep) {
+//          int h = (y + ystep <= height) ? ystep : height - y;
+//          String iiifSize = (w == xstep) ? String.format("%d,", xstep)
+//                          : (h == ystep) ? String.format(",%d", ystep)
+//                          : String.format("%d,", w);
+//          cb.foundLink(String.format("%s/%d,%d,%d,%d/%s/0/default.%s", id, x, y, w, h, iiifSize, format));
+//        }
+//      }
     }
   }
 

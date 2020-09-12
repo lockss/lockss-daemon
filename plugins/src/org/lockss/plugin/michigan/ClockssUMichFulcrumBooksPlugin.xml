@@ -9,7 +9,15 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>9</string>
+  </entry>
+  <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.michigan.UMichFulcrumBooksPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent_version</string>
+    <string>9</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -18,134 +26,5 @@
   <entry>
     <string>au_name</string>
     <string>"University of Michigan Press Books Plugin (CLOCKSS), Base URL %s, Path %s", base_url, book_uri</string>
-  </entry>
-  <entry>
-    <string>au_start_url</string>
-    <string>"%s%s", base_url, book_uri</string>
-  </entry>
-  <!--  don't currently have one; work around for now -->
-  <entry>
-    <string>au_permission_url</string>
-    <string>"http://clockss-ingest.lockss.org/clockss.txt"</string>
-  </entry>
-  <entry>
-    <string>au_permitted_host_pattern</string>
-    <list>
-     <string>www\.fulcrum\.org</string>
-      <string>"(.+\.cloudfront.net|use\.typekit\.net)"</string>
-    </list>
-  </entry>
-  <entry>
-    <string>au_def_new_content_crawl</string>
-    <long>1209600000</long>
-  </entry>
-  <entry>
-    <string>au_def_pause_time</string>
-    <long>3000</long>
-  </entry>
-  <entry>
-    <!-- start page to download page -->
-    <string>au_refetch_depth</string>
-    <int>2</int>
-  </entry>
-  <entry>
-    <string>au_crawlrules</string>
-    <list>
-      <!-- curated CDN list with terminators -->
-      <string>1,"^https?://(.+\.cloudfront.net/assets|use\.typekit\.net)/[^?]*\.(css|js)", url_host(base_url)</string>
-      <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff2?)([?][0-9]+)?$", url_host(base_url)</string>
-      <string>2,"^https?://%s/%s\.(atom|json|rss)", url_host(base_url), book_uri</string>
-      <string>2,"^https?://%s/%s.*&amp;(sort|per_page|view)=", url_host(base_url), book_uri</string>
-      <!--  %% is the way to represent a percent in a crawl rule -->
-      <string>2,"^https?://%s/%s\?f%%5B", url_host(base_url), book_uri</string>
-      <!--  a strange redundant argument that causes a 503 now normalized-->
-      <!-- <string>2,"^https?://%s/%s.*\?utf8=", url_host(base_url), book_uri</string>-->
-      <string>1,"^https?://%s/%s", url_host(base_url), book_uri</string>
-      <string>1,"^https?://%s/concern/file_sets", url_host(base_url)</string>
-      <string>1,"^https?://%s/(downloads|epubs)/", url_host(base_url)</string>
-    </list>
-  </entry>
-  <entry>
-    <string>au_substance_url_pattern</string>
-    <list>
-      <!--yes to: https://www.fulcrum.org/downloads/00000070p and no to https://www.fulcrum.org/downloads/00000070p?file=thumbnail -->
-      <!-- there is no way to differentiate the book substance from supporting assets -->
-      <string>"^https?://%s/downloads/[^?/]+$", url_host(base_url)</string>
-    </list>
-  </entry>
-  <entry>
-    <string>plugin_config_props</string>
-    <list>
-      <org.lockss.daemon.ConfigParamDescr>
-        <key>base_url</key>
-        <displayName>Base URL</displayName>
-        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
-        <type>3</type>
-        <size>40</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
-      <org.lockss.daemon.ConfigParamDescr>
-        <key>book_uri</key>
-        <displayName>Path</displayName>
-        <description>Path for book (used as part of file name)</description>
-        <type>1</type>
-        <size>200</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
-    </list>
-  </entry>
- <entry>
-    <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.michigan.UMichHtmlHashFilterFactory</string>
-  </entry>  
-  <entry>
-    <string>au_url_normalizer</string>
-    <string>org.lockss.plugin.michigan.UMichUrlNormalizer</string>
-  </entry>
-  <entry>
-    <string>text/html_link_extractor_factory</string>
-    <string>org.lockss.plugin.michigan.UMichHtmlLinkExtractorFactory</string>
-  </entry>
-  <entry>
-    <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.michigan.UMichBookIteratorFactory</string>
-  </entry>
-  <entry>
-    <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.michigan.UMichBookIteratorFactory</string>
-  </entry>
-  <entry>
-    <string>text/html_metadata_extractor_factory_map</string>
-    <map>
-      <entry>
-        <string>*;DublinCore</string>
-        <string>org.lockss.plugin.michigan.UMichHtmlMetadataExtractorFactory</string>
-      </entry>
-    </map>
-  </entry>
-  <entry>
-    <string>au_repair_from_peer_if_missing_url_pattern</string>
-    <list>
-      <string>.+[.](bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)(\?.*)?$"</string>
-    </list>
-  </entry>
-  <entry>
-    <!--these will not count towards poll results but will replicate from peer if above-->
-    <string>au_url_poll_result_weight</string>
-    <list>
-      <string>".+[.](bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)(\?.*)?$", 0</string>
-      <!--  do not replicate, just don't count in poll; it's a frame for the epub viewer and hashes to zero -->
-      <string>"^%sepubs/[^/]+$", base_url, 0</string>
-    </list>
-  </entry>
-  <!--  tell the default base.MimeTypeContentValidator what url patterns to validate by mime type -->
-  <!--  this won't work - it could be PDF also -->
-  <entry>
-    <string>au_url_mime_validation_map</string>
-    <list>
-      <string>/download/, application/epub+zip</string>
-    </list>
   </entry>
 </map>
