@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>9</string>
+    <string>10</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -17,7 +17,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>9</string>
+    <string>10</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -27,4 +27,9 @@
     <string>au_name</string>
     <string>"University of Michigan Press Books Plugin (CLOCKSS), Base URL %s, Path %s", base_url, book_uri</string>
   </entry>
+    <!--  don't currently have one; work around for now -->
+    <entry>
+        <string>au_permission_url</string>
+        <string>"http://clockss-ingest.lockss.org/clockss.txt"</string>
+    </entry>
 </map>
