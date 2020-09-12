@@ -1130,7 +1130,7 @@ while (my $line = <>) {
           } elsif (defined($man_contents) && ($man_contents =~ m/$lockss_tag/)) {
               #prepare for the worst by presetting a not found result...
               $result = "--";
-              if ($man_contents =~ m/doi\/book\/([^\/]+)\/([^"']+)/) {
+              if ($man_contents =~ m/doi\/book\/([^\/]+)\/([^"']+)/) { #"
                   my $doi1 = $1;
                   my $doi2 = $2;
                   #get the title of the book if we found the manifest page
@@ -1153,7 +1153,7 @@ while (my $line = <>) {
                       # what we're looking for on the page is href="/doi/pdf/doi1/doi2" OR href="/doi/pdfplus/doi1/doi2
                       #printf("href=\"pdfplus/%s/%s\"",${doi1},${doi2});
                       #if (defined($b_contents) && ($b_contents =~ m/href=\"[^"]+pdf(plus)?\/${doi1}\/${doi2}/)) {
-                      if (defined($b_contents) && ($b_contents =~ m/href=\"[^"]+pdf(plus)?\/${doi1}\//)) {
+                      if (defined($b_contents) && ($b_contents =~ m/href=\"[^"]+pdf(plus)?\/${doi1}\//)) {  #"
                           $result = "Manifest";
                       }
                   }
@@ -1191,7 +1191,7 @@ while (my $line = <>) {
           } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
               #prepare for the worst by presetting a not found result...
               $result = "--";
-              if ($man_contents =~ m/doi\/book\/([^\/]+)\/([^"']+)/) {
+              if ($man_contents =~ m/doi\/book\/([^\/]+)\/([^"']+)/) {  #"
                   my $doi1 = $1;
                   my $doi2 = $2;
                   #get the title of the book if we found the manifest page
@@ -1214,7 +1214,7 @@ while (my $line = <>) {
                       # what we're looking for on the page is href="/doi/pdf/doi1/doi2" OR href="/doi/pdfplus/doi1/doi2
                       #printf("href=\"pdfplus/%s/%s\"",${doi1},${doi2});
                       #if (defined($b_contents) && ($b_contents =~ m/href=\"[^"]+pdf(plus)?\/${doi1}\/${doi2}/)) {
-                      if (defined($b_contents) && ($b_contents =~ m/href=\"[^"]+pdf(plus)?\/${doi1}\//)) {
+                      if (defined($b_contents) && ($b_contents =~ m/href=\"[^"]+pdf(plus)?\/${doi1}\//)) {  #"
                           $result = "Manifest";
                       }
                   }
@@ -1295,11 +1295,11 @@ while (my $line = <>) {
       $url = sprintf("%s", $param{base_url});
       # if there is a year parameter (delivered source and original source plugins) that comes next
       if (defined $param{year}) {
-	  $url .= "$param{year}/";
+      $url .= "$param{year}/";
       } 
       # if there is a directory (delivered source in addition to year  and new directory based source plugins instead of year
       if (defined $param{directory}) {
-	  $url .= "$param{directory}/";
+      $url .= "$param{directory}/";
       }
       $man_url = uri_unescape($url);
       my $req = HTTP::Request->new(GET, $man_url);
