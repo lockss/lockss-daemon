@@ -39,7 +39,7 @@
       </entry>
       <entry>
         <string>Substance</string>
-        <string>6</string>
+        <string>7</string>
       </entry>
     </map>
   </entry>
@@ -149,7 +149,7 @@
       https://www.futuremedicine.com/doi/suppl/10.2217/fmb.14.49/suppl_file/.49.suppl
       -->
       <string>2,"^https?://%s/doi/suppl/.*/suppl_file/\.", url_host(base_url)</string>
-      <string>1,"^https?://%s/doi/((pdf|pdfplus|full|abs|ref(erences)?|suppl|figure|video[^/]+)/)?[0-9.]+/", url_host(base_url)</string>
+      <string>1,"^https?://%s/doi/((e?pdf|e?pdfplus|full|abs|ref(erences)?|suppl|figure|video[^/]+)/)?[0-9.]+/", url_host(base_url)</string>
       <string>2,"^https?://%s/action/showFullPopup\?doi=.*&amp;id=$", url_host(base_url)</string>
       <string>1,"^https?://%s/action/downloadCitation\?doi=.*&amp;format=ris&amp;include=(cit|abs)$", url_host(base_url)</string>
       <string>1,"^https?://%s/action/downloadTable\?(doi=.+&amp;id=[^&amp;]+|id=.+&amp;doi=[^&amp;]+)(&amp;downloadType=[^&amp;]+)?$", url_host(base_url)</string>
@@ -162,7 +162,7 @@
   <entry>
     <string>au_url_mime_type</string>
     <list>
-      <string>.*&amp;downloadType=(pdf|PDF)$, application/pdf</string>
+      <string>.*&amp;downloadType=(e?pdf|PDF)$, application/pdf</string>
     </list>
   </entry>
   <entry>
@@ -199,7 +199,7 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      	<string>"^https?://%s/doi/(pdf|pdfplus|full)/[.0-9]+/[^\?&amp;]+$", url_host(base_url)</string>
+      	<string>"^https?://%s/doi/(e?pdf|e?pdfplus|full)/[.0-9]+/[^\?&amp;]+$", url_host(base_url)</string>
     </list>
   </entry>
   <entry>
@@ -255,7 +255,7 @@
   <entry>
     <string>au_url_mime_validation_map</string>
     <list>
-      <string>/doi/pdf(plus)?/, application/pdf</string>
+      <string>/doi/e?pdf(plus)?/, application/pdf</string>
       <string>/doi/(abs|full)/, text/html</string>
     </list>
   </entry>
