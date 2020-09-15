@@ -38,16 +38,20 @@ import java.util.List;
 
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
+import org.apache.commons.io.FilenameUtils;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
 import org.lockss.plugin.CachedUrl;
 import java.io.InputStream;
 import java.io.FileInputStream;
+
+import org.lockss.util.UrlUtil;
 import org.marc4j.MarcReader;
 import org.marc4j.MarcStreamReader;
 import org.marc4j.marc.Record;
 import org.marc4j.marc.DataField;
 import org.marc4j.marc.Subfield;
+import org.marc4j.marc.ControlField;
 import java.util.List;
 
 import org.lockss.util.Logger;
@@ -62,8 +66,7 @@ public class CasaliniLibri2020SchemaHelper implements FileMetadataExtractor {
   /**
   The following is an example of a "mrc" record with some modification to avoid Comment Illegal Unicode Sequences
 s
-
-   =LDR  01276nam a2200373 i 4500
+  =LDR  01276nam a2200373 i 4500
   =001  2249531
   =003  ItFiC
   =005  20180726030539.0
@@ -95,9 +98,15 @@ s
   =910  \\$aBibliographic data$eTorrossa Fulltext Resource$gCasalini Libri
    */
 
+  private static final String TITLE = "title";
+  private static final String AUTHOR = "author";
+  private static final String ISBN = "isbn";
+  private static final String PUBLISHER = "publisher";
+  private static final String ENDPAGE = "endpage";
+
+
   @Override
   public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter) throws IOException, PluginException {
-
 
     InputStream input = cu.getUnfilteredInputStream();
 
@@ -114,23 +123,45 @@ s
       String MARC_isbn = getMARCData(record, "020", 'a');
       String MARC_title = getMARCData(record, "245", 'a');
       String MARC_pub_date =  getMARCData(record, "260", 'c');
-      String MARC_publisher = getMARCData(record, "260", 'b');
-      String MARC_start_page = getMARCData(record, "300", 'a');
+      String MARC_publisher = getMARCData(record, "910", 'g');
+      String MARC_total_page = getMARCData(record, "300", 'a');
       String MARC_author =   getMARCData(record, "700", 'a');
+      String MARC_pdf =  getMARCControlFieldData(record, "001");
 
-      am.put(MetadataField.FIELD_ISBN,  MARC_isbn);
-      am.put(MetadataField.FIELD_PUBLICATION_TITLE,  MARC_title);
-      am.put(MetadataField.FIELD_PUBLISHER, MARC_publisher);
-      am.put(MetadataField.FIELD_DATE, MARC_pub_date);
-      am.put(MetadataField.FIELD_AUTHOR, MARC_author);
-      am.put(MetadataField.FIELD_START_PAGE, MARC_start_page);
+      // Only count metadata when there is a PDF file
+      if (MARC_pdf != null) {
+        am.put(MetadataField.FIELD_ISBN,  MARC_isbn);
+        am.put(MetadataField.FIELD_PUBLICATION_TITLE,  MARC_title);
+        am.put(MetadataField.FIELD_PUBLISHER, MARC_publisher);
+        am.put(MetadataField.FIELD_DATE, MARC_pub_date);
+        am.put(MetadataField.FIELD_AUTHOR, MARC_author);
+        // They did not provide start page, just total number of page, 
+        am.put(MetadataField.FIELD_END_PAGE, MARC_total_page);
 
-      //am.cook(cookMap);
+        String cuBase = FilenameUtils.getFullPath(cu.getUrl());
+        String fullPathFile = UrlUtil.minimallyEncodeUrl(cuBase + MARC_pdf + ".pdf");
+        am.put(MetadataField.FIELD_ACCESS_URL, fullPathFile);
+
+        // Prepare raw metadata
+        am.putRaw(TITLE,  MARC_title);
+        am.putRaw(AUTHOR, MARC_author);
+        am.putRaw(ISBN, MARC_isbn);
+        am.putRaw(PUBLISHER, MARC_publisher);
+        am.putRaw(ENDPAGE, MARC_total_page);
+      }
+      
       emitter.emitMetadata(cu, am);
     }
     log.debug3(String.format("Metadata file source: %s, recordCount: %d", cu.getUrl(), recordCount));
   }
 
+  /**
+   * Get MARC21 data value by dataFieldCode and subFieldCode
+   * @param record
+   * @param dataFieldCode
+   * @param subFieldCode
+   * @return String value of MARC21 data field
+   */
   private String getMARCData(Record record, String dataFieldCode, char subFieldCode) {
 
     try {
@@ -155,7 +186,17 @@ s
 
           if (code == subFieldCode) {
             log.debug3("Mrc Record Found Tag: " + tag + " Subfield code: " + code + " Data element: " + data);
-            return data;
+
+            // clean up data before return
+            if (dataFieldCode.equals("700")) {
+              return data.replace("edited by", "");
+            } else if (dataFieldCode.equals("300")) {
+              return data.replace("p.", "").replace(":", "");
+            } else if (dataFieldCode.equals("245") && subFieldCode == 'a') {
+              return data.replace("/", "").replace(":", "");
+            } else {
+              return data;
+            }
           }
         }
       } else {
@@ -165,5 +206,24 @@ s
       log.debug3("Mrc Record DataFieldCode: " + dataFieldCode + " SubFieldCode: " + subFieldCode + " has error");
     }
     return null;
+  }
+
+  /**
+   * Get MARC21 control field data by dataFieldCode
+   * @param record
+   * @param dataFieldCode
+   * @return String value of control field
+   */
+  private String getMARCControlFieldData(Record record, String dataFieldCode) {
+
+    ControlField field = (ControlField) record.getVariableField(dataFieldCode);
+
+    if (field != null) {
+      String data = field.getData();
+      return data;
+    } else {
+        log.debug3("Mrc Record getMARCControlFieldData: " + dataFieldCode + " return null");
+        return null;
+    }
   }
 }
