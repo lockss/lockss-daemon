@@ -40,7 +40,6 @@ import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
-import org.lockss.plugin.clockss.aiaa.AtyponBooksXmlSchemaHelper;
 import org.lockss.util.Logger;
 
 import java.util.ArrayList;
