@@ -3,26 +3,11 @@
     name = eLife Sciences Publications
   >
 
-  #LXQUEUE-569, need plugin
-
   {
     title <
       name = eLife ;
       eissn = 2050-084X
     >
-    {
-      plugin = needs.plugin
-      implicit < status ; year ; name ; param[year] >
-      param[base_url] = https://elifesciences.org/
-
-      au < exists ; 2016 ; eLife Volume 2016 ; 2016 >
-      au < exists ; 2017 ; eLife Volume 2017 ; 2017 >
-      au < exists ; 2018 ; eLife Volume 2018 ; 2018 >
-      au < exists ; 2019 ; eLife Volume 2019 ; 2019 >
-      au < exists ; 2020 ; eLife Volume 2020 ; 2020 >
-
-    }
-
     {
       plugin = org.lockss.plugin.elifesciences.ELifeSciencesPlugin
       implicit < status ; year ; name ; param[year_month] >
