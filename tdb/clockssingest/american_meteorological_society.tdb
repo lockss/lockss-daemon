@@ -4,7 +4,8 @@
     name = American Meteorological Society ;
     info[contract] = 2012 ;
     info[tester] = 5 ;
-    info[poller] = 3
+    info[poller] = 3 ;
+    info[platform] = Silverchair
   >
   
   #moved to Silverchair

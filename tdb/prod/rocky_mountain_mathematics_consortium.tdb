@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = Rocky Mountain Mathematics Consortium
+    name = Rocky Mountain Mathematics Consortium ;
+    info[platform] = Project Euclid. Clockss source
   >
   
   plugin = needs.plugin
