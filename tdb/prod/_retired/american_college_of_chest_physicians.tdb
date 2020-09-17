@@ -1,8 +1,11 @@
 {
 
   publisher <
-    name = American College of Chest Physicians
+    name = American College of Chest Physicians ;
+    info[platform] = Preserved on HW & SC. Now moved to Elsevier.
   >
+  
+
 
   {
 
@@ -12,8 +15,6 @@
       eissn = 1931-3543 ;
       issnl = 0012-3692
     >
-    
-    comment[down] = moved to Silverchair.
     
     {
     
@@ -46,7 +47,6 @@
       implicit < status ; year ; name ; param[year] >
 
       comment[prior] = there are prior issues (2004 and earlier)
-      #move to Elsevier
       
       au < doNotProcess ; 2005 ; Chest Volume 127-128 ; 2005 >
       au < doNotProcess ; 2006 ; Chest Volume 129-130 ; 2006 >

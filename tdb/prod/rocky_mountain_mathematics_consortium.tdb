@@ -10,6 +10,7 @@
   implicit < status ; year ; name ; param[volume_name] >
   
   comment[plugin] = Plugin is down and needs work.  See status of plugin.
+  Publisher moved to Project Euclid.
   
   {
   
@@ -21,6 +22,7 @@
     >
     
     param[journal_id] = rmj
+    #param[base_url] = https://projecteuclid.org/euclid.rmjm
     
     au < doNotProcess ; 1971 ; Rocky Mountain Journal of Mathematics Volume 1 ; 1 >
     au < doNotProcess ; 1972 ; Rocky Mountain Journal of Mathematics Volume 2 ; 2 >
@@ -66,6 +68,12 @@
     au < doNotProcess ; 2012 ; Rocky Mountain Journal of Mathematics Volume 42 ; 42 >
     au < doNotProcess ; 2013 ; Rocky Mountain Journal of Mathematics Volume 43 ; 43 >
     au < doNotProcess ; 2014 ; Rocky Mountain Journal of Mathematics Volume 44 ; 44 >
+    au < doNotProcess ; 2015 ; Rocky Mountain Journal of Mathematics Volume 45 ; 44 >
+    au < doNotProcess ; 2016 ; Rocky Mountain Journal of Mathematics Volume 46 ; 44 >
+    au < doNotProcess ; 2017 ; Rocky Mountain Journal of Mathematics Volume 47 ; 44 >
+    au < doNotProcess ; 2018 ; Rocky Mountain Journal of Mathematics Volume 48 ; 44 >
+    au < doNotProcess ; 2019 ; Rocky Mountain Journal of Mathematics Volume 49 ; 44 >
+    au < exists ; 2020 ; Rocky Mountain Journal of Mathematics Volume 50 ; 44 >
 
   }
 
@@ -79,6 +87,7 @@
     >
     
     param[journal_id] = jie
+    #param[base_url] = https://projecteuclid.org/euclid.jiea
     
     au < doNotProcess ; 1989 ; Journal of Integral Equations and Applications Volume 1 ; 1 >
     au < doNotProcess ; 1990 ; Journal of Integral Equations and Applications Volume 2 ; 2 >
@@ -119,6 +128,7 @@
     >
     
     param[journal_id] = jca
+    #param[base_url] = https://projecteuclid.org/euclid.jca
     
     au < doNotProcess ; 2009 ; Journal of Commutative Algebra Volume 1 ; 1 >
     au < doNotProcess ; 2010 ; Journal of Commutative Algebra Volume 2 ; 2 >
