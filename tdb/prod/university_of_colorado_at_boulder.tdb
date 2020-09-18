@@ -14,21 +14,6 @@
     >
     
     {
-    plugin = org.lockss.plugin.atypon.GenericAtyponPlugin
-    param[base_url] = https://www.utexaspressjournals.org/
-    implicit < status ; year ; name ; param[volume_name] >
-    
-    param[journal_id] = gen
-    #no manifest pages. Able to find the right volume numbers? Manifest pages posted?
-    
-    au < exists ; 1988 ; Genders Volume 1988 ; 1988 >
-    au < exists ; 1989 ; Genders Volume 1989 ; 1989 >
-    au < exists ; 1990 ; Genders Volume 1990 ; 1990 >
-    au < exists ; 1991 ; Genders Volume 1991 ; 1991 >
-    au < exists ; 1992 ; Genders Volume 1992 ; 1992 >
-    au < exists ; 1993 ; Genders Volume 1993 ; 1993 >
-    }
-    {
     plugin = org.lockss.plugin.GendersPlugin
     param[base_url] = http://www.genders.org/
     implicit < status ; year ; name ; param[year] ; param[num_issue_range] >
