@@ -89,25 +89,26 @@
       plugin = org.lockss.plugin.prok.ProkPlugin
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://prok.princeton.edu/
+      #no longer online. Preserved through IA.
       
       au < superseded ; 2009 ; Princeton Report on Knowledge Volume 1 [superseded] ; 1 >
       au < superseded ; 2009 ; Princeton Report on Knowledge Volume 2 [superseded] ; 2 >
     
     }
     
-    {
-    
-      plugin = needs.plugin
-      implicit < status ; year ; name ; param[volume_name] >
-      param[base_url] = http://www.princeton.edu/prok/
-      
-      # Plugin needs review.
-      
-      au < doNotProcess ; 2009 ; Princeton Report on Knowledge Volume 1 ; 1 >
-      au < doNotProcess ; 2009 ; Princeton Report on Knowledge Volume 2 ; 2 >
-      au < doNotProcess ; 2009 ; Princeton Report on Knowledge Volume 3 ; 3 >
-      
-    }
+#    {
+#    
+#      plugin = needs.plugin
+#      implicit < status ; year ; name ; param[volume_name] >
+#      param[base_url] = http://www.princeton.edu/prok/
+#      
+#      # Plugin needs review.
+#      
+#      au < doNotProcess ; 2009 ; Princeton Report on Knowledge Volume 1 ; 1 >
+#      au < doNotProcess ; 2009 ; Princeton Report on Knowledge Volume 2 ; 2 >
+#      au < doNotProcess ; 2009 ; Princeton Report on Knowledge Volume 3 ; 3 >
+#      
+#    }
 
   }
 
