@@ -13,16 +13,16 @@
     >
     
     rights = openaccess
-    {
-    plugin = needs.plugin
-    implicit < status ; year ; name ; param[volume_name] >
-    param[base_url] = https://cla.umn.edu/hispanic-issues/online/
-    
-    au < exists ; 2019 ; Hispanic Issues On Line Volume 23 ; writing-end-times-apocalyptic-imagination-hispanic-world >
-    au < exists ; 2019 ; Hispanic Issues On Line Volume 24 ; environmental-cultural-studies-through-time-luso-hispanic-world >
-    au < exists ; 2020 ; Hispanic Issues On Line Volume 25 ; confined-women-walls-female-space-early-modern-spain >
-    au < exists ; 2020 ; Hispanic Issues On Line Volume 26 ; migraciones-derechos-humanos-y-acciones-locales >
-    }
+#    {
+#    plugin = needs.plugin
+#    implicit < status ; year ; name ; param[volume_name] >
+#    param[base_url] = https://cla.umn.edu/hispanic-issues/online/
+#    
+#    au < exists ; 2019 ; Hispanic Issues On Line Volume 23 ; writing-end-times-apocalyptic-imagination-hispanic-world >
+#    au < exists ; 2019 ; Hispanic Issues On Line Volume 24 ; environmental-cultural-studies-through-time-luso-hispanic-world >
+#    au < exists ; 2020 ; Hispanic Issues On Line Volume 25 ; confined-women-walls-female-space-early-modern-spain >
+#    au < exists ; 2020 ; Hispanic Issues On Line Volume 26 ; migraciones-derechos-humanos-y-acciones-locales >
+#    }
     {
     plugin = org.lockss.plugin.hispanicissuesonline.HispanicIssuesOnLinePlugin
     implicit < status ; year ; name ; param[base_url] ; param[volume_name] >

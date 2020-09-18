@@ -35,34 +35,34 @@
 
     }
 
-    {
-    plugin = needs.plugin
-    #param[base_url] = http://ivc.lib.rochester.edu/
-    implicit < status ; year ; name ; param[year] ; param[num_issue_range] ; param[base_url] >
-
-    au < doNotProcess ; 1998 ; Invisible Culture 1998 ; 1998 ; 1-1 ; http://ivc.lib.rochester.edu/ >
-    au < doNotProcess ; 1999 ; Invisible Culture 1999 ; 1999 ; 2-2 ; https://ivc.lib.rochester.edu/ >
-    au < doNotProcess ; 2000 ; Invisible Culture 2000 ; 2000 ; 3-3 ; https://ivc.lib.rochester.edu/ >
-    au < doNotProcess ; 2002 ; Invisible Culture 2002 ; 2002 ; 4-4 ; https://ivc.lib.rochester.edu/ >
-    au < doNotProcess ; 2003 ; Invisible Culture 2003 ; 2003 ; 5-6 ; http://ivc.lib.rochester.edu/ >
-    au < doNotProcess ; 2004 ; Invisible Culture 2004 ; 2004 ; 7-8 ; http://ivc.lib.rochester.edu/ >
-    au < doNotProcess ; 2005 ; Invisible Culture 2005 ; 2005 ; 9-9 ; http://ivc.lib.rochester.edu/ >
-    au < doNotProcess ; 2006 ; Invisible Culture 2006 ; 2006 ; 10-10 ; http://ivc.lib.rochester.edu/ >
-    au < doNotProcess ; 2007 ; Invisible Culture 2007 ; 2007 ; 11-11 ; http://ivc.lib.rochester.edu/ >
-    au < doNotProcess ; 2008 ; Invisible Culture 2008 ; 2008 ; 12-12 ; http://ivc.lib.rochester.edu/ >
-    au < doNotProcess ; 2009 ; Invisible Culture 2009 ; 2009 ; 13-13 ; http://ivc.lib.rochester.edu/ >
-    au < doNotProcess ; 2010 ; Invisible Culture 2010 ; 2010 ; 14-15 ; http://ivc.lib.rochester.edu/ >
-    au < doNotProcess ; 2011 ; Invisible Culture 2011 ; 2011 ; 16-16 ; http://ivc.lib.rochester.edu/ >
-    au < exists ; 2012 ; Invisible Culture 2012 ; 2012 ; 17-17 ; http://ivc.lib.rochester.edu/ >
-    au < exists ; 2013 ; Invisible Culture 2013 ; 2013 ; 18-19 ; http://ivc.lib.rochester.edu/ >
-    au < exists ; 2014 ; Invisible Culture 2014 ; 2014 ; 20-21 ; http://ivc.lib.rochester.edu/ >
-    au < exists ; 2015 ; Invisible Culture 2015 ; 2015 ; 22-23 ; https://ivc.lib.rochester.edu/ >
-    au < exists ; 2016 ; Invisible Culture 2016 ; 2016 ; 24-24 ; https://ivc.lib.rochester.edu/ >
-    au < exists ; 2017 ; Invisible Culture 2017 ; 2017 ; 25-27 ; https://ivc.lib.rochester.edu/ >
-    au < exists ; 2018 ; Invisible Culture 2018 ; 2018 ; 28-29 ; https://ivc.lib.rochester.edu/ >
-    au < expected ; 2019 ; Invisible Culture 2019 ; 2019 ; 30-31 ; https://ivc.lib.rochester.edu/ >
-
-    }
+#    {
+#    plugin = needs.plugin
+#    #param[base_url] = http://ivc.lib.rochester.edu/
+#    implicit < status ; year ; name ; param[year] ; param[num_issue_range] ; param[base_url] >
+     #last issue 2018. 20200917
+     #This journal collected on IA.
+#
+#    au < doNotProcess ; 1998 ; Invisible Culture 1998 ; 1998 ; 1-1 ; https://ivc.lib.rochester.edu/ >
+#    au < doNotProcess ; 1999 ; Invisible Culture 1999 ; 1999 ; 2-2 ; https://ivc.lib.rochester.edu/ >
+#    au < doNotProcess ; 2000 ; Invisible Culture 2000 ; 2000 ; 3-3 ; https://ivc.lib.rochester.edu/ >
+#    au < doNotProcess ; 2002 ; Invisible Culture 2002 ; 2002 ; 4-4 ; https://ivc.lib.rochester.edu/ >
+#    au < doNotProcess ; 2003 ; Invisible Culture 2003 ; 2003 ; 5-6 ; https://ivc.lib.rochester.edu/ >
+#    au < doNotProcess ; 2004 ; Invisible Culture 2004 ; 2004 ; 7-8 ; https://ivc.lib.rochester.edu/ >
+#    au < doNotProcess ; 2005 ; Invisible Culture 2005 ; 2005 ; 9-9 ; https://ivc.lib.rochester.edu/ >
+#    au < doNotProcess ; 2006 ; Invisible Culture 2006 ; 2006 ; 10-10 ; https://ivc.lib.rochester.edu/ >
+#    au < doNotProcess ; 2007 ; Invisible Culture 2007 ; 2007 ; 11-11 ; https://ivc.lib.rochester.edu/ >
+#    au < doNotProcess ; 2008 ; Invisible Culture 2008 ; 2008 ; 12-12 ; https://ivc.lib.rochester.edu/ >
+#    au < doNotProcess ; 2009 ; Invisible Culture 2009 ; 2009 ; 13-13 ; https://ivc.lib.rochester.edu/ >
+#    au < doNotProcess ; 2010 ; Invisible Culture 2010 ; 2010 ; 14-15 ; https://ivc.lib.rochester.edu/ >
+#    au < doNotProcess ; 2011 ; Invisible Culture 2011 ; 2011 ; 16-16 ; https://ivc.lib.rochester.edu/ >
+#    au < exists ; 2012 ; Invisible Culture 2012 ; 2012 ; 17-17 ; https://ivc.lib.rochester.edu/ >
+#    au < exists ; 2013 ; Invisible Culture 2013 ; 2013 ; 18-19 ; https://ivc.lib.rochester.edu/ >
+#    au < exists ; 2014 ; Invisible Culture 2014 ; 2014 ; 20-21 ; https://ivc.lib.rochester.edu/ >
+#    au < exists ; 2015 ; Invisible Culture 2015 ; 2015 ; 22-23 ; https://ivc.lib.rochester.edu/ >
+#    au < exists ; 2016 ; Invisible Culture 2016 ; 2016 ; 24-24 ; https://ivc.lib.rochester.edu/ >
+#    au < exists ; 2017 ; Invisible Culture 2017 ; 2017 ; 25-27 ; https://ivc.lib.rochester.edu/ >
+#    au < exists ; 2018 ; Invisible Culture 2018 ; 2018 ; 28-29 ; https://ivc.lib.rochester.edu/ >
+#    }
 
   }
 
@@ -72,27 +72,28 @@
       eissn = 0160-628X
     >
       plugin = org.lockss.plugin.ojs2.OJS2Plugin
-      implicit < status ; year ; name ; volume ; param[year] >
       {
-      param[base_url] = http://blakequarterly.org/
+      #param[base_url] = http://blakequarterly.org/
       param[journal_id] = blake
+      implicit < status ; year ; name ; volume ; param[year] ; param[base_url] >
 
-      au < doNotProcess ; 2011 ; Blake An Illustrated Quarterly Volume 44-45 ; 44-45 ; 2011 >
-      au < doNotProcess ; 2012 ; Blake An Illustrated Quarterly Volume 45-46 ; 45-46 ; 2012 >
-      au < doNotProcess ; 2013 ; Blake An Illustrated Quarterly Volume 46-47 ; 46-47 ; 2013 >
-      au < doNotProcess ; 2014 ; Blake An Illustrated Quarterly Volume 47-48 ; 47-48 ; 2014 >
-      au < doNotProcess ; 2015 ; Blake An Illustrated Quarterly Volume 48-49 ; 48-49 ; 2015 >
-      au < doNotProcess ; 2016 ; Blake An Illustrated Quarterly Volume 49-50 ; 49-50 ; 2016 >
-      au < released ; 2017 ; Blake An Illustrated Quarterly Volume 50-51 ; 50-51 ; 2017 >
-      au < exists ; 2018 ; Blake An Illustrated Quarterly Volume 51-52 ; 51-52 ; 2018 >
-      au < expected ; 2019 ; Blake An Illustrated Quarterly Volume 53-54 ; 53-54 ; 2019 >
-      au < expected ; 2020 ; Blake An Illustrated Quarterly Volume 55-56 ; 55-56 ; 2020 >
+      au < doNotProcess ; 2011 ; Blake An Illustrated Quarterly Volume 44-45 ; 44-45 ; 2011 ; https://blakequarterly.org/ >
+      au < doNotProcess ; 2012 ; Blake An Illustrated Quarterly Volume 45-46 ; 45-46 ; 2012 ; https://blakequarterly.org/ >
+      au < doNotProcess ; 2013 ; Blake An Illustrated Quarterly Volume 46-47 ; 46-47 ; 2013 ; https://blakequarterly.org/ >
+      au < doNotProcess ; 2014 ; Blake An Illustrated Quarterly Volume 47-48 ; 47-48 ; 2014 ; https://blakequarterly.org/ >
+      au < doNotProcess ; 2015 ; Blake An Illustrated Quarterly Volume 48-49 ; 48-49 ; 2015 ; https://blakequarterly.org/ >
+      au < doNotProcess ; 2016 ; Blake An Illustrated Quarterly Volume 49-50 ; 49-50 ; 2016 ; https://blakequarterly.org/ >
+      au < released ; 2017 ; Blake An Illustrated Quarterly Volume 50-51 ; 50-51 ; 2017 ; http://blakequarterly.org/ >
+      au < manifest ; 2018 ; Blake An Illustrated Quarterly Volume 51-52 ; 51-52 ; 2018 ; https://blakequarterly.org/ >
+      au < manifest ; 2019 ; Blake An Illustrated Quarterly Volume 53-54 ; 53-54 ; 2019 ; https://blakequarterly.org/ >
+      au < manifest ; 2020 ; Blake An Illustrated Quarterly Volume 55-56 ; 55-56 ; 2020 ; https://blakequarterly.org/ >
 
       }
 
       {
       param[base_url] = http://blake.lib.rochester.edu/blakeojs/
       param[journal_id] = blake
+      implicit < status ; year ; name ; volume ; param[year] >
 
       au < down ; 2011 ; Blake An Illustrated Quarterly Volume 45 ; 45 ; 2011 >
       au < down ; 2012 ; Blake An Illustrated Quarterly Volume 45-46 ; 45-46 ; 2012 >
