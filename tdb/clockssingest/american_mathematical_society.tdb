@@ -345,7 +345,7 @@
     au < finished ; finished ; 2017 ; Mathematics of Computation Volume 86 ; 2017 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; Mathematics of Computation Volume 87 ; 2018 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2019 ; Mathematics of Computation Volume 88 ; 2019 ; https://www.ams.org/ ; >
-    au < testing ; exists ; 2020 ; Mathematics of Computation Volume 89 ; 2020 ; https://www.ams.org/ ; >
+    au < ready ; exists ; 2020 ; Mathematics of Computation Volume 89 ; 2020 ; https://www.ams.org/ ; >
 
   }
     
@@ -409,7 +409,7 @@
     au < finished ; finished ; 2017 ; Proceedings of the American Mathematical Society Volume 145 ; 2017 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2018 ; Proceedings of the American Mathematical Society Volume 146 ; 2018 ; http://www.ams.org/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2019 ; Proceedings of the American Mathematical Society Volume 147 ; 2019 ; https://www.ams.org/ ; >
-    au < testing ; exists ; 2020 ; Proceedings of the American Mathematical Society Volume 148 ; 2020 ; https://www.ams.org/ ; >
+    au < ready ; exists ; 2020 ; Proceedings of the American Mathematical Society Volume 148 ; 2020 ; https://www.ams.org/ ; >
 
   }
     
