@@ -34,6 +34,7 @@ package org.lockss.plugin.berghahn;
 
 import java.io.*;
 
+import org.apache.commons.io.FileUtils;
 import org.lockss.util.*;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit;
@@ -55,64 +56,28 @@ public class TestBerghahnHtmlHashFilterFactory extends LockssTestCase {
     InputStream actIn; 
     actIn = fact.createFilteredInputStream(au, 
         new StringInputStream(nameToHash), Constants.DEFAULT_ENCODING);
-    assertEquals(expectedStr, StringUtil.fromInputStream(actIn));
+
+      assertEquals(expectedStr, StringUtil.fromInputStream(actIn));
+
   }
   
-  private static final String manifestHtml =
-		  "<div class=\"column\">" + 
-				  "<h1>Boyhood Studies Volume 10 LOCKSS Manifest Page</h1>" + 
-				  "<div>" + 
-				  "<li>" + 
-				  "<a href=\"/view/journals/foo/10/2/foo.10.issue-2.xml\">Issue 10/2</a>" + 
-				  "</li>" + 
-				  "<li>" + 
-				  "<a href=\"/view/journals/foo/10/1/foo.10.issue-1.xml\">Issue 10/1</a>" + 
-				  "</li>" + 
-				  "</div>" + 
-				  "<div>LOCKSS system has permission to collect, preserve, and serve this Archival Unit</div>" + 
-				  "<br/>" + 
-				  "<div>CLOCKSS system has permission to ingest, preserve, and serve this Archival Unit</div>" + 
-				  "</div>";
-  private static final String manifestFiltered =
-				  "<a href=\"/view/journals/foo/10/2/foo.10.issue-2.xml\">Issue 10/2</a>" + 
-				  "<a href=\"/view/journals/foo/10/1/foo.10.issue-1.xml\">Issue 10/1</a>"; 
-  
-  //placeholder - currently article and toc using same include block
   private static final String tocBlockHtml = 
 		"";
   private static final String tocBlockFiltered = "";
   
-  private static final String artBlockHtml = 
+  private static final String blockHtml =
 		  "<div class=\"mainBase\" id=\"mainContent\">" + 
 				  "  <div id=\"readPanel\">" + 
 				  "    <a class=\"summary-toggle ico-summary js-summary-toggle phoneOnly\" href=\"#\"><span>Show Summary Details</span></a>\n" + 
 				  "  </div>" +
-				  "</div>";
-  private static final String artBlockFiltered = 
-		  "<div id=\"readPanel\">" + 
-				  "    <a class=\"summary-toggle ico-summary js-summary-toggle phoneOnly\" href=\"#\"><span>Show Summary Details</span></a>\n" + 
-				  "  </div>";
-  
-  private static final String citOverlayHtml =
-      "<div id=\"previewWrapper\">" +
-      "<h2>Preview Citation</h2>" +
-                    "<p style=\"\" class=\"citationPreview\" id=\"apa_book\">" +
-                        "Borovnik, M. (2017). Nighttime Navigating, <em>Transfers</em>, <em>7</em>(3), 38-55.  Retrieved Jul 26, 2018, from " +
-                    "<a target=\"_blank\" href=\"https://www.berghahnjournals.com/view/journals/transfers/7/3/trans070305.xml\">" +
-                    "https://www.berghahnjournals.com/view/journals/transfers/7/3/trans070305.xml</a>" +
-                    "</p></div>";
-  
-  private static final String citOverlayFiltered=
-      "<div id=\"previewWrapper\">" +
-                        "<p style=\"\" class=\"citationPreview\" id=\"apa_book\">" +
-                        "<a target=\"_blank\" href=\"https://www.berghahnjournals.com/view/journals/transfers/7/3/trans070305.xml\">" +
-                        "https://www.berghahnjournals.com/view/journals/transfers/7/3/trans070305.xml</a>" +
-                        "</p></div>";
+				  "</div>" +
+                  "<div id=\"headerWrap\">headerWrap content</div>";
+  private static final String blockFiltered =
+		  "<div class=\"mainBase\" id=\"mainContent\">  <div id=\"readPanel\">    <a class=\"summary-toggle ico-summary js-summary-toggle phoneOnly\" href=\"#\"><span>Show Summary Details</span></a>\n" +
+                  "  </div></div>";
+
   public void testFiltering() throws Exception {
-	    doFilterTest(bau, fact, manifestHtml, manifestFiltered);
-	    doFilterTest(bau, fact, tocBlockHtml, tocBlockFiltered);
-            doFilterTest(bau, fact, artBlockHtml, artBlockFiltered);
-            doFilterTest(bau, fact, citOverlayHtml, citOverlayFiltered);
+	    doFilterTest(bau, fact, blockHtml, blockFiltered);
   }
 
 }
