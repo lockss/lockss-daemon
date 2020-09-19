@@ -12,20 +12,114 @@
         <string>1</string>
     </entry>
     <entry>
-        <string>plugin_parent</string>
-        <string>org.lockss.plugin.scalarweb.ClockssScalarWebPlugin</string>
-    </entry>
-    <entry>
-        <string>plugin_parent_version</string>
-        <string>1</string>
-    </entry>
-    <entry>
         <string>plugin_name</string>
         <string>Constructing The Sacred Plugin (CLOCKSS)</string>
+    </entry>
+    <entry>
+        <string>plugin_feature_version_map</string>
+        <map>
+            <entry>
+                <string>Substance</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Poll</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Metadata</string>
+                <string>1</string>
+            </entry>
+        </map>
+    </entry>
+    <entry>
+        <string>plugin_config_props</string>
+        <list>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>base_url</key>
+                <displayName>Base URL</displayName>
+                <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+                <type>3</type>
+                <size>40</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>journal_id</key>
+                <displayName>Journal Identifier</displayName>
+                <description>Identifier for journal</description>
+                <type>1</type>
+                <size>40</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+        </list>
+    </entry>
+    <entry>
+        <string>au_name</string>
+        <string>"Scalar Web Plugin (CLOCKSS), Base URL %s, Journal_ID %s", base_url, journal_id</string>
     </entry>
     <entry>
         <string>au_start_url</string>
         <string>"%s%s/introduction", base_url, journal_id</string>
     </entry>
-    <!--this plugin has not metadata -->
+    <entry>
+        <string>au_crawlrules</string>
+        <list>
+            <string>1,"https://code.jquery.com/jquery[^/]+\.js"</string>
+            <string>1,"https?://fonts.googleapis.com/css"</string>
+            <string>1,"https?://videos.criticalcommons.org/.*/video_file/.*\.mp4"</string>
+            <string>1,"https://code.jquery.com/jquery[^/]+\.js"</string>
+            <string>1,"https?://fonts.googleapis.com/css"</string>
+            <string>1,"https?://%s/%s", url_host(base_url), journal_id</string>
+            <string>1,"https?://%s/system/application/views/", url_host(base_url)</string>
+            <string>1,"https?://%s/cover/build/%s/assets", url_host(base_url), journal_id</string>
+            <string>1,"https?://%s/%s/media/.*\.(jpe?g|png|gif|pdf)", url_host(base_url), journal_id</string>
+        </list>
+    </entry>
+    <!--  don't currently have one; work around for now -->
+    <entry>
+        <string>au_permission_url</string>
+        <string>"http://clockss-ingest.lockss.org/clockss.txt"</string>
+    </entry>
+    <entry>
+        <string>au_refetch_depth</string>
+        <int>3</int>
+    </entry>
+    <entry>
+        <string>plugin_cache_result_list</string>
+        <list>
+            <string>500=org.lockss.util.urlconn.CacheException$NoRetryDeadLinkException</string>
+        </list>
+    </entry>
+    <entry>
+        <string>text/javascript_link_extractor_factory</string>
+        <string>org.lockss.plugin.scalarweb.ScalarWebJavascriptLinkExtractorFactory</string>
+    </entry>
+    <entry>
+        <string>application/javascript_link_extractor_factory</string>
+        <string>org.lockss.plugin.scalarweb.ScalarWebJavascriptLinkExtractorFactory</string>
+    </entry>
+    <entry>
+        <string>text/javascript_link_rewriter_factory</string>
+        <string>org.lockss.plugin.scalarweb.ScalarWebJavaScriptLinkRewriterFactory</string>
+    </entry>
+    <entry>
+        <string>application/javascript_link_rewriter_factory</string>
+        <string>org.lockss.plugin.scalarweb.ScalarWebJavaScriptLinkRewriterFactory</string>
+    </entry>
+    <entry>
+        <string>text/html_link_extractor_factory</string>
+        <string>org.lockss.plugin.scalarweb.ScalarWebHtmlLinkExtractorFactory</string>
+    </entry>
+    <entry>
+        <string>au_permitted_host_pattern</string>
+        <list>
+            <string>use\.typekit\.com</string>
+            <string>code\.jquery\.com</string>
+            <string>fonts\.googleapis\.com</string>
+            <string>videos\.criticalcommons\.org</string>
+            <string>constructingthesacred\.supdigital\.org</string>
+        </list>
+    </entry>
 </map>

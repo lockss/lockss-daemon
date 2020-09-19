@@ -1,0 +1,13 @@
+
+This is a plugin is different from "org.lockss.plugin.scalar" which uses scalar RDF method to collect information.
+
+This is uses classic plugin method to college information. "Black Quotidian" already collected using
+"org.lockss.plugin.scalar". At the moment, Scalar API is broken, use this classic method to see if
+we can collect information for "When Melodies Gather" and "Constructing the Sacred".
+
+For NYU project, stanford press, there are three websites which use Scalar framework.
+
+When Melodies Gather: https://www.whenmelodiesgather.org/ -- Scalar 2.1.7b
+Constructing the Sacred: https://constructingthesacred.org/ -- Scalar 2.5.11
+Black Quotidian: http://blackquotidian.supdigital.org/ -- uses Scalar 2.5.10, collected using "org.lockss.plugin.scalar"
+
