@@ -1,0 +1,43 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>down</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.janeway.ClockssJanewayPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Janeway Plugin (CLOCKSS)</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.janeway.JanewayPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_publishing_platform</string>
+    <string>Janeway</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Janeway Plugin (CLOCKSS), Base URL %s, Journal ID %s, Issue No %s", base_url, journal_id, issue_no</string>
+  </entry>
+  <entry>
+    <string>clockss_override</string>
+    <map>
+     <entry>
+        <string>au_def_pause_time</string>
+        <long>100</long>
+     </entry>
+    </map>
+  </entry>  
+</map>

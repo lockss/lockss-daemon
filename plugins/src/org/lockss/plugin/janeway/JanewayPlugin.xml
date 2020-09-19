@@ -1,0 +1,149 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>down</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.janeway.JanewayPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Janeway Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>plugin_publishing_platform</string>
+    <string>Janeway</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Janeway Plugin, Base URL %s, Journal ID %s, Issue No %s", base_url, journal_id, issue_no</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_id</key>
+        <displayName>Journal Identifier</displayName>
+        <description>Identifier for journal (often used as part of file names)</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>issue_no</key>
+        <displayName>Issue No. (e.g. 1, 6-7)</displayName>
+        <description></description>
+        <type>1</type>
+        <size>10</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <!--https://demojournal.janeway.systems/api/oai/ -->
+      <string>2,"https://twitter.com"</string>
+      <string>2,"https://plus.google.com"</string>
+      <string>2,"https://www.linkedin.com"</string>
+      <string>1,"https://cdnjs.cloudflare.com/.+\.(css|js)"</string>
+      <string>1,"https://use.typekit.net/.*\.js"</string>
+      <string>1,"https://maxcdn.bootstrapcdn.com/.+\.css"</string>
+      <string>1, "%s%s/issue/%s/info/", base_url, journal_id, issue_no</string>
+      <string>1, "%s%s/article/", base_url, journal_id</string>
+      <string>1, "%s(static|media/cover_images)/", base_url</string>
+    </list>
+  </entry>
+ <entry>
+     <string>au_substance_url_pattern</string>
+   <!-- https://www.iastatedigitalpress.com/aglawdigest/article/8101/galley/7872/download -->
+     <string>"%s%s/article.+/download$", base_url, journal_id,</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.janeway.JanewayArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.janeway.JanewayArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.janeway.JanewayMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry>
+  <!--
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.janeway.JanewayHtmlFilterFactory</string>
+  </entry>
+  -->
+  <!--  versioning or variants for style support -->
+  <entry>
+    <string>au_repair_from_peer_if_missing_url_pattern</string>
+    <list>
+      <string>.*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)(_v[0-9]+|\?v=[0-9.]+|\?[a-z0-9]+)</string>
+    </list>
+  </entry>
+  <!-- Weight Rule-->
+  <!-- Archived page should be weighted to 0 since it will change from time to time-->
+  <entry>
+    <string>au_url_poll_result_weight</string>
+    <list>
+      <string>.*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)(_v[0-9]+|\?v=[0-9.]+|\?[a-z0-9]+), 0</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_permitted_host_pattern</string>
+    <list>
+      <string>"cdnjs\.cloudflare\.com"</string>
+      <string>"use\.typekit\.net"</string>
+      <string>"maxcdn\.bootstrapcdn\.com"</string>
+    </list>
+  </entry>
+</map>
