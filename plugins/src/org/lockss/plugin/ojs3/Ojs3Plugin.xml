@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
    <entry>
     <string>plugin_name</string>
@@ -28,7 +28,13 @@
       <string>1,"^https?://%s/(%s/)?(journals/)?(index\.php/)?(%s/)?gateway/c?lockss\?year=%d$", url_host(base_url),journal_id,journal_id, year</string>
       <string>2,"\?acceptCookies="</string>
       <!--  intentionally https only -->
-      <string>1,"^https?://%s/(journals/)?(index\.php/)?(%s/)?(article|issue)/(download(SuppFile)?|view(Article|File|(Download|PDF)Interstitial|RST)?)/", url_host(base_url), journal_id</string>
+        <!--
+            Article page variant
+            https://www.clei.org/cleiej/index.php/cleiej/issue/view/6
+            http://trumpeter.athabascau.ca/index.php/trumpet/issue/view/123
+            https://scholarworks.iu.edu/journals/index.php/psource/issue/view/1257
+        -->
+      <string>1,"^https?://%s/(journals/)?(index\.php/)?(%s/)?(index\.php/)?(%s/)?(article|issue)/(download(SuppFile)?|view(Article|File|(Download|PDF)Interstitial|RST)?)/", url_host(base_url), journal_id, journal_id</string>
       <string>1,"^https?://%s/(journals/)?(index\.php/)?(%s/)?rt/(bio|metadata|printerFriendly|suppFileMetadata|suppFiles)/", url_host(base_url), journal_id</string>
       <string>2,"^https?://%s/.*plugins/generic/pdfJsViewer/pdf\.js/web/viewer\.html\?file=https?[%%]25", url_host(base_url)</string>
       <string>1,"^https?://%s/.*plugins/generic/pdfJsViewer/pdf\.js/web/viewer\.html\?file=", url_host(base_url)</string>
@@ -84,10 +90,33 @@
       </org.lockss.daemon.ConfigParamDescr>
     </list>
   </entry>
+    <entry>
+        <string>plugin_feature_version_map</string>
+        <map>
+            <entry>
+                <string>Metadata</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Poll</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Substance</string>
+                <string>2</string>
+            </entry>
+        </map>
+    </entry>
   <entry>
     <string>au_substance_url_pattern</string>
       <list>
-        <string>"^%s(journals/)?(index\.php/)?(%s/)?article/(view(File)?|download)/[^/]+/[^/?#&amp;.]+$", base_url, journal_id</string>
+          <!--
+            https://www.clei.org/cleiej/index.php/cleiej/article/download/437/372/1777
+            https://scholarworks.iu.edu/journals/index.php/psource/issue/view/1257/14
+            https://journals.library.ualberta.ca/jpps/index.php/JPPS/article/download/29659/21487/80185
+          -->
+          <string>"^%s(journals/)?(index\.php/)?(%s/)?article/(view(File)?|download)/[^/]+/[^/?#&amp;.]+$", base_url, journal_id</string>
+        <string>"^%s(journals/)?(index\.php/)?(%s/)?(index\.php/)?(%s/)?article/download/[^/]+/[^/]+/[^/]+", base_url, journal_id, journal_id</string>
       </list>
   </entry>
 <!-- 
