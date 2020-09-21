@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = Global Health - Science and Practice
+    name = Global Health - Science and Practice ;
+    info[platform] = HW Drupal. Manifest pages requested.
   >
 
       pluginPrefix = org.lockss.plugin.highwire.
