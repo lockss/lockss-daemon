@@ -1,0 +1,55 @@
+{
+  publisher <
+    name = Big Bridge
+  >
+  
+  {
+  
+    title <
+      name = Big Bridge ;
+      eissn = 1529-7136 ;
+      issnl = 1529-7136
+    >  
+
+    rights = openaccess
+    #contents online. Nothing further published 20200921
+    
+    {
+    
+      plugin = edu.wisc.library.plugin.BigBridgePlugin
+      param[base_url] = https://www.bigbridge.org/
+      implicit < status ; year ; name ; param[volume] ; param[num_issue_range] >
+
+      au < doNotProcess ; 2006 ; Big Bridge Volume 3 ; 3 ; 9-12 >
+      au < doNotProcess ; 2010 ; Big Bridge Volume 4 ; 4 ; 13-16 >
+      au < doNotProcess ; 2014 ; Big Bridge Volume 5 ; 5 ; 17-19 >
+    
+    }
+  
+    {
+    
+      plugin = edu.wisc.library.plugin.BigBridgePlugin
+      param[base_url] = http://www.bigbridge.org/
+      implicit < status ; year ; name ; param[volume] ; param[num_issue_range] >
+      
+      comment[plugin] = plugin needs review and possible revision.
+
+      au < released ; 2002 ; Big Bridge Volume 2 ; 2 ; 5-8 >
+    
+    }
+  
+    { 
+
+      plugin = edu.wisc.library.plugin.BigBridgeVol1Plugin
+      param[base_url] = http://www.bigbridge.org/
+      implicit < status ; year ; name ; volume >
+      
+      comment[plugin] = plugin needs review and possible revision.
+    
+      au < doNotProcess ; 1997 ; Big Bridge Volume 1 ; 1 >
+      
+    }
+    
+  }
+  
+}
