@@ -644,7 +644,7 @@
       au < finished ; manifest ; 2017 ; 2 ; Marvell Studies Volume 2017 ; 2017 ; https://marvell.openlibhums.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 3 ; Marvell Studies Volume 2018 ; 2018 ; https://marvell.openlibhums.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; 4 ; Marvell Studies Volume 2019 ; 2019 ; https://marvell.openlibhums.org/ ; reingest3.clockss.org:8083 >
-      au < expected ; exists ; 2020 ; 5 ; Marvell Studies Volume 2020 ; 2020 ; https://marvell.openlibhums.org/ ; >
+      au < manifest ; exists ; 2020 ; 5 ; Marvell Studies Volume 2020 ; 2020 ; https://marvell.openlibhums.org/ ; >
 
   }
 
