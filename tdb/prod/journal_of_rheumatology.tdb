@@ -46,6 +46,13 @@
       au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; Journal of Rheumatology Volume 40 ; 40 >
       au < HighWirePressH20Plugin ; down ; 2014 ; Journal of Rheumatology Volume 41 ; 41 >
       au < HighWirePressH20Plugin ; down ; 2015 ; Journal of Rheumatology Volume 42 ; 42 >
+
+     }
+   
+    {
+    
+      param[base_url] = https://www.jrheum.org/
+        
       au < HWDrupalPlugin ; exists ; 2016 ; Journal of Rheumatology Volume 43 ; 43 >
       au < HWDrupalPlugin ; exists ; 2017 ; Journal of Rheumatology Volume 44 ; 44 >
       au < HWDrupalPlugin ; exists ; 2018 ; Journal of Rheumatology Volume 45 ; 45 >
