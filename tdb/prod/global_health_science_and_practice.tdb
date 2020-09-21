@@ -13,7 +13,7 @@
       name = Global Health: Science and Practice ;
       eissn = 2169-575X
     >
-    
+    {
       rights = openaccess
       param[base_url] = http://www.ghspjournal.org/
 
@@ -21,11 +21,16 @@
       au < HighWirePressH20Plugin ; released ; 2014 ; Global Health: Science and Practice Volume 2 ; 2 >
       au < HighWirePressH20Plugin ; released ; 2015 ; Global Health: Science and Practice Volume 3 ; 3 >
       au < HighWirePressH20Plugin ; released ; 2016 ; Global Health: Science and Practice Volume 4 ; 4 >
+     }
+    {
+      rights = openaccess
+      param[base_url] = https://www.ghspjournal.org/
+
       au < HWDrupalPlugin ; exists ; 2017 ; Global Health: Science and Practice Volume 5 ; 5 >
       au < HWDrupalPlugin ; exists ; 2018 ; Global Health: Science and Practice Volume 6 ; 6 >
       au < HWDrupalPlugin ; expected ; 2019 ; Global Health: Science and Practice Volume 7 ; 7 >
       au < HWDrupalPlugin ; expected ; 2020 ; Global Health: Science and Practice Volume 8 ; 8 >
-
+     }
   }
   
 }
