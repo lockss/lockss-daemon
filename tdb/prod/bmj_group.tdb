@@ -139,18 +139,17 @@
     au < HighWirePressH20Plugin ; down ; 2007 ; Annals of the Rheumatic Diseases Volume 66 ; 66 ; http://ard.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2008 ; Annals of the Rheumatic Diseases Volume 67 ; 67 ; http://ard.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2009 ; Annals of the Rheumatic Diseases Volume 68 ; 68 ; http://ard.bmj.com/ >
-    au < HighWirePressH20Plugin ; down ; 2009 ; Annals of the Rheumatic Diseases Volume 69 ; 69 ; http://ard.bmj.com/ >
-    au < HighWirePressH20Plugin ; down ; 2010 ; Annals of the Rheumatic Diseases Volume 70 ; 70 ; http://ard.bmj.com/ >
-    au < HighWirePressH20Plugin ; down ; 2011 ; Annals of the Rheumatic Diseases Volume 71 ; 71 ; http://ard.bmj.com/ >
-    au < HighWirePressH20Plugin ; down ; 2012 ; Annals of the Rheumatic Diseases Volume 72 ; 72 ; http://ard.bmj.com/ >
-    au < HighWirePressH20Plugin ; down ; 2013 ; Annals of the Rheumatic Diseases Volume 73 ; 73 ; http://ard.bmj.com/ >
-    au < HighWirePressH20Plugin ; down ; 2014 ; Annals of the Rheumatic Diseases Volume 74 ; 74 ; http://ard.bmj.com/ >
-    au < HighWirePressH20Plugin ; down ; 2015 ; Annals of the Rheumatic Diseases Volume 75 ; 75 ; http://ard.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; released ; 2016 ; Annals of the Rheumatic Diseases Volume 76 ; 76 ; https://ard.bmj.com/ > # Unable to fetch probe permission page
-    au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; Annals of the Rheumatic Diseases Volume 77 ; 77 ; https://ard.bmj.com/ > #login page found on recent page
-    au < bmj.BMJDrupalPlugin ; manifest ; 2018 ; Annals of the Rheumatic Diseases Volume 78 ; 78 ; https://ard.bmj.com/ > #login page
-    au < bmj.BMJDrupalPlugin ; exists ; 2019 ; Annals of the Rheumatic Diseases Volume 79 ; 79 ; https://ard.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; expected ; 2020 ; Annals of the Rheumatic Diseases Volume 80 ; 80 ; https://ard.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2010 ; Annals of the Rheumatic Diseases Volume 69 ; 69 ; http://ard.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2011 ; Annals of the Rheumatic Diseases Volume 70 ; 70 ; http://ard.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2012 ; Annals of the Rheumatic Diseases Volume 71 ; 71 ; http://ard.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2013 ; Annals of the Rheumatic Diseases Volume 72 ; 72 ; http://ard.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2014 ; Annals of the Rheumatic Diseases Volume 73 ; 73 ; http://ard.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2015 ; Annals of the Rheumatic Diseases Volume 74 ; 74 ; http://ard.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2016 ; Annals of the Rheumatic Diseases Volume 75 ; 75 ; http://ard.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; released ; 2017 ; Annals of the Rheumatic Diseases Volume 76 ; 76 ; https://ard.bmj.com/ > # Unable to fetch probe permission page
+    au < bmj.BMJDrupalPlugin ; manifest ; 2018 ; Annals of the Rheumatic Diseases Volume 77 ; 77 ; https://ard.bmj.com/ > #login page found on recent page
+    au < bmj.BMJDrupalPlugin ; manifest ; 2019 ; Annals of the Rheumatic Diseases Volume 78 ; 78 ; https://ard.bmj.com/ > #login page
+    au < bmj.BMJDrupalPlugin ; exists ; 2020 ; Annals of the Rheumatic Diseases Volume 79 ; 79 ; https://ard.bmj.com/ >
 
   }
 
@@ -1081,6 +1080,7 @@
       >
 
     #param[base_url] = http://heartasia.bmj.com/
+    #stopped publication end of 2019.
 
     au < bmj.BMJDrupalPlugin ; manifest ; 2009 ; Heart Asia Volume 1 ; 1 ; https://heartasia.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2010 ; Heart Asia Volume 2 ; 2 ; http://heartasia.bmj.com/ >
@@ -1093,8 +1093,7 @@
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; Heart Asia Volume 9 ; 9 ; https://heartasia.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2018 ; Heart Asia Volume 10 ; 10 ; https://heartasia.bmj.com/  >
     au < bmj.BMJDrupalPlugin ; released ; 2019 ; Heart Asia Volume 11 ; 11 ; https://heartasia.bmj.com/  >
-    au < bmj.BMJDrupalPlugin ; expected ; 2020 ; Heart Asia Volume 12 ; 12 ; https://heartasia.bmj.com/  >
-
+    #stopped publication end of 2019.
   }
 
   {
@@ -2800,35 +2799,35 @@ comment[tc15] = recursive URL structure
 
   }
  }
- {
-
-  {
-    title <
-      name = BMJ Case Reports ;
-      eissn = 1757-790X
-      >
-
-    plugin = needs.plugin
-    implicit < status ; year ; name ; param[volume_name] >
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified
-    param[base_url] = https://casereports.bmj.com/
-    
-    comment[structure] = This journal seems different from others. Case reports are grouped by date, not by volume.
-    #need special plugin, please see #LXQUEUE-1316
-    ###***SEE TITLE BLOCK ABOVE, WITH OLD PLUGIN***###
-
-    au < exists ; 2008 ; BMJ Case Reports Volume 2008 ; 2008 >
-    au < exists ; 2009 ; BMJ Case Reports Volume 2009 ; 2009 >
-    au < exists ; 2010 ; BMJ Case Reports Volume 2010 ; 2010 >
-    au < exists ; 2011 ; BMJ Case Reports Volume 2011 ; 2011 >
-    au < exists ; 2012 ; BMJ Case Reports Volume 2012 ; 2012 >
-    au < exists ; 2013 ; BMJ Case Reports Volume 2013 ; 2013 >
-    au < exists ; 2014 ; BMJ Case Reports Volume 2014 ; 2014 >
-    au < exists ; 2015 ; BMJ Case Reports Volume 2015 ; 2015 >
-    au < exists ; 2016 ; BMJ Case Reports Volume 2016 ; 2016 >
-    au < exists ; 2017 ; BMJ Case Reports Volume 2017 ; 2017 >
-    au < exists ; 2018 ; BMJ Case Reports Volume 2018 ; 2018 >
-
-  }
- }
+# {
+#
+#  {
+#    title <
+#      name = BMJ Case Reports ;
+#      eissn = 1757-790X
+#      >
+#
+#    plugin = needs.plugin
+#    implicit < status ; year ; name ; param[volume_name] >
+#    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified
+#    param[base_url] = https://casereports.bmj.com/
+#    
+#    comment[structure] = This journal seems different from others. Case reports are grouped by date, not by volume.
+#    #need special plugin, please see #LXQUEUE-1316. This is a conglomeration of articles from various journals.
+#    ###***SEE TITLE BLOCK ABOVE, WITH OLD PLUGIN***###
+#
+#    au < exists ; 2008 ; BMJ Case Reports Volume 2008 ; 2008 >
+#    au < exists ; 2009 ; BMJ Case Reports Volume 2009 ; 2009 >
+#    au < exists ; 2010 ; BMJ Case Reports Volume 2010 ; 2010 >
+#    au < exists ; 2011 ; BMJ Case Reports Volume 2011 ; 2011 >
+#    au < exists ; 2012 ; BMJ Case Reports Volume 2012 ; 2012 >
+#    au < exists ; 2013 ; BMJ Case Reports Volume 2013 ; 2013 >
+#    au < exists ; 2014 ; BMJ Case Reports Volume 2014 ; 2014 >
+#    au < exists ; 2015 ; BMJ Case Reports Volume 2015 ; 2015 >
+#    au < exists ; 2016 ; BMJ Case Reports Volume 2016 ; 2016 >
+#    au < exists ; 2017 ; BMJ Case Reports Volume 2017 ; 2017 >
+#    au < exists ; 2018 ; BMJ Case Reports Volume 2018 ; 2018 >
+#
+#  }
+# }
 }
