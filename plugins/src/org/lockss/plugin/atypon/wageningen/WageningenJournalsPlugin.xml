@@ -10,7 +10,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>17</string>
+    <string>18</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -78,5 +78,9 @@
   <entry>
     <string>application/pdf_filter_factory</string>
     <string>org.lockss.plugin.atypon.wageningen.WageningenJournalsPdfFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.atypon.wageningen.WageningenUrlConsumerFactory</string>
   </entry>
 </map>
