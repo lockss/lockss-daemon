@@ -29,8 +29,8 @@
    au < finished ; finished ; 2010 ; 9789086861590 ; 9789086867158 ; 9789086867158 ; Gender, AIDS and food security: Culture and vulnerability in rural Cote d'Ivoire (9789086867158) ; http://www.wageningenacademic.com/ ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2010 ; 9789086861583 ; 9789086867141 ; 9789086867141 ; Intrahousehold resource allocation and well-being: The case of rural households in Senegal (9789086867141) ; http://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 9789086861460 ; 9789086867004 ; 9789086867004 ; Single women, land and livelihood vulnerability in a communal area in Zimbabwe (9789086867004) ; http://www.wageningenacademic.com/ ;  >
-   au < frozen ; exists ; 2010 ; 9789086861583 ; 9789086867141 ; 9789086867141 ; Intrahousehold resource allocation and well-being (9789086867141); https://www.wageningenacademic.com/ ; >
-   au < frozen ; exists ; 2010 ; 9789086861590 ; 9789086867158 ; 9789086867158 ; Gender, AIDS and food security (9789086867158) ; https://www.wageningenacademic.com/ ; >
+   au < superseded ; exists ; 2010 ; 9789086861583 ; 9789086867141 ; 9789086867141 ; Intrahousehold resource allocation and well-being: The case of rural households in Senegal (9789086867141) [superseded] ; https://www.wageningenacademic.com/ ; >
+   au < superseded ; exists ; 2010 ; 9789086861590 ; 9789086867158 ; 9789086867158 ; Gender, AIDS and food security: Culture and vulnerability in rural Cote d'Ivoire (9789086867158) [superseded] ; https://www.wageningenacademic.com/ ; >
 
  }
 
@@ -260,9 +260,9 @@
    type = bookSeries
   >
    au < finished ; finished ; 2004 ; 9789076998473 ; 9789086865338 ; 9789086865338 ; WAAP Book of the year 2003: A review of Livestock Systems Developments and Researches (9789086865338) ; http://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
-   au < finished ; finished ; 2005 ; 9789076998671 ; 9789086865642 ; 9789086865642 ; WAAP Book of the Year 2005 (9789086865642) ; http://www.wageningenacademic.com/ ;  >
-   au < finished ; finished ; 2007 ; 9789086860340 ; 9789086866151 ; 9789086866151 ; WAAP book of the year 2006 (9789086866151) ; http://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
-   au < finished ; finished ; 2009 ; 9789086860685 ; 9789086866564 ; 9789086866564 ; WAAP book of the year 2007 (9789086866564) ; http://www.wageningenacademic.com/ ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2005 ; 9789076998671 ; 9789086865642 ; 9789086865642 ; WAAP Book of the Year 2005: A review of Livestock Systems Developments and Researches (9789086865642) ; http://www.wageningenacademic.com/ ;  >
+   au < finished ; finished ; 2007 ; 9789086860340 ; 9789086866151 ; 9789086866151 ; WAAP book of the year 2006: A review of Livestock Systems Developments and Researches (9789086866151) ; http://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2009 ; 9789086860685 ; 9789086866564 ; 9789086866564 ; WAAP book of the year 2007: A review of Livestock Systems Developments and Researches (9789086866564) ; http://www.wageningenacademic.com/ ; reingest2.clockss.org:8085 >
 
  }
 
