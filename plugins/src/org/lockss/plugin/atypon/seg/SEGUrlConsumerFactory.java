@@ -58,7 +58,6 @@ public class SEGUrlConsumerFactory implements UrlConsumerFactory {
   
   @Override
   public UrlConsumer createUrlConsumer(CrawlerFacade facade, FetchedUrlData fud) {
-    log.debug3("Creating a UrlConsumer");
     return new HighWireDrupalUrlConsumer(facade, fud);
   }
   
@@ -98,8 +97,6 @@ public class SEGUrlConsumerFactory implements UrlConsumerFactory {
             && fud.redirectUrls.size() >= 1
             && (destMat = destPat.matcher(fud.fetchUrl)).find()
             && origPat.matcher(fud.origUrl).find());
-
-        log.debug3("Fei - pdf " + fud.fetchUrl + " " + fud.origUrl);
       }
       return should;
     }
