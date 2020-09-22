@@ -90,18 +90,14 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Biographical Memoirs of Fellows of the Royal Society Volume 61 ; 61 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Biographical Memoirs of Fellows of the Royal Society Volume 62 ; 62 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Biographical Memoirs of Fellows of the Royal Society Volume 63 ; 63 ; >
-
     au < finished ; finished ; 2018 ; Biographical Memoirs of Fellows of the Royal Society Volume 64 ; 64 ; reingest1.clockss.org:8082 >
     au < manifest ; exists ; 2018 ; Biographical Memoirs of Fellows of the Royal Society Volume 65 ; 65 ; >
-    au < manifest ; exists ; 2018 ; Biographical Memoirs of Fellows of the Royal Society Volume 64-65 [2018] ; 2018 ; >
-
     au < manifest ; exists ; 2019 ; Biographical Memoirs of Fellows of the Royal Society Volume 66 ; 66 ; >
     au < manifest ; exists ; 2019 ; Biographical Memoirs of Fellows of the Royal Society Volume 67 ; 67 ; >
-    au < frozen ; exists ; 2019 ; Biographical Memoirs of Fellows of the Royal Society Volume 66-67 [2019] ; 2019 ; >
+    au < superseded ; exists ; 2019 ; Biographical Memoirs of Fellows of the Royal Society Volume 66-67 [superseded] ; 2019 ; >
 
     au < manifest ; exists ; 2020 ; Biographical Memoirs of Fellows of the Royal Society Volume 68 ; 68 ; >
     au < expected ; exists ; 2020 ; Biographical Memoirs of Fellows of the Royal Society Volume 69 ; 69 ; >
-    au < manifest ; exists ; 2020 ; Biographical Memoirs of Fellows of the Royal Society Volume 68-69 [2020] ; 2020 ; >
 
   }
 
@@ -130,14 +126,14 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Biology Letters Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Biology Letters Volume 13 ; 13 ; >
 
-    au < finished ; finished ; 2018 ; Biology Letters Volume 14 [14] ; 14 ; reingest4.clockss.org:8082 >
-    au < manifest ; exists ; 2018 ; Biology Letters Volume 14 [2018] ; 2018 ; >
+    au < finished ; finished ; 2018 ; Biology Letters Volume 14 ; 14 ; reingest4.clockss.org:8082 >
+#    au < manifest ; exists ; 2018 ; Biology Letters Volume 14 [2018] ; 2018 ; >
 
-    au < manifest ; exists ; 2019 ; Biology Letters Volume 15 [15] ; 15 ; >
-    au < frozen ; exists ; 2019 ; Biology Letters Volume 15 [2019] ; 2019 ; >
+    au < manifest ; exists ; 2019 ; Biology Letters Volume 15 ; 15 ; >
+    au < superseded ; exists ; 2019 ; Biology Letters Volume 15 [superseded] ; 2019 ; >
 
-    au < manifest ; exists ; 2020 ; Biology Letters Volume 16 [16] ; 16 ; >
-    au < manifest ; exists ; 2020 ; Biology Letters Volume 16 [2020] ; 2020 ; >
+    au < manifest ; exists ; 2020 ; Biology Letters Volume 16 ; 16 ; >
+#    au < manifest ; exists ; 2020 ; Biology Letters Volume 16 [2020] ; 2020 ; >
 
   }
 
@@ -163,14 +159,14 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Interface Focus Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Interface Focus Volume 7 ; 7 ; >
 
-    au < finished ; finished ; 2018 ; Interface Focus Volume 8 [8] ; 8 ; reingest4.clockss.org:8082 >
-    au < manifest ; exists ; 2018 ; Interface Focus Volume 8 [2018] ; 2018 ; >
+    au < finished ; finished ; 2018 ; Interface Focus Volume 8 ; 8 ; reingest4.clockss.org:8082 >
+#    au < manifest ; exists ; 2018 ; Interface Focus Volume 8 [2018] ; 2018 ; >
 
-    au < manifest ; exists ; 2019 ; Interface Focus Volume 9 [9] ; 9 ; >
-    au < frozen ; exists ; 2019 ; Interface Focus Volume 9 [2019] ; 2019 ; >
+    au < manifest ; exists ; 2019 ; Interface Focus Volume 9 ; 9 ; >
+    au < superseded ; exists ; 2019 ; Interface Focus Volume 9 [superseded] ; 2019 ; >
 
-    au < manifest ; exists ; 2020 ; Interface Focus Volume 10 [10] ; 10 ; >
-    au < manifest ; exists ; 2020 ; Interface Focus Volume 10 [2020] ; 2020 ; >
+    au < manifest ; exists ; 2020 ; Interface Focus Volume 10 ; 10 ; >
+#    au < manifest ; exists ; 2020 ; Interface Focus Volume 10 [2020] ; 2020 ; >
 
   }
   
@@ -200,14 +196,14 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of the Royal Society Interface Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of the Royal Society Interface Volume 14 ; 14 ; >
 
-    au < finished ; finished ; 2018 ; Journal of the Royal Society Interface Volume 15 [15] ; 15 ; reingest3.clockss.org:8083 >
-    au < manifest ; exists ; 2018 ; Journal of the Royal Society Interface Volume 15 [2018] ; 2018 ; >
+    au < finished ; finished ; 2018 ; Journal of the Royal Society Interface Volume 15 ; 15 ; reingest3.clockss.org:8083 >
+#    au < manifest ; exists ; 2018 ; Journal of the Royal Society Interface Volume 15 [2018] ; 2018 ; >
 
-    au < manifest ; exists ; 2019 ; Journal of the Royal Society Interface Volume 16 [16] ; 16 ; >
-    au < frozen ; exists ; 2019 ; Journal of the Royal Society Interface Volume 16 [2019] ; 2019 ; >
+    au < manifest ; exists ; 2019 ; Journal of the Royal Society Interface Volume 16 ; 16 ; >
+    au < superseded ; exists ; 2019 ; Journal of the Royal Society Interface Volume 16 [superseded] ; 2019 ; >
 
-    au < manifest ; exists ; 2020 ; Journal of the Royal Society Interface Volume 17 [17] ; 17 ; >
-    au < manifest ; exists ; 2020 ; Journal of the Royal Society Interface Volume 17 [2020] ; 2020 ; >
+    au < manifest ; exists ; 2020 ; Journal of the Royal Society Interface Volume 17 ; 17 ; >
+#    au < manifest ; exists ; 2020 ; Journal of the Royal Society Interface Volume 17 [2020] ; 2020 ; >
 
   }
 
@@ -295,14 +291,14 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Notes and Records the Royal Society Journal of the History of Science Volume 70 ; 70 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Notes and Records the Royal Society Journal of the History of Science Volume 71 ; 71 ; >
 
-    au < finished ; finished ; 2018 ; Notes and Records the Royal Society Journal of the History of Science Volume 72 [72] ; 72 ; reingest5.clockss.org:8082 >
-    au < manifest ; exists ; 2018 ; Notes and Records the Royal Society Journal of the History of Science Volume 72 [2018] ; 2018 ; >
+    au < finished ; finished ; 2018 ; Notes and Records the Royal Society Journal of the History of Science Volume 72 ; 72 ; reingest5.clockss.org:8082 >
+#    au < manifest ; exists ; 2018 ; Notes and Records the Royal Society Journal of the History of Science Volume 72 [2018] ; 2018 ; >
 
-    au < manifest ; exists ; 2019 ; Notes and Records the Royal Society Journal of the History of Science Volume 73 [73] ; 73 ; >
-    au < frozen ; exists ; 2019 ; Notes and Records the Royal Society Journal of the History of Science Volume 73 [2019] ; 2019 ; >
+    au < manifest ; exists ; 2019 ; Notes and Records the Royal Society Journal of the History of Science Volume 73 ; 73 ; >
+    au < superseded ; exists ; 2019 ; Notes and Records the Royal Society Journal of the History of Science Volume 73 [superseded] ; 2019 ; >
 
-    au < manifest ; exists ; 2020 ; Notes and Records the Royal Society Journal of the History of Science Volume 74 [74] ; 74 ; >
-    au < manifest ; exists ; 2020 ; Notes and Records the Royal Society Journal of the History of Science Volume 74 [2020] ; 2020 ; >
+    au < manifest ; exists ; 2020 ; Notes and Records the Royal Society Journal of the History of Science Volume 74 ; 74 ; >
+#    au < manifest ; exists ; 2020 ; Notes and Records the Royal Society Journal of the History of Science Volume 74 [2020] ; 2020 ; >
 
   }
 
@@ -324,14 +320,14 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Open Biology Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Open Biology Volume 7 ; 7 ; >
 
-    au < finished ; finished ; 2018 ; Open Biology Volume 8 [8] ; 8 ; reingest2.clockss.org:8085 >
-    au < manifest ; exists ; 2018 ; Open Biology Volume 8 [2018] ; 2018 ; >
+    au < finished ; finished ; 2018 ; Open Biology Volume 8 ; 8 ; reingest2.clockss.org:8085 >
+#    au < manifest ; exists ; 2018 ; Open Biology Volume 8 [2018] ; 2018 ; >
 
-    au < manifest ; exists ; 2019 ; Open Biology Volume 9 [9] ; 9 ; >
-    au < frozen ; exists ; 2019 ; Open Biology Volume 9 [2019] ; 2019 ; >
+    au < manifest ; exists ; 2019 ; Open Biology Volume 9 ; 9 ; >
+    au < superseded ; exists ; 2019 ; Open Biology Volume 9 [superseded] ; 2019 ; >
 
-    au < manifest ; exists ; 2020 ; Open Biology Volume 10 [10] ; 10 ; >
-    au < manifest ; exists ; 2020 ; Open Biology Volume 10 [2020] ; 2020 ; >
+    au < manifest ; exists ; 2020 ; Open Biology Volume 10 ; 10 ; >
+#    au < manifest ; exists ; 2020 ; Open Biology Volume 10 [2020] ; 2020 ; >
 
   }
 
@@ -522,14 +518,14 @@
     au < doNotProcess ; exists ; 1994 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 347 ; 347 ; >
     au < doNotProcess ; exists ; 1994 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 348 ; 348 ; >
     au < doNotProcess ; exists ; 1994 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 349 ; 349 ; >
-    au < doNotProcess ; exists ; 1995 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 350 ; 350 ; >
-    au < doNotProcess ; exists ; 1995 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 351 ; 351 ; >
-    au < doNotProcess ; exists ; 1995 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 352 ; 352 ; >
-    au < doNotProcess ; exists ; 1995 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 353 ; 353 ; >
     }
     {
     param[journal_id] = rsta1996
     
+    au < doNotProcess ; exists ; 1995 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 350 ; 350 ; >
+    au < doNotProcess ; exists ; 1995 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 351 ; 351 ; >
+    au < doNotProcess ; exists ; 1995 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 352 ; 352 ; >
+    au < doNotProcess ; exists ; 1995 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 353 ; 353 ; >
     au < doNotProcess ; exists ; 1996 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 354 ; 354 ; >
     au < doNotProcess ; exists ; 1997 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 355 ; 355 ; >
     au < doNotProcess ; exists ; 1998 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 356 ; 356 ; >
@@ -557,13 +553,13 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 374 ; 374 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 375 ; 375 ; >
 
-    au < finished ; finished ; 2018 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 376 [376] ; 376 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2018 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 376 ; 376 ; reingest1.clockss.org:8082 >
     #au < manifest ; exists ; 2018 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 376 [2018] ; 2018 ; >#bad issue url "/toc/rsta/2014/372/2018"
 
-    au < manifest ; exists ; 2019 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 377 [377] ; 377 ; > # no substance. Using the year instead gets issue 2019 from the year 2013.
+    au < manifest ; exists ; 2019 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 377 ; 377 ; > # no substance. Using the year instead gets issue 2019 from the year 2013.
     #au < manifest ; exists ; 2019 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 377 [2019] ; 2019 ; >#bad issue url "/toc/rsta/2014/372/2019"
 
-    au < manifest ; exists ; 2020 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 378 [378] ; 378 ; >
+    au < manifest ; exists ; 2020 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 378 ; 378 ; >
     #au < manifest ; exists ; 2020 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 378 [2020] ; 2020 ; >#bad issue url "/toc/rsta/2014/372/2020"
     }
   }
@@ -788,14 +784,14 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 371 ; 371 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 372 ; 372 ; >
 
-    au < finished ; finished ; 2018 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 373 [373] ; 373 ; reingest2.clockss.org:8085 >
-    au < manifest ; exists ; 2018 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 373 [2018] ; 2018 ; >
+    au < finished ; finished ; 2018 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 373 ; 373 ; reingest2.clockss.org:8085 >
+#    au < manifest ; exists ; 2018 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 373 [2018] ; 2018 ; >
 
-    au < manifest ; exists ; 2019 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 374 [374] ; 374 ; >
-    au < manifest ; exists ; 2019 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 374 [2019] ; 2019 ; > #overcrawl. 2017, 2018, 2019.
+    au < manifest ; exists ; 2019 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 374 ; 374 ; >
+#    au < manifest ; exists ; 2019 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 374 [2019] ; 2019 ; > #overcrawl. 2017, 2018, 2019.
 
-    au < manifest ; exists ; 2020 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 375 [375] ; 375 ; >
-    au < manifest ; exists ; 2020 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 375 [2020] ; 2020 ; >
+    au < manifest ; exists ; 2020 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 375 ; 375 ; >
+#    au < manifest ; exists ; 2020 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 375 [2020] ; 2020 ; >
 
     }
   }
@@ -1400,13 +1396,13 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 472 ; 472 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 473 ; 473 ; >
 
-    au < finished ; finished ; 2018 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 474 [474] ; 474 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2018 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 474 ; 474 ; reingest3.clockss.org:8083 >
     #au < manifest ; exists ; 2018 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 474 [2018] ; 2018 ; >#bad issue url "/toc/rspa1996/2002/458/2018"
 
-    au < manifest ; exists ; 2019 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 475 [475] ; 475 ; > #no substance. using 2019 gives a manifest page with one url to issue 2019 from 2002.
+    au < manifest ; exists ; 2019 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 475 ; 475 ; > #no substance. using 2019 gives a manifest page with one url to issue 2019 from 2002.
     #au < manifest ; exists ; 2019 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 475 [2019] ; 2019 ; >#bad issue url "/toc/rspa1996/2002/458/2019"
 
-    au < manifest ; exists ; 2020 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 476 [476] ; 476 ; >
+    au < manifest ; exists ; 2020 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 476 ; 476 ; >
     #au < manifest ; exists ; 2020 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 476 [2020] ; 2020 ; >#bad issue url "/toc/rspa1996/2002/458/2020"
 
   }
@@ -1632,14 +1628,14 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Proceedings of the Royal Society B: Biological Sciences Volume 283 ; 283 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Proceedings of the Royal Society B: Biological Sciences Volume 284 ; 284 ; >
 
-    au < finished ; finished ; 2018 ; Proceedings of the Royal Society B: Biological Sciences Volume 285 [285] ; 285 ; reingest4.clockss.org:8082 >
-    au < manifest ; exists ; 2018 ; Proceedings of the Royal Society B: Biological Sciences Volume 285 [2018] ; 2018 ; >
+    au < finished ; finished ; 2018 ; Proceedings of the Royal Society B: Biological Sciences Volume 285 ; 285 ; reingest4.clockss.org:8082 >
+#    au < manifest ; exists ; 2018 ; Proceedings of the Royal Society B: Biological Sciences Volume 285 [2018] ; 2018 ; >
 
-    au < manifest ; exists ; 2019 ; Proceedings of the Royal Society B: Biological Sciences Volume 286 [286] ; 286 ; > 
-    au < manifest ; exists ; 2019 ; Proceedings of the Royal Society B: Biological Sciences Volume 286 [2019] ; 2019 ; > #overcrawling. 2017, 2018, 2019. Same manifest page for v286. Would likely get no substance.
+    au < manifest ; exists ; 2019 ; Proceedings of the Royal Society B: Biological Sciences Volume 286 ; 286 ; > 
+#    au < manifest ; exists ; 2019 ; Proceedings of the Royal Society B: Biological Sciences Volume 286 [2019] ; 2019 ; > #overcrawling. 2017, 2018, 2019. Same manifest page for v286. Would likely get no substance.
 
-    au < manifest ; exists ; 2020 ; Proceedings of the Royal Society B: Biological Sciences Volume 287 [287] ; 287 ; >
-    au < manifest ; exists ; 2020 ; Proceedings of the Royal Society B: Biological Sciences Volume 287 [2020] ; 2020 ; >
+    au < manifest ; exists ; 2020 ; Proceedings of the Royal Society B: Biological Sciences Volume 287 ; 287 ; >
+#    au < manifest ; exists ; 2020 ; Proceedings of the Royal Society B: Biological Sciences Volume 287 [2020] ; 2020 ; >
 
   }
 
@@ -1749,11 +1745,11 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Royal Society Open Science Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Royal Society Open Science Volume 5 ; 5 ; >
 
-    au < manifest ; exists ; 2019 ; Royal Society Open Science Volume 6 [6] ; 6 ; >
-    au < frozen ; exists ; 2019 ; Royal Society Open Science Volume 6 [2019] ; 2019 ; >
+    au < manifest ; exists ; 2019 ; Royal Society Open Science Volume 6 ; 6 ; >
+    au < superseded ; exists ; 2019 ; Royal Society Open Science Volume 6 [superseded] ; 2019 ; >
 
-    au < manifest ; exists ; 2020 ; Royal Society Open Science Volume 7 [7] ; 7 ; >
-    au < manifest ; exists ; 2020 ; Royal Society Open Science Volume 7 [2020] ; 2020 ; >
+    au < manifest ; exists ; 2020 ; Royal Society Open Science Volume 7 ; 7 ; >
+#    au < manifest ; exists ; 2020 ; Royal Society Open Science Volume 7 [2020] ; 2020 ; >
 
   }
 
