@@ -22,8 +22,16 @@ public class TestOJS3ArchivalUnit extends LockssTestCase {
         //  https://scholarworks.iu.edu/journals/index.php/psource/issue/view/1257/14
         //  https://journals.library.ualberta.ca/jpps/index.php/JPPS/article/download/29659/21487/80185
         String pdfString1 = "cleiej/index.php/cleiej/article/download/437/372/1777";
-        String pdfString3 = "jpps/index.php/JPPS/article/download/29659/21487/80185";
+
         String pdfString2 = "journals/index.php/psource/issue/view/1257/14"; // this is a valid pdf
+
+        // Article: https://journals.library.ualberta.ca/jpps/index.php/JPPS/issue/view/1955
+        // PDF: https://journals.library.ualberta.ca/jpps/index.php/JPPS/article/view/30339/21503
+        String pdfString3 = "jpps/index.php/JPPS/article/download/29659/21487/80185";
+
+        // JOTT:
+        // Article: https://threatenedtaxa.org/index.php/JoTT/article/view/1878
+        // PDF: https://threatenedtaxa.org/index.php/JoTT/article/download/1878/6616
 
         // Good cases
         // http://trumpeter.athabascau.ca/index.php/trumpet/article/download/1508/1739
@@ -32,7 +40,7 @@ public class TestOJS3ArchivalUnit extends LockssTestCase {
         String pdfString5 = "index.php/trumpet/article/view/1508/1739";
 
         //testReplacement(pdfString1, "cleiej");
-        testReplacement(pdfString3, "jpps");
+        //testReplacement(pdfString3, "jpps");
         //testReplacement(pdfString2, "psource");
 
         // These should success

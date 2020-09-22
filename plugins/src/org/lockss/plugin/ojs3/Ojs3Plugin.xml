@@ -116,7 +116,6 @@
             https://journals.library.ualberta.ca/jpps/index.php/JPPS/article/download/29659/21487/80185
           -->
           <string>"^%s(journals/)?(index\.php/)?(%s/)?article/(view(File)?|download)/[^/]+/[^/?#&amp;.]+$", base_url, journal_id</string>
-        <string>"^%s(journals/)?(index\.php/)?(%s/)?(index\.php/)?(%s/)?article/download/[^/]+/[^/]+/[^/]+", base_url, journal_id, journal_id</string>
       </list>
   </entry>
 <!-- 
