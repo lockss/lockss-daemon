@@ -13,8 +13,10 @@
     
     #manifest pages don't include index.php.
 
-    #move to OJS3, need patch from publisher. 3.1.1 as of 9/12/2019
-    #attr[start_stem] = journals/index.php/  #none for this journal
+    # Move to OJS3, need patch from publisher. 3.1.1 as of 9/12/2019
+    # Note: the correct value for start_stem will be the empty string (meaning
+    # there is no index.php/ portion).
+    #attr[start_stem] = 
 
     {
 
