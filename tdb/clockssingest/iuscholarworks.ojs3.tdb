@@ -24,6 +24,18 @@
 #jpea Journal of Public and Environmental Affairs - NO ISSUES
 ###########################################
 
+#
+# Note from Thib about attr[start_stem] = journals/index.php/
+#
+# This was a mis-use of attr[start_stem]. The string "journals/" should have
+# been part of the base_url. Because the eventually the base_url is concatenated
+# with the start_stem (and then with the journal code and with whatever else is
+# in the URL), the result is the same, but this pulled part of the base URL into
+# an attribute it does not belong to, which may have consequences down the line.
+# However right now, let's not incur a bunch of clean-up work, until we
+# determine something is not behaving properly because the base_url is "too
+# short".
+
     param[base_url] = https://scholarworks.iu.edu/
     attr[start_stem] = journals/index.php/
     plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
