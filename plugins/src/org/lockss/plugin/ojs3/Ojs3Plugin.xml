@@ -114,6 +114,8 @@
             https://www.clei.org/cleiej/index.php/cleiej/article/download/437/372/1777
             https://scholarworks.iu.edu/journals/index.php/psource/issue/view/1257/14
             https://journals.library.ualberta.ca/jpps/index.php/JPPS/article/download/29659/21487/80185
+            http://trumpeter.athabascau.ca/index.php/trumpet/article/download/1508/1739
+            http://trumpeter.athabascau.ca/index.php/trumpet/article/view/1508/1739
           -->
           <string>"^%s(journals/)?(index\.php/)?(%s/)?article/(view(File)?|download)/[^/]+/[^/?#&amp;.]+$", base_url, journal_id</string>
       </list>
