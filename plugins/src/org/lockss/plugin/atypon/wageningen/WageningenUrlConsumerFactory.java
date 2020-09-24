@@ -54,7 +54,7 @@ public class WageningenUrlConsumerFactory implements UrlConsumerFactory {
   
   @Override
   public UrlConsumer createUrlConsumer(CrawlerFacade facade, FetchedUrlData fud) {
-    return new HighWireDrupalUrlConsumer(facade, fud);
+    return new WageningenUrlConsumer(facade, fud);
   }
   
   public static Pattern getOrigPattern() {
@@ -65,11 +65,11 @@ public class WageningenUrlConsumerFactory implements UrlConsumerFactory {
     return destPat;
   }
 
-  public class HighWireDrupalUrlConsumer extends HttpToHttpsUrlConsumer {
+  public class WageningenUrlConsumer extends HttpToHttpsUrlConsumer {
     
     protected Configuration auconfig;
     
-    public HighWireDrupalUrlConsumer(CrawlerFacade facade, FetchedUrlData fud) {
+    public WageningenUrlConsumer(CrawlerFacade facade, FetchedUrlData fud) {
       super(facade, fud);
       auconfig = au.getConfiguration();
     }
@@ -93,7 +93,9 @@ public class WageningenUrlConsumerFactory implements UrlConsumerFactory {
             && fud.redirectUrls.size() >= 1
             && (destMat = destPat.matcher(fud.fetchUrl)).find()
             && origPat.matcher(fud.origUrl).find());
+        
       }
+
       return should;
     }
   }
