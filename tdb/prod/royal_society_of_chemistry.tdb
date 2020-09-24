@@ -26,6 +26,7 @@
     param[journal_code] = an
     {
 
+      au < doNotProcess ; 1996 ; The Analyst Volume 121 ; 121 ; 1996 ; https://pubs.rsc.org/ >
       au < doNotProcess ; 1997 ; The Analyst Volume 122 ; 122 ; 1997 ; https://pubs.rsc.org/ >
       au < doNotProcess ; 1998 ; The Analyst Volume 123 ; 123 ; 1998 ; https://pubs.rsc.org/ >
       au < doNotProcess ; 1999 ; The Analyst Volume 124 ; 124 ; 1999 ; https://pubs.rsc.org/ >
@@ -67,6 +68,7 @@
     
     {
       
+      au < exists ; 2009 ; Analytical Methods Volume 1 ; 1 ; 2009 ; https://pubs.rsc.org/ >
       au < released ; 2010 ; Analytical Methods Volume 2 ; 2 ; 2010 ; http://pubs.rsc.org/ >
       au < released ; 2011 ; Analytical Methods Volume 3 ; 3 ; 2011 ; http://pubs.rsc.org/ >
       au < released ; 2012 ; Analytical Methods Volume 4 ; 4 ; 2012 ; http://pubs.rsc.org/ >
@@ -95,6 +97,20 @@
     
     {
       
+      au < doesNotExist ; 1996 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 93 ; 93 ; 1996 ; https://pubs.rsc.org/ >
+      au < exists ; 1997 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 93 ; 93 ; 1997 ; https://pubs.rsc.org/ >
+      au < exists ; 1998 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 94 ; 94 ; 1998 ; https://pubs.rsc.org/ >
+      au < exists ; 1999 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 95 ; 95 ; 1999 ; https://pubs.rsc.org/ >
+      au < exists ; 2000 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 96 ; 96 ; 2000 ; https://pubs.rsc.org/ >
+      au < exists ; 2001 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 97 ; 97 ; 2001 ; https://pubs.rsc.org/ >
+      au < exists ; 2002 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 98 ; 98 ; 2002 ; https://pubs.rsc.org/ >
+      au < exists ; 2003 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 99 ; 99 ; 2003 ; https://pubs.rsc.org/ >
+      au < exists ; 2004 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 100 ; 100 ; 2004 ; https://pubs.rsc.org/ >
+      au < exists ; 2005 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 101 ; 101 ; 2005 ; https://pubs.rsc.org/ >
+      au < exists ; 2006 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 102 ; 102 ; 2006 ; https://pubs.rsc.org/ >
+      au < exists ; 2007 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 103 ; 103 ; 2007 ; https://pubs.rsc.org/ >
+      au < exists ; 2008 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 104 ; 104 ; 2008 ; https://pubs.rsc.org/ >
+      au < exists ; 2009 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 105 ; 105 ; 2009 ; https://pubs.rsc.org/ >
       au < released ; 2010 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 106 ; 106 ; 2010 ; http://pubs.rsc.org/ >
       au < released ; 2011 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 107 ; 107 ; 2011 ; http://pubs.rsc.org/ >
       au < released ; 2012 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 108 ; 108 ; 2012 ; http://pubs.rsc.org/ >
@@ -116,6 +132,20 @@
     
     {
       
+      au < doesNotExist ; 1996 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 93 ; 93 ; 1996 ; https://pubs.rsc.org/ >
+      au < exists ; 1997 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 93 ; 93 ; 1997 ; https://pubs.rsc.org/ >
+      au < exists ; 1998 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 94 ; 94 ; 1998 ; https://pubs.rsc.org/ >
+      au < exists ; 1999 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 95 ; 95 ; 1999 ; https://pubs.rsc.org/ >
+      au < exists ; 2000 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 96 ; 96 ; 2000 ; https://pubs.rsc.org/ >
+      au < exists ; 2001 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 97 ; 97 ; 2001 ; https://pubs.rsc.org/ >
+      au < exists ; 2002 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 98 ; 98 ; 2002 ; https://pubs.rsc.org/ >
+      au < exists ; 2003 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 99 ; 99 ; 2003 ; https://pubs.rsc.org/ >
+      au < exists ; 2004 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 100 ; 100 ; 2004 ; https://pubs.rsc.org/ >
+      au < exists ; 2005 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 101 ; 101 ; 2005 ; https://pubs.rsc.org/ >
+      au < exists ; 2006 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 102 ; 102 ; 2006 ; https://pubs.rsc.org/ >
+      au < exists ; 2007 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 103 ; 103 ; 2007 ; https://pubs.rsc.org/ >
+      au < exists ; 2008 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 104 ; 104 ; 2008 ; https://pubs.rsc.org/ >
+      au < exists ; 2009 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 105 ; 105 ; 2009 ; https://pubs.rsc.org/ >
       au < released ; 2010 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 106 ; 106 ; 2010 ; http://pubs.rsc.org/ >
       au < released ; 2011 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 107 ; 107 ; 2011 ; http://pubs.rsc.org/ >
       au < released ; 2012 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 108 ; 108 ; 2012 ; http://pubs.rsc.org/ >
@@ -136,6 +166,20 @@
     
     {
       
+      au < doesNotExist ; 1996 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 93 ; 93 ; 1996 ; https://pubs.rsc.org/ >
+      au < exists ; 1997 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 93 ; 93 ; 1997 ; https://pubs.rsc.org/ >
+      au < exists ; 1998 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 94 ; 94 ; 1998 ; https://pubs.rsc.org/ >
+      au < exists ; 1999 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 95 ; 95 ; 1999 ; https://pubs.rsc.org/ >
+      au < exists ; 2000 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 96 ; 96 ; 2000 ; https://pubs.rsc.org/ >
+      au < exists ; 2001 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 97 ; 97 ; 2001 ; https://pubs.rsc.org/ >
+      au < exists ; 2002 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 98 ; 98 ; 2002 ; https://pubs.rsc.org/ >
+      au < exists ; 2003 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 99 ; 99 ; 2003 ; https://pubs.rsc.org/ >
+      au < exists ; 2004 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 100 ; 100 ; 2004 ; https://pubs.rsc.org/ >
+      au < exists ; 2005 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 101 ; 101 ; 2005 ; https://pubs.rsc.org/ >
+      au < exists ; 2006 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 102 ; 102 ; 2006 ; https://pubs.rsc.org/ >
+      au < exists ; 2007 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 103 ; 103 ; 2007 ; https://pubs.rsc.org/ >
+      au < exists ; 2008 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 104 ; 104 ; 2008 ; https://pubs.rsc.org/ >
+      au < exists ; 2009 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 105 ; 105 ; 2009 ; https://pubs.rsc.org/ >
       au < released ; 2010 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 106 ; 106 ; 2010 ; http://pubs.rsc.org/ >
       au < released ; 2011 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 107 ; 107 ; 2011 ; http://pubs.rsc.org/ >
       au < released ; 2012 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 108 ; 108 ; 2012 ; http://pubs.rsc.org/ >
@@ -259,6 +303,17 @@
     param[journal_code] = ce
     {
       
+      au < exists ; 1999 ; CrystEngComm Volume 1 ; 1 ; 1999 ; https://pubs.rsc.org/ >
+      au < exists ; 2000 ; CrystEngComm Volume 2 ; 2 ; 2000 ; https://pubs.rsc.org/ >
+      au < exists ; 2001 ; CrystEngComm Volume 3 ; 3 ; 2001 ; https://pubs.rsc.org/ >
+      au < exists ; 2002 ; CrystEngComm Volume 4 ; 4 ; 2002 ; https://pubs.rsc.org/ >
+      au < exists ; 2003 ; CrystEngComm Volume 5 ; 5 ; 2003 ; https://pubs.rsc.org/ >
+      au < exists ; 2004 ; CrystEngComm Volume 6 ; 6 ; 2004 ; https://pubs.rsc.org/ >
+      au < exists ; 2005 ; CrystEngComm Volume 7 ; 7 ; 2005 ; https://pubs.rsc.org/ >
+      au < exists ; 2006 ; CrystEngComm Volume 8 ; 8 ; 2006 ; https://pubs.rsc.org/ >
+      au < exists ; 2007 ; CrystEngComm Volume 9 ; 9 ; 2007 ; https://pubs.rsc.org/ >
+      au < exists ; 2008 ; CrystEngComm Volume 10 ; 10 ; 2008 ; https://pubs.rsc.org/ >
+      au < exists ; 2009 ; CrystEngComm Volume 11 ; 11 ; 2009 ; https://pubs.rsc.org/ >
       au < released ; 2010 ; CrystEngComm Volume 12 ; 12 ; 2010 ; http://pubs.rsc.org/ >
       au < released ; 2011 ; CrystEngComm Volume 13 ; 13 ; 2011 ; http://pubs.rsc.org/ >
       au < released ; 2012 ; CrystEngComm Volume 14 ; 14 ; 2012 ; http://pubs.rsc.org/ >
@@ -492,6 +547,7 @@
     param[journal_code] = ib
     {
       
+      #last volume 2018
       au < released ; 2010 ; Integrative Biology Volume 2 ; 2 ; 2010 ; http://pubs.rsc.org/ >
       au < released ; 2011 ; Integrative Biology Volume 3 ; 3 ; 2011 ; http://pubs.rsc.org/ >
       au < released ; 2012 ; Integrative Biology Volume 4 ; 4 ; 2012 ; http://pubs.rsc.org/ >
@@ -501,8 +557,6 @@
       au < released ; 2016 ; Integrative Biology Volume 8 ; 8 ; 2016 ; http://pubs.rsc.org/ >
       au < released ; 2017 ; Integrative Biology Volume 9 ; 9 ; 2017 ; http://pubs.rsc.org/ >
       au < released ; 2018 ; Integrative Biology Volume 10 ; 10 ; 2018 ; https://pubs.rsc.org/ >
-      au < expected ; 2019 ; Integrative Biology Volume 11 ; 11 ; 2019 ; https://pubs.rsc.org/ >
-      au < expected ; 2020 ; Integrative Biology Volume 12 ; 12 ; 2020 ; https://pubs.rsc.org/ >
 
     }
   }
@@ -545,7 +599,11 @@
     param[journal_code] = ft
     {
       
+      #complete
+      au < exists ; 1996 ; Journal of the Chemical Society, Faraday Transactions Volume 92 ; 92 ; 1996 ; https://pubs.rsc.org/ >
+      au < exists ; 1997 ; Journal of the Chemical Society, Faraday Transactions Volume 93 ; 93 ; 1997 ; https://pubs.rsc.org/ >
       au < manifest ; 1998 ; Journal of the Chemical Society, Faraday Transactions Volume 94 ; 94 ; 1998 ; https://pubs.rsc.org/ >
+
     }
   }
 
@@ -2241,10 +2299,10 @@
       comment[years] = Published 2000-2003
       param[journal_code] = po
 
-      au < exists ; 2000 ; Pesticide Outlook Volume 2000 ; 2000 ; 2000 ; https://pubs.rsc.org/ >
-      au < exists ; 2001 ; Pesticide Outlook Volume 2001 ; 2001 ; 2001 ; https://pubs.rsc.org/ >
-      au < exists ; 2002 ; Pesticide Outlook Volume 2002 ; 2002 ; 2002 ; https://pubs.rsc.org/ >
-      au < exists ; 2003 ; Pesticide Outlook Volume 2003 ; 2003 ; 2003 ; https://pubs.rsc.org/ >
+      au < exists ; 2000 ; Pesticide Outlook Volume 11 ; 11 ; 2000 ; https://pubs.rsc.org/ >
+      au < exists ; 2001 ; Pesticide Outlook Volume 12 ; 12 ; 2001 ; https://pubs.rsc.org/ >
+      au < exists ; 2002 ; Pesticide Outlook Volume 13 ; 13 ; 2002 ; https://pubs.rsc.org/ >
+      au < exists ; 2003 ; Pesticide Outlook Volume 14 ; 14 ; 2003 ; https://pubs.rsc.org/ >
 
   }
 
@@ -2572,6 +2630,7 @@
       >
 
       param[journal_code] = tx
+      #moved to OUP
 
       au < released ; 2012 ; Toxicology Research Volume 1 ; 1 ; 2012 ; http://pubs.rsc.org/ >
       au < released ; 2013 ; Toxicology Research Volume 2 ; 2 ; 2013 ; http://pubs.rsc.org/ >
@@ -2581,7 +2640,7 @@
       au < released ; 2017 ; Toxicology Research Volume 6 ; 6 ; 2017 ; http://pubs.rsc.org/ >
       au < released ; 2018 ; Toxicology Research Volume 7 ; 7 ; 2018 ; https://pubs.rsc.org/ >
       au < released ; 2019 ; Toxicology Research Volume 8 ; 8 ; 2019 ; https://pubs.rsc.org/ >
-      au < expected ; 2020 ; Toxicology Research Volume 9 ; 9 ; 2020 ; https://pubs.rsc.org/ >
+      #moved to OUP
 
   }
 
