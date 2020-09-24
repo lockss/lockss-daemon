@@ -95,22 +95,22 @@
       plugin = org.lockss.plugin.springer.ClockssSpringerDeliveredSourcePlugin
       implicit < status ; status2 ; year ; name ; param[year] ; param[directory] >
 
-      au < readySource ; finished ; 2018 ; Springer Delivered Source Content 2018 HD1_1 ; 2018 ; HD1_1 >
-      au < readySource ; finished ; 2018 ; Springer Delivered Source Content 2018 HD1_2 ; 2018 ; HD1_2 >
-      au < readySource ; finished ; 2018 ; Springer Delivered Source Content 2018 HD1_3 ; 2018 ; HD1_3 >
-      au < readySource ; finished ; 2018 ; Springer Delivered Source Content 2018 HD1_4 ; 2018 ; HD1_4 >
-      au < readySource ; finished ; 2018 ; Springer Delivered Source Content 2018 HD1_5 ; 2018 ; HD1_5 >
-      au < readySource ; finished ; 2018 ; Springer Delivered Source Content 2018 HD1_6 ; 2018 ; HD1_6 >
-      au < readySource ; finished ; 2018 ; Springer Delivered Source Content 2018 HD1_7 ; 2018 ; HD1_7 >
-      au < readySource ; finished ; 2018 ; Springer Delivered Source Content 2018 HD1_8 ; 2018 ; HD1_8 >
-      au < readySource ; finished ; 2018 ; Springer Delivered Source Content 2018 HD1_9 ; 2018 ; HD1_9 >
+      au < zapped ; finished ; 2018 ; Springer Delivered Source Content 2018 HD1_1 ; 2018 ; HD1_1 >
+      au < zapped ; finished ; 2018 ; Springer Delivered Source Content 2018 HD1_2 ; 2018 ; HD1_2 >
+      au < zapped ; finished ; 2018 ; Springer Delivered Source Content 2018 HD1_3 ; 2018 ; HD1_3 >
+      au < zapped ; finished ; 2018 ; Springer Delivered Source Content 2018 HD1_4 ; 2018 ; HD1_4 >
+      au < zapped ; finished ; 2018 ; Springer Delivered Source Content 2018 HD1_5 ; 2018 ; HD1_5 >
+      au < zapped ; finished ; 2018 ; Springer Delivered Source Content 2018 HD1_6 ; 2018 ; HD1_6 >
+      au < zapped ; finished ; 2018 ; Springer Delivered Source Content 2018 HD1_7 ; 2018 ; HD1_7 >
+      au < zapped ; finished ; 2018 ; Springer Delivered Source Content 2018 HD1_8 ; 2018 ; HD1_8 >
+      au < zapped ; finished ; 2018 ; Springer Delivered Source Content 2018 HD1_9 ; 2018 ; HD1_9 >
       #books came in 2019
-      au < readySource ; finished ; 2019 ; Springer Delivered Source Content 2019 HD1_1 ; 2019 ; HD1_1 >
-      au < readySource ; finished ; 2019 ; Springer Delivered Source Content 2019 HD1_2 ; 2019 ; HD1_2 >
-      au < readySource ; finished ; 2019 ; Springer Delivered Source Content 2019 HD1_3 ; 2019 ; HD1_3 >
-      au < readySource ; finished ; 2019 ; Springer Delivered Source Content 2019 HD1_4 ; 2019 ; HD1_4 >
-      au < readySource ; finished ; 2019 ; Springer Delivered Source Content 2019 HD1_5 ; 2019 ; HD1_5 >
-      au < readySource ; finished ; 2019 ; Springer Delivered Source Content 2019 HD1_6 ; 2019 ; HD1_6 >
+      au < zapped ; finished ; 2019 ; Springer Delivered Source Content 2019 HD1_1 ; 2019 ; HD1_1 >
+      au < zapped ; finished ; 2019 ; Springer Delivered Source Content 2019 HD1_2 ; 2019 ; HD1_2 >
+      au < zapped ; finished ; 2019 ; Springer Delivered Source Content 2019 HD1_3 ; 2019 ; HD1_3 >
+      au < zapped ; finished ; 2019 ; Springer Delivered Source Content 2019 HD1_4 ; 2019 ; HD1_4 >
+      au < zapped ; finished ; 2019 ; Springer Delivered Source Content 2019 HD1_5 ; 2019 ; HD1_5 >
+      au < zapped ; finished ; 2019 ; Springer Delivered Source Content 2019 HD1_6 ; 2019 ; HD1_6 >
 
     }
 
