@@ -1,7 +1,7 @@
 {
 
   publisher <
-    name = International Structural Engineering Construction Society ;
+    name = International Structural Engineering and Construction Society ;
     info[contract] = 2016 ;
     info[tester] = S
   >
@@ -9,15 +9,15 @@
   {
 
     title <
-      name = International Structural Engineering Construction Society Source Content
+      name = International Structural Engineering and Construction Society Source Content
     >
 
     plugin = org.lockss.plugin.clockss.isecs.ClockssInternationalStructuralEngineeringConstructionSocietySourcePlugin
-    # incorrect url param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/aofoundation-released/
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/isec-released/2020/
     hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[year] >
 
-    au < expected ; exists ; 2020 ; International Structural Engineering Construction Society 2020 ; 2020 >
+    au < readySource ; crawling ; 2020 ; International Structural Engineering and Construction Society 2020 ; 2020 >
 
   }
 
