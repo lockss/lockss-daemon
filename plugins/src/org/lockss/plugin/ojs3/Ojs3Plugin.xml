@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>ready</string>
+    <string>development</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
    <entry>
     <string>plugin_name</string>
@@ -103,7 +103,7 @@
             </entry>
             <entry>
                 <string>Substance</string>
-                <string>2</string>
+                <string>3</string>
             </entry>
         </map>
     </entry>
@@ -119,6 +119,11 @@
           -->
           <string>"^%s(journals/)?(index\.php/)?(%s/)?article/(view(File)?|download)/[^/]+/[^/?#&amp;.]+$", base_url, journal_id</string>
       </list>
+  </entry>
+  <entry>
+        <!--  this is an extra check to allow special cases which do not match above pattern  -->
+        <string>plugin_substance_predicate_factory</string>
+        <string>org.lockss.plugin.ojs3.OJS3SubstancePredicateFactory</string>
   </entry>
 <!-- 
    <entry>

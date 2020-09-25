@@ -9,7 +9,7 @@ public class TestOJS3ArchivalUnit extends LockssTestCase {
 
     private MockArchivalUnit mau;
 
-    private String PDF_PATTERN_STRING = "^(journals/)?(index\\.php/)?(%s/)?article/(view(File)?|download)/[^/]+/[^/?#&amp;.]+$";
+    private String PDF_PATTERN_STRING = "^(%s/)?(article/)?(issue/)?(view(File)?|download)/[^/]+/([^/]+/)?[^/?#&amp;.]+$";
 
     public void setUp() throws Exception {
         super.setUp();
@@ -21,13 +21,13 @@ public class TestOJS3ArchivalUnit extends LockssTestCase {
         //  https://www.clei.org/cleiej/index.php/cleiej/article/download/437/372/1777
         //  https://scholarworks.iu.edu/journals/index.php/psource/issue/view/1257/14
         //  https://journals.library.ualberta.ca/jpps/index.php/JPPS/article/download/29659/21487/80185
-        String pdfString1 = "cleiej/index.php/cleiej/article/download/437/372/1777";
+        String pdfString1 = "cleiej/article/download/437/372/1777";
 
-        String pdfString2 = "journals/index.php/psource/issue/view/1257/14"; // this is a valid pdf
+        String pdfString2 = "psource/issue/view/1257/14"; // this is a valid pdf
 
         // Article: https://journals.library.ualberta.ca/jpps/index.php/JPPS/issue/view/1955
         // PDF: https://journals.library.ualberta.ca/jpps/index.php/JPPS/article/view/30339/21503
-        String pdfString3 = "jpps/index.php/JPPS/article/download/29659/21487/80185";
+        String pdfString3 = "JPPS/article/download/29659/21487/80185";
 
         // JOTT:
         // Article: https://threatenedtaxa.org/index.php/JoTT/article/view/1878
@@ -36,12 +36,12 @@ public class TestOJS3ArchivalUnit extends LockssTestCase {
         // Good cases
         // http://trumpeter.athabascau.ca/index.php/trumpet/article/download/1508/1739
         // http://trumpeter.athabascau.ca/index.php/trumpet/article/view/1508/1739
-        String pdfString4 = "index.php/trumpet/article/download/1508/1739";
-        String pdfString5 = "index.php/trumpet/article/view/1508/1739";
+        String pdfString4 = "trumpet/article/download/1508/1739";
+        String pdfString5 = "trumpet/article/view/1508/1739";
 
-        //testReplacement(pdfString1, "cleiej");
-        //testReplacement(pdfString3, "jpps");
-        //testReplacement(pdfString2, "psource");
+        testReplacement(pdfString1, "cleiej");
+        testReplacement(pdfString3, "jpps");
+        testReplacement(pdfString2, "psource");
 
         // These should success
         testReplacement(pdfString4, "trumpet");

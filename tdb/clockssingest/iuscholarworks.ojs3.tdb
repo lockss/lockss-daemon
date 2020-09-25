@@ -36,8 +36,10 @@
 # determine something is not behaving properly because the base_url is "too
 # short".
 
-    param[base_url] = https://scholarworks.iu.edu/
-    attr[start_stem] = journals/index.php/
+    #param[base_url] = https://scholarworks.iu.edu/
+    #attr[start_stem] = journals/index.php/
+    param[base_url] = https://scholarworks.iu.edu/journals/
+    attr[start_stem] = index.php/
     plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
     implicit < status ; status2 ; year ; param[year] ; name ; volume ; hidden[proxy] >
 
