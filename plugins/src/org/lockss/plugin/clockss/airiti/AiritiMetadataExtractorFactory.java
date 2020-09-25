@@ -4,6 +4,7 @@ import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrl;
+import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 import org.lockss.util.Logger;
 import java.io.IOException;
 
@@ -44,7 +45,8 @@ public class AiritiMetadataExtractorFactory implements FileMetadataExtractorFact
         AiritiMetadataExtractor ris = new AiritiMetadataExtractor();
 
         ris.addRisTag("DA", MetadataField.FIELD_DATE);
-        ris.addRisTag("JO", MetadataField.FIELD_PUBLISHER);
+        ris.addRisTag("JO", MetadataField.FIELD_PUBLICATION_TITLE);
+        //ris.addRisTag("PB", MetadataField.FIELD_PUBLISHER); -- use custom string than provided data
         ris.addRisTag("TI", MetadataField.FIELD_ARTICLE_TITLE);
         ris.addRisTag("SP", MetadataField.FIELD_START_PAGE);
         ris.addRisTag("VL", MetadataField.FIELD_VOLUME);
@@ -52,6 +54,8 @@ public class AiritiMetadataExtractorFactory implements FileMetadataExtractorFact
         ris.addRisTag("SN", MetadataField.FIELD_ISSN);
         ris.addRisTag("DO", MetadataField.FIELD_DOI);
         // Do not use UR listed in the ris file! It will get set to full text CU by daemon
+        ris.removeRisTag("PB");
+
         return ris;
     }
 
@@ -78,8 +82,8 @@ public class AiritiMetadataExtractorFactory implements FileMetadataExtractorFact
                 return; // do not emit, just return - no content
             }
 
-
             am.put(MetadataField.FIELD_ACCESS_URL, pdfName);
+            am.put(MetadataField.FIELD_PUBLISHER, "Airiti, Inc.");
 
             emitter.emitMetadata(cu, am);
         }
