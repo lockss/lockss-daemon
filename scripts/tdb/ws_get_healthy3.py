@@ -5,7 +5,7 @@
 # crontab:
 # ./scripts/tdb/ws_get_healthy.py ingest1.clockss.org:8081 $iun $ipw | sort > $t/gr_ingest_healthy.txt #see gln_ready.sh
 from suds.client import Client
-from suds.sudsobject import asdict
+#from suds.sudsobject import asdict
 import sys
 from datetime import datetime
 
