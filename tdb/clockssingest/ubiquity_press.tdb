@@ -1295,8 +1295,8 @@
       au < finished ; finished ; 2016 ; 1 ; International Review of Social Psychology Volume 2016 ; 2016 ; http://www.rips-irsp.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; 2 ; International Review of Social Psychology Volume 2017 ; 2017 ; http://www.rips-irsp.com/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 3 ; International Review of Social Psychology Volume 2018 ; 2018 ; https://www.rips-irsp.com/ ; reingest4.clockss.org:8082 >
-      au < exists ; exists ; 2019 ; 4 ; International Review of Social Psychology Volume 2019 ; 2019 ; https://www.rips-irsp.com/ ; >
-      au < expected ; exists ; 2020 ; 5 ; International Review of Social Psychology Volume 2020 ; 2020 ; https://www.rips-irsp.com/ ; >
+      au < manifest ; exists ; 2019 ; 4 ; International Review of Social Psychology Volume 2019 ; 2019 ; https://www.rips-irsp.com/ ; >
+      au < manifest ; exists ; 2020 ; 5 ; International Review of Social Psychology Volume 2020 ; 2020 ; https://www.rips-irsp.com/ ; >
 
   }
 
@@ -1356,7 +1356,7 @@
       au < finished ; manifest ; 2017 ; 15 ; Journal of Conservation and Museum Studies Volume 2017 ; 2017 ; https://www.jcms-journal.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 16 ; Journal of Conservation and Museum Studies Volume 2018 ; 2018 ; https://www.jcms-journal.com/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2019 ; 17 ; Journal of Conservation and Museum Studies Volume 2019 ; 2019 ; https://www.jcms-journal.com/ ; >
-      au < expected ; exists ; 2020 ; 18 ; Journal of Conservation and Museum Studies Volume 2020 ; 2020 ; https://www.jcms-journal.com/ ; >
+      au < manifest ; exists ; 2020 ; 18 ; Journal of Conservation and Museum Studies Volume 2020 ; 2020 ; https://www.jcms-journal.com/ ; >
 
   }
 
@@ -1793,8 +1793,8 @@
       au < finished ; finished ; 2016 ; 2 ; Open Quaternary Volume 2016 ; 2016 ; http://www.openquaternary.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; 3 ; Open Quaternary Volume 2017 ; 2017 ; http://www.openquaternary.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 4 ; Open Quaternary Volume 2018 ; 2018 ; https://www.openquaternary.com/ ; reingest4.clockss.org:8082 >
-      au < exists ; exists ; 2019 ; 5 ; Open Quaternary Volume 2019 ; 2019 ; https://www.openquaternary.com/ ; >
-      au < expected ; exists ; 2020 ; 6 ; Open Quaternary Volume 2020 ; 2020 ; https://www.openquaternary.com/ ; >
+      au < manifest ; exists ; 2019 ; 5 ; Open Quaternary Volume 2019 ; 2019 ; https://www.openquaternary.com/ ; >
+      au < manifest ; exists ; 2020 ; 6 ; Open Quaternary Volume 2020 ; 2020 ; https://www.openquaternary.com/ ; >
 
   }
 
@@ -2009,7 +2009,7 @@
       au < finished ; manifest ; 2017 ; 8 ; Utrecht Journal of International and European Law Volume 2017 ; 2017 ; https://utrechtjournal.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 9 ; Utrecht Journal of International and European Law Volume 2018 ; 2018 ; https://utrechtjournal.org/ ; reingest1.clockss.org:8082 >
       au < doesNotExist ; doesNotExist ; 2019 ; 10 ; Utrecht Journal of International and European Law Volume 2019 ; 2019 ; https://utrechtjournal.org/ ; >
-      au < expected ; exists ; 2020 ; 11 ; Utrecht Journal of International and European Law Volume 2020 ; 2020 ; https://utrechtjournal.org/ ; >
+      au < manifest ; exists ; 2020 ; 11 ; Utrecht Journal of International and European Law Volume 2020 ; 2020 ; https://utrechtjournal.org/ ; >
 
     }
   }
@@ -2147,8 +2147,8 @@
 #      param[base_url] = https://www.journalofcognition.org/
 
       au < finished ; manifest ; 2018 ; 1 ; Journal of Cognition Volume 2018 ; 2018 ; https://www.journalofcognition.org/ ; reingest3.clockss.org:8083 >
-      au < exists ; exists ; 2019 ; 2 ; Journal of Cognition Volume 2019 ; 2019 ; https://www.journalofcognition.org/ ; >
-      au < expected ; exists ; 2020 ; 3 ; Journal of Cognition Volume 2020 ; 2020 ; https://www.journalofcognition.org/ ; >
+      au < manifest ; exists ; 2019 ; 2 ; Journal of Cognition Volume 2019 ; 2019 ; https://www.journalofcognition.org/ ; >
+      au < manifest ; exists ; 2020 ; 3 ; Journal of Cognition Volume 2020 ; 2020 ; https://www.journalofcognition.org/ ; >
 
   }
 
@@ -2307,9 +2307,9 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://transactions.ismir.net/
 
-      au < exists ; exists ; 2018 ; 1 ; Transactions of the International Society for Music Information Retrieval Volume 2018 ; 2018 ; https://transactions.ismir.net/ ; >
-      au < exists ; exists ; 2019 ; 2 ; Transactions of the International Society for Music Information Retrieval Volume 2019 ; 2019 ; https://transactions.ismir.net/ ; >
-      au < exists ; exists ; 2020 ; 3 ; Transactions of the International Society for Music Information Retrieval Volume 2020 ; 2020 ; https://transactions.ismir.net/ ; >
+      au < manifest ; exists ; 2018 ; 1 ; Transactions of the International Society for Music Information Retrieval Volume 2018 ; 2018 ; https://transactions.ismir.net/ ; >
+      au < manifest ; exists ; 2019 ; 2 ; Transactions of the International Society for Music Information Retrieval Volume 2019 ; 2019 ; https://transactions.ismir.net/ ; >
+      au < manifest ; exists ; 2020 ; 3 ; Transactions of the International Society for Music Information Retrieval Volume 2020 ; 2020 ; https://transactions.ismir.net/ ; >
 
   }
 
