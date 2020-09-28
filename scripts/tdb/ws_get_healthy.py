@@ -10,7 +10,7 @@ import sys
 from datetime import datetime
 
 if len(sys.argv[1:]) != 3:
-  print 'Usage: %s host:uiport uiuser uipass' % (sys.argv[0],)
+  print('Usage: %s host:uiport uiuser uipass' % (sys.argv[0],))
   sys.exit(1)
 hostport, uiuser, uipass = sys.argv[1:]
 
@@ -23,4 +23,4 @@ query = 'select auId where substanceState = "Yes" and lastCrawlResult = "Success
 #query = 'select auId where substanceState = "Yes" and lastCrawlResult = "Successful"'
 #query = 'select auId,lastCrawl where substanceState = "Yes"'
 results = client.service.queryAus(query)
-for result in results: print result.auId
+for result in results: print(result.auId)
