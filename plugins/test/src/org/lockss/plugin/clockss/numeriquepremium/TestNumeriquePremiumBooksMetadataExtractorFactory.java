@@ -99,7 +99,7 @@ public class TestNumeriquePremiumBooksMetadataExtractorFactory extends LockssTes
                 assertEquals("9782753522657", md.get(MetadataField.FIELD_EISBN));
                 assertEquals("Tomic, Sacha", md.get(MetadataField.FIELD_AUTHOR));
                 assertEquals("Aux origines de la chimie organique", md.get(MetadataField.FIELD_ARTICLE_TITLE));
-                assertEquals("PUR", md.get(MetadataField.FIELD_PUBLISHER));
+                assertEquals("Numerique Premium", md.get(MetadataField.FIELD_PUBLISHER));
                 assertEquals("01-01-2010", md.get(MetadataField.FIELD_DATE));
             }
         }finally {
