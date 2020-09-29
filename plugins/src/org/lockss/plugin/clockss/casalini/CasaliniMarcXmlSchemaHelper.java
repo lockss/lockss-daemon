@@ -63,6 +63,9 @@ implements SourceXmlSchemaHelper {
 		<controlfield tag="006">m        d        </controlfield>
 		<controlfield tag="007">cr uuu---uuuuu</controlfield>
 		<controlfield tag="008">091114n        xx uu   s    u0    0und c</controlfield>
+		<datafield ind1=" " ind2=" " tag="022">
+          <subfield code="a">1972-5043</subfield>
+        </datafield>
 		<datafield ind1="7" ind2=" " tag="024">
 			<subfield code="a">10.1400/64562</subfield>
 			<subfield code="2">DOI</subfield>
@@ -112,6 +115,15 @@ implements SourceXmlSchemaHelper {
    */
 
   /*
+  <datafield ind1=" " ind2=" " tag="022">
+    <subfield code="a">1972-5043</subfield>
+  </datafield>
+   */
+
+  private static final String ISSN_TAG ="022";
+  private static final String issn_code ="a";
+
+  /*
   <datafield ind1="7" ind2=" " tag="024">
 			<subfield code="a">10.1400/64562</subfield>
 			<subfield code="2">DOI</subfield>
@@ -139,6 +151,7 @@ implements SourceXmlSchemaHelper {
    */
   private static final String TITLE_TAG ="245";
   private static final String title_code ="a";
+  private static final String title_code2 ="b";
 
   /*
 	<datafield ind1=" " ind2=" " tag="260">
@@ -163,7 +176,7 @@ implements SourceXmlSchemaHelper {
 
   /*
     <datafield ind1=" " ind2=" " tag="300">
-		<subfield code="a">P. [1-40] [40]</subfield>
+		<subfield code="a">P. [1-40] [40]</subfield>                773
     </datafield>
     <datafield ind1=" " ind2=" " tag="300">
 		<subfield code="a">370-370 p.</subfield>
@@ -213,6 +226,9 @@ implements SourceXmlSchemaHelper {
   public static String PDF_FILE_VOLUME =
           "datafield[@tag = \"" + PUB_TAG + "\"]" +
                   "/subfield[@code = \"" + publication_code + "\"]";
+  public static String PUBLICATION_TITLE =
+          "datafield[@tag = \"" + PUB_TAG + "\"]" +
+                  "/subfield[@code = \"" + publication_code + "\"]";
   public static String PDF_ARTICLE =
           "datafield[@tag = \"" + PDF_TAG + "\"]" +
                   "/subfield[@code = \"" + article_code + "\"]";
@@ -222,6 +238,9 @@ implements SourceXmlSchemaHelper {
   public static String MARC_title = 
       "datafield[@tag = \"" + TITLE_TAG + "\"]" +
           "/subfield[@code=\"" + title_code + "\"]";
+  public static String MARC_title2 =
+          "datafield[@tag = \"" + TITLE_TAG + "\"]" +
+                  "/subfield[@code=\"" + title_code2 + "\"]";
   public static String MARC_pub_date =
       "datafield[@tag = \"" + PUBLICATION_TAG + "\"]" +
           "/subfield[@code = \"" + pubdate_code + "\"]";
@@ -231,6 +250,9 @@ implements SourceXmlSchemaHelper {
   public static String MARC_doi =
           "datafield[@tag = \"" + DOI_TAG + "\"]" +
                   "/subfield[@code = \"" + doi_code + "\"]";
+  public static String MARC_issn =
+          "datafield[@tag = \"" + ISSN_TAG + "\"]" +
+                  "/subfield[@code = \"" + issn_code + "\"]";
   public static String MARC_start_page =
           "datafield[@tag = \"" + START_PAGE_LOCATION_TAG + "\"]" +
                   "/subfield[@code = \"" + start_page_code + "\"]";
@@ -248,14 +270,17 @@ implements SourceXmlSchemaHelper {
   static {
 
     casalini_articleMap.put(MARC_title, XmlDomMetadataExtractor.TEXT_VALUE);
-    casalini_articleMap.put(MARC_publisher, XmlDomMetadataExtractor.TEXT_VALUE);
-    casalini_articleMap.put(MARC_pub_date,  XmlDomMetadataExtractor.TEXT_VALUE);
+    casalini_articleMap.put(MARC_title2, XmlDomMetadataExtractor.TEXT_VALUE);
+    //casalini_articleMap.put(MARC_publisher, XmlDomMetadataExtractor.TEXT_VALUE);  -- handle by postProcess
+    //casalini_articleMap.put(MARC_pub_date,  XmlDomMetadataExtractor.TEXT_VALUE);
     casalini_articleMap.put(PDF_FILE_YEAR, XmlDomMetadataExtractor.TEXT_VALUE);
     casalini_articleMap.put(PDF_FILE_VOLUME, XmlDomMetadataExtractor.TEXT_VALUE);
+    casalini_articleMap.put(PUBLICATION_TITLE, XmlDomMetadataExtractor.TEXT_VALUE);
     casalini_articleMap.put(PDF_ARTICLE, XmlDomMetadataExtractor.TEXT_VALUE);
     casalini_articleMap.put(MARC_file, XmlDomMetadataExtractor.TEXT_VALUE);
     casalini_articleMap.put(MARC_doi, XmlDomMetadataExtractor.TEXT_VALUE);
-    casalini_articleMap.put(MARC_start_page, XmlDomMetadataExtractor.TEXT_VALUE);
+    casalini_articleMap.put(MARC_issn, XmlDomMetadataExtractor.TEXT_VALUE);
+    //casalini_articleMap.put(MARC_start_page, XmlDomMetadataExtractor.TEXT_VALUE);   -- ignore by APS team, since it is not reliable
     casalini_articleMap.put(MARC_author, XmlDomMetadataExtractor.TEXT_VALUE);
 
   }
@@ -271,10 +296,12 @@ implements SourceXmlSchemaHelper {
    */
   private static final MultiValueMap cookMap = new MultiValueMap();
   static {
-    cookMap.put(MARC_title, MetadataField.FIELD_PUBLICATION_TITLE);
-    cookMap.put(MARC_publisher, MetadataField.FIELD_PUBLISHER);
-    cookMap.put(MARC_pub_date, MetadataField.FIELD_DATE);
+    //cookMap.put(MARC_title, MetadataField.FIELD_PUBLICATION_TITLE);
+    //cookMap.put(MARC_publisher, MetadataField.FIELD_PUBLISHER);
+    //cookMap.put(MARC_pub_date, MetadataField.FIELD_DATE);
     cookMap.put(MARC_author, MetadataField.FIELD_AUTHOR);
+    cookMap.put(MARC_issn, MetadataField.FIELD_ISSN);
+
   }
 
 

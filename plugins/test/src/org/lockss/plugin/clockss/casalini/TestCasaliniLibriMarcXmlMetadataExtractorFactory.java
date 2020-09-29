@@ -2,6 +2,7 @@ package org.lockss.plugin.clockss.casalini;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
+import org.lockss.config.TdbAu;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
 import org.lockss.plugin.CachedUrl;
@@ -75,11 +76,9 @@ public class TestCasaliniLibriMarcXmlMetadataExtractorFactory extends SourceXmlM
         assertNotNull(md);
         assertEquals("10.1400/64564", md.get(MetadataField.FIELD_DOI));
         assertEquals("Romano, Cesare.", md.get(MetadataField.FIELD_AUTHOR));
-        assertEquals("37", md.get(MetadataField.FIELD_END_PAGE));
-        assertEquals("1", md.get(MetadataField.FIELD_START_PAGE));
-        assertEquals("Il piccolo Hans e la fobia del professor Freud.", md.get(MetadataField.FIELD_PUBLICATION_TITLE));
-        assertEquals("Franco Angeli,", md.get(MetadataField.FIELD_PUBLISHER));
-        assertEquals("2000.", md.get(MetadataField.FIELD_DATE));
+        assertEquals("Psicoterapia e scienze umane", md.get(MetadataField.FIELD_PUBLICATION_TITLE));
+        assertEquals("Casalini Libri", md.get(MetadataField.FIELD_PUBLISHER));
+        assertEquals("2000", md.get(MetadataField.FIELD_DATE));
     }
 
     private class MyCasaliniLibriMarcXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
@@ -157,36 +156,53 @@ public class TestCasaliniLibriMarcXmlMetadataExtractorFactory extends SourceXmlM
             protected void postCookProcess(SourceXmlSchemaHelper schemaHelper,
                                            CachedUrl cu, ArticleMetadata thisAM) {
 
-                if (thisAM.getRaw(CasaliniMarcXmlSchemaHelper.MARC_start_page) != null) {
-                    String pages = thisAM.getRaw(CasaliniMarcXmlSchemaHelper.MARC_start_page);
-                    // It might in different formats
-                    // P. [1-20] [20]
-                    // 370-370 p.
-                    String page_pattern = "[^\\d]*?(\\d+)\\s*?\\-\\s*?(\\d+)[^\\d]*?";
-
-                    Pattern pattern = Pattern.compile(page_pattern, Pattern.CASE_INSENSITIVE);
-                    Matcher matcher = pattern.matcher(pages);
-
-                    String start_page = "0";
-                    String end_page = "0";
-
-                    while (matcher.find()) {
-                        start_page = matcher.group(1);
-                        end_page = matcher.group(2);
-                    }
-
-                    thisAM.put(MetadataField.FIELD_START_PAGE, start_page);
-                    thisAM.put(MetadataField.FIELD_END_PAGE, end_page);
-                }
 
                 if (thisAM.getRaw(CasaliniMarcXmlSchemaHelper.MARC_author) != null) {
                     String author = thisAM.getRaw(CasaliniMarcXmlSchemaHelper.MARC_author);
                     thisAM.put(MetadataField.FIELD_AUTHOR, author.replace(".", ""));
                 }
 
+                if (thisAM.getRaw(CasaliniMarcXmlSchemaHelper.MARC_pub_date) != null) {
+                    String MARC_pub_date = thisAM.getRaw(CasaliniMarcXmlSchemaHelper.MARC_pub_date);
+                    thisAM.put(MetadataField.FIELD_DATE, MARC_pub_date.replace(".", ""));
+                }
+
+                if (thisAM.getRaw(CasaliniMarcXmlSchemaHelper.PUBLICATION_TITLE) != null) {
+                    String MARC_publication_title = thisAM.getRaw(CasaliniMarcXmlSchemaHelper.PUBLICATION_TITLE);
+
+                    if (MARC_publication_title.indexOf(".") > -1) {
+                        thisAM.put(MetadataField.FIELD_PUBLICATION_TITLE, MARC_publication_title.substring(0, MARC_publication_title.indexOf(".")));
+                    } else {
+                        thisAM.put(MetadataField.FIELD_PUBLICATION_TITLE, MARC_publication_title);
+                    }
+
+
+                    if (thisAM.getRaw(CasaliniMarcXmlSchemaHelper.MARC_title) != null) {
+                        String MARC_title1 = thisAM.getRaw(CasaliniMarcXmlSchemaHelper.MARC_title);
+                        String MARC_title2 = thisAM.getRaw(CasaliniMarcXmlSchemaHelper.MARC_title2);
+
+                        String MARC_title = MARC_title1;
+
+                        if (MARC_title2 != null) {
+                            MARC_title = MARC_title1 +  MARC_title2;
+                            thisAM.put(MetadataField.FIELD_ARTICLE_TITLE, MARC_title);
+                        }
+                        thisAM.put(MetadataField.FIELD_ARTICLE_TITLE, MARC_title);
+                    }
+                }
+
                 if (thisAM.getRaw(CasaliniMarcXmlSchemaHelper.MARC_doi) != null) {
                     thisAM.put(MetadataField.FIELD_DOI, thisAM.getRaw(CasaliniMarcXmlSchemaHelper.MARC_doi));
                 }
+
+                String publisherName = "Casalini Libri";
+
+                TdbAu tdbau = cu.getArchivalUnit().getTdbAu();
+                if (tdbau != null) {
+                    publisherName =  tdbau.getPublisherName();
+                }
+
+                thisAM.put(MetadataField.FIELD_PUBLISHER, publisherName);
             }
         }
     }

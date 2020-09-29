@@ -38,6 +38,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.apache.commons.io.FilenameUtils;
+import org.lockss.config.TdbAu;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
@@ -131,6 +132,8 @@ public class CasaliniLibriMarcXmlMetadataExtractorFactory extends SourceXmlMetad
     protected void postCookProcess(SourceXmlSchemaHelper schemaHelper,
                                    CachedUrl cu, ArticleMetadata thisAM) {
 
+      // Since the pagination format are not consistent, APS team agree to not have "start_page" & "end_page"
+       /*
       if (thisAM.getRaw(CasaliniMarcXmlSchemaHelper.MARC_start_page) != null) {
         String pages = thisAM.getRaw(CasaliniMarcXmlSchemaHelper.MARC_start_page);
         // It might in different formats
@@ -149,13 +152,43 @@ public class CasaliniLibriMarcXmlMetadataExtractorFactory extends SourceXmlMetad
             end_page = matcher.group(2);
         }
 
-        thisAM.put(MetadataField.FIELD_START_PAGE, start_page);
-        thisAM.put(MetadataField.FIELD_END_PAGE, end_page);
+        //thisAM.put(MetadataField.FIELD_START_PAGE, start_page);
+        //thisAM.put(MetadataField.FIELD_END_PAGE, end_page);
       }
+      */
 
       if (thisAM.getRaw(CasaliniMarcXmlSchemaHelper.MARC_author) != null) {
         String author = thisAM.getRaw(CasaliniMarcXmlSchemaHelper.MARC_author);
         thisAM.put(MetadataField.FIELD_AUTHOR, author.replace(".", ""));
+      }
+
+      if (thisAM.getRaw(CasaliniMarcXmlSchemaHelper.MARC_pub_date) != null) {
+        String MARC_pub_date = thisAM.getRaw(CasaliniMarcXmlSchemaHelper.MARC_pub_date);
+        thisAM.put(MetadataField.FIELD_DATE, MARC_pub_date.replace(".", ""));
+      }
+
+      if (thisAM.getRaw(CasaliniMarcXmlSchemaHelper.PUBLICATION_TITLE) != null) {
+        String MARC_publication_title = thisAM.getRaw(CasaliniMarcXmlSchemaHelper.PUBLICATION_TITLE);
+
+        if (MARC_publication_title.indexOf(".") > -1) {
+          thisAM.put(MetadataField.FIELD_PUBLICATION_TITLE, MARC_publication_title.substring(0, MARC_publication_title.indexOf(".")));
+        } else {
+          thisAM.put(MetadataField.FIELD_PUBLICATION_TITLE, MARC_publication_title);
+      }
+
+
+      if (thisAM.getRaw(CasaliniMarcXmlSchemaHelper.MARC_title) != null) {
+        String MARC_title1 = thisAM.getRaw(CasaliniMarcXmlSchemaHelper.MARC_title);
+        String MARC_title2 = thisAM.getRaw(CasaliniMarcXmlSchemaHelper.MARC_title2);
+
+        String MARC_title = MARC_title1;
+
+        if (MARC_title2 != null) {
+          MARC_title = MARC_title1 +  MARC_title2;
+          thisAM.put(MetadataField.FIELD_ARTICLE_TITLE, MARC_title);
+        }
+        thisAM.put(MetadataField.FIELD_ARTICLE_TITLE, MARC_title);
+        }
       }
 
       /*
@@ -185,6 +218,15 @@ public class CasaliniLibriMarcXmlMetadataExtractorFactory extends SourceXmlMetad
       if (thisAM.getRaw(CasaliniMarcXmlSchemaHelper.MARC_doi) != null) {
         thisAM.put(MetadataField.FIELD_DOI, thisAM.getRaw(CasaliniMarcXmlSchemaHelper.MARC_doi));
       }
+
+      String publisherName = "Casalini Libri";
+
+      TdbAu tdbau = cu.getArchivalUnit().getTdbAu();
+      if (tdbau != null) {
+        publisherName =  tdbau.getPublisherName();
+      }
+
+      thisAM.put(MetadataField.FIELD_PUBLISHER, publisherName);
     }
   }
 }
