@@ -1,5 +1,6 @@
 package org.lockss.plugin.clockss.scientificvideoprotocols;
 
+import org.lockss.config.TdbAu;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
 import org.lockss.plugin.ArchivalUnit;
@@ -72,6 +73,15 @@ public class ScientificVideoProtocolsRisMetadataExtractorFactory implements File
 
 
             am.put(MetadataField.FIELD_ACCESS_URL, pdfName);
+
+            String publisherName = "Scientific Video Protocols";
+
+            TdbAu tdbau = cu.getArchivalUnit().getTdbAu();
+            if (tdbau != null) {
+                publisherName =  tdbau.getPublisherName();
+            }
+
+            am.put(MetadataField.FIELD_PUBLISHER, publisherName);
 
             emitter.emitMetadata(cu, am);
         }
