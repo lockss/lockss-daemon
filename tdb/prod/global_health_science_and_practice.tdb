@@ -27,10 +27,10 @@
       rights = openaccess
       param[base_url] = https://www.ghspjournal.org/
 
-      au < HWDrupalPlugin ; exists ; 2017 ; Global Health: Science and Practice Volume 5 ; 5 >
-      au < HWDrupalPlugin ; exists ; 2018 ; Global Health: Science and Practice Volume 6 ; 6 >
-      au < HWDrupalPlugin ; expected ; 2019 ; Global Health: Science and Practice Volume 7 ; 7 >
-      au < HWDrupalPlugin ; expected ; 2020 ; Global Health: Science and Practice Volume 8 ; 8 >
+      au < HWDrupalPlugin ; manifest ; 2017 ; Global Health: Science and Practice Volume 5 ; 5 >
+      au < HWDrupalPlugin ; manifest ; 2018 ; Global Health: Science and Practice Volume 6 ; 6 >
+      au < HWDrupalPlugin ; manifest ; 2019 ; Global Health: Science and Practice Volume 7 ; 7 >
+      au < HWDrupalPlugin ; manifest ; 2020 ; Global Health: Science and Practice Volume 8 ; 8 >
      }
   }
   
