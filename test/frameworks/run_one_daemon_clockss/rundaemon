@@ -73,7 +73,7 @@ fi
 
 TDB_DIR=../tdbxml/${PLN}
 if [ -z "${TITLE_DBS}" -a -d ${TDB_DIR} ]; then
-  TITLE_DBS="`find ${TDB_DIR} -maxdepth 1 -name \*.xml | sort`"
+  TITLE_DBS="`find ${TDB_DIR} -name \*.xml ! -path \*_retired* | sort`"
 fi
 
 

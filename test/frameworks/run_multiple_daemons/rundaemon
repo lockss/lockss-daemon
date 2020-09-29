@@ -59,7 +59,7 @@ done
 # "." here is the test<n> dir
 TDB_DIR=../../tdbxml/prod
 if [ -z "${TITLE_DBS}" -a -d ${TDB_DIR} ]; then
-  TITLE_DBS="`find ${TDB_DIR} -name \*.xml | sort`"
+  TITLE_DBS="`find ${TDB_DIR} -name \*.xml ! -path \*_retired* | sort`"
 fi
 
 
