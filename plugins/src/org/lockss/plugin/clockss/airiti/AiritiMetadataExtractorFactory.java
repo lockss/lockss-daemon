@@ -1,5 +1,6 @@
 package org.lockss.plugin.clockss.airiti;
 
+import org.lockss.config.TdbAu;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
 import org.lockss.plugin.ArchivalUnit;
@@ -83,7 +84,15 @@ public class AiritiMetadataExtractorFactory implements FileMetadataExtractorFact
             }
 
             am.put(MetadataField.FIELD_ACCESS_URL, pdfName);
-            am.put(MetadataField.FIELD_PUBLISHER, "Airiti, Inc.");
+
+            String publisherName = "Airiti";
+
+            TdbAu tdbau = cu.getArchivalUnit().getTdbAu();
+            if (tdbau != null) {
+                publisherName =  tdbau.getPublisherName();
+            }
+
+            am.put(MetadataField.FIELD_PUBLISHER, publisherName);
 
             emitter.emitMetadata(cu, am);
         }
