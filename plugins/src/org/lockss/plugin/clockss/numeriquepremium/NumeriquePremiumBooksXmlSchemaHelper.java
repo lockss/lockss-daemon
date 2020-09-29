@@ -111,7 +111,7 @@ implements SourceXmlSchemaHelper {
   static {
     articleMap.put(book_doi, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(book_title, XmlDomMetadataExtractor.TEXT_VALUE);
-    articleMap.put(book_publisher, XmlDomMetadataExtractor.TEXT_VALUE);
+    //articleMap.put(book_publisher, XmlDomMetadataExtractor.TEXT_VALUE); -- handled by postProcess
     articleMap.put(book_isbn, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(book_eisbn, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(book_pub_date, PUBDATE_VALUE);
@@ -133,7 +133,7 @@ implements SourceXmlSchemaHelper {
     cookMap.put(book_doi, MetadataField.FIELD_DOI);
     cookMap.put(book_isbn, MetadataField.FIELD_ISBN);
     cookMap.put(book_eisbn, MetadataField.FIELD_EISBN);
-    cookMap.put(book_publisher, MetadataField.FIELD_PUBLISHER);
+    //cookMap.put(book_publisher, MetadataField.FIELD_PUBLISHER);  -- handled by postProcess
     cookMap.put(book_title, MetadataField.FIELD_ARTICLE_TITLE);
     cookMap.put(book_author, MetadataField.FIELD_AUTHOR);
     cookMap.put(book_pub_date, MetadataField.FIELD_DATE);

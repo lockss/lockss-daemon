@@ -32,6 +32,7 @@
 
 package org.lockss.plugin.clockss.numeriquepremium;
 
+import org.lockss.config.TdbAu;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.FileMetadataExtractor;
@@ -101,6 +102,15 @@ public class NumeriquePremiumBooksMetadataExtractorFactory extends SourceXmlMeta
     @Override
     protected void postCookProcess(SourceXmlSchemaHelper schemaHelper,
                                    CachedUrl cu, ArticleMetadata thisAM) {
+
+      String publisherName = "Numerique Premium";
+
+      TdbAu tdbau = cu.getArchivalUnit().getTdbAu();
+      if (tdbau != null) {
+        publisherName =  tdbau.getPublisherName();
+      }
+
+      thisAM.put(MetadataField.FIELD_PUBLISHER, publisherName);
 
       if (thisAM.getRaw(NumeriquePremiumBooksXmlSchemaHelper.book_isbn) != null) {
         String book_isbn = thisAM.getRaw(NumeriquePremiumBooksXmlSchemaHelper.book_isbn);
