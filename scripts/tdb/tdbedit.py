@@ -1,10 +1,10 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 
 '''A rudimentary script to change the status, status2, or proxy setting of AUs
 in TDB files from one or more old values to a new value.'''
 
 __copyright__ = '''\
-Copyright (c) 2000-2017, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2020, Board of Trustees of Leland Stanford Jr. University
 All rights reserved.'''
 
 __license__ = '''\
@@ -146,7 +146,7 @@ overwritten.
 
 __version__ = '0.4.2'
 
-import cStringIO
+import io
 import optparse
 import os.path
 import random
@@ -232,10 +232,10 @@ class _TdbEditOptions(object):
     super(_TdbEditOptions, self).__init__()
     # --copyright, --license, --tutorial (--help, --version already done)
     if any([opts.copyright, opts.license, opts.tutorial]):
-      if opts.copyright: print copyright__
-      elif opts.license: print __license__
-      elif opts.tutorial: print __tutorial__
-      else: raise RuntimeError, 'internal error'
+      if opts.copyright: print(__copyright__)
+      elif opts.license: print(__license__)
+      elif opts.tutorial: print(__tutorial__)
+      else: raise(RuntimeError, 'internal error')
       sys.exit()
     # status_change/from_status/keep_status/to_status
     if (opts.from_status is None) != (opts.to_status is None):
@@ -263,8 +263,10 @@ class _TdbEditOptions(object):
     _toproxy = [opts.to_proxy, opts.to_proxy_random, opts.to_proxy_round_robin]
     if (opts.from_proxy is None) != (not any(_toproxy)):
       parser.error('--from-proxy and --to-proxy/--to-proxy-random/-to-proxy-round-robin must be specified together')
-    if len(filter(None, _toproxy)) > 1:
+
+    if len([toproxyopt for toproxyopt in _toproxy if toproxyopt]) > 1:
       parser.error('only one of --to-proxy, --to-proxy-random, -to-proxy-round-robin can be requested')
+
     self.proxy_change = opts.from_proxy is not None
     if self.proxy_change:
       self.from_proxy = set([x.strip() for x in opts.from_proxy.split(',')])
@@ -393,7 +395,7 @@ class _Au(object):
     '''
     fieldindex = self.implicitmap.get(field)
     if fieldindex is None:
-      raise KeyError, '%s' % (field,)
+      raise(KeyError, '%s' % (field,))
     if val.strip() != self.values[fieldindex].strip():
       self.values[fieldindex] = ' %s ' % (val,)
       self.changed = True
@@ -407,7 +409,7 @@ class _Au(object):
     '''
     fieldindex = self.implicitmap.get(field)
     if fieldindex is None:
-      raise KeyError, '%s' % (field,)
+      raise(KeyError, '%s' % (field,))
     name = self.values[fieldindex].strip()
     if name[-1] == ']' :
       # already has an extension - replace 
@@ -437,7 +439,7 @@ def _tdbout(options):
   if proc.returncode != 0:
        sys.exit('%s exited with error code %d: %s' % (tdbout, proc.returncode, err))
   ret = list()
-  for line in cStringIO.StringIO(out):
+  for line in io.StringIO(out):
     x = line.strip().split('\t')
     ret.append([x[0], x[1], int(x[2])])
   return ret
