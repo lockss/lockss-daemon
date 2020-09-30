@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 # Input:
 # A tab-separated dump of the title database, with the columns being:
@@ -35,7 +35,7 @@ def nonRepeated(seq):
 def isNotIn(seq, eliminating):
   '''Returns a sequence of elements of 'seq' that are not in
   'eliminating'.'''
-  return filter(lambda x: x not in set(eliminating), seq)
+  return [x for x in seq if x not in set(eliminating)]
 
 def prettyInt(i):
   '''Given an integer between 0 and 999,999, returns a string version
@@ -119,7 +119,7 @@ def breakdownByPublisher(s, lst, includeNewTitleTag=False):
   structure 'lst' returned by 'buildIntervals'. Returns the longer
   string (the reference 's' is not modified).'''
   for p1, lot1 in lst:
-    lp1 = len(filter(lambda x: x[PUBLISHER] == p1, ausReleasing))
+    lp1 = len([x for x in ausReleasing if x[PUBLISHER] == p1])
     s = s + '%s archival %s from %s:\n\n' % (wordInt(lp1).capitalize(), plural(lp1, 'unit is', 'units are'), p1)
     for t1, lor1 in lot1:
       s = s + ' * %s (' % (t1,)
@@ -157,7 +157,7 @@ LOCKSS Team
 Website: http://www.lockss.org/
 Help: lockss-support (at) lockss (dot) org'''
 
-  print s
+  print(s)
 
 def generateGlnEmail(lst):
   '''Generates the text of a typical GLN release e-mail.'''
@@ -179,7 +179,7 @@ We are pleased to announce that %s additional archival %s now available for pres
   s = s + ':\n\n'
 
   for p1 in publishersReleasing:
-    lp1 = len(filter(lambda x: x[PUBLISHER] == p1, ausReleasing))
+    lp1 = len([x for x in ausReleasing if x[PUBLISHER] == p1])
     s = s + ' * %s (%d archival %s)' % (p1, lp1, plural(lp1, 'unit', 'units'))
     if p1 in publishersNew: s = s + ' [new publisher]'
     s = s + '\n'
@@ -227,7 +227,7 @@ Select the archival units you wish to add to your LOCKSS box. (If your machine h
 
 '''
 
-  print s
+  print(s)
 
 ###
 ### Main
@@ -237,27 +237,27 @@ Select the archival units you wish to add to your LOCKSS box. (If your machine h
 ausAll = [l.rstrip().split('\t') for l in sys.stdin.readlines()]
 
 # Compute sets
-ausReleasing = filter(lambda x: x[STATUS] in RELEASING, ausAll)
-ausReleased = filter(lambda x: x[STATUS] in RELEASED, ausAll)
-titlesReleasing = nonRepeated(map(lambda x: x[TITLE], ausReleasing))
-titlesReleased = nonRepeated(map(lambda x: x[TITLE], ausReleased))
+ausReleasing = [x for x in ausAll if x[STATUS] in RELEASING]
+ausReleased = [x for x in ausAll if x[STATUS] in RELEASED]
+titlesReleasing = nonRepeated([x[TITLE] for x in ausReleasing])
+titlesReleased = nonRepeated([x[TITLE] for x in ausReleased])
 titlesNew = isNotIn(titlesReleasing, titlesReleased)
-publishersReleasing = nonRepeated(map(lambda x: x[PUBLISHER], ausReleasing))
-publishersReleased = nonRepeated(map(lambda x: x[PUBLISHER], ausReleased))
+publishersReleasing = nonRepeated([x[PUBLISHER] for x in ausReleasing])
+publishersReleased = nonRepeated([x[PUBLISHER] for x in ausReleased])
 publishersNew = isNotIn(publishersReleasing, publishersReleased)
-publishersNonAlliance = nonRepeated(map(lambda x: x[PUBLISHER], filter(lambda x: x[PLUGIN] in NON_ALLIANCE, ausReleasing)))
-publishersAlliance = nonRepeated(map(lambda x: x[PUBLISHER], filter(lambda x: x[PLUGIN] not in NON_ALLIANCE, ausReleasing)))
+publishersNonAlliance = nonRepeated([x[PUBLISHER] for x in [x for x in ausReleasing if x[PLUGIN] in NON_ALLIANCE]])
+publishersAlliance = nonRepeated([x[PUBLISHER] for x in [x for x in ausReleasing if x[PLUGIN] not in NON_ALLIANCE]])
 
 # Build range structure
 lst = buildIntervals(ausReleasing)
 
 # Parse command line switches and dispatch accordingly
 if len(sys.argv) == 1:
-  print '''\
+  print('''\
 Usage: %s [-g|--gln|-p|--pln|--by-name-only|--by-publisher-only]
-Input: tab-separated: publisher,title,name,status,plugin''' % (sys.argv[0],)
+Input: tab-separated: publisher,title,name,status,plugin''' % (sys.argv[0],))
 elif sys.argv[1] in ['-g', '--gln']: generateGlnEmail(lst)
 elif sys.argv[1] in ['-p', '--pln']: generateGenericEmail(lst)
-elif sys.argv[1] in ['--by-name-only']: print '\n'.join(filter(lambda x: x.startswith(' * '), breakdownByPublisher('', lst).split('\n')))
-elif sys.argv[1] in ['--by-publisher-only']: print breakdownByPublisher('', lst)
+elif sys.argv[1] in ['--by-name-only']: print('\n'.join([x for x in breakdownByPublisher('', lst).split('\n') if x.startswith(' * ')]))
+elif sys.argv[1] in ['--by-publisher-only']: print(breakdownByPublisher('', lst))
 
