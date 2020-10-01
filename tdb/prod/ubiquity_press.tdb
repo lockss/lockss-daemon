@@ -422,7 +422,7 @@
       au < released ; 2007 ; 3 ; Digital Medievalist Volume 2007 ; 2007 ; https://journal.digitalmedievalist.org/ >
       au < released ; 2008 ; 4 ; Digital Medievalist Volume 2008 ; 2008 ; https://journal.digitalmedievalist.org/ >
       au < released ; 2009 ; 5 ; Digital Medievalist Volume 2009 ; 2009 ; https://journal.digitalmedievalist.org/ >
-      au < doesNotExist ; 2010 ; 6 ; Digital Medievalist Volume 2010 ; 2010 ; https://journal.digitalmedievalist.org/ >
+      au < manifest ; 2010 ; 6 ; Digital Medievalist Volume 2010 ; 2010 ; https://journal.digitalmedievalist.org/ >
       au < released ; 2011 ; 7 ; Digital Medievalist Volume 2011 ; 2011 ; https://journal.digitalmedievalist.org/ >
       au < released ; 2012 ; 8 ; Digital Medievalist Volume 2012 ; 2012 ; https://journal.digitalmedievalist.org/ >
       au < released ; 2013 ; 9 ; Digital Medievalist Volume 2013 ; 2013 ; https://journal.digitalmedievalist.org/ >
@@ -703,7 +703,7 @@
       au < released ; 2014 ; 24 ; Theoretical Roman Archaeology Conference Volume 2014 ; 2014 ; https://traj.openlibhums.org/ >
       au < released ; 2015 ; 25 ; Theoretical Roman Archaeology Conference Volume 2015 ; 2015 ; https://traj.openlibhums.org/ >
       au < doesNotExist ; 2016 ; 26 ; Theoretical Roman Archaeology Journal Volume 2016 ; 2016 ; https://traj.openlibhums.org/ >
-      au < doesNotExist ; 2017 ; 27 ; Theoretical Roman Archaeology Journal Volume 2017 ; 2017 ; https://traj.openlibhums.org/ >
+      au < manifest ; 2017 ; 27 ; Theoretical Roman Archaeology Journal Volume 2017 ; 2017 ; https://traj.openlibhums.org/ >
       au < released ; 2018 ; 28 ; Theoretical Roman Archaeology Journal Volume 2018 ; 2018 ; https://traj.openlibhums.org/ >
       au < released ; 2019 ; 29 ; Theoretical Roman Archaeology Journal Volume 2019 ; 2019 ; https://traj.openlibhums.org/ >
       au < manifest ; 2020 ; 30 ; Theoretical Roman Archaeology Journal Volume 2020 ; 2020 ; https://traj.openlibhums.org/ >
@@ -2303,20 +2303,20 @@
 #      param[base_url] = http://serials.uksg.org/
 
       au < manifest ; 1988 ; 1 ; Serials: The Journal for the Serials Community Volume 1988 ; 1988 ; https://serials.uksg.org/ >
-      au < doesNotExist ; 1989 ; 2 ; Serials: The Journal for the Serials Community Volume 1989 ; 1989 ; https://serials.uksg.org/ >
-      au < doesNotExist ; 1990 ; 3 ; Serials: The Journal for the Serials Community Volume 1990 ; 1990 ; https://serials.uksg.org/ >
-      au < doesNotExist ; 1991 ; 4 ; Serials: The Journal for the Serials Community Volume 1991 ; 1991 ; https://serials.uksg.org/ >
-      au < doesNotExist ; 1992 ; 5 ; Serials: The Journal for the Serials Community Volume 1992 ; 1992 ; https://serials.uksg.org/ >
-      au < doesNotExist ; 1993 ; 6 ; Serials: The Journal for the Serials Community Volume 1993 ; 1993 ; https://serials.uksg.org/ >
-      au < doesNotExist ; 1994 ; 7 ; Serials: The Journal for the Serials Community Volume 1994 ; 1994 ; https://serials.uksg.org/ >
+      au < manifest ; 1989 ; 2 ; Serials: The Journal for the Serials Community Volume 1989 ; 1989 ; https://serials.uksg.org/ >
+      au < manifest ; 1990 ; 3 ; Serials: The Journal for the Serials Community Volume 1990 ; 1990 ; https://serials.uksg.org/ >
+      au < manifest ; 1991 ; 4 ; Serials: The Journal for the Serials Community Volume 1991 ; 1991 ; https://serials.uksg.org/ >
+      au < manifest ; 1992 ; 5 ; Serials: The Journal for the Serials Community Volume 1992 ; 1992 ; https://serials.uksg.org/ >
+      au < manifest ; 1993 ; 6 ; Serials: The Journal for the Serials Community Volume 1993 ; 1993 ; https://serials.uksg.org/ >
+      au < manifest ; 1994 ; 7 ; Serials: The Journal for the Serials Community Volume 1994 ; 1994 ; https://serials.uksg.org/ >
       au < manifest ; 1995 ; 8 ; Serials: The Journal for the Serials Community Volume 1995 ; 1995 ; https://serials.uksg.org/ >
       au < manifest ; 1996 ; 9 ; Serials: The Journal for the Serials Community Volume 1996 ; 1996 ; https://serials.uksg.org/ >
       au < manifest ; 1997 ; 10 ; Serials: The Journal for the Serials Community Volume 1997 ; 1997 ; https://serials.uksg.org/ >
       au < manifest ; 1998 ; 11 ; Serials: The Journal for the Serials Community Volume 1998 ; 1998 ; https://serials.uksg.org/ >
       au < manifest ; 1999 ; 12 ; Serials: The Journal for the Serials Community Volume 1999 ; 1999 ; https://serials.uksg.org/ >
-      au < doesNotExist ; 2000 ; 13 ; Serials: The Journal for the Serials Community Volume 2000 ; 2000 ; https://serials.uksg.org/ >
+      au < manifest ; 2000 ; 13 ; Serials: The Journal for the Serials Community Volume 2000 ; 2000 ; https://serials.uksg.org/ >
       au < released ; 2001 ; 14 ; Serials: The Journal for the Serials Community Volume 2001 ; 2001 ; https://serials.uksg.org/ >
-      au < doesNotExist ; 2002 ; 15 ; Serials: The Journal for the Serials Community Volume 2002 ; 2002 ; https://serials.uksg.org/ >
+      au < manifest ; 2002 ; 15 ; Serials: The Journal for the Serials Community Volume 2002 ; 2002 ; https://serials.uksg.org/ >
       au < released ; 2003 ; 16 ; Serials: The Journal for the Serials Community Volume 2003 ; 2003 ; https://serials.uksg.org/ >
       au < released ; 2004 ; 17 ; Serials: The Journal for the Serials Community Volume 2004 ; 2004 ; https://serials.uksg.org/ >
       au < released ; 2005 ; 18 ; Serials: The Journal for the Serials Community Volume 2005 ; 2005 ; https://serials.uksg.org/ >

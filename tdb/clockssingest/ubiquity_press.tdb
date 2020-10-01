@@ -588,7 +588,7 @@
       au < finished ; frozen ; 2007 ; 3 ; Digital Medievalist Volume 2007 ; 2007 ; https://journal.digitalmedievalist.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2008 ; 4 ; Digital Medievalist Volume 2008 ; 2008 ; https://journal.digitalmedievalist.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2009 ; 5 ; Digital Medievalist Volume 2009 ; 2009 ; https://journal.digitalmedievalist.org/ ; reingest3.clockss.org:8083 >
-      au < doesNotExist ; doesNotExist ; 2010 ; 6 ; Digital Medievalist Volume 2010 ; 2010 ; https://journal.digitalmedievalist.org/ ; > #M exists. No articles for that year.
+      au < manifest ; exists ; 2010 ; 6 ; Digital Medievalist Volume 2010 ; 2010 ; https://journal.digitalmedievalist.org/ ; > #M exists. No articles for that year.
       au < finished ; finished ; 2011 ; 7 ; Digital Medievalist Volume 2011 ; 2011 ; https://journal.digitalmedievalist.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2012 ; 8 ; Digital Medievalist Volume 2012 ; 2012 ; https://journal.digitalmedievalist.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2013 ; 9 ; Digital Medievalist Volume 2013 ; 2013 ; https://journal.digitalmedievalist.org/ ; reingest4.clockss.org:8082 >
@@ -2896,20 +2896,20 @@
 #      param[base_url] = http://serials.uksg.org/
 
       au < manifest ; exists ; 1988 ; 1 ; Serials: The Journal for the Serials Community Volume 1988 ; 1988 ; https://serials.uksg.org/ ; >
-      au < doesNotExist ; doesNotExist ; 1989 ; 2 ; Serials: The Journal for the Serials Community Volume 1989 ; 1989 ; https://serials.uksg.org/ ; > #M exists. No articles for that year.
-      au < doesNotExist ; doesNotExist ; 1990 ; 3 ; Serials: The Journal for the Serials Community Volume 1990 ; 1990 ; https://serials.uksg.org/ ; > #M exists. No articles for that year.
-      au < doesNotExist ; doesNotExist ; 1991 ; 4 ; Serials: The Journal for the Serials Community Volume 1991 ; 1991 ; https://serials.uksg.org/ ; > #M exists. No articles for that year.
-      au < doesNotExist ; doesNotExist ; 1992 ; 5 ; Serials: The Journal for the Serials Community Volume 1992 ; 1992 ; https://serials.uksg.org/ ; > #M exists. No articles for that year.
-      au < doesNotExist ; doesNotExist ; 1993 ; 6 ; Serials: The Journal for the Serials Community Volume 1993 ; 1993 ; https://serials.uksg.org/ ; > #M exists. No articles for that year.
-      au < doesNotExist ; doesNotExist ; 1994 ; 7 ; Serials: The Journal for the Serials Community Volume 1994 ; 1994 ; https://serials.uksg.org/ ; > #M exists. No articles for that year.
+      au < manifest ; exists ; 1989 ; 2 ; Serials: The Journal for the Serials Community Volume 1989 ; 1989 ; https://serials.uksg.org/ ; > #M exists. No articles for that year.
+      au < manifest ; exists ; 1990 ; 3 ; Serials: The Journal for the Serials Community Volume 1990 ; 1990 ; https://serials.uksg.org/ ; > #M exists. No articles for that year.
+      au < manifest ; exists ; 1991 ; 4 ; Serials: The Journal for the Serials Community Volume 1991 ; 1991 ; https://serials.uksg.org/ ; > #M exists. No articles for that year.
+      au < manifest ; exists ; 1992 ; 5 ; Serials: The Journal for the Serials Community Volume 1992 ; 1992 ; https://serials.uksg.org/ ; > #M exists. No articles for that year.
+      au < manifest ; exists ; 1993 ; 6 ; Serials: The Journal for the Serials Community Volume 1993 ; 1993 ; https://serials.uksg.org/ ; > #M exists. No articles for that year.
+      au < manifest ; exists ; 1994 ; 7 ; Serials: The Journal for the Serials Community Volume 1994 ; 1994 ; https://serials.uksg.org/ ; > #M exists. No articles for that year.
       au < manifest ; exists ; 1995 ; 8 ; Serials: The Journal for the Serials Community Volume 1995 ; 1995 ; https://serials.uksg.org/ ; >
       au < manifest ; exists ; 1996 ; 9 ; Serials: The Journal for the Serials Community Volume 1996 ; 1996 ; https://serials.uksg.org/ ; >
       au < manifest ; exists ; 1997 ; 10 ; Serials: The Journal for the Serials Community Volume 1997 ; 1997 ; https://serials.uksg.org/ ; >
       au < manifest ; exists ; 1998 ; 11 ; Serials: The Journal for the Serials Community Volume 1998 ; 1998 ; https://serials.uksg.org/ ; >
       au < manifest ; exists ; 1999 ; 12 ; Serials: The Journal for the Serials Community Volume 1999 ; 1999 ; https://serials.uksg.org/ ; >
-      au < doesNotExist ; doesNotExist ; 2000 ; 13 ; Serials: The Journal for the Serials Community Volume 2000 ; 2000 ; https://serials.uksg.org/ ; > #M exists. No articles for that year.
+      au < manifest ; exists ; 2000 ; 13 ; Serials: The Journal for the Serials Community Volume 2000 ; 2000 ; https://serials.uksg.org/ ; > #M exists. No articles for that year.
       au < finished ; finished ; 2001 ; 14 ; Serials: The Journal for the Serials Community Volume 2001 ; 2001 ; https://serials.uksg.org/ ; reingest3.clockss.org:8083 >
-      au < doesNotExist ; doesNotExist ; 2002 ; 15 ; Serials: The Journal for the Serials Community Volume 2002 ; 2002 ; https://serials.uksg.org/ ; > #M exists. No articles for that year.
+      au < manifest ; exists ; 2002 ; 15 ; Serials: The Journal for the Serials Community Volume 2002 ; 2002 ; https://serials.uksg.org/ ; > #M exists. No articles for that year.
       au < finished ; finished ; 2003 ; 16 ; Serials: The Journal for the Serials Community Volume 2003 ; 2003 ; https://serials.uksg.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2004 ; 17 ; Serials: The Journal for the Serials Community Volume 2004 ; 2004 ; https://serials.uksg.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2005 ; 18 ; Serials: The Journal for the Serials Community Volume 2005 ; 2005 ; https://serials.uksg.org/ ; reingest1.clockss.org:8082 >
