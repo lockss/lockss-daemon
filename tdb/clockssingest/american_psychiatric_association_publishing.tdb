@@ -86,7 +86,7 @@
       au < crawling ; exists ; 2010 ; The American Journal of Psychiatry Volume 14 ; 14 ; >
       au < finished ; manifest ; 2011 ; The American Journal of Psychiatry Volume 15 ; 15 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2012 ; The American Journal of Psychiatry Volume 16 ; 16 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2013 ; The American Journal of Psychiatry Volume 17 ; 17 ; >
+      au < frozen ; exists ; 2013 ; The American Journal of Psychiatry Volume 17 ; 17 ; >
       au < finished ; manifest ; 2014 ; The American Journal of Psychiatry Volume 18 ; 18 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2015 ; The American Journal of Psychiatry Volume 19 ; 19 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2016 ; The American Journal of Psychiatry Volume 20 ; 20 ; reingest5.clockss.org:8082 >
@@ -118,12 +118,12 @@
       au < frozen ; exists ; 2010 ; Focus Volume 8 ; 8 ; >
       au < crawling ; exists ; 2011 ; Focus Volume 9 ; 9 ; >
       au < notReady ; exists ; 2012 ; FOCUS Volume 10 ; 10 ; >
-      au < crawling ; exists ; 2013 ; FOCUS Volume 11 ; 11 ; >
-      au < crawling ; exists ; 2014 ; FOCUS Volume 12 ; 12 ; >
+      au < frozen ; exists ; 2013 ; FOCUS Volume 11 ; 11 ; >
+      au < frozen ; exists ; 2014 ; FOCUS Volume 12 ; 12 ; >
       au < frozen ; exists ; 2015 ; FOCUS Volume 13 ; 13 ; >
       au < crawling ; exists ; 2016 ; FOCUS Volume 14 ; 14 ; >
       au < frozen ; exists ; 2017 ; FOCUS Volume 15 ; 15 ; >
-      au < crawling ; exists ; 2018 ; FOCUS Volume 16 ; 16 ; >
+      au < frozen ; exists ; 2018 ; FOCUS Volume 16 ; 16 ; >
       au < deepCrawl ; exists ; 2019 ; FOCUS Volume 17 ; 17 ; >
       au < crawling ; exists ; 2020 ; FOCUS Volume 18 ; 18 ; >
 
@@ -156,7 +156,7 @@
       au < crawling ; exists ; 2010 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 22 ; 22 ; >
       au < crawling ; exists ; 2011 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 23 ; 23 ; >
       au < notReady ; exists ; 2012 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 24 ; 24 ; >
-      au < crawling ; exists ; 2013 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 25 ; 25 ; >
+      au < frozen ; exists ; 2013 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 25 ; 25 ; >
       au < crawling ; exists ; 2014 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 26 ; 26 ; >
       au < frozen ; exists ; 2015 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 27 ; 27 ; >
       au < crawling ; exists ; 2016 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 28 ; 28 ; >
@@ -191,12 +191,12 @@
       au < manifest ; exists ; 2007 ; Psychiatric Services Volume 58 ; 58 ; >
       au < manifest ; exists ; 2008 ; Psychiatric Services Volume 59 ; 59 ; >
       au < manifest ; exists ; 2009 ; Psychiatric Services Volume 60 ; 60 ; >
-      au < crawling ; exists ; 2010 ; Psychiatric Services Volume 61 ; 61 ; >
+      au < frozen ; exists ; 2010 ; Psychiatric Services Volume 61 ; 61 ; >
       au < frozen ; exists ; 2011 ; Psychiatric Services Volume 62 ; 62 ; >
-      au < crawling ; exists ; 2012 ; Psychiatric Services Volume 63 ; 63 ; >
-      au < crawling ; exists ; 2013 ; Psychiatric Services Volume 64 ; 64 ; >
+      au < frozen ; exists ; 2012 ; Psychiatric Services Volume 63 ; 63 ; >
+      au < frozen ; exists ; 2013 ; Psychiatric Services Volume 64 ; 64 ; >
       au < notReady ; exists ; 2014 ; Psychiatric Services Volume 65 ; 65 ; >
-      au < crawling ; exists ; 2015 ; Psychiatric Services Volume 66 ; 66 ; >
+      au < frozen ; exists ; 2015 ; Psychiatric Services Volume 66 ; 66 ; >
       au < notReady ; exists ; 2016 ; Psychiatric Services Volume 67 ; 67 ; >
       au < frozen ; exists ; 2017 ; Psychiatric Services Volume 68 ; 68 ; >
       au < notReady ; exists ; 2018 ; Psychiatric Services Volume 69 ; 69 ; >
