@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>66</string>
+    <string>67</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -56,16 +56,16 @@
       <!-- all fonts, images, resources, css, js, etc. -->
       <string>1,"^https?://(%s|%s|docserver[.]ingentaconnect[.]com)/.*[.](css|js|eot|svg|ttf|woff.?)([?].*)?$", base_url_host, api_url_host</string>
       <string>1,"^https?://(%s|%s|docserver[.]ingentaconnect[.]com)/.*[.](bmp|gif|ico|jpe?g|png|tif?f)$", base_url_host, api_url_host</string>
-      <string>4,"^(?:%s|%s)", base_url, api_url</string>
+      <string>4,"^https?://(%s|%s)/", url_host(base_url), url_host(api_url)</string>
       <!--  allow option of contentone in place of content, normalized off -->
       <!--  these guard against duplicate URLS from the api_url -->
-      <string>2,"^%scontent(one)?/%s/%s/[0-9]{4}/0*%s/.{8}(\?format=.*)?$", api_url, publisher_id, journal_id, volume_name</string>
-      <string>2,"^%scontent(one)?/%s/%s/[0-9]{4}/0*%s/.{8}/.{8}(\?format=.*)?$", api_url, publisher_id, journal_id, volume_name</string>
+      <string>2,"^https?://%s/content(one)?/%s/%s/[0-9]{4}/0*%s/.{8}(\?format=.*)?$", url_host(api_url), publisher_id, journal_id, volume_name</string>
+      <string>2,"^https?://%s/content(one)?/%s/%s/[0-9]{4}/0*%s/.{8}/.{8}(\?format=.*)?$", url_host(api_url), publisher_id, journal_id, volume_name</string>
       <!--  these guard against unwanted variants -->
-      <string>2,"^(?:%s|%s)content(one)?/%s/%s/[0-9]{4}/0*%s/.*(?:/trial(?:[?]crawler=true)?|/citations|[?]format=rss)$", base_url, api_url, publisher_id, journal_id, volume_name</string>
-      <string>1,"^(?:%s|%s)content(one)?/%s/%s/[0-9]{4}/0*%s/", base_url, api_url, publisher_id, journal_id, volume_name</string>
+      <string>2,"^https?://(%s|%s)/content(one)?/%s/%s/[0-9]{4}/0*%s/.*(?:/trial(?:[?]crawler=true)?|/citations|[?]format=rss)$", url_host(base_url), url_host(api_url), publisher_id, journal_id, volume_name</string>
+      <string>1,"^https?://(%s|%s)/content(one)?/%s/%s/[0-9]{4}/0*%s/", url_host(base_url), url_host(api_url), publisher_id, journal_id, volume_name</string>
       <!-- special crawl rule for Maney Medieval Sermon Studies -->
-      <string>1,"^(?:%s|%s)content/%s/%s/%s$", base_url, api_url, publisher_id, journal_id, volume_name</string>
+      <string>1,"^https?://(%s|%s)/content/%s/%s/%s$", url_host(base_url), url_host(api_url), publisher_id, journal_id, volume_name</string>
       <!-- nope
       <string>1,"^%s", graphics_url</string>
       -->
@@ -76,19 +76,19 @@
     <map>
       <entry>
         <string>au_title</string>
-        <string>"%scontent/%s/%s", base_url, publisher_id, journal_id</string>
+        <string>"%scontent/%s/%s", url_host(base_url), publisher_id, journal_id</string>
       </entry>
       <entry>
         <string>au_volume</string>
-        <string>"%scontent/%s?format=lockss&amp;volume=%s", base_url, journal_issn, volume_name</string>
+        <string>"%scontent/%s?format=lockss&amp;volume=%s", url_host(base_url), journal_issn, volume_name</string>
       </entry>
       <entry>
         <string>au_issue</string>
-        <string>"%scontent/%s/%s/%s/%08d/%08d", base_url, publisher_id, journal_id, year, volume_name, issue</string>
+        <string>"%scontent/%s/%s/%s/%08d/%08d", url_host(base_url), publisher_id, journal_id, year, volume_name, issue</string>
       </entry>
       <entry>
         <string>au_article</string>
-        <string>"%scontent/%s/%s/%s/%08d/%08d/art%05d", base_url, publisher_id, journal_id, year, volume_name, issue, article</string>
+        <string>"%scontent/%s/%s/%s/%08d/%08d/art%05d", url_host(base_url), publisher_id, journal_id, year, volume_name, issue, article</string>
       </entry>
      </map>
   </entry>
@@ -101,6 +101,7 @@
       <!--  if necessary we can put it in as a CDN for legacy content but no old AUs had anything other than permission -->
       <!-- <string>"%slockss.txt", graphics_url</string> -->
       <!-- docserver.ingentaconnect.com serves figuresand permission exists at both http/https -->
+      <!-- there is no https version of lockss.txt on October/2020, and it does not support "?" regexp -->
       <string>"http://docserver.ingentaconnect.com/lockss.txt"</string>
     </list>
   </entry>
@@ -170,6 +171,20 @@
       </org.lockss.daemon.ConfigParamDescr>
     </list>
   </entry>
+  <!--  support http to https transition for existing AUs -->
+  <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.base.HttpToHttpsUrlConsumerFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_url_fetcher_factory</string>
+    <string>org.lockss.plugin.base.HttpToHttpsUrlFetcherFactory</string>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.BaseUrlHttpHttpsUrlNormalizer</string>
+  </entry>
+  <!--  end http to https transition specific support  -->
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.ingenta.IngentaJournalHtmlFilterFactory</string>
@@ -207,7 +222,7 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%scontent/%s/%s/[0-9]{4}/[^/]+/[^/]+/[^/]+[?]crawler=true&amp;mimetype=application/pdf", api_url, publisher_id, journal_id, volume_name</string>
+      <string>"^https?://%s/content/%s/%s/[0-9]{4}/[^/]+/[^/]+/[^/]+[?]crawler=true&amp;mimetype=application/pdf",  url_host(api_url), publisher_id, journal_id, volume_name</string>
     </list>
   </entry>
   <entry>

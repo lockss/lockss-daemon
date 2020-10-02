@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>66</string>
+    <string>67</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -17,7 +17,7 @@
   </entry>
    <entry>
     <string>plugin_parent_version</string>
-    <string>66</string>
+    <string>67</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -32,19 +32,19 @@
     <map>
       <entry>
         <string>au_title</string>
-        <string>"%scontent/%s/%s", base_url, publisher_id, journal_id</string>
+        <string>"^https?://%s/content/%s/%s", url_host(base_url) publisher_id, journal_id</string>
       </entry>
       <entry>
         <string>au_volume</string>
-        <string>"%scontent/%s?format=clockss&amp;volume=%s", base_url, journal_issn, volume_name</string>
+        <string>"^https?://%s/content/%s?format=clockss&amp;volume=%s", url_host(base_url), journal_issn, volume_name</string>
       </entry>
       <entry>
         <string>au_issue</string>
-        <string>"%scontent/%s/%s/%s/%08d/%08d", base_url, publisher_id, journal_id, year, volume_name, issue</string>
+        <string>"^https?://%s/content/%s/%s/%s/%08d/%08d", url_host(base_url), publisher_id, journal_id, year, volume_name, issue</string>
       </entry>
       <entry>
         <string>au_article</string>
-        <string>"%scontent/%s/%s/%s/%08d/%08d/art%05d", base_url, publisher_id, journal_id, year, volume_name, issue, article</string>
+        <string>"^https?://%s/content/%s/%s/%s/%08d/%08d/art%05d", url_host(base_url), publisher_id, journal_id, year, volume_name, issue, article</string>
       </entry>
     </map>
   </entry>
