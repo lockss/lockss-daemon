@@ -27,7 +27,7 @@
       au < manifest ; exists ; 2016 ; 2016 ; American Literary Scholarship 2016 ; 2014 ; >
       au < manifest ; exists ; 2017 ; 2017 ; American Literary Scholarship 2017 ; 2015 ; >
       au < manifest ; exists ; 2018 ; 2018 ; American Literary Scholarship 2018 ; 2016 ; >
-      au < testing ; exists ; 2019 ; 2019 ; American Literary Scholarship 2019 ; 2017 ; >
+      au < notReady ; exists ; 2019 ; 2019 ; American Literary Scholarship 2019 ; 2017 ; > #unable to add to AUTest
       au < manifest ; exists ; 2020 ; 2020 ; American Literary Scholarship 2020 ; 2018 ; >
 
   }
@@ -1058,7 +1058,7 @@
       param[journal_id] = tsq
       #alternate title = TSQ
 
-      au < manifest ; exists ; 2016 ; 2016 ; Transgender Studies Quarterly Volume 3 ; 3 ; >
+      au < testing ; exists ; 2016 ; 2016 ; Transgender Studies Quarterly Volume 3 ; 3 ; >
       au < manifest ; exists ; 2017 ; 2017 ; Transgender Studies Quarterly Volume 4 ; 4 ; >
       au < manifest ; exists ; 2018 ; 2018 ; Transgender Studies Quarterly Volume 5 ; 5 ; >
       au < manifest ; exists ; 2019 ; 2019 ; Transgender Studies Quarterly Volume 6 ; 6 ; >
@@ -1091,7 +1091,7 @@
       au < manifest ; exists ; 2012 ; 2012 ; Twentieth-Century Literature Volume 58 ; 58 ; >
       au < manifest ; exists ; 2013 ; 2013 ; Twentieth-Century Literature Volume 59 ; 59 ; >
       au < manifest ; exists ; 2014 ; 2014 ; Twentieth-Century Literature Volume 60 ; 60 ; >
-      au < manifest ; exists ; 2015 ; 2015 ; Twentieth-Century Literature Volume 61 ; 61 ; >
+      au < testing ; exists ; 2015 ; 2015 ; Twentieth-Century Literature Volume 61 ; 61 ; >
       au < manifest ; exists ; 2016 ; 2016 ; Twentieth-Century Literature Volume 62 ; 62 ; >
       au < manifest ; exists ; 2017 ; 2017 ; Twentieth-Century Literature Volume 63 ; 63 ; >
       au < manifest ; exists ; 2018 ; 2018 ; Twentieth-Century Literature Volume 64 ; 64 ; >
