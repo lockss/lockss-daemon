@@ -1,0 +1,28 @@
+{
+
+  publisher <
+    name = BioOne ;
+    #info[contract] = 2020 ;
+    info[tester] = 8 ;
+    info[poller] = 3
+  >
+
+  plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+
+  implicit < status ; year ; name ; param[year] >
+  {
+
+      title <
+        name = American Entomological Society
+      >
+
+      param[journal_id] = canadian-journal-of-animal-science
+
+     {
+       param[base_url] = https://bioone.org/
+
+      au < manifest ; 2019 ; American Entomological Society 2019 ; 2019 >
+
+      }
+  }
+}
