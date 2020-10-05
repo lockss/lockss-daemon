@@ -2290,7 +2290,7 @@
 
     param[journal_id] = crigm
 
-    au < exists ; exists ; 2011 ; Case Reports in Gastrointestinal Medicine Volume 2011 ; 2011 ; 2011 ; >
+    au < manifest ; exists ; 2011 ; Case Reports in Gastrointestinal Medicine Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Gastrointestinal Medicine Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Case Reports in Gastrointestinal Medicine Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Gastrointestinal Medicine Volume 2014 ; 2014 ; 2014 ; >
@@ -6360,7 +6360,7 @@
     au < manifest ; exists ; 2008 ; International Journal of Reacting Systems Volume 2008 ; 2008 ; 2008 ; >
     au < doesNotExist ; doesNotExist ; 2009 ; Journal of Combustion Volume 2009 ; 2009 ; 2009 ; >
     au < manifest ; exists ; 2010 ; Journal of Combustion Volume 2010 ; 2010 ; 2010 ; >
-    au < exists ; exists ; 2011 ; Journal of Combustion Volume 2011 ; 2011 ; 2011 ; >
+    au < manifest ; exists ; 2011 ; Journal of Combustion Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Combustion Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Journal of Combustion Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Combustion Volume 2014 ; 2014 ; 2014 ; >
