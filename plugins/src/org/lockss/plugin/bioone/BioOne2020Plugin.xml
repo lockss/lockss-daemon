@@ -1,0 +1,178 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>development</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.bioone.BioOne2020Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>BioOne 2020 Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>plugin_publishing_platform</string>
+    <string>BioOne 2020</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_id</key>
+        <displayName>Journal Identifier</displayName>
+        <description>Identifier for journal (often used as part of file names)</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"BioOne 2020 Plugin, Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <!--https://bioone.org/publishers/The-American-Entomological-Society-->
+    <!--https://bioone.org/journals/canadian-journal-of-animal-science/issues/2019-->
+    <!--https://bioone.org/journals/canadian-journal-of-animal-science/volume-99/issue-4-->
+    <!--https://bioone.org/journals/canadian-journal-of-animal-science/volume-99/issue-4/cjas-2018-0252/What-can-PIWI-interacting-RNA-research-learn-from-chickens-and/10.1139/cjas-2018-0252.full-->
+    <string>"%sjournals/%s/issues/%d", base_url, journal_id, year</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <!--https://bioone.org/publishers/The-American-Entomological-Society-->
+    <!--https://bioone.org/journals/canadian-journal-of-animal-science/issues/2019-->
+    <!--https://bioone.org/journals/canadian-journal-of-animal-science/volume-99/issue-4-->
+    <!--https://bioone.org/journals/canadian-journal-of-animal-science/volume-99/issue-4/cjas-2018-0252/What-can-PIWI-interacting-RNA-research-learn-from-chickens-and/10.1139/cjas-2018-0252.full-->
+    <string>"%sjournals/%s/issues/%d", base_url, journal_id, year</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <!--
+         https://use.typekit.net/aot8jlq.css"
+         href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css
+         src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"
+         https://cloud.typography.com/7583652/759528/css/fonts.css
+         -->
+      <string>1,"https://use.typekit.net/.*\.css"</string>
+      <string>1,"https://cloud.typography.com/.*\.css"</string>
+      <string>1,"cdnjs.cloudflare.com/ajax/.*\.js"</string>
+      <!--
+      https://bioone.org/ContentImages/Journals/cjas/99/4/cjas-2018-0252/graphic/cjas-2018-0252f6.jpg
+      -->
+      <string>1,"%sjournals/%s/issues/%d", base_url, journal_id, year</string>
+      <string>1,"%sjournals/%s/volume[^/]+/issue[^/]", base_url, journal_id, year</string>
+      <string>1,"%s(ContentImages|journalArticle|Images|images)", base_url</string>
+    </list>
+  </entry>
+ <entry>
+   <!--https://bioone.org/journalArticle/Download?fullDOI=10.1139%2Fcjas-2018-0252-->
+     <string>au_substance_url_pattern</string>
+       <string>"%sjournalArticle/Download", base_url</string>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.bioone.BioOne2020HtmlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.bioone.BioOne2020ArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.bioone.BioOne2020ArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.bioone.BioOne2020MetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+    <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.bioone.BioOne2020HtmlFilterFactory</string>
+  </entry>
+  <!--
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry>
+  <entry>
+    <string>au_refetch_depth</string>
+    <int>2</int>
+  </entry>
+  -->
+  <!--  versioning or variants for style support -->
+  <entry>
+    <string>au_repair_from_peer_if_missing_url_pattern</string>
+    <list>
+      <string>.*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)(_v[0-9]+|\?v=[0-9.]+|\?[a-z0-9]+)</string>
+    </list>
+  </entry>
+  <!-- Weight Rule-->
+  <!-- Archived page should be weighted to 0 since it will change from time to time-->
+  <entry>
+    <string>au_url_poll_result_weight</string>
+    <list>
+      <string>.*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)(_v[0-9]+|\?v=[0-9.]+|\?[a-z0-9]+), 0</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_permitted_host_pattern</string>
+    <list>
+      <string>"use\.typekit\.net"</string>
+      <string>"cdnjs\.cloudflare\.com"</string>
+      <string>"cloud\.typography\.com"</string>
+    </list>
+  </entry>
+</map>
