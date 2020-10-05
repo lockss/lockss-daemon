@@ -351,28 +351,6 @@ public class TestEmerald2020HtmlFilterFactory extends LockssTestCase {
         mau = createAu();
     }
 
-
-    private static void compareContentLineByLine(String before, String after) {
-        String[] beforeArr = before.split("\n");
-        String[] afterArr = after.split("\n");
-
-        int len = beforeArr.length;
-
-        for (int i = 0, sb1_i = 0, sb2_i = 0;  i < len; i++, sb1_i++, sb2_i++) {
-            StringBuilder sb1 = new StringBuilder();
-            StringBuilder sb2 = new StringBuilder();
-
-            sb1.append(beforeArr[i].replaceAll("\\s+", ""));
-            sb2.append(afterArr[i].replaceAll("\\s+", ""));
-
-            assertEquals(sb2.toString(), sb2.toString());
-
-            sb1.setLength(0);
-            sb2.setLength(0);
-        }
-
-    }
-
     public static class TestHash extends TestEmerald2020HtmlFilterFactory {
 
         public void testFullContentHash() throws Exception {
@@ -381,8 +359,6 @@ public class TestEmerald2020HtmlFilterFactory extends LockssTestCase {
 
             assertEquals(unicodeFilteredStr, unicodeExpectedStr);
         }
-
-
     }
 
     public static Test suite() {
