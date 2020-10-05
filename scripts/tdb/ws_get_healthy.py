@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 
 # This script queries for auids,date of last successful crawl, 
 # in order to release to the gln.
@@ -19,8 +19,8 @@ client = Client(url, username=uiuser, password=uipass)
 #query = 'select auId,lastCrawl,contentSize where substanceState = "Yes" and lastCrawlResult = "Successful"'
 #query = 'select auId,contentSize,lastCrawl,availableFromPublisher where substanceState = "Yes" and lastCrawlResult = "Successful" and auId like "%TaylorAndFrancisPlugin%"'
 #query = 'select auId where substanceState = "Yes" and lastCrawlResult = "Successful" and tdbYear like "%201%" and auId like "%Books%"'
-#query = 'select auId where substanceState = "Yes" and lastCrawlResult = "Successful" and tdbYear like "20%"'
-query = 'select auId where substanceState = "Yes" and lastCrawlResult = "Successful"'
+query = 'select auId where substanceState = "Yes" and lastCrawlResult = "Successful" and tdbYear like "20%"'
+#query = 'select auId where substanceState = "Yes" and lastCrawlResult = "Successful"'
 #query = 'select auId,lastCrawl where substanceState = "Yes"'
 results = client.service.queryAus(query)
 for result in results: print(result.auId)
