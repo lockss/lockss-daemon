@@ -60,10 +60,6 @@
     <string>"Emerald Group Publishing 2020 Books Plugin, Base URL %s, Path %s", base_url, book_uri</string>
   </entry>
   <entry>
-    <string>au_permission_url</string>
-    <string>"http://clockss-ingest.lockss.org/clockss.txt"</string>
-  </entry>
-  <entry>
     <string>au_start_url</string>
     <!-- https://www.emerald.com/insight/content/doi/10.1108/978-1-78714-501-620171009/full/html -->
     <string>"%sinsight/content/doi/%s/full/html", base_url, book_uri</string>

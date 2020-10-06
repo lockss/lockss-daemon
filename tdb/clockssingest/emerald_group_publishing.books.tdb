@@ -1,0 +1,21 @@
+{
+  publisher <
+    name = Emerald Group Publishing ;
+    #info[contract] = 2014 ;
+    info[tester] = 8 ;
+    info[poller] = 8
+ >
+  plugin = org.lockss.plugin.emerald.Emerald2020BooksPlugin
+  param[base_url] = https://www.emerald.com/
+  implicit < status ; status2 ; year ; isbn ; book_eisbn ; name ;  param[book_uri] ; hidden[proxy] >
+
+   {
+      title <
+      name = Advanced Strategies in Entrepreneurship, Education and Ecology ;
+      type = bookSeries
+      >
+
+    au < manifest ; exists ; 2017 ; 978-1-78714-502-3 ; 978-1-78714-501-6 ; '"Internet of Things" Firms and New Patterns of Internationalization' ; 10.1108/978-1-78714-501-620171009 ; >
+
+  }
+}

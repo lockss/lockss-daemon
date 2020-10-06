@@ -68,10 +68,6 @@
     <string>"Emerald Group Publishing 2020 Plugin, Base URL %s, ISSN %s, Volume %s", base_url, journal_issn, volume_name</string>
   </entry>
   <entry>
-    <string>au_permission_url</string>
-    <string>"http://clockss-ingest.lockss.org/clockss.txt"</string>
-  </entry>
-  <entry>
     <string>au_start_url</string>
     <!-- https://www.emerald.com/insight/publication/issn/0260-2288 -->
     <string>"%sinsight/publication/issn/%s", base_url, journal_issn</string>
