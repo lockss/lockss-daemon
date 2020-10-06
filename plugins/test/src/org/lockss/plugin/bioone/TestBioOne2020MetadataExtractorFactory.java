@@ -54,7 +54,7 @@ public class TestBioOne2020MetadataExtractorFactory extends LockssTestCase {
 
   private static Logger log = Logger.getLogger(TestBioOne2020MetadataExtractorFactory.class);
 
-  private static final String PLUGIN_ID = "org.lockss.plugin.americanentomologicalsociety.AmericanEntomologicalSocietyPlugin";
+  private static final String PLUGIN_ID = "org.lockss.plugin.bioone.BioOne2020Plugin";
 
   private ArchivalUnit mau;
   private String tempDirPath;
