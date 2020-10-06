@@ -246,45 +246,45 @@ def query_aus(host, auth, select, where=None):
     names to build a SELECT clause, optionally using the given string to build a
     WHERE clause, and returns a list of records with these fields (populated or
     not depending on the SELECT clause):
-    - AccessType (string)
-    - ArticleUrls (list of strings)
-    - AuConfiguration, a record with these fields:
-        - DefParams, a list of records with these fields:
-            - Key (string)
-            - Value (string)
-        - NonDefParams, a list of records with these fields:
-            - Key (string)
-            - Value (string)
-    - AuId (string)
-    - AvailableFromPublisher (boolean)
-    - ContentSize (numeric)
-    - CrawlPool (string)
-    - CrawlProxy (string)
-    - CrawlWindow (string)
-    - CreationTime (numeric)
-    - CurrentlyCrawling (boolean)
-    - CurrentlyPolling (boolean)
-    - DiskUsage (numeric)
-    - HighestPollAgreement (numeric)
-    - IsBulkContent (boolean)
-    - JournalTitle (string)
-    - LastCompletedCrawl (numeric)
-    - LastCompletedPoll (numeric)
-    - LastCrawl (numeric)
-    - LastCrawlResult (string)
-    - LastCompletedDeepCrawl (numeric)
-    - LastDeepCrawl (numeric)
-    - LastDeepCrawlResult (string)
-    - LastCompletedDeepCrawlDepth (numeric)
-    - LastPoll (numeric)
-    - LastPollResult (string)
-    - LastMetadataIndex (numeric)
-    - Name (string)
-    - NewContentCrawlUrls (list of strings)
-    - PeerAgreements, a list of records with these fields:
-        - Agreements, a record with these fields:
-            - Entry, a list of records with these fields:
-                - Key, a string among:
+    - accessType (string)
+    - articleUrls (list of strings)
+    - auConfiguration, a record with these fields:
+        - defParams, a list of records with these fields:
+            - key (string)
+            - value (string)
+        - nonDefParams, a list of records with these fields:
+            - key (string)
+            - value (string)
+    - auId (string)
+    - availableFromPublisher (boolean)
+    - contentSize (numeric)
+    - crawlPool (string)
+    - crawlProxy (string)
+    - crawlWindow (string)
+    - creationTime (numeric)
+    - currentlyCrawling (boolean)
+    - currentlyPolling (boolean)
+    - diskUsage (numeric)
+    - highestPollAgreement (numeric)
+    - isBulkContent (boolean)
+    - journalTitle (string)
+    - lastCompletedCrawl (numeric)
+    - lastCompletedPoll (numeric)
+    - lastCrawl (numeric)
+    - lastCrawlResult (string)
+    - lastCompletedDeepCrawl (numeric)
+    - lastDeepCrawl (numeric)
+    - lastDeepCrawlResult (string)
+    - lastCompletedDeepCrawlDepth (numeric)
+    - lastPoll (numeric)
+    - lastPollResult (string)
+    - lastMetadataIndex (numeric)
+    - name (string)
+    - newContentCrawlUrls (list of strings)
+    - peerAgreements, a list of records with these fields:
+        - agreements, a record with these fields:
+            - entry, a list of records with these fields:
+                - key, a string among:
                     - "POR"
                     - "POP"
                     - "SYMMETRIC_POR"
@@ -301,27 +301,27 @@ def query_aus(host, auth, select, where=None):
                     - "W_POP_HINT"
                     - "W_SYMMETRIC_POR_HINT"
                     - "W_SYMMETRIC_POP_HINT"
-                - Value, a record with these fields:
+                - value, a record with these fields:
                     - HighestPercentAgreement (floating point)
                     - HighestPercentAgreementTimestamp (numeric)
                     - PercentAgreement (floating point)
                     - PercentAgreementTimestamp (numeric)
-        - PeerId (string)
-    - PluginName (string)
-    - PublishingPlatform (string)
-    - RecentPollAgreement (numeric)
-    - RepositoryPath (string)
-    - SubscriptionStatus (string)
-    - SubstanceState (string)
-    - TdbProvider (string)
-    - TdbPublisher (string)
-    - TdbYear (string)
-    - UrlStems (list of strings)
-    - Urls, a list of records with these fields:
-        - CureentVersionSize (numeric)
-        - Url (string)
-        - VersionCount (numeric)
-    - Volume (string)
+        - peerId (string)
+    - pluginName (string)
+    - publishingPlatform (string)
+    - recentPollAgreement (numeric)
+    - repositoryPath (string)
+    - subscriptionStatus (string)
+    - substanceState (string)
+    - tdbProvider (string)
+    - tdbPublisher (string)
+    - tdbYear (string)
+    - urlStems (list of strings)
+    - urls, a list of records with these fields:
+        - currentVersionSize (numeric)
+        - url (string)
+        - versionCount (numeric)
+    - volume (string)
     Parameters:
     - host (string): a host:port pair
     - auth (requests.auth.AuthBase object): an authentication object
@@ -344,54 +344,51 @@ def query_aus(host, auth, select, where=None):
     return client.service.queryAus(auQuery=query)
 
 def query_crawls(host, auth, select, where=None):
-  '''Performs a queryCrawls operation on the given host, using the given field
-  names to build a SELECT clause, optionally using the given string to build a
-  WHERE clause, and returns a list of records with these fields (populated or
-  not depending on the SELECT clause):
-  - AuId (string)
-  - AuName (string)
-  - BytesFetchedCount (long)
-  - CrawlKey (string)
-  - CrawlStatus (string)
-  - CrawlType (string)
-  - Duration (long)
-  - LinkDepth (int)
-  - MimeTypeCount (int)
-  - MimeTypes (list of strings)
-  - OffSiteUrlsExcludedCount (int)
-  - PagesExcluded (list of strings)
-  - PagesExcludedCount (int)
-  - PagesFetched (list of strings)
-  - PagesFetchedCount (int)
-  - PagesNotModified (list of strings)
-  - PagesNotModifiedCount (int)
-  - PagesParsed (list of strings)
-  - PagesParsedCount (int)
-  - PagesPending (list of strings)
-  - PagesPendingCount (int)
-  - PagesWithErrors, a list of records with these fields:
-      - Message (string)
-      - Severity (string)
-      - Url (string)
-  - PagesWithErrorsCount (int)
-  - RefetchDepth (int)
-  - Sources (list of strings)
-  - StartTime (long)
-  - StartingUrls (list of strings)
-  '''
-  if type(select) is list: query = 'SELECT %s' % (', '.join(select))
-  elif type(select) is str: query = 'SELECT %s' % (select,)
-  else: raise ValueError('invalid type for select parameter: %s' % (type(select),))
-  if where is not None: query = '%s WHERE %s' % (query, where)
-  req = DaemonStatusServiceImplService_client.queryCrawls()
-  req.CrawlQuery = query
-  return _ws_port(host, auth).queryCrawls(req).Return
-
-#def _ws_port(host, auth, tracefile=None):
-#  url = 'http://%s/ws/DaemonStatusService' % (host,)
-#  locator = DaemonStatusServiceImplService_client.DaemonStatusServiceImplServiceLocator()
-#  if tracefile is None: return locator.getDaemonStatusServiceImplPort(url=url, auth=auth)
-#  else: return locator.getDaemonStatusServiceImplPort(url=url, auth=auth, tracefile=tracefile)
+    '''Performs a queryCrawls operation on the given host, using the given field
+    names to build a SELECT clause, optionally using the given string to build a
+    WHERE clause, and returns a list of records with these fields (populated or
+    not depending on the SELECT clause):
+    - auId (string)
+    - auName (string)
+    - bytesFetchedCount (long)
+    - crawlKey (string)
+    - crawlStatus (string)
+    - crawlType (string)
+    - duration (long)
+    - linkDepth (int)
+    - mimeTypeCount (int)
+    - mimeTypes (list of strings)
+    - offSiteUrlsExcludedCount (int)
+    - pagesExcluded (list of strings)
+    - pagesExcludedCount (int)
+    - pagesFetched (list of strings)
+    - pagesFetchedCount (int)
+    - pagesNotModified (list of strings)
+    - pagesNotModifiedCount (int)
+    - pagesParsed (list of strings)
+    - pagesParsedCount (int)
+    - pagesPending (list of strings)
+    - pagesPendingCount (int)
+    - pagesWithErrors, a list of records with these fields:
+        - message (string)
+        - severity (string)
+        - url (string)
+    - pagesWithErrorsCount (int)
+    - refetchDepth (int)
+    - sources (list of strings)
+    - startTime (long)
+    - startingUrls (list of strings)
+    '''
+    if type(select) is list:
+        query = f'SELECT {", ".join(select)}'
+    elif type(select) is str:
+        query = f'SELECT {select}'
+    else:
+        raise ValueError(f'invalid type for select parameter: {type(select)}')
+    if where is not None:
+        query = f'{query} WHERE {where}'
+    client = _make_client(host, auth)
+    return client.service.queryCrawls(crawlQuery=query)
 
 #
 # Command line tool
@@ -755,44 +752,44 @@ def _do_query_aus(options):
   _output_table(options, data, ['AUID'], [[x[0] for x in headlamb], sorted(options.hosts)] if options.group_by_field else [sorted(options.hosts), [x[0] for x in headlamb]])
 
 _QUERY_CRAWLS = {
-  'auId': ('AUID', lambda r: r.AuId),
-  'auName': ('AU name', lambda r: r.AuName),
-  'bytesFetchedCount': ('Bytes Fetched', lambda r: r.BytesFetchedCount),
-  'crawlKey': ('Crawl key', lambda r: r.CrawlKey),
-  'crawlStatus': ('Crawl status', lambda r: r.CrawlStatus),
-  'crawlType': ('Crawl type', lambda r: r.CrawlType),
-  'duration': ('Duration', lambda r: durationms(r.Duration)),
-  'linkDepth': ('Link depth', lambda r: r.LinkDepth),
-  'mimeTypeCount': ('MIME type count', lambda r: r.MimeTypeCount),
+  'auId': ('AUID', lambda r: r.auId),
+  'auName': ('AU name', lambda r: r.auName),
+  'bytesFetchedCount': ('Bytes Fetched', lambda r: r.bytesFetchedCount),
+  'crawlKey': ('Crawl key', lambda r: r.crawlKey),
+  'crawlStatus': ('Crawl status', lambda r: r.crawlStatus),
+  'crawlType': ('Crawl type', lambda r: r.crawlType),
+  'duration': ('Duration', lambda r: durationms(r.duration)),
+  'linkDepth': ('Link depth', lambda r: r.linkDepth),
+  'mimeTypeCount': ('MIME type count', lambda r: r.mimeTypeCount),
   'mimeTypes': ('MIME types', lambda r: '<MIME types>'),
-  'offSiteUrlsExcludedCount': ('Off-site URLs excluded count', lambda r: r.OffSiteUrlsExcludedCount),
+  'offSiteUrlsExcludedCount': ('Off-site URLs excluded count', lambda r: r.offSiteUrlsExcludedCount),
   'pagesExcluded': ('Pages excluded', lambda r: '<Pages excluded>'),
-  'pagesExcludedCount': ('Pages excluded count', lambda r: r.PagesExcludedCount),
+  'pagesExcludedCount': ('Pages excluded count', lambda r: r.pagesExcludedCount),
   'pagesFetched': ('Pages fetched', lambda r: '<Pages fetched>'),
-  'pagesFetchedCount': ('Pages fetched count', lambda r: r.PagesFetchedCount),
+  'pagesFetchedCount': ('Pages fetched count', lambda r: r.pagesFetchedCount),
   'pagesNotModified': ('Pages not modified', lambda r: '<Pages not modified>'),
-  'pagesNotModifiedCount': ('Pages not modified count', lambda r: r.PagesNotModifiedCount),
+  'pagesNotModifiedCount': ('Pages not modified count', lambda r: r.pagesNotModifiedCount),
   'pagesParsed': ('Pages parsed', lambda r: '<Pages parsed>'),
-  'pagesParsedCount': ('Pages parsed count', lambda r: r.PagesParsedCount),
+  'pagesParsedCount': ('Pages parsed count', lambda r: r.pagesParsedCount),
   'pagesPending': ('Pages pending', lambda r: '<Pages pending>'),
-  'pagesPendingCount': ('Pages pending count', lambda r: r.PagesPendingCount),
+  'pagesPendingCount': ('Pages pending count', lambda r: r.pagesPendingCount),
   'pagesWithErrors': ('Pages with errors', lambda r: '<Pages with errors>'),
-  'pagesWithErrorsCount': ('Pages with errors count', lambda r: r.PagesWithErrors),
-  'refetchDepth': ('RefetchDepth', lambda r: r.RefetchDepth),
+  'pagesWithErrorsCount': ('Pages with errors count', lambda r: r.pagesWithErrorsCount),
+  'refetchDepth': ('RefetchDepth', lambda r: r.refetchDepth),
   'sources': ('Sources', lambda r: '<Sources>'),
-  'startTime': ('Start time', lambda r: datetimems(r.StartTime)),
+  'startTime': ('Start time', lambda r: datetimems(r.startTime)),
   'startingUrls': ('Starting URLs', lambda r: '<Starting URLs>')
 }
 
 def _do_query_crawls(options):
   # Single request to a single host: unthreaded
-  select = list(filter(lambda x: x != 'auId', options.select))
-  auid_select = ['auId'] + select
-  headlamb = [_QUERY_CRAWLS[x] for x in options.select]
+  select_minus_auid = list(filter(lambda x: x != 'auId', options.select))
+  auid_first_select = ['auId'] + select_minus_auid
+  headlamb = [_QUERY_CRAWLS[x] for x in select_minus_auid]
   data = dict()
-  for r in query_crawls(options.hosts[0], options.auth, auid_select, options.where):
+  for r in query_crawls(options.hosts[0], options.auth, auid_first_select, options.where):
     for head, lamb in headlamb:
-      data[((r.AuId,), (head,))] = lamb(r)
+      data[((r.auId,), (head,))] = lamb(r)
   _output_table(options, data, ['AUID'], [[x[0] for x in headlamb]])
 
 def _dispatch(options):
