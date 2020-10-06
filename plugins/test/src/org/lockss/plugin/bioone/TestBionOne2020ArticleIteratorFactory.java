@@ -53,7 +53,7 @@ public class TestBionOne2020ArticleIteratorFactory extends ArticleIteratorTestCa
 
   private static Logger log = Logger.getLogger(TestBionOne2020ArticleIteratorFactory.class);
 
-  private static final String PLUGIN_ID = "org.lockss.plugin.americanentomologicalsociety.AmericanEntomologicalSocietyPlugin";
+  private static final String PLUGIN_ID = "org.lockss.plugin.bioone.BioOne2020Plugin";
   private ArchivalUnit mau;
   private String tempDirPath;
   private MockLockssDaemon daemon;
