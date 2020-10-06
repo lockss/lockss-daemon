@@ -241,7 +241,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; The Journal of Cell Biology Volume 215 ; 215 ; 215 ;  >
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; The Journal of Cell Biology Volume 216 ; 216 ; 216 ; > #frequency changes to 1 vol/yr.
     au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; The Journal of Cell Biology Volume 217 ; 217 ; 217 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; The Journal of Cell Biology Volume 218 ; 218 ; 218 ; >
+    au < frozen ; exists ; 2019 ; 2019 ; The Journal of Cell Biology Volume 218 ; 218 ; 218 ; >
     au < crawling ; exists ; 2020 ; 2020 ; The Journal of Cell Biology Volume 219 ; 219 ; 219 ; >
   }
 
@@ -635,7 +635,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; The Journal of General Physiology Volume 148 ; 148 ; 148 ;  > # switch to Drupal 9/20/16
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; The Journal of General Physiology Volume 149 ; 149 ; 149 ; > # switch to Drupal 9/20/16
     au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; The Journal of General Physiology Volume 150 ; 150 ; 150 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; The Journal of General Physiology Volume 151 ; 151 ; 151 ; >
+    au < frozen ; exists ; 2019 ; 2019 ; The Journal of General Physiology Volume 151 ; 151 ; 151 ; >
     au < manifest ; exists ; 2020 ; 2020 ; The Journal of General Physiology Volume 152 ; 152 ; 152 ; >
 
   }
