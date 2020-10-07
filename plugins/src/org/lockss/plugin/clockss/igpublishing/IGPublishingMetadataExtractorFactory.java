@@ -1,8 +1,11 @@
 package org.lockss.plugin.clockss.igpublishing;
 
+import org.lockss.config.TdbAu;
 import org.lockss.daemon.PluginException;
 import org.lockss.daemon.ShouldNotHappenException;
+import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.FileMetadataExtractor;
+import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
@@ -38,6 +41,21 @@ public class IGPublishingMetadataExtractorFactory extends SourceXmlMetadataExtra
             return IGPublishingXmlHelper;
         }
 
+        @Override
+        protected void postCookProcess(SourceXmlSchemaHelper schemaHelper,
+                                       CachedUrl cu, ArticleMetadata thisAM) {
+
+            String publisherName = "IG Publishing";
+
+            TdbAu tdbau = cu.getArchivalUnit().getTdbAu();
+            if (tdbau != null) {
+                publisherName =  tdbau.getPublisherName();
+            }
+
+            thisAM.put(MetadataField.FIELD_PUBLISHER, publisherName);
+            thisAM.put(MetadataField.FIELD_PROVIDER, publisherName);
+            
+        }
     }
 }
 

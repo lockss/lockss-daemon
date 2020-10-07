@@ -62,10 +62,11 @@ public class TestIGPublishingMetadataExtractorFactory extends SourceXmlMetadataE
         ArticleMetadata md = mdlist.get(0);
         assertNotNull(md);
 
+        assertEquals("9781788398299", md.get(MetadataField.FIELD_ISBN));
         assertEquals("9781788479028", md.get(MetadataField.FIELD_EISBN));
         assertEquals("Soni, Mitesh", md.get(MetadataField.FIELD_AUTHOR));
-        assertEquals("Practical AWS: networking build and manage complex networks using services such as Amazon VPC, Elastic Load Balancing, Direct Connect, and Amazon Route 53", md.get(MetadataField.FIELD_ARTICLE_TITLE));
-        assertEquals("Packt Publishing", md.get(MetadataField.FIELD_PUBLISHER));
+        assertEquals("Practical AWS: networking build and manage complex networks using services such as Amazon VPC, Elastic Load Balancing, Direct Connect, and Amazon Route 53", md.get(MetadataField.FIELD_PUBLICATION_TITLE));
+        assertEquals("IG Publishing", md.get(MetadataField.FIELD_PUBLISHER));
         assertEquals("2018", md.get(MetadataField.FIELD_DATE));
     }
 }

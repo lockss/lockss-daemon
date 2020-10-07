@@ -47,7 +47,7 @@ implements SourceXmlSchemaHelper {
   private static final Logger log = Logger.getLogger(IGPublishingSchemaHelper.class);
 
   private static final String IGParticle = "/metadata";
-  private static final String IGPisbn = "/metadata/isbn";
+  private static final String IGPisbn = "/metadata/pisbn";
   private static final String IGPeisbn = "/metadata/eisbn";
   private static final String IGPpublisher = "/metadata/publisher";
   private static final String IGPtitle = "/metadata/title";
@@ -85,12 +85,12 @@ implements SourceXmlSchemaHelper {
 
       cookMap.put(IGPisbn, MetadataField.FIELD_ISBN);
       cookMap.put(IGPeisbn, MetadataField.FIELD_EISBN);
-      //cookMap.put(ONIX_idtype_doi, MetadataField.FIELD_DOI);
-      cookMap.put(IGPpublisher, MetadataField.FIELD_PUBLICATION_TITLE);
-      cookMap.put(IGPtitle, MetadataField.FIELD_ARTICLE_TITLE);
+      cookMap.put(IGPtitle, MetadataField.FIELD_PUBLICATION_TITLE);
       cookMap.put(IGPauthor, MetadataField.FIELD_AUTHOR);
       cookMap.put(IGPpubdate, MetadataField.FIELD_DATE);
-      cookMap.put(IGPpublisher, MetadataField.FIELD_PUBLISHER);
+      // Read this one from tdb file
+      //cookMap.put(IGPpublisher, MetadataField.FIELD_PUBLISHER);
+      //cookMap.put(IGPpublisher, MetadataField.FIELD_PROVIDER);
   }
 
 
