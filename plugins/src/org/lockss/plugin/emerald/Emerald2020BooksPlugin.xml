@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Emerald Group Publishing 2020 Books Plugin</string>
+    <string>Emerald Group Publishing Books Plugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -57,7 +57,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Emerald Group Publishing 2020 Books Plugin, Base URL %s, Path %s", base_url, book_uri</string>
+    <string>"Emerald Group Publishing Books Plugin, Base URL %s, Path %s", base_url, book_uri</string>
   </entry>
   <entry>
     <string>au_start_url</string>
@@ -67,14 +67,14 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,"https://pro.fontawesome.com/.*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)"</string>
-      <string>1,"https://cdnjs.cloudflare.com/.*\.js"</string>
-      <string>1,"https://www.emerald.com/static/"</string>
-      <string>1, "https://fonts.googleapis.com/css"</string>
-      <string>1,"https://d1bxh8uas1mnw7.cloudfront.net/assets/"</string>
-      <string>1,"%sinsight/static", base_url</string>
-      <string>1,"%sinsight/proxy/img\?link=", base_url</string>
-      <string>1,"%sinsight/content/doi/%s", base_url, book_uri</string>
+      <string>1,"^https://pro.fontawesome.com/.*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)"</string>
+      <string>1,"^https://cdnjs.cloudflare.com/.*\.js"</string>
+      <string>1,"^https://fonts.googleapis.com/css"</string>
+      <string>1,"^https://d1bxh8uas1mnw7.cloudfront.net/assets/"</string>
+      <string>1,"^%sstatic/", base_url</string>
+      <string>1,"^%sinsight/static", base_url</string>
+      <string>1,"^%sinsight/proxy/img\?link=", base_url</string>
+      <string>1,"^%sinsight/content/doi/%s", base_url, book_uri</string>
     </list>
   </entry>
   <!--https://www.emerald.com/insight/content/doi/10.1108/SR-01-2020-0013/full/pdf?title=two-step-calibration-method-for-three-axis-magnetic-sensor-error-based-on-particle-swarm-optimization-->
@@ -122,7 +122,6 @@
     <string>au_permitted_host_pattern</string>
     <list>
       <string>pro\.fontawesome\.com</string>
-      <string>www\.emerald\.com</string>
       <string>cdnjs\.cloudflare\.com</string>
       <string>fonts\.googleapis\.com</string>
       <string>d1bxh8uas1mnw7\.cloudfront\.net</string>
