@@ -81,14 +81,6 @@
     <string>"%sjournals/%s/issues/%d", base_url, journal_id, year</string>
   </entry>
   <entry>
-    <string>au_start_url</string>
-    <!--https://bioone.org/publishers/The-American-Entomological-Society-->
-    <!--https://bioone.org/journals/canadian-journal-of-animal-science/issues/2019-->
-    <!--https://bioone.org/journals/canadian-journal-of-animal-science/volume-99/issue-4-->
-    <!--https://bioone.org/journals/canadian-journal-of-animal-science/volume-99/issue-4/cjas-2018-0252/What-can-PIWI-interacting-RNA-research-learn-from-chickens-and/10.1139/cjas-2018-0252.full-->
-    <string>"%sjournals/%s/issues/%d", base_url, journal_id, year</string>
-  </entry>
-  <entry>
     <string>au_crawlrules</string>
     <list>
       <!--
@@ -105,13 +97,13 @@
       -->
       <string>1,"%sjournals/%s/issues/%d", base_url, journal_id, year</string>
       <string>1,"%sjournals/%s/volume[^/]+/issue[^/]", base_url, journal_id, year</string>
-      <string>1,"%s(ContentImages|journalArticle|Images|images)", base_url</string>
+      <string>1,"%s(ContentImages|journalArticle|images)", base_url</string>
     </list>
   </entry>
  <entry>
    <!--https://bioone.org/journalArticle/Download?fullDOI=10.1139%2Fcjas-2018-0252-->
      <string>au_substance_url_pattern</string>
-       <string>"%sjournalArticle/Download", base_url</string>
+       <string>"^%sjournalArticle/Download\?fullDOI=", base_url</string>
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
@@ -134,11 +126,6 @@
       </entry>
     </map>
   </entry>
-    <entry>
-    <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.bioone.BioOne2020HtmlFilterFactory</string>
-  </entry>
-  <!--
   <entry>
     <string>au_def_new_content_crawl</string>
     <long>1209600000</long>
@@ -151,7 +138,6 @@
     <string>au_refetch_depth</string>
     <int>2</int>
   </entry>
-  -->
   <!--  versioning or variants for style support -->
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
