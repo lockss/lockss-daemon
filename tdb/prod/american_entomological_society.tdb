@@ -7,7 +7,7 @@
     info[poller] = 3
   >
 
-  plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+  plugin = org.lockss.plugin.bioone.BioOne2020Plugin
 
   implicit < status ; year ; name ; param[year] >
   {
