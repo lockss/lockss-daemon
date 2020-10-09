@@ -100,7 +100,7 @@
     comment[continued_as] = 2380-9450 #Journal of Air Transportation
 
     au < released ; 1993 ; Air Traffic Control Quarterly Volume 1 ; 1 ; https://arc.aiaa.org/ >
-    au < testing ; 1994 ; Air Traffic Control Quarterly Volume 2 ; 2 ; https://arc.aiaa.org/ >
+    au < manifest ; 1994 ; Air Traffic Control Quarterly Volume 2 ; 2 ; https://arc.aiaa.org/ >
     au < released ; 1995 ; Air Traffic Control Quarterly Volume 3 ; 3 ; https://arc.aiaa.org/ >
     au < released ; 1996 ; Air Traffic Control Quarterly Volume 4 ; 4 ; https://arc.aiaa.org/ >
     au < released ; 1997 ; Air Traffic Control Quarterly Volume 5 ; 5 ; https://arc.aiaa.org/ >
@@ -306,10 +306,10 @@
     param[journal_id] = jgcd
     #continues = 0162-3192
 
-    au < testing ; 1978 ; Journal of Guidance, Control, and Dynamics Volume 1 ; 1 ; https://arc.aiaa.org/ >
-    au < testing ; 1979 ; Journal of Guidance, Control, and Dynamics Volume 2 ; 2 ; https://arc.aiaa.org/ >
-    au < testing ; 1980 ; Journal of Guidance, Control, and Dynamics Volume 3 ; 3 ; https://arc.aiaa.org/ >
-    au < testing ; 1981 ; Journal of Guidance, Control, and Dynamics Volume 4 ; 4 ; https://arc.aiaa.org/ >
+    au < manifest ; 1978 ; Journal of Guidance, Control, and Dynamics Volume 1 ; 1 ; https://arc.aiaa.org/ >
+    au < manifest ; 1979 ; Journal of Guidance, Control, and Dynamics Volume 2 ; 2 ; https://arc.aiaa.org/ >
+    au < manifest ; 1980 ; Journal of Guidance, Control, and Dynamics Volume 3 ; 3 ; https://arc.aiaa.org/ >
+    au < manifest ; 1981 ; Journal of Guidance, Control, and Dynamics Volume 4 ; 4 ; https://arc.aiaa.org/ >
     au < released ; 1982 ; Journal of Guidance, Control, and Dynamics Volume 5 ; 5 ; https://arc.aiaa.org/ >
     au < released ; 1983 ; Journal of Guidance, Control, and Dynamics Volume 6 ; 6 ; https://arc.aiaa.org/ >
     au < released ; 1984 ; Journal of Guidance, Control, and Dynamics Volume 7 ; 7 ; https://arc.aiaa.org/ >
