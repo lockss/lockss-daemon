@@ -61,20 +61,16 @@ public class TestBerghahnHtmlHashFilterFactory extends LockssTestCase {
 
   }
   
-  private static final String tocBlockHtml = 
-		"";
-  private static final String tocBlockFiltered = "";
-  
   private static final String blockHtml =
-		  "<div class=\"mainBase\" id=\"mainContent\">" + 
+		  "<div class=\"content-box\"><div class=\"mainBase\" id=\"mainContent\">" +
 				  "  <div id=\"readPanel\">" + 
 				  "    <a class=\"summary-toggle ico-summary js-summary-toggle phoneOnly\" href=\"#\"><span>Show Summary Details</span></a>\n" + 
 				  "  </div>" +
-				  "</div>" +
+				  "</div></div>" +
                   "<div id=\"headerWrap\">headerWrap content</div>";
-  private static final String blockFiltered =
-		  "<div class=\"mainBase\" id=\"mainContent\">  <div id=\"readPanel\">    <a class=\"summary-toggle ico-summary js-summary-toggle phoneOnly\" href=\"#\"><span>Show Summary Details</span></a>\n" +
-                  "  </div></div>";
+  private static final String blockFiltered = "<div class=\"content-box\"><div class=\"mainBase\" id=\"mainContent\">  <div id=\"readPanel\">    <a class=\"summary-toggle ico-summary js-summary-toggle phoneOnly\" href=\"#\"><span>Show Summary Details</span></a>\n" +
+          "  </div></div></div><div id=\"readPanel\">    <a class=\"summary-toggle ico-summary js-summary-toggle phoneOnly\" href=\"#\"><span>Show Summary Details</span></a>\n" +
+          "  </div>";
 
   public void testFiltering() throws Exception {
 	    doFilterTest(bau, fact, blockHtml, blockFiltered);

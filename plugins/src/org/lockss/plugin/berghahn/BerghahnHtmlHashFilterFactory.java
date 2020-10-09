@@ -34,11 +34,15 @@ package org.lockss.plugin.berghahn;
 
 import java.io.InputStream;
 import java.io.Reader;
+import java.util.Vector;
 
 import org.htmlparser.*;
 import org.htmlparser.filters.OrFilter;
 import org.htmlparser.filters.TagNameFilter;
+import org.htmlparser.tags.Bullet;
+import org.htmlparser.tags.Div;
 import org.lockss.filter.FilterUtil;
+import org.lockss.filter.html.HtmlCompoundTransform;
 import org.lockss.filter.html.HtmlFilterInputStream;
 import org.lockss.filter.html.HtmlNodeFilterTransform;
 import org.lockss.filter.html.HtmlNodeFilters;
@@ -46,30 +50,91 @@ import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.FilterFactory;
 import org.lockss.util.ReaderInputStream;
 
+// Keeps contents only (includeNodes), then hashes out unwanted nodes 
+// within the content (excludeNodes).
 public class BerghahnHtmlHashFilterFactory implements FilterFactory {
+     
+  @Override
+  public InputStream createFilteredInputStream(ArchivalUnit au,
+                                               InputStream in, 
+                                               String encoding) {
+    NodeFilter[] includeNodes = new NodeFilter[] {
 
-    public InputStream createFilteredInputStream(ArchivalUnit au,
-                                                 InputStream in,
-                                                 String encoding) {
-        NodeFilter[] filters = new NodeFilter[] {
-                new TagNameFilter("noscript"),
-                new TagNameFilter("script"),
-                new TagNameFilter("style"),
-                new TagNameFilter("head"),
-                new TagNameFilter("style"),
-                new TagNameFilter("header"),
-                new TagNameFilter("footer"),
+    		
+    		// manifest just doesn't have much other than the links
+    	    new NodeFilter() {
+    			  @Override
+    			  public boolean accept(Node node) {
+    				  //plan <div> with plain <li> each with one href
+    				  //href="/view/journals/boyhood-studies/10/2/boyhood-studies.10.issue-2.xml"
+    			    if (HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/[^/]+issue[^/]+\\.xml").accept(node)) {
+    				  Node liParent = node.getParent();
+    				  if (liParent instanceof Bullet) {
+    				    Bullet li = (Bullet)liParent;
+    					Vector liAttr = li.getAttributesEx();
+    					if (liAttr != null && liAttr.size() == 1) {
+    					  Node divParent = li.getParent();
+    					  if (divParent instanceof Div) {
+    					    Div div = (Div)divParent;
+    						Vector divAttr = div.getAttributesEx();
+    						return divAttr != null && divAttr.size() == 1;
+    				      }
+    					}
+    				  }
+    			    } 
+    				return false;
+    		      }
+    		    },
+    		//main content of TOC and article landing page (on abstract or pdf tab)
+        HtmlNodeFilters.tagWithAttribute("div", "id", "readPanel"),
+        // citation overlay for download of ris - this has download date
+        HtmlNodeFilters.tagWithAttribute("div","id","previewWrapper"),
 
-                //https://www.berghahnjournals.com/view/journals/boyhood-studies/12/1/bhs120101.xml
-                HtmlNodeFilters.tagWithAttributeRegex("div", "id", "headerWrap"),
-                HtmlNodeFilters.tagWithAttributeRegex("div", "id", "footerWrap"),
-                HtmlNodeFilters.tagWithAttributeRegex("div", "class", "fixed-controls"),
+        // https://www.berghahnjournals.com/view/journals/boyhood-studies/12/2/bhs120201.xml -- html structure changed Oct/2020
+        HtmlNodeFilters.tagWithAttributeRegex("div","class","content-box"),
+    };
+    
+    NodeFilter[] excludeNodes = new NodeFilter[] {
+        new TagNameFilter("script"),
+        new TagNameFilter("noscript"),
+        // filter out comments
+        HtmlNodeFilters.comment(),
+        // citation overlay for download of ris - this has download date
+        // and the ris citation has a one-time key
+        // so just keep the referring article as a way of hashing
+        HtmlNodeFilters.allExceptSubtree(
+            HtmlNodeFilters.tagWithAttribute("div", "id", "previewWrapper"),
+            HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/view/journals/")),
+        //html structure change in Oct/2020
+        //https://www.berghahnjournals.com/view/journals/boyhood-studies/12/1/bhs120101.xml
+        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "headerWrap"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "footerWrap"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "fixed-controls"),
 
-        };
-        InputStream filteredStream = new HtmlFilterInputStream(in, encoding,
-                HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
-        Reader httpFilter = FilterUtil.getReader(filteredStream, encoding);
-        return new ReaderInputStream(httpFilter);
-    }
+    };
+    
+    return getFilteredInputStream(au, in, encoding, 
+                                  includeNodes, excludeNodes);
+  }
+  
+  // Takes include and exclude nodes as input. Removes white spaces.
+  public InputStream getFilteredInputStream(ArchivalUnit au, InputStream in,
+      String encoding, NodeFilter[] includeNodes, NodeFilter[] excludeNodes) {
+    if (excludeNodes == null) {
+      throw new NullPointerException("excludeNodes array is null");
+    }  
+    if (includeNodes == null) {
+      throw new NullPointerException("includeNodes array is null!");
+    }   
+    InputStream filtered;
+    filtered = new HtmlFilterInputStream(in, encoding,
+                 new HtmlCompoundTransform(
+                     HtmlNodeFilterTransform.include(new OrFilter(includeNodes)),
+                     HtmlNodeFilterTransform.exclude(new OrFilter(excludeNodes)))
+               );
+    
+    Reader reader = FilterUtil.getReader(filtered, encoding);
+    return new ReaderInputStream(reader); 
+  }
 
 }
