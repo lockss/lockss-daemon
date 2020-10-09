@@ -393,7 +393,7 @@
       au < finished ; crawling ; 2019 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 30 ; 30 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 31 ; 31 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2019 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 32 ; 32 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < testing ; exists ; 2020 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 33 ; 33 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2020 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 33 ; 33 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2020 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 34 ; 34 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2020 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 35 ; 35 ; https://www.inderscienceonline.com/ ; >
 
@@ -438,7 +438,7 @@
       au < finished ; finished ; 2017 ; International Journal of Advanced Intelligence Paradigms Volume 9 ; 9 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2018 ; International Journal of Advanced Intelligence Paradigms Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; International Journal of Advanced Intelligence Paradigms Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < testing ; exists ; 2020 ; International Journal of Advanced Intelligence Paradigms Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2020 ; International Journal of Advanced Intelligence Paradigms Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -9732,7 +9732,7 @@
     {
 
       title <
-        name = International Journal of Vehicle Systems Modelling and Testing ;
+        name = International Journal of Vehicle Systems Modelling and manifest ;
         issn = 1745-6436 ;
         eissn = 1745-6444 ;
         issnl = 1745-6436
