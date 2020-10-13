@@ -14,7 +14,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>48</string>
+    <string>49</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -122,6 +122,12 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <!--
+         https://link.springer.com/article/10.1023/B%3AJOGC.0000013193.80539.d1
+         Redirected to excluded URL:
+         https://idp.springer.com/authorize?response_type=cookie&client_id=springerlink&redirect_uri=https://link.springer.com/article/10.1023/B:JOGC.0000013193.80539.d1
+      -->
+      <string>1,"^https://idp.springer.com"</string>
       <string>1,"^https?://(%s|%s|(rd|static-content)\.springer\.com)/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?config=[^/]*)?$", url_host(base_url), url_host(download_url)</string>
       <string>2,"\?view=classic$",  url_host(base_url)</string>
       <string>1,"^%sauid=.*$", base_url</string>
@@ -202,8 +208,15 @@
     <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
          org.lockss.crawler.allowedPluginPermittedHosts -->
     <string>au_permitted_host_pattern</string>
-    <string>(api|rd|static-content)\.springer\.com</string>
-<!--   <string>dev\.springernature\.com"</string> -->
+    <list>
+      <string>(api|rd|static-content)\.springer\.com</string>
+      <!--
+         https://link.springer.com/article/10.1023/B%3AJOGC.0000013193.80539.d1
+         Redirected to excluded URL:
+         https://idp.springer.com/authorize?response_type=cookie&client_id=springerlink&redirect_uri=https://link.springer.com/article/10.1023/B:JOGC.0000013193.80539.d1
+      -->
+      <string>idp\.springer\.com</string>
+    </list>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
