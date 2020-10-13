@@ -1783,7 +1783,7 @@ while (my $line = <>) {
       if ($req->url ne $resp->request->uri) {
               $vol_title = $resp->request->uri;
               $result = "Redirected";
-      } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/<a href="[^"]*$param{publisher_id}\/[^"]+\/art00001/)) {
+      } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/<a href="[^"]*$param{publisher_id}\/[^"]+\/art00001/)) {  #"
         if ($man_contents =~ m/<TITLE>Ingenta Connect\s*(.*)\s*CLOCKSS MANIFEST PAGE<\/TITLE>/si) {
           $vol_title = $1;
           $vol_title =~ s/\s*\n\s*/ /g;
@@ -2646,6 +2646,58 @@ while (my $line = <>) {
     }
     sleep(4);
 
+  } elsif ($plugin eq "Emerald2020Plugin") {
+    $url = sprintf("%sinsight/publication/issn/%s",
+      $param{base_url}, $param{journal_id});
+      #params also include: $param{volume_name}
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    if ($resp->is_success) {
+      my $man_contents = $resp->content;
+      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && ($man_contents =~ m/\/issn\/$param{journal_id}\/vol\/$param{volume_name}\/iss\//)) {
+        if ($man_contents =~ m/<title>([^<]*)| *Emerald Insight<\/title>/si) {
+          $vol_title = $1 . " Volume " . $param{volume_name};
+          $vol_title =~ s/\s*\n\s*/ /g;
+          if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
+            $vol_title = "\"" . $vol_title . "\"";
+          }
+        }
+        $result = "Manifest"
+      } else {
+        $result = "--NO_TAG--"
+      }
+    } else {
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+    }
+    sleep(4);
+
+  } elsif ($plugin eq "ClockssEmerald2020Plugin") {
+    $url = sprintf("%sinsight/publication/issn/%s",
+      $param{base_url}, $param{journal_id});
+      #params also include: $param{volume_name}
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    if ($resp->is_success) {
+      my $man_contents = $resp->content;
+      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/\/issn\/$param{journal_id}\/vol\/$param{volume_name}\/iss\//)) {
+        if ($man_contents =~ m/<title> *([^<|]*) | *Emerald Insight<\/title>/si) {
+          $vol_title = $1 . " Volume " . $param{volume_name};
+          $vol_title =~ s/\s*\n\s*/ /g;
+          if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
+            $vol_title = "\"" . $vol_title . "\"";
+          }
+        }
+        $result = "Manifest"
+      } else {
+        $result = "--NO_TAG--"
+      }
+    } else {
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+    }
+    sleep(4);
+
 #  } elsif ($plugin eq "EmeraldPlugin") {
 #    $url = sprintf("%scrawlers/lockss.htm?issn=%s&volume=%s",
 #      $param{base_url}, $param{journal_issn}, $param{volume_name});
@@ -2671,60 +2723,60 @@ while (my $line = <>) {
 #    }
 #    sleep(4);
 #
-  } elsif ($plugin eq "ACSESSJournalsPlugin") {
-    $url = sprintf("%spublications/%s/tocs/%s",
-      $param{base_url}, $param{journal_id}, $param{volume_name});
-    $man_url = uri_unescape($url);
-    my $req = HTTP::Request->new(GET, $man_url);
-    my $resp = $ua->request($req);
-    if ($resp->is_success) {
-      my $man_contents = $resp->content;
-      if ($req->url ne $resp->request->uri) {
-              $vol_title = $resp->request->uri;
-              $result = "Redirected";
-      } elsif (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && ($man_contents =~ m/\/publications\/$param{journal_id}\/tocs\/$param{volume_name}\//)) {
-        if ($man_contents =~ m/<title>(.*)<\/title>/si) {
-          $vol_title = $1;
-          $vol_title =~ s/ \| Digital Library//;
-          $vol_title =~ s/ - / /;
-          $vol_title =~ s/ &amp\; / & /;
-          }
-        $result = "Manifest"
-      } else {
-        $result = "--NO_TAG--"
-      }
-    } else {
-      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
-    }
-    sleep(4);
-
-  } elsif ($plugin eq "ClockssACSESSJournalsPlugin") {
-    $url = sprintf("%spublications/%s/tocs/%s",
-      $param{base_url}, $param{journal_id}, $param{volume_name});
-    $man_url = uri_unescape($url);
-    my $req = HTTP::Request->new(GET, $man_url);
-    my $resp = $ua->request($req);
-    if ($resp->is_success) {
-      my $man_contents = $resp->content;
-      if ($req->url ne $resp->request->uri) {
-              $vol_title = $resp->request->uri;
-              $result = "Redirected";
-      } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/\/publications\/$param{journal_id}\/tocs\/$param{volume_name}\//)) {
-        if ($man_contents =~ m/<title>(.*)<\/title>/si) {
-          $vol_title = $1;
-          $vol_title =~ s/ \| Digital Library//;
-          $vol_title =~ s/ - / /;
-          $vol_title =~ s/ &amp\; / & /;
-          }
-        $result = "Manifest"
-      } else {
-        $result = "--NO_TAG--"
-      }
-    } else {
-      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
-    }
-    sleep(4);
-
+#  } elsif ($plugin eq "ACSESSJournalsPlugin") {
+#    $url = sprintf("%spublications/%s/tocs/%s",
+#      $param{base_url}, $param{journal_id}, $param{volume_name});
+#    $man_url = uri_unescape($url);
+#    my $req = HTTP::Request->new(GET, $man_url);
+#    my $resp = $ua->request($req);
+#    if ($resp->is_success) {
+#      my $man_contents = $resp->content;
+#      if ($req->url ne $resp->request->uri) {
+#              $vol_title = $resp->request->uri;
+#              $result = "Redirected";
+#      } elsif (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && ($man_contents =~ m/\/publications\/$param{journal_id}\/tocs\/$param{volume_name}\//)) {
+#        if ($man_contents =~ m/<title>(.*)<\/title>/si) {
+#          $vol_title = $1;
+#          $vol_title =~ s/ \| Digital Library//;
+#          $vol_title =~ s/ - / /;
+#          $vol_title =~ s/ &amp\; / & /;
+#          }
+#        $result = "Manifest"
+#      } else {
+#        $result = "--NO_TAG--"
+#      }
+#    } else {
+#      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+#    }
+#    sleep(4);
+#
+#  } elsif ($plugin eq "ClockssACSESSJournalsPlugin") {
+#    $url = sprintf("%spublications/%s/tocs/%s",
+#      $param{base_url}, $param{journal_id}, $param{volume_name});
+#    $man_url = uri_unescape($url);
+#    my $req = HTTP::Request->new(GET, $man_url);
+#    my $resp = $ua->request($req);
+#    if ($resp->is_success) {
+#      my $man_contents = $resp->content;
+#      if ($req->url ne $resp->request->uri) {
+#              $vol_title = $resp->request->uri;
+#              $result = "Redirected";
+#      } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/\/publications\/$param{journal_id}\/tocs\/$param{volume_name}\//)) {
+#        if ($man_contents =~ m/<title>(.*)<\/title>/si) {
+#          $vol_title = $1;
+#          $vol_title =~ s/ \| Digital Library//;
+#          $vol_title =~ s/ - / /;
+#          $vol_title =~ s/ &amp\; / & /;
+#          }
+#        $result = "Manifest"
+#      } else {
+#        $result = "--NO_TAG--"
+#      }
+#    } else {
+#      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+#    }
+#    sleep(4);
+#
   } elsif ($plugin eq "EuropeanMathematicalSocietyPlugin") {
     $url = sprintf("%sjournals/all_issues.php?issn=%s",
       $param{base_url}, $param{journal_issn});
