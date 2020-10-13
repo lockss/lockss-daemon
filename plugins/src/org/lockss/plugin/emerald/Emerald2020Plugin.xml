@@ -114,33 +114,6 @@
       </entry>
     </map>
   </entry>
-  <!--
-  <entry>
-    <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.emeraldgroup.EmeraldHtmlFilterFactory</string>
-  </entry>
-  <entry>
-    <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.emeraldgroup.EmeraldArticleIteratorFactory</string>
-  </entry>
-  <entry>
-    <string>application/pdf_filter_factory</string>
-    <string>org.lockss.plugin.emeraldgroup.EmeraldPdfFilterFactory</string>
-  </entry>
-  <entry>
-    <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.emeraldgroup.EmeraldArticleIteratorFactory</string>
-  </entry>
-  <entry>
-    <string>text/html_metadata_extractor_factory_map</string>
-    <map>
-      <entry>
-     	<string>*</string>
-        <string>org.lockss.plugin.emeraldgroup.EmeraldHtmlMetadataExtractorFactory</string>
-      </entry>
-    </map>
-  </entry>
-  -->
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
     <list>
