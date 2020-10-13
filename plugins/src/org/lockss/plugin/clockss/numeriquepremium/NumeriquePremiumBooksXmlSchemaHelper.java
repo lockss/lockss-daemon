@@ -134,7 +134,7 @@ implements SourceXmlSchemaHelper {
     cookMap.put(book_isbn, MetadataField.FIELD_ISBN);
     cookMap.put(book_eisbn, MetadataField.FIELD_EISBN);
     //cookMap.put(book_publisher, MetadataField.FIELD_PUBLISHER);  -- handled by postProcess
-    cookMap.put(book_title, MetadataField.FIELD_ARTICLE_TITLE);
+    cookMap.put(book_title, MetadataField.FIELD_PUBLICATION_TITLE);
     cookMap.put(book_author, MetadataField.FIELD_AUTHOR);
     cookMap.put(book_pub_date, MetadataField.FIELD_DATE);
   }
