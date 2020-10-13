@@ -46,17 +46,17 @@ import java.util.regex.Pattern;
 import org.lockss.util.RegexpUtil;
 
 
-public class OJS3SubstancePredicateFactory implements
+public class Ojs3SubstancePredicateFactory implements
 SubstancePredicateFactory {
   
   @Override
-  public OJS3SubstancePredicate makeSubstancePredicate(ArchivalUnit au)   
+  public Ojs3SubstancePredicate makeSubstancePredicate(ArchivalUnit au)
       throws LinkageError {
-    return new OJS3SubstancePredicate(au);
+    return new Ojs3SubstancePredicate(au);
   }
 
-  protected static class OJS3SubstancePredicate implements SubstancePredicate {
-    static Logger log = Logger.getLogger(OJS3SubstancePredicate.class);; 
+  protected static class Ojs3SubstancePredicate implements SubstancePredicate {
+    static Logger log = Logger.getLogger(Ojs3SubstancePredicate.class);;
     private ArchivalUnit au;
     private UrlPredicate up = null;
     private boolean hasArticleDownloadablePDFLink = false;
@@ -78,21 +78,21 @@ SubstancePredicateFactory {
             RegexpUtil.uncheckedCompile(URL_STRING);
 
 
-    public OJS3SubstancePredicate (ArchivalUnit au) {
+    public Ojs3SubstancePredicate (ArchivalUnit au) {
       this.au = au;
 
       for (CachedUrl cu : AuUtil.getCuIterable(au)) {
         String url = cu.getUrl();
-        log.info("Fei - au cached url: " + url);
+        log.info("au cached url: " + url);
         if (url.contains("/article/download/") || url.contains("/article/view/")) {
           hasArticleDownloadablePDFLink = true;
-          log.info("Fei - this has downloadable url, url = " + url);
+          log.info("this has downloadable url, url = " + url);
           break;
         }
       }
 
       if (!hasArticleDownloadablePDFLink) {
-        log.info("Fei - this has NO downloadable url ");
+        log.info("this has NO downloadable url ");
       }
 
       try {
@@ -123,7 +123,7 @@ SubstancePredicateFactory {
 
       // If URL match Substance pattern, return true
       if (up.isMatchSubstancePat(url)) {
-        log.debug3("Fei matched cases ="  + url);
+        log.debug3("matched cases ="  + url);
         return true;
       } 
       return false;
@@ -131,14 +131,14 @@ SubstancePredicateFactory {
     
     private static boolean isPdfUrl(String url) {
 
-      log.siteWarning("Fei - isPdfUrl " + url);
+      log.siteWarning("isPdfUrl " + url);
 
       Matcher mat = PDF_PATTERN.matcher(url);
 
       if (mat.matches()) {
-        log.siteWarning("Fei - isPdfUrl, found PDF " + url);
+        log.siteWarning("isPdfUrl, found PDF " + url);
       } else {
-        log.siteWarning("Fei - isPdfUrl, NOT found");
+        log.siteWarning("isPdfUrl, NOT found");
       }
 
       return (mat.matches());

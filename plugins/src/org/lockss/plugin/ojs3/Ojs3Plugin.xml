@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
    <entry>
     <string>plugin_name</string>
@@ -47,7 +47,7 @@
   </entry>
   <entry>
     <string>plugin_crawl_seed_factory</string>
-    <string>org.lockss.plugin.ojs3.OJS3CrawlSeedFactory</string>
+    <string>org.lockss.plugin.ojs3.Ojs3CrawlSeedFactory</string>
   </entry>
 <!--  end of start_url definition  -->
   <entry>
@@ -123,7 +123,7 @@
   <entry>
         <!--  this is an extra check to allow special cases which do not match above pattern  -->
         <string>plugin_substance_predicate_factory</string>
-        <string>org.lockss.plugin.ojs3.OJS3SubstancePredicateFactory</string>
+        <string>org.lockss.plugin.ojs3.Ojs3SubstancePredicateFactory</string>
   </entry>
 <!-- 
    <entry>
