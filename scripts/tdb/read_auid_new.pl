@@ -2648,15 +2648,15 @@ while (my $line = <>) {
 
   } elsif ($plugin eq "Emerald2020Plugin") {
     $url = sprintf("%sinsight/publication/issn/%s",
-      $param{base_url}, $param{journal_id});
+      $param{base_url}, $param{journal_issn});
       #params also include: $param{volume_name}
     $man_url = uri_unescape($url);
     my $req = HTTP::Request->new(GET, $man_url);
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && ($man_contents =~ m/\/issn\/$param{journal_id}\/vol\/$param{volume_name}\/iss\//)) {
-        if ($man_contents =~ m/<title>([^<]*)| *Emerald Insight<\/title>/si) {
+      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && ($man_contents =~ m/\/issn\/$param{journal_issn}\/vol\/$param{volume_name}\/iss\//)) {
+        if ($man_contents =~ m/<title> *([^<|]*) | *Emerald Insight<\/title>/si) {
           $vol_title = $1 . " Volume " . $param{volume_name};
           $vol_title =~ s/\s*\n\s*/ /g;
           if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
@@ -2674,14 +2674,14 @@ while (my $line = <>) {
 
   } elsif ($plugin eq "ClockssEmerald2020Plugin") {
     $url = sprintf("%sinsight/publication/issn/%s",
-      $param{base_url}, $param{journal_id});
+      $param{base_url}, $param{journal_issn});
       #params also include: $param{volume_name}
     $man_url = uri_unescape($url);
     my $req = HTTP::Request->new(GET, $man_url);
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/\/issn\/$param{journal_id}\/vol\/$param{volume_name}\/iss\//)) {
+      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/\/issn\/$param{journal_issn}\/vol\/$param{volume_name}\/iss\//)) {
         if ($man_contents =~ m/<title> *([^<|]*) | *Emerald Insight<\/title>/si) {
           $vol_title = $1 . " Volume " . $param{volume_name};
           $vol_title =~ s/\s*\n\s*/ /g;
