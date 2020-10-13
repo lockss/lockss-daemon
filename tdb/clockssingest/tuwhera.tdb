@@ -74,6 +74,10 @@
       param[base_url] = https://ojs.aut.ac.nz/te-kaharoa/
       param[journal_id] = tekaharoa
 
+      ### Note from plugin developer:
+      ### https://ojs.aut.ac.nz/te-kaharoa/index.php/tekaharoa/gateway/lockss?year=2016
+      ### it seemed it need an "index.php" start_stem from the Jira ticket.
+
       au < exists ; exists ; 2011 ; Te Kaharoa Volume 4 ; 4 ; 2011 ; > 
       au < exists ; exists ; 2012 ; Te Kaharoa Volume 5 ; 5 ; 2012 ; > 
       au < exists ; exists ; 2013 ; Te Kaharoa Volume 6 ; 6 ; 2013 ; > 
