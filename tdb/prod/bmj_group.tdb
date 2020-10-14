@@ -968,11 +968,11 @@
     au < HighWirePressH20Plugin ; down ; 2013 ; Emergency Medicine Journal Volume 30 ; 30 ; http://emj.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2014 ; Emergency Medicine Journal Volume 31 ; 31 ; http://emj.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2015 ; Emergency Medicine Journal Volume 32 ; 32 ; http://emj.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; manifest ; 2016 ; Emergency Medicine Journal Volume 33 ; 33 ; https://emj.bmj.com/ > # login page.
-    au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; Emergency Medicine Journal Volume 34 ; 34 ; https://emj.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; manifest ; 2018 ; Emergency Medicine Journal Volume 35 ; 35 ; https://emj.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; manifest ; 2019 ; Emergency Medicine Journal Volume 36 ; 36 ; https://emj.bmj.com/ > # login page.
-    au < bmj.BMJDrupalPlugin ; manifest ; 2020 ; Emergency Medicine Journal Volume 37 ; 37 ; https://emj.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; notReady ; 2016 ; Emergency Medicine Journal Volume 33 ; 33 ; https://emj.bmj.com/ > # login page. https://emj.bmj.com/content/suppl/2016/01/19/33.1.DC1
+    au < bmj.BMJDrupalPlugin ; notReady ; 2017 ; Emergency Medicine Journal Volume 34 ; 34 ; https://emj.bmj.com/ > # login page. https://emj.bmj.com/content/suppl/2016/12/14/34.1.DC1
+    au < bmj.BMJDrupalPlugin ; notReady ; 2018 ; Emergency Medicine Journal Volume 35 ; 35 ; https://emj.bmj.com/ > # login page. https://emj.bmj.com/content/suppl/2018/06/12/35.1.DC1
+    au < bmj.BMJDrupalPlugin ; notReady ; 2019 ; Emergency Medicine Journal Volume 36 ; 36 ; https://emj.bmj.com/ > # login page.
+    au < bmj.BMJDrupalPlugin ; notReady ; 2020 ; Emergency Medicine Journal Volume 37 ; 37 ; https://emj.bmj.com/ > # 
 
   }
 
@@ -1025,7 +1025,7 @@
     au < HighWirePressH20Plugin ; down ; 2014 ; European Journal of Hospital Pharmacy: Science and Practice Volume 21 ; 21 ; http://ejhp.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2015 ; European Journal of Hospital Pharmacy: Science and Practice Volume 22 ; 22 ; http://ejhp.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2016 ; European Journal of Hospital Pharmacy: Science and Practice Volume 23 ; 23 ; https://ejhp.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; European Journal of Hospital Pharmacy: Science and Practice Volume 24 ; 24 ; https://ejhp.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; notReady ; 2017 ; European Journal of Hospital Pharmacy: Science and Practice Volume 24 ; 24 ; https://ejhp.bmj.com/ > #login page. https://ejhp.bmj.com/content/suppl/2017/04/03/24.1.DC2
     au < bmj.BMJDrupalPlugin ; released ; 2018 ; European Journal of Hospital Pharmacy: Science and Practice Volume 25 ; 25 ; https://ejhp.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2019 ; European Journal of Hospital Pharmacy: Science and Practice Volume 26 ; 26 ; https://ejhp.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2020 ; European Journal of Hospital Pharmacy: Science and Practice Volume 27 ; 27 ; https://ejhp.bmj.com/ >
@@ -1429,7 +1429,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; down ; 2015 ; Heart Volume 101 ; 101 ; http://heart.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2016 ; Heart Volume 102 ; 102 ; https://heart.bmj.com/ > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; ready ; 2017 ; Heart Volume 103 ; 103 ; https://heart.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; manifest ; 2018 ; Heart Volume 104 ; 104 ; https://heart.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; notReady ; 2018 ; Heart Volume 104 ; 104 ; https://heart.bmj.com/ > # File size (2418184395) differs from Content-Length header (2971933806): heartjnl-2014-307008supp_Oxford-Live-2011.mov
     au < bmj.BMJDrupalPlugin ; manifest ; 2019 ; Heart Volume 105 ; 105 ; https://heart.bmj.com/ > #403 forbidden
     au < bmj.BMJDrupalPlugin ; manifest ; 2020 ; Heart Volume 106 ; 106 ; https://heart.bmj.com/ >
 

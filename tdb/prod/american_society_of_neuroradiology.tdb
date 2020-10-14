@@ -73,7 +73,8 @@
   {
     title <
       name = Neurographics ;
-      issn = 1541-6593 
+      issn = 1541-6593 ;
+      eissn = 2637-8329
     >
 
     {
@@ -83,12 +84,12 @@
     param[graphics_url] = http://graphics.ingentaconnect.com/
     param[publisher_id] = asnr
     param[journal_id] = ng 
-    param[journal_issn] = 1541-6593
     implicit < status ; year ; name ; param[volume_name] >
  
     {
      param[base_url] = http://www.ingentaconnect.com/
      param[api_url] = http://api.ingentaconnect.com/
+     param[journal_issn] = 1541-6593
 
       au < released ; 2011 ; Neurographics Volume 1 ; 1 >
       au < released ; 2012 ; Neurographics Volume 2 ; 2 >
@@ -102,10 +103,11 @@
     {
      param[base_url] = https://www.ingentaconnect.com/
      param[api_url] = https://api.ingentaconnect.com/
+     param[journal_issn] = 2637-8329
 
-      au < manifest ; 2017 ; Neurographics Volume 7 ; 7 > #Unable to fetch permission page, https://www.ingentaconnect.com/content/1541-6593?format=lockss&volume=7
-      au < manifest ; 2018 ; Neurographics Volume 8 ; 8 >
-      au < manifest ; 2019 ; Neurographics Volume 9 ; 9 >
+      au < exists ; 2017 ; Neurographics Volume 7 ; 7 > #Unable to fetch permission page, https://www.ingentaconnect.com/content/1541-6593?format=lockss&volume=7
+      au < exists ; 2018 ; Neurographics Volume 8 ; 8 >
+      au < exists ; 2019 ; Neurographics Volume 9 ; 9 >
       au < expected ; 2020 ; Neurographics Volume 10 ; 10 >
 
     }
