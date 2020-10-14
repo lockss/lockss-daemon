@@ -8,8 +8,8 @@
 
   plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
   param[base_url] = http://www.ingentaconnect.com/
-  param[api_url] = http://api.ingentaconnect.com/    
-  param[graphics_url] = http://graphics.ingentaconnect.com/    
+  param[api_url] = http://api.ingentaconnect.com/
+  param[graphics_url] = http://graphics.ingentaconnect.com/
   param[publisher_id] = stl
   comment[platform] = Ingenta
   implicit < status ; year ; name ; param[volume_name] >
@@ -60,10 +60,9 @@
     au < released ; 2014 ; Avian Biology Research Volume 7 ; 7 >
     au < released ; 2015 ; Avian Biology Research Volume 8 ; 8 >
     au < released ; 2016 ; Avian Biology Research Volume 9 ; 9 >
-    au < manifest ; 2017 ; Avian Biology Research Volume 10 ; 10 >
-    au < manifest ; 2018 ; Avian Biology Research Volume 11 ; 11 >
-    au < expected ; 2019 ; Avian Biology Research Volume 12 ; 12 >
-    au < expected ; 2020 ; Avian Biology Research Volume 13 ; 13 >
+    au < doNotProcess ; 2017 ; Avian Biology Research Volume 10 ; 10 >
+    au < doNotProcess ; 2018 ; Avian Biology Research Volume 11 ; 11 >
+    au < doNotProcess ; 2019 ; Avian Biology Research Volume 12 ; 12 >
 
   }
 
@@ -130,10 +129,9 @@
     au < released ; 2014 ; Journal of Chemical Research Volume 38 ; 38 >
     au < released ; 2015 ; Journal of Chemical Research Volume 39 ; 39 >
     au < released ; 2016 ; Journal of Chemical Research Volume 40 ; 40 >
-    au < manifest ; 2017 ; Journal of Chemical Research Volume 41 ; 41 >
-    au < manifest ; 2018 ; Journal of Chemical Research Volume 42 ; 42 >
-    au < expected ; 2019 ; Journal of Chemical Research Volume 43 ; 43 >
-    au < expected ; 2020 ; Journal of Chemical Research Volume 44 ; 44 >
+    au < doNotProcess ; 2017 ; Journal of Chemical Research Volume 41 ; 41 >
+    au < doNotProcess ; 2018 ; Journal of Chemical Research Volume 42 ; 42 >
+    au < doNotProcess ; 2019 ; Journal of Chemical Research Volume 43 ; 43 >
 
   }
 
@@ -219,10 +217,9 @@
     au < released ; 2014 ; Progress in Reaction Kenetics & Mechanism Volume 39 ; 39 >
     au < released ; 2015 ; Progress in Reaction Kenetics & Mechanism Volume 40 ; 40 >
     au < released ; 2016 ; Progress in Reaction Kenetics & Mechanism Volume 41 ; 41 >
-    au < manifest ; 2017 ; Progress in Reaction Kenetics & Mechanism Volume 42 ; 42 >
-    au < manifest ; 2018 ; Progress in Reaction Kenetics & Mechanism Volume 43 ; 43 >
-    au < expected ; 2019 ; Progress in Reaction Kenetics & Mechanism Volume 44 ; 44 >
-    au < expected ; 2020 ; Progress in Reaction Kenetics & Mechanism Volume 45 ; 45 >
+    au < doNotProcess ; 2017 ; Progress in Reaction Kenetics & Mechanism Volume 42 ; 42 >
+    au < doNotProcess ; 2018 ; Progress in Reaction Kenetics & Mechanism Volume 43 ; 43 >
+    au < doNotProcess ; 2019 ; Progress in Reaction Kenetics & Mechanism Volume 44 ; 44 >
 
   }
 
@@ -254,10 +251,9 @@
     au < released ; 2014 ; Science Progress Volume 97 ; 97 >
     au < released ; 2015 ; Science Progress Volume 98 ; 98 >
     au < released ; 2016 ; Science Progress Volume 99 ; 99 >
-    au < manifest ; 2017 ; Science Progress Volume 100 ; 100 >
-    au < manifest ; 2018 ; Science Progress Volume 101 ; 101 >
-    au < expected ; 2019 ; Science Progress Volume 102 ; 102 >
-    au < expected ; 2020 ; Science Progress Volume 103 ; 103 >
+    au < doNotProcess ; 2017 ; Science Progress Volume 100 ; 100 >
+    au < doNotProcess ; 2018 ; Science Progress Volume 101 ; 101 >
+    au < doNotProcess ; 2019 ; Science Progress Volume 102 ; 102 >
 
   }
 
