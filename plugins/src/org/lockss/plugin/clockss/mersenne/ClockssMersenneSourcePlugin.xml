@@ -9,14 +9,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -44,7 +44,7 @@
     <string>au_substance_url_pattern</string>
     <list>
       <!--mersenne/2018/AIF/AIF_2015__65_1/AIF_2015__65_1_1_0/AIF_2015__65_1_1_0.pdf-->
-      d<string>"^%s%s/.+\.pdf$", base_url, directory</string>
+      <string>"^%s%s/.+\.pdf$", base_url, directory</string>
     </list>
   </entry>
   <entry>

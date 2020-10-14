@@ -75,8 +75,8 @@ extends JatsPublishingSchemaHelper {
   
   static private final String Issue_issue = "/journal-issue/issue-meta/issue";
   static private final String Issue_volume = "/journal-issue/issue-meta/volume";
-  static private final String Issue_year = "/journal-issue/issue-meta/pub-date/year";
-  static private final String Special_JATS_date =  "front/article-meta/pub-date[@publication-format=\"electronic\"]/@iso-8601-date";
+  static public final String Issue_year = "/journal-issue/issue-meta/pub-date/year";
+  static public final String Special_JATS_date =  "front/article-meta/pub-date[@publication-format=\"electronic\"]/@iso-8601-date";
   
   static private final Map<String,XPathValue> Mersenne_globalMap = 
 	      new HashMap<String,XPathValue>();
@@ -106,6 +106,7 @@ extends JatsPublishingSchemaHelper {
   public MultiValueMap getCookMap() {
 	MultiValueMap theCookMap = super.getCookMap();
 	theCookMap.put(Issue_issue, MetadataField.FIELD_ISSUE);
+    theCookMap.put(Issue_year, MetadataField.FIELD_DATE);
     theCookMap.put(Special_JATS_date, MetadataField.FIELD_DATE);
     return theCookMap;
   }
