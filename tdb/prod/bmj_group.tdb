@@ -2736,8 +2736,8 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; down ; 2014 ; Thorax Volume 69 ; 69 ; http://thorax.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2015 ; Thorax Volume 70 ; 70 ; http://thorax.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2016 ; Thorax Volume 71 ; 71 ; https://thorax.bmj.com/ > # Unable to fetch probe permission page
-    au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; Thorax Volume 72 ; 72 ; https://thorax.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; manifest ; 2018 ; Thorax Volume 73 ; 73 ; https://thorax.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; notReady ; 2017 ; Thorax Volume 72 ; 72 ; https://thorax.bmj.com/ > # Login page https://thorax.bmj.com/content/suppl/2017/11/15/72.Suppl_3.DC2
+    au < bmj.BMJDrupalPlugin ; notReady ; 2018 ; Thorax Volume 73 ; 73 ; https://thorax.bmj.com/ > # Login page https://thorax.bmj.com/content/suppl/2018/02/19/73.Suppl_1.DC1
     au < bmj.BMJDrupalPlugin ; manifest ; 2019 ; Thorax Volume 74 ; 74 ; https://thorax.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2020 ; Thorax Volume 75 ; 75 ; https://thorax.bmj.com/ >
 
