@@ -10,7 +10,7 @@
   >
 
   plugin = org.lockss.plugin.emerald.ClockssEmerald2020Plugin
-  param[base_url] = https://www.emeraldinsight.com/
+  param[base_url] = https://www.emerald.com/
   implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
   {
@@ -12717,7 +12717,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 14 ; 14 ; >
-    au < testing ; exists ; 2019 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 15 ; 15 ; >
+    au < exists ; exists ; 2019 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 15 ; 15 ; >
     au < expected ; exists ; 2020 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 16 ; 16 ; >
 
   }
@@ -12741,7 +12741,7 @@
       au < doNotProcess ; doNotProcess ; 2016 ; World Journal of Science, Technology and Sustainable Development Volume 13 ; 13 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; World Journal of Science, Technology and Sustainable Development Volume 14 ; 14 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; World Journal of Science, Technology and Sustainable Development Volume 15 ; 15 ; >
-      au < testing ; exists ; 2019 ; World Journal of Science, Technology and Sustainable Development Volume 16 ; 16 ; >
+      au < exists ; exists ; 2019 ; World Journal of Science, Technology and Sustainable Development Volume 16 ; 16 ; >
       au < expected ; exists ; 2020 ; World Journal of Science, Technology and Sustainable Development Volume 17 ; 17 ; >
 
   }
@@ -12767,7 +12767,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Worldwide Hospitality and Tourism Themes Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Worldwide Hospitality and Tourism Themes Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Worldwide Hospitality and Tourism Themes Volume 10 ; 10 ; >
-    au < testing ; exists ; 2019 ; Worldwide Hospitality and Tourism Themes Volume 11 ; 11 ; >
+    au < exists ; exists ; 2019 ; Worldwide Hospitality and Tourism Themes Volume 11 ; 11 ; >
     au < expected ; exists ; 2020 ; Worldwide Hospitality and Tourism Themes Volume 12 ; 12 ; >
 
   }
@@ -12785,7 +12785,7 @@
 
     au < exists ; exists ; 1999-2000 ; International Journal of Advertising and Marketing to Children Volume 1 ; 1 ; >
     au < exists ; exists ; 2000-2001 ; International Journal of Advertising and Marketing to Children Volume 2 ; 2 ; >
-    au < testing ; exists ; 2001 ; International Journal of Advertising and Marketing to Children Volume 3 issue 1 ; 3 ; >
+    au < exists ; exists ; 2001 ; International Journal of Advertising and Marketing to Children Volume 3 issue 1 ; 3 ; >
 
   }
 
@@ -12818,7 +12818,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 19 ; 19 ; >
-    au < testing ; exists ; 2019 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 20 ; 20 ; >
+    au < exists ; exists ; 2019 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 20 ; 20 ; >
     au < expected ; exists ; 2020 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 21 ; 21 ; >
 
   }
