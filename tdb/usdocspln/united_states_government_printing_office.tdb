@@ -259,7 +259,7 @@
     au < manifest ; 1970 ; Congressional Hearings 1970 ; 1970 ; https://www.govinfo.gov/ >
     au < ready ; 1971 ; Congressional Hearings 1971 ; 1971 ; https://www.govinfo.gov/ >
     au < doNotProcess ; 1972 ; Congressional Hearings 1972 ; 1972 ; https://www.govinfo.gov/ >
-    au < manifest ; 1973 ; Congressional Hearings 1973 ; 1973 ; https://www.govinfo.gov/ >
+    au < ready ; 1973 ; Congressional Hearings 1973 ; 1973 ; https://www.govinfo.gov/ >
     au < manifest ; 1974 ; Congressional Hearings 1974 ; 1974 ; https://www.govinfo.gov/ >
     au < manifest ; 1975 ; Congressional Hearings 1975 ; 1975 ; https://www.govinfo.gov/ >
     au < ready ; 1976 ; Congressional Hearings 1976 ; 1976 ; https://www.govinfo.gov/ >
@@ -379,9 +379,9 @@
 
 
     au < released ; 1917 ; Statute Compilations 1917 ; 1917 ; https://www.govinfo.gov/ >
-    au < manifest ; 1920 ; Statute Compilations 1920 ; 1920 ; https://www.govinfo.gov/ >
+    au < ready ; 1920 ; Statute Compilations 1920 ; 1920 ; https://www.govinfo.gov/ >
     au < manifest ; 1921 ; Statute Compilations 1921 ; 1921 ; https://www.govinfo.gov/ >
-    au < manifest ; 1922 ; Statute Compilations 1922 ; 1922 ; https://www.govinfo.gov/ >
+    au < ready ; 1922 ; Statute Compilations 1922 ; 1922 ; https://www.govinfo.gov/ >
     au < manifest ; 1923 ; Statute Compilations 1923 ; 1923 ; https://www.govinfo.gov/ >
     au < released ; 1926 ; Statute Compilations 1926 ; 1926 ; https://www.govinfo.gov/ >
     au < released ; 1927 ; Statute Compilations 1927 ; 1927 ; https://www.govinfo.gov/ >
@@ -393,7 +393,7 @@
     au < released ; 1938 ; Statute Compilations 1938 ; 1938 ; https://www.govinfo.gov/ >
     au < released ; 1939 ; Statute Compilations 1939 ; 1939 ; https://www.govinfo.gov/ >
     au < manifest ; 1940 ; Statute Compilations 1940 ; 1940 ; https://www.govinfo.gov/ >
-    au < manifest ; 1943 ; Statute Compilations 1943 ; 1943 ; https://www.govinfo.gov/ >
+    au < ready ; 1943 ; Statute Compilations 1943 ; 1943 ; https://www.govinfo.gov/ >
     au < released ; 1944 ; Statute Compilations 1944 ; 1944 ; https://www.govinfo.gov/ >
     au < manifest ; 1945 ; Statute Compilations 1945 ; 1945 ; https://www.govinfo.gov/ >
     au < released ; 1946 ; Statute Compilations 1946 ; 1946 ; https://www.govinfo.gov/ >
@@ -401,10 +401,10 @@
     au < released ; 1949 ; Statute Compilations 1949 ; 1949 ; https://www.govinfo.gov/ >
     au < released ; 1950 ; Statute Compilations 1950 ; 1950 ; https://www.govinfo.gov/ >
     au < released ; 1955 ; Statute Compilations 1955 ; 1955 ; https://www.govinfo.gov/ >
-    au < manifest ; 1958 ; Statute Compilations 1958 ; 1958 ; https://www.govinfo.gov/ > #empty see https://www.govinfo.gov/sitemap/COMPS_1958_sitemap.xml
+    au < manifest ; 1958 ; Statute Compilations 1958 ; 1958 ; https://www.govinfo.gov/ > #empty? see https://www.govinfo.gov/sitemap/COMPS_1958_sitemap.xml
     au < released ; 1960 ; Statute Compilations 1960 ; 1960 ; https://www.govinfo.gov/ >
-    au < manifest ; 1961 ; Statute Compilations 1961 ; 1961 ; https://www.govinfo.gov/ > #empty see https://www.govinfo.gov/sitemap/COMPS_1961_sitemap.xml
-    au < manifest ; 1965 ; Statute Compilations 1965 ; 1965 ; https://www.govinfo.gov/ > #empty see https://www.govinfo.gov/sitemap/COMPS_1965_sitemap.xml
+    au < manifest ; 1961 ; Statute Compilations 1961 ; 1961 ; https://www.govinfo.gov/ > #empty? see https://www.govinfo.gov/sitemap/COMPS_1961_sitemap.xml
+    au < manifest ; 1965 ; Statute Compilations 1965 ; 1965 ; https://www.govinfo.gov/ > #empty? see https://www.govinfo.gov/sitemap/COMPS_1965_sitemap.xml
     au < released ; 1966 ; Statute Compilations 1966 ; 1966 ; https://www.govinfo.gov/ >
     au < released ; 1968 ; Statute Compilations 1968 ; 1968 ; https://www.govinfo.gov/ >
     au < released ; 1970 ; Statute Compilations 1970 ; 1970 ; https://www.govinfo.gov/ >
@@ -422,7 +422,7 @@
     au < manifest ; 1982 ; Statute Compilations 1982 ; 1982 ; https://www.govinfo.gov/ >
     au < released ; 1983 ; Statute Compilations 1983 ; 1983 ; https://www.govinfo.gov/ >
     au < released ; 1984 ; Statute Compilations 1984 ; 1984 ; https://www.govinfo.gov/ >
-    au < manifest ; 1985 ; Statute Compilations 1985 ; 1985 ; https://www.govinfo.gov/ > #empty site map see https://www.govinfo.gov/sitemap/COMPS_1985_sitemap.xml
+    au < manifest ; 1985 ; Statute Compilations 1985 ; 1985 ; https://www.govinfo.gov/ > #empty? site map see https://www.govinfo.gov/sitemap/COMPS_1985_sitemap.xml
     au < released ; 1986 ; Statute Compilations 1986 ; 1986 ; https://www.govinfo.gov/ >
     au < released ; 1987 ; Statute Compilations 1987 ; 1987 ; https://www.govinfo.gov/ >
     au < manifest ; 1988 ; Statute Compilations 1988 ; 1988 ; https://www.govinfo.gov/ >
@@ -776,7 +776,7 @@
     au < manifest ; 1982 ; Public Papers of the Presidents of the United States 1982 ; 1982 ; https://www.govinfo.gov/ >
     au < manifest ; 1983 ; Public Papers of the Presidents of the United States 1983 ; 1983 ; https://www.govinfo.gov/ >
     au < manifest ; 1984 ; Public Papers of the Presidents of the United States 1984 ; 1984 ; https://www.govinfo.gov/ >
-    au < manifest ; 1985 ; Public Papers of the Presidents of the United States 1985 ; 1985 ; https://www.govinfo.gov/ >
+    au < ready ; 1985 ; Public Papers of the Presidents of the United States 1985 ; 1985 ; https://www.govinfo.gov/ >
     au < manifest ; 1986 ; Public Papers of the Presidents of the United States 1986 ; 1986 ; https://www.govinfo.gov/ >
     au < manifest ; 1987 ; Public Papers of the Presidents of the United States 1987 ; 1987 ; https://www.govinfo.gov/ >
     au < manifest ; 1988 ; Public Papers of the Presidents of the United States 1988 ; 1988 ; https://www.govinfo.gov/ >
