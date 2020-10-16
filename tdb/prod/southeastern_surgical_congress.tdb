@@ -9,7 +9,8 @@
 #  param[api_url] = http://api.ingentaconnect.com/
   param[graphics_url] = http://graphics.ingentaconnect.com/
   param[publisher_id] = sesc
-  
+  #publisher content not available from ingenta
+
   implicit < status ; year ; name ; param[volume_name] >
 
   {
@@ -27,18 +28,18 @@
      param[base_url] = http://www.ingentaconnect.com/
      param[api_url] = http://api.ingentaconnect.com/
 
-    au < released ; 2005 ; The American Surgeon Volume 71 ; 71 >
-    au < released ; 2006 ; The American Surgeon Volume 72 ; 72 >
-    au < released ; 2007 ; The American Surgeon Volume 73 ; 73 >
-    au < released ; 2008 ; The American Surgeon Volume 74 ; 74 >
-    au < released ; 2009 ; The American Surgeon Volume 75 ; 75 >
-    au < released ; 2010 ; The American Surgeon Volume 76 ; 76 >
-    au < released ; 2011 ; The American Surgeon Volume 77 ; 77 >
-    au < released ; 2012 ; The American Surgeon Volume 78 ; 78 >
-    au < released ; 2013 ; The American Surgeon Volume 79 ; 79 >
-    au < released ; 2014 ; The American Surgeon Volume 80 ; 80 >
-    au < released ; 2015 ; The American Surgeon Volume 81 ; 81 >
-    au < released ; 2016 ; The American Surgeon Volume 82 ; 82 >
+    au < down ; 2005 ; The American Surgeon Volume 71 ; 71 >
+    au < down ; 2006 ; The American Surgeon Volume 72 ; 72 >
+    au < down ; 2007 ; The American Surgeon Volume 73 ; 73 >
+    au < down ; 2008 ; The American Surgeon Volume 74 ; 74 >
+    au < down ; 2009 ; The American Surgeon Volume 75 ; 75 >
+    au < down ; 2010 ; The American Surgeon Volume 76 ; 76 >
+    au < down ; 2011 ; The American Surgeon Volume 77 ; 77 >
+    au < down ; 2012 ; The American Surgeon Volume 78 ; 78 >
+    au < down ; 2013 ; The American Surgeon Volume 79 ; 79 >
+    au < down ; 2014 ; The American Surgeon Volume 80 ; 80 >
+    au < down ; 2015 ; The American Surgeon Volume 81 ; 81 >
+    au < down ; 2016 ; The American Surgeon Volume 82 ; 82 >
 
     }
 
@@ -46,10 +47,10 @@
      param[base_url] = https://www.ingentaconnect.com/
      param[api_url] = https://api.ingentaconnect.com/
 
-    au < manifest ; 2017 ; The American Surgeon Volume 83 ; 83 >
-    au < manifest ; 2018 ; The American Surgeon Volume 84 ; 84 >
-    au < manifest ; 2019 ; The American Surgeon Volume 85 ; 85 >
-    au < manifest ; 2020 ; The American Surgeon Volume 86 ; 86 >
+    au < doNotProcess ; 2017 ; The American Surgeon Volume 83 ; 83 >
+    au < doNotProcess ; 2018 ; The American Surgeon Volume 84 ; 84 >
+    au < doNotProcess ; 2019 ; The American Surgeon Volume 85 ; 85 >
+    au < doNotProcess ; 2020 ; The American Surgeon Volume 86 ; 86 >
 
     }
   }
