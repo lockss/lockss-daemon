@@ -92,8 +92,8 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Biographical Memoirs of Fellows of the Royal Society Volume 63 ; 63 ; >
     au < finished ; finished ; 2018 ; Biographical Memoirs of Fellows of the Royal Society Volume 64 ; 64 ; reingest1.clockss.org:8082 >
     au < manifest ; exists ; 2018 ; Biographical Memoirs of Fellows of the Royal Society Volume 65 ; 65 ; >
-    au < ready ; exists ; 2019 ; Biographical Memoirs of Fellows of the Royal Society Volume 66 ; 66 ; >
-    au < ready ; exists ; 2019 ; Biographical Memoirs of Fellows of the Royal Society Volume 67 ; 67 ; >
+    au < crawling ; exists ; 2019 ; Biographical Memoirs of Fellows of the Royal Society Volume 66 ; 66 ; >
+    au < crawling ; exists ; 2019 ; Biographical Memoirs of Fellows of the Royal Society Volume 67 ; 67 ; >
     au < superseded ; exists ; 2019 ; Biographical Memoirs of Fellows of the Royal Society Volume 66-67 [superseded] ; 2019 ; >
 
     au < manifest ; exists ; 2020 ; Biographical Memoirs of Fellows of the Royal Society Volume 68 ; 68 ; >
@@ -323,7 +323,7 @@
     au < finished ; finished ; 2018 ; Open Biology Volume 8 ; 8 ; reingest2.clockss.org:8085 >
 #    au < manifest ; exists ; 2018 ; Open Biology Volume 8 [2018] ; 2018 ; >
 
-    au < ready ; exists ; 2019 ; Open Biology Volume 9 ; 9 ; >
+    au < crawling ; exists ; 2019 ; Open Biology Volume 9 ; 9 ; >
     au < superseded ; exists ; 2019 ; Open Biology Volume 9 [superseded] ; 2019 ; >
 
     au < manifest ; exists ; 2020 ; Open Biology Volume 10 ; 10 ; >
@@ -1399,7 +1399,7 @@
     au < finished ; finished ; 2018 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 474 ; 474 ; reingest3.clockss.org:8083 >
     #au < manifest ; exists ; 2018 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 474 [2018] ; 2018 ; >#bad issue url "/toc/rspa1996/2002/458/2018"
 
-    au < ready ; exists ; 2019 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 475 ; 475 ; > #no substance. using 2019 gives a manifest page with one url to issue 2019 from 2002.
+    au < crawling ; exists ; 2019 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 475 ; 475 ; > #no substance. using 2019 gives a manifest page with one url to issue 2019 from 2002.
     #au < manifest ; exists ; 2019 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 475 [2019] ; 2019 ; >#bad issue url "/toc/rspa1996/2002/458/2019"
 
     au < manifest ; exists ; 2020 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 476 ; 476 ; >
