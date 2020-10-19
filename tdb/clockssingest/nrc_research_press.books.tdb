@@ -9,6 +9,7 @@
   comment[platform] = Atypon
   plugin = org.lockss.plugin.atypon.nrcresearchpress.ClockssNRCResearchPressBooksPlugin
   #param[base_url] = http://www.nrcresearchpress.com/
+  #platform moved to Canadian Science Publishing, https://cdnsciencepub.com/
   implicit < status ; status2 ; year ; isbn ; eisbn ; param[book_eisbn] ; name ; param[base_url] ; hidden[proxy] >
 
 
@@ -80,7 +81,7 @@
    au < finished ; finished ; 2003 ; 978-0-660-19065-5 ; 978-0-660-19065-5 ; 9780660190655 ; Proceedings of the SUNY Institute of Technology Conference on Theoretical High Energy Physics ; http://www.nrcresearchpress.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2003 ; 978-0-660-19007-5 ; 978-0-660-19265-9 ; 9780660192659 ; Sea Buckthorn (Hippophae rhamnoides L.) ; http://www.nrcresearchpress.com/ ;  >
    au < finished ; finished ; 2003 ; 978-0-660-18762-4 ; 978-0-660-19256-7 ; 9780660192567 ; Towards Sustainable Management of the Boreal Forest ; http://www.nrcresearchpress.com/ ;  >
-   au < exists ; exists ; 2003 ; 978-0-660-18941-3 ; 978-0-660-19259-8 ; 9780660189413 ; Flora of the Hudson Bay Lowland and its Postglacial Origins ; https://www.nrcresearchpress.com/doi/book/10.1139/9780660189413 ;  >
+   au < doNotProcess ; exists ; 2003 ; 978-0-660-18941-3 ; 978-0-660-19259-8 ; 9780660189413 ; Flora of the Hudson Bay Lowland and its Postglacial Origins ; https://www.nrcresearchpress.com/doi/book/10.1139/9780660189413 ;  >
    au < finished ; finished ; 2004 ; 978-0-660-19271-0 ; 978-0-660-19272-7 ; 9780660192727 ; Blue Grouse: Their Biology and Natural History ; http://www.nrcresearchpress.com/ ;  >
    au < finished ; finished ; 2004 ; 978-0-660-19322-9 ; 978-0-660-19323-6 ; 9780660193236 ; George J. Klein: The Great Inventor ; http://www.nrcresearchpress.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2004 ; 978-0-660-19326-7 ; 978-0-660-19327-4 ; 9780660193274 ; Ludlow and Pridoli (Upper Silurian) Graptolites from the Arctic Islands, Canada ; http://www.nrcresearchpress.com/ ;  >
