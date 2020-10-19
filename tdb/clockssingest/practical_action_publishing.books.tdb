@@ -9,6 +9,7 @@
   comment[platform] = Atypon
   plugin = org.lockss.plugin.atypon.practicalaction.ClockssPracticalActionBooksPlugin
   #  param[base_url] = http://www.developmentbookshelf.com/
+  #platform changed RT #10286
   implicit < status ; status2 ; year ; isbn ; eisbn ; param[book_eisbn] ; name ; param[base_url] ; hidden[proxy] >
 
  {
@@ -1447,11 +1448,11 @@
    au < finished ; finished ; 2015 ; 9781899365340 ; 9781909013414 ; 9781909013414 ; Reyita (9781909013414) ; http://www.developmentbookshelf.com/ ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 9781909014015 ; 9781909013902 ; 9781909013902 ; Brazil under the Workers' Party (9781909013902) ; http://www.developmentbookshelf.com/ ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2015 ; 9781909014107 ; 9781909014121 ; 9781909014121 ; The Nicaragua Grand Canal (9781909014121) ; http://www.developmentbookshelf.com/ ; reingest2.clockss.org:8085 >
-   au < exists ; exists ; 2015 ; 9781853399213 ; 9781780449227 ; 9781780449210 ; Citizen-Led Innovation for a New Economy ; https://www.developmentbookshelf.com/ ;  >
+   au < doNotProcess ; exists ; 2015 ; 9781853399213 ; 9781780449227 ; 9781780449210 ; Citizen-Led Innovation for a New Economy ; https://www.developmentbookshelf.com/ ;  >
    au < finished ; manifest ; 2016 ; 9781909014183 ; 9781909014190 ; 9781909014190 ; Brazil Inside Out 2nd Edition ; https://www.developmentbookshelf.com/ ; reingest1.clockss.org:8082 >
-   au < exists ; exists ; 2016 ; 9781853399008 ; 9781780449005 ; 9781780449005 ; Farmer Research Groups ; Institutionalizing participatory agricultural research in Ethiopia ; https://www.developmentbookshelf.com/ >
+   au < doNotProcess ; exists ; 2016 ; 9781853399008 ; 9781780449005 ; 9781780449005 ; Farmer Research Groups ; Institutionalizing participatory agricultural research in Ethiopia ; https://www.developmentbookshelf.com/ >
    au < finished ; manifest ; 2016 ; 9781853399268 ; 9781780449258 ; 9781780449258 ; Negotiating Knowledge -- Evidence and experience in development NGOs ; https://www.developmentbookshelf.com/ ; reingest3.clockss.org:8083 >
-   au < exists ; exists ; 2016 ; 9781853399190 ; 9781780449203 ; 9781780449197 ; Normas y directrices para intervenciones ganaderas en emergencias (LEGS) ; https://www.developmentbookshelf.com/ ;  >
+   au < doNotProcess ; exists ; 2016 ; 9781853399190 ; 9781780449203 ; 9781780449197 ; Normas y directrices para intervenciones ganaderas en emergencias (LEGS) ; https://www.developmentbookshelf.com/ ;  >
    au < finished ; manifest ; 2016 ; 9781853399329 ; 9781780449395 ; 9781780449395 ; People's Knowledge and Participatory Action Research ; https://www.developmentbookshelf.com/ ; reingest4.clockss.org:8082 >
    au < finished ; manifest ; 2016 ; 9781853399053 ; 9781780449043 ; 9781780449043 ; Rethink, Retool, Reboot: Technology as if people and planet mattered ; https://www.developmentbookshelf.com/ ; reingest4.clockss.org:8082 >
    au < finished ; manifest ; 2016 ; 9781909014039 ; 9781909013919 ; 9781909013919 ; Rosa of the Wild Grass ; https://www.developmentbookshelf.com/ ; reingest3.clockss.org:8083 >
