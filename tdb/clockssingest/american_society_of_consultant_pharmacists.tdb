@@ -4,9 +4,9 @@
     name = American Society of Consultant Pharmacists ;
     info[contract] = 2020 ;
     info[tester] = 8 ;
-    info[poller] = 8
+    info[poller] = 8 ;
+    info[platform] = Ingenta
   >
-    comment[platform] = Ingenta
 
     implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
     plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin

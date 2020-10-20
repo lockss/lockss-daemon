@@ -4,14 +4,14 @@
     name = American Society for Microbiology ;
     info[contract] = 2013 ;
     info[tester] = 8 ;
-    info[poller] = 3
+    info[poller] = 3 ;
+    info[platform] = Pub2Web
   >
 
   {
     plugin = org.lockss.plugin.pub2web.asm.ClockssASMscienceJournalsPlugin
     #param[base_url] = http://www.asmscience.org/
     implicit < status ; status2 ; year ; name ; param[volume_name] ; param[base_url] ; hidden[proxy] >
-    comment[platform] = Pub2Web
   
     {
       title <

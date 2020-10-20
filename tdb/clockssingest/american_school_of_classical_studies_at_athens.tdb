@@ -4,7 +4,8 @@
     name = American School of Classical Studies at Athens ;
     info[contract] = 2014 ;
     info[tester] = 8 ;
-    info[poller] = 3
+    info[poller] = 3 ;
+    info[platform] = JSTOR
   >
   
   {
@@ -16,7 +17,6 @@
     >
     
     {
-      comment[platform] = JSTOR
       plugin = org.lockss.plugin.jstor.ClockssJstorPlugin
       param[base_url] = http://www.jstor.org/
       param[base_url2] = https://www.jstor.org/
@@ -112,7 +112,6 @@
   
    {
    
-     comment[platform] = JSTOR
      plugin = org.lockss.plugin.jstor.ClockssJstorCurrentScholarshipPlugin
      # param[base_url] = http://www.jstor.org/
      implicit < status ; status2 ; year ; name ; param[year] ; param[base_url] ; hidden[proxy] >
