@@ -4,7 +4,8 @@
     name = Leibniz Institute for Psychology Information ;
     info[contract] = 2013 ;
     info[tester] = 8 ;
-    info[poller] = 2
+    info[poller] = 2 ;
+    info[platform] = Like the Pensoft plugin. See LXPLUG-1920.
   >
   
     rights = openaccess
@@ -25,6 +26,7 @@
       param[au_oai_set] = cpe
 
       au < exists ; exists ; 2019 ; 2019 ; Clinical Psychology in Europe Volume 2019 ; 2019 ; https://cpe.psychopen.eu/ ; >
+      au < expected ; exists ; 2020 ; 2020 ; Clinical Psychology in Europe Volume 2020 ; 2020 ; https://cpe.psychopen.eu/ ; >
 
   }
 
@@ -40,6 +42,7 @@
 
       au < exists ; exists ; 2018 ; 2018 ; Social Psychological Bulletin Volume 2018 ; 2018 ; https://spb.psychopen.eu/ ; >
       au < exists ; exists ; 2019 ; 2019 ; Social Psychological Bulletin Volume 2019 ; 2019 ; https://spb.psychopen.eu/ ; >
+      au < expected ; exists ; 2020 ; 2020 ; Social Psychological Bulletin Volume 2020 ; 2020 ; https://spb.psychopen.eu/ ; >
 
   }
 
