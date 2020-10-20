@@ -3,7 +3,8 @@
   publisher <
     name = Discrete Analysis ;
     info[contract] = 2017 ;
-    info[tester] = S
+    info[tester] = S ;
+    info[platform] = Source
   >
 
 
@@ -13,7 +14,7 @@
       name = Discrete Analysis Source Content
     >
 
-    #currently only one journal but they want the option to deliver more in the future    
+    #currently only one journal but they want the option to deliver more in the future
     plugin = needs.SourcePlugin
     
     #plugin = org.lockss.plugin.clockss.discreteanlysis.ClockssDiscreteAnalysisSourcePlugin

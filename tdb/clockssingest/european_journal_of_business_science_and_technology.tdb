@@ -5,7 +5,8 @@
     info[contract] = 2017 ;
     info[back] = 2015 ;
     info[tester] = 8 ;
-    info[poller] = 8
+    info[poller] = 8 ;
+    info[platform] = Actavia
   >
 
     implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
