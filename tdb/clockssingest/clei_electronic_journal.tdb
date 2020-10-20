@@ -24,9 +24,9 @@
       param[base_url] = https://www.clei.org/cleiej/
       param[journal_id] = cleiej
 
-      au < crawling ; exists ; 1998 ; CLEI Electronic Journal Volume 1 ; 1 ; 1998 ; >
-      au < crawling ; exists ; 1999 ; CLEI Electronic Journal Volume 2 ; 2 ; 1999 ; >
-      au < crawling ; exists ; 2000 ; CLEI Electronic Journal Volume 3 ; 3 ; 2000 ; >
+      au < frozen ; exists ; 1998 ; CLEI Electronic Journal Volume 1 ; 1 ; 1998 ; >
+      au < frozen ; exists ; 1999 ; CLEI Electronic Journal Volume 2 ; 2 ; 1999 ; >
+      au < frozen ; exists ; 2000 ; CLEI Electronic Journal Volume 3 ; 3 ; 2000 ; >
       au < manifest ; exists ; 2001 ; CLEI Electronic Journal Volume 4 ; 4 ; 2001 ; >
       au < manifest ; exists ; 2002 ; CLEI Electronic Journal Volume 5 ; 5 ; 2002 ; >
       au < manifest ; exists ; 2003 ; CLEI Electronic Journal Volume 6 ; 6 ; 2003 ; >
