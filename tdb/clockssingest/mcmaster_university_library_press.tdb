@@ -224,7 +224,7 @@
       au < frozen ; exists ; 2017 ; Journal for the History of Analytical Philosophy Volume 7 ; 7 ; 2017 ; >  #clockss permission page missing index.php
       au < frozen ; exists ; 2018 ; Journal for the History of Analytical Philosophy Volume 8 ; 8 ; 2018 ; >
       au < deepCrawl ; exists ; 2019 ; Journal for the History of Analytical Philosophy Volume 9 ; 9 ; 2019 ; >
-      au < ready ; exists ; 2020 ; Journal for the History of Analytical Philosophy Volume 10 ; 10 ; 2020 ; >
+      au < crawling ; exists ; 2020 ; Journal for the History of Analytical Philosophy Volume 10 ; 10 ; 2020 ; >
 
     }
 
@@ -379,7 +379,7 @@
       param[base_url] = https://mulpress.mcmaster.ca/
       param[journal_id] = ijrr
 
-      au < ready ; exists ; 2018 ; International Journal of Risk and Recovery Volume 1 ; 1 ; 2018 ; >
+      au < crawling ; exists ; 2018 ; International Journal of Risk and Recovery Volume 1 ; 1 ; 2018 ; >
       au < manifest ; exists ; 2019 ; International Journal of Risk and Recovery Volume 2 ; 2 ; 2019 ; > 
       au < expected ; exists ; 2020 ; International Journal of Risk and Recovery Volume 3 ; 3 ; 2020 ; >
 
