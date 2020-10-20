@@ -6,10 +6,11 @@
     info[contract] = 2012 ;
     # Under the auspices of Kansas State University on Digital Commons ;
     info[tester] = 5 ;
-    info[poller] = 8
+    info[poller] = 8 ;
+    info[platform] = DigitalCommons-Like
   >
   
-  # Do not add any titles with the DigitalCommons/BePress Plugin without Vicky's approval. Document Vicky's approval in PD-36.
+  # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
       plugin = needs.plugin
       #plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
       implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >

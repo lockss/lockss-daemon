@@ -4,7 +4,8 @@
     name = Institution of Engineering and Technology (IET) ;
     info[contract] = TDB ;
     info[tester] = 8 ;
-    info[poller] = 7
+    info[poller] = 7 ;
+    info[platform] = pub2web/books
   >
 
   plugin = needs.plugin
