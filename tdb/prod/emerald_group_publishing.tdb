@@ -29,7 +29,7 @@
     au < doNotProcess ; 2017 ; Academia Revista Latinoamericana de Administración Volume 30 ; 30 >
     au < manifest ; 2018 ; Academia Revista Latinoamericana de Administración Volume 31 ; 31 >
     au < manifest ; 2019 ; Academia Revista Latinoamericana de Administración Volume 32 ; 32 >
-    au < manifest ; 2020 ; Academia Revista Latinoamericana de Administración Volume 33 ; 33 >
+    au < testing ; 2020 ; Academia Revista Latinoamericana de Administración Volume 33 ; 33 >
 
   }
 
@@ -97,7 +97,7 @@
     au < manifest ; 1993 ; Accounting, Auditing & Accountability Journal Volume 6 ; 6 >
     au < manifest ; 1994 ; Accounting, Auditing & Accountability Journal Volume 7 ; 7 >
     au < manifest ; 1995 ; Accounting, Auditing & Accountability Journal Volume 8 ; 8 >
-    au < manifest ; 1996 ; Accounting, Auditing & Accountability Journal Volume 9 ; 9 >
+    au < testing ; 1996 ; Accounting, Auditing & Accountability Journal Volume 9 ; 9 >
     au < manifest ; 1997 ; Accounting, Auditing & Accountability Journal Volume 10 ; 10 >
     au < manifest ; 1998 ; Accounting, Auditing & Accountability Journal Volume 11 ; 11 >
     au < manifest ; 1999 ; Accounting, Auditing & Accountability Journal Volume 12 ; 12 >
@@ -119,7 +119,7 @@
     au < doNotProcess ; 2015 ; Accounting, Auditing & Accountability Journal Volume 28 ; 28 >
     au < doNotProcess ; 2016 ; Accounting, Auditing & Accountability Journal Volume 29 ; 29 >
     au < doNotProcess ; 2017 ; Accounting, Auditing & Accountability Journal Volume 30 ; 30 >
-    au < manifest ; 2018 ; Accounting, Auditing & Accountability Journal Volume 31 ; 31 >
+    au < testing ; 2018 ; Accounting, Auditing & Accountability Journal Volume 31 ; 31 >
 
   }
 
@@ -134,7 +134,7 @@
     param[journal_issn] = 1757-0972
     comment[journal_id] = add
 
-    au < manifest ; 2008 ; Advances in Dual Diagnosis Volume 1 ; 1 >
+    au < testing ; 2008 ; Advances in Dual Diagnosis Volume 1 ; 1 >
     au < manifest ; 2009 ; Advances in Dual Diagnosis Volume 2 ; 2 >
     au < manifest ; 2010 ; Advances in Dual Diagnosis Volume 3 ; 3 >
     au < manifest ; 2011 ; Advances in Dual Diagnosis Volume 4 ; 4 >
@@ -161,7 +161,7 @@
 
     au < manifest ; 2007 ; Advances in Mental Health and Learning Disabilities Volume 1 ; 1 >
     au < manifest ; 2008 ; Advances in Mental Health and Learning Disabilities Volume 2 ; 2 >
-    au < manifest ; 2009 ; Advances in Mental Health and Learning Disabilities Volume 3 ; 3 >
+    au < testing ; 2009 ; Advances in Mental Health and Learning Disabilities Volume 3 ; 3 >
     au < manifest ; 2010 ; Advances in Mental Health and Learning Disabilities Volume 4 ; 4 >
 
   }
@@ -621,7 +621,7 @@
     comment[journal_id] = apjba
 
     au < exists ; 2009 ; Asia-Pacific Journal of Business Administration Volume 1 ; 1 >
-    au < manifest ; 2010 ; Asia-Pacific Journal of Business Administration Volume 2 ; 2 >
+    au < testing ; 2010 ; Asia-Pacific Journal of Business Administration Volume 2 ; 2 >
     au < manifest ; 2011 ; Asia-Pacific Journal of Business Administration Volume 3 ; 3 >
     au < manifest ; 2012 ; Asia-Pacific Journal of Business Administration Volume 4 ; 4 >
     au < doNotProcess ; 2013 ; Asia-Pacific Journal of Business Administration Volume 5 ; 5 >
@@ -1223,7 +1223,7 @@
     comment[journal_id] = bepam
 
     au < manifest ; 2011 ; Built Environment Project and Asset Management Volume 1 ; 1 >
-    au < manifest ; 2012 ; Built Environment Project and Asset Management Volume 2 ; 2 >
+    au < testing ; 2012 ; Built Environment Project and Asset Management Volume 2 ; 2 >
     au < doNotProcess ; 2013 ; Built Environment Project and Asset Management Volume 3 ; 3 >
     au < doNotProcess ; 2014 ; Built Environment Project and Asset Management Volume 4 ; 4 >
     au < doNotProcess ; 2015 ; Built Environment Project and Asset Management Volume 5 ; 5 >
@@ -1403,7 +1403,7 @@
 
     au < exists ; 2009 ; China Agricultural Economic Review Volume 1 ; 1 >
     au < manifest ; 2010 ; China Agricultural Economic Review Volume 2 ; 2 >
-    au < manifest ; 2011 ; China Agricultural Economic Review Volume 3 ; 3 >
+    au < testing ; 2011 ; China Agricultural Economic Review Volume 3 ; 3 >
     au < manifest ; 2012 ; China Agricultural Economic Review Volume 4 ; 4 >
     au < doNotProcess ; 2013 ; China Agricultural Economic Review Volume 5 ; 5 >
     au < doNotProcess ; 2014 ; China Agricultural Economic Review Volume 6 ; 6 >
@@ -1450,7 +1450,7 @@
     au < exists ; 2008 ; Chinese Management Studies Volume 2 ; 2 >
     au < exists ; 2009 ; Chinese Management Studies Volume 3 ; 3 >
     au < manifest ; 2010 ; Chinese Management Studies Volume 4 ; 4 >
-    au < manifest ; 2011 ; Chinese Management Studies Volume 5 ; 5 >
+    au < testing ; 2011 ; Chinese Management Studies Volume 5 ; 5 >
     au < manifest ; 2012 ; Chinese Management Studies Volume 6 ; 6 >
     au < doNotProcess ; 2013 ; Chinese Management Studies Volume 7 ; 7 >
     au < doNotProcess ; 2014 ; Chinese Management Studies Volume 8 ; 8 >
