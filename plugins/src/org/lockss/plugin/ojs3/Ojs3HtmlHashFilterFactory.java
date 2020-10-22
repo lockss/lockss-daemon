@@ -58,6 +58,7 @@ public class Ojs3HtmlHashFilterFactory implements FilterFactory {
   private static final NodeFilter[] includeNodes = new NodeFilter[] {
 	    	// manifest page
 	    	HtmlNodeFilters.tagWithAttributeRegex("div",  "class", "page clockss"),
+            HtmlNodeFilters.tagWithAttributeRegex("div",  "class", "page lockss"),
 	        // toc - contents only
 	        HtmlNodeFilters.tagWithAttribute("div", "class", "issue-toc"),
 	        // abstract landing page html
