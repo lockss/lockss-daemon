@@ -379,7 +379,7 @@
       param[base_url] = https://mulpress.mcmaster.ca/
       param[journal_id] = ijrr
 
-      au < crawling ; exists ; 2018 ; International Journal of Risk and Recovery Volume 1 ; 1 ; 2018 ; >
+      au < frozen ; exists ; 2018 ; International Journal of Risk and Recovery Volume 1 ; 1 ; 2018 ; >
       au < manifest ; exists ; 2019 ; International Journal of Risk and Recovery Volume 2 ; 2 ; 2019 ; > 
       au < expected ; exists ; 2020 ; International Journal of Risk and Recovery Volume 3 ; 3 ; 2020 ; >
 
