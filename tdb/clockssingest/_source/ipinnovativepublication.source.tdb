@@ -13,8 +13,8 @@
        name = IP Innovative Publication
     >
     
-    #plugin = needs.plugin 
-    plugin = org.lockss.plugin.clockss.ipinnovative.ClockssIPInnovativeSourcePlugin
+    plugin = needs.plugin 
+    #plugin = org.lockss.plugin.clockss.ipinnovative.ClockssIPInnovativeSourcePlugin
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/innovativepublication-released/
     
     hidden[proxy] = DIRECT
