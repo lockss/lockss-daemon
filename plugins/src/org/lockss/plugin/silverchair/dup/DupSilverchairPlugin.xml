@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>down</string>
+    <string>development</string>
   </entry>
   <!-- NOTE: this plugin uses shared code (validation, response handler) from parent directory! -->
   <entry>
@@ -10,7 +10,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -116,11 +116,14 @@
     <string>plugin_fetch_rate_limiter_source</string>
     <string>host:base_url</string>
   </entry>
+  <!--
+  Validator factory for text MIME types is disabled in Oct/2020, because in order to comply
+  with EU privacy law, Silvarchair converted jpeg/tif/png to a single page html
   <entry>
-    <!-- Validator factory for text MIME types -->
     <string>text/*_content_validator_factory</string>
     <string>org.lockss.plugin.silverchair.BaseScContentValidatorFactory</string>
   </entry>
+  -->
   <entry>
     <string>plugin_url_consumer_factory</string>
     <string>org.lockss.plugin.silverchair.BaseScUrlConsumerFactory</string>
