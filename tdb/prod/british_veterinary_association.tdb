@@ -194,12 +194,12 @@
     au < HighWirePressH20Plugin ; released ; 2014 ; Veterinary Record Volume 175 ; 175 ; http://veterinaryrecord.bmj.com/ >
     au < HighWirePressH20Plugin ; released ; 2015 ; Veterinary Record Volume 176 ; 176 ; http://veterinaryrecord.bmj.com/ >
     au < HighWirePressH20Plugin ; released ; 2015 ; Veterinary Record Volume 177 ; 177 ; http://veterinaryrecord.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; testing ; 2016 ; Veterinary Record Volume 178 ; 178 ; https://veterinaryrecord.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; testing ; 2016 ; Veterinary Record Volume 179 ; 179 ; https://veterinaryrecord.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; testing ; 2017 ; Veterinary Record Volume 180 ; 180 ; https://veterinaryrecord.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; testing ; 2017 ; Veterinary Record Volume 181 ; 181 ; https://veterinaryrecord.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; testing ; 2018 ; Veterinary Record Volume 182 ; 182 ; https://veterinaryrecord.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; testing ; 2018 ; Veterinary Record Volume 183 ; 183 ; https://veterinaryrecord.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; notReady ; 2016 ; Veterinary Record Volume 178 ; 178 ; https://veterinaryrecord.bmj.com/ > #login found
+    au < bmj.BMJDrupalPlugin ; notReady ; 2016 ; Veterinary Record Volume 179 ; 179 ; https://veterinaryrecord.bmj.com/ > #login found
+    au < bmj.BMJDrupalPlugin ; notReady ; 2017 ; Veterinary Record Volume 180 ; 180 ; https://veterinaryrecord.bmj.com/ > #login found
+    au < bmj.BMJDrupalPlugin ; notReady ; 2017 ; Veterinary Record Volume 181 ; 181 ; https://veterinaryrecord.bmj.com/ > #login found
+    au < bmj.BMJDrupalPlugin ; notReady ; 2018 ; Veterinary Record Volume 182 ; 182 ; https://veterinaryrecord.bmj.com/ > #login found
+    au < bmj.BMJDrupalPlugin ; notReady ; 2018 ; Veterinary Record Volume 183 ; 183 ; https://veterinaryrecord.bmj.com/ > #login found
     au < bmj.BMJDrupalPlugin ; manifest ; 2019 ; Veterinary Record Volume 184 ; 184 ; https://veterinaryrecord.bmj.com/ > #login page
     au < bmj.BMJDrupalPlugin ; manifest ; 2019 ; Veterinary Record Volume 185 ; 185 ; https://veterinaryrecord.bmj.com/ > #unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; manifest ; 2020 ; Veterinary Record Volume 186 ; 186 ; https://veterinaryrecord.bmj.com/ >
