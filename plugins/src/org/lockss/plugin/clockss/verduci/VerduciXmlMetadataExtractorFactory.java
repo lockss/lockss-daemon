@@ -137,6 +137,15 @@ public class VerduciXmlMetadataExtractorFactory extends SourceXmlMetadataExtract
       List<String> returnList = new ArrayList<String>();
       String spage = oneAM.getRaw(PubMedSchemaHelper.art_sp);
       String epage = oneAM.getRaw(PubMedSchemaHelper.art_lp);
+
+      // In oct/2020, their upload a new folder with different structure. PDF file is named using
+      // <ELocationID EIdType="pii">1287</ELocationID>
+      // /verduci-released/2020/WCRJ/2019%20VOLUME%206/III/e1287.pdf
+
+      String elocation_id = oneAM.getRaw(PubMedSchemaHelper.elocation_id);
+
+      log.debug3("Fei - elocation_id" + elocation_id);
+
       if (epage == null) {
         epage = spage;
       }
@@ -157,14 +166,23 @@ public class VerduciXmlMetadataExtractorFactory extends SourceXmlMetadataExtract
           String xmlPath = FilenameUtils.getPath(url_string);
           if (xmlPath.endsWith("XML/")) {
             xmlPath = xmlPath.substring(0,xmlPath.length() - 4); 
-          }      
-          // 1st option - no PDF directory
-          String pdfName = xmlPath + spage + "-" + epage + ".pdf";
-          log.debug3("pdfName is " + pdfName);
-          returnList.add(pdfName);
-          // 2nd option - PDF subdirectory
-          pdfName = xmlPath + "PDF/" + spage + "-" + epage + ".pdf";
-          log.debug3("pdfName is " + pdfName);
+          }
+
+          String pdfName = "";
+
+          if (spage != null && epage != null) {
+              // 1st option - no PDF directory
+              pdfName = xmlPath + spage + "-" + epage + ".pdf";
+              log.debug3("pdfName is " + pdfName);
+              returnList.add(pdfName);
+              // 2nd option - PDF subdirectory
+              pdfName = xmlPath + "PDF/" + spage + "-" + epage + ".pdf";
+              log.debug3("pdfName is " + pdfName);
+          } else if (elocation_id != null) {
+
+              pdfName = xmlPath + "e" + elocation_id + ".pdf";
+              log.debug3("WRC pdfName is " + pdfName);
+          }
           returnList.add(pdfName);
         }
       }

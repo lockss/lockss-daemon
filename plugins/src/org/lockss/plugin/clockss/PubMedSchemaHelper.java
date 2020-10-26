@@ -163,9 +163,16 @@ implements SourceXmlSchemaHelper {
   private static String art_date = "publication_date";
   public static String art_sp = "FirstPage";
   public static String art_lp = "LastPage";
+
   //private static String art_doi = "";
     // not yet in xml samples
-  
+
+
+  // In oct/2020, their upload a new folder with different structure. PDF file is named using
+  // <ELocationID EIdType="pii">1287</ELocationID>
+  // /verduci-released/2020/WCRJ/2019%20VOLUME%206/III/e1287.pdf
+
+  public static String elocation_id = "ELocationID[@EIdType = \"pii\"]";
 
   /*
    *  The following 3 variables are needed to use the XPathXmlMetadataParser
@@ -184,7 +191,8 @@ implements SourceXmlSchemaHelper {
     articleMap.put(art_title, XmlDomMetadataExtractor.TEXT_VALUE); 
     articleMap.put(art_sp, XmlDomMetadataExtractor.TEXT_VALUE); 
     articleMap.put(art_lp, XmlDomMetadataExtractor.TEXT_VALUE); 
-    articleMap.put(art_contrib, AUTHOR_NAME); 
+    articleMap.put(art_contrib, AUTHOR_NAME);
+    articleMap.put(elocation_id, XmlDomMetadataExtractor.TEXT_VALUE);
   }
 
   /* 2.  Top level per-article node */
