@@ -1470,7 +1470,7 @@
     comment[years] = 2008-current
 
    au < doNotProcess ; exists ; 2008 ; 2008 ; Ergopraxis Volume 1 ; 1 ; >
-   au < frozen ; exists ; 2009 ; 2009 ; Ergopraxis Volume 2 ; 2 ; >
+   au < finished ; manifest ; 2009 ; 2009 ; Ergopraxis Volume 2 ; 2 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2010 ; 2010 ; Ergopraxis Volume 3 ; 3 ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2011 ; 2011 ; Ergopraxis Volume 4 ; 4 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2012 ; 2012 ; Ergopraxis Volume 5 ; 5 ; reingest2.clockss.org:8085 >
@@ -1499,7 +1499,7 @@
     au < doNotProcess ; exists ; 2006 ; 2006 ; Ergoscience Volume 1 ; 1 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Ergoscience Volume 2 ; 2 ; >
     au < doNotProcess ; exists ; 2008 ; 2008 ; Ergoscience Volume 3 ; 3 ; >
-    au < frozen ; exists ; 2009 ; 2009 ; Ergoscience Volume 4 ; 4 ; >
+    au < finished ; manifest ; 2009 ; 2009 ; Ergoscience Volume 4 ; 4 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2010 ; 2010 ; Ergoscience Volume 5 ; 5 ; >
 
   }
@@ -1524,7 +1524,7 @@
    au < doNotProcess ; exists ; 2006 ; 2006 ; Ernährung & Medizin Volume 21 ; 21 ; >
    au < doNotProcess ; exists ; 2007 ; 2007 ; Ernährung & Medizin Volume 22 ; 22 ; >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Ernährung & Medizin Volume 23 ; 23 ; >
-   au < frozen ; exists ; 2009 ; 2009 ; Ernährung & Medizin Volume 24 ; 24 ; >
+   au < finished ; manifest ; 2009 ; 2009 ; Ernährung & Medizin Volume 24 ; 24 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Ernährung & Medizin Volume 25 ; 25 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2011 ; 2011 ; Ernährung & Medizin Volume 26 ; 26 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2012 ; 2012 ; Ernährung & Medizin Volume 27 ; 27 ; >
@@ -1780,7 +1780,7 @@
 
    au < doNotProcess ; exists ; 2007 ; 2007 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 14 ; 14 ; >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 15 ; 15 ; >
-   au < frozen ; exists ; 2009 ; 2009 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 16 ; 16 ; >
+   au < finished ; manifest ; 2009 ; 2009 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 16 ; 16 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 17 ; 17 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2011 ; 2011 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 18 ; 18 ; >
    au < finished ; finished ; 2012 ; 2012 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 19 ; 19 ; reingest2.clockss.org:8085 >
@@ -1835,7 +1835,7 @@
    au < doNotProcess ; exists ; 2006 ; 2006 ; Fortschritte der Neurologie - Psychiatrie Volume 74 ; 74 ; >
    au < doNotProcess ; exists ; 2007 ; 2007 ; Fortschritte der Neurologie - Psychiatrie Volume 75 ; 75 ; >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Fortschritte der Neurologie - Psychiatrie Volume 76 ; 76 ; >
-   au < frozen ; exists ; 2009 ; 2009 ; Fortschritte der Neurologie - Psychiatrie Volume 77 ; 77 ; >
+   au < finished ; manifest ; 2009 ; 2009 ; Fortschritte der Neurologie - Psychiatrie Volume 77 ; 77 ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Fortschritte der Neurologie - Psychiatrie Volume 78 ; 78 ; >
    au < finished ; finished ; 2011 ; 2011 ; Fortschritte der Neurologie - Psychiatrie Volume 79 ; 79 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2012 ; 2012 ; Fortschritte der Neurologie - Psychiatrie Volume 80 ; 80 ; reingest2.clockss.org:8085 >
@@ -1893,7 +1893,7 @@
    au < doNotProcess ; exists ; 2006 ; 2006 ; Gastroenterologie up2dat Volume 2 ; 2 ; >
    au < doNotProcess ; exists ; 2007 ; 2007 ; Gastroenterologie up2dat Volume 3 ; 3 ; >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Gastroenterologie up2dat Volume 4 ; 4 ; >
-   au < frozen ; exists ; 2009 ; 2009 ; Gastroenterologie up2dat Volume 5 ; 5 ; >
+   au < finished ; manifest ; 2009 ; 2009 ; Gastroenterologie up2dat Volume 5 ; 5 ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Gastroenterologie up2dat Volume 6 ; 6 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2011 ; 2011 ; Gastroenterologie up2dat Volume 7 ; 7 ; >
    au < finished ; finished ; 2012 ; 2012 ; Gastroenterologie up2dat Volume 8 ; 8 ; >
@@ -2003,7 +2003,7 @@
    au < doNotProcess ; exists ; 2006 ; 2006 ; Gesundheitsökonomie & Qualitätsmanagement Volume 11 ; 11 ; >
    au < doNotProcess ; exists ; 2007 ; 2007 ; Gesundheitsökonomie & Qualitätsmanagement Volume 12 ; 12 ; >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Gesundheitsökonomie & Qualitätsmanagement Volume 13 ; 13 ; >
-   au < frozen ; exists ; 2009 ; 2009 ; Gesundheitsökonomie & Qualitätsmanagement Volume 14 ; 14 ; >
+   au < finished ; manifest ; 2009 ; 2009 ; Gesundheitsökonomie & Qualitätsmanagement Volume 14 ; 14 ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Gesundheitsökonomie & Qualitätsmanagement Volume 15 ; 15 ; >
    au < finished ; finished ; 2011 ; 2011 ; Gesundheitsökonomie & Qualitätsmanagement Volume 16 ; 16 ; >
    au < finished ; finished ; 2012 ; 2012 ; Gesundheitsökonomie & Qualitätsmanagement Volume 17 ; 17 ; reingest2.clockss.org:8085 >
@@ -2096,7 +2096,7 @@
    au < doNotProcess ; exists ; 2006 ; 2006 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 38 ; 38 ; >
    au < doNotProcess ; exists ; 2007 ; 2007 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 39 ; 39 ; >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 40 ; 40 ; >
-   au < frozen ; exists ; 2009 ; 2009 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 41 ; 41 ; >
+   au < finished ; manifest ; 2009 ; 2009 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 41 ; 41 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 42 ; 42 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2011 ; 2011 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 43 ; 43 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2012 ; 2012 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 44 ; 44 ; reingest2.clockss.org:8085 >
@@ -2375,7 +2375,7 @@
    au < doNotProcess ; exists ; 2006 ; 2006 ; Informationen aus Orthodontie & Kieferorthopädie Volume 38 ; 38 ; >
    au < doNotProcess ; exists ; 2007 ; 2007 ; Informationen aus Orthodontie & Kieferorthopädie Volume 39 ; 39 ; >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Informationen aus Orthodontie & Kieferorthopädie Volume 40 ; 40 ; >
-   au < frozen ; exists ; 2009 ; 2009 ; Informationen aus Orthodontie & Kieferorthopädie Volume 41 ; 41 ; >
+   au < finished ; manifest ; 2009 ; 2009 ; Informationen aus Orthodontie & Kieferorthopädie Volume 41 ; 41 ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Informationen aus Orthodontie & Kieferorthopädie Volume 42 ; 42 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2011 ; 2011 ; Informationen aus Orthodontie & Kieferorthopädie Volume 43 ; 43 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2012 ; 2012 ; Informationen aus Orthodontie & Kieferorthopädie Volume 44 ; 44 ; reingest2.clockss.org:8085 >
@@ -2859,7 +2859,7 @@
     comment[years] = 2015-2016
 
     au < finished ; finished ; 2015 ; 2015 ; Journal of Knee Surgery Reports Volume 1 ; 1 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2016 ; 2016 ; Journal of Knee Surgery Reports Volume 2 ; 2 ; >
+    au < finished ; manifest ; 2016 ; 2016 ; Journal of Knee Surgery Reports Volume 2 ; 2 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -3015,7 +3015,7 @@
     au < manifest ; exists ; 2006 ; 2006 ; Journal of Pediatric Infectious Diseases Volume 1 ; 1 ; >
     au < manifest ; exists ; 2007 ; 2007 ; Journal of Pediatric Infectious Diseases Volume 2 ; 2 ; >
     au < manifest ; exists ; 2008 ; 2008 ; Journal of Pediatric Infectious Diseases Volume 3 ; 3 ; >
-    au < frozen ; exists ; 2009 ; 2009 ; Journal of Pediatric Infectious Diseases Volume 4 ; 4 ; >
+    au < finished ; manifest ; 2009 ; 2009 ; Journal of Pediatric Infectious Diseases Volume 4 ; 4 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2010 ; 2010 ; Journal of Pediatric Infectious Diseases Volume 5 ; 5 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2011 ; 2011 ; Journal of Pediatric Infectious Diseases Volume 6 ; 6 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2012 ; 2012 ; Journal of Pediatric Infectious Diseases Volume 7 ; 7 ; reingest3.clockss.org:8083 >
