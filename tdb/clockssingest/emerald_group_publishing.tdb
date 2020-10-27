@@ -1643,7 +1643,7 @@
     comment[journal_id] = cb
     #continued_by = 2514-9326
 
-    au < crawling ; exists ; 1978-1979 ; Collection Building Volume 1 ; 1 ; >
+    au < frozen ; exists ; 1978-1979 ; Collection Building Volume 1 ; 1 ; >
     au < manifest ; exists ; 1980 ; Collection Building Volume 2 ; 2 ; >
     au < manifest ; exists ; 1981 ; Collection Building Volume 3 ; 3 ; >
     au < manifest ; exists ; 1982 ; Collection Building Volume 4 ; 4 ; >
@@ -2468,7 +2468,7 @@
     au < manifest ; exists ; 1993 ; Environmental Management and Health Volume 4 ; 4 ; >
     au < manifest ; exists ; 1994 ; Environmental Management and Health Volume 5 ; 5 ; >
     au < manifest ; exists ; 1995 ; Environmental Management and Health Volume 6 ; 6 ; >
-    au < crawling ; exists ; 1996 ; Environmental Management and Health Volume 7 ; 7 ; >
+    au < frozen ; exists ; 1996 ; Environmental Management and Health Volume 7 ; 7 ; >
     au < manifest ; exists ; 1997 ; Environmental Management and Health Volume 8 ; 8 ; >
     au < manifest ; exists ; 1998 ; Environmental Management and Health Volume 9 ; 9 ; >
     au < manifest ; exists ; 1999 ; Environmental Management and Health Volume 10 ; 10 ; >
@@ -4727,7 +4727,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; The International Journal of Logistics Management Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; The International Journal of Logistics Management Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; The International Journal of Logistics Management Volume 29 ; 29 ; >
-    au < crawling ; exists ; 2019 ; The International Journal of Logistics Management Volume 30 ; 30 ; >
+    au < frozen ; exists ; 2019 ; The International Journal of Logistics Management Volume 30 ; 30 ; >
     au < manifest ; exists ; 2020 ; The International Journal of Logistics Management Volume 31 ; 31 ; >
 
   }
@@ -12818,7 +12818,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 19 ; 19 ; >
-    au < crawling ; exists ; 2019 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 20 ; 20 ; >
+    au < frozen ; exists ; 2019 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 20 ; 20 ; >
     au < manifest ; exists ; 2020 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 21 ; 21 ; >
 
   }
