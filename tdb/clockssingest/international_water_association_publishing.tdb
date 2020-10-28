@@ -62,7 +62,7 @@
     au < manifest ; exists ; 1988 ; 1988 ; Nordic Hydrology Volume 19 ; 19 ; >
     au < manifest ; exists ; 1989 ; 1989 ; Nordic Hydrology Volume 20 ; 20 ; >
     au < manifest ; exists ; 1990 ; 1990 ; Nordic Hydrology Volume 21 ; 21 ; >
-    au < testing ; exists ; 1991 ; 1991 ; Nordic Hydrology Volume 22 ; 22 ; >
+    au < ready ; exists ; 1991 ; 1991 ; Nordic Hydrology Volume 22 ; 22 ; >
     au < manifest ; exists ; 1992 ; 1992 ; Nordic Hydrology Volume 23 ; 23 ; >
     au < manifest ; exists ; 1993 ; 1993 ; Nordic Hydrology Volume 24 ; 24 ; >
     au < manifest ; exists ; 1994 ; 1994 ; Nordic Hydrology Volume 25 ; 25 ; >
@@ -253,7 +253,7 @@
     au < manifest ; exists ; 2001 ; 2001 ; Journal of Hydroinformatics Volume 3 ; 3 ; >
     au < manifest ; exists ; 2002 ; 2002 ; Journal of Hydroinformatics Volume 4 ; 4 ; >
     au < manifest ; exists ; 2003 ; 2003 ; Journal of Hydroinformatics Volume 5 ; 5 ; >
-    au < testing ; exists ; 2004 ; 2004 ; Journal of Hydroinformatics Volume 6 ; 6 ; >
+    au < ready ; exists ; 2004 ; 2004 ; Journal of Hydroinformatics Volume 6 ; 6 ; >
     au < manifest ; exists ; 2005 ; 2005 ; Journal of Hydroinformatics Volume 7 ; 7 ; >
     au < manifest ; exists ; 2006 ; 2006 ; Journal of Hydroinformatics Volume 8 ; 8 ; >
     au < manifest ; exists ; 2007 ; 2007 ; Journal of Hydroinformatics Volume 9 ; 9 ; >
@@ -312,7 +312,7 @@
 
     param[journal_id] = wp
 
-    au < testing ; exists ; 2003 ; 2003 ; Water Policy Volume 5 ; 5 ; >
+    au < ready ; exists ; 2003 ; 2003 ; Water Policy Volume 5 ; 5 ; >
     au < manifest ; exists ; 2004 ; 2004 ; Water Policy Volume 6 ; 6 ; >
     au < manifest ; exists ; 2005 ; 2005 ; Water Policy Volume 7 ; 7 ; >
     au < manifest ; exists ; 2006 ; 2006 ; Water Policy Volume 8 ; 8 ; >
@@ -383,7 +383,7 @@
     au < manifest ; exists ; 1992 ; 1992 ; Water Science and Technology Volume 25-26 ; 25-26 ; >
     au < manifest ; exists ; 1993 ; 1993 ; Water Science and Technology Volume 27-28 ; 27-28 ; >
     au < manifest ; exists ; 1994 ; 1994 ; Water Science and Technology Volume 29-30 ; 29-30 ; >
-    au < testing ; exists ; 1995 ; 1995 ; Water Science and Technology Volume 31-32 ; 31-32 ; >
+    au < ready ; exists ; 1995 ; 1995 ; Water Science and Technology Volume 31-32 ; 31-32 ; >
     au < manifest ; exists ; 1996 ; 1996 ; Water Science and Technology Volume 33-34 ; 33-34 ; >
     au < manifest ; exists ; 1997 ; 1997 ; Water Science and Technology Volume 35-36 ; 35-36 ; >
     au < manifest ; exists ; 1998 ; 1998 ; Water Science and Technology Volume 37-38 ; 37-38 ; >
@@ -442,7 +442,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Water Science and Technology: Water Supply Volume 17 ; 17 ; > #IWADrupal plugin
     au < manifest ; exists ; 2018 ; 2018 ; Water Science and Technology: Water Supply Volume 18 ; 18 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Water Science and Technology: Water Supply Volume 19 ; 19 ; >
-    au < testing ; exists ; 2020 ; 2020 ; Water Science and Technology: Water Supply Volume 20 ; 20 ; >
+    au < ready ; exists ; 2020 ; 2020 ; Water Science and Technology: Water Supply Volume 20 ; 20 ; >
 
   }
   
