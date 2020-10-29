@@ -1643,7 +1643,7 @@
     comment[journal_id] = cb
     #continued_by = 2514-9326
 
-    au < frozen ; exists ; 1978-1979 ; Collection Building Volume 1 ; 1 ; >
+    au < finished ; manifest ; 1978-1979 ; Collection Building Volume 1 ; 1 ; reingest4.clockss.org:8082 >
     au < manifest ; exists ; 1980 ; Collection Building Volume 2 ; 2 ; >
     au < manifest ; exists ; 1981 ; Collection Building Volume 3 ; 3 ; >
     au < manifest ; exists ; 1982 ; Collection Building Volume 4 ; 4 ; >
@@ -2468,7 +2468,7 @@
     au < manifest ; exists ; 1993 ; Environmental Management and Health Volume 4 ; 4 ; >
     au < manifest ; exists ; 1994 ; Environmental Management and Health Volume 5 ; 5 ; >
     au < manifest ; exists ; 1995 ; Environmental Management and Health Volume 6 ; 6 ; >
-    au < frozen ; exists ; 1996 ; Environmental Management and Health Volume 7 ; 7 ; >
+    au < finished ; manifest ; 1996 ; Environmental Management and Health Volume 7 ; 7 ; reingest2.clockss.org:8085 >
     au < manifest ; exists ; 1997 ; Environmental Management and Health Volume 8 ; 8 ; >
     au < manifest ; exists ; 1998 ; Environmental Management and Health Volume 9 ; 9 ; >
     au < manifest ; exists ; 1999 ; Environmental Management and Health Volume 10 ; 10 ; >
@@ -2962,7 +2962,7 @@
     au < manifest ; exists ; 2007 ; Health Education Volume 107 ; 107 ; >
     au < manifest ; exists ; 2008 ; Health Education Volume 108 ; 108 ; >
     au < manifest ; exists ; 2009 ; Health Education Volume 109 ; 109 ; >
-    au < frozen ; exists ; 2010 ; Health Education Volume 110 ; 110 ; >
+    au < finished ; manifest ; 2010 ; Health Education Volume 110 ; 110 ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 2011 ; Health Education Volume 111 ; 111 ; >
     au < manifest ; exists ; 2012 ; Health Education Volume 112 ; 112 ; >
     au < manifest ; exists ; 2013 ; Health Education Volume 113 ; 113 ; >
@@ -4727,7 +4727,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; The International Journal of Logistics Management Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; The International Journal of Logistics Management Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; The International Journal of Logistics Management Volume 29 ; 29 ; >
-    au < frozen ; exists ; 2019 ; The International Journal of Logistics Management Volume 30 ; 30 ; >
+    au < finished ; manifest ; 2019 ; The International Journal of Logistics Management Volume 30 ; 30 ; reingest4.clockss.org:8082 >
     au < manifest ; exists ; 2020 ; The International Journal of Logistics Management Volume 31 ; 31 ; >
 
   }
@@ -6296,7 +6296,7 @@
     param[journal_issn] = 1746-6660
     comment[journal_id] = jcs
 
-    au < frozen ; exists ; 2006 ; Journal of Children’s Services: Research informing policy and practice Volume 1 ; 1 ; >
+    au < finished ; manifest ; 2006 ; Journal of Children’s Services: Research informing policy and practice Volume 1 ; 1 ; reingest1.clockss.org:8082 >
     au < manifest ; exists ; 2007 ; Journal of Children’s Services: Research informing policy and practice Volume 2 ; 2 ; >
     au < manifest ; exists ; 2008 ; Journal of Children’s Services: Research informing policy and practice Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Children’s Services: Research informing policy and practice Volume 4 ; 4 ; >
@@ -7784,7 +7784,7 @@
     param[journal_issn] = 0262-1711
     comment[journal_id] = jmd
 
-    au < frozen ; exists ; 1982 ; Journal of Management Development Volume 1 ; 1 ; >
+    au < finished ; manifest ; 1982 ; Journal of Management Development Volume 1 ; 1 ; reingest2.clockss.org:8085 >
     au < manifest ; exists ; 1983 ; Journal of Management Development Volume 2 ; 2 ; >
     au < manifest ; exists ; 1984 ; Journal of Management Development Volume 3 ; 3 ; >
     au < manifest ; exists ; 1985 ; Journal of Management Development Volume 4 ; 4 ; >
@@ -10422,7 +10422,7 @@
     #continues = 8756-5196
     #continued_by = 2059-5816
 
-    au < frozen ; exists ; 1993 ; OCLC Systems & Services Volume 9 ; 9 ; >
+    au < finished ; manifest ; 1993 ; OCLC Systems & Services Volume 9 ; 9 ; reingest4.clockss.org:8082 >
     au < manifest ; exists ; 1994 ; OCLC Systems & Services Volume 10 ; 10 ; >
     au < manifest ; exists ; 1995 ; OCLC Systems & Services Volume 11 ; 11 ; >
     au < manifest ; exists ; 1996 ; OCLC Systems & Services Volume 12 ; 12 ; >
@@ -12658,7 +12658,7 @@
     param[journal_issn] = 1366-3666
     comment[journal_id] = wwop
 
-    au < frozen ; exists ; 2000 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 4 ; 4 ; >
+    au < finished ; manifest ; 2000 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 4 ; 4 ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 2001 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 5 ; 5 ; >
     au < manifest ; exists ; 2002 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 6 ; 6 ; >
     au < manifest ; exists ; 2003 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 7 ; 7 ; >
@@ -12818,7 +12818,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 19 ; 19 ; >
-    au < frozen ; exists ; 2019 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 20 ; 20 ; >
+    au < finished ; manifest ; 2019 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 20 ; 20 ; reingest4.clockss.org:8082 >
     au < manifest ; exists ; 2020 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 21 ; 21 ; >
 
   }
