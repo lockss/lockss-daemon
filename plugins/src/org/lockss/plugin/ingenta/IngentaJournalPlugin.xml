@@ -228,8 +228,6 @@
     <string>au_substance_url_pattern</string>
     <list>
       <string>"^https?://%s/content/%s/%s/[0-9]{4}/[^/]+/[^/]+/[^/]+[?]crawler=true&amp;mimetype=application/pdf",  url_host(api_url), publisher_id, journal_id, volume_name</string>
-      <!-- https://www.qscience.com/content/journals/10.5339/ahcsps.2011.9?crawler=true&mimetype=application/pdf -->
-      <string>"%scontent/journals/[^/]+/%s\.%s\.\d+\?crawler=true&amp;mimetype=application/pdf", base_url, journal_id, volume_name</string>
     </list>
   </entry>
   <entry>

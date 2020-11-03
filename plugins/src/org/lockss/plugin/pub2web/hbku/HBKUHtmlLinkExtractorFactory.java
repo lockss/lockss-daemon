@@ -30,7 +30,7 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.ingenta.hbku;
+package org.lockss.plugin.pub2web.hbku;
 
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.LinkExtractor;

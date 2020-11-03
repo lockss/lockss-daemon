@@ -1,0 +1,45 @@
+<map>
+    <entry>
+        <string>plugin_status</string>
+        <string>development</string>
+    </entry>
+    <entry>
+        <string>plugin_identifier</string>
+        <string>org.lockss.plugin.pub2web.hbku.HBKUPlugin</string>
+    </entry>
+    <entry>
+        <string>plugin_version</string>
+        <string>1</string>
+    </entry>
+    <entry>
+        <string>plugin_name</string>
+        <string>HBKU Plugin</string>
+    </entry>
+    <entry>
+        <string>plugin_parent</string>
+        <string>org.lockss.plugin.pub2web.Pub2WebJournalsPlugin</string>
+    </entry>
+    <entry>
+        <string>plugin_parent_version</string>
+        <string>27</string>
+    </entry>
+    <entry>
+        <string>au_name</string>
+        <string>"HBKU Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    </entry>
+    <entry>
+        <string>au_start_url</string>
+        <list>
+            <!--HBKU example: https://www.qscience.com/content/journals/ahcsps/lockssissues?volume=2011 -->
+            <string>"%scontent/journals/%s/lockssissues?volume=%s", base_url, journal_id, volume_name</string>
+        </list>
+    </entry>
+    <entry>
+        <string>text/html_link_extractor_factory</string>
+        <string>org.lockss.plugin.pub2web.hbku.HBKUHtmlLinkExtractorFactory</string>
+    </entry>
+    <entry>
+        <string>text/html_filter_factory</string>
+        <string>org.lockss.plugin.pub2web.hbku.HBKUHtmlFilterFactory</string>
+    </entry>
+</map>
