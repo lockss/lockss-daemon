@@ -2,7 +2,7 @@
 
   publisher <
     name = American Academy of Implant Dentistry ;
-    comment[platform] = Allen Press
+    info[platform] = Atypon - Allen Press
   >
   
   plugin = org.lockss.plugin.atypon.allenpress.AllenPressJournalsPlugin
