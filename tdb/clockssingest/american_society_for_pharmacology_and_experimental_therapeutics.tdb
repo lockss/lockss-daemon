@@ -470,8 +470,8 @@
     param[base_url] = https://jpet.aspetjournals.org/
 
     au < aspet.ClockssASPETDrupalPlugin ; ready ; exists ; 2020 ; Journal of Pharmacology and Experimental Therapeutics Volume 372 ; 372 ; >
-    au < aspet.ClockssASPETDrupalPlugin ; ready ; exists ; 2020 ; Journal of Pharmacology and Experimental Therapeutics Volume 373 ; 373 ; >
-    au < aspet.ClockssASPETDrupalPlugin ; ready ; exists ; 2020 ; Journal of Pharmacology and Experimental Therapeutics Volume 374 ; 374 ; >
+    au < aspet.ClockssASPETDrupalPlugin ; crawling ; exists ; 2020 ; Journal of Pharmacology and Experimental Therapeutics Volume 373 ; 373 ; >
+    au < aspet.ClockssASPETDrupalPlugin ; crawling ; exists ; 2020 ; Journal of Pharmacology and Experimental Therapeutics Volume 374 ; 374 ; >
     au < aspet.ClockssASPETDrupalPlugin ; expected ; exists ; 2020 ; Journal of Pharmacology and Experimental Therapeutics Volume 375 ; 375 ; >
 
     }
@@ -611,7 +611,7 @@
     au < aspet.ClockssASPETDrupalPlugin ; finished ; finished ; 2018 ; Molecular Pharmacology Volume 94 ; 94 ; reingest1.clockss.org:8082 >
     au < aspet.ClockssASPETDrupalPlugin ; deepCrawl ; exists ; 2019 ; Molecular Pharmacology Volume 95 ; 95 ; >
     au < aspet.ClockssASPETDrupalPlugin ; deepCrawl ; exists ; 2019 ; Molecular Pharmacology Volume 96 ; 96 ; >
-    au < aspet.ClockssASPETDrupalPlugin ; ready ; exists ; 2020 ; Molecular Pharmacology Volume 97 ; 97 ; >
+    au < aspet.ClockssASPETDrupalPlugin ; crawling ; exists ; 2020 ; Molecular Pharmacology Volume 97 ; 97 ; >
     au < aspet.ClockssASPETDrupalPlugin ; testing ; exists ; 2020 ; Molecular Pharmacology Volume 98 ; 98 ; >
 
   }
