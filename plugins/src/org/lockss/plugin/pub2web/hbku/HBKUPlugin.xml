@@ -35,11 +35,11 @@
         </list>
     </entry>
     <entry>
-        <string>text/html_link_extractor_factory</string>
-        <string>org.lockss.plugin.pub2web.hbku.HBKUHtmlLinkExtractorFactory</string>
+        <string>text/html_filter_factory</string>
+        <string>org.lockss.plugin.pub2web.hbku.HBKUHtmlHashFilterFactory</string>
     </entry>
     <entry>
-        <string>text/html_filter_factory</string>
-        <string>org.lockss.plugin.pub2web.hbku.HBKUHtmlFilterFactory</string>
+        <string>text/html_link_extractor_factory</string>
+        <string>org.lockss.plugin.pub2web.hbku.HBKUHtmlLinkExtractorFactory</string>
     </entry>
 </map>

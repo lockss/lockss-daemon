@@ -46,20 +46,18 @@ import org.lockss.util.ReaderInputStream;
 import java.io.InputStream;
 import java.io.Reader;
 
-public class HBKUHtmlFilterFactory implements FilterFactory {
+public class HBKUHtmlHashFilterFactory implements FilterFactory {
 
   public InputStream createFilteredInputStream(ArchivalUnit au,
-                                               InputStream in,
-                                               String encoding) {
+                                               InputStream in, String encoding) {
     NodeFilter[] filters = new NodeFilter[] {
-            new TagNameFilter("noscript"),
-            new TagNameFilter("script"),
-            new TagNameFilter("style"),
-            new TagNameFilter("head"),
-            new TagNameFilter("style"),
-            new TagNameFilter("header"),
-            new TagNameFilter("footer"),
-
+            HtmlNodeFilters.tag("noscript"),
+            HtmlNodeFilters.tag("script"),
+            HtmlNodeFilters.tag("head"),
+            HtmlNodeFilters.tag("style"),
+            HtmlNodeFilters.tag("header"),
+            HtmlNodeFilters.tag("footer"),
+            
             HtmlNodeFilters.tagWithAttributeRegex("div", "id", "referenceContainer"),
             HtmlNodeFilters.tagWithAttributeRegex("section", "class", "trendmd-widget"),
             HtmlNodeFilters.tagWithAttributeRegex("section", "class", "header-container"),
@@ -71,10 +69,8 @@ public class HBKUHtmlFilterFactory implements FilterFactory {
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-pub2web-element"),
 
     };
-    InputStream filteredStream = new HtmlFilterInputStream(in, encoding,
-            HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
-    Reader httpFilter = FilterUtil.getReader(filteredStream, encoding);
-    return new ReaderInputStream(httpFilter);
+    return (new HtmlFilterInputStream(in, encoding, HtmlNodeFilterTransform.exclude(new OrFilter(filters))));
+
   }
 
 }

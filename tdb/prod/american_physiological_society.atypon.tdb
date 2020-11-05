@@ -10,7 +10,14 @@
   #param[base_url] = https://www.physiology.org/
   # moved to https://journals.physiology.org/
   #Moved to Atypon ~ Jan 2018.
-  
+  ###################
+  # Moved URL from 
+  #     www.physiology.org
+  # To
+  #     journals.physiology.org
+  ###################
+
+
   {
 
 
@@ -66,8 +73,10 @@
       au < doNotProcess ; 2014 ; Advances in Physiology Education Volume 38 ; 38 ; https://www.physiology.org/ >
       au < doNotProcess ; 2015 ; Advances in Physiology Education Volume 39 ; 39 ; https://www.physiology.org/ >
       au < doNotProcess ; 2016 ; Advances in Physiology Education Volume 40 ; 40 ; https://www.physiology.org/ >
-      au < released ; 2017 ; Advances in Physiology Education Volume 41 ; 41 ; https://www.physiology.org/ >
-      au < released ; 2018 ; Advances in Physiology Education Volume 42 ; 42 ; https://www.physiology.org/ >
+      au < superseded ; 2017 ; Advances in Physiology Education Volume 41 [superseded] ; 41 ; https://www.physiology.org/ >
+      au < superseded ; 2018 ; Advances in Physiology Education Volume 42 [superseded] ; 42 ; https://www.physiology.org/ >
+      au < exists ; 2017 ; Advances in Physiology Education Volume 41 ; 41 ; https://journals.physiology.org/ >
+      au < exists ; 2018 ; Advances in Physiology Education Volume 42 ; 42 ; https://journals.physiology.org/ >
       au < released ; 2019 ; Advances in Physiology Education Volume 43 ; 43 ; https://journals.physiology.org/ >
       au < manifest ; 2020 ; Advances in Physiology Education Volume 44 ; 44 ; https://journals.physiology.org/ >
 
@@ -414,10 +423,14 @@
       au < doNotProcess ; 2015 ; American Journal of Physiology - Cell Physiology Volume 309 ; 309 ; https://www.physiology.org/ >
       au < doNotProcess ; 2016 ; American Journal of Physiology - Cell Physiology Volume 310 ; 310 ; https://www.physiology.org/ >
       au < doNotProcess ; 2016 ; American Journal of Physiology - Cell Physiology Volume 311 ; 311 ; https://www.physiology.org/ >
-      au < down ; 2017 ; American Journal of Physiology - Cell Physiology Volume 312 ; 312 ; https://www.physiology.org/ >
-      au < down ; 2017 ; American Journal of Physiology - Cell Physiology Volume 313 ; 313 ; https://www.physiology.org/ >
-      au < down ; 2018 ; American Journal of Physiology - Cell Physiology Volume 314 ; 314 ; https://www.physiology.org/ >
-      au < down ; 2018 ; American Journal of Physiology - Cell Physiology Volume 315 ; 315 ; https://www.physiology.org/ >
+      au < superseded ; 2017 ; American Journal of Physiology - Cell Physiology Volume 312 [superseded] ; 312 ; https://www.physiology.org/ >
+      au < superseded ; 2017 ; American Journal of Physiology - Cell Physiology Volume 313 [superseded] ; 313 ; https://www.physiology.org/ >
+      au < superseded ; 2018 ; American Journal of Physiology - Cell Physiology Volume 314 [superseded] ; 314 ; https://www.physiology.org/ >
+      au < superseded ; 2018 ; American Journal of Physiology - Cell Physiology Volume 315 [superseded] ; 315 ; https://www.physiology.org/ >
+      au < exists ; 2017 ; American Journal of Physiology - Cell Physiology Volume 312 ; 312 ; https://journals.physiology.org/ >
+      au < exists ; 2017 ; American Journal of Physiology - Cell Physiology Volume 313 ; 313 ; https://journals.physiology.org/ >
+      au < exists ; 2018 ; American Journal of Physiology - Cell Physiology Volume 314 ; 314 ; https://journals.physiology.org/ >
+      au < exists ; 2018 ; American Journal of Physiology - Cell Physiology Volume 315 ; 315 ; https://journals.physiology.org/ >
       au < released ; 2019 ; American Journal of Physiology - Cell Physiology Volume 316 ; 316 ; https://journals.physiology.org/ >
       au < released ; 2019 ; American Journal of Physiology - Cell Physiology Volume 317 ; 317 ; https://journals.physiology.org/ >
       au < manifest ; 2020 ; American Journal of Physiology - Cell Physiology Volume 318 ; 318 ; https://journals.physiology.org/ >
@@ -521,10 +534,14 @@
       au < doNotProcess ; 2015 ; American Journal of Physiology - Endocrinology and Metabolism Volume 309 ; 309 ; https://www.physiology.org/ >
       au < doNotProcess ; 2016 ; American Journal of Physiology - Endocrinology and Metabolism Volume 310 ; 310 ; https://www.physiology.org/ >
       au < doNotProcess ; 2016 ; American Journal of Physiology - Endocrinology and Metabolism Volume 311 ; 311 ; https://www.physiology.org/ >
-      au < down ; 2017 ; American Journal of Physiology - Endocrinology and Metabolism Volume 312 ; 312 ; https://www.physiology.org/ >
-      au < down ; 2017 ; American Journal of Physiology - Endocrinology and Metabolism Volume 313 ; 313 ; https://www.physiology.org/ >
-      au < down ; 2018 ; American Journal of Physiology - Endocrinology and Metabolism Volume 314 ; 314 ; https://www.physiology.org/ >
-      au < down ; 2018 ; American Journal of Physiology - Endocrinology and Metabolism Volume 315 ; 315 ; https://www.physiology.org/ >
+      au < superseded ; 2017 ; American Journal of Physiology - Endocrinology and Metabolism Volume 312 [superseded] ; 312 ; https://www.physiology.org/ >
+      au < superseded ; 2017 ; American Journal of Physiology - Endocrinology and Metabolism Volume 313 [superseded] ; 313 ; https://www.physiology.org/ >
+      au < superseded ; 2018 ; American Journal of Physiology - Endocrinology and Metabolism Volume 314 [superseded] ; 314 ; https://www.physiology.org/ >
+      au < superseded ; 2018 ; American Journal of Physiology - Endocrinology and Metabolism Volume 315 [superseded] ; 315 ; https://www.physiology.org/ >
+      au < exists ; 2017 ; American Journal of Physiology - Endocrinology and Metabolism Volume 312 ; 312 ; https://journals.physiology.org/ >
+      au < exists ; 2017 ; American Journal of Physiology - Endocrinology and Metabolism Volume 313 ; 313 ; https://journals.physiology.org/ >
+      au < exists ; 2018 ; American Journal of Physiology - Endocrinology and Metabolism Volume 314 ; 314 ; https://journals.physiology.org/ >
+      au < exists ; 2018 ; American Journal of Physiology - Endocrinology and Metabolism Volume 315 ; 315 ; https://journals.physiology.org/ >
       au < released ; 2019 ; American Journal of Physiology - Endocrinology and Metabolism Volume 316 ; 316 ; https://journals.physiology.org/ >
       au < released ; 2019 ; American Journal of Physiology - Endocrinology and Metabolism Volume 317 ; 317 ; https://journals.physiology.org/ >
       au < manifest ; 2020 ; American Journal of Physiology - Endocrinology and Metabolism Volume 318 ; 318 ; https://journals.physiology.org/ >
@@ -628,10 +645,14 @@
       au < doNotProcess ; 2015 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 309 ; 309 ; https://www.physiology.org/ >
       au < doNotProcess ; 2016 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 310 ; 310 ; https://www.physiology.org/ >
       au < doNotProcess ; 2016 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 311 ; 311 ; https://www.physiology.org/ >
-      au < down ; 2017 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 312 ; 312 ; https://www.physiology.org/ >
-      au < down ; 2017 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 313 ; 313 ; https://www.physiology.org/ >
-      au < down ; 2018 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 314 ; 314 ; https://www.physiology.org/ >
-      au < down ; 2018 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 315 ; 315 ; https://www.physiology.org/ >
+      au < superseded ; 2017 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 312 [superseded] ; 312 ; https://www.physiology.org/ >
+      au < superseded ; 2017 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 313 [superseded] ; 313 ; https://www.physiology.org/ >
+      au < superseded ; 2018 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 314 [superseded] ; 314 ; https://www.physiology.org/ >
+      au < superseded ; 2018 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 315 [superseded] ; 315 ; https://www.physiology.org/ >
+      au < exists ; 2017 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 312 ; 312 ; https://journals.physiology.org/ >
+      au < exists ; 2017 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 313 ; 313 ; https://journals.physiology.org/ >
+      au < exists ; 2018 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 314 ; 314 ; https://journals.physiology.org/ >
+      au < exists ; 2018 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 315 ; 315 ; https://journals.physiology.org/ >
       au < released ; 2019 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 316 ; 316 ; https://journals.physiology.org/ >
       au < released ; 2019 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 317 ; 317 ; https://journals.physiology.org/ >
       au < manifest ; 2020 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 318 ; 318 ; https://journals.physiology.org/ >
@@ -735,10 +756,14 @@
       au < doNotProcess ; 2015 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 309 ; 309 ; https://www.physiology.org/ >
       au < doNotProcess ; 2016 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 310 ; 310 ; https://www.physiology.org/ >
       au < doNotProcess ; 2016 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 311 ; 311 ; https://www.physiology.org/ >
-      au < down ; 2017 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 312 ; 312 ; https://www.physiology.org/ >
-      au < down ; 2017 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 313 ; 313 ; https://www.physiology.org/ >
-      au < down ; 2018 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 314 ; 314 ; https://www.physiology.org/ >
-      au < down ; 2018 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 315 ; 315 ; https://www.physiology.org/ >
+      au < superseded ; 2017 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 312 [superseded] ; 312 ; https://www.physiology.org/ >
+      au < superseded ; 2017 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 313 [superseded] ; 313 ; https://www.physiology.org/ >
+      au < superseded ; 2018 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 314 [superseded] ; 314 ; https://www.physiology.org/ >
+      au < superseded ; 2018 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 315 [superseded] ; 315 ; https://www.physiology.org/ >
+      au < exists ; 2017 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 312 ; 312 ; https://journals.physiology.org/ >
+      au < exists ; 2017 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 313 ; 313 ; https://journals.physiology.org/ >
+      au < exists ; 2018 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 314 ; 314 ; https://journals.physiology.org/ >
+      au < exists ; 2018 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 315 ; 315 ; https://journals.physiology.org/ >
       au < released ; 2019 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 316 ; 316 ; https://journals.physiology.org/ >
       au < released ; 2019 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 317 ; 317 ; https://journals.physiology.org/ >
       au < manifest ; 2020 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 318 ; 318 ; https://journals.physiology.org/ >
@@ -817,10 +842,14 @@
       au < doNotProcess ; 2015 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 309 ; 309 ; https://www.physiology.org/ >
       au < doNotProcess ; 2016 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 310 ; 310 ; https://www.physiology.org/ >
       au < doNotProcess ; 2016 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 311 ; 311 ; https://www.physiology.org/ >
-      au < down ; 2017 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 312 ; 312 ; https://www.physiology.org/ >
-      au < down ; 2017 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 313 ; 313 ; https://www.physiology.org/ >
-      au < down ; 2018 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 314 ; 314 ; https://www.physiology.org/ >
-      au < down ; 2018 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 315 ; 315 ; https://www.physiology.org/ >
+      au < superseded ; 2017 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 312 [superseded] ; 312 ; https://www.physiology.org/ >
+      au < superseded ; 2017 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 313 [superseded] ; 313 ; https://www.physiology.org/ >
+      au < superseded ; 2018 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 314 [superseded] ; 314 ; https://www.physiology.org/ >
+      au < superseded ; 2018 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 315 [superseded] ; 315 ; https://www.physiology.org/ >
+      au < exists ; 2017 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 312 ; 312 ; https://journals.physiology.org/ >
+      au < exists ; 2017 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 313 ; 313 ; https://journals.physiology.org/ >
+      au < exists ; 2018 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 314 ; 314 ; https://journals.physiology.org/ >
+      au < exists ; 2018 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 315 ; 315 ; https://journals.physiology.org/ >
       au < released ; 2019 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 316 ; 316 ; https://journals.physiology.org/ >
       au < released ; 2019 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 317 ; 317 ; https://journals.physiology.org/ >
       au < manifest ; 2020 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 318 ; 318 ; https://journals.physiology.org/ >
@@ -924,10 +953,14 @@
       au < doNotProcess ; 2015 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 309 ; 309 ; https://www.physiology.org/ >
       au < doNotProcess ; 2016 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 310 ; 310 ; https://www.physiology.org/ >
       au < doNotProcess ; 2016 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 311 ; 311 ; https://www.physiology.org/ >
-      au < down ; 2017 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 312 ; 312 ; https://www.physiology.org/ >
-      au < down ; 2017 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 313 ; 313 ; https://www.physiology.org/ >
-      au < down ; 2018 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 314 ; 314 ; https://www.physiology.org/ >
-      au < down ; 2018 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 315 ; 315 ; https://www.physiology.org/ >
+      au < superseded ; 2017 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 312 [superseded] ; 312 ; https://www.physiology.org/ >
+      au < superseded ; 2017 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 313 [superseded] ; 313 ; https://www.physiology.org/ >
+      au < superseded ; 2018 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 314 [superseded] ; 314 ; https://www.physiology.org/ >
+      au < superseded ; 2018 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 315 [superseded] ; 315 ; https://www.physiology.org/ >
+      au < exists ; 2017 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 312 ; 312 ; https://journals.physiology.org/ >
+      au < exists ; 2017 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 313 ; 313 ; https://journals.physiology.org/ >
+      au < exists ; 2018 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 314 ; 314 ; https://journals.physiology.org/ >
+      au < exists ; 2018 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 315 ; 315 ; https://journals.physiology.org/ >
       au < released ; 2019 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 316 ; 316 ; https://journals.physiology.org/ >
       au < released ; 2019 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 317 ; 317 ; https://journals.physiology.org/ >
       au < manifest ; 2020 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 318 ; 318 ; https://journals.physiology.org/ >
@@ -1030,10 +1063,14 @@
       au < doNotProcess ; 2015 ; American Journal of Physiology - Renal Physiology Volume 309 ; 309 ; https://www.physiology.org/ >
       au < doNotProcess ; 2016 ; American Journal of Physiology - Renal Physiology Volume 310 ; 310 ; https://www.physiology.org/ >
       au < doNotProcess ; 2016 ; American Journal of Physiology - Renal Physiology Volume 311 ; 311 ; https://www.physiology.org/ >
-      au < down ; 2017 ; American Journal of Physiology - Renal Physiology Volume 312 ; 312 ; https://www.physiology.org/ >
-      au < down ; 2017 ; American Journal of Physiology - Renal Physiology Volume 313 ; 313 ; https://www.physiology.org/ >
-      au < down ; 2018 ; American Journal of Physiology - Renal Physiology Volume 314 ; 314 ; https://www.physiology.org/ >
-      au < down ; 2018 ; American Journal of Physiology - Renal Physiology Volume 315 ; 315 ; https://www.physiology.org/ >
+      au < superseded ; 2017 ; American Journal of Physiology - Renal Physiology Volume 312 [superseded] ; 312 ; https://www.physiology.org/ >
+      au < superseded ; 2017 ; American Journal of Physiology - Renal Physiology Volume 313 [superseded] ; 313 ; https://www.physiology.org/ >
+      au < superseded ; 2018 ; American Journal of Physiology - Renal Physiology Volume 314 [superseded] ; 314 ; https://www.physiology.org/ >
+      au < superseded ; 2018 ; American Journal of Physiology - Renal Physiology Volume 315 [superseded] ; 315 ; https://www.physiology.org/ >
+      au < exists ; 2017 ; American Journal of Physiology - Renal Physiology Volume 312 ; 312 ; https://journals.physiology.org/ >
+      au < exists ; 2017 ; American Journal of Physiology - Renal Physiology Volume 313 ; 313 ; https://journals.physiology.org/ >
+      au < exists ; 2018 ; American Journal of Physiology - Renal Physiology Volume 314 ; 314 ; https://journals.physiology.org/ >
+      au < exists ; 2018 ; American Journal of Physiology - Renal Physiology Volume 315 ; 315 ; https://journals.physiology.org/ >
       au < released ; 2019 ; American Journal of Physiology - Renal Physiology Volume 316 ; 316 ; https://journals.physiology.org/ >
       au < released ; 2019 ; American Journal of Physiology - Renal Physiology Volume 317 ; 317 ; https://journals.physiology.org/ >
       au < manifest ; 2020 ; American Journal of Physiology - Renal Physiology Volume 318 ; 318 ; https://journals.physiology.org/ >
@@ -1178,10 +1215,14 @@
       au < doNotProcess ; 2015 ; Journal of Applied Physiology Volume 119 ; 119 ; https://www.physiology.org/ >
       au < doNotProcess ; 2016 ; Journal of Applied Physiology Volume 120 ; 120 ; https://www.physiology.org/ >
       au < doNotProcess ; 2016 ; Journal of Applied Physiology Volume 121 ; 121 ; https://www.physiology.org/ >
-      au < down ; 2017 ; Journal of Applied Physiology Volume 122 ; 122 ; https://www.physiology.org/ >
-      au < down ; 2017 ; Journal of Applied Physiology Volume 123 ; 123 ; https://www.physiology.org/ >
-      au < down ; 2018 ; Journal of Applied Physiology Volume 124 ; 124 ; https://www.physiology.org/ >
-      au < down ; 2018 ; Journal of Applied Physiology Volume 125 ; 125 ; https://www.physiology.org/ >
+      au < superseded ; 2017 ; Journal of Applied Physiology Volume 122 [superseded] ; 122 ; https://www.physiology.org/ >
+      au < superseded ; 2017 ; Journal of Applied Physiology Volume 123 [superseded] ; 123 ; https://www.physiology.org/ >
+      au < superseded ; 2018 ; Journal of Applied Physiology Volume 124 [superseded] ; 124 ; https://www.physiology.org/ >
+      au < superseded ; 2018 ; Journal of Applied Physiology Volume 125 [superseded] ; 125 ; https://www.physiology.org/ >
+      au < exists ; 2017 ; Journal of Applied Physiology Volume 122 ; 122 ; https://journals.physiology.org/ >
+      au < exists ; 2017 ; Journal of Applied Physiology Volume 123 ; 123 ; https://journals.physiology.org/ >
+      au < exists ; 2018 ; Journal of Applied Physiology Volume 124 ; 124 ; https://journals.physiology.org/ >
+      au < exists ; 2018 ; Journal of Applied Physiology Volume 125 ; 125 ; https://journals.physiology.org/ >
       au < released ; 2019 ; Journal of Applied Physiology Volume 126 ; 126 ; https://journals.physiology.org/ >
       au < released ; 2019 ; Journal of Applied Physiology Volume 127 ; 127 ; https://journals.physiology.org/ >
       au < manifest ; 2020 ; Journal of Applied Physiology Volume 128 ; 128 ; https://journals.physiology.org/ >
@@ -1322,9 +1363,12 @@
       au < doNotProcess ; 2016 ; Journal of Neurophysiology Volume 115 ; 115 ; https://www.physiology.org/ >
       au < doNotProcess ; 2016 ; Journal of Neurophysiology Volume 116 ; 116 ; https://www.physiology.org/ >
       au < released ; 2017 ; Journal of Neurophysiology Volume 117 ; 117 ; https://journals.physiology.org/ >
-      au < down ; 2017 ; Journal of Neurophysiology Volume 118 ; 118 ; https://www.physiology.org/ >
-      au < down ; 2018 ; Journal of Neurophysiology Volume 119 ; 119 ; https://www.physiology.org/ >
-      au < down ; 2018 ; Journal of Neurophysiology Volume 120 ; 120 ; https://www.physiology.org/ >
+      au < superseded ; 2017 ; Journal of Neurophysiology Volume 118 [superseded] ; 118 ; https://www.physiology.org/ >
+      au < superseded ; 2018 ; Journal of Neurophysiology Volume 119 [superseded] ; 119 ; https://www.physiology.org/ >
+      au < superseded ; 2018 ; Journal of Neurophysiology Volume 120 [superseded] ; 120 ; https://www.physiology.org/ >
+      au < exists ; 2017 ; Journal of Neurophysiology Volume 118 ; 118 ; https://journals.physiology.org/ >
+      au < exists ; 2018 ; Journal of Neurophysiology Volume 119 ; 119 ; https://journals.physiology.org/ >
+      au < exists ; 2018 ; Journal of Neurophysiology Volume 120 ; 120 ; https://journals.physiology.org/ >
       au < released ; 2019 ; Journal of Neurophysiology Volume 121 ; 121 ; https://journals.physiology.org/ >
       au < released ; 2019 ; Journal of Neurophysiology Volume 122 ; 122 ; https://journals.physiology.org/ >
       au < manifest ; 2020 ; Journal of Neurophysiology Volume 123 ; 123 ; https://journals.physiology.org/ >
@@ -1398,7 +1442,8 @@
       au < doNotProcess ; 2015 ; Physiological Genomics Volume 47 ; 47 ; https://www.physiology.org/ >
       au < doNotProcess ; 2016 ; Physiological Genomics Volume 48 ; 48 ; https://www.physiology.org/ >
       au < released ; 2017 ; Physiological Genomics Volume 49 ; 49 ; https://journals.physiology.org/ >
-      au < down ; 2018 ; Physiological Genomics Volume 50 ; 50 ; https://www.physiology.org/ >
+      au < superseded ; 2018 ; Physiological Genomics Volume 50 [superseded] ; 50 ; https://www.physiology.org/ >
+      au < exists ; 2018 ; Physiological Genomics Volume 50 ; 50 ; https://journals.physiology.org/ >
       au < released ; 2019 ; Physiological Genomics Volume 51 ; 51 ; https://journals.physiology.org/ >
       au < manifest ; 2020 ; Physiological Genomics Volume 52 ; 52 ; https://journals.physiology.org/ >
 
@@ -1516,8 +1561,10 @@
       au < doNotProcess ; 2014 ; Physiological Reviews Volume 94 ; 94 ; https://www.physiology.org/ >
       au < doNotProcess ; 2015 ; Physiological Reviews Volume 95 ; 95 ; https://www.physiology.org/ >
       au < doNotProcess ; 2016 ; Physiological Reviews Volume 96 ; 96 ; https://www.physiology.org/ >
-      au < down ; 2017 ; Physiological Reviews Volume 97 ; 97 ; https://www.physiology.org/ >
-      au < down ; 2018 ; Physiological Reviews Volume 98 ; 98 ; https://www.physiology.org/ >
+      au < superseded ; 2017 ; Physiological Reviews Volume 97 [superseded] ; 97 ; https://www.physiology.org/ >
+      au < superseded ; 2018 ; Physiological Reviews Volume 98 [superseded] ; 98 ; https://www.physiology.org/ >
+      au < exists ; 2017 ; Physiological Reviews Volume 97 ; 97 ; https://journals.physiology.org/ >
+      au < exists ; 2018 ; Physiological Reviews Volume 98 ; 98 ; https://journals.physiology.org/ >
       au < released ; 2019 ; Physiological Reviews Volume 99 ; 99 ; https://journals.physiology.org/ >
       au < manifest ; 2020 ; Physiological Reviews Volume 100 ; 100 ; https://journals.physiology.org/ >
 
@@ -1570,8 +1617,10 @@
       au < doNotProcess ; 2014 ; Physiology Volume 29 ; 29 ; https://www.physiology.org/ >
       au < doNotProcess ; 2015 ; Physiology Volume 30 ; 30 ; https://www.physiology.org/ >
       au < doNotProcess ; 2016 ; Physiology Volume 31 ; 31 ; https://www.physiology.org/ >
-      au < down ; 2017 ; Physiology Volume 32 ; 32 ; https://www.physiology.org/ >
-      au < down ; 2018 ; Physiology Volume 33 ; 33 ; https://www.physiology.org/ >
+      au < superseded ; 2017 ; Physiology Volume 32 [superseded] ; 32 ; https://www.physiology.org/ >
+      au < superseded ; 2018 ; Physiology Volume 33 [superseded] ; 33 ; https://www.physiology.org/ >
+      au < exists ; 2017 ; Physiology Volume 32 ; 32 ; https://journals.physiology.org/ >
+      au < exists ; 2018 ; Physiology Volume 33 ; 33 ; https://journals.physiology.org/ >
       au < released ; 2019 ; Physiology Volume 34 ; 34 ; https://journals.physiology.org/ >
       au < manifest ; 2020 ; Physiology Volume 35 ; 35 ; https://journals.physiology.org/ >
 

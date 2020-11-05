@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = American Thoracic Society
+    name = American Thoracic Society ;
+    info[platform] = HW and Atypon
   >
   
   comment[moved] = Moved platforms from HighWire to Atypon. PD-1325
@@ -91,18 +92,22 @@
       au < doNotProcess ; 2011 ; American Journal of Respiratory and Critical Care Medicine Volume 184 ; 184 >
       au < doNotProcess ; 2012 ; American Journal of Respiratory and Critical Care Medicine Volume 185 ; 185 >
       au < doNotProcess ; 2012 ; American Journal of Respiratory and Critical Care Medicine Volume 186 ; 186 >
-      au < down ; 2013 ; American Journal of Respiratory and Critical Care Medicine Volume 187 ; 187 >
-      au < down ; 2013 ; American Journal of Respiratory and Critical Care Medicine Volume 188 ; 188 >
-      au < down ; 2014 ; American Journal of Respiratory and Critical Care Medicine Volume 189 ; 189 >
-      au < down ; 2014 ; American Journal of Respiratory and Critical Care Medicine Volume 190 ; 190 >
-      au < down ; 2015 ; American Journal of Respiratory and Critical Care Medicine Volume 191 ; 191 >
-      au < down ; 2015 ; American Journal of Respiratory and Critical Care Medicine Volume 192 ; 192 >
-      au < down ; 2016 ; American Journal of Respiratory and Critical Care Medicine Volume 193 ; 193 >
-      au < down ; 2016 ; American Journal of Respiratory and Critical Care Medicine Volume 194 ; 194 >
-      au < down ; 2017 ; American Journal of Respiratory and Critical Care Medicine Volume 195 ; 195 >
-      au < down ; 2017 ; American Journal of Respiratory and Critical Care Medicine Volume 196 ; 196 >
-      au < down ; 2018 ; American Journal of Respiratory and Critical Care Medicine Volume 197 ; 197 >
-      au < down ; 2018 ; American Journal of Respiratory and Critical Care Medicine Volume 198 ; 198 >
+      au < released ; 2013 ; American Journal of Respiratory and Critical Care Medicine Volume 187 ; 187 >
+      au < released ; 2013 ; American Journal of Respiratory and Critical Care Medicine Volume 188 ; 188 >
+      au < released ; 2014 ; American Journal of Respiratory and Critical Care Medicine Volume 189 ; 189 >
+      au < released ; 2014 ; American Journal of Respiratory and Critical Care Medicine Volume 190 ; 190 >
+      au < released ; 2015 ; American Journal of Respiratory and Critical Care Medicine Volume 191 ; 191 >
+      au < released ; 2015 ; American Journal of Respiratory and Critical Care Medicine Volume 192 ; 192 >
+      au < released ; 2016 ; American Journal of Respiratory and Critical Care Medicine Volume 193 ; 193 >
+      au < released ; 2016 ; American Journal of Respiratory and Critical Care Medicine Volume 194 ; 194 >
+      au < released ; 2017 ; American Journal of Respiratory and Critical Care Medicine Volume 195 ; 195 >
+      au < released ; 2017 ; American Journal of Respiratory and Critical Care Medicine Volume 196 ; 196 >
+      au < released ; 2018 ; American Journal of Respiratory and Critical Care Medicine Volume 197 ; 197 >
+      au < released ; 2018 ; American Journal of Respiratory and Critical Care Medicine Volume 198 ; 198 >
+      au < exists ; 2019 ; American Journal of Respiratory and Critical Care Medicine Volume 199 ; 199 >
+      au < exists ; 2019 ; American Journal of Respiratory and Critical Care Medicine Volume 200 ; 200 >
+      au < exists ; 2020 ; American Journal of Respiratory and Critical Care Medicine Volume 201 ; 201 >
+      au < exists ; 2020 ; American Journal of Respiratory and Critical Care Medicine Volume 202 ; 202 >
       }
 
       {
@@ -205,24 +210,28 @@
       {
       param[base_url] = https://www.atsjournals.org/
 
-      au < down ; 2010 ; American Journal of Respiratory Cell and Molecular Biology Volume 42 ; 42 >
-      au < down ; 2010 ; American Journal of Respiratory Cell and Molecular Biology Volume 43 ; 43 >
-      au < down ; 2011 ; American Journal of Respiratory Cell and Molecular Biology Volume 44 ; 44 >
-      au < down ; 2011 ; American Journal of Respiratory Cell and Molecular Biology Volume 45 ; 45 >
-      au < down ; 2012 ; American Journal of Respiratory Cell and Molecular Biology Volume 46 ; 46 >
-      au < down ; 2012 ; American Journal of Respiratory Cell and Molecular Biology Volume 47 ; 47 >
-      au < down ; 2013 ; American Journal of Respiratory Cell and Molecular Biology Volume 48 ; 48 >
-      au < down ; 2013 ; American Journal of Respiratory Cell and Molecular Biology Volume 49 ; 49 >
-      au < down ; 2014 ; American Journal of Respiratory Cell and Molecular Biology Volume 50 ; 50 >
-      au < down ; 2014 ; American Journal of Respiratory Cell and Molecular Biology Volume 51 ; 51 >
-      au < down ; 2015 ; American Journal of Respiratory Cell and Molecular Biology Volume 52 ; 52 >
-      au < down ; 2015 ; American Journal of Respiratory Cell and Molecular Biology Volume 53 ; 53 >
-      au < down ; 2016 ; American Journal of Respiratory Cell and Molecular Biology Volume 54 ; 54 >
-      au < down ; 2016 ; American Journal of Respiratory Cell and Molecular Biology Volume 55 ; 55 >
-      au < down ; 2017 ; American Journal of Respiratory Cell and Molecular Biology Volume 56 ; 56 >
-      au < down ; 2017 ; American Journal of Respiratory Cell and Molecular Biology Volume 57 ; 57 >
-      au < down ; 2018 ; American Journal of Respiratory Cell and Molecular Biology Volume 58 ; 58 >
-      au < down ; 2018 ; American Journal of Respiratory Cell and Molecular Biology Volume 59 ; 59 >
+      au < released ; 2010 ; American Journal of Respiratory Cell and Molecular Biology Volume 42 ; 42 >
+      au < released ; 2010 ; American Journal of Respiratory Cell and Molecular Biology Volume 43 ; 43 >
+      au < released ; 2011 ; American Journal of Respiratory Cell and Molecular Biology Volume 44 ; 44 >
+      au < released ; 2011 ; American Journal of Respiratory Cell and Molecular Biology Volume 45 ; 45 >
+      au < released ; 2012 ; American Journal of Respiratory Cell and Molecular Biology Volume 46 ; 46 >
+      au < released ; 2012 ; American Journal of Respiratory Cell and Molecular Biology Volume 47 ; 47 >
+      au < released ; 2013 ; American Journal of Respiratory Cell and Molecular Biology Volume 48 ; 48 >
+      au < released ; 2013 ; American Journal of Respiratory Cell and Molecular Biology Volume 49 ; 49 >
+      au < released ; 2014 ; American Journal of Respiratory Cell and Molecular Biology Volume 50 ; 50 >
+      au < released ; 2014 ; American Journal of Respiratory Cell and Molecular Biology Volume 51 ; 51 >
+      au < released ; 2015 ; American Journal of Respiratory Cell and Molecular Biology Volume 52 ; 52 >
+      au < released ; 2015 ; American Journal of Respiratory Cell and Molecular Biology Volume 53 ; 53 >
+      au < released ; 2016 ; American Journal of Respiratory Cell and Molecular Biology Volume 54 ; 54 >
+      au < released ; 2016 ; American Journal of Respiratory Cell and Molecular Biology Volume 55 ; 55 >
+      au < released ; 2017 ; American Journal of Respiratory Cell and Molecular Biology Volume 56 ; 56 >
+      au < released ; 2017 ; American Journal of Respiratory Cell and Molecular Biology Volume 57 ; 57 >
+      au < released ; 2018 ; American Journal of Respiratory Cell and Molecular Biology Volume 58 ; 58 >
+      au < released ; 2018 ; American Journal of Respiratory Cell and Molecular Biology Volume 59 ; 59 >
+      au < exists ; 2019 ; American Journal of Respiratory Cell and Molecular Biology Volume 60 ; 60 >
+      au < exists ; 2019 ; American Journal of Respiratory Cell and Molecular Biology Volume 61 ; 61 >
+      au < exists ; 2020 ; American Journal of Respiratory Cell and Molecular Biology Volume 62 ; 62 >
+      au < exists ; 2020 ; American Journal of Respiratory Cell and Molecular Biology Volume 63 ; 63 >
       }
       {
       param[base_url] = http://www.atsjournals.org/
@@ -325,11 +334,14 @@
     {
       param[base_url] = https://www.atsjournals.org/
 
-      au < down ; 2013 ; Annals of the American Thoracic Society Volume 10 ; 10 >
-      au < down ; 2014 ; Annals of the American Thoracic Society Volume 11 ; 11 >
-      au < down ; 2015 ; Annals of the American Thoracic Society Volume 12 ; 12 >
-      au < down ; 2016 ; Annals of the American Thoracic Society Volume 13 ; 13 >
-      au < down ; 2017 ; Annals of the American Thoracic Society Volume 14 ; 14 >
+      au < released ; 2013 ; Annals of the American Thoracic Society Volume 10 ; 10 >
+      au < released ; 2014 ; Annals of the American Thoracic Society Volume 11 ; 11 >
+      au < released ; 2015 ; Annals of the American Thoracic Society Volume 12 ; 12 >
+      au < released ; 2016 ; Annals of the American Thoracic Society Volume 13 ; 13 >
+      au < released ; 2017 ; Annals of the American Thoracic Society Volume 14 ; 14 >
+      au < exists ; 2018 ; Annals of the American Thoracic Society Volume 15 ; 15 >
+      au < exists ; 2019 ; Annals of the American Thoracic Society Volume 16 ; 16 >
+      au < exists ; 2020 ; Annals of the American Thoracic Society Volume 17 ; 17 >
     }
     {
       param[base_url] = http://www.atsjournals.org/
@@ -339,6 +351,23 @@
       au < doNotProcess ; 2015 ; Annals of the American Thoracic Society Volume 12 ; 12 >
       au < doNotProcess ; 2016 ; Annals of the American Thoracic Society Volume 13 ; 13 >
       au < doNotProcess ; 2017 ; Annals of the American Thoracic Society Volume 14 ; 14 >
+    }
+  }
+
+  {
+      title <
+      name = ATS Scholar ;
+      eissn = 2690-7097
+     >
+
+      plugin = org.lockss.plugin.atypon.americanthoracic.AtsJournalsPlugin
+      implicit < status ; year ; name ; param[volume_name] >
+      param[journal_id] = ats-scholar
+
+    {
+      param[base_url] = https://www.atsjournals.org/
+
+      au < exists ; 2020 ; ATS Scholar Volume 1 ; 1 >
     }
   }
 
