@@ -1003,6 +1003,8 @@ while (my $line = <>) {
           } elsif (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) && 
                   (($man_contents =~ m/\/$jid\/$param{volume_name}\//) || 
                   ($man_contents =~ m/\/toc\/$jid\/*$param{volume_name}\"/) || 
+                  ##Royal Society Publishing: "/toc/rsbl/2014/10/12"  or "/toc/rsbm/2018/64"  
+                  ($man_contents =~ m/\"\/toc\/$jid\/[12][67890]\d\d\/$param{volume_name}(\/[-0-9]*)?\"/) || 
                   ($man_contents =~ m/\/$jid\S*volume=$param{volume_name}/)))) {
               if ($man_contents =~ m/<title>\s*(.*) LOCKSS Manifest Page\s*<\/title>/si) {
                   $vol_title = $1;
@@ -1076,10 +1078,8 @@ while (my $line = <>) {
           } elsif (defined($man_contents) && (($man_contents =~ m/$clockss_tag/) && 
                   (($man_contents =~ m/\/$jid\/$param{volume_name}\//) || 
                   ($man_contents =~ m/\/toc\/$jid\/*$param{volume_name}\"/) || 
-                  #"/toc/rsbl/2014/10/12"
-                  ($man_contents =~ m/\"\/toc\/$jid\/[12][890]\d\d\/$param{volume_name}\/\d*\"/) || 
-                  #"/toc/rsbm/2018/64"
-                  ($man_contents =~ m/\"\/toc\/$jid\/[12][890]\d\d\/$param{volume_name}\"/) || 
+                  ##Royal Society Publishing: "/toc/rsbl/2014/10/12"  or "/toc/rsbm/2018/64"  
+                  ($man_contents =~ m/\"\/toc\/$jid\/[12][67890]\d\d\/$param{volume_name}(\/[-0-9]*)?\"/) || 
                   ($man_contents =~ m/\/$jid\S*volume=$param{volume_name}/)))) {
               if ($man_contents =~ m/<title>\s*(.*) CLOCKSS Manifest Page\s*<\/title>/si) {
                   $vol_title = $1;
