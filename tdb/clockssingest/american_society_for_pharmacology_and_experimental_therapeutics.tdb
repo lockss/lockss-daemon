@@ -70,7 +70,7 @@
     au < aspet.ClockssASPETDrupalPlugin ; finished ; finished ; 2017 ; Drug Metabolism and Disposition Volume 45 ; 45 ; reingest3.clockss.org:8083 >
     au < aspet.ClockssASPETDrupalPlugin ; finished ; finished ; 2018 ; Drug Metabolism and Disposition Volume 46 ; 46 ; reingest2.clockss.org:8085 >
     au < aspet.ClockssASPETDrupalPlugin ; deepCrawl ; exists ; 2019 ; Drug Metabolism and Disposition Volume 47 ; 47 ; >
-    au < aspet.ClockssASPETDrupalPlugin ; testing ; exists ; 2020 ; Drug Metabolism and Disposition Volume 48 ; 48 ; >
+    au < aspet.ClockssASPETDrupalPlugin ; ready ; exists ; 2020 ; Drug Metabolism and Disposition Volume 48 ; 48 ; >
 
   }
 
@@ -612,7 +612,7 @@
     au < aspet.ClockssASPETDrupalPlugin ; deepCrawl ; exists ; 2019 ; Molecular Pharmacology Volume 95 ; 95 ; >
     au < aspet.ClockssASPETDrupalPlugin ; deepCrawl ; exists ; 2019 ; Molecular Pharmacology Volume 96 ; 96 ; >
     au < aspet.ClockssASPETDrupalPlugin ; crawling ; exists ; 2020 ; Molecular Pharmacology Volume 97 ; 97 ; >
-    au < aspet.ClockssASPETDrupalPlugin ; testing ; exists ; 2020 ; Molecular Pharmacology Volume 98 ; 98 ; >
+    au < aspet.ClockssASPETDrupalPlugin ; ready ; exists ; 2020 ; Molecular Pharmacology Volume 98 ; 98 ; >
 
   }
 
