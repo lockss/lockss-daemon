@@ -1,38 +1,36 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-========================================================================
- $Id$
- Ant build file for LOCKSS daemon
-========================================================================
+Copyright (c) 2000-2020, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
 
-Copyright (c) 2000-2020 Board of Trustees of Leland Stanford Jr. University,
-all rights reserved.
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
-STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
 
-Except as contained in this notice, the name of Stanford University shall not
-be used in advertising or otherwise to promote the sale, use or other dealings
-in this Software without prior written authorization from Stanford University.
-========================================================================
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
 
 -->
-
 <project name="LOCKSS Gamma" default="test-all" basedir=".">
 
 <description>
@@ -225,6 +223,10 @@ Args:
   <property name="derby.jar"      value="${lib}/derby.jar"/>
   <property name="derbyclient.jar" value="${lib}/derbyclient.jar"/>
   <property name="derbynet.jar"   value="${lib}/derbynet.jar"/>
+<!--  <property name="derby.version"  value="10.12.1.1"/>-->
+<!--  <property name="derby.jar"      value="${lib}/derby-${derby.version}.jar"/>-->
+<!--  <property name="derbyclient.jar" value="${lib}/derbyclient-${derby.version}.jar"/>-->
+<!--  <property name="derbynet.jar"   value="${lib}/derbynet-${derby.version}.jar"/>-->
   <property name="postgresql-jdbc.jar"
                                   value="${lib}/postgresql-42.2.5.jre7.jar" />
   <property name="mysql-connector-java.jar"
@@ -250,31 +252,31 @@ Args:
   <property name="commons.lang.jar"
 				  value="${lib}/commons-lang-2.6.jar"/>
   <property name="commons.lang3.jar"
-				  value="${lib}/commons-lang3-3.8.1.jar"/>
+				  value="${lib}/commons-lang3-3.11.jar"/>
   <property name="commons.cli.jar"
   				  value="${lib}/commons-cli-1.4.jar"/>
   <property name="commons.collections.jar"
   				  value="${lib}/commons-collections-3.2.2.jar"/>
   <property name="commons.collections4.jar"
-	 			  value="${lib}/commons-collections4-4.2.jar"/>
+	 			  value="${lib}/commons-collections4-4.4.jar"/>
   <property name="commons.configuration.jar"
                   value="${lib}/commons-configuration-1.10.jar"/>
   <property name="commons.logging.jar"
   				  value="${lib}/commons-logging-1.2.jar"/>
   <property name="commons.codec.jar"
-  				  value="${lib}/commons-codec-1.11.jar"/>
+  				  value="${lib}/commons-codec-1.15.jar"/>
   <property name="commons.compress.jar"
-  				  value="${lib}/commons-compress-1.18.jar"/>
+  				  value="${lib}/commons-compress-1.20.jar"/>
   <property name="commons.httpclient.jar"
   			value="${lib}/commons-httpclient-3.0-rc4.jar"/>
   <property name="commons.io.jar"
-	        value="${lib}/commons-io-2.6.jar" />
+	        value="${lib}/commons-io-2.8.0.jar" />
   <property name="commons.jxpath.jar"
 				  value="${lib}/commons-jxpath-1.3.jar"/>
   <property name="commons.beanutils.jar"
-				  value="${lib}/commons-beanutils-1.9.3.jar"/>
+				  value="${lib}/commons-beanutils-1.9.4.jar"/>
     <property name="commons.validator.jar"
-              value="${lib}/commons-validator-1.6.jar"/>
+              value="${lib}/commons-validator-1.7.jar"/>
   <property name="commons.primitives.jar"
 				  value="${lib}/commons-primitives-1.0.jar"/>
   <!-- gettext jars, for i18n -->
@@ -344,10 +346,10 @@ Args:
   <property name="fontbox.jar" value="${lib}/fontbox-${pdfbox.version}.jar" />
   <property name="jempbox.jar" value="${lib}/jempbox-${pdfbox.version}.jar" />
   <property name="xmpbox.jar" value="${lib}/xmpbox-${pdfbox.version}.jar" />
-  <property name="bouncycastle.version" value="jdk15on-160" />
+  <property name="bouncycastle.version" value="jdk15on-167" />
   <property name="bouncycastle-provider.jar" value="${lib}/bcprov-${bouncycastle.version}.jar" />
   <property name="bouncycastle-mail.jar" value="${lib}/bcmail-${bouncycastle.version}.jar" />
-  <property name="icu4j.version" value="63_1" />
+  <property name="icu4j.version" value="68_1" />
   <property name="icu4j.jar" value="${lib}/icu4j-${icu4j.version}.jar" />
   <property name="icu4j-charset.jar" value="${lib}/icu4j-charset-${icu4j.version}.jar" />
   <property name="icu4j-localespi.jar" value="${lib}/icu4j-localespi-${icu4j.version}.jar" />
@@ -370,9 +372,9 @@ Args:
   <property name="ext.javadoc"
                       value="http://documents.lockss.org/gamma-libs/" />
   <!-- Needed by entitlement registry -->
-  <property name="jackson.version" value="2.9.8" />
+  <property name="jackson.version" value="2.9.10" />
   <property name="jackson-core.jar" value="${lib}/jackson-core-${jackson.version}.jar" />
-  <property name="jackson-databind.jar" value="${lib}/jackson-databind-${jackson.version}.jar" />
+  <property name="jackson-databind.jar" value="${lib}/jackson-databind-${jackson.version}.6.jar" /><!-- NOTE: 2.9.10.6 -->
   <property name="jackson-annotations.jar" value="${lib}/jackson-annotations-${jackson.version}.jar" />
 
   <property name="antlr.runtime.jar" value="${lib}/antlr-runtime-4.5.3.jar" />
