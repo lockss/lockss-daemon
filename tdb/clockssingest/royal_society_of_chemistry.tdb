@@ -210,7 +210,7 @@
 
       param[journal_code] = cc
 
-      #complete. Missing back content 1996-2009.
+      #complete. Missing back content 1996-2009. ****
       au < zapped ; finished ; 2010 ; Chemical Communications Volume 46 ; 46 ; 2010 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2011 ; Chemical Communications Volume 47 ; 47 ; 2011 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2012 ; Chemical Communications Volume 48 ; 48 ; 2012 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
@@ -346,7 +346,7 @@
 
       param[journal_code] = dt
 
-      #complete. Missing 1996-2009.
+      #complete. Missing 1996-2009. **** These volumes listed in another title block. Search for "= dt"
       au < frozen ; exists ; 2010 ; Dalton Transactions Volume 39 ; 39 ; 2010 ; http://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2011 ; Dalton Transactions Volume 40 ; 40 ; 2011 ; http://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2012 ; Dalton Transactions Volume 41 ; 41 ; 2012 ; http://pubs.rsc.org/ ; >
@@ -1487,6 +1487,20 @@
       param[journal_code] = em
 
       #complete
+      au < exists ; exists ; 1999 ; Environmental Science: Processes & Impacts Volume 1 ; 1 ; 1999 ; https://pubs.rsc.org/ ; >
+      au < exists ; exists ; 2000 ; Environmental Science: Processes & Impacts Volume 2 ; 2 ; 2000 ; https://pubs.rsc.org/ ; >
+      au < exists ; exists ; 2001 ; Environmental Science: Processes & Impacts Volume 3 ; 3 ; 2001 ; https://pubs.rsc.org/ ; >
+      au < exists ; exists ; 2002 ; Environmental Science: Processes & Impacts Volume 4 ; 4 ; 2002 ; https://pubs.rsc.org/ ; >
+      au < exists ; exists ; 2003 ; Environmental Science: Processes & Impacts Volume 5 ; 5 ; 2003 ; https://pubs.rsc.org/ ; >
+      au < exists ; exists ; 2004 ; Environmental Science: Processes & Impacts Volume 6 ; 6 ; 2004 ; https://pubs.rsc.org/ ; >
+      au < exists ; exists ; 2005 ; Environmental Science: Processes & Impacts Volume 7 ; 7 ; 2005 ; https://pubs.rsc.org/ ; >
+      au < exists ; exists ; 2006 ; Environmental Science: Processes & Impacts Volume 8 ; 8 ; 2006 ; https://pubs.rsc.org/ ; >
+      au < exists ; exists ; 2007 ; Environmental Science: Processes & Impacts Volume 9 ; 9 ; 2007 ; https://pubs.rsc.org/ ; >
+      au < exists ; exists ; 2008 ; Environmental Science: Processes & Impacts Volume 10 ; 10 ; 2008 ; https://pubs.rsc.org/ ; >
+      au < exists ; exists ; 2009 ; Environmental Science: Processes & Impacts Volume 11 ; 11 ; 2009 ; https://pubs.rsc.org/ ; >
+      au < exists ; exists ; 2010 ; Environmental Science: Processes & Impacts Volume 12 ; 12 ; 2010 ; https://pubs.rsc.org/ ; >
+      au < exists ; exists ; 2011 ; Environmental Science: Processes & Impacts Volume 13 ; 13 ; 2011 ; https://pubs.rsc.org/ ; >
+      au < exists ; exists ; 2012 ; Environmental Science: Processes & Impacts Volume 14 ; 14 ; 2012 ; https://pubs.rsc.org/ ; >
       au < finished ; manifest ; 2013 ; Environmental Science: Processes & Impacts Volume 15 ; 15 ; 2013 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2014 ; Environmental Science: Processes & Impacts Volume 16 ; 16 ; 2014 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2015 ; Environmental Science: Processes & Impacts Volume 17 ; 17 ; 2015 ; http://pubs.rsc.org/ ; >
@@ -1724,7 +1738,7 @@
       #example: https://pubs.rsc.org/en/journals/lockss?journalcode=jc&year=1997
       #instead of: https://pubs.rsc.org/en/journals/lockss?journalcode=jc&volume=1&year=1997
 
-      #complete. Missing 1997-1999
+      #complete. Missing 1997-1999 ****
       au < notReady ; exists ; 1997 ; Journal of Chemical Research, Synopses Volume 1997 ; 1997 ; 1997 ; https://pubs.rsc.org/ ; >
       au < notReady ; exists ; 1998 ; Journal of Chemical Research, Synopses Volume 1998 ; 1998 ; 1998 ; https://pubs.rsc.org/ ; >
       au < notReady ; exists ; 1999 ; Journal of Chemical Research, Synopses Volume 1999 ; 1999 ; 1999 ; https://pubs.rsc.org/ ; >
@@ -2078,7 +2092,7 @@
       
       #title continued under the name "Dalton Transactions"
 
-      #complete. Missing
+      #complete. Missing ****
       au < notReady ; exists ; 1996 ; Journal of the Chemical Society, Dalton Transactions Volume 1996 ; 1996 ; 1996 ; https://pubs.rsc.org/ ; >
       au < notReady ; exists ; 1997 ; Journal of the Chemical Society, Dalton Transactions Volume 1997 ; 1997 ; 1997 ; https://pubs.rsc.org/ ; >
       au < notReady ; exists ; 1998 ; Journal of the Chemical Society, Dalton Transactions Volume 1998 ; 1998 ; 1998 ; https://pubs.rsc.org/ ; >
@@ -2171,7 +2185,7 @@
       param[journal_code] = p1
       #manifest page in different format. No volume code
 
-      #complete. Missing
+      #complete. Missing ****
       au < notReady ; exists ; 2000 ; Journal of the Chemical Society, Perkin Transactions 1 Volume 2000 ; 2000 ; 2000 ; https://pubs.rsc.org/ ; >
 
   }
@@ -2188,7 +2202,7 @@
       param[journal_code] = p1
       #manifest page in different format. No volume code
 
-      #complete. Missing
+      #complete. Missing ****
       au < notReady ; exists ; 2001 ; Journal of the Chemical Society, Perkin Transactions 1 Volume 2001 ; 2001 ; 2001 ; https://pubs.rsc.org/ ; >
       au < notReady ; exists ; 2002 ; Journal of the Chemical Society, Perkin Transactions 1 Volume 2002 ; 2002 ; 2002 ; https://pubs.rsc.org/ ; >
 
@@ -2206,7 +2220,7 @@
       param[journal_code] = p1
       #manifest page in different format. No volume code
 
-      #complete. Missing
+      #complete. Missing ****
       au < doNotProcess ; exists ; 1972 ; Journal of the Chemical Society, Perkin Transactions 1: Organic and Bio-organic Chemistry Volume 1972 ; 1972 ; 1972 ; https://pubs.rsc.org/ ; >
       au < doNotProcess ; exists ; 1973 ; Journal of the Chemical Society, Perkin Transactions 1: Organic and Bio-organic Chemistry Volume 1973 ; 1973 ; 1973 ; https://pubs.rsc.org/ ; >
       au < doNotProcess ; exists ; 1974 ; Journal of the Chemical Society, Perkin Transactions 1: Organic and Bio-organic Chemistry Volume 1974 ; 1974 ; 1974 ; https://pubs.rsc.org/ ; >
@@ -2249,7 +2263,7 @@
       param[journal_code] = p2
       #manifest page in different format. No volume code
 
-      #complete. Missing
+      #complete. Missing ****
       au < notReady ; exists ; 2000 ; Journal of the Chemical Society, Perkin Transactions 2 Volume 2000 ; 2000 ; 2000 ; https://pubs.rsc.org/ ; >
 
   }
@@ -2266,7 +2280,7 @@
       param[journal_code] = p2
       #manifest page in different format. No volume code
 
-      #complete. Missing
+      #complete. Missing ****
       au < notReady ; exists ; 2001 ; Journal of the Chemical Society, Perkin Transactions 2 Volume 2001 ; 2001 ; 2001 ; https://pubs.rsc.org/ ; >
       au < notReady ; exists ; 2002 ; Journal of the Chemical Society, Perkin Transactions 2 Volume 2002 ; 2002 ; 2002 ; https://pubs.rsc.org/ ; >
 
@@ -2283,7 +2297,7 @@
       param[journal_code] = p2
       #manifest page in different format. No volume code
 
-      #complete. Missing
+      #complete. Missing ****
       au < doNotProcess ; exists ; 1972 ; Journal of the Chemical Society, Perkin Transactions 2: Physical Organic Chemistry Volume 1972 ; 1972 ; 1972 ; https://pubs.rsc.org/ ; >
       au < doNotProcess ; exists ; 1973 ; Journal of the Chemical Society, Perkin Transactions 2: Physical Organic Chemistry Volume 1973 ; 1973 ; 1973 ; https://pubs.rsc.org/ ; >
       au < doNotProcess ; exists ; 1974 ; Journal of the Chemical Society, Perkin Transactions 2: Physical Organic Chemistry Volume 1974 ; 1974 ; 1974 ; https://pubs.rsc.org/ ; >

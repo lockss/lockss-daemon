@@ -125,15 +125,10 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Biology Letters Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Biology Letters Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Biology Letters Volume 13 ; 13 ; >
-
     au < finished ; finished ; 2018 ; Biology Letters Volume 14 ; 14 ; reingest4.clockss.org:8082 >
-#    au < manifest ; exists ; 2018 ; Biology Letters Volume 14 [2018] ; 2018 ; >
-
     au < finished ; manifest ; 2019 ; Biology Letters Volume 15 ; 15 ; reingest5.clockss.org:8082 >
     au < superseded ; exists ; 2019 ; Biology Letters Volume 15 [superseded] ; 2019 ; >
-
     au < manifest ; exists ; 2020 ; Biology Letters Volume 16 ; 16 ; >
-#    au < manifest ; exists ; 2020 ; Biology Letters Volume 16 [2020] ; 2020 ; >
 
   }
 
@@ -158,15 +153,10 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Interface Focus Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Interface Focus Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Interface Focus Volume 7 ; 7 ; >
-
     au < finished ; finished ; 2018 ; Interface Focus Volume 8 ; 8 ; reingest4.clockss.org:8082 >
-#    au < manifest ; exists ; 2018 ; Interface Focus Volume 8 [2018] ; 2018 ; >
-
-    au < finished ; manifest ; 2019 ; Interface Focus Volume 9 ; 9 ; reingest5.clockss.org:8082 >
     au < superseded ; exists ; 2019 ; Interface Focus Volume 9 [superseded] ; 2019 ; >
-
+    au < finished ; manifest ; 2019 ; Interface Focus Volume 9 ; 9 ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 2020 ; Interface Focus Volume 10 ; 10 ; >
-#    au < manifest ; exists ; 2020 ; Interface Focus Volume 10 [2020] ; 2020 ; >
 
   }
   
@@ -195,15 +185,10 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of the Royal Society Interface Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of the Royal Society Interface Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of the Royal Society Interface Volume 14 ; 14 ; >
-
     au < finished ; finished ; 2018 ; Journal of the Royal Society Interface Volume 15 ; 15 ; reingest3.clockss.org:8083 >
-#    au < manifest ; exists ; 2018 ; Journal of the Royal Society Interface Volume 15 [2018] ; 2018 ; >
-
-    au < manifest ; exists ; 2019 ; Journal of the Royal Society Interface Volume 16 ; 16 ; >
     au < superseded ; exists ; 2019 ; Journal of the Royal Society Interface Volume 16 [superseded] ; 2019 ; >
-
+    au < manifest ; exists ; 2019 ; Journal of the Royal Society Interface Volume 16 ; 16 ; >
     au < manifest ; exists ; 2020 ; Journal of the Royal Society Interface Volume 17 ; 17 ; >
-#    au < manifest ; exists ; 2020 ; Journal of the Royal Society Interface Volume 17 [2020] ; 2020 ; >
 
   }
 
@@ -290,15 +275,10 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Notes and Records the Royal Society Journal of the History of Science Volume 69 ; 69 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Notes and Records the Royal Society Journal of the History of Science Volume 70 ; 70 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Notes and Records the Royal Society Journal of the History of Science Volume 71 ; 71 ; >
-
     au < finished ; finished ; 2018 ; Notes and Records the Royal Society Journal of the History of Science Volume 72 ; 72 ; reingest5.clockss.org:8082 >
-#    au < manifest ; exists ; 2018 ; Notes and Records the Royal Society Journal of the History of Science Volume 72 [2018] ; 2018 ; >
-
-    au < manifest ; exists ; 2019 ; Notes and Records the Royal Society Journal of the History of Science Volume 73 ; 73 ; >
     au < superseded ; exists ; 2019 ; Notes and Records the Royal Society Journal of the History of Science Volume 73 [superseded] ; 2019 ; >
-
+    au < manifest ; exists ; 2019 ; Notes and Records the Royal Society Journal of the History of Science Volume 73 ; 73 ; >
     au < manifest ; exists ; 2020 ; Notes and Records the Royal Society Journal of the History of Science Volume 74 ; 74 ; >
-#    au < manifest ; exists ; 2020 ; Notes and Records the Royal Society Journal of the History of Science Volume 74 [2020] ; 2020 ; >
 
   }
 
@@ -319,15 +299,10 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Open Biology Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Open Biology Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Open Biology Volume 7 ; 7 ; >
-
     au < finished ; finished ; 2018 ; Open Biology Volume 8 ; 8 ; reingest2.clockss.org:8085 >
-#    au < manifest ; exists ; 2018 ; Open Biology Volume 8 [2018] ; 2018 ; >
-
-    au < finished ; manifest ; 2019 ; Open Biology Volume 9 ; 9 ; reingest4.clockss.org:8082 >
     au < superseded ; exists ; 2019 ; Open Biology Volume 9 [superseded] ; 2019 ; >
-
+    au < finished ; manifest ; 2019 ; Open Biology Volume 9 ; 9 ; reingest4.clockss.org:8082 >
     au < manifest ; exists ; 2020 ; Open Biology Volume 10 ; 10 ; >
-#    au < manifest ; exists ; 2020 ; Open Biology Volume 10 [2020] ; 2020 ; >
 
   }
 
@@ -1741,10 +1716,8 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Royal Society Open Science Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Royal Society Open Science Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Royal Society Open Science Volume 5 ; 5 ; >
-
-    au < manifest ; exists ; 2019 ; Royal Society Open Science Volume 6 ; 6 ; >
     au < superseded ; exists ; 2019 ; Royal Society Open Science Volume 6 [superseded] ; 2019 ; >
-
+    au < manifest ; exists ; 2019 ; Royal Society Open Science Volume 6 ; 6 ; >
     au < manifest ; exists ; 2020 ; Royal Society Open Science Volume 7 ; 7 ; >
 
   }
