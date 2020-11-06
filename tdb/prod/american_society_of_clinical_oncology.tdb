@@ -83,6 +83,7 @@
     title <
       name = Journal of Oncology Practice ;
       issn = 1554-7477 ;
+      eissn = 1935-469X ;
       issnl = 1554-7477
     >
 
@@ -104,6 +105,21 @@
       au < released ; 2017 ; Journal of Oncology Practice Volume 13 ; 13 ; http://ascopubs.org/ >
       au < manifest ; 2018 ; Journal of Oncology Practice Volume 14 ; 14 ; https://ascopubs.org/ >
       au < manifest ; 2019 ; Journal of Oncology Practice Volume 15 ; 15 ; https://ascopubs.org/ >
+      #title changed as of 2020
+  }
+
+  {
+    title <
+      name = JCO Oncology Practice  ;
+      issn = 1554-7477 ;
+      eissn = 1935-469X ;
+      issnl = 1554-7477
+    >
+
+      #param[base_url] = http://jop.ascopubs.org/
+      param[journal_id] = op
+
+      #title changed as of 2020
       au < expected ; 2020 ; Journal of Oncology Practice Volume 16 ; 16 ; https://ascopubs.org/ >
 
   }
