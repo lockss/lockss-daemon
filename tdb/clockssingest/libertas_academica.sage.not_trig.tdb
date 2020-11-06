@@ -40,7 +40,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Air, Soil & Water Research Volume 6 ; 6 ; aswa ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Air, Soil & Water Research Volume 7 ; 7 ; aswa ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Air, Soil & Water Research Volume 8 ; 8 ; aswa ; http://journals.sagepub.com/ ; >
-    au < frozen ; exists ; 2016 ; Air, Soil & Water Research Volume 9 ; 9 ; aswa ; http://journals.sagepub.com/ ; >
+    au < finished ; manifest ; 2016 ; Air, Soil & Water Research Volume 9 ; 9 ; aswa ; http://journals.sagepub.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2017 ; Air, Soil & Water Research Volume 10 ; 10 ; aswa ; http://journals.sagepub.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Air, Soil & Water Research Volume 11 ; 11 ; aswa ; http://journals.sagepub.com/ ; >
 
@@ -65,7 +65,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Analytical Chemistry Insights Volume 8 ; 8 ; acia ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Analytical Chemistry Insights Volume 9 ; 9 ; acia ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Analytical Chemistry Insights Volume 10 ; 10 ; acia ; http://journals.sagepub.com/ ; >
-    au < frozen ; exists ; 2016 ; Analytical Chemistry Insights Volume 11 ; 11 ; acia ; http://journals.sagepub.com/ ; >
+    au < finished ; manifest ; 2016 ; Analytical Chemistry Insights Volume 11 ; 11 ; acia ; http://journals.sagepub.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2017 ; Analytical Chemistry Insights Volume 12 ; 12 ; acia ; http://journals.sagepub.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Analytical Chemistry Insights Volume 13 ; 13 ; acia ; http://journals.sagepub.com/ ; >
 
@@ -89,9 +89,9 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Biochemistry Insights Volume 6 ; 6 ; bcia ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Biochemistry Insights Volume 7 ; 7 ; bcia ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Biochemistry Insights Volume 8 ; 8 ; bcia ; http://journals.sagepub.com/ ; >
-    au < frozen ; exists ; 2016 ; Biochemistry Insights Volume 9 ; 9 ; bcia ; http://journals.sagepub.com/ ; >
+    au < finished ; manifest ; 2016 ; Biochemistry Insights Volume 9 ; 9 ; bcia ; http://journals.sagepub.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2017 ; Biochemistry Insights Volume 10 ; 10 ; bcia ; http://journals.sagepub.com/ ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2018 ; Biochemistry Insights Volume 11 ; 11 ; bcia ; https://journals.sagepub.com/ ; >
+    au < finished ; manifest ; 2018 ; Biochemistry Insights Volume 11 ; 11 ; bcia ; https://journals.sagepub.com/ ; reingest2.clockss.org:8085 >
 
   }
 
@@ -114,7 +114,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Bioinformatics and Biology Insights Volume 7 ; 7 ; bbia ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Bioinformatics and Biology Insights Volume 8 ; 8 ; bbia ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Bioinformatics and Biology Insights Volume 9 ; 9 ; bbia ; http://journals.sagepub.com/ ; >
-    au < frozen ; exists ; 2016 ; Bioinformatics and Biology Insights Volume 10 ; 10 ; bbia ; http://journals.sagepub.com/ ; >
+    au < finished ; manifest ; 2016 ; Bioinformatics and Biology Insights Volume 10 ; 10 ; bbia ; http://journals.sagepub.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2017 ; Bioinformatics and Biology Insights Volume 11 ; 11 ; bbia ; http://journals.sagepub.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2018 ; Bioinformatics and Biology Insights Volume 12 ; 12 ; bbia ; http://journals.sagepub.com/ ; >
 
@@ -140,8 +140,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Biomarker Insights Volume 8 ; 8 ; bmia ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Biomarker Insights Volume 9 ; 9 ; bmia ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Biomarker Insights Volume 10 ; 10 ; bmia ; http://journals.sagepub.com/ ; >
-    au < frozen ; exists ; 2016 ; Biomarker Insights Volume 11 ; 11 ; bmia ; http://journals.sagepub.com/ ; >
-    au < frozen ; exists ; 2017 ; Biomarker Insights Volume 12 ; 12 ; bmia ; http://journals.sagepub.com/ ; >
+    au < finished ; manifest ; 2016 ; Biomarker Insights Volume 11 ; 11 ; bmia ; http://journals.sagepub.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2017 ; Biomarker Insights Volume 12 ; 12 ; bmia ; http://journals.sagepub.com/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Biomarker Insights Volume 13 ; 13 ; bmia ; http://journals.sagepub.com/ ; >
 
   }
@@ -163,7 +163,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Biomarkers in Cancer Volume 5 ; 5 ; bica ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Biomarkers in Cancer Volume 6 ; 6 ; bica ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Biomarkers in Cancer Volume 7 ; 7 ; bica ; http://journals.sagepub.com/ ; >
-    au < frozen ; exists ; 2016 ; Biomarkers in Cancer Volume 8 ; 8 ; bica ; http://journals.sagepub.com/ ; >
+    au < finished ; manifest ; 2016 ; Biomarkers in Cancer Volume 8 ; 8 ; bica ; http://journals.sagepub.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2017 ; Biomarkers in Cancer Volume 9 ; 9 ; bica ; http://journals.sagepub.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; Biomarkers in Cancer Volume 10 ; 10 ; bica ; http://journals.sagepub.com/ ; >
 
@@ -185,7 +185,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Biomedical Engineering and Computational Biology Volume 4 ; 4 ; beca ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Biomedical Engineering and Computational Biology Volume 5 ; 5 ; beca ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Biomedical Engineering and Computational Biology Volume 6 ; 6 ; beca ; http://journals.sagepub.com/ ; >
-    au < frozen ; exists ; 2016 ; Biomedical Engineering and Computational Biology Volume 7 ; 7 ; beca ; http://journals.sagepub.com/ ; >
+    au < finished ; manifest ; 2016 ; Biomedical Engineering and Computational Biology Volume 7 ; 7 ; beca ; http://journals.sagepub.com/ ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2017 ; Biomedical Engineering and Computational Biology Volume 8 ; 8 ; beca ; http://journals.sagepub.com/ ; >
     au < deepCrawl ; exists ; 2018 ; Biomedical Engineering and Computational Biology Volume 9 ; 9 ; beca ; http://journals.sagepub.com/ ; >
 
