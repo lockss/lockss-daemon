@@ -6,21 +6,20 @@
     info[tester] = S ;
     info[platform] = Source
   >
-  
+
   {
-  
+
     title <
        name = IP Innovative Publication
     >
-    
-    plugin = needs.plugin 
-    #plugin = org.lockss.plugin.clockss.ipinnovative.ClockssIPInnovativeSourcePlugin
+
+
+    plugin = org.lockss.plugin.clockss.ipinnovative.ClockssIPInnovativeSourcePlugin
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/innovativepublication-released/
-    
+
     hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[year] >
 
-#on hold while checking
     au < exists ; exists ; 2020 ; IP Innovative Publication Content 2020 ; 2020 >
 
   }
