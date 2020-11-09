@@ -1165,9 +1165,14 @@ public class ServeContent extends LockssServlet {
                   + " cu=" + cu);
     }
     resp.setContentType(ctype);
-    // Set as inline content with name
-    resp.setHeader("Content-disposition", "inline; filename="+
-                                          ServletUtil.getContentOriginalFilename(cu, true));
+
+    // If no Content-Disposition, set as inline content with name
+    String cdisp = props.getProperty("Content-Disposition");
+    if (cdisp == null) {
+      cdisp = "inline; filename=" +
+	ServletUtil.getContentOriginalFilename(cu, true);
+    }
+    resp.setHeader("Content-Disposition", cdisp);
 
     if (cuLastModified != null) {
       resp.setHeader(HttpFields.__LastModified, cuLastModified);
