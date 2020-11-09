@@ -9,14 +9,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -72,5 +72,11 @@
         <string>org.lockss.plugin.clockss.verduci.VerduciXmlMetadataExtractorFactory</string>
       </entry>
     </map>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,"http://clockss-ingest.lockss.org/sourcefiles/verduci-released/2020/WCRJ/"</string>
+    </list>
   </entry>
 </map>    

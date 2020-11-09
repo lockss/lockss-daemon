@@ -37,6 +37,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.lockss.config.TdbAu;
 import org.lockss.util.*;
 import org.apache.commons.io.FilenameUtils;
 import org.lockss.daemon.*;
@@ -144,8 +145,6 @@ public class VerduciXmlMetadataExtractorFactory extends SourceXmlMetadataExtract
 
       String elocation_id = oneAM.getRaw(PubMedSchemaHelper.elocation_id);
 
-      log.debug3("Fei - elocation_id" + elocation_id);
-
       if (epage == null) {
         epage = spage;
       }
@@ -186,6 +185,16 @@ public class VerduciXmlMetadataExtractorFactory extends SourceXmlMetadataExtract
           returnList.add(pdfName);
         }
       }
+
+      String publisherName = "Verduci Editore";
+
+        TdbAu tdbau = cu.getArchivalUnit().getTdbAu();
+        if (tdbau != null) {
+            publisherName =  tdbau.getPublisherName();
+        }
+
+        oneAM.put(MetadataField.FIELD_PUBLISHER, publisherName);
+
       return returnList;
     }
     
