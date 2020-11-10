@@ -1487,20 +1487,20 @@
       param[journal_code] = em
 
       #complete
-      au < exists ; exists ; 1999 ; Environmental Science: Processes & Impacts Volume 1 ; 1 ; 1999 ; https://pubs.rsc.org/ ; >
-      au < exists ; exists ; 2000 ; Environmental Science: Processes & Impacts Volume 2 ; 2 ; 2000 ; https://pubs.rsc.org/ ; >
-      au < exists ; exists ; 2001 ; Environmental Science: Processes & Impacts Volume 3 ; 3 ; 2001 ; https://pubs.rsc.org/ ; >
-      au < exists ; exists ; 2002 ; Environmental Science: Processes & Impacts Volume 4 ; 4 ; 2002 ; https://pubs.rsc.org/ ; >
-      au < exists ; exists ; 2003 ; Environmental Science: Processes & Impacts Volume 5 ; 5 ; 2003 ; https://pubs.rsc.org/ ; >
-      au < exists ; exists ; 2004 ; Environmental Science: Processes & Impacts Volume 6 ; 6 ; 2004 ; https://pubs.rsc.org/ ; >
-      au < exists ; exists ; 2005 ; Environmental Science: Processes & Impacts Volume 7 ; 7 ; 2005 ; https://pubs.rsc.org/ ; >
-      au < exists ; exists ; 2006 ; Environmental Science: Processes & Impacts Volume 8 ; 8 ; 2006 ; https://pubs.rsc.org/ ; >
-      au < exists ; exists ; 2007 ; Environmental Science: Processes & Impacts Volume 9 ; 9 ; 2007 ; https://pubs.rsc.org/ ; >
-      au < exists ; exists ; 2008 ; Environmental Science: Processes & Impacts Volume 10 ; 10 ; 2008 ; https://pubs.rsc.org/ ; >
-      au < exists ; exists ; 2009 ; Environmental Science: Processes & Impacts Volume 11 ; 11 ; 2009 ; https://pubs.rsc.org/ ; >
-      au < exists ; exists ; 2010 ; Environmental Science: Processes & Impacts Volume 12 ; 12 ; 2010 ; https://pubs.rsc.org/ ; >
-      au < exists ; exists ; 2011 ; Environmental Science: Processes & Impacts Volume 13 ; 13 ; 2011 ; https://pubs.rsc.org/ ; >
-      au < exists ; exists ; 2012 ; Environmental Science: Processes & Impacts Volume 14 ; 14 ; 2012 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 1999 ; Environmental Science: Processes & Impacts Volume 1 ; 1 ; 1999 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2000 ; Environmental Science: Processes & Impacts Volume 2 ; 2 ; 2000 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2001 ; Environmental Science: Processes & Impacts Volume 3 ; 3 ; 2001 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2002 ; Environmental Science: Processes & Impacts Volume 4 ; 4 ; 2002 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2003 ; Environmental Science: Processes & Impacts Volume 5 ; 5 ; 2003 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2004 ; Environmental Science: Processes & Impacts Volume 6 ; 6 ; 2004 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2005 ; Environmental Science: Processes & Impacts Volume 7 ; 7 ; 2005 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2006 ; Environmental Science: Processes & Impacts Volume 8 ; 8 ; 2006 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2007 ; Environmental Science: Processes & Impacts Volume 9 ; 9 ; 2007 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2008 ; Environmental Science: Processes & Impacts Volume 10 ; 10 ; 2008 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2009 ; Environmental Science: Processes & Impacts Volume 11 ; 11 ; 2009 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2010 ; Environmental Science: Processes & Impacts Volume 12 ; 12 ; 2010 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2011 ; Environmental Science: Processes & Impacts Volume 13 ; 13 ; 2011 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2012 ; Environmental Science: Processes & Impacts Volume 14 ; 14 ; 2012 ; https://pubs.rsc.org/ ; >
       au < finished ; manifest ; 2013 ; Environmental Science: Processes & Impacts Volume 15 ; 15 ; 2013 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2014 ; Environmental Science: Processes & Impacts Volume 16 ; 16 ; 2014 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2015 ; Environmental Science: Processes & Impacts Volume 17 ; 17 ; 2015 ; http://pubs.rsc.org/ ; >
