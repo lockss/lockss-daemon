@@ -76,7 +76,7 @@ import org.mortbay.http.*;
 
  * Links can be rewritten (i.e., original URLs can be embedded in
  * ServeContent URLs) in two ways:<ul>
- * 
+ *
  * <li>http://.../ServeContent?url=<i>url-encoded-original-url</i></li>
  * <li>http://.../ServeContent/<i>original-url</i></li>
  * </ul>
@@ -394,7 +394,7 @@ public class ServeContent extends LockssServlet {
           DEFAULT_NORMALIZE_URL_ARG);
       normalizeForwardedUrl = config.getBoolean(PARAM_NORMALIZE_FORWARDED_URL,
           DEFAULT_NORMALIZE_FORWARDED_URL);
-      
+
       minimallyEncodeUrl = config.getBoolean(PARAM_MINIMALLY_ENCODE_URLS,
           DEFAULT_MINIMALLY_ENCODE_URLS);
       useRedirectedBaseUrl =
@@ -765,6 +765,8 @@ public class ServeContent extends LockssServlet {
         // Find a CU with content if possible.  If none, find an AU where
         // it would fit so can rewrite content from publisher if necessary.
         cu = pluginMgr.findCachedUrl(url, CuContentReq.PreferContent);
+	// TK why is this necessary with new repo but not old?
+	if (!cu.hasContent()) cu = null;
         if (cu != null) {
 	  cuUrl = cu.getUrl();
           au = cu.getArchivalUnit();
@@ -1692,7 +1694,7 @@ public class ServeContent extends LockssServlet {
       };
     }
   }
-      
+
 
   private void setContentLength(long length) {
     if (length >= 0) {

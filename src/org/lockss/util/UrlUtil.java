@@ -63,9 +63,9 @@ import javax.servlet.http.HttpServletRequest;
 /** Utilities for URLs and URLConnections
  */
 public class UrlUtil {
-  
+
   private static final Logger log = Logger.getLogger(UrlUtil.class);
-  
+
   /**
    * The separator string for URLs.
    */
@@ -578,7 +578,7 @@ public class UrlUtil {
 
   public static List<String> getUrlPrefixes(List<String> urls)
       throws MalformedURLException{
-    List<String> res = new ArrayList<String>();    
+    List<String> res = new ArrayList<String>();
     for (String s : urls) {
       res.add(getUrlPrefix(s));
     }
@@ -662,7 +662,7 @@ public class UrlUtil {
     int pos = url.indexOf(org.lockss.plugin.ArchiveMemberSpec.URL_SEPARATOR);
     if (pos > 0) {
       return minimallyEncodeUrl(url.substring(0, pos)) + url.substring(pos);
-    }      
+    }
     url = StringUtil.replaceString(url, " ", "%20");
     url = StringUtil.replaceString(url, "\"", "%22");
     url = StringUtil.replaceString(url, "|", "%7C");
@@ -838,7 +838,7 @@ public class UrlUtil {
                                           java.net.URI child)
       throws MalformedURLException {
 
-    // check if child is opaque first so that NPE is thrown 
+    // check if child is opaque first so that NPE is thrown
     // if child is null.
     if (child.isOpaque() || base.isOpaque()) {
       return child;
@@ -1052,7 +1052,7 @@ public class UrlUtil {
             new org.apache.commons.httpclient.URI(url, true);
         if (uri.isAbsoluteURI()) {
           StringBuffer sb = new StringBuffer();
-          sb.append(uri.getScheme());
+          sb.append(uri.getScheme().toLowerCase());
           sb.append("://");
           sb.append(uri.getHost());
           sb.append(uri.getPath());
@@ -1146,7 +1146,7 @@ public class UrlUtil {
    * <code>https</code>), unless the given URL does not begin with the given
    * original scheme or is insufficiently long.
    * </p>
-   * 
+   *
    * @param url
    *          A URL.
    * @param from
