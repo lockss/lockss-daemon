@@ -104,10 +104,10 @@
       au < released ; 2017 ; American Journal of Respiratory and Critical Care Medicine Volume 196 ; 196 >
       au < released ; 2018 ; American Journal of Respiratory and Critical Care Medicine Volume 197 ; 197 >
       au < released ; 2018 ; American Journal of Respiratory and Critical Care Medicine Volume 198 ; 198 >
-      au < exists ; 2019 ; American Journal of Respiratory and Critical Care Medicine Volume 199 ; 199 >
-      au < exists ; 2019 ; American Journal of Respiratory and Critical Care Medicine Volume 200 ; 200 >
-      au < exists ; 2020 ; American Journal of Respiratory and Critical Care Medicine Volume 201 ; 201 >
-      au < exists ; 2020 ; American Journal of Respiratory and Critical Care Medicine Volume 202 ; 202 >
+      au < manifest ; 2019 ; American Journal of Respiratory and Critical Care Medicine Volume 199 ; 199 >
+      au < manifest ; 2019 ; American Journal of Respiratory and Critical Care Medicine Volume 200 ; 200 >
+      au < manifest ; 2020 ; American Journal of Respiratory and Critical Care Medicine Volume 201 ; 201 >
+      au < manifest ; 2020 ; American Journal of Respiratory and Critical Care Medicine Volume 202 ; 202 >
       }
 
       {
@@ -228,10 +228,10 @@
       au < released ; 2017 ; American Journal of Respiratory Cell and Molecular Biology Volume 57 ; 57 >
       au < released ; 2018 ; American Journal of Respiratory Cell and Molecular Biology Volume 58 ; 58 >
       au < released ; 2018 ; American Journal of Respiratory Cell and Molecular Biology Volume 59 ; 59 >
-      au < exists ; 2019 ; American Journal of Respiratory Cell and Molecular Biology Volume 60 ; 60 >
-      au < exists ; 2019 ; American Journal of Respiratory Cell and Molecular Biology Volume 61 ; 61 >
-      au < exists ; 2020 ; American Journal of Respiratory Cell and Molecular Biology Volume 62 ; 62 >
-      au < exists ; 2020 ; American Journal of Respiratory Cell and Molecular Biology Volume 63 ; 63 >
+      au < manifest ; 2019 ; American Journal of Respiratory Cell and Molecular Biology Volume 60 ; 60 >
+      au < manifest ; 2019 ; American Journal of Respiratory Cell and Molecular Biology Volume 61 ; 61 >
+      au < manifest ; 2020 ; American Journal of Respiratory Cell and Molecular Biology Volume 62 ; 62 >
+      au < manifest ; 2020 ; American Journal of Respiratory Cell and Molecular Biology Volume 63 ; 63 >
       }
       {
       param[base_url] = http://www.atsjournals.org/
@@ -339,9 +339,9 @@
       au < released ; 2015 ; Annals of the American Thoracic Society Volume 12 ; 12 >
       au < released ; 2016 ; Annals of the American Thoracic Society Volume 13 ; 13 >
       au < released ; 2017 ; Annals of the American Thoracic Society Volume 14 ; 14 >
-      au < exists ; 2018 ; Annals of the American Thoracic Society Volume 15 ; 15 >
-      au < exists ; 2019 ; Annals of the American Thoracic Society Volume 16 ; 16 >
-      au < exists ; 2020 ; Annals of the American Thoracic Society Volume 17 ; 17 >
+      au < manifest ; 2018 ; Annals of the American Thoracic Society Volume 15 ; 15 >
+      au < manifest ; 2019 ; Annals of the American Thoracic Society Volume 16 ; 16 >
+      au < manifest ; 2020 ; Annals of the American Thoracic Society Volume 17 ; 17 >
     }
     {
       param[base_url] = http://www.atsjournals.org/
@@ -367,7 +367,7 @@
     {
       param[base_url] = https://www.atsjournals.org/
 
-      au < exists ; 2020 ; ATS Scholar Volume 1 ; 1 >
+      au < manifest ; 2020 ; ATS Scholar Volume 1 ; 1 >
     }
   }
 

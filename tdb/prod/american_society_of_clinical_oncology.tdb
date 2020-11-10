@@ -120,7 +120,7 @@
       param[journal_id] = op
 
       #title changed as of 2020
-      au < expected ; 2020 ; Journal of Oncology Practice Volume 16 ; 16 ; https://ascopubs.org/ >
+      au < manifest ; 2020 ; Journal of Oncology Practice Volume 16 ; 16 ; https://ascopubs.org/ >
 
   }
 

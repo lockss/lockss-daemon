@@ -136,19 +136,19 @@
     param[journal_abbr] = ijpbl
     implicit < status ; year ; name ; param[volume] ; param[base_url] >
 
-    au < exists ; 2006 ; Interdisciplinary Journal of Problem-Based Learning Volume 1 ; 1 ; https://docs.lib.purdue.edu/ >
-    au < exists ; 2008 ; Interdisciplinary Journal of Problem-Based Learning volume 2 ; 2 ; https://docs.lib.purdue.edu/ >
-    au < exists ; 2009 ; Interdisciplinary Journal of Problem-Based Learning Volume 3 ; 3 ; https://docs.lib.purdue.edu/ >
-    au < exists ; 2010 ; Interdisciplinary Journal of Problem-Based Learning Volume 4 ; 4 ; https://docs.lib.purdue.edu/ >
-    au < exists ; 2011 ; Interdisciplinary Journal of Problem-Based Learning Volume 5 ; 5 ; https://docs.lib.purdue.edu/ >
-    au < exists ; 2012 ; Interdisciplinary Journal of Problem-Based Learning Volume 6 ; 6 ; https://docs.lib.purdue.edu/ >
-    au < exists ; 2013 ; Interdisciplinary Journal of Problem-Based Learning Volume 7 ; 7 ; https://docs.lib.purdue.edu/ >
-    au < exists ; 2014 ; Interdisciplinary Journal of Problem-Based Learning Volume 8 ; 8 ; https://docs.lib.purdue.edu/ >
-    au < exists ; 2015 ; Interdisciplinary Journal of Problem-Based Learning Volume 9 ; 9 ; https://docs.lib.purdue.edu/ >
-    au < exists ; 2016 ; Interdisciplinary Journal of Problem-Based Learning Volume 10 ; 10 ; https://docs.lib.purdue.edu/ >
-    au < exists ; 2017 ; Interdisciplinary Journal of Problem-Based Learning Volume 11 ; 11 ; https://docs.lib.purdue.edu/ >
-    au < exists ; 2018 ; Interdisciplinary Journal of Problem-Based Learning Volume 12 ; 12 ; https://docs.lib.purdue.edu/ >
-    au < exists ; 2019 ; Interdisciplinary Journal of Problem-Based Learning Volume 13 ; 13 ; https://docs.lib.purdue.edu/ >
+    au < manifest ; 2006 ; Interdisciplinary Journal of Problem-Based Learning Volume 1 ; 1 ; https://docs.lib.purdue.edu/ >
+    au < manifest ; 2008 ; Interdisciplinary Journal of Problem-Based Learning volume 2 ; 2 ; https://docs.lib.purdue.edu/ >
+    au < manifest ; 2009 ; Interdisciplinary Journal of Problem-Based Learning Volume 3 ; 3 ; https://docs.lib.purdue.edu/ >
+    au < manifest ; 2010 ; Interdisciplinary Journal of Problem-Based Learning Volume 4 ; 4 ; https://docs.lib.purdue.edu/ >
+    au < manifest ; 2011 ; Interdisciplinary Journal of Problem-Based Learning Volume 5 ; 5 ; https://docs.lib.purdue.edu/ >
+    au < manifest ; 2012 ; Interdisciplinary Journal of Problem-Based Learning Volume 6 ; 6 ; https://docs.lib.purdue.edu/ >
+    au < manifest ; 2013 ; Interdisciplinary Journal of Problem-Based Learning Volume 7 ; 7 ; https://docs.lib.purdue.edu/ >
+    au < manifest ; 2014 ; Interdisciplinary Journal of Problem-Based Learning Volume 8 ; 8 ; https://docs.lib.purdue.edu/ >
+    au < manifest ; 2015 ; Interdisciplinary Journal of Problem-Based Learning Volume 9 ; 9 ; https://docs.lib.purdue.edu/ >
+    au < manifest ; 2016 ; Interdisciplinary Journal of Problem-Based Learning Volume 10 ; 10 ; https://docs.lib.purdue.edu/ >
+    au < manifest ; 2017 ; Interdisciplinary Journal of Problem-Based Learning Volume 11 ; 11 ; https://docs.lib.purdue.edu/ >
+    au < manifest ; 2018 ; Interdisciplinary Journal of Problem-Based Learning Volume 12 ; 12 ; https://docs.lib.purdue.edu/ >
+    au < manifest ; 2019 ; Interdisciplinary Journal of Problem-Based Learning Volume 13 ; 13 ; https://docs.lib.purdue.edu/ >
     au < expected ; 2020 ; Interdisciplinary Journal of Problem-Based Learning Volume 14 ; 14 ; https://docs.lib.purdue.edu/ >
 
   }
