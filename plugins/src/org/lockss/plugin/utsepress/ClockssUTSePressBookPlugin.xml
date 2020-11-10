@@ -98,12 +98,10 @@
       <string>403=org.lockss.util.urlconn.CacheException$NoRetryDeadLinkException</string>
     </list>
   </entry>
-  <!--
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.utsepress.UTSePressHtmlFilterFactory</string>
   </entry>
-  -->
   <entry>
     <!--  Use this one to get PDF only, since the website has three format(not guaranteed)  -->
     <string>plugin_substance_predicate_factory</string>
@@ -125,14 +123,6 @@
         <string>org.lockss.plugin.utsepress.UTSePressMetadataExtractorFactory</string>
       </entry>
     </map>
-  </entry>
-  <entry>
-    <string>au_def_new_content_crawl</string>
-    <long>1209600000</long>
-  </entry>
-  <entry>
-    <string>au_def_pause_time</string>
-    <long>3000</long>
   </entry>
   <!--  versioning or variants for style support -->
   <entry>
@@ -164,5 +154,13 @@
       <string>s7\.addthis\.com</string>
       <string>fonts\.googleapis\.com</string>
     </list>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
   </entry>
 </map>
