@@ -33331,7 +33331,6 @@
     title <
       name = Nordic Journal of Nursing Research ;
       issn = 0107-4083 ;
-      eissn = 2057-1593 ;
       issnl = 0107-4083
     >
 
@@ -42977,8 +42976,9 @@
 
     title <
       name = Therapeutic Advances in Vaccines ;
-      issn = 2051-0136 ;
-      eissn = 2051-0144
+        issn = 2051-0144 ;
+        eissn = 2051-0136 ;
+        issnl = 2051-0144
     >
 
     {
@@ -48252,8 +48252,9 @@
 
       title <
         name = International Journal of Care Coordination ;
+        issn = 2053-4345 ;
         eissn = 2053-4353 ;
-        issnl = 2053-4353
+        issnl = 2053-4345
       >
 
         pluginSuffix = ClockssHighWirePressH20Plugin

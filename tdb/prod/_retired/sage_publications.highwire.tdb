@@ -36816,7 +36816,6 @@ comment[mpj] = now published by Brill
     title <
       name = Nordic Journal of Nursing Research ;
       issn = 0107-4083 ;
-      eissn = 2057-1593 ;
       issnl = 0107-4083
     >
 
@@ -46522,8 +46521,9 @@ comment[mpj] = now published by Brill
 
       title <
         name = Therapeutic Advances in Vaccines  ;
-        issn = 2051-0136 ;
-        eissn = 2051-0144
+        issn = 2051-0144 ;
+        eissn = 2051-0136 ;
+        issnl = 2051-0144
       >
 
       {
@@ -51259,7 +51259,9 @@ comment[mpj] = now published by Brill
 
       title <
         name = Transactional Analysis Journal ;
-        eissn = 0362-1537
+        issn = 0362-1537 ;
+        eissn = 2329-5244 ;
+        issnl = 0362-1537
       >
 
     pluginSuffix = HighWirePressH20Plugin
@@ -52308,8 +52310,9 @@ comment[mpj] = now published by Brill
 
       title <
         name = International Journal of Care Coordination ;
+        issn = 2053-4345 ;
         eissn = 2053-4353 ;
-        issnl = 2053-4353
+        issnl = 2053-4345
       >
 
         pluginSuffix = HighWirePressH20Plugin
