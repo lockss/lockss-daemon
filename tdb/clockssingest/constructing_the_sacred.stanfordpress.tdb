@@ -17,7 +17,7 @@
     implicit < status ; status2 ; year ; name ; param[jounrnal_id] ; param[base_url] ; hidden[proxy] >
     #param[base_url] = http://whenmelodiesgather.supdigital.org/
 
-    au < manifest ; exits ; 2020 ; Constructing The Sacred ; cts ; http://constructingthesacred.supdigital.org/ ; >
+    au < manifest ; exists ; 2020 ; Constructing The Sacred ; cts ; http://constructingthesacred.supdigital.org/ ; >
 
   }
 
