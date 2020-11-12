@@ -43,7 +43,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Acta Biochimica et Biophysica Sinica Volume 37 ; 37 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Acta Biochimica et Biophysica Sinica Volume 38 ; 38 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Acta Biochimica et Biophysica Sinica Volume 39 ; 39 ; >
-    au < testing ; exists ; 2008 ; 2008 ; Acta Biochimica et Biophysica Sinica Volume 40 ; 40 ; >
+    au < ready ; exists ; 2008 ; 2008 ; Acta Biochimica et Biophysica Sinica Volume 40 ; 40 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Acta Biochimica et Biophysica Sinica Volume 41 ; 41 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Acta Biochimica et Biophysica Sinica Volume 42 ; 42 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Acta Biochimica et Biophysica Sinica Volume 43 ; 43 ; >
@@ -281,8 +281,8 @@
     au < frozen ; exists ; 2016 ; 2016 ; African Affairs Volume 115 ; 115 ; >
     au < frozen ; exists ; 2017 ; 2017 ; African Affairs Volume 116 ; 116 ; >
     au < frozen ; exists ; 2018 ; 2018 ; African Affairs Volume 117 ; 117 ; >
-    au < testing ; exists ; 2019 ; 2019 ; African Affairs Volume 118 ; 118 ; >
-    au < testing ; exists ; 2020 ; 2020 ; African Affairs Volume 119 ; 119 ; >
+    au < ready ; exists ; 2019 ; 2019 ; African Affairs Volume 118 ; 118 ; >
+    au < ready ; exists ; 2020 ; 2020 ; African Affairs Volume 119 ; 119 ; >
 
   }
 
@@ -417,7 +417,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Alcohol and Alcoholism Volume 52 ; 52 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Alcohol and Alcoholism Volume 53 ; 53 ; >
     au < testing ; exists ; 2019 ; 2019 ; Alcohol and Alcoholism Volume 54 ; 54 ; >
-    au < testing ; exists ; 2020 ; 2020 ; Alcohol and Alcoholism Volume 55 ; 55 ; >
+    au < ready ; exists ; 2020 ; 2020 ; Alcohol and Alcoholism Volume 55 ; 55 ; >
 
   }
 
@@ -3124,7 +3124,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Carcinogenesis Volume 38 ; 38 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Carcinogenesis Volume 39 ; 39 ; >
     au < down ; exists ; 2019 ; 2019 ; Carcinogenesis Volume 40 ; 40 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; Carcinogenesis Volume 41 ; 41 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Carcinogenesis Volume 41 ; 41 ; >
 
   }
 
@@ -3191,8 +3191,8 @@
     au < frozen ; exists ; 2016 ; 2016 ; Cardiovascular Research Volume 109-112 ; 109-112 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Cardiovascular Research Volume 113 ; 113 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Cardiovascular Research Volume 114 ; 114 ; >
-    au < notReady ; exists ; 2019 ; 2019 ; Cardiovascular Research Volume 115 ; 115 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; Cardiovascular Research Volume 116 ; 116 ; >
+    au < testing ; exists ; 2019 ; 2019 ; Cardiovascular Research Volume 115 ; 115 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Cardiovascular Research Volume 116 ; 116 ; >
 
   }
 
@@ -3236,7 +3236,7 @@
     au < finished ; finished ; 2017 ; 2017 ; Cerebral Cortex Volume 27 ; 27 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2018 ; 2018 ; Cerebral Cortex Volume 28 ; 28 ; >
     au < down ; exists ; 2019 ; 2019 ; Cerebral Cortex Volume 29 ; 29 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; Cerebral Cortex Volume 30 ; 30 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Cerebral Cortex Volume 30 ; 30 ; >
 
   }
 
@@ -3295,7 +3295,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Chemical Senses Volume 42 ; 42 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Chemical Senses Volume 43 ; 43 ; >
     au < down ; exists ; 2019 ; 2019 ; Chemical Senses Volume 44 ; 44 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; Chemical Senses Volume 45 ; 45 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Chemical Senses Volume 45 ; 45 ; >
 
   }
 
@@ -3350,7 +3350,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Children & Schools Volume 39 ; 39 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Children & Schools Volume 40 ; 40 ; >
     au < down ; exists ; 2019 ; 2019 ; Children & Schools Volume 41 ; 41 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; Children & Schools Volume 42 ; 42 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Children & Schools Volume 42 ; 42 ; >
 
   }
 
@@ -3383,7 +3383,7 @@
     au < finished ; finished ; 2017 ; 2017 ; Chinese Journal of International Law Volume 16 ; 16 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Chinese Journal of International Law Volume 17 ; 17 ; >
     au < down ; exists ; 2019 ; 2019 ; Chinese Journal of International Law Volume 18 ; 18 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; Chinese Journal of International Law Volume 19 ; 19 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Chinese Journal of International Law Volume 19 ; 19 ; >
 
   }
 
@@ -3424,7 +3424,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 23 ; 23 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 24 ; 24 ; >
     au < down ; exists ; 2019 ; 2019 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 25 ; 25 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 26 ; 26 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 26 ; 26 ; >
 
   }
 
@@ -3450,7 +3450,7 @@
     au < finished ; finished ; 2017 ; 2017 ; Classical Receptions Journal Volume 9 ; 9 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Classical Receptions Journal Volume 10 ; 10 ; >
     au < down ; exists ; 2019 ; 2019 ; Classical Receptions Journal Volume 11 ; 11 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; Classical Receptions Journal Volume 12 ; 12 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Classical Receptions Journal Volume 12 ; 12 ; >
 
   }
 
@@ -3525,12 +3525,12 @@
       au < notReady ; exists ; 2012 ; 2012 ; Clinical Chemistry Volume 58 ; 58 ; >
       au < notReady ; exists ; 2013 ; 2013 ; Clinical Chemistry Volume 59 ; 59 ; >
       au < notReady ; exists ; 2014 ; 2014 ; Clinical Chemistry Volume 60 ; 60 ; >
-      au < notReady ; exists ; 2015 ; 2015 ; Clinical Chemistry Volume 61 ; 61 ; >
-      au < notReady ; exists ; 2016 ; 2016 ; Clinical Chemistry Volume 62 ; 62 ; >
-      au < notReady ; exists ; 2017 ; 2017 ; Clinical Chemistry Volume 63 ; 63 ; >
-      au < notReady ; exists ; 2018 ; 2018 ; Clinical Chemistry Volume 64 ; 64 ; >
-      au < notReady ; exists ; 2019 ; 2019 ; Clinical Chemistry Volume 65 ; 65 ; >
-      au < notReady ; exists ; 2020 ; 2020 ; Clinical Chemistry Volume 66 ; 66 ; >
+      au < testing ; exists ; 2015 ; 2015 ; Clinical Chemistry Volume 61 ; 61 ; >
+      au < testing ; exists ; 2016 ; 2016 ; Clinical Chemistry Volume 62 ; 62 ; >
+      au < testing ; exists ; 2017 ; 2017 ; Clinical Chemistry Volume 63 ; 63 ; >
+      au < testing ; exists ; 2018 ; 2018 ; Clinical Chemistry Volume 64 ; 64 ; >
+      au < testing ; exists ; 2019 ; 2019 ; Clinical Chemistry Volume 65 ; 65 ; >
+      au < testing ; exists ; 2020 ; 2020 ; Clinical Chemistry Volume 66 ; 66 ; >
 
   }
 
@@ -3587,7 +3587,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Clinical Infectious Diseases Volume 64-65 ; 64-65 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Clinical Infectious Diseases Volume 66-67 ; 66-67 ; >
     au < down ; exists ; 2019 ; 2019 ; Clinical Infectious Diseases Volume 68-69 ; 68-69 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; Clinical Infectious Diseases Volume 70-71 ; 70-71 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Clinical Infectious Diseases Volume 70-71 ; 70-71 ; >
 
   }
 
@@ -3614,7 +3614,7 @@
     au < finished ; finished ; 2017 ; 2017 ; Clinical Kidney Journal Volume 10 ; 10 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Clinical Kidney Journal Volume 11 ; 11 ; >
     au < down ; exists ; 2019 ; 2019 ; Clinical Kidney Journal Volume 12 ; 12 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; Clinical Kidney Journal Volume 13 ; 13 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Clinical Kidney Journal Volume 13 ; 13 ; >
 
   }
 
@@ -3631,7 +3631,7 @@
 
     au < frozen ; exists ; 2018 ; 2018 ; Communication Theory Volume 1 ; 1 ; >
     au < down ; exists ; 2019 ; 2019 ; Communication Theory Volume 2 ; 2 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; Communication Theory Volume 3 ; 3 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Communication Theory Volume 3 ; 3 ; >
 
   }
 
@@ -3648,7 +3648,7 @@
 
     au < frozen ; exists ; 2018 ; 2018 ; Communication, Culture & Critique Volume 1 ; 1 ; >
     au < down ; exists ; 2019 ; 2019 ; Communication, Culture & Critique Volume 2 ; 2 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; Communication, Culture & Critique Volume 3 ; 3 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Communication, Culture & Critique Volume 3 ; 3 ; >
 
   }
 
@@ -3717,7 +3717,7 @@
     au < finished ; finished ; 2017 ; 2017 ; Community Development Journal Volume 52 ; 52 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2018 ; 2018 ; Community Development Journal Volume 53 ; 53 ; >
     au < down ; exists ; 2019 ; 2019 ; Community Development Journal Volume 54 ; 54 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; Community Development Journal Volume 55 ; 55 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Community Development Journal Volume 55 ; 55 ; >
 
   }
 
@@ -3773,7 +3773,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; The Condor: Ornithological Applications Volume 119 ; 119 ; >
     au < frozen ; exists ; 2018 ; 2018 ; The Condor: Ornithological Applications Volume 120 ; 120 ; >
     au < down ; exists ; 2019 ; 2019 ; The Condor: Ornithological Applications Volume 121 ; 121 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; The Condor: Ornithological Applications Volume 122 ; 122 ; >
+    au < testing ; exists ; 2020 ; 2020 ; The Condor: Ornithological Applications Volume 122 ; 122 ; >
 
   }
 
@@ -3793,7 +3793,7 @@
     au < finished ; finished ; 2017 ; 2017 ; Conservation Physiology Volume 5 ; 5 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2018 ; 2018 ; Conservation Physiology Volume 6 ; 6 ; >
     au < down ; exists ; 2019 ; 2019 ; Conservation Physiology Volume 7 ; 7 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; Conservation Physiology Volume 8 ; 8 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Conservation Physiology Volume 8 ; 8 ; >
 
   }
 
@@ -3822,8 +3822,8 @@
     au < frozen ; exists ; 2016 ; 2016 ; Contemporary Women's Writing Volume 10 ; 10 ; >
     au < finished ; finished ; 2017 ; 2017 ; Contemporary Women's Writing Volume 11 ; 11 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Contemporary Women's Writing Volume 12 ; 12 ; >
-    au < notReady ; exists ; 2019 ; 2019 ; Contemporary Women's Writing Volume 13 ; 13 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; Contemporary Women's Writing Volume 14 ; 14 ; >
+    au < testing ; exists ; 2019 ; 2019 ; Contemporary Women's Writing Volume 13 ; 13 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Contemporary Women's Writing Volume 14 ; 14 ; >
 
   }
 
@@ -3891,7 +3891,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Contributions to Political Economy Volume 36 ; 36 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Contributions to Political Economy Volume 37 ; 37 ; >
     au < down ; exists ; 2019 ; 2019 ; Contributions to Political Economy Volume 38 ; 38 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; Contributions to Political Economy Volume 39 ; 39 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Contributions to Political Economy Volume 39 ; 39 ; >
 
   }
 
@@ -3917,7 +3917,7 @@
     au < finished ; finished ; 2017 ; 2017 ; Critical Values Volume 10 ; 10 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Critical Values Volume 11 ; 11 ; >
     au < down ; exists ; 2019 ; 2019 ; Critical Values Volume 12 ; 12 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; Critical Values Volume 13 ; 13 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Critical Values Volume 13 ; 13 ; >
 
   }
 
@@ -3934,7 +3934,7 @@
     au < finished ; finished ; 2017 ; 2017 ; Current Developments in Nutrition Volume 1 ; 1 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Current Developments in Nutrition Volume 2 ; 2 ; >
     au < down ; exists ; 2019 ; 2019 ; Current Developments in Nutrition Volume 3 ; 3 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; Current Developments in Nutrition Volume 4 ; 4 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Current Developments in Nutrition Volume 4 ; 4 ; >
 
   }
 
@@ -3976,8 +3976,8 @@
     au < frozen ; exists ; 2016 ; 2016 ; Current Legal Problems Volume 69 ; 69 ; >
     au < finished ; finished ; 2017 ; 2017 ; Current Legal Problems Volume 70 ; 70 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2018 ; 2018 ; Current Legal Problems Volume 71 ; 71 ; >
-    au < notReady ; exists ; 2019 ; 2019 ; Current Legal Problems Volume 72 ; 72 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; Current Legal Problems Volume 73 ; 73 ; >
+    au < testing ; exists ; 2019 ; 2019 ; Current Legal Problems Volume 72 ; 72 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Current Legal Problems Volume 73 ; 73 ; >
 
   }
 
@@ -4000,7 +4000,7 @@
     au < finished ; finished ; 2017 ; 2017 ; Current Zoology Volume 63 ; 63 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2018 ; 2018 ; Current Zoology Volume 64 ; 64 ; >
     au < down ; exists ; 2019 ; 2019 ; Current Zoology Volume 65 ; 65 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; Current Zoology Volume 66 ; 66 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Current Zoology Volume 66 ; 66 ; >
 
   }
 
@@ -4041,7 +4041,7 @@
     au < finished ; finished ; 2017 ; 2017 ; DNA Research Volume 24 ; 24 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; DNA Research Volume 25 ; 25 ; >
     au < down ; exists ; 2019 ; 2019 ; DNA Research Volume 26 ; 26 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; DNA Research Volume 27 ; 27 ; >
+    au < testing ; exists ; 2020 ; 2020 ; DNA Research Volume 27 ; 27 ; >
 
   }
 
@@ -4061,12 +4061,12 @@
     au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Database Volume 2012 ; 2012 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Database Volume 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Database Volume 2014 ; 2014 ; >
-    au < notReady ; exists ; 2015 ; 2015 ; Database Volume 2015 ; 2015 ; >
+    au < testing ; exists ; 2015 ; 2015 ; Database Volume 2015 ; 2015 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Database Volume 2016 ; 2016 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Database Volume 2017 ; 2017 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Database Volume 2018 ; 2018 ; >
     au < down ; exists ; 2019 ; 2019 ; Database Volume 2019 ; 2019 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; Database Volume 2020 ; 2020 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Database Volume 2020 ; 2020 ; >
 
   }
 
@@ -4115,7 +4115,7 @@
     au < finished ; finished ; 2017 ; 2017 ; Digital Scholarship in the Humanities Volume 32 ; 32 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Digital Scholarship in the Humanities Volume 33 ; 33 ; >
     au < down ; exists ; 2019 ; 2019 ; Digital Scholarship in the Humanities Volume 34 ; 34 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; Digital Scholarship in the Humanities Volume 35 ; 35 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Digital Scholarship in the Humanities Volume 35 ; 35 ; >
 
   }
 
@@ -4173,7 +4173,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Diplomatic History Volume 41 ; 41 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Diplomatic History Volume 42 ; 42 ; >
     au < down ; exists ; 2019 ; 2019 ; Diplomatic History Volume 43 ; 43 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; Diplomatic History Volume 44 ; 44 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Diplomatic History Volume 44 ; 44 ; >
 
   }
 
@@ -4219,7 +4219,7 @@
     au < finished ; finished ; 2017 ; 2017 ; Diseases of the Esophagus Volume 30 ; 30 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Diseases of the Esophagus Volume 31 ; 31 ; >
     au < down ; exists ; 2019 ; 2019 ; Diseases of the Esophagus Volume 32 ; 32 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; Diseases of the Esophagus Volume 33 ; 33 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Diseases of the Esophagus Volume 33 ; 33 ; >
 
   }
 
@@ -4320,7 +4320,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; ELT Journal Volume 71 ; 71 ; >
     au < frozen ; exists ; 2018 ; 2018 ; ELT Journal Volume 72 ; 72 ; >
     au < down ; exists ; 2019 ; 2019 ; ELT Journal Volume 73 ; 73 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; ELT Journal Volume 74 ; 74 ; >
+    au < testing ; exists ; 2020 ; 2020 ; ELT Journal Volume 74 ; 74 ; >
 
   }
 
@@ -4358,7 +4358,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; EP Europace Volume 19 ; 19 ; >
     au < frozen ; exists ; 2018 ; 2018 ; EP Europace Volume 20 ; 20 ; >
     au < down ; exists ; 2019 ; 2019 ; EP Europace Volume 21 ; 21 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; EP Europace Volume 22 ; 22 ; >
+    au < testing ; exists ; 2020 ; 2020 ; EP Europace Volume 22 ; 22 ; >
 
   }
 
@@ -4441,7 +4441,7 @@
     au < finished ; finished ; 2017 ; 2017 ; Early Music Volume 45 ; 45 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2018 ; 2018 ; Early Music Volume 46 ; 46 ; >
     au < down ; exists ; 2019 ; 2019 ; Early Music Volume 47 ; 47 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; Early Music Volume 48 ; 48 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Early Music Volume 48 ; 48 ; >
 
   }
 
