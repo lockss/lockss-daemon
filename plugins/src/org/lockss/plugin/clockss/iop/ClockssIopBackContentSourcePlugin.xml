@@ -1,0 +1,87 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>development</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.clockss.iop.ClockssIopBackContentSourcePlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.clockss.ClockssDirSourcePlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"IOP Publishing Back Content Source Plugin (CLOCKSS), Base URL %s, Directory %s", base_url, directory</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>IOP Publishing Back Content Source Plugin (CLOCKSS)</string>
+  </entry>
+  <entry>
+    <string>plugin_archive_file_types</string>
+    <string>standard</string>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <!-- https://clockss-test.lockss.org/sourcefiles/iop-released/2020/1938-5862_v25_i6_a105.tar.gz -->
+      <string>"^%s%s/.+\.tar.gz$", base_url, directory</string>
+    </list>
+  </entry>
+  <!-- some metadata is in .article files which are xml but not recognized as such -->
+  <entry>
+    <string>au_url_mime_type_map</string>
+    <list>
+      <string>.*\.article$,text/xml</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.clockss.iop.IopBackContentArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.clockss.iop.IopBackContentArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/xml_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.clockss.iop.IopArticleXmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+    <entry>
+    <string>application/xml_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.clockss.iop.IopBackContentMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>    
+</map>    
