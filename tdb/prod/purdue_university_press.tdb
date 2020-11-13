@@ -40,6 +40,12 @@
     au < released ; 2009 ; Against the Grain Volume 21 ; 21 ; http://docs.lib.purdue.edu/ >
     au < released ; 2010 ; Against the Grain Volume 22 ; 22 ; http://docs.lib.purdue.edu/ >
     au < released ; 2011 ; Against the Grain Volume 23 ; 23 ; http://docs.lib.purdue.edu/ >
+    au < exists ; 2012 ; Against the Grain Volume 24 ; 24 ; https://docs.lib.purdue.edu/ >
+    au < exists ; 2013 ; Against the Grain Volume 25 ; 25 ; https://docs.lib.purdue.edu/ >
+    au < exists ; 2014 ; Against the Grain Volume 26 ; 26 ; https://docs.lib.purdue.edu/ >
+    au < exists ; 2015 ; Against the Grain Volume 27 ; 27 ; https://docs.lib.purdue.edu/ >
+    au < exists ; 2016-2018 ; Against the Grain Volume 28 ; 28 ; https://docs.lib.purdue.edu/ >
+    au < exists ; 2017 ; Against the Grain Volume 29 ; 29 ; https://docs.lib.purdue.edu/ >
 
   }
   
@@ -131,98 +137,195 @@
       eissn = 1541-5015 
     >
     
-    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+    plugin = org.lockss.plugin.bepress.BePressPlugin
 #    param[base_url] = http://docs.lib.purdue.edu/
     param[journal_abbr] = ijpbl
     implicit < status ; year ; name ; param[volume] ; param[base_url] >
 
-    au < manifest ; 2006 ; Interdisciplinary Journal of Problem-Based Learning Volume 1 ; 1 ; https://docs.lib.purdue.edu/ >
-    au < manifest ; 2008 ; Interdisciplinary Journal of Problem-Based Learning volume 2 ; 2 ; https://docs.lib.purdue.edu/ >
-    au < manifest ; 2009 ; Interdisciplinary Journal of Problem-Based Learning Volume 3 ; 3 ; https://docs.lib.purdue.edu/ >
-    au < manifest ; 2010 ; Interdisciplinary Journal of Problem-Based Learning Volume 4 ; 4 ; https://docs.lib.purdue.edu/ >
-    au < manifest ; 2011 ; Interdisciplinary Journal of Problem-Based Learning Volume 5 ; 5 ; https://docs.lib.purdue.edu/ >
-    au < manifest ; 2012 ; Interdisciplinary Journal of Problem-Based Learning Volume 6 ; 6 ; https://docs.lib.purdue.edu/ >
-    au < manifest ; 2013 ; Interdisciplinary Journal of Problem-Based Learning Volume 7 ; 7 ; https://docs.lib.purdue.edu/ >
-    au < manifest ; 2014 ; Interdisciplinary Journal of Problem-Based Learning Volume 8 ; 8 ; https://docs.lib.purdue.edu/ >
-    au < manifest ; 2015 ; Interdisciplinary Journal of Problem-Based Learning Volume 9 ; 9 ; https://docs.lib.purdue.edu/ >
-    au < manifest ; 2016 ; Interdisciplinary Journal of Problem-Based Learning Volume 10 ; 10 ; https://docs.lib.purdue.edu/ >
-    au < manifest ; 2017 ; Interdisciplinary Journal of Problem-Based Learning Volume 11 ; 11 ; https://docs.lib.purdue.edu/ >
-    au < manifest ; 2018 ; Interdisciplinary Journal of Problem-Based Learning Volume 12 ; 12 ; https://docs.lib.purdue.edu/ >
-    au < manifest ; 2019 ; Interdisciplinary Journal of Problem-Based Learning Volume 13 ; 13 ; https://docs.lib.purdue.edu/ >
-    au < expected ; 2020 ; Interdisciplinary Journal of Problem-Based Learning Volume 14 ; 14 ; https://docs.lib.purdue.edu/ >
+    au < exists ; 2006 ; Interdisciplinary Journal of Problem-Based Learning Volume 1 ; 1 ; https://docs.lib.purdue.edu/ >
+    au < exists ; 2008 ; Interdisciplinary Journal of Problem-Based Learning volume 2 ; 2 ; https://docs.lib.purdue.edu/ >
+    au < exists ; 2009 ; Interdisciplinary Journal of Problem-Based Learning Volume 3 ; 3 ; https://docs.lib.purdue.edu/ >
+    au < exists ; 2010 ; Interdisciplinary Journal of Problem-Based Learning Volume 4 ; 4 ; https://docs.lib.purdue.edu/ >
+    au < exists ; 2011 ; Interdisciplinary Journal of Problem-Based Learning Volume 5 ; 5 ; https://docs.lib.purdue.edu/ >
+    au < exists ; 2012 ; Interdisciplinary Journal of Problem-Based Learning Volume 6 ; 6 ; https://docs.lib.purdue.edu/ >
+    au < exists ; 2013 ; Interdisciplinary Journal of Problem-Based Learning Volume 7 ; 7 ; https://docs.lib.purdue.edu/ >
+    au < exists ; 2014 ; Interdisciplinary Journal of Problem-Based Learning Volume 8 ; 8 ; https://docs.lib.purdue.edu/ >
+    au < exists ; 2015 ; Interdisciplinary Journal of Problem-Based Learning Volume 9 ; 9 ; https://docs.lib.purdue.edu/ >
+    au < exists ; 2016 ; Interdisciplinary Journal of Problem-Based Learning Volume 10 ; 10 ; https://docs.lib.purdue.edu/ >
+    au < exists ; 2017 ; Interdisciplinary Journal of Problem-Based Learning Volume 11 ; 11 ; https://docs.lib.purdue.edu/ >
+    au < exists ; 2018 ; Interdisciplinary Journal of Problem-Based Learning Volume 12 ; 12 ; https://docs.lib.purdue.edu/ >
+    au < exists ; 2019 ; Interdisciplinary Journal of Problem-Based Learning Volume 13 ; 13 ; https://docs.lib.purdue.edu/ >
+    au < exists ; 2020 ; Interdisciplinary Journal of Problem-Based Learning Volume 14 ; 14 ; https://docs.lib.purdue.edu/ >
+
+  }
+
+  {
+  
+    title < 
+      name = Interdisciplinary Journal of Problem-Based Learning ;
+      eissn = 1541-5015 
+    >
+    
+    plugin = org.lockss.plugin.bepress.BePressPlugin
+#    param[base_url] = http://docs.lib.purdue.edu/
+    param[journal_abbr] = ijpbl
+    implicit < status ; year ; name ; param[volume] ; param[base_url] >
+
+    au < exists ; 2006 ; Interdisciplinary Journal of Problem-Based Learning Volume 1 ; 1 ; https://docs.lib.purdue.edu/ >
+    au < exists ; 2008 ; Interdisciplinary Journal of Problem-Based Learning volume 2 ; 2 ; https://docs.lib.purdue.edu/ >
+    au < exists ; 2009 ; Interdisciplinary Journal of Problem-Based Learning Volume 3 ; 3 ; https://docs.lib.purdue.edu/ >
+    au < exists ; 2010 ; Interdisciplinary Journal of Problem-Based Learning Volume 4 ; 4 ; https://docs.lib.purdue.edu/ >
+    au < exists ; 2011 ; Interdisciplinary Journal of Problem-Based Learning Volume 5 ; 5 ; https://docs.lib.purdue.edu/ >
+    au < exists ; 2012 ; Interdisciplinary Journal of Problem-Based Learning Volume 6 ; 6 ; http://docs.lib.purdue.edu/ >
+    au < exists ; 2013 ; Interdisciplinary Journal of Problem-Based Learning Volume 7 ; 7 ; http://docs.lib.purdue.edu/ >
+    au < exists ; 2014 ; Interdisciplinary Journal of Problem-Based Learning Volume 8 ; 8 ; http://docs.lib.purdue.edu/ >
+    au < exists ; 2015 ; Interdisciplinary Journal of Problem-Based Learning Volume 9 ; 9 ; http://docs.lib.purdue.edu/ >
+    au < exists ; 2016 ; Interdisciplinary Journal of Problem-Based Learning Volume 10 ; 10 ; http://docs.lib.purdue.edu/ >
+    au < exists ; 2017 ; Interdisciplinary Journal of Problem-Based Learning Volume 11 ; 11 ; http://docs.lib.purdue.edu/ >
+    au < exists ; 2018 ; Interdisciplinary Journal of Problem-Based Learning Volume 12 ; 12 ; https://docs.lib.purdue.edu/ >
+    au < exists ; 2019 ; Interdisciplinary Journal of Problem-Based Learning Volume 13 ; 13 ; https://docs.lib.purdue.edu/ >
+    au < exists ; 2020 ; Interdisciplinary Journal of Problem-Based Learning Volume 14 ; 14 ; https://docs.lib.purdue.edu/ >
 
   }
   
   {
 
-    title <
-      name = Education and Culture ;
-      issn = 1085-4908 ;
-      eissn = 1559-1786 ;
-      issnl = 1085-4908
+   title < 
+      name = Journal of Aviation Technology and Engineering ;
+      issn = 2159-6670
     >
-
-    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[journal_dir] = education_and_culture
-    implicit < status ; year ; name ; param[volume] >
-
-    attr[journal_id] = eac
     
-    {
+    plugin = org.lockss.plugin.bepress.BePressPlugin
+#    param[base_url] = http://docs.lib.purdue.edu/
+    param[journal_abbr] = jate
+    implicit < status ; year ; name ; param[volume] ; param[base_url] >
+    
+    au < exists ; 2011 ; Journal of Aviation Technology and Engineering Volume 1 ; 1 ; https://docs.lib.purdue.edu/ >
+    au < exists ; 2012 ; Journal of Aviation Technology and Engineering Volume 2 ; 2 ; http://docs.lib.purdue.edu/ >
+    au < exists ; 2013 ; Journal of Aviation Technology and Engineering Volume 3 ; 3 ; http://docs.lib.purdue.edu/ >
+    au < exists ; 2014 ; Journal of Aviation Technology and Engineering Volume 4 ; 4 ; http://docs.lib.purdue.edu/ >
+    au < exists ; 2015 ; Journal of Aviation Technology and Engineering Volume 5 ; 5 ; http://docs.lib.purdue.edu/ >
+    au < exists ; 2016 ; Journal of Aviation Technology and Engineering Volume 6 ; 6 ; http://docs.lib.purdue.edu/ >
+    au < exists ; 2017-2018 ; Journal of Aviation Technology and Engineering Volume 7 ; 7 ; http://docs.lib.purdue.edu/ >
+    au < exists ; 2018 ; Journal of Aviation Technology and Engineering Volume 8 ; 8 ; https://docs.lib.purdue.edu/ >
+    au < exists ; 2019 ; Journal of Aviation Technology and Engineering Volume 9 ; 9 ; https://docs.lib.purdue.edu/ >
+    au < exists ; 2020 ; Journal of Aviation Technology and Engineering Volume 10 ; 10 ; https://docs.lib.purdue.edu/ >
 
-      param[base_url] = https://muse.jhu.edu/
+  }
+  
+  {
 
-      au < doNotProcess ; 1976 ; Education and Culture Volume 1 ; 1 >
-      au < doNotProcess ; 1977 ; Education and Culture Volume 2 ; 2 >
-      au < doNotProcess ; 1983 ; Education and Culture Volume 3 ; 3 >
-      au < doNotProcess ; 1984 ; Education and Culture Volume 4 ; 4 >
-      au < doNotProcess ; 1985 ; Education and Culture Volume 5 ; 5 >
-      au < doNotProcess ; 1986 ; Education and Culture Volume 6 ; 6 >
-      au < doNotProcess ; 1987 ; Education and Culture Volume 7 ; 7 >
-      au < doNotProcess ; 1988 ; Education and Culture Volume 8 ; 8 >
-      au < doNotProcess ; 1989 ; Education and Culture Volume 9 ; 9 >
-      au < doNotProcess ; 1993 ; Education and Culture Volume 10 ; 10 >
-      au < doNotProcess ; 1994 ; Education and Culture Volume 11 ; 11 >
-      au < doNotProcess ; 1995 ; Education and Culture Volume 12 ; 12 >
-      au < doNotProcess ; 1996 ; Education and Culture Volume 13 ; 13 >
-      au < doNotProcess ; 1997 ; Education and Culture Volume 14 ; 14 >
-      au < doNotProcess ; 1999 ; Education and Culture Volume 15 ; 15 >
-      au < doNotProcess ; 1999-2000 ; Education and Culture Volume 16 ; 16 >
-      au < doNotProcess ; 2001 ; Education and Culture Volume 17 ; 17 >
-      au < doNotProcess ; 2002 ; Education and Culture Volume 18 ; 18 >
-      au < doNotProcess ; 2003 ; Education and Culture Volume 19 ; 19 >
-      au < doNotProcess ; 2004 ; Education and Culture Volume 20 ; 20 >
-      au < doNotProcess ; 2005 ; Education and Culture Volume 21 ; 21 >
-
-    }
-
-    {
-
-      param[base_url] = http://muse.jhu.edu/
-
-      au < down ; 2006 ; Education and Culture Volume 22 ; 22 >
-      au < down ; 2007 ; Education and Culture Volume 23 ; 23 >
-      au < down ; 2008 ; Education and Culture Volume 24 ; 24 >
-      au < down ; 2009 ; Education and Culture Volume 25 ; 25 >
-      au < down ; 2010 ; Education and Culture Volume 26 ; 26 >
-      au < down ; 2011 ; Education and Culture Volume 27 ; 27 >
-      au < down ; 2012 ; Education and Culture Volume 28 ; 28 >
-      au < down ; 2013 ; Education and Culture Volume 29 ; 29 >
-
-    }
-
-    {
-
-      param[base_url] = https://muse.jhu.edu/
-
-      au < down ; 2014 ; Education and Culture Volume 30 ; 30 >
-      au < down ; 2015 ; Education and Culture Volume 31 ; 31 >
-      au < doNotProcess ; 2016 ; Education and Culture Volume 32 ; 32 >
-
-    }
+   title < 
+      name = Journal of Human Performance in Extreme Environments ;
+      issn = 1529-5168
+    >
+    
+    plugin = org.lockss.plugin.bepress.BePressPlugin
+#    param[base_url] = http://docs.lib.purdue.edu/
+    param[journal_abbr] = jhpee
+    implicit < status ; year ; name ; param[volume] ; param[base_url] >
+    
+    au < exists ; 2000 ; Journal of Human Performance in Extreme Environments Volume 5 ; 5 ; http://docs.lib.purdue.edu/ >
+    au < exists ; 2001 ; Journal of Human Performance in Extreme Environments Volume 6 ; 6 ; http://docs.lib.purdue.edu/ >
+    au < exists ; 2003 ; Journal of Human Performance in Extreme Environments Volume 7 ; 7 ; http://docs.lib.purdue.edu/ >
+    au < exists ; 2005 ; Journal of Human Performance in Extreme Environments Volume 8 ; 8 ; http://docs.lib.purdue.edu/ >
+    au < exists ; 2006 ; Journal of Human Performance in Extreme Environments Volume 9 ; 9 ; http://docs.lib.purdue.edu/ >
+    au < exists ; 2012-2013 ; Journal of Human Performance in Extreme Environments Volume 10 ; 10 ; http://docs.lib.purdue.edu/ >
+    au < exists ; 2013-2014 ; Journal of Human Performance in Extreme Environments Volume 11 ; 11 ; http://docs.lib.purdue.edu/ >
+    au < exists ; 2015-2016 ; Journal of Human Performance in Extreme Environments Volume 12 ; 12 ; http://docs.lib.purdue.edu/ >
+    au < exists ; 2017 ; Journal of Human Performance in Extreme Environments Volume 13 ; 13 ; http://docs.lib.purdue.edu/ >
+    au < exists ; 2018 ; Journal of Human Performance in Extreme Environments Volume 14 ; 14 ; https://docs.lib.purdue.edu/ > # Probe url error on previous test
+    au < exists ; 2019 ; Journal of Human Performance in Extreme Environments Volume 15 ; 15 ; https://docs.lib.purdue.edu/ >
+    au < exists ; 2020 ; Journal of Human Performance in Extreme Environments Volume 16 ; 16 ; https://docs.lib.purdue.edu/ >
 
   }
 
+  {
+  
+   title < 
+      name = Journal of Pre-College Engineering Education Research ;
+      issn = 2157-9288
+    >
+    
+    plugin = org.lockss.plugin.bepress.BePressPlugin
+#    param[base_url] = http://docs.lib.purdue.edu/
+    param[journal_abbr] = jpeer
+    implicit < status ; year ; name ; param[volume] ; param[base_url] >
+
+    au < exists ; 2011 ; Journal of Pre-College Engineering Education Research Volume 1 ; 1 ; https://docs.lib.purdue.edu/ >
+    au < exists ; 2012 ; Journal of Pre-College Engineering Education Research Volume 2 ; 2 ; http://docs.lib.purdue.edu/ >
+    au < exists ; 2013 ; Journal of Pre-College Engineering Education Research Volume 3 ; 3 ; http://docs.lib.purdue.edu/ >
+    au < exists ; 2014 ; Journal of Pre-College Engineering Education Research Volume 4 ; 4 ; http://docs.lib.purdue.edu/ >
+    au < exists ; 2015 ; Journal of Pre-College Engineering Education Research Volume 5 ; 5 ; http://docs.lib.purdue.edu/ >
+    au < exists ; 2016 ; Journal of Pre-College Engineering Education Research Volume 6 ; 6 ; http://docs.lib.purdue.edu/ >
+    au < exists ; 2017 ; Journal of Pre-College Engineering Education Research Volume 7 ; 7 ; http://docs.lib.purdue.edu/ >
+    au < exists ; 2018 ; Journal of Pre-College Engineering Education Research Volume 8 ; 8 ; https://docs.lib.purdue.edu/ >
+    au < exists ; 2019 ; Journal of Pre-College Engineering Education Research Volume 9 ; 9 ; https://docs.lib.purdue.edu/ >
+    au < exists ; 2020 ; Journal of Pre-College Engineering Education Research Volume 10 ; 10 ; https://docs.lib.purdue.edu/ >
+
+  }
+
+  {
+  
+    title < 
+      name = Journal of Problem Solving ;
+      issn = 1932-6246
+    >
+    
+    plugin = org.lockss.plugin.bepress.BePressPlugin
+#    param[base_url] = http://docs.lib.purdue.edu/
+    param[journal_abbr] = jps
+    implicit < status ; year ; name ; param[volume] ; param[base_url] >
+    #BePress asks that we discontinue processing
+
+    au < doNotProcess ; 2006-2007 ; Journal of Problem Solving Volume 1 ; 1 ; https://docs.lib.purdue.edu/ >
+    au < doNotProcess ; 2008-2009 ; Journal of Problem Solving Volume 2 ; 2 ; https://docs.lib.purdue.edu/ >
+    au < doNotProcess ; 2010-2011 ; Journal of Problem Solving Volume 3 ; 3 ; https://docs.lib.purdue.edu/ >
+    au < doNotProcess ; 2012 ; Journal of Problem Solving Research Volume 4 ; 4 ; http://docs.lib.purdue.edu/ >
+    au < doNotProcess ; 2012 ; Journal of Problem Solving Research Volume 5 ; 5 ; http://docs.lib.purdue.edu/ >
+    au < doNotProcess ; 2013 ; Journal of Problem Solving Research Volume 6 ; 6 ; http://docs.lib.purdue.edu/ >
+    au < doNotProcess ; 2014 ; Journal of Problem Solving Research Volume 7 ; 7 ; http://docs.lib.purdue.edu/ >
+    au < doNotProcess ; 2015 ; Journal of Problem Solving Research Volume 8 ; 8 ; http://docs.lib.purdue.edu/ >
+    au < doNotProcess ; 2016 ; Journal of Problem Solving Research Volume 9 ; 9 ; http://docs.lib.purdue.edu/ >
+    au < doNotProcess ; 2017 ; Journal of Problem Solving Research Volume 10 ; 10 ; http://docs.lib.purdue.edu/ >
+    au < doNotProcess ; 2018 ; Journal of Problem Solving Research Volume 11 ; 11 ; https://docs.lib.purdue.edu/ >
+    au < doNotProcess ; 2019 ; Journal of Problem Solving Research Volume 12 ; 12 ; https://docs.lib.purdue.edu/ >
+
+  }
+  
+  {
+  
+    title < 
+      name = Journal of Southeast Asian American Education and Advancement ;
+      eissn = 2153-8999
+    >
+    
+    plugin = org.lockss.plugin.bepress.BePressPlugin
+#    param[base_url] = http://docs.lib.purdue.edu/
+    param[journal_abbr] = jsaaea
+    implicit < status ; year ; name ; param[volume] ; param[base_url] >
+
+    au < exists ; 2006 ; Journal of Southeast Asian American Education and Advancement Volume 1 ; 1 ; https://docs.lib.purdue.edu/ >
+    au < exists ; 2007 ; Journal of Southeast Asian American Education and Advancement Volume 2 ; 2 ; https://docs.lib.purdue.edu/ >
+    au < exists ; 2008 ; Journal of Southeast Asian American Education and Advancement Volume 3 ; 3 ; https://docs.lib.purdue.edu/ >
+    au < exists ; 2009 ; Journal of Southeast Asian American Education and Advancement Volume 4 ; 4 ; https://docs.lib.purdue.edu/ >
+    au < exists ; 2010 ; Journal of Southeast Asian American Education and Advancement Volume 5 ; 5 ; https://docs.lib.purdue.edu/ >
+    au < exists ; 2011 ; Journal of Southeast Asian American Education and Advancement Volume 6 ; 6 ; https://docs.lib.purdue.edu/ >
+    au < exists ; 2012 ; Journal of Southeast Asian American Education and Advancement Volume 7 ; 7 ; http://docs.lib.purdue.edu/ >
+    au < exists ; 2013 ; Journal of Southeast Asian American Education and Advancement Volume 8 ; 8 ; http://docs.lib.purdue.edu/ >
+    au < exists ; 2014 ; Journal of Southeast Asian American Education and Advancement Volume 9 ; 9 ; http://docs.lib.purdue.edu/ >
+    au < exists ; 2015 ; Journal of Southeast Asian American Education and Advancement Volume 10 ; 10 ; http://docs.lib.purdue.edu/ >
+    au < exists ; 2016 ; Journal of Southeast Asian American Education and Advancement Volume 11 ; 11 ; http://docs.lib.purdue.edu/ >
+    au < exists ; 2017 ; Journal of Southeast Asian American Education and Advancement Volume 12 ; 12 ; http://docs.lib.purdue.edu/ >
+    au < exists ; 2018 ; Journal of Southeast Asian American Education and Advancement Volume 13 ; 13 ; https://docs.lib.purdue.edu/ >
+    au < exists ; 2019 ; Journal of Southeast Asian American Education and Advancement Volume 14 ; 14 ; https://docs.lib.purdue.edu/ >
+    au < exists ; 2020 ; Journal of Southeast Asian American Education and Advancement Volume 15 ; 15 ; https://docs.lib.purdue.edu/ >
+
+  }
+
+  #JTRP Technical Reports handled in purdue_university_press.source.tdb as WARC  
+  
+  
   # Interdisciplinary Journal of Problem-Based Learning (1541-5015)
   
   # Journal of Aviation Technology and Engineering (2159-6670)
@@ -234,112 +337,6 @@
   # Journal of Problem Solving (1932-6246)
   
   # Journal of Southeast Asian American Education and Advancement (2153-8999)
-  
-  {
 
-    title <
-      name = Philip Roth Studies ;
-      issn = 1547-3929 ;
-      eissn = 1940-5278 ;
-      issnl = 1547-3929
-    >
-
-    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[journal_dir] = philip_roth_studies
-    implicit < status ; year ; name ; param[volume] >
-
-    attr[journal_id] = prs
-    
-    {
-
-      param[base_url] = http://muse.jhu.edu/
-
-      au < down ; 2005 ; Philip Roth Studies Volume 1 ; 1 >
-      au < down ; 2006 ; Philip Roth Studies Volume 2 ; 2 >
-      au < down ; 2007 ; Philip Roth Studies Volume 3 ; 3 >
-      au < down ; 2008 ; Philip Roth Studies Volume 4 ; 4 >
-      au < down ; 2009 ; Philip Roth Studies Volume 5 ; 5 >
-      au < down ; 2010 ; Philip Roth Studies Volume 6 ; 6 >
-      au < down ; 2011 ; Philip Roth Studies Volume 7 ; 7 >
-      au < down ; 2012 ; Philip Roth Studies Volume 8 ; 8 >
-      au < down ; 2013 ; Philip Roth Studies Volume 9 ; 9 >
-
-    }
-
-    {
-
-      param[base_url] = https://muse.jhu.edu/
-
-      au < down ; 2014 ; Philip Roth Studies Volume 10 ; 10 >
-      au < down ; 2015 ; Philip Roth Studies Volume 11 ; 11 >
-      au < doNotProcess ; 2016 ; Philip Roth Studies Volume 12 ; 12 >
-
-    }
-
-  }
-
-  {
-
-    title <
-      name = Shofar: An Interdisciplinary Journal of Jewish Studies ;
-      issn = 0882-8539 ;
-      eissn = 1534-5165 ;
-      issnl = 0882-8539
-    >
-
-    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[journal_dir] = shofar
-    implicit < status ; year ; name ; param[volume] >
-
-    attr[journal_id] = sho
-
-    {
-
-      param[base_url] = https://muse.jhu.edu/
-
-      au < down ; 1990-1991 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 9 ; 9 >
-      au < down ; 1991-1992 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 10 ; 10 >
-      au < down ; 1992-1993 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 11 ; 11 >
-      au < down ; 1993-1994 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 12 ; 12 >
-      au < down ; 1994-1995 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 13 ; 13 >
-      au < down ; 1995-1996 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 14 ; 14 >
-      au < down ; 1996-1997 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 15 ; 15 >
-      au < down ; 1997-1998 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 16 ; 16 >
-      au < down ; 1998-1999 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 17 ; 17 >
-      au < down ; 1999-2000 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 18 ; 18 >
-
-    }
-
-    {
-
-      param[base_url] = http://muse.jhu.edu/
-
-      au < down ; 2001 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 19 ; 19 >
-      au < down ; 2001-2002 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 20 ; 20 >
-      au < down ; 2002-2003 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 21 ; 21 >
-      au < down ; 2003-2004 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 22 ; 22 >
-      au < down ; 2004-2005 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 23 ; 23 >
-      au < down ; 2005-2006 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 24 ; 24 >
-      au < down ; 2006-2007 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 25 ; 25 >
-      au < down ; 2007-2008 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 26 ; 26 >
-      au < down ; 2008-2009 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 27 ; 27 >
-      au < down ; 2009-2010 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 28 ; 28 >
-      au < down ; 2010-2011 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 29 ; 29 >
-      au < down ; 2011-2012 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 30 ; 30 >
-      au < down ; 2012-2013 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 31 ; 31 >
-
-    }
-
-    {
-
-      param[base_url] = https://muse.jhu.edu/
-
-      au < down ; 2013-2014 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 32 ; 32 >
-      au < down ; 2014 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 33 ; 33 >
-      au < doNotProcess ; 2015-2016 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 34 ; 34 >
-
-    }
-
-  }
 
 }

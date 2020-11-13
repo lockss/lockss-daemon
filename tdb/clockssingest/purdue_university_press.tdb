@@ -105,11 +105,11 @@
     implicit < status ; status2 ; year ; name ; param[volume] ; param[base_url] ; hidden[proxy] >
     #BePress asks that we discontinue processing
 
-    au < doNotProcess ; exists ; 2009 ; Data Curation Profile Volume 1 ; 1 ; https://docs.lib.purdue.edu/ ; >
-    au < doNotProcess ; exists ; 2010 ; Data Curation Profile Volume 2 ; 2 ; https://docs.lib.purdue.edu/ ; >
-    au < doNotProcess ; exists ; 2011 ; Data Curation Profile Volume 3 ; 3 ; https://docs.lib.purdue.edu/ ; >
-    au < finished ; finished ; 2012 ; Data Curation Profile Volume 4 ; 4 ; http://docs.lib.purdue.edu/ ; >
-    au < finished ; finished ; 2013 ; Data Curation Profile Volume 5 ; 5 ; http://docs.lib.purdue.edu/ ; >
+    au < doNotProcess ; exists ; 2009 ; Data Curation Profiles Directory Volume 1 ; 1 ; https://docs.lib.purdue.edu/ ; >
+    au < doNotProcess ; exists ; 2010 ; Data Curation Profiles Directory Volume 2 ; 2 ; https://docs.lib.purdue.edu/ ; >
+    au < doNotProcess ; exists ; 2011 ; Data Curation Profiles Directory Volume 3 ; 3 ; https://docs.lib.purdue.edu/ ; >
+    au < finished ; finished ; 2012 ; Data Curation Profiles Directory Volume 4 ; 4 ; http://docs.lib.purdue.edu/ ; >
+    au < finished ; finished ; 2013 ; Data Curation Profiles Directory Volume 5 ; 5 ; http://docs.lib.purdue.edu/ ; >
 
   }
   

@@ -1,0 +1,186 @@
+{
+
+  publisher <
+    name = Purdue University Press ;
+    info[tester] = 5
+  >
+
+  
+  {
+
+    title <
+      name = Education and Culture ;
+      issn = 1085-4908 ;
+      eissn = 1559-1786 ;
+      issnl = 1085-4908
+    >
+
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    param[journal_dir] = education_and_culture
+    implicit < status ; year ; name ; param[volume] >
+
+    attr[journal_id] = eac
+    
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < doNotProcess ; 1976 ; Education and Culture Volume 1 ; 1 >
+      au < doNotProcess ; 1977 ; Education and Culture Volume 2 ; 2 >
+      au < doNotProcess ; 1983 ; Education and Culture Volume 3 ; 3 >
+      au < doNotProcess ; 1984 ; Education and Culture Volume 4 ; 4 >
+      au < doNotProcess ; 1985 ; Education and Culture Volume 5 ; 5 >
+      au < doNotProcess ; 1986 ; Education and Culture Volume 6 ; 6 >
+      au < doNotProcess ; 1987 ; Education and Culture Volume 7 ; 7 >
+      au < doNotProcess ; 1988 ; Education and Culture Volume 8 ; 8 >
+      au < doNotProcess ; 1989 ; Education and Culture Volume 9 ; 9 >
+      au < doNotProcess ; 1993 ; Education and Culture Volume 10 ; 10 >
+      au < doNotProcess ; 1994 ; Education and Culture Volume 11 ; 11 >
+      au < doNotProcess ; 1995 ; Education and Culture Volume 12 ; 12 >
+      au < doNotProcess ; 1996 ; Education and Culture Volume 13 ; 13 >
+      au < doNotProcess ; 1997 ; Education and Culture Volume 14 ; 14 >
+      au < doNotProcess ; 1999 ; Education and Culture Volume 15 ; 15 >
+      au < doNotProcess ; 1999-2000 ; Education and Culture Volume 16 ; 16 >
+      au < doNotProcess ; 2001 ; Education and Culture Volume 17 ; 17 >
+      au < doNotProcess ; 2002 ; Education and Culture Volume 18 ; 18 >
+      au < doNotProcess ; 2003 ; Education and Culture Volume 19 ; 19 >
+      au < doNotProcess ; 2004 ; Education and Culture Volume 20 ; 20 >
+      au < doNotProcess ; 2005 ; Education and Culture Volume 21 ; 21 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2006 ; Education and Culture Volume 22 ; 22 >
+      au < down ; 2007 ; Education and Culture Volume 23 ; 23 >
+      au < down ; 2008 ; Education and Culture Volume 24 ; 24 >
+      au < down ; 2009 ; Education and Culture Volume 25 ; 25 >
+      au < down ; 2010 ; Education and Culture Volume 26 ; 26 >
+      au < down ; 2011 ; Education and Culture Volume 27 ; 27 >
+      au < down ; 2012 ; Education and Culture Volume 28 ; 28 >
+      au < down ; 2013 ; Education and Culture Volume 29 ; 29 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 2014 ; Education and Culture Volume 30 ; 30 >
+      au < down ; 2015 ; Education and Culture Volume 31 ; 31 >
+      au < doNotProcess ; 2016 ; Education and Culture Volume 32 ; 32 >
+
+    }
+
+  }
+  
+  {
+
+    title <
+      name = Philip Roth Studies ;
+      issn = 1547-3929 ;
+      eissn = 1940-5278 ;
+      issnl = 1547-3929
+    >
+
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    param[journal_dir] = philip_roth_studies
+    implicit < status ; year ; name ; param[volume] >
+
+    attr[journal_id] = prs
+    
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2005 ; Philip Roth Studies Volume 1 ; 1 >
+      au < down ; 2006 ; Philip Roth Studies Volume 2 ; 2 >
+      au < down ; 2007 ; Philip Roth Studies Volume 3 ; 3 >
+      au < down ; 2008 ; Philip Roth Studies Volume 4 ; 4 >
+      au < down ; 2009 ; Philip Roth Studies Volume 5 ; 5 >
+      au < down ; 2010 ; Philip Roth Studies Volume 6 ; 6 >
+      au < down ; 2011 ; Philip Roth Studies Volume 7 ; 7 >
+      au < down ; 2012 ; Philip Roth Studies Volume 8 ; 8 >
+      au < down ; 2013 ; Philip Roth Studies Volume 9 ; 9 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 2014 ; Philip Roth Studies Volume 10 ; 10 >
+      au < down ; 2015 ; Philip Roth Studies Volume 11 ; 11 >
+      au < doNotProcess ; 2016 ; Philip Roth Studies Volume 12 ; 12 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Shofar: An Interdisciplinary Journal of Jewish Studies ;
+      issn = 0882-8539 ;
+      eissn = 1534-5165 ;
+      issnl = 0882-8539
+    >
+
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    param[journal_dir] = shofar
+    implicit < status ; year ; name ; param[volume] >
+
+    attr[journal_id] = sho
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 1990-1991 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 9 ; 9 >
+      au < down ; 1991-1992 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 10 ; 10 >
+      au < down ; 1992-1993 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 11 ; 11 >
+      au < down ; 1993-1994 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 12 ; 12 >
+      au < down ; 1994-1995 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 13 ; 13 >
+      au < down ; 1995-1996 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 14 ; 14 >
+      au < down ; 1996-1997 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 15 ; 15 >
+      au < down ; 1997-1998 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 16 ; 16 >
+      au < down ; 1998-1999 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 17 ; 17 >
+      au < down ; 1999-2000 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 18 ; 18 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < down ; 2001 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 19 ; 19 >
+      au < down ; 2001-2002 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 20 ; 20 >
+      au < down ; 2002-2003 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 21 ; 21 >
+      au < down ; 2003-2004 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 22 ; 22 >
+      au < down ; 2004-2005 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 23 ; 23 >
+      au < down ; 2005-2006 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 24 ; 24 >
+      au < down ; 2006-2007 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 25 ; 25 >
+      au < down ; 2007-2008 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 26 ; 26 >
+      au < down ; 2008-2009 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 27 ; 27 >
+      au < down ; 2009-2010 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 28 ; 28 >
+      au < down ; 2010-2011 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 29 ; 29 >
+      au < down ; 2011-2012 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 30 ; 30 >
+      au < down ; 2012-2013 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 31 ; 31 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < down ; 2013-2014 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 32 ; 32 >
+      au < down ; 2014 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 33 ; 33 >
+      au < doNotProcess ; 2015-2016 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 34 ; 34 >
+
+    }
+
+  }
+
+}
