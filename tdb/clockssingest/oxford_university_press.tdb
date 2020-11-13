@@ -549,6 +549,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; American Journal of Agricultural Economics Volume 99 ; 99 ; >
     au < frozen ; exists ; 2018 ; 2018 ; American Journal of Agricultural Economics Volume 100 ; 100 ; >
     au < down ; exists ; 2019 ; 2019 ; American Journal of Agricultural Economics Volume 101 ; 101 ; >
+    au < expected ; exists ; 2020 ; 2020 ; American Journal of Agricultural Economics Volume 102 ; 102 ; >
 
   }
 
@@ -1454,6 +1455,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Applied Economic Perspectives and Policy Volume 39 ; 39 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Applied Economic Perspectives and Policy Volume 40 ; 40 ; >
     au < down ; exists ; 2019 ; 2019 ; Applied Economic Perspectives and Policy Volume 41 ; 41 ; >
+    au < expected ; exists ; 2020 ; 2020 ; Applied Economic Perspectives and Policy Volume 42 ; 42 ; >
 
   }
 
@@ -16127,8 +16129,8 @@
     au < frozen ; exists ; 2016 ; 2016 ; Radiation Protection Dosimetry Volume 168-172 ; 168-172 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Radiation Protection Dosimetry Volume 173-177 ; 173-177 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Radiation Protection Dosimetry Volume 178-182 ; 178-182 ; >
-    au < down ; exists ; 2019 ; 2019 ; Radiation Protection Dosimetry Volume 183-188 ; 183-188 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; Radiation Protection Dosimetry Volume 189-1 ; 183-188 ; >
+    au < down ; exists ; 2019 ; 2019 ; Radiation Protection Dosimetry Volume 183-187 ; 183-187 ; >
+    au < notReady ; exists ; 2020 ; 2020 ; Radiation Protection Dosimetry Volume 188-192 ; 188-192 ; >
 
   }
 
@@ -18563,8 +18565,8 @@
       au < notReady ; exists ; 2016 ; 2016 ; The Journal of Applied Laboratory Medicine Volume 1 ; 1 ; >
       au < notReady ; exists ; 2017 ; 2017 ; The Journal of Applied Laboratory Medicine Volume 1-2 ; 1-2 ; >
       au < notReady ; exists ; 2018 ; 2018 ; The Journal of Applied Laboratory Medicine Volume 2-3 ; 2-3 ; >
-      au < notReady ; exists ; 2019 ; 2019 ; The Journal of Applied Laboratory Medicine Volume 3-4 ; 3-4 ; >
-      au < notReady ; exists ; 2020 ; 2020 ; The Journal of Applied Laboratory Medicine Volume 4-5 ; 4-5 ; >
+      au < exists ; exists ; 2019 ; 2019 ; The Journal of Applied Laboratory Medicine Volume 3-4 ; 3-4 ; >
+      au < exists ; exists ; 2020 ; 2020 ; The Journal of Applied Laboratory Medicine Volume 5 ; 5 ; >
 
   }
 
@@ -20812,7 +20814,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Toxicological Sciences Volume 155-160 ; 155-160 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Toxicological Sciences Volume 161-166 ; 161-166 ; >
     au < down ; exists ; 2019 ; 2019 ; Toxicological Sciences Volume 167-172 ; 167-172 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; Toxicological Sciences Volume 173-178 ; 173-178 ; >
+    au < exists ; exists ; 2020 ; 2020 ; Toxicological Sciences Volume 173-179 ; 173-179 ; >
 
   }
 

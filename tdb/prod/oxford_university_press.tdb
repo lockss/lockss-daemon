@@ -12071,22 +12071,23 @@
 
   }
 
-  {
-
-    title <
-      name = Journal of the Endocrine Society ;
-      eissn = 2472-1972
-    >
-
-    param[journal_id] = jes
-
-    #this title was ONLY in the publisher listing
-    au < released ; 2017 ; 2017 ; Journal of the Endocrine Society Volume 1 ; 1 >
-    au < released ; 2018 ; 2018 ; Journal of the Endocrine Society Volume 2 ; 2 >
-    au < manifest ; 2019 ; 2019 ; Journal of the Endocrine Society Volume 3 ; 3 >
-    au < manifest ; 2020 ; 2020 ; Journal of the Endocrine Society Volume 4 ; 4 >
-
-  }
+#  {
+#
+#    title <
+#      name = Journal of the Endocrine Society ;
+#      eissn = 2472-1972
+#    >
+#
+#    param[journal_id] = jes
+#    #This journal is included in the Endocrine Society tdb file.
+#
+#    #this title was ONLY in the publisher listing
+#    au < released ; 2017 ; 2017 ; Journal of the Endocrine Society Volume 1 ; 1 >
+#    au < released ; 2018 ; 2018 ; Journal of the Endocrine Society Volume 2 ; 2 >
+#    au < manifest ; 2019 ; 2019 ; Journal of the Endocrine Society Volume 3 ; 3 >
+#    au < manifest ; 2020 ; 2020 ; Journal of the Endocrine Society Volume 4 ; 4 >
+#
+#  }
 
   {
 
@@ -16141,8 +16142,8 @@
     au < released ; 2016 ; 2016 ; Radiation Protection Dosimetry Volume 168-172 ; 168-172 >
     au < released ; 2017 ; 2017 ; Radiation Protection Dosimetry Volume 173-177 ; 173-177 >
     au < released ; 2018 ; 2018 ; Radiation Protection Dosimetry Volume 178-182 ; 178-182 >
-    au < manifest ; 2019 ; 2019 ; Radiation Protection Dosimetry Volume 183-187 ; 183-187 >
-    au < manifest ; 2020 ; 2020 ; Radiation Protection Dosimetry Volume 188-192 ; 188-192 >
+    au < exists ; 2019 ; 2019 ; Radiation Protection Dosimetry Volume 183-187 ; 183-187 >
+    au < exists ; 2020 ; 2020 ; Radiation Protection Dosimetry Volume 188-192 ; 188-192 >
 
   }
 
@@ -18577,8 +18578,8 @@
       au < doNotProcess ; 2016 ; 2016 ; The Journal of Applied Laboratory Medicine Volume 1 ; 1 >
       au < doNotProcess ; 2017 ; 2017 ; The Journal of Applied Laboratory Medicine Volume 1-2 ; 1-2 >
       au < manifest ; 2018 ; 2018 ; The Journal of Applied Laboratory Medicine Volume 2-3 ; 2-3 >
-      au < manifest ; 2019 ; 2019 ; The Journal of Applied Laboratory Medicine Volume 3-4 ; 3-4 >
-      au < manifest ; 2020 ; 2020 ; The Journal of Applied Laboratory Medicine Volume 5 ; 5 >
+      au < exists ; 2019 ; 2019 ; The Journal of Applied Laboratory Medicine Volume 3-4 ; 3-4 >
+      au < exists ; 2020 ; 2020 ; The Journal of Applied Laboratory Medicine Volume 5 ; 5 >
 
   }
 
@@ -20826,7 +20827,7 @@
     au < released ; 2017 ; 2017 ; Toxicological Sciences Volume 155-160 ; 155-160 >
     au < released ; 2018 ; 2018 ; Toxicological Sciences Volume 161-166 ; 161-166 >
     au < manifest ; 2019 ; 2019 ; Toxicological Sciences Volume 167-172 ; 167-172 >
-    au < manifest ; 2020 ; 2020 ; Toxicological Sciences Volume 173-179 ; 173-179 >
+    au < exists ; 2020 ; 2020 ; Toxicological Sciences Volume 173-179 ; 173-179 >
 
   }
 

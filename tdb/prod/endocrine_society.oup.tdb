@@ -12,6 +12,23 @@
   {
 
     title <
+      name = Journal of the Endocrine Society ;
+      eissn = 2472-1972
+    >
+
+      param[base_url] = https://academic.oup.com/
+      param[journal_id] = jes
+
+      au < released ; 2017 ; 1 ; Journal of the Endocrine Society Volume 1 ; 2017 >
+      au < released ; 2018 ; 2 ; Journal of the Endocrine Society Volume 2 ; 2018 >
+      au < exists ; 2019 ; 3 ; Journal of the Endocrine Society Volume 3 ; 2019 >
+      au < exists ; 2020 ; 4 ; Journal of the Endocrine Society Volume 4 ; 2020 >
+
+  }
+
+  {
+
+    title <
       name = Endocrine Reviews ;
       issn = 0163-769X ;
       eissn = 1945-7189 ;
