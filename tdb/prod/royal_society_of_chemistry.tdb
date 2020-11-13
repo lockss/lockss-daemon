@@ -166,7 +166,7 @@
     
     {
       
-      au < doesNotExist ; 1996 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 93 ; 93 ; 1996 ; https://pubs.rsc.org/ >
+      au < exists ; 1996 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 92 ; 92 ; 1996 ; https://pubs.rsc.org/ >
       au < manifest ; 1997 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 93 ; 93 ; 1997 ; https://pubs.rsc.org/ >
       au < manifest ; 1998 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 94 ; 94 ; 1998 ; https://pubs.rsc.org/ >
       au < manifest ; 1999 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 95 ; 95 ; 1999 ; https://pubs.rsc.org/ >
@@ -571,23 +571,16 @@
       au < manifest ; 2020 ; Faraday Discussions Volume 221 ; 221 ; 2020 ; https://pubs.rsc.org/ >
       au < manifest ; 2020 ; Faraday Discussions Volume 222 ; 222 ; 2020 ; https://pubs.rsc.org/ >
       au < manifest ; 2020 ; Faraday Discussions Volume 223 ; 223 ; 2020 ; https://pubs.rsc.org/ >
-      au < exists ; 2020 ; Faraday Discussions Volume 224 ; 224 ; 2020 ; https://pubs.rsc.org/ >
-      au < exists ; 2020 ; Faraday Discussions Volume 225 ; 225 ; 2020 ; https://pubs.rsc.org/ >
-      au < exists ; 2020 ; Faraday Discussions Volume 226 ; 226 ; 2020 ; https://pubs.rsc.org/ >
-      au < exists ; 2020 ; Faraday Discussions Volume 227 ; 227 ; 2020 ; https://pubs.rsc.org/ >
-      au < exists ; 2020 ; Faraday Discussions Volume 228 ; 228 ; 2020 ; https://pubs.rsc.org/ >
-      au < exists ; 2020 ; Faraday Discussions Volume 229 ; 229 ; 2020 ; https://pubs.rsc.org/ >
-      au < exists ; 2020 ; Faraday Discussions Volume 230 ; 230 ; 2020 ; https://pubs.rsc.org/ >
+      au < expected ; 2020 ; Faraday Discussions Volume 224 ; 224 ; 2020 ; https://pubs.rsc.org/ >
+
+      au < expected ; 2021 ; Faraday Discussions Volume 225 ; 225 ; 2021 ; https://pubs.rsc.org/ >
+      au < expected ; 2021 ; Faraday Discussions Volume 226 ; 226 ; 2021 ; https://pubs.rsc.org/ >
+      au < expected ; 2021 ; Faraday Discussions Volume 227 ; 227 ; 2021 ; https://pubs.rsc.org/ >
+      au < expected ; 2021 ; Faraday Discussions Volume 228 ; 228 ; 2021 ; https://pubs.rsc.org/ >
+      au < expected ; 2021 ; Faraday Discussions Volume 229 ; 229 ; 2021 ; https://pubs.rsc.org/ >
+      au < expected ; 2021 ; Faraday Discussions Volume 230 ; 230 ; 2021 ; https://pubs.rsc.org/ >
       au < expected ; 2021 ; Faraday Discussions Volume 231 ; 231 ; 2021 ; https://pubs.rsc.org/ >
       au < expected ; 2021 ; Faraday Discussions Volume 232 ; 232 ; 2021 ; https://pubs.rsc.org/ >
-      au < expected ; 2021 ; Faraday Discussions Volume 233 ; 233 ; 2021 ; https://pubs.rsc.org/ >
-      au < expected ; 2021 ; Faraday Discussions Volume 234 ; 234 ; 2021 ; https://pubs.rsc.org/ >
-      au < expected ; 2021 ; Faraday Discussions Volume 235 ; 235 ; 2021 ; https://pubs.rsc.org/ >
-      au < expected ; 2021 ; Faraday Discussions Volume 236 ; 236 ; 2021 ; https://pubs.rsc.org/ >
-      au < expected ; 2021 ; Faraday Discussions Volume 237 ; 237 ; 2021 ; https://pubs.rsc.org/ >
-      au < expected ; 2021 ; Faraday Discussions Volume 238 ; 238 ; 2021 ; https://pubs.rsc.org/ >
-      au < expected ; 2021 ; Faraday Discussions Volume 239 ; 239 ; 2021 ; https://pubs.rsc.org/ >
-      au < expected ; 2021 ; Faraday Discussions Volume 240 ; 240 ; 2021 ; https://pubs.rsc.org/ >
     }
   }
 
@@ -732,6 +725,17 @@
     {
       
       #complete for 1999-2009 see other title block
+      au < exists ; 1999 ; Journal of Environmental Monitoring Volume 1 ; 1 ; 1999 ; https://pubs.rsc.org/ >
+      au < exists ; 2000 ; Journal of Environmental Monitoring Volume 2 ; 2 ; 2000 ; https://pubs.rsc.org/ >
+      au < exists ; 2001 ; Journal of Environmental Monitoring Volume 3 ; 3 ; 2001 ; https://pubs.rsc.org/ >
+      au < exists ; 2002 ; Journal of Environmental Monitoring Volume 4 ; 4 ; 2002 ; https://pubs.rsc.org/ >
+      au < exists ; 2003 ; Journal of Environmental Monitoring Volume 5 ; 5 ; 2003 ; https://pubs.rsc.org/ >
+      au < exists ; 2004 ; Journal of Environmental Monitoring Volume 6 ; 6 ; 2004 ; https://pubs.rsc.org/ >
+      au < exists ; 2005 ; Journal of Environmental Monitoring Volume 7 ; 7 ; 2005 ; https://pubs.rsc.org/ >
+      au < exists ; 2006 ; Journal of Environmental Monitoring Volume 8 ; 8 ; 2006 ; https://pubs.rsc.org/ >
+      au < exists ; 2007 ; Journal of Environmental Monitoring Volume 9 ; 9 ; 2007 ; https://pubs.rsc.org/ >
+      au < exists ; 2008 ; Journal of Environmental Monitoring Volume 10 ; 10 ; 2008 ; https://pubs.rsc.org/ >
+      au < exists ; 2009 ; Journal of Environmental Monitoring Volume 11 ; 11 ; 2009 ; https://pubs.rsc.org/ >
       au < released ; 2010 ; Journal of Environmental Monitoring Volume 12 ; 12 ; 2010 ; http://pubs.rsc.org/ >
       au < released ; 2011 ; Journal of Environmental Monitoring Volume 13 ; 13 ; 2011 ; http://pubs.rsc.org/ >
       au < released ; 2012 ; Journal of Environmental Monitoring Volume 14 ; 14 ; 2012 ; http://pubs.rsc.org/ >
@@ -1510,23 +1514,10 @@
         eissn = 2050-7895
       >
 
-      comment[years] = Published 2013-2016
+      comment[years] = Published 2013-present
       param[journal_code] = em
 
-      au < manifest ; 1999 ; Environmental Science: Processes & Impacts Volume 1 ; 1 ; 1999 ; https://pubs.rsc.org/ >
-      au < manifest ; 2000 ; Environmental Science: Processes & Impacts Volume 2 ; 2 ; 2000 ; https://pubs.rsc.org/ >
-      au < manifest ; 2001 ; Environmental Science: Processes & Impacts Volume 3 ; 3 ; 2001 ; https://pubs.rsc.org/ >
-      au < manifest ; 2002 ; Environmental Science: Processes & Impacts Volume 4 ; 4 ; 2002 ; https://pubs.rsc.org/ >
-      au < manifest ; 2003 ; Environmental Science: Processes & Impacts Volume 5 ; 5 ; 2003 ; https://pubs.rsc.org/ >
-      au < manifest ; 2004 ; Environmental Science: Processes & Impacts Volume 6 ; 6 ; 2004 ; https://pubs.rsc.org/ >
-      au < manifest ; 2005 ; Environmental Science: Processes & Impacts Volume 7 ; 7 ; 2005 ; https://pubs.rsc.org/ >
-      au < manifest ; 2006 ; Environmental Science: Processes & Impacts Volume 8 ; 8 ; 2006 ; https://pubs.rsc.org/ >
-      au < manifest ; 2007 ; Environmental Science: Processes & Impacts Volume 9 ; 9 ; 2007 ; https://pubs.rsc.org/ >
-      au < manifest ; 2008 ; Environmental Science: Processes & Impacts Volume 10 ; 10 ; 2008 ; https://pubs.rsc.org/ >
-      au < manifest ; 2009 ; Environmental Science: Processes & Impacts Volume 11 ; 11 ; 2009 ; https://pubs.rsc.org/ >
-      au < manifest ; 2010 ; Environmental Science: Processes & Impacts Volume 12 ; 12 ; 2010 ; https://pubs.rsc.org/ >
-      au < manifest ; 2011 ; Environmental Science: Processes & Impacts Volume 13 ; 13 ; 2011 ; https://pubs.rsc.org/ >
-      au < manifest ; 2012 ; Environmental Science: Processes & Impacts Volume 14 ; 14 ; 2012 ; https://pubs.rsc.org/ >
+      #complete. for 1999-2012 see another title block
       au < released ; 2013 ; Environmental Science: Processes & Impacts Volume 15 ; 15 ; 2013 ; http://pubs.rsc.org/ >
       au < released ; 2014 ; Environmental Science: Processes & Impacts Volume 16 ; 16 ; 2014 ; http://pubs.rsc.org/ >
       au < released ; 2015 ; Environmental Science: Processes & Impacts Volume 17 ; 17 ; 2015 ; http://pubs.rsc.org/ >
