@@ -157,7 +157,7 @@
       param[journal_code] = pc
 
       #complete
-      au < manifest ; exists ; 1996 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 93 ; 93 ; 1996 ; https://pubs.rsc.org/ ; >
+      au < exists ; exists ; 1996 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 92 ; 92 ; 1996 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 1997 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 93 ; 93 ; 1997 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 1998 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 94 ; 94 ; 1998 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 1999 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 95 ; 95 ; 1999 ; https://pubs.rsc.org/ ; >
