@@ -441,20 +441,20 @@
   }
 
 
-  {
-
-      title <
-        name = Clinical Psyhology in Europe ;
-        eissn = 2625-3410
-      >
-
-      param[au_oai_set] = cpe
-
-      au < manifest ; 2019 ; 2019 ; Clinical Psyhology in Europe Volume 2019 ; 2019 ; https://cpe.psychopen.eu/ >
-      au < expected ; 2020 ; 2020 ; Clinical Psyhology in Europe Volume 2020 ; 2020 ; https://cpe.psychopen.eu/ >
-
-  }
-
+#  {
+#
+#      title <
+#        name = Clinical Psyhology in Europe ;
+#        eissn = 2625-3410
+#      >
+#
+#      param[au_oai_set] = cpe
+#
+#      au < manifest ; 2019 ; 2019 ; Clinical Psyhology in Europe Volume 2019 ; 2019 ; https://cpe.psychopen.eu/ >
+#      au < expected ; 2020 ; 2020 ; Clinical Psyhology in Europe Volume 2020 ; 2020 ; https://cpe.psychopen.eu/ >
+#
+#  }
+#
 
   {
 
@@ -496,10 +496,9 @@
       >
 
       param[au_oai_set] = hmj
+      #no longer at Pensoft
 
       au < released ; 2018 ; 2018 ; History of Medicine Volume 2018 ; 2018 ; https://hmj.pensoft.net/ >
-      au < manifest ; 2019 ; 2019 ; History of Medicine Volume 2019 ; 2019 ; https://hmj.pensoft.net/ >
-      au < expected ; 2020 ; 2020 ; History of Medicine Volume 2020 ; 2020 ; https://hmj.pensoft.net/ >
 
   }
 
@@ -662,7 +661,7 @@
         eissn = 2367-7163
       >
 
-      param[au_oai_set] = riojournal.com
+      param[au_oai_set] = rio
 
       au < exists ; 2015 ; 2015 ; Research Ideas and Outcomes Volume 2015 ; 2015 ; https://riojournal.com/ >
       au < exists ; 2016 ; 2016 ; Research Ideas and Outcomes Volume 2016 ; 2016 ; https://riojournal.com/ >
@@ -711,43 +710,41 @@
   }
 
 
-  {
-
-      title <
-        name = Russian Journal of Economics ;
-        issn = 2618-7213 ;
-        eissn = 2405-4739
-      >
-
-      param[au_oai_set] = rujec.org
-
-      au < exists ; 2015 ; 2015 ; Russian Journal of Economics Volume 2015 ; 2015 ; https://rujec.org/ >
-      au < exists ; 2016 ; 2016 ; Russian Journal of Economics Volume 2016 ; 2016 ; https://rujec.org/ >
-      au < exists ; 2017 ; 2017 ; Russian Journal of Economics Volume 2017 ; 2017 ; https://rujec.org/ >
-      au < exists ; 2018 ; 2018 ; Russian Journal of Economics Volume 2018 ; 2018 ; https://rujec.org/ >
-      au < exists ; 2019 ; 2019 ; Russian Journal of Economics Volume 2019 ; 2019 ; https://rujec.org/ >
-      au < expected ; 2020 ; 2020 ; Russian Journal of Economics Volume 2020 ; 2020 ; https://rujec.org/ >
-
-  }
-
-
-  {
-
-      title <
-        name = Social Psychological Bulletin ;
-        issn = 1896-1800 ;
-        eissn = 2569-653X
-      >
-
-      param[au_oai_set] = sbp
-
-      au < exists ; 2018 ; 2018 ; Social Psychological Bulletin Volume 2018 ; 2018 ; https://spb.psychopen.eu/ >
-      au < exists ; 2019 ; 2019 ; Social Psychological Bulletin Volume 2019 ; 2019 ; https://spb.psychopen.eu/ >
-      au < expected ; 2020 ; 2020 ; Social Psychological Bulletin Volume 2020 ; 2020 ; https://spb.psychopen.eu/ >
-
-  }
-
-
+#  {
+#
+#      title <
+#        name = Russian Journal of Economics ;
+#        issn = 2618-7213 ;
+#        eissn = 2405-4739
+#      >
+#
+#      param[au_oai_set] = rujec.org
+#
+#      au < exists ; 2015 ; 2015 ; Russian Journal of Economics Volume 2015 ; 2015 ; https://rujec.org/ >
+#      au < exists ; 2016 ; 2016 ; Russian Journal of Economics Volume 2016 ; 2016 ; https://rujec.org/ >
+#      au < exists ; 2017 ; 2017 ; Russian Journal of Economics Volume 2017 ; 2017 ; https://rujec.org/ >
+#      au < exists ; 2018 ; 2018 ; Russian Journal of Economics Volume 2018 ; 2018 ; https://rujec.org/ >
+#      au < exists ; 2019 ; 2019 ; Russian Journal of Economics Volume 2019 ; 2019 ; https://rujec.org/ >
+#      au < expected ; 2020 ; 2020 ; Russian Journal of Economics Volume 2020 ; 2020 ; https://rujec.org/ >
+#
+#  }
+#
+#  {
+#
+#      title <
+#        name = Social Psychological Bulletin ;
+#        issn = 1896-1800 ;
+#        eissn = 2569-653X
+#      >
+#
+#      param[au_oai_set] = sbp
+#
+#      au < exists ; 2018 ; 2018 ; Social Psychological Bulletin Volume 2018 ; 2018 ; https://spb.psychopen.eu/ >
+#      au < exists ; 2019 ; 2019 ; Social Psychological Bulletin Volume 2019 ; 2019 ; https://spb.psychopen.eu/ >
+#      au < expected ; 2020 ; 2020 ; Social Psychological Bulletin Volume 2020 ; 2020 ; https://spb.psychopen.eu/ >
+#
+#  }
+#
   {
 
       title <

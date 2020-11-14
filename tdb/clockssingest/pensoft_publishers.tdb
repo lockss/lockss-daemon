@@ -446,6 +446,20 @@
   }
 
 
+#  {
+#
+#      title <
+#        name = Clinical Psyhology in Europe ;
+#        eissn = 2625-3410
+#      >
+#
+#      param[au_oai_set] = cpe
+#
+#      au < exists ; exists ; 2019 ; 2019 ; Clinical Psyhology in Europe Volume 2019 ; 2019 ; https://cpe.psychopen.eu/ ; >
+#      au < expected ; exists ; 2020 ; 2020 ; Clinical Psyhology in Europe Volume 2020 ; 2020 ; https://cpe.psychopen.eu/ ; >
+#
+#  }
+#
   {
 
       title <
@@ -718,7 +732,22 @@
 #
 #  }
 #
-
+#  {
+#
+#      title <
+#        name = Social Psychological Bulletin ;
+#        issn = 1896-1800 ;
+#        eissn = 2569-653X
+#      >
+#
+#      param[au_oai_set] = sbp
+#
+#      au < exists ; 2018 ; 2018 ; Social Psychological Bulletin Volume 2018 ; 2018 ; https://spb.psychopen.eu/ >
+#      au < exists ; 2019 ; 2019 ; Social Psychological Bulletin Volume 2019 ; 2019 ; https://spb.psychopen.eu/ >
+#      au < expected ; 2020 ; 2020 ; Social Psychological Bulletin Volume 2020 ; 2020 ; https://spb.psychopen.eu/ >
+#
+#  }
+#
   {
 
       title <
