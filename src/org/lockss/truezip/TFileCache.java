@@ -308,7 +308,7 @@ public class TFileCache {
       CachedUrl splitZipCu =
           au.makeCachedUrl(replaceZipExtension(cu.getUrl(), prefix, digits, i));
 
-      if (splitZipCu.hasContent()) {
+      if (splitZipCu != null && splitZipCu.hasContent()) {
         return splitZipCu;
       }
     }
