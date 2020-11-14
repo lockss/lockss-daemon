@@ -34,6 +34,8 @@ package org.lockss.plugin.base;
 
 import java.io.*;
 import java.net.*;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.*;
 import java.util.regex.*;
 import java.math.BigInteger;
@@ -41,6 +43,7 @@ import junit.framework.*;
 
 import de.schlichtherle.truezip.file.*;
 
+import org.apache.commons.io.output.NullOutputStream;
 import org.lockss.plugin.*;
 import org.lockss.plugin.PluginManager.CuContentReq;
 import org.lockss.plugin.simulated.*;
@@ -161,6 +164,59 @@ public class TestArchiveMembers extends LockssTestCase {
 			  url + "!/" + memberName, cu);
   }
 
+  void assertArchiveMemberByHash(String expHash, String expMime, long expSize, String url,
+                                 String memberName) throws IOException, NoSuchAlgorithmException {
+
+    CachedUrl cu0 = simau.makeCachedUrl(url);
+    assertTrue("Archive file not found: " + url, cu0.hasContent());
+
+    CachedUrl cu = cu0.getArchiveMemberCu(ArchiveMemberSpec.fromCu(cu0, memberName));
+
+    assertArchiveMemberCuByHash(expHash, expMime, expSize, url + "!/" + memberName, cu, null);
+  }
+
+  void assertArchiveMemberCuByHash(String expHash, String expMime, long expSize, String expMembUrl,
+                                   CachedUrl cu, CachedUrl arcCu) throws IOException, NoSuchAlgorithmException {
+
+    assertClass(BaseCachedUrl.Member.class, cu);
+
+    assertTrue("Should have content: " + cu, cu.hasContent());
+    assertEquals(expMembUrl, cu.getUrl());
+    assertEquals(expSize, cu.getContentSize());
+
+    // Compute MD5 hash and assert it matches
+    try (InputStream is = cu.getUnfilteredInputStream()) {
+      assertNotNull("getUnfilteredInputStream was null: " + cu, is);
+      assertEquals(expHash, hashInputStream(is, "MD5"));
+    }
+
+    Properties props = cu.getProperties();
+    assertEquals(expSize, props.get("Length"));
+
+    assertEquals(expMembUrl, props.get(CachedUrl.PROPERTY_NODE_URL));
+    assertEquals(expMime, cu.getContentType());
+
+    if (arcCu != null) {
+      Properties arcProps = arcCu.getProperties();
+
+      // Last-Modified should be present and not the same as that of the
+      // archive (see BaseCachedUrl.synthesizeProperties() )
+      assertNotEquals(arcProps.get(CachedUrl.PROPERTY_LAST_MODIFIED), props.get(CachedUrl.PROPERTY_LAST_MODIFIED));
+    }
+
+    assertNotNull(props.get(CachedUrl.PROPERTY_LAST_MODIFIED));
+  }
+
+  String hashInputStream(InputStream is, String alg) throws IOException, NoSuchAlgorithmException {
+    MessageDigest dig = MessageDigest.getInstance(alg);
+    HashedInputStream.Hasher hasher = new HashedInputStream.Hasher(dig);
+    HashedInputStream his = new HashedInputStream(is, hasher);
+    StreamUtil.copy(his, NullOutputStream.NULL_OUTPUT_STREAM);
+    byte[] hashOfContent = hasher.getDigest().digest();
+
+    return ByteArray.toHexString(hashOfContent);
+  }
+
   void assertArchiveMemberCu(String expContentRe, String expMime, long expSize,
 			     String expMembUrl, CachedUrl cu)
       throws IOException {
@@ -171,7 +227,7 @@ public class TestArchiveMembers extends LockssTestCase {
 			     String expMembUrl, CachedUrl cu, CachedUrl arcCu)
       throws IOException {
     assertClass(BaseCachedUrl.Member.class, cu);
-    assertTrue(cu.hasContent());
+    assertTrue("Should have content: " + cu, cu.hasContent());
     assertEquals(expMembUrl, cu.getUrl());
     InputStream is = cu.getUnfilteredInputStream();
     assertNotNull("getUnfilteredInputStream was null: " + cu, is);
@@ -219,6 +275,39 @@ public class TestArchiveMembers extends LockssTestCase {
     assertArchiveMember("this is bin",
 			null, 12,
 			aurl, "branch5/branch2/001file.bin");
+  }
+
+  public void testSplitZips() throws Exception {
+    PluginTestUtil.crawlSimAu(simau);
+
+    String aurl = "http://www.example.com/splitzip/lockss-core-daemon.src.zip";
+    String burl = "http://www.example.com/splitzip2/FOO.ZIP?xyzzy=foo&wolf=woof";
+
+    assertArchiveMemberByHash("212FBD3A7965442ED3CCA401A0D9BD06", null,
+        4765, aurl, "daemon/ArchiveEntry.java");
+
+    assertArchiveMemberByHash("99EF7447C09A6DBED0D21054FE01CA91", null,
+        14165, aurl, "daemon/LockssThread.java");
+
+    assertArchiveMemberByHash("B8248EE9F450516DFB9B6D298712C9AD", "text/html",
+        119, aurl, "daemon/status/package.html");
+
+
+    assertArchiveMemberByHash("5DA12A97178F6A612FE0D3AEA7054C86", null,
+        32768, burl, "foo/d");
+
+    assertNoArchiveMember(aurl, "none.html");
+  }
+
+  public void testReplaceZipExtension() throws Exception {
+    assertEquals("http://www.example.com/foo/zip1.z01",
+        TFileCache.replaceZipExtension("http://www.example.com/foo/zip1.zip", "z", 2, 1));
+
+    assertEquals("http://www.example.com/foo/zip1.Z01?",
+        TFileCache.replaceZipExtension("http://www.example.com/foo/zip1.zip?", "Z", 2, 1));
+
+    assertEquals("http://www.example.com/foo/zip1.z01?bar=xyzzy",
+        TFileCache.replaceZipExtension("http://www.example.com/foo/zip1.zip?bar=xyzzy", "z", 2, 1));
   }
 
   public void testInferContentType() throws Exception {
@@ -341,6 +430,7 @@ public class TestArchiveMembers extends LockssTestCase {
 	htmlcnt++;
 	int depth =
 	  (m1.group(1) != null ? 1 : 0) + (m1.group(2) != null ? 1 : 0);
+	log.debug("Checking member: " + url);
 	String expContent =
 	  String.format("This is file %s, depth %s, branch %s",
 			m1.group(3),
