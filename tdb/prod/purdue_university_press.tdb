@@ -65,14 +65,14 @@
       param[base_url] = http://clcwebjournal.lib.purdue.edu/
       implicit < status ; year ; name ; param[year] ; param[volume] >
     
-      au < down ; 1999 ; CLCWeb: Comparative Literature and Culture Volume 1 ; 1999 ; 1 >
-      au < down ; 2000 ; CLCWeb: Comparative Literature and Culture Volume 2 ; 2000 ; 2 >
-      au < down ; 2001 ; CLCWeb: Comparative Literature and Culture Volume 3 ; 2001 ; 3 >
-      au < down ; 2002 ; CLCWeb: Comparative Literature and Culture Volume 4 ; 2002 ; 4 >
-      au < down ; 2003 ; CLCWeb: Comparative Literature and Culture Volume 5 ; 2003 ; 5 >
-      au < down ; 2004 ; CLCWeb: Comparative Literature and Culture Volume 6 ; 2004 ; 6 >
-      au < down ; 2005 ; CLCWeb: Comparative Literature and Culture Volume 7 ; 2005 ; 7 >
-      au < down ; 2006 ; CLCWeb: Comparative Literature and Culture Volume 8 ; 2006 ; 8 >
+      au < superseded ; 1999 ; CLCWeb: Comparative Literature and Culture Volume 1 [superseded] ; 1999 ; 1 >
+      au < superseded ; 2000 ; CLCWeb: Comparative Literature and Culture Volume 2 [superseded] ; 2000 ; 2 >
+      au < superseded ; 2001 ; CLCWeb: Comparative Literature and Culture Volume 3 [superseded] ; 2001 ; 3 >
+      au < superseded ; 2002 ; CLCWeb: Comparative Literature and Culture Volume 4 [superseded] ; 2002 ; 4 >
+      au < superseded ; 2003 ; CLCWeb: Comparative Literature and Culture Volume 5 [superseded] ; 2003 ; 5 >
+      au < superseded ; 2004 ; CLCWeb: Comparative Literature and Culture Volume 6 [superseded] ; 2004 ; 6 >
+      au < superseded ; 2005 ; CLCWeb: Comparative Literature and Culture Volume 7 [superseded] ; 2005 ; 7 >
+      au < superseded ; 2006 ; CLCWeb: Comparative Literature and Culture Volume 8 [superseded] ; 2006 ; 8 >
   
     }
     
@@ -83,14 +83,14 @@
       param[journal_abbr] = clcweb
       implicit < status ; year ; name ; param[volume] ; param[base_url] >
       
-      au < doNotProcess ; 1999 ; CLCWeb: Comparative Literature and Culture Volume 1 ; 1 ; https://docs.lib.purdue.edu/ >
-      au < doNotProcess ; 2000 ; CLCWeb: Comparative Literature and Culture Volume 2 ; 2 ; https://docs.lib.purdue.edu/ >
-      au < doNotProcess ; 2001 ; CLCWeb: Comparative Literature and Culture Volume 3 ; 3 ; https://docs.lib.purdue.edu/ >
-      au < doNotProcess ; 2002 ; CLCWeb: Comparative Literature and Culture Volume 4 ; 4 ; https://docs.lib.purdue.edu/ >
-      au < doNotProcess ; 2003 ; CLCWeb: Comparative Literature and Culture Volume 5 ; 5 ; https://docs.lib.purdue.edu/ >
-      au < doNotProcess ; 2004 ; CLCWeb: Comparative Literature and Culture Volume 6 ; 6 ; https://docs.lib.purdue.edu/ >
-      au < doNotProcess ; 2005 ; CLCWeb: Comparative Literature and Culture Volume 7 ; 7 ; https://docs.lib.purdue.edu/ >
-      au < doNotProcess ; 2006 ; CLCWeb: Comparative Literature and Culture Volume 8 ; 8 ; https://docs.lib.purdue.edu/ >
+      au < exists ; 1999 ; CLCWeb: Comparative Literature and Culture Volume 1 ; 1 ; https://docs.lib.purdue.edu/ >
+      au < exists ; 2000 ; CLCWeb: Comparative Literature and Culture Volume 2 ; 2 ; https://docs.lib.purdue.edu/ >
+      au < exists ; 2001 ; CLCWeb: Comparative Literature and Culture Volume 3 ; 3 ; https://docs.lib.purdue.edu/ >
+      au < exists ; 2002 ; CLCWeb: Comparative Literature and Culture Volume 4 ; 4 ; https://docs.lib.purdue.edu/ >
+      au < exists ; 2003 ; CLCWeb: Comparative Literature and Culture Volume 5 ; 5 ; https://docs.lib.purdue.edu/ >
+      au < exists ; 2004 ; CLCWeb: Comparative Literature and Culture Volume 6 ; 6 ; https://docs.lib.purdue.edu/ >
+      au < exists ; 2005 ; CLCWeb: Comparative Literature and Culture Volume 7 ; 7 ; https://docs.lib.purdue.edu/ >
+      au < exists ; 2006 ; CLCWeb: Comparative Literature and Culture Volume 8 ; 8 ; https://docs.lib.purdue.edu/ >
       au < released ; 2007 ; CLCWeb: Comparative Literature and Culture Volume 9 ; 9 ; http://docs.lib.purdue.edu/ >
       au < released ; 2008 ; CLCWeb: Comparative Literature and Culture Volume 10 ; 10 ; http://docs.lib.purdue.edu/ >
       au < released ; 2009 ; CLCWeb: Comparative Literature and Culture Volume 11 ; 11 ; http://docs.lib.purdue.edu/ >
