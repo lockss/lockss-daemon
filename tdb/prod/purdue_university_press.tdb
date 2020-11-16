@@ -160,35 +160,6 @@
   }
 
   {
-  
-    title < 
-      name = Interdisciplinary Journal of Problem-Based Learning ;
-      eissn = 1541-5015 
-    >
-    
-    plugin = org.lockss.plugin.bepress.BePressPlugin
-#    param[base_url] = http://docs.lib.purdue.edu/
-    param[journal_abbr] = ijpbl
-    implicit < status ; year ; name ; param[volume] ; param[base_url] >
-
-    au < exists ; 2006 ; Interdisciplinary Journal of Problem-Based Learning Volume 1 ; 1 ; https://docs.lib.purdue.edu/ >
-    au < exists ; 2008 ; Interdisciplinary Journal of Problem-Based Learning volume 2 ; 2 ; https://docs.lib.purdue.edu/ >
-    au < exists ; 2009 ; Interdisciplinary Journal of Problem-Based Learning Volume 3 ; 3 ; https://docs.lib.purdue.edu/ >
-    au < exists ; 2010 ; Interdisciplinary Journal of Problem-Based Learning Volume 4 ; 4 ; https://docs.lib.purdue.edu/ >
-    au < exists ; 2011 ; Interdisciplinary Journal of Problem-Based Learning Volume 5 ; 5 ; https://docs.lib.purdue.edu/ >
-    au < exists ; 2012 ; Interdisciplinary Journal of Problem-Based Learning Volume 6 ; 6 ; http://docs.lib.purdue.edu/ >
-    au < exists ; 2013 ; Interdisciplinary Journal of Problem-Based Learning Volume 7 ; 7 ; http://docs.lib.purdue.edu/ >
-    au < exists ; 2014 ; Interdisciplinary Journal of Problem-Based Learning Volume 8 ; 8 ; http://docs.lib.purdue.edu/ >
-    au < exists ; 2015 ; Interdisciplinary Journal of Problem-Based Learning Volume 9 ; 9 ; http://docs.lib.purdue.edu/ >
-    au < exists ; 2016 ; Interdisciplinary Journal of Problem-Based Learning Volume 10 ; 10 ; http://docs.lib.purdue.edu/ >
-    au < exists ; 2017 ; Interdisciplinary Journal of Problem-Based Learning Volume 11 ; 11 ; http://docs.lib.purdue.edu/ >
-    au < exists ; 2018 ; Interdisciplinary Journal of Problem-Based Learning Volume 12 ; 12 ; https://docs.lib.purdue.edu/ >
-    au < exists ; 2019 ; Interdisciplinary Journal of Problem-Based Learning Volume 13 ; 13 ; https://docs.lib.purdue.edu/ >
-    au < exists ; 2020 ; Interdisciplinary Journal of Problem-Based Learning Volume 14 ; 14 ; https://docs.lib.purdue.edu/ >
-
-  }
-  
-  {
 
    title < 
       name = Journal of Aviation Technology and Engineering ;
