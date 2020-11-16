@@ -33,6 +33,9 @@ Installed Packages:
   apt-get install python sun-java7-jdk ant ant-optional
 )
 
+- In order to process split zip files, the command-line "zip" program must
+  be installed.
+
 Other Prerequisites:
 
 - Junit is included in the LOCKSS source distribution, but the Ant targets
@@ -44,6 +47,7 @@ Other Prerequisites:
   in which the JDK is installed.  (I.e., it's expected that tools.jar can
   be found in ${JAVA_HOME}/lib)
 
+- Some of the tests require the command-line "zip" program to be installed.
 
 To Build
 --------
