@@ -469,7 +469,10 @@
       au < doNotProcess ; doNotProcess ; 2012 ; Journal of Medical Microbiology Volume 61 ; 61 ; https://www.microbiologyresearch.org/ ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Journal of Medical Microbiology Volume 62 ; 62 ; https://www.microbiologyresearch.org/ ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Medical Microbiology Volume 63 ; 63 ; https://www.microbiologyresearch.org/ ; >
+
+      au < doNotProcess ; doNotProcess ; 2015 ; Journal of Medical Microbiology Volume 64 ; 64 ; https://www.microbiologyresearch.org/ ; >
       au < finished ; finished ; 2015 ; Journal of Medical Microbiology Volume 64 ; 64 ; http://jmm.microbiologyresearch.org/ ; reingest1.clockss.org:8082 >
+
       au < frozen ; exists ; 2016 ; Journal of Medical Microbiology Volume 65 ; 65 ; https://www.microbiologyresearch.org/ ; >
       au < frozen ; exists ; 2017 ; Journal of Medical Microbiology Volume 66 ; 66 ; https://www.microbiologyresearch.org/ ; >
       au < frozen ; exists ; 2018 ; Journal of Medical Microbiology Volume 67 ; 67 ; https://www.microbiologyresearch.org/ ; >
@@ -488,10 +491,13 @@
       param[journal_id] = jmmcr
 
       au < frozen ; exists ; 2014 ; JMM Case Reports Volume 1 ; 1 ; https://www.microbiologyresearch.org/ ; >
+
       au < doNotProcess ; doNotProcess ; 2015 ; JMM Case Reports Volume 2 ; 2 ; https://www.microbiologyresearch.org/ ; >
       au < finished ; finished ; 2015 ; JMM Case Reports Volume 2 ; 2 ; http://jmmcr.microbiologyresearch.org/ ; reingest5.clockss.org:8082 >
+
       au < doNotProcess ; doNotProcess ; 2016 ; JMM Case Reports Volume 3 ; 3 ; https://www.microbiologyresearch.org/ ; >
       au < frozen ; exists ; 2016 ; JMM Case Reports Volume 3 ; 3 ; http://jmmcr.microbiologyresearch.org/ ; reingest3.clockss.org:8083 >
+
       au < frozen ; exists ; 2017 ; JMM Case Reports Volume 4 ; 4 ; https://www.microbiologyresearch.org/ ; >
       au < frozen ; exists ; 2018 ; JMM Case Reports Volume 5 ; 5 ; https://www.microbiologyresearch.org/ ; >
       au < frozen ; exists ; 2019 ; JMM Case Reports Volume 6 ; 6 ; https://www.microbiologyresearch.org/ ; >
@@ -508,7 +514,9 @@
       rights = openaccess
       param[journal_id] = mgen
 
+      au < doNotProcess ; doNotProcess ; 2015 ; Microbial Genomics Volume 1 ; 1 ; https://www.microbiologyresearch.org/ ; >
       au < finished ; finished ; 2015 ; Microbial Genomics Volume 1 ; 1 ; http://mgen.microbiologyresearch.org/ ; reingest5.clockss.org:8082 >
+
       au < frozen ; exists ; 2016 ; Microbial Genomics Volume 2 ; 2 ; https://www.microbiologyresearch.org/ ; >
       au < frozen ; exists ; 2017 ; Microbial Genomics Volume 3 ; 3 ; https://www.microbiologyresearch.org/ ; >
       au < finished ; manifest ; 2018 ; Microbial Genomics Volume 4 ; 4 ; https://www.microbiologyresearch.org/ ; reingest3.clockss.org:8083 >
@@ -550,7 +558,10 @@
       au < doNotProcess ; doNotProcess ; 2012 ; Microbiology Volume 158 ; 158 ; https://www.microbiologyresearch.org/ ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Microbiology Volume 159 ; 159 ; https://www.microbiologyresearch.org/ ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Microbiology Volume 160 ; 160 ; https://www.microbiologyresearch.org/ ; >
+
+      au < doNotProcess ; doNotProcess ; 2015 ; Microbiology Volume 161 ; 161 ; https://www.microbiologyresearch.org/ ; >
       au < zapped ; finished ; 2015 ; Microbiology Volume 161 ; 161 ; http://mic.microbiologyresearch.org/ ; reingest2.clockss.org:8085 >
+
       au < frozen ; exists ; 2016 ; Microbiology Volume 162 ; 162 ; https://www.microbiologyresearch.org/ ; >
       au < frozen ; exists ; 2017 ; Microbiology Volume 163 ; 163 ; https://www.microbiologyresearch.org/ ; >
       au < frozen ; exists ; 2018 ; Microbiology Volume 164 ; 164 ; https://www.microbiologyresearch.org/ ; >
