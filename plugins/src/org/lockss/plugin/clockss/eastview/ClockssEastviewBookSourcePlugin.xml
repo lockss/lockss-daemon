@@ -1,7 +1,10 @@
 <map>
     <entry>
         <string>plugin_status</string>
-        <string>ready</string>
+        <!-- source folder reorg, need plugin updated-->
+        <!--new one: https://clockss-test.lockss.org/sourcefiles/eastviewbooks-released/-->
+        <!--old one:   https://clockss-test.lockss.org/sourcefiles/eastview, inside it has "Ebook"-->
+        <string>development</string>
     </entry>
     <entry>
         <string>plugin_identifier</string>
