@@ -488,7 +488,9 @@
       param[journal_id] = jmmcr
 
       au < frozen ; exists ; 2014 ; JMM Case Reports Volume 1 ; 1 ; https://www.microbiologyresearch.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; JMM Case Reports Volume 2 ; 2 ; https://www.microbiologyresearch.org/ ; >
       au < finished ; finished ; 2015 ; JMM Case Reports Volume 2 ; 2 ; http://jmmcr.microbiologyresearch.org/ ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2016 ; JMM Case Reports Volume 3 ; 3 ; https://www.microbiologyresearch.org/ ; >
       au < frozen ; exists ; 2016 ; JMM Case Reports Volume 3 ; 3 ; http://jmmcr.microbiologyresearch.org/ ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2017 ; JMM Case Reports Volume 4 ; 4 ; https://www.microbiologyresearch.org/ ; >
       au < frozen ; exists ; 2018 ; JMM Case Reports Volume 5 ; 5 ; https://www.microbiologyresearch.org/ ; >
@@ -500,7 +502,7 @@
   {
     title <
       name = Microbial Genomics ;
-      eissn =
+      eissn = 2057-5858
     >
 
       rights = openaccess
