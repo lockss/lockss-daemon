@@ -249,6 +249,7 @@ Args:
   <property name="jaxp.jar"       value="${lib}/javax.xml.jaxp.jar"/>
 <!--    <property name="xml.jar"  value="${lib}/org.apache.crimson.jar"/> -->
   <property name="log4j.jar" value="${lib}/log4j-1.2.13.jar"/>
+  <property name="commons.text.jar" value="${lib}/commons-text-1.9.jar" />
   <property name="commons.lang.jar"
 				  value="${lib}/commons-lang-2.6.jar"/>
   <property name="commons.lang3.jar"
@@ -489,6 +490,7 @@ Args:
   <!--  Classpaths -->
   <path id="compile.classpath">
     <pathelement path="${lockss.generated.jar}" />
+    <pathelement path="${commons.text.jar}" /><!-- @since 1.75 -->
     <pathelement path="${commons.lang.jar}" />
     <pathelement path="${commons.lang3.jar}" /><!-- @since 1.67 -->
     <pathelement path="${commons.collections.jar}" />

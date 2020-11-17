@@ -27,7 +27,7 @@
     au < finished ; manifest ; 2017 ; 1 ; Journal of the Endocrine Society Volume 1 ; 2017 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; 2 ; Journal of the Endocrine Society Volume 2 ; 2018 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2019 ; 3 ; Journal of the Endocrine Society Volume 3 ; 2019 ; >
-    au < manifest ; exists ; 2020 ; 4 ; Journal of the Endocrine Society Volume 4 ; 2020 ; >
+    au < testing ; exists ; 2020 ; 4 ; Journal of the Endocrine Society Volume 4 ; 2020 ; >
 
   }
 
@@ -83,8 +83,8 @@
       au < doNotProcess ; doNotProcess ; 2016 ; 37 ; Endocrine Reviews Volume 37 ; 2016 ; >
       au < finished ; manifest ; 2017 ; 38 ; Endocrine Reviews Volume 38 ; 2017 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2018 ; 39 ; Endocrine Reviews Volume 39 ; 2018 ; >
-      au < manifest ; exists ; 2019 ; 40 ; Endocrine Reviews Volume 40 ; 2019 ; >
-      au < manifest ; exists ; 2020 ; 41 ; Endocrine Reviews Volume 41 ; 2020 ; >
+      au < testing ; exists ; 2019 ; 40 ; Endocrine Reviews Volume 40 ; 2019 ; >
+      au < testing ; exists ; 2020 ; 41 ; Endocrine Reviews Volume 41 ; 2020 ; >
 
     }
 
@@ -205,8 +205,8 @@
       au < doNotProcess ; doNotProcess ; 2016 ; 157 ; Endocrinology Volume 157 ; 2016 ; >
       au < finished ; manifest ; 2017 ; 158 ; Endocrinology Volume 158 ; 2017 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018 ; 159 ; Endocrinology Volume 159 ; 2018 ; >
-      au < manifest ; exists ; 2019 ; 160 ; Endocrinology Volume 160 ; 2019 ; >
-      au < manifest ; exists ; 2020 ; 161 ; Endocrinology Volume 161 ; 2020 ; >
+      au < testing ; exists ; 2019 ; 160 ; Endocrinology Volume 160 ; 2019 ; >
+      au < testing ; exists ; 2020 ; 161 ; Endocrinology Volume 161 ; 2020 ; >
 
     }
 
@@ -303,8 +303,8 @@
       au < doNotProcess ; doNotProcess ; 2016 ; 101 ; Journal of Clinical Endocrinology & Metabolism Volume 101 ; 2016 ; >
       au < finished ; manifest ; 2017 ; 102 ; Journal of Clinical Endocrinology & Metabolism Volume 102 ; 2017 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018 ; 103 ; Journal of Clinical Endocrinology & Metabolism Volume 103 ; 2018 ; >
-      au < manifest ; exists ; 2019 ; 104 ; Journal of Clinical Endocrinology & Metabolism Volume 104 ; 2019 ; >
-      au < manifest ; exists ; 2020 ; 105 ; Journal of Clinical Endocrinology & Metabolism Volume 105 ; 2020 ; >
+      au < testing ; exists ; 2019 ; 104 ; Journal of Clinical Endocrinology & Metabolism Volume 104 ; 2019 ; >
+      au < testing ; exists ; 2020 ; 105 ; Journal of Clinical Endocrinology & Metabolism Volume 105 ; 2020 ; >
 
     }
 

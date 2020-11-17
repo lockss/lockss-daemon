@@ -24,7 +24,7 @@
 
       param[journal_id] = am-lit-scholarship
 
-      au < crawling ; exists ; 2016 ; 2016 ; American Literary Scholarship 2016 ; 2014 ; >
+      au < frozen ; exists ; 2016 ; 2016 ; American Literary Scholarship 2016 ; 2014 ; >
       au < manifest ; exists ; 2017 ; 2017 ; American Literary Scholarship 2017 ; 2015 ; >
       au < manifest ; exists ; 2018 ; 2018 ; American Literary Scholarship 2018 ; 2016 ; >
       au < notReady ; exists ; 2019 ; 2019 ; American Literary Scholarship 2019 ; 2017 ; > #unable to add to AUTest
@@ -617,7 +617,7 @@
       param[journal_id] = labor
 
       au < manifest ; exists ; 2017 ; 2017 ; Labor: Studies in Working-Class History of the Americas Volume 14 ; 14 ; >
-      au < crawling ; exists ; 2018 ; 2018 ; Labor: Studies in Working-Class History of the Americas Volume 15 ; 15 ; >
+      au < frozen ; exists ; 2018 ; 2018 ; Labor: Studies in Working-Class History of the Americas Volume 15 ; 15 ; >
       au < manifest ; exists ; 2019 ; 2019 ; Labor: Studies in Working-Class History of the Americas Volume 16 ; 16 ; >
       au < manifest ; exists ; 2020 ; 2020 ; Labor: Studies in Working-Class History of the Americas Volume 17 ; 17 ; >
 
@@ -1026,7 +1026,7 @@
       param[journal_id] = theater
 
       au < manifest ; exists ; 2017 ; 2017 ; Theater Volume 47 ; 47 ; >
-      au < crawling ; exists ; 2018 ; 2018 ; Theater Volume 48 ; 48 ; >
+      au < frozen ; exists ; 2018 ; 2018 ; Theater Volume 48 ; 48 ; >
       au < manifest ; exists ; 2019 ; 2019 ; Theater Volume 49 ; 49 ; >
       au < manifest ; exists ; 2020 ; 2020 ; Theater Volume 50 ; 50 ; >
 
@@ -1059,7 +1059,7 @@
       #alternate title = TSQ
 
       au < manifest ; exists ; 2016 ; 2016 ; Transgender Studies Quarterly Volume 3 ; 3 ; >
-      au < crawling ; exists ; 2017 ; 2017 ; Transgender Studies Quarterly Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2017 ; 2017 ; Transgender Studies Quarterly Volume 4 ; 4 ; >
       au < manifest ; exists ; 2018 ; 2018 ; Transgender Studies Quarterly Volume 5 ; 5 ; >
       au < manifest ; exists ; 2019 ; 2019 ; Transgender Studies Quarterly Volume 6 ; 6 ; >
       au < manifest ; exists ; 2020 ; 2020 ; Transgender Studies Quarterly Volume 7 ; 7 ; >
@@ -1093,7 +1093,7 @@
       au < manifest ; exists ; 2014 ; 2014 ; Twentieth-Century Literature Volume 60 ; 60 ; >
       au < manifest ; exists ; 2015 ; 2015 ; Twentieth-Century Literature Volume 61 ; 61 ; >
       au < manifest ; exists ; 2016 ; 2016 ; Twentieth-Century Literature Volume 62 ; 62 ; >
-      au < crawling ; exists ; 2017 ; 2017 ; Twentieth-Century Literature Volume 63 ; 63 ; >
+      au < frozen ; exists ; 2017 ; 2017 ; Twentieth-Century Literature Volume 63 ; 63 ; >
       au < manifest ; exists ; 2018 ; 2018 ; Twentieth-Century Literature Volume 64 ; 64 ; >
       au < manifest ; exists ; 2019 ; 2019 ; Twentieth-Century Literature Volume 65 ; 65 ; >
       au < manifest ; exists ; 2020 ; 2020 ; Twentieth-Century Literature Volume 66 ; 66 ; >
