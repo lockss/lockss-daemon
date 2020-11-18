@@ -534,11 +534,14 @@
     >
 
     param[journal_id] = hgr
+    #V2 I1=2016, I2=2016, I3=2016, I4=2017
+    #V3 I1=2017, I2=2018, I3=2019, I4=2019
+    #V4 I1=2019, I2=2019, I3=2020
 
     au < released ; 2015 ; Hunter Gatherer Research Volume 1 ; 1 ; http://online.liverpooluniversitypress.co.uk/ >
     au < released ; 2016-2017 ; Hunter Gatherer Research Volume 2 ; 2 ; http://online.liverpooluniversitypress.co.uk/ >
     au < released ; 2017-2019 ; Hunter Gatherer Research Volume 3 ; 3 ; https://online.liverpooluniversitypress.co.uk/ > #issue 3, 4 not online
-    au < manifest ; 2018-2020 ; Hunter Gatherer Research Volume 4 ; 4 ; https://online.liverpooluniversitypress.co.uk/ > #issue 3, 4 not online
+    au < manifest ; 2019-2020 ; Hunter Gatherer Research Volume 4 ; 4 ; https://online.liverpooluniversitypress.co.uk/ > #issue 3, 4 not online
 
   }
 

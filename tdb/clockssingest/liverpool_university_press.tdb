@@ -537,6 +537,9 @@
     >
 
     param[journal_id] = hgr
+    #V2 I1=2016, I2=2016, I3=2016, I4=2017
+    #V3 I1=2017, I2=2018, I3=2019, I4=2019
+    #V4 I1=2019, I2=2019, I3=2020
 
     au < finished ; finished ; 2015 ; Hunter Gatherer Research Volume 1 ; 1 ; http://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2016-2017 ; Hunter Gatherer Research Volume 2 ; 2 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
