@@ -620,7 +620,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; American Journal of Clinical Pathology Volume 147-148 ; 147-148 ; >
     au < frozen ; exists ; 2018 ; 2018 ; American Journal of Clinical Pathology Volume 149-150 ; 149-150 ; >
     au < down ; exists ; 2019 ; 2019 ; American Journal of Clinical Pathology Volume 151-152 ; 151-152 ; >
-    au < testing ; exists ; 2020 ; 2020 ; American Journal of Clinical Pathology Volume 153-154 ; 153-154 ; >
+    au < ready ; exists ; 2020 ; 2020 ; American Journal of Clinical Pathology Volume 153-154 ; 153-154 ; >
 
   }
 
@@ -1272,7 +1272,7 @@
     au < finished ; finished ; 2017 ; 2017 ; Annals of Botany Volume 119-120 ; 119-120 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Annals of Botany Volume 121-122 ; 121-122 ; >
     au < down ; exists ; 2019 ; 2019 ; Annals of Botany Volume 123-124 ; 123-124 ; >
-    au < testing ; exists ; 2020 ; 2020 ; Annals of Botany Volume 125-126 ; 125-126 ; >
+    au < ready ; exists ; 2020 ; 2020 ; Annals of Botany Volume 125-126 ; 125-126 ; >
 
   }
 
@@ -2239,7 +2239,7 @@
     au < finished ; finished ; 2017 ; 2017 ; Biology Methods and Protocols Volume 2 ; 2 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2018 ; 2018 ; Biology Methods and Protocols Volume 3 ; 3 ; >
     au < down ; exists ; 2019 ; 2019 ; Biology Methods and Protocols Volume 4 ; 4 ; >
-    au < testing ; exists ; 2020 ; 2020 ; Biology Methods and Protocols Volume 5 ; 5 ; >
+    au < ready ; exists ; 2020 ; 2020 ; Biology Methods and Protocols Volume 5 ; 5 ; >
 
   }
 
@@ -3126,7 +3126,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Carcinogenesis Volume 38 ; 38 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Carcinogenesis Volume 39 ; 39 ; >
     au < down ; exists ; 2019 ; 2019 ; Carcinogenesis Volume 40 ; 40 ; >
-    au < testing ; exists ; 2020 ; 2020 ; Carcinogenesis Volume 41 ; 41 ; >
+    au < ready ; exists ; 2020 ; 2020 ; Carcinogenesis Volume 41 ; 41 ; >
 
   }
 
@@ -7351,7 +7351,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; ICSID Review: Foreign Investment Law Journal Volume 31 ; 31 ; >
     au < frozen ; exists ; 2017 ; 2017 ; ICSID Review: Foreign Investment Law Journal Volume 32 ; 32 ; >
     au < frozen ; exists ; 2018 ; 2018 ; ICSID Review: Foreign Investment Law Journal Volume 33 ; 33 ; >
-    au < notReady ; exists ; 2019 ; 2019 ; ICSID Review: Foreign Investment Law Journal Volume 34 ; 34 ; >
+    au < testing ; exists ; 2019 ; 2019 ; ICSID Review: Foreign Investment Law Journal Volume 34 ; 34 ; >
     au < notReady ; exists ; 2020 ; 2020 ; ICSID Review: Foreign Investment Law Journal Volume 35 ; 35 ; >
 
   }
@@ -10709,7 +10709,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Journal of Law and the Biosciences Volume 3 ; 3 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Journal of Law and the Biosciences Volume 4 ; 4 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Law and the Biosciences Volume 5 ; 5 ; >
-    au < notReady ; exists ; 2019 ; 2019 ; Journal of Law and the Biosciences Volume 6 ; 6 ; >
+    au < testing ; exists ; 2019 ; 2019 ; Journal of Law and the Biosciences Volume 6 ; 6 ; >
     au < notReady ; exists ; 2020 ; 2020 ; Journal of Law and the Biosciences Volume 7 ; 7 ; >
 
   }
@@ -13344,7 +13344,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Monthly Notices of the Royal Astronomical Society Volume 455-463 ; 455-463 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Monthly Notices of the Royal Astronomical Society Volume 464-472 ; 464-472 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Monthly Notices of the Royal Astronomical Society Volume 473-481 ; 473-481 ; >
-    au < notReady ; exists ; 2019 ; 2019 ; Monthly Notices of the Royal Astronomical Society Volume 482-490 ; 482-490 ; >
+    au < testing ; exists ; 2019 ; 2019 ; Monthly Notices of the Royal Astronomical Society Volume 482-490 ; 482-490 ; >
     au < notReady ; exists ; 2020 ; 2020 ; Monthly Notices of the Royal Astronomical Society Volume 491-499 ; 491-499 ; >
 
   }
@@ -16728,7 +16728,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Shakespeare Quarterly Volume 67 ; 67 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Shakespeare Quarterly Volume 68 ; 68 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Shakespeare Quarterly Volume 69 ; 69 ; >
-    au < notReady ; exists ; 2019 ; 2019 ; Shakespeare Quarterly Volume 70 ; 70 ; >
+    au < testing ; exists ; 2019 ; 2019 ; Shakespeare Quarterly Volume 70 ; 70 ; >
     au < notReady ; exists ; 2020 ; 2020 ; Shakespeare Quarterly Volume 71 ; 71 ; >
 
   }
@@ -18565,8 +18565,8 @@
       au < notReady ; exists ; 2016 ; 2016 ; The Journal of Applied Laboratory Medicine Volume 1 ; 1 ; >
       au < notReady ; exists ; 2017 ; 2017 ; The Journal of Applied Laboratory Medicine Volume 1-2 ; 1-2 ; >
       au < notReady ; exists ; 2018 ; 2018 ; The Journal of Applied Laboratory Medicine Volume 2-3 ; 2-3 ; >
-      au < manifest ; exists ; 2019 ; 2019 ; The Journal of Applied Laboratory Medicine Volume 3-4 ; 3-4 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; The Journal of Applied Laboratory Medicine Volume 5 ; 5 ; >
+      au < testing ; exists ; 2019 ; 2019 ; The Journal of Applied Laboratory Medicine Volume 3-4 ; 3-4 ; >
+      au < testing ; exists ; 2020 ; 2020 ; The Journal of Applied Laboratory Medicine Volume 5 ; 5 ; >
 
   }
 
@@ -19370,7 +19370,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; The Leo Baeck Institute Year Book Volume 61 ; 61 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The Leo Baeck Institute Year Book Volume 62 ; 62 ; >
     au < frozen ; exists ; 2018 ; 2018 ; The Leo Baeck Institute Year Book Volume 63 ; 63 ; >
-    au < notReady ; exists ; 2019 ; 2019 ; The Leo Baeck Institute Year Book Volume 64 ; 64 ; >
+    au < testing ; exists ; 2019 ; 2019 ; The Leo Baeck Institute Year Book Volume 64 ; 64 ; >
     au < notReady ; exists ; 2020 ; 2020 ; The Leo Baeck Institute Year Book Volume 65 ; 65 ; >
 
   }
@@ -19673,7 +19673,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; The Musical Quarterly Volume 100 ; 100 ; >
     au < frozen ; exists ; 2018 ; 2018 ; The Musical Quarterly Volume 101 ; 101 ; >
     au < down ; exists ; 2019 ; 2019 ; The Musical Quarterly Volume 102 ; 102 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; The Musical Quarterly Volume 103 ; 103 ; >
+    au < testing ; exists ; 2020 ; 2020 ; The Musical Quarterly Volume 103 ; 103 ; >
 
   }
 
@@ -19722,8 +19722,8 @@
     au < frozen ; exists ; 2016 ; 2016 ; The Opera Quarterly Volume 32 ; 32 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The Opera Quarterly Volume 33 ; 33 ; >
     au < frozen ; exists ; 2018 ; 2018 ; The Opera Quarterly Volume 34 ; 34 ; >
-    au < notReady ; exists ; 2019 ; 2019 ; The Opera Quarterly Volume 35 (2019) ; 35 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; The Opera Quarterly Volume 35 (2020) ; 36 ; >
+    au < testing ; exists ; 2019 ; 2019 ; The Opera Quarterly Volume 35 (2019) ; 35 ; >
+    au < testing ; exists ; 2020 ; 2020 ; The Opera Quarterly Volume 35 (2020) ; 36 ; >
 
   }
 
@@ -19869,7 +19869,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; The Philosophical Quarterly Volume 67 ; 67 ; >
     au < frozen ; exists ; 2018 ; 2018 ; The Philosophical Quarterly Volume 68 ; 68 ; >
     au < down ; exists ; 2019 ; 2019 ; The Philosophical Quarterly Volume 69 ; 69 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; The Philosophical Quarterly Volume 70 ; 70 ; >
+    au < testing ; exists ; 2020 ; 2020 ; The Philosophical Quarterly Volume 70 ; 70 ; >
 
   }
 
@@ -20016,7 +20016,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; The Quarterly Journal of Economics Volume 132 ; 132 ; >
     au < frozen ; exists ; 2018 ; 2018 ; The Quarterly Journal of Economics Volume 133 ; 133 ; >
     au < down ; exists ; 2019 ; 2019 ; The Quarterly Journal of Economics Volume 134 ; 134 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; The Quarterly Journal of Economics Volume 135 ; 135 ; >
+    au < testing ; exists ; 2020 ; 2020 ; The Quarterly Journal of Economics Volume 135 ; 135 ; >
 
   }
 
@@ -20121,7 +20121,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; The Quarterly Journal of Mathematics Volume 68 ; 68 ; >
     au < frozen ; exists ; 2018 ; 2018 ; The Quarterly Journal of Mathematics Volume 69 ; 69 ; >
     au < down ; exists ; 2019 ; 2019 ; The Quarterly Journal of Mathematics Volume 70 ; 70 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; The Quarterly Journal of Mathematics Volume 71 ; 71 ; >
+    au < testing ; exists ; 2020 ; 2020 ; The Quarterly Journal of Mathematics Volume 71 ; 71 ; >
 
   }
 
@@ -20208,7 +20208,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 70 ; 70 ; >
     au < frozen ; exists ; 2018 ; 2018 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 71 ; 71 ; >
     au < down ; exists ; 2019 ; 2019 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 72 ; 72 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 73 ; 73 ; >
+    au < testing ; exists ; 2020 ; 2020 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 73 ; 73 ; >
 
   }
 
@@ -20232,7 +20232,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; The Review of Asset Pricing Studies Volume 7 ; 7 ; >
     au < frozen ; exists ; 2018 ; 2018 ; The Review of Asset Pricing Studies Volume 8 ; 8 ; >
     au < down ; exists ; 2019 ; 2019 ; The Review of Asset Pricing Studies Volume 9 ; 9 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; The Review of Asset Pricing Studies Volume 10 ; 10 ; >
+    au < testing ; exists ; 2020 ; 2020 ; The Review of Asset Pricing Studies Volume 10 ; 10 ; >
 
   }
 
@@ -20255,7 +20255,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; The Review of Corporate Finance Studies Volume 6 ; 6 ; >
     au < frozen ; exists ; 2018 ; 2018 ; The Review of Corporate Finance Studies Volume 7 ; 7 ; >
     au < down ; exists ; 2019 ; 2019 ; The Review of Corporate Finance Studies Volume 8 ; 8 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; The Review of Corporate Finance Studies Volume 9 ; 9 ; >
+    au < testing ; exists ; 2020 ; 2020 ; The Review of Corporate Finance Studies Volume 9 ; 9 ; >
 
   }
 
@@ -20356,7 +20356,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; The Review of Economic Studies Volume 84 ; 84 ; >
     au < frozen ; exists ; 2018 ; 2018 ; The Review of Economic Studies Volume 85 ; 85 ; >
     au < down ; exists ; 2019 ; 2019 ; The Review of Economic Studies Volume 86 ; 86 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; The Review of Economic Studies Volume 87 ; 87 ; >
+    au < testing ; exists ; 2020 ; 2020 ; The Review of Economic Studies Volume 87 ; 87 ; >
 
   }
 
@@ -20465,7 +20465,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; The Review of English Studies Volume 68 ; 68 ; >
     au < frozen ; exists ; 2018 ; 2018 ; The Review of English Studies Volume 69 ; 69 ; >
     au < down ; exists ; 2019 ; 2019 ; The Review of English Studies Volume 70 ; 70 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; The Review of English Studies Volume 71 ; 71 ; >
+    au < testing ; exists ; 2020 ; 2020 ; The Review of English Studies Volume 71 ; 71 ; >
 
   }
 
@@ -20512,7 +20512,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; The Review of Financial Studies Volume 30 ; 30 ; >
     au < frozen ; exists ; 2018 ; 2018 ; The Review of Financial Studies Volume 31 ; 31 ; >
     au < down ; exists ; 2019 ; 2019 ; The Review of Financial Studies Volume 32 ; 32 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; The Review of Financial Studies Volume 33 ; 33 ; >
+    au < testing ; exists ; 2020 ; 2020 ; The Review of Financial Studies Volume 33 ; 33 ; >
 
   }
 
@@ -20560,7 +20560,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; The World Bank Economic Review Volume 31 ; 31 ; >
     au < frozen ; exists ; 2018 ; 2018 ; The World Bank Economic Review Volume 32 ; 32 ; >
     au < down ; exists ; 2019 ; 2019 ; The World Bank Economic Review Volume 33 ; 33 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; The World Bank Economic Review Volume 34 ; 34 ; >
+    au < testing ; exists ; 2020 ; 2020 ; The World Bank Economic Review Volume 34 ; 34 ; >
 
   }
 
@@ -20609,7 +20609,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; The World Bank Research Observer Volume 32 ; 32 ; >
     au < frozen ; exists ; 2018 ; 2018 ; The World Bank Research Observer Volume 33 ; 33 ; >
     au < down ; exists ; 2019 ; 2019 ; The World Bank Research Observer Volume 34 ; 34 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; The World Bank Research Observer Volume 35 ; 35 ; >
+    au < testing ; exists ; 2020 ; 2020 ; The World Bank Research Observer Volume 35 ; 35 ; >
 
   }
 
@@ -20650,7 +20650,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; The Year's Work in Critical and Cultural Theory Volume 25 ; 25 ; >
     au < frozen ; exists ; 2018 ; 2018 ; The Year's Work in Critical and Cultural Theory Volume 26 ; 26 ; >
     au < manifest; exists ; 2019 ; 2019 ; The Year's Work in Critical and Cultural Theory Volume 27 ; 27 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; The Year's Work in Critical and Cultural Theory Volume 28 ; 28 ; >
+    au < testing ; exists ; 2020 ; 2020 ; The Year's Work in Critical and Cultural Theory Volume 28 ; 28 ; >
 
   }
 
@@ -20760,7 +20760,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; The Year's Work in English Studies Volume 96 ; 96 ; >
     au < frozen ; exists ; 2018 ; 2018 ; The Year's Work in English Studies Volume 97 ; 97 ; >
     au < manifest; exists ; 2019 ; 2019 ; The Year's Work in English Studies Volume 98 ; 98 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; The Year's Work in English Studies Volume 99 ; 99 ; >
+    au < testing ; exists ; 2020 ; 2020 ; The Year's Work in English Studies Volume 99 ; 99 ; >
 
   }
 
@@ -20814,7 +20814,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Toxicological Sciences Volume 155-160 ; 155-160 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Toxicological Sciences Volume 161-166 ; 161-166 ; >
     au < down ; exists ; 2019 ; 2019 ; Toxicological Sciences Volume 167-172 ; 167-172 ; >
-    au < manifest ; exists ; 2020 ; 2020 ; Toxicological Sciences Volume 173-179 ; 173-179 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Toxicological Sciences Volume 173-179 ; 173-179 ; >
 
   }
 
@@ -20941,7 +20941,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 111 ; 111 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 112 ; 112 ; >
     au < down ; exists ; 2019 ; 2019 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 113 ; 113 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 114 ; 114 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 114 ; 114 ; >
 
   }
 
@@ -20972,7 +20972,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Translational Animal Science Volume 1 ; 1 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Translational Animal Science Volume 2 ; 2 ; >
     au < down ; exists ; 2019 ; 2019 ; Translational Animal Science Volume 3 ; 3 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; Translational Animal Science Volume 4 ; 4 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Translational Animal Science Volume 4 ; 4 ; >
 
   }
 
@@ -20996,7 +20996,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Translational Behavioral Medicine Volume 7 ; 7 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Translational Behavioral Medicine Volume 8 ; 8 ; >
     au < down ; exists ; 2019 ; 2019 ; Translational Behavioral Medicine Volume 9 ; 9 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; Translational Behavioral Medicine Volume 10 ; 10 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Translational Behavioral Medicine Volume 10 ; 10 ; >
 
   }
 
@@ -21045,7 +21045,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Tree Physiology Volume 37 ; 37 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Tree Physiology Volume 38 ; 38 ; >
     au < down ; exists ; 2019 ; 2019 ; Tree Physiology Volume 39 ; 39 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; Tree Physiology Volume 40 ; 40 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Tree Physiology Volume 40 ; 40 ; >
 
   }
 
@@ -21073,7 +21073,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Trusts & Trustees Volume 23 ; 23 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Trusts & Trustees Volume 24 ; 24 ; >
     au < down ; exists ; 2019 ; 2019 ; Trusts & Trustees Volume 25 ; 25 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; Trusts & Trustees Volume 26 ; 26 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Trusts & Trustees Volume 26 ; 26 ; >
 
   }
 
@@ -21118,7 +21118,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Twentieth Century British History Volume 28 ; 28 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Twentieth Century British History Volume 29 ; 29 ; >
     au < down ; exists ; 2019 ; 2019 ; Twentieth Century British History Volume 30 ; 30 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; Twentieth Century British History Volume 31 ; 31 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Twentieth Century British History Volume 31 ; 31 ; >
 
   }
 
@@ -21177,7 +21177,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Uniform Law Review - Revue de droit uniforme Volume 22 ; 22 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Uniform Law Review - Revue de droit uniforme Volume 23 ; 23 ; >
     au < down ; exists ; 2019 ; 2019 ; Uniform Law Review - Revue de droit uniforme Volume 24 ; 24 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; Uniform Law Review - Revue de droit uniforme Volume 25 ; 25 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Uniform Law Review - Revue de droit uniforme Volume 25 ; 25 ; >
 
   }
 
@@ -21196,7 +21196,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Virus Evolution Volume 3 ; 3 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Virus Evolution Volume 4 ; 4 ; >
     au < down ; exists ; 2019 ; 2019 ; Virus Evolution Volume 5 ; 5 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; Virus Evolution Volume 6 ; 6 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Virus Evolution Volume 6 ; 6 ; >
 
   }
 
@@ -21260,7 +21260,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Western Historical Quarterly Volume 48 ; 48 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Western Historical Quarterly Volume 49 ; 49 ; >
     au < down ; exists ; 2019 ; 2019 ; Western Historical Quarterly Volume 50 ; 50 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; Western Historical Quarterly Volume 51 ; 51 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Western Historical Quarterly Volume 51 ; 51 ; >
 
   }
 
@@ -21280,7 +21280,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Work, Aging and Retirement Volume 3 ; 3 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Work, Aging and Retirement Volume 4 ; 4 ; >
     au < down ; exists ; 2019 ; 2019 ; Work, Aging and Retirement Volume 5 ; 5 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; Work, Aging and Retirement Volume 6 ; 6 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Work, Aging and Retirement Volume 6 ; 6 ; >
 
   }
 
@@ -21333,7 +21333,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Yearbook of European Law Volume 36 ; 36 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Yearbook of European Law Volume 37 ; 37 ; >
     au < manifest; exists ; 2019 ; 2019 ; Yearbook of European Law Volume 38 ; 38 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; Yearbook of European Law Volume 39 ; 39 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Yearbook of European Law Volume 39 ; 39 ; >
 
   }
 
@@ -21398,7 +21398,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Zoological Journal of the Linnean Society Volume 179-181 ; 179-181 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Zoological Journal of the Linnean Society Volume 182-184 ; 182-184 ; >
     au < down ; exists ; 2019 ; 2019 ; Zoological Journal of the Linnean Society Volume 185-187 ; 185-187 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; Zoological Journal of the Linnean Society Volume 188-190 ; 188-190 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Zoological Journal of the Linnean Society Volume 188-190 ; 188-190 ; >
 
   }
   
