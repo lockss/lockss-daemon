@@ -15,7 +15,7 @@ public class SpringerJatsSourceZipXmlArticleIteratorFactory implements ArticleIt
     private static String ARTICLE_METADATA_JATS_XML_ROLE = "ArticleMetadataJatsXml";
 
     protected static final String ALL_ZIP_XML_PATTERN_TEMPLATE =
-            "\"%s[^/]+/.*\\.zip!/(.*)_(Article|OnlinePDF)(_\\d+)?\\.pdf$\", base_url";
+            "\"%s[^/]+/.*\\.zip!/(.*)_(Article|OnlinePDF|Book)(_\\d+)?\\.pdf$\", base_url";
 
     // Be sure to exclude all nested archives in case supplemental data is provided this way
     protected static final Pattern SUB_NESTED_ARCHIVE_PATTERN =
@@ -30,12 +30,26 @@ public class SpringerJatsSourceZipXmlArticleIteratorFactory implements ArticleIt
         return ALL_ZIP_XML_PATTERN_TEMPLATE;
     }
 
-    protected static final Pattern PDF_PATTERN = Pattern.compile("/BodyRef/PDF/(.*)_(Article|OnlinePDF)(_\\d+)?\\.pdf$");
-    protected static final String PDF_REPLACEMENT = "/BodyRef/PDF/$1.pdf";
+    protected static final Pattern PDF_PATTERN = Pattern.compile("/BodyRef/PDF/(.*)_(Article|OnlinePDF|Book)(_\\d+)?\\.pdf$");
+    protected static final String PDF_REPLACEMENT = "/BodyRef/PDF/$1_$2$3.pdf";
 
-    protected static final String XML_REPLACEMENT = "/$1_Article$3_nlm.xml";
+    /*
+    Article:
+    ftp_PUB_20-10-20_01-03-55.zip!/JOU=12289/VOL=2020.13/ISU=6/ART=1514/12289_2019_Article_1514_nlm.xml.Meta
+    ftp_PUB_20-10-20_01-03-55.zip!/JOU=12289/VOL=2020.13/ISU=6/ART=1514/BodyRef/PDF/12289_2019_Article_1514.pdf
 
-    protected static final String XML_META_REPLACEMENT = "/$1_Article$3_nlm.xml.Meta";
+    OnlinePDF:
+    ftp_PUB_20-01-22_05-42-08.zip!/JOU=10050/VOL=2018.54/ISU=11/ART=12611/10050_2018_Article_12611_nlm.xml.Meta
+    ftp_PUB_20-01-22_05-42-08.zip!/JOU=10050/VOL=2018.54/ISU=11/ART=12611/BodyRef/PDF/10050_2018_12611_OnlinePDF.pdf
+
+    Book:
+    ftp_PUB_20-10-02_01-04-17.zip!/BOK=978-1-4842-6103-3/978-1-4842-6103-3_Book_nlm.xml
+    ftp_PUB_20-10-02_01-04-17.zip!/BOK=978-1-4842-6103-3/BodyRef/PDF/978-1-4842-6103-3_Book.pdf
+
+     */
+    protected static final String XML_REPLACEMENT = "/$1_$2$3_nlm.xml";
+
+    protected static final String XML_META_REPLACEMENT = "/$1_$2$3_nlm.xml.Meta";
 
     @Override
     public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
