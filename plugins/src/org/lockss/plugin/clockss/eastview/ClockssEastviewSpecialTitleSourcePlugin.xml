@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.clockss.eastview.ClockssEastviewBackContentSourcePlugin</string>
+    <string>org.lockss.plugin.clockss.eastview.ClockssEastviewSpecialTitleSourcePlugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -26,19 +26,19 @@
   </entry>
   <entry>
     <string>plugin_parent</string>
-    <string>org.lockss.plugin.clockss.ClockssSourcePlugin</string>
+    <string>org.lockss.plugin.clockss.ClockssDirSourcePlugin</string>
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>15</string>
+    <string>1</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"East View Information Services Back Content Source Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
+    <string>"East View Information Services Special Title Source Plugin (CLOCKSS), Base URL %s, Directory %s", base_url, directory</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>East View Information Services Back Content Source Plugin (CLOCKSS)</string>
+    <string>East View Information Services Special Title Source Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_archive_file_types</string>
@@ -47,17 +47,24 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%s%d/.+\.tar.gz$", base_url, year</string>
+      <string>"^%s%s/.+\.zip$", base_url, directory</string>
     </list>
   </entry>
-  <!--
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <!-- exclude "Digital Archive" folder for now -->
+      <string>2,"https://clockss-test.lockss.org/sourcefiles/eastview-released/2020/[^/]+/Digital.*"</string>
+      <string>1,"https://clockss-test.lockss.org/sourcefiles/eastview-released/2020/"</string>
+    </list>
+  </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.clockss.eastview.EastviewSourceXmlArticleIteratorFactory</string>
+    <string>org.lockss.plugin.clockss.eastview.EastviewSpecialTitleSourceXmlArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.clockss.eastview.EastviewSourceXmlArticleIteratorFactory</string>
+    <string>org.lockss.plugin.clockss.eastview.EastviewSpecialTitleSourceXmlArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>text/xml_metadata_extractor_factory_map</string>
@@ -77,5 +84,4 @@
       </entry>
     </map>
   </entry>
-  -->
 </map>    
