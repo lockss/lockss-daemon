@@ -30281,7 +30281,7 @@
   {
 
     title <
-      name = Language Testing ;
+      name = Language Testing. ;
       issn = 0265-5322 ;
       eissn = 1477-0946
     >
@@ -33329,7 +33329,7 @@
   {
 
     title <
-      name = Nordic Journal of Nursing Research ;
+      name = Vård i Norden ;
       issn = 0107-4083 ;
       issnl = 0107-4083
     >
@@ -33337,24 +33337,39 @@
       param[base_url] = http://njn.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-        au < doNotProcess ; exists ; 1997 ; Nordic Journal of Nursing Research Volume 17 ; 17 ; >
-        au < doNotProcess ; exists ; 1998 ; Nordic Journal of Nursing Research Volume 18 ; 18 ; >
-        au < doNotProcess ; exists ; 1999 ; Nordic Journal of Nursing Research Volume 19 ; 19 ; >
-        au < doNotProcess ; exists ; 2000 ; Nordic Journal of Nursing Research Volume 20 ; 20 ; >
-        au < doNotProcess ; exists ; 2001 ; Nordic Journal of Nursing Research Volume 21 ; 21 ; >
-        au < doNotProcess ; exists ; 2002 ; Nordic Journal of Nursing Research Volume 22 ; 22 ; >
-        au < doNotProcess ; exists ; 2003 ; Nordic Journal of Nursing Research Volume 23 ; 23 ; >
-        au < doNotProcess ; exists ; 2004 ; Nordic Journal of Nursing Research Volume 24 ; 24 ; >
-        au < doNotProcess ; exists ; 2005 ; Nordic Journal of Nursing Research Volume 25 ; 25 ; >
-        au < doNotProcess ; exists ; 2006 ; Nordic Journal of Nursing Research Volume 26 ; 26 ; >
-        au < doNotProcess ; exists ; 2007 ; Nordic Journal of Nursing Research Volume 27 ; 27 ; >
-        au < doNotProcess ; exists ; 2008 ; Nordic Journal of Nursing Research Volume 28 ; 28 ; >
-        au < doNotProcess ; exists ; 2009 ; Nordic Journal of Nursing Research Volume 29 ; 29 ; >
-        au < doNotProcess ; exists ; 2010 ; Nordic Journal of Nursing Research Volume 30 ; 30 ; >
-        au < doNotProcess ; exists ; 2011 ; Nordic Journal of Nursing Research Volume 31 ; 31 ; >
-        au < doNotProcess ; exists ; 2012 ; Nordic Journal of Nursing Research Volume 32 ; 32 ; >
-        au < doNotProcess ; exists ; 2013 ; Nordic Journal of Nursing Research Volume 33 ; 33 ; >
-        au < finished ; finished ; 2014 ; Nordic Journal of Nursing Research Volume 34 ; 34 ; reingest1.clockss.org:8082 >
+        au < doNotProcess ; exists ; 1997 ; Vård i Norden Volume 17 ; 17 ; >
+        au < doNotProcess ; exists ; 1998 ; Vård i Norden Volume 18 ; 18 ; >
+        au < doNotProcess ; exists ; 1999 ; Vård i Norden Volume 19 ; 19 ; >
+        au < doNotProcess ; exists ; 2000 ; Vård i Norden Volume 20 ; 20 ; >
+        au < doNotProcess ; exists ; 2001 ; Vård i Norden Volume 21 ; 21 ; >
+        au < doNotProcess ; exists ; 2002 ; Vård i Norden Volume 22 ; 22 ; >
+        au < doNotProcess ; exists ; 2003 ; Vård i Norden Volume 23 ; 23 ; >
+        au < doNotProcess ; exists ; 2004 ; Vård i Norden Volume 24 ; 24 ; >
+        au < doNotProcess ; exists ; 2005 ; Vård i Norden Volume 25 ; 25 ; >
+        au < doNotProcess ; exists ; 2006 ; Vård i Norden Volume 26 ; 26 ; >
+        au < doNotProcess ; exists ; 2007 ; Vård i Norden Volume 27 ; 27 ; >
+        au < doNotProcess ; exists ; 2008 ; Vård i Norden Volume 28 ; 28 ; >
+        au < doNotProcess ; exists ; 2009 ; Vård i Norden Volume 29 ; 29 ; >
+        au < doNotProcess ; exists ; 2010 ; Vård i Norden Volume 30 ; 30 ; >
+        au < doNotProcess ; exists ; 2011 ; Vård i Norden Volume 31 ; 31 ; >
+        au < doNotProcess ; exists ; 2012 ; Vård i Norden Volume 32 ; 32 ; >
+        au < doNotProcess ; exists ; 2013 ; Vård i Norden Volume 33 ; 33 ; >
+        au < finished ; finished ; 2014 ; Vård i Norden Volume 34 ; 34 ; reingest1.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = Nordic Journal of Nursing Research ;
+      issn = 2057-1585 ;
+      eissn = 2057-1593 ;
+      issnl = 2057-1585
+    >
+
+      param[base_url] = http://njn.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
         au < finished ; finished ; 2015 ; Nordic Journal of Nursing Research Volume 35 ; 35 ; reingest5.clockss.org:8082 >
         au < doNotProcess ; exists ; 2016 ; Nordic Journal of Nursing Research Volume 36 ; 36 ; >
 
