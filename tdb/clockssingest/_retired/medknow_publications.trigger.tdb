@@ -30,7 +30,6 @@
       au < finished ; finished ; 2015 ; Annals of Bioanthropology Volume 3 ; 2015 ; 3 ; ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2016 ; Annals of Bioanthropology Volume 4 ; 2016 ; 4 ; ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2017 ; Annals of Bioanthropology Volume 5 ; 2017 ; 5 ; ; reingest5.clockss.org:8082 >
-      au < expected ; exists ; 2018 ; Annals of Bioanthropology Volume 6 ; 2018 ; 6 ; ; >
 
   }
 
@@ -64,22 +63,22 @@
     param[journal_issn] = 0971-6866
     #Trigger
 
-    au < manifest ; exists ; 1995 ; Indian Journal of Human Genetics Volume 1 ; 1995 ; 1 ; ; >
-    au < manifest ; exists ; 1996 ; Indian Journal of Human Genetics Volume 2 ; 1996 ; 2 ; ; >
-    au < manifest ; exists ; 1997 ; Indian Journal of Human Genetics Volume 3 ; 1997 ; 3 ; ; >
-    au < manifest ; exists ; 1998 ; Indian Journal of Human Genetics Volume 4 ; 1998 ; 4 ; ; >
-    au < manifest ; exists ; 1999 ; Indian Journal of Human Genetics Volume 5 ; 1999 ; 5 ; ; >
-    au < manifest ; exists ; 2000 ; Indian Journal of Human Genetics Volume 6 ; 2000 ; 6 ; ; >
+    au < doNotProcess ; exists ; 1995 ; Indian Journal of Human Genetics Volume 1 ; 1995 ; 1 ; ; >
+    au < doNotProcess ; exists ; 1996 ; Indian Journal of Human Genetics Volume 2 ; 1996 ; 2 ; ; >
+    au < doNotProcess ; exists ; 1997 ; Indian Journal of Human Genetics Volume 3 ; 1997 ; 3 ; ; >
+    au < doNotProcess ; exists ; 1998 ; Indian Journal of Human Genetics Volume 4 ; 1998 ; 4 ; ; >
+    au < doNotProcess ; exists ; 1999 ; Indian Journal of Human Genetics Volume 5 ; 1999 ; 5 ; ; >
+    au < doNotProcess ; exists ; 2000 ; Indian Journal of Human Genetics Volume 6 ; 2000 ; 6 ; ; >
     au < doesNotExist ; doesNotExist ; 2001 ; Indian Journal of Human Genetics Volume 7 ; 2001 ; 7 ; ; >
-    au < manifest ; exists ; 2002 ; Indian Journal of Human Genetics Volume 8 ; 2002 ; 8 ; ; >
-    au < manifest ; exists ; 2003 ; Indian Journal of Human Genetics Volume 9 ; 2003 ; 9 ; ; >
-    au < manifest ; exists ; 2004 ; Indian Journal of Human Genetics Volume 10 ; 2004 ; 10 ; ; >
-    au < manifest ; exists ; 2005 ; Indian Journal of Human Genetics Volume 11 ; 2005 ; 11 ; ; >
-    au < manifest ; exists ; 2006 ; Indian Journal of Human Genetics Volume 12 ; 2006 ; 12 ; ; >
-    au < manifest ; exists ; 2007 ; Indian Journal of Human Genetics Volume 13 ; 2007 ; 13 ; ; >
-    au < manifest ; exists ; 2008 ; Indian Journal of Human Genetics Volume 14 ; 2008 ; 14 ; ; >
-    au < manifest ; exists ; 2009 ; Indian Journal of Human Genetics Volume 15 ; 2009 ; 15 ; ; >
-    au < manifest ; exists ; 2010 ; Indian Journal of Human Genetics Volume 16 ; 2010 ; 16 ; ; >
+    au < doNotProcess ; exists ; 2002 ; Indian Journal of Human Genetics Volume 8 ; 2002 ; 8 ; ; >
+    au < doNotProcess ; exists ; 2003 ; Indian Journal of Human Genetics Volume 9 ; 2003 ; 9 ; ; >
+    au < doNotProcess ; exists ; 2004 ; Indian Journal of Human Genetics Volume 10 ; 2004 ; 10 ; ; >
+    au < doNotProcess ; exists ; 2005 ; Indian Journal of Human Genetics Volume 11 ; 2005 ; 11 ; ; >
+    au < doNotProcess ; exists ; 2006 ; Indian Journal of Human Genetics Volume 12 ; 2006 ; 12 ; ; >
+    au < doNotProcess ; exists ; 2007 ; Indian Journal of Human Genetics Volume 13 ; 2007 ; 13 ; ; >
+    au < doNotProcess ; exists ; 2008 ; Indian Journal of Human Genetics Volume 14 ; 2008 ; 14 ; ; >
+    au < doNotProcess ; exists ; 2009 ; Indian Journal of Human Genetics Volume 15 ; 2009 ; 15 ; ; >
+    au < doNotProcess ; exists ; 2010 ; Indian Journal of Human Genetics Volume 16 ; 2010 ; 16 ; ; >
     au < finished ; finished ; 2011 ; Indian Journal of Human Genetics Volume 17 ; 2011 ; 17 ; ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Indian Journal of Human Genetics Volume 18 ; 2012 ; 18 ; ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; Indian Journal of Human Genetics Volume 19 ; 2013 ; 19 ; ; reingest3.clockss.org:8083 >
@@ -98,10 +97,10 @@
     param[journal_issn] = 0973-6042
     #Trigger
 
-    au < manifest ; exists ; 2007 ; International Journal of Shoulder Surgery Volume 1 ; 2007 ; 1 ; ; >
-    au < manifest ; exists ; 2008 ; International Journal of Shoulder Surgery Volume 2 ; 2008 ; 2 ; ; >
-    au < manifest ; exists ; 2009 ; International Journal of Shoulder Surgery Volume 3 ; 2009 ; 3 ; ; >
-    au < manifest ; exists ; 2010 ; International Journal of Shoulder Surgery Volume 4 ; 2010 ; 4 ; ; >
+    au < doNotProcess ; exists ; 2007 ; International Journal of Shoulder Surgery Volume 1 ; 2007 ; 1 ; ; >
+    au < doNotProcess ; exists ; 2008 ; International Journal of Shoulder Surgery Volume 2 ; 2008 ; 2 ; ; >
+    au < doNotProcess ; exists ; 2009 ; International Journal of Shoulder Surgery Volume 3 ; 2009 ; 3 ; ; >
+    au < doNotProcess ; exists ; 2010 ; International Journal of Shoulder Surgery Volume 4 ; 2010 ; 4 ; ; >
     au < finished ; finished ; 2011 ; International Journal of Shoulder Surgery Volume 5 ; 2011 ; 5 ; ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2012 ; International Journal of Shoulder Surgery Volume 6 ; 2012 ; 6 ; ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2013 ; International Journal of Shoulder Surgery Volume 7 ; 2013 ; 7 ; ; reingest4.clockss.org:8082 >
@@ -174,8 +173,8 @@
     param[journal_issn] = 2006-8808
     #Trigger
 
-    au < manifest ; exists ; 2009 ; Journal of Surgical Technique and Case Report Volume 1 ; 2009 ; 1 ; ; >
-    au < manifest ; exists ; 2010 ; Journal of Surgical Technique and Case Report Volume 2 ; 2010 ; 2 ; ; >
+    au < doNotProcess ; exists ; 2009 ; Journal of Surgical Technique and Case Report Volume 1 ; 2009 ; 1 ; ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Surgical Technique and Case Report Volume 2 ; 2010 ; 2 ; ; >
     au < finished ; finished ; 2011 ; Journal of Surgical Technique and Case Report Volume 3 ; 2011 ; 3 ; ; >
     au < finished ; finished ; 2012 ; Journal of Surgical Technique and Case Report Volume 4 ; 2012 ; 4 ; ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Journal of Surgical Technique and Case Report Volume 5 ; 2013 ; 5 ; ; >
@@ -238,7 +237,6 @@
       au < finished ; finished ; 2015 ; Sudan Medical Monitor Volume 10 ; 2015 ; 10 ; ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2016 ; Sudan Medical Monitor Volume 11 ; 2016 ; 11 ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2017 ; Sudan Medical Monitor Volume 12 ; 2017 ; 12 ; ; reingest2.clockss.org:8085 >
-      au < expected ; exists ; 2018 ; Sudan Medical Monitor Volume 13 ; 2018 ; 13 ; ; >
 
   }
 
