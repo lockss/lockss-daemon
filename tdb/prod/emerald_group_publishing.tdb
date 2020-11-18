@@ -2965,7 +2965,7 @@
     au < manifest ; 2007 ; Health Education Volume 107 ; 107 >
     au < manifest ; 2008 ; Health Education Volume 108 ; 108 >
     au < manifest ; 2009 ; Health Education Volume 109 ; 109 >
-    au < manifest ; 2010 ; Health Education Volume 110 ; 110 >
+    au < ready ; 2010 ; Health Education Volume 110 ; 110 >
     au < manifest ; 2011 ; Health Education Volume 111 ; 111 >
     au < manifest ; 2012 ; Health Education Volume 112 ; 112 >
     au < doNotProcess ; 2013 ; Health Education Volume 113 ; 113 >
@@ -4734,7 +4734,7 @@
     au < doNotProcess ; 2016 ; The International Journal of Logistics Management Volume 27 ; 27 >
     au < doNotProcess ; 2017 ; The International Journal of Logistics Management Volume 28 ; 28 >
     au < manifest ; 2018 ; The International Journal of Logistics Management Volume 29 ; 29 >
-    au < manifest ; 2019 ; The International Journal of Logistics Management Volume 30 ; 30 >
+    au < ready ; 2019 ; The International Journal of Logistics Management Volume 30 ; 30 >
     au < manifest ; 2020 ; The International Journal of Logistics Management Volume 31 ; 31 >
 
   }
@@ -6310,7 +6310,7 @@
     param[journal_issn] = 1746-6660
     comment[journal_id] = jcs
 
-    au < manifest ; 2006 ; Journal of Children’s Services: Research informing policy and practice Volume 1 ; 1 >
+    au < ready ; 2006 ; Journal of Children’s Services: Research informing policy and practice Volume 1 ; 1 >
     au < manifest ; 2007 ; Journal of Children’s Services: Research informing policy and practice Volume 2 ; 2 >
     au < manifest ; 2008 ; Journal of Children’s Services: Research informing policy and practice Volume 3 ; 3 >
     au < manifest ; 2009 ; Journal of Children’s Services: Research informing policy and practice Volume 4 ; 4 >
@@ -12686,7 +12686,7 @@
     param[journal_issn] = 1366-3666
     comment[journal_id] = wwop
 
-    au < manifest ; 2000 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 4 ; 4 >
+    au < ready ; 2000 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 4 ; 4 >
     au < manifest ; 2001 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 5 ; 5 >
     au < manifest ; 2002 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 6 ; 6 >
     au < manifest ; 2003 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 7 ; 7 >
@@ -12846,7 +12846,7 @@
     au < doNotProcess ; 2016 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 17 ; 17 >
     au < doNotProcess ; 2017 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 18 ; 18 >
     au < manifest ; 2018 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 19 ; 19 >
-    au < manifest ; 2019 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 20 ; 20 >
+    au < ready ; 2019 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 20 ; 20 >
     au < manifest ; 2020 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 21 ; 21 >
 
   }
