@@ -149,6 +149,10 @@ public class TestServletUtil extends LockssTestCase {
 		 ServletUtil.getContentOriginalFilename(cu, false));
     assertEquals("\"file.html\"",
 		 ServletUtil.getContentOriginalFilename(cu, true));
+
+    cu = new MockCachedUrl("https://www.here.there/articles/10.18352/ts.327/galley/319/download/");
+    assertEquals("\"download\"",
+		 ServletUtil.getContentOriginalFilename(cu, true));
   }
 
   public void testIsTabPopulated() {
