@@ -28,15 +28,15 @@
       param[journal_code] = an
 
       #complete
-      au < crawling ; exists ; 1996 ; The Analyst Volume 121 ; 121 ; 1996 ; https://pubs.rsc.org/ ; >
+      au < frozen ; exists ; 1996 ; The Analyst Volume 121 ; 121 ; 1996 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 1997 ; The Analyst Volume 122 ; 122 ; 1997 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 1998 ; The Analyst Volume 123 ; 123 ; 1998 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 1999 ; The Analyst Volume 124 ; 124 ; 1999 ; https://pubs.rsc.org/ ; >
-      au < crawling ; exists ; 2000 ; The Analyst Volume 125 ; 125 ; 2000 ; https://pubs.rsc.org/ ; >
-      au < crawling ; exists ; 2001 ; The Analyst Volume 126 ; 126 ; 2001 ; https://pubs.rsc.org/ ; >
+      au < frozen ; exists ; 2000 ; The Analyst Volume 125 ; 125 ; 2000 ; https://pubs.rsc.org/ ; >
+      au < frozen ; exists ; 2001 ; The Analyst Volume 126 ; 126 ; 2001 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2002 ; The Analyst Volume 127 ; 127 ; 2002 ; https://pubs.rsc.org/ ; >
-      au < crawling ; exists ; 2003 ; The Analyst Volume 128 ; 128 ; 2003 ; https://pubs.rsc.org/ ; >
-      au < crawling ; exists ; 2004 ; The Analyst Volume 129 ; 129 ; 2004 ; https://pubs.rsc.org/ ; >
+      au < frozen ; exists ; 2003 ; The Analyst Volume 128 ; 128 ; 2003 ; https://pubs.rsc.org/ ; >
+      au < frozen ; exists ; 2004 ; The Analyst Volume 129 ; 129 ; 2004 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2005 ; The Analyst Volume 130 ; 130 ; 2005 ; https://pubs.rsc.org/ ; >
       au < finished ; manifest ; 2006 ; The Analyst Volume 131 ; 131 ; 2006 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2007 ; The Analyst Volume 132 ; 132 ; 2007 ; https://pubs.rsc.org/ ; >
@@ -67,7 +67,7 @@
       param[journal_code] = ay
 
       #complete
-      au < crawling ; exists ; 2009 ; Analytical Methods Volume 1 ; 1 ; 2009 ; https://pubs.rsc.org/ ; >
+      au < frozen ; exists ; 2009 ; Analytical Methods Volume 1 ; 1 ; 2009 ; https://pubs.rsc.org/ ; >
       au < finished ; finished ; 2010 ; Analytical Methods Volume 2 ; 2 ; 2010 ; http://pubs.rsc.org/ ; >
       au < finished ; manifest ; 2011 ; Analytical Methods Volume 3 ; 3 ; 2011 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2012 ; Analytical Methods Volume 4 ; 4 ; 2012 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
