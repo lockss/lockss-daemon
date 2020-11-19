@@ -60,16 +60,7 @@ public class TestUTSePressHtmlFilterFactory extends LockssTestCase {
         Constants.DEFAULT_ENCODING);
 
     String filteredStr = StringUtil.fromInputStream(inStream);
-
-    String currentDirectory = System.getProperty("user.dir");
-    String pathname = currentDirectory +
-            "/plugins/test/src/org/lockss/plugin/utsepress/generated.html";
-    if (filteredStr.length() > 0) {
-      FileUtils.writeStringToFile(new File(pathname), filteredStr, Constants.DEFAULT_ENCODING);
-    } else {
-      FileUtils.writeStringToFile(new File(pathname), "Empty", Constants.DEFAULT_ENCODING);
-    }
-
+    
     assertEquals(aritlePageFiltered, filteredStr);
   }
 
