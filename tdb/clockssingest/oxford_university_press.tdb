@@ -43,7 +43,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Acta Biochimica et Biophysica Sinica Volume 37 ; 37 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Acta Biochimica et Biophysica Sinica Volume 38 ; 38 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Acta Biochimica et Biophysica Sinica Volume 39 ; 39 ; >
-    au < frozen ; exists ; 2008 ; 2008 ; Acta Biochimica et Biophysica Sinica Volume 40 ; 40 ; >
+    au < finished ; manifest ; 2008 ; 2008 ; Acta Biochimica et Biophysica Sinica Volume 40 ; 40 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Acta Biochimica et Biophysica Sinica Volume 41 ; 41 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Acta Biochimica et Biophysica Sinica Volume 42 ; 42 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Acta Biochimica et Biophysica Sinica Volume 43 ; 43 ; >
@@ -106,7 +106,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Advances in Nutrition Volume 7 ; 7 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Advances in Nutrition Volume 8 ; 8 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Advances in Nutrition Volume 9 ; 9 ; >
-    au < frozen ; exists ; 2019 ; 2019 ; Advances in Nutrition Volume 10 ; 10 ; >
+    au < finished ; manifest ; 2019 ; 2019 ; Advances in Nutrition Volume 10 ; 10 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2020 ; 2020 ; Advances in Nutrition Volume 11 ; 11 ; >
 
   }
@@ -281,7 +281,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; African Affairs Volume 115 ; 115 ; >
     au < frozen ; exists ; 2017 ; 2017 ; African Affairs Volume 116 ; 116 ; >
     au < frozen ; exists ; 2018 ; 2018 ; African Affairs Volume 117 ; 117 ; >
-    au < frozen ; exists ; 2019 ; 2019 ; African Affairs Volume 118 ; 118 ; >
+    au < finished ; manifest ; 2019 ; 2019 ; African Affairs Volume 118 ; 118 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2020 ; 2020 ; African Affairs Volume 119 ; 119 ; >
 
   }
