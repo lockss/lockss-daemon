@@ -7,7 +7,7 @@
     info[tester] = 5 ;
     info[poller] = 6
   >
-  #moved from HW to Atypon Jan 2018
+  #moved from HW to Atypon Jan 2018 to Wiley 2020
 
   {
 
@@ -57,6 +57,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; The FASEB Journal Volume 31 ; 31 ; >
     au < finished ; manifest ; 2018 ; The FASEB Journal Volume 32 ; 32 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; The FASEB Journal Volume 33 ; 33 ; reingest2.clockss.org:8085 >
+    #Moved to Wiley
 
   }
 

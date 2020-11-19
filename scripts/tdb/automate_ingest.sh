@@ -15,8 +15,10 @@ echo "###Ready Atypon not $year" >> $t/tmp_Atypon
 ./scripts/tdb/tdbout -Y -a -Q 'plugin ~ "typon" and year is not "'$year'" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | shuf >> $t/tmp_Atypon
 #Manifest
 #Don't include this year or last year so that new titles get tested for at least two years.
-#echo "###Manifest Sage 2019" >> $t/tmp_Atypon
-#./scripts/tdb/tdbout -MT -a -Q 'year ~ "2019$" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/sage_publications.atypon.tdb | shuf >> $t/tmp_Atypon
+#echo "###Manifest Sage 2020" >> $t/tmp_Atypon
+#./scripts/tdb/tdbout -MT -a -Q 'year ~ "2020$" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/sage_publications.atypon.tdb | shuf >> $t/tmp_Atypon
+echo "###Manifest Sage 2019" >> $t/tmp_Atypon
+./scripts/tdb/tdbout -MT -a -Q 'year ~ "2019$" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/sage_publications.atypon.tdb | shuf >> $t/tmp_Atypon
 echo "###Manifest Sage 2018" >> $t/tmp_Atypon
 ./scripts/tdb/tdbout -MT -a -Q 'year ~ "2018$" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/sage_publications.atypon.tdb | shuf >> $t/tmp_Atypon
 echo "###Manifest Sage 2017" >> $t/tmp_Atypon
