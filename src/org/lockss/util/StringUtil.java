@@ -659,6 +659,24 @@ public class StringUtil {
     return sb.toString();
   }
 
+  static final java.util.regex.Pattern LAST_COMPONENT =
+    java.util.regex.Pattern.compile("([^/?]+)/?(\\?|$)");
+
+  /** Extract the last component in a URL or filename, exclusive of any
+   * query args.  Unlike FileUtils.getBaseName(), thisMatches the behavior
+   * of Unix <tt>basename</tt>: the extension is included, and if the name
+   * ends with a slash the previous component is returned.
+   * @param name the URL or filename
+   * @return the last component, or null if no name can be found.
+   */
+  public static String basename(String name) {
+    java.util.regex.Matcher m = LAST_COMPONENT.matcher(name);
+    if (m.find()) {
+      return m.group(1);
+    }
+    return null;
+  }
+
   static Pattern alphanum =
     RegexpUtil.uncheckedCompile("([^a-zA-Z0-9])",
 				Perl5Compiler.READ_ONLY_MASK);
