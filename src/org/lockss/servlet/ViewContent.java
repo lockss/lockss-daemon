@@ -38,6 +38,7 @@ import java.util.*;
 import java.net.*;
 import java.util.regex.Pattern;
 
+import org.apache.commons.lang3.ObjectUtils;
 import org.mortbay.http.*;
 import org.mortbay.html.*;
 import org.lockss.daemon.status.*;
@@ -359,8 +360,10 @@ public class ViewContent extends LockssServlet {
     resp.setContentType(ctype);
     // Set as inline content with name, if PDF or unframed content
     if (!isFrameType(ctype)) {
-      resp.setHeader("Content-disposition", "inline; filename=" +
-		     ServletUtil.getContentOriginalFilename(cu, true));
+      String fname =
+        ObjectUtils.defaultIfNull(ServletUtil.getContentOriginalFilename(cu, true),
+                                  "UnnamedContent");
+      resp.setHeader("Content-disposition", "inline; filename=" + fname);
     }
     // if filtering, don't know content length
     if (!isFilter) {

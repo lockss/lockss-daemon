@@ -1655,20 +1655,11 @@ public class ServletUtil {
    * @return the original filename string
    */
   static String getContentOriginalFilename(CachedUrl cu, boolean quoted) {
-    String filename;
-    try {
-      // Get the filename path from the URL, without any query string
-      filename = new URL(cu.getUrl()).getPath();
-      // Remove path component
-      int n = filename.lastIndexOf("/");
-      filename = filename.substring(n<0?0:n+1);
-    } catch (MalformedURLException e) {
-      filename = "unknown";
-    }
-    if (quoted) {
-      return  "\"" + filename + "\"";
+    String basename = StringUtil.basename(cu.getUrl());
+    if (basename != null && quoted) {
+      return  "\"" + basename + "\"";
     } else {
-      return filename;
+      return basename;
     }
   }
 
