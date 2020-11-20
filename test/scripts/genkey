@@ -1,174 +1,200 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 
-from sys import exit
-from getpass import getpass
-from optparse import OptionParser
-from os import path, environ, popen
+__copyright__ = '''\
+Copyright (c) 2000-2020, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
+'''
+
+__license__ = '''\
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+'''
+
+__version__ = '0.3'
+
+import argparse
+from datetime import date
+import getpass
+import os
+import subprocess
+import sys
 
 # DN defaults
-DEFAULT_DN_OU = "LOCKSS"
-DEFAULT_DN_O = "Stanford University"
-DEFAULT_DN_L = "Palo Alto"
-DEFAULT_DN_S = "California"
-DEFAULT_DN_C = "US"
+_DEFAULT_DN_O = 'Stanford University'
+_DEFAULT_DN_OU = 'LOCKSS Program'
+_DEFAULT_DN_L = 'Stanford'
+_DEFAULT_DN_S = 'California'
+_DEFAULT_DN_C = 'US'
 
 # Other constants
-validDays = 3650 # ~ 10 years
-defStorepass = "password"
-keyTool = path.join(environ.get('JAVA_HOME'), 'bin', 'keytool')
+_DEFAULT_STORE_PASS = 'password'
+_keytool = os.path.join(os.environ['JAVA_HOME'], 'bin', 'keytool') if 'JAVA_HOME' in os.environ else 'keytool'
+_ten_years_from_now_in_days = (date(date.today().year + 10, date.today().month, date.today().day) - date.today()).days
 
-parser = OptionParser()
-parser.add_option("-n", "--name",
-                  dest="name", default=DEFAULT_DN_OU,
-                  help="common name, default %s" % DEFAULT_DN_OU)
-parser.add_option("-o", "--org",
-                  dest="org", default=DEFAULT_DN_O,
-                  help="organization, default %s" % DEFAULT_DN_O)
-parser.add_option("-l", "--locality",
-                  dest="locality", default=DEFAULT_DN_L,
-                  help="location value, default %s" % DEFAULT_DN_L)
-parser.add_option("-s", "--state",
-                  dest="state", default=DEFAULT_DN_S, 
-                  help="entity's state, province, default %s" % DEFAULT_DN_S)
-parser.add_option("-c", "--country",
-                  dest="country", default=DEFAULT_DN_C, 
-                  help="entity's country, default %s" % DEFAULT_DN_C)
-parser.add_option("-f", "--full_name",
-                  dest="full_name", default="");  
-parser.add_option("-a", "--alias",
-                  dest="alias", default="");  
+class __GenKeyOptions(object):
 
+    @staticmethod
+    def make_parser():
+        parser = argparse.ArgumentParser(description='LOCKSS signing key generator')
+        parser.add_argument('--version', '-V', action='version', version=__version__)
+        parser.add_argument('--copyright', '-C', action='store_true', help='show copyright and exit')
+        parser.add_argument('--license', '-L', action='store_true', help='show license and exit')
+        # Group: Name
+        group = parser.add_argument_group('Name')
+        group.add_argument('--full-name', '-f', metavar='FULLNAME', help='full name (default: interactive prompt)')
+        group.add_argument('--alias', '-a', metavar='ALIAS', help='alias (default: interactive prompt)')
+        # Group: Organization
+        group = parser.add_argument_group('Organization')
+        group.add_argument('--organization', '-o', metavar='ORG', default=_DEFAULT_DN_O, help='organization (default: %(default)s)')
+        group.add_argument('--unit', '-u', metavar='UNIT', default=_DEFAULT_DN_OU, help='organizational unit (default: %(default)s)')
+        # Group: Location
+        group = parser.add_argument_group('Location')
+        group.add_argument('--locality', '-l', metavar='CITY', default=_DEFAULT_DN_L, help='locality (default: %(default)s)')
+        group.add_argument('--state', '-s', metavar='STATE', default=_DEFAULT_DN_S, help='state or province (default: %(default)s)')
+        group.add_argument('--country', '-c', metavar='XX', default=_DEFAULT_DN_C, help='2-letter ISO 3166 country code (default: %(default)s)')
+        # Group: Options
+        group = parser.add_argument_group('Options')
+        group.add_argument('--import-into', '-i', metavar='KEYSTORE', default='src/org/lockss/plugin/lockss.keystore', help='import the generated certificate into a keystore (default: %(default)s)')
+        group.add_argument('--verbose', '-v', action='store_true', help='output keytool commands')
+        # Group: Deprecated
+        group = parser.add_argument_group('Deprecated', 'These deprecated arguments are kept for backward comptibility and may be removed in a future version.')
+        group.add_argument('--full_name', metavar='FULLNAME', dest='full_name', help='deprecated; use --full-name')
+        group.add_argument('--name', '-n', metavar='UNIT', dest='unit', default=_DEFAULT_DN_OU, help='deprecated; use --unit')
+        # Return parser
+        return parser
 
-(options, args) = parser.parse_args()
-args = {}
-args['full_name'] = options.full_name; 
-args['alias'] = options.alias; 
+    def __init__(self, parser, parsed):
+        super().__init__()
+        # --copyright, --license (--help, --version already taken care of)
+        if any([parsed.copyright, parsed.license]):
+            if parsed.copyright: print(__copyright__)
+            elif parsed.license: print(__license__)
+            else: raise RuntimeError('internal error')
+            sys.exit()
+        # --organization, --unit, --locality, --state, --country
+        self.organization = parsed.organization
+        self.unit = parsed.unit
+        self.locality = parsed.locality
+        self.state = parsed.state
+        self.country = parsed.country
+        # --verbose
+        self.verbose = parsed.verbose
+        # --import-into
+        self.import_into = parsed.import_into
+        # --full-name, --alias
+        self.full_name = parsed.full_name
+        while self.full_name is None or len(self.full_name) == 0:
+            try:
+                self.full_name = input('Full name (e.g. Firstname Lastname): ')
+            except (EOFError, KeyboardInterrupt):
+                sys.exit()
+        self.alias = parsed.full_name
+        while self.alias is None or len(self.alias) == 0:
+            try:
+                self.alias = input('Alias (e.g. flastname-lockss): ')
+            except (EOFError, KeyboardInterrupt):
+                sys.exit()
+        # Passphrase
+        self.passphrase = None
+        while self.passphrase is None:
+            try:
+                _p1 = getpass.getpass('Passphrase: ')
+                if len(_p1) < 6:
+                    print('Passphrase must have at least 6 characters')
+                    continue
+                _p2 = getpass.getpass('Confirm passphrase: ')
+                if _p1 != _p2:
+                    print('Passphrases do not match')
+                    continue
+                self.passphrase = _p1
+            except (EOFError, KeyboardInterrupt):
+                sys.exit()
 
-# DN constants
-dn_ou = options.name
-dn_o = options.org
-dn_l = options.locality;
-dn_s = options.state;
-dn_c = options.country;
+def __display_certificate(options):
+    cmd = [_keytool,
+           '-printcert',
+           '-file', f'{options.alias}.cer']
+    __run(options, cmd, output=True)
 
-def prompt_password():
-    passphrase = ''
-    confirmation = ''
+def __export_certificate(options):
+    cmd = [_keytool,
+           '-export',
+           '-file', f'{options.alias}.cer',
+           '-keystore', f'{options.alias}.keystore',
+           '-alias', options.alias,
+           '-storepass', options.passphrase]
+    __run(options, cmd)
 
-    while not passphrase or len(passphrase) == 0:
-        passphrase = getpass("Passphrase: ")
+def __generate_key(options):
+    cmd = [_keytool,
+           '-genkeypair',
+           '-alias', options.alias,
+           '-validity', str((date(date.today().year + 10, date.today().month, date.today().day) - date.today()).days),
+           '-keystore', f'{options.alias}.keystore',
+           '-storepass', options.passphrase,
+           '-keypass', options.passphrase,
+           '-dname', ', '.join([f'{k}={v}' for k, v in [('CN', options.full_name),
+                                                        ('O', options.organization),
+                                                        ('OU', options.unit),
+                                                        ('L', options.locality),
+                                                        ('S', options.state),
+                                                        ('C', options.country)] if v is not None and len(v) > 0])]
+    __run(options, cmd)
 
-    # Ensure the password meets the JKS keystore minimum length (6 characters)
-    while len(passphrase) < 6:
-        print("Passphrase must be at least six characters.")
-        passphrase = getpass("Passphrase: ")
+def __import_certificate(options):
+    _p3 = getpass.getpass(f'Passphrase for {options.import_into}: ')
+    cmd = [_keytool,
+           '-importcert',
+           '-keystore', options.import_into,
+           '-alias', options.alias,
+           '-file', f'{options.alias}.cer',
+           '-storepass', _p3]
+    __run(options, cmd)
 
-    while not confirmation or len(confirmation) == 0:
-        confirmation = getpass("   Confirm: ")
+def __run(options, cmd, output=False):
+    if options.verbose:
+        print(f'Executing: {" ".join(cmd)}')
+    proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+    out, err = proc.communicate()
+    if options.verbose and err is not None and len(err) > 0:
+        print(err, file=sys.stderr)
+    if (output or options.verbose) and out is not None and len(out) > 0:
+        print(out)
+    if proc.returncode != 0:
+        print(f'{cmd[0]} exited with {proc.returncode}')
+        sys.exit(proc.returncode)
 
-    return (passphrase, confirmation)
+def __main():
+    '''Main method.'''
+    parser = __GenKeyOptions.make_parser()
+    options = __GenKeyOptions(parser, parser.parse_args())
+    __generate_key(options)
+    __export_certificate(options)
+    __display_certificate(options)
+    __import_certificate(options)
 
-## Gather user input
-def gather_input():
+if __name__ == '__main__': __main()
 
-    while not args.has_key("full_name") or len(args["full_name"]) == 0:
-        args["full_name"] = raw_input("Full Name (i.e., First Last-lockss): ")
-        
-    while not args.has_key("alias") or len(args["alias"]) == 0:
-        args["alias"] = raw_input("Alias (i.e., flast-lockss): ")
-
-    ## Get the passphrase safely
-    (passphrase, confirmation) = prompt_password()
-
-    while not passphrase == confirmation:
-        print("Passwords do not match!")
-        (passphrase, confirmation) = prompt_password()
-
-    args["passphrase"] = passphrase
-
-    # setup DN
-    global dn
-    dn = "CN=%s, OU=%s, O=%s, L=%s, S=%s, C=%s" % \
-         (args["full_name"], dn_ou, dn_o, dn_l, dn_s, dn_c)
-
-def main():
-    try:
-        gather_input()
-    except SyntaxError:
-        print("Didn't understand your input.")
-        exit(1)
-        
-    genkey()
-    export_cert()
-    display_cert()
-    import_cert()
-
-def run_command(cmd, displayOut):
-    """ Run the given command, return error if any """
-
-    # print (cmd); 
-    child = popen(cmd)
-    output = child.read()
-    if displayOut:
-        print output
-    err = child.close()
-    if err:
-        return err
-
-def genkey():
-    command = keyTool + \
-              " -genkey -alias " + args["alias"] + \
-              " -validity %d" % validDays + \
-              " -keystore " + args["alias"] + ".keystore " + \
-              " -storepass \'" + args["passphrase"] + "\' " + \
-              " -keypass \'" + args["passphrase"] + "\' " + \
-              " -dname \'" + dn + "\'"
-    run_command(command, False)
-
-def export_cert():
-    """Export the user's certificate"""
-
-    command = keyTool + \
-              " -export -file " + args["alias"] + ".cer" + \
-              " -keystore " + args["alias"] + ".keystore" + \
-              " -alias " + args["alias"] + \
-              " -storepass \'" + args["passphrase"] + "\'"
-    run_command(command, False)
-    
-def display_cert():
-    print "Displaying cert..."
-    command = keyTool + " -printcert -file %s.cer" % args["alias"]
-    run_command(command, True)
-
-def import_cert():
-    doImport = raw_input("Import certificate into LOCKSS public keystore? (Y/N) [N]: ")
-
-    if not doImport == "Y" and not doImport == "y":
-        return
-
-    lockssKeystore = raw_input("LOCKSS Keystore location ['./lockss.keystore']: ")
-    lockssPassword = raw_input("LOCKSS Keystore password ['password']: ")
-
-    if not lockssKeystore:
-        lockssKeystore = './lockss.keystore'
-
-    if not lockssPassword:
-        lockssPassword = 'password'
-
-    command = keyTool + \
-              " -import -keystore \"" + lockssKeystore + "\" -alias " + args["alias"] + \
-              " -file " + args["alias"] + ".cer " + \
-              " -storepass \"" + lockssPassword + "\""
-
-    run_command(command, False)
-
-
-if __name__ == "__main__":
-    try:
-        main()
-    except KeyboardInterrupt:
-        print
-        exit(0)
-    except EOFError:
-        print
-        exit(0)
