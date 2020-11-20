@@ -61,6 +61,7 @@
       au < aap.AAPDrupalPlugin ; released ; 2019 ; AAP Grand Rounds Volume 41 ; 41 ; https://aapgrandrounds.aappublications.org/ >
       au < aap.AAPDrupalPlugin ; notReady ; 2019 ; AAP Grand Rounds Volume 42 ; 42 ; https://aapgrandrounds.aappublications.org/ > # Probe url: https://aapgrand.smart01.highwire.org/content/42/3/35 outside of crawl spec
       au < aap.AAPDrupalPlugin ; expected ; 2020 ; AAP Grand Rounds Volume 43 ; 43 ; https://aapgrandrounds.aappublications.org/ > 
+      au < aap.AAPDrupalPlugin ; expected ; 2020 ; AAP Grand Rounds Volume 44 ; 44 ; https://aapgrandrounds.aappublications.org/ > 
 
     }
 
@@ -353,6 +354,7 @@
       au < aap.AAPDrupalPlugin ; released ; 2019 ; Pediatrics Volume 143 ; 143 ; https://pediatrics.aappublications.org/ >
       au < aap.AAPDrupalPlugin ; released ; 2019 ; Pediatrics Volume 144 ; 144 ; https://pediatrics.aappublications.org/ >
       au < aap.AAPDrupalPlugin ; expected ; 2020 ; Pediatrics Volume 145 ; 145 ; https://pediatrics.aappublications.org/ >
+      au < aap.AAPDrupalPlugin ; expected ; 2020 ; Pediatrics Volume 146 ; 146 ; https://pediatrics.aappublications.org/ >
 
     }
 
