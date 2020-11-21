@@ -102,10 +102,10 @@ then
       #scripts/tdb/tdbout -EXMWTNYRCLZIF -c auid,name,year tdb/clockssingest/$file | grep -vf scripts/tdb/gvc_clockss.txt | sed -e 's/^[^&]*&//' | sed -e 's/http\|https//' | sed -e 's/ \[superseded\]//' | sort | uniq > $tpath/clocksst.txt
       #same statuses, but adjust http->https for only the first url in the list.
       scripts/tdb/tdbout -c auid,name,year tdb/prod/$file | grep -vf scripts/tdb/gvc_gln.txt | sed -e 's/^[^&]*&//' | sed -e 's/http\|https//' | sed -e 's/ \[superseded\]//' | sort | uniq > $tpath/glnt.txt
-      scripts/tdb/tdbout -c auid,name,year tdb/clockssingest/$file | grep -vf scripts/tdb/gvc_clockss.txt | sed -e 's/^[^&]*&//' | sed -e 's/http\|https//' | sed -e 's/ \[superseded\]//' | sort | uniq > $tpath/clocksst.txt
+      scripts/tdb/tdbout -c auid,name,year tdb/clockssingest/$file | grep -vf scripts/tdb/gvc_clockss.txt | sed -e 's/^[^&]*&//' | sed -e 's/http\|https//' | sed -e 's/ \[superseded\]//' | sed -e 's/ \[Article Count Mismatch\]//' | sort | uniq > $tpath/clocksst.txt
     else
       scripts/tdb/tdbout -c auid,name,year tdb/prod/$file | grep -vf scripts/tdb/gvc_gln.txt | sed -e 's/^[^&]*&//' | sed -e 's/http\|https//g' | sed -e 's/ \[superseded\]//' | sort | uniq > $tpath/glnt.txt
-      scripts/tdb/tdbout -c auid,name,year tdb/clockssingest/$file | grep -vf scripts/tdb/gvc_clockss.txt | sed -e 's/^[^&]*&//' | sed -e 's/http\|https//g' | sed -e 's/ \[superseded\]//' | sort | uniq > $tpath/clocksst.txt
+      scripts/tdb/tdbout -c auid,name,year tdb/clockssingest/$file | grep -vf scripts/tdb/gvc_clockss.txt | sed -e 's/^[^&]*&//' | sed -e 's/http\|https//g' | sed -e 's/ \[superseded\]//' | sed -e 's/ \[Article Count Mismatch\]//' | sort | uniq > $tpath/clocksst.txt
     fi
     if ! diff -i $tpath/glnt.txt $tpath/clocksst.txt > $tpath/diff.txt
     then

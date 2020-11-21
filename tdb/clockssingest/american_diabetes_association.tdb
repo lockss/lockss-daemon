@@ -53,6 +53,7 @@
     >
       #param[base_url] = http://diabetes.diabetesjournals.org/
       comment[supplement] = Scientific Sessions Abstract Book - this is published as a supplement to Diabetes journal
+      #No volume 11 for 1962.
 
       {
 
@@ -66,10 +67,10 @@
         au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1959 ; Diabetes Volume 8 ; 8 ; https://diabetes.diabetesjournals.org/ ; >
         au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1960 ; Diabetes Volume 9 ; 9 ; https://diabetes.diabetesjournals.org/ ; >
         au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1961 ; Diabetes Volume 10 ; 10 ; https://diabetes.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; exists ; exists ; 1963 ; Diabetes Volume 11 ; 11 ; https://diabetes.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1964 ; Diabetes Volume 12 ; 12 ; https://diabetes.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1965 ; Diabetes Volume 13 ; 13 ; https://diabetes.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1966 ; Diabetes Volume 14 ; 14 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; doesNotExist ; doesNotExist ; 1962 ; Diabetes Volume 11 ; 11 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1963 ; Diabetes Volume 12 ; 12 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1964 ; Diabetes Volume 13 ; 13 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1965 ; Diabetes Volume 14 ; 14 ; https://diabetes.diabetesjournals.org/ ; >
         au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1966 ; Diabetes Volume 15 ; 15 ; https://diabetes.diabetesjournals.org/ ; >
         au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1967 ; Diabetes Volume 16 ; 16 ; https://diabetes.diabetesjournals.org/ ; >
         au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 1968 ; Diabetes Volume 17 ; 17 ; https://diabetes.diabetesjournals.org/ ; >
