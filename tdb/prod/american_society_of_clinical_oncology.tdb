@@ -13,11 +13,16 @@
     title <
       name = Journal of Clinical Oncology ;
       issn = 0732-183X ;
+      eissn = 1527-7755 ;
       issnl = 0732-183X
     >
 
       #param[base_url] = http://jco.ascopubs.org/
       param[journal_id] = jco
+      # NOT only abstract_only but supplemental issues can be  abstract_only (V34)
+      # and iterator only counts these articles if coverage depth is set
+      # this will work with both but we should consider "abstract_partial"
+      attr[au_coverage_depth] = abstracts
 
       au < doNotProcess ; 1983 ; Journal of Clinical Oncology Volume 1 ; 1 ; https://ascopubs.org/ >
       au < doNotProcess ; 1984 ; Journal of Clinical Oncology Volume 2 ; 2 ; https://ascopubs.org/ >
@@ -62,6 +67,20 @@
 
   {
     title <
+      name = JCO Global Oncology ;
+      eissn = 2687-8941 ;
+      issnl = 2687-8941
+    >
+
+      param[journal_id] = go
+      #formerly Journal of Global Oncology 2378-9506
+
+      au < exists ; 2020 ; JCO Global Oncology Volume 6 ; 6 ; https://ascopubs.org/ >
+
+  }
+
+  {
+    title <
       name = Journal of Global Oncology ;
       eissn = 2378-9506 ;
       issnl = 2378-9506
@@ -75,7 +94,22 @@
       au < released ; 2017 ; Journal of Global Oncology Volume 3 ; 3 ; http://ascopubs.org/ >
       au < manifest ; 2018 ; Journal of Global Oncology Volume 4 ; 4 ; https://ascopubs.org/ >
       au < manifest ; 2019 ; Journal of Global Oncology Volume 5 ; 5 ; https://ascopubs.org/ >
-      au < expected ; 2020 ; Journal of Global Oncology Volume 6 ; 6 ; https://ascopubs.org/ >
+
+  }
+
+  {
+    title <
+      name = JCO Oncology Practice  ;
+      issn = 2688-1527 ;
+      eissn = 2688-1535 ;
+      issnl = 2688-1527
+    >
+
+      #param[base_url] = http://jop.ascopubs.org/
+      param[journal_id] = op
+
+      #title changed as of 2020
+      au < manifest ; 2020 ; JCO Oncology Practice Volume 16 ; 16 ; https://ascopubs.org/ >
 
   }
 
@@ -106,22 +140,6 @@
       au < manifest ; 2018 ; Journal of Oncology Practice Volume 14 ; 14 ; https://ascopubs.org/ >
       au < manifest ; 2019 ; Journal of Oncology Practice Volume 15 ; 15 ; https://ascopubs.org/ >
       #title changed as of 2020
-  }
-
-  {
-    title <
-      name = JCO Oncology Practice  ;
-      issn = 1554-7477 ;
-      eissn = 1935-469X ;
-      issnl = 1554-7477
-    >
-
-      #param[base_url] = http://jop.ascopubs.org/
-      param[journal_id] = op
-
-      #title changed as of 2020
-      au < manifest ; 2020 ; Journal of Oncology Practice Volume 16 ; 16 ; https://ascopubs.org/ >
-
   }
 
   {

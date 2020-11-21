@@ -168,6 +168,24 @@
   {
 
     title <
+      name = BJR|Open ;
+      eissn = 2513-9878 ;
+      issnl = 2513-9878
+    >
+    
+      plugin = org.lockss.plugin.atypon.bir.BIRAtyponPlugin
+      comment[platform] = Atypon
+      implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
+      param[journal_id] = bjro
+
+      au < exists ; 2019 ; BJR|Open Volume 1 ; 1 ; https://www.birpublications.org/ >
+      au < exists ; 2020 ; BJR|Open Volume 2 ; 2 ; https://www.birpublications.org/ >
+
+  }
+
+  {
+
+    title <
       name = Dentomaxillofacial Radiology ;
       issn = 0250-832X ;
       eissn = 1476-542X ;

@@ -4,6 +4,7 @@
     name = Ancestral Health Society
   >
   
+    # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
     plugin = org.lockss.plugin.bepress.BePressPlugin 
     implicit < status ; year ; name ; param[volume] ; param[base_url] >
 
