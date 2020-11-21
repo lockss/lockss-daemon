@@ -161,7 +161,7 @@
       name = Future Science OA ;
       eissn = 2056-5623
     >
-    
+    {
     param[journal_id] = fso
 
     au < released ; 2015 ; Future Science OA Volume 1 ; 1 ; http://www.future-science.com/ >
@@ -169,8 +169,12 @@
     au < released ; 2017 ; Future Science OA Volume 3 ; 3 ; https://www.future-science.com/ >
     au < released ; 2018 ; Future Science OA Volume 4 ; 4 ; https://www.future-science.com/ >
     au < released ; 2019 ; Future Science OA Volume 5 ; 5 ; https://www.future-science.com/ >
-    au < expected ; 2020 ; Future Science OA Volume 6 ; 6 ; https://www.future-science.com/ >
+    }
+    {
+    param[journal_id] = fsoa
 
+    au < expected ; 2020 ; Future Science OA Volume 6 ; 6 ; https://www.future-science.com/ >
+    }
   }
 
   {

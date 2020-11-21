@@ -24,7 +24,9 @@
     au < released ; 2007 ; 978-3-03719-036-4 ; 978-3-03719-536-9 ; Elements of Asymptotic Geometry ; 58 >
     au < released ; 2007 ; 978-3-03719-031-9 ; 978-3-03719-531-4 ; The Formation of Shocks in 3-Dimensional Fluids ; 51 >
     au < released ; 2003 ; 978-3-03719-000-5 ; 978-3-03719-500-0 ; Logarithmic combinatorial structures: a probabilistic approach ; 15 >
-
+    au < released ; 2018 ; 978-3-03719-135-4 ; 978-3-03719-635-9 ; Foundations of Rigid Geometry I ; 227 >
+    au < released ; 2019 ; 978-3-03719-192-7 ; 978-3-03719-692-2 ; The Shock Development Problem ; 238 >
+    au < exists ; 2019 ; 978-3-03719-193-4 ; 978-3-03719-693-9 ; From the Vlasov–Maxwell–Boltzmann System to Incompressible Viscous Electro-magneto-hydrodynamics ; 239 >
   }
   
   {
@@ -143,7 +145,7 @@
     au < released ; 2017 ; 978-3-03719-174-3 ; 978-3-03719-674-8 ; Frobenius Algebras II ; 219 >
     au < released ; 2017 ; 978-3-03719-179-8 ; 978-3-03719-679-3 ; A Course In Error-Correcting Codes (978-3-03719-679-3) ; 223 >
     au < released ; 2018 ; 978-3-03719-188-0 ; 978-3-03719-688-5 ; A Brief Introduction to Spectral Graph Theory ; 233 >
-    au < released ; 2018 ; 978-3-03719-187-3 ; 978-3-03719-687-8 ; An Introduction to KacMoody Groups over Fields ; 232 >
+    au < released ; 2018 ; 978-3-03719-187-3 ; 978-3-03719-687-8 ; An Introduction to Kac-Moody Groups over Fields ; 232 >
 
   }
   
@@ -215,6 +217,8 @@
 
     title <
       name = Heritage of European Mathematics ;
+      issn = 2523-5214 ;
+      eissn = 2523-5222 ;
       type = bookSeries
     >
     #series = hem
@@ -281,9 +285,7 @@
       type = bookSeries
     >
     
-    au < released ; 2019 ; 978-3-03719-192-7 ; 978-3-03719-692-2 ; The Shock Development Problem ; 238 >
     au < released ; 2018 ; 978-3-03719-176-7 ; 978-3-03719-676-2 ; European Congress of Mathematics ; 220 >
-    au < released ; 2018 ; 978-3-03719-135-4 ; 978-3-03719-635-9 ; Foundations of Rigid Geometry I ; 227 >
     au < released ; 2017 ; 978-3-03719-177-4 ; 978-3-03719-677-9 ; Interviews with the Abel Prize Laureates 20032016 ; 221 >
     au < released ; 2016 ; 978-3-03719-157-6 ; 978-3-03719-657-1 ; Absolute Arithmetic and F1-Geometry ; 204 >
     au < released ; 2016 ; 978-3-03719-164-4 ; 978-3-03719-664-9 ; Mathematics and Society ; 207 >
