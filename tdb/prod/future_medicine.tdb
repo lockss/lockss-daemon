@@ -377,11 +377,26 @@
       issn = 1746-9600
     >
     
-    param[journal_id] = hiv
+    param[journal_id] = fht
     comment[continued_by] = 1758-4310
 
     au < exists ; 2007 ; Future HIV Therapy Volume 1 ; 1 ; https://www.futuremedicine.com/ >
     au < exists ; 2008 ; Future HIV Therapy Volume 2 ; 2 ; https://www.futuremedicine.com/ >
+    
+  }
+
+  {
+  
+    title < 
+      name = HIV Therapy ;
+      issn = 1758-4310
+    >
+    
+    param[journal_id] = hiv
+    comment[continues] = 1746-9600
+
+    au < manifest ; 2009 ; HIV Therapy Volume 3 ; 3 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2010 ; HIV Therapy Volume 4 ; 4 ; https://www.futuremedicine.com/ >
     
   }
 
@@ -403,21 +418,6 @@
     au < released ; 2019 ; Hepatic Oncology Volume 6 ; 6 ; https://www.futuremedicine.com/ >
     au < manifest ; 2020 ; Hepatic Oncology Volume 7 ; 7 ; https://www.futuremedicine.com/ >
 
-  }
-
-  {
-  
-    title < 
-      name = HIV Therapy ;
-      issn = 1758-4310
-    >
-    
-    param[journal_id] = hiv
-    comment[continues] = 1746-9600
-
-    au < manifest ; 2009 ; HIV Therapy Volume 3 ; 3 ; https://www.futuremedicine.com/ >
-    au < manifest ; 2010 ; HIV Therapy Volume 4 ; 4 ; https://www.futuremedicine.com/ >
-    
   }
 
   {
