@@ -17,11 +17,10 @@
     param[base_url] = http://www.le.ac.uk/ms/
     implicit < status ; year ; volume ; name >
     
-    comment = this AU is broken, the left frame switched from links to a drop-down menu 
-    comment1 = the website is now at http://www2.le.ac.uk/departments/museumstudies/museumsociety/
-    comment2 = the main page has a journal TOC and there is a per-volume TOC of issues and their contents 
-    
+    # this AU is broken, the left frame switched from links to a drop-down menu     
     au < down ; 2003-2007 ; 1-5 ; Museum and Society Volumes 1-5 >
+  
+    # Now on OJS 2 at https://journals.le.ac.uk/ojs1/index.php/mas
   
   }
 

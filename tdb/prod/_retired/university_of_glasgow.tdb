@@ -16,9 +16,9 @@
     plugin = uk.org.lockss.plugin.jelit.JeLitPlugin
     param[base_url] = http://www.jelit.org/
     implicit < status ; year ; name ; volume >
-    #content not available
     
-    au < down ; 2004-2005 ; JeLit: Journal of eLiteracy ; 1-2 >
+    # Domain name controlled by squatters
+    au < down ; 2004-2005 ; JeLit: Journal of eLiteracy Volumes 1-2 ; 1-2 >
   
   }
 

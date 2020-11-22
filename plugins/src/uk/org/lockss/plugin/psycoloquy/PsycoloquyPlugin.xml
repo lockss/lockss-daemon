@@ -1,49 +1,51 @@
+<!--
+
+Copyright (c) 2000-2020, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+-->
 <map>
+  <entry>
+    <string>plugin_status</string>
+    <string>deprecated</string>
+  </entry>
   <entry>
     <string>plugin_identifier</string>
     <string>uk.org.lockss.plugin.psycoloquy.PsycoloquyPlugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
-  </entry>
-  <entry>
-    <string>text/html_filter</string>
-    <string>uk.org.lockss.plugin.psycoloquy.PsycoloquyFilterRule</string>
-  </entry>
-  <entry>
-    <string>au_def_pause_time</string>
-    <long>6000</long>
-  </entry>
-  <entry>
-    <string>au_name</string>
-    <string>&quot;Psycoloquy&quot;</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_name</string>
     <string>Psycoloquy Plugin</string>
-  </entry>
-  <entry>
-    <string>au_def_new_content_crawl</string>
-    <long>1209600000</long>
-  </entry>
-  <entry>
-    <string>plugin_notes</string>
-    <string></string>
-  </entry>
-  <entry>
-    <string>au_crawlrules</string>
-    <list>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%sLOCKSSmanifest.html&quot;, base_url</string>
-      <string>1,&quot;^%sperl/local/psyc/makedoc&quot;, base_url</string>
-      <string>2,&quot;^%sperl&quot;, base_url</string>
-      <string>1,&quot;^%s&quot;, base_url</string>
-    </list>
-  </entry>
-  <entry>
-    <string>au_start_url</string>
-    <string>&quot;%sLOCKSSmanifest.html&quot;, base_url</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -58,5 +60,39 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
     </list>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Psycoloquy Plugin, Base URL %s", base_url</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%sLOCKSSmanifest.html", base_url</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,"^%s", base_url</string>
+      <string>1,"^%sLOCKSSmanifest.html", base_url</string>
+      <string>1,"^%sperl/local/psyc/makedoc", base_url</string>
+      <string>2,"^%sperl", base_url</string>
+      <string>1,"^%s", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>uk.org.lockss.plugin.psycoloquy.PsycoloquyHtmlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_notes</string>
+    <string>For the old site http://psycprints.ecs.soton.ac.uk/</string>
   </entry>
 </map>

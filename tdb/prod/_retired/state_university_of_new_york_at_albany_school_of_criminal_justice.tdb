@@ -16,7 +16,8 @@
     plugin = edu.indiana.lib.plugin.jcjpc.JcjpcPlugin
     param[base_url] = http://www.albany.edu/scj/jcjpc/
     implicit < status ; year ; name ; param[volume] >
-    # see RU1943. Journal appears to be abandoned.
+    
+    # Journal has moved to https://jcjpc.org/ 
 
     au < down ; 2003 ; Journal of Criminal Justice and Popular Culture Volume 10 ; 10 >
     

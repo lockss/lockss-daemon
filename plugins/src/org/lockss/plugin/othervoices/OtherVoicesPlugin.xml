@@ -1,11 +1,39 @@
+<!--
+
+Copyright (c) 2000-2020, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+-->
 <map>
   <entry>
     <string>plugin_status</string>
     <string>down</string>
-  </entry>
-  <entry>
-    <string>au_def_pause_time</string>
-    <long>6000</long>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -16,47 +44,9 @@
     <string>2</string>
   </entry>
   <entry>
-    <string>au_name</string>
-    <string>&quot;Other Voices Plugin, Base URL %s, Volume %d&quot;, base_url, volume</string>
-  </entry>
-  <entry>
-    <string>au_def_new_content_crawl</string>
-    <long>1209600000</long>
-  </entry>
-  <entry>
     <string>plugin_name</string>
     <string>Other Voices Plugin</string>
   </entry>
-  <entry>
-    <string>au_crawlrules</string>
-    <list>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;%slockss-volume%d.html&quot;, base_url, volume</string>
-      <string>1,&quot;%s%d\.[0-9]/.*&quot;, base_url, volume</string>
-      <string>1,&quot;%simages/.*&quot;, base_url</string>
-    </list>
-  </entry>
-  <entry>
-    <string>au_start_url</string>
-    <string>&quot;%slockss-volume%d.html&quot;, base_url, volume</string>
-  </entry>
-  <entry>
-  	<string>au_feature_urls</string>
-  	<map>
-	  <entry>
-	    <string>au_title</string>
-    	<string>&quot;%sindex.php&quot;, base_url</string>
-	  </entry>
-	  <entry>
-	    <string>au_volume</string>
-    	<string>&quot;%sindex.php&quot;, base_url</string>
-	  </entry>
-	  <entry>
-	    <string>au_issue</string>
-    	<string>&quot;%s%s.%s/index.php&quot;, base_url, volume, issue</string>
-	  </entry>
-  	</map>
-  </entry>  
   <entry>
     <string>plugin_config_props</string>
     <list>
@@ -79,4 +69,52 @@
       </org.lockss.daemon.ConfigParamDescr>
     </list>
   </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Other Voices Plugin, Base URL %s, Volume %d", base_url, volume</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%sarchives.php", base_url</string>
+  </entry>
+  <!-- Use a fixed URL that has the permission statement; only volume 2 got a static start page long ago -->
+  <entry>
+    <string>au_permission_url</string>
+    <string>"%slockss-volume2.html", base_url, volume</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,"^%s", base_url</string>
+      <string>1,"^%s.*\.(bmp|css|eot|gif|ico|js|jpe?g|png|tif?f|svg|ttf|woff.?)$", base_url</string>
+      <string>1,"^%sarchives\.php$", base_url</string>
+      <string>1,"^%slockss-volume2\.html$", base_url</string>
+      <string>1,"^%s%d\.[0-9]/", base_url, volume</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+  	<string>au_feature_urls</string>
+  	<map>
+	  <entry>
+	    <string>au_title</string>
+    	<string>"%sindex.php", base_url</string>
+	  </entry>
+	  <entry>
+	    <string>au_volume</string>
+    	<string>"%sindex.php", base_url</string>
+	  </entry>
+	  <entry>
+	    <string>au_issue</string>
+    	<string>"%s%s.%s/index.php", base_url, volume, issue</string>
+	  </entry>
+  	</map>
+  </entry>  
 </map>

@@ -16,8 +16,11 @@
     plugin = org.lockss.plugin.othervoices.OtherVoicesPlugin
     param[base_url] = http://www.othervoices.org/
     implicit < status ; year ; name ; param[volume] >
-    
-    # plugin needs review.
+
+    # Could be un-retired with a little work.
+    # Volume 3 need a Javascript link extractor for its multimedia article.
+    # Volume 1 probably doesn't need much.
+    # All volumes may need a little HTML filtering.
     
     au < doNotProcess ; 1997-1999 ; Other Voices: The eJournal of Cultural Criticism Volume 1 ; 1 >
     au < down ; 2000-2005 ; Other Voices: The eJournal of Cultural Criticism Volume 2 ; 2 >

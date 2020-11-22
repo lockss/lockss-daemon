@@ -12,23 +12,15 @@
       issnl = 1055-0143
     >
     
-    {
-    
-      rights = openaccess
-      plugin = uk.org.lockss.plugin.psycoloquy.PsycoloquyPlugin
-      param[base_url] = http://psycprints.ecs.soton.ac.uk/
-      implicit < status ; year ; name >
+    rights = openaccess
+    plugin = uk.org.lockss.plugin.psycoloquy.PsycoloquyPlugin
+    param[base_url] = http://psycprints.ecs.soton.ac.uk/
+    implicit < status ; year ; name >
       
-      au < superseded ; 2002 ; Psycoloquy [superseded] >
-      
-    }
+    au < down ; 2002 ; Psycoloquy >
+
+    # completely new version at http://www.cogsci.ecs.soton.ac.uk/cgi/psyc/newpsy
     
-    {
-    
-      comment = completely new version at http://www.cogsci.ecs.soton.ac.uk/cgi/psyc/newpsy
-    
-    }
-  
   }
 
 }
