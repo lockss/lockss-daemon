@@ -1,3 +1,14 @@
 #!/bin/sh
 
+TESTCLASSPATH='test/test-classpath'
+PLUGINSTESTS='lib/lockss-plugins-test.jar'
+
+if [ ! -f "${TESTCLASSPATH}" ] ; then
+  echo "$0: ${TESTCLASSPATH} not found; try running: ant jar-tests jar-plugins-tests"
+  exit 1
+fi
+if [ ! -f "${PLUGINSTESTS}" ] ; then
+  echo "$0: ${PLUGINSTESTS} not found; try running: ant jar-tests jar-plugins-tests"
+  exit 1
+fi
 test/scripts/run-class -quiet -plugins org.lockss.plugin.clockss.warc.TestWarcXmlMetadataExtractor "$@"
