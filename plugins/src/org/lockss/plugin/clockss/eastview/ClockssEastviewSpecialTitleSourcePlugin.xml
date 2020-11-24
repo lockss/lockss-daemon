@@ -54,8 +54,8 @@
     <string>au_crawlrules</string>
     <list>
       <!-- exclude "Digital Archive" folder for now -->
-      <string>2,"https://clockss-test.lockss.org/sourcefiles/eastview-released/2020/[^/]+/Digital.*"</string>
-      <string>1,"https://clockss-test.lockss.org/sourcefiles/eastview-released/2020/"</string>
+      <string>2,"^%s%s/[^/]+/Digital.*", base_url, directory</string>
+      <string>1,"^%s%s/", base_url, directory</string>
     </list>
   </entry>
   <entry>
