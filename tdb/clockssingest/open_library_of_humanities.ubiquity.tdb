@@ -198,5 +198,30 @@
       }
   }
 
+    {
+    title <
+       name = Dandelion: Postgraduate Arts Journal and Research Network ;
+       eissn = 2048-1322
+     >
+     # This content was collected using wget and provided for preservation as a
+     # set of WARC files on 2018-06-25.
+     # WARC content collected from https://dandelionjournal.org/
+     comment[publisher] = Open Library of Humanities
+
+        #param[base_url] = https://dandelionjournal.org/
+        plugin = needs.plugin
+        implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
+
+        au < exists ; exists ; 2010 ; 1 ; Dandelion: Postgraduate Arts Journal and Research Network Volume 2010 ; 2010 ; https://dandelionjournal.org/ ; >
+        au < exists ; exists ; 2011 ; 2 ; Dandelion: Postgraduate Arts Journal and Research Network Volume 2011 ; 2011 ; https://dandelionjournal.org/ ; >
+        au < exists ; exists ; 2012 ; 3 ; Dandelion: Postgraduate Arts Journal and Research Network Volume 2012 ; 2012 ; https://dandelionjournal.org/ ; >
+        au < exists ; exists ; 2013 ; 4 ; Dandelion: Postgraduate Arts Journal and Research Network Volume 2013 ; 2013 ; https://dandelionjournal.org/ ; >
+        au < exists ; exists ; 2014 ; 5 ; Dandelion: Postgraduate Arts Journal and Research Network Volume 2014 ; 2014 ; https://dandelionjournal.org/ ; >
+        au < exists ; exists ; 2015 ; 6 ; Dandelion: Postgraduate Arts Journal and Research Network Volume 2015 ; 2015 ; https://dandelionjournal.org/ ; >
+        au < exists ; exists ; 2016 ; 7 ; Dandelion: Postgraduate Arts Journal and Research Network Volume 2016 ; 2016 ; https://dandelionjournal.org/ ; >
+        au < exists ; exists ; 2017 ; 8 ; Dandelion: Postgraduate Arts Journal and Research Network Volume 2017 ; 2017 ; https://dandelionjournal.org/ ; >
+        au < exists ; exists ; 2018 ; 9 ; Dandelion: Postgraduate Arts Journal and Research Network Volume 2018 ; 2018 ; https://dandelionjournal.org/ ; >
+
+  }
 }
 
