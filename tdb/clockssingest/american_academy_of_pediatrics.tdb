@@ -83,8 +83,8 @@
       au < aap.ClockssAAPDrupalPlugin ; manifest ; exists ; 2018 ; AAP Grand Rounds Volume 40 ; 40 ; https://aapgrandrounds.aappublications.org/ ; >
       au < aap.ClockssAAPDrupalPlugin ; deepCrawl ; exists ; 2019 ; AAP Grand Rounds Volume 41 ; 41 ; https://aapgrandrounds.aappublications.org/ ; >
       au < aap.ClockssAAPDrupalPlugin ; crawling ; exists ; 2019 ; AAP Grand Rounds Volume 42 ; 42 ; https://aapgrandrounds.aappublications.org/ ; >
-      au < aap.ClockssAAPDrupalPlugin ; expected ; exists ; 2020 ; AAP Grand Rounds Volume 43 ; 43 ; https://aapgrandrounds.aappublications.org/ ; >
-      au < aap.ClockssAAPDrupalPlugin ; expected ; exists ; 2020 ; AAP Grand Rounds Volume 44 ; 44 ; https://aapgrandrounds.aappublications.org/ ; >
+      au < aap.ClockssAAPDrupalPlugin ; manifest ; exists ; 2020 ; AAP Grand Rounds Volume 43 ; 43 ; https://aapgrandrounds.aappublications.org/ ; >
+      au < aap.ClockssAAPDrupalPlugin ; manifest ; exists ; 2020 ; AAP Grand Rounds Volume 44 ; 44 ; https://aapgrandrounds.aappublications.org/ ; >
 
     }
   
@@ -417,7 +417,7 @@
       au < aap.ClockssAAPDrupalPlugin ; deepCrawl ; exists ; 2019 ; Pediatrics Volume 143 ; 143 ; https://pediatrics.aappublications.org/ ; >
       au < aap.ClockssAAPDrupalPlugin ; crawling ; exists ; 2019 ; Pediatrics Volume 144 ; 144 ; https://pediatrics.aappublications.org/ ; >
       au < aap.ClockssAAPDrupalPlugin ; manifest ; exists ; 2020 ; Pediatrics Volume 145 ; 145 ; https://pediatrics.aappublications.org/ ; >
-      au < aap.ClockssAAPDrupalPlugin ; expected ; exists ; 2020 ; Pediatrics Volume 146 ; 146 ; https://pediatrics.aappublications.org/ ; >
+      au < aap.ClockssAAPDrupalPlugin ; manifest ; exists ; 2020 ; Pediatrics Volume 146 ; 146 ; https://pediatrics.aappublications.org/ ; >
 
     }
   

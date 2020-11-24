@@ -293,10 +293,10 @@
     param[journal_id] = jgc
     #continued_by = 0731-5090
 
-    au < exists ; exists ; 1978 ; Journal of Guidance and Control Volume 1 ; 1 ; https://arc.aiaa.org/ ; >
-    au < exists ; exists ; 1979 ; Journal of Guidance and Control Volume 2 ; 2 ; https://arc.aiaa.org/ ; >
-    au < exists ; exists ; 1980 ; Journal of Guidance and Control Volume 3 ; 3 ; https://arc.aiaa.org/ ; >
-    au < exists ; exists ; 1981 ; Journal of Guidance and Control Volume 4 ; 4 ; https://arc.aiaa.org/ ; >
+    au < manifest ; exists ; 1978 ; Journal of Guidance and Control Volume 1 ; 1 ; https://arc.aiaa.org/ ; >
+    au < manifest ; exists ; 1979 ; Journal of Guidance and Control Volume 2 ; 2 ; https://arc.aiaa.org/ ; >
+    au < manifest ; exists ; 1980 ; Journal of Guidance and Control Volume 3 ; 3 ; https://arc.aiaa.org/ ; >
+    au < manifest ; exists ; 1981 ; Journal of Guidance and Control Volume 4 ; 4 ; https://arc.aiaa.org/ ; >
 
   }
 

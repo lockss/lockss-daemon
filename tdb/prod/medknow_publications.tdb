@@ -1170,20 +1170,9 @@
     au < released ; 2011 ; Indian Journal of Medical Sciences Volume 65 ; 2011 ; 65 >
     au < manifest ; 2012 ; Indian Journal of Medical Sciences Volume 66 ; 2012 ; 66 >
     au < released ; 2013 ; Indian Journal of Medical Sciences Volume 67 ; 2013 ; 67 >
+    # Moved to OJS
   }
   
-  {
-    param[base_url] = http://www.journal.indianjmedsci.com/
-    #param[journal_issn] = ijms
-  
-    au < exists ; 2016 ; Indian Journal of Medical Sciences Volume 68 ; 2013 ; 68 >
-    au < exists ; 2017 ; Indian Journal of Medical Sciences Volume 69 ; 2013 ; 69 >
-    #au < expected ; 2018 ; Indian Journal of Medical Sciences Volume 70 ; 2013 ; 70 >
-    #au < expected ; 2019 ; Indian Journal of Medical Sciences Volume 71 ; 2013 ; 71 >
-    #au < expected ; 2020 ; Indian Journal of Medical Sciences Volume 72 ; 2013 ; 72 >
-
-  }
-
   }
 
   {

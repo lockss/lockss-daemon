@@ -210,8 +210,8 @@
       au < exists ; exists ; 2004 ; Interdisciplinary Literary Studies Volume 5-6 ; 2004 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2005 ; Interdisciplinary Literary Studies Volume 6-7 ; 2005 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2006 ; Interdisciplinary Literary Studies Volume 7-8 ; 2006 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 2007 ; Interdisciplinary Literary Studies Volume 8-9 ; 2007 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 2008 ; Interdisciplinary Literary Studies Volume 9-10 ; 2008 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2007 ; Interdisciplinary Literary Studies Volume 8-9 ; 2007 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2008 ; Interdisciplinary Literary Studies Volume 9-10 ; 2008 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2009 ; Interdisciplinary Literary Studies Volume 10-11 ; 2009 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2010 ; Interdisciplinary Literary Studies Volume 11-12; 2010 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2011 ; Interdisciplinary Literary Studies Volume 12-13 ; 2011 ; https://www.jstor.org/ ; >
@@ -407,9 +407,9 @@
       param[journal_id] = jmorahist
 
       au < exists ; exists ; 2006 ; Journal of Moravian History Volume 2006 ; 2006 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 2007 ; Journal of Moravian History Volume 2007 ; 2007 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 2008 ; Journal of Moravian History Volume 2008 ; 2008 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 2009 ; Journal of Moravian History Volume 2009 ; 2009 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2007 ; Journal of Moravian History Volume 2007 ; 2007 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2008 ; Journal of Moravian History Volume 2008 ; 2008 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2009 ; Journal of Moravian History Volume 2009 ; 2009 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2010 ; Journal of Moravian History Volume 2010 ; 2010 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2011 ; Journal of Moravian History Volume 2011 ; 2011 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2012 ; Journal of Moravian History Volume 12 ; 2012 ; http://www.jstor.org/ ; >
@@ -637,12 +637,12 @@
     
       param[journal_id] = reception
 
-      au < exists ; exists ; 2008 ; Reception: Texts, Readers, Audiences, History Volume 1 ; 2008 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2008 ; Reception: Texts, Readers, Audiences, History Volume 1 ; 2008 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2010 ; Reception: Texts, Readers, Audiences, History Volume 2 ; 2010 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2011 ; Reception: Texts, Readers, Audiences, History Volume 3 ; 2011 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2012 ; Reception: Texts, Readers, Audiences, History Volume 4 ; 2012 ; http://www.jstor.org/ ; >
-      au < exists ; exists ; 2013 ; Reception: Texts, Readers, Audiences, History Volume 5 ; 2013 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 2014 ; Reception: Texts, Readers, Audiences, History Volume 6 ; 2014 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2013 ; Reception: Texts, Readers, Audiences, History Volume 5 ; 2013 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2014 ; Reception: Texts, Readers, Audiences, History Volume 6 ; 2014 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2015 ; Reception: Texts, Readers, Audiences, History Volume 7 ; 2015 ; http://www.jstor.org/ ; >
       au < frozen ; exists ; 2016 ; Reception: Texts, Readers, Audiences, History Volume 8 ; 2016 ; http://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2017 ; Reception: Texts, Readers, Audiences, History Volume 9 ; 2017 ; http://www.jstor.org/ ; >
@@ -1727,7 +1727,7 @@
       au < frozen ; exists ; 2017 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2018 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2019 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
-      au < expected ; exists ; 2020 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2020 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
 
   }
 
@@ -1806,7 +1806,7 @@
       au < frozen ; exists ; 2017 ; The Korean Language in America Volume 20-21 ; 2017 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2018 ; The Korean Language in America Volume 21-22 ; 2018 ; https://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2019 ; The Korean Language in America Volume 22-23 ; 2019 ; https://www.jstor.org/ ; >
-      au < expected ; exists ; 2020 ; The Korean Language in America Volume 23-24 ; 2020 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2020 ; The Korean Language in America Volume 23-24 ; 2020 ; https://www.jstor.org/ ; >
 
   }
 
