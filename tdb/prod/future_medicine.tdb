@@ -380,8 +380,8 @@
     param[journal_id] = fht
     comment[continued_by] = 1758-4310
 
-    au < exists ; 2007 ; Future HIV Therapy Volume 1 ; 1 ; https://www.futuremedicine.com/ >
-    au < exists ; 2008 ; Future HIV Therapy Volume 2 ; 2 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2007 ; Future HIV Therapy Volume 1 ; 1 ; https://www.futuremedicine.com/ >
+    au < manifest ; 2008 ; Future HIV Therapy Volume 2 ; 2 ; https://www.futuremedicine.com/ >
     
   }
 

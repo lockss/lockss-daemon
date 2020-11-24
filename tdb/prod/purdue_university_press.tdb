@@ -83,14 +83,14 @@
       param[journal_abbr] = clcweb
       implicit < status ; year ; name ; param[volume] ; param[base_url] >
       
-      au < exists ; 1999 ; CLCWeb: Comparative Literature and Culture Volume 1 ; 1 ; https://docs.lib.purdue.edu/ >
-      au < exists ; 2000 ; CLCWeb: Comparative Literature and Culture Volume 2 ; 2 ; https://docs.lib.purdue.edu/ >
-      au < exists ; 2001 ; CLCWeb: Comparative Literature and Culture Volume 3 ; 3 ; https://docs.lib.purdue.edu/ >
-      au < exists ; 2002 ; CLCWeb: Comparative Literature and Culture Volume 4 ; 4 ; https://docs.lib.purdue.edu/ >
-      au < exists ; 2003 ; CLCWeb: Comparative Literature and Culture Volume 5 ; 5 ; https://docs.lib.purdue.edu/ >
-      au < exists ; 2004 ; CLCWeb: Comparative Literature and Culture Volume 6 ; 6 ; https://docs.lib.purdue.edu/ >
-      au < exists ; 2005 ; CLCWeb: Comparative Literature and Culture Volume 7 ; 7 ; https://docs.lib.purdue.edu/ >
-      au < exists ; 2006 ; CLCWeb: Comparative Literature and Culture Volume 8 ; 8 ; https://docs.lib.purdue.edu/ >
+      au < manifest ; 1999 ; CLCWeb: Comparative Literature and Culture Volume 1 ; 1 ; https://docs.lib.purdue.edu/ >
+      au < manifest ; 2000 ; CLCWeb: Comparative Literature and Culture Volume 2 ; 2 ; https://docs.lib.purdue.edu/ >
+      au < manifest ; 2001 ; CLCWeb: Comparative Literature and Culture Volume 3 ; 3 ; https://docs.lib.purdue.edu/ >
+      au < manifest ; 2002 ; CLCWeb: Comparative Literature and Culture Volume 4 ; 4 ; https://docs.lib.purdue.edu/ >
+      au < manifest ; 2003 ; CLCWeb: Comparative Literature and Culture Volume 5 ; 5 ; https://docs.lib.purdue.edu/ >
+      au < manifest ; 2004 ; CLCWeb: Comparative Literature and Culture Volume 6 ; 6 ; https://docs.lib.purdue.edu/ >
+      au < manifest ; 2005 ; CLCWeb: Comparative Literature and Culture Volume 7 ; 7 ; https://docs.lib.purdue.edu/ >
+      au < manifest ; 2006 ; CLCWeb: Comparative Literature and Culture Volume 8 ; 8 ; https://docs.lib.purdue.edu/ >
       au < released ; 2007 ; CLCWeb: Comparative Literature and Culture Volume 9 ; 9 ; http://docs.lib.purdue.edu/ >
       au < released ; 2008 ; CLCWeb: Comparative Literature and Culture Volume 10 ; 10 ; http://docs.lib.purdue.edu/ >
       au < released ; 2009 ; CLCWeb: Comparative Literature and Culture Volume 11 ; 11 ; http://docs.lib.purdue.edu/ >
