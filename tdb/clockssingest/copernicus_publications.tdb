@@ -163,7 +163,7 @@
       eissn = 2700-8150
     >
       attr[journal_id] = agile-giss
-      param[base_url] = https://agile-giss.copernicus.org/articles
+      param[base_url] = https://agile-giss.copernicus.org/articles/
       param[home_url] = https://www.advances-statistical-climatology-meteorology-oceanography.net/
 
       au < exists ; exists ; 2020 ; 2020 ; AGILE: GIScience Series Volume 1 ; 1 ; >
@@ -178,7 +178,7 @@
     >
       attr[journal_id] = angeo
       #param[base_url] = https://www.ann-geophys.net/
-      param[base_url] = https://angeo.copernicus.org/articles
+      param[base_url] = https://angeo.copernicus.org/articles/
       param[home_url] = https://www.annales-geophysicae.net/
       # volume 12 & 13 contain abstracts only
 
@@ -222,7 +222,7 @@
       eissn = 2363-9822
     >
       attr[journal_id] = aab
-      param[base_url] = https://aab.copernicus.org/articles
+      param[base_url] = https://aab.copernicus.org/articles/
       param[home_url] = https://archives-animal-breeding.net/
 
       {
@@ -263,7 +263,7 @@
     >
       attr[journal_id] = astra
       #param[base_url] = https://www.astrophys-space-sci-trans.net/
-      param[base_url] = https://astra.copernicus.org/articles
+      param[base_url] = https://astra.copernicus.org/articles/
       param[home_url] = https://www.astrophysics-and-space-sciences-transactions.net/
       # no publication after 2012
 
@@ -286,7 +286,7 @@
     >
       attr[journal_id] = acp
       #param[base_url] = https://www.atmos-chem-phys.net/
-      param[base_url] = https://acp.copernicus.org/articles
+      param[base_url] = https://acp.copernicus.org/articles/
       param[home_url] = https://www.atmospheric-chemistry-and-physics.net/
 
       au < doNotProcess ; exists ; 2001 ; 2001 ; Atmospheric Chemistry and Physics Volume 1 ; 1 ; >
@@ -320,7 +320,7 @@
     >
       attr[journal_id] =  amt
       #param[base_url] = https://www.atmos-meas-tech.net/
-      param[base_url] = https://amt.copernicus.org/articles
+      param[base_url] = https://amt.copernicus.org/articles/
       param[home_url] = https://www.atmospheric-measurement-techniques.net/
 
       au < doNotProcess ; exists ; 2008 ; 2008 ; Atmospheric Measurement Techniques Volume 1 ; 1 ; >
@@ -347,7 +347,7 @@
     >
       attr[journal_id] = bg
       #param[base_url] = https://www.biogeosciences.net/
-      param[base_url] = https://bg.copernicus.org/articles
+      param[base_url] = https://bg.copernicus.org/articles/
       param[home_url] = https://www.biogeosciences.net/
 
       au < doNotProcess ; exists ; 2004 ; 2004 ; Biogeosciences Volume 1 ; 1 ; >
@@ -378,7 +378,7 @@
     >
       attr[journal_id] = cp
       #param[base_url] = https://www.clim-past.net/
-      param[base_url] = https://cp.copernicus.org/articles
+      param[base_url] = https://cp.copernicus.org/articles/
       param[home_url] = https://www.climate-of-the-past.net/
 
       au < doNotProcess ; exists ; 2005 ; 2005 ; Climate of the Past Volume 1 ; 1 ; >
@@ -408,7 +408,7 @@
     >
       attr[journal_id] = dwes
       #param[base_url] = https://www.drink-water-eng-sci.net/
-      param[base_url] = https://dwes.copernicus.org/articles
+      param[base_url] = https://dwes.copernicus.org/articles/
       param[home_url] = https://www.drinking-water-engineering-and-science.net/
 
       au < doNotProcess ; exists ; 2008 ; 2008 ; Drinking Water Engineering and Science Volume 1 ; 1 ; >
@@ -435,7 +435,7 @@
     >
       attr[journal_id] = esurf
       #param[base_url] = https://www.earth-surf-dynam.net/
-      param[base_url] = https://esurf.copernicus.org/articles
+      param[base_url] = https://esurf.copernicus.org/articles/
       param[home_url] = https://www.earth-surface-dynamics.net/
 
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Earth Surface Dynamics Volume 1 ; 1 ; >
@@ -457,7 +457,7 @@
     >
       attr[journal_id] = esd
       #param[base_url] = https://www.earth-syst-dynam.net/
-      param[base_url] = https://esd.copernicus.org/articles
+      param[base_url] = https://esd.copernicus.org/articles/
       param[home_url] = https://www.earth-system-dynamics.net/
 
       au < doNotProcess ; exists ; 2010 ; 2010 ; Earth System Dynamics Volume 1 ; 1 ; >
@@ -482,7 +482,7 @@
     >
       attr[journal_id] = essd
       #param[base_url] = https://www.earth-syst-sci-data.net/
-      param[base_url] = https://essd.copernicus.org/articles
+      param[base_url] = https://essd.copernicus.org/articles/
       param[home_url] = https://www.earth-system-science-data.net/
 
       au < doNotProcess ; exists ; 2009 ; 2009 ; Earth System Science Data Volume 1 ; 1 ; >
@@ -508,7 +508,7 @@
     >
       attr[journal_id] = ee
       #param[base_url] = https://www.electronic-earth.net/
-      param[base_url] = https://ee.copernicus.org/articles
+      param[base_url] = https://ee.copernicus.org/articles/
       param[home_url] = https://www.electronic-earth.net/
       #stopped in summer 2009
 
@@ -527,7 +527,7 @@
       eissn = 2199-9090
     >
       attr[journal_id] = egqsj
-      param[base_url] = https://egqsj.copernicus.org/articles
+      param[base_url] = https://egqsj.copernicus.org/articles/
       param[home_url] = https://www.eg-quaternary-science-journal.net/
 
       au < doNotProcess ; exists ; 1951 ; 1951 ; E&G Quaternary Science Journal Volume 1 ; 1 ; >
@@ -607,7 +607,7 @@
     >
       attr[journal_id] = facts
       #param[base_url] = https://www.field-actions-sci-rep.net/
-      param[base_url] = https://facts.copernicus.org/articles
+      param[base_url] = https://facts.copernicus.org/articles/
       param[home_url] = https://www.field-actions-science-reports.net/
       # move to http://factsreports.revues.org
 
@@ -624,7 +624,7 @@
     >
       attr[journal_id] = fr
       #param[base_url] = https://www.foss-rec.net/
-      param[base_url] = https://fr.copernicus.org/articles
+      param[base_url] = https://fr.copernicus.org/articles/
       param[home_url] = https://www.fossil-record.net/
       # Abstract only, not Open Access, from volume 1 to 16, eissn 1860-1014
 
@@ -666,7 +666,7 @@
     >
       attr[journal_id] = gh
       #param[base_url] = https://www.geogr-helv.net/
-      param[base_url] = https://gh.copernicus.org/articles
+      param[base_url] = https://gh.copernicus.org/articles/
       param[home_url] = https://www.geographica-helvetica.net/
 
       comment[notReady] = This journal is open access one year after publication. eg 2013 volume is available jan 1 2015.
@@ -757,7 +757,7 @@
     >
       attr[journal_id] = gi
       #param[base_url] = https://www.geosci-instrum-method-data-syst.net/
-      param[base_url] = https://gi.copernicus.org/articles
+      param[base_url] = https://gi.copernicus.org/articles/
       param[home_url] = https://www.geoscientific-instrumentation-methods-and-data-systems.net/
 
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Geoscientific Instrumentation, Methods and Data Systems Volume 1 ; 1 ; >
@@ -780,7 +780,7 @@
     >
       attr[journal_id] = gmd
       #param[base_url] = https://www.geosci-model-dev.net/
-      param[base_url] = https://gmd.copernicus.org/articles
+      param[base_url] = https://gmd.copernicus.org/articles/
       param[home_url] = https://www.geoscientific-model-development.net/
 
       au < doNotProcess ; exists ; 2008 ; 2008 ; Geoscientific Model Development Volume 1 ; 1 ; >
@@ -807,7 +807,7 @@
     >
       attr[journal_id] = gtes
       #param[base_url] = https://www.geoth-energ-sci.net/
-      param[base_url] = https://gtes.copernicus.org/articles
+      param[base_url] = https://gtes.copernicus.org/articles/
       param[home_url] = https://www.geothermal-energy-science.net/
        #Moved to Springer
 
@@ -827,7 +827,7 @@
     >
       attr[journal_id] = hgss
       #param[base_url] = https://www.hist-geo-space-sci.net/
-      param[base_url] = https://hgss.copernicus.org/articles
+      param[base_url] = https://hgss.copernicus.org/articles/
       param[home_url] = https://www.history-of-geo-and-space-sciences.net/
 
       au < doNotProcess ; exists ; 2010 ; 2010 ; History of Geo- and Space Sciences Volume 1 ; 1 ; >
@@ -852,7 +852,7 @@
     >
       attr[journal_id] = hess
       #param[base_url] = https://www.hydrol-earth-syst-sci.net/
-      param[base_url] = https://hess.copernicus.org/articles
+      param[base_url] = https://hess.copernicus.org/articles/
       param[home_url] = https://www.hydrology-and-earth-system-sciences.net/
 
       au < doNotProcess ; exists ; 1997 ; 1997 ; Hydrology and Earth System Sciences Volume 1 ; 1 ; >
@@ -890,7 +890,7 @@
     >
       attr[journal_id] = isprsannals
       #param[base_url] = https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/
-      param[base_url] = https://isprsannals.copernicus.org/articles
+      param[base_url] = https://isprsannals.copernicus.org/articles/
       param[home_url] = https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/
       #needs communication with publisher see LXQUEUE-1055
 
@@ -951,8 +951,8 @@
     {
       attr[journal_id] = isprsarchives
       #param[base_url] = https://www.isprs.org/proceedings/
-      param[base_url] = https://isprsarchives.copernicus.org/articles
-      param[home_url] = https://www.isprs.org/proceedings/
+      param[base_url] = https://www.isprs.org/publications/archives.aspx
+      param[home_url] = https://www.isprs.org/publications/
       # needs review on file directory on website
       #needs communication with publisher see LXQUEUE-1055
 
@@ -1002,7 +1002,7 @@
     {
       attr[journal_id] = isprsarchives
       #param[base_url] = https://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/
-      param[base_url] = https://isprsarchives.copernicus.org/articles
+      param[base_url] = https://isprsarchives.copernicus.org/articles/
       param[home_url] = https://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/
 
       au < doNotProcess ; exists ; 2011 ; 2011 ; ISPRS Archives Volume XXXVIII-1/C22 ; XXXVIII-1-C22 ; >
@@ -1103,7 +1103,7 @@
       eissn = 2041-4978
     >
       attr[journal_id] = jm
-      param[base_url] = https://jm.copernicus.org/articles
+      param[base_url] = https://jm.copernicus.org/articles/
       param[home_url] = https://www.journal-of-micropalaeontology.net/
 
       au < doNotProcess ; exists ; 1982 ; 1982 ; Journal of Micropalaeontology Volume 1 ; 1 ; >
@@ -1156,7 +1156,7 @@
     >
       attr[journal_id] = jsss
       #param[base_url] = https://www.j-sens-sens-syst.net/
-      param[base_url] = https://jsss.copernicus.org/articles
+      param[base_url] = https://jsss.copernicus.org/articles/
       param[home_url] = https://www.journal-of-sensors-and-sensor-systems.net/
 
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Journal of Sensors and Sensor Systems Volume 1 ; 1 ; >
@@ -1179,7 +1179,7 @@
     >
       attr[journal_id] = ms
       #param[base_url] = https://www.mech-sci.net/
-      param[base_url] = https://ms.copernicus.org/articles
+      param[base_url] = https://ms.copernicus.org/articles/
       param[home_url] = https://www.mechanical-sciences.net/
 
       au < doNotProcess ; exists ; 2010 ; 2010 ; Mechanical Sciences Volume 1 ; 1 ; >
@@ -1204,7 +1204,7 @@
     >
       attr[journal_id] = nhess
       #param[base_url] = https://www.nat-hazards-earth-syst-sci.net/
-      param[base_url] = https://nhess.copernicus.org/articles
+      param[base_url] = https://nhess.copernicus.org/articles/
       param[home_url] = https://www.natural-hazards-and-earth-system-sciences.net/
 
       au < doNotProcess ; exists ; 2001 ; 2001 ; Natural Hazards and Earth System Sciences Volume 1 ; 1 ; >
@@ -1238,7 +1238,7 @@
     >
       attr[journal_id] = npg
       #param[base_url] = https://www.nonlin-processes-geophys.net/
-      param[base_url] = https://npg.copernicus.org/articles
+      param[base_url] = https://npg.copernicus.org/articles/
       param[home_url] = https://www.nonlinear-processes-in-geophysics.net/
 
       au < doNotProcess ; exists ; 1994 ; 1994 ; Nonlinear Processes in Geophysics Volume 1 ; 1 ; >
@@ -1279,7 +1279,7 @@
     >
       attr[journal_id] = os
       #param[base_url] = https://www.ocean-sci.net/
-      param[base_url] = https://os.copernicus.org/articles
+      param[base_url] = https://os.copernicus.org/articles/
       param[home_url] = https://www.ocean-science.net/
 
       au < doNotProcess ; exists ; 2005 ; 2005 ; Ocean Science Volume 1 ; 1 ; >
@@ -1309,7 +1309,7 @@
     >
       attr[journal_id] = prp
       #param[base_url] = https://www.pattern-recogn-phys.net/
-      param[base_url] = https://prp.copernicus.org/articles
+      param[base_url] = https://prp.copernicus.org/articles/
       param[home_url] = https://www.pattern-recognition-in-physics.net/
       #cease publishing 2014
 
@@ -1326,7 +1326,7 @@
     >
       attr[journal_id] = pb
       #param[base_url] = https://www.primate-biol.net/
-      param[base_url] = https://pb.copernicus.org/articles
+      param[base_url] = https://pb.copernicus.org/articles/
       param[home_url] = https://www.primate-biology.net/
 
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Primate Biology Volume 1 ; 1 ; >
@@ -1349,7 +1349,7 @@
       # CLOCKSS only
       attr[journal_id] = piahs
       #param[base_url] = https://www.proc-iahs.net/
-      param[base_url] = https://piahs.copernicus.org/articles
+      param[base_url] = https://piahs.copernicus.org/articles/
       param[home_url] = https://www.proceedings-international-association-of-hydrological-sciences.net/
 
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Proceedings of the International Association of Hydrological Sciences Volume 364 ; 364 ; >
@@ -1378,7 +1378,7 @@
     >
       attr[journal_id] = sd
       #param[base_url] = https://www.sci-dril.net/
-      param[base_url] = https://sd.copernicus.org/articles
+      param[base_url] = https://sd.copernicus.org/articles/
       param[home_url] = https://www.scientific-drilling.net/
 
       au < doNotProcess ; exists ; 2005 ; 2005 ; Scientific Drilling Volume 1 ; 1 ; >
@@ -1417,7 +1417,7 @@
     >
       attr[journal_id] = sg
       #param[base_url] = https://www.soc-geogr.net/
-      param[base_url] = https://sg.copernicus.org/articles
+      param[base_url] = https://sg.copernicus.org/articles/
       param[home_url] = https://www.social-geography.net/
       # stopped publishing as of 2012.
 
@@ -1439,7 +1439,7 @@
     >
       attr[journal_id] = soil
       #param[base_url] = https://www.soil-journal.net/
-      param[base_url] = https://soil.copernicus.org/articles
+      param[base_url] = https://soil.copernicus.org/articles/
       param[home_url] = https://www.soil-journal.net/
 
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; SOIL Volume 1 ; 1 ; >
@@ -1459,7 +1459,7 @@
     >
       attr[journal_id] = se
       #param[base_url] = https://www.solid-earth.net/
-      param[base_url] = https://se.copernicus.org/articles
+      param[base_url] = https://se.copernicus.org/articles/
       param[home_url] = https://www.solid-earth.net/
 
       au < doNotProcess ; exists ; 2010 ; 2010 ; Solid Earth Volume 1 ; 1 ; >
@@ -1484,7 +1484,7 @@
     >
       attr[journal_id] = smsps
       #param[base_url] = https://www.stephan-mueller-spec-publ-ser.net/
-      param[base_url] = https://smsps.copernicus.org/articles
+      param[base_url] = https://smsps.copernicus.org/articles/
       param[home_url] = https://www.stephan-mueller-special-publication-series.net/
       # no publication after 2009
 
@@ -1502,7 +1502,7 @@
     >
       attr[journal_id] = sapiens
       #param[base_url] = https://www.surv-perspect-integr-environ-soc.net/
-      param[base_url] = https://sapiens.copernicus.org/articles
+      param[base_url] = https://sapiens.copernicus.org/articles/
       param[home_url] = https://www.surveys-and-perspectives-integrating-environment-and-society.net/
       # move to http://sapiens.revues.org
 
@@ -1518,7 +1518,7 @@
     >
       attr[journal_id] = tc
       #param[base_url] = https://www.the-cryosphere.net/
-      param[base_url] = https://tc.copernicus.org/articles
+      param[base_url] = https://tc.copernicus.org/articles/
       param[home_url] = https://www.the-cryosphere.net/
 
       au < doNotProcess ; exists ; 2007 ; 2007 ; The Cryosphere Volume 1 ; 1 ; >
@@ -1546,7 +1546,7 @@
     >
       attr[journal_id] = we
       #param[base_url] = https://www.web-ecol.net/
-      param[base_url] = https://we.copernicus.org/articles
+      param[base_url] = https://we.copernicus.org/articles/
       param[home_url] = https://www.web-ecology.net/
 
       au < doNotProcess ; exists ; 2000 ; 2000 ; Web Ecology Volume 1 ; 1 ; >
@@ -1580,7 +1580,7 @@
     >
       attr[journal_id] = wes
       #param[base_url] = https://www.wind-energ-sci.net/
-      param[base_url] = https://wes.copernicus.org/articles
+      param[base_url] = https://wes.copernicus.org/articles/
       param[home_url] = https://www.wind-energy-science.net/
 
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Wind Energy Science Volume 1 ; 1 ; >
@@ -1598,7 +1598,7 @@
       eissn = 2628-3719 
     >
       attr[journal_id] = gchron
-      param[base_url] = https://gchron.copernicus.org/articles
+      param[base_url] = https://gchron.copernicus.org/articles/
       param[home_url] = https://www.geochronology.net/
 
       au < doNotProcess ; exists ; 2019 ; 2019 ; Geochronology: Advances in Gechronological Science Volume 1 ; 1 ; >
