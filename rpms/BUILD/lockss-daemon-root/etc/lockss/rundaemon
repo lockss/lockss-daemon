@@ -79,10 +79,10 @@ case "X${JAVA_BITS}" in
 esac
 
 case "X${JAVA_VERSION}" in
-X1.[6789]*)
+X1.8.*|X9.*|X1[012345].*)
     ;;
 *)
-    echo "Java version is ${JAVA_VERSION}: 1.6 or higher required" >>${LOG_FILE}
+    echo "Java version is ${JAVA_VERSION}: 8 or higher required" >>${LOG_FILE}
     exit 1
     ;;
 esac
