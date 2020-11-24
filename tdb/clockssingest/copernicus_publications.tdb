@@ -402,6 +402,20 @@
 
   {
     title <
+      name = DEUQUA Special Publications ;
+      eissn = 2625-8137
+    >
+      attr[journal_id] = deuquasp
+      param[base_url] = https://deuquasp.copernicus.org/articles/
+      param[home_url] = https://www.deuqua-special-publications.net/
+
+      au < exists ; exists ; 2018 ; 2018 ; DEUQUA Special Publications Volume 1 ; 1 ; >
+      au < exists ; exists ; 2019 ; 2019 ; DEUQUA Special Publications Volume 2 ; 2 ; >
+
+   }
+
+  {
+    title <
       name = Drinking Water Engineering and Science ;
       issn = 1996-9457 ;
       eissn = 1996-9465
@@ -602,6 +616,19 @@
 
   {
     title <
+      name = European Journal of Mineralogy ;
+      eissn = 1617-4011
+    >
+      attr[journal_id] = ejm
+      param[base_url] = https://ejm.copernicus.org/articles/
+      param[home_url] = https://www.european-journal-of-mineralogy.net/
+
+      au < exists ; exists ; 2020 ; 2020 ; European Journal of Mineralogy Volume 32 ; 32 ; >
+
+   }
+
+  {
+    title <
       name = Field Actions Science Reports ;
       eissn = 1867-8521
     >
@@ -655,6 +682,19 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Fossil Record Reports Volume 21 ; 21 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Fossil Record Reports Volume 22 ; 22 ; >
       au < manifest ; exists ; 2020 ; 2020 ; Fossil Record Reports Volume 23 ; 23 ; >
+
+   }
+
+  {
+    title <
+      name = Geochronology ;
+      eissn = 2628-3719
+    >
+      attr[journal_id] = gchron
+      param[base_url] = https://gchron.copernicus.org/articles/
+      param[home_url] = https://www.geochronology.net/
+
+      au < exists ; exists ; 2020 ; 2020 ; Geochronology Volume 32 ; 32 ; >
 
    }
 
@@ -746,6 +786,21 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Geographica Helvetica Volume 73 ; 73 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Geographica Helvetica Volume 74 ; 74 ; >
       au < manifest ; exists ; 2020 ; 2020 ; Geographica Helvetica Volume 75 ; 75 ; >
+
+   }
+
+  {
+    title <
+      name = Geoscience Communication ;
+      eissn = 2569-7110
+    >
+      attr[journal_id] = gc
+      param[base_url] = https://gc.copernicus.org/articles/
+      param[home_url] = https://www.geoscience-communication.net/
+
+      au < exists ; exists ; 2018 ; 2018 ; Geoscience Communication Volume 1 ; 1 ; >
+      au < exists ; exists ; 2019 ; 2019 ; Geoscience Communication Volume 2 ; 2 ; >
+      au < exists ; exists ; 2020 ; 2020 ; Geoscience Communication Volume 3 ; 3 ; >
 
    }
 
@@ -1106,6 +1161,24 @@
 
   {
     title <
+      name = Journal of Bone and Joint Infection ;
+      eissn = 2206-3552
+    >
+      attr[journal_id] = jbji
+      param[base_url] = https://jbji.copernicus.org/articles/
+      param[home_url] = https://www.journal-of-bone-and-joint-infection.net/
+
+      au < exists ; exists ; 2016 ; 2016 ; Journal of Bone and Joint Infection Volume 1 ; 1 ; >
+      au < exists ; exists ; 2017 ; 2017 ; Journal of Bone and Joint Infection Volume 2 ; 2 ; >
+      au < exists ; exists ; 2018 ; 2018 ; Journal of Bone and Joint Infection Volume 3 ; 3 ; >
+      au < exists ; exists ; 2019 ; 2019 ; Journal of Bone and Joint Infection Volume 4 ; 4 ; >
+      au < exists ; exists ; 2020 ; 2020 ; Journal of Bone and Joint Infection Volume 5 ; 5 ; >
+      au < exists ; exists ; 2020 ; 2020 ; Journal of Bone and Joint Infection Volume 6 ; 6 ; >
+
+   }
+
+  {
+    title <
       name = Journal of Micropalaeontology ;
       issn = 0262-821X ;
       eissn = 2041-4978
@@ -1176,6 +1249,19 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Journal of Sensors and Sensor Systems Volume 7 ; 7 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Journal of Sensors and Sensor Systems Volume 8 ; 8 ; >
       au < manifest ; exists ; 2020 ; 2020 ; Journal of Sensors and Sensor Systems Volume 9 ; 9 ; >
+
+   }
+
+  {
+    title <
+      name = Magnetic Resonance ;
+      eissn = 2699-0016
+    >
+      attr[journal_id] = mr
+      param[base_url] = https://mr.copernicus.org/articles/
+      param[home_url] = https://www.magnetic-resonance-ampere.net/
+
+      au < exists ; exists ; 2020 ; 2020 ; Magnetic Resonance Volume 1 ; 1 ; >
 
    }
 
@@ -1543,6 +1629,19 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; The Cryosphere Volume 12 ; 12 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; The Cryosphere Volume 13 ; 13 ; >
       au < manifest ; exists ; 2020 ; 2020 ; The Cryosphere Volume 14 ; 14 ; >
+
+   }
+
+  {
+    title <
+      name = Weather and Climate Dynamics ;
+      eissn = 2698-4016
+    >
+      attr[journal_id] = wcd
+      param[base_url] = https://wcd.copernicus.org/articles/
+      param[home_url] = https://www.weather-climate-dynamics.net/
+
+      au < exists ; exists ; 2020 ; 2020 ; Weather and Climate Dynamics Volume 1 ; 1 ; >
 
    }
 
