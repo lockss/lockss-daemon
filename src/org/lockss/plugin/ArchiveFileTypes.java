@@ -43,7 +43,8 @@ import org.lockss.util.*;
  * as pseudo-CachedUrls.
  */
 public class ArchiveFileTypes {
-  protected static Logger log = Logger.getLogger("ArchiveFileTypes");
+  
+  private static final Logger log = Logger.getLogger(ArchiveFileTypes.class);
 
 
   /** Default mime types and extensions for zip, tar, tgz. */
@@ -88,11 +89,16 @@ public class ArchiveFileTypes {
    * in the URL, or null if none.  
    */
   public String getFromUrl(String url) throws MalformedURLException {
+    String ret;
     if (StringUtil.endsWithIgnoreCase(url, ".tar.gz")) {
-      return getExtMimeMap().get(".tar.gz");
+      ret = getExtMimeMap().get(".tar.gz");
     }
-    String ext = UrlUtil.getFileExtension(url).toLowerCase();
-    return getExtMimeMap().get("." + ext);
+    else {
+      String ext = UrlUtil.getFileExtension(url).toLowerCase();
+      ret = getExtMimeMap().get("." + ext);
+    }
+    log.debug3(String.format("Result for %s: %s", url, ret));
+    return ret;
   }
 
   /** Return the archive file type corresponding to the MIME type, or null
@@ -100,10 +106,15 @@ public class ArchiveFileTypes {
    */
   public String getFromMime(String contentType) {
     String mimeType = HeaderUtil.getMimeTypeFromContentType(contentType);
+    String ret;
     if (mimeType == null) {
-      return null;
+      ret = null;
     }
-    return getExtMimeMap().get(mimeType.toLowerCase());
+    else {
+      ret = getExtMimeMap().get(mimeType.toLowerCase());
+    }
+    log.debug3(String.format("Result for %s: %s", contentType, ret));
+    return ret;
   }
 
   /** Lookup the CU's archive file type in its AU's ArchiveFileTypes
