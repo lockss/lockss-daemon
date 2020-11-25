@@ -1,10 +1,16 @@
 {
   publisher <
     name = IGI Global 
+#
+#
+#
+#
  >
   plugin = org.lockss.plugin.igiglobal.IgiGlobalBooksPlugin
   #  param[base_url] = http://www.igi-global.com/
   implicit < status ; year ; eisbn ; param[book_isbn] ; doi ; param[volume] ; name ; author ; param[base_url] >
+  comment[down] = content not online, but AU has been added on ingest machines
+  #find a list of books from https://www.igi-global.com/distributors/books/title-list/
   comment[notReady] = Forthcoming Book - Contents Coming Soon
 
 
@@ -36,6 +42,7 @@
    au < released ; 2000 ; 9781466601123 ; 9781878289865 ; 10.4018/978-1-878289-86-5 ; 911 ; Social Dimensions of Information Technology: Issues for the New Millennium ; G. David Garson (North Carolina State University, USA) ; http://www.igi-global.com/ >
    au < released ; 2000 ; 9781930708785 ; 9781878289605 ; 10.4018/978-1-87828-960-5 ; 1060 ; Web-Based Learning and Teaching Technologies: Opportunities and Challenges ; Anil K. Aggarwal ; http://www.igi-global.com/ >
    au < released ; 2000 ; 9781930708792 ; 9781878289667 ; 10.4018/978-1-87828-966-7 ; 1069 ; World Libraries on the Information Superhighway: Preparing for the Challenges of the New Millennium ; John Carlo Bertot and Patricia Diamond Fletcher ; http://www.igi-global.com/ >
+
    au < released ; 2001 ;  ; 9781615205929 ; 10.4018/978-1-61520-592-9 ; 44491 ; Annals of Cases on Information Technology: Applications and Management in Organizations (2001) ;  ; http://www.igi-global.com/ >
    au < released ; 2001 ; 9781930708501 ; 9781878289940 ; 10.4018/978-1-878289-94-0 ; 185 ; Computer-Aided Method Engineering: Designing CASE Repositories for the 21st Century ; Ajantha Dahanayake (Georgia College & State University, USA) ; http://www.igi-global.com/ >
    au < released ; 2001 ; 9781930708808 ; 9781930708037 ; 10.4018/978-1-93070-803-7 ; 229 ; Data Mining and Business Intelligence: A Guide to Productivity ; Richard Hoptroff and Stephan Kudyba ; http://www.igi-global.com/ >
@@ -60,6 +67,7 @@
    au < released ; 2001 ; 9781930708976 ; 9781878289797 ; 10.4018/978-1-878289-79-7 ; 983 ; Telecommuting and Virtual Offices: Issues and Opportunities ; Nancy Johnson ; http://www.igi-global.com/ >
    au < released ; 2001 ;  ; 9781878289933 ; 10.4018/978-1-878289-93-3 ; 987 ; Text Databases and Document Management: Theory and Practice ; Amita Goyal Chin ; http://www.igi-global.com/ >
    au < released ; 2001 ; 9781930708990 ; 9781930708051 ; 10.4018/978-1-930708-05-1 ; 1015 ; Unified Modeling Language: Systems Analysis, Design and Development Issues ; Terry Halpin (Neumont University, USA ) and Keng Siau (Missouri University of Science and Technology, USA) ; http://www.igi-global.com/ >
+
    au < released ; 2002 ; 9781591400271 ; 9781930708419 ; 10.4018/978-1-930708-41-9 ; 15 ; Advanced Topics in Database Research, Volume 1 ; Keng Siau (Missouri University of Science and Technology, USA) ; http://www.igi-global.com/ >
    au < released ; 2002 ; 9781591400288 ; 9781930708426 ; 10.4018/978-1-930708-42-6 ; 21 ; Advanced Topics in End User Computing, Volume 1 ; Mo Adam Mahmood (University of Texas at El Paso, USA) ; http://www.igi-global.com/ >
    au < released ; 2002 ; 9781591400295 ; 9781930708433 ; 10.4018/978-1-930708-43-3 ; 25 ; Advanced Topics in Global Information Management, Volume 1 ; Felix B. Tan (Auckland University of Technology, New Zealand) ; http://www.igi-global.com/ >
@@ -109,6 +117,7 @@
    au < released ; 2002 ; 9781931777339 ; 9781931777124 ; 10.4018/978-1-93177-712-4 ; 959 ; Successful Software Reengineering ; Salvatore  Valenti ; http://www.igi-global.com/ >
    au < released ; 2002 ; 9781591400011 ; 9781930708204 ; 10.4018/978-1-930708-20-4 ; 990 ; The Design and Management of Effective Distance Learning Programs ; Richard Discenza , Caroline Howard (HC Consulting, USA) and Karen D. Schenk (K. D. Schenk and Associates Consulting, USA) ; http://www.igi-global.com/ >
    au < released ; 2002 ; 9781931777223 ; 9781931777049 ; 10.4018/978-1-93177-704-9 ; 1058 ; Web-Based Instructional Learning ; Mehdi Khosrow-Pour (Information Resources Management Association, USA) ; http://www.igi-global.com/ >
+
    au < released ; 2003 ; 9781591400820 ; 9781591400349 ; 10.4018/978-1-59140-034-9 ; 5 ; Adaptive Evolutionary Information Systems ; Nandish V. Patel (Brunel University, UK) ; http://www.igi-global.com/ >
    au < released ; 2003 ; 9781591400981 ; 9781591400639 ; 10.4018/978-1-59140-063-9 ; 16 ; Advanced Topics in Database Research, Volume 2 ; Keng Siau (Missouri University of Science and Technology, USA) ; http://www.igi-global.com/ >
    au < released ; 2003 ; 9781591401001 ; 9781591400653 ; 10.4018/978-1-59140-065-3 ; 22 ; Advanced Topics in End User Computing, Volume 2 ; Mo Adam Mahmood (University of Texas at El Paso, USA) ; http://www.igi-global.com/ >
@@ -168,6 +177,7 @@
    au < released ; 2003 ; 9781591401100 ; 9781591401025 ; 10.4018/978-1-59140-102-5 ; 1055 ; Web-Based Education: Learning from Experience ; Anil K. Aggarwal ; http://www.igi-global.com/ >
    au < released ; 2003 ; 9781591400707 ; 9781591400417 ; 10.4018/978-1-59140-041-7 ; 1064 ; Web-Enabled Systems Integration: Practices and Challenges ; Ajantha Dahanayake (Georgia College & State University, USA) and Waltraud Gerhardt ; http://www.igi-global.com/ >
    au < released ; 2003 ; 9781591400929 ; 9781591400356 ; 10.4018/978-1-59140-035-6 ; 1065 ; Web-Powered Databases ; Johanna Wenny Rahayu  and David Taniar (Monash University, Australia) ; http://www.igi-global.com/ >
+
    au < released ; 2004 ; 9781931777995 ; 9781591402992 ; 10.4018/978-1-59140-299-2 ; 1 ; 3D Modeling and Animation: Synthesis and Analysis Techniques for the Human Body ; Nikos  Sarris and Michael   G. Strintzis ; http://www.igi-global.com/ >
    au < released ; 2004 ; 9781591402565 ; 9781591402558 ; 10.4018/978-1-59140-255-8 ; 17 ; Advanced Topics in Database Research, Volume 3 ; Keng Siau (Missouri University of Science and Technology, USA) ; http://www.igi-global.com/ >
    au < released ; 2004 ; 9781591402589 ; 9781591402572 ; 10.4018/978-1-59140-257-2 ; 23 ; Advanced Topics in End User Computing, Volume 3 ; Mo Adam Mahmood (University of Texas at El Paso, USA) ; http://www.igi-global.com/ >
@@ -229,6 +239,7 @@
    au < released ; 2004 ; 9781931777957 ; 9781591402985 ; 10.4018/978-1-59140-298-5 ; 1039 ; Visual Perception of Music Notation: On-Line and Off Line Recognition ; Susan Ella  George ; http://www.igi-global.com/ >
    au < released ; 2004 ; 9781591402091 ; 9781591402084 ; 10.4018/978-1-59140-208-4 ; 1044 ; Web Information Systems ; David Taniar (Monash University, Australia) and Johanna Wenny Rahayu ; http://www.igi-global.com/ >
    au < released ; 2004 ; 9781591401858 ; 9781591401841 ; 10.4018/978-1-59140-184-1 ; 1066 ; Wireless Communications and Mobile Commerce ; Nansi Shi (University of South Australia, Australia) ; http://www.igi-global.com/ >
+
    au < released ; 2005 ; 9781591405375 ; 9781591405672 ; 10.4018/978-1-59140-567-2 ; 3 ; Adaptable and Adaptive Hypermedia Systems ; Sherry Y. Chen (Brunel University, UK) and George D. Magoulas (University of London, UK) ; http://www.igi-global.com/ >
    au < released ; 2005 ; 9781591404873 ; 9781591404859 ; 10.4018/978-1-59140-485-9 ; 10 ; Advanced Methods in Distance Education: Applications and Practices for Educators, Administrators and Learners ; Kim E. Dooley, James R. Lindner and Larry M. Dooley ; http://www.igi-global.com/ >
    au < released ; 2005 ; 9781591404736 ; 9781591404712 ; 10.4018/978-1-59140-471-2 ; 18 ; Advanced Topics in Database Research, Volume 4 ; Keng Siau (Missouri University of Science and Technology, USA) ; http://www.igi-global.com/ >
@@ -326,6 +337,7 @@
    au < released ; 2005 ; 9781591403296 ; 9781591403272 ; 10.4018/978-1-59140-327-2 ; 1052 ; Web Systems Design and Online Consumer Behavior ; Yuan Gao ; http://www.igi-global.com/ >
    au < released ; 2005 ; 9781591405412 ; 9781591405689 ; 10.4018/978-1-59140-568-9 ; 1067 ; Wireless Information Highways ; Dimitrios Katsaros, Alexandros Nanopoulos and Yannis Manalopoulos ; http://www.igi-global.com/ >
    au < released ; 2005 ; 9781591405528 ; 9781591405856 ; 10.4018/978-1-59140-585-6 ; 1068 ; Working Virtually: Challenges of Virtual Teams ; Robert Jones, Rob Oyung and Lise Shade Pace ; http://www.igi-global.com/ >
+
    au < released ; 2006 ; 9781591408659 ; 9781591408635 ; 10.4018/978-1-59140-863-5 ; 9 ; Advanced Data Mining Technologies in Bioinformatics ; Hui-Huang Hsu ; http://www.igi-global.com/ >
    au < released ; 2006 ; 9781591409373 ; 9781591409359 ; 10.4018/978-1-59140-935-9 ; 19 ; Advanced Topics in Database Research, Volume 5 ; Keng Siau (Missouri University of Science and Technology, USA) ; http://www.igi-global.com/ >
    au < released ; 2006 ; 9781591409250 ; 9781591409236 ; 10.4018/978-1-59140-923-6 ; 29 ; Advanced Topics in Global Information Management, Volume 5 ; M. Gordon Hunter (University of Lethbridge, Canada) and Felix B. Tan (Auckland University of Technology, New Zealand) ; http://www.igi-global.com/ >
@@ -431,6 +443,7 @@
    au < released ; 2006 ; 9781591408567 ; 9781591408543 ; 10.4018/978-1-59140-854-3 ; 1048 ; Web Portfolio Design and Applications ; John DiMarco ; http://www.igi-global.com/ >
    au < released ; 2006 ; 9781591409076 ; 9781591409052 ; 10.4018/978-1-59140-905-2 ; 1049 ; Web Semantics & Ontology ; David Taniar (Monash University, Australia) and Johanna Wenny Rahayu ; http://www.igi-global.com/ >
    au < released ; 2006 ; 9781591407317 ; 9781591407294 ; 10.4018/978-1-59140-729-4 ; 1059 ; Web-Based Intelligent E-Learning Systems: Technologies and Applications ; Zongmin Ma (Northeastern University, China) ; http://www.igi-global.com/ >
+
    au < released ; 2007 ; 9781599040509 ; 9781599040486 ; 10.4018/978-1-59904-048-6 ; 6 ; Adaptive Technologies and Business Integration: Social, Managerial and Organizational Dimensions ; Maria Manuela Cruz-Cunha (Polytechnic Institute of Cavado and Ave, Portugal), Bruno Conceicao Cortes (Business Objects, Portugal) and Goran  D. Putnik (University of Minho, Portugal) ; http://www.igi-global.com/ >
    au < released ; 2007 ; 9781599043395 ; 9781599043371 ; 10.4018/978-1-59904-337-1 ; 14 ; Advanced Teaching Methods for the Technology Classroom ; Stephen Petrina (University of British Columbia, Canada) ; http://www.igi-global.com/ >
    au < released ; 2007 ; 9781599041346 ; 9781599041322 ; 10.4018/978-1-59904-132-2 ; 37 ; Advances in Audio and Speech Signal Processing: Technologies and Applications ; Hector  Perez-Meana (National Polytechnic Institute of Mexico) ; http://www.igi-global.com/ >
@@ -564,6 +577,7 @@
    au < released ; 2007 ; 9781599042305 ; 9781599042282 ; 10.4018/978-1-59904-228-2 ; 1042 ; Web Data Management Practices: Emerging Techniques and Technologies ; Athena Vakali and George Pallis ; http://www.igi-global.com/ >
    au < released ; 2007 ; 9781591406600 ; 9781591406587 ; 10.4018/978-1-59140-658-7 ; 1046 ; Web Mobile-Based Applications for Healthcare Management ; Latif Al-Hakim (University of Southern Queensland, Australia) ; http://www.igi-global.com/ >
    au < released ; 2007 ; 9781599041704 ; 9781599041681 ; 10.4018/978-1-59904-168-1 ; 1051 ; Web Services Security and E-Business ; G.  Radhamani and G.  S.V. Radha Krishna Rao ; http://www.igi-global.com/ >
+
    au < released ; 2008 ; 9781599049250 ; 9781599049229 ; 10.4018/978-1-59904-922-9 ; 4 ; Adapting Information and Communication Technologies for Effective Education ; Lawrence A. Tomei (Robert Morris University, USA) ; http://www.igi-global.com/ >
    au < released ; 2008 ; 9781599046778 ; 9781599046754 ; 10.4018/978-1-59904-675-4 ; 38 ; Advances in Banking Technology and Management: Impacts of ICT and CRM ; Vadlamani Ravi (Institute for Development and Research in Banking Technology, India) ; http://www.igi-global.com/ >
    au < released ; 2008 ; 9781599047584 ; 9781599047560 ; 10.4018/978-1-59904-756-0 ; 40 ; Advances in E-Learning: Experiences and Methodologies ; Francisco José García-Peñalvo (Universidad de Salamanca, Spain) ; http://www.igi-global.com/ >
@@ -709,6 +723,7 @@
    au < released ; 2008 ; 9781599048246 ; 9781599048222 ; 10.4018/978-1-59904-822-2 ; 1054 ; Web Technologies for Commerce and Services Online ; Mehdi Khosrow-Pour (Information Resources Management Association, USA) ; http://www.igi-global.com/ >
    au < released ; 2008 ; 9781599045276 ; 9781599045252 ; 10.4018/978-1-59904-525-2 ; 1056 ; Web-Based Education and Pedagogical Technologies: Solutions for Learning Applications ; Liliane Esnault (EM Lyon, France) ; http://www.igi-global.com/ >
    au < released ; 2008 ; 9781599047430 ; 9781599047416 ; 10.4018/978-1-59904-741-6 ; 1062 ; Web-Based Learning through Educational Informatics: Information Science Meets Educational Computing ; Nigel Ford (University of Sheffield, UK) ; http://www.igi-global.com/ >
+
    au < released ; 2009 ; 9781605662015 ; 9781605662008 ; 10.4018/978-1-60566-200-8 ; 12 ; Advanced Pattern Recognition Technologies with Applications to Biometrics ; David  Zhang (Hong Kong Polytechnic University, Hong Kong ), Fengxi  Song (New Star Research Institute Of Applied Technology, China ), Yong  Xu (Harbin Institute of Technology, China ) and Zhizhen  Liang (Shanghai Jiao Tong University, China ) ; http://www.igi-global.com/ >
    au < released ; 2009 ; 9781605661735 ; 9781605661728 ; 10.4018/978-1-60566-172-8 ; 13 ; Advanced Principles for Improving Database Design, Systems Modeling, and Software Development ; Keng Siau (Missouri University of Science and Technology, USA) and John Erickson (University of Nebraska, Omaha, USA) ; http://www.igi-global.com/ >
    au < released ; 2009 ; 9781605660691 ; 9781605660684 ; 10.4018/978-1-60566-068-4 ; 46 ; Advances in Government Enterprise Architecture ; Pallab Saha (National University of Singapore, Singapore) ; http://www.igi-global.com/ >
@@ -937,6 +952,7 @@
    au < released ; 2009 ; 9781605661117 ; 9781605661100 ; 10.4018/978-1-60566-110-0 ; 1034 ; Virtual Team Leadership and Collaborative Engineering Advancements: Contemporary Issues and Implications ; Ned Kock (Texas A&M International University, USA) ; http://www.igi-global.com/ >
    au < released ; 2009 ; 9781605661872 ; 9781605661865 ; 10.4018/978-1-60566-186-5 ; 1040 ; Visual Speech Recognition: Lip Segmentation and Mapping ; Alan Wee-Chung  Liew (Griffith University, Australia) and Shilin Wang (Shanghai Jiaotong University, China) ; http://www.igi-global.com/ >
    au < released ; 2009 ; 9781605661155 ; 9781605661148 ; 10.4018/978-1-60566-114-8 ; 1057 ; Web-Based Green Products Life Cycle Management Systems: Reverse Supply Chain Utilization ; Hsiao-Fan Wang (National Tsing Hua University, ROC) ; http://www.igi-global.com/ >
+
    au < released ; 2010 ; 9781605669274 ; 9781605669267 ; 10.4018/978-1-60566-926-7 ; 7 ; Adolescent Online Social Communication and Behavior: Relationship Formation on the Internet ; Robert Zheng (The University of Utah, USA), Jason Burrow-Sanchez (University of Utah, USA) and Clifford J. Drew (University of Utah, USA) ; http://www.igi-global.com/ >
    au < released ; 2010 ; 9781605668291 ; 9781605668284 ; 10.4018/978-1-60566-828-4 ; 8 ; Adult Learning in the Digital Age: Perspectives on Online Technologies and Outcomes ; Terry T. Kidd (Texas A&M University, USA) and Jared Keengwe (University of North Dakota, USA) ; http://www.igi-global.com/ >
    au < released ; 2010 ; 9781615207282 ; 9781615207275 ; 10.4018/978-1-61520-727-5 ; 37277 ; Advanced Applications and Structures in XML Processing: Label Streams, Semantics Utilization and Data Query Technologies ; Changqing Li (Duke University, USA) and Tok Wang Ling (National University of Singapore, Singapore) ; http://www.igi-global.com/ >
@@ -1197,6 +1213,7 @@
    au < released ; 2010 ; 9781605668895 ; 9781605668888 ; 10.4018/978-1-60566-888-8 ; 1063 ; Web-Based Supply Chain Management and Digital Signal Processing: Methods for Effective Information Administration and Transmission ; Manjunath Ramachandra (MSR School of Advanced Studies, India) ; http://www.igi-global.com/ >
    au < released ; 2010 ; 9781615207725 ; 9781615207718 ; 10.4018/978-1-61520-771-8 ; 37300 ; Wireless Network Traffic and Quality of Service Support: Trends and Standards ; Thomas Lagkas (University of Western Macedonia, Greece), Pantelis Angelidis (University of Western Macedonia, Greece) and Loukas Georgiadis (Hewlett-Packard Co, USA) ; http://www.igi-global.com/ >
    au < released ; 2010 ; 9781615206582 ; 9781615206575 ; 10.4018/978-1-61520-657-5 ; 37330 ; Women in Engineering, Science and Technology: Education and Career Challenges ; Aileen Cater-Steel (University of Southern Queensland, Australia) and Emily Cater (Bupa Health Assurance, UK) ; http://www.igi-global.com/ >
+
    au < released ; 2011 ; 9781609601430 ; 9781609601416 ; 10.4018/978-1-60960-141-6 ; 46985 ; Academic Podcasting and Mobile Assisted Language Learning: Applications and Outcomes ; Betty Rose Facer (Old Dominion University, USA) and M’hammed Abdous (Old Dominion University, USA) ; http://www.igi-global.com/ >
    au < released ; 2011 ; 9781609601997 ; 9781609601973 ; 10.4018/978-1-60960-197-3 ; 45978 ; Actor-Network Theory and Technology Innovation: Advancements and New Concepts ; Arthur Tatnall (Victoria University, Australia) ; http://www.igi-global.com/ >
    au < released ; 2011 ; 9781616928568 ; 9781616928544 ; 10.4018/978-1-61692-854-4 ; 41772 ; Adaptation, Resistance and Access to Instructional Technologies: Assessing Future Trends In Education ; Steven D'Agustino (Fordham University, USA) ; http://www.igi-global.com/ >
@@ -1454,6 +1471,7 @@
    au < released ; 2011 ; 9781609605483 ; 9781609605476 ; 10.4018/978-1-60960-547-6 ; 47436 ; Work-Integrated Learning in Engineering, Built Environment and Technology: Diversity of Practice in Practice ; Patrick Keleher (Central Queensland University, Australia), Arun Patil (Central Queensland University, Australia) and R. E. Harreveld (Central Queensland University, Australia) ; http://www.igi-global.com/ >
    au < released ; 2011 ; 9781609605261 ; 9781609605254 ; 10.4018/978-1-60960-525-4 ; 45961 ; YinYang Bipolar Relativity: A Unifying Theory of Nature, Agents and Causality with Applications in Quantum Computing, Cognitive Informatics and Life Sciences ; Wen-Ran Zhang (Georgia Southern University, USA) ; http://www.igi-global.com/ >
    au < released ; 2011 ; 9781609602116 ; 9781609602093 ; 10.4018/978-1-60960-209-3 ; 46990 ; Youth Culture and Net Culture: Online Social Practices ; Elza Dunkels (Umeå University, Sweden), Gun-Marie Franberg (Umea University, Sweden) and Camilla Hallgren (Umea University, Sweden) ; http://www.igi-global.com/ >
+
    au < released ; 2012 ; 9781466601147 ; 9781466601130 ; 10.4018/978-1-4666-0113-0 ; 58265 ; 3-D Surface Geometry and Reconstruction: Developing Concepts and Applications ; Umesh Chandra Pati (National Institute of Technology, Rourkela, India) ; http://www.igi-global.com/ >
    au < released ; 2012 ; 9781466616325 ; 9781466616318 ; 10.4018/978-1-4666-1631-8 ; 61642 ; Achieving Federated and Self-Manageable Cloud Infrastructures: Theory and Practice ; Massimo Villari (Università degli Studi di Messina, Italy), Ivona Brandic (Vienna University of Technology, Austria) and Francesco Tusa (Università degli Studi di Messina, Italy) ; http://www.igi-global.com/ >
    au < released ; 2012 ; 9781609608286 ; 9781609608279 ; 10.4018/978-1-60960-827-9 ; 50517 ; Achieving Real-Time in Distributed Computing: From Grids to Clouds ; Dimosthenis Kyriazis (National Technical University of Athens, Greece), Theodora Varvarigou (National Technical University of Athens, Greece) and Kleopatra G. Konstanteli (National Technical University of Athens, Greece) ; http://www.igi-global.com/ >
@@ -1816,6 +1834,7 @@
    au < released ; 2012 ; 9781466602106 ; 9781466602090 ; 10.4018/978-1-4666-0209-0 ; 58287 ; Wireless Technologies in Vehicular Ad Hoc Networks: Present and Future Challenges ; Raul Aquino-Santos (University of Colima, Mexico), Arthur Edwards (University of Colima, Mexico) and Víctor Rangel-Licea (National Autonomous University of México) ; http://www.igi-global.com/ >
    au < released ; 2012 ; 9781613501023 ; 9781613501016 ; 10.4018/978-1-61350-101-6 ; 51950 ; Wireless Technologies: Concepts, Methodologies, Tools and Applications ; Information Resources Management Association (USA) ; http://www.igi-global.com/ >
    au < released ; 2012 ; 9781613503577 ; 9781613503560 ; 10.4018/978-1-61350-356-0 ; 53006 ; XML Data Mining: Models, Methods, and Applications ; Andrea Tagarelli (University of Calabria, Italy) ; http://www.igi-global.com/ >
+
    au < released ; 2013 ; 9781466621176 ; 9781466621169 ; 10.4018/978-1-4666-2116-9 ; 66391 ; Academic Entrepreneurship and Technological Innovation: A Business Management Perspective ; Anna Szopa (Jagiellonian University, Poland), Waldemar Karwowski (University of Central Florida, USA) and Patricia Ordóñez de Pablos (Universidad de Oviedo, Spain) ; http://www.igi-global.com/ >
    au < released ; 2013 ; 9781466620902 ; 9781466620896 ; 10.4018/978-1-4666-2089-6 ; 66386 ; Adaptive Web Services for Modular and Reusable Software Development: Tactics and Solutions ; Guadalupe Ortiz (University of Cádiz, Spain) and Javier Cubo (University of Málaga, Spain) ; http://www.igi-global.com/ >
    au < released ; 2013 ; 9781466627772 ; 9781466627765 ; 10.4018/978-1-4666-2776-5 ; 69823 ; Adoption and Optimization of Embedded and Real-Time Communication Systems ; Seppo Virtanen (University of Turku, Finland) ; http://www.igi-global.com/ >
@@ -2168,6 +2187,7 @@
    au < released ; 2013 ; 9781466627802 ; 9781466627796 ; 10.4018/978-1-4666-2779-6 ; 69825 ; Web Portal Design, Implementation, Integration, and Optimization ; Jana Polgar (Dialog IT, Australia) and Greg Adamson (University of Melbourne, Australia) ; http://www.igi-global.com/ >
    au < released ; 2013 ; 9781466620247 ; 9781466620230 ; 10.4018/978-1-4666-2023-0 ; 64897 ; Web-Based and Blended Educational Tools and Innovations ; Nikos Karacapilidis (University of Patras, Greece), Mahesh Raisinghani (Texas Woman’s University, USA) and Eugenia M. W. Ng (Hong Kong Institute of Education, China) ; http://www.igi-global.com/ >
    au < released ; 2013 ; 9781466620278 ; 9781466620261 ; 10.4018/978-1-4666-2026-1 ; 64899 ; Web-Based Multimedia Advancements in Data Communications and Networking Technologies ; Varadharajan Sridhar (Sasken Communication Technologies) and Debashis Saha (Indian Institute of Management (Calcutta), India ) ; http://www.igi-global.com/ >
+
    au < released ; 2014 ; 9781466645196 ; 9781466645189 ; 10.4018/978-1-4666-4518-9 ; 76713 ; A Systemic Perspective to Managing Complexity with Enterprise Architecture ;  ; http://www.igi-global.com/ >
    au < released ; 2014 ; 9781466647985 ; 9781466647978 ; 10.4018/978-1-4666-4797-8 ; 78266 ; Academic Knowledge Construction and Multimodal Curriculum Development ;  ; http://www.igi-global.com/ >
    au < released ; 2014 ; 9781466661394 ; 9781466661387 ; 10.4018/978-1-4666-6138-7 ; 102181 ; Achieving Effective Integrated E-Care Beyond the Silos ;  ; http://www.igi-global.com/ >
@@ -2450,6 +2470,7 @@
    au < released ; 2014 ; 9781466648975 ; 9781466648968 ; 10.4018/978-1-4666-4896-8 ; 78939 ; Video Surveillance Techniques and Technologies ;  ; http://www.igi-global.com/ >
    au < released ; 2014 ; 9781466658615 ; 9781466658608 ; 10.4018/978-1-4666-5860-8 ; 95023 ; Women in IT in the New Social Era: A Critical Evidence-Based Review of Gender Inequality and the Potential for Change ;  ; http://www.igi-global.com/ >
    au < released ; 2014 ; 9781466658530 ; 9781466658523 ; 10.4018/978-1-4666-5852-3 ; 94910 ; X-Ray Line Profile Analysis in Materials Science ;  ; http://www.igi-global.com/ >
+
    au < released ; 2015 ; 9781466685116 ; 9781466685109 ; 10.4018/978-1-4666-8510-9 ; 124173 ; Achieving Enterprise Agility through Innovative Software Development ;  ; http://www.igi-global.com/ >
    au < released ; 2015 ; 9781466686779 ; 9781466686762 ; 10.4018/978-1-4666-8676-2 ; 126410 ; Advanced Research on Cloud Computing Design and Applications ;  ; http://www.igi-global.com/ >
    au < released ; 2015 ; 9781466674820 ; 9781466674813 ; 10.4018/978-1-4666-7481-3 ; 118277 ; Advanced Technological Solutions for E-Health and Dementia Patient Monitoring ;  ; http://www.igi-global.com/ >
@@ -2713,6 +2734,7 @@
    au < released ; 2015 ; 9781466675193 ; 9781466675186 ; 10.4018/978-1-4666-7518-6 ; 118342 ; Understanding Consumer Behavior and Consumption Experience ;  ; http://www.igi-global.com/ >
    au < released ; 2015 ; 9781466673298 ; 9781466673281 ; 10.4018/978-1-4666-7328-1 ; 112240 ; Urbanization and Migration as Factors Affecting Global Economic Development ;  ; http://www.igi-global.com/ >
    au < released ; 2015 ; 9781466664548 ; 9781466664531 ; 10.4018/978-1-4666-6453-1 ; 108292 ; Utilizing Evidence-Based Lessons Learned for Enhanced Organizational Innovation and Change ;  ; http://www.igi-global.com/ >
+
    au < released ; 2016 ; 9781466698802 ; 9781466698796 ; 10.4018/978-1-4666-9879-6 ; 140971 ; (R)evolutionizing Political Communication through Social Media ;  ; http://www.igi-global.com/ >
    au < released ; 2016 ; 9781522503125 ; 9781522503118 ; 10.4018/978-1-5225-0311-8 ; 145474 ; Administrative Challenges and Organizational Leadership in Historically Black Colleges and Universities ;  ; http://www.igi-global.com/ >
    au < released ; 2016 ; 9781522503309 ; 9781522503293 ; 10.4018/978-1-5225-0329-3 ; 145513 ; Advanced Manufacturing Techniques Using Laser Material Processing ;  ; http://www.igi-global.com/ >
@@ -2987,6 +3009,7 @@
    au < released ; 2016 ; 9781466686205 ; 9781466686199 ; 10.4018/978-1-4666-8619-9 ; 125530 ; Web Design and Development: Concepts, Methodologies, Tools, and Applications ;  ; http://www.igi-global.com/ >
    au < released ; 2016 ; 9781466694675 ; 9781466694668 ; 10.4018/978-1-4666-9466-8 ; 132774 ; Web-Based Services: Concepts, Methodologies, Tools, and Applications ;  ; http://www.igi-global.com/ >
    au < released ; 2016 ; 9781466686465 ; 9781466686458 ; 10.4018/978-1-4666-8645-8 ; 126401 ; Wideband, Multiband, and Smart Reconfigurable Antennas for Modern Wireless Communications ;  ; http://www.igi-global.com/ >
+
    au < released ; 2017 ; 9781522516781 ; 9781522516774 ; 10.4018/978-1-5225-1677-4 ; 162430 ; 3D Printing: Breakthroughs in Research and Practice ;  ; https://www.igi-global.com/ >
    au < released ; 2017 ; 9781522522904 ; 9781522522898 ; 10.4018/978-1-5225-2289-8 ; 173026 ; 3D Printing and its Impact on the Production of Fully Functional Components: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
    au < released ; 2017 ; 9781522505518 ; 9781522505501 ; 10.4018/978-1-5225-0550-1 ; 147103 ; Academic Library Development and Administration in China ;  ; https://www.igi-global.com/ >
@@ -3549,6 +3572,7 @@
    au < released ; 2017 ; 9781522527572 ; 9781522527565 ; 10.4018/978-1-5225-2756-5 ; 178714 ; Ranking Economic Performance and Efficiency in the Global Market: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
    au < released ; 2017 ; 9781522526803 ; 9781522526797 ; 10.4018/978-1-5225-2679-7 ; 178180 ; Techniques for Coding Imagery and Multimedia: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
    au < released ; 2017 ; 9781522532910 ; 9781522532903 ; 10.4018/978-1-5225-3290-3 ; 180229 ; Examining Developments and Applications of Wearable Devices in Modern Society ;  ; https://www.igi-global.com/ >
+
    au < exists ; 2018 ; 9781522525073 ; 9781522525066 ; 10.4018/978-1-5225-2506-6 ; 176083 ; Advanced Cloud Computing Security Techniques and Applications ;  ; https://www.igi-global.com/ >
    au < released ; 2018 ; 9781522521853 ; 9781522521846 ; 10.4018/978-1-5225-2184-6 ; 172442 ; Advanced Concept Maps in STEM Education: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
    au < released ; 2018 ; 9781522526087 ; 9781522526070 ; 10.4018/978-1-5225-2607-0 ; 177903 ; Applying Big Data Analytics in Bioinformatics and Medicine ;  ; https://www.igi-global.com/ >
@@ -3916,275 +3940,277 @@
    au < released ; 2019 ; 9781522541844 ; 9781522541837 ; 10.4018/978-1-5225-4183-7 ; 183206 ; Practice and Progress in Social Design and Sustainability ;  ; https://www.igi-global.com/ >
    au < released ; 2019 ; 9781522535355 ; 9781522535348 ; 10.4018/978-1-5225-3534-8 ; 181079 ; Machine Learning Techniques for Improved Business Analytics ;  ; https://www.igi-global.com/ >
    au < released ; 2019 ; 9781522534754 ; 9781522534747 ; 10.4018/978-1-5225-3474-7 ; 180990 ; Multicultural Andragogy for Transformative Learning ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522559498 ; 9781522559481 ; 10.4018/978-1-5225-5948-1 ; 193703 ; Coaching for Student Retention and Success at the Postsecondary Level: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522561156 ; 9781522561149 ; 10.4018/978-1-5225-6114-9 ; 197077 ; Perspectives, Trends, and Applications in Corporate Finance and Accounting ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522557760 ; 9781522557753 ; 10.4018/978-1-5225-5775-3 ; 192042 ; Feature Dimension Reduction for Content-Based Image Identification ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522540458 ; 9781522540441 ; 10.4018/978-1-5225-4044-1 ; 182365 ; Applications of Security, Mobile, Analytic, and Cloud (SMAC) Technologies for Effective Information Processing and Management ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522539971 ; 9781522539964 ; 10.4018/978-1-5225-3996-4 ; 182354 ; Smart Grid Analytics for Sustainability and Urbanization ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522556749 ; 9781522556732 ; 10.4018/978-1-5225-5673-2 ; 190798 ; Marketing Initiatives for Sustainable Educational Development ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522550921 ; 9781522550914 ; 10.4018/978-1-5225-5091-4 ; 186873 ; Optimization Techniques for Problem Solving in Uncertainty ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522549703 ; 9781522549697 ; 10.4018/978-1-5225-4969-7 ; 185739 ; Design and Development of Affordable Healthcare Technologies ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522547648 ; 9781522547631 ; 10.4018/978-1-5225-4763-1 ; 185479 ; Handbook of Research on Information and Cyber Security in the Fourth Industrial Revolution ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522541875 ; 9781522541868 ; 10.4018/978-1-5225-4186-8 ; 183207 ; Handbook of Research on Methods and Tools for Assessing Cultural Landscape Adaptation ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522541493 ; 9781522541486 ; 10.4018/978-1-5225-4148-6 ; 182885 ; Disruptive Technologies for Business Development and Strategic Advantage ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522539827 ; 9781522539810 ; 10.4018/978-1-5225-3981-0 ; 182279 ; Vehicular Cloud Computing for Traffic Management and Systems ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522529668 ; 9781522529651 ; 10.4018/978-1-5225-2965-1 ; 179220 ; Organizational Culture and Behavioral Shifts in the Green Economy ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522552895 ; 9781522552888 ; 10.4018/978-1-5225-5288-8 ; 187287 ; Cases on Quality Initiatives for Organizational Longevity ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522553618 ; 9781522553601 ; 10.4018/978-1-5225-5360-1 ; 188636 ; Enhancing Competitive Advantage With Dynamic Management and Engineering ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522552680 ; 9781522552673 ; 10.4018/978-1-5225-5267-3 ; 187280 ; Maintaining Sustainable Accounting Systems in Small Business ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522552147 ; 9781522552130 ; 10.4018/978-1-5225-5213-0 ; 187123 ; Microfinance and Its Impact on Entrepreneurial Development, Sustainability, and Inclusive Growth ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522550129 ; 9781522550112 ; 10.4018/978-1-5225-5011-2 ; 185752 ; Emerging Trends, Techniques, and Tools for Massive Open Online Course (MOOC) Management ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522549567 ; 9781522549550 ; 10.4018/978-1-5225-4955-0 ; 185735 ; Handbook of Research on Psychosocial Perspectives of Human Communication Disorders ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522547679 ; 9781522547662 ; 10.4018/978-1-5225-4766-2 ; 185480 ; Handbook of Research on Predictive Modeling and Optimization Methods in Science and Engineering ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522540755 ; 9781522540748 ; 10.4018/978-1-5225-4074-8 ; 182583 ; Optimizing Health Literacy for Improved Clinical Practices ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522562658 ; 9781522562641 ; 10.4018/978-1-5225-6264-1 ; 199020 ; Attracting and Retaining Millennial Workers in the Modern Business Era ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522557739 ; 9781522557722 ; 10.4018/978-1-5225-5772-2 ; 192041 ; Managing Sustainable Tourism Resources ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522554646 ; 9781522554639 ; 10.4018/978-1-5225-5463-9 ; 189160 ; Cross-Cultural Perspectives on Technology-Enhanced Language Learning ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522554318 ; 9781522554301 ; 10.4018/978-1-5225-5430-1 ; 189151 ; Learning Strategies and Constructionism in Modern Education Settings ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522553977 ; 9781522553960 ; 10.4018/978-1-5225-5396-0 ; 189140 ; Handbook of Research on Investigations in Artificial Life Research and Development ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522552475 ; 9781522552468 ; 10.4018/978-1-5225-5246-8 ; 187224 ; Intelligent Multidimensional Data and Image Processing ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522550860 ; 9781522550853 ; 10.4018/978-1-5225-5085-3 ; 186871 ; Handbook of Research on Student-Centered Strategies in Online Adult Learning Environments ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522541127 ; 9781522541110 ; 10.4018/978-1-5225-4111-0 ; 182744 ; Computer-Mediated Learning for Workforce Development ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522539919 ; 9781522539902 ; 10.4018/978-1-5225-3990-2 ; 182282 ; Promoting Global Environmental Sustainability and Cooperation ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522537779 ; 9781522537762 ; 10.4018/978-1-5225-3776-2 ; 181512 ; Handbook of Research on Cross-Cultural Business Education ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522534723 ; 9781522534716 ; 10.4018/978-1-5225-3471-6 ; 180928 ; Information Technology as a Facilitator of Social Processes in Project Management and Collaborative Work ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522560876 ; 9781522560869 ; 10.4018/978-1-5225-6086-9 ; 196162 ; Critical Theory and Transformative Learning ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522556534 ; 9781522556527 ; 10.4018/978-1-5225-5652-7 ; 190551 ; Social Media in Education: Breakthroughs in Research and Practice ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522556503 ; 9781522556497 ; 10.4018/978-1-5225-5649-7 ; 190550 ; Fog Computing: Breakthroughs in Research and Practice ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522556473 ; 9781522556466 ; 10.4018/978-1-5225-5646-6 ; 190549 ; E-Planning and Collaboration: Concepts, Methodologies, Tools, and Applications ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522556442 ; 9781522556435 ; 10.4018/978-1-5225-5643-5 ; 190548 ; Intelligent Systems: Concepts, Methodologies, Tools, and Applications ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522559979 ; 9781522559962 ; 10.4018/978-1-5225-5996-2 ; 195047 ; Systems Research for Real-World Challenges ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522559528 ; 9781522559511 ; 10.4018/978-1-5225-5951-1 ; 193744 ; Multidisciplinary Approaches to Service-Oriented Engineering ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522558309 ; 9781522558293 ; 10.4018/978-1-5225-5829-3 ; 193071 ; Innovative Applications of Knowledge Discovery and Information Resources Management ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522558279 ; 9781522558262 ; 10.4018/978-1-5225-5826-2 ; 193069 ; Global Perspectives on Social Media in Tertiary Learning and Teaching: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522557227 ; 9781522557210 ; 10.4018/978-1-5225-5721-0 ; 191617 ; Effective Open Innovation Strategies in Modern Business: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522554370 ; 9781522554363 ; 10.4018/978-1-5225-5436-3 ; 189153 ; Recent Advancements in Airborne Radar Signal Processing: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522551508 ; 9781522551492 ; 10.4018/978-1-5225-5149-2 ; 187083 ; Expert System Techniques in Biomedical Science Practice ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522540366 ; 9781522540359 ; 10.4018/978-1-5225-4035-9 ; 182362 ; Marketing Techniques for Financial Inclusion and Development ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522534525 ; 9781522534518 ; 10.4018/978-1-5225-3451-8 ; 180922 ; International Student Mobility and Opportunities for Growth in the Global Marketplace ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522532651 ; 9781522532644 ; 10.4018/978-1-5225-3264-4 ; 180163 ; Economic and Geopolitical Perspectives of the Commonwealth of Independent States and Eurasia ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522559672 ; 9781522559665 ; 10.4018/978-1-5225-5966-5 ; 195022 ; Innovative Perspectives on Public Administration in the Digital Age ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522556206 ; 9781522556190 ; 10.4018/978-1-5225-5619-0 ; 190528 ; Diverse Methods in Customer Relationship Marketing and Management ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522555810 ; 9781522555803 ; 10.4018/978-1-5225-5580-3 ; 190471 ; Electrocardiogram Signal Classification and Machine Learning: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522553243 ; 9781522553236 ; 10.4018/978-1-5225-5323-6 ; 188332 ; Advances in Data Communications and Networking for Digital Business Transformation ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522552178 ; 9781522552161 ; 10.4018/978-1-5225-5216-1 ; 187124 ; Composites and Advanced Materials for Industrial Applications ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522550402 ; 9781522550396 ; 10.4018/978-1-5225-5039-6 ; 186194 ; Emerging Trends in Open Source Geographic Information Systems ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522547792 ; 9781522547785 ; 10.4018/978-1-5225-4778-5 ; 185484 ; Handbook of Research on Military Expenditure on Economic and Political Resources ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522537267 ; 9781522537250 ; 10.4018/978-1-5225-3725-0 ; 181453 ; Handbook of Research on Knowledge Management for Contemporary Business Environments ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522555117 ; 9781522555100 ; 10.4018/978-1-5225-5510-0 ; 189773 ; Cyber-Physical Systems for Next-Generation Networks ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522552710 ; 9781522552703 ; 10.4018/978-1-5225-5270-3 ; 187281 ; Mobile Applications and Solutions for Social Inclusion ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522551713 ; 9781522551706 ; 10.4018/978-1-5225-5170-6 ; 187114 ; Emerging Synthesis Techniques for Luminescent Materials ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522550372 ; 9781522550365 ; 10.4018/978-1-5225-5036-5 ; 186193 ; Contemporary Applications of Mobile Computing in Healthcare Settings ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522541639 ; 9781522541622 ; 10.4018/978-1-5225-4162-2 ; 182889 ; Biostimulation Remediation Technologies for Groundwater Contaminants ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522560005 ; 9781522559993 ; 10.4018/978-1-5225-5999-3 ; 195048 ; New Approaches, Methods, and Tools in Urban E-Planning ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522559733 ; 9781522559726 ; 10.4018/978-1-5225-5972-6 ; 195034 ; Handbook of Research on Cloud and Fog Computing Infrastructures for Data Science ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522556268 ; 9781522556251 ; 10.4018/978-1-5225-5625-1 ; 190536 ; Contemporary Strategies and Approaches in 3-D Information Modeling ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522552444 ; 9781522552437 ; 10.4018/978-1-5225-5243-7 ; 187223 ; Augmented Reality for Enhanced Learning Environments ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522551478 ; 9781522551461 ; 10.4018/978-1-5225-5146-1 ; 187082 ; Library and Information Science in the Age of MOOCs ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522540519 ; 9781522540502 ; 10.4018/978-1-5225-4050-2 ; 182421 ; Mentorship Strategies in Teacher Education ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522540212 ; 9781522540205 ; 10.4018/978-1-5225-4020-5 ; 182357 ; Assessing Social Support and Stress in Autism-Focused Virtual Communities: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522560302 ; 9781522560296 ; 10.4018/978-1-5225-6029-6 ; 195668 ; Analyzing the Role of Risk Mitigation and Monitoring in Software Development ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522557586 ; 9781522557579 ; 10.4018/978-1-5225-5757-9 ; 192036 ; Handbook of Research on Supply Chain Management for Sustainable Development ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522554615 ; 9781522554608 ; 10.4018/978-1-5225-5460-8 ; 189159 ; Handbook of Research on Emerging Perspectives on Healthcare Information Systems and Informatics ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522554196 ; 9781522554189 ; 10.4018/978-1-5225-5418-9 ; 189146 ; Advanced Synchronization Control and Bifurcation of Chaotic Fractional-Order Systems ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522552567 ; 9781522552550 ; 10.4018/978-1-5225-5255-0 ; 187227 ; Enhancing Education Through Open Degree Programs and Prior Learning Assessment ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522552383 ; 9781522552376 ; 10.4018/978-1-5225-5237-6 ; 187131 ; Research Advancements in Pharmaceutical, Nutritional, and Industrial Enzymology ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522551683 ; 9781522551676 ; 10.4018/978-1-5225-5167-6 ; 187113 ; Early Childhood Education From an Intercultural and Bilingual Perspective ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522551133 ; 9781522551126 ; 10.4018/978-1-5225-5112-6 ; 186880 ; Examining the Role of Women Entrepreneurs in Emerging Economies ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522551102 ; 9781522551096 ; 10.4018/978-1-5225-5109-6 ; 186879 ; Pedagogy Development for Teaching Online Music ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522542070 ; 9781522542063 ; 10.4018/978-1-5225-4206-3 ; 184509 ; Learner Experience and Usability in Online Education ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522540601 ; 9781522540595 ; 10.4018/978-1-5225-4059-5 ; 182424 ; Handbook of Research on Media Literacy in Higher Education Environments ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522538097 ; 9781522538080 ; 10.4018/978-1-5225-3808-0 ; 181522 ; Deconstructing Stigma in Mental Health ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522559795 ; 9781522559788 ; 10.4018/978-1-5225-5978-8 ; 195041 ; Innovations and Trends in Environmental and Agricultural Informatics ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522559702 ; 9781522559696 ; 10.4018/978-1-5225-5969-6 ; 195033 ; Innovative Methods, User-Friendly Tools, Coding, and Design Approaches in People-Oriented Programming ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522557371 ; 9781522557364 ; 10.4018/978-1-5225-5736-4 ; 192029 ; Security and Privacy in Smart Sensor Networks ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522554677 ; 9781522554660 ; 10.4018/978-1-5225-5466-0 ; 189161 ; Innovative Applications of Online Pedagogy and Course Design ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522553274 ; 9781522553267 ; 10.4018/978-1-5225-5326-7 ; 188333 ; Optimizing E-Participation Initiatives Through Social Media ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522541660 ; 9781522541653 ; 10.4018/978-1-5225-4165-3 ; 182890 ; Handbook of Research on Urban Governance and Management in the Developing World ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522556411 ; 9781522556404 ; 10.4018/978-1-5225-5640-4 ; 190547 ; Veterinary Science: Breakthroughs in Research and Practice ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522556381 ; 9781522556374 ; 10.4018/978-1-5225-5637-4 ; 190546 ; Social Media Marketing: Breakthroughs in Research and Practice ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522556350 ; 9781522556343 ; 10.4018/978-1-5225-5634-3 ; 190539 ; Cyber Security and Threats: Concepts, Methodologies, Tools, and Applications ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522556329 ; 9781522556312 ; 10.4018/978-1-5225-5631-2 ; 190538 ; Teacher Training and Professional Development: Concepts, Methodologies, Tools, and Applications ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522553854 ; 9781522553847 ; 10.4018/978-1-5225-5384-7 ; 188847 ; Handbook of Research on Contemporary Perspectives on Web-Based Systems ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522553502 ; 9781522553496 ; 10.4018/978-1-5225-5349-6 ; 188633 ; Effective Techniques for Managing Trigeminal Neuralgia ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522547617 ; 9781522547600 ; 10.4018/978-1-5225-4760-0 ; 185478 ; Analysis and Applications of Lattice Boltzmann Simulations ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522540335 ; 9781522540328 ; 10.4018/978-1-5225-4032-8 ; 182361 ; Globalization and Trade Integration in Developing Countries ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522534693 ; 9781522534686 ; 10.4018/978-1-5225-3468-6 ; 180927 ; Analyzing the Impacts of Industry 4.0 in Modern Business Environments ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522555292 ; 9781522555285 ; 10.4018/978-1-5225-5528-5 ; 189779 ; Advanced Systems for Improved Public Healthcare and Disease Prevention: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522553649 ; 9781522553632 ; 10.4018/978-1-5225-5363-2 ; 188637 ; Microbial Cultures and Enzymes in Dairy Technology ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522547730 ; 9781522547723 ; 10.4018/978-1-5225-4772-3 ; 185482 ; Handbook of Research on Multicultural Perspectives on Gender and Aging ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522535416 ; 9781522535409 ; 10.4018/978-1-5225-3540-9 ; 181081 ; Handbook of Research on Microbial Tools for Environmental Waste Management ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522533801 ; 9781522533795 ; 10.4018/978-1-5225-3379-5 ; 180566 ; Effective Solutions to Pollution Mitigation for Public Welfare ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522532040 ; 9781522532033 ; 10.4018/978-1-5225-3203-3 ; 179846 ; Big Data Analytics in HIV/AIDS Research ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522538714 ; 9781522538707 ; 10.4018/978-1-5225-3870-7 ; 181764 ; Handbook of Research on Pattern Engineering System Development for Big Data Analytics ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522537854 ; 9781522537847 ; 10.4018/978-1-5225-3784-7 ; 181514 ; Reconceptualizing New Media and Intercultural Communication in a Networked Society ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522555735 ; 9781522555728 ; 10.4018/978-1-5225-5572-8 ; 190386 ; Narratives and the Role of Philosophy in Cross-Disciplinary Studies: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522552208 ; 9781522552192 ; 10.4018/978-1-5225-5219-2 ; 187125 ; Quantum-Inspired Intelligent Systems for Multimedia Data Analysis ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522551539 ; 9781522551522 ; 10.4018/978-1-5225-5152-2 ; 187084 ; Handbook of Research on Information Security in Biomedical Signal Processing ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522550952 ; 9781522550945 ; 10.4018/978-1-5225-5094-5 ; 186874 ; The Changing Scope of Technoethics in Contemporary Society ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522550891 ; 9781522550884 ; 10.4018/978-1-5225-5088-4 ; 186872 ; GIS Applications in the Tourism and Hospitality Industry ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522541554 ; 9781522541547 ; 10.4018/978-1-5225-4154-7 ; 182887 ; Multilingual Writing and Pedagogical Cooperation in Virtual Learning Environments ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522538639 ; 9781522538622 ; 10.4018/978-1-5225-3862-2 ; 181733 ; Electronic Nose Technologies and Advances in Machine Olfaction ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522538158 ; 9781522538141 ; 10.4018/978-1-5225-3814-1 ; 181524 ; Study Abroad Contexts for Enhanced Foreign Language Learning ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522538066 ; 9781522538059 ; 10.4018/978-1-5225-3805-9 ; 181521 ; Protocols and Applications for the Industrial Internet of Things ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522535447 ; 9781522535430 ; 10.4018/978-1-5225-3543-0 ; 181082 ; Handbook of Research on Intrapreneurship and Organizational Sustainability in SMEs ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522534495 ; 9781522534488 ; 10.4018/978-1-5225-3448-8 ; 180920 ; Utilizing Consumer Psychology in Business Strategy ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522530138 ; 9781522530121 ; 10.4018/978-1-5225-3012-1 ; 179331 ; Handbook of Research on Strategic Innovation Management for Improved Competitive Advantage ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522556299 ; 9781522556282 ; 10.4018/978-1-5225-5628-2 ; 190537 ; Advancements in Computer Vision and Image Processing ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522555841 ; 9781522555834 ; 10.4018/978-1-5225-5583-4 ; 190472 ; Security and Privacy Management, Techniques, and Protocols ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522554912 ; 9781522554905 ; 10.4018/978-1-5225-5490-5 ; 189169 ; Nursing Education, Administration, and Informatics: Breakthroughs in Research and Practice ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522554882 ; 9781522554875 ; 10.4018/978-1-5225-5487-5 ; 189168 ; Climate Change and Environmental Concerns: Breakthroughs in Research and Practice ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522554851 ; 9781522554844 ; 10.4018/978-1-5225-5484-4 ; 189167 ; Wearable Technologies: Concepts, Methodologies, Tools, and Applications ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522554820 ; 9781522554813 ; 10.4018/978-1-5225-5481-3 ; 189166 ; Global Business Expansion: Concepts, Methodologies, Tools, and Applications ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522552864 ; 9781522552857 ; 10.4018/978-1-5225-5285-7 ; 187286 ; Cyber Harassment and Policy Reform in the Digital Age: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522552352 ; 9781522552345 ; 10.4018/978-1-5225-5234-5 ; 187130 ; Handbook of Research on Ergonomics and Product Design ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522550242 ; 9781522550235 ; 10.4018/978-1-5225-5023-5 ; 185756 ; Enhancing Art, Culture, and Design With Technological Integration ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522550211 ; 9781522550204 ; 10.4018/978-1-5225-5020-4 ; 185755 ; Incorporating Nature-Inspired Paradigms in Computational Applications ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522550150 ; 9781522550143 ; 10.4018/978-1-5225-5014-3 ; 185753 ; Entrepreneurship, Collaboration, and Innovation in the Modern Business Era ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522541011 ; 9781522541004 ; 10.4018/978-1-5225-4100-4 ; 182673 ; Handbook of Research on Network Forensics and Analysis Techniques ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522540953 ; 9781522540946 ; 10.4018/978-1-5225-4094-6 ; 182671 ; Online Collaboration and Communication in Contemporary Organizations ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522540816 ; 9781522540809 ; 10.4018/978-1-5225-4080-9 ; 182585 ; Preparing the Next Generation of Teachers for 21st Century Education ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522540274 ; 9781522540267 ; 10.4018/978-1-5225-4026-7 ; 182359 ; Regaining Global Stability After the Financial Crisis ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522536291 ; 9781522536284 ; 10.4018/978-1-5225-3628-4 ; 181218 ; E-Manufacturing and E-Service Strategies in Contemporary Organizations ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522534556 ; 9781522534549 ; 10.4018/978-1-5225-3454-9 ; 180923 ; Changing Urban Landscapes Through Public Higher Education ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522530602 ; 9781522530596 ; 10.4018/978-1-5225-3059-6 ; 179347 ; Agricultural Finance and Opportunities for Investment and Expansion ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522538035 ; 9781522538028 ; 10.4018/978-1-5225-3802-8 ; 181520 ; Centrality Metrics for Complex Network Analysis: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522547709 ; 9781522547693 ; 10.4018/978-1-5225-4769-3 ; 185481 ; Nature-Inspired Intelligent Techniques for Solving Biomedical Engineering Problems ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522538608 ; 9781522538592 ; 10.4018/978-1-5225-3859-2 ; 181732 ; Media Diplomacy and Its Evolving Role in the Current Geopolitical Climate ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522528555 ; 9781522528548 ; 10.4018/978-1-5225-2854-8 ; 178920 ; Exploring the Role of Social Media in Transnational Advocacy ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522555261 ; 9781522555254 ; 10.4018/978-1-5225-5525-4 ; 189778 ; Analyzing Workplace Arrogance and Organizational Effectiveness: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522554585 ; 9781522554578 ; 10.4018/978-1-5225-5457-8 ; 189158 ; Multi-Sided Platforms (MSPs) and Sharing Strategies in the Digital Economy: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522549611 ; 9781522549604 ; 10.4018/978-1-5225-4960-4 ; 185736 ; Equity, Equality, and Reform in Contemporary Public Education ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522534815 ; 9781522534808 ; 10.4018/978-1-5225-3480-8 ; 180992 ; Handbook of Research on Geriatric Health, Treatment, and Care ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522550983 ; 9781522550976 ; 10.4018/978-1-5225-5097-6 ; 186875 ; Social Network Analytics for Contemporary Business Organizations ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522549949 ; 9781522549932 ; 10.4018/978-1-5225-4993-2 ; 185748 ; Global Leadership Initiatives for Conflict Resolution and Peacebuilding ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522549918 ; 9781522549901 ; 10.4018/978-1-5225-4990-1 ; 185747 ; Information Visualization Techniques in the Social Sciences and Humanities ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522540304 ; 9781522540298 ; 10.4018/978-1-5225-4029-8 ; 182360 ; Mobile Technologies and Socio-Economic Development in Emerging Nations ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522552628 ; 9781522552611 ; 10.4018/978-1-5225-5261-1 ; 187229 ; Dynamic Knowledge Representation in Scientific Domains ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522539360 ; 9781522539353 ; 10.4018/978-1-5225-3935-3 ; 181914 ; Handbook of Research on Power and Energy System Optimization ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522537144 ; 9781522537137 ; 10.4018/978-1-5225-3713-7 ; 181446 ; Financial Sustainability and Intergenerational Equity in Local Governments ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522534587 ; 9781522534570 ; 10.4018/978-1-5225-3457-0 ; 180924 ; Innovations in Measuring and Evaluating Scientific Information ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522532309 ; 9781522532293 ; 10.4018/978-1-5225-3229-3 ; 179851 ; Enhancing Social Presence in Online Learning Environments ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522547761 ; 9781522547754 ; 10.4018/978-1-5225-4775-4 ; 185483 ; Content Generation Through Narrative Communication and Simulation ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522540540 ; 9781522540533 ; 10.4018/978-1-5225-4053-3 ; 182422 ; Psychological and Behavioral Examinations in Cyber Security ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522540427 ; 9781522540410 ; 10.4018/978-1-5225-4041-0 ; 182364 ; Handbook of Research on Service-Learning Initiatives in Teacher Education Programs ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522540397 ; 9781522540380 ; 10.4018/978-1-5225-4038-0 ; 182363 ; Harnessing Human Capital Analytics for Competitive Advantage ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522537885 ; 9781522537878 ; 10.4018/978-1-5225-3787-8 ; 181515 ; Internet Taxation and E-Retailing Law in the Global Context ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522536444 ; 9781522536437 ; 10.4018/978-1-5225-3643-7 ; 181223 ; Big Data Analytics for Satellite Image Processing and Remote Sensing ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522536321 ; 9781522536314 ; 10.4018/978-1-5225-3631-4 ; 181219 ; Food Systems Sustainability and Environmental Policies in Modern Economies ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522531982 ; 9781522531975 ; 10.4018/978-1-5225-3197-5 ; 179844 ; Developing Organizational Maturity for Effective Project Management ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522556688 ; 9781522556671 ; 10.4018/978-1-5225-5667-1 ; 190786 ; Handbook of Research on Positive Scholarship for Global K-20 Education ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522556565 ; 9781522556558 ; 10.4018/978-1-5225-5655-8 ; 190576 ; Contemporary Knowledge and Systems Science ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522554790 ; 9781522554783 ; 10.4018/978-1-5225-5478-3 ; 189165 ; Applications of Neuroscience: Breakthroughs in Research and Practice ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522554769 ; 9781522554752 ; 10.4018/978-1-5225-5475-2 ; 189164 ; Sports Media, Marketing, and Management: Breakthroughs in Research and Practice ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522554738 ; 9781522554721 ; 10.4018/978-1-5225-5472-1 ; 189163 ; Online Course Management: Concepts, Methodologies, Tools, and Applications ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522554707 ; 9781522554691 ; 10.4018/978-1-5225-5469-1 ; 189162 ; Virtual and Augmented Reality: Concepts, Methodologies, Tools, and Applications ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522554349 ; 9781522554332 ; 10.4018/978-1-5225-5433-2 ; 189152 ; Nationalism, Social Movements, and Activism in Contemporary Society: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522554165 ; 9781522554158 ; 10.4018/978-1-5225-5415-8 ; 189145 ; Electromagnetic Compatibility for Space Systems Design ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522550464 ; 9781522550457 ; 10.4018/978-1-5225-5045-7 ; 186196 ; Stochastic Methods for Estimation and Problem Solving in Engineering ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522547587 ; 9781522547570 ; 10.4018/978-1-5225-4757-0 ; 185477 ; Handbook of Research on Social Marketing and Its Influence on Animal Origin Food Product Consumption ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522541813 ; 9781522541806 ; 10.4018/978-1-5225-4180-6 ; 183185 ; Modeling and Simulations for Metamaterials: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522541066 ; 9781522541059 ; 10.4018/978-1-5225-4105-9 ; 182742 ; Design Solutions for nZEB Retrofit Buildings ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522540984 ; 9781522540977 ; 10.4018/978-1-5225-4097-7 ; 182672 ; Promoting Ethnic Diversity and Multiculturalism in Higher Education ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522540243 ; 9781522540236 ; 10.4018/978-1-5225-4023-6 ; 182358 ; Applications of Conscious Innovation in Organizations ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522540106 ; 9781522540090 ; 10.4018/978-1-5225-4009-0 ; 182356 ; Psycholinguistics and Cognition in Language Processing ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522539414 ; 9781522539407 ; 10.4018/978-1-5225-3940-7 ; 181915 ; Digital Technologies and Instructional Design for Personalized Learning ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522537359 ; 9781522537342 ; 10.4018/978-1-5225-3734-2 ; 181456 ; Knowledge-Based Urban Development in the Middle East ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522537328 ; 9781522537311 ; 10.4018/978-1-5225-3731-1 ; 181455 ; Handbook of Research on Modernization and Accountability in Public Sector Management ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522536147 ; 9781522536130 ; 10.4018/978-1-5225-3613-0 ; 181213 ; Designing Grid Cities for Optimized Urban Development and Planning ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522526513 ; 9781522526506 ; 10.4018/978-1-5225-2650-6 ; 178123 ; Ethical Standards and Practice in International Relations ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522551355 ; 9781522551348 ; 10.4018/978-1-5225-5134-8 ; 187078 ; Critical Developments and Applications of Swarm Intelligence ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522540724 ; 9781522540717 ; 10.4018/978-1-5225-4071-7 ; 182582 ; Faculty Mentorship at Historically Black Colleges and Universities ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522539537 ; 9781522539520 ; 10.4018/978-1-5225-3952-0 ; 181919 ; Crowdfunding and Sustainable Urban Development in Emerging Economies ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522530428 ; 9781522530411 ; 10.4018/978-1-5225-3041-1 ; 179340 ; Curriculum Development for Gifted Education Programs ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522556237 ; 9781522556220 ; 10.4018/978-1-5225-5622-0 ; 190535 ; Empirical Research on Semiotics and Visual Rhetoric ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522553915 ; 9781522553908 ; 10.4018/978-1-5225-5390-8 ; 188880 ; Organizational Leadership for the Fourth Industrial Revolution: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522551416 ; 9781522551409 ; 10.4018/978-1-5225-5140-9 ; 187080 ; Handbook of Research on Integrating Technology Into Contemporary Language Learning and Teaching ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522541981 ; 9781522541974 ; 10.4018/978-1-5225-4197-4 ; 183470 ; Handbook of Research on Civic Engagement and Social Change in Contemporary Society ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522541356 ; 9781522541349 ; 10.4018/978-1-5225-4134-9 ; 182747 ; Employment Protection Legislation in Emerging Economies ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522539940 ; 9781522539933 ; 10.4018/978-1-5225-3993-3 ; 182353 ; Handbook of Research on Form and Morphogenesis in Modern Architectural Contexts ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522535522 ; 9781522535515 ; 10.4018/978-1-5225-3551-5 ; 181084 ; Corporate Social Responsibility for Valorization of Cultural Organizations ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522527923 ; 9781522527916 ; 10.4018/978-1-5225-2791-6 ; 178725 ; Curriculum Internationalization and the Future of Education ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522553212 ; 9781522553205 ; 10.4018/978-1-5225-5320-5 ; 188331 ; Corporate and Global Standardization Initiatives in Contemporary Society ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522552987 ; 9781522552970 ; 10.4018/978-1-5225-5297-0 ; 187290 ; Multidisciplinary Perspectives on Human Capital and Information Technology Professionals ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522549345 ; 9781522549338 ; 10.4018/978-1-5225-4933-8 ; 185729 ; Management Techniques for a Diverse and Cross-Cultural Workforce ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522537823 ; 9781522537816 ; 10.4018/978-1-5225-3781-6 ; 181513 ; Exploring Transmedia Journalism in the Digital Age ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522536413 ; 9781522536406 ; 10.4018/978-1-5225-3640-6 ; 181222 ; Innovations in Software-Defined Networking and Network Functions Virtualization ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522540786 ; 9781522540779 ; 10.4018/978-1-5225-4077-9 ; 182584 ; Advances in System Dynamics and Control ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522540632 ; 9781522540625 ; 10.4018/978-1-5225-4062-5 ; 182425 ; Lean Six Sigma for Optimal System Performance in Manufacturing and Service Organizations: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522539476 ; 9781522539469 ; 10.4018/978-1-5225-3946-9 ; 181917 ; Healthcare Administration for Patient Safety and Engagement ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522539445 ; 9781522539438 ; 10.4018/978-1-5225-3943-8 ; 181916 ; Social Justice and Parent Partnerships in Multicultural Education Contexts ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522539070 ; 9781522539063 ; 10.4018/978-1-5225-3906-3 ; 181905 ; Improving Business Performance Through Effective Managerial Training Initiatives ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522537687 ; 9781522537670 ; 10.4018/978-1-5225-3767-0 ; 181509 ; Fractal Approaches for Modeling Financial Assets and Predicting Crises ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522537175 ; 9781522537168 ; 10.4018/978-1-5225-3716-8 ; 181450 ; Global Perspectives on Health Communication in the Age of Social Media ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522535324 ; 9781522535317 ; 10.4018/978-1-5225-3531-7 ; 181078 ; Soft-Computing-Based Nonlinear Control Systems Design ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522532484 ; 9781522532477 ; 10.4018/978-1-5225-3247-7 ; 179865 ; Handbook of Research on Sustainable Development and Governance Strategies for Economic Growth in Africa ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522531807 ; 9781522531791 ; 10.4018/978-1-5225-3179-1 ; 179838 ; Affordability Issues Surrounding the Use of ICT for Development and Poverty Reduction ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522530862 ; 9781522530855 ; 10.4018/978-1-5225-3085-5 ; 179377 ; Emerging Developments and Practices in Oncology ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522552802 ; 9781522552796 ; 10.4018/978-1-5225-5279-6 ; 187284 ; Technology Management in Organizational and Societal Contexts ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522553700 ; 9781522553694 ; 10.4018/978-1-5225-5369-4 ; 188639 ; Impact of Learning Analytics on Curriculum Design and Student Performance ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522553151 ; 9781522553144 ; 10.4018/978-1-5225-5314-4 ; 188329 ; Optimizing Contemporary Application and Processes in Open Source Software ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522552659 ; 9781522552642 ; 10.4018/978-1-5225-5264-2 ; 187262 ; Managerial Approaches Toward Queuing Systems and Simulations ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522552116 ; 9781522552109 ; 10.4018/978-1-5225-5210-9 ; 187122 ; Intelligent Transportation and Planning: Breakthroughs in Research and Practice ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522552086 ; 9781522552079 ; 10.4018/978-1-5225-5207-9 ; 187121 ; Food Science and Nutrition: Breakthroughs in Research and Practice ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522552055 ; 9781522552048 ; 10.4018/978-1-5225-5204-8 ; 187120 ; Computer Vision: Concepts, Methodologies, Tools, and Applications ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522552024 ; 9781522552017 ; 10.4018/978-1-5225-5201-7 ; 187119 ; Technology Adoption and Social Issues: Concepts, Methodologies, Tools, and Applications ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522551560 ; 9781522551553 ; 10.4018/978-1-5225-5155-3 ; 187085 ; Engaging Adolescent Students in Contemporary Classrooms: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522551195 ; 9781522551188 ; 10.4018/978-1-5225-5118-8 ; 186890 ; Political Mediation in Modern Conflict Resolution: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522550181 ; 9781522550174 ; 10.4018/978-1-5225-5017-4 ; 185754 ; Green Computing Strategies for Competitive Advantage and Business Sustainability ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522549857 ; 9781522549840 ; 10.4018/978-1-5225-4984-0 ; 185745 ; Analyzing Attachment and Consumers' Emotions: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522536475 ; 9781522536468 ; 10.4018/978-1-5225-3646-8 ; 181224 ; Improving E-Commerce Web Applications Through Business Intelligence Techniques ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522534020 ; 9781522534013 ; 10.4018/978-1-5225-3401-3 ; 180658 ; Design and Optimization of Mechanical Engineering Products ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522531388 ; 9781522531371 ; 10.4018/978-1-5225-3137-1 ; 179828 ; Handbook of Research on Heritage Management and Preservation ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522552741 ; 9781522552734 ; 10.4018/978-1-5225-5273-4 ; 187282 ; Contemporary Approaches and Strategies for Applied Logistics ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522548386 ; 9781522548379 ; 10.4018/978-1-5225-4837-9 ; 185585 ; Mechanical Properties of Natural Fiber Reinforced Polymers: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522534631 ; 9781522534624 ; 10.4018/978-1-5225-3462-4 ; 180925 ; Cases on Global Competencies for Educational Diplomacy in International Settings ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522531272 ; 9781522531265 ; 10.4018/978-1-5225-3126-5 ; 179824 ; Microbial Biotechnology in Environmental Monitoring and Cleanup ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522531241 ; 9781522531234 ; 10.4018/978-1-5225-3123-4 ; 179823 ; Optimizing Elementary Education for English Language Learners ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522551041 ; 9781522551034 ; 10.4018/978-1-5225-5103-4 ; 186877 ; Written Corrective Feedback for L2 Development: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522550303 ; 9781522550297 ; 10.4018/978-1-5225-5029-7 ; 185884 ; Predictive Analysis on Large Data for Actionable Knowledge: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522548294 ; 9781522548287 ; 10.4018/978-1-5225-4828-7 ; 185582 ; Contemporary Identity and Access Management Architectures: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522537205 ; 9781522537199 ; 10.4018/978-1-5225-3719-9 ; 181451 ; Integrating Multi-User Virtual Environments in Modern Classrooms ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522536208 ; 9781522536192 ; 10.4018/978-1-5225-3619-2 ; 181215 ; Reputation Management Techniques in Public Relations ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522552239 ; 9781522552222 ; 10.4018/978-1-5225-5222-2 ; 187126 ; Big Data Management and the Internet of Things for Improved Health Systems ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522551591 ; 9781522551584 ; 10.4018/978-1-5225-5158-4 ; 187086 ; Security, Privacy, and Anonymization in Social Networks: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522550433 ; 9781522550426 ; 10.4018/978-1-5225-5042-6 ; 186195 ; Innovations, Developments, and Applications of Semantic Web and Information Systems ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522549673 ; 9781522549666 ; 10.4018/978-1-5225-4966-6 ; 185738 ; Regulation and Structure in Economic Virtualization: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522549420 ; 9781522549413 ; 10.4018/978-1-5225-4941-3 ; 185731 ; EHT Transmission Performance Evaluation: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522541929 ; 9781522541912 ; 10.4018/978-1-5225-4191-2 ; 183356 ; Enhancing Knowledge Discovery and Innovation in the Digital Era ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522539049 ; 9781522539032 ; 10.4018/978-1-5225-3903-2 ; 181904 ; Advanced Solid Catalysts for Renewable Energy Production ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522538684 ; 9781522538677 ; 10.4018/978-1-5225-3867-7 ; 181763 ; Handbook of Research on Renewable Energy and Electric Resources for Sustainable Rural Development ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522534860 ; 9781522534853 ; 10.4018/978-1-5225-3485-3 ; 180993 ; Handbook of Research on Students' Research Competence in Modern Educational Contexts ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522539599 ; 9781522539582 ; 10.4018/978-1-5225-3958-2 ; 181921 ; Social, Psychological, and Forensic Perspectives on Sexual Abuse ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522538516 ; 9781522538509 ; 10.4018/978-1-5225-3850-9 ; 181729 ; Emerging Technologies and Work-Integrated Learning Experiences in Allied Health Education ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522551447 ; 9781522551430 ; 10.4018/978-1-5225-5143-0 ; 187081 ; Building Brand Identity in the Age of Social Media: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522551072 ; 9781522551065 ; 10.4018/978-1-5225-5106-5 ; 186878 ; Differentiated Instructional Design for Multicultural Environments: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522549482 ; 9781522549475 ; 10.4018/978-1-5225-4947-5 ; 185733 ; Statistical Tools and Analysis in Human Resources Management ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522547822 ; 9781522547815 ; 10.4018/978-1-5225-4781-5 ; 185485 ; Multifunctional Nanocarriers for Contemporary Healthcare Applications ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522547556 ; 9781522547549 ; 10.4018/978-1-5225-4754-9 ; 185476 ; Research, Practices, and Innovations in Global Risk and Contingency Management ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522541950 ; 9781522541943 ; 10.4018/978-1-5225-4194-3 ; 183469 ; Production, Properties, and Applications of High Temperature Coatings ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522537717 ; 9781522537700 ; 10.4018/978-1-5225-3770-0 ; 181510 ; Technology and the New Generation of Active Citizens: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522532453 ; 9781522532446 ; 10.4018/978-1-5225-3244-6 ; 179864 ; Fuzzy Logic Dynamics and Machine Prediction for Failure Analysis ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522531098 ; 9781522531081 ; 10.4018/978-1-5225-3108-1 ; 179718 ; Socio-Technical Decision Support in Air Navigation Systems: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522553335 ; 9781522553328 ; 10.4018/978-1-5225-5332-8 ; 188501 ; Visual Approaches to Cognitive Education With Technology Integration ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522551997 ; 9781522551980 ; 10.4018/978-1-5225-5198-0 ; 187118 ; Gamification in Education: Breakthroughs in Research and Practice ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522551966 ; 9781522551959 ; 10.4018/978-1-5225-5195-9 ; 187117 ; Ophthalmology: Breakthroughs in Research and Practice ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522551928 ; 9781522551911 ; 10.4018/978-1-5225-5191-1 ; 187116 ; Information Retrieval and Management: Concepts, Methodologies, Tools, and Applications ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522551881 ; 9781522551874 ; 10.4018/978-1-5225-5187-4 ; 187115 ; Digital Marketing and Consumer Engagement: Concepts, Methodologies, Tools, and Applications ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522551621 ; 9781522551614 ; 10.4018/978-1-5225-5161-4 ; 187111 ; The Community of Inquiry Framework in Contemporary Education: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522550273 ; 9781522550266 ; 10.4018/978-1-5225-5026-6 ; 185757 ; Optimizing Current Practices in E-Services and Mobile Applications ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522549888 ; 9781522549871 ; 10.4018/978-1-5225-4987-1 ; 185746 ; Proliferation of Open Government Initiatives and Systems ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522549796 ; 9781522549789 ; 10.4018/978-1-5225-4978-9 ; 185742 ; Business Strategies and Advanced Techniques for Entrepreneurship 4.0 ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522549451 ; 9781522549444 ; 10.4018/978-1-5225-4944-4 ; 185732 ; Global Implications of Emerging Technology Trends ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522541295 ; 9781522541288 ; 10.4018/978-1-5225-4128-8 ; 182745 ; Computational Psychoanalysis and Formal Bi-Logic Frameworks ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522538004 ; 9781522537991 ; 10.4018/978-1-5225-3799-1 ; 181519 ; Creativity in Load-Balance Schemes for Multi/Many-Core Heterogeneous Graph Computing: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522537977 ; 9781522537960 ; 10.4018/978-1-5225-3796-0 ; 181518 ; Image Retrieval and Analysis Using Text and Fuzzy Shape Features: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522536383 ; 9781522536376 ; 10.4018/978-1-5225-3637-6 ; 181221 ; Handbook of Research on Perception-Driven Approaches to Urban Assessment and Design ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522535294 ; 9781522535287 ; 10.4018/978-1-5225-3528-7 ; 181077 ; Positioning and Navigation in Complex Environments ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522532279 ; 9781522532262 ; 10.4018/978-1-5225-3226-2 ; 179850 ; Modeling and Simulation Techniques for Improved Business Processes ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522531951 ; 9781522531944 ; 10.4018/978-1-5225-3194-4 ; 179843 ; Handbook of Research on Environmental Policies for Emergency Management and Public Safety ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522531432 ; 9781522531425 ; 10.4018/978-1-5225-3142-5 ; 179829 ; Handbook of Research on Big Data Storage and Visualization Techniques ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522528036 ; 9781522528029 ; 10.4018/978-1-5225-2802-9 ; 178728 ; Changing the Scope of Library Instruction in the Digital Age ;  ; https://www.igi-global.com/ >
+
+   au < released ; 2018 ; 9781522559498 ; 9781522559481 ; 10.4018/978-1-5225-5948-1 ; 193703 ; Coaching for Student Retention and Success at the Postsecondary Level: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522561156 ; 9781522561149 ; 10.4018/978-1-5225-6114-9 ; 197077 ; Perspectives, Trends, and Applications in Corporate Finance and Accounting ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522557760 ; 9781522557753 ; 10.4018/978-1-5225-5775-3 ; 192042 ; Feature Dimension Reduction for Content-Based Image Identification ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522540458 ; 9781522540441 ; 10.4018/978-1-5225-4044-1 ; 182365 ; Applications of Security, Mobile, Analytic, and Cloud (SMAC) Technologies for Effective Information Processing and Management ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522539971 ; 9781522539964 ; 10.4018/978-1-5225-3996-4 ; 182354 ; Smart Grid Analytics for Sustainability and Urbanization ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522556749 ; 9781522556732 ; 10.4018/978-1-5225-5673-2 ; 190798 ; Marketing Initiatives for Sustainable Educational Development ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522550921 ; 9781522550914 ; 10.4018/978-1-5225-5091-4 ; 186873 ; Optimization Techniques for Problem Solving in Uncertainty ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522549703 ; 9781522549697 ; 10.4018/978-1-5225-4969-7 ; 185739 ; Design and Development of Affordable Healthcare Technologies ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522547648 ; 9781522547631 ; 10.4018/978-1-5225-4763-1 ; 185479 ; Handbook of Research on Information and Cyber Security in the Fourth Industrial Revolution ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522541875 ; 9781522541868 ; 10.4018/978-1-5225-4186-8 ; 183207 ; Handbook of Research on Methods and Tools for Assessing Cultural Landscape Adaptation ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522541493 ; 9781522541486 ; 10.4018/978-1-5225-4148-6 ; 182885 ; Disruptive Technologies for Business Development and Strategic Advantage ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522539827 ; 9781522539810 ; 10.4018/978-1-5225-3981-0 ; 182279 ; Vehicular Cloud Computing for Traffic Management and Systems ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522529668 ; 9781522529651 ; 10.4018/978-1-5225-2965-1 ; 179220 ; Organizational Culture and Behavioral Shifts in the Green Economy ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522552895 ; 9781522552888 ; 10.4018/978-1-5225-5288-8 ; 187287 ; Cases on Quality Initiatives for Organizational Longevity ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522553618 ; 9781522553601 ; 10.4018/978-1-5225-5360-1 ; 188636 ; Enhancing Competitive Advantage With Dynamic Management and Engineering ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522552680 ; 9781522552673 ; 10.4018/978-1-5225-5267-3 ; 187280 ; Maintaining Sustainable Accounting Systems in Small Business ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522552147 ; 9781522552130 ; 10.4018/978-1-5225-5213-0 ; 187123 ; Microfinance and Its Impact on Entrepreneurial Development, Sustainability, and Inclusive Growth ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522550129 ; 9781522550112 ; 10.4018/978-1-5225-5011-2 ; 185752 ; Emerging Trends, Techniques, and Tools for Massive Open Online Course (MOOC) Management ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522549567 ; 9781522549550 ; 10.4018/978-1-5225-4955-0 ; 185735 ; Handbook of Research on Psychosocial Perspectives of Human Communication Disorders ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522547679 ; 9781522547662 ; 10.4018/978-1-5225-4766-2 ; 185480 ; Handbook of Research on Predictive Modeling and Optimization Methods in Science and Engineering ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522540755 ; 9781522540748 ; 10.4018/978-1-5225-4074-8 ; 182583 ; Optimizing Health Literacy for Improved Clinical Practices ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522562658 ; 9781522562641 ; 10.4018/978-1-5225-6264-1 ; 199020 ; Attracting and Retaining Millennial Workers in the Modern Business Era ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522557739 ; 9781522557722 ; 10.4018/978-1-5225-5772-2 ; 192041 ; Managing Sustainable Tourism Resources ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522554646 ; 9781522554639 ; 10.4018/978-1-5225-5463-9 ; 189160 ; Cross-Cultural Perspectives on Technology-Enhanced Language Learning ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522554318 ; 9781522554301 ; 10.4018/978-1-5225-5430-1 ; 189151 ; Learning Strategies and Constructionism in Modern Education Settings ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522553977 ; 9781522553960 ; 10.4018/978-1-5225-5396-0 ; 189140 ; Handbook of Research on Investigations in Artificial Life Research and Development ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522552475 ; 9781522552468 ; 10.4018/978-1-5225-5246-8 ; 187224 ; Intelligent Multidimensional Data and Image Processing ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522550860 ; 9781522550853 ; 10.4018/978-1-5225-5085-3 ; 186871 ; Handbook of Research on Student-Centered Strategies in Online Adult Learning Environments ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522541127 ; 9781522541110 ; 10.4018/978-1-5225-4111-0 ; 182744 ; Computer-Mediated Learning for Workforce Development ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522539919 ; 9781522539902 ; 10.4018/978-1-5225-3990-2 ; 182282 ; Promoting Global Environmental Sustainability and Cooperation ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522537779 ; 9781522537762 ; 10.4018/978-1-5225-3776-2 ; 181512 ; Handbook of Research on Cross-Cultural Business Education ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522534723 ; 9781522534716 ; 10.4018/978-1-5225-3471-6 ; 180928 ; Information Technology as a Facilitator of Social Processes in Project Management and Collaborative Work ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522560876 ; 9781522560869 ; 10.4018/978-1-5225-6086-9 ; 196162 ; Critical Theory and Transformative Learning ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522556534 ; 9781522556527 ; 10.4018/978-1-5225-5652-7 ; 190551 ; Social Media in Education: Breakthroughs in Research and Practice ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522556503 ; 9781522556497 ; 10.4018/978-1-5225-5649-7 ; 190550 ; Fog Computing: Breakthroughs in Research and Practice ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522556473 ; 9781522556466 ; 10.4018/978-1-5225-5646-6 ; 190549 ; E-Planning and Collaboration: Concepts, Methodologies, Tools, and Applications ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522556442 ; 9781522556435 ; 10.4018/978-1-5225-5643-5 ; 190548 ; Intelligent Systems: Concepts, Methodologies, Tools, and Applications ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522559979 ; 9781522559962 ; 10.4018/978-1-5225-5996-2 ; 195047 ; Systems Research for Real-World Challenges ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522559528 ; 9781522559511 ; 10.4018/978-1-5225-5951-1 ; 193744 ; Multidisciplinary Approaches to Service-Oriented Engineering ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522558309 ; 9781522558293 ; 10.4018/978-1-5225-5829-3 ; 193071 ; Innovative Applications of Knowledge Discovery and Information Resources Management ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522558279 ; 9781522558262 ; 10.4018/978-1-5225-5826-2 ; 193069 ; Global Perspectives on Social Media in Tertiary Learning and Teaching: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522557227 ; 9781522557210 ; 10.4018/978-1-5225-5721-0 ; 191617 ; Effective Open Innovation Strategies in Modern Business: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522554370 ; 9781522554363 ; 10.4018/978-1-5225-5436-3 ; 189153 ; Recent Advancements in Airborne Radar Signal Processing: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522551508 ; 9781522551492 ; 10.4018/978-1-5225-5149-2 ; 187083 ; Expert System Techniques in Biomedical Science Practice ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522540366 ; 9781522540359 ; 10.4018/978-1-5225-4035-9 ; 182362 ; Marketing Techniques for Financial Inclusion and Development ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522534525 ; 9781522534518 ; 10.4018/978-1-5225-3451-8 ; 180922 ; International Student Mobility and Opportunities for Growth in the Global Marketplace ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522532651 ; 9781522532644 ; 10.4018/978-1-5225-3264-4 ; 180163 ; Economic and Geopolitical Perspectives of the Commonwealth of Independent States and Eurasia ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522559672 ; 9781522559665 ; 10.4018/978-1-5225-5966-5 ; 195022 ; Innovative Perspectives on Public Administration in the Digital Age ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522556206 ; 9781522556190 ; 10.4018/978-1-5225-5619-0 ; 190528 ; Diverse Methods in Customer Relationship Marketing and Management ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522555810 ; 9781522555803 ; 10.4018/978-1-5225-5580-3 ; 190471 ; Electrocardiogram Signal Classification and Machine Learning: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522553243 ; 9781522553236 ; 10.4018/978-1-5225-5323-6 ; 188332 ; Advances in Data Communications and Networking for Digital Business Transformation ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522552178 ; 9781522552161 ; 10.4018/978-1-5225-5216-1 ; 187124 ; Composites and Advanced Materials for Industrial Applications ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522550402 ; 9781522550396 ; 10.4018/978-1-5225-5039-6 ; 186194 ; Emerging Trends in Open Source Geographic Information Systems ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522547792 ; 9781522547785 ; 10.4018/978-1-5225-4778-5 ; 185484 ; Handbook of Research on Military Expenditure on Economic and Political Resources ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522537267 ; 9781522537250 ; 10.4018/978-1-5225-3725-0 ; 181453 ; Handbook of Research on Knowledge Management for Contemporary Business Environments ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522555117 ; 9781522555100 ; 10.4018/978-1-5225-5510-0 ; 189773 ; Cyber-Physical Systems for Next-Generation Networks ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522552710 ; 9781522552703 ; 10.4018/978-1-5225-5270-3 ; 187281 ; Mobile Applications and Solutions for Social Inclusion ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522551713 ; 9781522551706 ; 10.4018/978-1-5225-5170-6 ; 187114 ; Emerging Synthesis Techniques for Luminescent Materials ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522550372 ; 9781522550365 ; 10.4018/978-1-5225-5036-5 ; 186193 ; Contemporary Applications of Mobile Computing in Healthcare Settings ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522541639 ; 9781522541622 ; 10.4018/978-1-5225-4162-2 ; 182889 ; Biostimulation Remediation Technologies for Groundwater Contaminants ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522560005 ; 9781522559993 ; 10.4018/978-1-5225-5999-3 ; 195048 ; New Approaches, Methods, and Tools in Urban E-Planning ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522559733 ; 9781522559726 ; 10.4018/978-1-5225-5972-6 ; 195034 ; Handbook of Research on Cloud and Fog Computing Infrastructures for Data Science ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522556268 ; 9781522556251 ; 10.4018/978-1-5225-5625-1 ; 190536 ; Contemporary Strategies and Approaches in 3-D Information Modeling ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522552444 ; 9781522552437 ; 10.4018/978-1-5225-5243-7 ; 187223 ; Augmented Reality for Enhanced Learning Environments ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522551478 ; 9781522551461 ; 10.4018/978-1-5225-5146-1 ; 187082 ; Library and Information Science in the Age of MOOCs ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522540519 ; 9781522540502 ; 10.4018/978-1-5225-4050-2 ; 182421 ; Mentorship Strategies in Teacher Education ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522540212 ; 9781522540205 ; 10.4018/978-1-5225-4020-5 ; 182357 ; Assessing Social Support and Stress in Autism-Focused Virtual Communities: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522560302 ; 9781522560296 ; 10.4018/978-1-5225-6029-6 ; 195668 ; Analyzing the Role of Risk Mitigation and Monitoring in Software Development ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522557586 ; 9781522557579 ; 10.4018/978-1-5225-5757-9 ; 192036 ; Handbook of Research on Supply Chain Management for Sustainable Development ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522554615 ; 9781522554608 ; 10.4018/978-1-5225-5460-8 ; 189159 ; Handbook of Research on Emerging Perspectives on Healthcare Information Systems and Informatics ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522554196 ; 9781522554189 ; 10.4018/978-1-5225-5418-9 ; 189146 ; Advanced Synchronization Control and Bifurcation of Chaotic Fractional-Order Systems ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522552567 ; 9781522552550 ; 10.4018/978-1-5225-5255-0 ; 187227 ; Enhancing Education Through Open Degree Programs and Prior Learning Assessment ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522552383 ; 9781522552376 ; 10.4018/978-1-5225-5237-6 ; 187131 ; Research Advancements in Pharmaceutical, Nutritional, and Industrial Enzymology ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522551683 ; 9781522551676 ; 10.4018/978-1-5225-5167-6 ; 187113 ; Early Childhood Education From an Intercultural and Bilingual Perspective ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522551133 ; 9781522551126 ; 10.4018/978-1-5225-5112-6 ; 186880 ; Examining the Role of Women Entrepreneurs in Emerging Economies ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522551102 ; 9781522551096 ; 10.4018/978-1-5225-5109-6 ; 186879 ; Pedagogy Development for Teaching Online Music ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522542070 ; 9781522542063 ; 10.4018/978-1-5225-4206-3 ; 184509 ; Learner Experience and Usability in Online Education ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522540601 ; 9781522540595 ; 10.4018/978-1-5225-4059-5 ; 182424 ; Handbook of Research on Media Literacy in Higher Education Environments ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522538097 ; 9781522538080 ; 10.4018/978-1-5225-3808-0 ; 181522 ; Deconstructing Stigma in Mental Health ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522559795 ; 9781522559788 ; 10.4018/978-1-5225-5978-8 ; 195041 ; Innovations and Trends in Environmental and Agricultural Informatics ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522559702 ; 9781522559696 ; 10.4018/978-1-5225-5969-6 ; 195033 ; Innovative Methods, User-Friendly Tools, Coding, and Design Approaches in People-Oriented Programming ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522557371 ; 9781522557364 ; 10.4018/978-1-5225-5736-4 ; 192029 ; Security and Privacy in Smart Sensor Networks ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522554677 ; 9781522554660 ; 10.4018/978-1-5225-5466-0 ; 189161 ; Innovative Applications of Online Pedagogy and Course Design ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522553274 ; 9781522553267 ; 10.4018/978-1-5225-5326-7 ; 188333 ; Optimizing E-Participation Initiatives Through Social Media ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522541660 ; 9781522541653 ; 10.4018/978-1-5225-4165-3 ; 182890 ; Handbook of Research on Urban Governance and Management in the Developing World ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522556411 ; 9781522556404 ; 10.4018/978-1-5225-5640-4 ; 190547 ; Veterinary Science: Breakthroughs in Research and Practice ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522556381 ; 9781522556374 ; 10.4018/978-1-5225-5637-4 ; 190546 ; Social Media Marketing: Breakthroughs in Research and Practice ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522556350 ; 9781522556343 ; 10.4018/978-1-5225-5634-3 ; 190539 ; Cyber Security and Threats: Concepts, Methodologies, Tools, and Applications ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522556329 ; 9781522556312 ; 10.4018/978-1-5225-5631-2 ; 190538 ; Teacher Training and Professional Development: Concepts, Methodologies, Tools, and Applications ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522553854 ; 9781522553847 ; 10.4018/978-1-5225-5384-7 ; 188847 ; Handbook of Research on Contemporary Perspectives on Web-Based Systems ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522553502 ; 9781522553496 ; 10.4018/978-1-5225-5349-6 ; 188633 ; Effective Techniques for Managing Trigeminal Neuralgia ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522547617 ; 9781522547600 ; 10.4018/978-1-5225-4760-0 ; 185478 ; Analysis and Applications of Lattice Boltzmann Simulations ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522540335 ; 9781522540328 ; 10.4018/978-1-5225-4032-8 ; 182361 ; Globalization and Trade Integration in Developing Countries ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522534693 ; 9781522534686 ; 10.4018/978-1-5225-3468-6 ; 180927 ; Analyzing the Impacts of Industry 4.0 in Modern Business Environments ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522555292 ; 9781522555285 ; 10.4018/978-1-5225-5528-5 ; 189779 ; Advanced Systems for Improved Public Healthcare and Disease Prevention: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522553649 ; 9781522553632 ; 10.4018/978-1-5225-5363-2 ; 188637 ; Microbial Cultures and Enzymes in Dairy Technology ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522547730 ; 9781522547723 ; 10.4018/978-1-5225-4772-3 ; 185482 ; Handbook of Research on Multicultural Perspectives on Gender and Aging ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522535416 ; 9781522535409 ; 10.4018/978-1-5225-3540-9 ; 181081 ; Handbook of Research on Microbial Tools for Environmental Waste Management ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522533801 ; 9781522533795 ; 10.4018/978-1-5225-3379-5 ; 180566 ; Effective Solutions to Pollution Mitigation for Public Welfare ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522532040 ; 9781522532033 ; 10.4018/978-1-5225-3203-3 ; 179846 ; Big Data Analytics in HIV/AIDS Research ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522538714 ; 9781522538707 ; 10.4018/978-1-5225-3870-7 ; 181764 ; Handbook of Research on Pattern Engineering System Development for Big Data Analytics ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522537854 ; 9781522537847 ; 10.4018/978-1-5225-3784-7 ; 181514 ; Reconceptualizing New Media and Intercultural Communication in a Networked Society ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522555735 ; 9781522555728 ; 10.4018/978-1-5225-5572-8 ; 190386 ; Narratives and the Role of Philosophy in Cross-Disciplinary Studies: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522552208 ; 9781522552192 ; 10.4018/978-1-5225-5219-2 ; 187125 ; Quantum-Inspired Intelligent Systems for Multimedia Data Analysis ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522551539 ; 9781522551522 ; 10.4018/978-1-5225-5152-2 ; 187084 ; Handbook of Research on Information Security in Biomedical Signal Processing ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522550952 ; 9781522550945 ; 10.4018/978-1-5225-5094-5 ; 186874 ; The Changing Scope of Technoethics in Contemporary Society ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522550891 ; 9781522550884 ; 10.4018/978-1-5225-5088-4 ; 186872 ; GIS Applications in the Tourism and Hospitality Industry ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522541554 ; 9781522541547 ; 10.4018/978-1-5225-4154-7 ; 182887 ; Multilingual Writing and Pedagogical Cooperation in Virtual Learning Environments ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522538639 ; 9781522538622 ; 10.4018/978-1-5225-3862-2 ; 181733 ; Electronic Nose Technologies and Advances in Machine Olfaction ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522538158 ; 9781522538141 ; 10.4018/978-1-5225-3814-1 ; 181524 ; Study Abroad Contexts for Enhanced Foreign Language Learning ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522538066 ; 9781522538059 ; 10.4018/978-1-5225-3805-9 ; 181521 ; Protocols and Applications for the Industrial Internet of Things ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522535447 ; 9781522535430 ; 10.4018/978-1-5225-3543-0 ; 181082 ; Handbook of Research on Intrapreneurship and Organizational Sustainability in SMEs ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522534495 ; 9781522534488 ; 10.4018/978-1-5225-3448-8 ; 180920 ; Utilizing Consumer Psychology in Business Strategy ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522530138 ; 9781522530121 ; 10.4018/978-1-5225-3012-1 ; 179331 ; Handbook of Research on Strategic Innovation Management for Improved Competitive Advantage ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522556299 ; 9781522556282 ; 10.4018/978-1-5225-5628-2 ; 190537 ; Advancements in Computer Vision and Image Processing ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522555841 ; 9781522555834 ; 10.4018/978-1-5225-5583-4 ; 190472 ; Security and Privacy Management, Techniques, and Protocols ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522554912 ; 9781522554905 ; 10.4018/978-1-5225-5490-5 ; 189169 ; Nursing Education, Administration, and Informatics: Breakthroughs in Research and Practice ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522554882 ; 9781522554875 ; 10.4018/978-1-5225-5487-5 ; 189168 ; Climate Change and Environmental Concerns: Breakthroughs in Research and Practice ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522554851 ; 9781522554844 ; 10.4018/978-1-5225-5484-4 ; 189167 ; Wearable Technologies: Concepts, Methodologies, Tools, and Applications ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522554820 ; 9781522554813 ; 10.4018/978-1-5225-5481-3 ; 189166 ; Global Business Expansion: Concepts, Methodologies, Tools, and Applications ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522552864 ; 9781522552857 ; 10.4018/978-1-5225-5285-7 ; 187286 ; Cyber Harassment and Policy Reform in the Digital Age: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522552352 ; 9781522552345 ; 10.4018/978-1-5225-5234-5 ; 187130 ; Handbook of Research on Ergonomics and Product Design ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522550242 ; 9781522550235 ; 10.4018/978-1-5225-5023-5 ; 185756 ; Enhancing Art, Culture, and Design With Technological Integration ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522550211 ; 9781522550204 ; 10.4018/978-1-5225-5020-4 ; 185755 ; Incorporating Nature-Inspired Paradigms in Computational Applications ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522550150 ; 9781522550143 ; 10.4018/978-1-5225-5014-3 ; 185753 ; Entrepreneurship, Collaboration, and Innovation in the Modern Business Era ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522541011 ; 9781522541004 ; 10.4018/978-1-5225-4100-4 ; 182673 ; Handbook of Research on Network Forensics and Analysis Techniques ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522540953 ; 9781522540946 ; 10.4018/978-1-5225-4094-6 ; 182671 ; Online Collaboration and Communication in Contemporary Organizations ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522540816 ; 9781522540809 ; 10.4018/978-1-5225-4080-9 ; 182585 ; Preparing the Next Generation of Teachers for 21st Century Education ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522540274 ; 9781522540267 ; 10.4018/978-1-5225-4026-7 ; 182359 ; Regaining Global Stability After the Financial Crisis ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522536291 ; 9781522536284 ; 10.4018/978-1-5225-3628-4 ; 181218 ; E-Manufacturing and E-Service Strategies in Contemporary Organizations ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522534556 ; 9781522534549 ; 10.4018/978-1-5225-3454-9 ; 180923 ; Changing Urban Landscapes Through Public Higher Education ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522530602 ; 9781522530596 ; 10.4018/978-1-5225-3059-6 ; 179347 ; Agricultural Finance and Opportunities for Investment and Expansion ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522538035 ; 9781522538028 ; 10.4018/978-1-5225-3802-8 ; 181520 ; Centrality Metrics for Complex Network Analysis: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522547709 ; 9781522547693 ; 10.4018/978-1-5225-4769-3 ; 185481 ; Nature-Inspired Intelligent Techniques for Solving Biomedical Engineering Problems ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522538608 ; 9781522538592 ; 10.4018/978-1-5225-3859-2 ; 181732 ; Media Diplomacy and Its Evolving Role in the Current Geopolitical Climate ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522528555 ; 9781522528548 ; 10.4018/978-1-5225-2854-8 ; 178920 ; Exploring the Role of Social Media in Transnational Advocacy ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522555261 ; 9781522555254 ; 10.4018/978-1-5225-5525-4 ; 189778 ; Analyzing Workplace Arrogance and Organizational Effectiveness: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522554585 ; 9781522554578 ; 10.4018/978-1-5225-5457-8 ; 189158 ; Multi-Sided Platforms (MSPs) and Sharing Strategies in the Digital Economy: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522549611 ; 9781522549604 ; 10.4018/978-1-5225-4960-4 ; 185736 ; Equity, Equality, and Reform in Contemporary Public Education ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522534815 ; 9781522534808 ; 10.4018/978-1-5225-3480-8 ; 180992 ; Handbook of Research on Geriatric Health, Treatment, and Care ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522550983 ; 9781522550976 ; 10.4018/978-1-5225-5097-6 ; 186875 ; Social Network Analytics for Contemporary Business Organizations ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522549949 ; 9781522549932 ; 10.4018/978-1-5225-4993-2 ; 185748 ; Global Leadership Initiatives for Conflict Resolution and Peacebuilding ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522549918 ; 9781522549901 ; 10.4018/978-1-5225-4990-1 ; 185747 ; Information Visualization Techniques in the Social Sciences and Humanities ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522540304 ; 9781522540298 ; 10.4018/978-1-5225-4029-8 ; 182360 ; Mobile Technologies and Socio-Economic Development in Emerging Nations ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522552628 ; 9781522552611 ; 10.4018/978-1-5225-5261-1 ; 187229 ; Dynamic Knowledge Representation in Scientific Domains ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522539360 ; 9781522539353 ; 10.4018/978-1-5225-3935-3 ; 181914 ; Handbook of Research on Power and Energy System Optimization ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522537144 ; 9781522537137 ; 10.4018/978-1-5225-3713-7 ; 181446 ; Financial Sustainability and Intergenerational Equity in Local Governments ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522534587 ; 9781522534570 ; 10.4018/978-1-5225-3457-0 ; 180924 ; Innovations in Measuring and Evaluating Scientific Information ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522532309 ; 9781522532293 ; 10.4018/978-1-5225-3229-3 ; 179851 ; Enhancing Social Presence in Online Learning Environments ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522547761 ; 9781522547754 ; 10.4018/978-1-5225-4775-4 ; 185483 ; Content Generation Through Narrative Communication and Simulation ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522540540 ; 9781522540533 ; 10.4018/978-1-5225-4053-3 ; 182422 ; Psychological and Behavioral Examinations in Cyber Security ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522540427 ; 9781522540410 ; 10.4018/978-1-5225-4041-0 ; 182364 ; Handbook of Research on Service-Learning Initiatives in Teacher Education Programs ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522540397 ; 9781522540380 ; 10.4018/978-1-5225-4038-0 ; 182363 ; Harnessing Human Capital Analytics for Competitive Advantage ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522537885 ; 9781522537878 ; 10.4018/978-1-5225-3787-8 ; 181515 ; Internet Taxation and E-Retailing Law in the Global Context ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522536444 ; 9781522536437 ; 10.4018/978-1-5225-3643-7 ; 181223 ; Big Data Analytics for Satellite Image Processing and Remote Sensing ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522536321 ; 9781522536314 ; 10.4018/978-1-5225-3631-4 ; 181219 ; Food Systems Sustainability and Environmental Policies in Modern Economies ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522531982 ; 9781522531975 ; 10.4018/978-1-5225-3197-5 ; 179844 ; Developing Organizational Maturity for Effective Project Management ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522556688 ; 9781522556671 ; 10.4018/978-1-5225-5667-1 ; 190786 ; Handbook of Research on Positive Scholarship for Global K-20 Education ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522556565 ; 9781522556558 ; 10.4018/978-1-5225-5655-8 ; 190576 ; Contemporary Knowledge and Systems Science ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522554790 ; 9781522554783 ; 10.4018/978-1-5225-5478-3 ; 189165 ; Applications of Neuroscience: Breakthroughs in Research and Practice ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522554769 ; 9781522554752 ; 10.4018/978-1-5225-5475-2 ; 189164 ; Sports Media, Marketing, and Management: Breakthroughs in Research and Practice ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522554738 ; 9781522554721 ; 10.4018/978-1-5225-5472-1 ; 189163 ; Online Course Management: Concepts, Methodologies, Tools, and Applications ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522554707 ; 9781522554691 ; 10.4018/978-1-5225-5469-1 ; 189162 ; Virtual and Augmented Reality: Concepts, Methodologies, Tools, and Applications ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522554349 ; 9781522554332 ; 10.4018/978-1-5225-5433-2 ; 189152 ; Nationalism, Social Movements, and Activism in Contemporary Society: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522554165 ; 9781522554158 ; 10.4018/978-1-5225-5415-8 ; 189145 ; Electromagnetic Compatibility for Space Systems Design ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522550464 ; 9781522550457 ; 10.4018/978-1-5225-5045-7 ; 186196 ; Stochastic Methods for Estimation and Problem Solving in Engineering ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522547587 ; 9781522547570 ; 10.4018/978-1-5225-4757-0 ; 185477 ; Handbook of Research on Social Marketing and Its Influence on Animal Origin Food Product Consumption ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522541813 ; 9781522541806 ; 10.4018/978-1-5225-4180-6 ; 183185 ; Modeling and Simulations for Metamaterials: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522541066 ; 9781522541059 ; 10.4018/978-1-5225-4105-9 ; 182742 ; Design Solutions for nZEB Retrofit Buildings ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522540984 ; 9781522540977 ; 10.4018/978-1-5225-4097-7 ; 182672 ; Promoting Ethnic Diversity and Multiculturalism in Higher Education ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522540243 ; 9781522540236 ; 10.4018/978-1-5225-4023-6 ; 182358 ; Applications of Conscious Innovation in Organizations ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522540106 ; 9781522540090 ; 10.4018/978-1-5225-4009-0 ; 182356 ; Psycholinguistics and Cognition in Language Processing ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522539414 ; 9781522539407 ; 10.4018/978-1-5225-3940-7 ; 181915 ; Digital Technologies and Instructional Design for Personalized Learning ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522537359 ; 9781522537342 ; 10.4018/978-1-5225-3734-2 ; 181456 ; Knowledge-Based Urban Development in the Middle East ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522537328 ; 9781522537311 ; 10.4018/978-1-5225-3731-1 ; 181455 ; Handbook of Research on Modernization and Accountability in Public Sector Management ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522536147 ; 9781522536130 ; 10.4018/978-1-5225-3613-0 ; 181213 ; Designing Grid Cities for Optimized Urban Development and Planning ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522526513 ; 9781522526506 ; 10.4018/978-1-5225-2650-6 ; 178123 ; Ethical Standards and Practice in International Relations ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522551355 ; 9781522551348 ; 10.4018/978-1-5225-5134-8 ; 187078 ; Critical Developments and Applications of Swarm Intelligence ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522540724 ; 9781522540717 ; 10.4018/978-1-5225-4071-7 ; 182582 ; Faculty Mentorship at Historically Black Colleges and Universities ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522539537 ; 9781522539520 ; 10.4018/978-1-5225-3952-0 ; 181919 ; Crowdfunding and Sustainable Urban Development in Emerging Economies ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522530428 ; 9781522530411 ; 10.4018/978-1-5225-3041-1 ; 179340 ; Curriculum Development for Gifted Education Programs ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522556237 ; 9781522556220 ; 10.4018/978-1-5225-5622-0 ; 190535 ; Empirical Research on Semiotics and Visual Rhetoric ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522553915 ; 9781522553908 ; 10.4018/978-1-5225-5390-8 ; 188880 ; Organizational Leadership for the Fourth Industrial Revolution: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522551416 ; 9781522551409 ; 10.4018/978-1-5225-5140-9 ; 187080 ; Handbook of Research on Integrating Technology Into Contemporary Language Learning and Teaching ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522541981 ; 9781522541974 ; 10.4018/978-1-5225-4197-4 ; 183470 ; Handbook of Research on Civic Engagement and Social Change in Contemporary Society ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522541356 ; 9781522541349 ; 10.4018/978-1-5225-4134-9 ; 182747 ; Employment Protection Legislation in Emerging Economies ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522539940 ; 9781522539933 ; 10.4018/978-1-5225-3993-3 ; 182353 ; Handbook of Research on Form and Morphogenesis in Modern Architectural Contexts ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522535522 ; 9781522535515 ; 10.4018/978-1-5225-3551-5 ; 181084 ; Corporate Social Responsibility for Valorization of Cultural Organizations ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522527923 ; 9781522527916 ; 10.4018/978-1-5225-2791-6 ; 178725 ; Curriculum Internationalization and the Future of Education ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522553212 ; 9781522553205 ; 10.4018/978-1-5225-5320-5 ; 188331 ; Corporate and Global Standardization Initiatives in Contemporary Society ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522552987 ; 9781522552970 ; 10.4018/978-1-5225-5297-0 ; 187290 ; Multidisciplinary Perspectives on Human Capital and Information Technology Professionals ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522549345 ; 9781522549338 ; 10.4018/978-1-5225-4933-8 ; 185729 ; Management Techniques for a Diverse and Cross-Cultural Workforce ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522537823 ; 9781522537816 ; 10.4018/978-1-5225-3781-6 ; 181513 ; Exploring Transmedia Journalism in the Digital Age ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522536413 ; 9781522536406 ; 10.4018/978-1-5225-3640-6 ; 181222 ; Innovations in Software-Defined Networking and Network Functions Virtualization ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522540786 ; 9781522540779 ; 10.4018/978-1-5225-4077-9 ; 182584 ; Advances in System Dynamics and Control ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522540632 ; 9781522540625 ; 10.4018/978-1-5225-4062-5 ; 182425 ; Lean Six Sigma for Optimal System Performance in Manufacturing and Service Organizations: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522539476 ; 9781522539469 ; 10.4018/978-1-5225-3946-9 ; 181917 ; Healthcare Administration for Patient Safety and Engagement ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522539445 ; 9781522539438 ; 10.4018/978-1-5225-3943-8 ; 181916 ; Social Justice and Parent Partnerships in Multicultural Education Contexts ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522539070 ; 9781522539063 ; 10.4018/978-1-5225-3906-3 ; 181905 ; Improving Business Performance Through Effective Managerial Training Initiatives ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522537687 ; 9781522537670 ; 10.4018/978-1-5225-3767-0 ; 181509 ; Fractal Approaches for Modeling Financial Assets and Predicting Crises ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522537175 ; 9781522537168 ; 10.4018/978-1-5225-3716-8 ; 181450 ; Global Perspectives on Health Communication in the Age of Social Media ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522535324 ; 9781522535317 ; 10.4018/978-1-5225-3531-7 ; 181078 ; Soft-Computing-Based Nonlinear Control Systems Design ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522532484 ; 9781522532477 ; 10.4018/978-1-5225-3247-7 ; 179865 ; Handbook of Research on Sustainable Development and Governance Strategies for Economic Growth in Africa ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522531807 ; 9781522531791 ; 10.4018/978-1-5225-3179-1 ; 179838 ; Affordability Issues Surrounding the Use of ICT for Development and Poverty Reduction ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522530862 ; 9781522530855 ; 10.4018/978-1-5225-3085-5 ; 179377 ; Emerging Developments and Practices in Oncology ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522552802 ; 9781522552796 ; 10.4018/978-1-5225-5279-6 ; 187284 ; Technology Management in Organizational and Societal Contexts ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522553700 ; 9781522553694 ; 10.4018/978-1-5225-5369-4 ; 188639 ; Impact of Learning Analytics on Curriculum Design and Student Performance ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522553151 ; 9781522553144 ; 10.4018/978-1-5225-5314-4 ; 188329 ; Optimizing Contemporary Application and Processes in Open Source Software ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522552659 ; 9781522552642 ; 10.4018/978-1-5225-5264-2 ; 187262 ; Managerial Approaches Toward Queuing Systems and Simulations ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522552116 ; 9781522552109 ; 10.4018/978-1-5225-5210-9 ; 187122 ; Intelligent Transportation and Planning: Breakthroughs in Research and Practice ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522552086 ; 9781522552079 ; 10.4018/978-1-5225-5207-9 ; 187121 ; Food Science and Nutrition: Breakthroughs in Research and Practice ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522552055 ; 9781522552048 ; 10.4018/978-1-5225-5204-8 ; 187120 ; Computer Vision: Concepts, Methodologies, Tools, and Applications ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522552024 ; 9781522552017 ; 10.4018/978-1-5225-5201-7 ; 187119 ; Technology Adoption and Social Issues: Concepts, Methodologies, Tools, and Applications ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522551560 ; 9781522551553 ; 10.4018/978-1-5225-5155-3 ; 187085 ; Engaging Adolescent Students in Contemporary Classrooms: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522551195 ; 9781522551188 ; 10.4018/978-1-5225-5118-8 ; 186890 ; Political Mediation in Modern Conflict Resolution: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522550181 ; 9781522550174 ; 10.4018/978-1-5225-5017-4 ; 185754 ; Green Computing Strategies for Competitive Advantage and Business Sustainability ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522549857 ; 9781522549840 ; 10.4018/978-1-5225-4984-0 ; 185745 ; Analyzing Attachment and Consumers' Emotions: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522536475 ; 9781522536468 ; 10.4018/978-1-5225-3646-8 ; 181224 ; Improving E-Commerce Web Applications Through Business Intelligence Techniques ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522534020 ; 9781522534013 ; 10.4018/978-1-5225-3401-3 ; 180658 ; Design and Optimization of Mechanical Engineering Products ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522531388 ; 9781522531371 ; 10.4018/978-1-5225-3137-1 ; 179828 ; Handbook of Research on Heritage Management and Preservation ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522552741 ; 9781522552734 ; 10.4018/978-1-5225-5273-4 ; 187282 ; Contemporary Approaches and Strategies for Applied Logistics ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522548386 ; 9781522548379 ; 10.4018/978-1-5225-4837-9 ; 185585 ; Mechanical Properties of Natural Fiber Reinforced Polymers: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522534631 ; 9781522534624 ; 10.4018/978-1-5225-3462-4 ; 180925 ; Cases on Global Competencies for Educational Diplomacy in International Settings ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522531272 ; 9781522531265 ; 10.4018/978-1-5225-3126-5 ; 179824 ; Microbial Biotechnology in Environmental Monitoring and Cleanup ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522531241 ; 9781522531234 ; 10.4018/978-1-5225-3123-4 ; 179823 ; Optimizing Elementary Education for English Language Learners ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522551041 ; 9781522551034 ; 10.4018/978-1-5225-5103-4 ; 186877 ; Written Corrective Feedback for L2 Development: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522550303 ; 9781522550297 ; 10.4018/978-1-5225-5029-7 ; 185884 ; Predictive Analysis on Large Data for Actionable Knowledge: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522548294 ; 9781522548287 ; 10.4018/978-1-5225-4828-7 ; 185582 ; Contemporary Identity and Access Management Architectures: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522537205 ; 9781522537199 ; 10.4018/978-1-5225-3719-9 ; 181451 ; Integrating Multi-User Virtual Environments in Modern Classrooms ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522536208 ; 9781522536192 ; 10.4018/978-1-5225-3619-2 ; 181215 ; Reputation Management Techniques in Public Relations ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522552239 ; 9781522552222 ; 10.4018/978-1-5225-5222-2 ; 187126 ; Big Data Management and the Internet of Things for Improved Health Systems ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522551591 ; 9781522551584 ; 10.4018/978-1-5225-5158-4 ; 187086 ; Security, Privacy, and Anonymization in Social Networks: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522550433 ; 9781522550426 ; 10.4018/978-1-5225-5042-6 ; 186195 ; Innovations, Developments, and Applications of Semantic Web and Information Systems ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522549673 ; 9781522549666 ; 10.4018/978-1-5225-4966-6 ; 185738 ; Regulation and Structure in Economic Virtualization: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522549420 ; 9781522549413 ; 10.4018/978-1-5225-4941-3 ; 185731 ; EHT Transmission Performance Evaluation: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522541929 ; 9781522541912 ; 10.4018/978-1-5225-4191-2 ; 183356 ; Enhancing Knowledge Discovery and Innovation in the Digital Era ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522539049 ; 9781522539032 ; 10.4018/978-1-5225-3903-2 ; 181904 ; Advanced Solid Catalysts for Renewable Energy Production ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522538684 ; 9781522538677 ; 10.4018/978-1-5225-3867-7 ; 181763 ; Handbook of Research on Renewable Energy and Electric Resources for Sustainable Rural Development ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522534860 ; 9781522534853 ; 10.4018/978-1-5225-3485-3 ; 180993 ; Handbook of Research on Students' Research Competence in Modern Educational Contexts ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522539599 ; 9781522539582 ; 10.4018/978-1-5225-3958-2 ; 181921 ; Social, Psychological, and Forensic Perspectives on Sexual Abuse ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522538516 ; 9781522538509 ; 10.4018/978-1-5225-3850-9 ; 181729 ; Emerging Technologies and Work-Integrated Learning Experiences in Allied Health Education ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522551447 ; 9781522551430 ; 10.4018/978-1-5225-5143-0 ; 187081 ; Building Brand Identity in the Age of Social Media: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522551072 ; 9781522551065 ; 10.4018/978-1-5225-5106-5 ; 186878 ; Differentiated Instructional Design for Multicultural Environments: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522549482 ; 9781522549475 ; 10.4018/978-1-5225-4947-5 ; 185733 ; Statistical Tools and Analysis in Human Resources Management ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522547822 ; 9781522547815 ; 10.4018/978-1-5225-4781-5 ; 185485 ; Multifunctional Nanocarriers for Contemporary Healthcare Applications ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522547556 ; 9781522547549 ; 10.4018/978-1-5225-4754-9 ; 185476 ; Research, Practices, and Innovations in Global Risk and Contingency Management ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522541950 ; 9781522541943 ; 10.4018/978-1-5225-4194-3 ; 183469 ; Production, Properties, and Applications of High Temperature Coatings ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522537717 ; 9781522537700 ; 10.4018/978-1-5225-3770-0 ; 181510 ; Technology and the New Generation of Active Citizens: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522532453 ; 9781522532446 ; 10.4018/978-1-5225-3244-6 ; 179864 ; Fuzzy Logic Dynamics and Machine Prediction for Failure Analysis ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522531098 ; 9781522531081 ; 10.4018/978-1-5225-3108-1 ; 179718 ; Socio-Technical Decision Support in Air Navigation Systems: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522553335 ; 9781522553328 ; 10.4018/978-1-5225-5332-8 ; 188501 ; Visual Approaches to Cognitive Education With Technology Integration ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522551997 ; 9781522551980 ; 10.4018/978-1-5225-5198-0 ; 187118 ; Gamification in Education: Breakthroughs in Research and Practice ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522551966 ; 9781522551959 ; 10.4018/978-1-5225-5195-9 ; 187117 ; Ophthalmology: Breakthroughs in Research and Practice ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522551928 ; 9781522551911 ; 10.4018/978-1-5225-5191-1 ; 187116 ; Information Retrieval and Management: Concepts, Methodologies, Tools, and Applications ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522551881 ; 9781522551874 ; 10.4018/978-1-5225-5187-4 ; 187115 ; Digital Marketing and Consumer Engagement: Concepts, Methodologies, Tools, and Applications ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522551621 ; 9781522551614 ; 10.4018/978-1-5225-5161-4 ; 187111 ; The Community of Inquiry Framework in Contemporary Education: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522550273 ; 9781522550266 ; 10.4018/978-1-5225-5026-6 ; 185757 ; Optimizing Current Practices in E-Services and Mobile Applications ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522549888 ; 9781522549871 ; 10.4018/978-1-5225-4987-1 ; 185746 ; Proliferation of Open Government Initiatives and Systems ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522549796 ; 9781522549789 ; 10.4018/978-1-5225-4978-9 ; 185742 ; Business Strategies and Advanced Techniques for Entrepreneurship 4.0 ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522549451 ; 9781522549444 ; 10.4018/978-1-5225-4944-4 ; 185732 ; Global Implications of Emerging Technology Trends ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522541295 ; 9781522541288 ; 10.4018/978-1-5225-4128-8 ; 182745 ; Computational Psychoanalysis and Formal Bi-Logic Frameworks ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522538004 ; 9781522537991 ; 10.4018/978-1-5225-3799-1 ; 181519 ; Creativity in Load-Balance Schemes for Multi/Many-Core Heterogeneous Graph Computing: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522537977 ; 9781522537960 ; 10.4018/978-1-5225-3796-0 ; 181518 ; Image Retrieval and Analysis Using Text and Fuzzy Shape Features: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522536383 ; 9781522536376 ; 10.4018/978-1-5225-3637-6 ; 181221 ; Handbook of Research on Perception-Driven Approaches to Urban Assessment and Design ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522535294 ; 9781522535287 ; 10.4018/978-1-5225-3528-7 ; 181077 ; Positioning and Navigation in Complex Environments ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522532279 ; 9781522532262 ; 10.4018/978-1-5225-3226-2 ; 179850 ; Modeling and Simulation Techniques for Improved Business Processes ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522531951 ; 9781522531944 ; 10.4018/978-1-5225-3194-4 ; 179843 ; Handbook of Research on Environmental Policies for Emergency Management and Public Safety ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522531432 ; 9781522531425 ; 10.4018/978-1-5225-3142-5 ; 179829 ; Handbook of Research on Big Data Storage and Visualization Techniques ;  ; https://www.igi-global.com/ >
+   au < released ; 2018 ; 9781522528036 ; 9781522528029 ; 10.4018/978-1-5225-2802-9 ; 178728 ; Changing the Scope of Library Instruction in the Digital Age ;  ; https://www.igi-global.com/ >
+
    au < manifest ; 2019 ; 9781522580928 ; 9781522580911 ; 10.4018/978-1-5225-8091-1 ; 214078 ; Dialectical Perspectives on Media, Health, and Culture in Modern Africa ;  ; https://www.igi-global.com/ >
    au < released ; 2019 ; 9781522578604 ; 9781522578598 ; 10.4018/978-1-5225-7859-8 ; 210243 ; Strategic Marketing for Social Enterprises in Developing Nations ;  ; https://www.igi-global.com/ >
    au < released ; 2019 ; 9781522597919 ; 9781522597902 ; 10.4018/978-1-5225-9790-2 ; 223524 ; Handbook of Research on Narrative Advertising ;  ; https://www.igi-global.com/ >
@@ -4206,7 +4232,7 @@
    au < released ; 2020 ; 9781522580898 ; 9781522580881 ; 10.4018/978-1-5225-8088-1 ; 214077 ; Cases on Global Leadership in the Contemporary Economy ;  ; https://www.igi-global.com/ >
    au < released ; 2019 ; 9781522579885 ; 9781522579878 ; 10.4018/978-1-5225-7987-8 ; 212351 ; Emerging Technologies in Virtual Learning Environments ;  ; https://www.igi-global.com/ >
    au < released ; 2019 ; 9781522575177 ; 9781522575160 ; 10.4018/978-1-5225-7516-0 ; 207705 ; Advanced Digital Image Steganography Using LSB, PVD, and EMD: Emerging Research and Opportunities ;  ; https://www.igi-global.com/ >
-   au < released ; 2019 ; 9781522573036 ; 9781522573029 ; 10.4018/978-1-5225-7302-9 ; 205599 ; Intellectual, Scientific, and Educational Influences on Sustainability ;  ; https://www.igi-global.com/ >
+   au < released ; 2019 ; 9781522573036 ; 9781522573029 ; 10.4018/978-1-5225-7302-9 ; 205599 ; Intellectual, Scientific, and Educational Influences on Sustainability Research ;  ; https://www.igi-global.com/ >
    au < released ; 2019 ; 9781522555179 ; 9781522555162 ; 10.4018/978-1-5225-5516-2 ; 189775 ; Emerging Perspectives in Big Data Warehousing ;  ; https://www.igi-global.com/ >
    au < released ; 2019 ; 9781522572909 ; 9781522572893 ; 10.4018/978-1-5225-7289-3 ; 205247 ; Global Perspectives on Air Pollution Prevention and Control System Design ;  ; https://www.igi-global.com/ >
    au < released ; 2019 ; 9781522581048 ; 9781522581031 ; 10.4018/978-1-5225-8103-1 ; 214496 ; Metaheuristic Approaches to Portfolio Optimization ;  ; https://www.igi-global.com/ >
