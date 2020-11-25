@@ -29,8 +29,8 @@
 
       #complete
       au < finished ; manifest ; 1996 ; The Analyst Volume 121 ; 121 ; 1996 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 1997 ; The Analyst Volume 122 ; 122 ; 1997 ; https://pubs.rsc.org/ ; >
-      au < crawling ; exists ; 1998 ; The Analyst Volume 123 ; 123 ; 1998 ; https://pubs.rsc.org/ ; >
+      au < frozen ; exists ; 1997 ; The Analyst Volume 122 ; 122 ; 1997 ; https://pubs.rsc.org/ ; >
+      au < frozen ; exists ; 1998 ; The Analyst Volume 123 ; 123 ; 1998 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 1999 ; The Analyst Volume 124 ; 124 ; 1999 ; https://pubs.rsc.org/ ; >
       au < finished ; manifest ; 2000 ; The Analyst Volume 125 ; 125 ; 2000 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2001 ; The Analyst Volume 126 ; 126 ; 2001 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
