@@ -282,6 +282,7 @@ public class TestArchiveMembers extends LockssTestCase {
 
     String aurl = "http://www.example.com/splitzip/lockss-core-daemon.src.zip";
     String burl = "http://www.example.com/splitzip2/FOO.ZIP?xyzzy=foo&wolf=woof";
+    String curl = "http://www.example.com/single-part-split-zip.zip";
 
     assertArchiveMemberByHash("212FBD3A7965442ED3CCA401A0D9BD06", null,
         4765, aurl, "daemon/ArchiveEntry.java");
@@ -297,6 +298,13 @@ public class TestArchiveMembers extends LockssTestCase {
         32768, burl, "foo/d");
 
     assertNoArchiveMember(aurl, "none.html");
+
+    assertArchiveMember("<tag>text in tag</tag>",
+			"application/xml", 23,
+			curl, "dir1/bar.xml");
+    assertArchiveMember("This is foo.txt",
+			"text/plain", 16,
+			curl, "foo.txt");
   }
 
   public void testReplaceZipExtension() throws Exception {
@@ -386,17 +394,16 @@ public class TestArchiveMembers extends LockssTestCase {
     Iterator<CachedUrl> cuIter = cus.archiveMemberIterator();
     Iterator<String> urlIter = urls.iterator();
 
-    int cnt = 0;
     int htmlcnt = 0;
 
     boolean didCheckDelete = false;
 
+    List<String> cusFiles = new ArrayList<>();
     while (cuIter.hasNext()) {
       CachedUrl cu = cuIter.next();
       String url = cu.getUrl();
       assertTrue(cu.hasContent());
-      assertEquals(url, urlIter.next(), url);
-      cnt++;
+      cusFiles.add(url);
 
       // This won't work until we add the necessary logic to recreate
       // TFiles that have been umounted
@@ -443,7 +450,7 @@ public class TestArchiveMembers extends LockssTestCase {
 	assertMatchesRE(url, expContent, content);
       }
     }
-    assertEquals(urls.size(), cnt++);
+    assertEquals(urls,cusFiles);
     assertEquals(170, htmlcnt);
 
 //     assertTrue(didCheckDelete);
