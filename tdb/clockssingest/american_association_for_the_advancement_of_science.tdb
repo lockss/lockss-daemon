@@ -426,13 +426,13 @@
       au < deepCrawl ; exists ; 2018 ; Science Volume 360 ; 360 ; http://science.sciencemag.org/ ; > #no permission on deepCrawl
       au < deepCrawl ; exists ; 2018 ; Science Volume 361 ; 361 ; http://science.sciencemag.org/ ; > #no permission on deepCrawl
       au < deepCrawl ; exists ; 2018 ; Science Volume 362 ; 362 ; http://science.sciencemag.org/ ; > #no permission on deepCrawl
-      au < manifest ; exists ; 2019 ; Science Volume 363 ; 363 ; https://science.sciencemag.org/ ; > #no permission
-      au < manifest ; exists ; 2019 ; Science Volume 364 ; 364 ; https://science.sciencemag.org/ ; > #no permission
-      au < manifest ; exists ; 2019 ; Science Volume 365 ; 365 ; https://science.sciencemag.org/ ; > #no permission
-      au < manifest ; exists ; 2019 ; Science Volume 366 ; 366 ; https://science.sciencemag.org/ ; > #no permission
+      au < exists ; exists ; 2019 ; Science Volume 363 ; 363 ; https://science.sciencemag.org/ ; > #no permission
+      au < exists ; exists ; 2019 ; Science Volume 364 ; 364 ; https://science.sciencemag.org/ ; > #no permission
+      au < exists ; exists ; 2019 ; Science Volume 365 ; 365 ; https://science.sciencemag.org/ ; > #no permission
+      au < exists ; exists ; 2019 ; Science Volume 366 ; 366 ; https://science.sciencemag.org/ ; > #no permission
       au < exists ; exists ; 2020 ; Science Volume 367 ; 367 ; https://science.sciencemag.org/ ; >
-      au < expected ; exists ; 2020 ; Science Volume 368 ; 368 ; https://science.sciencemag.org/ ; >
-      au < expected ; exists ; 2020 ; Science Volume 369 ; 369 ; https://science.sciencemag.org/ ; >
+      au < exists ; exists ; 2020 ; Science Volume 368 ; 368 ; https://science.sciencemag.org/ ; >
+      au < exists ; exists ; 2020 ; Science Volume 369 ; 369 ; https://science.sciencemag.org/ ; >
       au < expected ; exists ; 2020 ; Science Volume 370 ; 370 ; https://science.sciencemag.org/ ; >
 
   }
