@@ -69,6 +69,11 @@ public class TFileCache {
 
   static final Logger log = Logger.getLogger("TFileCache");
 
+  // Signature of regular zip
+  private final byte[] ZIP_SIG = new byte[]{'P', 'K', 3, 4};
+  // Signature of first or only part of a split zip
+  private final byte[] SPLIT_ZIP_SIG = new byte[]{'P', 'K', 7, 8};
+
   private File tmpDir;
   private long maxSize;
   private long maxFiles;
@@ -178,7 +183,8 @@ public class TFileCache {
 // 		  "Expires"
 		  );
 
-  void handleSplitZipArchive(TFile tf, CachedUrl cu, long digits) throws IOException {
+  void handleSplitZipArchive(TFile tf, CachedUrl cu, InputStream zipIs,
+                             long digits) throws IOException {
     String prefix = "splitzip.";
 
     // Get the CU's archival unit
@@ -203,7 +209,6 @@ public class TFileCache {
         // Copy split zip file to temporary directory
         try (InputStream input = splitZipCu.getUnfilteredInputStream();
              OutputStream output = new BufferedOutputStream(new FileOutputStream(splitZipFileDst))) {
-
           StreamUtil.copy(input, output);
         }
       } else {
@@ -215,10 +220,9 @@ public class TFileCache {
 
     // Copy zip file to temporary directory
     File zipFileDst = new File(splitZipsTmpDir, prefix + "zip");
-    try (InputStream input = cu.getUnfilteredInputStream();
-         OutputStream output = new BufferedOutputStream(new FileOutputStream(zipFileDst))) {
+    try (OutputStream output = new BufferedOutputStream(new FileOutputStream(zipFileDst))) {
 
-      StreamUtil.copy(input, output);
+      StreamUtil.copy(zipIs, output);
     }
 
     log.debug2("zipFileDst = " + zipFileDst);
@@ -326,40 +330,56 @@ public class TFileCache {
 
     boolean splitZipDetected = false;
 
-    try {
+    try (PushbackInputStream is =
+         new PushbackInputStream(cu.getUnfilteredInputStream(), 4)) {
       if (ext.equalsIgnoreCase("zip")) {
-        // Yes: Determine whether this is a split zip archive
-        ArchivalUnit au = cu.getArchivalUnit();
+        // This is a zip; check for split zip
+        byte[] filesig = new byte[4];
+        int siglen = is.read(filesig);
+        if (siglen == 4 && Arrays.equals(SPLIT_ZIP_SIG, filesig)) {
+          log.debug2("Detected single-part split zip: " + cu);
+          // This is a single-part split zip.  "zip -s-" won't turn it into
+          // a regular zip, so replace the magic number with that of a
+          // regular zip
+          is.unread(ZIP_SIG, 0, 4);
+        } else {
+          // Restore magic number
+          is.unread(filesig, 0, siglen);
+          // Scan for first split zip file (e.g., z1, z01, z001, etc)
+          for (int digits = 1; digits <= MAX_DIGITS; digits++) {
 
-        // Scan for first split zip file (e.g., z1, z01, z001, etc)
-        for (int digits = 1; digits <= MAX_DIGITS; digits++) {
+            CachedUrl splitZipCu = probeForSplitZip(cu, digits, 1);
 
-          CachedUrl splitZipCu = probeForSplitZip(cu, digits, 1);
+            if (splitZipCu != null) {
+              // Yes: Process split zip archive
+              try {
+                splitZipDetected = true;
+                log.debug2("Detected split zip: " + cu);
+                handleSplitZipArchive(tf, cu, is, digits);
+              } catch (IOException e) {
+                log.error("Error processing split zip archive");
+                throw e;
+              }
 
-          if (splitZipCu != null) {
-            // Yes: Process split zip archive
-            try {
-              splitZipDetected = true;
-              handleSplitZipArchive(tf, cu, digits);
-            } catch (IOException e) {
-              log.error("Error processing split zip archive");
-              throw e;
+              // Done - do not continue scanning for split zip files
+              break;
             }
-
-            // Done - do not continue scanning for split zip files
-            break;
           }
         }
       }
 
       if (!splitZipDetected) {
         // No: Process CU normally
-        try (InputStream is = cu.getUnfilteredInputStream()) {
+        try {
           tf.input(is);
+        } catch (IOException e) {
+          String msg = "Couldn't copy archive CU " + this + " to TFile " + tf;
+          log.error(msg, e);
+          throw e;
         } catch (Exception e) {
           String msg = "Couldn't copy archive CU " + this + " to TFile " + tf;
           log.error(msg, e);
-          throw new RuntimeException(msg, e);
+          throw new IOException(msg, e);
         }
       }
 
