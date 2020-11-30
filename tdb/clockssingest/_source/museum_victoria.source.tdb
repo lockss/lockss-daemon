@@ -2,7 +2,8 @@
   publisher <
     name = Museum Victoria ;
     info[contract] = 2013 ;
-    info[tester] = S
+    info[tester] = S ;
+    info[platform] = WARC
   >
 
     plugin = org.lockss.plugin.clockss.warc.ClockssWarcPlugin
