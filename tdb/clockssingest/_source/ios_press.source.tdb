@@ -3,7 +3,8 @@
   publisher <
     name = IOS Press ;
     info[contract] = 2018 ;
-    info[tester] = S
+    info[tester] = S ;
+    info[platform] = Source
   >
 
   {
@@ -21,6 +22,7 @@
     au < zapped ; finished ; 2018 ; IOS Press Books Source Content 2018 ; 2018 >
     au < readySource ; finished ; 2019 ; IOS Press Books Source Content 2019 ; 2019 >
     au < readySource ; crawling ; 2020 ; IOS Press Books Source Content 2020 ; 2020 >
+    au < expected ; exists ; 2021 ; IOS Press Books Source Content 2021 ; 2021 >
 
   }
 
@@ -39,6 +41,7 @@
     au < zapped ; finished ; 2018 ; IOS Press Source Content 2018 ; 2018 >
     au < readySource ; finished ; 2019 ; IOS Press Source Content 2019 ; 2019 >
     au < readySource ; crawling ; 2020 ; IOS Press Source Content 2020 ; 2020 >
+    au < expected ; exists ; 2021 ; IOS Press Source Content 2021 ; 2021 >
 
   }
 
