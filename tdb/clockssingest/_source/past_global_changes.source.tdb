@@ -3,7 +3,8 @@
   publisher <
     name = Past Global Changes ;
     info[contract] = 2017 ;
-    info[tester] = S
+    info[tester] = S ;
+    info[platform] = Source
   >
 
   {
@@ -19,8 +20,9 @@
     implicit < status ; status2 ; year ; name ; param[year] >
 
     au < zapped ; finished ; 2018 ; Past Global Changes Source Content 2018 ; 2018 >
-    au < readySource ; finished ; 2019 ; Past Global Changes Source Content 2019 ;  2019 >
-    au < readySource ; crawling ; 2020 ; Past Global Changes Source Content 2020 ;  2020 >
+    au < readySource ; finished ; 2019 ; Past Global Changes Source Content 2019 ; 2019 >
+    au < readySource ; crawling ; 2020 ; Past Global Changes Source Content 2020 ; 2020 >
+    au < expected ; exists ; 2021 ; Past Global Changes Source Content 2021 ; 2021 >
 
   }
 

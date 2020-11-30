@@ -3,7 +3,8 @@
   publisher <
     name = Mark Allen Group ;
     info[contract] = 2013 ;
-    info[tester] = S
+    info[tester] = S ;
+    info[platform] = Source
   >
 
   {
@@ -23,7 +24,7 @@
       #no content since before 2017
       #started sending content again 2020
       au < readySource ; crawling ; 2020 ; Mark Allen Group Books Source Content 2020 ; 2020 >
-
+      au < expected ; exists ; 2021 ; Mark Allen Group Books Source Content 2021 ; 2021 >
 
     }
 

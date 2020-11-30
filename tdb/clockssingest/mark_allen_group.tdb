@@ -5,7 +5,7 @@
     info[contract] = 2013 ;
     info[tester] = 8 ;
     info[poller] = 6 ;
-    comment[platform] = Atypon
+    info[platform] = Atypon
   >
 
   plugin = org.lockss.plugin.atypon.markallen.ClockssMarkAllenPlugin

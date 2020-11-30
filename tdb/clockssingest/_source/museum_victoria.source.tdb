@@ -1,14 +1,14 @@
 {
-
   publisher <
     name = Museum Victoria ;
     info[contract] = 2013 ;
-    info[tester] = S
+    info[tester] = S ;
+    info[platform] = WARC
   >
-  
+
     plugin = org.lockss.plugin.clockss.warc.ClockssWarcPlugin
     hidden[proxy] = DIRECT
-    implicit < status ; status2 ; year ; name ; param[year] >      
+    implicit < status ; status2 ; year ; name ; param[year] >
   {
     title <
       name = Memoirs of Museum Victoria WARC Content ;
@@ -22,7 +22,7 @@
     au < superseded ; finished ; 2016 ; Memoirs of Museum Victoria WARC Content 2016 ; 2016 >
     au < readySource ; finished ; 2018 ; Memoirs of Museum Victoria WARC Content 2018 ; 2018 >
     # check for new content before re-running
-       
+
   }
 
   {
@@ -38,7 +38,7 @@
     au < superseded ; finished ; 2016 ; Museum Victoria Science Reports WARC Content 2016 ; 2016 >
     au < readySource ; finished ; 2018 ; Museum Victoria Science Reports WARC Content 2018 ; 2018 >
     # check for new content before re-running
-   
+
   }
-  
+
 }

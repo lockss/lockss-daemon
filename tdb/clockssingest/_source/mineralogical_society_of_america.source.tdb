@@ -1,15 +1,14 @@
 {
-
   publisher <
     name = Mineralogical Society of America ;
     info[contract] = 2013 ;
-    info[tester] = S
-    
+    info[tester] = S ;
+    info[platform] = WARC
   >
-  
+
     plugin = org.lockss.plugin.clockss.warc.ClockssWarcPlugin
     hidden[proxy] = DIRECT
-    implicit < status ; status2 ; year ; name ; param[year] >  
+    implicit < status ; status2 ; year ; name ; param[year] >
   {
     title < 
       name = American Mineralogist ;
@@ -27,15 +26,14 @@
     param[base_url] = http://clockss-ingest.lockss.org/warcfiles/american-mineralogist-released/
 
     au < readySource ; finished ; 2016 ; American Mineralogist WARC Content 2016 ; 2016 >
-    #done    
+    #done
   }
-  
-  
+
   {
     title < 
       name = Reviews in Mineralogy and Geochemistry ;
       issn = 1529-6466
-      
+
     >
     # This content was collected using wget and provided for preservation as a
     # set of WARC files

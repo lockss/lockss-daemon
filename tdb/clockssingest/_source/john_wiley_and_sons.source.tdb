@@ -3,7 +3,8 @@
   publisher <
     name = John Wiley and Sons ;
     info[contract] = 2008 ;
-    info[tester] = S
+    info[tester] = S ;
+    info[platform] = Source
   >
 
   provider = Wiley-Blackwell
@@ -60,6 +61,13 @@
       au < readySource ; crawling ; 2020 ; Wiley Source Content 2020_2 ; 2020_2 >
       au < readySource ; crawling ; 2020 ; Wiley Source Content 2020_3 ; 2020_3 >
       au < readySource ; crawling ; 2020 ; Wiley Source Content 2020_4 ; 2020_4 >
+
+      au < expected ; exists ; 2021 ; Wiley Source Content 2021_01 ; 2021_01 >
+      au < expected ; exists ; 2021 ; Wiley Source Content 2021_02 ; 2021_02 >
+      au < expected ; exists ; 2021 ; Wiley Source Content 2021_03 ; 2021_03 >
+      au < expected ; exists ; 2021 ; Wiley Source Content 2021_04 ; 2021_04 >
+      au < expected ; exists ; 2021 ; Wiley Source Content 2021_05 ; 2021_05 >
+      au < expected ; exists ; 2021 ; Wiley Source Content 2021_06 ; 2021_06 >
 
     }
   }
