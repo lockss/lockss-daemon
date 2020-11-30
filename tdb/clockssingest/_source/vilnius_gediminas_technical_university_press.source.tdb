@@ -3,7 +3,8 @@
   publisher <
     name = Vilnius Gediminas Technical University Press ;
     info[contract] = 2012 ;
-    info[tester] = S
+    info[tester] = S ;
+    info[platform] = WARC
   >
   
   # do not include Aviation technologies, eissn 2029-9974
