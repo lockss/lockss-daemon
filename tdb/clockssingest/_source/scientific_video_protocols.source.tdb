@@ -17,7 +17,7 @@
     hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[year] >
 
-    #au < manifest ; exists ; 2019 ; Scientific Video Protocols 2019 ; 2019 >
+    #au < expected ; exists ; 2021 ; Scientific Video Protocols 2021 ; 2021 >
     #waiting on contract with publisher
     
   }

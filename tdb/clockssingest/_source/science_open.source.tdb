@@ -12,8 +12,6 @@
       name = Science Open Source Content
     >
 
-
-
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/scienceopen-released/
 
       plugin = org.lockss.plugin.clockss.scienceopen.ClockssScienceOpenSourcePlugin
@@ -21,6 +19,7 @@
       implicit < status ; status2 ; year ; name ; param[directory] >
 
       au < readySource ; crawling ; 2020 ; Science Open Source Content 2020 ; 2020 >
+      au < expected ; exists ; 2021 ; Science Open Source Content 2021 ; 2021 >
 
 
   }
