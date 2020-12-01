@@ -229,9 +229,7 @@
     au < released ; 2015 ; Annals of Nigerian Medicine Volume 9 ; 2015 ; 9 ; http://www.anmjournal.com/ >
     au < released ; 2016 ; Annals of Nigerian Medicine Volume 10 ; 2016 ; 10 ; http://www.anmjournal.com/ >
     au < released ; 2017 ; Annals of Nigerian Medicine Volume 11 ; 2017 ; 11 ; http://www.anmjournal.com/ >
-    au < expected ; 2018 ; Annals of Nigerian Medicine Volume 12 ; 2018 ; 12 ; https://www.anmjournal.com/ >
-    au < expected ; 2019 ; Annals of Nigerian Medicine Volume 13 ; 2019 ; 13 ; https://www.anmjournal.com/ >
-    au < expected ; 2020 ; Annals of Nigerian Medicine Volume 14 ; 2020 ; 14 ; https://www.anmjournal.com/ >
+    au < expected ; 2021 ; Annals of Nigerian Medicine Volume 12 ; 2021 ; 12 ; https://www.anmjournal.com/ >
 
   }
   
@@ -328,8 +326,7 @@
     au < released ; 2016 ; Annals of Tropical Medicine and Public Health Volume 9 ; 2016 ; 9 ; http://www.atmph.org/ >
     au < released ; 2017 ; Annals of Tropical Medicine and Public Health Volume 10 ; 2017 ; 10 ; http://www.atmph.org/ >
     au < manifest ; 2018 ; Annals of Tropical Medicine and Public Health Volume 11 ; 2018 ; 11 ; https://www.atmph.org/ >
-    au < expected ; 2019 ; Annals of Tropical Medicine and Public Health Volume 12 ; 2019 ; 12 ; https://www.atmph.org/ >
-    au < expected ; 2020 ; Annals of Tropical Medicine and Public Health Volume 13 ; 2020 ; 13 ; https://www.atmph.org/ >
+    au < expected ; 2021 ; Annals of Tropical Medicine and Public Health Volume 12 ; 2021 ; 12 ; https://www.atmph.org/ >
 
   }
 
@@ -509,14 +506,14 @@
 #    param[base_url] = http://www.conservationandsociety.org/
     param[journal_issn] = 0972-4923
 
-    au < exists ; 2003 ; Conservation and Society Volume 1 ; 2003 ; 1 ; https://www.conservationandsociety.org/ >
-    au < exists ; 2004 ; Conservation and Society Volume 2 ; 2004 ; 2 ; https://www.conservationandsociety.org/ >
-    au < exists ; 2005 ; Conservation and Society Volume 3 ; 2005 ; 3 ; https://www.conservationandsociety.org/ >
-    au < exists ; 2006 ; Conservation and Society Volume 4 ; 2006 ; 4 ; https://www.conservationandsociety.org/ >
-    au < exists ; 2007 ; Conservation and Society Volume 5 ; 2007 ; 5 ; https://www.conservationandsociety.org/ >
-    au < exists ; 2008 ; Conservation and Society Volume 6 ; 2008 ; 6 ; https://www.conservationandsociety.org/ >
-    au < exists ; 2009 ; Conservation and Society Volume 7 ; 2009 ; 7 ; https://www.conservationandsociety.org/ >
-    au < exists ; 2010 ; Conservation and Society Volume 8 ; 2010 ; 8 ; https://www.conservationandsociety.org/ >
+    au < manifest ; 2003 ; Conservation and Society Volume 1 ; 2003 ; 1 ; http://www.conservationandsociety.org/ >
+    au < manifest ; 2004 ; Conservation and Society Volume 2 ; 2004 ; 2 ; http://www.conservationandsociety.org/ >
+    au < manifest ; 2005 ; Conservation and Society Volume 3 ; 2005 ; 3 ; http://www.conservationandsociety.org/ >
+    au < manifest ; 2006 ; Conservation and Society Volume 4 ; 2006 ; 4 ; http://www.conservationandsociety.org/ >
+    au < manifest ; 2007 ; Conservation and Society Volume 5 ; 2007 ; 5 ; http://www.conservationandsociety.org/ >
+    au < manifest ; 2008 ; Conservation and Society Volume 6 ; 2008 ; 6 ; http://www.conservationandsociety.org/ >
+    au < manifest ; 2009 ; Conservation and Society Volume 7 ; 2009 ; 7 ; http://www.conservationandsociety.org/ >
+    au < manifest ; 2010 ; Conservation and Society Volume 8 ; 2010 ; 8 ; http://www.conservationandsociety.org/ >
     au < released ; 2011 ; Conservation and Society Volume 9 ; 2011 ; 9 ; http://www.conservationandsociety.org/ >
     au < released ; 2012 ; Conservation and Society Volume 10 ; 2012 ; 10 ; http://www.conservationandsociety.org/ >
     au < released ; 2013 ; Conservation and Society Volume 11 ; 2013 ; 11 ; http://www.conservationandsociety.org/ >
@@ -525,8 +522,8 @@
     au < released ; 2016 ; Conservation and Society Volume 14 ; 2016 ; 14 ; http://www.conservationandsociety.org/ >
     au < released ; 2017 ; Conservation and Society Volume 15 ; 2017 ; 15 ; http://www.conservationandsociety.org/ >
     au < released ; 2018 ; Conservation and Society Volume 16 ; 2018 ; 16 ; http://www.conservationandsociety.org/ >
-    au < exists ; 2019 ; Conservation and Society Volume 17 ; 2019 ; 17 ; https://www.conservationandsociety.org/ >
-    au < exists ; 2020 ; Conservation and Society Volume 18 ; 2020 ; 18 ; https://www.conservationandsociety.org/ >
+    au < manifest ; 2019 ; Conservation and Society Volume 17 ; 2019 ; 17 ; http://www.conservationandsociety.org/ >
+    au < manifest ; 2020 ; Conservation and Society Volume 18 ; 2020 ; 18 ; http://www.conservationandsociety.org/ >
 
   }
         
@@ -565,27 +562,27 @@
 
 #    param[base_url] = http://www.cytojournal.com/
     param[journal_issn] = 1742-6413
-    # different format from other journals. Issues are accessed individually by clicking http://www.cytojournal.com/browse.asp
+    # different format from other journals. Issues are accessed individually by clicking https://cytojournal.com/browse-articles/
     # instead of by a listing like this: http://www.jcnonweb.com/backissues.asp
-    # has a lockss permission statement http://www.cytojournal.com/lockss.txt
+    #Moved
 
-    au < notReady ; 2004 ; CytoJournal Volume 2004 ; 2004 ; 1 ; http://www.cytojournal.com/ >
-    au < notReady ; 2005 ; CytoJournal Volume 2005 ; 2005 ; 2 ; http://www.cytojournal.com/ >
-    au < notReady ; 2006 ; CytoJournal Volume 2006 ; 2006 ; 3 ; http://www.cytojournal.com/ >
-    au < notReady ; 2007 ; CytoJournal Volume 2007 ; 2007 ; 4 ; http://www.cytojournal.com/ >
-    au < notReady ; 2008 ; CytoJournal Volume 2008 ; 2008 ; 5 ; http://www.cytojournal.com/ >
-    au < notReady ; 2009 ; CytoJournal Volume 2009 ; 2009 ; 6 ; http://www.cytojournal.com/ >
-    au < notReady ; 2010 ; CytoJournal Volume 2010 ; 2010 ; 7 ; http://www.cytojournal.com/ >
-    au < notReady ; 2011 ; CytoJournal Volume 2011 ; 2011 ; 8 ; http://www.cytojournal.com/ >
-    au < notReady ; 2012 ; CytoJournal Volume 2012 ; 2012 ; 9 ; http://www.cytojournal.com/ >
-    au < notReady ; 2013 ; CytoJournal Volume 2013 ; 2013 ; 10 ; http://www.cytojournal.com/ >
-    au < notReady ; 2014 ; CytoJournal Volume 2014 ; 2014 ; 11 ; http://www.cytojournal.com/ >
-    au < notReady ; 2015 ; CytoJournal Volume 2015 ; 2015 ; 12 ; http://www.cytojournal.com/ >
-    au < notReady ; 2016 ; CytoJournal Volume 2016 ; 2016 ; 13 ; http://www.cytojournal.com/ >
-    au < notReady ; 2017 ; CytoJournal Volume 2017 ; 2017 ; 14 ; http://www.cytojournal.com/ >
-    au < notReady ; 2018 ; CytoJournal Volume 2018 ; 2018 ; 15 ; http://www.cytojournal.com/ >
-    au < exists ; 2019 ; CytoJournal Volume 2019 ; 2019 ; 16 ; https://www.cytojournal.com/ >
-    au < expected ; 2020 ; CytoJournal Volume 2020 ; 2020 ; 17 ; https://www.cytojournal.com/ >
+    au < doNotProcess ; 2004 ; CytoJournal Volume 2004 ; 2004 ; 1 ; http://www.cytojournal.com/ >
+    au < doNotProcess ; 2005 ; CytoJournal Volume 2005 ; 2005 ; 2 ; http://www.cytojournal.com/ >
+    au < doNotProcess ; 2006 ; CytoJournal Volume 2006 ; 2006 ; 3 ; http://www.cytojournal.com/ >
+    au < doNotProcess ; 2007 ; CytoJournal Volume 2007 ; 2007 ; 4 ; http://www.cytojournal.com/ >
+    au < doNotProcess ; 2008 ; CytoJournal Volume 2008 ; 2008 ; 5 ; http://www.cytojournal.com/ >
+    au < doNotProcess ; 2009 ; CytoJournal Volume 2009 ; 2009 ; 6 ; http://www.cytojournal.com/ >
+    au < doNotProcess ; 2010 ; CytoJournal Volume 2010 ; 2010 ; 7 ; http://www.cytojournal.com/ >
+    au < doNotProcess ; 2011 ; CytoJournal Volume 2011 ; 2011 ; 8 ; http://www.cytojournal.com/ >
+    au < doNotProcess ; 2012 ; CytoJournal Volume 2012 ; 2012 ; 9 ; http://www.cytojournal.com/ >
+    au < doNotProcess ; 2013 ; CytoJournal Volume 2013 ; 2013 ; 10 ; http://www.cytojournal.com/ >
+    au < doNotProcess ; 2014 ; CytoJournal Volume 2014 ; 2014 ; 11 ; http://www.cytojournal.com/ >
+    au < doNotProcess ; 2015 ; CytoJournal Volume 2015 ; 2015 ; 12 ; http://www.cytojournal.com/ >
+    au < doNotProcess ; 2016 ; CytoJournal Volume 2016 ; 2016 ; 13 ; http://www.cytojournal.com/ >
+    au < doNotProcess ; 2017 ; CytoJournal Volume 2017 ; 2017 ; 14 ; http://www.cytojournal.com/ >
+    au < doNotProcess ; 2018 ; CytoJournal Volume 2018 ; 2018 ; 15 ; http://www.cytojournal.com/ >
+    au < doNotProcess ; 2019 ; CytoJournal Volume 2019 ; 2019 ; 16 ; https://www.cytojournal.com/ >
+    au < doNotProcess ; 2020 ; CytoJournal Volume 2020 ; 2020 ; 17 ; https://www.cytojournal.com/ >
 
   }
 
@@ -772,9 +769,9 @@
     au < manifest ; 1988 ; Indian Journal of Community Medicine Volume 13 ; 1988 ; 13 ; https://www.ijcm.org.in/ >
     au < manifest ; 1989 ; Indian Journal of Community Medicine Volume 14 ; 1989 ; 14 ; https://www.ijcm.org.in/ >
     au < manifest ; 1990 ; Indian Journal of Community Medicine Volume 15 ; 1990 ; 15 ; https://www.ijcm.org.in/ >
-    au < exists ; 1991 ; Indian Journal of Community Medicine Volume 16 ; 1991 ; 16 ; https://www.ijcm.org.in/ >
-    au < exists ; 1992 ; Indian Journal of Community Medicine Volume 17 ; 1992 ; 17 ; https://www.ijcm.org.in/ >
-    au < exists ; 1993 ; Indian Journal of Community Medicine Volume 18 ; 1993 ; 18 ; https://www.ijcm.org.in/ >
+    au < manifest ; 1991 ; Indian Journal of Community Medicine Volume 16 ; 1991 ; 16 ; https://www.ijcm.org.in/ >
+    au < manifest ; 1992 ; Indian Journal of Community Medicine Volume 17 ; 1992 ; 17 ; https://www.ijcm.org.in/ >
+    au < manifest ; 1993 ; Indian Journal of Community Medicine Volume 18 ; 1993 ; 18 ; https://www.ijcm.org.in/ >
     au < manifest ; 1994 ; Indian Journal of Community Medicine Volume 19 ; 1994 ; 19 ; https://www.ijcm.org.in/ >
     au < manifest ; 1995 ; Indian Journal of Community Medicine Volume 20 ; 1995 ; 20 ; https://www.ijcm.org.in/ >
     au < manifest ; 1996 ; Indian Journal of Community Medicine Volume 21 ; 1996 ; 21 ; https://www.ijcm.org.in/ >
@@ -815,15 +812,16 @@
 
 #    param[base_url] = http://www.ijccm.org/
     param[journal_issn] = 0972-5229
+    #Moved to ciplamed
 
-    au < exists ; 2003 ; Indian Journal of Critical Care Medicine Volume 7 ; 2003 ; 7 ; https://www.ijccm.org/ >
-    au < exists ; 2004 ; Indian Journal of Critical Care Medicine Volume 8 ; 2004 ; 8 ; https://www.ijccm.org/ >
-    au < exists ; 2005 ; Indian Journal of Critical Care Medicine Volume 9 ; 2005 ; 9 ; https://www.ijccm.org/ >
-    au < exists ; 2006 ; Indian Journal of Critical Care Medicine Volume 10 ; 2006 ; 10 ; https://www.ijccm.org/ >
-    au < exists ; 2007 ; Indian Journal of Critical Care Medicine Volume 11 ; 2007 ; 11 ; https://www.ijccm.org/ >
-    au < exists ; 2008 ; Indian Journal of Critical Care Medicine Volume 12 ; 2008 ; 12 ; https://www.ijccm.org/ >
-    au < exists ; 2009 ; Indian Journal of Critical Care Medicine Volume 13 ; 2009 ; 13 ; https://www.ijccm.org/ >
-    au < exists ; 2010 ; Indian Journal of Critical Care Medicine Volume 14 ; 2010 ; 14 ; https://www.ijccm.org/ >
+    au < doNotProcess ; 2003 ; Indian Journal of Critical Care Medicine Volume 7 ; 2003 ; 7 ; https://www.ijccm.org/ >
+    au < doNotProcess ; 2004 ; Indian Journal of Critical Care Medicine Volume 8 ; 2004 ; 8 ; https://www.ijccm.org/ >
+    au < doNotProcess ; 2005 ; Indian Journal of Critical Care Medicine Volume 9 ; 2005 ; 9 ; https://www.ijccm.org/ >
+    au < doNotProcess ; 2006 ; Indian Journal of Critical Care Medicine Volume 10 ; 2006 ; 10 ; https://www.ijccm.org/ >
+    au < doNotProcess ; 2007 ; Indian Journal of Critical Care Medicine Volume 11 ; 2007 ; 11 ; https://www.ijccm.org/ >
+    au < doNotProcess ; 2008 ; Indian Journal of Critical Care Medicine Volume 12 ; 2008 ; 12 ; https://www.ijccm.org/ >
+    au < doNotProcess ; 2009 ; Indian Journal of Critical Care Medicine Volume 13 ; 2009 ; 13 ; https://www.ijccm.org/ >
+    au < doNotProcess ; 2010 ; Indian Journal of Critical Care Medicine Volume 14 ; 2010 ; 14 ; https://www.ijccm.org/ >
     au < released ; 2011 ; Indian Journal of Critical Care Medicine Volume 15 ; 2011 ; 15 ; http://www.ijccm.org/ >
     au < released ; 2012 ; Indian Journal of Critical Care Medicine Volume 16 ; 2012 ; 16 ; http://www.ijccm.org/ >
     au < released ; 2013 ; Indian Journal of Critical Care Medicine Volume 17 ; 2013 ; 17 ; http://www.ijccm.org/ >
@@ -831,9 +829,9 @@
     au < released ; 2015 ; Indian Journal of Critical Care Medicine Volume 19 ; 2015 ; 19 ; http://www.ijccm.org/ >
     au < released ; 2016 ; Indian Journal of Critical Care Medicine Volume 20 ; 2016 ; 20 ; http://www.ijccm.org/ >
     au < released ; 2017 ; Indian Journal of Critical Care Medicine Volume 21 ; 2017 ; 21 ; http://www.ijccm.org/ >
-    au < exists ; 2018 ; Indian Journal of Critical Care Medicine Volume 22 ; 2018 ; 22 ; https://www.ijccm.org/ >
-    au < expected ; 2019 ; Indian Journal of Critical Care Medicine Volume 23 ; 2019 ; 23 ; https://www.ijccm.org/ >
-    au < expected ; 2020 ; Indian Journal of Critical Care Medicine Volume 24 ; 2020 ; 24 ; https://www.ijccm.org/ >
+    au < doNotProcess ; 2018 ; Indian Journal of Critical Care Medicine Volume 22 ; 2018 ; 22 ; https://www.ijccm.org/ >
+    au < doNotProcess ; 2019 ; Indian Journal of Critical Care Medicine Volume 23 ; 2019 ; 23 ; https://www.ijccm.org/ >
+    au < doNotProcess ; 2020 ; Indian Journal of Critical Care Medicine Volume 24 ; 2020 ; 24 ; https://www.ijccm.org/ >
 
   }
 
@@ -1054,21 +1052,21 @@
 
     au < manifest ; 1994 ; Indian Journal of Medical and Paediatric Oncology Volume 15 ; 1994 ; 15 ; https://www.ijmpo.org/ >
     au < manifest ; 1995 ; Indian Journal of Medical and Paediatric Oncology Volume 16 ; 1995 ; 16 ; https://www.ijmpo.org/ >
-    au < exists ; 1996 ; Indian Journal of Medical and Paediatric Oncology Volume 17 ; 1996 ; 17 ; https://www.ijmpo.org/ >
-    au < exists ; 1997 ; Indian Journal of Medical and Paediatric Oncology Volume 18 ; 1997 ; 18 ; https://www.ijmpo.org/ >
+    au < manifest ; 1996 ; Indian Journal of Medical and Paediatric Oncology Volume 17 ; 1996 ; 17 ; https://www.ijmpo.org/ >
+    au < manifest ; 1997 ; Indian Journal of Medical and Paediatric Oncology Volume 18 ; 1997 ; 18 ; https://www.ijmpo.org/ >
     au < manifest ; 1998 ; Indian Journal of Medical and Paediatric Oncology Volume 19 ; 1998 ; 19 ; https://www.ijmpo.org/ >
     au < manifest ; 1999 ; Indian Journal of Medical and Paediatric Oncology Volume 20 ; 1999 ; 20 ; https://www.ijmpo.org/ >
     au < manifest ; 2000 ; Indian Journal of Medical and Paediatric Oncology Volume 21 ; 2000 ; 21 ; https://www.ijmpo.org/ >
     au < manifest ; 2001 ; Indian Journal of Medical and Paediatric Oncology Volume 22 ; 2001 ; 22 ; https://www.ijmpo.org/ >
-    au < exists ; 2002 ; Indian Journal of Medical and Paediatric Oncology Volume 23 ; 2002 ; 23 ; https://www.ijmpo.org/ >
+    au < manifest ; 2002 ; Indian Journal of Medical and Paediatric Oncology Volume 23 ; 2002 ; 23 ; https://www.ijmpo.org/ >
     au < manifest ; 2003 ; Indian Journal of Medical and Paediatric Oncology Volume 24 ; 2003 ; 24 ; https://www.ijmpo.org/ >
     au < manifest ; 2004 ; Indian Journal of Medical and Paediatric Oncology Volume 25 ; 2004 ; 25 ; https://www.ijmpo.org/ >
     au < manifest ; 2005 ; Indian Journal of Medical and Paediatric Oncology Volume 26 ; 2005 ; 26 ; https://www.ijmpo.org/ >
     au < manifest ; 2006 ; Indian Journal of Medical and Paediatric Oncology Volume 27 ; 2006 ; 27 ; https://www.ijmpo.org/ >
-    au < exists ; 2007 ; Indian Journal of Medical and Paediatric Oncology Volume 28 ; 2007 ; 28 ; https://www.ijmpo.org/ >
-    au < exists ; 2008 ; Indian Journal of Medical and Paediatric Oncology Volume 29 ; 2008 ; 29 ; https://www.ijmpo.org/ >
-    au < exists ; 2009 ; Indian Journal of Medical and Paediatric Oncology Volume 30 ; 2009 ; 30 ; https://www.ijmpo.org/ >
-    au < exists ; 2010 ; Indian Journal of Medical and Paediatric Oncology Volume 31 ; 2010 ; 31 ; https://www.ijmpo.org/ >
+    au < manifest ; 2007 ; Indian Journal of Medical and Paediatric Oncology Volume 28 ; 2007 ; 28 ; https://www.ijmpo.org/ >
+    au < manifest ; 2008 ; Indian Journal of Medical and Paediatric Oncology Volume 29 ; 2008 ; 29 ; https://www.ijmpo.org/ >
+    au < manifest ; 2009 ; Indian Journal of Medical and Paediatric Oncology Volume 30 ; 2009 ; 30 ; https://www.ijmpo.org/ >
+    au < manifest ; 2010 ; Indian Journal of Medical and Paediatric Oncology Volume 31 ; 2010 ; 31 ; https://www.ijmpo.org/ >
     au < released ; 2011 ; Indian Journal of Medical and Paediatric Oncology Volume 32 ; 2011 ; 32 ; http://www.ijmpo.org/ >
     au < released ; 2012 ; Indian Journal of Medical and Paediatric Oncology Volume 33 ; 2012 ; 33 ; http://www.ijmpo.org/ >
     au < released ; 2013 ; Indian Journal of Medical and Paediatric Oncology Volume 34 ; 2013 ; 34 ; http://www.ijmpo.org/ >
@@ -1077,8 +1075,8 @@
     au < released ; 2016 ; Indian Journal of Medical and Paediatric Oncology Volume 37 ; 2016 ; 37 ; http://www.ijmpo.org/ >
     au < released ; 2017 ; Indian Journal of Medical and Paediatric Oncology Volume 38 ; 2017 ; 38 ; http://www.ijmpo.org/ >
     au < released ; 2018 ; Indian Journal of Medical and Paediatric Oncology Volume 39 ; 2018 ; 39 ; http://www.ijmpo.org/ >
-    au < exists ; 2019 ; Indian Journal of Medical and Paediatric Oncology Volume 40 ; 2019 ; 40 ; https://www.ijmpo.org/ >
-    au < exists ; 2020 ; Indian Journal of Medical and Paediatric Oncology Volume 41 ; 2020 ; 41 ; https://www.ijmpo.org/ >
+    au < manifest ; 2019 ; Indian Journal of Medical and Paediatric Oncology Volume 40 ; 2019 ; 40 ; https://www.ijmpo.org/ >
+    au < manifest ; 2020 ; Indian Journal of Medical and Paediatric Oncology Volume 41 ; 2020 ; 41 ; https://www.ijmpo.org/ >
 
   }
       
@@ -1095,30 +1093,30 @@
 
     au < manifest ; 1984 ; Indian Journal of Medical Microbiology Volume 2 ; 1984 ; 2 ; https://www.ijmm.org/ >
     au < doesNotExist ; 0 ; Indian Journal of Medical Microbiology Volume 3 ; 0 ; 0 ; http://www.ijmm.org/ >
-    au < exists ; 1986 ; Indian Journal of Medical Microbiology Volume 4 ; 1986 ; 4 ; https://www.ijmm.org/ >
-    au < exists ; 1987 ; Indian Journal of Medical Microbiology Volume 5 ; 1987 ; 5 ; https://www.ijmm.org/ >
+    au < manifest ; 1986 ; Indian Journal of Medical Microbiology Volume 4 ; 1986 ; 4 ; https://www.ijmm.org/ >
+    au < manifest ; 1987 ; Indian Journal of Medical Microbiology Volume 5 ; 1987 ; 5 ; https://www.ijmm.org/ >
     au < manifest ; 1988 ; Indian Journal of Medical Microbiology Volume 6 ; 1988 ; 6 ; https://www.ijmm.org/ >
     au < manifest ; 1989 ; Indian Journal of Medical Microbiology Volume 7 ; 1989 ; 7 ; https://www.ijmm.org/ >
-    au < exists ; 1990 ; Indian Journal of Medical Microbiology Volume 8 ; 1990 ; 8 ; https://www.ijmm.org/ >
-    au < exists ; 1991 ; Indian Journal of Medical Microbiology Volume 9 ; 1991 ; 9 ; https://www.ijmm.org/ >
-    au < exists ; 1992 ; Indian Journal of Medical Microbiology Volume 10 ; 1992 ; 10 ; https://www.ijmm.org/ >
-    au < exists ; 1993 ; Indian Journal of Medical Microbiology Volume 11 ; 1993 ; 11 ; https://www.ijmm.org/ >
+    au < manifest ; 1990 ; Indian Journal of Medical Microbiology Volume 8 ; 1990 ; 8 ; https://www.ijmm.org/ >
+    au < manifest ; 1991 ; Indian Journal of Medical Microbiology Volume 9 ; 1991 ; 9 ; https://www.ijmm.org/ >
+    au < manifest ; 1992 ; Indian Journal of Medical Microbiology Volume 10 ; 1992 ; 10 ; https://www.ijmm.org/ >
+    au < manifest ; 1993 ; Indian Journal of Medical Microbiology Volume 11 ; 1993 ; 11 ; https://www.ijmm.org/ >
     au < doesNotExist ; 0 ; Indian Journal of Medical Microbiology Volume 12 ; 0 ; 0 ; http://www.ijmm.org/ >
     au < manifest ; 1995 ; Indian Journal of Medical Microbiology Volume 13 ; 1995 ; 13 ; https://www.ijmm.org/ >
-    au < exists ; 1996 ; Indian Journal of Medical Microbiology Volume 14 ; 1996 ; 14 ; https://www.ijmm.org/ >
-    au < exists ; 1997 ; Indian Journal of Medical Microbiology Volume 15 ; 1997 ; 15 ; https://www.ijmm.org/ >
-    au < exists ; 1998 ; Indian Journal of Medical Microbiology Volume 16 ; 1998 ; 16 ; https://www.ijmm.org/ >
-    au < exists ; 1999 ; Indian Journal of Medical Microbiology Volume 17 ; 1999 ; 17 ; https://www.ijmm.org/ >
-    au < exists ; 2000 ; Indian Journal of Medical Microbiology Volume 18 ; 2000 ; 18 ; https://www.ijmm.org/ >
-    au < exists ; 2001 ; Indian Journal of Medical Microbiology Volume 19 ; 2001 ; 19 ; https://www.ijmm.org/ >
-    au < exists ; 2002 ; Indian Journal of Medical Microbiology Volume 20 ; 2002 ; 20 ; https://www.ijmm.org/ >
-    au < exists ; 2003 ; Indian Journal of Medical Microbiology Volume 21 ; 2003 ; 21 ; https://www.ijmm.org/ >
-    au < exists ; 2004 ; Indian Journal of Medical Microbiology Volume 22 ; 2004 ; 22 ; https://www.ijmm.org/ >
-    au < exists ; 2005 ; Indian Journal of Medical Microbiology Volume 23 ; 2005 ; 23 ; https://www.ijmm.org/ >
+    au < manifest ; 1996 ; Indian Journal of Medical Microbiology Volume 14 ; 1996 ; 14 ; https://www.ijmm.org/ >
+    au < manifest ; 1997 ; Indian Journal of Medical Microbiology Volume 15 ; 1997 ; 15 ; https://www.ijmm.org/ >
+    au < manifest ; 1998 ; Indian Journal of Medical Microbiology Volume 16 ; 1998 ; 16 ; https://www.ijmm.org/ >
+    au < manifest ; 1999 ; Indian Journal of Medical Microbiology Volume 17 ; 1999 ; 17 ; https://www.ijmm.org/ >
+    au < manifest ; 2000 ; Indian Journal of Medical Microbiology Volume 18 ; 2000 ; 18 ; https://www.ijmm.org/ >
+    au < manifest ; 2001 ; Indian Journal of Medical Microbiology Volume 19 ; 2001 ; 19 ; https://www.ijmm.org/ >
+    au < manifest ; 2002 ; Indian Journal of Medical Microbiology Volume 20 ; 2002 ; 20 ; https://www.ijmm.org/ >
+    au < manifest ; 2003 ; Indian Journal of Medical Microbiology Volume 21 ; 2003 ; 21 ; https://www.ijmm.org/ >
+    au < manifest ; 2004 ; Indian Journal of Medical Microbiology Volume 22 ; 2004 ; 22 ; https://www.ijmm.org/ >
+    au < manifest ; 2005 ; Indian Journal of Medical Microbiology Volume 23 ; 2005 ; 23 ; https://www.ijmm.org/ >
     au < manifest ; 2006 ; Indian Journal of Medical Microbiology Volume 24 ; 2006 ; 24 ; https://www.ijmm.org/ >
     au < manifest ; 2007 ; Indian Journal of Medical Microbiology Volume 25 ; 2007 ; 25 ; https://www.ijmm.org/ >
     au < manifest ; 2008 ; Indian Journal of Medical Microbiology Volume 26 ; 2008 ; 26 ; https://www.ijmm.org/ >
-    au < exists ; 2009 ; Indian Journal of Medical Microbiology Volume 27 ; 2009 ; 27 ; https://www.ijmm.org/ >
+    au < manifest ; 2009 ; Indian Journal of Medical Microbiology Volume 27 ; 2009 ; 27 ; https://www.ijmm.org/ >
     au < manifest ; 2010 ; Indian Journal of Medical Microbiology Volume 28 ; 2010 ; 28 ; https://www.ijmm.org/ >
     au < released ; 2011 ; Indian Journal of Medical Microbiology Volume 29 ; 2011 ; 29 ; http://www.ijmm.org/ >
     au < released ; 2012 ; Indian Journal of Medical Microbiology Volume 30 ; 2012 ; 30 ; http://www.ijmm.org/ >
@@ -1144,32 +1142,32 @@
   {
 #    param[base_url] = http://www.indianjmedsci.org/
     param[journal_issn] = 0019-5359
-    #changed platform. changed format.
+    #changed platform. changed format. Click bait?
 
-    au < exists ; 1990 ; Indian Journal of Medical Sciences Volume 44 ; 1990 ; 44 ; https://www.indianjmedsci.org/ >
-    au < exists ; 1991 ; Indian Journal of Medical Sciences Volume 45 ; 1991 ; 45 ; https://www.indianjmedsci.org/ >
-    au < exists ; 1992 ; Indian Journal of Medical Sciences Volume 46 ; 1992 ; 46 ; https://www.indianjmedsci.org/ >
-    au < exists ; 1993 ; Indian Journal of Medical Sciences Volume 47 ; 1993 ; 47 ; https://www.indianjmedsci.org/ >
-    au < exists ; 1994 ; Indian Journal of Medical Sciences Volume 48 ; 1994 ; 48 ; https://www.indianjmedsci.org/ >
-    au < exists ; 1995 ; Indian Journal of Medical Sciences Volume 49 ; 1995 ; 49 ; https://www.indianjmedsci.org/ >
-    au < exists ; 1996 ; Indian Journal of Medical Sciences Volume 50 ; 1996 ; 50 ; https://www.indianjmedsci.org/ >
-    au < exists ; 1997 ; Indian Journal of Medical Sciences Volume 51 ; 1997 ; 51 ; https://www.indianjmedsci.org/ >
-    au < exists ; 1998 ; Indian Journal of Medical Sciences Volume 52 ; 1998 ; 52 ; https://www.indianjmedsci.org/ >
-    au < exists ; 1999 ; Indian Journal of Medical Sciences Volume 53 ; 1999 ; 53 ; https://www.indianjmedsci.org/ >
-    au < exists ; 2000 ; Indian Journal of Medical Sciences Volume 54 ; 2000 ; 54 ; https://www.indianjmedsci.org/ >
-    au < exists ; 2001 ; Indian Journal of Medical Sciences Volume 55 ; 2001 ; 55 ; https://www.indianjmedsci.org/ >
-    au < exists ; 2002 ; Indian Journal of Medical Sciences Volume 56 ; 2002 ; 56 ; https://www.indianjmedsci.org/ >
-    au < exists ; 2003 ; Indian Journal of Medical Sciences Volume 57 ; 2003 ; 57 ; https://www.indianjmedsci.org/ >
-    au < exists ; 2004 ; Indian Journal of Medical Sciences Volume 58 ; 2004 ; 58 ; https://www.indianjmedsci.org/ >
-    au < exists ; 2005 ; Indian Journal of Medical Sciences Volume 59 ; 2005 ; 59 ; https://www.indianjmedsci.org/ >
-    au < exists ; 2006 ; Indian Journal of Medical Sciences Volume 60 ; 2006 ; 60 ; https://www.indianjmedsci.org/ >
-    au < exists ; 2007 ; Indian Journal of Medical Sciences Volume 61 ; 2007 ; 61 ; https://www.indianjmedsci.org/ >
-    au < exists ; 2008 ; Indian Journal of Medical Sciences Volume 62 ; 2008 ; 62 ; https://www.indianjmedsci.org/ >
-    au < exists ; 2009 ; Indian Journal of Medical Sciences Volume 63 ; 2009 ; 63 ; https://www.indianjmedsci.org/ >
-    au < exists ; 2010 ; Indian Journal of Medical Sciences Volume 64 ; 2010 ; 64 ; https://www.indianjmedsci.org/ >
-    au < released ; 2011 ; Indian Journal of Medical Sciences Volume 65 ; 2011 ; 65 ; http://www.indianjmedsci.org/ >
-    au < exists ; 2012 ; Indian Journal of Medical Sciences Volume 66 ; 2012 ; 66 ; https://www.indianjmedsci.org/ >
-    au < released ; 2013 ; Indian Journal of Medical Sciences Volume 67 ; 2013 ; 67 ; http://www.indianjmedsci.org/ >
+    au < doNotProcess ; 1990 ; Indian Journal of Medical Sciences Volume 44 ; 1990 ; 44 ; https://www.indianjmedsci.org/ >
+    au < doNotProcess ; 1991 ; Indian Journal of Medical Sciences Volume 45 ; 1991 ; 45 ; https://www.indianjmedsci.org/ >
+    au < doNotProcess ; 1992 ; Indian Journal of Medical Sciences Volume 46 ; 1992 ; 46 ; https://www.indianjmedsci.org/ >
+    au < doNotProcess ; 1993 ; Indian Journal of Medical Sciences Volume 47 ; 1993 ; 47 ; https://www.indianjmedsci.org/ >
+    au < doNotProcess ; 1994 ; Indian Journal of Medical Sciences Volume 48 ; 1994 ; 48 ; https://www.indianjmedsci.org/ >
+    au < doNotProcess ; 1995 ; Indian Journal of Medical Sciences Volume 49 ; 1995 ; 49 ; https://www.indianjmedsci.org/ >
+    au < doNotProcess ; 1996 ; Indian Journal of Medical Sciences Volume 50 ; 1996 ; 50 ; https://www.indianjmedsci.org/ >
+    au < doNotProcess ; 1997 ; Indian Journal of Medical Sciences Volume 51 ; 1997 ; 51 ; https://www.indianjmedsci.org/ >
+    au < doNotProcess ; 1998 ; Indian Journal of Medical Sciences Volume 52 ; 1998 ; 52 ; https://www.indianjmedsci.org/ >
+    au < doNotProcess ; 1999 ; Indian Journal of Medical Sciences Volume 53 ; 1999 ; 53 ; https://www.indianjmedsci.org/ >
+    au < doNotProcess ; 2000 ; Indian Journal of Medical Sciences Volume 54 ; 2000 ; 54 ; https://www.indianjmedsci.org/ >
+    au < doNotProcess ; 2001 ; Indian Journal of Medical Sciences Volume 55 ; 2001 ; 55 ; https://www.indianjmedsci.org/ >
+    au < doNotProcess ; 2002 ; Indian Journal of Medical Sciences Volume 56 ; 2002 ; 56 ; https://www.indianjmedsci.org/ >
+    au < doNotProcess ; 2003 ; Indian Journal of Medical Sciences Volume 57 ; 2003 ; 57 ; https://www.indianjmedsci.org/ >
+    au < doNotProcess ; 2004 ; Indian Journal of Medical Sciences Volume 58 ; 2004 ; 58 ; https://www.indianjmedsci.org/ >
+    au < doNotProcess ; 2005 ; Indian Journal of Medical Sciences Volume 59 ; 2005 ; 59 ; https://www.indianjmedsci.org/ >
+    au < doNotProcess ; 2006 ; Indian Journal of Medical Sciences Volume 60 ; 2006 ; 60 ; https://www.indianjmedsci.org/ >
+    au < doNotProcess ; 2007 ; Indian Journal of Medical Sciences Volume 61 ; 2007 ; 61 ; https://www.indianjmedsci.org/ >
+    au < doNotProcess ; 2008 ; Indian Journal of Medical Sciences Volume 62 ; 2008 ; 62 ; https://www.indianjmedsci.org/ >
+    au < doNotProcess ; 2009 ; Indian Journal of Medical Sciences Volume 63 ; 2009 ; 63 ; https://www.indianjmedsci.org/ >
+    au < doNotProcess ; 2010 ; Indian Journal of Medical Sciences Volume 64 ; 2010 ; 64 ; https://www.indianjmedsci.org/ >
+    au < down ; 2011 ; Indian Journal of Medical Sciences Volume 65 ; 2011 ; 65 ; http://www.indianjmedsci.org/ >
+    au < doNotProcess ; 2012 ; Indian Journal of Medical Sciences Volume 66 ; 2012 ; 66 ; https://www.indianjmedsci.org/ >
+    au < down ; 2013 ; Indian Journal of Medical Sciences Volume 67 ; 2013 ; 67 ; http://www.indianjmedsci.org/ >
     # Moved to OJS
   }
   
@@ -1188,14 +1186,14 @@
 
     au < manifest ; 2001 ; Indian Journal of Nephrology Volume 11 ; 2001 ; 11 ; https://www.indianjnephrol.org/ >
     au < manifest ; 2002 ; Indian Journal of Nephrology Volume 12 ; 2002 ; 12 ; https://www.indianjnephrol.org/ >
-    au < exists ; 2003 ; Indian Journal of Nephrology Volume 13 ; 2003 ; 13 ; https://www.indianjnephrol.org/ >
-    au < exists ; 2004 ; Indian Journal of Nephrology Volume 14 ; 2004 ; 14 ; https://www.indianjnephrol.org/ >
+    au < manifest ; 2003 ; Indian Journal of Nephrology Volume 13 ; 2003 ; 13 ; https://www.indianjnephrol.org/ >
+    au < manifest ; 2004 ; Indian Journal of Nephrology Volume 14 ; 2004 ; 14 ; https://www.indianjnephrol.org/ >
     au < manifest ; 2005 ; Indian Journal of Nephrology Volume 15 ; 2005 ; 15 ; https://www.indianjnephrol.org/ >
-    au < exists ; 2006 ; Indian Journal of Nephrology Volume 16 ; 2006 ; 16 ; https://www.indianjnephrol.org/ >
+    au < doesNotExist ; 2006 ; Indian Journal of Nephrology Volume 16 ; 2006 ; 16 ; https://www.indianjnephrol.org/ >
     au < manifest ; 2007 ; Indian Journal of Nephrology Volume 17 ; 2007 ; 17 ; https://www.indianjnephrol.org/ >
     au < manifest ; 2008 ; Indian Journal of Nephrology Volume 18 ; 2008 ; 18 ; https://www.indianjnephrol.org/ >
     au < manifest ; 2009 ; Indian Journal of Nephrology Volume 19 ; 2009 ; 19 ; https://www.indianjnephrol.org/ >
-    au < exists ; 2010 ; Indian Journal of Nephrology Volume 20 ; 2010 ; 20 ; https://www.indianjnephrol.org/ >
+    au < manifest ; 2010 ; Indian Journal of Nephrology Volume 20 ; 2010 ; 20 ; https://www.indianjnephrol.org/ >
     au < released ; 2011 ; Indian Journal of Nephrology Volume 21 ; 2011 ; 21 ; http://www.indianjnephrol.org/ >
     au < released ; 2012 ; Indian Journal of Nephrology Volume 22 ; 2012 ; 22 ; http://www.indianjnephrol.org/ >
     au < released ; 2013 ; Indian Journal of Nephrology Volume 23 ; 2013 ; 23 ; http://www.indianjnephrol.org/ >
@@ -1204,8 +1202,8 @@
     au < released ; 2016 ; Indian Journal of Nephrology Volume 26 ; 2016 ; 26 ; http://www.indianjnephrol.org/ >
     au < released ; 2017 ; Indian Journal of Nephrology Volume 27 ; 2017 ; 27 ; http://www.indianjnephrol.org/ >
     au < released ; 2018 ; Indian Journal of Nephrology Volume 28 ; 2018 ; 28 ; http://www.indianjnephrol.org/ >
-    au < exists ; 2019 ; Indian Journal of Nephrology Volume 29 ; 2019 ; 29 ; https://www.indianjnephrol.org/ >
-    au < exists ; 2020 ; Indian Journal of Nephrology Volume 30 ; 2020 ; 30 ; https://www.indianjnephrol.org/ >
+    au < manifest ; 2019 ; Indian Journal of Nephrology Volume 29 ; 2019 ; 29 ; https://www.indianjnephrol.org/ >
+    au < manifest ; 2020 ; Indian Journal of Nephrology Volume 30 ; 2020 ; 30 ; https://www.indianjnephrol.org/ >
 
   }
 
@@ -1220,11 +1218,11 @@
 #    param[base_url] = http://www.ijnm.in/
     param[journal_issn] = 0972-3919
 
-    au < exists ; 2006 ; Indian Journal of Nuclear Medicine Volume 21 ; 2006 ; 21 ; https://www.ijnm.in/ >
-    au < exists ; 2007 ; Indian Journal of Nuclear Medicine Volume 22 ; 2007 ; 22 ; https://www.ijnm.in/ >
+    au < manifest ; 2006 ; Indian Journal of Nuclear Medicine Volume 21 ; 2006 ; 21 ; https://www.ijnm.in/ >
+    au < manifest ; 2007 ; Indian Journal of Nuclear Medicine Volume 22 ; 2007 ; 22 ; https://www.ijnm.in/ >
     au < doesNotExist ; 2008 ; Indian Journal of Nuclear Medicine Volume 23 ; 0 ; 0 ; http://www.ijnm.in/ >
     au < doesNotExist ; 2009 ; Indian Journal of Nuclear Medicine Volume 24 ; 0 ; 0 ; http://www.ijnm.in/ >
-    au < exists ; 2010 ; Indian Journal of Nuclear Medicine Volume 25 ; 2010 ; 25 ; https://www.ijnm.in/ >
+    au < manifest ; 2010 ; Indian Journal of Nuclear Medicine Volume 25 ; 2010 ; 25 ; https://www.ijnm.in/ >
     au < released ; 2011 ; Indian Journal of Nuclear Medicine Volume 26 ; 2011 ; 26 ; http://www.ijnm.in/ >
     au < released ; 2012 ; Indian Journal of Nuclear Medicine Volume 27 ; 2012 ; 27 ; http://www.ijnm.in/ >
     au < released ; 2013 ; Indian Journal of Nuclear Medicine Volume 28 ; 2013 ; 28 ; http://www.ijnm.in/ >
@@ -1233,8 +1231,8 @@
     au < released ; 2016 ; Indian Journal of Nuclear Medicine Volume 31 ; 2016 ; 31 ; http://www.ijnm.in/ >
     au < released ; 2017 ; Indian Journal of Nuclear Medicine Volume 32 ; 2017 ; 32 ; http://www.ijnm.in/ >
     au < released ; 2018 ; Indian Journal of Nuclear Medicine Volume 33 ; 2018 ; 33 ; http://www.ijnm.in/ >
-    au < exists ; 2019 ; Indian Journal of Nuclear Medicine Volume 34 ; 2019 ; 34 ; https://www.ijnm.in/ >
-    au < exists ; 2020 ; Indian Journal of Nuclear Medicine Volume 35 ; 2020 ; 35 ; https://www.ijnm.in/ >
+    au < manifest ; 2019 ; Indian Journal of Nuclear Medicine Volume 34 ; 2019 ; 34 ; https://www.ijnm.in/ >
+    au < manifest ; 2020 ; Indian Journal of Nuclear Medicine Volume 35 ; 2020 ; 35 ; https://www.ijnm.in/ >
 
   }
 
@@ -1265,13 +1263,13 @@
     param[journal_issn] = 0973-2284
     #[ijoem] =  medknow website uses correct issn 06/08/2018
 
-    au < exists ; 2003 ; Indian Journal of Occupational and Environmental Medicine Volume 7 ; 2003 ; 7 ; https://www.ijoem.com/ >
+    au < manifest ; 2003 ; Indian Journal of Occupational and Environmental Medicine Volume 7 ; 2003 ; 7 ; https://www.ijoem.com/ >
     au < manifest ; 2004 ; Indian Journal of Occupational and Environmental Medicine Volume 8 ; 2004 ; 8 ; https://www.ijoem.com/ >
     au < manifest ; 2005 ; Indian Journal of Occupational and Environmental Medicine Volume 9 ; 2005 ; 9 ; https://www.ijoem.com/ >
-    au < exists ; 2006 ; Indian Journal of Occupational and Environmental Medicine Volume 10 ; 2006 ; 10 ; https://www.ijoem.com/ >
+    au < manifest ; 2006 ; Indian Journal of Occupational and Environmental Medicine Volume 10 ; 2006 ; 10 ; https://www.ijoem.com/ >
     au < manifest ; 2007 ; Indian Journal of Occupational and Environmental Medicine Volume 11 ; 2007 ; 11 ; https://www.ijoem.com/ >
-    au < exists ; 2008 ; Indian Journal of Occupational and Environmental Medicine Volume 12 ; 2008 ; 12 ; https://www.ijoem.com/ >
-    au < exists ; 2009 ; Indian Journal of Occupational and Environmental Medicine Volume 13 ; 2009 ; 13 ; https://www.ijoem.com/ >
+    au < manifest ; 2008 ; Indian Journal of Occupational and Environmental Medicine Volume 12 ; 2008 ; 12 ; https://www.ijoem.com/ >
+    au < manifest ; 2009 ; Indian Journal of Occupational and Environmental Medicine Volume 13 ; 2009 ; 13 ; https://www.ijoem.com/ >
     au < manifest ; 2010 ; Indian Journal of Occupational and Environmental Medicine Volume 14 ; 2010 ; 14 ; https://www.ijoem.com/ >
     au < doNotProcess ; 2011 ; Indian Journal of Occupational and Environmental Medicine Volume 15 ; 2011 ; 15 ; http://www.ijoem.com/ >
     au < doNotProcess ; 2012 ; Indian Journal of Occupational and Environmental Medicine Volume 16 ; 2012 ; 16 ; http://www.ijoem.com/ >
@@ -1379,51 +1377,52 @@
 
 #    param[base_url] = http://www.ijoonline.com/
     param[journal_issn] = 0019-5413
+    #Moved
 
-    au < exists ; 1967 ; Indian Journal of Orthopaedics Volume 1 ; 1967 ; 1 ; https://www.ijoonline.com/ >
-    au < exists ; 1968 ; Indian Journal of Orthopaedics Volume 2 ; 1968 ; 2 ; https://www.ijoonline.com/ >
-    au < exists ; 1969 ; Indian Journal of Orthopaedics Volume 3 ; 1969 ; 3 ; https://www.ijoonline.com/ >
+    au < doNotProcess ; 1967 ; Indian Journal of Orthopaedics Volume 1 ; 1967 ; 1 ; https://www.ijoonline.com/ >
+    au < doNotProcess ; 1968 ; Indian Journal of Orthopaedics Volume 2 ; 1968 ; 2 ; https://www.ijoonline.com/ >
+    au < doNotProcess ; 1969 ; Indian Journal of Orthopaedics Volume 3 ; 1969 ; 3 ; https://www.ijoonline.com/ >
     au < doesNotExist ; 1970 ; Indian Journal of Orthopaedics Volume 4 ; 0 ; 0 ; http://www.ijoonline.com/ >
     au < doesNotExist ; 1971 ; Indian Journal of Orthopaedics Volume 5 ; 0 ; 0 ; http://www.ijoonline.com/ >
     au < doesNotExist ; 1972 ; Indian Journal of Orthopaedics Volume 6 ; 0 ; 0 ; http://www.ijoonline.com/ >
-    au < exists ; 1973 ; Indian Journal of Orthopaedics Volume 7 ; 1973 ; 7 ; https://www.ijoonline.com/ >
-    au < exists ; 1974 ; Indian Journal of Orthopaedics Volume 8 ; 1974 ; 8 ; https://www.ijoonline.com/ >
-    au < exists ; 1975 ; Indian Journal of Orthopaedics Volume 9 ; 1975 ; 9 ; https://www.ijoonline.com/ >
-    au < exists ; 1976 ; Indian Journal of Orthopaedics Volume 10 ; 1976 ; 10 ; https://www.ijoonline.com/ >
-    au < exists ; 1977 ; Indian Journal of Orthopaedics Volume 11 ; 1977 ; 11 ; https://www.ijoonline.com/ >
-    au < exists ; 1978 ; Indian Journal of Orthopaedics Volume 12 ; 1978 ; 12 ; https://www.ijoonline.com/ >
-    au < exists ; 1979 ; Indian Journal of Orthopaedics Volume 13 ; 1979 ; 13 ; https://www.ijoonline.com/ >
-    au < exists ; 1980 ; Indian Journal of Orthopaedics Volume 14 ; 1980 ; 14 ; https://www.ijoonline.com/ >
-    au < exists ; 1981 ; Indian Journal of Orthopaedics Volume 15 ; 1981 ; 15 ; https://www.ijoonline.com/ >
-    au < exists ; 1982 ; Indian Journal of Orthopaedics Volume 16 ; 1982 ; 16 ; https://www.ijoonline.com/ >
-    au < exists ; 1983 ; Indian Journal of Orthopaedics Volume 17 ; 1983 ; 17 ; https://www.ijoonline.com/ >
-    au < exists ; 1984 ; Indian Journal of Orthopaedics Volume 18 ; 1984 ; 18 ; https://www.ijoonline.com/ >
-    au < exists ; 1985 ; Indian Journal of Orthopaedics Volume 19 ; 1985 ; 19 ; https://www.ijoonline.com/ >
-    au < exists ; 1986 ; Indian Journal of Orthopaedics Volume 20 ; 1986 ; 20 ; https://www.ijoonline.com/ >
-    au < exists ; 1987 ; Indian Journal of Orthopaedics Volume 21 ; 1987 ; 21 ; https://www.ijoonline.com/ >
-    au < exists ; 1988 ; Indian Journal of Orthopaedics Volume 22 ; 1988 ; 22 ; https://www.ijoonline.com/ >
+    au < doNotProcess ; 1973 ; Indian Journal of Orthopaedics Volume 7 ; 1973 ; 7 ; https://www.ijoonline.com/ >
+    au < doNotProcess ; 1974 ; Indian Journal of Orthopaedics Volume 8 ; 1974 ; 8 ; https://www.ijoonline.com/ >
+    au < doNotProcess ; 1975 ; Indian Journal of Orthopaedics Volume 9 ; 1975 ; 9 ; https://www.ijoonline.com/ >
+    au < doNotProcess ; 1976 ; Indian Journal of Orthopaedics Volume 10 ; 1976 ; 10 ; https://www.ijoonline.com/ >
+    au < doNotProcess ; 1977 ; Indian Journal of Orthopaedics Volume 11 ; 1977 ; 11 ; https://www.ijoonline.com/ >
+    au < doNotProcess ; 1978 ; Indian Journal of Orthopaedics Volume 12 ; 1978 ; 12 ; https://www.ijoonline.com/ >
+    au < doNotProcess ; 1979 ; Indian Journal of Orthopaedics Volume 13 ; 1979 ; 13 ; https://www.ijoonline.com/ >
+    au < doNotProcess ; 1980 ; Indian Journal of Orthopaedics Volume 14 ; 1980 ; 14 ; https://www.ijoonline.com/ >
+    au < doNotProcess ; 1981 ; Indian Journal of Orthopaedics Volume 15 ; 1981 ; 15 ; https://www.ijoonline.com/ >
+    au < doNotProcess ; 1982 ; Indian Journal of Orthopaedics Volume 16 ; 1982 ; 16 ; https://www.ijoonline.com/ >
+    au < doNotProcess ; 1983 ; Indian Journal of Orthopaedics Volume 17 ; 1983 ; 17 ; https://www.ijoonline.com/ >
+    au < doNotProcess ; 1984 ; Indian Journal of Orthopaedics Volume 18 ; 1984 ; 18 ; https://www.ijoonline.com/ >
+    au < doNotProcess ; 1985 ; Indian Journal of Orthopaedics Volume 19 ; 1985 ; 19 ; https://www.ijoonline.com/ >
+    au < doNotProcess ; 1986 ; Indian Journal of Orthopaedics Volume 20 ; 1986 ; 20 ; https://www.ijoonline.com/ >
+    au < doNotProcess ; 1987 ; Indian Journal of Orthopaedics Volume 21 ; 1987 ; 21 ; https://www.ijoonline.com/ >
+    au < doNotProcess ; 1988 ; Indian Journal of Orthopaedics Volume 22 ; 1988 ; 22 ; https://www.ijoonline.com/ >
     au < doesNotExist ; 1989 ; Indian Journal of Orthopaedics Volume 23 ; 0 ; 0 ; http://www.ijoonline.com/ >
     au < doesNotExist ; 1990 ; Indian Journal of Orthopaedics Volume 24 ; 0 ; 0 ; http://www.ijoonline.com/ >
     au < doesNotExist ; 1991 ; Indian Journal of Orthopaedics Volume 25 ; 0 ; 0 ; http://www.ijoonline.com/ >
-    au < exists ; 1992 ; Indian Journal of Orthopaedics Volume 26 ; 1992 ; 26 ; https://www.ijoonline.com/ >
+    au < doNotProcess ; 1992 ; Indian Journal of Orthopaedics Volume 26 ; 1992 ; 26 ; https://www.ijoonline.com/ >
     au < doesNotExist ; 1993 ; Indian Journal of Orthopaedics Volume 27 ; 0 ; 0 ; http://www.ijoonline.com/ >
-    au < exists ; 1994 ; Indian Journal of Orthopaedics Volume 28 ; 1994 ; 28 ; https://www.ijoonline.com/ >
-    au < exists ; 1995 ; Indian Journal of Orthopaedics Volume 29 ; 1995 ; 29 ; https://www.ijoonline.com/ >
-    au < exists ; 1996 ; Indian Journal of Orthopaedics Volume 30 ; 1996 ; 30 ; https://www.ijoonline.com/ >
-    au < exists ; 1997 ; Indian Journal of Orthopaedics Volume 31 ; 1997 ; 31 ; https://www.ijoonline.com/ >
+    au < doNotProcess ; 1994 ; Indian Journal of Orthopaedics Volume 28 ; 1994 ; 28 ; https://www.ijoonline.com/ >
+    au < doNotProcess ; 1995 ; Indian Journal of Orthopaedics Volume 29 ; 1995 ; 29 ; https://www.ijoonline.com/ >
+    au < doNotProcess ; 1996 ; Indian Journal of Orthopaedics Volume 30 ; 1996 ; 30 ; https://www.ijoonline.com/ >
+    au < doNotProcess ; 1997 ; Indian Journal of Orthopaedics Volume 31 ; 1997 ; 31 ; https://www.ijoonline.com/ >
     au < doesNotExist ; 1998 ; Indian Journal of Orthopaedics Volume 32 ; 0 ; 0 ; http://www.ijoonline.com/ >
-    au < exists ; 1999 ; Indian Journal of Orthopaedics Volume 33 ; 1999 ; 33 ; https://www.ijoonline.com/ >
-    au < exists ; 2000 ; Indian Journal of Orthopaedics Volume 34 ; 2000 ; 34 ; https://www.ijoonline.com/ >
-    au < exists ; 2001 ; Indian Journal of Orthopaedics Volume 35 ; 2001 ; 35 ; https://www.ijoonline.com/ >
-    au < exists ; 2002 ; Indian Journal of Orthopaedics Volume 36 ; 2002 ; 36 ; https://www.ijoonline.com/ >
-    au < exists ; 2003 ; Indian Journal of Orthopaedics Volume 37 ; 2003 ; 37 ; https://www.ijoonline.com/ >
-    au < exists ; 2004 ; Indian Journal of Orthopaedics Volume 38 ; 2004 ; 38 ; https://www.ijoonline.com/ >
-    au < exists ; 2005 ; Indian Journal of Orthopaedics Volume 39 ; 2005 ; 39 ; https://www.ijoonline.com/ >
-    au < exists ; 2006 ; Indian Journal of Orthopaedics Volume 40 ; 2006 ; 40 ; https://www.ijoonline.com/ >
-    au < exists ; 2007 ; Indian Journal of Orthopaedics Volume 41 ; 2007 ; 41 ; https://www.ijoonline.com/ >
-    au < exists ; 2008 ; Indian Journal of Orthopaedics Volume 42 ; 2008 ; 42 ; https://www.ijoonline.com/ >
-    au < exists ; 2009 ; Indian Journal of Orthopaedics Volume 43 ; 2009 ; 43 ; https://www.ijoonline.com/ >
-    au < exists ; 2010 ; Indian Journal of Orthopaedics Volume 44 ; 2010 ; 44 ; https://www.ijoonline.com/ >
+    au < doNotProcess ; 1999 ; Indian Journal of Orthopaedics Volume 33 ; 1999 ; 33 ; https://www.ijoonline.com/ >
+    au < doNotProcess ; 2000 ; Indian Journal of Orthopaedics Volume 34 ; 2000 ; 34 ; https://www.ijoonline.com/ >
+    au < doNotProcess ; 2001 ; Indian Journal of Orthopaedics Volume 35 ; 2001 ; 35 ; https://www.ijoonline.com/ >
+    au < doNotProcess ; 2002 ; Indian Journal of Orthopaedics Volume 36 ; 2002 ; 36 ; https://www.ijoonline.com/ >
+    au < doNotProcess ; 2003 ; Indian Journal of Orthopaedics Volume 37 ; 2003 ; 37 ; https://www.ijoonline.com/ >
+    au < doNotProcess ; 2004 ; Indian Journal of Orthopaedics Volume 38 ; 2004 ; 38 ; https://www.ijoonline.com/ >
+    au < doNotProcess ; 2005 ; Indian Journal of Orthopaedics Volume 39 ; 2005 ; 39 ; https://www.ijoonline.com/ >
+    au < doNotProcess ; 2006 ; Indian Journal of Orthopaedics Volume 40 ; 2006 ; 40 ; https://www.ijoonline.com/ >
+    au < doNotProcess ; 2007 ; Indian Journal of Orthopaedics Volume 41 ; 2007 ; 41 ; https://www.ijoonline.com/ >
+    au < doNotProcess ; 2008 ; Indian Journal of Orthopaedics Volume 42 ; 2008 ; 42 ; https://www.ijoonline.com/ >
+    au < doNotProcess ; 2009 ; Indian Journal of Orthopaedics Volume 43 ; 2009 ; 43 ; https://www.ijoonline.com/ >
+    au < doNotProcess ; 2010 ; Indian Journal of Orthopaedics Volume 44 ; 2010 ; 44 ; https://www.ijoonline.com/ >
     au < released ; 2011 ; Indian Journal of Orthopaedics Volume 45 ; 2011 ; 45 ; http://www.ijoonline.com/ >
     au < released ; 2012 ; Indian Journal of Orthopaedics Volume 46 ; 2012 ; 46 ; http://www.ijoonline.com/ >
     au < released ; 2013 ; Indian Journal of Orthopaedics Volume 47 ; 2013 ; 47 ; http://www.ijoonline.com/ >
@@ -1432,8 +1431,8 @@
     au < released ; 2016 ; Indian Journal of Orthopaedics Volume 50 ; 2016 ; 50 ; http://www.ijoonline.com/ >
     au < released ; 2017 ; Indian Journal of Orthopaedics Volume 51 ; 2017 ; 51 ; http://www.ijoonline.com/ >
     au < released ; 2018 ; Indian Journal of Orthopaedics Volume 52 ; 2018 ; 52 ; http://www.ijoonline.com/ >
-    au < exists ; 2019 ; Indian Journal of Orthopaedics Volume 53 ; 2019 ; 53 ; https://www.ijoonline.com/ >
-    au < expected ; 2020 ; Indian Journal of Orthopaedics Volume 54 ; 2020 ; 54 ; https://www.ijoonline.com/ >
+    au < doNotProcess ; 2019 ; Indian Journal of Orthopaedics Volume 53 ; 2019 ; 53 ; https://www.ijoonline.com/ >
+    au < doNotProcess ; 2020 ; Indian Journal of Orthopaedics Volume 54 ; 2020 ; 54 ; https://www.ijoonline.com/ >
 
   }
 
@@ -1535,9 +1534,9 @@
     au < manifest ; 2000 ; Indian Journal of Pathology and Microbiology Volume 43 ; 2000 ; 43 ; https://www.ijpmonline.org/ >
     au < manifest ; 2001 ; Indian Journal of Pathology and Microbiology Volume 44 ; 2001 ; 44 ; https://www.ijpmonline.org/ >
     au < manifest ; 2002 ; Indian Journal of Pathology and Microbiology Volume 45 ; 2002 ; 45 ; https://www.ijpmonline.org/ >
-    au < exists ; 2003 ; Indian Journal of Pathology and Microbiology Volume 46 ; 2003 ; 46 ; https://www.ijpmonline.org/ >
-    au < exists ; 2004 ; Indian Journal of Pathology and Microbiology Volume 47 ; 2004 ; 47 ; https://www.ijpmonline.org/ >
-    au < exists ; 2005 ; Indian Journal of Pathology and Microbiology Volume 48 ; 2005 ; 48 ; https://www.ijpmonline.org/ >
+    au < doesNotExist ; 2003 ; Indian Journal of Pathology and Microbiology Volume 46 ; 2003 ; 46 ; https://www.ijpmonline.org/ >
+    au < doesNotExist ; 2004 ; Indian Journal of Pathology and Microbiology Volume 47 ; 2004 ; 47 ; https://www.ijpmonline.org/ >
+    au < doesNotExist ; 2005 ; Indian Journal of Pathology and Microbiology Volume 48 ; 2005 ; 48 ; https://www.ijpmonline.org/ >
     au < manifest ; 2006 ; Indian Journal of Pathology and Microbiology Volume 49 ; 2006 ; 49 ; https://www.ijpmonline.org/ >
     au < manifest ; 2007 ; Indian Journal of Pathology and Microbiology Volume 50 ; 2007 ; 50 ; https://www.ijpmonline.org/ >
     au < manifest ; 2008 ; Indian Journal of Pathology and Microbiology Volume 51 ; 2008 ; 51 ; https://www.ijpmonline.org/ >
@@ -1652,32 +1651,33 @@
 
 #    param[base_url] = http://www.ijps.org/
     param[journal_issn] = 0970-0358
+    #Moved
 
-    au < exists ; 1986 ; Indian Journal of Plastic Surgery Volume 19 ; 1986 ; 19 ; https://www.ijps.org/ >
-    au < exists ; 1987 ; Indian Journal of Plastic Surgery Volume 20 ; 1987 ; 20 ; https://www.ijps.org/ >
-    au < exists ; 1988 ; Indian Journal of Plastic Surgery Volume 21 ; 1988 ; 21 ; https://www.ijps.org/ >
+    au < doNotProcess ; 1986 ; Indian Journal of Plastic Surgery Volume 19 ; 1986 ; 19 ; https://www.ijps.org/ >
+    au < doNotProcess ; 1987 ; Indian Journal of Plastic Surgery Volume 20 ; 1987 ; 20 ; https://www.ijps.org/ >
+    au < doNotProcess ; 1988 ; Indian Journal of Plastic Surgery Volume 21 ; 1988 ; 21 ; https://www.ijps.org/ >
     au < doesNotExist ; 1989 ; Indian Journal of Plastic Surgery Volume 22 ; 0 ; 0 ; http://www.ijps.org/ >
-    au < exists ; 1990 ; Indian Journal of Plastic Surgery Volume 23 ; 1990 ; 23 ; https://www.ijps.org/ >
-    au < exists ; 1991 ; Indian Journal of Plastic Surgery Volume 24 ; 1991 ; 24 ; https://www.ijps.org/ >
-    au < exists ; 1992 ; Indian Journal of Plastic Surgery Volume 25 ; 1992 ; 25 ; https://www.ijps.org/ >
-    au < exists ; 1993 ; Indian Journal of Plastic Surgery Volume 26 ; 1993 ; 26 ; https://www.ijps.org/ >
-    au < exists ; 1994 ; Indian Journal of Plastic Surgery Volume 27 ; 1994 ; 27 ; https://www.ijps.org/ >
-    au < exists ; 1995 ; Indian Journal of Plastic Surgery Volume 28 ; 1995 ; 28 ; https://www.ijps.org/ >
-    au < exists ; 1996 ; Indian Journal of Plastic Surgery Volume 29 ; 1996 ; 29 ; https://www.ijps.org/ >
+    au < doNotProcess ; 1990 ; Indian Journal of Plastic Surgery Volume 23 ; 1990 ; 23 ; https://www.ijps.org/ >
+    au < doNotProcess ; 1991 ; Indian Journal of Plastic Surgery Volume 24 ; 1991 ; 24 ; https://www.ijps.org/ >
+    au < doNotProcess ; 1992 ; Indian Journal of Plastic Surgery Volume 25 ; 1992 ; 25 ; https://www.ijps.org/ >
+    au < doNotProcess ; 1993 ; Indian Journal of Plastic Surgery Volume 26 ; 1993 ; 26 ; https://www.ijps.org/ >
+    au < doNotProcess ; 1994 ; Indian Journal of Plastic Surgery Volume 27 ; 1994 ; 27 ; https://www.ijps.org/ >
+    au < doNotProcess ; 1995 ; Indian Journal of Plastic Surgery Volume 28 ; 1995 ; 28 ; https://www.ijps.org/ >
+    au < doNotProcess ; 1996 ; Indian Journal of Plastic Surgery Volume 29 ; 1996 ; 29 ; https://www.ijps.org/ >
     au < doesNotExist ; 1997 ; Indian Journal of Plastic Surgery Volume 30 ; 0 ; 0 ; http://www.ijps.org/ >
     au < doesNotExist ; 1998 ; Indian Journal of Plastic Surgery Volume 31 ; 0 ; 0 ; http://www.ijps.org/ >
     au < doesNotExist ; 1999 ; Indian Journal of Plastic Surgery Volume 32 ; 0 ; 0 ; http://www.ijps.org/ >
     au < doesNotExist ; 2000 ; Indian Journal of Plastic Surgery Volume 33 ; 0 ; 0 ; http://www.ijps.org/ >
-    au < exists ; 2001 ; Indian Journal of Plastic Surgery 34 ; 2001 ; 34 ; https://www.ijps.org/ >
+    au < doNotProcess ; 2001 ; Indian Journal of Plastic Surgery 34 ; 2001 ; 34 ; https://www.ijps.org/ >
     au < doesNotExist ; 2002 ; Indian Journal of Plastic Surgery Volume 35 ; 0 ; 0 ; http://www.ijps.org/ >
-    au < exists ; 2003 ; Indian Journal of Plastic Surgery Volume 36 ; 2003 ; 36 ; https://www.ijps.org/ >
-    au < exists ; 2004 ; Indian Journal of Plastic Surgery Volume 37 ; 2004 ; 37 ; https://www.ijps.org/ >
-    au < exists ; 2005 ; Indian Journal of Plastic Surgery Volume 38 ; 2005 ; 38 ; https://www.ijps.org/ >
-    au < exists ; 2006 ; Indian Journal of Plastic Surgery Volume 39 ; 2006 ; 39 ; https://www.ijps.org/ >
-    au < exists ; 2007 ; Indian Journal of Plastic Surgery Volume 40 ; 2007 ; 40 ; https://www.ijps.org/ >
-    au < exists ; 2008 ; Indian Journal of Plastic Surgery Volume 41 ; 2008 ; 41 ; https://www.ijps.org/ >
-    au < exists ; 2009 ; Indian Journal of Plastic Surgery Volume 42 ; 2009 ; 42 ; https://www.ijps.org/ >
-    au < exists ; 2010 ; Indian Journal of Plastic Surgery Volume 43 ; 2010 ; 43 ; https://www.ijps.org/ >
+    au < doNotProcess ; 2003 ; Indian Journal of Plastic Surgery Volume 36 ; 2003 ; 36 ; https://www.ijps.org/ >
+    au < doNotProcess ; 2004 ; Indian Journal of Plastic Surgery Volume 37 ; 2004 ; 37 ; https://www.ijps.org/ >
+    au < doNotProcess ; 2005 ; Indian Journal of Plastic Surgery Volume 38 ; 2005 ; 38 ; https://www.ijps.org/ >
+    au < doNotProcess ; 2006 ; Indian Journal of Plastic Surgery Volume 39 ; 2006 ; 39 ; https://www.ijps.org/ >
+    au < doNotProcess ; 2007 ; Indian Journal of Plastic Surgery Volume 40 ; 2007 ; 40 ; https://www.ijps.org/ >
+    au < doNotProcess ; 2008 ; Indian Journal of Plastic Surgery Volume 41 ; 2008 ; 41 ; https://www.ijps.org/ >
+    au < doNotProcess ; 2009 ; Indian Journal of Plastic Surgery Volume 42 ; 2009 ; 42 ; https://www.ijps.org/ >
+    au < doNotProcess ; 2010 ; Indian Journal of Plastic Surgery Volume 43 ; 2010 ; 43 ; https://www.ijps.org/ >
     au < released ; 2011 ; Indian Journal of Plastic Surgery Volume 44 ; 2011 ; 44 ; http://www.ijps.org/ >
     au < released ; 2012 ; Indian Journal of Plastic Surgery Volume 45 ; 2012 ; 45 ; http://www.ijps.org/ >
     au < released ; 2013 ; Indian Journal of Plastic Surgery Volume 46 ; 2013 ; 46 ; http://www.ijps.org/ >
@@ -1685,9 +1685,9 @@
     au < released ; 2015 ; Indian Journal of Plastic Surgery Volume 48 ; 2015 ; 48 ; http://www.ijps.org/ >
     au < released ; 2016 ; Indian Journal of Plastic Surgery Volume 49 ; 2016 ; 49 ; http://www.ijps.org/ >
     au < released ; 2017 ; Indian Journal of Plastic Surgery Volume 50 ; 2017 ; 50 ; http://www.ijps.org/ >
-    au < exists ; 2018 ; Indian Journal of Plastic Surgery Volume 51 ; 2018 ; 51 ; https://www.ijps.org/ >
-    au < expected ; 2019 ; Indian Journal of Plastic Surgery Volume 52 ; 2019 ; 52 ; https://www.ijps.org/ >
-    au < expected ; 2020 ; Indian Journal of Plastic Surgery Volume 53 ; 2020 ; 53 ; https://www.ijps.org/ >
+    au < doNotProcess ; 2018 ; Indian Journal of Plastic Surgery Volume 51 ; 2018 ; 51 ; https://www.ijps.org/ >
+    au < doNotProcess ; 2019 ; Indian Journal of Plastic Surgery Volume 52 ; 2019 ; 52 ; https://www.ijps.org/ >
+    au < exists ; 2020 ; Indian Journal of Plastic Surgery Volume 53 ; 2020 ; 53 ; https://www.ijps.org/ >
 
   }
 
@@ -1780,20 +1780,21 @@
 
 #    param[base_url] = http://www.ijpm.info/
     param[journal_issn] = 0253-7176
+    #Moved to Sage
 
-    au < exists ; 2008 ; Indian Journal of Psychological Medicine Volume 30 ; 2008 ; 30 ; https://www.ijpm.info/ >
-    au < exists ; 2009 ; Indian Journal of Psychological Medicine Volume 31 ; 2009 ; 31 ; https://www.ijpm.info/ >
-    au < exists ; 2010 ; Indian Journal of Psychological Medicine Volume 32 ; 2010 ; 32 ; https://www.ijpm.info/ >
-    au < released ; 2011 ; Indian Journal of Psychological Medicine Volume 33 ; 2011 ; 33 ; http://www.ijpm.info/ >
-    au < released ; 2012 ; Indian Journal of Psychological Medicine Volume 34 ; 2012 ; 34 ; http://www.ijpm.info/ >
-    au < released ; 2013 ; Indian Journal of Psychological Medicine Volume 35 ; 2013 ; 35 ; http://www.ijpm.info/ >
-    au < released ; 2014 ; Indian Journal of Psychological Medicine Volume 36 ; 2014 ; 36 ; http://www.ijpm.info/ >
-    au < released ; 2015 ; Indian Journal of Psychological Medicine Volume 37 ; 2015 ; 37 ; http://www.ijpm.info/ >
-    au < released ; 2016 ; Indian Journal of Psychological Medicine Volume 38 ; 2016 ; 38 ; http://www.ijpm.info/ >
-    au < released ; 2017 ; Indian Journal of Psychological Medicine Volume 39 ; 2017 ; 39 ; http://www.ijpm.info/ >
-    au < released ; 2018 ; Indian Journal of Psychological Medicine Volume 40 ; 2018 ; 40 ; http://www.ijpm.info/ >
-    au < exists ; 2019 ; Indian Journal of Psychological Medicine Volume 41 ; 2019 ; 41 ; https://www.ijpm.info/ >
-    au < exists ; 2020 ; Indian Journal of Psychological Medicine Volume 42 ; 2020 ; 42 ; https://www.ijpm.info/ >
+    au < doNotProcess ; 2008 ; Indian Journal of Psychological Medicine Volume 30 ; 2008 ; 30 ; https://www.ijpm.info/ >
+    au < doNotProcess ; 2009 ; Indian Journal of Psychological Medicine Volume 31 ; 2009 ; 31 ; https://www.ijpm.info/ >
+    au < doNotProcess ; 2010 ; Indian Journal of Psychological Medicine Volume 32 ; 2010 ; 32 ; https://www.ijpm.info/ >
+    au < down ; 2011 ; Indian Journal of Psychological Medicine Volume 33 ; 2011 ; 33 ; http://www.ijpm.info/ >
+    au < down ; 2012 ; Indian Journal of Psychological Medicine Volume 34 ; 2012 ; 34 ; http://www.ijpm.info/ >
+    au < down ; 2013 ; Indian Journal of Psychological Medicine Volume 35 ; 2013 ; 35 ; http://www.ijpm.info/ >
+    au < down ; 2014 ; Indian Journal of Psychological Medicine Volume 36 ; 2014 ; 36 ; http://www.ijpm.info/ >
+    au < down ; 2015 ; Indian Journal of Psychological Medicine Volume 37 ; 2015 ; 37 ; http://www.ijpm.info/ >
+    au < down ; 2016 ; Indian Journal of Psychological Medicine Volume 38 ; 2016 ; 38 ; http://www.ijpm.info/ >
+    au < down ; 2017 ; Indian Journal of Psychological Medicine Volume 39 ; 2017 ; 39 ; http://www.ijpm.info/ >
+    au < down ; 2018 ; Indian Journal of Psychological Medicine Volume 40 ; 2018 ; 40 ; http://www.ijpm.info/ >
+    au < doNotProcess ; 2019 ; Indian Journal of Psychological Medicine Volume 41 ; 2019 ; 41 ; https://www.ijpm.info/ >
+    au < doNotProcess ; 2020 ; Indian Journal of Psychological Medicine Volume 42 ; 2020 ; 42 ; https://www.ijpm.info/ >
 
   }
 
@@ -1808,17 +1809,17 @@
 #    param[base_url] = http://www.ijph.in/
     param[journal_issn] = 0019-557X 
 
-    au < exists ; 1981 ; Indian Journal of Public Health Volume 24 ; 1981 ; 24 ; https://www.ijph.in/ >
+    au < manifest ; 1981 ; Indian Journal of Public Health Volume 24 ; 1981 ; 24 ; https://www.ijph.in/ >
     au < manifest ; 1981 ; Indian Journal of Public Health Volume 25 ; 1981 ; 25 ; https://www.ijph.in/ >
     au < manifest ; 1982 ; Indian Journal of Public Health Volume 26 ; 1982 ; 26 ; https://www.ijph.in/ >
     au < manifest ; 1983 ; Indian Journal of Public Health Volume 27 ; 1983 ; 27 ; https://www.ijph.in/ >
-    au < exists ; 1984 ; Indian Journal of Public Health Volume 28 ; 1984 ; 28 ; https://www.ijph.in/ >
+    au < manifest ; 1984 ; Indian Journal of Public Health Volume 28 ; 1984 ; 28 ; https://www.ijph.in/ >
     au < manifest ; 1985 ; Indian Journal of Public Health Volume 29 ; 1985 ; 29 ; https://www.ijph.in/ >
-    au < exists ; 1986 ; Indian Journal of Public Health Volume 30 ; 1986 ; 30 ; https://www.ijph.in/ >
+    au < manifest ; 1986 ; Indian Journal of Public Health Volume 30 ; 1986 ; 30 ; https://www.ijph.in/ >
     au < manifest ; 1987 ; Indian Journal of Public Health Volume 31 ; 1987 ; 31 ; https://www.ijph.in/ >
     au < manifest ; 1988 ; Indian Journal of Public Health Volume 32 ; 1988 ; 32 ; https://www.ijph.in/ >
     au < manifest ; 1989 ; Indian Journal of Public Health Volume 33 ; 1989 ; 33 ; https://www.ijph.in/ >
-    au < exists ; 1990 ; Indian Journal of Public Health Volume 34 ; 1990 ; 34 ; https://www.ijph.in/ >
+    au < manifest ; 1990 ; Indian Journal of Public Health Volume 34 ; 1990 ; 34 ; https://www.ijph.in/ >
     au < manifest ; 1991 ; Indian Journal of Public Health Volume 35 ; 1991 ; 35 ; https://www.ijph.in/ >
     au < manifest ; 1992 ; Indian Journal of Public Health Volume 36 ; 1992 ; 36 ; https://www.ijph.in/ >
     au < manifest ; 1993 ; Indian Journal of Public Health Volume 37 ; 1993 ; 37 ; https://www.ijph.in/ >
@@ -1926,19 +1927,40 @@
    >
 
 #    param[base_url] = http://www.ijstd.org/
+    {
+    param[journal_issn] = 2589-0557
+
+    au < manifest ; 2007 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 28 ; 2007 ; 28 ; https://www.ijstd.org/ >
+    au < manifest ; 2008 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 29 ; 2008 ; 29 ; https://www.ijstd.org/ >
+    au < manifest ; 2009 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 30 ; 2009 ; 30 ; https://www.ijstd.org/ >
+    au < manifest ; 2010 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 31 ; 2010 ; 31 ; https://www.ijstd.org/ >
+    au < doNotProcess ; 2011 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 32 ; 2011 ; 32 ; http://www.ijstd.org/ >
+    au < doNotProcess ; 2012 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 33 ; 2012 ; 33 ; http://www.ijstd.org/ >
+    au < doNotProcess ; 2013 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 34 ; 2013 ; 34 ; http://www.ijstd.org/ >
+    au < doNotProcess ; 2014 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 35 ; 2014 ; 35 ; http://www.ijstd.org/ >
+    au < doNotProcess ; 2015 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 36 ; 2015 ; 36 ; http://www.ijstd.org/ >
+    au < doNotProcess ; 2016 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 37 ; 2016 ; 37 ; http://www.ijstd.org/ >
+    au < manifest ; 2017 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 38 ; 2017 ; 38 ; https://www.ijstd.org/ >
+    au < manifest ; 2018 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 39 ; 2018 ; 39 ; https://www.ijstd.org/ >
+    au < manifest ; 2019 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 40 ; 2019 ; 40 ; https://www.ijstd.org/ >
+    au < manifest ; 2020 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 41 ; 2020 ; 41 ; https://www.ijstd.org/ >
+
+    }
+    {
     param[journal_issn] = 0253-7184
+    #old issn. issn changed.
 
-    au < exists ; 2007 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 28 ; 2007 ; 28 ; https://www.ijstd.org/ >
-    au < exists ; 2008 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 29 ; 2008 ; 29 ; https://www.ijstd.org/ >
-    au < exists ; 2009 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 30 ; 2009 ; 30 ; https://www.ijstd.org/ >
-    au < exists ; 2010 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 31 ; 2010 ; 31 ; https://www.ijstd.org/ >
-    au < released ; 2011 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 32 ; 2011 ; 32 ; http://www.ijstd.org/ >
-    au < released ; 2012 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 33 ; 2012 ; 33 ; http://www.ijstd.org/ >
-    au < released ; 2013 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 34 ; 2013 ; 34 ; http://www.ijstd.org/ >
-    au < released ; 2014 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 35 ; 2014 ; 35 ; http://www.ijstd.org/ >
-    au < released ; 2015 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 36 ; 2015 ; 36 ; http://www.ijstd.org/ >
-    au < released ; 2016 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 37 ; 2016 ; 37 ; http://www.ijstd.org/ >
-
+    au < doNotProcess ; 2007 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 28 ; 2007 ; 28 ; https://www.ijstd.org/ >
+    au < doNotProcess ; 2008 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 29 ; 2008 ; 29 ; https://www.ijstd.org/ >
+    au < doNotProcess ; 2009 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 30 ; 2009 ; 30 ; https://www.ijstd.org/ >
+    au < doNotProcess ; 2010 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 31 ; 2010 ; 31 ; https://www.ijstd.org/ >
+    au < down ; 2011 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 32 ; 2011 ; 32 ; http://www.ijstd.org/ >
+    au < down ; 2012 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 33 ; 2012 ; 33 ; http://www.ijstd.org/ >
+    au < down ; 2013 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 34 ; 2013 ; 34 ; http://www.ijstd.org/ >
+    au < down ; 2014 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 35 ; 2014 ; 35 ; http://www.ijstd.org/ >
+    au < down ; 2015 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 36 ; 2015 ; 36 ; http://www.ijstd.org/ >
+    au < down ; 2016 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 37 ; 2016 ; 37 ; http://www.ijstd.org/ >
+    }
   }
 
   {
@@ -1983,20 +2005,20 @@
     au < manifest ; 1994 ; Indian Journal of Urology Volume 10 ; 1994 ; 10 ; https://www.indianjurol.com/ >
     au < doesNotExist ; 1995 ; Indian Journal of Urology Volume 11 ; 1995 ; 11 ; http://www.indianjurol.com/ >
     au < manifest ; 1996 ; Indian Journal of Urology Volume 12 ; 1996 ; 12 ; https://www.indianjurol.com/ >
-    au < exists ; 1997 ; Indian Journal of Urology Volume 13 ; 1997 ; 13 ; https://www.indianjurol.com/ >
-    au < exists ; 1998 ; Indian Journal of Urology Volume 14 ; 1998 ; 14 ; https://www.indianjurol.com/ >
+    au < manifest ; 1997 ; Indian Journal of Urology Volume 13 ; 1997 ; 13 ; https://www.indianjurol.com/ >
+    au < manifest ; 1998 ; Indian Journal of Urology Volume 14 ; 1998 ; 14 ; https://www.indianjurol.com/ >
     au < manifest ; 1999 ; Indian Journal of Urology Volume 15 ; 1999 ; 15 ; https://www.indianjurol.com/ >
     au < manifest ; 2000 ; Indian Journal of Urology Volume 16 ; 2000 ; 16 ; https://www.indianjurol.com/ >
     au < manifest ; 2001 ; Indian Journal of Urology Volume 17 ; 2001 ; 17 ; https://www.indianjurol.com/ >
-    au < exists ; 2002 ; Indian Journal of Urology Volume 18 ; 2002 ; 18 ; https://www.indianjurol.com/ >
+    au < manifest ; 2002 ; Indian Journal of Urology Volume 18 ; 2002 ; 18 ; https://www.indianjurol.com/ >
     au < manifest ; 2003 ; Indian Journal of Urology Volume 19 ; 2003 ; 19 ; https://www.indianjurol.com/ >
-    au < exists ; 2004 ; Indian Journal of Urology Volume 20 ; 2004 ; 20 ; https://www.indianjurol.com/ >
+    au < manifest ; 2004 ; Indian Journal of Urology Volume 20 ; 2004 ; 20 ; https://www.indianjurol.com/ >
     au < manifest ; 2005 ; Indian Journal of Urology Volume 21 ; 2005 ; 21 ; https://www.indianjurol.com/ >
-    au < exists ; 2006 ; Indian Journal of Urology Volume 22 ; 2006 ; 22 ; https://www.indianjurol.com/ >
-    au < exists ; 2007 ; Indian Journal of Urology Volume 23 ; 2007 ; 23 ; https://www.indianjurol.com/ >
-    au < exists ; 2008 ; Indian Journal of Urology Volume 24 ; 2008 ; 24 ; https://www.indianjurol.com/ >
+    au < manifest ; 2006 ; Indian Journal of Urology Volume 22 ; 2006 ; 22 ; https://www.indianjurol.com/ >
+    au < manifest ; 2007 ; Indian Journal of Urology Volume 23 ; 2007 ; 23 ; https://www.indianjurol.com/ >
+    au < manifest ; 2008 ; Indian Journal of Urology Volume 24 ; 2008 ; 24 ; https://www.indianjurol.com/ >
     au < manifest ; 2009 ; Indian Journal of Urology Volume 25 ; 2009 ; 25 ; https://www.indianjurol.com/ >
-    au < exists ; 2010 ; Indian Journal of Urology Volume 26 ; 2010 ; 26 ; https://www.indianjurol.com/ >
+    au < manifest ; 2010 ; Indian Journal of Urology Volume 26 ; 2010 ; 26 ; https://www.indianjurol.com/ >
     au < released ; 2011 ; Indian Journal of Urology Volume 27 ; 2011 ; 27 ; http://www.indianjurol.com/ >
     au < released ; 2012 ; Indian Journal of Urology Volume 28 ; 2012 ; 28 ; http://www.indianjurol.com/ >
     au < released ; 2013 ; Indian Journal of Urology Volume 29 ; 2013 ; 29 ; http://www.indianjurol.com/ >
@@ -2006,7 +2028,7 @@
     au < released ; 2017 ; Indian Journal of Urology Volume 33 ; 2017 ; 33 ; http://www.indianjurol.com/ >
     au < released ; 2018 ; Indian Journal of Urology Volume 34 ; 2018 ; 34 ; http://www.indianjurol.com/ >
     au < manifest ; 2019 ; Indian Journal of Urology Volume 35 ; 2019 ; 35 ; https://www.indianjurol.com/ >
-    au < exists ; 2020 ; Indian Journal of Urology Volume 36 ; 2020 ; 36 ; https://www.indianjurol.com/ >
+    au < manifest ; 2020 ; Indian Journal of Urology Volume 36 ; 2020 ; 36 ; https://www.indianjurol.com/ >
 
   }
 
@@ -2022,8 +2044,8 @@
     param[journal_issn] = 0972-6748
 
     au < manifest ; 2008 ; Industrial Psychiatry Journal Volume 17 ; 2008 ; 17 ; https://www.industrialpsychiatry.org/ >
-    au < exists ; 2009 ; Industrial Psychiatry Journal Volume 18 ; 2009 ; 18 ; https://www.industrialpsychiatry.org/ >
-    au < exists ; 2010 ; Industrial Psychiatry Journal Volume 19 ; 2010 ; 19 ; https://www.industrialpsychiatry.org/ >
+    au < manifest ; 2009 ; Industrial Psychiatry Journal Volume 18 ; 2009 ; 18 ; https://www.industrialpsychiatry.org/ >
+    au < manifest ; 2010 ; Industrial Psychiatry Journal Volume 19 ; 2010 ; 19 ; https://www.industrialpsychiatry.org/ >
     au < released ; 2011 ; Industrial Psychiatry Journal Volume 20 ; 2011 ; 20 ; http://www.industrialpsychiatry.org/ >
     au < released ; 2012 ; Industrial Psychiatry Journal Volume 21 ; 2012 ; 21 ; http://www.industrialpsychiatry.org/ >
     au < released ; 2013 ; Industrial Psychiatry Journal Volume 22 ; 2013 ; 22 ; http://www.industrialpsychiatry.org/ >
@@ -2033,7 +2055,7 @@
     au < released ; 2017 ; Industrial Psychiatry Journal Volume 26 ; 2017 ; 26 ; http://www.industrialpsychiatry.org/ >
     au < released ; 2018 ; Industrial Psychiatry Journal Volume 27 ; 2018 ; 27 ; http://www.industrialpsychiatry.org/ >
     au < manifest ; 2019 ; Industrial Psychiatry Journal Volume 28 ; 2019 ; 28 ; https://www.industrialpsychiatry.org/ >
-    au < expected ; 2020 ; Industrial Psychiatry Journal Volume 29 ; 2020 ; 29 ; https://www.industrialpsychiatry.org/ >
+    au < manifest ; 2020 ; Industrial Psychiatry Journal Volume 29 ; 2020 ; 29 ; https://www.industrialpsychiatry.org/ >
 
   }
 
@@ -2056,7 +2078,7 @@
     au < released ; 2016 ; International Journal of Applied and Basic Medical Research Volume 6 ; 2016 ; 6 ; http://www.ijabmr.org/ >
     au < released ; 2017 ; International Journal of Applied and Basic Medical Research Volume 7 ; 2017 ; 7 ; http://www.ijabmr.org/ >
     au < manifest ; 2018 ; International Journal of Applied and Basic Medical Research Volume 8 ; 2018 ; 8 ; https://www.ijabmr.org/ >
-    au < exists ; 2019 ; International Journal of Applied and Basic Medical Research Volume 9 ; 2019 ; 9 ; https://www.ijabmr.org/ >
+    au < manifest ; 2019 ; International Journal of Applied and Basic Medical Research Volume 9 ; 2019 ; 9 ; https://www.ijabmr.org/ >
     au < manifest ; 2020 ; International Journal of Applied and Basic Medical Research Volume 10 ; 2020 ; 10 ; https://www.ijabmr.org/ >
 
   }
@@ -2158,17 +2180,16 @@
 
 #    param[base_url] = http://www.jpionline.org/
     param[journal_issn] = 2230-973X 
+    #Moved to OJS
 
-    au < released ; 2011 ; International Journal of Pharmaceutical Investigation Volume 1 ; 2011 ; 1 ; http://www.jpionline.org/ >
-    au < released ; 2012 ; International Journal of Pharmaceutical Investigation Volume 2 ; 2012 ; 2 ; http://www.jpionline.org/ >
-    au < released ; 2013 ; International Journal of Pharmaceutical Investigation Volume 3 ; 2013 ; 3 ; http://www.jpionline.org/ >
-    au < released ; 2014 ; International Journal of Pharmaceutical Investigation Volume 4 ; 2014 ; 4 ; http://www.jpionline.org/ >
-    au < released ; 2015 ; International Journal of Pharmaceutical Investigation Volume 5 ; 2015 ; 5 ; http://www.jpionline.org/ >
-    au < released ; 2016 ; International Journal of Pharmaceutical Investigation Volume 6 ; 2016 ; 6 ; http://www.jpionline.org/ >
-    au < released ; 2017 ; International Journal of Pharmaceutical Investigation Volume 7 ; 2017 ; 7 ; http://www.jpionline.org/ >
-    au < exists ; 2018 ; International Journal of Pharmaceutical Investigation Volume 8 ; 2018 ; 8 ; https://www.jpionline.org/ >
-    au < expected ; 2019 ; International Journal of Pharmaceutical Investigation Volume 9 ; 2019 ; 9 ; https://www.jpionline.org/ >
-    au < expected ; 2020 ; International Journal of Pharmaceutical Investigation Volume 10 ; 2020 ; 10 ; https://www.jpionline.org/ >
+    au < down ; 2011 ; International Journal of Pharmaceutical Investigation Volume 1 ; 2011 ; 1 ; http://www.jpionline.org/ >
+    au < down ; 2012 ; International Journal of Pharmaceutical Investigation Volume 2 ; 2012 ; 2 ; http://www.jpionline.org/ >
+    au < down ; 2013 ; International Journal of Pharmaceutical Investigation Volume 3 ; 2013 ; 3 ; http://www.jpionline.org/ >
+    au < down ; 2014 ; International Journal of Pharmaceutical Investigation Volume 4 ; 2014 ; 4 ; http://www.jpionline.org/ >
+    au < down ; 2015 ; International Journal of Pharmaceutical Investigation Volume 5 ; 2015 ; 5 ; http://www.jpionline.org/ >
+    au < down ; 2016 ; International Journal of Pharmaceutical Investigation Volume 6 ; 2016 ; 6 ; http://www.jpionline.org/ >
+    au < down ; 2017 ; International Journal of Pharmaceutical Investigation Volume 7 ; 2017 ; 7 ; http://www.jpionline.org/ >
+    au < doNotProcess ; 2018 ; International Journal of Pharmaceutical Investigation Volume 8 ; 2018 ; 8 ; https://www.jpionline.org/ >
 
   }
 
@@ -2208,7 +2229,7 @@
     au < released ; 2011 ; International Journal of Trichology Volume 3 ; 2011 ; 3 ; http://www.ijtrichology.com/ >
     au < released ; 2012 ; International Journal of Trichology Volume 4 ; 2012 ; 4 ; http://www.ijtrichology.com/ >
     au < released ; 2013 ; International Journal of Trichology Volume 5 ; 2013 ; 5 ; http://www.ijtrichology.com/ >
-    au < exists ; 2014 ; International Journal of Trichology Volume 6 ; 2014 ; 6 ; https://www.ijtrichology.com/ >
+    au < manifest ; 2014 ; International Journal of Trichology Volume 6 ; 2014 ; 6 ; https://www.ijtrichology.com/ >
     au < released ; 2015 ; International Journal of Trichology Volume 7 ; 2015 ; 7 ; http://www.ijtrichology.com/ >
     au < released ; 2016 ; International Journal of Trichology Volume 8 ; 2016 ; 8 ; http://www.ijtrichology.com/ >
     au < released ; 2017 ; International Journal of Trichology Volume 9 ; 2017 ; 9 ; http://www.ijtrichology.com/ >
@@ -2229,9 +2250,9 @@
 #    param[base_url] = http://www.ijoy.org.in/
     param[journal_issn] = 0973-6131
 
-    au < exists ; 2008 ; International Journal of Yoga Volume 1 ; 2008 ; 1 ; https://www.ijoy.org.in/ >
-    au < exists ; 2009 ; International Journal of Yoga Volume 2 ; 2009 ; 2 ; https://www.ijoy.org.in/ >
-    au < exists ; 2010 ; International Journal of Yoga Volume 3 ; 2010 ; 3 ; https://www.ijoy.org.in/ >
+    au < manifest ; 2008 ; International Journal of Yoga Volume 1 ; 2008 ; 1 ; https://www.ijoy.org.in/ >
+    au < manifest ; 2009 ; International Journal of Yoga Volume 2 ; 2009 ; 2 ; https://www.ijoy.org.in/ >
+    au < manifest ; 2010 ; International Journal of Yoga Volume 3 ; 2010 ; 3 ; https://www.ijoy.org.in/ >
     au < released ; 2011 ; International Journal of Yoga Volume 4 ; 2011 ; 4 ; http://www.ijoy.org.in/ >
     au < released ; 2012 ; International Journal of Yoga Volume 5 ; 2012 ; 5 ; http://www.ijoy.org.in/ >
     au < released ; 2013 ; International Journal of Yoga Volume 6 ; 2013 ; 6 ; http://www.ijoy.org.in/ >
@@ -2240,8 +2261,8 @@
     au < released ; 2016 ; International Journal of Yoga Volume 9 ; 2016 ; 9 ; http://www.ijoy.org.in/ >
     au < released ; 2017 ; International Journal of Yoga Volume 10 ; 2017 ; 10 ; http://www.ijoy.org.in/ >
     au < released ; 2018 ; International Journal of Yoga Volume 11 ; 2018 ; 11 ; http://www.ijoy.org.in/ >
-    au < exists ; 2019 ; International Journal of Yoga Volume 12 ; 2019 ; 12 ; https://www.ijoy.org.in/ >
-    au < exists ; 2020 ; International Journal of Yoga Volume 13 ; 2020 ; 13 ; https://www.ijoy.org.in/ >
+    au < manifest ; 2019 ; International Journal of Yoga Volume 12 ; 2019 ; 12 ; https://www.ijoy.org.in/ >
+    au < manifest ; 2020 ; International Journal of Yoga Volume 13 ; 2020 ; 13 ; https://www.ijoy.org.in/ >
 
   }
 
@@ -2263,7 +2284,7 @@
     au < released ; 2017 ; Iranian Journal of Nursing and Midwifery Research Volume 22 ; 2017 ; 22 ; http://www.ijnmrjournal.net/ >
     au < released ; 2018 ; Iranian Journal of Nursing and Midwifery Research Volume 23 ; 2018 ; 23 ; http://www.ijnmrjournal.net/ >
     au < manifest ; 2019 ; Iranian Journal of Nursing and Midwifery Research Volume 24 ; 2019 ; 24 ; https://www.ijnmrjournal.net/ >
-    au < exists ; 2020 ; Iranian Journal of Nursing and Midwifery Research Volume 25 ; 2020 ; 25 ; https://www.ijnmrjournal.net/ >
+    au < manifest ; 2020 ; Iranian Journal of Nursing and Midwifery Research Volume 25 ; 2020 ; 25 ; https://www.ijnmrjournal.net/ >
 
   }
 
@@ -2293,7 +2314,7 @@
 #    param[base_url] = http://www.japtr.org/
     param[journal_issn] = 2231-4040
 
-    au < exists ; 2010 ; Journal of Advanced Pharmaceutical Technology & Research Volume 1 ; 2010 ; 1 ; https://www.japtr.org/ >
+    au < manifest ; 2010 ; Journal of Advanced Pharmaceutical Technology & Research Volume 1 ; 2010 ; 1 ; https://www.japtr.org/ >
     au < released ; 2011 ; Journal of Advanced Pharmaceutical Technology & Research Volume 2 ; 2011 ; 2 ; http://www.japtr.org/ >
     au < released ; 2012 ; Journal of Advanced Pharmaceutical Technology & Research Volume 3 ; 2012 ; 3 ; http://www.japtr.org/ >
     au < released ; 2013 ; Journal of Advanced Pharmaceutical Technology & Research Volume 4 ; 2013 ; 4 ; http://www.japtr.org/ >
@@ -2302,7 +2323,7 @@
     au < released ; 2016 ; Journal of Advanced Pharmaceutical Technology & Research Volume 7 ; 2016 ; 7 ; http://www.japtr.org/ >
     au < released ; 2017 ; Journal of Advanced Pharmaceutical Technology & Research Volume 8 ; 2017 ; 8 ; http://www.japtr.org/ >
     au < released ; 2018 ; Journal of Advanced Pharmaceutical Technology & Research Volume 9 ; 2018 ; 9 ; http://www.japtr.org/ >
-    au < exists ; 2019 ; Journal of Advanced Pharmaceutical Technology & Research Volume 10 ; 2019 ; 10 ; https://www.japtr.org/ >
+    au < manifest ; 2019 ; Journal of Advanced Pharmaceutical Technology & Research Volume 10 ; 2019 ; 10 ; https://www.japtr.org/ >
     au < manifest ; 2020 ; Journal of Advanced Pharmaceutical Technology & Research Volume 11 ; 2020 ; 11 ; https://www.japtr.org/ >
 
   }
@@ -2318,12 +2339,12 @@
 #    param[base_url] = http://www.joacp.org/
     param[journal_issn] = 0970-9185
 
-    au < exists ; 2005 ; Journal of Anaesthesiology Clinical Pharmacology Volume 21 ; 2005 ; 21 ; https://www.joacp.org/ >
-    au < exists ; 2006 ; Journal of Anaesthesiology Clinical Pharmacology Volume 22 ; 2006 ; 22 ; https://www.joacp.org/ >
+    au < manifest ; 2005 ; Journal of Anaesthesiology Clinical Pharmacology Volume 21 ; 2005 ; 21 ; https://www.joacp.org/ >
+    au < manifest ; 2006 ; Journal of Anaesthesiology Clinical Pharmacology Volume 22 ; 2006 ; 22 ; https://www.joacp.org/ >
     au < manifest ; 2007 ; Journal of Anaesthesiology Clinical Pharmacology Volume 23 ; 2007 ; 23 ; https://www.joacp.org/ >
-    au < exists ; 2008 ; Journal of Anaesthesiology Clinical Pharmacology Volume 24 ; 2008 ; 24 ; https://www.joacp.org/ >
+    au < manifest ; 2008 ; Journal of Anaesthesiology Clinical Pharmacology Volume 24 ; 2008 ; 24 ; https://www.joacp.org/ >
     au < manifest ; 2009 ; Journal of Anaesthesiology Clinical Pharmacology Volume 25 ; 2009 ; 25 ; https://www.joacp.org/ >
-    au < exists ; 2010 ; Journal of Anaesthesiology Clinical Pharmacology Volume 26 ; 2010 ; 26 ; https://www.joacp.org/ >
+    au < manifest ; 2010 ; Journal of Anaesthesiology Clinical Pharmacology Volume 26 ; 2010 ; 26 ; https://www.joacp.org/ >
     au < released ; 2011 ; Journal of Anaesthesiology Clinical Pharmacology Volume 27 ; 2011 ; 27 ; http://www.joacp.org/ >
     au < released ; 2012 ; Journal of Anaesthesiology Clinical Pharmacology Volume 28 ; 2012 ; 28 ; http://www.joacp.org/ >
     au < released ; 2013 ; Journal of Anaesthesiology Clinical Pharmacology Volume 29 ; 2013 ; 29 ; http://www.joacp.org/ >
@@ -2331,7 +2352,7 @@
     au < released ; 2015 ; Journal of Anaesthesiology Clinical Pharmacology Volume 31 ; 2015 ; 31 ; http://www.joacp.org/ >
     au < released ; 2016 ; Journal of Anaesthesiology Clinical Pharmacology Volume 32 ; 2016 ; 32 ; http://www.joacp.org/ >
     au < released ; 2017 ; Journal of Anaesthesiology Clinical Pharmacology Volume 33 ; 2017 ; 33 ; http://www.joacp.org/ >
-    au < exists ; 2018 ; Journal of Anaesthesiology Clinical Pharmacology Volume 34 ; 2018 ; 34 ; https://www.joacp.org/ >
+    au < manifest ; 2018 ; Journal of Anaesthesiology Clinical Pharmacology Volume 34 ; 2018 ; 34 ; https://www.joacp.org/ >
     au < manifest ; 2019 ; Journal of Anaesthesiology Clinical Pharmacology Volume 35 ; 2019 ; 35 ; https://www.joacp.org/ >
     au < manifest ; 2020 ; Journal of Anaesthesiology Clinical Pharmacology Volume 36 ; 2020 ; 36 ; https://www.joacp.org/ >
 
@@ -2386,7 +2407,7 @@
 
     au < manifest ; 2005 ; Journal of Cancer Research and Therapeutics Volume 1 ; 2005 ; 1 ; https://www.cancerjournal.net/ >
     au < manifest ; 2006 ; Journal of Cancer Research and Therapeutics Volume 2 ; 2006 ; 2 ; https://www.cancerjournal.net/ >
-    au < exists ; 2007 ; Journal of Cancer Research and Therapeutics Volume 3 ; 2007 ; 3 ; https://www.cancerjournal.net/ >
+    au < manifest ; 2007 ; Journal of Cancer Research and Therapeutics Volume 3 ; 2007 ; 3 ; https://www.cancerjournal.net/ >
     au < manifest ; 2008 ; Journal of Cancer Research and Therapeutics Volume 4 ; 2008 ; 4 ; https://www.cancerjournal.net/ >
     au < exists ; 2009 ; Journal of Cancer Research and Therapeutics Volume 5 ; 2009 ; 5 ; https://www.cancerjournal.net/ >
     au < manifest ; 2010 ; Journal of Cancer Research and Therapeutics Volume 6 ; 2010 ; 6 ; https://www.cancerjournal.net/ >
@@ -2417,25 +2438,25 @@
     # instead of by a listing like this: http://www.jcnonweb.com/backissues.asp
     # does have a lockss/clockss permission statement. http://www.carcinogenesis.com/lockss.txt
 
-    au < notReady ; 2002 ; Journal of Carcinogenesis Volume 1 ; 2002 ; 1 ; http://www.carcinogenesis.com/ >
-    au < notReady ; 2003 ; Journal of Carcinogenesis Volume 2 ; 2003 ; 2 ; http://www.carcinogenesis.com/ >
-    au < notReady ; 2004 ; Journal of Carcinogenesis Volume 3 ; 2004 ; 3 ; http://www.carcinogenesis.com/ >
-    au < notReady ; 2005 ; Journal of Carcinogenesis Volume 4 ; 2005 ; 4 ; http://www.carcinogenesis.com/ >
-    au < notReady ; 2006 ; Journal of Carcinogenesis Volume 5 ; 2006 ; 5 ; http://www.carcinogenesis.com/ >
-    au < notReady ; 2007 ; Journal of Carcinogenesis Volume 6 ; 2007 ; 6 ; http://www.carcinogenesis.com/ >
-    au < notReady ; 2008 ; Journal of Carcinogenesis Volume 7 ; 2008 ; 7 ; http://www.carcinogenesis.com/ >
-    au < notReady ; 2009 ; Journal of Carcinogenesis Volume 8 ; 2009 ; 8 ; http://www.carcinogenesis.com/ >
-    au < notReady ; 2010 ; Journal of Carcinogenesis Volume 9 ; 2010 ; 9 ; http://www.carcinogenesis.com/ >
-    au < notReady ; 2011 ; Journal of Carcinogenesis Volume 10 ; 2011 ; 10 ; http://www.carcinogenesis.com/ >
-    au < notReady ; 2012 ; Journal of Carcinogenesis Volume 11 ; 2012 ; 11 ; http://www.carcinogenesis.com/ >
-    au < notReady ; 2013 ; Journal of Carcinogenesis Volume 12 ; 2013 ; 12 ; http://www.carcinogenesis.com/ >
-    au < notReady ; 2014 ; Journal of Carcinogenesis Volume 13 ; 2014 ; 13 ; http://www.carcinogenesis.com/ >
-    au < notReady ; 2015 ; Journal of Carcinogenesis Volume 14 ; 2015 ; 14 ; http://www.carcinogenesis.com/ >
-    au < notReady ; 2016 ; Journal of Carcinogenesis Volume 15 ; 2016 ; 15 ; http://www.carcinogenesis.com/ >
-    au < notReady ; 2017 ; Journal of Carcinogenesis Volume 16 ; 2017 ; 16 ; http://www.carcinogenesis.com/ >
-    au < notReady ; 2018 ; Journal of Carcinogenesis Volume 17 ; 2018 ; 17 ; http://www.carcinogenesis.com/ >
-    au < exists ; 2019 ; Journal of Carcinogenesis Volume 18 ; 2019 ; 18 ; https://www.carcinogenesis.com/ >
-    au < exists ; 2020 ; Journal of Carcinogenesis Volume 19 ; 2020 ; 19 ; https://www.carcinogenesis.com/ >
+    au < exists ; 2002 ; Journal of Carcinogenesis Volume 1 ; 2002 ; 1 ; http://www.carcinogenesis.com/ >
+    au < exists ; 2003 ; Journal of Carcinogenesis Volume 2 ; 2003 ; 2 ; http://www.carcinogenesis.com/ >
+    au < exists ; 2004 ; Journal of Carcinogenesis Volume 3 ; 2004 ; 3 ; http://www.carcinogenesis.com/ >
+    au < exists ; 2005 ; Journal of Carcinogenesis Volume 4 ; 2005 ; 4 ; http://www.carcinogenesis.com/ >
+    au < exists ; 2006 ; Journal of Carcinogenesis Volume 5 ; 2006 ; 5 ; http://www.carcinogenesis.com/ >
+    au < exists ; 2007 ; Journal of Carcinogenesis Volume 6 ; 2007 ; 6 ; http://www.carcinogenesis.com/ >
+    au < exists ; 2008 ; Journal of Carcinogenesis Volume 7 ; 2008 ; 7 ; http://www.carcinogenesis.com/ >
+    au < exists ; 2009 ; Journal of Carcinogenesis Volume 8 ; 2009 ; 8 ; http://www.carcinogenesis.com/ >
+    au < exists ; 2010 ; Journal of Carcinogenesis Volume 9 ; 2010 ; 9 ; http://www.carcinogenesis.com/ >
+    au < exists ; 2011 ; Journal of Carcinogenesis Volume 10 ; 2011 ; 10 ; http://www.carcinogenesis.com/ >
+    au < exists ; 2012 ; Journal of Carcinogenesis Volume 11 ; 2012 ; 11 ; http://www.carcinogenesis.com/ >
+    au < exists ; 2013 ; Journal of Carcinogenesis Volume 12 ; 2013 ; 12 ; http://www.carcinogenesis.com/ >
+    au < exists ; 2014 ; Journal of Carcinogenesis Volume 13 ; 2014 ; 13 ; http://www.carcinogenesis.com/ >
+    au < exists ; 2015 ; Journal of Carcinogenesis Volume 14 ; 2015 ; 14 ; http://www.carcinogenesis.com/ >
+    au < exists ; 2016 ; Journal of Carcinogenesis Volume 15 ; 2016 ; 15 ; http://www.carcinogenesis.com/ >
+    au < manifest ; 2017 ; Journal of Carcinogenesis Volume 16 ; 2017 ; 16 ; http://www.carcinogenesis.com/ >
+    au < manifest ; 2018 ; Journal of Carcinogenesis Volume 17 ; 2018 ; 17 ; http://www.carcinogenesis.com/ >
+    au < manifest ; 2019 ; Journal of Carcinogenesis Volume 18 ; 2019 ; 18 ; http://www.carcinogenesis.com/ >
+    au < manifest ; 2020 ; Journal of Carcinogenesis Volume 19 ; 2020 ; 19 ; http://www.carcinogenesis.com/ >
 
   }
 
@@ -2479,8 +2500,8 @@
     au < notReady ; 2014 ; Journal of Clinical Imaging Science Volume 4 ; 2014 ; 4 ; http://www.clinicalimagingscience.org/ >
     au < notReady ; 2015 ; Journal of Clinical Imaging Science Volume 5 ; 2015 ; 5 ; http://www.clinicalimagingscience.org/ >
     au < notReady ; 2016 ; Journal of Clinical Imaging Science Volume 6 ; 2016 ; 6 ; http://www.clinicalimagingscience.org/ >
-    au < notReady ; 2017 ; Journal of Clinical Imaging Science Volume 7 ; 2017 ; 7 ; http://www.clinicalimagingscience.org/ >
-    au < notReady ; 2018 ; Journal of Clinical Imaging Science Volume 8 ; 2018 ; 8 ; http://www.clinicalimagingscience.org/ >
+    au < exists ; 2017 ; Journal of Clinical Imaging Science Volume 7 ; 2017 ; 7 ; http://www.clinicalimagingscience.org/ >
+    au < exists ; 2018 ; Journal of Clinical Imaging Science Volume 8 ; 2018 ; 8 ; http://www.clinicalimagingscience.org/ >
     au < expected ; 2019 ; Journal of Clinical Imaging Science Volume 9 ; 2019 ; 9 ; https://www.clinicalimagingscience.org/ >
     au < expected ; 2020 ; Journal of Clinical Imaging Science Volume 10 ; 2020 ; 10 ; https://www.clinicalimagingscience.org/ >
 
@@ -3709,20 +3730,21 @@
 
 #    param[base_url] = http://www.mlcd.in/
     param[journal_issn] = 0974-1234
+    #Moved
 
-    au < exists ; 2008 ; Medical Law Cases - For Doctors Volume 1 ; 2008 ; 1 ; https://www.mlcd.in/ >
-    au < exists ; 2009 ; Medical Law Cases - For Doctors Volume 2 ; 2009 ; 2 ; https://www.mlcd.in/ >
-    au < exists ; 2010 ; Medical Law Cases - For Doctors Volume 3 ; 2010 ; 3 ; https://www.mlcd.in/ >
-    au < exists ; 2011 ; Medical Law Cases - For Doctors Volume 4 ; 2011 ; 4 ; https://www.mlcd.in/ >
-    au < exists ; 2012 ; Medical Law Cases - For Doctors Volume 5 ; 2012 ; 5 ; https://www.mlcd.in/ >
-    au < exists ; 2013 ; Medical Law Cases - For Doctors Volume 6 ; 2013 ; 6 ; https://www.mlcd.in/ >
-    au < exists ; 2014 ; Medical Law Cases - For Doctors Volume 7 ; 2014 ; 7 ; https://www.mlcd.in/ >
-    au < exists ; 2015 ; Medical Law Cases - For Doctors Volume 8 ; 2015 ; 8 ; https://www.mlcd.in/ >
-    au < exists ; 2016 ; Medical Law Cases - For Doctors Volume 9 ; 2016 ; 9 ; https://www.mlcd.in/ >
-    au < expected ; 2017 ; Medical Law Cases - For Doctors Volume 10 ; 2017 ; 10 ; https://www.mlcd.in/ >
-    au < expected ; 2018 ; Medical Law Cases - For Doctors Volume 11 ; 2018 ; 11 ; https://www.mlcd.in/ >
-    au < expected ; 2019 ; Medical Law Cases - For Doctors Volume 12 ; 2019 ; 12 ; https://www.mlcd.in/ >
-    au < expected ; 2020 ; Medical Law Cases - For Doctors Volume 13 ; 2020 ; 13 ; https://www.mlcd.in/ >
+    au < doNotProcess ; 2008 ; Medical Law Cases - For Doctors Volume 1 ; 2008 ; 1 ; https://www.mlcd.in/ >
+    au < doNotProcess ; 2009 ; Medical Law Cases - For Doctors Volume 2 ; 2009 ; 2 ; https://www.mlcd.in/ >
+    au < doNotProcess ; 2010 ; Medical Law Cases - For Doctors Volume 3 ; 2010 ; 3 ; https://www.mlcd.in/ >
+    au < doNotProcess ; 2011 ; Medical Law Cases - For Doctors Volume 4 ; 2011 ; 4 ; https://www.mlcd.in/ >
+    au < doNotProcess ; 2012 ; Medical Law Cases - For Doctors Volume 5 ; 2012 ; 5 ; https://www.mlcd.in/ >
+    au < doNotProcess ; 2013 ; Medical Law Cases - For Doctors Volume 6 ; 2013 ; 6 ; https://www.mlcd.in/ >
+    au < doNotProcess ; 2014 ; Medical Law Cases - For Doctors Volume 7 ; 2014 ; 7 ; https://www.mlcd.in/ >
+    au < doNotProcess ; 2015 ; Medical Law Cases - For Doctors Volume 8 ; 2015 ; 8 ; https://www.mlcd.in/ >
+    au < doNotProcess ; 2016 ; Medical Law Cases - For Doctors Volume 9 ; 2016 ; 9 ; https://www.mlcd.in/ >
+    au < doNotProcess ; 2017 ; Medical Law Cases - For Doctors Volume 10 ; 2017 ; 10 ; https://www.mlcd.in/ >
+    au < doNotProcess ; 2018 ; Medical Law Cases - For Doctors Volume 11 ; 2018 ; 11 ; https://www.mlcd.in/ >
+    au < doNotProcess ; 2019 ; Medical Law Cases - For Doctors Volume 12 ; 2019 ; 12 ; https://www.mlcd.in/ >
+    au < doNotProcess ; 2020 ; Medical Law Cases - For Doctors Volume 13 ; 2020 ; 13 ; https://www.mlcd.in/ >
 
   }
 
@@ -4590,13 +4612,13 @@
 #      param[base_url] = http://www.advbiores.net/
       #browse. no back issues page.
 
-      au < notReady ; 2012 ; Advanced Biomedical Research Volume 1 ; 2012 ; 1 ; http://www.advbiores.net/ >
-      au < notReady ; 2013 ; Advanced Biomedical Research Volume 2 ; 2013 ; 2 ; http://www.advbiores.net/ >
-      au < notReady ; 2014 ; Advanced Biomedical Research Volume 3 ; 2014 ; 3 ; http://www.advbiores.net/ >
-      au < notReady ; 2015 ; Advanced Biomedical Research Volume 4 ; 2015 ; 4 ; http://www.advbiores.net/ >
-      au < notReady ; 2016 ; Advanced Biomedical Research Volume 5 ; 2016 ; 5 ; http://www.advbiores.net/ >
-      au < notReady ; 2017 ; Advanced Biomedical Research Volume 6 ; 2017 ; 6 ; http://www.advbiores.net/ >
-      au < notReady ; 2018 ; Advanced Biomedical Research Volume 7 ; 2018 ; 7 ; http://www.advbiores.net/ >
+      au < exists ; 2012 ; Advanced Biomedical Research Volume 1 ; 2012 ; 1 ; https://www.advbiores.net/ >
+      au < exists ; 2013 ; Advanced Biomedical Research Volume 2 ; 2013 ; 2 ; https://www.advbiores.net/ >
+      au < exists ; 2014 ; Advanced Biomedical Research Volume 3 ; 2014 ; 3 ; https://www.advbiores.net/ >
+      au < exists ; 2015 ; Advanced Biomedical Research Volume 4 ; 2015 ; 4 ; https://www.advbiores.net/ >
+      au < exists ; 2016 ; Advanced Biomedical Research Volume 5 ; 2016 ; 5 ; https://www.advbiores.net/ >
+      au < exists ; 2017 ; Advanced Biomedical Research Volume 6 ; 2017 ; 6 ; https://www.advbiores.net/ >
+      au < exists ; 2018 ; Advanced Biomedical Research Volume 7 ; 2018 ; 7 ; https://www.advbiores.net/ >
       au < exists ; 2019 ; Advanced Biomedical Research Volume 8 ; 2019 ; 8 ; https://www.advbiores.net/ >
       au < exists ; 2020 ; Advanced Biomedical Research Volume 9 ; 2020 ; 9 ; https://www.advbiores.net/ >
 
