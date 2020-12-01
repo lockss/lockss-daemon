@@ -471,10 +471,14 @@
     au < doNotProcess ; exists ; 1989 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 329 ; 329 ; >
     }
     {
+    param[journal_id] = rsta1934
+    
+    au < manifest ; exists ; 1990 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 330 ; 330 ; >
+    au < manifest ; exists ; 1990 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 331 ; 331 ; >
+    }
+    {
     param[journal_id] = rsta1990
     
-    au < exists ; exists ; 1990 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 330 ; 330 ; >
-    au < exists ; exists ; 1990 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 331 ; 331 ; >
     au < ready ; exists ; 1990 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 332 ; 332 ; >
     au < ready ; exists ; 1990 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 333 ; 333 ; >
     au < ready ; exists ; 1991 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 334 ; 334 ; >
@@ -493,14 +497,14 @@
     au < ready ; exists ; 1994 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 347 ; 347 ; >
     au < ready ; exists ; 1994 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 348 ; 348 ; >
     au < ready ; exists ; 1994 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 349 ; 349 ; >
+    au < manifest ; exists ; 1995 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 350 ; 350 ; >
+    au < manifest ; exists ; 1995 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 351 ; 351 ; >
+    au < manifest ; exists ; 1995 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 352 ; 352 ; >
+    au < manifest ; exists ; 1995 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 353 ; 353 ; >
     }
     {
     param[journal_id] = rsta1996
     
-    au < exists ; exists ; 1995 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 350 ; 350 ; >
-    au < exists ; exists ; 1995 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 351 ; 351 ; >
-    au < exists ; exists ; 1995 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 352 ; 352 ; >
-    au < exists ; exists ; 1995 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 353 ; 353 ; >
     au < ready ; exists ; 1996 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 354 ; 354 ; >
     au < ready ; exists ; 1997 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 355 ; 355 ; >
     au < ready ; exists ; 1998 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 356 ; 356 ; >
@@ -527,15 +531,9 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 373 ; 373 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 374 ; 374 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 375 ; 375 ; >
-
     au < finished ; finished ; 2018 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 376 ; 376 ; reingest1.clockss.org:8082 >
-    #au < manifest ; exists ; 2018 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 376 [2018] ; 2018 ; >#bad issue url "/toc/rsta/2014/372/2018"
-
     au < finished ; manifest ; 2019 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 377 ; 377 ; reingest2.clockss.org:8085 >
-    #au < manifest ; exists ; 2019 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 377 [2019] ; 2019 ; >#bad issue url "/toc/rsta/2014/372/2019"
-
     au < ready ; exists ; 2020 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 378 ; 378 ; >
-    #au < manifest ; exists ; 2020 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 378 [2020] ; 2020 ; >#bad issue url "/toc/rsta/2014/372/2020"
     }
   }
 
@@ -702,10 +700,14 @@
     au < doNotProcess ; exists ; 1989-1990 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 326 ; 326 ; >
     }
     {
+    param[journal_id] = rstb1969
+
+    au < manifest ; exists ; 1990 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 327 ; 327 ; >
+    au < manifest ; exists ; 1990 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 328 ; 328 ; >
+    }
+    {
     param[journal_id] = rstb1990
 
-    au < exists ; exists ; 1990 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 327 ; 327 ; >
-    au < exists ; exists ; 1990 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 328 ; 328 ; >
     au < ready ; exists ; 1990 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 329 ; 329 ; >
     au < ready ; exists ; 1990 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 330 ; 330 ; >
     au < ready ; exists ; 1991 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 331 ; 331 ; >
@@ -728,19 +730,15 @@
     au < ready ; exists ; 1995 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 348 ; 348 ; >
     au < ready ; exists ; 1995 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 349 ; 349 ; >
     au < ready ; exists ; 1995 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 350 ; 350 ; >
-    }
-    {
-    param[journal_id] = rstb1996
-
-    au < exists ; exists ; 1996 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 351 ; 351 ; >
-    au < exists ; exists ; 1997 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 352 ; 352 ; >
-    au < exists ; exists ; 1998 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 353 ; 353 ; >
-    au < exists ; exists ; 1999 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 354 ; 354 ; >
-    au < exists ; exists ; 2000 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 355 ; 355 ; >
-    au < exists ; exists ; 2001 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 356 ; 356 ; >
-    au < exists ; exists ; 2002 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 357 ; 357 ; >
-    au < exists ; exists ; 2003 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 358 ; 358 ; >
-    au < exists ; exists ; 2004 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 359 ; 359 ; >
+    au < manifest ; exists ; 1996 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 351 ; 351 ; >
+    au < manifest ; exists ; 1997 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 352 ; 352 ; >
+    au < manifest ; exists ; 1998 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 353 ; 353 ; >
+    au < manifest ; exists ; 1999 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 354 ; 354 ; >
+    au < manifest ; exists ; 2000 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 355 ; 355 ; >
+    au < manifest ; exists ; 2001 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 356 ; 356 ; >
+    au < manifest ; exists ; 2002 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 357 ; 357 ; >
+    au < manifest ; exists ; 2003 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 358 ; 358 ; >
+    au < manifest ; exists ; 2004 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 359 ; 359 ; >
     }
     {
     param[journal_id] = rstb
@@ -758,15 +756,9 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 370 ; 370 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 371 ; 371 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 372 ; 372 ; >
-
     au < finished ; finished ; 2018 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 373 ; 373 ; reingest2.clockss.org:8085 >
-#    au < manifest ; exists ; 2018 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 373 [2018] ; 2018 ; >
-
     au < finished ; manifest ; 2019 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 374 ; 374 ; reingest4.clockss.org:8082 >
-#    au < manifest ; exists ; 2019 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 374 [2019] ; 2019 ; > #overcrawl. 2017, 2018, 2019.
-
     au < ready ; exists ; 2020 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 375 ; 375 ; >
-#    au < manifest ; exists ; 2020 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 375 [2020] ; 2020 ; >
 
     }
   }
@@ -970,6 +962,7 @@
       issnl = 1364-5021
     >
 
+    {
     param[journal_id] = rspa
 
     au < doNotProcess ; exists ; 1905 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 76 ; 76 ; >
@@ -1323,43 +1316,59 @@
     au < doNotProcess ; exists ; 1989 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 424 ; 424 ; >
     au < doNotProcess ; exists ; 1989 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 425 ; 425 ; >
     au < doNotProcess ; exists ; 1989 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 426 ; 426 ; >
-    au < exists ; exists ; 1990 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 427 ; 427 ; >
-    au < exists ; exists ; 1990 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 428 ; 428 ; >
-    au < exists ; exists ; 1990 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 429 ; 429 ; >
-    au < exists ; exists ; 1990 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 430 ; 430 ; >
-    au < exists ; exists ; 1990 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 431 ; 431 ; >
-    au < exists ; exists ; 1991 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 432 ; 432 ; >
-    au < exists ; exists ; 1991 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 433 ; 433 ; >
-    au < exists ; exists ; 1991 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 434 ; 434 ; >
-    au < exists ; exists ; 1991 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 435 ; 435 ; >
-    au < exists ; exists ; 1992 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 436 ; 436 ; >
-    au < exists ; exists ; 1992 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 437 ; 437 ; >
-    au < exists ; exists ; 1992 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 438 ; 438 ; >
-    au < exists ; exists ; 1992 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 439 ; 439 ; >
-    au < exists ; exists ; 1993 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 440 ; 440 ; >
-    au < exists ; exists ; 1993 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 441 ; 441 ; >
-    au < exists ; exists ; 1993 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 442 ; 442 ; >
-    au < exists ; exists ; 1993 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 443 ; 443 ; >
-    au < exists ; exists ; 1994 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 444 ; 444 ; >
-    au < exists ; exists ; 1994 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 445 ; 445 ; >
-    au < exists ; exists ; 1994 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 446 ; 446 ; >
-    au < exists ; exists ; 1994 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 447 ; 447 ; >
-    au < exists ; exists ; 1995 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 448 ; 448 ; >
-    au < exists ; exists ; 1995 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 449 ; 449 ; >
-    au < exists ; exists ; 1995 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 450 ; 450 ; >
-    au < exists ; exists ; 1995 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 451 ; 451 ; >
-    au < exists ; exists ; 1996 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 452 ; 452 ; >
-    au < exists ; exists ; 1997 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 453 ; 453 ; >
-    au < ready ; exists ; 1998 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 454 ; 454 ; >
-    au < exists ; exists ; 1999 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 455 ; 455 ; >
-    au < exists ; exists ; 2000 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 456 ; 456 ; >
-    au < exists ; exists ; 2001 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 457 ; 457 ; >
-    au < exists ; exists ; 2002 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 458 ; 458 ; >
-    au < exists ; exists ; 2003 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 459 ; 459 ; >
-    au < exists ; exists ; 2004 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 460 ; 460 ; >
-    au < ready ; exists ; 2005 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 461 ; 461 ; >
+    }
+    {
+      param[journal_id] = rspa1969
+
+    au < manifest ; exists ; 1990 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 427 ; 427 ; >
+    au < manifest ; exists ; 1990 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 428 ; 428 ; >
+    au < manifest ; exists ; 1990 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 429 ; 429 ; >
+    }
+    {
+      param[journal_id] = rspa1990
+
+    au < manifest ; exists ; 1990 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 430 ; 430 ; >
+    au < manifest ; exists ; 1990 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 431 ; 431 ; >
+    au < manifest ; exists ; 1991 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 432 ; 432 ; >
+    au < manifest ; exists ; 1991 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 433 ; 433 ; >
+    au < manifest ; exists ; 1991 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 434 ; 434 ; >
+    au < manifest ; exists ; 1991 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 435 ; 435 ; >
+    au < manifest ; exists ; 1992 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 436 ; 436 ; >
+    au < manifest ; exists ; 1992 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 437 ; 437 ; >
+    au < manifest ; exists ; 1992 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 438 ; 438 ; >
+    au < manifest ; exists ; 1992 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 439 ; 439 ; >
+    au < manifest ; exists ; 1993 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 440 ; 440 ; >
+    au < manifest ; exists ; 1993 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 441 ; 441 ; >
+    au < manifest ; exists ; 1993 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 442 ; 442 ; >
+    au < manifest ; exists ; 1993 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 443 ; 443 ; >
+    au < manifest ; exists ; 1994 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 444 ; 444 ; >
+    au < manifest ; exists ; 1994 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 445 ; 445 ; >
+    au < manifest ; exists ; 1994 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 446 ; 446 ; >
+    au < manifest ; exists ; 1994 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 447 ; 447 ; >
+    au < manifest ; exists ; 1995 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 448 ; 448 ; >
+    au < manifest ; exists ; 1995 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 449 ; 449 ; >
+    au < manifest ; exists ; 1995 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 450 ; 450 ; >
+    au < manifest ; exists ; 1995 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 451 ; 451 ; >
+    }
+    {
+      param[journal_id] = rspa1996
+
+    au < manifest ; exists ; 1996 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 452 ; 452 ; >
+    au < manifest ; exists ; 1997 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 453 ; 453 ; >
+    au < manifest ; exists ; 1998 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 454 ; 454 ; >
+    au < manifest ; exists ; 1999 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 455 ; 455 ; >
+    au < manifest ; exists ; 2000 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 456 ; 456 ; >
+    au < manifest ; exists ; 2001 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 457 ; 457 ; >
+    au < manifest ; exists ; 2002 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 458 ; 458 ; >
+    au < manifest ; exists ; 2003 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 459 ; 459 ; >
+    au < manifest ; exists ; 2004 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 460 ; 460 ; >
+    }
+    {
+      param[journal_id] = rspa
+
+    au < manifest ; exists ; 2005 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 461 ; 461 ; >
     au < manifest ; exists ; 2006 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 462 ; 462 ; >
-    au < ready ; exists ; 2007 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 463 ; 463 ; >
+    au < manifest ; exists ; 2007 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 463 ; 463 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 464 ; 464 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 465 ; 465 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 466 ; 466 ; >
@@ -1370,16 +1379,10 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 471 ; 471 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 472 ; 472 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 473 ; 473 ; >
-
     au < finished ; finished ; 2018 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 474 ; 474 ; reingest3.clockss.org:8083 >
-    #au < manifest ; exists ; 2018 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 474 [2018] ; 2018 ; >#bad issue url "/toc/rspa1996/2002/458/2018"
-
     au < finished ; manifest ; 2019 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 475 ; 475 ; reingest5.clockss.org:8082 > #no substance. using 2019 gives a manifest page with one url to issue 2019 from 2002.
-    #au < manifest ; exists ; 2019 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 475 [2019] ; 2019 ; >#bad issue url "/toc/rspa1996/2002/458/2019"
-
     au < ready ; exists ; 2020 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 476 ; 476 ; >
-    #au < manifest ; exists ; 2020 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 476 [2020] ; 2020 ; >#bad issue url "/toc/rspa1996/2002/458/2020"
-
+    }
   }
 
   {
@@ -1391,6 +1394,7 @@
       issnl = 0962-8452
     >
 
+    {
     param[journal_id] = rspb
 
     au < doNotProcess ; exists ; 1905 ; Proceedings of the Royal Society B: Biological Sciences Volume 76 ; 76 ; >
@@ -1556,17 +1560,29 @@
     au < doNotProcess ; exists ; 1989 ; Proceedings of the Royal Society B: Biological Sciences Volume 236 ; 236 ; >
     au < doNotProcess ; exists ; 1989 ; Proceedings of the Royal Society B: Biological Sciences Volume 237 ; 237 ; >
     au < doNotProcess ; exists ; 1989-1990 ; Proceedings of the Royal Society B: Biological Sciences Volume 238 ; 238 ; >
-    au < exists ; exists ; 1990 ; Proceedings of the Royal Society B: Biological Sciences Volume 239 ; 239 ; >
-    au < exists ; exists ; 1990 ; Proceedings of the Royal Society B: Biological Sciences Volume 240 ; 240 ; >
-    au < exists ; exists ; 1990 ; Proceedings of the Royal Society B: Biological Sciences Volume 241 ; 241 ; >
-    au < exists ; exists ; 1990 ; Proceedings of the Royal Society B: Biological Sciences Volume 242 ; 242 ; >
-    au < exists ; exists ; 1991 ; Proceedings of the Royal Society B: Biological Sciences Volume 243 ; 243 ; >
-    au < exists ; exists ; 1991 ; Proceedings of the Royal Society B: Biological Sciences Volume 244 ; 244 ; >
-    au < exists ; exists ; 1991 ; Proceedings of the Royal Society B: Biological Sciences Volume 245 ; 245 ; >
-    au < exists ; exists ; 1991 ; Proceedings of the Royal Society B: Biological Sciences Volume 246 ; 246 ; >
-    au < exists ; exists ; 1992 ; Proceedings of the Royal Society B: Biological Sciences Volume 247 ; 247 ; >
-    au < exists ; exists ; 1992 ; Proceedings of the Royal Society B: Biological Sciences Volume 248 ; 248 ; >
-    au < exists ; exists ; 1992 ; Proceedings of the Royal Society B: Biological Sciences Volume 249 ; 249 ; >
+    }
+    {
+    param[journal_id] = rspb1989
+
+    au < manifest ; exists ; 1990 ; Proceedings of the Royal Society B: Biological Sciences Volume 239 ; 239 ; >
+    au < manifest ; exists ; 1990 ; Proceedings of the Royal Society B: Biological Sciences Volume 240 ; 240 ; >
+    }
+    {
+    param[journal_id] = rspb1990
+
+    au < manifest ; exists ; 1990 ; Proceedings of the Royal Society B: Biological Sciences Volume 241 ; 241 ; >
+    au < manifest ; exists ; 1990 ; Proceedings of the Royal Society B: Biological Sciences Volume 242 ; 242 ; >
+    au < manifest ; exists ; 1991 ; Proceedings of the Royal Society B: Biological Sciences Volume 243 ; 243 ; >
+    au < manifest ; exists ; 1991 ; Proceedings of the Royal Society B: Biological Sciences Volume 244 ; 244 ; >
+    au < manifest ; exists ; 1991 ; Proceedings of the Royal Society B: Biological Sciences Volume 245 ; 245 ; >
+    au < manifest ; exists ; 1991 ; Proceedings of the Royal Society B: Biological Sciences Volume 246 ; 246 ; >
+    au < manifest ; exists ; 1992 ; Proceedings of the Royal Society B: Biological Sciences Volume 247 ; 247 ; >
+    au < manifest ; exists ; 1992 ; Proceedings of the Royal Society B: Biological Sciences Volume 248 ; 248 ; >
+    au < manifest ; exists ; 1992 ; Proceedings of the Royal Society B: Biological Sciences Volume 249 ; 249 ; >
+    }
+    {
+    param[journal_id] = rspb
+
     au < doNotProcess ; doNotProcess ; 1992 ; Proceedings of the Royal Society B: Biological Sciences Volume 250 ; 250 ; >
     au < doNotProcess ; doNotProcess ; 1993 ; Proceedings of the Royal Society B: Biological Sciences Volume 251 ; 251 ; >
     au < doNotProcess ; doNotProcess ; 1993 ; Proceedings of the Royal Society B: Biological Sciences Volume 252 ; 252 ; >
@@ -1602,13 +1618,10 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Proceedings of the Royal Society B: Biological Sciences Volume 282 ; 282 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Proceedings of the Royal Society B: Biological Sciences Volume 283 ; 283 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Proceedings of the Royal Society B: Biological Sciences Volume 284 ; 284 ; >
-
     au < finished ; finished ; 2018 ; Proceedings of the Royal Society B: Biological Sciences Volume 285 ; 285 ; reingest4.clockss.org:8082 >
-
     au < finished ; manifest ; 2019 ; Proceedings of the Royal Society B: Biological Sciences Volume 286 ; 286 ; reingest5.clockss.org:8082 >
-
     au < ready ; exists ; 2020 ; Proceedings of the Royal Society B: Biological Sciences Volume 287 ; 287 ; >
-
+    }
   }
 
   {
@@ -1619,15 +1632,24 @@
       issnl = 0370-1662 
     >
 
+    #1896-1904 processed in HW
+    {
+    param[journal_id] = rspl1800
+
+    au < manifest ; exists ; 1832 ; Proceedings of the Royal Society of London Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1833 ; Proceedings of the Royal Society of London Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1837 ; Proceedings of the Royal Society of London Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1843 ; Proceedings of the Royal Society of London Volume 4 ; 4 ; >
+    }
+    {
+    param[journal_id] = rspl1843
+
+    au < manifest ; exists ; 1851 ; Proceedings of the Royal Society of London Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1854 ; Proceedings of the Royal Society of London Volume 6 ; 6 ; >
+    }
+    {
     param[journal_id] = rspl
 
-    #1896-1904 processed in HW
-    au < exists ; exists ; 1832 ; Proceedings of the Royal Society of London Volume 1 ; 1 ; >
-    au < exists ; exists ; 1833 ; Proceedings of the Royal Society of London Volume 2 ; 2 ; >
-    au < exists ; exists ; 1837 ; Proceedings of the Royal Society of London Volume 3 ; 3 ; >
-    au < exists ; exists ; 1843 ; Proceedings of the Royal Society of London Volume 4 ; 4 ; >
-    au < exists ; exists ; 1851 ; Proceedings of the Royal Society of London Volume 5 ; 5 ; >
-    au < exists ; exists ; 1854 ; Proceedings of the Royal Society of London Volume 6 ; 6 ; >
     au < ready ; exists ; 1856 ; Proceedings of the Royal Society of London Volume 7 ; 7 ; >
     au < ready ; exists ; 1857 ; Proceedings of the Royal Society of London Volume 8 ; 8 ; >
     au < ready ; exists ; 1859 ; Proceedings of the Royal Society of London Volume 9 ; 9 ; >
@@ -1697,7 +1719,7 @@
     au < doNotProcess ; doNotProcess ; 1904 ; Proceedings of the Royal Society of London Volume 73 ; 73 ; >
     au < doNotProcess ; doNotProcess ; 1905 ; Proceedings of the Royal Society of London Volume 74 ; 74 ; >
     au < doNotProcess ; doNotProcess ; 1905 ; Proceedings of the Royal Society of London Volume 75 ; 75 ; >
-
+    }
   }
 
   {
