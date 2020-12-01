@@ -205,7 +205,7 @@ def __run(options, cmd, output=False):
     if options.verbose:
         print('Executing: {}'.format(shlex.join(cmd)))
         output=True
-    proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
+    proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, universal_newlines=True)
     while proc.poll() is None:
         out = proc.stdout.read(1)
         if len(out) == 0:
