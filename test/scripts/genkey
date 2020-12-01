@@ -33,12 +33,13 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
 '''
 
-__version__ = '0.3'
+__version__ = '0.3.1'
 
 import argparse
 from datetime import date
 import getpass
 import os
+import shlex
 import subprocess
 import sys
 
@@ -62,10 +63,11 @@ class __GenKeyOptions(object):
         parser.add_argument('--version', '-V', action='version', version=__version__)
         parser.add_argument('--copyright', '-C', action='store_true', help='show copyright and exit')
         parser.add_argument('--license', '-L', action='store_true', help='show license and exit')
+        parser.add_argument('--verbose', '-v', action='store_true', help='output keytool commands')
         # Group: Name
         group = parser.add_argument_group('Name')
-        group.add_argument('--full-name', '-f', metavar='FULLNAME', help='full name (default: interactive prompt)')
-        group.add_argument('--alias', '-a', metavar='ALIAS', help='alias (default: interactive prompt)')
+        group.add_argument('--full-name', '-f', metavar='FULLNAME', help='full name (default: prompt)')
+        group.add_argument('--alias', '-a', metavar='ALIAS', help='alias (default: prompt)')
         # Group: Organization
         group = parser.add_argument_group('Organization')
         group.add_argument('--organization', '-o', metavar='ORG', default=_DEFAULT_DN_O, help='organization (default: %(default)s)')
@@ -75,12 +77,13 @@ class __GenKeyOptions(object):
         group.add_argument('--locality', '-l', metavar='CITY', default=_DEFAULT_DN_L, help='locality (default: %(default)s)')
         group.add_argument('--state', '-s', metavar='STATE', default=_DEFAULT_DN_S, help='state or province (default: %(default)s)')
         group.add_argument('--country', '-c', metavar='XX', default=_DEFAULT_DN_C, help='2-letter ISO 3166 country code (default: %(default)s)')
-        # Group: Options
-        group = parser.add_argument_group('Options')
-        group.add_argument('--import-into', '-i', metavar='KEYSTORE', default='src/org/lockss/plugin/lockss.keystore', help='import the generated certificate into a keystore (default: %(default)s)')
-        group.add_argument('--verbose', '-v', action='store_true', help='output keytool commands')
+        # Group: Import
+        group = parser.add_argument_group('Import')
+        group.add_argument('--import-certificate', '-i', action='store_true', default=None, help='import generated certificate into a keystore (default: prompt)')
+        group.add_argument('--no-import-certificate', action='store_false', dest='import_certificate', default=None, help='do not import generated certificate into a keystore')
+        group.add_argument('--import-destination', metavar='KEYSTORE', help='destination keystore for import (default: prompt)')
         # Group: Deprecated
-        group = parser.add_argument_group('Deprecated', 'These deprecated arguments are kept for backward comptibility and may be removed in a future version.')
+        group = parser.add_argument_group('Deprecated', 'These deprecated arguments are kept for backward compatibility and may be removed in a future version.')
         group.add_argument('--full_name', metavar='FULLNAME', dest='full_name', help='deprecated; use --full-name')
         group.add_argument('--name', '-n', metavar='UNIT', dest='unit', default=_DEFAULT_DN_OU, help='deprecated; use --unit')
         # Return parser
@@ -94,16 +97,17 @@ class __GenKeyOptions(object):
             elif parsed.license: print(__license__)
             else: raise RuntimeError('internal error')
             sys.exit()
+        # --verbose
+        self.verbose = parsed.verbose
         # --organization, --unit, --locality, --state, --country
         self.organization = parsed.organization
         self.unit = parsed.unit
         self.locality = parsed.locality
         self.state = parsed.state
         self.country = parsed.country
-        # --verbose
-        self.verbose = parsed.verbose
-        # --import-into
-        self.import_into = parsed.import_into
+        # --import-certificate/--no-import-certificate, --import-destination
+        self.import_certificate = parsed.import_certificate
+        self.import_destination = parsed.import_destination
         # --full-name, --alias
         self.full_name = parsed.full_name
         while self.full_name is None or len(self.full_name) == 0:
@@ -122,16 +126,16 @@ class __GenKeyOptions(object):
         while self.passphrase is None:
             try:
                 _p1 = getpass.getpass('Passphrase: ')
-                if len(_p1) < 6:
-                    print('Passphrase must have at least 6 characters')
-                    continue
-                _p2 = getpass.getpass('Confirm passphrase: ')
-                if _p1 != _p2:
-                    print('Passphrases do not match')
-                    continue
-                self.passphrase = _p1
             except (EOFError, KeyboardInterrupt):
                 sys.exit()
+            if len(_p1) < 6:
+                print('Passphrase must have at least 6 characters')
+                continue
+            _p2 = getpass.getpass('Confirm passphrase: ')
+            if _p1 != _p2:
+                print('Passphrases do not match')
+                continue
+            self.passphrase = _p1
 
 def __display_certificate(options):
     cmd = [_keytool,
@@ -165,24 +169,50 @@ def __generate_key(options):
     __run(options, cmd)
 
 def __import_certificate(options):
-    _p3 = getpass.getpass(f'Passphrase for {options.import_into}: ')
+    if options.import_certificate is None:
+        try:
+            _r = input('Import certificate into LOCKSS public keystore? (Y/N) [N]: ')
+            options.import_certificate = _r is not None and _r.lower() == 'y' 
+        except (EOFError, KeyboardInterrupt):
+            sys.exit()
+    if options.import_certificate is False:
+        return
+
+    if options.import_destination is None:
+        try:
+            options.import_destination = input('LOCKSS Keystore location [./lockss.keystore]: ')
+        except (EOFError, KeyboardInterrupt):
+            sys.exit()
+        if options.import_destination is None or len(options.import_destination) == 0:
+            options.import_destination = './lockss.keystore'
+
+    try:
+        _p3 = getpass.getpass('LOCKSS Keystore password [password]: ')
+    except (EOFError, KeyboardInterrupt):
+        sys.exit()
+    if _p3 is None or len(_p3) == 0:
+        _p3 = 'password'
+    
     cmd = [_keytool,
            '-importcert',
-           '-keystore', options.import_into,
+           '-keystore', options.import_destination,
            '-alias', options.alias,
            '-file', f'{options.alias}.cer',
            '-storepass', _p3]
-    __run(options, cmd)
+    __run(options, cmd, True)
 
 def __run(options, cmd, output=False):
     if options.verbose:
-        print(f'Executing: {" ".join(cmd)}')
-    proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-    out, err = proc.communicate()
-    if options.verbose and err is not None and len(err) > 0:
-        print(err, file=sys.stderr)
-    if (output or options.verbose) and out is not None and len(out) > 0:
-        print(out)
+        print(f'Executing: {shlex.join(cmd)}')
+        output=True
+    proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
+    while proc.poll() is None:
+        out = proc.stdout.read(1)
+        if len(out) == 0:
+            continue
+        if output:
+            print(out, end='', flush=True)
+    proc.wait()
     if proc.returncode != 0:
         print(f'{cmd[0]} exited with {proc.returncode}')
         sys.exit(proc.returncode)
