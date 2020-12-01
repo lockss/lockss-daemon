@@ -140,14 +140,14 @@ class __GenKeyOptions(object):
 def __display_certificate(options):
     cmd = [_keytool,
            '-printcert',
-           '-file', f'{options.alias}.cer']
+           '-file', '{}.cer'.format(options.alias)]
     __run(options, cmd, output=True)
 
 def __export_certificate(options):
     cmd = [_keytool,
            '-export',
-           '-file', f'{options.alias}.cer',
-           '-keystore', f'{options.alias}.keystore',
+           '-file', '{}.cer'.format(options.alias),
+           '-keystore', '{}.keystore'.format(options.alias),
            '-alias', options.alias,
            '-storepass', options.passphrase]
     __run(options, cmd)
@@ -157,15 +157,15 @@ def __generate_key(options):
            '-genkeypair',
            '-alias', options.alias,
            '-validity', str((date(date.today().year + 10, date.today().month, date.today().day) - date.today()).days),
-           '-keystore', f'{options.alias}.keystore',
+           '-keystore', '{}.keystore'.format(options.alias),
            '-storepass', options.passphrase,
            '-keypass', options.passphrase,
-           '-dname', ', '.join([f'{k}={v}' for k, v in [('CN', options.full_name),
-                                                        ('O', options.organization),
-                                                        ('OU', options.unit),
-                                                        ('L', options.locality),
-                                                        ('S', options.state),
-                                                        ('C', options.country)] if v is not None and len(v) > 0])]
+           '-dname', ', '.join(['{}={}'.format(k, v) for k, v in [('CN', options.full_name),
+                                                                  ('O', options.organization),
+                                                                  ('OU', options.unit),
+                                                                  ('L', options.locality),
+                                                                  ('S', options.state),
+                                                                  ('C', options.country)] if v is not None and len(v) > 0])]
     __run(options, cmd)
 
 def __import_certificate(options):
@@ -197,13 +197,13 @@ def __import_certificate(options):
            '-importcert',
            '-keystore', options.import_destination,
            '-alias', options.alias,
-           '-file', f'{options.alias}.cer',
+           '-file', '{}.cer'.format(options.alias),
            '-storepass', _p3]
     __run(options, cmd, True)
 
 def __run(options, cmd, output=False):
     if options.verbose:
-        print(f'Executing: {shlex.join(cmd)}')
+        print('Executing: {}'.format(shlex.join(cmd)))
         output=True
     proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
     while proc.poll() is None:
@@ -214,7 +214,7 @@ def __run(options, cmd, output=False):
             print(out, end='', flush=True)
     proc.wait()
     if proc.returncode != 0:
-        print(f'{cmd[0]} exited with {proc.returncode}')
+        print('{} exited with {}'.format(cmd[0], proc.returncode))
         sys.exit(proc.returncode)
 
 def __main():
