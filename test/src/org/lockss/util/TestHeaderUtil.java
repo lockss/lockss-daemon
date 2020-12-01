@@ -49,6 +49,8 @@ public class TestHeaderUtil extends LockssTestCase {
 		 HeaderUtil.getMimeTypeFromContentType("Application/Binary; charset=foo"));
     assertSame(HeaderUtil.getMimeTypeFromContentType(" Text/Html "),
 	       HeaderUtil.getMimeTypeFromContentType(" Text/Html "));
+    assertEquals("image/jpeg",
+		 HeaderUtil.getMimeTypeFromContentType("('image/jpeg', none)"));
   }
 
   public void testGetCharsetFromContentType() {
@@ -83,6 +85,7 @@ public class TestHeaderUtil extends LockssTestCase {
 	       HeaderUtil.getCharsetFromContentType("text/html;charset=\"iso8859-1\""));
     assertSame(HeaderUtil.getCharsetFromContentType("text/html; charset=\"iso8859-1\""),
                HeaderUtil.getCharsetFromContentType("text/html; charset=\"iso8859-1\""));
+    assertNull(HeaderUtil.getCharsetFromContentType("('image/jpeg', none)"));
   }
 
   String gcodfct(String ctype) {

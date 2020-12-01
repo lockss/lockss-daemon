@@ -31,6 +31,7 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.util;
 
+import java.util.regex.*;
 import org.apache.commons.collections.map.LRUMap;
 import org.apache.commons.httpclient.util.DateUtil;
 import org.mortbay.util.*;
@@ -48,9 +49,17 @@ public class HeaderUtil {
   static LRUMap mimeTypeMap = new LRUMap(100);
 
 
+  // ('image/jpeg', none)
+  private static Pattern MALFORMED_PYTHON_CONTENT_TYPE =
+    Pattern.compile("\\(\\s*'(.+)'\\s*,\\s*none\\s*\\)");
+
   static String extractMimeTypeFromContentType(String contentType) {
     if (contentType == null) {
       return null;
+    }
+    Matcher m = MALFORMED_PYTHON_CONTENT_TYPE.matcher(contentType);
+    if (m.find()) {
+      return m.group(1);
     }
     int idx = contentType.indexOf(';');
     String res;
@@ -64,10 +73,15 @@ public class HeaderUtil {
 
   /** Extract the MIME type, if any, from a Content-Type header.  The
    * result is always lowercase (so can be compared directly with the
-   * MIME-types defined in {@Constants}, e.g., {@link
+   * MIME-types defined in {@link Constants}, e.g., {@link
    * Constants#MIME_TYPE_HTML}).  E.g. given
    * <code>TEXT/HTML;charset=utf-8</code> , returns
-   * <code>text/html</code>. */
+   * <code>text/html</code>.
+   *
+   * As a special case, this recognizes apparently malformed strings such
+   * as "('image/jpeg', none)", which have been seen in the wild recently,
+   * possibly due to a buggy python library.
+   */
   public static String getMimeTypeFromContentType(String contentType) {
     synchronized (mimeTypeMap) {
       String mime = (String)mimeTypeMap.get(contentType);
