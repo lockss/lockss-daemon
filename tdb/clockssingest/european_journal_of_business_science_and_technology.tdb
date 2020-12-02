@@ -21,7 +21,7 @@
     # Moved to new platform -- Actavia
 
     {
-      plugin = org.lockss.plugin.ejbst.ClockssEuropeanJournalBusinessScienceTechnologyPlugin
+      plugin = org.lockss.plugin.ejobsat.ClockssEuropeanJournalBusinessScienceTechnologyPlugin
       param[base_url] = https://www.ejobsat.cz/
       param[journal_id] = ejo
 
