@@ -30,7 +30,7 @@ in this Software without prior written authorization from Stanford University.
 
  */
 
-package org.lockss.plugin.ejbst;
+package org.lockss.plugin.ejobsat;
 
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.OrFilter;

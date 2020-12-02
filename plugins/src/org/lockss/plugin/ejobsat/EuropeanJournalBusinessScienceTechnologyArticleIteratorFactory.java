@@ -1,4 +1,4 @@
-package org.lockss.plugin.ejbst;
+package org.lockss.plugin.ejobsat;
 
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadataExtractor;
@@ -9,7 +9,6 @@ import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArticleFiles;
 import org.lockss.plugin.ArticleIteratorFactory;
 import org.lockss.plugin.SubTreeArticleIteratorBuilder;
-import org.lockss.plugin.wroclawmedicaluniversity.WroclawMedicalUniversityArticleIteratorFactory;
 import org.lockss.util.Logger;
 
 import java.util.Iterator;
@@ -18,7 +17,11 @@ import java.util.regex.Pattern;
 public class EuropeanJournalBusinessScienceTechnologyArticleIteratorFactory implements ArticleIteratorFactory,
         ArticleMetadataExtractorFactory {
 
-    protected static Logger log = Logger.getLogger(WroclawMedicalUniversityArticleIteratorFactory.class);
+    //It has only html and PDF, no separate pages other aspects, like  abstract/full_tex
+    //https://www.ejobsat.cz/artkey/ejo-201801-0001_intangible-assets-and-the-determinants-of-a-single-bank-relation-of-german-smes.php
+    //https://www.ejobsat.cz/pdfs/ejo/2018/01/01.pdf
+
+    protected static Logger log = Logger.getLogger(EuropeanJournalBusinessScienceTechnologyArticleIteratorFactory.class);
 
     protected static final String ROOT_TEMPLATE = "\"%s\", base_url";
     protected static final String PATTERN_TEMPLATE =
@@ -36,10 +39,6 @@ public class EuropeanJournalBusinessScienceTechnologyArticleIteratorFactory impl
     private static final String PDF_REPLACEMENT = "/$1";
      */
 
-
-    //It has only html and PDF, no separate pages other aspects, like  abstract/full_tex
-    //https://www.ejobsat.cz/artkey/ejo-201801-0001_intangible-assets-and-the-determinants-of-a-single-bank-relation-of-german-smes.php
-    //https://www.ejobsat.cz/pdfs/ejo/2018/01/01.pdf
     @Override
     public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target)
             throws PluginException {

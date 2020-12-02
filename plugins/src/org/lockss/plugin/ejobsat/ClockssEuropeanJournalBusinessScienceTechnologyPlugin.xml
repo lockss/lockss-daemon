@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.ejbst.ClockssEuropeanJournalBusinessScienceTechnologyPlugin</string>
+    <string>org.lockss.plugin.ejobsat.ClockssEuropeanJournalBusinessScienceTechnologyPlugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -76,11 +76,10 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,"^https://pro.fontawesome.com/.*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)"</string>
-      <string>1,"^https://code.jquery.com/.*\.js"</string>
-      <string>1,"https://s7.addthis.com/js/.*\.js"</string>
-      <string>1,"^https://fonts.googleapis.com/css"</string>
-      <string>1,"^https://fonts.gstatic.com/.*\.css"</string>
+      <string>1,"^https://pro\.fontawesome\.com/.*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)"</string>
+      <string>1,"^https://code\.jquery\.com/.*\.js"</string>
+      <string>1,"^https://fonts\.googleapis\.com/css"</string>
+      <string>1,"^https://fonts\.gstatic\.com/.*\.css"</string>
       <string>1,"^%sartkey/ejo-%d", base_url, year</string>
       <string>1,"^%s(pdfs|img|etc)/ejo", base_url</string>
       <!--https://www.ejobsat.cz/clanek.php?action=refdn&rfmt=ris&artkey=ejo-201801-0003-->
@@ -96,22 +95,22 @@
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.ejbst.EuropeanJournalBusinessScienceTechnologyHtmlFilterFactory</string>
+    <string>org.lockss.plugin.ejobsat.EuropeanJournalBusinessScienceTechnologyHtmlFilterFactory</string>
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.ejbst.EuropeanJournalBusinessScienceTechnologyArticleIteratorFactory</string>
+    <string>org.lockss.plugin.ejobsat.EuropeanJournalBusinessScienceTechnologyArticleIteratorFactory</string>
   </entry>  
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.ejbst.EuropeanJournalBusinessScienceTechnologyArticleIteratorFactory</string>
+    <string>org.lockss.plugin.ejobsat.EuropeanJournalBusinessScienceTechnologyArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>text/html_metadata_extractor_factory_map</string>
     <map>
       <entry>
       <string>*</string>
-        <string>org.lockss.plugin.ejbst.EuropeanJournalBusinessScienceTechnologyMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.ejobsat.EuropeanJournalBusinessScienceTechnologyMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>
@@ -131,7 +130,6 @@
     <string>au_permitted_host_pattern</string>
     <list>
       <string>pro\.fontawesome\.com</string>
-      <string>s7\.addthis\.com</string>
       <string>fonts\.googleapis\.com</string>
       <string>fonts\.gstatic\.com</string>
       <string>code\.jquery\.com</string>

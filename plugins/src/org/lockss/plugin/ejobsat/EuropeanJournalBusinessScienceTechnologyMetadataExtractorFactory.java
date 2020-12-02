@@ -1,4 +1,4 @@
-package org.lockss.plugin.ejbst;
+package org.lockss.plugin.ejobsat;
 
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
@@ -20,7 +20,7 @@ public class EuropeanJournalBusinessScienceTechnologyMetadataExtractorFactory im
 
     /*
     <meta name="citation_journal_title"	content="European Journal of Business Science and Technology">
-	<meta name="citation_issn"			content="23366494">
+	<meta name="citation_issn"			content="23366494">  // this is the print issn
 	<meta name="citation_issn"			content="26947161">
 	<meta name="citation_authors"			content="Firdmuc, Jarko; Schreiber, Philipp; Siddiqui, Martin">
 	<meta name="citation_title"			content="Intangible Assets and the Determinants of a Single Bank Relation of German SMEs">
@@ -63,7 +63,7 @@ public class EuropeanJournalBusinessScienceTechnologyMetadataExtractorFactory im
             tagMap.put("citation_firstpage", MetadataField.FIELD_START_PAGE);
             tagMap.put("citation_lastpage", MetadataField.FIELD_END_PAGE);
             tagMap.put("citation_doi", MetadataField.FIELD_DOI);
-            tagMap.put("citation_issn", MetadataField.FIELD_ISSN);
+            tagMap.put("citation_issn", MetadataField.FIELD_EISSN);   //the second one
             tagMap.put("citation_pdf_url", MetadataField.FIELD_ACCESS_URL);
             tagMap.put("dc.Publisher", MetadataField.DC_FIELD_PUBLISHER);
         }
