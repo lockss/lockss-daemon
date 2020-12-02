@@ -766,8 +766,6 @@ public class ServeContent extends LockssServlet {
         // Find a CU with content if possible.  If none, find an AU where
         // it would fit so can rewrite content from publisher if necessary.
         cu = pluginMgr.findCachedUrl(url, CuContentReq.PreferContent);
-	// TK why is this necessary with new repo but not old?
-	if (!cu.hasContent()) cu = null;
         if (cu != null) {
 	  cuUrl = cu.getUrl();
           au = cu.getArchivalUnit();
