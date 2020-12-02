@@ -12,7 +12,7 @@
   rights = openaccess
   plugin = org.lockss.plugin.hindawi.ClockssHindawiPlugin
   param[base_url] = https://www.hindawi.com/
-  param[download_url] = https://downloads.hindawi.com/
+  param[download_url] = http://downloads.hindawi.com/
   implicit < status ; status2 ; year ; name ; param[year] ; volume ; hidden[proxy] >
 
   {
