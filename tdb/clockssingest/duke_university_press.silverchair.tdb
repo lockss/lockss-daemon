@@ -27,7 +27,7 @@
       au < frozen ; exists ; 2016 ; 2016 ; American Literary Scholarship 2016 ; 2014 ; >
       au < manifest ; exists ; 2017 ; 2017 ; American Literary Scholarship 2017 ; 2015 ; >
       au < manifest ; exists ; 2018 ; 2018 ; American Literary Scholarship 2018 ; 2016 ; >
-      au < notReady ; exists ; 2019 ; 2019 ; American Literary Scholarship 2019 ; 2017 ; > #unable to add to AUTest
+      au < manifest ; exists ; 2019 ; 2019 ; American Literary Scholarship 2019 ; 2017 ; > #unable to add to AUTest
       au < manifest ; exists ; 2020 ; 2020 ; American Literary Scholarship 2020 ; 2018 ; >
 
   }
@@ -289,10 +289,10 @@
       param[journal_id] = easts
       #move to T&F in 2021
 
-      au < manifest ; exists ; 2017 ; 2017 ; East Asian Science, Technology and Society: An International Journal Volume 11 ; 11 ; >
-      au < manifest ; exists ; 2018 ; 2018 ; East Asian Science, Technology and Society: An International Journal Volume 12 ; 12 ; >
-      au < manifest ; exists ; 2019 ; 2019 ; East Asian Science, Technology and Society: An International Journal Volume 13 ; 13 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; East Asian Science, Technology and Society: An International Journal Volume 14 ; 14 ; >
+      au < ready ; exists ; 2017 ; 2017 ; East Asian Science, Technology and Society: An International Journal Volume 11 ; 11 ; >
+      au < ready ; exists ; 2018 ; 2018 ; East Asian Science, Technology and Society: An International Journal Volume 12 ; 12 ; >
+      au < ready ; exists ; 2019 ; 2019 ; East Asian Science, Technology and Society: An International Journal Volume 13 ; 13 ; >
+      au < ready ; exists ; 2020 ; 2020 ; East Asian Science, Technology and Society: An International Journal Volume 14 ; 14 ; >
 
   }
 
