@@ -33,38 +33,43 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.ubiquitypress.upn;
 
-import java.util.Arrays;
+import java.io.*;
 
-import org.lockss.plugin.BaseUrlHttpHttpsUrlNormalizer;
-import org.apache.commons.lang3.StringUtils;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.rewriter.*;
+import org.lockss.servlet.ServletUtil.LinkTransform;
 
-// subclass the BaseUrlHttpHttpsUrlNormalizer - which redirects protocol to that of declared base_url
-// and then does whatever specific "additionalNormalization that is specified
-public class UbiquityPartnerNetworkUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
+public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewriterFactory {
 
   @Override
-   public String additionalNormalization(String url,ArchivalUnit au)
-      throws PluginException {
+  public InputStream createLinkRewriter(String mimeType, 
+                                        ArchivalUnit au,
+                                        InputStream in,
+                                        String encoding,
+                                        String url,
+                                        LinkTransform xform)
+      throws PluginException, IOException {
+    NodeFilterHtmlLinkRewriterFactory fact = new NodeFilterHtmlLinkRewriterFactory();
+    
     /*
-     * 'print/':
+     * Images in Utrecht University Library's Studium
+     * (https://www.gewina-studium.nl/) are displayed in a Featherlight
+     * (https://noelboss.github.io/featherlight/) widget. In this context, an
+     * <a> tag has a 'data-featherlight' attribute with a relative URL, and
+     * contains a regular <img> tag inside it. When clicked, the image is
+     * rendered in a popup, but using the 'data-featherlight' link from the <a>
+     * tag.
      * 
-     * Make the print version equivalent to the full text HTML version.
+     * Example from
+     * https://www.gewina-studium.nl/articles/10.18352/studium.10120/:
      * 
-     * '?action=download':
-     * 
-     * Make the "original" link of each figure refer to the image itself. Example:
-     * 
-     * https://www.gewina-studium.nl/articles/10.18352/studium.10120/figures/Cocquyt_fig1.jpg?action=download
-     * ->
-     * https://www.gewina-studium.nl/articles/10.18352/studium.10120/figures/Cocquyt_fig1.jpg
+     * <a href="#" data-featherlight="figures/Cocquyt_fig1.jpg"><img
+     * src="figures/Cocquyt_fig1.jpg"></a>
      */
-    for (String suffix : Arrays.asList("print/",
-                                       "?action=download")) {
-      url = StringUtils.removeEnd(url, suffix);
-    }
-
-    return url;
+    fact.addAttrToRewrite("data-featherlight");
+    
+    return fact.createLinkRewriter(mimeType, au, in, encoding, url, xform);
   }
+  
 }

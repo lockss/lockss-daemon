@@ -1,3 +1,35 @@
+<!--
+
+Copyright (c) 2000-2020, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+-->
 <map>
   <entry>
     <string>plugin_status</string>
@@ -9,14 +41,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>10</string>
+    <string>11</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-        <string>4</string>
+        <string>5</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -38,17 +70,14 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>2,"^https?://%s%sjms/public/journals/1/journalFavicon_en_US.ico$", url_host(base_url), url_path(base_url)</string>
 <!--      <string>1,"^https?://(.+\.cloudfront\.net|cdn\.mathjax\.org|.+\.jquery\.com|(fonts|ajax)\.(gstatic|googleapis)\.com)/."</string> -->
 <!--  take out jquery temporarily to see what it is that this needed -->
-      <string>1,"^https?://(.+\.cloudfront\.net|cdn\.mathjax\.org|(fonts|ajax)\.(gstatic|googleapis)\.com)/."</string>
+      <string>1,"^https?://(maxcdn\.bootstrapcdn\.com|cdnjs\.cloudflare\.com|.+\.cloudfront\.net|cdn\.mathjax\.org|(fonts|ajax)\.(gstatic|googleapis)\.com)/."</string>
       <string>1,"^https?://%s%slockss/year/%d/?$", url_host(base_url), url_path(base_url), year</string>
-      <string>1,"^https?://%s%s.*\.(bmp|css|gif|ico|js|jpe?g|png|tif?f|eot|svg|ttf|woff.?)([?]((itok|v)=)?[^&amp;]+)?(/)?$", url_host(base_url), url_path(base_url)</string>
+      <string>1,"^https?://%s%s.*\.(bmp|css|eot|gif|ico|js|jpe?g|png|tif?f|svg|ttf|woff.?)([?]((itok|v)=)?[^&amp;]+)?(/)?$", url_host(base_url), url_path(base_url)</string>
       <string>1,"^https?://%s%sarticles(/abstract)?/[^/?]+/[^/?]+/?(galley/[^/?]+/download)?/?$", url_host(base_url), url_path(base_url)</string>
-      <!--  allow the issue toc from the manifest page but it will normalize back to the manifest page url -->
-      <!--  so that triggered manifest pages won't have 404 links at the top page -->
-      <!-- https://www.xyz.nl/20/volume/0/issue/13/ -->
-      <string>1,"^https?://%s%s/[^/?]+/volume/[^/?]+/issue/[^/]+/$", url_host(base_url), url_path(base_url)</string>
+      <string>1,"^https?://%s%sarticles/[^/?]+/thumbs/", url_host(base_url), url_path(base_url)</string>
+      <string>1,"^https?://%s%s[^/?]+/volume/[^/?]+/issue/[^/]+/$", url_host(base_url), url_path(base_url)</string>
     </list>
   </entry>
   <entry>
@@ -148,10 +177,11 @@
          org.lockss.crawler.allowedPluginPermittedHosts= -->
     <string>au_permitted_host_pattern</string>
     <list>
+      <string>maxcdn\.bootstrapcdn\.com</string>
+      <string>cdnjs\.cloudflare\.com</string>
       <string>.+\.cloudfront\.net</string>
       <string>.+\.mathjax\.org</string>
-      <string>.+\.gstatic\.com</string>
-      <string>(fonts|ajax)\.googleapis\.com</string>
+      <string>(fonts|ajax)\.(gstatic|googleapis)\.com</string>
       <string>.+\.jquery\.com</string>
     </list>
   </entry>
@@ -165,5 +195,13 @@
     <list>
       <string>"/(lib|site|images|js|public|ads|static)/.+[.](css|gif|png|jpe?g|js)([?]((itok|v)=)?[^&amp;]+)?$", 0</string>
     </list>
+  </entry>
+  <entry>
+    <string>text/html_link_rewriter_factory</string>
+    <string>org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkHtmlLinkRewriterFactory</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
   </entry>
 </map>
