@@ -1,3 +1,35 @@
+<!--
+
+Copyright (c) 2000-2020, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+-->
 <map>
   <entry>
     <string>plugin_status</string>
@@ -76,14 +108,13 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,"^https://pro\.fontawesome\.com/.*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)"</string>
-      <string>1,"^https://code\.jquery\.com/.*\.js"</string>
-      <string>1,"^https://fonts\.googleapis\.com/css"</string>
-      <string>1,"^https://fonts\.gstatic\.com/.*\.css"</string>
-      <string>1,"^%sartkey/ejo-%d", base_url, year</string>
-      <string>1,"^%s(pdfs|img|etc)/ejo", base_url</string>
+      <string>1,"^https?://(%s|pro\.fontawesome\.com|code\.jquery\.com|fonts\.(googleapis|gstatic)\.com)/.*\.(bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)", url_host(base_url)</string>
+      <string>1,"^https?://fonts\.(googleapis|gstatic)\.com/css"</string>
+      <string>1,"^%sartkey/%s-%d", base_url, journal_id, year</string>
+      <string>1,"^%s(contents|magno|pdfs)/%s/%d/", base_url, journal_id, year</string>
       <!--https://www.ejobsat.cz/clanek.php?action=refdn&rfmt=ris&artkey=ejo-201801-0003-->
-      <string>1,"^%sclanek.php\?action=refdn&amp;rfmt=ris&amp;artkey=%s-%d", base_url, journal_id, year</string>
+      <string>2,"^%sclanek\.php\?action=refdn&amp;rfmt=word&amp;artkey=%s-%d", base_url, journal_id, year</string>
+      <string>1,"^%sclanek\.php\?action=refdn&amp;rfmt=[^&amp;]+&amp;artkey=%s-%d", base_url, journal_id, year</string>
     </list>
   </entry>
   <entry>
@@ -129,7 +160,7 @@
   <entry>
     <string>au_permitted_host_pattern</string>
     <list>
-      <string>pro\.fontawesome\.com</string>
+      <string>pro\.fontawesome\.com</string><!-- is this actually used? -->
       <string>fonts\.googleapis\.com</string>
       <string>fonts\.gstatic\.com</string>
       <string>code\.jquery\.com</string>
