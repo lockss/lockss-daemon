@@ -83,26 +83,6 @@ public class BioOneMetadataExtractorFactory extends SourceXmlMetadataExtractorFa
 			}
 			return JatsPublishingHelper;
 		}
-
-		/*
-		@Override
-		protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
-																ArticleMetadata oneAM) {
-
-			List<String> returnList = new ArrayList<String>();
-
-			String publisherName = "BioOne";
-
-			TdbAu tdbau = cu.getArchivalUnit().getTdbAu();
-			if (tdbau != null) {
-				publisherName =  tdbau.getPublisherName();
-			}
-
-			oneAM.put(MetadataField.FIELD_PUBLISHER, publisherName);
-
-			return returnList;
-		}
-		*/
 		
 		@Override
 		protected void postCookProcess(SourceXmlSchemaHelper schemaHelper,
@@ -116,6 +96,15 @@ public class BioOneMetadataExtractorFactory extends SourceXmlMetadataExtractorFa
 					thisAM.put(MetadataField.FIELD_DATE, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_edate));
 				}
 			}
+
+			String publisherName = "BioOne";
+
+			TdbAu tdbau = cu.getArchivalUnit().getTdbAu();
+			if (tdbau != null) {
+				publisherName =  tdbau.getPublisherName();
+			}
+			
+			thisAM.put(MetadataField.FIELD_PUBLISHER, publisherName);
 		}
 
 	}
