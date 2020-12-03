@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.clockss.casalini.ClockssCasaliniLibri2020SourcePlugin</string>
+    <string>org.lockss.plugin.clockss.casalini.ClockssCasaliniLibriBooksPlugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -36,13 +36,18 @@
     <string>plugin_parent_version</string>
     <string>1</string>
   </entry>
+  <!--This version need mar4j library-->
+  <entry>
+    <string>required_daemon_version</string>
+    <string>1.75.0</string>
+  </entry>
   <entry>
     <string>au_name</string>
-    <string>"Casalini Libri Monographs 2020 Source Plugin (CLOCKSS), Base URL %s, Directory %s", base_url, directory</string>
+    <string>"Casalini Libri Monographs Books Plugin (CLOCKSS), Base URL %s, Directory %s", base_url, directory</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Casalini Libri Monographs 2020 Source Plugin (CLOCKSS)</string>
+    <string>Casalini Libri Monographs Books Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
@@ -50,21 +55,13 @@
       <string>"^%s%s/.+\.pdf$", base_url, directory</string>
     </list>
   </entry>
-  <!--this is for test purpose only-->
-  <entry>
-    <string>au_crawlrules</string>
-    <list>
-      <string>1,"^%s%s/Sample", base_url, directory</string>
-    </list>
-  </entry>
-  <!--should be deleted later-->
   <entry>
     <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.clockss.casalini.CasaliniLibri2020SourceArticleIteratorFactory</string>
+    <string>org.lockss.plugin.clockss.casalini.CasaliniLibriBooksArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.clockss.casalini.CasaliniLibri2020SourceArticleIteratorFactory</string>
+    <string>org.lockss.plugin.clockss.casalini.CasaliniLibriBooksArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>application/marc_metadata_extractor_factory_map</string>
