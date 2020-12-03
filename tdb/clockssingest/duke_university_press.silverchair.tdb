@@ -25,10 +25,10 @@
       param[journal_id] = am-lit-scholarship
 
       au < frozen ; exists ; 2016 ; 2016 ; American Literary Scholarship 2016 ; 2014 ; >
-      au < manifest ; exists ; 2017 ; 2017 ; American Literary Scholarship 2017 ; 2015 ; >
-      au < manifest ; exists ; 2018 ; 2018 ; American Literary Scholarship 2018 ; 2016 ; >
-      au < manifest ; exists ; 2019 ; 2019 ; American Literary Scholarship 2019 ; 2017 ; > #unable to add to AUTest
-      au < manifest ; exists ; 2020 ; 2020 ; American Literary Scholarship 2020 ; 2018 ; >
+      au < ready ; exists ; 2017 ; 2017 ; American Literary Scholarship 2017 ; 2015 ; >
+      au < ready ; exists ; 2018 ; 2018 ; American Literary Scholarship 2018 ; 2016 ; >
+      au < ready ; exists ; 2019 ; 2019 ; American Literary Scholarship 2019 ; 2017 ; > #unable to add to AUTest
+      au < ready ; exists ; 2020 ; 2020 ; American Literary Scholarship 2020 ; 2018 ; >
 
   }
 
@@ -43,10 +43,10 @@
 
       param[journal_id] = american-literature
 
-      au < manifest ; exists ; 2017 ; 2017 ; American Literature Volume 89 ; 89 ; >
-      au < manifest ; exists ; 2018 ; 2018 ; American Literature Volume 90 ; 90 ; >
-      au < manifest ; exists ; 2019 ; 2019 ; American Literature Volume 91 ; 91 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; American Literature Volume 92 ; 92 ; >
+      au < ready ; exists ; 2017 ; 2017 ; American Literature Volume 89 ; 89 ; >
+      au < ready ; exists ; 2018 ; 2018 ; American Literature Volume 90 ; 90 ; >
+      au < ready ; exists ; 2019 ; 2019 ; American Literature Volume 91 ; 91 ; >
+      au < ready ; exists ; 2020 ; 2020 ; American Literature Volume 92 ; 92 ; >
 
   }
 
@@ -61,10 +61,10 @@
 
       param[journal_id] = american-speech
 
-      au < manifest ; exists ; 2017 ; 2017 ; American Speech Volume 92 ; 92 ; >
-      au < manifest ; exists ; 2018 ; 2018 ; American Speech Volume 93 ; 93 ; >
+      au < ready ; exists ; 2017 ; 2017 ; American Speech Volume 92 ; 92 ; >
+      au < ready ; exists ; 2018 ; 2018 ; American Speech Volume 93 ; 93 ; >
       au < manifest ; exists ; 2019 ; 2019 ; American Speech Volume 94 ; 94 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; American Speech Volume 95 ; 95 ; >
+      au < ready ; exists ; 2020 ; 2020 ; American Speech Volume 95 ; 95 ; >
 
   }
 
@@ -79,10 +79,10 @@
 
       param[journal_id] = boundary-2
 
-      au < manifest ; exists ; 2017 ; 2017 ; boundary 2 Volume 44 ; 44 ; >
-      au < manifest ; exists ; 2018 ; 2018 ; boundary 2 Volume 45 ; 45 ; >
-      au < manifest ; exists ; 2019 ; 2019 ; boundary 2 Volume 46 ; 46 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; boundary 2 Volume 47 ; 47 ; >
+      au < ready ; exists ; 2017 ; 2017 ; boundary 2 Volume 44 ; 44 ; >
+      au < ready ; exists ; 2018 ; 2018 ; boundary 2 Volume 45 ; 45 ; >
+      au < ready ; exists ; 2019 ; 2019 ; boundary 2 Volume 46 ; 46 ; >
+      au < ready ; exists ; 2020 ; 2020 ; boundary 2 Volume 47 ; 47 ; >
 
   }
 
@@ -97,25 +97,25 @@
 
       param[journal_id] = archives-of-asian-art
 
-      au < manifest ; exists ; 2001 ; 2001 ; Archives of Asian Art Volume 52 ; 52 ; >
-      au < manifest ; exists ; 2003 ; 2003 ; Archives of Asian Art Volume 53 ; 53 ; >
-      au < manifest ; exists ; 2004 ; 2004 ; Archives of Asian Art Volume 54 ; 54 ; >
-      au < manifest ; exists ; 2005 ; 2005 ; Archives of Asian Art Volume 55 ; 55 ; >
-      au < manifest ; exists ; 2006 ; 2006 ; Archives of Asian Art Volume 56 ; 56 ; >
-      au < manifest ; exists ; 2007 ; 2007 ; Archives of Asian Art Volume 57 ; 57 ; >
-      au < manifest ; exists ; 2008 ; 2008 ; Archives of Asian Art Volume 58 ; 58 ; >
-      au < manifest ; exists ; 2009 ; 2009 ; Archives of Asian Art Volume 59 ; 59 ; >
-      au < manifest ; exists ; 2010 ; 2010 ; Archives of Asian Art Volume 60 ; 60 ; >
-      au < manifest ; exists ; 2011 ; 2011 ; Archives of Asian Art Volume 61 ; 61 ; >
-      au < manifest ; exists ; 2012 ; 2012 ; Archives of Asian Art Volume 62 ; 62 ; >
-      au < manifest ; exists ; 2013 ; 2013 ; Archives of Asian Art Volume 63 ; 63 ; >
-      au < manifest ; exists ; 2014 ; 2014 ; Archives of Asian Art Volume 64 ; 64 ; >
-      au < manifest ; exists ; 2015 ; 2015 ; Archives of Asian Art Volume 65 ; 65 ; >
-      au < manifest ; exists ; 2016 ; 2016 ; Archives of Asian Art Volume 66 ; 66 ; >
-      au < manifest ; exists ; 2017 ; 2017 ; Archives of Asian Art Volume 67 ; 67 ; >
-      au < manifest ; exists ; 2018 ; 2018 ; Archives of Asian Art Volume 68 ; 68 ; >
-      au < manifest ; exists ; 2019 ; 2019 ; Archives of Asian Art Volume 69 ; 69 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; Archives of Asian Art Volume 70 ; 70 ; >
+      au < ready ; exists ; 2001 ; 2001 ; Archives of Asian Art Volume 52 ; 52 ; >
+      au < ready ; exists ; 2003 ; 2003 ; Archives of Asian Art Volume 53 ; 53 ; >
+      au < ready ; exists ; 2004 ; 2004 ; Archives of Asian Art Volume 54 ; 54 ; >
+      au < ready ; exists ; 2005 ; 2005 ; Archives of Asian Art Volume 55 ; 55 ; >
+      au < ready ; exists ; 2006 ; 2006 ; Archives of Asian Art Volume 56 ; 56 ; >
+      au < ready ; exists ; 2007 ; 2007 ; Archives of Asian Art Volume 57 ; 57 ; >
+      au < ready ; exists ; 2008 ; 2008 ; Archives of Asian Art Volume 58 ; 58 ; >
+      au < ready ; exists ; 2009 ; 2009 ; Archives of Asian Art Volume 59 ; 59 ; >
+      au < ready ; exists ; 2010 ; 2010 ; Archives of Asian Art Volume 60 ; 60 ; >
+      au < ready ; exists ; 2011 ; 2011 ; Archives of Asian Art Volume 61 ; 61 ; >
+      au < ready ; exists ; 2012 ; 2012 ; Archives of Asian Art Volume 62 ; 62 ; >
+      au < ready ; exists ; 2013 ; 2013 ; Archives of Asian Art Volume 63 ; 63 ; >
+      au < ready ; exists ; 2014 ; 2014 ; Archives of Asian Art Volume 64 ; 64 ; >
+      au < ready ; exists ; 2015 ; 2015 ; Archives of Asian Art Volume 65 ; 65 ; >
+      au < ready ; exists ; 2016 ; 2016 ; Archives of Asian Art Volume 66 ; 66 ; >
+      au < ready ; exists ; 2017 ; 2017 ; Archives of Asian Art Volume 67 ; 67 ; >
+      au < ready ; exists ; 2018 ; 2018 ; Archives of Asian Art Volume 68 ; 68 ; >
+      au < ready ; exists ; 2019 ; 2019 ; Archives of Asian Art Volume 69 ; 69 ; >
+      au < ready ; exists ; 2020 ; 2020 ; Archives of Asian Art Volume 70 ; 70 ; >
 
   }
 
@@ -130,15 +130,15 @@
 
       param[journal_id] = black-sacred-music
 
-      au < manifest ; exists ; 1987 ; 1987 ; Black Sacred Music Volume 1 ; 1 ; >
-      au < manifest ; exists ; 1988 ; 1988 ; Black Sacred Music Volume 2 ; 2 ; >
-      au < manifest ; exists ; 1989 ; 1989 ; Black Sacred Music Volume 3 ; 3 ; >
-      au < manifest ; exists ; 1990 ; 1990 ; Black Sacred Music Volume 4 ; 4 ; >
-      au < manifest ; exists ; 1991 ; 1991 ; Black Sacred Music Volume 5 ; 5 ; >
-      au < manifest ; exists ; 1992 ; 1992 ; Black Sacred Music Volume 6 ; 6 ; >
-      au < manifest ; exists ; 1993 ; 1993 ; Black Sacred Music Volume 7 ; 7 ; >
-      au < manifest ; exists ; 1994 ; 1994 ; Black Sacred Music Volume 8 ; 8 ; >
-      au < manifest ; exists ; 1995 ; 1995 ; Black Sacred Music Volume 9 ; 9 ; >
+      au < ready ; exists ; 1987 ; 1987 ; Black Sacred Music Volume 1 ; 1 ; >
+      au < ready ; exists ; 1988 ; 1988 ; Black Sacred Music Volume 2 ; 2 ; >
+      au < ready ; exists ; 1989 ; 1989 ; Black Sacred Music Volume 3 ; 3 ; >
+      au < ready ; exists ; 1990 ; 1990 ; Black Sacred Music Volume 4 ; 4 ; >
+      au < ready ; exists ; 1991 ; 1991 ; Black Sacred Music Volume 5 ; 5 ; >
+      au < ready ; exists ; 1992 ; 1992 ; Black Sacred Music Volume 6 ; 6 ; >
+      au < ready ; exists ; 1993 ; 1993 ; Black Sacred Music Volume 7 ; 7 ; >
+      au < ready ; exists ; 1994 ; 1994 ; Black Sacred Music Volume 8 ; 8 ; >
+      au < ready ; exists ; 1995 ; 1995 ; Black Sacred Music Volume 9 ; 9 ; >
 
   }
 
@@ -153,10 +153,10 @@
 
       param[journal_id] = camera-obscura
 
-      au < manifest ; exists ; 2017 ; 2017 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 32 ; 32 ; >
-      au < manifest ; exists ; 2018 ; 2018 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 33 ; 33 ; >
-      au < manifest ; exists ; 2019 ; 2019 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 34 ; 34 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 35 ; 35 ; >
+      au < ready ; exists ; 2017 ; 2017 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 32 ; 32 ; >
+      au < ready ; exists ; 2018 ; 2018 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 33 ; 33 ; >
+      au < ready ; exists ; 2019 ; 2019 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 34 ; 34 ; >
+      au < ready ; exists ; 2020 ; 2020 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 35 ; 35 ; >
 
   }
 
@@ -182,10 +182,10 @@
 
       param[journal_id] = common-knowledge
 
-      au < manifest ; exists ; 2017 ; 2017 ; Common Knowledge Volume 23 ; 23 ; >
-      au < manifest ; exists ; 2018 ; 2018 ; Common Knowledge Volume 24 ; 24 ; >
-      au < manifest ; exists ; 2019 ; 2019 ; Common Knowledge Volume 25 ; 25 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; Common Knowledge Volume 26 ; 26 ; >
+      au < ready ; exists ; 2017 ; 2017 ; Common Knowledge Volume 23 ; 23 ; >
+      au < ready ; exists ; 2018 ; 2018 ; Common Knowledge Volume 24 ; 24 ; >
+      au < ready ; exists ; 2019 ; 2019 ; Common Knowledge Volume 25 ; 25 ; >
+      au < ready ; exists ; 2020 ; 2020 ; Common Knowledge Volume 26 ; 26 ; >
 
   }
 
@@ -200,10 +200,10 @@
 
       param[journal_id] = comparative-literature
 
-      au < manifest ; exists ; 2017 ; 2017 ; Comparative Literature Volume 68 ; 68 ; >
-      au < manifest ; exists ; 2018 ; 2018 ; Comparative Literature Volume 69 ; 69 ; >
-      au < manifest ; exists ; 2019 ; 2019 ; Comparative Literature Volume 70 ; 70 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; Comparative Literature Volume 71 ; 71 ; >
+      au < ready ; exists ; 2017 ; 2017 ; Comparative Literature Volume 68 ; 68 ; >
+      au < ready ; exists ; 2018 ; 2018 ; Comparative Literature Volume 69 ; 69 ; >
+      au < ready ; exists ; 2019 ; 2019 ; Comparative Literature Volume 70 ; 70 ; >
+      au < ready ; exists ; 2020 ; 2020 ; Comparative Literature Volume 71 ; 71 ; >
 
   }
 
@@ -218,10 +218,10 @@
 
       param[journal_id] = cssaame
 
-      au < manifest ; exists ; 2017 ; 2017 ; Comparative Studies of South Asia, Africa and the Middle East Volume 37 ; 37 ; >
-      au < manifest ; exists ; 2018 ; 2018 ; Comparative Studies of South Asia, Africa and the Middle East Volume 38 ; 38 ; >
-      au < manifest ; exists ; 2019 ; 2019 ; Comparative Studies of South Asia, Africa and the Middle East Volume 39 ; 39 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; Comparative Studies of South Asia, Africa and the Middle East Volume 40 ; 40 ; >
+      au < ready ; exists ; 2017 ; 2017 ; Comparative Studies of South Asia, Africa and the Middle East Volume 37 ; 37 ; >
+      au < ready ; exists ; 2018 ; 2018 ; Comparative Studies of South Asia, Africa and the Middle East Volume 38 ; 38 ; >
+      au < ready ; exists ; 2019 ; 2019 ; Comparative Studies of South Asia, Africa and the Middle East Volume 39 ; 39 ; >
+      au < ready ; exists ; 2020 ; 2020 ; Comparative Studies of South Asia, Africa and the Middle East Volume 40 ; 40 ; >
 
   }
 
