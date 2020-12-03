@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -58,8 +58,6 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <!-- exclude "Digital Archive" folder for now -->
-      <string>2,"^%s%s/[^/]+/Digital.*", base_url, directory</string>
       <string>1,"^%s%s/", base_url, directory</string>
     </list>
   </entry>
