@@ -30,22 +30,22 @@
     param[base_url] = https://www.ingentaconnect.com/
     param[api_url] = https://api.ingentaconnect.com/
 
-    au < manifest ; exists ; 1997 ; International Journal of Tuberculosis and Lung Disease Volume 1 ; 1 ; >
-    au < manifest ; exists ; 1998 ; International Journal of Tuberculosis and Lung Disease Volume 2 ; 2 ; >
-    au < manifest ; exists ; 1999 ; International Journal of Tuberculosis and Lung Disease Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2000 ; International Journal of Tuberculosis and Lung Disease Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2001 ; International Journal of Tuberculosis and Lung Disease Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2002 ; International Journal of Tuberculosis and Lung Disease Volume 6 ; 6 ; >
-    au < manifest ; exists ; 2003 ; International Journal of Tuberculosis and Lung Disease Volume 7 ; 7 ; >
-    au < manifest ; exists ; 2004 ; International Journal of Tuberculosis and Lung Disease Volume 8 ; 8 ; >
-    au < manifest ; exists ; 2005 ; International Journal of Tuberculosis and Lung Disease Volume 9 ; 9 ; >
-    au < manifest ; exists ; 2006 ; International Journal of Tuberculosis and Lung Disease Volume 10 ; 10 ; >
-    au < manifest ; exists ; 2007 ; International Journal of Tuberculosis and Lung Disease Volume 11 ; 11 ; >
-    au < manifest ; exists ; 2008 ; International Journal of Tuberculosis and Lung Disease Volume 12 ; 12 ; >
-    au < manifest ; exists ; 2009 ; International Journal of Tuberculosis and Lung Disease Volume 13 ; 13 ; >
-    au < manifest ; exists ; 2010 ; International Journal of Tuberculosis and Lung Disease Volume 14 ; 14 ; >
-    au < manifest ; exists ; 2011 ; International Journal of Tuberculosis and Lung Disease Volume 15 ; 15 ; >
-    au < manifest ; exists ; 2012 ; International Journal of Tuberculosis and Lung Disease Volume 16 ; 16 ; >
+    au < doNotProcess ; exists ; 1997 ; International Journal of Tuberculosis and Lung Disease Volume 1 ; 1 ; >
+    au < doNotProcess ; exists ; 1998 ; International Journal of Tuberculosis and Lung Disease Volume 2 ; 2 ; >
+    au < doNotProcess ; exists ; 1999 ; International Journal of Tuberculosis and Lung Disease Volume 3 ; 3 ; >
+    au < doNotProcess ; exists ; 2000 ; International Journal of Tuberculosis and Lung Disease Volume 4 ; 4 ; >
+    au < doNotProcess ; exists ; 2001 ; International Journal of Tuberculosis and Lung Disease Volume 5 ; 5 ; >
+    au < doNotProcess ; exists ; 2002 ; International Journal of Tuberculosis and Lung Disease Volume 6 ; 6 ; >
+    au < doNotProcess ; exists ; 2003 ; International Journal of Tuberculosis and Lung Disease Volume 7 ; 7 ; >
+    au < doNotProcess ; exists ; 2004 ; International Journal of Tuberculosis and Lung Disease Volume 8 ; 8 ; >
+    au < doNotProcess ; exists ; 2005 ; International Journal of Tuberculosis and Lung Disease Volume 9 ; 9 ; >
+    au < doNotProcess ; exists ; 2006 ; International Journal of Tuberculosis and Lung Disease Volume 10 ; 10 ; >
+    au < doNotProcess ; exists ; 2007 ; International Journal of Tuberculosis and Lung Disease Volume 11 ; 11 ; >
+    au < doNotProcess ; exists ; 2008 ; International Journal of Tuberculosis and Lung Disease Volume 12 ; 12 ; >
+    au < doNotProcess ; exists ; 2009 ; International Journal of Tuberculosis and Lung Disease Volume 13 ; 13 ; >
+    au < doNotProcess ; exists ; 2010 ; International Journal of Tuberculosis and Lung Disease Volume 14 ; 14 ; >
+    au < doNotProcess ; exists ; 2011 ; International Journal of Tuberculosis and Lung Disease Volume 15 ; 15 ; >
+    au < doNotProcess ; exists ; 2012 ; International Journal of Tuberculosis and Lung Disease Volume 16 ; 16 ; >
 
     }
 
@@ -64,9 +64,9 @@
     param[base_url] = https://www.ingentaconnect.com/
     param[api_url] = https://api.ingentaconnect.com/
 
-    au < notReady ; exists ; 2017 ; International Journal of Tuberculosis and Lung Disease Volume 21 ; 21 ; > #LXQUEUE-1208
+    au < manifest ; exists ; 2017 ; International Journal of Tuberculosis and Lung Disease Volume 21 ; 21 ; > #LXQUEUE-1208
     au < manifest ; exists ; 2018 ; International Journal of Tuberculosis and Lung Disease Volume 22 ; 22 ; >
-    au < manifest ; exists ; 2019 ; International Journal of Tuberculosis and Lung Disease Volume 23 ; 23 ; >
+    au < exists ; exists ; 2019 ; International Journal of Tuberculosis and Lung Disease Volume 23 ; 23 ; >
     au < manifest ; exists ; 2020 ; International Journal of Tuberculosis and Lung Disease Volume 24 ; 24 ; >
 
     }
@@ -86,8 +86,8 @@
     param[base_url] = https://www.ingentaconnect.com/
     param[api_url] = https://api.ingentaconnect.com/
 
-    au < manifest ; exists ; 2011 ; Public Health Action Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2012 ; Public Health Action Volume 2 ; 2 ; >
+    au < doNotProcess ; exists ; 2011 ; Public Health Action Volume 1 ; 1 ; >
+    au < doNotProcess ; exists ; 2012 ; Public Health Action Volume 2 ; 2 ; >
 
     }
 
@@ -106,7 +106,7 @@
     param[base_url] = https://www.ingentaconnect.com/
     param[api_url] = https://api.ingentaconnect.com/
 
-    au < notReady ; exists ; 2017 ; Public Health Action Volume 7 ; 7 ; > #LXQUEUE-1208
+    au < manifest ; exists ; 2017 ; Public Health Action Volume 7 ; 7 ; > #LXQUEUE-1208
     au < manifest ; exists ; 2018 ; Public Health Action Volume 8 ; 8 ; >
     au < manifest ; exists ; 2019 ; Public Health Action Volume 9 ; 9 ; >
     au < manifest ; exists ; 2020 ; Public Health Action Volume 10 ; 10 ; >
