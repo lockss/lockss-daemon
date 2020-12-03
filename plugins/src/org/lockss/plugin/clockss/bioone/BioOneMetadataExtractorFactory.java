@@ -32,6 +32,7 @@
 
 package org.lockss.plugin.clockss.bioone;
 
+import org.lockss.config.TdbAu;
 import org.lockss.daemon.PluginException;
 import org.lockss.daemon.ShouldNotHappenException;
 import org.lockss.extractor.ArticleMetadata;
@@ -40,6 +41,7 @@ import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.JatsPublishingSchemaHelper;
+import org.lockss.plugin.clockss.PubMedSchemaHelper;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 import org.lockss.util.Logger;
@@ -82,6 +84,26 @@ public class BioOneMetadataExtractorFactory extends SourceXmlMetadataExtractorFa
 			return JatsPublishingHelper;
 		}
 
+		/*
+		@Override
+		protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
+																ArticleMetadata oneAM) {
+
+			List<String> returnList = new ArrayList<String>();
+
+			String publisherName = "BioOne";
+
+			TdbAu tdbau = cu.getArchivalUnit().getTdbAu();
+			if (tdbau != null) {
+				publisherName =  tdbau.getPublisherName();
+			}
+
+			oneAM.put(MetadataField.FIELD_PUBLISHER, publisherName);
+
+			return returnList;
+		}
+		*/
+		
 		@Override
 		protected void postCookProcess(SourceXmlSchemaHelper schemaHelper,
 									   CachedUrl cu, ArticleMetadata thisAM) {
