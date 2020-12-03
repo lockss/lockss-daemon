@@ -9,7 +9,6 @@ import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArticleFiles;
 import org.lockss.plugin.ArticleIteratorFactory;
 import org.lockss.plugin.SubTreeArticleIteratorBuilder;
-import org.lockss.plugin.springer.SpringerJatsSourceZipXmlArticleIteratorFactory;
 import org.lockss.util.Logger;
 
 import java.util.Iterator;
@@ -17,7 +16,7 @@ import java.util.regex.Pattern;
 
 public class ACMJatsSourceArticleIteratorFactory  implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
 
-    protected static Logger log = Logger.getLogger(SpringerJatsSourceZipXmlArticleIteratorFactory.class);
+    protected static Logger log = Logger.getLogger(ACMJatsSourceArticleIteratorFactory.class);
 
     protected static final String ALL_ZIP_XML_PATTERN_TEMPLATE =
             "\"%s[^/]+/.*\\.zip!/.*\\.pdf$\", base_url";
