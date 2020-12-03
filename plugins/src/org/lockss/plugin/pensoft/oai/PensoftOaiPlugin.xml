@@ -10,7 +10,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>18</string>
+    <string>19</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -35,8 +35,8 @@
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <!-- for no store exception-->
-    <string>1.72.0</string>
+    <!-- needs new OAI library -->
+    <string>1.75.0</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
