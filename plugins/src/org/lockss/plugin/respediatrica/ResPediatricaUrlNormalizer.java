@@ -6,7 +6,7 @@ import org.lockss.plugin.UrlNormalizer;
 import org.lockss.util.Logger;
 
 public class ResPediatricaUrlNormalizer implements UrlNormalizer {
-    private static final Logger log = Logger.getLogger(org.lockss.plugin.maffey.MaffeyUrlNormalizer.class);
+    private static final Logger log = Logger.getLogger(ResPediatricaUrlNormalizer.class);
 
     public String normalizeUrl(String url,
                                ArchivalUnit au)
