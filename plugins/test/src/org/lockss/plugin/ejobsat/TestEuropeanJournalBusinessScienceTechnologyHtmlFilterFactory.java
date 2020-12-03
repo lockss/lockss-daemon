@@ -1,4 +1,4 @@
-package org.lockss.plugin.ejbst;
+package org.lockss.plugin.ejobsat;
 
 import junit.framework.Test;
 import org.lockss.config.ConfigManager;
