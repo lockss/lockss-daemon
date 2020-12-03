@@ -10,7 +10,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -26,6 +26,15 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
+    <entry>
+        <string>au_permission_url</string>
+        <list>
+            <!-- https://www.hindawi.com/archiving/ -->
+            <string>"%sarchiving/", base_url</string>
+            <!-- http://downloads.hindawi.com/clockss.html -->
+            <string>"%sclockss.html", download_url</string>
+        </list>
+    </entry>
 </map>

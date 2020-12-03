@@ -10,7 +10,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>1</string>
+        <string>2</string>
     </entry>
     <entry>
         <string>au_name</string>
@@ -45,18 +45,18 @@
     <entry>
         <string>au_permission_url</string>
         <list>
-            <!--https://www.hindawi.com/archiving/-->
+            <!-- https://www.hindawi.com/archiving/ -->
             <string>"%sarchiving/", base_url</string>
+            <!-- http://downloads.hindawi.com/lockss.html -->
+            <string>"%slockss.html", download_url</string>
         </list>
     </entry>
     <entry>
         <string>au_crawlrules</string>
         <list>
-            <string>2, "^https://scholar.google.com/"</string>
-            <string>2, "^https://doi.org/"</string>
-            <string>1,"^https?://((fonts|ajax)\.googleapis\.com|cdnjs\.cloudflare\.com|fast\.fonts\.net|fonts\.gstatic\.com|cdn\.cookielaw\.org|images\.hindawi\.com|static-01\.hindawi\.com|downloads\.hindawi\.com)/"</string>
+            <string>1,"^https?://((fonts|ajax)\.(googleapis|gstatic)\.com|cdnjs\.cloudflare\.com|fast\.fonts\.net|cdn\.cookielaw\.org|images\.hindawi\.com|static-01\.hindawi\.com)/"</string>
             <string>1,"^%sfonts", base_url</string>
-            <string>1,"^%sjournals/%s/%d", base_url, journal_id, year</string>
+            <string>1,"^(%s|%s)journals/%s/%d/", base_url, download_url, journal_id, year</string>
             <string>1,"^%sjournals/%s/contents/year/%d/", base_url, journal_id, year</string>
         </list>
     </entry>
@@ -153,7 +153,14 @@
     </entry>
     <entry>
         <string>au_permitted_host_pattern</string>
-        <string>"(fonts|ajax)\.googleapis\.com|cdnjs\.cloudflare\.com|fast\.fonts\.net|fonts\.gstatic\.com|cdn\.cookielaw\.org|images\.hindawi\.com|static-01\.hindawi\.com|downloads\.hindawi\.com"</string>
+        <list>
+          <string>images\.hindawi\.com</string>
+          <string>static-01\.hindawi\.com</string>
+          <string>(fonts|ajax)\.(googleapis|gstatic)\.com</string>
+          <string>cdnjs\.cloudflare\.com</string>
+          <string>fast\.fonts\.net</string>
+          <string>cdn\.cookielaw\.org</string>
+        </list>
     </entry>
     <entry>
         <string>au_repair_from_peer_if_missing_url_pattern</string>
