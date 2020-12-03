@@ -34,6 +34,7 @@ POSSIBILITY OF SUCH DAMAGE.
 package org.lockss.plugin.ubiquitypress.upn;
 
 import java.util.Arrays;
+import java.util.regex.*;
 
 import org.lockss.plugin.BaseUrlHttpHttpsUrlNormalizer;
 import org.apache.commons.lang3.StringUtils;
@@ -44,6 +45,10 @@ import org.lockss.plugin.ArchivalUnit;
 // and then does whatever specific "additionalNormalization that is specified
 public class UbiquityPartnerNetworkUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
 
+  protected static Pattern CSS_WITH_DATE =
+      Pattern.compile("\\.css\\?\\d{4}-\\d{1,2}-\\d{1,2}$",
+                      Pattern.CASE_INSENSITIVE);
+  
   @Override
    public String additionalNormalization(String url,ArchivalUnit au)
       throws PluginException {
@@ -64,7 +69,12 @@ public class UbiquityPartnerNetworkUrlNormalizer extends BaseUrlHttpHttpsUrlNorm
                                        "?action=download")) {
       url = StringUtils.removeEnd(url, suffix);
     }
-
+    
+    /*
+     * Various .css URLs have a date appended, e.g. .css?2020-12-02
+     */
+    url = CSS_WITH_DATE.matcher(url).replaceFirst(".css");
+    
     return url;
   }
 }

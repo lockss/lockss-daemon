@@ -89,6 +89,10 @@ public class TestUbiquityPartnerNetworkUrlNormalizer extends LockssTestCase {
       assertEquals("http://www.xyz.com/fig1.jpg",
           norm.normalizeUrl("http://www.xyz.com/fig1.jpg?action=download", testAU) );
       //https://www.gewina-studium.nl/articles/10.18352/studium.10197/figures/6_Schoolmann_and_Flipse_fig1.jpg?action=download
+      assertEquals("http://www.xyz.com/foo.css",
+          norm.normalizeUrl("http://www.xyz.com/foo.css", testAU) );
+      assertEquals("http://www.xyz.com/foo.css",
+          norm.normalizeUrl("http://www.xyz.com/foo.css?2099-12-31", testAU) );
     }
   
 }
