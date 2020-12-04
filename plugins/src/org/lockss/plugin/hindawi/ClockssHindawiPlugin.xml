@@ -28,13 +28,22 @@
     <string>plugin_parent_version</string>
     <string>2</string>
   </entry>
-    <entry>
-        <string>au_permission_url</string>
-        <list>
-            <!-- https://www.hindawi.com/archiving/ -->
-            <string>"%sarchiving/", base_url</string>
-            <!-- http://downloads.hindawi.com/clockss.html -->
-            <string>"%sclockss.html", download_url</string>
-        </list>
-    </entry>
+  <entry>
+    <string>au_permission_url</string>
+    <list>
+      <!-- https://www.hindawi.com/archiving/ -->
+      <string>"%sarchiving/", base_url</string>
+      <!-- http://downloads.hindawi.com/clockss.html -->
+      <string>"%sclockss.html", download_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>clockss_override</string>
+    <map>
+      <entry>
+        <string>au_def_pause_time</string>
+        <long>100</long>
+      </entry>
+    </map>
+  </entry>
 </map>

@@ -28,4 +28,13 @@
     <string>au_name</string>
     <string>"Pensoft OAI Plugin (CLOCKSS), Base URL %s, OAI Set %s, OAI Date %s", base_url, au_oai_set, au_oai_date</string>
   </entry>
+  <entry>
+    <string>clockss_override</string>
+    <map>
+      <entry>
+        <string>au_def_pause_time</string>
+        <long>100</long>
+      </entry>
+    </map>
+  </entry>
 </map>
