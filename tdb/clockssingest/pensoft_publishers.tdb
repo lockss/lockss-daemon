@@ -26,8 +26,8 @@
     au < frozen ; exists ; 2016 ; 7 ; African Invertebrates Volume 2016 ; 2016 ; https://africaninvertebrates.pensoft.net/ ; >
     au < frozen ; exists ; 2017 ; 8 ; African Invertebrates Volume 2017 ; 2017 ; https://africaninvertebrates.pensoft.net/ ; >
     au < deepCrawl ; exists ; 2018 ; 9 ; African Invertebrates Volume 2018 ; 2018 ; https://africaninvertebrates.pensoft.net/ ; >
-    au < manifest ; exists ; 2019 ; 10 ; African Invertebrates Volume 2019 ; 2019 ; https://africaninvertebrates.pensoft.net/ ; >
-    au < manifest ; exists ; 2020 ; 11 ; African Invertebrates Volume 2020 ; 2020 ; https://africaninvertebrates.pensoft.net/ ; >
+    au < ready ; exists ; 2019 ; 10 ; African Invertebrates Volume 2019 ; 2019 ; https://africaninvertebrates.pensoft.net/ ; >
+    au < ready ; exists ; 2020 ; 11 ; African Invertebrates Volume 2020 ; 2020 ; https://africaninvertebrates.pensoft.net/ ; >
 
   }
 
@@ -77,7 +77,7 @@
     au < frozen ; exists ; 2017 ; 12 ; BioRisk Volume 2017 ; 2017 ; https://biorisk.pensoft.net/ ; >
     au < deepCrawl ; exists ; 2018 ; 13 ; BioRisk Volume 2018 ; 2018 ; https://biorisk.pensoft.net/ ; >
     au < deepCrawl ; exists ; 2019 ; 14 ; BioRisk Volume 2019 ; 2019 ; https://biorisk.pensoft.net/ ; >
-    au < manifest ; exists ; 2020 ; 15 ; BioRisk Volume 2020 ; 2020 ; https://biorisk.pensoft.net/ ; >
+    au < ready ; exists ; 2020 ; 15 ; BioRisk Volume 2020 ; 2020 ; https://biorisk.pensoft.net/ ; >
 
    }
    
@@ -97,8 +97,8 @@
      au < frozen ; exists ; 2016 ; 63 ; Deutsche Entomologische Zeitschrift Volume 2016 ; 2016 ; http://dez.pensoft.net/ ; >
      au < frozen ; exists ; 2017 ; 64 ; Deutsche Entomologische Zeitschrift Volume 2017 ; 2017 ; https://dez.pensoft.net/ ; >
      au < deepCrawl ; exists ; 2018 ; 65 ; Deutsche Entomologische Zeitschrift Volume 2018 ; 2018 ; https://dez.pensoft.net/ ; >
-     au < manifest ; exists ; 2019 ; 66 ; Deutsche Entomologische Zeitschrift Volume 2019 ; 2019 ; https://dez.pensoft.net/ ; >
-     au < manifest ; exists ; 2020 ; 67 ; Deutsche Entomologische Zeitschrift Volume 2020 ; 2020 ; https://dez.pensoft.net/ ; >
+     au < ready ; exists ; 2019 ; 66 ; Deutsche Entomologische Zeitschrift Volume 2019 ; 2019 ; https://dez.pensoft.net/ ; >
+     au < ready ; exists ; 2020 ; 67 ; Deutsche Entomologische Zeitschrift Volume 2020 ; 2020 ; https://dez.pensoft.net/ ; >
 
    }
    
@@ -140,8 +140,8 @@
     au < frozen ; exists ; 2016 ; 48-53 ; Journal of Hymenoptera Research Volume 2016 ; 2016 ; https://jhr.pensoft.net/ ; >
     au < frozen ; exists ; 2017 ; 54-61 ; Journal of Hymenoptera Research Volume 2017 ; 2017 ; https://jhr.pensoft.net/ ; >
     au < deepCrawl ; exists ; 2018 ; 62-67 ; Journal of Hymenoptera Research Volume 2018 ; 2018 ; https://jhr.pensoft.net/ ; >
-    au < manifest ; exists ; 2019 ; 68-73 ; Journal of Hymenoptera Research Volume 2019 ; 2019 ; https://jhr.pensoft.net/ ; >
-    au < manifest ; exists ; 2020 ; 74-79 ; Journal of Hymenoptera Research Volume 2020 ; 2020 ; https://jhr.pensoft.net/ ; >
+    au < ready ; exists ; 2019 ; 68-73 ; Journal of Hymenoptera Research Volume 2019 ; 2019 ; https://jhr.pensoft.net/ ; >
+    au < ready ; exists ; 2020 ; 74-79 ; Journal of Hymenoptera Research Volume 2020 ; 2020 ; https://jhr.pensoft.net/ ; >
 
    }
   
@@ -424,7 +424,7 @@
       param[au_oai_set] = biss
 
       au < frozen ; exists ; 2018 ; 2018 ; Biodiversity Information Science and Standards Volume 2018 ; 2018 ; https://biss.pensoft.net/ ; >
-      au < manifest ; exists ; 2019 ; 2019 ; Biodiversity Information Science and Standards Volume 2019 ; 2019 ; https://biss.pensoft.net/ ; >
+      au < ready ; exists ; 2019 ; 2019 ; Biodiversity Information Science and Standards Volume 2019 ; 2019 ; https://biss.pensoft.net/ ; >
       au < manifest ; exists ; 2020 ; 2020 ; Biodiversity Information Science and Standards Volume 2020 ; 2020 ; https://biss.pensoft.net/ ; >
 
   }
@@ -441,7 +441,7 @@
 
       au < frozen ; exists ; 2018 ; 2018 ; Check List Volume 2018 ; 2018 ; https://checklist.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2019 ; 2019 ; Check List Volume 2019 ; 2019 ; https://checklist.pensoft.net/ ; >
-      au < manifest ; exists ; 2020 ; 2020 ; Check List Volume 2020 ; 2020 ; https://checklist.pensoft.net/ ; >
+      au < ready ; exists ; 2020 ; 2020 ; Check List Volume 2020 ; 2020 ; https://checklist.pensoft.net/ ; >
 
   }
 
@@ -470,8 +470,8 @@
       param[au_oai_set] = evolsyst
 
       au < frozen ; exists ; 2018 ; 2018 ; Evolutionary Systematics Volume 2018 ; 2018 ; https://evolsyst.pensoft.net/ ; >
-      au < manifest ; exists ; 2019 ; 2019 ; Evolutionary Systematics Volume 2019 ; 2019 ; https://evolsyst.pensoft.net/ ; >
-      au < manifest ; exists ; 2020 ; 2020 ; Evolutionary Systematics Volume 2020 ; 2020 ; https://evolsyst.pensoft.net/ ; >
+      au < ready ; exists ; 2019 ; 2019 ; Evolutionary Systematics Volume 2019 ; 2019 ; https://evolsyst.pensoft.net/ ; >
+      au < ready ; exists ; 2020 ; 2020 ; Evolutionary Systematics Volume 2020 ; 2020 ; https://evolsyst.pensoft.net/ ; >
 
   }
 
@@ -520,8 +520,8 @@
       au < frozen ; exists ; 2016 ; 2016 ; Italian Botanist Volume 2016 ; 2016 ; https://italianbotanist.pensoft.net/ ; >
       au < frozen ; exists ; 2017 ; 2017 ; Italian Botanist Volume 2017 ; 2017 ; https://italianbotanist.pensoft.net/ ; >
       au < frozen ; exists ; 2018 ; 2018 ; Italian Botanist Volume 2018 ; 2018 ; https://italianbotanist.pensoft.net/ ; >
-      au < manifest ; exists ; 2019 ; 2019 ; Italian Botanist Volume 2019 ; 2019 ; https://italianbotanist.pensoft.net/ ; >
-      au < manifest ; exists ; 2020 ; 2020 ; Italian Botanist Volume 2020 ; 2020 ; https://italianbotanist.pensoft.net/ ; >
+      au < ready ; exists ; 2019 ; 2019 ; Italian Botanist Volume 2019 ; 2019 ; https://italianbotanist.pensoft.net/ ; >
+      au < ready ; exists ; 2020 ; 2020 ; Italian Botanist Volume 2020 ; 2020 ; https://italianbotanist.pensoft.net/ ; >
 
   }
 
@@ -547,8 +547,8 @@
     au < frozen ; exists ; 2016 ; 10 ; Comparative Cytogenetics Volume 2016 ; 2016 ; https://compcytogen.pensoft.net/ ; >
     au < frozen ; exists ; 2017 ; 11 ; Comparative Cytogenetics Volume 2017 ; 2017 ; https://compcytogen.pensoft.net/ ; >
     au < deepCrawl ; exists ; 2018 ; 12 ; Comparative Cytogenetics Volume 2018 ; 2018 ; https://compcytogen.pensoft.net/ ; >
-    au < manifest ; exists ; 2019 ; 13 ; Comparative Cytogenetics Volume 2019 ; 2019 ; https://compcytogen.pensoft.net/ ; >
-    au < manifest ; exists ; 2020 ; 14 ; Comparative Cytogenetics Volume 2020 ; 2020 ; https://compcytogen.pensoft.net/ ; >
+    au < ready ; exists ; 2019 ; 13 ; Comparative Cytogenetics Volume 2019 ; 2019 ; https://compcytogen.pensoft.net/ ; >
+    au < ready ; exists ; 2020 ; 14 ; Comparative Cytogenetics Volume 2020 ; 2020 ; https://compcytogen.pensoft.net/ ; >
 
    }
 
@@ -564,8 +564,8 @@
 
       au < frozen ; exists ; 2017 ; 2017 ; Journal of Orthoptera Research Volume 2017 ; 2017 ; https://jor.pensoft.net/ ; >
       au < frozen ; exists ; 2018 ; 2018 ; Journal of Orthoptera Research Volume 2018 ; 2018 ; https://jor.pensoft.net/ ; >
-      au < manifest ; exists ; 2019 ; 2019 ; Journal of Orthoptera Research Volume 2019 ; 2019 ; https://jor.pensoft.net/ ; >
-      au < manifest ; exists ; 2020 ; 2020 ; Journal of Orthoptera Research Volume 2020 ; 2020 ; https://jor.pensoft.net/ ; >
+      au < ready ; exists ; 2019 ; 2019 ; Journal of Orthoptera Research Volume 2019 ; 2019 ; https://jor.pensoft.net/ ; >
+      au < ready ; exists ; 2020 ; 2020 ; Journal of Orthoptera Research Volume 2020 ; 2020 ; https://jor.pensoft.net/ ; >
 
   }
 
@@ -585,7 +585,7 @@
       au < frozen ; exists ; 2017 ; 2017 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2017 ; 2017 ; https://mab-online.nl/ ; >
       au < frozen ; exists ; 2018 ; 2018 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2018 ; 2018 ; https://mab-online.nl/ ; >
       au < deepCrawl ; exists ; 2019 ; 2019 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2019 ; 2019 ; https://mab-online.nl/ ; >
-      au < manifest ; exists ; 2020 ; 2020 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2020 ; 2020 ; https://mab-online.nl/ ; >
+      au < ready ; exists ; 2020 ; 2020 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2020 ; 2020 ; https://mab-online.nl/ ; >
 
   }
 
@@ -601,8 +601,8 @@
 
       au < frozen ; exists ; 2017 ; 2017 ; Metabarcoding and Metagenomics Volume 2017 ; 2017 ; https://mbmg.pensoft.net/ ; >
       au < frozen ; exists ; 2018 ; 2018 ; Metabarcoding and Metagenomics Volume 2018 ; 2018 ; https://mbmg.pensoft.net/ ; >
-      au < manifest ; exists ; 2019 ; 2019 ; Metabarcoding and Metagenomics Volume 2019 ; 2019 ; https://mbmg.pensoft.net/ ; >
-      au < manifest ; exists ; 2020 ; 2020 ; Metabarcoding and Metagenomics Volume 2020 ; 2020 ; https://mbmg.pensoft.net/ ; >
+      au < ready ; exists ; 2019 ; 2019 ; Metabarcoding and Metagenomics Volume 2019 ; 2019 ; https://mbmg.pensoft.net/ ; >
+      au < ready ; exists ; 2020 ; 2020 ; Metabarcoding and Metagenomics Volume 2020 ; 2020 ; https://mbmg.pensoft.net/ ; >
 
   }
 
@@ -618,8 +618,8 @@
       param[au_oai_set] = moem
 
       au < frozen ; exists ; 2018 ; 2018 ; Modern Electronic Materials Volume 2018 ; 2018 ; https://moem.pensoft.net/ ; >
-      au < manifest ; exists ; 2019 ; 2019 ; Modern Electronic Materials Volume 2019 ; 2019 ; https://moem.pensoft.net/ ; >
-      au < manifest ; exists ; 2020 ; 2020 ; Modern Electronic Materials Volume 2020 ; 2020 ; https://moem.pensoft.net/ ; >
+      au < ready ; exists ; 2019 ; 2019 ; Modern Electronic Materials Volume 2019 ; 2019 ; https://moem.pensoft.net/ ; >
+      au < ready ; exists ; 2020 ; 2020 ; Modern Electronic Materials Volume 2020 ; 2020 ; https://moem.pensoft.net/ ; >
 
   }
 
@@ -634,8 +634,8 @@
       param[au_oai_set] = nucet
 
       au < frozen ; exists ; 2018 ; 2018 ; Nuclear Energy and Technology Volume 2018 ; 2018 ; https://nucet.pensoft.net/ ; >
-      au < manifest ; exists ; 2019 ; 2019 ; Nuclear Energy and Technology Volume 2019 ; 2019 ; https://nucet.pensoft.net/ ; >
-      au < manifest ; exists ; 2020 ; 2020 ; Nuclear Energy and Technology Volume 2020 ; 2020 ; https://nucet.pensoft.net/ ; >
+      au < ready ; exists ; 2019 ; 2019 ; Nuclear Energy and Technology Volume 2019 ; 2019 ; https://nucet.pensoft.net/ ; >
+      au < ready ; exists ; 2020 ; 2020 ; Nuclear Energy and Technology Volume 2020 ; 2020 ; https://nucet.pensoft.net/ ; >
 
   }
 
@@ -653,7 +653,7 @@
       au < frozen ; exists ; 2017 ; 2017 ; One Ecosystem Volume 2017 ; 2017 ; https://oneecosystem.pensoft.net/ ; >
       au < frozen ; exists ; 2018 ; 2018 ; One Ecosystem Volume 2018 ; 2018 ; https://oneecosystem.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2019 ; 2019 ; One Ecosystem Volume 2019 ; 2019 ; https://oneecosystem.pensoft.net/ ; >
-      au < manifest ; exists ; 2020 ; 2020 ; One Ecosystem Volume 2020 ; 2020 ; https://oneecosystem.pensoft.net/ ; >
+      au < ready ; exists ; 2020 ; 2020 ; One Ecosystem Volume 2020 ; 2020 ; https://oneecosystem.pensoft.net/ ; >
 
   }
 
@@ -671,8 +671,8 @@
       au < frozen ; exists ; 2016 ; 2016 ; Research Ideas and Outcomes Volume 2016 ; 2016 ; https://riojournal.com/ ; >
       au < frozen ; exists ; 2017 ; 2017 ; Research Ideas and Outcomes Volume 2017 ; 2017 ; https://riojournal.com/ ; >
       au < frozen ; exists ; 2018 ; 2018 ; Research Ideas and Outcomes Volume 2018 ; 2018 ; https://riojournal.com/ ; >
-      au < manifest ; exists ; 2019 ; 2019 ; Research Ideas and Outcomes Volume 2019 ; 2019 ; https://riojournal.com/ ; >
-      au < manifest ; exists ; 2020 ; 2020 ; Research Ideas and Outcomes Volume 2020 ; 2020 ; https://riojournal.com/ ; >
+      au < ready ; exists ; 2019 ; 2019 ; Research Ideas and Outcomes Volume 2019 ; 2019 ; https://riojournal.com/ ; >
+      au < ready ; exists ; 2020 ; 2020 ; Research Ideas and Outcomes Volume 2020 ; 2020 ; https://riojournal.com/ ; >
 
   }
 
@@ -690,8 +690,8 @@
       au < frozen ; exists ; 2016 ; 2016 ; Research results in Pharmacology Volume 2016 ; 2016 ; https://rrpharmacology.pensoft.net/ ; >
       au < frozen ; exists ; 2017 ; 2017 ; Research results in Pharmacology Volume 2017 ; 2017 ; https://rrpharmacology.pensoft.net/ ; >
       au < frozen ; exists ; 2018 ; 2018 ; Research results in Pharmacology Volume 2018 ; 2018 ; https://rrpharmacology.pensoft.net/ ; >
-      au < manifest ; exists ; 2019 ; 2019 ; Research results in Pharmacology Volume 2019 ; 2019 ; https://rrpharmacology.pensoft.net/ ; >
-      au < manifest ; exists ; 2020 ; 2020 ; Research results in Pharmacology Volume 2020 ; 2020 ; https://rrpharmacology.pensoft.net/ ; >
+      au < ready ; exists ; 2019 ; 2019 ; Research results in Pharmacology Volume 2019 ; 2019 ; https://rrpharmacology.pensoft.net/ ; >
+      au < ready ; exists ; 2020 ; 2020 ; Research results in Pharmacology Volume 2020 ; 2020 ; https://rrpharmacology.pensoft.net/ ; >
 
   }
 
@@ -757,8 +757,8 @@
 
       param[au_oai_set] = vdj
 
-      au < manifest ; exists ; 2019 ; 2019 ; Viticulture Data Journal Volume 2019 ; 2019 ; https://vdj.pensoft.net/ ; >
-      au < manifest ; exists ; 2020 ; 2020 ; Viticulture Data Journal Volume 2020 ; 2020 ; https://vdj.pensoft.net/ ; >
+      au < ready ; exists ; 2019 ; 2019 ; Viticulture Data Journal Volume 2019 ; 2019 ; https://vdj.pensoft.net/ ; >
+      au < ready ; exists ; 2020 ; 2020 ; Viticulture Data Journal Volume 2020 ; 2020 ; https://vdj.pensoft.net/ ; >
 
   }
 
@@ -777,7 +777,7 @@
       au < frozen ; exists ; 2017 ; 34 ; Zoologia Volume 2017 ; 2017 ; https://zoologia.pensoft.net/ ; >
       au < frozen ; exists ; 2018 ; 35 ; Zoologia Volume 2018 ; 2018 ; https://zoologia.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2019 ; 36 ; Zoologia Volume 2019 ; 2019 ; https://zoologia.pensoft.net/ ; >
-      au < testing ; exists ; 2020 ; 36 ; Zoologia Volume 2020 ; 2020 ; https://zoologia.pensoft.net/ ; >
+      au < ready ; exists ; 2020 ; 36 ; Zoologia Volume 2020 ; 2020 ; https://zoologia.pensoft.net/ ; >
 
   }
 

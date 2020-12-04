@@ -235,9 +235,9 @@
 
       param[journal_id] = critical-times
 
-      au < manifest ; exists ; 2018 ; 2018 ; Critical Times: Interventions in Global Critical Theory Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2019 ; 2019 ; Critical Times: Interventions in Global Critical Theory Volume 2 ; 2 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; Critical Times: Interventions in Global Critical Theory Volume 3 ; 3 ; >
+      au < ready ; exists ; 2018 ; 2018 ; Critical Times: Interventions in Global Critical Theory Volume 1 ; 1 ; >
+      au < ready ; exists ; 2019 ; 2019 ; Critical Times: Interventions in Global Critical Theory Volume 2 ; 2 ; >
+      au < ready ; exists ; 2020 ; 2020 ; Critical Times: Interventions in Global Critical Theory Volume 3 ; 3 ; >
 
   }
 
@@ -252,10 +252,10 @@
 
       param[journal_id] = cultural-politics
 
-      au < manifest ; exists ; 2017 ; 2017 ; Cultural Politics Volume 13 ; 13 ; >
-      au < manifest ; exists ; 2018 ; 2018 ; Cultural Politics Volume 14 ; 14 ; >
-      au < manifest ; exists ; 2019 ; 2019 ; Cultural Politics Volume 15 ; 15 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; Cultural Politics Volume 16 ; 16 ; >
+      au < ready ; exists ; 2017 ; 2017 ; Cultural Politics Volume 13 ; 13 ; >
+      au < ready ; exists ; 2018 ; 2018 ; Cultural Politics Volume 14 ; 14 ; >
+      au < ready ; exists ; 2019 ; 2019 ; Cultural Politics Volume 15 ; 15 ; >
+      au < ready ; exists ; 2020 ; 2020 ; Cultural Politics Volume 16 ; 16 ; >
 
   }
 
@@ -270,10 +270,10 @@
 
       param[journal_id] = differences
 
-      au < manifest ; exists ; 2017 ; 2017 ; differences: A Journal of Feminist Cultural Studies Volume 28 ; 28 ; >
-      au < manifest ; exists ; 2018 ; 2018 ; differences: A Journal of Feminist Cultural Studies Volume 29 ; 29 ; >
-      au < manifest ; exists ; 2019 ; 2019 ; differences: A Journal of Feminist Cultural Studies Volume 30 ; 30 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; differences: A Journal of Feminist Cultural Studies Volume 31 ; 31 ; >
+      au < ready ; exists ; 2017 ; 2017 ; differences: A Journal of Feminist Cultural Studies Volume 28 ; 28 ; >
+      au < ready ; exists ; 2018 ; 2018 ; differences: A Journal of Feminist Cultural Studies Volume 29 ; 29 ; >
+      au < ready ; exists ; 2019 ; 2019 ; differences: A Journal of Feminist Cultural Studies Volume 30 ; 30 ; >
+      au < ready ; exists ; 2020 ; 2020 ; differences: A Journal of Feminist Cultural Studies Volume 31 ; 31 ; >
 
   }
 
@@ -307,10 +307,10 @@
 
       param[journal_id] = eighteenth-century-life
 
-      au < manifest ; exists ; 2017 ; 2017 ; Eighteenth-Century Life Volume 41 ; 41 ; >
-      au < manifest ; exists ; 2018 ; 2018 ; Eighteenth-Century Life Volume 42 ; 42 ; >
-      au < manifest ; exists ; 2019 ; 2019 ; Eighteenth-Century Life Volume 43 ; 43 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; Eighteenth-Century Life Volume 44 ; 44 ; >
+      au < ready ; exists ; 2017 ; 2017 ; Eighteenth-Century Life Volume 41 ; 41 ; >
+      au < ready ; exists ; 2018 ; 2018 ; Eighteenth-Century Life Volume 42 ; 42 ; >
+      au < ready ; exists ; 2019 ; 2019 ; Eighteenth-Century Life Volume 43 ; 43 ; >
+      au < ready ; exists ; 2020 ; 2020 ; Eighteenth-Century Life Volume 44 ; 44 ; >
 
   }
 
@@ -325,27 +325,27 @@
 
       param[journal_id] = english-language-notes
 
-      au < manifest ; exists ; 2000 ; 2000 ; English Language Notes Volume 37-38 ; 37-38 ; >
-      au < manifest ; exists ; 2001 ; 2001 ; English Language Notes Volume 38-39 ; 38-39 ; >
-      au < manifest ; exists ; 2002 ; 2002 ; English Language Notes Volume 39-40 ; 39-40 ; >
-      au < manifest ; exists ; 2003 ; 2003 ; English Language Notes Volume 40-41 ; 40-41 ; >
-      au < manifest ; exists ; 2004 ; 2004 ; English Language Notes Volume 41-42 ; 41-42 ; >
-      au < manifest ; exists ; 2005 ; 2005 ; English Language Notes Volume 42-43 ; 42-43 ; >
-      au < manifest ; exists ; 2006 ; 2006 ; English Language Notes Volume 44 ; 44 ; >
-      au < manifest ; exists ; 2007 ; 2007 ; English Language Notes Volume 45 ; 45 ; >
-      au < manifest ; exists ; 2008 ; 2008 ; English Language Notes Volume 46 ; 46 ; >
-      au < manifest ; exists ; 2009 ; 2009 ; English Language Notes Volume 47 ; 47 ; >
-      au < manifest ; exists ; 2010 ; 2010 ; English Language Notes Volume 48 ; 48 ; >
-      au < manifest ; exists ; 2011 ; 2011 ; English Language Notes Volume 49 ; 49 ; >
-      au < manifest ; exists ; 2012 ; 2012 ; English Language Notes Volume 50 ; 50 ; >
-      au < manifest ; exists ; 2013 ; 2013 ; English Language Notes Volume 51 ; 51 ; >
-      au < manifest ; exists ; 2014 ; 2014 ; English Language Notes Volume 52 ; 52 ; >
-      au < manifest ; exists ; 2015 ; 2015 ; English Language Notes Volume 53 ; 53 ; >
-      au < manifest ; exists ; 2016 ; 2016 ; English Language Notes Volume 54 ; 54 ; >
-      au < manifest ; exists ; 2017 ; 2017 ; English Language Notes Volume 55 ; 55 ; >
-      au < manifest ; exists ; 2018 ; 2018 ; English Language Notes Volume 56 ; 56 ; >
-      au < manifest ; exists ; 2019 ; 2019 ; English Language Notes Volume 57 ; 57 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; English Language Notes Volume 58 ; 58 ; >
+      au < ready ; exists ; 2000 ; 2000 ; English Language Notes Volume 37-38 ; 37-38 ; >
+      au < ready ; exists ; 2001 ; 2001 ; English Language Notes Volume 38-39 ; 38-39 ; >
+      au < ready ; exists ; 2002 ; 2002 ; English Language Notes Volume 39-40 ; 39-40 ; >
+      au < ready ; exists ; 2003 ; 2003 ; English Language Notes Volume 40-41 ; 40-41 ; >
+      au < ready ; exists ; 2004 ; 2004 ; English Language Notes Volume 41-42 ; 41-42 ; >
+      au < ready ; exists ; 2005 ; 2005 ; English Language Notes Volume 42-43 ; 42-43 ; >
+      au < ready ; exists ; 2006 ; 2006 ; English Language Notes Volume 44 ; 44 ; >
+      au < ready ; exists ; 2007 ; 2007 ; English Language Notes Volume 45 ; 45 ; >
+      au < ready ; exists ; 2008 ; 2008 ; English Language Notes Volume 46 ; 46 ; >
+      au < ready ; exists ; 2009 ; 2009 ; English Language Notes Volume 47 ; 47 ; >
+      au < ready ; exists ; 2010 ; 2010 ; English Language Notes Volume 48 ; 48 ; >
+      au < ready ; exists ; 2011 ; 2011 ; English Language Notes Volume 49 ; 49 ; >
+      au < ready ; exists ; 2012 ; 2012 ; English Language Notes Volume 50 ; 50 ; >
+      au < ready ; exists ; 2013 ; 2013 ; English Language Notes Volume 51 ; 51 ; >
+      au < ready ; exists ; 2014 ; 2014 ; English Language Notes Volume 52 ; 52 ; >
+      au < ready ; exists ; 2015 ; 2015 ; English Language Notes Volume 53 ; 53 ; >
+      au < ready ; exists ; 2016 ; 2016 ; English Language Notes Volume 54 ; 54 ; >
+      au < ready ; exists ; 2017 ; 2017 ; English Language Notes Volume 55 ; 55 ; >
+      au < ready ; exists ; 2018 ; 2018 ; English Language Notes Volume 56 ; 56 ; >
+      au < ready ; exists ; 2019 ; 2019 ; English Language Notes Volume 57 ; 57 ; >
+      au < ready ; exists ; 2020 ; 2020 ; English Language Notes Volume 58 ; 58 ; >
 
   }
 
@@ -359,10 +359,10 @@
 
       param[journal_id] = environmental-humanities
 
-      au < manifest ; exists ; 2017 ; 2017 ; Environmental Humanities Volume 9 ; 9 ; >
-      au < manifest ; exists ; 2018 ; 2018 ; Environmental Humanities Volume 10 ; 10 ; >
-      au < manifest ; exists ; 2019 ; 2019 ; Environmental Humanities Volume 11 ; 11 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; Environmental Humanities Volume 12 ; 12 ; >
+      au < ready ; exists ; 2017 ; 2017 ; Environmental Humanities Volume 9 ; 9 ; >
+      au < ready ; exists ; 2018 ; 2018 ; Environmental Humanities Volume 10 ; 10 ; >
+      au < ready ; exists ; 2019 ; 2019 ; Environmental Humanities Volume 11 ; 11 ; >
+      au < ready ; exists ; 2020 ; 2020 ; Environmental Humanities Volume 12 ; 12 ; >
 
   }
 
@@ -377,10 +377,10 @@
 
       param[journal_id] = ethnohistory
 
-      au < manifest ; exists ; 2017 ; 2017 ; Ethnohistory Volume 64 ; 64 ; >
-      au < manifest ; exists ; 2018 ; 2018 ; Ethnohistory Volume 65 ; 65 ; >
-      au < manifest ; exists ; 2019 ; 2019 ; Ethnohistory Volume 66 ; 66 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; Ethnohistory Volume 67 ; 67 ; >
+      au < ready ; exists ; 2017 ; 2017 ; Ethnohistory Volume 64 ; 64 ; >
+      au < ready ; exists ; 2018 ; 2018 ; Ethnohistory Volume 65 ; 65 ; >
+      au < ready ; exists ; 2019 ; 2019 ; Ethnohistory Volume 66 ; 66 ; >
+      au < ready ; exists ; 2020 ; 2020 ; Ethnohistory Volume 67 ; 67 ; >
   }
 
   {
@@ -394,10 +394,10 @@
 
       param[journal_id] = french-historical-studies
 
-      au < manifest ; exists ; 2017 ; 2017 ; French Historical Studies Volume 40 ; 40 ; >
-      au < manifest ; exists ; 2018 ; 2018 ; French Historical Studies Volume 41 ; 41 ; >
-      au < manifest ; exists ; 2019 ; 2019 ; French Historical Studies Volume 42 ; 42 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; French Historical Studies Volume 43 ; 43 ; >
+      au < ready ; exists ; 2017 ; 2017 ; French Historical Studies Volume 40 ; 40 ; >
+      au < ready ; exists ; 2018 ; 2018 ; French Historical Studies Volume 41 ; 41 ; >
+      au < ready ; exists ; 2019 ; 2019 ; French Historical Studies Volume 42 ; 42 ; >
+      au < ready ; exists ; 2020 ; 2020 ; French Historical Studies Volume 43 ; 43 ; >
   }
 
   {
@@ -411,10 +411,10 @@
 
       param[journal_id] = genre
 
-      au < manifest ; exists ; 2017 ; 2017 ; Genre: Forms of Discourse and Culture Volume 50 ; 50 ; >
-      au < manifest ; exists ; 2018 ; 2018 ; Genre: Forms of Discourse and Culture Volume 51 ; 51 ; >
-      au < manifest ; exists ; 2019 ; 2019 ; Genre: Forms of Discourse and Culture Volume 52 ; 52 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; Genre: Forms of Discourse and Culture Volume 53 ; 53 ; >
+      au < ready ; exists ; 2017 ; 2017 ; Genre: Forms of Discourse and Culture Volume 50 ; 50 ; >
+      au < ready ; exists ; 2018 ; 2018 ; Genre: Forms of Discourse and Culture Volume 51 ; 51 ; >
+      au < ready ; exists ; 2019 ; 2019 ; Genre: Forms of Discourse and Culture Volume 52 ; 52 ; >
+      au < ready ; exists ; 2020 ; 2020 ; Genre: Forms of Discourse and Culture Volume 53 ; 53 ; >
 
   }
 
@@ -428,10 +428,10 @@
 
       param[journal_id] = glq
 
-      au < manifest ; exists ; 2017 ; 2017 ; GLQ: A Journal of Lesbian and Gay Studies Volume 23 ; 23 ; >
-      au < manifest ; exists ; 2018 ; 2018 ; GLQ: A Journal of Lesbian and Gay Studies Volume 24 ; 24 ; >
-      au < manifest ; exists ; 2019 ; 2019 ; GLQ: A Journal of Lesbian and Gay Studies Volume 25 ; 25 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; GLQ: A Journal of Lesbian and Gay Studies Volume 26 ; 26 ; >
+      au < ready ; exists ; 2017 ; 2017 ; GLQ: A Journal of Lesbian and Gay Studies Volume 23 ; 23 ; >
+      au < ready ; exists ; 2018 ; 2018 ; GLQ: A Journal of Lesbian and Gay Studies Volume 24 ; 24 ; >
+      au < ready ; exists ; 2019 ; 2019 ; GLQ: A Journal of Lesbian and Gay Studies Volume 25 ; 25 ; >
+      au < ready ; exists ; 2020 ; 2020 ; GLQ: A Journal of Lesbian and Gay Studies Volume 26 ; 26 ; >
 
     }
 
@@ -445,10 +445,10 @@
 
       param[journal_id] = hahr
 
-      au < manifest ; exists ; 2017 ; 2017 ; Hispanic American Historical Review Volume 97 ; 97 ; >
-      au < manifest ; exists ; 2018 ; 2018 ; Hispanic American Historical Review Volume 98 ; 98 ; >
-      au < manifest ; exists ; 2019 ; 2019 ; Hispanic American Historical Review Volume 99 ; 99 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; Hispanic American Historical Review Volume 100 ; 100 ; >
+      au < ready ; exists ; 2017 ; 2017 ; Hispanic American Historical Review Volume 97 ; 97 ; >
+      au < ready ; exists ; 2018 ; 2018 ; Hispanic American Historical Review Volume 98 ; 98 ; >
+      au < ready ; exists ; 2019 ; 2019 ; Hispanic American Historical Review Volume 99 ; 99 ; >
+      au < ready ; exists ; 2020 ; 2020 ; Hispanic American Historical Review Volume 100 ; 100 ; >
 
     }
 
@@ -462,10 +462,10 @@
 
       param[journal_id] = hope
 
-      au < manifest ; exists ; 2017 ; 2017 ; History of Political Economy Volume 49 ; 49 ; >
-      au < manifest ; exists ; 2018 ; 2018 ; History of Political Economy Volume 50 ; 50 ; >
+      au < ready ; exists ; 2017 ; 2017 ; History of Political Economy Volume 49 ; 49 ; >
+      au < ready ; exists ; 2018 ; 2018 ; History of Political Economy Volume 50 ; 50 ; >
       au < manifest ; exists ; 2019 ; 2019 ; History of Political Economy Volume 51 ; 51 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; History of Political Economy Volume 52 ; 52 ; >
+      au < ready ; exists ; 2020 ; 2020 ; History of Political Economy Volume 52 ; 52 ; >
 
     }
 
@@ -478,16 +478,16 @@
 
       param[journal_id] = history-of-the-present
 
-      au < manifest ; exists ; 2011 ; 2011 ; History of the Present Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2012 ; 2012 ; History of the Present Volume 2 ; 2 ; >
-      au < manifest ; exists ; 2013 ; 2013 ; History of the Present Volume 3 ; 3 ; >
-      au < manifest ; exists ; 2014 ; 2014 ; History of the Present Volume 4 ; 4 ; >
-      au < manifest ; exists ; 2015 ; 2015 ; History of the Present Volume 5 ; 5 ; >
-      au < manifest ; exists ; 2016 ; 2016 ; History of the Present Volume 6 ; 6 ; >
-      au < manifest ; exists ; 2017 ; 2017 ; History of the Present Volume 7 ; 7 ; >
-      au < manifest ; exists ; 2018 ; 2018 ; History of the Present Volume 8 ; 8 ; >
-      au < manifest ; exists ; 2019 ; 2019 ; History of the Present Volume 9 ; 9 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; History of the Present Volume 10 ; 10 ; >
+      au < ready ; exists ; 2011 ; 2011 ; History of the Present Volume 1 ; 1 ; >
+      au < ready ; exists ; 2012 ; 2012 ; History of the Present Volume 2 ; 2 ; >
+      au < ready ; exists ; 2013 ; 2013 ; History of the Present Volume 3 ; 3 ; >
+      au < ready ; exists ; 2014 ; 2014 ; History of the Present Volume 4 ; 4 ; >
+      au < ready ; exists ; 2015 ; 2015 ; History of the Present Volume 5 ; 5 ; >
+      au < ready ; exists ; 2016 ; 2016 ; History of the Present Volume 6 ; 6 ; >
+      au < ready ; exists ; 2017 ; 2017 ; History of the Present Volume 7 ; 7 ; >
+      au < ready ; exists ; 2018 ; 2018 ; History of the Present Volume 8 ; 8 ; >
+      au < ready ; exists ; 2019 ; 2019 ; History of the Present Volume 9 ; 9 ; >
+      au < ready ; exists ; 2020 ; 2020 ; History of the Present Volume 10 ; 10 ; >
 
     }
 
@@ -500,10 +500,10 @@
 
       param[journal_id] = jclc
 
-     au < manifest ; exists ; 2017 ; 2017 ; Journal of Chinese Literature and Culture Volume 4 ; 4 ; >
-     au < manifest ; exists ; 2018 ; 2018 ; Journal of Chinese Literature and Culture Volume 5 ; 5 ; >
-     au < manifest ; exists ; 2019 ; 2019 ; Journal of Chinese Literature and Culture Volume 6 ; 6 ; >
-     au < manifest ; exists ; 2020 ; 2020 ; Journal of Chinese Literature and Culture Volume 7 ; 7 ; >
+     au < ready ; exists ; 2017 ; 2017 ; Journal of Chinese Literature and Culture Volume 4 ; 4 ; >
+     au < ready ; exists ; 2018 ; 2018 ; Journal of Chinese Literature and Culture Volume 5 ; 5 ; >
+     au < ready ; exists ; 2019 ; 2019 ; Journal of Chinese Literature and Culture Volume 6 ; 6 ; >
+     au < ready ; exists ; 2020 ; 2020 ; Journal of Chinese Literature and Culture Volume 7 ; 7 ; >
 
     }
 
@@ -517,7 +517,7 @@
 
       param[journal_id] = jhppl
 
-      au < manifest ; exists ; 2017 ; 2017 ; Journal of Health Politics, Policy and Law Volume 42 ; 42 ; >
+      au < ready ; exists ; 2017 ; 2017 ; Journal of Health Politics, Policy and Law Volume 42 ; 42 ; >
       au < manifest ; exists ; 2018 ; 2018 ; Journal of Health Politics, Policy and Law Volume 43 ; 43 ; >
       au < manifest ; exists ; 2019 ; 2019 ; Journal of Health Politics, Policy and Law Volume 44 ; 44 ; >
       au < manifest ; exists ; 2020 ; 2020 ; Journal of Health Politics, Policy and Law Volume 45 ; 45 ; >
