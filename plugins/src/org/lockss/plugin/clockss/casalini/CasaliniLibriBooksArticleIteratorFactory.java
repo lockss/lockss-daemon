@@ -14,9 +14,9 @@ import org.lockss.util.Logger;
 import java.util.Iterator;
 import java.util.regex.Pattern;
 
-public class CasaliniLibri2020SourceArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
+public class CasaliniLibriBooksArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
 
-    protected static Logger log = Logger.getLogger(CasaliniLibri2020SourceArticleIteratorFactory.class);
+    protected static Logger log = Logger.getLogger(CasaliniLibriBooksArticleIteratorFactory.class);
 
     protected static final String ROOT_TEMPLATE = "\"%s\",base_url";
     private static final String PATTERN_TEMPLATE = "\"%s%s/\",base_url,directory";
