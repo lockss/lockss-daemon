@@ -2,7 +2,7 @@
 
   publisher <
     name = Society for Personality Research ;
-    info[back] = 2011 ;
+    info[back] = 2010 ;
     info[contract] = 2012 ;
     info[tester] = 8 ;
     info[poller] = 6
@@ -89,7 +89,7 @@
     param[base_url] = https://www.ingentaconnect.com/
     param[api_url] = https://api.ingentaconnect.com/
 
-    au < notReady ; exists ; 2017 ; Social Behavior and Personality Volume 45 ; 45 ; > #LXQUEUE-1208
+    au < manifest ; exists ; 2017 ; Social Behavior and Personality Volume 45 ; 45 ; > #LXQUEUE-1208
     au < manifest ; exists ; 2018 ; Social Behavior and Personality Volume 46 ; 46 ; >
     au < manifest ; exists ; 2019 ; Social Behavior and Personality Volume 47 ; 47 ; >
     au < manifest ; exists ; 2020 ; Social Behavior and Personality Volume 48 ; 48 ; >

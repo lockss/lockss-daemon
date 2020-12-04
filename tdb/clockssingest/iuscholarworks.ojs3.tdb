@@ -132,7 +132,7 @@
       au < manifest ; exists ; 2007 ; 2007 ; Anthropology of East Europe Review Volume 25 ; 25 ; >
       au < finished ; manifest ; 2008 ; 2008 ; Anthropology of East Europe Review Volume 26 ; 26 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2009 ; 2009 ; Anthropology of East Europe Review Volume 27 ; 27 ; reingest4.clockss.org:8082 >
-      au < manifest ; exists ; 2010 ; 2010 ; Anthropology of East Europe Review Volume 28 ; 28 ; >
+      au < ready ; exists ; 2010 ; 2010 ; Anthropology of East Europe Review Volume 28 ; 28 ; >
       au < finished ; manifest ; 2011 ; 2011 ; Anthropology of East Europe Review Volume 29 ; 29 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Anthropology of East Europe Review Volume 30 ; 30 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Anthropology of East Europe Review Volume 31 ; 31 ; >
@@ -794,9 +794,9 @@
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Indiana University South Bend Graduate Research Journal Volume 2014 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Indiana University South Bend Graduate Research Journal Volume 2015 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Indiana University South Bend Graduate Research Journal Volume 2016 ; 3 ; >
-      au < manifest ; exists ; 2017 ; 2017 ; Indiana University South Bend Graduate Research Journal Volume 2017 ; 4 ; >
-      au < manifest ; exists ; 2018 ; 2018 ; Indiana University South Bend Graduate Research Journal Volume 2018 ; 5 ; >
-      au < manifest ; exists ; 2019 ; 2019 ; Indiana University South Bend Graduate Research Journal Volume 2019 ; 6 ; >
+      au < ready ; exists ; 2017 ; 2017 ; Indiana University South Bend Graduate Research Journal Volume 2017 ; 4 ; >
+      au < ready ; exists ; 2018 ; 2018 ; Indiana University South Bend Graduate Research Journal Volume 2018 ; 5 ; >
+      au < ready ; exists ; 2019 ; 2019 ; Indiana University South Bend Graduate Research Journal Volume 2019 ; 6 ; >
       au < expected ; exists ; 2020 ; 2020 ; Indiana University South Bend Graduate Research Journal Volume 2020 ; 7 ; >
 
   }
@@ -815,17 +815,17 @@
          au < manifest ; exists ; 2001 ; 2001 ; IU South Bend Undergraduate Research Journal Volume 2001 ; 4 ; >
          au < manifest ; exists ; 2002 ; 2002 ; IU South Bend Undergraduate Research Journal Volume 2002 ; 5 ; >
          au < manifest ; exists ; 2003 ; 2003 ; IU South Bend Undergraduate Research Journal Volume 2003 ; 6 ; >
-         au < manifest ; exists ; 2008 ; 2008 ; IU South Bend Undergraduate Research Journal Volume 2008 ; 8 ; >
-         au < manifest ; exists ; 2009 ; 2009 ; IU South Bend Undergraduate Research Journal Volume 2009 ; 9 ; >
-         au < manifest ; exists ; 2010 ; 2010 ; IU South Bend Undergraduate Research Journal Volume 2010 ; 10 ; >
-         au < manifest ; exists ; 2011 ; 2011 ; IU South Bend Undergraduate Research Journal Volume 2011 ; 11 ; >
-         au < manifest ; exists ; 2012 ; 2012 ; IU South Bend Undergraduate Research Journal Volume 2012 ; 12 ; >
-         au < manifest ; exists ; 2014 ; 2014 ; IU South Bend Undergraduate Research Journal Volume 2014 ; 14 ; >
-         au < manifest ; exists ; 2015 ; 2015 ; IU South Bend Undergraduate Research Journal Volume 2015 ; 15 ; >
-         au < manifest ; exists ; 2016 ; 2016 ; IU South Bend Undergraduate Research Journal Volume 2016 ; 16 ; >
-         au < manifest ; exists ; 2017 ; 2017 ; IU South Bend Undergraduate Research Journal Volume 2017 ; 17 ; >
-         au < manifest ; exists ; 2018 ; 2018 ; IU South Bend Undergraduate Research Journal Volume 2018 ; 18 ; >
-         au < manifest ; exists ; 2019 ; 2019 ; IU South Bend Undergraduate Research Journal Volume 2019 ; 19 ; >
+         au < ready ; exists ; 2008 ; 2008 ; IU South Bend Undergraduate Research Journal Volume 2008 ; 8 ; >
+         au < ready ; exists ; 2009 ; 2009 ; IU South Bend Undergraduate Research Journal Volume 2009 ; 9 ; >
+         au < ready ; exists ; 2010 ; 2010 ; IU South Bend Undergraduate Research Journal Volume 2010 ; 10 ; >
+         au < ready ; exists ; 2011 ; 2011 ; IU South Bend Undergraduate Research Journal Volume 2011 ; 11 ; >
+         au < ready ; exists ; 2012 ; 2012 ; IU South Bend Undergraduate Research Journal Volume 2012 ; 12 ; >
+         au < ready ; exists ; 2014 ; 2014 ; IU South Bend Undergraduate Research Journal Volume 2014 ; 14 ; >
+         au < ready ; exists ; 2015 ; 2015 ; IU South Bend Undergraduate Research Journal Volume 2015 ; 15 ; >
+         au < ready ; exists ; 2016 ; 2016 ; IU South Bend Undergraduate Research Journal Volume 2016 ; 16 ; >
+         au < ready ; exists ; 2017 ; 2017 ; IU South Bend Undergraduate Research Journal Volume 2017 ; 17 ; >
+         au < ready ; exists ; 2018 ; 2018 ; IU South Bend Undergraduate Research Journal Volume 2018 ; 18 ; >
+         au < ready ; exists ; 2019 ; 2019 ; IU South Bend Undergraduate Research Journal Volume 2019 ; 19 ; >
          au < expected ; exists ; 2020 ; 2020 ; IU South Bend Undergraduate Research Journal Volume 2020 ; 20 ; >
       }
   }
@@ -842,8 +842,8 @@
          au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Indiana University Undergraduate Research Journal Volume 2015 ; 1 ; >
          au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Indiana University Undergraduate Research Journal Volume 2016 ; 2 ; >
          au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Indiana University Undergraduate Research Journal Volume 2017 ; 3 ; >
-         au < manifest ; exists ; 2018 ; 2018 ; Indiana University Undergraduate Research Journal Volume 2018 ; 4 ; >
-         au < manifest ; exists ; 2019 ; 2019 ; Indiana University Undergraduate Research Journal Volume 2019 ; 5 ; >
+         au < ready ; exists ; 2018 ; 2018 ; Indiana University Undergraduate Research Journal Volume 2018 ; 4 ; >
+         au < ready ; exists ; 2019 ; 2019 ; Indiana University Undergraduate Research Journal Volume 2019 ; 5 ; >
       }
   }
 
@@ -915,7 +915,7 @@
       au < finished ; manifest ; 2008 ; 2008 ; Plath Profiles: An Interdisciplinary Journal for Sylvia Plath Studies Volume 2008 ; 1 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2009 ; 2009 ; Plath Profiles: An Interdisciplinary Journal for Sylvia Plath Studies Volume 2009 ; 2 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2010 ; 2010 ; Plath Profiles: An Interdisciplinary Journal for Sylvia Plath Studies Volume 2010 ; 3 ; reingest4.clockss.org:8082 >
-      au < manifest ; exists ; 2011 ; 2011 ; Plath Profiles: An Interdisciplinary Journal for Sylvia Plath Studies Volume 2011 ; 4 ; >
+      au < ready ; exists ; 2011 ; 2011 ; Plath Profiles: An Interdisciplinary Journal for Sylvia Plath Studies Volume 2011 ; 4 ; >
       au < finished ; manifest ; 2012 ; 2012 ; Plath Profiles: An Interdisciplinary Journal for Sylvia Plath Studies Volume 2012 ; 5 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Plath Profiles: An Interdisciplinary Journal for Sylvia Plath Studies Volume 2013 ; 6 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Plath Profiles: An Interdisciplinary Journal for Sylvia Plath Studies Volume 2014 ; 7 ; >
@@ -1013,8 +1013,8 @@
 
       param[journal_id] = jaa
 
-      au < manifest ; exists ; 2018 ; 2018 ; Journal of Academic Advising Volume 2018 ; 1 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; Journal of Academic Advising Volume 2020 ; 2 ; >
+      au < ready ; exists ; 2018 ; 2018 ; Journal of Academic Advising Volume 2018 ; 1 ; >
+      au < ready ; exists ; 2020 ; 2020 ; Journal of Academic Advising Volume 2020 ; 2 ; >
 
   }
 
@@ -1027,9 +1027,9 @@
 
       param[journal_id] = joget
 
-      au < manifest ; exists ; 2017 ; 2017 ; Global Engagement and Transformation Volume 2017 ; 1 ; >
-      au < manifest ; exists ; 2018 ; 2018 ; Global Engagement and Transformation Volume 2018 ; 2 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; Global Engagement and Transformation Volume 2020 ; 3 ; >
+      au < ready ; exists ; 2017 ; 2017 ; Global Engagement and Transformation Volume 2017 ; 1 ; >
+      au < ready ; exists ; 2018 ; 2018 ; Global Engagement and Transformation Volume 2018 ; 2 ; >
+      au < ready ; exists ; 2020 ; 2020 ; Global Engagement and Transformation Volume 2020 ; 3 ; >
 
   }
 
@@ -1042,13 +1042,13 @@
 
       param[journal_id] = risky
 
-      au < manifest ; exists ; 2013 ; 2013 ; The Risky Academy  Volume 2013 ; 1 ; >
-      au < manifest ; exists ; 2014 ; 2014 ; The Risky Academy  Volume 2014 ; 2 ; >
-      au < manifest ; exists ; 2015 ; 2015 ; The Risky Academy  Volume 2015 ; 3 ; >
-      au < manifest ; exists ; 2016 ; 2016 ; The Risky Academy  Volume 2016 ; 4 ; >
-      au < manifest ; exists ; 2017 ; 2017 ; The Risky Academy  Volume 2017 ; 5 ; >
-      au < manifest ; exists ; 2018 ; 2018 ; The Risky Academy  Volume 2018 ; 6 ; >
-      au < manifest ; exists ; 2019 ; 2019 ; The Risky Academy  Volume 2019 ; 7 ; >
+      au < ready ; exists ; 2013 ; 2013 ; The Risky Academy  Volume 2013 ; 1 ; >
+      au < ready ; exists ; 2014 ; 2014 ; The Risky Academy  Volume 2014 ; 2 ; >
+      au < ready ; exists ; 2015 ; 2015 ; The Risky Academy  Volume 2015 ; 3 ; >
+      au < ready ; exists ; 2016 ; 2016 ; The Risky Academy  Volume 2016 ; 4 ; >
+      au < ready ; exists ; 2017 ; 2017 ; The Risky Academy  Volume 2017 ; 5 ; >
+      au < ready ; exists ; 2018 ; 2018 ; The Risky Academy  Volume 2018 ; 6 ; >
+      au < ready ; exists ; 2019 ; 2019 ; The Risky Academy  Volume 2019 ; 7 ; >
       au < exists ; exists ; 2020 ; 2020 ; The Risky Academy  Volume 2020 ; 8 ; >
 
   }
@@ -1124,8 +1124,8 @@
 
       param[journal_id] = iwpsalc
 
-      au < manifest ; exists ; 2019 ; 2019 ; Indiana Working Papers in South Asian Languages and Cultures Volume 2019 ; 1 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; Indiana Working Papers in South Asian Languages and Cultures Volume 2020 ; 2 ; >
+      au < ready ; exists ; 2019 ; 2019 ; Indiana Working Papers in South Asian Languages and Cultures Volume 2019 ; 1 ; >
+      au < ready ; exists ; 2020 ; 2020 ; Indiana Working Papers in South Asian Languages and Cultures Volume 2020 ; 2 ; >
 
   }
 
@@ -1300,7 +1300,7 @@
       au < manifest ; exists ; 2012 ; 2012 ; Primary Source Volume 2012 ; 2 ; >
       au < manifest ; exists ; 2013 ; 2013 ; Primary Source Volume 2013 ; 3 ; >
       au < manifest ; exists ; 2014 ; 2014 ; Primary Source Volume 2014 ; 4 ; >
-      au < manifest ; exists ; 2015 ; 2015 ; Primary Source Volume 2015 ; 5 ; >
+      au < ready ; exists ; 2015 ; 2015 ; Primary Source Volume 2015 ; 5 ; >
 
   }
 
