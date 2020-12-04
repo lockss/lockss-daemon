@@ -8,28 +8,30 @@
     info[platform] = Custom/OAI
   >
   
-    implicit < status ; status2 ; year ; volume ; name ; param[au_oai_date] ; hidden[proxy] >
-    plugin = needs.plugin
-
   {
 
     title <
-      name = Revista Residência Pediátrica ;
+      name = Residência Pediátrica ;
       eissn = 2236-6814
     >
 
-    param[base_url] = https://residenciapediatrica.com.br/
+    # HTTPS base_url exists but OAI-PMH server returns HTTP URLs
 
-    au < exists ; exists ; 2011 ; 1 ; Revista Residência Pediátrica Volume 2011 ; 2011 ; >
-    au < exists ; exists ; 2012 ; 2 ; Revista Residência Pediátrica Volume 2012 ; 2012 ; >
-    au < exists ; exists ; 2013 ; 3 ; Revista Residência Pediátrica Volume 2013 ; 2013 ; >
-    au < exists ; exists ; 2014 ; 4 ; Revista Residência Pediátrica Volume 2014 ; 2014 ; >
-    au < exists ; exists ; 2015 ; 5 ; Revista Residência Pediátrica Volume 2015 ; 2015 ; >
-    au < exists ; exists ; 2016 ; 6 ; Revista Residência Pediátrica Volume 2016 ; 2016 ; >
-    au < exists ; exists ; 2017 ; 7 ; Revista Residência Pediátrica Volume 2017 ; 2017 ; >
-    au < exists ; exists ; 2018 ; 8 ; Revista Residência Pediátrica Volume 2018 ; 2018 ; >
-    au < exists ; exists ; 2019 ; 9 ; Revista Residência Pediátrica Volume 2019 ; 2019 ; >
-    au < exists ; exists ; 2020 ; 10 ; Revista Residência Pediátrica Volume 2020 ; 2020 ; >
+    plugin = org.lockss.plugin.respediatrica.ClockssResPediatricaOaiPlugin
+    param[base_url] = http://residenciapediatrica.com.br/
+    param[oai_granularity] = YYYY-MM-DD
+    implicit < status ; status2 ; year ; volume ; name ; param[year] ; hidden[proxy] >
+
+    au < crawling ; exists ; 2011 ; 1 ; Residência Pediátrica Volume 1 ; 2011 ; >
+    au < crawling ; exists ; 2012 ; 2 ; Residência Pediátrica Volume 2 ; 2012 ; >
+    au < crawling ; exists ; 2013 ; 3 ; Residência Pediátrica Volume 3 ; 2013 ; >
+    au < crawling ; exists ; 2014 ; 4 ; Residência Pediátrica Volume 4 ; 2014 ; >
+    au < crawling ; exists ; 2015 ; 5 ; Residência Pediátrica Volume 5 ; 2015 ; >
+    au < crawling ; exists ; 2016 ; 6 ; Residência Pediátrica Volume 6 ; 2016 ; >
+    au < crawling ; exists ; 2017 ; 7 ; Residência Pediátrica Volume 7 ; 2017 ; >
+    au < crawling ; exists ; 2018 ; 8 ; Residência Pediátrica Volume 8 ; 2018 ; >
+    au < crawling ; exists ; 2019 ; 9 ; Residência Pediátrica Volume 9 ; 2019 ; >
+    au < crawling ; exists ; 2020 ; 10 ; Residência Pediátrica Volume 10 ; 2020 ; >
 
   }
 

@@ -1,3 +1,35 @@
+<!--
+
+Copyright (c) 2000-2020, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+-->
 <map>
     <entry>
         <string>plugin_status</string>
@@ -9,11 +41,11 @@
     </entry>
     <entry>
         <string>plugin_name</string>
-        <string>ResPediatrica OAI Plugin</string>
+        <string>Resid&#x00ea;ncia Pedi&#x00e1;trica Plugin</string>
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>1</string>
+        <string>2</string>
     </entry>
     <entry>
         <string>plugin_feature_version_map</string>
@@ -66,7 +98,7 @@
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"ResPediatrica OAI Plugin, Base URL %s, Year %d", base_url, year</string>
+        <string>"Resid&#x00ea;ncia Pedi&#x00e1;trica Plugin, Base URL %s, Year %d, OAI Granularity %s", base_url, year, oai_granularity</string>
     </entry>
     <!--This version need an OAI library-->
     <entry>
@@ -80,7 +112,7 @@
     </entry>
     <entry>
         <string>au_permission_url</string>
-        <string>"%s", base_url</string>
+        <string>"%ssobre-rp", base_url</string>
     </entry>
     <!--
     https://cdn.gn1.link/residenciapediatrica/Content/css/style.css?v=1
@@ -97,11 +129,10 @@
         <string>au_crawlrules</string>
         <list>
             <!--https://cdn.publisher.gn1.link/residenciapediatrica.com.br/pdf/v1n1a07.pdf-->
-            <string>1,"https://cdn.publisher.gn1.link/residenciapediatrica.com.br/pdf/"</string>
-            <string>1,"https://cdn.gn1.link/residenciapediatrica/.*\.(css|gif|jpe?g|js|png)"</string>
-            <string>1,"https://s3-sa-east-1.amazonaws.com/.*\.pdf"</string>
-            <string>1,"%s(detalhes|exportar-pdf)/", base_url</string>
-            <string>1,"%sexportar-citacao/\\d+/ris", base_url</string>
+            <string>1,"^https?://cdn\.publisher\.gn1\.link/residenciapediatrica\.com\.br/"</string>
+            <string>1,"^https?://cdn\.gn1\.link/residenciapediatrica/"</string>
+            <string>1,"^https?://s3-sa-east-1\.amazonaws\.com/.*\.pdf"</string>
+            <string>1,"^%s(detalhes|exportar-citacao|exportar-pdf)/", base_url</string>
         </list>
     </entry>
     <entry>
@@ -168,4 +199,8 @@
             <string>cdn\.publisher\.gn1\.link</string>
         </list>
     </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry>
 </map>
