@@ -157,7 +157,7 @@
       param[journal_code] = pc
 
       #complete
-      au < manifest ; exists ; 1996 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 93 [1996] ; 93 ; 1996 ; https://pubs.rsc.org/ ; >
+      au < ready ; exists ; 1996 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 93 [1996] ; 93 ; 1996 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 1997 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 93 [1997] ; 93 ; 1997 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 1998 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 94 ; 94 ; 1998 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 1999 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 95 ; 95 ; 1999 ; https://pubs.rsc.org/ ; >
@@ -769,8 +769,8 @@
       au < ready ; exists ; 2002 ; Lab on a Chip Volume 2 ; 2 ; 2002 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2003 ; Lab on a Chip Volume 3 ; 3 ; 2003 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2004 ; Lab on a Chip Volume 4 ; 4 ; 2004 ; https://pubs.rsc.org/ ; >
-      au < manifest ; exists ; 2005 ; Lab on a Chip Volume 5 ; 5 ; 2005 ; https://pubs.rsc.org/ ; >
-      au < manifest ; exists ; 2006 ; Lab on a Chip Volume 6 ; 6 ; 2006 ; https://pubs.rsc.org/ ; >
+      au < ready ; exists ; 2005 ; Lab on a Chip Volume 5 ; 5 ; 2005 ; https://pubs.rsc.org/ ; >
+      au < ready ; exists ; 2006 ; Lab on a Chip Volume 6 ; 6 ; 2006 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2007 ; Lab on a Chip Volume 7 ; 7 ; 2007 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2008 ; Lab on a Chip Volume 8 ; 8 ; 2008 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2009 ; Lab on a Chip Volume 9 ; 9 ; 2009 ; https://pubs.rsc.org/ ; >
@@ -905,7 +905,7 @@
       au < manifest ; exists ; 1999 ; Natural Product Reports Volume 16 ; 16 ; 1999 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2000 ; Natural Product Reports Volume 17 ; 17 ; 2000 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2001 ; Natural Product Reports Volume 18 ; 18 ; 2001 ; https://pubs.rsc.org/ ; >
-      au < manifest ; exists ; 2002 ; Natural Product Reports Volume 19 ; 19 ; 2002 ; https://pubs.rsc.org/ ; >
+      au < ready ; exists ; 2002 ; Natural Product Reports Volume 19 ; 19 ; 2002 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2003 ; Natural Product Reports Volume 20 ; 20 ; 2003 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2004 ; Natural Product Reports Volume 21 ; 21 ; 2004 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2005 ; Natural Product Reports Volume 22 ; 22 ; 2005 ; https://pubs.rsc.org/ ; >
@@ -949,7 +949,7 @@
       au < manifest ; exists ; 2005 ; New Journal of Chemistry Volume 29 ; 29 ; 2005 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2006 ; New Journal of Chemistry Volume 30 ; 30 ; 2006 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2007 ; New Journal of Chemistry Volume 31 ; 31 ; 2007 ; https://pubs.rsc.org/ ; >
-      au < manifest ; exists ; 2008 ; New Journal of Chemistry Volume 32 ; 32 ; 2008 ; https://pubs.rsc.org/ ; >
+      au < ready ; exists ; 2008 ; New Journal of Chemistry Volume 32 ; 32 ; 2008 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2009 ; New Journal of Chemistry Volume 33 ; 33 ; 2009 ; http://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2010 ; New Journal of Chemistry Volume 34 ; 34 ; 2010 ; http://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2011 ; New Journal of Chemistry Volume 35 ; 35 ; 2011 ; http://pubs.rsc.org/ ; >
