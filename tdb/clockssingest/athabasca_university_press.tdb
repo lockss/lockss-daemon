@@ -75,8 +75,8 @@
 
       au < ready ; exists ; 2011 ; International Review of Research in Open and Distance Learning (IRRODL) Volume 12 ; 12 ; 2011 ; >
       au < ready ; exists ; 2017 ; International Review of Research in Open and Distance Learning (IRRODL) Volume 18 ; 18 ; 2017 ; >
-      au < ready ; exists ; 2018 ; International Review of Research in Open and Distance Learning (IRRODL) Volume 19 ; 19 ; 2018 ; >
-      au < ready ; exists ; 2019 ; International Review of Research in Open and Distance Learning (IRRODL) Volume 20 ; 20 ; 2019 ; >
+      au < crawling ; exists ; 2018 ; International Review of Research in Open and Distance Learning (IRRODL) Volume 19 ; 19 ; 2018 ; >
+      au < crawling ; exists ; 2019 ; International Review of Research in Open and Distance Learning (IRRODL) Volume 20 ; 20 ; 2019 ; >
       au < crawling ; exists ; 2020 ; International Review of Research in Open and Distance Learning (IRRODL) Volume 21 ; 21 ; 2020 ; >
       }
     
@@ -151,7 +151,7 @@
       au < doNotProcess ; exists ; 2017 ; International Journal of E-Learning & Distance Education Volume 32 ; 32 ; 2017 ; >
       au < doNotProcess ; exists ; 2018 ; International Journal of E-Learning & Distance Education Volume 33 ; 33 ; 2018 ; >
       au < ready ; exists ; 2019 ; International Journal of E-Learning & Distance Education Volume 34 ; 34 ; 2019 ; >
-      au < ready ; exists ; 2020 ; International Journal of E-Learning & Distance Education Volume 35 ; 35 ; 2020 ; >
+      au < crawling ; exists ; 2020 ; International Journal of E-Learning & Distance Education Volume 35 ; 35 ; 2020 ; >
      }
   
   }
@@ -258,7 +258,7 @@
       au < manifest ; exists ; 2009 ; Labour / Le Travail Volume 63-64 ; 63-64 ; 2009 ; >
       au < ready ; exists ; 2010 ; Labour / Le Travail Volume 65-66 ; 65-66 ; 2010 ; >
       au < ready ; exists ; 2011 ; Labour / Le Travail Volume 67-68 ; 67-68 ; 2011 ; >
-      au < ready ; exists ; 2017 ; Labour / Le Travail Volume 79-80 ; 79-80 ; 2017 ; >
+      au < crawling ; exists ; 2017 ; Labour / Le Travail Volume 79-80 ; 79-80 ; 2017 ; >
       au < ready ; exists ; 2018 ; Labour / Le Travail Volume 81-82 ; 81-82 ; 2018 ; > #one year embargo.
       }
     

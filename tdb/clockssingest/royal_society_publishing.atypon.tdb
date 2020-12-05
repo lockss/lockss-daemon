@@ -506,7 +506,7 @@
     param[journal_id] = rsta1996
     
     au < crawling ; exists ; 1996 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 354 ; 354 ; >
-    au < ready ; exists ; 1997 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 355 ; 355 ; >
+    au < crawling ; exists ; 1997 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 355 ; 355 ; >
     au < crawling ; exists ; 1998 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 356 ; 356 ; >
     au < crawling ; exists ; 1999 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 357 ; 357 ; >
     au < crawling ; exists ; 2000 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 358 ; 358 ; >
@@ -1331,7 +1331,7 @@
     au < crawling ; exists ; 1990 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 431 ; 431 ; >
     au < crawling ; exists ; 1991 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 432 ; 432 ; >
     au < crawling ; exists ; 1991 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 433 ; 433 ; >
-    au < ready ; exists ; 1991 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 434 ; 434 ; >
+    au < crawling ; exists ; 1991 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 434 ; 434 ; >
     au < crawling ; exists ; 1991 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 435 ; 435 ; >
     au < crawling ; exists ; 1992 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 436 ; 436 ; >
     au < crawling ; exists ; 1992 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 437 ; 437 ; >
@@ -1357,7 +1357,7 @@
     au < crawling ; exists ; 1997 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 453 ; 453 ; >
     au < crawling ; exists ; 1998 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 454 ; 454 ; >
     au < crawling ; exists ; 1999 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 455 ; 455 ; >
-    au < ready ; exists ; 2000 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 456 ; 456 ; >
+    au < crawling ; exists ; 2000 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 456 ; 456 ; >
     au < crawling ; exists ; 2001 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 457 ; 457 ; >
     au < crawling ; exists ; 2002 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 458 ; 458 ; >
     au < crawling ; exists ; 2003 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 459 ; 459 ; >
@@ -1575,7 +1575,7 @@
     au < crawling ; exists ; 1991 ; Proceedings of the Royal Society B: Biological Sciences Volume 243 ; 243 ; >
     au < crawling ; exists ; 1991 ; Proceedings of the Royal Society B: Biological Sciences Volume 244 ; 244 ; >
     au < crawling ; exists ; 1991 ; Proceedings of the Royal Society B: Biological Sciences Volume 245 ; 245 ; >
-    au < ready ; exists ; 1991 ; Proceedings of the Royal Society B: Biological Sciences Volume 246 ; 246 ; >
+    au < crawling ; exists ; 1991 ; Proceedings of the Royal Society B: Biological Sciences Volume 246 ; 246 ; >
     au < crawling ; exists ; 1992 ; Proceedings of the Royal Society B: Biological Sciences Volume 247 ; 247 ; >
     au < crawling ; exists ; 1992 ; Proceedings of the Royal Society B: Biological Sciences Volume 248 ; 248 ; >
     au < crawling ; exists ; 1992 ; Proceedings of the Royal Society B: Biological Sciences Volume 249 ; 249 ; >
@@ -1636,8 +1636,8 @@
     {
     param[journal_id] = rspl1800
 
-    au < ready ; exists ; 1832 ; Proceedings of the Royal Society of London Volume 1 ; 1 ; >
-    au < ready ; exists ; 1833 ; Proceedings of the Royal Society of London Volume 2 ; 2 ; >
+    au < crawling ; exists ; 1832 ; Proceedings of the Royal Society of London Volume 1 ; 1 ; >
+    au < crawling ; exists ; 1833 ; Proceedings of the Royal Society of London Volume 2 ; 2 ; >
     au < crawling ; exists ; 1837 ; Proceedings of the Royal Society of London Volume 3 ; 3 ; >
     au < crawling ; exists ; 1843 ; Proceedings of the Royal Society of London Volume 4 ; 4 ; >
     }
@@ -1652,7 +1652,7 @@
 
     au < crawling ; exists ; 1856 ; Proceedings of the Royal Society of London Volume 7 ; 7 ; >
     au < crawling ; exists ; 1857 ; Proceedings of the Royal Society of London Volume 8 ; 8 ; >
-    au < ready ; exists ; 1859 ; Proceedings of the Royal Society of London Volume 9 ; 9 ; >
+    au < crawling ; exists ; 1859 ; Proceedings of the Royal Society of London Volume 9 ; 9 ; >
     au < crawling ; exists ; 1860 ; Proceedings of the Royal Society of London Volume 10 ; 10 ; >
     au < crawling ; exists ; 1862 ; Proceedings of the Royal Society of London Volume 11 ; 11 ; >
     au < crawling ; exists ; 1863 ; Proceedings of the Royal Society of London Volume 12 ; 12 ; >
@@ -1664,7 +1664,7 @@
     au < crawling ; exists ; 1870 ; Proceedings of the Royal Society of London Volume 18 ; 18 ; >
     au < crawling ; exists ; 1871 ; Proceedings of the Royal Society of London Volume 19 ; 19 ; >
     au < crawling ; exists ; 1872 ; Proceedings of the Royal Society of London Volume 20 ; 20 ; >
-    au < ready ; exists ; 1873 ; Proceedings of the Royal Society of London Volume 21 ; 21 ; >
+    au < crawling ; exists ; 1873 ; Proceedings of the Royal Society of London Volume 21 ; 21 ; >
     au < crawling ; exists ; 1874 ; Proceedings of the Royal Society of London Volume 22 ; 22 ; >
     au < crawling ; exists ; 1875 ; Proceedings of the Royal Society of London Volume 23 ; 23 ; >
     au < crawling ; exists ; 1876 ; Proceedings of the Royal Society of London Volume 24 ; 24 ; >
