@@ -1014,7 +1014,7 @@
       param[journal_id] = jaa
 
       au < ready ; exists ; 2018 ; 2018 ; Journal of Academic Advising Volume 2018 ; 1 ; >
-      au < ready ; exists ; 2020 ; 2020 ; Journal of Academic Advising Volume 2020 ; 2 ; >
+      au < crawling ; exists ; 2020 ; 2020 ; Journal of Academic Advising Volume 2020 ; 2 ; >
 
   }
 
@@ -1029,7 +1029,7 @@
 
       au < ready ; exists ; 2017 ; 2017 ; Global Engagement and Transformation Volume 2017 ; 1 ; >
       au < ready ; exists ; 2018 ; 2018 ; Global Engagement and Transformation Volume 2018 ; 2 ; >
-      au < ready ; exists ; 2020 ; 2020 ; Global Engagement and Transformation Volume 2020 ; 3 ; >
+      au < crawling ; exists ; 2020 ; 2020 ; Global Engagement and Transformation Volume 2020 ; 3 ; >
 
   }
 
@@ -1125,7 +1125,7 @@
       param[journal_id] = iwpsalc
 
       au < ready ; exists ; 2019 ; 2019 ; Indiana Working Papers in South Asian Languages and Cultures Volume 2019 ; 1 ; >
-      au < ready ; exists ; 2020 ; 2020 ; Indiana Working Papers in South Asian Languages and Cultures Volume 2020 ; 2 ; >
+      au < crawling ; exists ; 2020 ; 2020 ; Indiana Working Papers in South Asian Languages and Cultures Volume 2020 ; 2 ; >
 
   }
 

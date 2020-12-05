@@ -98,7 +98,7 @@
       au < finished ; manifest ; 2017 ; Business: Theory and Practice Volume 2017 ; 18 ; 2017 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; Business: Theory and Practice Volume 2018 ; 19 ; 2018 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2019 ; Business: Theory and Practice Volume 2019 ; 20 ; 2019 ; reingest3.clockss.org:8083 >
-      au < ready ; exists ; 2020 ; Business: Theory and Practice Volume 2020 ; 21 ; 2020 ;  >
+      au < crawling ; exists ; 2020 ; Business: Theory and Practice Volume 2020 ; 21 ; 2020 ;  >
 
   }
 
@@ -149,7 +149,7 @@
       au < finished ; manifest ; 2017 ; Engineering Structures and Technologies Volume 2017 ; 9 ; 2017 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; Engineering Structures and Technologies Volume 2018 ; 10 ; 2018 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2019 ; Engineering Structures and Technologies Volume 2019 ; 11 ; 2019 ; reingest3.clockss.org:8083 >
-      au < ready ; exists ; 2020 ; Engineering Structures and Technologies Volume 2020 ; 12 ; 2020 ;  >
+      au < crawling ; exists ; 2020 ; Engineering Structures and Technologies Volume 2020 ; 12 ; 2020 ;  >
 
   }
 
@@ -209,7 +209,7 @@
       au < finished ; manifest ; 2017 ; International Journal of Strategic Property Management Volume 2017 ; 14 ; 2017 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; International Journal of Strategic Property Management Volume 2018 ; 15 ; 2018 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; International Journal of Strategic Property Management Volume 2019 ; 16 ; 2019 ; reingest2.clockss.org:8085 >
-      au < ready ; exists ; 2020 ; International Journal of Strategic Property Management Volume 2020 ; 17 ; 2020 ;  >
+      au < crawling ; exists ; 2020 ; International Journal of Strategic Property Management Volume 2020 ; 17 ; 2020 ;  >
 
   }
 
@@ -237,7 +237,7 @@
       au < finished ; manifest ; 2017 ; Journal of Architecture and Urbanism Volume 2017 ; 12 ; 2017 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; Journal of Architecture and Urbanism Volume 2018 ; 13 ; 2018 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; Journal of Architecture and Urbanism Volume 2019 ; 14 ; 2019 ; reingest1.clockss.org:8082 >
-      au < ready ; exists ; 2020 ; Journal of Architecture and Urbanism Volume 2020 ; 15 ; 2020 ;  >
+      au < crawling ; exists ; 2020 ; Journal of Architecture and Urbanism Volume 2020 ; 15 ; 2020 ;  >
 
   }
 
@@ -268,7 +268,7 @@
       au < finished ; manifest ; 2017 ; Journal of Business Economics and Management Volume 2017 ; 15 ; 2017 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; Journal of Business Economics and Management Volume 2018 ; 16 ; 2018 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; Journal of Business Economics and Management Volume 2019 ; 17 ; 2019 ; reingest5.clockss.org:8082 >
-      au < ready ; exists ; 2020 ; Journal of Business Economics and Management Volume 2020 ; 18 ; 2020 ;  >
+      au < crawling ; exists ; 2020 ; Journal of Business Economics and Management Volume 2020 ; 18 ; 2020 ;  >
 
   }
 
@@ -307,7 +307,7 @@
       au < finished ; manifest ; 2017 ; Journal of Civil Engineering and Management Volume 2017 ; 23 ; 2017 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2018 ; Journal of Civil Engineering and Management Volume 2018 ; 24 ; 2018 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; Journal of Civil Engineering and Management Volume 2019 ; 25 ; 2019 ; reingest4.clockss.org:8082 >
-      au < ready ; exists ; 2020 ; Journal of Civil Engineering and Management Volume 2020 ; 26 ; 2020 ;  >
+      au < crawling ; exists ; 2020 ; Journal of Civil Engineering and Management Volume 2020 ; 26 ; 2020 ;  >
 
   }
 
@@ -337,7 +337,7 @@
       au < finished ; manifest ; 2017 ; Journal of Environmental Engineering and Landscape Management Volume 2017 ; 14 ; 2017 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2018 ; Journal of Environmental Engineering and Landscape Management Volume 2018 ; 15 ; 2018 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; Journal of Environmental Engineering and Landscape Management Volume 2019 ; 16 ; 2019 ; reingest4.clockss.org:8082 >
-      au < ready ; exists ; 2020 ; Journal of Environmental Engineering and Landscape Management Volume 2020 ; 17 ; 2020 ;  >
+      au < crawling ; exists ; 2020 ; Journal of Environmental Engineering and Landscape Management Volume 2020 ; 17 ; 2020 ;  >
 
   }
 
@@ -375,7 +375,7 @@
       au < finished ; manifest ; 2017 ; Mathematical Modelling and Analysis Volume 2017 ; 22 ; 2017 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; Mathematical Modelling and Analysis Volume 2018 ; 23 ; 2018 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; Mathematical Modelling and Analysis Volume 2019 ; 24 ; 2019 ; reingest2.clockss.org:8085 >
-      au < ready ; exists ; 2020 ; Mathematical Modelling and Analysis Volume 2020 ; 25 ; 2020 ;  >
+      au < crawling ; exists ; 2020 ; Mathematical Modelling and Analysis Volume 2020 ; 25 ; 2020 ;  >
 
   }
 
@@ -400,7 +400,7 @@
       au < doNotProcess ; exists ; 2017 ; Science - Future of Lithuania Volume 2017 ; 9 ; 2017 ;  >
       au < finished ; manifest ; 2018 ; Science - Future of Lithuania Volume 2018 ; 10 ; 2018 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; Science - Future of Lithuania Volume 2019 ; 11 ; 2019 ; reingest4.clockss.org:8082 >
-      au < ready ; exists ; 2020 ; Science - Future of Lithuania Volume 2020 ; 12 ; 2020 ;  >
+      au < crawling ; exists ; 2020 ; Science - Future of Lithuania Volume 2020 ; 12 ; 2020 ;  >
 
   }
 
@@ -430,7 +430,7 @@
       au < finished ; manifest ; 2017 ; Technological and Economic Development of Economy Volume 2017 ; 14 ; 2017 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; Technological and Economic Development of Economy Volume 2018 ; 15 ; 2018 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2019 ; Technological and Economic Development of Economy Volume 2019 ; 16 ; 2019 ; reingest3.clockss.org:8083 >
-      au < ready ; exists ; 2020 ; Technological and Economic Development of Economy Volume 2020 ; 17 ; 2020 ;  >
+      au < crawling ; exists ; 2020 ; Technological and Economic Development of Economy Volume 2020 ; 17 ; 2020 ;  >
 
   }
 
