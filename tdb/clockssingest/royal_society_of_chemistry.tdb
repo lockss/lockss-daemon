@@ -733,7 +733,7 @@
       param[journal_code] = jm
 
       #complete
-      au < manifest ; exists ; 1996 ; Journal of Materials Chemistry Volume 6 ; 6 ; 1996 ; https://pubs.rsc.org/ ; >
+      au < ready ; exists ; 1996 ; Journal of Materials Chemistry Volume 6 ; 6 ; 1996 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 1997 ; Journal of Materials Chemistry Volume 7 ; 7 ; 1997 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 1998 ; Journal of Materials Chemistry Volume 8 ; 8 ; 1998 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 1999 ; Journal of Materials Chemistry Volume 9 ; 9 ; 1999 ; https://pubs.rsc.org/ ; >
@@ -827,10 +827,10 @@
 
       #complete
       au < manifest ; exists ; 2005 ; Molecular BioSystems Volume 1 ; 1 ; 2005 ; https://pubs.rsc.org/ ; >
-      au < manifest ; exists ; 2006 ; Molecular BioSystems Volume 2 ; 2 ; 2006 ; https://pubs.rsc.org/ ; >
+      au < ready ; exists ; 2006 ; Molecular BioSystems Volume 2 ; 2 ; 2006 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2007 ; Molecular BioSystems Volume 3 ; 3 ; 2007 ; https://pubs.rsc.org/ ; >
-      au < manifest ; exists ; 2008 ; Molecular BioSystems Volume 4 ; 4 ; 2008 ; https://pubs.rsc.org/ ; >
-      au < manifest ; exists ; 2009 ; Molecular BioSystems Volume 5 ; 5 ; 2009 ; https://pubs.rsc.org/ ; >
+      au < ready ; exists ; 2008 ; Molecular BioSystems Volume 4 ; 4 ; 2008 ; https://pubs.rsc.org/ ; >
+      au < ready ; exists ; 2009 ; Molecular BioSystems Volume 5 ; 5 ; 2009 ; https://pubs.rsc.org/ ; >
       au < finished ; finished ; 2010 ; Molecular BioSystems Volume 6 ; 6 ; 2010 ; http://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2011 ; Molecular BioSystems Volume 7 ; 7 ; 2011 ; http://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2012 ; Molecular BioSystems Volume 8 ; 8 ; 2012 ; http://pubs.rsc.org/ ; >
@@ -872,7 +872,7 @@
       param[journal_code] = nr
 
       #complete
-      au < manifest ; exists ; 2009 ; Nanoscale Volume 1 ; 1 ; 2009 ; https://pubs.rsc.org/ ; >
+      au < ready ; exists ; 2009 ; Nanoscale Volume 1 ; 1 ; 2009 ; https://pubs.rsc.org/ ; >
       au < finished ; manifest ; 2010 ; Nanoscale Volume 2 ; 2 ; 2010 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2011 ; Nanoscale Volume 3 ; 3 ; 2011 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2012 ; Nanoscale Volume 4 ; 4 ; 2012 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
@@ -911,7 +911,7 @@
       au < manifest ; exists ; 2005 ; Natural Product Reports Volume 22 ; 22 ; 2005 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2006 ; Natural Product Reports Volume 23 ; 23 ; 2006 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2007 ; Natural Product Reports Volume 24 ; 24 ; 2007 ; https://pubs.rsc.org/ ; >
-      au < manifest ; exists ; 2008 ; Natural Product Reports Volume 25 ; 25 ; 2008 ; https://pubs.rsc.org/ ; >
+      au < ready ; exists ; 2008 ; Natural Product Reports Volume 25 ; 25 ; 2008 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2009 ; Natural Product Reports Volume 26 ; 26 ; 2009 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2010 ; Natural Product Reports Volume 27 ; 27 ; 2010 ; http://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2011 ; Natural Product Reports Volume 28 ; 28 ; 2011 ; http://pubs.rsc.org/ ; >
@@ -939,10 +939,10 @@
       param[journal_code] = nj
 
       #complete
-      au < manifest ; exists ; 1998 ; New Journal of Chemistry Volume 22 ; 22 ; 1998 ; https://pubs.rsc.org/ ; >
+      au < ready ; exists ; 1998 ; New Journal of Chemistry Volume 22 ; 22 ; 1998 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 1999 ; New Journal of Chemistry Volume 23 ; 23 ; 1999 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2000 ; New Journal of Chemistry Volume 24 ; 24 ; 2000 ; https://pubs.rsc.org/ ; >
-      au < manifest ; exists ; 2001 ; New Journal of Chemistry Volume 25 ; 25 ; 2001 ; https://pubs.rsc.org/ ; >
+      au < ready ; exists ; 2001 ; New Journal of Chemistry Volume 25 ; 25 ; 2001 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2002 ; New Journal of Chemistry Volume 26 ; 26 ; 2002 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2003 ; New Journal of Chemistry Volume 27 ; 27 ; 2003 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2004 ; New Journal of Chemistry Volume 28 ; 28 ; 2004 ; https://pubs.rsc.org/ ; >
