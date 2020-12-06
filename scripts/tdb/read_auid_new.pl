@@ -3014,7 +3014,8 @@ while (my $line = <>) {
     }
     sleep(4);
   } elsif (($plugin eq "OupSilverchairPlugin") || 
-           ($plugin eq "DupSilverchairPlugin")) {
+           ($plugin eq "DupSilverchairPlugin") ||
+           ($plugin eq "GeoscienceWorldSilverchairPlugin")) {
     $url = sprintf("%s%s/list-of-issues/%d",
       $param{base_url}, $param{journal_id}, $param{year});
     $man_url = uri_unescape($url);
@@ -3040,7 +3041,8 @@ while (my $line = <>) {
     sleep(4);
 
   } elsif (($plugin eq "ClockssOupSilverchairPlugin") || 
-           ($plugin eq "ClockssDupSilverchairPlugin")) {
+           ($plugin eq "ClockssDupSilverchairPlugin") || 
+           ($plugin eq "ClockssGeoscienceWorldSilverchairPlugin")) {
     $url = sprintf("%s%s/list-of-issues/%d",
       $param{base_url}, $param{journal_id}, $param{year});
     $man_url = uri_unescape($url);
@@ -3094,8 +3096,7 @@ while (my $line = <>) {
 #    
   } elsif (($plugin eq "IwapSilverchairPlugin") || 
            ($plugin eq "RockefellerUniversityPressSilverchairPlugin") || 
-           ($plugin eq "PortlandPressSilverchairPlugin") || 
-           ($plugin eq "GeoscienceWorldSilverchairPlugin")) {
+           ($plugin eq "PortlandPressSilverchairPlugin")) {
     $url = sprintf("%s%s/issue/browse-by-year/%d",
       $param{base_url}, $param{journal_id}, $param{year});
     $man_url = uri_unescape($url);
@@ -3122,8 +3123,7 @@ while (my $line = <>) {
 
   } elsif (($plugin eq "ClockssIwapSilverchairPlugin") || 
            ($plugin eq "ClockssRockefellerUniversityPressSilverchairPlugin") || 
-           ($plugin eq "ClockssPortlandPressSilverchairPlugin") || 
-           ($plugin eq "ClockssGeoscienceWorldSilverchairPlugin")) {
+           ($plugin eq "ClockssPortlandPressSilverchairPlugin")) { 
     $url = sprintf("%s%s/issue/browse-by-year/%d",
       $param{base_url}, $param{journal_id}, $param{year});
     $man_url = uri_unescape($url);
