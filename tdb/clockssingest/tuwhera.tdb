@@ -28,15 +28,17 @@
       >
       param[base_url] = https://ojs.aut.ac.nz/
       param[journal_id] = applied-finance-letters
+      attr[start_stem] = 
+      #manifest page checker doesn't work without standard stem
 
-      au < exists ; exists ; 2012 ; Applied Finance Letters Volume 1 ; 1 ; 2012 ; > 
-      au < exists ; exists ; 2013 ; Applied Finance Letters Volume 2 ; 2 ; 2013 ; > 
-      au < exists ; exists ; 2014 ; Applied Finance Letters Volume 3 ; 3 ; 2014 ; > 
-      au < exists ; exists ; 2015 ; Applied Finance Letters Volume 4 ; 4 ; 2015 ; > 
-      au < exists ; exists ; 2016 ; Applied Finance Letters Volume 5 ; 5 ; 2016 ; > 
-      au < exists ; exists ; 2017 ; Applied Finance Letters Volume 6 ; 6 ; 2017 ; >
-      au < exists ; exists ; 2018 ; Applied Finance Letters Volume 7 ; 7 ; 2018 ; >
-      au < exists ; exists ; 2019 ; Applied Finance Letters Volume 8 ; 8 ; 2019 ; >
+      au < manifest ; exists ; 2012 ; Applied Finance Letters Volume 1 ; 1 ; 2012 ; > 
+      au < manifest ; exists ; 2013 ; Applied Finance Letters Volume 2 ; 2 ; 2013 ; > 
+      au < manifest ; exists ; 2014 ; Applied Finance Letters Volume 3 ; 3 ; 2014 ; > 
+      au < manifest ; exists ; 2015 ; Applied Finance Letters Volume 4 ; 4 ; 2015 ; > 
+      au < manifest ; exists ; 2016 ; Applied Finance Letters Volume 5 ; 5 ; 2016 ; > 
+      au < manifest ; exists ; 2017 ; Applied Finance Letters Volume 6 ; 6 ; 2017 ; >
+      au < manifest ; exists ; 2018 ; Applied Finance Letters Volume 7 ; 7 ; 2018 ; >
+      au < manifest ; exists ; 2019 ; Applied Finance Letters Volume 8 ; 8 ; 2019 ; >
       au < expected ; exists ; 2020 ; Applied Finance Letters Volume 9 ; 9 ; 2020 ; >
 
     }
@@ -51,15 +53,17 @@
       >
       param[base_url] = https://ojs.aut.ac.nz/
       param[journal_id] = pacific-journalism-review
+      attr[start_stem] = 
+      #manifest page checker doesn't work without standard stem
 
-      au < exists ; exists ; 2012 ; Pacific Journalism Review Volume 18 ; 18 ; 2012 ; > 
-      au < exists ; exists ; 2013 ; Pacific Journalism Review Volume 19 ; 19 ; 2013 ; > 
-      au < exists ; exists ; 2014 ; Pacific Journalism Review Volume 20 ; 20 ; 2014 ; > 
-      au < exists ; exists ; 2015 ; Pacific Journalism Review Volume 21 ; 21 ; 2015 ; > 
-      au < exists ; exists ; 2016 ; Pacific Journalism Review Volume 22 ; 22 ; 2016 ; > 
-      au < exists ; exists ; 2017 ; Pacific Journalism Review Volume 23 ; 23 ; 2017 ; >
+      au < manifest ; exists ; 2012 ; Pacific Journalism Review Volume 18 ; 18 ; 2012 ; > 
+      au < manifest ; exists ; 2013 ; Pacific Journalism Review Volume 19 ; 19 ; 2013 ; > 
+      au < manifest ; exists ; 2014 ; Pacific Journalism Review Volume 20 ; 20 ; 2014 ; > 
+      au < manifest ; exists ; 2015 ; Pacific Journalism Review Volume 21 ; 21 ; 2015 ; > 
+      au < manifest ; exists ; 2016 ; Pacific Journalism Review Volume 22 ; 22 ; 2016 ; > 
+      au < manifest ; exists ; 2017 ; Pacific Journalism Review Volume 23 ; 23 ; 2017 ; >
       au < finished ; manifest ; 2018 ; Pacific Journalism Review Volume 24 ; 24 ; 2018 ; reingest4.clockss.org:8082 >
-      au < expected ; exists ; 2019 ; Pacific Journalism Review Volume 25 ; 25 ; 2019 ; >
+      au < manifest ; exists ; 2019 ; Pacific Journalism Review Volume 25 ; 25 ; 2019 ; >
       au < expected ; exists ; 2020 ; Pacific Journalism Review Volume 26 ; 26 ; 2020 ; >
 
     }
@@ -73,6 +77,7 @@
       >
       param[base_url] = https://ojs.aut.ac.nz/te-kaharoa/
       param[journal_id] = tekaharoa
+      attr[start_stem] = index.php/
 
       ### Note from plugin developer:
       ### https://ojs.aut.ac.nz/te-kaharoa/index.php/tekaharoa/gateway/lockss?year=2016
