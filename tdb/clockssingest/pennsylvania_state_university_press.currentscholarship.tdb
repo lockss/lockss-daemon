@@ -31,8 +31,8 @@
       au < manifest ; exists ; 2007 ; The Chaucer Review Volume 2007 ; 2007 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2008 ; The Chaucer Review Volume 2008 ; 2008 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2009 ; The Chaucer Review Volume 2009 ; 2009 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2010 ; The Chaucer Review Volume 2010 ; 2010 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2011 ; The Chaucer Review Volume 2011 ; 2011 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2010 ; The Chaucer Review Volume 2010 ; 2010 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2011 ; The Chaucer Review Volume 2011 ; 2011 ; https://www.jstor.org/ ; >
       au < finished ; manifest ; 2012 ; The Chaucer Review Volume 2012 ; 2012 ; http://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2013 ; The Chaucer Review Volume 2013 ; 2013 ; http://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2014 ; The Chaucer Review Volume 2014 ; 2014 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 > #java.lang.UnsupportedOperationException
@@ -57,7 +57,7 @@
       
  
       au < finished ; manifest ; 2010 ; Comparative Literature Studies Volume 47 ; 2010 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
-      au < manifest ; exists ; 2011 ; Comparative Literature Studies Volume 48 ; 2011 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2011 ; Comparative Literature Studies Volume 48 ; 2011 ; https://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Comparative Literature Studies Volume 49 ; 2012 ; https://www.jstor.org/ ; >
       au < finished ; manifest ; 2013 ; Comparative Literature Studies Volume 50 ; 2013 ; http://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2014 ; Comparative Literature Studies Volume 51 ; 2014 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
@@ -103,7 +103,7 @@
       param[journal_id] = edgallpoerev
 
       au < finished ; manifest ; 2010 ; The Edgar Allan Poe Review Volume 11 ; 2010 ; http://www.jstor.org/ ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 2011 ; The Edgar Allan Poe Review Volume 12 ; 2011 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2011 ; The Edgar Allan Poe Review Volume 12 ; 2011 ; https://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2012 ; The Edgar Allan Poe Review Volume 13 ; 2012 ; https://www.jstor.org/ ; >
       au < finished ; manifest ; 2013 ; The Edgar Allan Poe Review Volume 14 ; 2013 ; http://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2014 ; The Edgar Allan Poe Review Volume 15 ; 2014 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
@@ -126,7 +126,7 @@
     >
       param[journal_id] = eugeoneirevi
 
-      au < manifest ; exists ; 2010 ; The Eugene O'Neill Review Volume 32 ; 2010 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2010 ; The Eugene O'Neill Review Volume 32 ; 2010 ; https://www.jstor.org/ ; >
       au < finished ; manifest ; 2012 ; The Eugene O'Neill Review Volume 33 ; 2012 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2013 ; The Eugene O'Neill Review Volume 34 ; 2013 ; https://www.jstor.org/ ; >
       au < finished ; manifest ; 2014 ; The Eugene O'Neill Review Volume 35 ; 2014 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
@@ -151,8 +151,8 @@
       param[journal_id] = fscotfitzrevi
 
 
-      au < manifest ; exists ; 2010 ; The F. Scott Fitzgerald Review Volume 8 ; 2010 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2011 ; The F. Scott Fitzgerald Review Volume 9 ; 2011 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2010 ; The F. Scott Fitzgerald Review Volume 8 ; 2010 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2011 ; The F. Scott Fitzgerald Review Volume 9 ; 2011 ; https://www.jstor.org/ ; >
       au < finished ; manifest ; 2012 ; The F. Scott Fitzgerald Review Volume 10 ; 2012 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2013 ; The F. Scott Fitzgerald Review Volume 11 ; 2013 ; http://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2014 ; The F. Scott Fitzgerald Review Volume 12 ; 2014 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
@@ -178,7 +178,7 @@
       comment[continues] = 2157-2968
 
       au < finished ; manifest ; 2010 ; The Good Society Volume 19 ; 2010 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
-      au < manifest ; exists ; 2011 ; The Good Society Volume 20 ; 2011 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2011 ; The Good Society Volume 20 ; 2011 ; https://www.jstor.org/ ; >
       au < finished ; manifest ; 2012 ; The Good Society Volume 21 ; 2012 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2013 ; The Good Society Volume 22 ; 2013 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2014 ; The Good Society Volume 23 ; 2014 ; https://www.jstor.org/ ; >
@@ -214,8 +214,8 @@
       au < manifest ; exists ; 2007 ; Interdisciplinary Literary Studies Volume 8-9 ; 2007 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2008 ; Interdisciplinary Literary Studies Volume 9-10 ; 2008 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2009 ; Interdisciplinary Literary Studies Volume 10-11 ; 2009 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2010 ; Interdisciplinary Literary Studies Volume 11-12; 2010 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2011 ; Interdisciplinary Literary Studies Volume 12-13 ; 2011 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2010 ; Interdisciplinary Literary Studies Volume 11-12; 2010 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2011 ; Interdisciplinary Literary Studies Volume 12-13 ; 2011 ; https://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Interdisciplinary Literary Studies Volume 14 ; 2012 ; https://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Interdisciplinary Literary Studies Volume 15 ; 2013 ; https://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Interdisciplinary Literary Studies Volume 16 ; 2014 ; https://www.jstor.org/ ; >
@@ -261,7 +261,7 @@
 
       param[journal_id] = jasseinsteffe
 
-      au < manifest ; exists ; 2010 ; Journal of Assessment and Institutional Effectiveness Volume 1 ; 2010 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2010 ; Journal of Assessment and Institutional Effectiveness Volume 1 ; 2010 ; https://www.jstor.org/ ; >
       au < finished ; manifest ; 2012 ; Journal of Assessment and Institutional Effectiveness Volume 2 ; 2012 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2013 ; Journal of Assessment and Institutional Effectiveness Volume 3 ; 2013 ; http://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2015 ; Journal of Assessment and Institutional Effectiveness Volume 4-5 ; 2015 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
@@ -284,7 +284,7 @@
 
       param[journal_id] = jaynrandstud
 
-      au < manifest ; exists ; 2011 ; The Journal of Ayn Rand Studies Volume 11 ; 2011 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2011 ; The Journal of Ayn Rand Studies Volume 11 ; 2011 ; https://www.jstor.org/ ; >
       au < finished ; manifest ; 2012 ; The Journal of Ayn Rand Studies Volume 12 ; 2012 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2013 ; The Journal of Ayn Rand Studies Volume 13 ; 2013 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < doNotProcess ; doNotProcess ; 2014 ; The Journal of Ayn Rand Studies Volume 14 ; 2014 ; https://www.jstor.org/ ; >
@@ -330,8 +330,8 @@
 
       param[journal_id] = jgeneeduc
 
-      au < manifest ; exists ; 2010 ; The Journal of General Education Volume 59 ; 2010 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2011 ; The Journal of General Education Volume 60 ; 2011 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2010 ; The Journal of General Education Volume 59 ; 2010 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2011 ; The Journal of General Education Volume 60 ; 2011 ; https://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2012 ; The Journal of General Education Volume 61 ; 2012 ; https://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2013 ; The Journal of General Education Volume 62 ; 2013 ; https://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2014 ; The Journal of General Education Volume 63 ; 2014 ; https://www.jstor.org/ ; >
@@ -356,8 +356,8 @@
       param[journal_id] = jmedirelicult
       comment[continues] = Mystics Quarterly 0742-5503
 
-      au < manifest ; exists ; 2010 ; Journal of Medieval Religious Cultures Volume 36 ; 2010 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2011 ; Journal of Medieval Religious Cultures Volume 37 ; 2011 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2010 ; Journal of Medieval Religious Cultures Volume 36 ; 2010 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2011 ; Journal of Medieval Religious Cultures Volume 37 ; 2011 ; https://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Journal of Medieval Religious Cultures Volume 38 ; 2012 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2013 ; Journal of Medieval Religious Cultures Volume 39 ; 2013 ; http://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Medieval Religious Cultures Volume 40 ; 2014 ; https://www.jstor.org/ ; >
@@ -383,7 +383,7 @@
       # volume numbers don't line up with years - how to handle already processed content?
 
       au < frozen ; exists ; 2010 ; Journal of Modern Periodical Studies Volume 1 ; 2010 ; http://www.jstor.org/ ; >
-      au < manifest ; exists ; 2011 ; Journal of Modern Periodical Studies Volume 2 ; 2011 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2011 ; Journal of Modern Periodical Studies Volume 2 ; 2011 ; https://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Journal of Modern Periodical Studies Volume 3 ; 2012 ; https://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2013-2014 ; Journal of Modern Periodical Studies Volume 4 ; 2013 ; https://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2014-2015 ; Journal of Modern Periodical Studies Volume 4-5 ; 2014 ; https://www.jstor.org/ ; >
@@ -411,8 +411,8 @@
       au < manifest ; exists ; 2007 ; Journal of Moravian History Volume 2007 ; 2007 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2008 ; Journal of Moravian History Volume 2008 ; 2008 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2009 ; Journal of Moravian History Volume 2009 ; 2009 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2010 ; Journal of Moravian History Volume 2010 ; 2010 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2011 ; Journal of Moravian History Volume 2011 ; 2011 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2010 ; Journal of Moravian History Volume 2010 ; 2010 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2011 ; Journal of Moravian History Volume 2011 ; 2011 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2012 ; Journal of Moravian History Volume 12 ; 2012 ; http://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Journal of Moravian History Volume 13 ; 2013 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2014 ; Journal of Moravian History Volume 14 ; 2014 ; http://www.jstor.org/ ; >
@@ -436,7 +436,7 @@
 
       param[journal_id] = jnietstud
 
-      au < manifest ; exists ; 2011 ; The Journal of Nietzsche Studies Volume 41-42 ; 2011 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2011 ; The Journal of Nietzsche Studies Volume 41-42 ; 2011 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2012 ; The Journal of Nietzsche Studies Volume 43 ; 2012 ; http://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2013 ; The Journal of Nietzsche Studies Volume 44 ; 2013 ; https://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2014 ; The Journal of Nietzsche Studies Volume 45 ; 2014 ; https://www.jstor.org/ ; >
@@ -460,8 +460,8 @@
 
       param[journal_id] = jspecphil
 
-      au < manifest ; exists ; 2010 ; The Journal of Speculative Philosophy Volume 24 ; 2010 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2011 ; The Journal of Speculative Philosophy Volume 25 ; 2011 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2010 ; The Journal of Speculative Philosophy Volume 24 ; 2010 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2011 ; The Journal of Speculative Philosophy Volume 25 ; 2011 ; https://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2012 ; The Journal of Speculative Philosophy Volume 26 ; 2012 ; https://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2013 ; The Journal of Speculative Philosophy Volume 27 ; 2013 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2014 ; The Journal of Speculative Philosophy Volume 28 ; 2014 ; http://www.jstor.org/ ; >
@@ -486,8 +486,8 @@
       param[journal_id] = marktwaij
       
 
-      au < manifest ; exists ; 2010 ; The Mark Twain Annual Volume 8 ; 2010 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2011 ; The Mark Twain Annual Volume 9 ; 2011 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2010 ; The Mark Twain Annual Volume 8 ; 2010 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2011 ; The Mark Twain Annual Volume 9 ; 2011 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2012 ; The Mark Twain Annual Volume 10 ; 2012 ; http://www.jstor.org/ ; >
       au < frozen ; exists ; 2013 ; The Mark Twain Annual Volume 11 ; 2013 ; http://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2014 ; The Mark Twain Annual Volume 12 ; 2014 ; https://www.jstor.org/ ; >
@@ -540,7 +540,7 @@
       param[journal_id] = pacicoasphil
 
       au < exists ; exists ; 2010 ; Pacific Coast Philology Volume 45 ; 2010 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2011 ; Pacific Coast Philology Volume 46 ; 2011 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2011 ; Pacific Coast Philology Volume 46 ; 2011 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2012 ; Pacific Coast Philology Volume 47 ; 2012 ; http://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Pacific Coast Philology Volume 48 ; 2013 ; https://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Pacific Coast Philology Volume 49 ; 2014 ; https://www.jstor.org/ ; >
@@ -563,7 +563,7 @@
 
       param[journal_id] = pennhistory
 
-      au < manifest ; exists ; 2010 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 77 ; 2010 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2010 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 77 ; 2010 ; https://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 78 ; 2011 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2012 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 79 ; 2012 ; http://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 80 ; 2013 ; https://www.jstor.org/ ; >
@@ -588,8 +588,8 @@
 
       param[journal_id] = philrhet
 
-      au < manifest ; exists ; 2010 ; Philosophy and Rhetoric Volume 43 ; 2010 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2011 ; Philosophy and Rhetoric Volume 44 ; 2011 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2010 ; Philosophy and Rhetoric Volume 43 ; 2010 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2011 ; Philosophy and Rhetoric Volume 44 ; 2011 ; https://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Philosophy and Rhetoric Volume 45 ; 2012 ; https://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Philosophy and Rhetoric Volume 46 ; 2013 ; https://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Philosophy and Rhetoric Volume 47 ; 2014 ; https://www.jstor.org/ ; >
@@ -639,11 +639,11 @@
       param[journal_id] = reception
 
       au < manifest ; exists ; 2008 ; Reception: Texts, Readers, Audiences, History Volume 1 ; 2008 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2010 ; Reception: Texts, Readers, Audiences, History Volume 2 ; 2010 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2011 ; Reception: Texts, Readers, Audiences, History Volume 3 ; 2011 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2010 ; Reception: Texts, Readers, Audiences, History Volume 2 ; 2010 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2011 ; Reception: Texts, Readers, Audiences, History Volume 3 ; 2011 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2012 ; Reception: Texts, Readers, Audiences, History Volume 4 ; 2012 ; http://www.jstor.org/ ; >
-      au < manifest ; exists ; 2013 ; Reception: Texts, Readers, Audiences, History Volume 5 ; 2013 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2014 ; Reception: Texts, Readers, Audiences, History Volume 6 ; 2014 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2013 ; Reception: Texts, Readers, Audiences, History Volume 5 ; 2013 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2014 ; Reception: Texts, Readers, Audiences, History Volume 6 ; 2014 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2015 ; Reception: Texts, Readers, Audiences, History Volume 7 ; 2015 ; http://www.jstor.org/ ; >
       au < frozen ; exists ; 2016 ; Reception: Texts, Readers, Audiences, History Volume 8 ; 2016 ; http://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2017 ; Reception: Texts, Readers, Audiences, History Volume 9 ; 2017 ; http://www.jstor.org/ ; >
@@ -666,7 +666,7 @@
 
 
       au < frozen ; exists ; 2010 ; SHAW The Annual of Bernard Shaw Studies Volume 30 ; 2010 ; http://www.jstor.org/ ; >
-      au < manifest ; exists ; 2011 ; SHAW The Annual of Bernard Shaw Studies Volume 31 ; 2011 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2011 ; SHAW The Annual of Bernard Shaw Studies Volume 31 ; 2011 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2012 ; SHAW The Annual of Bernard Shaw Studies Volume 32 ; 2012 ; http://www.jstor.org/ ; >
       au < frozen ; exists ; 2013 ; SHAW The Annual of Bernard Shaw Studies Volume 33 ; 2013 ; http://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2014 ; SHAW The Annual of Bernard Shaw Studies Volume 34 ; 2014 ; https://www.jstor.org/ ; >
@@ -690,8 +690,8 @@
 
       param[journal_id] = soundings
 
-      au < manifest ; exists ; 2010 ; Soundings: An Interdisciplinary Journal Volume 93 ; 2010 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2011 ; Soundings: An Interdisciplinary Journal Volume 94 ; 2011 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2010 ; Soundings: An Interdisciplinary Journal Volume 93 ; 2010 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2011 ; Soundings: An Interdisciplinary Journal Volume 94 ; 2011 ; https://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Soundings: An Interdisciplinary Journal Volume 95 ; 2012 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2013 ; Soundings: An Interdisciplinary Journal Volume 96 ; 2013 ; http://www.jstor.org/ ; >
       au < frozen ; exists ; 2014 ; Soundings: An Interdisciplinary Journal Volume 97 ; 2014 ; http://www.jstor.org/ ; >
@@ -715,8 +715,8 @@
 
       param[journal_id] = steinbeckreview
 
-      au < manifest ; exists ; 2010 ; Steinbeck Review Volume 7 ; 2010 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2011 ; Steinbeck Review Volume 8 ; 2011 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2010 ; Steinbeck Review Volume 7 ; 2010 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2011 ; Steinbeck Review Volume 8 ; 2011 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2012 ; Steinbeck Review Volume 9 ; 2012 ; http://www.jstor.org/ ; >
       au < frozen ; exists ; 2013 ; Steinbeck Review Volume 10 ; 2013 ; http://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Steinbeck Review Volume 11 ; 2014 ; https://www.jstor.org/ ; >
@@ -740,8 +740,8 @@
 
       param[journal_id] = studamerjewilite
 
-      au < manifest ; exists ; 2010 ; Studies in American Jewish Literature Volume 29 ; 2010 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2011 ; Studies in American Jewish Literature Volume 30 ; 2011 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2010 ; Studies in American Jewish Literature Volume 29 ; 2010 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2011 ; Studies in American Jewish Literature Volume 30 ; 2011 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2012 ; Studies in American Jewish Literature Volume 31 ; 2012 ; http://www.jstor.org/ ; >
       au < frozen ; exists ; 2013 ; Studies in American Jewish Literature Volume 32 ; 2013 ; http://www.jstor.org/ ; >
       au < frozen ; exists ; 2014 ; Studies in American Jewish Literature Volume 33 ; 2014 ; http://www.jstor.org/ ; >
@@ -765,8 +765,8 @@
 
       param[journal_id] = transportationj
 
-      au < manifest ; exists ; 2010 ; Transportation Journal Volume 49 ; 2010 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2011 ; Transportation Journal Volume 50 ; 2011 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2010 ; Transportation Journal Volume 49 ; 2010 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2011 ; Transportation Journal Volume 50 ; 2011 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2012 ; Transportation Journal Volume 51 ; 2012 ; http://www.jstor.org/ ; >
       au < frozen ; exists ; 2013 ; Transportation Journal Volume 52 ; 2013 ; http://www.jstor.org/ ; >
       au < frozen ; exists ; 2014 ; Transportation Journal Volume 53 ; 2014 ; http://www.jstor.org/ ; >
@@ -790,8 +790,8 @@
 
       param[journal_id] = utopianstudies
 
-      au < manifest ; exists ; 2010 ; Utopian Studies Volume 21 ; 2010 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2011 ; Utopian Studies Volume 22 ; 2011 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2010 ; Utopian Studies Volume 21 ; 2010 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2011 ; Utopian Studies Volume 22 ; 2011 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2012 ; Utopian Studies Volume 23 ; 2012 ; http://www.jstor.org/ ; >
       au < frozen ; exists ; 2013 ; Utopian Studies Volume 24 ; 2013 ; http://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Utopian Studies Volume 25 ; 2014 ; https://www.jstor.org/ ; >
@@ -877,7 +877,7 @@
 
       param[journal_id] = bustan
 
-      au < manifest ; exists ; 2010 ; Bustan - The Middle East Book Review Volume 1 ; 2010 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2010 ; Bustan - The Middle East Book Review Volume 1 ; 2010 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2011 ; Bustan - The Middle East Book Review Volume 2 ; 2011 ; https://www.jstor.org/ ; >
       au < notReady ; exists ; 2012 ; Bustan - The Middle East Book Review Volume 3 ; 2012 ; https://www.jstor.org/ ; > #see LXQUEUE-1598
       au < notReady ; exists ; 2013 ; Bustan - The Middle East Book Review Volume 4 ; 2013 ; https://www.jstor.org/ ; > #see LXQUEUE-1598
@@ -907,7 +907,7 @@
       au < exists ; exists ; 2008 ; The Arthur Miller Journal Volume 3 ; 2008 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2009 ; The Arthur Miller Journal Volume 4 ; 2009 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2010 ; The Arthur Miller Journal Volume 5 ; 2010 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2011 ; The Arthur Miller Journal Volume 6 ; 2011 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2011 ; The Arthur Miller Journal Volume 6 ; 2011 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2012 ; The Arthur Miller Journal Volume 7 ; 2012 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2013 ; The Arthur Miller Journal Volume 8 ; 2013 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2014 ; The Arthur Miller Journal Volume 9 ; 2014 ; https://www.jstor.org/ ; >
@@ -1156,8 +1156,8 @@
       au < exists ; exists ; 2007 ; George Eliot-George Henry Lewes Studies Volume 2007 ; 2007 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2008 ; George Eliot-George Henry Lewes Studies Volume 2008 ; 2008 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2009 ; George Eliot-George Henry Lewes Studies Volume 2009 ; 2009 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2010 ; George Eliot-George Henry Lewes Studies Volume 2010 ; 2010 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2011 ; George Eliot-George Henry Lewes Studies Volume 2011 ; 2011 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2010 ; George Eliot-George Henry Lewes Studies Volume 2010 ; 2010 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2011 ; George Eliot-George Henry Lewes Studies Volume 2011 ; 2011 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2012 ; George Eliot-George Henry Lewes Studies Volume 2012 ; 2012 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2013 ; George Eliot-George Henry Lewes Studies Volume 2013 ; 2013 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2014 ; George Eliot-George Henry Lewes Studies Volume 66 ; 2014 ; https://www.jstor.org/ ; >
@@ -1281,7 +1281,7 @@
 
       param[journal_id] = jinfopoli
 
-      au < manifest ; exists ; 2011 ; Journal of Information Policy Volume 2011 ; 2011 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2011 ; Journal of Information Policy Volume 2011 ; 2011 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2012 ; Journal of Information Policy Volume 2012 ; 2012 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2013 ; Journal of Information Policy Volume 2013 ; 2013 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2014 ; Journal of Information Policy Volume 2014 ; 2014 ; https://www.jstor.org/ ; >
@@ -1390,7 +1390,7 @@
       au < exists ; exists ; 2008 ; Journal of the Pennsylvania Academy of Science Volume 81-82 ; 2008 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2009 ; Journal of the Pennsylvania Academy of Science Volume 83 ; 2009 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2010 ; Journal of the Pennsylvania Academy of Science Volume 83-84 ; 2010 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2011 ; Journal of the Pennsylvania Academy of Science Volume 85 ; 2011 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2011 ; Journal of the Pennsylvania Academy of Science Volume 85 ; 2011 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2012 ; Journal of the Pennsylvania Academy of Science Volume 86 ; 2012 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2013 ; Journal of the Pennsylvania Academy of Science Volume 87 ; 2013 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2014 ; Journal of the Pennsylvania Academy of Science Volume 88 ; 2014 ; https://www.jstor.org/ ; >
@@ -1601,8 +1601,8 @@
       au < exists ; exists ; 2007 ; Studies in American Humor Volume 2007 ; 2007 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2008 ; Studies in American Humor Volume 2008 ; 2008 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2009 ; Studies in American Humor Volume 2009 ; 2009 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2010 ; Studies in American Humor Volume 2010 ; 2010 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2011 ; Studies in American Humor Volume 2011 ; 2011 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2010 ; Studies in American Humor Volume 2010 ; 2010 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2011 ; Studies in American Humor Volume 2011 ; 2011 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2012 ; Studies in American Humor Volume 2012 ; 2012 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2013 ; Studies in American Humor Volume 2013 ; 2013 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2014 ; Studies in American Humor Volume 2014 ; 2014 ; https://www.jstor.org/ ; >
@@ -1669,8 +1669,8 @@
       au < exists ; exists ; 2007 ; Style Volume 2007 ; 2007 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2008 ; Style Volume 2008 ; 2008 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2009 ; Style Volume 2009 ; 2009 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2010 ; Style Volume 2010 ; 2010 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2011 ; Style Volume 2011 ; 2011 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2010 ; Style Volume 2010 ; 2010 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2011 ; Style Volume 2011 ; 2011 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2012 ; Style Volume 2012 ; 2012 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2013 ; Style Volume 2013 ; 2013 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2014 ; Style Volume 2014 ; 2014 ; https://www.jstor.org/ ; >
@@ -1701,7 +1701,7 @@
       au < exists ; exists ; 2008 ; The Cormac McCarthy Journal Volume 6 ; 2008 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2009 ; The Cormac McCarthy Journal Volume 7 ; 2009 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2010 ; The Cormac McCarthy Journal Volume 8 ; 2010 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2011 ; The Cormac McCarthy Journal Volume 9 ; 2011 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2011 ; The Cormac McCarthy Journal Volume 9 ; 2011 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2012 ; The Cormac McCarthy Journal Volume 10 ; 2012 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2013 ; The Cormac McCarthy Journal Volume 11 ; 2013 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2014 ; The Cormac McCarthy Journal Volume 12 ; 2014 ; https://www.jstor.org/ ; >
@@ -1744,7 +1744,7 @@
       param[journal_id] = jdevepers
 
       au < frozen ; exists ; 2017 ; The Journal of Development Perspectives Volume 1 ; 2017 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2018 ; The Journal of Development Perspectives Volume 2 ; 2018 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2018 ; The Journal of Development Perspectives Volume 2 ; 2018 ; https://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2019 ; The Journal of Development Perspectives Volume 3 ; 2019 ; https://www.jstor.org/ ; >
       au < expected ; exists ; 2020 ; The Journal of Development Perspectives Volume 4 ; 2020 ; https://www.jstor.org/ ; >
 
@@ -1798,8 +1798,8 @@
       au < exists ; exists ; 2007 ; The Korean Language in America Volume 12 ; 2007 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2008 ; The Korean Language in America Volume 13 ; 2008 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2009 ; The Korean Language in America Volume 14 ; 2009 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2010 ; The Korean Language in America Volume 15 ; 2010 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2011 ; The Korean Language in America Volume 16 ; 2011 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2010 ; The Korean Language in America Volume 15 ; 2010 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2011 ; The Korean Language in America Volume 16 ; 2011 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2012 ; The Korean Language in America Volume 17 ; 2012 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2013 ; The Korean Language in America Volume 18 ; 2013 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2015 ; The Korean Language in America Volume 19 ; 2015 ; https://www.jstor.org/ ; >
@@ -1908,7 +1908,7 @@
 
       au < exists ; exists ; 2009 ; Wesley and Methodist Studies Volume 1 ; 2009 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2010 ; Wesley and Methodist Studies Volume 2 ; 2010 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2011 ; Wesley and Methodist Studies Volume 3 ; 2011 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2011 ; Wesley and Methodist Studies Volume 3 ; 2011 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2012 ; Wesley and Methodist Studies Volume 4 ; 2012 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2013 ; Wesley and Methodist Studies Volume 5 ; 2013 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2014 ; Wesley and Methodist Studies Volume 6 ; 2014 ; https://www.jstor.org/ ; >
