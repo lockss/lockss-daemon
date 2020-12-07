@@ -43,6 +43,7 @@
 
     au < superseded ; finished ; 2016 ; Novecento WARC Content 2016 ; 2016 >
     au < readySource ; finished ; 2018 ; Novecento WARC Content 2018 ; 2018 >
+    au < expected ; exists ; 2020 ; Novecento WARC Content 2020 ; 2020 >
 
   }
 
@@ -61,6 +62,7 @@
 
     au < superseded ; finished ; 2016 ; Storicamente WARC Content 2016 ; 2016 >
     au < readySource ; finished ; 2018 ; Storicamente WARC Content 2018 ; 2018 >
+    au < expected ; exists ; 2020 ; Storicamente WARC Content 2020 ; 2020 >
 
   }
 
@@ -82,6 +84,6 @@
     au < expected ; exists ; 2020 ; E-Review WARC Content 2020 ; 2020 >
 
 
-  } 
+  }
 
 }
