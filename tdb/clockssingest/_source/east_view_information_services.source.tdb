@@ -44,4 +44,24 @@
 
   }
 
+  {
+
+      title <
+         name = East View Information Services Special Title Source Content
+      >
+
+      {
+        # This is the plugin handle collections may only have xml and gif file
+        # Also the title contains multiple information, like "<TITLE>28-02-1943(DASZD-No.001) ЗДРАВООХРАНЕНИЕ ЛЕНИНГРАДА В ДНИ ВЕЛИКОЙ ОТЕЧЕСТВЕННОЙ ВОЙНЫ</TITLE>"
+        plugin = org.lockss.plugin.clockss.eastview.ClockssEastviewSpecialTitleSourcePlugin
+        #param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/eastview-released/
+        hidden[proxy] = DIRECT
+        implicit < status ; status2 ; year ; name ; param[directory] >
+
+        #au < expected ; exists ; 2020 ; East View Information Services Book Source Content 2020 ; 2020 >
+
+      }
+
+    }
+
 }
