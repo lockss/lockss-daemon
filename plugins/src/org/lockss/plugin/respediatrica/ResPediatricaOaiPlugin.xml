@@ -45,7 +45,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>2</string>
+        <string>3</string>
     </entry>
     <entry>
         <string>plugin_feature_version_map</string>
@@ -60,7 +60,7 @@ POSSIBILITY OF SUCH DAMAGE.
             </entry>
             <entry>
                 <string>Metadata</string>
-                <string>1</string>
+                <string>2</string>
             </entry>
         </map>
     </entry>
@@ -133,6 +133,8 @@ POSSIBILITY OF SUCH DAMAGE.
             <string>1,"^https?://cdn\.gn1\.link/residenciapediatrica/"</string>
             <string>1,"^https?://s3-sa-east-1\.amazonaws\.com/.*\.pdf"</string>
             <string>1,"^%s(detalhes|exportar-citacao|exportar-pdf)/", base_url</string>
+            <!-- for the synthetic OAI start page -->
+            <string>1,"^%sauid=", base_url</string>
         </list>
     </entry>
     <entry>

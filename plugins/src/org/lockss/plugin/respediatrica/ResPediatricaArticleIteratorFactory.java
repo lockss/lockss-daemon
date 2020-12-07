@@ -58,40 +58,47 @@ public class ResPediatricaArticleIteratorFactory
     // http://residenciapediatrica.com.br/detalhes/323
     // http://residenciapediatrica.com.br/exportar-pdf/323/en_v8n2a08.pdf  # English or other language version
     // http://residenciapediatrica.com.br/exportar-pdf/323/v8n2a08.pdf     # Português version
-    protected static final String ROOT_TEMPLATE = "\"%s\", base_url";
+    protected static final String ROOT_TEMPLATE = "\"%sdetalhes\", base_url";
     protected static final String PATTERN_TEMPLATE =
-            "\"%s(detalhes|exportar-pdf)/(.*)\", base_url";
+            "\"^%sdetalhes/\\d+$\", base_url";
 
-    private static final Pattern HTML_PATTERN = Pattern.compile(
-            "/(detalhes)/(\\d+)$",
-            Pattern.CASE_INSENSITIVE);
-    private static final String HTML_REPLACEMENT = "/detalhes/$2";
+    private static final Pattern HTML_PATTERN =
+        Pattern.compile("/detalhes/(\\d+)$", Pattern.CASE_INSENSITIVE);
+    private static final String HTML_REPLACEMENT = "/detalhes/$1";
 
-    private static final Pattern PDF_PATTERN = Pattern.compile(
-            "/(exportar-pdf)/(.*)\\.pdf",
-            Pattern.CASE_INSENSITIVE);
-    private static final String PDF_REPLACEMENT = "/exportar-pdf/$2.pdf";
+//    private static final Pattern PDF_PATTERN =
+//        Pattern.compile("/exportar-pdf/(\\d+)\\.pdf$", Pattern.CASE_INSENSITIVE);
+//    private static final String PDF_REPLACEMENT = "/exportar-pdf/$1.pdf";
     
+    private static final String RIS_REPLACEMENT = "/exportar-citacao/$1/ris";
+
+    private static final String ENDNOTE_REPLACEMENT = "/exportar-citacao/$1/enl";
+
     @Override
     public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target)
             throws PluginException {
         SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
 
         builder.setSpec(target,
-                ROOT_TEMPLATE,
-                PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
+                        ROOT_TEMPLATE,
+                        PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
 
-        builder.addAspect(
-                HTML_PATTERN,
-                HTML_REPLACEMENT,
-                ArticleFiles.ROLE_ABSTRACT,
-                ArticleFiles.ROLE_FULL_TEXT_HTML,
-                ArticleFiles.ROLE_ARTICLE_METADATA);
+        builder.addAspect(HTML_PATTERN,
+                          HTML_REPLACEMENT,
+                          ArticleFiles.ROLE_ABSTRACT,
+                          ArticleFiles.ROLE_FULL_TEXT_HTML,
+                          ArticleFiles.ROLE_ARTICLE_METADATA);
 
-        builder.addAspect(
-                PDF_PATTERN,
-                PDF_REPLACEMENT,
-                ArticleFiles.ROLE_FULL_TEXT_PDF);
+        builder.addAspect(RIS_REPLACEMENT,
+                          ArticleFiles.ROLE_CITATION_RIS);
+        
+        builder.addAspect(ENDNOTE_REPLACEMENT,
+                          ArticleFiles.ROLE_CITATION_ENDNOTE);
+
+//        builder.addAspect(
+//                PDF_PATTERN,
+//                PDF_REPLACEMENT,
+//                ArticleFiles.ROLE_FULL_TEXT_PDF);
 
         return builder.getSubTreeArticleIterator();
     }
