@@ -10,7 +10,7 @@
 
     plugin = org.lockss.plugin.wroclawmedicaluniversity.ClockssWroclawMedicalUniversityJournalsPlugin
     implicit < status ; status2 ; year ; param[year] ; name ; param[volume_name] ; hidden[proxy] >
-
+    #**********No manifest page checker********
   {
 
     title <
@@ -35,7 +35,7 @@
     au < finished ; finished ; 2017 ; 2017 ; Advances in Clinical and Experimental Medicine Volume 26 ; 26 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2018 ; 2018 ; Advances in Clinical and Experimental Medicine Volume 27 ; 27 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; Advances in Clinical and Experimental Medicine Volume 28 ; 28 ; reingest4.clockss.org:8082 >
-    au < expected ; exists ; 2020 ; 2020 ; Advances in Clinical and Experimental Medicine Volume 29 ; 29 ;  >
+    au < manifest ; exists ; 2020 ; 2020 ; Advances in Clinical and Experimental Medicine Volume 29 ; 29 ;  >
 
   }
 
@@ -60,7 +60,7 @@
     au < finished ; finished ; 2017 ; 2017 ; Dental and Medical Problems Volume 54 ; 54 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2018 ; 2018 ; Dental and Medical Problems Volume 55 ; 55 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Dental and Medical Problems Volume 56 ; 56 ;  >
-    au < expected ; exists ; 2020 ; 2020 ; Dental and Medical Problems Volume 57 ; 57 ;  >
+    au < manifest ; exists ; 2020 ; 2020 ; Dental and Medical Problems Volume 57 ; 57 ;  >
 
   }
 
@@ -85,7 +85,7 @@
     au < finished ; finished ; 2017 ; 2017 ; Polymers in Medicine Volume 47 ; 47 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2018 ; 2018 ; Polymers in Medicine Volume 48 ; 48 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; 2019 ; Polymers in Medicine Volume 49 ; 49 ; reingest5.clockss.org:8082 >
-    au < expected ; exists ; 2020 ; 2020 ; Polymers in Medicine Volume 50 ; 50 ;  >
+    au < manifest ; exists ; 2020 ; 2020 ; Polymers in Medicine Volume 50 ; 50 ;  >
 
   }
 
@@ -108,7 +108,7 @@
     au < finished ; finished ; 2017 ; 2017 ; Nursing and Public Health Volume 7 ; 7 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2018 ; 2018 ; Nursing and Public Health Volume 8 ; 8 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Nursing and Public Health Volume 9 ; 9 ;  >
-    au < expected ; exists ; 2020 ; 2020 ; Nursing and Public Health Volume 10 ; 10 ;  >
+    au < manifest ; exists ; 2020 ; 2020 ; Nursing and Public Health Volume 10 ; 10 ;  >
 
   }
 
@@ -122,7 +122,6 @@
     
     au < exists ; exists ; 2018 ; 2018 ; Clinical Education & Medical Simulation Volume 1 ; 1 ;  >
     au < exists ; exists ; 2019 ; 2019 ; Clinical Education & Medical Simulation Volume 2 ; 2 ;  >
-    au < expected ; exists ; 2020 ; 2020 ; Clinical Education & Medical Simulation Volume 3 ; 3 ;  >
     # still needs an issn
 
   }
