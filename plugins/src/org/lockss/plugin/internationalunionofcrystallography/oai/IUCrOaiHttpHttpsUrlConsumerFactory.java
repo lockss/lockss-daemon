@@ -33,45 +33,18 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.internationalunionofcrystallography.oai;
 
-import org.lockss.daemon.ConfigParamDescr;
-import org.lockss.daemon.PluginException;
+import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.plugin.*;
-import org.lockss.util.UrlUtil;
 
-/*
- * 
- * change  http://
- * to this http://
- * 
- * If and only if the AU is iucrdata
+/**
+ * @see org.lockss.plugin.base.HttpToHttpsUrlConsumerFactory
  */
+public class IUCrOaiHttpHttpsUrlConsumerFactory implements UrlConsumerFactory {
 
-public class IUCrOaiUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
-  
-  private static final String TARGET = "http://journals.iucr.org/";
-  private static final String IUCRDATA = "iucrdata";
-
-  public static final String SCRIPT_URL = "script_url";
-  
-  /*  Note: Normalizes iucrdata urls with journals.iucr.org
-   * 
-   */
-  
-  public String additionalNormalization(String url, ArchivalUnit au)
-      throws PluginException {
-    
-//    String baseUrl = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
-//    String oaiSet = au.getConfiguration().get(BaseOaiPmhCrawlSeed.KEY_AU_OAI_SET);
-
-    // Same thing as BaseUrlHttpHttpsUrlNormalizer but for script_url
-    if (UrlUtil.isSameHost(au.getConfiguration().get(SCRIPT_URL), url)) {
-      url = AuUtil.normalizeHttpHttpsFromParamUrl(au, SCRIPT_URL, url);
-    }
-    
-//    if (oaiSet.equalsIgnoreCase(IUCRDATA) && url.startsWith(TARGET)) {
-//      url = url.replace(TARGET, baseUrl);
-//    }
-    return url;
+  @Override
+  public UrlConsumer createUrlConsumer(CrawlerFacade crawlFacade,
+                                       FetchedUrlData fud) {
+    return new IUCrOaiHttpHttpsUrlConsumer(crawlFacade, fud);
   }
 
 }

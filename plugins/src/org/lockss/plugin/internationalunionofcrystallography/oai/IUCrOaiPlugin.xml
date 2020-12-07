@@ -1,3 +1,35 @@
+<!--
+
+Copyright (c) 2000-2020, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+-->
 <map>
   <entry>
     <string>plugin_status</string>
@@ -9,7 +41,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>18</string>
+    <string>19</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -33,9 +65,9 @@
     <string>International Union of Crystallography OAI Plugin</string>
   </entry>
   <entry>
-  <!--  FeatureUrlGenerator, not yet deployed - will need 1.73.0 -->
+  <!-- for new OAI library -->
     <string>required_daemon_version</string>
-    <string>1.68.0</string>
+    <string>1.75.0</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
@@ -53,8 +85,13 @@
   <entry>
     <string>au_permission_url</string>
     <list>
-      <string>"%slockss.html", script_url</string>
-      <string>"%sx/issues/2016/lockss.html", base_url</string>
+      <string>"%slockss.html", to_https(script_url)</string>
+      <string>"%slockss.html", to_http(script_url)</string>
+      <string>"%se/issues/2020/lockss.html", to_https(base_url)</string>
+      <string>"%se/issues/2020/lockss.html", to_http(base_url)</string>
+      <!-- journals.iucr.org needed for when the base_url is actually iucrdata.iucr.org -->
+      <string>"https://journals.iucr.org/e/issues/2020/lockss.html"</string>
+      <string>"http://journals.iucr.org/e/issues/2020/lockss.html"</string>
     </list>
   </entry>
   <entry>
@@ -67,7 +104,6 @@
       </entry>
     </map>
   </entry>
-  
   <entry>
     <string>au_def_new_content_crawl</string>
     <long>1209600000</long>
@@ -75,13 +111,16 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,"^https?://(%s|%s|journals\.iucr\.org)/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)$", url_host(base_url), url_host(script_url)</string>
-      <string>1,"^%sauid=", script_url</string>
-      <string>2,"^(%s|%s).*buy=yes$", script_url, base_url</string>
-      <string>1,"^(%s|%s)[^/]+/issues/[^/]+/[^/]+/[^/]+/[^/]+/(.+\.pdf|index\.html|.+fig[0-9]+\.html)$", base_url, script_url</string>
-      <string>1,"^(%s|%s)cgi-bin/paper\?[^/]+$", script_url, base_url</string>
+      <!-- journals.iucr.org needed for when the base_url is actually iucrdata.iucr.org -->
+      <string>1,"^https?://(%s|%s|(iucrdata|journals|publcif|www)\.iucr\.org|(fonts|ajax)\.(googleapis|gstatic)\.com|code\.jquery\.com|crossmark-cdn\.crossref\.org)/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tiff?|ttf|woff2?)$", url_host(base_url), url_host(script_url)</string>
+      <string>1,"^https?://%s/auid=", url_host(script_url)</string>
+      <string>2,"^https?://(%s|%s|iucrdata\.iucr\.org)/.*buy=yes$", url_host(script_url), url_host(base_url)</string>
+      <string>1,"^https?://(%s|%s|iucrdata\.iucr\.org)/[^/]+/issues/[^/]+/[^/]+/[^/]+/[^/]+/(.+\.pdf|index\.html|.+fig[0-9]+\.html)$", url_host(script_url), url_host(base_url)</string>
+      <!-- journals.iucr.org/x needed for the redirects from non-base_url journals.iucr.org to base_url iucrdata.iucr.org -->
+      <string>1,"^https?://(journals\.iucr\.org)/x/issues/[^/]+/[^/]+/[^/]+/[^/]+/(.+\.pdf|index\.html|.+fig[0-9]+\.html)$", url_host(script_url), url_host(base_url)</string>
+      <string>1,"^https?://(%s|%s|iucrdata\.iucr\.org)/cgi-bin/paper\?[^/]+$", url_host(script_url), url_host(base_url)</string>
       <!-- IUCr has asked us not to download &Qmime=cif which is what requires the following -->
-      <string>1,"^(%s|%s)cgi-bin/(sendsupfiles|sendsup|sendcif)\?(?!.+Qmime=cif)", script_url, base_url</string>
+      <string>1,"^https?://(%s|%s|iucrdata\.iucr\.org)/cgi-bin/(sendsupfiles|sendsup|sendcif)\?(?!.+Qmime=cif)", url_host(script_url), url_host(base_url)</string>
       <!-- IUCr has asked us not to download &Qmime=cif which is what requires the following -->
       <!-- <string>1,"^http://publcif.iucr.org/cifmoldb/gui/cifjmol\.php\?cifid=[^/]+$"</string> -->
     </list>
@@ -196,4 +235,21 @@
       <!-- string>"://[^/]+(?!.*/content/)(/[^/]+)+[.](gif|png)$", 0</string> -->
     </list>
   </entry>
+  <entry>
+    <string>plugin_url_fetcher_factory</string>
+    <string>org.lockss.plugin.base.HttpToHttpsUrlFetcherFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.internationalunionofcrystallography.oai.IUCrOaiHttpHttpsUrlConsumerFactory</string>
+  </entry>
+    <entry>
+        <string>au_permitted_host_pattern</string>
+        <list>
+          <string>(iucrdata|publcif|www)\.iucr\.org</string>
+          <string>(fonts|ajax)\.(googleapis|gstatic)\.com</string>
+          <string>code\.jquery\.com</string>
+          <string>crossmark-cdn\.crossref\.org</string>
+        </list>
+    </entry>
 </map>

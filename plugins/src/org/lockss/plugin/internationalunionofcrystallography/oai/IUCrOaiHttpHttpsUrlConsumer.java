@@ -33,45 +33,53 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.internationalunionofcrystallography.oai;
 
+import java.io.IOException;
+
 import org.lockss.daemon.ConfigParamDescr;
-import org.lockss.daemon.PluginException;
+import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.plugin.*;
+import org.lockss.plugin.base.SimpleUrlConsumer;
 import org.lockss.util.UrlUtil;
 
-/*
- * 
- * change  http://
- * to this http://
- * 
- * If and only if the AU is iucrdata
+/**
+ * @see org.lockss.plugin.base.HttpToHttpsUrlConsumer
  */
-
-public class IUCrOaiUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
-  
-  private static final String TARGET = "http://journals.iucr.org/";
-  private static final String IUCRDATA = "iucrdata";
+public class IUCrOaiHttpHttpsUrlConsumer extends SimpleUrlConsumer {
 
   public static final String SCRIPT_URL = "script_url";
   
-  /*  Note: Normalizes iucrdata urls with journals.iucr.org
-   * 
-   */
-  
-  public String additionalNormalization(String url, ArchivalUnit au)
-      throws PluginException {
-    
-//    String baseUrl = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
-//    String oaiSet = au.getConfiguration().get(BaseOaiPmhCrawlSeed.KEY_AU_OAI_SET);
-
-    // Same thing as BaseUrlHttpHttpsUrlNormalizer but for script_url
-    if (UrlUtil.isSameHost(au.getConfiguration().get(SCRIPT_URL), url)) {
-      url = AuUtil.normalizeHttpHttpsFromParamUrl(au, SCRIPT_URL, url);
-    }
-    
-//    if (oaiSet.equalsIgnoreCase(IUCRDATA) && url.startsWith(TARGET)) {
-//      url = url.replace(TARGET, baseUrl);
-//    }
-    return url;
+  public IUCrOaiHttpHttpsUrlConsumer(CrawlerFacade facade, FetchedUrlData fud) {
+    super(facade, fud);
   }
 
+  @Override
+  public void consume() throws IOException {
+    if (shouldStoreAtOrigUrl()) {
+      storeAtOrigUrl();
+    }
+    super.consume();
+  }
+
+  /**
+   * <p>
+   * Determines if the URL is to be stored under its redirect chain's origin
+   * URL.
+   * </p>
+   *
+   * @see org.lockss.plugin.base.HttpToHttpsUrlConsumer#shouldStoreAtOrigUrl()
+   */
+  public boolean shouldStoreAtOrigUrl() {
+    boolean isFromBaseUrl = UrlUtil.isSameHost(fud.origUrl, au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey()));
+    boolean baseUrlIsHttp = AuUtil.isBaseUrlHttp(au);
+    boolean isFromScriptUrl = UrlUtil.isSameHost(fud.origUrl, au.getConfiguration().get(SCRIPT_URL));
+    boolean scriptUrlIsHttp = UrlUtil.isHttpUrl(au.getConfiguration().get(SCRIPT_URL));
+    return    ((isFromBaseUrl && baseUrlIsHttp) || (isFromScriptUrl && scriptUrlIsHttp))
+           && fud.redirectUrls != null
+           && fud.redirectUrls.size() == 1
+           && fud.fetchUrl.equals(fud.redirectUrls.get(0))
+           && UrlUtil.isHttpUrl(fud.origUrl)
+           && UrlUtil.isHttpsUrl(fud.fetchUrl)
+           && UrlUtil.stripProtocol(fud.origUrl).equals(UrlUtil.stripProtocol(fud.fetchUrl));
+  }
+  
 }

@@ -1,62 +1,82 @@
 /*
- * $Id: OaiPmhHtmlFilterFactory.java,v 1.1.2.1 2014/05/05 17:32:30 wkwilson Exp $
- */
 
-/*
+Copyright (c) 2000-2020, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
 
-Copyright (c) 2000-2018 Board of Trustees of Leland Stanford Jr. University,
-all rights reserved.
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
-STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
 
-Except as contained in this notice, the name of Stanford University shall not
-be used in advertising or otherwise to promote the sale, use or other dealings
-in this Software without prior written authorization from Stanford University.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
 
- */
+*/
 
 package org.lockss.plugin.internationalunionofcrystallography.oai;
 
 import java.io.InputStream;
 
-import org.htmlparser.NodeFilter;
+import org.htmlparser.*;
 import org.htmlparser.filters.*;
+import org.htmlparser.tags.LinkTag;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
-import org.lockss.util.Logger;
 
 public class IUCrOaiHtmlHashFilterFactory implements FilterFactory {
-	
-  private static final Logger log = Logger.getLogger(IUCrOaiHtmlHashFilterFactory.class);
 
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
                                                String encoding) {
     NodeFilter[] filters = new NodeFilter[] {
-     //filter out script
-     HtmlNodeFilters.tag("script"),
-     HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
-     HtmlNodeFilters.tagWithAttribute("div", "class", "clear"),
-     HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
-     HtmlNodeFilters.tagWithAttribute("div", "id", "footersearch"),
-     HtmlNodeFilters.tagWithAttribute("div", "id", "journalsocialmedia"),
-     HtmlNodeFilters.tagWithAttribute("div", "id", "bibl"),
-     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article_functions"),
+      //filter out script
+      HtmlNodeFilters.tag("script"),
+      HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
+      HtmlNodeFilters.tagWithAttribute("div", "class", "clear"),
+      HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
+      HtmlNodeFilters.tagWithAttribute("div", "id", "footersearch"),
+      HtmlNodeFilters.tagWithAttribute("div", "id", "journalsocialmedia"),
+      HtmlNodeFilters.tagWithAttribute("div", "id", "bibl"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article_functions"),
+      
+      /*
+       * Abstract and full text HTML pages have a view counter that is not very
+       * distinctive:
+       * 
+       * <a style="font-size:80%" href="//scripts.iucr.org/cgi-bin/citedin?wm5120">Viewed by <span style="border: 1px solid #401434;position:relative;top:1px;display:inline-block;padding-left:1px; padding-right:1px;">1307</span></a>
+       */
+      new NodeFilter() {
+        @Override
+        public boolean accept(Node node) {
+          if (node instanceof LinkTag) {
+            LinkTag linkTag = (LinkTag)node;
+            String href = linkTag.getAttribute("href");
+            if (href != null && href.contains("citedin")) {
+              String text = linkTag.getStringText();
+              return text != null && text.contains("Viewed by"); 
+            }
+          }
+          return false;
+        }
+      },
     };
     return new HtmlFilterInputStream(in,
                                      encoding,

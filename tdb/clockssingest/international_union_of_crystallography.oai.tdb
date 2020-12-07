@@ -9,8 +9,7 @@
   >
   
   plugin = org.lockss.plugin.internationalunionofcrystallography.oai.ClockssIUCrOaiPlugin
-  param[script_url] = http://scripts.iucr.org/
-  implicit < status ; status2 ; year ; volume ; name ; param[au_oai_date] ; hidden[proxy] >
+  implicit < status ; status2 ; year ; volume ; name ; param[au_oai_date] ; param[base_url] ; param[script_url] ; hidden[proxy] >
 
   {
   
@@ -25,86 +24,84 @@
     
     comment[continues] = Structure Reports Online 1600-5368 [2001-2014]
     param[au_oai_set] = actacryste
-    param[base_url] = http://journals.iucr.org/
     
-    
-    au < finished ; finished ; 2015 ; 71 ; Acta Crystallographica Section E: Crystallographic Communications Volume 71 January ; 2015-01 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2015 ; 71 ; Acta Crystallographica Section E: Crystallographic Communications Volume 71 February ; 2015-02 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2015 ; 71 ; Acta Crystallographica Section E: Crystallographic Communications Volume 71 March ; 2015-03 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2015 ; 71 ; Acta Crystallographica Section E: Crystallographic Communications Volume 71 April ; 2015-04 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2015 ; 71 ; Acta Crystallographica Section E: Crystallographic Communications Volume 71 May ; 2015-05 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2015 ; 71 ; Acta Crystallographica Section E: Crystallographic Communications Volume 71 June ; 2015-06 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2015 ; 71 ; Acta Crystallographica Section E: Crystallographic Communications Volume 71 July ; 2015-07 ; reingest4.clockss.org:8082 >
-    au < finished ; finished ; 2015 ; 71 ; Acta Crystallographica Section E: Crystallographic Communications Volume 71 August ; 2015-08 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2015 ; 71 ; Acta Crystallographica Section E: Crystallographic Communications Volume 71 September ; 2015-09 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2015 ; 71 ; Acta Crystallographica Section E: Crystallographic Communications Volume 71 October ; 2015-10 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2015 ; 71 ; Acta Crystallographica Section E: Crystallographic Communications Volume 71 November ; 2015-11 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2015 ; 71 ; Acta Crystallographica Section E: Crystallographic Communications Volume 71 December ; 2015-12 ; reingest1.clockss.org:8082 >
+    au < testing ; finished ; 2015 ; 71 ; Acta Crystallographica Section E: Crystallographic Communications Volume 71 (January 2015) ; 2015-01 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2015 ; 71 ; Acta Crystallographica Section E: Crystallographic Communications Volume 71 (February 2015) ; 2015-02 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2015 ; 71 ; Acta Crystallographica Section E: Crystallographic Communications Volume 71 (March 2015) ; 2015-03 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2015 ; 71 ; Acta Crystallographica Section E: Crystallographic Communications Volume 71 (April 2015) ; 2015-04 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2015 ; 71 ; Acta Crystallographica Section E: Crystallographic Communications Volume 71 (May 2015) ; 2015-05 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2015 ; 71 ; Acta Crystallographica Section E: Crystallographic Communications Volume 71 (June 2015) ; 2015-06 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2015 ; 71 ; Acta Crystallographica Section E: Crystallographic Communications Volume 71 (July 2015) ; 2015-07 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; 71 ; Acta Crystallographica Section E: Crystallographic Communications Volume 71 (August 2015) ; 2015-08 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2015 ; 71 ; Acta Crystallographica Section E: Crystallographic Communications Volume 71 (September 2015) ; 2015-09 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2015 ; 71 ; Acta Crystallographica Section E: Crystallographic Communications Volume 71 (October 2015) ; 2015-10 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2015 ; 71 ; Acta Crystallographica Section E: Crystallographic Communications Volume 71 (November 2015) ; 2015-11 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2015 ; 71 ; Acta Crystallographica Section E: Crystallographic Communications Volume 71 (December 2015) ; 2015-12 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
 
-    au < finished ; manifest ; 2016 ; 72 ; Acta Crystallographica Section E: Crystallographic Communications Volume 72 January ; 2016-01 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2016 ; 72 ; Acta Crystallographica Section E: Crystallographic Communications Volume 72 February ; 2016-02 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2016 ; 72 ; Acta Crystallographica Section E: Crystallographic Communications Volume 72 March ; 2016-03 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2016 ; 72 ; Acta Crystallographica Section E: Crystallographic Communications Volume 72 April ; 2016-04 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2016 ; 72 ; Acta Crystallographica Section E: Crystallographic Communications Volume 72 May ; 2016-05 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2016 ; 72 ; Acta Crystallographica Section E: Crystallographic Communications Volume 72 June ; 2016-06 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2016 ; 72 ; Acta Crystallographica Section E: Crystallographic Communications Volume 72 July ; 2016-07 ; reingest1.clockss.org:8082  >
-    au < finished ; manifest ; 2016 ; 72 ; Acta Crystallographica Section E: Crystallographic Communications Volume 72 August ; 2016-08 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2016 ; 72 ; Acta Crystallographica Section E: Crystallographic Communications Volume 72 September ; 2016-09 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2016 ; 72 ; Acta Crystallographica Section E: Crystallographic Communications Volume 72 October ; 2016-10 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2016 ; 72 ; Acta Crystallographica Section E: Crystallographic Communications Volume 72 November ; 2016-11 ; reingest5.clockss.org:8082 >
-    au < doesNotExist ; doesNotExist ; 2016 ; 72 ; Acta Crystallographica Section E: Crystallographic Communications Volume 72 December ; 2016-12 ; > # No records within date but should check again along with 2017 AUs
+    au < finished ; manifest ; 2016 ; 72 ; Acta Crystallographica Section E: Crystallographic Communications Volume 72 (January 2016) ; 2016-01 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2016 ; 72 ; Acta Crystallographica Section E: Crystallographic Communications Volume 72 (February 2016) ; 2016-02 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2016 ; 72 ; Acta Crystallographica Section E: Crystallographic Communications Volume 72 (March 2016) ; 2016-03 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2016 ; 72 ; Acta Crystallographica Section E: Crystallographic Communications Volume 72 (April 2016) ; 2016-04 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2016 ; 72 ; Acta Crystallographica Section E: Crystallographic Communications Volume 72 (May 2016) ; 2016-05 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2016 ; 72 ; Acta Crystallographica Section E: Crystallographic Communications Volume 72 (June 2016) ; 2016-06 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2016 ; 72 ; Acta Crystallographica Section E: Crystallographic Communications Volume 72 (July 2016) ; 2016-07 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082  >
+    au < finished ; manifest ; 2016 ; 72 ; Acta Crystallographica Section E: Crystallographic Communications Volume 72 (August 2016) ; 2016-08 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2016 ; 72 ; Acta Crystallographica Section E: Crystallographic Communications Volume 72 (September 2016) ; 2016-09 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2016 ; 72 ; Acta Crystallographica Section E: Crystallographic Communications Volume 72 (October 2016) ; 2016-10 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2016 ; 72 ; Acta Crystallographica Section E: Crystallographic Communications Volume 72 (November 2016) ; 2016-11 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < doesNotExist ; doesNotExist ; 2016 ; 72 ; Acta Crystallographica Section E: Crystallographic Communications Volume 72 (December 2016) ; 2016-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
 
-    au < deepCrawl ; exists ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 January ; 2017-01 ; >
-    au < deepCrawl ; exists ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 February ; 2017-02 ; >
-    au < finished ; crawling ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 March ; 2017-03 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 April ; 2017-04 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 May ; 2017-05 ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 June ; 2017-06 ; >
-    au < deepCrawl ; exists ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 July ; 2017-07 ; >
-    au < deepCrawl ; exists ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 August ; 2017-08 ; >
-    au < deepCrawl ; exists ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 September ; 2017-09 ; >
-    au < finished ; crawling ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 October ; 2017-10 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 November ; 2017-11 ; reingest4.clockss.org:8082 >
-    au < doesNotExist ; doesNotExist ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 December ; 2017-12 ; > # No records within date
+    au < deepCrawl ; exists ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 (January 2017) ; 2017-01 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < deepCrawl ; exists ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 (February 2017) ; 2017-02 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < finished ; crawling ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 (March 2017) ; 2017-03 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 (April 2017) ; 2017-04 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 (May 2017) ; 2017-05 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < deepCrawl ; exists ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 (June 2017) ; 2017-06 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < deepCrawl ; exists ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 (July 2017) ; 2017-07 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < deepCrawl ; exists ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 (August 2017) ; 2017-08 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < deepCrawl ; exists ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 (September 2017) ; 2017-09 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < finished ; crawling ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 (October 2017) ; 2017-10 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 (November 2017) ; 2017-11 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < doesNotExist ; doesNotExist ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 (December 2017) ; 2017-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
 
-    au < deepCrawl ; exists ; 2018 ; 74 ; Acta Crystallographica Section E: Crystallographic Communications Volume 74 January ; 2018-01 ; >
-    au < deepCrawl ; exists ; 2018 ; 74 ; Acta Crystallographica Section E: Crystallographic Communications Volume 74 February ; 2018-02 ; >
-    au < deepCrawl ; exists ; 2018 ; 74 ; Acta Crystallographica Section E: Crystallographic Communications Volume 74 March ; 2018-03 ; >
-    au < doesNotExist ; doesNotExist ; 2018 ; 74 ; Acta Crystallographica Section E: Crystallographic Communications Volume 74 April ; 2018-04 ; > #no substance. Likely no records for date
-    au < deepCrawl ; exists ; 2018 ; 74 ; Acta Crystallographica Section E: Crystallographic Communications Volume 74 May ; 2018-05 ; >
-    au < deepCrawl ; exists ; 2018 ; 74 ; Acta Crystallographica Section E: Crystallographic Communications Volume 74 June ; 2018-06 ; >
-    au < deepCrawl ; exists ; 2018 ; 74 ; Acta Crystallographica Section E: Crystallographic Communications Volume 74 July ; 2018-07 ; >
-    au < deepCrawl ; exists ; 2018 ; 74 ; Acta Crystallographica Section E: Crystallographic Communications Volume 74 August ; 2018-08 ; >
-    au < deepCrawl ; exists ; 2018 ; 74 ; Acta Crystallographica Section E: Crystallographic Communications Volume 74 September ; 2018-09 ; >
-    au < deepCrawl ; exists ; 2018 ; 74 ; Acta Crystallographica Section E: Crystallographic Communications Volume 74 October ; 2018-10 ; >
-    au < deepCrawl ; exists ; 2018 ; 74 ; Acta Crystallographica Section E: Crystallographic Communications Volume 74 November ; 2018-11 ; >
-    au < doesNotExist ; doesNotExist ; 2018 ; 74 ; Acta Crystallographica Section E: Crystallographic Communications Volume 74 December ; 2018-12 ; >
+    au < deepCrawl ; exists ; 2018 ; 74 ; Acta Crystallographica Section E: Crystallographic Communications Volume 74 (January 2018) ; 2018-01 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < deepCrawl ; exists ; 2018 ; 74 ; Acta Crystallographica Section E: Crystallographic Communications Volume 74 (February 2018) ; 2018-02 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < deepCrawl ; exists ; 2018 ; 74 ; Acta Crystallographica Section E: Crystallographic Communications Volume 74 (March 2018) ; 2018-03 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < doesNotExist ; doesNotExist ; 2018 ; 74 ; Acta Crystallographica Section E: Crystallographic Communications Volume 74 (April 2018) ; 2018-04 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < deepCrawl ; exists ; 2018 ; 74 ; Acta Crystallographica Section E: Crystallographic Communications Volume 74 (May 2018) ; 2018-05 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < deepCrawl ; exists ; 2018 ; 74 ; Acta Crystallographica Section E: Crystallographic Communications Volume 74 (June 2018) ; 2018-06 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < deepCrawl ; exists ; 2018 ; 74 ; Acta Crystallographica Section E: Crystallographic Communications Volume 74 (July 2018) ; 2018-07 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < deepCrawl ; exists ; 2018 ; 74 ; Acta Crystallographica Section E: Crystallographic Communications Volume 74 (August 2018) ; 2018-08 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < deepCrawl ; exists ; 2018 ; 74 ; Acta Crystallographica Section E: Crystallographic Communications Volume 74 (September 2018) ; 2018-09 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < deepCrawl ; exists ; 2018 ; 74 ; Acta Crystallographica Section E: Crystallographic Communications Volume 74 (October 2018) ; 2018-10 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < deepCrawl ; exists ; 2018 ; 74 ; Acta Crystallographica Section E: Crystallographic Communications Volume 74 (November 2018) ; 2018-11 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < doesNotExist ; doesNotExist ; 2018 ; 74 ; Acta Crystallographica Section E: Crystallographic Communications Volume 74 (December 2018) ; 2018-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
 
-    au < finished ; manifest ; 2019 ; 75 ; Acta Crystallographica Section E: Crystallographic Communications Volume 75 January ; 2019-01 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; 75 ; Acta Crystallographica Section E: Crystallographic Communications Volume 75 February ; 2019-02 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2019 ; 75 ; Acta Crystallographica Section E: Crystallographic Communications Volume 75 March ; 2019-03 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2019 ; 75 ; Acta Crystallographica Section E: Crystallographic Communications Volume 75 April ; 2019-04 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; 75 ; Acta Crystallographica Section E: Crystallographic Communications Volume 75 May ; 2019-05 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; 75 ; Acta Crystallographica Section E: Crystallographic Communications Volume 75 June ; 2019-06 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2019 ; 75 ; Acta Crystallographica Section E: Crystallographic Communications Volume 75 July ; 2019-07 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2019 ; 75 ; Acta Crystallographica Section E: Crystallographic Communications Volume 75 August ; 2019-08 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; 75 ; Acta Crystallographica Section E: Crystallographic Communications Volume 75 September ; 2019-09 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; 75 ; Acta Crystallographica Section E: Crystallographic Communications Volume 75 October ; 2019-10 ; reingest4.clockss.org:8082 >
-    au < manifest ; exists ; 2019 ; 75 ; Acta Crystallographica Section E: Crystallographic Communications Volume 75 November ; 2019-11 ; >
-    au < expected ; exists ; 2019 ; 75 ; Acta Crystallographica Section E: Crystallographic Communications Volume 75 December ; 2019-12 ; >
+    au < finished ; manifest ; 2019 ; 75 ; Acta Crystallographica Section E: Crystallographic Communications Volume 75 (January 2019) ; 2019-01 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; 75 ; Acta Crystallographica Section E: Crystallographic Communications Volume 75 (February 2019) ; 2019-02 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2019 ; 75 ; Acta Crystallographica Section E: Crystallographic Communications Volume 75 (March 2019) ; 2019-03 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2019 ; 75 ; Acta Crystallographica Section E: Crystallographic Communications Volume 75 (April 2019) ; 2019-04 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; 75 ; Acta Crystallographica Section E: Crystallographic Communications Volume 75 (May 2019) ; 2019-05 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; 75 ; Acta Crystallographica Section E: Crystallographic Communications Volume 75 (June 2019) ; 2019-06 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2019 ; 75 ; Acta Crystallographica Section E: Crystallographic Communications Volume 75 (July 2019) ; 2019-07 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2019 ; 75 ; Acta Crystallographica Section E: Crystallographic Communications Volume 75 (August 2019) ; 2019-08 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; 75 ; Acta Crystallographica Section E: Crystallographic Communications Volume 75 (September 2019) ; 2019-09 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; 75 ; Acta Crystallographica Section E: Crystallographic Communications Volume 75 (October 2019) ; 2019-10 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < manifest ; exists ; 2019 ; 75 ; Acta Crystallographica Section E: Crystallographic Communications Volume 75 (November 2019) ; 2019-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < expected ; exists ; 2019 ; 75 ; Acta Crystallographica Section E: Crystallographic Communications Volume 75 (December 2019) ; 2019-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
 
-    au < manifest ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 January ; 2020-01 ; >
-    au < manifest ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 February ; 2020-02 ; >
-    au < manifest ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 March ; 2020-03 ; >
-    au < manifest ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 April ; 2020-04 ; >
-    au < manifest ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 May ; 2020-05 ; >
-    au < manifest ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 June ; 2020-06 ; >
-    au < manifest ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 July ; 2020-07 ; >
-    au < manifest ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 August ; 2020-08 ; >
-    au < manifest ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 September ; 2020-09 ; >
-    au < manifest ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 October ; 2020-10 ; >
-    au < manifest ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 November ; 2020-11 ; >
-    au < expected ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 December ; 2020-12 ; >
+    au < manifest ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 (January 2020) ; 2020-01 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < manifest ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 (February 2020) ; 2020-02 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < manifest ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 (March 2020) ; 2020-03 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < manifest ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 (April 2020) ; 2020-04 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < manifest ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 (May 2020) ; 2020-05 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < manifest ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 (June 2020) ; 2020-06 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < manifest ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 (July 2020) ; 2020-07 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < manifest ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 (August 2020) ; 2020-08 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < manifest ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 (September 2020) ; 2020-09 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < manifest ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 (October 2020) ; 2020-10 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < manifest ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 (November 2020) ; 2020-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < expected ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 (December 2020) ; 2020-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
 
   }
 
@@ -123,187 +120,185 @@
     
     comment[continued_by] = Crystallographic Communications 2056-9890 [2015-onward]
     param[au_oai_set] = actacryste
-    param[base_url] = http://journals.iucr.org/
     
-    
-    au < finished ; manifest ; 2001 ; 57 ; Acta Crystallographica Section E: Structure Reports Online Volume 57 January ; 2001-01 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2001 ; 57 ; Acta Crystallographica Section E: Structure Reports Online Volume 57 February ; 2001-02 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2001 ; 57 ; Acta Crystallographica Section E: Structure Reports Online Volume 57 March ; 2001-03 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2001 ; 57 ; Acta Crystallographica Section E: Structure Reports Online Volume 57 April ; 2001-04 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2001 ; 57 ; Acta Crystallographica Section E: Structure Reports Online Volume 57 May ; 2001-05 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2001 ; 57 ; Acta Crystallographica Section E: Structure Reports Online Volume 57 June ; 2001-06 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2001 ; 57 ; Acta Crystallographica Section E: Structure Reports Online Volume 57 July ; 2001-07 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2001 ; 57 ; Acta Crystallographica Section E: Structure Reports Online Volume 57 August ; 2001-08 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2001 ; 57 ; Acta Crystallographica Section E: Structure Reports Online Volume 57 September ; 2001-09 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2001 ; 57 ; Acta Crystallographica Section E: Structure Reports Online Volume 57 October ; 2001-10 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2001 ; 57 ; Acta Crystallographica Section E: Structure Reports Online Volume 57 November ; 2001-11 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2001 ; 57 ; Acta Crystallographica Section E: Structure Reports Online Volume 57 December ; 2001-12 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2001 ; 57 ; Acta Crystallographica Section E: Structure Reports Online Volume 57 (January 2001) ; 2001-01 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2001 ; 57 ; Acta Crystallographica Section E: Structure Reports Online Volume 57 (February 2001) ; 2001-02 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2001 ; 57 ; Acta Crystallographica Section E: Structure Reports Online Volume 57 (March 2001) ; 2001-03 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2001 ; 57 ; Acta Crystallographica Section E: Structure Reports Online Volume 57 (April 2001) ; 2001-04 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2001 ; 57 ; Acta Crystallographica Section E: Structure Reports Online Volume 57 (May 2001) ; 2001-05 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2001 ; 57 ; Acta Crystallographica Section E: Structure Reports Online Volume 57 (June 2001) ; 2001-06 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2001 ; 57 ; Acta Crystallographica Section E: Structure Reports Online Volume 57 (July 2001) ; 2001-07 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2001 ; 57 ; Acta Crystallographica Section E: Structure Reports Online Volume 57 (August 2001) ; 2001-08 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2001 ; 57 ; Acta Crystallographica Section E: Structure Reports Online Volume 57 (September 2001) ; 2001-09 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2001 ; 57 ; Acta Crystallographica Section E: Structure Reports Online Volume 57 (October 2001) ; 2001-10 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2001 ; 57 ; Acta Crystallographica Section E: Structure Reports Online Volume 57 (November 2001) ; 2001-11 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2001 ; 57 ; Acta Crystallographica Section E: Structure Reports Online Volume 57 (December 2001) ; 2001-12 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
 
-    au < finished ; manifest ; 2002 ; 58 ; Acta Crystallographica Section E: Structure Reports Online Volume 58 January ; 2002-01 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2002 ; 58 ; Acta Crystallographica Section E: Structure Reports Online Volume 58 February ; 2002-02 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2002 ; 58 ; Acta Crystallographica Section E: Structure Reports Online Volume 58 March ; 2002-03 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2002 ; 58 ; Acta Crystallographica Section E: Structure Reports Online Volume 58 April ; 2002-04 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2002 ; 58 ; Acta Crystallographica Section E: Structure Reports Online Volume 58 May ; 2002-05 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2002 ; 58 ; Acta Crystallographica Section E: Structure Reports Online Volume 58 June ; 2002-06 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2002 ; 58 ; Acta Crystallographica Section E: Structure Reports Online Volume 58 July ; 2002-07 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2002 ; 58 ; Acta Crystallographica Section E: Structure Reports Online Volume 58 August ; 2002-08 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2002 ; 58 ; Acta Crystallographica Section E: Structure Reports Online Volume 58 September ; 2002-09 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2002 ; 58 ; Acta Crystallographica Section E: Structure Reports Online Volume 58 October ; 2002-10 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2002 ; 58 ; Acta Crystallographica Section E: Structure Reports Online Volume 58 November ; 2002-11 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2002 ; 58 ; Acta Crystallographica Section E: Structure Reports Online Volume 58 December ; 2002-12 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2002 ; 58 ; Acta Crystallographica Section E: Structure Reports Online Volume 58 (January 2002) ; 2002-01 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2002 ; 58 ; Acta Crystallographica Section E: Structure Reports Online Volume 58 (February 2002) ; 2002-02 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2002 ; 58 ; Acta Crystallographica Section E: Structure Reports Online Volume 58 (March 2002) ; 2002-03 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2002 ; 58 ; Acta Crystallographica Section E: Structure Reports Online Volume 58 (April 2002) ; 2002-04 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2002 ; 58 ; Acta Crystallographica Section E: Structure Reports Online Volume 58 (May 2002) ; 2002-05 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2002 ; 58 ; Acta Crystallographica Section E: Structure Reports Online Volume 58 (June 2002) ; 2002-06 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2002 ; 58 ; Acta Crystallographica Section E: Structure Reports Online Volume 58 (July 2002) ; 2002-07 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2002 ; 58 ; Acta Crystallographica Section E: Structure Reports Online Volume 58 (August 2002) ; 2002-08 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2002 ; 58 ; Acta Crystallographica Section E: Structure Reports Online Volume 58 (September 2002) ; 2002-09 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2002 ; 58 ; Acta Crystallographica Section E: Structure Reports Online Volume 58 (October 2002) ; 2002-10 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2002 ; 58 ; Acta Crystallographica Section E: Structure Reports Online Volume 58 (November 2002) ; 2002-11 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2002 ; 58 ; Acta Crystallographica Section E: Structure Reports Online Volume 58 (December 2002) ; 2002-12 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
 
-    au < finished ; manifest ; 2003 ; 59 ; Acta Crystallographica Section E: Structure Reports Online Volume 59 January ; 2003-01 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2003 ; 59 ; Acta Crystallographica Section E: Structure Reports Online Volume 59 February ; 2003-02 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2003 ; 59 ; Acta Crystallographica Section E: Structure Reports Online Volume 59 March ; 2003-03 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2003 ; 59 ; Acta Crystallographica Section E: Structure Reports Online Volume 59 April ; 2003-04 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2003 ; 59 ; Acta Crystallographica Section E: Structure Reports Online Volume 59 May ; 2003-05 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2003 ; 59 ; Acta Crystallographica Section E: Structure Reports Online Volume 59 June ; 2003-06 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2003 ; 59 ; Acta Crystallographica Section E: Structure Reports Online Volume 59 July ; 2003-07 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2003 ; 59 ; Acta Crystallographica Section E: Structure Reports Online Volume 59 August ; 2003-08 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2003 ; 59 ; Acta Crystallographica Section E: Structure Reports Online Volume 59 September ; 2003-09 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2003 ; 59 ; Acta Crystallographica Section E: Structure Reports Online Volume 59 October ;  2003-10 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2003 ; 59 ; Acta Crystallographica Section E: Structure Reports Online Volume 59 November ; 2003-11 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2003 ; 59 ; Acta Crystallographica Section E: Structure Reports Online Volume 59 December ; 2003-12 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2003 ; 59 ; Acta Crystallographica Section E: Structure Reports Online Volume 59 (January 2003) ; 2003-01 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2003 ; 59 ; Acta Crystallographica Section E: Structure Reports Online Volume 59 (February 2003) ; 2003-02 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2003 ; 59 ; Acta Crystallographica Section E: Structure Reports Online Volume 59 (March 2003) ; 2003-03 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2003 ; 59 ; Acta Crystallographica Section E: Structure Reports Online Volume 59 (April 2003) ; 2003-04 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2003 ; 59 ; Acta Crystallographica Section E: Structure Reports Online Volume 59 (May 2003) ; 2003-05 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2003 ; 59 ; Acta Crystallographica Section E: Structure Reports Online Volume 59 (June 2003) ; 2003-06 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2003 ; 59 ; Acta Crystallographica Section E: Structure Reports Online Volume 59 (July 2003) ; 2003-07 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2003 ; 59 ; Acta Crystallographica Section E: Structure Reports Online Volume 59 (August 2003) ; 2003-08 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2003 ; 59 ; Acta Crystallographica Section E: Structure Reports Online Volume 59 (September 2003) ; 2003-09 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2003 ; 59 ; Acta Crystallographica Section E: Structure Reports Online Volume 59 October ;  2003-10 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2003 ; 59 ; Acta Crystallographica Section E: Structure Reports Online Volume 59 (November 2003) ; 2003-11 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2003 ; 59 ; Acta Crystallographica Section E: Structure Reports Online Volume 59 (December 2003) ; 2003-12 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
 
-    au < finished ; manifest ; 2004 ; 60 ; Acta Crystallographica Section E: Structure Reports Online Volume 60 January ; 2004-01 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2004 ; 60 ; Acta Crystallographica Section E: Structure Reports Online Volume 60 February ; 2004-02 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2004 ; 60 ; Acta Crystallographica Section E: Structure Reports Online Volume 60 March ; 2004-03 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2004 ; 60 ; Acta Crystallographica Section E: Structure Reports Online Volume 60 April ; 2004-04 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2004 ; 60 ; Acta Crystallographica Section E: Structure Reports Online Volume 60 May ; 2004-05 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2004 ; 60 ; Acta Crystallographica Section E: Structure Reports Online Volume 60 June ; 2004-06 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2004 ; 60 ; Acta Crystallographica Section E: Structure Reports Online Volume 60 July ; 2004-07 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2004 ; 60 ; Acta Crystallographica Section E: Structure Reports Online Volume 60 August ; 2004-08 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2004 ; 60 ; Acta Crystallographica Section E: Structure Reports Online Volume 60 September ; 2004-09 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2004 ; 60 ; Acta Crystallographica Section E: Structure Reports Online Volume 60 October ; 2004-10 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2004 ; 60 ; Acta Crystallographica Section E: Structure Reports Online Volume 60 November ; 2004-11 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2004 ; 60 ; Acta Crystallographica Section E: Structure Reports Online Volume 60 December ; 2004-12 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2004 ; 60 ; Acta Crystallographica Section E: Structure Reports Online Volume 60 (January 2004) ; 2004-01 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2004 ; 60 ; Acta Crystallographica Section E: Structure Reports Online Volume 60 (February 2004) ; 2004-02 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2004 ; 60 ; Acta Crystallographica Section E: Structure Reports Online Volume 60 (March 2004) ; 2004-03 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2004 ; 60 ; Acta Crystallographica Section E: Structure Reports Online Volume 60 (April 2004) ; 2004-04 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2004 ; 60 ; Acta Crystallographica Section E: Structure Reports Online Volume 60 (May 2004) ; 2004-05 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2004 ; 60 ; Acta Crystallographica Section E: Structure Reports Online Volume 60 (June 2004) ; 2004-06 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2004 ; 60 ; Acta Crystallographica Section E: Structure Reports Online Volume 60 (July 2004) ; 2004-07 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2004 ; 60 ; Acta Crystallographica Section E: Structure Reports Online Volume 60 (August 2004) ; 2004-08 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2004 ; 60 ; Acta Crystallographica Section E: Structure Reports Online Volume 60 (September 2004) ; 2004-09 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2004 ; 60 ; Acta Crystallographica Section E: Structure Reports Online Volume 60 (October 2004) ; 2004-10 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2004 ; 60 ; Acta Crystallographica Section E: Structure Reports Online Volume 60 (November 2004) ; 2004-11 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2004 ; 60 ; Acta Crystallographica Section E: Structure Reports Online Volume 60 (December 2004) ; 2004-12 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
 
-    au < finished ; manifest ; 2005 ; 61 ; Acta Crystallographica Section E: Structure Reports Online Volume 61 January ; 2005-01 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2005 ; 61 ; Acta Crystallographica Section E: Structure Reports Online Volume 61 February ; 2005-02 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2005 ; 61 ; Acta Crystallographica Section E: Structure Reports Online Volume 61 March ; 2005-03 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2005 ; 61 ; Acta Crystallographica Section E: Structure Reports Online Volume 61 April ; 2005-04 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2005 ; 61 ; Acta Crystallographica Section E: Structure Reports Online Volume 61 May ; 2005-05 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2005 ; 61 ; Acta Crystallographica Section E: Structure Reports Online Volume 61 June ; 2005-06 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2005 ; 61 ; Acta Crystallographica Section E: Structure Reports Online Volume 61 July ; 2005-07 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2005 ; 61 ; Acta Crystallographica Section E: Structure Reports Online Volume 61 August ; 2005-08 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2005 ; 61 ; Acta Crystallographica Section E: Structure Reports Online Volume 61 September ; 2005-09 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2005 ; 61 ; Acta Crystallographica Section E: Structure Reports Online Volume 61 October ; 2005-10 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2005 ; 61 ; Acta Crystallographica Section E: Structure Reports Online Volume 61 November ; 2005-11 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2005 ; 61 ; Acta Crystallographica Section E: Structure Reports Online Volume 61 December ; 2005-12 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2005 ; 61 ; Acta Crystallographica Section E: Structure Reports Online Volume 61 (January 2005) ; 2005-01 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2005 ; 61 ; Acta Crystallographica Section E: Structure Reports Online Volume 61 (February 2005) ; 2005-02 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2005 ; 61 ; Acta Crystallographica Section E: Structure Reports Online Volume 61 (March 2005) ; 2005-03 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2005 ; 61 ; Acta Crystallographica Section E: Structure Reports Online Volume 61 (April 2005) ; 2005-04 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2005 ; 61 ; Acta Crystallographica Section E: Structure Reports Online Volume 61 (May 2005) ; 2005-05 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2005 ; 61 ; Acta Crystallographica Section E: Structure Reports Online Volume 61 (June 2005) ; 2005-06 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2005 ; 61 ; Acta Crystallographica Section E: Structure Reports Online Volume 61 (July 2005) ; 2005-07 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2005 ; 61 ; Acta Crystallographica Section E: Structure Reports Online Volume 61 (August 2005) ; 2005-08 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2005 ; 61 ; Acta Crystallographica Section E: Structure Reports Online Volume 61 (September 2005) ; 2005-09 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2005 ; 61 ; Acta Crystallographica Section E: Structure Reports Online Volume 61 (October 2005) ; 2005-10 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2005 ; 61 ; Acta Crystallographica Section E: Structure Reports Online Volume 61 (November 2005) ; 2005-11 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2005 ; 61 ; Acta Crystallographica Section E: Structure Reports Online Volume 61 (December 2005) ; 2005-12 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
 
-    au < finished ; manifest ; 2006 ; 62 ; Acta Crystallographica Section E: Structure Reports Online Volume 62 January ; 2006-01 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2006 ; 62 ; Acta Crystallographica Section E: Structure Reports Online Volume 62 February ; 2006-02 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2006 ; 62 ; Acta Crystallographica Section E: Structure Reports Online Volume 62 March ; 2006-03 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2006 ; 62 ; Acta Crystallographica Section E: Structure Reports Online Volume 62 April ; 2006-04 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2006 ; 62 ; Acta Crystallographica Section E: Structure Reports Online Volume 62 May ; 2006-05 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2006 ; 62 ; Acta Crystallographica Section E: Structure Reports Online Volume 62 June ; 2006-06 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2006 ; 62 ; Acta Crystallographica Section E: Structure Reports Online Volume 62 July ; 2006-07 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2006 ; 62 ; Acta Crystallographica Section E: Structure Reports Online Volume 62 August ; 2006-08 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2006 ; 62 ; Acta Crystallographica Section E: Structure Reports Online Volume 62 September ; 2006-09 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2006 ; 62 ; Acta Crystallographica Section E: Structure Reports Online Volume 62 October ; 2006-10 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2006 ; 62 ; Acta Crystallographica Section E: Structure Reports Online Volume 62 November ; 2006-11 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2006 ; 62 ; Acta Crystallographica Section E: Structure Reports Online Volume 62 December ; 2006-12 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2006 ; 62 ; Acta Crystallographica Section E: Structure Reports Online Volume 62 (January 2006) ; 2006-01 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2006 ; 62 ; Acta Crystallographica Section E: Structure Reports Online Volume 62 (February 2006) ; 2006-02 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2006 ; 62 ; Acta Crystallographica Section E: Structure Reports Online Volume 62 (March 2006) ; 2006-03 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2006 ; 62 ; Acta Crystallographica Section E: Structure Reports Online Volume 62 (April 2006) ; 2006-04 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2006 ; 62 ; Acta Crystallographica Section E: Structure Reports Online Volume 62 (May 2006) ; 2006-05 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2006 ; 62 ; Acta Crystallographica Section E: Structure Reports Online Volume 62 (June 2006) ; 2006-06 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2006 ; 62 ; Acta Crystallographica Section E: Structure Reports Online Volume 62 (July 2006) ; 2006-07 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2006 ; 62 ; Acta Crystallographica Section E: Structure Reports Online Volume 62 (August 2006) ; 2006-08 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2006 ; 62 ; Acta Crystallographica Section E: Structure Reports Online Volume 62 (September 2006) ; 2006-09 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2006 ; 62 ; Acta Crystallographica Section E: Structure Reports Online Volume 62 (October 2006) ; 2006-10 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2006 ; 62 ; Acta Crystallographica Section E: Structure Reports Online Volume 62 (November 2006) ; 2006-11 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2006 ; 62 ; Acta Crystallographica Section E: Structure Reports Online Volume 62 (December 2006) ; 2006-12 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
 
-    au < finished ; manifest ; 2007 ; 63 ; Acta Crystallographica Section E: Structure Reports Online Volume 63 January ; 2007-01 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2007 ; 63 ; Acta Crystallographica Section E: Structure Reports Online Volume 63 February ; 2007-02 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2007 ; 63 ; Acta Crystallographica Section E: Structure Reports Online Volume 63 March ; 2007-03 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2007 ; 63 ; Acta Crystallographica Section E: Structure Reports Online Volume 63 April ; 2007-04 ; reingest1.clockss.org:8082 >
-    au < exists ; exists ; 2007 ; 63 ; Acta Crystallographica Section E: Structure Reports Online Volume 63 May ; 2007-05 ; >
-    au < finished ; manifest ; 2007 ; 63 ; Acta Crystallographica Section E: Structure Reports Online Volume 63 June ; 2007-06 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2007 ; 63 ; Acta Crystallographica Section E: Structure Reports Online Volume 63 July ; 2007-07 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2007 ; 63 ; Acta Crystallographica Section E: Structure Reports Online Volume 63 August ; 2007-08 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2007 ; 63 ; Acta Crystallographica Section E: Structure Reports Online Volume 63 September ; 2007-09 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2007 ; 63 ; Acta Crystallographica Section E: Structure Reports Online Volume 63 October ; 2007-10 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2007 ; 63 ; Acta Crystallographica Section E: Structure Reports Online Volume 63 November ; 2007-11 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2007 ; 63 ; Acta Crystallographica Section E: Structure Reports Online Volume 63 December ; 2007-12 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2007 ; 63 ; Acta Crystallographica Section E: Structure Reports Online Volume 63 (January 2007) ; 2007-01 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2007 ; 63 ; Acta Crystallographica Section E: Structure Reports Online Volume 63 (February 2007) ; 2007-02 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2007 ; 63 ; Acta Crystallographica Section E: Structure Reports Online Volume 63 (March 2007) ; 2007-03 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2007 ; 63 ; Acta Crystallographica Section E: Structure Reports Online Volume 63 (April 2007) ; 2007-04 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < exists ; exists ; 2007 ; 63 ; Acta Crystallographica Section E: Structure Reports Online Volume 63 (May 2007) ; 2007-05 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < finished ; manifest ; 2007 ; 63 ; Acta Crystallographica Section E: Structure Reports Online Volume 63 (June 2007) ; 2007-06 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2007 ; 63 ; Acta Crystallographica Section E: Structure Reports Online Volume 63 (July 2007) ; 2007-07 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2007 ; 63 ; Acta Crystallographica Section E: Structure Reports Online Volume 63 (August 2007) ; 2007-08 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2007 ; 63 ; Acta Crystallographica Section E: Structure Reports Online Volume 63 (September 2007) ; 2007-09 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2007 ; 63 ; Acta Crystallographica Section E: Structure Reports Online Volume 63 (October 2007) ; 2007-10 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2007 ; 63 ; Acta Crystallographica Section E: Structure Reports Online Volume 63 (November 2007) ; 2007-11 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2007 ; 63 ; Acta Crystallographica Section E: Structure Reports Online Volume 63 (December 2007) ; 2007-12 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
 
-    au < exists ; exists ; 2008 ; 64 ; Acta Crystallographica Section E: Structure Reports Online Volume 64 January ; 2008-01 ; >
-    au < finished ; manifest ; 2008 ; 64 ; Acta Crystallographica Section E: Structure Reports Online Volume 64 February ; 2008-02 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2008 ; 64 ; Acta Crystallographica Section E: Structure Reports Online Volume 64 March ; 2008-03 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2008 ; 64 ; Acta Crystallographica Section E: Structure Reports Online Volume 64 April ; 2008-04 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2008 ; 64 ; Acta Crystallographica Section E: Structure Reports Online Volume 64 May ; 2008-05 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2008 ; 64 ; Acta Crystallographica Section E: Structure Reports Online Volume 64 June ; 2008-06 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2008 ; 64 ; Acta Crystallographica Section E: Structure Reports Online Volume 64 July ; 2008-07 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2008 ; 64 ; Acta Crystallographica Section E: Structure Reports Online Volume 64 August ; 2008-08 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2008 ; 64 ; Acta Crystallographica Section E: Structure Reports Online Volume 64 September ; 2008-09 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2008 ; 64 ; Acta Crystallographica Section E: Structure Reports Online Volume 64 October ; 2008-10 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2008 ; 64 ; Acta Crystallographica Section E: Structure Reports Online Volume 64 November ; 2008-11 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2008 ; 64 ; Acta Crystallographica Section E: Structure Reports Online Volume 64 December ; 2008-12 ; reingest2.clockss.org:8085 >
+    au < exists ; exists ; 2008 ; 64 ; Acta Crystallographica Section E: Structure Reports Online Volume 64 (January 2008) ; 2008-01 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < finished ; manifest ; 2008 ; 64 ; Acta Crystallographica Section E: Structure Reports Online Volume 64 (February 2008) ; 2008-02 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2008 ; 64 ; Acta Crystallographica Section E: Structure Reports Online Volume 64 (March 2008) ; 2008-03 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2008 ; 64 ; Acta Crystallographica Section E: Structure Reports Online Volume 64 (April 2008) ; 2008-04 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2008 ; 64 ; Acta Crystallographica Section E: Structure Reports Online Volume 64 (May 2008) ; 2008-05 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2008 ; 64 ; Acta Crystallographica Section E: Structure Reports Online Volume 64 (June 2008) ; 2008-06 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2008 ; 64 ; Acta Crystallographica Section E: Structure Reports Online Volume 64 (July 2008) ; 2008-07 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2008 ; 64 ; Acta Crystallographica Section E: Structure Reports Online Volume 64 (August 2008) ; 2008-08 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2008 ; 64 ; Acta Crystallographica Section E: Structure Reports Online Volume 64 (September 2008) ; 2008-09 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2008 ; 64 ; Acta Crystallographica Section E: Structure Reports Online Volume 64 (October 2008) ; 2008-10 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2008 ; 64 ; Acta Crystallographica Section E: Structure Reports Online Volume 64 (November 2008) ; 2008-11 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2008 ; 64 ; Acta Crystallographica Section E: Structure Reports Online Volume 64 (December 2008) ; 2008-12 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
 
-    au < finished ; manifest ; 2009 ; 65 ; Acta Crystallographica Section E: Structure Reports Online Volume 65 January ; 2009-01 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2009 ; 65 ; Acta Crystallographica Section E: Structure Reports Online Volume 65 February ; 2009-02 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2009 ; 65 ; Acta Crystallographica Section E: Structure Reports Online Volume 65 March ; 2009-03 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2009 ; 65 ; Acta Crystallographica Section E: Structure Reports Online Volume 65 April ; 2009-04 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2009 ; 65 ; Acta Crystallographica Section E: Structure Reports Online Volume 65 May ; 2009-05 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2009 ; 65 ; Acta Crystallographica Section E: Structure Reports Online Volume 65 June ; 2009-06 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2009 ; 65 ; Acta Crystallographica Section E: Structure Reports Online Volume 65 July ; 2009-07 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2009 ; 65 ; Acta Crystallographica Section E: Structure Reports Online Volume 65 August ; 2009-08 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2009 ; 65 ; Acta Crystallographica Section E: Structure Reports Online Volume 65 September ; 2009-09 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2009 ; 65 ; Acta Crystallographica Section E: Structure Reports Online Volume 65 October ; 2009-10 ; reingest3.clockss.org:8083 >
-    au < exists ; exists ; 2009 ; 65 ; Acta Crystallographica Section E: Structure Reports Online Volume 65 November ; 2009-11 ; >
-    au < finished ; manifest ; 2009 ; 65 ; Acta Crystallographica Section E: Structure Reports Online Volume 65 December ; 2009-12 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2009 ; 65 ; Acta Crystallographica Section E: Structure Reports Online Volume 65 (January 2009) ; 2009-01 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2009 ; 65 ; Acta Crystallographica Section E: Structure Reports Online Volume 65 (February 2009) ; 2009-02 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2009 ; 65 ; Acta Crystallographica Section E: Structure Reports Online Volume 65 (March 2009) ; 2009-03 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2009 ; 65 ; Acta Crystallographica Section E: Structure Reports Online Volume 65 (April 2009) ; 2009-04 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2009 ; 65 ; Acta Crystallographica Section E: Structure Reports Online Volume 65 (May 2009) ; 2009-05 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2009 ; 65 ; Acta Crystallographica Section E: Structure Reports Online Volume 65 (June 2009) ; 2009-06 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2009 ; 65 ; Acta Crystallographica Section E: Structure Reports Online Volume 65 (July 2009) ; 2009-07 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2009 ; 65 ; Acta Crystallographica Section E: Structure Reports Online Volume 65 (August 2009) ; 2009-08 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2009 ; 65 ; Acta Crystallographica Section E: Structure Reports Online Volume 65 (September 2009) ; 2009-09 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2009 ; 65 ; Acta Crystallographica Section E: Structure Reports Online Volume 65 (October 2009) ; 2009-10 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < exists ; exists ; 2009 ; 65 ; Acta Crystallographica Section E: Structure Reports Online Volume 65 (November 2009) ; 2009-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < finished ; manifest ; 2009 ; 65 ; Acta Crystallographica Section E: Structure Reports Online Volume 65 (December 2009) ; 2009-12 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
 
-    au < doNotProcess ; exists ; 2010 ; 66 ; Acta Crystallographica Section E: Structure Reports Online Volume 66 January ; 2010-01 ; >
-    au < doNotProcess ; exists ; 2010 ; 66 ; Acta Crystallographica Section E: Structure Reports Online Volume 66 February ; 2010-02 ; >
-    au < doNotProcess ; exists ; 2010 ; 66 ; Acta Crystallographica Section E: Structure Reports Online Volume 66 March ; 2010-03 ; >
-    au < doNotProcess ; exists ; 2010 ; 66 ; Acta Crystallographica Section E: Structure Reports Online Volume 66 April ; 2010-04 ; >
-    au < doNotProcess ; exists ; 2010 ; 66 ; Acta Crystallographica Section E: Structure Reports Online Volume 66 May ; 2010-05 ; >
-    au < doNotProcess ; exists ; 2010 ; 66 ; Acta Crystallographica Section E: Structure Reports Online Volume 66 June ; 2010-06 ; >
-    au < doNotProcess ; exists ; 2010 ; 66 ; Acta Crystallographica Section E: Structure Reports Online Volume 66 July ; 2010-07 ; >
-    au < doNotProcess ; exists ; 2010 ; 66 ; Acta Crystallographica Section E: Structure Reports Online Volume 66 August ; 2010-08 ; >
-    au < doNotProcess ; exists ; 2010 ; 66 ; Acta Crystallographica Section E: Structure Reports Online Volume 66 September ; 2010-09 ; >
-    au < doNotProcess ; exists ; 2010 ; 66 ; Acta Crystallographica Section E: Structure Reports Online Volume 66 October ; 2010-10 ; >
-    au < doNotProcess ; exists ; 2010 ; 66 ; Acta Crystallographica Section E: Structure Reports Online Volume 66 November ; 2010-11 ; >
-    au < doNotProcess ; exists ; 2010 ; 66 ; Acta Crystallographica Section E: Structure Reports Online Volume 66 December ; 2010-12 ; >
-    au < doNotProcess ; exists ; 2011 ; 67 ; Acta Crystallographica Section E: Structure Reports Online Volume 67 January ; 2011-01 ; >
-    au < doNotProcess ; exists ; 2011 ; 67 ; Acta Crystallographica Section E: Structure Reports Online Volume 67 February ; 2011-02 ; >
-    au < doNotProcess ; exists ; 2011 ; 67 ; Acta Crystallographica Section E: Structure Reports Online Volume 67 March ; 2011-03 ; >
-    au < doNotProcess ; exists ; 2011 ; 67 ; Acta Crystallographica Section E: Structure Reports Online Volume 67 April ; 2011-04 ; >
-    au < doNotProcess ; exists ; 2011 ; 67 ; Acta Crystallographica Section E: Structure Reports Online Volume 67 May ; 2011-05 ; >
-    au < doNotProcess ; exists ; 2011 ; 67 ; Acta Crystallographica Section E: Structure Reports Online Volume 67 June ; 2011-06 ; >
-    au < doNotProcess ; exists ; 2011 ; 67 ; Acta Crystallographica Section E: Structure Reports Online Volume 67 July ; 2011-07 ; >
-    au < doNotProcess ; exists ; 2011 ; 67 ; Acta Crystallographica Section E: Structure Reports Online Volume 67 August ; 2011-08 ; >
-    au < doNotProcess ; exists ; 2011 ; 67 ; Acta Crystallographica Section E: Structure Reports Online Volume 67 September ; 2011-09 ; >
-    au < doNotProcess ; exists ; 2011 ; 67 ; Acta Crystallographica Section E: Structure Reports Online Volume 67 October ; 2011-10 ; >
-    au < doNotProcess ; exists ; 2011 ; 67 ; Acta Crystallographica Section E: Structure Reports Online Volume 67 November ; 2011-11 ; >
-    au < doNotProcess ; exists ; 2011 ; 67 ; Acta Crystallographica Section E: Structure Reports Online Volume 67 December ; 2011-12 ; >
-    au < doNotProcess ; exists ; 2012 ; 68 ; Acta Crystallographica Section E: Structure Reports Online Volume 68 January ; 2012-01 ; >
-    au < doNotProcess ; exists ; 2012 ; 68 ; Acta Crystallographica Section E: Structure Reports Online Volume 68 February ; 2012-02 ; >
-    au < doNotProcess ; exists ; 2012 ; 68 ; Acta Crystallographica Section E: Structure Reports Online Volume 68 March ; 2012-03 ; >
-    au < doNotProcess ; exists ; 2012 ; 68 ; Acta Crystallographica Section E: Structure Reports Online Volume 68 April ; 2012-04 ; >
-    au < doNotProcess ; exists ; 2012 ; 68 ; Acta Crystallographica Section E: Structure Reports Online Volume 68 May ; 2012-05 ; >
-    au < doNotProcess ; exists ; 2012 ; 68 ; Acta Crystallographica Section E: Structure Reports Online Volume 68 June ; 2012-06 ; >
-    au < doNotProcess ; exists ; 2012 ; 68 ; Acta Crystallographica Section E: Structure Reports Online Volume 68 July ; 2012-07 ; >
-    au < doNotProcess ; exists ; 2012 ; 68 ; Acta Crystallographica Section E: Structure Reports Online Volume 68 August ; 2012-08 ; >
-    au < doNotProcess ; exists ; 2012 ; 68 ; Acta Crystallographica Section E: Structure Reports Online Volume 68 September ; 2012-09 ; >
-    au < doNotProcess ; exists ; 2012 ; 68 ; Acta Crystallographica Section E: Structure Reports Online Volume 68 October ; 2012-10 ; >
-    au < doNotProcess ; exists ; 2012 ; 68 ; Acta Crystallographica Section E: Structure Reports Online Volume 68 November ; 2012-11 ; >
-    au < doNotProcess ; exists ; 2012 ; 68 ; Acta Crystallographica Section E: Structure Reports Online Volume 68 December ; 2012-12 ; >
+    au < doNotProcess ; exists ; 2010 ; 66 ; Acta Crystallographica Section E: Structure Reports Online Volume 66 (January 2010) ; 2010-01 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < doNotProcess ; exists ; 2010 ; 66 ; Acta Crystallographica Section E: Structure Reports Online Volume 66 (February 2010) ; 2010-02 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < doNotProcess ; exists ; 2010 ; 66 ; Acta Crystallographica Section E: Structure Reports Online Volume 66 (March 2010) ; 2010-03 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < doNotProcess ; exists ; 2010 ; 66 ; Acta Crystallographica Section E: Structure Reports Online Volume 66 (April 2010) ; 2010-04 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < doNotProcess ; exists ; 2010 ; 66 ; Acta Crystallographica Section E: Structure Reports Online Volume 66 (May 2010) ; 2010-05 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < doNotProcess ; exists ; 2010 ; 66 ; Acta Crystallographica Section E: Structure Reports Online Volume 66 (June 2010) ; 2010-06 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < doNotProcess ; exists ; 2010 ; 66 ; Acta Crystallographica Section E: Structure Reports Online Volume 66 (July 2010) ; 2010-07 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < doNotProcess ; exists ; 2010 ; 66 ; Acta Crystallographica Section E: Structure Reports Online Volume 66 (August 2010) ; 2010-08 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < doNotProcess ; exists ; 2010 ; 66 ; Acta Crystallographica Section E: Structure Reports Online Volume 66 (September 2010) ; 2010-09 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < doNotProcess ; exists ; 2010 ; 66 ; Acta Crystallographica Section E: Structure Reports Online Volume 66 (October 2010) ; 2010-10 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < doNotProcess ; exists ; 2010 ; 66 ; Acta Crystallographica Section E: Structure Reports Online Volume 66 (November 2010) ; 2010-11 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < doNotProcess ; exists ; 2010 ; 66 ; Acta Crystallographica Section E: Structure Reports Online Volume 66 (December 2010) ; 2010-12 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < doNotProcess ; exists ; 2011 ; 67 ; Acta Crystallographica Section E: Structure Reports Online Volume 67 (January 2011) ; 2011-01 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < doNotProcess ; exists ; 2011 ; 67 ; Acta Crystallographica Section E: Structure Reports Online Volume 67 (February 2011) ; 2011-02 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < doNotProcess ; exists ; 2011 ; 67 ; Acta Crystallographica Section E: Structure Reports Online Volume 67 (March 2011) ; 2011-03 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < doNotProcess ; exists ; 2011 ; 67 ; Acta Crystallographica Section E: Structure Reports Online Volume 67 (April 2011) ; 2011-04 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < doNotProcess ; exists ; 2011 ; 67 ; Acta Crystallographica Section E: Structure Reports Online Volume 67 (May 2011) ; 2011-05 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < doNotProcess ; exists ; 2011 ; 67 ; Acta Crystallographica Section E: Structure Reports Online Volume 67 (June 2011) ; 2011-06 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < doNotProcess ; exists ; 2011 ; 67 ; Acta Crystallographica Section E: Structure Reports Online Volume 67 (July 2011) ; 2011-07 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < doNotProcess ; exists ; 2011 ; 67 ; Acta Crystallographica Section E: Structure Reports Online Volume 67 (August 2011) ; 2011-08 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < doNotProcess ; exists ; 2011 ; 67 ; Acta Crystallographica Section E: Structure Reports Online Volume 67 (September 2011) ; 2011-09 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < doNotProcess ; exists ; 2011 ; 67 ; Acta Crystallographica Section E: Structure Reports Online Volume 67 (October 2011) ; 2011-10 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < doNotProcess ; exists ; 2011 ; 67 ; Acta Crystallographica Section E: Structure Reports Online Volume 67 (November 2011) ; 2011-11 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < doNotProcess ; exists ; 2011 ; 67 ; Acta Crystallographica Section E: Structure Reports Online Volume 67 (December 2011) ; 2011-12 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < doNotProcess ; exists ; 2012 ; 68 ; Acta Crystallographica Section E: Structure Reports Online Volume 68 (January 2012) ; 2012-01 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < doNotProcess ; exists ; 2012 ; 68 ; Acta Crystallographica Section E: Structure Reports Online Volume 68 (February 2012) ; 2012-02 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < doNotProcess ; exists ; 2012 ; 68 ; Acta Crystallographica Section E: Structure Reports Online Volume 68 (March 2012) ; 2012-03 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < doNotProcess ; exists ; 2012 ; 68 ; Acta Crystallographica Section E: Structure Reports Online Volume 68 (April 2012) ; 2012-04 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < doNotProcess ; exists ; 2012 ; 68 ; Acta Crystallographica Section E: Structure Reports Online Volume 68 (May 2012) ; 2012-05 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < doNotProcess ; exists ; 2012 ; 68 ; Acta Crystallographica Section E: Structure Reports Online Volume 68 (June 2012) ; 2012-06 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < doNotProcess ; exists ; 2012 ; 68 ; Acta Crystallographica Section E: Structure Reports Online Volume 68 (July 2012) ; 2012-07 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < doNotProcess ; exists ; 2012 ; 68 ; Acta Crystallographica Section E: Structure Reports Online Volume 68 (August 2012) ; 2012-08 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < doNotProcess ; exists ; 2012 ; 68 ; Acta Crystallographica Section E: Structure Reports Online Volume 68 (September 2012) ; 2012-09 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < doNotProcess ; exists ; 2012 ; 68 ; Acta Crystallographica Section E: Structure Reports Online Volume 68 (October 2012) ; 2012-10 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < doNotProcess ; exists ; 2012 ; 68 ; Acta Crystallographica Section E: Structure Reports Online Volume 68 (November 2012) ; 2012-11 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < doNotProcess ; exists ; 2012 ; 68 ; Acta Crystallographica Section E: Structure Reports Online Volume 68 (December 2012) ; 2012-12 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
     #process a few 2013 dates in order to pick up early-publication-date articles from volume 70
-    au < finished ; manifest ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 January ; 2013-01 ; reingest5.clockss.org:8082 >
-    au < doNotProcess ; exists ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 February ; 2013-02 ; >
-    au < doNotProcess ; exists ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 March ; 2013-03 ; >
-    au < doNotProcess ; exists ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 April ; 2013-04 ; >
-    au < doNotProcess ; exists ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 May ; 2013-05 ; >
-    au < doNotProcess ; exists ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 June ; 2013-06 ; >
-    au < doNotProcess ; exists ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 July ; 2013-07 ; >
-    au < doNotProcess ; exists ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 August ; 2013-08 ; >
-    au < doNotProcess ; exists ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 September ; 2013-09 ; >
-    au < doNotProcess ; exists ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 October ; 2013-10 ; >
-    au < doNotProcess ; exists ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 November ; 2013-11 ; >
-    au < finished ; manifest ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 December ; 2013-12 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 January ; 2014-01 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 February ; 2014-02 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 March ; 2014-03 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 April ; 2014-04 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 May ; 2014-05 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 June ; 2014-06 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 July ; 2014-07 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 August ; 2014-08 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 September ; 2014-09 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 October ; 2014-10 ; reingest3.clockss.org:8083 >
-    au < finished ; finished ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 November ; 2014-11 ; reingest1.clockss.org:8082 >
-    au < doesNotExist ; doesNotExist ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 December ; 2014-12 ; > # No records within date
+    au < finished ; manifest ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 (January 2013) ; 2013-01 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < doNotProcess ; exists ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 (February 2013) ; 2013-02 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < doNotProcess ; exists ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 (March 2013) ; 2013-03 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < doNotProcess ; exists ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 (April 2013) ; 2013-04 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < doNotProcess ; exists ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 (May 2013) ; 2013-05 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < doNotProcess ; exists ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 (June 2013) ; 2013-06 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < doNotProcess ; exists ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 (July 2013) ; 2013-07 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < doNotProcess ; exists ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 (August 2013) ; 2013-08 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < doNotProcess ; exists ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 (September 2013) ; 2013-09 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < doNotProcess ; exists ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 (October 2013) ; 2013-10 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < doNotProcess ; exists ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 (November 2013) ; 2013-11 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < finished ; manifest ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 (December 2013) ; 2013-12 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 (January 2014) ; 2014-01 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 (February 2014) ; 2014-02 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 (March 2014) ; 2014-03 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 (April 2014) ; 2014-04 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 (May 2014) ; 2014-05 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 (June 2014) ; 2014-06 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 (July 2014) ; 2014-07 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 (August 2014) ; 2014-08 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 (September 2014) ; 2014-09 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 (October 2014) ; 2014-10 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 (November 2014) ; 2014-11 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < doesNotExist ; doesNotExist ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 (December 2014) ; 2014-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
     # changed name and issn.
   
   }
@@ -319,107 +314,103 @@
     # param of date is a year-month published date in the form yyyy-mm. Not all months have material published
     # Issues are Volume 1, Part1,2,3 etc. Parts do not correspond with month published.
     
-    param[base_url] = http://journals.iucr.org/
-    
-    {
     param[au_oai_set] = iucrj
 
-    au < finished ; manifest ; 2013 ; 1 ; IUCrJ Volume 1 October 2013 ; 2013-10 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2013 ; 1 ; IUCrJ Volume 1 December 2013 ; 2013-12 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2013 ; 1 ; IUCrJ Volume 1 (October 2013 2013) ; 2013-10 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2013 ; 1 ; IUCrJ Volume 1 (December 2013 2013) ; 2013-12 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
     
     #jan mar may jul sep nov
-    au < doesNotExist ; doesNotExist ; 2014 ; 1 ; IUCrJ Volume 1 January ; 2014-01 ; > # No records within date
-    au < finished ; finished ; 2014 ; 1 ; IUCrJ Volume 1 February ; 2014-02 ; reingest1.clockss.org:8082 >
-    au < doesNotExist ; doesNotExist ; 2014 ; 1 ; IUCrJ Volume 1 March ; 2014-03 ; > # No records within date
-    au < finished ; finished ; 2014 ; 1 ; IUCrJ Volume 1 April ; 2014-04 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 2014 ; 1 ; IUCrJ Volume 1 May ; 2014-05 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 2014 ; 1 ; IUCrJ Volume 1 June ; 2014-06 ; reingest1.clockss.org:8082 >
-    au < doesNotExist ; doesNotExist ; 2014 ; 1 ; IUCrJ Volume 1 July ; 2014-07 ; > # No records within date
-    au < finished ; finished ; 2014 ; 1 ; IUCrJ Volume 1 August ; 2014-08 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 2014 ; 1 ; IUCrJ Volume 1 September ; 2014-09 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 2014 ; 1 ; IUCrJ Volume 1 October ; 2014-10 ; reingest2.clockss.org:8085 >
-    au < doesNotExist ; doesNotExist ; 2014 ; 1 ; IUCrJ Volume 1 November ; 2014-11 ; > # No records within date
-    au < doesNotExist ; doesNotExist ; 2014 ; 1 ; IUCrJ Volume 1 December ; 2014-12 ; > # No records within date
+    au < doesNotExist ; doesNotExist ; 2014 ; 1 ; IUCrJ Volume 1 (January 2014) ; 2014-01 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < finished ; finished ; 2014 ; 1 ; IUCrJ Volume 1 (February 2014) ; 2014-02 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < doesNotExist ; doesNotExist ; 2014 ; 1 ; IUCrJ Volume 1 (March 2014) ; 2014-03 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < finished ; finished ; 2014 ; 1 ; IUCrJ Volume 1 (April 2014) ; 2014-04 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; 1 ; IUCrJ Volume 1 (May 2014) ; 2014-05 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; 1 ; IUCrJ Volume 1 (June 2014) ; 2014-06 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < doesNotExist ; doesNotExist ; 2014 ; 1 ; IUCrJ Volume 1 (July 2014) ; 2014-07 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < finished ; finished ; 2014 ; 1 ; IUCrJ Volume 1 (August 2014) ; 2014-08 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; 1 ; IUCrJ Volume 1 (September 2014) ; 2014-09 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; 1 ; IUCrJ Volume 1 (October 2014) ; 2014-10 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < doesNotExist ; doesNotExist ; 2014 ; 1 ; IUCrJ Volume 1 (November 2014) ; 2014-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < doesNotExist ; doesNotExist ; 2014 ; 1 ; IUCrJ Volume 1 (December 2014) ; 2014-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
 
-    au < finished ; finished ; 2015 ; 2 ; IUCrJ Volume 2 January ; 2015-01 ; reingest5.clockss.org:8082 >
-    au < finished ; finished ; 2015 ; 2 ; IUCrJ Volume 2 February ; 2015-02 ; reingest5.clockss.org:8082 >
-    au < finished ; finished ; 2015 ; 2 ; IUCrJ Volume 2 March ; 2015-03 ; reingest5.clockss.org:8082 >
-    au < finished ; finished ; 2015 ; 2 ; IUCrJ Volume 2 April ; 2015-04 ; reingest5.clockss.org:8082 >
-    au < finished ; finished ; 2015 ; 2 ; IUCrJ Volume 2 May ; 2015-05 ; reingest5.clockss.org:8082 >
-    au < finished ; finished ; 2015 ; 2 ; IUCrJ Volume 2 June ; 2015-06 ; reingest5.clockss.org:8082 >
-    au < finished ; finished ; 2015 ; 2 ; IUCrJ Volume 2 July ; 2015-07 ; reingest5.clockss.org:8082 >
-    au < finished ; finished ; 2015 ; 2 ; IUCrJ Volume 2 August ; 2015-08 ; reingest5.clockss.org:8082 >
-    au < finished ; finished ; 2015 ; 2 ; IUCrJ Volume 2 September ; 2015-09 ; reingest5.clockss.org:8082 >
-    au < finished ; finished ; 2015 ; 2 ; IUCrJ Volume 2 October ; 2015-10 ; reingest5.clockss.org:8082 >
-    au < finished ; finished ; 2015 ; 2 ; IUCrJ Volume 2 November ; 2015-11 ; reingest5.clockss.org:8082 >
-    au < doesNotExist ; doesNotExist ; 2015 ; 2 ; IUCrJ Volume 2 December ; 2015-12 ; > # No records within date
+    au < finished ; finished ; 2015 ; 2 ; IUCrJ Volume 2 (January 2015) ; 2015-01 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; 2 ; IUCrJ Volume 2 (February 2015) ; 2015-02 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; 2 ; IUCrJ Volume 2 (March 2015) ; 2015-03 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; 2 ; IUCrJ Volume 2 (April 2015) ; 2015-04 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; 2 ; IUCrJ Volume 2 (May 2015) ; 2015-05 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; 2 ; IUCrJ Volume 2 (June 2015) ; 2015-06 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; 2 ; IUCrJ Volume 2 (July 2015) ; 2015-07 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; 2 ; IUCrJ Volume 2 (August 2015) ; 2015-08 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; 2 ; IUCrJ Volume 2 (September 2015) ; 2015-09 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; 2 ; IUCrJ Volume 2 (October 2015) ; 2015-10 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; 2 ; IUCrJ Volume 2 (November 2015) ; 2015-11 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < doesNotExist ; doesNotExist ; 2015 ; 2 ; IUCrJ Volume 2 (December 2015) ; 2015-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
 
-    au < finished ; manifest ; 2016 ; 3 ; IUCrJ Volume 3 January ; 2016-01 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2016 ; 3 ; IUCrJ Volume 3 February ; 2016-02 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2016 ; 3 ; IUCrJ Volume 3 March ; 2016-03 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2016 ; 3 ; IUCrJ Volume 3 April ; 2016-04 ; reingest3.clockss.org:8083 >
-    au < doesNotExist ; doesNotExist ; 2016 ; 3 ; IUCrJ Volume 3 May ; 2016-05 ; > # No records within date
-    au < finished ; manifest ; 2016 ; 3 ; IUCrJ Volume 3 June ; 2016-06 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2016 ; 3 ; IUCrJ Volume 3 July ; 2016-07 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2016 ; 3 ; IUCrJ Volume 3 August ; 2016-08 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2016 ; 3 ; IUCrJ Volume 3 September ; 2016-09 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2016 ; 3 ; IUCrJ Volume 3 October ; 2016-10 ; reingest3.clockss.org:8083 >
-    au < doesNotExist ; doesNotExist ; 2016 ; 3 ; IUCrJ Volume 3 November ; 2016-11 ; > # No records within date
-    au < finished ; manifest ; 2016 ; 3 ; IUCrJ Volume 3 December ; 2016-12 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2016 ; 3 ; IUCrJ Volume 3 (January 2016) ; 2016-01 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2016 ; 3 ; IUCrJ Volume 3 (February 2016) ; 2016-02 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2016 ; 3 ; IUCrJ Volume 3 (March 2016) ; 2016-03 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2016 ; 3 ; IUCrJ Volume 3 (April 2016) ; 2016-04 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < doesNotExist ; doesNotExist ; 2016 ; 3 ; IUCrJ Volume 3 (May 2016) ; 2016-05 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < finished ; manifest ; 2016 ; 3 ; IUCrJ Volume 3 (June 2016) ; 2016-06 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2016 ; 3 ; IUCrJ Volume 3 (July 2016) ; 2016-07 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2016 ; 3 ; IUCrJ Volume 3 (August 2016) ; 2016-08 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2016 ; 3 ; IUCrJ Volume 3 (September 2016) ; 2016-09 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2016 ; 3 ; IUCrJ Volume 3 (October 2016) ; 2016-10 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < doesNotExist ; doesNotExist ; 2016 ; 3 ; IUCrJ Volume 3 (November 2016) ; 2016-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < finished ; manifest ; 2016 ; 3 ; IUCrJ Volume 3 (December 2016) ; 2016-12 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
 
-    au < deepCrawl ; exists ; 2017 ; 4 ; IUCrJ Volume 4 January ; 2017-01 ; >
-    au < deepCrawl ; exists ; 2017 ; 4 ; IUCrJ Volume 4 February ; 2017-02 ; >
-    au < deepCrawl ; exists ; 2017 ; 4 ; IUCrJ Volume 4 March ; 2017-03 ; >
-    au < deepCrawl ; exists ; 2017 ; 4 ; IUCrJ Volume 4 April ; 2017-04 ; >
-    au < deepCrawl ; exists ; 2017 ; 4 ; IUCrJ Volume 4 May ; 2017-05 ; >
-    au < deepCrawl ; exists ; 2017 ; 4 ; IUCrJ Volume 4 June ; 2017-06 ; >
-    au < deepCrawl ; exists ; 2017 ; 4 ; IUCrJ Volume 4 July ; 2017-07 ; >
-    au < deepCrawl ; exists ; 2017 ; 4 ; IUCrJ Volume 4 August ; 2017-08 ; >
-    au < deepCrawl ; exists ; 2017 ; 4 ; IUCrJ Volume 4 September ; 2017-09 ; >
-    au < deepCrawl ; exists ; 2017 ; 4 ; IUCrJ Volume 4 October ; 2017-10 ; >
-    au < doesNotExist ; doesNotExist ; 2017 ; 4 ; IUCrJ Volume 4 November ; 2017-11 ; > # No records within date
-    au < doesNotExist ; doesNotExist ; 2017 ; 4 ; IUCrJ Volume 4 December ; 2017-12 ; > # No records within date
+    au < deepCrawl ; exists ; 2017 ; 4 ; IUCrJ Volume 4 (January 2017) ; 2017-01 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < deepCrawl ; exists ; 2017 ; 4 ; IUCrJ Volume 4 (February 2017) ; 2017-02 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < deepCrawl ; exists ; 2017 ; 4 ; IUCrJ Volume 4 (March 2017) ; 2017-03 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < deepCrawl ; exists ; 2017 ; 4 ; IUCrJ Volume 4 (April 2017) ; 2017-04 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < deepCrawl ; exists ; 2017 ; 4 ; IUCrJ Volume 4 (May 2017) ; 2017-05 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < deepCrawl ; exists ; 2017 ; 4 ; IUCrJ Volume 4 (June 2017) ; 2017-06 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < deepCrawl ; exists ; 2017 ; 4 ; IUCrJ Volume 4 (July 2017) ; 2017-07 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < deepCrawl ; exists ; 2017 ; 4 ; IUCrJ Volume 4 (August 2017) ; 2017-08 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < deepCrawl ; exists ; 2017 ; 4 ; IUCrJ Volume 4 (September 2017) ; 2017-09 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < deepCrawl ; exists ; 2017 ; 4 ; IUCrJ Volume 4 (October 2017) ; 2017-10 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < doesNotExist ; doesNotExist ; 2017 ; 4 ; IUCrJ Volume 4 (November 2017) ; 2017-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < doesNotExist ; doesNotExist ; 2017 ; 4 ; IUCrJ Volume 4 (December 2017) ; 2017-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
 
-    au < deepCrawl ; exists ; 2018 ; 5 ; IUCrJ Volume 5 January ; 2018-01 ; >
-    au < deepCrawl ; exists ; 2018 ; 5 ; IUCrJ Volume 5 February ; 2018-02 ; >
-    au < deepCrawl ; exists ; 2018 ; 5 ; IUCrJ Volume 5 March ; 2018-03 ; >
-    au < deepCrawl ; exists ; 2018 ; 5 ; IUCrJ Volume 5 April ; 2018-04 ; >
-    au < deepCrawl ; exists ; 2018 ; 5 ; IUCrJ Volume 5 May ; 2018-05 ; >
-    au < deepCrawl ; exists ; 2018 ; 5 ; IUCrJ Volume 5 June ; 2018-06 ; >
-    au < deepCrawl ; exists ; 2018 ; 5 ; IUCrJ Volume 5 July ; 2018-07 ; >
-    au < deepCrawl ; exists ; 2018 ; 5 ; IUCrJ Volume 5 August ; 2018-08 ; >
-    au < deepCrawl ; exists ; 2018 ; 5 ; IUCrJ Volume 5 September ; 2018-09 ; >
-    au < deepCrawl ; exists ; 2018 ; 5 ; IUCrJ Volume 5 October ; 2018-10 ; >
-    au < doesNotExist ; doesNotExist ; 2018 ; 5 ; IUCrJ Volume 5 November ; 2018-11 ; >
-    au < doesNotExist ; doesNotExist ; 2018 ; 5 ; IUCrJ Volume 5 December ; 2018-12 ; >
+    au < deepCrawl ; exists ; 2018 ; 5 ; IUCrJ Volume 5 (January 2018) ; 2018-01 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < deepCrawl ; exists ; 2018 ; 5 ; IUCrJ Volume 5 (February 2018) ; 2018-02 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < deepCrawl ; exists ; 2018 ; 5 ; IUCrJ Volume 5 (March 2018) ; 2018-03 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < deepCrawl ; exists ; 2018 ; 5 ; IUCrJ Volume 5 (April 2018) ; 2018-04 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < deepCrawl ; exists ; 2018 ; 5 ; IUCrJ Volume 5 (May 2018) ; 2018-05 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < deepCrawl ; exists ; 2018 ; 5 ; IUCrJ Volume 5 (June 2018) ; 2018-06 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < deepCrawl ; exists ; 2018 ; 5 ; IUCrJ Volume 5 (July 2018) ; 2018-07 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < deepCrawl ; exists ; 2018 ; 5 ; IUCrJ Volume 5 (August 2018) ; 2018-08 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < deepCrawl ; exists ; 2018 ; 5 ; IUCrJ Volume 5 (September 2018) ; 2018-09 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < deepCrawl ; exists ; 2018 ; 5 ; IUCrJ Volume 5 (October 2018) ; 2018-10 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < doesNotExist ; doesNotExist ; 2018 ; 5 ; IUCrJ Volume 5 (November 2018) ; 2018-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < doesNotExist ; doesNotExist ; 2018 ; 5 ; IUCrJ Volume 5 (December 2018) ; 2018-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
 
-    au < manifest ; exists ; 2019 ; 6 ; IUCrJ Volume 6 January ; 2019-01 ; >
-    au < manifest ; exists ; 2019 ; 6 ; IUCrJ Volume 6 February ; 2019-02 ; >
-    au < manifest ; exists ; 2019 ; 6 ; IUCrJ Volume 6 March ; 2019-03 ; >
-    au < manifest ; exists ; 2019 ; 6 ; IUCrJ Volume 6 April ; 2019-04 ; >
-    au < manifest ; exists ; 2019 ; 6 ; IUCrJ Volume 6 May ; 2019-05 ; >
-    au < manifest ; exists ; 2019 ; 6 ; IUCrJ Volume 6 June ; 2019-06 ; >
-    au < manifest ; exists ; 2019 ; 6 ; IUCrJ Volume 6 July ; 2019-07 ; >
-    au < manifest ; exists ; 2019 ; 6 ; IUCrJ Volume 6 August ; 2019-08 ; >
-    au < manifest ; exists ; 2019 ; 6 ; IUCrJ Volume 6 September ; 2019-09 ; >
-    au < manifest ; exists ; 2019 ; 6 ; IUCrJ Volume 6 October ; 2019-10 ; >
-    au < manifest ; exists ; 2019 ; 6 ; IUCrJ Volume 6 November ; 2019-11 ; >
-    au < expected ; exists ; 2019 ; 6 ; IUCrJ Volume 6 December ; 2019-12 ; >
+    au < manifest ; exists ; 2019 ; 6 ; IUCrJ Volume 6 (January 2019) ; 2019-01 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < manifest ; exists ; 2019 ; 6 ; IUCrJ Volume 6 (February 2019) ; 2019-02 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < manifest ; exists ; 2019 ; 6 ; IUCrJ Volume 6 (March 2019) ; 2019-03 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < manifest ; exists ; 2019 ; 6 ; IUCrJ Volume 6 (April 2019) ; 2019-04 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < manifest ; exists ; 2019 ; 6 ; IUCrJ Volume 6 (May 2019) ; 2019-05 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < manifest ; exists ; 2019 ; 6 ; IUCrJ Volume 6 (June 2019) ; 2019-06 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < manifest ; exists ; 2019 ; 6 ; IUCrJ Volume 6 (July 2019) ; 2019-07 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < manifest ; exists ; 2019 ; 6 ; IUCrJ Volume 6 (August 2019) ; 2019-08 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < manifest ; exists ; 2019 ; 6 ; IUCrJ Volume 6 (September 2019) ; 2019-09 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < manifest ; exists ; 2019 ; 6 ; IUCrJ Volume 6 (October 2019) ; 2019-10 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < manifest ; exists ; 2019 ; 6 ; IUCrJ Volume 6 (November 2019) ; 2019-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < expected ; exists ; 2019 ; 6 ; IUCrJ Volume 6 (December 2019) ; 2019-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
 
-    au < manifest ; exists ; 2020 ; 7 ; IUCrJ Volume 7 January ; 2020-01 ; >
-    au < manifest ; exists ; 2020 ; 7 ; IUCrJ Volume 7 February ; 2020-02 ; >
-    au < manifest ; exists ; 2020 ; 7 ; IUCrJ Volume 7 March ; 2020-03 ; >
-    au < manifest ; exists ; 2020 ; 7 ; IUCrJ Volume 7 April ; 2020-04 ; >
-    au < manifest ; exists ; 2020 ; 7 ; IUCrJ Volume 7 May ; 2020-05 ; >
-    au < manifest ; exists ; 2020 ; 7 ; IUCrJ Volume 7 June ; 2020-06 ; >
-    au < manifest ; exists ; 2020 ; 7 ; IUCrJ Volume 7 July ; 2020-07 ; >
-    au < manifest ; exists ; 2020 ; 7 ; IUCrJ Volume 7 August ; 2020-08 ; >
-    au < manifest ; exists ; 2020 ; 7 ; IUCrJ Volume 7 September ; 2020-09 ; >
-    au < manifest ; exists ; 2020 ; 7 ; IUCrJ Volume 7 October ; 2020-10 ; >
-    au < expected ; exists ; 2020 ; 7 ; IUCrJ Volume 7 November ; 2020-11 ; >
-    au < expected ; exists ; 2020 ; 7 ; IUCrJ Volume 7 December ; 2020-12 ; >
+    au < manifest ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (January 2020) ; 2020-01 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < manifest ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (February 2020) ; 2020-02 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < manifest ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (March 2020) ; 2020-03 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < manifest ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (April 2020) ; 2020-04 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < manifest ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (May 2020) ; 2020-05 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < manifest ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (June 2020) ; 2020-06 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < manifest ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (July 2020) ; 2020-07 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < manifest ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (August 2020) ; 2020-08 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < manifest ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (September 2020) ; 2020-09 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < manifest ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (October 2020) ; 2020-10 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < expected ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (November 2020) ; 2020-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < expected ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (December 2020) ; 2020-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
 
-    }
   }
   
  {
@@ -434,73 +425,72 @@
     # Issues are Volume 1, Part1,2,3 etc. Parts do not correspond with month published.
     
     param[au_oai_set] = iucrdata
-    param[base_url] = http://iucrdata.iucr.org/
     
+    au < testing ; manifest ; 2016 ; 1 ; IUCrData Volume 1 (January 2016) ; 2016-01 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2016 ; 1 ; IUCrData Volume 1 (February 2016) ; 2016-02 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2016 ; 1 ; IUCrData Volume 1 (March 2016) ; 2016-03 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2016 ; 1 ; IUCrData Volume 1 (April 2016) ; 2016-04 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2016 ; 1 ; IUCrData Volume 1 (May 2016) ; 2016-05 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2016 ; 1 ; IUCrData Volume 1 (June 2016) ; 2016-06 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2016 ; 1 ; IUCrData Volume 1 (July 2016) ; 2016-07 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2016 ; 1 ; IUCrData Volume 1 (August 2016) ; 2016-08 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2016 ; 1 ; IUCrData Volume 1 (September 2016) ; 2016-09 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2016 ; 1 ; IUCrData Volume 1 (October 2016) ; 2016-10 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2016 ; 1 ; IUCrData Volume 1 (November 2016) ; 2016-11 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2016 ; 1 ; IUCrData Volume 1 (December 2016) ; 2016-12 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
     
-    au < finished ; manifest ; 2016 ; 1 ; IUCrData Volume 1 January ; 2016-01 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2016 ; 1 ; IUCrData Volume 1 February ; 2016-02 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2016 ; 1 ; IUCrData Volume 1 March ; 2016-03 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2016 ; 1 ; IUCrData Volume 1 April ; 2016-04 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2016 ; 1 ; IUCrData Volume 1 May ; 2016-05 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2016 ; 1 ; IUCrData Volume 1 June ; 2016-06 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2016 ; 1 ; IUCrData Volume 1 July ; 2016-07 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2016 ; 1 ; IUCrData Volume 1 August ; 2016-08 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2016 ; 1 ; IUCrData Volume 1 September ; 2016-09 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2016 ; 1 ; IUCrData Volume 1 October ; 2016-10 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2016 ; 1 ; IUCrData Volume 1 November ; 2016-11 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2016 ; 1 ; IUCrData Volume 1 December ; 2016-12 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2017 ; 2 ; IUCrData Volume 2 (January 2017) ; 2017-01 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2017 ; 2 ; IUCrData Volume 2 (February 2017) ; 2017-02 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; 2 ; IUCrData Volume 2 (March 2017) ; 2017-03 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; 2 ; IUCrData Volume 2 (April 2017) ; 2017-04 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2017 ; 2 ; IUCrData Volume 2 (May 2017) ; 2017-05 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2017 ; 2 ; IUCrData Volume 2 (June 2017) ; 2017-06 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; 2 ; IUCrData Volume 2 (July 2017) ; 2017-07 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; 2 ; IUCrData Volume 2 (August 2017) ; 2017-08 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; 2 ; IUCrData Volume 2 (September 2017) ; 2017-09 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2017 ; 2 ; IUCrData Volume 2 (October 2017) ; 2017-10 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2017 ; 2 ; IUCrData Volume 2 (November 2017) ; 2017-11 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < manifest ; exists ; 2017 ; 2 ; IUCrData Volume 2 (December 2017) ; 2017-12 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
     
-    au < finished ; manifest ; 2017 ; 2 ; IUCrData Volume 2 January ; 2017-01 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2017 ; 2 ; IUCrData Volume 2 February ; 2017-02 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2017 ; 2 ; IUCrData Volume 2 March ; 2017-03 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2017 ; 2 ; IUCrData Volume 2 April ; 2017-04 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2017 ; 2 ; IUCrData Volume 2 May ; 2017-05 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2017 ; 2 ; IUCrData Volume 2 June ; 2017-06 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2017 ; 2 ; IUCrData Volume 2 July ; 2017-07 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2017 ; 2 ; IUCrData Volume 2 August ; 2017-08 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2017 ; 2 ; IUCrData Volume 2 September ; 2017-09 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2017 ; 2 ; IUCrData Volume 2 October ; 2017-10 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2017 ; 2 ; IUCrData Volume 2 November ; 2017-11 ; reingest4.clockss.org:8082 >
-    au < manifest ; exists ; 2017 ; 2 ; IUCrData Volume 2 December ; 2017-12 ; >
-    
-    au < deepCrawl ; exists ; 2018 ; 3 ; IUCrData Volume 3 January ; 2018-01 ; >
-    au < deepCrawl ; exists ; 2018 ; 3 ; IUCrData Volume 3 February ; 2018-02 ; >
-    au < deepCrawl ; exists ; 2018 ; 3 ; IUCrData Volume 3 March ; 2018-03 ; >
-    au < deepCrawl ; exists ; 2018 ; 3 ; IUCrData Volume 3 April ; 2018-04 ; >
-    au < deepCrawl ; exists ; 2018 ; 3 ; IUCrData Volume 3 May ; 2018-05 ; >
-    au < deepCrawl ; exists ; 2018 ; 3 ; IUCrData Volume 3 June ; 2018-06 ; >
-    au < deepCrawl ; exists ; 2018 ; 3 ; IUCrData Volume 3 July ; 2018-07 ; >
-    au < deepCrawl ; exists ; 2018 ; 3 ; IUCrData Volume 3 August ; 2018-08 ; >
-    au < deepCrawl ; exists ; 2018 ; 3 ; IUCrData Volume 3 September ; 2018-09 ; >
-    au < deepCrawl ; exists ; 2018 ; 3 ; IUCrData Volume 3 October ; 2018-10 ; >
-    au < deepCrawl ; exists ; 2018 ; 3 ; IUCrData Volume 3 November ; 2018-11 ; >
-    au < deepCrawl ; exists ; 2018 ; 3 ; IUCrData Volume 3 December ; 2018-12 ; >
+    au < deepCrawl ; exists ; 2018 ; 3 ; IUCrData Volume 3 (January 2018) ; 2018-01 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < deepCrawl ; exists ; 2018 ; 3 ; IUCrData Volume 3 (February 2018) ; 2018-02 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < deepCrawl ; exists ; 2018 ; 3 ; IUCrData Volume 3 (March 2018) ; 2018-03 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < deepCrawl ; exists ; 2018 ; 3 ; IUCrData Volume 3 (April 2018) ; 2018-04 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < deepCrawl ; exists ; 2018 ; 3 ; IUCrData Volume 3 (May 2018) ; 2018-05 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < deepCrawl ; exists ; 2018 ; 3 ; IUCrData Volume 3 (June 2018) ; 2018-06 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < deepCrawl ; exists ; 2018 ; 3 ; IUCrData Volume 3 (July 2018) ; 2018-07 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < deepCrawl ; exists ; 2018 ; 3 ; IUCrData Volume 3 (August 2018) ; 2018-08 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < deepCrawl ; exists ; 2018 ; 3 ; IUCrData Volume 3 (September 2018) ; 2018-09 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < deepCrawl ; exists ; 2018 ; 3 ; IUCrData Volume 3 (October 2018) ; 2018-10 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < deepCrawl ; exists ; 2018 ; 3 ; IUCrData Volume 3 (November 2018) ; 2018-11 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < deepCrawl ; exists ; 2018 ; 3 ; IUCrData Volume 3 (December 2018) ; 2018-12 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; >
 
-    au < finished ; manifest ; 2019 ; 4 ; IUCrData Volume 4 January ; 2019-01 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; 4 ; IUCrData Volume 4 February ; 2019-02 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2019 ; 4 ; IUCrData Volume 4 March ; 2019-03 ; >
-    au < finished ; manifest ; 2019 ; 4 ; IUCrData Volume 4 April ; 2019-04 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2019 ; 4 ; IUCrData Volume 4 May ; 2019-05 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2019 ; 4 ; IUCrData Volume 4 June ; 2019-06 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; 4 ; IUCrData Volume 4 July ; 2019-07 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; 4 ; IUCrData Volume 4 August ; 2019-08 ; reingest4.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2019 ; 4 ; IUCrData Volume 4 September ; 2019-09 ; >
-    au < finished ; manifest ; 2019 ; 4 ; IUCrData Volume 4 October ; 2019-10 ; reingest5.clockss.org:8082 >
-    au < manifest ; exists ; 2019 ; 4 ; IUCrData Volume 4 November ; 2019-11 ; >
-    au < manifest ; exists ; 2019 ; 4 ; IUCrData Volume 4 December ; 2019-12 ; >
+    au < finished ; manifest ; 2019 ; 4 ; IUCrData Volume 4 (January 2019) ; 2019-01 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; 4 ; IUCrData Volume 4 (February 2019) ; 2019-02 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < deepCrawl ; exists ; 2019 ; 4 ; IUCrData Volume 4 (March 2019) ; 2019-03 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < finished ; manifest ; 2019 ; 4 ; IUCrData Volume 4 (April 2019) ; 2019-04 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2019 ; 4 ; IUCrData Volume 4 (May 2019) ; 2019-05 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2019 ; 4 ; IUCrData Volume 4 (June 2019) ; 2019-06 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; 4 ; IUCrData Volume 4 (July 2019) ; 2019-07 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; 4 ; IUCrData Volume 4 (August 2019) ; 2019-08 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < deepCrawl ; exists ; 2019 ; 4 ; IUCrData Volume 4 (September 2019) ; 2019-09 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; >
+    au < finished ; manifest ; 2019 ; 4 ; IUCrData Volume 4 (October 2019) ; 2019-10 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < manifest ; exists ; 2019 ; 4 ; IUCrData Volume 4 (November 2019) ; 2019-11 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < manifest ; exists ; 2019 ; 4 ; IUCrData Volume 4 (December 2019) ; 2019-12 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
 
-    au < manifest ; exists ; 2020 ; 5 ; IUCrData Volume 5 January ; 2020-01 ; >
-    au < manifest ; exists ; 2020 ; 5 ; IUCrData Volume 5 February ; 2020-02 ; >
-    au < manifest ; exists ; 2020 ; 5 ; IUCrData Volume 5 March ; 2020-03 ; >
-    au < manifest ; exists ; 2020 ; 5 ; IUCrData Volume 5 April ; 2020-04 ; >
-    au < manifest ; exists ; 2020 ; 5 ; IUCrData Volume 5 May ; 2020-05 ; >
-    au < manifest ; exists ; 2020 ; 5 ; IUCrData Volume 5 June ; 2020-06 ; >
-    au < manifest ; exists ; 2020 ; 5 ; IUCrData Volume 5 July ; 2020-07 ; >
-    au < manifest ; exists ; 2020 ; 5 ; IUCrData Volume 5 August ; 2020-08 ; >
-    au < manifest ; exists ; 2020 ; 5 ; IUCrData Volume 5 September ; 2020-09 ; >
-    au < manifest ; exists ; 2020 ; 5 ; IUCrData Volume 5 October ; 2020-10 ; >
-    au < manifest ; exists ; 2020 ; 5 ; IUCrData Volume 5 November ; 2020-11 ; >
-    au < manifest ; exists ; 2020 ; 5 ; IUCrData Volume 5 December ; 2020-12 ; >
+    au < manifest ; exists ; 2020 ; 5 ; IUCrData Volume 5 (January 2020) ; 2020-01 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < manifest ; exists ; 2020 ; 5 ; IUCrData Volume 5 (February 2020) ; 2020-02 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < manifest ; exists ; 2020 ; 5 ; IUCrData Volume 5 (March 2020) ; 2020-03 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < manifest ; exists ; 2020 ; 5 ; IUCrData Volume 5 (April 2020) ; 2020-04 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < manifest ; exists ; 2020 ; 5 ; IUCrData Volume 5 (May 2020) ; 2020-05 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < manifest ; exists ; 2020 ; 5 ; IUCrData Volume 5 (June 2020) ; 2020-06 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < manifest ; exists ; 2020 ; 5 ; IUCrData Volume 5 (July 2020) ; 2020-07 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < manifest ; exists ; 2020 ; 5 ; IUCrData Volume 5 (August 2020) ; 2020-08 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < manifest ; exists ; 2020 ; 5 ; IUCrData Volume 5 (September 2020) ; 2020-09 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < manifest ; exists ; 2020 ; 5 ; IUCrData Volume 5 (October 2020) ; 2020-10 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < manifest ; exists ; 2020 ; 5 ; IUCrData Volume 5 (November 2020) ; 2020-11 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < expected ; exists ; 2020 ; 5 ; IUCrData Volume 5 (December 2020) ; 2020-12 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
 
   }
+
 }
