@@ -14,7 +14,7 @@
     >
 
     plugin = org.lockss.plugin.clockss.bioone.ClockssBioOneBooksSourcePlugin
-    #param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/bioone-released/
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/bioone-released/
 
     hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[directory] >
