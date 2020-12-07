@@ -10,7 +10,7 @@
 
     plugin = org.lockss.plugin.wroclawmedicaluniversity.ClockssWroclawMedicalUniversityJournalsPlugin
     implicit < status ; status2 ; year ; param[year] ; name ; param[volume_name] ; hidden[proxy] >
-    #**********No manifest page checker********
+    #**********No manifest page checker********Still http 20201207
   {
 
     title <
