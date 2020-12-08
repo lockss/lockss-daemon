@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>35</string>
+    <string>36</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -139,6 +139,20 @@
       </org.lockss.daemon.ConfigParamDescr>
      </list>
   </entry>
+  <!--  support http to https transition for existing AUs -->
+  <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.base.HttpToHttpsUrlConsumerFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_url_fetcher_factory</string>
+    <string>org.lockss.plugin.base.HttpToHttpsUrlFetcherFactory</string>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.BaseUrlHttpHttpsUrlNormalizer</string>
+  </entry>
+  <!--  end http to https transition specific support  -->
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.medknow.MedknowHtmlHashFilterFactory</string>
