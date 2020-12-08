@@ -14,7 +14,7 @@
   <entry>
     <!-- allows for multiple journals under peerj host, but no preprints -->
     <string>plugin_version</string>
-    <string>8</string>
+    <string>9</string>
   </entry>
   <entry>
     <!-- to use new feature of HtmlNodeFilters in the html hash filter - allExceptSubtree() -->
@@ -81,6 +81,8 @@
       <string>1,"^https?://(%s|[^.]+\.cloudfront\.net|(fonts|ajax)\.(googleapis|gstatic)\.com)/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)$", url_host(base_url)</string>
       <!-- fonts sometimes have argument; limit the options but allow simple arg -->
       <string>1,"^https?://%s/assets/[^?]*\.(eot|svg|ttf|woff)([?](v=|-)[^/&amp;]+)?$", url_host(base_url)</string>
+      <!-- exclude this file, it is content type is xml, which cause trouble in SaxParser -->
+      <string>2, "https://dfzljdn9uc3pi\.cloudfront\.net/2020/9941/1/PRM_search_Ang_result\.csv"</string>
       <!-- cloudfront also used for volume-specific supplemental content .docx, .gz, etc -->
       <string>1,"^https://[^.]+\.cloudfront\.net/%s", volume_name</string>
       <string>4,"^%s", base_url</string>
