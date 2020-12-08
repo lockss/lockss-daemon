@@ -2409,7 +2409,7 @@
     au < manifest ; 2006 ; Journal of Cancer Research and Therapeutics Volume 2 ; 2006 ; 2 ; https://www.cancerjournal.net/ >
     au < manifest ; 2007 ; Journal of Cancer Research and Therapeutics Volume 3 ; 2007 ; 3 ; https://www.cancerjournal.net/ >
     au < manifest ; 2008 ; Journal of Cancer Research and Therapeutics Volume 4 ; 2008 ; 4 ; https://www.cancerjournal.net/ >
-    au < exists ; 2009 ; Journal of Cancer Research and Therapeutics Volume 5 ; 2009 ; 5 ; https://www.cancerjournal.net/ >
+    au < manifest ; 2009 ; Journal of Cancer Research and Therapeutics Volume 5 ; 2009 ; 5 ; https://www.cancerjournal.net/ >
     au < manifest ; 2010 ; Journal of Cancer Research and Therapeutics Volume 6 ; 2010 ; 6 ; https://www.cancerjournal.net/ >
     au < released ; 2011 ; Journal of Cancer Research and Therapeutics Volume 7 ; 2011 ; 7 ; http://www.cancerjournal.net/ >
     au < released ; 2012 ; Journal of Cancer Research and Therapeutics Volume 8 ; 2012 ; 8 ; http://www.cancerjournal.net/ >
@@ -2438,21 +2438,21 @@
     # instead of by a listing like this: http://www.jcnonweb.com/backissues.asp
     # does have a lockss/clockss permission statement. http://www.carcinogenesis.com/lockss.txt
 
-    au < exists ; 2002 ; Journal of Carcinogenesis Volume 1 ; 2002 ; 1 ; http://www.carcinogenesis.com/ >
-    au < exists ; 2003 ; Journal of Carcinogenesis Volume 2 ; 2003 ; 2 ; http://www.carcinogenesis.com/ >
-    au < exists ; 2004 ; Journal of Carcinogenesis Volume 3 ; 2004 ; 3 ; http://www.carcinogenesis.com/ >
-    au < exists ; 2005 ; Journal of Carcinogenesis Volume 4 ; 2005 ; 4 ; http://www.carcinogenesis.com/ >
-    au < exists ; 2006 ; Journal of Carcinogenesis Volume 5 ; 2006 ; 5 ; http://www.carcinogenesis.com/ >
-    au < exists ; 2007 ; Journal of Carcinogenesis Volume 6 ; 2007 ; 6 ; http://www.carcinogenesis.com/ >
-    au < exists ; 2008 ; Journal of Carcinogenesis Volume 7 ; 2008 ; 7 ; http://www.carcinogenesis.com/ >
-    au < exists ; 2009 ; Journal of Carcinogenesis Volume 8 ; 2009 ; 8 ; http://www.carcinogenesis.com/ >
-    au < exists ; 2010 ; Journal of Carcinogenesis Volume 9 ; 2010 ; 9 ; http://www.carcinogenesis.com/ >
-    au < exists ; 2011 ; Journal of Carcinogenesis Volume 10 ; 2011 ; 10 ; http://www.carcinogenesis.com/ >
-    au < exists ; 2012 ; Journal of Carcinogenesis Volume 11 ; 2012 ; 11 ; http://www.carcinogenesis.com/ >
-    au < exists ; 2013 ; Journal of Carcinogenesis Volume 12 ; 2013 ; 12 ; http://www.carcinogenesis.com/ >
-    au < exists ; 2014 ; Journal of Carcinogenesis Volume 13 ; 2014 ; 13 ; http://www.carcinogenesis.com/ >
-    au < exists ; 2015 ; Journal of Carcinogenesis Volume 14 ; 2015 ; 14 ; http://www.carcinogenesis.com/ >
-    au < exists ; 2016 ; Journal of Carcinogenesis Volume 15 ; 2016 ; 15 ; http://www.carcinogenesis.com/ >
+    au < manifest ; 2002 ; Journal of Carcinogenesis Volume 1 ; 2002 ; 1 ; http://www.carcinogenesis.com/ >
+    au < manifest ; 2003 ; Journal of Carcinogenesis Volume 2 ; 2003 ; 2 ; http://www.carcinogenesis.com/ >
+    au < manifest ; 2004 ; Journal of Carcinogenesis Volume 3 ; 2004 ; 3 ; http://www.carcinogenesis.com/ >
+    au < manifest ; 2005 ; Journal of Carcinogenesis Volume 4 ; 2005 ; 4 ; http://www.carcinogenesis.com/ >
+    au < manifest ; 2006 ; Journal of Carcinogenesis Volume 5 ; 2006 ; 5 ; http://www.carcinogenesis.com/ >
+    au < manifest ; 2007 ; Journal of Carcinogenesis Volume 6 ; 2007 ; 6 ; http://www.carcinogenesis.com/ >
+    au < manifest ; 2008 ; Journal of Carcinogenesis Volume 7 ; 2008 ; 7 ; http://www.carcinogenesis.com/ >
+    au < manifest ; 2009 ; Journal of Carcinogenesis Volume 8 ; 2009 ; 8 ; http://www.carcinogenesis.com/ >
+    au < manifest ; 2010 ; Journal of Carcinogenesis Volume 9 ; 2010 ; 9 ; http://www.carcinogenesis.com/ >
+    au < manifest ; 2011 ; Journal of Carcinogenesis Volume 10 ; 2011 ; 10 ; http://www.carcinogenesis.com/ >
+    au < manifest ; 2012 ; Journal of Carcinogenesis Volume 11 ; 2012 ; 11 ; http://www.carcinogenesis.com/ >
+    au < manifest ; 2013 ; Journal of Carcinogenesis Volume 12 ; 2013 ; 12 ; http://www.carcinogenesis.com/ >
+    au < manifest ; 2014 ; Journal of Carcinogenesis Volume 13 ; 2014 ; 13 ; http://www.carcinogenesis.com/ >
+    au < manifest ; 2015 ; Journal of Carcinogenesis Volume 14 ; 2015 ; 14 ; http://www.carcinogenesis.com/ >
+    au < manifest ; 2016 ; Journal of Carcinogenesis Volume 15 ; 2016 ; 15 ; http://www.carcinogenesis.com/ >
     au < manifest ; 2017 ; Journal of Carcinogenesis Volume 16 ; 2017 ; 16 ; http://www.carcinogenesis.com/ >
     au < manifest ; 2018 ; Journal of Carcinogenesis Volume 17 ; 2018 ; 17 ; http://www.carcinogenesis.com/ >
     au < manifest ; 2019 ; Journal of Carcinogenesis Volume 18 ; 2019 ; 18 ; http://www.carcinogenesis.com/ >
@@ -2525,8 +2525,8 @@
     au < released ; 2016 ; Journal of Clinical Neonatology Volume 5 ; 2016 ; 5 ; http://www.jcnonweb.com/ >
     au < released ; 2017 ; Journal of Clinical Neonatology Volume 6 ; 2017 ; 6 ; http://www.jcnonweb.com/ >
     au < released ; 2018 ; Journal of Clinical Neonatology Volume 7 ; 2018 ; 7 ; http://www.jcnonweb.com/ >
-    au < exists ; 2019 ; Journal of Clinical Neonatology Volume 8 ; 2019 ; 8 ; https://www.jcnonweb.com/ >
-    au < exists ; 2020 ; Journal of Clinical Neonatology Volume 9 ; 2020 ; 9 ; https://www.jcnonweb.com/ >
+    au < manifest ; 2019 ; Journal of Clinical Neonatology Volume 8 ; 2019 ; 8 ; https://www.jcnonweb.com/ >
+    au < manifest ; 2020 ; Journal of Clinical Neonatology Volume 9 ; 2020 ; 9 ; https://www.jcnonweb.com/ >
 
   }
 
@@ -2561,13 +2561,13 @@
     au < manifest ; 1998 ; Journal of Conservative Dentistry Volume 1 ; 1998 ; 1 ; https://www.jcd.org.in/ >
     au < manifest ; 1999 ; Journal of Conservative Dentistry Volume 2 ; 1999 ; 2 ; https://www.jcd.org.in/ >
     au < manifest ; 2000 ; Journal of Conservative Dentistry Volume 3 ; 2000 ; 3 ; https://www.jcd.org.in/ >
-    au < exists ; 2001 ; Journal of Conservative Dentistry Volume 4 ; 2001 ; 4 ; https://www.jcd.org.in/ >
-    au < exists ; 2002 ; Journal of Conservative Dentistry Volume 5 ; 2002 ; 5 ; https://www.jcd.org.in/ >
-    au < exists ; 2003 ; Journal of Conservative Dentistry Volume 6 ; 2003 ; 6 ; https://www.jcd.org.in/ >
-    au < exists ; 2004 ; Journal of Conservative Dentistry Volume 7 ; 2004 ; 7 ; https://www.jcd.org.in/ >
-    au < exists ; 2005 ; Journal of Conservative Dentistry Volume 8 ; 2005 ; 8 ; https://www.jcd.org.in/ >
+    au < manifest ; 2001 ; Journal of Conservative Dentistry Volume 4 ; 2001 ; 4 ; https://www.jcd.org.in/ >
+    au < manifest ; 2002 ; Journal of Conservative Dentistry Volume 5 ; 2002 ; 5 ; https://www.jcd.org.in/ >
+    au < manifest ; 2003 ; Journal of Conservative Dentistry Volume 6 ; 2003 ; 6 ; https://www.jcd.org.in/ >
+    au < manifest ; 2004 ; Journal of Conservative Dentistry Volume 7 ; 2004 ; 7 ; https://www.jcd.org.in/ >
+    au < manifest ; 2005 ; Journal of Conservative Dentistry Volume 8 ; 2005 ; 8 ; https://www.jcd.org.in/ >
     au < manifest ; 2006 ; Journal of Conservative Dentistry Volume 9 ; 2006 ; 9 ; https://www.jcd.org.in/ >
-    au < exists ; 2007 ; Journal of Conservative Dentistry Volume 10 ; 2007 ; 10 ; https://www.jcd.org.in/ >
+    au < manifest ; 2007 ; Journal of Conservative Dentistry Volume 10 ; 2007 ; 10 ; https://www.jcd.org.in/ >
     au < manifest ; 2008 ; Journal of Conservative Dentistry Volume 11 ; 2008 ; 11 ; https://www.jcd.org.in/ >
     au < manifest ; 2009 ; Journal of Conservative Dentistry Volume 12 ; 2009 ; 12 ; https://www.jcd.org.in/ >
     au < manifest ; 2010 ; Journal of Conservative Dentistry Volume 13 ; 2010 ; 13 ; https://www.jcd.org.in/ >
@@ -2579,8 +2579,8 @@
     au < released ; 2016 ; Journal of Conservative Dentistry Volume 19 ; 2016 ; 19 ; http://www.jcd.org.in/ >
     au < released ; 2017 ; Journal of Conservative Dentistry Volume 20 ; 2017 ; 20 ; http://www.jcd.org.in/ >
     au < released ; 2018 ; Journal of Conservative Dentistry Volume 21 ; 2018 ; 21 ; http://www.jcd.org.in/ >
-    au < exists ; 2019 ; Journal of Conservative Dentistry Volume 22 ; 2019 ; 22 ; https://www.jcd.org.in/ >
-    au < expected ; 2020 ; Journal of Conservative Dentistry Volume 23 ; 2020 ; 23 ; https://www.jcd.org.in/ >
+    au < manifest ; 2019 ; Journal of Conservative Dentistry Volume 22 ; 2019 ; 22 ; https://www.jcd.org.in/ >
+    au < manifest ; 2020 ; Journal of Conservative Dentistry Volume 23 ; 2020 ; 23 ; https://www.jcd.org.in/ >
 
   }
 
@@ -2595,7 +2595,7 @@
 #    param[base_url] = http://www.jcvjs.com/
     param[journal_issn] = 0974-8237
 
-    au < exists ; 2010 ; Journal of Craniovertebral Junction and Spine Volume 1 ; 2010 ; 1 ; https://www.jcvjs.com/ >
+    au < manifest ; 2010 ; Journal of Craniovertebral Junction and Spine Volume 1 ; 2010 ; 1 ; https://www.jcvjs.com/ >
     au < released ; 2011 ; Journal of Craniovertebral Junction and Spine Volume 2 ; 2011 ; 2 ; http://www.jcvjs.com/ >
     au < released ; 2012 ; Journal of Craniovertebral Junction and Spine Volume 3 ; 2012 ; 3 ; http://www.jcvjs.com/ >
     au < released ; 2013 ; Journal of Craniovertebral Junction and Spine Volume 4 ; 2013 ; 4 ; http://www.jcvjs.com/ >
@@ -2604,8 +2604,8 @@
     au < released ; 2016 ; Journal of Craniovertebral Junction and Spine Volume 7 ; 2016 ; 7 ; http://www.jcvjs.com/ >
     au < released ; 2017 ; Journal of Craniovertebral Junction and Spine Volume 8 ; 2017 ; 8 ; http://www.jcvjs.com/ >
     au < released ; 2018 ; Journal of Craniovertebral Junction and Spine Volume 9 ; 2018 ; 9 ; http://www.jcvjs.com/ >
-    au < exists ; 2019 ; Journal of Craniovertebral Junction and Spine Volume 10 ; 2019 ; 10 ; https://www.jcvjs.com/ >
-    au < exists ; 2020 ; Journal of Craniovertebral Junction and Spine Volume 11 ; 2020 ; 11 ; https://www.jcvjs.com/ >
+    au < manifest ; 2019 ; Journal of Craniovertebral Junction and Spine Volume 10 ; 2019 ; 10 ; https://www.jcvjs.com/ >
+    au < manifest ; 2020 ; Journal of Craniovertebral Junction and Spine Volume 11 ; 2020 ; 11 ; https://www.jcvjs.com/ >
 
   }
   
@@ -2620,8 +2620,8 @@
 #    param[base_url] = http://www.jcasonline.com/
     param[journal_issn] = 0974-2077
 
-    au < exists ; 2008 ; Journal of Cutaneous and Aesthetic Surgery Volume 1 ; 2008 ; 1 ; https://www.jcasonline.com/ >
-    au < exists ; 2009 ; Journal of Cutaneous and Aesthetic Surgery Volume 2 ; 2009 ; 2 ; https://www.jcasonline.com/ >
+    au < manifest ; 2008 ; Journal of Cutaneous and Aesthetic Surgery Volume 1 ; 2008 ; 1 ; https://www.jcasonline.com/ >
+    au < manifest ; 2009 ; Journal of Cutaneous and Aesthetic Surgery Volume 2 ; 2009 ; 2 ; https://www.jcasonline.com/ >
     au < manifest ; 2010 ; Journal of Cutaneous and Aesthetic Surgery Volume 3 ; 2010 ; 3 ; https://www.jcasonline.com/ >
     au < released ; 2011 ; Journal of Cutaneous and Aesthetic Surgery Volume 4 ; 2011 ; 4 ; http://www.jcasonline.com/ >
     au < released ; 2012 ; Journal of Cutaneous and Aesthetic Surgery Volume 5 ; 2012 ; 5 ; http://www.jcasonline.com/ >
@@ -2631,8 +2631,8 @@
     au < released ; 2016 ; Journal of Cutaneous and Aesthetic Surgery Volume 9 ; 2016 ; 9 ; http://www.jcasonline.com/ >
     au < released ; 2017 ; Journal of Cutaneous and Aesthetic Surgery Volume 10 ; 2017 ; 10 ; http://www.jcasonline.com/ >
     au < released ; 2018 ; Journal of Cutaneous and Aesthetic Surgery Volume 11 ; 2018 ; 11 ; http://www.jcasonline.com/ >
-    au < exists ; 2019 ; Journal of Cutaneous and Aesthetic Surgery Volume 12 ; 2019 ; 12 ; https://www.jcasonline.com/ >
-    au < exists ; 2020 ; Journal of Cutaneous and Aesthetic Surgery Volume 13 ; 2020 ; 13 ; https://www.jcasonline.com/ >
+    au < manifest ; 2019 ; Journal of Cutaneous and Aesthetic Surgery Volume 12 ; 2019 ; 12 ; https://www.jcasonline.com/ >
+    au < manifest ; 2020 ; Journal of Cutaneous and Aesthetic Surgery Volume 13 ; 2020 ; 13 ; https://www.jcasonline.com/ >
 
   }
 
@@ -2659,7 +2659,7 @@
     au < released ; 2016 ; Journal of Cytology Volume 33 ; 2016 ; 33 ; http://www.jcytol.org/ >
     au < released ; 2017 ; Journal of Cytology Volume 34 ; 2017 ; 34 ; http://www.jcytol.org/ >
     au < released ; 2018 ; Journal of Cytology Volume 35 ; 2018 ; 35 ; http://www.jcytol.org/ >
-    au < exists ; 2019 ; Journal of Cytology Volume 36 ; 2019 ; 36 ; https://www.jcytol.org/ >
+    au < manifest ; 2019 ; Journal of Cytology Volume 36 ; 2019 ; 36 ; https://www.jcytol.org/ >
     au < manifest ; 2020 ; Journal of Cytology Volume 37 ; 2020 ; 37 ; https://www.jcytol.org/ >
 
   }
@@ -2683,8 +2683,8 @@
     au < released ; 2016 ; Journal of Dental Implants Volume 6 ; 2016 ; 6 ; http://www.jdionline.org/ >
     au < released ; 2017 ; Journal of Dental Implants Volume 7 ; 2017 ; 7 ; http://www.jdionline.org/ >
     au < released ; 2018 ; Journal of Dental Implants Volume 8 ; 2018 ; 8 ; http://www.jdionline.org/ >
-    au < exists ; 2019 ; Journal of Dental Implants Volume 9 ; 2019 ; 9 ; https://www.jdionline.org/ >
-    au < exists ; 2020 ; Journal of Dental Implants Volume 10 ; 2020 ; 10 ; https://www.jdionline.org/ >
+    au < manifest ; 2019 ; Journal of Dental Implants Volume 9 ; 2019 ; 9 ; https://www.jdionline.org/ >
+    au < manifest ; 2020 ; Journal of Dental Implants Volume 10 ; 2020 ; 10 ; https://www.jdionline.org/ >
 
   }
 
@@ -2729,8 +2729,8 @@
     au < released ; 2016 ; Journal of Emergencies, Trauma, and Shock Volume 9 ; 2016 ; 9 ; http://www.onlinejets.org/ >
     au < released ; 2017 ; Journal of Emergencies, Trauma, and Shock Volume 10 ; 2017 ; 10 ; http://www.onlinejets.org/ >
     au < released ; 2018 ; Journal of Emergencies, Trauma, and Shock Volume 11 ; 2018 ; 11 ; http://www.onlinejets.org/ >
-    au < exists ; 2019 ; Journal of Emergencies, Trauma, and Shock Volume 12 ; 2019 ; 12 ; https://www.onlinejets.org/ >
-    au < exists ; 2020 ; Journal of Emergencies, Trauma, and Shock Volume 13 ; 2020 ; 13 ; https://www.onlinejets.org/ >
+    au < manifest ; 2019 ; Journal of Emergencies, Trauma, and Shock Volume 12 ; 2019 ; 12 ; https://www.onlinejets.org/ >
+    au < manifest ; 2020 ; Journal of Emergencies, Trauma, and Shock Volume 13 ; 2020 ; 13 ; https://www.onlinejets.org/ >
 
   }
 
@@ -2764,23 +2764,23 @@
 #    param[base_url] = http://www.jfcmonline.com/
     param[journal_issn] = 2230-8229
 
-    au < exists ; 1994 ; Journal of Family and Community Medicine Volume 1 ; 1994 ; 1 ; https://www.jfcmonline.com/ >
-    au < exists ; 1995 ; Journal of Family and Community Medicine Volume 2 ; 1995 ; 2 ; https://www.jfcmonline.com/ >
+    au < manifest ; 1994 ; Journal of Family and Community Medicine Volume 1 ; 1994 ; 1 ; https://www.jfcmonline.com/ >
+    au < manifest ; 1995 ; Journal of Family and Community Medicine Volume 2 ; 1995 ; 2 ; https://www.jfcmonline.com/ >
     au < manifest ; 1996 ; Journal of Family and Community Medicine Volume 3 ; 1996 ; 3 ; https://www.jfcmonline.com/ >
     au < manifest ; 1997 ; Journal of Family and Community Medicine Volume 4 ; 1997 ; 4 ; https://www.jfcmonline.com/ >
-    au < exists ; 1998 ; Journal of Family and Community Medicine Volume 5 ; 1998 ; 5 ; https://www.jfcmonline.com/ >
-    au < exists ; 1999 ; Journal of Family and Community Medicine Volume 6 ; 1999 ; 6 ; https://www.jfcmonline.com/ >
+    au < manifest ; 1998 ; Journal of Family and Community Medicine Volume 5 ; 1998 ; 5 ; https://www.jfcmonline.com/ >
+    au < manifest ; 1999 ; Journal of Family and Community Medicine Volume 6 ; 1999 ; 6 ; https://www.jfcmonline.com/ >
     au < manifest ; 2000 ; Journal of Family and Community Medicine Volume 7 ; 2000 ; 7 ; https://www.jfcmonline.com/ >
-    au < exists ; 2001 ; Journal of Family and Community Medicine Volume 8 ; 2001 ; 8 ; https://www.jfcmonline.com/ >
-    au < exists ; 2002 ; Journal of Family and Community Medicine Volume 9 ; 2002 ; 9 ; https://www.jfcmonline.com/ >
-    au < exists ; 2003 ; Journal of Family and Community Medicine Volume 10 ; 2003 ; 10 ; https://www.jfcmonline.com/ >
-    au < exists ; 2004 ; Journal of Family and Community Medicine Volume 11 ; 2004 ; 11 ; https://www.jfcmonline.com/ >
+    au < manifest ; 2001 ; Journal of Family and Community Medicine Volume 8 ; 2001 ; 8 ; https://www.jfcmonline.com/ >
+    au < manifest ; 2002 ; Journal of Family and Community Medicine Volume 9 ; 2002 ; 9 ; https://www.jfcmonline.com/ >
+    au < manifest ; 2003 ; Journal of Family and Community Medicine Volume 10 ; 2003 ; 10 ; https://www.jfcmonline.com/ >
+    au < manifest ; 2004 ; Journal of Family and Community Medicine Volume 11 ; 2004 ; 11 ; https://www.jfcmonline.com/ >
     au < manifest ; 2005 ; Journal of Family and Community Medicine Volume 12 ; 2005 ; 12 ; https://www.jfcmonline.com/ >
     au < manifest ; 2006 ; Journal of Family and Community Medicine Volume 13 ; 2006 ; 13 ; https://www.jfcmonline.com/ >
     au < manifest ; 2007 ; Journal of Family and Community Medicine Volume 14 ; 2007 ; 14 ; https://www.jfcmonline.com/ >
-    au < exists ; 2008 ; Journal of Family and Community Medicine Volume 15 ; 2008 ; 15 ; https://www.jfcmonline.com/ >
-    au < exists ; 2009 ; Journal of Family and Community Medicine Volume 16 ; 2009 ; 16 ; https://www.jfcmonline.com/ >
-    au < exists ; 2010 ; Journal of Family and Community Medicine Volume 17 ; 2010 ; 17 ; https://www.jfcmonline.com/ >
+    au < manifest ; 2008 ; Journal of Family and Community Medicine Volume 15 ; 2008 ; 15 ; https://www.jfcmonline.com/ >
+    au < manifest ; 2009 ; Journal of Family and Community Medicine Volume 16 ; 2009 ; 16 ; https://www.jfcmonline.com/ >
+    au < manifest ; 2010 ; Journal of Family and Community Medicine Volume 17 ; 2010 ; 17 ; https://www.jfcmonline.com/ >
     au < released ; 2011 ; Journal of Family and Community Medicine Volume 18 ; 2011 ; 18 ; http://www.jfcmonline.com/ >
     au < released ; 2012 ; Journal of Family and Community Medicine Volume 19 ; 2012 ; 19 ; http://www.jfcmonline.com/ >
     au < released ; 2013 ; Journal of Family and Community Medicine Volume 20 ; 2013 ; 20 ; http://www.jfcmonline.com/ >
@@ -2789,7 +2789,7 @@
     au < released ; 2016 ; Journal of Family and Community Medicine Volume 23 ; 2016 ; 23 ; http://www.jfcmonline.com/ >
     au < released ; 2017 ; Journal of Family and Community Medicine Volume 24 ; 2017 ; 24 ; http://www.jfcmonline.com/ >
     au < released ; 2018 ; Journal of Family and Community Medicine Volume 25 ; 2018 ; 25 ; http://www.jfcmonline.com/ >
-    au < exists ; 2019 ; Journal of Family and Community Medicine Volume 26 ; 2019 ; 26 ; https://www.jfcmonline.com/ >
+    au < manifest ; 2019 ; Journal of Family and Community Medicine Volume 26 ; 2019 ; 26 ; https://www.jfcmonline.com/ >
     au < manifest ; 2020 ; Journal of Family and Community Medicine Volume 27 ; 2020 ; 27 ; https://www.jfcmonline.com/ >
 
   }
@@ -2828,8 +2828,8 @@
 #    param[base_url] = http://www.jfds.org/
     param[journal_issn] = 0975-1475
 
-    au < exists ; 2009 ; Journal of Forensic Dental Sciences Volume 1 ; 2009 ; 1 ; https://www.jfds.org/ >
-    au < exists ; 2010 ; Journal of Forensic Dental Sciences Volume 2 ; 2010 ; 2 ; https://www.jfds.org/ >
+    au < manifest ; 2009 ; Journal of Forensic Dental Sciences Volume 1 ; 2009 ; 1 ; https://www.jfds.org/ >
+    au < manifest ; 2010 ; Journal of Forensic Dental Sciences Volume 2 ; 2010 ; 2 ; https://www.jfds.org/ >
     au < released ; 2011 ; Journal of Forensic Dental Sciences Volume 3 ; 2011 ; 3 ; http://www.jfds.org/ >
     au < released ; 2012 ; Journal of Forensic Dental Sciences Volume 4 ; 2012 ; 4 ; http://www.jfds.org/ >
     au < released ; 2013 ; Journal of Forensic Dental Sciences Volume 5 ; 2013 ; 5 ; http://www.jfds.org/ >
@@ -2838,7 +2838,7 @@
     au < released ; 2016 ; Journal of Forensic Dental Sciences Volume 8 ; 2016 ; 8 ; http://www.jfds.org/ >
     au < released ; 2017 ; Journal of Forensic Dental Sciences Volume 9 ; 2017 ; 9 ; http://www.jfds.org/ >
     au < released ; 2018 ; Journal of Forensic Dental Sciences Volume 10 ; 2018 ; 10 ; http://www.jfds.org/ >
-    au < exists ; 2019 ; Journal of Forensic Dental Sciences Volume 11 ; 2019 ; 11 ; https://www.jfds.org/ >
+    au < manifest ; 2019 ; Journal of Forensic Dental Sciences Volume 11 ; 2019 ; 11 ; https://www.jfds.org/ >
     au < expected ; 2020 ; Journal of Forensic Dental Sciences Volume 12 ; 2020 ; 12 ; https://www.jfds.org/ >
 
   }
@@ -2854,8 +2854,8 @@
 #    param[base_url] = http://www.jgid.org/
     param[journal_issn] = 0974-777X
 
-    au < exists ; 2009 ; Journal of Global Infectious Diseases Volume 1 ; 2009 ; 1 ; https://www.jgid.org/ >
-    au < exists ; 2010 ; Journal of Global Infectious Diseases Volume 2 ; 2010 ; 2 ; https://www.jgid.org/ >
+    au < manifest ; 2009 ; Journal of Global Infectious Diseases Volume 1 ; 2009 ; 1 ; https://www.jgid.org/ >
+    au < manifest ; 2010 ; Journal of Global Infectious Diseases Volume 2 ; 2010 ; 2 ; https://www.jgid.org/ >
     au < released ; 2011 ; Journal of Global Infectious Diseases Volume 3 ; 2011 ; 3 ; http://www.jgid.org/ >
     au < released ; 2012 ; Journal of Global Infectious Diseases Volume 4 ; 2012 ; 4 ; http://www.jgid.org/ >
     au < released ; 2013 ; Journal of Global Infectious Diseases Volume 5 ; 2013 ; 5 ; http://www.jgid.org/ >
@@ -2864,8 +2864,8 @@
     au < released ; 2016 ; Journal of Global Infectious Diseases Volume 8 ; 2016 ; 8 ; http://www.jgid.org/ >
     au < released ; 2017 ; Journal of Global Infectious Diseases Volume 9 ; 2017 ; 9 ; http://www.jgid.org/ >
     au < released ; 2018 ; Journal of Global Infectious Diseases Volume 10 ; 2018 ; 10 ; http://www.jgid.org/ >
-    au < exists ; 2019 ; Journal of Global Infectious Diseases Volume 11 ; 2019 ; 11 ; https://www.jgid.org/ >
-    au < exists ; 2020 ; Journal of Global Infectious Diseases Volume 12 ; 2020 ; 12 ; https://www.jgid.org/ >
+    au < manifest ; 2019 ; Journal of Global Infectious Diseases Volume 11 ; 2019 ; 11 ; https://www.jgid.org/ >
+    au < manifest ; 2020 ; Journal of Global Infectious Diseases Volume 12 ; 2020 ; 12 ; https://www.jgid.org/ >
 
   }
 
@@ -2896,9 +2896,9 @@
 #    param[base_url] = http://www.jhrsonline.org/
     param[journal_issn] = 0974-1208
 
-    au < exists ; 2008 ; Journal of Human Reproductive Sciences Volume 1 ; 2008 ; 1 ; https://www.jhrsonline.org/ >
+    au < manifest ; 2008 ; Journal of Human Reproductive Sciences Volume 1 ; 2008 ; 1 ; https://www.jhrsonline.org/ >
     au < manifest ; 2009 ; Journal of Human Reproductive Sciences Volume 2 ; 2009 ; 2 ; https://www.jhrsonline.org/ >
-    au < exists ; 2010 ; Journal of Human Reproductive Sciences Volume 3 ; 2010 ; 3 ; https://www.jhrsonline.org/ >
+    au < manifest ; 2010 ; Journal of Human Reproductive Sciences Volume 3 ; 2010 ; 3 ; https://www.jhrsonline.org/ >
     au < released ; 2011 ; Journal of Human Reproductive Sciences Volume 4 ; 2011 ; 4 ; http://www.jhrsonline.org/ >
     au < released ; 2012 ; Journal of Human Reproductive Sciences Volume 5 ; 2012 ; 5 ; http://www.jhrsonline.org/ >
     au < released ; 2013 ; Journal of Human Reproductive Sciences Volume 6 ; 2013 ; 6 ; http://www.jhrsonline.org/ >
@@ -2907,7 +2907,7 @@
     au < released ; 2016 ; Journal of Human Reproductive Sciences Volume 9 ; 2016 ; 9 ; http://www.jhrsonline.org/ >
     au < released ; 2017 ; Journal of Human Reproductive Sciences Volume 10 ; 2017 ; 10 ; http://www.jhrsonline.org/ >
     au < released ; 2018 ; Journal of Human Reproductive Sciences Volume 11 ; 2018 ; 11 ; http://www.jhrsonline.org/ >
-    au < exists ; 2019 ; Journal of Human Reproductive Sciences Volume 12 ; 2019 ; 12 ; https://www.jhrsonline.org/ >
+    au < manifest ; 2019 ; Journal of Human Reproductive Sciences Volume 12 ; 2019 ; 12 ; https://www.jhrsonline.org/ >
     au < manifest ; 2020 ; Journal of Human Reproductive Sciences Volume 13 ; 2020 ; 13 ; https://www.jhrsonline.org/ >
 
   }
@@ -2927,11 +2927,11 @@
     au < manifest ; 1997 ; Journal of Indian Association of Pediatric Surgeons Volume 2 ; 1997 ; 2 ; https://www.jiaps.com/ >
     au < manifest ; 1998 ; Journal of Indian Association of Pediatric Surgeons Volume 3 ; 1998 ; 3 ; https://www.jiaps.com/ >
     au < manifest ; 1999 ; Journal of Indian Association of Pediatric Surgeons Volume 4 ; 1999 ; 4 ; https://www.jiaps.com/ >
-    au < exists ; 2000 ; Journal of Indian Association of Pediatric Surgeons Volume 5 ; 2000 ; 5 ; https://www.jiaps.com/ >
-    au < exists ; 2001 ; Journal of Indian Association of Pediatric Surgeons Volume 6 ; 2001 ; 6 ; https://www.jiaps.com/ >
-    au < exists ; 2002 ; Journal of Indian Association of Pediatric Surgeons Volume 7 ; 2002 ; 7 ; https://www.jiaps.com/ >
+    au < manifest ; 2000 ; Journal of Indian Association of Pediatric Surgeons Volume 5 ; 2000 ; 5 ; https://www.jiaps.com/ >
+    au < manifest ; 2001 ; Journal of Indian Association of Pediatric Surgeons Volume 6 ; 2001 ; 6 ; https://www.jiaps.com/ >
+    au < manifest ; 2002 ; Journal of Indian Association of Pediatric Surgeons Volume 7 ; 2002 ; 7 ; https://www.jiaps.com/ >
     au < manifest ; 2003 ; Journal of Indian Association of Pediatric Surgeons Volume 8 ; 2003 ; 8 ; https://www.jiaps.com/ >
-    au < exists ; 2004 ; Journal of Indian Association of Pediatric Surgeons Volume 9 ; 2004 ; 9 ; https://www.jiaps.com/ >
+    au < manifest ; 2004 ; Journal of Indian Association of Pediatric Surgeons Volume 9 ; 2004 ; 9 ; https://www.jiaps.com/ >
     au < manifest ; 2005 ; Journal of Indian Association of Pediatric Surgeons Volume 10 ; 2005 ; 10 ; https://www.jiaps.com/ >
     au < manifest ; 2006 ; Journal of Indian Association of Pediatric Surgeons Volume 11 ; 2006 ; 11 ; https://www.jiaps.com/ >
     au < manifest ; 2007 ; Journal of Indian Association of Pediatric Surgeons Volume 12 ; 2007 ; 12 ; https://www.jiaps.com/ >
@@ -2966,14 +2966,14 @@
     au < manifest ; 1997 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 15 ; 1997 ; 15 ; https://www.jisppd.com/ >
     au < manifest ; 1998 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 16 ; 1998 ; 16 ; https://www.jisppd.com/ >
     au < manifest ; 1999 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 17 ; 1999 ; 17 ; https://www.jisppd.com/ >
-    au < exists ; 2000 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 18 ; 2000 ; 18 ; https://www.jisppd.com/ >
+    au < manifest ; 2000 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 18 ; 2000 ; 18 ; https://www.jisppd.com/ >
     au < manifest ; 2001 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 19 ; 2001 ; 19 ; https://www.jisppd.com/ >
-    au < exists ; 2002 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 20 ; 2002 ; 20 ; https://www.jisppd.com/ >
+    au < manifest ; 2002 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 20 ; 2002 ; 20 ; https://www.jisppd.com/ >
     au < manifest ; 2003 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 21 ; 2003 ; 21 ; https://www.jisppd.com/ >
     au < manifest ; 2004 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 22 ; 2004 ; 22 ; https://www.jisppd.com/ >
     au < manifest ; 2005 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 23 ; 2005 ; 23 ; https://www.jisppd.com/ >
     au < manifest ; 2006 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 24 ; 2006 ; 24 ; https://www.jisppd.com/ >
-    au < exists ; 2007 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 25 ; 2007 ; 25 ; https://www.jisppd.com/ >
+    au < manifest ; 2007 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 25 ; 2007 ; 25 ; https://www.jisppd.com/ >
     au < manifest ; 2008 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 26 ; 2008 ; 26 ; https://www.jisppd.com/ >
     au < manifest ; 2009 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 27 ; 2009 ; 27 ; https://www.jisppd.com/ >
     au < manifest ; 2010 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 28 ; 2010 ; 28 ; https://www.jisppd.com/ >
@@ -2986,7 +2986,7 @@
     au < released ; 2017 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 35 ; 2017 ; 35 ; http://www.jisppd.com/ >
     au < released ; 2018 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 36 ; 2018 ; 36 ; http://www.jisppd.com/ >
     au < manifest ; 2019 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 37 ; 2019 ; 37 ; https://www.jisppd.com/ >
-    au < exists ; 2020 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 38 ; 2020 ; 38 ; https://www.jisppd.com/ >
+    au < manifest ; 2020 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 38 ; 2020 ; 38 ; https://www.jisppd.com/ >
 
   }
 
@@ -3061,7 +3061,7 @@
     au < released ; 2017 ; Journal of International Society of Preventive and Community Dentistry Volume 7 ; 2017 ; 7 ; http://www.jispcd.org/ >
     au < released ; 2018 ; Journal of International Society of Preventive and Community Dentistry Volume 8 ; 2018 ; 8 ; http://www.jispcd.org/ >
     au < manifest ; 2019 ; Journal of International Society of Preventive and Community Dentistry Volume 9 ; 2019 ; 9 ; https://www.jispcd.org/ >
-    au < exists ; 2020 ; Journal of International Society of Preventive and Community Dentistry Volume 10 ; 2020 ; 10 ; https://www.jispcd.org/ >
+    au < manifest ; 2020 ; Journal of International Society of Preventive and Community Dentistry Volume 10 ; 2020 ; 10 ; https://www.jispcd.org/ >
 
   }
     
@@ -3110,8 +3110,8 @@
     au < released ; 2016 ; Journal of Laryngology and Voice Volume 6 ; 2016 ; 6 ; http://www.laryngologyandvoice.org/ >
     au < released ; 2017 ; Journal of Laryngology and Voice Volume 7 ; 2017 ; 7 ; http://www.laryngologyandvoice.org/ >
     au < manifest ; 2018 ; Journal of Laryngology and Voice Volume 8 ; 2018 ; 8 ; https://www.laryngologyandvoice.org/ >
-    au < exists ; 2019 ; Journal of Laryngology and Voice Volume 9 ; 2019 ; 9 ; https://www.laryngologyandvoice.org/ >
-    au < expected ; 2020 ; Journal of Laryngology and Voice Volume 10 ; 2020 ; 10 ; https://www.laryngologyandvoice.org/ >
+    au < manifest ; 2019 ; Journal of Laryngology and Voice Volume 9 ; 2019 ; 9 ; https://www.laryngologyandvoice.org/ >
+    au < manifest ; 2020 ; Journal of Laryngology and Voice Volume 10 ; 2020 ; 10 ; https://www.laryngologyandvoice.org/ >
 
   }
 
@@ -3133,32 +3133,32 @@
     au < doesNotExist ; 1982 ; Journal of Medical Physics Volume 7 ; 0 ; 0 ; http://www.jmp.org.in/ >
     au < manifest ; 1983 ; Journal of Medical Physics Volume 8 ; 1983 ; 8 ; https://www.jmp.org.in/ >
     au < manifest ; 1984 ; Journal of Medical Physics Volume 9 ; 1984 ; 9 ; https://www.jmp.org.in/ >
-    au < exists ; 1985 ; Journal of Medical Physics Volume 10 ; 1985 ; 10 ; https://www.jmp.org.in/ >
+    au < manifest ; 1985 ; Journal of Medical Physics Volume 10 ; 1985 ; 10 ; https://www.jmp.org.in/ >
     au < manifest ; 1986 ; Journal of Medical Physics Volume 11 ; 1986 ; 11 ; https://www.jmp.org.in/ >
-    au < exists ; 1987 ; Journal of Medical Physics Volume 12 ; 1987 ; 12 ; https://www.jmp.org.in/ >
+    au < manifest ; 1987 ; Journal of Medical Physics Volume 12 ; 1987 ; 12 ; https://www.jmp.org.in/ >
     au < manifest ; 1988 ; Journal of Medical Physics Volume 13 ; 1988 ; 13 ; https://www.jmp.org.in/ >
-    au < exists ; 1989 ; Journal of Medical Physics Volume 14 ; 1989 ; 14 ; https://www.jmp.org.in/ >
-    au < exists ; 1990 ; Journal of Medical Physics Volume 15 ; 1990 ; 15 ; https://www.jmp.org.in/ >
-    au < exists ; 1991 ; Journal of Medical Physics Volume 16 ; 1991 ; 16 ; https://www.jmp.org.in/ >
-    au < exists ; 1992 ; Journal of Medical Physics Volume 17 ; 1992 ; 17 ; https://www.jmp.org.in/ >
+    au < manifest ; 1989 ; Journal of Medical Physics Volume 14 ; 1989 ; 14 ; https://www.jmp.org.in/ >
+    au < manifest ; 1990 ; Journal of Medical Physics Volume 15 ; 1990 ; 15 ; https://www.jmp.org.in/ >
+    au < manifest ; 1991 ; Journal of Medical Physics Volume 16 ; 1991 ; 16 ; https://www.jmp.org.in/ >
+    au < manifest ; 1992 ; Journal of Medical Physics Volume 17 ; 1992 ; 17 ; https://www.jmp.org.in/ >
     au < manifest ; 1993 ; Journal of Medical Physics Volume 18 ; 1993 ; 18 ; https://www.jmp.org.in/ >
     au < manifest ; 1994 ; Journal of Medical Physics Volume 19 ; 1994 ; 19 ; https://www.jmp.org.in/ >
     au < manifest ; 1995 ; Journal of Medical Physics Volume 20 ; 1995 ; 20 ; https://www.jmp.org.in/ >
-    au < exists ; 1996 ; Journal of Medical Physics Volume 21 ; 1996 ; 21 ; https://www.jmp.org.in/ >
-    au < exists ; 1997 ; Journal of Medical Physics Volume 22 ; 1997 ; 22 ; https://www.jmp.org.in/ >
+    au < manifest ; 1996 ; Journal of Medical Physics Volume 21 ; 1996 ; 21 ; https://www.jmp.org.in/ >
+    au < manifest ; 1997 ; Journal of Medical Physics Volume 22 ; 1997 ; 22 ; https://www.jmp.org.in/ >
     au < manifest ; 1998 ; Journal of Medical Physics Volume 23 ; 1998 ; 23 ; https://www.jmp.org.in/ >
-    au < exists ; 1999 ; Journal of Medical Physics Volume 24 ; 1999 ; 24 ; https://www.jmp.org.in/ >
+    au < manifest ; 1999 ; Journal of Medical Physics Volume 24 ; 1999 ; 24 ; https://www.jmp.org.in/ >
     au < manifest ; 2000 ; Journal of Medical Physics Volume 25 ; 2000 ; 25 ; https://www.jmp.org.in/ >
     au < manifest ; 2001 ; Journal of Medical Physics Volume 26 ; 2001 ; 26 ; https://www.jmp.org.in/ >
     au < manifest ; 2002 ; Journal of Medical Physics Volume 27 ; 2002 ; 27 ; https://www.jmp.org.in/ >
-    au < exists ; 2003 ; Journal of Medical Physics Volume 28 ; 2003 ; 28 ; https://www.jmp.org.in/ >
+    au < manifest ; 2003 ; Journal of Medical Physics Volume 28 ; 2003 ; 28 ; https://www.jmp.org.in/ >
     au < manifest ; 2004 ; Journal of Medical Physics Volume 29 ; 2004 ; 29 ; https://www.jmp.org.in/ >
     au < manifest ; 2005 ; Journal of Medical Physics Volume 30 ; 2005 ; 30 ; https://www.jmp.org.in/ >
     au < manifest ; 2006 ; Journal of Medical Physics Volume 31 ; 2006 ; 31 ; https://www.jmp.org.in/ >
     au < manifest ; 2007 ; Journal of Medical Physics Volume 32 ; 2007 ; 32 ; https://www.jmp.org.in/ >
     au < manifest ; 2008 ; Journal of Medical Physics Volume 33 ; 2008 ; 33 ; https://www.jmp.org.in/ >
     au < manifest ; 2009 ; Journal of Medical Physics Volume 34 ; 2009 ; 34 ; https://www.jmp.org.in/ >
-    au < exists ; 2010 ; Journal of Medical Physics Volume 35 ; 2010 ; 35 ; https://www.jmp.org.in/ >
+    au < manifest ; 2010 ; Journal of Medical Physics Volume 35 ; 2010 ; 35 ; https://www.jmp.org.in/ >
     au < released ; 2011 ; Journal of Medical Physics Volume 36 ; 2011 ; 36 ; http://www.jmp.org.in/ >
     au < released ; 2012 ; Journal of Medical Physics Volume 37 ; 2012 ; 37 ; http://www.jmp.org.in/ >
     au < released ; 2013 ; Journal of Medical Physics Volume 38 ; 2013 ; 38 ; http://www.jmp.org.in/ >
@@ -3168,7 +3168,7 @@
     au < released ; 2017 ; Journal of Medical Physics Volume 42 ; 2017 ; 42 ; http://www.jmp.org.in/ >
     au < released ; 2018 ; Journal of Medical Physics Volume 43 ; 2018 ; 43 ; http://www.jmp.org.in/ >
     au < manifest ; 2019 ; Journal of Medical Physics Volume 44 ; 2019 ; 44 ; https://www.jmp.org.in/ >
-    au < exists ; 2020 ; Journal of Medical Physics Volume 45 ; 2020 ; 45 ; https://www.jmp.org.in/ >
+    au < manifest ; 2020 ; Journal of Medical Physics Volume 45 ; 2020 ; 45 ; https://www.jmp.org.in/ >
 
   }
 
@@ -3209,8 +3209,8 @@
     au < released ; 2016 ; Journal of Mid-life Health Volume 7 ; 2016 ; 7 ; http://www.jmidlifehealth.org/ >
     au < released ; 2017 ; Journal of Mid-life Health Volume 8 ; 2017 ; 8 ; http://www.jmidlifehealth.org/ >
     au < released ; 2018 ; Journal of Mid-life Health Volume 9 ; 2018 ; 9 ; http://www.jmidlifehealth.org/ >
-    au < exists ; 2019 ; Journal of Mid-life Health Volume 10 ; 2019 ; 10 ; https://www.jmidlifehealth.org/ >
-    au < exists ; 2020 ; Journal of Mid-life Health Volume 11 ; 2020 ; 11 ; https://www.jmidlifehealth.org/ >
+    au < manifest ; 2019 ; Journal of Mid-life Health Volume 10 ; 2019 ; 10 ; https://www.jmidlifehealth.org/ >
+    au < manifest ; 2020 ; Journal of Mid-life Health Volume 11 ; 2020 ; 11 ; https://www.jmidlifehealth.org/ >
 
   }
 
@@ -3239,7 +3239,7 @@
     au < released ; 2016 ; Journal of Minimal Access Surgery Volume 12 ; 2016 ; 12 ; http://www.journalofmas.com/ >
     au < released ; 2017 ; Journal of Minimal Access Surgery Volume 13 ; 2017 ; 13 ; http://www.journalofmas.com/ >
     au < released ; 2018 ; Journal of Minimal Access Surgery Volume 14 ; 2018 ; 14 ; http://www.journalofmas.com/ >
-    au < exists ; 2019 ; Journal of Minimal Access Surgery Volume 15 ; 2019 ; 15 ; https://www.journalofmas.com/ >
+    au < manifest ; 2019 ; Journal of Minimal Access Surgery Volume 15 ; 2019 ; 15 ; https://www.journalofmas.com/ >
     au < manifest ; 2020 ; Journal of Minimal Access Surgery Volume 16 ; 2020 ; 16 ; https://www.journalofmas.com/ >
 
   }
@@ -3364,7 +3364,7 @@
     au < released ; 2016 ; Journal of Oral and Maxillofacial Pathology Volume 20 ; 2016 ; 20 ; http://www.jomfp.in/ >
     au < released ; 2017 ; Journal of Oral and Maxillofacial Pathology Volume 21 ; 2017 ; 21 ; http://www.jomfp.in/ >
     au < released ; 2018 ; Journal of Oral and Maxillofacial Pathology Volume 22 ; 2018 ; 22 ; http://www.jomfp.in/ >
-    au < exists ; 2019 ; Journal of Oral and Maxillofacial Pathology Volume 23 ; 2019 ; 23 ; https://www.jomfp.in/ >
+    au < manifest ; 2019 ; Journal of Oral and Maxillofacial Pathology Volume 23 ; 2019 ; 23 ; https://www.jomfp.in/ >
     au < manifest ; 2020 ; Journal of Oral and Maxillofacial Pathology Volume 24 ; 2020 ; 24 ; https://www.jomfp.in/ >
 
   }
@@ -3391,7 +3391,7 @@
     au < notReady ; 2016 ; Journal of Pathology Informatics Volume 7 ; 2016 ; 7 ; http://www.jpathinformatics.org/ >
     au < notReady ; 2017 ; Journal of Pathology Informatics Volume 8 ; 2017 ; 8 ; http://www.jpathinformatics.org/ >
     au < notReady ; 2018 ; Journal of Pathology Informatics Volume 9 ; 2018 ; 9 ; http://www.jpathinformatics.org/ >
-    au < exists ; 2019 ; Journal of Pathology Informatics Volume 10 ; 2019 ; 10 ; https://www.jpathinformatics.org/ >
+    au < manifest ; 2019 ; Journal of Pathology Informatics Volume 10 ; 2019 ; 10 ; https://www.jpathinformatics.org/ >
     au < manifest ; 2020 ; Journal of Pathology Informatics Volume 11 ; 2020 ; 11 ; https://www.jpathinformatics.org/ >
 
   }
@@ -3408,7 +3408,7 @@
     param[journal_issn] = 1817-1745
 
     au < manifest ; 2006 ; Journal of Pediatric Neurosciences Volume 1 ; 2006 ; 1 ; https://www.pediatricneurosciences.com/ >
-    au < exists ; 2007 ; Journal of Pediatric Neurosciences Volume 2 ; 2007 ; 2 ; https://www.pediatricneurosciences.com/ >
+    au < manifest ; 2007 ; Journal of Pediatric Neurosciences Volume 2 ; 2007 ; 2 ; https://www.pediatricneurosciences.com/ >
     au < manifest ; 2008 ; Journal of Pediatric Neurosciences Volume 3 ; 2008 ; 3 ; https://www.pediatricneurosciences.com/ >
     au < manifest ; 2009 ; Journal of Pediatric Neurosciences Volume 4 ; 2009 ; 4 ; https://www.pediatricneurosciences.com/ >
     au < manifest ; 2010 ; Journal of Pediatric Neurosciences Volume 5 ; 2010 ; 5 ; https://www.pediatricneurosciences.com/ >
@@ -3620,7 +3620,7 @@
     param[journal_issn] = 2231-0754
 
     au < manifest ; 2009 ; Journal of the International Clinical Dental Research Organization Volume 1 ; 2009 ; 1 ; https://www.jicdro.org/ >
-    au < exists ; 2010 ; Journal of the International Clinical Dental Research Organization Volume 2 ; 2010 ; 2 ; https://www.jicdro.org/ >
+    au < manifest ; 2010 ; Journal of the International Clinical Dental Research Organization Volume 2 ; 2010 ; 2 ; https://www.jicdro.org/ >
     au < released ; 2011 ; Journal of the International Clinical Dental Research Organization Volume 3 ; 2011 ; 3 ; http://www.jicdro.org/ >
     au < released ; 2012 ; Journal of the International Clinical Dental Research Organization Volume 4 ; 2012 ; 4 ; http://www.jicdro.org/ >
     au < released ; 2013 ; Journal of the International Clinical Dental Research Organization Volume 5 ; 2013 ; 5 ; http://www.jicdro.org/ >
@@ -3669,16 +3669,16 @@
     au < manifest ; 1983 ; Lung India Volume 1 ; 1983 ; 1 ; https://www.lungindia.com/ >
     au < manifest ; 1984 ; Lung India Volume 2 ; 1984 ; 2 ; https://www.lungindia.com/ >
     au < manifest ; 1985 ; Lung India Volume 3 ; 1985 ; 3 ; https://www.lungindia.com/ >
-    au < exists ; 1986 ; Lung India Volume 4 ; 1986 ; 4 ; https://www.lungindia.com/ >
+    au < manifest ; 1986 ; Lung India Volume 4 ; 1986 ; 4 ; https://www.lungindia.com/ >
     au < manifest ; 1987 ; Lung India Volume 5 ; 1987 ; 5 ; https://www.lungindia.com/ >
-    au < exists ; 1988 ; Lung India Volume 6 ; 1988 ; 6 ; https://www.lungindia.com/ >
+    au < manifest ; 1988 ; Lung India Volume 6 ; 1988 ; 6 ; https://www.lungindia.com/ >
     au < manifest ; 1989 ; Lung India Volume 7 ; 1989 ; 7 ; https://www.lungindia.com/ >
     au < manifest ; 1990 ; Lung India Volume 8 ; 1990 ; 8 ; https://www.lungindia.com/ >
     au < manifest ; 1991 ; Lung India Volume 9 ; 1991 ; 9 ; https://www.lungindia.com/ >
-    au < exists ; 1992 ; Lung India Volume 10 ; 1992 ; 10 ; https://www.lungindia.com/ >
+    au < manifest ; 1992 ; Lung India Volume 10 ; 1992 ; 10 ; https://www.lungindia.com/ >
     au < manifest ; 1993 ; Lung India Volume 11 ; 1993 ; 11 ; https://www.lungindia.com/ >
     au < manifest ; 1994 ; Lung India Volume 12 ; 1994 ; 12 ; https://www.lungindia.com/ >
-    au < exists ; 1995 ; Lung India Volume 13 ; 1995 ; 13 ; https://www.lungindia.com/ >
+    au < manifest ; 1995 ; Lung India Volume 13 ; 1995 ; 13 ; https://www.lungindia.com/ >
     au < manifest ; 1996 ; Lung India Volume 14 ; 1996 ; 14 ; https://www.lungindia.com/ >
     au < manifest ; 1997 ; Lung India Volume 15 ; 1997 ; 15 ; https://www.lungindia.com/ >
     au < manifest ; 1998 ; Lung India Volume 16 ; 1998 ; 16 ; https://www.lungindia.com/ >
@@ -3686,13 +3686,13 @@
     au < manifest ; 2000 ; Lung India Volume 18 ; 2000 ; 18 ; https://www.lungindia.com/ >
     au < manifest ; 2001 ; Lung India Volume 19 ; 2001 ; 19 ; https://www.lungindia.com/ >
     au < manifest ; 2002 ; Lung India Volume 20 ; 2002 ; 20 ; https://www.lungindia.com/ >
-    au < exists ; 2004 ; Lung India Volume 21 ; 2004 ; 21 ; https://www.lungindia.com/ >
-    au < exists ; 2005 ; Lung India Volume 22 ; 2005 ; 22 ; https://www.lungindia.com/ >
-    au < exists ; 2006 ; Lung India Volume 23 ; 2006 ; 23 ; https://www.lungindia.com/ >
-    au < exists ; 2007 ; Lung India Volume 24 ; 2007 ; 24 ; https://www.lungindia.com/ >
-    au < exists ; 2008 ; Lung India Volume 25 ; 2008 ; 25 ; https://www.lungindia.com/ >
-    au < exists ; 2009 ; Lung India Volume 26 ; 2009 ; 26 ; https://www.lungindia.com/ >
-    au < exists ; 2010 ; Lung India Volume 27 ; 2010 ; 27 ; https://www.lungindia.com/ >
+    au < manifest ; 2004 ; Lung India Volume 21 ; 2004 ; 21 ; https://www.lungindia.com/ >
+    au < manifest ; 2005 ; Lung India Volume 22 ; 2005 ; 22 ; https://www.lungindia.com/ >
+    au < manifest ; 2006 ; Lung India Volume 23 ; 2006 ; 23 ; https://www.lungindia.com/ >
+    au < manifest ; 2007 ; Lung India Volume 24 ; 2007 ; 24 ; https://www.lungindia.com/ >
+    au < manifest ; 2008 ; Lung India Volume 25 ; 2008 ; 25 ; https://www.lungindia.com/ >
+    au < manifest ; 2009 ; Lung India Volume 26 ; 2009 ; 26 ; https://www.lungindia.com/ >
+    au < manifest ; 2010 ; Lung India Volume 27 ; 2010 ; 27 ; https://www.lungindia.com/ >
     au < released ; 2011 ; Lung India Volume 28 ; 2011 ; 28 ; http://www.lungindia.com/ >
     au < released ; 2012 ; Lung India Volume 29 ; 2012 ; 29 ; http://www.lungindia.com/ >
     au < released ; 2013 ; Lung India Volume 30 ; 2013 ; 30 ; http://www.lungindia.com/ >
@@ -3701,8 +3701,8 @@
     au < released ; 2016 ; Lung India Volume 33 ; 2016 ; 33 ; http://www.lungindia.com/ >
     au < released ; 2017 ; Lung India Volume 34 ; 2017 ; 34 ; http://www.lungindia.com/ >
     au < released ; 2018 ; Lung India Volume 35 ; 2018 ; 35 ; http://www.lungindia.com/ >
-    au < exists ; 2019 ; Lung India Volume 36 ; 2019 ; 36 ; https://www.lungindia.com/ >
-    au < exists ; 2020 ; Lung India Volume 37 ; 2020 ; 37 ; https://www.lungindia.com/ >
+    au < manifest ; 2019 ; Lung India Volume 36 ; 2019 ; 36 ; https://www.lungindia.com/ >
+    au < manifest ; 2020 ; Lung India Volume 37 ; 2020 ; 37 ; https://www.lungindia.com/ >
 
   }
     
@@ -3759,12 +3759,12 @@
 #    param[base_url] = http://www.msmonographs.org/
     param[journal_issn] = 0973-1229
 
-    au < exists ; 2003 ; Mens Sana Monographs Volume 1 ; 2003 ; 1 ; https://www.msmonographs.org/ >
-    au < exists ; 2004 ; Mens Sana Monographs Volume 2 ; 2004 ; 2 ; https://www.msmonographs.org/ >
-    au < exists ; 2005 ; Mens Sana Monographs Volume 3 ; 2005 ; 3 ; https://www.msmonographs.org/ >
-    au < exists ; 2006 ; Mens Sana Monographs Volume 4 ; 2006 ; 4 ; https://www.msmonographs.org/ >
-    au < exists ; 2007 ; Mens Sana Monographs Volume 5 ; 2007 ; 5 ; https://www.msmonographs.org/ >
-    au < exists ; 2008 ; Mens Sana Monographs Volume 6 ; 2008 ; 6 ; https://www.msmonographs.org/ >
+    au < manifest ; 2003 ; Mens Sana Monographs Volume 1 ; 2003 ; 1 ; https://www.msmonographs.org/ >
+    au < manifest ; 2004 ; Mens Sana Monographs Volume 2 ; 2004 ; 2 ; https://www.msmonographs.org/ >
+    au < manifest ; 2005 ; Mens Sana Monographs Volume 3 ; 2005 ; 3 ; https://www.msmonographs.org/ >
+    au < manifest ; 2006 ; Mens Sana Monographs Volume 4 ; 2006 ; 4 ; https://www.msmonographs.org/ >
+    au < manifest ; 2007 ; Mens Sana Monographs Volume 5 ; 2007 ; 5 ; https://www.msmonographs.org/ >
+    au < manifest ; 2008 ; Mens Sana Monographs Volume 6 ; 2008 ; 6 ; https://www.msmonographs.org/ >
     au < manifest ; 2009 ; Mens Sana Monographs Volume 7 ; 2009 ; 7 ; https://www.msmonographs.org/ >
     au < manifest ; 2010 ; Mens Sana Monographs Volume 8 ; 2010 ; 8 ; https://www.msmonographs.org/ >
     au < manifest ; 2011 ; Mens Sana Monographs Volume 9 ; 2011 ; 9 ; https://www.msmonographs.org/ >
@@ -3815,7 +3815,7 @@
 #    param[base_url] = http://www.njms.in/
     param[journal_issn] = 0975-5950
 
-    au < exists ; 2010 ; National Journal of Maxillofacial Surgery Volume 1 ; 2010 ; 1 ; https://www.njms.in/ >
+    au < manifest ; 2010 ; National Journal of Maxillofacial Surgery Volume 1 ; 2010 ; 1 ; https://www.njms.in/ >
     au < released ; 2011 ; National Journal of Maxillofacial Surgery Volume 2 ; 2011 ; 2 ; http://www.njms.in/ >
     au < released ; 2012 ; National Journal of Maxillofacial Surgery Volume 3 ; 2012 ; 3 ; http://www.njms.in/ >
     au < released ; 2013 ; National Journal of Maxillofacial Surgery Volume 4 ; 2013 ; 4 ; http://www.njms.in/ >
@@ -3824,8 +3824,8 @@
     au < released ; 2016 ; National Journal of Maxillofacial Surgery Volume 7 ; 2016 ; 7 ; http://www.njms.in/ >
     au < released ; 2017 ; National Journal of Maxillofacial Surgery Volume 8 ; 2017 ; 8 ; http://www.njms.in/ >
     au < released ; 2018 ; National Journal of Maxillofacial Surgery Volume 9 ; 2018 ; 9 ; http://www.njms.in/ >
-    au < exists ; 2019 ; National Journal of Maxillofacial Surgery Volume 10 ; 2019 ; 10 ; https://www.njms.in/ >
-    au < exists ; 2020 ; National Journal of Maxillofacial Surgery Volume 11 ; 2020 ; 11 ; https://www.njms.in/ >
+    au < manifest ; 2019 ; National Journal of Maxillofacial Surgery Volume 10 ; 2019 ; 10 ; https://www.njms.in/ >
+    au < manifest ; 2020 ; National Journal of Maxillofacial Surgery Volume 11 ; 2020 ; 11 ; https://www.njms.in/ >
 
   }
 
@@ -3882,12 +3882,12 @@
 #    param[base_url] = http://www.njcponline.com/
     param[journal_issn] = 1119-3077
 
-    au < exists ; 2005 ; Nigerian Journal of Clinical Practice Volume 8 ; 2005 ; 8 ; https://www.njcponline.com/ >
-    au < exists ; 2006 ; Nigerian Journal of Clinical Practice Volume 9 ; 2006 ; 9 ; https://www.njcponline.com/ >
-    au < exists ; 2007 ; Nigerian Journal of Clinical Practice Volume 10 ; 2007 ; 10 ; https://www.njcponline.com/ >
-    au < exists ; 2008 ; Nigerian Journal of Clinical Practice Volume 11 ; 2008 ; 11 ; https://www.njcponline.com/ >
-    au < exists ; 2009 ; Nigerian Journal of Clinical Practice Volume 12 ; 2009 ; 12 ; https://www.njcponline.com/ >
-    au < exists ; 2010 ; Nigerian Journal of Clinical Practice Volume 13 ; 2010 ; 13 ; https://www.njcponline.com/ >
+    au < manifest ; 2005 ; Nigerian Journal of Clinical Practice Volume 8 ; 2005 ; 8 ; https://www.njcponline.com/ >
+    au < manifest ; 2006 ; Nigerian Journal of Clinical Practice Volume 9 ; 2006 ; 9 ; https://www.njcponline.com/ >
+    au < manifest ; 2007 ; Nigerian Journal of Clinical Practice Volume 10 ; 2007 ; 10 ; https://www.njcponline.com/ >
+    au < manifest ; 2008 ; Nigerian Journal of Clinical Practice Volume 11 ; 2008 ; 11 ; https://www.njcponline.com/ >
+    au < manifest ; 2009 ; Nigerian Journal of Clinical Practice Volume 12 ; 2009 ; 12 ; https://www.njcponline.com/ >
+    au < manifest ; 2010 ; Nigerian Journal of Clinical Practice Volume 13 ; 2010 ; 13 ; https://www.njcponline.com/ >
     au < released ; 2011 ; Nigerian Journal of Clinical Practice Volume 14 ; 2011 ; 14 ; http://www.njcponline.com/ >
     au < released ; 2012 ; Nigerian Journal of Clinical Practice Volume 15 ; 2012 ; 15 ; http://www.njcponline.com/ >
     au < released ; 2013 ; Nigerian Journal of Clinical Practice Volume 16 ; 2013 ; 16 ; http://www.njcponline.com/ >
@@ -3896,8 +3896,8 @@
     au < released ; 2016 ; Nigerian Journal of Clinical Practice Volume 19 ; 2016 ; 19 ; http://www.njcponline.com/ >
     au < released ; 2017 ; Nigerian Journal of Clinical Practice Volume 20 ; 2017 ; 20 ; http://www.njcponline.com/ >
     au < released ; 2018 ; Nigerian Journal of Clinical Practice Volume 21 ; 2018 ; 21 ; http://www.njcponline.com/ >
-    au < exists ; 2019 ; Nigerian Journal of Clinical Practice Volume 22 ; 2019 ; 22 ; https://www.njcponline.com/ >
-    au < exists ; 2020 ; Nigerian Journal of Clinical Practice Volume 23 ; 2020 ; 23 ; https://www.njcponline.com/ >
+    au < manifest ; 2019 ; Nigerian Journal of Clinical Practice Volume 22 ; 2019 ; 22 ; https://www.njcponline.com/ >
+    au < manifest ; 2020 ; Nigerian Journal of Clinical Practice Volume 23 ; 2020 ; 23 ; https://www.njcponline.com/ >
 
   }
 
@@ -3912,8 +3912,8 @@
 #    param[base_url] = http://www.nigerianjsurg.com/
     param[journal_issn] = 1117-6806
 
-    au < exists ; 2009 ; Nigerian Journal of Surgery Volume 15 ; 2009 ; 15 ; https://www.nigerianjsurg.com/ >
-    au < exists ; 2010 ; Nigerian Journal of Surgery Volume 16 ; 2010 ; 16 ; https://www.nigerianjsurg.com/ >
+    au < manifest ; 2009 ; Nigerian Journal of Surgery Volume 15 ; 2009 ; 15 ; https://www.nigerianjsurg.com/ >
+    au < manifest ; 2010 ; Nigerian Journal of Surgery Volume 16 ; 2010 ; 16 ; https://www.nigerianjsurg.com/ >
     au < released ; 2011 ; Nigerian Journal of Surgery Volume 17 ; 2011 ; 17 ; http://www.nigerianjsurg.com/ >
     au < released ; 2012 ; Nigerian Journal of Surgery Volume 18 ; 2012 ; 18 ; http://www.nigerianjsurg.com/ >
     au < released ; 2013 ; Nigerian Journal of Surgery Volume 19 ; 2013 ; 19 ; http://www.nigerianjsurg.com/ >
@@ -3922,8 +3922,8 @@
     au < released ; 2016 ; Nigerian Journal of Surgery Volume 22 ; 2016 ; 22 ; http://www.nigerianjsurg.com/ >
     au < released ; 2017 ; Nigerian Journal of Surgery Volume 23 ; 2017 ; 23 ; http://www.nigerianjsurg.com/ >
     au < released ; 2018 ; Nigerian Journal of Surgery Volume 24 ; 2018 ; 24 ; http://www.nigerianjsurg.com/ >
-    au < exists ; 2019 ; Nigerian Journal of Surgery Volume 25 ; 2019 ; 25 ; https://www.nigerianjsurg.com/ >
-    au < exists ; 2020 ; Nigerian Journal of Surgery Volume 26 ; 2020 ; 26 ; https://www.nigerianjsurg.com/ >
+    au < manifest ; 2019 ; Nigerian Journal of Surgery Volume 25 ; 2019 ; 25 ; https://www.nigerianjsurg.com/ >
+    au < manifest ; 2020 ; Nigerian Journal of Surgery Volume 26 ; 2020 ; 26 ; https://www.nigerianjsurg.com/ >
 
   }
 
@@ -3938,8 +3938,8 @@
 #    param[base_url] = http://www.nigeriamedj.com/
     param[journal_issn] = 0300-1652
 
-    au < exists ; 2009 ; Nigerian Medical Journal Volume 50 ; 2009 ; 50 ; https://www.nigeriamedj.com/ >
-    au < exists ; 2010 ; Nigerian Medical Journal Volume 51 ; 2010 ; 51 ; https://www.nigeriamedj.com/ >
+    au < manifest ; 2009 ; Nigerian Medical Journal Volume 50 ; 2009 ; 50 ; https://www.nigeriamedj.com/ >
+    au < manifest ; 2010 ; Nigerian Medical Journal Volume 51 ; 2010 ; 51 ; https://www.nigeriamedj.com/ >
     au < released ; 2011 ; Nigerian Medical Journal Volume 52 ; 2011 ; 52 ; http://www.nigeriamedj.com/ >
     au < released ; 2012 ; Nigerian Medical Journal Volume 53 ; 2012 ; 53 ; http://www.nigeriamedj.com/ >
     au < released ; 2013 ; Nigerian Medical Journal Volume 54 ; 2013 ; 54 ; http://www.nigeriamedj.com/ >
@@ -3947,9 +3947,9 @@
     au < released ; 2015 ; Nigerian Medical Journal Volume 56 ; 2015 ; 56 ; http://www.nigeriamedj.com/ >
     au < released ; 2016 ; Nigerian Medical Journal Volume 57 ; 2016 ; 57 ; http://www.nigeriamedj.com/ >
     au < released ; 2017 ; Nigerian Medical Journal Volume 58 ; 2017 ; 58 ; http://www.nigeriamedj.com/ >
-    au < exists ; 2018 ; Nigerian Medical Journal Volume 59 ; 2018 ; 59 ; https://www.nigeriamedj.com/ >
-    au < exists ; 2019 ; Nigerian Medical Journal Volume 60 ; 2019 ; 60 ; https://www.nigeriamedj.com/ >
-    au < exists ; 2020 ; Nigerian Medical Journal Volume 61 ; 2020 ; 61 ; https://www.nigeriamedj.com/ >
+    au < manifest ; 2018 ; Nigerian Medical Journal Volume 59 ; 2018 ; 59 ; https://www.nigeriamedj.com/ >
+    au < manifest ; 2019 ; Nigerian Medical Journal Volume 60 ; 2019 ; 60 ; https://www.nigeriamedj.com/ >
+    au < manifest ; 2020 ; Nigerian Medical Journal Volume 61 ; 2020 ; 61 ; https://www.nigeriamedj.com/ >
 
   }
 
@@ -3964,18 +3964,18 @@
 #    param[base_url] = http://www.noiseandhealth.org/
     param[journal_issn] = 1463-1741
 
-    au < exists ; 1999 ; Noise and Health Volume 1 ; 1999 ; 1 ; https://www.noiseandhealth.org/ >
-    au < exists ; 2000 ; Noise and Health Volume 2 ; 2000 ; 2 ; https://www.noiseandhealth.org/ >
-    au < exists ; 2001 ; Noise and Health Volume 3 ; 2001 ; 3 ; https://www.noiseandhealth.org/ >
-    au < exists ; 2002 ; Noise and Health Volume 4 ; 2002 ; 4 ; https://www.noiseandhealth.org/ >
-    au < exists ; 2004 ; Noise and Health Volume 5 ; 2003 ; 5 ; https://www.noiseandhealth.org/ >
-    au < exists ; 2004 ; Noise and Health Volume 6 ; 2004 ; 6 ; https://www.noiseandhealth.org/ >
-    au < exists ; 2005 ; Noise and Health Volume 7 ; 2005 ; 7 ; https://www.noiseandhealth.org/ >
-    au < exists ; 2006 ; Noise and Health Volume 8 ; 2006 ; 8 ; https://www.noiseandhealth.org/ >
-    au < exists ; 2007 ; Noise and Health Volume 9 ; 2007 ; 9 ; https://www.noiseandhealth.org/ >
-    au < exists ; 2008 ; Noise and Health Volume 10 ; 2008 ; 10 ; https://www.noiseandhealth.org/ >
-    au < exists ; 2009 ; Noise and Health Volume 11 ; 2009 ; 11 ; https://www.noiseandhealth.org/ >
-    au < exists ; 2010 ; Noise and Health Volume 12 ; 2010 ; 12 ; https://www.noiseandhealth.org/ >
+    au < manifest ; 1999 ; Noise and Health Volume 1 ; 1999 ; 1 ; https://www.noiseandhealth.org/ >
+    au < manifest ; 2000 ; Noise and Health Volume 2 ; 2000 ; 2 ; https://www.noiseandhealth.org/ >
+    au < manifest ; 2001 ; Noise and Health Volume 3 ; 2001 ; 3 ; https://www.noiseandhealth.org/ >
+    au < manifest ; 2002 ; Noise and Health Volume 4 ; 2002 ; 4 ; https://www.noiseandhealth.org/ >
+    au < manifest ; 2004 ; Noise and Health Volume 5 ; 2003 ; 5 ; https://www.noiseandhealth.org/ >
+    au < manifest ; 2004 ; Noise and Health Volume 6 ; 2004 ; 6 ; https://www.noiseandhealth.org/ >
+    au < manifest ; 2005 ; Noise and Health Volume 7 ; 2005 ; 7 ; https://www.noiseandhealth.org/ >
+    au < manifest ; 2006 ; Noise and Health Volume 8 ; 2006 ; 8 ; https://www.noiseandhealth.org/ >
+    au < manifest ; 2007 ; Noise and Health Volume 9 ; 2007 ; 9 ; https://www.noiseandhealth.org/ >
+    au < manifest ; 2008 ; Noise and Health Volume 10 ; 2008 ; 10 ; https://www.noiseandhealth.org/ >
+    au < manifest ; 2009 ; Noise and Health Volume 11 ; 2009 ; 11 ; https://www.noiseandhealth.org/ >
+    au < manifest ; 2010 ; Noise and Health Volume 12 ; 2010 ; 12 ; https://www.noiseandhealth.org/ >
     au < released ; 2011 ; Noise and Health Volume 13 ; 2011 ; 13 ; http://www.noiseandhealth.org/ >
     au < released ; 2012 ; Noise and Health Volume 14 ; 2012 ; 14 ; http://www.noiseandhealth.org/ >
     au < released ; 2013 ; Noise and Health Volume 15 ; 2013 ; 15 ; http://www.noiseandhealth.org/ >
@@ -3984,8 +3984,8 @@
     au < released ; 2016 ; Noise and Health Volume 18 ; 2016 ; 18 ; http://www.noiseandhealth.org/ >
     au < released ; 2017 ; Noise and Health Volume 19 ; 2017 ; 19 ; http://www.noiseandhealth.org/ >
     au < released ; 2018 ; Noise and Health Volume 20 ; 2018 ; 20 ; http://www.noiseandhealth.org/ >
-    au < exists ; 2019 ; Noise and Health Volume 21 ; 2019 ; 21 ; https://www.noiseandhealth.org/ >
-    au < expected ; 2020 ; Noise and Health Volume 22 ; 2020 ; 22 ; https://www.noiseandhealth.org/ >
+    au < manifest ; 2019 ; Noise and Health Volume 21 ; 2019 ; 21 ; https://www.noiseandhealth.org/ >
+    au < manifest ; 2020 ; Noise and Health Volume 22 ; 2020 ; 22 ; https://www.noiseandhealth.org/ >
 
   }
 
@@ -4014,9 +4014,9 @@
     {
 #    param[base_url] = http://www.ojoonline.org/
 
-    au < exists ; 2008 ; Oman Journal of Ophthalmology Volume 1 ; 2008 ; 1 ; https://www.ojoonline.org/ >
-    au < exists ; 2009 ; Oman Journal of Ophthalmology Volume 2 ; 2009 ; 2 ; https://www.ojoonline.org/ >
-    au < exists ; 2010 ; Oman Journal of Ophthalmology Volume 3 ; 2010 ; 3 ; https://www.ojoonline.org/ >
+    au < manifest ; 2008 ; Oman Journal of Ophthalmology Volume 1 ; 2008 ; 1 ; https://www.ojoonline.org/ >
+    au < manifest ; 2009 ; Oman Journal of Ophthalmology Volume 2 ; 2009 ; 2 ; https://www.ojoonline.org/ >
+    au < manifest ; 2010 ; Oman Journal of Ophthalmology Volume 3 ; 2010 ; 3 ; https://www.ojoonline.org/ >
     au < doNotProcess ; 2011 ; Oman Journal of Ophthalmology Volume 4 ; 2011 ; 4 ; http://www.ojoonline.org/ >
     au < doNotProcess ; 2012 ; Oman Journal of Ophthalmology Volume 5 ; 2012 ; 5 ; http://www.ojoonline.org/ >
     au < doNotProcess ; 2013 ; Oman Journal of Ophthalmology Volume 6 ; 2013 ; 6 ; http://www.ojoonline.org/ >
@@ -4025,8 +4025,8 @@
     au < doNotProcess ; 2016 ; Oman Journal of Ophthalmology Volume 9 ; 2016 ; 9 ; http://www.ojoonline.org/ >
     au < released ; 2017 ; Oman Journal of Ophthalmology Volume 10 ; 2017 ; 10 ; http://www.ojoonline.org/ >
     au < released ; 2018 ; Oman Journal of Ophthalmology Volume 11 ; 2018 ; 11 ; http://www.ojoonline.org/ >
-    au < exists ; 2019 ; Oman Journal of Ophthalmology Volume 12 ; 2019 ; 12 ; https://www.ojoonline.org/ >
-    au < exists ; 2020 ; Oman Journal of Ophthalmology Volume 13 ; 2020 ; 13 ; https://www.ojoonline.org/ >
+    au < manifest ; 2019 ; Oman Journal of Ophthalmology Volume 12 ; 2019 ; 12 ; https://www.ojoonline.org/ >
+    au < manifest ; 2020 ; Oman Journal of Ophthalmology Volume 13 ; 2020 ; 13 ; https://www.ojoonline.org/ >
 
     }
 
@@ -4043,7 +4043,7 @@
 #    param[base_url] = http://www.picronline.org/
     param[journal_issn] = 2229-3485
 
-    au < exists ; 2010 ; Perspectives in Clinical Research Volume 1 ; 2010 ; 1 ; https://www.picronline.org/ >
+    au < manifest ; 2010 ; Perspectives in Clinical Research Volume 1 ; 2010 ; 1 ; https://www.picronline.org/ >
     au < released ; 2011 ; Perspectives in Clinical Research Volume 2 ; 2011 ; 2 ; http://www.picronline.org/ >
     au < released ; 2012 ; Perspectives in Clinical Research Volume 3 ; 2012 ; 3 ; http://www.picronline.org/ >
     au < released ; 2013 ; Perspectives in Clinical Research Volume 4 ; 2013 ; 4 ; http://www.picronline.org/ >
@@ -4053,7 +4053,7 @@
     au < released ; 2017 ; Perspectives in Clinical Research Volume 8 ; 2017 ; 8 ; http://www.picronline.org/ >
     au < released ; 2018 ; Perspectives in Clinical Research Volume 9 ; 2018 ; 9 ; http://www.picronline.org/ >
     au < exists ; 2019 ; Perspectives in Clinical Research Volume 10 ; 2019 ; 10 ; https://www.picronline.org/ >
-    au < exists ; 2020 ; Perspectives in Clinical Research Volume 11 ; 2020 ; 11 ; https://www.picronline.org/ >
+    au < manifest ; 2020 ; Perspectives in Clinical Research Volume 11 ; 2020 ; 11 ; https://www.picronline.org/ >
 
   }
 
@@ -4088,12 +4088,12 @@
 #    param[base_url] = http://www.phcog.com/
     param[journal_issn] = 0973-1296
 
-    au < exists ; 2005 ; Pharmacognosy Magazine Volume 1 ; 2005 ; 1 ; https://www.phcog.com/ >
-    au < exists ; 2006 ; Pharmacognosy Magazine Volume 2 ; 2006 ; 2 ; https://www.phcog.com/ >
-    au < exists ; 2007 ; Pharmacognosy Magazine Volume 3 ; 2007 ; 3 ; https://www.phcog.com/ >
-    au < exists ; 2008 ; Pharmacognosy Magazine Volume 4 ; 2008 ; 4 ; https://www.phcog.com/ >
-    au < exists ; 2009 ; Pharmacognosy Magazine Volume 5 ; 2009 ; 5 ; https://www.phcog.com/ >
-    au < exists ; 2010 ; Pharmacognosy Magazine Volume 6 ; 2010 ; 6 ; https://www.phcog.com/ >
+    au < manifest ; 2005 ; Pharmacognosy Magazine Volume 1 ; 2005 ; 1 ; https://www.phcog.com/ >
+    au < manifest ; 2006 ; Pharmacognosy Magazine Volume 2 ; 2006 ; 2 ; https://www.phcog.com/ >
+    au < manifest ; 2007 ; Pharmacognosy Magazine Volume 3 ; 2007 ; 3 ; https://www.phcog.com/ >
+    au < manifest ; 2008 ; Pharmacognosy Magazine Volume 4 ; 2008 ; 4 ; https://www.phcog.com/ >
+    au < manifest ; 2009 ; Pharmacognosy Magazine Volume 5 ; 2009 ; 5 ; https://www.phcog.com/ >
+    au < manifest ; 2010 ; Pharmacognosy Magazine Volume 6 ; 2010 ; 6 ; https://www.phcog.com/ >
     au < released ; 2011 ; Pharmacognosy Magazine Volume 7 ; 2011 ; 7 ; http://www.phcog.com/ >
     au < released ; 2012 ; Pharmacognosy Magazine Volume 8 ; 2012 ; 8 ; http://www.phcog.com/ >
     au < released ; 2013 ; Pharmacognosy Magazine Volume 9 ; 2013 ; 9 ; http://www.phcog.com/ >
@@ -4102,8 +4102,8 @@
     au < released ; 2016 ; Pharmacognosy Magazine Volume 12 ; 2016 ; 12 ; http://www.phcog.com/ >
     au < released ; 2017 ; Pharmacognosy Magazine Volume 13 ; 2017 ; 13 ; http://www.phcog.com/ >
     au < released ; 2018 ; Pharmacognosy Magazine Volume 14 ; 2018 ; 14 ; http://www.phcog.com/ >
-    au < exists ; 2019 ; Pharmacognosy Magazine Volume 15 ; 2019 ; 15 ; https://www.phcog.com/ >
-    au < exists ; 2020 ; Pharmacognosy Magazine Volume 16 ; 2020 ; 16 ; https://www.phcog.com/ >
+    au < manifest ; 2019 ; Pharmacognosy Magazine Volume 15 ; 2019 ; 15 ; https://www.phcog.com/ >
+    au < manifest ; 2020 ; Pharmacognosy Magazine Volume 16 ; 2020 ; 16 ; https://www.phcog.com/ >
 
   }
 
@@ -4118,8 +4118,8 @@
 #    param[base_url] = http://www.phcogres.com/
     param[journal_issn] = 0974-8490
 
-    au < exists ; 2009 ; Pharmacognosy Research Volume 1 ; 2009 ; 1 ; https://www.phcogres.com/ >
-    au < exists ; 2010 ; Pharmacognosy Research Volume 2 ; 2010 ; 2 ; https://www.phcogres.com/ >
+    au < manifest ; 2009 ; Pharmacognosy Research Volume 1 ; 2009 ; 1 ; https://www.phcogres.com/ >
+    au < manifest ; 2010 ; Pharmacognosy Research Volume 2 ; 2010 ; 2 ; https://www.phcogres.com/ >
     au < released ; 2011 ; Pharmacognosy Research Volume 3 ; 2011 ; 3 ; http://www.phcogres.com/ >
     au < released ; 2012 ; Pharmacognosy Research Volume 4 ; 2012 ; 4 ; http://www.phcogres.com/ >
     au < released ; 2013 ; Pharmacognosy Research Volume 5 ; 2013 ; 5 ; http://www.phcogres.com/ >
@@ -4128,8 +4128,8 @@
     au < released ; 2016 ; Pharmacognosy Research Volume 8 ; 2016 ; 8 ; http://www.phcogres.com/ >
     au < released ; 2017 ; Pharmacognosy Research Volume 9 ; 2017 ; 9 ; http://www.phcogres.com/ >
     au < released ; 2018 ; Pharmacognosy Research Volume 10 ; 2018 ; 10 ; http://www.phcogres.com/ >
-    au < exists ; 2019 ; Pharmacognosy Research Volume 11 ; 2019 ; 11 ; https://www.phcogres.com/ >
-    au < exists ; 2020 ; Pharmacognosy Research Volume 12 ; 2020 ; 12 ; https://www.phcogres.com/ >
+    au < manifest ; 2019 ; Pharmacognosy Research Volume 11 ; 2019 ; 11 ; https://www.phcogres.com/ >
+    au < manifest ; 2020 ; Pharmacognosy Research Volume 12 ; 2020 ; 12 ; https://www.phcogres.com/ >
 
   }  
 
@@ -4211,7 +4211,7 @@
 #    param[base_url] = http://www.rpe.org.in/
     param[journal_issn] = 0972-0464
 
-    au < exists ; 2010 ; Radiation Protection and Environment Volume 33 ; 2010 ; 33 ; https://www.rpe.org.in/ >
+    au < manifest ; 2010 ; Radiation Protection and Environment Volume 33 ; 2010 ; 33 ; https://www.rpe.org.in/ >
     au < released ; 2011 ; Radiation Protection and Environment Volume 34 ; 2011 ; 34 ; http://www.rpe.org.in/ >
     au < released ; 2012 ; Radiation Protection and Environment Volume 35 ; 2012 ; 35 ; http://www.rpe.org.in/ >
     au < released ; 2013 ; Radiation Protection and Environment Volume 36 ; 2013 ; 36 ; http://www.rpe.org.in/ >
@@ -4220,8 +4220,8 @@
     au < released ; 2016 ; Radiation Protection and Environment Volume 39 ; 2016 ; 39 ; http://www.rpe.org.in/ >
     au < released ; 2017 ; Radiation Protection and Environment Volume 40 ; 2017 ; 40 ; http://www.rpe.org.in/ >
     au < released ; 2018 ; Radiation Protection and Environment Volume 41 ; 2018 ; 41 ; http://www.rpe.org.in/ >
-    au < exists ; 2019 ; Radiation Protection and Environment Volume 42 ; 2019 ; 42 ; https://www.rpe.org.in/ >
-    au < exists ; 2020 ; Radiation Protection and Environment Volume 43 ; 2020 ; 43 ; https://www.rpe.org.in/ >
+    au < manifest ; 2019 ; Radiation Protection and Environment Volume 42 ; 2019 ; 42 ; https://www.rpe.org.in/ >
+    au < manifest ; 2020 ; Radiation Protection and Environment Volume 43 ; 2020 ; 43 ; https://www.rpe.org.in/ >
 
   }
         
@@ -4255,11 +4255,11 @@
     param[journal_issn] = 1735-5362
     comment[jrps] = the url structure is the new version
 
-    au < exists ; 2016 ; Research in Pharmaceutical Sciences Volume 11 ; 2016 ; 11 ; https://www.rpsjournal.net/ >
+    au < manifest ; 2016 ; Research in Pharmaceutical Sciences Volume 11 ; 2016 ; 11 ; https://www.rpsjournal.net/ >
     au < released ; 2017 ; Research in Pharmaceutical Sciences Volume 12 ; 2017 ; 12 ; http://www.rpsjournal.net/ >
-    au < exists ; 2018 ; Research in Pharmaceutical Sciences Volume 13 ; 2018 ; 13 ; https://www.rpsjournal.net/ >
-    au < exists ; 2019 ; Research in Pharmaceutical Sciences Volume 14 ; 2019 ; 14 ; https://www.rpsjournal.net/ >
-    au < exists ; 2020 ; Research in Pharmaceutical Sciences Volume 15 ; 2020 ; 15 ; https://www.rpsjournal.net/ >
+    au < manifest ; 2018 ; Research in Pharmaceutical Sciences Volume 13 ; 2018 ; 13 ; https://www.rpsjournal.net/ >
+    au < manifest ; 2019 ; Research in Pharmaceutical Sciences Volume 14 ; 2019 ; 14 ; https://www.rpsjournal.net/ >
+    au < manifest ; 2020 ; Research in Pharmaceutical Sciences Volume 15 ; 2020 ; 15 ; https://www.rpsjournal.net/ >
 
   }
     
@@ -4274,10 +4274,10 @@
 #    param[base_url] = http://www.saudija.org/
     param[journal_issn] = 1658-354X
 
-    au < exists ; 2007 ; Saudi Journal of Anaesthesia Volume 1 ; 2007 ; 1 ; https://www.saudija.org/ >
-    au < exists ; 2008 ; Saudi Journal of Anaesthesia Volume 2 ; 2008 ; 2 ; https://www.saudija.org/ >
-    au < exists ; 2009 ; Saudi Journal of Anaesthesia Volume 3 ; 2009 ; 3 ; https://www.saudija.org/ >
-    au < exists ; 2010 ; Saudi Journal of Anaesthesia Volume 4 ; 2010 ; 4 ; https://www.saudija.org/ >
+    au < manifest ; 2007 ; Saudi Journal of Anaesthesia Volume 1 ; 2007 ; 1 ; https://www.saudija.org/ >
+    au < manifest ; 2008 ; Saudi Journal of Anaesthesia Volume 2 ; 2008 ; 2 ; https://www.saudija.org/ >
+    au < manifest ; 2009 ; Saudi Journal of Anaesthesia Volume 3 ; 2009 ; 3 ; https://www.saudija.org/ >
+    au < manifest ; 2010 ; Saudi Journal of Anaesthesia Volume 4 ; 2010 ; 4 ; https://www.saudija.org/ >
     au < released ; 2011 ; Saudi Journal of Anaesthesia Volume 5 ; 2011 ; 5 ; http://www.saudija.org/ >
     au < released ; 2012 ; Saudi Journal of Anaesthesia Volume 6 ; 2012 ; 6 ; http://www.saudija.org/ >
     au < released ; 2013 ; Saudi Journal of Anaesthesia Volume 7 ; 2013 ; 7 ; http://www.saudija.org/ >
@@ -4286,8 +4286,8 @@
     au < released ; 2016 ; Saudi Journal of Anaesthesia Volume 10 ; 2016 ; 10 ; http://www.saudija.org/ >
     au < released ; 2017 ; Saudi Journal of Anaesthesia Volume 11 ; 2017 ; 11 ; http://www.saudija.org/ >
     au < released ; 2018 ; Saudi Journal of Anaesthesia Volume 12 ; 2018 ; 12 ; http://www.saudija.org/ >
-    au < exists ; 2019 ; Saudi Journal of Anaesthesia Volume 13 ; 2019 ; 13 ; https://www.saudija.org/ >
-    au < exists ; 2020 ; Saudi Journal of Anaesthesia Volume 14 ; 2020 ; 14 ; https://www.saudija.org/ >
+    au < manifest ; 2019 ; Saudi Journal of Anaesthesia Volume 13 ; 2019 ; 13 ; https://www.saudija.org/ >
+    au < manifest ; 2020 ; Saudi Journal of Anaesthesia Volume 14 ; 2020 ; 14 ; https://www.saudija.org/ >
 
   }
     
@@ -4310,8 +4310,8 @@
     au < released ; 2016 ; Saudi Journal of Kidney Diseases and Transplantation Volume 27 ; 2016 ; 27 ; http://www.sjkdt.org/ >
     au < released ; 2017 ; Saudi Journal of Kidney Diseases and Transplantation Volume 28 ; 2017 ; 28 ; http://www.sjkdt.org/ >
     au < released ; 2018 ; Saudi Journal of Kidney Diseases and Transplantation Volume 29 ; 2018 ; 29 ; http://www.sjkdt.org/ >
-    au < exists ; 2019 ; Saudi Journal of Kidney Diseases and Transplantation Volume 30 ; 2019 ; 30 ; https://www.sjkdt.org/ >
-    au < exists ; 2020 ; Saudi Journal of Kidney Diseases and Transplantation Volume 31 ; 2020 ; 31 ; https://www.sjkdt.org/ >
+    au < manifest ; 2019 ; Saudi Journal of Kidney Diseases and Transplantation Volume 30 ; 2019 ; 30 ; https://www.sjkdt.org/ >
+    au < manifest ; 2020 ; Saudi Journal of Kidney Diseases and Transplantation Volume 31 ; 2020 ; 31 ; https://www.sjkdt.org/ >
 
   }
 
@@ -4326,22 +4326,22 @@
 #    param[base_url] = http://www.saudijgastro.com/
     param[journal_issn] = 1319-3767
 
-    au < exists ; 1995 ; Saudi Journal of Gastroenterology Volume 1 ; 1995 ; 1 ; https://www.saudijgastro.com/ >
-    au < exists ; 1996 ; Saudi Journal of Gastroenterology Volume 2 ; 1996 ; 2 ; https://www.saudijgastro.com/ >
-    au < exists ; 1997 ; Saudi Journal of Gastroenterology Volume 3 ; 1997 ; 3 ; https://www.saudijgastro.com/ >
-    au < exists ; 1998 ; Saudi Journal of Gastroenterology Volume 4 ; 1998 ; 4 ; https://www.saudijgastro.com/ >
-    au < exists ; 1999 ; Saudi Journal of Gastroenterology Volume 5 ; 1999 ; 5 ; https://www.saudijgastro.com/ >
-    au < exists ; 2000 ; Saudi Journal of Gastroenterology Volume 6 ; 2000 ; 6 ; https://www.saudijgastro.com/ >
-    au < exists ; 2001 ; Saudi Journal of Gastroenterology Volume 7 ; 2001 ; 7 ; https://www.saudijgastro.com/ >
-    au < exists ; 2002 ; Saudi Journal of Gastroenterology Volume 8 ; 2002 ; 8 ; https://www.saudijgastro.com/ >
-    au < exists ; 2004 ; Saudi Journal of Gastroenterology Volume 9 ; 2003 ; 9 ; https://www.saudijgastro.com/ >
-    au < exists ; 2004 ; Saudi Journal of Gastroenterology Volume 10 ; 2004 ; 10 ; https://www.saudijgastro.com/ >
-    au < exists ; 2005 ; Saudi Journal of Gastroenterology Volume 11 ; 2005 ; 11 ; https://www.saudijgastro.com/ >
-    au < exists ; 2006 ; Saudi Journal of Gastroenterology Volume 12 ; 2006 ; 12 ; https://www.saudijgastro.com/ >
-    au < exists ; 2007 ; Saudi Journal of Gastroenterology Volume 13 ; 2007 ; 13 ; https://www.saudijgastro.com/ >
-    au < exists ; 2008 ; Saudi Journal of Gastroenterology Volume 14 ; 2008 ; 14 ; https://www.saudijgastro.com/ >
-    au < exists ; 2009 ; Saudi Journal of Gastroenterology Volume 15 ; 2009 ; 15 ; https://www.saudijgastro.com/ >
-    au < exists ; 2010 ; Saudi Journal of Gastroenterology Volume 16 ; 2010 ; 16 ; https://www.saudijgastro.com/ >
+    au < manifest ; 1995 ; Saudi Journal of Gastroenterology Volume 1 ; 1995 ; 1 ; https://www.saudijgastro.com/ >
+    au < manifest ; 1996 ; Saudi Journal of Gastroenterology Volume 2 ; 1996 ; 2 ; https://www.saudijgastro.com/ >
+    au < manifest ; 1997 ; Saudi Journal of Gastroenterology Volume 3 ; 1997 ; 3 ; https://www.saudijgastro.com/ >
+    au < manifest ; 1998 ; Saudi Journal of Gastroenterology Volume 4 ; 1998 ; 4 ; https://www.saudijgastro.com/ >
+    au < manifest ; 1999 ; Saudi Journal of Gastroenterology Volume 5 ; 1999 ; 5 ; https://www.saudijgastro.com/ >
+    au < manifest ; 2000 ; Saudi Journal of Gastroenterology Volume 6 ; 2000 ; 6 ; https://www.saudijgastro.com/ >
+    au < manifest ; 2001 ; Saudi Journal of Gastroenterology Volume 7 ; 2001 ; 7 ; https://www.saudijgastro.com/ >
+    au < manifest ; 2002 ; Saudi Journal of Gastroenterology Volume 8 ; 2002 ; 8 ; https://www.saudijgastro.com/ >
+    au < manifest ; 2004 ; Saudi Journal of Gastroenterology Volume 9 ; 2003 ; 9 ; https://www.saudijgastro.com/ >
+    au < manifest ; 2004 ; Saudi Journal of Gastroenterology Volume 10 ; 2004 ; 10 ; https://www.saudijgastro.com/ >
+    au < manifest ; 2005 ; Saudi Journal of Gastroenterology Volume 11 ; 2005 ; 11 ; https://www.saudijgastro.com/ >
+    au < manifest ; 2006 ; Saudi Journal of Gastroenterology Volume 12 ; 2006 ; 12 ; https://www.saudijgastro.com/ >
+    au < manifest ; 2007 ; Saudi Journal of Gastroenterology Volume 13 ; 2007 ; 13 ; https://www.saudijgastro.com/ >
+    au < manifest ; 2008 ; Saudi Journal of Gastroenterology Volume 14 ; 2008 ; 14 ; https://www.saudijgastro.com/ >
+    au < manifest ; 2009 ; Saudi Journal of Gastroenterology Volume 15 ; 2009 ; 15 ; https://www.saudijgastro.com/ >
+    au < manifest ; 2010 ; Saudi Journal of Gastroenterology Volume 16 ; 2010 ; 16 ; https://www.saudijgastro.com/ >
     au < released ; 2011 ; Saudi Journal of Gastroenterology Volume 17 ; 2011 ; 17 ; http://www.saudijgastro.com/ >
     au < released ; 2012 ; Saudi Journal of Gastroenterology Volume 18 ; 2012 ; 18 ; http://www.saudijgastro.com/ >
     au < released ; 2013 ; Saudi Journal of Gastroenterology Volume 19 ; 2013 ; 19 ; http://www.saudijgastro.com/ >
@@ -4350,8 +4350,8 @@
     au < released ; 2016 ; Saudi Journal of Gastroenterology Volume 22 ; 2016 ; 22 ; http://www.saudijgastro.com/ >
     au < released ; 2017 ; Saudi Journal of Gastroenterology Volume 23 ; 2017 ; 23 ; http://www.saudijgastro.com/ >
     au < released ; 2018 ; Saudi Journal of Gastroenterology Volume 24 ; 2018 ; 24 ; http://www.saudijgastro.com/ >
-    au < exists ; 2019 ; Saudi Journal of Gastroenterology Volume 25 ; 2019 ; 25 ; https://www.saudijgastro.com/ >
-    au < exists ; 2020 ; Saudi Journal of Gastroenterology Volume 26 ; 2020 ; 26 ; https://www.saudijgastro.com/ >
+    au < manifest ; 2019 ; Saudi Journal of Gastroenterology Volume 25 ; 2019 ; 25 ; https://www.saudijgastro.com/ >
+    au < manifest ; 2020 ; Saudi Journal of Gastroenterology Volume 26 ; 2020 ; 26 ; https://www.saudijgastro.com/ >
 
   }
     
@@ -4469,8 +4469,8 @@
     au < released ; 2016 ; Tropical Parasitology Volume 6 ; 2016 ; 6 ; http://www.tropicalparasitology.org/ >
     au < released ; 2017 ; Tropical Parasitology Volume 7 ; 2017 ; 7 ; http://www.tropicalparasitology.org/ >
     au < released ; 2018 ; Tropical Parasitology Volume 8 ; 2018 ; 8 ; http://www.tropicalparasitology.org/ >
-    au < exists ; 2019 ; Tropical Parasitology Volume 9 ; 2019 ; 9 ; https://www.tropicalparasitology.org/ >
-    au < exists ; 2020 ; Tropical Parasitology Volume 10 ; 2020 ; 10 ; https://www.tropicalparasitology.org/ >
+    au < manifest ; 2019 ; Tropical Parasitology Volume 9 ; 2019 ; 9 ; https://www.tropicalparasitology.org/ >
+    au < manifest ; 2020 ; Tropical Parasitology Volume 10 ; 2020 ; 10 ; https://www.tropicalparasitology.org/ >
 
   }
 
@@ -4485,8 +4485,8 @@
 #    param[base_url] = http://www.urologyannals.com/
     param[journal_issn] = 0974-7796
 
-    au < exists ; 2009 ; Urology Annals Volume 1 ; 2009 ; 1 ; https://www.urologyannals.com/ >
-    au < exists ; 2010 ; Urology Annals Volume 2 ; 2010 ; 2 ; https://www.urologyannals.com/ >
+    au < manifest ; 2009 ; Urology Annals Volume 1 ; 2009 ; 1 ; https://www.urologyannals.com/ >
+    au < manifest ; 2010 ; Urology Annals Volume 2 ; 2010 ; 2 ; https://www.urologyannals.com/ >
     au < released ; 2011 ; Urology Annals Volume 3 ; 2011 ; 3 ; http://www.urologyannals.com/ >
     au < released ; 2012 ; Urology Annals Volume 4 ; 2012 ; 4 ; http://www.urologyannals.com/ >
     au < released ; 2013 ; Urology Annals Volume 5 ; 2013 ; 5 ; http://www.urologyannals.com/ >
@@ -4495,8 +4495,8 @@
     au < released ; 2016 ; Urology Annals Volume 8 ; 2016 ; 8 ; http://www.urologyannals.com/ >
     au < released ; 2017 ; Urology Annals Volume 9 ; 2017 ; 9 ; http://www.urologyannals.com/ >
     au < released ; 2018 ; Urology Annals Volume 10 ; 2018 ; 10 ; http://www.urologyannals.com/ >
-    au < exists ; 2019 ; Urology Annals Volume 11 ; 2019 ; 11 ; https://www.urologyannals.com/ >
-    au < exists ; 2020 ; Urology Annals Volume 12 ; 2020 ; 12 ; https://www.urologyannals.com/ >
+    au < manifest ; 2019 ; Urology Annals Volume 11 ; 2019 ; 11 ; https://www.urologyannals.com/ >
+    au < manifest ; 2020 ; Urology Annals Volume 12 ; 2020 ; 12 ; https://www.urologyannals.com/ >
 
   }
 
@@ -4511,13 +4511,13 @@
 #    param[base_url] = http://www.wjnm.org/
     param[journal_issn] = 1450-1147
 
-    au < exists ; 2005 ; World Journal of Nuclear Medicine Volume 4 ; 2005 ; 4 ; https://www.wjnm.org/ >
-    au < exists ; 2006 ; World Journal of Nuclear Medicine Volume 5 ; 2006 ; 5 ; https://www.wjnm.org/ >
-    au < exists ; 2007 ; World Journal of Nuclear Medicine Volume 6 ; 2007 ; 6 ; https://www.wjnm.org/ >
-    au < exists ; 2008 ; World Journal of Nuclear Medicine Volume 7 ; 2008 ; 7 ; https://www.wjnm.org/ >
-    au < exists ; 2009 ; World Journal of Nuclear Medicine Volume 8 ; 2009 ; 8 ; https://www.wjnm.org/ >
+    au < manifest ; 2005 ; World Journal of Nuclear Medicine Volume 4 ; 2005 ; 4 ; https://www.wjnm.org/ >
+    au < manifest ; 2006 ; World Journal of Nuclear Medicine Volume 5 ; 2006 ; 5 ; https://www.wjnm.org/ >
+    au < manifest ; 2007 ; World Journal of Nuclear Medicine Volume 6 ; 2007 ; 6 ; https://www.wjnm.org/ >
+    au < manifest ; 2008 ; World Journal of Nuclear Medicine Volume 7 ; 2008 ; 7 ; https://www.wjnm.org/ >
+    au < manifest ; 2009 ; World Journal of Nuclear Medicine Volume 8 ; 2009 ; 8 ; https://www.wjnm.org/ >
     au < exists ; 2010 ; World Journal of Nuclear Medicine Volume 9 ; 2010 ; 9 ; https://www.wjnm.org/ >
-    au < exists ; 2011 ; World Journal of Nuclear Medicine Volume 10 ; 2011 ; 10 ; https://www.wjnm.org/ >
+    au < manifest ; 2011 ; World Journal of Nuclear Medicine Volume 10 ; 2011 ; 10 ; https://www.wjnm.org/ >
     au < released ; 2012 ; World Journal of Nuclear Medicine Volume 11 ; 2012 ; 11 ; http://www.wjnm.org/ >
     au < released ; 2013 ; World Journal of Nuclear Medicine Volume 12 ; 2013 ; 12 ; http://www.wjnm.org/ >
     au < released ; 2014 ; World Journal of Nuclear Medicine Volume 13 ; 2014 ; 13 ; http://www.wjnm.org/ >
@@ -4525,8 +4525,8 @@
     au < released ; 2016 ; World Journal of Nuclear Medicine Volume 15 ; 2016 ; 15 ; http://www.wjnm.org/ >
     au < released ; 2017 ; World Journal of Nuclear Medicine Volume 16 ; 2017 ; 16 ; http://www.wjnm.org/ >
     au < released ; 2018 ; World Journal of Nuclear Medicine Volume 17 ; 2018 ; 17 ; http://www.wjnm.org/ >
-    au < exists ; 2019 ; World Journal of Nuclear Medicine Volume 18 ; 2019 ; 18 ; https://www.wjnm.org/ >
-    au < exists ; 2020 ; World Journal of Nuclear Medicine Volume 19 ; 2020 ; 19 ; https://www.wjnm.org/ >
+    au < manifest ; 2019 ; World Journal of Nuclear Medicine Volume 18 ; 2019 ; 18 ; https://www.wjnm.org/ >
+    au < manifest ; 2020 ; World Journal of Nuclear Medicine Volume 19 ; 2020 ; 19 ; https://www.wjnm.org/ >
 
   }
   
@@ -4612,15 +4612,15 @@
 #      param[base_url] = http://www.advbiores.net/
       #browse. no back issues page.
 
-      au < exists ; 2012 ; Advanced Biomedical Research Volume 1 ; 2012 ; 1 ; https://www.advbiores.net/ >
-      au < exists ; 2013 ; Advanced Biomedical Research Volume 2 ; 2013 ; 2 ; https://www.advbiores.net/ >
-      au < exists ; 2014 ; Advanced Biomedical Research Volume 3 ; 2014 ; 3 ; https://www.advbiores.net/ >
-      au < exists ; 2015 ; Advanced Biomedical Research Volume 4 ; 2015 ; 4 ; https://www.advbiores.net/ >
-      au < exists ; 2016 ; Advanced Biomedical Research Volume 5 ; 2016 ; 5 ; https://www.advbiores.net/ >
-      au < exists ; 2017 ; Advanced Biomedical Research Volume 6 ; 2017 ; 6 ; https://www.advbiores.net/ >
-      au < exists ; 2018 ; Advanced Biomedical Research Volume 7 ; 2018 ; 7 ; https://www.advbiores.net/ >
-      au < exists ; 2019 ; Advanced Biomedical Research Volume 8 ; 2019 ; 8 ; https://www.advbiores.net/ >
-      au < exists ; 2020 ; Advanced Biomedical Research Volume 9 ; 2020 ; 9 ; https://www.advbiores.net/ >
+      au < manifest ; 2012 ; Advanced Biomedical Research Volume 1 ; 2012 ; 1 ; https://www.advbiores.net/ >
+      au < manifest ; 2013 ; Advanced Biomedical Research Volume 2 ; 2013 ; 2 ; https://www.advbiores.net/ >
+      au < manifest ; 2014 ; Advanced Biomedical Research Volume 3 ; 2014 ; 3 ; https://www.advbiores.net/ >
+      au < manifest ; 2015 ; Advanced Biomedical Research Volume 4 ; 2015 ; 4 ; https://www.advbiores.net/ >
+      au < manifest ; 2016 ; Advanced Biomedical Research Volume 5 ; 2016 ; 5 ; https://www.advbiores.net/ >
+      au < manifest ; 2017 ; Advanced Biomedical Research Volume 6 ; 2017 ; 6 ; https://www.advbiores.net/ >
+      au < manifest ; 2018 ; Advanced Biomedical Research Volume 7 ; 2018 ; 7 ; https://www.advbiores.net/ >
+      au < manifest ; 2019 ; Advanced Biomedical Research Volume 8 ; 2019 ; 8 ; https://www.advbiores.net/ >
+      au < manifest ; 2020 ; Advanced Biomedical Research Volume 9 ; 2020 ; 9 ; https://www.advbiores.net/ >
 
   }
 
@@ -4697,7 +4697,7 @@
 
       au < released ; 2015 ; Al-Basar International Journal of Ophthalmology Volume 3 ; 2015 ; 3 ; http://www.bijojournal.org/ >
       au < released ; 2017 ; Al-Basar International Journal of Ophthalmology Volume 4 ; 2017 ; 4 ; http://www.bijojournal.org/ >
-      au < exists ; 2018 ; Al-Basar International Journal of Ophthalmology Volume 5 ; 2018 ; 5 ; https://www.bijojournal.org/ >
+      au < manifest ; 2018 ; Al-Basar International Journal of Ophthalmology Volume 5 ; 2018 ; 5 ; https://www.bijojournal.org/ >
       au < manifest ; 2019 ; Al-Basar International Journal of Ophthalmology Volume 6 ; 2019 ; 6 ; https://www.bijojournal.org/ >
       au < expected ; 2020 ; Al-Basar International Journal of Ophthalmology Volume 7 ; 2020 ; 7 ; https://www.bijojournal.org/ >
 
@@ -4721,7 +4721,7 @@
       au < manifest ; 2004 ; Ancient Science of Life Volume 23 ; 2004 ; 23 ; https://www.ancientscienceoflife.org/ >
       au < manifest ; 2005 ; Ancient Science of Life Volume 24 ; 2005 ; 24 ; https://www.ancientscienceoflife.org/ >
       au < manifest ; 2006 ; Ancient Science of Life Volume 25 ; 2006 ; 25 ; https://www.ancientscienceoflife.org/ >
-      au < exists ; 2007 ; Ancient Science of Life Volume 26 ; 2007 ; 26 ; https://www.ancientscienceoflife.org/ >
+      au < manifest ; 2007 ; Ancient Science of Life Volume 26 ; 2007 ; 26 ; https://www.ancientscienceoflife.org/ >
       au < manifest ; 2008 ; Ancient Science of Life Volume 27 ; 2008 ; 27 ; https://www.ancientscienceoflife.org/ >
       au < manifest ; 2009 ; Ancient Science of Life Volume 28 ; 2009 ; 28 ; https://www.ancientscienceoflife.org/ >
       au < manifest ; 2010 ; Ancient Science of Life Volume 29 ; 2010 ; 29 ; https://www.ancientscienceoflife.org/ >
@@ -4816,7 +4816,7 @@
       au < released ; 2016 ; Archives of International Surgery Volume 6 ; 2016 ; 6 ; http://www.archintsurg.org/ >
       au < released ; 2017 ; Archives of International Surgery Volume 7 ; 2017 ; 7 ; http://www.archintsurg.org/ >
       au < manifest ; 2018 ; Archives of International Surgery Volume 8 ; 2018 ; 8 ; https://www.archintsurg.org/ >
-      au < exists ; 2019 ; Archives of International Surgery Volume 9 ; 2019 ; 9 ; https://www.archintsurg.org/ >
+      au < manifest ; 2019 ; Archives of International Surgery Volume 9 ; 2019 ; 9 ; https://www.archintsurg.org/ >
       au < expected ; 2020 ; Archives of International Surgery Volume 10 ; 2020 ; 10 ; https://www.archintsurg.org/ >
 
   }
@@ -4839,7 +4839,7 @@
       au < released ; 2017 ; Archives of Medicine and Health Sciences Volume 5 ; 2017 ; 5 ; http://www.amhsjournal.org/ >
       au < released ; 2018 ; Archives of Medicine and Health Sciences Volume 6 ; 2018 ; 6 ; http://www.amhsjournal.org/ >
       au < manifest ; 2019 ; Archives of Medicine and Health Sciences Volume 7 ; 2019 ; 7 ; https://www.amhsjournal.org/ >
-      au < exists ; 2020 ; Archives of Medicine and Health Sciences Volume 8 ; 2020 ; 8 ; https://www.amhsjournal.org/ >
+      au < manifest ; 2020 ; Archives of Medicine and Health Sciences Volume 8 ; 2020 ; 8 ; https://www.amhsjournal.org/ >
 
   }
 
@@ -4884,7 +4884,7 @@
       au < released ; 2016 ; Asia Pacific Journal of Clinical Trials: Nervous System Diseases Volume 1 ; 2016 ; 1 ; http://www.actnjournal.com/ >
       au < released ; 2017 ; Asia Pacific Journal of Clinical Trials: Nervous System Diseases Volume 2 ; 2017 ; 2 ; http://www.actnjournal.com/ >
       au < released ; 2018 ; Asia Pacific Journal of Clinical Trials: Nervous System Diseases Volume 3 ; 2018 ; 3 ; http://www.actnjournal.com/ >
-      au < exists ; 2019 ; Asia Pacific Journal of Clinical Trials: Nervous System Diseases Volume 4 ; 2019 ; 4 ; https://www.actnjournal.com/ >
+      au < manifest ; 2019 ; Asia Pacific Journal of Clinical Trials: Nervous System Diseases Volume 4 ; 2019 ; 4 ; https://www.actnjournal.com/ >
       au < manifest ; 2020 ; Asia Pacific Journal of Clinical Trials: Nervous System Diseases Volume 5 ; 2020 ; 5 ; https://www.actnjournal.com/ >
 
   }
@@ -5121,7 +5121,7 @@
       au < released ; 2016 ; Clinical and Translational Degenerative Diseases Volume 1 ; 2016 ; 1 ; http://www.clinicaltdd.com/ >
       au < released ; 2017 ; Clinical and Translational Degenerative Diseases Volume 2 ; 2017 ; 2 ; http://www.clinicaltdd.com/ >
       au < released ; 2018 ; Clinical and Translational Degenerative Diseases Volume 3 ; 2018 ; 3 ; http://www.clinicaltdd.com/ >
-      au < exists ; 2019 ; Clinical and Translational Degenerative Diseases Volume 4 ; 2019 ; 4 ; https://www.clinicaltdd.com/ >
+      au < manifest ; 2019 ; Clinical and Translational Degenerative Diseases Volume 4 ; 2019 ; 4 ; https://www.clinicaltdd.com/ >
       au < manifest ; 2020 ; Clinical and Translational Degenerative Diseases Volume 5 ; 2020 ; 5 ; https://www.clinicaltdd.com/ >
 
   }
@@ -5185,7 +5185,7 @@
       au < released ; 2015 ; Community Acquired Infection Volume 2 ; 2015 ; 2 ; http://www.caijournal.com/ >
       au < released ; 2016 ; Community Acquired Infection Volume 3 ; 2016 ; 3 ; http://www.caijournal.com/ >
       au < released ; 2017 ; Community Acquired Infection Volume 4 ; 2017 ; 4 ; http://www.caijournal.com/ >
-      au < exists ; 2018 ; Community Acquired Infection Volume 5 ; 2018 ; 5 ; https://www.caijournal.com/ >
+      au < manifest ; 2018 ; Community Acquired Infection Volume 5 ; 2018 ; 5 ; https://www.caijournal.com/ >
       au < manifest ; 2019 ; Community Acquired Infection Volume 6 ; 2019 ; 6 ; https://www.caijournal.com/ >
       au < expected ; 2020 ; Community Acquired Infection Volume 7 ; 2020 ; 7 ; https://www.caijournal.com/ >
 
@@ -5287,16 +5287,16 @@
 #      param[base_url] = http://www.educationforhealth.net/
 
       au < manifest ; 2000 ; Education for Health Volume 13 ; 2000 ; 13 ; https://www.educationforhealth.net/ >
-      au < exists ; 2001 ; Education for Health Volume 14 ; 2001 ; 14 ; https://www.educationforhealth.net/ >
-      au < exists ; 2002 ; Education for Health Volume 15 ; 2002 ; 15 ; https://www.educationforhealth.net/ >
+      au < manifest ; 2001 ; Education for Health Volume 14 ; 2001 ; 14 ; https://www.educationforhealth.net/ >
+      au < manifest ; 2002 ; Education for Health Volume 15 ; 2002 ; 15 ; https://www.educationforhealth.net/ >
       au < manifest ; 2003 ; Education for Health Volume 16 ; 2003 ; 16 ; https://www.educationforhealth.net/ >
-      au < exists ; 2004 ; Education for Health Volume 17 ; 2004 ; 17 ; https://www.educationforhealth.net/ >
+      au < manifest ; 2004 ; Education for Health Volume 17 ; 2004 ; 17 ; https://www.educationforhealth.net/ >
       au < manifest ; 2005 ; Education for Health Volume 18 ; 2005 ; 18 ; https://www.educationforhealth.net/ >
-      au < exists ; 2006 ; Education for Health Volume 19 ; 2006 ; 19 ; https://www.educationforhealth.net/ >
+      au < manifest ; 2006 ; Education for Health Volume 19 ; 2006 ; 19 ; https://www.educationforhealth.net/ >
       au < manifest ; 2007 ; Education for Health Volume 20 ; 2007 ; 20 ; https://www.educationforhealth.net/ >
       au < manifest ; 2008 ; Education for Health Volume 21 ; 2008 ; 21 ; https://www.educationforhealth.net/ >
-      au < exists ; 2009 ; Education for Health Volume 22 ; 2009 ; 22 ; https://www.educationforhealth.net/ >
-      au < exists ; 2010 ; Education for Health Volume 23 ; 2010 ; 23 ; https://www.educationforhealth.net/ >
+      au < manifest ; 2009 ; Education for Health Volume 22 ; 2009 ; 22 ; https://www.educationforhealth.net/ >
+      au < manifest ; 2010 ; Education for Health Volume 23 ; 2010 ; 23 ; https://www.educationforhealth.net/ >
       au < released ; 2011 ; Education for Health Volume 24 ; 2011 ; 24 ; http://www.educationforhealth.net/ >
       au < released ; 2012 ; Education for Health Volume 25 ; 2012 ; 25 ; http://www.educationforhealth.net/ >
       au < released ; 2013 ; Education for Health Volume 26 ; 2013 ; 26 ; http://www.educationforhealth.net/ >
@@ -5847,10 +5847,10 @@
       au < released ; 2017 ; Indian Journal of Medical Research Volume 146 ; 2017 ; 146 ; http://www.ijmr.org.in/ >
       au < released ; 2018 ; Indian Journal of Medical Research Volume 147 ; 2018 ; 147 ; http://www.ijmr.org.in/ >
       au < released ; 2018 ; Indian Journal of Medical Research Volume 148 ; 2018 ; 148 ; http://www.ijmr.org.in/ >
-      au < exists ; 2019 ; Indian Journal of Medical Research Volume 149 ; 2019 ; 149 ; https://www.ijmr.org.in/ >
-      au < exists ; 2019 ; Indian Journal of Medical Research Volume 150 ; 2019 ; 150 ; https://www.ijmr.org.in/ >
-      au < exists ; 2020 ; Indian Journal of Medical Research Volume 151 ; 2020 ; 151 ; https://www.ijmr.org.in/ >
-      au < exists ; 2020 ; Indian Journal of Medical Research Volume 152 ; 2020 ; 152 ; https://www.ijmr.org.in/ >
+      au < manifest ; 2019 ; Indian Journal of Medical Research Volume 149 ; 2019 ; 149 ; https://www.ijmr.org.in/ >
+      au < manifest ; 2019 ; Indian Journal of Medical Research Volume 150 ; 2019 ; 150 ; https://www.ijmr.org.in/ >
+      au < manifest ; 2020 ; Indian Journal of Medical Research Volume 151 ; 2020 ; 151 ; https://www.ijmr.org.in/ >
+      au < manifest ; 2020 ; Indian Journal of Medical Research Volume 152 ; 2020 ; 152 ; https://www.ijmr.org.in/ >
 
   }
 
@@ -5873,7 +5873,7 @@
       au < released ; 2016 ; Indian Journal of Multidisciplinary Dentistry Volume 6 ; 2016 ; 6 ; http://www.ijmdent.com/ >
       au < released ; 2017 ; Indian Journal of Multidisciplinary Dentistry Volume 7 ; 2017 ; 7 ; http://www.ijmdent.com/ >
       au < released ; 2018 ; Indian Journal of Multidisciplinary Dentistry Volume 8 ; 2018 ; 8 ; http://www.ijmdent.com/ >
-      au < exists ; 2019 ; Indian Journal of Multidisciplinary Dentistry Volume 9 ; 2019 ; 9 ; https://www.ijmdent.com/ >
+      au < manifest ; 2019 ; Indian Journal of Multidisciplinary Dentistry Volume 9 ; 2019 ; 9 ; https://www.ijmdent.com/ >
       au < expected ; 2020 ; Indian Journal of Multidisciplinary Dentistry Volume 10 ; 2020 ; 10 ; https://www.ijmdent.com/ >
 
   }
@@ -5892,8 +5892,8 @@
       au < released ; 2016 ; Indian Journal of Oral Health and Research Volume 2 ; 2016 ; 2 ; http://www.ijohr.org/ >
       au < released ; 2017 ; Indian Journal of Oral Health and Research Volume 3 ; 2017 ; 3 ; http://www.ijohr.org/ >
       au < released ; 2018 ; Indian Journal of Oral Health and Research Volume 4 ; 2018 ; 4 ; http://www.ijohr.org/ >
-      au < exists ; 2019 ; Indian Journal of Oral Health and Research Volume 5 ; 2019 ; 5 ; https://www.ijohr.org/ >
-      au < exists ; 2020 ; Indian Journal of Oral Health and Research Volume 6 ; 2020 ; 6 ; https://www.ijohr.org/ >
+      au < manifest ; 2019 ; Indian Journal of Oral Health and Research Volume 5 ; 2019 ; 5 ; https://www.ijohr.org/ >
+      au < manifest ; 2020 ; Indian Journal of Oral Health and Research Volume 6 ; 2020 ; 6 ; https://www.ijohr.org/ >
 
   }
 
@@ -5949,10 +5949,10 @@
       param[journal_issn] = 0974-7168
 #      param[base_url] = http://www.ijrh.org/
 
-      au < exists ; 2007 ; Indian Journal of Research in Homoeopathy Volume 1 ; 2007 ; 1 ; https://www.ijrh.org/ >
-      au < exists ; 2008 ; Indian Journal of Research in Homoeopathy Volume 2 ; 2008 ; 2 ; https://www.ijrh.org/ >
-      au < exists ; 2009 ; Indian Journal of Research in Homoeopathy Volume 3 ; 2009 ; 3 ; https://www.ijrh.org/ >
-      au < exists ; 2010 ; Indian Journal of Research in Homoeopathy Volume 4 ; 2010 ; 4 ; https://www.ijrh.org/ >
+      au < manifest ; 2007 ; Indian Journal of Research in Homoeopathy Volume 1 ; 2007 ; 1 ; https://www.ijrh.org/ >
+      au < manifest ; 2008 ; Indian Journal of Research in Homoeopathy Volume 2 ; 2008 ; 2 ; https://www.ijrh.org/ >
+      au < manifest ; 2009 ; Indian Journal of Research in Homoeopathy Volume 3 ; 2009 ; 3 ; https://www.ijrh.org/ >
+      au < manifest ; 2010 ; Indian Journal of Research in Homoeopathy Volume 4 ; 2010 ; 4 ; https://www.ijrh.org/ >
       au < released ; 2011 ; Indian Journal of Research in Homoeopathy Volume 5 ; 2011 ; 5 ; http://www.ijrh.org/ >
       au < released ; 2012 ; Indian Journal of Research in Homoeopathy Volume 6 ; 2012 ; 6 ; http://www.ijrh.org/ >
       au < released ; 2013 ; Indian Journal of Research in Homoeopathy Volume 7 ; 2013 ; 7 ; http://www.ijrh.org/ >
@@ -5961,7 +5961,7 @@
       au < released ; 2016 ; Indian Journal of Research in Homoeopathy Volume 10 ; 2016 ; 10 ; http://www.ijrh.org/ >
       au < released ; 2017 ; Indian Journal of Research in Homoeopathy Volume 11 ; 2017 ; 11 ; http://www.ijrh.org/ >
       au < released ; 2018 ; Indian Journal of Research in Homoeopathy Volume 12 ; 2018 ; 12 ; http://www.ijrh.org/ >
-      au < exists ; 2019 ; Indian Journal of Research in Homoeopathy Volume 13 ; 2019 ; 13 ; https://www.ijrh.org/ >
+      au < manifest ; 2019 ; Indian Journal of Research in Homoeopathy Volume 13 ; 2019 ; 13 ; https://www.ijrh.org/ >
       au < manifest ; 2020 ; Indian Journal of Research in Homoeopathy Volume 14 ; 2020 ; 14 ; https://www.ijrh.org/ >
 
   }
@@ -5981,8 +5981,8 @@
       au < released ; 2016 ; Indian Journal of Social Psychiatry Volume 32 ; 2016 ; 32 ; http://www.indjsp.org/ >
       au < released ; 2017 ; Indian Journal of Social Psychiatry Volume 33 ; 2017 ; 33 ; http://www.indjsp.org/ >
       au < released ; 2018 ; Indian Journal of Social Psychiatry Volume 34 ; 2018 ; 34 ; http://www.indjsp.org/ >
-      au < exists ; 2019 ; Indian Journal of Social Psychiatry Volume 35 ; 2019 ; 35 ; https://www.indjsp.org/ >
-      au < exists ; 2020 ; Indian Journal of Social Psychiatry Volume 36 ; 2020 ; 36 ; https://www.indjsp.org/ >
+      au < manifest ; 2019 ; Indian Journal of Social Psychiatry Volume 35 ; 2019 ; 35 ; https://www.indjsp.org/ >
+      au < manifest ; 2020 ; Indian Journal of Social Psychiatry Volume 36 ; 2020 ; 36 ; https://www.indjsp.org/ >
 
   }
 
@@ -6002,8 +6002,8 @@
       au < released ; 2016 ; Indian Journal of Vascular and Endovascular Surgery Volume 3 ; 2016 ; 3 ; http://www.indjvascsurg.org/ >
       au < released ; 2017 ; Indian Journal of Vascular and Endovascular Surgery Volume 4 ; 2017 ; 4 ; http://www.indjvascsurg.org/ >
       au < released ; 2018 ; Indian Journal of Vascular and Endovascular Surgery Volume 5 ; 2018 ; 5 ; http://www.indjvascsurg.org/ >
-      au < exists ; 2019 ; Indian Journal of Vascular and Endovascular Surgery Volume 6 ; 2019 ; 6 ; https://www.indjvascsurg.org/ >
-      au < exists ; 2020 ; Indian Journal of Vascular and Endovascular Surgery Volume 7 ; 2020 ; 7 ; https://www.indjvascsurg.org/ >
+      au < manifest ; 2019 ; Indian Journal of Vascular and Endovascular Surgery Volume 6 ; 2019 ; 6 ; https://www.indjvascsurg.org/ >
+      au < manifest ; 2020 ; Indian Journal of Vascular and Endovascular Surgery Volume 7 ; 2020 ; 7 ; https://www.indjvascsurg.org/ >
 
   }
 
@@ -6021,8 +6021,8 @@
       au < released ; 2016 ; International Journal of Academic Medicine Volume 2 ; 2016 ; 2 ; http://www.ijam-web.org/ >
       au < released ; 2017 ; International Journal of Academic Medicine Volume 3 ; 2017 ; 3 ; http://www.ijam-web.org/ >
       au < released ; 2018 ; International Journal of Academic Medicine Volume 4 ; 2018 ; 4 ; http://www.ijam-web.org/ >
-      au < exists ; 2019 ; International Journal of Academic Medicine Volume 5 ; 2019 ; 5 ; https://www.ijam-web.org/ >
-      au < exists ; 2020 ; International Journal of Academic Medicine Volume 6 ; 2020 ; 6 ; https://www.ijam-web.org/ >
+      au < manifest ; 2019 ; International Journal of Academic Medicine Volume 5 ; 2019 ; 5 ; https://www.ijam-web.org/ >
+      au < manifest ; 2020 ; International Journal of Academic Medicine Volume 6 ; 2020 ; 6 ; https://www.ijam-web.org/ >
 
   }
 
@@ -6042,8 +6042,8 @@
       au < released ; 2016 ; International Journal of Advanced Medical and Health Research Volume 3 ; 2016 ; 3 ; http://www.ijamhrjournal.org/ >
       au < released ; 2017 ; International Journal of Advanced Medical and Health Research Volume 4 ; 2017 ; 4 ; http://www.ijamhrjournal.org/ >
       au < released ; 2018 ; International Journal of Advanced Medical and Health Research Volume 5 ; 2018 ; 5 ; http://www.ijamhrjournal.org/ >
-      au < exists ; 2019 ; International Journal of Advanced Medical and Health Research Volume 6 ; 2019 ; 6 ; https://www.ijamhrjournal.org/ >
-      au < exists ; 2020 ; International Journal of Advanced Medical and Health Research Volume 7 ; 2020 ; 7 ; https://www.ijamhrjournal.org/ >
+      au < manifest ; 2019 ; International Journal of Advanced Medical and Health Research Volume 6 ; 2019 ; 6 ; https://www.ijamhrjournal.org/ >
+      au < manifest ; 2020 ; International Journal of Advanced Medical and Health Research Volume 7 ; 2020 ; 7 ; https://www.ijamhrjournal.org/ >
 
   }
 
@@ -6164,7 +6164,7 @@
       au < released ; 2016 ; International Journal of Heart Rhythm Volume 1 ; 2016 ; 1 ; http://www.ijhronline.org/ >
       au < released ; 2017 ; International Journal of Heart Rhythm Volume 2 ; 2017 ; 2 ; http://www.ijhronline.org/ >
       au < released ; 2018 ; International Journal of Heart Rhythm Volume 3 ; 2018 ; 3 ; http://www.ijhronline.org/ >
-      au < exists ; 2019 ; International Journal of Heart Rhythm Volume 4 ; 2019 ; 4 ; https://www.ijhronline.org/ >
+      au < manifest ; 2019 ; International Journal of Heart Rhythm Volume 4 ; 2019 ; 4 ; https://www.ijhronline.org/ >
       au < expected ; 2020 ; International Journal of Heart Rhythm Volume 5 ; 2020 ; 5 ; https://www.ijhronline.org/ >
 
   }
@@ -6183,8 +6183,8 @@
       au < released ; 2016 ; International Journal of Noncommunicable Diseases Volume 1 ; 2016 ; 1 ; http://www.ijncd.org/ >
       au < released ; 2017 ; International Journal of Noncommunicable Diseases Volume 2 ; 2017 ; 2 ; http://www.ijncd.org/ >
       au < released ; 2018 ; International Journal of Noncommunicable Diseases Volume 3 ; 2018 ; 3 ; http://www.ijncd.org/ >
-      au < exists ; 2019 ; International Journal of Noncommunicable Diseases Volume 4 ; 2019 ; 4 ; https://www.ijncd.org/ >
-      au < exists ; 2020 ; International Journal of Noncommunicable Diseases Volume 5 ; 2020 ; 5 ; https://www.ijncd.org/ >
+      au < manifest ; 2019 ; International Journal of Noncommunicable Diseases Volume 4 ; 2019 ; 4 ; https://www.ijncd.org/ >
+      au < manifest ; 2020 ; International Journal of Noncommunicable Diseases Volume 5 ; 2020 ; 5 ; https://www.ijncd.org/ >
 
   }
 
@@ -6205,8 +6205,8 @@
       au < released ; 2016 ; International Journal of Oral Health Sciences Volume 6 ; 2016 ; 6 ; http://www.ijohsjournal.org/ >
       au < released ; 2017 ; International Journal of Oral Health Sciences Volume 7 ; 2017 ; 7 ; http://www.ijohsjournal.org/ >
       au < released ; 2018 ; International Journal of Oral Health Sciences Volume 8 ; 2018 ; 8 ; http://www.ijohsjournal.org/ >
-      au < exists ; 2019 ; International Journal of Oral Health Sciences Volume 9 ; 2019 ; 9 ; https://www.ijohsjournal.org/ >
-      au < exists ; 2020 ; International Journal of Oral Health Sciences Volume 10 ; 2020 ; 10 ; https://www.ijohsjournal.org/ >
+      au < manifest ; 2019 ; International Journal of Oral Health Sciences Volume 9 ; 2019 ; 9 ; https://www.ijohsjournal.org/ >
+      au < manifest ; 2020 ; International Journal of Oral Health Sciences Volume 10 ; 2020 ; 10 ; https://www.ijohsjournal.org/ >
 
   }
 
@@ -6255,7 +6255,7 @@
       param[journal_issn] = 1658-5127
 #      param[base_url] = http://www.jahjournal.org/
 
-      au < exists ; 2010 ; Journal of Applied Hematology Volume 1 ; 2010 ; 1 ; https://www.jahjournal.org/ >
+      au < manifest ; 2010 ; Journal of Applied Hematology Volume 1 ; 2010 ; 1 ; https://www.jahjournal.org/ >
       au < released ; 2011 ; Journal of Applied Hematology Volume 2 ; 2011 ; 2 ; http://www.jahjournal.org/ >
       au < released ; 2012 ; Journal of Applied Hematology Volume 3 ; 2012 ; 3 ; http://www.jahjournal.org/ >
       au < released ; 2013 ; Journal of Applied Hematology Volume 4 ; 2013 ; 4 ; http://www.jahjournal.org/ >
@@ -6264,8 +6264,8 @@
       au < released ; 2016 ; Journal of Applied Hematology Volume 7 ; 2016 ; 7 ; http://www.jahjournal.org/ >
       au < released ; 2017 ; Journal of Applied Hematology Volume 8 ; 2017 ; 8 ; http://www.jahjournal.org/ >
       au < released ; 2018 ; Journal of Applied Hematology Volume 9 ; 2018 ; 9 ; http://www.jahjournal.org/ >
-      au < exists ; 2019 ; Journal of Applied Hematology Volume 10 ; 2019 ; 10 ; https://www.jahjournal.org/ >
-      au < exists ; 2020 ; Journal of Applied Hematology Volume 11 ; 2020 ; 11 ; https://www.jahjournal.org/ >
+      au < manifest ; 2019 ; Journal of Applied Hematology Volume 10 ; 2019 ; 10 ; https://www.jahjournal.org/ >
+      au < manifest ; 2020 ; Journal of Applied Hematology Volume 11 ; 2020 ; 11 ; https://www.jahjournal.org/ >
 
   }
 
@@ -6340,8 +6340,8 @@
       au < released ; 2016 ; Journal of Cardiovascular Echography Volume 26 ; 2016 ; 26 ; http://www.jcecho.org/ >
       au < released ; 2017 ; Journal of Cardiovascular Echography Volume 27 ; 2017 ; 27 ; http://www.jcecho.org/ >
       au < released ; 2018 ; Journal of Cardiovascular Echography Volume 28 ; 2018 ; 28 ; http://www.jcecho.org/ >
-      au < exists ; 2019 ; Journal of Cardiovascular Echography Volume 29 ; 2019 ; 29 ; https://www.jcecho.org/ >
-      au < exists ; 2020 ; Journal of Cardiovascular Echography Volume 30 ; 2020 ; 30 ; https://www.jcecho.org/ >
+      au < manifest ; 2019 ; Journal of Cardiovascular Echography Volume 29 ; 2019 ; 29 ; https://www.jcecho.org/ >
+      au < manifest ; 2020 ; Journal of Cardiovascular Echography Volume 30 ; 2020 ; 30 ; https://www.jcecho.org/ >
 
   }
 
@@ -6361,8 +6361,8 @@
       au < released ; 2016 ; Journal of Cleft Lip Palate and Craniofacial Anomalies Volume 3 ; 2016 ; 3 ; http://www.jclpca.org/ >
       au < released ; 2017 ; Journal of Cleft Lip Palate and Craniofacial Anomalies Volume 4 ; 2017 ; 4 ; http://www.jclpca.org/ >
       au < released ; 2018 ; Journal of Cleft Lip Palate and Craniofacial Anomalies Volume 5 ; 2018 ; 5 ; http://www.jclpca.org/ >
-      au < exists ; 2019 ; Journal of Cleft Lip Palate and Craniofacial Anomalies Volume 6 ; 2019 ; 6 ; https://www.jclpca.org/ >
-      au < exists ; 2020 ; Journal of Cleft Lip Palate and Craniofacial Anomalies Volume 7 ; 2020 ; 7 ; https://www.jclpca.org/ >
+      au < manifest ; 2019 ; Journal of Cleft Lip Palate and Craniofacial Anomalies Volume 6 ; 2019 ; 6 ; https://www.jclpca.org/ >
+      au < manifest ; 2020 ; Journal of Cleft Lip Palate and Craniofacial Anomalies Volume 7 ; 2020 ; 7 ; https://www.jclpca.org/ >
 
   }
 
@@ -6379,8 +6379,8 @@
       au < released ; 2016 ; Journal of Clinical and Preventive Cardiology Volume 5 ; 2016 ; 5 ; http://www.jcpconline.org/ >
       au < released ; 2017 ; Journal of Clinical and Preventive Cardiology Volume 6 ; 2017 ; 6 ; http://www.jcpconline.org/ >
       au < released ; 2018 ; Journal of Clinical and Preventive Cardiology Volume 7 ; 2018 ; 7 ; http://www.jcpconline.org/ >
-      au < exists ; 2019 ; Journal of Clinical and Preventive Cardiology Volume 8 ; 2019 ; 8 ; https://www.jcpconline.org/ >
-      au < exists ; 2020 ; Journal of Clinical and Preventive Cardiology Volume 9 ; 2020 ; 9 ; https://www.jcpconline.org/ >
+      au < manifest ; 2019 ; Journal of Clinical and Preventive Cardiology Volume 8 ; 2019 ; 8 ; https://www.jcpconline.org/ >
+      au < manifest ; 2020 ; Journal of Clinical and Preventive Cardiology Volume 9 ; 2020 ; 9 ; https://www.jcpconline.org/ >
 
   }
 
@@ -6401,8 +6401,8 @@
       au < released ; 2016 ; Journal of Clinical Ophthalmology and Research Volume 4 ; 2016 ; 4 ; http://www.jcor.in/ >
       au < released ; 2017 ; Journal of Clinical Ophthalmology and Research Volume 5 ; 2017 ; 5 ; http://www.jcor.in/ >
       au < released ; 2018 ; Journal of Clinical Ophthalmology and Research Volume 6 ; 2018 ; 6 ; http://www.jcor.in/ >
-      au < exists ; 2019 ; Journal of Clinical Ophthalmology and Research Volume 7 ; 2019 ; 7 ; https://www.jcor.in/ >
-      au < exists ; 2020 ; Journal of Clinical Ophthalmology and Research Volume 8 ; 2020 ; 8 ; https://www.jcor.in/ >
+      au < manifest ; 2019 ; Journal of Clinical Ophthalmology and Research Volume 7 ; 2019 ; 7 ; https://www.jcor.in/ >
+      au < manifest ; 2020 ; Journal of Clinical Ophthalmology and Research Volume 8 ; 2020 ; 8 ; https://www.jcor.in/ >
 
   }
 
@@ -6417,9 +6417,9 @@
       param[journal_issn] = 2468-6859
 #      param[base_url] = http://www.jcsjournal.org/
 
-      au < exists ; 2001 ; Journal of Clinical Sciences Volume 1 ; 2001 ; 1 ; https://www.jcsjournal.org/ >
+      au < manifest ; 2001 ; Journal of Clinical Sciences Volume 1 ; 2001 ; 1 ; https://www.jcsjournal.org/ >
       au < exists ; 2002 ; Journal of Clinical Sciences Volume 2 ; 2002 ; 2 ; https://www.jcsjournal.org/ >
-      au < exists ; 2003 ; Journal of Clinical Sciences Volume 3 ; 2003 ; 3 ; https://www.jcsjournal.org/ >
+      au < manifest ; 2003 ; Journal of Clinical Sciences Volume 3 ; 2003 ; 3 ; https://www.jcsjournal.org/ >
       au < manifest ; 2004 ; Journal of Clinical Sciences Volume 4 ; 2004 ; 4 ; https://www.jcsjournal.org/ >
       au < manifest ; 2005 ; Journal of Clinical Sciences Volume 5 ; 2005 ; 5 ; https://www.jcsjournal.org/ >
       au < manifest ; 2006 ; Journal of Clinical Sciences Volume 6 ; 2006 ; 6 ; https://www.jcsjournal.org/ >
@@ -6451,8 +6451,8 @@
       au < released ; 2016 ; Journal of Current Research in Scientific Medicine Volume 2 ; 2016 ; 2 ; http://www.jcrsmed.org/ >
       au < released ; 2017 ; Journal of Current Research in Scientific Medicine Volume 3 ; 2017 ; 3 ; http://www.jcrsmed.org/ >
       au < released ; 2018 ; Journal of Current Research in Scientific Medicine Volume 4 ; 2018 ; 4 ; http://www.jcrsmed.org/ >
-      au < exists ; 2019 ; Journal of Current Research in Scientific Medicine Volume 5 ; 2019 ; 5 ; https://www.jcrsmed.org/ >
-      au < exists ; 2020 ; Journal of Current Research in Scientific Medicine Volume 6 ; 2020 ; 6 ; https://www.jcrsmed.org/ >
+      au < manifest ; 2019 ; Journal of Current Research in Scientific Medicine Volume 5 ; 2019 ; 5 ; https://www.jcrsmed.org/ >
+      au < manifest ; 2020 ; Journal of Current Research in Scientific Medicine Volume 6 ; 2020 ; 6 ; https://www.jcrsmed.org/ >
 
   }
 
@@ -6490,10 +6490,10 @@
       param[journal_issn] = 2321-1385
 #      param[base_url] = http://www.jdentlasers.org/
 
-      au < exists ; 2007 ; Journal of Dental Lasers Volume 1 ; 2007 ; 1 ; https://www.jdentlasers.org/ >
-      au < exists ; 2008 ; Journal of Dental Lasers Volume 2 ; 2008 ; 2 ; https://www.jdentlasers.org/ >
-      au < exists ; 2009 ; Journal of Dental Lasers Volume 3 ; 2009 ; 3 ; https://www.jdentlasers.org/ >
-      au < exists ; 2010 ; Journal of Dental Lasers Volume 4 ; 2010 ; 4 ; https://www.jdentlasers.org/ >
+      au < manifest ; 2007 ; Journal of Dental Lasers Volume 1 ; 2007 ; 1 ; https://www.jdentlasers.org/ >
+      au < manifest ; 2008 ; Journal of Dental Lasers Volume 2 ; 2008 ; 2 ; https://www.jdentlasers.org/ >
+      au < manifest ; 2009 ; Journal of Dental Lasers Volume 3 ; 2009 ; 3 ; https://www.jdentlasers.org/ >
+      au < manifest ; 2010 ; Journal of Dental Lasers Volume 4 ; 2010 ; 4 ; https://www.jdentlasers.org/ >
       au < released ; 2011 ; Journal of Dental Lasers Volume 5 ; 2011 ; 5 ; http://www.jdentlasers.org/ >
       au < released ; 2012 ; Journal of Dental Lasers Volume 6 ; 2012 ; 6 ; http://www.jdentlasers.org/ >
       au < released ; 2013 ; Journal of Dental Lasers Volume 7 ; 2013 ; 7 ; http://www.jdentlasers.org/ >
@@ -6502,7 +6502,7 @@
       au < released ; 2016 ; Journal of Dental Lasers Volume 10 ; 2016 ; 10 ; http://www.jdentlasers.org/ >
       au < released ; 2017 ; Journal of Dental Lasers Volume 11 ; 2017 ; 11 ; http://www.jdentlasers.org/ >
       au < released ; 2018 ; Journal of Dental Lasers Volume 12 ; 2018 ; 12 ; http://www.jdentlasers.org/ >
-      au < exists ; 2019 ; Journal of Dental Lasers Volume 13 ; 2019 ; 13 ; https://www.jdentlasers.org/ >
+      au < manifest ; 2019 ; Journal of Dental Lasers Volume 13 ; 2019 ; 13 ; https://www.jdentlasers.org/ >
       au < expected ; 2020 ; Journal of Dental Lasers Volume 14 ; 2020 ; 14 ; https://www.jdentlasers.org/ >
 
   }
@@ -6523,8 +6523,8 @@
       au < released ; 2016 ; Journal of Dental Research and Review Volume 3 ; 2016 ; 3 ; http://www.jdrr.org/ >
       au < released ; 2017 ; Journal of Dental Research and Review Volume 4 ; 2017 ; 4 ; http://www.jdrr.org/ >
       au < released ; 2018 ; Journal of Dental Research and Review Volume 5 ; 2018 ; 5 ; http://www.jdrr.org/ >
-      au < exists ; 2019 ; Journal of Dental Research and Review Volume 6 ; 2019 ; 6 ; https://www.jdrr.org/ >
-      au < exists ; 2020 ; Journal of Dental Research and Review Volume 7 ; 2020 ; 7 ; https://www.jdrr.org/ >
+      au < manifest ; 2019 ; Journal of Dental Research and Review Volume 6 ; 2019 ; 6 ; https://www.jdrr.org/ >
+      au < manifest ; 2020 ; Journal of Dental Research and Review Volume 7 ; 2020 ; 7 ; https://www.jdrr.org/ >
 
   }
 
@@ -6570,8 +6570,8 @@
       au < released ; 2016 ; Journal of Dr. NTR University of Health Sciences Volume 5 ; 2016 ; 5 ; http://www.jdrntruhs.org/ >
       au < released ; 2017 ; Journal of Dr. NTR University of Health Sciences Volume 6 ; 2017 ; 6 ; http://www.jdrntruhs.org/ >
       au < released ; 2018 ; Journal of Dr. NTR University of Health Sciences Volume 7 ; 2018 ; 7 ; http://www.jdrntruhs.org/ >
-      au < exists ; 2019 ; Journal of Dr. NTR University of Health Sciences Volume 8 ; 2019 ; 8 ; https://www.jdrntruhs.org/ >
-      au < exists ; 2020 ; Journal of Dr. NTR University of Health Sciences Volume 9 ; 2020 ; 9 ; https://www.jdrntruhs.org/ >
+      au < manifest ; 2019 ; Journal of Dr. NTR University of Health Sciences Volume 8 ; 2019 ; 8 ; https://www.jdrntruhs.org/ >
+      au < manifest ; 2020 ; Journal of Dr. NTR University of Health Sciences Volume 9 ; 2020 ; 9 ; https://www.jdrntruhs.org/ >
 
   }
 
@@ -6605,8 +6605,8 @@
       au < released ; 2015 ; Journal of Experimental and Clinical Anatomy Volume 14 ; 2015 ; 14 ; http://www.jecajournal.org/ >
       au < released ; 2016 ; Journal of Experimental and Clinical Anatomy Volume 15 ; 2016 ; 15 ; http://www.jecajournal.org/ >
       au < released ; 2017 ; Journal of Experimental and Clinical Anatomy Volume 16 ; 2017 ; 16 ; http://www.jecajournal.org/ >
-      au < exists ; 2018 ; Journal of Experimental and Clinical Anatomy Volume 17 ; 2018 ; 17 ; https://www.jecajournal.org/ >
-      au < exists ; 2019 ; Journal of Experimental and Clinical Anatomy Volume 18 ; 2019 ; 18 ; https://www.jecajournal.org/ >
+      au < manifest ; 2018 ; Journal of Experimental and Clinical Anatomy Volume 17 ; 2018 ; 17 ; https://www.jecajournal.org/ >
+      au < manifest ; 2019 ; Journal of Experimental and Clinical Anatomy Volume 18 ; 2019 ; 18 ; https://www.jecajournal.org/ >
       au < expected ; 2020 ; Journal of Experimental and Clinical Anatomy Volume 19 ; 2020 ; 19 ; https://www.jecajournal.org/ >
 
   }
@@ -6626,8 +6626,8 @@
       au < released ; 2016 ; Journal of Forensic Science and Medicine Volume 2 ; 2016 ; 2 ; http://www.jfsmonline.com/ >
       au < released ; 2017 ; Journal of Forensic Science and Medicine Volume 3 ; 2017 ; 3 ; http://www.jfsmonline.com/ >
       au < released ; 2018 ; Journal of Forensic Science and Medicine Volume 4 ; 2018 ; 4 ; http://www.jfsmonline.com/ >
-      au < exists ; 2019 ; Journal of Forensic Science and Medicine Volume 5 ; 2019 ; 5 ; https://www.jfsmonline.com/ >
-      au < exists ; 2020 ; Journal of Forensic Science and Medicine Volume 6 ; 2020 ; 6 ; https://www.jfsmonline.com/ >
+      au < manifest ; 2019 ; Journal of Forensic Science and Medicine Volume 5 ; 2019 ; 5 ; https://www.jfsmonline.com/ >
+      au < manifest ; 2020 ; Journal of Forensic Science and Medicine Volume 6 ; 2020 ; 6 ; https://www.jfsmonline.com/ >
 
   }
 
@@ -6647,8 +6647,8 @@
       au < released ; 2016 ; Journal of Geriatric Mental Health Volume 3 ; 2016 ; 3 ; http://www.jgmh.org/ >
       au < released ; 2017 ; Journal of Geriatric Mental Health Volume 4 ; 2017 ; 4 ; http://www.jgmh.org/ >
       au < released ; 2018 ; Journal of Geriatric Mental Health Volume 5 ; 2018 ; 5 ; http://www.jgmh.org/ >
-      au < exists ; 2019 ; Journal of Geriatric Mental Health Volume 6 ; 2019 ; 6 ; https://www.jgmh.org/ >
-      au < exists ; 2020 ; Journal of Geriatric Mental Health Volume 7 ; 2020 ; 7 ; https://www.jgmh.org/ >
+      au < manifest ; 2019 ; Journal of Geriatric Mental Health Volume 6 ; 2019 ; 6 ; https://www.jgmh.org/ >
+      au < manifest ; 2020 ; Journal of Geriatric Mental Health Volume 7 ; 2020 ; 7 ; https://www.jgmh.org/ >
 
   }
 
@@ -6665,8 +6665,8 @@
       au < released ; 2016 ; Journal of Head & Neck Physicians And Surgeons Volume 4 ; 2016 ; 4 ; http://www.jhnps.org/ >
       au < released ; 2017 ; Journal of Head & Neck Physicians And Surgeons Volume 5 ; 2017 ; 5 ; http://www.jhnps.org/ >
       au < released ; 2018 ; Journal of Head & Neck Physicians And Surgeons Volume 6 ; 2018 ; 6 ; http://www.jhnps.org/ >
-      au < exists ; 2019 ; Journal of Head & Neck Physicians And Surgeons Volume 7 ; 2019 ; 7 ; https://www.jhnps.org/ >
-      au < exists ; 2020 ; Journal of Head & Neck Physicians And Surgeons Volume 8 ; 2020 ; 8 ; https://www.jhnps.org/ >
+      au < manifest ; 2019 ; Journal of Head & Neck Physicians And Surgeons Volume 7 ; 2019 ; 7 ; https://www.jhnps.org/ >
+      au < manifest ; 2020 ; Journal of Head & Neck Physicians And Surgeons Volume 8 ; 2020 ; 8 ; https://www.jhnps.org/ >
 
   }
 
@@ -6686,8 +6686,8 @@
       au < released ; 2016 ; Journal of Health Research and Reviews Volume 3 ; 2016 ; 3 ; http://www.jhrr.org/ >
       au < released ; 2017 ; Journal of Health Research and Reviews Volume 4 ; 2017 ; 4 ; http://www.jhrr.org/ >
       au < released ; 2018 ; Journal of Health Research and Reviews Volume 5 ; 2018 ; 5 ; http://www.jhrr.org/ >
-      au < exists ; 2019 ; Journal of Health Research and Reviews Volume 6 ; 2019 ; 6 ; https://www.jhrr.org/ >
-      au < expected ; 2020 ; Journal of Health Research and Reviews Volume 7 ; 2020 ; 7 ; https://www.jhrr.org/ >
+      au < manifest ; 2019 ; Journal of Health Research and Reviews Volume 6 ; 2019 ; 6 ; https://www.jhrr.org/ >
+      au < manifest ; 2020 ; Journal of Health Research and Reviews Volume 7 ; 2020 ; 7 ; https://www.jhrr.org/ >
 
   }
 
@@ -6745,15 +6745,15 @@
       param[journal_issn] = 2319-5932
 #      param[base_url] = http://www.jiaphd.org/
 
-      au < exists ; 2002 ; Journal of Indian Association of Public Health Dentistry Volume 2 ; 2002 ; 2 ; https://www.jiaphd.org/ >
-      au < exists ; 2003 ; Journal of Indian Association of Public Health Dentistry Volume 3 ; 2003 ; 3 ; https://www.jiaphd.org/ >
-      au < exists ; 2004 ; Journal of Indian Association of Public Health Dentistry Volume 4 [2004] ; 2004 ; 4 ; https://www.jiaphd.org/ >
-      au < exists ; 2005 ; Journal of Indian Association of Public Health Dentistry Volume 5 [2005] ; 2005 ; 5 ; https://www.jiaphd.org/ >
-      au < exists ; 2006 ; Journal of Indian Association of Public Health Dentistry Volume 4 [2006] ; 2006 ; 4 ; https://www.jiaphd.org/ >
-      au < exists ; 2007 ; Journal of Indian Association of Public Health Dentistry Volume 5 [2007] ; 2007 ; 5 ; https://www.jiaphd.org/ >
-      au < exists ; 2008 ; Journal of Indian Association of Public Health Dentistry Volume 6 ; 2008 ; 6 ; https://www.jiaphd.org/ >
-      au < exists ; 2009 ; Journal of Indian Association of Public Health Dentistry Volume 7 ; 2009 ; 7 ; https://www.jiaphd.org/ >
-      au < exists ; 2010 ; Journal of Indian Association of Public Health Dentistry Volume 8 ; 2010 ; 8 ; https://www.jiaphd.org/ >
+      au < manifest ; 2002 ; Journal of Indian Association of Public Health Dentistry Volume 2 ; 2002 ; 2 ; https://www.jiaphd.org/ >
+      au < manifest ; 2003 ; Journal of Indian Association of Public Health Dentistry Volume 3 ; 2003 ; 3 ; https://www.jiaphd.org/ >
+      au < manifest ; 2004 ; Journal of Indian Association of Public Health Dentistry Volume 4 [2004] ; 2004 ; 4 ; https://www.jiaphd.org/ >
+      au < manifest ; 2005 ; Journal of Indian Association of Public Health Dentistry Volume 5 [2005] ; 2005 ; 5 ; https://www.jiaphd.org/ >
+      au < manifest ; 2006 ; Journal of Indian Association of Public Health Dentistry Volume 4 [2006] ; 2006 ; 4 ; https://www.jiaphd.org/ >
+      au < manifest ; 2007 ; Journal of Indian Association of Public Health Dentistry Volume 5 [2007] ; 2007 ; 5 ; https://www.jiaphd.org/ >
+      au < manifest ; 2008 ; Journal of Indian Association of Public Health Dentistry Volume 6 ; 2008 ; 6 ; https://www.jiaphd.org/ >
+      au < manifest ; 2009 ; Journal of Indian Association of Public Health Dentistry Volume 7 ; 2009 ; 7 ; https://www.jiaphd.org/ >
+      au < manifest ; 2010 ; Journal of Indian Association of Public Health Dentistry Volume 8 ; 2010 ; 8 ; https://www.jiaphd.org/ >
       au < released ; 2011 ; Journal of Indian Association of Public Health Dentistry Volume 9 ; 2011 ; 9 ; http://www.jiaphd.org/ >
       au < released ; 2012 ; Journal of Indian Association of Public Health Dentistry Volume 10 ; 2012 ; 10 ; http://www.jiaphd.org/ >
       au < released ; 2013 ; Journal of Indian Association of Public Health Dentistry Volume 11 ; 2013 ; 11 ; http://www.jiaphd.org/ >
@@ -6762,8 +6762,8 @@
       au < released ; 2016 ; Journal of Indian Association of Public Health Dentistry Volume 14 ; 2016 ; 14 ; http://www.jiaphd.org/ >
       au < released ; 2017 ; Journal of Indian Association of Public Health Dentistry Volume 15 ; 2017 ; 15 ; http://www.jiaphd.org/ >
       au < released ; 2018 ; Journal of Indian Association of Public Health Dentistry Volume 16 ; 2018 ; 16 ; http://www.jiaphd.org/ >
-      au < exists ; 2019 ; Journal of Indian Association of Public Health Dentistry Volume 17 ; 2019 ; 17 ; https://www.jiaphd.org/ >
-      au < exists ; 2020 ; Journal of Indian Association of Public Health Dentistry Volume 18 ; 2020 ; 18 ; https://www.jiaphd.org/ >
+      au < manifest ; 2019 ; Journal of Indian Association of Public Health Dentistry Volume 17 ; 2019 ; 17 ; https://www.jiaphd.org/ >
+      au < manifest ; 2020 ; Journal of Indian Association of Public Health Dentistry Volume 18 ; 2020 ; 18 ; https://www.jiaphd.org/ >
 
   }
 
@@ -10539,7 +10539,7 @@
 #      param[base_url] = http://www.wjcs.us.com/
 
       au < manifest ; 2018 ; World Journal of Colorectal Surgery Volume 7 ; 2018 ; 7 ; https://www.wjcs.us.com/ >
-      au < exists ; 2019 ; World Journal of Colorectal Surgery Volume 8 ; 2019 ; 8 ; https://www.wjcs.us.com/ >
+      au < manifest ; 2019 ; World Journal of Colorectal Surgery Volume 8 ; 2019 ; 8 ; https://www.wjcs.us.com/ >
       au < manifest ; 2020 ; World Journal of Colorectal Surgery Volume 9 ; 2020 ; 9 ; https://www.wjcs.us.com/ >
 
   }
