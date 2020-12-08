@@ -4,7 +4,7 @@
     name = International Union of Crystallography ;
     info[back] = 2000 ;
     info[contract] = 2010 ;
-    info[tester] = 8 ;
+    info[tester] = 1 ;
     info[poller] = 3
   >
   
@@ -87,21 +87,21 @@
     au < finished ; manifest ; 2019 ; 75 ; Acta Crystallographica Section E: Crystallographic Communications Volume 75 (August 2019) ; 2019-08 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2019 ; 75 ; Acta Crystallographica Section E: Crystallographic Communications Volume 75 (September 2019) ; 2019-09 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2019 ; 75 ; Acta Crystallographica Section E: Crystallographic Communications Volume 75 (October 2019) ; 2019-10 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
-    au < manifest ; exists ; 2019 ; 75 ; Acta Crystallographica Section E: Crystallographic Communications Volume 75 (November 2019) ; 2019-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < expected ; exists ; 2019 ; 75 ; Acta Crystallographica Section E: Crystallographic Communications Volume 75 (December 2019) ; 2019-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2019 ; 75 ; Acta Crystallographica Section E: Crystallographic Communications Volume 75 (November 2019) ; 2019-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2019 ; 75 ; Acta Crystallographica Section E: Crystallographic Communications Volume 75 (December 2019) ; 2019-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
 
-    au < manifest ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 (January 2020) ; 2020-01 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < manifest ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 (February 2020) ; 2020-02 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < manifest ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 (March 2020) ; 2020-03 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < manifest ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 (April 2020) ; 2020-04 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < manifest ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 (May 2020) ; 2020-05 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < manifest ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 (June 2020) ; 2020-06 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < manifest ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 (July 2020) ; 2020-07 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < manifest ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 (August 2020) ; 2020-08 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < manifest ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 (September 2020) ; 2020-09 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < manifest ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 (October 2020) ; 2020-10 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < manifest ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 (November 2020) ; 2020-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < expected ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 (December 2020) ; 2020-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 (January 2020) ; 2020-01 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 (February 2020) ; 2020-02 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 (March 2020) ; 2020-03 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 (April 2020) ; 2020-04 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 (May 2020) ; 2020-05 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 (June 2020) ; 2020-06 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 (July 2020) ; 2020-07 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 (August 2020) ; 2020-08 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 (September 2020) ; 2020-09 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 (October 2020) ; 2020-10 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 (November 2020) ; 2020-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 (December 2020) ; 2020-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
 
   }
 
@@ -385,31 +385,31 @@
     au < doesNotExist ; doesNotExist ; 2018 ; 5 ; IUCrJ Volume 5 (November 2018) ; 2018-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < doesNotExist ; doesNotExist ; 2018 ; 5 ; IUCrJ Volume 5 (December 2018) ; 2018-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
 
-    au < manifest ; exists ; 2019 ; 6 ; IUCrJ Volume 6 (January 2019) ; 2019-01 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < manifest ; exists ; 2019 ; 6 ; IUCrJ Volume 6 (February 2019) ; 2019-02 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < manifest ; exists ; 2019 ; 6 ; IUCrJ Volume 6 (March 2019) ; 2019-03 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < manifest ; exists ; 2019 ; 6 ; IUCrJ Volume 6 (April 2019) ; 2019-04 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < manifest ; exists ; 2019 ; 6 ; IUCrJ Volume 6 (May 2019) ; 2019-05 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < manifest ; exists ; 2019 ; 6 ; IUCrJ Volume 6 (June 2019) ; 2019-06 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < manifest ; exists ; 2019 ; 6 ; IUCrJ Volume 6 (July 2019) ; 2019-07 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < manifest ; exists ; 2019 ; 6 ; IUCrJ Volume 6 (August 2019) ; 2019-08 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < manifest ; exists ; 2019 ; 6 ; IUCrJ Volume 6 (September 2019) ; 2019-09 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < manifest ; exists ; 2019 ; 6 ; IUCrJ Volume 6 (October 2019) ; 2019-10 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < manifest ; exists ; 2019 ; 6 ; IUCrJ Volume 6 (November 2019) ; 2019-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < expected ; exists ; 2019 ; 6 ; IUCrJ Volume 6 (December 2019) ; 2019-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2019 ; 6 ; IUCrJ Volume 6 (January 2019) ; 2019-01 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2019 ; 6 ; IUCrJ Volume 6 (February 2019) ; 2019-02 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2019 ; 6 ; IUCrJ Volume 6 (March 2019) ; 2019-03 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2019 ; 6 ; IUCrJ Volume 6 (April 2019) ; 2019-04 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2019 ; 6 ; IUCrJ Volume 6 (May 2019) ; 2019-05 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2019 ; 6 ; IUCrJ Volume 6 (June 2019) ; 2019-06 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2019 ; 6 ; IUCrJ Volume 6 (July 2019) ; 2019-07 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2019 ; 6 ; IUCrJ Volume 6 (August 2019) ; 2019-08 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2019 ; 6 ; IUCrJ Volume 6 (September 2019) ; 2019-09 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2019 ; 6 ; IUCrJ Volume 6 (October 2019) ; 2019-10 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2019 ; 6 ; IUCrJ Volume 6 (November 2019) ; 2019-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2019 ; 6 ; IUCrJ Volume 6 (December 2019) ; 2019-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
 
-    au < manifest ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (January 2020) ; 2020-01 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < manifest ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (February 2020) ; 2020-02 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < manifest ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (March 2020) ; 2020-03 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < manifest ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (April 2020) ; 2020-04 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < manifest ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (May 2020) ; 2020-05 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < manifest ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (June 2020) ; 2020-06 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < manifest ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (July 2020) ; 2020-07 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < manifest ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (August 2020) ; 2020-08 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < manifest ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (September 2020) ; 2020-09 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < manifest ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (October 2020) ; 2020-10 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < expected ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (November 2020) ; 2020-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < expected ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (December 2020) ; 2020-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (January 2020) ; 2020-01 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (February 2020) ; 2020-02 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (March 2020) ; 2020-03 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (April 2020) ; 2020-04 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (May 2020) ; 2020-05 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (June 2020) ; 2020-06 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (July 2020) ; 2020-07 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (August 2020) ; 2020-08 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (September 2020) ; 2020-09 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (October 2020) ; 2020-10 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (November 2020) ; 2020-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (December 2020) ; 2020-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
 
   }
   
@@ -475,21 +475,21 @@
     au < finished ; manifest ; 2019 ; 4 ; IUCrData Volume 4 (August 2019) ; 2019-08 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 4 ; IUCrData Volume 4 (September 2019) ; 2019-09 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; >
     au < finished ; manifest ; 2019 ; 4 ; IUCrData Volume 4 (October 2019) ; 2019-10 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
-    au < manifest ; exists ; 2019 ; 4 ; IUCrData Volume 4 (November 2019) ; 2019-11 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < manifest ; exists ; 2019 ; 4 ; IUCrData Volume 4 (December 2019) ; 2019-12 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2019 ; 4 ; IUCrData Volume 4 (November 2019) ; 2019-11 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2019 ; 4 ; IUCrData Volume 4 (December 2019) ; 2019-12 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
 
-    au < manifest ; exists ; 2020 ; 5 ; IUCrData Volume 5 (January 2020) ; 2020-01 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < manifest ; exists ; 2020 ; 5 ; IUCrData Volume 5 (February 2020) ; 2020-02 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < manifest ; exists ; 2020 ; 5 ; IUCrData Volume 5 (March 2020) ; 2020-03 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < manifest ; exists ; 2020 ; 5 ; IUCrData Volume 5 (April 2020) ; 2020-04 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < manifest ; exists ; 2020 ; 5 ; IUCrData Volume 5 (May 2020) ; 2020-05 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < manifest ; exists ; 2020 ; 5 ; IUCrData Volume 5 (June 2020) ; 2020-06 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < manifest ; exists ; 2020 ; 5 ; IUCrData Volume 5 (July 2020) ; 2020-07 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < manifest ; exists ; 2020 ; 5 ; IUCrData Volume 5 (August 2020) ; 2020-08 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < manifest ; exists ; 2020 ; 5 ; IUCrData Volume 5 (September 2020) ; 2020-09 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < manifest ; exists ; 2020 ; 5 ; IUCrData Volume 5 (October 2020) ; 2020-10 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < manifest ; exists ; 2020 ; 5 ; IUCrData Volume 5 (November 2020) ; 2020-11 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < manifest ; exists ; 2020 ; 5 ; IUCrData Volume 5 (December 2020) ; 2020-12 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2020 ; 5 ; IUCrData Volume 5 (January 2020) ; 2020-01 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2020 ; 5 ; IUCrData Volume 5 (February 2020) ; 2020-02 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2020 ; 5 ; IUCrData Volume 5 (March 2020) ; 2020-03 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2020 ; 5 ; IUCrData Volume 5 (April 2020) ; 2020-04 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2020 ; 5 ; IUCrData Volume 5 (May 2020) ; 2020-05 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2020 ; 5 ; IUCrData Volume 5 (June 2020) ; 2020-06 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2020 ; 5 ; IUCrData Volume 5 (July 2020) ; 2020-07 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2020 ; 5 ; IUCrData Volume 5 (August 2020) ; 2020-08 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2020 ; 5 ; IUCrData Volume 5 (September 2020) ; 2020-09 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2020 ; 5 ; IUCrData Volume 5 (October 2020) ; 2020-10 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2020 ; 5 ; IUCrData Volume 5 (November 2020) ; 2020-11 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2020 ; 5 ; IUCrData Volume 5 (December 2020) ; 2020-12 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
 
   }
 
