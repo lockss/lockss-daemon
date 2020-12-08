@@ -135,7 +135,7 @@
       au < finished ; manifest ; 2017 ; 20 ; Redescriptions Volume 2017 ; 2017 ; https://journal-redescriptions.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 21 ; Redescriptions Volume 2018 ; 2018 ; https://journal-redescriptions.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; 22 ; Redescriptions Volume 2019 ; 2019 ; https://journal-redescriptions.org/ ; reingest4.clockss.org:8082 >
-      au < manifest ; exists ; 2020 ; 23 ; Redescriptions Volume 2020 ; 2020 ; https://journal-redescriptions.org/ ; >
+      au < ready ; exists ; 2020 ; 23 ; Redescriptions Volume 2020 ; 2020 ; https://journal-redescriptions.org/ ; >
 
   }
 }
@@ -229,7 +229,7 @@
       au < finished ; finished ; 2017 ; 1 ; Latin American Research Review Volume 2017 ; 2017 ; https://larrlasa.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 2 ; Latin American Research Review Volume 2018 ; 2018 ; https://larrlasa.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2019 ; 3 ; Latin American Research Review Volume 2019 ; 2019 ; https://larrlasa.org/ ; >
-      au < manifest ; exists ; 2020 ; 4 ; Latin American Research Review Volume 2020 ; 2020 ; https://larrlasa.org/ ; >
+      au < ready ; exists ; 2020 ; 4 ; Latin American Research Review Volume 2020 ; 2020 ; https://larrlasa.org/ ; >
 
   }
 
@@ -567,7 +567,7 @@
       au < finished ; finished ; 2017 ; 2017 ; Body, Space & Technology Volume 2017 ; 2017 ; https://www.bstjournal.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2018 ; 2018 ; Body, Space & Technology Volume 2018 ; 2018 ; https://www.bstjournal.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; 2019 ; Body, Space & Technology Volume 2019 ; 2019 ; https://www.bstjournal.com/ ; reingest4.clockss.org:8082 >
-      au < manifest ; exists ; 2020 ; 2020 ; Body, Space & Technology Volume 2020 ; 2020 ; https://www.bstjournal.com/ ; >
+      au < ready ; exists ; 2020 ; 2020 ; Body, Space & Technology Volume 2020 ; 2020 ; https://www.bstjournal.com/ ; >
 
   }
 
@@ -588,7 +588,7 @@
       au < finished ; finished ; 2007 ; 3 ; Digital Medievalist Volume 2007 ; 2007 ; https://journal.digitalmedievalist.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2008 ; 4 ; Digital Medievalist Volume 2008 ; 2008 ; https://journal.digitalmedievalist.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2009 ; 5 ; Digital Medievalist Volume 2009 ; 2009 ; https://journal.digitalmedievalist.org/ ; reingest3.clockss.org:8083 >
-      au < manifest ; exists ; 2010 ; 6 ; Digital Medievalist Volume 2010 ; 2010 ; https://journal.digitalmedievalist.org/ ; > #M exists. No articles for that year.
+      au < ready ; exists ; 2010 ; 6 ; Digital Medievalist Volume 2010 ; 2010 ; https://journal.digitalmedievalist.org/ ; > #M exists. No articles for that year.
       au < finished ; finished ; 2011 ; 7 ; Digital Medievalist Volume 2011 ; 2011 ; https://journal.digitalmedievalist.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2012 ; 8 ; Digital Medievalist Volume 2012 ; 2012 ; https://journal.digitalmedievalist.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2013 ; 9 ; Digital Medievalist Volume 2013 ; 2013 ; https://journal.digitalmedievalist.org/ ; reingest4.clockss.org:8082 >
@@ -2045,9 +2045,9 @@
       au < manifest ; exists ; 2012 ; 2 ; Tremor and Other Hyperkinetic Movements Volume 2012 ; 2012 ; https://tremorjournal.org/ ; >
       au < manifest ; exists ; 2013 ; 3 ; Tremor and Other Hyperkinetic Movements Volume 2013 ; 2013 ; https://tremorjournal.org/ ; >
       au < manifest ; exists ; 2014 ; 4 ; Tremor and Other Hyperkinetic Movements Volume 2014 ; 2014 ; https://tremorjournal.org/ ; >
-      au < manifest ; exists ; 2015 ; 5 ; Tremor and Other Hyperkinetic Movements Volume 2015 ; 2015 ; https://tremorjournal.org/ ; >
+      au < ready ; exists ; 2015 ; 5 ; Tremor and Other Hyperkinetic Movements Volume 2015 ; 2015 ; https://tremorjournal.org/ ; >
       au < manifest ; exists ; 2016 ; 6 ; Tremor and Other Hyperkinetic Movements Volume 2016 ; 2016 ; https://tremorjournal.org/ ; >
-      au < manifest ; exists ; 2017 ; 7 ; Tremor and Other Hyperkinetic Movements Volume 2017 ; 2017 ; https://tremorjournal.org/ ; >
+      au < ready ; exists ; 2017 ; 7 ; Tremor and Other Hyperkinetic Movements Volume 2017 ; 2017 ; https://tremorjournal.org/ ; >
       au < manifest ; exists ; 2018 ; 8 ; Tremor and Other Hyperkinetic Movements Volume 2018 ; 2018 ; https://tremorjournal.org/ ; >
       au < manifest ; exists ; 2019 ; 9 ; Tremor and Other Hyperkinetic Movements Volume 2019 ; 2019 ; https://tremorjournal.org/ ; >
       au < crawling ; exists ; 2020 ; 10 ; Tremor and Other Hyperkinetic Movements Volume 2020 ; 2020 ; https://tremorjournal.org/ ; >
@@ -2066,7 +2066,7 @@
       au < finished ; manifest ; 2017 ; 1 ; Journal of Open Hardware Volume 2017 ; 2017 ; https://openhardware.metajnl.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 2 ; Journal of Open Hardware Volume 2018 ; 2018 ; https://openhardware.metajnl.com/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2019 ; 3 ; Journal of Open Hardware Volume 2019 ; 2019 ; https://openhardware.metajnl.com/ ; >
-      au < manifest ; exists ; 2020 ; 4 ; Journal of Open Hardware Volume 2020 ; 2020 ; https://openhardware.metajnl.com/ ; >
+      au < ready ; exists ; 2020 ; 4 ; Journal of Open Hardware Volume 2020 ; 2020 ; https://openhardware.metajnl.com/ ; >
 
   }
   {
@@ -2090,7 +2090,7 @@
       au < finished ; finished ; 2017 ; 10 ; Cultural Science Journal Volume 2017 ; 2017 ; https://culturalscience.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 11 ; Cultural Science Journal Volume 2018 ; 2018 ; https://culturalscience.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2019 ; 12 ; Cultural Science Journal Volume 2019 ; 2019 ; https://culturalscience.org/ ; >
-      au < manifest ; exists ; 2020 ; 13 ; Cultural Science Journal Volume 2020 ; 2020 ; https://culturalscience.org/ ; >
+      au < ready ; exists ; 2020 ; 13 ; Cultural Science Journal Volume 2020 ; 2020 ; https://culturalscience.org/ ; >
 
   }
 
@@ -2181,7 +2181,7 @@
       au < finished ; finished ; 2017 ; 1 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2017 ; 2017 ; https://kula.uvic.ca/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 2 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2018 ; 2018 ; https://kula.uvic.ca/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2019 ; 3 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2019 ; 2019 ; https://kula.uvic.ca/ ; >
-      au < manifest ; exists ; 2020 ; 4 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2020 ; 2020 ; https://kula.uvic.ca/ ; >
+      au < ready ; exists ; 2020 ; 4 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2020 ; 2020 ; https://kula.uvic.ca/ ; >
 
   }
 
@@ -2237,7 +2237,7 @@
       au < finished ; finished ; 2017 ; 6 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2017 ; 2017 ; https://tilburglawreview.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2018 ; 7 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2018 ; 2018 ; https://tilburglawreview.com/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2019 ; 8 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2019 ; 2019 ; https://tilburglawreview.com/ ; >
-      au < manifest ; exists ; 2020 ; 9 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2020 ; 2020 ; https://tilburglawreview.com/ ; >
+      au < ready ; exists ; 2020 ; 9 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2020 ; 2020 ; https://tilburglawreview.com/ ; >
 
   }
 
@@ -2308,7 +2308,7 @@
 #      param[base_url] = https://transactions.ismir.net/
 
       au < manifest ; exists ; 2018 ; 1 ; Transactions of the International Society for Music Information Retrieval Volume 2018 ; 2018 ; https://transactions.ismir.net/ ; >
-      au < manifest ; exists ; 2019 ; 2 ; Transactions of the International Society for Music Information Retrieval Volume 2019 ; 2019 ; https://transactions.ismir.net/ ; >
+      au < ready ; exists ; 2019 ; 2 ; Transactions of the International Society for Music Information Retrieval Volume 2019 ; 2019 ; https://transactions.ismir.net/ ; >
       au < manifest ; exists ; 2020 ; 3 ; Transactions of the International Society for Music Information Retrieval Volume 2020 ; 2020 ; https://transactions.ismir.net/ ; >
 
   }
@@ -2378,12 +2378,12 @@
       au < manifest ; exists ; 2011 ; 7 ; Journal of Deliberative Democracy Volume 2011 ; 2011 ; https://delibdemjournal.org/ ; >
       au < manifest ; exists ; 2012 ; 8 ; Journal of Deliberative Democracy Volume 2012 ; 2012 ; https://delibdemjournal.org/ ; >
       au < manifest ; exists ; 2013 ; 9 ; Journal of Deliberative Democracy Volume 2013 ; 2013 ; https://delibdemjournal.org/ ; >
-      au < manifest ; exists ; 2014 ; 10 ; Journal of Deliberative Democracy Volume 2014 ; 2014 ; https://delibdemjournal.org/ ; >
+      au < ready ; exists ; 2014 ; 10 ; Journal of Deliberative Democracy Volume 2014 ; 2014 ; https://delibdemjournal.org/ ; >
       au < manifest ; exists ; 2015 ; 11 ; Journal of Deliberative Democracy Volume 2015 ; 2015 ; https://delibdemjournal.org/ ; >
       au < manifest ; exists ; 2016 ; 12 ; Journal of Deliberative Democracy Volume 2016 ; 2016 ; https://delibdemjournal.org/ ; >
       au < manifest ; exists ; 2017 ; 13 ; Journal of Deliberative Democracy Volume 2017 ; 2017 ; https://delibdemjournal.org/ ; >
       au < manifest ; exists ; 2018 ; 14 ; Journal of Deliberative Democracy Volume 2018 ; 2018 ; https://delibdemjournal.org/ ; >
-      au < manifest ; exists ; 2019 ; 15 ; Journal of Deliberative Democracy Volume 2019 ; 2019 ; https://delibdemjournal.org/ ; >
+      au < ready ; exists ; 2019 ; 15 ; Journal of Deliberative Democracy Volume 2019 ; 2019 ; https://delibdemjournal.org/ ; >
       au < manifest ; exists ; 2020 ; 16 ; Journal of Deliberative Democracy Volume 2020 ; 2020 ; https://delibdemjournal.org/ ; >
 
   }
