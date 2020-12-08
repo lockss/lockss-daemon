@@ -124,7 +124,7 @@
         au < ada.ClockssADADrupalPlugin ; finished ; finished ; 2016 ; Diabetes Volume 65 ; 65 ; http://diabetes.diabetesjournals.org/ ; reingest2.clockss.org:8085 >
         au < ada.ClockssADADrupalPlugin ; deepCrawl ; exists ; 2017 ; Diabetes Volume 66 ; 66 ; http://diabetes.diabetesjournals.org/ ; >
         au < ada.ClockssADADrupalPlugin ; deepCrawl ; exists ; 2018 ; Diabetes Volume 67 ; 67 ; http://diabetes.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2019 ; Diabetes Volume 68 ; 68 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; ready ; exists ; 2019 ; Diabetes Volume 68 ; 68 ; https://diabetes.diabetesjournals.org/ ; >
         au < ada.ClockssADADrupalPlugin ; exists ; exists ; 2020 ; Diabetes Volume 69 ; 69 ; https://diabetes.diabetesjournals.org/ ; >
 
       }

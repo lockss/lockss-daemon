@@ -706,14 +706,14 @@
 
       #complete
       au < ready ; exists ; 1999 ; Journal of Environmental Monitoring Volume 1 ; 1 ; 1999 ; https://pubs.rsc.org/ ; >
-      au < manifest ; exists ; 2000 ; Journal of Environmental Monitoring Volume 2 ; 2 ; 2000 ; https://pubs.rsc.org/ ; >
+      au < ready ; exists ; 2000 ; Journal of Environmental Monitoring Volume 2 ; 2 ; 2000 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2001 ; Journal of Environmental Monitoring Volume 3 ; 3 ; 2001 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2002 ; Journal of Environmental Monitoring Volume 4 ; 4 ; 2002 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2003 ; Journal of Environmental Monitoring Volume 5 ; 5 ; 2003 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2004 ; Journal of Environmental Monitoring Volume 6 ; 6 ; 2004 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2005 ; Journal of Environmental Monitoring Volume 7 ; 7 ; 2005 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2006 ; Journal of Environmental Monitoring Volume 8 ; 8 ; 2006 ; https://pubs.rsc.org/ ; >
-      au < manifest ; exists ; 2007 ; Journal of Environmental Monitoring Volume 9 ; 9 ; 2007 ; https://pubs.rsc.org/ ; >
+      au < ready ; exists ; 2007 ; Journal of Environmental Monitoring Volume 9 ; 9 ; 2007 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2008 ; Journal of Environmental Monitoring Volume 10 ; 10 ; 2008 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2009 ; Journal of Environmental Monitoring Volume 11 ; 11 ; 2009 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2010 ; Journal of Environmental Monitoring Volume 12 ; 12 ; 2010 ; http://pubs.rsc.org/ ; >
@@ -740,7 +740,7 @@
       au < manifest ; exists ; 2000 ; Journal of Materials Chemistry Volume 10 ; 10 ; 2000 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2001 ; Journal of Materials Chemistry Volume 11 ; 11 ; 2001 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2002 ; Journal of Materials Chemistry Volume 12 ; 12 ; 2002 ; https://pubs.rsc.org/ ; >
-      au < manifest ; exists ; 2003 ; Journal of Materials Chemistry Volume 13 ; 13 ; 2003 ; https://pubs.rsc.org/ ; >
+      au < ready ; exists ; 2003 ; Journal of Materials Chemistry Volume 13 ; 13 ; 2003 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2004 ; Journal of Materials Chemistry Volume 14 ; 14 ; 2004 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2005 ; Journal of Materials Chemistry Volume 15 ; 15 ; 2005 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2006 ; Journal of Materials Chemistry Volume 16 ; 16 ; 2006 ; https://pubs.rsc.org/ ; >
@@ -907,7 +907,7 @@
       au < manifest ; exists ; 2001 ; Natural Product Reports Volume 18 ; 18 ; 2001 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2002 ; Natural Product Reports Volume 19 ; 19 ; 2002 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2003 ; Natural Product Reports Volume 20 ; 20 ; 2003 ; https://pubs.rsc.org/ ; >
-      au < manifest ; exists ; 2004 ; Natural Product Reports Volume 21 ; 21 ; 2004 ; https://pubs.rsc.org/ ; >
+      au < ready ; exists ; 2004 ; Natural Product Reports Volume 21 ; 21 ; 2004 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2005 ; Natural Product Reports Volume 22 ; 22 ; 2005 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2006 ; Natural Product Reports Volume 23 ; 23 ; 2006 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2007 ; Natural Product Reports Volume 24 ; 24 ; 2007 ; https://pubs.rsc.org/ ; >
@@ -940,13 +940,13 @@
 
       #complete
       au < ready ; exists ; 1998 ; New Journal of Chemistry Volume 22 ; 22 ; 1998 ; https://pubs.rsc.org/ ; >
-      au < manifest ; exists ; 1999 ; New Journal of Chemistry Volume 23 ; 23 ; 1999 ; https://pubs.rsc.org/ ; >
+      au < ready ; exists ; 1999 ; New Journal of Chemistry Volume 23 ; 23 ; 1999 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2000 ; New Journal of Chemistry Volume 24 ; 24 ; 2000 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2001 ; New Journal of Chemistry Volume 25 ; 25 ; 2001 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2002 ; New Journal of Chemistry Volume 26 ; 26 ; 2002 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2003 ; New Journal of Chemistry Volume 27 ; 27 ; 2003 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2004 ; New Journal of Chemistry Volume 28 ; 28 ; 2004 ; https://pubs.rsc.org/ ; >
-      au < manifest ; exists ; 2005 ; New Journal of Chemistry Volume 29 ; 29 ; 2005 ; https://pubs.rsc.org/ ; >
+      au < ready ; exists ; 2005 ; New Journal of Chemistry Volume 29 ; 29 ; 2005 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2006 ; New Journal of Chemistry Volume 30 ; 30 ; 2006 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2007 ; New Journal of Chemistry Volume 31 ; 31 ; 2007 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2008 ; New Journal of Chemistry Volume 32 ; 32 ; 2008 ; https://pubs.rsc.org/ ; >
