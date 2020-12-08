@@ -1,0 +1,34 @@
+{
+
+  publisher <
+    name = Patient Experience Journal ;
+    info[contract] = 2013 ;
+    info[tester] = 5 ;
+    info[poller] = 8
+  >
+  
+  # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
+
+  {
+  
+    title <
+      name = Patient Experience Journal ;
+      eissn = 2209-1092
+    >
+    
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
+    param[base_url] = https://pxjournal.org/
+    param[journal_abbr] = journal
+    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+
+    au < manifest ; exists ; 2014 ; Patient Experience Journal Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2015 ; Patient Experience Journal Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2016 ; Patient Experience Journal Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2017 ; Patient Experience Journal Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2018 ; Patient Experience Journal Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2019 ; Patient Experience Journal Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2020 ; Patient Experience Journal Volume 7 ; 7 ; >
+
+  }
+
+}
