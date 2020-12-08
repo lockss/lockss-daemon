@@ -34,7 +34,7 @@
       au < manifest ; exists ; 2005 ; Aviation Volume 2005 ; 2 ; 2005 ;  >
       au < crawling ; exists ; 2006 ; Aviation Volume 2006 ; 3 ; 2006 ;  >
       au < ready ; exists ; 2007 ; Aviation Volume 2007 ; 4 ; 2007 ;  >
-      au < ready ; exists ; 2008 ; Aviation Volume 2008 ; 5 ; 2008 ;  >
+      au < crawling ; exists ; 2008 ; Aviation Volume 2008 ; 5 ; 2008 ;  >
       au < ready ; exists ; 2009 ; Aviation Volume 2009 ; 6 ; 2009 ;  >
       au < finished ; manifest ; 2010 ; Aviation Volume 2010 ; 7 ; 2010 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2011 ; Aviation Volume 2011 ; 8 ; 2011 ; reingest2.clockss.org:8085 >
@@ -113,7 +113,7 @@
       param[journal_id] = CS
 
       au < ready ; exists ; 2008 ; Creativity Studies Volume 2008 ; 1 ; 2008 ;  >
-      au < ready ; exists ; 2009 ; Creativity Studies Volume 2009 ; 2 ; 2009 ;  >
+      au < crawling ; exists ; 2009 ; Creativity Studies Volume 2009 ; 2 ; 2009 ;  >
       au < finished ; manifest ; 2010 ; Creativity Studies Volume 2010 ; 3 ; 2010 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2011 ; Creativity Studies Volume 2011 ; 4 ; 2011 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2012 ; Creativity Studies Volume 2012 ; 5 ; 2012 ; reingest1.clockss.org:8082 >
@@ -418,7 +418,7 @@
       au < manifest ; exists ; 2005 ; Technological and Economic Development of Economy Volume 2005 ; 2 ; 2005 ;  >
       au < ready ; exists ; 2006 ; Technological and Economic Development of Economy Volume 2006 ; 3 ; 2006 ;  >
       au < crawling ; exists ; 2007 ; Technological and Economic Development of Economy Volume 2007 ; 4 ; 2007 ;  >
-      au < ready ; exists ; 2008 ; Technological and Economic Development of Economy Volume 2008 ; 5 ; 2008 ;  >
+      au < crawling ; exists ; 2008 ; Technological and Economic Development of Economy Volume 2008 ; 5 ; 2008 ;  >
       au < ready ; exists ; 2009 ; Technological and Economic Development of Economy Volume 2009 ; 6 ; 2009 ;  >
       au < finished ; manifest ; 2010 ; Technological and Economic Development of Economy Volume 2010 ; 7 ; 2010 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2011 ; Technological and Economic Development of Economy Volume 2011 ; 8 ; 2011 ; reingest1.clockss.org:8082 >

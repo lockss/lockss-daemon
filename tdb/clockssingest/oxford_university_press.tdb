@@ -3528,7 +3528,7 @@
       au < manifest ; exists ; 2014 ; 2014 ; Clinical Chemistry Volume 60 ; 60 ; >
       au < ready ; exists ; 2015 ; 2015 ; Clinical Chemistry Volume 61 ; 61 ; >
       au < ready ; exists ; 2016 ; 2016 ; Clinical Chemistry Volume 62 ; 62 ; >
-      au < ready ; exists ; 2017 ; 2017 ; Clinical Chemistry Volume 63 ; 63 ; >
+      au < crawling ; exists ; 2017 ; 2017 ; Clinical Chemistry Volume 63 ; 63 ; >
       au < frozen ; exists ; 2018 ; 2018 ; Clinical Chemistry Volume 64 ; 64 ; >
       au < ready ; exists ; 2019 ; 2019 ; Clinical Chemistry Volume 65 ; 65 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Clinical Chemistry Volume 66 ; 66 ; >
@@ -6251,7 +6251,7 @@
     au < finished ; finished ; 2017 ; 2017 ; French History Volume 31 ; 31 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; French History Volume 32 ; 32 ; >
     au < crawling ; exists ; 2019 ; 2019 ; French History Volume 33 ; 33 ; >
-    au < ready ; exists ; 2020 ; 2020 ; French History Volume 34 ; 34 ; >
+    au < crawling ; exists ; 2020 ; 2020 ; French History Volume 34 ; 34 ; >
 
   }
 
@@ -6340,7 +6340,7 @@
     au < finished ; finished ; 2017 ; 2017 ; French Studies Volume 71 ; 71 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2018 ; 2018 ; French Studies Volume 72 ; 72 ; >
     au < crawling ; exists ; 2019 ; 2019 ; French Studies Volume 73 ; 73 ; >
-    au < ready ; exists ; 2020 ; 2020 ; French Studies Volume 74 ; 74 ; >
+    au < crawling ; exists ; 2020 ; 2020 ; French Studies Volume 74 ; 74 ; >
 
   }
 
@@ -8848,7 +8848,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; International Studies Review Volume 19 ; 19 ; >
     au < frozen ; exists ; 2018 ; 2018 ; International Studies Review Volume 20 ; 20 ; >
     au < crawling ; exists ; 2019 ; 2019 ; International Studies Review Volume 21 ; 21 ; >
-    au < ready ; exists ; 2020 ; 2020 ; International Studies Review Volume 22 ; 22 ; >
+    au < crawling ; exists ; 2020 ; 2020 ; International Studies Review Volume 22 ; 22 ; >
 
   }
 
@@ -9219,7 +9219,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Journal of Analytical Toxicology Volume 41 ; 41 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Analytical Toxicology Volume 42 ; 42 ; >
     au < crawling ; exists ; 2019 ; 2019 ; Journal of Analytical Toxicology Volume 43 ; 43 ; >
-    au < ready ; exists ; 2020 ; 2020 ; Journal of Analytical Toxicology Volume 44 ; 44 ; >
+    au < crawling ; exists ; 2020 ; 2020 ; Journal of Analytical Toxicology Volume 44 ; 44 ; >
 
   }
 
@@ -9427,7 +9427,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Journal of Chromatographic Science Volume 55 ; 55 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Chromatographic Science Volume 56 ; 56 ; >
     au < crawling ; exists ; 2019 ; 2019 ; Journal of Chromatographic Science Volume 57 ; 57 ; >
-    au < ready ; exists ; 2020 ; 2020 ; Journal of Chromatographic Science Volume 58 ; 58 ; >
+    au < crawling ; exists ; 2020 ; 2020 ; Journal of Chromatographic Science Volume 58 ; 58 ; >
 
   }
 
@@ -9754,7 +9754,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Journal of Crustacean Biology Volume 37 ; 37 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Crustacean Biology Volume 38 ; 38 ; >
     au < crawling ; exists ; 2019 ; 2019 ; Journal of Crustacean Biology Volume 39 ; 39 ; >
-    au < ready ; exists ; 2020 ; 2020 ; Journal of Crustacean Biology Volume 40 ; 40 ; >
+    au < crawling ; exists ; 2020 ; 2020 ; Journal of Crustacean Biology Volume 40 ; 40 ; >
 
   }
 
@@ -10175,7 +10175,7 @@
 
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Geophysics and Engineering Volume 15 ; 15 ; >
     au < crawling ; exists ; 2019 ; 2019 ; Journal of Geophysics and Engineering Volume 16 ; 16 ; >
-    au < ready ; exists ; 2020 ; 2020 ; Journal of Geophysics and Engineering Volume 17 ; 17 ; >
+    au < crawling ; exists ; 2020 ; 2020 ; Journal of Geophysics and Engineering Volume 17 ; 17 ; >
 
   }
 
@@ -10255,7 +10255,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Journal of Global Security Studies Volume 2 ; 2 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Global Security Studies Volume 3 ; 3 ; >
     au < crawling ; exists ; 2019 ; 2019 ; Journal of Global Security Studies Volume 4 ; 4 ; >
-    au < ready ; exists ; 2020 ; 2020 ; Journal of Global Security Studies Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2020 ; 2020 ; Journal of Global Security Studies Volume 5 ; 5 ; >
 
   }
 
@@ -10626,7 +10626,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Journal of International Economic Law Volume 20 ; 20 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of International Economic Law Volume 21 ; 21 ; >
     au < crawling ; exists ; 2019 ; 2019 ; Journal of International Economic Law Volume 22 ; 22 ; >
-    au < ready ; exists ; 2020 ; 2020 ; Journal of International Economic Law Volume 23 ; 23 ; >
+    au < crawling ; exists ; 2020 ; 2020 ; Journal of International Economic Law Volume 23 ; 23 ; >
 
   }
 
@@ -10811,7 +10811,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Journal of Mammalogy Volume 98 ; 98 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Mammalogy Volume 99 ; 99 ; >
     au < crawling ; exists ; 2019 ; 2019 ; Journal of Mammalogy Volume 100 ; 100 ; >
-    au < ready ; exists ; 2020 ; 2020 ; Journal of Mammalogy Volume 101 ; 101 ; >
+    au < crawling ; exists ; 2020 ; 2020 ; Journal of Mammalogy Volume 101 ; 101 ; >
 
   }
 
@@ -11060,7 +11060,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Journal of Music Therapy Volume 54 ; 54 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Music Therapy Volume 55 ; 55 ; >
     au < crawling ; exists ; 2019 ; 2019 ; Journal of Music Therapy Volume 56 ; 56 ; >
-    au < ready ; exists ; 2020 ; 2020 ; Journal of Music Therapy Volume 57 ; 57 ; >
+    au < crawling ; exists ; 2020 ; 2020 ; Journal of Music Therapy Volume 57 ; 57 ; >
 
   }
 
@@ -11470,7 +11470,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Journal of Public Health Volume 39 ; 39 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Public Health Volume 40 ; 40 ; >
     au < crawling ; exists ; 2019 ; 2019 ; Journal of Public Health Volume 41 ; 41 ; >
-    au < ready ; exists ; 2020 ; 2020 ; Journal of Public Health Volume 42 ; 42 ; >
+    au < crawling ; exists ; 2020 ; 2020 ; Journal of Public Health Volume 42 ; 42 ; >
 
   }
 
@@ -12345,7 +12345,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Journal of the Pediatric Infectious Diseases Society Volume 6 ; 6 ; >
     au < finished ; finished ; 2018 ; 2018 ; Journal of the Pediatric Infectious Diseases Society Volume 7 ; 7 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2019 ; 2019 ; Journal of the Pediatric Infectious Diseases Society Volume 8 ; 8 ; >
-    au < ready ; exists ; 2020 ; 2020 ; Journal of the Pediatric Infectious Diseases Society Volume 9 ; 9 ; >
+    au < crawling ; exists ; 2020 ; 2020 ; Journal of the Pediatric Infectious Diseases Society Volume 9 ; 9 ; >
 
   }
 
@@ -12542,7 +12542,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Literature and Theology Volume 31 ; 31 ; >
     au < finished ; finished ; 2018 ; 2018 ; Literature and Theology Volume 32 ; 32 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2019 ; 2019 ; Literature and Theology Volume 33 ; 33 ; >
-    au < ready ; exists ; 2020 ; 2020 ; Literature and Theology Volume 34 ; 34 ; >
+    au < crawling ; exists ; 2020 ; 2020 ; Literature and Theology Volume 34 ; 34 ; >
 
   }
 
@@ -12605,7 +12605,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; London Review of International Law Volume 5 ; 5 ; >
     au < frozen ; exists ; 2018 ; 2018 ; London Review of International Law Volume 6 ; 6 ; >
     au < crawling ; exists ; 2019 ; 2019 ; London Review of International Law Volume 7 ; 7 ; >
-    au < ready ; exists ; 2020 ; 2020 ; London Review of International Law Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2020 ; 2020 ; London Review of International Law Volume 8 ; 8 ; >
 
   }
 
@@ -12901,7 +12901,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Medical Mycology Volume 55 ; 55 ; >
     au < finished ; frozen ; 2018 ; 2018 ; Medical Mycology Volume 56 ; 56 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2019 ; 2019 ; Medical Mycology Volume 57 ; 57 ; >
-    au < ready ; exists ; 2020 ; 2020 ; Medical Mycology Volume 58 ; 58 ; >
+    au < crawling ; exists ; 2020 ; 2020 ; Medical Mycology Volume 58 ; 58 ; >
 
   }
 
