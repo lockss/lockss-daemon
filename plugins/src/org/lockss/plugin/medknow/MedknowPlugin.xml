@@ -148,10 +148,7 @@
     <string>plugin_url_fetcher_factory</string>
     <string>org.lockss.plugin.base.HttpToHttpsUrlFetcherFactory</string>
   </entry>
-  <entry>
-    <string>au_url_normalizer</string>
-    <string>org.lockss.plugin.BaseUrlHttpHttpsUrlNormalizer</string>
-  </entry>
+  <!-- The third step in UrlNormalizer inherited from parent class-->
   <!--  end http to https transition specific support  -->
   <entry>
     <string>text/html_filter_factory</string>
