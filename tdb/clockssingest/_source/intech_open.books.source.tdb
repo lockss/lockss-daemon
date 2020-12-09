@@ -24,4 +24,12 @@
 
   }
 
+  {
+
+      # starting from year 2021, we should use this plugin to handle directory rather than year
+      #plugin = org.lockss.plugin.clockss.intechopen.ClockssIntechOpenBooksDirSourcePlugin
+ 
+
+    }
+
 }
