@@ -13,7 +13,7 @@
        name = BioOne Source Content
     >
 
-    plugin = org.lockss.plugin.clockss.bioone.ClockssBioOneBooksSourcePlugin
+    plugin = org.lockss.plugin.clockss.bioone.ClockssBioOneSourcePlugin
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/bioone-released/
 
     hidden[proxy] = DIRECT
