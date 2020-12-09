@@ -44,7 +44,7 @@
       param[journal_id] = american-literature
 
       au < ready ; exists ; 2017 ; 2017 ; American Literature Volume 89 ; 89 ; >
-      au < ready ; exists ; 2018 ; 2018 ; American Literature Volume 90 ; 90 ; >
+      au < crawling ; exists ; 2018 ; 2018 ; American Literature Volume 90 ; 90 ; >
       au < ready ; exists ; 2019 ; 2019 ; American Literature Volume 91 ; 91 ; >
       au < crawling ; exists ; 2020 ; 2020 ; American Literature Volume 92 ; 92 ; >
 
@@ -112,7 +112,7 @@
       au < ready ; exists ; 2014 ; 2014 ; Archives of Asian Art Volume 64 ; 64 ; >
       au < crawling ; exists ; 2015 ; 2015 ; Archives of Asian Art Volume 65 ; 65 ; >
       au < crawling ; exists ; 2016 ; 2016 ; Archives of Asian Art Volume 66 ; 66 ; >
-      au < ready ; exists ; 2017 ; 2017 ; Archives of Asian Art Volume 67 ; 67 ; >
+      au < crawling ; exists ; 2017 ; 2017 ; Archives of Asian Art Volume 67 ; 67 ; >
       au < ready ; exists ; 2018 ; 2018 ; Archives of Asian Art Volume 68 ; 68 ; >
       au < crawling ; exists ; 2019 ; 2019 ; Archives of Asian Art Volume 69 ; 69 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Archives of Asian Art Volume 70 ; 70 ; >
@@ -131,9 +131,9 @@
       param[journal_id] = black-sacred-music
 
       au < ready ; exists ; 1987 ; 1987 ; Black Sacred Music Volume 1 ; 1 ; >
-      au < ready ; exists ; 1988 ; 1988 ; Black Sacred Music Volume 2 ; 2 ; >
+      au < crawling ; exists ; 1988 ; 1988 ; Black Sacred Music Volume 2 ; 2 ; >
       au < ready ; exists ; 1989 ; 1989 ; Black Sacred Music Volume 3 ; 3 ; >
-      au < ready ; exists ; 1990 ; 1990 ; Black Sacred Music Volume 4 ; 4 ; >
+      au < crawling ; exists ; 1990 ; 1990 ; Black Sacred Music Volume 4 ; 4 ; >
       au < ready ; exists ; 1991 ; 1991 ; Black Sacred Music Volume 5 ; 5 ; >
       au < ready ; exists ; 1992 ; 1992 ; Black Sacred Music Volume 6 ; 6 ; >
       au < ready ; exists ; 1993 ; 1993 ; Black Sacred Music Volume 7 ; 7 ; >
@@ -308,8 +308,8 @@
       param[journal_id] = eighteenth-century-life
 
       au < ready ; exists ; 2017 ; 2017 ; Eighteenth-Century Life Volume 41 ; 41 ; >
-      au < ready ; exists ; 2018 ; 2018 ; Eighteenth-Century Life Volume 42 ; 42 ; >
-      au < ready ; exists ; 2019 ; 2019 ; Eighteenth-Century Life Volume 43 ; 43 ; >
+      au < crawling ; exists ; 2018 ; 2018 ; Eighteenth-Century Life Volume 42 ; 42 ; >
+      au < crawling ; exists ; 2019 ; 2019 ; Eighteenth-Century Life Volume 43 ; 43 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Eighteenth-Century Life Volume 44 ; 44 ; >
 
   }
@@ -339,7 +339,7 @@
       au < ready ; exists ; 2011 ; 2011 ; English Language Notes Volume 49 ; 49 ; >
       au < ready ; exists ; 2012 ; 2012 ; English Language Notes Volume 50 ; 50 ; >
       au < ready ; exists ; 2013 ; 2013 ; English Language Notes Volume 51 ; 51 ; >
-      au < ready ; exists ; 2014 ; 2014 ; English Language Notes Volume 52 ; 52 ; >
+      au < crawling ; exists ; 2014 ; 2014 ; English Language Notes Volume 52 ; 52 ; >
       au < ready ; exists ; 2015 ; 2015 ; English Language Notes Volume 53 ; 53 ; >
       au < ready ; exists ; 2016 ; 2016 ; English Language Notes Volume 54 ; 54 ; >
       au < ready ; exists ; 2017 ; 2017 ; English Language Notes Volume 55 ; 55 ; >
@@ -378,7 +378,7 @@
       param[journal_id] = ethnohistory
 
       au < ready ; exists ; 2017 ; 2017 ; Ethnohistory Volume 64 ; 64 ; >
-      au < ready ; exists ; 2018 ; 2018 ; Ethnohistory Volume 65 ; 65 ; >
+      au < crawling ; exists ; 2018 ; 2018 ; Ethnohistory Volume 65 ; 65 ; >
       au < ready ; exists ; 2019 ; 2019 ; Ethnohistory Volume 66 ; 66 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Ethnohistory Volume 67 ; 67 ; >
   }
@@ -394,9 +394,9 @@
 
       param[journal_id] = french-historical-studies
 
-      au < ready ; exists ; 2017 ; 2017 ; French Historical Studies Volume 40 ; 40 ; >
+      au < crawling ; exists ; 2017 ; 2017 ; French Historical Studies Volume 40 ; 40 ; >
       au < ready ; exists ; 2018 ; 2018 ; French Historical Studies Volume 41 ; 41 ; >
-      au < ready ; exists ; 2019 ; 2019 ; French Historical Studies Volume 42 ; 42 ; >
+      au < crawling ; exists ; 2019 ; 2019 ; French Historical Studies Volume 42 ; 42 ; >
       au < crawling ; exists ; 2020 ; 2020 ; French Historical Studies Volume 43 ; 43 ; >
   }
 
@@ -463,7 +463,7 @@
       param[journal_id] = hope
 
       au < ready ; exists ; 2017 ; 2017 ; History of Political Economy Volume 49 ; 49 ; >
-      au < ready ; exists ; 2018 ; 2018 ; History of Political Economy Volume 50 ; 50 ; >
+      au < crawling ; exists ; 2018 ; 2018 ; History of Political Economy Volume 50 ; 50 ; >
       au < ready ; exists ; 2019 ; 2019 ; History of Political Economy Volume 51 ; 51 ; >
       au < crawling ; exists ; 2020 ; 2020 ; History of Political Economy Volume 52 ; 52 ; >
 
@@ -534,7 +534,7 @@
 
       param[journal_id] = journal-of-korean-studies
 
-      au < ready ; exists ; 2014 ; 2014 ; Journal of Korean Studies Volume 9 ; 9 ; >
+      au < crawling ; exists ; 2014 ; 2014 ; Journal of Korean Studies Volume 9 ; 9 ; >
       au < ready ; exists ; 2015 ; 2015 ; Journal of Korean Studies Volume 10 ; 10 ; >
 
       au < ready ; exists ; 2018 ; 2018 ; Journal of Korean Studies Volume 23 ; 23 ; >
@@ -658,14 +658,14 @@
 
       param[journal_id] = meridians
 
-      au < ready ; exists ; 2000 ; 2000 ; Meridians Volume 1 (2000) ; 1 (2000) ; >
+      au < crawling ; exists ; 2000 ; 2000 ; Meridians Volume 1 (2000) ; 1 (2000) ; >
       au < ready ; exists ; 2001 ; 2001 ; Meridians Volume 1-2 (2001) ; 1-2 (2001) ; >
       au < ready ; exists ; 2002 ; 2002 ; Meridians Volume 2-3 (2002) ; 2-3 (2002) ; >
-      au < ready ; exists ; 2003 ; 2003 ; Meridians Volume 3-4 (2003) ; 3-4 (2003) ; >
+      au < crawling ; exists ; 2003 ; 2003 ; Meridians Volume 3-4 (2003) ; 3-4 (2003) ; >
       au < ready ; exists ; 2004 ; 2004 ; Meridians Volume 4-5 (2004) ; 4-5 (2004) ; >
       au < ready ; exists ; 2005 ; 2005 ; Meridians Volume 5-6 (2005) ; 5-6 (2005) ; >
       au < ready ; exists ; 2006 ; 2006 ; Meridians Volume 6-7 (2006) ; 6-7 (2006) ; >
-      au < ready ; exists ; 2007 ; 2007 ; Meridians Volume 7 (2007) ; 7 (2007) ; >
+      au < crawling ; exists ; 2007 ; 2007 ; Meridians Volume 7 (2007) ; 7 (2007) ; >
       au < ready ; exists ; 2008 ; 2008 ; Meridians Volume 8 (2008) ; 8 (2008) ; >
       au < ready ; exists ; 2009 ; 2009 ; Meridians Volume 9 (2009) ; 9 (2009) ; >
       au < ready ; exists ; 2010 ; 2010 ; Meridians Volume 10 (2010) ; 10 (2010) ; >
@@ -904,10 +904,10 @@
       au < crawling ; exists ; 2013 ; 2013 ; Qui Parle Volume 21-22 (2013) ; 21-22 (2013) ; >
       au < ready ; exists ; 2014 ; 2014 ; Qui Parle Volume 22-23 (2014) ; 22-23 (2014) ; >
       au < ready ; exists ; 2015 ; 2015 ; Qui Parle Volume 23-24 (2015) ; 23-24 (2015) ; >
-      au < ready ; exists ; 2016 ; 2016 ; Qui Parle Volume 24-25 (2016) ; 24-25 (2016) ; >
+      au < crawling ; exists ; 2016 ; 2016 ; Qui Parle Volume 24-25 (2016) ; 24-25 (2016) ; >
       au < ready ; exists ; 2017 ; 2017 ; Qui Parle Volume 26 (2017) ; 26 (2017) ; >
       au < ready ; exists ; 2018 ; 2018 ; Qui Parle Volume 27 (2018) ; 27 (2018) ; >
-      au < ready ; exists ; 2019 ; 2019 ; Qui Parle Volume 28 (2019) ; 28 (2019) ; >
+      au < crawling ; exists ; 2019 ; 2019 ; Qui Parle Volume 28 (2019) ; 28 (2019) ; >
       au < crawling ; exists ; 2020 ; 2020 ; Qui Parle Volume 29 (2020) ; 29 (2020) ; >
 
     }
@@ -922,7 +922,7 @@
 
       param[journal_id] = radical-history-review
 
-      au < ready ; exists ; 2017 ; 2017 ; Radical History Review Volume 2017 ; 2017 ; >
+      au < crawling ; exists ; 2017 ; 2017 ; Radical History Review Volume 2017 ; 2017 ; >
       au < ready ; exists ; 2018 ; 2018 ; Radical History Review Volume 2018 ; 2018 ; >
       au < ready ; exists ; 2019 ; 2019 ; Radical History Review Volume 2019 ; 2019 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Radical History Review Volume 2020 ; 2020 ; >
@@ -991,9 +991,9 @@
 
       param[journal_id] = social-text
 
-      au < ready ; exists ; 2017 ; 2017 ; Social Text Volume 35 ; 35 ; >
+      au < crawling ; exists ; 2017 ; 2017 ; Social Text Volume 35 ; 35 ; >
       au < ready ; exists ; 2018 ; 2018 ; Social Text Volume 36 ; 36 ; >
-      au < ready ; exists ; 2019 ; 2019 ; Social Text Volume 37 ; 37 ; >
+      au < crawling ; exists ; 2019 ; 2019 ; Social Text Volume 37 ; 37 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Social Text Volume 38 ; 38 ; >
 
      }
@@ -1043,7 +1043,7 @@
       param[journal_id] = tikkun
 
       au < ready ; exists ; 2017 ; 2017 ; Tikkun Volume 32 ; 32 ; >
-      au < ready ; exists ; 2018 ; 2018 ; Tikkun Volume 33 ; 33 ; >
+      au < crawling ; exists ; 2018 ; 2018 ; Tikkun Volume 33 ; 33 ; >
 
   }
 
@@ -1088,7 +1088,7 @@
       au < ready ; exists ; 2009 ; 2009 ; Twentieth-Century Literature Volume 55 ; 55 ; >
       au < ready ; exists ; 2010 ; 2010 ; Twentieth-Century Literature Volume 56 ; 56 ; >
       au < ready ; exists ; 2011 ; 2011 ; Twentieth-Century Literature Volume 57 ; 57 ; >
-      au < ready ; exists ; 2012 ; 2012 ; Twentieth-Century Literature Volume 58 ; 58 ; >
+      au < crawling ; exists ; 2012 ; 2012 ; Twentieth-Century Literature Volume 58 ; 58 ; >
       au < crawling ; exists ; 2013 ; 2013 ; Twentieth-Century Literature Volume 59 ; 59 ; >
       au < ready ; exists ; 2014 ; 2014 ; Twentieth-Century Literature Volume 60 ; 60 ; >
       au < ready ; exists ; 2015 ; 2015 ; Twentieth-Century Literature Volume 61 ; 61 ; >

@@ -263,7 +263,7 @@
       au < finished ; finished ; 2017 ; 4 ; Annals of Global Health Volume 2017 ; 2017 ; https://www.annalsofglobalhealth.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 5 ; Annals of Global Health Volume 2018 ; 2018 ; https://www.annalsofglobalhealth.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2019 ; 6 ; Annals of Global Health Volume 2019 ; 2019 ; https://www.annalsofglobalhealth.org/ ; >
-      au < ready ; exists ; 2020 ; 7 ; Annals of Global Health Volume 2020 ; 2020 ; https://www.annalsofglobalhealth.org/ ; >
+      au < crawling ; exists ; 2020 ; 7 ; Annals of Global Health Volume 2020 ; 2020 ; https://www.annalsofglobalhealth.org/ ; >
 
   }
 
@@ -295,7 +295,7 @@
 
       au < finished ; finished ; 2018 ; 1 ; Journal of Scientific Innovation in Medicine Volume 2018 ; 2018 ; https://journalofscientificinnovationinmedicine.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2019 ; 2 ; Journal of Scientific Innovation in Medicine Volume 2019 ; 2019 ; https://journalofscientificinnovationinmedicine.org/ ; >
-      au < ready ; exists ; 2020 ; 3 ; Journal of Scientific Innovation in Medicine Volume 2020 ; 2020 ; https://journalofscientificinnovationinmedicine.org/ ; >
+      au < crawling ; exists ; 2020 ; 3 ; Journal of Scientific Innovation in Medicine Volume 2020 ; 2020 ; https://journalofscientificinnovationinmedicine.org/ ; >
 
   }
 
@@ -588,7 +588,7 @@
       au < finished ; finished ; 2007 ; 3 ; Digital Medievalist Volume 2007 ; 2007 ; https://journal.digitalmedievalist.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2008 ; 4 ; Digital Medievalist Volume 2008 ; 2008 ; https://journal.digitalmedievalist.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2009 ; 5 ; Digital Medievalist Volume 2009 ; 2009 ; https://journal.digitalmedievalist.org/ ; reingest3.clockss.org:8083 >
-      au < ready ; exists ; 2010 ; 6 ; Digital Medievalist Volume 2010 ; 2010 ; https://journal.digitalmedievalist.org/ ; > #M exists. No articles for that year.
+      au < crawling ; exists ; 2010 ; 6 ; Digital Medievalist Volume 2010 ; 2010 ; https://journal.digitalmedievalist.org/ ; > #M exists. No articles for that year.
       au < finished ; finished ; 2011 ; 7 ; Digital Medievalist Volume 2011 ; 2011 ; https://journal.digitalmedievalist.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2012 ; 8 ; Digital Medievalist Volume 2012 ; 2012 ; https://journal.digitalmedievalist.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2013 ; 9 ; Digital Medievalist Volume 2013 ; 2013 ; https://journal.digitalmedievalist.org/ ; reingest4.clockss.org:8082 >
@@ -623,7 +623,7 @@
       au < finished ; finished ; 2017 ; 2017 ; Digital Studies / Le champ numérique Volume 2017 ; 2017 ; https://www.digitalstudies.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2018 ; 2018 ; Digital Studies / Le champ numérique Volume 2018 ; 2018 ; https://www.digitalstudies.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; 2019 ; Digital Studies / Le champ numérique Volume 2019 ; 2019 ; https://www.digitalstudies.org/ ; reingest3.clockss.org:8083 >
-      au < ready ; exists ; 2020 ; 2020 ; Digital Studies / Le champ numérique Volume 2020 ; 2020 ; https://www.digitalstudies.org/ ; >
+      au < crawling ; exists ; 2020 ; 2020 ; Digital Studies / Le champ numérique Volume 2020 ; 2020 ; https://www.digitalstudies.org/ ; >
 
   }
 
@@ -685,7 +685,7 @@
 
       au < finished ; manifest ; 2018 ; 1 ; Journal of Embodied Research Volume 2018 ; 2018 ; https://jer.openlibhums.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; 2 ; Journal of Embodied Research Volume 2019 ; 2019 ; https://jer.openlibhums.org/ ; reingest2.clockss.org:8085 >
-      au < ready ; exists ; 2020 ; 3 ; Journal of Embodied Research Volume 2020 ; 2020 ; https://jer.openlibhums.org/ ; >
+      au < crawling ; exists ; 2020 ; 3 ; Journal of Embodied Research Volume 2020 ; 2020 ; https://jer.openlibhums.org/ ; >
 
   }
 
@@ -1007,7 +1007,7 @@
       au < notReady ; exists ; 2017 ; 33 ; Current: Journal of Marine Education Volume 2017 ; 2017 ; https://www.current-journal.com/ ; >
       au < notReady ; exists ; 2018 ; 34 ; Current: Journal of Marine Education Volume 2018 ; 2018 ; https://www.current-journal.com/ ; >
       au < notReady ; exists ; 2019 ; 35 ; Current: Journal of Marine Education Volume 2019 ; 2019 ; https://www.current-journal.com/ ; >
-      au < ready ; exists ; 2020 ; 36 ; Current: Journal of Marine Education Volume 2020 ; 2020 ; https://www.current-journal.com/ ; >
+      au < crawling ; exists ; 2020 ; 36 ; Current: Journal of Marine Education Volume 2020 ; 2020 ; https://www.current-journal.com/ ; >
 
   }
 
@@ -1066,7 +1066,7 @@
       au < finished ; manifest ; 2017 ; 5 ; Architectural Histories Volume 2017 ; 2017 ; http://journal.eahn.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 6 ; Architectural Histories Volume 2018 ; 2018 ; https://journal.eahn.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2019 ; 7 ; Architectural Histories Volume 2019 ; 2019 ; https://journal.eahn.org/ ; >
-      au < ready ; exists ; 2020 ; 8 ; Architectural Histories Volume 2020 ; 2020 ; https://journal.eahn.org/ ; >
+      au < crawling ; exists ; 2020 ; 8 ; Architectural Histories Volume 2020 ; 2020 ; https://journal.eahn.org/ ; >
 
   }
 
@@ -1194,7 +1194,7 @@
       au < finished ; manifest ; 2017 ; 16 ; Data Science Journal Volume 2017 ; 2017 ; http://datascience.codata.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 17 ; Data Science Journal Volume 2018 ; 2018 ; https://datascience.codata.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2019 ; 18 ; Data Science Journal Volume 2019 ; 2019 ; https://datascience.codata.org/ ; >
-      au < ready ; exists ; 2020 ; 19 ; Data Science Journal Volume 2020 ; 2020 ; https://datascience.codata.org/ ; >
+      au < crawling ; exists ; 2020 ; 19 ; Data Science Journal Volume 2020 ; 2020 ; https://datascience.codata.org/ ; >
 
   }
 
@@ -1209,7 +1209,7 @@
 
       au < deepCrawl ; exists ; 2018 ; 1 ; Future Cities and Environment Volume 2018 ; 2018 ; https://futurecitiesandenvironment.com/ ; >
       au < finished ; crawling ; 2019 ; 2 ; Future Cities and Environment Volume 2019 ; 2019 ; https://futurecitiesandenvironment.com/ ; reingest5.clockss.org:8082 >
-      au < ready ; exists ; 2020 ; 3 ; Future Cities and Environment Volume 2020 ; 2020 ; https://futurecitiesandenvironment.com/ ; >
+      au < crawling ; exists ; 2020 ; 3 ; Future Cities and Environment Volume 2020 ; 2020 ; https://futurecitiesandenvironment.com/ ; >
 
   }
 
@@ -1295,7 +1295,7 @@
       au < finished ; finished ; 2016 ; 1 ; International Review of Social Psychology Volume 2016 ; 2016 ; http://www.rips-irsp.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; 2 ; International Review of Social Psychology Volume 2017 ; 2017 ; http://www.rips-irsp.com/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 3 ; International Review of Social Psychology Volume 2018 ; 2018 ; https://www.rips-irsp.com/ ; reingest4.clockss.org:8082 >
-      au < ready ; exists ; 2019 ; 4 ; International Review of Social Psychology Volume 2019 ; 2019 ; https://www.rips-irsp.com/ ; >
+      au < crawling ; exists ; 2019 ; 4 ; International Review of Social Psychology Volume 2019 ; 2019 ; https://www.rips-irsp.com/ ; >
       au < crawling ; exists ; 2020 ; 5 ; International Review of Social Psychology Volume 2020 ; 2020 ; https://www.rips-irsp.com/ ; >
 
   }
@@ -1381,7 +1381,7 @@
       au < finished ; manifest ; 2017 ; 8 ; Journal of European Psychology Students Volume 2017 ; 2017 ; http://jeps.efpsa.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 9 ; Journal of European Psychology Students Volume 2018 ; 2018 ; https://jeps.efpsa.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2019 ; 10 ; Journal of European Psychology Students Volume 2019 ; 2019 ; https://jeps.efpsa.org/ ; >
-      au < ready ; exists ; 2020 ; 11 ; Journal of European Psychology Students Volume 2020 ; 2020 ; https://jeps.efpsa.org/ ; >
+      au < crawling ; exists ; 2020 ; 11 ; Journal of European Psychology Students Volume 2020 ; 2020 ; https://jeps.efpsa.org/ ; >
 
   }
 
@@ -1577,7 +1577,7 @@
       au < finished ; manifest ; 2017 ; 5 ; Journal of Open Research Software Volume 2017 ; 2017 ; http://openresearchsoftware.metajnl.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 6 ; Journal of Open Research Software Volume 2018 ; 2018 ; https://openresearchsoftware.metajnl.com/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2019 ; 7 ; Journal of Open Research Software Volume 2019 ; 2019 ; https://openresearchsoftware.metajnl.com/ ; >
-      au < ready ; exists ; 2020 ; 8 ; Journal of Open Research Software Volume 2020 ; 2020 ; https://openresearchsoftware.metajnl.com/ ; >
+      au < crawling ; exists ; 2020 ; 8 ; Journal of Open Research Software Volume 2020 ; 2020 ; https://openresearchsoftware.metajnl.com/ ; >
 
   }
 
@@ -1636,7 +1636,7 @@
       au < finished ; manifest ; 2017 ; 101 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2017 ; 2017 ; http://www.jbsr.be/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 102 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2018 ; 2018 ; https://www.jbsr.be/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2019 ; 103 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2019 ; 2019 ; https://www.jbsr.be/ ; >
-      au < ready ; exists ; 2020 ; 104 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2020 ; 2020 ; https://www.jbsr.be/ ; >
+      au < crawling ; exists ; 2020 ; 104 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2020 ; 2020 ; https://www.jbsr.be/ ; >
 
   }
 
@@ -1672,7 +1672,7 @@
       au < finished ; manifest ; 2017 ; 2 ; MaHKUscript: Journal of Fine Art Research Volume 2017 ; 2017 ; https://www.mahkuscript.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 3 ; MaHKUscript: Journal of Fine Art Research Volume 2018 ; 2018 ; https://www.mahkuscript.com/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2019 ; 4 ; MaHKUscript: Journal of Fine Art Research Volume 2019 ; 2019 ; https://www.mahkuscript.com/ ; >
-      au < ready ; exists ; 2020 ; 5 ; MaHKUscript: Journal of Fine Art Research Volume 2020 ; 2020 ; https://www.mahkuscript.com/ ; >
+      au < crawling ; exists ; 2020 ; 5 ; MaHKUscript: Journal of Fine Art Research Volume 2020 ; 2020 ; https://www.mahkuscript.com/ ; >
 
   }
 
@@ -1933,7 +1933,7 @@
       au < finished ; manifest ; 2017 ; 13 ; Psychologica Belgica Volume 2017 ; 2017 ; https://www.psychologicabelgica.com/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 14 ; Psychologica Belgica Volume 2018 ; 2018 ; https://www.psychologicabelgica.com/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2019 ; 15 ; Psychologica Belgica Volume 2019 ; 2019 ; https://www.psychologicabelgica.com/ ; >
-      au < ready ; exists ; 2020 ; 16 ; Psychologica Belgica Volume 2020 ; 2020 ; https://www.psychologicabelgica.com/ ; >
+      au < crawling ; exists ; 2020 ; 16 ; Psychologica Belgica Volume 2020 ; 2020 ; https://www.psychologicabelgica.com/ ; >
 
     }
   }
@@ -1969,7 +1969,7 @@
       au < finished ; manifest ; 2017 ; 6 ; Secularism and Nonreligion Volume 2017 ; 2017 ; https://secularismandnonreligion.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 7 ; Secularism and Nonreligion Volume 2018 ; 2018 ; https://secularismandnonreligion.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2019 ; 8 ; Secularism and Nonreligion Volume 2019 ; 2019 ; https://secularismandnonreligion.org/ ; >
-      au < ready ; exists ; 2020 ; 9 ; Secularism and Nonreligion Volume 2020 ; 2020 ; https://secularismandnonreligion.org/ ; >
+      au < crawling ; exists ; 2020 ; 9 ; Secularism and Nonreligion Volume 2020 ; 2020 ; https://secularismandnonreligion.org/ ; >
 
     }
   }
@@ -2009,7 +2009,7 @@
       au < finished ; manifest ; 2017 ; 8 ; Utrecht Journal of International and European Law Volume 2017 ; 2017 ; https://utrechtjournal.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 9 ; Utrecht Journal of International and European Law Volume 2018 ; 2018 ; https://utrechtjournal.org/ ; reingest1.clockss.org:8082 >
       au < doesNotExist ; doesNotExist ; 2019 ; 10 ; Utrecht Journal of International and European Law Volume 2019 ; 2019 ; https://utrechtjournal.org/ ; >
-      au < ready ; exists ; 2020 ; 11 ; Utrecht Journal of International and European Law Volume 2020 ; 2020 ; https://utrechtjournal.org/ ; >
+      au < crawling ; exists ; 2020 ; 11 ; Utrecht Journal of International and European Law Volume 2020 ; 2020 ; https://utrechtjournal.org/ ; >
 
     }
   }
@@ -2044,10 +2044,10 @@
       au < ready ; exists ; 2011 ; 1 ; Tremor and Other Hyperkinetic Movements Volume 2011 ; 2011 ; https://tremorjournal.org/ ; >
       au < ready ; exists ; 2012 ; 2 ; Tremor and Other Hyperkinetic Movements Volume 2012 ; 2012 ; https://tremorjournal.org/ ; >
       au < ready ; exists ; 2013 ; 3 ; Tremor and Other Hyperkinetic Movements Volume 2013 ; 2013 ; https://tremorjournal.org/ ; >
-      au < ready ; exists ; 2014 ; 4 ; Tremor and Other Hyperkinetic Movements Volume 2014 ; 2014 ; https://tremorjournal.org/ ; >
+      au < crawling ; exists ; 2014 ; 4 ; Tremor and Other Hyperkinetic Movements Volume 2014 ; 2014 ; https://tremorjournal.org/ ; >
       au < ready ; exists ; 2015 ; 5 ; Tremor and Other Hyperkinetic Movements Volume 2015 ; 2015 ; https://tremorjournal.org/ ; >
       au < ready ; exists ; 2016 ; 6 ; Tremor and Other Hyperkinetic Movements Volume 2016 ; 2016 ; https://tremorjournal.org/ ; >
-      au < ready ; exists ; 2017 ; 7 ; Tremor and Other Hyperkinetic Movements Volume 2017 ; 2017 ; https://tremorjournal.org/ ; >
+      au < crawling ; exists ; 2017 ; 7 ; Tremor and Other Hyperkinetic Movements Volume 2017 ; 2017 ; https://tremorjournal.org/ ; >
       au < ready ; exists ; 2018 ; 8 ; Tremor and Other Hyperkinetic Movements Volume 2018 ; 2018 ; https://tremorjournal.org/ ; >
       au < ready ; exists ; 2019 ; 9 ; Tremor and Other Hyperkinetic Movements Volume 2019 ; 2019 ; https://tremorjournal.org/ ; >
       au < crawling ; exists ; 2020 ; 10 ; Tremor and Other Hyperkinetic Movements Volume 2020 ; 2020 ; https://tremorjournal.org/ ; >
@@ -2164,7 +2164,7 @@
 
       au < finished ; manifest ; 2018 ; 1 ; Journal of Computer Applications in Archaeology Volume 2018 ; 2018 ; https://journal.caa-international.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2019 ; 2 ; Journal of Computer Applications in Archaeology Volume 2019 ; 2019 ; https://journal.caa-international.org/ ; >
-      au < ready ; exists ; 2020 ; 3 ; Journal of Computer Applications in Archaeology Volume 2020 ; 2020 ; https://journal.caa-international.org/ ; >
+      au < crawling ; exists ; 2020 ; 3 ; Journal of Computer Applications in Archaeology Volume 2020 ; 2020 ; https://journal.caa-international.org/ ; >
 
   }
 
@@ -2309,7 +2309,7 @@
 
       au < ready ; exists ; 2018 ; 1 ; Transactions of the International Society for Music Information Retrieval Volume 2018 ; 2018 ; https://transactions.ismir.net/ ; >
       au < ready ; exists ; 2019 ; 2 ; Transactions of the International Society for Music Information Retrieval Volume 2019 ; 2019 ; https://transactions.ismir.net/ ; >
-      au < ready ; exists ; 2020 ; 3 ; Transactions of the International Society for Music Information Retrieval Volume 2020 ; 2020 ; https://transactions.ismir.net/ ; >
+      au < crawling ; exists ; 2020 ; 3 ; Transactions of the International Society for Music Information Retrieval Volume 2020 ; 2020 ; https://transactions.ismir.net/ ; >
 
   }
 
@@ -2355,7 +2355,7 @@
       au < finished ; manifest ; 2017 ; 15 ; Entertainment and Sports Law Journal Volume 2017 ; 2017 ; http://www.entsportslawjournal.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 16 ; Entertainment and Sports Law Journal Volume 2018 ; 2018 ; https://www.entsportslawjournal.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; 17 ; Entertainment and Sports Law Journal Volume 2019 ; 2019 ; https://www.entsportslawjournal.com/ ; reingest4.clockss.org:8082 >
-      au < ready ; exists ; 2020 ; 18 ; Entertainment and Sports Law Journal Volume 2020 ; 2020 ; https://www.entsportslawjournal.com/ ; >
+      au < crawling ; exists ; 2020 ; 18 ; Entertainment and Sports Law Journal Volume 2020 ; 2020 ; https://www.entsportslawjournal.com/ ; >
 
   }
 
@@ -2908,7 +2908,7 @@
       au < manifest ; exists ; 1997 ; 10 ; Serials: The Journal for the Serials Community Volume 1997 ; 1997 ; https://serials.uksg.org/ ; >
       au < manifest ; exists ; 1998 ; 11 ; Serials: The Journal for the Serials Community Volume 1998 ; 1998 ; https://serials.uksg.org/ ; >
       au < manifest ; exists ; 1999 ; 12 ; Serials: The Journal for the Serials Community Volume 1999 ; 1999 ; https://serials.uksg.org/ ; >
-      au < ready ; exists ; 2000 ; 13 ; Serials: The Journal for the Serials Community Volume 2000 ; 2000 ; https://serials.uksg.org/ ; > #M exists. No articles for that year.
+      au < crawling ; exists ; 2000 ; 13 ; Serials: The Journal for the Serials Community Volume 2000 ; 2000 ; https://serials.uksg.org/ ; > #M exists. No articles for that year.
       au < finished ; finished ; 2001 ; 14 ; Serials: The Journal for the Serials Community Volume 2001 ; 2001 ; https://serials.uksg.org/ ; reingest3.clockss.org:8083 >
       au < ready ; exists ; 2002 ; 15 ; Serials: The Journal for the Serials Community Volume 2002 ; 2002 ; https://serials.uksg.org/ ; > #M exists. No articles for that year.
       au < finished ; finished ; 2003 ; 16 ; Serials: The Journal for the Serials Community Volume 2003 ; 2003 ; https://serials.uksg.org/ ; reingest4.clockss.org:8082 >
