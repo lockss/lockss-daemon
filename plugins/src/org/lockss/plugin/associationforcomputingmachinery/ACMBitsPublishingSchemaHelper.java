@@ -161,7 +161,7 @@ public class ACMBitsPublishingSchemaHelper implements SourceXmlSchemaHelper {
     private static String BITS_fpage = "/book-part-wrapper/book-part/book-part-meta/fpage";
     private static String BITS_lpage = "/book-part-wrapper/book-part/book-part-meta/lpage";
     public static String BITS_copydate = "/book-part-wrapper/book-part/book-part-meta/permissions/copyright-year";
-    public static String BITS_date =  "/pub-date[@date-type=\"publication\"]";
+    public static String BITS_date =  "/book-part-wrapper/book-part/book-part-meta/pub-date[@date-type=\"publication\"]";
 
     
     /*
@@ -197,6 +197,7 @@ public class ACMBitsPublishingSchemaHelper implements SourceXmlSchemaHelper {
         cookMap.put(BITS_lpage, MetadataField.FIELD_END_PAGE);
         cookMap.put(BITS_contrib, MetadataField.FIELD_AUTHOR);
         cookMap.put(BITS_copydate, MetadataField.FIELD_DATE);
+        cookMap.put(BITS_date, MetadataField.FIELD_DATE);
     }
 
     @Override
