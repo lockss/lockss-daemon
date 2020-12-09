@@ -3,6 +3,7 @@
   publisher <
     name = University of Notre Dame Law School ;
     info[contract] = 2015 ;
+    info[back] = 2010 ;
     info[tester] = 5 ;
     info[poller] = 8
   >
@@ -109,39 +110,37 @@
       param[journal_abbr] = ndjlepp
 
       au < manifest ; exists ; 1985 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 1 ; 1 ; >
-      au < manifest ; exists ; 1986 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 2 ; 2 ; >
-      au < manifest ; exists ; 1987 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 3 ; 3 ; >
-      au < manifest ; exists ; 1988 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 4 ; 4 ; >
-      au < manifest ; exists ; 1989 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 5 ; 5 ; >
-      au < manifest ; exists ; 1990 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 6 ; 6 ; >
-      au < manifest ; exists ; 1991 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 7 ; 7 ; >
-      au < manifest ; exists ; 1992 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 8 ; 8 ; >
-      au < manifest ; exists ; 1993 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 9 ; 9 ; >
-      au < manifest ; exists ; 1994 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 10 ; 10 ; >
-      au < manifest ; exists ; 1995 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 11 ; 11 ; >
-      au < manifest ; exists ; 1996 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 12 ; 12 ; >
-      au < manifest ; exists ; 1997 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 13 ; 13 ; >
-      au < manifest ; exists ; 1998 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 14 ; 14 ; >
-      au < manifest ; exists ; 1999 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 15 ; 15 ; >
-      au < manifest ; exists ; 2000 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 16 ; 16 ; >
-      au < manifest ; exists ; 2001 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 17 ; 17 ; >
-      au < manifest ; exists ; 2002 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 18 ; 18 ; >
-      au < manifest ; exists ; 2003 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 19 ; 19 ; >
-      au < manifest ; exists ; 2004 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 20 ; 20 ; >
-      au < manifest ; exists ; 2005 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 21 ; 21 ; >
-      au < manifest ; exists ; 2006 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 22 ; 22 ; >
-      au < manifest ; exists ; 2007 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 23 ; 23 ; >
-      au < manifest ; exists ; 2008 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 24 ; 24 ; >
-      au < manifest ; exists ; 2009 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 25 ; 25 ; >
-      au < manifest ; exists ; 2010 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 26 ; 26 ; >
-      au < manifest ; exists ; 2011 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 27 ; 27 ; >
-      au < manifest ; exists ; 2012 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 28 ; 28 ; >
-      au < manifest ; exists ; 2013 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 29 ; 29 ; >
-      au < exists ; exists ; 2014 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 30 ; 30 ; >
-      au < finished ; finished ; 2015 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 31 ; 31 ; reingest1.clockss.org:8082 >
-      au < exists ; exists ; 2016 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 32 ; 32 ; >
-      au < exists ; exists ; 2017 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 33 ; 33 ; >
-
+      au < manifest ; exists ; 1987 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1988 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1990 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1991 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1992 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1993 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1994 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1995 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1996 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1997 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1998 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1999 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2000 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2001 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2002 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2003 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2004 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2005 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2006 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2007 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2008 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2009 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2010 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2011 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2012 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 26 ; 26 ; >
+      au < manifest ; exists ; 2013 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 27 ; 27 ; >
+      au < manifest ; exists ; 2014 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2015 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 29 ; 29 ; >
+      au < doesNotExist ; doesNotExist ; 2014 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 30 ; 30 ; >
+      au < finished ; finished ; 2017 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 31 ; 31 ; reingest1.clockss.org:8082 >
+      #nothing after 2017 as of 20201209
   }
 
   {
