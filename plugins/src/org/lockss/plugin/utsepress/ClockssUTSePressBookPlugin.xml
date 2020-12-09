@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>UTS ePress Book Plugin (CLOCKSS)</string>
+    <string>University of Technology Sydney ePress Book Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -57,15 +57,14 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"UTS ePress Book Plugin (CLOCKSS), Base URL %s, Path %s", base_url, book_uri</string>
+    <string>"University of Technology Sydney ePress Book Plugin (CLOCKSS), Base URL %s, Path %s", base_url, book_uri</string>
   </entry>
   <entry>
     <string>au_start_url</string>
     <!--
     They have different links
-    https://utsepress.lib.uts.edu.au/site/books/e/10.5130/978-0-6481242-8-3
-    https://utsepress.lib.uts.edu.au/site/books/m/10.5130/aae/
-    https://utsepress.lib.uts.edu.au/site/books/e/10.5130/pmrp.ipmarc2017/
+    https://utsepress.lib.uts.edu.au/site/books/10.5130/978-0-6481242-8-3
+    https://utsepress.lib.uts.edu.au/site/books/10.5130/pmrp.ipmarc2017/
      -->
     <string>"%ssite/books/%s", base_url, book_uri</string>
   </entry>
@@ -74,7 +73,6 @@
     <list>
       <string>1, "https://s3-eu-west-1.amazonaws.com/.*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)"</string>
       <string>1, "https://netdna.bootstrapcdn.com/font-awesome/"</string>
-      <string>1, "https://s7.addthis.com/js/.*\.js"</string>
       <string>1,"^https://fonts.googleapis.com/css"</string>
       <string>1,"%ssite/books/([^/]+/)?%s", base_url, book_uri</string>
       <!--
@@ -151,7 +149,6 @@
     <list>
       <string>s3-eu-west-1\.amazonaws\.com</string>
       <string>netdna\.bootstrapcdn\.com</string>
-      <string>s7\.addthis\.com</string>
       <string>fonts\.googleapis\.com</string>
     </list>
   </entry>
