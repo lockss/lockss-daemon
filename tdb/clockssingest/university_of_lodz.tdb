@@ -1,0 +1,37 @@
+{
+
+  publisher <
+    name = University of Lodz ;
+    info[contract] = 2013 ;
+    info[tester] = 5 ;
+    info[poller] = 8
+  >
+  
+  # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
+
+  {
+  
+    title <
+      name = Tourism / Turyzm ;
+      eissn = 2080-6922
+    >
+    
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
+    param[base_url] = https://digijournals.uni.lodz.pl/
+    param[journal_abbr] = turyzm
+    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+
+    au < manifest ; exists ; 2012 ; Tourism / Turyzm Volume 22 ; 22 ; >
+    au < manifest ; exists ; 2013 ; Tourism / Turyzm Volume 23 ; 23 ; >
+    au < manifest ; exists ; 2014 ; Tourism / Turyzm Volume 24 ; 24 ; >
+    au < manifest ; exists ; 2015 ; Tourism / Turyzm Volume 25 ; 25 ; >
+    au < manifest ; exists ; 2016 ; Tourism / Turyzm Volume 26 ; 26 ; >
+    au < manifest ; exists ; 2017 ; Tourism / Turyzm Volume 27 ; 27 ; >
+    au < manifest ; exists ; 2018 ; Tourism / Turyzm Volume 28 ; 28 ; >
+    au < manifest ; exists ; 2019 ; Tourism / Turyzm Volume 29 ; 29 ; >
+    au < manifest ; exists ; 2020 ; Tourism / Turyzm Volume 30 ; 30 ; >
+    au < expected ; exists ; 2021 ; Tourism / Turyzm Volume 31 ; 31 ; >
+
+  }
+
+}
