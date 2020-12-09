@@ -13,12 +13,12 @@
     >
 
     plugin = org.lockss.plugin.clockss.casalini.ClockssCasaliniLibriBooksPlugin
-    param[base_url] = https://clockss-test.lockss.org/sourcefiles/casalinibooks-released/
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/casalinibooks-released/
 
     hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[directory] >
 
-    au < readySource ; manifest ; 2020 ; Casalini Content 2020 ; 2020 >
+    au < manifest ; exists ; 2020 ; Casalini Content 2020 ; 2020 >
 
   }
 
