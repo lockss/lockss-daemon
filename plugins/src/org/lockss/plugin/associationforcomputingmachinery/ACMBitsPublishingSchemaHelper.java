@@ -161,7 +161,8 @@ public class ACMBitsPublishingSchemaHelper implements SourceXmlSchemaHelper {
     private static String BITS_fpage = "/book-part-wrapper/book-part/book-part-meta/fpage";
     private static String BITS_lpage = "/book-part-wrapper/book-part/book-part-meta/lpage";
     public static String BITS_copydate = "/book-part-wrapper/book-part/book-part-meta/permissions/copyright-year";
-    public static String BITS_date =  "/book-part-wrapper/book-part/book-part-meta/pub-date[@date-type=\"publication\"]";
+    public static String BITS_date =  "/pub-date[@date-type=\"publication\"]";
+    public static String BITS_date_alter = "/book-part-wrapper/book-part/book-part-meta/pub-date[@date-type=\"publication\"]";
 
     
     /*
@@ -180,6 +181,7 @@ public class ACMBitsPublishingSchemaHelper implements SourceXmlSchemaHelper {
         BITS_articleMap.put(BITS_copydate, XmlDomMetadataExtractor.TEXT_VALUE);
         BITS_articleMap.put(BITS_contrib, BITS_AUTHOR_VALUE);
         BITS_articleMap.put(BITS_date, BITS_DATE_VALUE);
+        BITS_articleMap.put(BITS_date_alter, BITS_DATE_VALUE);
     }
 
     /* 2. Each item (book) has its own XML file */
@@ -198,6 +200,7 @@ public class ACMBitsPublishingSchemaHelper implements SourceXmlSchemaHelper {
         cookMap.put(BITS_contrib, MetadataField.FIELD_AUTHOR);
         cookMap.put(BITS_copydate, MetadataField.FIELD_DATE);
         cookMap.put(BITS_date, MetadataField.FIELD_DATE);
+        cookMap.put(BITS_date_alter, MetadataField.FIELD_DATE);
     }
 
     @Override
