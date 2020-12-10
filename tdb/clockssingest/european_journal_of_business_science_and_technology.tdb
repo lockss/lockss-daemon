@@ -34,12 +34,12 @@
       param[base_url] = https://www.ejobsat.cz/
       param[journal_id] = ejo
 
-      au < manifest ; exists ; 2015 ; European Journal of Business Science and Technology Volume 1 ; 1 ; 2015 ; >
-      au < manifest ; exists ; 2016 ; European Journal of Business Science and Technology Volume 2 ; 2 ; 2016 ; >
-      au < manifest ; exists ; 2017 ; European Journal of Business Science and Technology Volume 3 ; 3 ; 2017 ; >
-      au < manifest ; exists ; 2018 ; European Journal of Business Science and Technology Volume 4 ; 4 ; 2018 ; >
-      au < manifest ; exists ; 2019 ; European Journal of Business Science and Technology Volume 5 ; 5 ; 2019 ; >
-      au < manifest ; exists ; 2020 ; European Journal of Business Science and Technology Volume 6 ; 6 ; 2020 ; >
+      au < crawling ; exists ; 2015 ; European Journal of Business Science and Technology Volume 1 ; 1 ; 2015 ; >
+      au < crawling ; exists ; 2016 ; European Journal of Business Science and Technology Volume 2 ; 2 ; 2016 ; >
+      au < crawling ; exists ; 2017 ; European Journal of Business Science and Technology Volume 3 ; 3 ; 2017 ; >
+      au < crawling ; exists ; 2018 ; European Journal of Business Science and Technology Volume 4 ; 4 ; 2018 ; >
+      au < crawling ; exists ; 2019 ; European Journal of Business Science and Technology Volume 5 ; 5 ; 2019 ; >
+      au < crawling ; exists ; 2020 ; European Journal of Business Science and Technology Volume 6 ; 6 ; 2020 ; >
     }
 
   }
