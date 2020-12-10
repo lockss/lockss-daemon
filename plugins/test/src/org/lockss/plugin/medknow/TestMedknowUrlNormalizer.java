@@ -28,6 +28,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.medknow;
 
+import org.lockss.plugin.BaseUrlHttpHttpsUrlNormalizer;
 import org.lockss.plugin.UrlNormalizer;
 import org.lockss.test.LockssTestCase;
 
@@ -35,54 +36,54 @@ import org.lockss.test.LockssTestCase;
 public class TestMedknowUrlNormalizer extends LockssTestCase {
 
   public void testUrlNormalizer() throws Exception {
-    UrlNormalizer normalizer = new MedknowUrlNormalizer();
+    BaseUrlHttpHttpsUrlNormalizer normalizer = new MedknowUrlNormalizer();
     
     // MedknowUrlNormalizer returns the original url, if it does not contains
     // article id (aid)
     assertEquals("http://www.afrjpaedsurg.org/article.asp?issn=0189-6725;year=2012;volume=9;issue=1;spage=13;epage=16;aulast=Kothari",
-        normalizer.normalizeUrl("http://www.afrjpaedsurg.org/article.asp?issn=0189-6725;year=2012;volume=9;issue=1;spage=13;epage=16;aulast=Kothari;aid=jpgm_2013_59_2_110_113831", null));
+        normalizer.additionalNormalization("http://www.afrjpaedsurg.org/article.asp?issn=0189-6725;year=2012;volume=9;issue=1;spage=13;epage=16;aulast=Kothari;aid=jpgm_2013_59_2_110_113831", null));
     // this one is unchanged
     assertEquals("http://www.afrjpaedsurg.org/article.asp?issn=0189-6725;year=2012;volume=9;issue=1;spage=13;epage=16;aulast=Kothari",
-        normalizer.normalizeUrl("http://www.afrjpaedsurg.org/article.asp?issn=0189-6725;year=2012;volume=9;issue=1;spage=13;epage=16;aulast=Kothari", null));
+        normalizer.additionalNormalization("http://www.afrjpaedsurg.org/article.asp?issn=0189-6725;year=2012;volume=9;issue=1;spage=13;epage=16;aulast=Kothari", null));
     
     // on the TOC for an issue url, remove the unnecessary month identifier.
     assertEquals("http://www.jpgmonline.com/showBackIssue.asp?issn=0022-3859;year=2013;volume=59;issue=3",
-        normalizer.normalizeUrl("http://www.jpgmonline.com/showBackIssue.asp?issn=0022-3859;year=2013;volume=59;issue=3;month=July-September", null));
+        normalizer.additionalNormalization("http://www.jpgmonline.com/showBackIssue.asp?issn=0022-3859;year=2013;volume=59;issue=3;month=July-September", null));
     // but it's okay if it doesn't have the month - do nothing
     assertEquals("http://www.jpgmonline.com/showBackIssue.asp?issn=0022-3859;year=2013;volume=59;issue=3",
-        normalizer.normalizeUrl("http://www.jpgmonline.com/showBackIssue.asp?issn=0022-3859;year=2013;volume=59;issue=3", null));
+        normalizer.additionalNormalization("http://www.jpgmonline.com/showBackIssue.asp?issn=0022-3859;year=2013;volume=59;issue=3", null));
     // but be sure if there is a "supp=Y" that gets left
     assertEquals("http://www.urologyannals.com/showBackIssue.asp?issn=0974-7796;year=2015;volume=7;issue=6;supp=Y",
-        normalizer.normalizeUrl("http://www.urologyannals.com/showBackIssue.asp?issn=0974-7796;year=2015;volume=7;issue=6;month=July;supp=Y", null));
+        normalizer.additionalNormalization("http://www.urologyannals.com/showBackIssue.asp?issn=0974-7796;year=2015;volume=7;issue=6;month=July;supp=Y", null));
     
     //having some trouble with the apostrophe in this URL...is it in the daemon or plugin
     assertEquals("http://www.jpgmonline.com/article.asp?issn=0022-3859;year=2013;volume=59;issue=1;spage=15;epage=20;aulast=D%27Souza;type=2",
-        normalizer.normalizeUrl("http://www.jpgmonline.com/article.asp?issn=0022-3859;year=2013;volume=59;issue=1;spage=15;epage=20;aulast=D%27Souza;type=2", null));
+        normalizer.additionalNormalization("http://www.jpgmonline.com/article.asp?issn=0022-3859;year=2013;volume=59;issue=1;spage=15;epage=20;aulast=D%27Souza;type=2", null));
     assertEquals("http://www.jpgmonline.com/article.asp?issn=0022-3859;year=2013;volume=59;issue=1;spage=15;epage=20;aulast=D%27Souza",
-        normalizer.normalizeUrl("http://www.jpgmonline.com/article.asp?issn=0022-3859;year=2013;volume=59;issue=1;spage=15;epage=20;aulast=D%27Souza", null));
+        normalizer.additionalNormalization("http://www.jpgmonline.com/article.asp?issn=0022-3859;year=2013;volume=59;issue=1;spage=15;epage=20;aulast=D%27Souza", null));
     assertEquals("http://www.jpgmonline.com/article.asp?issn=0022-3859;year=2013;volume=59;issue=1;spage=15;epage=20;aulast=D%27Souza;type=1",
-        normalizer.normalizeUrl("http://www.jpgmonline.com/article.asp?issn=0022-3859;year=2013;volume=59;issue=1;spage=15;epage=20;aulast=D%27Souza;type=1", null));
+        normalizer.additionalNormalization("http://www.jpgmonline.com/article.asp?issn=0022-3859;year=2013;volume=59;issue=1;spage=15;epage=20;aulast=D%27Souza;type=1", null));
     
     
     // for a citation landing page, remove the unnecessary arguments so we don't get multiples
     assertEquals("http://www.jpgmonline.com/citation.asp?issn=0022-3859;year=2013;volume=59;issue=3;spage=179;epage=185;aulast=Singh",
-        normalizer.normalizeUrl("http://www.jpgmonline.com/citation.asp?issn=0022-3859;year=2013;volume=59;issue=3;spage=179;epage=185;aulast=Singh;aid=jpgm_2013_59_3_179_118034", null));
+        normalizer.additionalNormalization("http://www.jpgmonline.com/citation.asp?issn=0022-3859;year=2013;volume=59;issue=3;spage=179;epage=185;aulast=Singh;aid=jpgm_2013_59_3_179_118034", null));
     assertEquals("http://www.jpgmonline.com/citation.asp?issn=0022-3859;year=2013;volume=59;issue=3;spage=179;epage=185;aulast=Singh",
-        normalizer.normalizeUrl("http://www.jpgmonline.com/citation.asp?issn=0022-3859;year=2013;volume=59;issue=3;spage=179;epage=185;aulast=Singh;type=0;aid=jpgm_2013_59_3_179_118034", null));
+        normalizer.additionalNormalization("http://www.jpgmonline.com/citation.asp?issn=0022-3859;year=2013;volume=59;issue=3;spage=179;epage=185;aulast=Singh;type=0;aid=jpgm_2013_59_3_179_118034", null));
     assertEquals("http://www.jpgmonline.com/citation.asp?issn=0022-3859;year=2013;volume=59;issue=3;spage=179;epage=185;aulast=Singh",
-        normalizer.normalizeUrl("http://www.jpgmonline.com/citation.asp?issn=0022-3859;year=2013;volume=59;issue=3;spage=179;epage=185;aulast=Singh;type=0", null));
+        normalizer.additionalNormalization("http://www.jpgmonline.com/citation.asp?issn=0022-3859;year=2013;volume=59;issue=3;spage=179;epage=185;aulast=Singh;type=0", null));
     // and no change for the simple version
     assertEquals("http://www.jpgmonline.com/citation.asp?issn=0022-3859;year=2013;volume=59;issue=3;spage=179;epage=185;aulast=Singh",
-        normalizer.normalizeUrl("http://www.jpgmonline.com/citation.asp?issn=0022-3859;year=2013;volume=59;issue=3;spage=179;epage=185;aulast=Singh", null));
+        normalizer.additionalNormalization("http://www.jpgmonline.com/citation.asp?issn=0022-3859;year=2013;volume=59;issue=3;spage=179;epage=185;aulast=Singh", null));
     
     
     // for encoding authLast
     assertEquals("http://www.jpgmonline.com/article.asp?issn=0189-6725;year=2015;volume=12;issue=3;spage=200;epage=202;aulast=P%E9rez-Egido;type=0",
-        normalizer.normalizeUrl("http://www.jpgmonline.com/article.asp?issn=0189-6725;year=2015;volume=12;issue=3;spage=200;epage=202;aulast=P" + (char) 0xE9 + "rez-Egido;type=0", null));
+        normalizer.additionalNormalization("http://www.jpgmonline.com/article.asp?issn=0189-6725;year=2015;volume=12;issue=3;spage=200;epage=202;aulast=P" + (char) 0xE9 + "rez-Egido;type=0", null));
     assertEquals("http://www.jpgmonline.com/article.asp?issn=0189-6725;year=2015;volume=12;issue=3;spage=200;epage=202;aulast=P%E9rez-Egido;type=0",
-        normalizer.normalizeUrl("http://www.jpgmonline.com/article.asp?issn=0189-6725;year=2015;volume=12;issue=3;spage=200;epage=202;aulast=P\u00e9rez-Egido;type=0", null));
+        normalizer.additionalNormalization("http://www.jpgmonline.com/article.asp?issn=0189-6725;year=2015;volume=12;issue=3;spage=200;epage=202;aulast=P\u00e9rez-Egido;type=0", null));
     assertEquals("http://www.jpgmonline.com/article.asp?issn=0189-6725;year=2015;volume=12;issue=3;spage=200;epage=202;aulast=Perez-Egido;type=0",
-        normalizer.normalizeUrl("http://www.jpgmonline.com/article.asp?issn=0189-6725;year=2015;volume=12;issue=3;spage=200;epage=202;aulast=Perez-Egido;type=0", null));
+        normalizer.additionalNormalization("http://www.jpgmonline.com/article.asp?issn=0189-6725;year=2015;volume=12;issue=3;spage=200;epage=202;aulast=Perez-Egido;type=0", null));
     
   }
   
