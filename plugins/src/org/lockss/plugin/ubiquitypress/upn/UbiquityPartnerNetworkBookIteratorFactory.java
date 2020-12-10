@@ -26,7 +26,7 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.utsepress;
+package org.lockss.plugin.ubiquitypress.upn;
 
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadataExtractor;
@@ -42,11 +42,11 @@ import org.lockss.util.Logger;
 import java.util.Iterator;
 import java.util.regex.Pattern;
 
-public class UTSePressArticleIteratorFactory implements ArticleIteratorFactory,
+public class UbiquityPartnerNetworkBookIteratorFactory implements ArticleIteratorFactory,
         ArticleMetadataExtractorFactory {
 
   protected static Logger log =
-          Logger.getLogger(UTSePressArticleIteratorFactory.class);
+          Logger.getLogger(UbiquityPartnerNetworkBookIteratorFactory.class);
 
   /*
   https://utsepress.lib.uts.edu.au/site/books/10.5130/978-0-6481242-8-3

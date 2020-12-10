@@ -14,7 +14,7 @@ import org.apache.commons.io.FileUtils;
 import java.io.File;
 import java.io.InputStream;
 
-public class TestUTSePressHtmlFilterFactory extends LockssTestCase {
+public class TestUbiquityPartnerNetworkBookHtmlFilterFactory extends LockssTestCase {
   static String ENC = Constants.DEFAULT_ENCODING;
 
   private UTSePressHtmlFilterFactory fact;

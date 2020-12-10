@@ -29,22 +29,22 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.utsepress;
+package org.lockss.plugin.ubiquitypress.upn;
 
 import org.lockss.daemon.PluginException.LinkageError;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.SubstancePredicateFactory;
 
-public class UTSePressSubstancePredicateFactory implements
+public class UbiquityPartnerNetworkBookSubstancePredicateFactory implements
     SubstancePredicateFactory {
 
   /* (non-Javadoc)
    * @see org.lockss.plugin.SubstancePredicateFactory#makeSubstancePredicate(org.lockss.plugin.ArchivalUnit)
    */
   @Override
-  public UTSePressSubstancePredicate makeSubstancePredicate(ArchivalUnit au)   
+  public UbiquityPartnerNetworkBookSubstancePredicate makeSubstancePredicate(ArchivalUnit au)
       throws LinkageError {
-    return new UTSePressSubstancePredicate(au);
+    return new UbiquityPartnerNetworkBookSubstancePredicate(au);
   }
 
 }

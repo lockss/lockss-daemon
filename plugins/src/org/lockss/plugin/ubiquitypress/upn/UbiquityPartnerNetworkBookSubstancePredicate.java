@@ -30,19 +30,15 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.utsepress;
+package org.lockss.plugin.ubiquitypress.upn;
 
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.SubstancePredicate;
 import org.lockss.state.SubstanceChecker.UrlPredicate;
-import org.lockss.util.Constants;
 import org.lockss.util.HeaderUtil;
 import org.lockss.util.Logger;
-import org.lockss.util.SetUtil;
-
-import java.util.Set;
 
 /**
  * UTSePressSubstancePredicate goes beyond just checking for
@@ -51,7 +47,7 @@ import java.util.Set;
  *
  */
 
-public class UTSePressSubstancePredicate implements SubstancePredicate {
+public class UbiquityPartnerNetworkBookSubstancePredicate implements SubstancePredicate {
   static Logger log; 
   private ArchivalUnit au;
   private UrlPredicate up = null;
@@ -61,7 +57,7 @@ public class UTSePressSubstancePredicate implements SubstancePredicate {
 
   private static final String SUBSTANCE_STRING = "application/pdf";
 
-  public UTSePressSubstancePredicate(ArchivalUnit au) {
+  public UbiquityPartnerNetworkBookSubstancePredicate(ArchivalUnit au) {
     log = Logger.getLogger("UTSePressSubstancePredicate");
     this.au = au;
     // add substance rules to check against

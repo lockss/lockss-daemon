@@ -30,7 +30,7 @@ in this Software without prior written authorization from Stanford University.
 
  */
 
-package org.lockss.plugin.utsepress;
+package org.lockss.plugin.ubiquitypress.upn;
 
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.OrFilter;
@@ -46,7 +46,7 @@ import org.lockss.util.ReaderInputStream;
 import java.io.InputStream;
 import java.io.Reader;
 
-public class UTSePressHtmlFilterFactory implements FilterFactory {
+public class UbiquityPartnerNetworkBookHtmlFilterFactory implements FilterFactory {
 
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,

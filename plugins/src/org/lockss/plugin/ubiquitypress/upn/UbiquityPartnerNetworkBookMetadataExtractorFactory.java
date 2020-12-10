@@ -30,7 +30,7 @@ in this Software without prior written authorization from Stanford University.
 
  */
 
-package org.lockss.plugin.utsepress;
+package org.lockss.plugin.ubiquitypress.upn;
 
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
@@ -40,13 +40,13 @@ import org.lockss.plugin.CachedUrl;
 
 import java.io.IOException;
 
-public class UTSePressMetadataExtractorFactory implements FileMetadataExtractorFactory {
+public class UbiquityPartnerNetworkBookMetadataExtractorFactory implements FileMetadataExtractorFactory {
 
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
                                                            String contentType)
           throws PluginException {
-    return new Emerald2020MetadataExtractor();
+    return new UbiquityPartnerNetworkBookMetadataExtractor();
   }
 
   /*
@@ -96,7 +96,7 @@ public class UTSePressMetadataExtractorFactory implements FileMetadataExtractorF
 
    */
 
-  public static class Emerald2020MetadataExtractor
+  public static class UbiquityPartnerNetworkBookMetadataExtractor
           extends SimpleHtmlMetaTagMetadataExtractor {
     private static MultiMap tagMap = new MultiValueMap();
     static {
