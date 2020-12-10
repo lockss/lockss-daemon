@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2020 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -100,6 +96,14 @@ public abstract class BaseCrawler implements Crawler {
       Configuration.PREFIX + "permissionBuf.max";
   public static final int DEFAULT_PERMISSION_BUF_MAX = 512 * 1024;
 
+  /** If true, an error fetching a permission page will cause the crawl to
+   * fail with No Permission, even if the plugin supplies alternate
+   * permission pages for that host.  If false, fetch errors will be soft
+   * and it will go on the the next permission page (if any). */
+  public static final String PARAM_FAIL_ON_PERMISSION_ERROR =
+      Configuration.PREFIX + "failOnPermissionError";
+  public static final boolean DEFAULT_FAIL_ON_PERMISSION_ERROR = false;
+
   /** The source address for crawler connections, or null to use the
    * machine's primary IP address.  Allows multiple daemons on a machine
    * with multiple IP addresses to crawl from those different addresses.
@@ -186,6 +190,8 @@ public abstract class BaseCrawler implements Crawler {
       DEFAULT_MIME_TYPE_PAUSE_AFTER_304;
   protected StorePermissionScheme paramStorePermissionScheme =
       DEFAULT_STORE_PERMISSION_SCHEME;
+  protected boolean paramFailOnPermissionError =
+      DEFAULT_FAIL_ON_PERMISSION_ERROR;
   protected boolean throwIfRateLimiterNotUsed =
       DEFAULT_THROW_IF_RATE_LIMITER_NOT_USED;
   
@@ -270,6 +276,9 @@ public abstract class BaseCrawler implements Crawler {
 					    PARAM_STORE_PERMISSION_SCHEME,
 					    DEFAULT_STORE_PERMISSION_SCHEME);
 
+    paramFailOnPermissionError =
+      config.getBoolean(PARAM_FAIL_ON_PERMISSION_ERROR,
+                        DEFAULT_FAIL_ON_PERMISSION_ERROR);
 
     String crawlFrom = config.get(PARAM_CRAWL_FROM_ADDR);
     if (StringUtil.isNullString(crawlFrom)) {
@@ -519,6 +528,7 @@ public abstract class BaseCrawler implements Crawler {
         // XXX we currently just go on, should we do something else?
       }
     }
+    permissionMap.setFailOnPermissionError(paramFailOnPermissionError);
     return permissionMap.populate();
   }
   

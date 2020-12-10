@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
- Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2020 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -65,6 +61,7 @@ public class PermissionMap {
   private Collection<PermissionChecker> daemonPermissionCheckers;
   private Collection<PermissionChecker> pluginPermissionCheckers;
   private List<Pattern> pluginPermittedHostPatterns;
+  private boolean failOnPermissionError;
   
   public PermissionMap(Crawler.CrawlerFacade crawlFacade,
       Collection<PermissionChecker> daemonPermissionCheckers,
@@ -91,6 +88,10 @@ public class PermissionMap {
     }
   }
   
+  public void setFailOnPermissionError(boolean val) {
+    failOnPermissionError = val;
+  }
+
   protected PermissionRecord createRecord(String pUrl)
       throws MalformedURLException {
     String host = UrlUtil.getHost(pUrl).toLowerCase();
@@ -293,11 +294,14 @@ public class PermissionMap {
           crawlStatus.setCrawlStatus(Crawler.STATUS_WINDOW_CLOSED);
           return false;
         case PERMISSION_FETCH_FAILED:
-          logger.debug3("Permission fetch failed");
-	  if (!crawlStatus.isCrawlError()) {
-	    crawlStatus.setCrawlStatus(Crawler.STATUS_FETCH_ERROR);
-	  }
-          return false;
+          if (failOnPermissionError) {
+            logger.debug3("Permission fetch failed, aborting");
+            if (!crawlStatus.isCrawlError()) {
+              crawlStatus.setCrawlStatus(Crawler.STATUS_FETCH_ERROR);
+            }
+            return false;
+          }
+          // else fall through to no-permission case to try next (if any)
         case PERMISSION_NOT_OK:
         case PERMISSION_NOT_IN_CRAWL_SPEC:
         case PERMISSION_MISSING:
