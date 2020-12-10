@@ -18,8 +18,11 @@ public class ACMJatsSourceArticleIteratorFactory  implements ArticleIteratorFact
 
     protected static Logger log = Logger.getLogger(ACMJatsSourceArticleIteratorFactory.class);
 
+    //http://clockss-ingest.lockss.org/sourcefiles/acmjats-released/2020_10/acmconferences_3306305-0627175823.zip!/3306305/3306305.3332368/suppl/a5-keissami-corrigendum.pdf
+    //http://clockss-ingest.lockss.org/sourcefiles/acmjats-released/2020_2/acmconferences_3343886-0302030314.zip!/3343886/ase.2015.10/ase.2015.10.pdf
+    // supplemental pdf has not matching xml, so exclude it from ArticleIterator
     protected static final String ALL_ZIP_XML_PATTERN_TEMPLATE =
-            "\"%s[^/]+/.*\\.zip!/.*\\.pdf$\", base_url";
+            "\"%s[^/]+/.*\\.zip!/(?!.*suppl).*\\.pdf$\", base_url";
 
     // Be sure to exclude all nested archives in case supplemental data is provided this way
     protected static final Pattern SUB_NESTED_ARCHIVE_PATTERN =
