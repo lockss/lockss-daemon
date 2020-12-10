@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2020 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -180,6 +176,52 @@ public class TestPermissionMap extends LockssTestCase {
     assertTrue(map.populate());
     assertTrue(map.hasPermission("http://www.example.com/"));
     assertFalse(mcf.getCrawlerStatus().isCrawlError());
+  }
+
+  public void testSameHostFirstGetsFetchError() throws Exception {
+    MockCrawlRule crawlRule = new MockCrawlRule();
+    crawlRule.addUrlToCrawl(permissionPage1);
+    mau.addUrl(permissionPage1);
+    mau.addUrl(nonPermissionPage1);
+    mau.setStartUrls(ListUtil.list(permissionPage1));
+    permUrls = ListUtil.list(nonPermissionPage1, permissionPage1 );
+    mau.setPermissionUrls(permUrls);
+    mau.setCrawlRule(crawlRule);
+    MockUrlFetcher muf = new MockUrlFetcher(mcf, nonPermissionPage1);
+    mcf.setPermissionUrlFetcher(muf);
+    // This doesn't exactly simulate a 404 response but it's close enough
+    muf.setCachingException(new org.lockss.util.urlconn.CacheException.NoRetryDeadLinkException("404 fetch error"), 1);
+
+    PermissionMap map =
+        new PermissionMap(mcf,
+            ListUtil.list(new MockPermissionChecker(permissionPage1)),
+            ListUtil.list(new MockPermissionChecker(999)), permUrls);
+    assertTrue(map.populate());
+    assertTrue(map.hasPermission("http://www.example.com/"));
+    assertFalse(mcf.getCrawlerStatus().isCrawlError());
+  }
+
+  public void testSameHostFirstGetsFetchErrorAbort() throws Exception {
+    MockCrawlRule crawlRule = new MockCrawlRule();
+    crawlRule.addUrlToCrawl(permissionPage1);
+    mau.addUrl(permissionPage1);
+    mau.addUrl(nonPermissionPage1);
+    mau.setStartUrls(ListUtil.list(permissionPage1));
+    permUrls = ListUtil.list(nonPermissionPage1, permissionPage1 );
+    mau.setPermissionUrls(permUrls);
+    mau.setCrawlRule(crawlRule);
+    MockUrlFetcher muf = new MockUrlFetcher(mcf, nonPermissionPage1);
+    mcf.setPermissionUrlFetcher(muf);
+    // This doesn't exactly simulate a 404 response but it's close enough
+    muf.setCachingException(new org.lockss.util.urlconn.CacheException.NoRetryDeadLinkException("404 fetch error"), 1);
+
+    PermissionMap map =
+        new PermissionMap(mcf,
+            ListUtil.list(new MockPermissionChecker(permissionPage1)),
+            ListUtil.list(new MockPermissionChecker(999)), permUrls);
+    map.setFailOnPermissionError(true);
+    assertFalse(map.populate());
+    assertFalse(map.hasPermission("http://www.example.com/"));
   }
 
   public void testGetPutPermission() throws Exception {
