@@ -1,28 +1,25 @@
 /*
  * $Id:$
  */
-package org.lockss.plugin.utsepress;
+package org.lockss.plugin.ubiquitypress.upn;
 
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockArchivalUnit;
 import org.lockss.test.StringInputStream;
 import org.lockss.util.Constants;
 import org.lockss.util.StringUtil;
-import org.apache.commons.io.FileUtils;
-
-
 import java.io.File;
 import java.io.InputStream;
 
 public class TestUbiquityPartnerNetworkBookHtmlFilterFactory extends LockssTestCase {
   static String ENC = Constants.DEFAULT_ENCODING;
 
-  private UTSePressHtmlFilterFactory fact;
+  private UbiquityPartnerNetworkBookHtmlFilterFactory fact;
   private MockArchivalUnit mau;
 
   public void setUp() throws Exception {
     super.setUp();
-    fact = new UTSePressHtmlFilterFactory();
+    fact = new UbiquityPartnerNetworkBookHtmlFilterFactory();
     mau = new MockArchivalUnit();
   }
   private static final String aritlePage = "<div class=\"table-of-contents\">table-of-contents</div>\n" +
