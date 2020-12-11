@@ -32,10 +32,10 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.clockss.phildoc;
 
-import java.util.regex.Pattern;
-
 import org.lockss.plugin.clockss.SourceZipXmlArticleIteratorFactory;
 import org.lockss.util.Logger;
+
+import java.util.regex.Pattern;
 
 //
 // Cannot use the generic Zip XML article iterator because don't want the full
@@ -56,9 +56,9 @@ import org.lockss.util.Logger;
 // There could be more than one issue XML within the zip (eg jcathsoc_13-1.xml and jcathsoc_13-2.xml)
 // along with all the corresponding PDF content
 //
-public class PhilDocZipXmlArticleIteratorFactory extends SourceZipXmlArticleIteratorFactory {
+public class PhilDocDirZipXmlArticleIteratorFactory extends SourceZipXmlArticleIteratorFactory {
 
-  private static final Logger log = Logger.getLogger(PhilDocZipXmlArticleIteratorFactory.class);
+  private static final Logger log = Logger.getLogger(PhilDocDirZipXmlArticleIteratorFactory.class);
 
   // The iterator pattern supports both the original sample layout of for journal foo of 
   //   clockss.zip!/foo/foo_3-7/foo_3-7.xml 
@@ -98,7 +98,7 @@ public class PhilDocZipXmlArticleIteratorFactory extends SourceZipXmlArticleIter
   https://clockss-test.lockss.org/sourcefiles/phildoccenter-released/2020/PDC-backcontent-4.zip!/tptoday_7DD9805D8EDF5D93C1257A7F00655268.zip/tptoday_7DD9805D8EDF5D93C1257A7F00655268.xml
    */
   protected static final String ONLY_TOC_XML_PATTERN_TEMPLATE =
-        "\"%s%d/.*\\.zip!/([^/]+)(\\.zip)?/(?!.*pdf).*\\.xml$\", base_url, year";
+        "\"%s%s/.*\\.zip!/([^/]+)(\\.zip)?/(?!.*pdf).*\\.xml$\", base_url, directory";
   //    "\"%s%d/.*\\.zip!/([^/]+)(\\.zip)?/(\\1_[^/]+/)?\\1_[^/.]+\\.xml$\", base_url, year";
   //  "\"%s%d/.*\\.zip!/[^/.]+\\.zip/[^/.]+\\.xml$\", base_url, year";
   
