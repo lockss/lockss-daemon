@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.copernicus;
 
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.regex.*;
 
@@ -47,20 +48,36 @@ import org.lockss.util.Logger;
  * * there might additionally be an <article>-supplement.pdf
  * * there might additionally be an <article>-corrigendum.pdf
  * <article>.bib, ris, xml are the citations
+ *
+ *
  */
+
+  /*
+  website update url pattern in 2020
+  https://acp.copernicus.org/articles/20/14889/2020
+  https://acp.copernicus.org/articles/20/14889/2020/acp-20-14889-2020-supplement.pd
+  https://acp.copernicus.org/articles/20/14889/2020/acp-20-14889-2020-t01.xlsx
+  https://acp.copernicus.org/articles/20/14889/2020/acp-20-14889-2020-t02.xlsx
+  https://acp.copernicus.org/articles/20/14889/2020/acp-20-14889-2020.bib
+  https://acp.copernicus.org/articles/20/14889/2020/acp-20-14889-2020.html
+  https://acp.copernicus.org/articles/20/14889/2020/acp-20-14889-2020.pdf
+  https://acp.copernicus.org/articles/20/14889/2020/acp-20-14889-2020.ris
+  https://acp.copernicus.org/articles/20/14889/2020/acp-20-14889-2020.xml
+   */
 
 public class CopernicusArticleIteratorFactory
     implements ArticleIteratorFactory,
                ArticleMetadataExtractorFactory {
 
   protected static Logger log = Logger.getLogger(CopernicusArticleIteratorFactory.class);
-  
-  protected static final String ROOT_TEMPLATE = "\"%s%s/\", base_url, volume_name"; 
+
+  protected static final String ROOT_TEMPLATE = "\"%s%s/\", base_url, volume_name";
+  protected static final String ROOT_TEMPLATE_V2 = "\"%sarticles/%s/\", base_url, volume_name";
   // although the format seems to be consistent, don't box in the alphanum sequence, just the depth
   // since we pick up ".pdf" as well, be sure not to pick up "-supplement.pdf", nor "-assets.html" as well
   //(?<!-supplement) is negative lookbehind and will cancel out the *.pdf if it matches
-  protected static final String PATTERN_TEMPLATE = "\"^%s%s/[^/]+/[^/]+/[^/]+(?<!-(supplement|assets|corrigendum))\\.(html|pdf)\", base_url,volume_name";
-  
+  // Use pdf here, since there are other formats of html page we do not want
+  protected static final String PATTERN_TEMPLATE = "\"/[^/]+/[^/]+/[^/]+(?<!-(supplement|assets|corrigendum))\\.pdf\"";
 
   // primary aspects of the article
   final Pattern ABSTRACT_PATTERN = Pattern.compile("(/[^/]+/[^/]+/[^/]+)\\.html$", Pattern.CASE_INSENSITIVE);
@@ -82,8 +99,8 @@ public class CopernicusArticleIteratorFactory
       SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
       
       builder.setSpec(target,
-          ROOT_TEMPLATE,
-          PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
+              Arrays.asList(ROOT_TEMPLATE, ROOT_TEMPLATE_V2),
+              PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
       
       // The order in which these aspects are added is important. They determine which will trigger
       // the ArticleFiles and if you are only counting articles (not pulling metadata) then the 
@@ -97,7 +114,7 @@ public class CopernicusArticleIteratorFactory
       // set up Abstract to be an aspect that will trigger an ArticleFiles
       // NOTE - for the moment this also means an abstract could be considered a FULL_TEXT_CU until this is deprecated
       // though the ordered list for role full text will mean if any of the others are there, they will become the FTCU
-      builder.addAspect(ABSTRACT_PATTERN,
+      builder.addAspect(
           ABSTRACT_REPLACEMENT,
           ArticleFiles.ROLE_ABSTRACT,
           ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE,

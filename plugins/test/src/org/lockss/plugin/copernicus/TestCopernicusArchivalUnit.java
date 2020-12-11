@@ -176,8 +176,9 @@ public class TestCopernicusArchivalUnit extends LockssTestCase {
 
     // 4 digit
     String expected = ROOT_URL+"123/index.html";
+    String expected2 = ROOT_URL+"articles/123/index.html";
     DefinableArchivalUnit ABAu = makeAu(url, url, 123, "2010");
-    assertEquals(ListUtil.list(expected), ABAu.getStartUrls());
+    assertEquals(ListUtil.list(expected, expected2), ABAu.getStartUrls());
   }
   
   public void testShouldNotCachePageFromOtherSite() throws Exception {

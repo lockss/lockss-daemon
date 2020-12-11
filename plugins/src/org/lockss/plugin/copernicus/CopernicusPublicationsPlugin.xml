@@ -19,7 +19,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>23</string>
+    <string>24</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -47,6 +47,7 @@
     <string>au_start_url</string>
     <list>
       <string>"%s%s/index.html", base_url, volume_name</string>
+      <string>"%sarticles/%s/index.html", base_url, volume_name</string>
     </list>
   </entry>
 <!--  first check the start_url and if not there, look at volumes (this is OR); then AND also need permission at home_url -->
@@ -55,6 +56,8 @@
       <list>
         <string>"%s%s/index.html", to_http(base_url), volume_name</string>
         <string>"%s%s/index.html", to_https(base_url), volume_name</string>
+        <string>"%sarticles/%s/index.html", to_http(base_url), volume_name</string>
+        <string>"%sarticles/%s/index.html", to_https(base_url), volume_name</string>
         <string>"%svolumes.html",to_http(base_url)</string>
         <string>"%svolumes.html",to_https(base_url)</string>
         <string>"%sindex.html",to_http(home_url)</string> 
@@ -92,16 +95,27 @@
       <!--  two CDN that contain style information and small supporting images-->
       <string>1,"^https?://(contentmanager|cdn)\.copernicus\.org/."</string>
 <!--  article level metrics live at <filename>-metrics.html -->      
-      <string>2,"^https?://%s/%s/.*-metrics.html$",url_host(base_url),volume_name</string>
+      <string>2,"^https?://%s/(articles/)?%s/.*-metrics.html$",url_host(base_url),volume_name</string>
 <!--  related articles live at <filename>-relations.html -->      
-      <string>2,"^https?://%s/%s/.*-relations.html$",url_host(base_url),volume_name</string>
+      <string>2,"^https?://%s/(articles/)?%s/.*-relations.html$",url_host(base_url),volume_name</string>
 <!--  article level discussions/"peer review" live at <filename>-discussion.html -->
-      <string>2,"^https?://%s/%s/.*-discussion.html$",url_host(base_url),volume_name</string>
+      <string>2,"^https?://%s/(articles/)?%s/.*-discussion.html$",url_host(base_url),volume_name</string>
 <!--article at <base_url>/14/4/2012/<filename>.(html|.pdf|.xml|.ris|.bib) -->
 <!--issue TOC at <base_url>/14/index.html or <base_url>/68/issue2.html -->
-      <string>1,"^https?://%s/%s/",url_host(base_url),volume_name</string>
-<!--  this used to be one of the permission urls; leave it in for AUs that already have it-->      
-      <string>1,"^https?://%s/index.html",url_host(base_url),volume_name</string>
+      <!--
+      https://contentmanager.copernicus.org/390807/ssl
+      https://contentmanager.copernicus.org/390808/ssl
+      https://contentmanager.copernicus.org/390809/ssl
+
+      https://acp.copernicus.org/articles/20/14889/2020/acp-20-14889-2020-t01.xlsx
+      https://acp.copernicus.org/articles/20/14889/2020/acp-20-14889-2020-t02.xlsx
+      -->
+      <string>2, "^https?://%s/(articles/)?%s/.*\.xlsx", url_host(base_url),volume_name</string>
+      <string>2, "^https://contentmanager.copernicus.org/.*/ssl"</string>
+      <!--https://acp.copernicus.org/articles/20/14303/2020/-->
+      <string>1, "^https?://%s/(articles/)?%s/",url_host(base_url),volume_name</string>
+<!--  this used to be one of the permission urls; leave it in for AUs that already have it-->
+      <string>1,"^https?://%s/(articles/)?%s/index.html",url_host(base_url), volume_name</string>
 <!--  anything not explicitly collected is inherently excluded so you don't need a statement-->
     </list>
   </entry>
@@ -154,7 +168,7 @@
 <!--  so far these are always <base_url>/<vol>/<startpage>/<year>/zz-vol-pg-year.html -->
 <!--  but it is better to be defensive and just ensure depth -->
 <!--  only pdf is full text. html is just abstract -->
-          <string>"^%s%s/[^/]+/[^/]+/[^/]+\.html$", base_url, volume_name</string>
+          <string>"^%s(articles/)?%s/[^/]+/[^/]+/[^/]+\.html$", base_url, volume_name</string>
         </list>
       </entry>
       <entry>
@@ -163,7 +177,7 @@
 <!--  so far these are always <base_url>/<vol>/<startpage>/<year>/zz-vol-pg-year.pdf -->
 <!--  but it is better to be defensive and just ensure depth -->
 <!--  only pdf is full text. html is just abstract -->
-      	  <string>"^%s%s/[^/]+/[^/]+/[^/]+\.pdf$", base_url, volume_name</string>
+      	  <string>"^%s(articles/)?%s/[^/]+/[^/]+/[^/]+\.pdf$", base_url, volume_name</string>
         </list>
       </entry>
     </map>
