@@ -154,9 +154,9 @@
     param[journal_abbr] = jafe
     implicit < status ; status2 ; year ; name ; param[volume] ; param[base_url] ; hidden[proxy] >
     
-    au < manifest ; exists ; 2017 ; Journal of Applied Farm Economics Volume 1 ; 1 ; https://docs.lib.purdue.edu/ ; >
-    au < manifest ; exists ; 2018 ; Journal of Applied Farm Economics Volume 2 ; 2 ; https://docs.lib.purdue.edu/ ; >
-    au < manifest ; exists ; 2019 ; Journal of Applied Farm Economics Volume 3 ; 3 ; https://docs.lib.purdue.edu/ ; >
+    au < ready ; exists ; 2017 ; Journal of Applied Farm Economics Volume 1 ; 1 ; https://docs.lib.purdue.edu/ ; >
+    au < ready ; exists ; 2018 ; Journal of Applied Farm Economics Volume 2 ; 2 ; https://docs.lib.purdue.edu/ ; >
+    au < ready ; exists ; 2019 ; Journal of Applied Farm Economics Volume 3 ; 3 ; https://docs.lib.purdue.edu/ ; >
     au < expected ; exists ; 2020 ; Journal of Applied Farm Economics Volume 4 ; 4 ; https://docs.lib.purdue.edu/ ; >
 
   }

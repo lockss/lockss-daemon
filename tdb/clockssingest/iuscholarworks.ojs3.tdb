@@ -75,9 +75,9 @@
       au < finished ; manifest ; 2013 ; 2013 ; Analecta Volume 43 ; 43 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2014 ; 2014 ; Analecta Volume 44 ; 44 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2015 ; 2015 ; Analecta Volume 45 ; 45 ; reingest5.clockss.org:8082 >
-      au < manifest ; exists ; 2016 ; 2016 ; Analecta Volume 46 ; 46 ; reingest5.clockss.org:8082 >
-      au < manifest ; exists ; 2017 ; 2017 ; Analecta Volume 47 ; 47 ; reingest5.clockss.org:8082 >
-      au < manifest ; exists ; 2018 ; 2018 ; Analecta Volume 48 ; 48 ; reingest5.clockss.org:8082 >
+      au < ready ; exists ; 2016 ; 2016 ; Analecta Volume 46 ; 46 ; reingest5.clockss.org:8082 >
+      au < ready ; exists ; 2017 ; 2017 ; Analecta Volume 47 ; 47 ; reingest5.clockss.org:8082 >
+      au < ready ; exists ; 2018 ; 2018 ; Analecta Volume 48 ; 48 ; reingest5.clockss.org:8082 >
 
   }
 
@@ -180,7 +180,7 @@
       au < finished ; manifest ; 2016 ; 2016 ; Ethnomusicology Translations Volume 2-4 ; 2-4 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2017 ; 2017 ; Ethnomusicology Translations Volume 5-6 ; 5-6 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 2018 ; Ethnomusicology Translations Volume 7-8 ; 7-8 ; reingest5.clockss.org:8082 >
-      au < manifest ; exists ; 2019 ; 2019 ; Ethnomusicology Translations Volume 9-10 ; 9-10 ; >
+      au < ready ; exists ; 2019 ; 2019 ; Ethnomusicology Translations Volume 9-10 ; 9-10 ; >
 
   }
 
@@ -203,8 +203,8 @@
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Hindsight: Journal of Optemetry History Volume 47 ; 47 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Hindsight: Journal of Optemetry History Volume 48 ; 48 ; >
       au < finished ; manifest ; 2018 ; 2018 ; Hindsight: Journal of Optemetry History Volume 49 ; 49 ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 2019 ; 2019 ; Hindsight: Journal of Optemetry History Volume 50 ; 50 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; Hindsight: Journal of Optemetry History Volume 51 ; 51 ; >
+      au < ready ; exists ; 2019 ; 2019 ; Hindsight: Journal of Optemetry History Volume 50 ; 50 ; >
+      au < ready ; exists ; 2020 ; 2020 ; Hindsight: Journal of Optemetry History Volume 51 ; 51 ; >
 
   }
 
@@ -245,8 +245,8 @@
 
       au < finished ; manifest ; 2017 ; 2017 ; The Hoosier Science Teacher Volume 40 ; 40 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 2018 ; The Hoosier Science Teacher Volume 41 ; 41 ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 2019 ; 2019 ; The Hoosier Science Teacher Volume 42 ; 42 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; The Hoosier Science Teacher Volume 43 ; 43 ; >
+      au < ready ; exists ; 2019 ; 2019 ; The Hoosier Science Teacher Volume 42 ; 42 ; >
+      au < ready ; exists ; 2020 ; 2020 ; The Hoosier Science Teacher Volume 43 ; 43 ; >
 
   }
 
@@ -335,7 +335,7 @@
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; International Journal of Designs for Learning Volume 7 ; 7 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; International Journal of Designs for Learning Volume 8 ; 8 ; >
       au < finished ; manifest ; 2018 ; 2018 ; International Journal of Designs for Learning Volume 9 ; 9 ; reingest5.clockss.org:8082 >
-      au < manifest ; exists ; 2019 ; 2019 ; International Journal of Designs for Learning Volume 10 ; 10 ; >
+      au < ready ; exists ; 2019 ; 2019 ; International Journal of Designs for Learning Volume 10 ; 10 ; >
 
   }
 
@@ -373,8 +373,8 @@
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; InULA Notes: Indiana University Librarians Association Volume 28 ; 28 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; InULA Notes: Indiana University Librarians Association Volume 29 ; 29 ; >
       au < finished ; manifest ; 2018 ; 2018 ; InULA Notes: Indiana University Librarians Association Volume 30 ; 30 ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 2019 ; 2019 ; InULA Notes: Indiana University Librarians Association Volume 31 ; 31 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; InULA Notes: Indiana University Librarians Association Volume 32 ; 32 ; >
+      au < ready ; exists ; 2019 ; 2019 ; InULA Notes: Indiana University Librarians Association Volume 31 ; 31 ; >
+      au < ready ; exists ; 2020 ; 2020 ; InULA Notes: Indiana University Librarians Association Volume 32 ; 32 ; >
 
   }
 
@@ -390,8 +390,8 @@
       au < finished ; manifest ; 2014 ; 2014 ; IUSB Undergraduate Research Journal of History Volume 4 ; 4 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2015 ; 2015 ; IUSB Undergraduate Research Journal of History Volume 5 ; 5 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2016 ; 2016 ; IUSB Undergraduate Research Journal of History Volume 6 ; 6 ; reingest4.clockss.org:8082 >
-      au < manifest ; exists ; 2017 ; 2017 ; IUSB Undergraduate Research Journal of History Volume 7 ; 7 ; >
-      au < manifest ; exists ; 2018 ; 2018 ; IUSB Undergraduate Research Journal of History Volume 8 ; 8 ; >
+      au < ready ; exists ; 2017 ; 2017 ; IUSB Undergraduate Research Journal of History Volume 7 ; 7 ; >
+      au < ready ; exists ; 2018 ; 2018 ; IUSB Undergraduate Research Journal of History Volume 8 ; 8 ; >
 
   }
 
@@ -404,8 +404,8 @@
       #no issn/eissn
 
       au < finished ; manifest ; 2016 ; 2016 ; Journal of Economic Development in Higher Education Volume 1 ; 1 ; reingest3.clockss.org:8083 >
-      au < manifest ; exists ; 2019 ; 2019 ; Journal of Economic Development in Higher Education Volume 2 ; 2 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; Journal of Economic Development in Higher Education Volume 3 ; 3 ; >
+      au < ready ; exists ; 2019 ; 2019 ; Journal of Economic Development in Higher Education Volume 2 ; 2 ; >
+      au < ready ; exists ; 2020 ; 2020 ; Journal of Economic Development in Higher Education Volume 3 ; 3 ; >
 
   }
 
@@ -424,7 +424,7 @@
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Journal of Teaching and Learning with Technology Volume 5 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Journal of Teaching and Learning with Technology Volume 6 ; 6 ; >
       au < finished ; manifest ; 2018 ; 2018 ; Journal of Teaching and Learning with Technology Volume 7 ; 7 ; reingest4.clockss.org:8082 >
-      au < manifest ; exists ; 2019 ; 2019 ; Journal of Teaching and Learning with Technology Volume 8 ; 8 ; >
+      au < ready ; exists ; 2019 ; 2019 ; Journal of Teaching and Learning with Technology Volume 8 ; 8 ; >
       #no 2020 as of 12/5/2020
 
   }
@@ -442,11 +442,11 @@
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Journal of the Indiana University Student Personnel Association Volume 2012 ; 2012 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Journal of the Indiana University Student Personnel Association Volume 2013 ; 2013 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of the Indiana University Student Personnel Association Volume 2014 ; 2014 ; >
-      au < manifest ; exists ; 2015 ; 2015 ; Journal of the Indiana University Student Personnel Association Volume 2015 ; 2015 ; >
-      au < manifest ; exists ; 2016 ; 2016 ; Journal of the Indiana University Student Personnel Association Volume 2016 ; 2016 ; >
-      au < manifest ; exists ; 2017 ; 2017 ; Journal of the Indiana University Student Personnel Association Volume 2017 ; 2017 ; >
-      au < manifest ; exists ; 2018 ; 2018 ; Journal of the Indiana University Student Personnel Association Volume 2018 ; 2018 ; >
-      au < manifest ; exists ; 2019 ; 2019 ; Journal of the Indiana University Student Personnel Association Volume 2019 ; 2019 ; >
+      au < ready ; exists ; 2015 ; 2015 ; Journal of the Indiana University Student Personnel Association Volume 2015 ; 2015 ; >
+      au < ready ; exists ; 2016 ; 2016 ; Journal of the Indiana University Student Personnel Association Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2017 ; 2017 ; Journal of the Indiana University Student Personnel Association Volume 2017 ; 2017 ; >
+      au < ready ; exists ; 2018 ; 2018 ; Journal of the Indiana University Student Personnel Association Volume 2018 ; 2018 ; >
+      au < ready ; exists ; 2019 ; 2019 ; Journal of the Indiana University Student Personnel Association Volume 2019 ; 2019 ; >
       #no 2020 as of 12/5/2020
 
   }
@@ -478,7 +478,7 @@
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Journal of the Scholarship of Teaching and Learning Volume 16 ; 16 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Journal of the Scholarship of Teaching and Learning Volume 17 ; 17 ; >
       au < finished ; manifest ; 2018 ; 2018 ; Journal of the Scholarship of Teaching and Learning Volume 18 ; 18 ; reingest3.clockss.org:8083 >
-      au < manifest ; exists ; 2019 ; 2019 ; Journal of the Scholarship of Teaching and Learning Volume 19 ; 19 ; >
+      au < ready ; exists ; 2019 ; 2019 ; Journal of the Scholarship of Teaching and Learning Volume 19 ; 19 ; >
       #no 2020 as of 12/5/2020
 
   }
@@ -561,8 +561,8 @@
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Museum Anthropology Review Volume 10 ; 10 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Museum Anthropology Review Volume 11 ; 11 ; >
       au < finished ; manifest ; 2018 ; 2018 ; Museum Anthropology Review Volume 12 ; 12 ; reingest4.clockss.org:8082 >
-      au < manifest ; exists ; 2019 ; 2019 ; Museum Anthropology Review Volume 13 ; 13 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; Museum Anthropology Review Volume 14 ; 14 ; >
+      au < ready ; exists ; 2019 ; 2019 ; Museum Anthropology Review Volume 13 ; 13 ; >
+      au < ready ; exists ; 2020 ; 2020 ; Museum Anthropology Review Volume 14 ; 14 ; >
 
   }
 
@@ -590,7 +590,7 @@
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; New Directions in Folklore Volume 14 ; 14 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; New Directions in Folklore Volume 15 ; 15 ; >
       au < finished ; manifest ; 2018 ; 2018 ; New Directions in Folklore Volume 16 ; 16 ; reingest3.clockss.org:8083 >
-      au < manifest ; exists ; 2019 ; 2019 ; New Directions in Folklore Volume 17 ; 17 ; >
+      au < ready ; exists ; 2019 ; 2019 ; New Directions in Folklore Volume 17 ; 17 ; >
       #no 2020 as of 12/5/2020
 
   }
@@ -607,9 +607,9 @@
       au < finished ; manifest ; 2014 ; 2014 ; New Views on Gender Volume 15 ; 15 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2015 ; 2015 ; New Views on Gender Volume 16 ; 16 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2016 ; 2016 ; New Views on Gender Volume 17 ; 17 ; reingest3.clockss.org:8083 >
-      au < manifest ; exists ; 2017 ; 2017 ; New Views on Gender Volume 18 [2017] ; 18 ; >
+      au < ready ; exists ; 2017 ; 2017 ; New Views on Gender Volume 18 [2017] ; 18 ; >
       au < doesNotExist ; doesNotExist ; 2018 ; 2018 ; New Views on Gender Volume 18 [2018] ; 18 ; >
-      au < manifest ; exists ; 2019 ; 2019 ; New Views on Gender Volume 19 ; 19 ; >
+      au < ready ; exists ; 2019 ; 2019 ; New Views on Gender Volume 19 ; 19 ; >
 
   }
 
@@ -673,7 +673,7 @@
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; The Workshop Volume 2016 ; 4 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; The Workshop Volume 2016 ; 4 ; >
       au < notReady ; exists ; 2018 ; 2018 ; The Workshop Volume 5 ; 5 ; >#Not a typo. Really 2018
-      au < manifest ; exists ; 2017 ; 2017 ; The Workshop Volume 6 ; 6 ; >#Not a typo. Really 2017
+      au < ready ; exists ; 2017 ; 2017 ; The Workshop Volume 6 ; 6 ; >#Not a typo. Really 2017
       #no 2020 as of 12/5/2020
 
   }
@@ -692,9 +692,9 @@
       au < finished ; manifest ; 2011 ; 2011 ; The World is Our Home Volume 3 ; 3 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2012 ; 2012 ; The World is Our Home Volume 4 ; 4 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; The World is Our Home Volume 5 ; 5 ; >
-      au < manifest ; exists ; 2014 ; 2014 ; The World is Our Home Volume 6 ; 6 ; >
-      au < manifest ; exists ; 2015 ; 2015 ; The World is Our Home Volume 7 ; 7 ; >
-      au < manifest ; exists ; 2016 ; 2016 ; The World is Our Home Volume 8 ; 8 ; >
+      au < ready ; exists ; 2014 ; 2014 ; The World is Our Home Volume 6 ; 6 ; >
+      au < ready ; exists ; 2015 ; 2015 ; The World is Our Home Volume 7 ; 7 ; >
+      au < ready ; exists ; 2016 ; 2016 ; The World is Our Home Volume 8 ; 8 ; >
 
   }
 
@@ -819,8 +819,8 @@
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Indiana Magazine of History Volume 2014 ; 110 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Indiana Magazine of History Volume 2015 ; 111 ; >
       au < finished ; manifest ; 2016 ; 2016 ; Indiana Magazine of History Volume 2016 ; 112 ; reingest4.clockss.org:8082 >
-      au < manifest ; exists ; 2017 ; 2017 ; Indiana Magazine of History Volume 2017 ; 113 ; >
-      au < manifest ; exists ; 2018 ; 2018 ; Indiana Magazine of History Volume 2018 ; 114 ; >
+      au < ready ; exists ; 2017 ; 2017 ; Indiana Magazine of History Volume 2017 ; 113 ; >
+      au < ready ; exists ; 2018 ; 2018 ; Indiana Magazine of History Volume 2018 ; 114 ; >
 
   }
 
@@ -924,8 +924,8 @@
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; The Medieval Review Volume 2016 ; 24 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; The Medieval Review Volume 2017 ; 25 ; >
       au < finished ; manifest ; 2018 ; 2018 ; The Medieval Review Volume 2018 ; 26 ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 2019 ; 2019 ; The Medieval Review Volume 2019 ; 27 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; The Medieval Review Volume 2020 ; 28 ; >
+      au < ready ; exists ; 2019 ; 2019 ; The Medieval Review Volume 2019 ; 27 ; >
+      au < ready ; exists ; 2020 ; 2020 ; The Medieval Review Volume 2020 ; 28 ; >
 
   }
 
@@ -998,8 +998,8 @@
 
       au < notReady ; exists ; 2017 ; 2017 ; Studies in Digital Heritage Volume 1 ; 1 ; > #500 error on malformed url. https://scholarworks.iu.edu/journals/index.php/sdh/article/download/23331/%20/en.wikipedia.org/wiki/Goldilocks_principle
       au < finished ; manifest ; 2018 ; 2018 ; Studies in Digital Heritage Volume 2 ; 2 ; reingest5.clockss.org:8082 >
-      au < manifest ; exists ; 2019 ; 2019 ; Studies in Digital Heritage Volume 3 ; 3 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; Studies in Digital Heritage Volume 4 ; 4 ; >
+      au < ready ; exists ; 2019 ; 2019 ; Studies in Digital Heritage Volume 3 ; 3 ; >
+      au < ready ; exists ; 2020 ; 2020 ; Studies in Digital Heritage Volume 4 ; 4 ; >
 
   }
 
@@ -1016,8 +1016,8 @@
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Textual Cultures: Texts, Contexts, Interpretation Volume 9 ; 9 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Textual Cultures: Texts, Contexts, Interpretation Volume 10 (2015) ; 10 ; >
       au < finished ; manifest ; 2016 ; 2016 ; Textual Cultures: Texts, Contexts, Interpretation Volume 10 (2016) ; 10 ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 2017 ; 2017 ; Textual Cultures: Texts, Contexts, Interpretation Volume 11 (2017) ; 11 ; >
-      au < manifest ; exists ; 2019 ; 2019 ; Textual Cultures: Texts, Contexts, Interpretation Volume 12 (2019) ; 12 ; >
+      au < ready ; exists ; 2017 ; 2017 ; Textual Cultures: Texts, Contexts, Interpretation Volume 11 (2017) ; 11 ; >
+      au < ready ; exists ; 2019 ; 2019 ; Textual Cultures: Texts, Contexts, Interpretation Volume 12 (2019) ; 12 ; >
 
   }
 
