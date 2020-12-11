@@ -20,8 +20,8 @@
       eissn = 1680-7359
     >
       attr[journal_id] = adgeo
-      #param[base_url] = https://www.adv-geosci.net/
-      param[base_url] = https://adgeo.copernicus.org/articles/
+      param[base_url] = https://www.adv-geosci.net/
+      #param[base_url] = https://adgeo.copernicus.org/articles/
       param[home_url] = https://www.advances-in-geosciences.net/
       comment[v37] = publication year is 2013 to 2014, publisher puts it under 2013, we collect it under 2014
 
