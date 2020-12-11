@@ -134,9 +134,9 @@
       au < ready ; exists ; 2002 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 98 ; 98 ; 2002 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2003 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 99 ; 99 ; 2003 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2004 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 100 ; 100 ; 2004 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2005 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 101 ; 101 ; 2005 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2005 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 101 ; 101 ; 2005 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2006 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 102 ; 102 ; 2006 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2007 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 103 ; 103 ; 2007 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2007 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 103 ; 103 ; 2007 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2008 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 104 ; 104 ; 2008 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2009 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 105 ; 105 ; 2009 ; https://pubs.rsc.org/ ; >
       au < finished ; finished ; 2010 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 106 ; 106 ; 2010 ; http://pubs.rsc.org/ ; >
@@ -170,7 +170,7 @@
       au < ready ; exists ; 2006 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 102 ; 102 ; 2006 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2007 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 103 ; 103 ; 2007 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2008 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 104 ; 104 ; 2008 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2009 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 105 ; 105 ; 2009 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2009 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 105 ; 105 ; 2009 ; https://pubs.rsc.org/ ; >
       au < finished ; finished ; 2010 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 106 ; 106 ; 2010 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2011 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 107 ; 107 ; 2011 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2012 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 108 ; 108 ; 2012 ; http://pubs.rsc.org/ ; >
@@ -221,7 +221,7 @@
       au < crawling ; exists ; 2003 ; Chemical Communications Volume 2003 ; 0 ; 2003 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2004 ; Chemical Communications Volume 2004 ; 0 ; 2004 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2005 ; Chemical Communications Volume 2005 ; 0 ; 2005 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2006 ; Chemical Communications Volume 2006 ; 0 ; 2006 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2006 ; Chemical Communications Volume 2006 ; 0 ; 2006 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2007 ; Chemical Communications Volume 2007 ; 0 ; 2007 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2008 ; Chemical Communications Volume 2008 ; 0 ; 2008 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2009 ; Chemical Communications Volume 2009 ; 0 ; 2009 ; https://pubs.rsc.org/ ; >
@@ -254,7 +254,7 @@
       au < ready ; exists ; 1996 ; Chemical Society Reviews Volume 25 ; 25 ; 1996 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 1997 ; Chemical Society Reviews Volume 26 ; 26 ; 1997 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 1998 ; Chemical Society Reviews Volume 27 ; 27 ; 1998 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 1999 ; Chemical Society Reviews Volume 28 ; 28 ; 1999 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 1999 ; Chemical Society Reviews Volume 28 ; 28 ; 1999 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2000 ; Chemical Society Reviews Volume 29 ; 29 ; 2000 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2001 ; Chemical Society Reviews Volume 30 ; 30 ; 2001 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2002 ; Chemical Society Reviews Volume 31 ; 31 ; 2002 ; https://pubs.rsc.org/ ; >
@@ -291,7 +291,7 @@
       #complete
       au < ready ; exists ; 2000 ; Chemistry Education Research and Practice Volume 1 ; 1 ; 2000 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2001 ; Chemistry Education Research and Practice Volume 2 ; 2 ; 2001 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2002 ; Chemistry Education Research and Practice Volume 3 ; 3 ; 2002 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2002 ; Chemistry Education Research and Practice Volume 3 ; 3 ; 2002 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2003 ; Chemistry Education Research and Practice Volume 4 ; 4 ; 2003 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2004 ; Chemistry Education Research and Practice Volume 5 ; 5 ; 2004 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2005 ; Chemistry Education Research and Practice Volume 6 ; 6 ; 2005 ; https://pubs.rsc.org/ ; >
@@ -325,7 +325,7 @@
 
       #complete
       au < crawling ; exists ; 1999 ; CrystEngComm Volume 1 ; 1 ; 1999 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2000 ; CrystEngComm Volume 2 ; 2 ; 2000 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2000 ; CrystEngComm Volume 2 ; 2 ; 2000 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2001 ; CrystEngComm Volume 3 ; 3 ; 2001 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2002 ; CrystEngComm Volume 4 ; 4 ; 2002 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2003 ; CrystEngComm Volume 5 ; 5 ; 2003 ; https://pubs.rsc.org/ ; >
@@ -443,14 +443,14 @@
       au < crawling ; exists ; 2002 ; Faraday Discussions Volume 121 ; 121 ; 2002 ; https://pubs.rsc.org/ ; >
 
       au < crawling ; exists ; 2003 ; Faraday Discussions Volume 122 ; 122 ; 2003 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2003 ; Faraday Discussions Volume 123 ; 123 ; 2003 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2003 ; Faraday Discussions Volume 123 ; 123 ; 2003 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2003 ; Faraday Discussions Volume 124 ; 124 ; 2003 ; https://pubs.rsc.org/ ; >
 
       au < crawling ; exists ; 2004 ; Faraday Discussions Volume 125 ; 125 ; 2004 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2004 ; Faraday Discussions Volume 126 ; 126 ; 2004 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2004 ; Faraday Discussions Volume 127 ; 127 ; 2004 ; https://pubs.rsc.org/ ; >
 
-      au < ready ; exists ; 2005 ; Faraday Discussions Volume 128 ; 128 ; 2005 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2005 ; Faraday Discussions Volume 128 ; 128 ; 2005 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2005 ; Faraday Discussions Volume 129 ; 129 ; 2005 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2005 ; Faraday Discussions Volume 130 ; 130 ; 2005 ; https://pubs.rsc.org/ ; >
 
@@ -596,7 +596,7 @@
       au < ready ; exists ; 2006 ; Green Chemistry Volume 8 ; 8 ; 2006 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2007 ; Green Chemistry Volume 9 ; 9 ; 2007 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2008 ; Green Chemistry Volume 10 ; 10 ; 2008 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2009 ; Green Chemistry Volume 11 ; 11 ; 2009 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2009 ; Green Chemistry Volume 11 ; 11 ; 2009 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2010 ; Green Chemistry Volume 12 ; 12 ; 2010 ; http://pubs.rsc.org/ ; >
       au < finished ; finished ; 2011 ; Green Chemistry Volume 13 ; 13 ; 2011 ; http://pubs.rsc.org/ ; >
       au < finished ; finished ; 2012 ; Green Chemistry Volume 14 ; 14 ; 2012 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
@@ -624,7 +624,7 @@
       #last volume 2018
 
       #complete
-      au < ready ; exists ; 2009 ; Integrative Biology Volume 1 ; 1 ; 2009 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2009 ; Integrative Biology Volume 1 ; 1 ; 2009 ; https://pubs.rsc.org/ ; >
       au < finished ; finished ; 2010 ; Integrative Biology Volume 2 ; 2 ; 2010 ; http://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2011 ; Integrative Biology Volume 3 ; 3 ; 2011 ; http://pubs.rsc.org/ ; >
       au < finished ; finished ; 2012 ; Integrative Biology Volume 4 ; 4 ; 2012 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
@@ -708,14 +708,14 @@
       au < ready ; exists ; 1999 ; Journal of Environmental Monitoring Volume 1 ; 1 ; 1999 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2000 ; Journal of Environmental Monitoring Volume 2 ; 2 ; 2000 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2001 ; Journal of Environmental Monitoring Volume 3 ; 3 ; 2001 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2002 ; Journal of Environmental Monitoring Volume 4 ; 4 ; 2002 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2002 ; Journal of Environmental Monitoring Volume 4 ; 4 ; 2002 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2003 ; Journal of Environmental Monitoring Volume 5 ; 5 ; 2003 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2004 ; Journal of Environmental Monitoring Volume 6 ; 6 ; 2004 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2005 ; Journal of Environmental Monitoring Volume 7 ; 7 ; 2005 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2006 ; Journal of Environmental Monitoring Volume 8 ; 8 ; 2006 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2007 ; Journal of Environmental Monitoring Volume 9 ; 9 ; 2007 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2008 ; Journal of Environmental Monitoring Volume 10 ; 10 ; 2008 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2009 ; Journal of Environmental Monitoring Volume 11 ; 11 ; 2009 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2009 ; Journal of Environmental Monitoring Volume 11 ; 11 ; 2009 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2010 ; Journal of Environmental Monitoring Volume 12 ; 12 ; 2010 ; http://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2011 ; Journal of Environmental Monitoring Volume 13 ; 13 ; 2011 ; http://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2012 ; Journal of Environmental Monitoring Volume 14 ; 14 ; 2012 ; http://pubs.rsc.org/ ; >
@@ -940,7 +940,7 @@
 
       #complete
       au < crawling ; exists ; 1998 ; New Journal of Chemistry Volume 22 ; 22 ; 1998 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 1999 ; New Journal of Chemistry Volume 23 ; 23 ; 1999 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 1999 ; New Journal of Chemistry Volume 23 ; 23 ; 1999 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2000 ; New Journal of Chemistry Volume 24 ; 24 ; 2000 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2001 ; New Journal of Chemistry Volume 25 ; 25 ; 2001 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2002 ; New Journal of Chemistry Volume 26 ; 26 ; 2002 ; https://pubs.rsc.org/ ; >

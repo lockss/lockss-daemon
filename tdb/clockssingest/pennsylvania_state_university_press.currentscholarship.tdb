@@ -32,7 +32,7 @@
       au < manifest ; exists ; 2008 ; The Chaucer Review Volume 2008 ; 2008 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2009 ; The Chaucer Review Volume 2009 ; 2009 ; https://www.jstor.org/ ; >
       au < ready ; exists ; 2010 ; The Chaucer Review Volume 2010 ; 2010 ; https://www.jstor.org/ ; >
-      au < ready ; exists ; 2011 ; The Chaucer Review Volume 2011 ; 2011 ; https://www.jstor.org/ ; >
+      au < crawling ; exists ; 2011 ; The Chaucer Review Volume 2011 ; 2011 ; https://www.jstor.org/ ; >
       au < finished ; manifest ; 2012 ; The Chaucer Review Volume 2012 ; 2012 ; http://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2013 ; The Chaucer Review Volume 2013 ; 2013 ; http://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2014 ; The Chaucer Review Volume 2014 ; 2014 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 > #java.lang.UnsupportedOperationException
@@ -178,7 +178,7 @@
       comment[continues] = 2157-2968
 
       au < finished ; manifest ; 2010 ; The Good Society Volume 19 ; 2010 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
-      au < ready ; exists ; 2011 ; The Good Society Volume 20 ; 2011 ; https://www.jstor.org/ ; >
+      au < crawling ; exists ; 2011 ; The Good Society Volume 20 ; 2011 ; https://www.jstor.org/ ; >
       au < finished ; manifest ; 2012 ; The Good Society Volume 21 ; 2012 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2013 ; The Good Society Volume 22 ; 2013 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2014 ; The Good Society Volume 23 ; 2014 ; https://www.jstor.org/ ; >
@@ -411,8 +411,8 @@
       au < manifest ; exists ; 2007 ; Journal of Moravian History Volume 2007 ; 2007 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2008 ; Journal of Moravian History Volume 2008 ; 2008 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2009 ; Journal of Moravian History Volume 2009 ; 2009 ; https://www.jstor.org/ ; >
-      au < ready ; exists ; 2010 ; Journal of Moravian History Volume 2010 ; 2010 ; https://www.jstor.org/ ; >
-      au < ready ; exists ; 2011 ; Journal of Moravian History Volume 2011 ; 2011 ; https://www.jstor.org/ ; >
+      au < crawling ; exists ; 2010 ; Journal of Moravian History Volume 2010 ; 2010 ; https://www.jstor.org/ ; >
+      au < crawling ; exists ; 2011 ; Journal of Moravian History Volume 2011 ; 2011 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2012 ; Journal of Moravian History Volume 12 ; 2012 ; http://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Journal of Moravian History Volume 13 ; 2013 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2014 ; Journal of Moravian History Volume 14 ; 2014 ; http://www.jstor.org/ ; >
@@ -716,7 +716,7 @@
       param[journal_id] = steinbeckreview
 
       au < crawling ; exists ; 2010 ; Steinbeck Review Volume 7 ; 2010 ; https://www.jstor.org/ ; >
-      au < ready ; exists ; 2011 ; Steinbeck Review Volume 8 ; 2011 ; https://www.jstor.org/ ; >
+      au < crawling ; exists ; 2011 ; Steinbeck Review Volume 8 ; 2011 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2012 ; Steinbeck Review Volume 9 ; 2012 ; http://www.jstor.org/ ; >
       au < frozen ; exists ; 2013 ; Steinbeck Review Volume 10 ; 2013 ; http://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Steinbeck Review Volume 11 ; 2014 ; https://www.jstor.org/ ; >
