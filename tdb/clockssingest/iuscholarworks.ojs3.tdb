@@ -858,7 +858,7 @@
          au < manifest ; exists ; 2002 ; 2002 ; IU South Bend Undergraduate Research Journal Volume 2002 ; 5 ; >
          au < manifest ; exists ; 2003 ; 2003 ; IU South Bend Undergraduate Research Journal Volume 2003 ; 6 ; >
          au < ready ; exists ; 2008 ; 2008 ; IU South Bend Undergraduate Research Journal Volume 2008 ; 8 ; >
-         au < ready ; exists ; 2009 ; 2009 ; IU South Bend Undergraduate Research Journal Volume 2009 ; 9 ; >
+         au < crawling ; exists ; 2009 ; 2009 ; IU South Bend Undergraduate Research Journal Volume 2009 ; 9 ; >
          au < ready ; exists ; 2010 ; 2010 ; IU South Bend Undergraduate Research Journal Volume 2010 ; 10 ; >
          au < ready ; exists ; 2011 ; 2011 ; IU South Bend Undergraduate Research Journal Volume 2011 ; 11 ; >
          au < crawling ; exists ; 2012 ; 2012 ; IU South Bend Undergraduate Research Journal Volume 2012 ; 12 ; >
@@ -1078,7 +1078,7 @@
       param[journal_id] = joget
 
       au < ready ; exists ; 2017 ; 2017 ; Global Engagement and Transformation Volume 2017 ; 1-2 ; >
-      au < ready ; exists ; 2018 ; 2018 ; Global Engagement and Transformation Volume 2018 ; 3 ; >
+      au < crawling ; exists ; 2018 ; 2018 ; Global Engagement and Transformation Volume 2018 ; 3 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Global Engagement and Transformation Volume 2020 ; 4 ; >
 
   }

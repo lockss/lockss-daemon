@@ -487,7 +487,7 @@
       
 
       au < crawling ; exists ; 2010 ; The Mark Twain Annual Volume 8 ; 2010 ; https://www.jstor.org/ ; >
-      au < ready ; exists ; 2011 ; The Mark Twain Annual Volume 9 ; 2011 ; https://www.jstor.org/ ; >
+      au < crawling ; exists ; 2011 ; The Mark Twain Annual Volume 9 ; 2011 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2012 ; The Mark Twain Annual Volume 10 ; 2012 ; http://www.jstor.org/ ; >
       au < frozen ; exists ; 2013 ; The Mark Twain Annual Volume 11 ; 2013 ; http://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2014 ; The Mark Twain Annual Volume 12 ; 2014 ; https://www.jstor.org/ ; >
@@ -741,7 +741,7 @@
       param[journal_id] = studamerjewilite
 
       au < ready ; exists ; 2010 ; Studies in American Jewish Literature Volume 29 ; 2010 ; https://www.jstor.org/ ; >
-      au < ready ; exists ; 2011 ; Studies in American Jewish Literature Volume 30 ; 2011 ; https://www.jstor.org/ ; >
+      au < crawling ; exists ; 2011 ; Studies in American Jewish Literature Volume 30 ; 2011 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2012 ; Studies in American Jewish Literature Volume 31 ; 2012 ; http://www.jstor.org/ ; >
       au < frozen ; exists ; 2013 ; Studies in American Jewish Literature Volume 32 ; 2013 ; http://www.jstor.org/ ; >
       au < frozen ; exists ; 2014 ; Studies in American Jewish Literature Volume 33 ; 2014 ; http://www.jstor.org/ ; >
@@ -1333,7 +1333,7 @@
       au < frozen ; exists ; 2014 ; Journal of Natural Resources Policy Research Volume 6 ; 2014 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2015 ; Journal of Natural Resources Policy Research Volume 7 ; 2015 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2018 ; Journal of Natural Resources Policy Research Volume 8 ; 2018 ; https://www.jstor.org/ ; >
-      au < ready ; exists ; 2019 ; Journal of Natural Resources Policy Research Volume 9 ; 2019 ; https://www.jstor.org/ ; >
+      au < crawling ; exists ; 2019 ; Journal of Natural Resources Policy Research Volume 9 ; 2019 ; https://www.jstor.org/ ; >
       au < expected ; exists ; 2020 ; Journal of Natural Resources Policy Research Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
 
   }

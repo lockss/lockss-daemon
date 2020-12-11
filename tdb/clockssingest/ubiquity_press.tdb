@@ -924,7 +924,7 @@
 
       au < ready ; exists ; 2016 ; 1 ; Journal of Home Language Research Volume 2016 ; 2016 ; https://jhlr.org/ ; >
       au < ready ; exists ; 2017 ; 2 ; Journal of Home Language Research Volume 2017 ; 2017 ; https://jhlr.org/ ; >
-      au < ready ; exists ; 2018 ; 3 ; Journal of Home Language Research Volume 2018 ; 2018 ; https://jhlr.org/ ; >
+      au < crawling ; exists ; 2018 ; 3 ; Journal of Home Language Research Volume 2018 ; 2018 ; https://jhlr.org/ ; >
 
   }
 }
@@ -2042,7 +2042,7 @@
 #      param[base_url] = https://tremorjournal.org/
 
       au < ready ; exists ; 2011 ; 1 ; Tremor and Other Hyperkinetic Movements Volume 2011 ; 2011 ; https://tremorjournal.org/ ; >
-      au < ready ; exists ; 2012 ; 2 ; Tremor and Other Hyperkinetic Movements Volume 2012 ; 2012 ; https://tremorjournal.org/ ; >
+      au < crawling ; exists ; 2012 ; 2 ; Tremor and Other Hyperkinetic Movements Volume 2012 ; 2012 ; https://tremorjournal.org/ ; >
       au < crawling ; exists ; 2013 ; 3 ; Tremor and Other Hyperkinetic Movements Volume 2013 ; 2013 ; https://tremorjournal.org/ ; >
       au < crawling ; exists ; 2014 ; 4 ; Tremor and Other Hyperkinetic Movements Volume 2014 ; 2014 ; https://tremorjournal.org/ ; >
       au < ready ; exists ; 2015 ; 5 ; Tremor and Other Hyperkinetic Movements Volume 2015 ; 2015 ; https://tremorjournal.org/ ; >
