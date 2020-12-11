@@ -299,7 +299,7 @@
     au < bmj.BMJDrupalPlugin ; released ; 2017 ; Archives of Disease in Childhood - Education and Practice Volume 102 ; 102 ; https://ep.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2018 ; Archives of Disease in Childhood - Education and Practice Volume 103 ; 103 ; https://ep.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2019 ; Archives of Disease in Childhood - Education and Practice Volume 104 ; 104 ; https://ep.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; exists ; 2020 ; Archives of Disease in Childhood - Education and Practice Volume 105 ; 105 ; https://ep.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2020 ; Archives of Disease in Childhood - Education and Practice Volume 105 ; 105 ; https://ep.bmj.com/ >
 
   }
 
@@ -662,7 +662,7 @@
     au < bmj.BMJDrupalPlugin ; released ; 2017 ; BMJ Supportive & Palliative Care Volume 7 ; 7 ; https://spcare.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2018 ; BMJ Supportive & Palliative Care Volume 8 ; 8 ; https://spcare.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2019 ; BMJ Supportive & Palliative Care Volume 9 ; 9 ; https://spcare.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; exists ; 2020 ; BMJ Supportive & Palliative Care Volume 10 ; 10 ; https://spcare.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2020 ; BMJ Supportive & Palliative Care Volume 10 ; 10 ; https://spcare.bmj.com/ >
 
   }
 
@@ -972,7 +972,7 @@
     au < bmj.BMJDrupalPlugin ; released ; 2017 ; Emergency Medicine Journal Volume 34 ; 34 ; https://emj.bmj.com/ > # login page. https://emj.bmj.com/content/suppl/2016/12/14/34.1.DC1
     au < bmj.BMJDrupalPlugin ; released ; 2018 ; Emergency Medicine Journal Volume 35 ; 35 ; https://emj.bmj.com/ > # login page. https://emj.bmj.com/content/suppl/2018/06/12/35.1.DC1
     au < bmj.BMJDrupalPlugin ; released ; 2019 ; Emergency Medicine Journal Volume 36 ; 36 ; https://emj.bmj.com/ > # login page.
-    au < bmj.BMJDrupalPlugin ; exists ; 2020 ; Emergency Medicine Journal Volume 37 ; 37 ; https://emj.bmj.com/ > # 
+    au < bmj.BMJDrupalPlugin ; manifest ; 2020 ; Emergency Medicine Journal Volume 37 ; 37 ; https://emj.bmj.com/ > # 
 
   }
 
@@ -1158,7 +1158,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; released ; 2017 ; Evidence-Based Medicine Volume 22 ; 22 ; https://ebm.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2018 ; Evidence-Based Medicine Volume 23 ; 23 ; https://ebm.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2019 ; Evidence-Based Medicine Volume 24 ; 24 ; https://ebm.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; expected ; 2020 ; Evidence-Based Medicine Volume 25 ; 25 ; https://ebm.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2020 ; Evidence-Based Medicine Volume 25 ; 25 ; https://ebm.bmj.com/ >
 
   }
 
@@ -1230,7 +1230,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; released ; 2017 ; Evidence-Based Nursing Volume 20 ; 20 ; https://ebn.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2018 ; Evidence-Based Nursing Volume 21 ; 21 ; https://ebn.bmj.com/ > #login found
     au < bmj.BMJDrupalPlugin ; released ; 2019 ; Evidence-Based Nursing Volume 22 ; 22 ; https://ebn.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; expected ; 2020 ; Evidence-Based Nursing Volume 23 ; 23 ; https://ebn.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2020 ; Evidence-Based Nursing Volume 23 ; 23 ; https://ebn.bmj.com/ >
 
   }
 
@@ -2469,7 +2469,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; released ; 2017 ; Practical Neurology Volume 17 ; 17 ; https://pn.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2018 ; Practical Neurology Volume 18 ; 18 ; https://pn.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2019 ; Practical Neurology Volume 19 ; 19 ; https://pn.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; exists ; 2020 ; Practical Neurology Volume 20 ; 20 ; https://pn.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2020 ; Practical Neurology Volume 20 ; 20 ; https://pn.bmj.com/ >
 
   }
 
