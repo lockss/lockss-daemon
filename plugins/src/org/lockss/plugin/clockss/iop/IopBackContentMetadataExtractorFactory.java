@@ -251,7 +251,7 @@ public class IopBackContentMetadataExtractorFactory extends SourceXmlMetadataExt
 		  }
 
 		  List<ArticleMetadata> amList =
-				  new IopBackContentXPathXmlMetadataParser(schemaHelper.getGlobalMetaMap(),
+				  new IopXPathXmlMetadataParser(schemaHelper.getGlobalMetaMap(),
 						  schemaHelper.getArticleNode(),
 						  schemaHelper.getArticleMetaMap()).extractMetadataFromCu(target, cu);
 

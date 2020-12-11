@@ -33,10 +33,7 @@
 package org.lockss.plugin.clockss.iop;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import org.lockss.util.*;
 import org.apache.commons.lang3.StringEscapeUtils;
@@ -45,6 +42,9 @@ import org.lockss.extractor.*;
 
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.*;
+import org.xml.sax.SAXException;
+
+import javax.xml.xpath.XPathExpressionException;
 
 
 /*
@@ -63,6 +63,7 @@ public class IopArticleXmlMetadataExtractorFactory extends SourceXmlMetadataExtr
 
   private static SourceXmlSchemaHelper JatsPublishingHelper = null;
   private static SourceXmlSchemaHelper ArticlePublishingHelper = null;
+	private static SourceXmlSchemaHelper  CustomizedArticlePublishingHelper = null;
   private static final Map<String,String> IOPIssnTitleMap = new HashMap<String,String>();
   static {
 	     IOPIssnTitleMap.put("0004-6256","The Astronomical Journal");
@@ -168,17 +169,33 @@ public class IopArticleXmlMetadataExtractorFactory extends SourceXmlMetadataExtr
 	  @Override
 	  protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
 		  // Once you have it, just keep returning the same one. It won't change.
+		  // They have three different kinds of xml:
+		  // 1. customer xml, which is handled by if(cu.getUrl().endsWith("article"))
+		  // 2. Jats format, which is handled by the second if-else
+		  // 3. Brutal assumption here, the third case has "cm5" in filename
+		  // http://clockss-ingest.lockss.org/sourcefiles/iop-released/2020_2/12-05-2020/0953-8984.tar.gz!/0953-8984/17/37/012/cm5_37_012.xml
+		  // http://clockss-ingest.lockss.org/sourcefiles/iop-released/2020_2/12-05-2020/0953-8984.tar.gz!/0953-8984/17/37/012/cm5_37_012.xml
 		  if(cu.getUrl().endsWith("article")) {
-			  if (ArticlePublishingHelper == null) {
-				  ArticlePublishingHelper = new IopArticleXmlSchemaHelper();
-			  }
+		  		log.debug3("Xml format: Article schema : "  + cu.getUrl());
+		  		if (ArticlePublishingHelper == null) {
+					ArticlePublishingHelper = new IopArticleXmlSchemaHelper();
+				}
 			  return ArticlePublishingHelper;
 
+		  } else if (cu.getUrl().contains("/cm5_")) {
+			  log.debug3("Xml format: Customer schema : "  + cu.getUrl());
+			  if (CustomizedArticlePublishingHelper == null) {
+				  CustomizedArticlePublishingHelper = new IopCustomizedArticleXmlSchemaHelper();
+			  }
+			  return CustomizedArticlePublishingHelper;
+
+		  }  else {
+				  log.debug3("Xml format: JATS schema : " + cu.getUrl());
+				  if (JatsPublishingHelper == null) {
+					  JatsPublishingHelper = new JatsPublishingSchemaHelper();
+				  }
+			  return JatsPublishingHelper;
 		  }
-		  if (JatsPublishingHelper == null) {
-			  JatsPublishingHelper = new JatsPublishingSchemaHelper();
-		  }
-		  return JatsPublishingHelper;
 	  }
 
 
@@ -237,38 +254,45 @@ public class IopArticleXmlMetadataExtractorFactory extends SourceXmlMetadataExtr
     		}
     	}
     }
-    
-    /**
-     * <p>Some IOP XML files contains HTML4 entities, that trip the SAX parser.
-     * Work around them with Apache Commons Lang3.</p> 
-     */
-    @Override
-    protected XPathXmlMetadataParser createXpathXmlMetadataParser() {
-      return new XPathXmlMetadataParser(getDoXmlFiltering()) {
-        @Override
-        protected InputStream getInputStreamFromCU(CachedUrl cu) {
-          if (isDoXmlFiltering()) {
-            return new XmlFilteringInputStream(new ReaderInputStream(new LineRewritingReader(new InputStreamReader(cu.getUnfilteredInputStream())) {
-              @Override
-              public String rewriteLine(String line) {
-                return StringEscapeUtils.unescapeHtml4(line);
-              }
-            }));
-          }
-          else { 
-            return cu.getUnfilteredInputStream();
-          }
-        }
-      };
-    }
 
-    /**
-     * @see #createXpathXmlMetadataParser()
-     */
-    @Override
-    public boolean getDoXmlFiltering() {
-      return true;
-    }
+	  @Override
+	  public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
+			  throws IOException, PluginException {
+		  try {
+			  SourceXmlSchemaHelper schemaHelper;
+			  // 1. figure out which XmlMetadataExtractorHelper class to use to get
+			  // the schema specific information
+			  if ((schemaHelper = setUpSchema(cu)) == null) {
+				  log.debug("Unable to set up XML schema. Cannot extract from XML");
+				  throw new PluginException("XML schema not set up for " + cu.getUrl());
+			  }
+
+			  List<ArticleMetadata> amList =
+					  new IopXPathXmlMetadataParser(schemaHelper.getGlobalMetaMap(),
+							  schemaHelper.getArticleNode(),
+							  schemaHelper.getArticleMetaMap()).extractMetadataFromCu(target, cu);
+
+			  Collection<ArticleMetadata> AMCollection = modifyAMList(schemaHelper, cu,
+					  amList);
+
+			  // 4. check, cook, and emit every item in resulting AM collection (list)
+			  for ( ArticleMetadata oneAM : AMCollection) {
+				  if (preEmitCheck(schemaHelper, cu, oneAM)) {
+					  oneAM.cook(schemaHelper.getCookMap());
+					  postCookProcess(schemaHelper, cu, oneAM); // hook for optional processing
+					  emitter.emitMetadata(cu,oneAM);
+				  }
+			  }
+
+		  } catch (XPathExpressionException e) {
+			  log.debug3("Xpath expression exception:",e);
+		  } catch (SAXException e) {
+			  handleSAXException(cu, emitter, e);
+		  } catch (IOException ex) {
+			  handleIOException(cu, emitter, ex);
+
+		  }
+	  }
     
   }
 }

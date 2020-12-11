@@ -34,30 +34,21 @@ package org.lockss.plugin.clockss.iop;
 
 import org.apache.commons.lang3.tuple.Pair;
 import org.lockss.extractor.XmlDomMetadataExtractor.XPathValue;
-import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.XPathXmlMetadataParser;
-import org.lockss.plugin.clockss.wolterskluwer.WoltersKluwerSgmlAdapter;
-import org.lockss.util.Constants;
 import org.lockss.util.Logger;
-import org.xml.sax.EntityResolver;
-import org.xml.sax.InputSource;
-import org.xml.sax.SAXException;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.xpath.XPathExpressionException;
-import java.io.IOException;
-import java.io.Reader;
-import java.io.UnsupportedEncodingException;
 import java.util.Map;
 
 
-public class IopBackContentXPathXmlMetadataParser extends XPathXmlMetadataParser {
-  private static final Logger log = Logger.getLogger(IopBackContentXPathXmlMetadataParser.class);
+public class IopXPathXmlMetadataParser extends XPathXmlMetadataParser {
+  private static final Logger log = Logger.getLogger(IopXPathXmlMetadataParser.class);
 
-  public IopBackContentXPathXmlMetadataParser(Map<String, XPathValue> globalMap,
-                                              String articleNode, Map<String, XPathValue> articleMap)
+  public IopXPathXmlMetadataParser(Map<String, XPathValue> globalMap,
+                                   String articleNode, Map<String, XPathValue> articleMap)
       throws XPathExpressionException {
     super(globalMap, articleNode, articleMap);
   }
