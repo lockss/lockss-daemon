@@ -65,15 +65,17 @@ public class Hindawi2020ArticleIteratorFactory
     String base_url = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
     String download_url = au.getConfiguration().get("download_url");
     
+    /* Abstract at top of full text html */
+    /* References at bottom of full text html */
     final Pattern HTML_PATTERN = Pattern.compile(String.format("^%sjournals/([^/]+)/([^/]+)/(\\d+)$", base_url), Pattern.CASE_INSENSITIVE);
-    final String HTML_REPLACEMENT = String.format("%sjournals/$1/$2/$3", base_url);
+    final String HTML_ABSTRACT_REFERENCE_REPLACEMENT = String.format("%sjournals/$1/$2/$3", base_url);
 
     final Pattern PDF_PATTERN = Pattern.compile(String.format("^%sjournals/([^/]+)/([^/]+)/(\\d+)\\.pdf$", download_url), Pattern.CASE_INSENSITIVE);
     final String PDF_REPLACEMENT = String.format("%sjournals/$1/$2/$3.pdf", download_url);
 
-    final String ABSTRACT_REPLACEMENT = String.format("%sjournals/$1/$2/$3/abs", base_url);
-    final String CITATION_REPLACEMENT = String.format("%sjournals/$1/$2/$3/cta", base_url);
-    final String REFERENCES_REPLACEMENT = String.format("%sjournals/$1/$2/$3/ref", base_url);
+    /* Citation, XML, & ePub links found on right sidebar */
+    final String RIS_REPLACEMENT = String.format("%sjournals/$1/$2/$3.ris", base_url);
+    final String XML_REPLACEMENT = String.format("%sjournals/$1/$2/$3.xml", download_url);
     final String EPUB_REPLACEMENT = String.format("%sjournals/$1/$2/$3.epub", download_url);
     
     SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
@@ -82,27 +84,32 @@ public class Hindawi2020ArticleIteratorFactory
                     Arrays.asList(ROOT_TEMPLATE_HTML, ROOT_TEMPLATE_PDF),
                     PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
 
-    builder.addAspect(PDF_PATTERN,
-                      PDF_REPLACEMENT,
-                      ArticleFiles.ROLE_FULL_TEXT_PDF);
-
     builder.addAspect(HTML_PATTERN,
-                      HTML_REPLACEMENT,
+                      HTML_ABSTRACT_REFERENCE_REPLACEMENT,
                       ArticleFiles.ROLE_FULL_TEXT_HTML,
                       ArticleFiles.ROLE_ARTICLE_METADATA);
     
-    builder.addAspect(ABSTRACT_REPLACEMENT,
-                      ArticleFiles.ROLE_ABSTRACT,
+    builder.addAspect(HTML_ABSTRACT_REFERENCE_REPLACEMENT,
+                      ArticleFiles.ROLE_ABSTRACT);
+
+    builder.addAspect(HTML_ABSTRACT_REFERENCE_REPLACEMENT,
                       ArticleFiles.ROLE_ARTICLE_METADATA);
+
+    builder.addAspect(HTML_ABSTRACT_REFERENCE_REPLACEMENT,
+                      ArticleFiles.ROLE_REFERENCES);
+    
+    builder.addAspect(PDF_PATTERN,
+                      PDF_REPLACEMENT,
+                      ArticleFiles.ROLE_FULL_TEXT_PDF);
+    
+    builder.addAspect(RIS_REPLACEMENT,
+                      ArticleFiles.ROLE_CITATION_RIS);
+                      
+    builder.addAspect(XML_REPLACEMENT,
+                      ArticleFiles.ROLE_FULL_TEXT_XML);
 
     builder.addAspect(EPUB_REPLACEMENT,
                       ArticleFiles.ROLE_FULL_TEXT_EPUB);
-
-    builder.addAspect(CITATION_REPLACEMENT,
-                      ArticleFiles.ROLE_CITATION);
-
-    builder.addAspect(REFERENCES_REPLACEMENT,
-                      ArticleFiles.ROLE_REFERENCES);
     
     // Use the abstract preferentially to extract metadata
     builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA,
