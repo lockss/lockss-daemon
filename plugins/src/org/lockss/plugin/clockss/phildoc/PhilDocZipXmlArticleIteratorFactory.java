@@ -82,8 +82,24 @@ public class PhilDocZipXmlArticleIteratorFactory extends SourceZipXmlArticleIter
   // capture group one will be the journal_id used as the subdir or zip name
   // expected that the issue XML and optional issue subdir will start with the 
   // same journal_id
-  protected static final String ONLY_TOC_XML_PATTERN_TEMPLATE = 
-      "\"%s%d/.*\\.zip!/([^/]+)(\\.zip)?/(\\1_[^/]+/)?\\1_[^/.]+\\.xml$\", base_url, year";
+
+  /*
+  Note from Dec/2020
+
+  The deliver has issue level xml and article level xml.
+  The first one is issue level xml which contains all the metadata.
+  The article level xml does not have much info.
+
+  So we will get something.xml and exclude something.pdf.xml
+
+  https://clockss-test.lockss.org/sourcefiles/phildoccenter-released/2020/PDC-backcontent-1.zip!/tpm_-1.zip/tpm_-1.xml
+  https://clockss-test.lockss.org/sourcefiles/phildoccenter-released/2020/PDC-backcontent-1.zip!/tpm_-1.zip/tpm_1997_0001_0006_0007.pdf
+  https://clockss-test.lockss.org/sourcefiles/phildoccenter-released/2020/PDC-backcontent-1.zip!/tpm_-1.zip/tpm_1997_0001_0006_0007.pdf.xml
+  https://clockss-test.lockss.org/sourcefiles/phildoccenter-released/2020/PDC-backcontent-4.zip!/tptoday_7DD9805D8EDF5D93C1257A7F00655268.zip/tptoday_7DD9805D8EDF5D93C1257A7F00655268.xml
+   */
+  protected static final String ONLY_TOC_XML_PATTERN_TEMPLATE =
+        "\"%s%s/.*\\.zip!/([^/]+)(\\.zip)?/(?!.*pdf).*\\.xml$\", base_url, directory";
+  //    "\"%s%d/.*\\.zip!/([^/]+)(\\.zip)?/(\\1_[^/]+/)?\\1_[^/.]+\\.xml$\", base_url, year";
   //  "\"%s%d/.*\\.zip!/[^/.]+\\.zip/[^/.]+\\.xml$\", base_url, year";
   
   // Unlike the default, we need to nest two down (top delivery and each journal zip)
