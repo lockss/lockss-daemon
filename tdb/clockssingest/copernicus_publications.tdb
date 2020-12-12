@@ -22,6 +22,7 @@
       attr[journal_id] = adgeo
       param[base_url] = https://www.adv-geosci.net/
       #param[base_url] = https://adgeo.copernicus.org/articles/
+      param[base_url] = https://adgeo.copernicus.org/
       param[home_url] = https://www.advances-in-geosciences.net/
       comment[v37] = publication year is 2013 to 2014, publisher puts it under 2013, we collect it under 2014
 
@@ -1273,7 +1274,8 @@
     >
       attr[journal_id] = ms
       #param[base_url] = https://www.mech-sci.net/
-      param[base_url] = https://ms.copernicus.org/articles/
+      #param[base_url] = https://ms.copernicus.org/articles/
+      param[base_url] = https://ms.copernicus.org/
       param[home_url] = https://www.mechanical-sciences.net/
 
       au < doNotProcess ; exists ; 2010 ; 2010 ; Mechanical Sciences Volume 1 ; 1 ; >
@@ -1533,7 +1535,8 @@
     >
       attr[journal_id] = soil
       #param[base_url] = https://www.soil-journal.net/
-      param[base_url] = https://soil.copernicus.org/articles/
+      #param[base_url] = https://soil.copernicus.org/articles/
+      param[base_url] = https://soil.copernicus.org/
       param[home_url] = https://www.soil-journal.net/
 
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; SOIL Volume 1 ; 1 ; >
@@ -1553,7 +1556,8 @@
     >
       attr[journal_id] = se
       #param[base_url] = https://www.solid-earth.net/
-      param[base_url] = https://se.copernicus.org/articles/
+      #param[base_url] = https://se.copernicus.org/articles/
+      param[base_url] = https://se.copernicus.org/
       param[home_url] = https://www.solid-earth.net/
 
       au < doNotProcess ; exists ; 2010 ; 2010 ; Solid Earth Volume 1 ; 1 ; >
