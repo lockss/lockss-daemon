@@ -213,7 +213,7 @@
       #complete. Missing back content 1996-2009. ****
       au < ready ; exists ; 1996 ; Chemical Communications Volume 1996 ; 0 ; 1996 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 1997 ; Chemical Communications Volume 1997 ; 0 ; 1997 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 1998 ; Chemical Communications Volume 1998 ; 0 ; 1998 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 1998 ; Chemical Communications Volume 1998 ; 0 ; 1998 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 1999 ; Chemical Communications Volume 1999 ; 0 ; 1999 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2000 ; Chemical Communications Volume 2000 ; 0 ; 2000 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2001 ; Chemical Communications Volume 2001 ; 0 ; 2001 ; https://pubs.rsc.org/ ; >
@@ -295,10 +295,10 @@
       au < crawling ; exists ; 2003 ; Chemistry Education Research and Practice Volume 4 ; 4 ; 2003 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2004 ; Chemistry Education Research and Practice Volume 5 ; 5 ; 2004 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2005 ; Chemistry Education Research and Practice Volume 6 ; 6 ; 2005 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2006 ; Chemistry Education Research and Practice Volume 7 ; 7 ; 2006 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2006 ; Chemistry Education Research and Practice Volume 7 ; 7 ; 2006 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2007 ; Chemistry Education Research and Practice Volume 8 ; 8 ; 2007 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2008 ; Chemistry Education Research and Practice Volume 9 ; 9 ; 2008 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2009 ; Chemistry Education Research and Practice Volume 10 ; 10 ; 2009 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2009 ; Chemistry Education Research and Practice Volume 10 ; 10 ; 2009 ; https://pubs.rsc.org/ ; >
       au < finished ; manifest ; 2010 ; Chemistry Education Research and Practice Volume 11 ; 11 ; 2010 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2011 ; Chemistry Education Research and Practice Volume 12 ; 12 ; 2011 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2012 ; Chemistry Education Research and Practice Volume 13 ; 13 ; 2012 ; http://pubs.rsc.org/ ; >
@@ -733,7 +733,7 @@
       param[journal_code] = jm
 
       #complete
-      au < ready ; exists ; 1996 ; Journal of Materials Chemistry Volume 6 ; 6 ; 1996 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 1996 ; Journal of Materials Chemistry Volume 6 ; 6 ; 1996 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 1997 ; Journal of Materials Chemistry Volume 7 ; 7 ; 1997 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 1998 ; Journal of Materials Chemistry Volume 8 ; 8 ; 1998 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 1999 ; Journal of Materials Chemistry Volume 9 ; 9 ; 1999 ; https://pubs.rsc.org/ ; >
