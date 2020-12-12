@@ -46,8 +46,6 @@
       plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
       param[base_url] = https://earlytheatre.org/
       param[journal_id] = earlytheatre
-      #clockss permission page has no index.php, and no listing. See for example https://earlytheatre.org/earlytheatre/gateway/clockss?year=2019
-      #probably needs a newer version of ojs3.
 
       au < manifest ; exists ; 1998 ; Early Theatre Volume 1 ; 1 ; 1998 ; > 
       au < manifest ; exists ; 1999 ; Early Theatre Volume 2 ; 2 ; 1999 ; > 
