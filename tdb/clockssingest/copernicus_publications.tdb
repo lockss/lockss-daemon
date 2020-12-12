@@ -115,7 +115,8 @@
     >
       attr[journal_id] =  asr
       #param[base_url] = https://www.adv-sci-res.net/
-      param[base_url] = https://asr.copernicus.org/articles/
+      #param[base_url] = https://asr.copernicus.org/articles/
+      param[base_url] = https://asr.copernicus.org/
       param[home_url] = https://www.advances-in-science-and-research.net/
 
       au < doNotProcess ; exists ; 2007 ; 2007 ; Advances in Science and Research Volume 1 ; 1 ; >
