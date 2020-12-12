@@ -981,7 +981,7 @@
       au < crawling ; exists ; 2004 ; Organic & Biomolecular Chemistry Volume 2 ; 2 ; 2004 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2005 ; Organic & Biomolecular Chemistry Volume 3 ; 3 ; 2005 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2006 ; Organic & Biomolecular Chemistry Volume 4 ; 4 ; 2006 ; https://pubs.rsc.org/ ; >
-      au < manifest ; exists ; 2007 ; Organic & Biomolecular Chemistry Volume 5 ; 5 ; 2007 ; https://pubs.rsc.org/ ; >
+      au < ready ; exists ; 2007 ; Organic & Biomolecular Chemistry Volume 5 ; 5 ; 2007 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2008 ; Organic & Biomolecular Chemistry Volume 6 ; 6 ; 2008 ; https://pubs.rsc.org/ ; >
       au < finished ; manifest ; 2009 ; Organic & Biomolecular Chemistry Volume 7 ; 7 ; 2009 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2010 ; Organic & Biomolecular Chemistry Volume 8 ; 8 ; 2010 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
@@ -1014,8 +1014,8 @@
       au < manifest ; exists ; 2004 ; Photochemical & Photobiological Sciences Volume 3 ; 3 ; 2004 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2005 ; Photochemical & Photobiological Sciences Volume 4 ; 4 ; 2005 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2006 ; Photochemical & Photobiological Sciences Volume 5 ; 5 ; 2006 ; https://pubs.rsc.org/ ; >
-      au < manifest ; exists ; 2007 ; Photochemical & Photobiological Sciences Volume 6 ; 6 ; 2007 ; https://pubs.rsc.org/ ; >
-      au < manifest ; exists ; 2008 ; Photochemical & Photobiological Sciences Volume 7 ; 7 ; 2008 ; https://pubs.rsc.org/ ; >
+      au < ready ; exists ; 2007 ; Photochemical & Photobiological Sciences Volume 6 ; 6 ; 2007 ; https://pubs.rsc.org/ ; >
+      au < ready ; exists ; 2008 ; Photochemical & Photobiological Sciences Volume 7 ; 7 ; 2008 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2009 ; Photochemical & Photobiological Sciences Volume 8 ; 8 ; 2009 ; http://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2010 ; Photochemical & Photobiological Sciences Volume 9 ; 9 ; 2010 ; http://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2011 ; Photochemical & Photobiological Sciences Volume 10 ; 10 ; 2011 ; http://pubs.rsc.org/ ; >
@@ -1050,7 +1050,7 @@
       au < manifest ; exists ; 2004 ; Physical Chemistry Chemical Physics Volume 6 ; 6 ; 2004 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2005 ; Physical Chemistry Chemical Physics Volume 7 ; 7 ; 2005 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2006 ; Physical Chemistry Chemical Physics Volume 8 ; 8 ; 2006 ; https://pubs.rsc.org/ ; >
-      au < manifest ; exists ; 2007 ; Physical Chemistry Chemical Physics Volume 9 ; 9 ; 2007 ; https://pubs.rsc.org/ ; >
+      au < ready ; exists ; 2007 ; Physical Chemistry Chemical Physics Volume 9 ; 9 ; 2007 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2008 ; Physical Chemistry Chemical Physics Volume 10 ; 10 ; 2008 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2009 ; Physical Chemistry Chemical Physics Volume 11 ; 11 ; 2009 ; https://pubs.rsc.org/ ; >
       au < zapped ; finished ; 2010 ; Physical Chemistry Chemical Physics Volume 12 ; 12 ; 2010 ; http://pubs.rsc.org/ ; >
@@ -1080,7 +1080,7 @@
       #complete
       au < manifest ; exists ; 2005 ; Soft Matter Volume 1 ; 1 ; 2005 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2006 ; Soft Matter Volume 2 ; 2 ; 2006 ; https://pubs.rsc.org/ ; >
-      au < manifest ; exists ; 2007 ; Soft Matter Volume 3 ; 3 ; 2007 ; https://pubs.rsc.org/ ; >
+      au < ready ; exists ; 2007 ; Soft Matter Volume 3 ; 3 ; 2007 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2008 ; Soft Matter Volume 4 ; 4 ; 2008 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2009 ; Soft Matter Volume 5 ; 5 ; 2009 ; https://pubs.rsc.org/ ; >
       au < finished ; manifest ; 2010 ; Soft Matter Volume 6 ; 6 ; 2010 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
@@ -2097,8 +2097,8 @@
       au < manifest ; exists ; 2004 ; Journal of the Chemical Society, Dalton Transactions Volume 2004 ; 0 ; 2004 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2005 ; Journal of the Chemical Society, Dalton Transactions Volume 2005 ; 0 ; 2005 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2006 ; Journal of the Chemical Society, Dalton Transactions Volume 2006 ; 0 ; 2006 ; https://pubs.rsc.org/ ; >
-      au < manifest ; exists ; 2007 ; Journal of the Chemical Society, Dalton Transactions Volume 2007 ; 0 ; 2007 ; https://pubs.rsc.org/ ; >
-      au < manifest ; exists ; 2008 ; Journal of the Chemical Society, Dalton Transactions Volume 2008 ; 0 ; 2008 ; https://pubs.rsc.org/ ; >
+      au < ready ; exists ; 2007 ; Journal of the Chemical Society, Dalton Transactions Volume 2007 ; 0 ; 2007 ; https://pubs.rsc.org/ ; >
+      au < ready ; exists ; 2008 ; Journal of the Chemical Society, Dalton Transactions Volume 2008 ; 0 ; 2008 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2009 ; Journal of the Chemical Society, Dalton Transactions Volume 2009 ; 0 ; 2009 ; https://pubs.rsc.org/ ; >
 
   }
