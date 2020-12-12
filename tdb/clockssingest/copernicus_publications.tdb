@@ -20,7 +20,7 @@
       eissn = 1680-7359
     >
       attr[journal_id] = adgeo
-      param[base_url] = https://www.adv-geosci.net/
+      #param[base_url] = https://www.adv-geosci.net/
       #param[base_url] = https://adgeo.copernicus.org/articles/
       param[base_url] = https://adgeo.copernicus.org/
       param[home_url] = https://www.advances-in-geosciences.net/
