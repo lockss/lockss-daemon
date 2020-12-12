@@ -430,10 +430,10 @@
       au < manifest ; exists ; 2019 ; Science Volume 364 ; 364 ; https://science.sciencemag.org/ ; > #no permission
       au < manifest ; exists ; 2019 ; Science Volume 365 ; 365 ; https://science.sciencemag.org/ ; > #no permission
       au < manifest ; exists ; 2019 ; Science Volume 366 ; 366 ; https://science.sciencemag.org/ ; > #no permission
-      au < exists ; exists ; 2020 ; Science Volume 367 ; 367 ; https://science.sciencemag.org/ ; >
-      au < exists ; exists ; 2020 ; Science Volume 368 ; 368 ; https://science.sciencemag.org/ ; >
-      au < exists ; exists ; 2020 ; Science Volume 369 ; 369 ; https://science.sciencemag.org/ ; >
-      au < expected ; exists ; 2020 ; Science Volume 370 ; 370 ; https://science.sciencemag.org/ ; >
+      au < manifest ; exists ; 2020 ; Science Volume 367 ; 367 ; https://science.sciencemag.org/ ; >
+      au < manifest ; exists ; 2020 ; Science Volume 368 ; 368 ; https://science.sciencemag.org/ ; >
+      au < manifest ; exists ; 2020 ; Science Volume 369 ; 369 ; https://science.sciencemag.org/ ; >
+      au < manifest ; exists ; 2020 ; Science Volume 370 ; 370 ; https://science.sciencemag.org/ ; >
 
   }
 
@@ -459,7 +459,7 @@
       au < frozen ; exists ; 2017 ; Science Signaling Volume 10 ; 10 ; http://stke.sciencemag.org/ ; >
       au < deepCrawl ; exists ; 2018 ; Science Signaling Volume 11 ; 11 ; http://stke.sciencemag.org/ ; >
       au < crawling ; exists ; 2019 ; Science Signaling Volume 12 ; 12 ; https://stke.sciencemag.org/ ; >
-      au < expected ; exists ; 2020 ; Science Signaling Volume 13 ; 13 ; https://stke.sciencemag.org/ ; >
+      au < manifest ; exists ; 2020 ; Science Signaling Volume 13 ; 13 ; https://stke.sciencemag.org/ ; >
 
   }
 
@@ -484,7 +484,7 @@
       au < deepCrawl ; exists ; 2017 ; Science Translational Medicine Volume 9 ; 9 ; http://stm.sciencemag.org/ ; >
       au < deepCrawl ; exists ; 2018 ; Science Translational Medicine Volume 10 ; 10 ; http://stm.sciencemag.org/ ; >
       au < crawling ; exists ; 2019 ; Science Translational Medicine Volume 11 ; 11 ; https://stm.sciencemag.org/ ; >
-      au < exists ; exists ; 2020 ; Science Translational Medicine Volume 12 ; 12 ; https://stm.sciencemag.org/ ; >
+      au < manifest ; exists ; 2020 ; Science Translational Medicine Volume 12 ; 12 ; https://stm.sciencemag.org/ ; >
 
   }
 
@@ -519,7 +519,7 @@
       au < finished ; finished ; 2017 ; Science Robotics Volume 2 ; 2 ; http://robotics.sciencemag.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018 ; Science Robotics Volume 3 ; 3 ; http://robotics.sciencemag.org/ ; >
       au < crawling ; exists ; 2019 ; Science Robotics Volume 4 ; 4 ; https://robotics.sciencemag.org/ ; >
-      au < expected ; exists ; 2020 ; Science Robotics Volume 5 ; 5 ; https://robotics.sciencemag.org/ ; >
+      au < manifest ; exists ; 2020 ; Science Robotics Volume 5 ; 5 ; https://robotics.sciencemag.org/ ; >
 
   }
 

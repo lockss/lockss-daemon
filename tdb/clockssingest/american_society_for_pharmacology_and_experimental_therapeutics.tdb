@@ -616,6 +616,7 @@
     {
     param[base_url] = https://molpharm.aspetjournals.org/
     au < aspet.ClockssASPETDrupalPlugin ; expected ; exists ; 2021 ; Molecular Pharmacology Volume 99 ; 99 ; >
+    au < aspet.ClockssASPETDrupalPlugin ; expected ; exists ; 2021 ; Molecular Pharmacology Volume 100 ; 100 ; >
     }
   }
 
