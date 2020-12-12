@@ -52,13 +52,15 @@ public class Hindawi2020ArticleIteratorFactory
 
   protected static final String ROOT_TEMPLATE_HTML = "\"%sjournals/%s/%d/\", base_url, journal_id, year";
   protected static final String ROOT_TEMPLATE_PDF = "\"%sjournals/%s/%d/\", download_url, journal_id, year";
+  protected static final String ROOT_TEMPLATE_PDF_ALT = "\"%sarchive/%d/\", download_url, year";
+
   /* limit html art_id to  > 3 digits because article id's are generally ~6 digits and TOC 
    * uses same format but with low number (indicating page of articles)
    * Don't need to put digit limitation pdf version - will never be a TOC
    * article example: http://www.hindawi.com/journals/ijmms/1978/231678/
    * toc example: http://www.hindawi.com/journals/aaa/2013/ --> http://www.hindawi.com/journals/aaa/2013/14/ (1,373 articles)
    */
-  protected static final String PATTERN_TEMPLATE = "\"^(%sjournals/%s/%d/\\d{4,}|%sjournals/%s/%d/\\d+\\.pdf)$\", base_url, journal_id, year, download_url, journal_id, year";
+  protected static final String PATTERN_TEMPLATE = "\"^(%sjournals/%s/%d/\\d{4,}|%sjournals/%s/%d/\\d+\\.pdf|%sarchive/%d/\\d+\\.pdf)$\", base_url, journal_id, year, download_url, journal_id, year, download_url, year"; 
 
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) throws PluginException {
@@ -70,51 +72,44 @@ public class Hindawi2020ArticleIteratorFactory
     final Pattern HTML_PATTERN = Pattern.compile(String.format("^%sjournals/([^/]+)/([^/]+)/(\\d+)$", base_url), Pattern.CASE_INSENSITIVE);
     final String HTML_ABSTRACT_REFERENCE_REPLACEMENT = String.format("%sjournals/$1/$2/$3", base_url);
 
-    final Pattern PDF_PATTERN = Pattern.compile(String.format("^%sjournals/([^/]+)/([^/]+)/(\\d+)\\.pdf$", download_url), Pattern.CASE_INSENSITIVE);
-    final String PDF_REPLACEMENT = String.format("%sjournals/$1/$2/$3.pdf", download_url);
+    /* download_url sometimes has journals and sometimes archives */
+    /* we will make PDF a minor aspect */
+    /*final Pattern PDF_PATTERN = Pattern.compile(String.format("^%s(?:journals|archive)/([^/]+)/([^/]+)/(\\d+)\\.pdf$", download_url), Pattern.CASE_INSENSITIVE);*/
+    final String PDF_REPLACEMENT_1 = String.format("%sjournals/$1/$2/$3.pdf", download_url);
+    final String PDF_REPLACEMENT_2 = String.format("%sarchive/$2/$3.pdf", download_url);
 
     /* Citation, XML, & ePub links found on right sidebar */
     final String RIS_REPLACEMENT = String.format("%sjournals/$1/$2/$3.ris", base_url);
-    final String XML_REPLACEMENT = String.format("%sjournals/$1/$2/$3.xml", download_url);
-    final String EPUB_REPLACEMENT = String.format("%sjournals/$1/$2/$3.epub", download_url);
+    /* download_url sometimes has journals and sometimes archives */
+    final String XML_REPLACEMENT_1 = String.format("%sjournals/$1/$2/$3.xml", download_url);
+    final String XML_REPLACEMENT_2 = String.format("%sarchive/$2/$3.xml", download_url);
+    final String EPUB_REPLACEMENT_1 = String.format("%sjournals/$1/$2/$3.epub", download_url);
+    final String EPUB_REPLACEMENT_2 = String.format("%sarchive/$2/$3.epub", download_url);
     
     SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
     
     builder.setSpec(target,
-                    Arrays.asList(ROOT_TEMPLATE_HTML, ROOT_TEMPLATE_PDF),
+                    Arrays.asList(ROOT_TEMPLATE_HTML, ROOT_TEMPLATE_PDF, ROOT_TEMPLATE_PDF_ALT),
                     PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
 
     builder.addAspect(HTML_PATTERN,
                       HTML_ABSTRACT_REFERENCE_REPLACEMENT,
                       ArticleFiles.ROLE_FULL_TEXT_HTML,
-                      ArticleFiles.ROLE_ARTICLE_METADATA);
-    
-    builder.addAspect(HTML_ABSTRACT_REFERENCE_REPLACEMENT,
-                      ArticleFiles.ROLE_ABSTRACT);
-
-    builder.addAspect(HTML_ABSTRACT_REFERENCE_REPLACEMENT,
-                      ArticleFiles.ROLE_ARTICLE_METADATA);
-
-    builder.addAspect(HTML_ABSTRACT_REFERENCE_REPLACEMENT,
+                      ArticleFiles.ROLE_ARTICLE_METADATA,
+                      ArticleFiles.ROLE_ABSTRACT,
                       ArticleFiles.ROLE_REFERENCES);
     
-    builder.addAspect(PDF_PATTERN,
-                      PDF_REPLACEMENT,
+    builder.addAspect(Arrays.asList(PDF_REPLACEMENT_1, PDF_REPLACEMENT_2),
                       ArticleFiles.ROLE_FULL_TEXT_PDF);
     
     builder.addAspect(RIS_REPLACEMENT,
                       ArticleFiles.ROLE_CITATION_RIS);
                       
-    builder.addAspect(XML_REPLACEMENT,
+    builder.addAspect(Arrays.asList(XML_REPLACEMENT_1, XML_REPLACEMENT_2),
                       ArticleFiles.ROLE_FULL_TEXT_XML);
 
-    builder.addAspect(EPUB_REPLACEMENT,
-                      ArticleFiles.ROLE_FULL_TEXT_EPUB);
-    
-    // Use the abstract preferentially to extract metadata
-    builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA,
-        ArticleFiles.ROLE_ABSTRACT,
-        ArticleFiles.ROLE_FULL_TEXT_HTML);    
+    builder.addAspect(Arrays.asList(EPUB_REPLACEMENT_1, EPUB_REPLACEMENT_2),
+                      ArticleFiles.ROLE_FULL_TEXT_EPUB); 
     
     return builder.getSubTreeArticleIterator();
   }
