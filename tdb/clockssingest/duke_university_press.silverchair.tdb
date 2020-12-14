@@ -61,9 +61,9 @@
 
       param[journal_id] = american-speech
 
-      au < ready ; exists ; 2017 ; 2017 ; American Speech Volume 92 ; 92 ; >
+      au < crawling ; exists ; 2017 ; 2017 ; American Speech Volume 92 ; 92 ; >
       au < ready ; exists ; 2018 ; 2018 ; American Speech Volume 93 ; 93 ; >
-      au < ready ; exists ; 2019 ; 2019 ; American Speech Volume 94 ; 94 ; >
+      au < crawling ; exists ; 2019 ; 2019 ; American Speech Volume 94 ; 94 ; >
       au < crawling ; exists ; 2020 ; 2020 ; American Speech Volume 95 ; 95 ; >
 
   }
@@ -98,7 +98,7 @@
       param[journal_id] = archives-of-asian-art
 
       au < crawling ; exists ; 2001 ; 2001 ; Archives of Asian Art Volume 52 ; 52 ; >
-      au < ready ; exists ; 2003 ; 2003 ; Archives of Asian Art Volume 53 ; 53 ; >
+      au < crawling ; exists ; 2003 ; 2003 ; Archives of Asian Art Volume 53 ; 53 ; >
       au < ready ; exists ; 2004 ; 2004 ; Archives of Asian Art Volume 54 ; 54 ; >
       au < ready ; exists ; 2005 ; 2005 ; Archives of Asian Art Volume 55 ; 55 ; >
       au < ready ; exists ; 2006 ; 2006 ; Archives of Asian Art Volume 56 ; 56 ; >
@@ -109,7 +109,7 @@
       au < ready ; exists ; 2011 ; 2011 ; Archives of Asian Art Volume 61 ; 61 ; >
       au < crawling ; exists ; 2012 ; 2012 ; Archives of Asian Art Volume 62 ; 62 ; >
       au < crawling ; exists ; 2013 ; 2013 ; Archives of Asian Art Volume 63 ; 63 ; >
-      au < ready ; exists ; 2014 ; 2014 ; Archives of Asian Art Volume 64 ; 64 ; >
+      au < crawling ; exists ; 2014 ; 2014 ; Archives of Asian Art Volume 64 ; 64 ; >
       au < crawling ; exists ; 2015 ; 2015 ; Archives of Asian Art Volume 65 ; 65 ; >
       au < crawling ; exists ; 2016 ; 2016 ; Archives of Asian Art Volume 66 ; 66 ; >
       au < crawling ; exists ; 2017 ; 2017 ; Archives of Asian Art Volume 67 ; 67 ; >
@@ -289,7 +289,7 @@
       param[journal_id] = easts
       #move to T&F in 2021
 
-      au < ready ; exists ; 2017 ; 2017 ; East Asian Science, Technology and Society: An International Journal Volume 11 ; 11 ; >
+      au < crawling ; exists ; 2017 ; 2017 ; East Asian Science, Technology and Society: An International Journal Volume 11 ; 11 ; >
       au < ready ; exists ; 2018 ; 2018 ; East Asian Science, Technology and Society: An International Journal Volume 12 ; 12 ; >
       au < crawling ; exists ; 2019 ; 2019 ; East Asian Science, Technology and Society: An International Journal Volume 13 ; 13 ; >
       au < crawling ; exists ; 2020 ; 2020 ; East Asian Science, Technology and Society: An International Journal Volume 14 ; 14 ; >
@@ -333,17 +333,17 @@
       au < ready ; exists ; 2005 ; 2005 ; English Language Notes Volume 42-43 ; 42-43 ; >
       au < crawling ; exists ; 2006 ; 2006 ; English Language Notes Volume 44 ; 44 ; >
       au < crawling ; exists ; 2007 ; 2007 ; English Language Notes Volume 45 ; 45 ; >
-      au < ready ; exists ; 2008 ; 2008 ; English Language Notes Volume 46 ; 46 ; >
+      au < crawling ; exists ; 2008 ; 2008 ; English Language Notes Volume 46 ; 46 ; >
       au < ready ; exists ; 2009 ; 2009 ; English Language Notes Volume 47 ; 47 ; >
       au < crawling ; exists ; 2010 ; 2010 ; English Language Notes Volume 48 ; 48 ; >
       au < ready ; exists ; 2011 ; 2011 ; English Language Notes Volume 49 ; 49 ; >
-      au < ready ; exists ; 2012 ; 2012 ; English Language Notes Volume 50 ; 50 ; >
+      au < crawling ; exists ; 2012 ; 2012 ; English Language Notes Volume 50 ; 50 ; >
       au < crawling ; exists ; 2013 ; 2013 ; English Language Notes Volume 51 ; 51 ; >
       au < crawling ; exists ; 2014 ; 2014 ; English Language Notes Volume 52 ; 52 ; >
       au < ready ; exists ; 2015 ; 2015 ; English Language Notes Volume 53 ; 53 ; >
       au < ready ; exists ; 2016 ; 2016 ; English Language Notes Volume 54 ; 54 ; >
       au < crawling ; exists ; 2017 ; 2017 ; English Language Notes Volume 55 ; 55 ; >
-      au < ready ; exists ; 2018 ; 2018 ; English Language Notes Volume 56 ; 56 ; >
+      au < crawling ; exists ; 2018 ; 2018 ; English Language Notes Volume 56 ; 56 ; >
       au < ready ; exists ; 2019 ; 2019 ; English Language Notes Volume 57 ; 57 ; >
       au < crawling ; exists ; 2020 ; 2020 ; English Language Notes Volume 58 ; 58 ; >
 
@@ -395,7 +395,7 @@
       param[journal_id] = french-historical-studies
 
       au < crawling ; exists ; 2017 ; 2017 ; French Historical Studies Volume 40 ; 40 ; >
-      au < ready ; exists ; 2018 ; 2018 ; French Historical Studies Volume 41 ; 41 ; >
+      au < crawling ; exists ; 2018 ; 2018 ; French Historical Studies Volume 41 ; 41 ; >
       au < crawling ; exists ; 2019 ; 2019 ; French Historical Studies Volume 42 ; 42 ; >
       au < crawling ; exists ; 2020 ; 2020 ; French Historical Studies Volume 43 ; 43 ; >
   }
@@ -486,7 +486,7 @@
       au < crawling ; exists ; 2016 ; 2016 ; History of the Present Volume 6 ; 6 ; >
       au < ready ; exists ; 2017 ; 2017 ; History of the Present Volume 7 ; 7 ; >
       au < ready ; exists ; 2018 ; 2018 ; History of the Present Volume 8 ; 8 ; >
-      au < ready ; exists ; 2019 ; 2019 ; History of the Present Volume 9 ; 9 ; >
+      au < crawling ; exists ; 2019 ; 2019 ; History of the Present Volume 9 ; 9 ; >
       au < crawling ; exists ; 2020 ; 2020 ; History of the Present Volume 10 ; 10 ; >
 
     }
@@ -571,7 +571,7 @@
       param[journal_id] = jmews
 
       au < crawling ; exists ; 2005 ; 2005 ; Journal of Middle East Women's Studies Volume 1 ; 1 ; >
-      au < ready ; exists ; 2006 ; 2006 ; Journal of Middle East Women's Studies Volume 2 ; 2 ; >
+      au < crawling ; exists ; 2006 ; 2006 ; Journal of Middle East Women's Studies Volume 2 ; 2 ; >
       au < crawling ; exists ; 2007 ; 2007 ; Journal of Middle East Women's Studies Volume 3 ; 3 ; >
       au < ready ; exists ; 2008 ; 2008 ; Journal of Middle East Women's Studies Volume 4 ; 4 ; >
       au < ready ; exists ; 2009 ; 2009 ; Journal of Middle East Women's Studies Volume 5 ; 5 ; >
@@ -616,7 +616,7 @@
 
       param[journal_id] = labor
 
-      au < ready ; exists ; 2017 ; 2017 ; Labor: Studies in Working-Class History of the Americas Volume 14 ; 14 ; >
+      au < crawling ; exists ; 2017 ; 2017 ; Labor: Studies in Working-Class History of the Americas Volume 14 ; 14 ; >
       au < frozen ; exists ; 2018 ; 2018 ; Labor: Studies in Working-Class History of the Americas Volume 15 ; 15 ; >
       au < ready ; exists ; 2019 ; 2019 ; Labor: Studies in Working-Class History of the Americas Volume 16 ; 16 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Labor: Studies in Working-Class History of the Americas Volume 17 ; 17 ; >
@@ -664,7 +664,7 @@
       au < crawling ; exists ; 2003 ; 2003 ; Meridians Volume 3-4 (2003) ; 3-4 (2003) ; >
       au < ready ; exists ; 2004 ; 2004 ; Meridians Volume 4-5 (2004) ; 4-5 (2004) ; >
       au < ready ; exists ; 2005 ; 2005 ; Meridians Volume 5-6 (2005) ; 5-6 (2005) ; >
-      au < ready ; exists ; 2006 ; 2006 ; Meridians Volume 6-7 (2006) ; 6-7 (2006) ; >
+      au < crawling ; exists ; 2006 ; 2006 ; Meridians Volume 6-7 (2006) ; 6-7 (2006) ; >
       au < crawling ; exists ; 2007 ; 2007 ; Meridians Volume 7 (2007) ; 7 (2007) ; >
       au < ready ; exists ; 2008 ; 2008 ; Meridians Volume 8 (2008) ; 8 (2008) ; >
       au < ready ; exists ; 2009 ; 2009 ; Meridians Volume 9 (2009) ; 9 (2009) ; >
@@ -675,8 +675,8 @@
       au < ready ; exists ; 2015 ; 2015 ; Meridians Volume 13 (2015) ; 13 (2015) ; >
       au < ready ; exists ; 2016 ; 2016 ; Meridians Volume 13-15 (2016) ; 13-15 (2016) ; >
       au < ready ; exists ; 2017 ; 2017 ; Meridians Volume 15 (2017) ; 15 (2017) ; >
-      au < ready ; exists ; 2018 ; 2018 ; Meridians Volume 16-17 (2018) ; 16-17 (2018) ; >
-      au < ready ; exists ; 2019 ; 2019 ; Meridians Volume 18 (2019) ; 18 (2019) ; >
+      au < crawling ; exists ; 2018 ; 2018 ; Meridians Volume 16-17 (2018) ; 16-17 (2018) ; >
+      au < crawling ; exists ; 2019 ; 2019 ; Meridians Volume 18 (2019) ; 18 (2019) ; >
       au < crawling ; exists ; 2020 ; 2020 ; Meridians Volume 19 (2020) ; 19 (2020) ; >
 
     }
@@ -776,7 +776,7 @@
 
       param[journal_id] = pedagogy
 
-      au < ready ; exists ; 2017 ; 2017 ; Pedagogy Volume 17 ; 17 ; >
+      au < crawling ; exists ; 2017 ; 2017 ; Pedagogy Volume 17 ; 17 ; >
       au < crawling ; exists ; 2018 ; 2018 ; Pedagogy Volume 18 ; 18 ; >
       au < crawling ; exists ; 2019 ; 2019 ; Pedagogy Volume 19 ; 19 ; >
 
@@ -810,7 +810,7 @@
       param[journal_id] = poetics-today
 
       au < ready ; exists ; 2017 ; 2017 ; Poetics Today Volume 38 ; 38 ; >
-      au < ready ; exists ; 2018 ; 2018 ; Poetics Today Volume 39 ; 39 ; >
+      au < crawling ; exists ; 2018 ; 2018 ; Poetics Today Volume 39 ; 39 ; >
       au < ready ; exists ; 2019 ; 2019 ; Poetics Today Volume 40 ; 40 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Poetics Today Volume 41 ; 41 ; >
 
@@ -842,7 +842,7 @@
 
       param[journal_id] = prism
 
-      au < ready ; exists ; 2019 ; 2019 ; Prism: Theory and Modern Chinese Literature Volume 16 ; 16 ; >
+      au < crawling ; exists ; 2019 ; 2019 ; Prism: Theory and Modern Chinese Literature Volume 16 ; 16 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Prism: Theory and Modern Chinese Literature Volume 17 ; 17 ; >
   }
 
@@ -959,7 +959,7 @@
       au < ready ; exists ; 2016 ; 2016 ; Romanic Review Volume 107 ; 107 ; >
       au < ready ; exists ; 2017 ; 2017 ; Romanic Review Volume 108 ; 108 ; >
       au < ready ; exists ; 2018 ; 2018 ; Romanic Review Volume 109 ; 109 ; >
-      au < ready ; exists ; 2019 ; 2019 ; Romanic Review Volume 110 ; 110 ; >
+      au < crawling ; exists ; 2019 ; 2019 ; Romanic Review Volume 110 ; 110 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Romanic Review Volume 111 ; 111 ; >
 
      }
@@ -1092,7 +1092,7 @@
       au < crawling ; exists ; 2013 ; 2013 ; Twentieth-Century Literature Volume 59 ; 59 ; >
       au < ready ; exists ; 2014 ; 2014 ; Twentieth-Century Literature Volume 60 ; 60 ; >
       au < ready ; exists ; 2015 ; 2015 ; Twentieth-Century Literature Volume 61 ; 61 ; >
-      au < ready ; exists ; 2016 ; 2016 ; Twentieth-Century Literature Volume 62 ; 62 ; >
+      au < crawling ; exists ; 2016 ; 2016 ; Twentieth-Century Literature Volume 62 ; 62 ; >
       au < frozen ; exists ; 2017 ; 2017 ; Twentieth-Century Literature Volume 63 ; 63 ; >
       au < ready ; exists ; 2018 ; 2018 ; Twentieth-Century Literature Volume 64 ; 64 ; >
       au < ready ; exists ; 2019 ; 2019 ; Twentieth-Century Literature Volume 65 ; 65 ; >
