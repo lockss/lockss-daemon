@@ -2351,12 +2351,12 @@ while (my $line = <>) {
            ($plugin eq "CopernicusPublicationsPlugin"))  {
     $url_p1 = sprintf("%sindex.html",
       $param{home_url});
-    $url_p2 = sprintf("%svolumes.html",
+    $url_p2 = sprintf("%sarticles/volumes.html",
       $param{base_url});
-    $url_s = sprintf("%s%s/index.html",
+    $url_s = sprintf("%sarticles/%s/index.html",
       $param{base_url}, $param{volume_name});
     #prefix for an article link
-    $url_d = sprintf("%s%s/",
+    $url_d = sprintf("%sarticles/%s/",
      $param{base_url}, $param{volume_name});
     $man_url = uri_unescape($url_s) . " + " . uri_unescape($url_p1) . " + " . uri_unescape($url_p2);
     $man_url_p1 = uri_unescape($url_p1);
