@@ -45,7 +45,7 @@
 
       au < ready ; exists ; 2017 ; 2017 ; American Literature Volume 89 ; 89 ; >
       au < crawling ; exists ; 2018 ; 2018 ; American Literature Volume 90 ; 90 ; >
-      au < ready ; exists ; 2019 ; 2019 ; American Literature Volume 91 ; 91 ; >
+      au < crawling ; exists ; 2019 ; 2019 ; American Literature Volume 91 ; 91 ; >
       au < crawling ; exists ; 2020 ; 2020 ; American Literature Volume 92 ; 92 ; >
 
   }
@@ -103,7 +103,7 @@
       au < ready ; exists ; 2005 ; 2005 ; Archives of Asian Art Volume 55 ; 55 ; >
       au < ready ; exists ; 2006 ; 2006 ; Archives of Asian Art Volume 56 ; 56 ; >
       au < crawling ; exists ; 2007 ; 2007 ; Archives of Asian Art Volume 57 ; 57 ; >
-      au < ready ; exists ; 2008 ; 2008 ; Archives of Asian Art Volume 58 ; 58 ; >
+      au < crawling ; exists ; 2008 ; 2008 ; Archives of Asian Art Volume 58 ; 58 ; >
       au < crawling ; exists ; 2009 ; 2009 ; Archives of Asian Art Volume 59 ; 59 ; >
       au < ready ; exists ; 2010 ; 2010 ; Archives of Asian Art Volume 60 ; 60 ; >
       au < ready ; exists ; 2011 ; 2011 ; Archives of Asian Art Volume 61 ; 61 ; >
@@ -200,7 +200,7 @@
 
       param[journal_id] = comparative-literature
 
-      au < ready ; exists ; 2017 ; 2017 ; Comparative Literature Volume 68 ; 68 ; >
+      au < crawling ; exists ; 2017 ; 2017 ; Comparative Literature Volume 68 ; 68 ; >
       au < crawling ; exists ; 2018 ; 2018 ; Comparative Literature Volume 69 ; 69 ; >
       au < ready ; exists ; 2019 ; 2019 ; Comparative Literature Volume 70 ; 70 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Comparative Literature Volume 71 ; 71 ; >
@@ -235,7 +235,7 @@
 
       param[journal_id] = critical-times
 
-      au < ready ; exists ; 2018 ; 2018 ; Critical Times: Interventions in Global Critical Theory Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2018 ; 2018 ; Critical Times: Interventions in Global Critical Theory Volume 1 ; 1 ; >
       au < ready ; exists ; 2019 ; 2019 ; Critical Times: Interventions in Global Critical Theory Volume 2 ; 2 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Critical Times: Interventions in Global Critical Theory Volume 3 ; 3 ; >
 
@@ -253,7 +253,7 @@
       param[journal_id] = cultural-politics
 
       au < ready ; exists ; 2017 ; 2017 ; Cultural Politics Volume 13 ; 13 ; >
-      au < ready ; exists ; 2018 ; 2018 ; Cultural Politics Volume 14 ; 14 ; >
+      au < crawling ; exists ; 2018 ; 2018 ; Cultural Politics Volume 14 ; 14 ; >
       au < crawling ; exists ; 2019 ; 2019 ; Cultural Politics Volume 15 ; 15 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Cultural Politics Volume 16 ; 16 ; >
 
@@ -361,7 +361,7 @@
 
       au < ready ; exists ; 2017 ; 2017 ; Environmental Humanities Volume 9 ; 9 ; >
       au < ready ; exists ; 2018 ; 2018 ; Environmental Humanities Volume 10 ; 10 ; >
-      au < ready ; exists ; 2019 ; 2019 ; Environmental Humanities Volume 11 ; 11 ; >
+      au < crawling ; exists ; 2019 ; 2019 ; Environmental Humanities Volume 11 ; 11 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Environmental Humanities Volume 12 ; 12 ; >
 
   }
@@ -379,7 +379,7 @@
 
       au < ready ; exists ; 2017 ; 2017 ; Ethnohistory Volume 64 ; 64 ; >
       au < crawling ; exists ; 2018 ; 2018 ; Ethnohistory Volume 65 ; 65 ; >
-      au < ready ; exists ; 2019 ; 2019 ; Ethnohistory Volume 66 ; 66 ; >
+      au < crawling ; exists ; 2019 ; 2019 ; Ethnohistory Volume 66 ; 66 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Ethnohistory Volume 67 ; 67 ; >
   }
 
@@ -480,7 +480,7 @@
 
       au < ready ; exists ; 2011 ; 2011 ; History of the Present Volume 1 ; 1 ; >
       au < crawling ; exists ; 2012 ; 2012 ; History of the Present Volume 2 ; 2 ; >
-      au < ready ; exists ; 2013 ; 2013 ; History of the Present Volume 3 ; 3 ; >
+      au < crawling ; exists ; 2013 ; 2013 ; History of the Present Volume 3 ; 3 ; >
       au < ready ; exists ; 2014 ; 2014 ; History of the Present Volume 4 ; 4 ; >
       au < ready ; exists ; 2015 ; 2015 ; History of the Present Volume 5 ; 5 ; >
       au < crawling ; exists ; 2016 ; 2016 ; History of the Present Volume 6 ; 6 ; >
@@ -553,7 +553,7 @@
 
       param[journal_id] = jmems
 
-      au < ready ; exists ; 2017 ; 2017 ; Journal of Medieval and Early Modern Studies Volume 47 ; 47 ; >
+      au < crawling ; exists ; 2017 ; 2017 ; Journal of Medieval and Early Modern Studies Volume 47 ; 47 ; >
       au < ready ; exists ; 2018 ; 2018 ; Journal of Medieval and Early Modern Studies Volume 48 ; 48 ; >
       au < crawling ; exists ; 2019 ; 2019 ; Journal of Medieval and Early Modern Studies Volume 49 ; 49 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Journal of Medieval and Early Modern Studies Volume 50 ; 50 ; >
@@ -600,7 +600,7 @@
       param[journal_id] = journal-of-music-theory
 
       au < ready ; exists ; 2017 ; 2017 ; Journal of Music Theory Volume 61 ; 61 ; >
-      au < ready ; exists ; 2018 ; 2018 ; Journal of Music Theory Volume 62 ; 62 ; >
+      au < crawling ; exists ; 2018 ; 2018 ; Journal of Music Theory Volume 62 ; 62 ; >
       au < crawling ; exists ; 2019 ; 2019 ; Journal of Music Theory Volume 63 ; 63 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Journal of Music Theory Volume 64 ; 64 ; >
 
@@ -659,7 +659,7 @@
       param[journal_id] = meridians
 
       au < crawling ; exists ; 2000 ; 2000 ; Meridians Volume 1 (2000) ; 1 (2000) ; >
-      au < ready ; exists ; 2001 ; 2001 ; Meridians Volume 1-2 (2001) ; 1-2 (2001) ; >
+      au < crawling ; exists ; 2001 ; 2001 ; Meridians Volume 1-2 (2001) ; 1-2 (2001) ; >
       au < crawling ; exists ; 2002 ; 2002 ; Meridians Volume 2-3 (2002) ; 2-3 (2002) ; >
       au < crawling ; exists ; 2003 ; 2003 ; Meridians Volume 3-4 (2003) ; 3-4 (2003) ; >
       au < ready ; exists ; 2004 ; 2004 ; Meridians Volume 4-5 (2004) ; 4-5 (2004) ; >
@@ -759,7 +759,7 @@
 
       param[journal_id] = novel
 
-      au < ready ; exists ; 2017 ; 2017 ; Novel: A Forum on Fiction Volume 50 ; 50 ; >
+      au < crawling ; exists ; 2017 ; 2017 ; Novel: A Forum on Fiction Volume 50 ; 50 ; >
       au < crawling ; exists ; 2018 ; 2018 ; Novel: A Forum on Fiction Volume 51 ; 51 ; >
       au < crawling ; exists ; 2019 ; 2019 ; Novel: A Forum on Fiction Volume 52 ; 52 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Novel: A Forum on Fiction Volume 53 ; 53 ; >
@@ -827,8 +827,8 @@
       #subtitle was "east asia cultures critique for 1999-2011 at least"
 
       au < ready ; exists ; 2017 ; 2017 ; positions: asia critique Volume 25 ; 25 ; >
-      au < ready ; exists ; 2018 ; 2018 ; positions: asia critique Volume 26 ; 26 ; >
-      au < ready ; exists ; 2019 ; 2019 ; positions: asia critique Volume 27 ; 27 ; >
+      au < crawling ; exists ; 2018 ; 2018 ; positions: asia critique Volume 26 ; 26 ; >
+      au < crawling ; exists ; 2019 ; 2019 ; positions: asia critique Volume 27 ; 27 ; >
       au < crawling ; exists ; 2020 ; 2020 ; positions: asia critique Volume 28 ; 28 ; >
 
   }
@@ -857,7 +857,7 @@
 
       au < ready ; exists ; 2017 ; 2017 ; Publication of the American Dialect Society Volume 101 ; 101 ; >
       au < ready ; exists ; 2018 ; 2018 ; Publication of the American Dialect Society Volume 102 ; 102 ; >
-      au < ready ; exists ; 2019 ; 2019 ; Publication of the American Dialect Society Volume 103 ; 103 ; >
+      au < crawling ; exists ; 2019 ; 2019 ; Publication of the American Dialect Society Volume 103 ; 103 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Publication of the American Dialect Society Volume 104 ; 104 ; >
 
     }
@@ -895,7 +895,7 @@
       au < ready ; exists ; 2004 ; 2004 ; Qui Parle Volume 14-15 (2004) ; 14-15 (2004) ; >
       au < ready ; exists ; 2005 ; 2005 ; Qui Parle Volume 15 (2005) ; 15 (2005) ; >
       au < ready ; exists ; 2006 ; 2006 ; Qui Parle Volume 16 (2006) ; 16 (2006) ; >
-      au < ready ; exists ; 2007 ; 2007 ; Qui Parle Volume 16 (2007) ; 16 (2007) ; >
+      au < crawling ; exists ; 2007 ; 2007 ; Qui Parle Volume 16 (2007) ; 16 (2007) ; >
       au < crawling ; exists ; 2008 ; 2008 ; Qui Parle Volume 17 (2008) ; 17 (2008) ; >
       au < ready ; exists ; 2009 ; 2009 ; Qui Parle Volume 17-18 (2009) ; 17-18 (2009) ; >
       au < crawling ; exists ; 2010 ; 2010 ; Qui Parle Volume 18-19 (2010) ; 18-19 (2010) ; >
@@ -942,9 +942,9 @@
 
       au < crawling ; exists ; 2000 ; 2000 ; Romanic Review Volume 91 ; 91 ; >
       au < crawling ; exists ; 2001 ; 2001 ; Romanic Review Volume 92 ; 92 ; >
-      au < ready ; exists ; 2002 ; 2002 ; Romanic Review Volume 93 ; 93 ; >
+      au < crawling ; exists ; 2002 ; 2002 ; Romanic Review Volume 93 ; 93 ; >
       au < crawling ; exists ; 2003 ; 2003 ; Romanic Review Volume 94 ; 94 ; >
-      au < ready ; exists ; 2004 ; 2004 ; Romanic Review Volume 95 ; 95 ; >
+      au < crawling ; exists ; 2004 ; 2004 ; Romanic Review Volume 95 ; 95 ; >
       au < ready ; exists ; 2005 ; 2005 ; Romanic Review Volume 96 ; 96 ; >
       au < crawling ; exists ; 2006 ; 2006 ; Romanic Review Volume 97 ; 97 ; >
       au < ready ; exists ; 2007 ; 2007 ; Romanic Review Volume 98 ; 98 ; >
@@ -975,7 +975,7 @@
       param[journal_id] = small-axe
 
       au < ready ; exists ; 2017 ; 2017 ; Small Axe Volume 21 ; 21 ; >
-      au < ready ; exists ; 2018 ; 2018 ; Small Axe Volume 22 ; 22 ; >
+      au < crawling ; exists ; 2018 ; 2018 ; Small Axe Volume 22 ; 22 ; >
       au < crawling ; exists ; 2019 ; 2019 ; Small Axe Volume 23 ; 23 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Small Axe Volume 24 ; 24 ; >
 
@@ -1025,9 +1025,9 @@
 
       param[journal_id] = theater
 
-      au < ready ; exists ; 2017 ; 2017 ; Theater Volume 47 ; 47 ; >
+      au < crawling ; exists ; 2017 ; 2017 ; Theater Volume 47 ; 47 ; >
       au < frozen ; exists ; 2018 ; 2018 ; Theater Volume 48 ; 48 ; >
-      au < ready ; exists ; 2019 ; 2019 ; Theater Volume 49 ; 49 ; >
+      au < crawling ; exists ; 2019 ; 2019 ; Theater Volume 49 ; 49 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Theater Volume 50 ; 50 ; >
 
     }
@@ -1084,13 +1084,13 @@
       au < crawling ; exists ; 2005 ; 2005 ; Twentieth-Century Literature Volume 51 ; 51 ; >
       au < crawling ; exists ; 2006 ; 2006 ; Twentieth-Century Literature Volume 52 ; 52 ; >
       au < ready ; exists ; 2007 ; 2007 ; Twentieth-Century Literature Volume 53 ; 53 ; >
-      au < ready ; exists ; 2008 ; 2008 ; Twentieth-Century Literature Volume 54 ; 54 ; >
+      au < crawling ; exists ; 2008 ; 2008 ; Twentieth-Century Literature Volume 54 ; 54 ; >
       au < ready ; exists ; 2009 ; 2009 ; Twentieth-Century Literature Volume 55 ; 55 ; >
       au < ready ; exists ; 2010 ; 2010 ; Twentieth-Century Literature Volume 56 ; 56 ; >
       au < ready ; exists ; 2011 ; 2011 ; Twentieth-Century Literature Volume 57 ; 57 ; >
       au < crawling ; exists ; 2012 ; 2012 ; Twentieth-Century Literature Volume 58 ; 58 ; >
       au < crawling ; exists ; 2013 ; 2013 ; Twentieth-Century Literature Volume 59 ; 59 ; >
-      au < ready ; exists ; 2014 ; 2014 ; Twentieth-Century Literature Volume 60 ; 60 ; >
+      au < crawling ; exists ; 2014 ; 2014 ; Twentieth-Century Literature Volume 60 ; 60 ; >
       au < ready ; exists ; 2015 ; 2015 ; Twentieth-Century Literature Volume 61 ; 61 ; >
       au < crawling ; exists ; 2016 ; 2016 ; Twentieth-Century Literature Volume 62 ; 62 ; >
       au < frozen ; exists ; 2017 ; 2017 ; Twentieth-Century Literature Volume 63 ; 63 ; >

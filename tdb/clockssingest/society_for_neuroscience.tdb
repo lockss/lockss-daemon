@@ -32,7 +32,7 @@
       au < sfn.ClockssSFNDrupalPlugin ; finished ; manifest ; 2017 ; eNeuro Volume 4 ; 4 ; reingest4.clockss.org:8082 >
       au < sfn.ClockssSFNDrupalPlugin ; finished ; manifest ; 2018 ; eNeuro Volume 5 ; 5 ; reingest5.clockss.org:8082 >
       au < sfn.ClockssSFNDrupalPlugin ; finished ; crawling ; 2019 ; eNeuro Volume 6 ; 6 ; reingest1.clockss.org:8082 >
-      au < sfn.ClockssSFNDrupalPlugin ; ready ; exists ; 2020 ; eNeuro Volume 7 ; 7 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; crawling ; exists ; 2020 ; eNeuro Volume 7 ; 7 ; >
       }
   }
   
@@ -85,7 +85,7 @@
       au < sfn.ClockssSFNDrupalPlugin ; finished ; manifest ; 2017 ; Journal of Neuroscience Volume 37 ; 37 ; reingest2.clockss.org:8085 >
       au < sfn.ClockssSFNDrupalPlugin ; finished ; manifest ; 2018 ; Journal of Neuroscience Volume 38 ; 38 ; reingest3.clockss.org:8083 >
       au < sfn.ClockssSFNDrupalPlugin ; testing ; exists ; 2019 ; Journal of Neuroscience Volume 39 ; 39 ; >
-      au < sfn.ClockssSFNDrupalPlugin ; ready ; exists ; 2020 ; Journal of Neuroscience Volume 40 ; 40 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; crawling ; exists ; 2020 ; Journal of Neuroscience Volume 40 ; 40 ; >
 
   }
 
