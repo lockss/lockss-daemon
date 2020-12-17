@@ -2779,7 +2779,7 @@
     au < finished ; finished ; 2017 ; Journal of Family and Community Medicine Volume 24 ; 2017 ; 24 ; http://www.jfcmonline.com/ ; ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Journal of Family and Community Medicine Volume 25 ; 2018 ; 25 ; http://www.jfcmonline.com/ ; ; >
     au < manifest ; exists ; 2019 ; Journal of Family and Community Medicine Volume 26 ; 2019 ; 26 ; https://www.jfcmonline.com/ ; ; >
-    au < expected ; exists ; 2020 ; Journal of Family and Community Medicine Volume 27 ; 2020 ; 27 ; https://www.jfcmonline.com/ ; ; >
+    au < manifest ; exists ; 2020 ; Journal of Family and Community Medicine Volume 27 ; 2020 ; 27 ; https://www.jfcmonline.com/ ; ; >
 
   }
 
@@ -5435,7 +5435,7 @@
       au < finished ; finished ; 2017 ; Egyptian Retina Journal Volume 4 ; 2017 ; 4 ; http://www.egyptretinaj.com/ ; ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2018 ; Egyptian Retina Journal Volume 5 ; 2018 ; 5 ; http://www.egyptretinaj.com/ ; ; >
       au < manifest ; exists ; 2019 ; Egyptian Retina Journal Volume 6 ; 2019 ; 6 ; https://www.egyptretinaj.com/ ; ; >
-      au < expected ; exists ; 2020 ; Egyptian Retina Journal Volume 7 ; 2020 ; 7 ; https://www.egyptretinaj.com/ ; ; >
+      au < manifest ; exists ; 2020 ; Egyptian Retina Journal Volume 7 ; 2020 ; 7 ; https://www.egyptretinaj.com/ ; ; >
 
   }
 
@@ -9502,8 +9502,8 @@
       param[journal_issn] = 2589-5354
 #      param[base_url] = http://www.ijofr.org/
 
-      au < exists ; exists ; 2017 ; International Journal of Orofacial Research Volume 2 ; 2017 ; 2 ; https://www.ijofr.org/ ; ; >
-      au < exists ; exists ; 2018 ; International Journal of Orofacial Research Volume 3 ; 2018 ; 3 ; https://www.ijofr.org/ ; ; >
+      au < manifest ; exists ; 2017 ; International Journal of Orofacial Research Volume 2 ; 2017 ; 2 ; https://www.ijofr.org/ ; ; >
+      au < manifest ; exists ; 2018 ; International Journal of Orofacial Research Volume 3 ; 2018 ; 3 ; https://www.ijofr.org/ ; ; >
       au < expected ; exists ; 2019 ; International Journal of Orofacial Research Volume 4 ; 2019 ; 4 ; https://www.ijofr.org/ ; ; >
       au < expected ; exists ; 2020 ; International Journal of Orofacial Research Volume 5 ; 2020 ; 5 ; https://www.ijofr.org/ ; ; >
 
@@ -10290,7 +10290,7 @@
       au < manifest ; exists ; 2017 ; Pediatric Respirology and Critical Care Medicine Volume 1 ; 2017 ; 1 ; https://www.prccm.org/ ; ; >
       au < manifest ; exists ; 2018 ; Pediatric Respirology and Critical Care Medicine Volume 2 ; 2018 ; 2 ; https://www.prccm.org/ ; ; >
       au < manifest ; exists ; 2019 ; Pediatric Respirology and Critical Care Medicine Volume 3 ; 2019 ; 3 ; https://www.prccm.org/ ; ; >
-      au < expected ; exists ; 2020 ; Pediatric Respirology and Critical Care Medicine Volume 4 ; 2020 ; 4 ; https://www.prccm.org/ ; ; >
+      au < manifest ; exists ; 2020 ; Pediatric Respirology and Critical Care Medicine Volume 4 ; 2020 ; 4 ; https://www.prccm.org/ ; ; >
 
   }
 
