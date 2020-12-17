@@ -115,7 +115,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Journal of Water and Climate Change Volume 7 ; 7 ; > #IWADrupal plugin
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Journal of Water and Climate Change Volume 8 ; 8 ; > #IWADrupal plugin
     au < crawling ; exists ; 2018 ; 2018 ; Journal of Water and Climate Change Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Journal of Water and Climate Change Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2019 ; 2019 ; Journal of Water and Climate Change Volume 10 ; 10 ; >
     au < crawling ; exists ; 2020 ; 2020 ; Journal of Water and Climate Change Volume 11 ; 11 ; >
 
   }
@@ -231,7 +231,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Water Supply: Research and Technology - Aqua Volume 64 ; 64 ; > #IWADrupal plugin
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Journal of Water Supply: Research and Technology - Aqua Volume 65 ; 65 ; > #IWADrupal plugin
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Journal of Water Supply: Research and Technology - Aqua Volume 66 ; 66 ; > #IWADrupal plugin
-    au < crawling ; exists ; 2018 ; 2018 ; Journal of Water Supply: Research and Technology - Aqua Volume 67 ; 67 ; >
+    au < frozen ; exists ; 2018 ; 2018 ; Journal of Water Supply: Research and Technology - Aqua Volume 67 ; 67 ; >
     au < crawling ; exists ; 2019 ; 2019 ; Journal of Water Supply: Research and Technology - Aqua Volume 68 ; 68 ; >
     au < crawling ; exists ; 2020 ; 2020 ; Journal of Water Supply: Research and Technology - Aqua Volume 69 ; 69 ; >
 
@@ -295,7 +295,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Water Practice and Technology Volume 10 ; 10 ; > #IWADrupal plugin
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Water Practice and Technology Volume 11 ; 11 ; > #IWADrupal plugin
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Water Practice and Technology Volume 12 ; 12 ; > #IWADrupal plugin
-    au < crawling ; exists ; 2018 ; 2018 ; Water Practice and Technology Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2018 ; 2018 ; Water Practice and Technology Volume 13 ; 13 ; >
     au < crawling ; exists ; 2019 ; 2019 ; Water Practice and Technology Volume 14 ; 14 ; >
     au < crawling ; exists ; 2020 ; 2020 ; Water Practice and Technology Volume 15 ; 15 ; >
 

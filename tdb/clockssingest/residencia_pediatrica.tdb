@@ -22,11 +22,11 @@
     param[oai_granularity] = YYYY-MM-DD
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; hidden[proxy] >
 
-    au < crawling ; exists ; 2011 ; 1 ; Residência Pediátrica Volume 1 ; 2011 ; >
-    au < crawling ; exists ; 2012 ; 2 ; Residência Pediátrica Volume 2 ; 2012 ; >
+    au < frozen ; exists ; 2011 ; 1 ; Residência Pediátrica Volume 1 ; 2011 ; >
+    au < frozen ; exists ; 2012 ; 2 ; Residência Pediátrica Volume 2 ; 2012 ; >
     au < crawling ; exists ; 2013 ; 3 ; Residência Pediátrica Volume 3 ; 2013 ; >
-    au < crawling ; exists ; 2014 ; 4 ; Residência Pediátrica Volume 4 ; 2014 ; >
-    au < crawling ; exists ; 2015 ; 5 ; Residência Pediátrica Volume 5 ; 2015 ; >
+    au < frozen ; exists ; 2014 ; 4 ; Residência Pediátrica Volume 4 ; 2014 ; >
+    au < frozen ; exists ; 2015 ; 5 ; Residência Pediátrica Volume 5 ; 2015 ; >
     au < crawling ; exists ; 2016 ; 6 ; Residência Pediátrica Volume 6 ; 2016 ; >
     au < crawling ; exists ; 2017 ; 7 ; Residência Pediátrica Volume 7 ; 2017 ; >
     au < crawling ; exists ; 2018 ; 8 ; Residência Pediátrica Volume 8 ; 2018 ; >

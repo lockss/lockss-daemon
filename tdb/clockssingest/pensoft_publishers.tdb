@@ -67,7 +67,7 @@
     
     au < crawling ; exists ; 2008 ; 1 ; BioRisk Volume 2008 ; 2008 ; https://biorisk.pensoft.net/ ; >
     au < crawling ; exists ; 2009 ; 2-3 ; BioRisk Volume 2009 ; 2009 ; https://biorisk.pensoft.net/ ; >
-    au < crawling ; exists ; 2010 ; 4-5 ; BioRisk Volume 2010 ; 2010 ; https://biorisk.pensoft.net/ ; >
+    au < frozen ; exists ; 2010 ; 4-5 ; BioRisk Volume 2010 ; 2010 ; https://biorisk.pensoft.net/ ; >
     au < crawling ; exists ; 2011 ; 6 ; BioRisk Volume 2011 ; 2011 ; https://biorisk.pensoft.net/ ; >
     au < finished ; finished ; 2012 ; 7 ; BioRisk Volume 2012 ; 2012 ; http://biorisk.pensoft.net/ ; >
     au < finished ; finished ; 2013 ; 8 ; BioRisk Volume 2013 ; 2013 ; http://biorisk.pensoft.net/ ; reingest1.clockss.org:8082 >
@@ -140,7 +140,7 @@
     au < frozen ; exists ; 2016 ; 48-53 ; Journal of Hymenoptera Research Volume 2016 ; 2016 ; https://jhr.pensoft.net/ ; >
     au < frozen ; exists ; 2017 ; 54-61 ; Journal of Hymenoptera Research Volume 2017 ; 2017 ; https://jhr.pensoft.net/ ; >
     au < deepCrawl ; exists ; 2018 ; 62-67 ; Journal of Hymenoptera Research Volume 2018 ; 2018 ; https://jhr.pensoft.net/ ; >
-    au < crawling ; exists ; 2019 ; 68-73 ; Journal of Hymenoptera Research Volume 2019 ; 2019 ; https://jhr.pensoft.net/ ; >
+    au < frozen ; exists ; 2019 ; 68-73 ; Journal of Hymenoptera Research Volume 2019 ; 2019 ; https://jhr.pensoft.net/ ; >
     au < crawling ; exists ; 2020 ; 74-79 ; Journal of Hymenoptera Research Volume 2020 ; 2020 ; https://jhr.pensoft.net/ ; >
 
    }
@@ -157,7 +157,7 @@
     param[au_oai_set] = mycokeys
 #    param[base_url] = http://mycokeys.pensoft.net/
     
-    au < crawling ; exists ; 2011 ; 1 ; MycoKeys Volume 2011 ; 2011 ; https://mycokeys.pensoft.net/ ; >
+    au < frozen ; exists ; 2011 ; 1 ; MycoKeys Volume 2011 ; 2011 ; https://mycokeys.pensoft.net/ ; >
     au < frozen ; exists ; 2012 ; 2-5 ; MycoKeys Volume 2012 ; 2012 ; http://mycokeys.pensoft.net/ ; >
     au < finished ; finished ; 2013 ; 6-7 ; MycoKeys Volume 2013 ; 2013 ; http://mycokeys.pensoft.net/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; 8 ; MycoKeys Volume 2014 ; 2014 ; http://mycokeys.pensoft.net/ ; reingest2.clockss.org:8085 >
@@ -252,7 +252,7 @@
 #    param[base_url] = http://phytokeys.pensoft.net/
     
     au < crawling ; exists ; 2010 ; 1 ; PhytoKeys Volume 2010 ; 2010 ; https://phytokeys.pensoft.net/ ; >
-    au < crawling ; exists ; 2011 ; 2-7 ; PhytoKeys Volume 2011 ; 2011 ; https://phytokeys.pensoft.net/ ; >
+    au < frozen ; exists ; 2011 ; 2-7 ; PhytoKeys Volume 2011 ; 2011 ; https://phytokeys.pensoft.net/ ; >
     au < frozen ; exists ; 2012 ; 8-19 ; PhytoKeys Volume 2012 ; 2012 ; http://phytokeys.pensoft.net/ ; >
     au < frozen ; exists ; 2013 ; 20-32 ; PhytoKeys Volume 2013 ; 2013 ; http://phytokeys.pensoft.net/ ; >
     au < frozen ; exists ; 2014 ; 33-43 ; PhytoKeys Volume 2014 ; 2014 ; http://phytokeys.pensoft.net/ ; >
@@ -278,7 +278,7 @@
     param[au_oai_set] = subtbiol
 #    param[base_url] = http://subtbiol.pensoft.net/
     
-    au < crawling ; exists ; 2011 ; 8-9 ; Subterranean Biology Volume 2011 ; 2011 ; https://subtbiol.pensoft.net/ ; >
+    au < frozen ; exists ; 2011 ; 8-9 ; Subterranean Biology Volume 2011 ; 2011 ; https://subtbiol.pensoft.net/ ; >
     au < frozen ; exists ; 2013 ; 10-12 ; Subterranean Biology Volume 2013 ; 2013 ; http://subtbiol.pensoft.net/ ; >
     au < finished ; finished ; 2014 ; 13-14 ; Subterranean Biology Volume 2014 ; 2014 ; http://subtbiol.pensoft.net/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; 15-16 ; Subterranean Biology Volume 2015 ; 2015 ; http://subtbiol.pensoft.net/ ; reingest2.clockss.org:8085 >
@@ -370,7 +370,7 @@
       param[au_oai_set] = aer
 
       au < frozen ; exists ; 2018 ; 2018 ; Arctic Environmental Research Volume 2018 ; 2018 ; https://aer.pensoft.net/ ; >
-      au < crawling ; exists ; 2019 ; 2019 ; Arctic Environmental Research Volume 2019 ; 2019 ; https://aer.pensoft.net/ ; >
+      au < frozen ; exists ; 2019 ; 2019 ; Arctic Environmental Research Volume 2019 ; 2019 ; https://aer.pensoft.net/ ; >
       au < crawling ; exists ; 2020 ; 2020 ; Arctic Environmental Research Volume 2020 ; 2020 ; https://aer.pensoft.net/ ; >
 
   }
@@ -537,9 +537,9 @@
     param[au_oai_set] = compcytogen
 #    param[base_url] = http://compcytogen.pensoft.net/
     
-    au < crawling ; exists ; 2009 ; 3 ; Comparative Cytogenetics Volume 2009 ; 2009 ; https://compcytogen.pensoft.net/ ; >
+    au < frozen ; exists ; 2009 ; 3 ; Comparative Cytogenetics Volume 2009 ; 2009 ; https://compcytogen.pensoft.net/ ; >
     au < crawling ; exists ; 2010 ; 4 ; Comparative Cytogenetics Volume 2010 ; 2010 ; https://compcytogen.pensoft.net/ ; >
-    au < crawling ; exists ; 2011 ; 5 ; Comparative Cytogenetics Volume 2011 ; 2011 ; https://compcytogen.pensoft.net/ ; >
+    au < frozen ; exists ; 2011 ; 5 ; Comparative Cytogenetics Volume 2011 ; 2011 ; https://compcytogen.pensoft.net/ ; >
     au < finished ; finished ; 2012 ; 6 ; Comparative Cytogenetics Volume 2012 ; 2012 ; http://compcytogen.pensoft.net/ ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2013 ; 7 ; Comparative Cytogenetics Volume 2013 ; 2013 ; http://compcytogen.pensoft.net/ ; >
     au < finished ; finished ; 2014 ; 8 ; Comparative Cytogenetics Volume 2014 ; 2014 ; http://compcytogen.pensoft.net/ ; reingest3.clockss.org:8083 >
@@ -601,7 +601,7 @@
 
       au < frozen ; exists ; 2017 ; 2017 ; Metabarcoding and Metagenomics Volume 2017 ; 2017 ; https://mbmg.pensoft.net/ ; >
       au < frozen ; exists ; 2018 ; 2018 ; Metabarcoding and Metagenomics Volume 2018 ; 2018 ; https://mbmg.pensoft.net/ ; >
-      au < crawling ; exists ; 2019 ; 2019 ; Metabarcoding and Metagenomics Volume 2019 ; 2019 ; https://mbmg.pensoft.net/ ; >
+      au < frozen ; exists ; 2019 ; 2019 ; Metabarcoding and Metagenomics Volume 2019 ; 2019 ; https://mbmg.pensoft.net/ ; >
       au < crawling ; exists ; 2020 ; 2020 ; Metabarcoding and Metagenomics Volume 2020 ; 2020 ; https://mbmg.pensoft.net/ ; >
 
   }
@@ -634,7 +634,7 @@
       param[au_oai_set] = nucet
 
       au < frozen ; exists ; 2018 ; 2018 ; Nuclear Energy and Technology Volume 2018 ; 2018 ; https://nucet.pensoft.net/ ; >
-      au < crawling ; exists ; 2019 ; 2019 ; Nuclear Energy and Technology Volume 2019 ; 2019 ; https://nucet.pensoft.net/ ; >
+      au < frozen ; exists ; 2019 ; 2019 ; Nuclear Energy and Technology Volume 2019 ; 2019 ; https://nucet.pensoft.net/ ; >
       au < crawling ; exists ; 2020 ; 2020 ; Nuclear Energy and Technology Volume 2020 ; 2020 ; https://nucet.pensoft.net/ ; >
 
   }
@@ -671,7 +671,7 @@
       au < frozen ; exists ; 2016 ; 2016 ; Research Ideas and Outcomes Volume 2016 ; 2016 ; https://riojournal.com/ ; >
       au < frozen ; exists ; 2017 ; 2017 ; Research Ideas and Outcomes Volume 2017 ; 2017 ; https://riojournal.com/ ; >
       au < frozen ; exists ; 2018 ; 2018 ; Research Ideas and Outcomes Volume 2018 ; 2018 ; https://riojournal.com/ ; >
-      au < crawling ; exists ; 2019 ; 2019 ; Research Ideas and Outcomes Volume 2019 ; 2019 ; https://riojournal.com/ ; >
+      au < frozen ; exists ; 2019 ; 2019 ; Research Ideas and Outcomes Volume 2019 ; 2019 ; https://riojournal.com/ ; >
       au < crawling ; exists ; 2020 ; 2020 ; Research Ideas and Outcomes Volume 2020 ; 2020 ; https://riojournal.com/ ; >
 
   }
