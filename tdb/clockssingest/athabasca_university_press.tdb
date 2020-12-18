@@ -74,7 +74,7 @@
       param[journal_id] = irrodl
 
       au < ready ; exists ; 2011 ; International Review of Research in Open and Distance Learning (IRRODL) Volume 12 ; 12 ; 2011 ; >
-      au < ready ; exists ; 2017 ; International Review of Research in Open and Distance Learning (IRRODL) Volume 18 ; 18 ; 2017 ; >
+      au < crawling ; exists ; 2017 ; International Review of Research in Open and Distance Learning (IRRODL) Volume 18 ; 18 ; 2017 ; >
       au < crawling ; exists ; 2018 ; International Review of Research in Open and Distance Learning (IRRODL) Volume 19 ; 19 ; 2018 ; >
       au < crawling ; exists ; 2019 ; International Review of Research in Open and Distance Learning (IRRODL) Volume 20 ; 20 ; 2019 ; >
       au < crawling ; exists ; 2020 ; International Review of Research in Open and Distance Learning (IRRODL) Volume 21 ; 21 ; 2020 ; >
@@ -109,7 +109,7 @@
       au < manifest ; exists ; 2008 ; Journal of Distance Education Volume 22 ; 22 ; 2008 ; >
       au < manifest ; exists ; 2009 ; Journal of Distance Education Volume 23 ; 23 ; 2009 ; >
       au < frozen ; exists ; 2010 ; Journal of Distance Education Volume 24 ; 24 ; 2010 ; >
-      au < ready ; exists ; 2011 ; Journal of Distance Education Volume 25 ; 25 ; 2011 ; >
+      au < crawling ; exists ; 2011 ; Journal of Distance Education Volume 25 ; 25 ; 2011 ; >
       au < crawling ; exists ; 2012 ; Journal of Distance Education Volume 26 ; 26 ; 2012 ; >
       au < ready ; exists ; 2013 ; Journal of Distance Education Volume 27 ; 27 ; 2013 ; >
     }
@@ -316,10 +316,10 @@
       au < manifest ; exists ; 2006 ; Oral History Forum d'histoire orale Volume 26 ; 26 ; 2006 ; >
       au < manifest ; exists ; 2007-2008 ; Oral History Forum d'histoire orale Volume 27-28 ; 27-28 ; 2008 ; >
       au < manifest ; exists ; 2009 ; Oral History Forum d'histoire orale Volume 29 ; 29 ; 2009 ; >
-      au < ready ; exists ; 2010 ; Oral History Forum d'histoire orale Volume 30 ; 30 ; 2010 ; >
+      au < crawling ; exists ; 2010 ; Oral History Forum d'histoire orale Volume 30 ; 30 ; 2010 ; >
       au < frozen ; exists ; 2011 ; Oral History Forum d'histoire orale Volume 31 ; 31 ; 2011 ; >
 
-      au < ready ; exists ; 2017 ; Oral History Forum d'histoire orale Volume 37 ; 37 ; 2017 ; >
+      au < crawling ; exists ; 2017 ; Oral History Forum d'histoire orale Volume 37 ; 37 ; 2017 ; >
       au < crawling ; exists ; 2018 ; Oral History Forum d'histoire orale Volume 38 ; 38 ; 2018 ; >#one year embargo?
       au < expected ; exists ; 2019 ; Oral History Forum d'histoire orale Volume 39 ; 39 ; 2019 ; >
       au < expected ; exists ; 2020 ; Oral History Forum d'histoire orale Volume 40 ; 40 ; 2020 ; >
