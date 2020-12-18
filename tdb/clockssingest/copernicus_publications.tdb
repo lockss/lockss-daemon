@@ -439,7 +439,7 @@
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Drinking Water Engineering and Science Volume 10 ; 10 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Drinking Water Engineering and Science Volume 11 ; 11 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Drinking Water Engineering and Science Volume 12 ; 12 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; Drinking Water Engineering and Science Volume 13 ; 13 ; >
+      au < ready ; exists ; 2020 ; 2020 ; Drinking Water Engineering and Science Volume 13 ; 13 ; >
 
    }
 
@@ -462,7 +462,7 @@
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Earth Surface Dynamics Volume 5 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Earth Surface Dynamics Volume 6 ; 6 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Earth Surface Dynamics Volume 7 ; 7 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; Earth Surface Dynamics Volume 8 ; 8 ; >
+      au < ready ; exists ; 2020 ; 2020 ; Earth Surface Dynamics Volume 8 ; 8 ; >
 
    }
 
@@ -488,7 +488,7 @@
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Earth System Dynamics Volume 8 ; 8 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Earth System Dynamics Volume 9 ; 9 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Earth System Dynamics Volume 10 ; 10 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; Earth System Dynamics Volume 11 ; 11 ; >
+      au < ready ; exists ; 2020 ; 2020 ; Earth System Dynamics Volume 11 ; 11 ; >
 
    }
 
@@ -515,7 +515,7 @@
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Earth System Science Data Volume 9 ; 9 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Earth System Science Data Volume 10 ; 10 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Earth System Science Data Volume 11 ; 11 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; Earth System Science Data Volume 12 ; 12 ; >
+      au < ready ; exists ; 2020 ; 2020 ; Earth System Science Data Volume 12 ; 12 ; >
 
    }
 
@@ -617,7 +617,7 @@
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; E&G Quaternary Science Journal Volume 66 ; 66 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; E&G Quaternary Science Journal Volume 67 ; 67 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; E&G Quaternary Science Journal Volume 68 ; 68 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; E&G Quaternary Science Journal Volume 69 ; 69 ; >
+      au < ready ; exists ; 2020 ; 2020 ; E&G Quaternary Science Journal Volume 69 ; 69 ; >
 
   }
 
@@ -631,7 +631,7 @@
       param[base_url] = https://ejm.copernicus.org/
       param[home_url] = https://www.european-journal-of-mineralogy.net/
 
-      au < manifest ; exists ; 2020 ; 2020 ; European Journal of Mineralogy Volume 32 ; 32 ; >
+      au < ready ; exists ; 2020 ; 2020 ; European Journal of Mineralogy Volume 32 ; 32 ; >
 
    }
 
@@ -691,7 +691,7 @@
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Fossil Record Reports Volume 20 ; 20 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Fossil Record Reports Volume 21 ; 21 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Fossil Record Reports Volume 22 ; 22 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; Fossil Record Reports Volume 23 ; 23 ; >
+      au < ready ; exists ; 2020 ; 2020 ; Fossil Record Reports Volume 23 ; 23 ; >
 
    }
 
@@ -797,7 +797,7 @@
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Geographica Helvetica Volume 72 ; 72 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Geographica Helvetica Volume 73 ; 73 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Geographica Helvetica Volume 74 ; 74 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; Geographica Helvetica Volume 75 ; 75 ; >
+      au < ready ; exists ; 2020 ; 2020 ; Geographica Helvetica Volume 75 ; 75 ; >
 
    }
 
@@ -813,7 +813,7 @@
 
       au < manifest ; exists ; 2018 ; 2018 ; Geoscience Communication Volume 1 ; 1 ; >
       au < manifest ; exists ; 2019 ; 2019 ; Geoscience Communication Volume 2 ; 2 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; Geoscience Communication Volume 3 ; 3 ; >
+      au < ready ; exists ; 2020 ; 2020 ; Geoscience Communication Volume 3 ; 3 ; >
 
    }
 
@@ -837,7 +837,7 @@
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Geoscientific Instrumentation, Methods and Data Systems Volume 6 ; 6 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Geoscientific Instrumentation, Methods and Data Systems Volume 7 ; 7 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Geoscientific Instrumentation, Methods and Data Systems Volume 8 ; 8 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; Geoscientific Instrumentation, Methods and Data Systems Volume 9 ; 9 ; >
+      au < ready ; exists ; 2020 ; 2020 ; Geoscientific Instrumentation, Methods and Data Systems Volume 9 ; 9 ; >
 
    }
 
@@ -912,7 +912,7 @@
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; History of Geo- and Space Sciences Volume 8 ; 8 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; History of Geo- and Space Sciences Volume 9 ; 9 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; History of Geo- and Space Sciences Volume 10 ; 10 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; History of Geo- and Space Sciences Volume 11 ; 11 ; >
+      au < ready ; exists ; 2020 ; 2020 ; History of Geo- and Space Sciences Volume 11 ; 11 ; >
 
    }
 
@@ -1192,8 +1192,8 @@
       au < manifest ; exists ; 2017 ; 2017 ; Journal of Bone and Joint Infection Volume 2 ; 2 ; >
       au < manifest ; exists ; 2018 ; 2018 ; Journal of Bone and Joint Infection Volume 3 ; 3 ; >
       au < manifest ; exists ; 2019 ; 2019 ; Journal of Bone and Joint Infection Volume 4 ; 4 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; Journal of Bone and Joint Infection Volume 5 ; 5 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; Journal of Bone and Joint Infection Volume 6 ; 6 ; >
+      au < ready ; exists ; 2020 ; 2020 ; Journal of Bone and Joint Infection Volume 5 ; 5 ; >
+      au < ready ; exists ; 2020 ; 2020 ; Journal of Bone and Joint Infection Volume 6 ; 6 ; >
 
    }
 
@@ -1246,7 +1246,7 @@
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Journal of Micropalaeontology Volume 36 ; 36 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Journal of Micropalaeontology Volume 37 ; 37 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Journal of Micropalaeontology Volume 38 ; 38 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; Journal of Micropalaeontology Volume 39 ; 39 ; >
+      au < ready ; exists ; 2020 ; 2020 ; Journal of Micropalaeontology Volume 39 ; 39 ; >
 
   }
 
@@ -1270,7 +1270,7 @@
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Journal of Sensors and Sensor Systems Volume 6 ; 6 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Journal of Sensors and Sensor Systems Volume 7 ; 7 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Journal of Sensors and Sensor Systems Volume 8 ; 8 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; Journal of Sensors and Sensor Systems Volume 9 ; 9 ; >
+      au < ready ; exists ; 2020 ; 2020 ; Journal of Sensors and Sensor Systems Volume 9 ; 9 ; >
 
    }
 
@@ -1387,7 +1387,7 @@
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Nonlinear Processes in Geophysics Volume 24 ; 24 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Nonlinear Processes in Geophysics Volume 25 ; 25 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Nonlinear Processes in Geophysics Volume 26 ; 26 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; Nonlinear Processes in Geophysics Volume 27 ; 27 ; >
+      au < ready ; exists ; 2020 ; 2020 ; Nonlinear Processes in Geophysics Volume 27 ; 27 ; >
 
    }
 
@@ -1418,7 +1418,7 @@
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Ocean Science Volume 13 ; 13 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Ocean Science Volume 14 ; 14 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Ocean Science Volume 15 ; 15 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; Ocean Science Volume 16 ; 16 ; >
+      au < ready ; exists ; 2020 ; 2020 ; Ocean Science Volume 16 ; 16 ; >
 
    }
 
@@ -1676,7 +1676,7 @@
       param[base_url] = https://wcd.copernicus.org/
       param[home_url] = https://www.weather-climate-dynamics.net/
 
-      au < manifest ; exists ; 2020 ; 2020 ; Weather and Climate Dynamics Volume 1 ; 1 ; >
+      au < ready ; exists ; 2020 ; 2020 ; Weather and Climate Dynamics Volume 1 ; 1 ; >
 
    }
 
@@ -1709,7 +1709,7 @@
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Web Ecology Volume 17 ; 17 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Web Ecology Volume 18 ; 18 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Web Ecology Volume 19 ; 19 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; Web Ecology Volume 20 ; 20 ; >
+      au < ready ; exists ; 2020 ; 2020 ; Web Ecology Volume 20 ; 20 ; >
 
    }
 
@@ -1727,7 +1727,7 @@
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Wind Energy Science Volume 2 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Wind Energy Science Volume 3 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Wind Energy Science Volume 4 ; 4 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; Wind Energy Science Volume 5 ; 5 ; >
+      au < ready ; exists ; 2020 ; 2020 ; Wind Energy Science Volume 5 ; 5 ; >
 
    }
 
@@ -1742,7 +1742,7 @@
       param[home_url] = https://www.geochronology.net/
 
       au < exists ; exists ; 2019 ; 2019 ; Geochronology: Advances in Gechronological Science Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; Geochronology: Advances in Gechronological Science Volume 2 ; 2 ; >
+      au < ready ; exists ; 2020 ; 2020 ; Geochronology: Advances in Gechronological Science Volume 2 ; 2 ; >
 
    }
 
