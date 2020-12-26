@@ -211,7 +211,7 @@
       param[journal_code] = cc
 
       #complete. Missing back content 1996-2009. ****
-      au < ready ; exists ; 1996 ; Chemical Communications Volume 1996 ; 0 ; 1996 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 1996 ; Chemical Communications Volume 1996 ; 0 ; 1996 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 1997 ; Chemical Communications Volume 1997 ; 0 ; 1997 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 1998 ; Chemical Communications Volume 1998 ; 0 ; 1998 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 1999 ; Chemical Communications Volume 1999 ; 0 ; 1999 ; https://pubs.rsc.org/ ; >
@@ -2096,7 +2096,7 @@
       au < crawling ; exists ; 2003 ; Journal of the Chemical Society, Dalton Transactions Volume 2003 ; 0 ; 2003 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2004 ; Journal of the Chemical Society, Dalton Transactions Volume 2004 ; 0 ; 2004 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2005 ; Journal of the Chemical Society, Dalton Transactions Volume 2005 ; 0 ; 2005 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2006 ; Journal of the Chemical Society, Dalton Transactions Volume 2006 ; 0 ; 2006 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2006 ; Journal of the Chemical Society, Dalton Transactions Volume 2006 ; 0 ; 2006 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2007 ; Journal of the Chemical Society, Dalton Transactions Volume 2007 ; 0 ; 2007 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2008 ; Journal of the Chemical Society, Dalton Transactions Volume 2008 ; 0 ; 2008 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2009 ; Journal of the Chemical Society, Dalton Transactions Volume 2009 ; 0 ; 2009 ; https://pubs.rsc.org/ ; >

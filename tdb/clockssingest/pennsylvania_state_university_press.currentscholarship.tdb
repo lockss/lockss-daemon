@@ -151,7 +151,7 @@
       param[journal_id] = fscotfitzrevi
 
 
-      au < ready ; exists ; 2010 ; The F. Scott Fitzgerald Review Volume 8 ; 2010 ; https://www.jstor.org/ ; >
+      au < crawling ; exists ; 2010 ; The F. Scott Fitzgerald Review Volume 8 ; 2010 ; https://www.jstor.org/ ; >
       au < ready ; exists ; 2011 ; The F. Scott Fitzgerald Review Volume 9 ; 2011 ; https://www.jstor.org/ ; >
       au < finished ; manifest ; 2012 ; The F. Scott Fitzgerald Review Volume 10 ; 2012 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2013 ; The F. Scott Fitzgerald Review Volume 11 ; 2013 ; http://www.jstor.org/ ; reingest2.clockss.org:8085 >
@@ -572,7 +572,7 @@
       au < frozen ; exists ; 2016 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 83 ; 2016 ; http://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2017 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 84 ; 2017 ; http://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2018 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 85 ; 2018 ; https://www.jstor.org/ ; >
-      au < ready ; exists ; 2019 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 86 ; 2019 ; https://www.jstor.org/ ; >
+      au < crawling ; exists ; 2019 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 86 ; 2019 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2020 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 87 ; 2020 ; https://www.jstor.org/ ; >
 
   }
