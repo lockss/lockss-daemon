@@ -58,9 +58,9 @@
     au < manifest ; exists ; 2007 ; Journal of Legislation Volume 33 ; 33 ; https://scholarship.law.nd.edu/ ; >
     au < manifest ; exists ; 2008 ; Journal of Legislation Volume 34 ; 34 ; https://scholarship.law.nd.edu/ ; >
     au < manifest ; exists ; 2009 ; Journal of Legislation Volume 35 ; 35 ; https://scholarship.law.nd.edu/ ; >
-    au < manifest ; exists ; 2010 ; Journal of Legislation Volume 36 ; 36 ; https://scholarship.law.nd.edu/ ; >
-    au < manifest ; exists ; 2011 ; Journal of Legislation Volume 37 ; 37 ; https://scholarship.law.nd.edu/ ; >
-    au < manifest ; exists ; 2012 ; Journal of Legislation Volume 38 ; 38 ; https://scholarship.law.nd.edu/ ; >
+    au < ready ; exists ; 2010 ; Journal of Legislation Volume 36 ; 36 ; https://scholarship.law.nd.edu/ ; >
+    au < ready ; exists ; 2011 ; Journal of Legislation Volume 37 ; 37 ; https://scholarship.law.nd.edu/ ; >
+    au < ready ; exists ; 2012 ; Journal of Legislation Volume 38 ; 38 ; https://scholarship.law.nd.edu/ ; >
     au < finished ; finished ; 2013 ; Journal of Legislation Volume 39 ; 39 ; http://scholarship.law.nd.edu/ ; >
     au < finished ; finished ; 2014 ; Journal of Legislation Volume 40 ; 40 ; http://scholarship.law.nd.edu/ ; >
     au < finished ; finished ; 2015 ; Journal of Legislation Volume 41 ; 41 ; http://scholarship.law.nd.edu/ ; >
@@ -85,9 +85,9 @@
       param[journal_abbr] = ndjicl
 
       au < manifest ; exists ; 2011 ; Notre Dame Journal of International & Comparative Law Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2012 ; Notre Dame Journal of International & Comparative Law Volume 2 ; 2 ; >
-      au < manifest ; exists ; 2013 ; Notre Dame Journal of International & Comparative Law Volume 3 ; 3 ; >
-      au < manifest ; exists ; 2014 ; Notre Dame Journal of International & Comparative Law Volume 4 ; 4 ; >
+      au < ready ; exists ; 2012 ; Notre Dame Journal of International & Comparative Law Volume 2 ; 2 ; >
+      au < ready ; exists ; 2013 ; Notre Dame Journal of International & Comparative Law Volume 3 ; 3 ; >
+      au < ready ; exists ; 2014 ; Notre Dame Journal of International & Comparative Law Volume 4 ; 4 ; >
       au < finished ; finished ; 2015 ; Notre Dame Journal of International & Comparative Law Volume 5 ; 5 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2016 ; Notre Dame Journal of International & Comparative Law Volume 6 ; 6 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2017 ; Notre Dame Journal of International & Comparative Law Volume 7 ; 7 ; reingest4.clockss.org:8082 >
@@ -132,12 +132,12 @@
       au < manifest ; exists ; 2007 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 21 ; 21 ; >
       au < manifest ; exists ; 2008 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 22 ; 22 ; >
       au < manifest ; exists ; 2009 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 23 ; 23 ; >
-      au < manifest ; exists ; 2010 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 24 ; 24 ; >
-      au < manifest ; exists ; 2011 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 25 ; 25 ; >
-      au < manifest ; exists ; 2012 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 26 ; 26 ; >
-      au < manifest ; exists ; 2013 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 27 ; 27 ; >
-      au < manifest ; exists ; 2014 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 28 ; 28 ; >
-      au < manifest ; exists ; 2015 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 29 ; 29 ; >
+      au < ready ; exists ; 2010 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 24 ; 24 ; >
+      au < ready ; exists ; 2011 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 25 ; 25 ; >
+      au < ready ; exists ; 2012 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 26 ; 26 ; >
+      au < ready ; exists ; 2013 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 27 ; 27 ; >
+      au < ready ; exists ; 2014 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 28 ; 28 ; >
+      au < ready ; exists ; 2015 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 29 ; 29 ; >
       au < doesNotExist ; doesNotExist ; 2014 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 30 ; 30 ; >
       au < finished ; finished ; 2017 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 31 ; 31 ; reingest1.clockss.org:8082 >
       #nothing after 2017 as of 20201209
@@ -239,11 +239,11 @@
       au < manifest ; exists ; 2007 ; Notre Dame Law Review Volume 82 ; 82 ; >
       au < manifest ; exists ; 2008 ; Notre Dame Law Review Volume 83 ; 83 ; >
       au < manifest ; exists ; 2009 ; Notre Dame Law Review Volume 84 ; 84 ; >
-      au < manifest ; exists ; 2010 ; Notre Dame Law Review Volume 85 ; 85 ; >
-      au < manifest ; exists ; 2011 ; Notre Dame Law Review Volume 86 ; 86 ; >
-      au < manifest ; exists ; 2012 ; Notre Dame Law Review Volume 87 ; 87 ; >
-      au < manifest ; exists ; 2013 ; Notre Dame Law Review Volume 88 ; 88 ; >
-      au < manifest ; exists ; 2014 ; Notre Dame Law Review Volume 89 ; 89 ; >
+      au < ready ; exists ; 2010 ; Notre Dame Law Review Volume 85 ; 85 ; >
+      au < ready ; exists ; 2011 ; Notre Dame Law Review Volume 86 ; 86 ; >
+      au < ready ; exists ; 2012 ; Notre Dame Law Review Volume 87 ; 87 ; >
+      au < ready ; exists ; 2013 ; Notre Dame Law Review Volume 88 ; 88 ; >
+      au < ready ; exists ; 2014 ; Notre Dame Law Review Volume 89 ; 89 ; >
       au < finished ; finished ; 2015 ; Notre Dame Law Review Volume 90 ; 90 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2016 ; Notre Dame Law Review Volume 91 ; 91 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2017 ; Notre Dame Law Review Volume 92 ; 92 ; reingest4.clockss.org:8082 >
