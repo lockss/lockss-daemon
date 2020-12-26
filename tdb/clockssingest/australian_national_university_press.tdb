@@ -119,10 +119,10 @@
     
     param[journal_id] = agenda
     
-      #2006 needed recollection in new layout
+  	  #2006 needed recollection in new layout
       au < finished ; finished ; 2006 ; Agenda - A Journal of Policy Analysis and Reform Volume 13 ; 13 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2019 ; Agenda - A Journal of Policy Analysis and Reform Volume 26 ; 26 ; >
-      au < notReady ; exists ; 2020 ; Agenda - A Journal of Policy Analysis and Reform Volume 27 ; 27 ; > #no substance. coming soon as of 20201218
+      au < manifest ; exists ; 2020 ; Agenda - A Journal of Policy Analysis and Reform Volume 27 ; 27 ; >
 
     }
   }
