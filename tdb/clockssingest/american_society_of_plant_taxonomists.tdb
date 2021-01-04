@@ -54,8 +54,8 @@
       param[api_url] = https://api.ingentaconnect.com/
 
       au < ready ; exists ; 2018 ; Systematic Botany Volume 43 ; 43 ; >
-      au < ready ; exists ; 2019 ; Systematic Botany Volume 44 ; 44 ; >
-      au < ready ; exists ; 2020 ; Systematic Botany Volume 45 ; 45 ; >
+      au < crawling ; exists ; 2019 ; Systematic Botany Volume 44 ; 44 ; >
+      au < crawling ; exists ; 2020 ; Systematic Botany Volume 45 ; 45 ; >
     }
 
   }

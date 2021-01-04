@@ -2719,7 +2719,7 @@
     au < finished ; frozen ; 2017 ; Journal of Emergencies, Trauma, and Shock Volume 10 ; 2017 ; 10 ; http://www.onlinejets.org/ ; ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Journal of Emergencies, Trauma, and Shock Volume 11 ; 2018 ; 11 ; http://www.onlinejets.org/ ; ; >
     au < manifest ; exists ; 2019 ; Journal of Emergencies, Trauma, and Shock Volume 12 ; 2019 ; 12 ; https://www.onlinejets.org/ ; ; >
-    au < ready ; exists ; 2020 ; Journal of Emergencies, Trauma, and Shock Volume 13 ; 2020 ; 13 ; https://www.onlinejets.org/ ; ; >
+    au < crawling ; exists ; 2020 ; Journal of Emergencies, Trauma, and Shock Volume 13 ; 2020 ; 13 ; https://www.onlinejets.org/ ; ; >
 
   }
 
@@ -3157,7 +3157,7 @@
     au < finished ; finished ; 2017 ; Journal of Medical Physics Volume 42 ; 2017 ; 42 ; http://www.jmp.org.in/ ; ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2018 ; Journal of Medical Physics Volume 43 ; 2018 ; 43 ; http://www.jmp.org.in/ ; ; >
     au < manifest ; exists ; 2019 ; Journal of Medical Physics Volume 44 ; 2019 ; 44 ; https://www.jmp.org.in/ ; ; >
-    au < ready ; exists ; 2020 ; Journal of Medical Physics Volume 45 ; 2020 ; 45 ; https://www.jmp.org.in/ ; ; >
+    au < crawling ; exists ; 2020 ; Journal of Medical Physics Volume 45 ; 2020 ; 45 ; https://www.jmp.org.in/ ; ; >
 
   }
 
@@ -3461,7 +3461,7 @@
     au < finished ; finished ; 2017 ; Journal of Pharmacology and Pharmacotherapeutics Volume 8 ; 2017 ; 8 ; http://www.jpharmacol.com/ ; ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Journal of Pharmacology and Pharmacotherapeutics Volume 9 ; 2018 ; 9 ; http://www.jpharmacol.com/ ; ; >
     au < manifest ; exists ; 2019 ; Journal of Pharmacology and Pharmacotherapeutics Volume 10 ; 2019 ; 10 ; https://www.jpharmacol.com/ ; ; >
-    au < ready ; exists ; 2020 ; Journal of Pharmacology and Pharmacotherapeutics Volume 11 ; 2020 ; 11 ; https://www.jpharmacol.com/ ; ; >
+    au < crawling ; exists ; 2020 ; Journal of Pharmacology and Pharmacotherapeutics Volume 11 ; 2020 ; 11 ; https://www.jpharmacol.com/ ; ; >
 
   }
 
@@ -3818,7 +3818,7 @@
     au < finished ; frozen ; 2017 ; National Journal of Maxillofacial Surgery Volume 8 ; 2017 ; 8 ; http://www.njms.in/ ; ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; National Journal of Maxillofacial Surgery Volume 9 ; 2018 ; 9 ; http://www.njms.in/ ; ; >
     au < manifest ; exists ; 2019 ; National Journal of Maxillofacial Surgery Volume 10 ; 2019 ; 10 ; https://www.njms.in/ ; ; >
-    au < ready ; exists ; 2020 ; National Journal of Maxillofacial Surgery Volume 11 ; 2020 ; 11 ; https://www.njms.in/ ; ; >
+    au < crawling ; exists ; 2020 ; National Journal of Maxillofacial Surgery Volume 11 ; 2020 ; 11 ; https://www.njms.in/ ; ; >
 
   }
 
@@ -4283,7 +4283,7 @@
     au < finished ; frozen ; 2017 ; Saudi Journal of Anaesthesia Volume 11 ; 2017 ; 11 ; http://www.saudija.org/ ; ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2018 ; Saudi Journal of Anaesthesia Volume 12 ; 2018 ; 12 ; http://www.saudija.org/ ; ; >
     au < manifest ; exists ; 2019 ; Saudi Journal of Anaesthesia Volume 13 ; 2019 ; 13 ; https://www.saudija.org/ ; ; >
-    au < ready ; exists ; 2020 ; Saudi Journal of Anaesthesia Volume 14 ; 2020 ; 14 ; https://www.saudija.org/ ; ; >
+    au < crawling ; exists ; 2020 ; Saudi Journal of Anaesthesia Volume 14 ; 2020 ; 14 ; https://www.saudija.org/ ; ; >
 
   }
 
@@ -4467,7 +4467,7 @@
     au < finished ; finished ; 2017 ; Tropical Parasitology Volume 7 ; 2017 ; 7 ; http://www.tropicalparasitology.org/ ; ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Tropical Parasitology Volume 8 ; 2018 ; 8 ; http://www.tropicalparasitology.org/ ; ; >
     au < manifest ; exists ; 2019 ; Tropical Parasitology Volume 9 ; 2019 ; 9 ; https://www.tropicalparasitology.org/ ; ; >
-    au < ready ; exists ; 2020 ; Tropical Parasitology Volume 10 ; 2020 ; 10 ; https://www.tropicalparasitology.org/ ; ; >
+    au < crawling ; exists ; 2020 ; Tropical Parasitology Volume 10 ; 2020 ; 10 ; https://www.tropicalparasitology.org/ ; ; >
 
   }
 
@@ -4493,7 +4493,7 @@
     au < finished ; finished ; 2017 ; Urology Annals Volume 9 ; 2017 ; 9 ; http://www.urologyannals.com/ ; ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; Urology Annals Volume 10 ; 2018 ; 10 ; http://www.urologyannals.com/ ; ; >
     au < manifest ; exists ; 2019 ; Urology Annals Volume 11 ; 2019 ; 11 ; https://www.urologyannals.com/ ; ; >
-    au < ready ; exists ; 2020 ; Urology Annals Volume 12 ; 2020 ; 12 ; https://www.urologyannals.com/ ; ; >
+    au < crawling ; exists ; 2020 ; Urology Annals Volume 12 ; 2020 ; 12 ; https://www.urologyannals.com/ ; ; >
 
   }
 
@@ -7073,7 +7073,7 @@
       au < finished ; finished ; 2017 ; Journal of Oral Research and Review Volume 9 ; 2017 ; 9 ; http://www.jorr.org/ ; ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2018 ; Journal of Oral Research and Review Volume 10 ; 2018 ; 10 ; http://www.jorr.org/ ; ; >
       au < manifest ; exists ; 2019 ; Journal of Oral Research and Review Volume 11 ; 2019 ; 11 ; https://www.jorr.org/ ; ; >
-      au < ready ; exists ; 2020 ; Journal of Oral Research and Review Volume 12 ; 2020 ; 12 ; https://www.jorr.org/ ; ; >
+      au < crawling ; exists ; 2020 ; Journal of Oral Research and Review Volume 12 ; 2020 ; 12 ; https://www.jorr.org/ ; ; >
 
   }
 
@@ -7445,7 +7445,7 @@
       au < finished ; frozen ; 2017 ; Medical Gas Research Volume 7 ; 2017 ; 7 ; http://www.medgasres.com/ ; ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2018 ; Medical Gas Research Volume 8 ; 2018 ; 8 ; http://www.medgasres.com/ ; ; >
       au < manifest ; exists ; 2019 ; Medical Gas Research Volume 9 ; 2019 ; 9 ; https://www.medgasres.com/ ; ; >
-      au < ready ; exists ; 2020 ; Medical Gas Research Volume 10 ; 2020 ; 10 ; https://www.medgasres.com/ ; ; >
+      au < crawling ; exists ; 2020 ; Medical Gas Research Volume 10 ; 2020 ; 10 ; https://www.medgasres.com/ ; ; >
 
   }
 
@@ -7804,7 +7804,7 @@
       au < finished ; finished ; 2017 ; Pigment International Volume 4 ; 2017 ; 4 ; http://www.pigmentinternational.com/ ; ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2018 ; Pigment International Volume 5 ; 2018 ; 5 ; http://www.pigmentinternational.com/ ; ; >
       au < manifest ; exists ; 2019 ; Pigment International Volume 6 ; 2019 ; 6 ; https://www.pigmentinternational.com/ ; ; >
-      au < ready ; exists ; 2020 ; Pigment International Volume 7 ; 2020 ; 7 ; https://www.pigmentinternational.com/ ; ; >
+      au < crawling ; exists ; 2020 ; Pigment International Volume 7 ; 2020 ; 7 ; https://www.pigmentinternational.com/ ; ; >
 
   }
 
@@ -7945,7 +7945,7 @@
       au < finished ; finished ; 2017 ; Saudi Journal of Laparoscopy Volume 2 ; 2017 ; 2 ; http://www.saudijl.org/ ; ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018 ; Saudi Journal of Laparoscopy Volume 3 ; 2018 ; 3 ; http://www.saudijl.org/ ; ; >
       au < manifest ; exists ; 2019 ; Saudi Journal of Laparoscopy Volume 4 ; 2019 ; 4 ; https://www.saudijl.org/ ; ; >
-      au < ready ; exists ; 2020 ; Saudi Journal of Laparoscopy Volume 5 ; 2020 ; 5 ; https://www.saudijl.org/ ; ; >
+      au < crawling ; exists ; 2020 ; Saudi Journal of Laparoscopy Volume 5 ; 2020 ; 5 ; https://www.saudijl.org/ ; ; >
 
   }
 
@@ -8009,7 +8009,7 @@
       au < finished ; frozen ; 2017 ; Saudi Journal of Oral Sciences Volume 4 ; 2017 ; 4 ; http://www.saudijos.org/ ; ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2018 ; Saudi Journal of Oral Sciences Volume 5 ; 2018 ; 5 ; http://www.saudijos.org/ ; ; >
       au < manifest ; exists ; 2019 ; Saudi Journal of Oral Sciences Volume 6 ; 2019 ; 6 ; https://www.saudijos.org/ ; ; >
-      au < ready ; exists ; 2020 ; Saudi Journal of Oral Sciences Volume 7 ; 2020 ; 7 ; https://www.saudijos.org/ ; ; >
+      au < crawling ; exists ; 2020 ; Saudi Journal of Oral Sciences Volume 7 ; 2020 ; 7 ; https://www.saudijos.org/ ; ; >
 
   }
 
@@ -8309,7 +8309,7 @@
       au < finished ; finished ; 2017 ; The Journal of Association of Chest Physicians Volume 5 ; 2017 ; 5 ; http://www.jacpjournal.org/ ; ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018 ; The Journal of Association of Chest Physicians Volume 6 ; 2018 ; 6 ; http://www.jacpjournal.org/ ; ; >
       au < manifest ; exists ; 2019 ; The Journal of Association of Chest Physicians Volume 7 ; 2019 ; 7 ; https://www.jacpjournal.org/ ; ; >
-      au < ready ; exists ; 2020 ; The Journal of Association of Chest Physicians Volume 8 ; 2020 ; 8 ; https://www.jacpjournal.org/ ; ; >
+      au < crawling ; exists ; 2020 ; The Journal of Association of Chest Physicians Volume 8 ; 2020 ; 8 ; https://www.jacpjournal.org/ ; ; >
 
   }
 
@@ -9727,7 +9727,7 @@
       au < manifest ; exists ; 2017 ; Journal of Diabetology Volume 8 ; 2017 ; 8 ; https://www.journalofdiabetology.org/ ; ; >
       au < manifest ; exists ; 2018 ; Journal of Diabetology Volume 9 ; 2018 ; 9 ; https://www.journalofdiabetology.org/ ; ; >
       au < manifest ; exists ; 2019 ; Journal of Diabetology Volume 10 ; 2019 ; 10 ; https://www.journalofdiabetology.org/ ; ; >
-      au < ready ; exists ; 2020 ; Journal of Diabetology Volume 11 ; 2020 ; 11 ; https://www.journalofdiabetology.org/ ; ; >
+      au < crawling ; exists ; 2020 ; Journal of Diabetology Volume 11 ; 2020 ; 11 ; https://www.journalofdiabetology.org/ ; ; >
 
   }
 
@@ -9941,7 +9941,7 @@
 
       au < manifest ; exists ; 2018 ; Journal of Nature and Science of Medicine Volume 1 ; 2018 ; 1 ; https://www.jnsmonline.org/ ; ; >
       au < manifest ; exists ; 2019 ; Journal of Nature and Science of Medicine Volume 2 ; 2019 ; 2 ; https://www.jnsmonline.org/ ; ; >
-      au < ready ; exists ; 2020 ; Journal of Nature and Science of Medicine Volume 3 ; 2020 ; 3 ; https://www.jnsmonline.org/ ; ; >
+      au < crawling ; exists ; 2020 ; Journal of Nature and Science of Medicine Volume 3 ; 2020 ; 3 ; https://www.jnsmonline.org/ ; ; >
 
   }
 
@@ -10290,7 +10290,7 @@
       au < manifest ; exists ; 2017 ; Pediatric Respirology and Critical Care Medicine Volume 1 ; 2017 ; 1 ; https://www.prccm.org/ ; ; >
       au < manifest ; exists ; 2018 ; Pediatric Respirology and Critical Care Medicine Volume 2 ; 2018 ; 2 ; https://www.prccm.org/ ; ; >
       au < manifest ; exists ; 2019 ; Pediatric Respirology and Critical Care Medicine Volume 3 ; 2019 ; 3 ; https://www.prccm.org/ ; ; >
-      au < ready ; exists ; 2020 ; Pediatric Respirology and Critical Care Medicine Volume 4 ; 2020 ; 4 ; https://www.prccm.org/ ; ; >
+      au < crawling ; exists ; 2020 ; Pediatric Respirology and Critical Care Medicine Volume 4 ; 2020 ; 4 ; https://www.prccm.org/ ; ; >
 
   }
 

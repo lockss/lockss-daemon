@@ -165,7 +165,7 @@
       au < ready ; exists ; 2001 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 97 ; 97 ; 2001 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2002 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 98 ; 98 ; 2002 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2003 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 99 ; 99 ; 2003 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2004 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 100 ; 100 ; 2004 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2004 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 100 ; 100 ; 2004 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2005 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 101 ; 101 ; 2005 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2006 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 102 ; 102 ; 2006 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2007 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 103 ; 103 ; 2007 ; https://pubs.rsc.org/ ; >
@@ -222,7 +222,7 @@
       au < ready ; exists ; 2004 ; Chemical Communications Volume 2004 ; 0 ; 2004 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2005 ; Chemical Communications Volume 2005 ; 0 ; 2005 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2006 ; Chemical Communications Volume 2006 ; 0 ; 2006 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2007 ; Chemical Communications Volume 2007 ; 0 ; 2007 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2007 ; Chemical Communications Volume 2007 ; 0 ; 2007 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2008 ; Chemical Communications Volume 2008 ; 0 ; 2008 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2009 ; Chemical Communications Volume 2009 ; 0 ; 2009 ; https://pubs.rsc.org/ ; >
       au < zapped ; finished ; 2010 ; Chemical Communications Volume 46 ; 46 ; 2010 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
@@ -259,7 +259,7 @@
       au < ready ; exists ; 2001 ; Chemical Society Reviews Volume 30 ; 30 ; 2001 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2002 ; Chemical Society Reviews Volume 31 ; 31 ; 2002 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2003 ; Chemical Society Reviews Volume 32 ; 32 ; 2003 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2004 ; Chemical Society Reviews Volume 33 ; 33 ; 2004 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2004 ; Chemical Society Reviews Volume 33 ; 33 ; 2004 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2005 ; Chemical Society Reviews Volume 34 ; 34 ; 2005 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2006 ; Chemical Society Reviews Volume 35 ; 35 ; 2006 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2007 ; Chemical Society Reviews Volume 36 ; 36 ; 2007 ; https://pubs.rsc.org/ ; >
@@ -416,21 +416,21 @@
       param[journal_code] = fd
       comment[overcrawl] = overcrawl due to broken manifest pages, multiple volumes per year
 
-      au < ready ; exists ; 1996 ; Faraday Discussions Volume 103 ; 103 ; 1996 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 1996 ; Faraday Discussions Volume 104 ; 104 ; 1996 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 1996 ; Faraday Discussions Volume 103 ; 103 ; 1996 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 1996 ; Faraday Discussions Volume 104 ; 104 ; 1996 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 1996 ; Faraday Discussions Volume 105 ; 105 ; 1996 ; https://pubs.rsc.org/ ; >
 
       au < crawling ; exists ; 1997 ; Faraday Discussions Volume 106 ; 106 ; 1997 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 1997 ; Faraday Discussions Volume 107 ; 107 ; 1997 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 1997 ; Faraday Discussions Volume 108 ; 108 ; 1997 ; https://pubs.rsc.org/ ; >
 
-      au < ready ; exists ; 1998 ; Faraday Discussions Volume 109 ; 109 ; 1998 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 1998 ; Faraday Discussions Volume 109 ; 109 ; 1998 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 1998 ; Faraday Discussions Volume 110 ; 110 ; 1998 ; https://pubs.rsc.org/ ; >
 
       au < ready ; exists ; 1999 ; Faraday Discussions Volume 111 ; 111 ; 1999 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 1999 ; Faraday Discussions Volume 112 ; 112 ; 1999 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 1999 ; Faraday Discussions Volume 113 ; 113 ; 1999 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 1999 ; Faraday Discussions Volume 114 ; 114 ; 1999 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 1999 ; Faraday Discussions Volume 114 ; 114 ; 1999 ; https://pubs.rsc.org/ ; >
 
       au < frozen ; exists ; 2000 ; Faraday Discussions Volume 115 ; 115 ; 2000 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2000 ; Faraday Discussions Volume 116 ; 116 ; 2000 ; https://pubs.rsc.org/ ; >
@@ -468,7 +468,7 @@
 
       au < crawling ; exists ; 2009 ; Faraday Discussions Volume 140 ; 140 ; 2009 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2009 ; Faraday Discussions Volume 141 ; 141 ; 2009 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2009 ; Faraday Discussions Volume 142 ; 142 ; 2009 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2009 ; Faraday Discussions Volume 142 ; 142 ; 2009 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2009 ; Faraday Discussions Volume 143 ; 143 ; 2009 ; https://pubs.rsc.org/ ; >
 
       au < finished ; finished ; 2010 ; Faraday Discussions Volume 144 ; 144 ; 2010 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
@@ -652,7 +652,7 @@
       au < ready ; exists ; 1997 ; Journal of Analytical Atomic Spectrometry Volume 12 ; 12 ; 1997 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 1998 ; Journal of Analytical Atomic Spectrometry Volume 13 ; 13 ; 1998 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 1999 ; Journal of Analytical Atomic Spectrometry Volume 14 ; 14 ; 1999 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2000 ; Journal of Analytical Atomic Spectrometry Volume 15 ; 15 ; 2000 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2000 ; Journal of Analytical Atomic Spectrometry Volume 15 ; 15 ; 2000 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2001 ; Journal of Analytical Atomic Spectrometry Volume 16 ; 16 ; 2001 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2002 ; Journal of Analytical Atomic Spectrometry Volume 17 ; 17 ; 2002 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2003 ; Journal of Analytical Atomic Spectrometry Volume 18 ; 18 ; 2003 ; https://pubs.rsc.org/ ; >
@@ -712,8 +712,8 @@
       au < crawling ; exists ; 2003 ; Journal of Environmental Monitoring Volume 5 ; 5 ; 2003 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2004 ; Journal of Environmental Monitoring Volume 6 ; 6 ; 2004 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2005 ; Journal of Environmental Monitoring Volume 7 ; 7 ; 2005 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2006 ; Journal of Environmental Monitoring Volume 8 ; 8 ; 2006 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2007 ; Journal of Environmental Monitoring Volume 9 ; 9 ; 2007 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2006 ; Journal of Environmental Monitoring Volume 8 ; 8 ; 2006 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2007 ; Journal of Environmental Monitoring Volume 9 ; 9 ; 2007 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2008 ; Journal of Environmental Monitoring Volume 10 ; 10 ; 2008 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2009 ; Journal of Environmental Monitoring Volume 11 ; 11 ; 2009 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2010 ; Journal of Environmental Monitoring Volume 12 ; 12 ; 2010 ; http://pubs.rsc.org/ ; >
@@ -740,10 +740,10 @@
       au < ready ; exists ; 2000 ; Journal of Materials Chemistry Volume 10 ; 10 ; 2000 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2001 ; Journal of Materials Chemistry Volume 11 ; 11 ; 2001 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2002 ; Journal of Materials Chemistry Volume 12 ; 12 ; 2002 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2003 ; Journal of Materials Chemistry Volume 13 ; 13 ; 2003 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2003 ; Journal of Materials Chemistry Volume 13 ; 13 ; 2003 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2004 ; Journal of Materials Chemistry Volume 14 ; 14 ; 2004 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2005 ; Journal of Materials Chemistry Volume 15 ; 15 ; 2005 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2006 ; Journal of Materials Chemistry Volume 16 ; 16 ; 2006 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2006 ; Journal of Materials Chemistry Volume 16 ; 16 ; 2006 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2007 ; Journal of Materials Chemistry Volume 17 ; 17 ; 2007 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2008 ; Journal of Materials Chemistry Volume 18 ; 18 ; 2008 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2009 ; Journal of Materials Chemistry Volume 19 ; 19 ; 2009 ; https://pubs.rsc.org/ ; >
@@ -768,7 +768,7 @@
       au < crawling ; exists ; 2001 ; Lab on a Chip Volume 1 ; 1 ; 2001 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2002 ; Lab on a Chip Volume 2 ; 2 ; 2002 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2003 ; Lab on a Chip Volume 3 ; 3 ; 2003 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2004 ; Lab on a Chip Volume 4 ; 4 ; 2004 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2004 ; Lab on a Chip Volume 4 ; 4 ; 2004 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2005 ; Lab on a Chip Volume 5 ; 5 ; 2005 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2006 ; Lab on a Chip Volume 6 ; 6 ; 2006 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2007 ; Lab on a Chip Volume 7 ; 7 ; 2007 ; https://pubs.rsc.org/ ; >
@@ -826,7 +826,7 @@
       param[journal_code] = mb
 
       #complete
-      au < ready ; exists ; 2005 ; Molecular BioSystems Volume 1 ; 1 ; 2005 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2005 ; Molecular BioSystems Volume 1 ; 1 ; 2005 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2006 ; Molecular BioSystems Volume 2 ; 2 ; 2006 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2007 ; Molecular BioSystems Volume 3 ; 3 ; 2007 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2008 ; Molecular BioSystems Volume 4 ; 4 ; 2008 ; https://pubs.rsc.org/ ; >
@@ -980,7 +980,7 @@
       au < ready ; exists ; 2003 ; Organic & Biomolecular Chemistry Volume 1 ; 1 ; 2003 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2004 ; Organic & Biomolecular Chemistry Volume 2 ; 2 ; 2004 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2005 ; Organic & Biomolecular Chemistry Volume 3 ; 3 ; 2005 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2006 ; Organic & Biomolecular Chemistry Volume 4 ; 4 ; 2006 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2006 ; Organic & Biomolecular Chemistry Volume 4 ; 4 ; 2006 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2007 ; Organic & Biomolecular Chemistry Volume 5 ; 5 ; 2007 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2008 ; Organic & Biomolecular Chemistry Volume 6 ; 6 ; 2008 ; https://pubs.rsc.org/ ; >
       au < finished ; manifest ; 2009 ; Organic & Biomolecular Chemistry Volume 7 ; 7 ; 2009 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
@@ -1045,14 +1045,14 @@
       au < manifest ; exists ; 1999 ; Physical Chemistry Chemical Physics Volume 1 ; 1 ; 1999 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2000 ; Physical Chemistry Chemical Physics Volume 2 ; 2 ; 2000 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2001 ; Physical Chemistry Chemical Physics Volume 3 ; 3 ; 2001 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2002 ; Physical Chemistry Chemical Physics Volume 4 ; 4 ; 2002 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2002 ; Physical Chemistry Chemical Physics Volume 4 ; 4 ; 2002 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2003 ; Physical Chemistry Chemical Physics Volume 5 ; 5 ; 2003 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2004 ; Physical Chemistry Chemical Physics Volume 6 ; 6 ; 2004 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2005 ; Physical Chemistry Chemical Physics Volume 7 ; 7 ; 2005 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2006 ; Physical Chemistry Chemical Physics Volume 8 ; 8 ; 2006 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2007 ; Physical Chemistry Chemical Physics Volume 9 ; 9 ; 2007 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2008 ; Physical Chemistry Chemical Physics Volume 10 ; 10 ; 2008 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2009 ; Physical Chemistry Chemical Physics Volume 11 ; 11 ; 2009 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2009 ; Physical Chemistry Chemical Physics Volume 11 ; 11 ; 2009 ; https://pubs.rsc.org/ ; >
       au < zapped ; finished ; 2010 ; Physical Chemistry Chemical Physics Volume 12 ; 12 ; 2010 ; http://pubs.rsc.org/ ; >
       au < zapped ; finished ; 2011 ; Physical Chemistry Chemical Physics Volume 13 ; 13 ; 2011 ; http://pubs.rsc.org/ ; >
       au < finished ; manifest ; 2012 ; Physical Chemistry Chemical Physics Volume 14 ; 14 ; 2012 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
@@ -1082,7 +1082,7 @@
       au < ready ; exists ; 2006 ; Soft Matter Volume 2 ; 2 ; 2006 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2007 ; Soft Matter Volume 3 ; 3 ; 2007 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2008 ; Soft Matter Volume 4 ; 4 ; 2008 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2009 ; Soft Matter Volume 5 ; 5 ; 2009 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2009 ; Soft Matter Volume 5 ; 5 ; 2009 ; https://pubs.rsc.org/ ; >
       au < finished ; manifest ; 2010 ; Soft Matter Volume 6 ; 6 ; 2010 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2011 ; Soft Matter Volume 7 ; 7 ; 2011 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2012 ; Soft Matter Volume 8 ; 8 ; 2012 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
@@ -1644,7 +1644,7 @@
       #complete
       au < manifest ; exists ; 2000 ; Geochemical Transactions Volume 1 ; 1 ; 2000 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2001 ; Geochemical Transactions Volume 2 ; 2 ; 2001 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2002 ; Geochemical Transactions Volume 3 ; 3 ; 2002 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2002 ; Geochemical Transactions Volume 3 ; 3 ; 2002 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2003 ; Geochemical Transactions Volume 4 ; 4 ; 2003 ; https://pubs.rsc.org/ ; >
 
   }
@@ -2092,14 +2092,14 @@
       au < manifest ; exists ; 1999 ; Journal of the Chemical Society, Dalton Transactions Volume 1999 ; 0 ; 1999 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2000 ; Journal of the Chemical Society, Dalton Transactions Volume 2000 ; 0 ; 2000 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2001 ; Journal of the Chemical Society, Dalton Transactions Volume 2001 ; 0 ; 2001 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2002 ; Journal of the Chemical Society, Dalton Transactions Volume 2002 ; 0 ; 2002 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2002 ; Journal of the Chemical Society, Dalton Transactions Volume 2002 ; 0 ; 2002 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2003 ; Journal of the Chemical Society, Dalton Transactions Volume 2003 ; 0 ; 2003 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2004 ; Journal of the Chemical Society, Dalton Transactions Volume 2004 ; 0 ; 2004 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2005 ; Journal of the Chemical Society, Dalton Transactions Volume 2005 ; 0 ; 2005 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2006 ; Journal of the Chemical Society, Dalton Transactions Volume 2006 ; 0 ; 2006 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2007 ; Journal of the Chemical Society, Dalton Transactions Volume 2007 ; 0 ; 2007 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2008 ; Journal of the Chemical Society, Dalton Transactions Volume 2008 ; 0 ; 2008 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2009 ; Journal of the Chemical Society, Dalton Transactions Volume 2009 ; 0 ; 2009 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2009 ; Journal of the Chemical Society, Dalton Transactions Volume 2009 ; 0 ; 2009 ; https://pubs.rsc.org/ ; >
 
   }
 
