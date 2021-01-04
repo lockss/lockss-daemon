@@ -39,7 +39,7 @@
       implicit < status ; status2 ; year ; name ; param[year] >
 
       au < zapped ; finished ; 2014 ; Elsevier Source Content 2014 ; 2014 >
-      au < readySource ; finished ; 2015 ; Elsevier Source Content 2015 ; 2015 >
+      au < zapped ; finished ; 2015 ; Elsevier Source Content 2015 ; 2015 >
       au < zapped ; finished ; 2016 ; Elsevier Source Content 2016 ; 2016 >
       #no more AUs expected for this plugin
 
@@ -76,19 +76,19 @@
       au < zapped ; finished ; 2018 ; Elsevier Source Content 2018_9 ; 2018_9 > #never success on anu for one file
       au < zapped ; finished ; 2018 ; Elsevier Source Content 2018_10 ; 2018_10 >
       au < zapped ; finished ; 2018 ; Elsevier Source Content 2018_11 ; 2018_11 >
-      au < readySource ; finished ; 2018 ; Elsevier Source Content 2018_12 ; 2018_12 >
+      au < zapped ; finished ; 2018 ; Elsevier Source Content 2018_12 ; 2018_12 >
 
-      au < readySource ; finished ; 2019 ; Elsevier Source Content 2019_1 ; 2019_1 >
-      au < readySource ; finished ; 2019 ; Elsevier Source Content 2019_2 ; 2019_2 >
-      au < readySource ; finished ; 2019 ; Elsevier Source Content 2019_3 ; 2019_3 >
-      au < readySource ; finished ; 2019 ; Elsevier Source Content 2019_4 ; 2019_4 >
-      au < readySource ; finished ; 2019 ; Elsevier Source Content 2019_5 ; 2019_5 >
-      au < readySource ; finished ; 2019 ; Elsevier Source Content 2019_6 ; 2019_6 >
-      au < readySource ; finished ; 2019 ; Elsevier Source Content 2019_7 ; 2019_7 >
-      au < readySource ; finished ; 2019 ; Elsevier Source Content 2019_8 ; 2019_8 >
-      au < readySource ; finished ; 2019 ; Elsevier Source Content 2019_9 ; 2019_9 >
-      au < readySource ; finished ; 2019 ; Elsevier Source Content 2019_10 ; 2019_10 >
-      au < readySource ; finished ; 2019 ; Elsevier Source Content 2019_11 ; 2019_11 >
+      au < zapped ; finished ; 2019 ; Elsevier Source Content 2019_1 ; 2019_1 >
+      au < zapped ; finished ; 2019 ; Elsevier Source Content 2019_2 ; 2019_2 >
+      au < zapped ; finished ; 2019 ; Elsevier Source Content 2019_3 ; 2019_3 >
+      au < zapped ; finished ; 2019 ; Elsevier Source Content 2019_4 ; 2019_4 >
+      au < zapped ; finished ; 2019 ; Elsevier Source Content 2019_5 ; 2019_5 >
+      au < zapped ; finished ; 2019 ; Elsevier Source Content 2019_6 ; 2019_6 >
+      au < zapped ; finished ; 2019 ; Elsevier Source Content 2019_7 ; 2019_7 >
+      au < zapped ; finished ; 2019 ; Elsevier Source Content 2019_8 ; 2019_8 >
+      au < zapped ; finished ; 2019 ; Elsevier Source Content 2019_9 ; 2019_9 >
+      au < zapped ; finished ; 2019 ; Elsevier Source Content 2019_10 ; 2019_10 >
+      au < zapped ; finished ; 2019 ; Elsevier Source Content 2019_11 ; 2019_11 >
       au < readySource ; frozen ; 2019 ; Elsevier Source Content 2019_12 ; 2019_12 >
 
       au < readySource ; crawling ; 2020 ; Elsevier Source Content 2020_1 ; 2020_1 >
