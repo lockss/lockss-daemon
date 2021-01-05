@@ -1,0 +1,236 @@
+{
+
+  publisher <
+    name = Seismological Society of America ;
+    info[contract] = 2012 ;
+    info[tester] = 8 ;
+    info[poller] = 2
+  >
+  
+    pluginPrefix = org.lockss.plugin.highwire.
+    implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
+
+  {
+  
+    title <
+      name = Bulletin of the Seismological Society of America ;
+      issn = 0037-1106 ;
+      eissn = 1943-3573 ;
+      issnl = 0037-1106
+    >
+
+      param[base_url] = http://www.bssaonline.org/
+
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1911 ; Bulletin of the Seismological Society of America Volume 1 ; 1 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1912 ; Bulletin of the Seismological Society of America Volume 2 ; 2 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1913 ; Bulletin of the Seismological Society of America Volume 3 ; 3 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1914 ; Bulletin of the Seismological Society of America Volume 4 ; 4 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1915 ; Bulletin of the Seismological Society of America Volume 5 ; 5 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1916 ; Bulletin of the Seismological Society of America Volume 6 ; 6 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1917 ; Bulletin of the Seismological Society of America Volume 7 ; 7 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1918 ; Bulletin of the Seismological Society of America Volume 8 ; 8 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1919 ; Bulletin of the Seismological Society of America Volume 9 ; 9 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1920 ; Bulletin of the Seismological Society of America Volume 10 ; 10 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1921 ; Bulletin of the Seismological Society of America Volume 11 ; 11 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1922 ; Bulletin of the Seismological Society of America Volume 12 ; 12 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1923 ; Bulletin of the Seismological Society of America Volume 13 ; 13 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1924 ; Bulletin of the Seismological Society of America Volume 14 ; 14 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1925 ; Bulletin of the Seismological Society of America Volume 15 ; 15 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1926 ; Bulletin of the Seismological Society of America Volume 16 ; 16 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1927 ; Bulletin of the Seismological Society of America Volume 17 ; 17 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1928 ; Bulletin of the Seismological Society of America Volume 18 ; 18 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1929 ; Bulletin of the Seismological Society of America Volume 19 ; 19 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1930 ; Bulletin of the Seismological Society of America Volume 20 ; 20 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1931 ; Bulletin of the Seismological Society of America Volume 21 ; 21 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1932 ; Bulletin of the Seismological Society of America Volume 22 ; 22 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1933 ; Bulletin of the Seismological Society of America Volume 23 ; 23 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1934 ; Bulletin of the Seismological Society of America Volume 24 ; 24 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1935 ; Bulletin of the Seismological Society of America Volume 25 ; 25 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1936 ; Bulletin of the Seismological Society of America Volume 26 ; 26 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1937 ; Bulletin of the Seismological Society of America Volume 27 ; 27 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1938 ; Bulletin of the Seismological Society of America Volume 28 ; 28 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1939 ; Bulletin of the Seismological Society of America Volume 29 ; 29 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1940 ; Bulletin of the Seismological Society of America Volume 30 ; 30 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1941 ; Bulletin of the Seismological Society of America Volume 31 ; 31 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1942 ; Bulletin of the Seismological Society of America Volume 32 ; 32 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1943 ; Bulletin of the Seismological Society of America Volume 33 ; 33 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1944 ; Bulletin of the Seismological Society of America Volume 34 ; 34 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1945 ; Bulletin of the Seismological Society of America Volume 35 ; 35 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1946 ; Bulletin of the Seismological Society of America Volume 36 ; 36 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1947 ; Bulletin of the Seismological Society of America Volume 37 ; 37 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1948 ; Bulletin of the Seismological Society of America Volume 38 ; 38 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1949 ; Bulletin of the Seismological Society of America Volume 39 ; 39 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1950 ; Bulletin of the Seismological Society of America Volume 40 ; 40 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1951 ; Bulletin of the Seismological Society of America Volume 41 ; 41 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1952 ; Bulletin of the Seismological Society of America Volume 42 ; 42 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1953 ; Bulletin of the Seismological Society of America Volume 43 ; 43 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1954 ; Bulletin of the Seismological Society of America Volume 44 ; 44 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1955 ; Bulletin of the Seismological Society of America Volume 45 ; 45 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1956 ; Bulletin of the Seismological Society of America Volume 46 ; 46 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1957 ; Bulletin of the Seismological Society of America Volume 47 ; 47 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1958 ; Bulletin of the Seismological Society of America Volume 48 ; 48 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1959 ; Bulletin of the Seismological Society of America Volume 49 ; 49 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1960 ; Bulletin of the Seismological Society of America Volume 50 ; 50 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1961 ; Bulletin of the Seismological Society of America Volume 51 ; 51 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1962 ; Bulletin of the Seismological Society of America Volume 52 ; 52 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1963 ; Bulletin of the Seismological Society of America Volume 53 ; 53 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1964 ; Bulletin of the Seismological Society of America Volume 54 ; 54 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1965 ; Bulletin of the Seismological Society of America Volume 55 ; 55 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1966 ; Bulletin of the Seismological Society of America Volume 56 ; 56 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1967 ; Bulletin of the Seismological Society of America Volume 57 ; 57 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1968 ; Bulletin of the Seismological Society of America Volume 58 ; 58 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1969 ; Bulletin of the Seismological Society of America Volume 59 ; 59 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1970 ; Bulletin of the Seismological Society of America Volume 60 ; 60 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1971 ; Bulletin of the Seismological Society of America Volume 61 ; 61 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1972 ; Bulletin of the Seismological Society of America Volume 62 ; 62 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1973 ; Bulletin of the Seismological Society of America Volume 63 ; 63 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1974 ; Bulletin of the Seismological Society of America Volume 64 ; 64 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1975 ; Bulletin of the Seismological Society of America Volume 65 ; 65 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1976 ; Bulletin of the Seismological Society of America Volume 66 ; 66 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1977 ; Bulletin of the Seismological Society of America Volume 67 ; 67 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1978 ; Bulletin of the Seismological Society of America Volume 68 ; 68 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1979 ; Bulletin of the Seismological Society of America Volume 69 ; 69 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 1980 ; Bulletin of the Seismological Society of America Volume 70 ; 70 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 1981 ; Bulletin of the Seismological Society of America Volume 71 ; 71 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 1982 ; Bulletin of the Seismological Society of America Volume 72 ; 72 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 1983 ; Bulletin of the Seismological Society of America Volume 73 ; 73 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 1984 ; Bulletin of the Seismological Society of America Volume 74 ; 74 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 1985 ; Bulletin of the Seismological Society of America Volume 75 ; 75 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 1986 ; Bulletin of the Seismological Society of America Volume 76 ; 76 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 1987 ; Bulletin of the Seismological Society of America Volume 77 ; 77 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 1988 ; Bulletin of the Seismological Society of America Volume 78 ; 78 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 1989 ; Bulletin of the Seismological Society of America Volume 79 ; 79 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1990 ; Bulletin of the Seismological Society of America Volume 80 ; 80 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1991 ; Bulletin of the Seismological Society of America Volume 81 ; 81 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1992 ; Bulletin of the Seismological Society of America Volume 82 ; 82 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1993 ; Bulletin of the Seismological Society of America Volume 83 ; 83 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 1994 ; Bulletin of the Seismological Society of America Volume 84 ; 84 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 1995 ; Bulletin of the Seismological Society of America Volume 85 ; 85 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1996 ; Bulletin of the Seismological Society of America Volume 86 ; 86 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1997 ; Bulletin of the Seismological Society of America Volume 87 ; 87 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1998 ; Bulletin of the Seismological Society of America Volume 88 ; 88 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 1999 ; Bulletin of the Seismological Society of America Volume 89 ; 89 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; manifest ; 2000 ; Bulletin of the Seismological Society of America Volume 90 ; 90 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2001 ; Bulletin of the Seismological Society of America Volume 91 ; 91 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2002 ; Bulletin of the Seismological Society of America Volume 92 ; 92 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; manifest ; 2003 ; Bulletin of the Seismological Society of America Volume 93 ; 93 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; manifest ; 2004 ; Bulletin of the Seismological Society of America Volume 94 ; 94 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; manifest ; 2005 ; Bulletin of the Seismological Society of America Volume 95 ; 95 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2006 ; Bulletin of the Seismological Society of America Volume 96 ; 96 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2007 ; Bulletin of the Seismological Society of America Volume 97 ; 97 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; Bulletin of the Seismological Society of America Volume 98 ; 98 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; manifest ; 2009 ; Bulletin of the Seismological Society of America Volume 99 ; 99 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010 ; Bulletin of the Seismological Society of America Volume 100 ; 100 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; manifest ; 2011 ; Bulletin of the Seismological Society of America Volume 101 ; 101 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; manifest ; 2012 ; Bulletin of the Seismological Society of America Volume 102 ; 102 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; manifest ; 2013 ; Bulletin of the Seismological Society of America Volume 103 ; 103 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 2014 ; Bulletin of the Seismological Society of America Volume 104 ; 104 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 2015 ; Bulletin of the Seismological Society of America Volume 105 ; 105 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; manifest ; 2016 ; Bulletin of the Seismological Society of America Volume 106 ; 106 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2017 ; Bulletin of the Seismological Society of America Volume 107 [superseded] ; 107 ; >
+
+  }
+
+  {
+
+    title <
+      name = Seismological Research Letters ;
+      issn = 0895-0695 ;
+      eissn = 1938-2057 
+     >
+
+    param[base_url] = http://srl.geoscienceworld.org/
+
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1929-1930 ; Seismological Research Letters Volume 1 ; 1 ; reingest2.clockss.org:8085 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1930-1931 ; Seismological Research Letters Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1931-1932 ; Seismological Research Letters Volume 3 ; 3 ; reingest4.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1932-1933 ; Seismological Research Letters Volume 4 ; 4 ; reingest5.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1933-1934 ; Seismological Research Letters Volume 5 ; 5 ; reingest1.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1934-1935 ; Seismological Research Letters Volume 6 ; 6 ; reingest2.clockss.org:8085 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1935-1936 ; Seismological Research Letters Volume 7 ; 7 ; reingest3.clockss.org:8083 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1936-1937 ; Seismological Research Letters Volume 8 ; 8 ; reingest4.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1937-1938 ; Seismological Research Letters Volume 9 ; 9 ; reingest5.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1938-1939 ; Seismological Research Letters Volume 10 ; 10 ; reingest1.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1939-1940 ; Seismological Research Letters Volume 11 ; 11 ; reingest2.clockss.org:8085 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1940-1941 ; Seismological Research Letters Volume 12 ; 12 ; reingest3.clockss.org:8083 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1941-1942 ; Seismological Research Letters Volume 13 ; 13 ; reingest4.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1942-1943 ; Seismological Research Letters Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1943-1944 ; Seismological Research Letters Volume 15 ; 15 ; reingest1.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1944-1945 ; Seismological Research Letters Volume 16 ; 16 ; reingest2.clockss.org:8085 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1945-1946 ; Seismological Research Letters Volume 17 ; 17 ; reingest3.clockss.org:8083 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1946-1947 ; Seismological Research Letters Volume 18 ; 18 ; reingest4.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1947-1948 ; Seismological Research Letters Volume 19 ; 19 ; reingest5.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1948-1949 ; Seismological Research Letters Volume 20 ; 20 ; reingest1.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1950 ; Seismological Research Letters Volume 21 ; 21 ; reingest2.clockss.org:8085 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1951 ; Seismological Research Letters Volume 22 ; 22 ; reingest3.clockss.org:8083 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1952 ; Seismological Research Letters Volume 23 ; 23 ; reingest4.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1953 ; Seismological Research Letters Volume 24 ; 24 ; reingest5.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1954 ; Seismological Research Letters Volume 25 ; 25 ; reingest1.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1955 ; Seismological Research Letters Volume 26 ; 26 ; reingest2.clockss.org:8085 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1956 ; Seismological Research Letters Volume 27 ; 27 ; reingest3.clockss.org:8083 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1957 ; Seismological Research Letters Volume 28 ; 28 ; reingest4.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1958 ; Seismological Research Letters Volume 29 ; 29 ; reingest5.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1959 ; Seismological Research Letters Volume 30 ; 30 ; reingest1.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1960 ; Seismological Research Letters Volume 31 ; 31 ; reingest2.clockss.org:8085 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1961 ; Seismological Research Letters Volume 32 ; 32 ; reingest3.clockss.org:8083 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1962 ; Seismological Research Letters Volume 33 ; 33 ; reingest4.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1963 ; Seismological Research Letters Volume 34 ; 34 ; reingest5.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1964 ; Seismological Research Letters Volume 35 ; 35 ; reingest1.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1965 ; Seismological Research Letters Volume 36 ; 36 ; reingest2.clockss.org:8085 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1966 ; Seismological Research Letters Volume 37 ; 37 ; reingest3.clockss.org:8083 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1967 ; Seismological Research Letters Volume 38 ; 38 ; reingest4.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1968 ; Seismological Research Letters Volume 39 ; 39 ; reingest5.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1969 ; Seismological Research Letters Volume 40 ; 40 ; reingest1.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1970 ; Seismological Research Letters Volume 41 ; 41 ; reingest2.clockss.org:8085 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1971 ; Seismological Research Letters Volume 42 ; 42 ; reingest3.clockss.org:8083 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1972 ; Seismological Research Letters Volume 43 ; 43 ; reingest4.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1973 ; Seismological Research Letters Volume 44 ; 44 ; reingest5.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1974 ; Seismological Research Letters Volume 45 ; 45 ; reingest1.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1975 ; Seismological Research Letters Volume 46 ; 46 ; reingest2.clockss.org:8085 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1976 ; Seismological Research Letters Volume 47 ; 47 ; reingest3.clockss.org:8083 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1977 ; Seismological Research Letters Volume 48 ; 48 ; reingest4.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1978-1979 ; Seismological Research Letters Volume 49 ; 49 ; reingest5.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1979 ; Seismological Research Letters Volume 50 ; 50 ; reingest1.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1980 ; Seismological Research Letters Volume 51 ; 51 ; reingest2.clockss.org:8085 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1981 ; Seismological Research Letters Volume 52 ; 52 ; reingest3.clockss.org:8083 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1982 ; Seismological Research Letters Volume 53 ; 53 ; reingest4.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1983 ; Seismological Research Letters Volume 54 ; 54 ; reingest5.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1984 ; Seismological Research Letters Volume 55 ; 55 ; reingest1.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1985 ; Seismological Research Letters Volume 56 ; 56 ; reingest2.clockss.org:8085 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1986 ; Seismological Research Letters Volume 57 ; 57 ; reingest3.clockss.org:8083 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1987 ; Seismological Research Letters Volume 58 ; 58 ; reingest4.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1988 ; Seismological Research Letters Volume 59 ; 59 ; reingest5.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1989 ; Seismological Research Letters Volume 60 ; 60 ; reingest1.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1990 ; Seismological Research Letters Volume 61 ; 61 ; reingest2.clockss.org:8085 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1991 ; Seismological Research Letters Volume 62 ; 62 ; reingest3.clockss.org:8083 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1992 ; Seismological Research Letters Volume 63 ; 63 ; reingest4.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1993 ; Seismological Research Letters Volume 64 ; 64 ; reingest5.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1994 ; Seismological Research Letters Volume 65 ; 65 ; reingest1.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1995 ; Seismological Research Letters Volume 66 ; 66 ; reingest2.clockss.org:8085 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1996 ; Seismological Research Letters Volume 67 ; 67 ; reingest3.clockss.org:8083 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1997 ; Seismological Research Letters Volume 68 ; 68 ; reingest4.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1998 ; Seismological Research Letters Volume 69 ; 69 ; reingest5.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 1999 ; Seismological Research Letters Volume 70 ; 70 ; reingest1.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; manifest ; 2000 ; Seismological Research Letters Volume 71 ; 71 ; reingest2.clockss.org:8085 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; manifest ; 2001 ; Seismological Research Letters Volume 72 ; 72 ; reingest3.clockss.org:8083 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; manifest ; 2002 ; Seismological Research Letters Volume 73 ; 73 ; reingest4.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; manifest ; 2003 ; Seismological Research Letters Volume 74 ; 74 ; reingest5.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; manifest ; 2004 ; Seismological Research Letters Volume 75 ; 75 ; reingest1.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; manifest ; 2005 ; Seismological Research Letters Volume 76 ; 76 ; reingest2.clockss.org:8085 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; manifest ; 2006 ; Seismological Research Letters Volume 77 ; 77 ; reingest3.clockss.org:8083 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; manifest ; 2007 ; Seismological Research Letters Volume 78 ; 78 ; reingest4.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; manifest ; 2008 ; Seismological Research Letters Volume 79 ; 79 ; reingest5.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; manifest ; 2009 ; Seismological Research Letters Volume 80 ; 80 ; reingest1.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; manifest ; 2010 ; Seismological Research Letters Volume 81 ; 81 ; reingest3.clockss.org:8083 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; manifest ; 2011 ; Seismological Research Letters Volume 82 ; 82 ; reingest2.clockss.org:8085 >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Seismological Research Letters Volume 83 ; 83 ; reingest2.clockss.org:8085 >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Seismological Research Letters Volume 84 ; 84 ; reingest4.clockss.org:8082 >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Seismological Research Letters Volume 85 ; 85 ; >
+    au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2015 ; Seismological Research Letters Volume 86 [superseded] ; 86 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; finished ; 2015 ; Seismological Research Letters Volume 86 ; 86 ; reingest1.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; finished ; 2016 ; Seismological Research Letters Volume 87 ; 87 ; reingest2.clockss.org:8085 >
+    au < gsw.ClockssGSWDrupalPlugin ; superseded ; exists ; 2017 ; Seismological Research Letters Volume 88 [superseded] ; 88 ; >
+
+  }
+  
+}
