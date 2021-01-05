@@ -5,9 +5,9 @@
     info[tester] = 8 
  >
  
-  plugin = org.lockss.plugin.utsepress.ClockssUTSePressBookPlugin
+  plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkBookPlugin
   param[base_url] = https://utsepress.lib.uts.edu.au/
-  implicit < status ; year ; isbn ; eisbn ; param[book_uri] ; name ;  hidden[proxy] >
+  implicit < status ; year ; isbn ; eisbn ; param[book_doi] ; name ;  hidden[proxy] >
 
   {
 
