@@ -66,7 +66,7 @@
     #notReady: V10 no substance. 
     
     au < crawling ; exists ; 2008 ; 1 ; BioRisk Volume 2008 ; 2008 ; https://biorisk.pensoft.net/ ; >
-    au < crawling ; exists ; 2009 ; 2-3 ; BioRisk Volume 2009 ; 2009 ; https://biorisk.pensoft.net/ ; >
+    au < frozen ; exists ; 2009 ; 2-3 ; BioRisk Volume 2009 ; 2009 ; https://biorisk.pensoft.net/ ; >
     au < frozen ; exists ; 2010 ; 4-5 ; BioRisk Volume 2010 ; 2010 ; https://biorisk.pensoft.net/ ; >
     au < crawling ; exists ; 2011 ; 6 ; BioRisk Volume 2011 ; 2011 ; https://biorisk.pensoft.net/ ; >
     au < finished ; finished ; 2012 ; 7 ; BioRisk Volume 2012 ; 2012 ; http://biorisk.pensoft.net/ ; >
@@ -302,7 +302,7 @@
     param[au_oai_set] = zookeys
 #    param[base_url] = http://zookeys.pensoft.net/
     
-    au < crawling ; exists ; 2008 ; 1-4 ; ZooKeys Volume 2008 ; 2008 ; https://zookeys.pensoft.net/ ; >
+    au < frozen ; exists ; 2008 ; 1-4 ; ZooKeys Volume 2008 ; 2008 ; https://zookeys.pensoft.net/ ; >
     au < crawling ; exists ; 2009 ; 5-31 ; ZooKeys Volume 2009 ; 2009 ; https://zookeys.pensoft.net/ ; >
     au < crawling ; exists ; 2010 ; 32-73 ; ZooKeys Volume 2010 ; 2010 ; https://zookeys.pensoft.net/ ; >
     au < crawling ; exists ; 2011 ; 74-160 ; ZooKeys Volume 2011 ; 2011 ; https://zookeys.pensoft.net/ ; >
@@ -408,7 +408,7 @@
       au < frozen ; exists ; 2016 ; 2016 ; BioDiscovery Volume 2016 ; 2016 ; https://biodiscovery.pensoft.net/ ; >
       au < frozen ; exists ; 2017 ; 2017 ; BioDiscovery Volume 2017 ; 2017 ; https://biodiscovery.pensoft.net/ ; >
       au < frozen ; exists ; 2018 ; 2018 ; BioDiscovery Volume 2018 ; 2018 ; https://biodiscovery.pensoft.net/ ; >
-      au < crawling ; exists ; 2019 ; 2019 ; BioDiscovery Volume 2019 ; 2019 ; https://biodiscovery.pensoft.net/ ; >
+      au < frozen ; exists ; 2019 ; 2019 ; BioDiscovery Volume 2019 ; 2019 ; https://biodiscovery.pensoft.net/ ; >
       au < crawling ; exists ; 2020 ; 2020 ; BioDiscovery Volume 2020 ; 2020 ; https://biodiscovery.pensoft.net/ ; >
 
   }
@@ -547,7 +547,7 @@
     au < frozen ; exists ; 2016 ; 10 ; Comparative Cytogenetics Volume 2016 ; 2016 ; https://compcytogen.pensoft.net/ ; >
     au < frozen ; exists ; 2017 ; 11 ; Comparative Cytogenetics Volume 2017 ; 2017 ; https://compcytogen.pensoft.net/ ; >
     au < deepCrawl ; exists ; 2018 ; 12 ; Comparative Cytogenetics Volume 2018 ; 2018 ; https://compcytogen.pensoft.net/ ; >
-    au < crawling ; exists ; 2019 ; 13 ; Comparative Cytogenetics Volume 2019 ; 2019 ; https://compcytogen.pensoft.net/ ; >
+    au < frozen ; exists ; 2019 ; 13 ; Comparative Cytogenetics Volume 2019 ; 2019 ; https://compcytogen.pensoft.net/ ; >
     au < crawling ; exists ; 2020 ; 14 ; Comparative Cytogenetics Volume 2020 ; 2020 ; https://compcytogen.pensoft.net/ ; >
 
    }

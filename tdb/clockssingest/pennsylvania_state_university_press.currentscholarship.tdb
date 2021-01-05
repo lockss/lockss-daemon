@@ -32,7 +32,7 @@
       au < manifest ; exists ; 2008 ; The Chaucer Review Volume 2008 ; 2008 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2009 ; The Chaucer Review Volume 2009 ; 2009 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2010 ; The Chaucer Review Volume 2010 ; 2010 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2011 ; The Chaucer Review Volume 2011 ; 2011 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2011 ; The Chaucer Review Volume 2011 ; 2011 ; https://www.jstor.org/ ; >
       au < finished ; manifest ; 2012 ; The Chaucer Review Volume 2012 ; 2012 ; http://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2013 ; The Chaucer Review Volume 2013 ; 2013 ; http://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2014 ; The Chaucer Review Volume 2014 ; 2014 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 > #java.lang.UnsupportedOperationException
@@ -383,7 +383,7 @@
       # volume numbers don't line up with years - how to handle already processed content?
 
       au < frozen ; exists ; 2010 ; Journal of Modern Periodical Studies Volume 1 ; 2010 ; http://www.jstor.org/ ; >
-      au < crawling ; exists ; 2011 ; Journal of Modern Periodical Studies Volume 2 ; 2011 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2011 ; Journal of Modern Periodical Studies Volume 2 ; 2011 ; https://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Journal of Modern Periodical Studies Volume 3 ; 2012 ; https://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2013-2014 ; Journal of Modern Periodical Studies Volume 4 ; 2013 ; https://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2014-2015 ; Journal of Modern Periodical Studies Volume 4-5 ; 2014 ; https://www.jstor.org/ ; >
@@ -412,7 +412,7 @@
       au < manifest ; exists ; 2008 ; Journal of Moravian History Volume 2008 ; 2008 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2009 ; Journal of Moravian History Volume 2009 ; 2009 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2010 ; Journal of Moravian History Volume 2010 ; 2010 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2011 ; Journal of Moravian History Volume 2011 ; 2011 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2011 ; Journal of Moravian History Volume 2011 ; 2011 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2012 ; Journal of Moravian History Volume 12 ; 2012 ; http://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Journal of Moravian History Volume 13 ; 2013 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2014 ; Journal of Moravian History Volume 14 ; 2014 ; http://www.jstor.org/ ; >
@@ -460,7 +460,7 @@
 
       param[journal_id] = jspecphil
 
-      au < crawling ; exists ; 2010 ; The Journal of Speculative Philosophy Volume 24 ; 2010 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2010 ; The Journal of Speculative Philosophy Volume 24 ; 2010 ; https://www.jstor.org/ ; >
       au < ready ; exists ; 2011 ; The Journal of Speculative Philosophy Volume 25 ; 2011 ; https://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2012 ; The Journal of Speculative Philosophy Volume 26 ; 2012 ; https://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2013 ; The Journal of Speculative Philosophy Volume 27 ; 2013 ; https://www.jstor.org/ ; >
@@ -486,7 +486,7 @@
       param[journal_id] = marktwaij
       
 
-      au < crawling ; exists ; 2010 ; The Mark Twain Annual Volume 8 ; 2010 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2010 ; The Mark Twain Annual Volume 8 ; 2010 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2011 ; The Mark Twain Annual Volume 9 ; 2011 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2012 ; The Mark Twain Annual Volume 10 ; 2012 ; http://www.jstor.org/ ; >
       au < frozen ; exists ; 2013 ; The Mark Twain Annual Volume 11 ; 2013 ; http://www.jstor.org/ ; >
@@ -691,7 +691,7 @@
       param[journal_id] = soundings
 
       au < crawling ; exists ; 2010 ; Soundings: An Interdisciplinary Journal Volume 93 ; 2010 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2011 ; Soundings: An Interdisciplinary Journal Volume 94 ; 2011 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2011 ; Soundings: An Interdisciplinary Journal Volume 94 ; 2011 ; https://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Soundings: An Interdisciplinary Journal Volume 95 ; 2012 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2013 ; Soundings: An Interdisciplinary Journal Volume 96 ; 2013 ; http://www.jstor.org/ ; >
       au < frozen ; exists ; 2014 ; Soundings: An Interdisciplinary Journal Volume 97 ; 2014 ; http://www.jstor.org/ ; >
@@ -766,7 +766,7 @@
       param[journal_id] = transportationj
 
       au < crawling ; exists ; 2010 ; Transportation Journal Volume 49 ; 2010 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2011 ; Transportation Journal Volume 50 ; 2011 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2011 ; Transportation Journal Volume 50 ; 2011 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2012 ; Transportation Journal Volume 51 ; 2012 ; http://www.jstor.org/ ; >
       au < frozen ; exists ; 2013 ; Transportation Journal Volume 52 ; 2013 ; http://www.jstor.org/ ; >
       au < frozen ; exists ; 2014 ; Transportation Journal Volume 53 ; 2014 ; http://www.jstor.org/ ; >
@@ -907,7 +907,7 @@
       au < exists ; exists ; 2008 ; The Arthur Miller Journal Volume 3 ; 2008 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2009 ; The Arthur Miller Journal Volume 4 ; 2009 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2010 ; The Arthur Miller Journal Volume 5 ; 2010 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2011 ; The Arthur Miller Journal Volume 6 ; 2011 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2011 ; The Arthur Miller Journal Volume 6 ; 2011 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2012 ; The Arthur Miller Journal Volume 7 ; 2012 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2013 ; The Arthur Miller Journal Volume 8 ; 2013 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2014 ; The Arthur Miller Journal Volume 9 ; 2014 ; https://www.jstor.org/ ; >
@@ -1669,7 +1669,7 @@
       au < exists ; exists ; 2007 ; Style Volume 2007 ; 2007 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2008 ; Style Volume 2008 ; 2008 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2009 ; Style Volume 2009 ; 2009 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2010 ; Style Volume 2010 ; 2010 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2010 ; Style Volume 2010 ; 2010 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2011 ; Style Volume 2011 ; 2011 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2012 ; Style Volume 2012 ; 2012 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2013 ; Style Volume 2013 ; 2013 ; https://www.jstor.org/ ; >
@@ -1701,7 +1701,7 @@
       au < exists ; exists ; 2008 ; The Cormac McCarthy Journal Volume 6 ; 2008 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2009 ; The Cormac McCarthy Journal Volume 7 ; 2009 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2010 ; The Cormac McCarthy Journal Volume 8 ; 2010 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2011 ; The Cormac McCarthy Journal Volume 9 ; 2011 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2011 ; The Cormac McCarthy Journal Volume 9 ; 2011 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2012 ; The Cormac McCarthy Journal Volume 10 ; 2012 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2013 ; The Cormac McCarthy Journal Volume 11 ; 2013 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2014 ; The Cormac McCarthy Journal Volume 12 ; 2014 ; https://www.jstor.org/ ; >

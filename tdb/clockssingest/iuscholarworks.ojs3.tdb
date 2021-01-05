@@ -478,7 +478,7 @@
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Journal of the Scholarship of Teaching and Learning Volume 16 ; 16 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Journal of the Scholarship of Teaching and Learning Volume 17 ; 17 ; >
       au < finished ; manifest ; 2018 ; 2018 ; Journal of the Scholarship of Teaching and Learning Volume 18 ; 18 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2019 ; 2019 ; Journal of the Scholarship of Teaching and Learning Volume 19 ; 19 ; >
+      au < frozen ; exists ; 2019 ; 2019 ; Journal of the Scholarship of Teaching and Learning Volume 19 ; 19 ; >
       #no 2020 as of 12/5/2020
 
   }
@@ -607,7 +607,7 @@
       au < finished ; manifest ; 2014 ; 2014 ; New Views on Gender Volume 15 ; 15 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2015 ; 2015 ; New Views on Gender Volume 16 ; 16 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2016 ; 2016 ; New Views on Gender Volume 17 ; 17 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2017 ; 2017 ; New Views on Gender Volume 18 [2017] ; 18 ; >
+      au < frozen ; exists ; 2017 ; 2017 ; New Views on Gender Volume 18 [2017] ; 18 ; >
       au < doesNotExist ; doesNotExist ; 2018 ; 2018 ; New Views on Gender Volume 18 [2018] ; 18 ; >
       au < ready ; exists ; 2019 ; 2019 ; New Views on Gender Volume 19 ; 19 ; >
 
@@ -884,7 +884,7 @@
          au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Indiana University Undergraduate Research Journal Volume 2015 ; 1 ; >
          au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Indiana University Undergraduate Research Journal Volume 2016 ; 2 ; >
          au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Indiana University Undergraduate Research Journal Volume 2017 ; 3 ; >
-         au < crawling ; exists ; 2018 ; 2018 ; Indiana University Undergraduate Research Journal Volume 2018 ; 4 ; >
+         au < frozen ; exists ; 2018 ; 2018 ; Indiana University Undergraduate Research Journal Volume 2018 ; 4 ; >
          au < ready ; exists ; 2019 ; 2019 ; Indiana University Undergraduate Research Journal Volume 2019 ; 5 ; >
       }
   }
@@ -998,7 +998,7 @@
 
       au < notReady ; exists ; 2017 ; 2017 ; Studies in Digital Heritage Volume 1 ; 1 ; > #500 error on malformed url. https://scholarworks.iu.edu/journals/index.php/sdh/article/download/23331/%20/en.wikipedia.org/wiki/Goldilocks_principle
       au < finished ; manifest ; 2018 ; 2018 ; Studies in Digital Heritage Volume 2 ; 2 ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2019 ; 2019 ; Studies in Digital Heritage Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2019 ; 2019 ; Studies in Digital Heritage Volume 3 ; 3 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Studies in Digital Heritage Volume 4 ; 4 ; >
 
   }
