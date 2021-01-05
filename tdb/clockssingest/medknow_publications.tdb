@@ -1934,38 +1934,36 @@
    >
 
 #    param[base_url] = http://www.ijstd.org/
-    param[journal_issn] = 0253-7184
+    {
+    #new issn and eissn -- changed since 2017
+    param[journal_issn] = 2589-0557
 
     au < exists ; exists ; 2007 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 28 ; 2007 ; 28 ; https://www.ijstd.org/ ; ; >
     au < exists ; exists ; 2008 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 29 ; 2008 ; 29 ; https://www.ijstd.org/ ; ; >
     au < exists ; exists ; 2009 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 30 ; 2009 ; 30 ; https://www.ijstd.org/ ; ; >
     au < exists ; exists ; 2010 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 31 ; 2010 ; 31 ; https://www.ijstd.org/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 32 ; 2011 ; 32 ; https://www.ijstd.org/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 33 ; 2012 ; 33 ; https://www.ijstd.org/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 34 ; 2013 ; 34 ; https://www.ijstd.org/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 35 ; 2014 ; 35 ; https://www.ijstd.org/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 36 ; 2015 ; 36 ; https://www.ijstd.org/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 37 ; 2016 ; 37 ; https://www.ijstd.org/ ; ; >
+    au < finished ; finished ; 2017 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 38 ; 2017 ; 38 ; http://www.ijstd.org/ ; ; reingest4.clockss.org:8082 >
+    au < deepCrawl ; exists ; 2018 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 39 ; 2018 ; 39 ; http://www.ijstd.org/ ; ; >
+    au < manifest ; exists ; 2019 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 40 ; 2019 ; 40 ; https://www.ijstd.org/ ; ; >
+    au < manifest ; exists ; 2020 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 41 ; 2020 ; 41 ; https://www.ijstd.org/ ; ; >
+    }
+    {
+    param[journal_issn] = 0253-7184
+    #old issn. issn changed.
+
     au < finished ; frozen ; 2011 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 32 ; 2011 ; 32 ; http://www.ijstd.org/ ; ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2012 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 33 ; 2012 ; 33 ; http://www.ijstd.org/ ; ; >
     au < finished ; finished ; 2013 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 34 ; 2013 ; 34 ; http://www.ijstd.org/ ; ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2014 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 35 ; 2014 ; 35 ; http://www.ijstd.org/ ; ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2015 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 36 ; 2015 ; 36 ; http://www.ijstd.org/ ; ; reingest4.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2016 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 37 ; 2016 ; 37 ; http://www.ijstd.org/ ; ; >
-
-  }
-
-  {
-    title <
-      name = Indian Journal of Sexually Transmitted Diseases and AIDS ;
-      issn = 2589-0557 ;
-      eissn = 2589-0565 ;
-      issnl = 2589-0557
-   >
-
-#    param[base_url] = http://www.ijstd.org/
-    param[journal_issn] = 2589-0557
-    #issn and eissn changed since 2017
-
-    au < finished ; finished ; 2017 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 38 ; 2017 ; 38 ; http://www.ijstd.org/ ; ; reingest4.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2018 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 39 ; 2018 ; 39 ; http://www.ijstd.org/ ; ; >
-    au < manifest ; exists ; 2019 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 40 ; 2019 ; 40 ; https://www.ijstd.org/ ; ; >
-    au < manifest ; exists ; 2020 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 41 ; 2020 ; 41 ; https://www.ijstd.org/ ; ; >
-
+    au < frozen ; exists ; 2016 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 37 ; 2016 ; 37 ; http://www.ijstd.org/ ; ; >
+    }
   }
 
   {
