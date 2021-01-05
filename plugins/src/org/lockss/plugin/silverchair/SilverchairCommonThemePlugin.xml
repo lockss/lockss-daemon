@@ -10,7 +10,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>4</string>
+        <string>5</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -167,9 +167,12 @@
     </entry>
     <entry>
         <string>au_substance_url_pattern</string>
+        <!--
+           https://pubs.geoscienceworld.org/gsa/gsabulletin/article-pdf/131/1-2/3/4604549/3.pdf
+        -->
         <!-- long PDF patterns are article PDF, shorter PDF patterns are for supplement PDF -->
         <list>
-            <string>"%s%s/article-pdf/.*\.pdf$", base_url, journal_id</string>
+            <string>"%s([^/]+/)?%s/article-pdf/.*\.pdf$", base_url, journal_id</string>
             <string>"^https?://([^/]+\.silverchair-cdn\.com)/[^?]+pdf\?Expires=2147483647"</string>
         </list>
     </entry>
@@ -190,6 +193,25 @@
             </entry>
         </map>
     </entry>
+    <!--
+    <entry>
+        <string>plugin_article_iterator_factory</string>
+        <string>org.lockss.plugin.silverchair.SilverchairCommonThemeV2ArticleIteratorFactory</string>
+    </entry>
+    <entry>
+        <string>plugin_article_metadata_extractor_factory</string>
+        <string>org.lockss.plugin.silverchair.SilverchairCommonThemeV2ArticleIteratorFactory</string>
+    </entry>
+    <entry>
+        <string>text/html_metadata_extractor_factory_map</string>
+        <map>
+            <entry>
+                <string>*</string>
+                <string>org.lockss.plugin.silverchair.ScHtmlMetadataExtractorFactory</string>
+            </entry>
+        </map>
+    </entry>
+    -->
     <!--  for http to https conversion support -->
     <entry>
         <string>plugin_url_fetcher_factory</string>

@@ -47,8 +47,9 @@ import org.lockss.util.Logger;
 public class BaseScArticleIteratorFactory
     implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
   
-  private static String ROOT_TEMPLATE = "\"%s%s/article\", base_url, journal_id";
-  private static String PATTERN_TEMPLATE = "\"^%s%s/article(-abstract)?/\", base_url, journal_id";
+  private static String ROOT_TEMPLATE = "\"%s%s\", base_url, journal_id";
+  private static String PATTERN_TEMPLATE =  "\"%s%s/article(-abstract)?\", base_url, journal_id";
+  //  //https://pubs.geoscienceworld.org/gsa/gsabulletin/article/132/1-2/113/570559/Vegetation-and-habitat-change-in-southern
   //https://academic.oup.com/psychsocgerontology/article/66B/1/109/580460
   private static Pattern HTML_PATTERN = Pattern.compile("/article/([^/]+)/(.*)$", Pattern.CASE_INSENSITIVE);
   private static String HTML_REPLACEMENT = "/article/$1/$2";
@@ -64,11 +65,7 @@ public class BaseScArticleIteratorFactory
     return Logger.getLogger(BaseScArticleIteratorFactory.class);
   }
 
-  protected static String getROOT_TEMPLATE() {
-    return ROOT_TEMPLATE;
-  }
-
-  protected static String getPATTERN_TEMPLATE() {
+  protected String getPATTERN_TEMPLATE() {
     return PATTERN_TEMPLATE;
   }
 
@@ -92,11 +89,11 @@ public class BaseScArticleIteratorFactory
     return PDF_PATTERN;
   }
 
-  protected static String getRootTemplate() {
+  protected String getRootTemplate() {
     return ROOT_TEMPLATE;
   }
 
-  protected static String getPatternTemplate() {
+  protected String getPatternTemplate() {
     return PATTERN_TEMPLATE;
   }
 
@@ -127,7 +124,7 @@ public class BaseScArticleIteratorFactory
     SubTreeArticleIteratorBuilder builder = localBuilderCreator(au);
     if (getRootTemplate() != null && getPatternTemplate() != null) {
       builder.setSpec(target,
-          getRootTemplate(),
+              Arrays.asList(getRootTemplate()),
           getPatternTemplate(), Pattern.CASE_INSENSITIVE);
     }
     if (getHtmlPattern() != null && getHtmlReplacement() != null) {

@@ -54,11 +54,13 @@ public class IwapArticleIteratorFactory extends BaseScArticleIteratorFactory {
     return Logger.getLogger(IwapArticleIteratorFactory.class);
   }
 
-  protected static String getRootTemplate() {
+  @Override
+  protected String getRootTemplate() {
     return ROOT_TEMPLATE;
   }
 
-  protected static String getPatternTemplate() {
+  @Override
+  protected String getPatternTemplate() {
     return PATTERN_TEMPLATE;
   }
 
