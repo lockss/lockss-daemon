@@ -35,6 +35,8 @@ public class GigaScienceAPIXmlMetadataExtractorFactory extends SourceXmlMetadata
                                        CachedUrl cu, ArticleMetadata thisAM) {
 
             log.debug3("in GigaScienceAPI  postCookProcess");
+            thisAM.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_FILE);
+            thisAM.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_FILE);
 
         }
     }
