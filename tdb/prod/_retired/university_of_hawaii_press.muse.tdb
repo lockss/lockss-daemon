@@ -7,8 +7,8 @@
   {
     title <
       name = Archives of Asian Art ;
-      issn = 1944-6497 ;
-      eissn = 0066-6637 ;
+      issn = 0066-6637 ;
+      eissn = 1944-6497 ;
       issnl = 0066-6637
     >
 
@@ -22,12 +22,12 @@
 
         param[base_url] = http://muse.jhu.edu/
 
-        au < down ; 2008 ; Archives of Asian Art Volume 58 ; 58 >
-        au < down ; 2009 ; Archives of Asian Art Volume 59 ; 59 >
-        au < down ; 2010 ; Archives of Asian Art Volume 60 ; 60 >
-        au < down ; 2011 ; Archives of Asian Art Volume 61 ; 61 >
-        au < down ; 2012 ; Archives of Asian Art Volume 62 ; 62 >
-        au < down ; 2013 ; Archives of Asian Art Volume 63 ; 63 >
+        au < superseded ; 2008 ; Archives of Asian Art Volume 58 [superseded] ; 58 >
+        au < superseded ; 2009 ; Archives of Asian Art Volume 59 [superseded] ; 59 >
+        au < superseded ; 2010 ; Archives of Asian Art Volume 60 [superseded] ; 60 >
+        au < superseded ; 2011 ; Archives of Asian Art Volume 61 [superseded] ; 61 >
+        au < superseded ; 2012 ; Archives of Asian Art Volume 62 [superseded] ; 62 >
+        au < superseded ; 2013 ; Archives of Asian Art Volume 63 [superseded] ; 63 >
 
       }
 
@@ -35,7 +35,7 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < down ; 2014 ; Archives of Asian Art Volume 64 ; 64 >
+        au < superseded ; 2014 ; Archives of Asian Art Volume 64 [superseded] ; 64 >
         au < doNotProcess ; 2015 ; Archives of Asian Art Volume 65 ; 65 >
         au < doNotProcess ; 2016 ; Archives of Asian Art Volume 66 ; 66 >
 
