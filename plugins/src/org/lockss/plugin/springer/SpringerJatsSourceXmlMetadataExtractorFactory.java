@@ -32,6 +32,7 @@ package org.lockss.plugin.springer;
 
  */
 
+import org.lockss.config.TdbAu;
 import org.lockss.daemon.PluginException;
 import org.lockss.daemon.ShouldNotHappenException;
 import org.lockss.extractor.ArticleMetadata;
@@ -128,6 +129,15 @@ public class SpringerJatsSourceXmlMetadataExtractorFactory extends SourceXmlMeta
                     thisAM.put(MetadataField.FIELD_DATE, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_edate));
                 }
             }
+
+            String publisherName = "Springer";
+
+            TdbAu tdbau = cu.getArchivalUnit().getTdbAu();
+            if (tdbau != null) {
+                publisherName =  tdbau.getPublisherName();
+            }
+
+            thisAM.put(MetadataField.FIELD_PUBLISHER, publisherName);
         }
 
     }

@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -81,5 +81,11 @@
         <string>org.lockss.plugin.springer.SpringerJatsSourceXmlMetadataExtractorFactory</string>
       </entry>
     </map>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1, "http://clockss-ingest.lockss.org/sourcefiles/springerjats-released/2020_12/ftp_PUB_20-12-02_01-05-09.*"</string>
+    </list>
   </entry>
 </map>

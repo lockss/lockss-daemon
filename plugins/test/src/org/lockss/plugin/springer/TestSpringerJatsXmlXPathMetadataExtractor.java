@@ -120,7 +120,7 @@ public class TestSpringerJatsXmlXPathMetadataExtractor extends SourceXmlMetadata
         ArticleMetadata md = mdlist.get(0);
         assertNotNull(md);
 
-        assertEquals("Methods in Molecular Biology", md.get(MetadataField.FIELD_PUBLISHER));
+        assertEquals("Springer New York", md.get(MetadataField.FIELD_PUBLISHER));
         assertEquals("Steroid Receptors", md.get(MetadataField.FIELD_PUBLICATION_TITLE));
         assertEquals("10.1007/978-1-4939-1346-6", md.get(MetadataField.FIELD_DOI));
         assertEquals("978-1-4939-1345-9", md.get(MetadataField.FIELD_ISBN));

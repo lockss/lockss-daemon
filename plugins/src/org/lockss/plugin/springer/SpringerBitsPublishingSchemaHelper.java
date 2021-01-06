@@ -62,8 +62,7 @@ public class SpringerBitsPublishingSchemaHelper implements SourceXmlSchemaHelper
     static private final NodeValue BITS_AUTHOR_VALUE = new NodeValue() {
         @Override
         public String getValue(Node node) {
-
-            log.debug3("Fei: getValue of BITS author");
+            
             NodeList elementChildren = node.getChildNodes();
             // only accept no children if this is a "name" node
             if (elementChildren == null &&
@@ -102,10 +101,8 @@ public class SpringerBitsPublishingSchemaHelper implements SourceXmlSchemaHelper
                     valbuilder.append(AUTHOR_SEPARATOR + " " + tgiven);
                 }
             } else {
-                log.debug3("Fei: no author found");
                 return null;
             }
-            log.debug3("Fei: author found: " + valbuilder.toString());
             return valbuilder.toString();
         }
     };
@@ -114,7 +111,7 @@ public class SpringerBitsPublishingSchemaHelper implements SourceXmlSchemaHelper
      *  BITS specific XPATH key definitions that we care about
      */
     private static String BITS_book = "/book";
-    private static String BITS_publisher= "/book/collection-meta/title-group/title";
+    private static String BITS_publisher= "/book/book-meta/publisher/publisher-name";
     private static String BITS_doi = "/book/book-meta/book-id[@book-id-type = \"doi\"]";
     private static String BITS_book_title =  "/book/book-meta/book-title-group/book-title";
     private static String BITS_contrib = "/book/book-meta/contrib-group/contrib/name";
