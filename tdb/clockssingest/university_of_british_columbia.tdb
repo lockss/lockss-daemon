@@ -30,7 +30,7 @@
       param[base_url] = https://www.ingentaconnect.com/
       param[api_url] = https://api.ingentaconnect.com/
     
-       au < crawling ; exists ; 2005-2006 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 78 ; 78 ; >
+       au < frozen ; exists ; 2005-2006 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 78 ; 78 ; >
        au < ready ; exists ; 2006-2007 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 79 ; 79 ; >
        au < crawling ; exists ; 2007 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 80 ; 80 ; >
        au < frozen ; exists ; 2008 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 81 ; 81 ; >
@@ -56,7 +56,7 @@
       param[api_url] = https://api.ingentaconnect.com/
 
       au < crawling ; exists ; 2018 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 91 ; 91 ; >
-      au < crawling ; exists ; 2019 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 92 ; 92 ; >
+      au < frozen ; exists ; 2019 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 92 ; 92 ; >
       au < crawling ; exists ; 2020 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 93 ; 93 ; >
     }
 

@@ -922,7 +922,7 @@
       comment[publisher] = Stockholm University Press
 #      param[base_url] = https://jhlr.org/
 
-      au < crawling ; exists ; 2016 ; 1 ; Journal of Home Language Research Volume 2016 ; 2016 ; https://jhlr.org/ ; >
+      au < frozen ; exists ; 2016 ; 1 ; Journal of Home Language Research Volume 2016 ; 2016 ; https://jhlr.org/ ; >
       au < ready ; exists ; 2017 ; 2 ; Journal of Home Language Research Volume 2017 ; 2017 ; https://jhlr.org/ ; >
       au < frozen ; exists ; 2018 ; 3 ; Journal of Home Language Research Volume 2018 ; 2018 ; https://jhlr.org/ ; >
 
@@ -2048,7 +2048,7 @@
       au < ready ; exists ; 2015 ; 5 ; Tremor and Other Hyperkinetic Movements Volume 2015 ; 2015 ; https://tremorjournal.org/ ; >
       au < crawling ; exists ; 2016 ; 6 ; Tremor and Other Hyperkinetic Movements Volume 2016 ; 2016 ; https://tremorjournal.org/ ; >
       au < frozen ; exists ; 2017 ; 7 ; Tremor and Other Hyperkinetic Movements Volume 2017 ; 2017 ; https://tremorjournal.org/ ; >
-      au < crawling ; exists ; 2018 ; 8 ; Tremor and Other Hyperkinetic Movements Volume 2018 ; 2018 ; https://tremorjournal.org/ ; >
+      au < frozen ; exists ; 2018 ; 8 ; Tremor and Other Hyperkinetic Movements Volume 2018 ; 2018 ; https://tremorjournal.org/ ; >
       au < ready ; exists ; 2019 ; 9 ; Tremor and Other Hyperkinetic Movements Volume 2019 ; 2019 ; https://tremorjournal.org/ ; >
       au < crawling ; exists ; 2020 ; 10 ; Tremor and Other Hyperkinetic Movements Volume 2020 ; 2020 ; https://tremorjournal.org/ ; >
 
@@ -2910,7 +2910,7 @@
       au < manifest ; exists ; 1999 ; 12 ; Serials: The Journal for the Serials Community Volume 1999 ; 1999 ; https://serials.uksg.org/ ; >
       au < crawling ; exists ; 2000 ; 13 ; Serials: The Journal for the Serials Community Volume 2000 ; 2000 ; https://serials.uksg.org/ ; > #M exists. No articles for that year.
       au < finished ; finished ; 2001 ; 14 ; Serials: The Journal for the Serials Community Volume 2001 ; 2001 ; https://serials.uksg.org/ ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2002 ; 15 ; Serials: The Journal for the Serials Community Volume 2002 ; 2002 ; https://serials.uksg.org/ ; > #M exists. No articles for that year.
+      au < frozen ; exists ; 2002 ; 15 ; Serials: The Journal for the Serials Community Volume 2002 ; 2002 ; https://serials.uksg.org/ ; > #M exists. No articles for that year.
       au < finished ; finished ; 2003 ; 16 ; Serials: The Journal for the Serials Community Volume 2003 ; 2003 ; https://serials.uksg.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2004 ; 17 ; Serials: The Journal for the Serials Community Volume 2004 ; 2004 ; https://serials.uksg.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2005 ; 18 ; Serials: The Journal for the Serials Community Volume 2005 ; 2005 ; https://serials.uksg.org/ ; reingest1.clockss.org:8082 >

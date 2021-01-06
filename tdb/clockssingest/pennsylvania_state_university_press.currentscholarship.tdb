@@ -572,7 +572,7 @@
       au < frozen ; exists ; 2016 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 83 ; 2016 ; http://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2017 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 84 ; 2017 ; http://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2018 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 85 ; 2018 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2019 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 86 ; 2019 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2019 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 86 ; 2019 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2020 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 87 ; 2020 ; https://www.jstor.org/ ; >
 
   }
@@ -640,10 +640,10 @@
 
       au < manifest ; exists ; 2008 ; Reception: Texts, Readers, Audiences, History Volume 1 ; 2008 ; https://www.jstor.org/ ; >
       au < ready ; exists ; 2010 ; Reception: Texts, Readers, Audiences, History Volume 2 ; 2010 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2011 ; Reception: Texts, Readers, Audiences, History Volume 3 ; 2011 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2011 ; Reception: Texts, Readers, Audiences, History Volume 3 ; 2011 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2012 ; Reception: Texts, Readers, Audiences, History Volume 4 ; 2012 ; http://www.jstor.org/ ; >
       au < crawling ; exists ; 2013 ; Reception: Texts, Readers, Audiences, History Volume 5 ; 2013 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2014 ; Reception: Texts, Readers, Audiences, History Volume 6 ; 2014 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2014 ; Reception: Texts, Readers, Audiences, History Volume 6 ; 2014 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2015 ; Reception: Texts, Readers, Audiences, History Volume 7 ; 2015 ; http://www.jstor.org/ ; >
       au < frozen ; exists ; 2016 ; Reception: Texts, Readers, Audiences, History Volume 8 ; 2016 ; http://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2017 ; Reception: Texts, Readers, Audiences, History Volume 9 ; 2017 ; http://www.jstor.org/ ; >
@@ -740,7 +740,7 @@
 
       param[journal_id] = studamerjewilite
 
-      au < crawling ; exists ; 2010 ; Studies in American Jewish Literature Volume 29 ; 2010 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2010 ; Studies in American Jewish Literature Volume 29 ; 2010 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2011 ; Studies in American Jewish Literature Volume 30 ; 2011 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2012 ; Studies in American Jewish Literature Volume 31 ; 2012 ; http://www.jstor.org/ ; >
       au < frozen ; exists ; 2013 ; Studies in American Jewish Literature Volume 32 ; 2013 ; http://www.jstor.org/ ; >
@@ -790,7 +790,7 @@
 
       param[journal_id] = utopianstudies
 
-      au < crawling ; exists ; 2010 ; Utopian Studies Volume 21 ; 2010 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2010 ; Utopian Studies Volume 21 ; 2010 ; https://www.jstor.org/ ; >
       au < ready ; exists ; 2011 ; Utopian Studies Volume 22 ; 2011 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2012 ; Utopian Studies Volume 23 ; 2012 ; http://www.jstor.org/ ; >
       au < frozen ; exists ; 2013 ; Utopian Studies Volume 24 ; 2013 ; http://www.jstor.org/ ; >

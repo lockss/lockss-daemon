@@ -203,7 +203,7 @@
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Hindsight: Journal of Optemetry History Volume 47 ; 47 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Hindsight: Journal of Optemetry History Volume 48 ; 48 ; >
       au < finished ; manifest ; 2018 ; 2018 ; Hindsight: Journal of Optemetry History Volume 49 ; 49 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2019 ; 2019 ; Hindsight: Journal of Optemetry History Volume 50 ; 50 ; >
+      au < frozen ; exists ; 2019 ; 2019 ; Hindsight: Journal of Optemetry History Volume 50 ; 50 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Hindsight: Journal of Optemetry History Volume 51 ; 51 ; >
 
   }
@@ -864,10 +864,10 @@
          au < frozen ; exists ; 2012 ; 2012 ; IU South Bend Undergraduate Research Journal Volume 2012 ; 12 ; >
          au < crawling ; exists ; 2014 ; 2014 ; IU South Bend Undergraduate Research Journal Volume 2014 ; 14 ; >
          au < crawling ; exists ; 2015 ; 2015 ; IU South Bend Undergraduate Research Journal Volume 2015 ; 15 ; >
-         au < crawling ; exists ; 2016 ; 2016 ; IU South Bend Undergraduate Research Journal Volume 2016 ; 16 ; >
+         au < frozen ; exists ; 2016 ; 2016 ; IU South Bend Undergraduate Research Journal Volume 2016 ; 16 ; >
          au < crawling ; exists ; 2017 ; 2017 ; IU South Bend Undergraduate Research Journal Volume 2017 ; 17 ; >
          au < ready ; exists ; 2018 ; 2018 ; IU South Bend Undergraduate Research Journal Volume 2018 ; 18 ; >
-         au < crawling ; exists ; 2019 ; 2019 ; IU South Bend Undergraduate Research Journal Volume 2019 ; 19 ; >
+         au < frozen ; exists ; 2019 ; 2019 ; IU South Bend Undergraduate Research Journal Volume 2019 ; 19 ; >
          au < expected ; exists ; 2020 ; 2020 ; IU South Bend Undergraduate Research Journal Volume 2020 ; 20 ; >
       }
   }
@@ -1077,7 +1077,7 @@
 
       param[journal_id] = joget
 
-      au < crawling ; exists ; 2017 ; 2017 ; Global Engagement and Transformation Volume 2017 ; 1-2 ; >
+      au < frozen ; exists ; 2017 ; 2017 ; Global Engagement and Transformation Volume 2017 ; 1-2 ; >
       au < crawling ; exists ; 2018 ; 2018 ; Global Engagement and Transformation Volume 2018 ; 3 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Global Engagement and Transformation Volume 2020 ; 4 ; >
 

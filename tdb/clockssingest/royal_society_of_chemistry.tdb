@@ -127,7 +127,7 @@
       #complete
       au < doesNotExist ; doesNotExist ; 1996 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 93 ; 93 ; 1996 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 1997 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 93 ; 93 ; 1997 ; https://pubs.rsc.org/ ; >
-      au < crawling ; exists ; 1998 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 94 ; 94 ; 1998 ; https://pubs.rsc.org/ ; >
+      au < frozen ; exists ; 1998 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 94 ; 94 ; 1998 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 1999 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 95 ; 95 ; 1999 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2000 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 96 ; 96 ; 2000 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2001 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 97 ; 97 ; 2001 ; https://pubs.rsc.org/ ; >
@@ -451,7 +451,7 @@
       au < ready ; exists ; 2004 ; Faraday Discussions Volume 127 ; 127 ; 2004 ; https://pubs.rsc.org/ ; >
 
       au < frozen ; exists ; 2005 ; Faraday Discussions Volume 128 ; 128 ; 2005 ; https://pubs.rsc.org/ ; >
-      au < crawling ; exists ; 2005 ; Faraday Discussions Volume 129 ; 129 ; 2005 ; https://pubs.rsc.org/ ; >
+      au < frozen ; exists ; 2005 ; Faraday Discussions Volume 129 ; 129 ; 2005 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2005 ; Faraday Discussions Volume 130 ; 130 ; 2005 ; https://pubs.rsc.org/ ; >
 
       au < ready ; exists ; 2006 ; Faraday Discussions Volume 131 ; 131 ; 2006 ; https://pubs.rsc.org/ ; >
@@ -460,14 +460,14 @@
 
       au < ready ; exists ; 2007 ; Faraday Discussions Volume 134 ; 134 ; 2007 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2007 ; Faraday Discussions Volume 135 ; 135 ; 2007 ; https://pubs.rsc.org/ ; >
-      au < crawling ; exists ; 2007 ; Faraday Discussions Volume 136 ; 136 ; 2007 ; https://pubs.rsc.org/ ; >
+      au < frozen ; exists ; 2007 ; Faraday Discussions Volume 136 ; 136 ; 2007 ; https://pubs.rsc.org/ ; >
 
       au < ready ; exists ; 2008 ; Faraday Discussions Volume 137 ; 137 ; 2008 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2008 ; Faraday Discussions Volume 138 ; 138 ; 2008 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2008 ; Faraday Discussions Volume 139 ; 139 ; 2008 ; https://pubs.rsc.org/ ; >
 
       au < crawling ; exists ; 2009 ; Faraday Discussions Volume 140 ; 140 ; 2009 ; https://pubs.rsc.org/ ; >
-      au < crawling ; exists ; 2009 ; Faraday Discussions Volume 141 ; 141 ; 2009 ; https://pubs.rsc.org/ ; >
+      au < frozen ; exists ; 2009 ; Faraday Discussions Volume 141 ; 141 ; 2009 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2009 ; Faraday Discussions Volume 142 ; 142 ; 2009 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2009 ; Faraday Discussions Volume 143 ; 143 ; 2009 ; https://pubs.rsc.org/ ; >
 
@@ -595,7 +595,7 @@
       au < crawling ; exists ; 2005 ; Green Chemistry Volume 7 ; 7 ; 2005 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2006 ; Green Chemistry Volume 8 ; 8 ; 2006 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2007 ; Green Chemistry Volume 9 ; 9 ; 2007 ; https://pubs.rsc.org/ ; >
-      au < crawling ; exists ; 2008 ; Green Chemistry Volume 10 ; 10 ; 2008 ; https://pubs.rsc.org/ ; >
+      au < frozen ; exists ; 2008 ; Green Chemistry Volume 10 ; 10 ; 2008 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2009 ; Green Chemistry Volume 11 ; 11 ; 2009 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2010 ; Green Chemistry Volume 12 ; 12 ; 2010 ; http://pubs.rsc.org/ ; >
       au < finished ; finished ; 2011 ; Green Chemistry Volume 13 ; 13 ; 2011 ; http://pubs.rsc.org/ ; >
@@ -660,7 +660,7 @@
       au < ready ; exists ; 2005 ; Journal of Analytical Atomic Spectrometry Volume 20 ; 20 ; 2005 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2006 ; Journal of Analytical Atomic Spectrometry Volume 21 ; 21 ; 2006 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2007 ; Journal of Analytical Atomic Spectrometry Volume 22 ; 22 ; 2007 ; https://pubs.rsc.org/ ; >
-      au < crawling ; exists ; 2008 ; Journal of Analytical Atomic Spectrometry Volume 23 ; 23 ; 2008 ; https://pubs.rsc.org/ ; >
+      au < frozen ; exists ; 2008 ; Journal of Analytical Atomic Spectrometry Volume 23 ; 23 ; 2008 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2009 ; Journal of Analytical Atomic Spectrometry Volume 24 ; 24 ; 2009 ; https://pubs.rsc.org/ ; >
       au < finished ; finished ; 2010 ; Journal of Analytical Atomic Spectrometry Volume 25 ; 25 ; 2010 ; http://pubs.rsc.org/ ; >
       au < finished ; finished ; 2011 ; Journal of Analytical Atomic Spectrometry Volume 26 ; 26 ; 2011 ; http://pubs.rsc.org/ ; >
@@ -705,7 +705,7 @@
       param[journal_code] = em
 
       #complete
-      au < crawling ; exists ; 1999 ; Journal of Environmental Monitoring Volume 1 ; 1 ; 1999 ; https://pubs.rsc.org/ ; >
+      au < frozen ; exists ; 1999 ; Journal of Environmental Monitoring Volume 1 ; 1 ; 1999 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2000 ; Journal of Environmental Monitoring Volume 2 ; 2 ; 2000 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2001 ; Journal of Environmental Monitoring Volume 3 ; 3 ; 2001 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2002 ; Journal of Environmental Monitoring Volume 4 ; 4 ; 2002 ; https://pubs.rsc.org/ ; >
@@ -773,7 +773,7 @@
       au < crawling ; exists ; 2006 ; Lab on a Chip Volume 6 ; 6 ; 2006 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2007 ; Lab on a Chip Volume 7 ; 7 ; 2007 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2008 ; Lab on a Chip Volume 8 ; 8 ; 2008 ; https://pubs.rsc.org/ ; >
-      au < crawling ; exists ; 2009 ; Lab on a Chip Volume 9 ; 9 ; 2009 ; https://pubs.rsc.org/ ; >
+      au < frozen ; exists ; 2009 ; Lab on a Chip Volume 9 ; 9 ; 2009 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2010 ; Lab on a Chip Volume 10 ; 10 ; 2010 ; http://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2011 ; Lab on a Chip Volume 11 ; 11 ; 2011 ; http://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2012 ; Lab on a Chip Volume 12 ; 12 ; 2012 ; http://pubs.rsc.org/ ; >
@@ -942,7 +942,7 @@
       au < crawling ; exists ; 1998 ; New Journal of Chemistry Volume 22 ; 22 ; 1998 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 1999 ; New Journal of Chemistry Volume 23 ; 23 ; 1999 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2000 ; New Journal of Chemistry Volume 24 ; 24 ; 2000 ; https://pubs.rsc.org/ ; >
-      au < crawling ; exists ; 2001 ; New Journal of Chemistry Volume 25 ; 25 ; 2001 ; https://pubs.rsc.org/ ; >
+      au < frozen ; exists ; 2001 ; New Journal of Chemistry Volume 25 ; 25 ; 2001 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2002 ; New Journal of Chemistry Volume 26 ; 26 ; 2002 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2003 ; New Journal of Chemistry Volume 27 ; 27 ; 2003 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2004 ; New Journal of Chemistry Volume 28 ; 28 ; 2004 ; https://pubs.rsc.org/ ; >
