@@ -1,4 +1,4 @@
-package org.lockss.plugin.silverchair.americanjournalofoccupationaltherapy;
+package org.lockss.plugin.silverchair.aota;
 
 import org.jsoup.nodes.Node;
 import org.lockss.daemon.PluginException;
@@ -10,9 +10,9 @@ import org.lockss.plugin.AuUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 
-public class AmericanJournalofOccupationalTherapySilverchairHtmlLinkExtractorFactory implements LinkExtractorFactory {
+public class AOTAHtmlLinkExtractorFactory implements LinkExtractorFactory {
 
-    private static final Logger log = Logger.getLogger(AmericanJournalofOccupationalTherapySilverchairHtmlLinkExtractorFactory.class);
+    private static final Logger log = Logger.getLogger(AOTAHtmlLinkExtractorFactory.class);
 
     private static final String ANCHOR_TAG = "a";
     //https://ajot.aota.org/article.aspx?articleid=2360691
@@ -59,9 +59,9 @@ https://aota.silverchair-cdn.com/aota/content_public/journal/ajot/931886/6901170
                 }));
     }
 
-    public static class AmericanJournalofOccupationalTherapySilverchairHtmlLinkExtractor extends JsoupHtmlLinkExtractor.SimpleTagLinkExtractor {
+    public static class AOTAHtmlLinkExtractor extends JsoupHtmlLinkExtractor.SimpleTagLinkExtractor {
 
-        public AmericanJournalofOccupationalTherapySilverchairHtmlLinkExtractor(final String[] attrs) {
+        public AOTAHtmlLinkExtractor(final String[] attrs) {
             super(attrs);
         }
 

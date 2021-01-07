@@ -5,7 +5,7 @@
     </entry>
     <entry>
         <string>plugin_identifier</string>
-        <string>org.lockss.plugin.silverchair.americanjournalofoccupationaltherapy.ClockssAmericanJournalofOccupationalTherapySilverchairPlugin</string>
+        <string>org.lockss.plugin.silverchair.aota.ClockssAOTASilverchairPlugin</string>
     </entry>
     <entry>
         <string>plugin_version</string>
@@ -17,7 +17,7 @@
     </entry>
     <entry>
         <string>plugin_parent</string>
-        <string>org.lockss.plugin.silverchair.americanjournalofoccupationaltherapy.AmericanJournalofOccupationalTherapySilverchairPlugin</string>
+        <string>org.lockss.plugin.silverchair.aota.AOTASilverchairPlugin</string>
     </entry>
     <entry>
         <string>plugin_parent_version</string>

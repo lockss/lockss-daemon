@@ -1,4 +1,4 @@
-package org.lockss.plugin.silverchair.americanjournalofoccupationaltherapy;
+package org.lockss.plugin.silverchair.aota;
 
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadataExtractor;
@@ -10,11 +10,10 @@ import org.lockss.plugin.ArticleFiles;
 import org.lockss.plugin.ArticleIteratorFactory;
 import org.lockss.plugin.SubTreeArticleIteratorBuilder;
 
-import java.util.Arrays;
 import java.util.Iterator;
 import java.util.regex.Pattern;
 
-public class AmericanJournalofOccupationalTherapySilverchairArticleIteratorFactory  implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
+public class AOTAArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
 
 
     private static final String ROOT_TEMPLATE = "\"%s\", base_url";
