@@ -8,9 +8,8 @@
   >
   
 
-  #plugin = org.lockss.plugin.silverchair.ClockssSilverchairJournalsPlugin
-  #plugin = org.lockss.plugin.silverchair.iwap.ClockssIwapSilverchairPlugin
   plugin = needs.plugin
+  #plugin = org.lockss.plugin.silverchair.aota.ClockssAOTASilverchairPlugin
   implicit < status ; status2 ; year ; param[year] ; name ; hidden[proxy] >
   param[base_url] = https://ajot.aota.org/
 
