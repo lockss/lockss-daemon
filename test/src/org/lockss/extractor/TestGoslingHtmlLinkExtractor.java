@@ -65,6 +65,22 @@ public class TestGoslingHtmlLinkExtractor extends LockssTestCase {
     cb = new MyLinkExtractorCallback();
   }
 
+  String hpUnEsc(String str) {
+    return org.htmlparser.util.Translate.decode(str);
+  }
+
+  String seuUnEsc(String str) {
+    return org.apache.commons.lang3.StringEscapeUtils.unescapeHtml4(str);
+  }
+
+  public void testUnescape() {
+    assertEquals("foo", hpUnEsc("foo"));
+    assertEquals("foo", seuUnEsc("foo"));
+    assertEquals("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600&display=swap\u2282set=latin-ext", hpUnEsc("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600&display=swap&subset=latin-ext"));
+    assertEquals("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600&display=swap&subset=latin-ext", seuUnEsc("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600&display=swap&subset=latin-ext"));
+  }
+
+
   public void testThrowsOnNullInputStream() throws IOException {
     try {
       extractor.extractUrls(mau, null, ENC, "http://www.example.com/",
@@ -717,9 +733,20 @@ public class TestGoslingHtmlLinkExtractor extends LockssTestCase {
     source =
       "<html><head><title>Test</title></head><body>"+
       "<base href=http://www.example.com/foo/bar>"+
-      "<a href=&#46&#46/xxx>link1</a>";
+      "<a href=&#46;&#46;/xxx>link1</a>";
     assertEquals(SetUtil.set("http://www.example.com/xxx"),
 		 parseSingleSource(source));
+  }
+
+  public void testDontResolveMalformedHtmlEntities()
+      throws IOException {
+    String expUrl=
+      "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600&display=swap&subset=latin-ext";
+
+    String source =
+      "<link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600&display=swap&subset=latin-ext\">";
+    assertEquals(SetUtil.set(expUrl), parseSingleSource(source));
+
   }
 
   public void testInterpretsBaseTag() throws IOException {

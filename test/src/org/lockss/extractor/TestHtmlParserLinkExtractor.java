@@ -616,9 +616,20 @@ public class TestHtmlParserLinkExtractor extends LockssTestCase {
     // ensure character entities processed before rel url resolution
     source = "<html><head><title>Test</title></head><body>"
       + "<base href=http://www.example.com/foo/bar>"
-      + "<a href=&#46&#46/xxx>link1</a>";
+      + "<a href=&#46;&#46;/xxx>link1</a>";
     assertEquals(SetUtil.set("http://www.example.com/xxx"),
 		 parseSingleSource(source));
+  }
+
+  public void testDontResolveMalformedHtmlEntities()
+      throws IOException {
+    String expUrl=
+      "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600&display=swap&subset=latin-ext";
+
+    String source =
+      "<link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600&display=swap&subset=latin-ext\">";
+    assertEquals(SetUtil.set(expUrl), parseSingleSource(source));
+
   }
 
   public void testInterpretsBaseTag() throws IOException {

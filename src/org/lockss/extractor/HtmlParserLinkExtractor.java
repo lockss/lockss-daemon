@@ -42,6 +42,7 @@ import java.util.Map;
 import java.util.Vector;
 
 import org.apache.commons.io.IOUtils;
+import org.apache.commons.lang3.StringEscapeUtils;
 import org.htmlparser.Parser;
 import org.htmlparser.Tag;
 import org.htmlparser.lexer.Lexer;
@@ -52,7 +53,6 @@ import org.htmlparser.tags.OptionTag;
 import org.htmlparser.tags.SelectTag;
 import org.htmlparser.tags.StyleTag;
 import org.htmlparser.util.ParserException;
-import org.htmlparser.util.Translate;
 import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.config.Configuration;
 import org.lockss.config.CurrentConfig;
@@ -262,7 +262,7 @@ public class HtmlParserLinkExtractor implements LinkExtractor {
       String target = m_tag.getAttribute("href");
       if (target == null) return;
 
-      target = Translate.decode(target);
+      target = StringEscapeUtils.unescapeHtml4(target);
       cb.foundLink(target);
     }
   }
