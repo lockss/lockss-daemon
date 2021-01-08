@@ -49,7 +49,7 @@ public class IngentaHtmlLinkExtractor extends GoslingHtmlLinkExtractor {
           Pattern.CASE_INSENSITIVE);
 
   protected static final Pattern articlePattern =
-          Pattern.compile("^https?://(.*)/[0-9]{4}/\\d+/\\d+/art[0-9]{5}$",
+          Pattern.compile("^https?://(.*)/[0-9]{4}/[^/]+/[^/]+/art[0-9]{5}$",
                   Pattern.CASE_INSENSITIVE);
   
   @Override
