@@ -1642,7 +1642,7 @@
       param[journal_code] = gt
 
       #complete
-      au < testing ; exists ; 2000 ; Geochemical Transactions Volume 1 ; 1 ; 2000 ; https://pubs.rsc.org/ ; >
+      au < ready ; exists ; 2000 ; Geochemical Transactions Volume 1 ; 1 ; 2000 ; https://pubs.rsc.org/ ; >
       au < testing ; exists ; 2001 ; Geochemical Transactions Volume 2 ; 2 ; 2001 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2002 ; Geochemical Transactions Volume 3 ; 3 ; 2002 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2003 ; Geochemical Transactions Volume 4 ; 4 ; 2003 ; https://pubs.rsc.org/ ; >
@@ -2549,8 +2549,8 @@
       param[journal_code] = po
 
       #complete
-      au < testing ; exists ; 2000 ; Pesticide Outlook Volume 11 ; 11 ; 2000 ; https://pubs.rsc.org/ ; >
-      au < testing ; exists ; 2001 ; Pesticide Outlook Volume 12 ; 12 ; 2001 ; https://pubs.rsc.org/ ; >
+      au < ready ; exists ; 2000 ; Pesticide Outlook Volume 11 ; 11 ; 2000 ; https://pubs.rsc.org/ ; >
+      au < ready ; exists ; 2001 ; Pesticide Outlook Volume 12 ; 12 ; 2001 ; https://pubs.rsc.org/ ; >
       au < testing ; exists ; 2002 ; Pesticide Outlook Volume 13 ; 13 ; 2002 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2003 ; Pesticide Outlook Volume 14 ; 14 ; 2003 ; https://pubs.rsc.org/ ; >
 
