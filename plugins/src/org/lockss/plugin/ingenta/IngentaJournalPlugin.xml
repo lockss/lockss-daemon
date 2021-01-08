@@ -258,6 +258,8 @@
     <string>au_permitted_host_pattern</string>
     <string>.*[.]cloudfront[.]net|cdn[.]mathjax[.]org|cdnjs[.]cloudflare[.]com</string>
     <string>.*[.]cloudfront[.]net|cdn[.]mathjax[.]org|cdnjs[.]cloudflare[.]com</string>
+    <!--this one has have been added on daemon host, adding here to be consistent-->
+    <string>docserver[.]ingentaconnect[.]com</string>
   </entry>
 <!-- Adding /references & ?format=bib to repair/exclude patterns due to inconsistent 
      content of no longer crawled AUs -->
