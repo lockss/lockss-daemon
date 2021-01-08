@@ -148,7 +148,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Advances in Dual Diagnosis Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Advances in Dual Diagnosis Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in Dual Diagnosis Volume 11 ; 11 ; >
-    au < ready ; exists ; 2019 ; Advances in Dual Diagnosis Volume 12 ; 12 ; >
+    au < crawling ; exists ; 2019 ; Advances in Dual Diagnosis Volume 12 ; 12 ; >
     au < crawling ; exists ; 2020 ; Advances in Dual Diagnosis Volume 13 ; 13 ; >
 
   }
@@ -191,7 +191,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Advances in Mental Health and Intellectual Disabilities Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Advances in Mental Health and Intellectual Disabilities Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in Mental Health and Intellectual Disabilities Volume 12 ; 12 ; >
-    au < ready ; exists ; 2019 ; Advances in Mental Health and Intellectual Disabilities Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2019 ; Advances in Mental Health and Intellectual Disabilities Volume 13 ; 13 ; >
     au < crawling ; exists ; 2020 ; Advances in Mental Health and Intellectual Disabilities Volume 14 ; 14 ; >
 
   }
@@ -1564,7 +1564,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Circuit World Volume 42 ; 42 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Circuit World Volume 43 ; 43 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Circuit World Volume 44 ; 44 ; >
-    au < ready ; exists ; 2019 ; Circuit World Volume 45 ; 45 ; >
+    au < crawling ; exists ; 2019 ; Circuit World Volume 45 ; 45 ; >
     au < crawling ; exists ; 2020 ; Circuit World Volume 46 ; 46 ; >
 
   }
@@ -1748,7 +1748,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 35 ; 35 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 36 ; 36 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 37 ; 37 ; >
-    au < ready ; exists ; 2019 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 38 ; 38 ; >
+    au < crawling ; exists ; 2019 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 38 ; 38 ; >
     au < crawling ; exists ; 2020 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 39 ; 39 ; >
 
   }
@@ -2623,7 +2623,7 @@
     au < manifest ; exists ; 1997 ; European Business Review Volume 97 ; 97 ; >
     au < manifest ; exists ; 1998 ; European Business Review Volume 98 ; 98 ; >
     au < manifest ; exists ; 1999 ; European Business Review Volume 99 ; 99 ; >
-    au < ready ; exists ; 2000 ; European Business Review Volume 12 ; 12 ; >
+    au < crawling ; exists ; 2000 ; European Business Review Volume 12 ; 12 ; >
     au < manifest ; exists ; 2001 ; European Business Review Volume 13 ; 13 ; >
     au < manifest ; exists ; 2002 ; European Business Review Volume 14 ; 14 ; >
     au < manifest ; exists ; 2003 ; European Business Review Volume 15 ; 15 ; >
@@ -2728,7 +2728,7 @@
     au < manifest ; exists ; 1997 ; European Journal of Marketing Volume 31 ; 31 ; >
     au < manifest ; exists ; 1998 ; European Journal of Marketing Volume 32 ; 32 ; >
     au < manifest ; exists ; 1999 ; European Journal of Marketing Volume 33 ; 33 ; >
-    au < ready ; exists ; 2000 ; European Journal of Marketing Volume 34 ; 34 ; >
+    au < crawling ; exists ; 2000 ; European Journal of Marketing Volume 34 ; 34 ; >
     au < manifest ; exists ; 2001 ; European Journal of Marketing Volume 35 ; 35 ; >
     au < manifest ; exists ; 2002 ; European Journal of Marketing Volume 36 ; 36 ; >
     au < manifest ; exists ; 2003 ; European Journal of Marketing Volume 37 ; 37 ; >
@@ -2747,7 +2747,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; European Journal of Marketing Volume 50 ; 50 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; European Journal of Marketing Volume 51 ; 51 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; European Journal of Marketing Volume 52 ; 52 ; >
-    au < ready ; exists ; 2019 ; European Journal of Marketing Volume 53 ; 53 ; >
+    au < crawling ; exists ; 2019 ; European Journal of Marketing Volume 53 ; 53 ; >
     au < crawling ; exists ; 2020 ; European Journal of Marketing Volume 54 ; 54 ; >
 
   }
@@ -3182,7 +3182,7 @@
     comment[journal_id] = ijoes
     #continues = 0828-8666
 
-    au < ready ; exists ; 2018 ; International Journal of Ethics and Systems Volume 34 ; 34 ; >
+    au < crawling ; exists ; 2018 ; International Journal of Ethics and Systems Volume 34 ; 34 ; >
     au < crawling ; exists ; 2019 ; International Journal of Ethics and Systems Volume 35 ; 35 ; >
     au < crawling ; exists ; 2020 ; International Journal of Ethics and Systems Volume 36 ; 36 ; >
 
@@ -3620,7 +3620,7 @@
     au < manifest ; exists ; 1997 ; Information Technology & People Volume 10 ; 10 ; >
     au < manifest ; exists ; 1998 ; Information Technology & People Volume 11 ; 11 ; >
     au < manifest ; exists ; 1999 ; Information Technology & People Volume 12 ; 12 ; >
-    au < ready ; exists ; 2000 ; Information Technology & People Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2000 ; Information Technology & People Volume 13 ; 13 ; >
     au < manifest ; exists ; 2001 ; Information Technology & People Volume 14 ; 14 ; >
     au < manifest ; exists ; 2002 ; Information Technology & People Volume 15 ; 15 ; >
     au < manifest ; exists ; 2003 ; Information Technology & People Volume 16 ; 16 ; >
@@ -3639,7 +3639,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Information Technology & People Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Information Technology & People Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Information Technology & People Volume 31 ; 31 ; >
-    au < ready ; exists ; 2019 ; Information Technology & People Volume 32 ; 32 ; >
+    au < crawling ; exists ; 2019 ; Information Technology & People Volume 32 ; 32 ; >
     au < crawling ; exists ; 2020 ; Information Technology & People Volume 33 ; 33 ; >
 
   }
@@ -4180,7 +4180,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Development Issues Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Development Issues Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Development Issues Volume 17 ; 17 ; >
-    au < ready ; exists ; 2019 ; International Journal of Development Issues Volume 18 ; 18 ; >
+    au < crawling ; exists ; 2019 ; International Journal of Development Issues Volume 18 ; 18 ; >
     au < crawling ; exists ; 2020 ; International Journal of Development Issues Volume 19 ; 19 ; >
 
   }
@@ -4615,7 +4615,7 @@
     #continues = 1756-1450
 
     au < crawling ; exists ; 2018 ; Journal of Property, Planning and Environmental Law Volume 10 ; 10 ; >
-    au < ready ; exists ; 2019 ; Journal of Property, Planning and Environmental Law Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2019 ; Journal of Property, Planning and Environmental Law Volume 11 ; 11 ; >
     au < crawling ; exists ; 2020 ; Journal of Property, Planning and Environmental Law Volume 12 ; 12 ; >
 
   }
@@ -5290,7 +5290,7 @@
     au < manifest ; exists ; 1997 ; International Journal of Public Sector Management Volume 10 ; 10 ; >
     au < manifest ; exists ; 1998 ; International Journal of Public Sector Management Volume 11 ; 11 ; >
     au < manifest ; exists ; 1999 ; International Journal of Public Sector Management Volume 12 ; 12 ; >
-    au < ready ; exists ; 2000 ; International Journal of Public Sector Management Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2000 ; International Journal of Public Sector Management Volume 13 ; 13 ; >
     au < manifest ; exists ; 2001 ; International Journal of Public Sector Management Volume 14 ; 14 ; >
     au < manifest ; exists ; 2002 ; International Journal of Public Sector Management Volume 15 ; 15 ; >
     au < manifest ; exists ; 2003 ; International Journal of Public Sector Management Volume 16 ; 16 ; >
@@ -5430,7 +5430,7 @@
     au < manifest ; exists ; 1997 ; International Journal of Retail & Distribution Management Volume 25 ; 25 ; >
     au < manifest ; exists ; 1998 ; International Journal of Retail & Distribution Management Volume 26 ; 26 ; >
     au < manifest ; exists ; 1999 ; International Journal of Retail & Distribution Management Volume 27 ; 27 ; >
-    au < ready ; exists ; 2000 ; International Journal of Retail & Distribution Management Volume 28 ; 28 ; >
+    au < crawling ; exists ; 2000 ; International Journal of Retail & Distribution Management Volume 28 ; 28 ; >
     au < manifest ; exists ; 2001 ; International Journal of Retail & Distribution Management Volume 29 ; 29 ; >
     au < manifest ; exists ; 2002 ; International Journal of Retail & Distribution Management Volume 30 ; 30 ; >
     au < manifest ; exists ; 2003 ; International Journal of Retail & Distribution Management Volume 31 ; 31 ; >
@@ -5475,7 +5475,7 @@
     au < manifest ; exists ; 1997 ; International Journal of Service Industry Management Volume 8 ; 8 ; >
     au < manifest ; exists ; 1998 ; International Journal of Service Industry Management Volume 9 ; 9 ; >
     au < manifest ; exists ; 1999 ; International Journal of Service Industry Management Volume 10 ; 10 ; >
-    au < ready ; exists ; 2000 ; International Journal of Service Industry Management Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2000 ; International Journal of Service Industry Management Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2001 ; International Journal of Service Industry Management Volume 12 ; 12 ; >
     au < manifest ; exists ; 2002 ; International Journal of Service Industry Management Volume 13 ; 13 ; >
     au < manifest ; exists ; 2003 ; International Journal of Service Industry Management Volume 14 ; 14 ; >
@@ -5598,7 +5598,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Sociology and Social Policy Volume 37 ; 37 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Sociology and Social Policy Volume 38 ; 38 ; >
     au < manifest ; exists ; 2019 ; International Journal of Sociology and Social Policy Volume 39 ; 39 ; >
-    au < ready ; exists ; 2020 ; International Journal of Sociology and Social Policy Volume 40 ; 40 ; >
+    au < crawling ; exists ; 2020 ; International Journal of Sociology and Social Policy Volume 40 ; 40 ; >
 
   }
 
@@ -7422,7 +7422,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Humanitarian Logistics and Supply Chain Management Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Humanitarian Logistics and Supply Chain Management Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Humanitarian Logistics and Supply Chain Management Volume 8 ; 8 ; >
-    au < ready ; exists ; 2019 ; Journal of Humanitarian Logistics and Supply Chain Management Volume 9 ; 9 ; >
+    au < crawling ; exists ; 2019 ; Journal of Humanitarian Logistics and Supply Chain Management Volume 9 ; 9 ; >
     au < crawling ; exists ; 2020 ; Journal of Humanitarian Logistics and Supply Chain Management Volume 10 ; 10 ; >
 
   }
@@ -9351,7 +9351,7 @@
     au < manifest ; exists ; 1997 ; Logistics Information Management Volume 10 ; 10 ; >
     au < manifest ; exists ; 1998 ; Logistics Information Management Volume 11 ; 11 ; >
     au < manifest ; exists ; 1999 ; Logistics Information Management Volume 12 ; 12 ; >
-    au < ready ; exists ; 2000 ; Logistics Information Management Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2000 ; Logistics Information Management Volume 13 ; 13 ; >
     au < manifest ; exists ; 2001 ; Logistics Information Management Volume 14 ; 14 ; >
     au < manifest ; exists ; 2002 ; Logistics Information Management Volume 15 ; 15 ; >
     au < manifest ; exists ; 2003 ; Logistics Information Management Volume 16 ; 16 ; >
@@ -10288,7 +10288,7 @@
     au < manifest ; exists ; 1997 ; New Library World Volume 98 ; 98 ; >
     au < manifest ; exists ; 1998 ; New Library World Volume 99 ; 99 ; >
     au < manifest ; exists ; 1999 ; New Library World Volume 100 ; 100 ; >
-    au < ready ; exists ; 2000 ; New Library World Volume 101 ; 101 ; >
+    au < crawling ; exists ; 2000 ; New Library World Volume 101 ; 101 ; >
     au < manifest ; exists ; 2001 ; New Library World Volume 102 ; 102 ; >
     au < doNotProcess ; doNotProcess ; 2002 ; New Library World Volume 103 ; 103 ; >
     au < manifest ; exists ; 2003 ; New Library World Volume 104 ; 104 ; >
@@ -10630,7 +10630,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Pacific Accounting Review Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Pacific Accounting Review Volume 30 ; 30 ; >
     au < manifest ; exists ; 2019 ; Pacific Accounting Review Volume 31 ; 31 ; >
-    au < ready ; exists ; 2020 ; Pacific Accounting Review Volume 32 ; 32 ; >
+    au < crawling ; exists ; 2020 ; Pacific Accounting Review Volume 32 ; 32 ; >
 
   }
 
@@ -11011,7 +11011,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Property Management Volume 35 ; 35 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Property Management Volume 36 ; 36 ; >
     au < manifest ; exists ; 2019 ; Property Management Volume 37 ; 37 ; >
-    au < ready ; exists ; 2020 ; Property Management Volume 38 ; 38 ; >
+    au < crawling ; exists ; 2020 ; Property Management Volume 38 ; 38 ; >
 
   }
 
@@ -12386,7 +12386,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; The TQM Journal Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; The TQM Journal Volume 30 ; 30 ; >
     au < manifest ; exists ; 2019 ; The TQM Journal Volume 31 ; 31 ; >
-    au < ready ; exists ; 2020 ; The TQM Journal Volume 32 ; 32 ; >
+    au < crawling ; exists ; 2020 ; The TQM Journal Volume 32 ; 32 ; >
 
   }
 
@@ -12529,7 +12529,7 @@
     au < manifest ; exists ; 1997 ; VINE Volume 27 ; 27 ; >
     au < manifest ; exists ; 1998 ; VINE Volume 28 ; 28 ; >
     au < manifest ; exists ; 1999 ; VINE Volume 29 ; 29 ; >
-    au < ready ; exists ; 2000 ; VINE Volume 30 ; 30 ; >
+    au < crawling ; exists ; 2000 ; VINE Volume 30 ; 30 ; >
     au < manifest ; exists ; 2001 ; VINE Volume 31 ; 31 ; >
     au < manifest ; exists ; 2002 ; VINE Volume 32 ; 32 ; >
     au < manifest ; exists ; 2003 ; VINE Volume 33 ; 33 ; >

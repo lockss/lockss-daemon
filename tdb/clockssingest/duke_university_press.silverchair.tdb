@@ -113,7 +113,7 @@
       au < frozen ; exists ; 2015 ; 2015 ; Archives of Asian Art Volume 65 ; 65 ; >
       au < frozen ; exists ; 2016 ; 2016 ; Archives of Asian Art Volume 66 ; 66 ; >
       au < frozen ; exists ; 2017 ; 2017 ; Archives of Asian Art Volume 67 ; 67 ; >
-      au < ready ; exists ; 2018 ; 2018 ; Archives of Asian Art Volume 68 ; 68 ; >
+      au < crawling ; exists ; 2018 ; 2018 ; Archives of Asian Art Volume 68 ; 68 ; >
       au < frozen ; exists ; 2019 ; 2019 ; Archives of Asian Art Volume 69 ; 69 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Archives of Asian Art Volume 70 ; 70 ; >
 
@@ -132,7 +132,7 @@
 
       au < frozen ; exists ; 1987 ; 1987 ; Black Sacred Music Volume 1 ; 1 ; >
       au < frozen ; exists ; 1988 ; 1988 ; Black Sacred Music Volume 2 ; 2 ; >
-      au < ready ; exists ; 1989 ; 1989 ; Black Sacred Music Volume 3 ; 3 ; >
+      au < crawling ; exists ; 1989 ; 1989 ; Black Sacred Music Volume 3 ; 3 ; >
       au < frozen ; exists ; 1990 ; 1990 ; Black Sacred Music Volume 4 ; 4 ; >
       au < crawling ; exists ; 1991 ; 1991 ; Black Sacred Music Volume 5 ; 5 ; >
       au < frozen ; exists ; 1992 ; 1992 ; Black Sacred Music Volume 6 ; 6 ; >
@@ -334,7 +334,7 @@
       au < crawling ; exists ; 2006 ; 2006 ; English Language Notes Volume 44 ; 44 ; >
       au < crawling ; exists ; 2007 ; 2007 ; English Language Notes Volume 45 ; 45 ; >
       au < crawling ; exists ; 2008 ; 2008 ; English Language Notes Volume 46 ; 46 ; >
-      au < ready ; exists ; 2009 ; 2009 ; English Language Notes Volume 47 ; 47 ; >
+      au < crawling ; exists ; 2009 ; 2009 ; English Language Notes Volume 47 ; 47 ; >
       au < frozen ; exists ; 2010 ; 2010 ; English Language Notes Volume 48 ; 48 ; >
       au < frozen ; exists ; 2011 ; 2011 ; English Language Notes Volume 49 ; 49 ; >
       au < crawling ; exists ; 2012 ; 2012 ; English Language Notes Volume 50 ; 50 ; >
@@ -518,7 +518,7 @@
       param[journal_id] = jhppl
 
       au < crawling ; exists ; 2017 ; 2017 ; Journal of Health Politics, Policy and Law Volume 42 ; 42 ; >
-      au < ready ; exists ; 2018 ; 2018 ; Journal of Health Politics, Policy and Law Volume 43 ; 43 ; >
+      au < crawling ; exists ; 2018 ; 2018 ; Journal of Health Politics, Policy and Law Volume 43 ; 43 ; >
       au < frozen ; exists ; 2019 ; 2019 ; Journal of Health Politics, Policy and Law Volume 44 ; 44 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Journal of Health Politics, Policy and Law Volume 45 ; 45 ; >
 
@@ -579,7 +579,7 @@
       au < frozen ; exists ; 2011 ; 2011 ; Journal of Middle East Women's Studies Volume 7 ; 7 ; >
       au < frozen ; exists ; 2012 ; 2012 ; Journal of Middle East Women's Studies Volume 8 ; 8 ; >
       au < frozen ; exists ; 2013 ; 2013 ; Journal of Middle East Women's Studies Volume 9 ; 9 ; >
-      au < ready ; exists ; 2014 ; 2014 ; Journal of Middle East Women's Studies Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2014 ; 2014 ; Journal of Middle East Women's Studies Volume 10 ; 10 ; >
       au < ready ; exists ; 2015 ; 2015 ; Journal of Middle East Women's Studies Volume 11 ; 11 ; >
       au < frozen ; exists ; 2016 ; 2016 ; Journal of Middle East Women's Studies Volume 12 ; 12 ; >
       au < ready ; exists ; 2017 ; 2017 ;  Journal of Middle East Women's Studies Volume 13 ; 13 ; >
@@ -672,7 +672,7 @@
       au < crawling ; exists ; 2011 ; 2011 ; Meridians Volume 11 (2011) ; 11 (2011) ; >
       au < frozen ; exists ; 2013 ; 2013 ; Meridians Volume 11 (2013) ; 11 (2013) ; >
       au < ready ; exists ; 2014 ; 2014 ; Meridians Volume 12 (2014) ; 12 (2014) ; >
-      au < ready ; exists ; 2015 ; 2015 ; Meridians Volume 13 (2015) ; 13 (2015) ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Meridians Volume 13 (2015) ; 13 (2015) ; >
       au < ready ; exists ; 2016 ; 2016 ; Meridians Volume 13-15 (2016) ; 13-15 (2016) ; >
       au < ready ; exists ; 2017 ; 2017 ; Meridians Volume 15 (2017) ; 15 (2017) ; >
       au < crawling ; exists ; 2018 ; 2018 ; Meridians Volume 16-17 (2018) ; 16-17 (2018) ; >
@@ -889,7 +889,7 @@
 
       param[journal_id] = qui-parle
 
-      au < ready ; exists ; 2000 ; 2000 ; Qui Parle Volume 12 (2000) ; 12 (2000) ; >
+      au < crawling ; exists ; 2000 ; 2000 ; Qui Parle Volume 12 (2000) ; 12 (2000) ; >
       au < frozen ; exists ; 2001 ; 2001 ; Qui Parle Volume 12-13 (2001) ; 12-13 (2001) ; >
       au < crawling ; exists ; 2003 ; 2003 ; Qui Parle Volume 13-14 (2003) ; 13-14 (2003) ; >
       au < ready ; exists ; 2004 ; 2004 ; Qui Parle Volume 14-15 (2004) ; 14-15 (2004) ; >

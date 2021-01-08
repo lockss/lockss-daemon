@@ -210,7 +210,7 @@
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Annales Geophysicae Volume 35 ; 35 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Annales Geophysicae Volume 36 ; 36 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Annales Geophysicae Volume 37 ; 37 ; >
-      au < ready ; exists ; 2020 ; 2020 ; Annales Geophysicae Volume 38 ; 38 ; >
+      au < crawling ; exists ; 2020 ; 2020 ; Annales Geophysicae Volume 38 ; 38 ; >
 
    }
 
@@ -811,7 +811,7 @@
       param[base_url] = https://gc.copernicus.org/
       param[home_url] = https://www.geoscience-communication.net/
 
-      au < ready ; exists ; 2018 ; 2018 ; Geoscience Communication Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2018 ; 2018 ; Geoscience Communication Volume 1 ; 1 ; >
       au < ready ; exists ; 2019 ; 2019 ; Geoscience Communication Volume 2 ; 2 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Geoscience Communication Volume 3 ; 3 ; >
 
@@ -1530,7 +1530,7 @@
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Scientific Drilling Volume 21 ; 21 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Scientific Drilling Volume 22 ; 22 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Scientific Drilling Volume 23 ; 23 ; >
-      au < ready ; exists ; 2020 ; 2020 ; Scientific Drilling Volume 24 ; 24 ; >
+      au < crawling ; exists ; 2020 ; 2020 ; Scientific Drilling Volume 24 ; 24 ; >
 
    }
 
