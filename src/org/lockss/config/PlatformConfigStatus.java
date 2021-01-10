@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.config;
 
 import java.util.*;
+import java.io.*;
 
 import org.lockss.app.*;
 import org.lockss.daemon.status.*;
@@ -43,6 +44,7 @@ import static org.lockss.config.ConfigManager.*;
 public class PlatformConfigStatus extends BaseLockssDaemonManager {
   static Logger log = Logger.getLogger("PlatformConfigStatus");
   final static String PLATFORM_STATUS_TABLE = "PlatformStatus";
+  final static String OS_RELEASE_TABLE = "OsRelease";
 
   public PlatformConfigStatus() {
   }
@@ -52,6 +54,11 @@ public class PlatformConfigStatus extends BaseLockssDaemonManager {
     StatusService statusServ = getDaemon().getStatusService();
     statusServ.registerStatusAccessor(PLATFORM_STATUS_TABLE,
 				      new PCStatus(getDaemon()));
+    // Register OS release info table iff its file exists
+    PropFileStatusAccessor osrs = new OsReleaseStatus();
+    if (osrs.canRead()) {
+      statusServ.registerStatusAccessor(OS_RELEASE_TABLE, osrs);
+    }
   }
 
   public void stopService() {
@@ -155,5 +162,17 @@ public class PlatformConfigStatus extends BaseLockssDaemonManager {
       return res;
     }
     
+  }
+
+  static class OsReleaseStatus extends PropFileStatusAccessor {
+
+    OsReleaseStatus() {
+      super(new File("/etc/os-release"));
+      setStripQuotes(true);
+    }
+
+    public String getDisplayName() {
+      return "OS Release Info";
+    }
   }
 }
