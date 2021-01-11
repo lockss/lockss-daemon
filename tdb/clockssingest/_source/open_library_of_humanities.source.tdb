@@ -32,9 +32,10 @@
   
     {
     title <
-       name = Dandelion Journal WARC Content ;
+       name = Dandelion: Postgraduate Arts Journal and Research Network ;
        eissn = 2048-1322
      >
+     #Leave title same as harvest entry in tdb file. Do not add "WARC Content to title."
     # This content was collected using wget and provided for preservation as a
     # set of WARC files
     # WARC content collected from https://dandelionjournal.org/
@@ -48,9 +49,10 @@
   
     {
     title <
-       name = International Journal of Welsh Writing in English WARC Content ;
+       name = International Journal of Welsh Writing in English ;
        eissn = 2053-1915
      >
+     #Leave title same as harvest entry in tdb file. Do not add "WARC Content to title."
     # This content was collected using wget and provided for preservation as a
     # set of WARC files
     # WARC content collected from https://ijwwe.uwp.co.uk/
