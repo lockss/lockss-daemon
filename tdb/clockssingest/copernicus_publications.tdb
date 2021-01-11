@@ -697,20 +697,6 @@
 
   {
     title <
-      name = Geochronology ;
-      eissn = 2628-3719
-    >
-      attr[journal_id] = gchron
-      #param[base_url] = https://gchron.copernicus.org/articles/
-      param[base_url] = https://gchron.copernicus.org/
-      param[home_url] = https://www.geochronology.net/
-
-      au < exists ; exists ; 2020 ; 2020 ; Geochronology Volume 32 ; 32 ; >
-
-   }
-
-  {
-    title <
       name = Geographica Helvetica ;
       issn = 0016-7312 ;
       eissn = 2194-8798
