@@ -103,7 +103,7 @@
       param[journal_id] = edgallpoerev
 
       au < finished ; manifest ; 2010 ; The Edgar Allan Poe Review Volume 11 ; 2010 ; http://www.jstor.org/ ; reingest1.clockss.org:8082 >
-      au < ready ; exists ; 2011 ; The Edgar Allan Poe Review Volume 12 ; 2011 ; https://www.jstor.org/ ; >
+      au < crawling ; exists ; 2011 ; The Edgar Allan Poe Review Volume 12 ; 2011 ; https://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2012 ; The Edgar Allan Poe Review Volume 13 ; 2012 ; https://www.jstor.org/ ; >
       au < finished ; manifest ; 2013 ; The Edgar Allan Poe Review Volume 14 ; 2013 ; http://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2014 ; The Edgar Allan Poe Review Volume 15 ; 2014 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
@@ -461,7 +461,7 @@
       param[journal_id] = jspecphil
 
       au < frozen ; exists ; 2010 ; The Journal of Speculative Philosophy Volume 24 ; 2010 ; https://www.jstor.org/ ; >
-      au < ready ; exists ; 2011 ; The Journal of Speculative Philosophy Volume 25 ; 2011 ; https://www.jstor.org/ ; >
+      au < crawling ; exists ; 2011 ; The Journal of Speculative Philosophy Volume 25 ; 2011 ; https://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2012 ; The Journal of Speculative Philosophy Volume 26 ; 2012 ; https://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2013 ; The Journal of Speculative Philosophy Volume 27 ; 2013 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2014 ; The Journal of Speculative Philosophy Volume 28 ; 2014 ; http://www.jstor.org/ ; >
@@ -540,7 +540,7 @@
       param[journal_id] = pacicoasphil
 
       au < exists ; exists ; 2010 ; Pacific Coast Philology Volume 45 ; 2010 ; https://www.jstor.org/ ; >
-      au < ready ; exists ; 2011 ; Pacific Coast Philology Volume 46 ; 2011 ; https://www.jstor.org/ ; >
+      au < crawling ; exists ; 2011 ; Pacific Coast Philology Volume 46 ; 2011 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2012 ; Pacific Coast Philology Volume 47 ; 2012 ; http://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Pacific Coast Philology Volume 48 ; 2013 ; https://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Pacific Coast Philology Volume 49 ; 2014 ; https://www.jstor.org/ ; >
@@ -791,7 +791,7 @@
       param[journal_id] = utopianstudies
 
       au < frozen ; exists ; 2010 ; Utopian Studies Volume 21 ; 2010 ; https://www.jstor.org/ ; >
-      au < ready ; exists ; 2011 ; Utopian Studies Volume 22 ; 2011 ; https://www.jstor.org/ ; >
+      au < crawling ; exists ; 2011 ; Utopian Studies Volume 22 ; 2011 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2012 ; Utopian Studies Volume 23 ; 2012 ; http://www.jstor.org/ ; >
       au < frozen ; exists ; 2013 ; Utopian Studies Volume 24 ; 2013 ; http://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Utopian Studies Volume 25 ; 2014 ; https://www.jstor.org/ ; >

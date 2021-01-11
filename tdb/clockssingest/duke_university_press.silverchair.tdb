@@ -99,7 +99,7 @@
 
       au < frozen ; exists ; 2001 ; 2001 ; Archives of Asian Art Volume 52 ; 52 ; >
       au < crawling ; exists ; 2003 ; 2003 ; Archives of Asian Art Volume 53 ; 53 ; >
-      au < ready ; exists ; 2004 ; 2004 ; Archives of Asian Art Volume 54 ; 54 ; >
+      au < crawling ; exists ; 2004 ; 2004 ; Archives of Asian Art Volume 54 ; 54 ; >
       au < ready ; exists ; 2005 ; 2005 ; Archives of Asian Art Volume 55 ; 55 ; >
       au < crawling ; exists ; 2006 ; 2006 ; Archives of Asian Art Volume 56 ; 56 ; >
       au < frozen ; exists ; 2007 ; 2007 ; Archives of Asian Art Volume 57 ; 57 ; >
@@ -153,9 +153,9 @@
 
       param[journal_id] = camera-obscura
 
-      au < ready ; exists ; 2017 ; 2017 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 32 ; 32 ; >
-      au < ready ; exists ; 2018 ; 2018 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 33 ; 33 ; >
-      au < ready ; exists ; 2019 ; 2019 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 34 ; 34 ; >
+      au < crawling ; exists ; 2017 ; 2017 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 32 ; 32 ; >
+      au < crawling ; exists ; 2018 ; 2018 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 33 ; 33 ; >
+      au < crawling ; exists ; 2019 ; 2019 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 34 ; 34 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 35 ; 35 ; >
 
   }
@@ -236,7 +236,7 @@
       param[journal_id] = critical-times
 
       au < frozen ; exists ; 2018 ; 2018 ; Critical Times: Interventions in Global Critical Theory Volume 1 ; 1 ; >
-      au < ready ; exists ; 2019 ; 2019 ; Critical Times: Interventions in Global Critical Theory Volume 2 ; 2 ; >
+      au < crawling ; exists ; 2019 ; 2019 ; Critical Times: Interventions in Global Critical Theory Volume 2 ; 2 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Critical Times: Interventions in Global Critical Theory Volume 3 ; 3 ; >
 
   }
@@ -325,7 +325,7 @@
 
       param[journal_id] = english-language-notes
 
-      au < ready ; exists ; 2000 ; 2000 ; English Language Notes Volume 37-38 ; 37-38 ; >
+      au < crawling ; exists ; 2000 ; 2000 ; English Language Notes Volume 37-38 ; 37-38 ; >
       au < crawling ; exists ; 2001 ; 2001 ; English Language Notes Volume 38-39 ; 38-39 ; >
       au < crawling ; exists ; 2002 ; 2002 ; English Language Notes Volume 39-40 ; 39-40 ; >
       au < crawling ; exists ; 2003 ; 2003 ; English Language Notes Volume 40-41 ; 40-41 ; >
@@ -359,8 +359,8 @@
 
       param[journal_id] = environmental-humanities
 
-      au < ready ; exists ; 2017 ; 2017 ; Environmental Humanities Volume 9 ; 9 ; >
-      au < ready ; exists ; 2018 ; 2018 ; Environmental Humanities Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2017 ; 2017 ; Environmental Humanities Volume 9 ; 9 ; >
+      au < crawling ; exists ; 2018 ; 2018 ; Environmental Humanities Volume 10 ; 10 ; >
       au < frozen ; exists ; 2019 ; 2019 ; Environmental Humanities Volume 11 ; 11 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Environmental Humanities Volume 12 ; 12 ; >
 
@@ -447,7 +447,7 @@
 
       au < ready ; exists ; 2017 ; 2017 ; Hispanic American Historical Review Volume 97 ; 97 ; >
       au < crawling ; exists ; 2018 ; 2018 ; Hispanic American Historical Review Volume 98 ; 98 ; >
-      au < ready ; exists ; 2019 ; 2019 ; Hispanic American Historical Review Volume 99 ; 99 ; >
+      au < crawling ; exists ; 2019 ; 2019 ; Hispanic American Historical Review Volume 99 ; 99 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Hispanic American Historical Review Volume 100 ; 100 ; >
 
     }
@@ -484,8 +484,8 @@
       au < frozen ; exists ; 2014 ; 2014 ; History of the Present Volume 4 ; 4 ; >
       au < ready ; exists ; 2015 ; 2015 ; History of the Present Volume 5 ; 5 ; >
       au < crawling ; exists ; 2016 ; 2016 ; History of the Present Volume 6 ; 6 ; >
-      au < ready ; exists ; 2017 ; 2017 ; History of the Present Volume 7 ; 7 ; >
-      au < ready ; exists ; 2018 ; 2018 ; History of the Present Volume 8 ; 8 ; >
+      au < crawling ; exists ; 2017 ; 2017 ; History of the Present Volume 7 ; 7 ; >
+      au < crawling ; exists ; 2018 ; 2018 ; History of the Present Volume 8 ; 8 ; >
       au < crawling ; exists ; 2019 ; 2019 ; History of the Present Volume 9 ; 9 ; >
       au < crawling ; exists ; 2020 ; 2020 ; History of the Present Volume 10 ; 10 ; >
 
@@ -502,7 +502,7 @@
 
      au < crawling ; exists ; 2017 ; 2017 ; Journal of Chinese Literature and Culture Volume 4 ; 4 ; >
      au < crawling ; exists ; 2018 ; 2018 ; Journal of Chinese Literature and Culture Volume 5 ; 5 ; >
-     au < ready ; exists ; 2019 ; 2019 ; Journal of Chinese Literature and Culture Volume 6 ; 6 ; >
+     au < crawling ; exists ; 2019 ; 2019 ; Journal of Chinese Literature and Culture Volume 6 ; 6 ; >
      au < crawling ; exists ; 2020 ; 2020 ; Journal of Chinese Literature and Culture Volume 7 ; 7 ; >
 
     }
@@ -573,7 +573,7 @@
       au < crawling ; exists ; 2005 ; 2005 ; Journal of Middle East Women's Studies Volume 1 ; 1 ; >
       au < frozen ; exists ; 2006 ; 2006 ; Journal of Middle East Women's Studies Volume 2 ; 2 ; >
       au < frozen ; exists ; 2007 ; 2007 ; Journal of Middle East Women's Studies Volume 3 ; 3 ; >
-      au < ready ; exists ; 2008 ; 2008 ; Journal of Middle East Women's Studies Volume 4 ; 4 ; >
+      au < crawling ; exists ; 2008 ; 2008 ; Journal of Middle East Women's Studies Volume 4 ; 4 ; >
       au < ready ; exists ; 2009 ; 2009 ; Journal of Middle East Women's Studies Volume 5 ; 5 ; >
       au < frozen ; exists ; 2010 ; 2010 ; Journal of Middle East Women's Studies Volume 6 ; 6 ; >
       au < frozen ; exists ; 2011 ; 2011 ; Journal of Middle East Women's Studies Volume 7 ; 7 ; >
@@ -618,7 +618,7 @@
 
       au < frozen ; exists ; 2017 ; 2017 ; Labor: Studies in Working-Class History of the Americas Volume 14 ; 14 ; >
       au < frozen ; exists ; 2018 ; 2018 ; Labor: Studies in Working-Class History of the Americas Volume 15 ; 15 ; >
-      au < ready ; exists ; 2019 ; 2019 ; Labor: Studies in Working-Class History of the Americas Volume 16 ; 16 ; >
+      au < crawling ; exists ; 2019 ; 2019 ; Labor: Studies in Working-Class History of the Americas Volume 16 ; 16 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Labor: Studies in Working-Class History of the Americas Volume 17 ; 17 ; >
 
     }
@@ -666,7 +666,7 @@
       au < frozen ; exists ; 2005 ; 2005 ; Meridians Volume 5-6 (2005) ; 5-6 (2005) ; >
       au < crawling ; exists ; 2006 ; 2006 ; Meridians Volume 6-7 (2006) ; 6-7 (2006) ; >
       au < crawling ; exists ; 2007 ; 2007 ; Meridians Volume 7 (2007) ; 7 (2007) ; >
-      au < ready ; exists ; 2008 ; 2008 ; Meridians Volume 8 (2008) ; 8 (2008) ; >
+      au < crawling ; exists ; 2008 ; 2008 ; Meridians Volume 8 (2008) ; 8 (2008) ; >
       au < ready ; exists ; 2009 ; 2009 ; Meridians Volume 9 (2009) ; 9 (2009) ; >
       au < crawling ; exists ; 2010 ; 2010 ; Meridians Volume 10 (2010) ; 10 (2010) ; >
       au < crawling ; exists ; 2011 ; 2011 ; Meridians Volume 11 (2011) ; 11 (2011) ; >
@@ -793,7 +793,7 @@
       param[journal_id] = the-philosophical-review
 
       au < frozen ; exists ; 2017 ; 2017 ; Philosophical Review Volume 126 ; 126 ; >
-      au < ready ; exists ; 2018 ; 2018 ; Philosophical Review Volume 127 ; 127 ; >
+      au < crawling ; exists ; 2018 ; 2018 ; Philosophical Review Volume 127 ; 127 ; >
       au < frozen ; exists ; 2019 ; 2019 ; Philosophical Review Volume 128 ; 128 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Philosophical Review Volume 129 ; 129 ; >
 
@@ -856,7 +856,7 @@
       param[journal_id] = pads
 
       au < ready ; exists ; 2017 ; 2017 ; Publication of the American Dialect Society Volume 101 ; 101 ; >
-      au < ready ; exists ; 2018 ; 2018 ; Publication of the American Dialect Society Volume 102 ; 102 ; >
+      au < crawling ; exists ; 2018 ; 2018 ; Publication of the American Dialect Society Volume 102 ; 102 ; >
       au < crawling ; exists ; 2019 ; 2019 ; Publication of the American Dialect Society Volume 103 ; 103 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Publication of the American Dialect Society Volume 104 ; 104 ; >
 
@@ -874,7 +874,7 @@
 
       au < ready ; exists ; 2017 ; 2017 ; Public Culture Volume 29 ; 29 ; >
       au < ready ; exists ; 2018 ; 2018 ; Public Culture Volume 30 ; 30 ; >
-      au < ready ; exists ; 2019 ; 2019 ; Public Culture Volume 31 ; 31 ; >
+      au < crawling ; exists ; 2019 ; 2019 ; Public Culture Volume 31 ; 31 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Public Culture Volume 32 ; 32 ; >
 
     }
@@ -955,7 +955,7 @@
       au < frozen ; exists ; 2012 ; 2012 ; Romanic Review Volume 103 ; 103 ; >
       au < ready ; exists ; 2013 ; 2013 ; Romanic Review Volume 104 ; 104 ; >
       au < crawling ; exists ; 2014 ; 2014 ; Romanic Review Volume 105 ; 105 ; >
-      au < ready ; exists ; 2015 ; 2015 ; Romanic Review Volume 106 ; 106 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Romanic Review Volume 106 ; 106 ; >
       au < crawling ; exists ; 2016 ; 2016 ; Romanic Review Volume 107 ; 107 ; >
       au < ready ; exists ; 2017 ; 2017 ; Romanic Review Volume 108 ; 108 ; >
       au < crawling ; exists ; 2018 ; 2018 ; Romanic Review Volume 109 ; 109 ; >
@@ -1076,16 +1076,16 @@
 
       param[journal_id] = twentieth-century-lit
 
-      au < ready ; exists ; 2000 ; 2000 ; Twentieth-Century Literature Volume 46 ; 46 ; >
+      au < crawling ; exists ; 2000 ; 2000 ; Twentieth-Century Literature Volume 46 ; 46 ; >
       au < ready ; exists ; 2001 ; 2001 ; Twentieth-Century Literature Volume 47 ; 47 ; >
       au < crawling ; exists ; 2002 ; 2002 ; Twentieth-Century Literature Volume 48 ; 48 ; >
       au < frozen ; exists ; 2003 ; 2003 ; Twentieth-Century Literature Volume 49 ; 49 ; >
       au < frozen ; exists ; 2004 ; 2004 ; Twentieth-Century Literature Volume 50 ; 50 ; >
       au < frozen ; exists ; 2005 ; 2005 ; Twentieth-Century Literature Volume 51 ; 51 ; >
       au < crawling ; exists ; 2006 ; 2006 ; Twentieth-Century Literature Volume 52 ; 52 ; >
-      au < ready ; exists ; 2007 ; 2007 ; Twentieth-Century Literature Volume 53 ; 53 ; >
+      au < crawling ; exists ; 2007 ; 2007 ; Twentieth-Century Literature Volume 53 ; 53 ; >
       au < crawling ; exists ; 2008 ; 2008 ; Twentieth-Century Literature Volume 54 ; 54 ; >
-      au < ready ; exists ; 2009 ; 2009 ; Twentieth-Century Literature Volume 55 ; 55 ; >
+      au < crawling ; exists ; 2009 ; 2009 ; Twentieth-Century Literature Volume 55 ; 55 ; >
       au < frozen ; exists ; 2010 ; 2010 ; Twentieth-Century Literature Volume 56 ; 56 ; >
       au < ready ; exists ; 2011 ; 2011 ; Twentieth-Century Literature Volume 57 ; 57 ; >
       au < frozen ; exists ; 2012 ; 2012 ; Twentieth-Century Literature Volume 58 ; 58 ; >

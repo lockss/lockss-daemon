@@ -22,7 +22,7 @@
     param[journal_abbr] = jpn
     implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
 
-    au < ready ; exists ; 2016 ; Judaica Librarianship Volume 29 ; 29 ; >
+    au < crawling ; exists ; 2016 ; Judaica Librarianship Volume 29 ; 29 ; >
     au < crawling ; exists ; 2017 ; Judaica Librarianship Volume 30 ; 30 ; >
     au < crawling ; exists ; 2018 ; Judaica Librarianship Volume 31 ; 31 ; >
     au < ready ; exists ; 2019 ; Judaica Librarianship Volume 32 ; 32 ; >
