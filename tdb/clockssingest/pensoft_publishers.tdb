@@ -26,7 +26,7 @@
     au < frozen ; exists ; 2016 ; 7 ; African Invertebrates Volume 2016 ; 2016 ; https://africaninvertebrates.pensoft.net/ ; >
     au < frozen ; exists ; 2017 ; 8 ; African Invertebrates Volume 2017 ; 2017 ; https://africaninvertebrates.pensoft.net/ ; >
     au < deepCrawl ; exists ; 2018 ; 9 ; African Invertebrates Volume 2018 ; 2018 ; https://africaninvertebrates.pensoft.net/ ; >
-    au < crawling ; exists ; 2019 ; 10 ; African Invertebrates Volume 2019 ; 2019 ; https://africaninvertebrates.pensoft.net/ ; >
+    au < frozen ; exists ; 2019 ; 10 ; African Invertebrates Volume 2019 ; 2019 ; https://africaninvertebrates.pensoft.net/ ; >
     au < crawling ; exists ; 2020 ; 11 ; African Invertebrates Volume 2020 ; 2020 ; https://africaninvertebrates.pensoft.net/ ; >
 
   }
@@ -303,7 +303,7 @@
 #    param[base_url] = http://zookeys.pensoft.net/
     
     au < frozen ; exists ; 2008 ; 1-4 ; ZooKeys Volume 2008 ; 2008 ; https://zookeys.pensoft.net/ ; >
-    au < crawling ; exists ; 2009 ; 5-31 ; ZooKeys Volume 2009 ; 2009 ; https://zookeys.pensoft.net/ ; >
+    au < frozen ; exists ; 2009 ; 5-31 ; ZooKeys Volume 2009 ; 2009 ; https://zookeys.pensoft.net/ ; >
     au < frozen ; exists ; 2010 ; 32-73 ; ZooKeys Volume 2010 ; 2010 ; https://zookeys.pensoft.net/ ; >
     au < crawling ; exists ; 2011 ; 74-160 ; ZooKeys Volume 2011 ; 2011 ; https://zookeys.pensoft.net/ ; >
     au < frozen ; exists ; 2012 ; 161-255 ; ZooKeys Volume 2012 ; 2012 ; http://zookeys.pensoft.net/ ; >

@@ -126,7 +126,7 @@
     >
       param[journal_id] = eugeoneirevi
 
-      au < crawling ; exists ; 2010 ; The Eugene O'Neill Review Volume 32 ; 2010 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2010 ; The Eugene O'Neill Review Volume 32 ; 2010 ; https://www.jstor.org/ ; >
       au < finished ; manifest ; 2012 ; The Eugene O'Neill Review Volume 33 ; 2012 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2013 ; The Eugene O'Neill Review Volume 34 ; 2013 ; https://www.jstor.org/ ; >
       au < finished ; manifest ; 2014 ; The Eugene O'Neill Review Volume 35 ; 2014 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
@@ -436,7 +436,7 @@
 
       param[journal_id] = jnietstud
 
-      au < crawling ; exists ; 2011 ; The Journal of Nietzsche Studies Volume 41-42 ; 2011 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2011 ; The Journal of Nietzsche Studies Volume 41-42 ; 2011 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2012 ; The Journal of Nietzsche Studies Volume 43 ; 2012 ; http://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2013 ; The Journal of Nietzsche Studies Volume 44 ; 2013 ; https://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2014 ; The Journal of Nietzsche Studies Volume 45 ; 2014 ; https://www.jstor.org/ ; >
@@ -1908,7 +1908,7 @@
 
       au < exists ; exists ; 2009 ; Wesley and Methodist Studies Volume 1 ; 2009 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2010 ; Wesley and Methodist Studies Volume 2 ; 2010 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2011 ; Wesley and Methodist Studies Volume 3 ; 2011 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2011 ; Wesley and Methodist Studies Volume 3 ; 2011 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2012 ; Wesley and Methodist Studies Volume 4 ; 2012 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2013 ; Wesley and Methodist Studies Volume 5 ; 2013 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2014 ; Wesley and Methodist Studies Volume 6 ; 2014 ; https://www.jstor.org/ ; >
