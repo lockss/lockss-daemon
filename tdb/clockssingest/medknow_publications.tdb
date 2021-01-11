@@ -1938,10 +1938,10 @@
     #new issn and eissn -- changed since 2017
     param[journal_issn] = 2589-0557
 
-    au < exists ; exists ; 2007 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 28 ; 2007 ; 28 ; https://www.ijstd.org/ ; ; >
-    au < exists ; exists ; 2008 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 29 ; 2008 ; 29 ; https://www.ijstd.org/ ; ; >
-    au < exists ; exists ; 2009 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 30 ; 2009 ; 30 ; https://www.ijstd.org/ ; ; >
-    au < exists ; exists ; 2010 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 31 ; 2010 ; 31 ; https://www.ijstd.org/ ; ; >
+    au < manifest ; exists ; 2007 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 28 ; 2007 ; 28 ; https://www.ijstd.org/ ; ; >
+    au < manifest ; exists ; 2008 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 29 ; 2008 ; 29 ; https://www.ijstd.org/ ; ; >
+    au < manifest ; exists ; 2009 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 30 ; 2009 ; 30 ; https://www.ijstd.org/ ; ; >
+    au < manifest ; exists ; 2010 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 31 ; 2010 ; 31 ; https://www.ijstd.org/ ; ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 32 ; 2011 ; 32 ; https://www.ijstd.org/ ; ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 33 ; 2012 ; 33 ; https://www.ijstd.org/ ; ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 34 ; 2013 ; 34 ; https://www.ijstd.org/ ; ; >
@@ -8898,8 +8898,8 @@
 
       au < notReady ; exists ; 2017 ; Asian Pacific Journal of Reproduction Volume 6 ; 2017 ; 6 ; http://www.apjr.net/ ; login for pdf ; >
       au < notReady ; exists ; 2018 ; Asian Pacific Journal of Reproduction Volume 7 ; 2018 ; 7 ; http://www.apjr.net/ ; login for pdf ; >
-      au < exists ; exists ; 2019 ; Asian Pacific Journal of Reproduction Volume 8 ; 2019 ; 8 ; https://www.apjr.net/ ; ; >
-      au < exists ; exists ; 2020 ; Asian Pacific Journal of Reproduction Volume 9 ; 2020 ; 9 ; https://www.apjr.net/ ; ; >
+      au < manifest ; exists ; 2019 ; Asian Pacific Journal of Reproduction Volume 8 ; 2019 ; 8 ; https://www.apjr.net/ ; ; >
+      au < manifest ; exists ; 2020 ; Asian Pacific Journal of Reproduction Volume 9 ; 2020 ; 9 ; https://www.apjr.net/ ; ; >
 
   }
 
@@ -9620,10 +9620,10 @@
       param[journal_issn] = 2221-6189
 #      param[base_url] = http://www.jadweb.org/
 
-      au < exists ; exists ; 2017 ; Journal of Acute Disease Volume 6 ; 2017 ; 6 ; https://www.jadweb.org/ ; ; >
-      au < exists ; exists ; 2018 ; Journal of Acute Disease Volume 7 ; 2018 ; 7 ; https://www.jadweb.org/ ; ; >
-      au < exists ; exists ; 2019 ; Journal of Acute Disease Volume 8 ; 2019 ; 8 ; https://www.jadweb.org/ ; ; >
-      au < exists ; exists ; 2020 ; Journal of Acute Disease Volume 9 ; 2020 ; 9 ; https://www.jadweb.org/ ; ; >
+      au < manifest ; exists ; 2017 ; Journal of Acute Disease Volume 6 ; 2017 ; 6 ; https://www.jadweb.org/ ; ; >
+      au < manifest ; exists ; 2018 ; Journal of Acute Disease Volume 7 ; 2018 ; 7 ; https://www.jadweb.org/ ; ; >
+      au < manifest ; exists ; 2019 ; Journal of Acute Disease Volume 8 ; 2019 ; 8 ; https://www.jadweb.org/ ; ; >
+      au < manifest ; exists ; 2020 ; Journal of Acute Disease Volume 9 ; 2020 ; 9 ; https://www.jadweb.org/ ; ; >
 
   }
 

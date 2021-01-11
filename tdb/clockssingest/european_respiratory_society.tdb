@@ -131,7 +131,7 @@
       au < ers.ClockssERSDrupalPlugin ; finished ; manifest ; 2019 ; European Respiratory Journal Volume 53 ; 53 ; https://erj.ersjournals.com/ ; reingest2.clockss.org:8085 >
       au < ers.ClockssERSDrupalPlugin ; finished ; manifest ; 2019 ; European Respiratory Journal Volume 54 ; 54 ; https://erj.ersjournals.com/ ; reingest5.clockss.org:8082 >
       au < ers.ClockssERSDrupalPlugin ; expected ; exists ; 2020 ; European Respiratory Journal Volume 55 ; 55 ; https://erj.ersjournals.com/ ; >
-      au < ers.ClockssERSDrupalPlugin ; expected ; exists ; 2020 ; European Respiratory Journal Volume 56 ; 56 ; https://erj.ersjournals.com/ ; >
+      au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 2020 ; European Respiratory Journal Volume 56 ; 56 ; https://erj.ersjournals.com/ ; >
 
     }
 
