@@ -223,7 +223,7 @@
 
     au < finished ; manifest ; 2018 ; International Journal of Distributed Artificial Intelligence (IJDAI) Volume 10 ; 10 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; International Journal of Distributed Artificial Intelligence (IJDAI) Volume 11 ; 11 ; https://www.igi-global.com/ ; reingest2.clockss.org:8085 >
-    au < testing ; exists ; 2020 ; International Journal of Distributed Artificial Intelligence (IJDAI) Volume 12 ; 12 ; https://www.igi-global.com/ ; >
+    au < ready ; exists ; 2020 ; International Journal of Distributed Artificial Intelligence (IJDAI) Volume 12 ; 12 ; https://www.igi-global.com/ ; >
 
   }
 
@@ -624,7 +624,7 @@
     au < deepCrawl ; exists ; 2016 ; International Journal of Chemoinformatics and Chemical Engineering (IJCCE) Volume 5 ; 5 ; http://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2017 ; International Journal of Chemoinformatics and Chemical Engineering (IJCCE) Volume 6 ; 6 ; http://www.igi-global.com/ ; >
     au < deepCrawl ; exists ; 2018 ; International Journal of Chemoinformatics and Chemical Engineering (IJCCE) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
-    au < testing ; exists ; 2019 ; International Journal of Chemoinformatics and Chemical Engineering (IJCCE) Volume 8 ; 8 ; https://www.igi-global.com/ ; >
+    au < ready ; exists ; 2019 ; International Journal of Chemoinformatics and Chemical Engineering (IJCCE) Volume 8 ; 8 ; https://www.igi-global.com/ ; >
     au < expected ; exists ; 2020 ; International Journal of Chemoinformatics and Chemical Engineering (IJCCE) Volume 9 ; 9 ; https://www.igi-global.com/ ; >
 
   }
@@ -1289,7 +1289,7 @@
     au < deepCrawl ; exists ; 2017 ; International Journal of Energy Optimization and Engineering (IJEOE) Volume 6 ; 6 ; http://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2018 ; International Journal of Energy Optimization and Engineering (IJEOE) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
     au < deepCrawl ; exists ; 2019 ; International Journal of Energy Optimization and Engineering (IJEOE) Volume 8 ; 8 ; https://www.igi-global.com/ ; >
-    au < testing ; exists ; 2020 ; International Journal of Energy Optimization and Engineering (IJEOE) Volume 9 ; 9 ; https://www.igi-global.com/ ; >
+    au < ready ; exists ; 2020 ; International Journal of Energy Optimization and Engineering (IJEOE) Volume 9 ; 9 ; https://www.igi-global.com/ ; >
 
   }
 
@@ -1434,7 +1434,7 @@
     au < deepCrawl ; exists ; 2017 ; International Journal of Game-Based Learning (IJGBL) Volume 7 ; 7 ; http://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2018 ; International Journal of Game-Based Learning (IJGBL) Volume 8 ; 8 ; https://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2019 ; International Journal of Game-Based Learning (IJGBL) Volume 9 ; 9 ; https://www.igi-global.com/ ; >
-    au < testing ; exists ; 2020 ; International Journal of Game-Based Learning (IJGBL) Volume 10 ; 10 ; https://www.igi-global.com/ ; >
+    au < ready ; exists ; 2020 ; International Journal of Game-Based Learning (IJGBL) Volume 10 ; 10 ; https://www.igi-global.com/ ; >
 
   }
 
@@ -2490,7 +2490,7 @@
     au < deepCrawl ; exists ; 2017 ; International Journal of Online Marketing (IJOM) Volume 7 ; 7 ; http://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2018 ; International Journal of Online Marketing (IJOM) Volume 8 ; 8 ; https://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2019 ; International Journal of Online Marketing (IJOM) Volume 9 ; 9 ; https://www.igi-global.com/ ; > 
-    au < testing ; exists ; 2020 ; International Journal of Online Marketing (IJOM) Volume 10 ; 10 ; https://www.igi-global.com/ ; > 
+    au < ready ; exists ; 2020 ; International Journal of Online Marketing (IJOM) Volume 10 ; 10 ; https://www.igi-global.com/ ; > 
 
   }
 
@@ -3068,7 +3068,7 @@
     au < deepCrawl ; exists ; 2017 ; International Journal of Surface Engineering and Interdisciplinary Materials Science (IJSEIMS) Volume 5 ; 5 ; http://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2018 ; International Journal of Surface Engineering and Interdisciplinary Materials Science (IJSEIMS) Volume 6 ; 6 ; https://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2019 ; International Journal of Surface Engineering and Interdisciplinary Materials Science (IJSEIMS) Volume 7 ; 7 ; https://www.igi-global.com/ ; > 
-    au < testing ; exists ; 2020 ; International Journal of Surface Engineering and Interdisciplinary Materials Science (IJSEIMS) Volume 8 ; 8 ; https://www.igi-global.com/ ; > 
+    au < ready ; exists ; 2020 ; International Journal of Surface Engineering and Interdisciplinary Materials Science (IJSEIMS) Volume 8 ; 8 ; https://www.igi-global.com/ ; > 
 
   }
 
