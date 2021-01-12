@@ -198,6 +198,25 @@
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
+    <!--
+    https://journals.sagepub.com/doi/full/10.1177/1477750919886087
+    https://journals.sagepub.com/doi/pdf/10.1177/1477750919886087
+    https://ascopubs.org/doi/pdf/10.1200/OP.20.00575
+    https://cdnsciencepub.com/doi/full/10.1139/juvs-2020-0016
+    https://cdnsciencepub.com/doi/pdf/10.1139/juvs-2018-0023
+    https://www.futuremedicine.com/doi/pdfplus/10.2217/fnl-2019-0014
+    https://www.jgme.org/doi/full/10.4300/JGME-D-20-01016.1
+    https://www.jgme.org/doi/pdf/10.4300/01.01.0003
+    https://arc.aiaa.org/doi/pdf/10.2514/3.98
+    https://arc.aiaa.org/doi/pdfplus/10.2514/3.100
+    https://journals.physiology.org/doi/full/10.1152/ajpcell.zh0-8735-corr.2020
+    https://journals.physiology.org/doi/pdf/10.1152/ajpcell.00003.2020
+    https://focus.psychiatryonline.org/doi/full/10.1176/appi.focus.20190034
+    https://focus.psychiatryonline.org/doi/pdf/10.1176/appi.focus.12.3.249
+
+    Could not find why "[^\?&amp;]+$" is in the pattern in the historical reason.
+    To be safe, separate the pattern to two
+    -->
     <list>
       	<string>"^https?://%s/doi/(e?pdf|e?pdfplus|full)/[.0-9]+/[^\?&amp;]+$", url_host(base_url)</string>
     </list>
