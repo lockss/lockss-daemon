@@ -1,9 +1,9 @@
 {
 
   publisher <
-    name = Lecturas de Economia ;
+    name = Lecturas de Economía ;
     info[contract] = 2020 ;
-    info[back] = 2015 ;
+    info[back] = 2010 ;
     info[tester] = 8 ;
     info[poller] = 8
   >
@@ -13,7 +13,7 @@
   {
  
     title <
-      name = Lecturas de Economia ;
+      name = Lecturas de Economía ;
       eissn = 0120-2596
     >
     
@@ -23,20 +23,21 @@
     param[base_url] = https://revistas.udea.edu.co/
     plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
     attr[start_stem] = index.php/
+    #Previously processed 2013-2015 through Scielo.
     
     #published 1980-present
 
-    au < manifest ; exists ; 2010 ; 2010 ; Lecturas de Economia Volume 2010 ; 2010 ; >
-    au < manifest ; exists ; 2011 ; 2011 ; Lecturas de Economia Volume 2011 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; 2012 ; Lecturas de Economia Volume 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; Lecturas de Economia Volume 2013 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 2014 ; Lecturas de Economia Volume 2014 ; 2014 ; >
-    au < crawling ; exists ; 2015 ; 2015 ; Lecturas de Economia Volume 2015 ; 2015 ; >
-    au < crawling ; exists ; 2016 ; 2016 ; Lecturas de Economia Volume 2016 ; 2016 ; >
-    au < crawling ; exists ; 2017 ; 2017 ; Lecturas de Economia Volume 2017 ; 2017 ; >
-    au < frozen ; exists ; 2018 ; 2018 ; Lecturas de Economia Volume 2018 ; 2018 ; >
-    au < frozen ; exists ; 2019 ; 2019 ; Lecturas de Economia Volume 2019 ; 2019 ; >
-    au < crawling ; exists ; 2020 ; 2020 ; Lecturas de Economia Volume 2020 ; 2020 ; >
+    au < manifest ; exists ; 2010 ; 2010 ; Lecturas de Economía Volume 2010 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 2011 ; Lecturas de Economía Volume 2011 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 2012 ; Lecturas de Economía Volume 2012 ; 2012 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Lecturas de Economía Volume 2013 ; 2013 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Lecturas de Economía Volume 2014 ; 2014 ; >
+    au < superseded ; exists ; 2015 ; 2015 ; Lecturas de Economía Volume 2015 [superseded] ; 2015 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; Lecturas de Economía Volume 2016 ; 2016 ; >
+    au < crawling ; exists ; 2017 ; 2017 ; Lecturas de Economía Volume 2017 ; 2017 ; >
+    au < frozen ; exists ; 2018 ; 2018 ; Lecturas de Economía Volume 2018 ; 2018 ; >
+    au < frozen ; exists ; 2019 ; 2019 ; Lecturas de Economía Volume 2019 ; 2019 ; >
+    au < crawling ; exists ; 2020 ; 2020 ; Lecturas de Economía Volume 2020 ; 2020 ; >
 
     }
 
