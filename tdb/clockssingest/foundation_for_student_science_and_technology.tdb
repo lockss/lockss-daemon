@@ -35,8 +35,8 @@
     au < finished ; manifest ; 2016 ; Journal of Student Science and Technology Volume 9 ; 9 ; 2016 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Journal of Student Science and Technology Volume 10 ; 10 ; 2017 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2019 ; Journal of Student Science and Technology Volume 11 ; 11 ; 2019 ; reingest2.clockss.org:8085 >
-    au < expected ; exists ; 2020 ; Journal of Student Science and Technology Volume 12 ; 12 ; 2020 ; >
-    #do not collect after 2020.
+    au < doNotProcess ; doNotProcess ; 2020 ; Journal of Student Science and Technology Volume 12 ; 12 ; 2020 ; >
+    #do not collect after 2020. Nothing published in 2020
 
   }
 
