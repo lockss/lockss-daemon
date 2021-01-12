@@ -98,6 +98,10 @@ public class BioOneMetadataExtractorFactory extends SourceXmlMetadataExtractorFa
 				}
 			}
 
+			thisAM.put(MetadataField.FIELD_PUBLISHER, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_pubname));
+
+			/*
+			Comment out these changes, since we like to get publisher name from the xml files
 			String publisherName = "BioOne";
 
 			TdbAu tdbau = cu.getArchivalUnit().getTdbAu();
@@ -106,6 +110,7 @@ public class BioOneMetadataExtractorFactory extends SourceXmlMetadataExtractorFa
 			}
 			
 			thisAM.put(MetadataField.FIELD_PUBLISHER, publisherName);
+			 */
 		}
 
 	}

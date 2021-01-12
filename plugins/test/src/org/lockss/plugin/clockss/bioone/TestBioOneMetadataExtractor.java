@@ -145,7 +145,7 @@ public class TestBioOneMetadataExtractor extends LockssTestCase {
     String fname = AM.getRaw("field[@name=\"imuse_id\"]");
     assertEquals("Entomological News", AM.get(MetadataField.FIELD_PUBLICATION_TITLE));
     assertEquals("2020-October-29", AM.get(MetadataField.FIELD_DATE));
-    assertEquals("BioOne", AM.get(MetadataField.FIELD_PUBLISHER));
+    assertEquals("American Entomological Society", AM.get(MetadataField.FIELD_PUBLISHER));
     assertEquals("129", AM.get(MetadataField.FIELD_VOLUME));
     assertEquals("3", AM.get(MetadataField.FIELD_ISSUE));
     assertEquals("0013-872X", AM.get(MetadataField.FIELD_ISSN));

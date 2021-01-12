@@ -60,9 +60,11 @@ public class BioOneArticleIteratorFactory implements ArticleIteratorFactory, Art
   //https://clockss-test.lockss.org/sourcefiles/bioone-released/2020/entn_129_3_SendAll.zip!/021.129.0301_SendAll.zip/021.129.0301.pdf	application/pdf	787505
   //https://clockss-test.lockss.org/sourcefiles/bioone-released/2020/entn_129_3_SendAll.zip!/021.129.0301_SendAll.zip/021.129.0301.xml	application/xml	40853
 
+  // Exclude supplemental pdf, since it has no metadata
+  //https://clockss-test.lockss.org/sourcefiles/bioone-released/2020/jmam_45_1_SendAll.zip!/ms2018-0071_SendAll.zip/suppl/45-1_01jo_2018-0071_sf1.pdf
 
   protected static final String ALL_ZIP_XML_PATTERN_TEMPLATE =
-          "\"%s%s/.*\\.zip!/([^/]+)(\\.zip)?/.*\\.pdf$\", base_url, directory";
+          "\"%s%s/.*\\.zip!/([^/]+)(\\.zip)?(?!/suppl)/.*\\.pdf$\", base_url, directory";
 
   // Be sure to exclude all nested archives in case supplemental data is provided this way
   protected static final Pattern SUB_NESTED_ARCHIVE_PATTERN =
