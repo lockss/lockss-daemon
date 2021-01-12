@@ -8871,9 +8871,9 @@
 #      param[base_url] = http://www.apjr.net/
 
       au < released ; 2017 ; Asian Pacific Journal of Reproduction Volume 6 ; 2017 ; 6 ; http://www.apjr.net/ >
-      au < exists ; 2018 ; Asian Pacific Journal of Reproduction Volume 7 ; 2018 ; 7 ; https://www.apjr.net/ >
-      au < exists ; 2019 ; Asian Pacific Journal of Reproduction Volume 8 ; 2019 ; 8 ; https://www.apjr.net/ >
-      au < exists ; 2020 ; Asian Pacific Journal of Reproduction Volume 9 ; 2020 ; 9 ; https://www.apjr.net/ >
+      au < manifest ; 2018 ; Asian Pacific Journal of Reproduction Volume 7 ; 2018 ; 7 ; https://www.apjr.net/ >
+      au < manifest ; 2019 ; Asian Pacific Journal of Reproduction Volume 8 ; 2019 ; 8 ; https://www.apjr.net/ >
+      au < manifest ; 2020 ; Asian Pacific Journal of Reproduction Volume 9 ; 2020 ; 9 ; https://www.apjr.net/ >
 
   }
 
@@ -9595,9 +9595,9 @@
 #      param[base_url] = http://www.jadweb.org/
 
       au < released ; 2017 ; Journal of Acute Disease Volume 6 ; 2017 ; 6 ; http://www.jadweb.org/ >
-      au < exists ; 2018 ; Journal of Acute Disease Volume 7 ; 2018 ; 7 ; https://www.jadweb.org/ >
-      au < exists ; 2019 ; Journal of Acute Disease Volume 8 ; 2019 ; 8 ; https://www.jadweb.org/ >
-      au < exists ; 2020 ; Journal of Acute Disease Volume 9 ; 2020 ; 9 ; https://www.jadweb.org/ >
+      au < manifest ; 2018 ; Journal of Acute Disease Volume 7 ; 2018 ; 7 ; https://www.jadweb.org/ >
+      au < manifest ; 2019 ; Journal of Acute Disease Volume 8 ; 2019 ; 8 ; https://www.jadweb.org/ >
+      au < manifest ; 2020 ; Journal of Acute Disease Volume 9 ; 2020 ; 9 ; https://www.jadweb.org/ >
 
   }
 
@@ -9616,7 +9616,7 @@
       au < released ; 2017 ; Journal of Cardiothoracic Trauma Volume 2 ; 2017 ; 2 ; http://www.jctt.org/ >
       au < manifest ; 2018 ; Journal of Cardiothoracic Trauma Volume 3 ; 2018 ; 3 ; https://www.jctt.org/ >
       au < manifest ; 2019 ; Journal of Cardiothoracic Trauma Volume 4 ; 2019 ; 4 ; https://www.jctt.org/ >
-      au < expected ; 2020 ; Journal of Cardiothoracic Trauma Volume 5 ; 2020 ; 5 ; https://www.jctt.org/ >
+      au < manifest ; 2020 ; Journal of Cardiothoracic Trauma Volume 5 ; 2020 ; 5 ; https://www.jctt.org/ >
 
   }
 
