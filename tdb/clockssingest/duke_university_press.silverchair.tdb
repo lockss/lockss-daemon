@@ -62,7 +62,7 @@
       param[journal_id] = american-speech
 
       au < frozen ; exists ; 2017 ; 2017 ; American Speech Volume 92 ; 92 ; >
-      au < crawling ; exists ; 2018 ; 2018 ; American Speech Volume 93 ; 93 ; >
+      au < frozen ; exists ; 2018 ; 2018 ; American Speech Volume 93 ; 93 ; >
       au < crawling ; exists ; 2019 ; 2019 ; American Speech Volume 94 ; 94 ; >
       au < crawling ; exists ; 2020 ; 2020 ; American Speech Volume 95 ; 95 ; >
 
@@ -98,12 +98,12 @@
       param[journal_id] = archives-of-asian-art
 
       au < frozen ; exists ; 2001 ; 2001 ; Archives of Asian Art Volume 52 ; 52 ; >
-      au < crawling ; exists ; 2003 ; 2003 ; Archives of Asian Art Volume 53 ; 53 ; >
+      au < frozen ; exists ; 2003 ; 2003 ; Archives of Asian Art Volume 53 ; 53 ; >
       au < crawling ; exists ; 2004 ; 2004 ; Archives of Asian Art Volume 54 ; 54 ; >
       au < ready ; exists ; 2005 ; 2005 ; Archives of Asian Art Volume 55 ; 55 ; >
       au < crawling ; exists ; 2006 ; 2006 ; Archives of Asian Art Volume 56 ; 56 ; >
       au < frozen ; exists ; 2007 ; 2007 ; Archives of Asian Art Volume 57 ; 57 ; >
-      au < crawling ; exists ; 2008 ; 2008 ; Archives of Asian Art Volume 58 ; 58 ; >
+      au < frozen ; exists ; 2008 ; 2008 ; Archives of Asian Art Volume 58 ; 58 ; >
       au < frozen ; exists ; 2009 ; 2009 ; Archives of Asian Art Volume 59 ; 59 ; >
       au < frozen ; exists ; 2010 ; 2010 ; Archives of Asian Art Volume 60 ; 60 ; >
       au < frozen ; exists ; 2011 ; 2011 ; Archives of Asian Art Volume 61 ; 61 ; >
@@ -136,7 +136,7 @@
       au < frozen ; exists ; 1990 ; 1990 ; Black Sacred Music Volume 4 ; 4 ; >
       au < crawling ; exists ; 1991 ; 1991 ; Black Sacred Music Volume 5 ; 5 ; >
       au < frozen ; exists ; 1992 ; 1992 ; Black Sacred Music Volume 6 ; 6 ; >
-      au < crawling ; exists ; 1993 ; 1993 ; Black Sacred Music Volume 7 ; 7 ; >
+      au < frozen ; exists ; 1993 ; 1993 ; Black Sacred Music Volume 7 ; 7 ; >
       au < crawling ; exists ; 1994 ; 1994 ; Black Sacred Music Volume 8 ; 8 ; >
       au < frozen ; exists ; 1995 ; 1995 ; Black Sacred Music Volume 9 ; 9 ; >
 
@@ -328,12 +328,12 @@
       au < crawling ; exists ; 2000 ; 2000 ; English Language Notes Volume 37-38 ; 37-38 ; >
       au < crawling ; exists ; 2001 ; 2001 ; English Language Notes Volume 38-39 ; 38-39 ; >
       au < crawling ; exists ; 2002 ; 2002 ; English Language Notes Volume 39-40 ; 39-40 ; >
-      au < crawling ; exists ; 2003 ; 2003 ; English Language Notes Volume 40-41 ; 40-41 ; >
+      au < frozen ; exists ; 2003 ; 2003 ; English Language Notes Volume 40-41 ; 40-41 ; >
       au < frozen ; exists ; 2004 ; 2004 ; English Language Notes Volume 41-42 ; 41-42 ; >
       au < ready ; exists ; 2005 ; 2005 ; English Language Notes Volume 42-43 ; 42-43 ; >
       au < crawling ; exists ; 2006 ; 2006 ; English Language Notes Volume 44 ; 44 ; >
       au < frozen ; exists ; 2007 ; 2007 ; English Language Notes Volume 45 ; 45 ; >
-      au < crawling ; exists ; 2008 ; 2008 ; English Language Notes Volume 46 ; 46 ; >
+      au < frozen ; exists ; 2008 ; 2008 ; English Language Notes Volume 46 ; 46 ; >
       au < crawling ; exists ; 2009 ; 2009 ; English Language Notes Volume 47 ; 47 ; >
       au < frozen ; exists ; 2010 ; 2010 ; English Language Notes Volume 48 ; 48 ; >
       au < frozen ; exists ; 2011 ; 2011 ; English Language Notes Volume 49 ; 49 ; >
@@ -429,7 +429,7 @@
       param[journal_id] = glq
 
       au < frozen ; exists ; 2017 ; 2017 ; GLQ: A Journal of Lesbian and Gay Studies Volume 23 ; 23 ; >
-      au < crawling ; exists ; 2018 ; 2018 ; GLQ: A Journal of Lesbian and Gay Studies Volume 24 ; 24 ; >
+      au < frozen ; exists ; 2018 ; 2018 ; GLQ: A Journal of Lesbian and Gay Studies Volume 24 ; 24 ; >
       au < frozen ; exists ; 2019 ; 2019 ; GLQ: A Journal of Lesbian and Gay Studies Volume 25 ; 25 ; >
       au < crawling ; exists ; 2020 ; 2020 ; GLQ: A Journal of Lesbian and Gay Studies Volume 26 ; 26 ; >
 
@@ -462,7 +462,7 @@
 
       param[journal_id] = hope
 
-      au < crawling ; exists ; 2017 ; 2017 ; History of Political Economy Volume 49 ; 49 ; >
+      au < frozen ; exists ; 2017 ; 2017 ; History of Political Economy Volume 49 ; 49 ; >
       au < frozen ; exists ; 2018 ; 2018 ; History of Political Economy Volume 50 ; 50 ; >
       au < crawling ; exists ; 2019 ; 2019 ; History of Political Economy Volume 51 ; 51 ; >
       au < crawling ; exists ; 2020 ; 2020 ; History of Political Economy Volume 52 ; 52 ; >
@@ -501,7 +501,7 @@
       param[journal_id] = jclc
 
      au < crawling ; exists ; 2017 ; 2017 ; Journal of Chinese Literature and Culture Volume 4 ; 4 ; >
-     au < crawling ; exists ; 2018 ; 2018 ; Journal of Chinese Literature and Culture Volume 5 ; 5 ; >
+     au < frozen ; exists ; 2018 ; 2018 ; Journal of Chinese Literature and Culture Volume 5 ; 5 ; >
      au < crawling ; exists ; 2019 ; 2019 ; Journal of Chinese Literature and Culture Volume 6 ; 6 ; >
      au < crawling ; exists ; 2020 ; 2020 ; Journal of Chinese Literature and Culture Volume 7 ; 7 ; >
 
@@ -554,7 +554,7 @@
       param[journal_id] = jmems
 
       au < frozen ; exists ; 2017 ; 2017 ; Journal of Medieval and Early Modern Studies Volume 47 ; 47 ; >
-      au < crawling ; exists ; 2018 ; 2018 ; Journal of Medieval and Early Modern Studies Volume 48 ; 48 ; >
+      au < frozen ; exists ; 2018 ; 2018 ; Journal of Medieval and Early Modern Studies Volume 48 ; 48 ; >
       au < crawling ; exists ; 2019 ; 2019 ; Journal of Medieval and Early Modern Studies Volume 49 ; 49 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Journal of Medieval and Early Modern Studies Volume 50 ; 50 ; >
 
@@ -726,7 +726,7 @@
       param[journal_id] = new-german-critique
 
       au < frozen ; exists ; 2017 ; 2017  ; New German Critique Volume 44 ; 44 ; >
-      au < crawling ; exists ; 2018 ; 2018 ; New German Critique Volume 45 ; 45 ; >
+      au < frozen ; exists ; 2018 ; 2018 ; New German Critique Volume 45 ; 45 ; >
       au < frozen ; exists ; 2019 ; 2019 ; New German Critique Volume 46 ; 46 ; >
       au < crawling ; exists ; 2020 ; 2020 ; New German Critique Volume 47 ; 47 ; >
 
@@ -826,8 +826,8 @@
       param[journal_id] = positions
       #subtitle was "east asia cultures critique for 1999-2011 at least"
 
-      au < crawling ; exists ; 2017 ; 2017 ; positions: asia critique Volume 25 ; 25 ; >
-      au < crawling ; exists ; 2018 ; 2018 ; positions: asia critique Volume 26 ; 26 ; >
+      au < frozen ; exists ; 2017 ; 2017 ; positions: asia critique Volume 25 ; 25 ; >
+      au < frozen ; exists ; 2018 ; 2018 ; positions: asia critique Volume 26 ; 26 ; >
       au < crawling ; exists ; 2019 ; 2019 ; positions: asia critique Volume 27 ; 27 ; >
       au < crawling ; exists ; 2020 ; 2020 ; positions: asia critique Volume 28 ; 28 ; >
 
@@ -897,7 +897,7 @@
       au < ready ; exists ; 2006 ; 2006 ; Qui Parle Volume 16 (2006) ; 16 (2006) ; >
       au < crawling ; exists ; 2007 ; 2007 ; Qui Parle Volume 16 (2007) ; 16 (2007) ; >
       au < frozen ; exists ; 2008 ; 2008 ; Qui Parle Volume 17 (2008) ; 17 (2008) ; >
-      au < crawling ; exists ; 2009 ; 2009 ; Qui Parle Volume 17-18 (2009) ; 17-18 (2009) ; >
+      au < frozen ; exists ; 2009 ; 2009 ; Qui Parle Volume 17-18 (2009) ; 17-18 (2009) ; >
       au < frozen ; exists ; 2010 ; 2010 ; Qui Parle Volume 18-19 (2010) ; 18-19 (2010) ; >
       au < frozen ; exists ; 2011 ; 2011 ; Qui Parle Volume 19-20 (2011) ; 19-20 (2011) ; >
       au < crawling ; exists ; 2012 ; 2012 ; Qui Parle Volume 20-21 (2012) ; 20-21 (2012) ; >
@@ -924,7 +924,7 @@
 
       au < frozen ; exists ; 2017 ; 2017 ; Radical History Review Volume 2017 ; 2017 ; >
       au < frozen ; exists ; 2018 ; 2018 ; Radical History Review Volume 2018 ; 2018 ; >
-      au < crawling ; exists ; 2019 ; 2019 ; Radical History Review Volume 2019 ; 2019 ; >
+      au < frozen ; exists ; 2019 ; 2019 ; Radical History Review Volume 2019 ; 2019 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Radical History Review Volume 2020 ; 2020 ; >
 
      }
@@ -948,7 +948,7 @@
       au < ready ; exists ; 2005 ; 2005 ; Romanic Review Volume 96 ; 96 ; >
       au < frozen ; exists ; 2006 ; 2006 ; Romanic Review Volume 97 ; 97 ; >
       au < frozen ; exists ; 2007 ; 2007 ; Romanic Review Volume 98 ; 98 ; >
-      au < crawling ; exists ; 2008 ; 2008 ; Romanic Review Volume 99 ; 99 ; >
+      au < frozen ; exists ; 2008 ; 2008 ; Romanic Review Volume 99 ; 99 ; >
       au < ready ; exists ; 2009 ; 2009 ; Romanic Review Volume 100 ; 100 ; >
       au < crawling ; exists ; 2010 ; 2010 ; Romanic Review Volume 101 ; 101 ; >
       au < frozen ; exists ; 2011 ; 2011 ; Romanic Review Volume 102 ; 102 ; >
@@ -975,7 +975,7 @@
       param[journal_id] = small-axe
 
       au < frozen ; exists ; 2017 ; 2017 ; Small Axe Volume 21 ; 21 ; >
-      au < crawling ; exists ; 2018 ; 2018 ; Small Axe Volume 22 ; 22 ; >
+      au < frozen ; exists ; 2018 ; 2018 ; Small Axe Volume 22 ; 22 ; >
       au < frozen ; exists ; 2019 ; 2019 ; Small Axe Volume 23 ; 23 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Small Axe Volume 24 ; 24 ; >
 
@@ -1008,9 +1008,9 @@
 
       param[journal_id] = south-atlantic-quarterly
 
-      au < crawling ; exists ; 2017 ; 2017 ; South Atlantic Quarterly Volume 116 ; 116 ; >
+      au < frozen ; exists ; 2017 ; 2017 ; South Atlantic Quarterly Volume 116 ; 116 ; >
       au < frozen ; exists ; 2018 ; 2018 ; South Atlantic Quarterly Volume 117 ; 117 ; >
-      au < crawling ; exists ; 2019 ; 2019 ; South Atlantic Quarterly Volume 118 ; 118 ; >
+      au < frozen ; exists ; 2019 ; 2019 ; South Atlantic Quarterly Volume 118 ; 118 ; >
       au < crawling ; exists ; 2020 ; 2020 ; South Atlantic Quarterly Volume 119 ; 119 ; >
 
      }
@@ -1027,7 +1027,7 @@
 
       au < crawling ; exists ; 2017 ; 2017 ; Theater Volume 47 ; 47 ; >
       au < frozen ; exists ; 2018 ; 2018 ; Theater Volume 48 ; 48 ; >
-      au < crawling ; exists ; 2019 ; 2019 ; Theater Volume 49 ; 49 ; >
+      au < frozen ; exists ; 2019 ; 2019 ; Theater Volume 49 ; 49 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Theater Volume 50 ; 50 ; >
 
     }
@@ -1091,7 +1091,7 @@
       au < frozen ; exists ; 2012 ; 2012 ; Twentieth-Century Literature Volume 58 ; 58 ; >
       au < frozen ; exists ; 2013 ; 2013 ; Twentieth-Century Literature Volume 59 ; 59 ; >
       au < frozen ; exists ; 2014 ; 2014 ; Twentieth-Century Literature Volume 60 ; 60 ; >
-      au < crawling ; exists ; 2015 ; 2015 ; Twentieth-Century Literature Volume 61 ; 61 ; >
+      au < frozen ; exists ; 2015 ; 2015 ; Twentieth-Century Literature Volume 61 ; 61 ; >
       au < crawling ; exists ; 2016 ; 2016 ; Twentieth-Century Literature Volume 62 ; 62 ; >
       au < frozen ; exists ; 2017 ; 2017 ; Twentieth-Century Literature Volume 63 ; 63 ; >
       au < crawling ; exists ; 2018 ; 2018 ; Twentieth-Century Literature Volume 64 ; 64 ; >

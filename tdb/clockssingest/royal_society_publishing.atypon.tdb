@@ -187,7 +187,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of the Royal Society Interface Volume 14 ; 14 ; >
     au < finished ; finished ; 2018 ; Journal of the Royal Society Interface Volume 15 ; 15 ; reingest3.clockss.org:8083 >
     au < superseded ; exists ; 2019 ; Journal of the Royal Society Interface Volume 16 [superseded] ; 2019 ; >
-    au < crawling ; exists ; 2019 ; Journal of the Royal Society Interface Volume 16 ; 16 ; >
+    au < frozen ; exists ; 2019 ; Journal of the Royal Society Interface Volume 16 ; 16 ; >
     au < crawling ; exists ; 2020 ; Journal of the Royal Society Interface Volume 17 ; 17 ; >
 
   }
@@ -481,7 +481,7 @@
     
     au < crawling ; exists ; 1990 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 332 ; 332 ; >
     au < crawling ; exists ; 1990 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 333 ; 333 ; >
-    au < crawling ; exists ; 1991 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 334 ; 334 ; >
+    au < frozen ; exists ; 1991 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 334 ; 334 ; >
     au < frozen ; exists ; 1991 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 335 ; 335 ; >
     au < frozen ; exists ; 1991 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 336 ; 336 ; >
     au < frozen ; exists ; 1991 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 337 ; 337 ; >
@@ -1644,7 +1644,7 @@
     {
     param[journal_id] = rspl1843
 
-    au < crawling ; exists ; 1851 ; Proceedings of the Royal Society of London Volume 5 ; 5 ; >
+    au < frozen ; exists ; 1851 ; Proceedings of the Royal Society of London Volume 5 ; 5 ; >
     au < crawling ; exists ; 1854 ; Proceedings of the Royal Society of London Volume 6 ; 6 ; >
     }
     {
@@ -1668,9 +1668,9 @@
     au < frozen ; exists ; 1874 ; Proceedings of the Royal Society of London Volume 22 ; 22 ; >
     au < frozen ; exists ; 1875 ; Proceedings of the Royal Society of London Volume 23 ; 23 ; >
     au < frozen ; exists ; 1876 ; Proceedings of the Royal Society of London Volume 24 ; 24 ; >
-    au < crawling ; exists ; 1877 ; Proceedings of the Royal Society of London Volume 25 ; 25 ; >
+    au < frozen ; exists ; 1877 ; Proceedings of the Royal Society of London Volume 25 ; 25 ; >
     au < frozen ; exists ; 1878 ; Proceedings of the Royal Society of London Volume 26 ; 26 ; >
-    au < crawling ; exists ; 1878 ; Proceedings of the Royal Society of London Volume 27 ; 27 ; >
+    au < frozen ; exists ; 1878 ; Proceedings of the Royal Society of London Volume 27 ; 27 ; >
     au < frozen ; exists ; 1879 ; Proceedings of the Royal Society of London Volume 28 ; 28 ; >
     au < crawling ; exists ; 1879 ; Proceedings of the Royal Society of London Volume 29 ; 29 ; >
     au < frozen ; exists ; 1880 ; Proceedings of the Royal Society of London Volume 30 ; 30 ; >
@@ -1693,7 +1693,7 @@
     au < frozen ; exists ; 1890 ; Proceedings of the Royal Society of London Volume 47 ; 47 ; >
     au < crawling ; exists ; 1890 ; Proceedings of the Royal Society of London Volume 48 ; 48 ; >
     au < crawling ; exists ; 1891 ; Proceedings of the Royal Society of London Volume 49 ; 49 ; >
-    au < crawling ; exists ; 1892 ; Proceedings of the Royal Society of London Volume 50 ; 50 ; >
+    au < frozen ; exists ; 1892 ; Proceedings of the Royal Society of London Volume 50 ; 50 ; >
     au < frozen ; exists ; 1892 ; Proceedings of the Royal Society of London Volume 51 ; 51 ; >
     au < crawling ; exists ; 1893 ; Proceedings of the Royal Society of London Volume 52 ; 52 ; >
     au < frozen ; exists ; 1893 ; Proceedings of the Royal Society of London Volume 53 ; 53 ; >

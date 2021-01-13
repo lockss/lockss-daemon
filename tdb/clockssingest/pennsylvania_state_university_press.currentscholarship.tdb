@@ -877,7 +877,7 @@
 
       param[journal_id] = bustan
 
-      au < crawling ; exists ; 2010 ; Bustan - The Middle East Book Review Volume 1 ; 2010 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2010 ; Bustan - The Middle East Book Review Volume 1 ; 2010 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2011 ; Bustan - The Middle East Book Review Volume 2 ; 2011 ; https://www.jstor.org/ ; >
       au < notReady ; exists ; 2012 ; Bustan - The Middle East Book Review Volume 3 ; 2012 ; https://www.jstor.org/ ; > #see LXQUEUE-1598
       au < notReady ; exists ; 2013 ; Bustan - The Middle East Book Review Volume 4 ; 2013 ; https://www.jstor.org/ ; > #see LXQUEUE-1598
@@ -1799,7 +1799,7 @@
       au < exists ; exists ; 2008 ; The Korean Language in America Volume 13 ; 2008 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2009 ; The Korean Language in America Volume 14 ; 2009 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2010 ; The Korean Language in America Volume 15 ; 2010 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2011 ; The Korean Language in America Volume 16 ; 2011 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2011 ; The Korean Language in America Volume 16 ; 2011 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2012 ; The Korean Language in America Volume 17 ; 2012 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2013 ; The Korean Language in America Volume 18 ; 2013 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2015 ; The Korean Language in America Volume 19 ; 2015 ; https://www.jstor.org/ ; >
