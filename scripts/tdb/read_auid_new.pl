@@ -605,7 +605,7 @@ while (my $line = <>) {
             } elsif (defined($man_contents) && ($man_contents =~ m/content=\"Open Journal Systems 3\./)) {
                 #$vol_title = $resp->request->uri;
                 $result = "MOVED_TO_OJS3";
-            } elsif (defined($man_contents) && defined($start_contents) && (($man_contents =~ m/$clockss_tag/) || ($man_contents =~ m/$oa_tag/)) && (($start_contents =~ m/\($param{year}\)/) || ($start_contents =~ m/: $param{year}/))) {
+            } elsif (defined($man_contents) && defined($start_contents) && (($man_contents =~ m/$clockss_tag/) || ($man_contents =~ m/$oa_tag/) || ($man_contents =~ m/$cc_license_tag/)) && (($start_contents =~ m/\($param{year}\)/) || ($start_contents =~ m/: $param{year}/))) {
                 $result = "Manifest"
             } else {
                 #$result = "--NO_TAG--"
@@ -737,54 +737,6 @@ while (my $line = <>) {
             $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
         }
         sleep(4);
-
-#  } elsif ($plugin eq "ClockssCoActionPublishingPlugin") {
-#        #Url with list of urls for issues
-#        $url = sprintf("%sindex.php/%s/gateway/lockss?year=%d",
-#            $param{base_url}, $param{journal_id}, $param{year});
-#        $start_url = uri_unescape($url);
-#        my $req_s = HTTP::Request->new(GET, $start_url);
-#        my $resp_s = $ua->request($req_s);
-#        #For reporting at the end
-#        $man_url = $start_url ;
-#    if ($resp_s->is_success) {
-#      my $start_contents = $resp_s->content;
-#      if (defined($start_contents) && (($start_contents =~ m/$cc_license_tag/) && ($start_contents =~ m/$cc_license_url/)) && (($start_contents =~ m/\($param{year}\)/) || ($start_contents =~ m/: $param{year}/))) {
-#         if ($start_contents =~ m/meta name=.description. content=.(.*) is an international/si) {
-#            $vol_title = $1;
-#        }
-#         $result = "Manifest"
-#      } else {
-#         $result = "--NO_TAG--"
-#      }
-#    } else {
-#      $result = "--REQ_FAIL--"
-#    }
-#        sleep(4);
-#
-#  } elsif ($plugin eq "PensoftPlugin" || $plugin eq "ClockssPensoftPlugin") {
-#        #Url with list of urls for issues
-#        $url = sprintf("%sjournals/%s/archive?year=%d",
-#            $param{base_url}, $param{journal_name}, $param{year});
-#        $start_url = uri_unescape($url);
-#        my $req_s = HTTP::Request->new(GET, $start_url);
-#        my $resp_s = $ua->request($req_s);
-#        #For reporting at the end
-#        $man_url = $start_url ;
-#    if ($resp_s->is_success) {
-#      my $start_contents = $resp_s->content;
-#      if (defined($start_contents) && (($start_contents =~ m/$cc_license_tag/) && ($start_contents =~ m/$cc_license_url/)) && ($start_contents =~ m/\($param{year}\)/)) {
-#         if ($start_contents =~ m/<title>(.*) - Pensoft<\/title>/si) {
-#            $vol_title = $1 . "Volume " . $param{year};
-#        }
-#         $result = "Manifest"
-#      } else {
-#         $result = "--NO_TAG--"
-#      }
-#    } else {
-#      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
-#    }
-#        sleep(4);
 
   } elsif ($plugin eq "PensoftOaiPlugin" || $plugin eq "ClockssPensoftOaiPlugin") {
     #permission is different from start
@@ -2437,46 +2389,6 @@ while (my $line = <>) {
       $result = "--REQ_FAIL--"
     }
     sleep(4);
-
-#  } elsif ($plugin eq "CopernicusPublicationsPlugin") {
-#    $url_p = sprintf("%s",
-#      $param{home_url});
-#    $url_s = sprintf("%s%s/index.html",
-#      $param{base_url}, $param{volume_name});
-#    $url_d = sprintf("%s%s/",
-#      $param{base_url}, $param{volume_name});
-#    $man_url = uri_unescape($url_s) . " + " . uri_unescape($url_p) ;
-#    $man_url_p = uri_unescape($url_p);
-##    printf("*man_url_p: %s\n", $man_url_p);
-#    $man_url_s = uri_unescape($url_s);
-##    printf("*man_url_s: %s\n", $man_url_s);
-#    my $article_prefix = uri_unescape($url_d);
-##    printf("*article_prefix: %s\n", $article_prefix);
-#    my $req_p = HTTP::Request->new(GET, $man_url_p);
-#    my $req_s = HTTP::Request->new(GET, $man_url_s);
-#    my $resp_p = $ua->request($req_p);
-#    my $resp_s = $ua->request($req_s);
-#    if ($resp_p->is_success && $resp_s->is_success) {
-#      my $perm_contents = $resp_p->content;
-#      my $start_contents = $resp_s->content;
-#      if (defined($perm_contents) && defined($start_contents) && 
-#         ($start_contents =~ m/$param{base_url}$param{volume_name}\//) && 
-#         (($perm_contents =~ m/$lockss_tag/) || (($perm_contents =~ m/$cc_license_tag/) && ($perm_contents =~ m/$cc_license_url/)) )) {
-#        if ($perm_contents =~ m/j-name.>\s*([^<]*)\s*<\//si) {
-#          $vol_title = $1;
-#          $vol_title =~ s/\s*\n\s*/ /g;
-#          if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
-#            $vol_title = "\"" . $vol_title . "\"";
-#          }
-#        }
-#        $result = "Manifest"
-#      } else {
-#        $result = "--NO_TAG--"
-#      }
-#    } else {
-#      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
-#    }
-#    sleep(4);
 
   } elsif (($plugin eq "BMCPlugin") || ($plugin eq "ClockssBMCPlugin")) {
     $url = sprintf("%s%s/%s",
