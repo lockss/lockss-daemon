@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.clockss.eastview.ClockssEastviewSpecialTitleSourcePlugin</string>
+    <string>org.lockss.plugin.clockss.eastview.ClockssEastviewDirSourcePlugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -34,17 +34,17 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"East View Information Services Special Title Source Plugin (CLOCKSS), Base URL %s, Directory %s", base_url, directory</string>
+    <string>"East View Information Services Dir Source Plugin (CLOCKSS), Base URL %s, Directory %s", base_url, directory</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>East View Information Services Special Title Source Plugin (CLOCKSS)</string>
+    <string>East View Information Services Dir Source Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_archive_file_types</string>
     <string>standard</string>
   </entry>
-  <!--This version need an OAI library-->
+  <!--This version need an split zip support-->
   <entry>
     <string>required_daemon_version</string>
     <string>1.75.0</string>
@@ -63,11 +63,11 @@
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.clockss.eastview.EastviewSpecialTitleSourceXmlArticleIteratorFactory</string>
+    <string>org.lockss.plugin.clockss.eastview.EastviewDirSourceXmlArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.clockss.eastview.EastviewSpecialTitleSourceXmlArticleIteratorFactory</string>
+    <string>org.lockss.plugin.clockss.eastview.EastviewDirSourceXmlArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>text/xml_metadata_extractor_factory_map</string>

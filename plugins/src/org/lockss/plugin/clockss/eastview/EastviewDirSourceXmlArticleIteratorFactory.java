@@ -47,9 +47,9 @@ import java.util.Iterator;
 import java.util.regex.Pattern;
 
 
-public class EastviewSpecialTitleSourceXmlArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory  {
+public class EastviewDirSourceXmlArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory  {
 
-  private static final Logger log = Logger.getLogger(EastviewSpecialTitleSourceXmlArticleIteratorFactory.class);
+  private static final Logger log = Logger.getLogger(EastviewDirSourceXmlArticleIteratorFactory.class);
 
   protected static final String ALL_ZIP_XML_PATTERN_TEMPLATE =
           "\"%s[^/]+/.*\\.zip!/.*\\.xml$\", base_url";
