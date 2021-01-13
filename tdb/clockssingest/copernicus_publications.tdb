@@ -248,7 +248,7 @@
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Archives Animal Breeding Volume 60 ; 60 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Archives Animal Breeding Volume 61 ; 61 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Archives Animal Breeding Volume 62 ; 62 ; >
-      au < ready ; exists ; 2020 ; 2020 ; Archives Animal Breeding Volume 63 ; 63 ; >
+      au < crawling ; exists ; 2020 ; 2020 ; Archives Animal Breeding Volume 63 ; 63 ; >
 
       }
 
@@ -333,7 +333,7 @@
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Atmospheric Measurement Techniques Volume 10 ; 10 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Atmospheric Measurement Techniques Volume 11 ; 11 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Atmospheric Measurement Techniques Volume 12 ; 12 ; >
-      au < ready ; exists ; 2020 ; 2020 ; Atmospheric Measurement Techniques Volume 13 ; 13 ; >
+      au < crawling ; exists ; 2020 ; 2020 ; Atmospheric Measurement Techniques Volume 13 ; 13 ; >
 
    }
 
@@ -1174,9 +1174,9 @@
       param[base_url] = https://jbji.copernicus.org/
       param[home_url] = https://www.journal-of-bone-and-joint-infection.net/
 
-      au < ready ; exists ; 2016 ; 2016 ; Journal of Bone and Joint Infection Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2016 ; 2016 ; Journal of Bone and Joint Infection Volume 1 ; 1 ; >
       au < ready ; exists ; 2017 ; 2017 ; Journal of Bone and Joint Infection Volume 2 ; 2 ; >
-      au < ready ; exists ; 2018 ; 2018 ; Journal of Bone and Joint Infection Volume 3 ; 3 ; >
+      au < crawling ; exists ; 2018 ; 2018 ; Journal of Bone and Joint Infection Volume 3 ; 3 ; >
       au < crawling ; exists ; 2019 ; 2019 ; Journal of Bone and Joint Infection Volume 4 ; 4 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Journal of Bone and Joint Infection Volume 5 ; 5 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Journal of Bone and Joint Infection Volume 6 ; 6 ; >
@@ -1331,7 +1331,7 @@
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Natural Hazards and Earth System Sciences Volume 17 ; 17 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Natural Hazards and Earth System Sciences Volume 18 ; 18 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Natural Hazards and Earth System Sciences Volume 19 ; 19 ; >
-      au < ready ; exists ; 2020 ; 2020 ; Natural Hazards and Earth System Sciences Volume 20 ; 20 ; >
+      au < crawling ; exists ; 2020 ; 2020 ; Natural Hazards and Earth System Sciences Volume 20 ; 20 ; >
 
    }
 

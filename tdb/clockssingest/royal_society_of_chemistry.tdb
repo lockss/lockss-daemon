@@ -131,7 +131,7 @@
       au < frozen ; exists ; 1999 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 95 ; 95 ; 1999 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2000 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 96 ; 96 ; 2000 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2001 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 97 ; 97 ; 2001 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2002 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 98 ; 98 ; 2002 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2002 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 98 ; 98 ; 2002 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2003 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 99 ; 99 ; 2003 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2004 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 100 ; 100 ; 2004 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2005 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 101 ; 101 ; 2005 ; https://pubs.rsc.org/ ; >
@@ -289,7 +289,7 @@
       param[journal_code] = rp
 
       #complete
-      au < ready ; exists ; 2000 ; Chemistry Education Research and Practice Volume 1 ; 1 ; 2000 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2000 ; Chemistry Education Research and Practice Volume 1 ; 1 ; 2000 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2001 ; Chemistry Education Research and Practice Volume 2 ; 2 ; 2001 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2002 ; Chemistry Education Research and Practice Volume 3 ; 3 ; 2002 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2003 ; Chemistry Education Research and Practice Volume 4 ; 4 ; 2003 ; https://pubs.rsc.org/ ; >
@@ -422,7 +422,7 @@
 
       au < frozen ; exists ; 1997 ; Faraday Discussions Volume 106 ; 106 ; 1997 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 1997 ; Faraday Discussions Volume 107 ; 107 ; 1997 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 1997 ; Faraday Discussions Volume 108 ; 108 ; 1997 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 1997 ; Faraday Discussions Volume 108 ; 108 ; 1997 ; https://pubs.rsc.org/ ; >
 
       au < crawling ; exists ; 1998 ; Faraday Discussions Volume 109 ; 109 ; 1998 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 1998 ; Faraday Discussions Volume 110 ; 110 ; 1998 ; https://pubs.rsc.org/ ; >
@@ -649,7 +649,7 @@
 
       #complete
       au < frozen ; exists ; 1996 ; Journal of Analytical Atomic Spectrometry Volume 11 ; 11 ; 1996 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 1997 ; Journal of Analytical Atomic Spectrometry Volume 12 ; 12 ; 1997 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 1997 ; Journal of Analytical Atomic Spectrometry Volume 12 ; 12 ; 1997 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 1998 ; Journal of Analytical Atomic Spectrometry Volume 13 ; 13 ; 1998 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 1999 ; Journal of Analytical Atomic Spectrometry Volume 14 ; 14 ; 1999 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2000 ; Journal of Analytical Atomic Spectrometry Volume 15 ; 15 ; 2000 ; https://pubs.rsc.org/ ; >
@@ -659,7 +659,7 @@
       au < crawling ; exists ; 2004 ; Journal of Analytical Atomic Spectrometry Volume 19 ; 19 ; 2004 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2005 ; Journal of Analytical Atomic Spectrometry Volume 20 ; 20 ; 2005 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2006 ; Journal of Analytical Atomic Spectrometry Volume 21 ; 21 ; 2006 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2007 ; Journal of Analytical Atomic Spectrometry Volume 22 ; 22 ; 2007 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2007 ; Journal of Analytical Atomic Spectrometry Volume 22 ; 22 ; 2007 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2008 ; Journal of Analytical Atomic Spectrometry Volume 23 ; 23 ; 2008 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2009 ; Journal of Analytical Atomic Spectrometry Volume 24 ; 24 ; 2009 ; https://pubs.rsc.org/ ; >
       au < finished ; finished ; 2010 ; Journal of Analytical Atomic Spectrometry Volume 25 ; 25 ; 2010 ; http://pubs.rsc.org/ ; >
@@ -941,13 +941,13 @@
       #complete
       au < frozen ; exists ; 1998 ; New Journal of Chemistry Volume 22 ; 22 ; 1998 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 1999 ; New Journal of Chemistry Volume 23 ; 23 ; 1999 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2000 ; New Journal of Chemistry Volume 24 ; 24 ; 2000 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2000 ; New Journal of Chemistry Volume 24 ; 24 ; 2000 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2001 ; New Journal of Chemistry Volume 25 ; 25 ; 2001 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2002 ; New Journal of Chemistry Volume 26 ; 26 ; 2002 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2003 ; New Journal of Chemistry Volume 27 ; 27 ; 2003 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2004 ; New Journal of Chemistry Volume 28 ; 28 ; 2004 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2005 ; New Journal of Chemistry Volume 29 ; 29 ; 2005 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2006 ; New Journal of Chemistry Volume 30 ; 30 ; 2006 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2006 ; New Journal of Chemistry Volume 30 ; 30 ; 2006 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2007 ; New Journal of Chemistry Volume 31 ; 31 ; 2007 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2008 ; New Journal of Chemistry Volume 32 ; 32 ; 2008 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2009 ; New Journal of Chemistry Volume 33 ; 33 ; 2009 ; http://pubs.rsc.org/ ; >
@@ -1013,7 +1013,7 @@
       au < testing ; exists ; 2003 ; Photochemical & Photobiological Sciences Volume 2 ; 2 ; 2003 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2004 ; Photochemical & Photobiological Sciences Volume 3 ; 3 ; 2004 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2005 ; Photochemical & Photobiological Sciences Volume 4 ; 4 ; 2005 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2006 ; Photochemical & Photobiological Sciences Volume 5 ; 5 ; 2006 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2006 ; Photochemical & Photobiological Sciences Volume 5 ; 5 ; 2006 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2007 ; Photochemical & Photobiological Sciences Volume 6 ; 6 ; 2007 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2008 ; Photochemical & Photobiological Sciences Volume 7 ; 7 ; 2008 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2009 ; Photochemical & Photobiological Sciences Volume 8 ; 8 ; 2009 ; http://pubs.rsc.org/ ; >

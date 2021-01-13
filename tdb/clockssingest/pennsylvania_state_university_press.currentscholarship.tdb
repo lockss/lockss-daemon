@@ -152,7 +152,7 @@
 
 
       au < crawling ; exists ; 2010 ; The F. Scott Fitzgerald Review Volume 8 ; 2010 ; https://www.jstor.org/ ; >
-      au < ready ; exists ; 2011 ; The F. Scott Fitzgerald Review Volume 9 ; 2011 ; https://www.jstor.org/ ; >
+      au < crawling ; exists ; 2011 ; The F. Scott Fitzgerald Review Volume 9 ; 2011 ; https://www.jstor.org/ ; >
       au < finished ; manifest ; 2012 ; The F. Scott Fitzgerald Review Volume 10 ; 2012 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2013 ; The F. Scott Fitzgerald Review Volume 11 ; 2013 ; http://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2014 ; The F. Scott Fitzgerald Review Volume 12 ; 2014 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
@@ -589,7 +589,7 @@
       param[journal_id] = philrhet
 
       au < frozen ; exists ; 2010 ; Philosophy and Rhetoric Volume 43 ; 2010 ; https://www.jstor.org/ ; >
-      au < ready ; exists ; 2011 ; Philosophy and Rhetoric Volume 44 ; 2011 ; https://www.jstor.org/ ; >
+      au < crawling ; exists ; 2011 ; Philosophy and Rhetoric Volume 44 ; 2011 ; https://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Philosophy and Rhetoric Volume 45 ; 2012 ; https://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Philosophy and Rhetoric Volume 46 ; 2013 ; https://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Philosophy and Rhetoric Volume 47 ; 2014 ; https://www.jstor.org/ ; >
