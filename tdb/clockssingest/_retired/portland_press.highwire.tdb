@@ -4,7 +4,8 @@
     name = Portland Press ;
     info[contract] = 2012 ;
     info[tester] = 8 ;
-    info[poller] = 2
+    info[poller] = 2 ;
+    info[platform] = HW Drupal
   >
 
   plugin = org.lockss.plugin.highwire.portlandpress.ClockssPortlandPressDrupalPlugin
@@ -495,7 +496,7 @@
     au < finished ; finished ; 2015 ; Biochemical Journal Volume 472 ; 472 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2016 ; Biochemical Journal Volume 473 ; 473 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Biochemical Journal Volume 474 ; 474 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2018 ; Biochemical Journal Volume 475 ; 475 ; >
+    au < superseded ; exists ; 2018 ; Biochemical Journal Volume 475 [superseded] ; 475 ; >
     au < doNotProcess ; exists ; 2019 ; Biochemical Journal Volume 476 ; 476 ; >
 
   }
@@ -556,7 +557,7 @@
     au < finished ; finished ; 2015 ; Biochemical Society Transactions Volume 43 ; 43 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2016 ; Biochemical Society Transactions Volume 44 ; 44 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2017 ; Biochemical Society Transactions Volume 45 ; 45 ; reingest4.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2018 ; Biochemical Society Transactions Volume 46 ; 46 ; >
+    au < superseded ; exists ; 2018 ; Biochemical Society Transactions Volume 46 superseded] ; 46 ; >
     au < doNotProcess ; exists ; 2019 ; Biochemical Society Transactions Volume 47 ; 47 ; >
 
   }
@@ -612,7 +613,7 @@
     au < finished ; manifest ; 2015 ; Bioscience Reports Volume 35 ; 35 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2016 ; Bioscience Reports Volume 36 ; 36 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Bioscience Reports Volume 37 ; 37 ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2018 ; Bioscience Reports Volume 38 ; 38 ; >
+    au < superseded ; exists ; 2018 ; Bioscience Reports Volume 38 [superseded] ; 38 ; >
     au < doNotProcess ; exists ; 2019 ; Bioscience Reports Volume 39 ; 39 ; >
 
   }
@@ -665,7 +666,7 @@
     au < finished ; manifest ; 2015 ; Clinical Science Volume 129 ; 129 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2016 ; Clinical Science Volume 130 ; 130 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Clinical Science Volume 131 ; 131 ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2018 ; Clinical Science Volume 132 ; 132 ; >
+    au < superseded ; exists ; 2018 ; Clinical Science Volume 132 [superseded] ; 132 ; >
     au < doNotProcess ; exists ; 2019 ; Clinical Science Volume 133 ; 133 ; >
 
   }
@@ -710,7 +711,7 @@
     au < finished ; finished ; 2015 ; Essays in Biochemistry Volume 59 ; 59 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2016 ; Essays in Biochemistry Volume 60 ; 60 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Essays in Biochemistry Volume 61 ; 61 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2018 ; Essays in Biochemistry Volume 62 ; 62 ; >
+    au < superseded ; exists ; 2018 ; Essays in Biochemistry Volume 62 [superseded] ; 62 ; >
     au < doNotProcess ; exists ; 2019 ; Essays in Biochemistry Volume 63 ; 63 ; >
 
   }
@@ -751,7 +752,7 @@
     param[base_url] = http://www.emergtoplifesci.org/
 
     au < finished ; manifest ; 2017 ; Emerging Topics in Life Sciences Volume 1 ; 1 ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2018 ; Emerging Topics in Life Sciences Volume 2 ; 2 ; >
+    au < superseded ; exists ; 2018 ; Emerging Topics in Life Sciences Volume 2 [superseded] ; 2 ; >
     au < doNotProcess ; exists ; 2019 ; Emerging Topics in Life Sciences Volume 3 ; 3 ; >
 
   }
@@ -767,7 +768,7 @@
     param[base_url] = http://www.neuronalsignaling.org/
 
     au < finished ; manifest ; 2017 ; Neuronal Signaling Volume 1 ; 1 ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2018 ; Neuronal Signaling Volume 2 ; 2 ; >
+    au < superseded ; exists ; 2018 ; Neuronal Signaling Volume 2 [superseded] ; 2 ; >
     au < doNotProcess ; exists ; 2019 ; Neuronal Signaling Volume 3 ; 3 ; >
 
   }
