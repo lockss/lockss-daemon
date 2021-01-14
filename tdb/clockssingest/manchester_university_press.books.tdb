@@ -4,14 +4,11 @@
     info[back] = 2000 ;
     info[contract] = 2012 ;
     info[tester] = 8 ;
-    info[poller] = 8 
+    info[poller] = 8 ;
+    info[platform] = PubFactory. Manchester Hive
  >
-  plugin = org.lockss.plugin.ingenta.ClockssIngentaBooksPlugin
-  #param[base_url] = http://www.ingentaconnect.com/
-  param[publisher_id] = mmso
-  implicit < status ; status2 ; year ; isbn ; eisbn ; param[book_isbn] ; name ; hidden[proxy] >
 
-  #move to new platform
+  #moved to PubFactory.
 
  {
   title <
@@ -20,6 +17,20 @@
   >
 
   {
+   plugin = needs.plugin
+   implicit < status ; status2 ; year ; isbn ; eisbn ; param[book_isbn] ; name ; hidden[proxy] >
+   param[base_url] = https://www.manchesterhive.com/
+   #Website says collection is 41 texts. We have 34. We are missing 7
+
+   au < doNotProcess ; exists ; 2018 ; 9781526119162 ;  ; 9781526119162 ; Noble society ;  >
+   au < doNotProcess ; exists ; 2018 ; 9781526135193 ;  ; 9781526135193 ; Towns in medieval England ;  >
+   au < doNotProcess ; exists ; 2020 ; 9781526134837 ;  ; 9781526134837 ; Confronting crisis in the Carolingian empire ;  >
+  }
+
+  {
+   plugin = org.lockss.plugin.ingenta.ClockssIngentaBooksPlugin
+   param[publisher_id] = mmso
+   implicit < status ; status2 ; year ; isbn ; eisbn ; param[book_isbn] ; name ; hidden[proxy] >
    param[base_url] = http://www.ingentaconnect.com/
 
    au < finished ; manifest ; 2013 ; 9781526112774 ;  ; 9781526112774 ; Ottonian Germany: The Chronicon of Thietmar of Merseburg ; reingest1.clockss.org:8082 >
@@ -56,12 +67,7 @@
    au < finished ; manifest ; 2016 ; 9781847799678 ;  ; 9781847799678 ; The Political Writings of Archbishop Wulfstan of York ; reingest1.clockss.org:8082 >
    au < finished ; manifest ; 2017 ; 9781784997267 ;  ; 9781784997267 ; Heresy and inquisition in France, 1200-1300 ; reingest2.clockss.org:8085 >
    au < finished ; manifest ; 2017 ; 9781784997434 ;  ; 9781784997434 ; The divorce of King Lothar and Queen Theutberga: Hincmar of Rheims's De divortio ; reingest3.clockss.org:8083 >
-  }
-
-  {
-   param[base_url] = https://www.ingentaconnect.com/
-   au < doNotProcess ; exists ; 2018 ; 9781526119162 ;  ; 9781526119162 ; Noble society ;  >
-   au < doNotProcess ; exists ; 2018 ; 9781526135193 ;  ; 9781526135193 ; Towns in medieval England ;  >
+   #34 books
   }
 
  }
