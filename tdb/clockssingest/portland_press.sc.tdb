@@ -10,7 +10,7 @@
 
   param[base_url] = https://portlandpress.com/
   plugin = org.lockss.plugin.silverchair.portlandpress.ClockssPortlandPressSilverchairPlugin
-  implicit < status ; status2 ; year ; param[year] ; name ; volume ; hidden[proxy] >
+  implicit < status ; status2 ; year ; param[year] ; name ; param[volume_name] ; hidden[proxy] >
 
     {
   

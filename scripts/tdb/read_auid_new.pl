@@ -334,28 +334,6 @@ while (my $line = <>) {
   }
       sleep(4);
 
-#  } elsif ($plugin eq "GPOFDSysSitemapsPlugin") {
-#      $url = sprintf("%ssmap/fdsys/sitemap_%d/%d_%s_sitemap.xml",
-#      $param{base_url}, $param{year}, $param{year}, $param{collection_id});
-#      $man_url = uri_unescape($url);
-#      my $req = HTTP::Request->new(GET, $man_url);
-#      my $resp = $ua->request($req);
-#      if ($resp->is_success) {
-#          my $man_contents = $resp->content;
-#          if ($req->url ne $resp->request->uri) {
-#              $vol_title = $resp->request->uri;
-#              $result = "Redirected";
-#          } elsif (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) || ($man_contents =~ m/$oa_tag/))) {
-#              $vol_title = $param{collection_id};
-#              $result = "Manifest"
-#          } else {
-#              $result = "--NO_TAG--"
-#          }
-#      } else {
-#          $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
-#      }
-#      sleep(5);
-
   } elsif ($plugin eq "GovInfoSitemapsPlugin") {
       #https://www.govinfo.gov/sitemap/USCODE_2001_sitemap.xml
       $url = sprintf("%ssitemap/%s_%d_sitemap.xml",
@@ -2967,9 +2945,9 @@ while (my $line = <>) {
       $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
     }
     sleep(4);
+
   } elsif (($plugin eq "OupSilverchairPlugin") || 
-           ($plugin eq "DupSilverchairPlugin") ||
-           ($plugin eq "GeoscienceWorldSilverchairPlugin")) {
+           ($plugin eq "DupSilverchairPlugin")) {
     $url = sprintf("%s%s/list-of-issues/%d",
       $param{base_url}, $param{journal_id}, $param{year});
     $man_url = uri_unescape($url);
@@ -3078,9 +3056,7 @@ while (my $line = <>) {
     }
   sleep(4);
     
-  } elsif (($plugin eq "IwapSilverchairPlugin") || 
-           ($plugin eq "RockefellerUniversityPressSilverchairPlugin") || 
-           ($plugin eq "PortlandPressSilverchairPlugin")) {
+  } elsif ($plugin eq "IwapSilverchairPlugin") {
     $url = sprintf("%s%s/issue/browse-by-year/%d",
       $param{base_url}, $param{journal_id}, $param{year});
     $man_url = uri_unescape($url);
@@ -3108,9 +3084,7 @@ while (my $line = <>) {
     }
     sleep(4);
 
-  } elsif (($plugin eq "ClockssIwapSilverchairPlugin") || 
-           ($plugin eq "ClockssRockefellerUniversityPressSilverchairPlugin") || 
-           ($plugin eq "ClockssPortlandPressSilverchairPlugin")) { 
+  } elsif ($plugin eq "ClockssIwapSilverchairPlugin") { 
     $url = sprintf("%s%s/issue/browse-by-year/%d",
       $param{base_url}, $param{journal_id}, $param{year});
     $man_url = uri_unescape($url);
@@ -3128,6 +3102,65 @@ while (my $line = <>) {
     } elsif ($man_contents !~ m/$clockss_tag/) {
         $result = "--NO_TAG--";
     } elsif ($man_contents !~ m/href=\"\/$param{journal_id}\/issue\/\d/) {
+        #$vol_title = $1;
+        $result = "--BAD_VOL--";
+    } else {
+        $result = "Manifest";
+        if ($man_contents =~ m/<title>(.*) [|] IWA Publishing<\/title>/si) {
+            $vol_title = $1;
+            $vol_title =~ s/\s*\n\s*/ /g;
+        }
+    }
+    sleep(4);
+    
+  } elsif (($plugin eq "RockefellerUniversityPressSilverchairPlugin") || 
+           ($plugin eq "PortlandPressSilverchairPlugin")) {
+    $url = sprintf("%s%s/issue/browse-by-year/%d",
+      $param{base_url}, $param{journal_id}, $param{year});
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    #printf("resp is %s\n",$resp->status_line);
+    my $man_contents = $resp->is_success ? $resp->content : "";
+    if (! $resp->is_success) {
+        $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+    } elsif ($req->url ne $resp->request->uri) {
+        $vol_title = $resp->request->uri;
+        $result = "Redirected";
+    } elsif (! defined($man_contents)) {
+        $result = "--NOT_DEF--";
+    } elsif ($man_contents !~ m/$lockss_tag/) {
+        $result = "--NO_TAG--";
+    } elsif ($man_contents !~ m/href=\"\/$param{journal_id}\/issue\/$param{volume_name}\//) {
+        $result = "--BAD_VOL--";
+    } else {
+        $result = "Manifest";
+        if ($man_contents =~ m/<title>(.*) [|] IWA Publishing<\/title>/si) {
+            $vol_title = $1;
+            $vol_title =~ s/\s*\n\s*/ /g;
+        }
+    }
+    sleep(4);
+
+  } elsif (($plugin eq "ClockssRockefellerUniversityPressSilverchairPlugin") || 
+           ($plugin eq "ClockssPortlandPressSilverchairPlugin")) { 
+    $url = sprintf("%s%s/issue/browse-by-year/%d",
+      $param{base_url}, $param{journal_id}, $param{year});
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    #printf("resp is %s\n",$resp->status_line);
+    my $man_contents = $resp->is_success ? $resp->content : "";
+    if (! $resp->is_success) {
+        $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+    } elsif ($req->url ne $resp->request->uri) {
+        $vol_title = $resp->request->uri;
+        $result = "Redirected";
+    } elsif (! defined($man_contents)) {
+        $result = "--NOT_DEF--";
+    } elsif ($man_contents !~ m/$clockss_tag/) {
+        $result = "--NO_TAG--";
+    } elsif ($man_contents !~ m/href=\"\/$param{journal_id}\/issue\/$param{volume_name}\//) {
         #$vol_title = $1;
         $result = "--BAD_VOL--";
     } else {
