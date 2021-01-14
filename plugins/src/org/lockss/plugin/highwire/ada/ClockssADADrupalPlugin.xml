@@ -1,8 +1,8 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <!--please see PluginsLXPLUG-1765 for overcrawl PDF caused by pdf moved to cloudflare-->
     <string>ready</string>
+    <!--please see PluginsLXPLUG-1765 for overcrawl PDF caused by pdf moved to cloudflare-->
   </entry>
   <!-- compare to ADADrupalPlugin, the added entries should be in synch -->
   <!-- also compare to ClockssHighWireDrupalPlugin for CLOCKSS specific entries -->
