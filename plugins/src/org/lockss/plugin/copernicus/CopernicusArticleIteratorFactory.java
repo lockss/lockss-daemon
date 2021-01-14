@@ -75,10 +75,12 @@ public class CopernicusArticleIteratorFactory
   protected static final String ROOT_TEMPLATE = "\"%s%s/\", base_url, volume_name";
   protected static final String ROOT_TEMPLATE_V2 = "\"%sarticles/%s/\", base_url, volume_name";
   // although the format seems to be consistent, don't box in the alphanum sequence, just the depth
-  // since we pick up ".pdf" as well, be sure not to pick up "-supplement.pdf", nor "-assets.html" as well
+  // since we pick up ".pdf" as well, be sure not to pick up "-supplement.pdf", nor "-assets.html"
+  //   Nor do we want the figure or table files that have "-tXX.pdf" or "-fXX.pdf" (where XX is a zero padded integer)
+  //       Sometimes the figure files also have "-fXX-high-res.pdf," so get rid of those as well
   //(?<!-supplement) is negative lookbehind and will cancel out the *.pdf if it matches
   // Use pdf here, since there are other formats of html page we do not want
-  protected static final String PATTERN_TEMPLATE = "\"/[^/]+/[^/]+/[^/]+(?<!-(supplement|assets|corrigendum))\\.pdf\"";
+  protected static final String PATTERN_TEMPLATE = "\"/[^/]+/[^/]+/[^/]+(?<!-(supplement|assets|corrigendum|high-res|[tf]\\d\\d))\\.pdf\"";
 
   // primary aspects of the article
   final Pattern ABSTRACT_PATTERN = Pattern.compile("(/[^/]+/[^/]+/[^/]+)\\.html$", Pattern.CASE_INSENSITIVE);

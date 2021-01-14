@@ -132,6 +132,9 @@ public class TestCopernicusArticleIteratorFactory extends ArticleIteratorTestCas
     assertNotMatchesRE(pat, "http://www.clim-past.net/8/1/2012/cp-8-1-2012-supplement.pdf"); //supplement, not article
     assertNotMatchesRE(pat, "http://www.clim-past.net/8/1/2012/cp-8-1-2012-corrigendum.pdf"); //corrigendum, not article
     assertNotMatchesRE(pat, "http://www.clim-past.net/8/1/2012/cp-8-1-2012-supplement.zip"); //zip not pdf
+    assertNotMatchesRE(pat, "http://www.clim-past.net/8/1/2012/cp-8-1-2012-f01-high-res.pdf");
+    assertNotMatchesRE(pat, "http://www.clim-past.net/8/1/2012/cp-8-1-2012-f01.pdf");
+    assertNotMatchesRE(pat, "http://www.clim-past.net/8/1/2012/cp-8-1-2012-t01.pdf");
     //assertMatchesRE(pat, "http://www.clim-past.net/8/1/2012/cp-8-1-2012.html");
     assertNotMatchesRE(pat, "http://www.clim-past.net/8/1/2012");
     // their website get rid of file extension, these two test may not long make sense
