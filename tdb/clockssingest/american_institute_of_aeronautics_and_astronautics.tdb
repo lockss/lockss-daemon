@@ -84,8 +84,8 @@
     au < zapped ; finished ; 2013 ; AIAA Journal Volume 51 ; 51 ; http://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < zapped ; finished ; 2014 ; AIAA Journal Volume 52 ; 52 ; http://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; AIAA Journal Volume 53 ; 53 ; http://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2016 ; AIAA Journal Volume 54 ; 54 ; http://arc.aiaa.org/ ; >
-    au < deepCrawl ; exists ; 2017 ; AIAA Journal Volume 55 ; 55 ; http://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 2016 ; AIAA Journal Volume 54 ; 54 ; http://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2017 ; AIAA Journal Volume 55 ; 55 ; http://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2018 ; AIAA Journal Volume 56 ; 56 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; AIAA Journal Volume 57 ; 57 ; https://arc.aiaa.org/ ; >
     au < crawling ; exists ; 2020 ; AIAA Journal Volume 58 ; 58 ; https://arc.aiaa.org/ ; >
@@ -163,10 +163,10 @@
     comment[continued_from] = 1542-9423
 
     au < finished ; finished ; 2013 ; Journal of Aerospace Computing, Information, and Communication Volume 10 ; 10 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2014 ; Journal of Aerospace Computing, Information, and Communication Volume 11 ; 11 ; http://arc.aiaa.org/ ; >
+    au < finished ; manifest; 2014 ; Journal of Aerospace Computing, Information, and Communication Volume 11 ; 11 ; http://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2015 ; Journal of Aerospace Computing, Information, and Communication Volume 12 ; 12 ; http://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2016 ; Journal of Aerospace Computing, Information, and Communication Volume 13 ; 13 ; http://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2017 ; Journal of Aerospace Computing, Information, and Communication Volume 14 ; 14 ; http://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 2017 ; Journal of Aerospace Computing, Information, and Communication Volume 14 ; 14 ; http://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2018 ; Journal of Aerospace Computing, Information, and Communication Volume 15 ; 15 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2019 ; Journal of Aerospace Computing, Information, and Communication Volume 16 ; 16 ; https://arc.aiaa.org/ ; >
     au < crawling ; exists ; 2020 ; Journal of Aerospace Computing, Information, and Communication Volume 17 ; 17 ; https://arc.aiaa.org/ ; >
@@ -254,7 +254,7 @@
     au < frozen ; exists ; 2012 ; Journal of Aircraft Volume 49 ; 49 ; http://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2013 ; Journal of Aircraft Volume 50 ; 50 ; http://arc.aiaa.org/ ; >
     au < zapped ; finished ; 2014 ; Journal of Aircraft Volume 51 ; 51 ; http://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2015 ; Journal of Aircraft Volume 52 ; 52 ; http://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 2015 ; Journal of Aircraft Volume 52 ; 52 ; http://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Journal of Aircraft Volume 53 ; 53 ; http://arc.aiaa.org/ ; >
     au < finished ; finished ; 2017 ; Journal of Aircraft Volume 54 ; 54 ; http://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2018 ; Journal of Aircraft Volume 55 ; 55 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
@@ -348,9 +348,9 @@
     au < zapped ; finished ; 2013 ; Journal of Guidance, Control, and Dynamics Volume 36 ; 36 ; http://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2014 ; Journal of Guidance, Control, and Dynamics Volume 37 ; 37 ; http://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2015 ; Journal of Guidance, Control, and Dynamics Volume 38 ; 38 ; http://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2016 ; Journal of Guidance, Control, and Dynamics Volume 39 ; 39 ; http://arc.aiaa.org/ ; >
-    au < deepCrawl ; exists ; 2017 ; Journal of Guidance, Control, and Dynamics Volume 40 ; 40 ; http://arc.aiaa.org/ ; >
-    au < deepCrawl ; exists ; 2018 ; Journal of Guidance, Control, and Dynamics Volume 41 ; 41 ; https://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 2016 ; Journal of Guidance, Control, and Dynamics Volume 39 ; 39 ; http://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2017 ; Journal of Guidance, Control, and Dynamics Volume 40 ; 40 ; http://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2018 ; Journal of Guidance, Control, and Dynamics Volume 41 ; 41 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; Journal of Guidance, Control, and Dynamics Volume 42 ; 42 ; https://arc.aiaa.org/ ; >
     au < crawling ; exists ; 2020 ; Journal of Guidance, Control, and Dynamics Volume 43 ; 43 ; https://arc.aiaa.org/ ; >
 
@@ -425,8 +425,8 @@
     au < frozen ; exists ; 2013 ; Journal of Propulsion and Power Volume 29 ; 29 ; http://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2014 ; Journal of Propulsion and Power Volume 30 ; 30 ; http://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2015 ; Journal of Propulsion and Power Volume 31 ; 31 ; http://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2016 ; Journal of Propulsion and Power Volume 32 ; 32 ; http://arc.aiaa.org/ ; >
-    au < deepCrawl ; exists ; 2017 ; Journal of Propulsion and Power Volume 33 ; 33 ; http://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 2016 ; Journal of Propulsion and Power Volume 32 ; 32 ; http://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2017 ; Journal of Propulsion and Power Volume 33 ; 33 ; http://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2018 ; Journal of Propulsion and Power Volume 34 ; 34 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2019 ; Journal of Propulsion and Power Volume 35 ; 35 ; https://arc.aiaa.org/ ; >
     au < crawling ; exists ; 2020 ; Journal of Propulsion and Power Volume 36 ; 36 ; https://arc.aiaa.org/ ; >
@@ -497,7 +497,7 @@
     au < frozen ; exists ; 2015 ; Journal of Spacecraft and Rockets Volume 52 ; 52 ; http://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2016 ; Journal of Spacecraft and Rockets Volume 53 ; 53 ; http://arc.aiaa.org/ ; >
     au < finished ; finished ; 2017 ; Journal of Spacecraft and Rockets Volume 54 ; 54 ; http://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2018 ; Journal of Spacecraft and Rockets Volume 55 ; 55 ; https://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 2018 ; Journal of Spacecraft and Rockets Volume 55 ; 55 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2019 ; Journal of Spacecraft and Rockets Volume 56 ; 56 ; https://arc.aiaa.org/ ; >
     au < crawling ; exists ; 2020 ; Journal of Spacecraft and Rockets Volume 57 ; 57 ; https://arc.aiaa.org/ ; >
 
