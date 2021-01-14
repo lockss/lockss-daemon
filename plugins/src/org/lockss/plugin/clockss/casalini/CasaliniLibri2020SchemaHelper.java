@@ -100,9 +100,13 @@ s
 
   private static final String TITLE = "title";
   private static final String AUTHOR = "author";
+  private static final String AUTHOR2 = "author_alt";
   private static final String ISBN = "isbn";
   private static final String PUBLISHER = "publisher";
   private static final String ENDPAGE = "endpage";
+
+  private static final String PUBLISHER_NAME = "Casalini";
+  private static final String PUBLISHER_NAME_APPENDIX = " - " + PUBLISHER_NAME ;
 
 
   @Override
@@ -123,18 +127,22 @@ s
       String MARC_isbn = getMARCData(record, "020", 'a');
       String MARC_title = getMARCData(record, "245", 'a');
       String MARC_pub_date =  getMARCData(record, "260", 'c');
-      String MARC_publisher = getMARCData(record, "910", 'g');
+      String MARC_publisher = getMARCData(record, "260", 'b');
       String MARC_total_page = getMARCData(record, "300", 'a');
-      String MARC_author =   getMARCData(record, "700", 'a');
+      String MARC_author =   getMARCData(record, "100", 'a');
+      String MARC_author_alt =   getMARCData(record, "700", 'a');
       String MARC_pdf =  getMARCControlFieldData(record, "001");
 
       // Only count metadata when there is a PDF file
       if (MARC_pdf != null) {
         am.put(MetadataField.FIELD_ISBN,  MARC_isbn);
         am.put(MetadataField.FIELD_PUBLICATION_TITLE,  MARC_title);
-        am.put(MetadataField.FIELD_PUBLISHER, MARC_publisher);
         am.put(MetadataField.FIELD_DATE, MARC_pub_date);
-        am.put(MetadataField.FIELD_AUTHOR, MARC_author);
+        if (MARC_author == null) {
+          am.put(MetadataField.FIELD_AUTHOR, MARC_author_alt);
+        } else {
+          am.put(MetadataField.FIELD_AUTHOR, MARC_author);
+        }
         // They did not provide start page, just total number of page, 
         am.put(MetadataField.FIELD_END_PAGE, MARC_total_page);
 
@@ -145,7 +153,19 @@ s
         // Prepare raw metadata
         am.putRaw(TITLE,  MARC_title);
         am.putRaw(AUTHOR, MARC_author);
+        am.putRaw(AUTHOR2, MARC_author_alt);
         am.putRaw(ISBN, MARC_isbn);
+
+        if (MARC_publisher == null) {
+          am.put(MetadataField.FIELD_PUBLISHER, PUBLISHER_NAME);
+        }  else {
+          if (!MARC_publisher.equalsIgnoreCase(PUBLISHER_NAME)) {
+            am.put(MetadataField.FIELD_PUBLISHER, MARC_publisher.replace(",", "") + PUBLISHER_NAME_APPENDIX);
+          } else {
+            am.put(MetadataField.FIELD_PUBLISHER, MARC_publisher);
+          }
+        }
+
         am.putRaw(PUBLISHER, MARC_publisher);
         am.putRaw(ENDPAGE, MARC_total_page);
       }
