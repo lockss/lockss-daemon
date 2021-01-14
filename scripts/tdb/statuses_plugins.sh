@@ -33,16 +33,16 @@ grep -r --include "*.xml" "<string>au_substance_url_pattern</string>" plugins/sr
 grep -rL --include "*.xml" "<string>au_substance_url_pattern</string>" plugins/src | sed 's/plugins\/src\/\(.*\).xml/\1,!/' >> $tpath/foo02.txt
 
 #To get the plugins with and without http to https A:
-grep -r --include "*.xml" "<string>org.lockss.plugin.base.HttpToHttpsUrlConsumerFactory</string>" plugins/src | sed 's/plugins\/src\/\(.*\).xml.*<string>.*<\/string>/\1,HttpsUrlCons/' > $tpath/foo13.txt
-grep -rL --include "*.xml" "<string>org.lockss.plugin.base.HttpToHttpsUrlConsumerFactory</string>" plugins/src | sed 's/plugins\/src\/\(.*\).xml/\1,!/' >> $tpath/foo13.txt
+grep -r --include "*.xml" "<string>org.lockss.plugin.*HttpToHttpsUrlConsumerFactory</string>" plugins/src | sed 's/plugins\/src\/\(.*\).xml.*<string>.*<\/string>/\1,HttpsUrlCons/' > $tpath/foo13.txt
+grep -rL --include "*.xml" "<string>org.lockss.plugin.*HttpToHttpsUrlConsumerFactory</string>" plugins/src | sed 's/plugins\/src\/\(.*\).xml/\1,!/' >> $tpath/foo13.txt
 
 #To get the plugins with and without http to https B:
-grep -r --include "*.xml" "<string>org.lockss.plugin.base.HttpToHttpsUrlFetcherFactory</string>" plugins/src | sed 's/plugins\/src\/\(.*\).xml.*<string>.*<\/string>/\1,HttpsUrlFetch/' > $tpath/foo14.txt
-grep -rL --include "*.xml" "<string>org.lockss.plugin.base.HttpToHttpsUrlFetcherFactory</string>" plugins/src | sed 's/plugins\/src\/\(.*\).xml/\1,!/' >> $tpath/foo14.txt
+grep -r --include "*.xml" "<string>org.lockss.plugin.*HttpToHttpsUrlFetcherFactory</string>" plugins/src | sed 's/plugins\/src\/\(.*\).xml.*<string>.*<\/string>/\1,HttpsUrlFetch/' > $tpath/foo14.txt
+grep -rL --include "*.xml" "<string>org.lockss.plugin.*HttpToHttpsUrlFetcherFactory</string>" plugins/src | sed 's/plugins\/src\/\(.*\).xml/\1,!/' >> $tpath/foo14.txt
 
 #To get the plugins with and without http to https C:
-grep -r --include "*.xml" "<string>org.lockss.plugin.BaseUrlHttpHttpsUrlNormalizer</string>" plugins/src | sed 's/plugins\/src\/\(.*\).xml.*<string>.*<\/string>/\1,HttpsUrlNorm/' > $tpath/foo15.txt
-grep -rL --include "*.xml" "<string>org.lockss.plugin.BaseUrlHttpHttpsUrlNormalizer</string>" plugins/src | sed 's/plugins\/src\/\(.*\).xml/\1,!/' >> $tpath/foo15.txt
+grep -r --include "*.xml" "<string>org.lockss.plugin.*HttpHttpsUrlNormalizer</string>" plugins/src | sed 's/plugins\/src\/\(.*\).xml.*<string>.*<\/string>/\1,HttpsUrlNorm/' > $tpath/foo15.txt
+grep -rL --include "*.xml" "<string>org.lockss.plugin.*HttpHttpsUrlNormalizer</string>" plugins/src | sed 's/plugins\/src\/\(.*\).xml/\1,!/' >> $tpath/foo15.txt
 
 ##To get the plugins with and without article iterators:
 #grep -r --include "*.xml" "<string>plugin_article_iterator_factory</string>" plugins/src | sed 's/plugins\/src\/\(.*\).xml.*<string>.*<\/string>/\1,artit/' > $tpath/foo03.txt
@@ -106,7 +106,7 @@ cat $tpath/foo11.txt | sort -t, -k 1,1 > $tpath/blatz11.txt #Plugins on delta ma
 cat $tpath/foo12.txt | sort -t, -k 1,1 > $tpath/blatz12.txt #Plugins on content machines 1-4
 
 #echo "Plugin,CVS,C9-16,D1-13,C1-4,I1-4,Parent,PV,AUs,Substance,ArtIt,MetadataEx,OpenURL,Status"
-echo "Plugin,CVS,C5-8,D1-13,C1-4,I1-4,Parent,PV,AUs,Substance,Status"
+echo "Plugin,CVS,C5-8,D1-13,C1-4,I1-4,Parent,PV,AUs,Substance,HttpsA,HttpsB,HttpsC,Status"
 #join -t, -e EMPTY $tpath/blatz08.txt $tpath/blatz09.txt | join -t, -e EMPTY - $tpath/blatz11.txt | join -t, -e EMPTY - $tpath/blatz12.txt | join -t, -e EMPTY - $tpath/blatz10.txt | join -t, -e EMPTY - $tpath/blatz06.txt | join -t, -e EMPTY - $tpath/blatz07.txt | join -t, -e EMPTY - $tpath/blatz00.txt | join -t, -e EMPTY - $tpath/blatz02.txt | join -t, -e EMPTY - $tpath/blatz03.txt | join -t, -e EMPTY - $tpath/blatz04.txt | join -t, -e EMPTY - $tpath/blatz05.txt | join -t, -e EMPTY - $tpath/blatz01.txt | sort -t, -k 9 -nr 
 #join -t, -e EMPTY $tpath/blatz08.txt $tpath/blatz09.txt | join -t, -e EMPTY - $tpath/blatz11.txt | join -t, -e EMPTY - $tpath/blatz12.txt | join -t, -e EMPTY - $tpath/blatz10.txt | join -t, -e EMPTY - $tpath/blatz06.txt | join -t, -e EMPTY - $tpath/blatz07.txt | join -t, -e EMPTY - $tpath/blatz00.txt | join -t, -e EMPTY - $tpath/blatz02.txt | join -t, -e EMPTY - $tpath/blatz01.txt | sort -t, -k 9 -nr 
 join -t, -e EMPTY $tpath/blatz08.txt $tpath/blatz09.txt | join -t, -e EMPTY - $tpath/blatz11.txt | join -t, -e EMPTY - $tpath/blatz12.txt | join -t, -e EMPTY - $tpath/blatz10.txt | join -t, -e EMPTY - $tpath/blatz06.txt | join -t, -e EMPTY - $tpath/blatz07.txt | join -t, -e EMPTY - $tpath/blatz00.txt | join -t, -e EMPTY - $tpath/blatz02.txt | join -t, -e EMPTY - $tpath/blatz13.txt | join -t, -e EMPTY - $tpath/blatz14.txt | join -t, -e EMPTY - $tpath/blatz15.txt | join -t, -e EMPTY - $tpath/blatz01.txt | sort -t, -k 9 -nr 
