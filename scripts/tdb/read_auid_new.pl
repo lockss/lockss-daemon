@@ -2235,6 +2235,7 @@ while (my $line = <>) {
     sleep(4);
 
   } elsif ($plugin eq "ClockssASMscienceJournalsPlugin") {
+    #pub2web
     $url = sprintf("%scontent/journal/%s/clockssissues?volume=%s",
       $param{base_url}, $param{journal_id}, $param{volume_name});
     $man_url = uri_unescape($url);
