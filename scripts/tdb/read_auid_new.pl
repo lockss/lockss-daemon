@@ -2255,8 +2255,8 @@ while (my $line = <>) {
     }
     sleep(4);
 
-  } elsif ($plugin eq "ClockssIetJournalsPlugin") {
-# note plural on journals - unique among pub2web
+  } elsif (($plugin eq "ClockssIetJournalsPlugin") || ($plugin eq "ClockssHBKUPlugin")) {
+  # note plural on journals - unique among pub2web
     $url = sprintf("%scontent/journals/%s/clockssissues?volume=%s",
       $param{base_url}, $param{journal_id}, $param{volume_name});
     $man_url = uri_unescape($url);
