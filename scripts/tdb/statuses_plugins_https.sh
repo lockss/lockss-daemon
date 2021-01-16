@@ -51,15 +51,15 @@ echo "quick $quick"
 if [ ${quick} == false ]; then
     #http + https + no_count
     if [ ${clockss} == true ]; then
-        tdbout -CLZFB -t param[base_url],plugin tdb/clockssingest/*.tdb tdb/clockssingest/_retired/*.tdb  | sort | uniq > $tpath/base_url1.txt
+        ./scripts/tdb/tdbout -CLZFB -t param[base_url],plugin tdb/clockssingest/*.tdb tdb/clockssingest/_retired/*.tdb  | sort | uniq > $tpath/base_url1.txt
     else
-        tdbout -DSR -t param[base_url],plugin tdb/prod/*.tdb tdb/prod/_retired/*.tdb  | sort | uniq > $tpath/base_url1.txt
+        ./scripts/tdb/tdbout -DSR -t param[base_url],plugin tdb/prod/*.tdb tdb/prod/_retired/*.tdb  | sort | uniq > $tpath/base_url1.txt
     fi
     #http+https+count
     if [ ${clockss} == true ]; then
-        tdbout -CLZFB -t param[base_url],plugin tdb/clockssingest/*.tdb tdb/clockssingest/_retired/*.tdb  | sed s/https*:..// |sort | uniq -c > $tpath/base_url4.txt
+        ./scripts/tdb/tdbout -CLZFB -t param[base_url],plugin tdb/clockssingest/*.tdb tdb/clockssingest/_retired/*.tdb  | sed s/https*:..// |sort | uniq -c > $tpath/base_url4.txt
     else
-        tdbout -DSR -t param[base_url],plugin tdb/prod/*.tdb tdb/prod/_retired/*.tdb  | sed s/https*:..// |sort | uniq -c > $tpath/base_url4.txt
+        ./scripts/tdb/tdbout -DSR -t param[base_url],plugin tdb/prod/*.tdb tdb/prod/_retired/*.tdb  | sed s/https*:..// |sort | uniq -c > $tpath/base_url4.txt
     fi
 fi
 
