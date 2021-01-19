@@ -44,7 +44,9 @@ import org.lockss.util.UrlUtil;
  * 
  * @author Thib Guicherd-Callin
  * @since 1.70
+ * @deprecated Since 1.75.4, use {@link HttpHttpsParamUrlNormalizer} instead.
  */
+@Deprecated
 public class BaseUrlHttpHttpsUrlNormalizer implements UrlNormalizer {
 
   @Override
