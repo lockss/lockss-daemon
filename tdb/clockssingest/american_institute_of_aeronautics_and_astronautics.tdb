@@ -228,16 +228,16 @@
     au < finished ; finished ; 1986 ; Journal of Aircraft Volume 23 ; 23 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 1987 ; Journal of Aircraft Volume 24 ; 24 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1988 ; Journal of Aircraft Volume 25 ; 25 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1989 ; Journal of Aircraft Volume 26 ; 26 ; https://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 1989 ; Journal of Aircraft Volume 26 ; 26 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 1990 ; Journal of Aircraft Volume 27 ; 27 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1991 ; Journal of Aircraft Volume 28 ; 28 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1992 ; Journal of Aircraft Volume 29 ; 29 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1993 ; Journal of Aircraft Volume 30 ; 30 ; https://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 1993 ; Journal of Aircraft Volume 30 ; 30 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 1994 ; Journal of Aircraft Volume 31 ; 31 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1995 ; Journal of Aircraft Volume 32 ; 32 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1996 ; Journal of Aircraft Volume 33 ; 33 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1997 ; Journal of Aircraft Volume 34 ; 34 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1998 ; Journal of Aircraft Volume 35 ; 35 ; https://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 1998 ; Journal of Aircraft Volume 35 ; 35 ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 1999 ; Journal of Aircraft Volume 36 ; 36 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2000 ; Journal of Aircraft Volume 37 ; 37 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2001 ; Journal of Aircraft Volume 38 ; 38 ; https://arc.aiaa.org/ ; >
@@ -248,7 +248,7 @@
     au < frozen ; exists ; 2006 ; Journal of Aircraft Volume 43 ; 43 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2007 ; Journal of Aircraft Volume 44 ; 44 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2008 ; Journal of Aircraft Volume 45 ; 45 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2009 ; Journal of Aircraft Volume 46 ; 46 ; https://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 2009 ; Journal of Aircraft Volume 46 ; 46 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2010 ; Journal of Aircraft Volume 47 ; 47 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2011 ; Journal of Aircraft Volume 48 ; 48 ; http://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2012 ; Journal of Aircraft Volume 49 ; 49 ; http://arc.aiaa.org/ ; >
@@ -273,13 +273,13 @@
     >
     param[journal_id] = je
 
-    au < frozen ; exists ; 1977 ; Journal of Energy Volume 1 ; 1 ; https://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 1977 ; Journal of Energy Volume 1 ; 1 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 1978 ; Journal of Energy Volume 2 ; 2 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1979 ; Journal of Energy Volume 3 ; 3 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1980 ; Journal of Energy Volume 4 ; 4 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1981 ; Journal of Energy Volume 5 ; 5 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1982 ; Journal of Energy Volume 6 ; 6 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1983 ; Journal of Energy Volume 7 ; 7 ; https://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 1979 ; Journal of Energy Volume 3 ; 3 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1980 ; Journal of Energy Volume 4 ; 4 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1981 ; Journal of Energy Volume 5 ; 5 ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1982 ; Journal of Energy Volume 6 ; 6 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1983 ; Journal of Energy Volume 7 ; 7 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
 
   }
 
@@ -310,29 +310,29 @@
     >
     param[journal_id] = jgcd
 
-    au < frozen ; exists ; 1978 ; Journal of Guidance, Control, and Dynamics Volume 1 ; 1 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1979 ; Journal of Guidance, Control, and Dynamics Volume 2 ; 2 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1980 ; Journal of Guidance, Control, and Dynamics Volume 3 ; 3 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1981 ; Journal of Guidance, Control, and Dynamics Volume 4 ; 4 ; https://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 1978 ; Journal of Guidance, Control, and Dynamics Volume 1 ; 1 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1979 ; Journal of Guidance, Control, and Dynamics Volume 2 ; 2 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1980 ; Journal of Guidance, Control, and Dynamics Volume 3 ; 3 ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1981 ; Journal of Guidance, Control, and Dynamics Volume 4 ; 4 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 1982 ; Journal of Guidance, Control, and Dynamics Volume 5 ; 5 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1983 ; Journal of Guidance, Control, and Dynamics Volume 6 ; 6 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1984 ; Journal of Guidance, Control, and Dynamics Volume 7 ; 7 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1985 ; Journal of Guidance, Control, and Dynamics Volume 8 ; 8 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1986 ; Journal of Guidance, Control, and Dynamics Volume 9 ; 9 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1987 ; Journal of Guidance, Control, and Dynamics Volume 10 ; 10 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1988 ; Journal of Guidance, Control, and Dynamics Volume 11 ; 11 ; https://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 1988 ; Journal of Guidance, Control, and Dynamics Volume 11 ; 11 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 1989 ; Journal of Guidance, Control, and Dynamics Volume 12 ; 12 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1990 ; Journal of Guidance, Control, and Dynamics Volume 13 ; 13 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1991 ; Journal of Guidance, Control, and Dynamics Volume 14 ; 14 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1992 ; Journal of Guidance, Control, and Dynamics Volume 15 ; 15 ; https://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 1991 ; Journal of Guidance, Control, and Dynamics Volume 14 ; 14 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1992 ; Journal of Guidance, Control, and Dynamics Volume 15 ; 15 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 1993 ; Journal of Guidance, Control, and Dynamics Volume 16 ; 16 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1994 ; Journal of Guidance, Control, and Dynamics Volume 17 ; 17 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1995 ; Journal of Guidance, Control, and Dynamics Volume 18 ; 18 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1996 ; Journal of Guidance, Control, and Dynamics Volume 19 ; 19 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1997 ; Journal of Guidance, Control, and Dynamics Volume 20 ; 20 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1998 ; Journal of Guidance, Control, and Dynamics Volume 21 ; 21 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1999 ; Journal of Guidance, Control, and Dynamics Volume 22 ; 22 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2000 ; Journal of Guidance, Control, and Dynamics Volume 23 ; 23 ; https://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 1999 ; Journal of Guidance, Control, and Dynamics Volume 22 ; 22 ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2000 ; Journal of Guidance, Control, and Dynamics Volume 23 ; 23 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2001 ; Journal of Guidance, Control, and Dynamics Volume 24 ; 24 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2002 ; Journal of Guidance, Control, and Dynamics Volume 25 ; 25 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2003 ; Journal of Guidance, Control, and Dynamics Volume 26 ; 26 ; https://arc.aiaa.org/ ; >
@@ -340,10 +340,10 @@
     au < frozen ; exists ; 2005 ; Journal of Guidance, Control, and Dynamics Volume 28 ; 28 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2006 ; Journal of Guidance, Control, and Dynamics Volume 29 ; 29 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2007 ; Journal of Guidance, Control, and Dynamics Volume 30 ; 30 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2008 ; Journal of Guidance, Control, and Dynamics Volume 31 ; 31 ; https://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 2008 ; Journal of Guidance, Control, and Dynamics Volume 31 ; 31 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2009 ; Journal of Guidance, Control, and Dynamics Volume 32 ; 32 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2010 ; Journal of Guidance, Control, and Dynamics Volume 33 ; 33 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2011 ; Journal of Guidance, Control, and Dynamics Volume 34 ; 34 ; https://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 2010 ; Journal of Guidance, Control, and Dynamics Volume 33 ; 33 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2011 ; Journal of Guidance, Control, and Dynamics Volume 34 ; 34 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2012 ; Journal of Guidance, Control, and Dynamics Volume 35 ; 35 ; http://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
     au < zapped ; finished ; 2013 ; Journal of Guidance, Control, and Dynamics Volume 36 ; 36 ; http://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2014 ; Journal of Guidance, Control, and Dynamics Volume 37 ; 37 ; http://arc.aiaa.org/ ; >
@@ -366,21 +366,21 @@
     >
     param[journal_id] = jh
 
-    au < frozen ; exists ; 1967 ; Journal of Hydronautics Volume 1 ; 1 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1968 ; Journal of Hydronautics Volume 2 ; 2 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1969 ; Journal of Hydronautics Volume 3 ; 3 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1970 ; Journal of Hydronautics Volume 4 ; 4 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1971 ; Journal of Hydronautics Volume 5 ; 5 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1972 ; Journal of Hydronautics Volume 6 ; 6 ; https://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 1967 ; Journal of Hydronautics Volume 1 ; 1 ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1968 ; Journal of Hydronautics Volume 2 ; 2 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1969 ; Journal of Hydronautics Volume 3 ; 3 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1970 ; Journal of Hydronautics Volume 4 ; 4 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1971 ; Journal of Hydronautics Volume 5 ; 5 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1972 ; Journal of Hydronautics Volume 6 ; 6 ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 1973 ; Journal of Hydronautics Volume 7 ; 7 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1974 ; Journal of Hydronautics Volume 8 ; 8 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1975 ; Journal of Hydronautics Volume 9 ; 9 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1976 ; Journal of Hydronautics Volume 10 ; 10 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1977 ; Journal of Hydronautics Volume 11 ; 11 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1978 ; Journal of Hydronautics Volume 12 ; 12 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1979 ; Journal of Hydronautics Volume 13 ; 13 ; https://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 1974 ; Journal of Hydronautics Volume 8 ; 8 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1975 ; Journal of Hydronautics Volume 9 ; 9 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1976 ; Journal of Hydronautics Volume 10 ; 10 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1977 ; Journal of Hydronautics Volume 11 ; 11 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1978 ; Journal of Hydronautics Volume 12 ; 12 ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1979 ; Journal of Hydronautics Volume 13 ; 13 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 1980 ; Journal of Hydronautics Volume 14 ; 14 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1981 ; Journal of Hydronautics Volume 15 ; 15 ; https://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 1981 ; Journal of Hydronautics Volume 15 ; 15 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
 
   }
 
@@ -396,10 +396,10 @@
 
     au < frozen ; exists ; 1985 ; Journal of Propulsion and Power Volume 1 ; 1 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1986 ; Journal of Propulsion and Power Volume 2 ; 2 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1987 ; Journal of Propulsion and Power Volume 3 ; 3 ; https://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 1987 ; Journal of Propulsion and Power Volume 3 ; 3 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 1988 ; Journal of Propulsion and Power Volume 4 ; 4 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1989 ; Journal of Propulsion and Power Volume 5 ; 5 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1990 ; Journal of Propulsion and Power Volume 6 ; 6 ; https://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 1990 ; Journal of Propulsion and Power Volume 6 ; 6 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 1991 ; Journal of Propulsion and Power Volume 7 ; 7 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1992 ; Journal of Propulsion and Power Volume 8 ; 8 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1993 ; Journal of Propulsion and Power Volume 9 ; 9 ; https://arc.aiaa.org/ ; >
@@ -407,17 +407,17 @@
     au < frozen ; exists ; 1995 ; Journal of Propulsion and Power Volume 11 ; 11 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1996 ; Journal of Propulsion and Power Volume 12 ; 12 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1997 ; Journal of Propulsion and Power Volume 13 ; 13 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1998 ; Journal of Propulsion and Power Volume 14 ; 14 ; https://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 1998 ; Journal of Propulsion and Power Volume 14 ; 14 ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 1999 ; Journal of Propulsion and Power Volume 15 ; 15 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2000 ; Journal of Propulsion and Power Volume 16 ; 16 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2001 ; Journal of Propulsion and Power Volume 17 ; 17 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2002 ; Journal of Propulsion and Power Volume 18 ; 18 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2003 ; Journal of Propulsion and Power Volume 19 ; 19 ; https://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 2002 ; Journal of Propulsion and Power Volume 18 ; 18 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2003 ; Journal of Propulsion and Power Volume 19 ; 19 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2004 ; Journal of Propulsion and Power Volume 20 ; 20 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2005 ; Journal of Propulsion and Power Volume 21 ; 21 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2006 ; Journal of Propulsion and Power Volume 22 ; 22 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2007 ; Journal of Propulsion and Power Volume 23 ; 23 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2008 ; Journal of Propulsion and Power Volume 24 ; 24 ; https://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 2007 ; Journal of Propulsion and Power Volume 23 ; 23 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2008 ; Journal of Propulsion and Power Volume 24 ; 24 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2009 ; Journal of Propulsion and Power Volume 25 ; 25 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2010 ; Journal of Propulsion and Power Volume 26 ; 26 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2011 ; Journal of Propulsion and Power Volume 27 ; 27 ; https://arc.aiaa.org/ ; >
