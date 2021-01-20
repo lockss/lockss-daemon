@@ -22,7 +22,7 @@
         issnl = 2054-9318
       >
 
-     #param[journal_id] = bjrl
+     param[journal_id] = bjrl
      #param[journal_issn] = 2054-9326
 
      au < exists ; exists ; 2003 ; Bulletin of the John Rylands Library Volume 85 ; 85 ; >
@@ -49,7 +49,7 @@
       issnl = 1469-0314
     >
 
-      #param[journal_id] = fs
+      param[journal_id] = fs
       #param[journal_issn] = 1469-0314
       #move to pubfactory, https://www.manchesterhive.com/abstract/journals/fs/fs-overview.xml
 
@@ -85,7 +85,7 @@
       issnl = 2054-2240
     >
 
-    #param[journal_id] = hrv
+    param[journal_id] = hrv
     #param[journal_issn] = 2054-2240
     #move to pubfactory, https://www.manchesteropenhive.com/view/journals/hrv/hrv-overview.xml
 
@@ -109,7 +109,7 @@
       eissn = 2056-9211 ;
       issnl = 2056-9211
     >
-      #param[journal_id] = jbr
+      param[journal_id] = jbr
 
       {
       #param[base_url] = https://jbr.openlibrary.manchester.ac.uk/

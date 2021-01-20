@@ -820,7 +820,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Indiana Magazine of History Volume 2015 ; 111 ; >
       au < finished ; manifest ; 2016 ; 2016 ; Indiana Magazine of History Volume 2016 ; 112 ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2017 ; 2017 ; Indiana Magazine of History Volume 2017 ; 113 ; >
-      au < crawling ; exists ; 2018 ; 2018 ; Indiana Magazine of History Volume 2018 ; 114 ; >
+      au < frozen ; exists ; 2018 ; 2018 ; Indiana Magazine of History Volume 2018 ; 114 ; >
 
   }
 
@@ -860,12 +860,12 @@
          au < ready ; exists ; 2008 ; 2008 ; IU South Bend Undergraduate Research Journal Volume 2008 ; 8 ; >
          au < frozen ; exists ; 2009 ; 2009 ; IU South Bend Undergraduate Research Journal Volume 2009 ; 9 ; >
          au < crawling ; exists ; 2010 ; 2010 ; IU South Bend Undergraduate Research Journal Volume 2010 ; 10 ; >
-         au < crawling ; exists ; 2011 ; 2011 ; IU South Bend Undergraduate Research Journal Volume 2011 ; 11 ; >
+         au < frozen ; exists ; 2011 ; 2011 ; IU South Bend Undergraduate Research Journal Volume 2011 ; 11 ; >
          au < frozen ; exists ; 2012 ; 2012 ; IU South Bend Undergraduate Research Journal Volume 2012 ; 12 ; >
          au < crawling ; exists ; 2014 ; 2014 ; IU South Bend Undergraduate Research Journal Volume 2014 ; 14 ; >
          au < crawling ; exists ; 2015 ; 2015 ; IU South Bend Undergraduate Research Journal Volume 2015 ; 15 ; >
          au < frozen ; exists ; 2016 ; 2016 ; IU South Bend Undergraduate Research Journal Volume 2016 ; 16 ; >
-         au < crawling ; exists ; 2017 ; 2017 ; IU South Bend Undergraduate Research Journal Volume 2017 ; 17 ; >
+         au < frozen ; exists ; 2017 ; 2017 ; IU South Bend Undergraduate Research Journal Volume 2017 ; 17 ; >
          au < ready ; exists ; 2018 ; 2018 ; IU South Bend Undergraduate Research Journal Volume 2018 ; 18 ; >
          au < frozen ; exists ; 2019 ; 2019 ; IU South Bend Undergraduate Research Journal Volume 2019 ; 19 ; >
          au < expected ; exists ; 2020 ; 2020 ; IU South Bend Undergraduate Research Journal Volume 2020 ; 20 ; >
@@ -1078,7 +1078,7 @@
       param[journal_id] = joget
 
       au < frozen ; exists ; 2017 ; 2017 ; Global Engagement and Transformation Volume 2017 ; 1-2 ; >
-      au < crawling ; exists ; 2018 ; 2018 ; Global Engagement and Transformation Volume 2018 ; 3 ; >
+      au < frozen ; exists ; 2018 ; 2018 ; Global Engagement and Transformation Volume 2018 ; 3 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Global Engagement and Transformation Volume 2020 ; 4 ; >
 
   }
