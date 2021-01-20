@@ -14,8 +14,7 @@
       name = Malaysian Society of Parasitology and Tropical Medicine Source Content
     >
 
-    plugin = needs.plugin
-    #plugin = org.lockss.plugin.clockss.airiti.ClockssAiritiSourcePlugin
+    plugin = org.lockss.plugin.clockss.msptm.ClockssMSPTMSourcePlugin
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/ssssss-released/
     hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[directory] >
