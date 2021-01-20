@@ -2,15 +2,15 @@
 
   publisher <
     name = American Meteorological Society ;
-    info[platform] = Silverchair. Clockss & GLN
+    info[platform] = PubFactory
   >
 
   
-  plugin = needs.plugin  
+  plugin = needs.plugin 
   implicit < status ; year ; param[year] ; name ; volume >
   param[base_url] = https://journals.ametsoc.org/
 
-  #move to Silverchair
+  #move to Silverchair thence to PubFactory
 
   {
 
