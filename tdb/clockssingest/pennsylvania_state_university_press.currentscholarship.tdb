@@ -261,7 +261,7 @@
 
       param[journal_id] = jasseinsteffe
 
-      au < crawling ; exists ; 2010 ; Journal of Assessment and Institutional Effectiveness Volume 1 ; 2010 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2010 ; Journal of Assessment and Institutional Effectiveness Volume 1 ; 2010 ; https://www.jstor.org/ ; >
       au < finished ; manifest ; 2012 ; Journal of Assessment and Institutional Effectiveness Volume 2 ; 2012 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2013 ; Journal of Assessment and Institutional Effectiveness Volume 3 ; 2013 ; http://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2015 ; Journal of Assessment and Institutional Effectiveness Volume 4-5 ; 2015 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
@@ -563,7 +563,7 @@
 
       param[journal_id] = pennhistory
 
-      au < crawling ; exists ; 2010 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 77 ; 2010 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2010 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 77 ; 2010 ; https://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 78 ; 2011 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2012 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 79 ; 2012 ; http://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 80 ; 2013 ; https://www.jstor.org/ ; >
@@ -642,7 +642,7 @@
       au < ready ; exists ; 2010 ; Reception: Texts, Readers, Audiences, History Volume 2 ; 2010 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2011 ; Reception: Texts, Readers, Audiences, History Volume 3 ; 2011 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2012 ; Reception: Texts, Readers, Audiences, History Volume 4 ; 2012 ; http://www.jstor.org/ ; >
-      au < crawling ; exists ; 2013 ; Reception: Texts, Readers, Audiences, History Volume 5 ; 2013 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2013 ; Reception: Texts, Readers, Audiences, History Volume 5 ; 2013 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2014 ; Reception: Texts, Readers, Audiences, History Volume 6 ; 2014 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2015 ; Reception: Texts, Readers, Audiences, History Volume 7 ; 2015 ; http://www.jstor.org/ ; >
       au < frozen ; exists ; 2016 ; Reception: Texts, Readers, Audiences, History Volume 8 ; 2016 ; http://www.jstor.org/ ; >
@@ -1157,7 +1157,7 @@
       au < exists ; exists ; 2008 ; George Eliot-George Henry Lewes Studies Volume 2008 ; 2008 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2009 ; George Eliot-George Henry Lewes Studies Volume 2009 ; 2009 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2010 ; George Eliot-George Henry Lewes Studies Volume 2010 ; 2010 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2011 ; George Eliot-George Henry Lewes Studies Volume 2011 ; 2011 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2011 ; George Eliot-George Henry Lewes Studies Volume 2011 ; 2011 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2012 ; George Eliot-George Henry Lewes Studies Volume 2012 ; 2012 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2013 ; George Eliot-George Henry Lewes Studies Volume 2013 ; 2013 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2014 ; George Eliot-George Henry Lewes Studies Volume 66 ; 2014 ; https://www.jstor.org/ ; >
@@ -1602,7 +1602,7 @@
       au < exists ; exists ; 2008 ; Studies in American Humor Volume 2008 ; 2008 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2009 ; Studies in American Humor Volume 2009 ; 2009 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2010 ; Studies in American Humor Volume 2010 ; 2010 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2011 ; Studies in American Humor Volume 2011 ; 2011 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2011 ; Studies in American Humor Volume 2011 ; 2011 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2012 ; Studies in American Humor Volume 2012 ; 2012 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2013 ; Studies in American Humor Volume 2013 ; 2013 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2014 ; Studies in American Humor Volume 2014 ; 2014 ; https://www.jstor.org/ ; >
