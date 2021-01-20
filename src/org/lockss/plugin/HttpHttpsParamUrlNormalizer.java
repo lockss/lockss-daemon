@@ -33,109 +33,40 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin;
 
-import java.net.MalformedURLException;
-import java.util.*;
-
-import org.lockss.daemon.ConfigParamDescr;
-import org.lockss.util.UrlUtil;
-
 /**
-   * <p>
-   * A URL normalizer for HTTP-to-HTTPS plugin transitions, that accepts a set
-   * of target URL-typed plugin parameters, and normalizes incoming URLs from
-   * the same host as a target URL to the same protocol (HTTP or HTTPS) as that
-   * target URL.  
-   * </p>
-   * <p>
-   * Example:
-   * </p>
-   * <pre>
-au = // an AU with foo_url := http://foo.example.com/
-     //        and bar_url := https://bar.example.com/
-h = new HttpHttpsUrlHelper(au, "foo_url", "bar_url");
-h.makeSame("http://foo.example.com/abc.html")  -> http://foo.example.com/abc.html
-h.makeSame("https://foo.example.com/abc.html") -> http://foo.example.com/abc.html
-h.makeSame("http://bar.example.com/def.html")  -> https://bar.example.com/def.html
-h.makeSame("https://foo.example.com/def.html") -> https://bar.example.com/def.html
-h.makeSame("http://www.example.com/xyz.html")  -> http://www.example.com/xyz.html
-h.makeSame("https://www.example.com/xyz.html") -> https://www.example.com/xyz.html
-</pre>
-   * 
-   * @author Thib Guicherd-Callin
-   * @since 1.75.4
-   */
+ * <p>
+ * A URL normalizer for HTTP-to-HTTPS plugin transitions, that accepts a set of
+ * target URL-typed plugin parameters, and uses {@link HttpHttpsUrlHelper} to
+ * normalize incoming URLs from the same host as a target URL to the same
+ * protocol (HTTP or HTTPS) as that target URL.
+ * </p>
+ * 
+ * @author Thib Guicherd-Callin
+ * @since 1.75.4
+ * @see HttpHttpsUrlHelper
+ */
 public class HttpHttpsParamUrlNormalizer implements UrlNormalizer {
-    
-  protected ArchivalUnit au;
 
-  protected Map<String, Boolean> httpUrls;
-    
+  protected String[] params;
+  
   /**
    * <p>
-   * Makes a new instance with 'base_url' as the only key.
-   * </p>
-   * <p>
-   * Equivalent to {@code new HttpHttpsUrlHelper(au, "base_url")}.
+   * Makes a new instance, based on the given plugin parameter keys.
    * </p>
    * 
-   * @param au
+   * @param params
+   *          Plugin parameter keys, e.g.
+   *          {@code ConfigParamDescr.BASE_URL.getKey()} or
+   *          {@code "download_url"}.
    * @since 1.75.4
-   * @see HttpHttpsParamUrlNormalizer#HttpHttpsUrlHelper(ArchivalUnit, String...)
    */
-  public HttpHttpsParamUrlNormalizer(ArchivalUnit au) {
-    this(au, ConfigParamDescr.BASE_URL.getKey());
+  public HttpHttpsParamUrlNormalizer(String... params) {
+    this.params = params;
   }
-   
-  /**
-   * 
-   * @param au
-   * @since 1.75.4
-   */
-  public HttpHttpsParamUrlNormalizer(ArchivalUnit au, String... params)
-      throws IllegalArgumentException {
-    this.au = au;
-    this.httpUrls = new HashMap<String, Boolean>();
-    for (String param : params) {
-      String url = au.getConfiguration().get(param);
-      if (!UrlUtil.isHttpOrHttpsUrl(url)) {
-        throw new IllegalArgumentException(String.format("Expected AU param %s to be http:// or https:// URL but got %s",
-                                                         param,
-                                                         url));
-      }
-      try {
-        httpUrls.put(UrlUtil.getHost(url),
-                     UrlUtil.isHttpUrl(url));
-      }
-      catch (MalformedURLException mue) {
-        throw new IllegalArgumentException(String.format("AU param %s is a malformed URL: %s",
-                                                      param,
-                                                      url),
-                                           mue);
-      }
-    }
-  }
-
-  /**
-   * 
-   * @param url
-   * @return
-   * @since 1.75.4
-   */
+  
+  @Override
   public String normalizeUrl(String url, ArchivalUnit au) {
-    if (!this.au.getAuId().equals(au.getAuId())) {
-      return url;
-    }
-    try {
-      String host = UrlUtil.getHost(url);
-      Boolean isSupposedToBeHttp = httpUrls.get(host);
-      if (isSupposedToBeHttp == null) {
-        return url;
-      }
-      return (isSupposedToBeHttp ? "http://" : "https://") + UrlUtil.stripProtocol(url);
-    }
-    catch (MalformedURLException mue) {
-      return url;
-    }
+    return new HttpHttpsUrlHelper(au, params).normalize(url);
   }
 
 }

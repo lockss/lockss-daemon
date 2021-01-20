@@ -36,17 +36,28 @@ package org.lockss.plugin;
 import org.lockss.test.*;
 
 /**
+ * <p>
+ * Unit tests of {@link HttpHttpsParamUrlNormalizer}.
+ * </p>
  * 
  * @author Thib Guicherd-Callin
  * @since 1.75.4
+ * @see HttpHttpsParamUrlNormalizer
  */
 public class TestHttpHttpsParamUrlNormalizer extends LockssTestCase {
 
+  /**
+   * <p>
+   * Tests a typical {@link HttpHttpsParamUrlNormalizer}.
+   * </p>
+   * 
+   * @throws Exception if an error occurs.
+   */
   public void testHttpHttpsParamUrlNormalizer() throws Exception {
     MockArchivalUnit au = new MockArchivalUnit();
     au.setConfiguration(ConfigurationUtil.fromArgs("foo_url", "http://foo.example.com/",
                                                    "bar_url", "https://bar.example.com/"));
-    UrlNormalizer norm = new HttpHttpsParamUrlNormalizer(au, "foo_url", "bar_url");
+    UrlNormalizer norm = new HttpHttpsParamUrlNormalizer("foo_url", "bar_url");
     // URLs from foo.example.com should all be normalized to http://
     assertEquals("http://foo.example.com/some/path.html",
                  norm.normalizeUrl("http://foo.example.com/some/path.html", au));
@@ -63,26 +74,5 @@ public class TestHttpHttpsParamUrlNormalizer extends LockssTestCase {
     assertEquals("https://www.example.com/some/path.html",
                  norm.normalizeUrl("https://www.example.com/some/path.html", au));
   }
-  
-  public void testDefault() throws Exception {
-    MockArchivalUnit au = new MockArchivalUnit();
-    au.setConfiguration(ConfigurationUtil.fromArgs("base_url", "http://foo.example.com/",
-                                                   "bar_url", "https://bar.example.com/"));
-    UrlNormalizer norm = new HttpHttpsParamUrlNormalizer(au); // default constructor implies "base_url"
-    // URLs from foo.example.com should all be normalized to http://
-    assertEquals("http://foo.example.com/some/path.html",
-                 norm.normalizeUrl("http://foo.example.com/some/path.html", au));
-    assertEquals("http://foo.example.com/some/path.html",
-                 norm.normalizeUrl("https://foo.example.com/some/path.html", au));
-    // URLs from other hosts, including bar.example.com, should be unchanged
-    assertEquals("http://bar.example.com/some/path.html",
-        norm.normalizeUrl("http://bar.example.com/some/path.html", au));
-    assertEquals("https://bar.example.com/some/path.html",
-        norm.normalizeUrl("https://bar.example.com/some/path.html", au));
-    assertEquals("http://www.example.com/some/path.html",
-                 norm.normalizeUrl("http://www.example.com/some/path.html", au));
-    assertEquals("https://www.example.com/some/path.html",
-                 norm.normalizeUrl("https://www.example.com/some/path.html", au));
-  }
-  
+
 }
