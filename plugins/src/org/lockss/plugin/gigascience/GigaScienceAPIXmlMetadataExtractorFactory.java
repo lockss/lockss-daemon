@@ -62,8 +62,6 @@ public class GigaScienceAPIXmlMetadataExtractorFactory extends SourceXmlMetadata
         }
 
         protected String getFileIdentifier(CachedUrl cu) {
-            // we know cu isn't null
-            log.debug3("Fei - FileIdentifier : " + FilenameUtils.getBaseName(cu.getUrl());
             return FilenameUtils.getBaseName(cu.getUrl());
         }
 
