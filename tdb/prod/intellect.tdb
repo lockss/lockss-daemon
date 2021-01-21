@@ -967,6 +967,7 @@
       >
       param[journal_id] = ijcis
       param[journal_issn] = 1751-2867
+      #continued_by = 2515-8538
 
       {
       param[base_url] = http://www.ingentaconnect.com/
@@ -991,8 +992,26 @@
 
       au < released ; 2017 ; International Journal of Contemporary Iraqi Studies Volume 11 ; 11 >
       au < released ; 2018 ; International Journal of Contemporary Iraqi Studies Volume 12 ; 12 >
-      au < expected ; 2019 ; International Journal of Contemporary Iraqi Studies Volume 13 ; 13 >
-      au < expected ; 2020 ; International Journal of Contemporary Iraqi Studies Volume 14 ; 14 >
+
+      }
+    }
+
+    {
+      title <
+        name = Journal of Contemporary Iraq & the Arab World ;
+        issn = 2515-8538 ;
+        eissn = 2515-8546
+      >
+      param[journal_id] = jciaw
+      param[journal_issn] = 2515-8538
+      #continues = 1751-2867
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
+      au < expected ; 2019 ; Journal of Contemporary Iraq & the Arab World Volume 13 ; 13 >
+      au < expected ; 2020 ; Journal of Contemporary Iraq & the Arab World Volume 14 ; 14 >
 
       }
     }
@@ -1005,6 +1024,7 @@
       >
       param[journal_id] = jdtv
       param[journal_issn] = 2040-4182
+      #continued_by = 2516-3523
 
       {
       param[base_url] = http://www.ingentaconnect.com/
@@ -1026,8 +1046,26 @@
 
       au < released ; 2017 ; International Journal of Digital Television Volume 8 ; 8 >
       au < released ; 2018 ; International Journal of Digital Television Volume 9 ; 9 >
-      au < expected ; 2019 ; International Journal of Digital Television Volume 10 ; 10 >
-      au < expected ; 2020 ; International Journal of Digital Television Volume 11 ; 11 >
+
+      }
+    }
+
+    {
+      title <
+        name = Journal of Digital Media & Policy ;
+        issn = 2516-3523 ;
+        eissn = 2516-3531
+      >
+      param[journal_id] = jdmp
+      param[journal_issn] = 2516-3523
+      #continues = 1743-5234
+
+      {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+
+      au < expected ; 2019 ; Journal of Digital Media & Policy Volume 10 ; 10 >
+      au < expected ; 2020 ; Journal of Digital Media & Policy Volume 11 ; 11 >
 
       }
     }
