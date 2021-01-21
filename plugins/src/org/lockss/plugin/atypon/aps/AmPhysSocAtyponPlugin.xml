@@ -54,16 +54,16 @@
   </entry>
   <!--  also for https conversion -->
   <entry>
-    <string>plugin_url_consumer_factory</string>
-    <string>org.lockss.plugin.base.HttpToHttpsUrlConsumerFactory</string>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponHttpHttpsUrlNormalizer</string>
   </entry>
   <entry>
     <string>plugin_url_fetcher_factory</string>
-    <string>org.lockss.plugin.base.HttpToHttpsUrlFetcherFactory</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponHttpToHttpsUrlFetcherFactory</string>
   </entry>
   <entry>
-    <string>au_url_normalizer</string>
-    <string>org.lockss.plugin.BaseUrlHttpHttpsUrlNormalizer</string>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponHttpToHttpsUrlConsumerFactory</string>
   </entry>
   <!--  end http to https transition specific support  -->
   <!--some pdfplus files need scraping.  -->
