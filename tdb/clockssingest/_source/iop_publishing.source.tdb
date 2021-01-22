@@ -41,17 +41,17 @@
 
       au < readySource ; crawling ; 2020 ; IOP Publishing Source Content 2020_1 ; 2020_1 >
       au < readySource ; crawling ; 2020 ; IOP Publishing Source Content 2020_2 ; 2020_2 > #released to clockss-stanford early
-      au < manifest ; exists ; 2020 ; IOP Publishing Source Content 2020_3 ; 2020_3 >
-      au < manifest ; exists ; 2020 ; IOP Publishing Source Content 2020_4 ; 2020_4 >
+      au < readySource ; crawling ; 2020 ; IOP Publishing Source Content 2020_3 ; 2020_3 >
+      au < readySource ; crawling ; 2020 ; IOP Publishing Source Content 2020_4 ; 2020_4 >
 
-      au < doNotProcess ; exists ; 2021 ; IOP Publishing Source Content 2021_01 ; 2021_01 >
+      au < readySource ; crawling ; 2021 ; IOP Publishing Source Content 2021_01 ; 2021_01 >
       au < doNotProcess ; exists ; 2021 ; IOP Publishing Source Content 2021_02 ; 2021_02 >
       au < doNotProcess ; exists ; 2021 ; IOP Publishing Source Content 2021_03 ; 2021_03 >
       au < doNotProcess ; exists ; 2021 ; IOP Publishing Source Content 2021_04 ; 2021_04 >
 
     }
   }
-  
+
   {
 
     title <
