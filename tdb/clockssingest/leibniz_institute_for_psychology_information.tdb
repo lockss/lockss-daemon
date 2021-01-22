@@ -14,6 +14,36 @@
       #moved to https
 
   {
+
+      title <
+        name = Clinical Psychology in Europe ;
+        eissn = 2625-3410
+      >
+
+      param[journal_id] = cpe
+
+      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2019 ; Clinical Psychology in Europe Volume 2019 ; 2019 ; 2019 ; https://cpe.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; expected ; exists ; 2020 ; Clinical Psychology in Europe Volume 2020 ; 2020 ; 2020 ; https://cpe.psychopen.eu/ ; >
+
+  }
+
+  {
+
+      title <
+        name = Social Psychological Bulletin ;
+        issn = 1896-1800 ;
+        eissn = 2569-653X
+      >
+
+      param[journal_id] = sbp
+
+      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2018 ; Social Psychological Bulletin Volume 2018 ; 2018 ; 2018 ; https://spb.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2019 ; Social Psychological Bulletin Volume 2019 ; 2019 ; 2019 ; https://spb.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; expected ; exists ; 2020 ; Social Psychological Bulletin Volume 2020 ; 2020 ; 2020 ; https://spb.psychopen.eu/ ; >
+
+  }
+
+  {
     title <
       name = Europe's Journal of Psychology ;
       issn = 1841-0413
@@ -60,7 +90,7 @@
       au < ojs2.ClockssOJS2Plugin ; deepCrawl ; exists ; 2017 ; The European Journal of Counselling Psychology Volume 6 ; 6 ; 2017 ; https://ejcop.psychopen.eu/ ; >
       au < ojs2.ClockssOJS2Plugin ; deepCrawl ; exists ; 2018 ; The European Journal of Counselling Psychology Volume 7 ; 7 ; 2018 ; https://ejcop.psychopen.eu/ ; >
       au < ojs2.ClockssOJS2Plugin ; manifest ; exists ; 2019 ; The European Journal of Counselling Psychology Volume 8 ; 8 ; 2019 ; https://ejcop.psychopen.eu/ ; >
-      au < ojs2.ClockssOJS2Plugin ; expected ; exists ; 2020 ; The European Journal of Counselling Psychology Volume 9 ; 9 ; 2020 ; https://ejcop.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; expected ; exists ; 2020 ; The European Journal of Counselling Psychology Volume 9 ; 9 ; 2020 ; https://ejcop.psychopen.eu/ ; >
 
   }
 
@@ -163,7 +193,7 @@
       au < ojs2.ClockssOJS2Plugin ; deepCrawl ; exists ; 2017 ; Psychological Thought Volume 10 ; 10 ; 2017 ; https://psyct.psychopen.eu/ ; >
       au < ojs2.ClockssOJS2Plugin ; deepCrawl ; exists ; 2018 ; Psychological Thought Volume 11 ; 11 ; 2018 ; https://psyct.psychopen.eu/ ; >
       au < ojs2.ClockssOJS2Plugin ; ready ; exists ; 2019 ; Psychological Thought Volume 12 ; 12 ; 2019 ; https://psyct.psychopen.eu/ ; >
-      au < ojs2.ClockssOJS2Plugin ; expected ; exists ; 2020 ; Psychological Thought Volume 13 ; 13 ; 2020 ; https://psyct.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; expected ; exists ; 2020 ; Psychological Thought Volume 13 ; 13 ; 2020 ; https://psyct.psychopen.eu/ ; >
 
   }
 
@@ -185,7 +215,7 @@
       au < ojs2.ClockssOJS2Plugin ; deepCrawl ; exists ; 2017 ; Psychology, Community & Health Volume 6 ; 6 ; 2017 ; https://pch.psychopen.eu/ ; >
       au < ojs2.ClockssOJS2Plugin ; finished ; manifest ; 2018 ; Psychology, Community & Health Volume 7 ; 7 ; 2018 ; https://pch.psychopen.eu/ ; reingest4.clockss.org:8082 >
       au < ojs2.ClockssOJS2Plugin ; frozen ; exists ; 2019 ; Psychology, Community & Health Volume 8 ; 8 ; 2019 ; https://pch.psychopen.eu/ ; >
-      au < ojs2.ClockssOJS2Plugin ; expected ; exists ; 2020 ; Psychology, Community & Health Volume 9 ; 9 ; 2020 ; https://pch.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; expected ; exists ; 2020 ; Psychology, Community & Health Volume 9 ; 9 ; 2020 ; https://pch.psychopen.eu/ ; >
 
   }
 
