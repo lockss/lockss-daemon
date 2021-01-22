@@ -29,7 +29,10 @@
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%sclockss-manifest/vol_%s_manifest.dtl", base_url, volume_name</string>
+    <list>
+      <string>"%sclockss-manifest/vol_%s_manifest.dtl", to_http(base_url), volume_name</string>
+      <string>"%sclockss-manifest/vol_%s_manifest.dtl", to_https(base_url), volume_name</string>
+    </list>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
