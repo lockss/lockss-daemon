@@ -15,7 +15,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>19</string>
+    <string>20</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -23,15 +23,19 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>19</string>
+    <string>20</string>
   </entry>
   <entry>
     <string>au_name</string>
     <string>"American Academy of Pediatrics Plugin (CLOCKSS), Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
   <entry>
+    <!--  override start url from parent to support http to https conversion -->
     <string>au_start_url</string>
-    <string>"%sclockss-manifest/vol_%s_manifest.html", base_url, volume_name</string>
+    <list>
+      <string>"%sclockss-manifest/vol_%s_manifest.html", to_http(base_url), volume_name</string>
+      <string>"%sclockss-manifest/vol_%s_manifest.html", to_https(base_url), volume_name</string>
+    </list>
   </entry>
   <entry>
     <string>clockss_override</string>
