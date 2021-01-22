@@ -15,37 +15,70 @@
         This is a list of HighWire Drupal Child plugins - be sure to update
         the child's plugin_parent_version number to match, then
         update the child's plugin_version number:
-        aaas.ClockssAAASDrupalPlugin
-        aai.ClockssAAIDrupalPlugin
-        aap.AAPDrupalPlugin
-        aapl.AAPLDrupalPlugin
-        ada.ADADrupalPlugin
-        aha.AHADrupalPlugin
-        aps.APSDrupalPlugin
-        apta.APTADrupalPlugin (Deprecated)
-        arf.ARFDrupalPlugin
-        ash.ASHDrupalPlugin
-        asm.ASMDrupalPlugin
-        besbjs.BESBJSDrupalPlugin
-        biologists.BiologistsDrupalPlugin
-        bmj.BMJDrupalPlugin
-        elife.ClockssELifeDrupalPlugin (Deprecated)
-        embo.EMBODrupalPlugin
-        ers.ERSDrupalPlugin
-        fsf.FSFDrupalPlugin
-        gensoc.GeneticsSocietyDrupalPlugin
-        gsl.GSLDrupalPlugin
-        gsw.GSWDrupalPlugin (soon to be Deprecated)
-        iwa.IWADrupalPlugin
-        jbjs.JBJSDrupalPlugin (Deprecated)
-        oup.OUPDrupalPlugin (Deprecated)
-        portlandpress.PortlandPressDrupalPlugin
-        rcgp.RCGPDrupalPlugin
-        rcpsych.RCPsychDrupalPlugin
-        rsp.RSPDrupalPlugin
-        rup.RUPDrupalPlugin
-        sfn.SFNDrupalPlugin
-        
+        aaas.ClockssAAASDrupalPlugin.xml
+        aacc.AmAssocClinChemDrupalPlugin.xml
+        aacr.AmAssocCancerResearchDrupalPlugin.xml
+        aai.AAIDrupalPlugin.xml
+           (child)-> ClockssAAIDrupalPlugin.xml
+        aap.AAPDrupalPlugin.xml
+           (child)-> ClockssAAPDrupalPlugin.xml
+        aapl.AAPLDrupalPlugin.xml
+           (child)-> ClockssAAPLDrupalPlugin.xml
+        aarespcare.AmAssocRespCareDrupalPlugin.xml
+        accardiol.AmCollegeCardiologyDrupalPlugin.xml
+        ada.ADADrupalPlugin.xml
+           (child)-> ClockssADADrupalPlugin.xml
+        adha.ClockssADHADrupalPlugin.xml
+        aha.AHADrupalPlugin.xml
+           (child)-> ClockssAHADrupalPlugin.xml
+        annalsfamilymedicine.AnnalsFamilyMedicineDrupalPlugin.xml
+           (child)-> ClockssAnnalsFamilyMedicineDrupalPlugin.xml
+        aps.APSDrupalPlugin.xml
+           (child)-> ClockssAPSDrupalPlugin.xml
+        apta.APTADrupalPlugin.xml                           (Deprecated)
+        arf.ARFDrupalPlugin.xml
+        asenvit.AmSocEnVitDrupalPlugin.xml
+        ash.ASHDrupalPlugin.xml
+        ashealthsys.AmSocHealthSysDrupalPlugin.xml
+        asm.ASMDrupalPlugin.xml
+        aspb.ASPBDrupalPlugin.xml
+           (child)-> ClockssASPBDrupalPlugin.xml
+        aspet.ASPETDrupalPlugin.xml
+           (child)-> ClockssASPETDrupalPlugin.xml
+        besbjs.BESBJSDrupalPlugin.xml
+        biologists.BiologistsDrupalPlugin.xml
+           (child)-> ClockssBiologistsDrupalPlugin.xml
+        bmj.BMJDrupalPlugin.xml
+        cfpc.CollegeFamilyPhysCanadaDrupalPlugin.xml
+        elife.ClockssELifeDrupalPlugin.xml                   (Deprecated)
+        embo.EMBODrupalPlugin.xml
+        ers.ERSDrupalPlugin.xml
+           (child)-> ClockssERSDrupalPlugin.xml
+        fsf.FSFDrupalPlugin.xml
+        gensoc.GeneticsSocietyDrupalPlugin.xml
+           (child)-> ClockssGeneticsSocietyDrupalPlugin.xml
+        gsl.GSLDrupalPlugin.xml
+           (child)-> ClockssGSLDrupalPlugin.xml
+        gsw.GSWDrupalPlugin.xml                              (soon to be Deprecated)
+           (child)-> ClockssGSWDrupalPlugin.xml
+        iwa.IWADrupalPlugin.xml
+           (child)-> ClockssIWADrupalPlugin.xml
+        jbjs.JBJSDrupalPlugin.xml                            (Deprecated)
+        lsa.ClockssLifeScienceAllianceDrupalPlugin.xml
+        oup.OUPDrupalPlugin.xml	                             (Deprecated)
+           (child)-> ClockssOUPDrupalPlugin.xml
+        portlandpress.PortlandPressDrupalPlugin.xml
+           (child)-> ClockssPortlandPressDrupalPlugin.xml
+        rcgp.RCGPDrupalPlugin.xml
+        rcpsych.RCPsychDrupalPlugin.xml
+        rsp.RSPDrupalPlugin.xml
+           (child)-> ClockssRSPDrupalPlugin.xml
+        rup.RUPDrupalPlugin.xml
+           (child)-> ClockssRUPDrupalPlugin.xml
+        sfn.SFNDrupalPlugin.xml
+           (child)-> ClockssSFNDrupalPlugin.xml
+        ucpress.UCPressDrupalPlugin.xml
+
         Note: the LOCKSS child is the parent of the CLOCKSS child plugin, therefore
         update the CLOCKSS child plugin_version & plugin_parent_version with 
         the LOCKSS child's new version
@@ -280,9 +313,9 @@
          -->
     <string>au_exclude_urls_from_polls_pattern</string>
     <list>
-      <string>^http(?!.*/highwire/filestream/.*)(?!.*\.pdf)(?!.*/content/[^/]+/suppl/.*)|html$</string>
-      <string>^http(.+)/twi[ls]\.</string>
-      <string>^http(.+)/findings\.</string>
+      <string>^https?(?!.*/highwire/filestream/.*)(?!.*\.pdf)(?!.*/content/[^/]+/suppl/.*)|html$</string>
+      <string>^https?(.+)/twi[ls]\.</string>
+      <string>^https?(.+)/findings\.</string>
     </list>
   </entry>
   <entry>
