@@ -70,10 +70,10 @@
       <string>1,"^%s", graphics_url</string>
       -->
       <!-- HBKU: https://www.qscience.com/content/journals/ahcsps/2011/2 -->
-      <string>1, "%scontent/journals/%s/%s/", base_url, journal_id, volume_name</string>
-      <string>1, "%scontent/journals/[^/]+/%s\.%s", base_url, journal_id, volume_name</string>
+      <string>1, "^https?://%scontent/journals/%s/%s/",  url_host(base_url), journal_id, volume_name</string>
+      <string>1, "^https?://%scontent/journals/[^/]+/%s\.%s",  url_host(base_url), journal_id, volume_name</string>
       <!-- https://www.qscience.com/content/journals/10.5339/ahcsps.2011.9?crawler=true&mimetype=application/pdf -->
-      <string>1, "%scontent/journals/[^/]+/%s\.%s\.\d+\?crawler=true", base_url, journal_id, volume_name</string>
+      <string>1, "^https?://%scontent/journals/[^/]+/%s\.%s\.\d+\?crawler=true",  url_host(base_url), journal_id, volume_name</string>
     </list>
   </entry>
   <entry>

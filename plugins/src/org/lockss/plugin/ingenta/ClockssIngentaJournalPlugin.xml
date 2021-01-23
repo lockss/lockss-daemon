@@ -54,13 +54,19 @@
       <!--
       https://www.ingentaconnect.com/content/ascp/tscp?format=clockss
       -->
-      <string>"%scontent/%s?format=clockss&amp;volume=%s", base_url, journal_issn, volume_name</string>
-      <string>"%scontent/%s?format=clockss&amp;volume=%s", api_url, journal_issn, volume_name</string>
+      <string>"%scontent/%s?format=clockss&amp;volume=%s", to_http(base_url), journal_issn, volume_name</string>
+      <string>"%scontent/%s?format=clockss&amp;volume=%s", to_https(base_url), journal_issn, volume_name</string>
+      <string>"%scontent/%s?format=clockss&amp;volume=%s", to_http(api_url), journal_issn, volume_name</string>
+      <string>"%scontent/%s?format=clockss&amp;volume=%s", to_https(api_url), journal_issn, volume_name</string>
       <!--  no longer (if ever needed) take this out -->
       <!-- <string>"%slockss.txt", graphics_url</string> -->
       <!--  docserver content stays at http even if the rest is at https -->
       <string>"http://docserver.ingentaconnect.com/lockss.txt"</string>
     </list>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.ingenta.IngentaHttpHttpsUrlNormalizer</string>
   </entry>
   <entry>
     <string>clockss_override</string>
