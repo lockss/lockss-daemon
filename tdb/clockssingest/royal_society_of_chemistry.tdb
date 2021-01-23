@@ -561,7 +561,7 @@
       au < crawling ; exists ; 2020 ; Faraday Discussions Volume 221 ; 221 ; 2020 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2020 ; Faraday Discussions Volume 222 ; 222 ; 2020 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2020 ; Faraday Discussions Volume 223 ; 223 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < testing ; exists ; 2020 ; Faraday Discussions Volume 224 ; 224 ; 2020 ; https://pubs.rsc.org/ ; >
+      au < ready ; exists ; 2020 ; Faraday Discussions Volume 224 ; 224 ; 2020 ; https://pubs.rsc.org/ ; >
 
       au < expected ; exists ; 2021 ; Faraday Discussions Volume 225 ; 225 ; 2021 ; https://pubs.rsc.org/ ; >
       au < expected ; exists ; 2021 ; Faraday Discussions Volume 226 ; 226 ; 2021 ; https://pubs.rsc.org/ ; >
@@ -1734,7 +1734,7 @@
       #complete. Missing 1997-1999 ****
       au < ready ; exists ; 1997 ; Journal of Chemical Research, Synopses Volume 1997 ; 0 ; 1997 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 1998 ; Journal of Chemical Research, Synopses Volume 1998 ; 0 ; 1998 ; https://pubs.rsc.org/ ; >
-      au < testing ; exists ; 1999 ; Journal of Chemical Research, Synopses Volume 1999 ; 0 ; 1999 ; https://pubs.rsc.org/ ; >
+      au < ready ; exists ; 1999 ; Journal of Chemical Research, Synopses Volume 1999 ; 0 ; 1999 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -2318,7 +2318,7 @@
       au < ready ; exists ; 1996 ; Journal of the Chemical Society, Perkin Transactions 2: Physical Organic Chemistry Volume 1996 ; 0 ; 1996 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 1997 ; Journal of the Chemical Society, Perkin Transactions 2: Physical Organic Chemistry Volume 1997 ; 0 ; 1997 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 1998 ; Journal of the Chemical Society, Perkin Transactions 2: Physical Organic Chemistry Volume 1998 ; 0 ; 1998 ; https://pubs.rsc.org/ ; >
-      au < testing ; exists ; 1999 ; Journal of the Chemical Society, Perkin Transactions 2: Physical Organic Chemistry Volume 1999 ; 0 ; 1999 ; https://pubs.rsc.org/ ; >
+      au < ready ; exists ; 1999 ; Journal of the Chemical Society, Perkin Transactions 2: Physical Organic Chemistry Volume 1999 ; 0 ; 1999 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -2569,7 +2569,7 @@
       #complete
       au < ready ; exists ; 1998 ; PhysChemComm Volume 1 ; 1 ; 1998 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 1999 ; PhysChemComm Volume 2 ; 2 ; 1999 ; https://pubs.rsc.org/ ; >
-      au < testing ; exists ; 2000 ; PhysChemComm Volume 3 ; 3 ; 2000 ; https://pubs.rsc.org/ ; >
+      au < ready ; exists ; 2000 ; PhysChemComm Volume 3 ; 3 ; 2000 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2001 ; PhysChemComm Volume 4 ; 4 ; 2001 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2002 ; PhysChemComm Volume 5 ; 5 ; 2002 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2003 ; PhysChemComm Volume 6 ; 6 ; 2003 ; https://pubs.rsc.org/ ; >
