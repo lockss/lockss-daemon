@@ -91,15 +91,15 @@
       comment[publisher] = Helsinki University Press
 #      param[base_url] = https://journal-njmr.org/
 
-      au < frozen ; exists ; 2011 ; 1 ; Nordic Journal of Migration Research Volume 2011 ; 2011 ; https://journal-njmr.org/ ; >
+      au < finished ; manifest ; 2011 ; 1 ; Nordic Journal of Migration Research Volume 2011 ; 2011 ; https://journal-njmr.org/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2012 ; 2 ; Nordic Journal of Migration Research Volume 2012 ; 2012 ; https://journal-njmr.org/ ; >
       au < crawling ; exists ; 2013 ; 3 ; Nordic Journal of Migration Research Volume 2013 ; 2013 ; https://journal-njmr.org/ ; >
-      au < frozen ; exists ; 2014 ; 4 ; Nordic Journal of Migration Research Volume 2014 ; 2014 ; https://journal-njmr.org/ ; >
+      au < finished ; manifest ; 2014 ; 4 ; Nordic Journal of Migration Research Volume 2014 ; 2014 ; https://journal-njmr.org/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2015 ; 5 ; Nordic Journal of Migration Research Volume 2015 ; 2015 ; https://journal-njmr.org/ ; >
-      au < frozen ; exists ; 2016 ; 6 ; Nordic Journal of Migration Research Volume 2016 ; 2016 ; https://journal-njmr.org/ ; >
-      au < frozen ; exists ; 2017 ; 7 ; Nordic Journal of Migration Research Volume 2017 ; 2017 ; https://journal-njmr.org/ ; >
+      au < finished ; manifest ; 2016 ; 6 ; Nordic Journal of Migration Research Volume 2016 ; 2016 ; https://journal-njmr.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2017 ; 7 ; Nordic Journal of Migration Research Volume 2017 ; 2017 ; https://journal-njmr.org/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2018 ; 8 ; Nordic Journal of Migration Research Volume 2018 ; 2018 ; https://journal-njmr.org/ ; >
-      au < frozen ; exists ; 2019 ; 9 ; Nordic Journal of Migration Research Volume 2019 ; 2019 ; https://journal-njmr.org/ ; >
+      au < finished ; manifest ; 2019 ; 9 ; Nordic Journal of Migration Research Volume 2019 ; 2019 ; https://journal-njmr.org/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2020 ; 10 ; Nordic Journal of Migration Research Volume 2020 ; 2020 ; https://journal-njmr.org/ ; >
   }
 
@@ -309,7 +309,7 @@
       comment[publisher] = Levy Library Press
 #      param[base_url] = https://www.scholarlyassessmentreports.org/
 
-      au < frozen ; exists ; 2019 ; 1 ; Scholarly Assessment Reports Volume 2019 ; 2019 ; https://www.scholarlyassessmentreports.org/ ; >
+      au < finished ; manifest ; 2019 ; 1 ; Scholarly Assessment Reports Volume 2019 ; 2019 ; https://www.scholarlyassessmentreports.org/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2020 ; 2 ; Scholarly Assessment Reports Volume 2020 ; 2020 ; https://www.scholarlyassessmentreports.org/ ; >
 
   }
@@ -588,7 +588,7 @@
       au < finished ; finished ; 2007 ; 3 ; Digital Medievalist Volume 2007 ; 2007 ; https://journal.digitalmedievalist.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2008 ; 4 ; Digital Medievalist Volume 2008 ; 2008 ; https://journal.digitalmedievalist.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2009 ; 5 ; Digital Medievalist Volume 2009 ; 2009 ; https://journal.digitalmedievalist.org/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2010 ; 6 ; Digital Medievalist Volume 2010 ; 2010 ; https://journal.digitalmedievalist.org/ ; > #M exists. No articles for that year.
+      au < finished ; manifest ; 2010 ; 6 ; Digital Medievalist Volume 2010 ; 2010 ; https://journal.digitalmedievalist.org/ ; reingest2.clockss.org:8085 > #M exists. No articles for that year.
       au < finished ; finished ; 2011 ; 7 ; Digital Medievalist Volume 2011 ; 2011 ; https://journal.digitalmedievalist.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2012 ; 8 ; Digital Medievalist Volume 2012 ; 2012 ; https://journal.digitalmedievalist.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2013 ; 9 ; Digital Medievalist Volume 2013 ; 2013 ; https://journal.digitalmedievalist.org/ ; reingest4.clockss.org:8082 >
@@ -922,9 +922,9 @@
       comment[publisher] = Stockholm University Press
 #      param[base_url] = https://jhlr.org/
 
-      au < frozen ; exists ; 2016 ; 1 ; Journal of Home Language Research Volume 2016 ; 2016 ; https://jhlr.org/ ; >
+      au < finished ; manifest ; 2016 ; 1 ; Journal of Home Language Research Volume 2016 ; 2016 ; https://jhlr.org/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2017 ; 2 ; Journal of Home Language Research Volume 2017 ; 2017 ; https://jhlr.org/ ; >
-      au < frozen ; exists ; 2018 ; 3 ; Journal of Home Language Research Volume 2018 ; 2018 ; https://jhlr.org/ ; >
+      au < finished ; manifest ; 2018 ; 3 ; Journal of Home Language Research Volume 2018 ; 2018 ; https://jhlr.org/ ; reingest4.clockss.org:8082 >
 
   }
 }
@@ -1161,7 +1161,7 @@
       au < finished ; finished ; 2016 ; 1 ; Citizen Science: Theory and Practice Volume 2016 ; 2016 ; http://theoryandpractice.citizenscienceassociation.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2017 ; 2 ; Citizen Science: Theory and Practice Volume 2017 ; 2017 ; http://theoryandpractice.citizenscienceassociation.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 3 ; Citizen Science: Theory and Practice Volume 2018 ; 2018 ; https://theoryandpractice.citizenscienceassociation.org/ ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2019 ; 4 ; Citizen Science: Theory and Practice Volume 2019 ; 2019 ; https://theoryandpractice.citizenscienceassociation.org/ ; >
+      au < finished ; manifest ; 2019 ; 4 ; Citizen Science: Theory and Practice Volume 2019 ; 2019 ; https://theoryandpractice.citizenscienceassociation.org/ ; reingest3.clockss.org:8083 >
       au < manifest ; exists ; 2020 ; 5 ; Citizen Science: Theory and Practice Volume 2020 ; 2020 ; https://theoryandpractice.citizenscienceassociation.org/ ; >
 
   }
@@ -1295,7 +1295,7 @@
       au < finished ; finished ; 2016 ; 1 ; International Review of Social Psychology Volume 2016 ; 2016 ; http://www.rips-irsp.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; 2 ; International Review of Social Psychology Volume 2017 ; 2017 ; http://www.rips-irsp.com/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 3 ; International Review of Social Psychology Volume 2018 ; 2018 ; https://www.rips-irsp.com/ ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2019 ; 4 ; International Review of Social Psychology Volume 2019 ; 2019 ; https://www.rips-irsp.com/ ; >
+      au < finished ; manifest ; 2019 ; 4 ; International Review of Social Psychology Volume 2019 ; 2019 ; https://www.rips-irsp.com/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2020 ; 5 ; International Review of Social Psychology Volume 2020 ; 2020 ; https://www.rips-irsp.com/ ; >
 
   }
@@ -1765,7 +1765,7 @@
       au < doesNotExist ; doesNotExist ; 2007 ; 2 ; Global Heart Volume 2007 ; 2007 ;  https://globalheartjournal.com/ ; >
       au < finished ; manifest ; 2008 ; 3 ; Global Heart Volume 2008 ; 2008 ;  https://globalheartjournal.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2009 ; 4 ; Global Heart Volume 2009 ; 2009 ;  https://globalheartjournal.com/ ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2010 ; 5 ; Global Heart Volume 2010 ; 2010 ;  https://globalheartjournal.com/ ; >
+      au < finished ; manifest ; 2010 ; 5 ; Global Heart Volume 2010 ; 2010 ;  https://globalheartjournal.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2011 ; 6 ; Global Heart Volume 2011 ; 2011 ;  https://globalheartjournal.com/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2012 ; 7 ; Global Heart Volume 2012 ; 2012 ;  https://globalheartjournal.com/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2013 ; 8 ; Global Heart Volume 2013 ; 2013 ;  https://globalheartjournal.com/ ; reingest5.clockss.org:8082 >
@@ -2042,14 +2042,14 @@
 #      param[base_url] = https://tremorjournal.org/
 
       au < crawling ; exists ; 2011 ; 1 ; Tremor and Other Hyperkinetic Movements Volume 2011 ; 2011 ; https://tremorjournal.org/ ; >
-      au < frozen ; exists ; 2012 ; 2 ; Tremor and Other Hyperkinetic Movements Volume 2012 ; 2012 ; https://tremorjournal.org/ ; >
-      au < frozen ; exists ; 2013 ; 3 ; Tremor and Other Hyperkinetic Movements Volume 2013 ; 2013 ; https://tremorjournal.org/ ; >
-      au < frozen ; exists ; 2014 ; 4 ; Tremor and Other Hyperkinetic Movements Volume 2014 ; 2014 ; https://tremorjournal.org/ ; >
+      au < finished ; manifest ; 2012 ; 2 ; Tremor and Other Hyperkinetic Movements Volume 2012 ; 2012 ; https://tremorjournal.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2013 ; 3 ; Tremor and Other Hyperkinetic Movements Volume 2013 ; 2013 ; https://tremorjournal.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2014 ; 4 ; Tremor and Other Hyperkinetic Movements Volume 2014 ; 2014 ; https://tremorjournal.org/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2015 ; 5 ; Tremor and Other Hyperkinetic Movements Volume 2015 ; 2015 ; https://tremorjournal.org/ ; >
       au < crawling ; exists ; 2016 ; 6 ; Tremor and Other Hyperkinetic Movements Volume 2016 ; 2016 ; https://tremorjournal.org/ ; >
-      au < frozen ; exists ; 2017 ; 7 ; Tremor and Other Hyperkinetic Movements Volume 2017 ; 2017 ; https://tremorjournal.org/ ; >
-      au < frozen ; exists ; 2018 ; 8 ; Tremor and Other Hyperkinetic Movements Volume 2018 ; 2018 ; https://tremorjournal.org/ ; >
-      au < frozen ; exists ; 2019 ; 9 ; Tremor and Other Hyperkinetic Movements Volume 2019 ; 2019 ; https://tremorjournal.org/ ; >
+      au < finished ; manifest ; 2017 ; 7 ; Tremor and Other Hyperkinetic Movements Volume 2017 ; 2017 ; https://tremorjournal.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; 8 ; Tremor and Other Hyperkinetic Movements Volume 2018 ; 2018 ; https://tremorjournal.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; 9 ; Tremor and Other Hyperkinetic Movements Volume 2019 ; 2019 ; https://tremorjournal.org/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2020 ; 10 ; Tremor and Other Hyperkinetic Movements Volume 2020 ; 2020 ; https://tremorjournal.org/ ; >
 
   }
@@ -2370,20 +2370,20 @@
 #      param[base_url] = https://delibdemjournal.org/
 
       au < crawling ; exists ; 2005 ; 1 ; Journal of Deliberative Democracy Volume 2005 ; 2005 ; https://delibdemjournal.org/ ; >
-      au < frozen ; exists ; 2006 ; 2 ; Journal of Deliberative Democracy Volume 2006 ; 2006 ; https://delibdemjournal.org/ ; >
-      au < frozen ; exists ; 2007 ; 3 ; Journal of Deliberative Democracy Volume 2007 ; 2007 ; https://delibdemjournal.org/ ; >
+      au < finished ; manifest ; 2006 ; 2 ; Journal of Deliberative Democracy Volume 2006 ; 2006 ; https://delibdemjournal.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2007 ; 3 ; Journal of Deliberative Democracy Volume 2007 ; 2007 ; https://delibdemjournal.org/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2008 ; 4 ; Journal of Deliberative Democracy Volume 2008 ; 2008 ; https://delibdemjournal.org/ ; >
       au < crawling ; exists ; 2009 ; 5 ; Journal of Deliberative Democracy Volume 2009 ; 2009 ; https://delibdemjournal.org/ ; >
-      au < frozen ; exists ; 2010 ; 6 ; Journal of Deliberative Democracy Volume 2010 ; 2010 ; https://delibdemjournal.org/ ; >
+      au < finished ; manifest ; 2010 ; 6 ; Journal of Deliberative Democracy Volume 2010 ; 2010 ; https://delibdemjournal.org/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2011 ; 7 ; Journal of Deliberative Democracy Volume 2011 ; 2011 ; https://delibdemjournal.org/ ; >
       au < crawling ; exists ; 2012 ; 8 ; Journal of Deliberative Democracy Volume 2012 ; 2012 ; https://delibdemjournal.org/ ; >
       au < ready ; exists ; 2013 ; 9 ; Journal of Deliberative Democracy Volume 2013 ; 2013 ; https://delibdemjournal.org/ ; >
       au < crawling ; exists ; 2014 ; 10 ; Journal of Deliberative Democracy Volume 2014 ; 2014 ; https://delibdemjournal.org/ ; >
       au < ready ; exists ; 2015 ; 11 ; Journal of Deliberative Democracy Volume 2015 ; 2015 ; https://delibdemjournal.org/ ; >
       au < crawling ; exists ; 2016 ; 12 ; Journal of Deliberative Democracy Volume 2016 ; 2016 ; https://delibdemjournal.org/ ; >
-      au < frozen ; exists ; 2017 ; 13 ; Journal of Deliberative Democracy Volume 2017 ; 2017 ; https://delibdemjournal.org/ ; >
+      au < finished ; manifest ; 2017 ; 13 ; Journal of Deliberative Democracy Volume 2017 ; 2017 ; https://delibdemjournal.org/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2018 ; 14 ; Journal of Deliberative Democracy Volume 2018 ; 2018 ; https://delibdemjournal.org/ ; >
-      au < frozen ; exists ; 2019 ; 15 ; Journal of Deliberative Democracy Volume 2019 ; 2019 ; https://delibdemjournal.org/ ; >
+      au < finished ; manifest ; 2019 ; 15 ; Journal of Deliberative Democracy Volume 2019 ; 2019 ; https://delibdemjournal.org/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2020 ; 16 ; Journal of Deliberative Democracy Volume 2020 ; 2020 ; https://delibdemjournal.org/ ; >
 
   }
@@ -2909,9 +2909,9 @@
       au < doNotProcess ; doNotProcess ; 1997 ; 10 ; Serials: The Journal for the Serials Community Volume 1997 ; 1997 ; https://serials.uksg.org/ ; >
       au < doNotProcess ; doNotProcess ; 1998 ; 11 ; Serials: The Journal for the Serials Community Volume 1998 ; 1998 ; https://serials.uksg.org/ ; >
       au < doNotProcess ; doNotProcess ; 1999 ; 12 ; Serials: The Journal for the Serials Community Volume 1999 ; 1999 ; https://serials.uksg.org/ ; >
-      au < frozen ; exists ; 2000 ; 13 ; Serials: The Journal for the Serials Community Volume 2000 ; 2000 ; https://serials.uksg.org/ ; > #M exists. No articles for that year.
+      au < finished ; manifest ; 2000 ; 13 ; Serials: The Journal for the Serials Community Volume 2000 ; 2000 ; https://serials.uksg.org/ ; reingest3.clockss.org:8083 > #M exists. No articles for that year.
       au < finished ; finished ; 2001 ; 14 ; Serials: The Journal for the Serials Community Volume 2001 ; 2001 ; https://serials.uksg.org/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2002 ; 15 ; Serials: The Journal for the Serials Community Volume 2002 ; 2002 ; https://serials.uksg.org/ ; > #M exists. No articles for that year.
+      au < finished ; manifest ; 2002 ; 15 ; Serials: The Journal for the Serials Community Volume 2002 ; 2002 ; https://serials.uksg.org/ ; reingest4.clockss.org:8082 > #M exists. No articles for that year.
       au < finished ; finished ; 2003 ; 16 ; Serials: The Journal for the Serials Community Volume 2003 ; 2003 ; https://serials.uksg.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2004 ; 17 ; Serials: The Journal for the Serials Community Volume 2004 ; 2004 ; https://serials.uksg.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2005 ; 18 ; Serials: The Journal for the Serials Community Volume 2005 ; 2005 ; https://serials.uksg.org/ ; reingest1.clockss.org:8082 >
