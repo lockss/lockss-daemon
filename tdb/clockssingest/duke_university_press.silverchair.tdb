@@ -584,7 +584,7 @@
       au < frozen ; exists ; 2016 ; 2016 ; Journal of Middle East Women's Studies Volume 12 ; 12 ; >
       au < ready ; exists ; 2017 ; 2017 ;  Journal of Middle East Women's Studies Volume 13 ; 13 ; >
       au < frozen ; exists ; 2018 ; 2018 ; Journal of Middle East Women's Studies Volume 14 ; 14 ; >
-      au < crawling ; exists ; 2019 ; 2019 ; Journal of Middle East Women's Studies Volume 15 ; 15 ; >
+      au < frozen ; exists ; 2019 ; 2019 ; Journal of Middle East Women's Studies Volume 15 ; 15 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Journal of Middle East Women's Studies Volume 16 ; 16 ; >
 
    }
@@ -668,7 +668,7 @@
       au < crawling ; exists ; 2007 ; 2007 ; Meridians Volume 7 (2007) ; 7 (2007) ; >
       au < crawling ; exists ; 2008 ; 2008 ; Meridians Volume 8 (2008) ; 8 (2008) ; >
       au < ready ; exists ; 2009 ; 2009 ; Meridians Volume 9 (2009) ; 9 (2009) ; >
-      au < crawling ; exists ; 2010 ; 2010 ; Meridians Volume 10 (2010) ; 10 (2010) ; >
+      au < frozen ; exists ; 2010 ; 2010 ; Meridians Volume 10 (2010) ; 10 (2010) ; >
       au < crawling ; exists ; 2011 ; 2011 ; Meridians Volume 11 (2011) ; 11 (2011) ; >
       au < frozen ; exists ; 2013 ; 2013 ; Meridians Volume 11 (2013) ; 11 (2013) ; >
       au < crawling ; exists ; 2014 ; 2014 ; Meridians Volume 12 (2014) ; 12 (2014) ; >
@@ -710,7 +710,7 @@
 
       au < ready ; exists ; 2017 ; 2017 ; MLQ: Modern Language Quarterly Volume 78 ; 78 ; >
       au < frozen ; exists ; 2018 ; 2018 ; MLQ: Modern Language Quarterly Volume 79 ; 79 ; >
-      au < crawling ; exists ; 2019 ; 2019 ; MLQ: Modern Language Quarterly Volume 80 ; 80 ; >
+      au < frozen ; exists ; 2019 ; 2019 ; MLQ: Modern Language Quarterly Volume 80 ; 80 ; >
       au < crawling ; exists ; 2020 ; 2020 ; MLQ: Modern Language Quarterly Volume 81 ; 81 ; >
 
     }
@@ -810,7 +810,7 @@
       param[journal_id] = poetics-today
 
       au < crawling ; exists ; 2017 ; 2017 ; Poetics Today Volume 38 ; 38 ; >
-      au < crawling ; exists ; 2018 ; 2018 ; Poetics Today Volume 39 ; 39 ; >
+      au < frozen ; exists ; 2018 ; 2018 ; Poetics Today Volume 39 ; 39 ; >
       au < frozen ; exists ; 2019 ; 2019 ; Poetics Today Volume 40 ; 40 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Poetics Today Volume 41 ; 41 ; >
 
@@ -889,9 +889,9 @@
 
       param[journal_id] = qui-parle
 
-      au < crawling ; exists ; 2000 ; 2000 ; Qui Parle Volume 12 (2000) ; 12 (2000) ; >
+      au < frozen ; exists ; 2000 ; 2000 ; Qui Parle Volume 12 (2000) ; 12 (2000) ; >
       au < frozen ; exists ; 2001 ; 2001 ; Qui Parle Volume 12-13 (2001) ; 12-13 (2001) ; >
-      au < crawling ; exists ; 2003 ; 2003 ; Qui Parle Volume 13-14 (2003) ; 13-14 (2003) ; >
+      au < frozen ; exists ; 2003 ; 2003 ; Qui Parle Volume 13-14 (2003) ; 13-14 (2003) ; >
       au < crawling ; exists ; 2004 ; 2004 ; Qui Parle Volume 14-15 (2004) ; 14-15 (2004) ; >
       au < frozen ; exists ; 2005 ; 2005 ; Qui Parle Volume 15 (2005) ; 15 (2005) ; >
       au < ready ; exists ; 2006 ; 2006 ; Qui Parle Volume 16 (2006) ; 16 (2006) ; >
@@ -958,7 +958,7 @@
       au < crawling ; exists ; 2015 ; 2015 ; Romanic Review Volume 106 ; 106 ; >
       au < crawling ; exists ; 2016 ; 2016 ; Romanic Review Volume 107 ; 107 ; >
       au < ready ; exists ; 2017 ; 2017 ; Romanic Review Volume 108 ; 108 ; >
-      au < crawling ; exists ; 2018 ; 2018 ; Romanic Review Volume 109 ; 109 ; >
+      au < frozen ; exists ; 2018 ; 2018 ; Romanic Review Volume 109 ; 109 ; >
       au < frozen ; exists ; 2019 ; 2019 ; Romanic Review Volume 110 ; 110 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Romanic Review Volume 111 ; 111 ; >
 

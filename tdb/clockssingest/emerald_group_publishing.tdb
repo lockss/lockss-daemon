@@ -650,7 +650,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Aisa-Pacific Journal of Business Administration Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Aisa-Pacific Journal of Business Administration Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Aisa-Pacific Journal of Business Administration Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2019 ; Aisa-Pacific Journal of Business Administration Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2019 ; Aisa-Pacific Journal of Business Administration Volume 11 ; 11 ; >
     au < crawling ; exists ; 2020 ; Aisa-Pacific Journal of Business Administration Volume 12 ; 12 ; >
 
   }
@@ -2078,7 +2078,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Disaster Prevention and Management Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Disaster Prevention and Management Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Disaster Prevention and Management Volume 27 ; 27 ; >
-    au < crawling ; exists ; 2019 ; Disaster Prevention and Management Volume 28 ; 28 ; >
+    au < frozen ; exists ; 2019 ; Disaster Prevention and Management Volume 28 ; 28 ; >
     au < crawling ; exists ; 2020 ; Disaster Prevention and Management Volume 29 ; 29 ; >
 
   }
@@ -2642,7 +2642,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; European Business Review Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; European Business Review Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; European Business Review Volume 30 ; 30 ; >
-    au < crawling ; exists ; 2019 ; European Business Review Volume 31 ; 31 ; >
+    au < frozen ; exists ; 2019 ; European Business Review Volume 31 ; 31 ; >
     au < crawling ; exists ; 2020 ; European Business Review Volume 32 ; 32 ; >
 
   }
@@ -4119,7 +4119,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Contemporary Hospitality Management Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Contemporary Hospitality Management Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Contemporary Hospitality Management Volume 30 ; 30 ; >
-    au < crawling ; exists ; 2019 ; International Journal of Contemporary Hospitality Management Volume 31 ; 31 ; >
+    au < frozen ; exists ; 2019 ; International Journal of Contemporary Hospitality Management Volume 31 ; 31 ; >
     au < crawling ; exists ; 2020 ; International Journal of Contemporary Hospitality Management Volume 32 ; 32 ; >
 
   }
@@ -4394,7 +4394,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Event and Festival Management Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Event and Festival Management Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Event and Festival Management Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2019 ; International Journal of Event and Festival Management Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2019 ; International Journal of Event and Festival Management Volume 10 ; 10 ; >
     au < crawling ; exists ; 2020 ; International Journal of Event and Festival Management Volume 11 ; 11 ; >
 
   }
@@ -4614,7 +4614,7 @@
     comment[journal_id] = jppel
     #continues = 1756-1450
 
-    au < crawling ; exists ; 2018 ; Journal of Property, Planning and Environmental Law Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2018 ; Journal of Property, Planning and Environmental Law Volume 10 ; 10 ; >
     au < crawling ; exists ; 2019 ; Journal of Property, Planning and Environmental Law Volume 11 ; 11 ; >
     au < crawling ; exists ; 2020 ; Journal of Property, Planning and Environmental Law Volume 12 ; 12 ; >
 
@@ -9351,7 +9351,7 @@
     au < manifest ; exists ; 1997 ; Logistics Information Management Volume 10 ; 10 ; >
     au < manifest ; exists ; 1998 ; Logistics Information Management Volume 11 ; 11 ; >
     au < manifest ; exists ; 1999 ; Logistics Information Management Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2000 ; Logistics Information Management Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2000 ; Logistics Information Management Volume 13 ; 13 ; >
     au < manifest ; exists ; 2001 ; Logistics Information Management Volume 14 ; 14 ; >
     au < manifest ; exists ; 2002 ; Logistics Information Management Volume 15 ; 15 ; >
     au < manifest ; exists ; 2003 ; Logistics Information Management Volume 16 ; 16 ; >
