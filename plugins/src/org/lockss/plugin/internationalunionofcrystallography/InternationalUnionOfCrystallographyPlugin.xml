@@ -54,18 +54,23 @@
   </entry>
   <entry>
     <string>au_crawlrules</string>
+    <!-- added http and https urls -->
     <list>
       <string>4,"^https?://(%s|%s)/", base_url_host, scripts_url_host</string>
       <string>1,"^https?://(%s|%s)/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host, scripts_url_host</string>
-      <string>1,"^%s%s/issues/%d/lockss\.html$", base_url, journal_id, year</string>
-      <string>1,"^%slockss\.html$", scripts_url</string>
-      <string>1,"^%s%s/issues/%d/%s/", base_url, journal_id, year, issue</string>
-      <string>1,"^%scgi-bin/(sendcif|sendsup|sendsupfiles)\?", scripts_url</string>
+      <string>1,"^https?://%s/%s/issues/%d/lockss\.html$", url_host(base_url), journal_id, year</string>
+      <string>1,"^https?://%s/lockss\.html$", url_host(scripts_url)</string>
+      <string>1,"^https?://%s/%s/issues/%d/%s/", url_host(base_url), journal_id, year, issue</string>
+      <string>1,"^https?://%s/cgi-bin/(sendcif|sendsup|sendsupfiles)\?", url_host(scripts_url)</string>
     </list>
   </entry>
   <entry>
+    <!-- added http and https urls -->
     <string>au_start_url</string>
-    <string>"%s%s/issues/%d/%s/00/issconts.html", base_url, journal_id, year, issue</string>
+    <list>
+      <string>"%s%s/issues/%d/%s/00/issconts.html", to_http(base_url), journal_id, year, issue</string>
+      <string>"%s%s/issues/%d/%s/00/issconts.html", to_https(base_url), journal_id, year, issue</string>
+    </list>
   </entry>
   <entry>
     <string>au_feature_urls</string>
@@ -87,8 +92,10 @@
   <entry>
     <string>au_manifest</string>
     <list>
-      <string>"%s%s/issues/%d/lockss.html", base_url, journal_id, year</string>
-      <string>"%slockss.html", scripts_url</string>
+      <string>"%s%s/issues/%d/lockss.html", to_http(base_url), journal_id, year</string>
+      <string>"%s%s/issues/%d/lockss.html", to_https(base_url), journal_id, year</string>
+      <string>"%slockss.html", to_http(scripts_url)</string>
+      <string>"%slockss.html", to_https(scripts_url)</string>
     </list>
   </entry>
   <entry>
