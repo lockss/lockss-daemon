@@ -87,9 +87,9 @@
       param[base_url] = https://www.ingentaconnect.com/
       param[api_url] = https://api.ingentaconnect.com/
 
-      au < testing ; 2017 ; Art & the Public Sphere Volume 6 ; 6 >
-      au < testing ; 2018 ; Art & the Public Sphere Volume 7 ; 7 >
-      au < testing ; 2019 ; Art & the Public Sphere Volume 8 ; 8 >
+      au < ready ; 2017 ; Art & the Public Sphere Volume 6 ; 6 >
+      au < ready ; 2018 ; Art & the Public Sphere Volume 7 ; 7 >
+      au < ready ; 2019 ; Art & the Public Sphere Volume 8 ; 8 >
       au < expected ; 2020 ; Art & the Public Sphere Volume 9 ; 9 >
 
       }
@@ -1514,9 +1514,9 @@
       param[base_url] = https://www.ingentaconnect.com/
       param[api_url] = https://api.ingentaconnect.com/
 
-      au < testing ; 2017 ; Journal of Arab & Muslim Media Research Volume 10 ; 10 >
-      au < testing ; 2018 ; Journal of Arab & Muslim Media Research Volume 11 ; 11 >
-      au < testing ; 2019 ; Journal of Arab & Muslim Media Research Volume 12 ; 12 >
+      au < ready ; 2017 ; Journal of Arab & Muslim Media Research Volume 10 ; 10 >
+      au < ready ; 2018 ; Journal of Arab & Muslim Media Research Volume 11 ; 11 >
+      au < ready ; 2019 ; Journal of Arab & Muslim Media Research Volume 12 ; 12 >
       au < manifest ; 2020 ; Journal of Arab & Muslim Media Research Volume 13 ; 13 >
 
       }
@@ -1591,8 +1591,8 @@
       param[base_url] = https://www.ingentaconnect.com/
       param[api_url] = https://api.ingentaconnect.com/
 
-      au < testing ; 2017 ; Journal of Curatorial Studies Volume 6 ; 6 >
-      au < testing ; 2018 ; Journal of Curatorial Studies Volume 7 ; 7 >
+      au < ready ; 2017 ; Journal of Curatorial Studies Volume 6 ; 6 >
+      au < ready ; 2018 ; Journal of Curatorial Studies Volume 7 ; 7 >
       au < ready ; 2019 ; Journal of Curatorial Studies Volume 8 ; 8 >
       au < manifest ; 2020 ; Journal of Curatorial Studies Volume 9 ; 9 >
 
@@ -1628,8 +1628,8 @@
       param[api_url] = https://api.ingentaconnect.com/
 
       au < ready ; 2017 ; Journal of Dance & Somatic Practices Volume 9 ; 9 >
-      au < testing ; 2018 ; Journal of Dance & Somatic Practices Volume 10 ; 10 >
-      au < testing ; 2019 ; Journal of Dance & Somatic Practices Volume 11 ; 11 >
+      au < ready ; 2018 ; Journal of Dance & Somatic Practices Volume 10 ; 10 >
+      au < ready ; 2019 ; Journal of Dance & Somatic Practices Volume 11 ; 11 >
       au < manifest ; 2020 ; Journal of Dance & Somatic Practices Volume 12 ; 12 >
 
       }
@@ -1665,7 +1665,7 @@
 
       au < ready ; 2017 ; Journal of European Popular Culture Volume 8 ; 8 >
       au < ready ; 2018 ; Journal of European Popular Culture Volume 9 ; 9 >
-      au < testing ; 2019 ; Journal of European Popular Culture Volume 10 ; 10 >
+      au < ready ; 2019 ; Journal of European Popular Culture Volume 10 ; 10 >
       au < manifest ; 2020 ; Journal of European Popular Culture Volume 11 ; 11 >
 
       }
@@ -1735,7 +1735,7 @@
 
       au < ready ; 2017 ; Journal of Gaming & Virtual Worlds Volume 9 ; 9 >
       au < ready ; 2018 ; Journal of Gaming & Virtual Worlds Volume 10 ; 10 >
-      au < testing ; 2019 ; Journal of Gaming & Virtual Worlds Volume 11 ; 11 >
+      au < ready ; 2019 ; Journal of Gaming & Virtual Worlds Volume 11 ; 11 >
       au < manifest ; 2020 ; Journal of Gaming & Virtual Worlds Volume 12 ; 12 >
 
       }
@@ -1767,8 +1767,8 @@
       param[base_url] = https://www.ingentaconnect.com/
       param[api_url] = https://api.ingentaconnect.com/
 
-      au < testing ; 2018 ; Journal of Italian Cinema and Media Studies Volume 6 ; 6 >
-      au < testing ; 2019 ; Journal of Italian Cinema and Media Studies Volume 7 ; 7 >
+      au < ready ; 2018 ; Journal of Italian Cinema and Media Studies Volume 6 ; 6 >
+      au < ready ; 2019 ; Journal of Italian Cinema and Media Studies Volume 7 ; 7 >
       au < manifest ; 2020 ; Journal of Italian Cinema and Media Studies Volume 8 ; 8 >
 
       }
@@ -1856,7 +1856,7 @@
       param[base_url] = https://www.ingentaconnect.com/
       param[api_url] = https://api.ingentaconnect.com/
 
-      au < testing ; 2017 ; Journal of Music, Technology & Education Volume 10 ; 10 >
+      au < ready ; 2017 ; Journal of Music, Technology & Education Volume 10 ; 10 >
       au < ready ; 2018 ; Journal of Music, Technology & Education Volume 11 ; 11 >
       au < ready ; 2019 ; Journal of Music, Technology & Education Volume 12 ; 12 >
       au < manifest ; 2020 ; Journal of Music, Technology & Education Volume 13 ; 13 >
@@ -1888,7 +1888,7 @@
       param[base_url] = https://www.ingentaconnect.com/
       param[api_url] = https://api.ingentaconnect.com/
 
-      au < testing ; 2017 ; Journal of New Zealand & Pacific Studies Volume 5 ; 5 >
+      au < ready ; 2017 ; Journal of New Zealand & Pacific Studies Volume 5 ; 5 >
       au < ready ; 2018 ; Journal of New Zealand & Pacific Studies Volume 6 ; 6 >
       au < ready ; 2019 ; Journal of New Zealand & Pacific Studies Volume 7 ; 7 >
       au < manifest ; 2020 ; Journal of New Zealand & Pacific Studies Volume 8 ; 8 >
@@ -2163,7 +2163,7 @@
       param[api_url] = https://api.ingentaconnect.com/
 
       au < ready ; 2017 ; Moving Image Review & Art Journal (MIRAJ) Volume 6 ; 6 >
-      au < testing ; 2018 ; Moving Image Review & Art Journal (MIRAJ) Volume 7 ; 7 >
+      au < ready ; 2018 ; Moving Image Review & Art Journal (MIRAJ) Volume 7 ; 7 >
       au < ready ; 2019 ; Moving Image Review & Art Journal (MIRAJ) Volume 8 ; 8 >
       au < manifest ; 2020 ; Moving Image Review & Art Journal (MIRAJ) Volume 9 ; 9 >
 
@@ -2333,9 +2333,9 @@
       param[base_url] = https://www.ingentaconnect.com/
       param[api_url] = https://api.ingentaconnect.com/
 
-      au < testing ; 2017 ; Philosophy of Photography Volume 8 ; 8 >
+      au < ready ; 2017 ; Philosophy of Photography Volume 8 ; 8 >
       au < ready ; 2018 ; Philosophy of Photography Volume 9 ; 9 >
-      au < testing ; 2019 ; Philosophy of Photography Volume 10 ; 10 >
+      au < ready ; 2019 ; Philosophy of Photography Volume 10 ; 10 >
       au < expected ; 2020 ; Philosophy of Photography Volume 11 ; 11 >
 
       }
@@ -2428,9 +2428,9 @@
       param[base_url] = https://www.ingentaconnect.com/
       param[api_url] = https://api.ingentaconnect.com/
 
-      au < testing ; 2017 ; PUBLIC: Art, Culture, Ideas Volume 28 ; 28 >
-      au < testing ; 2018 ; PUBLIC: Art, Culture, Ideas Volume 29 ; 29 >
-      au < testing ; 2019 ; PUBLIC: Art, Culture, Ideas Volume 30 ; 30 >
+      au < ready ; 2017 ; PUBLIC: Art, Culture, Ideas Volume 28 ; 28 >
+      au < ready ; 2018 ; PUBLIC: Art, Culture, Ideas Volume 29 ; 29 >
+      au < ready ; 2019 ; PUBLIC: Art, Culture, Ideas Volume 30 ; 30 >
       au < manifest ; 2020 ; PUBLIC: Art, Culture, Ideas Volume 31 ; 31 >
 
       }
@@ -2461,9 +2461,9 @@
       param[base_url] = https://www.ingentaconnect.com/
       param[api_url] = https://api.ingentaconnect.com/
 
-      au < testing ; 2017 ; Punk & Post Punk Volume 6 ; 6 >
+      au < ready ; 2017 ; Punk & Post Punk Volume 6 ; 6 >
       au < ready ; 2018 ; Punk & Post Punk Volume 7 ; 7 >
-      au < testing ; 2019 ; Punk & Post Punk Volume 8 ; 8 >
+      au < ready ; 2019 ; Punk & Post Punk Volume 8 ; 8 >
       au < manifest ; 2020 ; Punk & Post Punk Volume 9 ; 9 >
 
       }
@@ -2505,7 +2505,7 @@
       param[api_url] = https://api.ingentaconnect.com/
 
       au < ready ; 2017 ; The Radio Journal: International Studies in Broadcast & Audio Media Volume 15 ; 15 >
-      au < testing ; 2018 ; The Radio Journal: International Studies in Broadcast & Audio Media Volume 16 ; 16 >
+      au < ready ; 2018 ; The Radio Journal: International Studies in Broadcast & Audio Media Volume 16 ; 16 >
       au < ready ; 2019 ; The Radio Journal: International Studies in Broadcast & Audio Media Volume 17 ; 17 >
       au < manifest ; 2020 ; The Radio Journal: International Studies in Broadcast & Audio Media Volume 18 ; 18 >
 
@@ -2536,7 +2536,7 @@
       param[api_url] = https://api.ingentaconnect.com/
 
       au < ready ; 2017 ; Scene Volume 5 ; 5 >
-      au < testing ; 2018 ; Scene Volume 6 ; 6 >
+      au < ready ; 2018 ; Scene Volume 6 ; 6 >
       au < ready ; 2019 ; Scene Volume 7 ; 7 >
       au < expected ; 2020 ; Scene Volume 8 ; 8 >
 
