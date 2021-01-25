@@ -33,25 +33,27 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.ingenta;
 
-import org.lockss.daemon.PluginException;
-import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.BaseUrlHttpHttpsUrlNormalizer;
-import org.lockss.plugin.UrlNormalizer;
-import org.lockss.plugin.ingenta.IngentaUrlNormalizer;
-import org.lockss.util.Logger;
+import org.lockss.plugin.*;
+import org.lockss.test.*;
 
-/*
- * Adds in the http-to-https conversion then calls the standard Ingenta normalization
- */
-public class IngentaHttpHttpsUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
-  protected static Logger log =
-      Logger.getLogger(org.lockss.plugin.ingenta.IngentaHttpHttpsUrlNormalizer.class);
-  protected static UrlNormalizer baseNorm = new IngentaUrlNormalizer();
+public class TestIngentaHttpHttpsUrlNormalizer extends LockssTestCase {
 
-  @Override
-  public String additionalNormalization(String url, ArchivalUnit au)
-      throws PluginException {
-    return baseNorm.normalizeUrl(url, au);
+  protected UrlNormalizer normalizer;
+
+  protected MockArchivalUnit au;
+
+  public void setUp() throws Exception {
+    au = new MockArchivalUnit();
+    au.setConfiguration(ConfigurationUtil.fromArgs("base_url", "http://www.example.com/",
+        "api_url", "http://api.example.com/"));
+    normalizer = new IngentaHttpHttpsUrlNormalizer();
+
+  }
+
+  public void testHttpsUrls() throws Exception {
+    assertEquals("http://api.example.com/content/publi/jour/2005/00000044/00000003/art00001?crawler=true&mimetype=text/html",
+        normalizer.normalizeUrl("https://www.example.com/search/download?pub=infobike%3a%2f%2fpubli%2fjour%2f2005%2f00000044%2f00000003%2fart00001&mimetype=text%2fhtml&exitTargetId=1234567890123", au));
+    assertEquals("http://api.example.com/content/publi/jour/2002/00000009/00000001/art00003?crawler=true",
+        normalizer.normalizeUrl("https://www.example.com/search/download?pub=infobike%3a%2f%2fpubli%2fjour%2f2002%2f00000009%2f00000001%2fart00003&mimetype=application%2fpdf", au));
   }
 }
-
