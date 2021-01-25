@@ -110,6 +110,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_crawlrules</string>
+    <!-- added http and https urls -->
     <list>
       <!-- journals.iucr.org needed for when the base_url is actually iucrdata.iucr.org -->
       <string>1,"^https?://(%s|%s|(iucrdata|journals|publcif|www)\.iucr\.org|(fonts|ajax)\.(googleapis|gstatic)\.com|code\.jquery\.com|crossmark-cdn\.crossref\.org)/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tiff?|ttf|woff2?)$", url_host(base_url), url_host(script_url)</string>
