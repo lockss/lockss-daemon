@@ -34,9 +34,11 @@ POSSIBILITY OF SUCH DAMAGE.
 package org.lockss.plugin.internationalunionofcrystallography.oai;
 
 import java.io.IOException;
+import java.util.Arrays;
 
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
+import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.FileMetadataExtractor;
@@ -45,6 +47,7 @@ import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.extractor.SimpleHtmlMetaTagMetadataExtractor;
 import org.lockss.plugin.CachedUrl;
+import org.lockss.plugin.HttpHttpsUrlHelper;
 import org.lockss.util.Logger;
 
 public class IUCrOaiHtmlMetadataExtractorFactory
@@ -84,6 +87,18 @@ public class IUCrOaiHtmlMetadataExtractorFactory
     throws IOException {
       ArticleMetadata am = super.extract(target, cu);
       am.cook(tagMap);
+
+      HttpHttpsUrlHelper helper = new HttpHttpsUrlHelper(cu.getArchivalUnit(),
+          ConfigParamDescr.BASE_URL.getKey(),
+          "script_url");
+      for (MetadataField field : Arrays.asList(MetadataField.FIELD_ACCESS_URL,
+          MetadataField.FIELD_ABSTRACT)) {
+        String url = am.get(field);
+        if (url != null) {
+          url = helper.normalize(url);
+          am.replace(field, url);
+        }
+      }
       return am;
     }
   }
