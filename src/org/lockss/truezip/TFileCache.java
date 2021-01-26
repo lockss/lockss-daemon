@@ -38,8 +38,6 @@ import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.apache.commons.collections.map.LRUMap;
-import org.apache.commons.collections.map.ReferenceMap;
 import de.schlichtherle.truezip.file.*;
 import de.schlichtherle.truezip.fs.*;
 
@@ -96,7 +94,7 @@ public class TFileCache {
    * @param dir the directory in which to store temp files.
    */
   public TFileCache(File dir) {
-    this.tmpDir = dir;
+    this.tmpDir = dir; // can be relative (e.g. run_one_daemon)
     if (!tmpDir.exists()) {
       if (!tmpDir.mkdirs()) {
 	throw new RuntimeException("Couldn't create temp dir: " + tmpDir);
@@ -235,17 +233,17 @@ public class TFileCache {
       File mergedZip = new File(mergedZipTmpDir, "merged.zip");
 
       // Command list to cause zip to merged the split zip files
-      List<String> command = new ArrayList<>();
+      List<String> command = new ArrayList<>(6);
       command.add("zip");
       command.add("-q");
       command.add("-s-");
-      command.add(zipFileDst.toString());
+      command.add(zipFileDst.getAbsolutePath()); // tmpDir i.e. splitZipsTmpDir i.e. zipFileDst can be relative
       command.add("-O");
-      command.add(mergedZip.toString());
+      command.add(mergedZip.getAbsolutePath()); // tmpDir i.e. mergedZipTmpDir i.e. mergedZip can be relative
 
       // Invoke zip utility on split zip archive
       ProcessBuilder builder = new ProcessBuilder(command);
-      builder.directory(splitZipsTmpDir);
+      builder.directory(splitZipsTmpDir); // this is why zipFileDst and mergedZip should be absolute
       builder.redirectErrorStream(true);
       Process process = builder.start();
       int exitCode = process.waitFor();
@@ -255,9 +253,23 @@ public class TFileCache {
 
       if (exitCode != 0) {
         // Read and log zip output for error message (note: zip logs error messages to STDOUT)
-        String error = StringUtil.fromInputStream(process.getInputStream());
-        log.error("Zip exited with non-zero exit code:\n" + error);
-        throw new IOException("Zip exited with non-zero exit code");
+        String zipError = StringUtil.fromInputStream(process.getInputStream());
+
+        log.error(String.format("Zip exited with non-zero exit code %d:%n%s", exitCode, zipError));
+
+        if (log.isDebug2()) {
+          StringBuilder sb = new StringBuilder();
+          sb.append("Details of the zip command:");
+          for (int i = 0 ; i < command.size() ; ++i) {
+            sb.append("\n");
+            sb.append(i);
+            sb.append(":\t");
+            sb.append(command.get(i));
+          }
+          log.debug2(sb.toString());
+        }
+        
+        throw new IOException(String.format("Zip exited with non-zero exit code %d", exitCode));
       }
 
       // Feed merged zip's input stream to TFile
