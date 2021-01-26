@@ -35,11 +35,11 @@
         eissn = 2569-653X
       >
 
-      param[journal_id] = sbp
+      param[journal_id] = spb
 
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2018 ; Social Psychological Bulletin Volume 2018 ; 2018 ; 2018 ; https://spb.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2019 ; Social Psychological Bulletin Volume 2019 ; 2019 ; 2019 ; https://spb.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; expected ; exists ; 2020 ; Social Psychological Bulletin Volume 2020 ; 2020 ; 2020 ; https://spb.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2018 ; Social Psychological Bulletin Volume 2018 ; 2018 ; 2018 ; https://spb.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2019 ; Social Psychological Bulletin Volume 2019 ; 2019 ; 2019 ; https://spb.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2020 ; Social Psychological Bulletin Volume 2020 ; 2020 ; 2020 ; https://spb.psychopen.eu/ ; >
 
   }
 
@@ -80,18 +80,15 @@
 
       #param[base_url] = http://ejcop.psychopen.eu/
       param[journal_id] = ejcop
-      #still OJS2 20201205
 
       au < ojs2.ClockssOJS2Plugin ; finished ; manifest ; 2009 ; The European Journal of Counselling Psychology Volume 1 ; 1 ; 2009 ; https://ejcop.psychopen.eu/ ; reingest4.clockss.org:8082 >
       au < ojs2.ClockssOJS2Plugin ; finished ; finished ; 2013 ; The European Journal of Counselling Psychology Volume 2 ; 2 ; 2013 ; http://ejcop.psychopen.eu/ ; reingest2.clockss.org:8085 >
       au < ojs2.ClockssOJS2Plugin ; finished ; finished ; 2014 ; The European Journal of Counselling Psychology Volume 3 ; 3 ; 2014 ; http://ejcop.psychopen.eu/ ; >
       au < ojs2.ClockssOJS2Plugin ; finished ; finished ; 2015 ; The European Journal of Counselling Psychology Volume 4 ; 4 ; 2015 ; http://ejcop.psychopen.eu/ ; reingest1.clockss.org:8082 >
       au < ojs2.ClockssOJS2Plugin ; finished ; finished ; 2016 ; The European Journal of Counselling Psychology Volume 5 ; 5 ; 2016 ; http://ejcop.psychopen.eu/ ; reingest3.clockss.org:8083 >
-      au < ojs2.ClockssOJS2Plugin ; deepCrawl ; exists ; 2017 ; The European Journal of Counselling Psychology Volume 6 ; 6 ; 2017 ; https://ejcop.psychopen.eu/ ; >
-      au < ojs2.ClockssOJS2Plugin ; deepCrawl ; exists ; 2018 ; The European Journal of Counselling Psychology Volume 7 ; 7 ; 2018 ; https://ejcop.psychopen.eu/ ; >
-      au < ojs2.ClockssOJS2Plugin ; manifest ; exists ; 2019 ; The European Journal of Counselling Psychology Volume 8 ; 8 ; 2019 ; https://ejcop.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; expected ; exists ; 2020 ; The European Journal of Counselling Psychology Volume 9 ; 9 ; 2020 ; https://ejcop.psychopen.eu/ ; >
-
+      au < ojs2.ClockssOJS2Plugin ; frozen ; exists ; 2017 ; The European Journal of Counselling Psychology Volume 6 ; 6 ; 2017 ; https://ejcop.psychopen.eu/ ; >
+      au < ojs2.ClockssOJS2Plugin ; frozen ; exists ; 2018 ; The European Journal of Counselling Psychology Volume 7 ; 7 ; 2018 ; https://ejcop.psychopen.eu/ ; >
+      #Changed platform. See https://ejcop.psychopen.eu/index.php/ejcop
   }
 
   {
@@ -193,8 +190,7 @@
       au < ojs2.ClockssOJS2Plugin ; deepCrawl ; exists ; 2017 ; Psychological Thought Volume 10 ; 10 ; 2017 ; https://psyct.psychopen.eu/ ; >
       au < ojs2.ClockssOJS2Plugin ; deepCrawl ; exists ; 2018 ; Psychological Thought Volume 11 ; 11 ; 2018 ; https://psyct.psychopen.eu/ ; >
       au < ojs2.ClockssOJS2Plugin ; ready ; exists ; 2019 ; Psychological Thought Volume 12 ; 12 ; 2019 ; https://psyct.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; expected ; exists ; 2020 ; Psychological Thought Volume 13 ; 13 ; 2020 ; https://psyct.psychopen.eu/ ; >
-
+      #Moved publishers at end of 2019. https://psyct.psychopen.eu/index.php/psyct
   }
 
   {
@@ -205,7 +201,7 @@
 
       #param[base_url] = http://pch.psychopen.eu/
       param[journal_id] = pch
-      #Still OJS2 20201205
+      #Still OJS2 20200125. Nothing published for 2020
 
       au < ojs2.ClockssOJS2Plugin ; finished ; manifest ; 2012 ; Psychology, Community & Health Volume 1 ; 1 ; 2012 ; https://pch.psychopen.eu/ ; reingest5.clockss.org:8082 >
       au < ojs2.ClockssOJS2Plugin ; finished ; finished ; 2013 ; Psychology, Community & Health Volume 2 ; 2 ; 2013 ; http://pch.psychopen.eu/ ; >
@@ -215,7 +211,6 @@
       au < ojs2.ClockssOJS2Plugin ; deepCrawl ; exists ; 2017 ; Psychology, Community & Health Volume 6 ; 6 ; 2017 ; https://pch.psychopen.eu/ ; >
       au < ojs2.ClockssOJS2Plugin ; finished ; manifest ; 2018 ; Psychology, Community & Health Volume 7 ; 7 ; 2018 ; https://pch.psychopen.eu/ ; reingest4.clockss.org:8082 >
       au < ojs2.ClockssOJS2Plugin ; frozen ; exists ; 2019 ; Psychology, Community & Health Volume 8 ; 8 ; 2019 ; https://pch.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; expected ; exists ; 2020 ; Psychology, Community & Health Volume 9 ; 9 ; 2020 ; https://pch.psychopen.eu/ ; >
 
   }
 
@@ -258,10 +253,9 @@
 #      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2016 ; Jahrbuch Musikpsychologie Volume 26 ; 26 ; 2016 ; https://jbdgm.psychopen.eu/ ; >
 #      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2017 ; Jahrbuch Musikpsychologie Volume 27 ; 27 ; 2017 ; https://jbdgm.psychopen.eu/ ; >
 
-      au < ojs3.ClockssOjs3Plugin ; crawling ; exists ; 2018 ; Jahrbuch Musikpsychologie Volume 28 ; 28 ; 2018 ; https://jbdgm.psychopen.eu/ ; > #failed test. corrected start_stem
-      au < ojs3.ClockssOjs3Plugin ; crawling ; exists ; 2019 ; Jahrbuch Musikpsychologie Volume 29 ; 29 ; 2019 ; https://jbdgm.psychopen.eu/ ; > 
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2020 ; Jahrbuch Musikpsychologie Volume 30 ; 30 ; 2020 ; https://jbdgm.psychopen.eu/ ; > 
-
+      au < ojs3.ClockssOjs3Plugin ; superseded ; exists ; 2018 ; Jahrbuch Musikpsychologie Volume 28 ; 28 ; 2018 ; https://jbdgm.psychopen.eu/ ; > #Moved platform
+      au < ojs3.ClockssOjs3Plugin ; superseded ; exists ; 2019 ; Jahrbuch Musikpsychologie Volume 29 ; 29 ; 2019 ; https://jbdgm.psychopen.eu/ ; > #Moved platform
+      #Moved platform.
   }
 
 }
