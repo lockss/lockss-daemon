@@ -15,7 +15,7 @@
     >
 
     plugin = org.lockss.plugin.clockss.msptm.ClockssMSPTMSourcePlugin
-    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/ssssss-released/
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/msptm-released/
     hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[directory] >
 
