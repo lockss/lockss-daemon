@@ -2,6 +2,7 @@
   <entry>
     <string>plugin_status</string>
     <string>ready</string>
+    <!-- https transition enabled -->
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -13,7 +14,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>131</string>
+    <string>132</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -63,8 +64,12 @@
     <string>"HighWire Press Plugin (H20), Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
   <entry>
+    <!--  support http to https conversion -->
     <string>au_start_url</string>
-    <string>"%slockss-manifest/vol_%s_manifest.dtl", base_url, volume_name</string>
+    <list>
+      <string>"%slockss-manifest/vol_%s_manifest.dtl", to_http(base_url), volume_name</string>
+      <string>"%slockss-manifest/vol_%s_manifest.dtl", to_https(base_url), volume_name</string>
+    </list>
   </entry>
   <entry>
     <string>au_feature_urls</string>
