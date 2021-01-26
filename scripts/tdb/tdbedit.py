@@ -144,7 +144,7 @@ backup copy is made under 'a.tdb.bak'. If that backup file already exists, it is
 overwritten.
 '''
 
-__version__ = '0.4.2'
+__version__ = '0.5.0'
 
 import io
 import optparse
