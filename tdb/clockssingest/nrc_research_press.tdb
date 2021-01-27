@@ -697,7 +697,8 @@
     au < manifest ; exists ; 1939 ; Journal of the Fisheries Research Board of Canada Volume 4b ; 4b ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1940 ; Journal of the Fisheries Research Board of Canada Volume 5a ; 5a ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1941 ; Journal of the Fisheries Research Board of Canada Volume 5b ; 5b ; https://cdnsciencepub.com/ ; >
-    au < exists ; exists ; 1942 ; Journal of the Fisheries Research Board of Canada Volume 5c-6a ; 5c-6a ; https://www.nrcresearchpress.com/ ; >
+    au < manifest ; exists ; 1942 ; Journal of the Fisheries Research Board of Canada Volume 5c ; 5c ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1942 ; Journal of the Fisheries Research Board of Canada Volume 6a ; 6a ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1943 ; Journal of the Fisheries Research Board of Canada Volume 6b ; 6b ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1944 ; Journal of the Fisheries Research Board of Canada Volume 6c ; 6c ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1945 ; Journal of the Fisheries Research Board of Canada Volume 6d ; 6d ; https://cdnsciencepub.com/ ; >
@@ -705,10 +706,13 @@
     au < manifest ; exists ; 1947 ; Journal of the Fisheries Research Board of Canada Volume 7a ; 7a ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1948 ; Journal of the Fisheries Research Board of Canada Volume 7b ; 7b ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1949 ; Journal of the Fisheries Research Board of Canada Volume 7c ; 7c ; https://cdnsciencepub.com/ ; >
-    au < exists ; exists ; 1950 ; Journal of the Fisheries Research Board of Canada Volume 7d-8a ; 7d-8a ; https://www.nrcresearchpress.com/ ; >
+    au < manifest ; exists ; 1950 ; Journal of the Fisheries Research Board of Canada Volume 7d ; 7d ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1950 ; Journal of the Fisheries Research Board of Canada Volume 8a ; 8a ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1951 ; Journal of the Fisheries Research Board of Canada Volume 8b ; 8b ; https://cdnsciencepub.com/ ; >
-    au < exists ; exists ; 1952 ; Journal of the Fisheries Research Board of Canada Volume 8c-9 ; 8c-9 ; https://www.nrcresearchpress.com/ ; >
-    au < exists ; exists ; 1953 ; Journal of the Fisheries Research Board of Canada Volume 9a-10 ; 9a-10 ; https://www.nrcresearchpress.com/ ; >
+    au < manifest ; exists ; 1952 ; Journal of the Fisheries Research Board of Canada Volume 8c ; 8c ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1952 ; Journal of the Fisheries Research Board of Canada Volume 9 ; 9 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1953 ; Journal of the Fisheries Research Board of Canada Volume 9a ; 9a ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1953 ; Journal of the Fisheries Research Board of Canada Volume 10 ; 10 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1954 ; Journal of the Fisheries Research Board of Canada Volume 11 ; 11 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1955 ; Journal of the Fisheries Research Board of Canada Volume 12 ; 12 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1956 ; Journal of the Fisheries Research Board of Canada Volume 13 ; 13 ; https://cdnsciencepub.com/ ; >
@@ -1111,27 +1115,81 @@
     param[journal_id] = cjr
 
     au < manifest ; exists ; 1929 ; Canadian Journal of Research Volume 1 ; 1 ; https://cdnsciencepub.com/ ; >
-    au < exists ; exists ; 1930 ; Canadian Journal of Research Volume 2-3 ; 2-3 ; https://www.nrcresearchpress.com/ ; >
-    au < exists ; exists ; 1931 ; Canadian Journal of Research Volume 4-5 ; 4-5 ; https://www.nrcresearchpress.com/ ; >
-    au < exists ; exists ; 1932 ; Canadian Journal of Research Volume 6-7 ; 6-7 ; https://www.nrcresearchpress.com/ ; >
-    au < exists ; exists ; 1933 ; Canadian Journal of Research Volume 8-9 ; 8-9 ; https://www.nrcresearchpress.com/ ; >
-    au < exists ; exists ; 1934 ; Canadian Journal of Research Volume 10-11 ; 10-11 ; https://www.nrcresearchpress.com/ ; >
-    au < exists ; exists ; 1935 ; Canadian Journal of Research Volume 12-13 ; 12-13 ; https://www.nrcresearchpress.com/ ; >
-    au < exists ; exists ; 1936 ; Canadian Journal of Research Volume 14 ; 14 ; https://www.nrcresearchpress.com/ ; >
-    au < exists ; exists ; 1937 ; Canadian Journal of Research Volume 15 ; 15 ; https://www.nrcresearchpress.com/ ; >
-    au < exists ; exists ; 1938 ; Canadian Journal of Research Volume 16 ; 16 ; https://www.nrcresearchpress.com/ ; >
-    au < exists ; exists ; 1939 ; Canadian Journal of Research Volume 17 ; 17 ; https://www.nrcresearchpress.com/ ; >
-    au < exists ; exists ; 1940 ; Canadian Journal of Research Volume 18 ; 18 ; https://www.nrcresearchpress.com/ ; >
-    au < exists ; exists ; 1941 ; Canadian Journal of Research Volume 19 ; 19 ; https://www.nrcresearchpress.com/ ; >
-    au < exists ; exists ; 1942 ; Canadian Journal of Research Volume 20 ; 20 ; https://www.nrcresearchpress.com/ ; >
-    au < exists ; exists ; 1943 ; Canadian Journal of Research Volume 21 ; 21 ; https://www.nrcresearchpress.com/ ; >
-    au < exists ; exists ; 1944 ; Canadian Journal of Research Volume 22 ; 22 ; https://www.nrcresearchpress.com/ ; >
-    au < exists ; exists ; 1945 ; Canadian Journal of Research Volume 23 ; 23 ; https://www.nrcresearchpress.com/ ; >
-    au < exists ; exists ; 1946 ; Canadian Journal of Research Volume 24 ; 24 ; https://www.nrcresearchpress.com/ ; >
-    au < exists ; exists ; 1947 ; Canadian Journal of Research Volume 25 ; 25 ; https://www.nrcresearchpress.com/ ; >
-    au < exists ; exists ; 1948 ; Canadian Journal of Research Volume 26 ; 26 ; https://www.nrcresearchpress.com/ ; >
-    au < exists ; exists ; 1949 ; Canadian Journal of Research Volume 27 ; 27 ; https://www.nrcresearchpress.com/ ; >
-    au < exists ; exists ; 1950 ; Canadian Journal of Research Volume 28 ; 28 ; https://www.nrcresearchpress.com/ ; >
+    au < manifest ; exists ; 1930 ; Canadian Journal of Research Volume 2 ; 2 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1930 ; Canadian Journal of Research Volume 3 ; 3 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1931 ; Canadian Journal of Research Volume 4 ; 4 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1931 ; Canadian Journal of Research Volume 5 ; 5 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1932 ; Canadian Journal of Research Volume 6 ; 6 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1932 ; Canadian Journal of Research Volume 7 ; 7 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1933 ; Canadian Journal of Research Volume 8 ; 8 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1933 ; Canadian Journal of Research Volume 9 ; 9 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1934 ; Canadian Journal of Research Volume 10 ; 10 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1934 ; Canadian Journal of Research Volume 11 ; 11 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1935 ; Canadian Journal of Research Volume 12 ; 12 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1935 ; Canadian Journal of Research Volume 13a ; 13a ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1935 ; Canadian Journal of Research Volume 13b ; 13b ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1935 ; Canadian Journal of Research Volume 13c ; 13c ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1935 ; Canadian Journal of Research Volume 13d ; 13d ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1936 ; Canadian Journal of Research Volume 14a ; 14a ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1936 ; Canadian Journal of Research Volume 14b ; 14b ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1936 ; Canadian Journal of Research Volume 14c ; 14c ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1936 ; Canadian Journal of Research Volume 14d ; 14d ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1937 ; Canadian Journal of Research Volume 15a ; 15a ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1937 ; Canadian Journal of Research Volume 15b ; 15b ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1937 ; Canadian Journal of Research Volume 15c ; 15c ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1937 ; Canadian Journal of Research Volume 15d ; 15d ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1938 ; Canadian Journal of Research Volume 16a ; 16a ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1938 ; Canadian Journal of Research Volume 16b ; 16b ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1938 ; Canadian Journal of Research Volume 16c ; 16c ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1938 ; Canadian Journal of Research Volume 16d ; 16d ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1939 ; Canadian Journal of Research Volume 17a ; 17a ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1939 ; Canadian Journal of Research Volume 17b ; 17b ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1939 ; Canadian Journal of Research Volume 17c ; 17c ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1939 ; Canadian Journal of Research Volume 17d ; 17d ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1940 ; Canadian Journal of Research Volume 18a ; 18a ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1940 ; Canadian Journal of Research Volume 18b ; 18b ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1940 ; Canadian Journal of Research Volume 18c ; 18c ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1940 ; Canadian Journal of Research Volume 18d ; 18d ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1941 ; Canadian Journal of Research Volume 19a ; 19a ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1941 ; Canadian Journal of Research Volume 19b ; 19b ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1941 ; Canadian Journal of Research Volume 19c ; 19c ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1941 ; Canadian Journal of Research Volume 19d ; 19d ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1942 ; Canadian Journal of Research Volume 20a ; 20a ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1942 ; Canadian Journal of Research Volume 20b ; 20b ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1942 ; Canadian Journal of Research Volume 20c ; 20c ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1942 ; Canadian Journal of Research Volume 20d ; 20d ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1943 ; Canadian Journal of Research Volume 21a ; 21a ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1943 ; Canadian Journal of Research Volume 21b ; 21b ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1943 ; Canadian Journal of Research Volume 21c ; 21c ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1943 ; Canadian Journal of Research Volume 21d ; 21d ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1944 ; Canadian Journal of Research Volume 22a ; 22a ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1944 ; Canadian Journal of Research Volume 22b ; 22b ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1944 ; Canadian Journal of Research Volume 22c ; 22c ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1944 ; Canadian Journal of Research Volume 22d ; 22d ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1945 ; Canadian Journal of Research Volume 23a ; 23a ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1945 ; Canadian Journal of Research Volume 23b ; 23b ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1945 ; Canadian Journal of Research Volume 23c ; 23c ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1945 ; Canadian Journal of Research Volume 23d ; 23d ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1946 ; Canadian Journal of Research Volume 24a ; 24a ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1946 ; Canadian Journal of Research Volume 24b ; 24b ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1946 ; Canadian Journal of Research Volume 24c ; 24c ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1946 ; Canadian Journal of Research Volume 24d ; 24d ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1947 ; Canadian Journal of Research Volume 25a ; 25a ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1947 ; Canadian Journal of Research Volume 25b ; 25b ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1947 ; Canadian Journal of Research Volume 25c ; 25c ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1947 ; Canadian Journal of Research Volume 25d ; 25d ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1948 ; Canadian Journal of Research Volume 26a ; 26a ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1948 ; Canadian Journal of Research Volume 26b ; 26b ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1948 ; Canadian Journal of Research Volume 26c ; 26c ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1948 ; Canadian Journal of Research Volume 26d ; 26d ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1949 ; Canadian Journal of Research Volume 27a ; 27a ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1949 ; Canadian Journal of Research Volume 27b ; 27b ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1949 ; Canadian Journal of Research Volume 27c ; 27c ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1949 ; Canadian Journal of Research Volume 27d ; 27d ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1950 ; Canadian Journal of Research Volume 28a ; 28a ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1950 ; Canadian Journal of Research Volume 28b ; 28b ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1950 ; Canadian Journal of Research Volume 28c ; 28c ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1950 ; Canadian Journal of Research Volume 28d ; 28d ; https://cdnsciencepub.com/ ; >
     
     }
     
@@ -1510,6 +1568,30 @@
     {
     
     title < 
+      name = The Canadian Surveyor ;
+      eissn = 0008-5103
+      >
+     
+    param[journal_id] = tcs
+    #1952 (V 11) - 1987 (V 41)
+
+    au < manifest ; exists ; 1952-1953 ; The Canadian Surveyor Volume 11 ; 11 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1954-1955 ; The Canadian Surveyor Volume 12 ; 12 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1956-1957 ; The Canadian Surveyor Volume 13 ; 13 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1958-1959 ; The Canadian Surveyor Volume 14 ; 14 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1960-1961 ; The Canadian Surveyor Volume 15 ; 15 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1962 ; The Canadian Surveyor Volume 16 ; 16 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1963 ; The Canadian Surveyor Volume 17 ; 17 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1964 ; The Canadian Surveyor Volume 18 ; 18 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1965 ; The Canadian Surveyor Volume 19 ; 19 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1966 ; The Canadian Surveyor Volume 20 ; 20 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1967 ; The Canadian Surveyor Volume 21 ; 21 ; https://cdnsciencepub.com/ ; >
+
+    }
+    
+    {
+    
+    title < 
       name = Scientific Agriculture ;
       issn = 0370-887X ;
       eissn = 2371-6746
@@ -1518,7 +1600,121 @@
     param[journal_id] = sa
     #1921 to 1952. continued by Canadian Journal of Agricultural Science
 
+    au < manifest ; exists ; 1950 ; Scientific Agriculture Volume 30 ; 30 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1951 ; Scientific Agriculture Volume 31 ; 31 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1952 ; Scientific Agriculture Volume 32 ; 32 ; https://cdnsciencepub.com/ ; >
+
+    }
+    
+    {
+    
+    title < 
+      name = Transactions of the Canadian Society for Mechanical Engineering ;
+      eissn = 0315-8977
+      >
+     
+    param[journal_id] = tcsme
+
+    au < manifest ; exists ; 1972 ; Transactions of the Canadian Society for Mechanical Engineering Volume 1 ; 1 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1973 ; Transactions of the Canadian Society for Mechanical Engineering Volume 2 ; 2 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1974 ; Transactions of the Canadian Society for Mechanical Engineering Volume 3 ; 3 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1975 ; Transactions of the Canadian Society for Mechanical Engineering Volume 4 ; 4 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1976 ; Transactions of the Canadian Society for Mechanical Engineering Volume 5 ; 5 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1980 ; Transactions of the Canadian Society for Mechanical Engineering Volume 6 ; 6 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1983 ; Transactions of the Canadian Society for Mechanical Engineering Volume 7 ; 7 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1984 ; Transactions of the Canadian Society for Mechanical Engineering Volume 8 ; 8 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1985 ; Transactions of the Canadian Society for Mechanical Engineering Volume 9 ; 9 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1986 ; Transactions of the Canadian Society for Mechanical Engineering Volume 10 ; 10 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1987 ; Transactions of the Canadian Society for Mechanical Engineering Volume 11 ; 11 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1988 ; Transactions of the Canadian Society for Mechanical Engineering Volume 12 ; 12 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1989 ; Transactions of the Canadian Society for Mechanical Engineering Volume 13 ; 13 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1990 ; Transactions of the Canadian Society for Mechanical Engineering Volume 14 ; 14 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1991 ; Transactions of the Canadian Society for Mechanical Engineering Volume 15 ; 15 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1992 ; Transactions of the Canadian Society for Mechanical Engineering Volume 16 ; 16 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1993 ; Transactions of the Canadian Society for Mechanical Engineering Volume 17 ; 17 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1994 ; Transactions of the Canadian Society for Mechanical Engineering Volume 18 ; 18 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1995 ; Transactions of the Canadian Society for Mechanical Engineering Volume 19 ; 19 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1996 ; Transactions of the Canadian Society for Mechanical Engineering Volume 20 ; 20 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1997 ; Transactions of the Canadian Society for Mechanical Engineering Volume 21 ; 21 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1998 ; Transactions of the Canadian Society for Mechanical Engineering Volume 22 ; 22 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1999 ; Transactions of the Canadian Society for Mechanical Engineering Volume 23 ; 23 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 2000 ; Transactions of the Canadian Society for Mechanical Engineering Volume 24 ; 24 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 2001 ; Transactions of the Canadian Society for Mechanical Engineering Volume 25 ; 25 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 2002 ; Transactions of the Canadian Society for Mechanical Engineering Volume 26 ; 26 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 2003 ; Transactions of the Canadian Society for Mechanical Engineering Volume 27 ; 27 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 2004 ; Transactions of the Canadian Society for Mechanical Engineering Volume 28 ; 28 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 2005 ; Transactions of the Canadian Society for Mechanical Engineering Volume 29 ; 29 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 2006 ; Transactions of the Canadian Society for Mechanical Engineering Volume 30 ; 30 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 2007 ; Transactions of the Canadian Society for Mechanical Engineering Volume 31 ; 31 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 2008 ; Transactions of the Canadian Society for Mechanical Engineering Volume 32 ; 32 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 2009 ; Transactions of the Canadian Society for Mechanical Engineering Volume 33 ; 33 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 2010 ; Transactions of the Canadian Society for Mechanical Engineering Volume 34 ; 34 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 2011 ; Transactions of the Canadian Society for Mechanical Engineering Volume 35 ; 35 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 2012 ; Transactions of the Canadian Society for Mechanical Engineering Volume 36 ; 36 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 2003 ; Transactions of the Canadian Society for Mechanical Engineering Volume 37 ; 37 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 2004 ; Transactions of the Canadian Society for Mechanical Engineering Volume 38 ; 38 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 2015 ; Transactions of the Canadian Society for Mechanical Engineering Volume 39 ; 39 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 2016 ; Transactions of the Canadian Society for Mechanical Engineering Volume 40 ; 40 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 2017 ; Transactions of the Canadian Society for Mechanical Engineering Volume 41 ; 41 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 2018 ; Transactions of the Canadian Society for Mechanical Engineering Volume 42 ; 42 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 2019 ; Transactions of the Canadian Society for Mechanical Engineering Volume 43 ; 43 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 2020 ; Transactions of the Canadian Society for Mechanical Engineering Volume 44 ; 44 ; https://cdnsciencepub.com/ ; >
+
+    }
+    
+    {
+    
+    title < 
+      name = Geomatica ;
+      issn = 1195-1036 ;
+      eissn = 1924-4296
+      >
+     
+    param[journal_id] = geomat
+
+#    au < exists ; exists ; 1993 ; Geomatica Volume 47 ; 47 ; https://cdnsciencepub.com/ ; >
+#    au < exists ; exists ; 1994 ; Geomatica Volume 48 ; 48 ; https://cdnsciencepub.com/ ; >
+#    au < exists ; exists ; 1995 ; Geomatica Volume 49 ; 49 ; https://cdnsciencepub.com/ ; >
+#    au < exists ; exists ; 1996 ; Geomatica Volume 50 ; 50 ; https://cdnsciencepub.com/ ; >
+#    au < exists ; exists ; 1997 ; Geomatica Volume 51 ; 51 ; https://cdnsciencepub.com/ ; >
+#    au < exists ; exists ; 1998 ; Geomatica Volume 52 ; 52 ; https://cdnsciencepub.com/ ; >
+#    au < exists ; exists ; 1999 ; Geomatica Volume 53 ; 53 ; https://cdnsciencepub.com/ ; >
+#    au < exists ; exists ; 2000 ; Geomatica Volume 54 ; 54 ; https://cdnsciencepub.com/ ; >
+#    au < exists ; exists ; 2001 ; Geomatica Volume 55 ; 55 ; https://cdnsciencepub.com/ ; >
+#    au < exists ; exists ; 2002 ; Geomatica Volume 56 ; 56 ; https://cdnsciencepub.com/ ; >
+#    au < exists ; exists ; 2003 ; Geomatica Volume 57 ; 57 ; https://cdnsciencepub.com/ ; >
+#    au < exists ; exists ; 2004 ; Geomatica Volume 58 ; 58 ; https://cdnsciencepub.com/ ; >
+#    au < exists ; exists ; 2005 ; Geomatica Volume 59 ; 59 ; https://cdnsciencepub.com/ ; >
+#    au < exists ; exists ; 2006 ; Geomatica Volume 60 ; 60 ; https://cdnsciencepub.com/ ; >
+#    au < exists ; exists ; 2007 ; Geomatica Volume 61 ; 61 ; https://cdnsciencepub.com/ ; >
+#    au < exists ; exists ; 2008 ; Geomatica Volume 62 ; 62 ; https://cdnsciencepub.com/ ; >
+#    au < exists ; exists ; 2009 ; Geomatica Volume 63 ; 63 ; https://cdnsciencepub.com/ ; >
+#    au < exists ; exists ; 2010 ; Geomatica Volume 64 ; 64 ; https://cdnsciencepub.com/ ; >
+#    au < exists ; exists ; 2011 ; Geomatica Volume 65 ; 65 ; https://cdnsciencepub.com/ ; >
+#    au < exists ; exists ; 2012 ; Geomatica Volume 66 ; 66 ; https://cdnsciencepub.com/ ; >
+#    au < exists ; exists ; 2013 ; Geomatica Volume 67 ; 67 ; https://cdnsciencepub.com/ ; >
+#    au < exists ; exists ; 2014 ; Geomatica Volume 68 ; 68 ; https://cdnsciencepub.com/ ; >
+#    au < exists ; exists ; 2015 ; Geomatica Volume 69 ; 69 ; https://cdnsciencepub.com/ ; >
+#    au < exists ; exists ; 2016 ; Geomatica Volume 70 ; 70 ; https://cdnsciencepub.com/ ; >
+#    au < exists ; exists ; 2017 ; Geomatica Volume 71 ; 71 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 2018 ; Geomatica Volume 72 ; 72 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 2019 ; Geomatica Volume 73 ; 73 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 2020 ; Geomatica Volume 74 ; 74 ; https://cdnsciencepub.com/ ; >
+
+    }
+    
+    {
+    
+    title < 
+      name = Anthropocene Coasts ;
+      eissn = 2561-4150
+      >
+     
+    param[journal_id] = anc
+
+    au < manifest ; exists ; 2018 ; Anthropocene Coasts Volume 1 ; 1 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 2019 ; Anthropocene Coasts Volume 2 ; 2 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 2020 ; Anthropocene Coasts Volume 3 ; 3 ; https://cdnsciencepub.com/ ; >
 
     }
     
@@ -1533,6 +1729,9 @@
     param[journal_id] = agsci
     #1953 to 1956. Continued by 3 journals: cjss, cjps, cjas
 
+    au < manifest ; exists ; 1953 ; Canadian Journal of Agricultural Science Volume 33 ; 33 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1954 ; Canadian Journal of Agricultural Science Volume 34 ; 34 ; https://cdnsciencepub.com/ ; >
+    au < manifest ; exists ; 1955 ; Canadian Journal of Agricultural Science Volume 35 ; 35 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1956 ; Canadian Journal of Agricultural Science Volume 36 ; 36 ; https://cdnsciencepub.com/ ; >
 
     }
@@ -1564,10 +1763,9 @@
     name = NRC Research Press ;
     info[contract] = 2012 ;
     info[tester] = 8 ;
-    info[poller] = 6
+    info[poller] = 6 ;
+    info[platform] = Like atypon, but not
   >
-
-  comment[platform] = Atypon
   
   plugin = needs.plugin
   param[base_url] = https://www.facetsjournal.com/
