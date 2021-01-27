@@ -439,7 +439,7 @@ def _tdbout(options):
   if proc.returncode != 0:
        sys.exit('%s exited with error code %d: %s' % (tdbout, proc.returncode, err))
   ret = list()
-  for line in io.StringIO(out):
+  for line in io.StringIO(out.decode('utf-8')):
     x = line.strip().split('\t')
     ret.append([x[0], x[1], int(x[2])])
   return ret
