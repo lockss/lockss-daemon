@@ -3007,7 +3007,7 @@ Test results in ${test.results}
                   <arg value="--get"/>
                   <arg value="remote.origin.url"/>
                 </exec>
-                <echo message="git url|${git.url}|" />
+                <echo message="git url: ${git.url}" />
                 <exec executable="git" dir="${temp.build.dir}" failonerror="true">
                   <arg value="clone" />
                   <arg value="-q" />
