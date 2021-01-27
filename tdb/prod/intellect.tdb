@@ -1010,8 +1010,8 @@
       param[base_url] = https://www.ingentaconnect.com/
       param[api_url] = https://api.ingentaconnect.com/
 
-      au < expected ; 2019 ; Journal of Contemporary Iraq & the Arab World Volume 13 ; 13 >
-      au < expected ; 2020 ; Journal of Contemporary Iraq & the Arab World Volume 14 ; 14 >
+      au < manifest ; 2019 ; Journal of Contemporary Iraq & the Arab World Volume 13 ; 13 >
+      au < manifest ; 2020 ; Journal of Contemporary Iraq & the Arab World Volume 14 ; 14 >
 
       }
     }
@@ -1064,8 +1064,8 @@
       param[base_url] = https://www.ingentaconnect.com/
       param[api_url] = https://api.ingentaconnect.com/
 
-      au < expected ; 2019 ; Journal of Digital Media & Policy Volume 10 ; 10 >
-      au < expected ; 2020 ; Journal of Digital Media & Policy Volume 11 ; 11 >
+      au < manifest ; 2019 ; Journal of Digital Media & Policy Volume 10 ; 10 >
+      au < manifest ; 2020 ; Journal of Digital Media & Policy Volume 11 ; 11 >
 
       }
     }
