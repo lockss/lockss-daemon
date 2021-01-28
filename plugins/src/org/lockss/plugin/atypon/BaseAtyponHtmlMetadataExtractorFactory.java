@@ -125,7 +125,16 @@ public class BaseAtyponHtmlMetadataExtractorFactory
        * CORRECT the access.url if it is not in the AU
        */
       BaseAtyponMetadataUtil.completeMetadata(cu, am);
-      
+
+      HttpHttpsUrlHelper helper = new HttpHttpsUrlHelper(cu.getArchivalUnit(),
+          ConfigParamDescr.BASE_URL.getKey(),
+          "base_url");
+      String url = am.get(MetadataField.FIELD_ACCESS_URL);
+
+      if (url != null) {
+        url = helper.normalize(url);
+        am.replace(MetadataField.FIELD_ACCESS_URL, url);
+      }
       // If we've gotten this far, emit
       emitter.emitMetadata(cu, am);
 
