@@ -65,9 +65,9 @@ ArticleMetadataExtractorFactory {
 
   
   // Only put the 'abs' in the pattern if used for primary; otherwise builder spews errors
-  private static final String DEFAULT_PATTERN_TEMPLATE_WITH_ABSTRACT = 
+  private static final String DEFAULT_PATTERN_TEMPLATE_WITH_ABSTRACT =
       "\"^%sdoi/((abs|full|e?pdf|e?pdfplus)/)?[.0-9]+/\", base_url";
-  private static final String DEFAULT_PATTERN_TEMPLATE = 
+  private static final String DEFAULT_PATTERN_TEMPLATE =
       "\"^%sdoi/((full|e?pdf|e?pdfplus)/)?[.0-9]+/\", base_url";
 
   // various aspects of an article
@@ -81,15 +81,15 @@ ArticleMetadataExtractorFactory {
   private static final Pattern DOI_PATTERN = Pattern.compile("/doi/([.0-9]+)/([^?&]+)$", Pattern.CASE_INSENSITIVE);
 
   // how to change from one form (aspect) of article to another
-  private static final String HTML_REPLACEMENT = "/doi/full/$1/$2";
   private static final String ABSTRACT_REPLACEMENT = "/doi/abs/$1/$2";
+  private static final String HTML_REPLACEMENT = "/doi/full/$1/$2";
   private static final String PDF_REPLACEMENT = "/doi/pdf/$1/$2";
-  private static final String PDFPLUS_REPLACEMENT = "/doi/pdfplus/$1/$2";
   private static final String EPDF_REPLACEMENT = "/doi/epdf/$1/$2";
+  private static final String PDFPLUS_REPLACEMENT = "/doi/pdfplus/$1/$2";
   private static final String EPDFPLUS_REPLACEMENT = "/doi/epdfplus/$1/$2";
+  private static final String DOI_REPLACEMENT = "/doi/$1/$2";
   // in support of books, this is equivalent of full book abstract (landing page)
   private static final String BOOK_REPLACEMENT = "/doi/book/$1/$2";
-  private static final String DOI_REPLACEMENT = "/doi/$1/$2";
 
   // Things not an "article" but in support of an article
   private static final String REFERENCES_REPLACEMENT = "/doi/ref/$1/$2";
@@ -225,13 +225,15 @@ ArticleMetadataExtractorFactory {
     // For AUs that are all or partially abstract only, add in this option but
     // leave the full-text as the priorities
     if (isAbstractOnly(au)) {
-      builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF,
+      builder.setFullTextFromRoles(
           ArticleFiles.ROLE_FULL_TEXT_HTML,
+          ArticleFiles.ROLE_FULL_TEXT_PDF,
           ROLE_PDFPLUS,
           ArticleFiles.ROLE_ABSTRACT);
     } else {
-      builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF,
+      builder.setFullTextFromRoles(
           ArticleFiles.ROLE_FULL_TEXT_HTML,
+          ArticleFiles.ROLE_FULL_TEXT_PDF,
           ROLE_PDFPLUS);
     }
 
