@@ -80,13 +80,30 @@
       <string>2,"^https?://%s/(doi|citation)/[^/]+/[0-9.]+/[-.9]+$", url_host(base_url)</string>
       <string>2,"^https?://%s/stable/([^/]+/)?[0-9.]+/[-.9]+$", url_host(base_url)</string>
       <!-- regular/new style -->
+      <!--
+         New url pattern found on Jan/2021
+          https://www.jstor.org/stable/10.3764/aja.124.4.fm
+          https://www.jstor.org/stable/10.3764/aja.124.4.online
+          https://www.jstor.org/stable/10.3764/amerjarch.124.issue-3
+          https://www.jstor.org/stable/10.3764/amerjarch.124.issue-4#
+          https://www.jstor.org/stable/10.3764/amerjarch.124.issue-4#content
+          https://www.jstor.org/stable/10.3764/amerjarch.125.issue-1
+          https://www.jstor.org/stable/pdf/10.3764/aja.124.4.0523.pdf
+          https://www.jstor.org/stable/pdf/10.3764/aja.124.4.0551.pdf
+
+          https://www.jstor.org/stable/10.1163/187853011x564416
+          https://www.jstor.org/stable/10.1163/187853011x564425
+          https://www.jstor.org/stable/10.1163/187853011x564434
+          https://www.jstor.org/stable/10.1163/bustan.1.issue-1
+          https://www.jstor.org/stable/10.1163/bustan.2.issue-1#
+          https://www.jstor.org/stable/10.1163/bustan.2.issue-1#content
+          https://www.jstor.org/stable/10.1163/bustan.2.issue-2
+          https://www.jstor.org/stable/pdf/10.1163/187853011x564326.pdf
+          https://www.jstor.org/stable/pdf/10.1163/187853011x564335.pdf
+      -->
       <!--  unfortunately amerjarch uses aja as prefix on article poriton of doi, so can't require journal_id -->
-      <string>1,"^https?://%s/stable/(pdf/)?[.0-9]+/[a-z]+\.", url_host(base_url)</string>
-      <!-- legacy style -->
-      <string>1,"^https?://%s/stable/[0-9.]+/i[0-9]+$", url_host(base_url)</string>
-      <string>1,"^https?://%s/stable/i[0-9]+$", url_host(base_url)</string>
-      <string>1,"^https?://%s/stable/([0-9.]+/)?[0-9]+$", url_host(base_url)</string>
-      <string>1,"^https?://%s/stable/pdf/[0-9]+\.pdf", url_host(base_url)</string>
+      <string>1,"^https?://%s/stable/", url_host(base_url)</string>
+
       <!--  citation support -->
       <string>1,"^https?://%s/doi/xml/[.0-9]+/", url_host(base_url)</string>
       <string>1,"^https?://%s/citation/(info|ris|text)/[.0-9]+/", url_host(base_url)</string>
@@ -131,7 +148,16 @@
     <list>
       <!--  newer use two part doi as article identifier and end in pdf -->
       <!--  legacy uses article identifier and end in pdf -->
-      <string>"^https?://%s/stable/pdf/([.0-9]+/)?[^/?&amp;]+\.pdf$", url_host(base_url)</string>
+      <!-- regular/new style -->
+      <!--
+         New url pattern found on Jan/2021
+          https://www.jstor.org/stable/pdf/10.3764/aja.124.4.0523.pdf
+          https://www.jstor.org/stable/pdf/10.3764/aja.124.4.0551.pdf
+
+          https://www.jstor.org/stable/pdf/10.1163/187853011x564326.pdf
+          https://www.jstor.org/stable/pdf/10.1163/187853011x564335.pdf
+      -->
+      <string>"^https?://%s/stable/pdf/", url_host(base_url)</string>
     </list>
   </entry>
   <entry>
