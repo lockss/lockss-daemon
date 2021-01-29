@@ -160,7 +160,7 @@
     au < manifest ; 2007 ; Boyhood Studies Volume 1 ; 1 >
     au < manifest ; 2008 ; Boyhood Studies Volume 2 ; 2 >
     au < manifest ; 2009 ; Boyhood Studies Volume 3 ; 3 >
-    au < testing ; 2010 ; Boyhood Studies Volume 4 ; 4 >
+    au < ready ; 2010 ; Boyhood Studies Volume 4 ; 4 >
     au < released ; 2011 ; Boyhood Studies Volume 5 ; 5 >
     au < released ; 2012 ; Boyhood Studies Volume 6 ; 6 >
     au < released ; 2013 ; Boyhood Studies Volume 7 ; 7 >
@@ -321,12 +321,12 @@
       au < manifest ; 2007 ; Critical Survey Volume 19 ; 19 >
       au < manifest ; 2008 ; Critical Survey Volume 20 ; 20 >
       au < manifest ; 2009 ; Critical Survey Volume 21 ; 21 >
-      au < testing ; 2010 ; Critical Survey Volume 22 ; 22 >
-      au < testing ; 2011 ; Critical Survey Volume 23 ; 23 >
-      au < testing ; 2012 ; Critical Survey Volume 24 ; 24 >
-      au < testing ; 2013 ; Critical Survey Volume 25 ; 25 >
-      au < testing ; 2014 ; Critical Survey Volume 26 ; 26 >
-      au < testing ; 2015 ; Critical Survey Volume 27 ; 27 >
+      au < ready ; 2010 ; Critical Survey Volume 22 ; 22 >
+      au < ready ; 2011 ; Critical Survey Volume 23 ; 23 >
+      au < ready ; 2012 ; Critical Survey Volume 24 ; 24 >
+      au < ready ; 2013 ; Critical Survey Volume 25 ; 25 >
+      au < ready ; 2014 ; Critical Survey Volume 26 ; 26 >
+      au < ready ; 2015 ; Critical Survey Volume 27 ; 27 >
     }
   }
 
@@ -707,8 +707,8 @@
     au < manifest ; 2007 ; Italian Politics Volume 22 ; 22 >
     au < manifest ; 2008 ; Italian Politics Volume 23 ; 23 >
     au < manifest ; 2009 ; Italian Politics Volume 24 ; 24 >
-    au < testing ; 2010 ; Italian Politics Volume 25 ; 25 >
-    au < testing ; 2011 ; Italian Politics Volume 26 ; 26 >
+    au < ready ; 2010 ; Italian Politics Volume 25 ; 25 >
+    au < ready ; 2011 ; Italian Politics Volume 26 ; 26 >
     au < doNotProcess ; 2012 ; Italian Politics Volume 27 ; 27 >
     au < doNotProcess ; 2013 ; Italian Politics Volume 28 ; 28 >
     au < doNotProcess ; 2014 ; Italian Politics Volume 29 ; 29 >
@@ -838,7 +838,7 @@
     au < doNotProcess ; 2013 ; Mobility in History Volume 4 ; 4 >
     au < doNotProcess ; 2014 ; Mobility in History Volume 5 ; 5 >
     au < doNotProcess ; 2015 ; Mobility in History Volume 6 ; 6 >
-    au < testing ; 2016 ; Mobility in History Volume 7 ; 7 >
+    au < ready ; 2016 ; Mobility in History Volume 7 ; 7 >
     au < released ; 2017 ; Mobility in History Volume 8 ; 8 >
 
   }
@@ -1056,7 +1056,7 @@
        
     au < released ; 2016 ; Screen Bodies Volume 1 ; 1 >
     au < released ; 2017 ; Screen Bodies Volume 2 ; 2 >
-    au < testing ; 2018 ; Screen Bodies Volume 3 ; 3 >
+    au < ready ; 2018 ; Screen Bodies Volume 3 ; 3 >
     au < manifest ; 2019 ; Screen Bodies Volume 4 ; 4 >
     au < manifest ; 2020 ; Screen Bodies Volume 5 ; 5 >
 
