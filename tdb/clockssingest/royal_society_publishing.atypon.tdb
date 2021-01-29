@@ -1564,21 +1564,21 @@
     {
     param[journal_id] = rspb1989
 
-    au < frozen ; exists ; 1990 ; Proceedings of the Royal Society B: Biological Sciences Volume 239 ; 239 ; >
-    au < frozen ; exists ; 1990 ; Proceedings of the Royal Society B: Biological Sciences Volume 240 ; 240 ; >
+    au < finished ; manifest ; 1990 ; Proceedings of the Royal Society B: Biological Sciences Volume 239 ; 239 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1990 ; Proceedings of the Royal Society B: Biological Sciences Volume 240 ; 240 ; reingest5.clockss.org:8082 >
     }
     {
     param[journal_id] = rspb1990
 
-    au < frozen ; exists ; 1990 ; Proceedings of the Royal Society B: Biological Sciences Volume 241 ; 241 ; >
+    au < finished ; manifest ; 1990 ; Proceedings of the Royal Society B: Biological Sciences Volume 241 ; 241 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 1990 ; Proceedings of the Royal Society B: Biological Sciences Volume 242 ; 242 ; >
-    au < frozen ; exists ; 1991 ; Proceedings of the Royal Society B: Biological Sciences Volume 243 ; 243 ; >
-    au < frozen ; exists ; 1991 ; Proceedings of the Royal Society B: Biological Sciences Volume 244 ; 244 ; >
-    au < frozen ; exists ; 1991 ; Proceedings of the Royal Society B: Biological Sciences Volume 245 ; 245 ; >
-    au < frozen ; exists ; 1991 ; Proceedings of the Royal Society B: Biological Sciences Volume 246 ; 246 ; >
-    au < frozen ; exists ; 1992 ; Proceedings of the Royal Society B: Biological Sciences Volume 247 ; 247 ; >
-    au < frozen ; exists ; 1992 ; Proceedings of the Royal Society B: Biological Sciences Volume 248 ; 248 ; >
-    au < frozen ; exists ; 1992 ; Proceedings of the Royal Society B: Biological Sciences Volume 249 ; 249 ; >
+    au < finished ; manifest ; 1991 ; Proceedings of the Royal Society B: Biological Sciences Volume 243 ; 243 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1991 ; Proceedings of the Royal Society B: Biological Sciences Volume 244 ; 244 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1991 ; Proceedings of the Royal Society B: Biological Sciences Volume 245 ; 245 ; >
+    au < finished ; manifest ; 1991 ; Proceedings of the Royal Society B: Biological Sciences Volume 246 ; 246 ; >
+    au < finished ; manifest ; 1992 ; Proceedings of the Royal Society B: Biological Sciences Volume 247 ; 247 ; >
+    au < finished ; manifest ; 1992 ; Proceedings of the Royal Society B: Biological Sciences Volume 248 ; 248 ; >
+    au < finished ; manifest ; 1992 ; Proceedings of the Royal Society B: Biological Sciences Volume 249 ; 249 ; >
     }
     {
     param[journal_id] = rspb
