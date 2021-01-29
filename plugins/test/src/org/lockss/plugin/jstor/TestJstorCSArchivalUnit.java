@@ -70,7 +70,7 @@ public class TestJstorCSArchivalUnit extends LockssTestCase {
   static final String jstorSubstanceList[] = 
     {
     // "^http\\:\\/\\/www\\.jstor\\.org\\/stable/pdf/([.0-9]+/)?[^/?&]+\\.pdf$",
-    "^https?://www\\.jstor\\.org/stable/pdf/([.0-9]+/)?[^/?&]+\\.pdf$", // different string normalization
+    "^https?://www\\.jstor\\.org/stable/pdf/", // different string normalization
     };
   static final String jstorRepairList[] = 
     {
