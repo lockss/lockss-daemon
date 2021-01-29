@@ -4,7 +4,6 @@
         <string>development</string>
         <!-- source folder reorg, need plugin updated-->
         <!--new one: https://clockss-test.lockss.org/sourcefiles/eastviewbooks-released/-->
-        <!--old one:   https://clockss-test.lockss.org/sourcefiles/eastview, inside it has "Ebook"-->
     </entry>
     <entry>
         <string>plugin_identifier</string>
@@ -12,19 +11,19 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>2</string>
+        <string>3</string>
     </entry>
     <entry>
         <string>plugin_parent</string>
-        <string>org.lockss.plugin.clockss.ClockssSourcePlugin</string>
+        <string>org.lockss.plugin.clockss.ClockssDirSourcePlugin</string>
     </entry>
     <entry>
         <string>plugin_parent_version</string>
-        <string>15</string>
+        <string>1</string>
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"East View Information Services Book Source Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
+        <string>"East View Information Services Book Source Plugin (CLOCKSS), Base URL %s, Directory %s", base_url, directory</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -50,8 +49,12 @@
     <entry>
         <string>au_substance_url_pattern</string>
         <list>
-            <string>"^%s%d/.+\.pdf$", base_url, year</string>
+            <string>"^%s%s/.+\.zip$", base_url, directory</string>
         </list>
+    </entry>
+    <entry>
+        <string>plugin_archive_file_types</string>
+        <string>standard</string>
     </entry>
     <entry>
         <string>plugin_article_iterator_factory</string>
@@ -78,5 +81,11 @@
                 <string>org.lockss.plugin.clockss.eastview.EastviewBookXmlMetadataExtractorFactory</string>
             </entry>
         </map>
+    </entry>
+    <entry>
+        <string>au_crawlrules</string>
+        <list>
+            <string>1,&quot;https://clockss-test.lockss.org/sourcefiles/eastviewbooks-released/2020/.*Ebook.*/20H1"</string>
+        </list>
     </entry>
 </map>

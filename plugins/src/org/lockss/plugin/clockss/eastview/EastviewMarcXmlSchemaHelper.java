@@ -212,6 +212,17 @@ implements SourceXmlSchemaHelper {
   private static final String publisher_title_code ="b";
   private static final String publisher_date_code ="c";
 
+
+  /*
+  <marc:datafield tag="533" ind1=" " ind2=" ">
+  <marc:subfield code="b">Saint Petersburg :</marc:subfield>
+  <marc:subfield code="c">Pushkinskiĭ Dom,</marc:subfield>
+  <marc:subfield code="d">2014.</marc:subfield>
+  </marc:datafield>
+   */
+  private static final String PUBLISHER_TAG2 ="533";
+  private static final String publisher_date_code2 ="d";
+
   /*
   300 - Physical Description (R)
 
@@ -410,6 +421,12 @@ implements SourceXmlSchemaHelper {
   public static String MARC_author =
           "datafield[@tag = \"" + AUTHOR_TAG + "\" and @ind1=\"1\" and @ind2=\" \" ]" +
                   "/subfield[@code = \"" + author_name_code + "\"]";
+
+  public static String MARC_pub_date2 =
+          "datafield[@tag = \"" + PUBLISHER_TAG2 + "\"]" +
+                  "/subfield[@code = \"" + publisher_date_code2 + "\"]";    
+
+  public static String zippedFolderName;
   
   /*
    *  The following 3 variables are needed to construct the XPathXmlMetadataParser
@@ -421,6 +438,7 @@ implements SourceXmlSchemaHelper {
   static {
     eastview_articleMap.put(MARC_publisher, XmlDomMetadataExtractor.TEXT_VALUE);
     eastview_articleMap.put(MARC_pub_date,  XmlDomMetadataExtractor.TEXT_VALUE);
+    eastview_articleMap.put(MARC_pub_date2,  XmlDomMetadataExtractor.TEXT_VALUE);
     eastview_articleMap.put(MARC_title, XmlDomMetadataExtractor.TEXT_VALUE);
     eastview_articleMap.put(MARC_pdf, XmlDomMetadataExtractor.TEXT_VALUE);
     eastview_articleMap.put(MARC_isbn, XmlDomMetadataExtractor.TEXT_VALUE);
@@ -499,5 +517,13 @@ implements SourceXmlSchemaHelper {
   @Override
   public String getFilenameXPathKey() {
     return null;
+  }
+
+  public static String getZippedFolderName() {
+    return zippedFolderName;
+  }
+
+  public static void setZippedFolderName(String fname) {
+    zippedFolderName = fname;
   }
 }

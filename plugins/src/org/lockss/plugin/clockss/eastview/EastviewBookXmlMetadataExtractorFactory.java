@@ -1,10 +1,10 @@
-package org.lockss.plugin.clockss.eastview;/*
+/*
  * $Id$
  */
 
 /*
 
- Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -30,92 +30,98 @@ package org.lockss.plugin.clockss.eastview;/*
 
  */
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+package org.lockss.plugin.clockss.eastview;
 
 import org.apache.commons.io.FilenameUtils;
-import org.lockss.util.*;
-import org.lockss.daemon.*;
-import org.lockss.extractor.*;
+import org.lockss.config.TdbAu;
+import org.lockss.daemon.PluginException;
+import org.lockss.extractor.ArticleMetadata;
+import org.lockss.extractor.FileMetadataExtractor;
+import org.lockss.extractor.MetadataField;
+import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
+import org.lockss.util.Logger;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
 
 public class EastviewBookXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
-    private static final Logger log = Logger.getLogger(EastviewBookXmlMetadataExtractorFactory.class);
+  private static final Logger log = Logger.getLogger(EastviewBookXmlMetadataExtractorFactory.class);
+  private static SourceXmlSchemaHelper EastviewBookXmlHelper = null;
 
-    private static SourceXmlSchemaHelper EastviewBookXmlHelper = null;
+  @Override
+  public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
+      String contentType)
+          throws PluginException {
+    return new EastviewBookXmlMarcXmlMetadataExtractor();
+  }
+
+  public static class EastviewBookXmlMarcXmlMetadataExtractor extends SourceXmlMetadataExtractor {
 
     @Override
-    public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
-                                                             String contentType)
-            throws PluginException {
-        return new EastviewBookXmlMarcXmlMetadataExtractor();
+    protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
+    // Once you have it, just keep returning the same one. It won't change.
+      if (EastviewBookXmlHelper == null) {
+        EastviewBookXmlHelper = new EastviewMarcXmlSchemaHelper();
+      }
+      return EastviewBookXmlHelper;
+    }
+    
+    @Override
+    protected boolean preEmitCheck(SourceXmlSchemaHelper schemaHelper,
+                                   CachedUrl cu, ArticleMetadata thisAM) {
+      return true;
     }
 
-    public class EastviewBookXmlMarcXmlMetadataExtractor extends SourceXmlMetadataExtractor {
+    @Override
+    protected void postCookProcess(SourceXmlSchemaHelper schemaHelper,
+                                   CachedUrl cu, ArticleMetadata thisAM) {
 
-        @Override
-        protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
-            // There is only 1 xml: https://clockss-test.lockss.org/sourcefiles/eastview-released/2020/metadata.xml
-            if  (EastviewBookXmlHelper == null) {
-                EastviewBookXmlHelper = new EastviewMarcXmlSchemaHelper();
-                log.debug3("Setup EastviewMarcXmlSchemaHelper");
-            }
-            return EastviewBookXmlHelper;
+
+      if (thisAM.getRaw(EastviewMarcXmlSchemaHelper.MARC_pdf) != null) {
+
+        String zippedFolderName = EastviewMarcXmlSchemaHelper.getZippedFolderName();
+
+        String fileNum = thisAM.getRaw(EastviewMarcXmlSchemaHelper.MARC_pdf);
+        String cuBase = FilenameUtils.getFullPath(cu.getUrl());
+
+        String pdfFilePath = cuBase + zippedFolderName + ".zip!/" + fileNum + ".pdf";
+        log.debug3("Fei - pdfFilePath" + pdfFilePath );
+        thisAM.put(MetadataField.FIELD_ACCESS_URL, pdfFilePath);
+      }
+
+      if (thisAM.getRaw(EastviewMarcXmlSchemaHelper.MARC_author) != null) {
+        String author = thisAM.getRaw(EastviewMarcXmlSchemaHelper.MARC_author);
+        thisAM.put(MetadataField.FIELD_AUTHOR, author.replace(".", ""));
+      }
+
+      if (thisAM.getRaw(EastviewMarcXmlSchemaHelper.MARC_publisher) != null) {
+        thisAM.put(MetadataField.FIELD_PUBLICATION_TITLE, thisAM.getRaw(EastviewMarcXmlSchemaHelper.MARC_publisher));
+      }
+
+      if (thisAM.getRaw(EastviewMarcXmlSchemaHelper.MARC_pub_date) != null) {
+        String MARC_pub_date = thisAM.getRaw(EastviewMarcXmlSchemaHelper.MARC_pub_date);
+        thisAM.put(MetadataField.FIELD_DATE, MARC_pub_date.replace(".", ""));
+      } else {
+        if (thisAM.getRaw(EastviewMarcXmlSchemaHelper.MARC_pub_date2) != null) {
+          String MARC_pub_date = thisAM.getRaw(EastviewMarcXmlSchemaHelper.MARC_pub_date2);
+          thisAM.put(MetadataField.FIELD_DATE, MARC_pub_date.replace(".", ""));
         }
+      }
 
-        /*
-          <datafield ind1="0" ind2=" " tag="773">
-            <subfield code="t">Psicoterapia e scienze umane. Fascicolo 4, 2000.</subfield> // we are trying to get "4"
-            <subfield code="d">Milano : Franco Angeli, 2000.</subfield>
-            <subfield code="w">()2194804</subfield>
-          </datafield>
-       */
-        // It is not clear which one can be used as "volume" of the PDF file, we use the above "4"
-        // we also assume it is single digit number between 1-9
-        @Override
-        protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper,
-                                                                CachedUrl cu,
-                                                                ArticleMetadata oneAM) {
+      String publisherName = "EastView";
 
-            ArrayList<String> returnList = new ArrayList<String>();
+      TdbAu tdbau = cu.getArchivalUnit().getTdbAu();
+      if (tdbau != null) {
+        publisherName = tdbau.getPublisherName();
+      }
 
-
-            String fileNum = oneAM.getRaw(EastviewMarcXmlSchemaHelper.MARC_pdf);
-            String cuBase = FilenameUtils.getFullPath(cu.getUrl());
-
-            String  pdfFilePath = cuBase +  fileNum + ".pdf";
-            returnList.add(pdfFilePath);
-
-            return returnList;
-        }
-
-        @Override
-        protected void postCookProcess(SourceXmlSchemaHelper schemaHelper,
-                                       CachedUrl cu, ArticleMetadata thisAM) {
-
-            if (thisAM.getRaw(EastviewMarcXmlSchemaHelper.MARC_author) != null) {
-                String author = thisAM.getRaw(EastviewMarcXmlSchemaHelper.MARC_author);
-                thisAM.put(MetadataField.FIELD_AUTHOR, author.replace(":", ""));
-            }
-
-            if (thisAM.getRaw(EastviewMarcXmlSchemaHelper.MARC_pub_date) != null) {
-                String pub_date = thisAM.getRaw(EastviewMarcXmlSchemaHelper.MARC_pub_date);
-                thisAM.put(MetadataField.FIELD_DATE, pub_date.replace(".", ""));
-            }
-
-            if (thisAM.getRaw(EastviewMarcXmlSchemaHelper.MARC_publisher) != null) {
-                String publisher = thisAM.getRaw(EastviewMarcXmlSchemaHelper.MARC_publisher);
-                thisAM.put(MetadataField.FIELD_PUBLISHER, publisher.replace(":", ""));
-            }
-
-            if (thisAM.getRaw(EastviewMarcXmlSchemaHelper.MARC_title) != null) {
-                String title = thisAM.getRaw(EastviewMarcXmlSchemaHelper.MARC_title);
-                thisAM.put(MetadataField.FIELD_PUBLICATION_TITLE, title.replace(":", ""));
-            }
-        }
+      thisAM.put(MetadataField.FIELD_PUBLISHER, publisherName);
     }
+
+  }
 }
