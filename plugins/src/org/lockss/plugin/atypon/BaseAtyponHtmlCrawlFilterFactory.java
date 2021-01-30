@@ -41,6 +41,7 @@ import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.*;
 import org.htmlparser.tags.CompositeTag;
 import org.htmlparser.tags.LinkTag;
+import org.htmlparser.tags.Div;
 import org.lockss.config.TdbAu;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
@@ -86,7 +87,12 @@ public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
     // we avoid the whole right column, but this seems like a good general catch
     HtmlNodeFilters.tagWithAttributeRegex("div","class", "relatedArticlesWidget"),
     HtmlNodeFilters.tagWithAttributeRegex("div","id", "relatedArticlesColumn"),
-    
+    // new for 2020? at least appears on https://ascopubs.org/doi/full/10.1200/JCO.2009.46.2473
+    HtmlNodeFilters.tagWithAttributeRegex("div","class", "article-tools"),
+    HtmlNodeFilters.tagWithAttribute("div","id", "TrendMD Widget"),
+    // other trendmd id/classnames
+    HtmlNodeFilters.tagWithAttribute("div","id", "trendmd-suggestions"),
+
     // Since overcrawling is a constant problem for Atypon, put common
     // next article-previous article link for safety; 
     // AIAA, AMetSoc, ASCE, Ammons, APHA, SEG,Siam, 
@@ -162,6 +168,47 @@ public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
         if (!(node instanceof LinkTag)) return false;
         String allText = ((CompositeTag)node).toPlainTextString();
         return corrections.matcher(allText).matches();
+      }
+    },
+    // there is a 'box' embedded in article for asco (may be others) that includes only a few aarticles outside the AU
+    // and is difficult to pin down as the id, and class name are not unique
+    // it seems that div.id = 'b1' is always a 'The Bottom Line' section, if it is present. But ...
+    // this box is not always present. So we need to filter on the wording title itself 'Related ASCO Guidelines'
+    // on this page is an example: https://ascopubs.org/doi/full/10.1200/JCO.20.02672
+    //  <div id="b2" class="boxed-text-anchor">
+    //    <div class="NLM_sec NLM_sec_level_2">
+    //      <div class="head-b">Related ASCO Guidelines</div>
+    // This page uses id=b1 for the box, as it is missing a 'The Bottom Line' section
+    // https://ascopubs.org/doi/full/10.1200/JCO.20.00611
+    // these filters would be nice, but would not catch all instances
+    // HtmlNodeFilters.tagWithAttributeRegex("div","id", "b2"), // this is not guaranteed
+    // <div class="boxed-text-float" >
+    // <div class="boxed-text-anchor">   is used in older articles
+    // e.g.   https://ascopubs.org/doi/10.1200/JCO.2016.70.1474
+    // so lets put it all together
+    new NodeFilter() {
+      @Override public boolean accept(Node node) {
+        if (HtmlNodeFilters.tagWithAttributeRegex("div", "class", "boxed-text-(float|anchor)").accept(node)) {
+          log.debug2("found tag btfa: " + node.toPlainTextString());
+          Node firstChild = node.getFirstChild();
+          if (firstChild != null && firstChild instanceof Div) {
+            // case the firstChild to a Div type
+            Div firstDiv = (Div)firstChild;
+            Node secondChild = firstDiv.getFirstChild();
+            if (secondChild != null && secondChild instanceof Div) {
+              Div secondDiv = (Div)secondChild;
+              // this title seems regular, however, the capitalization is not. additionally, there is sometimes a ':' at the
+              // end, i don't think this matters, just noting the inconsistency
+              Pattern titlePattern = Pattern.compile("Related ASCO Guidelines", Pattern.CASE_INSENSITIVE);
+              // this method returns the inner text, e.g. <div class="head-b">Related ASCO Guidelines</div>
+              // becomes 'Related ASCO Guidelines'
+              String tagText = secondDiv.toPlainTextString();
+              log.debug2("related guidelines? " + tagText);
+              return titlePattern.matcher(tagText).find();
+            }
+          }
+        }
+        return false;
       }
     },
   };
