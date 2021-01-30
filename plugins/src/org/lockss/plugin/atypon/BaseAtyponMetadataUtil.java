@@ -31,6 +31,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.atypon;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Matcher;
@@ -129,7 +130,7 @@ public class BaseAtyponMetadataUtil {
     }
     
     // Check VOLUME/YEAR
-    if (!(StringUtils.isEmpty(foundVolume) || StringUtils.isEmpty(foundDate))) {
+    if (!StringUtils.isEmpty(foundVolume)) {
 
       // Get the AU's volume name from the AU properties. This must be set
       TypedEntryMap tfProps = au.getProperties();
@@ -141,9 +142,32 @@ public class BaseAtyponMetadataUtil {
         log.debug3("After volume check, isInAu :" + isInAu);
       }
 
-      // Add in doing year comparison if FIELD_DATE is set
-      // this is more complicated because date format is variable
     }
+    // Add in doing year comparison if FIELD_DATE is set
+    // this is more complicated because date format is variable
+    // so
+    if (isInAu && !StringUtils.isEmpty(foundDate)) {
+      String tdbauYr = tdbau.getAttr("year");
+      String[] dateDeliminators = { "-", "/", ":", ".", "" };
+      String artYear = "";
+      for (String del : dateDeliminators) {
+        if (foundDate.contains(del)) {
+          String[] dateArr = foundDate.split(del);
+          for (String dateBit : dateArr) {
+            if (dateBit.length() == 4) {
+              artYear = dateBit;
+            }
+          }
+        }
+      }
+      if (tdbauYr.equals(artYear)) {
+        log.debug3("AU year: <" + tdbauYr + "> Article yr: <" + artYear + "> match");
+      } else {
+        log.debug3("Checki! AU year: <" + tdbauYr + "> Article yr: <" + artYear + "> no match");
+      }
+      isInAu = tdbauYr.equals(artYear);
+    }
+
     
     // If we've come this far and have passed an ISSN check, we're done
     if (checkedISSN) {
