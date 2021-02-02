@@ -2,7 +2,8 @@
 
   publisher <
     name = American Society of Civil Engineers ;
-    info[contract] = 2012 ;
+    info[contract] = 2010 ;
+    info[back] = 2010 ;
     info[tester] = 8 ;
     info[poller] = 3
   >
@@ -33,8 +34,8 @@
     au < manifest ; exists ; 2007 ; International Journal of Geomechanics Volume 7 ; 7 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2008 ; International Journal of Geomechanics Volume 8 ; 8 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2009 ; International Journal of Geomechanics Volume 9 ; 9 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2010 ; International Journal of Geomechanics Volume 10 ; 10 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2011 ; International Journal of Geomechanics Volume 11 ; 11 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2010 ; International Journal of Geomechanics Volume 10 ; 10 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2011 ; International Journal of Geomechanics Volume 11 ; 11 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2012 ; International Journal of Geomechanics Volume 12 ; 12 ; http://ascelibrary.org/ ; >
     au < frozen ; exists ; 2013 ; International Journal of Geomechanics Volume 13 ; 13 ; http://ascelibrary.org/ ; >
     au < finished ; finished ; 2014 ; International Journal of Geomechanics Volume 14 ; 14 ; http://ascelibrary.org/ ; reingest2.clockss.org:8085 >
@@ -72,8 +73,8 @@
     au < manifest ; exists ; 2007 ; Journal of Architectural Engineering Volume 13 ; 13 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2008 ; Journal of Architectural Engineering Volume 14 ; 14 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2009 ; Journal of Architectural Engineering Volume 15 ; 15 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2010 ; Journal of Architectural Engineering Volume 16 ; 16 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2011 ; Journal of Architectural Engineering Volume 17 ; 17 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Architectural Engineering Volume 16 ; 16 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2011 ; Journal of Architectural Engineering Volume 17 ; 17 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2012 ; Journal of Architectural Engineering Volume 18 ; 18 ; http://ascelibrary.org/ ; >
     au < frozen ; exists ; 2013 ; Journal of Architectural Engineering Volume 19 ; 19 ; http://ascelibrary.org/ ; >
     au < finished ; finished ; 2014 ; Journal of Architectural Engineering Volume 20 ; 20 ; http://ascelibrary.org/ ; >
@@ -118,8 +119,8 @@
     au < manifest ; exists ; 2007 ; Journal of Aerospace Engineering Volume 20 ; 20 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2008 ; Journal of Aerospace Engineering Volume 21 ; 21 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2009 ; Journal of Aerospace Engineering Volume 22 ; 22 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2010 ; Journal of Aerospace Engineering Volume 23 ; 23 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2011 ; Journal of Aerospace Engineering Volume 24 ; 24 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Aerospace Engineering Volume 23 ; 23 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2011 ; Journal of Aerospace Engineering Volume 24 ; 24 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2012 ; Journal of Aerospace Engineering Volume 25 ; 25 ; http://ascelibrary.org/ ; >
     au < frozen ; exists ; 2013 ; Journal of Aerospace Engineering Volume 26 ; 26 ; http://ascelibrary.org/ ; >
     au < zapped ; finished ; 2014 ; Journal of Aerospace Engineering Volume 27 ; 27 ; http://ascelibrary.org/ ; >
@@ -161,8 +162,8 @@
       au < manifest ; exists ; 2007 ; Journal of Bridge Engineering Volume 12 ; 12 ; https://ascelibrary.org/ ; >
       au < manifest ; exists ; 2008 ; Journal of Bridge Engineering Volume 13 ; 13 ; https://ascelibrary.org/ ; >
       au < manifest ; exists ; 2009 ; Journal of Bridge Engineering Volume 14 ; 14 ; https://ascelibrary.org/ ; >
-      au < manifest ; exists ; 2010 ; Journal of Bridge Engineering Volume 15 ; 15 ; https://ascelibrary.org/ ; >
-      au < manifest ; exists ; 2011 ; Journal of Bridge Engineering Volume 16 ; 16 ; https://ascelibrary.org/ ; >
+      au < doNotProcess ; exists ; 2010 ; Journal of Bridge Engineering Volume 15 ; 15 ; https://ascelibrary.org/ ; >
+      au < doNotProcess ; exists ; 2011 ; Journal of Bridge Engineering Volume 16 ; 16 ; https://ascelibrary.org/ ; >
       au < frozen ; exists ; 2012 ; Journal of Bridge Engineering Volume 17 ; 17 ; http://ascelibrary.org/ ; >
       au < frozen ; exists ; 2013 ; Journal of Bridge Engineering Volume 18 ; 18 ; http://ascelibrary.org/ ; >
       au < zapped ; finished ; 2014 ; Journal of Bridge Engineering Volume 19 ; 19 ; http://ascelibrary.org/ ; reingest2.clockss.org:8085 >
@@ -198,8 +199,8 @@
     au < manifest ; exists ; 2007 ; Journal of Composites for Construction Volume 11 ; 11 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2008 ; Journal of Composites for Construction Volume 12 ; 12 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2009 ; Journal of Composites for Construction Volume 13 ; 13 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2010 ; Journal of Composites for Construction Volume 14 ; 14 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2011 ; Journal of Composites for Construction Volume 15 ; 15 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Composites for Construction Volume 14 ; 14 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2011 ; Journal of Composites for Construction Volume 15 ; 15 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2012 ; Journal of Composites for Construction Volume 16 ; 16 ; http://ascelibrary.org/ ; >
     au < frozen ; exists ; 2013 ; Journal of Composites for Construction Volume 17 ; 17 ; http://ascelibrary.org/ ; >
     au < zapped ; finished ; 2014 ; Journal of Composites for Construction Volume 18 ; 18 ; http://ascelibrary.org/ ; reingest2.clockss.org:8085 >
@@ -245,8 +246,8 @@
     au < manifest ; exists ; 2007 ; Journal of Performance of Constructed Facilities Volume 21 ; 21 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2008 ; Journal of Performance of Constructed Facilities Volume 22 ; 22 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2009 ; Journal of Performance of Constructed Facilities Volume 23 ; 23 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2010 ; Journal of Performance of Constructed Facilities Volume 24 ; 24 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2011 ; Journal of Performance of Constructed Facilities Volume 25 ; 25 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Performance of Constructed Facilities Volume 24 ; 24 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2011 ; Journal of Performance of Constructed Facilities Volume 25 ; 25 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2012 ; Journal of Performance of Constructed Facilities Volume 26 ; 26 ; http://ascelibrary.org/ ; >
     au < frozen ; exists ; 2013 ; Journal of Performance of Constructed Facilities Volume 27 ; 27 ; http://ascelibrary.org/ ; >
     au < zapped ; finished ; 2014 ; Journal of Performance of Constructed Facilities Volume 28 ; 28 ; http://ascelibrary.org/ ; reingest5.clockss.org:8082 >
@@ -296,8 +297,8 @@
     au < manifest ; exists ; 2007 ; Journal of Construction Engineering and Management Volume 133 ; 133 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2008 ; Journal of Construction Engineering and Management Volume 134 ; 134 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2009 ; Journal of Construction Engineering and Management Volume 135 ; 135 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2010 ; Journal of Construction Engineering and Management Volume 136 ; 136 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2011 ; Journal of Construction Engineering and Management Volume 137 ; 137 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Construction Engineering and Management Volume 136 ; 136 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2011 ; Journal of Construction Engineering and Management Volume 137 ; 137 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2012 ; Journal of Construction Engineering and Management Volume 138 ; 138 ; http://ascelibrary.org/ ; >
     au < frozen ; exists ; 2013 ; Journal of Construction Engineering and Management Volume 139 ; 139 ; http://ascelibrary.org/ ; >
     au < zapped ; finished ; 2014 ; Journal of Construction Engineering and Management Volume 140 ; 140 ; http://ascelibrary.org/ ; reingest2.clockss.org:8085 >
@@ -343,8 +344,8 @@
     au < manifest ; exists ; 2007 ; Journal of Computing in Civil Engineering Volume 21 ; 21 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2008 ; Journal of Computing in Civil Engineering Volume 22 ; 22 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2009 ; Journal of Computing in Civil Engineering Volume 23 ; 23 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2010 ; Journal of Computing in Civil Engineering Volume 24 ; 24 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2011 ; Journal of Computing in Civil Engineering Volume 25 ; 25 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Computing in Civil Engineering Volume 24 ; 24 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2011 ; Journal of Computing in Civil Engineering Volume 25 ; 25 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2012 ; Journal of Computing in Civil Engineering Volume 26 ; 26 ; http://ascelibrary.org/ ; >
     au < frozen ; exists ; 2013 ; Journal of Computing in Civil Engineering Volume 27 ; 27 ; http://ascelibrary.org/ ; >
     au < zapped ; finished ; 2014 ; Journal of Computing in Civil Engineering Volume 28 ; 28 ; http://ascelibrary.org/ ; reingest1.clockss.org:8082 >
@@ -390,8 +391,8 @@
     au < manifest ; exists ; 2007 ; Journal of Cold Regions Engineering Volume 21 ; 21 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2008 ; Journal of Cold Regions Engineering Volume 22 ; 22 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2009 ; Journal of Cold Regions Engineering Volume 23 ; 23 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2010 ; Journal of Cold Regions Engineering Volume 24 ; 24 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2011 ; Journal of Cold Regions Engineering Volume 25 ; 25 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Cold Regions Engineering Volume 24 ; 24 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2011 ; Journal of Cold Regions Engineering Volume 25 ; 25 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2012 ; Journal of Cold Regions Engineering Volume 26 ; 26 ; http://ascelibrary.org/ ; >
     au < frozen ; exists ; 2013 ; Journal of Cold Regions Engineering Volume 27 ; 27 ; http://ascelibrary.org/ ; >
     au < finished ; finished ; 2014 ; Journal of Cold Regions Engineering Volume 28 ; 28 ; http://ascelibrary.org/ ; reingest2.clockss.org:8085 >
@@ -441,8 +442,8 @@
     au < manifest ; exists ; 2007 ; Journal of Environmental Engineering Volume 133 ; 133 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2008 ; Journal of Environmental Engineering Volume 134 ; 134 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2009 ; Journal of Environmental Engineering Volume 135 ; 135 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2010 ; Journal of Environmental Engineering Volume 136 ; 136 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2011 ; Journal of Environmental Engineering Volume 137 ; 137 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Environmental Engineering Volume 136 ; 136 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2011 ; Journal of Environmental Engineering Volume 137 ; 137 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2012 ; Journal of Environmental Engineering Volume 138 ; 138 ; http://ascelibrary.org/ ; >
     au < frozen ; exists ; 2013 ; Journal of Environmental Engineering Volume 139 ; 139 ; http://ascelibrary.org/ ; >
     au < zapped ; finished ; 2014 ; Journal of Environmental Engineering Volume 140 ; 140 ; http://ascelibrary.org/ ; reingest4.clockss.org:8082 >
@@ -492,8 +493,8 @@
     au < manifest ; exists ; 2007 ; Journal of Engineering Mechanics Volume 133 ; 133 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2008 ; Journal of Engineering Mechanics Volume 134 ; 134 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2009 ; Journal of Engineering Mechanics Volume 135 ; 135 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2010 ; Journal of Engineering Mechanics Volume 136 ; 136 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2011 ; Journal of Engineering Mechanics Volume 137 ; 137 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Engineering Mechanics Volume 136 ; 136 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2011 ; Journal of Engineering Mechanics Volume 137 ; 137 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2012 ; Journal of Engineering Mechanics Volume 138 ; 138 ; http://ascelibrary.org/ ; >
     au < frozen ; exists ; 2013 ; Journal of Engineering Mechanics Volume 139 ; 139 ; http://ascelibrary.org/ ; >
     au < zapped ; finished ; 2014 ; Journal of Engineering Mechanics Volume 140 ; 140 ; http://ascelibrary.org/ ; reingest2.clockss.org:8085 >
@@ -543,8 +544,8 @@
     au < manifest ; exists ; 2007 ; Journal of Energy Engineering Volume 133 ; 133 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2008 ; Journal of Energy Engineering Volume 134 ; 134 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2009 ; Journal of Energy Engineering Volume 135 ; 135 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2010 ; Journal of Energy Engineering Volume 136 ; 136 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2011 ; Journal of Energy Engineering Volume 137 ; 137 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Energy Engineering Volume 136 ; 136 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2011 ; Journal of Energy Engineering Volume 137 ; 137 ; https://ascelibrary.org/ ; >
     au < finished ; finished ; 2012 ; Journal of Energy Engineering Volume 138 ; 138 ; http://ascelibrary.org/ ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2013 ; Journal of Energy Engineering Volume 139 ; 139 ; http://ascelibrary.org/ ; >
     au < finished ; finished ; 2014 ; Journal of Energy Engineering Volume 140 ; 140 ; http://ascelibrary.org/ ; reingest2.clockss.org:8085 >
@@ -594,8 +595,8 @@
     au < manifest ; exists ; 2007 ; Journal of Geotechnical and Geoenvironmental Engineering Volume 133 ; 133 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2008 ; Journal of Geotechnical and Geoenvironmental Engineering Volume 134 ; 134 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2009 ; Journal of Geotechnical and Geoenvironmental Engineering Volume 135 ; 135 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2010 ; Journal of Geotechnical and Geoenvironmental Engineering Volume 136 ; 136 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2011 ; Journal of Geotechnical and Geoenvironmental Engineering Volume 137 ; 137 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Geotechnical and Geoenvironmental Engineering Volume 136 ; 136 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2011 ; Journal of Geotechnical and Geoenvironmental Engineering Volume 137 ; 137 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2012 ; Journal of Geotechnical and Geoenvironmental Engineering Volume 138 ; 138 ; http://ascelibrary.org/ ; >
     au < frozen ; exists ; 2013 ; Journal of Geotechnical and Geoenvironmental Engineering Volume 139 ; 139 ; http://ascelibrary.org/ ; >
     au < zapped ; finished ; 2014 ; Journal of Geotechnical and Geoenvironmental Engineering Volume 140 ; 140 ; http://ascelibrary.org/ ; reingest5.clockss.org:8082 >
@@ -631,8 +632,8 @@
     au < manifest ; exists ; 2007 ; Journal of Hazardous, Toxic and Radioactive Waste Volume 11 ; 11 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2008 ; Journal of Hazardous, Toxic and Radioactive Waste Volume 12 ; 12 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2009 ; Journal of Hazardous, Toxic and Radioactive Waste Volume 13 ; 13 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2010 ; Journal of Hazardous, Toxic and Radioactive Waste Volume 14 ; 14 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2011 ; Journal of Hazardous, Toxic and Radioactive Waste Volume 15 ; 15 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Hazardous, Toxic and Radioactive Waste Volume 14 ; 14 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2011 ; Journal of Hazardous, Toxic and Radioactive Waste Volume 15 ; 15 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2012 ; Journal of Hazardous, Toxic and Radioactive Waste Volume 16 ; 16 ; http://ascelibrary.org/ ; >
     au < finished ; finished ; 2013 ; Journal of Hazardous, Toxic and Radioactive Waste Volume 17 ; 17 ; http://ascelibrary.org/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Journal of Hazardous, Toxic and Radioactive Waste Volume 18 ; 18 ; http://ascelibrary.org/ ; reingest2.clockss.org:8085 >
@@ -669,8 +670,8 @@
     au < manifest ; exists ; 2007 ; Journal of Hydrologic Engineering Volume 12 ; 12 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2008 ; Journal of Hydrologic Engineering Volume 13 ; 13 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2009 ; Journal of Hydrologic Engineering Volume 14 ; 14 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2010 ; Journal of Hydrologic Engineering Volume 15 ; 15 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2011 ; Journal of Hydrologic Engineering Volume 16 ; 16 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Hydrologic Engineering Volume 15 ; 15 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2011 ; Journal of Hydrologic Engineering Volume 16 ; 16 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2012 ; Journal of Hydrologic Engineering Volume 17 ; 17 ; http://ascelibrary.org/ ; >
     au < frozen ; exists ; 2013 ; Journal of Hydrologic Engineering Volume 18 ; 18 ; http://ascelibrary.org/ ; >
     au < zapped ; finished ; 2014 ; Journal of Hydrologic Engineering Volume 19 ; 19 ; http://ascelibrary.org/ ; reingest3.clockss.org:8083 >
@@ -720,8 +721,8 @@
     au < manifest ; exists ; 2007 ; Journal of Hydraulic Engineering Volume 133 ; 133 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2008 ; Journal of Hydraulic Engineering Volume 134 ; 134 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2009 ; Journal of Hydraulic Engineering Volume 135 ; 135 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2010 ; Journal of Hydraulic Engineering Volume 136 ; 136 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2011 ; Journal of Hydraulic Engineering Volume 137 ; 137 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Hydraulic Engineering Volume 136 ; 136 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2011 ; Journal of Hydraulic Engineering Volume 137 ; 137 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2012 ; Journal of Hydraulic Engineering Volume 138 ; 138 ; http://ascelibrary.org/ ; >
     au < frozen ; exists ; 2013 ; Journal of Hydraulic Engineering Volume 139 ; 139 ; http://ascelibrary.org/ ; >
     au < zapped ; finished ; 2014 ; Journal of Hydraulic Engineering Volume 140 ; 140 ; http://ascelibrary.org/ ; reingest3.clockss.org:8083 >
@@ -771,8 +772,8 @@
     au < manifest ; exists ; 2007 ; Journal of Irrigation and Drainage Engineering Volume 133 ; 133 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2008 ; Journal of Irrigation and Drainage Engineering Volume 134 ; 134 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2009 ; Journal of Irrigation and Drainage Engineering Volume 135 ; 135 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2010 ; Journal of Irrigation and Drainage Engineering Volume 136 ; 136 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2011 ; Journal of Irrigation and Drainage Engineering Volume 137 ; 137 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Irrigation and Drainage Engineering Volume 136 ; 136 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2011 ; Journal of Irrigation and Drainage Engineering Volume 137 ; 137 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2012 ; Journal of Irrigation and Drainage Engineering Volume 138 ; 138 ; http://ascelibrary.org/ ; >
     au < frozen ; exists ; 2013 ; Journal of Irrigation and Drainage Engineering Volume 139 ; 139 ; http://ascelibrary.org/ ; >
     au < zapped ; finished ; 2014 ; Journal of Irrigation and Drainage Engineering Volume 140 ; 140 ; http://ascelibrary.org/ ; reingest2.clockss.org:8085 >
@@ -810,8 +811,8 @@
     au < manifest ; exists ; 2007 ; Journal of Infrastructure Systems Volume 13 ; 13 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2008 ; Journal of Infrastructure Systems Volume 14 ; 14 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2009 ; Journal of Infrastructure Systems Volume 15 ; 15 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2010 ; Journal of Infrastructure Systems Volume 16 ; 16 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2011 ; Journal of Infrastructure Systems Volume 17 ; 17 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Infrastructure Systems Volume 16 ; 16 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2011 ; Journal of Infrastructure Systems Volume 17 ; 17 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2012 ; Journal of Infrastructure Systems Volume 18 ; 18 ; http://ascelibrary.org/ ; >
     au < frozen ; exists ; 2013 ; Journal of Infrastructure Systems Volume 19 ; 19 ; http://ascelibrary.org/ ; >
     au < finished ; finished ; 2014 ; Journal of Infrastructure Systems Volume 20 ; 20 ; http://ascelibrary.org/ ; >
@@ -835,8 +836,8 @@
     param[journal_id] = jladah
 
     au < manifest ; exists ; 2009 ; Journal of Legal Affairs and Dispute Resolution in Engineering and Construction Volume 1 ; 1 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2010 ; Journal of Legal Affairs and Dispute Resolution in Engineering and Construction Volume 2 ; 2 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2011 ; Journal of Legal Affairs and Dispute Resolution in Engineering and Construction Volume 3 ; 3 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Legal Affairs and Dispute Resolution in Engineering and Construction Volume 2 ; 2 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2011 ; Journal of Legal Affairs and Dispute Resolution in Engineering and Construction Volume 3 ; 3 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2012 ; Journal of Legal Affairs and Dispute Resolution in Engineering and Construction Volume 4 ; 4 ; http://ascelibrary.org/ ; >
     au < frozen ; exists ; 2013 ; Journal of Legal Affairs and Dispute Resolution in Engineering and Construction Volume 5 ; 5 ; http://ascelibrary.org/ ; >
     au < finished ; finished ; 2014 ; Journal of Legal Affairs and Dispute Resolution in Engineering and Construction Volume 6 ; 6 ; http://ascelibrary.org/ ; reingest2.clockss.org:8085 >
@@ -884,8 +885,8 @@
     au < manifest ; exists ; 2007 ; Journal of Management in Engineering Volume 23 ; 23 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2008 ; Journal of Management in Engineering Volume 24 ; 24 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2009 ; Journal of Management in Engineering Volume 25 ; 25 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2010 ; Journal of Management in Engineering Volume 26 ; 26 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2011 ; Journal of Management in Engineering Volume 27 ; 27 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Management in Engineering Volume 26 ; 26 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2011 ; Journal of Management in Engineering Volume 27 ; 27 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2012 ; Journal of Management in Engineering Volume 28 ; 28 ; http://ascelibrary.org/ ; >
     au < frozen ; exists ; 2013 ; Journal of Management in Engineering Volume 29 ; 29 ; http://ascelibrary.org/ ; >
     au < finished ; finished ; 2014 ; Journal of Management in Engineering Volume 30 ; 30 ; http://ascelibrary.org/ ; reingest1.clockss.org:8082 >
@@ -929,8 +930,8 @@
     au < manifest ; exists ; 2007 ; Journal of Materials in Civil Engineering Volume 19 ; 19 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2008 ; Journal of Materials in Civil Engineering Volume 20 ; 20 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2009 ; Journal of Materials in Civil Engineering Volume 21 ; 21 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2010 ; Journal of Materials in Civil Engineering Volume 22 ; 22 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2011 ; Journal of Materials in Civil Engineering Volume 23 ; 23 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Materials in Civil Engineering Volume 22 ; 22 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2011 ; Journal of Materials in Civil Engineering Volume 23 ; 23 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2012 ; Journal of Materials in Civil Engineering Volume 24 ; 24 ; http://ascelibrary.org/ ; >
     au < frozen ; exists ; 2013 ; Journal of Materials in Civil Engineering Volume 25 ; 25 ; http://ascelibrary.org/ ; >
     au < zapped ; finished ; 2014 ; Journal of Materials in Civil Engineering Volume 26 ; 26 ; http://ascelibrary.org/ ; >
@@ -954,7 +955,7 @@
     param[journal_id] = jnmoco
     #stop publishing
 
-    au < manifest ; exists ; 2011 ; Journal of Nanomechanics and Micromechanics Volume 1 ; 1 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2011 ; Journal of Nanomechanics and Micromechanics Volume 1 ; 1 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2012 ; Journal of Nanomechanics and Micromechanics Volume 2 ; 2 ; http://ascelibrary.org/ ; >
     au < frozen ; exists ; 2013 ; Journal of Nanomechanics and Micromechanics Volume 3 ; 3 ; http://ascelibrary.org/ ; >
     au < finished ; finished ; 2014 ; Journal of Nanomechanics and Micromechanics Volume 4 ; 4 ; http://ascelibrary.org/ ; reingest3.clockss.org:8083 >
@@ -1002,8 +1003,8 @@
     au < manifest ; exists ; 2007 ; Journal of Professional Issues in Engineering Education and Practice Volume 133 ; 133 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2008 ; Journal of Professional Issues in Engineering Education and Practice Volume 134 ; 134 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2009 ; Journal of Professional Issues in Engineering Education and Practice Volume 135 ; 135 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2010 ; Journal of Professional Issues in Engineering Education and Practice Volume 136 ; 136 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2011 ; Journal of Professional Issues in Engineering Education and Practice Volume 137 ; 137 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Professional Issues in Engineering Education and Practice Volume 136 ; 136 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2011 ; Journal of Professional Issues in Engineering Education and Practice Volume 137 ; 137 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2012 ; Journal of Professional Issues in Engineering Education and Practice Volume 138 ; 138 ; http://ascelibrary.org/ ; >
     au < frozen ; exists ; 2013 ; Journal of Professional Issues in Engineering Education and Practice Volume 139 ; 139 ; http://ascelibrary.org/ ; >
     au < finished ; finished ; 2014 ; Journal of Professional Issues in Engineering Education and Practice Volume 140 ; 140 ; http://ascelibrary.org/ ; reingest5.clockss.org:8082 >
@@ -1030,8 +1031,8 @@
 
     param[journal_id] = jpsea2
 
-    au < manifest ; exists ; 2010 ; Journal of Pipeline Systems Engineering and Practice Volume 1 ; 1 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2011 ; Journal of Pipeline Systems Engineering and Practice Volume 2 ; 2 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Pipeline Systems Engineering and Practice Volume 1 ; 1 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2011 ; Journal of Pipeline Systems Engineering and Practice Volume 2 ; 2 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2012 ; Journal of Pipeline Systems Engineering and Practice Volume 3 ; 3 ; http://ascelibrary.org/ ; >
     au < frozen ; exists ; 2013 ; Journal of Pipeline Systems Engineering and Practice Volume 4 ; 4 ; http://ascelibrary.org/ ; >
     au < finished ; finished ; 2014 ; Journal of Pipeline Systems Engineering and Practice Volume 5 ; 5 ; http://ascelibrary.org/ ; reingest4.clockss.org:8082 >
@@ -1081,8 +1082,8 @@
     au < manifest ; exists ; 2007 ; Journal of Structural Engineering Volume 133 ; 133 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2008 ; Journal of Structural Engineering Volume 134 ; 134 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2009 ; Journal of Structural Engineering Volume 135 ; 135 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2010 ; Journal of Structural Engineering Volume 136 ; 136 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2011 ; Journal of Structural Engineering Volume 137 ; 137 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Structural Engineering Volume 136 ; 136 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2011 ; Journal of Structural Engineering Volume 137 ; 137 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2012 ; Journal of Structural Engineering Volume 138 ; 138 ; http://ascelibrary.org/ ; >
     au < frozen ; exists ; 2013 ; Journal of Structural Engineering Volume 139 ; 139 ; http://ascelibrary.org/ ; >
     au < zapped ; finished ; 2014 ; Journal of Structural Engineering Volume 140 ; 140 ; http://ascelibrary.org/ ; reingest5.clockss.org:8082 >
@@ -1132,8 +1133,8 @@
     au < manifest ; exists ; 2007 ; Journal of Surveying Engineering Volume 133 ; 133 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2008 ; Journal of Surveying Engineering Volume 134 ; 134 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2009 ; Journal of Surveying Engineering Volume 135 ; 135 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2010 ; Journal of Surveying Engineering Volume 136 ; 136 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2011 ; Journal of Surveying Engineering Volume 137 ; 137 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Surveying Engineering Volume 136 ; 136 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2011 ; Journal of Surveying Engineering Volume 137 ; 137 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2012 ; Journal of Surveying Engineering Volume 138 ; 138 ; http://ascelibrary.org/ ; >
     au < frozen ; exists ; 2013 ; Journal of Surveying Engineering Volume 139 ; 139 ; http://ascelibrary.org/ ; >
     au < finished ; finished ; 2014 ; Journal of Surveying Engineering Volume 140 ; 140 ; http://ascelibrary.org/ ; reingest1.clockss.org:8082 >
@@ -1184,8 +1185,8 @@
     au < manifest ; exists ; 2007 ; Journal of Transportation Engineering Volume 133 ; 133 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2008 ; Journal of Transportation Engineering Volume 134 ; 134 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2009 ; Journal of Transportation Engineering Volume 135 ; 135 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2010 ; Journal of Transportation Engineering Volume 136 ; 136 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2011 ; Journal of Transportation Engineering Volume 137 ; 137 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Transportation Engineering Volume 136 ; 136 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2011 ; Journal of Transportation Engineering Volume 137 ; 137 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2012 ; Journal of Transportation Engineering Volume 138 ; 138 ; http://ascelibrary.org/ ; >
     au < zapped ; finished ; 2013 ; Journal of Transportation Engineering Volume 139 ; 139 ; http://ascelibrary.org/ ; reingest2.clockss.org:8085 >
     au < zapped ; finished ; 2014 ; Journal of Transportation Engineering Volume 140 ; 140 ; http://ascelibrary.org/ ; reingest1.clockss.org:8082 >
@@ -1239,8 +1240,8 @@
     au < manifest ; exists ; 2007 ; Journal of Urban Planning and Development Volume 133 ; 133 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2008 ; Journal of Urban Planning and Development Volume 134 ; 134 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2009 ; Journal of Urban Planning and Development Volume 135 ; 135 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2010 ; Journal of Urban Planning and Development Volume 136 ; 136 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2011 ; Journal of Urban Planning and Development Volume 137 ; 137 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Urban Planning and Development Volume 136 ; 136 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2011 ; Journal of Urban Planning and Development Volume 137 ; 137 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2012 ; Journal of Urban Planning and Development Volume 138 ; 138 ; http://ascelibrary.org/ ; >
     au < frozen ; exists ; 2013 ; Journal of Urban Planning and Development Volume 139 ; 139 ; http://ascelibrary.org/ ; >
     au < finished ; finished ; 2014 ; Journal of Urban Planning and Development Volume 140 ; 140 ; http://ascelibrary.org/ ; reingest4.clockss.org:8082 >
@@ -1290,8 +1291,8 @@
     au < manifest ; exists ; 2007 ; Journal of Water Resources Planning and Management Volume 133 ; 133 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2008 ; Journal of Water Resources Planning and Management Volume 134 ; 134 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2009 ; Journal of Water Resources Planning and Management Volume 135 ; 135 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2010 ; Journal of Water Resources Planning and Management Volume 136 ; 136 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2011 ; Journal of Water Resources Planning and Management Volume 137 ; 137 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Water Resources Planning and Management Volume 136 ; 136 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2011 ; Journal of Water Resources Planning and Management Volume 137 ; 137 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2012 ; Journal of Water Resources Planning and Management Volume 138 ; 138 ; http://ascelibrary.org/ ; >
     au < frozen ; exists ; 2013 ; Journal of Water Resources Planning and Management Volume 139 ; 139 ; http://ascelibrary.org/ ; >
     au < zapped ; finished ; 2014 ; Journal of Water Resources Planning and Management Volume 140 ; 140 ; http://ascelibrary.org/ ; reingest5.clockss.org:8082 >
@@ -1341,8 +1342,8 @@
     au < manifest ; exists ; 2007 ; Journal of Waterway, Port, Coastal, and Ocean Engineering Volume 133 ; 133 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2008 ; Journal of Waterway, Port, Coastal, and Ocean Engineering Volume 134 ; 134 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2009 ; Journal of Waterway, Port, Coastal, and Ocean Engineering Volume 135 ; 135 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2010 ; Journal of Waterway, Port, Coastal, and Ocean Engineering Volume 136 ; 136 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2011 ; Journal of Waterway, Port, Coastal, and Ocean Engineering Volume 137 ; 137 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Waterway, Port, Coastal, and Ocean Engineering Volume 136 ; 136 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2011 ; Journal of Waterway, Port, Coastal, and Ocean Engineering Volume 137 ; 137 ; https://ascelibrary.org/ ; >
     au < finished ; finished ; 2012 ; Journal of Waterway, Port, Coastal, and Ocean Engineering Volume 138 ; 138 ; http://ascelibrary.org/ ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2013 ; Journal of Waterway, Port, Coastal, and Ocean Engineering Volume 139 ; 139 ; http://ascelibrary.org/ ; >
     au < finished ; finished ; 2014 ; Journal of Waterway, Port, Coastal, and Ocean Engineering Volume 140 ; 140 ; http://ascelibrary.org/ ; reingest5.clockss.org:8082 >
@@ -1374,8 +1375,8 @@
     au < manifest ; exists ; 2007 ; Leadership & Management in Engineering Volume 7 ; 7 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2008 ; Leadership & Management in Engineering Volume 8 ; 8 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2009 ; Leadership & Management in Engineering Volume 9 ; 9 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2010 ; Leadership & Management in Engineering Volume 10 ; 10 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2011 ; Leadership & Management in Engineering Volume 11 ; 11 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2010 ; Leadership & Management in Engineering Volume 10 ; 10 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2011 ; Leadership & Management in Engineering Volume 11 ; 11 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2012 ; Leadership & Management in Engineering Volume 12 ; 12 ; http://ascelibrary.org/ ; >
     au < frozen ; exists ; 2013 ; Leadership & Management in Engineering Volume 13 ; 13 ; http://ascelibrary.org/ ; >
     
@@ -1401,8 +1402,8 @@
     au < manifest ; exists ; 2007 ; Natural Hazards Review Volume 8 ; 8 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2008 ; Natural Hazards Review Volume 9 ; 9 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2009 ; Natural Hazards Review Volume 10 ; 10 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2010 ; Natural Hazards Review Volume 11 ; 11 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2011 ; Natural Hazards Review Volume 12 ; 12 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2010 ; Natural Hazards Review Volume 11 ; 11 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2011 ; Natural Hazards Review Volume 12 ; 12 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2012 ; Natural Hazards Review Volume 13 ; 13 ; http://ascelibrary.org/ ; >
     au < frozen ; exists ; 2013 ; Natural Hazards Review Volume 14 ; 14 ; http://ascelibrary.org/ ; >
     au < finished ; finished ; 2014 ; Natural Hazards Review Volume 15 ; 15 ; http://ascelibrary.org/ ; reingest5.clockss.org:8082 >
@@ -1439,8 +1440,8 @@
     au < manifest ; exists ; 2007 ; Practice Periodical on Structural Design & Construction Volume 12 ; 12 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2008 ; Practice Periodical on Structural Design & Construction Volume 13 ; 13 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2009 ; Practice Periodical on Structural Design & Construction Volume 14 ; 14 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2010 ; Practice Periodical on Structural Design & Construction Volume 15 ; 15 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2011 ; Practice Periodical on Structural Design & Construction Volume 16 ; 16 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2010 ; Practice Periodical on Structural Design & Construction Volume 15 ; 15 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2011 ; Practice Periodical on Structural Design & Construction Volume 16 ; 16 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2012 ; Practice Periodical on Structural Design & Construction Volume 17 ; 17 ; http://ascelibrary.org/ ; >
     au < frozen ; exists ; 2013 ; Practice Periodical on Structural Design & Construction Volume 18 ; 18 ; http://ascelibrary.org/ ; >
     au < finished ; finished ; 2014 ; Practice Periodical on Structural Design & Construction Volume 19 ; 19 ; http://ascelibrary.org/ ; reingest1.clockss.org:8082 >
