@@ -1695,7 +1695,7 @@
     comment[journal_id] = cc
     #continues = 0160-4953
 
-    au < manifest ; exists ; 2018 ; Collection and Curation Volume 37 ; 37 ; >
+    au < notReady ; exists ; 2018 ; Collection and Curation Volume 37 ; 37 ; > #500 error https://www.emerald.com/insight/content/doi/10.1108/CC-08-2017-0037/full/html
     au < crawling ; exists ; 2019 ; Collection and Curation Volume 38 ; 38 ; >
     au < crawling ; exists ; 2020 ; Collection and Curation Volume 39 ; 39 ; >
 
@@ -2822,7 +2822,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Facilities Volume 34 ; 34 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Facilities Volume 35 ; 35 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Facilities Volume 36 ; 36 ; >
-    au < manifest ; exists ; 2019 ; Facilities Volume 37 ; 37 ; >
+    au < notReady ; exists ; 2019 ; Facilities Volume 37 ; 37 ; > #500 error https://www.emerald.com/insight/content/doi/10.1108/F-09-2018-0107/full/html
     au < crawling ; exists ; 2020 ; Facilities Volume 38 ; 38 ; >
 
   }
@@ -5544,7 +5544,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Social Economics Volume 44 ; 44 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Social Economics Volume 45 ; 45 ; >
     au < ready ; exists ; 2019 ; International Journal of Social Economics Volume 46 ; 46 ; >
-    au < manifest ; exists ; 2020 ; International Journal of Social Economics Volume 47 ; 47 ; >
+    au < notReady ; exists ; 2020 ; International Journal of Social Economics Volume 47 ; 47 ; > #500 error https://www.emerald.com/insight/proxy/img?link=/resource/id/urn:emeraldgroup.com:asset:id:article:10_1108_IJSE-05-2019-0310/urn:emeraldgroup.com:asset:id:binary:IJSE-05-2019-0310_mmc1.doc
 
   }
 
@@ -7090,7 +7090,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Fashion Marketing and Management Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Fashion Marketing and Management Volume 22 ; 22 ; >
     au < manifest ; exists ; 2019 ; Journal of Fashion Marketing and Management Volume 23 ; 23 ; >
-    au < manifest ; exists ; 2020 ; Journal of Fashion Marketing and Management Volume 24 ; 24 ; >
+    au < notReady ; exists ; 2020 ; Journal of Fashion Marketing and Management Volume 24 ; 24 ; > #500 error https://www.emerald.com/insight/content/doi/10.1108/JFMM-10-2018-0138/full/html
 
   }
 
@@ -7157,7 +7157,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Financial Economic Policy Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Financial Economic Policy Volume 10 ; 10 ; >
     au < ready ; exists ; 2019 ; Journal of Financial Economic Policy Volume 11 ; 11 ; >
-    au < manifest ; exists ; 2020 ; Journal of Financial Economic Policy Volume 12 ; 12 ; >
+    au < notReady ; exists ; 2020 ; Journal of Financial Economic Policy Volume 12 ; 12 ; > #500 error https://www.emerald.com/insight/content/doi/10.1108/JFEP-02-2019-0036/full/html
 
   }
 
@@ -9210,7 +9210,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Library Management Volume 38 ; 38 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Library Management Volume 39 ; 39 ; >
     au < crawling ; exists ; 2019 ; Library Management Volume 40 ; 40 ; >
-    au < manifest ; exists ; 2020 ; Library Management Volume 41 ; 41 ; >
+    au < notReady ; exists ; 2020 ; Library Management Volume 41 ; 41 ; > #500 error https://www.emerald.com/insight/content/doi/10.1108/LM-02-2017%200022/full/pdf?title=libraries-and-technology-canadian-and-malaysian-copyright-exceptions
 
   }
 
@@ -11337,31 +11337,29 @@
     comment[journal_id] = rr
     # online from 1997
 
-    au < manifest ; exists ; 1997 ; Reference Reviews Volume 11 ; 11 ; >
-    au < manifest ; exists ; 1998 ; Reference Reviews Volume 12 ; 12 ; >
-    au < manifest ; exists ; 1999 ; Reference Reviews Volume 13 ; 13 ; >
-    au < manifest ; exists ; 2000 ; Reference Reviews Volume 14 ; 14 ; >
-    au < manifest ; exists ; 2001 ; Reference Reviews Volume 15 ; 15 ; >
-    au < manifest ; exists ; 2002 ; Reference Reviews Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2003 ; Reference Reviews Volume 17 ; 17 ; >
-    au < manifest ; exists ; 2004 ; Reference Reviews Volume 18 ; 18 ; >
-    au < manifest ; exists ; 2005 ; Reference Reviews Volume 19 ; 19 ; >
-    au < manifest ; exists ; 2006 ; Reference Reviews Volume 20 ; 20 ; >
-    au < manifest ; exists ; 2007 ; Reference Reviews Volume 21 ; 21 ; >
-    au < manifest ; exists ; 2008 ; Reference Reviews Volume 22 ; 22 ; >
-    au < manifest ; exists ; 2009 ; Reference Reviews Volume 23 ; 23 ; >
-    au < manifest ; exists ; 2010 ; Reference Reviews Volume 24 ; 24 ; >
-    au < manifest ; exists ; 2011 ; Reference Reviews Volume 25 ; 25 ; >
-    au < manifest ; exists ; 2012 ; Reference Reviews Volume 26 ; 26 ; >
-    au < manifest ; exists ; 2013 ; Reference Reviews Volume 27 ; 27 ; >
+    au < notReady ; exists ; 1997 ; Reference Reviews Volume 11 ; 11 ; >
+    au < notReady ; exists ; 1998 ; Reference Reviews Volume 12 ; 12 ; >
+    au < notReady ; exists ; 1999 ; Reference Reviews Volume 13 ; 13 ; >
+    au < notReady ; exists ; 2000 ; Reference Reviews Volume 14 ; 14 ; > #no substance. Possibly abstracts only
+    au < notReady ; exists ; 2001 ; Reference Reviews Volume 15 ; 15 ; >
+    au < notReady ; exists ; 2002 ; Reference Reviews Volume 16 ; 16 ; >
+    au < notReady ; exists ; 2003 ; Reference Reviews Volume 17 ; 17 ; >
+    au < notReady ; exists ; 2004 ; Reference Reviews Volume 18 ; 18 ; >
+    au < notReady ; exists ; 2005 ; Reference Reviews Volume 19 ; 19 ; >
+    au < notReady ; exists ; 2006 ; Reference Reviews Volume 20 ; 20 ; >
+    au < notReady ; exists ; 2007 ; Reference Reviews Volume 21 ; 21 ; >
+    au < notReady ; exists ; 2008 ; Reference Reviews Volume 22 ; 22 ; >
+    au < notReady ; exists ; 2009 ; Reference Reviews Volume 23 ; 23 ; >
+    au < notReady ; exists ; 2010 ; Reference Reviews Volume 24 ; 24 ; >
+    au < notReady ; exists ; 2011 ; Reference Reviews Volume 25 ; 25 ; >
+    au < notReady ; exists ; 2012 ; Reference Reviews Volume 26 ; 26 ; >
+    au < notReady ; exists ; 2013 ; Reference Reviews Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Reference Reviews Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Reference Reviews Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Reference Reviews Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Reference Reviews Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Reference Reviews Volume 32 ; 32 ; >
-    au < exists ; exists ; 2019 ; Reference Reviews Volume 33 ; 33 ; >
-    au < expected ; exists ; 2020 ; Reference Reviews Volume 34 ; 34 ; >
-
+    #stopped publishing after 2018
   }
 
   {
@@ -11480,7 +11478,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Review of Behavioral Finance Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Review of Behavioral Finance Volume 10 ; 10 ; >
     au < manifest ; exists ; 2019 ; Review of Behavioral Finance Volume 11 ; 11 ; >
-    au < manifest ; exists ; 2020 ; Review of Behavioral Finance Volume 12 ; 12 ; >
+    au < notReady ; exists ; 2020 ; Review of Behavioral Finance Volume 12 ; 12 ; > #500 error https://www.emerald.com/insight/proxy/img?link=/resource/id/urn:emeraldgroup.com:asset:id:article:10_1108_RBF-01-2020-0013/urn:emeraldgroup.com:asset:id:binary:RBF-01-2020-0013_mmc001.docx
 
   }
 
