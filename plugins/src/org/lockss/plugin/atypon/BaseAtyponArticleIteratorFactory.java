@@ -66,9 +66,14 @@ ArticleMetadataExtractorFactory {
   
   // Only put the 'abs' in the pattern if used for primary; otherwise builder spews errors
   private static final String DEFAULT_PATTERN_TEMPLATE_WITH_ABSTRACT =
-      "\"^%sdoi/((abs|full|e?pdf|e?pdfplus)/)?[.0-9]+/\", base_url";
+    "\"^%sdoi/((abs|full|e?pdf|e?pdfplus)/)?[.0-9]+/(?!_suppl)\", base_url";
+    // If it ever turns out we want to not count Meeting Abstracts as Article files use this pattern which will
+    // exclude the urls with '_suppl' in the pattern. Which indicates a meeting abstract
+    //"\"^%sdoi/((abs|full|e?pdf|e?pdfplus)/)?[.0-9]+/[A-z]+[.0-9]+(?!_suppl)$\", base_url";
   private static final String DEFAULT_PATTERN_TEMPLATE =
-      "\"^%sdoi/((full|e?pdf|e?pdfplus)/)?[.0-9]+/\", base_url";
+    "\"^%sdoi/((full|e?pdf|e?pdfplus)/)?[.0-9]+/(?!_suppl)\", base_url";
+    // Ibid.
+    //"\"^%sdoi/((full|e?pdf|e?pdfplus)/)?[.0-9]+/[A-z]+[.0-9]+(?!_suppl)$\", base_url";
 
   // various aspects of an article
   // DOI's can have "/"s in the suffix
@@ -226,26 +231,27 @@ ArticleMetadataExtractorFactory {
     // leave the full-text as the priorities
     if (isAbstractOnly(au)) {
       builder.setFullTextFromRoles(
-          ArticleFiles.ROLE_FULL_TEXT_HTML,
           ArticleFiles.ROLE_FULL_TEXT_PDF,
+          ArticleFiles.ROLE_FULL_TEXT_HTML,
           ROLE_PDFPLUS,
           ArticleFiles.ROLE_ABSTRACT);
     } else {
       builder.setFullTextFromRoles(
-          ArticleFiles.ROLE_FULL_TEXT_HTML,
           ArticleFiles.ROLE_FULL_TEXT_PDF,
+          ArticleFiles.ROLE_FULL_TEXT_HTML,
           ROLE_PDFPLUS);
     }
 
     // The order in which we want to define what a PDF is 
     // if we only have PDFPLUS, that should become a FULL_TEXT_PDF
-    builder.setRoleFromOtherRoles(ArticleFiles.ROLE_FULL_TEXT_PDF,
+    builder.setRoleFromOtherRoles(
         ArticleFiles.ROLE_FULL_TEXT_PDF,
         ROLE_PDFPLUS); // this should be ROLE_PDFPLUS when it's defined
 
 
     // set the ROLE_ARTICLE_METADATA to the first one that exists 
-    builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA,
+    builder.setRoleFromOtherRoles(
+        ArticleFiles.ROLE_ARTICLE_METADATA,
         ArticleFiles.ROLE_CITATION_RIS,
         ArticleFiles.ROLE_ABSTRACT,
         ArticleFiles.ROLE_FULL_TEXT_HTML); // this could be doi/full/xxx or doi/xxx
