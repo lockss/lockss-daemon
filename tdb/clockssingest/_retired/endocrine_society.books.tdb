@@ -9,6 +9,7 @@
     comment[platform] = Atypon 
   >
 
+  provider = Oxford University Press
   plugin = org.lockss.plugin.atypon.endocrinesociety.ClockssEndocrineSocietyBooksPlugin
   param[base_url] = http://press.endocrine.org/
   #no longer exists, did not move to oup

@@ -5,6 +5,7 @@
   >
 
   #######**** When Endocrine Society moves to OUP, do not change publisher.
+  provider = Oxford University Press
 
   plugin = org.lockss.plugin.silverchair.oup.OupSilverchairPlugin
   implicit < status ; year ; volume ; name ; param[year] >
