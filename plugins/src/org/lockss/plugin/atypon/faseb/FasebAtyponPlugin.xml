@@ -68,12 +68,12 @@
     <string>org.lockss.plugin.atypon.BaseAtyponHttpToHttpsUrlConsumerFactory</string>
   </entry>
   -->
-  <!-- end changes for https conversion -->
-  <entry>
   <!-- markom updated FasebUrlConsumerFactory to be http<->https compliant -->
+  <entry>
     <string>plugin_url_consumer_factory</string>
     <string>org.lockss.plugin.atypon.faseb.FasebUrlConsumerFactory</string>
   </entry>
+  <!-- end changes for https conversion -->
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.atypon.faseb.FasebHtmlHashFilterFactory</string>
