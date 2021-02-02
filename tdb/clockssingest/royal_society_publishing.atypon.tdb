@@ -1636,73 +1636,73 @@
     {
     param[journal_id] = rspl1800
 
-    au < frozen ; exists ; 1832 ; Proceedings of the Royal Society of London Volume 1 ; 1 ; >
-    au < frozen ; exists ; 1833 ; Proceedings of the Royal Society of London Volume 2 ; 2 ; >
-    au < frozen ; exists ; 1837 ; Proceedings of the Royal Society of London Volume 3 ; 3 ; >
-    au < frozen ; exists ; 1843 ; Proceedings of the Royal Society of London Volume 4 ; 4 ; >
+    au < finished ; manifest ; 1832 ; Proceedings of the Royal Society of London Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1833 ; Proceedings of the Royal Society of London Volume 2 ; 2 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1837 ; Proceedings of the Royal Society of London Volume 3 ; 3 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1843 ; Proceedings of the Royal Society of London Volume 4 ; 4 ; reingest5.clockss.org:8082 >
     }
     {
     param[journal_id] = rspl1843
 
-    au < frozen ; exists ; 1851 ; Proceedings of the Royal Society of London Volume 5 ; 5 ; >
-    au < frozen ; exists ; 1854 ; Proceedings of the Royal Society of London Volume 6 ; 6 ; >
+    au < finished ; manifest ; 1851 ; Proceedings of the Royal Society of London Volume 5 ; 5 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1854 ; Proceedings of the Royal Society of London Volume 6 ; 6 ; reingest5.clockss.org:8082 >
     }
     {
     param[journal_id] = rspl
 
-    au < frozen ; exists ; 1856 ; Proceedings of the Royal Society of London Volume 7 ; 7 ; >
-    au < frozen ; exists ; 1857 ; Proceedings of the Royal Society of London Volume 8 ; 8 ; >
-    au < frozen ; exists ; 1859 ; Proceedings of the Royal Society of London Volume 9 ; 9 ; >
-    au < frozen ; exists ; 1860 ; Proceedings of the Royal Society of London Volume 10 ; 10 ; >
-    au < frozen ; exists ; 1862 ; Proceedings of the Royal Society of London Volume 11 ; 11 ; >
-    au < frozen ; exists ; 1863 ; Proceedings of the Royal Society of London Volume 12 ; 12 ; >
+    au < finished ; manifest ; 1856 ; Proceedings of the Royal Society of London Volume 7 ; 7 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1857 ; Proceedings of the Royal Society of London Volume 8 ; 8 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1859 ; Proceedings of the Royal Society of London Volume 9 ; 9 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1860 ; Proceedings of the Royal Society of London Volume 10 ; 10 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1862 ; Proceedings of the Royal Society of London Volume 11 ; 11 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1863 ; Proceedings of the Royal Society of London Volume 12 ; 12 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 1864 ; Proceedings of the Royal Society of London Volume 13 ; 13 ; >
-    au < frozen ; exists ; 1865 ; Proceedings of the Royal Society of London Volume 14 ; 14 ; >
-    au < frozen ; exists ; 1867 ; Proceedings of the Royal Society of London Volume 15 ; 15 ; >
-    au < frozen ; exists ; 1868 ; Proceedings of the Royal Society of London Volume 16 ; 16 ; >
-    au < frozen ; exists ; 1869 ; Proceedings of the Royal Society of London Volume 17 ; 17 ; >
-    au < frozen ; exists ; 1870 ; Proceedings of the Royal Society of London Volume 18 ; 18 ; >
-    au < frozen ; exists ; 1871 ; Proceedings of the Royal Society of London Volume 19 ; 19 ; >
-    au < frozen ; exists ; 1872 ; Proceedings of the Royal Society of London Volume 20 ; 20 ; >
-    au < frozen ; exists ; 1873 ; Proceedings of the Royal Society of London Volume 21 ; 21 ; >
-    au < frozen ; exists ; 1874 ; Proceedings of the Royal Society of London Volume 22 ; 22 ; >
-    au < frozen ; exists ; 1875 ; Proceedings of the Royal Society of London Volume 23 ; 23 ; >
-    au < frozen ; exists ; 1876 ; Proceedings of the Royal Society of London Volume 24 ; 24 ; >
-    au < frozen ; exists ; 1877 ; Proceedings of the Royal Society of London Volume 25 ; 25 ; >
-    au < frozen ; exists ; 1878 ; Proceedings of the Royal Society of London Volume 26 ; 26 ; >
-    au < frozen ; exists ; 1878 ; Proceedings of the Royal Society of London Volume 27 ; 27 ; >
-    au < frozen ; exists ; 1879 ; Proceedings of the Royal Society of London Volume 28 ; 28 ; >
+    au < finished ; manifest ; 1865 ; Proceedings of the Royal Society of London Volume 14 ; 14 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1867 ; Proceedings of the Royal Society of London Volume 15 ; 15 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1868 ; Proceedings of the Royal Society of London Volume 16 ; 16 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1869 ; Proceedings of the Royal Society of London Volume 17 ; 17 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1870 ; Proceedings of the Royal Society of London Volume 18 ; 18 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1871 ; Proceedings of the Royal Society of London Volume 19 ; 19 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1872 ; Proceedings of the Royal Society of London Volume 20 ; 20 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1873 ; Proceedings of the Royal Society of London Volume 21 ; 21 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1874 ; Proceedings of the Royal Society of London Volume 22 ; 22 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1875 ; Proceedings of the Royal Society of London Volume 23 ; 23 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1876 ; Proceedings of the Royal Society of London Volume 24 ; 24 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1877 ; Proceedings of the Royal Society of London Volume 25 ; 25 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1878 ; Proceedings of the Royal Society of London Volume 26 ; 26 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1878 ; Proceedings of the Royal Society of London Volume 27 ; 27 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1879 ; Proceedings of the Royal Society of London Volume 28 ; 28 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 1879 ; Proceedings of the Royal Society of London Volume 29 ; 29 ; >
-    au < frozen ; exists ; 1880 ; Proceedings of the Royal Society of London Volume 30 ; 30 ; >
+    au < finished ; manifest ; 1880 ; Proceedings of the Royal Society of London Volume 30 ; 30 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 1881 ; Proceedings of the Royal Society of London Volume 31 ; 31 ; >
     au < crawling ; exists ; 1881 ; Proceedings of the Royal Society of London Volume 32 ; 32 ; >
-    au < frozen ; exists ; 1882 ; Proceedings of the Royal Society of London Volume 33 ; 33 ; >
-    au < frozen ; exists ; 1883 ; Proceedings of the Royal Society of London Volume 34 ; 34 ; >
-    au < frozen ; exists ; 1883 ; Proceedings of the Royal Society of London Volume 35 ; 35 ; >
-    au < frozen ; exists ; 1884 ; Proceedings of the Royal Society of London Volume 36 ; 36 ; >
-    au < frozen ; exists ; 1884 ; Proceedings of the Royal Society of London Volume 37 ; 37 ; >
-    au < frozen ; exists ; 1885 ; Proceedings of the Royal Society of London Volume 38 ; 38 ; >
+    au < finished ; manifest ; 1882 ; Proceedings of the Royal Society of London Volume 33 ; 33 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1883 ; Proceedings of the Royal Society of London Volume 34 ; 34 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1883 ; Proceedings of the Royal Society of London Volume 35 ; 35 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1884 ; Proceedings of the Royal Society of London Volume 36 ; 36 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1884 ; Proceedings of the Royal Society of London Volume 37 ; 37 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1885 ; Proceedings of the Royal Society of London Volume 38 ; 38 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 1886 ; Proceedings of the Royal Society of London Volume 39 ; 39 ; >
-    au < frozen ; exists ; 1886 ; Proceedings of the Royal Society of London Volume 40 ; 40 ; >
-    au < frozen ; exists ; 1887 ; Proceedings of the Royal Society of London Volume 41 ; 41 ; >
-    au < frozen ; exists ; 1887 ; Proceedings of the Royal Society of London Volume 42 ; 42 ; >
-    au < frozen ; exists ; 1888 ; Proceedings of the Royal Society of London Volume 43 ; 43 ; >
-    au < frozen ; exists ; 1888 ; Proceedings of the Royal Society of London Volume 44 ; 44 ; >
-    au < frozen ; exists ; 1889 ; Proceedings of the Royal Society of London Volume 45 ; 45 ; >
+    au < finished ; manifest ; 1886 ; Proceedings of the Royal Society of London Volume 40 ; 40 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1887 ; Proceedings of the Royal Society of London Volume 41 ; 41 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1887 ; Proceedings of the Royal Society of London Volume 42 ; 42 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1888 ; Proceedings of the Royal Society of London Volume 43 ; 43 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1888 ; Proceedings of the Royal Society of London Volume 44 ; 44 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1889 ; Proceedings of the Royal Society of London Volume 45 ; 45 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 1890 ; Proceedings of the Royal Society of London Volume 46 ; 46 ; >
-    au < frozen ; exists ; 1890 ; Proceedings of the Royal Society of London Volume 47 ; 47 ; >
+    au < finished ; manifest ; 1890 ; Proceedings of the Royal Society of London Volume 47 ; 47 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 1890 ; Proceedings of the Royal Society of London Volume 48 ; 48 ; >
     au < crawling ; exists ; 1891 ; Proceedings of the Royal Society of London Volume 49 ; 49 ; >
-    au < frozen ; exists ; 1892 ; Proceedings of the Royal Society of London Volume 50 ; 50 ; >
-    au < frozen ; exists ; 1892 ; Proceedings of the Royal Society of London Volume 51 ; 51 ; >
+    au < finished ; manifest ; 1892 ; Proceedings of the Royal Society of London Volume 50 ; 50 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1892 ; Proceedings of the Royal Society of London Volume 51 ; 51 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 1893 ; Proceedings of the Royal Society of London Volume 52 ; 52 ; >
-    au < frozen ; exists ; 1893 ; Proceedings of the Royal Society of London Volume 53 ; 53 ; >
-    au < frozen ; exists ; 1894 ; Proceedings of the Royal Society of London Volume 54 ; 54 ; >
-    au < frozen ; exists ; 1894 ; Proceedings of the Royal Society of London Volume 55 ; 55 ; >
+    au < finished ; manifest ; 1893 ; Proceedings of the Royal Society of London Volume 53 ; 53 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1894 ; Proceedings of the Royal Society of London Volume 54 ; 54 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1894 ; Proceedings of the Royal Society of London Volume 55 ; 55 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 1894 ; Proceedings of the Royal Society of London Volume 56 ; 56 ; >
-    au < frozen ; exists ; 1895 ; Proceedings of the Royal Society of London Volume 57 ; 57 ; >
-    au < frozen ; exists ; 1895 ; Proceedings of the Royal Society of London Volume 58 ; 58 ; >
-    au < frozen ; exists ; 1896 ; Proceedings of the Royal Society of London Volume 59 ; 59 ; >
+    au < finished ; manifest ; 1895 ; Proceedings of the Royal Society of London Volume 57 ; 57 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1895 ; Proceedings of the Royal Society of London Volume 58 ; 58 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1896 ; Proceedings of the Royal Society of London Volume 59 ; 59 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 1897 ; Proceedings of the Royal Society of London Volume 60 ; 60 ; >
     au < doNotProcess ; doNotProcess ; 1897 ; Proceedings of the Royal Society of London Volume 61 ; 61 ; >
     au < doNotProcess ; doNotProcess ; 1898 ; Proceedings of the Royal Society of London Volume 62 ; 62 ; >
