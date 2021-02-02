@@ -62,12 +62,15 @@
     <string>plugin_url_fetcher_factory</string>
     <string>org.lockss.plugin.atypon.BaseAtyponHttpToHttpsUrlFetcherFactory</string>
   </entry>
+  <!-- Unnecessary, Faseb has it's own Consumer
   <entry>
     <string>plugin_url_consumer_factory</string>
     <string>org.lockss.plugin.atypon.BaseAtyponHttpToHttpsUrlConsumerFactory</string>
   </entry>
+  -->
   <!-- end changes for https conversion -->
   <entry>
+  <!-- markom updated FasebUrlConsumerFactory to be http<->https compliant -->
     <string>plugin_url_consumer_factory</string>
     <string>org.lockss.plugin.atypon.faseb.FasebUrlConsumerFactory</string>
   </entry>

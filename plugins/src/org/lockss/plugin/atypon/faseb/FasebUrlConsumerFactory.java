@@ -40,6 +40,7 @@ import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.SimpleUrlConsumer;
 import org.lockss.util.Logger;
+import org.lockss.util.UrlUtil;
 
 /**
  * <p>
@@ -82,7 +83,17 @@ public class FasebUrlConsumerFactory implements UrlConsumerFactory {
      */
     public boolean shouldStoreAtOrigUrl() throws IOException {
       boolean should = false;
-      
+
+      // do Http to Https checks
+      should = AuUtil.isBaseUrlHttp(au)
+          && fud.redirectUrls != null
+          && fud.redirectUrls.size() == 1
+          && fud.fetchUrl.equals(fud.redirectUrls.get(0))
+          && UrlUtil.isHttpUrl(fud.origUrl)
+          && UrlUtil.isHttpsUrl(fud.fetchUrl)
+          && UrlUtil.stripProtocol(fud.origUrl).equals(UrlUtil.stripProtocol(fud.fetchUrl));
+
+      // do the additional 'should' check specific to Faseb
       if (fud.redirectUrls != null && (fud.redirectUrls.size() > 0)) {
         //the fetched = original or fetched is from cdn
         if (fud.fetchUrl.equals(fud.origUrl) ||
