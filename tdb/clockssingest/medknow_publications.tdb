@@ -614,7 +614,7 @@
     au < finished ; manifest ; 2017 ; Dental Research Journal Volume 14 ; 2017 ; 14 ; http://www.drjjournal.net/ ; ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Dental Research Journal Volume 15 ; 2018 ; 15 ; http://www.drjjournal.net/ ; ; >
     au < manifest ; exists ; 2019 ; Dental Research Journal Volume 16 ; 2019 ; 16 ; https://www.drjjournal.net/ ; ; >
-    au < ready ; exists ; 2020 ; Dental Research Journal Volume 17 ; 2020 ; 17 ; https://www.drjjournal.net/ ; ; >
+    au < crawling ; exists ; 2020 ; Dental Research Journal Volume 17 ; 2020 ; 17 ; https://www.drjjournal.net/ ; ; >
 
   }
 
@@ -760,7 +760,7 @@
     au < finished ; frozen ; 2017 ; Indian Journal of Cancer Volume 54 ; 2017 ; 54 ; http://www.indianjcancer.com/ ; ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Indian Journal of Cancer Volume 55 ; 2018 ; 55 ; http://www.indianjcancer.com/ ; ; >
     au < manifest ; exists ; 2019 ; Indian Journal of Cancer Volume 56 ; 2019 ; 56 ; https://www.indianjcancer.com/ ; ; >
-    au < ready ; exists ; 2020 ; Indian Journal of Cancer Volume 57 ; 2020 ; 57 ; https://www.indianjcancer.com/ ; ; >
+    au < crawling ; exists ; 2020 ; Indian Journal of Cancer Volume 57 ; 2020 ; 57 ; https://www.indianjcancer.com/ ; ; >
 
   }
 
@@ -1211,7 +1211,7 @@
     au < finished ; frozen ; 2017 ; Indian Journal of Nephrology Volume 27 ; 2017 ; 27 ; http://www.indianjnephrol.org/ ; ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Indian Journal of Nephrology Volume 28 ; 2018 ; 28 ; http://www.indianjnephrol.org/ ; ; >
     au < manifest ; exists ; 2019 ; Indian Journal of Nephrology Volume 29 ; 2019 ; 29 ; https://www.indianjnephrol.org/ ; ; >
-    au < ready ; exists ; 2020 ; Indian Journal of Nephrology Volume 30 ; 2020 ; 30 ; https://www.indianjnephrol.org/ ; ; >
+    au < crawling ; exists ; 2020 ; Indian Journal of Nephrology Volume 30 ; 2020 ; 30 ; https://www.indianjnephrol.org/ ; ; >
 
   }
 
@@ -1855,7 +1855,7 @@
     au < finished ; manifest ; 2017 ; Indian Journal of Public Health Volume 61 ; 2017 ; 61 ; http://www.ijph.in/ ; ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Indian Journal of Public Health Volume 62 ; 2018 ; 62 ; http://www.ijph.in/ ; ; >
     au < manifest ; exists ; 2019 ; Indian Journal of Public Health Volume 63 ; 2019 ; 63 ; https://www.ijph.in/ ; ; >
-    au < ready ; exists ; 2020 ; Indian Journal of Public Health Volume 64 ; 2020 ; 64 ; https://www.ijph.in/ ; ; >
+    au < crawling ; exists ; 2020 ; Indian Journal of Public Health Volume 64 ; 2020 ; 64 ; https://www.ijph.in/ ; ; >
 
   }
 
@@ -1892,7 +1892,7 @@
     au < finished ; frozen ; 2017 ; Indian Journal of Radiology and Imaging Volume 27 ; 2017 ; 27 ; http://www.ijri.org/ ; ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Indian Journal of Radiology and Imaging Volume 28 ; 2018 ; 28 ; http://www.ijri.org/ ; ; >
     au < manifest ; exists ; 2019 ; Indian Journal of Radiology and Imaging Volume 29 ; 2019 ; 29 ; https://www.ijri.org/ ; ; >
-    au < ready ; exists ; 2020 ; Indian Journal of Radiology and Imaging Volume 30 ; 2020 ; 30 ; https://www.ijri.org/ ; ; >
+    au < crawling ; exists ; 2020 ; Indian Journal of Radiology and Imaging Volume 30 ; 2020 ; 30 ; https://www.ijri.org/ ; ; >
 
   }
 
@@ -2039,7 +2039,7 @@
     au < finished ; frozen ; 2017 ; Industrial Psychiatry Journal Volume 26 ; 2017 ; 26 ; http://www.industrialpsychiatry.org/ ; ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Industrial Psychiatry Journal Volume 27 ; 2018 ; 27 ; http://www.industrialpsychiatry.org/ ; ; >
     au < manifest ; exists ; 2019 ; Industrial Psychiatry Journal Volume 28 ; 2019 ; 28 ; https://www.industrialpsychiatry.org/ ; ; >
-    au < ready ; exists ; 2020 ; Industrial Psychiatry Journal Volume 29 ; 2020 ; 29 ; https://www.industrialpsychiatry.org/ ; ; >
+    au < crawling ; exists ; 2020 ; Industrial Psychiatry Journal Volume 29 ; 2020 ; 29 ; https://www.industrialpsychiatry.org/ ; ; >
 
   }
 
@@ -2104,7 +2104,7 @@
     au < finished ; finished ; 2017 ; International Journal of Critical Illness and Injury Science Volume 7 ; 2017 ; 7 ; http://www.ijciis.org/ ; ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; International Journal of Critical Illness and Injury Science Volume 8 ; 2018 ; 8 ; http://www.ijciis.org/ ; ; >
     au < manifest ; exists ; 2019 ; International Journal of Critical Illness and Injury Science Volume 9 ; 2019 ; 9 ; https://www.ijciis.org/ ; ; >
-    au < ready ; exists ; 2020 ; International Journal of Critical Illness and Injury Science Volume 10 ; 2020 ; 10 ; https://www.ijciis.org/ ; ; >
+    au < crawling ; exists ; 2020 ; International Journal of Critical Illness and Injury Science Volume 10 ; 2020 ; 10 ; https://www.ijciis.org/ ; ; >
 
   }
 
@@ -3976,7 +3976,7 @@
     au < finished ; finished ; 2017 ; Noise and Health Volume 19 ; 2017 ; 19 ; http://www.noiseandhealth.org/ ; ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Noise and Health Volume 20 ; 2018 ; 20 ; http://www.noiseandhealth.org/ ; ; >
     au < manifest ; exists ; 2019 ; Noise and Health Volume 21 ; 2019 ; 21 ; https://www.noiseandhealth.org/ ; ; >
-    au < ready ; exists ; 2020 ; Noise and Health Volume 22 ; 2020 ; 22 ; https://www.noiseandhealth.org/ ; ; >
+    au < crawling ; exists ; 2020 ; Noise and Health Volume 22 ; 2020 ; 22 ; https://www.noiseandhealth.org/ ; ; >
 
   }
 
@@ -5229,7 +5229,7 @@
       au < finished ; manifest ; 2017 ; Dental Hypotheses Volume 8 ; 2017 ; 8 ; http://www.dentalhypotheses.com/ ; ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2018 ; Dental Hypotheses Volume 9 ; 2018 ; 9 ; http://www.dentalhypotheses.com/ ; ; >
       au < manifest ; exists ; 2019 ; Dental Hypotheses Volume 10 ; 2019 ; 10 ; https://www.dentalhypotheses.com/ ; ; >
-      au < ready ; exists ; 2020 ; Dental Hypotheses Volume 11 ; 2020 ; 11 ; https://www.dentalhypotheses.com/ ; ; >
+      au < crawling ; exists ; 2020 ; Dental Hypotheses Volume 11 ; 2020 ; 11 ; https://www.dentalhypotheses.com/ ; ; >
 
   }
 
@@ -6002,7 +6002,7 @@
       au < finished ; frozen ; 2017 ; Indian Journal of Vascular and Endovascular Surgery Volume 4 ; 2017 ; 4 ; http://www.indjvascsurg.org/ ; ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018 ; Indian Journal of Vascular and Endovascular Surgery Volume 5 ; 2018 ; 5 ; http://www.indjvascsurg.org/ ; ; >
       au < manifest ; exists ; 2019 ; Indian Journal of Vascular and Endovascular Surgery Volume 6 ; 2019 ; 6 ; https://www.indjvascsurg.org/ ; ; >
-      au < ready ; exists ; 2020 ; Indian Journal of Vascular and Endovascular Surgery Volume 7 ; 2020 ; 7 ; https://www.indjvascsurg.org/ ; ; >
+      au < crawling ; exists ; 2020 ; Indian Journal of Vascular and Endovascular Surgery Volume 7 ; 2020 ; 7 ; https://www.indjvascsurg.org/ ; ; >
 
   }
 
@@ -6946,7 +6946,7 @@
       au < finished ; finished ; 2017 ; Journal of Medicine in the Tropics Volume 19 ; 2017 ; 19 ; http://www.jmedtropics.org/ ; ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2018 ; Journal of Medicine in the Tropics Volume 20 ; 2018 ; 20 ; http://www.jmedtropics.org/ ; ; >
       au < manifest ; exists ; 2019 ; Journal of Medicine in the Tropics Volume 21 ; 2019 ; 21 ; https://www.jmedtropics.org/ ; ; >
-      au < ready ; exists ; 2020 ; Journal of Medicine in the Tropics Volume 22 ; 2020 ; 22 ; https://www.jmedtropics.org/ ; ; >
+      au < crawling ; exists ; 2020 ; Journal of Medicine in the Tropics Volume 22 ; 2020 ; 22 ; https://www.jmedtropics.org/ ; ; >
 
   }
 
@@ -7342,7 +7342,7 @@
       au < finished ; frozen ; 2017 ; Journal of the Practice of Cardiovascular Sciences Volume 3 ; 2017 ; 3 ; http://www.j-pcs.org/ ; ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018 ; Journal of the Practice of Cardiovascular Sciences Volume 4 ; 2018 ; 4 ; http://www.j-pcs.org/ ; ; >
       au < manifest ; exists ; 2019 ; Journal of the Practice of Cardiovascular Sciences Volume 5 ; 2019 ; 5 ; https://www.j-pcs.org/ ; ; >
-      au < ready ; exists ; 2020 ; Journal of the Practice of Cardiovascular Sciences Volume 6 ; 2020 ; 6 ; https://www.j-pcs.org/ ; ; >
+      au < crawling ; exists ; 2020 ; Journal of the Practice of Cardiovascular Sciences Volume 6 ; 2020 ; 6 ; https://www.j-pcs.org/ ; ; >
 
   }
 
@@ -9278,7 +9278,7 @@
       au < manifest ; exists ; 2017 ; Indian Anaesthetists' Forum Volume 18 ; 2017 ; 18 ; https://www.theiaforum.org/ ; ; >
       au < manifest ; exists ; 2018 ; Indian Anaesthetists' Forum Volume 19 ; 2018 ; 19 ; https://www.theiaforum.org/ ; ; >
       au < manifest ; exists ; 2019 ; Indian Anaesthetists' Forum Volume 20 ; 2019 ; 20 ; https://www.theiaforum.org/ ; ; >
-      au < ready ; exists ; 2020 ; Indian Anaesthetists' Forum Volume 21 ; 2020 ; 21 ; https://www.theiaforum.org/ ; ; >
+      au < crawling ; exists ; 2020 ; Indian Anaesthetists' Forum Volume 21 ; 2020 ; 21 ; https://www.theiaforum.org/ ; ; >
 
   }
 
@@ -9351,7 +9351,7 @@
       au < manifest ; exists ; 2017 ; Indian Journal of Transplantation Volume 11 ; 2017 ; 11 ; https://www.ijtonline.in/ ; ; >
       au < manifest ; exists ; 2018 ; Indian Journal of Transplantation Volume 12 ; 2018 ; 12 ; https://www.ijtonline.in/ ; ; >
       au < manifest ; exists ; 2019 ; Indian Journal of Transplantation Volume 13 ; 2019 ; 13 ; https://www.ijtonline.in/ ; ; >
-      au < ready ; exists ; 2020 ; Indian Journal of Transplantation Volume 14 ; 2020 ; 14 ; https://www.ijtonline.in/ ; ; >
+      au < crawling ; exists ; 2020 ; Indian Journal of Transplantation Volume 14 ; 2020 ; 14 ; https://www.ijtonline.in/ ; ; >
 
   }
 
