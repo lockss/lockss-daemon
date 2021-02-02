@@ -89,13 +89,13 @@ public class ResPediatricaOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
   @Override
   protected Collection<String> getRecordList(ListRecordsParameters params)
 		  throws ConfigurationException, IOException {
-      logger.debug3("Fei - auid: " + au.getAuId() + ", encoded auid:" + UrlUtil.encodeUrl(au.getAuId()));
+      logger.debug3(" auid: " + au.getAuId() + ", encoded auid:" + UrlUtil.encodeUrl(au.getAuId()));
 
       String url = UrlUtil.encodeUrl(au.getAuId());
 
       String storeUrl = baseUrl + "auid=" + UrlUtil.encodeUrl(au.getAuId());
 
-      logger.debug3("Fei: baseUrl = " + baseUrl + ", url = " + url + ", storeUrl = " + storeUrl);
+      logger.debug3("baseUrl = " + baseUrl + ", url = " + url + ", storeUrl = " + storeUrl);
 
       String link;
       Boolean error = false;
@@ -109,18 +109,18 @@ public class ResPediatricaOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
                   if (rec != null) {
                       MetadataSearch<String> metaSearch =
                               rec.getMetadata().getValue().searcher();
-                      logger.debug3("Fei: - inside Try , inside for");
+                      logger.debug3("- inside Try , inside for");
                       if (checkMetaRules(metaSearch)) {
                           link = findRecordArticleLink(rec);
                           if (link != null) {
-                              logger.debug3("Fei: - link = %s" + link);
+                              logger.debug3("- link = %s" + link);
                               idSet.add(link);
                           } else {
-                              logger.debug3("Fei: - empty link");
+                              logger.debug3("- empty link");
                           }
                       }
                   } else {
-                      logger.debug3("Fei: - recIter is not null, but rec is null");
+                      logger.debug3("- recIter is not null, but rec is null");
                   }
               }
           }
@@ -203,24 +203,24 @@ public class ResPediatricaOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
           Matcher yearMatch = yearPattern.matcher(value);
           if(yearMatch.find()) {
             subYear = yearMatch.group(1);
-            logger.debug3("Fei: subYear = " + subYear + " value = " + value + ", expected year = " + year);
+            logger.debug3("subYear = " + subYear + " value = " + value + ", expected year = " + year);
             if(year == Integer.parseInt(subYear)) {
-                logger.debug3("Fei: subYear = " + subYear + " value = " + value + " === expected year = " + year);
+                logger.debug3("subYear = " + subYear + " value = " + value + " === expected year = " + year);
               return true;
             }
             return false;
           }
         } catch(NumberFormatException|IllegalStateException ex) {
-            logger.debug3("Fei: yearPattern match does not expectation");
+            logger.debug3("yearPattern match does not expectation");
         }
       }
     } else if (matchingTags!= null) {
-        logger.debug3("Fei: matchingTags is not null, checkMetaRules metaSearch = " + metaSearch);
+        logger.debug3("matchingTags is not null, checkMetaRules metaSearch = " + metaSearch);
         for(String value : matchingTags) {
-            logger.debug3("Fei: checkMetaRules metaSearch value = " + value);
+            logger.debug3("checkMetaRules metaSearch value = " + value);
         }
     } else if (matchingTags == null) {
-        logger.debug3("Fei: matchingTags is NULL, checkMetaRules metaSearch = " + metaSearch);
+        logger.debug3("matchingTags is NULL, checkMetaRules metaSearch = " + metaSearch);
     }
     return false;
   }

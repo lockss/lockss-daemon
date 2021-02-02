@@ -150,13 +150,13 @@ public abstract class BaseOaiPmhCrawlSeed extends BaseCrawlSeed {
       }
     }
     if(config.containsKey(KEY_AU_OAI_GRANULARITY)) {
-      logger.debug3("Fei - KEY_AU_OAI_GRANULARITY is set");
+      logger.debug3(" KEY_AU_OAI_GRANULARITY is set");
       if(!setGranularity(config.get(KEY_AU_OAI_GRANULARITY))) {
         throw new ConfigurationException(KEY_AU_OAI_GRANULARITY + 
                                          " must be " + Granularity.Day + 
                                          " or " + Granularity.Second);
       }  else {
-        logger.debug3("Fei - granularity is set to : " + config.get(KEY_AU_OAI_GRANULARITY));
+        logger.debug3(" granularity is set to : " + config.get(KEY_AU_OAI_GRANULARITY));
       }
     }
       
@@ -170,7 +170,7 @@ public abstract class BaseOaiPmhCrawlSeed extends BaseCrawlSeed {
    */
   protected void setDates(int year) throws ConfigurationException {
     setDates(year + YEAR_START_POSTFIX, year  + YEAR_END_POSTFIX);
-    logger.debug3("Fei - setDates: from " + year + YEAR_START_POSTFIX + " until" + (year + 1) + YEAR_END_POSTFIX);
+    logger.debug3(" setDates: from " + year + YEAR_START_POSTFIX + " until" + (year + 1) + YEAR_END_POSTFIX);
   }
   
   /**
@@ -188,7 +188,7 @@ public abstract class BaseOaiPmhCrawlSeed extends BaseCrawlSeed {
     this.from = parseDate(from, df, "from");
     this.until = parseDate(until, df, "until");
 
-    logger.debug3("Fei - setRange:  from = " + this.from + ", until = " + this.until);
+    logger.debug3(" setRange:  from = " + this.from + ", until = " + this.until);
   }
 
   

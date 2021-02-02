@@ -127,14 +127,14 @@ public abstract class RecordFilteringOaiPmhCrawlSeed extends BaseOaiPmhCrawlSeed
       lip.withFrom(from);
       lip.withUntil(until);
 
-      logger.debug3("Fei - buildParams from = " + from + ", until = " + until);
+      logger.debug3(" buildParams from = " + from + ", until = " + until);
     }
     if (usesSet && !set.equals(NULL_SET)) {
       lip.withSetSpec(set);
     }
     if (usesGranularity) {
       lip.withGranularity("YYYY-MM-DD");
-      logger.debug3("Fei - buildParams granularity set granularity");
+      logger.debug3(" buildParams granularity set granularity");
     }
     return lip;
   }
@@ -176,7 +176,7 @@ public abstract class RecordFilteringOaiPmhCrawlSeed extends BaseOaiPmhCrawlSeed
   @Override
   public Collection<String> doGetStartUrls() throws ConfigurationException,
                                           PluginException, IOException {
-    logger.debug3("Fei: doGetStartUrls...");
+    logger.debug3(" doGetStartUrls...");
     return getRecordList(buildParams());
   }
 }
