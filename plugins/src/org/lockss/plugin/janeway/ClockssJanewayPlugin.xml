@@ -29,15 +29,15 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Janeway Plugin (CLOCKSS), Base URL %s, Journal ID %s, Issue No %s", base_url, journal_id, issue_no</string>
+    <string>"Janeway Plugin (CLOCKSS), Base URL %s, Journal ID %s, Year %d, OAI Granularity %s", base_url, journal_id, year, oai_granularity</string>
   </entry>
   <entry>
     <string>clockss_override</string>
     <map>
-     <entry>
+      <entry>
         <string>au_def_pause_time</string>
         <long>100</long>
-     </entry>
+      </entry>
     </map>
-  </entry>  
+  </entry>
 </map>

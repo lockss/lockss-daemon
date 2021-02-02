@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>down</string>
+    <string>development</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -37,15 +37,11 @@
     <string>Janeway</string>
   </entry>
   <entry>
-    <string>au_name</string>
-    <string>"Janeway Plugin, Base URL %s, Journal ID %s, Issue No %s", base_url, journal_id, issue_no</string>
-  </entry>
-  <entry>
     <string>plugin_config_props</string>
     <list>
       <org.lockss.daemon.ConfigParamDescr>
         <key>base_url</key>
-        <displayName>Base URL</displayName>
+        <displayName>Base URLs</displayName>
         <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
         <type>3</type>
         <size>40</size>
@@ -62,15 +58,39 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
-        <key>issue_no</key>
-        <displayName>Issue No. (e.g. 1, 6-7)</displayName>
-        <description></description>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>oai_granularity</key>
+        <displayName>OAI Granularity</displayName>
+        <description>Rules to filter records based upon granularity, use "YYYY-MM-DD"</description>
         <type>1</type>
-        <size>10</size>
+        <size>128</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
     </list>
+  </entry>
+  <!--This version need an OAI library-->
+  <entry>
+    <string>required_daemon_version</string>
+    <string>1.75.0</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Janeway Plugin, Base URL %s, Journal ID %s, Year %d, OAI Granularity %s", base_url, journal_id, year, oai_granularity</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <!--https://www.iastatedigitalpress.com/aglawdigest/api/oai?verb=ListRecords&metadataPrefix=oai_dc&from=2019-01-01&until=2019-12-31-->
+    <!--https://orbit.openlibhums.org/api/oai/?verb=ListRecords&metadataPrefix=oai_dc&from=2019-01-01&until=2019-12-31-->
+    <string>"%s%s/api/oai?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;from=%d-01-01&amp;until=%d-12-31", base_url, journal_id, year, year</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
@@ -82,7 +102,7 @@
       <string>1,"https://cdnjs.cloudflare.com/.+\.(css|js)"</string>
       <string>1,"https://use.typekit.net/.*\.js"</string>
       <string>1,"https://maxcdn.bootstrapcdn.com/.+\.css"</string>
-      <string>1, "%s%s/issue/%s/info/", base_url, journal_id, issue_no</string>
+      <string>1, "%s%s/issue/[^/]+/info/", base_url, journal_id</string>
       <string>1, "%s%s/article/", base_url, journal_id</string>
       <string>1, "%s(static|media/cover_images)/", base_url</string>
     </list>
@@ -90,8 +110,13 @@
  <entry>
      <string>au_substance_url_pattern</string>
    <!-- https://www.iastatedigitalpress.com/aglawdigest/article/8101/galley/7872/download -->
-     <string>"%s%s/article.+/download$", base_url, journal_id,</string>
+     <string>"%s[^/]+/article.+/download$", base_url</string>
   </entry>
+  <entry>
+    <string>plugin_crawl_seed_factory</string>
+    <string>org.lockss.plugin.janeway.JanewayOaiCrawlSeedFactory</string>
+  </entry>
+  <!--
   <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.janeway.JanewayArticleIteratorFactory</string>
@@ -109,6 +134,7 @@
       </entry>
     </map>
   </entry>
+  -->
   <entry>
     <string>au_def_new_content_crawl</string>
     <long>1209600000</long>
