@@ -100,8 +100,10 @@
   <entry>
     <string>au_start_url</string>
     <list>
-      <string>"%scontent/%s?format=lockss&amp;volume=%s", base_url, journal_issn, volume_name</string>
-      <string>"%scontent/%s?format=lockss&amp;volume=%s", api_url, journal_issn, volume_name</string>
+      <string>"%scontent/%s?format=lockss&amp;volume=%s", to_http(base_url), journal_issn, volume_name</string>
+      <string>"%scontent/%s?format=lockss&amp;volume=%s", to_https(base_url), journal_issn, volume_name</string>
+      <string>"%scontent/%s?format=lockss&amp;volume=%s", to_http(api_url), journal_issn, volume_name</string>
+      <string>"%scontent/%s?format=lockss&amp;volume=%s", to_https(api_url), journal_issn, volume_name</string>
       <!--  graphics.ingentaconnect.com doesn't appear to ever have been needed. Weight to zero --> 
       <!--  if necessary we can put it in as a CDN for legacy content but no old AUs had anything other than permission -->
       <!-- <string>"%slockss.txt", graphics_url</string> -->
@@ -187,7 +189,7 @@
   </entry>
   <entry>
     <string>au_url_normalizer</string>
-    <string>org.lockss.plugin.BaseUrlHttpHttpsUrlNormalizer</string>
+    <string>org.lockss.plugin.ingenta.IngentaHttpHttpsUrlNormalizer</string>
   </entry>
   <!--  end http to https transition specific support  -->
   <entry>
@@ -215,10 +217,6 @@
   <entry>
     <string>text/html_link_extractor_factory</string>
     <string>org.lockss.plugin.ingenta.IngentaHtmlLinkExtractorFactory</string>
-  </entry>
-  <entry>
-    <string>au_url_normalizer</string>
-    <string>org.lockss.plugin.ingenta.IngentaUrlNormalizer</string>
   </entry>
   <entry>
     <string>text/html_link_rewriter_factory</string>
