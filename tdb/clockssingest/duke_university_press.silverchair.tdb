@@ -182,8 +182,8 @@
 
       param[journal_id] = common-knowledge
 
-      au < crawling ; exists ; 2017 ; 2017 ; Common Knowledge Volume 23 ; 23 ; >
-      au < crawling ; exists ; 2018 ; 2018 ; Common Knowledge Volume 24 ; 24 ; >
+      au < frozen ; exists ; 2017 ; 2017 ; Common Knowledge Volume 23 ; 23 ; >
+      au < frozen ; exists ; 2018 ; 2018 ; Common Knowledge Volume 24 ; 24 ; >
       au < frozen ; exists ; 2019 ; 2019 ; Common Knowledge Volume 25 ; 25 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Common Knowledge Volume 26 ; 26 ; >
 
@@ -290,7 +290,7 @@
       #move to T&F in 2021
 
       au < frozen ; exists ; 2017 ; 2017 ; East Asian Science, Technology and Society: An International Journal Volume 11 ; 11 ; >
-      au < crawling ; exists ; 2018 ; 2018 ; East Asian Science, Technology and Society: An International Journal Volume 12 ; 12 ; >
+      au < frozen ; exists ; 2018 ; 2018 ; East Asian Science, Technology and Society: An International Journal Volume 12 ; 12 ; >
       au < crawling ; exists ; 2019 ; 2019 ; East Asian Science, Technology and Society: An International Journal Volume 13 ; 13 ; >
       au < crawling ; exists ; 2020 ; 2020 ; East Asian Science, Technology and Society: An International Journal Volume 14 ; 14 ; >
 
@@ -308,7 +308,7 @@
       param[journal_id] = eighteenth-century-life
 
       au < crawling ; exists ; 2017 ; 2017 ; Eighteenth-Century Life Volume 41 ; 41 ; >
-      au < crawling ; exists ; 2018 ; 2018 ; Eighteenth-Century Life Volume 42 ; 42 ; >
+      au < frozen ; exists ; 2018 ; 2018 ; Eighteenth-Century Life Volume 42 ; 42 ; >
       au < frozen ; exists ; 2019 ; 2019 ; Eighteenth-Century Life Volume 43 ; 43 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Eighteenth-Century Life Volume 44 ; 44 ; >
 
@@ -327,11 +327,11 @@
 
       au < crawling ; exists ; 2000 ; 2000 ; English Language Notes Volume 37-38 ; 37-38 ; >
       au < frozen ; exists ; 2001 ; 2001 ; English Language Notes Volume 38-39 ; 38-39 ; >
-      au < crawling ; exists ; 2002 ; 2002 ; English Language Notes Volume 39-40 ; 39-40 ; >
+      au < frozen ; exists ; 2002 ; 2002 ; English Language Notes Volume 39-40 ; 39-40 ; >
       au < frozen ; exists ; 2003 ; 2003 ; English Language Notes Volume 40-41 ; 40-41 ; >
       au < frozen ; exists ; 2004 ; 2004 ; English Language Notes Volume 41-42 ; 41-42 ; >
       au < crawling ; exists ; 2005 ; 2005 ; English Language Notes Volume 42-43 ; 42-43 ; >
-      au < crawling ; exists ; 2006 ; 2006 ; English Language Notes Volume 44 ; 44 ; >
+      au < frozen ; exists ; 2006 ; 2006 ; English Language Notes Volume 44 ; 44 ; >
       au < frozen ; exists ; 2007 ; 2007 ; English Language Notes Volume 45 ; 45 ; >
       au < frozen ; exists ; 2008 ; 2008 ; English Language Notes Volume 46 ; 46 ; >
       au < frozen ; exists ; 2009 ; 2009 ; English Language Notes Volume 47 ; 47 ; >
@@ -517,7 +517,7 @@
 
       param[journal_id] = jhppl
 
-      au < crawling ; exists ; 2017 ; 2017 ; Journal of Health Politics, Policy and Law Volume 42 ; 42 ; >
+      au < frozen ; exists ; 2017 ; 2017 ; Journal of Health Politics, Policy and Law Volume 42 ; 42 ; >
       au < frozen ; exists ; 2018 ; 2018 ; Journal of Health Politics, Policy and Law Volume 43 ; 43 ; >
       au < frozen ; exists ; 2019 ; 2019 ; Journal of Health Politics, Policy and Law Volume 44 ; 44 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Journal of Health Politics, Policy and Law Volume 45 ; 45 ; >
@@ -1025,7 +1025,7 @@
 
       param[journal_id] = theater
 
-      au < crawling ; exists ; 2017 ; 2017 ; Theater Volume 47 ; 47 ; >
+      au < frozen ; exists ; 2017 ; 2017 ; Theater Volume 47 ; 47 ; >
       au < frozen ; exists ; 2018 ; 2018 ; Theater Volume 48 ; 48 ; >
       au < frozen ; exists ; 2019 ; 2019 ; Theater Volume 49 ; 49 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Theater Volume 50 ; 50 ; >

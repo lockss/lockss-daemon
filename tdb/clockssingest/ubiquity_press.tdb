@@ -2369,7 +2369,7 @@
       comment[publisher] = University of Westminster Press
 #      param[base_url] = https://delibdemjournal.org/
 
-      au < crawling ; exists ; 2005 ; 1 ; Journal of Deliberative Democracy Volume 2005 ; 2005 ; https://delibdemjournal.org/ ; >
+      au < frozen ; exists ; 2005 ; 1 ; Journal of Deliberative Democracy Volume 2005 ; 2005 ; https://delibdemjournal.org/ ; >
       au < finished ; manifest ; 2006 ; 2 ; Journal of Deliberative Democracy Volume 2006 ; 2006 ; https://delibdemjournal.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2007 ; 3 ; Journal of Deliberative Democracy Volume 2007 ; 2007 ; https://delibdemjournal.org/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2008 ; 4 ; Journal of Deliberative Democracy Volume 2008 ; 2008 ; https://delibdemjournal.org/ ; >
