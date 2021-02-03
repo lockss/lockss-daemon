@@ -41,14 +41,14 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>19</string>
+    <string>20</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Substance</string>
-        <string>4</string>
+        <string>5</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -56,7 +56,7 @@ POSSIBILITY OF SUCH DAMAGE.
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
     </map>
   </entry>
@@ -129,7 +129,7 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%s[^/]+/issues/[^/]+/[^/]+/[^/]+/[^/]+/.+\.pdf$", base_url</string>
+      <string>"^https?://%s/[^/]+/issues/[^/]+/[^/]+/[^/]+/[^/]+/.+\.pdf$", url_host(base_url)</string>
     </list>
   </entry>
   <entry>

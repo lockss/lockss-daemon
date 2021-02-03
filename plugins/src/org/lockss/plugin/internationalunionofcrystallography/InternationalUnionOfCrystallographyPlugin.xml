@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>14</string>
+    <string>15</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Substance</string>
-	<string>2</string>
+	<string>5</string>
       </entry>
     </map>
   </entry>
@@ -155,7 +155,7 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%s%s/issues/%d/%s/00/[^/]+/index\.html$", base_url, journal_id, year, issue</string>
+      <string>"^https?://%s/%s/issues/%d/%s/00/[^/]+/index\.html$", url_host(base_url), journal_id, year, issue</string>
     </list>
   </entry>
     <entry>
