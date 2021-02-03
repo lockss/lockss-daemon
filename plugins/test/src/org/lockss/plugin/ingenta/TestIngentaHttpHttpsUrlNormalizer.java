@@ -36,18 +36,14 @@ package org.lockss.plugin.ingenta;
 import org.lockss.plugin.*;
 import org.lockss.test.*;
 
-public class TestIngentaHttpHttpsUrlNormalizer extends LockssTestCase {
+public class TestIngentaHttpHttpsUrlNormalizer extends TestIngentaUrlNormalizer {
 
-  protected UrlNormalizer normalizer;
-
-  protected MockArchivalUnit au;
-
+  @Override
   public void setUp() throws Exception {
-    au = new MockArchivalUnit();
-    au.setConfiguration(ConfigurationUtil.fromArgs("base_url", "http://www.example.com/",
-        "api_url", "http://api.example.com/"));
+    super.setUp();
+    // override the IngentaUrlNormalizer, but keep the Book one.
+    // This ensures tha the Https version will pass this test and the tests in the original TestIngentaUrlNormalizer
     normalizer = new IngentaHttpHttpsUrlNormalizer();
-
   }
 
   public void testHttpsUrls() throws Exception {
@@ -56,4 +52,5 @@ public class TestIngentaHttpHttpsUrlNormalizer extends LockssTestCase {
     assertEquals("http://api.example.com/content/publi/jour/2002/00000009/00000001/art00003?crawler=true",
         normalizer.normalizeUrl("https://www.example.com/search/download?pub=infobike%3a%2f%2fpubli%2fjour%2f2002%2f00000009%2f00000001%2fart00003&mimetype=application%2fpdf", au));
   }
+
 }
