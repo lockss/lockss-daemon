@@ -1,3 +1,6 @@
+<!-- This isn't really in use; CLOCKSS Drupal children inherit from HighWireDrupalPlugin,
+     either directly, or through their non-CLOCKSS parent. We are considering removing
+     this from Git altogether, to avoid confusion. -->
 <map>
   <entry>
     <string>plugin_status</string>
@@ -13,7 +16,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>79</string>
+    <string>82</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -21,7 +24,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>79</string>
+    <string>82</string>
   </entry>
   <entry>
     <string>au_name</string>
