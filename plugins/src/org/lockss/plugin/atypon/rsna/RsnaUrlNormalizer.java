@@ -34,6 +34,7 @@ package org.lockss.plugin.atypon.rsna;
 
 import java.util.regex.Pattern;
 
+import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.*;
 import org.lockss.plugin.atypon.BaseAtyponUrlNormalizer;
@@ -60,6 +61,13 @@ public class RsnaUrlNormalizer extends BaseAtyponUrlNormalizer {
       log.debug3("normalized font url: " + returnString);
       url = returnString;
     }
+
+    // http to https
+    HttpHttpsUrlHelper helper = new HttpHttpsUrlHelper(au,
+        ConfigParamDescr.BASE_URL.getKey(),
+        "base_url");
+    url = helper.normalize(url);
+
     return super.normalizeUrl(url, au);
   }
 }
