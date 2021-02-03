@@ -106,7 +106,7 @@
     param[base_url] = https://www.ingentaconnect.com/
     param[api_url] = https://api.ingentaconnect.com/
 
-    au < crawling ; exists ; 2017 ; Public Health Action Volume 7 ; 7 ; > #LXQUEUE-1208
+    au < frozen ; exists ; 2017 ; Public Health Action Volume 7 ; 7 ; > #LXQUEUE-1208
     au < crawling ; exists ; 2018 ; Public Health Action Volume 8 ; 8 ; >
     au < frozen ; exists ; 2019 ; Public Health Action Volume 9 ; 9 ; >
     au < crawling ; exists ; 2020 ; Public Health Action Volume 10 ; 10 ; >

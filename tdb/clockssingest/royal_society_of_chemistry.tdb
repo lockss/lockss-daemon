@@ -212,13 +212,13 @@
 
       #complete. Missing back content 1996-2009. ****
       au < frozen ; exists ; 1996 ; Chemical Communications Volume 1996 ; 0 ; 1996 ; https://pubs.rsc.org/ ; >
-      au < crawling ; exists ; 1997 ; Chemical Communications Volume 1997 ; 0 ; 1997 ; https://pubs.rsc.org/ ; >
+      au < frozen ; exists ; 1997 ; Chemical Communications Volume 1997 ; 0 ; 1997 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 1998 ; Chemical Communications Volume 1998 ; 0 ; 1998 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 1999 ; Chemical Communications Volume 1999 ; 0 ; 1999 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2000 ; Chemical Communications Volume 2000 ; 0 ; 2000 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2001 ; Chemical Communications Volume 2001 ; 0 ; 2001 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2002 ; Chemical Communications Volume 2002 ; 0 ; 2002 ; https://pubs.rsc.org/ ; >
-      au < crawling ; exists ; 2003 ; Chemical Communications Volume 2003 ; 0 ; 2003 ; https://pubs.rsc.org/ ; >
+      au < frozen ; exists ; 2003 ; Chemical Communications Volume 2003 ; 0 ; 2003 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2004 ; Chemical Communications Volume 2004 ; 0 ; 2004 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2005 ; Chemical Communications Volume 2005 ; 0 ; 2005 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2006 ; Chemical Communications Volume 2006 ; 0 ; 2006 ; https://pubs.rsc.org/ ; >
@@ -333,7 +333,7 @@
       au < frozen ; exists ; 2005 ; CrystEngComm Volume 7 ; 7 ; 2005 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2006 ; CrystEngComm Volume 8 ; 8 ; 2006 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2007 ; CrystEngComm Volume 9 ; 9 ; 2007 ; https://pubs.rsc.org/ ; >
-      au < crawling ; exists ; 2008 ; CrystEngComm Volume 10 ; 10 ; 2008 ; https://pubs.rsc.org/ ; >
+      au < frozen ; exists ; 2008 ; CrystEngComm Volume 10 ; 10 ; 2008 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2009 ; CrystEngComm Volume 11 ; 11 ; 2009 ; https://pubs.rsc.org/ ; >
       au < finished ; manifest ; 2010 ; CrystEngComm Volume 12 ; 12 ; 2010 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2011 ; CrystEngComm Volume 13 ; 13 ; 2011 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
@@ -712,8 +712,8 @@
       au < frozen ; exists ; 2003 ; Journal of Environmental Monitoring Volume 5 ; 5 ; 2003 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2004 ; Journal of Environmental Monitoring Volume 6 ; 6 ; 2004 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2005 ; Journal of Environmental Monitoring Volume 7 ; 7 ; 2005 ; https://pubs.rsc.org/ ; >
-      au < crawling ; exists ; 2006 ; Journal of Environmental Monitoring Volume 8 ; 8 ; 2006 ; https://pubs.rsc.org/ ; >
-      au < crawling ; exists ; 2007 ; Journal of Environmental Monitoring Volume 9 ; 9 ; 2007 ; https://pubs.rsc.org/ ; >
+      au < frozen ; exists ; 2006 ; Journal of Environmental Monitoring Volume 8 ; 8 ; 2006 ; https://pubs.rsc.org/ ; >
+      au < frozen ; exists ; 2007 ; Journal of Environmental Monitoring Volume 9 ; 9 ; 2007 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2008 ; Journal of Environmental Monitoring Volume 10 ; 10 ; 2008 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2009 ; Journal of Environmental Monitoring Volume 11 ; 11 ; 2009 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2010 ; Journal of Environmental Monitoring Volume 12 ; 12 ; 2010 ; http://pubs.rsc.org/ ; >
@@ -733,7 +733,7 @@
       param[journal_code] = jm
 
       #complete
-      au < crawling ; exists ; 1996 ; Journal of Materials Chemistry Volume 6 ; 6 ; 1996 ; https://pubs.rsc.org/ ; >
+      au < frozen ; exists ; 1996 ; Journal of Materials Chemistry Volume 6 ; 6 ; 1996 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 1997 ; Journal of Materials Chemistry Volume 7 ; 7 ; 1997 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 1998 ; Journal of Materials Chemistry Volume 8 ; 8 ; 1998 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 1999 ; Journal of Materials Chemistry Volume 9 ; 9 ; 1999 ; https://pubs.rsc.org/ ; >

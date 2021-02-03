@@ -479,7 +479,7 @@
     {
     param[journal_id] = rsta1990
     
-    au < crawling ; exists ; 1990 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 332 ; 332 ; >
+    au < frozen ; exists ; 1990 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 332 ; 332 ; >
     au < frozen ; exists ; 1990 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 333 ; 333 ; >
     au < finished ; manifest ; 1991 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 334 ; 334 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1991 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 335 ; 335 ; reingest4.clockss.org:8082 >
@@ -1320,7 +1320,7 @@
     {
       param[journal_id] = rspa1969
 
-    au < crawling ; exists ; 1990 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 427 ; 427 ; >
+    au < frozen ; exists ; 1990 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 427 ; 427 ; >
     au < frozen ; exists ; 1990 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 428 ; 428 ; >
     au < finished ; manifest ; 1990 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 429 ; 429 ; reingest1.clockss.org:8082 >
     }
@@ -1336,7 +1336,7 @@
     au < finished ; manifest ; 1992 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 436 ; 436 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 1992 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 437 ; 437 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 1992 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 438 ; 438 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 1992 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 439 ; 439 ; >
+    au < frozen ; exists ; 1992 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 439 ; 439 ; >
     au < crawling ; exists ; 1993 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 440 ; 440 ; >
     au < finished ; manifest ; 1993 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 441 ; 441 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 1993 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 442 ; 442 ; >
