@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = American Journal of Science
+    name = American Journal of Science ;
+    info[platform] = HWDrupal
   >
 
   {
@@ -14,7 +15,11 @@
     >
 
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-    param[base_url] = http://www.ajsonline.org/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    {
+    param[base_url] = https://www.ajsonline.org/
+    plugin = needs.plugin
     implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 1860 ; American Journal of Science Series 2 Volume 29 (1860) ; s2-29 >
@@ -52,7 +57,7 @@
     au < exists ; 1876 ; American Journal of Science Series 3 Volume 11 (1876) ; s3-11 >
     au < exists ; 1876 ; American Journal of Science Series 3 Volume 12 (1876) ; s3-12 >
     au < exists ; 1877 ; American Journal of Science Series 3 Volume 13 (1877) ; s3-13 >
-    au < manifest ; 1877 ; American Journal of Science Series 3 Volume 14 (1877) ; s3-14 >
+    au < exists ; 1877 ; American Journal of Science Series 3 Volume 14 (1877) ; s3-14 >
     au < exists ; 1878 ; American Journal of Science Series 3 Volume 15 (1878) ; s3-15 >
     au < exists ; 1878 ; American Journal of Science Series 3 Volume 16 (1878) ; s3-16 >
     au < exists ; 1879 ; American Journal of Science Series 3 Volume 17 (1879) ; s3-17 >
@@ -89,177 +94,185 @@
     au < exists ; 1894 ; American Journal of Science Series 3 Volume 48 (1894) ; s3-48 >
     au < exists ; 1895 ; American Journal of Science Series 3 Volume 49 (1895) ; s3-49 >
     au < exists ; 1895 ; American Journal of Science Series 3 Volume 50 (1895) ; s3-50 >
-    au < released ; 1896 ; American Journal of Science Series 4 Volume 1 (1896) ; s4-1 >
-    au < released ; 1896 ; American Journal of Science Series 4 Volume 2 (1896) ; s4-2 >
-    au < released ; 1897 ; American Journal of Science Series 4 Volume 3 (1897) ; s4-3 >
-    au < released ; 1897 ; American Journal of Science Series 4 Volume 4 (1897) ; s4-4 >
-    au < released ; 1898 ; American Journal of Science Series 4 Volume 5 (1898) ; s4-5 >
-    au < released ; 1898 ; American Journal of Science Series 4 Volume 6 (1898) ; s4-6 >
-    au < released ; 1899 ; American Journal of Science Series 4 Volume 7 (1899) ; s4-7 >
-    au < released ; 1899 ; American Journal of Science Series 4 Volume 8 (1899) ; s4-8 >
-    au < released ; 1900 ; American Journal of Science Series 4 Volume 9 (1900) ; s4-9 >
-    au < released ; 1900 ; American Journal of Science Series 4 Volume 10 (1900) ; s4-10 >
-    au < released ; 1901 ; American Journal of Science Series 4 Volume 11 (1901) ; s4-11 >
-    au < released ; 1901 ; American Journal of Science Series 4 Volume 12 (1901) ; s4-12 >
-    au < released ; 1902 ; American Journal of Science Series 4 Volume 13 (1902) ; s4-13 >
-    au < released ; 1902 ; American Journal of Science Series 4 Volume 14 (1902) ; s4-14 >
-    au < released ; 1903 ; American Journal of Science Series 4 Volume 15 (1903) ; s4-15 >
-    au < released ; 1903 ; American Journal of Science Series 4 Volume 16 (1903) ; s4-16 >
-    au < released ; 1904 ; American Journal of Science Series 4 Volume 17 (1904) ; s4-17 >
-    au < released ; 1904 ; American Journal of Science Series 4 Volume 18 (1904) ; s4-18 >
-    au < released ; 1905 ; American Journal of Science Series 4 Volume 19 (1905) ; s4-19 >
-    au < released ; 1905 ; American Journal of Science Series 4 Volume 20 (1905) ; s4-20 >
-    au < released ; 1906 ; American Journal of Science Series 4 Volume 21 (1906) ; s4-21 >
-    au < released ; 1906 ; American Journal of Science Series 4 Volume 22 (1906) ; s4-22 >
-    au < released ; 1907 ; American Journal of Science Series 4 Volume 23 (1907) ; s4-23 >
-    au < released ; 1907 ; American Journal of Science Series 4 Volume 24 (1907) ; s4-24 >
-    au < released ; 1908 ; American Journal of Science Series 4 Volume 25 (1908) ; s4-25 >
-    au < released ; 1908 ; American Journal of Science Series 4 Volume 26 (1908) ; s4-26 >
-    au < released ; 1909 ; American Journal of Science Series 4 Volume 27 (1909) ; s4-27 >
-    au < released ; 1909 ; American Journal of Science Series 4 Volume 28 (1909) ; s4-28 >
-    au < released ; 1910 ; American Journal of Science Series 4 Volume 29 (1910) ; s4-29 >
-    au < released ; 1910 ; American Journal of Science Series 4 Volume 30 (1910) ; s4-30 >
-    au < released ; 1911 ; American Journal of Science Series 4 Volume 31 (1911) ; s4-31 >
-    au < released ; 1911 ; American Journal of Science Series 4 Volume 32 (1911) ; s4-32 >
-    au < released ; 1912 ; American Journal of Science Series 4 Volume 33 (1912) ; s4-33 >
-    au < released ; 1912 ; American Journal of Science Series 4 Volume 34 (1912) ; s4-34 >
-    au < released ; 1913 ; American Journal of Science Series 4 Volume 35 (1913) ; s4-35 >
-    au < released ; 1913 ; American Journal of Science Series 4 Volume 36 (1913) ; s4-36 >
-    au < released ; 1914 ; American Journal of Science Series 4 Volume 37 (1914) ; s4-37 >
-    au < released ; 1914 ; American Journal of Science Series 4 Volume 38 (1914) ; s4-38 >
-    au < released ; 1915 ; American Journal of Science Series 4 Volume 39 (1915) ; s4-39 >
-    au < released ; 1915 ; American Journal of Science Series 4 Volume 40 (1915) ; s4-40 >
-    au < released ; 1916 ; American Journal of Science Series 4 Volume 41 (1916) ; s4-41 >
-    au < released ; 1916 ; American Journal of Science Series 4 Volume 42 (1916) ; s4-42 >
-    au < released ; 1917 ; American Journal of Science Series 4 Volume 43 (1917) ; s4-43 >
-    au < released ; 1917 ; American Journal of Science Series 4 Volume 44 (1917) ; s4-44 >
-    au < released ; 1918 ; American Journal of Science Series 4 Volume 45 (1918) ; s4-45 >
-    au < released ; 1918 ; American Journal of Science Series 4 Volume 46 (1918) ; s4-46 >
-    au < released ; 1919 ; American Journal of Science Series 4 Volume 47 (1919) ; s4-47 >
-    au < released ; 1919 ; American Journal of Science Series 4 Volume 48 (1919) ; s4-48 >
-    au < released ; 1920 ; American Journal of Science Series 4 Volume 49 (1920) ; s4-49 >
-    au < released ; 1920 ; American Journal of Science Series 4 Volume 50 (1920) ; s4-50 >
-    au < released ; 1921 ; American Journal of Science Series 5 Volume 1 (1921) ; s5-1 >
-    au < released ; 1921 ; American Journal of Science Series 5 Volume 2 (1921) ; s5-2 >
-    au < released ; 1922 ; American Journal of Science Series 5 Volume 3 (1922) ; s5-3 >
-    au < released ; 1922 ; American Journal of Science Series 5 Volume 4 (1922) ; s5-4 >
-    au < released ; 1923 ; American Journal of Science Series 5 Volume 5 (1923) ; s5-5 >
-    au < released ; 1923 ; American Journal of Science Series 5 Volume 6 (1923) ; s5-6 >
-    au < released ; 1924 ; American Journal of Science Series 5 Volume 7 (1924) ; s5-7 >
-    au < released ; 1924 ; American Journal of Science Series 5 Volume 8 (1924) ; s5-8 >
-    au < released ; 1925 ; American Journal of Science Series 5 Volume 9 (1925) ; s5-9 >
-    au < released ; 1925 ; American Journal of Science Series 5 Volume 10 (1925) ; s5-10 >
-    au < released ; 1926 ; American Journal of Science Series 5 Volume 11 (1926) ; s5-11 >
-    au < released ; 1926 ; American Journal of Science Series 5 Volume 12 (1926) ; s5-12 >
-    au < released ; 1927 ; American Journal of Science Series 5 Volume 13 (1927) ; s5-13 >
-    au < released ; 1927 ; American Journal of Science Series 5 Volume 14 (1927) ; s5-14 >
-    au < released ; 1928 ; American Journal of Science Series 5 Volume 15 (1928) ; s5-15 >
-    au < released ; 1928 ; American Journal of Science Series 5 Volume 16 (1928) ; s5-16 >
-    au < released ; 1929 ; American Journal of Science Series 5 Volume 17 (1929) ; s5-17 >
-    au < released ; 1929 ; American Journal of Science Series 5 Volume 18 (1929) ; s5-18 >
-    au < released ; 1930 ; American Journal of Science Series 5 Volume 19 (1930) ; s5-19 >
-    au < released ; 1930 ; American Journal of Science Series 5 Volume 20 (1930) ; s5-20 >
-    au < released ; 1931 ; American Journal of Science Series 5 Volume 21 (1931) ; s5-21 >
-    au < released ; 1931 ; American Journal of Science Series 5 Volume 22 (1931) ; s5-22 >
-    au < released ; 1932 ; American Journal of Science Series 5 Volume 23 (1932) ; s5-23 >
-    au < released ; 1932 ; American Journal of Science Series 5 Volume 24 (1932) ; s5-24 >
-    au < released ; 1933 ; American Journal of Science Series 5 Volume 25 (1933) ; s5-25 >
-    au < released ; 1933 ; American Journal of Science Series 5 Volume 26 (1933) ; s5-26 >
-    au < released ; 1934 ; American Journal of Science Series 5 Volume 27 (1934) ; s5-27 >
-    au < released ; 1934 ; American Journal of Science Series 5 Volume 28 (1934) ; s5-28 >
-    au < released ; 1935 ; American Journal of Science Series 5 Volume 29 (1935) ; s5-29 >
-    au < released ; 1935 ; American Journal of Science Series 5 Volume 30 (1935) ; s5-30 >
-    au < released ; 1936 ; American Journal of Science Series 5 Volume 31 (1936) ; s5-31 >
-    au < released ; 1936 ; American Journal of Science Series 5 Volume 32 (1936) ; s5-32 >
-    au < released ; 1937 ; American Journal of Science Series 5 Volume 33 (1937) ; s5-33 >
-    au < released ; 1937 ; American Journal of Science Series 5 Volume 34 (1937) ; s5-34 >
-    au < released ; 1938 ; American Journal of Science Series 5 Volume 35 (1938) ; s5-35 >
-    au < released ; 1938 ; American Journal of Science Series 5 Volume 36 (1938) ; s5-36 >
-    au < released ; 1939 ; American Journal of Science Volume 237 ; 237 >
-    au < released ; 1940 ; American Journal of Science Volume 238 ; 238 >
-    au < released ; 1941 ; American Journal of Science Volume 239 ; 239 >
-    au < released ; 1942 ; American Journal of Science Volume 240 ; 240 >
-    au < released ; 1943 ; American Journal of Science Volume 241 ; 241 >
-    au < released ; 1944 ; American Journal of Science Volume 242 ; 242 >
-    au < released ; 1945 ; American Journal of Science Volume 243 ; 243 >
-    au < released ; 1946 ; American Journal of Science Volume 244 ; 244 >
-    au < released ; 1947 ; American Journal of Science Volume 245 ; 245 >
-    au < released ; 1948 ; American Journal of Science Volume 246 ; 246 >
-    au < released ; 1949 ; American Journal of Science Volume 247 ; 247 >
-    au < released ; 1950 ; American Journal of Science Volume 248 ; 248 >
-    au < released ; 1951 ; American Journal of Science Volume 249 ; 249 >
-    au < released ; 1952 ; American Journal of Science Volume 250 ; 250 >
-    au < released ; 1953 ; American Journal of Science Volume 251 ; 251 >
-    au < released ; 1954 ; American Journal of Science Volume 252 ; 252 >
-    au < released ; 1955 ; American Journal of Science Volume 253 ; 253 >
-    au < released ; 1956 ; American Journal of Science Volume 254 ; 254 >
-    au < released ; 1957 ; American Journal of Science Volume 255 ; 255 >
-    au < released ; 1958 ; American Journal of Science Volume 256 ; 256 >
-    au < released ; 1959 ; American Journal of Science Volume 257 ; 257 >
-    au < released ; 1960 ; American Journal of Science Volume 258 ; 258 >
-    au < released ; 1961 ; American Journal of Science Volume 259 ; 259 >
-    au < released ; 1962 ; American Journal of Science Volume 260 ; 260 >
-    au < released ; 1963 ; American Journal of Science Volume 261 ; 261 >
-    au < released ; 1964 ; American Journal of Science Volume 262 ; 262 >
-    au < released ; 1965 ; American Journal of Science Volume 263 ; 263 >
-    au < released ; 1966 ; American Journal of Science Volume 264 ; 264 >
-    au < released ; 1967 ; American Journal of Science Volume 265 ; 265 >
-    au < released ; 1968 ; American Journal of Science Volume 266 ; 266 >
-    au < released ; 1969 ; American Journal of Science Volume 267 ; 267 >
-    au < released ; 1970 ; American Journal of Science Volume 268 ; 268 >
-    au < released ; 1970 ; American Journal of Science Volume 269 ; 269 >
-    au < released ; 1971 ; American Journal of Science Volume 270 ; 270 >
-    au < released ; 1971 ; American Journal of Science Volume 271 ; 271 >
-    au < released ; 1972 ; American Journal of Science Volume 272 ; 272 >
-    au < released ; 1973 ; American Journal of Science Volume 273 ; 273 >
-    au < released ; 1974 ; American Journal of Science Volume 274 ; 274 >
-    au < released ; 1975 ; American Journal of Science Volume 275 ; 275 >
-    au < released ; 1976 ; American Journal of Science Volume 276 ; 276 >
-    au < released ; 1977 ; American Journal of Science Volume 277 ; 277 >
-    au < released ; 1978 ; American Journal of Science Volume 278 ; 278 >
-    au < released ; 1979 ; American Journal of Science Volume 279 ; 279 >
-    au < released ; 1980 ; American Journal of Science Volume 280 ; 280 >
-    au < released ; 1981 ; American Journal of Science Volume 281 ; 281 >
-    au < released ; 1982 ; American Journal of Science Volume 282 ; 282 >
-    au < released ; 1983 ; American Journal of Science Volume 283 ; 283 >
-    au < released ; 1984 ; American Journal of Science Volume 284 ; 284 >
-    au < released ; 1985 ; American Journal of Science Volume 285 ; 285 >
-    au < released ; 1986 ; American Journal of Science Volume 286 ; 286 >
-    au < released ; 1987 ; American Journal of Science Volume 287 ; 287 >
-    au < released ; 1988 ; American Journal of Science Volume 288 ; 288 >
-    au < released ; 1989 ; American Journal of Science Volume 289 ; 289 >
-    au < released ; 1990 ; American Journal of Science Volume 290 ; 290 >
-    au < released ; 1991 ; American Journal of Science Volume 291 ; 291 >
-    au < released ; 1992 ; American Journal of Science Volume 292 ; 292 >
-    au < released ; 1993 ; American Journal of Science Volume 293 ; 293 >
-    au < released ; 1994 ; American Journal of Science Volume 294 ; 294 >
-    au < released ; 1995 ; American Journal of Science Volume 295 ; 295 >
-    au < released ; 1996 ; American Journal of Science Volume 296 ; 296 >
-    au < released ; 1997 ; American Journal of Science Volume 297 ; 297 >
-    au < released ; 1998 ; American Journal of Science Volume 298 ; 298 >
-    au < released ; 1999 ; American Journal of Science Volume 299 ; 299 >
-    au < released ; 2000 ; American Journal of Science Volume 300 ; 300 >
-    au < released ; 2001 ; American Journal of Science Volume 301 ; 301 >
-    au < released ; 2002 ; American Journal of Science Volume 302 ; 302 >
-    au < released ; 2003 ; American Journal of Science Volume 303 ; 303 >
-    au < released ; 2004 ; American Journal of Science Volume 304 ; 304 >
-    au < released ; 2005 ; American Journal of Science Volume 305 ; 305 >
-    au < released ; 2006 ; American Journal of Science Volume 306 ; 306 >
-    au < released ; 2007 ; American Journal of Science Volume 307 ; 307 >
-    au < released ; 2008 ; American Journal of Science Volume 308 ; 308 >
-    au < released ; 2009 ; American Journal of Science Volume 309 ; 309 >
-    au < released ; 2010 ; American Journal of Science Volume 310 ; 310 >
-    au < released ; 2011 ; American Journal of Science Volume 311 ; 311 >
-    au < released ; 2012 ; American Journal of Science Volume 312 ; 312 >
-    au < released ; 2013 ; American Journal of Science Volume 313 ; 313 >
-    au < released ; 2014 ; American Journal of Science Volume 314 ; 314 >
-    au < released ; 2015 ; American Journal of Science Volume 315 ; 315 >
-    au < released ; 2016 ; American Journal of Science Volume 316 ; 316 >
-    au < released ; 2017 ; American Journal of Science Volume 317 ; 317 >
-    au < released ; 2018 ; American Journal of Science Volume 318 ; 318 >
-    au < manifest ; 2019 ; American Journal of Science Volume 319 ; 319 >
-    au < manifest ; 2020 ; American Journal of Science Volume 320 ; 320 >
 
+    au < exists ; 2019 ; American Journal of Science Volume 319 ; 319 >
+    au < exists ; 2020 ; American Journal of Science Volume 320 ; 320 >
+    au < expected ; 2021 ; American Journal of Science Volume 321 ; 321 >
+    }
+    {
+    param[base_url] = http://www.ajsonline.org/
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < down ; 1896 ; American Journal of Science Series 4 Volume 1 (1896) ; s4-1 >
+    au < down ; 1896 ; American Journal of Science Series 4 Volume 2 (1896) ; s4-2 >
+    au < down ; 1897 ; American Journal of Science Series 4 Volume 3 (1897) ; s4-3 >
+    au < down ; 1897 ; American Journal of Science Series 4 Volume 4 (1897) ; s4-4 >
+    au < down ; 1898 ; American Journal of Science Series 4 Volume 5 (1898) ; s4-5 >
+    au < down ; 1898 ; American Journal of Science Series 4 Volume 6 (1898) ; s4-6 >
+    au < down ; 1899 ; American Journal of Science Series 4 Volume 7 (1899) ; s4-7 >
+    au < down ; 1899 ; American Journal of Science Series 4 Volume 8 (1899) ; s4-8 >
+    au < down ; 1900 ; American Journal of Science Series 4 Volume 9 (1900) ; s4-9 >
+    au < down ; 1900 ; American Journal of Science Series 4 Volume 10 (1900) ; s4-10 >
+    au < down ; 1901 ; American Journal of Science Series 4 Volume 11 (1901) ; s4-11 >
+    au < down ; 1901 ; American Journal of Science Series 4 Volume 12 (1901) ; s4-12 >
+    au < down ; 1902 ; American Journal of Science Series 4 Volume 13 (1902) ; s4-13 >
+    au < down ; 1902 ; American Journal of Science Series 4 Volume 14 (1902) ; s4-14 >
+    au < down ; 1903 ; American Journal of Science Series 4 Volume 15 (1903) ; s4-15 >
+    au < down ; 1903 ; American Journal of Science Series 4 Volume 16 (1903) ; s4-16 >
+    au < down ; 1904 ; American Journal of Science Series 4 Volume 17 (1904) ; s4-17 >
+    au < down ; 1904 ; American Journal of Science Series 4 Volume 18 (1904) ; s4-18 >
+    au < down ; 1905 ; American Journal of Science Series 4 Volume 19 (1905) ; s4-19 >
+    au < down ; 1905 ; American Journal of Science Series 4 Volume 20 (1905) ; s4-20 >
+    au < down ; 1906 ; American Journal of Science Series 4 Volume 21 (1906) ; s4-21 >
+    au < down ; 1906 ; American Journal of Science Series 4 Volume 22 (1906) ; s4-22 >
+    au < down ; 1907 ; American Journal of Science Series 4 Volume 23 (1907) ; s4-23 >
+    au < down ; 1907 ; American Journal of Science Series 4 Volume 24 (1907) ; s4-24 >
+    au < down ; 1908 ; American Journal of Science Series 4 Volume 25 (1908) ; s4-25 >
+    au < down ; 1908 ; American Journal of Science Series 4 Volume 26 (1908) ; s4-26 >
+    au < down ; 1909 ; American Journal of Science Series 4 Volume 27 (1909) ; s4-27 >
+    au < down ; 1909 ; American Journal of Science Series 4 Volume 28 (1909) ; s4-28 >
+    au < down ; 1910 ; American Journal of Science Series 4 Volume 29 (1910) ; s4-29 >
+    au < down ; 1910 ; American Journal of Science Series 4 Volume 30 (1910) ; s4-30 >
+    au < down ; 1911 ; American Journal of Science Series 4 Volume 31 (1911) ; s4-31 >
+    au < down ; 1911 ; American Journal of Science Series 4 Volume 32 (1911) ; s4-32 >
+    au < down ; 1912 ; American Journal of Science Series 4 Volume 33 (1912) ; s4-33 >
+    au < down ; 1912 ; American Journal of Science Series 4 Volume 34 (1912) ; s4-34 >
+    au < down ; 1913 ; American Journal of Science Series 4 Volume 35 (1913) ; s4-35 >
+    au < down ; 1913 ; American Journal of Science Series 4 Volume 36 (1913) ; s4-36 >
+    au < down ; 1914 ; American Journal of Science Series 4 Volume 37 (1914) ; s4-37 >
+    au < down ; 1914 ; American Journal of Science Series 4 Volume 38 (1914) ; s4-38 >
+    au < down ; 1915 ; American Journal of Science Series 4 Volume 39 (1915) ; s4-39 >
+    au < down ; 1915 ; American Journal of Science Series 4 Volume 40 (1915) ; s4-40 >
+    au < down ; 1916 ; American Journal of Science Series 4 Volume 41 (1916) ; s4-41 >
+    au < down ; 1916 ; American Journal of Science Series 4 Volume 42 (1916) ; s4-42 >
+    au < down ; 1917 ; American Journal of Science Series 4 Volume 43 (1917) ; s4-43 >
+    au < down ; 1917 ; American Journal of Science Series 4 Volume 44 (1917) ; s4-44 >
+    au < down ; 1918 ; American Journal of Science Series 4 Volume 45 (1918) ; s4-45 >
+    au < down ; 1918 ; American Journal of Science Series 4 Volume 46 (1918) ; s4-46 >
+    au < down ; 1919 ; American Journal of Science Series 4 Volume 47 (1919) ; s4-47 >
+    au < down ; 1919 ; American Journal of Science Series 4 Volume 48 (1919) ; s4-48 >
+    au < down ; 1920 ; American Journal of Science Series 4 Volume 49 (1920) ; s4-49 >
+    au < down ; 1920 ; American Journal of Science Series 4 Volume 50 (1920) ; s4-50 >
+    au < down ; 1921 ; American Journal of Science Series 5 Volume 1 (1921) ; s5-1 >
+    au < down ; 1921 ; American Journal of Science Series 5 Volume 2 (1921) ; s5-2 >
+    au < down ; 1922 ; American Journal of Science Series 5 Volume 3 (1922) ; s5-3 >
+    au < down ; 1922 ; American Journal of Science Series 5 Volume 4 (1922) ; s5-4 >
+    au < down ; 1923 ; American Journal of Science Series 5 Volume 5 (1923) ; s5-5 >
+    au < down ; 1923 ; American Journal of Science Series 5 Volume 6 (1923) ; s5-6 >
+    au < down ; 1924 ; American Journal of Science Series 5 Volume 7 (1924) ; s5-7 >
+    au < down ; 1924 ; American Journal of Science Series 5 Volume 8 (1924) ; s5-8 >
+    au < down ; 1925 ; American Journal of Science Series 5 Volume 9 (1925) ; s5-9 >
+    au < down ; 1925 ; American Journal of Science Series 5 Volume 10 (1925) ; s5-10 >
+    au < down ; 1926 ; American Journal of Science Series 5 Volume 11 (1926) ; s5-11 >
+    au < down ; 1926 ; American Journal of Science Series 5 Volume 12 (1926) ; s5-12 >
+    au < down ; 1927 ; American Journal of Science Series 5 Volume 13 (1927) ; s5-13 >
+    au < down ; 1927 ; American Journal of Science Series 5 Volume 14 (1927) ; s5-14 >
+    au < down ; 1928 ; American Journal of Science Series 5 Volume 15 (1928) ; s5-15 >
+    au < down ; 1928 ; American Journal of Science Series 5 Volume 16 (1928) ; s5-16 >
+    au < down ; 1929 ; American Journal of Science Series 5 Volume 17 (1929) ; s5-17 >
+    au < down ; 1929 ; American Journal of Science Series 5 Volume 18 (1929) ; s5-18 >
+    au < down ; 1930 ; American Journal of Science Series 5 Volume 19 (1930) ; s5-19 >
+    au < down ; 1930 ; American Journal of Science Series 5 Volume 20 (1930) ; s5-20 >
+    au < down ; 1931 ; American Journal of Science Series 5 Volume 21 (1931) ; s5-21 >
+    au < down ; 1931 ; American Journal of Science Series 5 Volume 22 (1931) ; s5-22 >
+    au < down ; 1932 ; American Journal of Science Series 5 Volume 23 (1932) ; s5-23 >
+    au < down ; 1932 ; American Journal of Science Series 5 Volume 24 (1932) ; s5-24 >
+    au < down ; 1933 ; American Journal of Science Series 5 Volume 25 (1933) ; s5-25 >
+    au < down ; 1933 ; American Journal of Science Series 5 Volume 26 (1933) ; s5-26 >
+    au < down ; 1934 ; American Journal of Science Series 5 Volume 27 (1934) ; s5-27 >
+    au < down ; 1934 ; American Journal of Science Series 5 Volume 28 (1934) ; s5-28 >
+    au < down ; 1935 ; American Journal of Science Series 5 Volume 29 (1935) ; s5-29 >
+    au < down ; 1935 ; American Journal of Science Series 5 Volume 30 (1935) ; s5-30 >
+    au < down ; 1936 ; American Journal of Science Series 5 Volume 31 (1936) ; s5-31 >
+    au < down ; 1936 ; American Journal of Science Series 5 Volume 32 (1936) ; s5-32 >
+    au < down ; 1937 ; American Journal of Science Series 5 Volume 33 (1937) ; s5-33 >
+    au < down ; 1937 ; American Journal of Science Series 5 Volume 34 (1937) ; s5-34 >
+    au < down ; 1938 ; American Journal of Science Series 5 Volume 35 (1938) ; s5-35 >
+    au < down ; 1938 ; American Journal of Science Series 5 Volume 36 (1938) ; s5-36 >
+    au < down ; 1939 ; American Journal of Science Volume 237 ; 237 >
+    au < down ; 1940 ; American Journal of Science Volume 238 ; 238 >
+    au < down ; 1941 ; American Journal of Science Volume 239 ; 239 >
+    au < down ; 1942 ; American Journal of Science Volume 240 ; 240 >
+    au < down ; 1943 ; American Journal of Science Volume 241 ; 241 >
+    au < down ; 1944 ; American Journal of Science Volume 242 ; 242 >
+    au < down ; 1945 ; American Journal of Science Volume 243 ; 243 >
+    au < down ; 1946 ; American Journal of Science Volume 244 ; 244 >
+    au < down ; 1947 ; American Journal of Science Volume 245 ; 245 >
+    au < down ; 1948 ; American Journal of Science Volume 246 ; 246 >
+    au < down ; 1949 ; American Journal of Science Volume 247 ; 247 >
+    au < down ; 1950 ; American Journal of Science Volume 248 ; 248 >
+    au < down ; 1951 ; American Journal of Science Volume 249 ; 249 >
+    au < down ; 1952 ; American Journal of Science Volume 250 ; 250 >
+    au < down ; 1953 ; American Journal of Science Volume 251 ; 251 >
+    au < down ; 1954 ; American Journal of Science Volume 252 ; 252 >
+    au < down ; 1955 ; American Journal of Science Volume 253 ; 253 >
+    au < down ; 1956 ; American Journal of Science Volume 254 ; 254 >
+    au < down ; 1957 ; American Journal of Science Volume 255 ; 255 >
+    au < down ; 1958 ; American Journal of Science Volume 256 ; 256 >
+    au < down ; 1959 ; American Journal of Science Volume 257 ; 257 >
+    au < down ; 1960 ; American Journal of Science Volume 258 ; 258 >
+    au < down ; 1961 ; American Journal of Science Volume 259 ; 259 >
+    au < down ; 1962 ; American Journal of Science Volume 260 ; 260 >
+    au < down ; 1963 ; American Journal of Science Volume 261 ; 261 >
+    au < down ; 1964 ; American Journal of Science Volume 262 ; 262 >
+    au < down ; 1965 ; American Journal of Science Volume 263 ; 263 >
+    au < down ; 1966 ; American Journal of Science Volume 264 ; 264 >
+    au < down ; 1967 ; American Journal of Science Volume 265 ; 265 >
+    au < down ; 1968 ; American Journal of Science Volume 266 ; 266 >
+    au < down ; 1969 ; American Journal of Science Volume 267 ; 267 >
+    au < down ; 1970 ; American Journal of Science Volume 268 ; 268 >
+    au < down ; 1970 ; American Journal of Science Volume 269 ; 269 >
+    au < down ; 1971 ; American Journal of Science Volume 270 ; 270 >
+    au < down ; 1971 ; American Journal of Science Volume 271 ; 271 >
+    au < down ; 1972 ; American Journal of Science Volume 272 ; 272 >
+    au < down ; 1973 ; American Journal of Science Volume 273 ; 273 >
+    au < down ; 1974 ; American Journal of Science Volume 274 ; 274 >
+    au < down ; 1975 ; American Journal of Science Volume 275 ; 275 >
+    au < down ; 1976 ; American Journal of Science Volume 276 ; 276 >
+    au < down ; 1977 ; American Journal of Science Volume 277 ; 277 >
+    au < down ; 1978 ; American Journal of Science Volume 278 ; 278 >
+    au < down ; 1979 ; American Journal of Science Volume 279 ; 279 >
+    au < down ; 1980 ; American Journal of Science Volume 280 ; 280 >
+    au < down ; 1981 ; American Journal of Science Volume 281 ; 281 >
+    au < down ; 1982 ; American Journal of Science Volume 282 ; 282 >
+    au < down ; 1983 ; American Journal of Science Volume 283 ; 283 >
+    au < down ; 1984 ; American Journal of Science Volume 284 ; 284 >
+    au < down ; 1985 ; American Journal of Science Volume 285 ; 285 >
+    au < down ; 1986 ; American Journal of Science Volume 286 ; 286 >
+    au < down ; 1987 ; American Journal of Science Volume 287 ; 287 >
+    au < down ; 1988 ; American Journal of Science Volume 288 ; 288 >
+    au < down ; 1989 ; American Journal of Science Volume 289 ; 289 >
+    au < down ; 1990 ; American Journal of Science Volume 290 ; 290 >
+    au < down ; 1991 ; American Journal of Science Volume 291 ; 291 >
+    au < down ; 1992 ; American Journal of Science Volume 292 ; 292 >
+    au < down ; 1993 ; American Journal of Science Volume 293 ; 293 >
+    au < down ; 1994 ; American Journal of Science Volume 294 ; 294 >
+    au < down ; 1995 ; American Journal of Science Volume 295 ; 295 >
+    au < down ; 1996 ; American Journal of Science Volume 296 ; 296 >
+    au < down ; 1997 ; American Journal of Science Volume 297 ; 297 >
+    au < down ; 1998 ; American Journal of Science Volume 298 ; 298 >
+    au < down ; 1999 ; American Journal of Science Volume 299 ; 299 >
+    au < down ; 2000 ; American Journal of Science Volume 300 ; 300 >
+    au < down ; 2001 ; American Journal of Science Volume 301 ; 301 >
+    au < down ; 2002 ; American Journal of Science Volume 302 ; 302 >
+    au < down ; 2003 ; American Journal of Science Volume 303 ; 303 >
+    au < down ; 2004 ; American Journal of Science Volume 304 ; 304 >
+    au < down ; 2005 ; American Journal of Science Volume 305 ; 305 >
+    au < down ; 2006 ; American Journal of Science Volume 306 ; 306 >
+    au < down ; 2007 ; American Journal of Science Volume 307 ; 307 >
+    au < down ; 2008 ; American Journal of Science Volume 308 ; 308 >
+    au < down ; 2009 ; American Journal of Science Volume 309 ; 309 >
+    au < down ; 2010 ; American Journal of Science Volume 310 ; 310 >
+    au < down ; 2011 ; American Journal of Science Volume 311 ; 311 >
+    au < down ; 2012 ; American Journal of Science Volume 312 ; 312 >
+    au < down ; 2013 ; American Journal of Science Volume 313 ; 313 >
+    au < down ; 2014 ; American Journal of Science Volume 314 ; 314 >
+    au < down ; 2015 ; American Journal of Science Volume 315 ; 315 >
+    au < down ; 2016 ; American Journal of Science Volume 316 ; 316 >
+    au < down ; 2017 ; American Journal of Science Volume 317 ; 317 >
+    au < down ; 2018 ; American Journal of Science Volume 318 ; 318 >
+    }
   }
 
 }
