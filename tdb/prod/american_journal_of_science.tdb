@@ -14,9 +14,6 @@
       issnl = 0002-9599
     >
 
-    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-    implicit < status ; year ; name ; param[volume_name] >
-
     {
     param[base_url] = https://www.ajsonline.org/
     plugin = needs.plugin
