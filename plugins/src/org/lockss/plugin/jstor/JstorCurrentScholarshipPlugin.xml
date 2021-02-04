@@ -2,6 +2,7 @@
   <entry>
     <string>plugin_status</string>
     <string>ready</string>
+    <!-- https transition enabled -->
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -35,6 +36,7 @@
   <entry>
     <string>required_daemon_version</string>
     <!-- url consumer with storeAtOrigUrl convenience method -->
+    <!-- when this goes to 1.74 or above the au_url_normalizer must be updated -->
     <string>1.68.0</string>
   </entry>
   <entry>
