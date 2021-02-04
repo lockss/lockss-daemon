@@ -667,13 +667,13 @@
       au < crawling ; exists ; 2006 ; 2006 ; Meridians Volume 6-7 (2006) ; 6-7 (2006) ; >
       au < frozen ; exists ; 2007 ; 2007 ; Meridians Volume 7 (2007) ; 7 (2007) ; >
       au < crawling ; exists ; 2008 ; 2008 ; Meridians Volume 8 (2008) ; 8 (2008) ; >
-      au < ready ; exists ; 2009 ; 2009 ; Meridians Volume 9 (2009) ; 9 (2009) ; >
+      au < crawling ; exists ; 2009 ; 2009 ; Meridians Volume 9 (2009) ; 9 (2009) ; >
       au < frozen ; exists ; 2010 ; 2010 ; Meridians Volume 10 (2010) ; 10 (2010) ; >
       au < frozen ; exists ; 2011 ; 2011 ; Meridians Volume 11 (2011) ; 11 (2011) ; >
       au < frozen ; exists ; 2013 ; 2013 ; Meridians Volume 11 (2013) ; 11 (2013) ; >
       au < crawling ; exists ; 2014 ; 2014 ; Meridians Volume 12 (2014) ; 12 (2014) ; >
       au < frozen ; exists ; 2015 ; 2015 ; Meridians Volume 13 (2015) ; 13 (2015) ; >
-      au < ready ; exists ; 2016 ; 2016 ; Meridians Volume 13-15 (2016) ; 13-15 (2016) ; >
+      au < crawling ; exists ; 2016 ; 2016 ; Meridians Volume 13-15 (2016) ; 13-15 (2016) ; >
       au < ready ; exists ; 2017 ; 2017 ; Meridians Volume 15 (2017) ; 15 (2017) ; >
       au < frozen ; exists ; 2018 ; 2018 ; Meridians Volume 16-17 (2018) ; 16-17 (2018) ; >
       au < frozen ; exists ; 2019 ; 2019 ; Meridians Volume 18 (2019) ; 18 (2019) ; >
@@ -708,7 +708,7 @@
 
       param[journal_id] = modern-language-quarterly
 
-      au < ready ; exists ; 2017 ; 2017 ; MLQ: Modern Language Quarterly Volume 78 ; 78 ; >
+      au < crawling ; exists ; 2017 ; 2017 ; MLQ: Modern Language Quarterly Volume 78 ; 78 ; >
       au < frozen ; exists ; 2018 ; 2018 ; MLQ: Modern Language Quarterly Volume 79 ; 79 ; >
       au < frozen ; exists ; 2019 ; 2019 ; MLQ: Modern Language Quarterly Volume 80 ; 80 ; >
       au < crawling ; exists ; 2020 ; 2020 ; MLQ: Modern Language Quarterly Volume 81 ; 81 ; >
@@ -872,7 +872,7 @@
 
       param[journal_id] = public-culture
 
-      au < ready ; exists ; 2017 ; 2017 ; Public Culture Volume 29 ; 29 ; >
+      au < crawling ; exists ; 2017 ; 2017 ; Public Culture Volume 29 ; 29 ; >
       au < crawling ; exists ; 2018 ; 2018 ; Public Culture Volume 30 ; 30 ; >
       au < crawling ; exists ; 2019 ; 2019 ; Public Culture Volume 31 ; 31 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Public Culture Volume 32 ; 32 ; >
@@ -957,7 +957,7 @@
       au < frozen ; exists ; 2014 ; 2014 ; Romanic Review Volume 105 ; 105 ; >
       au < crawling ; exists ; 2015 ; 2015 ; Romanic Review Volume 106 ; 106 ; >
       au < crawling ; exists ; 2016 ; 2016 ; Romanic Review Volume 107 ; 107 ; >
-      au < ready ; exists ; 2017 ; 2017 ; Romanic Review Volume 108 ; 108 ; >
+      au < crawling ; exists ; 2017 ; 2017 ; Romanic Review Volume 108 ; 108 ; >
       au < frozen ; exists ; 2018 ; 2018 ; Romanic Review Volume 109 ; 109 ; >
       au < frozen ; exists ; 2019 ; 2019 ; Romanic Review Volume 110 ; 110 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Romanic Review Volume 111 ; 111 ; >
@@ -1095,7 +1095,7 @@
       au < crawling ; exists ; 2016 ; 2016 ; Twentieth-Century Literature Volume 62 ; 62 ; >
       au < frozen ; exists ; 2017 ; 2017 ; Twentieth-Century Literature Volume 63 ; 63 ; >
       au < crawling ; exists ; 2018 ; 2018 ; Twentieth-Century Literature Volume 64 ; 64 ; >
-      au < ready ; exists ; 2019 ; 2019 ; Twentieth-Century Literature Volume 65 ; 65 ; >
+      au < crawling ; exists ; 2019 ; 2019 ; Twentieth-Century Literature Volume 65 ; 65 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Twentieth-Century Literature Volume 66 ; 66 ; >
 
   }

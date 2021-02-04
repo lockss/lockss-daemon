@@ -933,7 +933,7 @@
     au < finished ; manifest ; 2017 ; Indian Journal of Dermatology Volume 62 ; 2017 ; 62 ; http://www.e-ijd.org/ ; ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Indian Journal of Dermatology Volume 63 ; 2018 ; 63 ; http://www.e-ijd.org/ ; ; >
     au < manifest ; exists ; 2019 ; Indian Journal of Dermatology Volume 64 ; 2019 ; 64 ; https://www.e-ijd.org/ ; ; >
-    au < ready ; exists ; 2020 ; Indian Journal of Dermatology Volume 65 ; 2020 ; 65 ; https://www.e-ijd.org/ ; ; >
+    au < crawling ; exists ; 2020 ; Indian Journal of Dermatology Volume 65 ; 2020 ; 65 ; https://www.e-ijd.org/ ; ; >
 
   }
 
@@ -1487,7 +1487,7 @@
     au < finished ; frozen ; 2017 ; Indian Journal of Paediatric Dermatology Volume 18 ; 2017 ; 18 ; http://www.ijpd.in/ ; ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2018 ; Indian Journal of Paediatric Dermatology Volume 19 ; 2018 ; 19 ; http://www.ijpd.in/ ; ; >
     au < manifest ; exists ; 2019 ; Indian Journal of Paediatric Dermatology Volume 20 ; 2019 ; 20 ; https://www.ijpd.in/ ; ; >
-    au < ready ; exists ; 2020 ; Indian Journal of Paediatric Dermatology Volume 21 ; 2020 ; 21 ; https://www.ijpd.in/ ; ; >
+    au < crawling ; exists ; 2020 ; Indian Journal of Paediatric Dermatology Volume 21 ; 2020 ; 21 ; https://www.ijpd.in/ ; ; >
 
   }
 
@@ -1559,7 +1559,7 @@
     au < finished ; frozen ; 2017 ; Indian Journal of Pathology and Microbiology Volume 60 ; 2017 ; 60 ; http://www.ijpmonline.org/ ; ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Indian Journal of Pathology and Microbiology Volume 61 ; 2018 ; 61 ; http://www.ijpmonline.org/ ; ; >
     au < manifest ; exists ; 2019 ; Indian Journal of Pathology and Microbiology Volume 62 ; 2019 ; 62 ; https://www.ijpmonline.org/ ; ; >
-    au < ready ; exists ; 2020 ; Indian Journal of Pathology and Microbiology Volume 63 ; 2020 ; 63 ; https://www.ijpmonline.org/ ; ; >
+    au < crawling ; exists ; 2020 ; Indian Journal of Pathology and Microbiology Volume 63 ; 2020 ; 63 ; https://www.ijpmonline.org/ ; ; >
 
   }
 
@@ -2221,7 +2221,7 @@
     au < finished ; frozen ; 2017 ; International Journal of Trichology Volume 9 ; 2017 ; 9 ; http://www.ijtrichology.com/ ; ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; International Journal of Trichology Volume 10 ; 2018 ; 10 ; http://www.ijtrichology.com/ ; ; >
     au < manifest ; exists ; 2019 ; International Journal of Trichology Volume 11 ; 2019 ; 11 ; https://www.ijtrichology.com/ ; ; >
-    au < ready ; exists ; 2020 ; International Journal of Trichology Volume 12 ; 2020 ; 12 ; https://www.ijtrichology.com/ ; ; >
+    au < crawling ; exists ; 2020 ; International Journal of Trichology Volume 12 ; 2020 ; 12 ; https://www.ijtrichology.com/ ; ; >
 
   }
 
@@ -3544,7 +3544,7 @@
     au < finished ; finished ; 2017 ; Journal of Postgraduate Medicine Volume 63 ; 2017 ; 63 ; http://www.jpgmonline.com/ ; ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2018 ; Journal of Postgraduate Medicine Volume 64 ; 2018 ; 64 ; http://www.jpgmonline.com/ ; ; >
     au < manifest ; exists ; 2019 ; Journal of Postgraduate Medicine Volume 65 ; 2019 ; 65 ; https://www.jpgmonline.com/ ; ; >
-    au < ready ; exists ; 2020 ; Journal of Postgraduate Medicine Volume 66 ; 2020 ; 66 ; https://www.jpgmonline.com/ ; ; >
+    au < crawling ; exists ; 2020 ; Journal of Postgraduate Medicine Volume 66 ; 2020 ; 66 ; https://www.jpgmonline.com/ ; ; >
 
   }
 
@@ -5100,7 +5100,7 @@
       au < finished ; finished ; 2017 ; CHRISMED Journal of Health and Research Volume 4 ; 2017 ; 4 ; http://www.cjhr.org/ ; ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018 ; CHRISMED Journal of Health and Research Volume 5 ; 2018 ; 5 ; http://www.cjhr.org/ ; ; >
       au < manifest ; exists ; 2019 ; CHRISMED Journal of Health and Research Volume 6 ; 2019 ; 6 ; https://www.cjhr.org/ ; ; >
-      au < ready ; exists ; 2020 ; CHRISMED Journal of Health and Research Volume 7 ; 2020 ; 7 ; https://www.cjhr.org/ ; ; >
+      au < crawling ; exists ; 2020 ; CHRISMED Journal of Health and Research Volume 7 ; 2020 ; 7 ; https://www.cjhr.org/ ; ; >
 
   }
 
@@ -5535,7 +5535,7 @@
       au < finished ; frozen ; 2017 ; Environmental Disease Volume 2 ; 2017 ; 2 ; http://www.environmentmed.org/ ; ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2018 ; Environmental Disease Volume 3 ; 2018 ; 3 ; http://www.environmentmed.org/ ; ; >
       au < manifest ; exists ; 2019 ; Environmental Disease Volume 4 ; 2019 ; 4 ; https://www.environmentmed.org/ ; ; >
-      au < ready ; exists ; 2020 ; Environmental Disease Volume 5 ; 2020 ; 5 ; https://www.environmentmed.org/ ; ; >
+      au < crawling ; exists ; 2020 ; Environmental Disease Volume 5 ; 2020 ; 5 ; https://www.environmentmed.org/ ; ; >
 
   }
 
@@ -5961,7 +5961,7 @@
       au < finished ; finished ; 2017 ; Indian Journal of Research in Homoeopathy Volume 11 ; 2017 ; 11 ; http://www.ijrh.org/ ; ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2018 ; Indian Journal of Research in Homoeopathy Volume 12 ; 2018 ; 12 ; http://www.ijrh.org/ ; ; >
       au < manifest ; exists ; 2019 ; Indian Journal of Research in Homoeopathy Volume 13 ; 2019 ; 13 ; https://www.ijrh.org/ ; ; >
-      au < ready ; exists ; 2020 ; Indian Journal of Research in Homoeopathy Volume 14 ; 2020 ; 14 ; https://www.ijrh.org/ ; ; >
+      au < crawling ; exists ; 2020 ; Indian Journal of Research in Homoeopathy Volume 14 ; 2020 ; 14 ; https://www.ijrh.org/ ; ; >
 
   }
 
@@ -5981,7 +5981,7 @@
       au < finished ; frozen ; 2017 ; Indian Journal of Social Psychiatry Volume 33 ; 2017 ; 33 ; http://www.indjsp.org/ ; ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2018 ; Indian Journal of Social Psychiatry Volume 34 ; 2018 ; 34 ; http://www.indjsp.org/ ; ; >
       au < manifest ; exists ; 2019 ; Indian Journal of Social Psychiatry Volume 35 ; 2019 ; 35 ; https://www.indjsp.org/ ; ; >
-      au < ready ; exists ; 2020 ; Indian Journal of Social Psychiatry Volume 36 ; 2020 ; 36 ; https://www.indjsp.org/ ; ; >
+      au < crawling ; exists ; 2020 ; Indian Journal of Social Psychiatry Volume 36 ; 2020 ; 36 ; https://www.indjsp.org/ ; ; >
 
   }
 
@@ -6042,7 +6042,7 @@
       au < finished ; finished ; 2017 ; International Journal of Advanced Medical and Health Research Volume 4 ; 2017 ; 4 ; http://www.ijamhrjournal.org/ ; ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018 ; International Journal of Advanced Medical and Health Research Volume 5 ; 2018 ; 5 ; http://www.ijamhrjournal.org/ ; ; >
       au < manifest ; exists ; 2019 ; International Journal of Advanced Medical and Health Research Volume 6 ; 2019 ; 6 ; https://www.ijamhrjournal.org/ ; ; >
-      au < ready ; exists ; 2020 ; International Journal of Advanced Medical and Health Research Volume 7 ; 2020 ; 7 ; https://www.ijamhrjournal.org/ ; ; >
+      au < crawling ; exists ; 2020 ; International Journal of Advanced Medical and Health Research Volume 7 ; 2020 ; 7 ; https://www.ijamhrjournal.org/ ; ; >
 
   }
 
@@ -7281,7 +7281,7 @@
       au < finished ; frozen ; 2017 ; Journal of The Academy of Clinical Microbiologists Volume 19 ; 2017 ; 19 ; http://www.jacmjournal.org/ ; ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018 ; Journal of The Academy of Clinical Microbiologists Volume 20 ; 2018 ; 20 ; http://www.jacmjournal.org/ ; ; >
       au < manifest ; exists ; 2019 ; Journal of The Academy of Clinical Microbiologists Volume 21 ; 2019 ; 21 ; https://www.jacmjournal.org/ ; ; >
-      au < ready ; exists ; 2020 ; Journal of The Academy of Clinical Microbiologists Volume 22 ; 2020 ; 22 ; https://www.jacmjournal.org/ ; ; >
+      au < crawling ; exists ; 2020 ; Journal of The Academy of Clinical Microbiologists Volume 22 ; 2020 ; 22 ; https://www.jacmjournal.org/ ; ; >
 
   }
 
@@ -8136,7 +8136,7 @@
       au < finished ; finished ; 2017 ; Sudanese Journal of Ophthalmology Volume 9 ; 2017 ; 9 ; http://www.sjopthal.net/ ; ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2018 ; Sudanese Journal of Ophthalmology Volume 10 ; 2018 ; 10 ; http://www.sjopthal.net/ ; ; >
       au < manifest ; exists ; 2019 ; Sudanese Journal of Ophthalmology Volume 11 ; 2019 ; 11 ; https://www.sjopthal.net/ ; ; >
-      au < ready ; exists ; 2020 ; Sudanese Journal of Ophthalmology Volume 12 ; 2020 ; 12 ; https://www.sjopthal.net/ ; ; >
+      au < crawling ; exists ; 2020 ; Sudanese Journal of Ophthalmology Volume 12 ; 2020 ; 12 ; https://www.sjopthal.net/ ; ; >
 
   }
 
@@ -9369,7 +9369,7 @@
 
       au < manifest ; exists ; 2018 ; Indian Spine Journal Volume 1 ; 2018 ; 1 ; https://www.isjonline.com/ ; ; >
       au < manifest ; exists ; 2019 ; Indian Spine Journal Volume 2 ; 2019 ; 2 ; https://www.isjonline.com/ ; ; >
-      au < ready ; exists ; 2020 ; Indian Spine Journal Volume 3 ; 2020 ; 3 ; https://www.isjonline.com/ ; ; >
+      au < crawling ; exists ; 2020 ; Indian Spine Journal Volume 3 ; 2020 ; 3 ; https://www.isjonline.com/ ; ; >
 
   }
 
@@ -9921,7 +9921,7 @@
       au < manifest ; exists ; 2017 ; Journal of Musculoskeletal Surgery and Research Volume 1 ; 2017 ; 1 ; https://www.journalmsr.com/ ; ; >
       au < manifest ; exists ; 2018 ; Journal of Musculoskeletal Surgery and Research Volume 2 ; 2018 ; 2 ; https://www.journalmsr.com/ ; ; >
       au < manifest ; exists ; 2019 ; Journal of Musculoskeletal Surgery and Research Volume 3 ; 2019 ; 3 ; https://www.journalmsr.com/ ; ; >
-      au < ready ; exists ; 2020 ; Journal of Musculoskeletal Surgery and Research Volume 4 ; 2020 ; 4 ; https://www.journalmsr.com/ ; ; >
+      au < crawling ; exists ; 2020 ; Journal of Musculoskeletal Surgery and Research Volume 4 ; 2020 ; 4 ; https://www.journalmsr.com/ ; ; >
 
   }
 
@@ -10307,7 +10307,7 @@
       au < manifest ; exists ; 2017 ; Physiotherapy - The Journal of Indian Association of Physiotherapists Volume 11 ; 2017 ; 11 ; https://www.pjiap.org/ ; ; >
       au < manifest ; exists ; 2018 ; Physiotherapy - The Journal of Indian Association of Physiotherapists Volume 12 ; 2018 ; 12 ; https://www.pjiap.org/ ; ; >
       au < manifest ; exists ; 2019 ; Physiotherapy - The Journal of Indian Association of Physiotherapists Volume 13 ; 2019 ; 13 ; https://www.pjiap.org/ ; ; >
-      au < ready ; exists ; 2020 ; Physiotherapy - The Journal of Indian Association of Physiotherapists Volume 14 ; 2020 ; 14 ; https://www.pjiap.org/ ; ; >
+      au < crawling ; exists ; 2020 ; Physiotherapy - The Journal of Indian Association of Physiotherapists Volume 14 ; 2020 ; 14 ; https://www.pjiap.org/ ; ; >
 
   }
 
