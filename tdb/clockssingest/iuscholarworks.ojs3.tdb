@@ -404,7 +404,7 @@
       #no issn/eissn
 
       au < finished ; manifest ; 2016 ; 2016 ; Journal of Economic Development in Higher Education Volume 1 ; 1 ; reingest3.clockss.org:8083 >
-      au < ready ; exists ; 2019 ; 2019 ; Journal of Economic Development in Higher Education Volume 2 ; 2 ; >
+      au < crawling ; exists ; 2019 ; 2019 ; Journal of Economic Development in Higher Education Volume 2 ; 2 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Journal of Economic Development in Higher Education Volume 3 ; 3 ; >
 
   }
@@ -445,7 +445,7 @@
       au < frozen ; exists ; 2015 ; 2015 ; Journal of the Indiana University Student Personnel Association Volume 2015 ; 2015 ; >
       au < crawling ; exists ; 2016 ; 2016 ; Journal of the Indiana University Student Personnel Association Volume 2016 ; 2016 ; >
       au < frozen ; exists ; 2017 ; 2017 ; Journal of the Indiana University Student Personnel Association Volume 2017 ; 2017 ; >
-      au < ready ; exists ; 2018 ; 2018 ; Journal of the Indiana University Student Personnel Association Volume 2018 ; 2018 ; >
+      au < crawling ; exists ; 2018 ; 2018 ; Journal of the Indiana University Student Personnel Association Volume 2018 ; 2018 ; >
       au < frozen ; exists ; 2019 ; 2019 ; Journal of the Indiana University Student Personnel Association Volume 2019 ; 2019 ; >
       #no 2020 as of 12/5/2020
 
@@ -673,7 +673,7 @@
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; The Workshop Volume 2016 ; 4 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; The Workshop Volume 2016 ; 4 ; >
       au < notReady ; exists ; 2018 ; 2018 ; The Workshop Volume 5 ; 5 ; >#Not a typo. Really 2018
-      au < ready ; exists ; 2017 ; 2017 ; The Workshop Volume 6 ; 6 ; >#Not a typo. Really 2017
+      au < crawling ; exists ; 2017 ; 2017 ; The Workshop Volume 6 ; 6 ; >#Not a typo. Really 2017
       #no 2020 as of 12/5/2020
 
   }
@@ -857,7 +857,7 @@
          au < manifest ; exists ; 2001 ; 2001 ; IU South Bend Undergraduate Research Journal Volume 2001 ; 4 ; >
          au < manifest ; exists ; 2002 ; 2002 ; IU South Bend Undergraduate Research Journal Volume 2002 ; 5 ; >
          au < manifest ; exists ; 2003 ; 2003 ; IU South Bend Undergraduate Research Journal Volume 2003 ; 6 ; >
-         au < ready ; exists ; 2008 ; 2008 ; IU South Bend Undergraduate Research Journal Volume 2008 ; 8 ; >
+         au < crawling ; exists ; 2008 ; 2008 ; IU South Bend Undergraduate Research Journal Volume 2008 ; 8 ; >
          au < frozen ; exists ; 2009 ; 2009 ; IU South Bend Undergraduate Research Journal Volume 2009 ; 9 ; >
          au < frozen ; exists ; 2010 ; 2010 ; IU South Bend Undergraduate Research Journal Volume 2010 ; 10 ; >
          au < frozen ; exists ; 2011 ; 2011 ; IU South Bend Undergraduate Research Journal Volume 2011 ; 11 ; >
@@ -885,7 +885,7 @@
          au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Indiana University Undergraduate Research Journal Volume 2016 ; 2 ; >
          au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Indiana University Undergraduate Research Journal Volume 2017 ; 3 ; >
          au < frozen ; exists ; 2018 ; 2018 ; Indiana University Undergraduate Research Journal Volume 2018 ; 4 ; >
-         au < ready ; exists ; 2019 ; 2019 ; Indiana University Undergraduate Research Journal Volume 2019 ; 5 ; >
+         au < crawling ; exists ; 2019 ; 2019 ; Indiana University Undergraduate Research Journal Volume 2019 ; 5 ; >
       }
   }
 
@@ -1097,7 +1097,7 @@
       au < frozen ; exists ; 2015 ; 2015 ; The Risky Academy  Volume 2015 ; 3 ; >
       au < frozen ; exists ; 2016 ; 2016 ; The Risky Academy  Volume 2016 ; 4 ; >
       au < frozen ; exists ; 2017 ; 2017 ; The Risky Academy  Volume 2017 ; 5 ; >
-      au < ready ; exists ; 2018 ; 2018 ; The Risky Academy  Volume 2018 ; 6 ; >
+      au < crawling ; exists ; 2018 ; 2018 ; The Risky Academy  Volume 2018 ; 6 ; >
       au < frozen ; exists ; 2019 ; 2019 ; The Risky Academy  Volume 2019 ; 7 ; >
       au < expected ; exists ; 2020 ; 2020 ; The Risky Academy  Volume 2020 ; 8 ; >
 
