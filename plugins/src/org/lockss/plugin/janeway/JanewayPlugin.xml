@@ -99,6 +99,7 @@
       <string>2,"https://twitter.com"</string>
       <string>2,"https://plus.google.com"</string>
       <string>2,"https://www.linkedin.com"</string>
+      <string>2,"https://www.facebook.com"</string>
       <string>1,"https://cdnjs.cloudflare.com/.+\.(css|js)"</string>
       <string>1,"https://use.typekit.net/.*\.js"</string>
       <string>1,"https://maxcdn.bootstrapcdn.com/.+\.css"</string>
@@ -116,7 +117,6 @@
     <string>plugin_crawl_seed_factory</string>
     <string>org.lockss.plugin.janeway.JanewayOaiCrawlSeedFactory</string>
   </entry>
-  <!--
   <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.janeway.JanewayArticleIteratorFactory</string>
@@ -134,7 +134,6 @@
       </entry>
     </map>
   </entry>
-  -->
   <entry>
     <string>au_def_new_content_crawl</string>
     <long>1209600000</long>
@@ -143,21 +142,16 @@
     <string>au_def_pause_time</string>
     <long>3000</long>
   </entry>
-  <!--
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.janeway.JanewayHtmlFilterFactory</string>
   </entry>
-  -->
-  <!--  versioning or variants for style support -->
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
     <list>
       <string>.*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)(_v[0-9]+|\?v=[0-9.]+|\?[a-z0-9]+)</string>
     </list>
   </entry>
-  <!-- Weight Rule-->
-  <!-- Archived page should be weighted to 0 since it will change from time to time-->
   <entry>
     <string>au_url_poll_result_weight</string>
     <list>
