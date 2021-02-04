@@ -43,8 +43,8 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2017 ; 2017 ; >
-    au < manifest ; exists ; 2018 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2018 ; 2018 ; > #no substance
-    au < manifest ; exists ; 2019 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2019 ; 2019 ; > #no substance
+    au < testing ; exists ; 2018 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2018 ; 2018 ; > #no substance
+    au < testing ; exists ; 2019 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2019 ; 2019 ; > #no substance
     au < ready ; exists ; 2020 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2020 ; 2020 ; >
 
   }
@@ -92,7 +92,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Qatar Medical Journal Volume 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Qatar Medical Journal Volume 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Qatar Medical Journal Volume 2017 ; 2017 ; >
-    au < manifest ; exists ; 2018 ; Qatar Medical Journal Volume 2018 ; 2018 ; > #no substance
+    au < testing ; exists ; 2018 ; Qatar Medical Journal Volume 2018 ; 2018 ; > #no substance
     au < crawling ; exists ; 2019 ; Qatar Medical Journal Volume 2019 ; 2019 ; >
     au < ready ; exists ; 2020 ; Qatar Medical Journal Volume 2020 ; 2020 ; >
 
