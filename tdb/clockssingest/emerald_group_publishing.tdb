@@ -8880,7 +8880,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Kybernetes Volume 45 ; 45 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Kybernetes Volume 46 ; 46 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Kybernetes Volume 47 ; 47 ; >
-    au < manifest ; exists ; 2019 ; Kybernetes Volume 48 ; 48 ; >
+    au < notReady ; exists ; 2019 ; Kybernetes Volume 48 ; 48 ; > #500 error https://www.emerald.com/insight/content/doi/10.1108/K-05-2018-0267/full/html
     au < crawling ; exists ; 2020 ; Kybernetes Volume 49 ; 49 ; >
 
   }
@@ -9920,7 +9920,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Meditari Accountancy Research Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Meditari Accountancy Research Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Meditari Accountancy Research Volume 26 ; 26 ; >
-    au < manifest ; exists ; 2019 ; Meditari Accountancy Research Volume 27 ; 27 ; >
+    au < notReady ; exists ; 2019 ; Meditari Accountancy Research Volume 27 ; 27 ; > #500 error 
     au < ready ; exists ; 2020 ; Meditari Accountancy Research Volume 28 ; 28 ; >
 
     }
@@ -10679,7 +10679,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Performance Measurement and Metrics Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Performance Measurement and Metrics Volume 19 ; 19 ; >
     au < manifest ; exists ; 2019 ; Performance Measurement and Metrics Volume 20 ; 20 ; >
-    au < manifest ; exists ; 2020 ; Performance Measurement and Metrics Volume 21 ; 21 ; >
+    au < ready ; exists ; 2020 ; Performance Measurement and Metrics Volume 21 ; 21 ; >
 
   }
 
@@ -11477,7 +11477,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Review of Behavioral Finance Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Review of Behavioral Finance Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Review of Behavioral Finance Volume 10 ; 10 ; >
-    au < manifest ; exists ; 2019 ; Review of Behavioral Finance Volume 11 ; 11 ; >
+    au < notReady ; exists ; 2019 ; Review of Behavioral Finance Volume 11 ; 11 ; > #500 error https://www.emerald.com/insight/proxy/img?link=/resource/id/urn:emeraldgroup.com:asset:id:article:10_1108_RBF-01-2020-0013/urn:emeraldgroup.com:asset:id:binary:RBF-01-2020-0013_mmc001.docx
     au < notReady ; exists ; 2020 ; Review of Behavioral Finance Volume 12 ; 12 ; > #500 error https://www.emerald.com/insight/proxy/img?link=/resource/id/urn:emeraldgroup.com:asset:id:article:10_1108_RBF-01-2020-0013/urn:emeraldgroup.com:asset:id:binary:RBF-01-2020-0013_mmc001.docx
 
   }
