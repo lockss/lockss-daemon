@@ -34,6 +34,8 @@ echo "###Manifest Sage 2008" >> $t/tmp_Atypon
 ./scripts/tdb/tdbout -MT -a -Q 'year ~ "2008$" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/sage_publications.atypon.tdb | shuf >> $t/tmp_Atypon
 echo "###Manifest Sage 2007" >> $t/tmp_Atypon
 ./scripts/tdb/tdbout -MT -a -Q 'year ~ "2007$" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/sage_publications.atypon.tdb | shuf >> $t/tmp_Atypon
+echo "###Manifest Sage 2006" >> $t/tmp_Atypon
+./scripts/tdb/tdbout -MT -a -Q 'year ~ "2006$" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/sage_publications.atypon.tdb | shuf | head >> $t/tmp_Atypon
 
 #Atypon T&F in order by year
 #Ready
@@ -65,10 +67,10 @@ echo "*********************" >> $t/tmp_Misc
 echo "###Ready Misc Ingest5" >> $t/tmp_Misc
 ./scripts/tdb/tdbout -Y -a -Q 'au:hidden[proxy] is "reingest5.clockss.org:8082"' tdb/clockssingest/*.tdb | shuf >> $t/tmp_Misc
 
-head -n40 $t/tmp_HW | grep -v ClockssHWDrupalPlugin > $t/tmp_All
-head -n90 $t/tmp_Atypon >> $t/tmp_All
+head -n25 $t/tmp_HW | grep -v ClockssHWDrupalPlugin > $t/tmp_All
+head -n75 $t/tmp_Atypon >> $t/tmp_All
 #head -n25 $t/tmp_TnF >> $t/tmp_All
-head -n120 $t/tmp_Misc | grep -v ClockssHWDrupalPlugin >> $t/tmp_All
+head -n150 $t/tmp_Misc | grep -v ClockssHWDrupalPlugin >> $t/tmp_All
 
 exit 0
 
