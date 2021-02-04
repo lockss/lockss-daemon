@@ -1047,55 +1047,115 @@ while (my $line = <>) {
            ($plugin eq "LiverpoolBooksPlugin") ||
            ($plugin eq "SiamBooksPlugin") ||
            ($plugin eq "WageningenBooksPlugin")) {
-      $url = sprintf("%slockss/eisbn/%s",
-      $param{base_url}, $param{book_eisbn});
-      $man_url = uri_unescape($url);
-      my $req = HTTP::Request->new(GET, $man_url);
-      my $resp = $ua->request($req);
-      if ($resp->is_success) {
-          my $man_contents = $resp->content;
-          if ($req->url ne $resp->request->uri) {
-              $vol_title =  $resp->request->uri;
-              $result = "Redirected";
-          } elsif (defined($man_contents) && ($man_contents =~ m/$lockss_tag/)) {
-              #prepare for the worst by presetting a not found result...
-              $result = "--";
-              if ($man_contents =~ m/doi\/book\/([^\/]+)\/([^"']+)/) { #"
-                  my $doi1 = $1;
-                  my $doi2 = $2;
-                  #get the title of the book if we found the manifest page
-                  if ($man_contents =~ m/<title>(.*) Manifest Page<\/title>/si) {
-                      $vol_title = $1;
-                      $vol_title =~ s/\s*\n\s*/ /g;
-                      $vol_title =~ s/ &amp\; / & /;
-                      if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
-                          $vol_title = "\"" . $vol_title . "\"";
-                      }
-                  }
-                  # now make sure a PDF is actually available on the book landing page
-                  # whole book pdf will use the same doi as the book landing page
-                  $url = sprintf("%sdoi/book/%s/%s",$param{base_url}, $doi1, $doi2);
-                  my $book_url = uri_unescape($url);
-                  my $breq = HTTP::Request->new(GET, $book_url);
-                  my $bresp = $ua->request($breq);
-                  if ($bresp->is_success) {
-                      my $b_contents = $bresp->content;
-                      # what we're looking for on the page is href="/doi/pdf/doi1/doi2" OR href="/doi/pdfplus/doi1/doi2
-                      #printf("href=\"pdfplus/%s/%s\"",${doi1},${doi2});
-                      #if (defined($b_contents) && ($b_contents =~ m/href=\"[^"]+pdf(plus)?\/${doi1}\/${doi2}/)) {
-                      if (defined($b_contents) && ($b_contents =~ m/href=\"[^"]+pdf(plus)?\/${doi1}\//)) {  #"
-                          $result = "Manifest";
-                      }
-                  }
-              }
-          } else {
-            $result = "--NO_TAG--"
-          }
-      } else {
-          $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
-      }
-      sleep(4);
+    $url = sprintf("%slockss/eisbn/%s",
+        $param{base_url}, $param{book_eisbn});
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    my $man_contents = $resp->is_success ? $resp->content : "";
+    if (! $resp->is_success) {
+        $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+    } elsif ($req->url ne $resp->request->uri) {
+        $vol_title = $resp->request->uri;
+        $result = "Redirected";
+    } elsif (! defined($man_contents)) {
+        $result = "--NOT_DEF--";
+    } elsif ($man_contents !~ m/$lockss_tag/) {
+        $result = "--NO_TAG--";
+    } elsif ($man_contents !~ m/doi\/book\/([^\/]+)\/([^"']+)/) { #"
+        $result = "--BAD_DOI--";
+    } elsif ($man_contents =~ m/doi\/book\/([^\/]+)\/([^"']+)/) { #"
+        my $doi1 = $1;
+        my $doi2 = $2;
+        #get the title of the book if we found the manifest page
+        if ($man_contents =~ m/<title>(.*) Manifest Page<\/title>/si) {
+            $vol_title = $1;
+            $vol_title =~ s/\s*\n\s*/ /g;
+            $vol_title =~ s/ &amp\; / & /;
+            if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
+                $vol_title = "\"" . $vol_title . "\"";
+            }
+        }
+        # now make sure a PDF is actually available on the book landing page
+        # whole book pdf will use the same doi as the book landing page
+        #Assume the worst
+        $result = "--BAD_PDF--";
+        $url = sprintf("%sdoi/book/%s/%s",$param{base_url}, $doi1, $doi2);
+        my $book_url = uri_unescape($url);
+        my $breq = HTTP::Request->new(GET, $book_url);
+        my $bresp = $ua->request($breq);
+        if ($bresp->is_success) {
+            my $b_contents = $bresp->content;
+            # what we're looking for on the page is href="/doi/pdf/doi1/doi2" OR href="/doi/pdfplus/doi1/doi2
+            #printf("href=\"pdfplus/%s/%s\"",${doi1},${doi2});
+            #if (defined($b_contents) && ($b_contents =~ m/href=\"[^"]+pdf(plus)?\/${doi1}\/${doi2}/)) {
+            if (defined($b_contents) && ($b_contents =~ m/href=\"[^"]+pdf(plus)?\/${doi1}\//)) {  #"
+                $result = "Manifest";
+            }
+        }
+    } else {
+        $result = "--CODE_BUG--";
+    }
+    sleep(4);
 
+#  # the non-Clockss Atypon Books plugins go here
+#  } elsif (($plugin eq "GenericAtyponBooksPlugin") ||
+#           ($plugin eq "AIAABooksPlugin") ||
+#           ($plugin eq "EmeraldGroupBooksPlugin") ||
+#           ($plugin eq "EndocrineSocietyBooksPlugin") ||
+#           ($plugin eq "FutureScienceBooksPlugin") ||
+#           ($plugin eq "LiverpoolBooksPlugin") ||
+#           ($plugin eq "SiamBooksPlugin") ||
+#           ($plugin eq "WageningenBooksPlugin")) {
+#      $url = sprintf("%slockss/eisbn/%s",
+#          $param{base_url}, $param{book_eisbn});
+#      $man_url = uri_unescape($url);
+#      my $req = HTTP::Request->new(GET, $man_url);
+#      my $resp = $ua->request($req);
+#      if ($resp->is_success) {
+#          my $man_contents = $resp->content;
+#          if ($req->url ne $resp->request->uri) {
+#              $vol_title =  $resp->request->uri;
+#              $result = "Redirected";
+#          } elsif (defined($man_contents) && ($man_contents =~ m/$lockss_tag/)) {
+#              #prepare for the worst by presetting a not found result...
+#              $result = "--";
+#              if ($man_contents =~ m/doi\/book\/([^\/]+)\/([^"']+)/) { #"
+#                  my $doi1 = $1;
+#                  my $doi2 = $2;
+#                  #get the title of the book if we found the manifest page
+#                  if ($man_contents =~ m/<title>(.*) Manifest Page<\/title>/si) {
+#                      $vol_title = $1;
+#                      $vol_title =~ s/\s*\n\s*/ /g;
+#                      $vol_title =~ s/ &amp\; / & /;
+#                      if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
+#                          $vol_title = "\"" . $vol_title . "\"";
+#                      }
+#                  }
+#                  # now make sure a PDF is actually available on the book landing page
+#                  # whole book pdf will use the same doi as the book landing page
+#                  $url = sprintf("%sdoi/book/%s/%s",$param{base_url}, $doi1, $doi2);
+#                  my $book_url = uri_unescape($url);
+#                  my $breq = HTTP::Request->new(GET, $book_url);
+#                  my $bresp = $ua->request($breq);
+#                  if ($bresp->is_success) {
+#                      my $b_contents = $bresp->content;
+#                      # what we're looking for on the page is href="/doi/pdf/doi1/doi2" OR href="/doi/pdfplus/doi1/doi2
+#                      #printf("href=\"pdfplus/%s/%s\"",${doi1},${doi2});
+#                      #if (defined($b_contents) && ($b_contents =~ m/href=\"[^"]+pdf(plus)?\/${doi1}\/${doi2}/)) {
+#                      if (defined($b_contents) && ($b_contents =~ m/href=\"[^"]+pdf(plus)?\/${doi1}\//)) {  #"
+#                          $result = "Manifest";
+#                      }
+#                  }
+#              }
+#          } else {
+#            $result = "--NO_TAG--"
+#          }
+#      } else {
+#          $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+#      }
+#      sleep(4);
+#
   # the CLOCKSS Atypon Books plugins go here
   } elsif (($plugin eq "ClockssGenericAtyponBooksPlugin") ||
            ($plugin eq "ClockssAIAABooksPlugin") ||
