@@ -1317,7 +1317,7 @@
     au < finished ; manifest ; 2017 ; 2017 ; Annals of Oncology Volume 28 ; 28 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2018 ; 2018 ; Annals of Oncology Volume 29 ; 29 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; Annals of Oncology Volume 30 ; 30 ; reingest5.clockss.org:8082 >
-    au < doNotProcess ; exists ; 2020 ; 2020 ; Annals of Oncology Volume 31 ; 31 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Annals of Oncology Volume 31 ; 31 ; >
 
   }
 
@@ -1454,7 +1454,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Applied Economic Perspectives and Policy Volume 39 ; 39 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Applied Economic Perspectives and Policy Volume 40 ; 40 ; >
     au < frozen ; exists ; 2019 ; 2019 ; Applied Economic Perspectives and Policy Volume 41 ; 41 ; >
-    au < doNotProcess ; exists ; 2020 ; 2020 ; Applied Economic Perspectives and Policy Volume 42 ; 42 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Applied Economic Perspectives and Policy Volume 42 ; 42 ; >
 
   }
 
@@ -15433,7 +15433,7 @@
     au < finished ; manifest ; 2017 ; 2017 ; Poultry Science Volume 96 ; 96 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2018 ; 2018 ; Poultry Science Volume 97 ; 97 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; exists ; 2019 ; 2019 ; Poultry Science Volume 98 ; 98 ; >
-    au < doNotProcess ; exists ; 2020 ; 2020 ; Poultry Science Volume 99 ; 99 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Poultry Science Volume 99 ; 99 ; >
 
   }
 
@@ -16203,7 +16203,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Regenerative Biomaterials Volume 4 ; 4 ; >
     au < finished ; finished ; 2018 ; 2018 ; Regenerative Biomaterials Volume 5 ; 5 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2019 ; 2019 ; Regenerative Biomaterials Volume 6 ; 6 ; >
-    au < testing ; exists ; 2020 ; 2020 ; Regenerative Biomaterials Volume 7 ; 7 ; >
+    au < ready ; exists ; 2020 ; 2020 ; Regenerative Biomaterials Volume 7 ; 7 ; >
 
   }
 
@@ -16333,7 +16333,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Review of Environmental Economics and Policy Volume 11 ; 11 ; >
     au < finished ; finished ; 2018 ; 2018 ; Review of Environmental Economics and Policy Volume 12 ; 12 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2019 ; 2019 ; Review of Environmental Economics and Policy Volume 13 ; 13 ; >
-    au < doNotProcess ; exists ; 2020 ; 2020 ; Review of Environmental Economics and Policy Volume 14 ; 14 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Review of Environmental Economics and Policy Volume 14 ; 14 ; >
 
   }
 
@@ -18610,7 +18610,7 @@
     au < finished ; manifest ; 2017 ; 2017 ; The Journal of Applied Poultry Research Volume 26 ; 26 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2018 ; 2018 ; The Journal of Applied Poultry Research Volume 27 ; 27 ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2019 ; 2019 ; The Journal of Applied Poultry Research Volume 28 ; 28 ; reingest2.clockss.org:8085 >
-    au < doNotProcess ; exists ; 2020 ; 2020 ; The Journal of Applied Poultry Research Volume 29 ; 29 ; >
+    au < testing ; exists ; 2020 ; 2020 ; The Journal of Applied Poultry Research Volume 29 ; 29 ; >
 
   }
 
@@ -19785,7 +19785,7 @@
     au < finished ; manifest ; 2017 ; 2017 ; The Oral History Review Volume 44 ; 44 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2018 ; 2018 ; The Oral History Review Volume 45 ; 45 ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2019 ; 2019 ; The Oral History Review Volume 46 ; 46 ; reingest3.clockss.org:8083 >
-    au < doNotProcess ; exists ; 2020 ; 2020 ; The Oral History Review Volume 47 ; 47 ; >
+    au < testing ; exists ; 2020 ; 2020 ; The Oral History Review Volume 47 ; 47 ; >
 
   }
 
