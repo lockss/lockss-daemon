@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2020, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -35,6 +35,8 @@ package org.lockss.plugin.ubiquitypress.upn;
 
 import java.io.*;
 
+import org.htmlparser.*;
+import org.htmlparser.tags.LinkTag;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.rewriter.*;
@@ -53,6 +55,50 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
     NodeFilterHtmlLinkRewriterFactory fact = new NodeFilterHtmlLinkRewriterFactory();
     
     /*
+     * Some "Download" PDF links in Utrecht University Library's Studium
+     * (https://www.gewina-studium.nl/) have an href value with extraneous
+     * whitespace before and after, even spanning multiple lines. The regular
+     * expressions of NodeFilterHtmlLinkRewriterFactory are anchored and don't
+     * rewrite such links. Pre-process all <a> tags by trimming the href value.
+     * 
+     * Example from
+     * https://www.gewina-studium.nl/articles/abstract/10.18352/studium.1451/:
+     * 
+<a
+    
+        class="piwik_download"
+        data-trackThis='downloads'
+        data-category="PDF"
+        data-label=
+                "
+            
+                10.18352/studium.1451#1480
+            "
+
+    
+        href="
+    
+        /articles/10.18352/studium.1451/galley/1480/download/
+    ">
+    PDF
+    (EN)
+</a>
+     */
+    fact.addPreXform(new NodeFilter() {
+      @Override
+      public boolean accept(Node node) {
+        if (node instanceof org.htmlparser.tags.LinkTag) {
+          LinkTag link = (LinkTag)node;
+          String href = link.getLink();
+          if (href != null) {
+            link.setLink(href.trim());
+          }
+        }
+        return false;
+      }
+    });
+    
+    /*
      * Images in Utrecht University Library's Studium
      * (https://www.gewina-studium.nl/) are displayed in a Featherlight
      * (https://noelboss.github.io/featherlight/) widget. In this context, an
@@ -64,8 +110,9 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
      * Example from
      * https://www.gewina-studium.nl/articles/10.18352/studium.10120/:
      * 
-     * <a href="#" data-featherlight="figures/Cocquyt_fig1.jpg"><img
-     * src="figures/Cocquyt_fig1.jpg"></a>
+<a href="#" data-featherlight="figures/Cocquyt_fig1.jpg">
+  <img src="figures/Cocquyt_fig1.jpg">
+</a>
      */
     fact.addAttrToRewrite("data-featherlight");
     
