@@ -26,7 +26,7 @@
 
       au < frozen ; exists ; 2016 ; 2016 ; American Literary Scholarship 2016 ; 2014 ; >
       au < crawling ; exists ; 2017 ; 2017 ; American Literary Scholarship 2017 ; 2015 ; >
-      au < ready ; exists ; 2018 ; 2018 ; American Literary Scholarship 2018 ; 2016 ; >
+      au < crawling ; exists ; 2018 ; 2018 ; American Literary Scholarship 2018 ; 2016 ; >
       au < crawling ; exists ; 2019 ; 2019 ; American Literary Scholarship 2019 ; 2017 ; > #unable to add to AUTest
       au < crawling ; exists ; 2020 ; 2020 ; American Literary Scholarship 2020 ; 2018 ; >
 
@@ -80,7 +80,7 @@
       param[journal_id] = boundary-2
 
       au < crawling ; exists ; 2017 ; 2017 ; boundary 2 Volume 44 ; 44 ; >
-      au < ready ; exists ; 2018 ; 2018 ; boundary 2 Volume 45 ; 45 ; >
+      au < crawling ; exists ; 2018 ; 2018 ; boundary 2 Volume 45 ; 45 ; >
       au < crawling ; exists ; 2019 ; 2019 ; boundary 2 Volume 46 ; 46 ; >
       au < crawling ; exists ; 2020 ; 2020 ; boundary 2 Volume 47 ; 47 ; >
 
@@ -482,7 +482,7 @@
       au < frozen ; exists ; 2012 ; 2012 ; History of the Present Volume 2 ; 2 ; >
       au < crawling ; exists ; 2013 ; 2013 ; History of the Present Volume 3 ; 3 ; >
       au < frozen ; exists ; 2014 ; 2014 ; History of the Present Volume 4 ; 4 ; >
-      au < ready ; exists ; 2015 ; 2015 ; History of the Present Volume 5 ; 5 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; History of the Present Volume 5 ; 5 ; >
       au < frozen ; exists ; 2016 ; 2016 ; History of the Present Volume 6 ; 6 ; >
       au < crawling ; exists ; 2017 ; 2017 ; History of the Present Volume 7 ; 7 ; >
       au < crawling ; exists ; 2018 ; 2018 ; History of the Present Volume 8 ; 8 ; >
@@ -582,7 +582,7 @@
       au < frozen ; exists ; 2014 ; 2014 ; Journal of Middle East Women's Studies Volume 10 ; 10 ; >
       au < crawling ; exists ; 2015 ; 2015 ; Journal of Middle East Women's Studies Volume 11 ; 11 ; >
       au < frozen ; exists ; 2016 ; 2016 ; Journal of Middle East Women's Studies Volume 12 ; 12 ; >
-      au < ready ; exists ; 2017 ; 2017 ;  Journal of Middle East Women's Studies Volume 13 ; 13 ; >
+      au < crawling ; exists ; 2017 ; 2017 ;  Journal of Middle East Women's Studies Volume 13 ; 13 ; >
       au < frozen ; exists ; 2018 ; 2018 ; Journal of Middle East Women's Studies Volume 14 ; 14 ; >
       au < frozen ; exists ; 2019 ; 2019 ; Journal of Middle East Women's Studies Volume 15 ; 15 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Journal of Middle East Women's Studies Volume 16 ; 16 ; >
@@ -674,7 +674,7 @@
       au < crawling ; exists ; 2014 ; 2014 ; Meridians Volume 12 (2014) ; 12 (2014) ; >
       au < frozen ; exists ; 2015 ; 2015 ; Meridians Volume 13 (2015) ; 13 (2015) ; >
       au < crawling ; exists ; 2016 ; 2016 ; Meridians Volume 13-15 (2016) ; 13-15 (2016) ; >
-      au < ready ; exists ; 2017 ; 2017 ; Meridians Volume 15 (2017) ; 15 (2017) ; >
+      au < crawling ; exists ; 2017 ; 2017 ; Meridians Volume 15 (2017) ; 15 (2017) ; >
       au < frozen ; exists ; 2018 ; 2018 ; Meridians Volume 16-17 (2018) ; 16-17 (2018) ; >
       au < frozen ; exists ; 2019 ; 2019 ; Meridians Volume 18 (2019) ; 18 (2019) ; >
       au < crawling ; exists ; 2020 ; 2020 ; Meridians Volume 19 (2020) ; 19 (2020) ; >

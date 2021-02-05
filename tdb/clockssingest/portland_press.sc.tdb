@@ -498,9 +498,9 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Biochemical Journal Volume 472 ; 472 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Biochemical Journal Volume 473 ; 473 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Biochemical Journal Volume 474 ; 474 ; >
-    au < ready ; exists ; 2018 ; 2018 ; Biochemical Journal Volume 475 ; 475 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; Biochemical Journal Volume 475 ; 475 ; >
     au < crawling ; exists ; 2019 ; 2019 ; Biochemical Journal Volume 476 ; 476 ; >
-    au < ready ; exists ; 2020 ; 2020 ; Biochemical Journal Volume 477 ; 477 ; >
+    au < crawling ; exists ; 2020 ; 2020 ; Biochemical Journal Volume 477 ; 477 ; >
     au < manifest ; exists ; 2021 ; 2021 ; Biochemical Journal Volume 478 ; 478 ; >
 
   }
@@ -623,7 +623,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Bioscience Reports Volume 37 ; 37 ; >
     au < crawling ; exists ; 2018 ; 2018 ; Bioscience Reports Volume 38 ; 38 ; >
     au < crawling ; exists ; 2019 ; 2019 ; Bioscience Reports Volume 39 ; 39 ; >
-    au < ready ; exists ; 2020 ; 2020 ; Bioscience Reports Volume 40 ; 40 ; >
+    au < crawling ; exists ; 2020 ; 2020 ; Bioscience Reports Volume 40 ; 40 ; >
     au < manifest ; exists ; 2021 ; 2021 ; Bioscience Reports Volume 41 ; 41 ; >
 
   }
@@ -677,7 +677,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Clinical Science Volume 129 ; 129 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Clinical Science Volume 130 ; 130 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Clinical Science Volume 131 ; 131 ; >
-    au < ready ; exists ; 2018 ; 2018 ; Clinical Science Volume 132 ; 132 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; Clinical Science Volume 132 ; 132 ; >
     au < crawling ; exists ; 2019 ; 2019 ; Clinical Science Volume 133 ; 133 ; >
     au < crawling ; exists ; 2020 ; 2020 ; Clinical Science Volume 134 ; 134 ; >
     au < manifest ; exists ; 2021 ; 2021 ; Clinical Science Volume 135 ; 135 ; >
@@ -727,7 +727,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Essays in Biochemistry Volume 61 ; 61 ; >
     au < crawling ; exists ; 2018 ; 2018 ; Essays in Biochemistry Volume 62 ; 62 ; >
     au < crawling ; exists ; 2019 ; 2019 ; Essays in Biochemistry Volume 63 ; 63 ; >
-    au < ready ; exists ; 2020 ; 2020 ; Essays in Biochemistry Volume 64 ; 64 ; >
+    au < crawling ; exists ; 2020 ; 2020 ; Essays in Biochemistry Volume 64 ; 64 ; >
     au < expected ; exists ; 2021 ; 2021 ; Essays in Biochemistry Volume 65 ; 65 ; >
 
   }
@@ -770,7 +770,7 @@
     #param[base_url] = http://www.emergtoplifesci.org/
 
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Emerging Topics in Life Sciences Volume 1 ; 1 ; >
-    au < ready ; exists ; 2018 ; 2018 ; Emerging Topics in Life Sciences Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; Emerging Topics in Life Sciences Volume 2 ; 2 ; >
     au < crawling ; exists ; 2019 ; 2019 ; Emerging Topics in Life Sciences Volume 3 ; 3 ; >
     au < ready ; exists ; 2020 ; 2020 ; Emerging Topics in Life Sciences Volume 4 ; 4 ; >
     au < expected ; exists ; 2021 ; 2021 ; Emerging Topics in Life Sciences Volume 5 ; 5 ; >
@@ -791,7 +791,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Neuronal Signaling Volume 1 ; 1 ; >
     au < crawling ; exists ; 2018 ; 2018 ; Neuronal Signaling Volume 2 ; 2 ; >
     au < ready ; exists ; 2019 ; 2019 ; Neuronal Signaling Volume 3 ; 3 ; >
-    au < ready ; exists ; 2020 ; 2020 ; Neuronal Signaling Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2020 ; 2020 ; Neuronal Signaling Volume 4 ; 4 ; >
     au < manifest ; exists ; 2021 ; 2021 ; Neuronal Signaling Volume 5 ; 5 ; >
 
   }
