@@ -57,48 +57,60 @@
     <string>au_crawlrules</string>
     <list>
       <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)$", base_url_host</string>
-      <string>2,"^%sarticle.asp\?issn=%s;year=[0-9]+;volume=%s;issue=.*;type=[3-9]$",base_url, journal_issn, volume_name</string>
-      <string>1,"^%s(article|citation|downloadpdf)\.asp\?issn=%s;year=[0-9]+;volume=%s;issue=",base_url, journal_issn, volume_name</string>
+      <string>2,"^https?://%s/article\.asp\?issn=%s;year=[0-9]+;volume=%s;issue=.*;type=[3-9]$", base_url_host, journal_issn, volume_name</string>
+      <string>1,"^https?://%s/(article|citation|downloadpdf)\.asp\?issn=%s;year=[0-9]+;volume=%s;issue=", base_url_host, journal_issn, volume_name</string>
       <!--  allow this for UrlConsumer -->
-      <string>1,"^%sshowcaptcha\.asp\?RedirectUrl=",base_url</string>
-      <string>1,"^%sciteman.asp\?issn=%s;year=[0-9]+;volume=%s;issue=.*;t=2$",base_url, journal_issn, volume_name</string>
-      <string>1,"^%s(show[Bb]ack[Ii]ssue|citation)\.asp\?issn=%s;year=[0-9]+;volume=%s", base_url, journal_issn, volume_name</string>
-      <string>1,"^%sviewimage.asp\?img=", base_url</string>
-      <string>1,"^%sbrowse.asp(|\?sabs=[ny]|\?date=[0-9]{1,2}-%d)$", base_url, year</string>
+      <string>1,"^https?://%s/showcaptcha\.asp\?RedirectUrl=", base_url_host</string>
+      <string>1,"^https?://%s/citeman\.asp\?issn=%s;year=[0-9]+;volume=%s;issue=.*;t=2$", base_url_host, journal_issn, volume_name</string>
+      <string>1,"^https?://%s/(show[Bb]ack[Ii]ssue|citation)\.asp\?issn=%s;year=[0-9]+;volume=%s", base_url_host, journal_issn, volume_name</string>
+      <string>1,"^https?://%s/viewimage\.asp\?img=", base_url_host</string>
+      <string>1,"^https?://%s/browse\.asp(|\?sabs=[ny]|\?date=[0-9]{1,2}-%d)$", base_url_host, year</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
     <!-- http://www.jpgmonline.com/backissues.asp -->
-    <string>"%sbackissues.asp", base_url</string> <!--  limit to current volume through crawl rules above -->
+    <list>
+      <string>"%sbackissues.asp", to_http(base_url)</string>
+      <string>"%sbackissues.asp", to_https(base_url)</string>
+    </list>
   </entry>
   <entry>
     <string>au_permission_url</string>
-    <string>"%slockss.txt", base_url</string>
+    <list>
+      <string>"%slockss.txt", to_http(base_url)</string>
+      <string>"%slockss.txt", to_https(base_url)</string>
+    </list>
   </entry>
   <entry>
     <string>au_feature_urls</string>
     <map>
       <entry>
         <string>au_title</string>
-        <string>"%s", base_url</string>
+        <list>
+          <string>"%s", to_http(base_url)</string>
+          <string>"%s", to_https(base_url)</string>
+        </list>
       </entry>
       <entry>
         <string>au_issue</string>
-        <string>"%sshowBackIssue.asp?issn=%s;year=%d;volume=%s;issue=%s", base_url, journal_issn, year, volume_name, issue</string>
+        <list>
+          <string>"%sshowBackIssue.asp?issn=%s;year=%d;volume=%s;issue=%s", to_http(base_url), journal_issn, year, volume_name, issue</string>
+          <string>"%sshowBackIssue.asp?issn=%s;year=%d;volume=%s;issue=%s", to_https(base_url), journal_issn, year, volume_name, issue</string>
+        </list>
       </entry>
     </map>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
-      <list>
+    <list>
       <!-- EITHER
       base_url/article.asp?issn=0022-3859;year=2013;volume=59;issue=3;spage=179;epage=185;aulast=Singh full text html (no type)
       or
       base_url/article.asp?issn=0022-3859;year=2013;volume=59;issue=3;spage=179;epage=185;aulast=Singh;type=2  pdf
       -->
-        <string>"^%s(article)\.asp\?issn=%s;year=[0-9]+;volume=%s.*;aulast=[^;]*(;type=2)?$", base_url, journal_issn, volume_name</string>
-      </list>
+      <string>"^https?://%s/(article)\.asp\?issn=%s;year=[0-9]+;volume=%s.*;aulast=[^;]*(;type=2)?$", base_url_host, journal_issn, volume_name</string>
+    </list>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -142,7 +154,7 @@
   <!--  support http to https transition for existing AUs -->
   <entry>
     <string>plugin_url_consumer_factory</string>
-    <string>org.lockss.plugin.base.HttpToHttpsUrlConsumerFactory</string>
+    <string>org.lockss.plugin.medknow.MedknowHttpHttpsUrlConsumerFactory</string>
   </entry>
   <entry>
     <string>plugin_url_fetcher_factory</string>
@@ -206,11 +218,7 @@
   </entry>
   <entry>
     <string>au_redirect_to_login_url_pattern</string>
-          <string>"%ssubscriberlogin\.asp", base_url</string>-->
-  </entry>
-  <entry>
-    <string>plugin_url_consumer_factory</string>
-    <string>org.lockss.plugin.medknow.MedknowUrlConsumerFactory</string>
+    <string>"https?://%s/subscriberlogin\.asp", base_url_host</string>
   </entry>
   <!--
   http://www.wjcs.us.com/article.asp?issn=1941-8213;year=2018;volume=7;issue=1;spage=1;epage=7;aulast=Stringfield;type=2
@@ -256,22 +264,22 @@
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
     <list>
-      <string>"%s(images|templates)/.+[.](css|js|gif|jpe?g|png)$", base_url</string>
-      <string>"%s(js)/.+[.](js)$", base_url</string>
-      <string>"%sdownloadpdf[.]asp", base_url</string>
+      <string>"https?://%s/(images|templates)/.+[.](css|js|gif|jpe?g|png)$", base_url_host</string>
+      <string>"https?://%s/(js)/.+[.](js)$", base_url_host</string>
+      <string>"https?://%s/downloadpdf[.]asp", base_url_host</string>
     </list>
   </entry>
   <entry>
     <!-- these will not count towards poll results but will replicate from peer if above -->
     <string>au_url_poll_result_weight</string>
     <list>
-      <string>"%s(images|templates)/.+[.](css|js|gif|jpe?g|png)$", base_url, 0</string>
-      <string>"%s(js)/.+[.](js)$", base_url, 0</string>
-      <string>"%sdownloadpdf[.]asp", base_url, 0</string>
+      <string>"https?://%s/(images|templates)/.+[.](css|js|gif|jpe?g|png)$", base_url_host, 0</string>
+      <string>"https?://%s/(js)/.+[.](js)$", base_url_host, 0</string>
+      <string>"https?://%s/downloadpdf[.]asp", base_url_host, 0</string>
       <!-- always a backissues.asp, however it is always being updated so disagreements happen -->
-      <string>"%s(backissues[.]asp)$", base_url, 0</string>
+      <string>"https?://%s/(backissues[.]asp)$", base_url_host, 0</string>
       <!-- allow showcaptcha.asp?RedirectUrl= for UrlConsumer, however no weight -->
-      <string>"%sshowcaptcha\.asp\?RedirectUrl=", base_url, 0</string>
+      <string>"https?://%s/showcaptcha\.asp\?RedirectUrl=", base_url_host, 0</string>
     </list>
   </entry>
   <entry>

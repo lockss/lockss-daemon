@@ -98,11 +98,14 @@ public class MedknowHtmlMetadataExtractorFactory implements
       
       ArticleMetadata am = super.extract(target, cu);
       am.cook(tagMap);
-      
+
+      /* access_url and publisher all checked by BaseArticleMetadata against tdb */
+      am.putIfBetter(MetadataField.FIELD_PUBLISHER,MEDKNOW_PUBNAME);
+
       /** raw metadata:
-        dc.identifier: [http://www.afrjpaedsurg.org/article.asp?issn=0189-6725;year=2010;volume=7;issue=2;spage=61;epage=65;aulast=Gupta;type=0; 0189-6725]
-        extract the muti-value for this field, check if one of the values
-        is valid issn, then set the issn metadata in cooked metadata list. */
+       dc.identifier: [http://www.afrjpaedsurg.org/article.asp?issn=0189-6725;year=2010;volume=7;issue=2;spage=61;epage=65;aulast=Gupta;type=0; 0189-6725]
+       extract the muti-value for this field, check if one of the values
+       is valid issn, then set the issn metadata in cooked metadata list. */
       List<String> idList = am.getRawList("DC.Identifier");
       for (String id : idList) {
         if (MetadataUtil.isIssn(id)) {
@@ -110,10 +113,52 @@ public class MedknowHtmlMetadataExtractorFactory implements
           break;
         }
       }
-      
-      /* access_url and publisher all checked by BaseArticleMetadata against tdb */
-      am.putIfBetter(MetadataField.FIELD_PUBLISHER,MEDKNOW_PUBNAME);
-      
+
+      // add http to https transition handling
+      HttpHttpsUrlHelper helper = new HttpHttpsUrlHelper(cu.getArchivalUnit(),
+          ConfigParamDescr.BASE_URL.getKey());
+      for (MetadataField field : Arrays.asList(MetadataField.DC_FIELD_IDENTIFIER,
+          MetadataField.FIELD_ACCESS_URL)) {
+        switch (field.getCardinality()) {
+          case Multi:
+            List<String> entries = am.getList(field);
+            List<String> newEntries = new ArrayList<>();
+            log.debug2("STRTing-Iter");
+            log.debug2("OLD LIST: " + entries.toString());
+            // deep copy the list so that we can clear it
+            Iterator<String> iter = entries.iterator();
+            while (iter.hasNext()) {
+              String s = iter.next();
+              log.debug2("entry: " + s);
+              newEntries.add(s);
+            }
+            log.debug2("NEW LIST: " + newEntries.toString());
+            entries.clear();
+            log.debug2("OLD LIST AFTER CLEAR: " + entries.toString());
+            log.debug2("NEW LIST AFTER CLEAR:" + newEntries.toString());
+            // normalize any urls found in the list.
+            for (String each : newEntries) {
+              log.debug2("entry: " + each);
+              if (each.contains("http")) {
+                each = helper.normalize(each);
+              }
+              log.debug2("entry after https: " + each);
+              if (am.put(field, each)) {
+                log.debug2("put success");
+              } else {
+                log.debug2("put fail");
+              }
+            }
+            log.debug2("END");
+          case Single:
+            String url = am.get(field);
+            if (url != null) {
+              url = helper.normalize(url);
+              am.replace(field, url);
+            }
+        }
+      }
+
       return am;
       
     } /** end extract */
