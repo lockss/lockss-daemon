@@ -87,7 +87,7 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
     fact.addPreXform(new NodeFilter() {
       @Override
       public boolean accept(Node node) {
-        if (node instanceof org.htmlparser.tags.LinkTag) {
+        if (node instanceof LinkTag) {
           LinkTag link = (LinkTag)node;
           String href = link.getLink();
           if (href != null) {
