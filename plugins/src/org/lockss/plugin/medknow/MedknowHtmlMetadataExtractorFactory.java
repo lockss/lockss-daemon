@@ -143,12 +143,14 @@ public class MedknowHtmlMetadataExtractorFactory implements
                 each = helper.normalize(each);
               }
               log.debug2("entry after https: " + each);
+              /*
               if (am.put(field, each)) {
                 log.debug2("put success");
               } else {
                 log.debug2("put fail");
-              }
+              }*/
             }
+            am.put(field, newEntries.toString());
             log.debug2("END");
           case Single:
             String url = am.get(field);
