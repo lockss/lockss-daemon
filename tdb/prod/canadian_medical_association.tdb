@@ -1,6 +1,7 @@
 {
   publisher <
-    name = Canadian Medical Association
+    name = Canadian Medical Association ;
+    info[platform] = HWDrupal. One journal
   >
 
   {
@@ -119,10 +120,10 @@
     au < HighWirePressH20Plugin ; released ; 2014 ; Canadian Medical Association Journal Volume 186 ; 186 >
     au < HighWirePressH20Plugin ; released ; 2015 ; Canadian Medical Association Journal Volume 187 ; 187 >
     au < HighWirePressH20Plugin ; released ; 2016 ; Canadian Medical Association Journal Volume 188 ; 188 >
-    au < HighWireDrupalPlugin ; exists ; 2017 ; Canadian Medical Association Journal Volume 189 ; 189 >
-    au < HighWireDrupalPlugin ; exists ; 2018 ; Canadian Medical Association Journal Volume 190 ; 190 >
-    au < HighWireDrupalPlugin ; exists ; 2019 ; Canadian Medical Association Journal Volume 191 ; 191 >
-    au < HighWireDrupalPlugin ; expected ; 2020 ; Canadian Medical Association Journal Volume 192 ; 192 >
+    au < HWDrupalPlugin ; exists ; 2017 ; Canadian Medical Association Journal Volume 189 ; 189 >
+    au < HWDrupalPlugin ; exists ; 2018 ; Canadian Medical Association Journal Volume 190 ; 190 >
+    au < HWDrupalPlugin ; exists ; 2019 ; Canadian Medical Association Journal Volume 191 ; 191 >
+    au < HWDrupalPlugin ; expected ; 2020 ; Canadian Medical Association Journal Volume 192 ; 192 >
 
   }
 

@@ -17,61 +17,62 @@
     >
 
     #param[base_url] = http://bjgp.org/
+    #doNotProcess: no manifest pages. 
 
-    au < exists ; 1953 ; British Journal of General Practice Volume os-1 ; os-1 ; https://bjgp.org/ >
-    au < exists ; 1954 ; British Journal of General Practice Volume os-2 ; os-2 ; https://bjgp.org/ >
-    au < exists ; 1955 ; British Journal of General Practice Volume os-3 ; os-3 ; https://bjgp.org/ >
-    au < exists ; 1956 ; British Journal of General Practice Volume os-4 ; os-4 ; https://bjgp.org/ >
-    au < exists ; 1957 ; British Journal of General Practice Volume os-5 ; os-5 ; https://bjgp.org/ >
-    au < exists ; 1958 ; British Journal of General Practice Volume 1 ; 1 ; https://bjgp.org/ >
-    au < exists ; 1959 ; British Journal of General Practice Volume 2 ; 2 ; https://bjgp.org/ >
-    au < exists ; 1960 ; British Journal of General Practice Volume 3 ; 3 ; https://bjgp.org/ >
-    au < exists ; 1961 ; British Journal of General Practice Volume 4 ; 4 ; https://bjgp.org/ >
-    au < exists ; 1962 ; British Journal of General Practice Volume 5 ; 5 ; https://bjgp.org/ >
-    au < exists ; 1963 ; British Journal of General Practice Volume 6 ; 6 ; https://bjgp.org/ >
-    au < exists ; 1964 ; British Journal of General Practice Volume 7 ; 7 ; https://bjgp.org/ >
-    au < exists ; 1964 ; British Journal of General Practice Volume 8 ; 8 ; https://bjgp.org/ >
-    au < exists ; 1965 ; British Journal of General Practice Volume 9 ; 9 ; https://bjgp.org/ >
-    au < exists ; 1965 ; British Journal of General Practice Volume 10 ; 10 ; https://bjgp.org/ >
-    au < exists ; 1966 ; British Journal of General Practice Volume 11 ; 11 ; https://bjgp.org/ >
-    au < exists ; 1966 ; British Journal of General Practice Volume 12 ; 12 ; https://bjgp.org/ >
-    au < exists ; 1967 ; British Journal of General Practice Volume 13 ; 13 ; https://bjgp.org/ >
-    au < exists ; 1967 ; British Journal of General Practice Volume 14 ; 14 ; https://bjgp.org/ >
-    au < exists ; 1968 ; British Journal of General Practice Volume 15 ; 15 ; https://bjgp.org/ >
-    au < exists ; 1968 ; British Journal of General Practice Volume 16 ; 16 ; https://bjgp.org/ >
-    au < exists ; 1969 ; British Journal of General Practice Volume 17 ; 17 ; https://bjgp.org/ >
-    au < exists ; 1969 ; British Journal of General Practice Volume 18 ; 18 ; https://bjgp.org/ >
-    au < exists ; 1970 ; British Journal of General Practice Volume 19 ; 19 ; https://bjgp.org/ >
-    au < exists ; 1970 ; British Journal of General Practice Volume 20 ; 20 ; https://bjgp.org/ >
-    au < exists ; 1971 ; British Journal of General Practice Volume 21 ; 21 ; https://bjgp.org/ >
-    au < exists ; 1972 ; British Journal of General Practice Volume 22 ; 22 ; https://bjgp.org/ >
-    au < exists ; 1973 ; British Journal of General Practice Volume 23 ; 23 ; https://bjgp.org/ >
-    au < exists ; 1974 ; British Journal of General Practice Volume 24 ; 24 ; https://bjgp.org/ >
-    au < exists ; 1975 ; British Journal of General Practice Volume 25 ; 25 ; https://bjgp.org/ >
-    au < exists ; 1976 ; British Journal of General Practice Volume 26 ; 26 ; https://bjgp.org/ >
-    au < exists ; 1977 ; British Journal of General Practice Volume 27 ; 27 ; https://bjgp.org/ >
-    au < exists ; 1978 ; British Journal of General Practice Volume 28 ; 28 ; https://bjgp.org/ >
-    au < exists ; 1979 ; British Journal of General Practice Volume 29 ; 29 ; https://bjgp.org/ >
-    au < exists ; 1980 ; British Journal of General Practice Volume 30 ; 30 ; https://bjgp.org/ >
-    au < exists ; 1981 ; British Journal of General Practice Volume 31 ; 31 ; https://bjgp.org/ >
-    au < exists ; 1982 ; British Journal of General Practice Volume 32 ; 32 ; https://bjgp.org/ >
-    au < exists ; 1983 ; British Journal of General Practice Volume 33 ; 33 ; https://bjgp.org/ >
-    au < exists ; 1984 ; British Journal of General Practice Volume 34 ; 34 ; https://bjgp.org/ >
-    au < exists ; 1985 ; British Journal of General Practice Volume 35 ; 35 ; https://bjgp.org/ >
-    au < exists ; 1986 ; British Journal of General Practice Volume 36 ; 36 ; https://bjgp.org/ >
-    au < exists ; 1987 ; British Journal of General Practice Volume 37 ; 37 ; https://bjgp.org/ >
-    au < exists ; 1988 ; British Journal of General Practice Volume 38 ; 38 ; https://bjgp.org/ >
-    au < exists ; 1989 ; British Journal of General Practice Volume 39 ; 39 ; https://bjgp.org/ >
-    au < exists ; 1990 ; British Journal of General Practice Volume 40 ; 40 ; https://bjgp.org/ >
-    au < exists ; 1991 ; British Journal of General Practice Volume 41 ; 41 ; https://bjgp.org/ >
-    au < exists ; 1992 ; British Journal of General Practice Volume 42 ; 42 ; https://bjgp.org/ >
-    au < exists ; 1993 ; British Journal of General Practice Volume 43 ; 43 ; https://bjgp.org/ >
-    au < exists ; 1994 ; British Journal of General Practice Volume 44 ; 44 ; https://bjgp.org/ >
-    au < exists ; 1995 ; British Journal of General Practice Volume 45 ; 45 ; https://bjgp.org/ >
-    au < exists ; 1996 ; British Journal of General Practice Volume 46 ; 46 ; https://bjgp.org/ >
-    au < exists ; 1997 ; British Journal of General Practice Volume 47 ; 47 ; https://bjgp.org/ >
-    au < exists ; 1998 ; British Journal of General Practice Volume 48 ; 48 ; https://bjgp.org/ >
-    au < exists ; 1999 ; British Journal of General Practice Volume 49 ; 49 ; https://bjgp.org/ >
+    au < doNotProcess ; 1953 ; British Journal of General Practice Volume os-1 ; os-1 ; https://bjgp.org/ >
+    au < doNotProcess ; 1954 ; British Journal of General Practice Volume os-2 ; os-2 ; https://bjgp.org/ >
+    au < doNotProcess ; 1955 ; British Journal of General Practice Volume os-3 ; os-3 ; https://bjgp.org/ >
+    au < doNotProcess ; 1956 ; British Journal of General Practice Volume os-4 ; os-4 ; https://bjgp.org/ >
+    au < doNotProcess ; 1957 ; British Journal of General Practice Volume os-5 ; os-5 ; https://bjgp.org/ >
+    au < doNotProcess ; 1958 ; British Journal of General Practice Volume 1 ; 1 ; https://bjgp.org/ >
+    au < doNotProcess ; 1959 ; British Journal of General Practice Volume 2 ; 2 ; https://bjgp.org/ >
+    au < doNotProcess ; 1960 ; British Journal of General Practice Volume 3 ; 3 ; https://bjgp.org/ >
+    au < doNotProcess ; 1961 ; British Journal of General Practice Volume 4 ; 4 ; https://bjgp.org/ >
+    au < doNotProcess ; 1962 ; British Journal of General Practice Volume 5 ; 5 ; https://bjgp.org/ >
+    au < doNotProcess ; 1963 ; British Journal of General Practice Volume 6 ; 6 ; https://bjgp.org/ >
+    au < doNotProcess ; 1964 ; British Journal of General Practice Volume 7 ; 7 ; https://bjgp.org/ >
+    au < doNotProcess ; 1964 ; British Journal of General Practice Volume 8 ; 8 ; https://bjgp.org/ >
+    au < doNotProcess ; 1965 ; British Journal of General Practice Volume 9 ; 9 ; https://bjgp.org/ >
+    au < doNotProcess ; 1965 ; British Journal of General Practice Volume 10 ; 10 ; https://bjgp.org/ >
+    au < doNotProcess ; 1966 ; British Journal of General Practice Volume 11 ; 11 ; https://bjgp.org/ >
+    au < doNotProcess ; 1966 ; British Journal of General Practice Volume 12 ; 12 ; https://bjgp.org/ >
+    au < doNotProcess ; 1967 ; British Journal of General Practice Volume 13 ; 13 ; https://bjgp.org/ >
+    au < doNotProcess ; 1967 ; British Journal of General Practice Volume 14 ; 14 ; https://bjgp.org/ >
+    au < doNotProcess ; 1968 ; British Journal of General Practice Volume 15 ; 15 ; https://bjgp.org/ >
+    au < doNotProcess ; 1968 ; British Journal of General Practice Volume 16 ; 16 ; https://bjgp.org/ >
+    au < doNotProcess ; 1969 ; British Journal of General Practice Volume 17 ; 17 ; https://bjgp.org/ >
+    au < doNotProcess ; 1969 ; British Journal of General Practice Volume 18 ; 18 ; https://bjgp.org/ >
+    au < doNotProcess ; 1970 ; British Journal of General Practice Volume 19 ; 19 ; https://bjgp.org/ >
+    au < doNotProcess ; 1970 ; British Journal of General Practice Volume 20 ; 20 ; https://bjgp.org/ >
+    au < doNotProcess ; 1971 ; British Journal of General Practice Volume 21 ; 21 ; https://bjgp.org/ >
+    au < doNotProcess ; 1972 ; British Journal of General Practice Volume 22 ; 22 ; https://bjgp.org/ >
+    au < doNotProcess ; 1973 ; British Journal of General Practice Volume 23 ; 23 ; https://bjgp.org/ >
+    au < doNotProcess ; 1974 ; British Journal of General Practice Volume 24 ; 24 ; https://bjgp.org/ >
+    au < doNotProcess ; 1975 ; British Journal of General Practice Volume 25 ; 25 ; https://bjgp.org/ >
+    au < doNotProcess ; 1976 ; British Journal of General Practice Volume 26 ; 26 ; https://bjgp.org/ >
+    au < doNotProcess ; 1977 ; British Journal of General Practice Volume 27 ; 27 ; https://bjgp.org/ >
+    au < doNotProcess ; 1978 ; British Journal of General Practice Volume 28 ; 28 ; https://bjgp.org/ >
+    au < doNotProcess ; 1979 ; British Journal of General Practice Volume 29 ; 29 ; https://bjgp.org/ >
+    au < doNotProcess ; 1980 ; British Journal of General Practice Volume 30 ; 30 ; https://bjgp.org/ >
+    au < doNotProcess ; 1981 ; British Journal of General Practice Volume 31 ; 31 ; https://bjgp.org/ >
+    au < doNotProcess ; 1982 ; British Journal of General Practice Volume 32 ; 32 ; https://bjgp.org/ >
+    au < doNotProcess ; 1983 ; British Journal of General Practice Volume 33 ; 33 ; https://bjgp.org/ >
+    au < doNotProcess ; 1984 ; British Journal of General Practice Volume 34 ; 34 ; https://bjgp.org/ >
+    au < doNotProcess ; 1985 ; British Journal of General Practice Volume 35 ; 35 ; https://bjgp.org/ >
+    au < doNotProcess ; 1986 ; British Journal of General Practice Volume 36 ; 36 ; https://bjgp.org/ >
+    au < doNotProcess ; 1987 ; British Journal of General Practice Volume 37 ; 37 ; https://bjgp.org/ >
+    au < doNotProcess ; 1988 ; British Journal of General Practice Volume 38 ; 38 ; https://bjgp.org/ >
+    au < doNotProcess ; 1989 ; British Journal of General Practice Volume 39 ; 39 ; https://bjgp.org/ >
+    au < doNotProcess ; 1990 ; British Journal of General Practice Volume 40 ; 40 ; https://bjgp.org/ >
+    au < doNotProcess ; 1991 ; British Journal of General Practice Volume 41 ; 41 ; https://bjgp.org/ >
+    au < doNotProcess ; 1992 ; British Journal of General Practice Volume 42 ; 42 ; https://bjgp.org/ >
+    au < doNotProcess ; 1993 ; British Journal of General Practice Volume 43 ; 43 ; https://bjgp.org/ >
+    au < doNotProcess ; 1994 ; British Journal of General Practice Volume 44 ; 44 ; https://bjgp.org/ >
+    au < doNotProcess ; 1995 ; British Journal of General Practice Volume 45 ; 45 ; https://bjgp.org/ >
+    au < doNotProcess ; 1996 ; British Journal of General Practice Volume 46 ; 46 ; https://bjgp.org/ >
+    au < doNotProcess ; 1997 ; British Journal of General Practice Volume 47 ; 47 ; https://bjgp.org/ >
+    au < doNotProcess ; 1998 ; British Journal of General Practice Volume 48 ; 48 ; https://bjgp.org/ >
+    au < doNotProcess ; 1999 ; British Journal of General Practice Volume 49 ; 49 ; https://bjgp.org/ >
     au < released ; 2000 ; British Journal of General Practice Volume 50 ; 50 ; http://bjgp.org/ >
     au < released ; 2001 ; British Journal of General Practice Volume 51 ; 51 ; http://bjgp.org/ >
     au < released ; 2002 ; British Journal of General Practice Volume 52 ; 52 ; http://bjgp.org/ >
@@ -91,8 +92,9 @@
     au < released ; 2016 ; British Journal of General Practice Volume 66 ; 66 ; http://bjgp.org/ >
     au < released ; 2017 ; British Journal of General Practice Volume 67 ; 67 ; http://bjgp.org/ >
     au < released ; 2018 ; British Journal of General Practice Volume 68 ; 68 ; http://bjgp.org/ >
-    au < expected ; 2019 ; British Journal of General Practice Volume 69 ; 69 ; https://bjgp.org/ >
-    au < expected ; 2020 ; British Journal of General Practice Volume 70 ; 70 ; https://bjgp.org/ >
+    au < exists ; 2019 ; British Journal of General Practice Volume 69 ; 69 ; https://bjgp.org/ >
+    au < exists ; 2020 ; British Journal of General Practice Volume 70 ; 70 ; https://bjgp.org/ >
+    au < exists ; 2021 ; British Journal of General Practice Volume 71 ; 71 ; https://bjgp.org/ >
 
   }
 

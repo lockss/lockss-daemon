@@ -79,6 +79,7 @@
       issnl = 0022-3565
     >
 
+    {
     param[base_url] = http://jpet.aspetjournals.org/
 
     au < HighWirePressH20Plugin ; down ; 1909-1910 ; Journal of Pharmacology and Experimental Therapeutics Volume 1 ; 1 >
@@ -452,11 +453,15 @@
     au < aspet.ASPETDrupalPlugin ; released ; 2019 ; Journal of Pharmacology and Experimental Therapeutics Volume 369 ; 369 >
     au < aspet.ASPETDrupalPlugin ; released ; 2019 ; Journal of Pharmacology and Experimental Therapeutics Volume 370 ; 370 >
     au < aspet.ASPETDrupalPlugin ; released ; 2019 ; Journal of Pharmacology and Experimental Therapeutics Volume 371 ; 371 >
-    au < aspet.ASPETDrupalPlugin ; manifest ; 2020 ; Journal of Pharmacology and Experimental Therapeutics Volume 372 ; 372 >
-    au < aspet.ASPETDrupalPlugin ; manifest ; 2020 ; Journal of Pharmacology and Experimental Therapeutics Volume 373 ; 373 >
-    au < aspet.ASPETDrupalPlugin ; manifest ; 2020 ; Journal of Pharmacology and Experimental Therapeutics Volume 374 ; 374 >
-    au < aspet.ASPETDrupalPlugin ; expected ; 2020 ; Journal of Pharmacology and Experimental Therapeutics Volume 375 ; 375 >
+    }
+    {
+    param[base_url] = https://jpet.aspetjournals.org/
 
+    au < aspet.ASPETDrupalPlugin ; exists ; 2020 ; Journal of Pharmacology and Experimental Therapeutics Volume 372 ; 372 >
+    au < aspet.ASPETDrupalPlugin ; exists ; 2020 ; Journal of Pharmacology and Experimental Therapeutics Volume 373 ; 373 >
+    au < aspet.ASPETDrupalPlugin ; exists ; 2020 ; Journal of Pharmacology and Experimental Therapeutics Volume 374 ; 374 >
+    au < aspet.ASPETDrupalPlugin ; exists ; 2020 ; Journal of Pharmacology and Experimental Therapeutics Volume 375 ; 375 >
+    }
   }
 
   {
