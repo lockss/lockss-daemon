@@ -17,6 +17,7 @@
     implicit < status ; year ; volume ; name ; param[year] >
     param[base_url] = https://www.foodsystemsjournal.org/
     param[journal_id] = fsj
+   attr[start_stem] = index.php/
     #open access starts 1/1/2018
     
     au < doNotProcess ; 2010 ; 1 ; Journal of Agriculture, Food Systems, and Community Development Volume 2010 ; 2010 >
