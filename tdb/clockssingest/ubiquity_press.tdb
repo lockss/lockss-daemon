@@ -2782,8 +2782,12 @@
       au < finished ; finished ; 2017 ; 10 ; Studium Volume 2017 ; 2017 ; http://www.gewina-studium.nl/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2018 ; 11 ; Studium Volume 2018 ; 2018 ; https://www.gewina-studium.nl/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2019 ; 12 ; Studium Volume 2019 ; 2019 ; https://www.gewina-studium.nl/ ; reingest4.clockss.org:8082 >
-      # No 2020 AU expected.
-      # Trigger approved late 2020.
+
+      # This additional AU is needed because the last two TOCs of 2019 only
+      # appear on a 2020 manifest page. Note how only the param[year] is 2020.
+      au < manifest ; exists ; 2019 ; 12 ; Studium Volume 2019 [additional tables of contents] ; 2020 ; https://www.gewina-studium.nl/ ; reingest1.clockss.org:8082 >
+
+      # Trigger approved late 2020
 
   }
 
