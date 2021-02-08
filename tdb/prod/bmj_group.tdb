@@ -501,12 +501,12 @@
 
     #param[base_url] = https://informatics.bmj.com/
 
-    au < bmj.BMJDrupalPlugin ; exists ; 2015 ; BMJ Health & Care Informatics Volume 22 ; 22 ; https://informatics.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; exists ; 2016 ; BMJ Health & Care Informatics Volume 23 ; 23 ; https://informatics.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; exists ; 2017 ; BMJ Health & Care Informatics Volume 24 ; 24 ; https://informatics.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; exists ; 2018 ; BMJ Health & Care Informatics Volume 25 ; 25 ; https://informatics.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; exists ; 2019 ; BMJ Health & Care Informatics Volume 26 ; 26 ; https://informatics.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; exists ; 2020 ; BMJ Health & Care Informatics Volume 27 ; 27 ; https://informatics.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2015 ; BMJ Health & Care Informatics Volume 22 ; 22 ; https://informatics.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2016 ; BMJ Health & Care Informatics Volume 23 ; 23 ; https://informatics.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; BMJ Health & Care Informatics Volume 24 ; 24 ; https://informatics.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2018 ; BMJ Health & Care Informatics Volume 25 ; 25 ; https://informatics.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2019 ; BMJ Health & Care Informatics Volume 26 ; 26 ; https://informatics.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; expected ; 2020 ; BMJ Health & Care Informatics Volume 27 ; 27 ; https://informatics.bmj.com/ >
 
   }
 
