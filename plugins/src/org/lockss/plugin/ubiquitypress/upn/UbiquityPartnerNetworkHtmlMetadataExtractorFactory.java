@@ -62,6 +62,8 @@ public class UbiquityPartnerNetworkHtmlMetadataExtractorFactory implements
     
     // Map OJS2-specific HTML meta tag names to cooked metadata fields
     private static MultiMap tagMap = new MultiValueMap();
+
+    //https://www.gewina-studium.nl/articles/10.18352/studium.10199/
     
     static {
       
@@ -70,6 +72,8 @@ public class UbiquityPartnerNetworkHtmlMetadataExtractorFactory implements
       tagMap.put("DC.Title", MetadataField.DC_FIELD_TITLE);
       tagMap.put("DC.Identifier", MetadataField.DC_FIELD_IDENTIFIER);
       tagMap.put("DC.Date", MetadataField.DC_FIELD_DATE);
+      // In case DC.Date is null, use DC.Date.issued, like in  https://www.gewina-studium.nl/articles/10.18352/studium.10199/
+      tagMap.put("DC.Date.issued", MetadataField.DC_FIELD_DATE);
       tagMap.put("DC.Publisher", MetadataField.DC_FIELD_PUBLISHER);
       tagMap.put("DC.Publisher", MetadataField.FIELD_PUBLISHER);
       tagMap.put("DC.Contributor", MetadataField.DC_FIELD_CONTRIBUTOR);
@@ -89,6 +93,7 @@ public class UbiquityPartnerNetworkHtmlMetadataExtractorFactory implements
       tagMap.put("citation_lastpage", MetadataField.FIELD_END_PAGE);
       tagMap.put("citation_doi", MetadataField.FIELD_DOI);
       tagMap.put("citation_public_url", MetadataField.FIELD_ACCESS_URL);
+      tagMap.put("citation_publication_date", MetadataField.DC_FIELD_DATE);
       
     } // static
     
