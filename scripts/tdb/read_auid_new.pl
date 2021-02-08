@@ -206,7 +206,9 @@ while (my $line = <>) {
             #print("Result:$result");
             if ($pl_url eq "") {
                 $result = "EmptyProbeLink";
-            } elsif (substr($pl_url,0,11) ne substr($url,0,11)) {
+            } elsif (substr($pl_url,0,12) ne substr($man_url,0,12)) {
+                #print substr($pl_url,0,11);
+                #print substr($man_url,0,11);
                 $result = "Base-Probe-Mismatch";
                 $vol_title = $pl_url;
             } elsif (! $resp->is_success) {
@@ -228,6 +230,73 @@ while (my $line = <>) {
     }
     sleep(4);
 
+#CLOCKSS
+  } elsif ($plugin =~ m/^Clockss.+DrupalPlugin/) {
+        $url = sprintf("%sclockss-manifest/vol_%s_manifest.html",
+        $param{base_url}, $param{volume_name});
+        #printf("********************\n");  #debug
+        #printf("url=%s\n",$url);  #debug
+    $man_url = uri_unescape($url);
+    #printf("man_url=%s\n",$man_url);  #debug
+    $base_url_short = substr(uri_unescape($param{base_url}), 0, -1);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    my $man_contents = $resp->is_success ? $resp->content : "";
+    if (! $resp->is_success) {
+        $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+    } elsif ($req->url ne $resp->request->uri) {
+        $vol_title = $resp->request->uri;
+        $result = "Redirected";
+    } elsif (! defined($man_contents)) {
+        $result = "--NOT_DEF--";
+    } elsif ($man_contents !~ m/$clockss_tag/) {
+        $result = "--NO_TAG--";
+    } elsif (($man_contents =~ m/\/cgi\/reprint\/$param{volume_name}\//) || ($man_contents =~ m/$base_url_short" lockss-probe/)) { #"
+        $result = "CGI_probe_link";
+    } elsif (($man_contents =~ m/\/content\/$param{volume_name}\//) || ($man_contents =~ m/\/content\/vol$param{volume_name}\//)) {
+        #Collect title
+        if ($man_contents =~ m/<title>\s*(.*)\s+C?LOCKSS\s+Manifest\s+Page.*<\/title>/si) {
+            $vol_title = $1;
+            $vol_title =~ s/\s*\n\s*/ /g;
+            if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
+                $vol_title = "\"" . $vol_title . "\"";
+            }
+        }
+        #Test probe link
+        if ($man_contents !~ m/="([^"]*)" lockss-probe="true"/si) { #"
+            $result = "MissingProbeLink";
+        } else {
+            my $pl_url = $1;
+            my $req_pl = HTTP::Request->new(GET, $pl_url);
+            my $resp_pl = $ua->request($req_pl);
+            #print("Result:$result");
+            if ($pl_url eq "") {
+                $result = "EmptyProbeLink";
+            } elsif (substr($pl_url,0,12) ne substr($man_url,0,12)) {
+                #print substr($pl_url,0,11);
+                #print substr($man_url,0,11);
+                $result = "Base-Probe-Mismatch";
+                $vol_title = $pl_url;
+            } elsif (! $resp->is_success) {
+                $result = "BadProbeLink-" . $resp_pl->code();
+                $vol_title = $pl_url;
+            } elsif ($req_pl->url ne $resp_pl->request->uri) {
+                $result = "ProbeLinkRedirect";
+                $vol_title = $pl_url;
+            } else {
+                $result = "Manifest";
+            }
+        }
+    } else {
+        if ($man_contents =~ m/<a HREF="">/) {
+            $result = "--EMPTY_ISSUE_URL--";
+        } else {
+            $result = "--UNKNOWN--";
+        }
+    }
+    sleep(4);
+
+#GLN Deprecated
 #  } elsif ($plugin =~ m/^(?!Clockss).+DrupalPlugin/) {
 #        $url = sprintf("%slockss-manifest/vol_%s_manifest.html",
 #            $param{base_url}, $param{volume_name});
@@ -287,61 +356,61 @@ while (my $line = <>) {
 #        }
 #        sleep(4);
 #
-#CLOCKSS
-  } elsif ($plugin =~ m/^Clockss.+DrupalPlugin/) {
-        $url = sprintf("%sclockss-manifest/vol_%s_manifest.html",
-            $param{base_url}, $param{volume_name});
-        $man_url = uri_unescape($url);
-        $base_url_short = substr(uri_unescape($param{base_url}), 0, -1);
-        my $req = HTTP::Request->new(GET, $man_url);
-        my $resp = $ua->request($req);
-        #printf("%s\" lockss-probe\n",$base_url_short);
-        if ($resp->is_success) {
-            my $man_contents = $resp->content;
-            if ($req->url ne $resp->request->uri) {
-              $vol_title = $resp->request->uri;
-              $result = "Redirected";
-            } elsif (defined($man_contents) && (($man_contents =~ m/\/cgi\/reprint\/$param{volume_name}\//) || ($man_contents =~ m/$base_url_short" lockss-probe/))) {
-                $result = "CGI_probe_link";
-                if ($man_contents =~ m/<title>\s*(.*)\s+C?LOCKSS\s+Manifest\s+Page.*<\/title>/si) {
-                    $vol_title = $1;
-                    $vol_title =~ s/\s*\n\s*/ /g;
-                    if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
-                        $vol_title = "\"" . $vol_title . "\"";
-                    }
-                }
-            } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && (($man_contents =~ m/\/content\/$param{volume_name}\//) || ($man_contents =~ m/\/content\/vol$param{volume_name}\//))) {
-                if ($man_contents =~ m/<title>\s*(.*)\s+C?LOCKSS\s+Manifest\s+Page.*<\/title>/si) {
-                    $vol_title = $1;
-                    $vol_title =~ s/\s*\n\s*/ /g;
-                    if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
-                        $vol_title = "\"" . $vol_title . "\"";
-                    }
-                }
-                $result = "Manifest";
-                if ($man_contents =~ m/="([^"]*)" lockss-probe="true"/si) {
-                    my $pl_url = $1;
-                    my $req_pl = HTTP::Request->new(GET, $pl_url);
-                    my $resp_pl = $ua->request($req_pl);
-                    if ($resp_pl->is_success) {
-                        if ($req_pl->url ne $resp_pl->request->uri) {
-                            $result = "ProbeLinkRedirect";
-                        }
-                    } else {
-                        $vol_title = $pl_url;
-                        $result = "BadProbeLink-" . $resp_pl->code();
-                    }
-                } else {
-                    $result = "MissingProbeLink";
-                }
-            } else {
-                $result = "--NO_TAG--"
-            }
-        } else {
-            $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
-        }
-        sleep(4);
-
+#CLOCKSS Deprecated
+#  } elsif ($plugin =~ m/^Clockss.+DrupalPlugin/) {
+#        $url = sprintf("%sclockss-manifest/vol_%s_manifest.html",
+#            $param{base_url}, $param{volume_name});
+#        $man_url = uri_unescape($url);
+#        $base_url_short = substr(uri_unescape($param{base_url}), 0, -1);
+#        my $req = HTTP::Request->new(GET, $man_url);
+#        my $resp = $ua->request($req);
+#        #printf("%s\" lockss-probe\n",$base_url_short);
+#        if ($resp->is_success) {
+#            my $man_contents = $resp->content;
+#            if ($req->url ne $resp->request->uri) {
+#              $vol_title = $resp->request->uri;
+#              $result = "Redirected";
+#            } elsif (defined($man_contents) && (($man_contents =~ m/\/cgi\/reprint\/$param{volume_name}\//) || ($man_contents =~ m/$base_url_short" lockss-probe/))) {
+#                $result = "CGI_probe_link";
+#                if ($man_contents =~ m/<title>\s*(.*)\s+C?LOCKSS\s+Manifest\s+Page.*<\/title>/si) {
+#                    $vol_title = $1;
+#                    $vol_title =~ s/\s*\n\s*/ /g;
+#                    if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
+#                        $vol_title = "\"" . $vol_title . "\"";
+#                    }
+#                }
+#            } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && (($man_contents =~ m/\/content\/$param{volume_name}\//) || ($man_contents =~ m/\/content\/vol$param{volume_name}\//))) {
+#                if ($man_contents =~ m/<title>\s*(.*)\s+C?LOCKSS\s+Manifest\s+Page.*<\/title>/si) {
+#                    $vol_title = $1;
+#                    $vol_title =~ s/\s*\n\s*/ /g;
+#                    if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
+#                        $vol_title = "\"" . $vol_title . "\"";
+#                    }
+#                }
+#                $result = "Manifest";
+#                if ($man_contents =~ m/="([^"]*)" lockss-probe="true"/si) {
+#                    my $pl_url = $1;
+#                    my $req_pl = HTTP::Request->new(GET, $pl_url);
+#                    my $resp_pl = $ua->request($req_pl);
+#                    if ($resp_pl->is_success) {
+#                        if ($req_pl->url ne $resp_pl->request->uri) {
+#                            $result = "ProbeLinkRedirect";
+#                        }
+#                    } else {
+#                        $vol_title = $pl_url;
+#                        $result = "BadProbeLink-" . $resp_pl->code();
+#                    }
+#                } else {
+#                    $result = "MissingProbeLink";
+#                }
+#            } else {
+#                $result = "--NO_TAG--"
+#            }
+#        } else {
+#            $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+#        }
+#        sleep(4);
+#
   } elsif ($plugin eq "ProjectMuse2017Plugin") {
     $url = sprintf("%slockss?vid=%s",
       $param{base_url}, $param{resource_id});
