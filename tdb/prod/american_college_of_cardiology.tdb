@@ -1,12 +1,16 @@
 {
 
   publisher <
-    name = American College of Cardiology
+    name = American College of Cardiology ;
+    info[platform] = GLN only. Atypon. Four titles (8 on website). GLN only. Need manifest pages
   >
+  
+  # publisher moving H10 -> Drupal -> Atypon
+  # this tdb file has only 2019 and 2020. All back content processed under HW.
 
-  # publisher moving H10 -> Silverchair -> Drupal?
-  pluginPrefix = org.lockss.plugin.highwire.
-  implicit < pluginSuffix ; status ; year ; name ; param[volume_name] ; param[base_url] >
+  plugin = org.lockss.plugin.atypon.GenericAtyponPlugin #this is a placeholder. Needs plugin.
+  implicit < status ; year ; name ; param[volume_name] >
+  param[base_url] = https://www.jacc.org/
 
   {
     title <
@@ -14,13 +18,10 @@
       eissn = 2452-302X
     >
 
-    #param[base_url] = http://basictranslational.onlinejacc.org/
+    param[journal_id] = basic-translational
 
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2016 ; JACC: Basic To Translational Science Volume 1 ; 1 ; http://basictranslational.onlinejacc.org/ >
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2017 ; JACC: Basic To Translational Science Volume 2 ; 2 ; http://basictranslational.onlinejacc.org/ >
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2018 ; JACC: Basic To Translational Science Volume 3 ; 3 ; http://basictranslational.onlinejacc.org/ >
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2019 ; JACC: Basic To Translational Science Volume 4 ; 4 ; https://basictranslational.onlinejacc.org/ >
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; exists ; 2020 ; JACC: Basic To Translational Science Volume 5 ; 5 ; https://basictranslational.onlinejacc.org/ >
+    au < exists ; 2019 ; JACC: Basic To Translational Science Volume 4 ; 4 >
+    au < exists ; 2020 ; JACC: Basic To Translational Science Volume 5 ; 5 >
 
   }
 
@@ -31,25 +32,11 @@
       eissn = 1876-7591
     >
 
-    {
-    #param[base_url] = http://imaging.onlinejacc.org/
+    param[journal_id] = imaging
 
-    au < HighWirePressPlugin ; down ; 2008 ; JACC: Cardiovascular Imaging Volume 1 ; 1 ; http://imaging.onlinejacc.org/ >
-    au < HighWirePressPlugin ; down ; 2009 ; JACC: Cardiovascular Imaging Volume 2 ; 2 ; http://imaging.onlinejacc.org/ >
-    au < HighWirePressPlugin ; down ; 2010 ; JACC: Cardiovascular Imaging Volume 3 ; 3 ; http://imaging.onlinejacc.org/ >
-    au < HighWirePressPlugin ; down ; 2011 ; JACC: Cardiovascular Imaging Volume 4 ; 4 ; http://imaging.onlinejacc.org/ >
-    au < HighWirePressPlugin ; down ; 2012 ; JACC: Cardiovascular Imaging Volume 5 ; 5 ; http://imaging.onlinejacc.org/ >
+    au < exists ; 2019 ; JACC: Cardiovascular Imaging Volume 12 ; 12 >
+    au < exists ; 2020 ; JACC: Cardiovascular Imaging Volume 13 ; 13 >
 
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2013 ; JACC: Cardiovascular Imaging Volume 6 ; 6 ; http://imaging.onlinejacc.org/ >
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2014 ; JACC: Cardiovascular Imaging Volume 7 ; 7 ; http://imaging.onlinejacc.org/ >
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2015 ; JACC: Cardiovascular Imaging Volume 8 ; 8 ; http://imaging.onlinejacc.org/ >
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2016 ; JACC: Cardiovascular Imaging Volume 9 ; 9 ; http://imaging.onlinejacc.org/ >
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2017 ; JACC: Cardiovascular Imaging Volume 10 ; 10 ; http://imaging.onlinejacc.org/ >
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2018 ; JACC: Cardiovascular Imaging Volume 11 ; 11 ; http://imaging.onlinejacc.org/ >
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; exists ; 2019 ; JACC: Cardiovascular Imaging Volume 12 ; 12 ; https://imaging.onlinejacc.org/ >
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; exists ; 2020 ; JACC: Cardiovascular Imaging Volume 13 ; 13 ; https://imaging.onlinejacc.org/ >
-
-    }
 
   }
 
@@ -60,24 +47,10 @@
       eissn = 1876-7605
     >
 
-    {
-    #param[base_url] = http://interventions.onlinejacc.org/
+    param[journal_id] = interventions
 
-    au < HighWirePressPlugin ; down ; 2008 ; JACC: Cardiovascular Interventions Volume 1 ; 1 ; http://interventions.onlinejacc.org/>
-    au < HighWirePressPlugin ; down ; 2009 ; JACC: Cardiovascular Interventions Volume 2 ; 2 ; http://interventions.onlinejacc.org/ >
-    au < HighWirePressPlugin ; down ; 2010 ; JACC: Cardiovascular Interventions Volume 3 ; 3 ; http://interventions.onlinejacc.org/ >
-    au < HighWirePressPlugin ; down ; 2011 ; JACC: Cardiovascular Interventions Volume 4 ; 4 ; http://interventions.onlinejacc.org/ >
-    au < HighWirePressPlugin ; down ; 2012 ; JACC: Cardiovascular Interventions Volume 5 ; 5 ; http://interventions.onlinejacc.org/ >
-
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2013 ; JACC: Cardiovascular Interventions Volume 6 ; 6 ; http://interventions.onlinejacc.org/ >
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2014 ; JACC: Cardiovascular Interventions Volume 7 ; 7 ; http://interventions.onlinejacc.org/ >
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2015 ; JACC: Cardiovascular Interventions Volume 8 ; 8 ; http://interventions.onlinejacc.org/ >
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2016 ; JACC: Cardiovascular Interventions Volume 9 ; 9 ; http://interventions.onlinejacc.org/ >
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2017 ; JACC: Cardiovascular Interventions Volume 10 ; 10 ; http://interventions.onlinejacc.org/ >
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2018 ; JACC: Cardiovascular Interventions Volume 11 ; 11 ; http://interventions.onlinejacc.org/ >
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; exists ; 2019 ; JACC: Cardiovascular Interventions Volume 12 ; 12 ; https://interventions.onlinejacc.org/ >
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; exists ; 2020 ; JACC: Cardiovascular Interventions Volume 13 ; 13 ; https://interventions.onlinejacc.org/ >
-    }
+    au < exists ; 2019 ; JACC: Cardiovascular Interventions Volume 12 ; 12 >
+    au < exists ; 2020 ; JACC: Cardiovascular Interventions Volume 13 ; 13 >
 
   }
 
@@ -89,96 +62,12 @@
       eissn = 1558-3597
     >
 
-    {
-     #param[base_url] = http://content.onlinejacc.org/
+    param[journal_id] = jacc
 
-    {
-      attr[au_coverage_depth] = abstracts
-
-      au < HighWirePressPlugin ; down ; 1983 ; Journal of the American College of Cardiology Volume 1 [abstracts only] ; 1 ; http://content.onlinejacc.org/ >
-      au < HighWirePressPlugin ; down ; 1983 ; Journal of the American College of Cardiology Volume 2 [abstracts only] ; 2 ; http://content.onlinejacc.org/ >
-      au < HighWirePressPlugin ; down ; 1984 ; Journal of the American College of Cardiology Volume 3 [abstracts only] ; 3 ; http://content.onlinejacc.org/ >
-      au < HighWirePressPlugin ; down ; 1984 ; Journal of the American College of Cardiology Volume 4 [abstracts only] ; 4 ; http://content.onlinejacc.org/ >
-      au < HighWirePressPlugin ; down ; 1985 ; Journal of the American College of Cardiology Volume 5 [abstracts only] ; 5 ; http://content.onlinejacc.org/ >
-      au < HighWirePressPlugin ; down ; 1985 ; Journal of the American College of Cardiology Volume 6 [abstracts only] ; 6 ; http://content.onlinejacc.org/ >
-      au < HighWirePressPlugin ; down ; 1986 ; Journal of the American College of Cardiology Volume 7 [abstracts only] ; 7 ; http://content.onlinejacc.org/ >
-      au < HighWirePressPlugin ; down ; 1986 ; Journal of the American College of Cardiology Volume 8 [abstracts only] ; 8 ; http://content.onlinejacc.org/ >
-      au < HighWirePressPlugin ; down ; 1987 ; Journal of the American College of Cardiology Volume 9 [abstracts only] ; 9 ; http://content.onlinejacc.org/ >
-      au < HighWirePressPlugin ; down ; 1987 ; Journal of the American College of Cardiology Volume 10 [abstracts only] ; 10 ; http://content.onlinejacc.org/ >
-      au < HighWirePressPlugin ; down ; 1988 ; Journal of the American College of Cardiology Volume 11 [abstracts only] ; 11 ; http://content.onlinejacc.org/ >
-      au < HighWirePressPlugin ; down ; 1988 ; Journal of the American College of Cardiology Volume 12 [abstracts only] ; 12 ; http://content.onlinejacc.org/ >
-      au < HighWirePressPlugin ; down ; 1989 ; Journal of the American College of Cardiology Volume 13 [abstracts only] ; 13 ; http://content.onlinejacc.org/ >
-      au < HighWirePressPlugin ; down ; 1989 ; Journal of the American College of Cardiology Volume 14 [abstracts only] ; 14 ; http://content.onlinejacc.org/ >
-      au < HighWirePressPlugin ; down ; 1990 ; Journal of the American College of Cardiology Volume 15 [abstracts only] ; 15 ; http://content.onlinejacc.org/ >
-      au < HighWirePressPlugin ; down ; 1990 ; Journal of the American College of Cardiology Volume 16 [abstracts only] ; 16 ; http://content.onlinejacc.org/ >
-      au < HighWirePressPlugin ; down ; 1991 ; Journal of the American College of Cardiology Volume 17 [abstracts only] ; 17 ; http://content.onlinejacc.org/ >
-      au < HighWirePressPlugin ; down ; 1991 ; Journal of the American College of Cardiology Volume 18 [abstracts only] ; 18 ; http://content.onlinejacc.org/ >
-      au < HighWirePressPlugin ; down ; 1992 ; Journal of the American College of Cardiology Volume 19 [abstracts only] ; 19 ; http://content.onlinejacc.org/ >
-      au < HighWirePressPlugin ; down ; 1992 ; Journal of the American College of Cardiology Volume 20 [abstracts only] ; 20 ; http://content.onlinejacc.org/ >
-      au < HighWirePressPlugin ; down ; 1993 ; Journal of the American College of Cardiology Volume 21 [abstracts only] ; 21 ; http://content.onlinejacc.org/ >
-      au < HighWirePressPlugin ; down ; 1993 ; Journal of the American College of Cardiology Volume 22 [abstracts only] ; 22 ; http://content.onlinejacc.org/ >
-      au < HighWirePressPlugin ; down ; 1994 ; Journal of the American College of Cardiology Volume 23 [abstracts only] ; 23 ; http://content.onlinejacc.org/ >
-      au < HighWirePressPlugin ; down ; 1994 ; Journal of the American College of Cardiology Volume 24 [abstracts only] ; 24 ; http://content.onlinejacc.org/ >
-      au < HighWirePressPlugin ; down ; 1995 ; Journal of the American College of Cardiology Volume 25 [abstracts only] ; 25 ; http://content.onlinejacc.org/ >
-      au < HighWirePressPlugin ; down ; 1995 ; Journal of the American College of Cardiology Volume 26 [abstracts only] ; 26 ; http://content.onlinejacc.org/ >
-      au < HighWirePressPlugin ; down ; 1996 ; Journal of the American College of Cardiology Volume 27 [abstracts only] ; 27 ; http://content.onlinejacc.org/ >
-      au < HighWirePressPlugin ; down ; 1996 ; Journal of the American College of Cardiology Volume 28 [abstracts only] ; 28 ; http://content.onlinejacc.org/ >
-      au < HighWirePressPlugin ; down ; 1997 ; Journal of the American College of Cardiology Volume 29 [abstracts only] ; 29 ; http://content.onlinejacc.org/ >
-      au < HighWirePressPlugin ; down ; 1997 ; Journal of the American College of Cardiology Volume 30 [abstracts only] ; 30 ; http://content.onlinejacc.org/ >
-    }
-    au < HighWirePressPlugin ; down ; 1998 ; Journal of the American College of Cardiology Volume 31 ; 31 ; http://content.onlinejacc.org/ >
-    au < HighWirePressPlugin ; down ; 1998 ; Journal of the American College of Cardiology Volume 32 ; 32 ; http://content.onlinejacc.org/ >
-    au < HighWirePressPlugin ; down ; 1999 ; Journal of the American College of Cardiology Volume 33 ; 33 ; http://content.onlinejacc.org/ >
-    au < HighWirePressPlugin ; down ; 1999 ; Journal of the American College of Cardiology Volume 34 ; 34 ; http://content.onlinejacc.org/ >
-    au < HighWirePressPlugin ; down ; 2000 ; Journal of the American College of Cardiology Volume 35 ; 35 ; http://content.onlinejacc.org/ >
-    au < HighWirePressPlugin ; down ; 2000 ; Journal of the American College of Cardiology Volume 36 ; 36 ; http://content.onlinejacc.org/ >
-    au < HighWirePressPlugin ; down ; 2001 ; Journal of the American College of Cardiology Volume 37 ; 37 ; http://content.onlinejacc.org/ >
-    au < HighWirePressPlugin ; down ; 2001 ; Journal of the American College of Cardiology Volume 38 ; 38 ; http://content.onlinejacc.org/ >
-    au < HighWirePressPlugin ; down ; 2002 ; Journal of the American College of Cardiology Volume 39 ; 39 ; http://content.onlinejacc.org/ >
-    au < HighWirePressPlugin ; down ; 2002 ; Journal of the American College of Cardiology Volume 40 ; 40 ; http://content.onlinejacc.org/ >
-    au < HighWirePressPlugin ; down ; 2003 ; Journal of the American College of Cardiology Volume 41 ; 41 ; http://content.onlinejacc.org/ >
-    au < HighWirePressPlugin ; down ; 2003 ; Journal of the American College of Cardiology Volume 42 ; 42 ; http://content.onlinejacc.org/ >
-    au < HighWirePressPlugin ; down ; 2004 ; Journal of the American College of Cardiology Volume 43 ; 43 ; http://content.onlinejacc.org/ >
-    au < HighWirePressPlugin ; down ; 2004 ; Journal of the American College of Cardiology Volume 44 ; 44 ; http://content.onlinejacc.org/ >
-    au < HighWirePressPlugin ; down ; 2005 ; Journal of the American College of Cardiology Volume 45 ; 45 ; http://content.onlinejacc.org/ >
-    au < HighWirePressPlugin ; down ; 2005 ; Journal of the American College of Cardiology Volume 46 ; 46 ; http://content.onlinejacc.org/ >
-    au < HighWirePressPlugin ; down ; 2006 ; Journal of the American College of Cardiology Volume 47 ; 47 ; http://content.onlinejacc.org/ >
-    au < HighWirePressPlugin ; down ; 2006 ; Journal of the American College of Cardiology Volume 48 ; 48 ; http://content.onlinejacc.org/ >
-    au < HighWirePressPlugin ; down ; 2007 ; Journal of the American College of Cardiology Volume 49 ; 49 ; http://content.onlinejacc.org/ >
-    au < HighWirePressPlugin ; down ; 2007 ; Journal of the American College of Cardiology Volume 50 ; 50 ; http://content.onlinejacc.org/ >
-    au < HighWirePressPlugin ; down ; 2008 ; Journal of the American College of Cardiology Volume 51 ; 51 ; http://content.onlinejacc.org/ >
-    au < HighWirePressPlugin ; down ; 2008 ; Journal of the American College of Cardiology Volume 52 ; 52 ; http://content.onlinejacc.org/ >
-    au < HighWirePressPlugin ; down ; 2009 ; Journal of the American College of Cardiology Volume 53 ; 53 ; http://content.onlinejacc.org/ >
-    au < HighWirePressPlugin ; down ; 2009 ; Journal of the American College of Cardiology Volume 54 ; 54 ; http://content.onlinejacc.org/ >
-    au < HighWirePressPlugin ; down ; 2010 ; Journal of the American College of Cardiology Volume 55 ; 55 ; http://content.onlinejacc.org/ >
-    au < HighWirePressPlugin ; down ; 2010 ; Journal of the American College of Cardiology Volume 56 ; 56 ; http://content.onlinejacc.org/ >
-    au < HighWirePressPlugin ; down ; 2011 ; Journal of the American College of Cardiology Volume 57 ; 57 ; http://content.onlinejacc.org/ >
-    au < HighWirePressPlugin ; down ; 2011 ; Journal of the American College of Cardiology Volume 58 ; 58 ; http://content.onlinejacc.org/ >
-    au < HighWirePressPlugin ; down ; 2012 ; Journal of the American College of Cardiology Volume 59 ; 59 ; http://content.onlinejacc.org/ >
-    }
-
-    {
-    #param[base_url] = http://www.onlinejacc.org/
-
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2012 ; Journal of the American College of Cardiology Volume 60 ; 60 ; http://www.onlinejacc.org/ >
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2013 ; Journal of the American College of Cardiology Volume 61 ; 61 ; http://www.onlinejacc.org/ >
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2013 ; Journal of the American College of Cardiology Volume 62 ; 62 ; http://www.onlinejacc.org/ >
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2014 ; Journal of the American College of Cardiology Volume 63 ; 63 ; http://www.onlinejacc.org/ >
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2014 ; Journal of the American College of Cardiology Volume 64 ; 64 ; http://www.onlinejacc.org/ >
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2015 ; Journal of the American College of Cardiology Volume 65 ; 65 ; http://www.onlinejacc.org/ >
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2015 ; Journal of the American College of Cardiology Volume 66 ; 66 ; http://www.onlinejacc.org/ >
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2016 ; Journal of the American College of Cardiology Volume 67 ; 67 ; http://www.onlinejacc.org/ >
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2016 ; Journal of the American College of Cardiology Volume 68 ; 68 ; http://www.onlinejacc.org/ >
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2017 ; Journal of the American College of Cardiology Volume 69 ; 69 ; http://www.onlinejacc.org/ >
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2017 ; Journal of the American College of Cardiology Volume 70 ; 70 ; http://www.onlinejacc.org/ >
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2018 ; Journal of the American College of Cardiology Volume 71 ; 71 ; http://www.onlinejacc.org/ >
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; released ; 2018 ; Journal of the American College of Cardiology Volume 72 ; 72 ; http://www.onlinejacc.org/ >
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; exists ; 2019 ; Journal of the American College of Cardiology Volume 73 ; 73 ; https://www.onlinejacc.org/ >
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; exists ; 2019 ; Journal of the American College of Cardiology Volume 74 ; 74 ; https://www.onlinejacc.org/ >
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; exists ; 2020 ; Journal of the American College of Cardiology Volume 75 ; 75 ; https://www.onlinejacc.org/ >
-    au < accardiol.AmCollegeCardiologyDrupalPlugin ; expected ; 2020 ; Journal of the American College of Cardiology Volume 76 ; 76 ; https://www.onlinejacc.org/ >
-
-    }
+    au < exists ; 2019 ; Journal of the American College of Cardiology Volume 73 ; 73 >
+    au < exists ; 2019 ; Journal of the American College of Cardiology Volume 74 ; 74 >
+    au < exists ; 2020 ; Journal of the American College of Cardiology Volume 75 ; 75 >
+    au < expected ; 2020 ; Journal of the American College of Cardiology Volume 76 ; 76 >
 
   }
 }
