@@ -103,7 +103,8 @@
       <string>1,"https://cdnjs.cloudflare.com/.+\.(css|js)"</string>
       <string>1,"https://use.typekit.net/.*\.js"</string>
       <string>1,"https://maxcdn.bootstrapcdn.com/.+\.css"</string>
-      <string>1, "%s%s/issue/[^/]+/info/", base_url, journal_id</string>
+      <!--exclude the following link, so it will not overcrawl-->
+      <string>2, "%s%s/issue/[^/]+/info/", base_url, journal_id</string>
       <string>1, "%s%s/article/", base_url, journal_id</string>
       <string>1, "%s(static|media/cover_images)/", base_url</string>
     </list>

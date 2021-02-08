@@ -60,6 +60,7 @@ import java.util.regex.Pattern;
 public class JanewayOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
   public static final String DEFAULT_DATE_TAG = "dc.date";
   public static final String DEFAULT_IDENTIFIER_TAG = "dc.identifier";
+  public static final String FULL_TEXT_URL_TAG = "dc.fullTextUrl";
   protected Collection<String> startUrls;
   protected int year;
   protected Pattern yearPattern = Pattern.compile("^([0-9]{4})-[0-9]{2}-[0-9]{2}");
@@ -165,14 +166,16 @@ public class JanewayOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
   
   protected String findRecordArticleLink(Record rec) { 
     MetadataSearch<String> recSearcher = rec.getMetadata().getValue().searcher();
-    List<String> idTags = recSearcher.findAll(DEFAULT_IDENTIFIER_TAG);
+    List<String> idTags = recSearcher.findAll(FULL_TEXT_URL_TAG);
     if(idTags != null && !idTags.isEmpty()) {
       for(String value : idTags) {
+          logger.debug3("Fei: idTag is not null, its value = " + value);
         if (value.startsWith(baseUrl)) {
           return value;
         }
       }
     }
+    logger.debug3("Fei: idTag is null");
     return null;
   }
   
