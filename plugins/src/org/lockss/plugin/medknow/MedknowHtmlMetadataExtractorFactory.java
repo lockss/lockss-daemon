@@ -123,35 +123,21 @@ public class MedknowHtmlMetadataExtractorFactory implements
           case Multi:
             List<String> entries = am.getList(field);
             List<String> newEntries = new ArrayList<>();
-            log.debug2("STRTing-Iter");
-            log.debug2("OLD LIST: " + entries.toString());
             // deep copy the list so that we can clear it
             Iterator<String> iter = entries.iterator();
             while (iter.hasNext()) {
               String s = iter.next();
-              log.debug2("entry: " + s);
               newEntries.add(s);
             }
-            log.debug2("NEW LIST: " + newEntries.toString());
+            // clear the original list, which will clear the ArticleMetadata List
             entries.clear();
-            log.debug2("OLD LIST AFTER CLEAR: " + entries.toString());
-            log.debug2("NEW LIST AFTER CLEAR:" + newEntries.toString());
             // normalize any urls found in the list.
             for (String each : newEntries) {
-              log.debug2("entry: " + each);
               if (each.contains("http")) {
                 each = helper.normalize(each);
               }
-              log.debug2("entry after https: " + each);
-              /*
-              if (am.put(field, each)) {
-                log.debug2("put success");
-              } else {
-                log.debug2("put fail");
-              }*/
             }
             am.put(field, newEntries.toString());
-            log.debug2("END");
           case Single:
             String url = am.get(field);
             if (url != null) {
