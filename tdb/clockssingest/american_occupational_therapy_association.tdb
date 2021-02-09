@@ -4,12 +4,12 @@
     info[contract] = 2020 ;
     info[tester] = 5 ;
     info[poller] = 5 ;
-    info[platform] = Silverchair
+    info[platform] = Silverchair. L+C. 1 journal
   >
   
 
-  #plugin = needs.plugin
-  plugin = org.lockss.plugin.silverchair.aota.ClockssAOTASilverchairPlugin
+  plugin = needs.plugin
+  #plugin = org.lockss.plugin.silverchair.aota.ClockssAOTASilverchairPlugin
   implicit < status ; status2 ; year ; param[year] ; name ; hidden[proxy] >
   param[base_url] = https://ajot.aota.org/
 
