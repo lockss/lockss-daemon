@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>9</string>
+    <string>10</string>
   </entry>
    <entry>
     <string>plugin_name</string>
@@ -105,7 +105,7 @@
             </entry>
             <entry>
                 <string>Substance</string>
-                <string>3</string>
+                <string>4</string>
             </entry>
         </map>
     </entry>
@@ -118,8 +118,17 @@
             https://journals.library.ualberta.ca/jpps/index.php/JPPS/article/download/29659/21487/80185
             http://trumpeter.athabascau.ca/index.php/trumpet/article/download/1508/1739
             http://trumpeter.athabascau.ca/index.php/trumpet/article/view/1508/1739
+            https://jspp.psychopen.eu/index.php/jspp/article/download/5207/5207.pdf
+            https://interpersona.psychopen.eu/index.php/interpersona/article/download/3647/3647.pdf
+            https://spb.psychopen.eu/index.php/spb/article/download/2663/2663.pdf
+            https://ps.psychopen.eu/index.php/ps/article/view/5297/5297.pdf
+            https://sotrap.psychopen.eu/index.php/sotrap/article/download/3065/3065.pdf
+            https://interpersona.psychopen.eu/index.php/interpersona/article/download/3799/3799.html?inline=1
+            https://interpersona.psychopen.eu/index.php/interpersona/article/download/4497/4497.pdf
+            https://interpersona.psychopen.eu/index.php/interpersona/article/view/3647/3647.pdf
           -->
-          <string>"^%s(journals/)?(index\.php/)?(%s/)?article/(view(File)?|download)/[^/]+/[^/?#&amp;.]+$", base_url, journal_id</string>
+          <!--<string>"^%s(journals/)?(index\.php/)?(%s/)?article/(view(File)?|download)/[^/]+/[^/?#&amp;.]+$", base_url, journal_id</string>-->
+          <string>"^%s(journals/)?(index\.php/)?(%s/)?article/(view(File)?|download)/[^/]+/(([^/?#&amp;.]+$)|([^/]+\.pdf$))",base_url, journal_id</string>
       </list>
   </entry>
   <entry>
