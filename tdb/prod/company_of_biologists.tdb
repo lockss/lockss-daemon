@@ -3,6 +3,7 @@
   publisher <
     name = Company of Biologists
   >
+  #Moving to SC early 2021
 
   implicit < pluginSuffix ; status ; year ; name ; param[volume_name] ; param[base_url] >
   pluginPrefix = org.lockss.plugin.highwire.
