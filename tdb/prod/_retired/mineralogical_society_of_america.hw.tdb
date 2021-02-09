@@ -59,7 +59,7 @@
       au < gsw.GSWDrupalPlugin ; doNotProcess ; 2013 ; American Mineralogist Volume 98 ; 98 >
       au < gsw.GSWDrupalPlugin ; doNotProcess ; 2014 ; American Mineralogist Volume 99 ; 99 >
       au < gsw.GSWDrupalPlugin ; doNotProcess ; 2015 ; American Mineralogist Volume 100 ; 100 >
-      au < gsw.GSWDrupalPlugin ; down ; 2016 ; American Mineralogist Volume 101 ; 101 >
+      au < gsw.GSWDrupalPlugin ; superseded ; 2016 ; American Mineralogist Volume 101 [superseded] ; 101 >
       au < gsw.GSWDrupalPlugin ; doNotProcess ; 2017 ; American Mineralogist Volume 102 ; 102 >
 
     }
@@ -87,8 +87,8 @@
     au < gsw.GSWDrupalPlugin ; down ; 2012 ; Elements Volume 8 ; 8 >
     au < gsw.GSWDrupalPlugin ; down ; 2013 ; Elements Volume 9 ; 9 >
     au < gsw.GSWDrupalPlugin ; doNotProcess ; 2014 ; Elements Volume 10 ; 10 >
-    au < gsw.GSWDrupalPlugin ; down ; 2015 ; Elements Volume 11 ; 11 >
-    au < gsw.GSWDrupalPlugin ; down ; 2016 ; Elements Volume 12 ; 12 >
+    au < gsw.GSWDrupalPlugin ; superseded ; 2015 ; Elements Volume 11 [superseded] ; 11 >
+    au < gsw.GSWDrupalPlugin ; superseded ; 2016 ; Elements Volume 12 [superseded] ; 12 >
     au < gsw.GSWDrupalPlugin ; doNotProcess ; 2017 ; Elements Volume 13 ; 13 >
 
   }
@@ -163,7 +163,7 @@
     au < gsw.GSWDrupalPlugin ; doNotProcess ; 2014 ; Reviews in Mineralogy and Geochemistry Volume 78 ; 78 >
     au < gsw.GSWDrupalPlugin ; doNotProcess ; 2014 ; Reviews in Mineralogy and Geochemistry Volume 79 ; 79 >
     au < gsw.GSWDrupalPlugin ; doNotProcess ; 2015 ; Reviews in Mineralogy and Geochemistry Volume 80 ; 80 >
-    au < gsw.GSWDrupalPlugin ; down ; 2016 ; Reviews in Mineralogy and Geochemistry Volume 81 ; 81 >
+    au < gsw.GSWDrupalPlugin ; superseded ; 2016 ; Reviews in Mineralogy and Geochemistry Volume 81 [superseded] ; 81 >
     au < gsw.GSWDrupalPlugin ; doNotProcess ; 2017 ; Reviews in Mineralogy and Geochemistry Volume 82 ; 82 >
 
   }
