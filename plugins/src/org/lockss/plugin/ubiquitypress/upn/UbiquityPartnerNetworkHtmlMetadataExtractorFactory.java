@@ -53,11 +53,11 @@ public class UbiquityPartnerNetworkHtmlMetadataExtractorFactory implements
   public FileMetadataExtractor createFileMetadataExtractor(
       MetadataTarget target, String contentType) throws PluginException {
     
-    return new OJS2HtmlMetadataExtractor();
+    return new UbiquityPartnerNetworkHtmlMetaTagMetadataExtractor();
     
   } // createFileMetadataExtractor
 
-  public static class OJS2HtmlMetadataExtractor 
+  public static class UbiquityPartnerNetworkHtmlMetaTagMetadataExtractor 
     extends SimpleHtmlMetaTagMetadataExtractor {
     
     // Map OJS2-specific HTML meta tag names to cooked metadata fields
@@ -79,7 +79,7 @@ public class UbiquityPartnerNetworkHtmlMetadataExtractorFactory implements
       tagMap.put("DC.Contributor", MetadataField.DC_FIELD_CONTRIBUTOR);
       tagMap.put("citation_journal_title", MetadataField.FIELD_PUBLICATION_TITLE);
       tagMap.put("citation_title", MetadataField.FIELD_ARTICLE_TITLE);
-      tagMap.put("citation_date", MetadataField.FIELD_DATE);
+      //tagMap.put("citation_date", MetadataField.FIELD_DATE);
       tagMap.put("citation_author", MetadataField.FIELD_AUTHOR);
       tagMap.put("citation_authors",
           new MetadataField(MetadataField.FIELD_AUTHOR,
@@ -93,7 +93,7 @@ public class UbiquityPartnerNetworkHtmlMetadataExtractorFactory implements
       tagMap.put("citation_lastpage", MetadataField.FIELD_END_PAGE);
       tagMap.put("citation_doi", MetadataField.FIELD_DOI);
       tagMap.put("citation_public_url", MetadataField.FIELD_ACCESS_URL);
-      tagMap.put("citation_publication_date", MetadataField.DC_FIELD_DATE);
+      tagMap.put("citation_publication_date", MetadataField.FIELD_DATE);
       
     } // static
     
