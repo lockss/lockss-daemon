@@ -2785,7 +2785,7 @@
 
       # This additional AU is needed because the last two TOCs of 2019 only
       # appear on a 2020 manifest page. Note how only the param[year] is 2020.
-      au < manifest ; exists ; 2019 ; 12 ; Studium Volume 2019 [additional tables of contents] ; 2020 ; https://www.gewina-studium.nl/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2019 ; 12 ; Studium Volume 2019 [additional tables of contents] ; 2020 ; https://www.gewina-studium.nl/ ; reingest2.clockss.org:8085 >
 
       # Trigger approved late 2020
 
