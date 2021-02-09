@@ -123,8 +123,8 @@
       au < HighWirePressH20Plugin ; down ; 2012 ; Bulletin of the Seismological Society of America Volume 102 ; 102 >
       au < HighWirePressH20Plugin ; down ; 2013 ; Bulletin of the Seismological Society of America Volume 103 ; 103 >
       au < HighWirePressH20Plugin ; down ; 2014 ; Bulletin of the Seismological Society of America Volume 104 ; 104 >
-      au < HighWirePressH20Plugin ; down ; 2015 ; Bulletin of the Seismological Society of America Volume 105 ; 105 >
-      au < HighWirePressH20Plugin ; down ; 2016 ; Bulletin of the Seismological Society of America Volume 106 ; 106 >
+      au < HighWirePressH20Plugin ; superseded ; 2015 ; Bulletin of the Seismological Society of America Volume 105 [superseded] ; 105 >
+      au < HighWirePressH20Plugin ; superseded ; 2016 ; Bulletin of the Seismological Society of America Volume 106 [superseded] ; 106 >
       au < HighWirePressH20Plugin ; doNotProcess ; 2017 ; Bulletin of the Seismological Society of America Volume 107 ; 107 >
 
   }
@@ -225,8 +225,8 @@
     au < HighWirePressH20Plugin ; down ; 2012 ; Seismological Research Letters Volume 83 ; 83 >
     au < HighWirePressH20Plugin ; down ; 2013 ; Seismological Research Letters Volume 84 ; 84 >
     au < HighWirePressH20Plugin ; down ; 2014 ; Seismological Research Letters Volume 85 ; 85 >
-    au < HighWirePressH20Plugin ; down ; 2015 ; Seismological Research Letters Volume 86 ; 86 >
-    au < gsw.GSWDrupalPlugin ; down ; 2016 ; Seismological Research Letters Volume 87 ; 87 >
+    au < HighWirePressH20Plugin ; superseded ; 2015 ; Seismological Research Letters Volume 86 [superseded] ; 86 >
+    au < gsw.GSWDrupalPlugin ; superseded ; 2016 ; Seismological Research Letters Volume 87 [superseded] ; 87 >
     au < gsw.GSWDrupalPlugin ; doNotProcess ; 2017 ; Seismological Research Letters Volume 88 ; 88 >
 
   }
