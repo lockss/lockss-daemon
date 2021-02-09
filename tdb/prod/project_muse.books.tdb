@@ -1,8 +1,29 @@
 {
   publisher <
-    name = Project MUSE
+    name = Project MUSE ;
+    info[platform] = Project Muse Books
   >
+  
+{
 
+  plugin = needs.plugin
+  implicit < status ; year ; isbn ; eisbn ; name ; param[eisbn] >
+
+  {
+
+    title <
+      name = Project Muse Books ;
+      type = bookSeries
+    >
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < expected ; 2020 ;  ;  ; Example Title ; 9780000000000 >
+
+  }
+}
+
+{
   plugin = org.lockss.plugin.projmuse.ProjectMuseBooksPlugin
   implicit < status ; year ; isbn ; eisbn ; name ; param[eisbn] >
   
@@ -7309,5 +7330,5 @@
 
 
   }
-
+}
 }
