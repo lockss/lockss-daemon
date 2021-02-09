@@ -2,7 +2,7 @@
 
   publisher <
     name = Journal of Rheumatology ;
-    info[platform] = HW Drupal. Manifest pages requested.
+    info[platform] = HWDrupal. Manifests found. 1 journal.
   >
   
   {
@@ -59,6 +59,7 @@
       au < HWDrupalPlugin ; manifest ; 2018 ; Journal of Rheumatology Volume 45 ; 45 >
       au < HWDrupalPlugin ; manifest ; 2019 ; Journal of Rheumatology Volume 46 ; 46 >
       au < HWDrupalPlugin ; manifest ; 2020 ; Journal of Rheumatology Volume 47 ; 47 >
+      au < HWDrupalPlugin ; expected ; 2021 ; Journal of Rheumatology Volume 48 ; 48 >
 
      }
    

@@ -2,11 +2,12 @@
 
   publisher <
     name = Global Health - Science and Practice ;
-    info[platform] = HW Drupal. Manifest pages requested.
+    info[platform] = HW Drupal. 1 journal. Manifest present.
   >
 
       pluginPrefix = org.lockss.plugin.highwire.
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+      rights = openaccess
       
   {
 
@@ -15,16 +16,14 @@
       eissn = 2169-575X
     >
     {
-      rights = openaccess
       param[base_url] = http://www.ghspjournal.org/
 
-      au < HighWirePressH20Plugin ; released ; 2013 ; Global Health: Science and Practice Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; released ; 2014 ; Global Health: Science and Practice Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; released ; 2015 ; Global Health: Science and Practice Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; released ; 2016 ; Global Health: Science and Practice Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; down ; 2013 ; Global Health: Science and Practice Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; down ; 2014 ; Global Health: Science and Practice Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; down ; 2015 ; Global Health: Science and Practice Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; down ; 2016 ; Global Health: Science and Practice Volume 4 ; 4 >
      }
     {
-      rights = openaccess
       param[base_url] = https://www.ghspjournal.org/
 
       au < HWDrupalPlugin ; manifest ; 2017 ; Global Health: Science and Practice Volume 5 ; 5 >
