@@ -1,12 +1,12 @@
 {
   publisher <
     name = American Occupational Therapy Association ;
-    info[platform] = Silverchair
+    info[platform] = Silverchair. L+C. 1 journal
   >
   
 
-  plugin = needs.plugin
-  #plugin = org.lockss.plugin.silverchair.aota.AOTASilverchairPlugin
+  #plugin = needs.plugin
+  plugin = org.lockss.plugin.silverchair.aota.AOTASilverchairPlugin
   implicit < status ; year ; param[year] ; name >
   param[base_url] = https://ajot.aota.org/
 
