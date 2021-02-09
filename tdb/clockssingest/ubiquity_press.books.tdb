@@ -1,13 +1,19 @@
 {
 
   provider = Ubiquity Press
-  plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkBooksPlugin
+  #plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkBooksPlugin
+  plugin = needs.plugin
   implicit < status ; status2 ; year ; isbn ; name ; param[book_doi] ; hidden[proxy] >
   
   {
 
     publisher <
-      name = Aperio
+      name = Aperio ;
+      info[contract] = 2011 ;
+      info[back] = 2000 ;
+      info[tester] = 5 ;
+      info[poller] = 3
+      info[platform] = Ubiquity Books
     >
 
     {
@@ -29,7 +35,12 @@
   {
 
     publisher <
-      name = Finnish Literature Society (SKS)
+      name = Finnish Literature Society (SKS) ;
+      info[contract] = 2011 ;
+      info[back] = 2000 ;
+      info[tester] = 5 ;
+      info[poller] = 3
+      info[platform] = Ubiquity Books
     >
 
     {
@@ -123,7 +134,12 @@
   {
 
     publisher <
-      name = Kriterium
+      name = Kriterium ;
+      info[contract] = 2011 ;
+      info[back] = 2000 ;
+      info[tester] = 5 ;
+      info[poller] = 3
+      info[platform] = Ubiquity Books
     >
 
     {
@@ -165,7 +181,12 @@
   {
 
     publisher <
-      name = London School of Economics Press
+      name = London School of Economics Press ;
+      info[contract] = 2011 ;
+      info[back] = 2000 ;
+      info[tester] = 5 ;
+      info[poller] = 3
+      info[platform] = Ubiquity Books
     >
 
     {
@@ -185,7 +206,12 @@
   {
 
     publisher <
-      name = Modern Academic Publishing
+      name = Modern Academic Publishing ;
+      info[contract] = 2011 ;
+      info[back] = 2000 ;
+      info[tester] = 5 ;
+      info[poller] = 3
+      info[platform] = Ubiquity Books
     >
 
     {
@@ -218,7 +244,12 @@
   {
 
     publisher <
-      name = Penn State University Press
+      name = Penn State University Press ;
+      info[contract] = 2011 ;
+      info[back] = 2000 ;
+      info[tester] = 5 ;
+      info[poller] = 3
+      info[platform] = Ubiquity Books
     >
 
     {
@@ -251,7 +282,12 @@
   {
 
     publisher <
-      name = Stockholm University Press
+      name = Stockholm University Press ;
+      info[contract] = 2011 ;
+      info[back] = 2000 ;
+      info[tester] = 5 ;
+      info[poller] = 3
+      info[platform] = Ubiquity Books
     >
 
     {
@@ -301,7 +337,12 @@
   {
 
     publisher <
-      name = Ubiquity Press
+      name = Ubiquity Press ;
+      info[contract] = 2011 ;
+      info[back] = 2000 ;
+      info[tester] = 5 ;
+      info[poller] = 3
+      info[platform] = Ubiquity Books
     >
 
     {
@@ -364,7 +405,12 @@
   {
 
     publisher <
-      name = University of California Press
+      name = University of California Press ;
+      info[contract] = 2011 ;
+      info[back] = 2000 ;
+      info[tester] = 5 ;
+      info[poller] = 3
+      info[platform] = Ubiquity Books
     >
 
     {
@@ -446,7 +492,12 @@
   {
 
     publisher <
-      name = University of Westminster Press
+      name = University of Westminster Press ;
+      info[contract] = 2011 ;
+      info[back] = 2000 ;
+      info[tester] = 5 ;
+      info[poller] = 3
+      info[platform] = Ubiquity Books
     >
 
     {
@@ -500,7 +551,12 @@
   {
 
     publisher <
-      name = Virginia Tech Publishing
+      name = Virginia Tech Publishing ;
+      info[contract] = 2011 ;
+      info[back] = 2000 ;
+      info[tester] = 5 ;
+      info[poller] = 3
+      info[platform] = Ubiquity Books
     >
 
     {
@@ -535,7 +591,12 @@
   {
 
     publisher <
-      name = White Rose University Press
+      name = White Rose University Press ;
+      info[contract] = 2011 ;
+      info[back] = 2000 ;
+      info[tester] = 5 ;
+      info[poller] = 3
+      info[platform] = Ubiquity Books
     >
 
     {
