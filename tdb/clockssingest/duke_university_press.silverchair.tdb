@@ -855,7 +855,7 @@
 
       param[journal_id] = pads
 
-      au < ready ; exists ; 2017 ; 2017 ; Publication of the American Dialect Society Volume 101 ; 101 ; >
+      au < crawling ; exists ; 2017 ; 2017 ; Publication of the American Dialect Society Volume 101 ; 101 ; >
       au < crawling ; exists ; 2018 ; 2018 ; Publication of the American Dialect Society Volume 102 ; 102 ; >
       au < frozen ; exists ; 2019 ; 2019 ; Publication of the American Dialect Society Volume 103 ; 103 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Publication of the American Dialect Society Volume 104 ; 104 ; >

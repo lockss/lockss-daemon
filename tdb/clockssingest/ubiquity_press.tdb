@@ -2307,7 +2307,7 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://transactions.ismir.net/
 
-      au < ready ; exists ; 2018 ; 1 ; Transactions of the International Society for Music Information Retrieval Volume 2018 ; 2018 ; https://transactions.ismir.net/ ; >
+      au < crawling ; exists ; 2018 ; 1 ; Transactions of the International Society for Music Information Retrieval Volume 2018 ; 2018 ; https://transactions.ismir.net/ ; >
       au < crawling ; exists ; 2019 ; 2 ; Transactions of the International Society for Music Information Retrieval Volume 2019 ; 2019 ; https://transactions.ismir.net/ ; >
       au < crawling ; exists ; 2020 ; 3 ; Transactions of the International Society for Music Information Retrieval Volume 2020 ; 2020 ; https://transactions.ismir.net/ ; >
 

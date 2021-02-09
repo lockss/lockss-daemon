@@ -213,7 +213,7 @@
       au < exists ; exists ; 2006 ; Interdisciplinary Literary Studies Volume 7-8 ; 2006 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2007 ; Interdisciplinary Literary Studies Volume 8-9 ; 2007 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2008 ; Interdisciplinary Literary Studies Volume 9-10 ; 2008 ; https://www.jstor.org/ ; >
-      au < ready ; exists ; 2009 ; Interdisciplinary Literary Studies Volume 10-11 ; 2009 ; https://www.jstor.org/ ; >
+      au < crawling ; exists ; 2009 ; Interdisciplinary Literary Studies Volume 10-11 ; 2009 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2010 ; Interdisciplinary Literary Studies Volume 11-12; 2010 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2011 ; Interdisciplinary Literary Studies Volume 12-13 ; 2011 ; https://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Interdisciplinary Literary Studies Volume 14 ; 2012 ; https://www.jstor.org/ ; >
@@ -638,7 +638,7 @@
     
       param[journal_id] = reception
 
-      au < ready ; exists ; 2008 ; Reception: Texts, Readers, Audiences, History Volume 1 ; 2008 ; https://www.jstor.org/ ; >
+      au < crawling ; exists ; 2008 ; Reception: Texts, Readers, Audiences, History Volume 1 ; 2008 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2010 ; Reception: Texts, Readers, Audiences, History Volume 2 ; 2010 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2011 ; Reception: Texts, Readers, Audiences, History Volume 3 ; 2011 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2012 ; Reception: Texts, Readers, Audiences, History Volume 4 ; 2012 ; http://www.jstor.org/ ; >
@@ -878,7 +878,7 @@
       param[journal_id] = bustan
 
       au < frozen ; exists ; 2010 ; Bustan - The Middle East Book Review Volume 1 ; 2010 ; https://www.jstor.org/ ; >
-      au < ready ; exists ; 2011 ; Bustan - The Middle East Book Review Volume 2 ; 2011 ; https://www.jstor.org/ ; >
+      au < crawling ; exists ; 2011 ; Bustan - The Middle East Book Review Volume 2 ; 2011 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2012 ; Bustan - The Middle East Book Review Volume 3 ; 2012 ; https://www.jstor.org/ ; > #see LXQUEUE-1598
       au < exists ; exists ; 2013 ; Bustan - The Middle East Book Review Volume 4 ; 2013 ; https://www.jstor.org/ ; > #see LXQUEUE-1598
       au < exists ; exists ; 2014 ; Bustan - The Middle East Book Review Volume 5 ; 2014 ; https://www.jstor.org/ ; > #see LXQUEUE-1598
@@ -1079,7 +1079,7 @@
       au < frozen ; exists ; 2017 ; Ecumenica: Performance and Religion Volume 10 ; 2017 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2018 ; Ecumenica: Performance and Religion Volume 11 ; 2018 ; https://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2019 ; Ecumenica: Performance and Religion Volume 12 ; 2019 ; https://www.jstor.org/ ; >
-      au < ready ; exists ; 2020 ; Ecumenica: Performance and Religion Volume 13 ; 2020 ; https://www.jstor.org/ ; >
+      au < crawling ; exists ; 2020 ; Ecumenica: Performance and Religion Volume 13 ; 2020 ; https://www.jstor.org/ ; >
 
   }
 
@@ -1427,7 +1427,7 @@
       au < frozen ; exists ; 2017 ; Journal of Theological Interpretation Volume 11 ; 2017 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2018 ; Journal of Theological Interpretation Volume 12 ; 2018 ; https://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2019 ; Journal of Theological Interpretation Volume 13 ; 2019 ; https://www.jstor.org/ ; >
-      au < ready ; exists ; 2020 ; Journal of Theological Interpretation Volume 14 ; 2020 ; https://www.jstor.org/ ; >
+      au < crawling ; exists ; 2020 ; Journal of Theological Interpretation Volume 14 ; 2020 ; https://www.jstor.org/ ; >
 
   }
 
@@ -1847,7 +1847,7 @@
       au < exists ; exists ; 2009 ; The Langston Hughes Review Volume 23 ; 2009 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2010 ; The Langston Hughes Review Volume 24 ; 2010 ; https://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2019 ; The Langston Hughes Review Volume 25 ; 2019 ; https://www.jstor.org/ ; >
-      au < ready ; exists ; 2020 ; The Langston Hughes Review Volume 26 ; 2020 ; https://www.jstor.org/ ; >
+      au < crawling ; exists ; 2020 ; The Langston Hughes Review Volume 26 ; 2020 ; https://www.jstor.org/ ; >
 
   }
 

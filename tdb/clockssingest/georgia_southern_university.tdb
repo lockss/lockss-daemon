@@ -88,7 +88,7 @@
       au < finished ; finished ; 2017 ; Georgia Educational Researcher Volume 15 ; 15 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2018 ; Georgia Educational Researcher Volume 16 ; 16 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2019 ; Georgia Educational Researcher Volume 17 ; 17 ; >
-      au < ready ; exists ; 2020 ; Georgia Educational Researcher Volume 18 ; 18 ; >
+      au < crawling ; exists ; 2020 ; Georgia Educational Researcher Volume 18 ; 18 ; >
 
   }
 
@@ -171,7 +171,7 @@
       au < manifest ; exists ; 2008 ; Journal of the Georgia Public Health Association Volume 3 ; 3 ; >
       au < manifest ; exists ; 2009 ; Journal of the Georgia Public Health Association Volume 4 ; 4 ; >
       au < crawling ; exists ; 2015-2016 ; Journal of the Georgia Public Health Association Volume 5 ; 5 ; >
-      au < ready ; exists ; 2016-2017 ; Journal of the Georgia Public Health Association Volume 6 ; 6 ; >
+      au < crawling ; exists ; 2016-2017 ; Journal of the Georgia Public Health Association Volume 6 ; 6 ; >
       au < crawling ; exists ; 2017-2019 ; Journal of the Georgia Public Health Association Volume 7 ; 7 ; >
       au < crawling ; exists ; 2020 ; Journal of the Georgia Public Health Association Volume 8 ; 8 ; >
 
@@ -261,7 +261,7 @@
       au < manifest ; exists ; 2009 ; Southern Business Review Volume 34 ; 34 ; >
       au < manifest ; exists ; 2010 ; Southern Business Review Volume 35 ; 35 ; >
       au < manifest ; exists ; 2011 ; Southern Business Review Volume 36 ; 36 ; >
-      au < ready ; exists ; 2012 ; Southern Business Review Volume 37 ; 37 ; >
+      au < crawling ; exists ; 2012 ; Southern Business Review Volume 37 ; 37 ; >
       au < crawling ; exists ; 2013 ; Southern Business Review Volume 38 ; 38 ; >
 
   }

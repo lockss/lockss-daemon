@@ -45,7 +45,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2017 ; 2017 ; >
     au < testing ; exists ; 2018 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2018 ; 2018 ; > #no substance
     au < testing ; exists ; 2019 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2019 ; 2019 ; > #no substance
-    au < ready ; exists ; 2020 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2020 ; 2020 ; >
+    au < crawling ; exists ; 2020 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2020 ; 2020 ; >
 
   }
 
@@ -146,7 +146,7 @@
     {
       param[journal_id] = ahcsps
  
-      au < ready ; exists ; 2011 ; Aswan Heart Centre: Science and Practice Series Volume 2011 ; 2011 ; >
+      au < crawling ; exists ; 2011 ; Aswan Heart Centre: Science and Practice Series Volume 2011 ; 2011 ; >
       #no longer publishing
     }
     
