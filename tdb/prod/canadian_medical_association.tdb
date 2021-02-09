@@ -13,92 +13,93 @@
     >
 
     pluginPrefix = org.lockss.plugin.highwire.
-    param[base_url] = http://www.cmaj.ca/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-
-    au < HighWirePressH20Plugin ; manifest ; 1966 ; Canadian Medical Association Journal Volume 94 [tables of contents only] ; 94 >
-    au < HighWirePressH20Plugin ; manifest ; 1966 ; Canadian Medical Association Journal Volume 95 [tables of contents only] ; 95 >
-    au < HighWirePressH20Plugin ; manifest ; 1967 ; Canadian Medical Association Journal Volume 96 [tables of contents only] ; 96 >
-    au < HighWirePressH20Plugin ; manifest ; 1967 ; Canadian Medical Association Journal Volume 97 [tables of contents only] ; 97 >
-    au < HighWirePressH20Plugin ; manifest ; 1968 ; Canadian Medical Association Journal Volume 98 [tables of contents only] ; 98 >
-    au < HighWirePressH20Plugin ; manifest ; 1968 ; Canadian Medical Association Journal Volume 99 [tables of contents only] ; 99 >
-    au < HighWirePressH20Plugin ; manifest ; 1969 ; Canadian Medical Association Journal Volume 100 [tables of contents only] ; 100 >
-    au < HighWirePressH20Plugin ; manifest ; 1969 ; Canadian Medical Association Journal Volume 101 [tables of contents only] ; 101 >
-    au < HighWirePressH20Plugin ; manifest ; 1970 ; Canadian Medical Association Journal Volume 102 [tables of contents only] ; 102 >
-    au < HighWirePressH20Plugin ; manifest ; 1970 ; Canadian Medical Association Journal Volume 103 [tables of contents only] ; 103 >
-    au < HighWirePressH20Plugin ; manifest ; 1971 ; Canadian Medical Association Journal Volume 104 [tables of contents only] ; 104 >
-    au < HighWirePressH20Plugin ; manifest ; 1971 ; Canadian Medical Association Journal Volume 105 [tables of contents only] ; 105 >
-    au < HighWirePressH20Plugin ; manifest ; 1972 ; Canadian Medical Association Journal Volume 106 [tables of contents only] ; 106 >
-    au < HighWirePressH20Plugin ; manifest ; 1972 ; Canadian Medical Association Journal Volume 107 [tables of contents only] ; 107 >
-    au < HighWirePressH20Plugin ; manifest ; 1973 ; Canadian Medical Association Journal Volume 108 [tables of contents only] ; 108 >
-    au < HighWirePressH20Plugin ; manifest ; 1973 ; Canadian Medical Association Journal Volume 109 [tables of contents only] ; 109 >
-    au < HighWirePressH20Plugin ; manifest ; 1974 ; Canadian Medical Association Journal Volume 110 [tables of contents only] ; 110 >
-    au < HighWirePressH20Plugin ; manifest ; 1974 ; Canadian Medical Association Journal Volume 111 [tables of contents only] ; 111 >
     {
-    
-      attr[au_coverage_depth] = abstracts
-    
-      au < HighWirePressH20Plugin ; manifest ; 1975 ; Canadian Medical Association Journal Volume 112 [abstracts only] ; 112 >
-      au < HighWirePressH20Plugin ; manifest ; 1975 ; Canadian Medical Association Journal Volume 113 [abstracts only] ; 113 >
-      au < HighWirePressH20Plugin ; manifest ; 1976 ; Canadian Medical Association Journal Volume 114 [abstracts only] ; 114 >
-      au < HighWirePressH20Plugin ; manifest ; 1976 ; Canadian Medical Association Journal Volume 115 [abstracts only] ; 115 >
-      au < HighWirePressH20Plugin ; manifest ; 1977 ; Canadian Medical Association Journal Volume 116 [abstracts only] ; 116 >
-      au < HighWirePressH20Plugin ; manifest ; 1977 ; Canadian Medical Association Journal Volume 117 [abstracts only] ; 117 >
-      au < HighWirePressH20Plugin ; manifest ; 1978 ; Canadian Medical Association Journal Volume 118 [abstracts only] ; 118 >
-      au < HighWirePressH20Plugin ; manifest ; 1978 ; Canadian Medical Association Journal Volume 119 [abstracts only] ; 119 >
-      au < HighWirePressH20Plugin ; manifest ; 1979 ; Canadian Medical Association Journal Volume 120 [abstracts only] ; 120 >
-      au < HighWirePressH20Plugin ; manifest ; 1979 ; Canadian Medical Association Journal Volume 121 [abstracts only] ; 121 >
-      au < HighWirePressH20Plugin ; manifest ; 1980 ; Canadian Medical Association Journal Volume 122 [abstracts only] ; 122 >
-      au < HighWirePressH20Plugin ; manifest ; 1980 ; Canadian Medical Association Journal Volume 123 [abstracts only] ; 123 >
-      au < HighWirePressH20Plugin ; manifest ; 1981 ; Canadian Medical Association Journal Volume 124 [abstracts only] ; 124 >
-      au < HighWirePressH20Plugin ; manifest ; 1981 ; Canadian Medical Association Journal Volume 125 [abstracts only] ; 125 >
-      au < HighWirePressH20Plugin ; manifest ; 1982 ; Canadian Medical Association Journal Volume 126 [abstracts only] ; 126 >
-      au < HighWirePressH20Plugin ; manifest ; 1982 ; Canadian Medical Association Journal Volume 127 [abstracts only] ; 127 >
-      au < HighWirePressH20Plugin ; manifest ; 1983 ; Canadian Medical Association Journal Volume 128 [abstracts only] ; 128 >
-      au < HighWirePressH20Plugin ; manifest ; 1983 ; Canadian Medical Association Journal Volume 129 [abstracts only] ; 129 >
-      au < HighWirePressH20Plugin ; manifest ; 1984 ; Canadian Medical Association Journal Volume 130 [abstracts only] ; 130 >
-      au < HighWirePressH20Plugin ; manifest ; 1984 ; Canadian Medical Association Journal Volume 131 [abstracts only] ; 131 >
-      au < HighWirePressH20Plugin ; manifest ; 1985 ; Canadian Medical Association Journal Volume 132 [abstracts only] ; 132 >
-      au < HighWirePressH20Plugin ; manifest ; 1985 ; Canadian Medical Association Journal Volume 133 [abstracts only] ; 133 >
-      au < HighWirePressH20Plugin ; manifest ; 1986 ; Canadian Medical Association Journal Volume 134 [abstracts only] ; 134 >
-      au < HighWirePressH20Plugin ; manifest ; 1986 ; Canadian Medical Association Journal Volume 135 [abstracts only] ; 135 >
-      au < HighWirePressH20Plugin ; manifest ; 1987 ; Canadian Medical Association Journal Volume 136 [abstracts only] ; 136 >
-      au < HighWirePressH20Plugin ; manifest ; 1987 ; Canadian Medical Association Journal Volume 137 [abstracts only] ; 137 >
-      au < HighWirePressH20Plugin ; manifest ; 1988 ; Canadian Medical Association Journal Volume 138 [abstracts only] ; 138 >
-      au < HighWirePressH20Plugin ; manifest ; 1988 ; Canadian Medical Association Journal Volume 139 [abstracts only] ; 139 >
-      au < HighWirePressH20Plugin ; manifest ; 1989 ; Canadian Medical Association Journal Volume 140 [abstracts only] ; 140 >
-      au < HighWirePressH20Plugin ; manifest ; 1989 ; Canadian Medical Association Journal Volume 141 [abstracts only] ; 141 >
-      au < HighWirePressH20Plugin ; manifest ; 1990 ; Canadian Medical Association Journal Volume 142 [abstracts only] ; 142 >
-      au < HighWirePressH20Plugin ; manifest ; 1990 ; Canadian Medical Association Journal Volume 143 [abstracts only] ; 143 >
-      au < HighWirePressH20Plugin ; manifest ; 1991 ; Canadian Medical Association Journal Volume 144 [abstracts only] ; 144 >
-      au < HighWirePressH20Plugin ; manifest ; 1991 ; Canadian Medical Association Journal Volume 145 [abstracts only] ; 145 >
-      au < HighWirePressH20Plugin ; manifest ; 1992 ; Canadian Medical Association Journal Volume 146 [abstracts only] ; 146 >
-      au < HighWirePressH20Plugin ; manifest ; 1992 ; Canadian Medical Association Journal Volume 147 [abstracts only] ; 147 >
-      au < HighWirePressH20Plugin ; manifest ; 1993 ; Canadian Medical Association Journal Volume 148 [abstracts only] ; 148 >
-      au < HighWirePressH20Plugin ; manifest ; 1993 ; Canadian Medical Association Journal Volume 149 [abstracts only] ; 149 >
-      au < HighWirePressH20Plugin ; manifest ; 1994 ; Canadian Medical Association Journal Volume 150 [abstracts only] ; 150 >
-      au < HighWirePressH20Plugin ; manifest ; 1994 ; Canadian Medical Association Journal Volume 151 [abstracts only] ; 151 >
-      au < HighWirePressH20Plugin ; manifest ; 1995 ; Canadian Medical Association Journal Volume 152 [abstracts only] ; 152 >
-      au < HighWirePressH20Plugin ; manifest ; 1995 ; Canadian Medical Association Journal Volume 153 [abstracts only] ; 153 >
-      au < HighWirePressH20Plugin ; manifest ; 1996 ; Canadian Medical Association Journal Volume 154 [abstracts only] ; 154 >
-      au < HighWirePressH20Plugin ; manifest ; 1996 ; Canadian Medical Association Journal Volume 155 [abstracts only] ; 155 >
-    }
-    au < HighWirePressH20Plugin ; released ; 1997 ; Canadian Medical Association Journal Volume 156 ; 156 >
-    au < HighWirePressH20Plugin ; released ; 1997 ; Canadian Medical Association Journal Volume 157 ; 157 >
-    au < HighWirePressH20Plugin ; released ; 1998 ; Canadian Medical Association Journal Volume 158 ; 158 >
-    au < HighWirePressH20Plugin ; released ; 1998 ; Canadian Medical Association Journal Volume 159 ; 159 >
-    au < HighWirePressH20Plugin ; released ; 1999 ; Canadian Medical Association Journal Volume 160 ; 160 >
-    au < HighWirePressH20Plugin ; released ; 1999 ; Canadian Medical Association Journal Volume 161 ; 161 >
-    au < HighWirePressH20Plugin ; released ; 2000 ; Canadian Medical Association Journal Volume 162 ; 162 >
-    au < HighWirePressH20Plugin ; released ; 2000 ; Canadian Medical Association Journal Volume 163 ; 163 >
-    au < HighWirePressH20Plugin ; released ; 2001 ; Canadian Medical Association Journal Volume 164 ; 164 >
-    au < HighWirePressH20Plugin ; released ; 2001 ; Canadian Medical Association Journal Volume 165 ; 165 >
-    au < HighWirePressH20Plugin ; released ; 2002 ; Canadian Medical Association Journal Volume 166 ; 166 >
-    au < HighWirePressH20Plugin ; released ; 2002 ; Canadian Medical Association Journal Volume 167 ; 167 >
-    au < HighWirePressH20Plugin ; released ; 2003 ; Canadian Medical Association Journal Volume 168 ; 168 >
-    au < HighWirePressH20Plugin ; released ; 2003 ; Canadian Medical Association Journal Volume 169 ; 169 >
-    au < HighWirePressH20Plugin ; released ; 2004 ; Canadian Medical Association Journal Volume 170 ; 170 >
-    au < HighWirePressH20Plugin ; released ; 2004 ; Canadian Medical Association Journal Volume 171 ; 171 >
+    param[base_url] = http://www.cmaj.ca/
+
+#    au < HWDrupalPlugin ; exists ; 1966 ; Canadian Medical Association Journal Volume 94 [tables of contents only] ; 94 >
+#    au < HWDrupalPlugin ; exists ; 1966 ; Canadian Medical Association Journal Volume 95 [tables of contents only] ; 95 >
+#    au < HWDrupalPlugin ; exists ; 1967 ; Canadian Medical Association Journal Volume 96 [tables of contents only] ; 96 >
+#    au < HWDrupalPlugin ; exists ; 1967 ; Canadian Medical Association Journal Volume 97 [tables of contents only] ; 97 >
+#    au < HWDrupalPlugin ; exists ; 1968 ; Canadian Medical Association Journal Volume 98 [tables of contents only] ; 98 >
+#    au < HWDrupalPlugin ; exists ; 1968 ; Canadian Medical Association Journal Volume 99 [tables of contents only] ; 99 >
+#    au < HWDrupalPlugin ; exists ; 1969 ; Canadian Medical Association Journal Volume 100 [tables of contents only] ; 100 >
+#    au < HWDrupalPlugin ; exists ; 1969 ; Canadian Medical Association Journal Volume 101 [tables of contents only] ; 101 >
+#    au < HWDrupalPlugin ; exists ; 1970 ; Canadian Medical Association Journal Volume 102 [tables of contents only] ; 102 >
+#    au < HWDrupalPlugin ; exists ; 1970 ; Canadian Medical Association Journal Volume 103 [tables of contents only] ; 103 >
+#    au < HWDrupalPlugin ; exists ; 1971 ; Canadian Medical Association Journal Volume 104 [tables of contents only] ; 104 >
+#    au < HWDrupalPlugin ; exists ; 1971 ; Canadian Medical Association Journal Volume 105 [tables of contents only] ; 105 >
+#    au < HWDrupalPlugin ; exists ; 1972 ; Canadian Medical Association Journal Volume 106 [tables of contents only] ; 106 >
+#    au < HWDrupalPlugin ; exists ; 1972 ; Canadian Medical Association Journal Volume 107 [tables of contents only] ; 107 >
+#    au < HWDrupalPlugin ; exists ; 1973 ; Canadian Medical Association Journal Volume 108 [tables of contents only] ; 108 >
+#    au < HWDrupalPlugin ; exists ; 1973 ; Canadian Medical Association Journal Volume 109 [tables of contents only] ; 109 >
+#    au < HWDrupalPlugin ; exists ; 1974 ; Canadian Medical Association Journal Volume 110 [tables of contents only] ; 110 >
+#    au < HWDrupalPlugin ; exists ; 1974 ; Canadian Medical Association Journal Volume 111 [tables of contents only] ; 111 >
+#    {
+#    
+#      attr[au_coverage_depth] = abstracts
+#    
+#      au < HWDrupalPlugin ; exists ; 1975 ; Canadian Medical Association Journal Volume 112 [abstracts only] ; 112 >
+#      au < HWDrupalPlugin ; exists ; 1975 ; Canadian Medical Association Journal Volume 113 [abstracts only] ; 113 >
+#      au < HWDrupalPlugin ; exists ; 1976 ; Canadian Medical Association Journal Volume 114 [abstracts only] ; 114 >
+#      au < HWDrupalPlugin ; exists ; 1976 ; Canadian Medical Association Journal Volume 115 [abstracts only] ; 115 >
+#      au < HWDrupalPlugin ; exists ; 1977 ; Canadian Medical Association Journal Volume 116 [abstracts only] ; 116 >
+#      au < HWDrupalPlugin ; exists ; 1977 ; Canadian Medical Association Journal Volume 117 [abstracts only] ; 117 >
+#      au < HWDrupalPlugin ; exists ; 1978 ; Canadian Medical Association Journal Volume 118 [abstracts only] ; 118 >
+#      au < HWDrupalPlugin ; exists ; 1978 ; Canadian Medical Association Journal Volume 119 [abstracts only] ; 119 >
+#      au < HWDrupalPlugin ; exists ; 1979 ; Canadian Medical Association Journal Volume 120 [abstracts only] ; 120 >
+#      au < HWDrupalPlugin ; exists ; 1979 ; Canadian Medical Association Journal Volume 121 [abstracts only] ; 121 >
+#      au < HWDrupalPlugin ; exists ; 1980 ; Canadian Medical Association Journal Volume 122 [abstracts only] ; 122 >
+#      au < HWDrupalPlugin ; exists ; 1980 ; Canadian Medical Association Journal Volume 123 [abstracts only] ; 123 >
+#      au < HWDrupalPlugin ; exists ; 1981 ; Canadian Medical Association Journal Volume 124 [abstracts only] ; 124 >
+#      au < HWDrupalPlugin ; exists ; 1981 ; Canadian Medical Association Journal Volume 125 [abstracts only] ; 125 >
+#      au < HWDrupalPlugin ; exists ; 1982 ; Canadian Medical Association Journal Volume 126 [abstracts only] ; 126 >
+#      au < HWDrupalPlugin ; exists ; 1982 ; Canadian Medical Association Journal Volume 127 [abstracts only] ; 127 >
+#      au < HWDrupalPlugin ; exists ; 1983 ; Canadian Medical Association Journal Volume 128 [abstracts only] ; 128 >
+#      au < HWDrupalPlugin ; exists ; 1983 ; Canadian Medical Association Journal Volume 129 [abstracts only] ; 129 >
+#      au < HWDrupalPlugin ; exists ; 1984 ; Canadian Medical Association Journal Volume 130 [abstracts only] ; 130 >
+#      au < HWDrupalPlugin ; exists ; 1984 ; Canadian Medical Association Journal Volume 131 [abstracts only] ; 131 >
+#      au < HWDrupalPlugin ; exists ; 1985 ; Canadian Medical Association Journal Volume 132 [abstracts only] ; 132 >
+#      au < HWDrupalPlugin ; exists ; 1985 ; Canadian Medical Association Journal Volume 133 [abstracts only] ; 133 >
+#      au < HWDrupalPlugin ; exists ; 1986 ; Canadian Medical Association Journal Volume 134 [abstracts only] ; 134 >
+#      au < HWDrupalPlugin ; exists ; 1986 ; Canadian Medical Association Journal Volume 135 [abstracts only] ; 135 >
+#      au < HWDrupalPlugin ; exists ; 1987 ; Canadian Medical Association Journal Volume 136 [abstracts only] ; 136 >
+#      au < HWDrupalPlugin ; exists ; 1987 ; Canadian Medical Association Journal Volume 137 [abstracts only] ; 137 >
+#      au < HWDrupalPlugin ; exists ; 1988 ; Canadian Medical Association Journal Volume 138 [abstracts only] ; 138 >
+#      au < HWDrupalPlugin ; exists ; 1988 ; Canadian Medical Association Journal Volume 139 [abstracts only] ; 139 >
+#      au < HWDrupalPlugin ; exists ; 1989 ; Canadian Medical Association Journal Volume 140 [abstracts only] ; 140 >
+#      au < HWDrupalPlugin ; exists ; 1989 ; Canadian Medical Association Journal Volume 141 [abstracts only] ; 141 >
+#      au < HWDrupalPlugin ; exists ; 1990 ; Canadian Medical Association Journal Volume 142 [abstracts only] ; 142 >
+#      au < HWDrupalPlugin ; exists ; 1990 ; Canadian Medical Association Journal Volume 143 [abstracts only] ; 143 >
+#      au < HWDrupalPlugin ; exists ; 1991 ; Canadian Medical Association Journal Volume 144 [abstracts only] ; 144 >
+#      au < HWDrupalPlugin ; exists ; 1991 ; Canadian Medical Association Journal Volume 145 [abstracts only] ; 145 >
+#      au < HWDrupalPlugin ; exists ; 1992 ; Canadian Medical Association Journal Volume 146 [abstracts only] ; 146 >
+#      au < HWDrupalPlugin ; exists ; 1992 ; Canadian Medical Association Journal Volume 147 [abstracts only] ; 147 >
+#      au < HWDrupalPlugin ; exists ; 1993 ; Canadian Medical Association Journal Volume 148 [abstracts only] ; 148 >
+#      au < HWDrupalPlugin ; exists ; 1993 ; Canadian Medical Association Journal Volume 149 [abstracts only] ; 149 >
+#      au < HWDrupalPlugin ; exists ; 1994 ; Canadian Medical Association Journal Volume 150 [abstracts only] ; 150 >
+#      au < HWDrupalPlugin ; exists ; 1994 ; Canadian Medical Association Journal Volume 151 [abstracts only] ; 151 >
+#      au < HWDrupalPlugin ; exists ; 1995 ; Canadian Medical Association Journal Volume 152 [abstracts only] ; 152 >
+#      au < HWDrupalPlugin ; exists ; 1995 ; Canadian Medical Association Journal Volume 153 [abstracts only] ; 153 >
+#      au < HWDrupalPlugin ; exists ; 1996 ; Canadian Medical Association Journal Volume 154 [abstracts only] ; 154 >
+#      au < HWDrupalPlugin ; exists ; 1996 ; Canadian Medical Association Journal Volume 155 [abstracts only] ; 155 >
+#    }
+    au < HighWirePressH20Plugin ; down ; 1997 ; Canadian Medical Association Journal Volume 156 ; 156 >
+    au < HighWirePressH20Plugin ; down ; 1997 ; Canadian Medical Association Journal Volume 157 ; 157 >
+    au < HighWirePressH20Plugin ; down ; 1998 ; Canadian Medical Association Journal Volume 158 ; 158 >
+    au < HighWirePressH20Plugin ; down ; 1998 ; Canadian Medical Association Journal Volume 159 ; 159 >
+    au < HighWirePressH20Plugin ; down ; 1999 ; Canadian Medical Association Journal Volume 160 ; 160 >
+    au < HighWirePressH20Plugin ; down ; 1999 ; Canadian Medical Association Journal Volume 161 ; 161 >
+    au < HighWirePressH20Plugin ; down ; 2000 ; Canadian Medical Association Journal Volume 162 ; 162 >
+    au < HighWirePressH20Plugin ; down ; 2000 ; Canadian Medical Association Journal Volume 163 ; 163 >
+    au < HighWirePressH20Plugin ; down ; 2001 ; Canadian Medical Association Journal Volume 164 ; 164 >
+    au < HighWirePressH20Plugin ; down ; 2001 ; Canadian Medical Association Journal Volume 165 ; 165 >
+    au < HighWirePressH20Plugin ; down ; 2002 ; Canadian Medical Association Journal Volume 166 ; 166 >
+    au < HighWirePressH20Plugin ; down ; 2002 ; Canadian Medical Association Journal Volume 167 ; 167 >
+    au < HighWirePressH20Plugin ; down ; 2003 ; Canadian Medical Association Journal Volume 168 ; 168 >
+    au < HighWirePressH20Plugin ; down ; 2003 ; Canadian Medical Association Journal Volume 169 ; 169 >
+    au < HighWirePressH20Plugin ; down ; 2004 ; Canadian Medical Association Journal Volume 170 ; 170 >
+    au < HighWirePressH20Plugin ; down ; 2004 ; Canadian Medical Association Journal Volume 171 ; 171 >
     au < HighWireStrVolPlugin ; down ; 2005 ; Canadian Medical Association Journal Volume 172 ; 172 >
     au < HighWirePressPlugin ; superseded ; 2005 ; Canadian Medical Association Journal Volume 172 [superseded] ; 172 >
     au < HighWireStrVolPlugin ; down ; 2005 ; Canadian Medical Association Journal Volume 173 ; 173 >
@@ -111,20 +112,24 @@
     au < HighWirePressPlugin ; down ; 2007 ; Canadian Medical Association Journal Volume 177 ; 177 >
     au < HighWirePressPlugin ; down ; 2008 ; Canadian Medical Association Journal Volume 178 ; 178 >
     au < HighWirePressPlugin ; down ; 2008 ; Canadian Medical Association Journal Volume 179 ; 179 >
-    au < HighWirePressH20Plugin ; released ; 2009 ; Canadian Medical Association Journal Volume 180 ; 180 >
-    au < HighWirePressH20Plugin ; released ; 2009 ; Canadian Medical Association Journal Volume 181 ; 181 >
-    au < HighWirePressH20Plugin ; released ; 2010 ; Canadian Medical Association Journal Volume 182 ; 182 >
-    au < HighWirePressH20Plugin ; released ; 2011 ; Canadian Medical Association Journal Volume 183 ; 183 >
-    au < HighWirePressH20Plugin ; released ; 2012 ; Canadian Medical Association Journal Volume 184 ; 184 >
-    au < HighWirePressH20Plugin ; released ; 2013 ; Canadian Medical Association Journal Volume 185 ; 185 >
-    au < HighWirePressH20Plugin ; released ; 2014 ; Canadian Medical Association Journal Volume 186 ; 186 >
-    au < HighWirePressH20Plugin ; released ; 2015 ; Canadian Medical Association Journal Volume 187 ; 187 >
-    au < HighWirePressH20Plugin ; released ; 2016 ; Canadian Medical Association Journal Volume 188 ; 188 >
+    au < HighWirePressH20Plugin ; down ; 2009 ; Canadian Medical Association Journal Volume 180 ; 180 >
+    au < HighWirePressH20Plugin ; down ; 2009 ; Canadian Medical Association Journal Volume 181 ; 181 >
+    au < HighWirePressH20Plugin ; down ; 2010 ; Canadian Medical Association Journal Volume 182 ; 182 >
+    au < HighWirePressH20Plugin ; down ; 2011 ; Canadian Medical Association Journal Volume 183 ; 183 >
+    au < HighWirePressH20Plugin ; down ; 2012 ; Canadian Medical Association Journal Volume 184 ; 184 >
+    au < HighWirePressH20Plugin ; down ; 2013 ; Canadian Medical Association Journal Volume 185 ; 185 >
+    au < HighWirePressH20Plugin ; down ; 2014 ; Canadian Medical Association Journal Volume 186 ; 186 >
+    au < HighWirePressH20Plugin ; down ; 2015 ; Canadian Medical Association Journal Volume 187 ; 187 >
+    au < HighWirePressH20Plugin ; down ; 2016 ; Canadian Medical Association Journal Volume 188 ; 188 >
+    }
+    {
+    param[base_url] = https://www.cmaj.ca/
+
     au < HWDrupalPlugin ; exists ; 2017 ; Canadian Medical Association Journal Volume 189 ; 189 >
     au < HWDrupalPlugin ; exists ; 2018 ; Canadian Medical Association Journal Volume 190 ; 190 >
     au < HWDrupalPlugin ; exists ; 2019 ; Canadian Medical Association Journal Volume 191 ; 191 >
     au < HWDrupalPlugin ; expected ; 2020 ; Canadian Medical Association Journal Volume 192 ; 192 >
-
+    }
   }
 
   {
@@ -148,6 +153,7 @@
       au < released ; 2018 ; CMAJ Open Volume 6 ; 6 >
       au < manifest ; 2019 ; CMAJ Open Volume 7 ; 7 >
       au < manifest ; 2020 ; CMAJ Open Volume 8 ; 8 >
+      au < expected ; 2021 ; CMAJ Open Volume 9 ; 9 >
     }
     {
       param[base_url] = http://www.cmajopen.ca/
