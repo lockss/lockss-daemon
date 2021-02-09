@@ -81,8 +81,8 @@
     au < HighWirePressH20Plugin ; down ; 2012 ; Rocky Mountain Geology Volume 47 ; 47 >
     au < HighWirePressH20Plugin ; down ; 2013 ; Rocky Mountain Geology Volume 48 ; 48 >
     au < HighWirePressH20Plugin ; down ; 2014 ; Rocky Mountain Geology Volume 49 ; 49 >
-    au < HighWirePressH20Plugin ; down ; 2015 ; Rocky Mountain Geology Volume 50 ; 50 >
-    au < gsw.GSWDrupalPlugin ; down ; 2016 ; Rocky Mountain Geology Volume 51 ; 51 >
+    au < HighWirePressH20Plugin ; superseded ; 2015 ; Rocky Mountain Geology Volume 50 [superseded] ; 50 >
+    au < gsw.GSWDrupalPlugin ; superseded ; 2016 ; Rocky Mountain Geology Volume 51 [superseded] ; 51 >
     au < gsw.GSWDrupalPlugin ; doNotProcess ; 2017 ; Rocky Mountain Geology Volume 52 ; 52 >
    
   }
