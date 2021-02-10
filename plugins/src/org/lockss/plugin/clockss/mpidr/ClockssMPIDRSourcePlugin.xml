@@ -1,0 +1,94 @@
+<map>
+    <entry>
+        <string>plugin_status</string>
+        <string>development</string>
+    </entry>
+    <entry>
+        <string>plugin_identifier</string>
+        <string>org.lockss.plugin.clockss.mpidr.ClockssMPIDRSourcePlugin</string>
+    </entry>
+    <entry>
+        <string>plugin_version</string>
+        <string>1</string>
+    </entry>
+    <entry>
+        <string>plugin_feature_version_map</string>
+        <map>
+            <entry>
+                <string>Metadata</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Poll</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Substance</string>
+                <string>1</string>
+            </entry>
+        </map>
+    </entry>
+    <entry>
+        <string>plugin_parent</string>
+        <string>org.lockss.plugin.clockss.ClockssDirSourcePlugin</string>
+    </entry>
+    <entry>
+        <string>plugin_parent_version</string>
+        <string>1</string>
+    </entry>
+    <entry>
+        <string>plugin_name</string>
+        <string>Max Planck Insitute for Demographic Research Source Plugin (CLOCKSS)</string>
+    </entry>
+    <entry>
+        <string>au_name</string>
+        <string>"Max Planck Insitute for Demographic Research Source Plugin (CLOCKSS), Base URL %s, directory %s", base_url, directory</string>
+    </entry>
+    <entry>
+        <string>au_substance_url_pattern</string>
+        <list>
+            <string>"^%s%s/.+\.pdf", base_url, directory</string>
+        </list>
+    </entry>
+    <entry>
+        <string>au_url_mime_type</string>
+        <list>
+            <string>.*\.ris$, application/x-research-info-systems</string>
+        </list>
+    </entry>
+    <entry>
+        <string>au_crawlrules</string>
+        <list>
+            <!--need "special/$" to allow "special" root level directory-->
+            <string>1,&quot;%s%s/special/$", base_url, directory</string>
+            <string>1,&quot;%s%s/special/[1-3]{1}/.*", base_url, directory</string>
+            <string>1,&quot;%s%s/volumes/.*", base_url, directory</string>
+        </list>
+    </entry>
+    <entry>
+        <string>plugin_article_iterator_factory</string>
+        <string>org.lockss.plugin.clockss.mpidr.MPIDRRisArticleIteratorFactory</string>
+    </entry>
+    <entry>
+        <string>plugin_article_metadata_extractor_factory</string>
+        <string>org.lockss.plugin.clockss.mpidr.MPIDRRisArticleIteratorFactory</string>
+    </entry>
+    <entry>
+        <string>text/plain_metadata_extractor_factory_map</string>
+        <map>
+            <entry>
+                <string>*;RIS</string>
+                <string>org.lockss.plugin.clockss.mpidr.MPIDRRisMetadataExtractorFactory</string>
+            </entry>
+        </map>
+    </entry>
+    <entry>
+        <string>application/x-research-info-systems_metadata_extractor_factory_map</string>
+        <map>
+            <entry>
+                <string>*;RIS</string>
+                <string>org.lockss.plugin.clockss.mpidr.MPIDRRisMetadataExtractorFactory</string>
+            </entry>
+        </map>
+    </entry>
+</map>
