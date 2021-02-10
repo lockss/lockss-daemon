@@ -38,6 +38,7 @@ import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
+import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.util.Logger;
 
@@ -94,7 +95,13 @@ public class RSC2014HtmlMetadataExtractorFactory implements FileMetadataExtracto
       
       ArticleMetadata am = super.extract(target, cu);
       am.cook(tagMap);
-      am.replace(MetadataField.FIELD_ACCESS_URL, cu.getUrl());
+
+      // set url, and normalize it. normalization should be redundant, as the cachedUrl should already be normalized,
+      // but just in case.
+      am.replace(
+          MetadataField.FIELD_ACCESS_URL,
+          AuUtil.normalizeHttpHttpsFromBaseUrl(cu.getArchivalUnit(), cu.getUrl())
+      );
       return am;
     } // extract
     

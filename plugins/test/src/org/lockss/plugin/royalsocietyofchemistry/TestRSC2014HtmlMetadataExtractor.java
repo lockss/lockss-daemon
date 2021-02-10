@@ -136,7 +136,7 @@ public class TestRSC2014HtmlMetadataExtractor extends LockssTestCase {
   String goodIssue = "5";
   String goodStartPage = "R543";
   String goodEndPage = "R556";
-  String goodURL = "http://fakejournaloflaughs.drfriendly.org/415/5/R543";
+  String goodURL = "https://fakejournaloflaughs.drfriendly.org/415/5/R543";
   
   // a chunk of html source code from the publisher's site from where the metadata should be extracted
   String goodContent = "" +
@@ -164,7 +164,8 @@ public class TestRSC2014HtmlMetadataExtractor extends LockssTestCase {
    */
   public void testExtractFromGoodContent() throws Exception {
     String url = "http://pubs.rsc.org/en/content/articlelanding/2008/gc/xx";
-    MockCachedUrl cu = new MockCachedUrl(url, rscau);
+    String url_https = "https://pubs.rsc.org/en/content/articlelanding/2008/gc/xx";
+    MockCachedUrl cu = new MockCachedUrl(url_https, rscau);
     cu.setContent(goodContent);
     cu.setContentSize(goodContent.length());
     cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
@@ -186,6 +187,12 @@ public class TestRSC2014HtmlMetadataExtractor extends LockssTestCase {
     assertEquals(goodStartPage, md.get(MetadataField.FIELD_START_PAGE));
     assertEquals(goodDOI, md.get(MetadataField.FIELD_DOI));
     assertEquals(url, md.get(MetadataField.FIELD_ACCESS_URL));
+    // ensure that the https transition portion works depending on the BASE_URL.
+    if (BASE_URL.charAt(4)=='s') {
+      assertNotEquals(url, md.get(MetadataField.FIELD_ACCESS_URL));
+    } else {
+      assertNotEquals(url_https, md.get(MetadataField.FIELD_ACCESS_URL));
+    }
   }
   
   // a chunk of HTML source code from where the HtmlMetadataExtractorFactory 
