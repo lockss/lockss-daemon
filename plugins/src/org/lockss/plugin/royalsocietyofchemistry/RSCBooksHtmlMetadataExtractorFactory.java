@@ -39,6 +39,7 @@ import org.apache.commons.collections.map.MultiValueMap;
 import org.lockss.config.TdbAu;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
+import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.util.Logger;
 
@@ -113,7 +114,13 @@ public class RSCBooksHtmlMetadataExtractorFactory implements FileMetadataExtract
       } else {
         am.replace(MetadataField.FIELD_ACCESS_URL, cu.getUrl());
       }
-      
+      // normalize the url
+      am.replace(MetadataField.FIELD_ACCESS_URL,
+          AuUtil.normalizeHttpHttpsFromBaseUrl(
+              cu.getArchivalUnit(),
+              am.get(MetadataField.FIELD_ACCESS_URL)
+          )
+      );
       return am;
     } // extract
   }
