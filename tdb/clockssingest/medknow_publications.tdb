@@ -5312,12 +5312,12 @@
 
       title <
         name = Egyptian Journal of Bronchology ;
-        issn = 1687-8426 ;
         eissn = 2314-8551
       >
 
       param[journal_issn] = 1687-8426
 #      param[base_url] = http://www.ejbronchology.eg.net/
+      #Moved to Springer
 
       au < finished ; frozen ; 2013 ; Egyptian Journal of Bronchology Volume 7 ; 2013 ; 7 ; http://www.ejbronchology.eg.net/ ; ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2014 ; Egyptian Journal of Bronchology Volume 8 ; 2014 ; 8 ; http://www.ejbronchology.eg.net/ ; ; reingest1.clockss.org:8082 >
@@ -8247,12 +8247,12 @@
 
       title <
         name = The Egyptian Journal of Otolaryngology ;
-        issn = 1012-5574 ;
         eissn = 2090-8539
       >
 
       param[journal_issn] = 1012-5574
 #      param[base_url] = http://www.ejo.eg.net/
+      #Moved to Springer
 
       au < finished ; finished ; 2012 ; The Egyptian Journal of Otolaryngology Volume 28 ; 2012 ; 28 ; http://www.ejo.eg.net/ ; ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2013 ; The Egyptian Journal of Otolaryngology Volume 29 ; 2013 ; 29 ; http://www.ejo.eg.net/ ; ; reingest1.clockss.org:8082 >
