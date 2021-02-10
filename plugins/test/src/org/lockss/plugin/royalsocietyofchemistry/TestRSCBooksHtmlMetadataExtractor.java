@@ -33,12 +33,14 @@ POSSIBILITY OF SUCH DAMAGE.
 /**
 
  NEED TO ADD THIS TEST BUT DON"T HAVE ACCESS TO THE METADATA ATM.
-
+*/
 package org.lockss.plugin.royalsocietyofchemistry;
 
 import org.lockss.test.LockssTestCase;
 
 public class TestRSCBooksHtmlMetadataExtractor extends LockssTestCase {
 
+  public void testEmptyTest() throws Exception {
+    assertEquals('a', 'a');
+  }
 }
-*/
