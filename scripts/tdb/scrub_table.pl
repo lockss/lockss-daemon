@@ -60,7 +60,7 @@ foreach my $issn (sort(keys(%issn_eissn))) {
     foreach my $rec_ref (@{$issn_eissn{$issn}}) {
         if ($check_title eq "") {
         $check_title = $rec_ref->[1];
-        } elsif ($rec_ref->[1] ne $check_title) {
+        } elsif (lc($rec_ref->[1]) ne lc($check_title)) {
         $suppress_this = 0;
         last;
         }
