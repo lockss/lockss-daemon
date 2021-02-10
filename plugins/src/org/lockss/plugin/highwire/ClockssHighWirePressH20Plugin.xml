@@ -2,6 +2,7 @@
   <entry>
     <string>plugin_status</string>
     <string>ready</string>
+    <!-- https transition enabled -->
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -13,7 +14,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>131</string>
+    <string>132</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -21,7 +22,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>131</string>
+    <string>132</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -29,7 +30,10 @@
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%sclockss-manifest/vol_%s_manifest.dtl", base_url, volume_name</string>
+    <list>
+      <string>"%sclockss-manifest/vol_%s_manifest.dtl", to_http(base_url), volume_name</string>
+      <string>"%sclockss-manifest/vol_%s_manifest.dtl", to_https(base_url), volume_name</string>
+    </list>
   </entry>
   <entry>
     <string>au_def_pause_time</string>

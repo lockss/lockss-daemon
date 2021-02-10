@@ -2,6 +2,7 @@
   <entry>
     <string>plugin_status</string>
     <string>ready</string>
+    <!-- https transition enabled -->
   </entry>
   <!-- compare to BiologistsDrupalPlugin, the added entries should be in synch -->
   <!-- also compare to ClockssHighWireDrupalPlugin for CLOCKSS specific entries -->
@@ -15,7 +16,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>13</string>
+    <string>14</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -23,15 +24,19 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>13</string>
+    <string>14</string>
   </entry>
   <entry>
     <string>au_name</string>
     <string>"Company of Biologists Plugin (CLOCKSS), Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
   <entry>
+    <!--  override start url from parent to support http to https conversion -->
     <string>au_start_url</string>
-    <string>"%sclockss-manifest/vol_%s_manifest.html", base_url, volume_name</string>
+    <list>
+      <string>"%sclockss-manifest/vol_%s_manifest.html", to_http(base_url), volume_name</string>
+      <string>"%sclockss-manifest/vol_%s_manifest.html", to_https(base_url), volume_name</string>
+    </list>
   </entry>
   <entry>
     <string>clockss_override</string>

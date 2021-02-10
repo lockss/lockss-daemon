@@ -97,12 +97,13 @@ public class TestBMJDrupalPlugin extends LockssTestCase {
     props.setProperty(BASE_URL_KEY, "https://www.example.com/");
     
     String starturl[] = {
+        "http://www.example.com/lockss-manifest/vol_313_manifest.html",
         "https://www.example.com/lockss-manifest/vol_313_manifest.html", 
     };
     DefinableArchivalUnit au = makeAuFromProps(props);
     assertEquals("BMJ Plugin, Base URL https://www.example.com/, Volume 313",
         au.getName());
-    assertEquals(ListUtil.list(starturl[0]), au.getStartUrls());
+    assertEquals(ListUtil.list(starturl), au.getStartUrls());
   }
   
   public void testGetPluginId() {

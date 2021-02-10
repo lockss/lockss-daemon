@@ -55,7 +55,13 @@ public class TestHighWirePressH20Plugin extends LockssTestCase {
 
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   static final String VOL_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
-  
+
+  static final String starturls[] =
+    {
+      "http://www.example.com/lockss-manifest/vol_322_manifest.dtl",
+      "https://www.example.com/lockss-manifest/vol_322_manifest.dtl",
+    };
+
   // from au_url_poll_result_weight in plugins/src/org/lockss/plugin/highwire/HighWirePressH20Plugin.xml
   // if it changes in the plugin, you will likely need to change the test, so verify
   static final String HW_REPAIR_FROM_PEER_REGEXP[] = 
@@ -106,11 +112,9 @@ public class TestHighWirePressH20Plugin extends LockssTestCase {
     props.setProperty(VOL_KEY, "322");
     props.setProperty(BASE_URL_KEY, "http://www.example.com/");
 
-    String starturl =
-      "http://www.example.com/lockss-manifest/vol_322_manifest.dtl";
     DefinableArchivalUnit au = makeAuFromProps(props);
     assertEquals("HighWire Press Plugin (H20), Base URL http://www.example.com/, Volume 322", au.getName());
-    assertEquals(ListUtil.list(starturl), au.getStartUrls());
+    assertEquals(ListUtil.list(starturls), au.getStartUrls());
   }
 
   public void testGetPluginId() {
@@ -137,8 +141,6 @@ public class TestHighWirePressH20Plugin extends LockssTestCase {
     props.setProperty(VOL_KEY, "322");
     props.setProperty(BASE_URL_KEY, "http://www.example.com/");
 
-    String starturl =
-      "http://www.example.com/lockss-manifest/vol_322_manifest.dtl";
     DefinableArchivalUnit au = makeAuFromProps(props);
     MockLockssUrlConnection conn = new MockLockssUrlConnection();
     conn.setURL("http://uuu17/");
@@ -147,10 +149,11 @@ public class TestHighWirePressH20Plugin extends LockssTestCase {
                                                                500, "foo");
     assertClass(NoRetryDeadLinkException.class, exc);
 
-    conn.setURL(starturl);
+    conn.setURL(starturls[0]);
     exc = ((HttpResultMap)plugin.getCacheResultMap()).mapException(au, conn,
                                                                    500, "foo");
     assertClass(RetrySameUrlException.class, exc);
+
 
   }
   

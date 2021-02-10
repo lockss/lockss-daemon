@@ -2,6 +2,7 @@
   <entry>
     <string>plugin_status</string>
     <string>ready</string>
+    <!-- https transition enabled -->
   </entry>
   <!-- compare to ClockssADADrupalPlugin, the added entries should be in synch -->
   <entry>
@@ -14,7 +15,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>8</string>
+    <string>9</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -22,7 +23,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>75</string>
+    <string>82</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -33,7 +34,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -52,5 +53,13 @@
   <entry>
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.highwire.ada.ADADrupalHtmlCrawlFilterFactory</string>
+  </entry>
+  <entry>
+    <!--  override start url from parent to support http to https conversion -->
+    <string>au_start_url</string>
+    <list>
+      <string>"%slockss-manifest/vol_%s_manifest.html", to_http(base_url), volume_name</string>
+      <string>"%slockss-manifest/vol_%s_manifest.html", to_https(base_url), volume_name</string>
+    </list>
   </entry>
 </map>

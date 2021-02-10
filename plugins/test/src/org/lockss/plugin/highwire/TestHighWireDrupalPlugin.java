@@ -394,9 +394,9 @@ public class TestHighWireDrupalPlugin extends LockssTestCase {
   
   static final String HW_EXCLUDE_FROM_POLLS_REGEXP[] = 
     {
-        "^http(?!.*/highwire/filestream/.*)(?!.*\\.pdf)(?!.*/content/[^/]+/suppl/.*)|html$",
-        "^http(.+)/twi[ls]\\.",
-        "^http(.+)/findings\\.",
+        "^https?(?!.*/highwire/filestream/.*)(?!.*\\.pdf)(?!.*/content/[^/]+/suppl/.*)|html$",
+        "^https?(.+)/twi[ls]\\.",
+        "^https?(.+)/findings\\.",
     };
 
   public void testPollSpecial() throws Exception {

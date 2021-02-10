@@ -98,11 +98,12 @@ public class TestASMDrupalPlugin extends LockssTestCase {
     
     String starturl[] = {
         "http://www.example.com/lockss-manifest/vol_2_manifest.html",
+        "https://www.example.com/lockss-manifest/vol_2_manifest.html",
     };
     DefinableArchivalUnit au = makeAuFromProps(props);
     assertEquals("American Society for Microbiology Plugin, Base URL http://www.example.com/, Volume 2",
         au.getName());
-    assertEquals(ListUtil.list(starturl[0]), au.getStartUrls());
+    assertEquals(ListUtil.list(starturl), au.getStartUrls());
   }
   
   public void testGetPluginId() {
