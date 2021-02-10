@@ -8641,7 +8641,7 @@
   {
 
       title <
-        name = Ain-Shams Journal of Anaesthesiology ;
+        name = Ain-Shams Journal of Anesthesiology ;
         issn = 1687-7934 ;
         eissn = 2090-925X
       >
@@ -8649,16 +8649,13 @@
       param[journal_issn] = 1687-7934
 #      param[base_url] = http://www.asja.eg.net/
 
-      au < released ; 2012 ; Ain-Shams Journal of Anaesthesiology Volume 5 ; 2012 ; 5 ; http://www.asja.eg.net/ >
-      au < released ; 2013 ; Ain-Shams Journal of Anaesthesiology Volume 6 ; 2013 ; 6 ; http://www.asja.eg.net/ >
-      au < released ; 2014 ; Ain-Shams Journal of Anaesthesiology Volume 7 ; 2014 ; 7 ; http://www.asja.eg.net/ >
-      au < released ; 2015 ; Ain-Shams Journal of Anaesthesiology Volume 8 ; 2015 ; 8 ; http://www.asja.eg.net/ >
-      au < released ; 2016 ; Ain-Shams Journal of Anaesthesiology Volume 9 ; 2016 ; 9 ; http://www.asja.eg.net/ >
-      au < released ; 2017 ; Ain-Shams Journal of Anaesthesiology Volume 10 ; 2017 ; 10 ; http://www.asja.eg.net/ >
-      au < expected ; 2018 ; Ain-Shams Journal of Anaesthesiology Volume 11 ; 2018 ; 11 ; https://www.asja.eg.net/ >
-      au < expected ; 2019 ; Ain-Shams Journal of Anaesthesiology Volume 12 ; 2019 ; 12 ; https://www.asja.eg.net/ >
-      au < expected ; 2020 ; Ain-Shams Journal of Anaesthesiology Volume 13 ; 2020 ; 13 ; https://www.asja.eg.net/ >
-
+      au < released ; 2012 ; Ain-Shams Journal of Anesthesiology Volume 5 ; 2012 ; 5 ; http://www.asja.eg.net/ >
+      au < released ; 2013 ; Ain-Shams Journal of Anesthesiology Volume 6 ; 2013 ; 6 ; http://www.asja.eg.net/ >
+      au < released ; 2014 ; Ain-Shams Journal of Anesthesiology Volume 7 ; 2014 ; 7 ; http://www.asja.eg.net/ >
+      au < released ; 2015 ; Ain-Shams Journal of Anesthesiology Volume 8 ; 2015 ; 8 ; http://www.asja.eg.net/ >
+      au < released ; 2016 ; Ain-Shams Journal of Anesthesiology Volume 9 ; 2016 ; 9 ; http://www.asja.eg.net/ >
+      au < released ; 2017 ; Ain-Shams Journal of Anesthesiology Volume 10 ; 2017 ; 10 ; http://www.asja.eg.net/ >
+      #Nothing published after 2017. As of 2021/02/09. Moved to Springer
   }
 
 

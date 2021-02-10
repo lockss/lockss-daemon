@@ -35660,7 +35660,7 @@ comment[mpj] = now published by Brill
   {
 
     title <
-      name = Multiple Sclerosis Journal – Experimental, Translational and Clinical ;
+      name = Multiple Sclerosis Journal - Experimental, Translational and Clinical ;
         eissn = 2055-2173 ;
         issnl = 2055-2173
     >
@@ -35669,8 +35669,8 @@ comment[mpj] = now published by Brill
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < down ; 2015 ; Multiple Sclerosis Journal – Experimental, Translational and Clinical Volume 1 ; 1 >
-      au < doNotProcess ; 2016 ; Multiple Sclerosis Journal – Experimental, Translational and Clinical Volume 2 ; 2 >
+      au < down ; 2015 ; Multiple Sclerosis Journal - Experimental, Translational and Clinical Volume 1 ; 1 >
+      au < doNotProcess ; 2016 ; Multiple Sclerosis Journal - Experimental, Translational and Clinical Volume 2 ; 2 >
 
   }
 
