@@ -133,6 +133,7 @@ public class MedknowHtmlMetadataExtractorFactory implements
             entries.clear();
             // normalize any urls found in the list.
             for (String each : newEntries) {
+              // check if it is a url, not all entries are urls.
               if (each.contains("http")) {
                 each = helper.normalize(each);
               }
