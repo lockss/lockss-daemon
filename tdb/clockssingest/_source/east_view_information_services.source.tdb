@@ -5,39 +5,39 @@
     info[contract] = 2011 ;
     info[tester] = S
   >
-  
+
   {
-  
+
     title <
        name = East View Information Services Source Content
     >
-    
+
     {
-    
+
       plugin = org.lockss.plugin.clockss.eastview.ClockssEastviewSourcePlugin
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/eastview-released/
       hidden[proxy] = DIRECT
       implicit < status ; status2 ; year ; name ; param[year] >
-    
-      au < zapped ; finished ; 2017 ; East View Information Services Source Content 2017 ; 2017 >
 
+      au < zapped ; finished ; 2017 ; East View Information Services Source Content 2017 ; 2017 >
+#No more content expected for this plugin.
     }
 
   }
 
   {
-  
+
     title <
        name = East View Information Services Book Source Content
     >
-    
+
     {
-    
+
       plugin = org.lockss.plugin.clockss.eastview.ClockssEastviewBookSourcePlugin
-      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/eastview-released/
+      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/eastviewbooks-released/
       hidden[proxy] = DIRECT
       implicit < status ; status2 ; year ; name ; param[year] >
-    
+
       au < expected ; exists ; 2021 ; East View Information Services Book Source Content 2021 ; 2021 >
 
     }
@@ -58,7 +58,7 @@
         hidden[proxy] = DIRECT
         implicit < status ; status2 ; year ; name ; param[directory] >
 
-        #au < expected ; exists ; 2020 ; East View Information Services Book Source Content 2020 ; 2020 >
+        #au < expected ; exists ; 2020 ; East View Information Services Source Content 2020 ; 2020 >
 
       }
 
