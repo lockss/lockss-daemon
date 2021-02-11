@@ -92,5 +92,9 @@
       <string>"^https?://%s/doi/(e?pdf|e?pdfplus)/", url_host(base_url)</string>
     </list>
   </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.atypon.seg.SEGUrlNormalizer</string>
+  </entry>
 </map>    
 
