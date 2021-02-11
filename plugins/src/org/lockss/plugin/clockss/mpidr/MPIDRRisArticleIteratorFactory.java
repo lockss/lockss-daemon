@@ -18,17 +18,20 @@ public class MPIDRRisArticleIteratorFactory implements ArticleIteratorFactory, A
 
     protected static Logger log = Logger.getLogger(MPIDRRisArticleIteratorFactory.class);
 
+    /*
+    https://clockss-test.lockss.org/sourcefiles/mpidr-released/2021/special/3/9/S3-9.pdf
+    https://clockss-test.lockss.org/sourcefiles/mpidr-released/2021/special/3/9/article.ris
+    https://clockss-test.lockss.org/sourcefiles/mpidr-released/2021/special/3/9/default.htm
+    https://clockss-test.lockss.org/sourcefiles/mpidr-released/2021/volumes/vol1/1/1-1.pdf
+    https://clockss-test.lockss.org/sourcefiles/mpidr-released/2021/volumes/vol1/1/article.ris
+    https://clockss-test.lockss.org/sourcefiles/mpidr-released/2021/volumes/vol1/1/default.htm
+     */
+
+    protected static final String PATTERN_TEMPLATE = "\"^%s%s/(.*)\\.(ris|pdf)$\",base_url, directory";
+
     public static final Pattern RIS_PATTERN = Pattern.compile("/([^/]+)\\.ris$", Pattern.CASE_INSENSITIVE);
     public static final String RIS_REPLACEMENT = "/$1.ris";
 
-    public static final Pattern PDF_PATTERN = Pattern.compile("/([^/]+)\\.pdf$", Pattern.CASE_INSENSITIVE);
-    public static final String PDF_REPLACEMENT = "/$1.pdf";
-
-    protected static final String PATTERN_TEMPLATE = "\"^%s[^/]+/(.*)\\.(?:ris|pdf)$\",base_url";
-    //
-    // The source content structure looks like this:
-    // <root_location>/<dir>/<possible subdirectories>/<STUFF> where STUFF is a series of files:
-    // <name>.pdf, <name>.ris. <name>.ris is used to extract metadata
     @Override
     public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
                                                         MetadataTarget target)
@@ -40,15 +43,9 @@ public class MPIDRRisArticleIteratorFactory implements ArticleIteratorFactory, A
                 .setTarget(target)
                 .setPatternTemplate(PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE));
 
-        builder.addAspect(PDF_PATTERN,
-                PDF_REPLACEMENT,
-                ArticleFiles.ROLE_FULL_TEXT_PDF);
-
         builder.addAspect(RIS_PATTERN,
                 RIS_REPLACEMENT,
                 ArticleFiles.ROLE_ARTICLE_METADATA);
-
-        builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF);
 
         return builder.getSubTreeArticleIterator();
     }

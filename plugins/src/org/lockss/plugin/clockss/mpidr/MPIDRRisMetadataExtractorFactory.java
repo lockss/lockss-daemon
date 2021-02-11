@@ -5,12 +5,16 @@ import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrl;
+import org.lockss.plugin.clockss.JatsPublishingSchemaHelper;
+import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 import org.lockss.util.Logger;
 
 import java.io.IOException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /*
-Here is the sample data from .ris file inside volume folder
+Here is the sample data from .ris file inside "volume" folder
 TY  - JOUR
 A1  - Kannisto, VÃ¤inÃ¶
 A1  - Nieminen, Mauri
@@ -29,6 +33,28 @@ L2  - https://www.demographic-research.org/volumes/vol1/1/1-1.pdf
 N2  - A recently completed series of life tables from 1751 to 1995 is used for identifying four stages of mortality transition in Finland, separated by the years 1880, 1945 and 1970.  The cyclical fluctuation of the death rate in the eighteenth and nineteenth centuries is measured and examined in relation to epidemics, famines and wars.  Important permanent changes in mortality also took place in this early period.  Each of the successive stages of transition produced its own characteristic pattern of mortality change which contrasted with those of the other stages.  Finally, the age profile of the years added to life is drawn to illustrate the end result of each stage of mortality transition. (All figures follow at the end of the document.)
 ER  -
 -
+Here is the sample data from .ris file inside "special" folder
+TY  - JOUR
+A1  - Watkins, Susan
+A1  - Kohler, Hans-Peter
+A1  - Behrman, Jere
+A1  - Zulu, Eliya Msiyaphazi
+T1  - Introduction to "Research on Demographic Aspects of HIV/AIDS in Rural Africa"
+Y1  - 2003.09.19
+JF  - Demographic Research
+JO  - Demographic Research
+SN  - 1435-9871
+SP  - 1
+EP  - 30
+N1  - 10.4054/DemRes.2003.S1.1
+VL  - Special 1
+IS  - 1
+UR  - https://www.demographic-research.org/special/1/1/default.htm
+L1  - https://www.demographic-research.org/special/1/1/s1-1.pdf
+L2  - https://www.demographic-research.org/special/1/1/s1-1.pdf
+N2  - This paper introduces a set of papers presented at the conference "Research on Demographic Aspects of HIV/AIDS in Rural Africa", held at the Population Studies Center, University of Pennsylvania, October 28-29, 2002.    The aim of the conference was to provide a forum for the presentation of results, to an audience of experts, on a variety of demographic aspects relevant for the study of HIV/AIDS in rural Africa. The aim of this volume is to provide these results to a wider audience.  Although the topics covered are diverse, ranging from methodological issues in the study of HIV/AIDS such as sample attrition to substantive issues such as fertility, divorce, and womenâ€™s autonomy, the papers are united by their use of two similar data sets collected in rural Malawi and Kenya. This introduction thus begins by briefly describing the contents of the volume and the collaborators, and then focuses on a detailed description of the data used by all authors and on the threats to data quality in these contexts. We conclude that demographic studies of HIV/AIDS in rural Africa are likely to face similar threats, and that these should be routinely recognized and acknowledged.
+ER  -
+
  */
 public class MPIDRRisMetadataExtractorFactory implements FileMetadataExtractorFactory {
     private static final Logger log = Logger.getLogger(MPIDRRisMetadataExtractorFactory.class);
@@ -37,21 +63,21 @@ public class MPIDRRisMetadataExtractorFactory implements FileMetadataExtractorFa
                                                              String contentType)
             throws PluginException {
 
-        ScientificVideoProtocolsRisMetadataExtractor ris = new ScientificVideoProtocolsRisMetadataExtractor();
+        MPIDRRisMetadataExtractor ris = new MPIDRRisMetadataExtractor();
 
-        ris.addRisTag("DA", MetadataField.FIELD_DATE);
+        ris.addRisTag("Y1", MetadataField.FIELD_DATE);
         ris.addRisTag("JO", MetadataField.FIELD_PUBLICATION_TITLE);
-        ris.addRisTag("TI", MetadataField.FIELD_ARTICLE_TITLE);
-        ris.addRisTag("SP", MetadataField.FIELD_START_PAGE);
+        ris.addRisTag("T1", MetadataField.FIELD_ARTICLE_TITLE);
         ris.addRisTag("VL", MetadataField.FIELD_VOLUME);
         ris.addRisTag("IS", MetadataField.FIELD_ISSUE);
         ris.addRisTag("SN", MetadataField.FIELD_ISSN);
         ris.addRisTag("DO", MetadataField.FIELD_DOI);
+        ris.addRisTag("A1", MetadataField.FIELD_AUTHOR);
         // Do not use UR listed in the ris file! It will get set to full text CU by daemon
         return ris;
     }
 
-    public static class ScientificVideoProtocolsRisMetadataExtractor
+    public static class MPIDRRisMetadataExtractor
             extends RisMetadataExtractor {
 
         // override this to do some additional attempts to get valid data before emitting
@@ -65,16 +91,40 @@ public class MPIDRRisMetadataExtractorFactory implements FileMetadataExtractorFa
             // post-cook processing...
             // check for existence of content file - return without emitting if not there
             String url_string = cu.getUrl();
-            String pdfName = url_string.substring(0,url_string.length() - 3) + "pdf";
             ArchivalUnit au = cu.getArchivalUnit();
+
+
+            String pattern = "(.*)(\\d{4,})(.*)";
+
+            // Create a Pattern object
+            Pattern r =
+                    Pattern.compile(pattern);
+
+            // Now create matcher object.
+            Matcher m = r.matcher(url_string);
+            String localUrl = "";
+            if (m.find()) {
+                log.debug3("Found value: " + m.group(0));
+                log.debug3("Found value: " + m.group(1));
+                log.debug3("Found value: " + m.group(2));
+                log.debug3("Found value: " + m.group(3));
+                localUrl = m.group(1) + m.group(2) + "/";
+            } else {
+                log.debug3("NO MATCH");
+            }
+
+            String pdfurl = am.getRaw("L1");
+            String realUrl = pdfurl.substring(0, pdfurl.indexOf("org/")) + "org/";
+            String pdfName = pdfurl.replace(realUrl, localUrl).replace(".ris", ".pdf");
             CachedUrl fileCu = au.makeCachedUrl(pdfName);
+
+
             log.debug3("Check for existence of " + pdfName);
-            if(fileCu == null || !(fileCu.hasContent())) {
+            if (fileCu == null || !(fileCu.hasContent())) {
                 log.debug3(pdfName + " was not in cu");
                 return; // do not emit, just return - no content
             }
-
-
+            
             am.put(MetadataField.FIELD_ACCESS_URL, pdfName);
 
             String publisherName = "Max Planck Insitute for Demographic Research";
@@ -88,6 +138,5 @@ public class MPIDRRisMetadataExtractorFactory implements FileMetadataExtractorFa
 
             emitter.emitMetadata(cu, am);
         }
-
     }
 }
