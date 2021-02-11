@@ -14,11 +14,11 @@
   <entry>
   <!--  for support of au_url_mime_type_validation_map-->
     <string>required_daemon_version</string>
-    <string>1.74.0</string>
+    <string>1.75.0</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>107</string>
+    <string>108</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -31,7 +31,7 @@
     <map>
       <entry>
         <string>Metadata</string>
-        <string>14</string>
+        <string>15</string>
       </entry>
       <entry>
         <string>Poll</string>

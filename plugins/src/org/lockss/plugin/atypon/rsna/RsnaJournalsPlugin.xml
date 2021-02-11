@@ -2,6 +2,7 @@
   <entry>
     <string>plugin_status</string>
     <string>ready</string>
+    <!-- https transition enabled -->
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -9,7 +10,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>10</string>
+    <string>11</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -21,16 +22,35 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>101</string>
+    <string>108</string>
   </entry>
   <entry>
     <string>au_name</string>
     <string>"Radiological Society of North America Journals Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
+  <!--  override start url from parent to support http to https conversion -->
+  <entry>
+    <string>au_start_url</string>
+    <list>
+      <string>"%slockss/%s/%s/index.html", to_http(base_url), journal_id, volume_name</string>
+      <string>"%slockss/%s/%s/index.html", to_https(base_url), journal_id, volume_name</string>
+    </list>
+  </entry>
+  <!-- http to https conversion added to the RsnaUrlNormalizer class -->
   <entry>
     <string>au_url_normalizer</string>
     <string>org.lockss.plugin.atypon.rsna.RsnaUrlNormalizer</string>
   </entry>
+  <!--  also for https conversion -->
+  <entry>
+    <string>plugin_url_fetcher_factory</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponHttpToHttpsUrlFetcherFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponHttpToHttpsUrlConsumerFactory</string>
+  </entry>
+  <!-- end changes for https conversion -->
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.atypon.rsna.RsnaHtmlHashFilterFactory</string>

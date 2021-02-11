@@ -10,7 +10,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>13</string>
+    <string>14</string>
   </entry>
 <!--  updating out of sync with parent, must have own feature_version_map -->
   <entry>
@@ -18,7 +18,7 @@
     <map>
       <entry>
         <string>Metadata</string>
-        <string>14</string>
+        <string>15</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -40,7 +40,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>101</string>
+    <string>108</string>
   </entry>
   <entry>
     <string>au_name</string>
