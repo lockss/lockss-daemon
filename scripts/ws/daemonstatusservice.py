@@ -33,7 +33,7 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.'''
 
-__version__ = '0.7.0'
+__version__ = '0.7.1'
 
 import argparse
 import getpass
@@ -49,8 +49,9 @@ import requests.auth
 
 try: import zeep
 except ImportError: sys.exit('The Python Zeep module must be installed (or on the PYTHONPATH)')
-import zeep.transports
 import zeep.exceptions
+import zeep.helpers
+import zeep.transports
 
 from wsutil import datems, datetimems, durationms, requests_basic_auth
 
@@ -58,7 +59,7 @@ from wsutil import datems, datetimems, durationms, requests_basic_auth
 # Library
 #
 
-def get_au_status(host, auth, auid):
+def get_au_status(host, username, password, auid):
     '''Performs a getAuStatus operation on the given host for the given AUID, and
     returns a record with these fields (or None if zeep.exceptions.Fault with
     'No Archival Unit with provided identifier' is raised):
@@ -97,12 +98,13 @@ def get_au_status(host, auth, auid):
     - year (string)
     Parameters:
     - host (string): a host:port pair
-    - auth (requests.auth.AuthBase object): an authentication object
+    - username (string): a username for the host
+    - password (string): a password for the host
     - auid (string): an AUID
     '''
-    client = _make_client(host, auth)
+    client = _make_client(host, wsutil.requests_basic_auth(username, password))
     try:
-        return client.service.getAuStatus(auId=auid)
+        return zeep.helpers.serialize_object(client.service.getAuStatus(auId=auid))
     except zeep.exceptions.Fault as e:
         if e.message == 'No Archival Unit with provided identifier':
             return None
