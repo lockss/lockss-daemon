@@ -22,7 +22,7 @@
     implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
 
     au < manifest ; exists ; 2012 ; Tourism / Turyzm Volume 22 ; 22 ; >
-    au < crawling ; exists ; 2013 ; Tourism / Turyzm Volume 23 ; 23 ; >
+    au < frozen ; exists ; 2013 ; Tourism / Turyzm Volume 23 ; 23 ; >
     au < crawling ; exists ; 2014 ; Tourism / Turyzm Volume 24 ; 24 ; >
     au < frozen ; exists ; 2015 ; Tourism / Turyzm Volume 25 ; 25 ; >
     au < crawling ; exists ; 2016 ; Tourism / Turyzm Volume 26 ; 26 ; >
