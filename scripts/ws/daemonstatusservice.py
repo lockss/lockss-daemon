@@ -102,7 +102,7 @@ def get_au_status(host, username, password, auid):
     - password (string): a password for the host
     - auid (string): an AUID
     '''
-    client = _make_client(host, wsutil.requests_basic_auth(username, password))
+    client = _make_client(host, requests_basic_auth(username, password))
     try:
         return zeep.helpers.serialize_object(client.service.getAuStatus(auId=auid))
     except zeep.exceptions.Fault as e:
@@ -515,9 +515,9 @@ class _DaemonStatusServiceOptions(object):
     # threads
     self.threads = args.threads or len(self.hosts)
     # auth
-    u = args.username or getpass.getpass('UI username: ')
-    p = args.password or getpass.getpass('UI password: ')
-    self.auth = requests_basic_auth(u, p)
+    self._u = args.username or getpass.getpass('UI username: ')
+    self._p = args.password or getpass.getpass('UI password: ')
+    self.auth = requests_basic_auth(self._u, self._p)
 
   def __init_select(self, parser, args, field_dict):
     if args.select is None: return sorted(field_dict)
@@ -587,7 +587,7 @@ def _do_get_au_status(options):
   headlamb = [_AU_STATUS[x] for x in options.select]
   data = dict()
   for host, auid, result in ThreadPool(options.threads).imap_unordered( \
-      lambda _tup: (_tup[1], _tup[0], get_au_status(_tup[1], options.auth, _tup[0])), \
+      lambda _tup: (_tup[1], _tup[0], get_au_status(_tup[1], options._u, options._p, _tup[0])), \
       itertools.product(options.auids, options.hosts)):
     if result is not None:
       for head, lamb in headlamb:
