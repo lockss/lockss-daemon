@@ -811,7 +811,7 @@ def _make_client(host, auth):
     session = requests.Session()
     session.auth = auth
     transport = zeep.transports.Transport(session=session)
-    wsdl = f'http://{host}/ws/DaemonStatusService?wsdl'
+    wsdl = 'http://{}/ws/DaemonStatusService?wsdl'.format(host)
     client = zeep.Client(wsdl, transport=transport)
     return client
 
