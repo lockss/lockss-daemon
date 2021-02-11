@@ -41,7 +41,7 @@ def prettyInt(i):
   '''Given an integer between 0 and 999,999, returns a string version
   with a comma in the thousands position if needed.'''
   if i < 1000: return str(i)
-  return str(i / 1000) + ',' + str(i % 1000).rjust(3, '0')
+  return str(i // 1000) + ',' + str(i % 1000).rjust(3, '0')
 
 def wordInt(i):
   '''Given a positive integer, returns a string spelling out the
@@ -50,7 +50,7 @@ def wordInt(i):
   if i >= 100: return prettyInt(i)
   s = ''
   if i >= 20:
-    s = {2:'twenty', 3:'thirty', 4:'forty', 5:'fifty', 6:'sixty', 7:'seventy', 8:'eighty', 9:'ninety'}[i / 10]
+    s = {2:'twenty', 3:'thirty', 4:'forty', 5:'fifty', 6:'sixty', 7:'seventy', 8:'eighty', 9:'ninety'}[i // 10]
     if i % 10 == 0: return s
     s = s + ' '
     i = i % 10
