@@ -58,6 +58,30 @@ except ImportError:
 
 from wsutil import datems, datetimems, durationms, requests_basic_auth
 
+###FIXME see https://docs.python-zeep.org/en/master/transport.html?highlight=debug#debugging
+import logging.config
+logging.config.dictConfig({
+    'version': 1,
+    'formatters': {
+        'verbose': {
+            'format': '%(name)s: %(message)s'
+        }
+    },
+    'handlers': {
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'verbose',
+        },
+    },
+    'loggers': {
+        'zeep.transports': {
+            'level': 'DEBUG',
+            'propagate': True,
+            'handlers': ['console'],
+        },
+    }
+})
 
 #
 # Library
@@ -398,19 +422,20 @@ class _HasherServiceOptions(object):
 
 def _do_hash(options, host):
     if options.url is None:
-        reqid = hash_asynchronously_au(host, options.auth, options.auid, options.include_weight)
+        wsResult = hash_asynchronously_au(host, options.auth, options.auid, options.include_weight)
     else:
-        reqid = hash_asynchronously_au_url(host, options.auth, options.auid, options.url)
-    if reqid is None: return host, False
+        wsResult = hash_asynchronously_au_url(host, options.auth, options.auid, options.url)
+    if wsResult is None: return host, False
+    reqid = wsResult.requestId
     while True:
         time.sleep(options.wait)
         res = get_asynchronous_hash_result(host, options.auth, reqid)
-        if res._status == 'Done': break
+        if res.status == 'Done': break
     if options.url is None:
-        source = res._blockFileDataHandler
+        source = res.blockFileDataHandler
         fstr = '%s.%s.hash' % (options.output_prefix, host)
     else:
-        source = res._recordFileDataHandler
+        source = res.recordFileDataHandler
         fstr = '%s.%s.filtered' % (options.output_prefix, host)
     if source is not None:
         lines = [line for line in source]
