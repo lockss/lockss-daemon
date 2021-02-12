@@ -4,7 +4,7 @@
 service via its legacy SOAP Web Services API.'''
 
 __copyright__ = '''\
-Copyright (c) 2000-2020, Board of Trustees of Leland Stanford Jr. University.
+Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University.
 All rights reserved.'''
 
 __license__ = '''\
@@ -35,20 +35,17 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.'''
 
 __version__ = '0.7.1'
 
+try: import zeep
+except ImportError: sys.exit('The Python Zeep module must be installed (or on the PYTHONPATH)')
+
 import argparse
 import getpass
 import itertools
 from multiprocessing.dummy import Pool as ThreadPool
 import os.path
+import requests.auth
 import sys
 from threading import Thread
-
-try: import requests
-except ImportError: sys.exit('The Python Requests module must be installed (or on the PYTHONPATH)')
-import requests.auth
-
-try: import zeep
-except ImportError: sys.exit('The Python Zeep module must be installed (or on the PYTHONPATH)')
 import zeep.exceptions
 import zeep.helpers
 import zeep.transports
@@ -102,49 +99,58 @@ def get_au_status(host, username, password, auid):
     - password (string): a password for the host
     - auid (string): an AUID
     '''
-    client = _make_client(host, requests_basic_auth(username, password))
+    client = _make_client(host, username, password)
     try:
-        return zeep.helpers.serialize_object(client.service.getAuStatus(auId=auid))
+        ret = client.service.getAuStatus(auId=auid)
+        return zeep.helpers.serialize_object(ret)
     except zeep.exceptions.Fault as e:
         if e.message == 'No Archival Unit with provided identifier':
             return None
-        raise
+        else:
+            raise
 
-def get_au_urls(host, auth, auid, prefix=None):
+def get_au_urls(host, username, password, auid, prefix=None):
     '''Performs a getAuUrls operation on the given host for the given AUID and
     returns a list of URLs (strings) in the AU. If the optional prefix argument is
     given, limits the results to URLs with that prefix (including the URL itself).
 
     Parameters:
     - host (string): a host:port pair
-    - auth (requests.auth.AuthBase object): an authentication object
+    - username (string): a username for the host
+    - password (string): a password for the host
     - auid (string): an AUID
     - prefix (string): a URL prefix (default: None)
     '''
-    client = _make_client(host, auth)
-    return client.service.getAuUrls(auId=auid, url=prefix)
+    client = _make_client(host, username, password)
+    ret = client.service.getAuUrls(auId=auid, url=prefix)
+    return ret
 
-def get_au_type_urls(host, auth, auid, typ):
+def get_au_type_urls(host, username, password, auid, typ):
     '''Performs a queryAus operation on the given host for the given AUID and
-    selects only the url list of type  given (articleUrls,substanceUrls) for the AU.  
+    selects only the url list of the given type (articleUrls, substanceUrls) for
+    the AU.  
 
     Parameters:
     - host (string): a host:port pair
-    - auth (requests.auth.AuthBase object): an authentication object
+    - username (string): a username for the host
+    - password (string): a password for the host
     - auid (string): an AUID
     - typ (string): one of 'articleUrls' or 'substanceUrls'
     '''
-    res = query_aus(host, auth, typ, f'auId = "{auid}"')
+    # query_aus with select='substanceUrls' returns [None] if there are no substance URLs;
+    # _do_query_aus with select='substanceUrls' calls query_aus with select=['auId','substanceUrls']
+    # and doesn't have that problem; so always request 'auId' for now 
+    res = query_aus(host, username, password, ['auId', typ], where='auId = "{}"'.format(auid))
     if len(res) == 0:
         return None
     elif typ == 'articleUrls':
-        return res[0].articleUrls
+        return res[0].get('articleUrls')
     elif typ == 'substanceUrls':
-        return res[0].substanceUrls
+        return res[0].get('substanceUrls')
     else:
-        raise RuntimeError(f'invalid type argument: {typ}')
+        raise RuntimeError('invalid type argument: {}'.format(typ))
 
-def get_auids(host, auth):
+def get_auids(host, username, password):
     '''Performs a getAuIds operation on the given host, which really produces a
     sequence of all AUIDs with the AU names, and returns a list of records with
     these fields:
@@ -152,12 +158,14 @@ def get_auids(host, auth):
     - name (string)
     Parameters:
     - host (string): a host:port pair
-    - auth (requests.auth.AuthBase object): an authentication object
+    - username (string): a username for the host
+    - password (string): a password for the host
     '''
-    client = _make_client(host, auth)
-    return client.service.getAuIds()
+    client = _make_client(host, username, password)
+    ret = client.service.getAuIds()
+    return zeep.helpers.serialize_object(ret)
 
-def get_peer_agreements(host, auth, auid):
+def get_peer_agreements(host, username, password, auid):
     '''Convenience call to query_aus() that returns the PeerAgreements list for
     the given AUID (or None if there is no such AUID). The PeerAgreements list is
     a list of records with these fields:
@@ -188,14 +196,19 @@ def get_peer_agreements(host, auth, auid):
     - PeerId (string)
     Parameters:
     - host (string): a host:port pair
-    - auth (ZSI authentication object): an authentication object
+    - username (string): a username for the host
+    - password (string): a password for the host
     - auid (string): an AUID
     '''
-    res = query_aus(host, auth, 'peerAgreements', f'auId = "{auid}"')
-    if len(res) == 0: return None
-    else: return res[0].peerAgreements
+    # See get_au_type_urls for why 'auId' is also requested
+    res = query_aus(host, username, password, ['auId', 'peerAgreements'], where='auId = "{}"'.format(auid))
+    if len(res) == 0:
+        return None
+    else:
+        ret = zeep.helpers.serialize_object(res[0])
+        return ret.get('peerAgreements')
 
-def get_platform_configuration(host, auth):
+def get_platform_configuration(host, username, password):
     '''Performs a getPlatformConfiguration operation on the given host and returns
     a record with these fields:
     - adminEmail (string)
@@ -228,22 +241,24 @@ def get_platform_configuration(host, auth):
     - v3Identity (string)
     Parameters:
     - host (string): a host:port pair
-    - auth (requests.auth.AuthBase object): an authentication object
+    - username (string): a username for the host
+    - password (string): a password for the host
     '''
-    client = _make_client(host, auth)
-    return client.service.getPlatformConfiguration()
+    client = _make_client(host, username, password)
+    return zeep.helpers.serialize_object(client.service.getPlatformConfiguration())
 
-def is_daemon_ready(host, auth):
+def is_daemon_ready(host, username, password):
     '''Performs an isDaemonReady operation on the given host and returns True or
     False.
     Parameters:
     - host (string): a host:port pair
-    - auth (requests.auth.AuthBase object): an authentication object
+    - username (string): a username for the host
+    - password (string): a password for the host
     '''
-    client = _make_client(host, auth)
+    client = _make_client(host, username, password)
     return client.service.isDaemonReady()
 
-def query_aus(host, auth, select, where=None):
+def query_aus(host, username, password, select, where=None):
     '''Performs a queryAus operation on the given host, using the given field
     names to build a SELECT clause, optionally using the given string to build a
     WHERE clause, and returns a list of records with these fields (populated or
@@ -326,7 +341,8 @@ def query_aus(host, auth, select, where=None):
     - volume (string)
     Parameters:
     - host (string): a host:port pair
-    - auth (requests.auth.AuthBase object): an authentication object
+    - username (string): a username for the host
+    - password (string): a password for the host
     - select (string or list of strings): if a list of strings, the field names to
     be used in the SELECT clause; if a string, the single field name to be used in
     the SELECT clause
@@ -335,17 +351,18 @@ def query_aus(host, auth, select, where=None):
     - ValueError if select is not of the right type
     '''
     if type(select) is list:
-        query = f'SELECT {", ".join(select)}'
+        query = 'SELECT {}'.format(', '.join(select))
     elif type(select) is str:
-        query = f'SELECT {select}'
+        query = 'SELECT {}'.format(select)
     else:
-        raise ValueError(f'invalid type for select parameter: {type(select)}')
+        raise ValueError('invalid type for select parameter: {}'.format(type(select)))
     if where is not None:
-        query = f'{query} WHERE {where}'
-    client = _make_client(host, auth)
-    return client.service.queryAus(auQuery=query)
+        query = '{} WHERE {}'.format(query, where)
+    client = _make_client(host, username, password)
+    ret = client.service.queryAus(auQuery=query)
+    return zeep.helpers.serialize_object(ret)
 
-def query_crawls(host, auth, select, where=None):
+def query_crawls(host, username, password, select, where=None):
     '''Performs a queryCrawls operation on the given host, using the given field
     names to build a SELECT clause, optionally using the given string to build a
     WHERE clause, and returns a list of records with these fields (populated or
@@ -380,17 +397,28 @@ def query_crawls(host, auth, select, where=None):
     - sources (list of strings)
     - startTime (long)
     - startingUrls (list of strings)
+    Parameters:
+    - host (string): a host:port pair
+    - username (string): a username for the host
+    - password (string): a password for the host
+    - select (string or list of strings): if a list of strings, the field names to
+    be used in the SELECT clause; if a string, the single field name to be used in
+    the SELECT clause
+    - where (string): optional statement for the WHERE clause (default: None)
+    Raises:
+    - ValueError if select is not of the right type
     '''
     if type(select) is list:
-        query = f'SELECT {", ".join(select)}'
+        query = 'SELECT {}'.format(', '.join(select))
     elif type(select) is str:
-        query = f'SELECT {select}'
+        query = 'SELECT {}'.format(select)
     else:
-        raise ValueError(f'invalid type for select parameter: {type(select)}')
+        raise ValueError('invalid type for select parameter: {}'.format(type(select)))
     if where is not None:
-        query = f'{query} WHERE {where}'
-    client = _make_client(host, auth)
-    return client.service.queryCrawls(crawlQuery=query)
+        query = '{} WHERE {}'.format(query, where)
+    client = _make_client(host, username, password)
+    ret = client.service.queryCrawls(crawlQuery=query)
+    return zeep.helpers.serialize_object(ret)
 
 #
 # Command line tool
@@ -522,9 +550,9 @@ class _DaemonStatusServiceOptions(object):
   def __init_select(self, parser, args, field_dict):
     if args.select is None: return sorted(field_dict)
     fields = [s.strip() for s in args.select.split(',')]
-    errfields = list(filter(lambda f: f not in field_dict, fields))
-    if len(errfields) == 1: parser.error('unknown field: %s' % (errfields[0],))
-    if len(errfields) > 1: parser.error('unknown fields: %s' % (', '.join(errfields),))
+    errfields = [f for f in fields if f not in field_dict]
+    if len(errfields) == 1: parser.error('unknown field: {}'.format(errfields[0]))
+    if len(errfields) > 1: parser.error('unknown fields: {}'.format(', '.join(errfields)))
     return fields
 
 # Last modified 2018-03-19 for unicode support and boolean False when boolean is None
@@ -544,43 +572,43 @@ def _output_table(options, data, rowheaders, lstcolkeys):
 # Last modified 2020-10-01
 def _file_lines(fstr):
     with open(os.path.expanduser(fstr)) as f: ret = list(filter(lambda y: len(y) > 0, [x.partition('#')[0].strip() for x in f]))
-    if len(ret) == 0: sys.exit(f'Error: {fstr} contains no meaningful lines')
+    if len(ret) == 0: sys.exit('Error: {} contains no meaningful lines'.format(fstr))
     return ret
 
 _AU_STATUS = {
-  'accessType': ('Access type', lambda r: r.accessType),
-  'availableFromPublisher': ('Available from publisher', lambda r: r.availableFromPublisher),
-  'contentSize': ('Content size', lambda r: r.contentSize),
-  'crawlPool': ('Crawl pool', lambda r: r.crawlPool),
-  'crawlProxy': ('Crawl proxy', lambda r: r.crawlProxy),
-  'crawlWindow': ('Crawl window', lambda r: r.crawlWindow),
-  'creationTime': ('Creation time', lambda r: datetimems(r.creationTime)),
-  'currentlyCrawling': ('Currently crawling', lambda r: r.currentlyCrawling),
-  'currentlyPolling': ('Currently polling', lambda r: r.currentlyPolling),
-  'diskUsage': ('Disk usage', lambda r: r.diskUsage),
-  'journalTitle': ('Journal title', lambda r: r.journalTitle),
-  'lastCompletedCrawl': ('Last completed crawl', lambda r: datetimems(r.lastCompletedCrawl)),
-  'lastCompletedPoll': ('Last completed poll', lambda r: datetimems(r.lastCompletedPoll)),
-  'lastCrawl': ('Last crawl', lambda r: datetimems(r.lastCrawl)),
-  'lastCrawlResult': ('Last crawl result', lambda r: r.lastCrawlResult),
-  'lastCompletedDeepCrawl': ('Last completed deep crawl', lambda r: datetimems(r.lastCompletedDeepCrawl)),
-  'lastDeepCrawl': ('Last deep crawl', lambda r: datetimems(r.lastDeepCrawl)),
-  'lastDeepCrawlResult': ('Last deep crawl result',  lambda r: r.lastDeepCrawlResult),
-  'lastCompletedDeepCrawlDepth': ('Last completed deep crawl depth', lambda r: r.lastCompletedDeepCrawlDepth),
-  'lastPoll': ('Last poll', lambda r: datetimems(r.lastPoll)),
-  'lastPollResult': ('Last poll result', lambda r: r.lastPollResult),
-  'lastMetadataIndex': ('Last metadata index', lambda r: datetimems(r.lastMetadataIndex)),
-  'pluginName': ('Plugin name', lambda r: r.pluginName),
-  'provider': ('Provider', lambda r: r.provider),
-  'publisher': ('Publisher', lambda r: r.publisher),
-  'publishingPlatform': ('Publishing platform', lambda r: r.publishingPlatform),
-  'recentPollAgreement': ('Recent poll agreement', lambda r: r.recentPollAgreement),
-  'repository': ('Repository', lambda r: r.repository),
-  'status': ('Status', lambda r: r.status),
-  'subscriptionStatus': ('Subscription status', lambda r: r.subscriptionStatus),
-  'substanceState': ('Substance state', lambda r: r.substanceState),
-  'volume': ('Volume name', lambda r: r.volume),
-  'year': ('Year', lambda r: r.year)
+  'accessType': ('Access type', lambda r: r.get('accessType')),
+  'availableFromPublisher': ('Available from publisher', lambda r: r.get('availableFromPublisher')),
+  'contentSize': ('Content size', lambda r: r.get('contentSize')),
+  'crawlPool': ('Crawl pool', lambda r: r.get('crawlPool')),
+  'crawlProxy': ('Crawl proxy', lambda r: r.get('crawlProxy')),
+  'crawlWindow': ('Crawl window', lambda r: r.get('crawlWindow')),
+  'creationTime': ('Creation time', lambda r: datetimems(r.get('creationTime'))),
+  'currentlyCrawling': ('Currently crawling', lambda r: r.get('currentlyCrawling')),
+  'currentlyPolling': ('Currently polling', lambda r: r.get('currentlyPolling')),
+  'diskUsage': ('Disk usage', lambda r: r.get('diskUsage')),
+  'journalTitle': ('Journal title', lambda r: r.get('journalTitle')),
+  'lastCompletedCrawl': ('Last completed crawl', lambda r: datetimems(r.get('lastCompletedCrawl'))),
+  'lastCompletedPoll': ('Last completed poll', lambda r: datetimems(r.get('lastCompletedPoll'))),
+  'lastCrawl': ('Last crawl', lambda r: datetimems(r.get('lastCrawl'))),
+  'lastCrawlResult': ('Last crawl result', lambda r: r.get('lastCrawlResult')),
+  'lastCompletedDeepCrawl': ('Last completed deep crawl', lambda r: datetimems(r.get('lastCompletedDeepCrawl'))),
+  'lastDeepCrawl': ('Last deep crawl', lambda r: datetimems(r.get('lastDeepCrawl'))),
+  'lastDeepCrawlResult': ('Last deep crawl result',  lambda r: r.get('lastDeepCrawlResult')),
+  'lastCompletedDeepCrawlDepth': ('Last completed deep crawl depth', lambda r: r.get('lastCompletedDeepCrawlDepth')),
+  'lastPoll': ('Last poll', lambda r: datetimems(r.get('lastPoll'))),
+  'lastPollResult': ('Last poll result', lambda r: r.get('lastPollResult')),
+  'lastMetadataIndex': ('Last metadata index', lambda r: datetimems(r.get('lastMetadataIndex'))),
+  'pluginName': ('Plugin name', lambda r: r.get('pluginName')),
+  'provider': ('Provider', lambda r: r.get('provider')),
+  'publisher': ('Publisher', lambda r: r.get('publisher')),
+  'publishingPlatform': ('Publishing platform', lambda r: r.get('publishingPlatform')),
+  'recentPollAgreement': ('Recent poll agreement', lambda r: r.get('recentPollAgreement')),
+  'repository': ('Repository', lambda r: r.get('repository')),
+  'status': ('Status', lambda r: r.get('status')),
+  'subscriptionStatus': ('Subscription status', lambda r: r.get('subscriptionStatus')),
+  'substanceState': ('Substance state', lambda r: r.get('substanceState')),
+  'volume': ('Volume name', lambda r: r.get('volume')),
+  'year': ('Year', lambda r: r.get('year'))
 }
 
 def _do_get_au_status(options):
@@ -598,21 +626,20 @@ def _do_get_au_status(options):
 
 def _do_get_au_urls(options):
   # Single request to a single host: unthreaded
-  r = get_au_urls(options.hosts[0], options.auth, options.auids[0], options.prefix)
+  r = get_au_urls(options.hosts[0], options._u, options._p, options.auids[0], options.prefix)
   for url in sorted(r): _output_record(options, [url])
 
 def _do_get_au_article_urls(options):
   # Single request to a single host: unthreaded
-  r = get_au_type_urls(options.hosts[0], options.auth, options.auids[0], "articleUrls")
+  r = get_au_type_urls(options.hosts[0], options._u, options._p, options.auids[0], 'articleUrls')
   if r is not None:
     for url in sorted(r): _output_record(options, [url])
 
 def _do_get_au_subst_urls(options):
   # Single request to a single host: unthreaded
-  r = get_au_type_urls(options.hosts[0], options.auth, options.auids[0], "substanceUrls")
+  r = get_au_type_urls(options.hosts[0], options._u, options._p, options.auids[0], 'substanceUrls')
   if r is not None:
     for url in sorted(r): _output_record(options, [url])
-
 
 def _do_get_auids(options):
   if len(options.auids) > 0:
@@ -622,7 +649,7 @@ def _do_get_auids(options):
   data = dict()
   auids = set()
   for host, result in ThreadPool(options.threads).imap_unordered( \
-      lambda _host: (_host, get_auids(_host, options.auth)), \
+      lambda _host: (_host, get_auids(_host, options._u, options._p)), \
       options.hosts):
     for r in result:
       if shouldskip(r.id): continue
@@ -634,51 +661,59 @@ def _do_get_auids(options):
         for h in options.hosts: data.setdefault((rowkey, (h,)), False)
   _output_table(options, data, ['AUID', 'Name'] if options.get_auids_names else ['AUID'], [sorted(options.hosts)])
 
-_PLATFORM_CONFIGURATION = {
-  'adminEmail': ('Admin e-mail', lambda r: r.adminEmail),
-  'buildHost':  ('Build host', lambda r: r.buildHost),
-  'buildTimestamp': ('Build timestamp', lambda r: datetimems(r.buildTimestamp)),
-  'currentTime': ('Current time', lambda r: datetimems(r.currentTime)),
-  'currentWorkingDirectory': ('Current working directory', lambda r: r.currentWorkingDirectory),
-  'daemonBuildVersion': ('Daemon build version', lambda r: r.daemonVersion.buildVersion),
-  'daemonFullVersion': ('Daemon full version', lambda r: r.daemonVersion.fullVersion),
-  'daemonMajorVersion': ('Daemon major version', lambda r: r.daemonVersion.majorVersion),
-  'daemonMinorVersion': ('Daemon minor version', lambda r: r.daemonVersion.minorVersion),
-  'disks': ('Disks', lambda r: ', '.join(r.disks)),
-  'groups': ('Groups', lambda r: ', '.join(r.groups)),
-  'hostName': ('Host name', lambda r: r.hostName),
-  'ipAddress': ('IP address', lambda r: r.ipAddress),
-  'javaRuntimeName': ('Java runtime name', lambda r: r.javaVersion.runtimeName),
-  'javaRuntimeVersion': ('Java runtime version', lambda r: r.javaVersion.runtimeVersion),
-  'javaSpecificationVersion': ('Java specification version', lambda r: r.javaVersion.specificationVersion),
-  'javaVersion': ('Java version', lambda r: r.javaVersion.version),
-  'mailRelay': ('Mail relay', lambda r: r.mailRelay),
-  'platformName': ('Platform name', lambda r: r.platform.name),
-  'platformSuffix': ('Platform suffix', lambda r: r.platform.suffix),
-  'platformVersion': ('Platform version', lambda r: r.platform.version),
-  'project': ('Project', lambda r: r.project),
-  'properties': ('Properties', lambda r: ', '.join(r.properties)),
-  'uptime': ('Uptime', lambda r: durationms(r.uptime)),
-  'v3Identity': ('V3 identity', lambda r: r.v3Identity)
-}
-
 def _do_get_peer_agreements(options):
-  # Single request to a single host: unthreaded
-  pa = get_peer_agreements(options.hosts[0], options.auth, options.auids[0])
-  if pa is None:
-    print('No such AUID')
-    return
-  for pae in pa:
-    for ae in pae.Agreements.Entry:
-      _output_record(options, [pae.PeerId, ae.Key, ae.Value.PercentAgreement, datetimems(ae.Value.PercentAgreementTimestamp), ae.Value.HighestPercentAgreement, datetimems(ae.Value.HighestPercentAgreementTimestamp)])
+    # Single request to a single host: unthreaded
+    pa = get_peer_agreements(options.hosts[0], options._u, options._p, options.auids[0])
+    if pa is None:
+        print('No such AUID')
+        return
+    for peer_and_agreements_dict in pa:
+        peer = peer_and_agreements_dict['peerId']
+        singleton_agreements_dict = peer_and_agreements_dict['agreements']
+        agreements_list = singleton_agreements_dict['entry']
+        for agreement_dict in agreements_list:
+            agreement_type = agreement_dict['key']
+            agreement = agreement_dict['value']
+            percent_agreement = agreement['percentAgreement']
+            percent_agreement_timestamp = agreement['percentAgreementTimestamp']
+            highest_percent_agreement = agreement['highestPercentAgreement']
+            highest_percent_agreement_timestamp = agreement['highestPercentAgreementTimestamp']
+            _output_record(options, [peer, agreement_type, percent_agreement, datetimems(percent_agreement_timestamp), highest_percent_agreement, datetimems(highest_percent_agreement_timestamp)]) 
+
+_PLATFORM_CONFIGURATION = {
+  'adminEmail': ('Admin e-mail', lambda r: r.get('adminEmail')),
+  'buildHost':  ('Build host', lambda r: r.get('buildHost')),
+  'buildTimestamp': ('Build timestamp', lambda r: datetimems(r.get('buildTimestamp'))),
+  'currentTime': ('Current time', lambda r: datetimems(r.get('currentTime'))),
+  'currentWorkingDirectory': ('Current working directory', lambda r: r.get('currentWorkingDirectory')),
+  'daemonBuildVersion': ('Daemon build version', lambda r: r.get('daemonVersion', {}).get('buildVersion')),
+  'daemonFullVersion': ('Daemon full version', lambda r: r.get('daemonVersion', {}).get('fullVersion')),
+  'daemonMajorVersion': ('Daemon major version', lambda r: r.get('daemonVersion', {}).get('majorVersion')),
+  'daemonMinorVersion': ('Daemon minor version', lambda r: r.get('daemonVersion', {}).get('minorVersion')),
+  'disks': ('Disks', lambda r: ', '.join(r.get('disks'))),
+  'groups': ('Groups', lambda r: ', '.join(r.get('groups'))),
+  'hostName': ('Host name', lambda r: r.get('hostName')),
+  'ipAddress': ('IP address', lambda r: r.get('ipAddress')),
+  'javaRuntimeName': ('Java runtime name', lambda r: r.get('javaVersion', {}).get('runtimeName')),
+  'javaRuntimeVersion': ('Java runtime version', lambda r: r.get('javaVersion', {}).get('runtimeVersion')),
+  'javaSpecificationVersion': ('Java specification version', lambda r: r.get('javaVersion', {}).get('specificationVersion')),
+  'javaVersion': ('Java version', lambda r: r.get('javaVersion', {}).get('version')),
+  'mailRelay': ('Mail relay', lambda r: r.get('mailRelay')),
+  'platformName': ('Platform name', lambda r: r.get('platform', {}).get('name')),
+  'platformSuffix': ('Platform suffix', lambda r: r.get('platform', {}).get('suffix')),
+  'platformVersion': ('Platform version', lambda r: r.get('platform', {}).get('version')),
+  'project': ('Project', lambda r: r.get('project')),
+  'properties': ('Properties', lambda r: ', '.join(r.get('properties'))),
+  'uptime': ('Uptime', lambda r: durationms(r.get('uptime'))),
+  'v3Identity': ('V3 identity', lambda r: r.get('v3Identity'))
+}
 
 def _do_get_platform_configuration(options):
   headlamb = [_PLATFORM_CONFIGURATION[x] for x in options.select]
   data = dict()
   for host, result in ThreadPool(options.threads).imap_unordered( \
-      lambda _host: (_host, get_platform_configuration(_host, options.auth)), \
+      lambda _host: (_host, get_platform_configuration(_host, options._u, options._p)), \
       options.hosts):
-    print(f'{result.v3Identity} {result["v3Identity"]}') ###FIXME
     for head, lamb in headlamb:
       data[((head,), (host,))] = lamb(result)
   _output_table(options, data, [''], [sorted(options.hosts)])
@@ -686,7 +721,7 @@ def _do_get_platform_configuration(options):
 def _do_is_daemon_ready(options):
   data = dict()
   for host, result in ThreadPool(options.threads).imap_unordered( \
-      lambda _host: (_host, is_daemon_ready(_host, options.auth)), \
+      lambda _host: (_host, is_daemon_ready(_host, options._u, options._p)), \
       options.hosts):
     if options.is_daemon_ready_quiet and result is False: sys.exit(1)
     else: data[((host,), ('Daemon is ready',))] = result
@@ -694,104 +729,105 @@ def _do_is_daemon_ready(options):
   else: _output_table(options, data, ['Host'], [['Daemon is ready']])
 
 _QUERY_AUS = {
-  'accessType': ('Access type', lambda r: r.accessType),
-  'articleUrls': ('Article URLs', lambda r: '<ArticleUrls>'),
+  'accessType': ('Access type', lambda r: r.get('accessType')),
+  'articleUrls': ('Article URLs', lambda r: '{}'.format(len(r.get('articleUrls', list())))),
   'auConfiguration': ('AU configuration', lambda r: '<AuConfiguration>'),
-  'auId': ('AUID', lambda r: r.auId),
-  'availableFromPublisher': ('Available from publisher', lambda r: r.availableFromPublisher),
-  'contentSize': ('Content size', lambda r: r.contentSize),
-  'crawlPool': ('Crawl pool', lambda r: r.crawlPool),
-  'crawlProxy': ('Crawl proxy', lambda r: r.crawlProxy),
-  'crawlWindow': ('Crawl window', lambda r: r.crawlWindow),
-  'creationTime': ('Creation time', lambda r: datetimems(r.creationTime)),
-  'currentlyCrawling': ('Currently crawling', lambda r: r.currentlyCrawling),
-  'currentlyPolling': ('Currently polling', lambda r: r.currentlyPolling),
-  'diskUsage': ('Disk usage', lambda r: r.diskUsage),
-  'highestPollAgreement': ('Highest poll agreement', lambda r: r.highestPollAgreement),
-  'isBulkContent': ('Is bulk content', lambda r: r.isBulkContent),
-  'journalTitle': ('Title', lambda r: r.journalTitle),
-  'lastCompletedCrawl': ('Last completed crawl', lambda r: datetimems(r.lastCompletedCrawl)),
-  'lastCompletedPoll': ('Last completed poll', lambda r: datetimems(r.lastCompletedPoll)),
-  'lastCrawl': ('Last crawl', lambda r: datetimems(r.lastCrawl)),
-  'lastCrawlResult': ('Last crawl result', lambda r: r.lastCrawlResult),
-  'lastCompletedDeepCrawl': ('Last completed deep crawl', lambda r: datetimems(r.lastCompletedDeepCrawl)),
-  'lastDeepCrawl': ('Last deep crawl', lambda r: datetimems(r.lastDeepCrawl)),
-  'lastDeepCrawlResult': ('Last deep crawl result',  lambda r: r.lastDeepCrawlResult),
-  'lastCompletedDeepCrawlDepth': ('Last completed deep crawl depth', lambda r: r.lastCompletedDeepCrawlDepth),
-  'lastPoll': ('Last poll', lambda r: datetimems(r.lastPoll)),
-  'lastPollResult': ('Last poll result', lambda r: r.lastPollResult),
-  'lastMetadataIndex': ('Last metadata index', lambda r: datetimems(r.lastMetadataIndex)),
-  'name': ('Name', lambda r: r.name),
+  'auId': ('AUID', lambda r: r.get('auId')),
+  'availableFromPublisher': ('Available from publisher', lambda r: r.get('availableFromPublisher')),
+  'contentSize': ('Content size', lambda r: r.get('contentSize')),
+  'crawlPool': ('Crawl pool', lambda r: r.get('crawlPool')),
+  'crawlProxy': ('Crawl proxy', lambda r: r.get('crawlProxy')),
+  'crawlWindow': ('Crawl window', lambda r: r.get('crawlWindow')),
+  'creationTime': ('Creation time', lambda r: datetimems(r.get('creationTime'))),
+  'currentlyCrawling': ('Currently crawling', lambda r: r.get('currentlyCrawling')),
+  'currentlyPolling': ('Currently polling', lambda r: r.get('currentlyPolling')),
+  'diskUsage': ('Disk usage', lambda r: r.get('diskUsage')),
+  'highestPollAgreement': ('Highest poll agreement', lambda r: r.get('highestPollAgreement')),
+  'isBulkContent': ('Is bulk content', lambda r: r.get('isBulkContent')),
+  'journalTitle': ('Title', lambda r: r.get('journalTitle')),
+  'lastCompletedCrawl': ('Last completed crawl', lambda r: datetimems(r.get('lastCompletedCrawl'))),
+  'lastCompletedPoll': ('Last completed poll', lambda r: datetimems(r.get('lastCompletedPoll'))),
+  'lastCrawl': ('Last crawl', lambda r: datetimems(r.get('lastCrawl'))),
+  'lastCrawlResult': ('Last crawl result', lambda r: r.get('lastCrawlResult')),
+  'lastCompletedDeepCrawl': ('Last completed deep crawl', lambda r: datetimems(r.get('lastCompletedDeepCrawl'))),
+  'lastDeepCrawl': ('Last deep crawl', lambda r: datetimems(r.get('lastDeepCrawl'))),
+  'lastDeepCrawlResult': ('Last deep crawl result',  lambda r: r.get('lastDeepCrawlResult')),
+  'lastCompletedDeepCrawlDepth': ('Last completed deep crawl depth', lambda r: r.get('lastCompletedDeepCrawlDepth')),
+  'lastPoll': ('Last poll', lambda r: datetimems(r.get('lastPoll'))),
+  'lastPollResult': ('Last poll result', lambda r: r.get('lastPollResult')),
+  'lastMetadataIndex': ('Last metadata index', lambda r: datetimems(r.get('lastMetadataIndex'))),
+  'name': ('Name', lambda r: r.get('name')),
   'newContentCrawlUrls': ('New content crawl URLs', lambda r: '<NewContentCrawlUrls>'),
   'peerAgreements': ('Peer agreements', lambda r: '<PeerAgreements>'),
-  'pluginName': ('Plugin name', lambda r: r.pluginName),
-  'publishingPlatform': ('Publishing platform', lambda r: r.publishingPlatform),
-  'recentPollAgreement': ('Recent poll agreement', lambda r: r.recentPollAgreement),
-  'repositoryPath': ('Repository path', lambda r: r.repositoryPath),
-  'subscriptionStatus': ('Subscription status', lambda r: r.subscriptionStatus),
-  'substanceState': ('Substance state', lambda r: r.substanceState),
-  'tdbProvider': ('TDB provider', lambda r: r.tdbProvider),
-  'tdbPublisher': ('TDB publisher', lambda r: r.tdbPublisher),
-  'tdbYear': ('TDB year', lambda r: r.tdbYear),
+  'pluginName': ('Plugin name', lambda r: r.get('pluginName')),
+  'publishingPlatform': ('Publishing platform', lambda r: r.get('publishingPlatform')),
+  'recentPollAgreement': ('Recent poll agreement', lambda r: r.get('recentPollAgreement')),
+  'repositoryPath': ('Repository path', lambda r: r.get('repositoryPath')),
+  'subscriptionStatus': ('Subscription status', lambda r: r.get('subscriptionStatus')),
+  'substanceState': ('Substance state', lambda r: r.get('substanceState')),
+  'substanceUrls': ('Substance URLs', lambda r: '{}'.format(len(r.get('substanceUrls', list())))),
+  'tdbProvider': ('TDB provider', lambda r: r.get('tdbProvider')),
+  'tdbPublisher': ('TDB publisher', lambda r: r.get('tdbPublisher')),
+  'tdbYear': ('TDB year', lambda r: r.get('tdbYear')),
   'urlStems': ('URL stems', lambda r: '<UrlStems>'),
-  'urls': ('URLs', lambda r: '<Urls>'),
-  'volume': ('Volume', lambda r: r.volume)
+  'urls': ('URLs', lambda r: '{}'.format(len(r.get('urls', list())))),
+  'volume': ('Volume', lambda r: r.get('volume'))
 }
 
 def _do_query_aus(options):
-  select_minus_auid = list(filter(lambda x: x != 'auId', options.select))
+  select_minus_auid = [x for x in options.select if x != 'auId']
   auid_first_select = ['auId'] + select_minus_auid
   headlamb = [_QUERY_AUS[x] for x in select_minus_auid]
   data = dict()
   for host, result in ThreadPool(options.threads).imap_unordered( \
-      lambda _host: (_host, query_aus(_host, options.auth, auid_first_select, options.where)), \
+      lambda _host: (_host, query_aus(_host, options._u, options._p, auid_first_select, options.where)), \
       options.hosts):
     for r in result:
       for head, lamb in headlamb:
         if options.group_by_field: colkey = (head, host)
         else: colkey = (host, head)
-        data[((r.auId,), colkey)] = lamb(r)
+        data[((r['auId'],), colkey)] = lamb(r)
   _output_table(options, data, ['AUID'], [[x[0] for x in headlamb], sorted(options.hosts)] if options.group_by_field else [sorted(options.hosts), [x[0] for x in headlamb]])
 
 _QUERY_CRAWLS = {
-  'auId': ('AUID', lambda r: r.auId),
-  'auName': ('AU name', lambda r: r.auName),
-  'bytesFetchedCount': ('Bytes Fetched', lambda r: r.bytesFetchedCount),
-  'crawlKey': ('Crawl key', lambda r: r.crawlKey),
-  'crawlStatus': ('Crawl status', lambda r: r.crawlStatus),
-  'crawlType': ('Crawl type', lambda r: r.crawlType),
-  'duration': ('Duration', lambda r: durationms(r.duration)),
-  'linkDepth': ('Link depth', lambda r: r.linkDepth),
-  'mimeTypeCount': ('MIME type count', lambda r: r.mimeTypeCount),
+  'auId': ('AUID', lambda r: r.get('auId')),
+  'auName': ('AU name', lambda r: r.get('auName')),
+  'bytesFetchedCount': ('Bytes Fetched', lambda r: r.get('bytesFetchedCount')),
+  'crawlKey': ('Crawl key', lambda r: r.get('crawlKey')),
+  'crawlStatus': ('Crawl status', lambda r: r.get('crawlStatus')),
+  'crawlType': ('Crawl type', lambda r: r.get('crawlType')),
+  'duration': ('Duration', lambda r: durationms(r.get('duration'))),
+  'linkDepth': ('Link depth', lambda r: r.get('linkDepth')),
+  'mimeTypeCount': ('MIME type count', lambda r: r.get('mimeTypeCount')),
   'mimeTypes': ('MIME types', lambda r: '<MIME types>'),
-  'offSiteUrlsExcludedCount': ('Off-site URLs excluded count', lambda r: r.offSiteUrlsExcludedCount),
+  'offSiteUrlsExcludedCount': ('Off-site URLs excluded count', lambda r: r.get('offSiteUrlsExcludedCount')),
   'pagesExcluded': ('Pages excluded', lambda r: '<Pages excluded>'),
-  'pagesExcludedCount': ('Pages excluded count', lambda r: r.pagesExcludedCount),
+  'pagesExcludedCount': ('Pages excluded count', lambda r: r.get('pagesExcludedCount')),
   'pagesFetched': ('Pages fetched', lambda r: '<Pages fetched>'),
-  'pagesFetchedCount': ('Pages fetched count', lambda r: r.pagesFetchedCount),
+  'pagesFetchedCount': ('Pages fetched count', lambda r: r.get('pagesFetchedCount')),
   'pagesNotModified': ('Pages not modified', lambda r: '<Pages not modified>'),
-  'pagesNotModifiedCount': ('Pages not modified count', lambda r: r.pagesNotModifiedCount),
+  'pagesNotModifiedCount': ('Pages not modified count', lambda r: r.get('pagesNotModifiedCount')),
   'pagesParsed': ('Pages parsed', lambda r: '<Pages parsed>'),
-  'pagesParsedCount': ('Pages parsed count', lambda r: r.pagesParsedCount),
+  'pagesParsedCount': ('Pages parsed count', lambda r: r.get('pagesParsedCount')),
   'pagesPending': ('Pages pending', lambda r: '<Pages pending>'),
-  'pagesPendingCount': ('Pages pending count', lambda r: r.pagesPendingCount),
+  'pagesPendingCount': ('Pages pending count', lambda r: r.get('pagesPendingCount')),
   'pagesWithErrors': ('Pages with errors', lambda r: '<Pages with errors>'),
-  'pagesWithErrorsCount': ('Pages with errors count', lambda r: r.pagesWithErrorsCount),
-  'refetchDepth': ('RefetchDepth', lambda r: r.refetchDepth),
+  'pagesWithErrorsCount': ('Pages with errors count', lambda r: r.get('pagesWithErrorsCount')),
+  'refetchDepth': ('RefetchDepth', lambda r: r.get('refetchDepth')),
   'sources': ('Sources', lambda r: '<Sources>'),
-  'startTime': ('Start time', lambda r: datetimems(r.startTime)),
+  'startTime': ('Start time', lambda r: datetimems(r.get('startTime'))),
   'startingUrls': ('Starting URLs', lambda r: '<Starting URLs>')
 }
 
 def _do_query_crawls(options):
   # Single request to a single host: unthreaded
-  select_minus_auid = list(filter(lambda x: x != 'auId', options.select))
+  select_minus_auid = [x for x in options.select if x != 'auId']
   auid_first_select = ['auId'] + select_minus_auid
   headlamb = [_QUERY_CRAWLS[x] for x in select_minus_auid]
   data = dict()
-  for r in query_crawls(options.hosts[0], options.auth, auid_first_select, options.where):
+  for r in query_crawls(options.hosts[0], options._u, options._p, auid_first_select, options.where):
     for head, lamb in headlamb:
-      data[((r.auId,), (head,))] = lamb(r)
+      data[((r['auId'],), (head,))] = lamb(r)
   _output_table(options, data, ['AUID'], [[x[0] for x in headlamb]])
 
 def _dispatch(options):
@@ -807,9 +843,9 @@ def _dispatch(options):
   elif options.query_crawls: _do_query_crawls(options)
   else: raise RuntimeError('Unreachable')
 
-def _make_client(host, auth):
+def _make_client(host, username, password):
     session = requests.Session()
-    session.auth = auth
+    session.auth = requests.auth.HTTPBasicAuth(username, password)
     transport = zeep.transports.Transport(session=session)
     wsdl = 'http://{}/ws/DaemonStatusService?wsdl'.format(host)
     client = zeep.Client(wsdl, transport=transport)
