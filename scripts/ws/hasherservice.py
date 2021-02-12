@@ -59,29 +59,29 @@ except ImportError:
 from wsutil import datems, datetimems, durationms, requests_basic_auth
 
 ###FIXME see https://docs.python-zeep.org/en/master/transport.html?highlight=debug#debugging
-import logging.config
-logging.config.dictConfig({
-    'version': 1,
-    'formatters': {
-        'verbose': {
-            'format': '%(name)s: %(message)s'
-        }
-    },
-    'handlers': {
-        'console': {
-            'level': 'DEBUG',
-            'class': 'logging.StreamHandler',
-            'formatter': 'verbose',
-        },
-    },
-    'loggers': {
-        'zeep.transports': {
-            'level': 'DEBUG',
-            'propagate': True,
-            'handlers': ['console'],
-        },
-    }
-})
+# import logging.config
+# logging.config.dictConfig({
+#     'version': 1,
+#     'formatters': {
+#         'verbose': {
+#             'format': '%(name)s: %(message)s'
+#         }
+#     },
+#     'handlers': {
+#         'console': {
+#             'level': 'DEBUG',
+#             'class': 'logging.StreamHandler',
+#             'formatter': 'verbose',
+#         },
+#     },
+#     'loggers': {
+#         'zeep.transports': {
+#             'level': 'DEBUG',
+#             'propagate': True,
+#             'handlers': ['console'],
+#         },
+#     }
+# })
 
 #
 # Library
@@ -438,11 +438,10 @@ def _do_hash(options, host):
         source = res.recordFileDataHandler
         fstr = '%s.%s.filtered' % (options.output_prefix, host)
     if source is not None:
-        lines = [line for line in source]
-        if options.long_html_line: lines = map(lambda s: s.replace('<', '\n<'), lines)
-        if options.long_text_line: lines = map(lambda s: s.replace(' ', '\n'), lines)
-        with open(os.path.join(options.output_directory, fstr), 'w') as f:
-            f.writelines(lines)
+        if options.long_html_line: source = source.replace(b'<', b'\n<')
+        if options.long_text_line: source = source.replace(b' ', b'\n')
+        with open(os.path.join(options.output_directory, fstr), 'wb') as f:
+            f.write(source)
     res = remove_asynchronous_hash_request(host, options.auth, reqid)
     return host, source is not None
 
