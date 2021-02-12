@@ -235,7 +235,7 @@ def _hash_asynchronously(host, auth, hasher_params):
     :param hasher_params: hasherWsParams
     :return:
     """
-    client = _make_client()
+    client = _make_client(host, auth)
     return client.service.hashAsynchronously(hasherParams=hasher_params)
 
 
@@ -261,7 +261,7 @@ def get_all_asynchronous_hash_results(host, auth):
     :param auth: an authentication object (requests.auth.AuthBase object)
     :return:
     """
-    client = _make_client()
+    client = _make_client(host, auth)
     return client.service.getAllAsynchronousHashResults()
 
 
