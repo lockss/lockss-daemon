@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 
 '''A library and a command line tool to interact with the LOCKSS daemon's
 content configuration service via its Web Services API.'''
@@ -39,14 +39,24 @@ import getpass
 import itertools
 from multiprocessing import Pool as ProcessPool
 from multiprocessing.dummy import Pool as ThreadPool
-from optparse import OptionGroup, OptionParser
+import argparse #from optparse import parser.add_argument_group, OptionParser
 import os.path
 import sys
 from threading import Lock, Thread
 
-import ContentConfigurationServiceImplService_client
-from wsutil import zsiauth
+#import ContentConfigurationServiceImplService_client
+#from wsutil import zsiauth
 
+try: import requests
+except ImportError: sys.exit('The Python Requests module must be installed (or on the PYTHONPATH)')
+import requests.auth
+
+try: import zeep
+except ImportError: sys.exit('The Python Zeep module must be installed (or on the PYTHONPATH)')
+import zeep.transports
+import zeep.exceptions
+
+from wsutil import requests_basic_auth
 #
 # Library
 #
@@ -65,9 +75,8 @@ def add_au_by_id(host, auth, auid):
   - auth (ZSI authentication object): an authentication object
   - auid (string): an AUID
   '''
-  req = ContentConfigurationServiceImplService_client.addAuById()
-  req.AuId = auid
-  return _ws_port(host, auth).addAuById(req).Return
+  client = _make_client(host, auth)
+  return client.service.addAuById(auId = auid)
 
 def add_aus_by_id_list(host, auth, auids):
   '''
@@ -83,9 +92,8 @@ def add_aus_by_id_list(host, auth, auids):
   - auth (ZSI authentication object): an authentication object
   - auids (list of strings): a list of AUIDs
   '''
-  req = ContentConfigurationServiceImplService_client.addAusByIdList()
-  req.AuIds = auids
-  return _ws_port(host, auth).addAusByIdList(req).Return
+  client = _make_client(host, auth)
+  return client.service.addAusByIdList(auIds = auids)
 
 def deactivate_au_by_id(host, auth, auid):
   '''
@@ -101,9 +109,8 @@ def deactivate_au_by_id(host, auth, auid):
   - auth (ZSI authentication object): an authentication object
   - auid (string): an AUID
   '''
-  req = ContentConfigurationServiceImplService_client.deactivateAuById()
-  req.AuId = auid
-  return _ws_port(host, auth).deactivateAuById(req).Return
+  client = _make_client(host, auth)
+  return client.service.deactivateAuById(auId = auid)
 
 def deactivate_aus_by_id_list(host, auth, auids):
   '''
@@ -119,9 +126,8 @@ def deactivate_aus_by_id_list(host, auth, auids):
   - auth (ZSI authentication object): an authentication object
   - auids (list of strings): a list of AUIDs
   '''
-  req = ContentConfigurationServiceImplService_client.deactivateAusByIdList()
-  req.AuIds = auids
-  return _ws_port(host, auth).deactivateAusByIdList(req).Return
+  client = _make_client(host, auth)
+  return client.service.deactivateAusByIdList(auIds = auids)
 
 def delete_au_by_id(host, auth, auid):
   '''
@@ -137,9 +143,8 @@ def delete_au_by_id(host, auth, auid):
   - auth (ZSI authentication object): an authentication object
   - auid (string): an AUID
   '''
-  req = ContentConfigurationServiceImplService_client.deleteAuById()
-  req.AuId = auid
-  return _ws_port(host, auth).deleteAuById(req).Return
+  client = _make_client(host, auth)
+  return client.service.deleteAuById(auId = auid)
 
 def delete_aus_by_id_list(host, auth, auids):
   '''
@@ -155,9 +160,8 @@ def delete_aus_by_id_list(host, auth, auids):
   - auth (ZSI authentication object): an authentication object
   - auids (list of strings): a list of AUIDs
   '''
-  req = ContentConfigurationServiceImplService_client.deleteAusByIdList()
-  req.AuIds = auids
-  return _ws_port(host, auth).deleteAusByIdList(req).Return
+  client = _make_client(host, auth)
+  return client.service.deleteAusByIdList(auIds = auids)
 
 def reactivate_au_by_id(host, auth, auid):
   '''
@@ -173,9 +177,8 @@ def reactivate_au_by_id(host, auth, auid):
   - auth (ZSI authentication object): an authentication object
   - auid (string): an AUID
   '''
-  req = ContentConfigurationServiceImplService_client.reactivateAuById()
-  req.AuId = auid
-  return _ws_port(host, auth).reactivateAuById(req).Return
+  client = _make_client(host, auth)
+  return client.service.reactivateAuById(auId = auid)
 
 def reactivate_aus_by_id_list(host, auth, auids):
   '''
@@ -191,23 +194,8 @@ def reactivate_aus_by_id_list(host, auth, auids):
   - auth (ZSI authentication object): an authentication object
   - auids (list of strings): a list of AUIDs
   '''
-  req = ContentConfigurationServiceImplService_client.reactivateAusByIdList()
-  req.AuIds = auids
-  return _ws_port(host, auth).reactivateAusByIdList(req).Return
-
-def _ws_port(host, auth, tracefile=None):
-  '''
-  Internal convenience method used to set up a Web Services Port.
-
-  Parameters:
-  - host (string): a host:port pair
-  - auth (ZSI authentication object): an authentication object
-  - tracefile (file object): an optional trace file (default None for no trace)
-  '''
-  url = 'http://%s/ws/ContentConfigurationService' % (host,)
-  locator = ContentConfigurationServiceImplService_client.ContentConfigurationServiceImplServiceLocator()
-  if tracefile is None: return locator.getContentConfigurationServiceImplPort(url=url, auth=auth)
-  else: return locator.getContentConfigurationServiceImplPort(url=url, auth=auth, tracefile=tracefile)
+  client = _make_client(host, auth)
+  return client.service.reactivateAusByIdList(auIds = auids)
 
 #
 # Command line tool
@@ -308,55 +296,55 @@ class _ContentConfigurationServiceOptions(object):
   @staticmethod
   def make_parser():
     '''Static method to make a command line parser suitable for this tool.'''
-    usage = '%prog {--host=HOST|--hosts=HFILE}... {--auid=AUID|--auids=AFILE}... {--add-aus|--deactivate-aus|--delete-aus|--reactivate-aus} [OPTIONS]'
-    parser = OptionParser(version=__version__, description=__doc__, usage=usage)
+    usage = '%(prog)s {--host=HOST|--hosts=HFILE}... {--auid=AUID|--auids=AFILE}... {--add-aus|--deactivate-aus|--delete-aus|--reactivate-aus} [OPTIONS]'
+    parser = argparse.ArgumentParser( description=__doc__, usage=usage)
     # Top-level options
-    parser.add_option('--copyright', action='store_true', help='display copyright and exit')
-    parser.add_option('--license', action='store_true', help='display software license and exit')
-    parser.add_option('--tutorial', action='store_true', help='display tutorial and exit')
+    parser.add_argument('--copyright', action='store_true', help='display copyright and exit')
+    parser.add_argument('--license', action='store_true', help='display software license and exit')
+    parser.add_argument('--tutorial', action='store_true', help='display tutorial and exit')
     # Hosts
-    group = OptionGroup(parser, 'Target hosts')
-    group.add_option('--host', action='append', default=list(), help='add host:port pair to list of target hosts')
-    group.add_option('--hosts', action='append', default=list(), metavar='HFILE', help='add host:port pairs in HFILE to list of target hosts')
-    group.add_option('--password', metavar='PASS', help='UI password (default: interactive prompt)')
-    group.add_option('--username', metavar='USER', help='UI username (default: interactive prompt)')
-    parser.add_option_group(group)
+    group = parser.add_argument_group(parser, 'Target hosts')
+    group.add_argument('--host', action='append', default=list(), help='add host:port pair to list of target hosts')
+    group.add_argument('--hosts', action='append', default=list(), metavar='HFILE', help='add host:port pairs in HFILE to list of target hosts')
+    group.add_argument('--password', metavar='PASS', help='UI password (default: interactive prompt)')
+    group.add_argument('--username', metavar='USER', help='UI username (default: interactive prompt)')
+    parser.add_argument_group(group)
     # AUIDs
-    group = OptionGroup(parser, 'Target AUIDs')
-    group.add_option('--auid', action='append', default=list(), help='add AUID to list of target AUIDs')
-    group.add_option('--auids', action='append', default=list(), metavar='AFILE', help='add AUIDs in AFILE to list of target AUIDs')
-    parser.add_option_group(group)
+    group = parser.add_argument_group(parser, 'Target AUIDs')
+    group.add_argument('--auid', action='append', default=list(), help='add AUID to list of target AUIDs')
+    group.add_argument('--auids', action='append', default=list(), metavar='AFILE', help='add AUIDs in AFILE to list of target AUIDs')
+    parser.add_argument_group(group)
     # Content configuration operations
-    group = OptionGroup(parser, 'Content configuration operations')
-    group.add_option('--add-aus', action='store_true', help='add target AUs to target hosts')
-    group.add_option('--deactivate-aus', action='store_true', help='deactivate target AUs on target hosts')
-    group.add_option('--delete-aus', action='store_true', help='delete target AUs from target hosts')
-    group.add_option('--reactivate-aus', action='store_true', help='reactivate target AUs on target hosts')
-    parser.add_option_group(group)
+    group = parser.add_argument_group(parser, 'Content configuration operations')
+    group.add_argument('--add-aus', action='store_true', help='add target AUs to target hosts')
+    group.add_argument('--deactivate-aus', action='store_true', help='deactivate target AUs on target hosts')
+    group.add_argument('--delete-aus', action='store_true', help='delete target AUs from target hosts')
+    group.add_argument('--reactivate-aus', action='store_true', help='reactivate target AUs on target hosts')
+    parser.add_argument_group(group)
     # Output options
-    group = OptionGroup(parser, 'Output options')
-    group.add_option('--list-by-auid', action='store_true', help='list output by AUID')
-    group.add_option('--list-by-both', action='store_true', help='list output by both AU name and AUID (default)')
-    group.add_option('--list-by-name', action='store_true', help='list output by AU name')
-    group.add_option('--sort-by-auid', action='store_true', help='sort output by AUID')
-    group.add_option('--sort-by-name', action='store_true', help='sort output by AU name (default)')
-    group.add_option('--table-output', action='store_true', help='produce tabular output')
-    group.add_option('--text-output', action='store_true', help='produce text output (default)')
-    group.add_option('--verbose', action='store_true', default=False, help='make --text-output verbose (default: %default)')
-    parser.add_option_group(group)
+    group = parser.add_argument_group(parser, 'Output options')
+    group.add_argument('--list-by-auid', action='store_true', help='list output by AUID')
+    group.add_argument('--list-by-both', action='store_true', help='list output by both AU name and AUID (default)')
+    group.add_argument('--list-by-name', action='store_true', help='list output by AU name')
+    group.add_argument('--sort-by-auid', action='store_true', help='sort output by AUID')
+    group.add_argument('--sort-by-name', action='store_true', help='sort output by AU name (default)')
+    group.add_argument('--table-output', action='store_true', help='produce tabular output')
+    group.add_argument('--text-output', action='store_true', help='produce text output (default)')
+    group.add_argument('--verbose', action='store_true', default=False, help='make --text-output verbose (default: %default)')
+    parser.add_argument_group(group)
     # Job pool
-    group = OptionGroup(parser, 'Job pool')
-    group.add_option('--pool-size', metavar='SIZE', type='int', default=0, help='size of the job pool, 0 for unlimited (default: %default)')
-    group.add_option('--process-pool', action='store_true', help='use a process pool')
-    group.add_option('--thread-pool', action='store_true', help='use a thread pool (default)')
-    parser.add_option_group(group)
+    group = parser.add_argument_group(parser, 'Job pool')
+    group.add_argument('--pool-size', metavar='SIZE', type=int, default=0, help='size of the job pool, 0 for unlimited (default: %default)')
+    group.add_argument('--process-pool', action='store_true', help='use a process pool')
+    group.add_argument('--thread-pool', action='store_true', help='use a thread pool (default)')
+    parser.add_argument_group(group)
     # Other options
-    group = OptionGroup(parser, 'Other options')
-    group.add_option('--batch-size', metavar='SIZE', type='int', default=100, help='size of AUID batches (default: %default)')
-    parser.add_option_group(group)
+    group = parser.add_argument_group(parser, 'Other options')
+    group.add_argument('--batch-size', metavar='SIZE', type=int, default=100, help='size of AUID batches (default: %default)')
+    parser.add_argument_group(group)
     return parser
 
-  def __init__(self, parser, opts, args):
+  def __init__(self, parser, args):
     '''
     Constructor.
 
@@ -369,52 +357,58 @@ class _ContentConfigurationServiceOptions(object):
     super(_ContentConfigurationServiceOptions, self).__init__()
     self.errors = 0
     # Special options
-    if opts.copyright: print __copyright__
-    if opts.license: print __license__
-    if opts.tutorial: print __tutorial__
-    if any([opts.copyright, opts.license, opts.tutorial]): sys.exit()
+    if args.copyright: print(__copyright__)
+    if args.license: print(__license__)
+    if args.tutorial: print(__tutorial__)
+    if any([args.copyright, args.license, args.tutorial]): sys.exit()
     # General checks
-    if len(args) > 0:
-      parser.error('unexpected command line arguments: %s' % (' '.join(args),))
-    if len(filter(None, [opts.add_aus, opts.deactivate_aus, opts.delete_aus, opts.reactivate_aus])) != 1:
-      parser.error('exactly one of --add-aus, --deactivate-aus, --delete-aus, --reactivate-aus is required')
-    if len(filter(None, [opts.table_output, opts.text_output])) > 1:
+    # no need to check for unrecognized, argparse does this out of box
+    if len(list(filter(None, [args.add_aus, args.reactivate_aus, args.delete_aus, args.deactivate_aus ]))) != 1:
+      parser.error('exactly one of --add-aus, --reactivate-aus, --delete-aus, --deactivate-aus  is required')
+    if len(list(filter(None, [args.table_output, args.text_output]))) > 1:
       parser.error('at most one of --table-output, --text-output can be specified')
     # hosts
-    self.hosts = opts.host[:]
-    for f in opts.hosts: self.hosts.extend(_file_lines(f))
+    self.hosts = args.host[:]
+    for f in args.hosts: self.hosts.extend(_file_lines(f))
     if len(self.hosts) == 0: parser.error('at least one target host is required')
     # auids
-    self.auids = opts.auid[:]
-    for f in opts.auids: self.auids.extend(_file_lines(f))
+    self.auids = args.auid[:]
+    for f in args.auids: self.auids.extend(_file_lines(f))
+    # get_auids/get_auids_names/is_daemon_ready/is_daemon_ready_quiet
     if len(self.auids) == 0: parser.error('at least one target AUID is required')
     # au_operation
-    if opts.add_aus: self.au_operation = add_aus_by_id_list
-    elif opts.deactivate_aus: self.au_operation = deactivate_aus_by_id_list
-    elif opts.delete_aus: self.au_operation = delete_aus_by_id_list
-    else: self.au_operation = reactivate_aus_by_id_list
+    if len(self.auids) > 1:
+      if args.add_aus: self.au_operation = add_aus_by_id_list
+      elif args.deactivate_aus: self.au_operation = deactivate_aus_by_id_list
+      elif args.delete_aus: self.au_operation = delete_aus_by_id_list
+      else: self.au_operation = reactivate_aus_by_id_list
+    else:
+      if args.add_aus: self.au_operation = add_au_by_id
+      elif args.deactivate_aus: self.au_operation = deactivate_au_by_id
+      elif args.delete_aus: self.au_operation = delete_au_by_id
+      else: self.au_operation = reactivate_au_by_id
     # table_output/text_output/keysort/keydisplay/verbose
-    self.table_output = opts.table_output
+    self.table_output = args.table_output
     self.text_output = not self.table_output
-    if opts.sort_by_auid: self.keysort = _sort_by_auid
+    if args.sort_by_auid: self.keysort = _sort_by_auid
     else: self.keysort = _sort_by_name # default is --sort-by-name
-    if opts.list_by_auid: self.keydisplay = _list_by_auid
-    elif opts.list_by_name: self.keydisplay = _list_by_name
+    if args.list_by_auid: self.keydisplay = _list_by_auid
+    elif args.list_by_name: self.keydisplay = _list_by_name
     else: self.keydisplay = _list_by_both # default is --list-by-both
     if self.text_output:
-      self.verbose = opts.verbose
-    elif opts.verbose:
+      self.verbose = args.verbose
+    elif args.verbose:
       parser.error('--verbose can only be specified with --text-output')
     # pool_class/pool_size/batch_size
-    if opts.process_pool and opts.thread_pool:
+    if args.process_pool and args.thread_pool:
       parser.error('--process-pool and --thread-pool are mutually exclusive')
-    self.pool_class = ProcessPool if opts.process_pool else ThreadPool
-    self.pool_size = opts.pool_size or len(self.hosts)
-    self.batch_size = opts.batch_size
+    self.pool_class = ProcessPool if args.process_pool else ThreadPool
+    self.pool_size = args.pool_size or len(self.hosts)
+    self.batch_size = args.batch_size
     # auth
-    u = opts.username or getpass.getpass('UI username: ')
-    p = opts.password or getpass.getpass('UI password: ')
-    self.auth = zsiauth(u, p)
+    u = args.username or getpass.getpass('UI username: ')
+    p = args.password or getpass.getpass('UI password: ')
+    self.auth = requests_basic_auth(u, p)
 
 # This is to allow pickling, so the process pool works, but this isn't great
 # Have the sort and list params be enums and have keysort and keydisplay be methods?
@@ -428,14 +422,22 @@ def _do_au_operation_job(options_host):
   options, host = options_host
   data = dict()
   errors = 0
-  for i in xrange(0, len(options.auids), options.batch_size):
-    result = options.au_operation(host, options.auth, options.auids[i:i+options.batch_size])
-    for r in result:
-      if r.IsSuccess: msg = None
-      else:
-        msg = (r.Message or '').partition(':')[0]
-        errors = errors + 1
-      data[((r.Name, r.Id), (host,))] = msg
+  if len(options.auids) == 1:
+    r = options.au_operation(host, options.auth, options.auids[0])
+    if r.isSuccess: msg = None
+    else:
+      msg = (r.message or '').partition(':')[0]
+      errors += 1
+    data[((r.name, r.id), (host,))] = msg
+  else:
+      for i in range(0, len(options.auids), options.batch_size):
+        result = options.au_operation(host, options.auth, options.auids[i:i+options.batch_size])
+        for r in result:
+          if r.isSuccess: msg = None
+          else:
+            msg = (r.Message or '').partition(':')[0]
+            errors += 1
+          data[((r.name, r.id), (host,))] = msg
   return (host, data, errors)
 
 def _do_au_operation(options):
@@ -447,7 +449,7 @@ def _do_au_operation(options):
     options.errors = options.errors + errors
   if options.text_output:
     for host in sorted(options.hosts):
-      hostresults = [(k[0], v) for k, v in data.iteritems() if k[1] == host]
+      hostresults = [(k[0], v) for k, v in data.items() if k[1] == host]
       if options.verbose:
         successful = filter(lambda x: x[1] is None, hostresults)
         if len(successful) > 0:
@@ -455,7 +457,7 @@ def _do_au_operation(options):
           for x in sorted(successful, key=options.keysort):
             _output_record(options, options.keydisplay(x[0]))
           _output_record(options, [])
-      unsuccessful = filter(lambda x: x[1] is not None, hostresults)
+      unsuccessful = list(filter(lambda x: x[1] is not None, hostresults))
       if len(unsuccessful) > 0:
         _output_record(options, ['Unsuccessful on %s:' % (host,)])
         for x in sorted(unsuccessful, key=options.keysort):
@@ -468,7 +470,7 @@ def _do_au_operation(options):
 # Last modified 2015-08-05
 def _output_record(options, lst):
   '''Internal method to display a single record.'''
-  print '\t'.join([str(x or '') for x in lst])
+  print('\t'.join([str(x or '') for x in lst]))
 
 # Last modified 2016-05-16
 def _output_table(options, data, rowheaders, lstcolkeys, rowsort=None):
@@ -483,16 +485,26 @@ def _output_table(options, data, rowheaders, lstcolkeys, rowsort=None):
 
 # Last modified 2015-08-31
 def _file_lines(fstr):
-  with open(os.path.expanduser(fstr)) as f: ret = filter(lambda y: len(y) > 0, [x.partition('#')[0].strip() for x in f])
-  if len(ret) == 0: sys.exit('Error: %s contains no meaningful lines' % (fstr,))
-  return ret
+    with open(os.path.expanduser(fstr)) as f: ret = list(filter(lambda y: len(y) > 0, [x.partition('#')[0].strip() for x in f]))
+    if len(ret) == 0: sys.exit(f'Error: {fstr} contains no meaningful lines')
+    return ret
+
+def _make_client(host, auth):
+  session = requests.Session()
+  session.auth = auth
+  transport = zeep.transports.Transport(session=session)
+  wsdl = 'http://%s/ws/ContentConfigurationService?wsdl' % host
+  client = zeep.Client(wsdl, transport=transport)
+  return client
 
 def _main():
   '''Main method.'''
   # Parse command line
   parser = _ContentConfigurationServiceOptions.make_parser()
-  (opts, args) = parser.parse_args()
-  options = _ContentConfigurationServiceOptions(parser, opts, args)
+  #(opts, args) = parser.parse_args()
+  #options = _ContentConfigurationServiceOptions(parser, opts, args)
+  args = parser.parse_args()
+  options = _ContentConfigurationServiceOptions(parser, args)
   # Dispatch
   t = Thread(target=_do_au_operation, args=(options,))
   t.daemon = True
@@ -504,5 +516,6 @@ def _main():
   if options.errors > 0: sys.exit('%d %s; exiting' % (options.errors, 'error' if options.errors == 1 else 'errors'))
 
 # Main entry point
-if __name__ == '__main__': _main()
+if __name__ == '__main__':
+  _main()
 
