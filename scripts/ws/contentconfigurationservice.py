@@ -39,24 +39,21 @@ import getpass
 import itertools
 from multiprocessing import Pool as ProcessPool
 from multiprocessing.dummy import Pool as ThreadPool
-import argparse #from optparse import parser.add_argument_group, OptionParser
+import argparse
 import os.path
 import sys
 from threading import Lock, Thread
 
-#import ContentConfigurationServiceImplService_client
-#from wsutil import zsiauth
-
-try: import requests
+try:
+  from requests import Session
+  from requests.auth import HTTPBasicAuth
 except ImportError: sys.exit('The Python Requests module must be installed (or on the PYTHONPATH)')
-import requests.auth
 
-try: import zeep
+try:
+  from zeep import Client
+  from zeep.transports import Transport
 except ImportError: sys.exit('The Python Zeep module must be installed (or on the PYTHONPATH)')
-import zeep.transports
-import zeep.exceptions
 
-from wsutil import requests_basic_auth
 #
 # Library
 #
@@ -65,14 +62,14 @@ def add_au_by_id(host, auth, auid):
   '''
   Performs an addAuById operation (which adds a single AU on a single host, by
   AUID), and returns a record with these fields:
-  - Id (string): the AUID
-  - IsSuccess (boolean): a success flag
-  - Message (string): an error message
-  - Name (string): the AU name
+  - id (string): the AUID
+  - isSuccess (boolean): a success flag
+  - message (string): an error message
+  - name (string): the AU name
 
   Parameters:
   - host (string): a host:port pair
-  - auth (ZSI authentication object): an authentication object
+  - auth (requests.auth.HTTPBasicAuth object): an authentication object
   - auid (string): an AUID
   '''
   client = _make_client(host, auth)
@@ -82,14 +79,14 @@ def add_aus_by_id_list(host, auth, auids):
   '''
   Performs an addAusByIdList operation (which adds all given AUs on a single
   host, by AUID), and returns a list of records with these fields:
-  - Id (string): the AUID
-  - IsSuccess (boolean): a success flag
-  - Message (string): an error message
-  - Name (string): the AU name
+  - id (string): the AUID
+  - isSuccess (boolean): a success flag
+  - message (string): an error message
+  - name (string): the AU name
 
   Parameters:
   - host (string): a host:port pair
-  - auth (ZSI authentication object): an authentication object
+  - auth (requests.auth.HTTPBasicAuth object): an authentication object
   - auids (list of strings): a list of AUIDs
   '''
   client = _make_client(host, auth)
@@ -99,14 +96,14 @@ def deactivate_au_by_id(host, auth, auid):
   '''
   Performs a deactivateAuById operation (which deactivates a single AU on a
   single host, by AUID), and returns a record with these fields:
-  - Id (string): the AUID
-  - IsSuccess (boolean): a success flag
-  - Message (string): an error message
-  - Name (string): the AU name
+  - id (string): the AUID
+  - isSuccess (boolean): a success flag
+  - message (string): an error message
+  - name (string): the AU name
 
   Parameters:
   - host (string): a host:port pair
-  - auth (ZSI authentication object): an authentication object
+  - auth (requests.auth.HTTPBasicAuth object): an authentication object
   - auid (string): an AUID
   '''
   client = _make_client(host, auth)
@@ -116,14 +113,14 @@ def deactivate_aus_by_id_list(host, auth, auids):
   '''
   Performs a deactivateAusByIdList operation (which deactivates all given AUs on
   a single host, by AUID), and returns a list of records with these fields:
-  - Id (string): the AUID
-  - IsSuccess (boolean): a success flag
-  - Message (string): an error message
-  - Name (string): the AU name
+  - id (string): the AUID
+  - isSuccess (boolean): a success flag
+  - message (string): an error message
+  - name (string): the AU name
 
   Parameters:
   - host (string): a host:port pair
-  - auth (ZSI authentication object): an authentication object
+  - auth (requests.auth.HTTPBasicAuth object): an authentication object
   - auids (list of strings): a list of AUIDs
   '''
   client = _make_client(host, auth)
@@ -133,14 +130,14 @@ def delete_au_by_id(host, auth, auid):
   '''
   Performs a deleteAuById operation (which deletes a single AU on a single host,
   by AUID), and returns a record with these fields:
-  - Id (string): the AUID
-  - IsSuccess (boolean): a success flag
-  - Message (string): an error message
-  - Name (string): the AU name
+  - id (string): the AUID
+  - isSuccess (boolean): a success flag
+  - message (string): an error message
+  - name (string): the AU name
 
   Parameters:
   - host (string): a host:port pair
-  - auth (ZSI authentication object): an authentication object
+  - auth (requests.auth.HTTPBasicAuth object): an authentication object
   - auid (string): an AUID
   '''
   client = _make_client(host, auth)
@@ -150,14 +147,14 @@ def delete_aus_by_id_list(host, auth, auids):
   '''
   Performs a deleteAusByIdList operation (which deletes all given AUs on a
   single host, by AUID), and returns a list of records with these fields:
-  - Id (string): the AUID
-  - IsSuccess (boolean): a success flag
-  - Message (string): an error message
-  - Name (string): the AU name
+  - id (string): the AUID
+  - isSuccess (boolean): a success flag
+  - message (string): an error message
+  - name (string): the AU name
 
   Parameters:
   - host (string): a host:port pair
-  - auth (ZSI authentication object): an authentication object
+  - auth (requests.auth.HTTPBasicAuth object): an authentication object
   - auids (list of strings): a list of AUIDs
   '''
   client = _make_client(host, auth)
@@ -167,14 +164,14 @@ def reactivate_au_by_id(host, auth, auid):
   '''
   Performs a reactivateAuById operation (which reactivates a single AU on a
   single host, by AUID), and returns a record with these fields:
-  - Id (string): the AUID
-  - IsSuccess (boolean): a success flag
-  - Message (string): an error message
-  - Name (string): the AU name
+  - id (string): the AUID
+  - isSuccess (boolean): a success flag
+  - message (string): an error message
+  - name (string): the AU name
 
   Parameters:
   - host (string): a host:port pair
-  - auth (ZSI authentication object): an authentication object
+  - auth (requests.auth.HTTPBasicAuth object): an authentication object
   - auid (string): an AUID
   '''
   client = _make_client(host, auth)
@@ -184,14 +181,14 @@ def reactivate_aus_by_id_list(host, auth, auids):
   '''
   Performs a reactivateAusByIdList operation (which reactivates all given AUs on
   a single host, by AUID), and returns a list of records with these fields:
-  - Id (string): the AUID
-  - IsSuccess (boolean): a success flag
-  - Message (string): an error message
-  - Name (string): the AU name
+  - id (string): the AUID
+  - isSuccess (boolean): a success flag
+  - message (string): an error message
+  - name (string): the AU name
 
   Parameters:
   - host (string): a host:port pair
-  - auth (ZSI authentication object): an authentication object
+  - auth (requests.auth.HTTPBasicAuth object): an authentication object
   - auids (list of strings): a list of AUIDs
   '''
   client = _make_client(host, auth)
@@ -408,7 +405,7 @@ class _ContentConfigurationServiceOptions(object):
     # auth
     u = args.username or getpass.getpass('UI username: ')
     p = args.password or getpass.getpass('UI password: ')
-    self.auth = requests_basic_auth(u, p)
+    self.auth = HTTPBasicAuth(u, p)
 
 # This is to allow pickling, so the process pool works, but this isn't great
 # Have the sort and list params be enums and have keysort and keydisplay be methods?
@@ -433,9 +430,10 @@ def _do_au_operation_job(options_host):
       for i in range(0, len(options.auids), options.batch_size):
         result = options.au_operation(host, options.auth, options.auids[i:i+options.batch_size])
         for r in result:
+          print(r)
           if r.isSuccess: msg = None
           else:
-            msg = (r.Message or '').partition(':')[0]
+            msg = (r.message or '').partition(':')[0]
             errors += 1
           data[((r.name, r.id), (host,))] = msg
   return (host, data, errors)
@@ -449,9 +447,9 @@ def _do_au_operation(options):
     options.errors = options.errors + errors
   if options.text_output:
     for host in sorted(options.hosts):
-      hostresults = [(k[0], v) for k, v in data.items() if k[1] == host]
+      hostresults = [(k[0], v) for k, v in data.items() if k[1][0] == host]
       if options.verbose:
-        successful = filter(lambda x: x[1] is None, hostresults)
+        successful = list(filter(lambda x: x[1] is None, hostresults))
         if len(successful) > 0:
           _output_record(options, ['Successful on %s:' % (host,)])
           for x in sorted(successful, key=options.keysort):
@@ -485,24 +483,23 @@ def _output_table(options, data, rowheaders, lstcolkeys, rowsort=None):
 
 # Last modified 2015-08-31
 def _file_lines(fstr):
-    with open(os.path.expanduser(fstr)) as f: ret = list(filter(lambda y: len(y) > 0, [x.partition('#')[0].strip() for x in f]))
-    if len(ret) == 0: sys.exit(f'Error: {fstr} contains no meaningful lines')
-    return ret
+  with open(os.path.expanduser(fstr)) as f: ret = list(filter(lambda y: len(y) > 0, [x.partition('#')[0].strip() for x in f]))
+  if len(ret) == 0: sys.exit('Error: %s contains no meaningful lines' % (fstr,))
+  return ret
 
 def _make_client(host, auth):
-  session = requests.Session()
+  '''Initializes a web service client.'''
+  session = Session()
   session.auth = auth
-  transport = zeep.transports.Transport(session=session)
-  wsdl = 'http://%s/ws/ContentConfigurationService?wsdl' % host
-  client = zeep.Client(wsdl, transport=transport)
+  transport = Transport(session=session)
+  wsdl = 'http://%s/ws/ContentConfigurationService?wsdl' % (host,)
+  client = Client(wsdl, transport=transport)
   return client
 
 def _main():
   '''Main method.'''
   # Parse command line
   parser = _ContentConfigurationServiceOptions.make_parser()
-  #(opts, args) = parser.parse_args()
-  #options = _ContentConfigurationServiceOptions(parser, opts, args)
   args = parser.parse_args()
   options = _ContentConfigurationServiceOptions(parser, args)
   # Dispatch
@@ -513,7 +510,8 @@ def _main():
     t.join(1.5)
     if not t.is_alive(): break
   # Errors
-  if options.errors > 0: sys.exit('%d %s; exiting' % (options.errors, 'error' if options.errors == 1 else 'errors'))
+  if options.errors > 0:
+    sys.exit('%d %s' % (options.errors, 'error' if options.errors == 1 else 'errors'))
 
 # Main entry point
 if __name__ == '__main__':
