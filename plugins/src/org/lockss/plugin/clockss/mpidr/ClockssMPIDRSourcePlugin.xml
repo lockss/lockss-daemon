@@ -57,15 +57,6 @@
         </list>
     </entry>
     <entry>
-        <string>au_crawlrules</string>
-        <list>
-            <!--need "special/$" to allow "special" root level directory-->
-            <string>1,&quot;%s%s/special/$", base_url, directory</string>
-            <string>1,&quot;%s%s/special/[1-3]{1}/.*", base_url, directory</string>
-            <string>1,&quot;%s%s/volumes/.*", base_url, directory</string>
-        </list>
-    </entry>
-    <entry>
         <string>plugin_article_iterator_factory</string>
         <string>org.lockss.plugin.clockss.mpidr.MPIDRRisArticleIteratorFactory</string>
     </entry>

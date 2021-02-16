@@ -22,7 +22,7 @@
 
     param[base_url] = http://clockss-ingest.lockss.org/warcfiles/cartografare-il-presente-released/
 
-    au < readySource ; finished ; 2016 ; Cartografare il present WARC Content 2016 ; 2016 >
+    au < zapped ; finished ; 2016 ; Cartografare il present WARC Content 2016 ; 2016 >
     #this one has no additional content; not necessary to process in 2018
 
   }
@@ -41,8 +41,8 @@
 
     param[base_url] = http://clockss-ingest.lockss.org/warcfiles/novecento-released/
 
-    au < superseded ; finished ; 2016 ; Novecento WARC Content 2016 ; 2016 >
-    au < readySource ; finished ; 2018 ; Novecento WARC Content 2018 ; 2018 >
+    au < zapped ; finished ; 2016 ; Novecento WARC Content 2016 ; 2016 >
+    au < zapped ; finished ; 2018 ; Novecento WARC Content 2018 ; 2018 >
     au < readySource ; crawling ; 2020 ; Novecento WARC Content 2020 ; 2020 >
 
   }
@@ -60,8 +60,8 @@
 
     param[base_url] = http://clockss-ingest.lockss.org/warcfiles/storicamente-released/
 
-    au < superseded ; finished ; 2016 ; Storicamente WARC Content 2016 ; 2016 >
-    au < readySource ; finished ; 2018 ; Storicamente WARC Content 2018 ; 2018 >
+    au < zapped ; finished ; 2016 ; Storicamente WARC Content 2016 ; 2016 >
+    au < zapped ; finished ; 2018 ; Storicamente WARC Content 2018 ; 2018 >
     au < readySource ; crawling ; 2020 ; Storicamente WARC Content 2020 ; 2020 >
 
   }
@@ -79,8 +79,8 @@
 
     param[base_url] = http://clockss-ingest.lockss.org/warcfiles/e-review-rivista-degli-istituti-storici-dell-emilia-romagna-in-rete-released/
 
-    au < superseded ; finished ; 2016 ; E-Review WARC Content 2016 ; 2016 >
-    au < readySource ; finished ; 2018 ; E-Review WARC Content 2018 ; 2018 >
+    au < zapped ; finished ; 2016 ; E-Review WARC Content 2016 ; 2016 >
+    au < zapped ; finished ; 2018 ; E-Review WARC Content 2018 ; 2018 >
     au < readySource ; crawling ; 2020 ; E-Review WARC Content 2020 ; 2020 >
 
 
