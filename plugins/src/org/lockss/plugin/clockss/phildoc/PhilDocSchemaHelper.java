@@ -54,8 +54,9 @@ implements SourceXmlSchemaHelper {
    *  Philosophy Documentation Center 
    */
   // The following are all under the article node /doc
-  private static String pub_issn = "field[@name=\"issn\"]";
   private static String pub_title = "field[@name=\"publication\"]";
+  private static String pub_issn = "field[@name=\"issn\"]";
+  private static String pub_isbn = "field[@name=\"isbn\"]";
   private static String art_title = "field[@name=\"title\"]";
   public static String art_subtitle = "field[@name=\"subtitle\"]";
   private static String pub_volume = "field[@name=\"volume\"]";
@@ -74,16 +75,17 @@ implements SourceXmlSchemaHelper {
   static private final Map<String,XPathValue>     
   pdoc_articleMap = new HashMap<String,XPathValue>();
   static {
-    pdoc_articleMap.put(pub_title, XmlDomMetadataExtractor.TEXT_VALUE); 
-    pdoc_articleMap.put(pub_issn, XmlDomMetadataExtractor.TEXT_VALUE); 
+    pdoc_articleMap.put(pub_title, XmlDomMetadataExtractor.TEXT_VALUE);
+    pdoc_articleMap.put(pub_issn, XmlDomMetadataExtractor.TEXT_VALUE);
+    pdoc_articleMap.put(pub_isbn, XmlDomMetadataExtractor.TEXT_VALUE);
+    pdoc_articleMap.put(art_title, XmlDomMetadataExtractor.TEXT_VALUE);
+    pdoc_articleMap.put(art_subtitle, XmlDomMetadataExtractor.TEXT_VALUE);
     pdoc_articleMap.put(pub_volume, XmlDomMetadataExtractor.TEXT_VALUE); 
     pdoc_articleMap.put(pub_issue, XmlDomMetadataExtractor.TEXT_VALUE); 
-    pdoc_articleMap.put(pub_year, XmlDomMetadataExtractor.TEXT_VALUE); 
-    pdoc_articleMap.put(art_title, XmlDomMetadataExtractor.TEXT_VALUE); 
-    pdoc_articleMap.put(art_subtitle, XmlDomMetadataExtractor.TEXT_VALUE); 
+    pdoc_articleMap.put(pub_year, XmlDomMetadataExtractor.TEXT_VALUE);
+    pdoc_articleMap.put(art_auth, XmlDomMetadataExtractor.TEXT_VALUE);
     pdoc_articleMap.put(art_sp, XmlDomMetadataExtractor.TEXT_VALUE); 
-    pdoc_articleMap.put(art_lp, XmlDomMetadataExtractor.TEXT_VALUE); 
-    pdoc_articleMap.put(art_auth, XmlDomMetadataExtractor.TEXT_VALUE); 
+    pdoc_articleMap.put(art_lp, XmlDomMetadataExtractor.TEXT_VALUE);
     pdoc_articleMap.put(art_filename, XmlDomMetadataExtractor.TEXT_VALUE); 
   }
 
@@ -101,13 +103,14 @@ implements SourceXmlSchemaHelper {
     // normal journal article schema
     cookMap.put(pub_title, MetadataField.FIELD_PUBLICATION_TITLE);
     cookMap.put(pub_issn, MetadataField.FIELD_ISSN);
+    cookMap.put(pub_isbn, MetadataField.FIELD_ISBN);
+    cookMap.put(art_title, MetadataField.FIELD_ARTICLE_TITLE);
     cookMap.put(pub_volume, MetadataField.FIELD_VOLUME);
     cookMap.put(pub_issue, MetadataField.FIELD_ISSUE);
     cookMap.put(pub_year, MetadataField.FIELD_DATE);
-    cookMap.put(art_title, MetadataField.FIELD_ARTICLE_TITLE);
+    cookMap.put(art_auth, MetadataField.FIELD_AUTHOR);
     cookMap.put(art_sp, MetadataField.FIELD_START_PAGE);
     cookMap.put(art_lp, MetadataField.FIELD_END_PAGE);
-    cookMap.put(art_auth, MetadataField.FIELD_AUTHOR);
   }
 
   /**
