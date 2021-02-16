@@ -22,7 +22,7 @@
     param[base_url] = http://clockss-ingest.lockss.org/warcfiles/philosophy@lisbon-released/
 
     au < zapped ; finished ; 2017 ; Philosophy@LISBON WARC Content 2017 ; 2017 >
-    au < readySource ; finished ; 2018 ; Philosophy@LISBON WARC Content 2018 ; 2018 >
+    au < zapped ; finished ; 2018 ; Philosophy@LISBON WARC Content 2018 ; 2018 >
       
   }
 
@@ -39,7 +39,7 @@
     param[base_url] = http://clockss-ingest.lockss.org/warcfiles/philosophica-released/
     
     au < zapped ; finished ; 2017 ; Philosophica WARC Content 2017 ; 2017 >
-    au < readySource ; finished ; 2018 ; Philosophica WARC Content 2018 ; 2018 >
+    au < zapped ; finished ; 2018 ; Philosophica WARC Content 2018 ; 2018 >
     
   }
 
