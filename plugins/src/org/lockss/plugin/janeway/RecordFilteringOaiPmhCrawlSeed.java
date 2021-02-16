@@ -177,7 +177,7 @@ public abstract class RecordFilteringOaiPmhCrawlSeed extends BaseOaiPmhCrawlSeed
   @Override
   public Collection<String> doGetStartUrls() throws ConfigurationException,
                                           PluginException, IOException {
-    logger.debug3("Fei: doGetStartUrls...");
+    logger.debug3("doGetStartUrls...");
     return getRecordList(buildParams());
   }
 }
