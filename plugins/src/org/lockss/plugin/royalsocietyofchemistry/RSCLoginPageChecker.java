@@ -87,9 +87,9 @@ public class RSCLoginPageChecker implements LoginPageChecker {
 
     boolean found = false;
     if ("text/html".equalsIgnoreCase(HeaderUtil.getMimeTypeFromContentType(props.getProperty("Content-Type")))) {
-      String theContents = StringUtil.fromReader(reader);  // This returns an empty string most of the time.
+      String theContents = StringUtil.fromReader(reader);
       Matcher matcher = ACCESS_DENIED_PATTERN.matcher(theContents);
-      //log.debug3( theContents.length() + "<<<" + theContents + ">>>" );
+      //log.debug3( theContents.length() + "<<<" + theContents + ">>>" ); //Note the logging here. Grep will not return much meaningful info, so check the log itself for full printout
       found = matcher.find();
       if (found) {
         log.debug3("found a match with: '" + ACCESS_DENIED_SNIPPET + "'");
