@@ -2,6 +2,7 @@
   <entry>
    <string>plugin_status</string>
    <string>ready</string>
+    <!-- https transition enabled -->
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -9,7 +10,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>29</string>
+    <string>30</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -17,7 +18,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>29</string>
+    <string>30</string>
   </entry>
   <entry>
     <string>au_name</string>

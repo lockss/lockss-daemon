@@ -2,6 +2,7 @@
   <entry>
    <string>plugin_status</string>
    <string>ready</string>
+    <!-- https transition enabled -->
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -13,22 +14,22 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>13</string>
+    <string>14</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Poll</string>
-        <string>5</string>
+        <string>6</string>
       </entry>
       <entry>
         <string>Substance</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
     </map>
   </entry>
@@ -43,30 +44,35 @@
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%sen/ebooks/lockss?copyrightyear=%d", base_url, year</string>
+    <list>
+      <string>"%sen/ebooks/lockss?copyrightyear=%d", to_http(base_url), year</string>
+      <string>"%sen/ebooks/lockss?copyrightyear=%d", to_https(base_url), year</string>
+    </list>
   </entry>
   <entry>
     <string>au_permission_url</string>
       <list>
-        <string>"%sen/ebooks/lockss?copyrightyear=%d", base_url, year</string>
-        <string>"%slockss.htm", graphics_url</string>
+        <string>"%sen/ebooks/lockss?copyrightyear=%d", to_http(base_url), year</string>
+        <string>"%sen/ebooks/lockss?copyrightyear=%d", to_https(base_url), year</string>
+        <string>"%slockss.htm", to_http(graphics_url)</string>
+        <string>"%slockss.htm", to_https(graphics_url)</string>
       </list>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
-    <string>"^%sen/content/chapterpdf/[0-9]{4}/[a-z0-9-]+\?isbn=[-0-9x]+$", base_url</string>
+    <string>"^https?://%s/en/content/chapterpdf/[0-9]{4}/[a-z0-9-]+\?isbn=[-0-9x]+$", base_url_host</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,"^%s", graphics_url</string>
+      <string>1,"^https?://%s/", graphics_url_host</string>
       <!-- all content from CDN -->
       <string>1,"^https?://((fonts|ajax)\.(googleapis)\.com)/."</string>
-      <string>2,"^%sen/(error|account)/", base_url</string>
-      <string>4,"^%s", base_url</string>
-      <string>1,"^%sen/ebooks/lockss\?isbn=[-0-9x]+", base_url</string>
-      <string>1,"^%sen/content/chapter/[-a-z0-9]+/[-0-9x]+", base_url</string>
-      <string>1,"^%sen/content/chapterpdf/[0-9]{4}/[-a-z0-9]+\?isbn=[-0-9x]+", base_url</string>
+      <string>2,"^https?://%s/en/(error|account)/", base_url_host</string>
+      <string>4,"^https?://%s/", base_url_host</string>
+      <string>1,"^https?://%s/en/ebooks/lockss\?isbn=[-0-9x]+", base_url_host</string>
+      <string>1,"^https?://%s/en/content/chapter/[-a-z0-9]+/[-0-9x]+", base_url_host</string>
+      <string>1,"^https?://%s/en/content/chapterpdf/[0-9]{4}/[-a-z0-9]+\?isbn=[-0-9x]+", base_url_host</string>
     </list>
   </entry>
   <entry>
@@ -102,6 +108,14 @@
     </list>
   </entry>
   <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.base.HttpToHttpsUrlConsumerFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_url_fetcher_factory</string>
+    <string>org.lockss.plugin.base.HttpToHttpsUrlFetcherFactory</string>
+  </entry>
+  <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.royalsocietyofchemistry.RSCBooksArticleIteratorFactory</string>
   </entry>
@@ -130,6 +144,10 @@
   <entry>
     <string>au_url_normalizer</string>
     <string>org.lockss.plugin.royalsocietyofchemistry.RSCBooksUrlNormalizer</string>
+  </entry>
+  <entry>
+    <string>au_login_page_checker</string>
+    <string>org.lockss.plugin.royalsocietyofchemistry.RSCLoginPageChecker</string>
   </entry>
   <entry>
     <string>plugin_cache_result_list</string>
@@ -164,11 +182,11 @@
   </entry>
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
-    <string>"%spubs-core/", graphics_url</string>
+    <string>"https?://%s/pubs-core/", graphics_url_host</string>
   </entry>
   <entry>
     <!-- these will not count towards poll results but will replicate from peer if above 1.69.5 -->
     <string>au_url_poll_result_weight</string>
-    <string>"%spubs-core/", graphics_url, 0</string>
+    <string>"https?://%s/pubs-core/", graphics_url_host, 0</string>
   </entry>
 </map>

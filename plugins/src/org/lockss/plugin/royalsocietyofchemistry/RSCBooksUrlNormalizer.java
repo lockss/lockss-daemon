@@ -47,8 +47,9 @@ import org.lockss.util.StringUtil;
  * to http://xlink.rsc.org/?doi=b712109a
  */
 
-public class RSCBooksUrlNormalizer implements UrlNormalizer {
-  
+//public class RSCBooksUrlNormalizer implements UrlNormalizer {
+public class RSCBooksUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
+
   private static final Logger log = Logger.getLogger(RSCBooksUrlNormalizer.class);
   
   /*  Note: this assumes that all AUs have same params, this way we set the urls once
@@ -57,7 +58,8 @@ public class RSCBooksUrlNormalizer implements UrlNormalizer {
    */
   private static String content_url = "";
   
-  public String normalizeUrl(String url, ArchivalUnit au)
+  //public String normalizeUrl(String url, ArchivalUnit au)
+  public String additionalNormalization(String url, ArchivalUnit au)
       throws PluginException {
     
     if (content_url.isEmpty()) {
