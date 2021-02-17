@@ -8,6 +8,9 @@
   >
 
   #the publisher requested that their name be listed simply as "Hindawi." see RT8402
+  #########################################
+  ### Download URL moved from http to https. These AUs can be deleted from the ingest machines.
+  #########################################
 
   rights = openaccess
   plugin = org.lockss.plugin.hindawi.ClockssHindawiPlugin
