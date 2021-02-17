@@ -1,10 +1,6 @@
 /*
- * $Id DisplayContentStatus.java 2012/12/03 14:52:00 rwincewicz $
- */
 
-/*
-
- Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2021 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -421,6 +417,11 @@ public class DisplayContentStatus extends LockssServlet {
     }
     wrtr.println();
 
+    // Create (but do not yet refer to) any footnotes that the table wants
+    // to be in a specific order
+    for (String orderedFoot : statTable.getOrderedFootnotes()) {
+      addFootnote(orderedFoot);
+    }
     java.util.List rowList = getRowList(statTable);
     if (rowList != null) {
       // output rows
@@ -737,15 +738,17 @@ public class DisplayContentStatus extends LockssServlet {
               ? HtmlUtil.htmlEncode(aval.getDisplayString())
               : getDisplayString1(aval.getValue(), type);
       String color = aval.getColor();
-      String footnote = aval.getFootnote();
+      java.util.List<String> footnotes = aval.getFootnotes();
       if (color != null) {
         str = "<font color=" + color + ">" + str + "</font>";
       }
       if (aval.getBold()) {
         str = "<b>" + str + "</b>";
       }
-      if (footnote != null) {
-        str = str + addFootnote(footnote);
+      boolean notFirst = false;
+      for (String foot : footnotes) {
+	str = str + addFootnote(foot, notFirst);
+        notFirst = true;
       }
       return str;
     } else {

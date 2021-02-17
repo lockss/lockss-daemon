@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2021 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -352,7 +348,7 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
 	if (status.getCrawlStatus() == Crawler.STATUS_SUCCESSFUL &&
 	    AuUtil.getAuState(au).hasNoSubstance()) {
 	  statusMsg =
-	    new StatusTable.DisplayedValue(statusMsg).setFootnote(SingleCrawlStatusAccessor.FOOT_NO_SUBSTANCE_CRAWL_STATUS);
+	    new StatusTable.DisplayedValue(statusMsg).addFootnote(SingleCrawlStatusAccessor.FOOT_NO_SUBSTANCE_CRAWL_STATUS);
 	}
       }
       statusColRef = makeRef(statusMsg,

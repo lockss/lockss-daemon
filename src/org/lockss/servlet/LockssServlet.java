@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2021 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -73,6 +69,12 @@ public abstract class LockssServlet extends HttpServlet
    * cached per-package (internally to the gettext-commons library). */
   protected static I18n i18n = I18nUtil.getI18n(LockssServlet.class);
 
+  /** Available footnote citation styles.  Bracket: footnote number is
+   * enclosed in brackets; SeparatedBracket: footnote number is enclosed in
+   * brackets and multiple citations are space-separated; Plain: footnote
+   * numbers are undecorated, and space-separated */
+  public enum CitationStyle { Bracket, SeparatedBracket, Plain }
+
   // Constants
   static final String PARAM_LOCAL_IP = Configuration.PREFIX + "localIPAddress";
 
@@ -92,6 +94,14 @@ public abstract class LockssServlet extends HttpServlet
   /** The warning string to display when the UI is disabled. */
   static final String PARAM_UI_WARNING =
     Configuration.PREFIX + "ui.warning";
+
+  /** Footnote citation style.  Bracket: footnote numbers are enclosed in
+   * brackets; SeparatedBracket: footnote numbers are enclosed in brackets
+   * and multiple citations are space-separated; Plain: footnote numbers
+   * are undecorated, and space-separated */
+  static final String PARAM_CITATION_STYLE =
+    Configuration.PREFIX + "ui.citationStyle";
+  static final CitationStyle DEFAULT_CITATION_STYLE = CitationStyle.Plain;
 
   // session keys
   static final String SESSION_KEY_OBJECT_ID = "obj_id";
@@ -1010,6 +1020,14 @@ public abstract class LockssServlet extends HttpServlet
    * empty string is returned.  Footnote numbers get turned into links;
    * <b>Do not put the result of addFootnote inside a link!</b>.  */
   protected String addFootnote(String s) {
+    return addFootnote(s, false);
+  }
+
+  /** Store a footnote, assign it a number, return html for footnote
+   * reference.  If footnote in null or empty, no footnote is added and an
+   * empty string is returned.  Footnote numbers get turned into links;
+   * <b>Do not put the result of addFootnote inside a link!</b>.  */
+    protected String addFootnote(String s, boolean withLeadingSpace) {
     if (s == null || s.length() == 0) {
       return "";
     }
@@ -1025,8 +1043,39 @@ public abstract class LockssServlet extends HttpServlet
       n = footNumber++;
       footnotes.addElement(s);
     }
-    return "<sup><font size=-1><a href=#foottag" + (n+1) + ">" +
-      (n+1) + "</a></font></sup>";
+    StringBuilder sb = new StringBuilder();
+    sb.append("<sup><font size=-1>");
+    CitationStyle citationStyle =
+      (CitationStyle)
+      ConfigManager.getCurrentConfig().getEnum(CitationStyle.class,
+                                               PARAM_CITATION_STYLE,
+                                               DEFAULT_CITATION_STYLE);
+    switch (citationStyle) {
+    case SeparatedBracket:
+      if (withLeadingSpace) {
+        sb.append("&nbsp;");
+      }
+    case Bracket:
+      sb.append("<a href=#foottag");
+      sb.append((n+1));
+      sb.append(">[");
+      sb.append((n+1));
+      sb.append("]");
+      break;
+    case Plain:
+    default:
+      if (withLeadingSpace) {
+        sb.append("&nbsp;");
+      }
+      sb.append("<a href=#foottag");
+      sb.append((n+1));
+      sb.append(">");
+      sb.append((n+1));
+    }
+    sb.append("</a></font></sup>");
+    return sb.toString();
+//     return "<sup><font size=-1><a href=#foottag" + (n+1) + ">" +
+//       (n+1) + "</a></font></sup>";
   }
 
   /** Add javascript to page.  Normally adds a link to the script file, but

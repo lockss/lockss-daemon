@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2021 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -66,6 +62,7 @@ public class StatusTable {
   private BitSet options = new BitSet();
   private boolean isResortable = true;
   private Properties props;
+  private List<String> orderedFootnotes;
 
   /**
    * @param name String representing table name
@@ -142,6 +139,29 @@ public class StatusTable {
    */
   public void setTitleFootnote(String footnote) {
     this.titleFootnote = footnote;
+  }
+
+  /**
+   * Get the ordered list of footnotes for this table
+   * @return the ordered list of footnotes for this table
+   */
+  public List<String> getOrderedFootnotes() {
+    if (orderedFootnotes == null) {
+      return Collections.emptyList();
+    }
+    return orderedFootnotes;
+  }
+
+  /**
+   * Set the ordered list of footnotes for this table.  They will be added
+   * to the display in this order.  Needed in cases where the footnote
+   * order is important, because they would otherwise be created in
+   * variable order depending on the current table sorting.
+   * @param footnotes (a subset of) the footnotes for this table in the
+   * order they should appear
+   */
+  public void setOrderedFootnotes(List<String> footnotes) {
+    this.orderedFootnotes = footnotes;
   }
 
   /**
@@ -478,7 +498,7 @@ public class StatusTable {
   public static class DisplayedValue implements EmbeddedValue {
     private Object value;
     private String color = null;
-    private String footnote = null;
+    private List<String> footnotes = null;
     private boolean bold = false;
     private Layout layout = Layout.None;
     private String displayStr;  // if present, human-friendly display string
@@ -553,17 +573,23 @@ public class StatusTable {
       return bold;
     }
 
-    /** Set footnote.
+    /** Add footnote.
      * @param footnote the footnote string
      */
-    public DisplayedValue setFootnote(String footnote) {
-      this.footnote = footnote;
+    public DisplayedValue addFootnote(String footnote) {
+      if (footnotes == null) {
+        footnotes = new ArrayList<>(4);
+      }
+      footnotes.add(footnote);
       return this;
     }
 
-    /** Get the footnote */
-    public String getFootnote() {
-      return footnote;
+    /** Get the footnotes */
+    public List<String> getFootnotes() {
+      if (footnotes == null) {
+        return Collections.emptyList();
+      }
+      return footnotes;
     }
 
     /** Set layout.
@@ -597,9 +623,9 @@ public class StatusTable {
       if (getBold()) {
 	sb.append(", bold");
       }	
-      if (getFootnote() != null) {
+      if (getFootnotes() != null) {
 	sb.append(", foot: ");
-	sb.append(getFootnote());
+	sb.append(getFootnotes());
       }	
       return sb.toString();
     }

@@ -1,9 +1,5 @@
 /*
- * $Id$
- */
-
-/*
- Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2021 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
@@ -327,6 +323,12 @@ public class TestStatusTable extends LockssTestCase {
   public void testEmbeddedValue() {
     Integer val = new Integer(3);
     StatusTable.DisplayedValue dval = new StatusTable.DisplayedValue(val);
+    assertEmpty(dval.getFootnotes());
+    dval.addFootnote("f1");
+    assertEquals(ListUtil.list("f1"), dval.getFootnotes());
+    dval.addFootnote("f2");
+    assertEquals(ListUtil.list("f1", "f2"), dval.getFootnotes());
+
     StatusTable.Reference rval = new StatusTable.Reference(val, "foo", "bar");
     StatusTable.SrvLink lval = new StatusTable.SrvLink(val, srvDescr, args);
     // should be able to embed DisplayedValue in Reference or SrvLink
