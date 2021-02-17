@@ -2,7 +2,7 @@
 
   publisher <
     name = American Society for Biochemistry and Molecular Biology ;
-    info[platform] = 1 title HW Drupal. 2 titles HW-H20
+    info[platform] = HW. moved to Elsevier
   >
 
   {
@@ -32,7 +32,7 @@
     au < released ; 2017 ; Journal of Biological Chemistry Volume 292 ; 292 ; http://www.jbc.org/ >
     au < released ; 2018 ; Journal of Biological Chemistry Volume 293 ; 293 ; http://www.jbc.org/ >
     au < released ; 2019 ; Journal of Biological Chemistry Volume 294 ; 294 ; https://www.jbc.org/ >
-    au < manifest ; 2020 ; Journal of Biological Chemistry Volume 295 ; 295 ; https://www.jbc.org/ >
+    au < doNotProcess ; 2020 ; Journal of Biological Chemistry Volume 295 ; 295 ; https://www.jbc.org/ >
 
   }
 
@@ -81,7 +81,7 @@
     au < released ; 2017 ; The Journal of Lipid Research Volume 58 ; 58 ; http://www.jlr.org/ >
     au < released ; 2018 ; The Journal of Lipid Research Volume 59 ; 59 ; http://www.jlr.org/ >
     au < released ; 2019 ; The Journal of Lipid Research Volume 60 ; 60 ; https://www.jlr.org/ >
-    au < manifest ; 2020 ; The Journal of Lipid Research Volume 61 ; 61 ; https://www.jlr.org/ >
+    au < doNotProcess ; 2020 ; The Journal of Lipid Research Volume 61 ; 61 ; https://www.jlr.org/ >
 
   }
 
@@ -99,7 +99,7 @@
       pluginPrefix = org.lockss.plugin.highwire.
       #param[base_url] = http://www.mcponline.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] ; param[base_url] >
-      #move to Drupal
+      #move to Elsevier
 
       au < HighWirePressH20Plugin ; down ; 2002 ; Molecular & Cellular Proteomics Volume 1 ; 1 ; http://www.mcponline.org/ >
       au < HighWirePressH20Plugin ; down ; 2003 ; Molecular & Cellular Proteomics Volume 2 ; 2 ; http://www.mcponline.org/ >
@@ -117,9 +117,9 @@
       au < HighWirePressH20Plugin ; down ; 2015 ; Molecular & Cellular Proteomics Volume 14 ; 14 ; http://www.mcponline.org/ >
       au < HighWirePressH20Plugin ; down ; 2016 ; Molecular & Cellular Proteomics Volume 15 ; 15 ; http://www.mcponline.org/ >
       au < HighWirePressH20Plugin ; down ; 2017 ; Molecular & Cellular Proteomics Volume 16 ; 16 ; http://www.mcponline.org/ >
-      au < HWDrupalPlugin ; manifest ; 2018 ; Molecular & Cellular Proteomics Volume 17 ; 17 ; https://www.mcponline.org/ >
-      au < HWDrupalPlugin ; manifest ; 2019 ; Molecular & Cellular Proteomics Volume 18 ; 18 ; https://www.mcponline.org/ >
-      au < HWDrupalPlugin ; expected ; 2020 ; Molecular & Cellular Proteomics Volume 19 ; 19 ; https://www.mcponline.org/ >
+      au < HWDrupalPlugin ; doNotProcess ; 2018 ; Molecular & Cellular Proteomics Volume 17 ; 17 ; https://www.mcponline.org/ >
+      au < HWDrupalPlugin ; doNotProcess ; 2019 ; Molecular & Cellular Proteomics Volume 18 ; 18 ; https://www.mcponline.org/ >
+      au < HWDrupalPlugin ; doNotProcess ; 2020 ; Molecular & Cellular Proteomics Volume 19 ; 19 ; https://www.mcponline.org/ >
 
     }
 
