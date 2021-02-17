@@ -457,10 +457,10 @@
     {
     param[base_url] = https://jpet.aspetjournals.org/
 
-    au < aspet.ASPETDrupalPlugin ; exists ; 2020 ; Journal of Pharmacology and Experimental Therapeutics Volume 372 ; 372 >
-    au < aspet.ASPETDrupalPlugin ; exists ; 2020 ; Journal of Pharmacology and Experimental Therapeutics Volume 373 ; 373 >
-    au < aspet.ASPETDrupalPlugin ; exists ; 2020 ; Journal of Pharmacology and Experimental Therapeutics Volume 374 ; 374 >
-    au < aspet.ASPETDrupalPlugin ; exists ; 2020 ; Journal of Pharmacology and Experimental Therapeutics Volume 375 ; 375 >
+    au < aspet.ASPETDrupalPlugin ; manifest ; 2020 ; Journal of Pharmacology and Experimental Therapeutics Volume 372 ; 372 >
+    au < aspet.ASPETDrupalPlugin ; manifest ; 2020 ; Journal of Pharmacology and Experimental Therapeutics Volume 373 ; 373 >
+    au < aspet.ASPETDrupalPlugin ; manifest ; 2020 ; Journal of Pharmacology and Experimental Therapeutics Volume 374 ; 374 >
+    au < aspet.ASPETDrupalPlugin ; manifest ; 2020 ; Journal of Pharmacology and Experimental Therapeutics Volume 375 ; 375 >
     }
   }
 
