@@ -30,7 +30,7 @@ in this Software without prior written authorization from Stanford University.
 
  */
 
-package org.lockss.plugin.pubfactory.berghahn;
+package org.lockss.plugin.pubfactory;
 
 import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
@@ -53,7 +53,7 @@ import java.util.Vector;
 
 // Keeps contents only (includeNodes), then hashes out unwanted nodes 
 // within the content (excludeNodes).
-public class BerghahnHtmlHashFilterFactory implements FilterFactory {
+public class PubfactoryHtmlHashFilterFactory implements FilterFactory {
      
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,

@@ -30,7 +30,7 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.pubfactory.berghahn;
+package org.lockss.plugin.pubfactory;
 
 
 import org.lockss.daemon.Crawler.CrawlerFacade;
@@ -51,18 +51,18 @@ import java.io.IOException;
  * after discussion we've decided to leave both versions in - so that if the pdf is ever linked to direclty, we have it
  * 
  */
-public class BerghahnUrlConsumerFactory implements UrlConsumerFactory {
-  private static final Logger log = Logger.getLogger(BerghahnUrlConsumerFactory.class);
+public class PubfactoryUrlConsumerFactory implements UrlConsumerFactory {
+  private static final Logger log = Logger.getLogger(PubfactoryUrlConsumerFactory.class);
   
   @Override
   public UrlConsumer createUrlConsumer(CrawlerFacade crawlFacade,
       FetchedUrlData fud) {
-    return new BerghahnUrlConsumer(crawlFacade, fud);
+    return new PubfactoryUrlConsumer(crawlFacade, fud);
   }
   
-  public class BerghahnUrlConsumer extends SimpleUrlConsumer {
+  public class PubfactoryUrlConsumer extends SimpleUrlConsumer {
     
-    public BerghahnUrlConsumer(CrawlerFacade facade, FetchedUrlData fud) {
+    public PubfactoryUrlConsumer(CrawlerFacade facade, FetchedUrlData fud) {
       super(facade, fud);
     }
     

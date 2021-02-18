@@ -41,7 +41,7 @@ import org.lockss.test.ConfigurationUtil;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockArchivalUnit;
 
-public class TestBerghahnUrlNormalizer extends LockssTestCase {
+public class TestPubfactoryUrlNormalizer extends LockssTestCase {
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   static final String VOL_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
   static final String JID_KEY = ConfigParamDescr.JOURNAL_ID.getKey();

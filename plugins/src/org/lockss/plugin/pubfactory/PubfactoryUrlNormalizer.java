@@ -30,13 +30,13 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.pubfactory.berghahn;
+package org.lockss.plugin.pubfactory;
 
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.UrlNormalizer;
 
-public class BerghahnUrlNormalizer implements UrlNormalizer {
+public class PubfactoryUrlNormalizer implements UrlNormalizer {
 
   /**
    *  Clean off some unnecessary one-time arguments from citation urls
