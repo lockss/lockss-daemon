@@ -234,7 +234,7 @@ Args:
   <property name="activation.jar" value="${lib}/activation-1.0.2.jar"/>
   <property name="castor.jar"     value="${lib}/castor-0.9.4.1-xml.jar"/>
   <!-- the jars needed for xml processeing using xerces2j and xalan -->
-  <property name="xerces.jar"     value="${lib}/xercesImpl-2.11.0.jar"/>
+  <property name="xerces.jar"     value="${lib}/xercesImpl-2.12.1.jar"/>
   <property name="xml-apis.jar"   value="${lib}/xml-apis-1.4.01.jar"/>
   <property name="xalan.jar"      value="${lib}/xalan-2.7.2.jar"/>
   <property name="xml-resolver.jar" value="${lib}/xml-resolver-1.2.jar" />
