@@ -202,7 +202,7 @@ public class ConfigStatus extends BaseLockssDaemonManager {
         for (String key : config.keySet()) {
           if (ConfigManager.shouldParamBeLogged(key)) {
             paramSources.put(key, source);
-            footnoteThisSource = false;
+            footnoteThisSource = true;
           }
         }
         if (footnoteThisSource) {
