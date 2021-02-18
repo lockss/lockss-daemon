@@ -42,7 +42,6 @@ public class CasaliniLibri2020MetadataExtractorFactory implements FileMetadataEx
 
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target, String contentType) throws PluginException {
-    log.debug3("Fei: create CasaliniLibri2020SchemaHelper");
     return new CasaliniLibri2020SchemaHelper();
   }
 }
