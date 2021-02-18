@@ -30,7 +30,7 @@ in this Software without prior written authorization from Stanford University.
 
  */
 
-package org.lockss.plugin.pubfactory.berghahn;
+package org.lockss.plugin.pubfactory;
 
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadataExtractor;
@@ -54,9 +54,9 @@ import java.util.regex.Pattern;
  * https://www.berghahnjournals.com/view/journals/boyhood-studies/10/1/bhs100101.xml?&pdfVersion=true (WHAAA?)
  */
 
-public class BerghahnArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
+public class PubfactoryArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
 
-  private static final Logger log = Logger.getLogger(BerghahnArticleIteratorFactory.class);
+  private static final Logger log = Logger.getLogger(PubfactoryArticleIteratorFactory.class);
 
   // don't set the ROOT_TEMPLATE - it is just base_url
 
