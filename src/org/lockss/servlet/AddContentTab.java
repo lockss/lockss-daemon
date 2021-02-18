@@ -664,15 +664,17 @@ public class AddContentTab extends LockssServlet {
                     ? HtmlUtil.htmlEncode(aval.getDisplayString())
                     : getDisplayString1(aval.getValue(), type);
             String color = aval.getColor();
-            String footnote = aval.getFootnote();
+            List<String> footnotes = aval.getFootnotes();
             if (color != null) {
                 str = "<font color=" + color + ">" + str + "</font>";
             }
             if (aval.getBold()) {
                 str = "<b>" + str + "</b>";
             }
-            if (footnote != null) {
-                str = str + addFootnote(footnote);
+            boolean notFirst = false;
+            for (String foot : footnotes) {
+              str = str + addFootnote(foot, notFirst);
+              notFirst = true;
             }
             return str;
         } else {

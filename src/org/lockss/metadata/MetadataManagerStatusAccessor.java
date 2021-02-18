@@ -537,7 +537,7 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
         if (auId != null) {
           if ((indexStatus == ReindexingStatus.Success) && auNoSubstance) {
             status =
-              new StatusTable.DisplayedValue(status).setFootnote(
+              new StatusTable.DisplayedValue(status).addFootnote(
                 "Though metadata indexing finished successfully, no"
               + " article files containing substantial content were found");
           }
