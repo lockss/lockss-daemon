@@ -70,25 +70,25 @@ public class LockssDaemon extends LockssApp {
 
   private static final String PREFIX = Configuration.PREFIX + "daemon.";
 
-  public static final JavaVersion MIN_JAVA_VERSION = JavaVersion.JAVA_1_7;
+  public static final JavaVersion MIN_JAVA_VERSION = JavaVersion.JAVA_1_8;
 
-/**
- * LOCKSS is a trademark of Stanford University.  Stanford hereby grants you
- * limited permission to use the LOCKSS trademark only in connection with
- * this software, including in the User-Agent HTTP request header generated
- * by the software and provided to web servers, provided the software or any
- * output of the software is used solely for the purpose of populating a
- * certified LOCKSS cache from a web server that has granted permission for
- * the LOCKSS system to collect material.  You may not remove or delete any
- * reference to LOCKSS in the software indicating that LOCKSS is a mark owned
- * by Stanford University.  No other permission is granted you to use the
- * LOCKSS trademark or any other trademark of Stanford University.  Without
- * limiting the foregoing, if you adapt or use the software for any other
- * purpose, you must delete all references to or uses of the LOCKSS mark from
- * the software.  All good will associated with your use of the LOCKSS mark
- * shall inure to the benefit of Stanford University.
- */
-private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
+  /**
+   * LOCKSS is a trademark of Stanford University.  Stanford hereby grants you
+   * limited permission to use the LOCKSS trademark only in connection with
+   * this software, including in the User-Agent HTTP request header generated
+   * by the software and provided to web servers, provided the software or any
+   * output of the software is used solely for the purpose of populating a
+   * certified LOCKSS cache from a web server that has granted permission for
+   * the LOCKSS system to collect material.  You may not remove or delete any
+   * reference to LOCKSS in the software indicating that LOCKSS is a mark owned
+   * by Stanford University.  No other permission is granted you to use the
+   * LOCKSS trademark or any other trademark of Stanford University.  Without
+   * limiting the foregoing, if you adapt or use the software for any other
+   * purpose, you must delete all references to or uses of the LOCKSS mark from
+   * the software.  All good will associated with your use of the LOCKSS mark
+   * shall inure to the benefit of Stanford University.
+   */
+  private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
 
   public final static String PARAM_TESTING_MODE = PREFIX + "testingMode";
 
