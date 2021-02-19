@@ -5,11 +5,11 @@
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.janeway.iowastateuniversitydigitalpress.ClockssIowaStateUniversityDigitalPressPlugin</string>
+    <string>org.lockss.plugin.janeway.openlibraryhumanities.ClockssOpenLibraryHumanitiesPlugin</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Iowa State University Digital Press Plugin (CLOCKSS)</string>
+    <string>Open Library of Humanities Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -27,13 +27,19 @@
     <string>plugin_publishing_platform</string>
     <string>Janway</string>
   </entry>
+  <!--
   <entry>
     <string>au_permission_url</string>
     <string>"%sfarmreports/plugins/clockss", base_url</string>
   </entry>
+  -->
+  <entry>
+    <string>au_permission_url</string>
+    <string>"https://www.iastatedigitalpress.com/farmreports/plugins/clockss/"</string>
+  </entry>
   <entry>
     <string>au_start_url</string>
-    <!--https://www.iastatedigitalpress.com/aglawdigest/api/oai?verb=ListRecords&metadataPrefix=oai_dc&from=2019-01-01&until=2019-12-31-->
-    <string>"%s%s/api/oai?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;from=%d-01-01&amp;until=%d-12-31", base_url, journal_id, year, year</string>
+    <!--https://orbit.openlibhums.org/api/oai/?verb=ListRecords&metadataPrefix=oai_dc&from=2019-01-01&until=2019-12-31-->
+    <string>"%sapi/oai?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;from=%d-01-01&amp;until=%d-12-31", base_url, year, year</string>
   </entry>
 </map>
