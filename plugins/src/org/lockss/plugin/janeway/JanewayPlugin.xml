@@ -54,7 +54,7 @@
         <description>Identifier for journal (often used as part of file names)</description>
         <type>1</type>
         <size>40</size>
-        <definitional>true</definitional>
+        <definitional>false</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
@@ -87,15 +87,8 @@
     <string>"Janeway Plugin, Base URL %s, Journal ID %s, Year %d, OAI Granularity %s", base_url, journal_id, year, oai_granularity</string>
   </entry>
   <entry>
-    <string>au_start_url</string>
-    <!--https://www.iastatedigitalpress.com/aglawdigest/api/oai?verb=ListRecords&metadataPrefix=oai_dc&from=2019-01-01&until=2019-12-31-->
-    <!--https://orbit.openlibhums.org/api/oai/?verb=ListRecords&metadataPrefix=oai_dc&from=2019-01-01&until=2019-12-31-->
-    <string>"%s%s/api/oai?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;from=%d-01-01&amp;until=%d-12-31", base_url, journal_id, year, year</string>
-  </entry>
-  <entry>
     <string>au_crawlrules</string>
     <list>
-      <!--https://demojournal.janeway.systems/api/oai/ -->
       <string>2,"https://twitter.com"</string>
       <string>2,"https://plus.google.com"</string>
       <string>2,"https://www.linkedin.com"</string>
@@ -104,8 +97,8 @@
       <string>1,"https://use.typekit.net/.*\.js"</string>
       <string>1,"https://maxcdn.bootstrapcdn.com/.+\.css"</string>
       <!--exclude the following link, so it will not overcrawl-->
-      <string>2, "%s%s/issue/[^/]+/info/", base_url, journal_id</string>
-      <string>1, "%s%s/article/", base_url, journal_id</string>
+      <string>2, "%s([^/]+/)?issue/[^/]+/info/", base_url</string>
+      <string>1, "%s([^/]+/)?article/", base_url</string>
       <string>1, "%s(static|media/cover_images)/", base_url</string>
     </list>
   </entry>
@@ -165,6 +158,7 @@
       <string>"cdnjs\.cloudflare\.com"</string>
       <string>"use\.typekit\.net"</string>
       <string>"maxcdn\.bootstrapcdn\.com"</string>
+      <string>"www\.iastatedigitalpress\.com"</string>
     </list>
   </entry>
 </map>
