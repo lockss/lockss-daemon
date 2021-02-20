@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2018, Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University,
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification,
@@ -33,16 +33,15 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 package org.lockss.tdb;
 
 import java.io.*;
-import java.text.DateFormat;
+import java.text.*;
 import java.util.*;
+import java.util.function.Function;
 import java.util.regex.*;
 
 import org.apache.commons.cli.*;
-import org.apache.commons.lang3.StringEscapeUtils;
-import org.apache.commons.lang3.text.translate.*;
+import org.apache.commons.text.StringEscapeUtils;
+import org.apache.commons.text.translate.*;
 import org.lockss.tdb.AntlrUtil.SyntaxError;
-
-import com.ibm.icu.text.Transliterator;
 
 public class TdbXml {
 
@@ -53,7 +52,7 @@ public class TdbXml {
    * 
    * @since 1.68
    */
-  public static final String VERSION = "[TdbXml:0.2.7]";
+  public static final String VERSION = "[TdbXml:0.2.8]";
   
   /**
    * <p>
@@ -181,21 +180,29 @@ public class TdbXml {
 
   /**
    * <p>
-   * An ICU transliterator that removes accented characters.
+   * A replacement for the ICU4J transliterator
+   * {@code Transliterator.getInstance("NFD; [:Nonspacing Mark:] Remove; NFC")}.
    * </p>
    *
    * @since 1.67
+   * @see Normalizer#normalize(CharSequence, java.text.Normalizer.Form)
+   * @see Normalizer.Form.NFD
+   * @see Normalizer.Form.NFC
+   * @see Character#NON_SPACING_MARK
    */
-  protected static final Transliterator unicodeNormalizer =
-      Transliterator.getInstance("NFD; [:Nonspacing Mark:] Remove; NFC");
+  protected static final Function<String, String> unicodeNormalizer =
+      (s) -> Normalizer.normalize(Normalizer.normalize(s, Normalizer.Form.NFD).replaceAll("\\p{gc=Mn}", ""), Normalizer.Form.NFC);
 
   /**
    * <p>
-   * A Commons Lang translator that escape XML and also numerically encodes
+   * A Commons Text translator that escape XML and also numerically encodes
    * characters starting at <code>0x7f</code>.
    * </p>
    * 
    * @since 1.67
+   * @see StringEscapeUtils#ESCAPE_XML10
+   * @see CharSequenceTranslator#with(CharSequenceTranslator...)
+   * @see NumericEntityEscaper#above(int)
    */
   protected static final CharSequenceTranslator xmlEscaper =
       StringEscapeUtils.ESCAPE_XML10.with(NumericEntityEscaper.above(0x7e));
@@ -553,7 +560,7 @@ public class TdbXml {
     ausb.append(plugin.substring(plugin.lastIndexOf('.') + 1));
     Matcher mat = AU_SUFFIX.matcher(auName);
     if (mat.find()) {
-      ausb.append(AU_UNDESIRABLE.matcher(unicodeNormalizer.transliterate(auName.substring(0, mat.start()))).replaceAll(""));
+      ausb.append(AU_UNDESIRABLE.matcher(unicodeNormalizer.apply(auName.substring(0, mat.start()))).replaceAll(""));
       ausb.append(mat.group(1));
       String year = mat.group(4);
       if (year != null) {

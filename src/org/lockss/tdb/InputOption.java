@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2018, Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University,
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification,
@@ -157,10 +157,10 @@ public class InputOption {
 	  File aFile = new File(oneArg);
 	  if (aFile.isDirectory()) {
 		  List<String> retList = new ArrayList<String>();
-		  Collection<File> tdbfiles = FileUtils.listFiles(aFile, TDBSUFFIX, true); /*recursive*/
-		  for (File tdbfile : tdbfiles) {
+		  for (File tdbfile : FileUtils.listFiles(aFile, TDBSUFFIX, true)) {
 			  retList.add(tdbfile.toString());
 		  }
+		  retList.sort(String::compareTo);
 		  return retList;
 	  }
 	  return Arrays.asList(oneArg);
