@@ -35,6 +35,7 @@ package org.lockss.protocol;
 import java.io.*;
 import java.util.*;
 
+import org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream;
 import org.lockss.test.LockssTestCase;
 import org.lockss.util.*;
 
@@ -61,7 +62,7 @@ public class TestDiskVoteBlocks extends LockssTestCase {
     
     List voteBlockList = V3TestUtils.makeVoteBlockList(blockCount);
 
-    ByteArrayOutputStream bos = new ByteArrayOutputStream();
+    UnsynchronizedByteArrayOutputStream bos = new UnsynchronizedByteArrayOutputStream();
     DataOutputStream dos = new DataOutputStream(bos);
     
     for (Iterator iter = voteBlockList.iterator(); iter.hasNext(); ) {

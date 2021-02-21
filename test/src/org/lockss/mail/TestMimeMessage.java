@@ -35,6 +35,8 @@ package org.lockss.mail;
 import java.io.*;
 import java.util.*;
 import java.net.*;
+
+import org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream;
 import org.apache.oro.text.regex.*;
 import javax.mail.*;
 import javax.mail.internet.*;
@@ -63,7 +65,7 @@ public class TestMimeMessage extends LockssTestCase {
 
   String toString(MailMessage msg) {
     try {
-      ByteArrayOutputStream baos = new ByteArrayOutputStream();
+      UnsynchronizedByteArrayOutputStream baos = new UnsynchronizedByteArrayOutputStream();
       BufferedOutputStream out = new BufferedOutputStream(baos);
       msg.writeData(out);
       out.flush();

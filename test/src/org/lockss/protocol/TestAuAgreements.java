@@ -36,6 +36,7 @@ import org.lockss.test.*;
 import org.lockss.util.*;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream;
 
 import java.io.*;
 import java.util.*;
@@ -295,7 +296,7 @@ public class TestAuAgreements extends LockssTestCase {
       };
 
     AuAgreements auAgreements = AuAgreements.make(hRep, idMgr);
-    ByteArrayOutputStream out = new ByteArrayOutputStream();
+    UnsynchronizedByteArrayOutputStream out = new UnsynchronizedByteArrayOutputStream();
     auAgreements.writeTo(hRep, out);
 
     // The content was copied into the OutputStream.

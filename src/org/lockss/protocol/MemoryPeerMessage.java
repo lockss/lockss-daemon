@@ -34,6 +34,8 @@ package org.lockss.protocol;
 
 import java.io.*;
 import java.util.*;
+
+import org.apache.commons.io.output.*;
 import org.lockss.util.*;
 
 /** Implementation of PeerMessage that stores its data in an array
@@ -90,12 +92,16 @@ class MemoryPeerMessage extends PeerMessage {
     return this.toString("Memory");
   }
 
-  private class MsgOutputStream extends ByteArrayOutputStream {
+  private class MsgOutputStream extends ProxyOutputStream {
+    
+    public MsgOutputStream() {
+      super(new UnsynchronizedByteArrayOutputStream());
+    }
 
     public synchronized void close() throws IOException {
       if (isOutputOpen) {
 	super.close();
-	payload = toByteArray();
+	payload = ((UnsynchronizedByteArrayOutputStream)out).toByteArray();
 	isOutputOpen = false;
       }
     }

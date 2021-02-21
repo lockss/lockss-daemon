@@ -33,6 +33,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.devtools;
 import java.io.*;
 import java.util.*;
+
+import org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
@@ -292,7 +294,7 @@ public class TestFilterRunner extends LockssTestCase {
 //     try {
 //       FilterRunner.filterSingleFile(null,
 // 				    new StringReader("blah"),
-// 				    new ByteArrayOutputStream());
+// 				    new UnsynchronizedByteArrayOutputStream());
 //       fail("Calling filterSingleFile with a null FilterFactory "
 // 	   +"should have thrown");
 //     } catch (IllegalArgumentException e) {
@@ -303,7 +305,7 @@ public class TestFilterRunner extends LockssTestCase {
 //     try {
 //       FilterRunner.filterSingleFile(new MockFilterFactory(),
 // 				    null,
-// 				    new ByteArrayOutputStream());
+// 				    new UnsynchronizedByteArrayOutputStream());
 //       fail("Calling filterSingleFile with a null Reader "
 // 	   +"should have thrown");
 //     } catch (IllegalArgumentException e) {

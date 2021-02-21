@@ -34,6 +34,7 @@ package org.lockss.devtools;
 import java.io.*;
 import java.util.*;
 
+import org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.config.Tdb;
@@ -122,7 +123,7 @@ public class TestTdbDiff extends LockssTestCase {
     TdbDiff tdbDiff = new TdbDiff(pluginMgr, tdb1, tdb2);
     tdbDiff.showFields = true;
     tdbDiff.showAll = true;
-    ByteArrayOutputStream bos = new ByteArrayOutputStream();
+    UnsynchronizedByteArrayOutputStream bos = new UnsynchronizedByteArrayOutputStream();
     PrintStream ps = new PrintStream(bos);
     tdbDiff.printTdbDiffsByAu(ps);
     String output = bos.toString();

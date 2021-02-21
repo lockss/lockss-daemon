@@ -39,6 +39,7 @@ import java.util.*;
 
 import junit.framework.Test;
 
+import org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream;
 import org.lockss.config.CurrentConfig;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
@@ -504,7 +505,7 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
     filePath += HistoryRepositoryImpl.AU_FILE_NAME;
     File xmlFile = new File(filePath);
     FileInputStream fis = new FileInputStream(xmlFile);
-    ByteArrayOutputStream baos = new ByteArrayOutputStream();
+    UnsynchronizedByteArrayOutputStream baos = new UnsynchronizedByteArrayOutputStream();
     StreamUtil.copy(fis, baos);
     fis.close();
     String expectedStr = baos.toString();
@@ -555,7 +556,7 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
     assertEquals(ListUtil.list("http://foo/"), auState.getCdnStems());
 
     fis = new FileInputStream(xmlFile);
-    baos = new ByteArrayOutputStream(expectedStr.length());
+    baos = new UnsynchronizedByteArrayOutputStream(expectedStr.length());
     StreamUtil.copy(fis, baos);
     fis.close();
     log.info(baos.toString());
@@ -607,7 +608,7 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
 			  repository);
     repository.storeAuState(auState);
     fis = new FileInputStream(xmlFile);
-    baos = new ByteArrayOutputStream(expectedStr.length());
+    baos = new UnsynchronizedByteArrayOutputStream(expectedStr.length());
     StreamUtil.copy(fis, baos);
     fis.close();
     assertEquals(expectedStr, baos.toString());

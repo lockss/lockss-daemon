@@ -35,6 +35,8 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 import java.util.zip.*;
+
+import org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream;
 import org.lockss.util.*;
 
 /**
@@ -115,8 +117,8 @@ public class LockssReceivedDatagram extends LockssDatagram {
       throws IOException {
     byte[] data = packet.getData();
     InputStream gzin = new GZIPInputStream(new ByteArrayInputStream(data));
-    ByteArrayOutputStream baos =
-      new ByteArrayOutputStream(packet.getLength() * 4);
+    UnsynchronizedByteArrayOutputStream baos =
+      new UnsynchronizedByteArrayOutputStream(packet.getLength() * 4);
     byte[] header = new byte[HEADER_LENGTH];
     int hlen = gzin.read(header, 0, HEADER_LENGTH);
     if (hlen != HEADER_LENGTH) {

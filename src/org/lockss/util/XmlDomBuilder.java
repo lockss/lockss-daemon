@@ -36,6 +36,7 @@ import java.io.*;
 import javax.xml.parsers.*;
 
 import org.w3c.dom.*;
+import org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream;
 import org.apache.xml.serialize.*;
 import org.xml.sax.InputSource;
 
@@ -381,11 +382,11 @@ public class XmlDomBuilder {
    * @throws XmlDomException
    */
   public static String serialize(Document document) throws XmlDomException {
-    ByteArrayOutputStream stream = null;
+    UnsynchronizedByteArrayOutputStream stream = null;
     Writer writer = null;
 
     try {
-      stream = new ByteArrayOutputStream();
+      stream = new UnsynchronizedByteArrayOutputStream();
       writer = new OutputStreamWriter(stream, ENCODING);
       serialize(document, writer);
       return stream.toString();

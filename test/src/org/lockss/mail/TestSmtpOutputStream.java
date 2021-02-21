@@ -33,6 +33,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.mail;
 
 import java.io.*;
+
+import org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream;
 import org.lockss.test.*;
 import org.lockss.util.*;
 
@@ -46,7 +48,7 @@ public class TestSmtpOutputStream extends LockssTestCase {
    */
   void assertSmtpOutput(String exp, String in, int bufsize)
       throws IOException {
-    ByteArrayOutputStream baos = new ByteArrayOutputStream();
+    UnsynchronizedByteArrayOutputStream baos = new UnsynchronizedByteArrayOutputStream();
     SmtpOutputStream os = new SmtpOutputStream(baos);
     byte[] b = in.getBytes(Constants.DEFAULT_ENCODING);
     if (bufsize == 0) {

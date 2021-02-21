@@ -33,6 +33,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 
 import java.io.*;
+
+import org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream;
 import org.lockss.test.*;
 import java.net.Socket;
 
@@ -52,7 +54,7 @@ public class TestSmtpMailer extends LockssTestCase {
   }
 
   public void testSendMail() throws Exception {
-    ByteArrayOutputStream baos = new ByteArrayOutputStream(128);
+    UnsynchronizedByteArrayOutputStream baos = new UnsynchronizedByteArrayOutputStream(128);
     String responses = "220\n250\n250\n250\n354\n250\n";
     ByteArrayInputStream bais = new ByteArrayInputStream(responses.getBytes());
     BufferedReader rdr = new BufferedReader(new InputStreamReader(bais));

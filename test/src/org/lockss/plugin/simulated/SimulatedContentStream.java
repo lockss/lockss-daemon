@@ -31,6 +31,9 @@ package org.lockss.plugin.simulated;
 
 import java.io.*;
 import java.util.*;
+
+import org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream;
+
 import java.lang.reflect.*;
 
 /**
@@ -56,7 +59,7 @@ class SimulatedContentStream extends BufferedInputStream {
 
   protected byte[] getStreamContents(InputStream in) {
     int b;
-    ByteArrayOutputStream str = new ByteArrayOutputStream();
+    UnsynchronizedByteArrayOutputStream str = new UnsynchronizedByteArrayOutputStream();
     try {
       while ((b=in.read())!=-1) {
         str.write(b);

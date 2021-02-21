@@ -32,6 +32,8 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 import java.io.*;
+
+import org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream;
 import org.lockss.test.*;
 
 public class TestReaderInputStream extends LockssTestCase {
@@ -163,7 +165,7 @@ public class TestReaderInputStream extends LockssTestCase {
   }
 
   private void compareWithWriter(String s, String encoding) throws Exception {
-    ByteArrayOutputStream baos = new ByteArrayOutputStream();
+    UnsynchronizedByteArrayOutputStream baos = new UnsynchronizedByteArrayOutputStream();
     Writer wrtr = new OutputStreamWriter(baos, encoding);
     wrtr.write(s);
     wrtr.flush();

@@ -34,6 +34,8 @@ package org.lockss.plugin.simulated;
 
 import java.io.*;
 import java.net.*;
+
+import org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
@@ -374,7 +376,7 @@ public class TestSimulatedContentGenerator extends LockssTestCase {
     File child = new File(branchName, SimulatedContentGenerator.DIR_CONTENT_NAME);
     assertTrue(child.exists());
     FileInputStream fis = new FileInputStream(child);
-    ByteArrayOutputStream baos = new ByteArrayOutputStream(30);
+    UnsynchronizedByteArrayOutputStream baos = new UnsynchronizedByteArrayOutputStream(30);
     StreamUtil.copy(fis, baos);
     fis.close();
     assertEquals(scgen.getBranchContent(scgen.getDirectoryName(1),
@@ -392,7 +394,7 @@ public class TestSimulatedContentGenerator extends LockssTestCase {
     child = new File(branchName, SimulatedContentGenerator.DIR_CONTENT_NAME);
     assertTrue(child.exists());
     fis = new FileInputStream(child);
-    baos = new ByteArrayOutputStream(30);
+    baos = new UnsynchronizedByteArrayOutputStream(30);
     StreamUtil.copy(fis, baos);
     fis.close();
     assertEquals(scgen.getBranchContent(scgen.getDirectoryName(2),
@@ -405,7 +407,7 @@ public class TestSimulatedContentGenerator extends LockssTestCase {
     child = new File(branchName, SimulatedContentGenerator.DIR_CONTENT_NAME);
     assertTrue(child.exists());
     fis = new FileInputStream(child);
-    baos = new ByteArrayOutputStream(30);
+    baos = new UnsynchronizedByteArrayOutputStream(30);
     StreamUtil.copy(fis, baos);
     fis.close();
     assertEquals(scgen.getBranchContent(scgen.getDirectoryName(1),
@@ -442,7 +444,7 @@ public class TestSimulatedContentGenerator extends LockssTestCase {
   private String getFileContent(File file) throws Exception {
     return StringUtil.fromFile(file);
 //     FileInputStream fis = new FileInputStream(file);
-//     ByteArrayOutputStream baos = new ByteArrayOutputStream();
+//     UnsynchronizedByteArrayOutputStream baos = new UnsynchronizedByteArrayOutputStream();
 //     StreamUtil.copy(fis, baos);
 //     fis.close();
 //     String content = new String(baos.toByteArray());

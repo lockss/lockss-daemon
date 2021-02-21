@@ -41,7 +41,7 @@ import junit.framework.*;
 
 import org.lockss.protocol.BlockingPeerChannel.ChannelState;
 import org.lockss.protocol.BlockingStreamComm.PeerData;
-
+import org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
@@ -530,7 +530,7 @@ public class TestBlockingStreamComm extends LockssTestCase {
 
   public void testWriteHeader() throws IOException {
     setupComm1();
-    ByteArrayOutputStream outs = new ByteArrayOutputStream();
+    UnsynchronizedByteArrayOutputStream outs = new UnsynchronizedByteArrayOutputStream();
     BlockingPeerChannel chan = new BlockingPeerChannel(comm1, pid1,
 						       null, outs);
     chan.writeHeader(5, 16, 34);

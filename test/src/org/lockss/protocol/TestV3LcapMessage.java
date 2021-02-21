@@ -41,6 +41,7 @@ import java.io.*;
 import java.util.*;
 
 import org.lockss.test.*;
+import org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream;
 import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.poller.*;
@@ -217,7 +218,7 @@ public class TestV3LcapMessage extends LockssTestCase {
 		 src.getEstimatedEncodedLength());
     InputStream in = copy.getRepairDataInputStream();
     assertTrue(in+"", in instanceof ByteArrayInputStream);
-    ByteArrayOutputStream out = new ByteArrayOutputStream();
+    UnsynchronizedByteArrayOutputStream out = new UnsynchronizedByteArrayOutputStream();
     StreamUtil.copy(in, out);
     byte[] repairCopy = out.toByteArray();
     assertEquals(repairData, repairCopy);
@@ -241,7 +242,7 @@ public class TestV3LcapMessage extends LockssTestCase {
 		 src.getEstimatedEncodedLength());
     InputStream in = copy.getRepairDataInputStream();
     assertTrue(in+"", in instanceof FileInputStream);
-    ByteArrayOutputStream out = new ByteArrayOutputStream();
+    UnsynchronizedByteArrayOutputStream out = new UnsynchronizedByteArrayOutputStream();
     StreamUtil.copy(in, out);
     byte[] repairCopy = out.toByteArray();
     assertEquals(repairData, repairCopy);

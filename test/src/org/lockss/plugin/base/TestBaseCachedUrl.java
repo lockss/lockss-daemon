@@ -38,6 +38,7 @@ import java.util.*;
 import java.security.MessageDigest;
 import junit.framework.*;
 import org.lockss.plugin.*;
+import org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.test.*;
@@ -805,7 +806,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
 						 InputStream in,
 						 String encoding) {
       in.mark(mark);
-      ByteArrayOutputStream baos = new ByteArrayOutputStream();
+      UnsynchronizedByteArrayOutputStream baos = new UnsynchronizedByteArrayOutputStream();
       try {
 	StreamUtil.copy(in, baos, resetAt);
 	in.reset();

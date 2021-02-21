@@ -37,6 +37,7 @@ import java.util.*;
 import java.net.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
+import org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
@@ -46,7 +47,7 @@ import org.lockss.plugin.*;
  */
 public class TestSmtpClient extends LockssTestCase {
   MyMockSmtpClient client;
-  ByteArrayOutputStream baos = new ByteArrayOutputStream(128);
+  UnsynchronizedByteArrayOutputStream baos = new UnsynchronizedByteArrayOutputStream(128);
   PrintStream pstrm;
 
   public void setUp() throws Exception {
@@ -54,7 +55,7 @@ public class TestSmtpClient extends LockssTestCase {
     ConfigurationUtil.setFromArgs(ConfigManager.PARAM_PLATFORM_FQDN,
 				  "foohost");
     client = new MyMockSmtpClient("hostx");
-    baos = new ByteArrayOutputStream(128);
+    baos = new UnsynchronizedByteArrayOutputStream(128);
     pstrm = new PrintStream(baos);
   }
 
@@ -157,7 +158,7 @@ public class TestSmtpClient extends LockssTestCase {
     String host;
     int port;
     String responses;
-    ByteArrayOutputStream baos;
+    UnsynchronizedByteArrayOutputStream baos;
     boolean isOpen;
     int nThrow = -1;
 
@@ -175,7 +176,7 @@ public class TestSmtpClient extends LockssTestCase {
       log.debug3("openServer()");
       this.host = server;
       this.port = port;
-      baos = new ByteArrayOutputStream(1024);
+      baos = new UnsynchronizedByteArrayOutputStream(1024);
       serverSocket = new MyMockSocket();
       serverOutput = new PrintStream(baos);
       ByteArrayInputStream bais = new ByteArrayInputStream("".getBytes());

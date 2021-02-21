@@ -39,6 +39,7 @@ import java.text.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.mail.*;
+import org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
@@ -185,7 +186,7 @@ public class TestAlertActionMail extends LockssTestCase {
 
   String toString(MailMessage msg) {
     try {
-      ByteArrayOutputStream baos = new ByteArrayOutputStream();
+      UnsynchronizedByteArrayOutputStream baos = new UnsynchronizedByteArrayOutputStream();
       msg.writeData(baos);
       return baos.toString();
     } catch (IOException e) {

@@ -35,6 +35,7 @@ import java.io.*;
 import java.net.DatagramPacket;
 import java.util.zip.GZIPOutputStream;
 
+import org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream;
 import org.lockss.config.*;
 import org.lockss.util.*;
 
@@ -137,7 +138,7 @@ public class LockssDatagram {
    */
   public byte[] encodeCompressedPacketData()
       throws IOException {
-    ByteArrayOutputStream baos = new ByteArrayOutputStream();
+    UnsynchronizedByteArrayOutputStream baos = new UnsynchronizedByteArrayOutputStream();
     OutputStream gzout = new GZIPOutputStream(baos);
     byte[] hdrData = new byte[HEADER_LENGTH];
     ByteArray.encodeInt(protocol, hdrData, 0);

@@ -40,6 +40,7 @@ import org.lockss.test.*;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.filter.*;
+import org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream;
 import org.lockss.crawler.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
@@ -1646,7 +1647,7 @@ public class TestBlockHasher extends LockssTestCase {
     public InputStream createFilteredInputStream(ArchivalUnit au,
 						 InputStream in,
 						 String encoding) {
-      ByteArrayOutputStream baos = new ByteArrayOutputStream();
+      UnsynchronizedByteArrayOutputStream baos = new UnsynchronizedByteArrayOutputStream();
       try {
 	StreamUtil.copy(in, baos, len);
       } catch (IOException e) {
@@ -1669,7 +1670,7 @@ public class TestBlockHasher extends LockssTestCase {
 						 InputStream in,
 						 String encoding) {
       in.mark(mark);
-      ByteArrayOutputStream baos = new ByteArrayOutputStream();
+      UnsynchronizedByteArrayOutputStream baos = new UnsynchronizedByteArrayOutputStream();
       try {
 	StreamUtil.copy(in, baos, resetAt);
 	in.reset();

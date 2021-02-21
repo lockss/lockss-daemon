@@ -37,6 +37,8 @@ import java.io.OutputStreamWriter;
 import java.io.IOException;
 import java.util.BitSet;
 
+import org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream;
+
 public class PropKeyEncoder {
   static BitSet dontNeedEncoding;
   static final int caseDiff = ('a' - 'A');
@@ -75,7 +77,7 @@ public class PropKeyEncoder {
   public static String encode(String s) {
     int maxBytesPerChar = 10;
     StringBuffer out = new StringBuffer(s.length());
-    ByteArrayOutputStream buf = new ByteArrayOutputStream(maxBytesPerChar);
+    UnsynchronizedByteArrayOutputStream buf = new UnsynchronizedByteArrayOutputStream(maxBytesPerChar);
     OutputStreamWriter writer = new OutputStreamWriter(buf);
 
     for (int i = 0, len = s.length(); i < len; i++) {

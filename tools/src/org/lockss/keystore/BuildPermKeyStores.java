@@ -39,6 +39,7 @@ import java.security.*;
 import java.security.cert.*;
 import javax.net.ssl.*;
 
+import org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream;
 import org.lockss.util.KeyStoreUtil.CertAndKeyGen;
 import org.lockss.util.KeyStoreUtil.X500Name;
 
@@ -114,12 +115,12 @@ public class BuildPermKeyStores {
 		rand[i] += 32;
 	      }
 	    }
-	    ByteArrayOutputStream baos = new ByteArrayOutputStream();
+	    UnsynchronizedByteArrayOutputStream baos = new UnsynchronizedByteArrayOutputStream();
 	    baos.write(rand, 0, rand.length);
 	    try {
 	        ret = baos.toString("ASCII");
 	    } catch (UnsupportedEncodingException ex) {
-		OUTerror("ByteArrayOutputStream.toString threw: " + ex);
+		OUTerror("UnsynchronizedByteArrayOutputStream.toString threw: " + ex);
 	    }
 	    OUTdebug("password is " + (ret == null ? "null" : ret));
 	    return (ret);

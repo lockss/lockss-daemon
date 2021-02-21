@@ -36,6 +36,7 @@ import java.io.*;
 import java.util.*;
 import java.lang.reflect.*;
 
+import org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream;
 import org.lockss.test.*;
 
 /**
@@ -544,7 +545,7 @@ public class TestStringUtil extends LockssTestCase {
 
   public void testToOutputStream() throws Exception {
     String s = "asdfjsfd";
-    ByteArrayOutputStream baos = new ByteArrayOutputStream();
+    UnsynchronizedByteArrayOutputStream baos = new UnsynchronizedByteArrayOutputStream();
     StringUtil.toOutputStream(baos, s);
     assertEquals(s, baos.toString());
   }

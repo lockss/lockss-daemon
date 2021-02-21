@@ -39,7 +39,7 @@ import javax.xml.parsers.*;
 
 import org.w3c.dom.*;
 import org.xml.sax.*;
-
+import org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream;
 import org.apache.xerces.dom.*;
 import org.apache.xml.serialize.*;
 
@@ -294,11 +294,11 @@ public class TestXmlUtils extends LockssTestCase implements ApiParameters {
    */
   public void testSerializeToStream() throws Exception {
 
-    ByteArrayOutputStream	stream;
+    UnsynchronizedByteArrayOutputStream	stream;
     Document newDoc;
     Element root;
 
-    stream = new ByteArrayOutputStream();
+    stream = new UnsynchronizedByteArrayOutputStream();
     XmlUtils.serialize(document, stream);
 
     newDoc = parse(new String(stream.toByteArray()));

@@ -37,6 +37,8 @@ import java.nio.channels.*;
 import java.nio.file.*;
 import java.net.*;
 import java.util.*;
+
+import org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream;
 import org.apache.commons.lang3.StringUtils;
 
 import org.lockss.test.*;
@@ -2608,7 +2610,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
   public static String getRNCContent(RepositoryNode.RepositoryNodeContents rnc)
       throws IOException {
     InputStream is = rnc.getInputStream();
-    OutputStream baos = new ByteArrayOutputStream(20);
+    OutputStream baos = new UnsynchronizedByteArrayOutputStream(20);
     StreamUtil.copy(is, baos);
     is.close();
     String resultStr = baos.toString();

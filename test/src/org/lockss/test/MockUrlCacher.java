@@ -39,6 +39,7 @@ import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream;
 import org.lockss.crawler.*;
 
 /**
@@ -167,7 +168,7 @@ public class MockUrlCacher implements UrlCacher {
       }
     }
     if (isReadContent) {
-      ByteArrayOutputStream baos = new ByteArrayOutputStream();
+      UnsynchronizedByteArrayOutputStream baos = new UnsynchronizedByteArrayOutputStream();
       long bytes = StreamUtil.copy(input, baos);
       logger.debug3("Stored " + bytes + " bytes");
       storedContent = baos.toByteArray();

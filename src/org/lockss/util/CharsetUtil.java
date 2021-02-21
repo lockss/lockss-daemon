@@ -39,6 +39,8 @@ import java.nio.charset.UnsupportedCharsetException;
 
 import com.ibm.icu.text.CharsetDetector;
 import com.ibm.icu.text.CharsetMatch;
+
+import org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream;
 import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.commons.lang3.tuple.Pair;
 
@@ -98,7 +100,7 @@ public class CharsetUtil {
   {
     if(!in.markSupported())
       throw new IllegalArgumentException("InputStream must support mark.");
-    ByteArrayOutputStream buffered = new ByteArrayOutputStream();
+    UnsynchronizedByteArrayOutputStream buffered = new UnsynchronizedByteArrayOutputStream();
     byte[] buf = new byte[inferCharsetBufSize];
     in.mark(inferCharsetBufSize + 1024);
     int len = StreamUtil.readBytes(in, buf, buf.length);
@@ -170,7 +172,7 @@ public class CharsetUtil {
     if (!CharsetUtil.inferCharset()) {
       return new InputStreamAndCharset(inStream, expectedCharset);
     }
-    ByteArrayOutputStream buffered = new ByteArrayOutputStream();
+    UnsynchronizedByteArrayOutputStream buffered = new UnsynchronizedByteArrayOutputStream();
     int len = 0;
     byte[] buf = new byte[inferCharsetBufSize];
     if(inStream != null) {

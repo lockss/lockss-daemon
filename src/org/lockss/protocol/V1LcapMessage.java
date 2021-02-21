@@ -30,7 +30,7 @@ import java.io.*;
 import java.util.*;
 
 import org.mortbay.util.B64Code;
-
+import org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream;
 import org.lockss.config.CurrentConfig;
 import org.lockss.poller.*;
 import org.lockss.util.*;
@@ -238,7 +238,7 @@ public class V1LcapMessage extends LcapMessage {
     byte[] hash_bytes = computeHash(prop_bytes);
     // build out the remaining packet
     int enc_len = prop_bytes.length + hash_bytes.length + 8; // msg header is 8 bytes
-    ByteArrayOutputStream baos = new ByteArrayOutputStream(enc_len);
+    UnsynchronizedByteArrayOutputStream baos = new UnsynchronizedByteArrayOutputStream(enc_len);
     DataOutputStream dos = new DataOutputStream(baos);
     dos.write(signature);
     dos.write(protocolByte[m_pollProtocol - 1]);

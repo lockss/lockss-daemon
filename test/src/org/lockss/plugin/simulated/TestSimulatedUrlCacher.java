@@ -37,6 +37,7 @@ import java.util.Properties;
 
 import org.lockss.test.*;
 import org.lockss.daemon.*;
+import org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream;
 import org.lockss.config.*;
 import org.lockss.repository.*;
 import org.lockss.plugin.*;
@@ -86,7 +87,7 @@ public class TestSimulatedUrlCacher extends LockssTestCase {
     SimulatedUrlCacher suc = new SimulatedUrlCacher(sau, ud, tempDirPath);
     suc.storeContent();
     InputStream is = suc.getCachedUrl().getUnfilteredInputStream();
-    ByteArrayOutputStream baos = new ByteArrayOutputStream(11);
+    UnsynchronizedByteArrayOutputStream baos = new UnsynchronizedByteArrayOutputStream(11);
     StreamUtil.copy(is, baos);
     is.close();
     assertEquals("test stream", baos.toString());

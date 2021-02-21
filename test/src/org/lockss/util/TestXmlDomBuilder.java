@@ -38,6 +38,7 @@ import javax.xml.parsers.DocumentBuilder;
 import org.lockss.test.LockssTestCase;
 
 import org.w3c.dom.*;
+import org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream;
 import org.apache.xml.serialize.*;
 
 public class TestXmlDomBuilder extends LockssTestCase {
@@ -121,7 +122,7 @@ public class TestXmlDomBuilder extends LockssTestCase {
   }
 
   public void testSerializeStream() throws Exception {
-    ByteArrayOutputStream baos = new ByteArrayOutputStream();
+    UnsynchronizedByteArrayOutputStream baos = new UnsynchronizedByteArrayOutputStream();
     XmlDomBuilder.serialize(document, baos);
 
     ByteArrayInputStream bais = new ByteArrayInputStream(baos.toByteArray());
@@ -131,7 +132,7 @@ public class TestXmlDomBuilder extends LockssTestCase {
   }
 
   public void testSerializeWriter() throws Exception {
-    ByteArrayOutputStream baos = new ByteArrayOutputStream();
+    UnsynchronizedByteArrayOutputStream baos = new UnsynchronizedByteArrayOutputStream();
     Writer writer = new OutputStreamWriter(baos);
     XmlDomBuilder.serialize(document, writer);
 

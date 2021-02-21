@@ -36,6 +36,8 @@ import java.io.*;
 import java.util.zip.*;
 //import java.io.ByteArrayInputStream;
 
+import org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream;
+
 /**
  * InputStream that supplies a deflated version of what it reads.  Currently
  * source must be a string. InputStream source requires a piped copy.
@@ -45,7 +47,7 @@ public class DeflatedInputStream extends InputStream {
   private byte[] bytes;
 
   public DeflatedInputStream(String srcStr) throws IOException {
-    ByteArrayOutputStream baos = new ByteArrayOutputStream();
+    UnsynchronizedByteArrayOutputStream baos = new UnsynchronizedByteArrayOutputStream();
     OutputStream os = baos;
     os = new DeflaterOutputStream(os);
     os.write(srcStr.getBytes());

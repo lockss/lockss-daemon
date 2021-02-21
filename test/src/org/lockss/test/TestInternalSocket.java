@@ -38,6 +38,7 @@ import java.net.*;
 import junit.framework.TestCase;
 import org.lockss.util.*;
 import org.lockss.util.Queue;
+import org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream;
 import org.lockss.test.*;
 
 
@@ -197,7 +198,7 @@ public class TestInternalSocket extends LockssTestCase {
     }
   }
   class SocketReader extends ServerThread {
-    ByteArrayOutputStream rcvd = new ByteArrayOutputStream();
+    UnsynchronizedByteArrayOutputStream rcvd = new UnsynchronizedByteArrayOutputStream();
     InputStream is;
     OutputStream os;
     String str;

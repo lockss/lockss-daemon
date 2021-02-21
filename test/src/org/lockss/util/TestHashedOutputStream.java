@@ -33,6 +33,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 import java.io.*;
 import java.security.*;
+
+import org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream;
 import org.lockss.test.*;
 
 public class TestHashedOutputStream extends LockssTestCase {
@@ -43,7 +45,7 @@ public class TestHashedOutputStream extends LockssTestCase {
 
   public void testNullArgumentsToConstructor() {
     MessageDigest md = makeMessageDigest();
-    OutputStream out = new ByteArrayOutputStream();
+    OutputStream out = new UnsynchronizedByteArrayOutputStream();
     try {
       new HashedOutputStream(null, md);
       fail("Calling the constructor with null OutputStream should throw");
@@ -61,7 +63,7 @@ public class TestHashedOutputStream extends LockssTestCase {
   }
 
   public void testWrite() throws IOException {
-    ByteArrayOutputStream out = new ByteArrayOutputStream();
+    UnsynchronizedByteArrayOutputStream out = new UnsynchronizedByteArrayOutputStream();
     MockMessageDigest md = makeMessageDigest();
     HashedOutputStream hos = new HashedOutputStream(out, md);
     hos.write('a');

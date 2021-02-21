@@ -35,6 +35,7 @@ package org.lockss.util;
 import java.io.*;
 import java.net.URL;
 
+import org.apache.commons.io.output.*;
 import org.apache.commons.lang3.StringUtils;
 import org.custommonkey.xmlunit.XMLTestCase;
 import org.custommonkey.xmlunit.XMLUnit;
@@ -139,7 +140,7 @@ public abstract class ObjectSerializerTester extends XMLTestCase {
                                          ObjectSerializer deserializer1,
                                          ObjectSerializer deserializer2)
               throws Exception {
-            ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+            UnsynchronizedByteArrayOutputStream outputStream = new UnsynchronizedByteArrayOutputStream();
             serializer.serialize(outputStream, original);
             result1 = serializer.deserialize(new ByteArrayInputStream(outputStream.toByteArray()));
             result2 = serializer.deserialize(new ByteArrayInputStream(outputStream.toByteArray()));
@@ -506,7 +507,7 @@ public abstract class ObjectSerializerTester extends XMLTestCase {
         // With an OutputStream
         new SerializeInspect() {
           public void doSomething(ObjectSerializer serializer) throws Exception {
-            ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+            UnsynchronizedByteArrayOutputStream outputStream = new UnsynchronizedByteArrayOutputStream();
             serializer.serialize(outputStream, original);
             result = new InputStreamReader(new ByteArrayInputStream(outputStream.toByteArray()));
           }
@@ -630,7 +631,7 @@ public abstract class ObjectSerializerTester extends XMLTestCase {
         // With an OutputStream
         new DoSomething() {
           public void doSomething(ObjectSerializer serializer) throws Exception {
-            serializer.serialize(new ByteArrayOutputStream() {
+            serializer.serialize(new ProxyOutputStream(new UnsynchronizedByteArrayOutputStream()) {
               public synchronized void write(byte[] b, int off, int len) {
                 throw new RuntimeException(new InterruptedIOException());
               }
@@ -715,13 +716,13 @@ public abstract class ObjectSerializerTester extends XMLTestCase {
         // With an OutputStream and a LockssSerializable
         new DoSomething() {
           public void doSomething(ObjectSerializer serializer) throws Exception {
-            serializer.serialize(new ByteArrayOutputStream(), (LockssSerializable)null);
+            serializer.serialize(new UnsynchronizedByteArrayOutputStream(), (LockssSerializable)null);
           }
         },
         // With an OutputStream and a Serializable
         new DoSomething() {
           public void doSomething(ObjectSerializer serializer) throws Exception {
-            serializer.serialize(new ByteArrayOutputStream(), (Serializable)null);
+            serializer.serialize(new UnsynchronizedByteArrayOutputStream(), (Serializable)null);
           }
         },
         // With a File and a LockssSerializable
@@ -861,7 +862,7 @@ public abstract class ObjectSerializerTester extends XMLTestCase {
           public void doRoundTrip(ObjectSerializer serializer,
                                   ObjectSerializer deserializer)
               throws Exception {
-            ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+            UnsynchronizedByteArrayOutputStream outputStream = new UnsynchronizedByteArrayOutputStream();
             serializer.serialize(outputStream, original);
             result = deserializer.deserialize(new ByteArrayInputStream(outputStream.toByteArray()));
           }

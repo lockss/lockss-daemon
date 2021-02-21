@@ -33,6 +33,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 
 import java.io.*;
+
+import org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream;
 import org.lockss.test.*;
 
 public class TestPrintStreamTarget extends LockssTestCase {
@@ -58,7 +60,7 @@ public class TestPrintStreamTarget extends LockssTestCase {
   }
 
   public void testOutputStringFormat(String timestampRE) {
-    ByteArrayOutputStream baos = new ByteArrayOutputStream();
+    UnsynchronizedByteArrayOutputStream baos = new UnsynchronizedByteArrayOutputStream();
     PrintStream ps = new PrintStream(baos);
     PrintStreamTarget target = new PrintStreamTarget(ps);
 
@@ -84,7 +86,7 @@ public class TestPrintStreamTarget extends LockssTestCase {
   }
 
   public void testNoBlankLines() {
-    ByteArrayOutputStream baos = new ByteArrayOutputStream();
+    UnsynchronizedByteArrayOutputStream baos = new UnsynchronizedByteArrayOutputStream();
     PrintStream ps = new PrintStream(baos);
     PrintStreamTarget target = new PrintStreamTarget(ps);
 

@@ -43,6 +43,7 @@ import org.apache.commons.collections.primitives.*;
 import org.apache.commons.collections4.map.LRUMap;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.io.output.ByteArrayOutputStream;
+import org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream;
 import org.lockss.util.*;
 
 /**
@@ -837,7 +838,7 @@ public class FileBackedList<E>
   
   protected static byte[] toBytes(Object obj) throws RuntimeException {
     try {
-      ByteArrayOutputStream baos = new ByteArrayOutputStream();
+      UnsynchronizedByteArrayOutputStream baos = new UnsynchronizedByteArrayOutputStream();
       ObjectOutputStream oos = new ObjectOutputStream(baos);
       oos.writeObject(obj);
       return baos.toByteArray();

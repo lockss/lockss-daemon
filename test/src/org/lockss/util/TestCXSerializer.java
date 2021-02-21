@@ -34,6 +34,8 @@ package org.lockss.util;
 
 import java.io.*;
 
+import org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream;
+
 /**
  * <p>Tests the Castor/XStream hybrid serializer.</p>
  * @author Thib Guicherd-Callin
@@ -213,7 +215,7 @@ public class TestCXSerializer extends ObjectSerializerTester {
     // Set up needed objects
     ExtMapBean original = makeSample_ExtMapBean();
     ExtMapBean clone;
-    ByteArrayOutputStream out = new ByteArrayOutputStream();
+    UnsynchronizedByteArrayOutputStream out = new UnsynchronizedByteArrayOutputStream();
     ByteArrayInputStream in;
 
     try {

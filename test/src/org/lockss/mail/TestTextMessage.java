@@ -37,6 +37,7 @@ import java.util.*;
 import java.net.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
+import org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 
@@ -61,7 +62,7 @@ public class TestTextMessage extends LockssTestCase {
   }
 
   public void testWriteData() throws IOException {
-    ByteArrayOutputStream baos = new ByteArrayOutputStream(128);
+    UnsynchronizedByteArrayOutputStream baos = new UnsynchronizedByteArrayOutputStream(128);
     TextMessage msg = new TextMessage();
     msg.addHeader("From", "me");
     msg.addHeader("To", "you");

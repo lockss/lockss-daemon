@@ -38,8 +38,7 @@ import java.io.*;
 import java.nio.charset.*;
 import junit.framework.TestCase;
 import org.apache.commons.io.input.*;
-import org.apache.commons.io.output.NullOutputStream;
-
+import org.apache.commons.io.output.*;
 import org.lockss.test.*;
 import org.lockss.daemon.LockssWatchdog;
 
@@ -52,7 +51,7 @@ public class TestStreamUtil extends LockssTestCase {
   }
 
   public void testCopyNullInputStream() throws IOException {
-    OutputStream baos = new ByteArrayOutputStream(11);
+    OutputStream baos = new UnsynchronizedByteArrayOutputStream(11);
     assertEquals(0, StreamUtil.copy(null, baos));
     String resultStr = baos.toString();
     baos.close();
@@ -67,7 +66,7 @@ public class TestStreamUtil extends LockssTestCase {
 
   public void testCopyInputStream() throws IOException {
     InputStream is = new StringInputStream("test string");
-    OutputStream baos = new ByteArrayOutputStream(11);
+    OutputStream baos = new UnsynchronizedByteArrayOutputStream(11);
     StreamUtil.copy(is, baos);
     is.close();
     String resultStr = baos.toString();
@@ -77,7 +76,7 @@ public class TestStreamUtil extends LockssTestCase {
 
   public void testCopyInputStreamReturnsCount() throws IOException {
     InputStream is = new StringInputStream("test string");
-    OutputStream baos = new ByteArrayOutputStream(11);
+    OutputStream baos = new UnsynchronizedByteArrayOutputStream(11);
     assertEquals(11, StreamUtil.copy(is, baos));
     is.close();
     baos.close();
@@ -85,7 +84,7 @@ public class TestStreamUtil extends LockssTestCase {
 
   public void testCopyInputStreamLength() throws IOException {
     InputStream is = new StringInputStream("012345678901234567890");
-    OutputStream baos = new ByteArrayOutputStream(20);
+    OutputStream baos = new UnsynchronizedByteArrayOutputStream(20);
     assertEquals(5, StreamUtil.copy(is, baos, 5));
     assertEquals("01234", baos.toString());
     assertEquals(5, StreamUtil.copy(is, baos, 5));
@@ -98,16 +97,16 @@ public class TestStreamUtil extends LockssTestCase {
     baos.close();
 
     is = new StringInputStream("01234567890123456789012345");
-    baos = new ByteArrayOutputStream(2);
+    baos = new UnsynchronizedByteArrayOutputStream(2);
     assertEquals(2, StreamUtil.copy(is, baos, 2));
     assertEquals("01", baos.toString());
-    baos = new ByteArrayOutputStream(5);
+    baos = new UnsynchronizedByteArrayOutputStream(5);
     assertEquals(5, StreamUtil.copy(is, baos, 5));
     assertEquals("23456", baos.toString());
-    baos = new ByteArrayOutputStream(7);
+    baos = new UnsynchronizedByteArrayOutputStream(7);
     assertEquals(7, StreamUtil.copy(is, baos, 7));
     assertEquals("7890123", baos.toString());
-    baos = new ByteArrayOutputStream(7);
+    baos = new UnsynchronizedByteArrayOutputStream(7);
     assertEquals(12, StreamUtil.copy(is, baos, -1));
     assertEquals("456789012345", baos.toString());
     is.close();
