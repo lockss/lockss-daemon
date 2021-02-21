@@ -1,32 +1,33 @@
 /*
- * $Id$
- */
 
-/*
+Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
 
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
-all rights reserved.
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
-STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
 
-Except as contained in this notice, the name of Stanford University shall not
-be used in advertising or otherwise to promote the sale, use or other dealings
-in this Software without prior written authorization from Stanford University.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
 
 */
 
@@ -51,54 +52,45 @@ public class PdfOpcodes {
    * The {@value} opcode.
    * </p>
    * 
-   * @since 1.56
+   * @since 1.76
    */
-  public static final String BEGIN_IMAGE_DATA = "ID";
+  public static final String BEGIN_INLINE_IMAGE = "BI";
   
   /**
    * <p>
    * The {@value} opcode.
    * </p>
    * 
-   * @since 1.56
+   * @since 1.76
    */
-  public static final String BEGIN_IMAGE_OBJECT = "BI";
+  public static final String BEGIN_INLINE_IMAGE_DATA = "ID";
   
   /**
    * <p>
    * The {@value} opcode.
    * </p>
    * 
-   * @since 1.56
+   * @since 1.76
    */
-  public static final String BEGIN_TEXT_OBJECT = "BT";
+  public static final String BEGIN_TEXT = "BT";
   
   /**
    * <p>
    * The {@value} opcode.
    * </p>
    * 
-   * @since 1.56
+   * @since 1.76
    */
-  public static final String END_TEXT_OBJECT = "ET";
+  public static final String DRAW_OBJECT = "Do";
   
   /**
    * <p>
    * The {@value} opcode.
    * </p>
    * 
-   * @since 1.56
+   * @since 1.76
    */
-  public static final String INVOKE_XOBJECT = "Do";
-  
-  /**
-   * <p>
-   * The {@value} opcode.
-   * </p>
-   * 
-   * @since 1.56
-   */
-  public static final String NEXT_LINE_SHOW_TEXT = "'";
+  public static final String END_TEXT = "ET";
   
   /**
    * <p>
@@ -107,26 +99,26 @@ public class PdfOpcodes {
    * 
    * @since 1.56.3
    */
-  public static final String RESTORE_GRAPHICS_STATE = "Q";
+  public static final String RESTORE = "Q";
   
   /**
    * <p>
    * The {@value} opcode.
    * </p>
    * 
-   * @since 1.56.3
+   * @since 1.76
    */
-  public static final String SAVE_GRAPHICS_STATE = "q";
+  public static final String SAVE = "q";
   
   /**
    * <p>
    * The {@value} opcode.
    * </p>
    * 
-   * @since 1.56
+   * @since 1.76
    */
-  public static final String SET_SPACING_NEXT_LINE_SHOW_TEXT = "\"";
-
+  public static final String SET_GRAPHICS_STATE_PARAMS = "gs";
+  
   /**
    * <p>
    * The {@value} opcode.
@@ -159,104 +151,106 @@ public class PdfOpcodes {
    * The {@value} opcode.
    * </p>
    * 
+   * @since 1.76
+   */
+  public static final String SHOW_TEXT_ADJUSTED = "TJ";
+
+  /**
+   * <p>
+   * The {@value} opcode.
+   * </p>
+   * 
    * @since 1.56
    */
-  public static final String SHOW_TEXT_GLYPH_POSITIONING = "TJ";
+  public static final String SHOW_TEXT_LINE = "'";
+  
+  /**
+   * <p>
+   * The {@value} opcode.
+   * </p>
+   * 
+   * @since 1.56
+   */
+  public static final String SHOW_TEXT_LINE_AND_SPACE = "\"";
 
   /**
    * <p>
    * Determines if a PDF token for which {@link PdfToken#isOperator()} is true
-   * is the opcode {@link #BEGIN_IMAGE_DATA}.
+   * is the opcode {@link #BEGIN_INLINE_IMAGE}.
    * </p>
    * 
    * @param operator
    *          A PDF token that is an operator.
    * @return <code>true</code> if the given operator is the opcode
-   *         {@link #BEGIN_IMAGE_DATA}
-   * @since 1.70
+   *         {@link #BEGIN_INLINE_IMAGE}.}
+   * @since 1.76
    */
-  public static boolean isBeginImageData(PdfToken operator) {
-    return isOpcode(operator, BEGIN_IMAGE_DATA);
+  public static boolean isBeginInlineImage(PdfToken operator) {
+    return isOpcode(operator, BEGIN_INLINE_IMAGE);
   }
 
   /**
    * <p>
    * Determines if a PDF token for which {@link PdfToken#isOperator()} is true
-   * is the opcode {@link #BEGIN_IMAGE_OBJECT}.
+   * is the opcode {@link #BEGIN_INLINE_IMAGE_DATA}.
    * </p>
    * 
    * @param operator
    *          A PDF token that is an operator.
    * @return <code>true</code> if the given operator is the opcode
-   *         {@link #BEGIN_IMAGE_OBJECT}
-   * @since 1.70
+   *         {@link #BEGIN_INLINE_IMAGE_DATA}
+   * @since 1.76
    */
-  public static boolean isBeginImageObject(PdfToken operator) {
-    return isOpcode(operator, BEGIN_IMAGE_OBJECT);
+  public static boolean isBeginInlineImageData(PdfToken operator) {
+    return isOpcode(operator, BEGIN_INLINE_IMAGE_DATA);
   }
 
   /**
    * <p>
    * Determines if a PDF token for which {@link PdfToken#isOperator()} is true
-   * is the opcode {@link #BEGIN_TEXT_OBJECT}.
+   * is the opcode {@link #BEGIN_TEXT}.
    * </p>
    * 
    * @param operator
    *          A PDF token that is an operator.
    * @return <code>true</code> if the given operator is the opcode
-   *         {@link #BEGIN_TEXT_OBJECT}
-   * @since 1.70
+   *         {@link #BEGIN_TEXT}
+   * @since 1.76
    */
-  public static boolean isBeginTextObject(PdfToken operator) {
-    return isOpcode(operator, BEGIN_TEXT_OBJECT);
+  public static boolean isBeginText(PdfToken operator) {
+    return isOpcode(operator, BEGIN_TEXT);
   }
 
   /**
    * <p>
    * Determines if a PDF token for which {@link PdfToken#isOperator()} is true
-   * is the opcode {@link #END_TEXT_OBJECT}.
+   * is the opcode {@link #DRAW_OBJECT}.
    * </p>
    * 
    * @param operator
    *          A PDF token that is an operator.
    * @return <code>true</code> if the given operator is the opcode
-   *         {@link #END_TEXT_OBJECT}
-   * @since 1.70
+   *         {@link #DRAW_OBJECT}
+   * @since 1.76
    */
-  public static boolean isEndTextObject(PdfToken operator) {
-    return isOpcode(operator, END_TEXT_OBJECT);
+  public static boolean isDrawObject(PdfToken operator) {
+    return isOpcode(operator, DRAW_OBJECT);
   }
 
   /**
    * <p>
    * Determines if a PDF token for which {@link PdfToken#isOperator()} is true
-   * is the opcode {@link #INVOKE_XOBJECT}.
+   * is the opcode {@link #END_TEXT}.
    * </p>
    * 
    * @param operator
    *          A PDF token that is an operator.
    * @return <code>true</code> if the given operator is the opcode
-   *         {@link #INVOKE_XOBJECT}
-   * @since 1.70
+   *         {@link #END_TEXT}
+   * @since 1.76
    */
-  public static boolean isInvokeXObject(PdfToken operator) {
-    return isOpcode(operator, INVOKE_XOBJECT);
-  }
-
-  /**
-   * <p>
-   * Determines if a PDF token for which {@link PdfToken#isOperator()} is true
-   * is the opcode {@link #NEXT_LINE_SHOW_TEXT}.
-   * </p>
-   * 
-   * @param operator
-   *          A PDF token that is an operator.
-   * @return <code>true</code> if the given operator is the opcode
-   *         {@link #NEXT_LINE_SHOW_TEXT}
-   * @since 1.70
-   */
-  public static boolean isNextLineShowText(PdfToken operator) {
-    return isOpcode(operator, NEXT_LINE_SHOW_TEXT);
+  public static boolean isEndText(PdfToken operator) {
+    return isOpcode(operator, END_TEXT);
   }
 
   /**
@@ -279,49 +273,49 @@ public class PdfOpcodes {
   /**
    * <p>
    * Determines if a PDF token for which {@link PdfToken#isOperator()} is true
-   * is the opcode {@link #RESTORE_GRAPHICS_STATE}.
+   * is the opcode {@link #RESTORE}.
    * </p>
    * 
    * @param operator
    *          A PDF token that is an operator.
    * @return <code>true</code> if the given operator is the opcode
-   *         {@link #RESTORE_GRAPHICS_STATE}
-   * @since 1.70
+   *         {@link #RESTORE}
+   * @since 1.76
    */
-  public static boolean isRestoreGraphicsState(PdfToken operator) {
-    return isOpcode(operator, RESTORE_GRAPHICS_STATE);
+  public static boolean isRestore(PdfToken operator) {
+    return isOpcode(operator, RESTORE);
   }
 
   /**
    * <p>
    * Determines if a PDF token for which {@link PdfToken#isOperator()} is true
-   * is the opcode {@link #SAVE_GRAPHICS_STATE}.
+   * is the opcode {@link #SAVE}.
    * </p>
    * 
    * @param operator
    *          A PDF token that is an operator.
    * @return <code>true</code> if the given operator is the opcode
-   *         {@link #SAVE_GRAPHICS_STATE}
-   * @since 1.70
+   *         {@link #SAVE}
+   * @since 1.76
    */
-  public static boolean isSaveGraphicsState(PdfToken operator) {
-    return isOpcode(operator, SAVE_GRAPHICS_STATE);
+  public static boolean isSave(PdfToken operator) {
+    return isOpcode(operator, SAVE);
   }
 
   /**
    * <p>
    * Determines if a PDF token for which {@link PdfToken#isOperator()} is true
-   * is the opcode {@link #SET_SPACING_NEXT_LINE_SHOW_TEXT}.
+   * is the opcode {@link #SET_GRAPHICS_STATE_PARAMS}.
    * </p>
    * 
    * @param operator
    *          A PDF token that is an operator.
    * @return <code>true</code> if the given operator is the opcode
-   *         {@link #SET_SPACING_NEXT_LINE_SHOW_TEXT}
-   * @since 1.70
+   *         {@link #SET_GRAPHICS_STATE_PARAMS}
+   * @since 1.76
    */
-  public static boolean isSetSpacingNextLineShowText(PdfToken operator) {
-    return isOpcode(operator, SET_SPACING_NEXT_LINE_SHOW_TEXT);
+  public static boolean isSetGraphicsStateParams(PdfToken operator) {
+    return isOpcode(operator, SET_GRAPHICS_STATE_PARAMS);
   }
 
   /**
@@ -370,6 +364,230 @@ public class PdfOpcodes {
    */
   public static boolean isShowText(PdfToken operator) {
     return isOpcode(operator, SHOW_TEXT);
+  }
+
+  /**
+   * <p>
+   * Determines if a PDF token for which {@link PdfToken#isOperator()} is true
+   * is the opcode {@link #SHOW_TEXT_ADJUSTED}.
+   * </p>
+   * 
+   * @param operator
+   *          A PDF token that is an operator.
+   * @return <code>true</code> if the given operator is the opcode
+   *         {@link #SHOW_TEXT_ADJUSTED}
+   * @since 1.76
+   */
+  public static boolean isShowTextAdjusted(PdfToken operator) {
+    return isOpcode(operator, SHOW_TEXT_ADJUSTED);
+  }
+
+  /**
+   * <p>
+   * Determines if a PDF token for which {@link PdfToken#isOperator()} is true
+   * is the opcode {@link #SHOW_TEXT_ADJUSTED}, and its equivalent
+   * string operand contains the given substring.
+   * </p>
+   * 
+   * @param operator
+   *          A PDF token that is an operator.
+   * @param operand
+   *          A PDF token that is treated as an array.
+   * @param substr
+   *          A substring.
+   * @return <code>true</code> if the given operator is the opcode
+   *         {@link #SHOW_TEXT_ADJUSTED} and its operand contains the
+   *         given substring
+   * @since 1.76
+   */
+  public static boolean isShowTextAdjustedContains(PdfToken operator,
+                                                   PdfToken operand,
+                                                   String substr) {
+    if (isShowTextAdjusted(operator)) {
+      StringBuilder sb = new StringBuilder();
+      for (PdfToken tok : operand.getArray()) {
+        if (tok.isString()) {
+          sb.append(tok.getString());
+          if (sb.toString().contains(substr)) {
+            return true;
+          }
+        }
+      }
+    }
+    return false;
+  }
+
+  /**
+   * <p>
+   * Determines if a PDF token for which {@link PdfToken#isOperator()} is true
+   * is the opcode {@link #SHOW_TEXT_ADJUSTED}, and its equivalent
+   * string operand ends with the given suffix.
+   * </p>
+   * 
+   * @param operator
+   *          A PDF token that is an operator.
+   * @param operand
+   *          A PDF token that is treated as an array.
+   * @param suffix
+   *          A suffix.
+   * @return <code>true</code> if the given operator is the opcode
+   *         {@link #SHOW_TEXT_ADJUSTED} and its operand ends with the
+   *         given suffix
+   * @since 1.76
+   */
+  public static boolean isShowTextAdjustedEndsWith(PdfToken operator,
+                                                   PdfToken operand,
+                                                   String suffix) {
+    if (isShowTextAdjusted(operator)) {
+      StringBuilder sb = new StringBuilder();
+      List<PdfToken> array = operand.getArray();
+      for (int i = array.size() - 1 ; i >= 0 ; --i) {
+        PdfToken tok = array.get(i);
+        if (tok.isString()) {
+          sb.insert(0, tok.getString());
+          if (sb.length() >= suffix.length()) {
+            return sb.toString().endsWith(suffix);
+          }
+        }
+      }
+    }
+    return false;
+  }
+
+  /**
+   * <p>
+   * Determines if a PDF token for which {@link PdfToken#isOperator()} is true
+   * is the opcode {@link #SHOW_TEXT_ADJUSTED}, and its equivalent
+   * string operand is equal to the given string.
+   * </p>
+   * 
+   * @param operator
+   *          A PDF token that is an operator.
+   * @param operand
+   *          A PDF token that is treated as an array.
+   * @param str
+   *          A string.
+   * @return <code>true</code> if the given operator is the opcode
+   *         {@link #SHOW_TEXT_ADJUSTED} and its operand is equal to
+   *         the given string
+   * @since 1.76
+   */
+  public static boolean isShowTextAdjustedEquals(PdfToken operator,
+                                                 PdfToken operand,
+                                                 String str) {
+    if (isShowTextAdjusted(operator)) {
+      StringBuilder sb = new StringBuilder();
+      for (PdfToken tok : operand.getArray()) {
+        if (tok.isString()) {
+          sb.append(tok.getString());
+        }
+      }
+      return sb.toString().equals(str);
+    }
+    return false;
+  }
+
+  /**
+   * <p>
+   * Determines if a PDF token for which {@link PdfToken#isOperator()} is true
+   * is the opcode {@link #SHOW_TEXT_ADJUSTED}, and its equivalent
+   * string operand is equal to the given string (case-independently).
+   * </p>
+   * 
+   * @param operator
+   *          A PDF token that is an operator.
+   * @param operand
+   *          A PDF token that is treated as an array.
+   * @param str
+   *          A string.
+   * @return <code>true</code> if the given operator is the opcode
+   *         {@link #SHOW_TEXT_ADJUSTED} and its operand is equal to
+   *         the given string (case-independently)
+   * @since 1.70
+   */
+  public static boolean isShowTextAdjustedEqualsIgnoreCase(PdfToken operator,
+                                                           PdfToken operand,
+                                                           String str) {
+    if (isShowTextAdjusted(operator)) {
+      StringBuilder sb = new StringBuilder();
+      for (PdfToken tok : operand.getArray()) {
+        if (tok.isString()) {
+          sb.append(tok.getString());
+        }
+      }
+      return sb.toString().equalsIgnoreCase(str);
+    }
+    return false;
+  }
+
+  /**
+   * <p>
+   * Determines if a PDF token for which {@link PdfToken#isOperator()} is true
+   * is the opcode {@link #SHOW_TEXT_ADJUSTED}, and its equivalent
+   * string operand matches the given pattern (using {@link Matcher#find()},
+   * which does not implicitly anchor).
+   * </p>
+   * 
+   * @param operator
+   *          A PDF token that is an operator.
+   * @param operand
+   *          A PDF token that is treated as an array.
+   * @param pattern
+   *          A pattern.
+   * @return <code>true</code> if the given operator is the opcode
+   *         {@link #SHOW_TEXT_ADJUSTED} and its operand matches the
+   *         given pattern (using {@link Matcher#find()})
+   * @since 1.76
+   * @see Matcher#find()
+   */
+  public static boolean isShowTextAdjustedFind(PdfToken operator,
+                                               PdfToken operand,
+                                               Pattern pattern) {
+    if (isShowTextAdjusted(operator)) {
+      StringBuilder sb = new StringBuilder();
+      for (PdfToken tok : operand.getArray()) {
+        if (tok.isString()) {
+          sb.append(tok.getString());
+        }
+      }
+      return pattern.matcher(sb.toString()).find();
+    }
+    return false;
+  }
+
+  /**
+   * <p>
+   * Determines if a PDF token for which {@link PdfToken#isOperator()} is true
+   * is the opcode {@link #SHOW_TEXT_ADJUSTED}, and its equivalent
+   * string operand starts with the given prefix.
+   * </p>
+   * 
+   * @param operator
+   *          A PDF token that is an operator.
+   * @param operand
+   *          A PDF token that is treated as an array.
+   * @param prefix
+   *          A prefix.
+   * @return <code>true</code> if the given operator is the opcode
+   *         {@link #SHOW_TEXT_ADJUSTED} and its operand is starts with
+   *         the given prefix
+   * @since 1.70
+   */
+  public static boolean isShowTextAdjustedStartsWith(PdfToken operator,
+                                                     PdfToken operand,
+                                                     String prefix) {
+    if (isShowTextAdjusted(operator)) {
+      StringBuilder sb = new StringBuilder();
+      for (PdfToken tok : operand.getArray()) {
+        if (tok.isString()) {
+          sb.append(tok.getString());
+          if (sb.length() >= prefix.length()) {
+            return sb.toString().startsWith(prefix);
+          }
+        }
+      }
+    }
+    return false;
   }
 
   /**
@@ -497,225 +715,33 @@ public class PdfOpcodes {
   /**
    * <p>
    * Determines if a PDF token for which {@link PdfToken#isOperator()} is true
-   * is the opcode {@link #SHOW_TEXT_GLYPH_POSITIONING}.
+   * is the opcode {@link #SHOW_TEXT_LINE}.
    * </p>
    * 
    * @param operator
    *          A PDF token that is an operator.
    * @return <code>true</code> if the given operator is the opcode
-   *         {@link #SHOW_TEXT_GLYPH_POSITIONING}
-   * @since 1.70
+   *         {@link #SHOW_TEXT_LINE}
+   * @since 1.76
    */
-  public static boolean isShowTextGlyphPositioning(PdfToken operator) {
-    return isOpcode(operator, SHOW_TEXT_GLYPH_POSITIONING);
+  public static boolean isShowTextLine(PdfToken operator) {
+    return isOpcode(operator, SHOW_TEXT_LINE);
   }
 
   /**
    * <p>
    * Determines if a PDF token for which {@link PdfToken#isOperator()} is true
-   * is the opcode {@link #SHOW_TEXT_GLYPH_POSITIONING}, and its equivalent
-   * string operand contains the given substring.
+   * is the opcode {@link #SHOW_TEXT_LINE_AND_SPACE}.
    * </p>
    * 
    * @param operator
    *          A PDF token that is an operator.
-   * @param operand
-   *          A PDF token that is treated as an array.
-   * @param substr
-   *          A substring.
    * @return <code>true</code> if the given operator is the opcode
-   *         {@link #SHOW_TEXT_GLYPH_POSITIONING} and its operand contains the
-   *         given substring
-   * @since 1.70
+   *         {@link #SHOW_TEXT_LINE_AND_SPACE}
+   * @since 1.76
    */
-  public static boolean isShowTextGlyphPositioningContains(PdfToken operator,
-                                                           PdfToken operand,
-                                                           String substr) {
-    if (isShowTextGlyphPositioning(operator)) {
-      StringBuilder sb = new StringBuilder();
-      for (PdfToken tok : operand.getArray()) {
-        if (tok.isString()) {
-          sb.append(tok.getString());
-          if (sb.toString().contains(substr)) {
-            return true;
-          }
-        }
-      }
-    }
-    return false;
-  }
-
-  /**
-   * <p>
-   * Determines if a PDF token for which {@link PdfToken#isOperator()} is true
-   * is the opcode {@link #SHOW_TEXT_GLYPH_POSITIONING}, and its equivalent
-   * string operand ends with the given suffix.
-   * </p>
-   * 
-   * @param operator
-   *          A PDF token that is an operator.
-   * @param operand
-   *          A PDF token that is treated as an array.
-   * @param suffix
-   *          A suffix.
-   * @return <code>true</code> if the given operator is the opcode
-   *         {@link #SHOW_TEXT_GLYPH_POSITIONING} and its operand ends with the
-   *         given suffix
-   * @since 1.70
-   */
-  public static boolean isShowTextGlyphPositioningEndsWith(PdfToken operator,
-                                                           PdfToken operand,
-                                                           String suffix) {
-    if (isShowTextGlyphPositioning(operator)) {
-      StringBuilder sb = new StringBuilder();
-      List<PdfToken> array = operand.getArray();
-      for (int i = array.size() - 1 ; i >= 0 ; --i) {
-        PdfToken tok = array.get(i);
-        if (tok.isString()) {
-          sb.insert(0, tok.getString());
-          if (sb.length() >= suffix.length()) {
-            return sb.toString().endsWith(suffix);
-          }
-        }
-      }
-    }
-    return false;
-  }
-
-  /**
-   * <p>
-   * Determines if a PDF token for which {@link PdfToken#isOperator()} is true
-   * is the opcode {@link #SHOW_TEXT_GLYPH_POSITIONING}, and its equivalent
-   * string operand is equal to the given string.
-   * </p>
-   * 
-   * @param operator
-   *          A PDF token that is an operator.
-   * @param operand
-   *          A PDF token that is treated as an array.
-   * @param str
-   *          A string.
-   * @return <code>true</code> if the given operator is the opcode
-   *         {@link #SHOW_TEXT_GLYPH_POSITIONING} and its operand is equal to
-   *         the given string
-   * @since 1.70
-   */
-  public static boolean isShowTextGlyphPositioningEquals(PdfToken operator,
-                                                         PdfToken operand,
-                                                         String str) {
-    if (isShowTextGlyphPositioning(operator)) {
-      StringBuilder sb = new StringBuilder();
-      for (PdfToken tok : operand.getArray()) {
-        if (tok.isString()) {
-          sb.append(tok.getString());
-        }
-      }
-      return sb.toString().equals(str);
-    }
-    return false;
-  }
-
-  /**
-   * <p>
-   * Determines if a PDF token for which {@link PdfToken#isOperator()} is true
-   * is the opcode {@link #SHOW_TEXT_GLYPH_POSITIONING}, and its equivalent
-   * string operand is equal to the given string (case-independently).
-   * </p>
-   * 
-   * @param operator
-   *          A PDF token that is an operator.
-   * @param operand
-   *          A PDF token that is treated as an array.
-   * @param str
-   *          A string.
-   * @return <code>true</code> if the given operator is the opcode
-   *         {@link #SHOW_TEXT_GLYPH_POSITIONING} and its operand is equal to
-   *         the given string (case-independently)
-   * @since 1.70
-   */
-  public static boolean isShowTextGlyphPositioningEqualsIgnoreCase(PdfToken operator,
-                                                                   PdfToken operand,
-                                                                   String str) {
-    if (isShowTextGlyphPositioning(operator)) {
-      StringBuilder sb = new StringBuilder();
-      for (PdfToken tok : operand.getArray()) {
-        if (tok.isString()) {
-          sb.append(tok.getString());
-        }
-      }
-      return sb.toString().equalsIgnoreCase(str);
-    }
-    return false;
-  }
-
-  /**
-   * <p>
-   * Determines if a PDF token for which {@link PdfToken#isOperator()} is true
-   * is the opcode {@link #SHOW_TEXT_GLYPH_POSITIONING}, and its equivalent
-   * string operand matches the given pattern (using {@link Matcher#find()},
-   * which does not implicitly anchor).
-   * </p>
-   * 
-   * @param operator
-   *          A PDF token that is an operator.
-   * @param operand
-   *          A PDF token that is treated as an array.
-   * @param pattern
-   *          A pattern.
-   * @return <code>true</code> if the given operator is the opcode
-   *         {@link #SHOW_TEXT_GLYPH_POSITIONING} and its operand matches the
-   *         given pattern (using {@link Matcher#find()})
-   * @since 1.70
-   * @see Matcher#find()
-   */
-  public static boolean isShowTextGlyphPositioningFind(PdfToken operator,
-                                                       PdfToken operand,
-                                                       Pattern pattern) {
-    if (isShowTextGlyphPositioning(operator)) {
-      StringBuilder sb = new StringBuilder();
-      for (PdfToken tok : operand.getArray()) {
-        if (tok.isString()) {
-          sb.append(tok.getString());
-        }
-      }
-      return pattern.matcher(sb.toString()).find();
-    }
-    return false;
-  }
-
-  /**
-   * <p>
-   * Determines if a PDF token for which {@link PdfToken#isOperator()} is true
-   * is the opcode {@link #SHOW_TEXT_GLYPH_POSITIONING}, and its equivalent
-   * string operand starts with the given prefix.
-   * </p>
-   * 
-   * @param operator
-   *          A PDF token that is an operator.
-   * @param operand
-   *          A PDF token that is treated as an array.
-   * @param prefix
-   *          A prefix.
-   * @return <code>true</code> if the given operator is the opcode
-   *         {@link #SHOW_TEXT_GLYPH_POSITIONING} and its operand is starts with
-   *         the given prefix
-   * @since 1.70
-   */
-  public static boolean isShowTextGlyphPositioningStartsWith(PdfToken operator,
-                                                             PdfToken operand,
-                                                             String prefix) {
-    if (isShowTextGlyphPositioning(operator)) {
-      StringBuilder sb = new StringBuilder();
-      for (PdfToken tok : operand.getArray()) {
-        if (tok.isString()) {
-          sb.append(tok.getString());
-          if (sb.length() >= prefix.length()) {
-            return sb.toString().startsWith(prefix);
-          }
-        }
-      }
-    }
-    return false;
+  public static boolean isShowTextLineAndSpace(PdfToken operator) {
+    return isOpcode(operator, SHOW_TEXT_LINE_AND_SPACE);
   }
 
   /**
@@ -751,6 +777,339 @@ public class PdfOpcodes {
    */
   private PdfOpcodes() {
     // Prevent instantiation
+  }
+
+  /* ***************************************************************************
+   * DEPRECATED IN 1.76
+   ************************************************************************** */
+  
+  /**
+   * <p>
+   * Deprecated: renamed to {@link #BEGIN_INLINE_IMAGE}.
+   * </p>
+   * 
+   * @since 1.56
+   * @deprecated renamed to {@link #BEGIN_INLINE_IMAGE}.
+   */
+  @Deprecated
+  public static final String BEGIN_IMAGE_OBJECT = BEGIN_INLINE_IMAGE;
+  
+  /**
+   * <p>
+   * Deprecated: renamed to {@link #BEGIN_INLINE_IMAGE_DATA}.
+   * </p>
+   * 
+   * @since 1.56
+   * @deprecated renamed to {@link #BEGIN_INLINE_IMAGE_DATA}.
+   */
+  @Deprecated
+  public static final String BEGIN_IMAGE_DATA = BEGIN_INLINE_IMAGE_DATA;
+  
+  /**
+   * <p>
+   * Deprecated: renamed to {@link #BEGIN_TEXT}.
+   * </p>
+   * 
+   * @since 1.56
+   * @deprecated renamed to {@link #BEGIN_TEXT}.
+   */
+  @Deprecated
+  public static final String BEGIN_TEXT_OBJECT = BEGIN_TEXT;
+  
+  /**
+   * <p>
+   * Deprectaed: renamed to {@link #END_TEXT}.
+   * </p>
+   * 
+   * @since 1.56
+   * @deprecated renamed to {@link #END_TEXT}.
+   */
+  @Deprecated
+  public static final String END_TEXT_OBJECT = END_TEXT;
+  
+  /**
+   * <p>
+   * Deprecated: renamed to {@link #DRAW_OBJECT}.
+   * </p>
+   * 
+   * @since 1.56
+   * @deprecated renamed to {@link #DRAW_OBJECT}.
+   */
+  @Deprecated
+  public static final String INVOKE_XOBJECT = DRAW_OBJECT;
+  
+  /**
+   * <p>
+   * Deprecated: renamed to {@link #SHOW_TEXT_LINE}.
+   * </p>
+   * 
+   * @since 1.56
+   * @deprecated renamed to {@link #SHOW_TEXT_LINE}.
+   */
+  @Deprecated
+  public static final String NEXT_LINE_SHOW_TEXT = SHOW_TEXT_LINE;
+  
+  /**
+   * <p>
+   * Deprecated: renamed to {@link #RESTORE}.
+   * </p>
+   * 
+   * @since 1.56.3
+   * @deprecated renamed to {@link #RESTORE}.
+   */
+  @Deprecated
+  public static final String RESTORE_GRAPHICS_STATE = RESTORE;
+  
+  /**
+   * <p>
+   * Deprecated: renamed to {@link #SAVE}.
+   * </p>
+   * 
+   * @since 1.56.3
+   * @deprecated renamed to {@link #SAVE}.
+   */
+  @Deprecated
+  public static final String SAVE_GRAPHICS_STATE = SAVE;
+  
+  /**
+   * <p>
+   * Deprecated: renamed to {@link #SHOW_TEXT_LINE_AND_SPACE}.
+   * </p>
+   * 
+   * @since 1.56
+   * @deprecated renamed to {@link #SHOW_TEXT_LINE_AND_SPACE}.
+   */
+  @Deprecated
+  public static final String SET_SPACING_NEXT_LINE_SHOW_TEXT = SHOW_TEXT_LINE_AND_SPACE;
+
+  /**
+   * <p>
+   * Deprecated: renamed to {@link #SHOW_TEXT_ADJUSTED}.
+   * </p>
+   * 
+   * @since 1.56
+   * @deprecated renamed to {@link #SHOW_TEXT_ADJUSTED}.
+   */
+  @Deprecated
+  public static final String SHOW_TEXT_GLYPH_POSITIONING = SHOW_TEXT_ADJUSTED;
+
+  /**
+   * <p>
+   * Deprecated: renamed to {@link #isBeginInlineImageData(PdfToken)}.
+   * </p>
+   * 
+   * @since 1.70
+   * @deprecated renamed to {@link #isBeginInlineImageData(PdfToken)}.
+   */
+  @Deprecated
+  public static boolean isBeginImageData(PdfToken operator) {
+    return isBeginInlineImageData(operator);
+  }
+
+  /**
+   * <p>
+   * Deprecated renamed to {@link #isBeginInlineImage(PdfToken)}.
+   * </p>
+   * 
+   * @since 1.70
+   * @deprecated renamed to {@link #isBeginInlineImage(PdfToken)}.
+   */
+  @Deprecated
+  public static boolean isBeginImageObject(PdfToken operator) {
+    return isBeginInlineImage(operator);
+  }
+
+  /**
+   * <p>
+   * Deprecated: renamed to {@link #isBeginText(PdfToken)}.
+   * </p>
+   * 
+   * @since 1.70
+   * @deprecated renamed to {@link #isBeginText(PdfToken)}.
+   */
+  @Deprecated
+  public static boolean isBeginTextObject(PdfToken operator) {
+    return isBeginText(operator);
+  }
+
+  /**
+   * <p>
+   * Deprecated renamed to {@link #isEndText(PdfToken)}.
+   * </p>
+   * 
+   * @since 1.70
+   * @deprecated renamed to {@link #isEndText(PdfToken)}.
+   */
+  @Deprecated
+  public static boolean isEndTextObject(PdfToken operator) {
+    return isEndText(operator);
+  }
+
+  /**
+   * <p>
+   * Deprecated: renamed to {@link #isDrawObject(PdfToken)}.
+   * </p>
+   * 
+   * @since 1.70
+   * @deprecated renamed to {@link #isDrawObject(PdfToken)}.
+   */
+  @Deprecated
+  public static boolean isInvokeXObject(PdfToken operator) {
+    return isDrawObject(operator);
+  }
+
+  /**
+   * <p>
+   * Deprecated: renamed to {@link #isShowTextLine(PdfToken)}.
+   * </p>
+   * 
+   * @since 1.70
+   * @deprecated renamed to {@link #isShowTextLine(PdfToken)}.
+   */
+  @Deprecated
+  public static boolean isNextLineShowText(PdfToken operator) {
+    return isShowTextLine(operator);
+  }
+
+  /**
+   * <p>
+   * Deprecated renamed to {@link #isRestore(PdfToken)}.
+   * </p>
+   * 
+   * @since 1.70
+   * @deprecated renamed to {@link #isRestore(PdfToken)}.
+   */
+  @Deprecated
+  public static boolean isRestoreGraphicsState(PdfToken operator) {
+    return isRestore(operator);
+  }
+
+  /**
+   * <p>
+   * Deprecated: @deprecated renamed to {@link #isSave(PdfToken)}.
+   * </p>
+   * 
+   * @since 1.70
+   * @deprecated renamed to {@link #isSave(PdfToken)}.
+   */
+  @Deprecated
+  public static boolean isSaveGraphicsState(PdfToken operator) {
+    return isSave(operator);
+  }
+
+  /**
+   * <p>
+   * Deprecated: renamed to {@link #isShowTextLineAndSpace(PdfToken)}.
+   * </p>
+   * 
+   * @since 1.70
+   * @deprecated renamed to {@link #isShowTextLineAndSpace(PdfToken)}.
+   */
+  @Deprecated
+  public static boolean isSetSpacingNextLineShowText(PdfToken operator) {
+    return isShowTextLineAndSpace(operator);
+  }
+
+  /**
+   * <p>
+   * Deprecated: renamed to {@link #isShowTextAdjusted(PdfToken)}.
+   * </p>
+   * 
+   * @since 1.70
+   * @deprecated renamed to {@link #isShowTextAdjusted(PdfToken)}.
+   */
+  @Deprecated
+  public static boolean isShowTextGlyphPositioning(PdfToken operator) {
+    return isShowTextAdjusted(operator);
+  }
+
+  /**
+   * <p>
+   * Deprecated: renamed to {@link #isShowTextAdjustedContains(PdfToken, PdfToken, String)}.
+   * </p>
+   * 
+   * @since 1.70
+   * @deprecated renamed to {@link #isShowTextAdjustedContains(PdfToken, PdfToken, String)}.
+   */
+  @Deprecated
+  public static boolean isShowTextGlyphPositioningContains(PdfToken operator,
+                                                           PdfToken operand,
+                                                           String substr) {
+    return isShowTextAdjustedContains(operator, operand, substr);
+  }
+
+  /**
+   * <p>
+   * Deprecated: renamed to {@link #isShowTextAdjustedEndsWith(PdfToken, PdfToken, String)}.
+   * </p>
+   * 
+   * @since 1.70
+   * @deprecated renamed to {@link #isShowTextAdjustedEndsWith(PdfToken, PdfToken, String)}.
+   */
+  @Deprecated
+  public static boolean isShowTextGlyphPositioningEndsWith(PdfToken operator,
+                                                           PdfToken operand,
+                                                           String suffix) {
+    return isShowTextAdjustedEndsWith(operator, operand, suffix);
+  }
+
+  /**
+   * <p>
+   * Deprecated: renamed to {@link #isShowTextAdjustedEquals(PdfToken, PdfToken, String)}.
+   * </p>
+   * 
+   * @since 1.70
+   * @deprecated renamed to {@link #isShowTextAdjustedEquals(PdfToken, PdfToken, String)}.
+   */
+  public static boolean isShowTextGlyphPositioningEquals(PdfToken operator,
+                                                         PdfToken operand,
+                                                         String str) {
+    return isShowTextAdjustedEquals(operator, operand, str);
+  }
+
+  /**
+   * <p>
+   * Deprecated: renamed to {@link #isShowTextAdjustedEqualsIgnoreCase(PdfToken, PdfToken, String)}.
+   * </p>
+   * 
+   * @since 1.70
+   * @deprecated: renamed to {@link #isShowTextAdjustedEqualsIgnoreCase(PdfToken, PdfToken, String)}.
+   */
+  @Deprecated
+  public static boolean isShowTextGlyphPositioningEqualsIgnoreCase(PdfToken operator,
+                                                                   PdfToken operand,
+                                                                   String str) {
+    return isShowTextAdjustedEqualsIgnoreCase(operator, operand, str);
+  }
+
+  /**
+   * <p>
+   * Deprecated renamed to {@link #isShowTextAdjustedFind(PdfToken, PdfToken, Pattern)}.
+   * </p>
+   * 
+   * @since 1.70
+   * @deprecated renamed to {@link #isShowTextAdjustedFind(PdfToken, PdfToken, Pattern)}.
+   */
+  @Deprecated
+  public static boolean isShowTextGlyphPositioningFind(PdfToken operator,
+                                                       PdfToken operand,
+                                                       Pattern pattern) {
+    return isShowTextAdjustedFind(operator, operand, pattern);
+  }
+
+  /**
+   * <p>
+   * Deprecated: renamed to #isShowTextAdjustedStartsWith(PdfToken, PdfToken, String).
+   * </p>
+   * 
+   * @since 1.70
+   * @deprecated renamed to #isShowTextAdjustedStartsWith(PdfToken, PdfToken, String).
+   */
+  @Deprecated
+  public static boolean isShowTextGlyphPositioningStartsWith(PdfToken operator,
+                                                             PdfToken operand,
+                                                             String prefix) {
+    return isShowTextAdjustedStartsWith(operator, operand, prefix);
   }
 
 }

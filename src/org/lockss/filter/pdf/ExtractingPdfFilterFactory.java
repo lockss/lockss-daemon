@@ -332,11 +332,11 @@ public abstract class ExtractingPdfFilterFactory
       PdfTokenStreamWorker worker = new PdfTokenStreamWorker() {
         @Override public void operatorCallback() throws PdfException {
           // 'Tj', '\'' and '"'
-          if (isShowText() || isNextLineShowText() || isSetSpacingNextLineShowText()) {
+          if (isShowText() || isShowTextLine() || isShowTextLineAndSpace()) {
             outputString(getTokens().get(getIndex() - 1).getString());
           }
           // 'TJ'
-          else if (isShowTextGlyphPositioning()) {
+          else if (isShowTextAdjusted()) {
             for (PdfToken token : getTokens().get(getIndex() - 1).getArray()) {
               if (token.isString()) {
                 outputString(token.getString());
@@ -347,12 +347,12 @@ public abstract class ExtractingPdfFilterFactory
       };
       
       // Apply the worker to every token stream in the page
-      for (PdfTokenStream pdfTokenStream : pdfPage.getAllTokenStreams()) {
+      for (PdfTokenStream pdfTokenStream : pdfPage.getTokenStreamList()) {
         worker.process(pdfTokenStream);
       }
       
       // Now output all byte streams in the page wholesale
-      for (InputStream byteStream : pdfPage.getAllByteStreams()) {
+      for (InputStream byteStream : pdfPage.getByteStreamList()) {
         outputByteStream(byteStream);
       }
     }
@@ -414,7 +414,7 @@ public abstract class ExtractingPdfFilterFactory
     DeferredTempFileOutputStream os = null;
 
     try {
-      pdfDocument = pdfDocumentFactory.parse(in);
+      pdfDocument = pdfDocumentFactory.makeDocument(in);
       transform(au, pdfDocument);
       
       os = new DeferredTempFileOutputStream(PdfUtil.getPdfMemoryLimit());

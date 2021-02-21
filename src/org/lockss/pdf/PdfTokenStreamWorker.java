@@ -1,32 +1,33 @@
 /*
- * $Id$
- */
 
-/*
+Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
 
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
-all rights reserved.
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
-STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
 
-Except as contained in this notice, the name of Stanford University shall not
-be used in advertising or otherwise to promote the sale, use or other dealings
-in this Software without prior written authorization from Stanford University.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
 
 */
 
@@ -34,6 +35,8 @@ package org.lockss.pdf;
 
 import java.util.*;
 import java.util.regex.*;
+
+import org.apache.commons.lang3.ObjectUtils;
 
 /**
  * <p>
@@ -206,10 +209,28 @@ public abstract class PdfTokenStreamWorker {
    * 
    * @author Thib Guicherd-Callin
    * @since 1.56
+   * @deprecated As of 1.76, {@link PdfTokenStreamWorker} is becoming
+   *             {@link PdfOperandsAndOperator}-based and is always "forward".
    */
+  @Deprecated
   public enum Direction {
+
+    /**
+     * @since 1.56
+     * @deprecated As of 1.76, {@link PdfTokenStreamWorker} is becoming
+     *             {@link PdfOperandsAndOperator}-based and is always "forward".
+     */
+    @Deprecated
     BACKWARD,
+    
+    /**
+     * @since 1.56
+     * @deprecated As of 1.76, {@link PdfTokenStreamWorker} is becoming
+     *             {@link PdfOperandsAndOperator}-based and is always "forward".
+     */
+    @Deprecated
     FORWARD
+    
   }
   
   /**
@@ -228,8 +249,11 @@ public abstract class PdfTokenStreamWorker {
    * </p>
    * 
    * @since 1.56
+   * @deprecated As of 1.76, {@link PdfTokenStreamWorker} is becoming
+   *             {@link PdfOperandsAndOperator}-based and is always "forward".
    * @see Direction
    */
+  @Deprecated
   private final Direction direction;
 
   /**
@@ -261,12 +285,23 @@ public abstract class PdfTokenStreamWorker {
 
   /**
    * <p>
-   * The current operator.
+   * The current operands.
    * </p>
    * 
    * @since 1.56
    */
-  private List<PdfToken> operands;
+  private List<? extends PdfToken> operands;
+
+  /**
+   * <p>
+   * The current operands, in old FORWARD/BACKWARD mode.
+   * </p>
+   * 
+   * @since 1.76
+   * @deprecated Shift away from this mode after 1.76.
+   */
+  @Deprecated
+  private List<PdfToken> operands_old;
 
   /**
    * <p>
@@ -283,7 +318,10 @@ public abstract class PdfTokenStreamWorker {
    * </p>
    * 
    * @since 1.56
+   * @deprecated As of 1.76, {@link PdfTokenStreamWorker} is becoming
+   *             {@link PdfOperandsAndOperator}-based and this is no longer used.
    */
+  @Deprecated
   private List<PdfToken> tokens;
 
   /**
@@ -305,8 +343,11 @@ public abstract class PdfTokenStreamWorker {
    * @param direction
    *          A direction.
    * @since 1.56
+   * @deprecated As of 1.76, {@link PdfTokenStreamWorker} is becoming
+   *             {@link PdfOperandsAndOperator}-based and is always "forward".
    * @see Direction
    */
+  @Deprecated
   public PdfTokenStreamWorker(Direction direction) {
     this.direction = direction;
   }
@@ -328,6 +369,7 @@ public abstract class PdfTokenStreamWorker {
    * 
    * @throws PdfException
    *           If PDF processing fails.
+   * @since 1.56
    */
   public abstract void operatorCallback() throws PdfException;
   
@@ -341,7 +383,12 @@ public abstract class PdfTokenStreamWorker {
    *          A PDF token stream.
    * @throws PdfException
    *           If PDF processing fails.
+   * @since 1.56
+   * @deprecated As of 1.76, {@link PdfTokenStreamWorker} is becoming
+   *             {@link PdfOperandsAndOperator}-based and is always "forward".
+   *             Use instead. //FIXME
    * @see #process(List, PdfTokenFactory)
+   * 
    */
   public void process(PdfTokenStream pdfTokenStream) throws PdfException {
     process(pdfTokenStream.getTokens(), PdfUtil.getTokenFactory(pdfTokenStream));
@@ -360,7 +407,9 @@ public abstract class PdfTokenStreamWorker {
    * @throws PdfException
    *           If PDF processing fails.
    * @since 1.62
+   * @deprecated FIXME
    */
+  @Deprecated // FIXME
   public void process(List<PdfToken> tokens,
                       PdfTokenFactory factory)
       throws PdfException {
@@ -368,7 +417,7 @@ public abstract class PdfTokenStreamWorker {
     this.factory = factory;
     index = -1;
     operator = null;
-    operands = new ArrayList<PdfToken>();
+    operands_old = new ArrayList<PdfToken>();
     continueFlag = true;
     setUp();
     switch (getDirection()) {
@@ -382,6 +431,89 @@ public abstract class PdfTokenStreamWorker {
         throw new IllegalStateException("Illegal direction: " + getDirection());
       }
     }
+  }
+  
+  /**
+   * 
+   * @param oaoIterator
+   * @param factory
+   * @throws PdfException
+   * @see 1.76
+   */
+  public void processOperandsAndOperatorIterator(Iterator<? extends PdfOperandsAndOperator<? extends PdfToken>> oaoIterator,
+                                                 PdfTokenFactory factory)
+      throws PdfException {
+    tokens = null;
+    this.factory = factory;
+    index = -1;
+    continueFlag = true;
+    setUp();
+    while (oaoIterator.hasNext() && continueFlag) {
+      PdfOperandsAndOperator<? extends PdfToken> oao = oaoIterator.next();
+      operands = oao.getOperands();
+      operator = oao.getOperator();
+      opcode = operator.getOperator();
+      index += operands.size() + 1;
+      operatorCallback();
+    }
+  }
+
+  /**
+   * 
+   * @param oaos
+   * @param factory
+   * @throws PdfException
+   * @since 1.76
+   * @see #processOperandsAndOperatorIterator(Iterator, PdfTokenFactory)
+   */
+  public void processOperandsAndOperatorList(List<? extends PdfOperandsAndOperator<? extends PdfToken>> oaos,
+                                             PdfTokenFactory factory)
+      throws PdfException {
+    processOperandsAndOperatorIterator(oaos.iterator(), factory);
+  }
+
+  /**
+   * 
+   * @throws PdfException
+   * @since 1.76
+   */
+  public void processPdfTokenStream(PdfTokenStream pdfTokenStream) throws PdfException {
+    processOperandsAndOperatorIterator(pdfTokenStream.getOperandsAndOperatorIterator(),
+                                       PdfUtil.getTokenFactory(pdfTokenStream));
+  }
+  
+  /**
+   * 
+   * @param tokens
+   * @param factory
+   * @throws PdfException
+   * @since 1.76
+   */
+  public void processTokenIterator(Iterator<? extends PdfToken> tokenIter,
+                                   PdfTokenFactory factory)
+      throws PdfException {
+    processOperandsAndOperatorIterator(PdfUtil.toOperandsAndOperatorIterator(tokenIter), factory);
+  }
+  
+  /**
+   * <p>
+   * Processes the given list of PDF tokens after calling {@link #setUp()},
+   * using the given PDF token factory.
+   * </p>
+   * 
+   * @param tokens
+   *          A list of PDF tokens.
+   * @param factory
+   *          A PDF token factory.
+   * @throws PdfException
+   *           If PDF processing fails.
+   * @since 1.76
+   * @see #processTokenIterator(Iterator, PdfTokenFactory)
+   */
+  public void processTokenList(List<? extends PdfToken> tokens,
+                               PdfTokenFactory factory)
+      throws PdfException {
+    processTokenIterator(tokens.iterator(), factory);
   }
   
   /**
@@ -408,6 +540,9 @@ public abstract class PdfTokenStreamWorker {
    * @see Direction
    */
   protected Direction getDirection() {
+    if (tokens == null) {
+      throw new UnsupportedOperationException("Operation not available in iterator mode");
+    }
     return direction;
   }
 
@@ -463,7 +598,6 @@ public abstract class PdfTokenStreamWorker {
    * @since 1.67
    */
   protected PdfToken getSingleOperand() {
-    List<PdfToken> operands = getOperands();
     return (operands.size() == 1) ? operands.get(0) : null;
   }
 
@@ -476,8 +610,8 @@ public abstract class PdfTokenStreamWorker {
    * @return The current operator's operands (possibly an empty list).
    * @since 1.56.3
    */
-  protected List<PdfToken> getOperands() {
-    return operands;
+  protected List<? extends PdfToken> getOperands() {
+    return (tokens == null) ? operands : operands_old; // FIXME
   }
 
   /**
@@ -515,144 +649,134 @@ public abstract class PdfTokenStreamWorker {
    * 
    * @return The current list of all tokens.
    * @since 1.56.3
+   * @deprecated FIXME
    */
-  protected List<PdfToken> getTokens() {
+  @Deprecated // FIXME
+  protected List<? extends PdfToken> getTokens() {
+    if (tokens == null) {
+      throw new UnsupportedOperationException("Operation not available in iterator mode");
+    }
     return tokens;
   }
 
   /**
    * <p>
    * Convenience call to
-   * {@link PdfOpcodes#isBeginImageData(PdfToken)}
+   * {@link PdfOpcodes#isBeginInlineImage(PdfToken)}
    * using the current operator.
    * </p>
    * 
    * @return <code>true</code> if the current operator is the opcode
-   *         {@link PdfOpcodes#BEGIN_IMAGE_DATA}
-   * @since 1.60
+   *         {@link PdfOpcodes#BEGIN_INLINE_IMAGE}
+   * @since 1.76
    */
-  protected boolean isBeginImageData() {
-    return PdfOpcodes.isBeginImageData(getOperator());
+  protected boolean isBeginInlineImage() {
+    return PdfOpcodes.isBeginInlineImage(getOperator());
   }
 
   /**
    * <p>
    * Convenience call to
-   * {@link PdfOpcodes#isBeginImageObject(PdfToken)}
+   * {@link PdfOpcodes#isBeginInlineImageData(PdfToken)}
    * using the current operator.
    * </p>
    * 
    * @return <code>true</code> if the current operator is the opcode
-   *         {@link PdfOpcodes#BEGIN_IMAGE_OBJECT}
-   * @since 1.60
+   *         {@link PdfOpcodes#BEGIN_INLINE_IMAGE_DATA}
+   * @since 1.76
    */
-  protected boolean isBeginImageObject() {
-    return PdfOpcodes.isBeginImageObject(getOperator());
+  protected boolean isBeginInlineImageData() {
+    return PdfOpcodes.isBeginInlineImageData(getOperator());
   }
 
   /**
    * <p>
    * Convenience call to
-   * {@link PdfOpcodes#isBeginTextObject(PdfToken)}
+   * {@link PdfOpcodes#isBeginText(PdfToken)}
    * using the current operator.
    * </p>
    * 
    * @return <code>true</code> if the current operator is the opcode
-   *         {@link PdfOpcodes#BEGIN_TEXT_OBJECT}
+   *         {@link PdfOpcodes#BEGIN_TEXT}
    * @since 1.60
    */
-  protected boolean isBeginTextObject() {
-    return PdfOpcodes.isBeginTextObject(getOperator());
+  protected boolean isBeginText() {
+    return PdfOpcodes.isBeginText(getOperator());
   }
   
   /**
    * <p>
    * Convenience call to
-   * {@link PdfOpcodes#isEndTextObject(PdfToken)}
+   * {@link PdfOpcodes#isDrawObject(PdfToken)}
    * using the current operator.
    * </p>
    * 
    * @return <code>true</code> if the current operator is the opcode
-   *         {@link PdfOpcodes#END_TEXT_OBJECT}
-   * @since 1.60
+   *         {@link PdfOpcodes#DRAW_OBJECT}
+   * @since 1.76
    */
-  protected boolean isEndTextObject() {
-    return PdfOpcodes.isEndTextObject(getOperator());
+  protected boolean isDrawObject() {
+    return PdfOpcodes.isDrawObject(getOperator());
   }
   
   /**
    * <p>
    * Convenience call to
-   * {@link PdfOpcodes#isInvokeXObject(PdfToken)}
+   * {@link PdfOpcodes#isEndText(PdfToken)}
    * using the current operator.
    * </p>
    * 
    * @return <code>true</code> if the current operator is the opcode
-   *         {@link PdfOpcodes#INVOKE_XOBJECT}
-   * @since 1.60
+   *         {@link PdfOpcodes#END_TEXT}
+   * @since 1.76
    */
-  protected boolean isInvokeXObject() {
-    return PdfOpcodes.isInvokeXObject(getOperator());
+  protected boolean isEndText() {
+    return PdfOpcodes.isEndText(getOperator());
   }
   
   /**
    * <p>
    * Convenience call to
-   * {@link PdfOpcodes#isNextLineShowText(PdfToken)}
+   * {@link PdfOpcodes#isRestore(PdfToken)}
    * using the current operator.
    * </p>
    * 
    * @return <code>true</code> if the current operator is the opcode
-   *         {@link PdfOpcodes#NEXT_LINE_SHOW_TEXT}
-   * @since 1.60
+   *         {@link PdfOpcodes#RESTORE}
+   * @since 1.76
    */
-  protected boolean isNextLineShowText() {
-    return PdfOpcodes.isNextLineShowText(getOperator());
+  protected boolean isRestore() {
+    return PdfOpcodes.isRestore(getOperator());
   }
   
   /**
    * <p>
    * Convenience call to
-   * {@link PdfOpcodes#isRestoreGraphicsState(PdfToken)}
+   * {@link PdfOpcodes#isSave(PdfToken)}
    * using the current operator.
    * </p>
    * 
    * @return <code>true</code> if the current operator is the opcode
-   *         {@link PdfOpcodes#RESTORE_GRAPHICS_STATE}
-   * @since 1.60
+   *         {@link PdfOpcodes#SAVE}
+   * @since 1.76
    */
-  protected boolean isRestoreGraphicsState() {
-    return PdfOpcodes.isRestoreGraphicsState(getOperator());
+  protected boolean isSave() {
+    return PdfOpcodes.isSave(getOperator());
   }
   
   /**
    * <p>
    * Convenience call to
-   * {@link PdfOpcodes#isSaveGraphicsState(PdfToken)}
+   * {@link PdfOpcodes#isSetGraphicsStateParams(PdfToken)}
    * using the current operator.
    * </p>
    * 
    * @return <code>true</code> if the current operator is the opcode
-   *         {@link PdfOpcodes#SAVE_GRAPHICS_STATE}
-   * @since 1.60
+   *         {@link PdfOpcodes#SET_GRAPHICS_STATE_PARAMS}
+   * @since 1.76
    */
-  protected boolean isSaveGraphicsState() {
-    return PdfOpcodes.isSaveGraphicsState(getOperator());
-  }
-  
-  /**
-   * <p>
-   * Convenience call to
-   * {@link PdfOpcodes#isSetSpacingNextLineShowText(PdfToken)}
-   * using the current operator.
-   * </p>
-   * 
-   * @return <code>true</code> if the current operator is the opcode
-   *         {@link PdfOpcodes#SET_SPACING_NEXT_LINE_SHOW_TEXT}
-   * @since 1.60
-   */
-  protected boolean isSetSpacingNextLineShowText() {
-    return PdfOpcodes.isSetSpacingNextLineShowText(getOperator());
+  protected boolean isSetGraphicsStateParams() {
+    return PdfOpcodes.isSetGraphicsStateParams(getOperator());
   }
   
   /**
@@ -698,6 +822,131 @@ public abstract class PdfTokenStreamWorker {
    */
   protected boolean isShowText() {
     return PdfOpcodes.isShowText(getOperator());
+  }
+  
+  /**
+   * <p>
+   * Convenience call to
+   * {@link PdfOpcodes#isShowTextAdjusted(PdfToken)}
+   * using the current operator.
+   * </p>
+   * 
+   * @return <code>true</code> if the current operator is the opcode
+   *         {@link PdfOpcodes#SHOW_TEXT_ADJUSTED}
+   * @since 1.76
+   */
+  protected boolean isShowTextAdjusted() {
+    return PdfOpcodes.isShowTextAdjusted(getOperator());
+  }
+  
+  /**
+   * <p>
+   * Convenience call to
+   * {@link PdfOpcodes#isShowTextAdjustedContains(PdfToken, PdfToken, String)}
+   * using the current operator, its single operand and the given substring.
+   * </p>
+   * 
+   * @param substr
+   *          A given substring.
+   * @return <code>true</code> if the current operator is the opcode
+   *         {@link PdfOpcodes#SHOW_TEXT_ADJUSTED} and its equivalent
+   *         string operand contains <code>substr</code>.
+   * @since 1.76
+   */
+  protected boolean isShowTextAdjustedContains(String substr) {
+    return PdfOpcodes.isShowTextAdjustedContains(getOperator(), getSingleOperand(), substr);
+  }
+  
+  /**
+   * <p>
+   * Convenience call to
+   * {@link PdfOpcodes#isShowTextAdjustedEndsWith(PdfToken, PdfToken, String)}
+   * using the current operator, its single operand and the given suffix.
+   * </p>
+   * 
+   * @param suffix
+   *          A given suffix.
+   * @return <code>true</code> if the current operator is the opcode
+   *         {@link PdfOpcodes#SHOW_TEXT_ADJUSTED} and its equivalent
+   *         string operand ends with <code>suffix</code>.
+   * @since 1.76
+   */
+  protected boolean isShowTextAdjustedEndsWith(String suffix) {
+    return PdfOpcodes.isShowTextAdjustedEndsWith(getOperator(), getSingleOperand(), suffix);
+  }
+  
+  /**
+   * <p>
+   * Convenience call to
+   * {@link PdfOpcodes#isShowTextAdjustedEquals(PdfToken, PdfToken, String)}
+   * using the current operator, its single operand and the given suffix.
+   * </p>
+   * 
+   * @param str
+   *          A given string.
+   * @return <code>true</code> if the current operator is the opcode
+   *         {@link PdfOpcodes#SHOW_TEXT_ADJUSTED} and its equivalent
+   *         string operand is equal to <code>str</code>.
+   * @since 1.76
+   */
+  protected boolean isShowTextAdjustedEquals(String str) {
+    return PdfOpcodes.isShowTextAdjustedEquals(getOperator(), getSingleOperand(), str);
+  }
+  
+  /**
+   * <p>
+   * Convenience call to
+   * {@link PdfOpcodes#isShowTextAdjustedEqualsIgnoreCase(PdfToken, PdfToken, String)}
+   * using the current operator, its single operand and the given suffix.
+   * </p>
+   * 
+   * @param str
+   *          A given string.
+   * @return <code>true</code> if the current operator is the opcode
+   *         {@link PdfOpcodes#SHOW_TEXT_ADJUSTED} and its equivalent
+   *         string operand is equal to <code>str</code> (case-independently).
+   * @since 1.76
+   */
+  protected boolean isShowTextAdjustedEqualsIgnoreCase(String str) {
+    return PdfOpcodes.isShowTextAdjustedEqualsIgnoreCase(getOperator(), getSingleOperand(), str);
+  }
+  
+  /**
+   * <p>
+   * Convenience call to
+   * {@link PdfOpcodes#isShowTextAdjustedFind(PdfToken, PdfToken, Pattern)
+   * using the current operator, its single operand and the given pattern.
+   * </p>
+   * 
+   * @param pattern
+   *          A given pattern.
+   * @return <code>true</code> if the current operator is the opcode
+   *         {@link PdfOpcodes#SHOW_TEXT_GLYPH_POSITIONING} and its equivalent
+   *         string operand matches <code>pattern</code> (using
+   *         {@link Matcher#find()}, which does not implicitly anchor).
+   * @since 1.76
+   * @see Matcher#find()
+   */
+  protected boolean isShowTextAdjustedFind(Pattern pattern) {
+    return PdfOpcodes.isShowTextAdjustedFind(getOperator(), getSingleOperand(), pattern);
+  }
+  
+  /**
+   * <p>
+   * Convenience call to
+   * {@link PdfOpcodes#isShowTextAdjustedStartsWith(PdfToken, PdfToken, String)
+   * using the current operator, its single operand and the given prefix.
+   * </p>
+   * 
+   * @param prefix
+   *          A given prefix.
+   * @return <code>true</code> if the current operator is the opcode
+   *         {@link PdfOpcodes#SHOW_TEXT_ADJUSTED} and its equivalent
+   *         string operand starts with <code>prefix</code>.
+   * @since 1.76
+   */
+  protected boolean isShowTextAdjustedStartsWith(String prefix) {
+    return PdfOpcodes.isShowTextAdjustedStartsWith(getOperator(), getSingleOperand(), prefix);
   }
   
   /**
@@ -795,126 +1044,31 @@ public abstract class PdfTokenStreamWorker {
   /**
    * <p>
    * Convenience call to
-   * {@link PdfOpcodes#isShowTextGlyphPositioning(PdfToken)}
+   * {@link PdfOpcodes#isShowTextLine(PdfToken)}
    * using the current operator.
    * </p>
    * 
    * @return <code>true</code> if the current operator is the opcode
-   *         {@link PdfOpcodes#SHOW_TEXT_GLYPH_POSITIONING}
-   * @since 1.60
+   *         {@link PdfOpcodes#SHOW_TEXT_LINE}
+   * @since 1.76
    */
-  protected boolean isShowTextGlyphPositioning() {
-    return PdfOpcodes.isShowTextGlyphPositioning(getOperator());
+  protected boolean isShowTextLine() {
+    return PdfOpcodes.isShowTextLine(getOperator());
   }
   
   /**
    * <p>
    * Convenience call to
-   * {@link PdfOpcodes#isShowTextGlyphPositioningContains(PdfToken, PdfToken, String)}
-   * using the current operator, its single operand and the given substring.
+   * {@link PdfOpcodes#isShowTextLineAndSpace(PdfToken)}
+   * using the current operator.
    * </p>
    * 
-   * @param substr
-   *          A given substring.
    * @return <code>true</code> if the current operator is the opcode
-   *         {@link PdfOpcodes#SHOW_TEXT_GLYPH_POSITIONING} and its equivalent
-   *         string operand contains <code>substr</code>.
-   * @since 1.67
+   *         {@link PdfOpcodes#SHOW_TEXT_LINE_AND_SPACE}
+   * @since 1.76
    */
-  protected boolean isShowTextGlyphPositioningContains(String substr) {
-    return PdfOpcodes.isShowTextGlyphPositioningContains(getOperator(), getSingleOperand(), substr);
-  }
-  
-  /**
-   * <p>
-   * Convenience call to
-   * {@link PdfOpcodes#isShowTextGlyphPositioningEndsWith(PdfToken, PdfToken, String)}
-   * using the current operator, its single operand and the given suffix.
-   * </p>
-   * 
-   * @param suffix
-   *          A given suffix.
-   * @return <code>true</code> if the current operator is the opcode
-   *         {@link PdfOpcodes#SHOW_TEXT_GLYPH_POSITIONING} and its equivalent
-   *         string operand ends with <code>suffix</code>.
-   * @since 1.60
-   */
-  protected boolean isShowTextGlyphPositioningEndsWith(String suffix) {
-    return PdfOpcodes.isShowTextGlyphPositioningEndsWith(getOperator(), getSingleOperand(), suffix);
-  }
-  
-  /**
-   * <p>
-   * Convenience call to
-   * {@link PdfOpcodes#isShowTextGlyphPositioningEquals(PdfToken, PdfToken, String)}
-   * using the current operator, its single operand and the given suffix.
-   * </p>
-   * 
-   * @param str
-   *          A given string.
-   * @return <code>true</code> if the current operator is the opcode
-   *         {@link PdfOpcodes#SHOW_TEXT_GLYPH_POSITIONING} and its equivalent
-   *         string operand is equal to <code>str</code>.
-   * @since 1.60
-   */
-  protected boolean isShowTextGlyphPositioningEquals(String str) {
-    return PdfOpcodes.isShowTextGlyphPositioningEquals(getOperator(), getSingleOperand(), str);
-  }
-  
-  /**
-   * <p>
-   * Convenience call to
-   * {@link PdfOpcodes#isShowTextGlyphPositioningEqualsIgnoreCase(PdfToken, PdfToken, String)}
-   * using the current operator, its single operand and the given suffix.
-   * </p>
-   * 
-   * @param str
-   *          A given string.
-   * @return <code>true</code> if the current operator is the opcode
-   *         {@link PdfOpcodes#SHOW_TEXT_GLYPH_POSITIONING} and its equivalent
-   *         string operand is equal to <code>str</code> (case-independently).
-   * @since 1.60
-   */
-  protected boolean isShowTextGlyphPositioningEqualsIgnoreCase(String str) {
-    return PdfOpcodes.isShowTextGlyphPositioningEqualsIgnoreCase(getOperator(), getSingleOperand(), str);
-  }
-  
-  /**
-   * <p>
-   * Convenience call to
-   * {@link PdfOpcodes#isShowTextGlyphPositioningFind(PdfToken, PdfToken, Pattern)
-   * using the current operator, its single operand and the givenpattern.
-   * </p>
-   * 
-   * @param pattern
-   *          A given pattern.
-   * @return <code>true</code> if the current operator is the opcode
-   *         {@link PdfOpcodes#SHOW_TEXT_GLYPH_POSITIONING} and its equivalent
-   *         string operand matches <code>pattern</code> (using
-   *         {@link Matcher#find()}, which does not implicitly anchor).
-   * @since 1.62
-   * @see Matcher#find()
-   */
-  protected boolean isShowTextGlyphPositioningFind(Pattern pattern) {
-    return PdfOpcodes.isShowTextGlyphPositioningFind(getOperator(), getSingleOperand(), pattern);
-  }
-  
-  /**
-   * <p>
-   * Convenience call to
-   * {@link PdfOpcodes#isShowTextGlyphPositioningStartsWith(PdfToken, PdfToken, String)
-   * using the current operator, its single operand and the given prefix.
-   * </p>
-   * 
-   * @param prefix
-   *          A given prefix.
-   * @return <code>true</code> if the current operator is the opcode
-   *         {@link PdfOpcodes#SHOW_TEXT_GLYPH_POSITIONING} and its equivalent
-   *         string operand starts with <code>prefix</code>.
-   * @since 1.60
-   */
-  protected boolean isShowTextGlyphPositioningStartsWith(String prefix) {
-    return PdfOpcodes.isShowTextGlyphPositioningStartsWith(getOperator(), getSingleOperand(), prefix);
+  protected boolean isShowTextLineAndSpace() {
+    return PdfOpcodes.isShowTextLineAndSpace(getOperator());
   }
   
   /**
@@ -947,7 +1101,7 @@ public abstract class PdfTokenStreamWorker {
   protected void processBackward() throws PdfException {
     int end = tokens.size() - 1;
     while (end >= 0 && continueFlag) {
-      operands.clear();
+      operands_old.clear();
       operator = tokens.get(end);
       opcode = operator.getOperator();
       index = end;
@@ -955,7 +1109,7 @@ public abstract class PdfTokenStreamWorker {
       while (beginMinusOne >= 0 && !tokens.get(beginMinusOne).isOperator()) {
         --beginMinusOne;
       }
-      operands.addAll(tokens.subList(beginMinusOne + 1, end));
+      operands_old.addAll(tokens.subList(beginMinusOne + 1, end));
       operatorCallback();
       end = beginMinusOne;
     }
@@ -973,12 +1127,12 @@ public abstract class PdfTokenStreamWorker {
   protected void processForward() throws PdfException {
     int begin = 0;
     while (begin < tokens.size() && continueFlag) {
-      operands.clear();
+      operands_old.clear();
       int end = begin;
       while (end < tokens.size() && !tokens.get(end).isOperator()) {
         ++end;
       }
-      operands.addAll(tokens.subList(begin, end));
+      operands_old.addAll(tokens.subList(begin, end));
       operator = tokens.get(end);
       opcode = operator.getOperator();
       index = end;
@@ -999,5 +1153,218 @@ public abstract class PdfTokenStreamWorker {
   protected void stop() {
     continueFlag = false;
   }
+
+  /* ***************************************************************************
+   * DEPRECATED IN 1.76
+   ************************************************************************** */
   
+  /**
+   * <p>
+   * <b>Deprecated.</b> Renamed to {@link #isBeginInlineImageData()}.
+   * </p>
+   * 
+   * @since 1.60
+   * @deprecated Renamed to {@link #isBeginInlineImageData()}.
+   */
+  @Deprecated
+  protected boolean isBeginImageData() {
+    return isBeginInlineImageData();
+  }
+
+  /**
+   * <p>
+   * <b>Deprecated.</b> Renamed to {@link #isBeginInlineImage()}.
+   * </p>
+   * 
+   * @since 1.60
+   * @deprecated Renamed to {@link #isBeginInlineImage()}.
+   */
+  @Deprecated
+  protected boolean isBeginImageObject() {
+    return isBeginInlineImage();
+  }
+
+  /**
+   * <p>
+   * <b>Deprecated.</b> Renamed to {@link #isBeginText()}.
+   * </p>
+   * 
+   * @since 1.60
+   * @deprecated Renamed to {@link #isBeginText()}.
+   */
+  protected boolean isBeginTextObject() {
+    return isBeginText();
+  }
+
+  /**
+   * <p>
+   * <b>Deprecated.</b> Renamed to {@link #isEndText()}.
+   * </p>
+   * 
+   * @since 1.60
+   * @deprecated Renamed to {@link #isEndText()}.
+   */
+  @Deprecated
+  protected boolean isEndTextObject() {
+    return isEndText();
+  }
+
+  /**
+   * <p>
+   * <b>Deprecated.</b> Renamed to {@link #isDrawObject()}.
+   * </p>
+   * 
+   * @since 1.60
+   * @deprecated Renamed to {@link #isDrawObject()}.
+   */
+  @Deprecated
+  protected boolean isInvokeXObject() {
+    return isDrawObject();
+  }
+  
+  /**
+   * <p>
+   * <b>Deprecated.</b> Renamed to {@link #isShowTextLine()}.
+   * </p>
+   * 
+   * @since 1.60
+   * @deprecated Renamed to {@link #isShowTextLine()}.
+   */
+  @Deprecated
+  protected boolean isNextLineShowText() {
+    return isShowTextLine();
+  }
+
+  /**
+   * <p>
+   * <b>Deprecated.</b> Renamed to {@link #isRestore()}.
+   * </p>
+   * 
+   * @return <code>true</code> if the current operator is the opcode
+   *         {@link PdfOpcodes#RESTORE_GRAPHICS_STATE}
+   * @since 1.60
+   * @deprecated Renamed to {@link #isRestore()}.
+   */
+  @Deprecated
+  protected boolean isRestoreGraphicsState() {
+    return isRestore();
+  }
+
+  /**
+   * <p>
+   * <b>Deprecated.</b> Renamed to {@link #isSave()}.
+   * </p>
+   * 
+   * @since 1.60
+   * @deprecated Renamed to {@link #isSave()}.
+   */
+  @Deprecated
+  protected boolean isSaveGraphicsState() {
+    return isSave();
+  }
+
+  /**
+   * <p>
+   * <b>Deprecated.</b> Renamed to {@link #isShowTextLineAndSpace()}.
+   * </p>
+   * 
+   * @since 1.60
+   * @deprecated Renamed to {@link #isShowTextLineAndSpace()}.
+   */
+  @Deprecated
+  protected boolean isSetSpacingNextLineShowText() {
+    return isShowTextLineAndSpace();
+  }
+
+  /**
+   * <p>
+   * <b>Deprecated.</b> Renamed to {@link #isShowTextAdjusted()}.
+   * </p>
+   * 
+   * @since 1.60
+   * @deprecated Renamed to {@link #isShowTextAdjusted()}.
+   */
+  @Deprecated
+  protected boolean isShowTextGlyphPositioning() {
+    return isShowTextAdjusted();
+  }
+
+  /**
+   * <p>
+   * <b>Deprecated.</b> Renamed to {@link #isShowTextAdjustedContains(String)}.
+   * </p>
+   * 
+   * @since 1.67
+   * @deprecated Renamed to {@link #isShowTextAdjustedContains(String)}.
+   */
+  @Deprecated
+  protected boolean isShowTextGlyphPositioningContains(String substr) {
+    return isShowTextAdjustedContains(substr);
+  }
+
+  /**
+   * <p>
+   * <b>Deprecated.</b> Renamed to {@link #isShowTextAdjustedEndsWith(String)}.
+   * </p>
+   * 
+   * @since 1.60
+   * @deprecated Renamed to {@link #isShowTextAdjustedEndsWith(String)}.
+   */
+  @Deprecated
+  protected boolean isShowTextGlyphPositioningEndsWith(String suffix) {
+    return isShowTextAdjustedEndsWith(suffix);
+  }
+
+  /**
+   * <p>
+   * <b>Deprecated.</b> Renamed to {@link #isShowTextAdjustedEquals(String)}.
+   * </p>
+   * 
+   * @since 1.60
+   * @deprecated Renamed to {@link #isShowTextAdjustedEquals(String)}.
+   */
+  @Deprecated
+  protected boolean isShowTextGlyphPositioningEquals(String str) {
+    return isShowTextAdjustedEquals(str);
+  }
+
+  /**
+   * <p>
+   * <b>Deprecated.</b> Renamed to {@link #isShowTextAdjustedEqualsIgnoreCase(String)}.
+   * </p>
+   * 
+   * @since 1.60
+   * @deprecated Renamed to {@link #isShowTextAdjustedEqualsIgnoreCase(String)}.
+   */
+  @Deprecated
+  protected boolean isShowTextGlyphPositioningEqualsIgnoreCase(String str) {
+    return isShowTextAdjustedEqualsIgnoreCase(str);
+  }
+
+  /**
+   * <p>
+   * <b>Deprecated.</b> Renamed to{@link #isShowTextAdjustedFind(Pattern)}.
+   * </p>
+   * 
+   * @since 1.62
+   * @deprecated Renamed to{@link #isShowTextAdjustedFind(Pattern)}.
+   */
+  @Deprecated
+  protected boolean isShowTextGlyphPositioningFind(Pattern pattern) {
+    return isShowTextAdjustedFind(pattern);
+  }
+
+  /**
+   * <p>
+   * <b>Deprecated.</b> Renamed to {@link #isShowTextAdjustedStartsWith(String)}.
+   * </p>
+   * 
+   * @since 1.60
+   * @deprecated Renamed to {@link #isShowTextAdjustedStartsWith(String)}.
+   */
+  @Deprecated
+  protected boolean isShowTextGlyphPositioningStartsWith(String prefix) {
+    return isShowTextAdjustedStartsWith(prefix);
+  }
+
 }

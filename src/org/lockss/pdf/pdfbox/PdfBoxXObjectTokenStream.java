@@ -1,32 +1,33 @@
 /*
- * $Id$
- */
 
-/*
+Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
 
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
-all rights reserved.
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
-STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
 
-Except as contained in this notice, the name of Stanford University shall not
-be used in advertising or otherwise to promote the sale, use or other dealings
-in this Software without prior written authorization from Stanford University.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
 
 */
 
@@ -35,11 +36,13 @@ package org.lockss.pdf.pdfbox;
 import java.io.IOException;
 import java.util.*;
 
-import org.apache.pdfbox.cos.COSName;
+import org.apache.pdfbox.contentstream.PDContentStream;
+import org.apache.pdfbox.cos.*;
 import org.apache.pdfbox.pdfwriter.ContentStreamWriter;
 import org.apache.pdfbox.pdmodel.PDResources;
 import org.apache.pdfbox.pdmodel.common.PDStream;
-import org.apache.pdfbox.pdmodel.graphics.xobject.*;
+import org.apache.pdfbox.pdmodel.graphics.PDXObject;
+import org.apache.pdfbox.pdmodel.graphics.form.PDFormXObject;
 import org.lockss.pdf.*;
 import org.lockss.util.Logger;
 
@@ -49,7 +52,7 @@ import org.lockss.util.Logger;
  * on PDFBox 1.6.0.
  * </p>
  * <p>
- * This class acts as an adapter for the {@link PDXObjectForm} class.
+ * This class acts as an adapter for the {@link PDFormXObject} class.
  * </p>
  * 
  * @author Thib Guicherd-Callin
@@ -69,16 +72,16 @@ public class PdfBoxXObjectTokenStream extends PdfBoxTokenStream {
   
   /**
    * <p>
-   * The {@link PDXObjectForm} instance underpinning this instance.
+   * The {@link PDFormXObject} instance underpinning this instance.
    * </p>
    * 
    * @since 1.56
    */
-  protected PDXObjectForm pdXObjectForm;
+  protected PDFormXObject pdFormXObject;
   
   /**
    * <p>
-   * The form's resources, either its own ({@link PDXObjectForm#getResources()})
+   * The form's resources, either its own ({@link PDFormXObject#getResources()})
    * or those of an enclosing context.
    * </p>
    * 
@@ -96,6 +99,11 @@ public class PdfBoxXObjectTokenStream extends PdfBoxTokenStream {
   protected PDResources ownResources;
   
   /**
+   * @since 1.76
+   */
+  protected String name;
+  
+  /**
    * <p>
    * Builds a new instance using the given parent and own resources.
    * </p>
@@ -103,7 +111,7 @@ public class PdfBoxXObjectTokenStream extends PdfBoxTokenStream {
    * @param pdfBoxPage
    *          The parent PDF page.
    * @param pdXObjectForm
-   *          The {@link PDXObjectForm} being wrapped.
+   *          The {@link PDFormXObject} being wrapped.
    * @param parentResources
    *          The parent resources.
    * @param ownResources
@@ -111,67 +119,40 @@ public class PdfBoxXObjectTokenStream extends PdfBoxTokenStream {
    * @since 1.67.6
    */
   public PdfBoxXObjectTokenStream(PdfBoxPage pdfBoxPage,
-                                  PDXObjectForm pdXObjectForm,
+                                  PDFormXObject pdXObjectForm,
                                   PDResources parentResources,
                                   PDResources ownResources) {
     super(pdfBoxPage);
-    this.pdXObjectForm = pdXObjectForm;
+    this.pdFormXObject = pdXObjectForm;
     this.parentResources = parentResources;
     this.ownResources = ownResources;
+    this.name = null; /* FIXME */
   }
 
   @Override
-  public void setTokens(List<PdfToken> newTokens) throws PdfException {
+  public PdfBoxTokenStreamIterator getOperandsAndOperatorIterator() throws PdfException {
+    return new PdfBoxTokenStreamIterator(pdFormXObject, pdfBoxPage.getPdPage());
+  }
+  
+  @Override
+  public void setTokens(Iterator<? extends PdfToken> tokenIterator) throws PdfException {
+    PDStream newPdStream = makePdStreamFromTokens(tokenIterator);
+    COSStream cosStream = newPdStream.getCOSObject();
+    cosStream.setName(COSName.SUBTYPE, COSName.FORM.getName());
     try {
-      PDXObjectForm oldForm = pdXObjectForm;
-      PDStream newPdStream = makeNewPdStream();
-      newPdStream.getStream().setName(COSName.SUBTYPE, PDXObjectForm.SUB_TYPE);
-      ContentStreamWriter tokenWriter = new ContentStreamWriter(newPdStream.createOutputStream());
-      for (int i = 0 ; i < newTokens.size() ; i += 10000) {
-        int len = newTokens.size() - i > 10_000 ? 10_000 : newTokens.size() - i;
-        tokenWriter.writeTokens(PdfBoxTokens.unconvertList(newTokens.subList(i, i + len)));
-      }
-      pdXObjectForm = new PDXObjectForm(newPdStream);
-      pdXObjectForm.setResources(getStreamResources());
-      Map<String, PDXObject> xobjects = parentResources.getXObjects();
-      boolean found = true; // Bug? False here then true before 'break'? (Harmless)
-      for (Map.Entry<String, PDXObject> ent : xobjects.entrySet()) {
-        String key = ent.getKey();
-        PDXObject val = ent.getValue();
-        if (val == oldForm) {
-          xobjects.put(key, pdXObjectForm);
-          /*
-           * IMPLEMENTATION NOTE
-           * 
-           * The map returned by getXObjects() (PDFBox 1.8.9: PDResources.java
-           * lines 326-339) is a HashMap that caches the stored COSDictionary of
-           * XObjects. When setXObjects is called, the supplied map is used to
-           * supplant the cached map and to regenerate the stored COSDictionary.
-           * We observed identical original bytes being filtered to results that
-           * differ only in the ordering of resource dictionaries in the
-           * ASMscience Journals Plugin on the CLOCKSS production machines after
-           * this code was introduced. It turns out that the machines running
-           * Java 6 agreed together and those running Java 7 agreed together.
-           * Use a sorted map instead (added in 1.68.3).
-           */ 
-          parentResources.setXObjects(new TreeMap<String, PDXObject>(xobjects));
-          break;
-        }
-      }
-      if (!found) {
-        log.debug2("No mapping found while replacing form token stream");
-      }
+      PDXObject pdxObject = PDXObject.createXObject(cosStream, null /* FIXME which resources? */);
+      parentResources.put(COSName.getPDFName(name), pdxObject);
     }
     catch (IOException ioe) {
-      throw new PdfException("Error while writing XObject token stream", ioe);
+      throw new PdfException(ioe);
     }
   }
-
+  
   @Override
-  protected PDStream getPdStream() {
-    return pdXObjectForm.getPDStream();
+  protected PDContentStream getPdContentStream() {
+    return pdFormXObject;
   }
-
+  
   @Override
   protected PDResources getStreamResources() {
     return ownResources != null ? ownResources : parentResources;

@@ -41,6 +41,10 @@ import org.pdfbox.pdfparser.PDFParser;
 import org.pdfbox.pdmodel.*;
 import org.pdfbox.pdmodel.common.*;
 
+/**
+ * @deprecated
+ */
+@Deprecated
 public class MockPdfDocument extends PdfDocument {
 
   public MockPdfDocument() {

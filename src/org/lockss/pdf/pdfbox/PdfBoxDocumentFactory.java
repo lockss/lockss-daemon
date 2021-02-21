@@ -1,32 +1,33 @@
 /*
- * $Id$
- */
 
-/*
+Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
 
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
-all rights reserved.
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
-STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
 
-Except as contained in this notice, the name of Stanford University shall not
-be used in advertising or otherwise to promote the sale, use or other dealings
-in this Software without prior written authorization from Stanford University.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
 
 */
 
@@ -35,11 +36,11 @@ package org.lockss.pdf.pdfbox;
 import java.io.*;
 import java.util.List;
 
-import org.apache.pdfbox.exceptions.*;
 import org.apache.pdfbox.pdfparser.PDFParser;
 import org.apache.pdfbox.pdmodel.*;
 import org.apache.pdfbox.pdmodel.common.PDStream;
-import org.apache.pdfbox.pdmodel.graphics.xobject.PDXObjectForm;
+import org.apache.pdfbox.pdmodel.encryption.InvalidPasswordException;
+import org.apache.pdfbox.pdmodel.graphics.form.PDFormXObject;
 import org.lockss.pdf.*;
 import org.lockss.util.IOUtil;
 
@@ -55,8 +56,8 @@ import org.lockss.util.IOUtil;
 public class PdfBoxDocumentFactory implements PdfDocumentFactory {
 
   @Override
-  public PdfTokenFactory getTokenFactory() {
-    return PdfBoxTokens.getFactory();
+  public PdfBoxToken.Factory getTokenFactory() {
+    return PdfBoxToken.getFactory();
   }
   
   @Override
@@ -69,13 +70,14 @@ public class PdfBoxDocumentFactory implements PdfDocumentFactory {
       processAfterParse(pdDocument);
       return makeDocument(this, pdDocument);
     }
-    catch (CryptographyException ce) {
-      throw new PdfCryptographyException(ce);
+    catch (InvalidPasswordException ipe) {
+      throw new PdfCryptographyException(ipe);
     }
     catch (IOException ioe) {
       throw new PdfException(ioe);
     }
     finally {
+      // FIXME
       // PDFBox normally closes the input stream, but just in case
       IOUtil.safeClose(pdfInputStream);
     }
@@ -112,15 +114,15 @@ public class PdfBoxDocumentFactory implements PdfDocumentFactory {
    *           If an error occurs
    * @since 1.70
    */
-  public PdfBoxPageTokenStream makePageTokenStream(PdfPage pdfPage,
+  public PdfBoxTokenStream makePageTokenStream(PdfPage pdfPage,
                                                    Object pdfTokenStreamObject)
       throws PdfException {
-    return new PdfBoxPageTokenStream((PdfBoxPage)pdfPage, (PDStream)pdfTokenStreamObject);
+    return new PdfBoxPageTokenStream((PdfBoxPage)pdfPage, null);
   }
 
   @Override
-  public PdfTokenStream makeTokenStream(PdfPage pdfPage,
-                                        Object pdfToenStreamObject)
+  public PdfBoxTokenStream makeTokenStream(PdfPage pdfPage,
+                                           Object pdfTokenStreamObject)
       throws PdfException {
     throw new UnsupportedOperationException("Not supported by this class; use makePageTokenStream and makeXObjectTokenStream instead");
   }
@@ -149,20 +151,11 @@ public class PdfBoxDocumentFactory implements PdfDocumentFactory {
       throws PdfException {
     List<?> varargs = (List<?>)pdfTokenStreamObject;
     return new PdfBoxXObjectTokenStream((PdfBoxPage)pdfPage,
-                                        (PDXObjectForm)varargs.get(0),
+                                        (PDFormXObject)varargs.get(0),
                                         (PDResources)varargs.get(1),
                                         (PDResources)varargs.get(2));
   }
   
-  @Override
-  @Deprecated
-  public PdfDocument parse(InputStream pdfInputStream)
-      throws IOException,
-             PdfCryptographyException,
-             PdfException {
-    return makeDocument(pdfInputStream);
-  }
-
   /**
    * 
    * @param pdfInputStream
@@ -171,11 +164,9 @@ public class PdfBoxDocumentFactory implements PdfDocumentFactory {
    * @since 1.70
    */
   protected PDDocument makePdDocument(InputStream pdfInputStream)
-      throws IOException {
-    PDFParser pdfParser = new PDFParser(pdfInputStream);
-    pdfParser.parse(); // Probably closes the input stream
-    PDDocument pdDocument = pdfParser.getPDDocument();
-    return pdDocument;
+      throws InvalidPasswordException, IOException {
+    // FIXME: memory management
+    return PDDocument.load(pdfInputStream);
   }
   
   /**
@@ -186,18 +177,13 @@ public class PdfBoxDocumentFactory implements PdfDocumentFactory {
    * 
    * @param pdDocument
    *          A freshly parsed {@link PDDocument} instance
-   * @throws CryptographyException
-   *           if a cryptography exception is thrown
    * @throws IOException
    *           if an I/O exception is thrown
    * @since 1.67
    */
   protected void processAfterParse(PDDocument pdDocument)
-      throws CryptographyException, IOException {
+      throws IOException {
     pdDocument.setAllSecurityToBeRemoved(true);
-    if (pdDocument.isEncrypted()) {
-      pdDocument.decrypt("");
-    }
   }
   
 }

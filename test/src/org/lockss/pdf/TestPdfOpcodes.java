@@ -39,19 +39,31 @@ import org.lockss.test.LockssTestCase;
 
 public class TestPdfOpcodes extends LockssTestCase {
 
-  protected static final String[] OPCODES = {PdfOpcodes.BEGIN_IMAGE_DATA,
-                                             PdfOpcodes.BEGIN_IMAGE_OBJECT,
-                                             PdfOpcodes.BEGIN_TEXT_OBJECT,
-                                             PdfOpcodes.END_TEXT_OBJECT,
-                                             PdfOpcodes.INVOKE_XOBJECT,
-                                             PdfOpcodes.NEXT_LINE_SHOW_TEXT,
-                                             PdfOpcodes.RESTORE_GRAPHICS_STATE,
-                                             PdfOpcodes.SAVE_GRAPHICS_STATE,
-                                             PdfOpcodes.SET_SPACING_NEXT_LINE_SHOW_TEXT,
+  protected static final String[] OPCODES = {PdfOpcodes.BEGIN_IMAGE_DATA, // renamed to PdfOpcodes.BEGIN_INLINE_IMAGE_DATA
+                                             PdfOpcodes.BEGIN_IMAGE_OBJECT, // renamed to PdfOpcodes.BEGIN_INLINE_IMAGE
+                                             PdfOpcodes.BEGIN_INLINE_IMAGE,
+                                             PdfOpcodes.BEGIN_INLINE_IMAGE_DATA,
+                                             PdfOpcodes.BEGIN_TEXT,
+                                             PdfOpcodes.BEGIN_TEXT_OBJECT, // renamed to PdfOpcodes.BEGIN_TEXT
+                                             PdfOpcodes.DRAW_OBJECT,
+                                             PdfOpcodes.END_TEXT,
+                                             PdfOpcodes.END_TEXT_OBJECT, // renamed to PdfOpcodes.END_TEXT
+                                             PdfOpcodes.INVOKE_XOBJECT, // renamed to PdfOpcodes.DRAW_OBJECT
+                                             PdfOpcodes.NEXT_LINE_SHOW_TEXT, // renamed to PdfOpcodes.SHOW_TEXT_LINE
+                                             PdfOpcodes.RESTORE,
+                                             PdfOpcodes.RESTORE_GRAPHICS_STATE, // renamed to PdfOpcodes.RESTORE
+                                             PdfOpcodes.SAVE,
+                                             PdfOpcodes.SAVE_GRAPHICS_STATE, // renamed to PdfOpcodes.SAVE
+                                             PdfOpcodes.SET_GRAPHICS_STATE_PARAMS,
+                                             PdfOpcodes.SET_SPACING_NEXT_LINE_SHOW_TEXT, // renamed to PdfOpcodes.SHOW_TEXT_LINE_AND_SPACE
                                              PdfOpcodes.SET_TEXT_FONT,
                                              PdfOpcodes.SET_TEXT_MATRIX,
                                              PdfOpcodes.SHOW_TEXT,
-                                             PdfOpcodes.SHOW_TEXT_GLYPH_POSITIONING};
+                                             PdfOpcodes.SHOW_TEXT_ADJUSTED,
+                                             PdfOpcodes.SHOW_TEXT_GLYPH_POSITIONING, // renamed to PdfOpcodes.SHOW_TEXT_ADJUSTED
+                                             PdfOpcodes.SHOW_TEXT_LINE,
+                                             PdfOpcodes.SHOW_TEXT_LINE_AND_SPACE,
+                                            };
   
   protected PdfTokenFactory tf;
   
@@ -72,18 +84,34 @@ public class TestPdfOpcodes extends LockssTestCase {
                    PdfOpcodes.isBeginImageData(operator));
       assertEquals(PdfOpcodes.BEGIN_IMAGE_OBJECT.equals(opcode),
                    PdfOpcodes.isBeginImageObject(operator));
+      assertEquals(PdfOpcodes.BEGIN_INLINE_IMAGE.equals(opcode),
+                   PdfOpcodes.isBeginInlineImage(operator));
+      assertEquals(PdfOpcodes.BEGIN_INLINE_IMAGE_DATA.equals(opcode),
+                   PdfOpcodes.isBeginInlineImageData(operator));
+      assertEquals(PdfOpcodes.BEGIN_TEXT.equals(opcode),
+                   PdfOpcodes.isBeginText(operator));
       assertEquals(PdfOpcodes.BEGIN_TEXT_OBJECT.equals(opcode),
                    PdfOpcodes.isBeginTextObject(operator));
+      assertEquals(PdfOpcodes.DRAW_OBJECT.equals(opcode),
+                   PdfOpcodes.isDrawObject(operator));
+      assertEquals(PdfOpcodes.END_TEXT.equals(opcode),
+                   PdfOpcodes.isEndText(operator));
       assertEquals(PdfOpcodes.END_TEXT_OBJECT.equals(opcode),
                    PdfOpcodes.isEndTextObject(operator));
       assertEquals(PdfOpcodes.INVOKE_XOBJECT.equals(opcode),
                    PdfOpcodes.isInvokeXObject(operator));
       assertEquals(PdfOpcodes.NEXT_LINE_SHOW_TEXT.equals(opcode),
                    PdfOpcodes.isNextLineShowText(operator));
+      assertEquals(PdfOpcodes.RESTORE.equals(opcode),
+                   PdfOpcodes.isRestore(operator));
       assertEquals(PdfOpcodes.RESTORE_GRAPHICS_STATE.equals(opcode),
                    PdfOpcodes.isRestoreGraphicsState(operator));
+      assertEquals(PdfOpcodes.SAVE.equals(opcode),
+                   PdfOpcodes.isSave(operator));
       assertEquals(PdfOpcodes.SAVE_GRAPHICS_STATE.equals(opcode),
                    PdfOpcodes.isSaveGraphicsState(operator));
+      assertEquals(PdfOpcodes.SET_GRAPHICS_STATE_PARAMS.equals(opcode),
+                   PdfOpcodes.isSetGraphicsStateParams(operator));
       assertEquals(PdfOpcodes.SET_SPACING_NEXT_LINE_SHOW_TEXT.equals(opcode),
                    PdfOpcodes.isSetSpacingNextLineShowText(operator));
       assertEquals(PdfOpcodes.SET_TEXT_FONT.equals(opcode),
@@ -92,8 +120,14 @@ public class TestPdfOpcodes extends LockssTestCase {
                    PdfOpcodes.isSetTextMatrix(operator));
       assertEquals(PdfOpcodes.SHOW_TEXT.equals(opcode),
                    PdfOpcodes.isShowText(operator));
+      assertEquals(PdfOpcodes.SHOW_TEXT_ADJUSTED.equals(opcode),
+                   PdfOpcodes.isShowTextAdjusted(operator));
       assertEquals(PdfOpcodes.SHOW_TEXT_GLYPH_POSITIONING.equals(opcode),
                    PdfOpcodes.isShowTextGlyphPositioning(operator));
+      assertEquals(PdfOpcodes.SHOW_TEXT_LINE.equals(opcode),
+                   PdfOpcodes.isShowTextLine(operator));
+      assertEquals(PdfOpcodes.SHOW_TEXT_LINE_AND_SPACE.equals(opcode),
+                   PdfOpcodes.isShowTextLineAndSpace(operator));
     }
   }
   
@@ -142,35 +176,35 @@ public class TestPdfOpcodes extends LockssTestCase {
             }
     };
 
-    StringOpcodeTester showTextGlyphPositioning =
-        new StringOpcodeTester(tf.makeOperator(PdfOpcodes.SHOW_TEXT_GLYPH_POSITIONING),
+    StringOpcodeTester showTextAdjusted =
+        new StringOpcodeTester(tf.makeOperator(PdfOpcodes.SHOW_TEXT_ADJUSTED),
                                tf.makeArray(Arrays.asList(tf.makeString("foo"),
                                                           tf.makeInteger(1),
                                                           tf.makeString("bar"),
                                                           tf.makeInteger(2),
                                                           tf.makeString("qux")))) {
             @Override boolean contains(String substr) {
-              return PdfOpcodes.isShowTextGlyphPositioningContains(operator, operand, substr);
+              return PdfOpcodes.isShowTextAdjustedContains(operator, operand, substr);
             }
             @Override boolean endsWith(String suffix) {
-              return PdfOpcodes.isShowTextGlyphPositioningEndsWith(operator, operand, suffix);
+              return PdfOpcodes.isShowTextAdjustedEndsWith(operator, operand, suffix);
             }
             @Override boolean equals(String str) {
-              return PdfOpcodes.isShowTextGlyphPositioningEquals(operator, operand, str);
+              return PdfOpcodes.isShowTextAdjustedEquals(operator, operand, str);
             }
             @Override boolean equalsIgnoreCase(String str) {
-              return PdfOpcodes.isShowTextGlyphPositioningEqualsIgnoreCase(operator, operand, str);
+              return PdfOpcodes.isShowTextAdjustedEqualsIgnoreCase(operator, operand, str);
             }
             @Override boolean find(Pattern pattern) {
-              return PdfOpcodes.isShowTextGlyphPositioningFind(operator, operand, pattern);
+              return PdfOpcodes.isShowTextAdjustedFind(operator, operand, pattern);
             }
             @Override boolean startsWith(String prefix) {
-              return PdfOpcodes.isShowTextGlyphPositioningStartsWith(operator, operand, prefix);
+              return PdfOpcodes.isShowTextAdjustedStartsWith(operator, operand, prefix);
             }
     };
     
     for (StringOpcodeTester tester : Arrays.asList(showText,
-                                                   showTextGlyphPositioning)) {
+                                                   showTextAdjusted)) {
       assertTrue(tester.contains("bar"));
       assertFalse(tester.contains("fred"));
       assertTrue(tester.endsWith("ux"));

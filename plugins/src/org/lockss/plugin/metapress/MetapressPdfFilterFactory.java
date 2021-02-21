@@ -131,7 +131,7 @@ public class MetapressPdfFilterFactory implements FilterFactory {
       
       PdfTokenStreamStateMachine worker = new MetaPressStateMachine();
       for (PdfPage pdfPage : pdfDocument.getPages()) {
-        for (PdfTokenStream pdfTokenStream : pdfPage.getAllTokenStreams()) {
+        for (PdfTokenStream pdfTokenStream : pdfPage.getTokenStreamList()) {
           worker.process(pdfTokenStream);
           if (worker.getResult()) {
             List<PdfToken> tokens = pdfTokenStream.getTokens();

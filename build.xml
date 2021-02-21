@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-Copyright (c) 2000-2020, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -339,20 +339,21 @@ Args:
   <property name="test-support.jar" value="${lib}/test-support-1.0.4.jar"/>
   <property name="httpclient.jar" value="${lib}/httpclient-4.3.1.jar"/>
 
-  <!-- PDFBox -->
-  <property name="pdfbox.version" value="1.8.16" />
-  <property name="pdfbox.jar" value="${lib}/pdfbox-${pdfbox.version}.jar" />
-  <!-- Next 8 JARs needed by PDFBox: -->
-  <property name="fontbox.jar" value="${lib}/fontbox-${pdfbox.version}.jar" />
-  <property name="jempbox.jar" value="${lib}/jempbox-${pdfbox.version}.jar" />
-  <property name="xmpbox.jar" value="${lib}/xmpbox-${pdfbox.version}.jar" />
-  <property name="bouncycastle.version" value="jdk15on-167" />
+  <!-- PDFBox 2.0 -->
+  <property name="pdfbox2.version" value="2.0.22" />
+  <property name="pdfbox2.jar" value="${lib}/pdfbox-${pdfbox2.version}.jar" />
+  <!-- PDFBox 2.0 dependencies (https://pdfbox.apache.org/2.0/dependencies.html): -->
+  <!-- Commons Logging, which we already have -->
+  <property name="fontbox2.jar" value="${lib}/fontbox-${pdfbox2.version}.jar" />
+  <property name="jempbox2.jar" value="${lib}/jempbox-${pdfbox2.version}.jar" />
+  <property name="xmpbox2.jar" value="${lib}/xmpbox-${pdfbox2.version}.jar" />
+  <property name="bouncycastle.version" value="jdk15to18-168" />
   <property name="bouncycastle-provider.jar" value="${lib}/bcprov-${bouncycastle.version}.jar" />
   <property name="bouncycastle-mail.jar" value="${lib}/bcmail-${bouncycastle.version}.jar" />
-  <property name="icu4j.version" value="68_1" />
-  <property name="icu4j.jar" value="${lib}/icu4j-${icu4j.version}.jar" />
-  <property name="icu4j-charset.jar" value="${lib}/icu4j-charset-${icu4j.version}.jar" />
-  <property name="icu4j-localespi.jar" value="${lib}/icu4j-localespi-${icu4j.version}.jar" />
+  <property name="bouncycastle-pkix.jar" value="${lib}/bcpkix-${bouncycastle.version}.jar" />
+
+  <!-- Contains a drop-in replacement for ICU4J's CharsetDetector, now that PDFBox doesn't depend on ICU4J anymore -->
+  <property name="tika-parser-text-module.jar" value="${lib}/tika-parser-text-module-2.0.0-ALPHA.jar" />
 
   <!-- PDFBox 0.7.3 -->
   <property name="pdfbox-old.jar" value="${lib}/PDFBox-0.7.3.jar" />
@@ -537,15 +538,15 @@ Args:
     <pathelement path="${marc4j.jar}" />
     <pathelement path="${rdf.jar}" />
     <pathelement path="${xstream.jar}" />
-    <pathelement path="${pdfbox.jar}" />
+    <pathelement path="${pdfbox2.jar}" />
     <!-- Next 7 needed by PDFBox: -->
-    <pathelement path="${fontbox.jar}" />
-    <pathelement path="${jempbox.jar}" />
+    <pathelement path="${fontbox2.jar}" />
+    <pathelement path="${jempbox2.jar}" />
+    <pathelement path="${xmpbox2.jar}" />
     <pathelement path="${bouncycastle-provider.jar}" />
     <pathelement path="${bouncycastle-mail.jar}" />
-    <pathelement path="${icu4j.jar}" />
-    <pathelement path="${icu4j-charset.jar}" />
-    <pathelement path="${icu4j-localespi.jar}" />
+    <pathelement path="${bouncycastle-pkix.jar}" />
+    <pathelement path="${tika-parser-text-module.jar}" />
     <pathelement path="${pdfbox-old.jar}" />
     <!-- Next 3 needed by PDFBox 0.7.3: -->
     <pathelement path="${fontbox-old.jar}" />

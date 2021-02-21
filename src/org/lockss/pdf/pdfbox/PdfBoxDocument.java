@@ -1,32 +1,33 @@
 /*
- * $Id$
- */
 
-/*
+Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
 
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
-all rights reserved.
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
-STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
 
-Except as contained in this notice, the name of Stanford University shall not
-be used in advertising or otherwise to promote the sale, use or other dealings
-in this Software without prior written authorization from Stanford University.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
 
 */
 
@@ -34,18 +35,20 @@ package org.lockss.pdf.pdfbox;
 
 import java.io.*;
 import java.lang.ref.WeakReference;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 import javax.xml.transform.TransformerException;
 
-import org.apache.jempbox.xmp.XMPMetadata;
+import org.apache.commons.collections4.iterators.*;
+import org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream;
 import org.apache.pdfbox.cos.*;
-import org.apache.pdfbox.exceptions.COSVisitorException;
 import org.apache.pdfbox.pdmodel.*;
 import org.apache.pdfbox.pdmodel.common.PDMetadata;
+import org.apache.xmpbox.XMPMetadata;
+import org.apache.xmpbox.xml.*;
 import org.lockss.pdf.*;
 import org.lockss.pdf.PdfDocument;
-import org.lockss.pdf.PdfPage;
 import org.lockss.util.*;
 import org.w3c.dom.Document;
 
@@ -133,23 +136,6 @@ public class PdfBoxDocument implements PdfDocument {
   
   /**
    * <p>
-   * Constructor. <b>Deprectaed in 1.70.</b>
-   * </p>
-   * 
-   * @param pdDocument
-   *          The {@link PDDocument} instance underpinning this PDF document
-   * @since 1.56
-   * @deprecated Deprecated since 1.70. Use
-   *             {@link #PdfBoxDocument(PdfDocumentFactory, PDDocument)}
-   *             instead.
-   */
-  @Deprecated
-  public PdfBoxDocument(PDDocument pdDocument) {
-    this(null, pdDocument);
-  }
-
-  /**
-   * <p>
    * Constructor.
    * </p>
    * 
@@ -208,13 +194,8 @@ public class PdfBoxDocument implements PdfDocument {
   }
 
   @Override
-  public Calendar getCreationDate() throws PdfException {
-    try {
-      return pdDocument.getDocumentInformation().getCreationDate();
-    }
-    catch (IOException ioe) {
-      throw new PdfException("Error processing the creation date", ioe);
-    }
+  public Calendar getCreationDate() {
+    return pdDocument.getDocumentInformation().getCreationDate();
   }
 
   @Override
@@ -244,7 +225,8 @@ public class PdfBoxDocument implements PdfDocument {
       if (metadata == null) {
         return null;
       }
-      return metadata.getInputStreamAsString();
+      InputStreamReader reader = new InputStreamReader(metadata.exportXMPMetadata(), StandardCharsets.UTF_8);
+      return StringUtil.fromReader(reader);
     }
     catch (IOException ioe) {
       throw new PdfException("Error converting metadata stream to string", ioe);
@@ -253,26 +235,41 @@ public class PdfBoxDocument implements PdfDocument {
 
   @Override
   public Document getMetadataAsXmp() throws PdfException {
+    throw new UnsupportedOperationException("Operation not supported in the PDFBox implementation");
+  }
+
+  /**
+   * <p>
+   * Returns the document metadata as an XMPBox {@link XMPMetadata} instance.
+   * </p>
+   * <p>
+   * Note that in PDF parlance, "metadata" is a field you can get and set, just
+   * like "author" is a field you can get and set.
+   * </p>
+   * 
+   * @return The document metadata as an XMPBox {@link XMPMetadata} instance.
+   * @throws PdfException
+   *           If processing fails.
+   * @since 1.76
+   * @see #setMetadataFromXMPMetadata(XMPMetadata)
+   */
+  public XMPMetadata getMetadataAsXMPMetadata() throws PdfException {
     try {
-      PDMetadata metadata = pdDocument.getDocumentCatalog().getMetadata();
-      if (metadata == null) {
+      PDMetadata pdMetadata = pdDocument.getDocumentCatalog().getMetadata();
+      if (pdMetadata == null) {
         return null;
       }
-      return metadata.exportXMPMetadata().getXMPDocument();
+      DomXmpParser xmpParser = new DomXmpParser();
+      return xmpParser.parse(pdMetadata.exportXMPMetadata());
     }
-    catch (IOException ioe) {
-      throw new PdfException("Error parsing XMP data", ioe);
+    catch (XmpParsingException | IOException exc) {
+      throw new PdfException("Error parsing XMP data", exc);
     }
   }
 
   @Override
-  public Calendar getModificationDate() throws PdfException {
-    try {
-      return pdDocument.getDocumentInformation().getModificationDate();
-    }
-    catch (IOException ioe) {
-      throw new PdfException("Error processing the modification date", ioe);
-    }
+  public Calendar getModificationDate() {
+    return pdDocument.getDocumentInformation().getModificationDate();
   }
 
   @Override
@@ -281,33 +278,39 @@ public class PdfBoxDocument implements PdfDocument {
   }
 
   @Override
-  public PdfPage getPage(int index) throws PdfException {
-    /*
-     * IMPLEMENTATION NOTE
-     * 
-     * The documentation of getAllPages() (PDFBox 1.6.0:
-     * PDDocumentCatalog line 205) states that all the elements in the
-     * returned list are of type PDPage.
-     */
-    return getDocumentFactory().makePage(this, /*(PDPage)*/pdDocument.getDocumentCatalog().getAllPages().get(index));
+  public PdfBoxPage getPage(int index) throws PdfException {
+    return getDocumentFactory().makePage(this, pdDocument.getPage(index));
   }
 
+  @Override // Just for the covariant default method return type
+  public Iterable<PdfBoxPage> getPageIterable() throws PdfException {
+    return (Iterable<PdfBoxPage>)PdfDocument.super.getPageIterable();
+  }
+  
   @Override
-  public List<PdfPage> getPages() throws PdfException {
-    /*
-     * IMPLEMENTATION NOTE
-     * 
-     * The documentation of getAllPages() (PDFBox 1.6.0:
-     * PDDocumentCatalog line 205) states that all the elements in the
-     * returned list are of type PDPage.
-     */
-    List<PdfPage> ret = new ArrayList<PdfPage>();
-    for (Object obj : pdDocument.getDocumentCatalog().getAllPages()) {
-      ret.add(getDocumentFactory().makePage(this, /*(PDPage)*/obj));
-    }
-    return ret;
+  public Iterator<PdfBoxPage> getPageIterator() throws PdfException {
+    return new LazyIteratorChain<PdfBoxPage>() {
+      @Override
+      protected Iterator<PdfBoxPage> nextIterator(int count) { // caution: count is one-based
+        try {
+          return (count <= getNumberOfPages()) ? new SingletonIterator<>(getPage(count - 1)) : null;
+        }
+        catch (PdfException pe) {
+          throw new PdfRuntimeException("PdfException in page iterator at index " + (count - 1), pe);
+        }
+      }
+    };
   }
-
+  
+  @Override // Just for the covariant default method return type
+  public List<PdfBoxPage> getPageList() throws PdfException {
+    return (List<PdfBoxPage>)PdfDocument.super.getPageList();
+  }
+  
+  public PDDocument getPdDocument() {
+    return pdDocument;
+  }
+  
   @Override
   public String getProducer() {
     return pdDocument.getDocumentInformation().getProducer();
@@ -334,7 +337,7 @@ public class PdfBoxDocument implements PdfDocument {
      * logical root dictionary (catalog). Converting it leads to converting the
      * entire object graph, which fails on COSStream. Special-case this part;
      * but this should probably lead to deprecating #setTrailer(Map) in favor
-     * of redefining #getTrailer() as retsurning a live mapping that need not be
+     * of redefining #getTrailer() as returning a live mapping that need not be
      * stored.
      */
     Map<String, PdfToken> ret = new LinkedHashMap<String, PdfToken>();
@@ -343,7 +346,7 @@ public class PdfBoxDocument implements PdfDocument {
       for (Map.Entry<COSName, COSBase> ent : trailer.entrySet()) {
         COSBase val = ent.getValue();
         if (!(val instanceof COSObject)) {
-          ret.put(ent.getKey().getName(), PdfBoxTokens.convertOne(val));
+          ret.put(ent.getKey().getName(), PdfBoxToken.convertOne(val));
         }
       }
     }
@@ -363,9 +366,9 @@ public class PdfBoxDocument implements PdfDocument {
     try {
       pdDocument.save(outputStream);
     }
-    catch (COSVisitorException cve) {
-      log.debug2("Error saving PDF document", cve);
-      throw new PdfException("Error saving PDF document", cve);
+    catch (IOException ioe) {
+      log.debug2("Error saving PDF document", ioe);
+      throw ioe;
     }
   }
 
@@ -399,35 +402,51 @@ public class PdfBoxDocument implements PdfDocument {
     /*
      * IMPLEMENTATION NOTE
      * 
-     * getInputStreamAsString() (PDFBox 1.6.0: PDStream line 496) uses
-     * the encoding ISO-8859-1, so we need to encode the string
-     * accordingly. If it defined a constant, we could use it, but it
-     * hard-codes the string "ISO-8859-1".
+     * PDFBox 1.6.0 (probably 1.x) hard-coded ISO-8859-1, but there is no trace
+     * of an encoding anymore (now that it comes out as an InputStream and goes
+     * back in as a byte array), and the XML specification (2016 Part 3 Section
+     * 2.1.1 and 2.1.2) doesn't really adjudicate except for saying UTF-8 is
+     * widespread. Using UTF-8 now.
      */
     try {
-      InputStream is = new ByteArrayInputStream(metadata.getBytes(Constants.ENCODING_ISO_8859_1));
-      pdDocument.getDocumentCatalog().setMetadata(new PDMetadata(pdDocument, is, false));
-    }
-    catch (UnsupportedEncodingException uee) {
-      // Shouldn't happen, ISO-8859-1 is guaranteed to exist
-      log.warning("Unexpected unsupported encoding exception: " + Constants.ENCODING_ISO_8859_1, uee);
-      throw new PdfException("Unexpected error converting metadata string to stream", uee);
+      pdDocument.getDocumentCatalog().getMetadata().importXMPMetadata(metadata.getBytes(StandardCharsets.UTF_8));
     }
     catch (IOException ioe) {
-      throw new PdfException("Error converting metadata string to stream", ioe);
+      throw new PdfException("Error converting metadata string", ioe);
     }
   }
 
   @Override
   public void setMetadataFromXmp(Document xmpDocument) throws PdfException {
+    throw new UnsupportedOperationException("Operation not supported in the PDFBox implementation");
+  }
+
+  /**
+   * <p>
+   * Sets the document metadata from an XMPBox {@link XMPMetadata } instance.
+   * </p>
+   * <p>
+   * Note that in PDF parlance, "metadata" is a field you can get and set, just
+   * like "author" is a field you can get and set.
+   * </p>
+   * 
+   * @param xmpDocument
+   *          The document metadata from an XMPBox {@link XMPMetadata }
+   *          instance.
+   * @throws PdfException
+   *           If processing fails.
+   * @since 1.76
+   * @see #getMetadataAsXMPMetadata()
+   */
+  public void setMetadataFromXMPMetadata(XMPMetadata xmpMetadata) throws PdfException {
     try {
-      pdDocument.getDocumentCatalog().getMetadata().importXMPMetadata(new XMPMetadata(xmpDocument));
+      UnsynchronizedByteArrayOutputStream ubaos = new UnsynchronizedByteArrayOutputStream();
+      XmpSerializer xmpSerializer = new XmpSerializer();
+      xmpSerializer.serialize(xmpMetadata, ubaos, true);
+      pdDocument.getDocumentCatalog().getMetadata().importXMPMetadata(ubaos.toByteArray());
     }
-    catch (IOException ioe) {
-      throw new PdfException("Error converting XMP document to metadata", ioe);
-    }
-    catch (TransformerException te) {
-      throw new PdfException("Error converting XMP document to metadata", te);
+    catch (TransformerException | IOException exc) {
+      throw new PdfException("Error converting XMP data", exc);
     }
   }
 
@@ -456,7 +475,7 @@ public class PdfBoxDocument implements PdfDocument {
     /* See important IMPLEMENTATION NOTE in #getTrailer() */
     COSDictionary trailer = pdDocument.getDocument().getTrailer();
     for (Map.Entry<String, PdfToken> ent : trailerMapping.entrySet()) {
-      trailer.setItem(ent.getKey(), (COSBase)PdfBoxTokens.unconvertOne(ent.getValue()));
+      trailer.setItem(ent.getKey(), (COSBase)PdfBoxToken.unconvertOne(ent.getValue()));
     }
   }
 

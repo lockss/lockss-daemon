@@ -87,7 +87,7 @@ public abstract class SimplePdfFilterFactory
       throws PluginException {
     PdfDocument pdfDocument = null;
     try {
-      pdfDocument = pdfDocumentFactory.parse(in);
+      pdfDocument = pdfDocumentFactory.makeDocument(in);
       transform(au, pdfDocument);
       return PdfUtil.asInputStream(pdfDocument);
     }

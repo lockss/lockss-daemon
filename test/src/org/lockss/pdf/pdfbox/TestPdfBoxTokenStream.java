@@ -41,25 +41,26 @@ import org.lockss.util.FileBackedList;
 import org.lockss.util.Logger;
 
 public class TestPdfBoxTokenStream extends LockssTestCase {
-  private static Logger log = Logger.getLogger("TestPdfBoxTokenStream");
+
+  private static final Logger log = Logger.getLogger(TestPdfBoxTokenStream.class);
 
   public void testExcessiveTokenStream() throws Exception {
-    List<PdfToken> tok = null;
+    List<PdfBoxToken> tokens = null;
     try {
       ConfigurationUtil.addFromArgs(PdfBoxTokenStream.PARAM_FILE_BACKED_LISTS_THRESHOLD, "1000");
-      PdfDocumentFactory fact = new PdfBoxDocumentFactory();
-      PdfDocument doc = fact.makeDocument(getClass().getResourceAsStream("lorem.pdf"));
-      PdfPage page = doc.getPage(0);
-      PdfTokenStream strm = page.getPageTokenStream();
-      tok = strm.getTokens();
-      assertEquals(8011, tok.size()); // expected size of this manufactured token stream
-      assertTrue(tok instanceof FileBackedList); // check that it exceeded the in-memory limit
+      PdfBoxDocumentFactory fact = new PdfBoxDocumentFactory();
+      PdfBoxDocument doc = fact.makeDocument(getClass().getResourceAsStream("lorem.pdf"));
+      PdfBoxPage page = doc.getPage(0);
+      PdfBoxTokenStream strm = page.getPageTokenStream();
+      tokens = strm.getTokenList();
+      assertEquals(8011, tokens.size()); // expected size of this manufactured token stream
+      assertTrue(tokens instanceof FileBackedList); // check that it exceeded the in-memory limit
     } finally {
-      if (tok instanceof FileBackedList) {
+      if (tokens instanceof FileBackedList) {
 	try {
-	  ((FileBackedList)tok).close();
+	  ((FileBackedList)tokens).close();
 	} catch (Exception e) {
-	  log.warning("Couldn't close FileBackedList", e);
+	  log.warning("Error closing FileBackedList", e);
 	}
       }
       ConfigurationUtil.resetConfig();
