@@ -84,6 +84,31 @@
   {
 
       title <
+        name = Estetika: The European Journal of Aesthetics ;
+        eissn = 2571-0915
+      >
+
+      comment[publisher] = Helsinki University Press
+#      param[base_url] = https://estetikajournal.org/
+
+      au < exists ; exists ; 2008 ; 45 ; Estetika: The European Journal of Aesthetics Volume 2008 ; 2008 ; https://estetikajournal.org/ ; >
+      au < exists ; exists ; 2009 ; 46 ; Estetika: The European Journal of Aesthetics Volume 2009 ; 2009 ; https://estetikajournal.org/ ; >
+      au < exists ; exists ; 2010 ; 47 ; Estetika: The European Journal of Aesthetics Volume 2010 ; 2010 ; https://estetikajournal.org/ ; >
+      au < exists ; exists ; 2011 ; 48 ; Estetika: The European Journal of Aesthetics Volume 2011 ; 2011 ; https://estetikajournal.org/ ; >
+      au < exists ; exists ; 2012 ; 49 ; Estetika: The European Journal of Aesthetics Volume 2012 ; 2012 ; https://estetikajournal.org/ ; >
+      au < exists ; exists ; 2013 ; 50 ; Estetika: The European Journal of Aesthetics Volume 2013 ; 2013 ; https://estetikajournal.org/ ; >
+      au < exists ; exists ; 2014 ; 51 ; Estetika: The European Journal of Aesthetics Volume 2014 ; 2014 ; https://estetikajournal.org/ ; >
+      au < exists ; exists ; 2015 ; 52 ; Estetika: The European Journal of Aesthetics Volume 2015 ; 2015 ; https://estetikajournal.org/ ; >
+      au < exists ; exists ; 2016 ; 53 ; Estetika: The European Journal of Aesthetics Volume 2016 ; 2016 ; https://estetikajournal.org/ ; >
+      au < exists ; exists ; 2017 ; 54 ; Estetika: The European Journal of Aesthetics Volume 2017 ; 2017 ; https://estetikajournal.org/ ; >
+      au < exists ; exists ; 2018 ; 55 ; Estetika: The European Journal of Aesthetics Volume 2018 ; 2018 ; https://estetikajournal.org/ ; >
+      au < exists ; exists ; 2019 ; 56 ; Estetika: The European Journal of Aesthetics Volume 2019 ; 2019 ; https://estetikajournal.org/ ; >
+      au < notReady ; exists ; 2020 ; 57 ; Estetika: The European Journal of Aesthetics Volume 2020 ; 2020 ; https://estetikajournal.org/ ; >
+  }
+
+  {
+
+      title <
         name = Nordic Journal of Migration Research ;
         eissn = 1799-649X
       >
@@ -780,7 +805,6 @@
 
       comment[publisher] = Stockholm University Press
 #      param[base_url] = http://www.karib.no/
-      #requested clockss permission statement RT 7992 2/5/2018
 
       au < finished ; finished ; 2014 ; 1 ; Karib: Nordic Journal for Caribbean Studies Volume 2014 ; 2014 ; https://www.karib.no/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2015 ; 2 ; Karib: Nordic Journal for Caribbean Studies Volume 2015 ; 2015 ; https://www.karib.no/ ; reingest3.clockss.org:8083 >
@@ -788,6 +812,20 @@
       au < finished ; manifest ; 2018 ; 4 ; Karib: Nordic Journal for Caribbean Studies Volume 2018 ; 2018 ; https://www.karib.no/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2019 ; 5 ; Karib: Nordic Journal for Caribbean Studies Volume 2019 ; 2019 ; https://www.karib.no/ ; >
       au < expected ; exists ; 2020 ; 6 ; Karib: Nordic Journal for Caribbean Studies Volume 2020 ; 2020 ; https://www.karib.no/ ; >
+
+  }
+
+  {
+
+      title <
+        name = Nordic Journal of Transitions, Careers and Guidance  ;
+        eissn = 2379-6227
+      >
+
+      comment[publisher] = Stockholm University Press
+#      param[base_url] = https://njtcg.org/
+
+      au < expected ; exists ; 2020 ; 1 ; Nordic Journal of Transitions, Careers and Guidance Volume 2020 ; 2020 ; https://njtcg.org/ ; >
 
   }
 
@@ -1001,12 +1039,12 @@
       au < notReady ; exists ; 2011 ; 27 ; Current: Journal of Marine Education Volume 2011 ; 2011 ; https://www.current-journal.com/ ; >
       au < notReady ; exists ; 2012 ; 28 ; Current: Journal of Marine Education Volume 2012 ; 2012 ; https://www.current-journal.com/ ; >
       au < doesNotExist ; doesNotExist ; 2013 ; 29 ; Current: Journal of Marine Education Volume 2013 ; 2013 ; https://www.current-journal.com/ ; >
-      au < notReady ; exists ; 2014 ; 30 ; Current: Journal of Marine Education Volume 2014 ; 2014 ; https://www.current-journal.com/ ; >
-      au < notReady ; exists ; 2015 ; 31 ; Current: Journal of Marine Education Volume 2015 ; 2015 ; https://www.current-journal.com/ ; >
-      au < notReady ; exists ; 2016 ; 32 ; Current: Journal of Marine Education Volume 2016 ; 2016 ; https://www.current-journal.com/ ; >
-      au < notReady ; exists ; 2017 ; 33 ; Current: Journal of Marine Education Volume 2017 ; 2017 ; https://www.current-journal.com/ ; >
-      au < notReady ; exists ; 2018 ; 34 ; Current: Journal of Marine Education Volume 2018 ; 2018 ; https://www.current-journal.com/ ; >
-      au < notReady ; exists ; 2019 ; 35 ; Current: Journal of Marine Education Volume 2019 ; 2019 ; https://www.current-journal.com/ ; >
+      au < manifest ; exists ; 2014 ; 30 ; Current: Journal of Marine Education Volume 2014 ; 2014 ; https://www.current-journal.com/ ; >
+      au < manifest ; exists ; 2015 ; 31 ; Current: Journal of Marine Education Volume 2015 ; 2015 ; https://www.current-journal.com/ ; >
+      au < manifest ; exists ; 2016 ; 32 ; Current: Journal of Marine Education Volume 2016 ; 2016 ; https://www.current-journal.com/ ; >
+      au < manifest ; exists ; 2017 ; 33 ; Current: Journal of Marine Education Volume 2017 ; 2017 ; https://www.current-journal.com/ ; >
+      au < manifest ; exists ; 2018 ; 34 ; Current: Journal of Marine Education Volume 2018 ; 2018 ; https://www.current-journal.com/ ; >
+      au < manifest ; exists ; 2019 ; 35 ; Current: Journal of Marine Education Volume 2019 ; 2019 ; https://www.current-journal.com/ ; >
       au < crawling ; exists ; 2020 ; 36 ; Current: Journal of Marine Education Volume 2020 ; 2020 ; https://www.current-journal.com/ ; >
 
   }
@@ -1169,6 +1207,23 @@
   {
 
       title <
+        name = Computational Psychiatry ;
+        eissn = 2379-6227
+      >
+
+      comment[publisher] = Ubiquity Press
+#      param[base_url] = https://cpsyjournal.org/
+
+      au < exists ; exists ; 2017 ; 1 ; Computational Psychiatry Volume 2017 ; 2017 ; https://cpsyjournal.org/ ; >
+      au < exists ; exists ; 2018 ; 2 ; Computational Psychiatry Volume 2018 ; 2018 ; https://cpsyjournal.org/ ; >
+      au < exists ; exists ; 2019 ; 3 ; Computational Psychiatry Volume 2019 ; 2019 ; https://cpsyjournal.org/ ; >
+      au < exists ; exists ; 2020 ; 4 ; Computational Psychiatry Volume 2020 ; 2020 ; https://cpsyjournal.org/ ; >
+
+  }
+
+  {
+
+      title <
         name = Data Science Journal ;
         eissn = 1683-1470
       >
@@ -1297,6 +1352,20 @@
       au < finished ; manifest ; 2018 ; 3 ; International Review of Social Psychology Volume 2018 ; 2018 ; https://www.rips-irsp.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; 4 ; International Review of Social Psychology Volume 2019 ; 2019 ; https://www.rips-irsp.com/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2020 ; 5 ; International Review of Social Psychology Volume 2020 ; 2020 ; https://www.rips-irsp.com/ ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal for the History of Knowledge ;
+        eissn = 2632-282X
+      >
+
+      comment[publisher] = Ubiquity Press
+#      param[base_url] = https://journalhistoryknowledge.org/
+
+      au < exists ; exists ; 2020 ; 1 ; Journal for the History of Knowledge Volume 2020 ; 2020 ; https://journalhistoryknowledge.org/ ; >
 
   }
 
@@ -2313,6 +2382,97 @@
 
   }
 
+}
+
+{
+  publisher <
+    name = University of Birmingham ;
+    info[contract] = 2011 ;
+    info[back] = 2000 ;
+    info[tester] = 8 ;
+    info[poller] = 8
+  >
+
+    provider = Ubiquity Press
+    plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
+    implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
+
+  {
+
+      title <
+        name = Journal of Philosophy in Schools ;
+        eissn = 2204-2482
+      >
+
+      comment[publisher] = University of Birmingham
+#      param[base_url] = https://jps.bham.ac.uk/
+
+      au < exists ; exists ; 2014 ; 1 ; Journal of Philosophy in Schools Volume 2014 ; 2014 ; https://jps.bham.ac.uk/ ; >
+      au < exists ; exists ; 2015 ; 2 ; Journal of Philosophy in Schools Volume 2015 ; 2015 ; https://jps.bham.ac.uk/ ; >
+      au < exists ; exists ; 2016 ; 3 ; Journal of Philosophy in Schools Volume 2016 ; 2016 ; https://jps.bham.ac.uk/ ; >
+      au < exists ; exists ; 2017 ; 4 ; Journal of Philosophy in Schools Volume 2017 ; 2017 ; https://jps.bham.ac.uk/ ; >
+      au < exists ; exists ; 2018 ; 5 ; Journal of Philosophy in Schools Volume 2018 ; 2018 ; https://jps.bham.ac.uk/ ; >
+      au < exists ; exists ; 2019 ; 6 ; Journal of Philosophy in Schools Volume 2019 ; 2019 ; https://jps.bham.ac.uk/ ; >
+      au < exists ; exists ; 2020 ; 7 ; Journal of Philosophy in Schools Volume 2020 ; 2020 ; https://jps.bham.ac.uk/ ; >
+
+  }
+}
+
+{
+  publisher <
+    name = University of East Anglia ;
+    info[contract] = 2011 ;
+    info[back] = 2000 ;
+    info[tester] = 8 ;
+    info[poller] = 8
+  >
+
+    provider = Ubiquity Press
+    plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
+    implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
+
+  {
+
+      title <
+        name = New Area Studies ;
+        eissn = 2633-3716
+      >
+
+      comment[publisher] = University of East Anglia
+#      param[base_url] = https://newareastudies.com/
+
+      au < exists ; exists ; 2020 ; 1 ; New Area Studies Volume 2020 ; 2020 ; https://newareastudies.com/ ; >
+
+  }
+}
+
+{
+  publisher <
+    name = University of New South Wales ;
+    info[contract] = 2011 ;
+    info[back] = 2000 ;
+    info[tester] = 8 ;
+    info[poller] = 8
+  >
+
+    provider = Ubiquity Press
+    plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
+    implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
+
+  {
+
+      title <
+        name = Global Biosecurity ;
+        eissn = 2652-0036
+      >
+
+      comment[publisher] = University of New South Wales
+#      param[base_url] = https://jglobalbiosecurity.com/
+
+      au < exists ; exists ; 2019 ; 1 ; Global Biosecurity Volume 2019 ; 2019 ; https://jglobalbiosecurity.com/ ; >
+      au < exists ; exists ; 2020 ; 2 ; Global Biosecurity Volume 2020 ; 2020 ; https://jglobalbiosecurity.com/ ; >
+
+  }
 }
 
 {
