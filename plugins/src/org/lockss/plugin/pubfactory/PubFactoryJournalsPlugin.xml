@@ -103,26 +103,26 @@
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.pubfactory.PubfactoryHtmlHashFilterFactory</string>
+    <string>org.lockss.plugin.pubfactory.PubFactoryHtmlHashFilterFactory</string>
   </entry>
  <entry>
     <string>au_url_normalizer</string>
-    <string>org.lockss.plugin.pubfactory.PubfactoryUrlNormalizer</string>
+    <string>org.lockss.plugin.pubfactory.PubFactoryUrlNormalizer</string>
   </entry>  
   <entry>
     <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.pubfactory.PubfactoryArticleIteratorFactory</string>
+    <string>org.lockss.plugin.pubfactory.PubFactoryArticleIteratorFactory</string>
   </entry> 
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.pubfactory.PubfactoryArticleIteratorFactory</string>
+    <string>org.lockss.plugin.pubfactory.PubFactoryArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>text/html_metadata_extractor_factory_map</string>
     <map>
       <entry>
         <string>*;DublinCore</string>
-        <string>org.lockss.plugin.pubfactory.PubfactoryHtmlMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.pubfactory.PubFactoryHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>

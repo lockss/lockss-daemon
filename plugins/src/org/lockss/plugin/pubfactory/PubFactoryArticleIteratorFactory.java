@@ -54,9 +54,9 @@ import java.util.regex.Pattern;
  * https://www.berghahnjournals.com/view/journals/boyhood-studies/10/1/bhs100101.xml?&pdfVersion=true (WHAAA?)
  */
 
-public class PubfactoryArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
+public class PubFactoryArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
 
-  private static final Logger log = Logger.getLogger(PubfactoryArticleIteratorFactory.class);
+  private static final Logger log = Logger.getLogger(PubFactoryArticleIteratorFactory.class);
 
   // don't set the ROOT_TEMPLATE - it is just base_url
 

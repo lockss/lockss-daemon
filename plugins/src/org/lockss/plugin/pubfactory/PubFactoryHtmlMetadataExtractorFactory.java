@@ -41,7 +41,7 @@ import org.lockss.plugin.CachedUrl;
 import java.io.IOException;
 
 
-public class PubfactoryHtmlMetadataExtractorFactory implements FileMetadataExtractorFactory {
+public class PubFactoryHtmlMetadataExtractorFactory implements FileMetadataExtractorFactory {
   
 
   @Override
