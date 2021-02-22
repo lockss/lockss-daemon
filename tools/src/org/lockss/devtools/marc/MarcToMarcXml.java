@@ -59,7 +59,7 @@ public class MarcToMarcXml {
       MarcXmlWriter writer = null;
       try {
         MarcStreamReader reader = new MarcStreamReader(inStream);
-        writer = new MarcXmlWriter(outStream);
+        writer = new MarcXmlWriter(outStream, true);
         while (reader.hasNext()) {
           writer.write(reader.next());
         } 
