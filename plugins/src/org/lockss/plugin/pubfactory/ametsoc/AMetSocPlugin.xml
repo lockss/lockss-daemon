@@ -30,7 +30,7 @@
   </entry>
   <entry>
     <string>plugin_parent</string>
-    <string>org.lockss.plugin.pubfactory.PubfactoryJournalsPlugin</string>
+    <string>org.lockss.plugin.pubfactory.PubFactoryJournalsPlugin</string>
   </entry>
   <entry>
     <string>plugin_parent_version</string>
@@ -38,10 +38,10 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>American Meteorological Society Plugin (Pubfactory)</string>
+    <string>American Meteorological Society Plugin (PubFactory)</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"American Meteorological Society Plugin (Pubfactory), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"American Meteorological Society Plugin (PubFactory), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
 </map>

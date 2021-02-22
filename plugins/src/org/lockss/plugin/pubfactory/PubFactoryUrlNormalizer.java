@@ -36,7 +36,7 @@ import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.UrlNormalizer;
 
-public class PubfactoryUrlNormalizer implements UrlNormalizer {
+public class PubFactoryUrlNormalizer implements UrlNormalizer {
 
   /**
    *  Clean off some unnecessary one-time arguments from citation urls

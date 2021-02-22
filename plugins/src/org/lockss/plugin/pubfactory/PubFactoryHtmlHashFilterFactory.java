@@ -53,7 +53,7 @@ import java.util.Vector;
 
 // Keeps contents only (includeNodes), then hashes out unwanted nodes 
 // within the content (excludeNodes).
-public class PubfactoryHtmlHashFilterFactory implements FilterFactory {
+public class PubFactoryHtmlHashFilterFactory implements FilterFactory {
      
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,

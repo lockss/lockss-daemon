@@ -51,8 +51,8 @@ import java.io.IOException;
  * after discussion we've decided to leave both versions in - so that if the pdf is ever linked to direclty, we have it
  * 
  */
-public class PubfactoryUrlConsumerFactory implements UrlConsumerFactory {
-  private static final Logger log = Logger.getLogger(PubfactoryUrlConsumerFactory.class);
+public class PubFactoryUrlConsumerFactory implements UrlConsumerFactory {
+  private static final Logger log = Logger.getLogger(PubFactoryUrlConsumerFactory.class);
   
   @Override
   public UrlConsumer createUrlConsumer(CrawlerFacade crawlFacade,
