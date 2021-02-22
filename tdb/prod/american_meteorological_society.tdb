@@ -7,6 +7,7 @@
 
   
   plugin = org.lockss.plugin.pubfactory.ametsoc.AMetSocPlugin
+#  implicit < status ; year ; param[year] ; name ; volume >
   implicit < status ; year ; name ; param[volume_name] >
   param[base_url] = https://journals.ametsoc.org/
 
