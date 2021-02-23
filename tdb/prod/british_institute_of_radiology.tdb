@@ -178,7 +178,7 @@
       implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
       param[journal_id] = bjro
 
-      au < releasing ; 2019 ; BJR|Open Volume 1 ; 1 ; https://www.birpublications.org/ >
+      au < released ; 2019 ; BJR|Open Volume 1 ; 1 ; https://www.birpublications.org/ >
       au < manifest ; 2020 ; BJR|Open Volume 2 ; 2 ; https://www.birpublications.org/ >
 
   }
