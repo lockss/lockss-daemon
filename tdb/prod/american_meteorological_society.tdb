@@ -74,7 +74,7 @@
     au < doNotProcess ; 2017 ; Bulletin of the American Meteorological Society Volume 98 ; 98 >
     au < doNotProcess ; 2018 ; Bulletin of the American Meteorological Society Volume 99 ; 99 >
     au < doNotProcess ; 2019 ; Bulletin of the American Meteorological Society Volume 100 ; 100 >
-    au < exists ; 2020 ; Bulletin of the American Meteorological Society Volume 101 ; 101 >
+    au < manifest ; 2020 ; Bulletin of the American Meteorological Society Volume 101 ; 101 >
 
   }
 
@@ -111,7 +111,7 @@
     au < doNotProcess ; 2017 ; Earth Interactions Volume 21 ; 21 >
     au < doNotProcess ; 2018 ; Earth Interactions Volume 22 ; 22 >
     au < doNotProcess ; 2019 ; Earth Interactions Volume 23 ; 23 >
-    au < exists ; 2020 ; Earth Interactions Volume 24 ; 24 >
+    au < manifest ; 2020 ; Earth Interactions Volume 24 ; 24 >
 
   }
 
@@ -137,7 +137,7 @@
     au < doNotProcess ; 1969 ; Journal of Applied Meteorology Volume 8 ; 8 >
     au < doNotProcess ; 1970 ; Journal of Applied Meteorology Volume 9 ; 9 >
     au < doNotProcess ; 1971 ; Journal of Applied Meteorology Volume 10 ; 10 >
-    au < exists ; 1972 ; Journal of Applied Meteorology Volume 11 ; 11 > #Error parsing page
+    au < exists ; 1972 ; Journal of Applied Meteorology Volume 11 ; 11 > # No TOC links! But has permission statement
     au < doNotProcess ; 1973 ; Journal of Applied Meteorology Volume 12 ; 12 >
     au < doNotProcess ; 1974 ; Journal of Applied Meteorology Volume 13 ; 13 >
     au < doNotProcess ; 1975 ; Journal of Applied Meteorology Volume 14 ; 14 >
@@ -231,7 +231,7 @@
     au < doNotProcess ; 2017 ; Journal of Applied Meteorology and Climatology Volume 56 ; 56 >
     au < doNotProcess ; 2018 ; Journal of Applied Meteorology and Climatology Volume 57 ; 57 >
     au < doNotProcess ; 2019 ; Journal of Applied Meteorology and Climatology Volume 58 ; 58 >
-    au < exists ; 2020 ; Journal of Applied Meteorology and Climatology Volume 59 ; 59 >
+    au < manifest ; 2020 ; Journal of Applied Meteorology and Climatology Volume 59 ; 59 >
 
   }
 
@@ -282,7 +282,7 @@
     au < doNotProcess ; 2017 ; Journal of Atmospheric and Oceanic Technology Volume 34 ; 34 >
     au < doNotProcess ; 2018 ; Journal of Atmospheric and Oceanic Technology Volume 35 ; 35 >
     au < doNotProcess ; 2019 ; Journal of Atmospheric and Oceanic Technology Volume 36 ; 36 >
-    au < exists ; 2020 ; Journal of Atmospheric and Oceanic Technology Volume 37 ; 37 >
+    au < manifest ; 2020 ; Journal of Atmospheric and Oceanic Technology Volume 37 ; 37 >
 
   }
 
@@ -313,7 +313,7 @@
     au < doNotProcess ; 2001 ; Journal of Climate Volume 14 ; 14 >
     au < doNotProcess ; 2002 ; Journal of Climate Volume 15 ; 15 >
     au < doNotProcess ; 2003 ; Journal of Climate Volume 16 ; 16 >
-    au < exists ; 2004 ; Journal of Climate Volume 17 ; 17 > #500 Internal Server Error
+    au < manifest ; 2004 ; Journal of Climate Volume 17 ; 17 >
     au < doNotProcess ; 2005 ; Journal of Climate Volume 18 ; 18 >
     au < doNotProcess ; 2006 ; Journal of Climate Volume 19 ; 19 >
     au < doNotProcess ; 2007 ; Journal of Climate Volume 20 ; 20 >
@@ -329,7 +329,7 @@
     au < doNotProcess ; 2017 ; Journal of Climate Volume 30 ; 30 >
     au < doNotProcess ; 2018 ; Journal of Climate Volume 31 ; 31 >
     au < doNotProcess ; 2019 ; Journal of Climate Volume 32 ; 32 >
-    au < exists ; 2020 ; Journal of Climate Volume 33 ; 33 >
+    au < manifest ; 2020 ; Journal of Climate Volume 33 ; 33 >
 
   }
 
@@ -429,7 +429,7 @@
     au < doNotProcess ; 2017 ; Journal of Physical Oceanography Volume 47 ; 47 >
     au < doNotProcess ; 2018 ; Journal of Physical Oceanography Volume 48 ; 48 >
     au < doNotProcess ; 2019 ; Journal of Physical Oceanography Volume 49 ; 49 >
-    au < exists ; 2020 ; Journal of Physical Oceanography Volume 50 ; 50 >
+    au < manifest ; 2020 ; Journal of Physical Oceanography Volume 50 ; 50 >
 
   }
 
@@ -444,24 +444,24 @@
     
     param[journal_id] = atsc
 
-    au < exists ; 1944 ; Journal of the Atmospheric Sciences Volume 1 ; 1 >
-    au < exists ; 1945 ; Journal of the Atmospheric Sciences Volume 2 ; 2 >
-    au < exists ; 1946 ; Journal of the Atmospheric Sciences Volume 3 ; 3 >
-    au < exists ; 1947 ; Journal of the Atmospheric Sciences Volume 4 ; 4 >
-    au < exists ; 1948 ; Journal of the Atmospheric Sciences Volume 5 ; 5 >
-    au < exists ; 1949 ; Journal of the Atmospheric Sciences Volume 6 ; 6 >
-    au < exists ; 1950 ; Journal of the Atmospheric Sciences Volume 7 ; 7 >
-    au < exists ; 1951 ; Journal of the Atmospheric Sciences Volume 8 ; 8 >
-    au < exists ; 1952 ; Journal of the Atmospheric Sciences Volume 9 ; 9 >
-    au < exists ; 1953 ; Journal of the Atmospheric Sciences Volume 10 ; 10 >
-    au < exists ; 1954 ; Journal of the Atmospheric Sciences Volume 11 ; 11 >
-    au < exists ; 1955 ; Journal of the Atmospheric Sciences Volume 12 ; 12 >
-    au < exists ; 1956 ; Journal of the Atmospheric Sciences Volume 13 ; 13 >
-    au < exists ; 1957 ; Journal of the Atmospheric Sciences Volume 14 ; 14 >
-    au < exists ; 1958 ; Journal of the Atmospheric Sciences Volume 15 ; 15 >
-    au < exists ; 1959 ; Journal of the Atmospheric Sciences Volume 16 ; 16 >
-    au < exists ; 1960 ; Journal of the Atmospheric Sciences Volume 17 ; 17 >
-    au < exists ; 1961 ; Journal of the Atmospheric Sciences Volume 18 ; 18 >
+    au < manifest ; 1944 ; Journal of the Atmospheric Sciences Volume 1 ; 1 >
+    au < manifest ; 1945 ; Journal of the Atmospheric Sciences Volume 2 ; 2 >
+    au < manifest ; 1946 ; Journal of the Atmospheric Sciences Volume 3 ; 3 >
+    au < manifest ; 1947 ; Journal of the Atmospheric Sciences Volume 4 ; 4 >
+    au < manifest ; 1948 ; Journal of the Atmospheric Sciences Volume 5 ; 5 >
+    au < manifest ; 1949 ; Journal of the Atmospheric Sciences Volume 6 ; 6 >
+    au < manifest ; 1950 ; Journal of the Atmospheric Sciences Volume 7 ; 7 >
+    au < manifest ; 1951 ; Journal of the Atmospheric Sciences Volume 8 ; 8 >
+    au < manifest ; 1952 ; Journal of the Atmospheric Sciences Volume 9 ; 9 >
+    au < manifest ; 1953 ; Journal of the Atmospheric Sciences Volume 10 ; 10 >
+    au < manifest ; 1954 ; Journal of the Atmospheric Sciences Volume 11 ; 11 >
+    au < manifest ; 1955 ; Journal of the Atmospheric Sciences Volume 12 ; 12 >
+    au < manifest ; 1956 ; Journal of the Atmospheric Sciences Volume 13 ; 13 >
+    au < manifest ; 1957 ; Journal of the Atmospheric Sciences Volume 14 ; 14 >
+    au < manifest ; 1958 ; Journal of the Atmospheric Sciences Volume 15 ; 15 >
+    au < manifest ; 1959 ; Journal of the Atmospheric Sciences Volume 16 ; 16 >
+    au < manifest ; 1960 ; Journal of the Atmospheric Sciences Volume 17 ; 17 >
+    au < manifest ; 1961 ; Journal of the Atmospheric Sciences Volume 18 ; 18 >
     au < doNotProcess ; 1962 ; Journal of the Atmospheric Sciences Volume 19 ; 19 >
     au < doNotProcess ; 1963 ; Journal of the Atmospheric Sciences Volume 20 ; 20 >
     au < doNotProcess ; 1964 ; Journal of the Atmospheric Sciences Volume 21 ; 21 >
@@ -503,7 +503,7 @@
     au < doNotProcess ; 2000 ; Journal of the Atmospheric Sciences Volume 57 ; 57 >
     au < doNotProcess ; 2001 ; Journal of the Atmospheric Sciences Volume 58 ; 58 >
     au < doNotProcess ; 2002 ; Journal of the Atmospheric Sciences Volume 59 ; 59 >
-    au < exists ; 2003 ; Journal of the Atmospheric Sciences Volume 60 ; 60 > #Error parsing page
+    au < manifest ; 2003 ; Journal of the Atmospheric Sciences Volume 60 ; 60 >
     au < doNotProcess ; 2004 ; Journal of the Atmospheric Sciences Volume 61 ; 61 >
     au < doNotProcess ; 2005 ; Journal of the Atmospheric Sciences Volume 62 ; 62 >
     au < doNotProcess ; 2006 ; Journal of the Atmospheric Sciences Volume 63 ; 63 >
@@ -520,7 +520,7 @@
     au < doNotProcess ; 2017 ; Journal of the Atmospheric Sciences Volume 74 ; 74 >
     au < doNotProcess ; 2018 ; Journal of the Atmospheric Sciences Volume 75 ; 75 >
     au < doNotProcess ; 2019 ; Journal of the Atmospheric Sciences Volume 76 ; 76 >
-    au < exists ; 2020 ; Journal of the Atmospheric Sciences Volume 77 ; 77 >
+    au < manifest ; 2020 ; Journal of the Atmospheric Sciences Volume 77 ; 77 >
 
   }
 
@@ -535,17 +535,17 @@
     
     param[journal_id] = amsm
     
-    au < exists ; 1980 ; Meteorological Monographs Volume 39 [abstract only] ; 39 >
-    au < exists ; 1986 ; Meteorological Monographs Volume 43 [abstract only] ; 43 >
-    au < exists ; 1993 ; Meteorological Monographs Volume 46 [abstract only] ; 46 >
-    au < exists ; 1994 ; Meteorological Monographs Volume 47 [abstract only] ; 47 >
-    au < exists ; 1996 ; Meteorological Monographs Volume 48 [abstract only] ; 48 >
-    au < exists ; 1998 ; Meteorological Monographs Volume 49 [abstract only] ; 49 >
-    au < exists ; 2001 ; Meteorological Monographs Volume 50 [abstract only] ; 50 >
-    au < exists ; 2002 ; Meteorological Monographs Volume 51 [abstract only] ; 51 >
-    au < exists ; 2003 ; Meteorological Monographs Volume 52 [abstract only] ; 52-53 >
-    au < exists ; 2004 ; Meteorological Monographs Volume 54 [abstract only] ; 54 >
-    au < exists ; 2008 ; Meteorological Monographs Volume 55 [abstract only] ; 55 >
+    au < exists ; 1980 ; Meteorological Monographs Volume 39 [abstract only] ; 39 > # No TOC links, but has permission statements
+    au < exists ; 1986 ; Meteorological Monographs Volume 43 [abstract only] ; 43 > # No TOC links, but has permission statements
+    au < exists ; 1993 ; Meteorological Monographs Volume 46 [abstract only] ; 46 > # No TOC links, but has permission statements
+    au < exists ; 1994 ; Meteorological Monographs Volume 47 [abstract only] ; 47 > # No TOC links, but has permission statements
+    au < exists ; 1996 ; Meteorological Monographs Volume 48 [abstract only] ; 48 > # No TOC links, but has permission statements
+    au < exists ; 1998 ; Meteorological Monographs Volume 49 [abstract only] ; 49 > # No TOC links, but has permission statements
+    au < exists ; 2001 ; Meteorological Monographs Volume 50 [abstract only] ; 50 > # No TOC links, but has permission statements
+    au < exists ; 2002 ; Meteorological Monographs Volume 51 [abstract only] ; 51 > # No TOC links, but has permission statements
+    au < exists ; 2003 ; Meteorological Monographs Volume 52 [abstract only] ; 52-53 > # No TOC links, but has permission statements
+    au < exists ; 2004 ; Meteorological Monographs Volume 54 [abstract only] ; 54 > # No TOC links, but has permission statements
+    au < exists ; 2008 ; Meteorological Monographs Volume 55 [abstract only] ; 55 > # No TOC links, but has permission statements
     au < doNotProcess ; 2016 ; Meteorological Monographs Volume 56 ; 56 >
     au < doNotProcess ; 2016 ; Meteorological Monographs Volume 57 ; 57 >
     au < doNotProcess ; 2017 ; Meteorological Monographs Volume 58 ; 58 >
@@ -564,108 +564,108 @@
     
     param[journal_id] = mwre
     
-    au < exists ; 1872 ; Monthly Weather Review Volume 0 ; 0 >
-    au < exists ; 1873 ; Monthly Weather Review Volume 1 ; 1 >
-    au < exists ; 1874 ; Monthly Weather Review Volume 2 ; 2 >
-    au < exists ; 1875 ; Monthly Weather Review Volume 3 ; 3 >
-    au < exists ; 1876 ; Monthly Weather Review Volume 4 ; 4 >
-    au < exists ; 1877 ; Monthly Weather Review Volume 5 ; 5 >
-    au < exists ; 1878 ; Monthly Weather Review Volume 6 ; 6 >
-    au < exists ; 1879 ; Monthly Weather Review Volume 7 ; 7 >
-    au < exists ; 1880 ; Monthly Weather Review Volume 8 ; 8 >
-    au < exists ; 1881 ; Monthly Weather Review Volume 9 ; 9 >
-    au < exists ; 1882 ; Monthly Weather Review Volume 10 ; 10 >
-    au < exists ; 1883 ; Monthly Weather Review Volume 11 ; 11 >
-    au < exists ; 1884 ; Monthly Weather Review Volume 12 ; 12 >
-    au < exists ; 1885 ; Monthly Weather Review Volume 13 ; 13 >
-    au < exists ; 1886 ; Monthly Weather Review Volume 14 ; 14 >
-    au < exists ; 1887 ; Monthly Weather Review Volume 15 ; 15 >
-    au < exists ; 1888 ; Monthly Weather Review Volume 16 ; 16 >
-    au < exists ; 1889 ; Monthly Weather Review Volume 17 ; 17 >
-    au < exists ; 1890 ; Monthly Weather Review Volume 18 ; 18 >
-    au < exists ; 1891 ; Monthly Weather Review Volume 19 ; 19 >
-    au < exists ; 1892 ; Monthly Weather Review Volume 20 ; 20 >
-    au < exists ; 1893 ; Monthly Weather Review Volume 21 ; 21 >
-    au < exists ; 1894 ; Monthly Weather Review Volume 22 ; 22 >
-    au < exists ; 1895 ; Monthly Weather Review Volume 23 ; 23 >
-    au < exists ; 1896 ; Monthly Weather Review Volume 24 ; 24 >
-    au < exists ; 1897 ; Monthly Weather Review Volume 25 ; 25 >
-    au < exists ; 1898 ; Monthly Weather Review Volume 26 ; 26 >
-    au < exists ; 1899 ; Monthly Weather Review Volume 27 ; 27 >
-    au < exists ; 1900 ; Monthly Weather Review Volume 28 ; 28 >
-    au < exists ; 1901 ; Monthly Weather Review Volume 29 ; 29 >
-    au < exists ; 1902 ; Monthly Weather Review Volume 30 ; 30 >
-    au < exists ; 1903 ; Monthly Weather Review Volume 31 ; 31 >
-    au < exists ; 1904 ; Monthly Weather Review Volume 32 ; 32 >
-    au < exists ; 1905 ; Monthly Weather Review Volume 33 ; 33 >
-    au < exists ; 1906 ; Monthly Weather Review Volume 34 ; 34 >
-    au < exists ; 1907 ; Monthly Weather Review Volume 35 ; 35 >
-    au < exists ; 1908 ; Monthly Weather Review Volume 36 ; 36 >
-    au < exists ; 1909 ; Monthly Weather Review Volume 37 ; 37 >
-    au < exists ; 1910 ; Monthly Weather Review Volume 38 ; 38 >
-    au < exists ; 1911 ; Monthly Weather Review Volume 39 ; 39 >
-    au < exists ; 1912 ; Monthly Weather Review Volume 40 ; 40 >
-    au < exists ; 1913 ; Monthly Weather Review Volume 41 ; 41 >
-    au < exists ; 1914 ; Monthly Weather Review Volume 42 ; 42 >
-    au < exists ; 1915 ; Monthly Weather Review Volume 43 ; 43 >
-    au < exists ; 1916 ; Monthly Weather Review Volume 44 ; 44 >
-    au < exists ; 1917 ; Monthly Weather Review Volume 45 ; 45 >
-    au < exists ; 1918 ; Monthly Weather Review Volume 46 ; 46 >
-    au < exists ; 1919 ; Monthly Weather Review Volume 47 ; 47 >
-    au < exists ; 1920 ; Monthly Weather Review Volume 48 ; 48 >
-    au < exists ; 1921 ; Monthly Weather Review Volume 49 ; 49 >
-    au < exists ; 1922 ; Monthly Weather Review Volume 50 ; 50 >
-    au < exists ; 1923 ; Monthly Weather Review Volume 51 ; 51 >
-    au < exists ; 1924 ; Monthly Weather Review Volume 52 ; 52 >
-    au < exists ; 1925 ; Monthly Weather Review Volume 53 ; 53 >
-    au < exists ; 1926 ; Monthly Weather Review Volume 54 ; 54 >
-    au < exists ; 1927 ; Monthly Weather Review Volume 55 ; 55 >
-    au < exists ; 1928 ; Monthly Weather Review Volume 56 ; 56 >
-    au < exists ; 1929 ; Monthly Weather Review Volume 57 ; 57 >
-    au < exists ; 1930 ; Monthly Weather Review Volume 58 ; 58 >
-    au < exists ; 1931 ; Monthly Weather Review Volume 59 ; 59 >
-    au < exists ; 1932 ; Monthly Weather Review Volume 60 ; 60 >
-    au < exists ; 1933 ; Monthly Weather Review Volume 61 ; 61 >
-    au < exists ; 1934 ; Monthly Weather Review Volume 62 ; 62 >
-    au < exists ; 1935 ; Monthly Weather Review Volume 63 ; 63 >
-    au < exists ; 1936 ; Monthly Weather Review Volume 64 ; 64 >
-    au < exists ; 1937 ; Monthly Weather Review Volume 65 ; 65 >
-    au < exists ; 1938 ; Monthly Weather Review Volume 66 ; 66 >
-    au < exists ; 1939 ; Monthly Weather Review Volume 67 ; 67 >
-    au < exists ; 1940 ; Monthly Weather Review Volume 68 ; 68 >
-    au < exists ; 1941 ; Monthly Weather Review Volume 69 ; 69 >
-    au < exists ; 1942 ; Monthly Weather Review Volume 70 ; 70 >
-    au < exists ; 1943 ; Monthly Weather Review Volume 71 ; 71 >
-    au < exists ; 1944 ; Monthly Weather Review Volume 72 ; 72 >
-    au < exists ; 1945 ; Monthly Weather Review Volume 73 ; 73 >
-    au < exists ; 1946 ; Monthly Weather Review Volume 74 ; 74 >
-    au < exists ; 1947 ; Monthly Weather Review Volume 75 ; 75 >
-    au < exists ; 1948 ; Monthly Weather Review Volume 76 ; 76 >
-    au < exists ; 1949 ; Monthly Weather Review Volume 77 ; 77 >
-    au < exists ; 1950 ; Monthly Weather Review Volume 78 ; 78 >
-    au < exists ; 1951 ; Monthly Weather Review Volume 79 ; 79 >
-    au < exists ; 1952 ; Monthly Weather Review Volume 80 ; 80 >
-    au < exists ; 1953 ; Monthly Weather Review Volume 81 ; 81 >
-    au < exists ; 1954 ; Monthly Weather Review Volume 82 ; 82 >
-    au < exists ; 1955 ; Monthly Weather Review Volume 83 ; 83 >
-    au < exists ; 1956 ; Monthly Weather Review Volume 84 ; 84 >
-    au < exists ; 1957 ; Monthly Weather Review Volume 85 ; 85 >
-    au < exists ; 1958 ; Monthly Weather Review Volume 86 ; 86 >
-    au < exists ; 1959 ; Monthly Weather Review Volume 87 ; 87 >
-    au < exists ; 1960 ; Monthly Weather Review Volume 88 ; 88 >
-    au < exists ; 1961 ; Monthly Weather Review Volume 89 ; 89 >
-    au < exists ; 1962 ; Monthly Weather Review Volume 90 ; 90 >
-    au < exists ; 1963 ; Monthly Weather Review Volume 91 ; 91 >
-    au < exists ; 1964 ; Monthly Weather Review Volume 92 ; 92 >
-    au < exists ; 1965 ; Monthly Weather Review Volume 93 ; 93 >
-    au < exists ; 1966 ; Monthly Weather Review Volume 94 ; 94 >
-    au < exists ; 1967 ; Monthly Weather Review Volume 95 ; 95 >
-    au < exists ; 1968 ; Monthly Weather Review Volume 96 ; 96 >
-    au < exists ; 1969 ; Monthly Weather Review Volume 97 ; 97 >
-    au < exists ; 1970 ; Monthly Weather Review Volume 98 ; 98 >
-    au < exists ; 1971 ; Monthly Weather Review Volume 99 ; 99 >
-    au < exists ; 1972 ; Monthly Weather Review Volume 100 ; 100 >
-    au < exists ; 1973 ; Monthly Weather Review Volume 101 ; 101 >
+    au < exists ; 1872 ; Monthly Weather Review Volume 0 ; 0 > # No TOC links, but has permission statements
+    au < manifest ; 1873 ; Monthly Weather Review Volume 1 ; 1 >
+    au < manifest ; 1874 ; Monthly Weather Review Volume 2 ; 2 >
+    au < manifest ; 1875 ; Monthly Weather Review Volume 3 ; 3 >
+    au < manifest ; 1876 ; Monthly Weather Review Volume 4 ; 4 >
+    au < manifest ; 1877 ; Monthly Weather Review Volume 5 ; 5 >
+    au < manifest ; 1878 ; Monthly Weather Review Volume 6 ; 6 >
+    au < manifest ; 1879 ; Monthly Weather Review Volume 7 ; 7 >
+    au < manifest ; 1880 ; Monthly Weather Review Volume 8 ; 8 >
+    au < manifest ; 1881 ; Monthly Weather Review Volume 9 ; 9 >
+    au < manifest ; 1882 ; Monthly Weather Review Volume 10 ; 10 >
+    au < manifest ; 1883 ; Monthly Weather Review Volume 11 ; 11 >
+    au < manifest ; 1884 ; Monthly Weather Review Volume 12 ; 12 >
+    au < manifest ; 1885 ; Monthly Weather Review Volume 13 ; 13 >
+    au < manifest ; 1886 ; Monthly Weather Review Volume 14 ; 14 >
+    au < manifest ; 1887 ; Monthly Weather Review Volume 15 ; 15 >
+    au < manifest ; 1888 ; Monthly Weather Review Volume 16 ; 16 >
+    au < manifest ; 1889 ; Monthly Weather Review Volume 17 ; 17 >
+    au < manifest ; 1890 ; Monthly Weather Review Volume 18 ; 18 >
+    au < manifest ; 1891 ; Monthly Weather Review Volume 19 ; 19 >
+    au < manifest ; 1892 ; Monthly Weather Review Volume 20 ; 20 >
+    au < manifest ; 1893 ; Monthly Weather Review Volume 21 ; 21 >
+    au < manifest ; 1894 ; Monthly Weather Review Volume 22 ; 22 >
+    au < manifest ; 1895 ; Monthly Weather Review Volume 23 ; 23 >
+    au < manifest ; 1896 ; Monthly Weather Review Volume 24 ; 24 >
+    au < manifest ; 1897 ; Monthly Weather Review Volume 25 ; 25 >
+    au < manifest ; 1898 ; Monthly Weather Review Volume 26 ; 26 >
+    au < manifest ; 1899 ; Monthly Weather Review Volume 27 ; 27 >
+    au < manifest ; 1900 ; Monthly Weather Review Volume 28 ; 28 >
+    au < manifest ; 1901 ; Monthly Weather Review Volume 29 ; 29 >
+    au < manifest ; 1902 ; Monthly Weather Review Volume 30 ; 30 >
+    au < manifest ; 1903 ; Monthly Weather Review Volume 31 ; 31 >
+    au < manifest ; 1904 ; Monthly Weather Review Volume 32 ; 32 >
+    au < manifest ; 1905 ; Monthly Weather Review Volume 33 ; 33 >
+    au < manifest ; 1906 ; Monthly Weather Review Volume 34 ; 34 >
+    au < manifest ; 1907 ; Monthly Weather Review Volume 35 ; 35 >
+    au < manifest ; 1908 ; Monthly Weather Review Volume 36 ; 36 >
+    au < manifest ; 1909 ; Monthly Weather Review Volume 37 ; 37 >
+    au < manifest ; 1910 ; Monthly Weather Review Volume 38 ; 38 >
+    au < manifest ; 1911 ; Monthly Weather Review Volume 39 ; 39 >
+    au < manifest ; 1912 ; Monthly Weather Review Volume 40 ; 40 >
+    au < manifest ; 1913 ; Monthly Weather Review Volume 41 ; 41 >
+    au < manifest ; 1914 ; Monthly Weather Review Volume 42 ; 42 >
+    au < manifest ; 1915 ; Monthly Weather Review Volume 43 ; 43 >
+    au < manifest ; 1916 ; Monthly Weather Review Volume 44 ; 44 >
+    au < manifest ; 1917 ; Monthly Weather Review Volume 45 ; 45 >
+    au < manifest ; 1918 ; Monthly Weather Review Volume 46 ; 46 >
+    au < manifest ; 1919 ; Monthly Weather Review Volume 47 ; 47 >
+    au < manifest ; 1920 ; Monthly Weather Review Volume 48 ; 48 >
+    au < manifest ; 1921 ; Monthly Weather Review Volume 49 ; 49 >
+    au < manifest ; 1922 ; Monthly Weather Review Volume 50 ; 50 >
+    au < manifest ; 1923 ; Monthly Weather Review Volume 51 ; 51 >
+    au < manifest ; 1924 ; Monthly Weather Review Volume 52 ; 52 >
+    au < manifest ; 1925 ; Monthly Weather Review Volume 53 ; 53 >
+    au < manifest ; 1926 ; Monthly Weather Review Volume 54 ; 54 >
+    au < manifest ; 1927 ; Monthly Weather Review Volume 55 ; 55 >
+    au < manifest ; 1928 ; Monthly Weather Review Volume 56 ; 56 >
+    au < manifest ; 1929 ; Monthly Weather Review Volume 57 ; 57 >
+    au < manifest ; 1930 ; Monthly Weather Review Volume 58 ; 58 >
+    au < manifest ; 1931 ; Monthly Weather Review Volume 59 ; 59 >
+    au < manifest ; 1932 ; Monthly Weather Review Volume 60 ; 60 >
+    au < manifest ; 1933 ; Monthly Weather Review Volume 61 ; 61 >
+    au < manifest ; 1934 ; Monthly Weather Review Volume 62 ; 62 >
+    au < manifest ; 1935 ; Monthly Weather Review Volume 63 ; 63 >
+    au < manifest ; 1936 ; Monthly Weather Review Volume 64 ; 64 >
+    au < manifest ; 1937 ; Monthly Weather Review Volume 65 ; 65 >
+    au < manifest ; 1938 ; Monthly Weather Review Volume 66 ; 66 >
+    au < manifest ; 1939 ; Monthly Weather Review Volume 67 ; 67 >
+    au < manifest ; 1940 ; Monthly Weather Review Volume 68 ; 68 >
+    au < manifest ; 1941 ; Monthly Weather Review Volume 69 ; 69 >
+    au < manifest ; 1942 ; Monthly Weather Review Volume 70 ; 70 >
+    au < manifest ; 1943 ; Monthly Weather Review Volume 71 ; 71 >
+    au < manifest ; 1944 ; Monthly Weather Review Volume 72 ; 72 >
+    au < manifest ; 1945 ; Monthly Weather Review Volume 73 ; 73 >
+    au < manifest ; 1946 ; Monthly Weather Review Volume 74 ; 74 >
+    au < manifest ; 1947 ; Monthly Weather Review Volume 75 ; 75 >
+    au < manifest ; 1948 ; Monthly Weather Review Volume 76 ; 76 >
+    au < manifest ; 1949 ; Monthly Weather Review Volume 77 ; 77 >
+    au < manifest ; 1950 ; Monthly Weather Review Volume 78 ; 78 >
+    au < manifest ; 1951 ; Monthly Weather Review Volume 79 ; 79 >
+    au < manifest ; 1952 ; Monthly Weather Review Volume 80 ; 80 >
+    au < manifest ; 1953 ; Monthly Weather Review Volume 81 ; 81 >
+    au < manifest ; 1954 ; Monthly Weather Review Volume 82 ; 82 >
+    au < manifest ; 1955 ; Monthly Weather Review Volume 83 ; 83 >
+    au < manifest ; 1956 ; Monthly Weather Review Volume 84 ; 84 >
+    au < manifest ; 1957 ; Monthly Weather Review Volume 85 ; 85 >
+    au < manifest ; 1958 ; Monthly Weather Review Volume 86 ; 86 >
+    au < manifest ; 1959 ; Monthly Weather Review Volume 87 ; 87 >
+    au < manifest ; 1960 ; Monthly Weather Review Volume 88 ; 88 >
+    au < manifest ; 1961 ; Monthly Weather Review Volume 89 ; 89 >
+    au < manifest ; 1962 ; Monthly Weather Review Volume 90 ; 90 >
+    au < manifest ; 1963 ; Monthly Weather Review Volume 91 ; 91 >
+    au < manifest ; 1964 ; Monthly Weather Review Volume 92 ; 92 >
+    au < manifest ; 1965 ; Monthly Weather Review Volume 93 ; 93 >
+    au < manifest ; 1966 ; Monthly Weather Review Volume 94 ; 94 >
+    au < manifest ; 1967 ; Monthly Weather Review Volume 95 ; 95 >
+    au < manifest ; 1968 ; Monthly Weather Review Volume 96 ; 96 >
+    au < manifest ; 1969 ; Monthly Weather Review Volume 97 ; 97 >
+    au < manifest ; 1970 ; Monthly Weather Review Volume 98 ; 98 >
+    au < manifest ; 1971 ; Monthly Weather Review Volume 99 ; 99 >
+    au < manifest ; 1972 ; Monthly Weather Review Volume 100 ; 100 >
+    au < manifest ; 1973 ; Monthly Weather Review Volume 101 ; 101 >
     au < doNotProcess ; 1974 ; Monthly Weather Review Volume 102 ; 102 >
     au < doNotProcess ; 1975 ; Monthly Weather Review Volume 103 ; 103 >
     au < doNotProcess ; 1976 ; Monthly Weather Review Volume 104 ; 104 >
@@ -712,7 +712,7 @@
     au < doNotProcess ; 2017 ; Monthly Weather Review Volume 145 ; 145 >
     au < doNotProcess ; 2018 ; Monthly Weather Review Volume 146 ; 146 >
     au < doNotProcess ; 2019 ; Monthly Weather Review Volume 147 ; 147 >
-    au < exists ; 2020 ; Monthly Weather Review Volume 148 ; 148 >
+    au < manifest ; 2020 ; Monthly Weather Review Volume 148 ; 148 >
 
   }
 
@@ -738,7 +738,7 @@
     au < doNotProcess ; 2017 ; Weather, Climate, and Society Volume 9 ; 9 >
     au < doNotProcess ; 2018 ; Weather, Climate, and Society Volume 10 ; 10 >
     au < doNotProcess ; 2019 ; Weather, Climate, and Society Volume 11 ; 11 >
-    au < exists ; 2020 ; Weather, Climate, and Society Volume 12 ; 12 >
+    au < manifest ; 2020 ; Weather, Climate, and Society Volume 12 ; 12 >
 
   }
 
@@ -787,7 +787,7 @@
     au < doNotProcess ; 2017 ; Weather and Forecasting Volume 32 ; 32 >
     au < doNotProcess ; 2018 ; Weather and Forecasting Volume 33 ; 33 >
     au < doNotProcess ; 2019 ; Weather and Forecasting Volume 34 ; 34 >
-    au < exists ; 2020 ; Weather and Forecasting Volume 35 ; 35 >
+    au < manifest ; 2020 ; Weather and Forecasting Volume 35 ; 35 >
 
   }
 
