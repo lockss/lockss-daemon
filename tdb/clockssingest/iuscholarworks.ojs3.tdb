@@ -3,25 +3,17 @@
   publisher <
     name = IUScholarWorks ;
     info[contract] = 2013 ;
-    info[back] = 2008 ;
+    info[back] = 2005 ;
     info[tester] = 8 ;
     info[poller] = 8
   >
 
 ##############
 #
-#NEW - not in previous tdb; confirm and then add
-#bbsr Bulletin Bibliographique de la Société Rencesvals Vol1 (1958) - Vol42 (2010)
-#cfr Children's Folklore Review vol1 (1979) - Vol 38 (2017)
-#psource Primary Source Vol1 (2011) - Vol5 (2015)
-
-#NEW at site but not enabled
-#IJLCLE IJLCLE	NO CLOCKSS MANIFEST
-#iulcwp IULC Working Papers NO CLOCKSS MANIFEST
-#iwpsalc Indiana Working Papers in South Asian Languages and Cultures - NO ISSUES
-#iwpssa Indiana Working Papers in Speech Sound Articulation - NO ISSUES
-#jfr Journal of Folklore Research - LOGIN REQUIRED
-#jpea Journal of Public and Environmental Affairs - NO ISSUES
+#NEW at site but not enabled (2/22/2021)
+#Integrated HPS Conference Proceedings -- NO ISSUES
+#Journal of the History of Music Theory and Literature -- NO ISSUES
+#
 ###########################################
 
 #
@@ -78,6 +70,7 @@
       au < ready ; exists ; 2016 ; 2016 ; Analecta Volume 46 ; 46 ; reingest5.clockss.org:8082 >
       au < ready ; exists ; 2017 ; 2017 ; Analecta Volume 47 ; 47 ; reingest5.clockss.org:8082 >
       au < ready ; exists ; 2018 ; 2018 ; Analecta Volume 48 ; 48 ; reingest5.clockss.org:8082 >
+      #No more published
 
   }
 
@@ -96,8 +89,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Artifact Volume 3 (2014) ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Artifact Volume 3 (2015) ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Artifact Volume 4 ; 4 ; >
-      #no 2018-2020 as of 12/5/2020
-      au < expected ; exists ; 2021 ; 2021 ; Artifact Volume 5 ; 5 ; > 
+      #no more published
 
   }
 
@@ -144,9 +136,8 @@
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Anthropology of East Europe Review Volume 33 ; 33 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Anthropology of East Europe Review Volume 34 ; 34 ; >
       au < finished ; manifest ; 2017 ; 2017 ; Anthropology of East Europe Review Volume 35 ; 35 ; reingest2.clockss.org:8085 >
-      #no 2018 as of 3/14/19
       au < deepCrawl ; exists ; 2019 ; 2019 ; Anthropology of East Europe Review Volume 36 ; 36 ; > 
-      #no 2020 as of 12/5/20
+      #no more published
 
   }
 
@@ -165,6 +156,20 @@
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Black Diaspora Review Volume 3 (2013) ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Black Diaspora Review Volume 4 ; 4 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Black Diaspora Review Volume 5 ; 5 ; >
+      #no more published
+  }
+
+  {
+    title <
+      name = Digest: A Journal of Foodways and Culture ;
+      eissn = 2329-4787
+    >
+
+      param[journal_id] = digest
+      #Still in publication 2021
+
+      au < manifest ; exists ; 2019 ; 2019 ; Digest: A Journal of Foodways and Culture Volume 7 ; 7 ; >
+      au < exists ; exists ; 2020 ; 2020 ; Digest: A Journal of Foodways and Culture Volume 8 ; 8 ; >
 
   }
 
@@ -181,7 +186,7 @@
       au < finished ; manifest ; 2017 ; 2017 ; Ethnomusicology Translations Volume 5-6 ; 5-6 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 2018 ; Ethnomusicology Translations Volume 7-8 ; 7-8 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2019 ; 2019 ; Ethnomusicology Translations Volume 9-10 ; 9-10 ; >
-
+      #no more published
   }
 
   {
@@ -265,9 +270,8 @@
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 13 ; 13 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 14 ; 14 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 15 ; 15 ; >
-      #no 2018 or 2019 as of 4/14/2020
-      au < expected ; exists ; 2020 ; 2020 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 16 ; 16 ; > 
-      #no 2020 as of 12/5/2020
+      #no more published
+
   }
 
   {
@@ -385,6 +389,7 @@
     >
 
       param[journal_id] = iusburjh
+      #Still in publication 2021
 
       au < finished ; manifest ; 2012 ; 2012 ; IUSB Undergraduate Research Journal of History Volume 3 ; 3 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2014 ; 2014 ; IUSB Undergraduate Research Journal of History Volume 4 ; 4 ; reingest2.clockss.org:8085 >
@@ -406,6 +411,19 @@
       au < finished ; manifest ; 2016 ; 2016 ; Journal of Economic Development in Higher Education Volume 1 ; 1 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2019 ; 2019 ; Journal of Economic Development in Higher Education Volume 2 ; 2 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Journal of Economic Development in Higher Education Volume 3 ; 3 ; >
+
+  }
+
+  {
+    title <
+      name = Journal of Public and Environmental Affairs ;
+      issn = 2578-1294
+    >
+
+      param[journal_id] = jpea
+
+      au < manifest ; exists ; 2020 ; 2020 ; Journal of Public and Environmental Affairs Volume 1 ; 1 ; >
+      au < expected ; exists ; 2021 ; 2021 ; Journal of Public and Environmental Affairs Volume 2 ; 2 ; >
 
   }
 
@@ -839,8 +857,7 @@
       au < frozen ; exists ; 2017 ; 2017 ; Indiana University South Bend Graduate Research Journal Volume 2017 ; 4 ; >
       au < crawling ; exists ; 2018 ; 2018 ; Indiana University South Bend Graduate Research Journal Volume 2018 ; 5 ; >
       au < frozen ; exists ; 2019 ; 2019 ; Indiana University South Bend Graduate Research Journal Volume 2019 ; 6 ; >
-      au < expected ; exists ; 2020 ; 2020 ; Indiana University South Bend Graduate Research Journal Volume 2020 ; 7 ; >
-
+      #no more published
   }
 
   {
@@ -852,6 +869,7 @@
 
       {
          param[journal_id] = iusburj
+         #still published 2021
 
          au < manifest ; exists ; 2000 ; 2000 ; IU South Bend Undergraduate Research Journal Volume 2000 ; 3 ; >
          au < manifest ; exists ; 2001 ; 2001 ; IU South Bend Undergraduate Research Journal Volume 2001 ; 4 ; >
@@ -869,6 +887,7 @@
          au < crawling ; exists ; 2018 ; 2018 ; IU South Bend Undergraduate Research Journal Volume 2018 ; 18 ; >
          au < frozen ; exists ; 2019 ; 2019 ; IU South Bend Undergraduate Research Journal Volume 2019 ; 19 ; >
          au < expected ; exists ; 2020 ; 2020 ; IU South Bend Undergraduate Research Journal Volume 2020 ; 20 ; >
+         au < expected ; exists ; 2021 ; 2021 ; IU South Bend Undergraduate Research Journal Volume 2021 ; 21 ; >
       }
   }
 
@@ -1076,10 +1095,12 @@
       >
 
       param[journal_id] = joget
+      #Still in publication 2021
 
       au < frozen ; exists ; 2017 ; 2017 ; Global Engagement and Transformation Volume 2017 ; 1-2 ; >
       au < frozen ; exists ; 2018 ; 2018 ; Global Engagement and Transformation Volume 2018 ; 3 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Global Engagement and Transformation Volume 2020 ; 4 ; >
+      au < expected ; exists ; 2021 ; 2021 ; Global Engagement and Transformation Volume 2021 ; 5 ; >
 
   }
 
@@ -1091,6 +1112,7 @@
       >
 
       param[journal_id] = risky
+      #Still published 2021
 
       au < crawling ; exists ; 2013 ; 2013 ; The Risky Academy  Volume 2013 ; 1 ; >
       au < frozen ; exists ; 2014 ; 2014 ; The Risky Academy  Volume 2014 ; 2 ; >
@@ -1100,6 +1122,7 @@
       au < crawling ; exists ; 2018 ; 2018 ; The Risky Academy  Volume 2018 ; 6 ; >
       au < frozen ; exists ; 2019 ; 2019 ; The Risky Academy  Volume 2019 ; 7 ; >
       au < expected ; exists ; 2020 ; 2020 ; The Risky Academy  Volume 2020 ; 8 ; >
+      au < expected ; exists ; 2021 ; 2021 ; The Risky Academy  Volume 2021 ; 9 ; >
 
   }
 
@@ -1111,9 +1134,11 @@
       >
 
       param[journal_id] = gjte
+      #Still in publication 2021
 
-      au < exists ; exists ; 2019 ; 2019 ; Global Journal of Transformative Education Volume 2018 ; 1 ; >
-      au < expected ; exists ; 2020 ; 2020 ; Global Journal of Transformative Education Volume 2020 ; 2 ; >
+      au < manifest ; exists ; 2019 ; 2019 ; Global Journal of Transformative Education Volume 2018 ; 1 ; >
+      au < manifest ; exists ; 2020 ; 2020 ; Global Journal of Transformative Education Volume 2020 ; 2 ; >
+      au < expected ; exists ; 2021 ; 2021 ; Global Journal of Transformative Education Volume 2021 ; 3 ; >
 
   }
 
@@ -1126,11 +1151,11 @@
 
       param[journal_id] = IJLCLE
 
-      au < exists ; exists ; 2012 ; 2012 ; International Journal of Literacy, Culture, and Language Education Volume 2012 ; 1 ; >
-      au < exists ; exists ; 2013 ; 2013 ; International Journal of Literacy, Culture, and Language Education Volume 2013 ; 2 ; >
-      au < exists ; exists ; 2014 ; 2014 ; International Journal of Literacy, Culture, and Language Education Volume 2014 ; 3 ; >
-      au < exists ; exists ; 2015 ; 2015 ; International Journal of Literacy, Culture, and Language Education Volume 2015 ; 4 ; >
-      au < exists ; exists ; 2017 ; 2017 ; International Journal of Literacy, Culture, and Language Education Volume 2017 ; 5 ; >
+      au < manifest ; exists ; 2012 ; 2012 ; International Journal of Literacy, Culture, and Language Education Volume 2012 ; 1 ; >
+      au < manifest ; exists ; 2013 ; 2013 ; International Journal of Literacy, Culture, and Language Education Volume 2013 ; 2 ; >
+      au < manifest ; exists ; 2014 ; 2014 ; International Journal of Literacy, Culture, and Language Education Volume 2014 ; 3 ; >
+      au < manifest ; exists ; 2015 ; 2015 ; International Journal of Literacy, Culture, and Language Education Volume 2015 ; 4 ; >
+      au < manifest ; exists ; 2017 ; 2017 ; International Journal of Literacy, Culture, and Language Education Volume 2017 ; 5 ; >
 
   }
 
@@ -1142,27 +1167,26 @@
       >
 
       param[journal_id] = iulcwp
-      #needs lockss permission statements turned on 20201205
 
-      au < exists ; exists ; 2002 ; 2002 ; IULC Working Papers  Volume 2002 ; 1 ; >
-      au < exists ; exists ; 2003 ; 2003 ; IULC Working Papers  Volume 2003 ; 2 ; >
-      au < exists ; exists ; 2004 ; 2004 ; IULC Working Papers  Volume 2004 ; 3 ; >
-      au < exists ; exists ; 2005 ; 2005 ; IULC Working Papers  Volume 2005 ; 4 ; >
-      au < exists ; exists ; 2006 ; 2006 ; IULC Working Papers  Volume 2006 ; 5 ; >
-      au < exists ; exists ; 2007 ; 2007 ; IULC Working Papers  Volume 2007 ; 6 ; >
-      au < exists ; exists ; 2008 ; 2008 ; IULC Working Papers  Volume 2008 ; 7 ; >
-      au < exists ; exists ; 2009 ; 2009 ; IULC Working Papers  Volume 2009 ; 8 ; >
-      au < exists ; exists ; 2010 ; 2010 ; IULC Working Papers  Volume 2010 ; 9 ; >
-      au < exists ; exists ; 2011 ; 2011 ; IULC Working Papers  Volume 2011 ; 10 ; >
-      au < exists ; exists ; 2012 ; 2012 ; IULC Working Papers  Volume 2012 ; 11 ; >
-      au < exists ; exists ; 2013 ; 2013 ; IULC Working Papers  Volume 2013 ; 12 ; >
-      au < exists ; exists ; 2014 ; 2014 ; IULC Working Papers  Volume 2014 ; 13 ; >
-      au < exists ; exists ; 2015 ; 2015 ; IULC Working Papers  Volume 2015 ; 14 ; >
-      au < exists ; exists ; 2016 ; 2016 ; IULC Working Papers  Volume 2016 ; 15 ; >
-      au < exists ; exists ; 2017 ; 2017 ; IULC Working Papers  Volume 2017 ; 16 ; >
-      au < exists ; exists ; 2018 ; 2018 ; IULC Working Papers  Volume 2018 ; 17 ; >
-      au < exists ; exists ; 2019 ; 2019 ; IULC Working Papers  Volume 2019 ; 18 ; >
-      au < expected ; exists ; 2020 ; 2020 ; IULC Working Papers  Volume 2020 ; 19 ; >
+      au < manifest ; exists ; 2002 ; 2002 ; IULC Working Papers  Volume 2002 ; 1 ; >
+      au < manifest ; exists ; 2003 ; 2003 ; IULC Working Papers  Volume 2003 ; 2 ; >
+      au < manifest ; exists ; 2004 ; 2004 ; IULC Working Papers  Volume 2004 ; 3 ; >
+      au < manifest ; exists ; 2005 ; 2005 ; IULC Working Papers  Volume 2005 ; 4 ; >
+      au < manifest ; exists ; 2006 ; 2006 ; IULC Working Papers  Volume 2006 ; 5 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; IULC Working Papers  Volume 2007 ; 6 ; >
+      au < manifest ; exists ; 2008 ; 2008 ; IULC Working Papers  Volume 2008 ; 7 ; >
+      au < doesNotExist ; doesNotExist ; 2009 ; 2009 ; IULC Working Papers  Volume 2009 ; 8 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; IULC Working Papers  Volume 2010 ; 9 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; IULC Working Papers  Volume 2011 ; 10 ; >
+      au < manifest ; exists ; 2012 ; 2012 ; IULC Working Papers  Volume 2012 ; 11 ; >
+      au < manifest ; exists ; 2013 ; 2013 ; IULC Working Papers  Volume 2013 ; 12 ; >
+      au < manifest ; exists ; 2014 ; 2014 ; IULC Working Papers  Volume 2014 ; 13 ; >
+      au < manifest ; exists ; 2015 ; 2015 ; IULC Working Papers  Volume 2015 ; 14 ; >
+      au < manifest ; exists ; 2016 ; 2016 ; IULC Working Papers  Volume 2016 ; 15 ; >
+      au < manifest ; exists ; 2017 ; 2017 ; IULC Working Papers  Volume 2017 ; 16 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; IULC Working Papers  Volume 2018 ; 17 ; >
+      au < manifest ; exists ; 2019 ; 2019 ; IULC Working Papers  Volume 2019 ; 18 ; >
+      au < manifest ; exists ; 2020 ; 2020 ; IULC Working Papers  Volume 2020 ; 19 ; >
 
   }
 
@@ -1183,27 +1207,42 @@
   {
 
       title <
+        name = Indiana Working Papers in Speech Sound Articulation ;
+        eissn = 2688-7215
+      >
+
+      param[journal_id] = iwpssa
+
+      au < manifest ; exists ; 2020 ; 2020 ; Indiana Working Papers in Speech Sound Articulation Volume 2020 ; 1 ; >
+      au < expected ; exists ; 2021 ; 2021 ; Indiana Working Papers in Speech Sound Articulation Volume 2021 ; 2 ; >
+
+  }
+
+  {
+
+      title <
         name = Developmental Observer ;
         eissn = 2689-2650
       >
 
       param[journal_id] = do
-      #needs lockss permission statements turned on 20201205
+      #Still in publication 2021
 
-      au < exists ; exists ; 2007 ; 2007 ; Developmental Observer Volume 2007 ; 1 ; >
-      au < exists ; exists ; 2008 ; 2008 ; Developmental Observer Volume 2008 ; 2 ; >
-      au < exists ; exists ; 2009 ; 2009 ; Developmental Observer Volume 2009 ; 3 ; >
-      au < exists ; exists ; 2010 ; 2010 ; Developmental Observer Volume 2010 ; 4 ; >
-      au < exists ; exists ; 2011 ; 2011 ; Developmental Observer Volume 2011 ; 5 ; >
-      au < exists ; exists ; 2012 ; 2012 ; Developmental Observer Volume 2012 ; 5 ; >
-      au < exists ; exists ; 2013 ; 2013 ; Developmental Observer Volume 2013 ; 6 ; >
-      au < exists ; exists ; 2014 ; 2014 ; Developmental Observer Volume 2014 ; 7 ; >
-      au < exists ; exists ; 2015 ; 2015 ; Developmental Observer Volume 2015 ; 8 ; >
-      au < exists ; exists ; 2016 ; 2016 ; Developmental Observer Volume 2016 ; 9 ; >
-      au < exists ; exists ; 2017 ; 2017 ; Developmental Observer Volume 2017 ; 10 ; >
-      au < exists ; exists ; 2018 ; 2018 ; Developmental Observer Volume 2018 ; 11 ; >
-      au < exists ; exists ; 2019 ; 2019 ; Developmental Observer Volume 2019 ; 12 ; >
-      au < exists ; exists ; 2020 ; 2020 ; Developmental Observer Volume 2020 ; 13 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; Developmental Observer Volume 2007 ; 1 ; >
+      au < manifest ; exists ; 2008 ; 2008 ; Developmental Observer Volume 2008 ; 2 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; Developmental Observer Volume 2009 ; 3 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; Developmental Observer Volume 2010 ; 4 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; Developmental Observer Volume 2011 ; 5 ; >
+      au < manifest ; exists ; 2012 ; 2012 ; Developmental Observer Volume 2012 ; 5 ; >
+      au < manifest ; exists ; 2013 ; 2013 ; Developmental Observer Volume 2013 ; 6 ; >
+      au < manifest ; exists ; 2014 ; 2014 ; Developmental Observer Volume 2014 ; 7 ; >
+      au < manifest ; exists ; 2015 ; 2015 ; Developmental Observer Volume 2015 ; 8 ; >
+      au < manifest ; exists ; 2016 ; 2016 ; Developmental Observer Volume 2016 ; 9 ; >
+      au < manifest ; exists ; 2017 ; 2017 ; Developmental Observer Volume 2017 ; 10 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; Developmental Observer Volume 2018 ; 11 ; >
+      au < manifest ; exists ; 2019 ; 2019 ; Developmental Observer Volume 2019 ; 12 ; >
+      au < manifest ; exists ; 2020 ; 2020 ; Developmental Observer Volume 2020 ; 13 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Developmental Observer Volume 2021 ; 14 ; >
 
   }
 
@@ -1249,8 +1288,8 @@
       au < doesNotExist ; doesNotExist ; 2016 ; 2016 ; Indiana Journal of Earth Sciences Volume 2016 ; 8 ; >
       au < doesNotExist ; doesNotExist ; 2017 ; 2017 ; Indiana Journal of Earth Sciences Volume 2017 ; 9 ; >
       au < doesNotExist ; doesNotExist ; 2018 ; 2018 ; Indiana Journal of Earth Sciences Volume 2018 ; 10 ; >
-      au < exists ; exists ; 2019 ; 2019 ; Indiana Journal of Earth Sciences Volume 2019 ; 11 ; >
-      au < exists ; exists ; 2020 ; 2020 ; Indiana Journal of Earth Sciences Volume 2020 ; 12 ; >
+      au < manifest ; exists ; 2019 ; 2019 ; Indiana Journal of Earth Sciences Volume 2019 ; 11 ; >
+      au < manifest ; exists ; 2020 ; 2020 ; Indiana Journal of Earth Sciences Volume 2020 ; 12 ; >
 
   }
 
@@ -1264,21 +1303,21 @@
       param[journal_id] = ijpbl
       #needs lockss permission statements turned on 20201205
 
-      au < exists ; exists ; 2006 ; 2006 ; Interdisciplinary Journal of Problem-Based Learning Volume 2006 ; 1 ; >
-      au < exists ; exists ; 2007 ; 2007 ; Interdisciplinary Journal of Problem-Based Learning Volume 2007 ; 2 ; >
-      au < exists ; exists ; 2008 ; 2008 ; Interdisciplinary Journal of Problem-Based Learning Volume 2008 ; 3 ; >
-      au < exists ; exists ; 2009 ; 2009 ; Interdisciplinary Journal of Problem-Based Learning Volume 2009 ; 4 ; >
-      au < exists ; exists ; 2010 ; 2010 ; Interdisciplinary Journal of Problem-Based Learning Volume 2010 ; 5 ; >
-      au < exists ; exists ; 2011 ; 2011 ; Interdisciplinary Journal of Problem-Based Learning Volume 2011 ; 6 ; >
-      au < exists ; exists ; 2012 ; 2012 ; Interdisciplinary Journal of Problem-Based Learning Volume 2012 ; 7 ; >
-      au < exists ; exists ; 2013 ; 2013 ; Interdisciplinary Journal of Problem-Based Learning Volume 2013 ; 8 ; >
-      au < exists ; exists ; 2014 ; 2014 ; Interdisciplinary Journal of Problem-Based Learning Volume 2014 ; 9 ; >
-      au < exists ; exists ; 2015 ; 2015 ; Interdisciplinary Journal of Problem-Based Learning Volume 2015 ; 10 ; >
-      au < exists ; exists ; 2016 ; 2016 ; Interdisciplinary Journal of Problem-Based Learning Volume 2016 ; 11 ; >
-      au < exists ; exists ; 2017 ; 2017 ; Interdisciplinary Journal of Problem-Based Learning Volume 2017 ; 12 ; >
-      au < exists ; exists ; 2018 ; 2018 ; Interdisciplinary Journal of Problem-Based Learning Volume 2018 ; 13 ; >
-      au < exists ; exists ; 2019 ; 2019 ; Interdisciplinary Journal of Problem-Based Learning Volume 2019 ; 14 ; >
-      au < exists ; exists ; 2020 ; 2020 ; Interdisciplinary Journal of Problem-Based Learning Volume 2020 ; 15 ; >
+      au < manifest ; exists ; 2006 ; 2006 ; Interdisciplinary Journal of Problem-Based Learning Volume 2006 ; 1 ; >
+      au < doesNotExist ; doesNotExist ; 2007 ; 2007 ; Interdisciplinary Journal of Problem-Based Learning Volume 2007 ; 2 ; >
+      au < manifest ; exists ; 2008 ; 2008 ; Interdisciplinary Journal of Problem-Based Learning Volume 2008 ; 3 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; Interdisciplinary Journal of Problem-Based Learning Volume 2009 ; 4 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; Interdisciplinary Journal of Problem-Based Learning Volume 2010 ; 5 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; Interdisciplinary Journal of Problem-Based Learning Volume 2011 ; 6 ; >
+      au < manifest ; exists ; 2012 ; 2012 ; Interdisciplinary Journal of Problem-Based Learning Volume 2012 ; 7 ; >
+      au < manifest ; exists ; 2013 ; 2013 ; Interdisciplinary Journal of Problem-Based Learning Volume 2013 ; 8 ; >
+      au < manifest ; exists ; 2014 ; 2014 ; Interdisciplinary Journal of Problem-Based Learning Volume 2014 ; 9 ; >
+      au < manifest ; exists ; 2015 ; 2015 ; Interdisciplinary Journal of Problem-Based Learning Volume 2015 ; 10 ; >
+      au < manifest ; exists ; 2016 ; 2016 ; Interdisciplinary Journal of Problem-Based Learning Volume 2016 ; 11 ; >
+      au < manifest ; exists ; 2017 ; 2017 ; Interdisciplinary Journal of Problem-Based Learning Volume 2017 ; 12 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; Interdisciplinary Journal of Problem-Based Learning Volume 2018 ; 13 ; >
+      au < manifest ; exists ; 2019 ; 2019 ; Interdisciplinary Journal of Problem-Based Learning Volume 2019 ; 14 ; >
+      au < manifest ; exists ; 2020 ; 2020 ; Interdisciplinary Journal of Problem-Based Learning Volume 2020 ; 15 ; >
 
   }
 
@@ -1320,24 +1359,26 @@
 
   }
 
-#  {
-#No longer on website
-#      title <
-#        name = The VAD Journal ;
-#        eissn =  2378-2706
-#      >
-#
-#      param[journal_id] = vad
-#
-#      au < exists ; exists ; 2015 ; 2015 ; The VAD Journal Volume 2015 ; 1 ; >
-#      au < exists ; exists ; 2016 ; 2016 ; The VAD Journal Volume 2016 ; 2 ; >
-#      au < exists ; exists ; 2017 ; 2017 ; The VAD Journal Volume 2017 ; 3 ; >
-#      au < exists ; exists ; 2018 ; 2018 ; The VAD Journal Volume 2018 ; 4 ; >
-#      au < exists ; exists ; 2019 ; 2019 ; The VAD Journal Volume 2019 ; 5 ; >
-#      au < exists ; exists ; 2020 ; 2020 ; The VAD Journal Volume 2020 ; 6 ; >
-#
-#  }
-#
+  {
+
+      title <
+        name = Research, Advocacy, and Practice for Complex and Chronic Conditions ;
+        eissn = 2372-451X
+      >
+
+      param[journal_id] = pders
+
+      au < manifest ; exists ; 2013 ; 2013 ; Research, Advocacy, and Practice for Complex and Chronic Conditions Volume 32 ; 32 ; >
+      au < manifest ; exists ; 2014 ; 2014 ; Research, Advocacy, and Practice for Complex and Chronic Conditions Volume 33 ; 33 ; >
+      au < manifest ; exists ; 2015 ; 2015 ; Research, Advocacy, and Practice for Complex and Chronic Conditions Volume 34 ; 34 ; >
+      au < manifest ; exists ; 2016 ; 2016 ; Research, Advocacy, and Practice for Complex and Chronic Conditions Volume 35 ; 35 ; >
+      au < manifest ; exists ; 2017 ; 2017 ; Research, Advocacy, and Practice for Complex and Chronic Conditions Volume 36 ; 36 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; Research, Advocacy, and Practice for Complex and Chronic Conditions Volume 37 ; 37 ; >
+      au < manifest ; exists ; 2019 ; 2019 ; Research, Advocacy, and Practice for Complex and Chronic Conditions Volume 38 ; 38 ; >
+      au < manifest ; exists ; 2020 ; 2020 ; Research, Advocacy, and Practice for Complex and Chronic Conditions Volume 39 ; 39 ; >
+
+  }
+
   {
 
       title <
