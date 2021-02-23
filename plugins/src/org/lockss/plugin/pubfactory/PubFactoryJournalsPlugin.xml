@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.pubfactory.PubfactoryJournalsPlugin</string>
+    <string>org.lockss.plugin.pubfactory.PubFactoryJournalsPlugin</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -34,11 +34,11 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Pubfactory Journals Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"PubFactory Journals Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Pubfactory Journals Plugin</string>
+    <string>PubFactory Journals Plugin</string>
   </entry>
   <entry>
     <string>plugin_fetch_rate_limiter_source</string>
