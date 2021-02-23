@@ -31,8 +31,10 @@
       {
       plugin = org.lockss.plugin.ojs3.Ojs3Plugin
 
-      param[base_url] = https://journals.carleton.ca/
+      param[base_url] = https://jocg.org/
       param[journal_id] = jocg
+      attr[start_stem] = index.php/
+      #publisher contacted 2/22/2021 for certificate failure
 
       au < exists ; 2018 ; Journal of Computational Geometry Volume 9 ; 9 ; 2018 > #Unable to fetch permission page
       au < expected ; 2019 ; Journal of Computational Geometry Volume 10 ; 10 ; 2019 > #Unable to fetch permission page
