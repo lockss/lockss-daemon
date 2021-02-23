@@ -779,7 +779,7 @@
      au < released ; 2002 ; Gothic Studies Volume 4 ; 4 ; https://www.euppublishing.com/ >
      au < released ; 2003 ; Gothic Studies Volume 5 ; 5 ; https://www.euppublishing.com/ >
      au < released ; 2004 ; Gothic Studies Volume 6 ; 6 ; https://www.euppublishing.com/ >
-     au < releasing ; 2005 ; Gothic Studies Volume 7 ; 7 ; https://www.euppublishing.com/ >
+     au < released ; 2005 ; Gothic Studies Volume 7 ; 7 ; https://www.euppublishing.com/ >
      au < released ; 2006 ; Gothic Studies Volume 8 ; 8 ; https://www.euppublishing.com/ >
      au < released ; 2007 ; Gothic Studies Volume 9 ; 9 ; https://www.euppublishing.com/ >
      au < released ; 2008 ; Gothic Studies Volume 10 ; 10 ; https://www.euppublishing.com/ >
@@ -817,7 +817,7 @@
       implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
 
       au < manifest ; 2002 ; Holy Land Studies Volume 1 ; 1 ; https://www.euppublishing.com/ >
-      au < releasing ; 2003 ; Holy Land Studies Volume 2 ; 2 ; https://www.euppublishing.com/ >
+      au < released ; 2003 ; Holy Land Studies Volume 2 ; 2 ; https://www.euppublishing.com/ >
       au < released ; 2004 ; Holy Land Studies Volume 3 ; 3 ; http://www.euppublishing.com/ >
       au < released ; 2005 ; Holy Land Studies Volume 4 ; 4 ; http://www.euppublishing.com/ >
       au < released ; 2006 ; Holy Land Studies Volume 5 ; 5 ; http://www.euppublishing.com/ >
@@ -891,10 +891,10 @@
       param[journal_id] = inr
       implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
 
-      au < releasing ; 2000 ; The Innes Review Volume 51 ; 51 ; https://www.euppublishing.com/ >
+      au < released ; 2000 ; The Innes Review Volume 51 ; 51 ; https://www.euppublishing.com/ >
       au < manifest ; 2001 ; The Innes Review Volume 52 ; 52 ; https://www.euppublishing.com/ >
       au < released ; 2002 ; The Innes Review Volume 53 ; 53 ; https://www.euppublishing.com/ >
-      au < releasing ; 2003 ; The Innes Review Volume 54 ; 54 ; https://www.euppublishing.com/ >
+      au < released ; 2003 ; The Innes Review Volume 54 ; 54 ; https://www.euppublishing.com/ >
       au < released ; 2004 ; The Innes Review Volume 55 ; 55 ; http://www.euppublishing.com/ >
       au < released ; 2005 ; The Innes Review Volume 56 ; 56 ; http://www.euppublishing.com/ >
       au < released ; 2006 ; The Innes Review Volume 57 ; 57 ; http://www.euppublishing.com/ >
@@ -1086,14 +1086,14 @@
       param[journal_id] = jobs
       implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
 
-      au < releasing ; 2000 ; Journal of Beckett Studies Volume 9 ; 9 ; https://www.euppublishing.com/ >
+      au < released ; 2000 ; Journal of Beckett Studies Volume 9 ; 9 ; https://www.euppublishing.com/ >
       au < released ; 2001 ; Journal of Beckett Studies Volume 10 ; 10 ; https://www.euppublishing.com/ >
-      au < releasing ; 2002 ; Journal of Beckett Studies Volume 11 ; 11 ; https://www.euppublishing.com/ >
+      au < released ; 2002 ; Journal of Beckett Studies Volume 11 ; 11 ; https://www.euppublishing.com/ >
       au < released ; 2003 ; Journal of Beckett Studies Volume 12 ; 12 ; https://www.euppublishing.com/ >
       au < released ; 2004 ; Journal of Beckett Studies Volume 13 ; 13 ; https://www.euppublishing.com/ >
-      au < releasing ; 2005 ; Journal of Beckett Studies Volume 14 ; 14 ; https://www.euppublishing.com/ >
+      au < released ; 2005 ; Journal of Beckett Studies Volume 14 ; 14 ; https://www.euppublishing.com/ >
       au < released ; 2006 ; Journal of Beckett Studies Volume 15 ; 15 ; https://www.euppublishing.com/ >
-      au < releasing ; 2007 ; Journal of Beckett Studies Volume 16 ; 16 ; https://www.euppublishing.com/ >
+      au < released ; 2007 ; Journal of Beckett Studies Volume 16 ; 16 ; https://www.euppublishing.com/ >
       au < released ; 2008 ; Journal of Beckett Studies Volume 17 ; 17 ; http://www.euppublishing.com/ >
       au < released ; 2009 ; Journal of Beckett Studies Volume 18 ; 18 ; http://www.euppublishing.com/ >
       au < released ; 2010 ; Journal of Beckett Studies Volume 19 ; 19 ; http://www.euppublishing.com/ >
@@ -1234,7 +1234,7 @@
       au < manifest ; 2001 ; Journal of Qur'anic Studies Volume 3 ; 3 ; https://www.euppublishing.com/ >
       au < released ; 2002 ; Journal of Qur'anic Studies Volume 4 ; 4 ; https://www.euppublishing.com/ >
       au < released ; 2003 ; Journal of Qur'anic Studies Volume 5 ; 5 ; https://www.euppublishing.com/ >
-      au < releasing ; 2004 ; Journal of Qur'anic Studies Volume 6 ; 6 ; https://www.euppublishing.com/ >
+      au < released ; 2004 ; Journal of Qur'anic Studies Volume 6 ; 6 ; https://www.euppublishing.com/ >
       au < released ; 2005 ; Journal of Qur'anic Studies Volume 7 ; 7 ; http://www.euppublishing.com/ >
       au < released ; 2006 ; Journal of Qur'anic Studies Volume 8 ; 8 ; http://www.euppublishing.com/ >
       au < released ; 2007 ; Journal of Qur'anic Studies Volume 9 ; 9 ; http://www.euppublishing.com/ >
@@ -1695,13 +1695,13 @@
       param[journal_id] = olr
       implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
 
-      au < releasing ; 2000 ; Oxford Literary Review Volume 22 ; 22 ; https://www.euppublishing.com/ >
-      au < releasing ; 2001 ; Oxford Literary Review Volume 23 ; 23 ; https://www.euppublishing.com/ >
-      au < releasing ; 2002 ; Oxford Literary Review Volume 24 ; 24 ; https://www.euppublishing.com/ >
-      au < releasing ; 2003 ; Oxford Literary Review Volume 25 ; 25 ; https://www.euppublishing.com/ >
-      au < releasing ; 2004 ; Oxford Literary Review Volume 26 ; 26 ; https://www.euppublishing.com/ >
+      au < released ; 2000 ; Oxford Literary Review Volume 22 ; 22 ; https://www.euppublishing.com/ >
+      au < released ; 2001 ; Oxford Literary Review Volume 23 ; 23 ; https://www.euppublishing.com/ >
+      au < released ; 2002 ; Oxford Literary Review Volume 24 ; 24 ; https://www.euppublishing.com/ >
+      au < released ; 2003 ; Oxford Literary Review Volume 25 ; 25 ; https://www.euppublishing.com/ >
+      au < released ; 2004 ; Oxford Literary Review Volume 26 ; 26 ; https://www.euppublishing.com/ >
       au < manifest ; 2005 ; Oxford Literary Review Volume 27 ; 27 ; https://www.euppublishing.com/ >
-      au < releasing ; 2006 ; Oxford Literary Review Volume 28 ; 28 ; https://www.euppublishing.com/ >
+      au < released ; 2006 ; Oxford Literary Review Volume 28 ; 28 ; https://www.euppublishing.com/ >
       au < released ; 2007 ; Oxford Literary Review Volume 29 ; 29 ; http://www.euppublishing.com/ >
       au < released ; 2008 ; Oxford Literary Review Volume 30 ; 30 ; http://www.euppublishing.com/ >
       au < released ; 2009 ; Oxford Literary Review Volume 31 ; 31 ; http://www.euppublishing.com/ >
@@ -1737,7 +1737,7 @@
       param[journal_id] = para
       implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
 
-      au < releasing ; 2000 ; Paragraph Volume 23 ; 23 ; https://www.euppublishing.com/ >
+      au < released ; 2000 ; Paragraph Volume 23 ; 23 ; https://www.euppublishing.com/ >
       au < released ; 2001 ; Paragraph Volume 24 ; 24 ; http://www.euppublishing.com/ >
       au < released ; 2002 ; Paragraph Volume 25 ; 25 ; http://www.euppublishing.com/ >
       au < released ; 2003 ; Paragraph Volume 26 ; 26 ; http://www.euppublishing.com/ >
@@ -1872,7 +1872,7 @@
       param[journal_id] = rom
       implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
 
-      au < releasing ; 2000 ; Romanticism Volume 6 ; 6 ; https://www.euppublishing.com/ >
+      au < released ; 2000 ; Romanticism Volume 6 ; 6 ; https://www.euppublishing.com/ >
       au < released ; 2001 ; Romanticism Volume 7 ; 7 ; http://www.euppublishing.com/ >
       au < released ; 2002 ; Romanticism Volume 8 ; 8 ; http://www.euppublishing.com/ >
       au < released ; 2003 ; Romanticism Volume 9 ; 9 ; http://www.euppublishing.com/ >
@@ -2256,7 +2256,7 @@
       param[journal_id] = tal
       implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
 
-      au < releasing ; 2000 ; Translation and Literature Volume 9 ; 9 ; https://www.euppublishing.com/ >
+      au < released ; 2000 ; Translation and Literature Volume 9 ; 9 ; https://www.euppublishing.com/ >
       au < released ; 2001 ; Translation and Literature Volume 10 ; 10 ; https://www.euppublishing.com/ >
       au < released ; 2002 ; Translation and Literature Volume 11 ; 11 ; http://www.euppublishing.com/ >
       au < released ; 2003 ; Translation and Literature Volume 12 ; 12 ; http://www.euppublishing.com/ >
