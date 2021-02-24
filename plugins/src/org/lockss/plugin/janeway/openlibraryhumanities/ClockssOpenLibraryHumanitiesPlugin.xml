@@ -27,19 +27,13 @@
     <string>plugin_publishing_platform</string>
     <string>Janway</string>
   </entry>
-  <!--
   <entry>
     <string>au_permission_url</string>
-    <string>"%sfarmreports/plugins/clockss", base_url</string>
-  </entry>
-  -->
-  <entry>
-    <string>au_permission_url</string>
-    <string>"https://www.iastatedigitalpress.com/farmreports/plugins/clockss/"</string>
+    <string>"%splugins/clockss", base_url</string>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <!--https://orbit.openlibhums.org/api/oai/?verb=ListRecords&metadataPrefix=oai_dc&from=2019-01-01&until=2019-12-31-->
+    <!--https://www.comicsgrid.com/api/oai/?verb=ListRecords&metadataPrefix=oai_dc&from=2019-01-01&until=2019-12-31-->
     <string>"%sapi/oai?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;from=%d-01-01&amp;until=%d-12-31", base_url, year, year</string>
   </entry>
 </map>
