@@ -430,9 +430,8 @@ def _do_au_operation_job(options_host):
     data[((r.name, r.id), (host,))] = msg
   else:
       for i in range(0, len(options.auids), options.batch_size):
-        result = options.au_operation(host, options.auth, options.auids[i:i+options.batch_size])
+        result = options.au_operation(host,  options._u, options._p, options.auids[i:i+options.batch_size])
         for r in result:
-          print(r)
           if r.isSuccess: msg = None
           else:
             msg = (r.message or '').partition(':')[0]
