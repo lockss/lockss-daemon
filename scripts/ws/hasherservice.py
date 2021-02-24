@@ -35,26 +35,23 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.'''
 
 __version__ = '0.5.0'
 
+try: import requests
+except ImportError: sys.exit('The Python Requests module must be installed (or on the PYTHONPATH)')
+
+try: import zeep
+except ImportError: sys.exit('The Python Zeep module must be installed (or on the PYTHONPATH)')
+
 import argparse
 import getpass
 from multiprocessing.dummy import Pool as ThreadPool
 import os.path
+import requests.auth
 import sys
 import time
 from threading import Thread
-
-try:
-    import requests
-    import requests.auth
-except ImportError:
-    sys.exit('The Python Requests module must be installed (or on the PYTHONPATH)')
-
-try:
-    import zeep
-    import zeep.transports
-    import zeep.exceptions
-except ImportError:
-    sys.exit('The Python Zeep module must be installed (or on the PYTHONPATH)')
+import zeep.exceptions
+import zeep.helpers
+import zeep.transports
 
 from wsutil import datems, datetimems, durationms, requests_basic_auth
 
@@ -62,7 +59,7 @@ from wsutil import datems, datetimems, durationms, requests_basic_auth
 # Library
 #
 
-def hash_au(host, auth, auid, include_weight=False):
+def hash_au(host, username, password, auid, include_weight=False):
     """Performs a hash operation on an AU on the given host and returns
     a hasherWsResult record with these fields:
     - blockFileDataHandler (base64Binary)
@@ -88,10 +85,10 @@ def hash_au(host, auth, auid, include_weight=False):
         "auId": auid,
         "includeWeight": include_weight
     }
-    return _hash(host, auth, hasher_params)
+    return _hash(host, username, password, hasher_params)
 
 
-def hash_au_url(host, auth, auid, url):
+def hash_au_url(host, username, password, auid, url):
     """Performs a hash operation on a URL in an AU on the given host and returns
     a hasherWsResult record with these fields:
     - blockFileDataHandler (base64Binary)
@@ -108,7 +105,8 @@ def hash_au_url(host, auth, auid, url):
 
     Parameters:
     :param host: a host:port pair (string)
-    :param auth: an authentication object (requests.auth.AuthBase object)
+    :param username: a username for the host (string)
+    :param password: a password for the host (string)
     :param auid: an auid (string)
     :param url: a url (string)
     :return:
@@ -119,10 +117,10 @@ def hash_au_url(host, auth, auid, url):
         "hashType": "V3File",
         "recordFilteredStream": True
     }
-    return _hash(host, auth, hasher_params)
+    return _hash(host, username, password, hasher_params)
 
 
-def _hash(host, auth, hasher_params):
+def _hash(host, username, password, hasher_params):
     """Performs a hash operation on the given host with the given hasher parameters (hasherWsParams) and returns
     a hasherWsResult record with these fields:
     - blockFileDataHandler (base64Binary)
@@ -139,15 +137,16 @@ def _hash(host, auth, hasher_params):
 
     Parameters:
     :param host: a host:port pair (string)
-    :param auth: an authentication object (requests.auth.AuthBase object)
+    :param username: a username for the host (string)
+    :param password: a password for the host (string)
     :param hasher_params: hasherWsParams
     :return:
     """
-    client = _make_client(host, auth)
+    client = _make_client(host, username, password)
     return client.service.hash(hasherParams=hasher_params)
 
 
-def hash_asynchronously_au(host, auth, auid, include_weight=False):
+def hash_asynchronously_au(host, username, password, auid, include_weight=False):
     """Performs a hashAsynchronously operation on the given host and returns
     a hasherWsAsynchronousResult record with these fields:
     - requestId (string)
@@ -166,7 +165,8 @@ def hash_asynchronously_au(host, auth, auid, include_weight=False):
 
     Parameters:
     :param host: a host:port pair (string)
-    :param auth: an authentication object (requests.auth.AuthBase object)
+    :param username: a username for the host (string)
+    :param password: a password for the host (string)
     :param auid: an auid (string)
     :param include_weight:
     :return:
@@ -175,10 +175,10 @@ def hash_asynchronously_au(host, auth, auid, include_weight=False):
         "auId": auid,
         "includeWeight": include_weight
     }
-    return _hash_asynchronously(host, auth, hasher_params)
+    return _hash_asynchronously(host, username, password, hasher_params)
 
 
-def hash_asynchronously_au_url(host, auth, auid, url):
+def hash_asynchronously_au_url(host, username, password, auid, url):
     """Performs a hashAsynchronously operation on the given host and returns
     a hasherWsAsynchronousResult record with these fields:
     - requestId (string)
@@ -197,7 +197,8 @@ def hash_asynchronously_au_url(host, auth, auid, url):
 
     Parameters:
     :param host: a host:port pair (string)
-    :param auth: an authentication object (requests.auth.AuthBase object)
+    :param username: a username for the host (string)
+    :param password: a password for the host (string)
     :param auid: an auid (string)
     :param url: a url (string)
     :return:
@@ -208,10 +209,10 @@ def hash_asynchronously_au_url(host, auth, auid, url):
         "hashType": "V3File",
         "recordFilteredStream": True
     }
-    return _hash_asynchronously(host, auth, hasher_params)
+    return _hash_asynchronously(host, username, password, hasher_params)
 
 
-def _hash_asynchronously(host, auth, hasher_params):
+def _hash_asynchronously(host, username, password, hasher_params):
     """Performs a hashAsynchronously operation on the given host with the given hasher parameters and returns
     a hasherWsAsynchronousResult record with these fields:
     - requestId (string)
@@ -230,15 +231,16 @@ def _hash_asynchronously(host, auth, hasher_params):
 
     Parameters:
     :param host: a host:port pair (string)
-    :param auth: an authentication object (requests.auth.AuthBase object)
+    :param username: a username for the host (string)
+    :param password: a password for the host (string)
     :param hasher_params: hasherWsParams
     :return:
     """
-    client = _make_client(host, auth)
+    client = _make_client(host, username, password)
     return client.service.hashAsynchronously(hasherParams=hasher_params)
 
 
-def get_all_asynchronous_hash_results(host, auth):
+def get_all_asynchronous_hash_results(host, username, password):
     """Performs a getAllAsynchronousHashResults operation on the givne host and returns
     an array of hasherWsAsynchronousResult with these fields:
     - requestId (string)
@@ -257,14 +259,15 @@ def get_all_asynchronous_hash_results(host, auth):
 
     Parameters:
     :param host: a host:port pair (string)
-    :param auth: an authentication object (requests.auth.AuthBase object)
+    :param username: a username for the host (string)
+    :param password: a password for the host (string)
     :return:
     """
-    client = _make_client(host, auth)
+    client = _make_client(host, username, password)
     return client.service.getAllAsynchronousHashResults()
 
 
-def get_asynchronous_hash_result(host, auth, request_id):
+def get_asynchronous_hash_result(host, username, password, request_id):
     """Performs a getAsynchronousHashResult operation on the given host and returns
     a hasherWsAsynchronousResult record with these fields:
     - requestId (string)
@@ -283,15 +286,16 @@ def get_asynchronous_hash_result(host, auth, request_id):
 
     Parameters:
     :param host: a host:port pair (string)
-    :param auth: an authentication object (requests.auth.AuthBase object)
+    :param username: a username for the host (string)
+    :param password: a password for the host (string)
     :param request_id: a request ID (string)
     :return:
     """
-    client = _make_client(host, auth)
+    client = _make_client(host, username, password)
     return client.service.getAsynchronousHashResult(requestId=request_id)
 
 
-def remove_asynchronous_hash_request(host, auth, request_id):
+def remove_asynchronous_hash_request(host, username, password, request_id):
     """Performs a removeAsynchronousHashRequest operation on the given host and returns
     a hasherWsAsynchronousResult record with these fields:
     - requestId (string)
@@ -310,11 +314,12 @@ def remove_asynchronous_hash_request(host, auth, request_id):
 
     Parameters:
     :param host: a host:port pair (string)
-    :param auth: an authentication object (requests.auth.AuthBase object)
+    :param username: a username for the host (string)
+    :param password: a password for the host (string)
     :param request_id: a request id (string)
     :return:
     """
-    client = _make_client(host, auth)
+    client = _make_client(host, username, password)
     return client.service.removeAsynchronousHashRequest(requestId=request_id)
 
 
@@ -390,21 +395,21 @@ class _HasherServiceOptions(object):
         # threads
         self.threads = args.threads or len(self.hosts)
         # auth
-        u = args.username or getpass.getpass('UI username: ')
-        p = args.password or getpass.getpass('UI password: ')
-        self.auth = requests_basic_auth(u, p)
+        self._u = args.username or getpass.getpass('UI username: ')
+        self._p = args.password or getpass.getpass('UI password: ')
+        self.auth = requests_basic_auth(self._u, self._p)
 
 
 def _do_hash(options, host):
     if options.url is None:
-        wsResult = hash_asynchronously_au(host, options.auth, options.auid, options.include_weight)
+        wsResult = hash_asynchronously_au(host, options._u, options._p, options.auid, options.include_weight)
     else:
-        wsResult = hash_asynchronously_au_url(host, options.auth, options.auid, options.url)
+        wsResult = hash_asynchronously_au_url(host, options._u, options._p, options.auid, options.url)
     if wsResult is None: return host, False
     reqid = wsResult.requestId
     while True:
         time.sleep(options.wait)
-        res = get_asynchronous_hash_result(host, options.auth, reqid)
+        res = get_asynchronous_hash_result(host, options._u, options._p, reqid)
         if res.status == 'Done': break
     if options.url is None:
         source = res.blockFileDataHandler
@@ -417,7 +422,7 @@ def _do_hash(options, host):
         if options.long_text_line: source = source.replace(b' ', b'\n')
         with open(os.path.join(options.output_directory, fstr), 'wb') as f:
             f.write(source)
-    res = remove_asynchronous_hash_request(host, options.auth, reqid)
+    res = remove_asynchronous_hash_request(host, options._u, options._p, reqid)
     return host, source is not None
 
 
@@ -436,15 +441,13 @@ def _file_lines(fstr):
     if len(ret) == 0: sys.exit('Error: %s contains no meaningful lines' % (fstr,))
     return ret
 
-
-def _make_client(host, auth):
+def _make_client(host, username, password):
     session = requests.Session()
-    session.auth = auth
+    session.auth = requests.auth.HTTPBasicAuth(username, password)
     transport = zeep.transports.Transport(session=session)
-    wsdl = f'http://{host}/ws/HasherService?wsdl'
+    wsdl = 'http://{}/ws/HasherService?wsdl'.format(host)
     client = zeep.Client(wsdl, transport=transport)
     return client
-
 
 def _main():
     '''Main method.'''

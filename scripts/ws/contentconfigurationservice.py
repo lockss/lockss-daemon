@@ -38,6 +38,9 @@ POSSIBILITY OF SUCH DAMAGE.
 
 __version__ = '0.3.0'
 
+try: import requests
+except ImportError: sys.exit('The Python Requests module must be installed (or on the PYTHONPATH)')
+
 try: import zeep
 except ImportError: sys.exit('The Python Zeep module must be installed (or on the PYTHONPATH)')
 
@@ -47,7 +50,7 @@ import itertools
 from multiprocessing import Pool as ProcessPool
 from multiprocessing.dummy import Pool as ThreadPool
 import os.path
-import requests
+import requests.auth
 import sys
 from threading import Lock, Thread
 import zeep.exceptions
@@ -71,7 +74,8 @@ def add_au_by_id(host, username, password, auid):
 
   Parameters:
   - host (string): a host:port pair
-  - auth (requests.auth.HTTPBasicAuth object): an authentication object
+  - username (string): a username for the host
+  - password (string): a password for the host
   - auid (string): an AUID
   '''
   client = _make_client(host, username, password)
@@ -88,7 +92,8 @@ def add_aus_by_id_list(host, username, password, auids):
 
   Parameters:
   - host (string): a host:port pair
-  - auth (requests.auth.HTTPBasicAuth object): an authentication object
+  - username (string): a username for the host
+  - password (string): a password for the host
   - auids (list of strings): a list of AUIDs
   '''
   client = _make_client(host, username, password)
@@ -105,7 +110,8 @@ def deactivate_au_by_id(host, username, password, auid):
 
   Parameters:
   - host (string): a host:port pair
-  - auth (requests.auth.HTTPBasicAuth object): an authentication object
+  - username (string): a username for the host
+  - password (string): a password for the host
   - auid (string): an AUID
   '''
   client = _make_client(host, username, password)
@@ -122,7 +128,8 @@ def deactivate_aus_by_id_list(host, username, password, auids):
 
   Parameters:
   - host (string): a host:port pair
-  - auth (requests.auth.HTTPBasicAuth object): an authentication object
+  - username (string): a username for the host
+  - password (string): a password for the host
   - auids (list of strings): a list of AUIDs
   '''
   client = _make_client(host, username, password)
@@ -139,7 +146,8 @@ def delete_au_by_id(host, username, password, auid):
 
   Parameters:
   - host (string): a host:port pair
-  - auth (requests.auth.HTTPBasicAuth object): an authentication object
+  - username (string): a username for the host
+  - password (string): a password for the host
   - auid (string): an AUID
   '''
   client = _make_client(host, username, password)
@@ -156,7 +164,8 @@ def delete_aus_by_id_list(host, username, password, auids):
 
   Parameters:
   - host (string): a host:port pair
-  - auth (requests.auth.HTTPBasicAuth object): an authentication object
+  - username (string): a username for the host
+  - password (string): a password for the host
   - auids (list of strings): a list of AUIDs
   '''
   client = _make_client(host, username, password)
@@ -173,7 +182,8 @@ def reactivate_au_by_id(host, username, password, auid):
 
   Parameters:
   - host (string): a host:port pair
-  - auth (requests.auth.HTTPBasicAuth object): an authentication object
+  - username (string): a username for the host
+  - password (string): a password for the host
   - auid (string): an AUID
   '''
   client = _make_client(host, username, password)
@@ -190,7 +200,8 @@ def reactivate_aus_by_id_list(host, username, password, auids):
 
   Parameters:
   - host (string): a host:port pair
-  - auth (requests.auth.HTTPBasicAuth object): an authentication object
+  - username (string): a username for the host
+  - password (string): a password for the host
   - auids (list of strings): a list of AUIDs
   '''
   client = _make_client(host, username, password)
@@ -296,32 +307,29 @@ class _ContentConfigurationServiceOptions(object):
   def make_parser():
     '''Static method to make a command line parser suitable for this tool.'''
     usage = '%(prog)s {--host=HOST|--hosts=HFILE}... {--auid=AUID|--auids=AFILE}... {--add-aus|--deactivate-aus|--delete-aus|--reactivate-aus} [OPTIONS]'
-    parser = argparse.ArgumentParser( description=__doc__, usage=usage)
+    parser = argparse.ArgumentParser(description=__doc__, usage=usage)
     # Top-level options
     parser.add_argument('--copyright', action='store_true', help='display copyright and exit')
     parser.add_argument('--license', action='store_true', help='display software license and exit')
     parser.add_argument('--tutorial', action='store_true', help='display tutorial and exit')
     # Hosts
-    group = parser.add_argument_group(parser, 'Target hosts')
+    group = parser.add_argument_group('Target hosts')
     group.add_argument('--host', action='append', default=list(), help='add host:port pair to list of target hosts')
     group.add_argument('--hosts', action='append', default=list(), metavar='HFILE', help='add host:port pairs in HFILE to list of target hosts')
     group.add_argument('--password', metavar='PASS', help='UI password (default: interactive prompt)')
     group.add_argument('--username', metavar='USER', help='UI username (default: interactive prompt)')
-    parser.add_argument_group(group)
     # AUIDs
-    group = parser.add_argument_group(parser, 'Target AUIDs')
+    group = parser.add_argument_group('Target AUIDs')
     group.add_argument('--auid', action='append', default=list(), help='add AUID to list of target AUIDs')
     group.add_argument('--auids', action='append', default=list(), metavar='AFILE', help='add AUIDs in AFILE to list of target AUIDs')
-    parser.add_argument_group(group)
     # Content configuration operations
-    group = parser.add_argument_group(parser, 'Content configuration operations')
+    group = parser.add_argument_group('Content configuration operations')
     group.add_argument('--add-aus', action='store_true', help='add target AUs to target hosts')
     group.add_argument('--deactivate-aus', action='store_true', help='deactivate target AUs on target hosts')
     group.add_argument('--delete-aus', action='store_true', help='delete target AUs from target hosts')
     group.add_argument('--reactivate-aus', action='store_true', help='reactivate target AUs on target hosts')
-    parser.add_argument_group(group)
     # Output options
-    group = parser.add_argument_group(parser, 'Output options')
+    group = parser.add_argument_group('Output options')
     group.add_argument('--list-by-auid', action='store_true', help='list output by AUID')
     group.add_argument('--list-by-both', action='store_true', help='list output by both AU name and AUID (default)')
     group.add_argument('--list-by-name', action='store_true', help='list output by AU name')
@@ -329,18 +337,15 @@ class _ContentConfigurationServiceOptions(object):
     group.add_argument('--sort-by-name', action='store_true', help='sort output by AU name (default)')
     group.add_argument('--table-output', action='store_true', help='produce tabular output')
     group.add_argument('--text-output', action='store_true', help='produce text output (default)')
-    group.add_argument('--verbose', action='store_true', default=False, help='make --text-output verbose (default: %default)')
-    parser.add_argument_group(group)
+    group.add_argument('--verbose', action='store_true', default=False, help='make --text-output verbose (default: %(default)s)')
     # Job pool
-    group = parser.add_argument_group(parser, 'Job pool')
-    group.add_argument('--pool-size', metavar='SIZE', type=int, default=0, help='size of the job pool, 0 for unlimited (default: %default)')
+    group = parser.add_argument_group('Job pool')
+    group.add_argument('--pool-size', metavar='SIZE', type=int, default=0, help='size of the job pool, 0 for unlimited (default: %(default)s)')
     group.add_argument('--process-pool', action='store_true', help='use a process pool')
     group.add_argument('--thread-pool', action='store_true', help='use a thread pool (default)')
-    parser.add_argument_group(group)
     # Other options
-    group = parser.add_argument_group(parser, 'Other options')
-    group.add_argument('--batch-size', metavar='SIZE', type=int, default=100, help='size of AUID batches (default: %default)')
-    parser.add_argument_group(group)
+    group = parser.add_argument_group('Other options')
+    group.add_argument('--batch-size', metavar='SIZE', type=int, default=100, help='size of AUID batches (default: %(default)s)')
     return parser
 
   def __init__(self, parser, args):

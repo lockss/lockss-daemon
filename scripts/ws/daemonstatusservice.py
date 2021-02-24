@@ -35,6 +35,9 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.'''
 
 __version__ = '0.7.1'
 
+try: import requests
+except ImportError: sys.exit('The Python Requests module must be installed (or on the PYTHONPATH)')
+
 try: import zeep
 except ImportError: sys.exit('The Python Zeep module must be installed (or on the PYTHONPATH)')
 
