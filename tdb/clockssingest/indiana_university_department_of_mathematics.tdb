@@ -17,10 +17,12 @@
     >
     
     param[base_url] = http://www.iumj.indiana.edu/
+    #permission statements at https://www.iumj.indiana.edu/lockss.txt
     implicit < status ; status2 ; year ; param[year] ; name ; param[volume_name] ; hidden[proxy] >
 
     {
     plugin = org.lockss.plugin.iumj.ClockssIUMJ2018Plugin  #LXPLUG-1904
+    #param[journal_id] = IUMJ
 
     au < exists ; exists ; 1952 ; 1952 ; Indiana University Mathematics Journal Volume 1 ; 1 ; >
     au < exists ; exists ; 1953 ; 1953 ; Indiana University Mathematics Journal Volume 2 ; 2 ; >
