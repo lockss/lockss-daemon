@@ -1,12 +1,11 @@
-<!--  $Id$ -->
 <map>
-  <!-- ClockssIUMJ2018Plugin.xml inherited from IUMJ2018Plugin.xml.
-       The main differences are names, version.
-  -->  
   <entry>
     <string>plugin_status</string>
-    <string>testing</string>
+    <string>ready</string>
   </entry>
+  <!-- ClockssIUMJ2018Plugin.xml inherited from IUMJ2018Plugin.xml.
+     The main differences are names, version.
+  -->
   <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.iumj.ClockssIUMJ2018Plugin</string>
