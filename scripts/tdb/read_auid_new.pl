@@ -997,7 +997,7 @@ while (my $line = <>) {
         sleep(4);
 
   } elsif (($plugin eq "BerghahnJournalsPlugin") ||
-           ($plugin eq "AMetSocPlugin")) {
+           ($plugin eq "AMetSoc2021Plugin")) {
       $url = sprintf("%slockss-manifest/journal/%s/volume/%s",
       $param{base_url}, $param{journal_id}, $param{volume_name});
       $man_url = uri_unescape($url);
@@ -1029,7 +1029,7 @@ while (my $line = <>) {
         sleep(4);
 
   } elsif (($plugin eq "ClockssBerghahnJournalsPlugin") ||
-           ($plugin eq "ClockssAMetSocPlugin")) {
+           ($plugin eq "ClockssAMetSoc2021Plugin")) {
       $url = sprintf("%slockss-manifest/journal/%s/volume/%s",
       $param{base_url}, $param{journal_id}, $param{volume_name});
       $man_url = uri_unescape($url);
