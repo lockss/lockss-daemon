@@ -22,14 +22,17 @@ public class JanewayArticleIteratorFactory implements ArticleIteratorFactory,
     //https://www.iastatedigitalpress.com/aglawdigest/article/id/8101
     //https://www.iastatedigitalpress.com/aglawdigest/article/id/8101/print
     //https://www.iastatedigitalpress.com/aglawdigest/article/8101/galley/7872/download
+
+    //https://www.comicsgrid.com/article/id/3579
+    //https://www.comicsgrid.com/article/3579/galley/5155/download	
     protected static final String ROOT_TEMPLATE = "\"%s\", base_url";
     protected static final String PATTERN_TEMPLATE =
-            "\"%s%s/article\", base_url, journal_id";
+            "\"%s([^/]+/)?article\", base_url";
 
     private static final Pattern HTML_PATTERN = Pattern.compile(
-            "/id/([^/]+)",
+            "/(id)/(\\d+)$",
             Pattern.CASE_INSENSITIVE);
-    private static final String HTML_REPLACEMENT = "/id/$1";
+    private static final String HTML_REPLACEMENT = "/id/$2";
 
     private static final Pattern PDF_PATTERN = Pattern.compile(
             "/([^/]+)/(galley/[^/]+/download)",
@@ -45,11 +48,7 @@ public class JanewayArticleIteratorFactory implements ArticleIteratorFactory,
                 ROOT_TEMPLATE,
                 PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
 
-        builder.addAspect(
-                PDF_PATTERN,
-                PDF_REPLACEMENT,
-                ArticleFiles.ROLE_FULL_TEXT_PDF);
-
+        // Use HTML instead of PDF as full text, since download url gave multiple formats, not only PDF
         builder.addAspect(
                 HTML_PATTERN,
                 HTML_REPLACEMENT,
@@ -57,7 +56,15 @@ public class JanewayArticleIteratorFactory implements ArticleIteratorFactory,
                 ArticleFiles.ROLE_FULL_TEXT_HTML,
                 ArticleFiles.ROLE_ARTICLE_METADATA);
 
+        /*
+        builder.addAspect(
+                PDF_PATTERN,
+                PDF_REPLACEMENT,
+                ArticleFiles.ROLE_FULL_TEXT_PDF);
+
         builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF);
+         */
+
 
         return builder.getSubTreeArticleIterator();
     }
