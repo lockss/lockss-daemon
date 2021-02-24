@@ -38,30 +38,29 @@ POSSIBILITY OF SUCH DAMAGE.
 
 __version__ = '0.3.0'
 
+try: import zeep
+except ImportError: sys.exit('The Python Zeep module must be installed (or on the PYTHONPATH)')
+
+import argparse
 import getpass
 import itertools
 from multiprocessing import Pool as ProcessPool
 from multiprocessing.dummy import Pool as ThreadPool
-import argparse
 import os.path
+import requests
 import sys
 from threading import Lock, Thread
+import zeep.exceptions
+import zeep.helpers
+import zeep.transports
 
-try:
-  from requests import Session
-  from requests.auth import HTTPBasicAuth
-except ImportError: sys.exit('The Python Requests module must be installed (or on the PYTHONPATH)')
-
-try:
-  from zeep import Client
-  from zeep.transports import Transport
-except ImportError: sys.exit('The Python Zeep module must be installed (or on the PYTHONPATH)')
+from wsutil import datems, datetimems, durationms, requests_basic_auth
 
 #
 # Library
 #
 
-def add_au_by_id(host, auth, auid):
+def add_au_by_id(host, username, password, auid):
   '''
   Performs an addAuById operation (which adds a single AU on a single host, by
   AUID), and returns a record with these fields:
@@ -75,10 +74,10 @@ def add_au_by_id(host, auth, auid):
   - auth (requests.auth.HTTPBasicAuth object): an authentication object
   - auid (string): an AUID
   '''
-  client = _make_client(host, auth)
+  client = _make_client(host, username, password)
   return client.service.addAuById(auId = auid)
 
-def add_aus_by_id_list(host, auth, auids):
+def add_aus_by_id_list(host, username, password, auids):
   '''
   Performs an addAusByIdList operation (which adds all given AUs on a single
   host, by AUID), and returns a list of records with these fields:
@@ -92,10 +91,10 @@ def add_aus_by_id_list(host, auth, auids):
   - auth (requests.auth.HTTPBasicAuth object): an authentication object
   - auids (list of strings): a list of AUIDs
   '''
-  client = _make_client(host, auth)
+  client = _make_client(host, username, password)
   return client.service.addAusByIdList(auIds = auids)
 
-def deactivate_au_by_id(host, auth, auid):
+def deactivate_au_by_id(host, username, password, auid):
   '''
   Performs a deactivateAuById operation (which deactivates a single AU on a
   single host, by AUID), and returns a record with these fields:
@@ -109,10 +108,10 @@ def deactivate_au_by_id(host, auth, auid):
   - auth (requests.auth.HTTPBasicAuth object): an authentication object
   - auid (string): an AUID
   '''
-  client = _make_client(host, auth)
+  client = _make_client(host, username, password)
   return client.service.deactivateAuById(auId = auid)
 
-def deactivate_aus_by_id_list(host, auth, auids):
+def deactivate_aus_by_id_list(host, username, password, auids):
   '''
   Performs a deactivateAusByIdList operation (which deactivates all given AUs on
   a single host, by AUID), and returns a list of records with these fields:
@@ -126,10 +125,10 @@ def deactivate_aus_by_id_list(host, auth, auids):
   - auth (requests.auth.HTTPBasicAuth object): an authentication object
   - auids (list of strings): a list of AUIDs
   '''
-  client = _make_client(host, auth)
+  client = _make_client(host, username, password)
   return client.service.deactivateAusByIdList(auIds = auids)
 
-def delete_au_by_id(host, auth, auid):
+def delete_au_by_id(host, username, password, auid):
   '''
   Performs a deleteAuById operation (which deletes a single AU on a single host,
   by AUID), and returns a record with these fields:
@@ -143,10 +142,10 @@ def delete_au_by_id(host, auth, auid):
   - auth (requests.auth.HTTPBasicAuth object): an authentication object
   - auid (string): an AUID
   '''
-  client = _make_client(host, auth)
+  client = _make_client(host, username, password)
   return client.service.deleteAuById(auId = auid)
 
-def delete_aus_by_id_list(host, auth, auids):
+def delete_aus_by_id_list(host, username, password, auids):
   '''
   Performs a deleteAusByIdList operation (which deletes all given AUs on a
   single host, by AUID), and returns a list of records with these fields:
@@ -160,10 +159,10 @@ def delete_aus_by_id_list(host, auth, auids):
   - auth (requests.auth.HTTPBasicAuth object): an authentication object
   - auids (list of strings): a list of AUIDs
   '''
-  client = _make_client(host, auth)
+  client = _make_client(host, username, password)
   return client.service.deleteAusByIdList(auIds = auids)
 
-def reactivate_au_by_id(host, auth, auid):
+def reactivate_au_by_id(host, username, password, auid):
   '''
   Performs a reactivateAuById operation (which reactivates a single AU on a
   single host, by AUID), and returns a record with these fields:
@@ -177,10 +176,10 @@ def reactivate_au_by_id(host, auth, auid):
   - auth (requests.auth.HTTPBasicAuth object): an authentication object
   - auid (string): an AUID
   '''
-  client = _make_client(host, auth)
+  client = _make_client(host, username, password)
   return client.service.reactivateAuById(auId = auid)
 
-def reactivate_aus_by_id_list(host, auth, auids):
+def reactivate_aus_by_id_list(host, username, password, auids):
   '''
   Performs a reactivateAusByIdList operation (which reactivates all given AUs on
   a single host, by AUID), and returns a list of records with these fields:
@@ -194,7 +193,7 @@ def reactivate_aus_by_id_list(host, auth, auids):
   - auth (requests.auth.HTTPBasicAuth object): an authentication object
   - auids (list of strings): a list of AUIDs
   '''
-  client = _make_client(host, auth)
+  client = _make_client(host, username, password)
   return client.service.reactivateAusByIdList(auIds = auids)
 
 #
@@ -406,9 +405,9 @@ class _ContentConfigurationServiceOptions(object):
     self.pool_size = args.pool_size or len(self.hosts)
     self.batch_size = args.batch_size
     # auth
-    u = args.username or getpass.getpass('UI username: ')
-    p = args.password or getpass.getpass('UI password: ')
-    self.auth = HTTPBasicAuth(u, p)
+    self._u = args.username or getpass.getpass('UI username: ')
+    self._p = args.password or getpass.getpass('UI password: ')
+    self.auth = requests_basic_auth(self._u, self._p)
 
 # This is to allow pickling, so the process pool works, but this isn't great
 # Have the sort and list params be enums and have keysort and keydisplay be methods?
@@ -423,7 +422,7 @@ def _do_au_operation_job(options_host):
   data = dict()
   errors = 0
   if len(options.auids) == 1:
-    r = options.au_operation(host, options.auth, options.auids[0])
+    r = options.au_operation(host, options._u, options._p, options.auids[0])
     if r.isSuccess: msg = None
     else:
       msg = (r.message or '').partition(':')[0]
@@ -490,14 +489,13 @@ def _file_lines(fstr):
   if len(ret) == 0: sys.exit('Error: %s contains no meaningful lines' % (fstr,))
   return ret
 
-def _make_client(host, auth):
-  '''Initializes a web service client.'''
-  session = Session()
-  session.auth = auth
-  transport = Transport(session=session)
-  wsdl = 'http://%s/ws/ContentConfigurationService?wsdl' % (host,)
-  client = Client(wsdl, transport=transport)
-  return client
+def _make_client(host, username, password):
+    session = requests.Session()
+    session.auth = requests.auth.HTTPBasicAuth(username, password)
+    transport = zeep.transports.Transport(session=session)
+    wsdl = 'http://{}/ws/ContentConfigurationService?wsdl'.format(host)
+    client = zeep.Client(wsdl, transport=transport)
+    return client
 
 def _main():
   '''Main method.'''
