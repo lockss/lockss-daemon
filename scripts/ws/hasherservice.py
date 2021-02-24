@@ -33,7 +33,7 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.'''
 
-__version__ = '0.4.1'
+__version__ = '0.5.0'
 
 import argparse
 import getpass
@@ -57,31 +57,6 @@ except ImportError:
     sys.exit('The Python Zeep module must be installed (or on the PYTHONPATH)')
 
 from wsutil import datems, datetimems, durationms, requests_basic_auth
-
-###FIXME see https://docs.python-zeep.org/en/master/transport.html?highlight=debug#debugging
-# import logging.config
-# logging.config.dictConfig({
-#     'version': 1,
-#     'formatters': {
-#         'verbose': {
-#             'format': '%(name)s: %(message)s'
-#         }
-#     },
-#     'handlers': {
-#         'console': {
-#             'level': 'DEBUG',
-#             'class': 'logging.StreamHandler',
-#             'formatter': 'verbose',
-#         },
-#     },
-#     'loggers': {
-#         'zeep.transports': {
-#             'level': 'DEBUG',
-#             'propagate': True,
-#             'handlers': ['console'],
-#         },
-#     }
-# })
 
 #
 # Library
