@@ -1427,7 +1427,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Career Development International Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Career Development International Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Career Development International Volume 23 ; 23 ; >
-    au < crawling ; exists ; 2019 ; Career Development International Volume 24 ; 24 ; >
+    au < frozen ; exists ; 2019 ; Career Development International Volume 24 ; 24 ; >
     au < crawling ; exists ; 2020 ; Career Development International Volume 25 ; 25 ; >
 
   }
@@ -1696,7 +1696,7 @@
     #continues = 0160-4953
 
     au < notReady ; exists ; 2018 ; Collection and Curation Volume 37 ; 37 ; > #500 error https://www.emerald.com/insight/content/doi/10.1108/CC-08-2017-0037/full/html
-    au < crawling ; exists ; 2019 ; Collection and Curation Volume 38 ; 38 ; >
+    au < frozen ; exists ; 2019 ; Collection and Curation Volume 38 ; 38 ; >
     au < crawling ; exists ; 2020 ; Collection and Curation Volume 39 ; 39 ; >
 
   }
@@ -4180,7 +4180,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Development Issues Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Development Issues Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Development Issues Volume 17 ; 17 ; >
-    au < crawling ; exists ; 2019 ; International Journal of Development Issues Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2019 ; International Journal of Development Issues Volume 18 ; 18 ; >
     au < crawling ; exists ; 2020 ; International Journal of Development Issues Volume 19 ; 19 ; >
 
   }
