@@ -6,6 +6,11 @@ import org.marc4j.MarcWriter;
 import org.marc4j.MarcXmlWriter;
 import org.marc4j.converter.impl.AnselToUnicode;
 import org.marc4j.marc.Record;
+import org.marc4j.marc.DataField;
+import org.marc4j.marc.Subfield;
+import org.marc4j.MarcXmlReader;
+import org.marc4j.marc.Leader;
+
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
@@ -55,10 +60,11 @@ public class TestCasaliniLibri2020MetadataExtractorFactory extends SourceXmlMeta
 
         String samplePath = "./plugins/test/src/org/lockss/plugin/clockss/casalini/" + fname;
 
+        /*
         InputStream input = new FileInputStream(samplePath);
         OutputStream out = new FileOutputStream(new File("./plugins/test/src/org/lockss/plugin/clockss/casalini/generated.xml"));
 
-        /*
+
         MarcReader reader = new MarcStreamReader(input);
         MarcWriter writer = new MarcXmlWriter(out, true);
 
@@ -71,6 +77,55 @@ public class TestCasaliniLibri2020MetadataExtractorFactory extends SourceXmlMeta
         }
         writer.close();
          */
+    }
+
+    public void testReadingMrcXmlByMrcBinary() throws Exception {
+
+        //String fname = "Marc21SampleArticle.xml";
+        String fname = "Sample.mrc";
+
+        String samplePath = "./plugins/test/src/org/lockss/plugin/clockss/casalini/" + fname;
+
+        InputStream input = new FileInputStream(samplePath);
+
+        MarcReader reader = null;
+
+        if (fname.contains(".xml")) {
+            reader = new MarcXmlReader(input);
+        }
+
+        if (fname.contains(".mrc")) {
+            reader = new MarcStreamReader(input);
+        }
+
+        //log.info("------------fname: " + fname);
+
+        while (reader.hasNext()) {
+            Record record = reader.next();
+
+            Leader leader = record.getLeader();
+
+            char publication_type1 = leader.getImplDefined1()[0];
+            char publication_type2 = leader.getImplDefined1()[1];
+
+            log.info(String.format("--------publication_type1: %c", publication_type1));
+            log.info(String.format("--------publication_type2: %c", publication_type2));
+
+            List<DataField> fields = record.getDataFields();
+            if (fields != null) {
+                for (DataField field : fields) {
+                    String tag = field.getTag();
+                    List<Subfield> subfields = field.getSubfields();
+                    if (subfields != null) {
+                        for (Subfield subfield : subfields) {
+                            char subtag = subfield.getCode();
+                            String subtag_data = subfield.getData();
+                            //log.info(String.format("--------%s_%c: %s", tag, subtag, subtag_data));
+                        }
+                    }
+                }
+            } 
+        }
     }
 }
 
