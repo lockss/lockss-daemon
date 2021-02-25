@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<marc:collection xmlns:marc="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+    <marc:record>
+        <marc:leader>00682naa a2200193 i 4500</marc:leader>
+        <marc:controlfield tag="001">000002449011</marc:controlfield>
+        <marc:controlfield tag="003">ItFiC</marc:controlfield>
+        <marc:controlfield tag="005">20110323084149.0</marc:controlfield>
+        <marc:controlfield tag="008">110323s1999    xx      s    u000 u ita c</marc:controlfield>
+        <marc:datafield tag="040" ind1=" " ind2=" ">
+            <marc:subfield code="a">ItFiC</marc:subfield>
+            <marc:subfield code="b">eng</marc:subfield>
+            <marc:subfield code="c">ItFiC</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="092" ind1=" " ind2=" ">
+            <marc:subfield code="a">2449011</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="097" ind1="0" ind2=" ">
+            <marc:subfield code="a">2448043</marc:subfield>
+            <marc:subfield code="b">015</marc:subfield>
+            <marc:subfield code="c">2449011</marc:subfield>
+            <marc:subfield code="d">0002</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="245" ind1="1" ind2="2">
+            <marc:subfield code="a">L'importanza dell'autonomia :</marc:subfield>
+            <marc:subfield code="b">premesse teoriche e considerazioni pratiche /</marc:subfield>
+            <marc:subfield code="c">Freddi, Maria.</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="260" ind1=" " ind2=" ">
+            <marc:subfield code="a">Bologna :</marc:subfield>
+            <marc:subfield code="b">CLUEB,</marc:subfield>
+            <marc:subfield code="c">1999.</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="700" ind1="1" ind2=" ">
+            <marc:subfield code="a">Freddi, Maria.</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="773" ind1="0" ind2=" ">
+            <marc:subfield code="t">Percorsi assistiti nell'auto-apprendimento.</marc:subfield>
+            <marc:subfield code="d">Bologna : CLUEB, 1999.</marc:subfield>
+            <marc:subfield code="k">Manuali &amp; antologie</marc:subfield>
+            <marc:subfield code="z">88-491-1405-2</marc:subfield>
+            <marc:subfield code="w">()2448043</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="910" ind1=" " ind2=" ">
+            <marc:subfield code="a">Bibl. data</marc:subfield>
+            <marc:subfield code="e">Torrossa Fulltext Resource</marc:subfield>
+            <marc:subfield code="g">Casalini Libri</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="943" ind1=" " ind2=" ">
+            <marc:subfield code="a">134</marc:subfield>
+            <marc:subfield code="b">S</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="998" ind1=" " ind2=" ">
+            <marc:subfield code="a">FBO170</marc:subfield>
+        </marc:datafield>
+    </marc:record>
+    <marc:record>
+        <marc:leader>00748naa a2200217 i 4500</marc:leader>
+        <marc:controlfield tag="001">000002279430</marc:controlfield>
+        <marc:controlfield tag="003">ItFiC</marc:controlfield>
+        <marc:controlfield tag="005">20111221124957.0</marc:controlfield>
+        <marc:controlfield tag="008">091115s2004    xx      s    u000 u und c</marc:controlfield>
+        <marc:datafield tag="040" ind1=" " ind2=" ">
+            <marc:subfield code="a">ItFiC</marc:subfield>
+            <marc:subfield code="b">eng</marc:subfield>
+            <marc:subfield code="c">ItFiC</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="092" ind1=" " ind2=" ">
+            <marc:subfield code="a">2279430</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="097" ind1="0" ind2=" ">
+            <marc:subfield code="a">2249531</marc:subfield>
+            <marc:subfield code="b">015</marc:subfield>
+            <marc:subfield code="c">2279430</marc:subfield>
+            <marc:subfield code="d">0001</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="245" ind1="1" ind2="0">
+            <marc:subfield code="a">Premessa /</marc:subfield>
+            <marc:subfield code="c">Gallo, Italo.</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="260" ind1=" " ind2=" ">
+            <marc:subfield code="a">Roma :</marc:subfield>
+            <marc:subfield code="b">Edizioni dell'Ateneo,</marc:subfield>
+            <marc:subfield code="c">2004.</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="300" ind1=" " ind2=" ">
+            <marc:subfield code="a">P. 1000-1001</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="591" ind1=" " ind2=" ">
+            <marc:subfield code="b">0001</marc:subfield>
+            <marc:subfield code="f">1000</marc:subfield>
+            <marc:subfield code="g">1001</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="700" ind1="1" ind2=" ">
+            <marc:subfield code="a">Gallo, Italo.</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="773" ind1="0" ind2=" ">
+            <marc:subfield code="a">Gallo, Italo.</marc:subfield>
+            <marc:subfield code="t">Riflessioni e divagazioni sulla grecità.</marc:subfield>
+            <marc:subfield code="d">Roma : Edizioni dell'Ateneo, 2004.</marc:subfield>
+            <marc:subfield code="k">Filologia e critica / Università degli studi di Urbino</marc:subfield>
+            <marc:subfield code="z">88-8476-031-3</marc:subfield>
+            <marc:subfield code="w">()2249531</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="910" ind1=" " ind2=" ">
+            <marc:subfield code="a">Bibl. data</marc:subfield>
+            <marc:subfield code="e">Torrossa Fulltext Resource</marc:subfield>
+            <marc:subfield code="g">Casalini Libri</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="943" ind1=" " ind2=" ">
+            <marc:subfield code="a">40</marc:subfield>
+            <marc:subfield code="b">S</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="998" ind1=" " ind2=" ">
+            <marc:subfield code="a">FR2950</marc:subfield>
+        </marc:datafield>
+    </marc:record>
+    <marc:record>
+        <marc:leader>00669naa a2200193 i 4500</marc:leader>
+        <marc:controlfield tag="001">000002284283</marc:controlfield>
+        <marc:controlfield tag="003">ItFiC</marc:controlfield>
+        <marc:controlfield tag="005">20091115145739.0</marc:controlfield>
+        <marc:controlfield tag="008">091115s2005    xx      s    u100 u und c</marc:controlfield>
+        <marc:datafield tag="040" ind1=" " ind2=" ">
+            <marc:subfield code="a">ItFiC</marc:subfield>
+            <marc:subfield code="b">eng</marc:subfield>
+            <marc:subfield code="c">ItFiC</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="092" ind1=" " ind2=" ">
+            <marc:subfield code="a">2284283</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="097" ind1="0" ind2=" ">
+            <marc:subfield code="a">2249532</marc:subfield>
+            <marc:subfield code="b">015</marc:subfield>
+            <marc:subfield code="c">2284283</marc:subfield>
+            <marc:subfield code="d">0034</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="245" ind1="1" ind2="0">
+            <marc:subfield code="a">Paratesto ed editoria teatrale :</marc:subfield>
+            <marc:subfield code="b">il programma di sala /</marc:subfield>
+            <marc:subfield code="c">Di Carlo, Carla.</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="260" ind1=" " ind2=" ">
+            <marc:subfield code="a">Roma :</marc:subfield>
+            <marc:subfield code="b">Edizioni dell'Ateneo,</marc:subfield>
+            <marc:subfield code="c">2005.</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="700" ind1="1" ind2=" ">
+            <marc:subfield code="a">Di Carlo, Carla.</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="773" ind1="0" ind2=" ">
+            <marc:subfield code="t">Dintorni del testo.</marc:subfield>
+            <marc:subfield code="d">Roma : Edizioni dell'Ateneo, 2005.</marc:subfield>
+            <marc:subfield code="k">Biblioteca di Paratesto</marc:subfield>
+            <marc:subfield code="z">88-8476-101-8</marc:subfield>
+            <marc:subfield code="w">()2249532</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="910" ind1=" " ind2=" ">
+            <marc:subfield code="a">Bibl. data</marc:subfield>
+            <marc:subfield code="e">Torrossa Fulltext Resource</marc:subfield>
+            <marc:subfield code="g">Casalini Libri</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="943" ind1=" " ind2=" ">
+            <marc:subfield code="a">97</marc:subfield>
+            <marc:subfield code="b">S</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="998" ind1=" " ind2=" ">
+            <marc:subfield code="a">FR2950</marc:subfield>
+        </marc:datafield>
+    </marc:record>
+    <marc:record>
+        <marc:leader>00608naa a2200193 i 4500</marc:leader>
+        <marc:controlfield tag="001">000002433363</marc:controlfield>
+        <marc:controlfield tag="003">ItFiC</marc:controlfield>
+        <marc:controlfield tag="005">20101109235337.0</marc:controlfield>
+        <marc:controlfield tag="008">101109s2006    xx      s    u000 u ita c</marc:controlfield>
+        <marc:datafield tag="040" ind1=" " ind2=" ">
+            <marc:subfield code="a">ItFiC</marc:subfield>
+            <marc:subfield code="b">eng</marc:subfield>
+            <marc:subfield code="c">ItFiC</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="092" ind1=" " ind2=" ">
+            <marc:subfield code="a">2433363</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="097" ind1="0" ind2=" ">
+            <marc:subfield code="a">2413794</marc:subfield>
+            <marc:subfield code="b">015</marc:subfield>
+            <marc:subfield code="c">2433363</marc:subfield>
+            <marc:subfield code="d">0001</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="245" ind1="1" ind2="0">
+            <marc:subfield code="a">Prefazione /</marc:subfield>
+            <marc:subfield code="c">Rossi, Lino.</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="260" ind1=" " ind2=" ">
+            <marc:subfield code="a">Bologna :</marc:subfield>
+            <marc:subfield code="b">CLUEB,</marc:subfield>
+            <marc:subfield code="c">2006.</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="700" ind1="1" ind2=" ">
+            <marc:subfield code="a">Rossi, Lino.</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="773" ind1="0" ind2=" ">
+            <marc:subfield code="a">Rossi, Lino.</marc:subfield>
+            <marc:subfield code="t">Occasioni IV.</marc:subfield>
+            <marc:subfield code="d">Bologna : CLUEB, 2006.</marc:subfield>
+            <marc:subfield code="k">Relazioni e significati. Studi</marc:subfield>
+            <marc:subfield code="z">88-491-2609-3</marc:subfield>
+            <marc:subfield code="w">()2413794</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="910" ind1=" " ind2=" ">
+            <marc:subfield code="a">Bibl. data</marc:subfield>
+            <marc:subfield code="e">Torrossa Fulltext Resource</marc:subfield>
+            <marc:subfield code="g">Casalini Libri</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="943" ind1=" " ind2=" ">
+            <marc:subfield code="a">75</marc:subfield>
+            <marc:subfield code="b">S</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="998" ind1=" " ind2=" ">
+            <marc:subfield code="a">FBO170</marc:subfield>
+        </marc:datafield>
+    </marc:record>
+    <marc:record>
+        <marc:leader>00880naa a2200193 i 4500</marc:leader>
+        <marc:controlfield tag="001">000002294864</marc:controlfield>
+        <marc:controlfield tag="003">ItFiC</marc:controlfield>
+        <marc:controlfield tag="005">20091115152738.0</marc:controlfield>
+        <marc:controlfield tag="008">091115s2006    xx      s    u100 u und c</marc:controlfield>
+        <marc:datafield tag="040" ind1=" " ind2=" ">
+            <marc:subfield code="a">ItFiC</marc:subfield>
+            <marc:subfield code="b">eng</marc:subfield>
+            <marc:subfield code="c">ItFiC</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="092" ind1=" " ind2=" ">
+            <marc:subfield code="a">2294864</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="097" ind1="0" ind2=" ">
+            <marc:subfield code="a">2251618</marc:subfield>
+            <marc:subfield code="b">015</marc:subfield>
+            <marc:subfield code="c">2294864</marc:subfield>
+            <marc:subfield code="d">0004</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="245" ind1="1" ind2="0">
+            <marc:subfield code="a">In memoria di Laura e d'altri amati :</marc:subfield>
+            <marc:subfield code="b">il ricordo della vedovanza napoletana di Vittoria Colonna in alcuni contemporanei e di poco posteriori /</marc:subfield>
+            <marc:subfield code="c">de Miranda, Girolamo.</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="260" ind1=" " ind2=" ">
+            <marc:subfield code="a">Pisa [etc.] :</marc:subfield>
+            <marc:subfield code="b">Istituti editoriali e poligrafici internazionali,</marc:subfield>
+            <marc:subfield code="c">2006.</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="700" ind1="1" ind2=" ">
+            <marc:subfield code="a">de Miranda, Girolamo.</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="773" ind1="0" ind2=" ">
+            <marc:subfield code="t">Petrarca e Napoli.</marc:subfield>
+            <marc:subfield code="d">Pisa [etc.] : Istituti editoriali e poligrafici internazionali, 2006.</marc:subfield>
+            <marc:subfield code="k">Atti / Istituto nazionale di studi sul Rinascimento meridionale</marc:subfield>
+            <marc:subfield code="z">978-88-8147-578-0</marc:subfield>
+            <marc:subfield code="w">()2251618</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="910" ind1=" " ind2=" ">
+            <marc:subfield code="a">Bibl. data</marc:subfield>
+            <marc:subfield code="e">Torrossa Fulltext Resource</marc:subfield>
+            <marc:subfield code="g">Casalini Libri</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="943" ind1=" " ind2=" ">
+            <marc:subfield code="a">230</marc:subfield>
+            <marc:subfield code="b">S</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="998" ind1=" " ind2=" ">
+            <marc:subfield code="a">FPI426</marc:subfield>
+        </marc:datafield>
+    </marc:record>
+    <marc:record>
+        <marc:leader>00637naa a2200193 i 4500</marc:leader>
+        <marc:controlfield tag="001">000002264726</marc:controlfield>
+        <marc:controlfield tag="003">ItFiC</marc:controlfield>
+        <marc:controlfield tag="005">20091115140211.0</marc:controlfield>
+        <marc:controlfield tag="008">091115s2003    xx      s    u000 u und c</marc:controlfield>
+        <marc:datafield tag="040" ind1=" " ind2=" ">
+            <marc:subfield code="a">ItFiC</marc:subfield>
+            <marc:subfield code="b">eng</marc:subfield>
+            <marc:subfield code="c">ItFiC</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="092" ind1=" " ind2=" ">
+            <marc:subfield code="a">2264726</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="097" ind1="0" ind2=" ">
+            <marc:subfield code="a">2251420</marc:subfield>
+            <marc:subfield code="b">015</marc:subfield>
+            <marc:subfield code="c">2264726</marc:subfield>
+            <marc:subfield code="d">0002</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="245" ind1="1" ind2="0">
+            <marc:subfield code="a">Prefazione /</marc:subfield>
+            <marc:subfield code="c">Marchesini, Simona.</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="260" ind1=" " ind2=" ">
+            <marc:subfield code="a">Pisa :</marc:subfield>
+            <marc:subfield code="b">Giardini,</marc:subfield>
+            <marc:subfield code="c">2003.</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="700" ind1="1" ind2=" ">
+            <marc:subfield code="a">Marchesini, Simona.</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="773" ind1="0" ind2=" ">
+            <marc:subfield code="t">Linguistica è storia.</marc:subfield>
+            <marc:subfield code="d">Pisa : Giardini, 2003.</marc:subfield>
+            <marc:subfield code="k">Ricerche sulle lingue di frammentaria attestazione</marc:subfield>
+            <marc:subfield code="z">88-427-0304-4</marc:subfield>
+            <marc:subfield code="w">()2251420</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="910" ind1=" " ind2=" ">
+            <marc:subfield code="a">Bibl. data</marc:subfield>
+            <marc:subfield code="e">Torrossa Fulltext Resource</marc:subfield>
+            <marc:subfield code="g">Casalini Libri</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="943" ind1=" " ind2=" ">
+            <marc:subfield code="a">41</marc:subfield>
+            <marc:subfield code="b">S</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="998" ind1=" " ind2=" ">
+            <marc:subfield code="a">FPI420</marc:subfield>
+        </marc:datafield>
+    </marc:record>
+    <marc:record>
+        <marc:leader>00646naa a2200181 i 4500</marc:leader>
+        <marc:controlfield tag="001">000002291615</marc:controlfield>
+        <marc:controlfield tag="003">ItFiC</marc:controlfield>
+        <marc:controlfield tag="005">20091115151824.0</marc:controlfield>
+        <marc:controlfield tag="008">091115s2007    xx      s    u000 u und c</marc:controlfield>
+        <marc:datafield tag="040" ind1=" " ind2=" ">
+            <marc:subfield code="a">ItFiC</marc:subfield>
+            <marc:subfield code="b">eng</marc:subfield>
+            <marc:subfield code="c">ItFiC</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="092" ind1=" " ind2=" ">
+            <marc:subfield code="a">2291615</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="097" ind1="0" ind2=" ">
+            <marc:subfield code="a">2251419</marc:subfield>
+            <marc:subfield code="b">015</marc:subfield>
+            <marc:subfield code="c">2291615</marc:subfield>
+            <marc:subfield code="d">0002</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="245" ind1="0" ind2="0">
+            <marc:subfield code="a">Premessa.</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="260" ind1=" " ind2=" ">
+            <marc:subfield code="a">Pisa [etc.] :</marc:subfield>
+            <marc:subfield code="b">Gruppo editoriale internazionale,</marc:subfield>
+            <marc:subfield code="c">2007.</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="773" ind1="0" ind2=" ">
+            <marc:subfield code="t">Studi di onomastica e letteratura offerti a a Bruno Porcelli.</marc:subfield>
+            <marc:subfield code="d">Pisa [etc.] : Gruppo editoriale internazionale, 2007.</marc:subfield>
+            <marc:subfield code="k">Studia erudita</marc:subfield>
+            <marc:subfield code="z">978-88-8011-130-6</marc:subfield>
+            <marc:subfield code="w">()2251419</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="910" ind1=" " ind2=" ">
+            <marc:subfield code="a">Bibl. data</marc:subfield>
+            <marc:subfield code="e">Torrossa Fulltext Resource</marc:subfield>
+            <marc:subfield code="g">Casalini Libri</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="943" ind1=" " ind2=" ">
+            <marc:subfield code="a">34</marc:subfield>
+            <marc:subfield code="b">S</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="998" ind1=" " ind2=" ">
+            <marc:subfield code="a">FPI425</marc:subfield>
+        </marc:datafield>
+    </marc:record>
+    <marc:record>
+        <marc:leader>00779naa a2200217 i 4500</marc:leader>
+        <marc:controlfield tag="001">000002279431</marc:controlfield>
+        <marc:controlfield tag="003">ItFiC</marc:controlfield>
+        <marc:controlfield tag="005">20111221125025.0</marc:controlfield>
+        <marc:controlfield tag="008">091115s2004    xx      s    u000 u und c</marc:controlfield>
+        <marc:datafield tag="040" ind1=" " ind2=" ">
+            <marc:subfield code="a">ItFiC</marc:subfield>
+            <marc:subfield code="b">eng</marc:subfield>
+            <marc:subfield code="c">ItFiC</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="092" ind1=" " ind2=" ">
+            <marc:subfield code="a">2279431</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="097" ind1="0" ind2=" ">
+            <marc:subfield code="a">2249531</marc:subfield>
+            <marc:subfield code="b">015</marc:subfield>
+            <marc:subfield code="c">2249531</marc:subfield>
+            <marc:subfield code="d">0002</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="245" ind1="1" ind2="3">
+            <marc:subfield code="a">Il problema dell'origine della "polis" /</marc:subfield>
+            <marc:subfield code="c">Gallo, Italo.</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="260" ind1=" " ind2=" ">
+            <marc:subfield code="a">Roma :</marc:subfield>
+            <marc:subfield code="b">Edizioni dell'Ateneo,</marc:subfield>
+            <marc:subfield code="c">2004.</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="300" ind1=" " ind2=" ">
+            <marc:subfield code="a">P. 1000-1014</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="591" ind1=" " ind2=" ">
+            <marc:subfield code="b">0002</marc:subfield>
+            <marc:subfield code="f">1000</marc:subfield>
+            <marc:subfield code="g">1014</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="700" ind1="1" ind2=" ">
+            <marc:subfield code="a">Gallo, Italo.</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="773" ind1="0" ind2=" ">
+            <marc:subfield code="a">Gallo, Italo.</marc:subfield>
+            <marc:subfield code="t">Riflessioni e divagazioni sulla grecità.</marc:subfield>
+            <marc:subfield code="d">Roma : Edizioni dell'Ateneo, 2004.</marc:subfield>
+            <marc:subfield code="k">Filologia e critica / Università degli studi di Urbino</marc:subfield>
+            <marc:subfield code="z">88-8476-031-3</marc:subfield>
+            <marc:subfield code="w">()2249531</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="910" ind1=" " ind2=" ">
+            <marc:subfield code="a">Bibl. data</marc:subfield>
+            <marc:subfield code="e">Torrossa Fulltext Resource</marc:subfield>
+            <marc:subfield code="g">Casalini Libri</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="943" ind1=" " ind2=" ">
+            <marc:subfield code="a">122</marc:subfield>
+            <marc:subfield code="b">S</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="998" ind1=" " ind2=" ">
+            <marc:subfield code="a">FR2950</marc:subfield>
+        </marc:datafield>
+    </marc:record>
+</marc:collection>
