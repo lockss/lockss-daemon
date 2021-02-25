@@ -126,65 +126,49 @@ public class MarcXmlToMarcBinarySchemaHelper implements FileMetadataExtractor {
             String publisherCleanName = MARC_publisher.replace(",", "");
             String publisherShortCut = PublisherNameShortcutMap.get(publisherCleanName);
 
-            log.debug3(String.format("MARC_publisher: %s | publisherCleanName: %s | publisherShortCut %s",
+            log.debug(String.format("MARC_publisher: %s | publisherCleanName: %s | publisherShortCut %s",
                     MARC_publisher, publisherCleanName, publisherShortCut));
 
+            if (MARC_isbn != null) {
+                am.put(MetadataField.FIELD_ISBN, MARC_isbn);
+            }
 
-            String MARC_pdf =  String.format("/%s/%s/%s/%s", COLLECTION_NAME, publisherShortCut, MARC_bookid, MARC_bookid);
+            if (MARC_issn != null) {
+                am.put(MetadataField.FIELD_ISSN, MARC_issn);
+            }
 
-            // Only count metadata when there is a PDF file
-            if (MARC_pdf != null) {
+            if (MARC_title != null) {
+                am.put(MetadataField.FIELD_PUBLICATION_TITLE, MARC_title);
+            }
 
-                if (MARC_isbn != null) {
-                    am.put(MetadataField.FIELD_ISBN, MARC_isbn);
-                }
+            if ( MARC_pub_date != null) {
+                am.put(MetadataField.FIELD_DATE, MARC_pub_date.replace(".", ""));
+            }
 
-                if (MARC_issn != null) {
-                    am.put(MetadataField.FIELD_ISSN, MARC_issn);
-                }
+            if (MARC_author == null) {
+                am.put(MetadataField.FIELD_AUTHOR, MARC_author_alt);
+            } else {
+                am.put(MetadataField.FIELD_AUTHOR, MARC_author);
+            }
+            // They did not provide start page, just total number of page,
+            if (MARC_total_page != null) {
+                am.put(MetadataField.FIELD_END_PAGE, MARC_total_page);
+            }
 
-                if (MARC_title != null) {
-                    am.put(MetadataField.FIELD_PUBLICATION_TITLE, MARC_title);
-                }
-                
-                if ( MARC_pub_date != null) {
-                    am.put(MetadataField.FIELD_DATE, MARC_pub_date.replace(".", ""));
-                }
+            if (MARC_publisher == null) {
+                am.put(MetadataField.FIELD_PUBLISHER, MARC_publisher_alt.replace(",", ""));
+            } else {
+                am.put(MetadataField.FIELD_PUBLISHER, MARC_publisher.replace(",", ""));
+            }
 
-                if (MARC_author == null) {
-                    am.put(MetadataField.FIELD_AUTHOR, MARC_author_alt);
+            // This part handle Casanili special request for publisher name
+            if (MARC_publisher == null) {
+                am.put(MetadataField.FIELD_PUBLISHER, PUBLISHER_NAME);
+            }  else {
+                if (!MARC_publisher.equalsIgnoreCase(PUBLISHER_NAME)) {
+                    am.put(MetadataField.FIELD_PUBLISHER, MARC_publisher.replace(",", "") + PUBLISHER_NAME_APPENDIX);
                 } else {
-                    am.put(MetadataField.FIELD_AUTHOR, MARC_author);
-                }
-                // They did not provide start page, just total number of page,
-                if (MARC_total_page != null) {
-                    am.put(MetadataField.FIELD_END_PAGE, MARC_total_page);
-                }
-
-                if (MARC_pdf != null) {
-                    String cuBase = FilenameUtils.getFullPath(cu.getUrl());
-                    String fullPathFile = UrlUtil.minimallyEncodeUrl(cuBase + MARC_pdf + ".pdf");
-                    log.debug3("MARC_pdf: " + MARC_pdf + ", fullPathFile = " + fullPathFile);
-                    am.put(MetadataField.FIELD_ACCESS_URL, fullPathFile);
-                } else {
-                    log.debug3("MARC_pdf field is not used");
-                }
-
-                if (MARC_publisher == null) {
-                    am.put(MetadataField.FIELD_PUBLISHER, MARC_publisher_alt.replace(",", ""));
-                } else {
-                    am.put(MetadataField.FIELD_PUBLISHER, MARC_publisher.replace(",", ""));
-                }
-
-                // This part handle Casanili special request for publisher name
-                if (MARC_publisher == null) {
-                    am.put(MetadataField.FIELD_PUBLISHER, PUBLISHER_NAME);
-                }  else {
-                    if (!MARC_publisher.equalsIgnoreCase(PUBLISHER_NAME)) {
-                        am.put(MetadataField.FIELD_PUBLISHER, MARC_publisher.replace(",", "") + PUBLISHER_NAME_APPENDIX);
-                    } else {
-                        am.put(MetadataField.FIELD_PUBLISHER, MARC_publisher);
-                    }
+                    am.put(MetadataField.FIELD_PUBLISHER, MARC_publisher);
                 }
             }
 
@@ -210,17 +194,36 @@ public class MarcXmlToMarcBinarySchemaHelper implements FileMetadataExtractor {
                 am.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_JOURNAL);
             }
 
-            if (MARC_bookid != null && MARC_chapterid != null && MARC_bookid.equals(MARC_chapterid)) {
-                log.debug3(String.format("Emit chapter: MARC_bookid %s | MARC_chapterid: %s ",
+            String MARC_pdf =  String.format("/%s/%s/%s/%s", COLLECTION_NAME, publisherShortCut, MARC_bookid, MARC_bookid);
+
+            log.debug("MARC_pdf: " + MARC_pdf);
+
+            if (MARC_bookid != null && MARC_chapterid != null ) {
+                log.debug(String.format("Emit chapter: MARC_bookid %s | MARC_chapterid: %s ",
                         MARC_bookid, MARC_chapterid));
-                emitter.emitMetadata(cu, am);
             } else if (MARC_chapterid == null) {
+                log.debug(String.format("Do not emit chapter: MARC_bookid %s ", MARC_bookid));
+            }
+
+            if (MARC_pdf != null) {
+                String cuBase = FilenameUtils.getFullPath(cu.getUrl());
+                String fullPathFile = UrlUtil.minimallyEncodeUrl(cuBase + MARC_pdf + ".pdf");
+                log.debug("MARC_pdf: " + MARC_pdf + ", fullPathFile = " + fullPathFile);
+                am.put(MetadataField.FIELD_ACCESS_URL, fullPathFile);
+
                 emitter.emitMetadata(cu, am);
-                log.debug3(String.format("Do not emit chapter: MARC_bookid %s ", MARC_bookid));
-                emitter.emitMetadata(cu, am);
+            } else {
+                log.debug("MARC_pdf field is not used");
+            }
+
+            if (MARC_bookid != null && MARC_chapterid != null ) {
+                log.debug(String.format("Emit chapter: MARC_bookid %s | MARC_chapterid: %s ",
+                        MARC_bookid, MARC_chapterid));
+            } else if (MARC_chapterid == null) {
+                log.debug(String.format("Do not emit chapter: MARC_bookid %s ", MARC_bookid));
             }
         }
-        log.debug3(String.format("Metadata file source: %s, recordCount: %d", cu.getUrl(), recordCount));
+        log.debug(String.format("Metadata file source: %s, recordCount: %d", cu.getUrl(), recordCount));
     }
 
     /**
@@ -242,7 +245,7 @@ public class MarcXmlToMarcBinarySchemaHelper implements FileMetadataExtractor {
                 char ind1 = field.getIndicator1();
                 char ind2 = field.getIndicator2();
 
-                log.debug3("Mrc Record Tag: " + tag + " Indicator 1: " + ind1 + " Indicator 2: " + ind2);
+                log.debug("Mrc Record Tag: " + tag + " Indicator 1: " + ind1 + " Indicator 2: " + ind2);
 
                 List subfields = field.getSubfields();
                 Iterator i = subfields.iterator();
@@ -253,7 +256,7 @@ public class MarcXmlToMarcBinarySchemaHelper implements FileMetadataExtractor {
                     String data = subfield.getData();
 
                     if (code == subFieldCode) {
-                        log.debug3("Mrc Record Found Tag: " + tag + " Subfield code: " + code + " Data element: " + data);
+                        log.debug("Mrc Record Found Tag: " + tag + " Subfield code: " + code + " Data element: " + data);
 
                         // clean up data before return
                         if (dataFieldCode.equals("700")) {
@@ -268,10 +271,10 @@ public class MarcXmlToMarcBinarySchemaHelper implements FileMetadataExtractor {
                     }
                 }
             } else {
-                log.debug3("Mrc Record getVariableField: " + dataFieldCode + " return null");
+                log.debug("Mrc Record getVariableField: " + dataFieldCode + " return null");
             }
         } catch (NullPointerException e) {
-            log.debug3("Mrc Record DataFieldCode: " + dataFieldCode + " SubFieldCode: " + subFieldCode + " has error");
+            log.debug("Mrc Record DataFieldCode: " + dataFieldCode + " SubFieldCode: " + subFieldCode + " has error");
         }
         return null;
     }
@@ -290,7 +293,7 @@ public class MarcXmlToMarcBinarySchemaHelper implements FileMetadataExtractor {
             String data = field.getData();
             return data;
         } else {
-            log.debug3("Mrc Record getMARCControlFieldData: " + dataFieldCode + " return null");
+            log.debug("Mrc Record getMARCControlFieldData: " + dataFieldCode + " return null");
             return null;
         }
     }
