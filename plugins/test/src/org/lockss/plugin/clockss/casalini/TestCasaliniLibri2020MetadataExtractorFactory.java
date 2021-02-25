@@ -97,8 +97,8 @@ public class TestCasaliniLibri2020MetadataExtractorFactory extends SourceXmlMeta
 
         //String fname = "Marc21SampleArticle.xml";
         //String fname = "Sample.mrc";
-        //String fname = "Marc212016Sample.xml";
-        String fname= "monographs2016.xml";
+        String fname = "Marc212016Sample.xml";
+        //String fname= "monographs2016.xml";
 
         String samplePath = "./plugins/test/src/org/lockss/plugin/clockss/casalini/" + fname;
 
