@@ -114,7 +114,8 @@ public class TestCasaliniLibri2020MetadataExtractorFactory extends SourceXmlMeta
             reader = new MarcStreamReader(input);
         }
 
-        log.info("------------fname: " + fname);
+        //log.info("------------fname: " + fname);
+        List<String> bookIDs = new ArrayList<String>();
 
         while (reader.hasNext()) {
             Record record = reader.next();
@@ -159,6 +160,21 @@ public class TestCasaliniLibri2020MetadataExtractorFactory extends SourceXmlMeta
             String publisherCleanName = MARC_publisher.replace(",", "");
             String publisherShortCut = PublisherNameShortcutMap.get(publisherCleanName);
 
+            if (MARC_bookid != null) {
+
+                //log.info("-------: " + MARC_bookid + ", book_count = " + bookIDs.size());
+
+                if (!bookIDs.contains(MARC_bookid)) {
+                    bookIDs.add(MARC_bookid);
+                    //log.info("-----------bookID does NOT exist: " + MARC_bookid + ", book_count = " + bookIDs.size());
+                } else {
+                    //log.info("-------bookID already exist: " + MARC_bookid);
+                }
+            } else {
+                //log.info("-------bookID is null");
+            }
+
+
             if (publisherShortCut != null) {
                 //log.info(String.format("-------MARC_publisher: %s | publisherCleanName: %s | publisherShortCut: %s",MARC_publisher, publisherCleanName, publisherShortCut));
 
@@ -174,7 +190,7 @@ public class TestCasaliniLibri2020MetadataExtractorFactory extends SourceXmlMeta
             //log.info("-------MARC_pdf: " + MARC_pdf );
 
             if (MARC_publisher == null) {
-                log.info("-------MARC_MARC_publisher is null ");
+                //log.info("-------MARC_MARC_publisher is null ");
             } else {
                 //log.info("-------MARC_MARC_publisher is not null: " + MARC_publisher);
             }
@@ -183,7 +199,7 @@ public class TestCasaliniLibri2020MetadataExtractorFactory extends SourceXmlMeta
                 //log.info(String.format("----------------Both: MARC_bookid %s | MARC_chapterid: %s ",MARC_bookid, MARC_chapterid));
 
             }  else if (MARC_chapterid == null) { 
-                log.info(String.format("----------------Only bookid: MARC_bookid %s ",MARC_bookid));
+                //log.info(String.format("----------------Only bookid: MARC_bookid %s ",MARC_bookid));
             }
         }
     }
@@ -225,8 +241,8 @@ public class TestCasaliniLibri2020MetadataExtractorFactory extends SourceXmlMeta
                 new FileMetadataListExtractor(me);
         List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), mcu);
         assertNotEmpty(mdlist);
-        log.info("------size = " + mdlist.size());
-        assertEquals(1, mdlist.size());
+        //log.info("------size = " + mdlist.size());
+        assertEquals(7, mdlist.size());
         ArticleMetadata md = mdlist.get(0);
         assertNotNull(md);
         //assertEquals("10.1400/64564", md.get(MetadataField.FIELD_DOI));

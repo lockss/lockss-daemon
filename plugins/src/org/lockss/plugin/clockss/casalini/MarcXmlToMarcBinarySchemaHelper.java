@@ -10,10 +10,7 @@ import org.lockss.util.Logger;
 import org.lockss.util.UrlUtil;
 
 import java.io.*;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import org.marc4j.MarcReader;
 import org.marc4j.MarcStreamReader;
@@ -72,6 +69,8 @@ public class MarcXmlToMarcBinarySchemaHelper implements FileMetadataExtractor {
 
         int recordCount = 0;
 
+        List<String> bookIDs = new ArrayList<String>();
+
         while (reader.hasNext()) {
 
             ArticleMetadata am = new ArticleMetadata();
@@ -122,6 +121,7 @@ public class MarcXmlToMarcBinarySchemaHelper implements FileMetadataExtractor {
 
             String MARC_bookid =   getMARCData(record, "097", 'a');
             String MARC_chapterid =   getMARCData(record, "097", 'c');
+
 
             String publisherCleanName = MARC_publisher.replace(",", "");
             String publisherShortCut = PublisherNameShortcutMap.get(publisherCleanName);
@@ -194,7 +194,7 @@ public class MarcXmlToMarcBinarySchemaHelper implements FileMetadataExtractor {
                 am.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_JOURNAL);
             }
 
-            String MARC_pdf =  String.format("/%s/%s/%s/%s", COLLECTION_NAME, publisherShortCut, MARC_bookid, MARC_bookid);
+            String MARC_pdf =  String.format("%s/%s/%s/%s", COLLECTION_NAME, publisherShortCut, MARC_bookid, MARC_chapterid);
 
             log.debug("MARC_pdf: " + MARC_pdf);
 
@@ -211,7 +211,15 @@ public class MarcXmlToMarcBinarySchemaHelper implements FileMetadataExtractor {
                 log.debug("MARC_pdf: " + MARC_pdf + ", fullPathFile = " + fullPathFile);
                 am.put(MetadataField.FIELD_ACCESS_URL, fullPathFile);
 
-                emitter.emitMetadata(cu, am);
+                // Only emit the books metadata
+
+                if (!bookIDs.contains(MARC_bookid)) {
+                    bookIDs.add(MARC_bookid);
+                    emitter.emitMetadata(cu, am);
+                } else {
+                    log.debug("bookID already exist: " + MARC_bookid);
+                }
+
             } else {
                 log.debug("MARC_pdf field is not used");
             }
