@@ -10,8 +10,10 @@ import org.lockss.util.Logger;
 import org.lockss.util.UrlUtil;
 
 import java.io.*;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 
 import org.marc4j.MarcReader;
 import org.marc4j.MarcStreamReader;
@@ -30,6 +32,7 @@ public class MarcXmlToMarcBinarySchemaHelper implements FileMetadataExtractor {
 
     private static final Logger log = Logger.getLogger(MarcXmlToMarcBinarySchemaHelper.class);
 
+    private static final String COLLECTION_NAME = "Monographs";
     private static final String TITLE = "title";
     private static final String AUTHOR = "author";
     private static final String AUTHOR2 = "author_alt";
@@ -39,6 +42,17 @@ public class MarcXmlToMarcBinarySchemaHelper implements FileMetadataExtractor {
 
     private static final String PUBLISHER_NAME = "Casalini";
     private static final String PUBLISHER_NAME_APPENDIX = " - " + PUBLISHER_NAME ;
+
+    private static final Map<String,String> PublisherNameShortcutMap = new HashMap<String,String>();
+    static {
+        PublisherNameShortcutMap.put("Edizioni dell'Ateneo", "ATENEO");
+        PublisherNameShortcutMap.put("Cadmo", "CADMO");
+        PublisherNameShortcutMap.put("Casalini libri", "CASA");
+        PublisherNameShortcutMap.put("CLUEB", "CLUEB");
+        PublisherNameShortcutMap.put("Gruppo editoriale internazionale", "GEI");
+        PublisherNameShortcutMap.put("Giardini", "GIARDI");
+        PublisherNameShortcutMap.put("Istituti editoriali e poligrafici internazionali", "IEPI");
+    };
 
 
     @Override
@@ -90,7 +104,32 @@ public class MarcXmlToMarcBinarySchemaHelper implements FileMetadataExtractor {
             String MARC_total_page = getMARCData(record, "300", 'a');
             String MARC_author =   getMARCData(record, "100", 'a');
             String MARC_author_alt =   getMARCData(record, "700", 'a');
-            String MARC_pdf =  getMARCControlFieldData(record, "001");
+
+            /*
+            http://clockss-ingest.lockss.org/sourcefiles/casalini2012-released/2016/Monographs/CLUEB/2448043
+            http://clockss-ingest.lockss.org/sourcefiles/casalini2012-released/2016/Monographs/CLUEB/2448043/2448043.pdf
+            http://clockss-ingest.lockss.org/sourcefiles/casalini2012-released/2016/Monographs/CLUEB/2448043/2448043.pdf.md5sum
+            http://clockss-ingest.lockss.org/sourcefiles/casalini2012-released/2016/Monographs/CLUEB/2448043/2449010.pdf
+            http://clockss-ingest.lockss.org/sourcefiles/casalini2012-released/2016/Monographs/CLUEB/2448043/2449010.pdf.md5sum
+            http://clockss-ingest.lockss.org/sourcefiles/casalini2012-released/2016/Monographs/CLUEB/2448043/2449011.pdf
+            http://clockss-ingest.lockss.org/sourcefiles/casalini2012-released/2016/Monographs/CLUEB/2448043/2449011.pdf.md5sum
+            http://clockss-ingest.lockss.org/sourcefiles/casalini2012-released/2016/Monographs/CLUEB/2448043/2449012.pdf
+            http://clockss-ingest.lockss.org/sourcefiles/casalini2012-released/2016/Monographs/CLUEB/2448043/2449012.pdf.md5sum
+            http://clockss-ingest.lockss.org/sourcefiles/casalini2012-released/2016/Monographs/CLUEB/2448043/2449013.pdf
+            */
+            //Casalini 2016 do not use this one
+            //String MARC_pdf =  getMARCControlFieldData(record, "001");
+
+            String MARC_bookid =   getMARCData(record, "097", 'a');
+            String MARC_chapterid =   getMARCData(record, "097", 'c');
+
+            String publisherCleanName = MARC_publisher.replace(",", "");
+            String publisherShortCut = PublisherNameShortcutMap.get(publisherCleanName);
+
+            log.debug3(String.format("MARC_publisher: %s | publisherCleanName: %s | publisherShortCut %s",
+                    MARC_publisher, publisherCleanName, publisherShortCut));
+
+            String MARC_pdf =  String.format("/%s/%s/%s/%s", COLLECTION_NAME, publisherShortCut, MARC_bookid, MARC_bookid);
 
             // Only count metadata when there is a PDF file
             if (MARC_pdf != null) {
@@ -103,23 +142,30 @@ public class MarcXmlToMarcBinarySchemaHelper implements FileMetadataExtractor {
                     am.put(MetadataField.FIELD_ISSN, MARC_issn);
                 }
                 am.put(MetadataField.FIELD_PUBLICATION_TITLE,  MARC_title);
-                am.put(MetadataField.FIELD_DATE, MARC_pub_date);
+                am.put(MetadataField.FIELD_DATE, MARC_pub_date.replace(".", ""));
                 if (MARC_author == null) {
                     am.put(MetadataField.FIELD_AUTHOR, MARC_author_alt);
                 } else {
                     am.put(MetadataField.FIELD_AUTHOR, MARC_author);
                 }
                 // They did not provide start page, just total number of page,
-                am.put(MetadataField.FIELD_END_PAGE, MARC_total_page);
+                if (MARC_total_page != null) {
+                    am.put(MetadataField.FIELD_END_PAGE, MARC_total_page);
+                }
 
-                String cuBase = FilenameUtils.getFullPath(cu.getUrl());
-                String fullPathFile = UrlUtil.minimallyEncodeUrl(cuBase + MARC_pdf + ".pdf");
-                am.put(MetadataField.FIELD_ACCESS_URL, fullPathFile);
+                if (MARC_pdf != null) {
+                    String cuBase = FilenameUtils.getFullPath(cu.getUrl());
+                    String fullPathFile = UrlUtil.minimallyEncodeUrl(cuBase + MARC_pdf + ".pdf");
+                    log.debug3("MARC_pdf: " + MARC_pdf + ", fullPathFile = " + fullPathFile);
+                    am.put(MetadataField.FIELD_ACCESS_URL, fullPathFile);
+                } else {
+                    log.debug3("MARC_pdf field is not used");
+                }
 
                 if (MARC_publisher == null) {
-                    am.put(MetadataField.FIELD_PUBLISHER, MARC_publisher_alt);
+                    am.put(MetadataField.FIELD_PUBLISHER, MARC_publisher_alt.replace(",", ""));
                 } else {
-                    am.put(MetadataField.FIELD_PUBLISHER, MARC_publisher);
+                    am.put(MetadataField.FIELD_PUBLISHER, MARC_publisher.replace(",", ""));
                 }
 
                 // This part handle Casanili special request for publisher name
@@ -155,8 +201,15 @@ public class MarcXmlToMarcBinarySchemaHelper implements FileMetadataExtractor {
                 am.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.PUBLICATION_TYPE_JOURNAL);
                 am.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_JOURNAL);
             }
-            
-            emitter.emitMetadata(cu, am);
+
+            if (MARC_bookid.equals(MARC_chapterid)) {
+                log.debug3(String.format("Emit chapter: MARC_bookid %s | MARC_chapterid: %s ",
+                        MARC_bookid, MARC_chapterid));
+                emitter.emitMetadata(cu, am);
+            } else {
+                log.debug3(String.format("Do not emit chapter: MARC_bookid %s | MARC_chapterid: %s ",
+                        MARC_bookid, MARC_chapterid));
+            }
         }
         log.debug3(String.format("Metadata file source: %s, recordCount: %d", cu.getUrl(), recordCount));
     }

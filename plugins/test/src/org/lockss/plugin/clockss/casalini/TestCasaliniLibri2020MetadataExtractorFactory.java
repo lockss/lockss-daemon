@@ -1,5 +1,6 @@
 package org.lockss.plugin.clockss.casalini;
 
+import org.lockss.util.UrlUtil;
 import org.marc4j.MarcReader;
 import org.marc4j.MarcStreamReader;
 import org.marc4j.MarcWriter;
@@ -27,8 +28,7 @@ import org.lockss.util.Constants;
 import org.lockss.util.Logger;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -40,6 +40,20 @@ public class TestCasaliniLibri2020MetadataExtractorFactory extends SourceXmlMeta
     private static String Directory = "2019";
     private static String pdfUrl1 = BaseUrl + Directory + "/2000_4_2194804.pdf";
     private static String pdfUrl2 = BaseUrl + Directory + "/2002_4_2194812.pdf";
+
+    private static final Map<String,String> PublisherNameShortcutMap = new HashMap<String,String>();
+
+    private static final String COLLECTION_NAME = "Monographs";
+
+    static {
+        PublisherNameShortcutMap.put("Edizioni dell'Ateneo", "ATENEO");
+        PublisherNameShortcutMap.put("Cadmo", "CADMO");
+        PublisherNameShortcutMap.put("Casalini libri", "CASA");
+        PublisherNameShortcutMap.put("CLUEB", "CLUEB");
+        PublisherNameShortcutMap.put("Gruppo editoriale internazionale", "GEI");
+        PublisherNameShortcutMap.put("Giardini", "GIARDI");
+        PublisherNameShortcutMap.put("Istituti editoriali e poligrafici internazionali", "IEPI");
+    };
 
     private static String getXmlFileContent(String fname) {
         String xmlContent = "";
@@ -82,7 +96,8 @@ public class TestCasaliniLibri2020MetadataExtractorFactory extends SourceXmlMeta
     public void testReadingMrcXmlByMrcBinary() throws Exception {
 
         //String fname = "Marc21SampleArticle.xml";
-        String fname = "Sample.mrc";
+        //String fname = "Sample.mrc";
+        String fname = "Marc212016Sample.xml";
 
         String samplePath = "./plugins/test/src/org/lockss/plugin/clockss/casalini/" + fname;
 
@@ -120,12 +135,100 @@ public class TestCasaliniLibri2020MetadataExtractorFactory extends SourceXmlMeta
                         for (Subfield subfield : subfields) {
                             char subtag = subfield.getCode();
                             String subtag_data = subfield.getData();
-                            //log.info(String.format("--------%s_%c: %s", tag, subtag, subtag_data));
+                            log.info(String.format("--------%s_%c: %s", tag, subtag, subtag_data));
                         }
                     }
                 }
-            } 
+            }
+
+            String MARC_isbn = getMARCData(record, "020", 'a');
+            String MARC_issn = getMARCData(record, "022", 'a');
+            String MARC_title = getMARCData(record, "245", 'a');
+            String MARC_pub_date =  getMARCData(record, "260", 'c');
+            String MARC_publisher = getMARCData(record, "260", 'b');
+            String MARC_publisher_alt = getMARCData(record, "264", 'b');
+            String MARC_total_page = getMARCData(record, "300", 'a');
+            String MARC_author =   getMARCData(record, "100", 'a');
+            String MARC_author_alt =   getMARCData(record, "700", 'a');
+
+            String MARC_bookid =   getMARCData(record, "097", 'a');
+            String MARC_chapterid =   getMARCData(record, "097", 'c');
+
+            String publisherCleanName = MARC_publisher.replace(",", "");
+            String publisherShortCut = PublisherNameShortcutMap.get(publisherCleanName);
+
+            if (publisherShortCut != null) {
+                log.info(String.format("-------MARC_publisher: %s | publisherCleanName: %s | publisherShortCut: %s",
+                        MARC_publisher, publisherCleanName, publisherShortCut));
+
+            } else {
+                log.info(String.format("=======MARC_publisher: %s | publisherCleanName: %s",
+                        MARC_publisher, publisherCleanName));
+
+            }
+
+            log.info(String.format("-------MARC_publisher: %s | publisherCleanName: %s | publisherShortCut: %s",
+                    MARC_publisher, publisherCleanName, publisherShortCut));
+
+            String MARC_pdf =  String.format("/%s/%s/%s/%s.pdf", COLLECTION_NAME, publisherShortCut, MARC_bookid, MARC_bookid);
+
+            log.info("-------MARC_pdf: " + MARC_pdf );
+
+            if (MARC_bookid.equals(MARC_chapterid)) {
+                log.info(String.format("----------------Emit chapter: MARC_bookid %s | MARC_chapterid: %s ",
+                        MARC_bookid, MARC_chapterid));
+
+            } else {
+                log.info(String.format("Do not emit chapter: MARC_bookid %s | MARC_chapterid: %s ",
+                        MARC_bookid, MARC_chapterid));
+            }
         }
+    }
+
+    private String getMARCData(Record record, String dataFieldCode, char subFieldCode) {
+
+        try {
+            DataField field = (DataField) record.getVariableField(dataFieldCode);
+
+            // It is not guaranteed each record has the same information
+            if (field != null) {
+
+                String tag = field.getTag();
+                char ind1 = field.getIndicator1();
+                char ind2 = field.getIndicator2();
+
+                log.debug3("Mrc Record Tag: " + tag + " Indicator 1: " + ind1 + " Indicator 2: " + ind2);
+
+                List subfields = field.getSubfields();
+                Iterator i = subfields.iterator();
+
+                while (i.hasNext()) {
+                    Subfield subfield = (Subfield) i.next();
+                    char code = subfield.getCode();
+                    String data = subfield.getData();
+
+                    if (code == subFieldCode) {
+                        log.debug3("Mrc Record Found Tag: " + tag + " Subfield code: " + code + " Data element: " + data);
+
+                        // clean up data before return
+                        if (dataFieldCode.equals("700")) {
+                            return data.replace("edited by", "");
+                        } else if (dataFieldCode.equals("300")) {
+                            return data.replace("p.", "").replace(":", "");
+                        } else if (dataFieldCode.equals("245") && subFieldCode == 'a') {
+                            return data.replace("/", "").replace(":", "");
+                        } else {
+                            return data;
+                        }
+                    }
+                }
+            } else {
+                log.debug3("Mrc Record getVariableField: " + dataFieldCode + " return null");
+            }
+        } catch (NullPointerException e) {
+            log.debug3("Mrc Record DataFieldCode: " + dataFieldCode + " SubFieldCode: " + subFieldCode + " has error");
+        }
+        return null;
     }
 }
 
