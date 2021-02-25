@@ -123,8 +123,8 @@ public class TestCasaliniLibri2020MetadataExtractorFactory extends SourceXmlMeta
             char publication_type1 = leader.getImplDefined1()[0];
             char publication_type2 = leader.getImplDefined1()[1];
 
-            log.info(String.format("--------publication_type1: %c", publication_type1));
-            log.info(String.format("--------publication_type2: %c", publication_type2));
+            //log.info(String.format("--------publication_type1: %c", publication_type1));
+            //log.info(String.format("--------publication_type2: %c", publication_type2));
 
             List<DataField> fields = record.getDataFields();
             if (fields != null) {
@@ -135,7 +135,7 @@ public class TestCasaliniLibri2020MetadataExtractorFactory extends SourceXmlMeta
                         for (Subfield subfield : subfields) {
                             char subtag = subfield.getCode();
                             String subtag_data = subfield.getData();
-                            log.info(String.format("--------%s_%c: %s", tag, subtag, subtag_data));
+                            //log.info(String.format("--------%s_%c: %s", tag, subtag, subtag_data));
                         }
                     }
                 }
@@ -158,29 +158,24 @@ public class TestCasaliniLibri2020MetadataExtractorFactory extends SourceXmlMeta
             String publisherShortCut = PublisherNameShortcutMap.get(publisherCleanName);
 
             if (publisherShortCut != null) {
-                log.info(String.format("-------MARC_publisher: %s | publisherCleanName: %s | publisherShortCut: %s",
-                        MARC_publisher, publisherCleanName, publisherShortCut));
+                //log.info(String.format("-------MARC_publisher: %s | publisherCleanName: %s | publisherShortCut: %s",MARC_publisher, publisherCleanName, publisherShortCut));
 
             } else {
-                log.info(String.format("=======MARC_publisher: %s | publisherCleanName: %s",
-                        MARC_publisher, publisherCleanName));
+                //log.info(String.format("=======MARC_publisher: %s | publisherCleanName: %s",MARC_publisher, publisherCleanName));
 
             }
 
-            log.info(String.format("-------MARC_publisher: %s | publisherCleanName: %s | publisherShortCut: %s",
-                    MARC_publisher, publisherCleanName, publisherShortCut));
+            //log.info(String.format("-------MARC_publisher: %s | publisherCleanName: %s | publisherShortCut: %s", MARC_publisher, publisherCleanName, publisherShortCut));
 
             String MARC_pdf =  String.format("/%s/%s/%s/%s.pdf", COLLECTION_NAME, publisherShortCut, MARC_bookid, MARC_bookid);
 
-            log.info("-------MARC_pdf: " + MARC_pdf );
+            //log.info("-------MARC_pdf: " + MARC_pdf );
 
             if (MARC_bookid.equals(MARC_chapterid)) {
-                log.info(String.format("----------------Emit chapter: MARC_bookid %s | MARC_chapterid: %s ",
-                        MARC_bookid, MARC_chapterid));
+                //log.info(String.format("----------------Emit chapter: MARC_bookid %s | MARC_chapterid: %s ",MARC_bookid, MARC_chapterid));
 
             } else {
-                log.info(String.format("Do not emit chapter: MARC_bookid %s | MARC_chapterid: %s ",
-                        MARC_bookid, MARC_chapterid));
+                //log.info(String.format("Do not emit chapter: MARC_bookid %s | MARC_chapterid: %s ", MARC_bookid, MARC_chapterid));
             }
         }
     }
