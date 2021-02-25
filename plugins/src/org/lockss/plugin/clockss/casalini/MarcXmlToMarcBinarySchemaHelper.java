@@ -142,8 +142,15 @@ public class MarcXmlToMarcBinarySchemaHelper implements FileMetadataExtractor {
                 if (MARC_issn != null) {
                     am.put(MetadataField.FIELD_ISSN, MARC_issn);
                 }
-                am.put(MetadataField.FIELD_PUBLICATION_TITLE,  MARC_title);
-                am.put(MetadataField.FIELD_DATE, MARC_pub_date.replace(".", ""));
+
+                if (MARC_title != null) {
+                    am.put(MetadataField.FIELD_PUBLICATION_TITLE, MARC_title);
+                }
+                
+                if ( MARC_pub_date != null) {
+                    am.put(MetadataField.FIELD_DATE, MARC_pub_date.replace(".", ""));
+                }
+
                 if (MARC_author == null) {
                     am.put(MetadataField.FIELD_AUTHOR, MARC_author_alt);
                 } else {
@@ -208,7 +215,9 @@ public class MarcXmlToMarcBinarySchemaHelper implements FileMetadataExtractor {
                         MARC_bookid, MARC_chapterid));
                 emitter.emitMetadata(cu, am);
             } else if (MARC_chapterid == null) {
+                emitter.emitMetadata(cu, am);
                 log.debug3(String.format("Do not emit chapter: MARC_bookid %s ", MARC_bookid));
+                emitter.emitMetadata(cu, am);
             }
         }
         log.debug3(String.format("Metadata file source: %s, recordCount: %d", cu.getUrl(), recordCount));
