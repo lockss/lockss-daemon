@@ -97,7 +97,8 @@ public class TestCasaliniLibri2020MetadataExtractorFactory extends SourceXmlMeta
 
         //String fname = "Marc21SampleArticle.xml";
         //String fname = "Sample.mrc";
-        String fname = "Marc212016Sample.xml";
+        //String fname = "Marc212016Sample.xml";
+        String fname= "monographs2016.xml";
 
         String samplePath = "./plugins/test/src/org/lockss/plugin/clockss/casalini/" + fname;
 
@@ -113,7 +114,7 @@ public class TestCasaliniLibri2020MetadataExtractorFactory extends SourceXmlMeta
             reader = new MarcStreamReader(input);
         }
 
-        //log.info("------------fname: " + fname);
+        log.info("------------fname: " + fname);
 
         while (reader.hasNext()) {
             Record record = reader.next();
@@ -145,6 +146,7 @@ public class TestCasaliniLibri2020MetadataExtractorFactory extends SourceXmlMeta
             String MARC_issn = getMARCData(record, "022", 'a');
             String MARC_title = getMARCData(record, "245", 'a');
             String MARC_pub_date =  getMARCData(record, "260", 'c');
+
             String MARC_publisher = getMARCData(record, "260", 'b');
             String MARC_publisher_alt = getMARCData(record, "264", 'b');
             String MARC_total_page = getMARCData(record, "300", 'a');
@@ -171,14 +173,69 @@ public class TestCasaliniLibri2020MetadataExtractorFactory extends SourceXmlMeta
 
             //log.info("-------MARC_pdf: " + MARC_pdf );
 
-            if (MARC_bookid.equals(MARC_chapterid)) {
-                //log.info(String.format("----------------Emit chapter: MARC_bookid %s | MARC_chapterid: %s ",MARC_bookid, MARC_chapterid));
-
+            if (MARC_publisher == null) {
+                log.info("-------MARC_MARC_publisher is null ");
             } else {
-                //log.info(String.format("Do not emit chapter: MARC_bookid %s | MARC_chapterid: %s ", MARC_bookid, MARC_chapterid));
+                //log.info("-------MARC_MARC_publisher is not null: " + MARC_publisher);
+            }
+
+            if (MARC_bookid != null && MARC_chapterid != null && MARC_bookid.equals(MARC_chapterid)) {
+                //log.info(String.format("----------------Both: MARC_bookid %s | MARC_chapterid: %s ",MARC_bookid, MARC_chapterid));
+
+            }  else if (MARC_chapterid == null) { 
+                log.info(String.format("----------------Only bookid: MARC_bookid %s ",MARC_bookid));
             }
         }
     }
+
+    public void testExtractArticleXmlSchema() throws Exception {
+
+        /*
+        String fname = "monographs2016.xml";
+        String samplePath = "./plugins/test/src/org/lockss/plugin/clockss/casalini/" + fname;
+        InputStream input = new FileInputStream(samplePath);
+         */
+
+        String fname = "Marc212016Sample.xml";
+
+        String journalXml = getXmlFileContent(fname);
+        assertNotNull(journalXml);
+
+        String xml_url = BaseUrl + Directory + "/" + fname;
+
+        CIProperties xmlHeader = new CIProperties();
+        xmlHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
+        MockArchivalUnit mau = new MockArchivalUnit();
+
+        MockCachedUrl mcu = mau.addUrl(xml_url, true, true, xmlHeader);
+        mcu.setContent(journalXml);
+        //mcu.setInputStream(input);
+        mcu.setContentSize(journalXml.length());
+        mcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
+
+        // Now add two PDF files so they can be "found"
+        // these aren't opened, so it doens't matter that they have the wrong header type
+        mau.addUrl(pdfUrl1, true, true, xmlHeader);
+        mau.addUrl(pdfUrl2, true, true, xmlHeader);
+
+
+        FileMetadataExtractor me =  new CasaliniLibriMarcXmlBinaryMetadataExtractorFactory().
+                createFileMetadataExtractor(MetadataTarget.Any(), "text/xml");
+        FileMetadataListExtractor mle =
+                new FileMetadataListExtractor(me);
+        List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), mcu);
+        assertNotEmpty(mdlist);
+        log.info("------size = " + mdlist.size());
+        assertEquals(1, mdlist.size());
+        ArticleMetadata md = mdlist.get(0);
+        assertNotNull(md);
+        //assertEquals("10.1400/64564", md.get(MetadataField.FIELD_DOI));
+        //assertEquals("Romano, Cesare.", md.get(MetadataField.FIELD_AUTHOR));
+        //assertEquals("Psicoterapia e scienze umane", md.get(MetadataField.FIELD_PUBLICATION_TITLE));
+        //assertEquals("Casalini Libri", md.get(MetadataField.FIELD_PUBLISHER));
+        //assertEquals("2000", md.get(MetadataField.FIELD_DATE));
+    }
+
 
     private String getMARCData(Record record, String dataFieldCode, char subFieldCode) {
 
