@@ -129,6 +129,7 @@ public class MarcXmlToMarcBinarySchemaHelper implements FileMetadataExtractor {
             log.debug3(String.format("MARC_publisher: %s | publisherCleanName: %s | publisherShortCut %s",
                     MARC_publisher, publisherCleanName, publisherShortCut));
 
+
             String MARC_pdf =  String.format("/%s/%s/%s/%s", COLLECTION_NAME, publisherShortCut, MARC_bookid, MARC_bookid);
 
             // Only count metadata when there is a PDF file
@@ -202,13 +203,12 @@ public class MarcXmlToMarcBinarySchemaHelper implements FileMetadataExtractor {
                 am.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_JOURNAL);
             }
 
-            if (MARC_bookid.equals(MARC_chapterid)) {
+            if (MARC_bookid != null && MARC_chapterid != null && MARC_bookid.equals(MARC_chapterid)) {
                 log.debug3(String.format("Emit chapter: MARC_bookid %s | MARC_chapterid: %s ",
                         MARC_bookid, MARC_chapterid));
                 emitter.emitMetadata(cu, am);
-            } else {
-                log.debug3(String.format("Do not emit chapter: MARC_bookid %s | MARC_chapterid: %s ",
-                        MARC_bookid, MARC_chapterid));
+            } else if (MARC_chapterid == null) {
+                log.debug3(String.format("Do not emit chapter: MARC_bookid %s ", MARC_bookid));
             }
         }
         log.debug3(String.format("Metadata file source: %s, recordCount: %d", cu.getUrl(), recordCount));
