@@ -104,8 +104,16 @@
   </entry>
  <entry>
      <string>au_substance_url_pattern</string>
-   <!-- https://www.iastatedigitalpress.com/aglawdigest/article/8101/galley/7872/download -->
-     <string>"%s[^/]+/article.+/download$", base_url</string>
+   <!--
+   https://www.iastatedigitalpress.com/aglawdigest/article/8101/galley/7872/download
+   https://www.comicsgrid.com/article/3579/galley/5155/download
+   -->
+     <string>"%s([^/]+/)?article.+/download$", base_url</string>
+  </entry>
+  <entry>
+    <!--  Use this one to get PDF only, since the website has three format(not guaranteed)  -->
+    <string>plugin_substance_predicate_factory</string>
+    <string>org.lockss.plugin.janeway.JanewaySubstancePredicateFactory</string>
   </entry>
   <entry>
     <string>plugin_crawl_seed_factory</string>
