@@ -126,7 +126,7 @@ public class MarcXmlToMarcBinarySchemaHelper implements FileMetadataExtractor {
             String publisherCleanName = MARC_publisher.replace(",", "");
             String publisherShortCut = PublisherNameShortcutMap.get(publisherCleanName);
 
-            log.debu3(String.format("MARC_publisher: %s | publisherCleanName: %s | publisherShortCut %s",
+            log.debug3(String.format("MARC_publisher: %s | publisherCleanName: %s | publisherShortCut %s",
                     MARC_publisher, publisherCleanName, publisherShortCut));
 
             if (MARC_isbn != null) {
@@ -196,19 +196,19 @@ public class MarcXmlToMarcBinarySchemaHelper implements FileMetadataExtractor {
 
             String MARC_pdf =  String.format("%s/%s/%s/%s", COLLECTION_NAME, publisherShortCut, MARC_bookid, MARC_bookid);
 
-            log.debu3("MARC_pdf: " + MARC_pdf);
+            log.debug3("MARC_pdf: " + MARC_pdf);
 
             if (MARC_bookid != null && MARC_chapterid != null ) {
-                log.debu3(String.format("Emit chapter: MARC_bookid %s | MARC_chapterid: %s ",
+                log.debug3(String.format("Emit chapter: MARC_bookid %s | MARC_chapterid: %s ",
                         MARC_bookid, MARC_chapterid));
             } else if (MARC_chapterid == null) {
-                log.debu3(String.format("Do not emit chapter: MARC_bookid %s ", MARC_bookid));
+                log.debug3(String.format("Do not emit chapter: MARC_bookid %s ", MARC_bookid));
             }
 
             if (MARC_pdf != null) {
                 String cuBase = FilenameUtils.getFullPath(cu.getUrl());
                 String fullPathFile = UrlUtil.minimallyEncodeUrl(cuBase + MARC_pdf + ".pdf");
-                log.debu3("MARC_pdf: " + MARC_pdf + ", fullPathFile = " + fullPathFile);
+                log.debug3("MARC_pdf: " + MARC_pdf + ", fullPathFile = " + fullPathFile);
                 am.put(MetadataField.FIELD_ACCESS_URL, fullPathFile);
 
                 // Only emit the books metadata
@@ -217,21 +217,21 @@ public class MarcXmlToMarcBinarySchemaHelper implements FileMetadataExtractor {
                     bookIDs.add(MARC_bookid);
                     emitter.emitMetadata(cu, am);
                 } else {
-                    log.debu3("bookID already exist: " + MARC_bookid);
+                    log.debug3("bookID already exist: " + MARC_bookid);
                 }
 
             } else {
-                log.debu3("MARC_pdf field is not used");
+                log.debug3("MARC_pdf field is not used");
             }
 
             if (MARC_bookid != null && MARC_chapterid != null ) {
-                log.debu3(String.format("Emit chapter: MARC_bookid %s | MARC_chapterid: %s ",
+                log.debug3(String.format("Emit chapter: MARC_bookid %s | MARC_chapterid: %s ",
                         MARC_bookid, MARC_chapterid));
             } else if (MARC_chapterid == null) {
-                log.debu3(String.format("Do not emit chapter: MARC_bookid %s ", MARC_bookid));
+                log.debug3(String.format("Do not emit chapter: MARC_bookid %s ", MARC_bookid));
             }
         }
-        log.debu3(String.format("Metadata file source: %s, recordCount: %d", cu.getUrl(), recordCount));
+        log.debug3(String.format("Metadata file source: %s, recordCount: %d", cu.getUrl(), recordCount));
     }
 
     /**
@@ -253,7 +253,7 @@ public class MarcXmlToMarcBinarySchemaHelper implements FileMetadataExtractor {
                 char ind1 = field.getIndicator1();
                 char ind2 = field.getIndicator2();
 
-                log.debu3("Mrc Record Tag: " + tag + " Indicator 1: " + ind1 + " Indicator 2: " + ind2);
+                log.debug3("Mrc Record Tag: " + tag + " Indicator 1: " + ind1 + " Indicator 2: " + ind2);
 
                 List subfields = field.getSubfields();
                 Iterator i = subfields.iterator();
@@ -264,7 +264,7 @@ public class MarcXmlToMarcBinarySchemaHelper implements FileMetadataExtractor {
                     String data = subfield.getData();
 
                     if (code == subFieldCode) {
-                        log.debu3("Mrc Record Found Tag: " + tag + " Subfield code: " + code + " Data element: " + data);
+                        log.debug3("Mrc Record Found Tag: " + tag + " Subfield code: " + code + " Data element: " + data);
 
                         // clean up data before return
                         if (dataFieldCode.equals("700")) {
@@ -279,10 +279,10 @@ public class MarcXmlToMarcBinarySchemaHelper implements FileMetadataExtractor {
                     }
                 }
             } else {
-                log.debu3("Mrc Record getVariableField: " + dataFieldCode + " return null");
+                log.debug3("Mrc Record getVariableField: " + dataFieldCode + " return null");
             }
         } catch (NullPointerException e) {
-            log.debu3("Mrc Record DataFieldCode: " + dataFieldCode + " SubFieldCode: " + subFieldCode + " has error");
+            log.debug3("Mrc Record DataFieldCode: " + dataFieldCode + " SubFieldCode: " + subFieldCode + " has error");
         }
         return null;
     }
@@ -301,7 +301,7 @@ public class MarcXmlToMarcBinarySchemaHelper implements FileMetadataExtractor {
             String data = field.getData();
             return data;
         } else {
-            log.debu3("Mrc Record getMARCControlFieldData: " + dataFieldCode + " return null");
+            log.debug3("Mrc Record getMARCControlFieldData: " + dataFieldCode + " return null");
             return null;
         }
     }
