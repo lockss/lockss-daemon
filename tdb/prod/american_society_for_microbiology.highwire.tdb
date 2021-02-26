@@ -185,7 +185,7 @@
 
       au < asm.ASMDrupalPlugin ; released ; 2018 ; Applied and Environmental Microbiology Volume 84 ; 84 ; https://aem.asm.org/ >
       au < asm.ASMDrupalPlugin ; released ; 2019 ; Applied and Environmental Microbiology Volume 85 ; 85 ; https://aem.asm.org/ >
-      au < asm.ASMDrupalPlugin ; expected ; 2020 ; Applied and Environmental Microbiology Volume 86 ; 86 ; https://aem.asm.org/ >
+      au < asm.ASMDrupalPlugin ; manifest ; 2020 ; Applied and Environmental Microbiology Volume 86 ; 86 ; https://aem.asm.org/ >
 
     }
   
@@ -266,7 +266,7 @@
 
       au < asm.ASMDrupalPlugin ; released ; 2018 ; Clinical Microbiology Reviews Volume 31 ; 31 ; https://cmr.asm.org/ >
       au < asm.ASMDrupalPlugin ; released ; 2019 ; Clinical Microbiology Reviews Volume 32 ; 32 ; https://cmr.asm.org/ >
-      au < asm.ASMDrupalPlugin ; expected ; 2020 ; Clinical Microbiology Reviews Volume 33 ; 33 ; https://cmr.asm.org/ >
+      au < asm.ASMDrupalPlugin ; manifest ; 2020 ; Clinical Microbiology Reviews Volume 33 ; 33 ; https://cmr.asm.org/ >
 
     }
   
@@ -609,7 +609,7 @@
 
       au < asm.ASMDrupalPlugin ; released ; 2018 ; Journal of Bacteriology Volume 200 ; 200 ; https://jb.asm.org/ >
       au < asm.ASMDrupalPlugin ; released ; 2019 ; Journal of Bacteriology Volume 201 ; 201 ; https://jb.asm.org/ >
-      au < asm.ASMDrupalPlugin ; expected ; 2020 ; Journal of Bacteriology Volume 202 ; 202 ; https://jb.asm.org/ >
+      au < asm.ASMDrupalPlugin ; manifest ; 2020 ; Journal of Bacteriology Volume 202 ; 202 ; https://jb.asm.org/ >
 
     }
   
@@ -788,7 +788,7 @@
   
       au < asm.ASMDrupalPlugin ; released ; 2018 ; Journal of Virology Volume 92 ; 92 ; https://jvi.asm.org/ >
       au < asm.ASMDrupalPlugin ; released ; 2019 ; Journal of Virology Volume 93 ; 93 ; https://jvi.asm.org/ >
-      au < asm.ASMDrupalPlugin ; expected ; 2020 ; Journal of Virology Volume 94 ; 94 ; https://jvi.asm.org/ >
+      au < asm.ASMDrupalPlugin ; manifest ; 2020 ; Journal of Virology Volume 94 ; 94 ; https://jvi.asm.org/ >
 
     }
 
@@ -961,7 +961,7 @@
   
       au < asm.ASMDrupalPlugin ; released ; 2018 ; Molecular and Cellular Biology Volume 38 ; 38 ; https://mcb.asm.org/ >
       au < asm.ASMDrupalPlugin ; released ; 2019 ; Molecular and Cellular Biology Volume 39 ; 39 ; https://mcb.asm.org/ >
-      au < asm.ASMDrupalPlugin ; expected ; 2020 ; Molecular and Cellular Biology Volume 40 ; 40 ; https://mcb.asm.org/ >
+      au < asm.ASMDrupalPlugin ; manifest ; 2020 ; Molecular and Cellular Biology Volume 40 ; 40 ; https://mcb.asm.org/ >
 
     }
   
@@ -1025,7 +1025,7 @@
       #starts with volume 7
       au < asm.ASMDrupalPlugin ; released ; 2018 ; Microbiology Resource Announcements Volume 7 ; 7 ; https://mra.asm.org/ >
       au < asm.ASMDrupalPlugin ; released ; 2019 ; Microbiology Resource Announcements Volume 8 ; 8 ; https://mra.asm.org/ >
-      au < asm.ASMDrupalPlugin ; expected ; 2020 ; Microbiology Resource Announcements Volume 9 ; 9 ; https://mra.asm.org/ >
+      au < asm.ASMDrupalPlugin ; manifest ; 2020 ; Microbiology Resource Announcements Volume 9 ; 9 ; https://mra.asm.org/ >
 
     }
   
