@@ -136,7 +136,7 @@
     au < manifest ; exists ; 2005 ; 2005 ; Aktuelle Ernährungsmedizin Volume 30 ; 30 ; >
     au < manifest ; exists ; 2006 ; 2006 ; Aktuelle Ernährungsmedizin Volume 31 ; 31 ; >
     au < manifest ; exists ; 2007 ; 2007 ; Aktuelle Ernährungsmedizin Volume 32 ; 32 ; >
-    au < ready ; exists ; 2008 ; 2008 ; Aktuelle Ernährungsmedizin Volume 33 ; 33 ; >
+    au < crawling ; exists ; 2008 ; 2008 ; Aktuelle Ernährungsmedizin Volume 33 ; 33 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Aktuelle Ernährungsmedizin Volume 34 ; 34 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2010 ; 2010 ; Aktuelle Ernährungsmedizin Volume 35 ; 35 ; >
     au < finished ; finished ; 2011 ; 2011 ; Aktuelle Ernährungsmedizin Volume 36 ; 36 ; >
@@ -488,7 +488,7 @@
     au < manifest ; exists ; 2005 ; 2005 ; American Journal of Perinatology Volume 22 ; 22 ; >
     au < manifest ; exists ; 2006 ; 2006 ; American Journal of Perinatology Volume 23 ; 23 ; >
     au < manifest ; exists ; 2007 ; 2007 ; American Journal of Perinatology Volume 24 ; 24 ; >
-    au < ready ; exists ; 2008 ; 2008 ; American Journal of Perinatology Volume 25 ; 25 ; >
+    au < crawling ; exists ; 2008 ; 2008 ; American Journal of Perinatology Volume 25 ; 25 ; >
     au < finished ; manifest ; 2009 ; 2009 ; American Journal of Perinatology Volume 26 ; 26 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2010 ; 2010 ; American Journal of Perinatology Volume 27 ; 27 ; >
     au < finished ; finished ; 2011 ; 2011 ; American Journal of Perinatology Volume 28 ; 28 ; >
@@ -1358,7 +1358,7 @@
    au < manifest ; exists ; 2005 ; 2005 ; Endoscopy Volume 37 ; 37 ; >
    au < manifest ; exists ; 2006 ; 2006 ; Endoscopy Volume 38 ; 38 ; >
    au < manifest ; exists ; 2007 ; 2007 ; Endoscopy Volume 39 ; 39 ; >
-   au < ready ; exists ; 2008 ; 2008 ; Endoscopy Volume 40 ; 40 ; >
+   au < crawling ; exists ; 2008 ; 2008 ; Endoscopy Volume 40 ; 40 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Endoscopy Volume 41 ; 41 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Endoscopy Volume 42 ; 42 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2011 ; 2011 ; Endoscopy Volume 43 ; 43 ; reingest2.clockss.org:8085 >
@@ -1470,7 +1470,7 @@
     param[journal_id] = 10.1055/s-00000163
     comment[years] = 2008-current
 
-   au < ready ; exists ; 2008 ; 2008 ; Ergopraxis Volume 1 ; 1 ; >
+   au < crawling ; exists ; 2008 ; 2008 ; Ergopraxis Volume 1 ; 1 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Ergopraxis Volume 2 ; 2 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2010 ; 2010 ; Ergopraxis Volume 3 ; 3 ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2011 ; 2011 ; Ergopraxis Volume 4 ; 4 ; reingest2.clockss.org:8085 >
@@ -1499,7 +1499,7 @@
 
     au < manifest ; exists ; 2006 ; 2006 ; Ergoscience Volume 1 ; 1 ; >
     au < manifest ; exists ; 2007 ; 2007 ; Ergoscience Volume 2 ; 2 ; >
-    au < ready ; exists ; 2008 ; 2008 ; Ergoscience Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2008 ; 2008 ; Ergoscience Volume 3 ; 3 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Ergoscience Volume 4 ; 4 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2010 ; 2010 ; Ergoscience Volume 5 ; 5 ; >
 
@@ -1683,7 +1683,7 @@
    au < manifest ; exists ; 2005 ; 2005 ; Experimental and Clinical Endocrinology & Diabetes Volume 113 ; 113 ; >
    au < manifest ; exists ; 2006 ; 2006 ; Experimental and Clinical Endocrinology & Diabetes Volume 114 ; 114 ; >
    au < manifest ; exists ; 2007 ; 2007 ; Experimental and Clinical Endocrinology & Diabetes Volume 115 ; 115 ; >
-   au < ready ; exists ; 2008 ; 2008 ; Experimental and Clinical Endocrinology & Diabetes Volume 116 ; 116 ; >
+   au < crawling ; exists ; 2008 ; 2008 ; Experimental and Clinical Endocrinology & Diabetes Volume 116 ; 116 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Experimental and Clinical Endocrinology & Diabetes Volume 117 ; 117 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2010 ; 2010 ; Experimental and Clinical Endocrinology & Diabetes Volume 118 ; 118 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2011 ; 2011 ; Experimental and Clinical Endocrinology & Diabetes Volume 119 ; 119 ; reingest2.clockss.org:8085 >
@@ -2038,7 +2038,7 @@
    au < manifest ; exists ; 2005 ; 2005 ; Gesundheitswesen Das Volume 69 ; 69 ; >
    au < manifest ; exists ; 2006 ; 2006 ; Gesundheitswesen Das Volume 70 ; 70 ; >
    au < manifest ; exists ; 2007 ; 2007 ; Gesundheitswesen Das Volume 71 ; 71 ; >
-   au < ready ; exists ; 2008 ; 2008 ; Gesundheitswesen Das Volume 72 ; 72 ; >
+   au < crawling ; exists ; 2008 ; 2008 ; Gesundheitswesen Das Volume 72 ; 72 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Gesundheitswesen Das Volume 73 ; 73 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Gesundheitswesen Das Volume 74 ; 74 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2011 ; 2011 ; Gesundheitswesen Das Volume 75 ; 75 ; reingest2.clockss.org:8085 >
