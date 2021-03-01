@@ -14,7 +14,7 @@
       name = Open Library of Humanities
     >
 
-    plugin = org.lockss.plugin.janeway.openlibraryhumanities.ClockssOpenLibraryHumanitiesPlugin
+    plugin = org.lockss.plugin.janeway.olh.ClockssOpLHPlugin
     param[base_url] = https://www.comicsgrid.com/
     param[oai_granularity] = YYYY-MM-DD
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; hidden[proxy] >
