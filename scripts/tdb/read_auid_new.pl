@@ -2210,6 +2210,28 @@ while (my $line = <>) {
 #    }
 #    sleep(4);
 #
+#  } elsif ($plugin eq "ClockssRSCBooksPlugin" || $plugin eq "RSCBooksPlugin" ) {
+#    $url = sprintf("%sen/ebooks/lockss?copyrightyear=%d",
+#      $param{base_url}, $param{year});
+#    $man_url = uri_unescape($url);
+#    my $req = HTTP::Request->new(GET, $man_url);
+#    my $resp = $ua->request($req);
+#    if ($resp->is_success) {
+#      my $man_contents = $resp->content;
+#      if ($req->url ne $resp->request->uri) {
+#              $vol_title = $resp->request->uri;
+#              $result = "Redirected";
+#      } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/en\/ebooks\/lockss\?isbn=9/)) {
+#          $vol_title = "Royal Society of Chemistry Books $param{year}";
+#          $result = "Manifest"
+#      } else {
+#        $result = "--NO_TAG--"
+#      }
+#    } else {
+#      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+#    }
+#    sleep(4);
+#
   } elsif ($plugin eq "ClockssRSCBooksPlugin" || $plugin eq "RSCBooksPlugin" ) {
     $url = sprintf("%sen/ebooks/lockss?copyrightyear=%d",
       $param{base_url}, $param{year});
@@ -2222,10 +2244,16 @@ while (my $line = <>) {
               $vol_title = $resp->request->uri;
               $result = "Redirected";
       } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/en\/ebooks\/lockss\?isbn=9/)) {
-          $vol_title = "Royal Society of Chemistry Books $param{year}";
+          $vol_title = "RSC Books $param{year}";
           $result = "Manifest"
       } else {
-        $result = "--NO_TAG--"
+        if ($man_contents =~ m/Access Denied/) {
+          $result = "--ACCESS_DENIED--";
+        } elsif ($man_contents !~ m/$lockss_tag/) {
+          $result = "--NO_TAG--";
+        } else {
+          $result = "--NO_ISSUE--";
+        }
       }
     } else {
       $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
