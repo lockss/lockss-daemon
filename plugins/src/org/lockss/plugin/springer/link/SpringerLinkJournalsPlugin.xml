@@ -97,10 +97,6 @@
     <string>plugin_url_fetcher_factory</string>
     <string>org.lockss.plugin.base.HttpToHttpsUrlFetcherFactory</string>
   </entry>
-  <entry>
-    <string>au_url_normalizer</string>
-    <string>org.lockss.plugin.BaseUrlHttpHttpsUrlNormalizer</string>
-  </entry> 
 <!--  end http to https transition specific support  -->  
   <entry>
     <string>au_feature_urls</string>
@@ -127,7 +123,7 @@
          Redirected to excluded URL:
          https://idp.springer.com/authorize?response_type=cookie&client_id=springerlink&redirect_uri=https://link.springer.com/article/10.1023/B:JOGC.0000013193.80539.d1
       -->
-      <string>1,"^https://idp.springer.com"</string>
+      <string>1,"^https?://idp.springer.com"</string>
       <string>1,"^https?://(%s|%s|(rd|static-content)\.springer\.com)/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?config=[^/]*)?$", url_host(base_url), url_host(download_url)</string>
       <string>2,"\?view=classic$",  url_host(base_url)</string>
       <string>1,"^%sauid=.*$", base_url</string>
@@ -135,7 +131,7 @@
       <string>1,"^https?://%s/download/epub/",  url_host(base_url)</string>
       <string>1,"^https?://%s/(content|article)/",  url_host(base_url)</string>
       <string>1,"^https?://%s/(springerlink-)?static/", url_host(base_url)</string>
-      <string>1,"^https?://(%s|etatic-content\.springer\.com/).*\.pdf$", url_host(base_url)</string>
+      <string>1,"^https?://(%s|static-content\.springer\.com/).*\.pdf$", url_host(base_url)</string>
     </list>
   </entry>
   <entry>
