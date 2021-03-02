@@ -185,12 +185,12 @@ public class MarcXmlToMarcBinarySchemaHelper implements FileMetadataExtractor {
             char publication_type = leader.getImplDefined1()[0];
 
             if (publication_type == 'm' || publication_type == 'a') {
-                am.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.PUBLICATION_TYPE_BOOK);
+                am.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_BOOKVOLUME);
                 am.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_BOOK);
             }
 
             if (publication_type == 's' || publication_type == 'b') {
-                am.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.PUBLICATION_TYPE_JOURNAL);
+                am.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_JOURNALARTICLE);
                 am.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_JOURNAL);
             }
 
