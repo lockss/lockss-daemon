@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2021 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -1869,7 +1869,23 @@ public class PluginManager
     }
     Plugin oldPlug = pluginMap.get(pluginKey);
     if (oldPlug != null) {
-      log.debug("Stopping old plugin " + oldPlug.getPluginName());
+      String oldName = oldPlug.getPluginName();
+      String name = plugin.getPluginName();
+      // Alert on new plugin version
+      String nameStr = name;
+      if (!StringUtil.equalStrings(oldName, name)) {
+        nameStr = name + " (was: " + oldName + ")";
+      }
+      String feats = PluginManager.pluginFeatureVersionsString(plugin);
+      if (StringUtil.isNullString(feats)) {
+        raiseAlert(Alert.cacheAlert(Alert.PLUGIN_RELOADED),
+                   String.format("Plugin reloaded: %s", name));
+      } else {
+        raiseAlert(Alert.cacheAlert(Alert.PLUGIN_RELOADED),
+                   String.format("Plugin reloaded: %s\nFeature versions:\n%s",
+                                 name, feats));
+      }
+      log.debug("Stopping old plugin " + oldName);
       oldPlug.stopPlugin();
     }
     pluginMap.put(pluginKey, plugin);
@@ -1880,6 +1896,23 @@ public class PluginManager
     log.debug("Removing plugin " + key);
     pluginMap.remove(key);
     pluginfoMap.remove(key);
+  }
+
+  /** Return a string describing the plugin feature versions */
+  public static String pluginFeatureVersionsString(Plugin plug) {
+    StringBuilder sb = new StringBuilder();
+    for (Plugin.Feature feat : Plugin.Feature.values()) {
+      String val = plug.getFeatureVersion(feat);
+      if (!StringUtil.isNullString(val)) {
+        if (sb.length() != 0) {
+          sb.append("\n");
+        }
+        sb.append(feat);
+        sb.append(": ");
+        sb.append(val);
+      }
+    }
+    return sb.toString();
   }
 
   /**
@@ -3139,12 +3172,18 @@ public class PluginManager
       try {
 	// Validate and bless the JAR file from the CU.
 	blessedJar = jarValidator.getBlessedJar(cu);
-	log.debug2("Plugin jar: " + cu.getUrl() + " -> " + blessedJar);
+	log.debug2("Plugin jar: " + url + " -> " + blessedJar);
       } catch (IOException ex) {
 	log.error("Error processing jar file: " + url, ex);
+        raiseAlert(Alert.cacheAlert(Alert.PLUGIN_JAR_NOT_VALIDATED),
+                   String.format("Error validating plugin jar: %s\n%s",
+                                 url, ex.getMessage()));
 	return;
       } catch (JarValidator.JarValidationException ex) {
-	log.error("CachedUrl did not validate: " + cu, ex);
+	log.error("Plugin jar did not validate: " + url, ex);
+        raiseAlert(Alert.cacheAlert(Alert.PLUGIN_JAR_NOT_VALIDATED),
+                   String.format("Plugin jar could not be validated: %s\n%s",
+                                 url, ex.getMessage()));
 	return;
       }
     }
