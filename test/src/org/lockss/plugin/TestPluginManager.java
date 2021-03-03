@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2021 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,6 +33,7 @@ import java.net.*;
 import java.util.*;
 import java.security.KeyStore;
 import junit.framework.*;
+import org.lockss.alert.*;
 import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
@@ -85,13 +82,13 @@ public class TestPluginManager extends LockssTestCase {
   static String p1a3param = p1param + mauauidKey3 + ".";
 
   private String pluginJar;
-  private String signAlias = "goodguy";
   private String pubKeystore = "org/lockss/test/public.keystore";
   private String password = "f00bar";
 
   private String tempDirPath;
 
   MyPluginManager mgr;
+  private MockAlertManager alertMgr;
 
   public TestPluginManager(String msg) {
     super(msg);
@@ -106,6 +103,8 @@ public class TestPluginManager extends LockssTestCase {
 
     theDaemon.setPluginManager(mgr);
     theDaemon.setDaemonInited(true);
+    alertMgr = new MockAlertManager();
+    theDaemon.setAlertManager(alertMgr);
 
     // Prepare the loadable plugin directory property, which is
     // created by mgr.startService()
@@ -1673,10 +1672,6 @@ public class TestPluginManager extends LockssTestCase {
       new MyMockRegistryArchivalUnit(ListUtil.list(badplug));
     MyMockRegistryArchivalUnit mmau2 =
       new MyMockRegistryArchivalUnit(ListUtil.list(badplug, pluginJar));
-    // Make processOneRegistryAu throw on the first au
-    mgr.processOneRegistryAuThrowIf(mmau1);
-    // Make processOneRegistryJar throw on the first jar in the second au
-    mgr.processOneRegistryJarThrowIf(mmau2.getNthUrl(1));
     assertNull(mgr.getPlugin(pluginKey));
     mgr.processRegistryAus(ListUtil.list(mmau1, mmau2));
     // ensure that the one plugin was still loaded
@@ -1687,6 +1682,15 @@ public class TestPluginManager extends LockssTestCase {
     assertEquals(mmau2.getNthUrl(2), info.getCuUrl());
     assertTrue(info.isOnLoadablePath());
     assertSame(mockPlugin, info.getPlugin());
+    assertEquals(2, alertMgr.getAlerts().size());
+    Alert alert1 = alertMgr.getAlerts().get(0);
+    assertEquals("PluginJarNotValidated", alert1.getAttribute(Alert.ATTR_NAME));
+    assertMatchesRE("Plugin jar could not be validated: http://foo.bar/test1.jar\n.*No issuer certificate",
+                    alert1.getAttribute(Alert.ATTR_TEXT).toString());
+    Alert alert2 = alertMgr.getAlerts().get(1);
+    assertEquals("PluginJarNotValidated", alert2.getAttribute(Alert.ATTR_NAME));
+    assertMatchesRE("Plugin jar could not be validated: http://foo.bar/test1.jar\n.*No issuer certificate",
+                    alert2.getAttribute(Alert.ATTR_TEXT).toString());
   }
 
   // This test loads two versions of the same plugin.  Because it doesn't
@@ -1745,6 +1749,14 @@ public class TestPluginManager extends LockssTestCase {
     assertSame(plugin2, au2.getPlugin());
     assertEquals("V2: http://example.com/a/, 1942", au2.getName());
     assertEquals(0, mgr.getNumFailedAuRestarts());
+
+    assertEquals(2, alertMgr.getAlerts().size());
+    Alert alert1 = alertMgr.getAlerts().get(0);
+    assertEquals("AuCreated", alert1.getAttribute(Alert.ATTR_NAME));
+    Alert alert2 = alertMgr.getAlerts().get(1);
+    assertEquals("PluginReloaded", alert2.getAttribute(Alert.ATTR_NAME));
+    assertEquals("Plugin reloaded: Absinthe Literary Review",
+                    alert2.getAttribute(Alert.ATTR_TEXT));
   }
 
   public void testStartAuLoadsCdnStems() throws Exception {
