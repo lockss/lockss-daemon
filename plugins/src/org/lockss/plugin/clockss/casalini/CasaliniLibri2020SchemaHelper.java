@@ -143,8 +143,9 @@ s
         } else {
           am.put(MetadataField.FIELD_AUTHOR, MARC_author);
         }
-        // They did not provide start page, just total number of page, 
-        am.put(MetadataField.FIELD_END_PAGE, MARC_total_page);
+        // They did not provide start page, just total number of page,
+        // start page and end page will cause it thinks it is chapter, instead of whole book
+        //am.put(MetadataField.FIELD_END_PAGE, MARC_total_page);
 
         String cuBase = FilenameUtils.getFullPath(cu.getUrl());
         String fullPathFile = UrlUtil.minimallyEncodeUrl(cuBase + MARC_pdf + ".pdf");
