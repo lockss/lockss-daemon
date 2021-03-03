@@ -42,31 +42,32 @@ public class MarcXmlToMarcBinarySchemaHelper implements FileMetadataExtractor {
 
     private static final Map<String,String> PublisherNameShortcutMap = new HashMap<String,String>();
     static {
-        PublisherNameShortcutMap.put("Edizioni dell'Ateneo", "ATENEO");
-        PublisherNameShortcutMap.put("Cadmo", "CADMO");
-        PublisherNameShortcutMap.put("Centro per la filosofia italiana", "CADMO");
-        PublisherNameShortcutMap.put("The Wolfsonian Foundation", "CADMO");
-        PublisherNameShortcutMap.put("Cadmo", "CADMO");
-        PublisherNameShortcutMap.put("Amalthea", "CADMO");
-        PublisherNameShortcutMap.put("Casalini libri", "CASA");
-        PublisherNameShortcutMap.put("Casalini Libri", "CASA");
-        PublisherNameShortcutMap.put("CLUEB", "CLUEB");
-        PublisherNameShortcutMap.put("Jaca book", "CLUEB");
-        PublisherNameShortcutMap.put("Dipartimento di filosofia, Università di Bologna", "CLUEB");
-        PublisherNameShortcutMap.put("Petite plaisance", "CLUEB");
-        PublisherNameShortcutMap.put("Eum", "CLUEB");
-        PublisherNameShortcutMap.put("[s.n.]","CLUEB");
-        PublisherNameShortcutMap.put("Regione Emilia-Romagna", "CLUEB");
-        PublisherNameShortcutMap.put("Ministero per i beni e le attività culturali Direzione generale per gli archivi", "CLUEB");
-        PublisherNameShortcutMap.put("Faenza editrice", "CLUEB");
-        PublisherNameShortcutMap.put("Università La Sapienza", "CLUEB");
-        PublisherNameShortcutMap.put("Giardini editori e stampatori", "GIARDI");
-        PublisherNameShortcutMap.put("Gruppo editoriale internazionale", "GEI");
-        PublisherNameShortcutMap.put("Giardini", "GIARDI");
-        PublisherNameShortcutMap.put("Giardini editori e stampatori", "GIARDI");
-        PublisherNameShortcutMap.put("Istituti editoriali e poligrafici internazionali", "IEPI");
-        PublisherNameShortcutMap.put("Università degli studi di Macerata", "IEPI");
-        PublisherNameShortcutMap.put("Antenore", "IEPI");
+        PublisherNameShortcutMap.put("Edizioni dell'Ateneo".toLowerCase(), "ATENEO");
+        PublisherNameShortcutMap.put("Cadmo".toLowerCase(), "CADMO");
+        PublisherNameShortcutMap.put("Centro per la filosofia italiana".toLowerCase(), "CADMO");
+        PublisherNameShortcutMap.put("The Wolfsonian Foundation".toLowerCase(), "CADMO");
+        PublisherNameShortcutMap.put("Cadmo".toLowerCase(), "CADMO");
+        PublisherNameShortcutMap.put("Amalthea".toLowerCase(), "CADMO");
+        PublisherNameShortcutMap.put("Casalini libri".toLowerCase(), "CASA");
+        PublisherNameShortcutMap.put("Casalini Libri".toLowerCase(), "CASA");
+        PublisherNameShortcutMap.put("CLUEB".toLowerCase(), "CLUEB");
+        PublisherNameShortcutMap.put("Jaca book".toLowerCase(), "CLUEB");
+        PublisherNameShortcutMap.put("Dipartimento di filosofia Università di Bologna".toLowerCase(), "CLUEB");
+        PublisherNameShortcutMap.put("Petite plaisance".toLowerCase(), "CLUEB");
+        PublisherNameShortcutMap.put("Eum".toLowerCase(), "CLUEB");
+        PublisherNameShortcutMap.put("[s.n.]".toLowerCase(),"CLUEB");
+        PublisherNameShortcutMap.put("Regione Emilia-Romagna".toLowerCase(), "CLUEB");
+        PublisherNameShortcutMap.put("Ministero per i beni e le attività culturali Direzione generale per gli archivi".toLowerCase(), "CLUEB");
+        PublisherNameShortcutMap.put("Faenza editrice".toLowerCase(), "CLUEB");
+        PublisherNameShortcutMap.put("Università La Sapienza".toLowerCase(), "CLUEB");
+        PublisherNameShortcutMap.put("Uranoscopo".toLowerCase(), "CLUEB");
+        PublisherNameShortcutMap.put("Giardini editori e stampatori".toLowerCase(), "GIARDI");
+        PublisherNameShortcutMap.put("Gruppo editoriale internazionale".toLowerCase(), "GEI");
+        PublisherNameShortcutMap.put("Giardini".toLowerCase(), "GIARDI");
+        PublisherNameShortcutMap.put("Giardini editori e stampatori".toLowerCase(), "GIARDI");
+        PublisherNameShortcutMap.put("Istituti editoriali e poligrafici internazionali".toLowerCase(), "IEPI");
+        PublisherNameShortcutMap.put("Università degli studi di Macerata".toLowerCase(), "IEPI");
+        PublisherNameShortcutMap.put("Antenore".toLowerCase(), "IEPI");
     };
 
 
@@ -147,7 +148,7 @@ public class MarcXmlToMarcBinarySchemaHelper implements FileMetadataExtractor {
                     replace(";", "").
                     replace(":", "")
                     .trim();
-            String publisherShortCut = PublisherNameShortcutMap.get(publisherCleanName);
+            String publisherShortCut = PublisherNameShortcutMap.get(publisherCleanName.toLowerCase());
 
             if (publisherShortCut == null) {
                 log.debug(String.format("publisherShortCut is null: MARC_publisher: %s | publisherCleanName: %s",
