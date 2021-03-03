@@ -30,24 +30,27 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.berghahn;
+package org.lockss.plugin.pubfactory;
 
-import java.io.*;
-
-import org.apache.commons.io.FileUtils;
-import org.lockss.util.*;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.FilterFactory;
-import org.lockss.test.*;
+import org.lockss.test.LockssTestCase;
+import org.lockss.test.MockArchivalUnit;
+import org.lockss.test.StringInputStream;
+import org.lockss.util.Constants;
+import org.lockss.util.StringUtil;
 
-public class TestBerghahnHtmlHashFilterFactory extends LockssTestCase {
-  private BerghahnHtmlHashFilterFactory fact;
+import java.io.IOException;
+import java.io.InputStream;
+
+public class TestPubFactoryHtmlHashFilterFactory extends LockssTestCase {
+  private PubFactoryHtmlHashFilterFactory fact;
   private MockArchivalUnit bau;
 
   public void setUp() throws Exception {
     super.setUp();
-    fact = new BerghahnHtmlHashFilterFactory();
+    fact = new PubFactoryHtmlHashFilterFactory();
   }
   
   private void doFilterTest(ArchivalUnit au, 

@@ -30,15 +30,18 @@ in this Software without prior written authorization from Stanford University.
 
  */
 
-package org.lockss.plugin.berghahn;
+package org.lockss.plugin.pubfactory;
 
-import java.util.Iterator;
-import java.util.regex.*;
-
-import org.lockss.daemon.*;
-import org.lockss.extractor.*;
+import org.lockss.daemon.PluginException;
+import org.lockss.extractor.ArticleMetadataExtractor;
+import org.lockss.extractor.ArticleMetadataExtractorFactory;
+import org.lockss.extractor.BaseArticleMetadataExtractor;
+import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
+
+import java.util.Iterator;
+import java.util.regex.Pattern;
 
 /*
  * https://www.berghahnjournals.com/downloadpdf/journals/boyhood-studies/10/1/bhs100105.pdf
@@ -51,9 +54,9 @@ import org.lockss.util.Logger;
  * https://www.berghahnjournals.com/view/journals/boyhood-studies/10/1/bhs100101.xml?&pdfVersion=true (WHAAA?)
  */
 
-public class BerghahnArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
+public class PubFactoryArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
 
-  private static final Logger log = Logger.getLogger(BerghahnArticleIteratorFactory.class);
+  private static final Logger log = Logger.getLogger(PubFactoryArticleIteratorFactory.class);
 
   // don't set the ROOT_TEMPLATE - it is just base_url
 

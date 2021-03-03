@@ -1872,19 +1872,22 @@ public class PluginManager
       String oldName = oldPlug.getPluginName();
       String name = plugin.getPluginName();
       // Alert on new plugin version
-      String nameStr = name;
+      StringBuilder sb = new StringBuilder();
+      sb.append("Plugin reloaded: ");
+      sb.append(name);
       if (!StringUtil.equalStrings(oldName, name)) {
-        nameStr = name + " (was: " + oldName + ")";
+        sb.append(" (was ");
+        sb.append(oldName);
+        sb.append(")");
       }
+      sb.append("\nVersion: ");
+      sb.append(plugin.getVersion());
       String feats = PluginManager.pluginFeatureVersionsString(plugin);
-      if (StringUtil.isNullString(feats)) {
-        raiseAlert(Alert.cacheAlert(Alert.PLUGIN_RELOADED),
-                   String.format("Plugin reloaded: %s", name));
-      } else {
-        raiseAlert(Alert.cacheAlert(Alert.PLUGIN_RELOADED),
-                   String.format("Plugin reloaded: %s\nFeature versions:\n%s",
-                                 name, feats));
+      if (!StringUtil.isNullString(feats)) {
+        sb.append("\nFeature versions:\n");
+        sb.append(feats);
       }
+      raiseAlert(Alert.cacheAlert(Alert.PLUGIN_RELOADED), sb.toString());
       log.debug("Stopping old plugin " + oldName);
       oldPlug.stopPlugin();
     }
