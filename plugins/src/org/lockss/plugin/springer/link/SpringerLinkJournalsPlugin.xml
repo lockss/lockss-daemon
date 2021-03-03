@@ -14,7 +14,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>51</string>
+    <string>52</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -86,7 +86,10 @@
   <!-- CrawlSeed takes precedence but leave it in for safety in case daemon expects it somewhere -->
   <entry>
     <string>au_start_url</string>
-    <string>"%slockss.txt", base_url</string>
+    <list>
+      <string>"%slockss.txt", to_http(base_url)</string>
+      <string>"%slockss.txt", to_https(base_url)</string>
+    </list>
   </entry>
 <!--  support http to https transition for existing AUs -->  
   <entry>
@@ -126,7 +129,7 @@
       <string>1,"^https?://idp.springer.com"</string>
       <string>1,"^https?://(%s|%s|(rd|static-content)\.springer\.com)/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?config=[^/]*)?$", url_host(base_url), url_host(download_url)</string>
       <string>2,"\?view=classic$",  url_host(base_url)</string>
-      <string>1,"^%sauid=.*$", base_url</string>
+      <string>1,"^https?://%s/auid=.*$", url_host(base_url)</string>
       <string>2,"^https?://%s/content/pdf/(bbm|bfm)",  url_host(base_url)</string>
       <string>1,"^https?://%s/download/epub/",  url_host(base_url)</string>
       <string>1,"^https?://%s/(content|article)/",  url_host(base_url)</string>

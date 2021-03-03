@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>28</string>
+    <string>29</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -67,7 +67,10 @@
     <string>au_start_url</string>
     <!-- Start url is http(s)://springer.link.com/[eisbn] which redirects to http(s)://springer.link.com/book/[doi]
     We would rather hard code in a eisbn then a DOI-->
-    <string>"%s%s", base_url, book_eisbn</string>
+    <list>
+      <string>"%s%s", to_http(base_url), book_eisbn</string>
+      <string>"%s%s", to_https(base_url), book_eisbn</string>
+    </list>
   </entry>
   <entry>
     <string>au_permission_url</string>
@@ -83,7 +86,7 @@
     <list>
       <string>1,"^https?://(%s|(rd|static-content)\.springer\.com)/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?config=[^/]*)?$", url_host(base_url)</string>
       <string>2,"^https?://%s/content/pdf/(bbm|bfm)",  url_host(base_url)</string>
-      <string>1,"^%sauid=.*$", base_url</string>
+      <string>1,"^https?://%s/auid=.*$", url_host(base_url)</string>
       <string>1,"^https?://%s/download/epub/",  url_host(base_url)</string>
       <string>1,"^https?://%s/(content|chapter|book|article|referencework)/",  url_host(base_url)</string>
       <string>1,"^https?://(%s|static-content\.springer\.com/).*\.pdf$", url_host(base_url)</string>
