@@ -1,0 +1,26 @@
+{
+
+  publisher <
+    name = Max Planck Institute for Demographic Research ;
+    info[contract] = 2020 ;
+    info[tester] = S ;
+    info[platform] = Source
+  >
+
+
+  {
+
+    title <
+      name = Max Planck Institute for Demographic Research Source Content
+    >
+
+    plugin = org.lockss.plugin.clockss.mpidr.ClockssMPIDRSourcePlugin
+    #param[base_url] = https://clockss-test.lockss.org/sourcefiles/mpidr-released/
+    hidden[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[directory] >
+
+    au < readySource ; crawling ; 2020 ; Max Planck Institute for Demographic Research Source Content 2021_01 ; 2021_01 >
+
+  }
+
+}
