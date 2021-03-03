@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2021 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -291,6 +287,9 @@ public class TestDefinablePlugin extends LockssTestCase {
 		 definablePlugin.getFeatureVersion(Plugin.Feature.Metadata));
     assertEquals("Substance_farty-two",
 		 definablePlugin.getFeatureVersion(Plugin.Feature.Substance));
+
+    assertEquals("Poll: Poll_2\nMetadata: Metadata_7\nSubstance: Substance_farty-two",
+                 PluginManager.pluginFeatureVersionsString(definablePlugin));
   }
 
   public void testGetPluginId() throws Exception {

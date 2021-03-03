@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2021 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -102,6 +98,14 @@ public class Alert {
 
   public static final Alert PLUGIN_NOT_LOADED =
     new Alert("PluginNotLoaded").
+    setAttribute(ATTR_SEVERITY, SEVERITY_WARNING);
+
+  public static final Alert PLUGIN_RELOADED =
+    new Alert("PluginReloaded").
+    setAttribute(ATTR_SEVERITY, SEVERITY_INFO);
+
+  public static final Alert PLUGIN_JAR_NOT_VALIDATED =
+    new Alert("PluginJarNotValidated").
     setAttribute(ATTR_SEVERITY, SEVERITY_WARNING);
 
   public static final Alert AU_CREATED =
