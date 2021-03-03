@@ -1755,7 +1755,7 @@ public class TestPluginManager extends LockssTestCase {
     assertEquals("AuCreated", alert1.getAttribute(Alert.ATTR_NAME));
     Alert alert2 = alertMgr.getAlerts().get(1);
     assertEquals("PluginReloaded", alert2.getAttribute(Alert.ATTR_NAME));
-    assertEquals("Plugin reloaded: Absinthe Literary Review",
+    assertEquals("Plugin reloaded: Absinthe Literary Review\nVersion: 2",
                     alert2.getAttribute(Alert.ATTR_TEXT));
   }
 
