@@ -30,15 +30,17 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.berghahn;
+package org.lockss.plugin.pubfactory;
 
-
-import java.io.IOException;
 
 import org.lockss.daemon.Crawler.CrawlerFacade;
-import org.lockss.plugin.*;
+import org.lockss.plugin.FetchedUrlData;
+import org.lockss.plugin.UrlConsumer;
+import org.lockss.plugin.UrlConsumerFactory;
 import org.lockss.plugin.base.SimpleUrlConsumer;
 import org.lockss.util.Logger;
+
+import java.io.IOException;
 
 /**
  * UNUSED CURRENTLY
@@ -49,18 +51,18 @@ import org.lockss.util.Logger;
  * after discussion we've decided to leave both versions in - so that if the pdf is ever linked to direclty, we have it
  * 
  */
-public class BerghahnUrlConsumerFactory implements UrlConsumerFactory {
-  private static final Logger log = Logger.getLogger(BerghahnUrlConsumerFactory.class);
+public class PubFactoryUrlConsumerFactory implements UrlConsumerFactory {
+  private static final Logger log = Logger.getLogger(PubFactoryUrlConsumerFactory.class);
   
   @Override
   public UrlConsumer createUrlConsumer(CrawlerFacade crawlFacade,
       FetchedUrlData fud) {
-    return new BerghahnUrlConsumer(crawlFacade, fud);
+    return new PubfactoryUrlConsumer(crawlFacade, fud);
   }
   
-  public class BerghahnUrlConsumer extends SimpleUrlConsumer {
+  public class PubfactoryUrlConsumer extends SimpleUrlConsumer {
     
-    public BerghahnUrlConsumer(CrawlerFacade facade, FetchedUrlData fud) {
+    public PubfactoryUrlConsumer(CrawlerFacade facade, FetchedUrlData fud) {
       super(facade, fud);
     }
     

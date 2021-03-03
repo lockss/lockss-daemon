@@ -30,13 +30,10 @@ in this Software without prior written authorization from Stanford University.
 
  */
 
-package org.lockss.plugin.berghahn;
+package org.lockss.plugin.pubfactory;
 
-import java.io.InputStream;
-import java.io.Reader;
-import java.util.Vector;
-
-import org.htmlparser.*;
+import org.htmlparser.Node;
+import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.OrFilter;
 import org.htmlparser.filters.TagNameFilter;
 import org.htmlparser.tags.Bullet;
@@ -50,9 +47,13 @@ import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.FilterFactory;
 import org.lockss.util.ReaderInputStream;
 
+import java.io.InputStream;
+import java.io.Reader;
+import java.util.Vector;
+
 // Keeps contents only (includeNodes), then hashes out unwanted nodes 
 // within the content (excludeNodes).
-public class BerghahnHtmlHashFilterFactory implements FilterFactory {
+public class PubFactoryHtmlHashFilterFactory implements FilterFactory {
      
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,

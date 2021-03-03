@@ -30,26 +30,25 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.berghahn;
-
-import java.io.*;
+package org.lockss.plugin.pubfactory;
 
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
-
-import org.lockss.daemon.*;
+import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
-import org.lockss.plugin.*;
+import org.lockss.plugin.CachedUrl;
+
+import java.io.IOException;
 
 
-public class BerghahnHtmlMetadataExtractorFactory implements FileMetadataExtractorFactory {
+public class PubFactoryHtmlMetadataExtractorFactory implements FileMetadataExtractorFactory {
   
 
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(
       MetadataTarget target, String contentType)
           throws PluginException {
-    return new BerghahnHtmlMetadataExtractor();
+    return new PubfactoryHtmlMetadataExtractor();
   }
   
   /*
@@ -77,7 +76,7 @@ public class BerghahnHtmlMetadataExtractorFactory implements FileMetadataExtract
    * <meta name="dc.type" 
    * <meta name="description" 
    */
-  public static class BerghahnHtmlMetadataExtractor 
+  public static class PubfactoryHtmlMetadataExtractor
     implements FileMetadataExtractor {
     
     // Map HighWire HTML meta tag names to cooked metadata fields

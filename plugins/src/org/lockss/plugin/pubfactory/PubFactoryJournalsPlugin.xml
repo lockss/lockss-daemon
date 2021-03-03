@@ -1,0 +1,143 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>development</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.pubfactory.PubFactoryJournalsPlugin</string>
+  </entry>
+  <entry>
+    <string>required_daemon_version</string>
+    <string>1.67.3</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"PubFactory Journals Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>PubFactory Journals Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_fetch_rate_limiter_source</string>
+    <string>host:base_url</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?v=[^/]*)?$", base_url_host</string>
+      <string>4,"^%s", base_url</string>
+      <string>2,"^%s.*print$", base_url</string>
+      <!--  looks like an error - pdf tab while on pdf tab view has ?amp -->
+      <string>2,"^%s.*\.xml\?&amp;pdfVersion=true$", base_url</string>
+      <!--  citation overlay and ris download have odd normalization; allow for both -->
+      <string>1,"^%scite/(\$002f)?journals(\$002f|/)%s(\$002f|/)%s", base_url, journal_id, volume_name</string>
+      <string>1,"^%scite:exportcitation/ris\?t:ac=\$002fjournals(\$002f|/)%s(\$002f|/)%s", base_url, journal_id, volume_name</string>
+      <!-- https://journals.ametsoc.org/view/journals/eint/24/2/eiD200001.xml -->
+      <string>1,"^%s(view|downloadpdf|abstract)/journals/%s/%s", base_url, journal_id, volume_name</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <!-- https://www.berghahnjournals.com/lockss-manifest/journal/democratic-theory/volume/4 -->
+    <!-- https://journals.ametsoc.org/lockss-manifest/journal/hydr/volume/16 -->
+    <string>"%slockss-manifest/journal/%s/volume/%s", base_url, journal_id, volume_name</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_id</key>
+        <displayName>Journal Identifier</displayName>
+        <description>Identifier for journal</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume_name</key>
+        <displayName>Volume Name</displayName>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <!-- https://journals.ametsoc.org/downloadpdf/journals/eint/24/2/eiD200001.xml -->
+      <string>"^%sdownloadpdf/journals/%s/%s/", base_url, journal_id, volume_name</string>
+    </list>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.pubfactory.PubFactoryHtmlHashFilterFactory</string>
+  </entry>
+ <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.pubfactory.PubFactoryUrlNormalizer</string>
+  </entry>  
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.pubfactory.PubFactoryArticleIteratorFactory</string>
+  </entry> 
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.pubfactory.PubFactoryArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.pubfactory.PubFactoryHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_repair_from_peer_if_missing_url_pattern</string>
+    <list>
+      <string>://[^/]+/(assets|fileasset|skin)/</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_url_poll_result_weight</string>
+    <list>
+      <string>://[^/]+/(assets|fileasset|skin)/, 0</string>
+    </list>
+  </entry>  
+</map>

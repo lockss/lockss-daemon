@@ -30,26 +30,36 @@ in this Software without prior written authorization from Stanford University.
 
  */
 
-package org.lockss.plugin.berghahn;
-
-import java.net.URL;
-import java.util.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+package org.lockss.plugin.pubfactory;
 
 import org.lockss.config.Configuration;
-import org.lockss.daemon.*;
-import org.lockss.plugin.*;
+import org.lockss.daemon.ConfigParamDescr;
+import org.lockss.daemon.RangeCachedUrlSetSpec;
+import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.CachedUrlSet;
 import org.lockss.plugin.base.BaseCachedUrlSet;
-import org.lockss.plugin.definable.*;
-import org.lockss.test.*;
-import org.lockss.util.*;
+import org.lockss.plugin.definable.DefinableArchivalUnit;
+import org.lockss.plugin.definable.DefinablePlugin;
+import org.lockss.test.ConfigurationUtil;
+import org.lockss.test.LockssTestCase;
+import org.lockss.test.MockLockssDaemon;
+import org.lockss.util.ListUtil;
+import org.lockss.util.Logger;
+import org.lockss.util.PatternFloatMap;
+import org.lockss.util.RegexpUtil;
+
+import java.net.URL;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Properties;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 //
 // This plugin test framework is set up to run the same tests in two variants - CLOCKSS and GLN
 // without having to actually duplicate any of the written tests
 //a
-public class TestBerghahnArchivalUnit extends LockssTestCase {
+public class TestPubFactoryArchivalUnit extends LockssTestCase {
   private MockLockssDaemon theDaemon;
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   static final String JID_KEY = ConfigParamDescr.JOURNAL_ID.getKey();
@@ -65,10 +75,10 @@ public class TestBerghahnArchivalUnit extends LockssTestCase {
 
 
   
-  private static final Logger log = Logger.getLogger(TestBerghahnArchivalUnit.class);
+  private static final Logger log = Logger.getLogger(TestPubFactoryArchivalUnit.class);
 
-  static final String PLUGIN_ID = "org.lockss.plugin.berghahn.BerghahnJournalsPlugin";
-  static final String PluginName = "Berghahn Journals Plugin";
+  static final String PLUGIN_ID = "org.lockss.plugin.pubfactory.PubFactoryJournalsPlugin";
+  static final String PluginName = "PubFactory Journals Plugin";
 
   public void setUp() throws Exception {
     super.setUp();

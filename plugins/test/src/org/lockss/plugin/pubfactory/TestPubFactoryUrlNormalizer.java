@@ -30,9 +30,7 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.berghahn;
-
-import java.util.Properties;
+package org.lockss.plugin.pubfactory;
 
 import org.lockss.config.Configuration;
 import org.lockss.daemon.ConfigParamDescr;
@@ -41,7 +39,9 @@ import org.lockss.test.ConfigurationUtil;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockArchivalUnit;
 
-public class TestBerghahnUrlNormalizer extends LockssTestCase {
+import java.util.Properties;
+
+public class TestPubFactoryUrlNormalizer extends LockssTestCase {
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   static final String VOL_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
   static final String JID_KEY = ConfigParamDescr.JOURNAL_ID.getKey();
@@ -63,7 +63,7 @@ public class TestBerghahnUrlNormalizer extends LockssTestCase {
   
 
   public void testNormalizeUrl() throws Exception {
-    UrlNormalizer normalizer = new BerghahnUrlNormalizer();
+    UrlNormalizer normalizer = new PubFactoryUrlNormalizer();
     // No change expected
     assertEquals("http://www.berghahnjournals.com/downloadpdf/journals/foo/10/1/trans070105.xml",
         normalizer.normalizeUrl("http://www.berghahnjournals.com/downloadpdf/journals/foo/10/1/trans070105.xml", m_mau));
