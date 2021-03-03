@@ -77,23 +77,26 @@ public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
       InputStream in, String encoding) {
 
     HtmlFilterInputStream filteredStream = new HtmlFilterInputStream(in, encoding,
-            new HtmlCompoundTransform(
-            HtmlNodeFilterTransform.include(new OrFilter(new NodeFilter[] {
-                    /*
-                    HtmlNodeFilters.tagWithAttribute("p", "class", "Para"),
-                    HtmlNodeFilters.tagWithAttribute("h1", "class", "ArticleTitle")
-                    -- tried:
-                    HtmlNodeFilters.tagWithAttribute("p", "class", "lang=\"en\""),
-                    HtmlNodeFilters.tagWithAttribute("h1", "class", "c-article-title")
-                    */
-                    HtmlNodeFilters.tag("p"),
-                    HtmlNodeFilters.tag("h1")
-            })),
-        /*
-         * DROP: filter remaining content areas
-         */
-            HtmlNodeFilterTransform.exclude(new OrFilter(new NodeFilter[] {
-            }))));
+      new HtmlCompoundTransform(
+      // Remove these parts first
+      HtmlNodeFilterTransform.exclude(new OrFilter(new NodeFilter[] {
+        // entire footer  (incl. ip address/logged in notifier)
+        HtmlNodeFilters.tag("footer"),
+        // article visits and other changeables
+        HtmlNodeFilters.tagWithAttribute("div", "data-test", "article-metrics"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "altmetric-container"),
+        //adds on the side and top
+        HtmlNodeFilters.tagWithAttributeRegex("aside", "class", "c-ad"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "skyscraper-ad"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "banner-advert"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "doubleclick-ad"),
+      })),
+      // now keep these
+      HtmlNodeFilterTransform.include(new OrFilter(new NodeFilter[] {
+          HtmlNodeFilters.tag("p"),
+          HtmlNodeFilters.tag("h1")
+      }))
+      ));
     Reader filteredReader = FilterUtil.getReader(filteredStream, encoding);
 //    Reader noTagFilter = new HtmlTagFilter(new StringFilter(filteredReader, "<", " <"), new TagPair("<", ">"));
 

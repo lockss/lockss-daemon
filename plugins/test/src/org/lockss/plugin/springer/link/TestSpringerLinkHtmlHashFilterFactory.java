@@ -69,7 +69,51 @@ public class TestSpringerLinkHtmlHashFilterFactory extends LockssTestCase {
   private static final String HtmlHashAFiltered =
     "<h1 class=\"c-article-title\" data-test=\"article-title\" data-article-title=\"\" itemprop=\"name headline\">Very Fancy Title</h1>" +
     "<p lang=\"en\">A user-friendly staged concept. English version</p>" ;
-  
+
+
+  private static final String articleHeader =
+    "<aside class=\"c-ad c-ad--728x90\" data-test=\"springer-doubleclick-ad\">" +
+    "  <div class=\"c-ad__inner\">" +
+    "    <p class=\"c-ad__label\">Advertisement</p>" +
+    "    <div id=\"div-gpt-ad-LB1\" data-gpt-unitpath=\"/270604982/springerlink/40554/article\" data-gpt-sizes=\"728x90\" data-gpt-targeting=\"pos=LB1;articleid=s40554-018-0065-9;\"></div>" +
+    "  </div>" +
+    "</aside>" +
+    "<div class=\"c-article-header\">" +
+    "  <header>" +
+    "    <ul class=\"c-article-identifiers\" data-test=\"article-identifier\">" +
+    "      <li class=\"c-article-identifiers__item\" data-test=\"article-category\">Research</li>" +
+    "      <li class=\"c-article-identifiers__item\"><span class=\"c-article-identifiers__open\" data-test=\"open-access\">Open Access</span></li>" +
+    "      <li class=\"c-article-identifiers__item\"><a href=\"#article-info\" data-track=\"click\" data-track-action=\"publication date\" data-track-label=\"link\">Published: <time datetime=\"2019-01-09\" itemprop=\"datePublished\">09 January 2019</time></a></li>" +
+    "    </ul>" +
+    "    <h1 class=\"c-article-title\" data-test=\"article-title\" data-article-title=\"\" itemprop=\"name headline\">Embodied meaning: a systemic functional perspective on paralanguage</h1>" +
+    "    <p class=\"c-article-info-details\" data-container-section=\"info\"><a data-test=\"journal-link\" href=\"/journal/40554\"><i data-test=\"journal-title\">Functional Linguistics</i></a><b data-test=\"journal-volume\"><span class=\"u-visually-hidden\">volume</span>&nbsp;6</b>, Article&nbsp;number:&nbsp;<span data-test=\"article-number\">1</span> (<span data-test=\"article-publication-year\">2019</span>)<a href=\"#citeas\" class=\"c-article-info-details__cite-as u-hide-print\" data-track=\"click\" data-track-action=\"cite this article\" data-track-label=\"link\">Cite this article</a></p>" +
+    "    <div data-test=\"article-metrics\">" +
+    "      <div id=\"altmetric-container\">" +
+    "        <div class=\"c-article-metrics-bar__wrapper u-clear-both\">" +
+    "          <ul class=\"c-article-metrics-bar u-list-reset\">" +
+    "            <li class=\" c-article-metrics-bar__item\">" +
+    "              <p class=\"c-article-metrics-bar__count\">4856 <span class=\"c-article-metrics-bar__label\">Accesses</span></p>" +
+    "            </li>" +
+    "            <li class=\"c-article-metrics-bar__item\">" +
+    "              <p class=\"c-article-metrics-bar__count\">4 <span class=\"c-article-metrics-bar__label\">Citations</span></p>" +
+    "            </li>" +
+    "            <li class=\"c-article-metrics-bar__item\">" +
+    "              <p class=\"c-article-metrics-bar__count\">1 <span class=\"c-article-metrics-bar__label\">Altmetric</span></p>" +
+    "            </li>" +
+    "            <li class=\"c-article-metrics-bar__item\">" +
+    "              <p class=\"c-article-metrics-bar__details\"><a href=\"/article/10.1186%2Fs40554-018-0065-9/metrics\" data-track=\"click\" data-track-action=\"view metrics\" data-track-label=\"link\" rel=\"nofollow\">Metrics <span class=\"u-visually-hidden\">details</span></a></p>" +
+    "            </li>" +
+    "          </ul>" +
+    "        </div>" +
+    "      </div>" +
+    "    </div>" +
+    "  </header>" +
+    "</div>";
+
+  private static final String filteredArticleHeader =
+    "<h1 class=\"c-article-title\" data-test=\"article-title\" data-article-title=\"\" itemprop=\"name headline\">Embodied meaning: a systemic functional perspective on paralanguage</h1>" +
+    "<p class=\"c-article-info-details\" data-container-section=\"info\"><a data-test=\"journal-link\" href=\"/journal/40554\"><i data-test=\"journal-title\">Functional Linguistics</i></a><b data-test=\"journal-volume\"><span class=\"u-visually-hidden\">volume</span>&nbsp;6</b>, Article&nbsp;number:&nbsp;<span data-test=\"article-number\">1</span> (<span data-test=\"article-publication-year\">2019</span>)<a href=\"#citeas\" class=\"c-article-info-details__cite-as u-hide-print\" data-track=\"click\" data-track-action=\"cite this article\" data-track-label=\"link\">Cite this article</a></p>";
+
   // this example is a little different; it's from an article
   /*
   private static final String HtmlHashB =
@@ -133,12 +177,20 @@ public class TestSpringerLinkHtmlHashFilterFactory extends LockssTestCase {
     InputStream inA;
 
     // viewed-by test 
-    inA = fact.createFilteredInputStream(mau, 
-          new StringInputStream(HtmlHashA), ENC);
+    inA = fact.createFilteredInputStream(mau,
+        new StringInputStream(HtmlHashA), ENC);
     String filtStrA = StringUtil.fromInputStream(inA);
 
     assertEquals(HtmlHashAFiltered, filtStrA);
-   
+
+  }
+
+  public void testFilterHeader() throws Exception {
+    InputStream inA;
+    // viewed-by test
+    inA = fact.createFilteredInputStream(mau,
+        new StringInputStream(articleHeader), ENC);
+    assertEquals(filteredArticleHeader, StringUtil.fromInputStream(inA));
   }
 
   /*

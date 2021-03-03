@@ -44,10 +44,12 @@ import org.lockss.plugin.*;
 public class SpringerLinkHtmlCrawlFilterFactory implements FilterFactory {
   
   private static final NodeFilter[] filters = new NodeFilter[] {
-      //footer
+      //footer, one of:
       HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
-      
-      //adds on the side 
+      HtmlNodeFilters.tag("footer"),
+
+      //adds on the side and top
+      HtmlNodeFilters.tagWithAttributeRegex("aside", "class", "c-ad"),
       HtmlNodeFilters.tagWithAttribute("div", "class", "skyscraper-ad"),
       HtmlNodeFilters.tagWithAttribute("div", "class", "banner-advert"),
       HtmlNodeFilters.tagWithAttribute("div", "id", "doubleclick-ad"),
@@ -57,13 +59,18 @@ public class SpringerLinkHtmlCrawlFilterFactory implements FilterFactory {
       HtmlNodeFilters.tagWithAttribute("div", "role", "banner"),
       HtmlNodeFilters.tagWithAttribute("div", "class", "banner"),
       
-      //non essentials like metrics and related links 
+      //// non essentials like metrics and related links
+      // in header
+      HtmlNodeFilters.tagWithAttribute("div", "data-test", "article-metrics"),
+      HtmlNodeFilters.tagWithAttribute("div", "id", "altmetric-container"),
+      // and in sidebar
       HtmlNodeFilters.tagWithAttribute("div", "role", "complementary"),
-      HtmlNodeFilters.tagWithAttribute("div", "class", "col-aside"),
-      HtmlNodeFilters.tagWithAttribute("aside", "class", "col-aside"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "col-aside"),
+      HtmlNodeFilters.tagWithAttributeRegex("aside", "class", "col-aside"),
+      HtmlNodeFilters.tagWithAttribute("div", "class", "document-aside"),
       HtmlNodeFilters.tagWithAttribute("div", "class", "article-complementary-left"),
       HtmlNodeFilters.tagWithAttribute("div", "class", "document-aside"),
-      
+
       //citations - filter out other springer links in references
       HtmlNodeFilters.tagWithAttribute("li", "class", "citation"),
       
