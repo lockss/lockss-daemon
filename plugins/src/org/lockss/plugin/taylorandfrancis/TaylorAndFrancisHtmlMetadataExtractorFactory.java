@@ -35,8 +35,8 @@ import java.util.Map;
 
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
-import org.apache.commons.lang.StringEscapeUtils;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.text.StringEscapeUtils;
 import org.lockss.config.TdbAu;
 import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.PluginException;
@@ -333,7 +333,7 @@ public class TaylorAndFrancisHtmlMetadataExtractorFactory implements FileMetadat
 
           // org.apache.commons.lang.StringEscapeUtils contains a method for unescaping HTML codes
           // (like &amp;) that may appear in the journal title
-          journalTitle = StringEscapeUtils.unescapeHtml(journalTitle);
+          journalTitle = StringEscapeUtils.unescapeHtml4(journalTitle);
           journalTitle = journalTitle.trim(); // mal-formatted identifier could end up with trailing white space
 
           // Only put values in to metadata if they have valid content; no value will allow it to look elsewhere

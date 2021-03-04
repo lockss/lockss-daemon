@@ -43,7 +43,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.regex.Pattern;
 
 import org.apache.commons.io.input.BoundedInputStream;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.RisFilterReader;
 import org.lockss.plugin.*;

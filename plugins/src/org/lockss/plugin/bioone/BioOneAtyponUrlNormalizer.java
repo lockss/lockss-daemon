@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.bioone;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.*;
 import org.lockss.plugin.atypon.BaseAtyponUrlNormalizer;
