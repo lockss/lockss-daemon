@@ -151,7 +151,7 @@ public class MarcXmlToMarcBinarySchemaHelper implements FileMetadataExtractor {
             String publisherShortCut = PublisherNameShortcutMap.get(publisherCleanName.toLowerCase());
 
             if (publisherShortCut == null) {
-                log.debug(String.format("publisherShortCut is null: MARC_publisher: %s | publisherCleanName: %s",
+                log.debug3(String.format("publisherShortCut is null: MARC_publisher: %s | publisherCleanName: %s",
                         MARC_publisher, publisherCleanName, publisherShortCut));
             }
 
@@ -238,8 +238,7 @@ public class MarcXmlToMarcBinarySchemaHelper implements FileMetadataExtractor {
                 am.put(MetadataField.FIELD_ACCESS_URL, fullPathFile);
 
                 // Only emit the books metadata
-
-                if (!bookIDs.contains(MARC_bookid)) {
+                if (MARC_bookid != null && !bookIDs.contains(MARC_bookid)) {
                     bookIDs.add(MARC_bookid);
                     emitter.emitMetadata(cu, am);
                 } else {
