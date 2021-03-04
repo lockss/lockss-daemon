@@ -84,7 +84,7 @@
       implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
       param[journal_abbr] = ndjicl
 
-      au < testing ; exists ; 2011 ; Notre Dame Journal of International & Comparative Law Volume 1 ; 1 ; >
+      au < ready ; exists ; 2011 ; Notre Dame Journal of International & Comparative Law Volume 1 ; 1 ; >
       au < crawling ; exists ; 2012 ; Notre Dame Journal of International & Comparative Law Volume 2 ; 2 ; >
       au < crawling ; exists ; 2013 ; Notre Dame Journal of International & Comparative Law Volume 3 ; 3 ; >
       au < frozen ; exists ; 2014 ; Notre Dame Journal of International & Comparative Law Volume 4 ; 4 ; >
