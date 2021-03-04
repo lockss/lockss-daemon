@@ -35,7 +35,7 @@ package org.lockss.plugin.atypon;
 
 import java.io.*;
 import java.util.regex.Matcher;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.lockss.filter.*;
 import org.lockss.util.*;
 
