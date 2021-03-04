@@ -75,7 +75,7 @@ public class JanewayOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
     String optional_journal_id = au.getConfiguration().get(ConfigParamDescr.JOURNAL_ID.getKey());
     logger.debug3(" optional_journal_id " + optional_journal_id);
     if (optional_journal_id != null) {
-        setUrlPostfix(optional_journal_id + "api/oai/");
+        setUrlPostfix(optional_journal_id + "/api/oai/");
     } else {
         setUrlPostfix("api/oai/");
     }
