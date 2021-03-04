@@ -98,6 +98,10 @@ public class BaseAtyponHtmlMetadataExtractorFactory
     @Override
     public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
         throws IOException {
+
+      // NOTE: MarkAllen plugins Override this extract  method and then calls it via super.extract() after
+      //       performing additional checks on Date and Doi.
+
       ArticleMetadata am = 
         new SimpleHtmlMetaTagMetadataExtractor().extract(target, cu);
  
