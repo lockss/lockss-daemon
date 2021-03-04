@@ -1,44 +1,44 @@
-/* $Id$
- */
-
 /*
 
-Copyright (c) 2000-2019 Board of Trustees of Leland Stanford Jr. University,
-all rights reserved.
+Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
-STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
 
-Except as contained in this notice, the name of Stanford University shall not
-be used in advertising or otherwise to promote the sale, use or other dealings
-in this Software without prior written authorization from Stanford University.
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
 
- */
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+*/
 
 package org.lockss.plugin.atypon;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.lockss.config.TdbAu;
 import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.extractor.ArticleMetadata;
@@ -59,7 +59,7 @@ import org.lockss.util.TypedEntryMap;
  */
 public class BaseAtyponMetadataUtil {
   private static final Logger log = Logger.getLogger(BaseAtyponMetadataUtil.class);
-  
+
   private static final String BOOK_EISBN_PARAM = "book_eisbn";
   private static final String AU_TYPE = "type";
   private static final Pattern PROTOCOL_PATTERN = Pattern.compile("^(e)?is(b|s)n:(\\s)*", Pattern.CASE_INSENSITIVE);
@@ -70,32 +70,31 @@ public class BaseAtyponMetadataUtil {
    * If the publication type doesn't match the article type (book v journal)
    * If the AU lists BOTH issn & eissn and the metadata has one that doesn'tm atch
    * If the volume is available, check against the TDB information
-   * If the volume wasn't available but the year was, try that 
-   * If we're still valid and the publication title is available, check 
+   * If the volume wasn't available but the year was, try that
+   * If we're still valid and the publication title is available, check
    *   a normalized version of that against a normalized version of tdb pub title
    * @param au
    * @param am
    * @return true if the metadata matches the TDB information
    */
-  public static boolean metadataMatchesTdb(ArchivalUnit au, 
-      ArticleMetadata am) { 
+  public static boolean metadataMatchesTdb(ArchivalUnit au,
+                                           ArticleMetadata am) {
 
     boolean isInAu = true;
-    
+
     //Initial check - are we of the expected type
     // We're only in this method if the type was NOT book or book_chapter
     // or if the article didn't indicate its type (html)
     TdbAu tdbau = au.getTdbAu();
-
     String au_type = (tdbau == null) ? null : tdbau.getPublicationType();
     // if the tdb publication type is a book or book chapter, then we don't belong
     if ( au_type != null && (MetadataField.PUBLICATION_TYPE_BOOKSERIES.equals(au_type)
-          || MetadataField.PUBLICATION_TYPE_BOOK.equals(au_type)) ) {
-        // we probably overcrawled and got a journal or proceedings article
-        // while preserving a book
-        return false;
+        || MetadataField.PUBLICATION_TYPE_BOOK.equals(au_type)) ) {
+      // we probably overcrawled and got a journal or proceedings article
+      // while preserving a book
+      return false;
     }
-    
+
     // if we do an ISSN check, then we can bypass checking the title later, which is trickier
     Boolean checkedISSN = false;
     String AU_ISSN = (tdbau == null) ? null : normalize_id(tdbau.getPrintIssn());
@@ -108,7 +107,7 @@ public class BaseAtyponMetadataUtil {
       String foundISSN = normalize_id(am.get(MetadataField.FIELD_ISSN));
       checkedISSN = true;
       // don't go crazy. If the EISSN is there and matches, just move on
-      if (foundEISSN != null) { 
+      if (foundEISSN != null) {
         if (!(foundEISSN.equals(AU_EISSN) || foundEISSN.equals(AU_ISSN)) ) {
           return false;
         }
@@ -124,16 +123,15 @@ public class BaseAtyponMetadataUtil {
     String foundJournalTitle = am.get(MetadataField.FIELD_PUBLICATION_TITLE);
     String foundVolume = am.get(MetadataField.FIELD_VOLUME);
     String foundDate = am.get(MetadataField.FIELD_DATE);
-    String foundDOI = am.get(MetadataField.FIELD_DOI);
 
     // If we got nothing, just return, we can't validate further
     if (StringUtils.isEmpty(foundVolume) && StringUtils.isEmpty(foundDate) &&
         StringUtils.isEmpty(foundJournalTitle)) {
       return isInAu; //return true, we have no way of knowing
     }
-    
-    // Check VOLUME
-    if (!StringUtils.isEmpty(foundVolume)) {
+
+    // Check VOLUME/YEAR
+    if (!(StringUtils.isEmpty(foundVolume) || StringUtils.isEmpty(foundDate))) {
 
       // Get the AU's volume name from the AU properties. This must be set
       TypedEntryMap tfProps = au.getProperties();
@@ -145,53 +143,8 @@ public class BaseAtyponMetadataUtil {
         log.debug3("After volume check, isInAu :" + isInAu);
       }
 
-    }
-    log.debug3("FOUND DATE IS: " + foundDate);
-    if (isInAu && !StringUtils.isEmpty(foundDate)) {
-      String AU_Year = tdbau.getYear();
-      log.debug3("AU HAS THIS YEAR: " + AU_Year);
-      // date can come in many formats, so lets try to deal with them, e.g. 2013/09/28, 2013-09-28, 9/28/2013
-      String seperator = null;
-      String foundYear = null;
-
-      if (foundDate.contains("/")) {
-        seperator = "/";
-      } else if (foundDate.contains("-")) {
-        seperator = "-";
-      }
-
-      if (!StringUtils.isEmpty(seperator)) {
-        String[] splitDate = foundDate.split(seperator);
-        for (String piece : splitDate) {
-          log.debug3("Checking : " + piece);
-          if (piece.length() == 4) {
-            foundYear = piece;
-          }
-        }
-      }
-
-      if (!StringUtils.isEmpty(foundYear)) {
-        isInAu =  ( (AU_Year != null) && (AU_Year.equals(foundYear)));
-        log.debug3("is the year equal? isInAu :" + isInAu);
-      }
-    }
-
-    if (isInAu && !StringUtils.isEmpty(foundDOI)) {
-      TypedEntryMap tfProps = au.getProperties();
-      String JOURNAL_ID = tfProps.getString(ConfigParamDescr.JOURNAL_ID.getKey());
-      log.debug3("JID IS:" + JOURNAL_ID);
-
-      log.debug3("JID: fDOI: "+ foundDOI);
-      String[] splitDOI = foundDOI.split("/");
-      String lastPart = splitDOI[1];
-      log.debug3("JID: lastP: "+ lastPart);
-      String[] splitLP = lastPart.split("[.]");
-      String shouldBeJID = splitLP[0];
-      log.debug3("SHOULD BE JID: " + shouldBeJID);
-
-      isInAu =  ((shouldBeJID != null) && (shouldBeJID.equals(JOURNAL_ID)));
-      log.debug3("ARE THE JID EQUAL: " + isInAu);
-
+      // Add in doing year comparison if FIELD_DATE is set
+      // this is more complicated because date format is variable
     }
 
     // If we've come this far and have passed an ISSN check, we're done
@@ -211,8 +164,8 @@ public class BaseAtyponMetadataUtil {
       log.debug3("normalized title from AU is : " + normAuTitle);
       log.debug3("normalized title from metadata is : " + normFoundTitle);
       // If the titles are a subset of each other or are equal after normalization
-      isInAu = ( 
-          ( (StringUtils.contains(normAuTitle,normFoundTitle)) || 
+      isInAu = (
+          ( (StringUtils.contains(normAuTitle,normFoundTitle)) ||
               (StringUtils.contains(normFoundTitle,normAuTitle))) );
       // last chance... cover weird cases, such as when the publisher mistakenly
       // converts multi-byte in to ? in their text output
@@ -222,7 +175,7 @@ public class BaseAtyponMetadataUtil {
         String rawTextFoundTitle = generateRawTitle(normFoundTitle);
         log.debug3("raw AuTitle: " + rawTextAuTitle);
         log.debug3("raw foundTitle: " + rawTextFoundTitle);
-        isInAu =( ( (StringUtils.contains(rawTextAuTitle,rawTextFoundTitle)) || 
+        isInAu =( ( (StringUtils.contains(rawTextAuTitle,rawTextFoundTitle)) ||
             (StringUtils.contains(rawTextFoundTitle,rawTextAuTitle))) );
       }
     }
@@ -240,25 +193,25 @@ public class BaseAtyponMetadataUtil {
    * If the eisbn is availalble, check against the TDB information 
    * If the isbn is availalble, check against the TDB information 
    * It's not clear if we should also check title info. I think not. ISBN should rule
-   * 
+   *
    * @param au
    * @param am
    * @return true if the metadata matches the TDB information
    */
-  public static boolean metadataMatchesBookTdb(ArchivalUnit au, 
-      ArticleMetadata am) { 
+  public static boolean metadataMatchesBookTdb(ArchivalUnit au,
+                                               ArticleMetadata am) {
 
     boolean isInAu = false;
-    
+
     // We're only in this method if the type was BOOK or BOOK_CHAPTER
     TdbAu tdbau = au.getTdbAu();
     String au_type = (tdbau == null) ? null : tdbau.getPublicationType();
     // proceedings, books and book_series could all represent as books/chapters
     // so only discard if the TDB thinks this should actually be a journal - possibly overcrawled?
     if (au_type != null && (MetadataField.PUBLICATION_TYPE_JOURNAL.equals(au_type))) {
-        // we probably overcrawled and got a BOOK_CHAP or BOOK while 
-        // collecting a journal or proceedings 
-        return false;
+      // we probably overcrawled and got a BOOK_CHAP or BOOK while
+      // collecting a journal or proceedings
+      return false;
     }
 
     // Use the book information from the ArticleMetadata
@@ -272,12 +225,12 @@ public class BaseAtyponMetadataUtil {
       //TODO: add in additional title check if ISBN metadata isn't available?
       return true; //return true, we have no way of knowing
     }
-    
+
     // Get the AU's volume name from the AU properties. This must be set
     TypedEntryMap tfProps = au.getProperties();
     String AU_EISBN = tfProps.getString(BOOK_EISBN_PARAM);
     String AU_ISBN = (tdbau == null) ? null : normalize_id(tdbau.getPrintIsbn());
-    
+
     // this is a param...it can't be null, but be safe
     if (AU_EISBN == null) {
       return true; //return true, we have no way of knowing
@@ -289,14 +242,14 @@ public class BaseAtyponMetadataUtil {
       isInAu = true;
     } else if (!StringUtils.isEmpty(AU_ISBN)) {
       // they might have only listed a print isbn, not an eisbn so above would fail...
-        isInAu =( ((!(StringUtils.isEmpty(foundISBN))) && AU_ISBN.equals(foundISBN)) ||
-            ((!(StringUtils.isEmpty(foundEISBN))) && AU_ISBN.equals(foundEISBN)));
-    }      
+      isInAu =( ((!(StringUtils.isEmpty(foundISBN))) && AU_ISBN.equals(foundISBN)) ||
+          ((!(StringUtils.isEmpty(foundEISBN))) && AU_ISBN.equals(foundEISBN)));
+    }
     log.debug3("After eisbn/isbn check, isInAu :" + isInAu);
     return isInAu;
   }
 
-  /* Because we compare a title from metadata with the title in the AU 
+  /* Because we compare a title from metadata with the title in the AU
    * (as set in the tdb file) to make sure the item belongs in this AU,
    * we need to minimize potential for mismatch by normalizing the titles
    * Remove any apostrophes - eg "T'ang" becomes "Tang"; "Freddy's" ==> "Freddys"
@@ -312,18 +265,18 @@ public class BaseAtyponMetadataUtil {
     AtyponNormalizeMap.put("'", ""); //apostrophe to nothing - remove
     AtyponNormalizeMap.put("\u2018", ""); //single left quote to nothing - remove
     AtyponNormalizeMap.put("\u2019", ""); //single right quote (apostrophe alternative) to nothing - remove
-    
-  }  
+
+  }
 
 
   /* To maximize the chance of finding matching titles normalize out stylistic
    * differences as much as possible, eg
    * make lower case,
-   * remove leading and trailing spaces 
+   * remove leading and trailing spaces
    * remove a leading "the " in the title
    * map control variations on standard chars (en-dash --> hyphen)
-   * and & to "and" 
-   * 
+   * and & to "and"
+   *
    */
   public static String normalizeTitle(String inTitle) {
     String outTitle;
@@ -336,10 +289,10 @@ public class BaseAtyponMetadataUtil {
     if (outTitle.startsWith("the "))  {
       outTitle = outTitle.substring(4);// get over the "the " 
     }
-    
+
     //reduce interior multiple space characters to only one
     outTitle = outTitle.replaceAll("\\s+", " ");
-    
+
     // Using the normalization map, substitute characters
     for (Map.Entry<String, String> norm_entry : AtyponNormalizeMap.entrySet())
     {
@@ -358,7 +311,7 @@ public class BaseAtyponMetadataUtil {
    * remove ?,-,:,"
    * 'this is a text:title-for "questions"?' in to
    * 'thisisatextitleforquestions'
-   * 
+   *
    */
   public static String generateRawTitle(String inTitle) {
     String outTitle;
@@ -369,9 +322,9 @@ public class BaseAtyponMetadataUtil {
     outTitle = inTitle.replaceAll("\\W", "");
     return outTitle;
   }
-  
-  
-  /* 
+
+
+  /*
    * This could work for both ISBN and ISSN type ids
    */
   public static String normalize_id(String id) {
@@ -389,7 +342,7 @@ public class BaseAtyponMetadataUtil {
    *  1. if the DOI wasn't there, get it from the URL
    *  2. if the Publisher wasn't set, get it from the TDB
    *  3. If the Publication Title wasn't set, get it from the TDB
-   *  4. if the access.url is set, make sure it's in the AU 
+   *  4. if the access.url is set, make sure it's in the AU
    */
   public static void completeMetadata(CachedUrl cu, ArticleMetadata am) {
 
@@ -403,7 +356,7 @@ public class BaseAtyponMetadataUtil {
       String patternString = "^https?://" + base_host + "doi/[^/]+/([^/]+)/([^?&]+)$";
       Pattern METADATA_PATTERN = Pattern.compile(patternString, Pattern.CASE_INSENSITIVE);
       String url = cu.getUrl();
-      Matcher mat = METADATA_PATTERN.matcher(url);    
+      Matcher mat = METADATA_PATTERN.matcher(url);
       if (mat.matches()) {
         log.debug3("Pull DOI from URL " + mat.group(1) + "." + mat.group(2));
         am.put(MetadataField.FIELD_DOI, mat.group(1) + "/" + mat.group(2));
@@ -433,7 +386,7 @@ public class BaseAtyponMetadataUtil {
     String potential_access_url;
     if ((potential_access_url = am.get(MetadataField.FIELD_ACCESS_URL)) != null) {
       CachedUrl potential_cu = cu.getArchivalUnit().makeCachedUrl(potential_access_url);
-      if ( (potential_cu == null) || (!potential_cu.hasContent()) ){   
+      if ( (potential_cu == null) || (!potential_cu.hasContent()) ){
         //Not in this AU; remove this value; allow for fullTextCu to get set later
         am.replace(MetadataField.FIELD_ACCESS_URL, null);
       }
