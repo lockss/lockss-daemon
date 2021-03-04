@@ -33,7 +33,9 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.atypon;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -86,6 +88,7 @@ public class BaseAtyponMetadataUtil {
     // We're only in this method if the type was NOT book or book_chapter
     // or if the article didn't indicate its type (html)
     TdbAu tdbau = au.getTdbAu();
+
     String au_type = (tdbau == null) ? null : tdbau.getPublicationType();
     // if the tdb publication type is a book or book chapter, then we don't belong
     if ( au_type != null && (MetadataField.PUBLICATION_TYPE_BOOKSERIES.equals(au_type)
@@ -123,6 +126,7 @@ public class BaseAtyponMetadataUtil {
     String foundJournalTitle = am.get(MetadataField.FIELD_PUBLICATION_TITLE);
     String foundVolume = am.get(MetadataField.FIELD_VOLUME);
     String foundDate = am.get(MetadataField.FIELD_DATE);
+    String foundDOI = am.get(MetadataField.FIELD_DOI);
 
     // If we got nothing, just return, we can't validate further
     if (StringUtils.isEmpty(foundVolume) && StringUtils.isEmpty(foundDate) &&
@@ -130,8 +134,8 @@ public class BaseAtyponMetadataUtil {
       return isInAu; //return true, we have no way of knowing
     }
     
-    // Check VOLUME/YEAR
-    if (!(StringUtils.isEmpty(foundVolume) || StringUtils.isEmpty(foundDate))) {
+    // Check VOLUME
+    if (!StringUtils.isEmpty(foundVolume)) {
 
       // Get the AU's volume name from the AU properties. This must be set
       TypedEntryMap tfProps = au.getProperties();
@@ -143,10 +147,55 @@ public class BaseAtyponMetadataUtil {
         log.debug3("After volume check, isInAu :" + isInAu);
       }
 
-      // Add in doing year comparison if FIELD_DATE is set
-      // this is more complicated because date format is variable
     }
-    
+    log.debug3("FOUND DATE IS: " + foundDate);
+    if (isInAu && !StringUtils.isEmpty(foundDate)) {
+      String AU_Year = tdbau.getYear();
+      log.debug3("AU HAS THIS YEAR: " + AU_Year);
+      // date can come in many formats, so lets try to deal with them, e.g. 2013/09/28, 2013-09-28, 9/28/2013
+      String seperator = null;
+      String foundYear = null;
+
+      if (foundDate.contains("/")) {
+        seperator = "/";
+      } else if (foundDate.contains("-")) {
+        seperator = "-";
+      }
+
+      if (!StringUtils.isEmpty(seperator)) {
+        String[] splitDate = foundDate.split(seperator);
+        for (String piece : splitDate) {
+          log.debug3("Checking : " + piece);
+          if (piece.length() == 4) {
+            foundYear = piece;
+          }
+        }
+      }
+
+      if (!StringUtils.isEmpty(foundYear)) {
+        isInAu =  ( (AU_Year != null) && (AU_Year.equals(foundYear)));
+        log.debug3("is the year equal? isInAu :" + isInAu);
+      }
+    }
+
+    if (isInAu && !StringUtils.isEmpty(foundDOI)) {
+      TypedEntryMap tfProps = au.getProperties();
+      String JOURNAL_ID = tfProps.getString(ConfigParamDescr.JOURNAL_ID.getKey());
+      log.debug3("JID IS:" + JOURNAL_ID);
+
+      log.debug3("JID: fDOI: "+ foundDOI);
+      String[] splitDOI = foundDOI.split("/");
+      String lastPart = splitDOI[1];
+      log.debug3("JID: lastP: "+ lastPart);
+      String[] splitLP = lastPart.split("[.]");
+      String shouldBeJID = splitLP[0];
+      log.debug3("SHOULD BE JID: " + shouldBeJID);
+
+      isInAu =  ((shouldBeJID != null) && (shouldBeJID.equals(JOURNAL_ID)));
+      log.debug3("ARE THE JID EQUAL: " + isInAu);
+
+    }
+
     // If we've come this far and have passed an ISSN check, we're done
     if (checkedISSN) {
       return isInAu;
