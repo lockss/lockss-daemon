@@ -58,7 +58,7 @@ public class SEGUrlConsumerFactory implements UrlConsumerFactory {
   
   @Override
   public UrlConsumer createUrlConsumer(CrawlerFacade facade, FetchedUrlData fud) {
-    return new HighWireDrupalUrlConsumer(facade, fud);
+    return new SEGUrlConsumer(facade, fud);
   }
   
   public static Pattern getOrigPattern() {
@@ -69,11 +69,11 @@ public class SEGUrlConsumerFactory implements UrlConsumerFactory {
     return destPat;
   }
 
-  public class HighWireDrupalUrlConsumer extends HttpToHttpsUrlConsumer {
+  public class SEGUrlConsumer extends HttpToHttpsUrlConsumer {
     
     protected Configuration auconfig;
     
-    public HighWireDrupalUrlConsumer(CrawlerFacade facade, FetchedUrlData fud) {
+    public SEGUrlConsumer(CrawlerFacade facade, FetchedUrlData fud) {
       super(facade, fud);
       auconfig = au.getConfiguration();
     }
