@@ -42,7 +42,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>32</string>
+    <string>33</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -65,7 +65,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <map>
       <entry>
         <string>Metadata</string>
-        <string>17</string>
+        <string>18</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -114,5 +114,14 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>application/pdf_filter_factory</string>
     <string>org.lockss.plugin.atypon.BaseAtyponScrapingPdfFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.atypon.markallen.MarkAllenHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
   </entry>
 </map>
