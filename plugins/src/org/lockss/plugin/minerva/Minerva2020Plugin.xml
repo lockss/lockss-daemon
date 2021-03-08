@@ -33,11 +33,11 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>deprecated</string>
+    <string>down - needs review</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.minerva.MinervaPlugin</string>
+    <string>org.lockss.plugin.minerva.Minerva2020Plugin</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
@@ -45,11 +45,28 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>2</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Minerva Plugin (legacy site), Base URL %s, Second Base URL %s, Volume %s", base_url, base_url2, volume_name</string>
+    <string>"Minerva Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -57,42 +74,39 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Minerva Plugin (legacy site)</string>
+    <string>Minerva Plugin</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>4,"^(%s|%s)", base_url, base_url2</string>
-      <string>1,"^%s~philos/vol%s/index\.html", base_url, volume_name</string>
-      <string>1,"^%s~philos/vol%s/", base_url, volume_name</string>
-      <string>1,"^%sstephen/vol%s/", base_url2, volume_name</string>
-      <string>1,"^%sstephen/.*\.pdf", base_url2</string>
-      <string>1,"^%sstephen/permission\.htm", base_url2</string>
-      <string>1,"^.*\.(css|gif|jpe?g|js|png)$"</string>
+      <!-- Allow anything in the AU's volume -->
+      <string>1,"^%s%s/", base_url, volume_name</string>
+      <!-- Disallow anything in another volume than the AU's -->
+      <string>2,"^%svol[^/]+/", base_url</string>
+      <!-- Allow anything else on the site (images, stylesheets, Javascript, and a few odd things) -->
+      <string>1,"^%s", base_url, volume_name</string>
     </list>
   </entry>
+  <!-- See crawl seed for an exception for volume 18 (volume_name = Vol18) -->
   <entry>
     <string>au_start_url</string>
-    <string>"%s~philos/vol%s/index.html", base_url, volume_name</string>
+    <string>"%s%s/index.html", base_url, volume_name</string>
   </entry>
   <entry>
-    <string>au_manifest</string>
-    <list>
-      <string>"%s~philos/vol%s/index.html", base_url, volume_name</string>
-      <string>"%sstephen/permission.htm", base_url2</string>
-    </list>
+    <string>au_permission_url</string>
+    <string>"%sArchive.htm", base_url</string>
+  </entry>
+  <entry>
+    <string>plugin_crawl_seed_factory</string>
+    <string>org.lockss.plugin.minerva.Minerva2020CrawlSeedFactory</string>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.minerva.Minerva2020UrlNormalizer</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
     <list>
-      <org.lockss.daemon.ConfigParamDescr>
-        <key>volume_name</key>
-        <displayName>Volume Name</displayName>
-        <type>1</type>
-        <size>20</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
         <key>base_url</key>
         <displayName>Base URL</displayName>
@@ -103,14 +117,17 @@ POSSIBILITY OF SUCH DAMAGE.
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
-        <key>base_url2</key>
-        <displayName>Second Base URL</displayName>
-        <description>Use if AU spans two hosts</description>
-        <type>3</type>
-        <size>40</size>
+        <key>volume_name</key>
+        <displayName>Volume Name</displayName>
+        <type>1</type>
+        <size>20</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
     </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <string>"^%s%s/[^/]+\.pdf$", base_url, volume_name</string>
   </entry>
 </map>
