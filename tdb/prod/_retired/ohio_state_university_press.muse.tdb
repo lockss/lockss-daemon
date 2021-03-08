@@ -75,7 +75,7 @@
 
   {
     title <
-      name = Journal for the Psychoanalysis of Culture and Society ;
+      name = Psychoanalysis, Culture and Society ;
       issn = 1088-0763 ;
       eissn = 1543-3390 ;
       issnl = 1088-0763
@@ -87,6 +87,7 @@
     {
 
       param[base_url] = http://muse.jhu.edu/
+      #title changed after 2003
 
       au < down ; 2003 ; Journal for the Psychoanalysis of Culture and Society Volume 8 ; 8 >
 
