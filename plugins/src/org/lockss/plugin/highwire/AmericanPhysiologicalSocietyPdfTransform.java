@@ -1,32 +1,33 @@
 /*
- * $Id$
- */
 
-/*
+Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
-all rights reserved.
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
-STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
 
-Except as contained in this notice, the name of Stanford University shall not
-be used in advertising or otherwise to promote the sale, use or other dealings
-in this Software without prior written authorization from Stanford University.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
 
 */
 
@@ -42,6 +43,22 @@ import org.lockss.util.*;
 import org.pdfbox.util.operator.OperatorProcessor;
 
 /**
+ * <p>
+ * Notes to help the transition out of {@link HighWirePdfFilterFactory} and
+ * PDFBox 0.7.3. See {@link HighWirePdfFilterFactory} for details.
+ * </p>
+ * <p>
+ * Originally contained an {@link OutputDocumentTransform} and, within
+ * {@link AmericanPhysiologicalSocietyPdfTransform.Simplified}, a simplified
+ * {@link ResilientTextScrapingDocumentTransform}. But no TDB file uses
+ * {@link AmericanPhysiologicalSocietyPdfTransform.Simplified}, only
+ * {@link AmericanPhysiologicalSocietyPdfTransform}, so the contents of
+ * the nested transform have been purged for brevity.
+ * </p>
+ * <p>
+ * Turns out, this class already had an old narrative description, found below:
+ * </p>
+ * <hr />
  * <p>A PDF transform for PDF files of the American Physiological
  * Society.</p>
  * <h3>Overview of dynamic elements in APS PDF files</h3>
@@ -88,7 +105,7 @@ import org.pdfbox.util.operator.OperatorProcessor;
  * @see EraseVerticalBanner
  * @see EraseVerticalBanner2
  * @see NormalizeCurrentAsOf
- * @see Simplified
+ * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
  */
 @Deprecated
 public class AmericanPhysiologicalSocietyPdfTransform
@@ -103,6 +120,7 @@ public class AmericanPhysiologicalSocietyPdfTransform
    * @see AmericanPhysiologicalSocietyPdfTransform
    * @see ReplaceCurrentAsOf
    */
+  @Deprecated
   public static class NormalizeCurrentAsOf extends PageStreamTransform {
 
     /**
@@ -113,23 +131,27 @@ public class AmericanPhysiologicalSocietyPdfTransform
      * @author Thib Guicherd-Callin
      * @see NormalizeCurrentAsOf
      */
+    @Deprecated
     public static class ReplaceCurrentAsOf extends ReplaceString {
 
       /* Inherit documentation */
+      @Deprecated
       public String getReplacement(String match) {
         return "This information is current as of ";
       }
 
       /* Inherit documentation */
+      @Deprecated
       public boolean identify(String candidate) {
         return candidate.startsWith("This information is current as of ");
       }
 
     }
 
+    @Deprecated
     public NormalizeCurrentAsOf(final ArchivalUnit au) throws IOException {
       super(new OperatorProcessorFactory() {
-              public OperatorProcessor newInstanceForName(String className) throws LinkageError, ExceptionInInitializerError, ClassNotFoundException, IllegalAccessException, InstantiationException, SecurityException {
+              @Deprecated public OperatorProcessor newInstanceForName(String className) throws LinkageError, ExceptionInInitializerError, ClassNotFoundException, IllegalAccessException, InstantiationException, SecurityException {
                 return (OperatorProcessor)au.getPlugin().newAuxClass(className,
                                                                      OperatorProcessor.class);
               }
@@ -140,49 +162,15 @@ public class AmericanPhysiologicalSocietyPdfTransform
 
   }
 
-  /**
-   * <p>A simplified version of
-   * {@link AmericanPhysiologicalSocietyPdfTransform}, which applies
-   * minimal transformations on the strings of the document, scrapes
-   * all string constants and concatenates them into the result output
-   * stream.</p>
-   * @author Thib Guicherd-Callin
-   * @see AmericanPhysiologicalSocietyPdfTransform
-   */
   @Deprecated
-  public static class Simplified
-      extends ResilientTextScrapingDocumentTransform
-      implements ArchivalUnitDependent {
-
-    protected ArchivalUnit au;
-
-    public void setArchivalUnit(ArchivalUnit au) {
-      this.au = au;
-    }
-
-    public DocumentTransform makePreliminaryTransform() throws IOException {
-      if (au == null) throw new IOException("Uninitialized AU-dependent transform");
-      return new ConditionalDocumentTransform(// If...
-                                              new AggregateDocumentTransform(// ...on the first page...
-                                                                             new TransformFirstPage(// ...collapsing "Donwloaded from" succeeds...
-                                                                                                    new CollapseDownloadedFrom(au)),
-                                                                             // ...and on at least one page...
-                                                                             new TransformEachPage(PdfUtil.OR,
-                                                                                                   // ...normalizing "This information is current as of" succeeds,
-                                                                                                   new NormalizeCurrentAsOf(au))),
-                                              // ...then on every page except the first...
-                                              new TransformEachPageExceptFirst(// ...collapse "Downloaded from"
-                                                                               new CollapseDownloadedFrom(au)));
-    }
-
-  }
-
   protected ArchivalUnit au;
 
+  @Deprecated
   public void setArchivalUnit(ArchivalUnit au) {
     this.au = au;
   }
 
+  @Deprecated
   public boolean transform(PdfDocument pdfDocument,
                            OutputStream outputStream) {
     return PdfUtil.applyAndSave(this,
@@ -190,6 +178,7 @@ public class AmericanPhysiologicalSocietyPdfTransform
                                 outputStream);
   }
 
+  @Deprecated
   public boolean transform(PdfDocument pdfDocument) throws IOException {
     if (au == null) throw new IOException("Uninitialized AU-dependent transform");
     DocumentTransform documentTransform = new ConditionalDocumentTransform(// If...
