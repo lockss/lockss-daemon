@@ -1,32 +1,33 @@
 /*
- * $Id$
- */
 
-/*
+Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
-all rights reserved.
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
-STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
 
-Except as contained in this notice, the name of Stanford University shall not
-be used in advertising or otherwise to promote the sale, use or other dealings
-in this Software without prior written authorization from Stanford University.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
 
 */
 
@@ -52,13 +53,16 @@ import org.pdfbox.pdmodel.fdf.FDFDocument;
  * it is a parser more than a document object. This class exposes an
  * API more related to the PDF document under the parser.</p>
  * @author Thib Guicherd-Callin
+ * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
  */
 @Deprecated
 public class PdfDocument {
 
   /**
    * <p>The underlying PDF parser.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   private PDFParser pdfParser;
 
   /**
@@ -70,6 +74,7 @@ public class PdfDocument {
    * @throws IOException if any processing error occurs.
    * @see PDFParser#PDFParser(InputStream)
    * @see PDFParser#parse
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
   @Deprecated
   public PdfDocument(InputStream inputStream) throws IOException {
@@ -91,7 +96,9 @@ public class PdfDocument {
    * @return True if closing the PDF document succeeded, false
    *         otherwise.
    * @see PDDocument#close
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public boolean close() {
     try {
       getPdDocument().close();
@@ -111,7 +118,9 @@ public class PdfDocument {
    * @return The author of the document (null if not set).
    * @throws IOException if any processing error occurs.
    * @see PDDocumentInformation#getAuthor
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public String getAuthor() throws IOException {
     return getDocumentInformation().getAuthor();
   }
@@ -123,7 +132,9 @@ public class PdfDocument {
    *         the underlying {@link PDFParser} instance.
    * @throws IOException if any processing error occurs.
    * @see PDFParser#getDocument
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public COSDocument getCosDocument() throws IOException {
     return getPdfParser().getDocument();
   }
@@ -133,7 +144,9 @@ public class PdfDocument {
    * @return The creation date of the document (null if not set).
    * @throws IOException if any processing error occurs.
    * @see PDDocumentInformation#getCreationDate
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public Calendar getCreationDate() throws IOException {
     return getDocumentInformation().getCreationDate();
   }
@@ -143,7 +156,9 @@ public class PdfDocument {
    * @return The creator of the document (null if not set).
    * @throws IOException if any processing error occurs.
    * @see PDDocumentInformation#getCreator
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public String getCreator() throws IOException {
     return getDocumentInformation().getCreator();
   }
@@ -153,11 +168,19 @@ public class PdfDocument {
    * @return The keywords of the document (null if not set).
    * @throws IOException if any processing error occurs.
    * @see PDDocumentInformation#getKeywords
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public String getKeywords() throws IOException {
     return getDocumentInformation().getKeywords();
   }
 
+  /**
+   * @return
+   * @throws IOException
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
+   */
+  @Deprecated
   public String getMetadataAsString() throws IOException {
     PDMetadata metadata = getMetadata();
     return metadata == null ? null : metadata.getInputStreamAsString();
@@ -168,7 +191,9 @@ public class PdfDocument {
    * @return The modification date of the document (null if not set).
    * @throws IOException if any processing error occurs.
    * @see PDDocumentInformation#getModificationDate
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public Calendar getModificationDate() throws IOException {
     return getDocumentInformation().getModificationDate();
   }
@@ -178,15 +203,30 @@ public class PdfDocument {
    * @return The total number of pages.
    * @throws IOException if any processing error occurs.
    * @see PDDocument#getNumberOfPages
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public int getNumberOfPages() throws IOException {
     return getPdDocument().getNumberOfPages();
   }
 
+  /**
+   * @param index
+   * @return
+   * @throws IOException
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
+   */
+  @Deprecated
   public PdfPage getPage(int index) throws IOException {
     return new PdfPage(this, getPdPage(index));
   }
 
+  /**
+   * @return
+   * @throws IOException
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
+   */
+  @Deprecated
   public ListIterator /* of PdfPage */ getPageIterator() throws IOException {
     List pdfPages = new ArrayList();
     for (Iterator iter = getPdPageIterator() ; iter.hasNext() ; ) {
@@ -202,7 +242,9 @@ public class PdfDocument {
    *         the underlying {@link PDFParser} instance.
    * @throws IOException if any processing error occurs.
    * @see PDFParser#getPDDocument
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public PDDocument getPdDocument() throws IOException {
     return getPdfParser().getPDDocument();
   }
@@ -211,15 +253,30 @@ public class PdfDocument {
    * <p>Provides access to the underlying {@link PDFParser}
    * instance; <em>use with care.</em></p>
    * @return The underlying {@link PDFParser} instance.
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public PDFParser getPdfParser() {
     return pdfParser;
   }
 
+  /**
+   * @param index
+   * @return
+   * @throws IOException
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
+   */
+  @Deprecated
   public PDPage getPdPage(int index) throws IOException {
     return (PDPage)getPdPages().get(index);
   }
 
+  /**
+   * @return
+   * @throws IOException
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
+   */
+  @Deprecated
   public ListIterator /* of PDPage */ getPdPageIterator() throws IOException {
     return getPdPages().listIterator();
   }
@@ -229,7 +286,9 @@ public class PdfDocument {
    * @return The producer of the document (null if not set).
    * @throws IOException if any processing error occurs.
    * @see PDDocumentInformation#getProducer
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public String getProducer() throws IOException {
     return getDocumentInformation().getProducer();
   }
@@ -239,7 +298,9 @@ public class PdfDocument {
    * @return The subject of the document (null if not set).
    * @throws IOException if any processing error occurs.
    * @see PDDocumentInformation#getSubject
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public String getSubject() throws IOException {
     return getDocumentInformation().getSubject();
   }
@@ -249,11 +310,19 @@ public class PdfDocument {
    * @return The title of the document (null if not set).
    * @throws IOException if any processing error occurs.
    * @see PDDocumentInformation#getTitle
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public String getTitle() throws IOException {
     return getDocumentInformation().getTitle();
   }
 
+  /**
+   * @return
+   * @throws IOException
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
+   */
+  @Deprecated
   public COSDictionary getTrailer() throws IOException {
     return getCosDocument().getTrailer();
   }
@@ -264,7 +333,9 @@ public class PdfDocument {
    * @return A newly instantiated {@link PDStream} instance.
    * @throws IOException if any processing error occurs.
    * @see PDStream#PDStream(PDDocument)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public PDStream makePdStream() throws IOException {
     return new PDStream(getPdDocument());
   }
@@ -273,7 +344,9 @@ public class PdfDocument {
    * <p>Unsets the author from the document information.</p>
    * @throws IOException if any processing error occurs.
    * @see #setAuthor
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public void removeAuthor() throws IOException {
     setAuthor(null);
   }
@@ -282,7 +355,9 @@ public class PdfDocument {
    * <p>Unsets the creation date from the document information.</p>
    * @throws IOException if any processing error occurs.
    * @see #setCreationDate
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public void removeCreationDate() throws IOException {
     setCreationDate(null);
   }
@@ -291,7 +366,9 @@ public class PdfDocument {
    * <p>Unsets the creator from the document information.</p>
    * @throws IOException if any processing error occurs.
    * @see #setCreator
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public void removeCreator() throws IOException {
     setCreator(null);
   }
@@ -300,7 +377,9 @@ public class PdfDocument {
    * <p>Unsets the keywords from the document information.</p>
    * @throws IOException if any processing error occurs.
    * @see #setKeywords
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public void removeKeywords() throws IOException {
     setKeywords(null);
   }
@@ -309,15 +388,29 @@ public class PdfDocument {
    * <p>Unsets the modification date from the document information.</p>
    * @throws IOException if any processing error occurs.
    * @see #setModificationDate
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public void removeModificationDate() throws IOException {
     setModificationDate(null);
   }
 
+  /**
+   * @param index
+   * @throws IOException
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
+   */
+  @Deprecated
   public void removePage(int index) throws IOException {
     getPdDocument().removePage(index);
   }
 
+  /**
+   * @param pdfPage
+   * @throws IOException
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
+   */
+  @Deprecated
   public void removePage(PdfPage pdfPage) throws IOException {
     removePage(pdfPage.getPdPage());
   }
@@ -326,7 +419,9 @@ public class PdfDocument {
    * <p>Unsets the producer from the document information.</p>
    * @throws IOException if any processing error occurs.
    * @see #setProducer
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public void removeProducer() throws IOException {
     setProducer(null);
   }
@@ -335,7 +430,9 @@ public class PdfDocument {
    * <p>Unsets the subject from the document information.</p>
    * @throws IOException if any processing error occurs.
    * @see #setSubject
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public void removeSubject() throws IOException {
     setSubject(null);
   }
@@ -344,7 +441,9 @@ public class PdfDocument {
    * <p>Unsets the title from the document information.</p>
    * @throws IOException if any processing error occurs.
    * @see #setTitle
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public void removeTitle() throws IOException {
     setTitle(null);
   }
@@ -355,7 +454,9 @@ public class PdfDocument {
    * @param outputStream An output stream into which this document
    *                     will be saved.
    * @throws IOException if any processing error occurs.
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public void save(OutputStream outputStream) throws IOException {
     try {
       getPdDocument().save(outputStream);
@@ -372,7 +473,9 @@ public class PdfDocument {
    * @param author The new author of the document (null to unset).
    * @throws IOException if any processing error occurs.
    * @see PDDocumentInformation#setAuthor
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public void setAuthor(String author) throws IOException {
     getDocumentInformation().setAuthor(author);
   }
@@ -382,7 +485,9 @@ public class PdfDocument {
    * @param date The new creation date of the document (null to unset).
    * @throws IOException if any processing error occurs.
    * @see PDDocumentInformation#setCreationDate
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public void setCreationDate(Calendar date) throws IOException {
     getDocumentInformation().setCreationDate(date);
   }
@@ -392,7 +497,9 @@ public class PdfDocument {
    * @param creator The new creator of the document (null to unset).
    * @throws IOException if any processing error occurs.
    * @see PDDocumentInformation#setCreator
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public void setCreator(String creator) throws IOException {
     getDocumentInformation().setCreator(creator);
   }
@@ -402,11 +509,19 @@ public class PdfDocument {
    * @param keywords The new keywords of the document (null to unset).
    * @throws IOException if any processing error occurs.
    * @see PDDocumentInformation#setKeywords
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public void setKeywords(String keywords) throws IOException {
     getDocumentInformation().setKeywords(keywords);
   }
 
+  /**
+   * @param metadataAsString
+   * @throws IOException
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
+   */
+  @Deprecated
   public void setMetadata(String metadataAsString) throws IOException {
     ByteArrayInputStream inputStream = new ByteArrayInputStream(metadataAsString.getBytes());
     PDMetadata pdMetadata = new PDMetadata(getPdDocument(), inputStream, false);
@@ -418,7 +533,9 @@ public class PdfDocument {
    * @param date The new modification date of the document (null to unset).
    * @throws IOException if any processing error occurs.
    * @see PDDocumentInformation#setModificationDate
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public void setModificationDate(Calendar date) throws IOException {
     getDocumentInformation().setModificationDate(date);
   }
@@ -428,7 +545,9 @@ public class PdfDocument {
    * @param producer The new producer of the document (null to unset).
    * @throws IOException if any processing error occurs.
    * @see PDDocumentInformation#setProducer
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public void setProducer(String producer) throws IOException {
     getDocumentInformation().setProducer(producer);
   }
@@ -438,7 +557,9 @@ public class PdfDocument {
    * @param subject The new subject of the document (null to unset).
    * @throws IOException if any processing error occurs.
    * @see PDDocumentInformation#setSubject
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public void setSubject(String subject) throws IOException {
     getDocumentInformation().setSubject(subject);
   }
@@ -448,27 +569,58 @@ public class PdfDocument {
    * @param title The new title of the document (null to unset).
    * @throws IOException if any processing error occurs.
    * @see PDDocumentInformation#setTitle
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public void setTitle(String title) throws IOException {
     getDocumentInformation().setTitle(title);
   }
 
+  /**
+   * @return
+   * @throws IOException
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
+   */
+  @Deprecated
   protected PDDocumentCatalog getDocumentCatalog() throws IOException {
     return getPdDocument().getDocumentCatalog();
   }
 
+  /**
+   * @return
+   * @throws IOException
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
+   */
+  @Deprecated
   protected PDDocumentInformation getDocumentInformation() throws IOException {
     return getPdDocument().getDocumentInformation();
   }
 
+  /**
+   * @return
+   * @throws IOException
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
+   */
+  @Deprecated
   protected PDMetadata getMetadata() throws IOException {
     return getDocumentCatalog().getMetadata();
   }
 
+  /**
+   * @return
+   * @throws IOException
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
+   */
+  @Deprecated
   protected List getPdPages() throws IOException {
     return getDocumentCatalog().getAllPages();
   }
 
+  /**
+   * @throws IOException
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
+   */
+  @Deprecated
   protected void parse() throws IOException {
     // Parse the document before using it
     getPdfParser().parse();
@@ -491,15 +643,31 @@ public class PdfDocument {
     }
   }
 
+  /**
+   * @param pdPage
+   * @throws IOException
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
+   */
+  @Deprecated
   protected void removePage(PDPage pdPage) throws IOException {
     getPdDocument().removePage(pdPage);
   }
 
+  /**
+   * @param metadata
+   * @throws IOException
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
+   */
+  @Deprecated
   protected void setMetadata(PDMetadata metadata) throws IOException {
     getDocumentCatalog().setMetadata(metadata);
   }
 
-  private static Logger logger = Logger.getLogger("PdfDocument");
+  /**
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
+   */
+  @Deprecated
+  private static Logger logger = Logger.getLogger(PdfDocument.class);
 
   /**
    * <p>Closes the underlying {@link COSDocument} instance
@@ -514,7 +682,9 @@ public class PdfDocument {
    * @return True if the PDF document is null or if closing it
    *         succeeded, false otherwise.
    * @see #close()
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static boolean close(PdfDocument pdfDocument) {
     if (pdfDocument == null) {
       return true;

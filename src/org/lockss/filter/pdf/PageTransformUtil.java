@@ -1,32 +1,66 @@
 /*
- * $Id$
- */
+
+Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+*/
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
-all rights reserved.
+Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
-STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
 
-Except as contained in this notice, the name of Stanford University shall not
-be used in advertising or otherwise to promote the sale, use or other dealings
-in this Software without prior written authorization from Stanford University.
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
 
 */
 
@@ -43,6 +77,7 @@ import org.pdfbox.util.*;
 /**
  * <p>Utility page transforms.</p>
  * @author Thib Guicherd-Callin
+ * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
  */
 @Deprecated
 public class PageTransformUtil {
@@ -55,6 +90,7 @@ public class PageTransformUtil {
    * they keep a reference to the instantiation output stream.</p>
    * @author Thib Guicherd-Callin
    * @see PageTransformUtil.ExtractStringsToOutputStream.WriteToOutputStream
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
   @Deprecated
   public static class ExtractStringsToOutputStream extends NullPageStreamTransform {
@@ -70,6 +106,7 @@ public class PageTransformUtil {
      * {@link PDFStreamEngine} prevent this.</p>
      * @author Thib Guicherd-Callin
      * @see PageTransformUtil.ExtractStringsToOutputStream
+     * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
      */
     @Deprecated
     public static class WriteToOutputStream extends ProcessString {
@@ -89,7 +126,9 @@ public class PageTransformUtil {
 
     /**
      * <p>The output stream associated with this instance.</p>
+     * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
      */
+    @Deprecated
     protected OutputStream outputStream;
 
     /**
@@ -97,6 +136,7 @@ public class PageTransformUtil {
      * output stream.</p>
      * @param outputStream An output stream for output.
      * @throws IOException if any processing error occurs.
+     * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
      */
     @Deprecated
     public ExtractStringsToOutputStream(OutputStream outputStream) throws IOException {
@@ -117,6 +157,7 @@ public class PageTransformUtil {
    * they keep a reference to the instantiation string buffer.</p>
    * @author Thib Guicherd-Callin
    * @see PageTransformUtil.ExtractStringsToStringBuffer.AppendToStringBuffer
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
   @Deprecated
   public static class ExtractStringsToStringBuffer extends NullPageStreamTransform {
@@ -132,6 +173,7 @@ public class PageTransformUtil {
      * {@link PDFStreamEngine} prevent this.</p>
      * @author Thib Guicherd-Callin
      * @see PageTransformUtil.ExtractStringsToStringBuffer
+     * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
      */
     @Deprecated
     public static class AppendToStringBuffer extends ProcessString {
@@ -151,7 +193,9 @@ public class PageTransformUtil {
 
     /**
      * <p>The string buffer associated with this instance.</p>
+     * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
      */
+    @Deprecated
     protected StringBuffer buffer;
 
     /**
@@ -159,6 +203,7 @@ public class PageTransformUtil {
      * string buffer.</p>
      * @param buffer A string buffer for output.
      * @throws IOException if any processing error occurs.
+     * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
      */
     @Deprecated
     public ExtractStringsToStringBuffer(StringBuffer buffer) throws IOException {
@@ -174,13 +219,16 @@ public class PageTransformUtil {
   /**
    * <p>A page transform that does nothing.</p>
    * @author Thib Guicherd-Callin
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
   @Deprecated
   public static class IdentityPageTransform implements PageTransform {
 
     /**
      * <p>The return value for {@link #transform}.</p>
+     * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
      */
+    @Deprecated
     protected boolean returnValue;
 
     /**
@@ -189,6 +237,7 @@ public class PageTransformUtil {
      * result value.</p>
      * @see #IdentityPageTransform(boolean)
      * @see #RESULT_DEFAULT
+     * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
      */
     @Deprecated
     public IdentityPageTransform() {
@@ -200,6 +249,7 @@ public class PageTransformUtil {
      * {@link #transform} method always returns the given
      * result value.</p>
      * @param returnValue The return value for {@link #transform}.
+     * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
      */
     @Deprecated
     public IdentityPageTransform(boolean returnValue) {
@@ -207,6 +257,7 @@ public class PageTransformUtil {
     }
 
     /* Inherit documentation */
+    @Deprecated
     public boolean transform(PdfPage pdfPage) throws IOException {
       logger.debug2("Identity page transform result: " + returnValue);
       return returnValue;
@@ -215,7 +266,9 @@ public class PageTransformUtil {
     /**
      * <p>The constant return value used by default by this class.</p>
      * @see #IdentityPageTransform()
+     * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
      */
+    @Deprecated
     public static final boolean RESULT_DEFAULT = true;
 
   }
@@ -225,6 +278,7 @@ public class PageTransformUtil {
    * returns the opposite of its underlying page transform's
    * {@link PageTransform#transform} method.</p>
    * @author Thib Guicherd-Callin
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
   @Deprecated
   public static class OppositePageTransform extends PageTransformDecorator {
@@ -233,6 +287,7 @@ public class PageTransformUtil {
      * <p>Builds a new page transform decorating the given
      * page transform.</p>
      * @param pageTransform A page transform to be wrapped.
+     * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
      */
     @Deprecated
     public OppositePageTransform(PageTransform pageTransform) {
@@ -240,6 +295,7 @@ public class PageTransformUtil {
     }
 
     /* Inherit documentation */
+    @Deprecated
     public boolean transform(PdfPage pdfPage) throws IOException {
       logger.debug3("Begin opposite page transform based on " + pageTransform.getClass().getName());
       boolean ret = !pageTransform.transform(pdfPage);
@@ -252,19 +308,23 @@ public class PageTransformUtil {
   /**
    * <p>A base wrapper for another page transform.</p>
    * @author Thib Guicherd-Callin
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
   @Deprecated
   public static abstract class PageTransformDecorator implements PageTransform {
 
     /**
      * <p>The underlying page transform.</p>
+     * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
      */
+    @Deprecated
     protected PageTransform pageTransform;
 
     /**
      * <p>Builds a new page transform with the given underlying
      * page transform.</p>
      * @param pageTransform A page transform to be wrapped.
+     * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
      */
     @Deprecated
     protected PageTransformDecorator(PageTransform pageTransform) {
@@ -278,6 +338,7 @@ public class PageTransformUtil {
    * {@link PageTransformException} when its underlying page
    * transform fails.</p>
    * @author Thib Guicherd-Callin
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
   @Deprecated
   public static class StrictPageTransform extends PageTransformDecorator {
@@ -286,6 +347,7 @@ public class PageTransformUtil {
      * <p>Builds a new strict page transform decorating the given
      * page transform.</p>
      * @param pageTransform A page transform.
+     * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
      */
     @Deprecated
     public StrictPageTransform(PageTransform pageTransform) {
@@ -293,6 +355,7 @@ public class PageTransformUtil {
     }
 
     /* Inherit documentation */
+    @Deprecated
     public boolean transform(PdfPage pdfPage) throws IOException {
       logger.debug3("Begin strict page transform based on " + pageTransform.getClass().getName());
       if (pageTransform.transform(pdfPage)) {
@@ -309,13 +372,16 @@ public class PageTransformUtil {
 
   /**
    * <p>Not publicly instantiable.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
   @Deprecated
   private PageTransformUtil() { }
 
   /**
    * <p>A logger for use by this class.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
-  private static Logger logger = Logger.getLogger("PageTransformUtil");
+  @Deprecated
+  private static Logger logger = Logger.getLogger(PageTransformUtil.class);
 
 }
