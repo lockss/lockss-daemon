@@ -1,32 +1,33 @@
 /*
- * $Id$
- */
 
-/*
+Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
-all rights reserved.
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
-STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
 
-Except as contained in this notice, the name of Stanford University shall not
-be used in advertising or otherwise to promote the sale, use or other dealings
-in this Software without prior written authorization from Stanford University.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
 
 */
 
@@ -51,12 +52,16 @@ public class PdfPage {
 
   /**
    * <p>The associated {@link PdfDocument} instance.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   private PdfDocument pdfDocument;
 
   /**
    * <p>The underlying {@link PDPage} instance.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   private PDPage pdPage;
 
   /**
@@ -76,7 +81,9 @@ public class PdfPage {
    * <p>Finds this page's crop box, looking up hierarchically.</p>
    * @return The page's crop box.
    * @see PDPage#findCropBox
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public PDRectangle findCropBox() {
     return getPdPage().findCropBox();
   }
@@ -85,7 +92,9 @@ public class PdfPage {
    * <p>Finds this page's media box, looking up hierarchically.</p>
    * @return The page's media box.
    * @see PDPage#findMediaBox
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public PDRectangle findMediaBox() {
     return getPdPage().findMediaBox();
   }
@@ -94,21 +103,27 @@ public class PdfPage {
    * <p>Finds this page's resources, looking up hierarchically.</p>
    * @return The page's resources.
    * @see PDPage#findResources
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public PDResources findResources() {
     return getPdPage().findResources();
   }
 
   /**
    * @see #getAnnotations
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public PDAnnotation getAnnotation(int index) throws IOException {
     return (PDAnnotation)getAnnotations().get(index);
   }
 
   /**
    * @see #getAnnotations
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public ListIterator /* of PDAnnotation */ getAnnotationIterator() throws IOException {
     return getAnnotations().listIterator();
   }
@@ -117,7 +132,9 @@ public class PdfPage {
    * <p>Gets this page's art box (by default the crop box).</p>
    * @return The page's art box.
    * @see PDPage#getArtBox
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public PDRectangle getArtBox() {
     return getPdPage().getArtBox();
   }
@@ -126,7 +143,9 @@ public class PdfPage {
    * <p>Gets this page's bleed box (by default the crop box).</p>
    * @return The page's bleed box.
    * @see PDPage#getBleedBox
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public PDRectangle getBleedBox() {
     return getPdPage().getBleedBox();
   }
@@ -138,7 +157,9 @@ public class PdfPage {
    *         instance.
    * @throws IOException if any processing error occurs.
    * @see PDStream#getStream
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public COSStream getContentStream() throws IOException {
     return getContents().getStream();
   }
@@ -150,7 +171,9 @@ public class PdfPage {
    *         level.
    * @see #findCropBox
    * @see PDPage#getArtBox
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public PDRectangle getCropBox() {
     return getPdPage().getCropBox();
   }
@@ -159,7 +182,9 @@ public class PdfPage {
    * <p>Gets this page's underlying dictionary.</p>
    * @return This page's underlying dictionary ({@link COSDictionary}).
    * @see PDPage#getCOSDictionary
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public COSDictionary getDictionary() {
     return getPdPage().getCOSDictionary();
   }
@@ -171,14 +196,18 @@ public class PdfPage {
    *         level.
    * @see #findMediaBox
    * @see PDPage#getMediaBox
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public PDRectangle getMediaBox() {
     return getPdPage().getMediaBox();
   }
 
   /**
    * @see #getAnnotations
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public int getNumberOfAnnotations() throws IOException {
     return getAnnotations().size();
   }
@@ -188,7 +217,9 @@ public class PdfPage {
    * with this PDF page.\</p>
    * @return This page's associated {@link PdfDocument} instance.
    * @see PdfDocument
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public PdfDocument getPdfDocument() {
     return pdfDocument;
   }
@@ -198,7 +229,9 @@ public class PdfPage {
    * <em>use with care.</em></p>
    * @return This page's underlying {@link PDPage} instance.
    * @see PDPage
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public PDPage getPdPage() {
     return pdPage;
   }
@@ -210,7 +243,9 @@ public class PdfPage {
    *         stream.
    * @throws IOException if any processing error occurs.
    * @see #getStreamTokens
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public ListIterator getStreamTokenIterator() throws IOException {
     return getStreamTokens().listIterator();
   }
@@ -220,7 +255,9 @@ public class PdfPage {
    * @return A list of tokens in this page's content stream.
    * @throws IOException if any processing error occurs.
    * @see COSStream#getStreamTokens
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public List getStreamTokens() throws IOException {
     return getContentStream().getStreamTokens();
   }
@@ -229,7 +266,9 @@ public class PdfPage {
    * <p>Gets this page's trim box (by default the crop box).</p>
    * @return The page's trim box.
    * @see PDPage#getTrimBox
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public PDRectangle getTrimBox() {
     return getPdPage().getTrimBox();
   }
@@ -238,7 +277,9 @@ public class PdfPage {
    * <p>Sets the art box for this page.</p>
    * @param rectangle The new art box.
    * @see PDPage#setArtBox
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public void setArtBox(PDRectangle rectangle) {
     getPdPage().setArtBox(rectangle);
   }
@@ -247,11 +288,18 @@ public class PdfPage {
    * <p>Sets the bleed box for this page.</p>
    * @param rectangle The new bleed box.
    * @see PDPage#setBleedBox
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public void setBleedBox(PDRectangle rectangle) {
     getPdPage().setBleedBox(rectangle);
   }
 
+  /**
+   * @param rectangle
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
+   */
+  @Deprecated
   public void setContents(PDStream rectangle) {
     getPdPage().setContents(rectangle);
   }
@@ -260,7 +308,9 @@ public class PdfPage {
    * <p>Sets the crop box for this page.</p>
    * @param rectangle The new crop box.
    * @see PDPage#setCropBox
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public void setCropBox(PDRectangle rectangle) {
     getPdPage().setCropBox(rectangle);
   }
@@ -269,7 +319,9 @@ public class PdfPage {
    * <p>Sets the media box for this page.</p>
    * @param rectangle The new media box.
    * @see PDPage#setMediaBox
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public void setMediaBox(PDRectangle rectangle) {
     getPdPage().setMediaBox(rectangle);
   }
@@ -278,14 +330,18 @@ public class PdfPage {
    * <p>Sets the trim box for this page.</p>
    * @param rectangle The new trim box.
    * @see PDPage#setTrimBox
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public void setTrimBox(PDRectangle rectangle) {
     getPdPage().setTrimBox(rectangle);
   }
 
   /**
    * @see PDPage#getAnnotations
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   protected List /* of PDAnnotation */ getAnnotations() throws IOException {
     return getPdPage().getAnnotations();
   }
@@ -295,7 +351,9 @@ public class PdfPage {
    * @return This page's content stream.
    * @throws IOException if any processing error occurs.
    * @see PDPage#getContents
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   protected PDStream getContents() throws IOException {
     return getPdPage().getContents();
   }

@@ -1,32 +1,33 @@
 /*
- * $Id$
- */
 
-/*
+Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
-all rights reserved.
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
-STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
 
-Except as contained in this notice, the name of Stanford University shall not
-be used in advertising or otherwise to promote the sale, use or other dealings
-in this Software without prior written authorization from Stanford University.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
 
 */
 
@@ -39,7 +40,6 @@ import org.lockss.util.*;
 import org.pdfbox.pdfwriter.ContentStreamWriter;
 import org.pdfbox.pdmodel.common.PDStream;
 import org.pdfbox.util.PDFStreamEngine;
-import org.pdfbox.util.PDFStreamEngine.OperatorProcessorFactory;
 import org.pdfbox.util.operator.OperatorProcessor;
 
 /**
@@ -100,6 +100,7 @@ import org.pdfbox.util.operator.OperatorProcessor;
  * @see PDFStreamEngine
  * @see PdfOperatorProcessor
  * @see SplitOperatorProcessor
+ * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
  */
 @Deprecated
 public class PageStreamTransform extends PDFStreamEngine implements PageTransform {
@@ -109,6 +110,7 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
    * to the PDF page, even if at least one change has been signaled to
    * it by way of {@link PageStreamTransform#signalChange}.</p>
    * @author Thib Guicherd-Callin
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
   @Deprecated
   public static class NullPageStreamTransform extends PageStreamTransform {
@@ -118,6 +120,7 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
      * all PDF operators with {@link SimpleOperatorProcessor}.</p>
      * @throws IOException if any processing error occurs.
      * @see PageStreamTransform#PageStreamTransform()
+     * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
      */
     @Deprecated
     public NullPageStreamTransform() throws IOException {
@@ -142,6 +145,7 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
      * @throws NullPointerException if the argument is null.
      * @throws IOException          if any processing error occurs.
      * @see PageStreamTransform#PageStreamTransform(Properties)
+     * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
      */
     @Deprecated
     public NullPageStreamTransform(Properties customOperatorProcessors) throws IOException {
@@ -159,6 +163,7 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
      *                             <code>pdfOperatorString</code>.
      * @throws IOException if any processing error occurs.
      * @see PageStreamTransform#PageStreamTransform(String, Class, String, Class)
+     * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
      */
     @Deprecated
     public NullPageStreamTransform(String pdfOperatorString, Class pdfOperatorProcessor)
@@ -180,6 +185,7 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
      *                              <code>pdfOperatorString2</code>.
      * @throws IOException if any processing error occurs.
      * @see PageStreamTransform#PageStreamTransform(String, Class, String, Class)
+     * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
      */
     @Deprecated
     public NullPageStreamTransform(String pdfOperatorString1, Class pdfOperatorProcessor1,
@@ -206,6 +212,7 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
      *                              <code>pdfOperatorString3</code>.
      * @throws IOException if any processing error occurs.
      * @see PageStreamTransform#PageStreamTransform(String, Class, String, Class, String, Class)
+     * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
      */
     @Deprecated
     public NullPageStreamTransform(String pdfOperatorString1, Class pdfOperatorProcessor1,
@@ -237,6 +244,7 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
      *                              <code>pdfOperatorString4</code>.
      * @throws IOException if any processing error occurs.
      * @see PageStreamTransform#PageStreamTransform(String, Class, String, Class, String, Class, String, Class)
+     * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
      */
     @Deprecated
     public NullPageStreamTransform(String pdfOperatorString1, Class pdfOperatorProcessor1,
@@ -250,6 +258,10 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
             pdfOperatorString4, pdfOperatorProcessor4);
     }
 
+    /**
+     * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
+     */
+    @Deprecated
     protected synchronized void writeResult(PdfPage pdfPage) throws IOException {
       logger.debug2("Null page stream transform; skipping writing the result");
     }
@@ -260,15 +272,23 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
    * <p>Whether a change has been indicated by a PDF operator
    * processor since the begininng of the current/latest call to
    * {@link #transform}.</p>
-   * @see #reset
+   * @see #reset()
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   protected boolean atLeastOneChange;
 
+  /**
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
+   */
+  @Deprecated
   protected PdfPage currentPdfPage;
 
   /**
    * <p>The output list stack.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   protected Stack /* of ArrayList */ listStack;
 
   /**
@@ -289,6 +309,7 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
    * @param factory A {@link PdfOperatorProcessor} factory.
    * @throws IOException if any processing error occurs.
    * @see #PageStreamTransform(OperatorProcessorFactory, Properties)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
   @Deprecated
   public PageStreamTransform(OperatorProcessorFactory factory) throws IOException {
@@ -347,6 +368,7 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
    * @see PdfUtil#getPdfOperators
    * @see <a href="http://sourceforge.net/tracker/index.php?func=detail&aid=1544943&group_id=78314&atid=552832">PDFBox
    *      Bug #1544943</a>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
   @Deprecated
   public PageStreamTransform(OperatorProcessorFactory factory,
@@ -389,6 +411,7 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
    * @throws IOException if any processing error occurs.
    * @see #PageStreamTransform(OperatorProcessorFactory, Properties)
    * @see PropUtil#fromArgs(String, String)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
   @Deprecated
   public PageStreamTransform(OperatorProcessorFactory factory,
@@ -440,6 +463,7 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
    * @throws IOException if any processing error occurs.
    * @see #PageStreamTransform(OperatorProcessorFactory, Properties)
    * @see PropUtil#fromArgs(String, String, String, String)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
   @Deprecated
   public PageStreamTransform(OperatorProcessorFactory factory,
@@ -501,6 +525,7 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
    * @throws IOException if any processing error occurs.
    * @see #PageStreamTransform(OperatorProcessorFactory, Properties)
    * @see PropUtil#fromArgs(String, String, String, String, String, String)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
   @Deprecated
   public PageStreamTransform(OperatorProcessorFactory factory,
@@ -572,6 +597,7 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
    * @throws IOException if any processing error occurs.
    * @see #PageStreamTransform(Properties)
    * @see PropUtil#fromArgs(String, String, String, String, String, String, String, String)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
   @Deprecated
   public PageStreamTransform(OperatorProcessorFactory factory,
@@ -587,10 +613,20 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
                            pdfOperatorString4, pdfOperatorProcessor4.getName()));
   }
 
+  /**
+   * @return
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
+   */
+  @Deprecated
   public synchronized boolean getChangeFlag() {
     return atLeastOneChange;
   }
 
+  /**
+   * @return
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
+   */
+  @Deprecated
   public PdfPage getCurrentPdfPage() {
     return currentPdfPage;
   }
@@ -602,7 +638,9 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
    * @see #splitOutputList
    * @see #mergeOutputList()
    * @see #mergeOutputList(List)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public synchronized List getOutputList() {
     return (List)listStack.peek();
   }
@@ -614,7 +652,9 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
    * @throws EmptyStackException if there is currently only one output
    *                             list on the stack.
    * @see #mergeOutputList(List)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public synchronized void mergeOutputList() {
     logger.debug3("Merging");
     List oldTop = (List)listStack.pop();
@@ -631,7 +671,9 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
    *                    the stack.
    * @throws EmptyStackException if there is currently only one output
    *                             list on the stack.
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public synchronized void mergeOutputList(List replacement) {
     logger.debug3("Merging with replacement");
     listStack.pop(); // discard result
@@ -654,7 +696,9 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
    * to this method, which may represent a memory issue. Thus clients
    * <em>may</em> call {@link #reset} after a call to
    * {@link #transform} to clear the output list stack.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public synchronized void reset() {
     logger.debug3("Resetting the page stream transform");
     atLeastOneChange = false;
@@ -662,6 +706,11 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
     listStack.push(new ArrayList()); // FIXME: initial capacity?
   }
 
+  /**
+   * @param atLeastOneChange
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
+   */
+  @Deprecated
   public synchronized void setChangeFlag(boolean atLeastOneChange) {
     logger.debug3(atLeastOneChange ? "Change flag set" : "Change flag cleared");
     this.atLeastOneChange = atLeastOneChange;
@@ -673,7 +722,9 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
    * <p>After a call to this method, the token stream of the PDF
    * page being transformed will always be replaced with the output
    * list.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public synchronized void signalChange() {
     logger.debug3("Change signaled");
     atLeastOneChange = true;
@@ -681,7 +732,9 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
 
   /**
    * <p>Pushes an empty list onto the output list stack.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public synchronized void splitOutputList() {
     logger.debug3("Splitting");
     listStack.push(new ArrayList());
@@ -708,7 +761,9 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
    *                                   occurs.
    * @see PDFStreamEngine#processStream
    * @see #reset
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public synchronized boolean transform(PdfPage pdfPage)
       throws IOException {
     logger.debug3("Begin page stream transform");
@@ -738,7 +793,9 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
    * indicated.</p>
    * @param pdfPage     A PDF page (belonging to the PDF document).
    * @throws IOException if any processing error occurs.
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   protected synchronized void writeResult(PdfPage pdfPage)
       throws IOException {
     if (atLeastOneChange) {
@@ -756,12 +813,20 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
 
   /**
    * <p>A logger for use by this class.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
-  private static Logger logger = Logger.getLogger("PageStreamTransform");
+  @Deprecated
+  private static Logger logger = Logger.getLogger(PageStreamTransform.class);
 
+  /**
+   * @param customOperatorProcessors
+   * @param defaultOperatorProcessorClassName
+   * @return
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
+   */
+  @Deprecated
   public static Properties rewriteProperties(Properties customOperatorProcessors,
                                              String defaultOperatorProcessorClassName) {
-
     if (customOperatorProcessors == null) {
       throw new NullPointerException("Custom operator processors cannot be specified by a null Properties instance.");
     }
@@ -791,7 +856,9 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
    *         argument's value for that key (found recursively) or to
    *         {@link SimpleOperatorProcessor}.
    * @throws NullPointerException if the argument is null
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   protected static Properties rewriteProperties(Properties customOperatorProcessors) {
     return rewriteProperties(customOperatorProcessors, SimpleOperatorProcessor.class.getName());
   }

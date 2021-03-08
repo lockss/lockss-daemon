@@ -1,34 +1,35 @@
 /*
- * $Id$
- */
 
-/*
+Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
 
- Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
- all rights reserved.
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
 
- Permission is hereby granted, free of charge, to any person obtaining a copy
- of this software and associated documentation files (the "Software"), to deal
- in the Software without restriction, including without limitation the rights
- to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- copies of the Software, and to permit persons to whom the Software is
- furnished to do so, subject to the following conditions:
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
 
- The above copyright notice and this permission notice shall be included in
- all copies or substantial portions of the Software.
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
 
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
- STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
- WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
- IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
 
- Except as contained in this notice, the name of Stanford University shall not
- be used in advertising or otherwise to promote the sale, use or other dealings
- in this Software without prior written authorization from Stanford University.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
 
- */
+*/
 
 package org.lockss.util;
 
@@ -40,13 +41,13 @@ import org.lockss.config.*;
 import org.lockss.filter.pdf.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.definable.DefinableArchivalUnit;
-import org.lockss.util.CloseCallbackInputStream.DeleteFileOnCloseInputStream;
 import org.pdfbox.cos.*;
 import org.pdfbox.util.PDFOperator;
 
 /**
  * <p>Utilities for PDF processing and filtering.</p>
  * @author Thib Guicherd-Callin
+ * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
  */
 @Deprecated
 public class PdfUtil {
@@ -89,17 +90,21 @@ return success;
    * {@link AggregatePageTransform#transform} or
    * {@link TransformSelectedPages#transform}.</p>
    * @author Thib Guicherd-Callin
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    * @see PdfUtil#AND
    * @see PdfUtil#AND_ALL
    * @see PdfUtil#OR
    * @see PdfUtil#OR_ALL
    */
+  @Deprecated
   public interface ResultPolicy {
 
     /**
      * <p>Provides the initial value for the success flag.</p>
      * @return The value of the success flag before the loop.
+     * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
      */
+    @Deprecated
     boolean initialValue();
 
     /**
@@ -108,7 +113,9 @@ return success;
      * @param currentResult The current value of the success flag.
      * @return Whether the loop should continue based on the current
      *         value of the success flag.
+     * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
      */
+    @Deprecated
     boolean shouldKeepGoing(boolean currentResult);
 
     /**
@@ -118,7 +125,9 @@ return success;
      * @param currentResult The current value of the success flag.
      * @param update        A new result from an iteration of the loop.
      * @return The new value of the success flag.
+     * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
      */
+    @Deprecated
     boolean updateResult(boolean currentResult, boolean update);
 
   }
@@ -127,7 +136,9 @@ return success;
    * <p>A version of {@link ResultPolicy} that implements
    * short-circuiting "and" semantics.</p>
    * @see PdfUtil#AND_ALL
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final ResultPolicy AND = new ResultPolicy() {
 
     /* Inherit documentation */
@@ -155,7 +166,9 @@ return success;
    * <p>A version of {@link ResultPolicy} that implements
    * non short-circuiting "and" semantics.</p>
    * @see PdfUtil#AND
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final ResultPolicy AND_ALL = new ResultPolicy() {
 
     /* Inherit documentation */
@@ -183,7 +196,9 @@ return success;
    * <p>A version of {@link ResultPolicy} that implements
    * short-circuiting "or" semantics.</p>
    * @see PdfUtil#OR_ALL
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final ResultPolicy OR = new ResultPolicy() {
 
     /* Inherit documentation */
@@ -211,7 +226,9 @@ return success;
    * <p>A version of {@link ResultPolicy} that implements
    * non short-circuiting "or" semantics.</p>
    * @see PdfUtil#OR
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final ResultPolicy OR_ALL = new ResultPolicy() {
 
     /* Inherit documentation */
@@ -237,177 +254,247 @@ return success;
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String APPEND_CURVED_SEGMENT = "c";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String APPEND_CURVED_SEGMENT_FINAL = "y";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String APPEND_CURVED_SEGMENT_INITIAL = "v";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String APPEND_RECTANGLE = "re";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String APPEND_STRAIGHT_LINE_SEGMENT = "l";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String BEGIN_COMPATIBILITY_SECTION = "BX";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String BEGIN_INLINE_IMAGE_DATA = "ID";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String BEGIN_INLINE_IMAGE_OBJECT = "BI";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String BEGIN_MARKED_CONTENT = "BMC";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String BEGIN_MARKED_CONTENT_PROP = "BDC";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String BEGIN_NEW_SUBPATH = "m";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String BEGIN_TEXT_OBJECT = "BT";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String CLOSE_FILL_STROKE_EVENODD = "b*";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String CLOSE_FILL_STROKE_NONZERO = "b";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String CLOSE_STROKE = "s";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String CLOSE_SUBPATH = "h";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String CONCATENATE_MATRIX = "cm";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String DEFINE_MARKED_CONTENT_POINT = "MP";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String DEFINE_MARKED_CONTENT_POINT_PROP = "DP";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String END_COMPATIBILITY_SECTION = "EX";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String END_INLINE_IMAGE_OBJECT = "EI";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String END_MARKED_CONTENT = "EMC";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String END_PATH = "n";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String END_TEXT_OBJECT = "ET";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String FILL_EVENODD = "f*";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String FILL_NONZERO = "f";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String FILL_NONZERO_OBSOLETE = "F";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String FILL_STROKE_EVENODD = "B*";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String FILL_STROKE_NONZERO = "B";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String INVOKE_NAMED_XOBJECT = "Do";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String MOVE_TEXT_POSITION = "Td";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String MOVE_TEXT_POSITION_SET_LEADING = "TD";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String MOVE_TO_NEXT_LINE = "T*";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String MOVE_TO_NEXT_LINE_SHOW_TEXT = "\'";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String PAINT_SHADING_PATTERN = "sh";
 
   /**
@@ -429,199 +516,277 @@ return success;
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String RESTORE_GRAPHICS_STATE = "Q";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String SAVE_GRAPHICS_STATE = "q";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String SET_CHARACTER_SPACING = "Tc";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String SET_CLIPPING_PATH_EVENODD = "W*";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String SET_CLIPPING_PATH_NONZERO = "W";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String SET_CMYK_COLOR_NONSTROKING = "k";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String SET_CMYK_COLOR_STROKING = "K";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String SET_COLOR_NONSTROKING = "sc";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String SET_COLOR_NONSTROKING_SPECIAL = "scn";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String SET_COLOR_RENDERING_INTENT = "ri";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String SET_COLOR_SPACE_NONSTROKING = "cs";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String SET_COLOR_SPACE_STROKING = "CS";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String SET_COLOR_STROKING = "SC";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String SET_COLOR_STROKING_SPECIAL = "SCN";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String SET_FLATNESS_TOLERANCE = "i";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String SET_FROM_GRAPHICS_STATE = "gs";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String SET_GLYPH_WIDTH = "d0";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String SET_GLYPH_WIDTH_BOUNDING_BOX = "d1";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String SET_GRAY_LEVEL_NONSTROKING = "g";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String SET_GRAY_LEVEL_STROKING = "G";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String SET_HORIZONTAL_TEXT_SCALING = "Tz";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String SET_LINE_CAP_STYLE = "J";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String SET_LINE_DASH_PATTERN = "d";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String SET_LINE_JOIN_STYLE = "j";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String SET_LINE_WIDTH = "w";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String SET_MITER_LIMIT = "M";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String SET_RGB_COLOR_NONSTROKING = "rg";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String SET_RGB_COLOR_STROKING = "RG";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String SET_SPACING_MOVE_TO_NEXT_LINE_SHOW_TEXT = "\"";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String SET_TEXT_FONT_AND_SIZE = "Tf";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String SET_TEXT_LEADING = "TL";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String SET_TEXT_MATRIX = "Tm";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String SET_TEXT_RENDERING_MODE = "Tr";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String SET_TEXT_RISE = "Ts";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String SET_WORD_SPACING = "Tw";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String SHOW_TEXT = "Tj";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String SHOW_TEXT_GLYPH_POSITIONING = "TJ";
 
   /**
    * <p>The PDF <code>{@value}</code> operator string.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final String STROKE = "S";
 
   /**
    * <p>All 73 operators defined by PDF 1.6, in the order they are
    * listed in the specification (Appendix A).</p>
    * @see <a href="http://partners.adobe.com/public/developer/en/pdf/PDFReference16.pdf">PDF Reference, Fifth Edition, Version 1.6</a>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   protected static final String[] PDF_1_6_OPERATORS = {
     CLOSE_FILL_STROKE_NONZERO,
     FILL_STROKE_NONZERO,
@@ -700,8 +865,10 @@ return success;
 
   /**
    * <p>A logger for use by this class.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
-  private static Logger logger = Logger.getLogger("PdfUtil");
+  @Deprecated
+  private static Logger logger = Logger.getLogger("PdfUtilOld");
 
   /**
    * <p>Applies the given transform to the given PDF document, and
@@ -710,7 +877,9 @@ return success;
    * @param pdfDocument       A PDF document.
    * @param outputStream      An output stream into which to write the
    *                          transformed PDF document.
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static boolean applyAndSave(DocumentTransform documentTransform,
                                      PdfDocument pdfDocument,
                                      OutputStream outputStream) {
@@ -730,6 +899,13 @@ return success;
     }
   }
 
+  /**
+   * @param documentTransform
+   * @param inputStream
+   * @return
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
+   */
+  @Deprecated
   public static InputStream applyFromInputStream(OutputDocumentTransform documentTransform,
                                                  InputStream inputStream) {
     PdfDocument pdfDocument = null;
@@ -773,12 +949,23 @@ return success;
     }
   }
 
+  /**
+   * @param dtfos
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
+   */
+  @Deprecated
   private static void deleteTempFile(DeferredTempFileOutputStream dtfos) {
     if (dtfos != null) {
       dtfos.deleteTempFile();
     }
   }
 
+  /**
+   * @param au
+   * @return
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
+   */
+  @Deprecated
   public static OutputDocumentTransform getOutputDocumentTransform(ArchivalUnit au) {
     String key = PREFIX_PDF_FILTER_FACTORY_HINT + Constants.MIME_TYPE_PDF + DefinableArchivalUnit.SUFFIX_HASH_FILTER_FACTORY;
     String className = AuUtil.getTitleAttribute(au, key);
@@ -800,6 +987,11 @@ return success;
     }
   }
 
+  /**
+   * @return
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
+   */
+  @Deprecated
   public static Iterator getPdf16Operators() {
     return UnmodifiableIterator.decorate(new ObjectArrayIterator(PDF_1_6_OPERATORS));
   }
@@ -816,7 +1008,9 @@ return success;
    * @return The float associated with the selected PDF float.
    * @see #isPdfFloat(List, int)
    * @see #getPdfFloat(Object)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static float getPdfFloat(List tokens,
                                   int index) {
     return getPdfFloat(tokens.get(index));
@@ -833,7 +1027,9 @@ return success;
    * @return The float associated with this PDF float.
    * @see COSFloat#floatValue
    * @see #isPdfFloat(Object)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static float getPdfFloat(Object pdfFloat) {
     return ((COSFloat)pdfFloat).floatValue();
   }
@@ -850,7 +1046,9 @@ return success;
    * @return The integer associated with the selected PDF integer.
    * @see #isPdfInteger(List, int)
    * @see #getPdfInteger(Object)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static int getPdfInteger(List tokens,
                                   int index) {
     return getPdfInteger(tokens.get(index));
@@ -867,7 +1065,9 @@ return success;
    * @return The integer associated with this PDF integer.
    * @see COSInteger#intValue
    * @see #isPdfInteger(Object)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static int getPdfInteger(Object pdfInteger) {
     return ((COSInteger)pdfInteger).intValue();
   }
@@ -883,7 +1083,9 @@ return success;
    * @param index  The index of the selected token.
    * @return The number (as a float) associated with the selected PDF number.
    * @see #getPdfNumber(Object)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static float getPdfNumber(List tokens,
                                    int index) {
     return getPdfNumber(tokens.get(index));
@@ -900,7 +1102,9 @@ return success;
    * @return The number (as a float) associated with this PDF number.
    * @see COSInteger#intValue
    * @see #isPdfInteger(Object)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static float getPdfNumber(Object pdfNumber) {
     if (isPdfFloat(pdfNumber)) {
       return getPdfFloat(pdfNumber);
@@ -910,6 +1114,11 @@ return success;
     }
   }
 
+  /**
+   * @return
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
+   */
+  @Deprecated
   public static Iterator getPdfOperators() {
     return getPdf16Operators();
   }
@@ -926,7 +1135,9 @@ return success;
    * @return The {@link String} associated with the selected PDF string.
    * @see #isPdfString(List, int)
    * @see #getPdfString(Object)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static String getPdfString(List tokens,
                                     int index) {
     return getPdfString(tokens.get(index));
@@ -943,7 +1154,9 @@ return success;
    * @return The {@link String} associated with this PDF string.
    * @see COSString#getString
    * @see #isPdfString(Object)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static String getPdfString(Object pdfString) {
     return ((COSString)pdfString).getString();
   }
@@ -956,7 +1169,9 @@ return success;
    * @return True if the selected token is the expected operator, false
    *         otherwise.
    * @see #isBeginTextObject(Object)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static boolean isBeginTextObject(List tokens,
                                           int index) {
     return 0 <= index
@@ -972,7 +1187,9 @@ return success;
    *         otherwise.
    * @see #BEGIN_TEXT_OBJECT
    * @see #matchPdfOperator(Object, String)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static boolean isBeginTextObject(Object candidateToken) {
     return matchPdfOperator(candidateToken,
                             BEGIN_TEXT_OBJECT);
@@ -986,7 +1203,9 @@ return success;
    * @return True if the selected token is the expected operator, false
    *         otherwise.
    * @see #isEndTextObject(Object)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static boolean isEndTextObject(List tokens,
                                         int index) {
     return 0 <= index
@@ -1002,7 +1221,9 @@ return success;
    *         otherwise.
    * @see #END_TEXT_OBJECT
    * @see #matchPdfOperator(Object, String)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static boolean isEndTextObject(Object candidateToken) {
     return matchPdfOperator(candidateToken,
                             END_TEXT_OBJECT);
@@ -1016,7 +1237,9 @@ return success;
    * @return True if the selected token is the expected operator, false
    *         otherwise.
    * @see #isMoveToNextLineShowText(Object)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static boolean isMoveToNextLineShowText(List tokens,
                                                  int index) {
     return 0 <= index
@@ -1032,7 +1255,9 @@ return success;
    *         otherwise.
    * @see #MOVE_TO_NEXT_LINE_SHOW_TEXT
    * @see #matchPdfOperator(Object, String)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static boolean isMoveToNextLineShowText(Object candidateToken) {
     return matchPdfOperator(candidateToken,
                             MOVE_TO_NEXT_LINE_SHOW_TEXT);
@@ -1044,7 +1269,9 @@ return success;
    * @param index The index of the selected token.
    * @return True if the selected token is a PDF float, false otherwise.
    * @see #isPdfFloat(Object)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static boolean isPdfFloat(List tokens,
                                    int index) {
     return 0 <= index
@@ -1057,7 +1284,9 @@ return success;
    * @param candidateToken A candidate PDF token.
    * @return True if the argument is a PDF float, false otherwise.
    * @see COSFloat
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static boolean isPdfFloat(Object candidateToken) {
     return candidateToken instanceof COSFloat;
   }
@@ -1068,7 +1297,9 @@ return success;
    * @param index The index of the selected token.
    * @return True if the selected token is a PDF integer, false otherwise.
    * @see #isPdfInteger(Object)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static boolean isPdfInteger(List tokens,
                                      int index) {
     return 0 <= index
@@ -1081,7 +1312,9 @@ return success;
    * @param candidateToken A candidate PDF toekn.
    * @return True if the argument is a PDF integer, false otherwise.
    * @see COSInteger
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static boolean isPdfInteger(Object candidateToken) {
     return candidateToken instanceof COSInteger;
   }
@@ -1092,7 +1325,9 @@ return success;
    * @param index The index of the selected token.
    * @return True if the selected token is a PDF number, false otherwise.
    * @see #isPdfNumber(Object)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static boolean isPdfNumber(List tokens,
                                     int index) {
     return 0 <= index
@@ -1107,7 +1342,9 @@ return success;
    *         false otherwise.
    * @see #isPdfFloat(Object)
    * @see #isPdfInteger(Object)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static boolean isPdfNumber(Object candidateToken) {
     return isPdfFloat(candidateToken)
     || isPdfInteger(candidateToken);
@@ -1119,7 +1356,9 @@ return success;
    * @param index The index of the selected token.
    * @return True if the selected token is a PDF string, false otherwise.
    * @see #isPdfString(Object)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static boolean isPdfString(List tokens,
                                     int index) {
     return 0 <= index
@@ -1132,7 +1371,9 @@ return success;
    * @param candidateToken A candidate PDF toekn.
    * @return True if the argument is a PDF string, false otherwise.
    * @see COSString
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static boolean isPdfString(Object candidateToken) {
     return candidateToken instanceof COSString;
   }
@@ -1145,7 +1386,9 @@ return success;
    * @return True if the selected token is the expected operator, false
    *         otherwise.
    * @see #isSetRgbColorNonStroking(Object)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static boolean isSetRgbColorNonStroking(List tokens,
                                                  int index) {
     return 0 <= index
@@ -1161,7 +1404,9 @@ return success;
    *         otherwise.
    * @see #SET_RGB_COLOR_NONSTROKING
    * @see #matchPdfOperator(Object, String)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static boolean isSetRgbColorNonStroking(Object candidateToken) {
     return matchPdfOperator(candidateToken,
                             SET_RGB_COLOR_NONSTROKING);
@@ -1175,7 +1420,9 @@ return success;
    * @return True if the selected token is the expected operator, false
    *         otherwise.
    * @see #isSetSpacingMoveToNextLineShowText(Object)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static boolean isSetSpacingMoveToNextLineShowText(List tokens,
                                                            int index) {
     return 0 <= index
@@ -1191,7 +1438,9 @@ return success;
    *         otherwise.
    * @see #SET_SPACING_MOVE_TO_NEXT_LINE_SHOW_TEXT
    * @see #matchPdfOperator(Object, String)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static boolean isSetSpacingMoveToNextLineShowText(Object candidateToken) {
     return matchPdfOperator(candidateToken,
                             SET_SPACING_MOVE_TO_NEXT_LINE_SHOW_TEXT);
@@ -1202,7 +1451,9 @@ return success;
    * @param tokens
    * @param index
    * @return TODO
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static boolean isSetTextMatrix(List tokens,
                                         int index) {
     return 0 <= index
@@ -1214,7 +1465,9 @@ return success;
    *
    * @param candidateToken
    * @return TODO
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static boolean isSetTextMatrix(Object candidateToken) {
     return matchPdfOperator(candidateToken,
                             SET_TEXT_MATRIX);
@@ -1228,7 +1481,9 @@ return success;
    * @return True if the selected token is the expected operator, false
    *         otherwise.
    * @see #isShowText(Object)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static boolean isShowText(List tokens,
                                    int index) {
     return 0 <= index
@@ -1244,7 +1499,9 @@ return success;
    *         otherwise.
    * @see #SHOW_TEXT
    * @see #matchPdfOperator(Object, String)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static boolean isShowText(Object candidateToken) {
     return matchPdfOperator(candidateToken,
                             SHOW_TEXT);
@@ -1258,7 +1515,9 @@ return success;
    * @return True if the selected token is the expected operator, false
    *         otherwise.
    * @see #isShowTextGlyphPositioning(Object)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static boolean isShowTextGlyphPositioning(List tokens,
                                                    int index) {
     return 0 <= index
@@ -1274,7 +1533,9 @@ return success;
    *         otherwise.
    * @see #SHOW_TEXT_GLYPH_POSITIONING
    * @see #matchPdfOperator(Object, String)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static boolean isShowTextGlyphPositioning(Object candidateToken) {
     return matchPdfOperator(candidateToken,
                             SHOW_TEXT_GLYPH_POSITIONING);
@@ -1289,7 +1550,9 @@ return success;
    * @return True if the selected token is a PDF float and its value
    *         is equal to the given value, false otherwise.
    * @see #matchPdfFloat(Object, float)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static boolean matchPdfFloat(List tokens,
                                       int index,
                                       float num) {
@@ -1308,7 +1571,9 @@ return success;
    *         is equal to the given value, false otherwise.
    * @see #isPdfFloat(Object)
    * @see #getPdfFloat(Object)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static boolean matchPdfFloat(Object candidateToken,
                                       float num) {
     return isPdfFloat(candidateToken)
@@ -1324,7 +1589,9 @@ return success;
    * @return True if the selected token is a PDF integer and its value
    *         is equal to the given value, false otherwise.
    * @see #matchPdfInteger(Object, int)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static boolean matchPdfInteger(List tokens,
                                         int index,
                                         int num) {
@@ -1343,7 +1610,9 @@ return success;
    *         is equal to the given value, false otherwise.
    * @see #isPdfInteger(Object)
    * @see #getPdfInteger(Object)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static boolean matchPdfInteger(Object candidateToken,
                                         int num) {
     return isPdfInteger(candidateToken)
@@ -1359,7 +1628,9 @@ return success;
    * @return True if the selected token is a PDF number and its value
    *         is equal to the given value, false otherwise.
    * @see #matchPdfNumber(Object, float)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static boolean matchPdfNumber(List tokens,
                                        int index,
                                        float num) {
@@ -1378,7 +1649,9 @@ return success;
    *         is equal to the given value, false otherwise.
    * @see #isPdfNumber(Object)
    * @see #getPdfNumber(Object)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static boolean matchPdfNumber(Object candidateToken,
                                        float num) {
     return isPdfNumber(candidateToken)
@@ -1395,7 +1668,9 @@ return success;
    * @return True if the selected token is a PDF operator of the expected
    *         type, false otherwise.
    * @see #matchPdfFloat(Object, float)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static boolean matchPdfOperator(List tokens,
                                          int index,
                                          String expectedOperator) {
@@ -1412,7 +1687,9 @@ return success;
    * @param expectedOperator A PDF operator string to match the token against.
    * @return True if the argument is a PDF operator of the expected
    *         type, false otherwise.
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static boolean matchPdfOperator(Object candidateToken,
                                          String expectedOperator) {
     return candidateToken instanceof PDFOperator
@@ -1428,7 +1705,9 @@ return success;
    * @return True if the selected token is a PDF string and its value
    *         is equal to the given value, false otherwise.
    * @see #matchPdfString(Object, String)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static boolean matchPdfString(List tokens,
                                        int index,
                                        String str) {
@@ -1447,7 +1726,9 @@ return success;
    *         is equal to the given value, false otherwise.
    * @see #isPdfString(Object)
    * @see #getPdfString(Object)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static boolean matchPdfString(Object candidateToken,
                                        String str) {
     return isPdfString(candidateToken)
@@ -1463,7 +1744,9 @@ return success;
    * @return True if the selected token is a PDF string and its value
    *         ends with the given value, false otherwise.
    * @see #matchPdfStringEndsWith(Object, String)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static boolean matchPdfStringEndsWith(List tokens,
                                                int index,
                                                String str) {
@@ -1482,7 +1765,9 @@ return success;
    *         ends with the given value, false otherwise.
    * @see #isPdfString(Object)
    * @see #getPdfString(Object)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static boolean matchPdfStringEndsWith(Object candidateToken,
                                                String str) {
     return isPdfString(candidateToken)
@@ -1498,7 +1783,9 @@ return success;
    * @return True if the selected token is a PDF string and its value
    *         matches the given regular expression, false otherwise.
    * @see #matchPdfStringStartsWith(Object, String)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static boolean matchPdfStringMatches(List tokens,
                                               int index,
                                               String regex) {
@@ -1517,7 +1804,9 @@ return success;
    *         matches the given regular expression, false otherwise.
    * @see #isPdfString(Object)
    * @see #getPdfString(Object)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static boolean matchPdfStringMatches(Object candidateToken,
                                               String regex) {
     return isPdfString(candidateToken)
@@ -1533,7 +1822,9 @@ return success;
    * @return True if the selected token is a PDF string and its value
    *         starts with the given value, false otherwise.
    * @see #matchPdfStringStartsWith(Object, String)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static boolean matchPdfStringStartsWith(List tokens,
                                                  int index,
                                                  String str) {
@@ -1552,7 +1843,9 @@ return success;
    *         starts with the given value, false otherwise.
    * @see #isPdfString(Object)
    * @see #getPdfString(Object)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static boolean matchPdfStringStartsWith(Object candidateToken,
                                                  String str) {
     return isPdfString(candidateToken)
@@ -1569,7 +1862,9 @@ return success;
    * @return TODO
    * @see #isSetRgbColorNonStroking(List, int)
    * @see #matchPdfNumber(List, int, float)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static boolean matchSetRgbColorNonStroking(List tokens,
                                                     int index,
                                                     float red,
@@ -1590,7 +1885,9 @@ return success;
    * @param blue
    * @return TODO
    * @see #matchSetRgbColorNonStroking(List, int, float, float, float)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static boolean matchSetRgbColorNonStroking(List tokens,
                                                     int index,
                                                     int red,
@@ -1608,7 +1905,9 @@ return success;
    * @param tokens
    * @param index
    * @return TODO
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static boolean matchSetTextMatrix(List tokens,
                                            int index) {
     return isSetTextMatrix(tokens, index)
@@ -1627,7 +1926,9 @@ return success;
    * @return TODO
    * @see #isShowText(List, int)
    * @see #isPdfString(List, int)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static boolean matchShowText(List tokens,
                                       int index) {
     return isShowText(tokens, index)
@@ -1642,7 +1943,9 @@ return success;
    * @return TODO
    * @see #isShowText(List, int)
    * @see #matchPdfString(List, int, String)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static boolean matchShowText(List tokens,
                                       int index,
                                       String str) {
@@ -1658,7 +1961,9 @@ return success;
    * @return TODO
    * @see #isShowText(List, int)
    * @see #matchPdfStringEndsWith(List, int, String)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static boolean matchShowTextEndsWith(List tokens,
                                               int index,
                                               String str) {
@@ -1674,7 +1979,9 @@ return success;
    * @return TODO
    * @see #isShowText(List, int)
    * @see #matchPdfStringMatches(List, int, String)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static boolean matchShowTextMatches(List tokens,
                                              int index,
                                              String regex) {
@@ -1690,7 +1997,9 @@ return success;
   * @return TODO
   * @see #isShowText(List, int)
   * @see #matchPdfStringStartsWith(List, int, String)
+  * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
   */
+ @Deprecated
  public static boolean matchShowTextStartsWith(List tokens,
                                                int index,
                                                String str) {
@@ -1711,7 +2020,9 @@ return success;
    *         false otherwise.
    * @see #isBeginTextObject(List, int)
    * @see #isEndTextObject(List, int)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static boolean matchTextObject(List tokens,
                                         int begin,
                                         int end) {

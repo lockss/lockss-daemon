@@ -1,32 +1,33 @@
 /*
- * $Id$
- */
 
-/*
+Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
-all rights reserved.
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
-STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
 
-Except as contained in this notice, the name of Stanford University shall not
-be used in advertising or otherwise to promote the sale, use or other dealings
-in this Software without prior written authorization from Stanford University.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
 
 */
 
@@ -42,19 +43,24 @@ import org.lockss.util.PdfUtil.ResultPolicy;
  * <p>A document transform made of many other document transforms,
  * applied sequentially.</p>
  * @author Thib Guicherd-Callin
+ * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
  */
 @Deprecated
 public class AggregateDocumentTransform implements DocumentTransform {
 
   /**
    * <p>A list of registered {@link DocumentTransform} instances.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   protected List /* of DocumentTransform */ documentTransforms;
 
   /**
    * <p>A result policy determining the boolean result of the
    * transform.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   protected ResultPolicy resultPolicy;
 
   /**
@@ -62,6 +68,7 @@ public class AggregateDocumentTransform implements DocumentTransform {
    * result policy.</p>
    * @see #AggregateDocumentTransform(PdfUtil.ResultPolicy)
    * @see #POLICY_DEFAULT
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
   @Deprecated
   public AggregateDocumentTransform() {
@@ -74,6 +81,7 @@ public class AggregateDocumentTransform implements DocumentTransform {
    * @param documentTransform A document transform.
    * @see #AggregateDocumentTransform(PdfUtil.ResultPolicy, DocumentTransform)
    * @see #POLICY_DEFAULT
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
   @Deprecated
   public AggregateDocumentTransform(DocumentTransform documentTransform) {
@@ -88,6 +96,7 @@ public class AggregateDocumentTransform implements DocumentTransform {
    * @param documentTransform2 A document transform.
    * @see #AggregateDocumentTransform(PdfUtil.ResultPolicy, DocumentTransform, DocumentTransform)
    * @see #POLICY_DEFAULT
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
   @Deprecated
   public AggregateDocumentTransform(DocumentTransform documentTransform1,
@@ -105,6 +114,7 @@ public class AggregateDocumentTransform implements DocumentTransform {
    * @param documentTransform3 A document transform.
    * @see #AggregateDocumentTransform(PdfUtil.ResultPolicy, DocumentTransform, DocumentTransform, DocumentTransform)
    * @see #POLICY_DEFAULT
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
   @Deprecated
   public AggregateDocumentTransform(DocumentTransform documentTransform1,
@@ -125,6 +135,7 @@ public class AggregateDocumentTransform implements DocumentTransform {
    * @param documentTransform4 A document transform.
    * @see #AggregateDocumentTransform(PdfUtil.ResultPolicy, DocumentTransform, DocumentTransform, DocumentTransform, DocumentTransform)
    * @see #POLICY_DEFAULT
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
   @Deprecated
   public AggregateDocumentTransform(DocumentTransform documentTransform1,
@@ -144,6 +155,7 @@ public class AggregateDocumentTransform implements DocumentTransform {
    * @param documentTransforms An array of document transforms.
    * @see #AggregateDocumentTransform(DocumentTransform[])
    * @see #POLICY_DEFAULT
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
   @Deprecated
   public AggregateDocumentTransform(DocumentTransform[] documentTransforms) {
@@ -155,6 +167,7 @@ public class AggregateDocumentTransform implements DocumentTransform {
    * <p>Builds a new aggregate document transform using the given
    * result policy.</p>
    * @param resultPolicy A result policy.
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
   @Deprecated
   public AggregateDocumentTransform(ResultPolicy resultPolicy) {
@@ -174,6 +187,7 @@ public class AggregateDocumentTransform implements DocumentTransform {
    * @param resultPolicy       A result policy.
    * @param documentTransform A document transform.
    * @see #AggregateDocumentTransform(PdfUtil.ResultPolicy)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
   @Deprecated
   public AggregateDocumentTransform(ResultPolicy resultPolicy,
@@ -190,6 +204,7 @@ public class AggregateDocumentTransform implements DocumentTransform {
    * @param documentTransform1 A document transform.
    * @param documentTransform2 A document transform.
    * @see #AggregateDocumentTransform(PdfUtil.ResultPolicy, DocumentTransform)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
   @Deprecated
   public AggregateDocumentTransform(ResultPolicy resultPolicy,
@@ -209,6 +224,7 @@ public class AggregateDocumentTransform implements DocumentTransform {
    * @param documentTransform2 A document transform.
    * @param documentTransform3 A document transform.
    * @see #AggregateDocumentTransform(PdfUtil.ResultPolicy, DocumentTransform, DocumentTransform)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
   @Deprecated
   public AggregateDocumentTransform(ResultPolicy resultPolicy,
@@ -231,6 +247,7 @@ public class AggregateDocumentTransform implements DocumentTransform {
    * @param documentTransform3 A document transform.
    * @param documentTransform4 A document transform.
    * @see #AggregateDocumentTransform(PdfUtil.ResultPolicy, DocumentTransform, DocumentTransform, DocumentTransform)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
   @Deprecated
   public AggregateDocumentTransform(ResultPolicy resultPolicy,
@@ -254,6 +271,7 @@ public class AggregateDocumentTransform implements DocumentTransform {
    * @param documentTransforms An array of document transforms.
    * @see #AggregateDocumentTransform(PdfUtil.ResultPolicy)
    * @see #add(DocumentTransform[])
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
   @Deprecated
   public AggregateDocumentTransform(ResultPolicy resultPolicy,
@@ -271,7 +289,9 @@ public class AggregateDocumentTransform implements DocumentTransform {
    * registered tranforms are applied in the order the transforms
    * were registered with this method.</p>
    * @param documentTransform A {@link DocumentTransform} instance.
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public synchronized void add(DocumentTransform documentTransform) {
     if (documentTransform == null) {
       String logMessage = "Cannot add a null document transform";
@@ -292,7 +312,9 @@ public class AggregateDocumentTransform implements DocumentTransform {
    * @param documentTransforms An array of {@link DocumentTransform}
    *                           instances.
    * @see #add(DocumentTransform)
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public void add(DocumentTransform[] documentTransforms) {
     if (documentTransforms == null) {
       String logMessage = "Cannot add a null array of document transforms";
@@ -306,6 +328,7 @@ public class AggregateDocumentTransform implements DocumentTransform {
   }
 
   /* Inherit documentation */
+  @Deprecated
   public synchronized boolean transform(PdfDocument pdfDocument) throws IOException {
     logger.debug2("Begin aggregate document transform with result policy " + resultPolicy.toString());
     boolean success = resultPolicy.initialValue();
@@ -331,12 +354,16 @@ public class AggregateDocumentTransform implements DocumentTransform {
    * @see #AggregateDocumentTransform(DocumentTransform, DocumentTransform, DocumentTransform)
    * @see #AggregateDocumentTransform(DocumentTransform, DocumentTransform, DocumentTransform, DocumentTransform)
    * @see #AggregateDocumentTransform(DocumentTransform[])
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   public static final ResultPolicy POLICY_DEFAULT = PdfUtil.AND;
 
   /**
    * <p>A logger for use by this class.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
-  private static Logger logger = Logger.getLogger("AggregateDocumentTransform");
+  @Deprecated
+  private static Logger logger = Logger.getLogger(AggregateDocumentTransform.class);
 
 }

@@ -1,32 +1,33 @@
 /*
- * $Id$
- */
 
-/*
+Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
-all rights reserved.
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
-STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
 
-Except as contained in this notice, the name of Stanford University shall not
-be used in advertising or otherwise to promote the sale, use or other dealings
-in this Software without prior written authorization from Stanford University.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
 
 */
 
@@ -39,6 +40,7 @@ import org.lockss.util.*;
 /**
  * <p>Utility document transforms.</p>
  * @author Thib Guicherd-Callin
+ * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
  */
 @Deprecated
 public class DocumentTransformUtil {
@@ -46,19 +48,23 @@ public class DocumentTransformUtil {
   /**
    * <p>A base wrapper for another document transform.</p>
    * @author Thib Guicherd-Callin
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
   @Deprecated
   public static abstract class DocumentTransformDecorator implements DocumentTransform {
 
     /**
      * <p>The underlying document transform.</p>
+     * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
      */
+    @Deprecated
     protected DocumentTransform documentTransform;
 
     /**
      * <p>Builds a new document transform with the given underlying
      * document transform.</p>
      * @param documentTransform A document transform to be wrapped.
+     * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
      */
     @Deprecated
     protected DocumentTransformDecorator(DocumentTransform documentTransform) {
@@ -70,13 +76,16 @@ public class DocumentTransformUtil {
   /**
    * <p>A document transform that does nothing.</p>
    * @author Thib Guicherd-Callin
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
   @Deprecated
   public static class IdentityDocumentTransform implements DocumentTransform {
 
     /**
      * <p>The return value for {@link #transform}.</p>
+     * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
      */
+    @Deprecated
     protected boolean returnValue;
 
     /**
@@ -85,6 +94,7 @@ public class DocumentTransformUtil {
      * return value.</p>
      * @see #IdentityDocumentTransform(boolean)
      * @see #RESULT_DEFAULT
+     * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
      */
     @Deprecated
     public IdentityDocumentTransform() {
@@ -96,6 +106,7 @@ public class DocumentTransformUtil {
      * {@link #transform} method always returns the given
      * return value.</p>
      * @param returnValue The return value for {@link #transform}.
+     * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
      */
     @Deprecated
     public IdentityDocumentTransform(boolean returnValue) {
@@ -103,6 +114,7 @@ public class DocumentTransformUtil {
     }
 
     /* Inherit documentation */
+    @Deprecated
     public boolean transform(PdfDocument pdfDocument) throws IOException {
       logger.debug2("Identity document transform result: " + returnValue);
       return returnValue;
@@ -111,7 +123,9 @@ public class DocumentTransformUtil {
     /**
      * <p>The constant return value used by default by this class.</p>
      * @see #IdentityDocumentTransform()
+     * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
      */
+    @Deprecated
     public static final boolean RESULT_DEFAULT = true;
 
   }
@@ -121,6 +135,7 @@ public class DocumentTransformUtil {
    * returns the opposite of its underlying document transform's
    * {@link DocumentTransform#transform} method.</p>
    * @author Thib Guicherd-Callin
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
   @Deprecated
   public static class OppositeDocumentTransform extends DocumentTransformDecorator {
@@ -129,6 +144,7 @@ public class DocumentTransformUtil {
      * <p>Builds a new document transform decorating the given
      * document transform.</p>
      * @param documentTransform A document transform to be wrapped.
+     * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
      */
     @Deprecated
     public OppositeDocumentTransform(DocumentTransform documentTransform) {
@@ -136,6 +152,7 @@ public class DocumentTransformUtil {
     }
 
     /* Inherit documentation */
+    @Deprecated
     public boolean transform(PdfDocument pdfDocument) throws IOException {
       logger.debug3("Begin opposite document transform based on " + documentTransform.getClass().getName());
       boolean ret = !documentTransform.transform(pdfDocument);
@@ -149,19 +166,23 @@ public class DocumentTransformUtil {
    * <p>A base document transform that serves as a wrapper around a
    * page transform.</p>
    * @author Thib Guicherd-Callin
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
   @Deprecated
   public static abstract class PageTransformWrapper implements DocumentTransform {
 
     /**
      * <p>The underlying page transform.</p>
+     * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
      */
+    @Deprecated
     protected PageTransform pageTransform;
 
     /**
      * <p>Builds a new document transform wrapping the given page
      * transform.</p>
      * @param pageTransform
+     * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
      */
     @Deprecated
     protected PageTransformWrapper(PageTransform pageTransform) {
@@ -175,6 +196,7 @@ public class DocumentTransformUtil {
    * {@link DocumentTransformException} when its underlying document
    * transform fails.</p>
    * @author Thib Guicherd-Callin
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
   @Deprecated
   public static class StrictDocumentTransform extends DocumentTransformDecorator {
@@ -183,6 +205,7 @@ public class DocumentTransformUtil {
      * <p>Builds a new strict document transform decorating the given
      * document transform.</p>
      * @param documentTransform A document transform.
+     * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
      */
     @Deprecated
     public StrictDocumentTransform(DocumentTransform documentTransform) {
@@ -190,6 +213,7 @@ public class DocumentTransformUtil {
     }
 
     /* Inherit documentation */
+    @Deprecated
     public boolean transform(PdfDocument pdfDocument) throws IOException {
       logger.debug3("Begin strict document transform based on " + documentTransform.getClass().getName());
       if (documentTransform.transform(pdfDocument)) {
@@ -206,12 +230,16 @@ public class DocumentTransformUtil {
 
   /**
    * <p>Not publicly instantiable.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
+  @Deprecated
   private DocumentTransformUtil() { }
 
   /**
    * <p>A logger for use by this class.</p>
+   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
    */
-  private static Logger logger = Logger.getLogger("DocumentTransformUtil");
+  @Deprecated
+  private static Logger logger = Logger.getLogger(DocumentTransformUtil.class);
 
 }
