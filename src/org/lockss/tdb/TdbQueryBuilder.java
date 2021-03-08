@@ -705,6 +705,7 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
                  "org.lockss.plugin.locksscard.LockssCardPlugin",
                  "org.lockss.plugin.madhattersreview.MadHattersReviewPlugin",
                  "org.lockss.plugin.minerva.MinervaPlugin",
+                 "org.lockss.plugin.minerva.Minerva2020Plugin",
                  "org.lockss.plugin.msr.MSRPlugin",
                  "org.lockss.plugin.ojs.OJSPlugin",
                  "org.lockss.plugin.othervoices.OtherVoicesPlugin",
