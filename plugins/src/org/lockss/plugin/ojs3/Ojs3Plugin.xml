@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>10</string>
+    <string>11</string>
   </entry>
    <entry>
     <string>plugin_name</string>
@@ -22,6 +22,7 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <string>1,"https://docs.lib.purdue.edu/cgi/viewcontent.cgi\?article="</string>
       <string>1,"^(%s|%s).*\.(bmp|css|gif|ico|js|jpe?g|png|tif?f|eot|svg|ttf|woff.?)([?]((itok|v)=)?[^&amp;]+)?$", to_http(base_url),to_https(base_url)</string>
       <string>1,"^(%s|%s).*/css([?]name=stylesheet)?$", to_http(base_url),to_https(base_url)</string>
         <!--  index.php or journals/index.php are an optional attr so allow but do not require -->
@@ -105,7 +106,7 @@
             </entry>
             <entry>
                 <string>Substance</string>
-                <string>4</string>
+                <string>5</string>
             </entry>
         </map>
     </entry>
@@ -154,6 +155,10 @@
     <string>text/html_link_extractor_factory</string>
     <string>org.lockss.plugin.ojs3.Ojs3HtmlLinkExtractorFactory</string>
   </entry>
+    <entry>
+        <string>plugin_url_consumer_factory</string>
+        <string>org.lockss.plugin.ojs3.OJS3UrlConsumerFactory</string>
+    </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.ojs3.Ojs3ArticleIteratorFactory</string>
@@ -185,7 +190,6 @@
     <string>au_refetch_depth</string>
     <int>2</int>
   </entry>
-<!-- 
   <entry>
     <string>au_permitted_host_pattern</string>
     <list>
@@ -194,9 +198,9 @@
       <string>.+\.mathjax\.org</string>
       <string>.+\.gstatic\.com</string>
       <string>(fonts|ajax)\.googleapis\.com</string>
+      <string>docs\.lib\.purdue\.edu</string>
     </list>
   </entry>
-  -->
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
     <list>
