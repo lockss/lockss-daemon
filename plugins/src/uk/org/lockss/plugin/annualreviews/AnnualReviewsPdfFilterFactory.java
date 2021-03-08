@@ -218,7 +218,7 @@ public class AnnualReviewsPdfFilterFactory extends SimplePdfFilterFactory {
     boolean firstPage = true;
     for (PdfPage pdfPage : pdfDocument.getPages()) {
       boolean hasDoneSomething = false;
-      for (PdfTokenStream pdfTokenStream : pdfPage.getTokenStreamList()) {
+      for (PdfTokenStream pdfTokenStream : pdfPage.getAllTokenStreams()) {
         downloadedFromWorker.process(pdfTokenStream);
         if (downloadedFromWorker.result) {
           hasDoneSomething = true;
