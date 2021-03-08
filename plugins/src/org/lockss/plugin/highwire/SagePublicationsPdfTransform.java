@@ -1,32 +1,33 @@
 /*
- * $Id$
- */
 
-/*
+Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
-all rights reserved.
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
-STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
 
-Except as contained in this notice, the name of Stanford University shall not
-be used in advertising or otherwise to promote the sale, use or other dealings
-in this Software without prior written authorization from Stanford University.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
 
 */
 
@@ -40,15 +41,60 @@ import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.highwire.HighWirePdfFilterFactory.*;
 import org.lockss.util.*;
 
+/**
+ * <p>
+ * Notes to help the transition out of {@link HighWirePdfFilterFactory} and
+ * PDFBox 0.7.3. See {@link HighWirePdfFilterFactory} for details.
+ * </p>
+ * <p>
+ * Originally contained an {@link OutputDocumentTransform} and, within
+ * {@link SagePublicationsPdfTransform.Simplified}, a simplified
+ * {@link ResilientTextScrapingDocumentTransform}. But no TDB file uses
+ * {@link SagePublicationsPdfTransform}, only
+ * {@link SagePublicationsPdfTransform.Simplified}, so the contents of the
+ * parent transform have been purged for brevity.
+ * </p>
+ * <p>
+ * This class defines two additional building blocks.
+ * </p>
+ * <p>
+ * {@link SagePublicationsPdfTransform.RecognizeSyntheticPage}, is a page
+ * transform that recognizes the following pattern by enumerating the page
+ * stream tokens (forward). Right at the beginning Tj with a URL string, then Tj
+ * with the string
+ * {@code "The online version of this article can be found at:"}, then Tj with a
+ * string matching such patterns as {@code "Published by"} or
+ * {@code "...on behalf of"}, then Tj with the URL string
+ * {@code "http://www.sagepublications.com"}, then Tj with the string
+ * {@code "Additional services and information for "}, then Tj with a URL
+ * string, then Tj with the string {@code "Downloaded from "}.
+ * </p>
+ * <p>
+ * {@link RemovePage} is a page transform that simply removes its page from the
+ * enclosing document.
+ * </p>
+ * <p>
+ * {@link SagePublicationsPdfTransform.Simplified} is a
+ * {@link ResilientTextScrapingDocumentTransform} that does the following. If
+ * {@link RecognizeSyntheticPage} succeeds on the first page, then the first
+ * page is removed, and also {@link CollapseDownloadedFrom} is applied to all
+ * remaining pages, and also {@link NormalizeMetadata} is applied.
+ * </p>
+ * 
+ * @see HighWirePdfFilterFactory
+ * @see SagePublicationsPdfTransform.Simplified
+ * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
+ */
 @Deprecated
-public class SagePublicationsPdfTransform
-    implements OutputDocumentTransform,
-               ArchivalUnitDependent {
+public class SagePublicationsPdfTransform {
   
-  protected static Logger logger = Logger.getLogger("SagePublicationsPdfTransform");
+  @Deprecated
+  protected static Logger logger = Logger.getLogger(SagePublicationsPdfTransform.class);
   
+  @Deprecated
   public static class RecognizeSyntheticPage implements PageTransform {
 
+    @Deprecated
     public boolean transform(PdfPage pdfPage) throws IOException {
       // Initially, assume the recognition fails
       boolean ret = false;
@@ -116,8 +162,10 @@ public class SagePublicationsPdfTransform
 
   }
 
+  @Deprecated
   public static class RemovePage implements PageTransform {
 
+    @Deprecated
     public boolean transform(PdfPage pdfPage) throws IOException {
       // Remove this page from the document
       pdfPage.getPdfDocument().removePage(pdfPage);
@@ -131,12 +179,15 @@ public class SagePublicationsPdfTransform
       extends ResilientTextScrapingDocumentTransform
       implements ArchivalUnitDependent {
 
+    @Deprecated
     protected ArchivalUnit au;
 
+    @Deprecated
     public void setArchivalUnit(ArchivalUnit au) {
       this.au = au;
     }
 
+    @Deprecated
     public DocumentTransform makePreliminaryTransform() throws IOException {
       if (au == null) throw new IOException("Uninitialized AU-dependent transform");
       return new ConditionalDocumentTransform(// If the first page...
@@ -155,40 +206,6 @@ public class SagePublicationsPdfTransform
                                               });
     }
 
-  }
-
-  protected ArchivalUnit au;
-
-  public void setArchivalUnit(ArchivalUnit au) {
-    this.au = au;
-  }
-
-  public boolean transform(PdfDocument pdfDocument,
-                           OutputStream outputStream) {
-    return PdfUtil.applyAndSave(this,
-                                pdfDocument,
-                                outputStream);
-  }
-
-  public boolean transform(PdfDocument pdfDocument) throws IOException {
-    if (au == null) throw new IOException("Uninitialized AU-dependent transform");
-    DocumentTransform documentTransform = new ConditionalDocumentTransform(// If the first page...
-                                                                           new TransformFirstPage(// ...is recognized as a synthetic page,
-                                                                                                  new RecognizeSyntheticPage()),
-                                                                           // Then...
-                                                                           new DocumentTransform[] {
-                                                                             // The first page...
-                                                                             new TransformFirstPage(// ...has its hyperlinks normalized,
-                                                                                                    new NormalizeHyperlinks(),
-                                                                                                    // ...and is removed,
-                                                                                                    new RemovePage()),
-                                                                             // ...and on all the pages now that the first is gone...
-                                                                             new TransformEachPage(// ...collapse "Downloaded from" and normalize the hyperlink,
-                                                                                                   new CollapseDownloadedFromAndNormalizeHyperlinks(au)),
-                                                                             // ...and normalize the metadata
-                                                                             new NormalizeMetadata()
-                                                                           });
-    return documentTransform.transform(pdfDocument);
   }
 
 }
