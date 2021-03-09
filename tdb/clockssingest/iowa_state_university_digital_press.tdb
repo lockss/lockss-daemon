@@ -17,7 +17,7 @@
     plugin = org.lockss.plugin.janeway.iowastatedp.ClockssIowaStateDPPlugin
     param[base_url] = https://www.iastatedigitalpress.com/
     param[oai_granularity] = YYYY-MM-DD
-    param[journal_id] = aglawdigest
+    nondefparam[journal_id] = aglawdigest
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; hidden[proxy] >
 
     # I got volume from here: https://www.iastatedigitalpress.com/aglawdigest/api/oai/?verb=ListRecords&metadataPrefix=oai_dc&from=2018-01-01&until=2018-12-31
