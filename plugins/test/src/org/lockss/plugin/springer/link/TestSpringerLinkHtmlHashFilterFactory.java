@@ -114,6 +114,72 @@ public class TestSpringerLinkHtmlHashFilterFactory extends LockssTestCase {
     "<h1 class=\"c-article-title\" data-test=\"article-title\" data-article-title=\"\" itemprop=\"name headline\">Embodied meaning: a systemic functional perspective on paralanguage</h1>" +
     "<p class=\"c-article-info-details\" data-container-section=\"info\"><a data-test=\"journal-link\" href=\"/journal/40554\"><i data-test=\"journal-title\">Functional Linguistics</i></a><b data-test=\"journal-volume\"><span class=\"u-visually-hidden\">volume</span>&nbsp;6</b>, Article&nbsp;number:&nbsp;<span data-test=\"article-number\">1</span> (<span data-test=\"article-publication-year\">2019</span>)<a href=\"#citeas\" class=\"c-article-info-details__cite-as u-hide-print\" data-track=\"click\" data-track-action=\"cite this article\" data-track-label=\"link\">Cite this article</a></p>";
 
+  private static final String pTagWRights =
+    "<h1 class=\"c-article-title\" data-test=\"article-title\" data-article-title=\"\" itemprop=\"name headline\">Editorial Introduction</h1>" +
+    "<p class=\"c-article-rights\">" +
+    "<a data-track=\"click\" data-track-action=\"view rights and permissions\" data-track-label=\"link\" href=\"https://s100.copyright.com/AppDispatchServlet?title=Editorial%20Introduction&amp;author=Robert%20G.%20Resta&amp;contentID=10.1023%2FA%3A1022814018694&amp;copyright=National%20Society%20of%20Genetic%20Counselors%2C%20Inc.&amp;publication=1059-7700&amp;publicationDate=1999-02&amp;publisherName=SpringerNature&amp;orderBeanReset=true\">" +
+    "Reprints and Permissions</a>" +
+    "</p>";
+
+  private static final String filteredPTagWRights =
+    "<h1 class=\"c-article-title\" data-test=\"article-title\" data-article-title=\"\" itemprop=\"name headline\">Editorial Introduction</h1>";
+
+  private static final String pTagWAccess =
+    "<p>" +
+    "<i>The federal Office of Disease Prevention and Health Promotion (U.S. Public Health Service) has again prepared a compilation of goals and objectives for the health of the Nation's people, applicable to anticipated achievements within the decade ending in the year 2000. This effort involved work groups from numerous federal agencies, testimony in regional hearings from 800 citizens, and enrollment of a consortium of 300 national organizations. The final product, Healthy People 2000, was released in September 1990, and contains 298 measurable objectives. Content regarding children, genetic disorders, developmental disabilities, and disabilities in general is less featured and less specific than was hoped for. Ten objectives of relatively direct concern to geneticists are discussed, plus 23 others of interest in the maternal and child health field. On balance, it is suggested that the Healthy People 2000 objectives can be useful and stimulating for workers in genetics, child health care, and disabilities' services. Regrettably, there was no simultaneous proposal of legislation that would provide new federal programs, funding, or assistance to states</i>" +
+    "</p>" +
+    "<p class=\"c-article-access-provider__text\">" +
+    "Access provided by " +
+    "<span class=\"js-institution-name\">Stanford University</span>" +
+    "</p>" +
+    "<p class=\"c-article-access-provider__text\"" +
+    "<a href=\"/content/pdf/10.1007/BF00962914.pdf\" target=\"_blank\" rel=\"noopener\" data-track=\"click\" data-track-action=\"download pdf\" data-track-label=\"inline link\">" +
+    "Download</a>";
+
+  private static final String filteredPTagWAccess =
+    "<p>" +
+    "<i>The federal Office of Disease Prevention and Health Promotion (U.S. Public Health Service) has again prepared a compilation of goals and objectives for the health of the Nation's people, applicable to anticipated achievements within the decade ending in the year 2000. This effort involved work groups from numerous federal agencies, testimony in regional hearings from 800 citizens, and enrollment of a consortium of 300 national organizations. The final product, Healthy People 2000, was released in September 1990, and contains 298 measurable objectives. Content regarding children, genetic disorders, developmental disabilities, and disabilities in general is less featured and less specific than was hoped for. Ten objectives of relatively direct concern to geneticists are discussed, plus 23 others of interest in the maternal and child health field. On balance, it is suggested that the Healthy People 2000 objectives can be useful and stimulating for workers in genetics, child health care, and disabilities' services. Regrettably, there was no simultaneous proposal of legislation that would provide new federal programs, funding, or assistance to states</i>" +
+    "</p>";
+
+  private static final String changingATagAttr =
+    "<p>" +
+    "<a>A Psycho-Educational Intervention for People with a Family History of Depression: Pilot Results</a>" +
+    "</p>" +
+    "<p>Mental illness jar model illustration adapted from Peay and Austin (" +
+    "<a data-track=\"click\" data-track-action=\"reference anchor\" data-track-label=\"link\" data-test=\"citation-ref\" aria-label=\"Reference 2011\" title=\"Peay, H., &amp; Austin, J. (2011). How to talk with families about genetics and psychiatric illness. New York: W.W. Norton Company Inc..\" " +
+    "href=\"/article/10.1007/s10897-016-0011-5#ref-CR29\" id=\"ref-link-section-d52245e910\">" +
+    "2011</a>" +
+    ")</p>" +
+    "<p>Blaise Pascal, Pensees</p>" +
+    "<p>" +
+    "Huntington s disease, an autosomal-dominant neurodegenerative disorder, manifests as choreiform movements, cognitive changes, dystonia, mood and behavioral changes (Ross et al. <a data-track=\"click\" data-track-action=\"reference anchor\" data-track-label=\"link\" data-test=\"citation-ref\" aria-label=\"Reference 2014\" title=\"Ross, C. A., Aylward, E. H., Wild, E. J., Langbehn, D. R., Long, J. D., Warner, J. H., et al. (2014). Huntington disease: natural history, biomarkers and prospects for therapeutics. Nature Reviews Neurology, 10, 204 216.\" href=\"/article/10.1007/s10897-016-0007-1#ref-CR8\" id=\"ref-link-section-d54510e386\">" +
+    " 2014</a>" +
+    "<a data-track=\"click\" data-track-action=\"reference anchor\" data-track-label=\"link\" data-test=\"citation-ref\" aria-label=\"Reference 2007\" title=\"Walker, F. O. (2007). Huntington s disease. Lancet, 369, 218 228.\" href=\"/article/10.1007/s10897-016-0007-1#ref-CR11\" id=\"ref-link-section-d54510e389\">" +
+    "2007</a>" +
+    " ). The discovery of the <i>" +
+    " HD</i>" +
+    " gene in 1993 led to advances in detecting pathognomonic CAG expansions responsible for phenotypic manifestations of illness (The Huntington s Disease Collaborative Research Group <a data-track=\"click\" data-track-action=\"reference anchor\" data-track-label=\"link\" data-test=\"citation-ref\" aria-label=\"Reference 1993\" title=\"The Huntington s Disease Collaborative Research Group. (1993). A novel gene containing a trinucleotide repeat that is expanded and unstable on Huntington s disease chromosomes. Cell, 72, 971 983.\" href=\"/article/10.1007/s10897-016-0007-1#ref-CR10\" id=\"ref-link-section-d54510e395\">" +
+    " 1993</a>" +
+    "<p>" +
+    "Interpreting and prioritizing core ethical principles (such as autonomy, beneficence, nonmaleficence and justice) in the face of difficult clinical scenarios is often not straightforward. This is particularly so with vulnerable populations such as children or, as this case illustrates, those with intellectual disability.</p>" +
+    "<p>" ;
+
+  private static final String filteredChangingATagAttr =
+    "<p>" +
+    "<a>A Psycho-Educational Intervention for People with a Family History of Depression: Pilot Results</a>" +
+    "</p>" +
+    "<p>Mental illness jar model illustration adapted from Peay and Austin (" +
+    ")</p>" +
+    "<p>Blaise Pascal, Pensees</p>" +
+    "<p>" +
+    "Huntington s disease, an autosomal-dominant neurodegenerative disorder, manifests as choreiform movements, cognitive changes, dystonia, mood and behavioral changes (Ross et al." +
+    " ). The discovery of the <i>" +
+    " HD</i>" +
+    " gene in 1993 led to advances in detecting pathognomonic CAG expansions responsible for phenotypic manifestations of illness (The Huntington s Disease Collaborative Research Group " +
+    "<p>" +
+    "Interpreting and prioritizing core ethical principles (such as autonomy, beneficence, nonmaleficence and justice) in the face of difficult clinical scenarios is often not straightforward. This is particularly so with vulnerable populations such as children or, as this case illustrates, those with intellectual disability.</p>" +
+    "<p>" ;
+
   // this example is a little different; it's from an article
   /*
   private static final String HtmlHashB =
@@ -191,6 +257,30 @@ public class TestSpringerLinkHtmlHashFilterFactory extends LockssTestCase {
     inA = fact.createFilteredInputStream(mau,
         new StringInputStream(articleHeader), ENC);
     assertEquals(filteredArticleHeader, StringUtil.fromInputStream(inA));
+  }
+
+  public void testPTagRights() throws Exception {
+    InputStream inA;
+    // viewed-by test
+    inA = fact.createFilteredInputStream(mau,
+        new StringInputStream(pTagWRights), ENC);
+    assertEquals(filteredPTagWRights, StringUtil.fromInputStream(inA));
+  }
+
+  public void testPTagAccess() throws Exception {
+    InputStream inA;
+    // viewed-by test
+    inA = fact.createFilteredInputStream(mau,
+        new StringInputStream(pTagWAccess), ENC);
+    assertEquals(filteredPTagWAccess, StringUtil.fromInputStream(inA));
+  }
+
+  public void testchangingATagAttr() throws Exception {
+    InputStream inA;
+    // viewed-by test
+    inA = fact.createFilteredInputStream(mau,
+        new StringInputStream(changingATagAttr), ENC);
+    assertEquals(filteredChangingATagAttr, StringUtil.fromInputStream(inA));
   }
 
   /*

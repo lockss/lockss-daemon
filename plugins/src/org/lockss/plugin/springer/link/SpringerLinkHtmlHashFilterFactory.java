@@ -39,7 +39,7 @@ import java.io.Reader;
 import org.htmlparser.NodeFilter;
 import org.lockss.filter.FilterUtil;
 import org.lockss.filter.WhiteSpaceFilter;
-import org.lockss.filter.html.*;
+import org.lockss.filter.html;
 import org.lockss.plugin.*;
 import org.lockss.util.ReaderInputStream;
 import org.htmlparser.filters.OrFilter;
@@ -63,6 +63,19 @@ public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "class", "skyscraper-ad"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "banner-advert"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "doubleclick-ad"),
+        // <p class="c-article-rights">
+        // there is an additional param in the href of an a tag in this p tag.
+        // copyright=National%20Society%20of%20Genetic%20Counselors%2C%20Inc
+        // would be nice to normalize, or ignore the attribute, but as the p tag only contains the a tag
+        // ignoring the whole thing shouldn't be a problem
+        HtmlNodeFilters.tagWithAttribute("p", "class", "c-article-rights"),
+        // <p class="c-article-access-provider__text" ....
+        // this tag can either appear or not appear.
+        HtmlNodeFilters.tagWithAttribute("p", "class", "c-article-access-provider__text"),
+        // <a ... id="ref-link-section-d95262e910">
+        // this a tag's id seems to change every time, luckilly the ref-link-section bit is the same
+        HtmlNodeFilters.tagWithAttributeRegex("a", "id", "ref-link-section-"),
+
       })),
       // now keep these
       HtmlNodeFilterTransform.include(new OrFilter(new NodeFilter[] {
