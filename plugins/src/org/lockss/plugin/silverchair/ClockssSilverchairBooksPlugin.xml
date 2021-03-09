@@ -44,21 +44,211 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>24</string>
     </entry>
     <entry>
-        <string>plugin_parent</string>
-        <string>org.lockss.plugin.silverchair.SilverchairBooksPlugin</string>
+        <string>plugin_feature_version_map</string>
+        <map>
+            <entry>
+                <string>Poll</string>
+                <string>28</string>
+            </entry>
+            <entry>
+                <string>Substance</string>
+                <string>5</string>
+            </entry>
+            <entry>
+                <string>Metadata</string>
+                <string>7</string>
+            </entry>
+        </map>
     </entry>
     <entry>
-        <string>plugin_parent_version</string>
-        <string>24</string>
+        <string>required_daemon_version</string>
+        <string>1.72.0</string> <!-- no store content validation -->
     </entry>
     <entry>
         <string>plugin_name</string>
         <string>Silverchair Books Plugin (legacy, CLOCKSS)</string>
     </entry>
     <entry>
-        <string>au_name</string>
-        <string>"Silverchair Books Plugin (legacy, CLOCKSS), Base URL %s, Resource Id %d",  base_url, resource_id</string>
+        <string>plugin_config_props</string>
+        <list>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>base_url</key>
+                <displayName>Base URL</displayName>
+                <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+                <type>3</type>
+                <size>40</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>resource_id</key>
+                <displayName>Resource ID</displayName>
+                <description>Internal resource ID</description>
+                <type>6</type>
+                <size>8</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+        </list>
     </entry>
+    <entry>
+        <string>au_name</string>
+        <string>"Silverchair Books Plugin (legacy), Base URL %s, Resource Id %d", base_url,
+            resource_id</string>
+    </entry>
+    <entry>
+        <string>au_start_url</string>
+        <string>"%sbook.aspx?bookid=%d", base_url, resource_id</string>
+    </entry>
+    <entry>
+        <string>au_crawlrules</string>
+        <list>
+            <string>1,"^https?://((fonts|ajax)\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|ajax\.microsoft\.com)/"</string>
+            <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)$", url_host(base_url)</string>
+            <string>1,"^https?://%s/[^./]+\.axd/(file|script|stylesheet)/", url_host(base_url)</string>
+            <string>1,"^https?://[^.]+\.(silverchair\.netdna-cdn|silverchaircdn)\.com/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$"</string>
+            <string>1,"^https?://[^.]+\.(silverchair\.netdna-cdn|silverchaircdn)\.com/combres\.axd/"</string>
+            <string>4,"^%s", base_url</string>
+            <string>2,"__EVENTVALIDATION="</string>
+            <string>1,"^%sbook\.aspx\?bookid=",base_url,</string>
+            <string>1,"^%scontent\.aspx\?bookid=",base_url,</string>
+            <string>1,"^%scombres\.axd/", base_url</string>
+            <string>1,"^%svolume\.aspx/SetPDFLinkBasedOnAccess", base_url</string>
+            <string>1,"^%spdfaccess\.ashx\?ResourceID", base_url</string>
+            <string>1,"^%s(Script|Web)Resource\.axd\?d", base_url</string>
+            <string>1,"^%sCSS/book.less", base_url</string>
+        </list>
+    </entry>
+    <entry>
+        <string>text/html_link_extractor_factory</string>
+        <string>org.lockss.plugin.silverchair.ScHtmlLinkExtractorFactory</string>
+    </entry>
+    <entry>
+        <string>application/json_link_extractor_factory</string>
+        <string>org.lockss.plugin.silverchair.ScJsonLinkExtractorFactory</string>
+    </entry>
+    <entry>
+        <string>text/html_crawl_filter_factory</string>
+        <string>org.lockss.plugin.silverchair.ScHtmlCrawlFilterFactory</string>
+    </entry>
+    <entry>
+        <string>au_url_normalizer</string>
+        <string>org.lockss.plugin.silverchair.ScUrlNormalizer</string>
+    </entry>
+    <entry>
+        <string>text/html_link_rewriter_factory</string>
+        <string>org.lockss.plugin.silverchair.ScHtmlLinkRewriterFactory</string>
+    </entry>
+    <entry>
+        <string>au_refetch_depth</string>
+        <int>2</int>
+    </entry>
+    <entry>
+        <string>au_def_new_content_crawl</string>
+        <long>1209600000</long>
+    </entry>
+    <entry>
+        <string>au_def_pause_time</string>
+        <long>3000</long>
+    </entry>
+    <entry>
+        <string>plugin_fetch_rate_limiter_source</string>
+        <string>key:Silverchair</string>
+    </entry>
+    <entry>
+      <!-- Validator factory for text MIME types -->
+      <string>text/*_content_validator_factory</string>
+      <string>org.lockss.plugin.silverchair.BaseScContentValidatorFactory</string>
+    </entry>
+    <entry>
+      <string>application/json_filter_factory</string>
+      <string>org.lockss.plugin.silverchair.ScJsonHashFilterFactory</string>
+    </entry>
+    <entry>
+        <string>text/html_filter_factory</string>
+        <string>org.lockss.plugin.silverchair.BaseScHtmlHashFilterFactory</string>
+    </entry>
+    <entry>
+        <string>au_substance_url_pattern</string>
+        <list>
+            <string>"^%spdfaccess\.ashx\?ResourceID=(\d+)&amp;PDFSource=(\d+)$", base_url</string>
+        </list>
+    </entry>
+    <entry>
+        <string>plugin_article_iterator_factory</string>
+        <string>org.lockss.plugin.silverchair.ScBooksArticleIteratorFactory</string>
+    </entry>
+    <entry>
+        <string>plugin_article_metadata_extractor_factory</string>
+        <string>org.lockss.plugin.silverchair.ScBooksArticleIteratorFactory</string>
+    </entry>
+    <entry>
+        <string>text/plain_metadata_extractor_factory_map</string>
+        <map>
+            <entry>
+                <string>*;RIS</string>
+                <string>org.lockss.plugin.silverchair.ScRisMetadataExtractorFactory</string>
+            </entry>
+        </map>
+    </entry>
+    <entry>
+        <string>application/x-research-info-systems_metadata_extractor_factory_map</string>
+        <map>
+            <entry>
+                <string>*;RIS</string>
+                <string>org.lockss.plugin.silverchair.ScRisMetadataExtractorFactory</string>
+            </entry>
+        </map>
+    </entry>
+    <entry>
+        <string>text/html_metadata_extractor_factory_map</string>
+        <map>
+            <entry>
+                <string>*</string>
+                <string>org.lockss.plugin.silverchair.ScBooksHtmlMetadataExtractorFactory</string>
+            </entry>
+        </map>
+    </entry>
+    <entry>
+        <string>au_permitted_host_pattern</string>
+        <string>"(fonts|ajax)\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|ajax\.microsoft\.com|[^.]+\.(silverchair\.netdna-cdn|silverchaircdn)\.com"</string>
+    </entry>
+    <entry>
+        <string>plugin_url_fetcher_factory</string>
+        <string>org.lockss.plugin.silverchair.ScUrlFetcherFactory</string>
+    </entry>
+    <entry>
+        <string>plugin_cache_result_list</string>
+        <list>
+            <string>405=org.lockss.plugin.silverchair.BaseScHtmlHttpResponseHandler</string>
+            <string>org.lockss.plugin.ContentValidationException$WrongLength=org.lockss.plugin.silverchair.BaseScHtmlHttpResponseHandler</string>
+        </list>
+    </entry>
+  <!-- The ScriptResource files have a hash in the url book,journals & proceedings -->    
+  <!-- base_url/ScriptResource.axd?d=8yhG95ORBCdFcnQMiG7SKCkD7fZE_-0QfrcOcMeSd0iByYMyQoN8n6P2Wockd7G3m_urLLH950OSn9bLbQ75XNXB2XfWbNDcxAGwQB7wJDBvcGPlDeYm-FLeqx7t2_Ae6wOe8Q2&t=6811d392 -->  
+  <!-- don't count it in the poll, but do collect and share versions -->  
+    <entry>
+    <string>au_repair_from_peer_if_missing_url_pattern</string>
+    <list>
+	  <string>/ScriptResource\.axd\?d=[^/]+$</string>
+      <string>/combres.axd/[^/]+-(js|css)/-?[0-9]+$</string>
+      <string>/multimediaPlayer.aspx\?</string>
+      <string>/errors/404\.aspx\?aspxerrorpath=</string>
+      <string>silverchaircdn\.com/(CSS|Images)/</string>
+      <string>"\?v=[0-9]+$"</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_url_poll_result_weight</string>
+    <list>
+      <string>"/ScriptResource\.axd\?d=[^/]+$", 0</string>
+      <string>"/combres.axd/[^/]+-(js|css)/-?[0-9]+$", 0</string>
+      <string>"/multimediaPlayer.aspx\?", 0</string>
+      <string>"/errors/404\.aspx\?aspxerrorpath=", 0</string>
+      <string>"silverchaircdn\.com/(CSS|Images)/", 0</string>
+      <string>"\?v=[0-9]+$", 0</string>
+    </list>
+  </entry> 
     <entry>
         <string>clockss_override</string>
         <map>
