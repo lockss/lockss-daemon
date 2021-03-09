@@ -34,107 +34,110 @@ POSSIBILITY OF SUCH DAMAGE.
 package org.lockss.extractor;
 
 import java.io.*;
-import java.net.MalformedURLException;
-import java.util.Iterator;
+import java.util.Map;
 
 import org.lockss.daemon.PluginException;
-import org.lockss.filter.pdf.*;
+import org.lockss.pdf.*;
+import org.lockss.pdf.PdfDocument;
+import org.lockss.pdf.PdfPage;
+import org.lockss.pdf.PdfUtil;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.*;
-import org.pdfbox.pdmodel.interactive.action.type.*;
-import org.pdfbox.pdmodel.interactive.annotation.*;
 
 /**
- * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
+ * <p>
+ * A PDF link extractor. 
+ * </p>
+ * <p>
+ * 
+ * </p>
+ * 
+ * @author Thib Guicherd-Callin
  */
-@Deprecated
 public class PdfLinkExtractor implements LinkExtractor {
 
+  protected PdfDocumentFactory pdfDocumentFactory;
+  
   /**
-   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
+   * <p>
+   * Makes a new PDF link extractor using the default PDF document factory
+   * ({@link DefaultPdfDocumentFactory}).
+   * </p>
+   * 
+   * @since 1.76
+   * @see #PdfLinkExtractor(PdfDocumentFactory) 
+   * @see DefaultPdfDocumentFactory
    */
-  @Deprecated
-  protected static class OutputAllLinks implements PageTransform {
-    
-    /**
-     * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
-     */
-    @Deprecated
-    protected LinkExtractor.Callback callback;
-    
-    /**
-     * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
-     */
-    @Deprecated
-    protected String baseUrl;
-    
-    /**
-     * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
-     */
-    @Deprecated
-    public OutputAllLinks(String baseUrl,
-                          LinkExtractor.Callback callback) {
-      this.baseUrl = baseUrl;
-      this.callback = callback;
-    }
-    
-    /**
-     * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
-     */
-    @Deprecated
-    public boolean transform(PdfPage pdfPage) throws IOException {
-      for (Iterator iter = pdfPage.getAnnotationIterator() ; iter.hasNext() ; ) {
-        PDAnnotation pdAnnotation = (PDAnnotation)iter.next();
-        if (pdAnnotation instanceof PDAnnotationLink) {
-          PDAnnotationLink pdAnnotationLink = (PDAnnotationLink)pdAnnotation;
-          PDAction pdAction = pdAnnotationLink.getAction();
-          if (pdAction instanceof PDActionURI) {
-            PDActionURI pdActionUri = (PDActionURI)pdAction;
-            emit(pdActionUri.getURI());
-          }
-        }
-      }
-      return true; // always succeed
-    }
-    
-    /**
-     * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
-     */
-    @Deprecated
-    protected void emit(String url) throws MalformedURLException {
-      if ("".equals(url)) {
-        throw new MalformedURLException("Empty URL");
-      }
-      String resolved = UrlUtil.resolveUri(baseUrl, url);
-      if (logger.isDebug2()) {
-        logger.debug2("Found " + url + " which resolves to " + resolved);
-      }
-      callback.foundLink(resolved);
-    }
-    
+  public PdfLinkExtractor() {
+    this(DefaultPdfDocumentFactory.getInstance());
   }
   
   /**
-   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
+   * <p>
+   * Makes a new PDF link extractor using the given PDF document factory
+   * ({@link DefaultPdfDocumentFactory}).
+   * </p>
+   * 
+   * @since 1.76
    */
-  @Deprecated
+  public PdfLinkExtractor(PdfDocumentFactory pdfDocumentFactory) {
+    this.pdfDocumentFactory = pdfDocumentFactory;
+  }
+  
+  @Override
   public void extractUrls(ArchivalUnit au,
                           InputStream in,
                           String encoding,
                           String srcUrl,
-                          LinkExtractor.Callback cb)
-      throws IOException, PluginException {
-    PdfDocument pdfDocument = new PdfDocument(in);
-    PageTransform pageTransform = new OutputAllLinks(srcUrl, cb);
-    DocumentTransform documentTransform = new TransformEachPage(pageTransform);
-    documentTransform.transform(pdfDocument);
-    pdfDocument.close();
+                          Callback cb)
+      throws IOException,
+             PluginException {
+    // Inspired by PDFBox 1.8.16 PrintURLs (https://github.com/apache/pdfbox/blob/1.8.16/examples/src/main/java/org/apache/pdfbox/examples/pdmodel/PrintURLs.java)
+    PdfDocument pdfDocument = null;
+    try {
+      pdfDocument = pdfDocumentFactory.makeDocument(in);
+      for (PdfPage pdfPage : pdfDocument.getPages()) { // FIXME 1.76
+        for (PdfToken annotToken : pdfPage.getAnnotations()) {
+          if (!annotToken.isDictionary()) {
+            continue; // not supposed to happen
+          }
+          Map<String, PdfToken> annotDictionary = annotToken.getDictionary();
+          PdfToken annotSubtype = annotDictionary.get("Subtype");
+          if (annotSubtype == null || !annotSubtype.isName() || !annotSubtype.getName().equals("Link")) {
+            continue;
+          }
+          PdfToken actionToken = annotDictionary.get("A");
+          if (actionToken == null || !actionToken.isDictionary()) {
+            continue;
+          }
+          Map<String, PdfToken> actionDictionary = actionToken.getDictionary();
+          PdfToken actionSubtype = actionDictionary.get("S");
+          if (actionSubtype == null || !actionSubtype.isName() || !actionSubtype.getName().equals("URI")) {
+            continue;
+          }
+          PdfToken uriToken = actionDictionary.get("URI");
+          if (uriToken == null || !uriToken.isString()) {
+            continue;
+          }
+          String uri = uriToken.getString();
+          log.debug2("Found link: " + uri);
+          cb.foundLink(uri);
+        }
+      }
+    }
+    catch (PdfException pe) {
+      throw new IOException(pe);
+    }
+    finally {
+      PdfUtil.safeClose(pdfDocument);
+    }
   }
-
-  /**
-   * @deprecated Moving away from PDFBox 0.7.3 after 1.76.
-   */
-  @Deprecated
-  private static final Logger logger = Logger.getLogger(PdfLinkExtractor.class);
   
+  /**
+   * <p>
+   * A logger for use by this class.
+   * </p>
+   */
+  private static final Logger log = Logger.getLogger(PdfLinkExtractor.class);
+
 }
