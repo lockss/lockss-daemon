@@ -143,7 +143,7 @@ public class BaseAtyponMetadataUtil {
 
     // BEGIN Mark Allen Specific checks
     // get the AU's publisher and check if it is Mark Allen Group.
-    String pubName = tdbau.getAttr("publisher");
+    String pubName = tdbau.getPublisherName();
 
     if (isInAu && pubName.equals("Mark Allen Group")) {
       log.debug3("MarkAllen Checks");
@@ -151,7 +151,7 @@ public class BaseAtyponMetadataUtil {
       String foundDate = am.get(MetadataField.FIELD_DATE);
       String foundDOI = am.get(MetadataField.FIELD_DOI);
 
-      if (!org.apache.commons.lang.StringUtils.isEmpty(foundDate)) {
+      if (!StringUtils.isEmpty(foundDate)) {
         String AU_Year = tdbau.getYear();
         // date can come in many formats, so lets try to deal with them,
         // e.g. 2013/09/28, 2013-09-28, 9/28/2013, "September 28, 2013", "2013, Sep 28"
@@ -166,12 +166,11 @@ public class BaseAtyponMetadataUtil {
             foundYear = piece;
           }
         }
-        isInAu = (!org.apache.commons.lang.StringUtils.isEmpty(foundYear) && (AU_Year != null) && AU_Year.equals(foundYear));
+        isInAu = (!StringUtils.isEmpty(foundYear) && (AU_Year != null) && AU_Year.equals(foundYear));
       }
 
-      if (isInAu && !org.apache.commons.lang.StringUtils.isEmpty(foundDOI)) {
-        TypedEntryMap tfProps = au.getProperties();
-        String JOURNAL_ID = tfProps.getString(ConfigParamDescr.JOURNAL_ID.getKey());
+      if (isInAu && !StringUtils.isEmpty(foundDOI)) {
+        String JOURNAL_ID = au.getConfiguration().get(ConfigParamDescr.JOURNAL_ID.getKey());
         // laboriously parse this out to the journal id that is embedded in the DOI
         // DOI for MarkAllen stuff always looks like this:
         // 10.12968/coan.2018.23.1.41
