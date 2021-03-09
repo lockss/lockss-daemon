@@ -199,15 +199,19 @@ public class PdfBoxPage implements PdfPage {
      * this API, because only one type of annotation has a foreseeable
      * use case (the Link type). So for now, we are only representing
      * annotations as the dictionaries they are by circumventing the
-     * PDAnnotation factory call in getAnnotations() (PDFBox 1.6.0:
-     * PDPage line 780).
+     * PDAnnotation factory call in getAnnotations() (see PDFBox 1.8.16
+     * PDAnnotation createAnnotation(), PDPage getAnnotations()).
      */
     COSDictionary pageDictionary = pdPage.getCOSDictionary();
     COSArray annots = (COSArray)pageDictionary.getDictionaryObject(COSName.ANNOTS);
     if (annots == null) {
       return new ArrayList<PdfToken>();
     }
-    return PdfBoxTokens.convertOne(annots).getArray();
+    List<PdfToken> ret = new ArrayList<>(annots.size());
+    for (int i = 0 ; i < annots.size() ; ++i) {
+      ret.add(PdfBoxTokens.convertOne(annots.getObject(i)));
+    }
+    return ret;
   }
 
   @Override
@@ -227,6 +231,7 @@ public class PdfBoxPage implements PdfPage {
   
   @Override
   public void setAnnotations(List<PdfToken> annotations) {
+    // FIXME Possibly incorrect, based on the 1.76.0-era bug fix in getAnnotations()
     pdPage.getCOSDictionary().setItem(COSName.ANNOTS, (COSArray)Arr.of(annotations).toPdfBoxObject());
   }
 
