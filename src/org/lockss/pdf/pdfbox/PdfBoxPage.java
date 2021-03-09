@@ -113,8 +113,8 @@ public class PdfBoxPage implements PdfPage {
      * this API, because only one type of annotation has a foreseeable
      * use case (the Link type). So for now, we are only representing
      * annotations as the dictionaries they are by circumventing the
-     * PDAnnotation factory call in getAnnotations() (PDFBox 1.6.0:
-     * PDPage line 780).
+     * PDAnnotation factory call in getAnnotations() (see PDFBox 1.8.16
+     * PDAnnotation createAnnotation(), PDPage getAnnotations()).
      */
     List<PDAnnotation> annots = null;
     try {
@@ -123,11 +123,9 @@ public class PdfBoxPage implements PdfPage {
     catch (IOException ioe) {
       throw new PdfException("Error retrieving annotations", ioe);
     }
-    List<PdfBoxToken> ret = new ArrayList<>(annots.size());
-    if (annots != null) {
-      for (PDAnnotation annot : annots) {
-        ret.add(PdfBoxToken.Dic.of(annot.getCOSObject()));
-      }
+    List<PdfToken> ret = new ArrayList<>(annots.size());
+    for (int i = 0 ; i < annots.size() ; ++i) {
+      ret.add(PdfBoxToken.convertOne(annots.getObject(i)));
     }
     return ret;
   }
@@ -191,6 +189,15 @@ public class PdfBoxPage implements PdfPage {
     }
   }
   
+<<<<<<< HEAD
+=======
+  @Override
+  public void setAnnotations(List<PdfToken> annotations) {
+    // FIXME Possibly incorrect, based on the 1.76.0-era bug fix in getAnnotations()
+    pdPage.getCOSDictionary().setItem(COSName.ANNOTS, (COSArray)Arr.of(annotations).toPdfBoxObject());
+  }
+
+>>>>>>> cd1cfab581 (Bug fix: the annotation dictionaries contained in the PDPage's 'Annots')
   /**
    * @since 1.76
    */
