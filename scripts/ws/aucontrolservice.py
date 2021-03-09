@@ -107,8 +107,8 @@ class _AuControlServiceOptions(object):
 
         # Other options
         group = parser.add_argument_group('Other options')
-        group.add_argument('--refetchDepth', type=int, help='crawl depth')
-        group.add_argument('--priority', type=int, help='priority for crawl')
+        group.add_argument('--refetch-depth', default=123, type=int, metavar='DEPTH', help='crawl depth (default: %(default)s)')
+        group.add_argument('--priority', default=10, type=int, help='priority for crawl (default: %(default)s)' )
         group.add_argument('--force', action="store_true", help='force crawl outside of crawl window')
         return parser
 
@@ -119,7 +119,9 @@ class _AuControlServiceOptions(object):
         self.auids = args.auid[:]
         for f in args.auids: self.auids.extend(_file_lines(f))
         # request_deep_crawl_by_id/request_deep_crawl_by_id_list
-        self.get_auids = args.get_auids
+        self.force = args.force
+        self.priority = args.priority
+        self.refetch_depth = args.refetch_depth
 
 def _file_lines(fstr):
     with open(os.path.expanduser(fstr)) as f: ret = list(filter(lambda y: len(y) > 0, [x.partition('#')[0].strip() for x in f]))
