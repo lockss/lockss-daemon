@@ -122,17 +122,14 @@ public class BaseAtyponMetadataUtil {
     // Use the journalTitle and volume name from the ArticleMetadata
     String foundJournalTitle = am.get(MetadataField.FIELD_PUBLICATION_TITLE);
     String foundVolume = am.get(MetadataField.FIELD_VOLUME);
-    String foundDate = am.get(MetadataField.FIELD_DATE);
 
     // If we got nothing, just return, we can't validate further
-    if (StringUtils.isEmpty(foundVolume) && StringUtils.isEmpty(foundDate) &&
-        StringUtils.isEmpty(foundJournalTitle)) {
+    if (StringUtils.isEmpty(foundVolume) && StringUtils.isEmpty(foundJournalTitle)) {
       return isInAu; //return true, we have no way of knowing
     }
 
     // Check VOLUME/YEAR
-    if (!(StringUtils.isEmpty(foundVolume) || StringUtils.isEmpty(foundDate))) {
-
+    if (!StringUtils.isEmpty(foundVolume)) {
       // Get the AU's volume name from the AU properties. This must be set
       TypedEntryMap tfProps = au.getProperties();
       String AU_volume = tfProps.getString(ConfigParamDescr.VOLUME_NAME.getKey());
@@ -142,10 +139,62 @@ public class BaseAtyponMetadataUtil {
         isInAu =  ( (AU_volume != null) && (AU_volume.equals(foundVolume)));
         log.debug3("After volume check, isInAu :" + isInAu);
       }
-
-      // Add in doing year comparison if FIELD_DATE is set
-      // this is more complicated because date format is variable
     }
+
+    // BEGIN Mark Allen Specific checks
+    // get the AU's publisher and check if it is Mark Allen Group.
+    String pubName = tdbau.getAttr("publisher");
+
+    if (isInAu && pubName.equals("Mark Allen Group")) {
+      log.debug3("MarkAllen Checks");
+
+      String foundDate = am.get(MetadataField.FIELD_DATE);
+      String foundDOI = am.get(MetadataField.FIELD_DOI);
+
+      if (!org.apache.commons.lang.StringUtils.isEmpty(foundDate)) {
+        String AU_Year = tdbau.getYear();
+        // date can come in many formats, so lets try to deal with them,
+        // e.g. 2013/09/28, 2013-09-28, 9/28/2013, "September 28, 2013", "2013, Sep 28"
+        // other formats are too tricky, e.g. 20130928 so this format should pass the check as well
+        // This date check can likely be instantly used for all Atypon,
+
+        String foundYear = null;
+
+        String[] splitDate = foundDate.split("/|-|, ");
+        for (String piece : splitDate) {
+          if (piece.length() == 4) {
+            foundYear = piece;
+          }
+        }
+        isInAu = (!org.apache.commons.lang.StringUtils.isEmpty(foundYear) && (AU_Year != null) && AU_Year.equals(foundYear));
+      }
+
+      if (isInAu && !org.apache.commons.lang.StringUtils.isEmpty(foundDOI)) {
+        TypedEntryMap tfProps = au.getProperties();
+        String JOURNAL_ID = tfProps.getString(ConfigParamDescr.JOURNAL_ID.getKey());
+        // laboriously parse this out to the journal id that is embedded in the DOI
+        // DOI for MarkAllen stuff always looks like this:
+        // 10.12968/coan.2018.23.1.41
+        // this was pulled in but doesnt look like markallen.
+        // 10.1111/j.2044-3862.2009.tb00374.x
+        // the letters between the '/' and the second '.' is the Journal ID
+        // we extract it.
+        // To generalize to all of Atypon more analysis should be done for the DOI entries of other publishers
+        // as this is prime for false positives.
+
+        int slashIdx = foundDOI.indexOf("/");
+        String shouldBeJID = foundDOI.substring(slashIdx + 1, foundDOI.indexOf(".", slashIdx));
+
+        isInAu = ((shouldBeJID != null) && shouldBeJID.equals(JOURNAL_ID));
+
+      }
+      log.debug3("foundDate: " + foundDate);
+      log.debug3("foundDOI: " + foundDOI);
+      if (isInAu) {
+        log.debug3("Mark Allen Pass");
+      }
+    }
+    // END MARK ALLEN SPECIFIC CHECKS //
 
     // If we've come this far and have passed an ISSN check, we're done
     if (checkedISSN) {

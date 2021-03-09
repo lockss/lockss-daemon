@@ -115,6 +115,8 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>application/pdf_filter_factory</string>
     <string>org.lockss.plugin.atypon.BaseAtyponScrapingPdfFilterFactory</string>
   </entry>
+  <!-- because of the multiple Metadata sources this class is now unused, see BaseAtyponMetadataUtil for the
+       year and journal_id chaecks.
   <entry>
     <string>text/html_metadata_extractor_factory_map</string>
     <map>
@@ -124,4 +126,5 @@ POSSIBILITY OF SUCH DAMAGE.
       </entry>
     </map>
   </entry>
+  -->
 </map>
