@@ -1,8 +1,4 @@
 /*
- * $Id$
- */
-
-/*
 
 Copyright (c) 2000-2018 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -34,19 +30,20 @@ package org.lockss.plugin.pubfactory;
 
 import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
+import org.htmlparser.Tag;
 import org.htmlparser.filters.OrFilter;
 import org.htmlparser.filters.TagNameFilter;
 import org.htmlparser.tags.Bullet;
 import org.htmlparser.tags.Div;
+import org.htmlparser.util.NodeList;
+import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.filter.FilterUtil;
-import org.lockss.filter.html.HtmlCompoundTransform;
-import org.lockss.filter.html.HtmlFilterInputStream;
-import org.lockss.filter.html.HtmlNodeFilterTransform;
-import org.lockss.filter.html.HtmlNodeFilters;
+import org.lockss.filter.html.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.FilterFactory;
 import org.lockss.util.ReaderInputStream;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.Reader;
 import java.util.Vector;
@@ -60,7 +57,6 @@ public class PubFactoryHtmlHashFilterFactory implements FilterFactory {
                                                InputStream in, 
                                                String encoding) {
     NodeFilter[] includeNodes = new NodeFilter[] {
-
     		
     		// manifest just doesn't have much other than the links
     	    new NodeFilter() {
@@ -111,12 +107,66 @@ public class PubFactoryHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("div", "id", "headerWrap"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "id", "footerWrap"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "fixed-controls"),
-
+        /*
+        // Metrics on AMetSoc https://journals.ametsoc.org/view/journals/wcas/12/2/wcas-d-19-0115.1.xml
+        // class name is big e.g. "component component-content-item component-container container-metrics container-wrapper-43132"
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "container-metrics"),
+        // same with related content
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "component-related-content"),
+        */
+        // Get rid of entire sidebar, as it has lots of dynamic ids etc
+        // "component component-content-item component-container container-sideBar container-wrapper-43148 container-accordion"
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "container-sideBar"),
+        // get rid of volume dropdown, it similarly has generated ids
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "component-volume-issue-selector"),
     };
     
     return getFilteredInputStream(au, in, encoding, 
                                   includeNodes, excludeNodes);
   }
+  /*
+  HtmlTransform xform = new HtmlTransform() {
+    @Override
+    public NodeList transform(NodeList nodeList) throws IOException {
+      try {
+        nodeList.visitAllNodesWith(new NodeVisitor() {
+          @Override
+          public void visitTag(Tag tag) {
+            String tagName = tag.getTagName().toLowerCase();
+            /* remove these
+            * <ul class="ajax-zone m-0 t-zone" id="zone115228561_1">
+            * <ul data-menu-list="list-id-567363a7-9393-49e7-
+            * <li ... data-menu-item="list-id-fe284
+            *
+            *
+
+            if ("ul".equals(tagName) && (tag.getAttribute("id") != null) {
+              String tagAttr = tag.getAttribute("id");
+              if (tagAttr.contains("zone") || tagAttr.contains("zone")) {
+                tag.setAttribute("id", "");
+              }
+            } /* remove these
+             * <div data-popover-fullscreen="false"
+
+            else if (("div".equals(tagName)) && (tag.getAttribute("id")!= null) &&
+                ) {
+              if (tag.getAttribute("class") != null)
+                tag.removeAttribute("class");
+            } /* remove these
+             * <button data-popover-anchor="0979a884-7df8-4d05-a54...
+
+            else if () {
+
+          }
+        });
+      }
+      catch (Exception exc) {
+        log.debug2("Internal error (visitor)", exc); // Ignore this tag and move on
+      }
+      return nodeList;
+    }
+  };
+*/
   
   // Takes include and exclude nodes as input. Removes white spaces.
   public InputStream getFilteredInputStream(ArchivalUnit au, InputStream in,
