@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2021 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,9 +28,12 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.repository;
 
+import java.io.*;
+import java.nio.file.*;
 import java.net.*;
 import java.util.*;
 import org.apache.commons.collections.map.LinkedMap;
+import org.apache.commons.io.FileUtils;
 
 import org.lockss.app.*;
 import org.lockss.util.*;
@@ -123,6 +122,11 @@ public class RepositoryManager
   public static final CheckUnnormalizedMode DEFAULT_CHECK_UNNORMALIZED =
     CheckUnnormalizedMode.Log;
 
+  /** If set, the contents of deleted AUs will be moved to a directory
+   * below this.  Must be a path relative to .../cache. */
+  public static final String PARAM_MOVE_DELETED_AUS_TO =
+    PREFIX + "moveDeletedAusTo";
+  public static final String DEFAULT_MOVE_DELETED_AUS_TO = null;
 
   static final String WDOG_PARAM_SIZE_CALC = "SizeCalc";
   static final long WDOG_DEFAULT_SIZE_CALC = Constants.DAY;
@@ -144,6 +148,7 @@ public class RepositoryManager
     DISK_PREFIX + "full.freePercent";
   static final double DEFAULT_DISK_FULL_FRRE_PERCENT = .01;
 
+  private PluginManager pluginMgr;
   private PlatformUtil platInfo = PlatformUtil.getInstance();
   private List repoList = Collections.EMPTY_LIST;
   int paramNodeCacheSize = DEFAULT_MAX_PER_AU_CACHE_SIZE;
@@ -164,6 +169,8 @@ public class RepositoryManager
   private static int maxComponentLength = DEFAULT_MAX_COMPONENT_LENGTH;
   private static CheckUnnormalizedMode checkUnnormalized =
     DEFAULT_CHECK_UNNORMALIZED;
+  private String paramMoveDeletedAusTo = DEFAULT_MOVE_DELETED_AUS_TO;
+  private AuEventHandler auEventHandler;
 
 
   PlatformUtil.DF paramDFWarn =
@@ -177,8 +184,82 @@ public class RepositoryManager
 
   public void startService() {
     super.startService();
+    pluginMgr = getDaemon().getPluginManager();
     localRepos = new HashMap();
+
+    // register our AU event handler
+    auEventHandler = new AuEventHandler.Base() {
+	@Override public void auDeleted(AuEvent event, ArchivalUnit au) {
+	  moveAuDir(event, au);
+	}};
+    pluginMgr.registerAuEventHandler(auEventHandler);
   }
+
+  /** Optionally rename the repository dir belonging to a deleted AU to a
+   * "deleted" directory, and remove the auid -> dir mapping */
+
+  // Testcase for this is TestPluginManager.testRenameDeletedAuDir().
+  // This is not bulletproof, but making it so would be more work than is
+  // warranted for a repository implementation that's on its way out.  The
+  // intended use is for autest, which normally won't delete AUs with
+  // active polls or crawls.
+  private void moveAuDir(AuEvent event, ArchivalUnit au) {
+    String auid = au.getAuId();
+    switch (event.getType()) {
+      // Do this only for Delete, not Deactivate or RestartDelete
+    case Delete:
+      if (!StringUtil.isNullString(paramMoveDeletedAusTo)) {
+        // Normally should be only one dir for AU, easier to handle all
+        // repos than figure out which is correct if more than one
+        List<String> repoRoots = findExistingAuBaseDirsFor(auid);
+        log.debug2("del repos for: " + au.getName() + ": " + repoRoots);
+        for (String repoRoot : repoRoots) {
+          File auDir =
+            new File(LockssRepositoryImpl.getAuDir(auid, repoRoot, false));
+          String auDirName = auDir.getName();
+          File deletedDir = new File(repoRoot, paramMoveDeletedAusTo);
+          if (!deletedDir.exists()) {
+            log.debug("Creating deleted AU dir: " + deletedDir);
+            if (!deletedDir.mkdirs()) {
+              log.error("Couldn't create deleted AU dir: " + deletedDir);
+              break;
+            }
+          }
+
+          // Uniqueify the dirname under the "deleted" dir
+          File moveToDir = new File(deletedDir, auDirName);
+          int suffix = 1;
+          while (moveToDir.exists()) {
+            moveToDir = new File(deletedDir, auDirName + "." + suffix++);
+          }
+          try {
+            log.debug2("move(" + auDir.toPath() + ", "
+                       + moveToDir.toPath() + ")");
+            Files.move(auDir.toPath(), moveToDir.toPath(),
+                       StandardCopyOption.ATOMIC_MOVE);
+            // Remove entry from map
+            LockssRepositoryImpl.removeAuDirEntry(auid, repoRoot);
+            // Update timestamp so janitor script knows when to delete the
+            // dir.
+            FileUtils.touch(moveToDir);
+
+            // Unfinished idea to leave a symlink behind temporarily (to be
+            // deleted by TimerQ or some such) so that still-running polls
+            // and crawls won't recreate the dir.  There isn't sufficient
+            // locking available to guarantee that, and the symlink would
+            // be left around if the daemon dies before it's deleted
+//           Files.createSymbolicLink(auDir.toPath(),
+//                                    moveToDir.toPath());
+          } catch (IOException e) {
+            log.error("failed to move deleted AU dir: " + auDir +
+                      " to deleted dir: " + moveToDir, e);
+          }
+        }
+      }
+      break;
+    }
+  }
+
 
   public void setConfig(Configuration config, Configuration oldConfig,
 			Configuration.Differences changedKeys) {
@@ -257,6 +338,8 @@ public class RepositoryManager
 	(CheckUnnormalizedMode)
 	config.getEnum(CheckUnnormalizedMode.class,
 		       PARAM_CHECK_UNNORMALIZED, DEFAULT_CHECK_UNNORMALIZED);
+      paramMoveDeletedAusTo = config.get(PARAM_MOVE_DELETED_AUS_TO,
+                                         DEFAULT_MOVE_DELETED_AUS_TO);
     }
   }
 
@@ -334,19 +417,26 @@ public class RepositoryManager
     return isStatefulUnusedDirSearch;
   }
 
-  public List findExistingRepositoriesFor(String auid) {
-    List res = null;
-    for (Iterator iter = getRepositoryList().iterator(); iter.hasNext(); ) {
-      String repoName = (String)iter.next();
+  public List<String> findExistingRepositoriesFor(String auid) {
+    List<String> res = null;
+    for (String repoName : getRepositoryList()) {
       String path = LockssRepositoryImpl.getLocalRepositoryPath(repoName);
       if (LockssRepositoryImpl.doesAuDirExist(auid, path)) {
 	if (res == null) {
-	  res = new ArrayList();
+	  res = new ArrayList<>();
 	}
 	res.add(repoName);
       }
     }
-    return res == null ? Collections.EMPTY_LIST : res;
+    return res == null ? Collections.emptyList() : res;
+  }
+
+  public List<String> findExistingAuBaseDirsFor(String auid) {
+    List<String> res = new ArrayList<>();
+    for (String repoName : findExistingRepositoriesFor(auid)) {
+      res.add(StringUtil.replaceFirst(repoName, "local:", ""));
+    }
+    return res;
   }
 
   // hack only local
