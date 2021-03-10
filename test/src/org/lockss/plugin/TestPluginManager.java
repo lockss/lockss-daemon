@@ -1800,6 +1800,35 @@ public class TestPluginManager extends LockssTestCase {
 		       mgr.getCandidateAusFromStem(baseStem));
   }
 
+  public void testRenameDeletedAuDir() throws Exception {
+    String delDir = "DELETED_AUS";
+    ConfigurationUtil.addFromArgs(RepositoryManager.PARAM_MOVE_DELETED_AUS_TO,
+                                  delDir);
+    theDaemon.setStartAuManagers(true);
+    mgr.startService();
+    minimalConfig();
+    String pname = "org.lockss.test.TestXmlPlugin";
+    String key = PluginManager.pluginKeyFromId(pname);
+    assertTrue(mgr.ensurePluginLoaded(key));
+    Plugin plug = mgr.getPlugin(key);
+    assertNotNull(plug);
+    Configuration config = ConfigurationUtil.fromArgs("base_url",
+						      "http://example.com/a/");
+    ArchivalUnit au = mgr.createAu(plug, config,
+                                   new AuEvent(AuEvent.Type.Create, false));
+    String auDir = LockssRepositoryImpl.getAuDir(au.getAuId(), tempDirPath,
+                                                 false);
+    File auDirFile = new File(auDir);
+    log.critical("auDir: " + auDir);
+    assertTrue(auDirFile.exists());
+
+    mgr.deleteAu(au);
+    assertFalse(auDirFile.exists());
+    File delDirFile = new File(tempDirPath, delDir);
+    File renamedDir = new File(delDirFile, auDirFile.getName());
+    assertTrue(renamedDir.exists());
+    assertNull(LockssRepositoryImpl.getAuDir(au.getAuId(), tempDirPath, false));
+  }
 
   public void testRegistryAuEventHandler() throws Exception {
     mgr.setLoadablePluginsReady(false);
