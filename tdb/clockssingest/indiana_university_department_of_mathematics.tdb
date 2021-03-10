@@ -2,7 +2,7 @@
 
   publisher <
     name = Indiana University Department of Mathematics ;
-    info[back] = 2008 ;
+    info[back] = 1983 ;
     info[contract] = 2012 ;
     info[tester] = 8 ;
     info[poller] = 8
@@ -88,11 +88,12 @@
     au < doNotProcess ; exists ; 2013 ; 2013 ; Indiana University Mathematics Journal Volume 62 ; 62 ; >
     au < doNotProcess ; exists ; 2014 ; 2014 ; Indiana University Mathematics Journal Volume 63 ; 63 ; >
     au < doNotProcess ; exists ; 2015 ; 2015 ; Indiana University Mathematics Journal Volume 64 ; 64 ; >
-    au < manifest ; exists ; 2016 ; 2016 ; Indiana University Mathematics Journal Volume 65 ; 65 ; >
-    au < manifest ; exists ; 2017 ; 2017 ; Indiana University Mathematics Journal Volume 66 ; 66 ; >
-    au < manifest ; exists ; 2018 ; 2018 ; Indiana University Mathematics Journal Volume 67 ; 67 ; >
-    au < manifest ; exists ; 2019 ; 2019 ; Indiana University Mathematics Journal Volume 68 ; 68 ; >
-    au < manifest ; exists ; 2020 ; 2020 ; Indiana University Mathematics Journal Volume 69 ; 69 ; >
+    au < ready ; exists ; 2016 ; 2016 ; Indiana University Mathematics Journal Volume 65 ; 65 ; >
+    au < ready ; exists ; 2017 ; 2017 ; Indiana University Mathematics Journal Volume 66 ; 66 ; >
+    au < ready ; exists ; 2018 ; 2018 ; Indiana University Mathematics Journal Volume 67 ; 67 ; >
+    au < ready ; exists ; 2019 ; 2019 ; Indiana University Mathematics Journal Volume 68 ; 68 ; >
+    au < ready ; exists ; 2020 ; 2020 ; Indiana University Mathematics Journal Volume 69 ; 69 ; >
+    au < expected ; exists ; 2021 ; 2021 ; Indiana University Mathematics Journal Volume 70 ; 70 ; >
     }
     {
     plugin = org.lockss.plugin.iumj.ClockssIUMJPlugin
