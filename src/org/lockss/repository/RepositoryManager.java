@@ -418,7 +418,7 @@ public class RepositoryManager
   }
 
   public List<String> findExistingRepositoriesFor(String auid) {
-    List<String> res = null;
+    List<String> res = new ArrayList<>();
     for (String repoName : getRepositoryList()) {
       String path = LockssRepositoryImpl.getLocalRepositoryPath(repoName);
       if (LockssRepositoryImpl.doesAuDirExist(auid, path)) {
@@ -428,7 +428,7 @@ public class RepositoryManager
 	res.add(repoName);
       }
     }
-    return res == null ? Collections.emptyList() : res;
+    return res;
   }
 
   public List<String> findExistingAuBaseDirsFor(String auid) {
