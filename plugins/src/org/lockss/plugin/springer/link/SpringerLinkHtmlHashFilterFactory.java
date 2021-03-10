@@ -33,18 +33,34 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.springer.link;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.Reader;
 
 import org.htmlparser.NodeFilter;
+import org.htmlparser.Tag;
+import org.htmlparser.Text;
+import org.htmlparser.tags.CompositeTag;
+import org.htmlparser.tags.Html;
+import org.htmlparser.tags.LinkTag;
+import org.htmlparser.util.NodeList;
+import org.htmlparser.util.ParserException;
+import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.filter.FilterUtil;
 import org.lockss.filter.WhiteSpaceFilter;
-import org.lockss.filter.html;
+import org.lockss.filter.html.HtmlFilterInputStream;
+import org.lockss.filter.html.HtmlNodeFilterTransform;
+import org.lockss.filter.html.HtmlCompoundTransform;
+import org.lockss.filter.html.HtmlNodeFilters;
+import org.lockss.filter.html.HtmlTransform;
 import org.lockss.plugin.*;
+import org.lockss.util.Logger;
 import org.lockss.util.ReaderInputStream;
 import org.htmlparser.filters.OrFilter;
 
 public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
+
+  private static final Logger log = Logger.getLogger(SpringerLinkHtmlHashFilterFactory.class);
 
   public InputStream createFilteredInputStream(ArchivalUnit au,
       InputStream in, String encoding) {
@@ -72,21 +88,55 @@ public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
         // <p class="c-article-access-provider__text" ....
         // this tag can either appear or not appear.
         HtmlNodeFilters.tagWithAttribute("p", "class", "c-article-access-provider__text"),
+        HtmlNodeFilters.tagWithAttribute("p", "class", "c-article-metrics__explanation"),
         // <a ... id="ref-link-section-d95262e910">
         // this a tag's id seems to change every time, luckilly the ref-link-section bit is the same
-        HtmlNodeFilters.tagWithAttributeRegex("a", "id", "ref-link-section-"),
-
+        //HtmlNodeFilters.tagWithAttributeRegex("a", "id", "ref-link-section-"),
+        // There is a <p> tag with no attributes, here is is.
+        // <p>
+        // Please try refreshing the page. If that doesn't work, please contact support so we can address the problem.</p>
+        HtmlNodeFilters.tagWithTextRegex("p", "Please try refreshing the page\\. If that doesn't work, please contact support so we can address the problem\\."),
+        // Similarly, there is this
+        // <p> class="mb0" data-component='SpringerLinkArticleCollections'>
+        //	We re sorry, something doesn't seem to be working properly.</p>
+        HtmlNodeFilters.tagWithTextRegex("p", "re sorry, something doesn't seem to be working properly\\."),
       })),
       // now keep these
       HtmlNodeFilterTransform.include(new OrFilter(new NodeFilter[] {
           HtmlNodeFilters.tag("p"),
           HtmlNodeFilters.tag("h1")
-      }))
-      ));
-    Reader filteredReader = FilterUtil.getReader(filteredStream, encoding);
-//    Reader noTagFilter = new HtmlTagFilter(new StringFilter(filteredReader, "<", " <"), new TagPair("<", ">"));
+      })),
+      /*
+      * many a tags in the articles have this id="ref-link-section-d82226e386" for an id attribute.
+      */
+      new HtmlTransform() {
+        @Override
+        public NodeList transform(NodeList nodeList) throws IOException {
+          try {
+            nodeList.visitAllNodesWith(new NodeVisitor() {
+              @Override
+              public void visitTag(Tag tag) {
+                if ("a".equals(tag.getTagName().toLowerCase()) && tag.getAttribute("id") != null) {
+                  if (tag.getAttribute("id").contains("ref-link-section")) {
+                    tag.removeAttribute("id");
+                  }
+                }
+              }
+            });
+          } catch (ParserException pe) {
+            IOException ioe = new IOException();
+            ioe.initCause(pe);
+            throw ioe;
+          }
+          return nodeList;
+        }
+      }
+    ));
 
-      // Remove white space
+    Reader filteredReader = FilterUtil.getReader(filteredStream, encoding);
+    // Reader noTagFilter = new HtmlTagFilter(new StringFilter(filteredReader, "<", " <"), new TagPair("<", ">"));
+
+    // Remove white space
     return new ReaderInputStream(new WhiteSpaceFilter(filteredReader));
   }
   

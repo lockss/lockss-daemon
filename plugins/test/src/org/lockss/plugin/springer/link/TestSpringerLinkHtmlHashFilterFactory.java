@@ -169,6 +169,28 @@ public class TestSpringerLinkHtmlHashFilterFactory extends LockssTestCase {
     "<a>A Psycho-Educational Intervention for People with a Family History of Depression: Pilot Results</a>" +
     "</p>" +
     "<p>Mental illness jar model illustration adapted from Peay and Austin (" +
+    "<a data-track=\"click\" data-track-action=\"reference anchor\" data-track-label=\"link\" data-test=\"citation-ref\" aria-label=\"Reference 2011\" title=\"Peay, H., &amp; Austin, J. (2011). How to talk with families about genetics and psychiatric illness. New York: W.W. Norton Company Inc..\" " +
+    "href=\"/article/10.1007/s10897-016-0011-5#ref-CR29\" >" +
+    "2011</a>" +
+    ")</p>" +
+    "<p>Blaise Pascal, Pensees</p>" +
+    "<p>" +
+    "Huntington s disease, an autosomal-dominant neurodegenerative disorder, manifests as choreiform movements, cognitive changes, dystonia, mood and behavioral changes (Ross et al. <a data-track=\"click\" data-track-action=\"reference anchor\" data-track-label=\"link\" data-test=\"citation-ref\" aria-label=\"Reference 2014\" title=\"Ross, C. A., Aylward, E. H., Wild, E. J., Langbehn, D. R., Long, J. D., Warner, J. H., et al. (2014). Huntington disease: natural history, biomarkers and prospects for therapeutics. Nature Reviews Neurology, 10, 204 216.\" href=\"/article/10.1007/s10897-016-0007-1#ref-CR8\" >" +
+    " 2014</a>" +
+    "<a data-track=\"click\" data-track-action=\"reference anchor\" data-track-label=\"link\" data-test=\"citation-ref\" aria-label=\"Reference 2007\" title=\"Walker, F. O. (2007). Huntington s disease. Lancet, 369, 218 228.\" href=\"/article/10.1007/s10897-016-0007-1#ref-CR11\" >" +
+    "2007</a>" +
+    " ). The discovery of the <i>" +
+    " HD</i>" +
+    " gene in 1993 led to advances in detecting pathognomonic CAG expansions responsible for phenotypic manifestations of illness (The Huntington s Disease Collaborative Research Group <a data-track=\"click\" data-track-action=\"reference anchor\" data-track-label=\"link\" data-test=\"citation-ref\" aria-label=\"Reference 1993\" title=\"The Huntington s Disease Collaborative Research Group. (1993). A novel gene containing a trinucleotide repeat that is expanded and unstable on Huntington s disease chromosomes. Cell, 72, 971 983.\" href=\"/article/10.1007/s10897-016-0007-1#ref-CR10\" >" +
+    " 1993</a>" +
+    "<p>" +
+    "Interpreting and prioritizing core ethical principles (such as autonomy, beneficence, nonmaleficence and justice) in the face of difficult clinical scenarios is often not straightforward. This is particularly so with vulnerable populations such as children or, as this case illustrates, those with intellectual disability.</p>" +
+    "<p>" ;
+  /*
+    "<p>" +
+    "<a>A Psycho-Educational Intervention for People with a Family History of Depression: Pilot Results</a>" +
+    "</p>" +
+    "<p>Mental illness jar model illustration adapted from Peay and Austin (" +
     ")</p>" +
     "<p>Blaise Pascal, Pensees</p>" +
     "<p>" +
@@ -179,6 +201,37 @@ public class TestSpringerLinkHtmlHashFilterFactory extends LockssTestCase {
     "<p>" +
     "Interpreting and prioritizing core ethical principles (such as autonomy, beneficence, nonmaleficence and justice) in the face of difficult clinical scenarios is often not straightforward. This is particularly so with vulnerable populations such as children or, as this case illustrates, those with intellectual disability.</p>" +
     "<p>" ;
+*/
+  private static final String problemPTag =
+    "<p>AllThats Left" +
+    "</p>" +
+    "<p class=\"mb0\" data-component='SpringerLinkArticleCollections'>" +
+    "We re sorry, something doesn't seem to be working properly.</p>" +
+    "<p>" +
+    " Please try refreshing the page. If that doesn't work, please contact support so we can address the problem.</p>";
+
+  private static final String filteredProblemPTag =
+    "<p>AllThats Left" +
+    "</p>";
+
+  private static final String pTagArticleAccessText =
+    "<p class=\"c-article-access-provider__text\">\n" +
+    "      Access provided by <span class=\"js-institution-name\">\n" +
+    "      Stanford University</span>\n" +
+    "</p>\n" +
+    "<p class=\"c-article-access-provider__text\">\n" +
+    "<a href=\"/content/pdf/10.1023/A:1013828717421.pdf\" target=\"_blank\" rel=\"noopener\" data-track=\"click\" data-track-action=\"download pdf\" data-track-label=\"inline link\">\n" +
+    "Download</a></p>";
+
+  private static final String filteredPTagArticleAccessText = "";
+
+  private static final String aTagWBadHref =
+    "<p class=\"c-article-rights\">" +
+    "<a data-track=\"click\" data-track-action=\"view rights and permissions\" data-track-label=\"link\" href=\"https://s100.copyright.com/AppDispatchServlet?title=Book%20Review%3A%20The%20Genetic%20Testing%20of%20Children.%20By%20Angus%20Clarke%20%28ed.%29.%20Bios%20Scientific%20Publishers%2C%20Oxford%2C%20UK%2C%201998%2C%20334%20pp.%20%28hardback%29&amp;author=Verle%20Headings&amp;contentID=10.1023%2FA%3A1022942618101&amp;publication=1059-7700&amp;publicationDate=1999-10&amp;publisherName=SpringerNature&amp;orderBeanReset=true\">" +
+    "Reprints and Permissions</a>" +
+    "</p>";
+
+  private static final String filteredATagWBadHref = "";
 
   // this example is a little different; it's from an article
   /*
@@ -246,9 +299,7 @@ public class TestSpringerLinkHtmlHashFilterFactory extends LockssTestCase {
     inA = fact.createFilteredInputStream(mau,
         new StringInputStream(HtmlHashA), ENC);
     String filtStrA = StringUtil.fromInputStream(inA);
-
     assertEquals(HtmlHashAFiltered, filtStrA);
-
   }
 
   public void testFilterHeader() throws Exception {
@@ -281,6 +332,30 @@ public class TestSpringerLinkHtmlHashFilterFactory extends LockssTestCase {
     inA = fact.createFilteredInputStream(mau,
         new StringInputStream(changingATagAttr), ENC);
     assertEquals(filteredChangingATagAttr, StringUtil.fromInputStream(inA));
+  }
+
+  public void testProblemPTag() throws Exception {
+    InputStream inA;
+    // viewed-by test
+    inA = fact.createFilteredInputStream(mau,
+        new StringInputStream(problemPTag), ENC);
+    assertEquals(filteredProblemPTag, StringUtil.fromInputStream(inA));
+  }
+
+  public void testPTagArticleAccessText() throws Exception {
+    InputStream inA;
+    // viewed-by test
+    inA = fact.createFilteredInputStream(mau,
+        new StringInputStream(pTagArticleAccessText), ENC);
+    assertEquals(filteredPTagArticleAccessText, StringUtil.fromInputStream(inA));
+  }
+
+  public void testTagWBadHref() throws Exception {
+    InputStream inA;
+    // viewed-by test
+    inA = fact.createFilteredInputStream(mau,
+        new StringInputStream(aTagWBadHref), ENC);
+    assertEquals(filteredATagWBadHref, StringUtil.fromInputStream(inA));
   }
 
   /*
