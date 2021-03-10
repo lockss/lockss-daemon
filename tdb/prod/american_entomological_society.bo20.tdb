@@ -4,6 +4,10 @@
     name = American Entomological Society
   >
 
+    plugin = org.lockss.plugin.bioone.BioOne2020Plugin
+    implicit < status ; year ; param[year] ; name ; volume >
+    param[base_url] = https://bioone.org/
+
   {
     title <
       name = Entomological News ;
@@ -11,11 +15,7 @@
       issnl = 0013-872X
     >
     
-    plugin = org.lockss.plugin.bioone.BioOne2020Plugin
-    #plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
-    implicit < status ; year ; param[year] ; name ; volume >
-    param[base_url] = https://www.bioone.org/
-    param[journal_id] = entn
+    param[journal_id] = entomological-news
   
     au < doNotProcess ; 2006 ; 2006 ; Entomological News Volume 2006 ; 117 >
     au < doNotProcess ; 2007 ; 2007 ; Entomological News Volume 2007 ; 118 >
@@ -31,8 +31,9 @@
     au < manifest ; 2017 ; 2017 ; Entomological News Volume 2017 ; 126-127 >
     au < manifest ; 2018 ; 2018 ; Entomological News Volume 2018 ; 127-128 >
     au < manifest ; 2019 ; 2019 ; Entomological News Volume 2019 ; 128-129 >
-    au < testing ; 2020 ; 2020 ; Entomological News Volume 2020 ; 129-130 >
+    au < manifest ; 2020 ; 2020 ; Entomological News Volume 2020 ; 129-130 >
     au < expected ; 2021 ; 2021 ; Entomological News Volume 2021 ; 130-131 >
+    au < expected ; 2022 ; 2022 ; Entomological News Volume 2022 ; 131-132 >
 
   }
 
@@ -44,27 +45,25 @@
       issnl = 0002-8320
     >
     
-    plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
-    implicit < status ; year ; name ; param[volume_name] >
-    param[base_url] = http://www.bioone.org/
-    param[journal_id] = taes
+    param[journal_id] = transactions-of-the-american-entomological-society
   
-    au < doNotProcess ; 2006 ; Transactions of the American Entomological Society Volume 132 ; 132 >
-    au < doNotProcess ; 2007 ; Transactions of the American Entomological Society Volume 133 ; 133 >
-    au < doNotProcess ; 2008 ; Transactions of the American Entomological Society Volume 134 ; 134 >
-    au < doNotProcess ; 2009 ; Transactions of the American Entomological Society Volume 135 ; 135 >
-    au < doNotProcess ; 2010 ; Transactions of the American Entomological Society Volume 136 ; 136 >
-    au < doNotProcess ; 2011 ; Transactions of the American Entomological Society Volume 137 ; 137 >
-    au < doNotProcess ; 2012 ; Transactions of the American Entomological Society Volume 138 ; 138 >
-    au < doNotProcess ; 2013 ; Transactions of the American Entomological Society Volume 139 ; 139 >
-    au < doNotProcess ; 2014 ; Transactions of the American Entomological Society Volume 140 ; 140 >
-    au < doNotProcess ; 2015 ; Transactions of the American Entomological Society Volume 141 ; 141 >
-    au < doNotProcess ; 2016 ; Transactions of the American Entomological Society Volume 142 ; 142 >
-    au < doNotProcess ; 2017 ; Transactions of the American Entomological Society Volume 143 ; 143 >
-    au < manifest ; 2018 ; Transactions of the American Entomological Society Volume 144 ; 144 >
-    au < manifest ; 2019 ; Transactions of the American Entomological Society Volume 145 ; 145 >
-    au < testing ; 2020 ; Transactions of the American Entomological Society Volume 146 ; 146 >
-    au < expected ; 2021 ; Transactions of the American Entomological Society Volume 147 ; 147 >
+    au < doNotProcess ; 2006 ; 2006 ; Transactions of the American Entomological Society Volume 132 ; 132 >
+    au < doNotProcess ; 2007 ; 2007 ; Transactions of the American Entomological Society Volume 133 ; 133 >
+    au < doNotProcess ; 2008 ; 2008 ; Transactions of the American Entomological Society Volume 134 ; 134 >
+    au < doNotProcess ; 2009 ; 2009 ; Transactions of the American Entomological Society Volume 135 ; 135 >
+    au < doNotProcess ; 2010 ; 2010 ; Transactions of the American Entomological Society Volume 136 ; 136 >
+    au < doNotProcess ; 2011 ; 2011 ; Transactions of the American Entomological Society Volume 137 ; 137 >
+    au < doNotProcess ; 2012 ; 2012 ; Transactions of the American Entomological Society Volume 138 ; 138 >
+    au < doNotProcess ; 2013 ; 2013 ; Transactions of the American Entomological Society Volume 139 ; 139 >
+    au < doNotProcess ; 2014 ; 2014 ; Transactions of the American Entomological Society Volume 140 ; 140 >
+    au < doNotProcess ; 2015 ; 2015 ; Transactions of the American Entomological Society Volume 141 ; 141 >
+    au < doNotProcess ; 2016 ; 2016 ; Transactions of the American Entomological Society Volume 142 ; 142 >
+    au < doNotProcess ; 2017 ; 2017 ; Transactions of the American Entomological Society Volume 143 ; 143 >
+    au < manifest ; 2018 ; 2018 ; Transactions of the American Entomological Society Volume 144 ; 144 >
+    au < manifest ; 2019 ; 2019 ; Transactions of the American Entomological Society Volume 145 ; 145 >
+    au < manifest ; 2020 ; 2020 ; Transactions of the American Entomological Society Volume 146 ; 146 >
+    au < expected ; 2021 ; 2021 ; Transactions of the American Entomological Society Volume 147 ; 147 >
+    au < expected ; 2022 ; 2022 ; Transactions of the American Entomological Society Volume 148 ; 148 >
 
   }
   
