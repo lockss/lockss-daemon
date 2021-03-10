@@ -1,3 +1,35 @@
+<!--
+
+Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+-->
 <map>
 <!--
   <entry>
@@ -15,7 +47,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>13</string>
+    <string>14</string>
   </entry>
   <entry>
     <string>plugin_notes</string>
@@ -23,7 +55,7 @@
   </entry>
   <entry>
     <string>au_def_pause_time</string>
-    <long>6000</long>
+    <long>3000</long>
   </entry>
   <entry>
     <string>text/html_filter</string>
@@ -31,7 +63,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;BioOne Plugin (retired Allen Press site), Base URL %s, Journal ID %s, Volume %d&quot;, base_url, journal_id, volume</string>
+    <string>"BioOne Plugin (retired Allen Press site), Base URL %s, Journal ID %s, Volume %d", base_url, journal_id, volume</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -48,36 +80,36 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;%sperlserv/\?request=archive-lockss&amp;issn=%s&amp;volume=%.03d&quot;, base_url, journal_id, volume</string>
-      <string>1,&quot;%sperlserv/\?request=get-toc&amp;issn=%s&amp;volume=%d.*&quot;, base_url, journal_id, volume</string>
-      <string>1,&quot;%sperlserv/\?request=(get-abstract|get-pdf|get-document)&amp;doi=[0-9]+\.[0-9]+%%2F%s%%28[0-9]+%%290*%d&quot;, base_url, journal_id, volume</string>
-      <string>1,&quot;%sbioone/\?request=get-toc&amp;issn=%s&amp;volume=%d.*&quot;, base_url, journal_id, volume</string>
-      <string>1,&quot;%sbioone/\?request=(get-abstract|get-document)&amp;issn=%s&amp;volume=%.03d.*&quot;, base_url, journal_id, volume</string>
-      <string>1,&quot;%simages/.*&quot;, base_url</string>
-      <string>1,&quot;%spdfserv/i%s-%.03d-[0-9]+-[0-9]+\.pdf&quot;, base_url, journal_id, volume</string>
-      <string>1,&quot;%s(css|js)/.*&quot;, base_url</string>
-      <string>1,&quot;%sarchive/%s/cover/.*&quot;, base_url, journal_id</string>
-      <string>1,&quot;%sperlserv/\?request=display-figures&amp;name=i%s-%d.*&quot;, base_url, journal_id, volume</string>
-      <string>1,&quot;%sarchive/%s/%d/.*&quot;, base_url, journal_id, volume</string>
-      <string>1,&quot;%sperlserv/\?request=get-moreinfo&amp;issn=%s&quot;, base_url, journal_id</string>
-      <string>1,&quot;%sperlserv/\?request=res-loc.*%s%%28[0-9]+%%290*%d&quot;, base_url, journal_id, volume</string>
+      <string>4,"^%s", base_url</string>
+      <string>1,"%sperlserv/\?request=archive-lockss&amp;issn=%s&amp;volume=%.03d", base_url, journal_id, volume</string>
+      <string>1,"%sperlserv/\?request=get-toc&amp;issn=%s&amp;volume=%d.*", base_url, journal_id, volume</string>
+      <string>1,"%sperlserv/\?request=(get-abstract|get-pdf|get-document)&amp;doi=[0-9]+\.[0-9]+%%2F%s%%28[0-9]+%%290*%d", base_url, journal_id, volume</string>
+      <string>1,"%sbioone/\?request=get-toc&amp;issn=%s&amp;volume=%d.*", base_url, journal_id, volume</string>
+      <string>1,"%sbioone/\?request=(get-abstract|get-document)&amp;issn=%s&amp;volume=%.03d.*", base_url, journal_id, volume</string>
+      <string>1,"%simages/.*", base_url</string>
+      <string>1,"%spdfserv/i%s-%.03d-[0-9]+-[0-9]+\.pdf", base_url, journal_id, volume</string>
+      <string>1,"%s(css|js)/.*", base_url</string>
+      <string>1,"%sarchive/%s/cover/.*", base_url, journal_id</string>
+      <string>1,"%sperlserv/\?request=display-figures&amp;name=i%s-%d.*", base_url, journal_id, volume</string>
+      <string>1,"%sarchive/%s/%d/.*", base_url, journal_id, volume</string>
+      <string>1,"%sperlserv/\?request=get-moreinfo&amp;issn=%s", base_url, journal_id</string>
+      <string>1,"%sperlserv/\?request=res-loc.*%s%%28[0-9]+%%290*%d", base_url, journal_id, volume</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%sperlserv/?request=archive-lockss&amp;issn=%s&amp;volume=%.03d&quot;, base_url, journal_id, volume</string>
+    <string>"%sperlserv/?request=archive-lockss&amp;issn=%s&amp;volume=%.03d", base_url, journal_id, volume</string>
   </entry>
   <entry>
   	<string>au_feature_urls</string>
   	<map>
   	  <entry>
   	    <string>au_volume</string>
-    	<string>&quot;%sperlserv/?request-get-toc&amp;issn=%s&amp;volume=%d&quot;, base_url, journal_id, volume</string>
+    	<string>"%sperlserv/?request-get-toc&amp;issn=%s&amp;volume=%d", base_url, journal_id, volume</string>
   	  </entry>
   	  <entry>
   	  	<string>au_issue</string>
-  	  	<string>&quot;%sperlserv/?request=get-toc&amp;issn=%s&amp;volume=%d&amp;issue=%s&quot;, base_url, journal_id, volume, issue</string>
+  	  	<string>"%sperlserv/?request=get-toc&amp;issn=%s&amp;volume=%d&amp;issue=%s", base_url, journal_id, volume, issue</string>
   	  </entry>
   	</map>
   </entry>
