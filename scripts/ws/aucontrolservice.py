@@ -71,7 +71,6 @@ def request_deep_crawl_by_id_list(host, username, password, auids, refetch_depth
     return client.service.requestDeepCrawlByIdList(auIds=auids, refetchDepth=refetch_depth, priority=priority,
                                                    force=force)
 
-
 def _do_request_deep_crawl_by_id(options):
     return request_deep_crawl_by_id(options.host, options.username, options.password, options.auid,
                                     options.refetch_depth, options.priority, options.force)
@@ -95,15 +94,19 @@ class _AuControlServiceOptions(object):
         parser.add_argument('--version', '-V', action='version', version=__version__)
         # Hosts
         group = parser.add_argument_group('Target hosts')
-        group.add_argument('--host', action='append', default=list(), help='add host:port pair to list of target hosts')
+        group.add_argument('--host',  help='add host:port pair to list of target hosts')
         group.add_argument('--password', metavar='PASS', help='UI password (default: interactive prompt)')
         group.add_argument('--username', metavar='USER', help='UI username (default: interactive prompt)')
 
         # AUIDs
         group = parser.add_argument_group('Target AUIDs')
-        group.add_argument('--auid', action='append', default=list(), help='add AUID to list of target AUIDs')
+        group.add_argument('--auid', help='add AUID to list of target AUIDs')
         group.add_argument('--auids', action='append', default=list(), metavar='AFILE',
                            help='add AUIDs in AFILE to list of target AUIDs')
+        # AUID operations
+        group = parser.add_argument_group('AU operations')
+        group.add_argument('--request-deep-crawl-by-id', action='store_true', help='perform deep crawl on a single AU')
+        group.add_argument('--request-deep-crawl-by-id-list', action='store_true', help='perform a deep crawl on multiple AUs')
 
         # Other options
         group = parser.add_argument_group('Other options')
@@ -115,10 +118,16 @@ class _AuControlServiceOptions(object):
     def __init__(self, parser, args):
         super(_AuControlServiceOptions, self).__init__()
         if len(list(filter(None, [args.request_deep_crawl_by_id, args.request_deep_crawl_by_id_list]))) != 1:
-            parser.error('exactly one of --request_deep_crawl_by_id, --request_deep_crawl_by_id_list is required')
+            parser.error('exactly one of --request-deep-crawl-by-id --request-deep-crawl-by-id-list is required')
+        self.auid=args.auid
         self.auids = args.auid[:]
         for f in args.auids: self.auids.extend(_file_lines(f))
         # request_deep_crawl_by_id/request_deep_crawl_by_id_list
+        self.request_deep_crawl_by_id=args.request_deep_crawl_by_id
+        self.request_deep_crawl_by_id_list=args.request_deep_crawl_by_id_list
+        self.host=args.host
+        self.password=args.password
+        self.username=args.username
         self.force = args.force
         self.priority = args.priority
         self.refetch_depth = args.refetch_depth
@@ -145,7 +154,6 @@ def _make_client(host, auth):
     wsdl = 'http://{}/ws/AuControlService?wsdl'.format(host)
     client = zeep.Client(wsdl, transport=transport)
     return client
-
 
 def _main():
     '''Main method.'''
