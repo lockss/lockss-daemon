@@ -45,6 +45,7 @@ import org.lockss.plugin.CachedUrl;
 import java.io.InputStream;
 import java.io.FileInputStream;
 
+import org.lockss.plugin.clockss.MetadataStringHelperUtilities;
 import org.lockss.util.UrlUtil;
 import org.marc4j.MarcReader;
 import org.marc4j.MarcStreamReader;
@@ -127,6 +128,7 @@ s
       String MARC_isbn = getMARCData(record, "020", 'a');
       String MARC_title = getMARCData(record, "245", 'a');
       String MARC_pub_date =  getMARCData(record, "260", 'c');
+      String MARC_pub_date_alt =  getMARCData(record, "264", 'c');
       String MARC_publisher = getMARCData(record, "260", 'b');
       String MARC_total_page = getMARCData(record, "300", 'a');
       String MARC_author =   getMARCData(record, "100", 'a');
@@ -137,7 +139,11 @@ s
       if (MARC_pdf != null) {
         am.put(MetadataField.FIELD_ISBN,  MARC_isbn);
         am.put(MetadataField.FIELD_PUBLICATION_TITLE,  MARC_title);
-        am.put(MetadataField.FIELD_DATE, MARC_pub_date);
+        if (MARC_pub_date != null) {
+          am.put(MetadataField.FIELD_DATE, MetadataStringHelperUtilities.cleanupPubDate(MARC_pub_date));
+        } else {
+          am.put(MetadataField.FIELD_DATE, MetadataStringHelperUtilities.cleanupPubDate(MARC_pub_date_alt));
+        }
         if (MARC_author == null) {
           am.put(MetadataField.FIELD_AUTHOR, MARC_author_alt);
         } else {
@@ -247,4 +253,5 @@ s
         return null;
     }
   }
+  
 }
