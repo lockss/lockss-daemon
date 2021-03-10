@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2021 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -600,6 +596,14 @@ public class LockssRepositoryImpl
     return getAuDir(au.getAuId(), repoRoot, create);
   }
 
+  static boolean removeAuDirEntry(String auid, String repoRoot) {
+    LocalRepository localRepo = getLocalRepository(repoRoot);
+    synchronized (localRepo) {
+      Map aumap = localRepo.getAuMap();
+      return aumap.remove(auid) != null;
+    }
+  }
+
   /**
    * Finds the directory for this AU.  If none found in the map, designates
    * a new dir for it.
@@ -607,7 +611,7 @@ public class LockssRepositoryImpl
    * @param repoRoot path to the root of the repository
    * @return the dir String
    */
-  static String getAuDir(String auid, String repoRoot, boolean create) {
+  public static String getAuDir(String auid, String repoRoot, boolean create) {
     String repoCachePath = extendCacheLocation(repoRoot);
     LocalRepository localRepo = getLocalRepository(repoRoot);
     synchronized (localRepo) {
