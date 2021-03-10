@@ -141,9 +141,12 @@ s
         am.put(MetadataField.FIELD_PUBLICATION_TITLE,  MARC_title);
         if (MARC_pub_date != null) {
           am.put(MetadataField.FIELD_DATE, MetadataStringHelperUtilities.cleanupPubDate(MARC_pub_date));
-        } else {
+        } else if (MARC_pub_date_alt != null){
           am.put(MetadataField.FIELD_DATE, MetadataStringHelperUtilities.cleanupPubDate(MARC_pub_date_alt));
+        } else {
+          log.debug("MARC_pub_date is null and MARC_pub_date_alt is null");
         }
+        
         if (MARC_author == null) {
           am.put(MetadataField.FIELD_AUTHOR, MARC_author_alt);
         } else {
