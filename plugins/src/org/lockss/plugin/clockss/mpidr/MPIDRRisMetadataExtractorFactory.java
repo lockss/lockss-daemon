@@ -152,7 +152,7 @@ public class MPIDRRisMetadataExtractorFactory implements FileMetadataExtractorFa
             // Their special collection use Uppser case 'S' in PDF file, and lowercase 's' in .ris file
             // when references to the PDF file
             if (pdfurl.contains("special")) {
-                 pdfName.replace("s1", "S1")
+                 pdfName = pdfName.replace("s1", "S1")
                          .replace("s2", "S2")
                          .replace("s3", "S3");
             }
