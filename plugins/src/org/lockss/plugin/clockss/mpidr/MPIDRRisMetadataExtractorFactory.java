@@ -149,9 +149,16 @@ public class MPIDRRisMetadataExtractorFactory implements FileMetadataExtractorFa
             String realUrl = pdfurl.substring(0, pdfurl.indexOf("org/")) + "org/";
             String pdfName = pdfurl.replace(realUrl, localUrl).replace(".ris", ".pdf");
 
+            // Their special collection use Uppser case 'S' in PDF file, and lowercase 's' in .ris file
+            // when references to the PDF file
+            if (pdfurl.contains("special")) {
+                 pdfName.replace("s1", "S1")
+                         .replace("s2", "S2")
+                         .replace("s3", "S3");
+            }
+
             CachedUrl fileCu = au.makeCachedUrl(pdfName);
-
-
+            
             log.debug3("Check for existence of " + pdfName);
             if (fileCu == null || !(fileCu.hasContent())) {
                 log.debug3(pdfName + " was not in cu");
