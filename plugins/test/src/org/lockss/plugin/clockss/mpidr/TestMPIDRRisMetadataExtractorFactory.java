@@ -32,11 +32,11 @@ public class TestMPIDRRisMetadataExtractorFactory extends LockssTestCase {
      * Set up the metadata expected for each of the above tests
      */
 
-    private static final String pdfUrl1 = "https://clockss-test.lockss.org/sourcefiles/mpidr-released/2021/volumes/vol1/1/1-1.pdf";
-    private static final String pdfUrl2 = "https://clockss-test.lockss.org/sourcefiles/mpidr-released/2021/special/1/10/article.pdf";
+    private static final String pdfUrl1 = "https://clockss-test.lockss.org/sourcefiles/mpidr-released/2021_01/volumes/vol1/1/1-1.pdf";
+    private static final String pdfUrl2 = "https://clockss-test.lockss.org/sourcefiles/mpidr-released/2021_01/special/1/10/article.pdf";
 
-    private static String risUrl1 = "https://clockss-test.lockss.org/sourcefiles/mpidr-released/2021/volumes/vol1/1/article.ris";
-    private static String risUrl2 = "https://clockss-test.lockss.org/sourcefiles/mpidr-released/2021/special/1/10/article.ris";
+    private static String risUrl1 = "https://clockss-test.lockss.org/sourcefiles/mpidr-released/2021_01/volumes/vol1/1/article.ris";
+    private static String risUrl2 = "https://clockss-test.lockss.org/sourcefiles/mpidr-released/2021_01/special/1/10/article.ris";
     private static String risNoPdf3 = "https://clockss-test.lockss.org/2019/10_32389.ris";
 
 

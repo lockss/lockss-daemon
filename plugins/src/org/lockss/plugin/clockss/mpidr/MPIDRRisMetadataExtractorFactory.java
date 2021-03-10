@@ -124,8 +124,8 @@ public class MPIDRRisMetadataExtractorFactory implements FileMetadataExtractorFa
             String url_string = cu.getUrl();
             ArchivalUnit au = cu.getArchivalUnit();
 
-
-            String pattern = "(.*)(\\d{4,})(.*)";
+            // match "2021_01", "2021_02", etc folder....
+            String pattern = "(.*)([\\d_]{7,})(.*)";
 
             // Create a Pattern object
             Pattern r =
@@ -145,8 +145,14 @@ public class MPIDRRisMetadataExtractorFactory implements FileMetadataExtractorFa
             }
 
             String pdfurl = am.getRaw("L1");
+
+            log.debug3("Fei : pdfurl from ris : " + pdfurl  + ", url_string : " + url_string);
+
             String realUrl = pdfurl.substring(0, pdfurl.indexOf("org/")) + "org/";
             String pdfName = pdfurl.replace(realUrl, localUrl).replace(".ris", ".pdf");
+
+            log.debug3("Fei : realUrl: " + realUrl + ", pdfName : " + pdfName);
+
             CachedUrl fileCu = au.makeCachedUrl(pdfName);
 
 
