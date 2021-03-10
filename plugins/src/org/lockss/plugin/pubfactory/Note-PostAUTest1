@@ -1,0 +1,44 @@
+
+Hash Differences:
+  LUCKILLY THESE ARE ALL IN A SIDEBAR
+    ul id
+        -                <ul class="ajax-zone m-0 t-zone" id="zone115228561_2">
+        +                <ul class="ajax-zone m-0 t-zone" id="zone1934751109_2">
+
+    ul data-menu-list
+        -		<ul data-menu-list="list-id-e5fe0d9f-94c2-487c-9a29-3bf669da02a6" ...>
+        +		<ul data-menu-list="list-id-b4a68c93-3948-4b43-a446-3c9d2ed791a8" ...>
+
+    li data-menu-item
+        -       <li ... data-menu-item="list-id-e5fe0d9f-94c2-487c-9a29-3bf669da02a6" ...
+        +       <li ... data-menu-item="list-id-b4a68c93-3948-4b43-a446-3c9d2ed791a8" ...
+
+        -       <li ... data-menu-item="list-id-e5fe0d9f-94c2-487c-9a29-3bf669da02a6" ...
+        +       <li ... data-menu-item="list-id-b4a68c93-3948-4b43-a446-3c9d2ed791a8" ...
+
+    button data-popover-anchor
+        -			<button data-popover-anchor="0f50715e-cdf8-4eda-8b07-8199810828a6" ...>
+        +			<button data-popover-anchor="f7c9dc9f-32ec-4d41-ba68-6b2fe3ad7b57" ...>
+
+    div data-popover
+        -			<div ... data-popover="0f50715e-cdf8-4eda-8b07-8199810828a6" ...>
+        +			<div ... data-popover="f7c9dc9f-32ec-4d41-ba68-6b2fe3ad7b57" ...>
+
+    Metrics counts
+        -  16</td>
+        +  17</td>
+
+        -  7</td>
+        +  8</td>
+  END SIDEBAR
+
+
+    PDF Files have embedded date and time
+        http://sullockss-content-06.stanford.edu:8081/ViewContent?frame=content&filter=1&auid=org%7Clockss%7Cplugin%7Cpubfactory%7Cametsoc%7CAMetSoc2021Plugin%26base_url%7Ehttps%253A%252F%252Fjournals%252Eametsoc%252Eorg%252F%26journal_id%7Emwre%26volume_name%7E64&url=https%3A%2F%2Fjournals.ametsoc.org%2Fdownloadpdf%2Fjournals%2Fmwre%2F64%2F1%2F1520-0493_1936_64_14_tdvich_2_0_co_2.pdf
+        http://sullockss-content-05.stanford.edu:8081/ViewContent?frame=content&filter=1&auid=org%7Clockss%7Cplugin%7Cpubfactory%7Cametsoc%7CAMetSoc2021Plugin%26base_url%7Ehttps%253A%252F%252Fjournals%252Eametsoc%252Eorg%252F%26journal_id%7Emwre%26volume_name%7E64&url=https%3A%2F%2Fjournals.ametsoc.org%2Fdownloadpdf%2Fjournals%2Fmwre%2F64%2F1%2F1520-0493_1936_64_14_tdvich_2_0_co_2.pdf
+
+--- DONE --
+URL Normalizer
+  xml and pdf urls are the same, note that 'downloaddpf' is in each.
+
+  http://sullockss-content-06.stanford.edu:8081/ListObjects?fields=ContentType%2CSize%2CPollWeight&type=urls&auid=org%7Clockss%7Cplugin%7Cpubfactory%7Cametsoc%7CAMetSoc2021Plugin%26base_url%7Ehttps%253A%252F%252Fjournals%252Eametsoc%252Eorg%252F%26journal_id%7Emwre%26volume_name%7E64
