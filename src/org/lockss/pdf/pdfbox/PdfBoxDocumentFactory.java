@@ -152,8 +152,9 @@ public class PdfBoxDocumentFactory implements PdfDocumentFactory {
     List<?> varargs = (List<?>)pdfTokenStreamObject;
     return new PdfBoxXObjectTokenStream((PdfBoxPage)pdfPage,
                                         (PDFormXObject)varargs.get(0),
-                                        (PDResources)varargs.get(1),
-                                        (PDResources)varargs.get(2));
+                                        (String)varargs.get(1),
+                                        (PDResources)varargs.get(2),
+                                        (PDResources)varargs.get(3));
   }
   
   /**

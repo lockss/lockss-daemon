@@ -179,7 +179,7 @@ public class PdfBoxDocument implements PdfDocument {
         }
       }
       catch (IOException ioe) {
-        log.debug2("Exception closing PDF document explicitly", ioe);
+        log.debug("Exception closing PDF document explicitly", ioe);
         throw new PdfException(ioe);
       }
       finally {
@@ -279,7 +279,7 @@ public class PdfBoxDocument implements PdfDocument {
 
   @Override
   public PdfBoxPage getPage(int index) throws PdfException {
-    return getDocumentFactory().makePage(this, pdDocument.getPage(index));
+    return pdfBoxDocumentFactory.makePage(this, pdDocument.getPage(index));
   }
 
   @Override // Just for the covariant default method return type
@@ -291,12 +291,13 @@ public class PdfBoxDocument implements PdfDocument {
   public Iterator<PdfBoxPage> getPageIterator() throws PdfException {
     return new LazyIteratorChain<PdfBoxPage>() {
       @Override
-      protected Iterator<PdfBoxPage> nextIterator(int count) { // caution: count is one-based
+      protected Iterator<PdfBoxPage> nextIterator(int count) {
+        int index = count - 1; // caution: count is one-based
         try {
-          return (count <= getNumberOfPages()) ? new SingletonIterator<>(getPage(count - 1)) : null;
+          return (index < getNumberOfPages()) ? new SingletonIterator<>(getPage(index)) : null;
         }
         catch (PdfException pe) {
-          throw new PdfRuntimeException("PdfException in page iterator at index " + (count - 1), pe);
+          throw new PdfRuntimeException("PdfException in page iterator at index " + index, pe);
         }
       }
     };
@@ -367,7 +368,7 @@ public class PdfBoxDocument implements PdfDocument {
       pdDocument.save(outputStream);
     }
     catch (IOException ioe) {
-      log.debug2("Error saving PDF document", ioe);
+      log.debug("Error saving PDF document", ioe);
       throw ioe;
     }
   }
@@ -423,7 +424,7 @@ public class PdfBoxDocument implements PdfDocument {
 
   /**
    * <p>
-   * Sets the document metadata from an XMPBox {@link XMPMetadata } instance.
+   * Sets the document metadata from an XMPBox {@link XMPMetadata} instance.
    * </p>
    * <p>
    * Note that in PDF parlance, "metadata" is a field you can get and set, just

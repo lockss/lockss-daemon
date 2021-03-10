@@ -38,7 +38,6 @@ import java.util.*;
 
 import org.apache.pdfbox.contentstream.PDContentStream;
 import org.apache.pdfbox.cos.*;
-import org.apache.pdfbox.pdfwriter.ContentStreamWriter;
 import org.apache.pdfbox.pdmodel.PDResources;
 import org.apache.pdfbox.pdmodel.common.PDStream;
 import org.apache.pdfbox.pdmodel.graphics.PDXObject;
@@ -120,13 +119,14 @@ public class PdfBoxXObjectTokenStream extends PdfBoxTokenStream {
    */
   public PdfBoxXObjectTokenStream(PdfBoxPage pdfBoxPage,
                                   PDFormXObject pdXObjectForm,
+                                  String name,
                                   PDResources parentResources,
                                   PDResources ownResources) {
     super(pdfBoxPage);
     this.pdFormXObject = pdXObjectForm;
+    this.name = name;
     this.parentResources = parentResources;
     this.ownResources = ownResources;
-    this.name = null; /* FIXME */
   }
 
   @Override

@@ -37,6 +37,7 @@ import java.io.*;
 import java.util.*;
 
 import org.apache.commons.collections4.iterators.*;
+import org.apache.pdfbox.cos.COSName;
 import org.apache.pdfbox.pdmodel.*;
 import org.apache.pdfbox.pdmodel.graphics.PDXObject;
 import org.apache.pdfbox.pdmodel.graphics.form.PDFormXObject;
@@ -182,7 +183,7 @@ public class PdfBoxPage implements PdfPage {
   @Override
   public PdfBoxTokenStream getPageTokenStream() throws PdfException {
     try {
-      return getDocument().getDocumentFactory().makePageTokenStream(this, pdPage.getContents());
+      return pdfBoxDocument.getDocumentFactory().makePageTokenStream(this, pdPage.getContents());
     }
     catch (IOException ioe) {
       throw new PdfException("Failed to get the page content stream", ioe);
@@ -224,13 +225,14 @@ public class PdfBoxPage implements PdfPage {
             if (operands.size() >= 1) {
               PdfToken operand0 = operands.get(0);
               if (operand0.isName()) {
-                PDXObject pdxObject = iterator.getPdResources().getXObject(((PdfBoxToken.Nam)operand0).toPdfBoxObject());
+                COSName cosName = ((PdfBoxToken.Nam)operand0).toPdfBoxObject();
+                PDXObject pdxObject = iterator.getPdResources().getXObject(cosName);
                 if (pdxObject instanceof PDFormXObject) {
                   // FIXME what about the subtypes of PDFormXObject?
                   if (processed.add(pdxObject.getCOSObject())) {
                     PDFormXObject pdFormXObject = (PDFormXObject)pdxObject;
                     iterators.add(new PdfBoxTokenStreamIterator(pdFormXObject, pdPage));
-                    return new PdfBoxXObjectTokenStream(PdfBoxPage.this, pdFormXObject, iterator.getPdResources(), pdFormXObject.getResources());
+                    return pdfBoxDocument.getDocumentFactory().makeXObjectTokenStream(PdfBoxPage.this, Arrays.asList(pdFormXObject, cosName.getName(), iterator.getPdResources(), pdFormXObject.getResources()));
                   }
                 }
               }

@@ -134,9 +134,7 @@ public class PdfBoxTokenStreamIterator
     
     // See PDFBox 2.0.22 PDFStreamEngine processStreamOperators()
     while ((pdfBoxObject = pdfBoxParser.parseNextToken()) != null) {
-//      if (next == null) {
-//        next = new PdfOperandsAndOperator();
-//      }
+
       if (pdfBoxObject instanceof Operator) {
         // ======== IS AN OPERATOR ========
         Operator pdfBoxOperator = (Operator)pdfBoxObject;
@@ -154,6 +152,7 @@ public class PdfBoxTokenStreamIterator
                 retOperands.add(processString((COSString)pdfBoxOperand));
               }
               else {
+                // Not supposed to happen, but just in case
                 retOperands.add(PdfBoxToken.convertOne(pdfBoxOperand));
               }
             }
@@ -168,9 +167,11 @@ public class PdfBoxTokenStreamIterator
                 retOperands.add(processStrings((COSArray)pdfBoxOperand));
               }
               else if (pdfBoxOperand instanceof COSString) {
-                retOperands.add(processString((COSString)pdfBoxOperand)); // not supposed to be COSString, but just in case
+                // Not supposed to happen, but just in case
+                retOperands.add(processString((COSString)pdfBoxOperand));
               }
               else {
+                // Not supposed to happen, but just in case
                 retOperands.add(PdfBoxToken.convertOne(pdfBoxOperand));
               }
             }
@@ -185,13 +186,15 @@ public class PdfBoxTokenStreamIterator
               if (operand0 instanceof COSName) {
                 COSName fontName = (COSName)operand0;
                 COSBase operand1 = pdfBoxOperands.get(1);
-                if (operand1 instanceof COSFloat) {
+                if (operand1 instanceof COSNumber) {
                   PDFont newFont = pdContentStream.getResources().getFont(fontName);
                   pdGraphicsStateStack.removeFirst();
                   pdGraphicsStateStack.addFirst(newFont);
+                  break; // success
                 }
               }
             }
+            // FIXME logging?
             break;
             
           // -------- q --------
@@ -207,7 +210,7 @@ public class PdfBoxTokenStreamIterator
               pdGraphicsStateStack.removeFirst();
             }
             catch (NoSuchElementException nsee) {
-              throw new IOException(nsee); 
+              throw new IOException("Restore operator applied to empty graphics state stack", nsee); 
             }
             break;
 
@@ -215,26 +218,27 @@ public class PdfBoxTokenStreamIterator
           case OperatorName.SET_GRAPHICS_STATE_PARAMS:
             // See PDFBox 2.0.22 SetGraphicsStateParameters
             if (pdfBoxOperands.size() >= 1) {
-              COSBase arg0 = pdfBoxOperands.get(0);
-              if (arg0 instanceof COSName) {
-                COSName graphicsName = (COSName)arg0;
+              COSBase operand0 = pdfBoxOperands.get(0);
+              if (operand0 instanceof COSName) {
+                COSName graphicsName = (COSName)operand0;
                 PDExtendedGraphicsState pdExtendedGraphicsState = pdResources.getExtGState(graphicsName);
                 if (pdExtendedGraphicsState != null) {
                   // See PDFBox 2.0.22 PDExtendedGraphicsState copyIntoGraphicsState() and getFontSetting()
                   COSDictionary cosDictionary = pdExtendedGraphicsState.getCOSObject();
                   if (cosDictionary != null) {
                     COSBase cosBase = cosDictionary.getDictionaryObject(COSName.FONT);
-                    if (cosBase instanceof COSArray)
-                    {
-                        COSArray cosArray = (COSArray)cosBase;
-                        PDFontSetting pdFontSetting = new PDFontSetting(cosArray);
-                        pdGraphicsStateStack.removeFirst();
-                        pdGraphicsStateStack.addFirst(pdFontSetting.getFont());
+                    if (cosBase != null && cosBase instanceof COSArray) {
+                      COSArray cosArray = (COSArray)cosBase;
+                      PDFontSetting pdFontSetting = new PDFontSetting(cosArray);
+                      pdGraphicsStateStack.removeFirst();
+                      pdGraphicsStateStack.addFirst(pdFontSetting.getFont());
+                      break; // success
                     }
                   }
                 }
               }
             }
+            // FIXME logging?
             break;
             
           // -------- Default --------
@@ -257,14 +261,23 @@ public class PdfBoxTokenStreamIterator
         retOperands.clear();
         return;
       }
+      else if (pdfBoxObject instanceof COSObject) {
+        // ======== IS A COSObject OPERAND ========
+        pdfBoxOperands.add(((COSObject)pdfBoxObject).getObject());
+      }
       else if (pdfBoxObject instanceof COSBase) {
-        // ======== IS AN OPERAND ========
+        // ======== IS A COSBase OPERAND ========
         pdfBoxOperands.add((COSBase)pdfBoxObject);
       }
       else {
-        // FIXME: is a COSObject
+        // Not supposed to happen, but just in case
+        throw new IOException(String.format("PDF token of unknown type: %s (%s)",
+                                            pdfBoxObject.getClass().getName(),
+                                            pdfBoxObject.toString()));
       }
     }
+    
+    // FIXME if nonempty operands, stream did not end in an operator; throw?
     
     // Exited the while: end of stream
     pdfBoxParser = null;
@@ -277,6 +290,7 @@ public class PdfBoxTokenStreamIterator
       font = PDType1Font.HELVETICA;
     }
     InputStream bais = new ByteArrayInputStream(cosString.getBytes());
+    StringBuilder sb = new StringBuilder();
     while (bais.available() > 0) {
       int code = font.readCode(bais);
       // See PDFBox 2.0.22 PDFStreamEngine showGlyph(4)
@@ -292,10 +306,10 @@ public class PdfBoxTokenStreamIterator
       }
       else {
         // See PDFBox 2.0.22 PDFStreamEngine showFontGlyph(4)
-        return PdfBoxToken.Str.of(unicode);
+        sb.append(unicode);
       }
     }
-    return null; // Never happens: loop over a finite number of bytes
+    return PdfBoxToken.Str.of(sb.toString());
   }
   
   protected PdfBoxToken processStrings(COSArray cosArray) throws IOException {

@@ -109,10 +109,8 @@ public abstract class PdfBoxTokenStream implements PdfTokenStream {
     return (Iterator<PdfBoxToken>)PdfTokenStream.super.getTokenIterator();
   }
   
-  /**
-   *
-   */
   @Override
+  @Deprecated
   public List<PdfToken> getTokens() throws PdfException {
     return (List<PdfToken>)PdfTokenStream.super.getTokenList();
   }
@@ -156,7 +154,7 @@ public abstract class PdfBoxTokenStream implements PdfTokenStream {
   @Override
   public void setTokens(Iterator<? extends PdfToken> tokenIterator) throws PdfException {
     Iterator<PdfBoxToken> pdfBoxIter = (Iterator<PdfBoxToken>)tokenIterator;
-    
+    // FIXME !!!
   }
   
   /**
