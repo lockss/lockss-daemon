@@ -47,13 +47,16 @@ import java.io.FileInputStream;
 
 import org.lockss.plugin.clockss.MetadataStringHelperUtilities;
 import org.lockss.util.UrlUtil;
+import java.util.List;
+
 import org.marc4j.MarcReader;
 import org.marc4j.MarcStreamReader;
 import org.marc4j.marc.Record;
 import org.marc4j.marc.DataField;
 import org.marc4j.marc.Subfield;
 import org.marc4j.marc.ControlField;
-import java.util.List;
+import org.marc4j.MarcXmlReader;
+import org.marc4j.marc.Leader;
 
 import org.lockss.util.Logger;
 
@@ -99,13 +102,6 @@ s
   =910  \\$aBibliographic data$eTorrossa Fulltext Resource$gCasalini Libri
    */
 
-  private static final String TITLE = "title";
-  private static final String AUTHOR = "author";
-  private static final String AUTHOR2 = "author_alt";
-  private static final String ISBN = "isbn";
-  private static final String PUBLISHER = "publisher";
-  private static final String ENDPAGE = "endpage";
-
   private static final String PUBLISHER_NAME = "Casalini";
   private static final String PUBLISHER_NAME_APPENDIX = " - " + PUBLISHER_NAME ;
 
@@ -125,12 +121,28 @@ s
       Record record = reader.next();
       recordCount++;
 
+      // Get all the raw metadata and put it to raw
+      List<DataField> fields = record.getDataFields();
+      if (fields != null) {
+        for (DataField field : fields) {
+          String tag = field.getTag();
+          List<Subfield> subfields = field.getSubfields();
+          if (subfields != null) {
+            for (Subfield subfield : subfields) {
+              char subtag = subfield.getCode();
+              am.putRaw(String.format("%s_%c", tag, subtag),
+                      subfield.getData());
+            }
+          }
+        }
+      }
+
+
       String MARC_isbn = getMARCData(record, "020", 'a');
       String MARC_title = getMARCData(record, "245", 'a');
       String MARC_pub_date =  getMARCData(record, "260", 'c');
       String MARC_pub_date_alt =  getMARCData(record, "264", 'c');
       String MARC_publisher = getMARCData(record, "260", 'b');
-      String MARC_total_page = getMARCData(record, "300", 'a');
       String MARC_author =   getMARCData(record, "100", 'a');
       String MARC_author_alt =   getMARCData(record, "700", 'a');
       String MARC_pdf =  getMARCControlFieldData(record, "001");
@@ -160,11 +172,6 @@ s
         String fullPathFile = UrlUtil.minimallyEncodeUrl(cuBase + MARC_pdf + ".pdf");
         am.put(MetadataField.FIELD_ACCESS_URL, fullPathFile);
 
-        // Prepare raw metadata
-        am.putRaw(TITLE,  MARC_title);
-        am.putRaw(AUTHOR, MARC_author);
-        am.putRaw(AUTHOR2, MARC_author_alt);
-        am.putRaw(ISBN, MARC_isbn);
 
         if (MARC_publisher == null) {
           am.put(MetadataField.FIELD_PUBLISHER, PUBLISHER_NAME);
@@ -175,9 +182,27 @@ s
             am.put(MetadataField.FIELD_PUBLISHER, MARC_publisher);
           }
         }
+      }
 
-        am.putRaw(PUBLISHER, MARC_publisher);
-        am.putRaw(ENDPAGE, MARC_total_page);
+      /*
+      Leader byte 07 “a” = Book (monographic component part)
+      Leader byte 07 “m” = Book
+      Leader byte 07 “s” = Journal
+      Leader byte 07 “b” = Journal (serial component part)
+
+      */
+      Leader leader = record.getLeader();
+      // return <code>char[]</code>- implementation defined values, it return chars at 07, 08 position
+      char publication_type = leader.getImplDefined1()[0];
+
+      if (publication_type == 'm' || publication_type == 'a') {
+        am.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_BOOKVOLUME);
+        am.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_BOOK);
+      }
+
+      if (publication_type == 's' || publication_type == 'b') {
+        am.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_JOURNALARTICLE);
+        am.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_JOURNAL);
       }
       
       emitter.emitMetadata(cu, am);
