@@ -135,13 +135,13 @@ public class MPIDRRisMetadataExtractorFactory implements FileMetadataExtractorFa
             Matcher m = r.matcher(url_string);
             String localUrl = "";
             if (m.find()) {
-                log.debug("Found value: " + m.group(0));
-                log.debug("Found value: " + m.group(1));
-                log.debug("Found value: " + m.group(2));
-                log.debug("Found value: " + m.group(3));
+                log.debug3("Found value: " + m.group(0));
+                log.debug3("Found value: " + m.group(1));
+                log.debug3("Found value: " + m.group(2));
+                log.debug3("Found value: " + m.group(3));
                 localUrl = m.group(1) + m.group(2) + "/";
             } else {
-                log.debug("NO MATCH");
+                log.debug3("NO MATCH");
             }
 
             String pdfurl = am.getRaw("L1");
@@ -157,13 +157,13 @@ public class MPIDRRisMetadataExtractorFactory implements FileMetadataExtractorFa
                          .replace("s3", "S3");
             }
 
-            log.debug(String.format("pdfurl: %s, realUrl %s, pdfName %s", pdfurl, realUrl, pdfName));
+            log.debug3(String.format("pdfurl: %s, realUrl %s, pdfName %s", pdfurl, realUrl, pdfName));
 
             CachedUrl fileCu = au.makeCachedUrl(pdfName);
             
-            log.debug("Check for existence of " + pdfName);
+            log.debug3("Check for existence of " + pdfName);
             if (fileCu == null || !(fileCu.hasContent())) {
-                log.debug(pdfName + " was not in cu");
+                log.debug3(pdfName + " was not in cu");
                 return; // do not emit, just return - no content
             }
             
