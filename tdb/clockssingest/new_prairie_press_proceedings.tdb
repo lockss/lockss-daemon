@@ -9,6 +9,7 @@
     info[poller] = 8 ;
     info[platform] = DigitalCommons-Like
   >
+  provider = bepress
   
   # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
       plugin = needs.plugin

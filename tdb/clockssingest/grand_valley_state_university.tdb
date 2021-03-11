@@ -6,8 +6,9 @@
     info[tester] = 5 ;
     info[poller] = 8
   >
-
-  provider = Scholarworks@Grand Valley State University
+  provider = bepress
+  #provider = Scholarworks@Grand Valley State University
+  
   # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
 
   {
