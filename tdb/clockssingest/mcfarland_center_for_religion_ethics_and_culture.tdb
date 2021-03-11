@@ -5,6 +5,9 @@
     info[tester] = 5 ;
     info[poller] = 6
   >
+  provider = bepress
+
+  # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
 
     plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
     implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
