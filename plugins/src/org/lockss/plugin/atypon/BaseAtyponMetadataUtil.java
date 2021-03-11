@@ -119,28 +119,6 @@ public class BaseAtyponMetadataUtil {
       }
     }
 
-    // Use the journalTitle and volume name from the ArticleMetadata
-    String foundJournalTitle = am.get(MetadataField.FIELD_PUBLICATION_TITLE);
-    String foundVolume = am.get(MetadataField.FIELD_VOLUME);
-
-    // If we got nothing, just return, we can't validate further
-    if (StringUtils.isEmpty(foundVolume) && StringUtils.isEmpty(foundJournalTitle)) {
-      return isInAu; //return true, we have no way of knowing
-    }
-
-    // Check VOLUME/YEAR
-    if (!StringUtils.isEmpty(foundVolume)) {
-      // Get the AU's volume name from the AU properties. This must be set
-      TypedEntryMap tfProps = au.getProperties();
-      String AU_volume = tfProps.getString(ConfigParamDescr.VOLUME_NAME.getKey());
-
-      // Do Volume comparison first, it's simpler
-      if (isInAu && !(StringUtils.isEmpty(foundVolume))) {
-        isInAu =  ( (AU_volume != null) && (AU_volume.equals(foundVolume)));
-        log.debug3("After volume check, isInAu :" + isInAu);
-      }
-    }
-
     // BEGIN Mark Allen Specific checks
     // get the AU's publisher and check if it is Mark Allen Group.
     String pubName = tdbau.getPublisherName();
@@ -187,13 +165,36 @@ public class BaseAtyponMetadataUtil {
         isInAu = ((shouldBeJID != null) && shouldBeJID.equals(JOURNAL_ID));
 
       }
-      log.debug3("foundDate: " + foundDate);
-      log.debug3("foundDOI: " + foundDOI);
+      //log.debug3("foundDate: " + foundDate);
+      //log.debug3("foundDOI: " + foundDOI);
       if (isInAu) {
         log.debug3("Mark Allen Pass");
       }
     }
     // END MARK ALLEN SPECIFIC CHECKS //
+
+    // Use the journalTitle and volume name from the ArticleMetadata
+    String foundJournalTitle = am.get(MetadataField.FIELD_PUBLICATION_TITLE);
+    String foundVolume = am.get(MetadataField.FIELD_VOLUME);
+
+    // If we got nothing, just return, we can't validate further
+    if (StringUtils.isEmpty(foundVolume) && StringUtils.isEmpty(foundJournalTitle)) {
+      log.debug3("Vol and Title was empty, returning: " + isInAu);
+      return isInAu; //return true, we have no way of knowing
+    }
+
+    // Check VOLUME/YEAR
+    if (!StringUtils.isEmpty(foundVolume)) {
+      // Get the AU's volume name from the AU properties. This must be set
+      TypedEntryMap tfProps = au.getProperties();
+      String AU_volume = tfProps.getString(ConfigParamDescr.VOLUME_NAME.getKey());
+
+      // Do Volume comparison first, it's simpler
+      if (isInAu && !(StringUtils.isEmpty(foundVolume))) {
+        isInAu =  ( (AU_volume != null) && (AU_volume.equals(foundVolume)));
+        log.debug3("After volume check, isInAu :" + isInAu);
+      }
+    }
 
     // If we've come this far and have passed an ISSN check, we're done
     if (checkedISSN) {
