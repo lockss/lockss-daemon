@@ -65,8 +65,6 @@ public class TestPubFactoryUrlNormalizer extends LockssTestCase {
   public void testNormalizeUrl() throws Exception {
     UrlNormalizer normalizer = new PubFactoryUrlNormalizer();
     // No change expected
-    assertEquals("http://www.berghahnjournals.com/downloadpdf/journals/foo/10/1/trans070105.xml",
-        normalizer.normalizeUrl("http://www.berghahnjournals.com/downloadpdf/journals/foo/10/1/trans070105.xml", m_mau));
     assertEquals("http://www.berghahnjournals.com/view/journals/foo/10/1/trans070105.xml",
         normalizer.normalizeUrl("http://www.berghahnjournals.com/view/journals/foo/10/1/trans070105.xml", m_mau));
     assertEquals("http://www.berghahnjournals.com/view/journals/foo/10/1/trans070105.xml?pdfVersion=true",
@@ -81,6 +79,10 @@ public class TestPubFactoryUrlNormalizer extends LockssTestCase {
     // but not from other types of urls for now (haven't seen this)
     assertEquals("https://www.berghahnjournals.com/cite/$002fjournals$002ffoo$002f10$002f2$002fbhs100206.xml/$N?nojs=true&t:state:client=H4sIAAAARhDnAAAA",
         normalizer.normalizeUrl("https://www.berghahnjournals.com/cite/$002fjournals$002ffoo$002f10$002f2$002fbhs100206.xml/$N?nojs=true&t:state:client=H4sIAAAARhDnAAAA", m_mau));
+    // downloadpdf come in both .xml and .pdf, normalize to .pdf
+    assertEquals("http://www.berghahnjournals.com/downloadpdf/journals/foo/10/1/trans070105.pdf",
+        normalizer.normalizeUrl("http://www.berghahnjournals.com/downloadpdf/journals/foo/10/1/trans070105.xml", m_mau));
+
   }
   
 
