@@ -54,7 +54,7 @@
       au < ojs2.ClockssOJS2Plugin ; superseded ; exists ; 2018 ; Europe's Journal of Psychology Volume 14 [superseded] ; 14 ; 2018 ; https://ejop.psychopen.eu/ ; >
       au < ojs3.ClockssOjs3Plugin ; crawling ; exists ; 2018 ; Europe's Journal of Psychology Volume 14 ; 14 ; 2018 ; https://ejop.psychopen.eu/ ; >
       au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2019 ; Europe's Journal of Psychology Volume 15 ; 15 ; 2019 ; https://ejop.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2020 ; Europe's Journal of Psychology Volume 16 ; 16 ; 2020 ; https://ejop.psychopen.eu/ ; > #no substance urls.
+      au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2020 ; Europe's Journal of Psychology Volume 16 ; 16 ; 2020 ; https://ejop.psychopen.eu/ ; > #no substance urls.
       au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2021 ; Europe's Journal of Psychology Volume 17 ; 17 ; 2021 ; https://ejop.psychopen.eu/ ; >
 
   }
@@ -138,7 +138,7 @@
       #param[base_url] = https://meth.psychopen.eu/
       param[journal_id] = meth
 
-      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2020 ; Methodology Volume 16 ; 16 ; 2020 ; https://meth.psychopen.eu/ ; > #no substance urls
+      au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2020 ; Methodology Volume 16 ; 16 ; 2020 ; https://meth.psychopen.eu/ ; > #no substance urls
       au < ojs3.ClockssOjs3Plugin ; expected ; exists ; 2021 ; Methodology Volume 17 ; 17 ; 2021 ; https://meth.psychopen.eu/ ; >
 
   }
