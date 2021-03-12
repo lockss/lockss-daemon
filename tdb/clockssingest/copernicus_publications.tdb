@@ -1330,13 +1330,13 @@
       param[base_url] = https://os.copernicus.org/
       param[home_url] = https://www.ocean-science.net/
 
-      au < ready ; exists ; 2005 ; 2005 ; Ocean Science Volume 1 ; 1 ; >
-      au < ready ; exists ; 2006 ; 2006 ; Ocean Science Volume 2 ; 2 ; >
-      au < ready ; exists ; 2007 ; 2007 ; Ocean Science Volume 3 ; 3 ; >
-      au < ready ; exists ; 2008 ; 2008 ; Ocean Science Volume 4 ; 4 ; >
-      au < ready ; exists ; 2009 ; 2009 ; Ocean Science Volume 5 ; 5 ; >
-      au < ready ; exists ; 2010 ; 2010 ; Ocean Science Volume 6 ; 6 ; >
-      au < ready ; exists ; 2011 ; 2011 ; Ocean Science Volume 7 ; 7 ; >
+      au < crawling ; exists ; 2005 ; 2005 ; Ocean Science Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2006 ; 2006 ; Ocean Science Volume 2 ; 2 ; >
+      au < crawling ; exists ; 2007 ; 2007 ; Ocean Science Volume 3 ; 3 ; >
+      au < crawling ; exists ; 2008 ; 2008 ; Ocean Science Volume 4 ; 4 ; >
+      au < crawling ; exists ; 2009 ; 2009 ; Ocean Science Volume 5 ; 5 ; >
+      au < crawling ; exists ; 2010 ; 2010 ; Ocean Science Volume 6 ; 6 ; >
+      au < crawling ; exists ; 2011 ; 2011 ; Ocean Science Volume 7 ; 7 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Ocean Science Volume 8 ; 8 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Ocean Science Volume 9 ; 9 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Ocean Science Volume 10 ; 10 ; >
@@ -1432,19 +1432,19 @@
       param[base_url] = https://sd.copernicus.org/
       param[home_url] = https://www.scientific-drilling.net/
 
-      au < ready ; exists ; 2005 ; 2005 ; Scientific Drilling Volume 1 ; 1 ; >
-      au < ready ; exists ; 2006 ; 2006 ; Scientific Drilling Volume 2 ; 2 ; >
-      au < ready ; exists ; 2006 ; 2006 ; Scientific Drilling Volume 3 ; 3 ; >
-      au < ready ; exists ; 2007 ; 2007 ; Scientific Drilling Volume 4 ; 4 ; >
-      au < ready ; exists ; 2007 ; 2007 ; Scientific Drilling Volume 5 ; 5 ; >
-      au < ready ; exists ; 2007 ; 2007 ; Scientific Drilling Volume SpecialIssue ; SpecialIssue ; >
-      au < ready ; exists ; 2008 ; 2008 ; Scientific Drilling Volume 6 ; 6 ; >
-      au < ready ; exists ; 2009 ; 2009 ; Scientific Drilling Volume 7 ; 7 ; >
-      au < ready ; exists ; 2009 ; 2009 ; Scientific Drilling Volume 8 ; 8 ; >
-      au < ready ; exists ; 2010 ; 2010 ; Scientific Drilling Volume 9 ; 9 ; >
-      au < ready ; exists ; 2010 ; 2010 ; Scientific Drilling Volume 10 ; 10 ; >
-      au < ready ; exists ; 2011 ; 2011 ; Scientific Drilling Volume 11 ; 11 ; >
-      au < ready ; exists ; 2011 ; 2011 ; Scientific Drilling Volume 12 ; 12 ; >
+      au < crawling ; exists ; 2005 ; 2005 ; Scientific Drilling Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2006 ; 2006 ; Scientific Drilling Volume 2 ; 2 ; >
+      au < crawling ; exists ; 2006 ; 2006 ; Scientific Drilling Volume 3 ; 3 ; >
+      au < crawling ; exists ; 2007 ; 2007 ; Scientific Drilling Volume 4 ; 4 ; >
+      au < crawling ; exists ; 2007 ; 2007 ; Scientific Drilling Volume 5 ; 5 ; >
+      au < crawling ; exists ; 2007 ; 2007 ; Scientific Drilling Volume SpecialIssue ; SpecialIssue ; >
+      au < crawling ; exists ; 2008 ; 2008 ; Scientific Drilling Volume 6 ; 6 ; >
+      au < crawling ; exists ; 2009 ; 2009 ; Scientific Drilling Volume 7 ; 7 ; >
+      au < crawling ; exists ; 2009 ; 2009 ; Scientific Drilling Volume 8 ; 8 ; >
+      au < crawling ; exists ; 2010 ; 2010 ; Scientific Drilling Volume 9 ; 9 ; >
+      au < crawling ; exists ; 2010 ; 2010 ; Scientific Drilling Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2011 ; 2011 ; Scientific Drilling Volume 11 ; 11 ; >
+      au < crawling ; exists ; 2011 ; 2011 ; Scientific Drilling Volume 12 ; 12 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Scientific Drilling Volume 13 ; 13 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Scientific Drilling Volume 14 ; 14 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Scientific Drilling Volume 15 ; 15 ; >
@@ -1493,8 +1493,8 @@
       param[base_url] = https://se.copernicus.org/
       param[home_url] = https://www.solid-earth.net/
 
-      au < ready ; exists ; 2010 ; 2010 ; Solid Earth Volume 1 ; 1 ; >
-      au < ready ; exists ; 2011 ; 2011 ; Solid Earth Volume 2 ; 2 ; >
+      au < crawling ; exists ; 2010 ; 2010 ; Solid Earth Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2011 ; 2011 ; Solid Earth Volume 2 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Solid Earth Volume 3 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Solid Earth Volume 4 ; 4 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Solid Earth Volume 5 ; 5 ; >
@@ -1520,10 +1520,10 @@
       param[home_url] = https://www.stephan-mueller-special-publication-series.net/
       # no publication after 2009
 
-      au < ready ; exists ; 2002 ; 2002 ; Stephan Mueller Special Publication Series Volume 1 ; 1 ; >
-      au < ready ; exists ; 2002 ; 2002 ; Stephan Mueller Special Publication Series Volume 2 ; 2 ; >
-      au < ready ; exists ; 2002 ; 2002 ; Stephan Mueller Special Publication Series Volume 3 ; 3 ; >
-      au < ready ; exists ; 2009 ; 2009 ; Stephan Mueller Special Publication Series Volume 4 ; 4 ; >
+      au < crawling ; exists ; 2002 ; 2002 ; Stephan Mueller Special Publication Series Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2002 ; 2002 ; Stephan Mueller Special Publication Series Volume 2 ; 2 ; >
+      au < crawling ; exists ; 2002 ; 2002 ; Stephan Mueller Special Publication Series Volume 3 ; 3 ; >
+      au < crawling ; exists ; 2009 ; 2009 ; Stephan Mueller Special Publication Series Volume 4 ; 4 ; >
 
   }
 
@@ -1537,11 +1537,11 @@
       param[base_url] = https://tc.copernicus.org/
       param[home_url] = https://www.the-cryosphere.net/
 
-      au < ready ; exists ; 2007 ; 2007 ; The Cryosphere Volume 1 ; 1 ; >
-      au < ready ; exists ; 2008 ; 2008 ; The Cryosphere Volume 2 ; 2 ; >
-      au < ready ; exists ; 2009 ; 2009 ; The Cryosphere Volume 3 ; 3 ; >
-      au < ready ; exists ; 2010 ; 2010 ; The Cryosphere Volume 4 ; 4 ; >
-      au < ready ; exists ; 2011 ; 2011 ; The Cryosphere Volume 5 ; 5 ; >
+      au < crawling ; exists ; 2007 ; 2007 ; The Cryosphere Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2008 ; 2008 ; The Cryosphere Volume 2 ; 2 ; >
+      au < crawling ; exists ; 2009 ; 2009 ; The Cryosphere Volume 3 ; 3 ; >
+      au < crawling ; exists ; 2010 ; 2010 ; The Cryosphere Volume 4 ; 4 ; >
+      au < crawling ; exists ; 2011 ; 2011 ; The Cryosphere Volume 5 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; The Cryosphere Volume 6 ; 6 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; The Cryosphere Volume 7 ; 7 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; The Cryosphere Volume 8 ; 8 ; >
@@ -1577,17 +1577,17 @@
       param[base_url] = https://we.copernicus.org/
       param[home_url] = https://www.web-ecology.net/
 
-      au < ready ; exists ; 2000 ; 2000 ; Web Ecology Volume 1 ; 1 ; >
-      au < ready ; exists ; 2001 ; 2001 ; Web Ecology Volume 2 ; 2 ; >
-      au < ready ; exists ; 2002 ; 2002 ; Web Ecology Volume 3 ; 3 ; >
-      au < ready ; exists ; 2003 ; 2003 ; Web Ecology Volume 4 ; 4 ; >
-      au < ready ; exists ; 2005 ; 2005 ; Web Ecology Volume 5 ; 5 ; >
-      au < ready ; exists ; 2006 ; 2006 ; Web Ecology Volume 6 ; 6 ; >
-      au < ready ; exists ; 2007 ; 2007 ; Web Ecology Volume 7 ; 7 ; >
-      au < ready ; exists ; 2008 ; 2008 ; Web Ecology Volume 8 ; 8 ; >
-      au < ready ; exists ; 2009 ; 2009 ; Web Ecology Volume 9 ; 9 ; >
-      au < ready ; exists ; 2010 ; 2010 ; Web Ecology Volume 10 ; 10 ; >
-      au < ready ; exists ; 2011 ; 2011 ; Web Ecology Volume 11 ; 11 ; >
+      au < crawling ; exists ; 2000 ; 2000 ; Web Ecology Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2001 ; 2001 ; Web Ecology Volume 2 ; 2 ; >
+      au < crawling ; exists ; 2002 ; 2002 ; Web Ecology Volume 3 ; 3 ; >
+      au < crawling ; exists ; 2003 ; 2003 ; Web Ecology Volume 4 ; 4 ; >
+      au < crawling ; exists ; 2005 ; 2005 ; Web Ecology Volume 5 ; 5 ; >
+      au < crawling ; exists ; 2006 ; 2006 ; Web Ecology Volume 6 ; 6 ; >
+      au < crawling ; exists ; 2007 ; 2007 ; Web Ecology Volume 7 ; 7 ; >
+      au < crawling ; exists ; 2008 ; 2008 ; Web Ecology Volume 8 ; 8 ; >
+      au < crawling ; exists ; 2009 ; 2009 ; Web Ecology Volume 9 ; 9 ; >
+      au < crawling ; exists ; 2010 ; 2010 ; Web Ecology Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2011 ; 2011 ; Web Ecology Volume 11 ; 11 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Web Ecology Volume 12 ; 12 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Web Ecology Volume 13 ; 13 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Web Ecology Volume 14 ; 14 ; >
