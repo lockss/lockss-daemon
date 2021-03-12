@@ -35,6 +35,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.'''
 
 __version__ = '0.5.0'
 
+import sys
+
 try: import requests
 except ImportError: sys.exit('The Python Requests module must be installed (or on the PYTHONPATH)')
 
@@ -46,7 +48,6 @@ import getpass
 from multiprocessing.dummy import Pool as ThreadPool
 import os.path
 import requests.auth
-import sys
 import time
 from threading import Thread
 import zeep.exceptions

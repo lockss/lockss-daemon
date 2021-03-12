@@ -38,6 +38,8 @@ POSSIBILITY OF SUCH DAMAGE.
 
 __version__ = '0.3.0'
 
+import sys
+
 try: import requests
 except ImportError: sys.exit('The Python Requests module must be installed (or on the PYTHONPATH)')
 
@@ -51,7 +53,6 @@ from multiprocessing import Pool as ProcessPool
 from multiprocessing.dummy import Pool as ThreadPool
 import os.path
 import requests.auth
-import sys
 from threading import Lock, Thread
 import zeep.exceptions
 import zeep.helpers
