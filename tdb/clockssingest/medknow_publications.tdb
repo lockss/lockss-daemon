@@ -89,7 +89,7 @@
     au < deepCrawl ; exists ; 2016 ; Anesthesia: Essays and Researches Volume 10 ; 2016 ; 10 ; http://www.aeronline.org/ ; ; >
     au < finished ; frozen ; 2017 ; Anesthesia: Essays and Researches Volume 11 ; 2017 ; 11 ; http://www.aeronline.org/ ; ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Anesthesia: Essays and Researches Volume 12 ; 2018 ; 12 ; http://www.aeronline.org/ ; ; >
-    au < manifest ; exists ; 2019 ; Anesthesia: Essays and Researches Volume 13 ; 2019 ; 13 ; https://www.aeronline.org/ ; ; >
+    au < ready ; exists ; 2019 ; Anesthesia: Essays and Researches Volume 13 ; 2019 ; 13 ; https://www.aeronline.org/ ; ; >
     au < manifest ; exists ; 2020 ; Anesthesia: Essays and Researches Volume 14 ; 2020 ; 14 ; https://www.aeronline.org/ ; ; >
 
   }
@@ -646,7 +646,7 @@
     au < deepCrawl ; exists ; 2016 ; Heart Views Volume 17 ; 2016 ; 17 ; http://www.heartviews.org/ ; ; >
     au < finished ; frozen ; 2017 ; Heart Views Volume 18 ; 2017 ; 18 ; http://www.heartviews.org/ ; ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; Heart Views Volume 19 ; 2018 ; 19 ; http://www.heartviews.org/ ; ; >
-    au < manifest ; exists ; 2019 ; Heart Views Volume 20 ; 2019 ; 20 ; https://www.heartviews.org/ ; ; >
+    au < ready ; exists ; 2019 ; Heart Views Volume 20 ; 2019 ; 20 ; https://www.heartviews.org/ ; ; >
     au < manifest ; exists ; 2020 ; Heart Views Volume 21 ; 2020 ; 21 ; https://www.heartviews.org/ ; ; >
 
   }
@@ -3271,7 +3271,7 @@
     au < deepCrawl ; exists ; 2016 ; Journal of Natural Science, Biology and Medicine Volume 7 ; 2016 ; 7 ; http://www.jnsbm.org/ ; ; >
     au < finished ; finished ; 2017 ; Journal of Natural Science, Biology and Medicine Volume 8 ; 2017 ; 8 ; http://www.jnsbm.org/ ; ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Journal of Natural Science, Biology and Medicine Volume 9 ; 2018 ; 9 ; http://www.jnsbm.org/ ; ; >
-    au < manifest ; exists ; 2019 ; Journal of Natural Science, Biology and Medicine Volume 10 ; 2019 ; 10 ; https://www.jnsbm.org/ ; ; >
+    au < ready ; exists ; 2019 ; Journal of Natural Science, Biology and Medicine Volume 10 ; 2019 ; 10 ; https://www.jnsbm.org/ ; ; >
     au < manifest ; exists ; 2020 ; Journal of Natural Science, Biology and Medicine Volume 11 ; 2020 ; 11 ; https://www.jnsbm.org/ ; ; >
 
   }
@@ -3408,7 +3408,7 @@
     au < deepCrawl ; exists ; 2016 ; Journal of Pediatric Neurosciences Volume 11 ; 2016 ; 11 ; http://www.pediatricneurosciences.com/ ; ; >
     au < finished ; manifest ; 2017 ; Journal of Pediatric Neurosciences Volume 12 ; 2017 ; 12 ; http://www.pediatricneurosciences.com/ ; ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Journal of Pediatric Neurosciences Volume 13 ; 2018 ; 13 ; http://www.pediatricneurosciences.com/ ; ; >
-    au < manifest ; exists ; 2019 ; Journal of Pediatric Neurosciences Volume 14 ; 2019 ; 14 ; https://www.pediatricneurosciences.com/ ; ; >
+    au < ready ; exists ; 2019 ; Journal of Pediatric Neurosciences Volume 14 ; 2019 ; 14 ; https://www.pediatricneurosciences.com/ ; ; >
     au < crawling ; exists ; 2020 ; Journal of Pediatric Neurosciences Volume 15 ; 2020 ; 15 ; https://www.pediatricneurosciences.com/ ; ; >
 
   }
@@ -3458,7 +3458,7 @@
     au < deepCrawl ; exists ; 2016 ; Journal of Pharmacology and Pharmacotherapeutics Volume 7 ; 2016 ; 7 ; http://www.jpharmacol.com/ ; ; >
     au < finished ; finished ; 2017 ; Journal of Pharmacology and Pharmacotherapeutics Volume 8 ; 2017 ; 8 ; http://www.jpharmacol.com/ ; ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Journal of Pharmacology and Pharmacotherapeutics Volume 9 ; 2018 ; 9 ; http://www.jpharmacol.com/ ; ; >
-    au < manifest ; exists ; 2019 ; Journal of Pharmacology and Pharmacotherapeutics Volume 10 ; 2019 ; 10 ; https://www.jpharmacol.com/ ; ; >
+    au < ready ; exists ; 2019 ; Journal of Pharmacology and Pharmacotherapeutics Volume 10 ; 2019 ; 10 ; https://www.jpharmacol.com/ ; ; >
     au < crawling ; exists ; 2020 ; Journal of Pharmacology and Pharmacotherapeutics Volume 11 ; 2020 ; 11 ; https://www.jpharmacol.com/ ; ; >
 
   }
@@ -10269,7 +10269,7 @@
       au < manifest ; exists ; 2017 ; Oncology Journal of India Volume 1 ; 2017 ; 1 ; https://www.ojionline.org/ ; ; >
       au < manifest ; exists ; 2018 ; Oncology Journal of India Volume 2 ; 2018 ; 2 ; https://www.ojionline.org/ ; ; >
       au < manifest ; exists ; 2019 ; Oncology Journal of India Volume 3 ; 2019 ; 3 ; https://www.ojionline.org/ ; ; >
-      au < manifest ; exists ; 2020 ; Oncology Journal of India Volume 4 ; 2020 ; 4 ; https://www.ojionline.org/ ; ; >
+      au < ready ; exists ; 2020 ; Oncology Journal of India Volume 4 ; 2020 ; 4 ; https://www.ojionline.org/ ; ; >
 
   }
 
@@ -10326,7 +10326,7 @@
       au < manifest ; exists ; 2017 ; Reproductive and Developmental Medicine Volume 1 ; 2017 ; 1 ; https://www.repdevmed.org/ ; ; >
       au < manifest ; exists ; 2018 ; Reproductive and Developmental Medicine Volume 2 ; 2018 ; 2 ; https://www.repdevmed.org/ ; ; >
       au < manifest ; exists ; 2019 ; Reproductive and Developmental Medicine Volume 3 ; 2019 ; 3 ; https://www.repdevmed.org/ ; ; >
-      au < manifest ; exists ; 2020 ; Reproductive and Developmental Medicine Volume 4 ; 2020 ; 4 ; https://www.repdevmed.org/ ; ; >
+      au < ready ; exists ; 2020 ; Reproductive and Developmental Medicine Volume 4 ; 2020 ; 4 ; https://www.repdevmed.org/ ; ; >
 
   }
 
