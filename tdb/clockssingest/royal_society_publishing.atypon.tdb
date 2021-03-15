@@ -1437,7 +1437,7 @@
     au < finished ; finished ; 2018 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 474 ; 474 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2019 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 475 ; 475 ; reingest5.clockss.org:8082 > #no substance. using 2019 gives a manifest page with one url to issue 2019 from 2002.
     au < crawling ; exists ; 2020 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 476 ; 476 ; >
-    au < expected ; exists ; 2021 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 477 ; 477 ; >
+    au < manifest ; exists ; 2021 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 477 ; 477 ; >
     }
   }
 
@@ -1531,66 +1531,66 @@
     au < manifest ; exists ; 1957 ; Proceedings of the Royal Society B: Biological Sciences Volume 147 ; 147 ; >
     au < manifest ; exists ; 1958 ; Proceedings of the Royal Society B: Biological Sciences Volume 148 ; 148 ; >
     au < manifest ; exists ; 1958 ; Proceedings of the Royal Society B: Biological Sciences Volume 149 ; 149 ; >
-    au < exists ; exists ; 1959 ; Proceedings of the Royal Society B: Biological Sciences Volume 150 ; 150 ; >
+    au < manifest ; exists ; 1959 ; Proceedings of the Royal Society B: Biological Sciences Volume 150 ; 150 ; >
     }
     {
     param[journal_id] = rspb1959
 
-    au < exists ; exists ; 1959-1960 ; Proceedings of the Royal Society B: Biological Sciences Volume 151 ; 151 ; >
-    au < exists ; exists ; 1960 ; Proceedings of the Royal Society B: Biological Sciences Volume 152 ; 152 ; >
-    au < exists ; exists ; 1960-1961 ; Proceedings of the Royal Society B: Biological Sciences Volume 153 ; 153 ; >
-    au < exists ; exists ; 1961 ; Proceedings of the Royal Society B: Biological Sciences Volume 154 ; 154 ; >
-    au < exists ; exists ; 1961-1962 ; Proceedings of the Royal Society B: Biological Sciences Volume 155 ; 155 ; >
-    au < exists ; exists ; 1962 ; Proceedings of the Royal Society B: Biological Sciences Volume 156 ; 156 ; >
-    au < exists ; exists ; 1962-1963 ; Proceedings of the Royal Society B: Biological Sciences Volume 157 ; 157 ; >
-    au < exists ; exists ; 1963 ; Proceedings of the Royal Society B: Biological Sciences Volume 158 ; 158 ; >
-    au < exists ; exists ; 1963-1964 ; Proceedings of the Royal Society B: Biological Sciences Volume 159 ; 159 ; >
-    au < exists ; exists ; 1964 ; Proceedings of the Royal Society B: Biological Sciences Volume 160 ; 160 ; >
-    au < exists ; exists ; 1964-1965 ; Proceedings of the Royal Society B: Biological Sciences Volume 161 ; 161 ; >
-    au < exists ; exists ; 1965 ; Proceedings of the Royal Society B: Biological Sciences Volume 162 ; 162 ; >
-    au < exists ; exists ; 1965-1966 ; Proceedings of the Royal Society B: Biological Sciences Volume 163 ; 163 ; >
-    au < exists ; exists ; 1966 ; Proceedings of the Royal Society B: Biological Sciences Volume 164 ; 164 ; >
-    au < exists ; exists ; 1966 ; Proceedings of the Royal Society B: Biological Sciences Volume 165 ; 165 ; >
-    au < exists ; exists ; 1966-1967 ; Proceedings of the Royal Society B: Biological Sciences Volume 166 ; 166 ; >
-    au < exists ; exists ; 1967 ; Proceedings of the Royal Society B: Biological Sciences Volume 167 ; 167 ; >
-    au < exists ; exists ; 1967 ; Proceedings of the Royal Society B: Biological Sciences Volume 168 ; 168 ; >
-    au < exists ; exists ; 1967-1968 ; Proceedings of the Royal Society B: Biological Sciences Volume 169 ; 169 ; >
-    au < exists ; exists ; 1968 ; Proceedings of the Royal Society B: Biological Sciences Volume 170 ; 170 ; >
-    au < exists ; exists ; 1968-1969 ; Proceedings of the Royal Society B: Biological Sciences Volume 171 ; 171 ; >
-    au < exists ; exists ; 1969 ; Proceedings of the Royal Society B: Biological Sciences Volume 172 ; 172 ; >
-    au < exists ; exists ; 1969 ; Proceedings of the Royal Society B: Biological Sciences Volume 173 ; 173 ; >
-    au < exists ; exists ; 1969-1970 ; Proceedings of the Royal Society B: Biological Sciences Volume 174 ; 174 ; >
-    au < exists ; exists ; 1970 ; Proceedings of the Royal Society B: Biological Sciences Volume 175 ; 175 ; >
-    au < exists ; exists ; 1970-1971 ; Proceedings of the Royal Society B: Biological Sciences Volume 176 ; 176 ; >
-    au < exists ; exists ; 1971 ; Proceedings of the Royal Society B: Biological Sciences Volume 177 ; 177 ; >
-    au < exists ; exists ; 1971 ; Proceedings of the Royal Society B: Biological Sciences Volume 178 ; 178 ; >
-    au < exists ; exists ; 1971 ; Proceedings of the Royal Society B: Biological Sciences Volume 179 ; 179 ; >
-    au < exists ; exists ; 1972 ; Proceedings of the Royal Society B: Biological Sciences Volume 180 ; 180 ; >
-    au < exists ; exists ; 1972 ; Proceedings of the Royal Society B: Biological Sciences Volume 181 ; 181 ; >
-    au < exists ; exists ; 1972 ; Proceedings of the Royal Society B: Biological Sciences Volume 182 ; 182 ; >
-    au < exists ; exists ; 1973 ; Proceedings of the Royal Society B: Biological Sciences Volume 183 ; 183 ; >
-    au < exists ; exists ; 1973 ; Proceedings of the Royal Society B: Biological Sciences Volume 184 ; 184 ; >
-    au < exists ; exists ; 1974 ; Proceedings of the Royal Society B: Biological Sciences Volume 185 ; 185 ; >
-    au < exists ; exists ; 1974 ; Proceedings of the Royal Society B: Biological Sciences Volume 186 ; 186 ; >
-    au < exists ; exists ; 1974 ; Proceedings of the Royal Society B: Biological Sciences Volume 187 ; 187 ; >
-    au < exists ; exists ; 1975 ; Proceedings of the Royal Society B: Biological Sciences Volume 188 ; 188 ; >
-    au < exists ; exists ; 1975 ; Proceedings of the Royal Society B: Biological Sciences Volume 189 ; 189 ; >
-    au < exists ; exists ; 1975 ; Proceedings of the Royal Society B: Biological Sciences Volume 190 ; 190 ; >
-    au < exists ; exists ; 1975 ; Proceedings of the Royal Society B: Biological Sciences Volume 191 ; 191 ; >
-    au < exists ; exists ; 1975-1976 ; Proceedings of the Royal Society B: Biological Sciences Volume 192 ; 192 ; >
-    au < exists ; exists ; 1976 ; Proceedings of the Royal Society B: Biological Sciences Volume 193 ; 193 ; >
-    au < exists ; exists ; 1976 ; Proceedings of the Royal Society B: Biological Sciences Volume 194 ; 194 ; >
-    au < exists ; exists ; 1976-1977 ; Proceedings of the Royal Society B: Biological Sciences Volume 195 ; 195 ; >
-    au < exists ; exists ; 1977 ; Proceedings of the Royal Society B: Biological Sciences Volume 196 ; 196 ; >
-    au < exists ; exists ; 1977 ; Proceedings of the Royal Society B: Biological Sciences Volume 197 ; 197 ; >
-    au < exists ; exists ; 1977 ; Proceedings of the Royal Society B: Biological Sciences Volume 198 ; 198 ; >
-    au < exists ; exists ; 1977 ; Proceedings of the Royal Society B: Biological Sciences Volume 199 ; 199 ; >
-    au < exists ; exists ; 1978 ; Proceedings of the Royal Society B: Biological Sciences Volume 200 ; 200 ; >
-    au < exists ; exists ; 1978 ; Proceedings of the Royal Society B: Biological Sciences Volume 201 ; 201 ; >
-    au < exists ; exists ; 1978 ; Proceedings of the Royal Society B: Biological Sciences Volume 202 ; 202 ; >
-    au < exists ; exists ; 1978-1979 ; Proceedings of the Royal Society B: Biological Sciences Volume 203 ; 203 ; >
-    au < exists ; exists ; 1979 ; Proceedings of the Royal Society B: Biological Sciences Volume 204 ; 204 ; >
-    au < exists ; exists ; 1979 ; Proceedings of the Royal Society B: Biological Sciences Volume 205 ; 205 ; >
+    au < manifest ; exists ; 1959-1960 ; Proceedings of the Royal Society B: Biological Sciences Volume 151 ; 151 ; >
+    au < manifest ; exists ; 1960 ; Proceedings of the Royal Society B: Biological Sciences Volume 152 ; 152 ; >
+    au < manifest ; exists ; 1960-1961 ; Proceedings of the Royal Society B: Biological Sciences Volume 153 ; 153 ; >
+    au < manifest ; exists ; 1961 ; Proceedings of the Royal Society B: Biological Sciences Volume 154 ; 154 ; >
+    au < manifest ; exists ; 1961-1962 ; Proceedings of the Royal Society B: Biological Sciences Volume 155 ; 155 ; >
+    au < manifest ; exists ; 1962 ; Proceedings of the Royal Society B: Biological Sciences Volume 156 ; 156 ; >
+    au < manifest ; exists ; 1962-1963 ; Proceedings of the Royal Society B: Biological Sciences Volume 157 ; 157 ; >
+    au < manifest ; exists ; 1963 ; Proceedings of the Royal Society B: Biological Sciences Volume 158 ; 158 ; >
+    au < manifest ; exists ; 1963-1964 ; Proceedings of the Royal Society B: Biological Sciences Volume 159 ; 159 ; >
+    au < manifest ; exists ; 1964 ; Proceedings of the Royal Society B: Biological Sciences Volume 160 ; 160 ; >
+    au < manifest ; exists ; 1964-1965 ; Proceedings of the Royal Society B: Biological Sciences Volume 161 ; 161 ; >
+    au < manifest ; exists ; 1965 ; Proceedings of the Royal Society B: Biological Sciences Volume 162 ; 162 ; >
+    au < manifest ; exists ; 1965-1966 ; Proceedings of the Royal Society B: Biological Sciences Volume 163 ; 163 ; >
+    au < manifest ; exists ; 1966 ; Proceedings of the Royal Society B: Biological Sciences Volume 164 ; 164 ; >
+    au < manifest ; exists ; 1966 ; Proceedings of the Royal Society B: Biological Sciences Volume 165 ; 165 ; >
+    au < manifest ; exists ; 1966-1967 ; Proceedings of the Royal Society B: Biological Sciences Volume 166 ; 166 ; >
+    au < manifest ; exists ; 1967 ; Proceedings of the Royal Society B: Biological Sciences Volume 167 ; 167 ; >
+    au < manifest ; exists ; 1967 ; Proceedings of the Royal Society B: Biological Sciences Volume 168 ; 168 ; >
+    au < manifest ; exists ; 1967-1968 ; Proceedings of the Royal Society B: Biological Sciences Volume 169 ; 169 ; >
+    au < manifest ; exists ; 1968 ; Proceedings of the Royal Society B: Biological Sciences Volume 170 ; 170 ; >
+    au < manifest ; exists ; 1968-1969 ; Proceedings of the Royal Society B: Biological Sciences Volume 171 ; 171 ; >
+    au < manifest ; exists ; 1969 ; Proceedings of the Royal Society B: Biological Sciences Volume 172 ; 172 ; >
+    au < manifest ; exists ; 1969 ; Proceedings of the Royal Society B: Biological Sciences Volume 173 ; 173 ; >
+    au < manifest ; exists ; 1969-1970 ; Proceedings of the Royal Society B: Biological Sciences Volume 174 ; 174 ; >
+    au < manifest ; exists ; 1970 ; Proceedings of the Royal Society B: Biological Sciences Volume 175 ; 175 ; >
+    au < manifest ; exists ; 1970-1971 ; Proceedings of the Royal Society B: Biological Sciences Volume 176 ; 176 ; >
+    au < manifest ; exists ; 1971 ; Proceedings of the Royal Society B: Biological Sciences Volume 177 ; 177 ; >
+    au < manifest ; exists ; 1971 ; Proceedings of the Royal Society B: Biological Sciences Volume 178 ; 178 ; >
+    au < manifest ; exists ; 1971 ; Proceedings of the Royal Society B: Biological Sciences Volume 179 ; 179 ; >
+    au < manifest ; exists ; 1972 ; Proceedings of the Royal Society B: Biological Sciences Volume 180 ; 180 ; >
+    au < manifest ; exists ; 1972 ; Proceedings of the Royal Society B: Biological Sciences Volume 181 ; 181 ; >
+    au < manifest ; exists ; 1972 ; Proceedings of the Royal Society B: Biological Sciences Volume 182 ; 182 ; >
+    au < manifest ; exists ; 1973 ; Proceedings of the Royal Society B: Biological Sciences Volume 183 ; 183 ; >
+    au < manifest ; exists ; 1973 ; Proceedings of the Royal Society B: Biological Sciences Volume 184 ; 184 ; >
+    au < manifest ; exists ; 1974 ; Proceedings of the Royal Society B: Biological Sciences Volume 185 ; 185 ; >
+    au < manifest ; exists ; 1974 ; Proceedings of the Royal Society B: Biological Sciences Volume 186 ; 186 ; >
+    au < manifest ; exists ; 1974 ; Proceedings of the Royal Society B: Biological Sciences Volume 187 ; 187 ; >
+    au < manifest ; exists ; 1975 ; Proceedings of the Royal Society B: Biological Sciences Volume 188 ; 188 ; >
+    au < manifest ; exists ; 1975 ; Proceedings of the Royal Society B: Biological Sciences Volume 189 ; 189 ; >
+    au < manifest ; exists ; 1975 ; Proceedings of the Royal Society B: Biological Sciences Volume 190 ; 190 ; >
+    au < manifest ; exists ; 1975 ; Proceedings of the Royal Society B: Biological Sciences Volume 191 ; 191 ; >
+    au < manifest ; exists ; 1975-1976 ; Proceedings of the Royal Society B: Biological Sciences Volume 192 ; 192 ; >
+    au < manifest ; exists ; 1976 ; Proceedings of the Royal Society B: Biological Sciences Volume 193 ; 193 ; >
+    au < manifest ; exists ; 1976 ; Proceedings of the Royal Society B: Biological Sciences Volume 194 ; 194 ; >
+    au < manifest ; exists ; 1976-1977 ; Proceedings of the Royal Society B: Biological Sciences Volume 195 ; 195 ; >
+    au < manifest ; exists ; 1977 ; Proceedings of the Royal Society B: Biological Sciences Volume 196 ; 196 ; >
+    au < manifest ; exists ; 1977 ; Proceedings of the Royal Society B: Biological Sciences Volume 197 ; 197 ; >
+    au < manifest ; exists ; 1977 ; Proceedings of the Royal Society B: Biological Sciences Volume 198 ; 198 ; >
+    au < manifest ; exists ; 1977 ; Proceedings of the Royal Society B: Biological Sciences Volume 199 ; 199 ; >
+    au < manifest ; exists ; 1978 ; Proceedings of the Royal Society B: Biological Sciences Volume 200 ; 200 ; >
+    au < manifest ; exists ; 1978 ; Proceedings of the Royal Society B: Biological Sciences Volume 201 ; 201 ; >
+    au < manifest ; exists ; 1978 ; Proceedings of the Royal Society B: Biological Sciences Volume 202 ; 202 ; >
+    au < manifest ; exists ; 1978-1979 ; Proceedings of the Royal Society B: Biological Sciences Volume 203 ; 203 ; >
+    au < manifest ; exists ; 1979 ; Proceedings of the Royal Society B: Biological Sciences Volume 204 ; 204 ; >
+    au < manifest ; exists ; 1979 ; Proceedings of the Royal Society B: Biological Sciences Volume 205 ; 205 ; >
     au < manifest ; exists ; 1979-1980 ; Proceedings of the Royal Society B: Biological Sciences Volume 206 ; 206 ; >
     au < manifest ; exists ; 1980 ; Proceedings of the Royal Society B: Biological Sciences Volume 207 ; 207 ; >
     au < manifest ; exists ; 1980 ; Proceedings of the Royal Society B: Biological Sciences Volume 208 ; 208 ; >
@@ -1685,7 +1685,7 @@
     au < finished ; finished ; 2018 ; Proceedings of the Royal Society B: Biological Sciences Volume 285 ; 285 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2019 ; Proceedings of the Royal Society B: Biological Sciences Volume 286 ; 286 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2020 ; Proceedings of the Royal Society B: Biological Sciences Volume 287 ; 287 ; >
-    au < expected ; exists ; 2021 ; Proceedings of the Royal Society B: Biological Sciences Volume 288 ; 288 ; >
+    au < manifest ; exists ; 2021 ; Proceedings of the Royal Society B: Biological Sciences Volume 288 ; 288 ; >
     }
   }
 
