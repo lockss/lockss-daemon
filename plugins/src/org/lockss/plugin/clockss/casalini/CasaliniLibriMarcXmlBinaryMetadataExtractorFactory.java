@@ -33,23 +33,16 @@
 package org.lockss.plugin.clockss.casalini;
 
 import org.apache.commons.io.FilenameUtils;
-import org.lockss.config.TdbAu;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
-import org.lockss.plugin.CachedUrl;
-import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
-import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 import org.lockss.util.Logger;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class CasaliniLibriMarcXmlBinaryMetadataExtractorFactory implements FileMetadataExtractorFactory {
 
-  private static final Logger log = Logger.getLogger(CasaliniLibri2020MetadataExtractorFactory.class);
+  private static final Logger log = Logger.getLogger(CasaliniLibriMarcXmlBinaryMetadataExtractorFactory.class);
 
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target, String contentType) throws PluginException {
-    return new MarcXmlToMarcBinarySchemaHelper();
+    return new CasaliniLibriMarcMetadataHelper();
   }
 }

@@ -33,21 +33,20 @@
 package org.lockss.plugin.clockss.casalini;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import org.apache.commons.collections.MultiMap;
-import org.apache.commons.collections.map.MultiValueMap;
 import org.apache.commons.io.FilenameUtils;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
 import org.lockss.plugin.CachedUrl;
 import java.io.InputStream;
-import java.io.FileInputStream;
 
 import org.lockss.plugin.clockss.MetadataStringHelperUtilities;
+import org.lockss.plugin.clockss.MetadataStringHelperUtilities.*;
+import static org.lockss.plugin.clockss.casalini.CasaliniLibriPublisherNameStringHelperUtilities.*;
 import org.lockss.util.UrlUtil;
-import java.util.List;
 
 import org.marc4j.MarcReader;
 import org.marc4j.MarcStreamReader;
@@ -63,45 +62,11 @@ import org.lockss.util.Logger;
 /**
  *  Marc4J library https://github.com/marc4j/marc4j
  */
-public class CasaliniLibri2020SchemaHelper implements FileMetadataExtractor {
+public class CasaliniLibriMarcMetadataHelper implements FileMetadataExtractor {
 
-  private static final Logger log = Logger.getLogger(CasaliniLibri2020SchemaHelper.class);
+  private static final Logger log = Logger.getLogger(CasaliniLibriMarcMetadataHelper.class);
 
-  /**
-  The following is an example of a "mrc" record with some modification to avoid Comment Illegal Unicode Sequences
-s
-  =LDR  01276nam a2200373 i 4500
-  =001  2249531
-  =003  ItFiC
-  =005  20180726030539.0
-  =007  ### can not use original content here, for illegal unicode error
-  =008  060828s2004\\\\it\\\\\\s\\\\\000\0\ita\d
-  =020  \\$a8884760313
-  =040  \\$aItFiC$beng$cItFiC
-  =043  \\$ae-gr
-  =045  \\$ad4i-
-  =050  \4$aDF77$b.G35 2004
-  =082  14$a880$214
-  =082  14$a306$214
-  =082  14$a184$214
-  =082  14$a938$214
-  =100  1\$aGallo, Italo.
-  =245  10$aRiflessioni e divagazioni sulla grecità /$cItalo Gallo.
-  =260  \\$aRoma :$bEdizioni dell'Ateneo,$c2004.
-  =300  \\$a91 p.
-  =490  0\$aFilologia e critica / Università degli studi di Urbino ;$v92
-  =504  \\$aIncludes bibliographical references.
-  =500  \\$aCollection of already publ. writings, now slightly rev.
-  =500  \\$aHalf title: Centro internazionale di studi sulla grecità ...
-  =500  \\$aThe ISBN on back cover, 88-8476-016-X, is incorrect.
-  =650  \0$aGreek literature$xHistory and criticism.
-  =650  \0$aPhilosophy, Ancient.
-  =651  \0$aGreece$xCivilization.
-  =856  40$uhttp://digital.casalini.it/8884760313
-  =900  \\$a(c) Casalini Libri, 50014 Fiesole (Italy) - www.casalini.it
-  =910  \\$aBibliographic data$eTorrossa Fulltext Resource$gCasalini Libri
-   */
-
+  private static final String COLLECTION_NAME = "Monographs";
   private static final String PUBLISHER_NAME = "Casalini";
   private static final String PUBLISHER_NAME_APPENDIX = " - " + PUBLISHER_NAME ;
 
@@ -109,10 +74,30 @@ s
   @Override
   public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter) throws IOException, PluginException {
 
+    // Since 2016 has special case to handle their PDF file path, we need to tell whether it is 2016
+    boolean is_year_2016 = false;
+
+    String cuBase = FilenameUtils.getFullPath(cu.getUrl());
+
+    if (cuBase.contains("released/2016")) {
+      is_year_2016 = true;
+    }
+    
+
     InputStream input = cu.getUnfilteredInputStream();
 
-    MarcReader reader = new MarcStreamReader(input);
+    MarcReader reader = null;
+
+    if (cu.getUrl().contains(".xml")) {
+      reader = new MarcXmlReader(input);
+    }
+
+    if (cu.getUrl().contains(".mrc")) {
+      reader = new MarcStreamReader(input);
+    }
+
     int recordCount = 0;
+    List<String> bookIDs = new ArrayList<String>();
 
     while (reader.hasNext()) {
 
@@ -139,6 +124,8 @@ s
 
 
       String MARC_isbn = getMARCData(record, "020", 'a');
+      // This is only used in 2016 mrc record
+      String MARC_isbn_alt = getMARCData(record, "773", 'z');
       String MARC_title = getMARCData(record, "245", 'a');
       String MARC_pub_date =  getMARCData(record, "260", 'c');
       String MARC_pub_date_alt =  getMARCData(record, "264", 'c');
@@ -147,42 +134,96 @@ s
       String MARC_author_alt =   getMARCData(record, "700", 'a');
       String MARC_pdf =  getMARCControlFieldData(record, "001");
 
-      // Only count metadata when there is a PDF file
-      if (MARC_pdf != null) {
-        am.put(MetadataField.FIELD_ISBN,  MARC_isbn);
-        am.put(MetadataField.FIELD_PUBLICATION_TITLE,  MARC_title);
-        if (MARC_pub_date != null) {
-          am.put(MetadataField.FIELD_DATE, MetadataStringHelperUtilities.cleanupPubDate(MARC_pub_date));
-        } else if (MARC_pub_date_alt != null){
-          am.put(MetadataField.FIELD_DATE, MetadataStringHelperUtilities.cleanupPubDate(MARC_pub_date_alt));
+      //////////
+      String MARC_bookid =   getMARCData(record, "097", 'a');
+      String MARC_chapterid =   getMARCData(record, "097", 'c');
+
+      String publisherCleanName = cleanupKey(MARC_publisher);
+
+      String publisherShortCut = matchiPublishNamer(publisherCleanName.toLowerCase());
+
+      if (publisherShortCut == null) {
+        log.debug3(String.format("publisherShortCut is null: MARC_publisher: %s | publisherCleanName: %s",
+                MARC_publisher, publisherCleanName, publisherShortCut));
+      }
+      /////////
+
+      // Set ISBN
+      if (MARC_isbn != null) {
+        am.put(MetadataField.FIELD_ISBN, MARC_isbn);
+      } else if (MARC_isbn_alt != null) {
+        am.put(MetadataField.FIELD_ISBN, MARC_isbn_alt);
+      }
+
+      // Set publication title
+      if (MARC_title != null) {
+        am.put(MetadataField.FIELD_PUBLICATION_TITLE, MARC_title);
+      }
+
+      // Set publiation date
+      if (MARC_pub_date != null) {
+        am.put(MetadataField.FIELD_DATE, MetadataStringHelperUtilities.cleanupPubDate(MARC_pub_date));
+      } else if (MARC_pub_date_alt != null){
+        am.put(MetadataField.FIELD_DATE, MetadataStringHelperUtilities.cleanupPubDate(MARC_pub_date_alt));
+      } else {
+        log.debug("MARC_pub_date is null and MARC_pub_date_alt is null");
+      }
+
+      // Set author
+      if (MARC_author == null) {
+        am.put(MetadataField.FIELD_AUTHOR, MARC_author_alt);
+      } else {
+        am.put(MetadataField.FIELD_AUTHOR, MARC_author);
+      }
+
+      // Set publisher name
+      if (MARC_publisher == null) {
+        am.put(MetadataField.FIELD_PUBLISHER, PUBLISHER_NAME);
+      }  else {
+
+        String cleanPublisherName = MetadataStringHelperUtilities.cleanupPublisherName(MARC_publisher);
+
+        if (!cleanPublisherName.toLowerCase().contains(PUBLISHER_NAME.toLowerCase())) {
+          am.put(MetadataField.FIELD_PUBLISHER, MARC_publisher.replace(",", "") + PUBLISHER_NAME_APPENDIX);
         } else {
-          log.debug("MARC_pub_date is null and MARC_pub_date_alt is null");
-        }
-        
-        if (MARC_author == null) {
-          am.put(MetadataField.FIELD_AUTHOR, MARC_author_alt);
-        } else {
-          am.put(MetadataField.FIELD_AUTHOR, MARC_author);
-        }
-        // They did not provide start page, just total number of page,
-        // start page and end page will cause it thinks it is chapter, instead of whole book
-        //am.put(MetadataField.FIELD_END_PAGE, MARC_total_page);
-
-        String cuBase = FilenameUtils.getFullPath(cu.getUrl());
-        String fullPathFile = UrlUtil.minimallyEncodeUrl(cuBase + MARC_pdf + ".pdf");
-        am.put(MetadataField.FIELD_ACCESS_URL, fullPathFile);
-
-
-        if (MARC_publisher == null) {
-          am.put(MetadataField.FIELD_PUBLISHER, PUBLISHER_NAME);
-        }  else {
-          if (!MARC_publisher.equalsIgnoreCase(PUBLISHER_NAME)) {
-            am.put(MetadataField.FIELD_PUBLISHER, MARC_publisher.replace(",", "") + PUBLISHER_NAME_APPENDIX);
-          } else {
-            am.put(MetadataField.FIELD_PUBLISHER, MARC_publisher);
-          }
+          am.put(MetadataField.FIELD_PUBLISHER, cleanPublisherName);
         }
       }
+
+      if (is_year_2016) {
+
+        // Handle 2016 PDF goes here
+        String MARC_pdf_2016 = String.format("%s/%s/%s/%s", COLLECTION_NAME, publisherShortCut, MARC_bookid, MARC_bookid);
+
+        log.debug3("2016 MARC_pdf: " + MARC_pdf);
+
+        if (MARC_bookid != null && MARC_chapterid != null) {
+          log.debug3(String.format("Emit chapter: MARC_bookid %s | MARC_chapterid: %s ",
+                  MARC_bookid, MARC_chapterid));
+        } else if (MARC_chapterid == null) {
+          log.debug3(String.format("Do not emit chapter: MARC_bookid %s ", MARC_bookid));
+        }
+
+        if (MARC_pdf_2016 != null) {
+          String fullPathFile_2016 = UrlUtil.minimallyEncodeUrl(cuBase + MARC_pdf_2016 + ".pdf");
+          log.debug3("2016 MARC_pdf: " + MARC_pdf_2016 + ", fullPathFile = " + fullPathFile_2016);
+          am.put(MetadataField.FIELD_ACCESS_URL, fullPathFile_2016);
+
+          // Only emit the books metadata
+          if (MARC_bookid != null && !bookIDs.contains(MARC_bookid)) {
+            bookIDs.add(MARC_bookid);
+            emitter.emitMetadata(cu, am);
+          }
+        } else {
+          log.debug3("MARC_pdf field is not used");
+        }
+        // End handle 2016 PDF
+      } else {
+        String fullPathFile = UrlUtil.minimallyEncodeUrl(cuBase + MARC_pdf + ".pdf");
+        log.debug3("2020 MARC_pdf " + fullPathFile);
+        am.put(MetadataField.FIELD_ACCESS_URL, fullPathFile);
+      }
+
 
       /*
       Leader byte 07 “a” = Book (monographic component part)
@@ -192,9 +233,10 @@ s
 
       */
       Leader leader = record.getLeader();
-      // return <code>char[]</code>- implementation defined values, it return chars at 07, 08 position
+
       char publication_type = leader.getImplDefined1()[0];
 
+      // Setup FIELD_PUBLICATION_TYPE & FIELD_ARTICLE_TYPE
       if (publication_type == 'm' || publication_type == 'a') {
         am.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_BOOKVOLUME);
         am.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_BOOK);

@@ -12,22 +12,44 @@ public class TestMetadataStringHelperUtilities extends LockssTestCase {
 
     public void testcleanupPubDate() throws Exception {
 
-        List<String> testDates = new ArrayList<>();
+        List<String> testData = new ArrayList<>();
 
-        testDates.add("2001 (printed 2002)");
-        testDates.add("[1981]");
-        testDates.add("2005-2006.");
-        testDates.add("2014-");
-        testDates.add("aprile 2020.");
-        testDates.add("c2001.");
-        testDates.add("1998");
-        testDates.add("1996.");
-        testDates.add("MMXV.");
-        testDates.add("[MMXVI]");
+        testData.add("2001 (printed 2002)");
+        testData.add("[1981]");
+        testData.add("2005-2006.");
+        testData.add("2014-");
+        testData.add("aprile 2020.");
+        testData.add("c2001.");
+        testData.add("1998");
+        testData.add("1996.");
+        testData.add("MMXV.");
+        testData.add("[MMXVI]");
 
-        for(String originalStr : testDates) {
-            log.info("originalStr = " + originalStr);
+        for(String originalStr : testData) {
+            //log.info("originalStr = " + originalStr);
             MetadataStringHelperUtilities.cleanupPubDate(originalStr);
+        }
+    }
+
+    public void testcleanupPublisherName() throws Exception {
+
+        List<String> testData = new ArrayList<>();
+
+        testData.add("Antenore :");
+        testData.add("Anthropos  ;");
+        testData.add("G. Giappichelli Editore");
+        testData.add("XY.IT");
+        testData.add("[s.n.]");
+        testData.add("Di che cibo 6?");
+        testData.add("G. Giappichelli");
+        testData.add("G. Giappichelli Editore");
+        testData.add("Agorà & Co.");
+        testData.add("CPL - Centro Primo Levi");
+
+
+        for(String originalStr : testData) {
+            log.info("------------originalStr = " + originalStr);
+            MetadataStringHelperUtilities.cleanupPublisherName(originalStr);
         }
     }
 }
