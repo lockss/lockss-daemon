@@ -2206,7 +2206,7 @@
 
     au < manifest ; exists ; 2008 ; Education, Business and Society: Contemporary Middle Eastern Issues Volume 1 ; 1 ; >
     au < manifest ; exists ; 2009 ; Education, Business and Society: Contemporary Middle Eastern Issues Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2010 ; Education, Business and Society: Contemporary Middle Eastern Issues Volume 3 ; 3 ; >
+    au < ready ; exists ; 2010 ; Education, Business and Society: Contemporary Middle Eastern Issues Volume 3 ; 3 ; >
     au < manifest ; exists ; 2011 ; Education, Business and Society: Contemporary Middle Eastern Issues Volume 4 ; 4 ; >
     au < crawling ; exists ; 2012 ; Education, Business and Society: Contemporary Middle Eastern Issues Volume 5 ; 5 ; >
     au < crawling ; exists ; 2013 ; Education, Business and Society: Contemporary Middle Eastern Issues Volume 6 ; 6 ; >
@@ -3519,9 +3519,9 @@
     au < manifest ; exists ; 2008 ; info Volume 10 ; 10 ; >
     au < manifest ; exists ; 2009 ; info Volume 11 ; 11 ; >
     au < crawling ; exists ; 2010 ; info Volume 12 ; 12 ; >
-    au < manifest ; exists ; 2011 ; info Volume 13 ; 13 ; >
-    au < manifest ; exists ; 2012 ; info Volume 14 ; 14 ; >
-    au < manifest ; exists ; 2013 ; info Volume 15 ; 15 ; >
+    au < ready ; exists ; 2011 ; info Volume 13 ; 13 ; >
+    au < ready ; exists ; 2012 ; info Volume 14 ; 14 ; >
+    au < ready ; exists ; 2013 ; info Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; info Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; info Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; info Volume 18 ; 18 ; >
@@ -3577,7 +3577,7 @@
     au < crawling ; exists ; 2010 ; Information Management & Computer Security Volume 18 ; 18 ; >
     au < manifest ; exists ; 2011 ; Information Management & Computer Security Volume 19 ; 19 ; >
     au < manifest ; exists ; 2012 ; Information Management & Computer Security Volume 20 ; 20 ; >
-    au < manifest ; exists ; 2013 ; Information Management & Computer Security Volume 21 ; 21 ; >
+    au < ready ; exists ; 2013 ; Information Management & Computer Security Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Information Management & Computer Security Volume 22 ; 22 ; >
 
   }
@@ -3630,10 +3630,10 @@
     au < manifest ; exists ; 2007 ; Information Technology & People Volume 20 ; 20 ; >
     au < manifest ; exists ; 2008 ; Information Technology & People Volume 21 ; 21 ; >
     au < manifest ; exists ; 2009 ; Information Technology & People Volume 22 ; 22 ; >
-    au < manifest ; exists ; 2010 ; Information Technology & People Volume 23 ; 23 ; >
+    au < ready ; exists ; 2010 ; Information Technology & People Volume 23 ; 23 ; >
     au < manifest ; exists ; 2011 ; Information Technology & People Volume 24 ; 24 ; >
-    au < manifest ; exists ; 2012 ; Information Technology & People Volume 25 ; 25 ; >
-    au < manifest ; exists ; 2013 ; Information Technology & People Volume 26 ; 26 ; >
+    au < ready ; exists ; 2012 ; Information Technology & People Volume 25 ; 25 ; >
+    au < ready ; exists ; 2013 ; Information Technology & People Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Information Technology & People Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Information Technology & People Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Information Technology & People Volume 29 ; 29 ; >
@@ -3690,8 +3690,8 @@
     au < manifest ; exists ; 2007 ; Interactive Technology and Smart Education Volume 4 ; 4 ; >
     au < manifest ; exists ; 2008 ; Interactive Technology and Smart Education Volume 5 ; 5 ; >
     au < manifest ; exists ; 2009 ; Interactive Technology and Smart Education Volume 6 ; 6 ; >
-    au < manifest ; exists ; 2010 ; Interactive Technology and Smart Education Volume 7 ; 7 ; >
-    au < manifest ; exists ; 2011 ; Interactive Technology and Smart Education Volume 8 ; 8 ; >
+    au < ready ; exists ; 2010 ; Interactive Technology and Smart Education Volume 7 ; 7 ; >
+    au < ready ; exists ; 2011 ; Interactive Technology and Smart Education Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Interactive Technology and Smart Education Volume 9 ; 9 ; >
     au < manifest ; exists ; 2013 ; Interactive Technology and Smart Education Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Interactive Technology and Smart Education Volume 11 ; 11 ; >
@@ -3733,7 +3733,7 @@
     comment[journal_id] = ijlls
 
     au < doNotProcess ; doNotProcess ; 2012 ; International Journal for Lesson and Learning Studies Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2013 ; International Journal for Lesson and Learning Studies Volume 2 ; 2 ; >
+    au < ready ; exists ; 2013 ; International Journal for Lesson and Learning Studies Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal for Lesson and Learning Studies Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal for Lesson and Learning Studies Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal for Lesson and Learning Studies Volume 5 ; 5 ; >
@@ -3799,7 +3799,7 @@
     au < manifest ; exists ; 2008 ; International Journal of Accounting & Information Management Volume 16 ; 16 ; >
     au < manifest ; exists ; 2009 ; International Journal of Accounting & Information Management Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Accounting & Information Management Volume 18 ; 18 ; >
-    au < manifest ; exists ; 2011 ; International Journal of Accounting & Information Management Volume 19 ; 19 ; >
+    au < ready ; exists ; 2011 ; International Journal of Accounting & Information Management Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Accounting & Information Management Volume 20 ; 20 ; >
     au < crawling ; exists ; 2013 ; International Journal of Accounting & Information Management Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Accounting & Information Management Volume 22 ; 22 ; >
@@ -3867,10 +3867,10 @@
     au < doNotProcess ; doNotProcess ; 2007 ; International Journal of Bank Marketing Volume 25 ; 25 ; >
     au < manifest ; exists ; 2008 ; International Journal of Bank Marketing Volume 26 ; 26 ; >
     au < manifest ; exists ; 2009 ; International Journal of Bank Marketing Volume 27 ; 27 ; >
-    au < manifest ; exists ; 2010 ; International Journal of Bank Marketing Volume 28 ; 28 ; >
-    au < manifest ; exists ; 2011 ; International Journal of Bank Marketing Volume 29 ; 29 ; >
+    au < ready ; exists ; 2010 ; International Journal of Bank Marketing Volume 28 ; 28 ; >
+    au < ready ; exists ; 2011 ; International Journal of Bank Marketing Volume 29 ; 29 ; >
     au < crawling ; exists ; 2012 ; International Journal of Bank Marketing Volume 30 ; 30 ; >
-    au < manifest ; exists ; 2013 ; International Journal of Bank Marketing Volume 31 ; 31 ; >
+    au < ready ; exists ; 2013 ; International Journal of Bank Marketing Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Bank Marketing Volume 32 ; 32 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Bank Marketing Volume 33 ; 33 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Bank Marketing Volume 34 ; 34 ; >
@@ -3915,10 +3915,10 @@
     comment[journal_id] = ijccsm
 
     au < manifest ; exists ; 2009 ; International Journal of Climate Change Strategies and Management Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2010 ; International Journal of Climate Change Strategies and Management Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2011 ; International Journal of Climate Change Strategies and Management Volume 3 ; 3 ; >
+    au < ready ; exists ; 2010 ; International Journal of Climate Change Strategies and Management Volume 2 ; 2 ; >
+    au < ready ; exists ; 2011 ; International Journal of Climate Change Strategies and Management Volume 3 ; 3 ; >
     au < crawling ; exists ; 2012 ; International Journal of Climate Change Strategies and Management Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2013 ; International Journal of Climate Change Strategies and Management Volume 5 ; 5 ; >
+    au < ready ; exists ; 2013 ; International Journal of Climate Change Strategies and Management Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Climate Change Strategies and Management Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Climate Change Strategies and Management Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Climate Change Strategies and Management Volume 8 ; 8 ; >
@@ -3961,10 +3961,10 @@
     au < manifest ; exists ; 2007 ; International Journal of Clothing Science and Technology Volume 19 ; 19 ; >
     au < manifest ; exists ; 2008 ; International Journal of Clothing Science and Technology Volume 20 ; 20 ; >
     au < manifest ; exists ; 2009 ; International Journal of Clothing Science and Technology Volume 21 ; 21 ; >
-    au < manifest ; exists ; 2010 ; International Journal of Clothing Science and Technology Volume 22 ; 22 ; >
-    au < manifest ; exists ; 2011 ; International Journal of Clothing Science and Technology Volume 23 ; 23 ; >
-    au < manifest ; exists ; 2012 ; International Journal of Clothing Science and Technology Volume 24 ; 24 ; >
-    au < manifest ; exists ; 2013 ; International Journal of Clothing Science and Technology Volume 25 ; 25 ; >
+    au < ready ; exists ; 2010 ; International Journal of Clothing Science and Technology Volume 22 ; 22 ; >
+    au < ready ; exists ; 2011 ; International Journal of Clothing Science and Technology Volume 23 ; 23 ; >
+    au < ready ; exists ; 2012 ; International Journal of Clothing Science and Technology Volume 24 ; 24 ; >
+    au < ready ; exists ; 2013 ; International Journal of Clothing Science and Technology Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Clothing Science and Technology Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Clothing Science and Technology Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Clothing Science and Technology Volume 28 ; 28 ; >
@@ -4007,8 +4007,8 @@
     au < manifest ; exists ; 2009 ; International Journal of Commerce and Management Volume 19 ; 19 ; >
     au < crawling ; exists ; 2010 ; International Journal of Commerce and Management Volume 20 ; 20 ; >
     au < crawling ; exists ; 2011 ; International Journal of Commerce and Management Volume 21 ; 21 ; >
-    au < manifest ; exists ; 2012 ; International Journal of Commerce and Management Volume 22 ; 22 ; >
-    au < manifest ; exists ; 2013 ; International Journal of Commerce and Management Volume 23 ; 23 ; >
+    au < ready ; exists ; 2012 ; International Journal of Commerce and Management Volume 22 ; 22 ; >
+    au < ready ; exists ; 2013 ; International Journal of Commerce and Management Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Commerce and Management Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Commerce and Management Volume 25 ; 25 ; >
 
@@ -4064,9 +4064,9 @@
     au < manifest ; exists ; 2007 ; International Journal of Conflict Management Volume 18 ; 18 ; >
     au < manifest ; exists ; 2008 ; International Journal of Conflict Management Volume 19 ; 19 ; >
     au < manifest ; exists ; 2009 ; International Journal of Conflict Management Volume 20 ; 20 ; >
-    au < manifest ; exists ; 2010 ; International Journal of Conflict Management Volume 21 ; 21 ; >
-    au < manifest ; exists ; 2011 ; International Journal of Conflict Management Volume 22 ; 22 ; >
-    au < manifest ; exists ; 2012 ; International Journal of Conflict Management Volume 23 ; 23 ; >
+    au < ready ; exists ; 2010 ; International Journal of Conflict Management Volume 21 ; 21 ; >
+    au < ready ; exists ; 2011 ; International Journal of Conflict Management Volume 22 ; 22 ; >
+    au < ready ; exists ; 2012 ; International Journal of Conflict Management Volume 23 ; 23 ; >
     au < crawling ; exists ; 2013 ; International Journal of Conflict Management Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Conflict Management Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Conflict Management Volume 26 ; 26 ; >
@@ -4110,8 +4110,8 @@
     au < manifest ; exists ; 2007 ; International Journal of Contemporary Hospitality Management Volume 19 ; 19 ; >
     au < manifest ; exists ; 2008 ; International Journal of Contemporary Hospitality Management Volume 20 ; 20 ; >
     au < manifest ; exists ; 2009 ; International Journal of Contemporary Hospitality Management Volume 21 ; 21 ; >
-    au < manifest ; exists ; 2010 ; International Journal of Contemporary Hospitality Management Volume 22 ; 22 ; >
-    au < manifest ; exists ; 2011 ; International Journal of Contemporary Hospitality Management Volume 23 ; 23 ; >
+    au < ready ; exists ; 2010 ; International Journal of Contemporary Hospitality Management Volume 22 ; 22 ; >
+    au < ready ; exists ; 2011 ; International Journal of Contemporary Hospitality Management Volume 23 ; 23 ; >
     au < crawling ; exists ; 2012 ; International Journal of Contemporary Hospitality Management Volume 24 ; 24 ; >
     au < crawling ; exists ; 2013 ; International Journal of Contemporary Hospitality Management Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Contemporary Hospitality Management Volume 26 ; 26 ; >
@@ -4139,9 +4139,9 @@
     au < manifest ; exists ; 2008 ; International Journal of Culture, Tourism and Hospitality Research Volume 2 ; 2 ; >
     au < manifest ; exists ; 2009 ; International Journal of Culture, Tourism and Hospitality Research Volume 3 ; 3 ; >
     au < crawling ; exists ; 2010 ; International Journal of Culture, Tourism and Hospitality Research Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2011 ; International Journal of Culture, Tourism and Hospitality Research Volume 5 ; 5 ; >
+    au < ready ; exists ; 2011 ; International Journal of Culture, Tourism and Hospitality Research Volume 5 ; 5 ; >
     au < crawling ; exists ; 2012 ; International Journal of Culture, Tourism and Hospitality Research Volume 6 ; 6 ; >
-    au < manifest ; exists ; 2013 ; International Journal of Culture, Tourism and Hospitality Research Volume 7 ; 7 ; >
+    au < ready ; exists ; 2013 ; International Journal of Culture, Tourism and Hospitality Research Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Culture, Tourism and Hospitality Research Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Culture, Tourism and Hospitality Research Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Culture, Tourism and Hospitality Research Volume 10 ; 10 ; >
@@ -4171,10 +4171,10 @@
     au < manifest ; exists ; 2007 ; International Journal of Development Issues Volume 6 ; 6 ; >
     au < manifest ; exists ; 2008 ; International Journal of Development Issues Volume 7 ; 7 ; >
     au < manifest ; exists ; 2009 ; International Journal of Development Issues Volume 8 ; 8 ; >
-    au < manifest ; exists ; 2010 ; International Journal of Development Issues Volume 9 ; 9 ; >
-    au < manifest ; exists ; 2011 ; International Journal of Development Issues Volume 10 ; 10 ; >
-    au < manifest ; exists ; 2012 ; International Journal of Development Issues Volume 11 ; 11 ; >
-    au < manifest ; exists ; 2013 ; International Journal of Development Issues Volume 12 ; 12 ; >
+    au < ready ; exists ; 2010 ; International Journal of Development Issues Volume 9 ; 9 ; >
+    au < ready ; exists ; 2011 ; International Journal of Development Issues Volume 10 ; 10 ; >
+    au < ready ; exists ; 2012 ; International Journal of Development Issues Volume 11 ; 11 ; >
+    au < ready ; exists ; 2013 ; International Journal of Development Issues Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Development Issues Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Development Issues Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Development Issues Volume 15 ; 15 ; >
@@ -4198,7 +4198,7 @@
 
     au < crawling ; exists ; 2010 ; International Journal of Disaster Resilience in the Built Environment Volume 1 ; 1 ; >
     au < manifest ; exists ; 2011 ; International Journal of Disaster Resilience in the Built Environment Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2012 ; International Journal of Disaster Resilience in the Built Environment Volume 3 ; 3 ; >
+    au < ready ; exists ; 2012 ; International Journal of Disaster Resilience in the Built Environment Volume 3 ; 3 ; >
     au < crawling ; exists ; 2013 ; International Journal of Disaster Resilience in the Built Environment Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Disaster Resilience in the Built Environment Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Disaster Resilience in the Built Environment Volume 6 ; 6 ; >
@@ -4245,7 +4245,7 @@
     au < manifest ; exists ; 2008 ; International Journal of Educational Management Volume 22 ; 22 ; >
     au < manifest ; exists ; 2009 ; International Journal of Educational Management Volume 23 ; 23 ; >
     au < crawling ; exists ; 2010 ; International Journal of Educational Management Volume 24 ; 24 ; >
-    au < manifest ; exists ; 2011 ; International Journal of Educational Management Volume 25 ; 25 ; >
+    au < ready ; exists ; 2011 ; International Journal of Educational Management Volume 25 ; 25 ; >
     au < crawling ; exists ; 2012 ; International Journal of Educational Management Volume 26 ; 26 ; >
     au < crawling ; exists ; 2013 ; International Journal of Educational Management Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Educational Management Volume 28 ; 28 ; >
@@ -4296,8 +4296,8 @@
     au < manifest ; exists ; 2009 ; International Journal of Emerging Markets Volume 4 ; 4 ; >
     au < crawling ; exists ; 2010 ; International Journal of Emerging Markets Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Emerging Markets Volume 6 ; 6 ; >
-    au < manifest ; exists ; 2012 ; International Journal of Emerging Markets Volume 7 ; 7 ; >
-    au < manifest ; exists ; 2013 ; International Journal of Emerging Markets Volume 8 ; 8 ; >
+    au < ready ; exists ; 2012 ; International Journal of Emerging Markets Volume 7 ; 7 ; >
+    au < ready ; exists ; 2013 ; International Journal of Emerging Markets Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Emerging Markets Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Emerging Markets Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Emerging Markets Volume 11 ; 11 ; >
@@ -4323,7 +4323,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; International Journal of Energy Sector Management Volume 2 ; 2 ; >
     au < manifest ; exists ; 2009 ; International Journal of Energy Sector Management Volume 3 ; 3 ; >
     au < crawling ; exists ; 2010 ; International Journal of Energy Sector Management Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2011 ; International Journal of Energy Sector Management Volume 5 ; 5 ; >
+    au < ready ; exists ; 2011 ; International Journal of Energy Sector Management Volume 5 ; 5 ; >
     au < manifest ; exists ; 2012 ; International Journal of Energy Sector Management Volume 6 ; 6 ; >
     au < crawling ; exists ; 2013 ; International Journal of Energy Sector Management Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Energy Sector Management Volume 8 ; 8 ; >
@@ -4364,8 +4364,8 @@
     au < manifest ; exists ; 2009 ; International Journal of Entrepreneurial Behaviour & Research Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Entrepreneurial Behaviour & Research Volume 16 ; 16 ; >
     au < manifest ; exists ; 2011 ; International Journal of Entrepreneurial Behaviour & Research Volume 17 ; 17 ; >
-    au < manifest ; exists ; 2012 ; International Journal of Entrepreneurial Behaviour & Research Volume 18 ; 18 ; >
-    au < manifest ; exists ; 2013 ; International Journal of Entrepreneurial Behaviour & Research Volume 19 ; 19 ; >
+    au < ready ; exists ; 2012 ; International Journal of Entrepreneurial Behaviour & Research Volume 18 ; 18 ; >
+    au < ready ; exists ; 2013 ; International Journal of Entrepreneurial Behaviour & Research Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of entrepreneurial Behaviour & Research Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of entrepreneurial Behaviour & Research Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of entrepreneurial Behaviour & Research Volume 22 ; 22 ; >
@@ -4385,10 +4385,10 @@
     param[journal_issn] = 1758-2954
     comment[journal_id] = ijefm
 
-    au < manifest ; exists ; 2010 ; International Journal of Event and Festival Management Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2011 ; International Journal of Event and Festival Management Volume 2 ; 2 ; >
+    au < ready ; exists ; 2010 ; International Journal of Event and Festival Management Volume 1 ; 1 ; >
+    au < ready ; exists ; 2011 ; International Journal of Event and Festival Management Volume 2 ; 2 ; >
     au < crawling ; exists ; 2012 ; International Journal of Event and Festival Management Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2013 ; International Journal of Event and Festival Management Volume 4 ; 4 ; >
+    au < ready ; exists ; 2013 ; International Journal of Event and Festival Management Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Event and Festival Management Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Event and Festival Management Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Event and Festival Management Volume 7 ; 7 ; >
@@ -4485,10 +4485,10 @@
 
     au < manifest ; exists ; 2008 ; International Journal of Housing Markets and Analysis Volume 1 ; 1 ; >
     au < manifest ; exists ; 2009 ; International Journal of Housing Markets and Analysis Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2010 ; International Journal of Housing Markets and Analysis Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2011 ; International Journal of Housing Markets and Analysis Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2012 ; International Journal of Housing Markets and Analysis Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2013 ; International Journal of Housing Markets and Analysis Volume 6 ; 6 ; >
+    au < ready ; exists ; 2010 ; International Journal of Housing Markets and Analysis Volume 3 ; 3 ; >
+    au < ready ; exists ; 2011 ; International Journal of Housing Markets and Analysis Volume 4 ; 4 ; >
+    au < ready ; exists ; 2012 ; International Journal of Housing Markets and Analysis Volume 5 ; 5 ; >
+    au < ready ; exists ; 2013 ; International Journal of Housing Markets and Analysis Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Housing Markets and Analysis Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Housing Markets and Analysis Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Housing Markets and Analysis Volume 9 ; 9 ; >
@@ -4511,8 +4511,8 @@
 
     au < manifest ; exists ; 2008 ; International Journal of Intelligent Computing and Cybernetics Volume 1 ; 1 ; >
     au < manifest ; exists ; 2009 ; International Journal of Intelligent Computing and Cybernetics Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2010 ; International Journal of Intelligent Computing and Cybernetics Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2011 ; International Journal of Intelligent Computing and Cybernetics Volume 4 ; 4 ; >
+    au < ready ; exists ; 2010 ; International Journal of Intelligent Computing and Cybernetics Volume 3 ; 3 ; >
+    au < ready ; exists ; 2011 ; International Journal of Intelligent Computing and Cybernetics Volume 4 ; 4 ; >
     au < crawling ; exists ; 2012 ; International Journal of Intelligent Computing and Cybernetics Volume 5 ; 5 ; >
     au < crawling ; exists ; 2013 ; International Journal of Intelligent Computing and Cybernetics Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Intelligent Computing and Cybernetics Volume 7 ; 7 ; >
@@ -4538,7 +4538,7 @@
 
     au < manifest ; exists ; 2008 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 1 ; 1 ; >
     au < manifest ; exists ; 2009 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2010 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 3 ; 3 ; >
+    au < ready ; exists ; 2010 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 3 ; 3 ; >
     au < manifest ; exists ; 2011 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 4 ; 4 ; >
     au < manifest ; exists ; 2012 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 5 ; 5 ; >
     au < manifest ; exists ; 2013 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 6 ; 6 ; >
