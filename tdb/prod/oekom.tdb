@@ -1,0 +1,60 @@
+{
+
+  publisher <
+    name = Oekom
+  >
+
+  {
+
+    title <
+      name = GAIA - Ecological Perspectives for Science and Society ;
+      issn = 0940-5550 ;
+      eissn = 2625-5413
+    >
+
+    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    param[graphics_url] = http://graphics.ingentaconnect.com/ # no longer used but defined in plugin
+    param[publisher_id] = oekom
+    param[journal_id] = gaia
+    param[journal_issn] = 0940-5550
+    implicit < status ; year ; name ; param[volume_name] >
+
+    {
+      param[base_url] = https://www.ingentaconnect.com/
+      param[api_url] = https://api.ingentaconnect.com/
+    
+       au < exists ; 1992 ; GAIA - Ecological Perspectives for Science and Society Volume 1 ; 1 >
+       au < exists ; 1993 ; GAIA - Ecological Perspectives for Science and Society Volume 2 ; 2 >
+       au < exists ; 1994 ; GAIA - Ecological Perspectives for Science and Society Volume 3 ; 3 >
+       au < exists ; 1995 ; GAIA - Ecological Perspectives for Science and Society Volume 4 ; 4 >
+       au < exists ; 1996 ; GAIA - Ecological Perspectives for Science and Society Volume 5 ; 5 >
+       au < exists ; 1997 ; GAIA - Ecological Perspectives for Science and Society Volume 6 ; 6 >
+       au < exists ; 1998 ; GAIA - Ecological Perspectives for Science and Society Volume 7 ; 7 >
+       au < exists ; 1999 ; GAIA - Ecological Perspectives for Science and Society Volume 8 ; 8 >
+       au < exists ; 2000 ; GAIA - Ecological Perspectives for Science and Society Volume 9 ; 9 >
+       au < exists ; 2001 ; GAIA - Ecological Perspectives for Science and Society Volume 10 ; 10 >
+       au < exists ; 2002 ; GAIA - Ecological Perspectives for Science and Society Volume 11 ; 11 >
+       au < exists ; 2003 ; GAIA - Ecological Perspectives for Science and Society Volume 12 ; 12 >
+       au < exists ; 2004 ; GAIA - Ecological Perspectives for Science and Society Volume 13 ; 13 >
+       au < exists ; 2005 ; GAIA - Ecological Perspectives for Science and Society Volume 14 ; 14 >
+       au < exists ; 2006 ; GAIA - Ecological Perspectives for Science and Society Volume 15 ; 15 >
+       au < exists ; 2007 ; GAIA - Ecological Perspectives for Science and Society Volume 16 ; 16 >
+       au < exists ; 2008 ; GAIA - Ecological Perspectives for Science and Society Volume 17 ; 17 >
+       au < exists ; 2009 ; GAIA - Ecological Perspectives for Science and Society Volume 18 ; 18 >
+       au < exists ; 2010 ; GAIA - Ecological Perspectives for Science and Society Volume 19 ; 19 >
+       au < exists ; 2011 ; GAIA - Ecological Perspectives for Science and Society Volume 20 ; 20 >
+       au < exists ; 2012 ; GAIA - Ecological Perspectives for Science and Society Volume 21 ; 21 >
+       au < manifest ; 2013 ; GAIA - Ecological Perspectives for Science and Society Volume 22 ; 22 >
+       au < manifest ; 2014 ; GAIA - Ecological Perspectives for Science and Society Volume 23 ; 23 >
+       au < manifest ; 2015 ; GAIA - Ecological Perspectives for Science and Society Volume 24 ; 24 >
+       au < manifest ; 2016 ; GAIA - Ecological Perspectives for Science and Society Volume 25 ; 25 >
+       au < manifest ; 2017 ; GAIA - Ecological Perspectives for Science and Society Volume 26 ; 26 >
+       au < manifest ; 2018 ; GAIA - Ecological Perspectives for Science and Society Volume 27 ; 27 >
+       au < manifest ; 2019 ; GAIA - Ecological Perspectives for Science and Society Volume 28 ; 28 >
+       au < manifest ; 2020 ; GAIA - Ecological Perspectives for Science and Society Volume 29 ; 29 >
+       au < expected ; 2021 ; GAIA - Ecological Perspectives for Science and Society Volume 30 ; 30 >
+    }
+
+  }
+
+}
