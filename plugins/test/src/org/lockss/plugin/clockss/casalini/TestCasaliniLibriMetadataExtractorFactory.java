@@ -32,9 +32,9 @@ import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class TestCasaliniLibri2020MetadataExtractorFactory extends SourceXmlMetadataExtractorTest {
+public class TestCasaliniLibriMetadataExtractorFactory extends SourceXmlMetadataExtractorTest {
 
-    private static final Logger log = Logger.getLogger(TestCasaliniLibriMarcXmlMetadataExtractorFactory.class);
+    private static final Logger log = Logger.getLogger(TestCasaliniLibriMetadataExtractorFactory.class);
 
     private static String BaseUrl = "http://source.host.org/sourcefiles/casalini/";
     private static String Directory = "2019";
@@ -242,7 +242,7 @@ public class TestCasaliniLibri2020MetadataExtractorFactory extends SourceXmlMeta
         List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), mcu);
         assertNotEmpty(mdlist);
         //log.info("------size = " + mdlist.size());
-        assertEquals(7, mdlist.size());
+        assertEquals(8, mdlist.size());
         ArticleMetadata md = mdlist.get(0);
         assertNotNull(md);
         //assertEquals("10.1400/64564", md.get(MetadataField.FIELD_DOI));
