@@ -1391,11 +1391,11 @@
 
       # CLOCKSS only
       attr[journal_id] = piahs
-      #param[base_url] = https://www.proc-iahs.net/
+      param[home_url] = https://www.proc-iahs.net/
       #param[base_url] = https://piahs.copernicus.org/articles/
       param[base_url] = https://piahs.copernicus.org/
       #https://piahs.copernicus.org/articles/volumes.html works fine
-      param[home_url] = https://www.proceedings-international-association-of-hydrological-sciences.net/
+      #param[home_url] = https://www.proceedings-international-association-of-hydrological-sciences.net/
 
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Proceedings of the International Association of Hydrological Sciences Volume 364 ; 364 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 365 ; 365 ; >
