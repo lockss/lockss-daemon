@@ -74,7 +74,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Accounting Research Journal Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Accounting Research Journal Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Accounting Research Journal Volume 31 ; 31 ; >
-    au < crawling ; exists ; 2019 ; Accounting Research Journal Volume 32 ; 32 ; >
+    au < frozen ; exists ; 2019 ; Accounting Research Journal Volume 32 ; 32 ; >
     au < crawling ; exists ; 2020 ; Accounting Research Journal Volume 33 ; 33 ; >
 
   }
@@ -1453,7 +1453,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; China Agricultural Economic Review Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; China Agricultural Economic Review Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; China Agricultural Economic Review Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2019 ; China Agricultural Economic Review Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2019 ; China Agricultural Economic Review Volume 11 ; 11 ; >
     au < crawling ; exists ; 2020 ; China Agricultural Economic Review Volume 12 ; 12 ; >
 
   }
@@ -2188,7 +2188,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Education + Training Volume 58 ; 58 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Education + Training Volume 59 ; 59 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Education + Training Volume 60 ; 60 ; >
-    au < crawling ; exists ; 2019 ; Education + Training Volume 61 ; 61 ; >
+    au < frozen ; exists ; 2019 ; Education + Training Volume 61 ; 61 ; >
     au < crawling ; exists ; 2020 ; Education + Training Volume 62 ; 62 ; >
 
   }
