@@ -74,185 +74,200 @@ public class CasaliniLibriMarcMetadataHelper implements FileMetadataExtractor {
   @Override
   public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter) throws IOException, PluginException {
 
-    // Since 2016 has special case to handle their PDF file path, we need to tell whether it is 2016
-    boolean is_year_2016 = false;
+    try {
 
-    String cuBase = FilenameUtils.getFullPath(cu.getUrl());
+      // Since 2016 has special case to handle their PDF file path, we need to tell whether it is 2016
+      boolean is_year_2016 = false;
 
-    if (cuBase.contains("released/2016")) {
-      log.debug("Year 2016: cuBase = " + cuBase);
-      is_year_2016 = true;
-    } else {
-      log.debug("Year not 2016, cuBase = " + cuBase );
-    }
-    
+      String cuBase = FilenameUtils.getFullPath(cu.getUrl());
 
-    InputStream input = cu.getUnfilteredInputStream();
+      if (cuBase.contains("released/2016")) {
+        log.debug("Year 2016: cuBase = " + cuBase);
+        is_year_2016 = true;
+      } else {
+        log.debug("Year not 2016, cuBase = " + cuBase);
+      }
 
-    MarcReader reader = null;
 
-    if (cu.getUrl().contains(".xml")) {
-      reader = new MarcXmlReader(input);
-    }
+      InputStream input = cu.getUnfilteredInputStream();
 
-    if (cu.getUrl().contains(".mrc")) {
-      reader = new MarcStreamReader(input);
-    }
+      MarcReader reader = null;
 
-    int recordCount = 0;
-    List<String> bookIDs = new ArrayList<String>();
+      if (cu.getUrl().contains(".xml")) {
+        reader = new MarcXmlReader(input);
+      }
 
-    while (reader.hasNext()) {
+      if (cu.getUrl().contains(".mrc")) {
+        reader = new MarcStreamReader(input);
+      }
 
-      ArticleMetadata am = new ArticleMetadata();
+      int recordCount = 0;
+      List<String> bookIDs = new ArrayList<String>();
 
-      Record record = reader.next();
-      recordCount++;
+      while (reader.hasNext()) {
 
-      // Get all the raw metadata and put it to raw
-      List<DataField> fields = record.getDataFields();
-      if (fields != null) {
-        for (DataField field : fields) {
-          String tag = field.getTag();
-          List<Subfield> subfields = field.getSubfields();
-          if (subfields != null) {
-            for (Subfield subfield : subfields) {
-              char subtag = subfield.getCode();
-              am.putRaw(String.format("%s_%c", tag, subtag),
-                      subfield.getData());
+        ArticleMetadata am = new ArticleMetadata();
+
+        Record record = reader.next();
+        recordCount++;
+
+        // Get all the raw metadata and put it to raw
+        List<DataField> fields = record.getDataFields();
+        if (fields != null) {
+          for (DataField field : fields) {
+            String tag = field.getTag();
+            List<Subfield> subfields = field.getSubfields();
+            if (subfields != null) {
+              for (Subfield subfield : subfields) {
+                char subtag = subfield.getCode();
+                am.putRaw(String.format("%s_%c", tag, subtag),
+                        subfield.getData());
+              }
             }
           }
         }
-      }
 
 
-      String MARC_isbn = getMARCData(record, "020", 'a');
-      // This is only used in 2016 mrc record
-      String MARC_isbn_alt = getMARCData(record, "773", 'z');
-      String MARC_title = getMARCData(record, "245", 'a');
-      String MARC_pub_date =  getMARCData(record, "260", 'c');
-      String MARC_pub_date_alt =  getMARCData(record, "264", 'c');
-      String MARC_publisher = getMARCData(record, "260", 'b');
-      String MARC_author =   getMARCData(record, "100", 'a');
-      String MARC_author_alt =   getMARCData(record, "700", 'a');
-      String MARC_pdf =  getMARCControlFieldData(record, "001");
+        String MARC_isbn = getMARCData(record, "020", 'a');
+        // This is only used in 2016 mrc record
+        String MARC_isbn_alt = getMARCData(record, "773", 'z');
+        String MARC_title = getMARCData(record, "245", 'a');
+        String MARC_pub_date = getMARCData(record, "260", 'c');
+        String MARC_pub_date_alt = getMARCData(record, "264", 'c');
+        String MARC_publisher = getMARCData(record, "260", 'b');
+        String MARC_author = getMARCData(record, "100", 'a');
+        String MARC_author_alt = getMARCData(record, "700", 'a');
+        String MARC_pdf = getMARCControlFieldData(record, "001");
 
-      //////////
-      String MARC_bookid =   getMARCData(record, "097", 'a');
-      String MARC_chapterid =   getMARCData(record, "097", 'c');
+        //////////
+        String MARC_bookid = getMARCData(record, "097", 'a');
+        String MARC_chapterid = getMARCData(record, "097", 'c');
 
-      String publisherCleanName = cleanupKey(MARC_publisher);
+        String publisherCleanName = cleanupKey(MARC_publisher);
 
-      String publisherShortCut = matchiPublishNamer(publisherCleanName.toLowerCase());
+        String publisherShortCut = matchiPublishNamer(publisherCleanName.toLowerCase());
 
-      if (publisherShortCut == null) {
-        log.debug(String.format("publisherShortCut is null: MARC_publisher: %s | publisherCleanName: %s",
-                MARC_publisher, publisherCleanName, publisherShortCut));
-      }
-      /////////
+        if (publisherShortCut == null) {
+          log.debug(String.format("publisherShortCut is null: MARC_publisher: %s | publisherCleanName: %s",
+                  MARC_publisher, publisherCleanName, publisherShortCut));
+        }
+        /////////
 
-      // Set ISBN
-      if (MARC_isbn != null) {
-        am.put(MetadataField.FIELD_ISBN, MARC_isbn);
-      } else if (MARC_isbn_alt != null) {
-        am.put(MetadataField.FIELD_ISBN, MARC_isbn_alt);
-      }
+        // Set ISBN
+        if (MARC_isbn != null) {
+          am.put(MetadataField.FIELD_ISBN, MARC_isbn);
+        } else if (MARC_isbn_alt != null) {
+          am.put(MetadataField.FIELD_ISBN, MARC_isbn_alt);
+        }
 
-      // Set publication title
-      if (MARC_title != null) {
-        am.put(MetadataField.FIELD_PUBLICATION_TITLE, MARC_title);
-      }
+        // Set publication title
+        if (MARC_title != null) {
+          am.put(MetadataField.FIELD_PUBLICATION_TITLE, MARC_title);
+        }
 
-      // Set publiation date
-      if (MARC_pub_date != null) {
-        am.put(MetadataField.FIELD_DATE, MetadataStringHelperUtilities.cleanupPubDate(MARC_pub_date));
-      } else if (MARC_pub_date_alt != null){
-        am.put(MetadataField.FIELD_DATE, MetadataStringHelperUtilities.cleanupPubDate(MARC_pub_date_alt));
-      } else {
-        log.debug("MARC_pub_date is null and MARC_pub_date_alt is null");
-      }
-
-      // Set author
-      if (MARC_author == null) {
-        am.put(MetadataField.FIELD_AUTHOR, MARC_author_alt);
-      } else {
-        am.put(MetadataField.FIELD_AUTHOR, MARC_author);
-      }
-
-      // Set publisher name
-      if (MARC_publisher == null) {
-        am.put(MetadataField.FIELD_PUBLISHER, PUBLISHER_NAME);
-      }  else {
-
-        String cleanPublisherName = MetadataStringHelperUtilities.cleanupPublisherName(MARC_publisher);
-
-        if (!cleanPublisherName.toLowerCase().contains(PUBLISHER_NAME.toLowerCase())) {
-          am.put(MetadataField.FIELD_PUBLISHER, MARC_publisher.replace(",", "") + PUBLISHER_NAME_APPENDIX);
+        // Set publiation date
+        if (MARC_pub_date != null) {
+          am.put(MetadataField.FIELD_DATE, MetadataStringHelperUtilities.cleanupPubDate(MARC_pub_date));
+        } else if (MARC_pub_date_alt != null) {
+          am.put(MetadataField.FIELD_DATE, MetadataStringHelperUtilities.cleanupPubDate(MARC_pub_date_alt));
         } else {
-          am.put(MetadataField.FIELD_PUBLISHER, cleanPublisherName);
-        }
-      }
-
-      if (is_year_2016) {
-
-        // Handle 2016 PDF goes here
-        String MARC_pdf_2016 = String.format("%s/%s/%s/%s", COLLECTION_NAME, publisherShortCut, MARC_bookid, MARC_bookid);
-
-        log.debug("2016 MARC_pdf: " + MARC_pdf);
-
-        if (MARC_bookid != null && MARC_chapterid != null) {
-          log.debug(String.format("Emit chapter: MARC_bookid %s | MARC_chapterid: %s ",
-                  MARC_bookid, MARC_chapterid));
-        } else if (MARC_chapterid == null) {
-          log.debug(String.format("Do not emit chapter: MARC_bookid %s ", MARC_bookid));
+          log.debug("MARC_pub_date is null and MARC_pub_date_alt is null");
         }
 
-        if (MARC_pdf_2016 != null) {
-          String fullPathFile_2016 = UrlUtil.minimallyEncodeUrl(cuBase + MARC_pdf_2016 + ".pdf");
-          log.debug("2016 MARC_pdf: " + MARC_pdf_2016 + ", fullPathFile = " + fullPathFile_2016);
-          am.put(MetadataField.FIELD_ACCESS_URL, fullPathFile_2016);
-
-          // Only emit the books metadata
-          if (MARC_bookid != null && !bookIDs.contains(MARC_bookid)) {
-            bookIDs.add(MARC_bookid);
-            emitter.emitMetadata(cu, am);
+        // Set author
+        if (MARC_author == null) {
+          am.put(MetadataField.FIELD_AUTHOR, MARC_author_alt);
+        } else {
+          if (MARC_author != null) {
+            am.put(MetadataField.FIELD_AUTHOR, MARC_author);
           }
-        } else {
-          log.debug("MARC_pdf field is not used");
         }
-        // End handle 2016 PDF
-      } else {
-        String fullPathFile = UrlUtil.minimallyEncodeUrl(cuBase + MARC_pdf + ".pdf");
-        log.debug("2020 MARC_pdf " + fullPathFile);
-        am.put(MetadataField.FIELD_ACCESS_URL, fullPathFile);
+
+        // Set publisher name
+        if (MARC_publisher == null) {
+          am.put(MetadataField.FIELD_PUBLISHER, PUBLISHER_NAME);
+        } else {
+
+          String cleanPublisherName = MetadataStringHelperUtilities.cleanupPublisherName(MARC_publisher);
+
+          if (!cleanPublisherName.toLowerCase().contains(PUBLISHER_NAME.toLowerCase())) {
+            am.put(MetadataField.FIELD_PUBLISHER, cleanPublisherName + PUBLISHER_NAME_APPENDIX);
+          } else {
+            am.put(MetadataField.FIELD_PUBLISHER, cleanPublisherName);
+          }
+        }
+
+        if (is_year_2016) {
+
+          // Handle 2016 PDF goes here
+          String MARC_pdf_2016 = String.format("%s/%s/%s/%s", COLLECTION_NAME, publisherShortCut, MARC_bookid, MARC_bookid);
+
+          log.debug("2016 MARC_pdf: " + MARC_pdf);
+
+          if (MARC_bookid != null && MARC_chapterid != null) {
+            log.debug(String.format("Emit chapter: MARC_bookid %s | MARC_chapterid: %s ",
+                    MARC_bookid, MARC_chapterid));
+          } else if (MARC_chapterid == null) {
+            log.debug(String.format("Do not emit chapter: MARC_bookid %s ", MARC_bookid));
+          }
+
+          if (MARC_pdf_2016 != null) {
+            String fullPathFile_2016 = UrlUtil.minimallyEncodeUrl(cuBase + MARC_pdf_2016 + ".pdf");
+            log.debug("2016 MARC_pdf: " + MARC_pdf_2016 + ", fullPathFile = " + fullPathFile_2016);
+            am.put(MetadataField.FIELD_ACCESS_URL, fullPathFile_2016);
+
+            // Only emit the books metadata
+            if (MARC_bookid != null && !bookIDs.contains(MARC_bookid)) {
+              bookIDs.add(MARC_bookid);
+              emitter.emitMetadata(cu, am);
+            }
+          } else {
+            log.debug("MARC_pdf field is not used");
+          }
+          // End handle 2016 PDF
+        } else {
+          String fullPathFile = UrlUtil.minimallyEncodeUrl(cuBase + MARC_pdf + ".pdf");
+          log.debug("2020 MARC_pdf " + fullPathFile);
+          am.put(MetadataField.FIELD_ACCESS_URL, fullPathFile);
+        }
+
+
+        /*
+        Leader byte 07 “a” = Book (monographic component part)
+        Leader byte 07 “m” = Book
+        Leader byte 07 “s” = Journal
+        Leader byte 07 “b” = Journal (serial component part)
+
+        */
+        Leader leader = record.getLeader();
+
+        char publication_type = '0';
+
+        publication_type = leader.getImplDefined1()[0];
+
+        if (publication_type != '0') {
+          // Setup FIELD_PUBLICATION_TYPE & FIELD_ARTICLE_TYPE
+          if (publication_type == 'm' || publication_type == 'a') {
+            am.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_BOOKVOLUME);
+            am.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_BOOK);
+          }
+
+          if (publication_type == 's' || publication_type == 'b') {
+            am.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_JOURNALARTICLE);
+            am.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_JOURNAL);
+          }
+        }
+
+        emitter.emitMetadata(cu, am);
       }
-
-
-      /*
-      Leader byte 07 “a” = Book (monographic component part)
-      Leader byte 07 “m” = Book
-      Leader byte 07 “s” = Journal
-      Leader byte 07 “b” = Journal (serial component part)
-
-      */
-      Leader leader = record.getLeader();
-
-      char publication_type = leader.getImplDefined1()[0];
-
-      // Setup FIELD_PUBLICATION_TYPE & FIELD_ARTICLE_TYPE
-      if (publication_type == 'm' || publication_type == 'a') {
-        am.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_BOOKVOLUME);
-        am.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_BOOK);
-      }
-
-      if (publication_type == 's' || publication_type == 'b') {
-        am.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_JOURNALARTICLE);
-        am.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_JOURNAL);
-      }
-      
-      emitter.emitMetadata(cu, am);
+      log.debug(String.format("Metadata file source: %s, recordCount: %d", cu.getUrl(), recordCount));
+    } catch (NullPointerException exception) {
+      log.error("CasaliniLibriMarcMetadataHelper throw NullPointerExceptiop: ", exception);
+      exception.printStackTrace();
+    } catch (Exception exception) {
+      log.error("CasaliniLibriMarcMetadataHelper throw Exceptiop: ", exception);
+      exception.printStackTrace();
     }
-    log.debug(String.format("Metadata file source: %s, recordCount: %d", cu.getUrl(), recordCount));
   }
 
   /**

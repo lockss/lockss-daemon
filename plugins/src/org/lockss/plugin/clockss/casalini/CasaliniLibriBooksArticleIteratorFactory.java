@@ -19,7 +19,7 @@ public class CasaliniLibriBooksArticleIteratorFactory implements ArticleIterator
     protected static Logger log = Logger.getLogger(CasaliniLibriBooksArticleIteratorFactory.class);
 
     protected static final String ROOT_TEMPLATE = "\"%s\",base_url";
-    private static final String PATTERN_TEMPLATE = "\"%s%s/\",base_url,directory";
+    private static final String PATTERN_TEMPLATE = "\"%s%s/.*\\.(pdf|mrc|xml)$\",base_url,directory";
 
     // In 2020, the content is delivered using ".mrc" file.
     // https://clockss-test.lockss.org/sourcefiles/casalini-released/2020/Sample%20Material/SubsetSampleRecords.mrc
