@@ -59,7 +59,13 @@ Brought to you by CLOCKSS | Unauthenticated | Downloaded 03/04/21 01:12 AM UTC
  * </p>
 <pre>
 "\uFEFF\u0000B\u0000r\u0000o\u0000u\u0000g\u0000h\u0000t\u0000 \u0000t\u0000o\u0000 \u0000y\u0000o\u0000u\u0000\u0000b\u0000y\u0000 \u0000C\u0000L\u0000O\u0000C\u0000K\u0000S\u0000S\u0000 \u0000|\u0000 \u0000U\u0000n\u0000a\u0000u\u0000t\u0000h\u0000e\u0000n\u0000t\u0000i\u0000c\u0000a\u0000t\u0000e\u0000d\u0000 \u0000|\u0000 \u0000D\u0000o\u0000w\u0000n\u0000l\u0000o\u0000a\u0000d\u0000e\u0000d\u0000 \u00000\u00003\u0000/\u00000\u00004\u0000/\u00002\u00001\u0000 \u00000\u00001\u0000\u02DB\u00001\u00002\u0000 \u0000A\u0000M\u0000 \u0000U\u0000T\u0000C"
-</pre>
+ </pre>
+ *<p>
+ * and sometimes this:
+ *</p>
+<pre>
+ "\uFEFF\u0000B\u0000r\u0000o\u0000u\u0000g\u0000h\u0000t\u0000 \u0000t\u0000o\u0000 \u0000y\u0000o\u0000u\u0000 \u0000b\u0000y\u0000 \u0000C\u0000i\u0000l\u0000C\u0000h\u0000S\u0000S\u0000 \u0000|\u0000 \u0000r\u0000n\u0000a\u0000u\u0000t\u0000h\u0000e\u0000n\u0000t\u0000i\u0000c\u0000a\u0000t\u0000e\u0000d\u0000 \u0000|\u0000 \u0000a\u0000o\u0000w\u0000n\u0000l\u0000o\u0000a\u0000d\u0000e\u0000d\u0000 \u0000M\u0000P\u0000L\u0000M\u0000˝\u0000L\u0000O\u00001\u0000 \u0000M\u0000˝\u0000˛\u00001\u0000ˇ\u0000 \u0000P\u0000M\u0000 \u0000r\u0000T\u0000"
+ </pre>
  * <p>
  * Ostensibly, this is the UTF-16BE encoding (with a byte order mark), with the
  * exception that the timestamp sometimes has mis-mapped characters (which may
@@ -97,11 +103,12 @@ public class AMetSocPdfFilterFactory extends ExtractingPdfFilterFactory {
    * 
    * The first one (EI-D-19-0015.1.xml) has an example of a huge token stream
    * with drawing operations on page 6 (page index 5).
+   *
    */
   
   protected static final Pattern BROUGHT_TO_YOU_ETC =
-      Pattern.compile("^Brought to you by.*Downloaded \\d{2}/\\d{2}/\\d{2}");
-  
+      Pattern.compile("^Brought to you.*wnloaded \\d{2}/\\d{2}/\\d{2}");
+
   @Override
   public void transform(ArchivalUnit au,
                         PdfDocument pdfDocument)
