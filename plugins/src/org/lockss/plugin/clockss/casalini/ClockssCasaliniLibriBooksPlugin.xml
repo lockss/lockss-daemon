@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>8</string>
+    <string>9</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -20,7 +20,7 @@
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>7</string>
+        <string>8</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -64,16 +64,7 @@
     <string>org.lockss.plugin.clockss.casalini.CasaliniLibriBooksArticleIteratorFactory</string>
   </entry>
   <entry>
-    <string>text/xml_metadata_extractor_factory_map</string>
-    <map>
-      <entry>
-        <string>*</string>
-        <string>org.lockss.plugin.clockss.casalini.CasaliniLibriMarcXmlBinaryMetadataExtractorFactory</string>
-      </entry>
-    </map>
-  </entry>
-  <entry>
-    <string>application/xml_metadata_extractor_factory_map</string>
+    <string>application/marc_metadata_extractor_factory_map</string>
     <map>
       <entry>
         <string>*</string>
