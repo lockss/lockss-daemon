@@ -244,7 +244,7 @@ public class CasaliniLibriPublisherNameStringHelperUtilities {
         String publisherCleanName = originalDateString.replaceAll(
                 "[^a-zA-Z0-9&]", "").toLowerCase();
 
-        //log.info("-------originalDateString = " + originalDateString + ", publisherCleanName = " + publisherCleanName);
+        log.debug("-------originalDateString = " + originalDateString + ", publisherCleanName = " + publisherCleanName);
 
         return  publisherCleanName;
     }
