@@ -41,7 +41,6 @@ import java.util.regex.Pattern;
 import org.apache.commons.collections.IteratorUtils;
 import org.apache.commons.io.IOUtils;
 import org.lockss.filter.pdf.*;
-import org.lockss.filter.pdf.ExtractingPdfFilterFactory.BaseDocumentExtractingTransform;
 import org.lockss.pdf.*;
 import org.lockss.plugin.*;
 
@@ -106,8 +105,8 @@ public class AMetSocPdfFilterFactory extends ExtractingPdfFilterFactory {
    *
    */
   
-  protected static final Pattern BROUGHT_TO_YOU_ETC =
-      Pattern.compile("^Brought to you.*wnloaded \\d{2}/\\d{2}/\\d{2}");
+  protected static final Pattern BROUGHT_TO_YOU =
+      Pattern.compile("^Brought to you");
 
   @Override
   public void transform(ArchivalUnit au,
@@ -136,7 +135,7 @@ public class AMetSocPdfFilterFactory extends ExtractingPdfFilterFactory {
               String str = tok.getString();
               if (str.startsWith("\ufeff")) {
                 String rewritten = new String(str.substring(1).getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_16BE);
-                if (BROUGHT_TO_YOU_ETC.matcher(rewritten).find()) {
+                if (BROUGHT_TO_YOU.matcher(rewritten).find()) {
                   accumulator.clear();
                   return;
                 }
