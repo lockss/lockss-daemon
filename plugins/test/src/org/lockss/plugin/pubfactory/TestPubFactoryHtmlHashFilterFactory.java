@@ -70,13 +70,58 @@ public class TestPubFactoryHtmlHashFilterFactory extends LockssTestCase {
 				  "    <a class=\"summary-toggle ico-summary js-summary-toggle phoneOnly\" href=\"#\"><span>Show Summary Details</span></a>\n" + 
 				  "  </div>" +
 				  "</div></div>" +
-                  "<div id=\"headerWrap\">headerWrap content</div>";
-  private static final String blockFiltered = "<div class=\"content-box\"><div class=\"mainBase\" id=\"mainContent\">  <div id=\"readPanel\">    <a class=\"summary-toggle ico-summary js-summary-toggle phoneOnly\" href=\"#\"><span>Show Summary Details</span></a>\n" +
-          "  </div></div></div><div id=\"readPanel\">    <a class=\"summary-toggle ico-summary js-summary-toggle phoneOnly\" href=\"#\"><span>Show Summary Details</span></a>\n" +
-          "  </div>";
+          "<div id=\"headerWrap\">headerWrap content</div>";
+
+  private static final String blockFiltered =
+    "<div class=\"content-box\"><div class=\"mainBase\" id=\"mainContent\">" +
+        "  <div id=\"readPanel\">" +
+        "    <a class=\"summary-toggle ico-summary js-summary-toggle phoneOnly\" href=\"#\"><span>Show Summary Details</span></a>\n" +
+        "  </div>" +
+        "</div></div>";
+
+  private static final String hTags =
+    "<h2 class=\"abstractTitle text-title my-1\" id=\"d3038e2\">Abstract</h2>" +
+    "<h3 id=\"d4951423e445\">a. Satellite data</h3>" +
+    "<h4 id=\"d4951423e1002\">On what scale does lightning enhancement occur?</h4>" +
+    "<h5 id=\"h79834098f6464\">Does this even happen?</h5>" +
+    "<h8 id=\"j6984981a43585\">This one can't</h8>";
+
+  private static final String filteredHTags =
+    "<h2 class=\"abstractTitle text-title my-1\" >Abstract</h2>" +
+    "<h3 >a. Satellite data</h3>" +
+    "<h4 >On what scale does lightning enhancement occur?</h4>" +
+    "<h5 >Does this even happen?</h5>" +
+    "<h8 >This one can't</h8>";
+
+  private static final String dataPopoverAttr1 =
+    "<div data-popover-fullscreen=\"false\" data-popover-placement=\"\" data-popover-breakpoints=\"\" data-popover=\"607a919f-a0fd-41c2-9100-deaaff9a0862\" class=\"position-absolute display-none\">" +
+    "    <p>Some text</p>" +
+    "</div>";
+
+  private static final String filteredDataPopoverAttr1 =
+    "<div data-popover-fullscreen=\"false\" data-popover-placement=\"\" data-popover-breakpoints=\"\"  class=\"position-absolute display-none\">" +
+    "    <p>Some text</p>" +
+    "</div>";
+
+  private static final String dataPopoverAttr2 =
+    "<button data-popover-anchor=\"0979a884-7df8-4d05-a54\">Button Content</button>";
+
+  private static final String filteredDataPopoverAttr2 =
+    "<button >Button Content</button>";
+
+
 
   public void testFiltering() throws Exception {
 	    doFilterTest(bau, fact, blockHtml, blockFiltered);
   }
 
+  public void testHTagsFiltering() throws Exception {
+    doFilterTest(bau, fact, hTags, filteredHTags);
+  }
+  public void testDivPopOverFiltering() throws Exception {
+    doFilterTest(bau, fact, dataPopoverAttr1, filteredDataPopoverAttr1);
+  }
+  public void testButtonPopOverFiltering() throws Exception {
+    doFilterTest(bau, fact, dataPopoverAttr2, filteredDataPopoverAttr2);
+  }
 }
