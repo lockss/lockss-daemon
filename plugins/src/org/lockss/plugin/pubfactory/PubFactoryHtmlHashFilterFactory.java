@@ -41,6 +41,7 @@ import org.lockss.filter.FilterUtil;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.FilterFactory;
+import org.lockss.util.Logger;
 import org.lockss.util.ReaderInputStream;
 
 import java.io.IOException;
@@ -51,46 +52,13 @@ import java.util.Vector;
 // Keeps contents only (includeNodes), then hashes out unwanted nodes 
 // within the content (excludeNodes).
 public class PubFactoryHtmlHashFilterFactory implements FilterFactory {
-     
+
+  private static final Logger log =
+      Logger.getLogger(PubFactoryHtmlHashFilterFactory.class);
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in, 
                                                String encoding) {
-    NodeFilter[] includeNodes = new NodeFilter[] {
-    		
-    		// manifest just doesn't have much other than the links
-    	    new NodeFilter() {
-    			  @Override
-    			  public boolean accept(Node node) {
-    				  //plan <div> with plain <li> each with one href
-    				  //href="/view/journals/boyhood-studies/10/2/boyhood-studies.10.issue-2.xml"
-    			    if (HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/[^/]+issue[^/]+\\.xml").accept(node)) {
-    				  Node liParent = node.getParent();
-    				  if (liParent instanceof Bullet) {
-    				    Bullet li = (Bullet)liParent;
-    					Vector liAttr = li.getAttributesEx();
-    					if (liAttr != null && liAttr.size() == 1) {
-    					  Node divParent = li.getParent();
-    					  if (divParent instanceof Div) {
-    					    Div div = (Div)divParent;
-    						Vector divAttr = div.getAttributesEx();
-    						return divAttr != null && divAttr.size() == 1;
-    				      }
-    					}
-    				  }
-    			    } 
-    				return false;
-    		      }
-    		    },
-    		//main content of TOC and article landing page (on abstract or pdf tab)
-        HtmlNodeFilters.tagWithAttribute("div", "id", "readPanel"),
-        // citation overlay for download of ris - this has download date
-        HtmlNodeFilters.tagWithAttribute("div","id","previewWrapper"),
-
-        // https://www.berghahnjournals.com/view/journals/boyhood-studies/12/2/bhs120201.xml -- html structure changed Oct/2020
-        HtmlNodeFilters.tagWithAttributeRegex("div","class","content-box"),
-    };
-    
     NodeFilter[] excludeNodes = new NodeFilter[] {
         new TagNameFilter("script"),
         new TagNameFilter("noscript"),
@@ -110,7 +78,7 @@ public class PubFactoryHtmlHashFilterFactory implements FilterFactory {
         /*
         // Metrics on AMetSoc https://journals.ametsoc.org/view/journals/wcas/12/2/wcas-d-19-0115.1.xml
         // class name is big e.g. "component component-content-item component-container container-metrics container-wrapper-43132"
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "container-metrics"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "component-content-metrics"),
         // same with related content
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "component-related-content"),
         */
@@ -121,10 +89,10 @@ public class PubFactoryHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "component-volume-issue-selector"),
     };
     
-    return getFilteredInputStream(au, in, encoding, 
-                                  includeNodes, excludeNodes);
+    return getFilteredInputStream(au, in, encoding,
+        excludeNodes);
   }
-  /*
+
   HtmlTransform xform = new HtmlTransform() {
     @Override
     public NodeList transform(NodeList nodeList) throws IOException {
@@ -133,30 +101,31 @@ public class PubFactoryHtmlHashFilterFactory implements FilterFactory {
           @Override
           public void visitTag(Tag tag) {
             String tagName = tag.getTagName().toLowerCase();
+            // THESE ARE HANDLED BY OMMITED THE 'contatiner-sideBar' in HtmlNodeFilters by div.class
             /* remove these
             * <ul class="ajax-zone m-0 t-zone" id="zone115228561_1">
             * <ul data-menu-list="list-id-567363a7-9393-49e7-
             * <li ... data-menu-item="list-id-fe284
-            *
-            *
-
-            if ("ul".equals(tagName) && (tag.getAttribute("id") != null) {
-              String tagAttr = tag.getAttribute("id");
-              if (tagAttr.contains("zone") || tagAttr.contains("zone")) {
-                tag.setAttribute("id", "");
-              }
-            } /* remove these
-             * <div data-popover-fullscreen="false"
-
-            else if (("div".equals(tagName)) && (tag.getAttribute("id")!= null) &&
-                ) {
-              if (tag.getAttribute("class") != null)
-                tag.removeAttribute("class");
-            } /* remove these
+            */
+            /* Remove the generated id's from all the h# tags
+             * <h2 class="abstractTitle text-title my-1" id="d3038e2">Abstract</h2>
+             * <h3 id="d4951423e445">a. Satellite data</h3>
+             * <h4 id="d4951423e1002">On what scale does lightning enhancement occur?</h4>
+            */
+            if (tagName.matches("h\\d") && (tag.getAttribute("id") != null)) {
+              tag.removeAttribute("id");
+            }
+            /* remove these data-popover[-anchor] attributes that are dynamically generated from div and button tags
+             * <div data-popover-fullscreen="false" data-popover-placement="" data-popover-breakpoints="" data-popover="607a919f-a0fd-41c2-9100-deaaff9a0862" class="position-absolute display-none">
              * <button data-popover-anchor="0979a884-7df8-4d05-a54...
-
-            else if () {
-
+             */
+            else if ("div".equals(tagName) || "button".equals(tagName)) {
+              if ((tag.getAttribute("data-popover-anchor") != null)) {
+                tag.removeAttribute("data-popover-anchor");
+              } else if (tag.getAttribute("data-popover") != null) {
+                tag.removeAttribute("data-popover");
+              }
+            }
           }
         });
       }
@@ -166,24 +135,25 @@ public class PubFactoryHtmlHashFilterFactory implements FilterFactory {
       return nodeList;
     }
   };
-*/
+
   
   // Takes include and exclude nodes as input. Removes white spaces.
   public InputStream getFilteredInputStream(ArchivalUnit au, InputStream in,
-      String encoding, NodeFilter[] includeNodes, NodeFilter[] excludeNodes) {
+    //  String encoding, NodeFilter[] includeNodes, NodeFilter[] excludeNodes) {
+    String encoding, NodeFilter[] excludeNodes) {
     if (excludeNodes == null) {
       throw new NullPointerException("excludeNodes array is null");
     }  
-    if (includeNodes == null) {
-      throw new NullPointerException("includeNodes array is null!");
-    }   
+    //if (includeNodes == null) {
+    //  throw new NullPointerException("includeNodes array is null!");
+    //}
     InputStream filtered;
     filtered = new HtmlFilterInputStream(in, encoding,
                  new HtmlCompoundTransform(
-                     HtmlNodeFilterTransform.include(new OrFilter(includeNodes)),
-                     HtmlNodeFilterTransform.exclude(new OrFilter(excludeNodes)))
+                   //  HtmlNodeFilterTransform.include(new OrFilter(includeNodes)),
+                    HtmlNodeFilterTransform.exclude(new OrFilter(excludeNodes)), xform)
                );
-    
+
     Reader reader = FilterUtil.getReader(filtered, encoding);
     return new ReaderInputStream(reader); 
   }
