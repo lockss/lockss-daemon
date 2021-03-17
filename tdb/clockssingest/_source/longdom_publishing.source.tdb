@@ -83,7 +83,7 @@
 
     # WARC content collected from http://www.har-journal.com/
     au < zapped ; finished ; 2016 ; Healthy Aging Research WARC Content 2016 ; 2016 >
-    au < expected ; exists ; 2021 ; Healthy Aging Research WARC Content 2021 ; 2021 >
+    au < readySource ; crawling ; 2021 ; Healthy Aging Research WARC Content 2021 ; 2021 >
     #Contract has ended. No longer collecting.
 
   }
