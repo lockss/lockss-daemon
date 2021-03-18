@@ -60,6 +60,7 @@ public class PubFactoryHtmlHashFilterFactory implements FilterFactory {
                                                InputStream in, 
                                                String encoding) {
     NodeFilter[] excludeNodes = new NodeFilter[] {
+        HtmlNodeFilters.tag("head"),
         new TagNameFilter("script"),
         new TagNameFilter("noscript"),
         // filter out comments
@@ -87,6 +88,13 @@ public class PubFactoryHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "container-sideBar"),
         // get rid of volume dropdown, it similarly has generated ids
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "component-volume-issue-selector"),
+        /* sometimes there is a little div near the bottom of the page that contains the IP address.
+         * <div id="debug" style="display: none"> <ul>
+         *     <li id="xForwarded">[171.66.236.212]</li>
+         *     <li id="modifiedRemoteAddr">171.66.236.212</li>
+         * </ul> </div>
+         */
+        HtmlNodeFilters.tagWithAttribute("div", "id", "debug"),
     };
     
     return getFilteredInputStream(au, in, encoding,
