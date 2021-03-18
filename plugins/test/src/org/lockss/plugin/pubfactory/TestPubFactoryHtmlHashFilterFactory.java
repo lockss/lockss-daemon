@@ -65,19 +65,19 @@ public class TestPubFactoryHtmlHashFilterFactory extends LockssTestCase {
   }
   
   private static final String blockHtml =
-		  "<div class=\"content-box\"><div class=\"mainBase\" id=\"mainContent\">" +
-				  "  <div id=\"readPanel\">" + 
-				  "    <a class=\"summary-toggle ico-summary js-summary-toggle phoneOnly\" href=\"#\"><span>Show Summary Details</span></a>\n" + 
-				  "  </div>" +
-				  "</div></div>" +
-          "<div id=\"headerWrap\">headerWrap content</div>";
+    "<div class=\"content-box\"><div class=\"mainBase\" id=\"mainContent\">" +
+    "  <div id=\"readPanel\">" +
+    "    <a class=\"summary-toggle ico-summary js-summary-toggle phoneOnly\" href=\"#\"><span>Show Summary Details</span></a>\n" +
+    "  </div>" +
+    "</div></div>" +
+    "<div id=\"headerWrap\">headerWrap content</div>";
 
   private static final String blockFiltered =
     "<div class=\"content-box\"><div class=\"mainBase\" id=\"mainContent\">" +
-        "  <div id=\"readPanel\">" +
-        "    <a class=\"summary-toggle ico-summary js-summary-toggle phoneOnly\" href=\"#\"><span>Show Summary Details</span></a>\n" +
-        "  </div>" +
-        "</div></div>";
+    "  <div id=\"readPanel\">" +
+    "    <a class=\"summary-toggle ico-summary js-summary-toggle phoneOnly\" href=\"#\"><span>Show Summary Details</span></a>\n" +
+    "  </div>" +
+    "</div></div>";
 
   private static final String hTags =
     "<h2 class=\"abstractTitle text-title my-1\" id=\"d3038e2\">Abstract</h2>" +
@@ -109,12 +109,23 @@ public class TestPubFactoryHtmlHashFilterFactory extends LockssTestCase {
   private static final String filteredDataPopoverAttr2 =
     "<button >Button Content</button>";
 
+  private static final String debugDiv =
+    "<body>" +
+    "<div id=\"debug\" style=\"display: none\">" +
+    "  <ul>" +
+    "    <li id=\"xForwarded\">[171.66.236.212]</li>" +
+    "    <li id=\"modifiedRemoteAddr\">171.66.236.212</li>" +
+    "  </ul>" +
+    "</div>" +
+    "</body>" ;
 
+  private static final String filteredDebugDiv =
+    "<body>" +
+    "</body>" ;
 
   public void testFiltering() throws Exception {
 	    doFilterTest(bau, fact, blockHtml, blockFiltered);
   }
-
   public void testHTagsFiltering() throws Exception {
     doFilterTest(bau, fact, hTags, filteredHTags);
   }
@@ -123,5 +134,8 @@ public class TestPubFactoryHtmlHashFilterFactory extends LockssTestCase {
   }
   public void testButtonPopOverFiltering() throws Exception {
     doFilterTest(bau, fact, dataPopoverAttr2, filteredDataPopoverAttr2);
+  }
+  public void testDebugFiltering() throws Exception {
+    doFilterTest(bau, fact, debugDiv, filteredDebugDiv);
   }
 }
