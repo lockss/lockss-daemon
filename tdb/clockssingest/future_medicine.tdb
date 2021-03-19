@@ -61,6 +61,22 @@
   {
   
     title < 
+      name = Bioelectronics in Medicine ;
+      issn = 2059-1500 ;
+      eissn = 2059-1519
+    >
+    
+    param[journal_id] = bem
+
+    au < manifest ; exists ; 2018 ; Bioelectronics in Medicine Volume 1 ; 1 ; https://www.futuremedicine.com/ ; >
+    au < manifest ; exists ; 2019 ; Bioelectronics in Medicine Volume 2 ; 2 ; https://www.futuremedicine.com/ ; >
+    au < manifest ; exists ; 2020 ; Bioelectronics in Medicine Volume 3 ; 3 ; https://www.futuremedicine.com/ ; >
+    #Ceased
+  }
+
+  {
+  
+    title < 
       name = Breast Cancer Management ;
       issn = 1758-1923
     >
