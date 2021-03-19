@@ -1027,8 +1027,8 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "  </body>\n" + 
       "</html>";
   
-  private static final String art1ContentCrawlFiltered = 
-      "<html class=\"pb-page\" data-request-id=\"9876543-21\" lang=\"en\">\n" + 
+  private static final String art1ContentCrawlFiltered =
+      "<html class=\"pb-page\" data-request-id=\"9876543-21\" lang=\"en\">\n" +
       "  <head data-pb-dropzone=\"head\">\n" + 
       "    <meta name=\"pbContext\" content=\";website:website:hope-site;page:string:Article/Chapter View;journal:journal:hlthaff;article:article:10.1377/hlthaff.2018.test1;issue:issue:10.1377/hlthaff.2017.36.issue-11;wgroup:string:Publication Websites;pageGroup:string:Publication Pages;subPage:string:Full Text\">\n" + 
       "    <meta data-pb-head=\"head-widgets-start\">\n" + 
@@ -1115,13 +1115,13 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "</ul>" +
       "<ul class=\"coolBar__second rlist\">" +
       "<div class=\" col-xs-6 gutterless \">" +
-      "<div data-db-target-of=\"9876543-21\" aria-labelledby=\"9876543-21_Ctrl\" role=\"menu\" id=\"9876543-21_Pop\" class=\"article-tools__block fixed dropBlock__holder\">" +
-      "<ul class=\"rlist w-slide--list\">" +
-      "<li role=\"none\" class=\"article-tool\">" +
-      "<a href=\"/action/showCitFormats?doi=10.1377%2Fhlthaff.2018.test1\" role=\"menuitem\"><i aria-hidden=\"true\" class=\"icon-Icon_Download\"></i><span>Download Citations</span></a>" +
-      "</li>" +
-      "</ul>" +
-      "</div></div>" +
+      //"<div data-db-target-of=\"9876543-21\" aria-labelledby=\"9876543-21_Ctrl\" role=\"menu\" id=\"9876543-21_Pop\" class=\"article-tools__block fixed dropBlock__holder\">" +
+      //"<ul class=\"rlist w-slide--list\">" +
+      //"<li role=\"none\" class=\"article-tool\">" +
+      //"<a href=\"/action/showCitFormats?doi=10.1377%2Fhlthaff.2018.test1\" role=\"menuitem\"><i aria-hidden=\"true\" class=\"icon-Icon_Download\"></i><span>Download Citations</span></a>" +
+      //"</li>" +
+      //"</ul>" +
+      "</div>" + //"</div></div>" +
       "</ul>" +
       "</div>" +
       "</nav>\n" + 
@@ -1462,7 +1462,10 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
     InputStream actIn; 
     actIn = fact.createFilteredInputStream(au, 
         new StringInputStream(nameToHash), Constants.ENCODING_UTF_8);
-    assertEquals(expectedStr, StringUtil.fromInputStream(actIn));
+    String inStr = StringUtil.fromInputStream(actIn);
+    log.info(inStr);
+    log.info(expectedStr);
+    assertEquals(expectedStr, inStr);
   }
   
   public void startMockDaemon() {
