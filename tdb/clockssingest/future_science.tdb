@@ -137,6 +137,21 @@
   {
   
     title < 
+      name = Future Drug Discover ;
+      eissn = 2631-3316
+    >
+    
+    param[journal_id] = fdd
+
+    au < manifest ; exists ; 2019 ; Future Drug Discover Volume 1 ; 1 ; https://www.future-science.com/ ; >
+    au < manifest ; exists ; 2020 ; Future Drug Discover Volume 2 ; 2 ; https://www.future-science.com/ ; >
+    au < manifest ; exists ; 2021 ; Future Drug Discover Volume 3 ; 3 ; https://www.future-science.com/ ; >
+
+  }
+
+  {
+  
+    title < 
       name = Future Medicinal Chemistry ;
       issn = 1756-8919 ;
       eissn = 1756-8927
@@ -197,7 +212,7 @@
    au < deepCrawl ; exists ; 2017 ; International Journal of Pharmacokinetics Volume 2 ; 2 ; https://www.future-science.com/ ; >
    au < deepCrawl ; exists ; 2018 ; International Journal of Pharmacokinetics Volume 3 ; 3 ; https://www.future-science.com/ ; >
    au < manifest ; exists ; 2019 ; International Journal of Pharmacokinetics Volume 4 ; 4 ; https://www.future-science.com/ ; >
-   au < expected ; exists ; 2020 ; International Journal of Pharmacokinetics Volume 5 ; 5 ; https://www.future-science.com/ ; >
+   au < expected ; exists ; 2021 ; International Journal of Pharmacokinetics Volume 5 ; 5 ; https://www.future-science.com/ ; >
 
    }
 
