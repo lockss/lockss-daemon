@@ -66,6 +66,7 @@
         au < released ; 2017 ; Appalachian Heritage Volume 45 [2017] ; 13316 >
         au < released ; 2018 ; Appalachian Heritage Volume 46 [2018] ; 14206 >
         au < released ; 2019 ; Appalachian Heritage Volume 47 [2019] ; 14207 >
+        au < manifest ; 2020 ; Appalachian Review Volume 48 [2020] ; 14969 >
 
     }
 
@@ -101,6 +102,7 @@
         au < released ; 2018 ; Early American Literature Volume 53 [2018] ; 13274 >
         au < released ; 2019 ; Early American Literature Volume 54 [2019] ; 13916 >
         au < released ; 2020 ; Early American Literature Volume 55 [2020] ; 14614 >
+        au < manifest ; 2021 ; Early American Literature Volume 56 [2021] ; 15463 >
 
     }
 
@@ -116,6 +118,7 @@
       attr[journal_id] = 279
 
         au < released ; 2018 ; Southeastern Geographer: Geographies of Louisiana, Black Geographies [2018] ; 13283 >
+        au < manifest ; 2021 ; Southeastern Geographer Volume 61 [2021] ; 15492 >
 
         au < released ; 1961 ; Southeastern Geographer Volume 1 [1961] ; 7172 >
         au < released ; 1962 ; Southeastern Geographer Volume 2 [1962] ; 7173 >
@@ -177,258 +180,4 @@
         au < released ; 2018 ; Southeastern Geographer Volume 58 [2018] ; 13375 >
         au < released ; 2019 ; Southeastern Geographer Volume 59 [2019] ; 13906 >
         au < released ; 2020 ; Southeastern Geographer Volume 60 [2020] ; 14654 >
-
-    }
-
-    {
-    title <
-      name = Southern Cultures ;
-      issn = 1068-8218  ;
-      eissn = 1534-1488  ;
-      issnl = 1068-8218
-
-    >
-
-      attr[journal_id] = 177
-
-        au < released ; 1993 ; Southern Cultures Inaugural Issue [1993] ; 7183 >
-        au < released ; 1994-1995 ; Southern Cultures Volume 1 [1994-1995] ; 7015 >
-        au < released ; 1995 ; Southern Cultures Volume 2 [1995] ; 7016 >
-        au < released ; 1997 ; Southern Cultures Volume 3 [1997] ; 7024 >
-        au < released ; 1998 ; Southern Cultures Volume 4 [1998] ; 7017 >
-        au < released ; 1999 ; Southern Cultures Volume 5 [1999] ; 7018 >
-        au < released ; 2000 ; Southern Cultures Volume 6 [2000] ; 614 >
-        au < released ; 2001 ; Southern Cultures Volume 7 [2001] ; 615 >
-        au < released ; 2002 ; Southern Cultures Volume 8 [2002] ; 616 >
-        au < released ; 2003 ; Southern Cultures Volume 9 [2003] ; 847 >
-        au < released ; 2004 ; Southern Cultures Volume 10 [2004] ; 2417 >
-        au < released ; 2005 ; Southern Cultures Volume 11 [2005] ; 2687 >
-        au < released ; 2006 ; Southern Cultures Volume 12 [2006] ; 2961 >
-        au < released ; 2007 ; Southern Cultures Volume 13 [2007] ; 3236 >
-        au < released ; 2008 ; Southern Cultures Volume 14 [2008] ; 3647 >
-        au < released ; 2009 ; Southern Cultures Volume 15 [2009] ; 4154 >
-        au < released ; 2010 ; Southern Cultures Volume 16 [2010] ; 5805 >
-        au < released ; 2011 ; Southern Cultures Volume 17 [2011] ; 6837 >
-        au < released ; 2012 ; Southern Cultures Volume 18 [2012] ; 7999 >
-        au < released ; 2013 ; Southern Cultures Volume 19 [2013] ; 8729 >
-        au < released ; 2014 ; Southern Cultures Volume 20 [2014] ; 9647 >
-        au < released ; 2015 ; Southern Cultures Volume 21 [2015] ; 10515 >
-        au < released ; 2016 ; Southern Cultures Volume 22 [2016] ; 11004 >
-        au < released ; 2017 ; Southern Cultures Volume 23 [2017] ; 12565 >
-        au < released ; 2018 ; Southern Cultures Volume 24 [2018] ; 13365 >
-        au < released ; 2019 ; Southern Cultures Volume 25 [2019] ; 14100 >
-        au < testing ; 2020 ; Southern Cultures Volume 26 [2020] ; 14794 >
-
-    }
-
-    {
-    title <
-      name = Studies in Philology ;
-      issn = 0039-3738  ;
-      eissn = 1543-0383  ;
-      issnl = 0039-3738
-
-    >
-
-      attr[journal_id] = 233
-
-        au < released ; 2003 ; Studies in Philology Volume 100 [2003] ; 794 >
-        au < released ; 2004 ; Studies in Philology Volume 101 [2004] ; 1759 >
-        au < released ; 2005 ; Studies in Philology Volume 102 [2005] ; 2629 >
-        au < released ; 2006 ; Studies in Philology Volume 103 [2006] ; 2903 >
-        au < released ; 2007 ; Studies in Philology Volume 104 [2007] ; 3238 >
-        au < released ; 2008 ; Studies in Philology Volume 105 [2008] ; 3600 >
-        au < released ; 2009 ; Studies in Philology Volume 106 [2009] ; 4091 >
-        au < released ; 2010 ; Studies in Philology Volume 107 [2010] ; 5728 >
-        au < released ; 2011 ; Studies in Philology Volume 108 [2011] ; 6713 >
-        au < released ; 2012 ; Studies in Philology Volume 109 [2012] ; 7907 >
-        au < released ; 2013 ; Studies in Philology Volume 110 [2013] ; 8712 >
-        au < released ; 2014 ; Studies in Philology Volume 111 [2014] ; 9593 >
-        au < released ; 2015 ; Studies in Philology Volume 112 [2015] ; 10327 >
-        au < released ; 2016 ; Studies in Philology Volume 113 [2016] ; 11077 >
-        au < released ; 2017 ; Studies in Philology Volume 114 [2017] ; 12259 >
-        au < released ; 2018 ; Studies in Philology Volume 115 [2018] ; 13135 >
-        au < released ; 2019 ; Studies in Philology Volume 116 [2019] ; 13853 >
-        au < ready ; 2020 ; Studies in Philology Volume 117 [2020] ; 14601 >
-
-    }
-
-    {
-    title <
-      name = The Comparatist ;
-      issn = 0195-7678  ;
-      eissn = 1559-0887  ;
-      issnl = 0195-7678
-
-    >
-
-      attr[journal_id] = 342
-
-        au < released ; 1992 ; The Comparatist Volume 16 [May 1992] ; 6852 >
-        au < released ; 1995 ; The Comparatist Volume 19 [May 1995] ; 6849 >
-        au < released ; 1996 ; The Comparatist Volume 20 [May 1996] ; 6848 >
-        au < released ; 1997 ; The Comparatist Volume 21 [May 1997] ; 6804 >
-        au < released ; 1999 ; The Comparatist Volume 23 [May 1999] ; 6857 >
-        au < released ; 2000 ; The Comparatist Volume 24 [May 2000] ; 6856 >
-        au < released ; 2001 ; The Comparatist Volume 25 [May 2001] ; 6855 >
-        au < released ; 2002 ; The Comparatist Volume 26 [May 2002] ; 6839 >
-        au < released ; 2003 ; The Comparatist Volume 27 [May 2003] ; 6840 >
-        au < released ; 2004 ; The Comparatist Volume 28 [May 2004] ; 6841 >
-        au < released ; 2005 ; The Comparatist Volume 29 [May 2005] ; 2914 >
-        au < released ; 2006 ; The Comparatist Volume 30 [May 2006] ; 3032 >
-        au < released ; 2007 ; The Comparatist Volume 31 [May 2007] ; 3389 >
-        au < released ; 2008 ; The Comparatist Volume 32 [May 2008] ; 3785 >
-        au < released ; 2009 ; The Comparatist Volume 33 [May 2009] ; 4380 >
-        au < released ; 2010 ; The Comparatist Volume 34 [May 2010] ; 6337 >
-        au < released ; 2011 ; The Comparatist Volume 35 [May 2011] ; 7423 >
-        au < released ; 2012 ; The Comparatist Volume 36 [May 2012] ; 8311 >
-        au < released ; 2013 ; The Comparatist Volume 37 [May 2013] ; 9060 >
-        au < released ; 2014 ; The Comparatist Volume 38 [October 2014] ; 10214 >
-        au < released ; 2015 ; The Comparatist Volume 39 [October 2015] ; 10829 >
-        au < released ; 2016 ; The Comparatist Volume 40 [October 2016] ; 12183 >
-        au < released ; 2017 ; The Comparatist Volume 41 [October 2017] ; 12999 >
-        au < released ; 2018 ; The Comparatist Volume 42 [October 2018] ; 13768 >
-        au < released ; 2019 ; The Comparatist Volume 43 [2019] ; 14483 >
-
-    }
-
-    {
-    title <
-      name = The High School Journal ;
-      issn = 0018-1498  ;
-      eissn = 1534-5157  ;
-      issnl = 0018-1498
-
-    >
-
-      attr[journal_id] = 78
-
-        au < released ; 2001 ; The High School Journal Volume 84 [2001] ; 267 >
-        au < released ; 2001-2002 ; The High School Journal Volume 85 [2001-2002] ; 268 >
-        au < released ; 2002-2003 ; The High School Journal Volume 86 [2002-2003] ; 269 >
-        au < released ; 2003-2004 ; The High School Journal Volume 87 [2003-2004] ; 1708 >
-        au < released ; 2004-2005 ; The High School Journal Volume 88 [2004-2005] ; 2578 >
-        au < released ; 2005-2006 ; The High School Journal Volume 89 [2005-2006] ; 2851 >
-        au < released ; 2006-2007 ; The High School Journal Volume 90 [2006-2007] ; 3151 >
-        au < released ; 2007 ; The High School Journal Volume 91 [2007] ; 3495 >
-        au < released ; 2008 ; The High School Journal Volume 92 [2008] ; 4041 >
-        au < released ; 2009 ; The High School Journal Volume 93 [2009] ; 5688 >
-        au < released ; 2010 ; The High School Journal Volume 94 [2010] ; 6693 >
-        au < released ; 2011 ; The High School Journal Volume 95 [2011] ; 7665 >
-        au < released ; 2012 ; The High School Journal Volume 96 [2012] ; 8520 >
-        au < released ; 2013 ; The High School Journal Volume 97 [2013] ; 9431 >
-        au < released ; 2014-2015 ; The High School Journal Volume 98 [2014-2015] ; 10218 >
-        au < released ; 2015 ; The High School Journal Volume 99 [2015] ; 10824 >
-        au < released ; 2016 ; The High School Journal Volume 100 [2016] ; 12154 >
-        au < released ; 2017 ; The High School Journal Volume 101 [2017] ; 13007 >
-        au < released ; 2018 ; The High School Journal Volume 102 [2018] ; 13795 >
-        au < testing ; 2020-2021 ; The High School Journal Volume 103 [2020-2021] ; 14749 >
-
-    }
-
-    {
-    title <
-      name = The Journal of the Civil War Era ;
-      issn = 2154-4727  ;
-      eissn = 2159-9807  ;
-      issnl = 2154-4727
-
-    >
-
-      attr[journal_id] = 516
-
-        au < released ; 2011 ; The Journal of the Civil War Era Volume 1 [2011] ; 6918 >
-        au < released ; 2012 ; The Journal of the Civil War Era Volume 2 [2012] ; 8024 >
-        au < released ; 2013 ; The Journal of the Civil War Era Volume 3 [2013] ; 8783 >
-        au < released ; 2014 ; The Journal of the Civil War Era Volume 4 [2014] ; 9644 >
-        au < released ; 2015 ; The Journal of the Civil War Era Volume 5 [2015] ; 10348 >
-        au < released ; 2016 ; The Journal of the Civil War Era Volume 6 [2016] ; 11044 >
-        au < released ; 2017 ; The Journal of the Civil War Era Volume 7 [2017] ; 12322 >
-        au < released ; 2018 ; The Journal of the Civil War Era Volume 8 [2018] ; 13273 >
-        au < released ; 2019 ; The Journal of the Civil War Era Volume 9 [2019] ; 13960 >
-        au < released ; 2020 ; The Journal of the Civil War Era Volume 10 [2020] ; 14755 >
-
-    }
-
-    {
-    title <
-      name = The Latin Americanist ;
-      issn = 1557-2021 ;
-      eissn = 1557-203X ;
-      issnl = 1557-2021
-
-    >
-
-      attr[journal_id] = 737
-
-        au < released ; 2003-2004 ; The Latin Americanist Volume 47 [2003-2004] ; 13699 >
-        au < released ; 2004-2005 ; The Latin Americanist Volume 48 [2004-2005] ; 13700 >
-        au < released ; 2005-2006 ; The Latin Americanist Volume 49 [2005-2006] ; 13701 >
-        au < released ; 2006-2007 ; The Latin Americanist Volume 50 [2006-2007] ; 13702 >
-        au < released ; 2007 ; The Latin Americanist Volume 51 [2007] ; 13703 >
-        au < released ; 2008 ; The Latin Americanist Volume 52 [2008] ; 13704 >
-        au < released ; 2009 ; The Latin Americanist Volume 53 [2009] ; 13705 >
-        au < released ; 2010 ; The Latin Americanist Volume 54 [2010] ; 13706 >
-        au < released ; 2011 ; The Latin Americanist Volume 55 [2011] ; 13707 >
-        au < released ; 2012 ; The Latin Americanist Volume 56 [2012] ; 13708 >
-        au < released ; 2013 ; The Latin Americanist Volume 57 [2013] ; 13709 >
-        au < released ; 2014 ; The Latin Americanist Volume 58 [2014] ; 13710 >
-        au < released ; 2015 ; The Latin Americanist Volume 59 [2015] ; 13711 >
-        au < released ; 2016 ; The Latin Americanist Volume 60 [2016] ; 13712 >
-        au < released ; 2017 ; The Latin Americanist Volume 61 [2017] ; 13667 >
-        au < released ; 2018 ; The Latin Americanist Volume 62 [2018] ; 13668 >
-        au < released ; 2019 ; The Latin Americanist Volume 63 [2019] ; 14059 >
-        au < released ; 2020 ; The Latin Americanist Volume 64 [2020] ; 14833 >
-
-    }
-
-    {
-    title <
-      name = The Southern Literary Journal ;
-      issn = 0038-4291  ;
-      eissn = 1534-1461  ;
-      issnl = 0038-4291
-
-    >
-
-      attr[journal_id] = 183
-      #continued_by = 2474-8102
-
-        au < released ; 2000-2001 ; The Southern Literary Journal Volume 33 [2000-2001] ; 630 >
-        au < released ; 2001-2002 ; The Southern Literary Journal Volume 34 [2001-2002] ; 631 >
-        au < released ; 2002-2003 ; The Southern Literary Journal Volume 35 [2002-2003] ; 813 >
-        au < released ; 2003-2004 ; The Southern Literary Journal Volume 36 [2003-2004] ; 1734 >
-        au < released ; 2004-2005 ; The Southern Literary Journal Volume 37 [2004-2005] ; 2615 >
-        au < released ; 2005-2006 ; The Southern Literary Journal Volume 38 [2005-2006] ; 2884 >
-        au < released ; 2006-2007 ; The Southern Literary Journal Volume 39 [2006-2007] ; 3225 >
-        au < released ; 2007-2008 ; The Southern Literary Journal Volume 40 [2007-2008] ; 3631 >
-        au < released ; 2008-2009 ; The Southern Literary Journal Volume 41 [2008-2009] ; 4174 >
-        au < released ; 2009-2010 ; The Southern Literary Journal Volume 42 [2009-2010] ; 5788 >
-        au < released ; 2010-2011 ; The Southern Literary Journal Volume 43 [2010-2011] ; 6989 >
-        au < released ; 2011-2012 ; The Southern Literary Journal Volume 44 [2011-2012] ; 8025 >
-        au < released ; 2012-2013 ; The Southern Literary Journal Volume 45 [2012-2013] ; 9205 >
-        au < released ; 2013-2014 ; The Southern Literary Journal Volume 46 [2013-2014] ; 9651 >
-        au < released ; 2014-2015 ; The Southern Literary Journal Volume 47 [2014-2015] ; 10638 >
-        au < released ; 2018-2019 ; South: a scholarly journal Volume 51 [2018-2019] ; 14528 >
-
-    }
-
-    {
-    title <
-      name = South: a scholary journal ;
-      issn = 2474-8102  ;
-      eissn = 2470-9506  ;
-      issnl = 2474-8102
-
-    >
-
-      attr[journal_id] = 183
-      #continues = 0038-4291
-
-        au < released ; 2015-2016 ; South: a scholary journal Volume 48 [2015-2016] ; 11283 >
-        au < released ; 2016-2017 ; South: a scholary journal Volume 49 [2016-2017] ; 12717 >
-        au < released ; 2017-2018 ; South: a scholary journal Volume 50 [2017-2018] ; 13642 >
-
-    }
-
-}
+        au < manifest ; 2021 ; Southeastern Geographer Volume 61 [2021] ; 15492 >
