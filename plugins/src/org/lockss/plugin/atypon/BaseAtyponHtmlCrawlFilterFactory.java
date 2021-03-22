@@ -153,6 +153,21 @@ public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
     // related content near Erratum
     // http://press.endocrine.org/toc/endo/154/10       
     HtmlNodeFilters.tagWithAttribute("div", "class", "relatedLayer"),
+
+    // Links to "Prev" & "Next" at Atypon Seg on March/2021 at: https://library.seg.org/toc/leedff/21/9
+    // Also the issues and other top navigation will go to other volumes
+    HtmlNodeFilters.tagWithAttribute("div", "class", "content-navigation"),
+    HtmlNodeFilters.tagWithAttribute("div", "class", "content-navigation__btn--pre"),
+    HtmlNodeFilters.tagWithAttribute("div", "class", "content-navigation__extra"),
+    HtmlNodeFilters.tagWithAttribute("div", "class", "content-navigation__btn--next"),
+    HtmlNodeFilters.tagWithAttribute("div", "class", "publication__menu"),
+    HtmlNodeFilters.tagWithAttribute("div", "class", "generic-menu"),
+
+    // Right menu for related articles, figure and other stuff
+    HtmlNodeFilters.tagWithAttribute("div", "id", "pane-pcw-figures"),
+    HtmlNodeFilters.tagWithAttribute("div", "id", "pane-pcw-references"),
+    HtmlNodeFilters.tagWithAttribute("div", "id", "pane-pcw-related"),
+    HtmlNodeFilters.tagWithAttribute("div", "id", "pane-pcw-details"),
     
     // Not all Atypon plugins necessarily need this but MANY do and it is
     // an insidious source of over crawling
