@@ -83,16 +83,12 @@ SubstancePredicateFactory {
 
       for (CachedUrl cu : AuUtil.getCuIterable(au)) {
         String url = cu.getUrl();
-        log.info("au cached url: " + url);
+        log.debug3("au cached url: " + url);
         if (url.contains("/article/download/") || url.contains("/article/view/")) {
           hasArticleDownloadablePDFLink = true;
-          log.info("this has downloadable url, url = " + url);
+          log.debug3("this has downloadable url, url = " + url);
           break;
         }
-      }
-
-      if (!hasArticleDownloadablePDFLink) {
-        log.info("this has NO downloadable url ");
       }
 
       try {
@@ -112,6 +108,16 @@ SubstancePredicateFactory {
       CachedUrl cu = au.makeCachedUrl(url);
       if ( (cu == null) || !(cu.hasContent()) || (up == null) ){
         return false;
+      }
+
+      // We have a special case for"scholarworks.iu.edu/", they have no PDF files
+      // https://scholarworks.iu.edu/journals/index.php/pders/article/view/28644
+      // https://scholarworks.iu.edu/journals/index.php/pders/article/view/28644
+      // https://scholarworks.iu.edu/journals/index.php/pders/issue/view/2071
+
+      if (url.contains("scholarworks.iu.edu") && PDF_PATTERN.matcher(url).matches()) {
+        log.debug3("Special case for scholarworks.iu.edu the url is considered as PDF: " + url);
+        return true;
       }
 
       // If it has no downloadable link, only check PDF pattern
