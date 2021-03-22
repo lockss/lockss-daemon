@@ -109,28 +109,43 @@ public class PubFactoryHtmlHashFilterFactory implements FilterFactory {
           @Override
           public void visitTag(Tag tag) {
             String tagName = tag.getTagName().toLowerCase();
-            // THESE ARE HANDLED BY OMMITED THE 'contatiner-sideBar' in HtmlNodeFilters by div.class
-            /* remove these
+            /* Many of the ul, and li tags contain dynamic attributes, aggressivley remove these
             * <ul class="ajax-zone m-0 t-zone" id="zone115228561_1">
-            * <ul data-menu-list="list-id-567363a7-9393-49e7-
-            * <li ... data-menu-item="list-id-fe284
+            * <ul data-menu-list="list-id-567363a7-9393-49e7-..." ...>
+            * <li ... data-menu-item="list-id-fe284..." ...>
             */
+            if (tagName.equalsIgnoreCase("ul")) {
+              if (tag.getAttribute("id") != null){
+                tag.removeAttribute("id");
+              }
+              if (tag.getAttribute("data-menu-list") != null) {
+                tag.removeAttribute("data-menu-list");
+              }
+            } else if (tagName.equalsIgnoreCase("li"))  {
+              if (tag.getAttribute("id") != null) {
+                tag.removeAttribute("id");
+              }
+              if (tag.getAttribute("data-menu-item") != null) {
+                tag.removeAttribute("data-menu-item");
+              }
+            }
             /* Remove the generated id's from all the h# tags
              * <h2 class="abstractTitle text-title my-1" id="d3038e2">Abstract</h2>
              * <h3 id="d4951423e445">a. Satellite data</h3>
              * <h4 id="d4951423e1002">On what scale does lightning enhancement occur?</h4>
             */
-            if (tagName.matches("h\\d") && (tag.getAttribute("id") != null)) {
+            else if (tagName.matches("h\\d") && (tag.getAttribute("id") != null)) {
               tag.removeAttribute("id");
             }
             /* remove these data-popover[-anchor] attributes that are dynamically generated from div and button tags
              * <div data-popover-fullscreen="false" data-popover-placement="" data-popover-breakpoints="" data-popover="607a919f-a0fd-41c2-9100-deaaff9a0862" class="position-absolute display-none">
              * <button data-popover-anchor="0979a884-7df8-4d05-a54...
              */
-            else if ("div".equals(tagName) || "button".equals(tagName)) {
-              if ((tag.getAttribute("data-popover-anchor") != null)) {
+            else if ("div".equalsIgnoreCase(tagName) || "button".equalsIgnoreCase(tagName)) {
+              if (tag.getAttribute("data-popover-anchor") != null) {
                 tag.removeAttribute("data-popover-anchor");
-              } else if (tag.getAttribute("data-popover") != null) {
+              }
+              if (tag.getAttribute("data-popover") != null) {
                 tag.removeAttribute("data-popover");
               }
             }
