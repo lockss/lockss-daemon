@@ -60,7 +60,7 @@
 
     au < readySource ; crawling ; 2021 ; Taylor & Francis Source Content 2021_01 ; 2021_01 >
     au < readySource ; crawling ; 2021 ; Taylor & Francis Source Content 2021_02 ; 2021_02 >
-    au < manifest ; exists ; 2021 ; Taylor & Francis Source Content 2021_03 ; 2021_03 >
+    au < readySource ; crawling ; 2021 ; Taylor & Francis Source Content 2021_03 ; 2021_03 >
     au < expected ; exists ; 2021 ; Taylor & Francis Source Content 2021_04 ; 2021_04 >
     au < expected ; exists ; 2021 ; Taylor & Francis Source Content 2021_05 ; 2021_05 >
     au < expected ; exists ; 2021 ; Taylor & Francis Source Content 2021_06 ; 2021_06 >
@@ -83,8 +83,8 @@
       implicit < status ; status2 ; year ; name ; param[directory] >
 
       #Taylor & Francis back content delivery
-      au < expected ; exists ; 2021 ; Taylor & Francis Back Content 2021_01 ; 2021_01 >
-      au < expected ; exists ; 2021 ; Taylor & Francis Back Content 2021_02 ; 2021_02 >
+      au < manifest ; exists ; 2021 ; Taylor & Francis Back Content 2021_01 ; 2021_01 >
+      au < manifest ; exists ; 2021 ; Taylor & Francis Back Content 2021_02 ; 2021_02 >
       au < expected ; exists ; 2021 ; Taylor & Francis Back Content 2021_03 ; 2021_03 >
       au < expected ; exists ; 2021 ; Taylor & Francis Back Content 2021_04 ; 2021_04 >
       au < expected ; exists ; 2021 ; Taylor & Francis Back Content 2021_05 ; 2021_05 >

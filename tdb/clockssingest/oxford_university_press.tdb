@@ -3528,7 +3528,7 @@
       au < manifest ; exists ; 2014 ; 2014 ; Clinical Chemistry Volume 60 ; 60 ; >
       au < crawling ; exists ; 2015 ; 2015 ; Clinical Chemistry Volume 61 ; 61 ; >
       au < crawling ; exists ; 2016 ; 2016 ; Clinical Chemistry Volume 62 ; 62 ; >
-      au < crawling ; exists ; 2017 ; 2017 ; Clinical Chemistry Volume 63 ; 63 ; >
+      au < frozen ; exists ; 2017 ; 2017 ; Clinical Chemistry Volume 63 ; 63 ; >
       au < finished ; manifest ; 2018 ; 2018 ; Clinical Chemistry Volume 64 ; 64 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2019 ; 2019 ; Clinical Chemistry Volume 65 ; 65 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Clinical Chemistry Volume 66 ; 66 ; >
@@ -5642,7 +5642,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; FEMS Microbiology Ecology Volume 93 ; 93 ; >
     au < frozen ; exists ; 2018 ; 2018 ; FEMS Microbiology Ecology Volume 94 ; 94 ; >
     au < crawling ; exists ; 2019 ; 2019 ; FEMS Microbiology Ecology Volume 95 ; 95 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; FEMS Microbiology Ecology Volume 96 ; 96 ; >
+    au < crawling ; exists ; 2020 ; 2020 ; FEMS Microbiology Ecology Volume 96 ; 96 ; >
 
   }
 
@@ -7303,7 +7303,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; ICES Journal of Marine Science Volume 74 ; 74 ; >
     au < frozen ; exists ; 2018 ; 2018 ; ICES Journal of Marine Science Volume 75 ; 75 ; >
     au < crawling ; exists ; 2019 ; 2019 ; ICES Journal of Marine Science Volume 76 ; 76 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; ICES Journal of Marine Science Volume 77 ; 77 ; >
+    au < crawling ; exists ; 2020 ; 2020 ; ICES Journal of Marine Science Volume 77 ; 77 ; >
 
   }
 
@@ -8024,7 +8024,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; International Affairs Volume 93 ; 93 ; >
     au < frozen ; exists ; 2018 ; 2018 ; International Affairs Volume 94 ; 94 ; >
     au < crawling ; exists ; 2019 ; 2019 ; International Affairs Volume 95 ; 95 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; International Affairs Volume 96 ; 96 ; >
+    au < crawling ; exists ; 2020 ; 2020 ; International Affairs Volume 96 ; 96 ; >
 
   }
 
@@ -12981,7 +12981,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Military Medicine Volume 1 ; 1 ; >
     au < finished ; finished ; 2018 ; 2018 ; Military Medicine Volume 2 ; 2 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2019 ; 2019 ; Military Medicine Volume 3 ; 3 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; Military Medicine Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2020 ; 2020 ; Military Medicine Volume 4 ; 4 ; >
 
   }
 
@@ -13194,7 +13194,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Modern Judaism Volume 37 ; 37 ; >
     au < finished ; finished ; 2018 ; 2018 ; Modern Judaism Volume 38 ; 38 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2019 ; 2019 ; Modern Judaism Volume 39 ; 39 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; Modern Judaism Volume 40 ; 40 ; >
+    au < crawling ; exists ; 2020 ; 2020 ; Modern Judaism Volume 40 ; 40 ; >
 
   }
 

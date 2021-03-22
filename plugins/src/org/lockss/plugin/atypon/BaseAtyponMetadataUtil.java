@@ -121,23 +121,26 @@ public class BaseAtyponMetadataUtil {
       }
     }
 
-    // BEGIN Mark Allen Specific checks
-    // get the AU's publisher and check if it is Mark Allen Group.
-    // Note,
+    // BEGIN PUBLISHER SPECIFIC CHECKS
+    // get the AU's publisher and check if it is in our list
     String pubName = (tdbau == null) ? null : tdbau.getPublisherName();
 
-    if (isInAu && (pubName != null) && pubName.equals("Mark Allen Group")) {
-      log.debug3("MarkAllen Checks");
-      // check the am date against the au
-      isInAu = checkMdDate(au, am);
-      if (isInAu) {
-        isInAu = checkMdDoiJournalID(au, am);
-      }
-      if (isInAu) {
-        log.debug3("Mark Allen Pass");
+    if (isInAu && (pubName != null)) {
+      Boolean isMarkAllen = pubName.equals("Mark Allen Group");
+      Boolean isASCO = pubName.equals("American Society of Clinical Oncology");
+      if (isASCO || isMarkAllen) {
+        log.debug3("Publisher Specific Checks");
+        // check the am date against the au
+        isInAu = checkMdDate(au, am);
+        if (isInAu && isMarkAllen) {
+          isInAu = checkMdDoiJournalID(au, am);
+        }
+        if (isInAu) {
+          log.debug3("Publisher Specific Pass");
+        }
       }
     }
-    // END MARK ALLEN SPECIFIC CHECKS //
+    // END PUBLISHER SPECIFIC CHECKS //
 
     // Use the journalTitle and volume name from the ArticleMetadata
     String foundJournalTitle = am.get(MetadataField.FIELD_PUBLICATION_TITLE);
