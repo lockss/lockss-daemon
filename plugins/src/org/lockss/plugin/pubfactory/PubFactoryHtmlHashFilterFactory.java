@@ -95,6 +95,9 @@ public class PubFactoryHtmlHashFilterFactory implements FilterFactory {
          * </ul> </div>
          */
         HtmlNodeFilters.tagWithAttribute("div", "id", "debug"),
+        // there are a number of input forms, comment boxes, etc to filter out
+        HtmlNodeFilters.tagWithAttributeRegex("form", "class", "annotationsForm"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "searchModule"),
     };
     
     return getFilteredInputStream(au, in, encoding,
@@ -109,18 +112,32 @@ public class PubFactoryHtmlHashFilterFactory implements FilterFactory {
           @Override
           public void visitTag(Tag tag) {
             String tagName = tag.getTagName().toLowerCase();
-            // THESE ARE HANDLED BY OMMITED THE 'contatiner-sideBar' in HtmlNodeFilters by div.class
-            /* remove these
+            /* Many of the ul, and li tags contain dynamic attributes, aggressivley remove these
             * <ul class="ajax-zone m-0 t-zone" id="zone115228561_1">
-            * <ul data-menu-list="list-id-567363a7-9393-49e7-
-            * <li ... data-menu-item="list-id-fe284
+            * <ul data-menu-list="list-id-567363a7-9393-49e7-..." ...>
+            * <li ... data-menu-item="list-id-fe284..." ...>
             */
+            if (tagName.equals("ul")) {
+              if (tag.getAttribute("id") != null){
+                tag.removeAttribute("id");
+              }
+              if (tag.getAttribute("data-menu-list") != null) {
+                tag.removeAttribute("data-menu-list");
+              }
+            } else if (tagName.equals("li"))  {
+              if (tag.getAttribute("id") != null) {
+                tag.removeAttribute("id");
+              }
+              if (tag.getAttribute("data-menu-item") != null) {
+                tag.removeAttribute("data-menu-item");
+              }
+            }
             /* Remove the generated id's from all the h# tags
              * <h2 class="abstractTitle text-title my-1" id="d3038e2">Abstract</h2>
              * <h3 id="d4951423e445">a. Satellite data</h3>
              * <h4 id="d4951423e1002">On what scale does lightning enhancement occur?</h4>
             */
-            if (tagName.matches("h\\d") && (tag.getAttribute("id") != null)) {
+            else if (tagName.matches("h\\d") && (tag.getAttribute("id") != null)) {
               tag.removeAttribute("id");
             }
             /* remove these data-popover[-anchor] attributes that are dynamically generated from div and button tags
@@ -128,11 +145,35 @@ public class PubFactoryHtmlHashFilterFactory implements FilterFactory {
              * <button data-popover-anchor="0979a884-7df8-4d05-a54...
              */
             else if ("div".equals(tagName) || "button".equals(tagName)) {
-              if ((tag.getAttribute("data-popover-anchor") != null)) {
+              if (tag.getAttribute("data-popover-anchor") != null) {
                 tag.removeAttribute("data-popover-anchor");
-              } else if (tag.getAttribute("data-popover") != null) {
+              }
+              if (tag.getAttribute("data-popover") != null) {
                 tag.removeAttribute("data-popover");
               }
+              // the container-wrapper-NUMBERS is dynamic
+              // <div class="component component-content-item component-container container-body container-tabbed container-wrapper-43131">
+              if (tag.getAttribute("class") != null && tag.getAttribute("class").matches(".*container-wrapper-.*")) {
+                tag.removeAttribute("class");
+              }
+              // <div id="container-43131-item-43166" class="container-item">
+              if (tag.getAttribute("id") != null && tag.getAttribute("id").matches(".*container-.*")) {
+                tag.removeAttribute("id");
+              }
+            } else if ("nav".equals(tagName) && (tag.getAttribute("id") != null) && tag.getAttribute("id").matches(".*container-.*") ) {
+              //<nav data-container-tab-address="tab_body" id="container-nav-43131" class="container-tabs">
+              tag.removeAttribute("id");
+            } else if ("a".equals(tagName)) {
+              // <a data-tab-id="abstract-display" title="" href="#container-43131-item-43130" tabIndex="0" role="button" type="button" class=" c-Button c-Button--medium ">
+              // for hashing, lets not worry about all the possible patterns of the internal dynamic links, just ignore all the internal hrefs
+              if (tag.getAttribute("href").startsWith("#")) {
+                tag.removeAttribute("href");
+              }
+            /* } else if ("img".equals(tagName) && (tag.getAttribute("src") != null)) {
+              * // <img id="textarea_icon" class="t-error-icon t-invisible" alt="" src="/assets/b76ba41532fd3780cf2469d2455825eb6f606227/core/spacer.gif"/>
+              //  if (tag.getAttribute("src").matches(".assets.")) {
+              *   tag.removeAttribute("src");
+              *  } */
             }
           }
         });

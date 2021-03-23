@@ -414,6 +414,32 @@
   {
 
       title <
+        name = Kansas Library Association College and University Libraries Section Proceedings ;
+        eissn = 2160‐942X
+      >
+
+      plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+      implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+      comment[publisher] = New Prairie Press
+      param[base_url] = https://newprairiepress.org/
+      param[journal_abbr] = culsproceedings
+
+      au < manifest ; exists ; 2011; Kansas Library Association College and University Libraries Section Proceedings Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2012; Kansas Library Association College and University Libraries Section Proceedings Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2013; Kansas Library Association College and University Libraries Section Proceedings Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2014; Kansas Library Association College and University Libraries Section Proceedings Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2015; Kansas Library Association College and University Libraries Section Proceedings Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2016; Kansas Library Association College and University Libraries Section Proceedings Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2017; Kansas Library Association College and University Libraries Section Proceedings Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2018; Kansas Library Association College and University Libraries Section Proceedings Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2019; Kansas Library Association College and University Libraries Section Proceedings Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2020 ; Kansas Library Association College and University Libraries Section Proceedings Volume 10 ; 10 ; >
+
+  }
+
+  {
+
+      title <
         name = Neurospora Newsletter ;
         issn = 0028-3975
       >
