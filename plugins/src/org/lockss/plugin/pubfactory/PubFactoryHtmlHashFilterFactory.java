@@ -95,6 +95,9 @@ public class PubFactoryHtmlHashFilterFactory implements FilterFactory {
          * </ul> </div>
          */
         HtmlNodeFilters.tagWithAttribute("div", "id", "debug"),
+        // there are a number of input forms, comment boxes, etc to filter out
+        HtmlNodeFilters.tagWithAttributeRegex("form", "class", "annotationsForm"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "searchModule"),
     };
     
     return getFilteredInputStream(au, in, encoding,
@@ -150,23 +153,27 @@ public class PubFactoryHtmlHashFilterFactory implements FilterFactory {
               }
               // the container-wrapper-NUMBERS is dynamic
               // <div class="component component-content-item component-container container-body container-tabbed container-wrapper-43131">
-              if (tag.getAttribute("class") != null && tag.getAttribute("class").matches("container-wrapper-")) {
+              if (tag.getAttribute("class") != null && tag.getAttribute("class").matches(".*container-wrapper-.*")) {
                 tag.removeAttribute("class");
               }
               // <div id="container-43131-item-43166" class="container-item">
-              if (tag.getAttribute("id") != null)) {
+              if (tag.getAttribute("id") != null && tag.getAttribute("id").matches(".*container-.*")) {
                 tag.removeAttribute("id");
               }
-            } else if ("nav".equals(tagName)) {
+            } else if ("nav".equals(tagName) && (tag.getAttribute("id") != null) && tag.getAttribute("id").matches(".*container-.*") ) {
               //<nav data-container-tab-address="tab_body" id="container-nav-43131" class="container-tabs">
+              tag.removeAttribute("id");
             } else if ("a".equals(tagName)) {
               // <a data-tab-id="abstract-display" title="" href="#container-43131-item-43130" tabIndex="0" role="button" type="button" class=" c-Button c-Button--medium ">
               // for hashing, lets not worry about all the possible patterns of the internal dynamic links, just ignore all the internal hrefs
               if (tag.getAttribute("href").startsWith("#")) {
                 tag.removeAttribute("href");
               }
-            } else if ("img".equals(tagName) && (tag.getAttribute("src") != null)) {
-              // <img id="textarea_icon" class="t-error-icon t-invisible" alt="" src="/assets/b76ba41532fd3780cf2469d2455825eb6f606227/core/spacer.gif"/>
+            /* } else if ("img".equals(tagName) && (tag.getAttribute("src") != null)) {
+              * // <img id="textarea_icon" class="t-error-icon t-invisible" alt="" src="/assets/b76ba41532fd3780cf2469d2455825eb6f606227/core/spacer.gif"/>
+              //  if (tag.getAttribute("src").matches(".assets.")) {
+              *   tag.removeAttribute("src");
+              *  } */
             }
           }
         });
