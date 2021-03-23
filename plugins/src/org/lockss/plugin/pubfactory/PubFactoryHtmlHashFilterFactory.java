@@ -114,14 +114,14 @@ public class PubFactoryHtmlHashFilterFactory implements FilterFactory {
             * <ul data-menu-list="list-id-567363a7-9393-49e7-..." ...>
             * <li ... data-menu-item="list-id-fe284..." ...>
             */
-            if (tagName.equalsIgnoreCase("ul")) {
+            if (tagName.equals("ul")) {
               if (tag.getAttribute("id") != null){
                 tag.removeAttribute("id");
               }
               if (tag.getAttribute("data-menu-list") != null) {
                 tag.removeAttribute("data-menu-list");
               }
-            } else if (tagName.equalsIgnoreCase("li"))  {
+            } else if (tagName.equals("li"))  {
               if (tag.getAttribute("id") != null) {
                 tag.removeAttribute("id");
               }
@@ -141,13 +141,32 @@ public class PubFactoryHtmlHashFilterFactory implements FilterFactory {
              * <div data-popover-fullscreen="false" data-popover-placement="" data-popover-breakpoints="" data-popover="607a919f-a0fd-41c2-9100-deaaff9a0862" class="position-absolute display-none">
              * <button data-popover-anchor="0979a884-7df8-4d05-a54...
              */
-            else if ("div".equalsIgnoreCase(tagName) || "button".equalsIgnoreCase(tagName)) {
+            else if ("div".equals(tagName) || "button".equals(tagName)) {
               if (tag.getAttribute("data-popover-anchor") != null) {
                 tag.removeAttribute("data-popover-anchor");
               }
               if (tag.getAttribute("data-popover") != null) {
                 tag.removeAttribute("data-popover");
               }
+              // the container-wrapper-NUMBERS is dynamic
+              // <div class="component component-content-item component-container container-body container-tabbed container-wrapper-43131">
+              if (tag.getAttribute("class") != null && tag.getAttribute("class").matches("container-wrapper-")) {
+                tag.removeAttribute("class");
+              }
+              // <div id="container-43131-item-43166" class="container-item">
+              if (tag.getAttribute("id") != null)) {
+                tag.removeAttribute("id");
+              }
+            } else if ("nav".equals(tagName)) {
+              //<nav data-container-tab-address="tab_body" id="container-nav-43131" class="container-tabs">
+            } else if ("a".equals(tagName)) {
+              // <a data-tab-id="abstract-display" title="" href="#container-43131-item-43130" tabIndex="0" role="button" type="button" class=" c-Button c-Button--medium ">
+              // for hashing, lets not worry about all the possible patterns of the internal dynamic links, just ignore all the internal hrefs
+              if (tag.getAttribute("href").startsWith("#")) {
+                tag.removeAttribute("href");
+              }
+            } else if ("img".equals(tagName) && (tag.getAttribute("src") != null)) {
+              // <img id="textarea_icon" class="t-error-icon t-invisible" alt="" src="/assets/b76ba41532fd3780cf2469d2455825eb6f606227/core/spacer.gif"/>
             }
           }
         });
