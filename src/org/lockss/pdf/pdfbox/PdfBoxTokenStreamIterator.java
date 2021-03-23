@@ -55,7 +55,7 @@ public class PdfBoxTokenStreamIterator
 
   protected PDContentStream pdContentStream;
   
-  protected PDPage pdPage;
+  protected PDPage enclosingPdPage;
   
   protected PDFStreamParser pdfBoxParser;
   
@@ -67,32 +67,39 @@ public class PdfBoxTokenStreamIterator
   
   public PdfBoxTokenStreamIterator(PDPage pdPage)
       throws PdfException {
+    // See PDFBox 2.0.23 PDFStreamEngine processPage(PDPage)
     this((PDContentStream)pdPage, pdPage);
   }
   
-  public PdfBoxTokenStreamIterator(PDFormXObject pdFormXObject, PDPage enclosingPage)
+  public PdfBoxTokenStreamIterator(PDFormXObject pdFormXObject,
+                                   PDPage enclosingPage)
       throws PdfException {
     this((PDContentStream)pdFormXObject, enclosingPage);
   }
   
-  protected PdfBoxTokenStreamIterator(PDContentStream pdContentStream, PDPage enclosingPage)
+  protected PdfBoxTokenStreamIterator(PDContentStream pdContentStream,
+                                      PDPage enclosingPdPage)
       throws PdfException {
-    this.pdContentStream = pdContentStream;
     this.next = null;
+    this.pdContentStream = pdContentStream;
+    this.enclosingPdPage = enclosingPdPage;
     
-    // See PDFBox 2.0.22 PDFStreamEngine instance variable initialization
-    this.pdGraphicsStateStack = new LinkedList<>(); // because ArrayDeque prohibits null
+    // See PDFBox 2.0.23 PDFStreamEngine instance variable initialization
+    this.pdGraphicsStateStack = makeGraphicsStateStack();
     
-    initializePage(enclosingPage);
-    if (pdPage.hasContents()) {
-      try {
-        this.pdfBoxParser = new PDFStreamParser(pdContentStream);
-      }
-      catch (IOException ioe) {
-        throw new PdfException(ioe);
-      }
+    // See PDFBox 2.0.23 PDFStreamEngine initPage(PDPage)
+    initializePage();
+    if (this.enclosingPdPage.hasContents()) {
+      initializeStream();
     }
-    initializeStream(pdContentStream);
+
+    // See beginning of PDFBox 2.0.23 PDFStreamEngine processStreamOperators()
+    try {
+      this.pdfBoxParser = new PDFStreamParser(pdContentStream);
+    }
+    catch (IOException ioe) {
+      throw new PdfException(ioe);
+    }
   }
   
   @Override
@@ -113,14 +120,12 @@ public class PdfBoxTokenStreamIterator
 
   @Override
   public PdfBoxOperandsAndOperator next() {
-    if (hasNext()) {
-      PdfBoxOperandsAndOperator ret = next;
-      next = null;
-      return ret;
-    }
-    else {
+    if (!hasNext()) {
       throw new NoSuchElementException();
     }
+    PdfBoxOperandsAndOperator ret = next;
+    next = null;
+    return ret;
   }
 
   public PDResources getPdResources() {
@@ -132,21 +137,23 @@ public class PdfBoxTokenStreamIterator
     List<PdfBoxToken> retOperands = new ArrayList<>();
     Object pdfBoxObject;
     
-    // See PDFBox 2.0.22 PDFStreamEngine processStreamOperators()
+    // See PDFBox 2.0.23 PDFStreamEngine processStreamOperators()
     while ((pdfBoxObject = pdfBoxParser.parseNextToken()) != null) {
 
       if (pdfBoxObject instanceof Operator) {
         // ======== IS AN OPERATOR ========
         Operator pdfBoxOperator = (Operator)pdfBoxObject;
         boolean processOperands = true;
-        
+
+        // For which operators are important, see PDFBox 2.0.23 LegacyPDFStreamEngine constructor
+        // FIXME what about the extra glyph list from the aforementioned constructor?
         switch (pdfBoxOperator.getName()) {
         
           // -------- Tj and ' and " --------
           case OperatorName.SHOW_TEXT:
           case OperatorName.SHOW_TEXT_LINE:
           case OperatorName.SHOW_TEXT_LINE_AND_SPACE:
-            // See PDFBox 2.0.22 ShowText, ShowTextLine, ShowTextLineAndSpace
+            // See PDFBox 2.0.23 ShowText, ShowTextLine, ShowTextLineAndSpace
             for (Object pdfBoxOperand : pdfBoxOperands) {
               if (pdfBoxOperand instanceof COSString) {
                 retOperands.add(processString((COSString)pdfBoxOperand));
@@ -161,7 +168,7 @@ public class PdfBoxTokenStreamIterator
 
           // -------- TJ --------
           case OperatorName.SHOW_TEXT_ADJUSTED:
-            // See PDFBox 2.0.22 ShowTextAdjusted
+            // See PDFBox 2.0.23 ShowTextAdjusted
             for (Object pdfBoxOperand : pdfBoxOperands) {
               if (pdfBoxOperand instanceof COSArray) {
                 retOperands.add(processStrings((COSArray)pdfBoxOperand));
@@ -180,7 +187,7 @@ public class PdfBoxTokenStreamIterator
           
           // -------- Tf --------
           case OperatorName.SET_FONT_AND_SIZE:
-            // See PDFBox 2.0.22 SetFontAndSize
+            // See PDFBox 2.0.23 SetFontAndSize
             if (pdfBoxOperands.size() >= 2) {
               COSBase operand0 = pdfBoxOperands.get(0);
               if (operand0 instanceof COSName) {
@@ -199,7 +206,7 @@ public class PdfBoxTokenStreamIterator
             
           // -------- q --------
           case OperatorName.SAVE:
-            // See PDFBox 2.0.22 Save
+            // See PDFBox 2.0.23 Save
             pdGraphicsStateStack.addFirst(pdGraphicsStateStack.peekFirst());
             break;
             
@@ -216,14 +223,14 @@ public class PdfBoxTokenStreamIterator
 
           // -------- gs --------
           case OperatorName.SET_GRAPHICS_STATE_PARAMS:
-            // See PDFBox 2.0.22 SetGraphicsStateParameters
+            // See PDFBox 2.0.23 SetGraphicsStateParameters
             if (pdfBoxOperands.size() >= 1) {
               COSBase operand0 = pdfBoxOperands.get(0);
               if (operand0 instanceof COSName) {
                 COSName graphicsName = (COSName)operand0;
                 PDExtendedGraphicsState pdExtendedGraphicsState = pdResources.getExtGState(graphicsName);
                 if (pdExtendedGraphicsState != null) {
-                  // See PDFBox 2.0.22 PDExtendedGraphicsState copyIntoGraphicsState() and getFontSetting()
+                  // See PDFBox 2.0.23 PDExtendedGraphicsState copyIntoGraphicsState() and getFontSetting()
                   COSDictionary cosDictionary = pdExtendedGraphicsState.getCOSObject();
                   if (cosDictionary != null) {
                     COSBase cosBase = cosDictionary.getDictionaryObject(COSName.FONT);
@@ -293,10 +300,10 @@ public class PdfBoxTokenStreamIterator
     StringBuilder sb = new StringBuilder();
     while (bais.available() > 0) {
       int code = font.readCode(bais);
-      // See PDFBox 2.0.22 PDFStreamEngine showGlyph(4)
+      // See PDFBox 2.0.23 PDFStreamEngine showGlyph(4)
       String unicode = font.toUnicode(code);
       if (font instanceof PDType3Font) {
-        // See PDFBox 2.0.22 PDFStreamEngine showType3Glyph(5)
+        // See PDFBox 2.0.23 PDFStreamEngine showType3Glyph(5)
         PDType3Font pdType3Font = (PDType3Font)font;
         PDType3CharProc charProc = pdType3Font.getCharProc(code);
         if (charProc != null) {
@@ -305,7 +312,7 @@ public class PdfBoxTokenStreamIterator
         }
       }
       else {
-        // See PDFBox 2.0.22 PDFStreamEngine showFontGlyph(4)
+        // See PDFBox 2.0.23 PDFStreamEngine showFontGlyph(4)
         sb.append(unicode);
       }
     }
@@ -313,7 +320,7 @@ public class PdfBoxTokenStreamIterator
   }
   
   protected PdfBoxToken processStrings(COSArray cosArray) throws IOException {
-    // See PDFBox 2.0.22 PDFStreamEngine lines 683-762
+    // See PDFBox 2.0.23 PDFStreamEngine lines 683-762
     List<PdfToken> tokens = new ArrayList<>(cosArray.size());
     for (COSBase cosBase : cosArray) {
       if (cosBase instanceof COSString) {
@@ -328,13 +335,11 @@ public class PdfBoxTokenStreamIterator
 
   /**
    * 
-   * @param pdPage
    * @since 1.76
    * @see PDFStreamEngine#initPage(PDPage)
    */
-  protected void initializePage(PDPage pdPage) {
-    // See PDFBox 2.0.22 PDFStreamEngine initPage()
-    this.pdPage = pdPage;
+  protected void initializePage() {
+    // See PDFBox 2.0.23 PDFStreamEngine initPage()
     this.pdGraphicsStateStack.clear(); // probably moot
     this.pdGraphicsStateStack.addFirst(null);
     this.pdResources = null;
@@ -342,18 +347,26 @@ public class PdfBoxTokenStreamIterator
 
   /**
    * 
-   * @param pdContentStream
    * @since 1.76
    * @see PDFStreamEngine#processStream(PDContentStream)
    */
-  protected void initializeStream(PDContentStream pdContentStream) {
-    // See PDFBox 2.0.22 PDFStreamEngine processStream()
+  protected void initializeStream() {
+    // See PDFBox 2.0.23 PDFStreamEngine processStream()
     PDResources oldResources = pushResources(pdContentStream);
-    Deque<PDFont> oldStack = saveStack();
+    Deque<PDFont> oldStack = saveGraphicsStateStack();
     
-    // FIXME: these should happen when a stream is exhausted
-//    pdGraphicsStateStack = oldStack; // See PDFBox 2.0.22 PDFStreamEngine restore()
-//    pdResources = oldResources; // See PDFBox 2.0.22 PDFStreamEngine popResources()
+    // FIXME: these should happen when a stream is exhausted?
+//    pdGraphicsStateStack = oldStack; // See PDFBox 2.0.23 PDFStreamEngine restore()
+//    pdResources = oldResources; // See PDFBox 2.0.23 PDFStreamEngine popResources()
+  }
+
+  /**
+   * 
+   * @return
+   * @since 1.76
+   */
+  protected Deque<PDFont> makeGraphicsStateStack() {
+    return new LinkedList<>(); // because ArrayDeque prohibits null
   }
   
   /**
@@ -361,14 +374,14 @@ public class PdfBoxTokenStreamIterator
    * @see PDFStreamEngine#pushResources(PDContentStream)
    */
   protected PDResources pushResources(PDContentStream pdContentStream) {
-    // See PDFBox 2.0.22 PDFStreamEngine pushResources()
+    // See PDFBox 2.0.23 PDFStreamEngine pushResources()
     PDResources ret = pdResources;
     PDResources streamResources = pdContentStream.getResources();
     if (streamResources != null) {
       pdResources = streamResources;
     }
     else if (pdResources == null) {
-      pdResources = pdPage.getResources();
+      pdResources = enclosingPdPage.getResources();
     }
     if (pdResources == null) {
       pdResources = new PDResources();
@@ -382,9 +395,9 @@ public class PdfBoxTokenStreamIterator
    * @since 1.76
    * @see PDFStreamEngine#restoreGraphicsStack(Deque<PDGraphicsState>)
    */
-  protected Deque<PDFont> saveStack() {
+  protected Deque<PDFont> saveGraphicsStateStack() {
     Deque<PDFont> ret = pdGraphicsStateStack;
-    pdGraphicsStateStack = new LinkedList<>();
+    pdGraphicsStateStack = makeGraphicsStateStack();
     pdGraphicsStateStack.addFirst(ret.getFirst());
     return ret;
   }

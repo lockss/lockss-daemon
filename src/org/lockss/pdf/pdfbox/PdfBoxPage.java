@@ -37,7 +37,7 @@ import java.io.*;
 import java.util.*;
 
 import org.apache.commons.collections4.iterators.*;
-import org.apache.pdfbox.cos.COSName;
+import org.apache.pdfbox.cos.*;
 import org.apache.pdfbox.pdmodel.*;
 import org.apache.pdfbox.pdmodel.graphics.PDXObject;
 import org.apache.pdfbox.pdmodel.graphics.form.PDFormXObject;
@@ -117,14 +117,12 @@ public class PdfBoxPage implements PdfPage {
      * PDAnnotation factory call in getAnnotations() (see PDFBox 1.8.16
      * PDAnnotation createAnnotation(), PDPage getAnnotations()).
      */
-    List<PDAnnotation> annots = null;
-    try {
-      annots = pdPage.getAnnotations();
+    COSDictionary pageDictionary = pdPage.getCOSObject();
+    COSArray annots = (COSArray)pageDictionary.getDictionaryObject(COSName.ANNOTS);
+    if (annots == null) {
+      return new ArrayList<PdfBoxToken>();
     }
-    catch (IOException ioe) {
-      throw new PdfException("Error retrieving annotations", ioe);
-    }
-    List<PdfToken> ret = new ArrayList<>(annots.size());
+    List<PdfBoxToken> ret = new ArrayList<>(annots.size());
     for (int i = 0 ; i < annots.size() ; ++i) {
       ret.add(PdfBoxToken.convertOne(annots.getObject(i)));
     }
@@ -190,15 +188,6 @@ public class PdfBoxPage implements PdfPage {
     }
   }
   
-<<<<<<< HEAD
-=======
-  @Override
-  public void setAnnotations(List<PdfToken> annotations) {
-    // FIXME Possibly incorrect, based on the 1.76.0-era bug fix in getAnnotations()
-    pdPage.getCOSDictionary().setItem(COSName.ANNOTS, (COSArray)Arr.of(annotations).toPdfBoxObject());
-  }
-
->>>>>>> cd1cfab581 (Bug fix: the annotation dictionaries contained in the PDPage's 'Annots')
   /**
    * @since 1.76
    */
@@ -252,7 +241,7 @@ public class PdfBoxPage implements PdfPage {
   public List<PdfBoxTokenStream> getTokenStreamList() throws PdfException {
     return (List<PdfBoxTokenStream>)PdfPage.super.getTokenStreamList();
   }
-  
+
   @Override
   public void setAnnotations(List<PdfToken> annotations) throws PdfException {
     List<PDAnnotation> result = null;
