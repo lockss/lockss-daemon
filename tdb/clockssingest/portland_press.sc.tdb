@@ -580,9 +580,6 @@
 
     param[journal_id] = bioscirep
     #param[base_url] = http://www.bioscirep.org/
-    # HW Manifest pages have different format. See http://jira.lockss.org/browse/PD-1560
-    # HW Manifest page (unusual) at http://www.bioscirep.org/clockss-manifest/ppbioscirep_2015.html 
-    # HW Manifest page (usual) at http://www.bioscirep.org/lockss-manifest/vol_37_manifest.html
 
     au < doNotProcess ; exists ; 1981 ; 1981 ; Bioscience Reports Volume 1 ; 1 ; >
     au < doNotProcess ; exists ; 1982 ; 1982 ; Bioscience Reports Volume 2 ; 2 ; >
