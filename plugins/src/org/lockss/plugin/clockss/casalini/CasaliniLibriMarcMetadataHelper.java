@@ -190,7 +190,7 @@ public class CasaliniLibriMarcMetadataHelper implements FileMetadataExtractor {
 
           String publisherCleanName = cleanupKey(MARC_publisher);
 
-          String publisherShortCut = matchiPublishNamer(publisherCleanName.toLowerCase());
+          String publisherShortCut = matchPublisherName(publisherCleanName.toLowerCase());
 
           if (publisherShortCut == null) {
             log.debug3(String.format("publisherShortCut is null: MARC_publisher: %s | publisherCleanName: %s",

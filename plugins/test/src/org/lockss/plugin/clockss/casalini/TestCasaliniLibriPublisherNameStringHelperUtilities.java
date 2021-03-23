@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import static org.lockss.plugin.clockss.casalini.CasaliniLibriPublisherNameStringHelperUtilities.*;
 
-import static org.lockss.plugin.clockss.casalini.CasaliniLibriPublisherNameStringHelperUtilities.matchiPublishNamer;
+import static org.lockss.plugin.clockss.casalini.CasaliniLibriPublisherNameStringHelperUtilities.matchPublisherName;
 
 public class TestCasaliniLibriPublisherNameStringHelperUtilities extends LockssTestCase {
 
@@ -247,7 +247,7 @@ public class TestCasaliniLibriPublisherNameStringHelperUtilities extends LockssT
         for(String originalStr : testGoodKey) {
 
             String cleanStr = cleanupKey(originalStr);
-            String publisherShortCut = matchiPublishNamer(cleanStr);
+            String publisherShortCut = matchPublisherName(cleanStr);
 
             //log.info("########Good originalStr = " + originalStr + ", cleanStr = " + cleanStr + ", publisherShortCut = " + publisherShortCut);
             assertNotNull(publisherShortCut);
@@ -264,7 +264,7 @@ public class TestCasaliniLibriPublisherNameStringHelperUtilities extends LockssT
         for(String originalStr : testNullKey) {
 
             String cleanStr = CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey(originalStr);
-            String publisherShortCut = matchiPublishNamer(cleanStr);
+            String publisherShortCut = matchPublisherName(cleanStr);
 
             //log.info("########BAD originalStr = " + originalStr + ", cleanStr = " + cleanStr + ", publisherShortCut = " + publisherShortCut);
 
