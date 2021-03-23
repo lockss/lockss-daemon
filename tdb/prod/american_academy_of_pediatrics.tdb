@@ -60,7 +60,7 @@
       au < aap.AAPDrupalPlugin ; released ; 2018 ; AAP Grand Rounds Volume 40 ; 40 ; https://aapgrandrounds.aappublications.org/ >
       au < aap.AAPDrupalPlugin ; released ; 2019 ; AAP Grand Rounds Volume 41 ; 41 ; https://aapgrandrounds.aappublications.org/ >
       au < aap.AAPDrupalPlugin ; notReady ; 2019 ; AAP Grand Rounds Volume 42 ; 42 ; https://aapgrandrounds.aappublications.org/ > # Probe url: https://aapgrand.smart01.highwire.org/content/42/3/35 outside of crawl spec
-      au < aap.AAPDrupalPlugin ; ready ; 2020 ; AAP Grand Rounds Volume 43 ; 43 ; https://aapgrandrounds.aappublications.org/ > 
+      au < aap.AAPDrupalPlugin ; releasing ; 2020 ; AAP Grand Rounds Volume 43 ; 43 ; https://aapgrandrounds.aappublications.org/ > 
       au < aap.AAPDrupalPlugin ; manifest ; 2020 ; AAP Grand Rounds Volume 44 ; 44 ; https://aapgrandrounds.aappublications.org/ > 
 
     }
