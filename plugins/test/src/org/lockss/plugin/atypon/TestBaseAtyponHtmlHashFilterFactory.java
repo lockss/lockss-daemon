@@ -330,8 +330,34 @@ public class TestBaseAtyponHtmlHashFilterFactory extends LockssTestCase {
         "</div>World" ;
   private static final String withoutRelatedContent = 
         "HelloWorld" ;
-    
-  
+
+
+  protected static final String protectedEmailSpan =
+        "<a href=\"dgern@thoracic.org\">" +
+        "<span class=\"__cf_email__\" data-cfemail=\"34505351465a74405c5b4655575d571a5b4653\">[email&nbsp;protected] </span>" +
+        "</a>";
+
+  protected static final String filteredProtectedEmailSpan =
+        "<a href=\"dgern@thoracic.org\">" +
+        "</a>";
+
+  protected static final String protectedEmailASpan =
+      "<div class=\"NLM_corresp\">" +
+      "Correspondence and requests for reprints should be addressed to Peter Classi, M.Sc., M.B.A., " +
+      "United Therapeutics Corporation, 55 TW Alexander Drive, Research Triangle Park, NC 27709. E-mail: " +
+      "<a class=\"email\" href=\"/cdn-cgi/l/email-protection#1060737c7163637950657e79647875623e737f7d\">" +
+      "<span class=\"__cf_email__\" data-cfemail=\"3c4c5f505d4f4f557c4952554854594e125f5351\">[email&nbsp;protected]</span>" +
+      "</a>." +
+      "</div>";
+
+  protected static final String filteredProtectedEmailASpan =
+      "<div class=\"NLM_corresp\">" +
+      "Correspondence and requests for reprints should be addressed to Peter Classi, M.Sc., M.B.A., " +
+      "United Therapeutics Corporation, 55 TW Alexander Drive, Research Triangle Park, NC 27709. E-mail: " +
+      "." +
+      "</div>";
+
+
   /*
    *  Compare Html and HtmlHashFiltered
    */
@@ -401,7 +427,18 @@ public class TestBaseAtyponHtmlHashFilterFactory extends LockssTestCase {
         new StringInputStream(withAccessIcon), Constants.DEFAULT_ENCODING);
     assertEquals(withoutAccessIcon, StringUtil.fromInputStream(actIn));
   }
-  
+
+  public void testProtectedEmail() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(protectedEmailSpan), Constants.DEFAULT_ENCODING);
+    assertEquals(filteredProtectedEmailSpan, StringUtil.fromInputStream(actIn));
+  }
+
+  public void testProtectedEmail2() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(protectedEmailASpan), Constants.DEFAULT_ENCODING);
+    assertEquals(filteredProtectedEmailASpan, StringUtil.fromInputStream(actIn));
+  }
   public void test_pdfPlusSize() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
         new StringInputStream(pdfPlusSize),

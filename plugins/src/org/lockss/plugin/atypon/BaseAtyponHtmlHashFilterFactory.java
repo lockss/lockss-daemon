@@ -166,7 +166,7 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
     //  showPopup&citid=citart1 for when the email address is not available?
     HtmlNodeFilters.tagWithAttributeRegex("a", "href", "email-protection"),
     // sometimes the a tag has the appropriate email address, yet the inner span has the protected hash
-    HtmlNodeFilters.tagWithAttributeRegex("span", "class=", "cf_email"),
+    HtmlNodeFilters.tagWithAttributeRegex("span", "class", "cf_email"),
 
     // A number of children add a link item "Cited By" only after the article
     // has been cited...remove the entire list item - look for text pattern
