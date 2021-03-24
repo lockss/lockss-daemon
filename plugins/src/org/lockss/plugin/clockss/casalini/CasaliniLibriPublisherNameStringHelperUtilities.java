@@ -225,6 +225,7 @@ public class CasaliniLibriPublisherNameStringHelperUtilities {
       canonical.put("quasar", "Edizioni Quasar");
       canonical.put("quasar associazione giovanni secco suardo", "Edizioni Quasar");
       canonical.put("quasar longo scripta manent di tipogr. mancini", "Edizioni Quasar");
+      canonical.put("regione emilia-romagna", "CLUEB");
       canonical.put("regione emilia-romagna clueb", "CLUEB");
       canonical.put("reus", "Editorial Reus");
       canonical.put("rosenberg & seller", "Rosenberg & Sellier"); //sic
