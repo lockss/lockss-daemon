@@ -179,10 +179,20 @@ public class CasaliniLibriMarcMetadataHelper implements FileMetadataExtractor {
 
         // Set publisher name
         if (MARC_publisher == null) {
-          am.put(MetadataField.FIELD_PUBLISHER, PUBLISHER_NAME);
+
+          publisherCleanName = cleanupPublisherName(PUBLISHER_NAME);
+          canonicalPublisherName = getCanonicalPublisherName(publisherCleanName);
+          am.put(MetadataField.FIELD_PUBLISHER, canonicalPublisherName);
+
+          log.debug(String.format("Casalini-Metadata: MARC_publisher is null, set it to: %s", canonicalPublisherName));
         } else {
           // Step 1: get the cleaned publisher name
           publisherCleanName = cleanupPublisherName(MARC_publisher);
+
+
+          log.debug(String.format("Casalini-Metadata:  getMARC_publisher %s | publisherCleanName: %s", MARC_publisher, publisherCleanName));
+
+
           canonicalPublisherName = getCanonicalPublisherName(publisherCleanName);
 
           log.debug(String.format("Casalini-Metadata:  MARC_publisher %s | publisherCleanName: %s | " +
@@ -196,6 +206,8 @@ public class CasaliniLibriMarcMetadataHelper implements FileMetadataExtractor {
         }
 
         if (is_year_2016) {
+
+          //   book should have both
 
           MARC_bookid = getMARCData(record, "092", 'a');
           MARC_097a = getMARCData(record, "097", 'a');
@@ -222,7 +234,7 @@ public class CasaliniLibriMarcMetadataHelper implements FileMetadataExtractor {
           // Handle 2016 PDF goes here
           String MARC_pdf_2016 = String.format("%s/%s/%s/%s", COLLECTION_NAME, publisherShortCut, MARC_bookid, MARC_bookid);
 
-          log.debug("Casalini-Metadata: 2016 MARC_pdf: " + MARC_pdf);
+          log.debug("Casalini-Metadata: 2016 MARC_pdf control field id: " + MARC_pdf);
 
           if (MARC_pdf_2016 != null) {
             String fullPathFile_2016 = UrlUtil.minimallyEncodeUrl(cuBase + MARC_pdf_2016 + ".pdf");
@@ -265,7 +277,7 @@ public class CasaliniLibriMarcMetadataHelper implements FileMetadataExtractor {
         }
 
         // Emit 2016 metadata based on book_id info
-        if (is_year_2016 && MARC_bookid != null && !bookIDs.contains(MARC_bookid)) {
+        if (is_year_2016 && MARC_097a == null && !bookIDs.contains(MARC_bookid)) {
           bookIDs.add(MARC_bookid);
           emitter.emitMetadata(cu, am);
         }

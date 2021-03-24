@@ -75,6 +75,7 @@ public class CasaliniLibriPublisherNameStringHelperUtilities {
       canonical.put("bononia university press", "Bononia University Press");
       canonical.put("cadmo", "Cadmo");
       canonical.put("cadmo centro mario rossi per gli studi filosofici", "Cadmo");
+      canonical.put("casalini", "Casalini Libri");
       canonical.put("casalini libri", "Casalini Libri");
       canonical.put("celid", "Celid");
       canonical.put("centro per la filosofia italiana cadmo", "Cadmo");
