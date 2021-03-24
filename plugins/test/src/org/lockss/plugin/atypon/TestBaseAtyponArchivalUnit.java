@@ -66,7 +66,7 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
   static final String baseRepairList[] = 
     {
     "://[^/]+/(templates/jsp|(css|img|js)Jawr|fonts|pb-assets|releasedAssets|resources|sda|wro|products/photo-theme)/",
-    "/(media|assets|css|img|js|wro)/.+\\.(css|gif|jpe?g|js|png)(_v[0-9]+)?$",
+    "/(assets|css|img|js|wro)/.+\\.(css|gif|jpe?g|js|png)(_v[0-9]+)?$",
     "://[^/]+/na[0-9]+/home/(readonly|literatum)/publisher/.*(cover\\.jpg|/covergifs/.*\\.jpg|\\.fp\\.png(_v[0-9]+)?)$",
     "://[^/]+/na[0-9]+/home/(readonly|literatum)/publisher/.*/images/.*\\.(gif|jpe?g|png)$",
     };
@@ -511,7 +511,7 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
           .0001);
     }
     // This pattern is still weighted even though it is replicated
-    //assertEquals(1.0, urlPollResults.getMatch(na101String, (float) 1), .0001);    // comment out for now
+    assertEquals(1.0, urlPollResults.getMatch(na101String, (float) 1), .0001);    // comment out for now
   }
   
   public void testPollSpecialBooks() throws Exception {
