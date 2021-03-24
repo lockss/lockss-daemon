@@ -352,7 +352,7 @@ public class CasaliniLibriPublisherNameStringHelperUtilities {
     canonical.put("clueb icm istituto per gli incontriculturali mitteleuropei", "CLUEB");
     canonical.put("clueb regione emilia-romagna", "CLUEB");
     canonical.put("comares", "Editorial Comares");
-    canonical.put("comune di falconara marittima", "comune di falconara marittima"); //FIXME
+    canonical.put("comune di falconara marittima", "Metauro");
     canonical.put("cpl editions", "CPL - Centro Primo Levi");
     canonical.put("di che cibo 6", "Di che cibo 6?");
     canonical.put("diderotiana editrice", "Diderotiana Editrice");
@@ -367,7 +367,7 @@ public class CasaliniLibriPublisherNameStringHelperUtilities {
     canonical.put("editrice bibliografica", "Editrice Bibliografica");
     canonical.put("edizione di storia e letteratura", "Storia e Letteratura");
     canonical.put("edizioni clichy", "Edizioni Clichy");
-    canonical.put("edizioni del galluzzo per la fondazione ezio franceschini", "edizioni del galluzzo per la fondazione ezio franceschini"); //FIXME
+    canonical.put("edizioni del galluzzo per la fondazione ezio franceschini", "SISMEL - Edizioni del Galluzzo");
     canonical.put("edizioni dell'ateneo", "Edizioni dell'Ateneo");
     canonical.put("edizioni di storia e letteratura", "Storia e Letteratura");
     canonical.put("edizioni di storia e letteratura centro tedesco di studi veneziani", "Storia e Letteratura");
@@ -380,7 +380,7 @@ public class CasaliniLibriPublisherNameStringHelperUtilities {
     canonical.put("egea", "EGEA");
     canonical.put("egea universita bocconi", "EGEA");
     canonical.put("ets", "ETS");
-    canonical.put("eum", "eum"); //FIXME
+    canonical.put("eum", "CLUEB");
     canonical.put("eunsa", "EUNSA - Ediciones Universidad de Navarra");
     canonical.put("eurilink", "Eurilink University Press");
     canonical.put("eurilink university press", "Eurilink University Press");
@@ -424,7 +424,7 @@ public class CasaliniLibriPublisherNameStringHelperUtilities {
     canonical.put("la ergástula", "La Ergástula");
     canonical.put("l'asino d'oro", "L'asino d'oro edizioni");
     canonical.put("l'asino d'oro edizioni", "L'asino d'oro edizioni");
-    canonical.put("latium", "latium"); //FIXME
+    canonical.put("latium", "Edizioni Quasar");
     canonical.put("la vita felice", "La Vita Felice");
     canonical.put("ledizioni", "Ledizioni");
     canonical.put("ledizioni ledipublishing", "Ledizioni");
@@ -449,24 +449,25 @@ public class CasaliniLibriPublisherNameStringHelperUtilities {
     canonical.put("matauro", "Metauro"); //sic
     canonical.put("metauro", "Metauro");
     canonical.put("mimesis", "Mimesis Edizioni");
-    canonical.put("ministero per i beni e le attivita culturali direzione generale per gli archivi", "ministero per i beni e le attivita culturali direzione generale per gli archivi"); //FIXME
-    canonical.put("ministero per i beni e le attività culturali direzione generale per gli archivi", "ministero per i beni e le attività culturali direzione generale per gli archivi"); //FIXME
+    canonical.put("ministero per i beni e le attivita culturali direzione generale per gli archivi", "CLUEB");
+    canonical.put("ministero per i beni e le attività culturali direzione generale per gli archivi", "CLUEB");
     canonical.put("morcelliana", "Morcelliana");
     canonical.put("morlacchi", "Morlacchi Editore");
     canonical.put("nardini", "Nardini editore");
     canonical.put("new digital frontiers", "New Digital Frontiers");
-    canonical.put("new digital press", "new digital press"); //FIXME
+    canonical.put("new digital press", "New Digital Frontiers"); //sic
     canonical.put("nicomp", "Nicomp");
     canonical.put("officina libraria", "Officina Libraria");
     canonical.put("orthotes", "Orthotes Editrice");
     canonical.put("paolo loffredo", "Loffredo");
     canonical.put("paolo loffredo iniziative editoriali", "Loffredo");
-    canonical.put("partagees", "partagees"); //FIXME
+    canonical.put("partagees", "Giannini Editore");
+    canonical.put("partagées", "Giannini Editore");
     canonical.put("passigli", "Passigli");
     canonical.put("patron", "Pàtron Editore");
     canonical.put("pàtron", "Pàtron Editore");
     canonical.put("pendragon", "Edizioni Pendragon");
-    canonical.put("pesaro", "pesaro"); //FIXME
+    canonical.put("pesaro", "Metauro");
     canonical.put("petite plaisance clueb", "CLUEB");
     canonical.put("plaza y valdes", "Plaza y Valdés Editores");
     canonical.put("plaza y valdés", "Plaza y Valdés Editores");
@@ -491,7 +492,7 @@ public class CasaliniLibriPublisherNameStringHelperUtilities {
     canonical.put("settenove", "Settenove edizioni");
     canonical.put("sillabe", "Sillabe");
     canonical.put("sismel edizioni del galluzzo", "SISMEL - Edizioni del Galluzzo");
-    canonical.put("s.n.", "s.n."); //FIXME
+    canonical.put("s.n.", "CLUEB"); // Not universal, but all s.n. in 2016 and 2020 happen to be CLUEB
     canonical.put("sovera edizioni", "Sovera Edizioni");
     canonical.put("stilo", "Stilo Editrice");
     canonical.put("stilo editrice", "Stilo Editrice");
@@ -511,7 +512,7 @@ public class CasaliniLibriPublisherNameStringHelperUtilities {
     canonical.put("università degli studi di macerata", "Istituti Editoriali e Poligrafici Internazionali");
     canonical.put("universita la sapienza", "CLUEB");
     canonical.put("università la sapienza", "CLUEB");
-    canonical.put("uranoscopo", "uranoscopo"); //FIXME
+    canonical.put("uranoscopo", "CLUEB");
     canonical.put("urbaniana university press", "Urbaniana University Press");
     canonical.put("visor libros", "Visor Libros");
     canonical.put("vita e pensiero", "Vita e Pensiero");
