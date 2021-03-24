@@ -59,8 +59,8 @@ public class TestPubFactoryHtmlHashFilterFactory extends LockssTestCase {
     InputStream actIn; 
     actIn = fact.createFilteredInputStream(au, 
         new StringInputStream(nameToHash), Constants.DEFAULT_ENCODING);
-
-      assertEquals(expectedStr, StringUtil.fromInputStream(actIn));
+    String filtered = StringUtil.fromInputStream(actIn);
+    assertEquals(expectedStr, filtered);
 
   }
   
@@ -74,22 +74,22 @@ public class TestPubFactoryHtmlHashFilterFactory extends LockssTestCase {
 
   private static final String blockFiltered =
     "<div class=\"content-box\"><div class=\"mainBase\" id=\"mainContent\">" +
-    "  <div id=\"readPanel\">" +
-    "    <a class=\"summary-toggle ico-summary js-summary-toggle phoneOnly\" ><span>Show Summary Details</span></a>" +
-    "  </div>" +
+     " <div id=\"readPanel\">" +
+       " <a class=\"summary-toggle ico-summary js-summary-toggle phoneOnly\" ><span>Show Summary Details</span></a>" +
+     " </div>" +
     "</div></div>";
 
   private static final String ulDataMenu =
     "<ul data-menu-list=\"list-id-5c36bde5-1620-44f8-bd4e-88e4da63b50f\" role=\"listbox\" class=\"List\">";
 
   private static final String filteredUlDataMenu =
-    "<ul  role=\"listbox\" class=\"List\">";
+    "<ul role=\"listbox\" class=\"List\">";
 
   private static final String liDataMenu =
     "<li aria-selected=\"false\" role=\"option\" data-menu-item=\"list-id-69f0550e-0a86-4387-a582-7feb7a5203b6\" class=\"ListItem\">";
 
   private static final String filteredLiDataMenu =
-      "<li aria-selected=\"false\" role=\"option\"  class=\"ListItem\">";
+    "<li aria-selected=\"false\" role=\"option\" class=\"ListItem\">";
 
   private static final String hTags =
     "<h2 class=\"abstractTitle text-title my-1\" id=\"d3038e2\">Abstract</h2>" +
@@ -123,7 +123,7 @@ public class TestPubFactoryHtmlHashFilterFactory extends LockssTestCase {
     "<div data-popover-fullscreen=\"false\" data-popover-placement=\"\" data-popover-breakpoints=\"\" data-popover=\"607a919f-a0fd-41c2-9100-deaaff9a0862\" class=\"position-absolute display-none\"></div>";
 
   protected static final String filteredDivDP =
-    "<div data-popover-fullscreen=\"false\" data-popover-placement=\"\" data-popover-breakpoints=\"\"  class=\"position-absolute display-none\"></div>";
+    "<div data-popover-fullscreen=\"false\" data-popover-placement=\"\" data-popover-breakpoints=\"\" class=\"position-absolute display-none\"></div>";
 
   protected static final String buttonDPA =
     "<button data-popover-anchor=\"0979a884-7df8-4d05-a54\"><span>ClickME!</span></button>";
@@ -145,25 +145,25 @@ public class TestPubFactoryHtmlHashFilterFactory extends LockssTestCase {
     "<div id=\"container-43131-item-43166\" class=\"container-item\"></div>";
 
   protected static final String filteredDivIDContainer =
-    "<div  class=\"container-item\"></div>";
+    "<div class=\"container-item\"></div>";
 
   protected static final String navIDcontainer =
     "<nav data-container-tab-address=\"tab_body\" id=\"container-nav-43131\" class=\"container-tabs\"></nav>";
 
   protected static final String filteredNavIDcontainer =
-    "<nav data-container-tab-address=\"tab_body\"  class=\"container-tabs\"></nav>";
+    "<nav data-container-tab-address=\"tab_body\" class=\"container-tabs\"></nav>";
 
   protected static final String aHrefContainer =
     "<a data-tab-id=\"abstract-display\" title=\"\" href=\"#container-43131-item-43130\" tabIndex=\"0\" role=\"button\" type=\"button\" class=\" c-Button c-Button--medium \"></a>";
 
   protected static final String filteredAHrefContainer =
-    "<a data-tab-id=\"abstract-display\" title=\"\"  tabIndex=\"0\" role=\"button\" type=\"button\" class=\" c-Button c-Button--medium \"></a>";
+    "<a data-tab-id=\"abstract-display\" title=\"\" tabIndex=\"0\" role=\"button\" type=\"button\" class=\" c-Button c-Button--medium \"></a>";
 
   protected static final String imgSrcHash =
     "<img id=\"textarea_icon\" class=\"t-error-icon t-invisible\" alt=\"\" src=\"/assets/b76ba41532fd3780cf2469d2455825eb6f606227/core/spacer.gif\"/>";
 
   protected static final String filteredImgSrcHash =
-    "<img id=\"textarea_icon\" class=\"t-error-icon t-invisible\" alt=\"\" />";
+    "<img id=\"textarea_icon\" class=\"t-error-icon t-invisible\" alt=\"\"/>";
 
   protected static final String manyForms = 
     "<div class=\"shell\">" +
@@ -220,37 +220,35 @@ public class TestPubFactoryHtmlHashFilterFactory extends LockssTestCase {
     "</div>";
 
   protected static final String filteredManyForms =
-      "<div class=\"shell\">" +
-      "  <div class=\"t-zone\" id=\"viewAnnotationZone\">" +
-      "  </div>" +
-      "  " + // form 1
-      "  " + // form 2
-      "  " + // form 3
-      "</div>";
+    "<div class=\"shell\">" +
+     " <div class=\"t-zone\" id=\"viewAnnotationZone\">" +
+     " </div>" +
+    " </div>";
 
   private static final String searchBox =
-      "<div class=\"module searchModule search-within s-m-0\">" +
-      "  <form class=\"search-form single-query-form doc-search-form c-FormControl c-FormControl--dense c-FormControl--fullWidth\" data-component-formcontrol=\"quickSearchTextfield\" onsubmit=\"javascript:return Tapestry.waitForPage(event);\" action=\"/configurable/contentpage.configurablecontentpagebody.searchwithinform.form?t:ac=journals$002fatsc$002f5$002f4$002fatsc.5.issue-4.xml&amp;t:state:client=H4sIAAAAAAAAAIWTsW/TQBTGLy2BVkGURERlQWJgdiYkEBM0jbBqQqREDGzP9otzcL4zd89OsiBY6MDAAhsDA2P/FUYGNgQzTEhInbhzgCSDU0s+3dk/vffde+87+cHq03OMsX2j2ZHSiQcZRBP0CDI0pOc3PS4JtQThGdQFj9B4B4KjpAFqww3ZXY+jiIekNCTop5m4cYTzL7/231z4fnq8xbYD1ohUmilpUT8m1gqeQAEdATLpDElzmdwJ2O7YBelDis/Yc1YL2E5mo/0/zzJityMlxzzJNYQC7d6ldlCo4rlXKJGnyI3J0aD9bdX8/UYqItawIJdAOHKnq6uROgeLUAMbyhah6cR5Tpx3TymBID9d1y8+vz/9ucVqj1m9AJHjLGPG6WJu2SbWjkAOtEo0GsML7HKTCZi7n/WSO7+O75mJmt6NbC2Nb6WYFbC2BjZKMKeJ0qYy2kUHDeJxwOXTsyjXITlWlVSzTKiJRwL7eRqi3hxwmIfESWAlVd7gMOa06QZl1odScImDPOzaNlWiOw71jZFnEWE10Vxq4iBG86w63W5ZNW3HfnMzD6WdNA3EVXXaSw4cuWoFEKKo5NqREgIyg30lHwC3L9GGPrSWt7G+myodVxe6XfYMNUfzqDTHZiVlobo4hlxQT+kUqBK9Ug5OAVw4Ty3gah17KczuI8TW+13MaLIA18znW1MmqFvfPnz8/fL4ljWf/898ml1ecospfXXy7lrj7dfXW4xZb9pnfVSjXGtr8ZVcbu058A+rT4Z9AgUAAA==\" method=\"post\" id=\"form\"><div class=\"t-invisible\"><input value=\"journals$002fatsc$002f5$002f4$002fatsc.5.issue-4.xml\" name=\"t:ac\" type=\"hidden\"><input value=\"H4sIAAAAAAAAAIWTsW/TQBTGLy2BVkGURERlQWJgdiYkEBM0jbBqQqREDGzP9otzcL4zd89OsiBY6MDAAhsDA2P/FUYGNgQzTEhInbhzgCSDU0s+3dk/vffde+87+cHq03OMsX2j2ZHSiQcZRBP0CDI0pOc3PS4JtQThGdQFj9B4B4KjpAFqww3ZXY+jiIekNCTop5m4cYTzL7/231z4fnq8xbYD1ohUmilpUT8m1gqeQAEdATLpDElzmdwJ2O7YBelDis/Yc1YL2E5mo/0/zzJityMlxzzJNYQC7d6ldlCo4rlXKJGnyI3J0aD9bdX8/UYqItawIJdAOHKnq6uROgeLUAMbyhah6cR5Tpx3TymBID9d1y8+vz/9ucVqj1m9AJHjLGPG6WJu2SbWjkAOtEo0GsML7HKTCZi7n/WSO7+O75mJmt6NbC2Nb6WYFbC2BjZKMKeJ0qYy2kUHDeJxwOXTsyjXITlWlVSzTKiJRwL7eRqi3hxwmIfESWAlVd7gMOa06QZl1odScImDPOzaNlWiOw71jZFnEWE10Vxq4iBG86w63W5ZNW3HfnMzD6WdNA3EVXXaSw4cuWoFEKKo5NqREgIyg30lHwC3L9GGPrSWt7G+myodVxe6XfYMNUfzqDTHZiVlobo4hlxQT+kUqBK9Ug5OAVw4Ty3gah17KczuI8TW+13MaLIA18znW1MmqFvfPnz8/fL4ljWf/898ml1ecospfXXy7lrj7dfXW4xZb9pnfVSjXGtr8ZVcbu058A+rT4Z9AgUAAA==\" name=\"t:state:client\" type=\"hidden\"><input value=\"H4sIAAAAAAAAAFvzloG1PI4hJjk/Ly0zvbQoMSknVd85P68kNa8kIDE91QpZIhkiXgAUT8pPqdQrTk0sSs4ozyzJyMxLyy/KRREoqSxITcvMKUktKi5isMgvStdLLEhMzkjVK0ksSC0uKao01UvOL0rNyUwC0rkF+XlAk4v1ghJTMvPdi/JLC1SCU0tKCyYa7NPZzPf5EBMDow8DN8gBRfk5fom5qSUMQj5ZiWWJ+jmJeen6wSVFmXnp1hUFJQxiEEeEgx0RAnSEG9gRdPCkCRmeNDxVcerUpuC/+5gYGCoKyn0YvKjjyJz8/AKgk/SIdZIPUL2Kqa7/yWuaDNUnB4NjDCOfrP2ctv3yQto4xo8kxwQB5YFSwSWJJaluRfm5wSBeinNOJlBJWGJOaaru9ENXOhgU/kLTKUKikKGOgRGULlk9g4NDXQc4UE0+FaRpuouttqdFoIK8ylXCwO7lHxrk5+hDXdNBhvMNcOiZGQh8sIhb0mMLDj0A7ZzZFTsFAAA=\" name=\"t:formdata\" type=\"hidden\"></div>" +
-      "    <input value=\"/journals/atsc/atsc-overview.xml\" name=\"source\" id=\"source\" type=\"hidden\">" +
-      "    <div class=\"form-row\">" +
-      "      <input placeholder=\"Search within Journal...\" data-component-textfield=\"{&quot;id&quot;:&quot;quickSearchTextfield&quot;, &quot;labelText&quot;:&quot;Search within Journal...&quot;}\" class=\"form-control search-field c-InputField\" name=\"q\" id=\"q_within\" type=\"text\">" +
-      "      <button data-component-textfield-righticon=\"quickSearchTextfield\" class=\"button submit-btn search-button c-InputAffix c-IconButton c-IconButton--search\" type=\"submit\">" +
-      "        <span>Search</span>" +
-      "      </button>" +
-      "    </div>" +
-      "    <input name=\"issueUri\" type=\"hidden\">" +
-      "    <fieldset class=\"form-group radio-group\">" +
-      "      <label class=\"form-label radio-label\">" +
-      "        <input value=\"ISSUE\" name=\"searchWithinTypeFilter\" id=\"radio\" type=\"radio\"> Issue" +
-      "      </label>" +
-      "      <label class=\"form-label radio-label\">" +
-      "        <input value=\"JOURNAL\" name=\"searchWithinTypeFilter\" id=\"radio_0\" type=\"radio\"> Journal" +
-      "      </label>" +
-      "    </fieldset>" +
-      "  </form>" +
-      "</div>";
+    "<div class=\"module searchModule search-within s-m-0\">" +
+    "  <form class=\"search-form single-query-form doc-search-form c-FormControl c-FormControl--dense c-FormControl--fullWidth\" data-component-formcontrol=\"quickSearchTextfield\" onsubmit=\"javascript:return Tapestry.waitForPage(event);\" action=\"/configurable/contentpage.configurablecontentpagebody.searchwithinform.form?t:ac=journals$002fatsc$002f5$002f4$002fatsc.5.issue-4.xml&amp;t:state:client=H4sIAAAAAAAAAIWTsW/TQBTGLy2BVkGURERlQWJgdiYkEBM0jbBqQqREDGzP9otzcL4zd89OsiBY6MDAAhsDA2P/FUYGNgQzTEhInbhzgCSDU0s+3dk/vffde+87+cHq03OMsX2j2ZHSiQcZRBP0CDI0pOc3PS4JtQThGdQFj9B4B4KjpAFqww3ZXY+jiIekNCTop5m4cYTzL7/231z4fnq8xbYD1ohUmilpUT8m1gqeQAEdATLpDElzmdwJ2O7YBelDis/Yc1YL2E5mo/0/zzJityMlxzzJNYQC7d6ldlCo4rlXKJGnyI3J0aD9bdX8/UYqItawIJdAOHKnq6uROgeLUAMbyhah6cR5Tpx3TymBID9d1y8+vz/9ucVqj1m9AJHjLGPG6WJu2SbWjkAOtEo0GsML7HKTCZi7n/WSO7+O75mJmt6NbC2Nb6WYFbC2BjZKMKeJ0qYy2kUHDeJxwOXTsyjXITlWlVSzTKiJRwL7eRqi3hxwmIfESWAlVd7gMOa06QZl1odScImDPOzaNlWiOw71jZFnEWE10Vxq4iBG86w63W5ZNW3HfnMzD6WdNA3EVXXaSw4cuWoFEKKo5NqREgIyg30lHwC3L9GGPrSWt7G+myodVxe6XfYMNUfzqDTHZiVlobo4hlxQT+kUqBK9Ug5OAVw4Ty3gah17KczuI8TW+13MaLIA18znW1MmqFvfPnz8/fL4ljWf/898ml1ecospfXXy7lrj7dfXW4xZb9pnfVSjXGtr8ZVcbu058A+rT4Z9AgUAAA==\" method=\"post\" id=\"form\"><div class=\"t-invisible\"><input value=\"journals$002fatsc$002f5$002f4$002fatsc.5.issue-4.xml\" name=\"t:ac\" type=\"hidden\"><input value=\"H4sIAAAAAAAAAIWTsW/TQBTGLy2BVkGURERlQWJgdiYkEBM0jbBqQqREDGzP9otzcL4zd89OsiBY6MDAAhsDA2P/FUYGNgQzTEhInbhzgCSDU0s+3dk/vffde+87+cHq03OMsX2j2ZHSiQcZRBP0CDI0pOc3PS4JtQThGdQFj9B4B4KjpAFqww3ZXY+jiIekNCTop5m4cYTzL7/231z4fnq8xbYD1ohUmilpUT8m1gqeQAEdATLpDElzmdwJ2O7YBelDis/Yc1YL2E5mo/0/zzJityMlxzzJNYQC7d6ldlCo4rlXKJGnyI3J0aD9bdX8/UYqItawIJdAOHKnq6uROgeLUAMbyhah6cR5Tpx3TymBID9d1y8+vz/9ucVqj1m9AJHjLGPG6WJu2SbWjkAOtEo0GsML7HKTCZi7n/WSO7+O75mJmt6NbC2Nb6WYFbC2BjZKMKeJ0qYy2kUHDeJxwOXTsyjXITlWlVSzTKiJRwL7eRqi3hxwmIfESWAlVd7gMOa06QZl1odScImDPOzaNlWiOw71jZFnEWE10Vxq4iBG86w63W5ZNW3HfnMzD6WdNA3EVXXaSw4cuWoFEKKo5NqREgIyg30lHwC3L9GGPrSWt7G+myodVxe6XfYMNUfzqDTHZiVlobo4hlxQT+kUqBK9Ug5OAVw4Ty3gah17KczuI8TW+13MaLIA18znW1MmqFvfPnz8/fL4ljWf/898ml1ecospfXXy7lrj7dfXW4xZb9pnfVSjXGtr8ZVcbu058A+rT4Z9AgUAAA==\" name=\"t:state:client\" type=\"hidden\"><input value=\"H4sIAAAAAAAAAFvzloG1PI4hJjk/Ly0zvbQoMSknVd85P68kNa8kIDE91QpZIhkiXgAUT8pPqdQrTk0sSs4ozyzJyMxLyy/KRREoqSxITcvMKUktKi5isMgvStdLLEhMzkjVK0ksSC0uKao01UvOL0rNyUwC0rkF+XlAk4v1ghJTMvPdi/JLC1SCU0tKCyYa7NPZzPf5EBMDow8DN8gBRfk5fom5qSUMQj5ZiWWJ+jmJeen6wSVFmXnp1hUFJQxiEEeEgx0RAnSEG9gRdPCkCRmeNDxVcerUpuC/+5gYGCoKyn0YvKjjyJz8/AKgk/SIdZIPUL2Kqa7/yWuaDNUnB4NjDCOfrP2ctv3yQto4xo8kxwQB5YFSwSWJJaluRfm5wSBeinNOJlBJWGJOaaru9ENXOhgU/kLTKUKikKGOgRGULlk9g4NDXQc4UE0+FaRpuouttqdFoIK8ylXCwO7lHxrk5+hDXdNBhvMNcOiZGQh8sIhb0mMLDj0A7ZzZFTsFAAA=\" name=\"t:formdata\" type=\"hidden\"></div>" +
+    "    <input value=\"/journals/atsc/atsc-overview.xml\" name=\"source\" id=\"source\" type=\"hidden\">" +
+    "    <div class=\"form-row\">" +
+    "      \"<input placeholder=\\\"Search within Journal...\\\" data-component-textfield=\\\"{&quot;id&quot;:&quot;quickSearchTextfield&quot;, &quot;labelText&quot;:&quot;Search within Journal...&quot;}\\\" class=\\\"form-control search-field c-InputField\\\" name=\\\"q\\\" id=\\\"q_within\\\" type=\\\"text\\\">\" +\n<input placeholder=\"Search within Journal...\" data-component-textfield=\"{&quot;id&quot;:&quot;quickSearchTextfield&quot;, &quot;labelText&quot;:&quot;Search within Journal...&quot;}\" class=\"form-control search-field c-InputField\" name=\"q\" id=\"q_within\" type=\"text\">" +
+    "      <button data-component-textfield-righticon=\"quickSearchTextfield\" class=\"button submit-btn search-button c-InputAffix c-IconButton c-IconButton--search\" type=\"submit\">" +
+    "        <span>Search</span>" +
+    "      </button>" +
+    "    </div>" +
+    "    <input name=\"issueUri\" type=\"hidden\">" +
+    "    <fieldset class=\"form-group radio-group\">" +
+    "      <label class=\"form-label radio-label\">" +
+    "        <input value=\"ISSUE\" name=\"searchWithinTypeFilter\" id=\"radio\" type=\"radio\"> Issue" +
+    "      </label>" +
+    "      <label class=\"form-label radio-label\">" +
+    "        <input value=\"JOURNAL\" name=\"searchWithinTypeFilter\" id=\"radio_0\" type=\"radio\"> Journal" +
+    "      </label>" +
+    "    </fieldset>" +
+    "  </form>" +
+    "</div>";
 
-  private static final String filteredSearchBox = "";
+  private static final String filteredSearchBox =
+    "";
 
   public void testFiltering() throws Exception {
 	    doFilterTest(bau, fact, blockHtml, blockFiltered);

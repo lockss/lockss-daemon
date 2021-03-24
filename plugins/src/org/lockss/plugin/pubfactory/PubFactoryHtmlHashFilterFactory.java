@@ -38,6 +38,7 @@ import org.htmlparser.tags.Div;
 import org.htmlparser.util.NodeList;
 import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.filter.FilterUtil;
+import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.FilterFactory;
@@ -169,11 +170,6 @@ public class PubFactoryHtmlHashFilterFactory implements FilterFactory {
               if (tag.getAttribute("href").startsWith("#")) {
                 tag.removeAttribute("href");
               }
-            /* } else if ("img".equals(tagName) && (tag.getAttribute("src") != null)) {
-              * // <img id="textarea_icon" class="t-error-icon t-invisible" alt="" src="/assets/b76ba41532fd3780cf2469d2455825eb6f606227/core/spacer.gif"/>
-              //  if (tag.getAttribute("src").matches(".assets.")) {
-              *   tag.removeAttribute("src");
-              *  } */
             }
           }
         });
@@ -204,7 +200,8 @@ public class PubFactoryHtmlHashFilterFactory implements FilterFactory {
                );
 
     Reader reader = FilterUtil.getReader(filtered, encoding);
-    return new ReaderInputStream(reader); 
+    return new ReaderInputStream( new WhiteSpaceFilter(reader));
+    //return new ReaderInputStream(reader);
   }
 
 }
