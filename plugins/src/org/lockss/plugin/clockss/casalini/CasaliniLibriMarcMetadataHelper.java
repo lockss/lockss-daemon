@@ -304,7 +304,7 @@ public class CasaliniLibriMarcMetadataHelper implements FileMetadataExtractor {
    * @param subFieldCode
    * @return String value of MARC21 data field
    */
-  private String getMARCData(Record record, String dataFieldCode, char subFieldCode) {
+  public static String getMARCData(Record record, String dataFieldCode, char subFieldCode) {
 
     try {
       DataField field = (DataField) record.getVariableField(dataFieldCode);

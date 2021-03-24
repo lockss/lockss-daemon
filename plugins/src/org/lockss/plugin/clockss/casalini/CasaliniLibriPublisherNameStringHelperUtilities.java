@@ -33,10 +33,14 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.clockss.casalini;
 
+import org.lockss.plugin.clockss.MetadataStringHelperUtilities;
 import org.lockss.util.Logger;
+import org.marc4j.*;
+import org.xml.sax.InputSource;
 
+import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
-import java.util.Locale;
 import java.util.Map;
 
 public class CasaliniLibriPublisherNameStringHelperUtilities {
@@ -58,6 +62,7 @@ public class CasaliniLibriPublisherNameStringHelperUtilities {
       canonical.put("aluvion editorial", "Aluvión Editorial");
       canonical.put("aluvión editorial", "Aluvión Editorial");
       canonical.put("amalthea", "Cadmo");
+      canonical.put("antenore", "Istituti Editoriali e Poligrafici Internazionali");
       canonical.put("antenore la facolta giardini", "Istituti Editoriali e Poligrafici Internazionali");
       canonical.put("antenore la facoltà giardini", "Istituti Editoriali e Poligrafici Internazionali");
       canonical.put("anthropos", "Anthropos Editorial");
@@ -78,6 +83,7 @@ public class CasaliniLibriPublisherNameStringHelperUtilities {
       canonical.put("casalini", "Casalini Libri");
       canonical.put("casalini libri", "Casalini Libri");
       canonical.put("celid", "Celid");
+      canonical.put("centro per la filosofia italiana", "Cadmo");
       canonical.put("centro per la filosofia italiana cadmo", "Cadmo");
       canonical.put("clichy", "Edizioni Clichy");
       canonical.put("clueb", "CLUEB");
@@ -154,6 +160,7 @@ public class CasaliniLibriPublisherNameStringHelperUtilities {
       canonical.put("istituti editoriali e poligrafici internazionali", "Istituti Editoriali e Poligrafici Internazionali");
       canonical.put("istituti editoriali e poligrafici internazionali universita degli studi di macerata", "Istituti Editoriali e Poligrafici Internazionali");
       canonical.put("istituti editoriali e poligrafici internazionali università degli studi di macerata", "Istituti Editoriali e Poligrafici Internazionali");
+      canonical.put("jaca book", "CLUEB");
       canonical.put("jaca book clueb", "CLUEB");
       canonical.put("la ergastula", "La Ergástula");
       canonical.put("la ergástula", "La Ergástula");
@@ -203,6 +210,7 @@ public class CasaliniLibriPublisherNameStringHelperUtilities {
       canonical.put("pàtron", "Pàtron Editore");
       canonical.put("pendragon", "Edizioni Pendragon");
       canonical.put("pesaro", "Metauro");
+      canonical.put("petite plaisance", "CLUEB");
       canonical.put("petite plaisance clueb", "CLUEB");
       canonical.put("plaza y valdes", "Plaza y Valdés Editores");
       canonical.put("plaza y valdés", "Plaza y Valdés Editores");
@@ -237,6 +245,7 @@ public class CasaliniLibriPublisherNameStringHelperUtilities {
       canonical.put("tab edizioni", "TAB edizioni");
       canonical.put("tangram", "Tangram Edizioni Scientifiche");
       canonical.put("tangram edizioni scientifiche", "Tangram Edizioni Scientifiche");
+      canonical.put("the wolfsonian foundation", "Cadmo");
       canonical.put("the wolfsonian foundation amalthea", "Cadmo");
       canonical.put("tra le righe", "Tra le righe libri");
       canonical.put("tra le righe libri", "Tra le righe libri");
@@ -287,5 +296,16 @@ public class CasaliniLibriPublisherNameStringHelperUtilities {
         return  publisherCleanName;
     }
 
+//  public static void main(String[] args) throws Exception {
+//    String fileStr = "/tmp/monographs.xml";
+//    MarcReader marcReader = new MarcXmlReader(new InputSource(new InputStreamReader(new FileInputStream(fileStr), StandardCharsets.UTF_8)));
+////  PrintStream out = System.out;
+//    PrintStream out = new PrintStream(new FileOutputStream(fileStr + ".out"));
+//    while (marcReader.hasNext()) {
+//      out.println(MetadataStringHelperUtilities.cleanupPublisherName(CasaliniLibriMarcMetadataHelper.getMARCData(marcReader.next(), "260", 'b')).toLowerCase());
+//    }
+//    out.close();
+//  }
+    
 }
  
