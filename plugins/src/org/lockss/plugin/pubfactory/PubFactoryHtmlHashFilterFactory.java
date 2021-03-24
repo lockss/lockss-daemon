@@ -170,6 +170,10 @@ public class PubFactoryHtmlHashFilterFactory implements FilterFactory {
               if (tag.getAttribute("href").startsWith("#")) {
                 tag.removeAttribute("href");
               }
+              // <a data-tab-id="previewPdf-43621" title=""  tabIndex="0" role="button" type="button" class=" c-Button c-Button--medium ">
+              if (tag.getAttribute("data-tab-id") != null) {
+                tag.removeAttribute("data-tab-id");
+              }
             }
           }
         });
