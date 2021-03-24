@@ -934,7 +934,7 @@
         eissn = 2452-1051
       >
 
-      param[au_oai_set] = journalofeuropeanlandscapes.eu
+      param[au_oai_set] = journalofeuropeanlandscapes
 
       au < exists ; exists ; 2020 ; 2020 ; Journal of European Landscapes Volume 2020 ; 2020 ; https://journalofeuropeanlandscapes.eu/ ; >
       au < expected ; exists ; 2021 ; 2021 ; Journal of European Landscapes Volume 2021 ; 2021 ; https://journalofeuropeanlandscapes.eu/ ; >
@@ -951,8 +951,8 @@
 
       param[au_oai_set] = vcs
 
-      au < exists ; exists ; 2020 ; 2020 ; Vegetation Classification and Survey Volume 2020 ; 2020 ; https://vcs.pensoft.net ; >
-      au < expected ; exists ; 2021 ; 2021 ; Vegetation Classification and Survey Volume 2021 ; 2021 ; https://vcs.pensoft.net ; >
+      au < manifest ; exists ; 2020 ; 2020 ; Vegetation Classification and Survey Volume 2020 ; 2020 ; https://vcs.pensoft.net/ ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Vegetation Classification and Survey Volume 2021 ; 2021 ; https://vcs.pensoft.net/ ; >
 
   }
 
