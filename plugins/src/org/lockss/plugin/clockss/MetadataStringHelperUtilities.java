@@ -102,16 +102,4 @@ public class MetadataStringHelperUtilities {
       log.debug2(String.format("Cleanup Publisher Name: originalString: %s, cleanupPublisherName: %s ", originalString, cleanupPublisherName));
       return cleanupPublisherName;
     }
-    
-    public static void main(String[] args) throws Exception {
-      String fileStr = "/tmp/260b.txt";
-      LineIterator iter = new LineIterator(new InputStreamReader(new FileInputStream(fileStr), StandardCharsets.UTF_8));
-//      PrintStream out = System.out;
-      PrintWriter out = new PrintWriter(fileStr + ".out", "UTF-8");
-      while (iter.hasNext()) {
-        String line = iter.next().substring("  260_b: ".length());
-        out.format("%s -> %s%n", line, cleanupPublisherName(line));
-      }
-      out.close();
-    }
 }

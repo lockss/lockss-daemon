@@ -247,10 +247,15 @@ public class TestCasaliniLibriPublisherNameStringHelperUtilities extends LockssT
         for(String originalStr : testGoodKey) {
 
             String cleanStr = cleanupKey(originalStr);
-            String publisherShortCut = matchPublisherName(cleanStr);
+            String publisherShortCut = matchPublisherName2016(cleanStr);
 
-            //log.info("########Good originalStr = " + originalStr + ", cleanStr = " + cleanStr + ", publisherShortCut = " + publisherShortCut);
-            assertNotNull(publisherShortCut);
+            if (publisherShortCut == null) {
+                // If it not found in 2016 mapping, it may be in 2019,2020 mapping
+                publisherShortCut = matchPublisherName(cleanStr);
+                
+                //log.info("########Good originalStr = " + originalStr + ", cleanStr = " + cleanStr + ", publisherShortCut = " + publisherShortCut);
+                assertNotNull(publisherShortCut);
+            }
         }
     }
 

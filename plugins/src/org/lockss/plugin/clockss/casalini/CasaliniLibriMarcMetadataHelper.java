@@ -190,11 +190,16 @@ public class CasaliniLibriMarcMetadataHelper implements FileMetadataExtractor {
 
           String publisherCleanName = cleanupKey(MARC_publisher);
 
-          String publisherShortCut = matchPublisherName(publisherCleanName.toLowerCase());
+          String publisherShortCut = matchPublisherName2016(publisherCleanName.toLowerCase());
 
           if (publisherShortCut == null) {
-            log.debug3(String.format("publisherShortCut is null: MARC_publisher: %s | publisherCleanName: %s",
-                    MARC_publisher, publisherCleanName, publisherShortCut));
+            // If it not found in 2016 mapping, it may be in 2019,2020 mapping
+            publisherShortCut = matchPublisherName(publisherCleanName.toLowerCase());
+
+            if (publisherShortCut == null) {
+              log.debug3(String.format("publisherShortCut is null: MARC_publisher: %s | publisherCleanName: %s",
+                      MARC_publisher, publisherCleanName, publisherShortCut));
+            }
           }
 
           // Handle 2016 PDF goes here
