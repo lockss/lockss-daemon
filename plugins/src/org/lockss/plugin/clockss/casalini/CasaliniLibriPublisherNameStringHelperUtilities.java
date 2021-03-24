@@ -40,8 +40,7 @@ import org.xml.sax.InputSource;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class CasaliniLibriPublisherNameStringHelperUtilities {
 
@@ -130,6 +129,7 @@ public class CasaliniLibriPublisherNameStringHelperUtilities {
       canonical.put("faenza editrice", "CLUEB");
       canonical.put("f. angeli", "Franco Angeli");
       canonical.put("f.angeli", "Franco Angeli");
+      canonical.put("fondazione ignazio mormino del banco di sicilia", "L'Erma di Bretschneider");
       canonical.put("fondazione ignazio mormino del banco di sicilia l'erma di bretschneider", "L'Erma di Bretschneider");
       canonical.put("franco angeli", "Franco Angeli");
       canonical.put("francoangeli", "Franco Angeli");
@@ -235,6 +235,7 @@ public class CasaliniLibriPublisherNameStringHelperUtilities {
       canonical.put("settegiorni", "Settegiorni Editore");
       canonical.put("settenove", "Settenove edizioni");
       canonical.put("sillabe", "Sillabe");
+      canonical.put("sismel", "SISMEL - Edizioni del Galluzzo");
       canonical.put("sismel edizioni del galluzzo", "SISMEL - Edizioni del Galluzzo");
       canonical.put("s.n.", "CLUEB"); // Not universal, but all s.n. in 2016 and 2020 happen to be CLUEB
       canonical.put("sovera edizioni", "Sovera Edizioni");
@@ -298,14 +299,28 @@ public class CasaliniLibriPublisherNameStringHelperUtilities {
     }
 
 //  public static void main(String[] args) throws Exception {
-//    String fileStr = "/tmp/monographs.xml";
-//    MarcReader marcReader = new MarcXmlReader(new InputSource(new InputStreamReader(new FileInputStream(fileStr), StandardCharsets.UTF_8)));
-////  PrintStream out = System.out;
-//    PrintStream out = new PrintStream(new FileOutputStream(fileStr + ".out"));
-//    while (marcReader.hasNext()) {
-//      out.println(MetadataStringHelperUtilities.cleanupPublisherName(CasaliniLibriMarcMetadataHelper.getMARCData(marcReader.next(), "260", 'b')).toLowerCase());
+//    String[] files = {
+//      "/tmp/m1/2005.mrc",  
+//      "/tmp/m1/2014.mrc",  
+//      "/tmp/m1/2018.mrc",  
+//    };
+//    for (String fileStr : files) {
+//      MarcReader marcReader = new MarcStreamReader(new FileInputStream(fileStr));
+//  //  PrintStream out = System.out;
+//      PrintStream out = new PrintStream(new FileOutputStream(fileStr + ".out"));
+//      while (marcReader.hasNext()) {
+//        String x260b = CasaliniLibriMarcMetadataHelper.getMARCData(marcReader.next(), "260", 'b');
+//        if (x260b == null) {
+//          x260b = "Casalini Libri";
+//        }
+//        String key = MetadataStringHelperUtilities.cleanupPublisherName(x260b).toLowerCase();
+////        out.println(key);
+//        if (!canonical.containsKey(key)) {
+//          System.out.println(key);
+//        }
+//      }
+//      out.close();
 //    }
-//    out.close();
 //  }
     
 }
