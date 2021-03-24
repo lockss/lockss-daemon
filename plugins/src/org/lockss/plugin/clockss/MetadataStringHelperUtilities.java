@@ -90,16 +90,14 @@ public class MetadataStringHelperUtilities {
 
         return cleanedUpPubDate;
     }
-
-    // This function should just cleanup the string, like ";", ":", extra space, but it should still be human readable
-    // However, "[]" or "()", "&" "?" have meanings, will not try to be too aggressive on this
+    
     public static String cleanupPublisherName(String originalString) {
       Pattern badCharactersPat = Pattern.compile("[^-\\p{Alnum} .&']+", Pattern.UNICODE_CHARACTER_CLASS);
       String cleanupPublisherName = originalString.replaceAll("\\[\\d{4}\\]", "");
       cleanupPublisherName = badCharactersPat.matcher(cleanupPublisherName).replaceAll("");
       cleanupPublisherName = cleanupPublisherName.trim();
       cleanupPublisherName = cleanupPublisherName.replaceAll(" +", " ");
-      log.debug2(String.format("Cleanup Publisher Name: originalString: %s, cleanupPublisherName: %s ", originalString, cleanupPublisherName));
+      log.debug2(String.format("Casalini-Metadata: Cleanup Publisher Name: originalString: %s, cleanupPublisherName: %s ", originalString, cleanupPublisherName));
       return cleanupPublisherName;
     }
 }
