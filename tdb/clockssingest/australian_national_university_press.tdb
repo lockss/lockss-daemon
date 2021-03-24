@@ -408,8 +408,26 @@
     
     param[journal_id] = human-voyage-undergraduate-research-biological-anthropology
 
-    au < finished ; finished ; 2017 ; The Human Voyage: Undergraduate Research in Biological Anthropology: Volume 1 ; 1 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2017 ; The Human Voyage: Undergraduate Research in Biological Anthropology Volume 1 ; 1 ; reingest4.clockss.org:8082 >
     #after 2017 published at http://studentjournals.anu.edu.au/index.php/hv (OJS3)
+
+  }
+
+  {
+  
+    title <
+      name = Made in China ;
+      issn = 2652-6352 ;
+      eissn = 2206-9119
+    >
+    
+    param[journal_id] = made-china-journal
+
+    au < manifest ; exists ; 2016 ; Made in China Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2017 ; Made in China Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2018 ; Made in China Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2019 ; Made in China Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2020 ; Made in China Volume 5 ; 5 ; >
 
   }
 
