@@ -935,10 +935,10 @@
         eissn = 2452-1051
       >
 
-      param[au_oai_set] = journalofeuropeanlandscapes.eu
+      param[au_oai_set] = jel
 
-      au < exists ; exists ; 2020 ; 2020 ; Journal of European Landscapes Volume 2020 ; 2020 ; https://journalofeuropeanlandscapes.eu/ ; >
-      au < expected ; exists ; 2021 ; 2021 ; Journal of European Landscapes Volume 2021 ; 2021 ; https://journalofeuropeanlandscapes.eu/ ; >
+      au < manifest ; exists ; 2020 ; 2020 ; Journal of European Landscapes Volume 2020 ; 2020 ; https://journalofeuropeanlandscapes.eu/ ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Journal of European Landscapes Volume 2021 ; 2021 ; https://journalofeuropeanlandscapes.eu/ ; >
 
   }
 
