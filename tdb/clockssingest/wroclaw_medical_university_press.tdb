@@ -118,10 +118,11 @@
       name = Clinical Education & Medical Simulation 
     >
     
-    param[base_url] = http://www.cems.umed.wroc.pl/
+    param[base_url] = https://www.cems.umed.wroc.pl/
     
     au < exists ; exists ; 2018 ; 2018 ; Clinical Education & Medical Simulation Volume 1 ; 1 ;  >
     au < exists ; exists ; 2019 ; 2019 ; Clinical Education & Medical Simulation Volume 2 ; 2 ;  >
+    au < exists ; exists ; 2020 ; 2020 ; Clinical Education & Medical Simulation Volume 3 ; 3 ;  >
     # still needs an issn
 
   }
