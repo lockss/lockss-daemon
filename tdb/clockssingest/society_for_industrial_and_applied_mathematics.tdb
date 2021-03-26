@@ -169,7 +169,7 @@
       au < finished ; manifest ; 2016 ; Journal on Applied Mathematics Volume 76 ; 76 ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; Journal on Applied Mathematics Volume 77 ; 77 ; http://epubs.siam.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; Journal on Applied Mathematics Volume 78 ; 78 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2019 ; Journal on Applied Mathematics Volume 79 ; 79 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2019 ; Journal on Applied Mathematics Volume 79 ; 79 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2020 ; Journal on Applied Mathematics Volume 80 ; 80 ; https://epubs.siam.org/ ; >
     }
 
@@ -185,15 +185,15 @@
 
     param[journal_id] = smjcat
 
-    au < finished ; crawling ; 1972 ; Journal on Computing Volume 1 ; 1 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1973 ; Journal on Computing Volume 2 ; 2 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 1974 ; Journal on Computing Volume 3 ; 3 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 1975 ; Journal on Computing Volume 4 ; 4 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 1976 ; Journal on Computing Volume 5 ; 5 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 1977 ; Journal on Computing Volume 6 ; 6 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1978 ; Journal on Computing Volume 7 ; 7 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 1979 ; Journal on Computing Volume 8 ; 8 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 1980 ; Journal on Computing Volume 9 ; 9 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 1972 ; Journal on Computing Volume 1 ; 1 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1973 ; Journal on Computing Volume 2 ; 2 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1974 ; Journal on Computing Volume 3 ; 3 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1975 ; Journal on Computing Volume 4 ; 4 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 1976 ; Journal on Computing Volume 5 ; 5 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1977 ; Journal on Computing Volume 6 ; 6 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1978 ; Journal on Computing Volume 7 ; 7 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1979 ; Journal on Computing Volume 8 ; 8 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1980 ; Journal on Computing Volume 9 ; 9 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 1981 ; Journal on Computing Volume 10 ; 10 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 1982 ; Journal on Computing Volume 11 ; 11 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1983 ; Journal on Computing Volume 12 ; 12 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
