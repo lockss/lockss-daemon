@@ -87,6 +87,7 @@ public class PubFactoryArticleIteratorFactory implements ArticleIteratorFactory,
     builder.addAspect(ART_LANDING_PATTERN,
         LANDING_REPLACEMENT,
         ArticleFiles.ROLE_ABSTRACT,
+        ArticleFiles.ROLE_FULL_TEXT_HTML,
         ArticleFiles.ROLE_ARTICLE_METADATA);
 
     // make this one primary by defining it first
@@ -107,7 +108,9 @@ public class PubFactoryArticleIteratorFactory implements ArticleIteratorFactory,
     // The order in which we want to define full_text_cu.  
     // First one that exists will get the job
     // Leave the CITATION_RIS in because if just doing iterator, it's the only one set
-    builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF,
+    builder.setFullTextFromRoles(
+        ArticleFiles.ROLE_FULL_TEXT_HTML,
+        ArticleFiles.ROLE_FULL_TEXT_PDF,
         ArticleFiles.ROLE_ABSTRACT);
 
     
