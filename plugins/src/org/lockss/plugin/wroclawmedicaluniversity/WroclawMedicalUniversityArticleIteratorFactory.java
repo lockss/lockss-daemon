@@ -55,7 +55,9 @@ public class WroclawMedicalUniversityArticleIteratorFactory implements ArticleIt
                 ArticleFiles.ROLE_FULL_TEXT_HTML,
                 ArticleFiles.ROLE_ARTICLE_METADATA);
 
-        builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF);
+        builder.setFullTextFromRoles(
+            ArticleFiles.ROLE_FULL_TEXT_PDF,
+            ArticleFiles.ROLE_FULL_TEXT_HTML);
 
         return builder.getSubTreeArticleIterator();
     }
