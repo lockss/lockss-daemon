@@ -167,7 +167,7 @@ public class PubFactoryHtmlHashFilterFactory implements FilterFactory {
             } else if ("a".equals(tagName)) {
               // <a data-tab-id="abstract-display" title="" href="#container-43131-item-43130" tabIndex="0" role="button" type="button" class=" c-Button c-Button--medium ">
               // for hashing, lets not worry about all the possible patterns of the internal dynamic links, just ignore all the internal hrefs
-              if (tag.getAttribute("href").startsWith("#")) {
+              if ((tag.getAttribute("href") != null) && (tag.getAttribute("href").startsWith("#"))) {
                 tag.removeAttribute("href");
               }
               // <a data-tab-id="previewPdf-43621" title=""  tabIndex="0" role="button" type="button" class=" c-Button c-Button--medium ">

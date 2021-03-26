@@ -153,11 +153,11 @@ public class TestPubFactoryHtmlHashFilterFactory extends LockssTestCase {
   protected static final String filteredNavIDcontainer =
     "<nav data-container-tab-address=\"tab_body\" class=\"container-tabs\"></nav>";
 
-  protected static final String aHrefContainer =
+  protected static final String aDataTabIdHrefContainer =
     "<a data-tab-id=\"abstract-display\" title=\"\" href=\"#container-43131-item-43130\" tabIndex=\"0\" role=\"button\" type=\"button\" class=\" c-Button c-Button--medium \"></a>";
 
-  protected static final String filteredAHrefContainer =
-    "<a data-tab-id=\"abstract-display\" title=\"\" tabIndex=\"0\" role=\"button\" type=\"button\" class=\" c-Button c-Button--medium \"></a>";
+  protected static final String filteredADataTabIdHrefContainer =
+    "<a title=\"\" tabIndex=\"0\" role=\"button\" type=\"button\" class=\" c-Button c-Button--medium \"></a>";
 
   protected static final String imgSrcHash =
     "<img id=\"textarea_icon\" class=\"t-error-icon t-invisible\" alt=\"\" src=\"/assets/b76ba41532fd3780cf2469d2455825eb6f606227/core/spacer.gif\"/>";
@@ -250,6 +250,12 @@ public class TestPubFactoryHtmlHashFilterFactory extends LockssTestCase {
   private static final String filteredSearchBox =
     "";
 
+  private static final String aDataTabId =
+    "<a data-tab-id=\"previewPdf-43621\" title=\"\" tabIndex=\"0\" role=\"button\" type=\"button\" class=\" c-Button c-Button--medium \">Link Text</a>";
+
+  private static final String filteredADataTabId =
+    "<a title=\"\" tabIndex=\"0\" role=\"button\" type=\"button\" class=\" c-Button c-Button--medium \">Link Text</a>";
+
   public void testFiltering() throws Exception {
 	    doFilterTest(bau, fact, blockHtml, blockFiltered);
   }
@@ -281,7 +287,7 @@ public class TestPubFactoryHtmlHashFilterFactory extends LockssTestCase {
     doFilterTest(bau, fact, navIDcontainer, filteredNavIDcontainer);
   }
   public void testAHrefContainerFiltering() throws Exception {
-    doFilterTest(bau, fact, aHrefContainer, filteredAHrefContainer);
+    doFilterTest(bau, fact, aDataTabIdHrefContainer, filteredADataTabIdHrefContainer);
   }
   /*
   public void testImgSrcHashFiltering() throws Exception {
@@ -293,5 +299,8 @@ public class TestPubFactoryHtmlHashFilterFactory extends LockssTestCase {
   }
   public void testSearchBoxFiltering() throws Exception {
     doFilterTest(bau, fact, searchBox, filteredSearchBox);
+  }
+  public void testADataTabIdFiltering() throws Exception {
+    doFilterTest(bau, fact, aDataTabId, filteredADataTabId);
   }
 }
