@@ -172,7 +172,11 @@ public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttribute("div", "id", "pane-pcw-figures"),
     HtmlNodeFilters.tagWithAttribute("div", "id", "pane-pcw-references"),
     HtmlNodeFilters.tagWithAttribute("div", "id", "pane-pcw-related"),
-    HtmlNodeFilters.tagWithAttribute("div", "id", "pane-pcw-details"),
+    // Can not filter our all div#id="pane-pcw-details", since PDF links are in inside
+    HtmlNodeFilters.tagWithAttribute("div", "class", "cover-details"),
+    HtmlNodeFilters.tagWithAttribute("section", "class", "copywrites"),
+    HtmlNodeFilters.tagWithAttribute("section", "class", "publisher"),
+    HtmlNodeFilters.tagWithAttribute("section", "class", "article__history"),
     
     // Not all Atypon plugins necessarily need this but MANY do and it is
     // an insidious source of over crawling

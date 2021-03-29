@@ -849,16 +849,7 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "                                    <p></p>\n" + 
       "                                  </div>\n" + 
       "                                </section>\n" + 
-      "                                <hr class=\"section__separator\">\n" + 
-      "                                <section class=\"article__history\">\n" + 
-      "                                  <strong class=\"section__title\">History</strong>\n" + 
-      "                                  <div class=\"section__body\">\n" + 
-      "                                    <p>\n" + 
-      "                                    </p>\n" + 
-      "                                    <div>Published online 1 November 2017</div>\n" + 
-      "                                    <p></p>\n" + 
-      "                                  </div>\n" + 
-      "                                </section>\n" + 
+      "                                <hr class=\"section__separator\">\n" +
       "                                <hr class=\"section__separator\">\n" + 
       "                              </div>\n" + 
       "                              <section class=\"section\">\n" + 
@@ -1168,16 +1159,7 @@ public class TestHealthAffairsHtmlFilterFactory extends LockssTestCase {
       "                            <li id=\"pane-pcw-details\" aria-labelledby=\"pane-pcw-detailscon\" role=\"tabpanel\" class=\"tab__pane active\">\n" + 
       "                              <div class=\"details-tab\">\n" + 
       "                                \n" + 
-      "                                <hr class=\"section__separator\">\n" + 
-      "                                <section class=\"article__history\">\n" + 
-      "                                  <strong class=\"section__title\">History</strong>\n" + 
-      "                                  <div class=\"section__body\">\n" + 
-      "                                    <p>\n" + 
-      "                                    </p>\n" + 
-      "                                    <div>Published online 1 November 2017</div>\n" + 
-      "                                    <p></p>\n" + 
-      "                                  </div>\n" + 
-      "                                </section>\n" + 
+      "                                <hr class=\"section__separator\">\n" +
       "                                <hr class=\"section__separator\">\n" + 
       "                              </div>\n" + 
       "                              <section class=\"section\">\n" + 
