@@ -32,12 +32,15 @@
 
 package org.lockss.plugin.clockss.gigascience;
 
+import org.lockss.config.TdbAu;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.FileMetadataExtractor;
+import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.CrossRefSchemaHelper;
+import org.lockss.plugin.clockss.JatsPublishingSchemaHelper;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 import org.lockss.util.Logger;
@@ -75,8 +78,6 @@ public class GigaScienceXmlMetadataExtractorFactory extends SourceXmlMetadataExt
     protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
         ArticleMetadata oneAM) {
 
-      // XML: SciPostPhys_1_1_003_Crossref.xml
-      // PDF: SciPostPhys_1_1_003.pdf
       String url_string = cu.getUrl();
       String pdfName = url_string.substring(0,url_string.length() - 13) + ".pdf";
       log.debug3("pdfName is " + pdfName);
@@ -84,12 +85,19 @@ public class GigaScienceXmlMetadataExtractorFactory extends SourceXmlMetadataExt
       returnList.add(pdfName);
       return returnList;
     }
-    
-    @Override
-    protected void postCookProcess(SourceXmlSchemaHelper schemaHelper, 
-        CachedUrl cu, ArticleMetadata thisAM) {
-      log.debug("in SciPost postcook");
-    }
 
+    @Override
+    protected void postCookProcess(SourceXmlSchemaHelper schemaHelper,
+                                   CachedUrl cu, ArticleMetadata thisAM) {
+
+      String publisherName = "Giga Science";
+
+      TdbAu tdbau = cu.getArchivalUnit().getTdbAu();
+      if (tdbau != null) {
+          publisherName =  tdbau.getPublisherName();
+      }
+
+      thisAM.put(MetadataField.FIELD_PUBLISHER, publisherName);
+    }
   }
 }
