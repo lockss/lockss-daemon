@@ -24,6 +24,7 @@
     {
 
       param[base_url] = http://www.plantcell.org/
+      #move to OUP 2021
 
       au < aspb.ClockssASPBDrupalPlugin ; finished ; crawling ; 1989 ; The Plant Cell Volume 1 ; 1 ; reingest1.clockss.org:8082 >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; crawling ; 1990 ; The Plant Cell Volume 2 ; 2 ; reingest2.clockss.org:8085 >

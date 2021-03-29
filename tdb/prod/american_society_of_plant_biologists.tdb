@@ -29,7 +29,8 @@
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://www.plantcell.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-      
+      #move to OUP 2021
+
       au < aspb.ASPBDrupalPlugin ; manifest ; 1989 ; The Plant Cell Volume 1 ; 1 >
       au < aspb.ASPBDrupalPlugin ; manifest ; 1990 ; The Plant Cell Volume 2 ; 2 >
       au < aspb.ASPBDrupalPlugin ; manifest ; 1991 ; The Plant Cell Volume 3 ; 3 >
