@@ -688,7 +688,7 @@
 
       #complete
       au < crawling ; exists ; 1996 ; Journal of the Chemical Society, Faraday Transactions Volume 92 ; 92 ; 1996 ; https://pubs.rsc.org/ ; >
-      au < crawling ; exists ; 1997 ; Journal of the Chemical Society, Faraday Transactions Volume 93 ; 93 ; 1997 ; https://pubs.rsc.org/ ; >
+      au < frozen ; exists ; 1997 ; Journal of the Chemical Society, Faraday Transactions Volume 93 ; 93 ; 1997 ; https://pubs.rsc.org/ ; >
       au < doNotProcess ; exists ; 1998 ; Journal of the Chemical Society, Faraday Transactions Volume 94 ; 94 ; 1998 ; https://pubs.rsc.org/ ; >
   }
 
