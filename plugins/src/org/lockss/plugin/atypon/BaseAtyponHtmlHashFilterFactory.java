@@ -168,6 +168,11 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
     // sometimes the a tag has the appropriate email address, yet the inner span has the protected hash
     HtmlNodeFilters.tagWithAttributeRegex("span", "class", "cf_email"),
 
+    // <span class="video-source" style="display:none">https://thoracic-prod-streaming.literatumonline.com/journals/content/annalsats/2019/annalsats.2019.16.issue-12/annalsats.201905-414cc/20191115/media/annalsats.201905-414cc_vid1.,964,750,300,180,.mp4.m3u8?b92b4ad1b4f274c70877528314abb28bd3f723a7d6082e6507476c036d1b3402e209f95f47cb691aca526557783e82bc64ff0999d3d535157ece591a7960e52d0ad6ff2e906196e220cb93f961768e02064b91a1ad9c7348821c98f7acc9bd5e389723630f66ab576db0f419f0c939f58d827bfa2eac7787d4b56d13de187b3827fc74a9d5fbda90a8b17c06c05d2720b3f7c0d3e1346cc83905b6bb1906c3b9d888e9193497328183834474e8c05f9b2eee691ed114090d8fb9bb9bea87d9b35ba05edca8b3b902 </span>
+    HtmlNodeFilters.tagWithAttribute("span", "class", "video-source"),
+
+    HtmlNodeFilters.tagWithAttribute("table", "class", "loginForm"),
+
     // A number of children add a link item "Cited By" only after the article
     // has been cited...remove the entire list item - look for text pattern
     new NodeFilter() {
