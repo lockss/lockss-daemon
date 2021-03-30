@@ -120,9 +120,9 @@
     
     param[base_url] = https://www.cems.umed.wroc.pl/
     
-    au < crawling ; exists ; 2018 ; 2018 ; Clinical Education & Medical Simulation Volume 1 ; 1 ;  >
-    au < crawling ; exists ; 2019 ; 2019 ; Clinical Education & Medical Simulation Volume 2 ; 2 ;  >
-    au < crawling ; exists ; 2020 ; 2020 ; Clinical Education & Medical Simulation Volume 3 ; 3 ;  >
+    au < finished ; manifest ; 2018 ; 2018 ; Clinical Education & Medical Simulation Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; 2019 ; Clinical Education & Medical Simulation Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2020 ; 2020 ; Clinical Education & Medical Simulation Volume 3 ; 3 ; reingest3.clockss.org:8083 >
     # needs an issn 2021-03-25. Ceased publication
 
   }
