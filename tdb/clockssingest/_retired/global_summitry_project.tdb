@@ -1,10 +1,11 @@
 {
 
   publisher <
-    name = University of Toronto ;
+    name = University of Toronto, Munk School of Global Affairs & Public Policy, Global Summitry Project ;
     info[contract] = 2012 ;
     info[tester] = 5 ;
-    info[poller] = 8
+    info[poller] = 8 ;
+    info[platform] = bepress. Journal moved to OUP
   >
   provider = bepress
   
