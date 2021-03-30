@@ -804,8 +804,12 @@ while (my $line = <>) {
 # thin child of ClockssOJS2 but with a different start_url and no permission_url
   } elsif ($plugin eq "ClockssJidcOJS2Plugin" || $plugin eq "ClockssOjs3Plugin") {
     #OJS3 allows an attr to define variants for location of manifest
+    #print $param{base_url};
         if ($param{base_url} =~ m/scholarworks/) {
             $url = sprintf("%sjournals/index.php/%s/gateway/clockss?year=%d",
+            $param{base_url}, $param{journal_id}, $param{year});
+        } elsif (uri_unescape($param{base_url}) =~ m/aut\.ac\.nz/) {
+            $url = sprintf("%s%s/gateway/clockss?year=%d",
             $param{base_url}, $param{journal_id}, $param{year});
         } else {
           #default behavior
