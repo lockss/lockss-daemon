@@ -161,7 +161,8 @@ public class ScienceOpenBookXmlSchemaHelper
   public static final String book_title = book_meta + "book-title-group/book-title";
   private static final String book_publisher = book_meta + "publisher/publisher-name";
   private static final String book_pub_date = book_meta + "pub-date";
-  private static final String book_isbn = book_meta + "isbn";
+  private static final String book_isbn = book_meta + "isbn[@publication-format = 'print']";
+  private static final String book_eisbn = book_meta + "isbn[@publication-format = 'electronic']";
 
   // set parent of chapter meta
   private static final String chapter_meta = "book-body/book-part[@book-part-type = 'chapter']/book-part-meta/";
@@ -180,6 +181,7 @@ public class ScienceOpenBookXmlSchemaHelper
     articleMap.put(book_title, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(book_publisher, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(book_isbn, XmlDomMetadataExtractor.TEXT_VALUE);
+    articleMap.put(book_eisbn, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(book_pub_date, DATE_VALUE);
     articleMap.put(chapter_doi, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(chapter_title, XmlDomMetadataExtractor.TEXT_VALUE);
