@@ -449,6 +449,54 @@
 
   }
   
+  {
+
+    title <
+      name = Crime Fiction Studies ;
+      issn = 2517-7982 ;
+      eissn = 2517-7990 ;
+      issnl = 2517-7982 
+     >
+
+    param[journal_id] = cfs
+
+    au < manifest ; exists ; 2020 ; Crime Fiction Studies Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 2021 ; Crime Fiction Studies Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
+
+  }
+  
+  {
+
+    title <
+      name = Global Energy Law and Sustainability ;
+      issn = 2632-4512 ;
+      eissn = 2632-4520 ;
+      issnl = 2632-4512 
+     >
+
+    param[journal_id] = gels
+
+    au < manifest ; exists ; 2020 ; Global Energy Law and Sustainability Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 2020 ; Global Energy Law and Sustainability Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
+
+  }
+  
+  {
+
+    title <
+      name = Library and Information History ;
+      issn = 1758-3489 ;
+      eissn = 1758-3497 ;
+      issnl = 1758-3489 
+     >
+
+    param[journal_id] = lih
+
+    au < manifest ; exists ; 2020 ; Library and Information History Volume 36 ; 36 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 2020 ; Library and Information History Volume 37 ; 37 ; https://www.euppublishing.com/ ; >
+
+  }
+  
     {
 
     title <
