@@ -2758,6 +2758,47 @@
   {
 
     title <
+      name = British Journal of Surgery ;
+      issn = 0007-1323 ;
+      eissn = 1365-2168 ;
+      issnl = 0007-1323
+    >
+
+    param[journal_id] = bjs
+
+    au < exists ; exists ; 1994 ; 1994 ; British Journal of Surgery Volume 81 ; 81 ; >
+    au < exists ; exists ; 1995 ; 1995 ; British Journal of Surgery Volume 82 ; 82 ; >
+    au < exists ; exists ; 1996 ; 1996 ; British Journal of Surgery Volume 83 ; 83 ; >
+    au < exists ; exists ; 1997 ; 1997 ; British Journal of Surgery Volume 84 ; 84 ; >
+    au < exists ; exists ; 1998 ; 1998 ; British Journal of Surgery Volume 85 ; 85 ; >
+    au < exists ; exists ; 1999 ; 1999 ; British Journal of Surgery Volume 86 ; 86 ; >
+    au < exists ; exists ; 2000 ; 2000 ; British Journal of Surgery Volume 87 ; 87 ; >
+    au < exists ; exists ; 2001 ; 2001 ; British Journal of Surgery Volume 88 ; 88 ; >
+    au < exists ; exists ; 2002 ; 2002 ; British Journal of Surgery Volume 89 ; 89 ; >
+    au < exists ; exists ; 2003 ; 2003 ; British Journal of Surgery Volume 90 ; 90 ; >
+    au < exists ; exists ; 2004 ; 2004 ; British Journal of Surgery Volume 91 ; 91 ; >
+    au < exists ; exists ; 2005 ; 2005 ; British Journal of Surgery Volume 92 ; 92 ; >
+    au < exists ; exists ; 2006 ; 2006 ; British Journal of Surgery Volume 93 ; 93 ; >
+    au < exists ; exists ; 2007 ; 2007 ; British Journal of Surgery Volume 94 ; 94 ; >
+    au < exists ; exists ; 2008 ; 2008 ; British Journal of Surgery Volume 95 ; 95 ; >
+    au < exists ; exists ; 2009 ; 2009 ; British Journal of Surgery Volume 96 ; 96 ; >
+    au < exists ; exists ; 2010 ; 2010 ; British Journal of Surgery Volume 97 ; 97 ; >
+    au < exists ; exists ; 2011 ; 2011 ; British Journal of Surgery Volume 98 ; 98 ; >
+    au < exists ; exists ; 2012 ; 2012 ; British Journal of Surgery Volume 99 ; 99 ; >
+    au < exists ; exists ; 2013 ; 2013 ; British Journal of Surgery Volume 100 ; 100 ; >
+    au < exists ; exists ; 2014 ; 2014 ; British Journal of Surgery Volume 101 ; 101 ; >
+    au < exists ; exists ; 2015 ; 2015 ; British Journal of Surgery Volume 102 ; 102 ; >
+    au < exists ; exists ; 2016 ; 2016 ; British Journal of Surgery Volume 103 ; 103 ; >
+    au < exists ; exists ; 2017 ; 2017 ; British Journal of Surgery Volume 104 ; 104 ; >
+    au < exists ; exists ; 2018 ; 2018 ; British Journal of Surgery Volume 105 ; 105 ; >
+    au < exists ; exists ; 2019 ; 2019 ; British Journal of Surgery Volume 106 ; 106 ; >
+    au < exists ; exists ; 2020 ; 2020 ; British Journal of Surgery Volume 107 ; 107 ; >
+
+  }
+
+  {
+
+    title <
       name = British Medical Bulletin ;
       issn = 0007-1420 ;
       eissn = 1471-8391 ;
@@ -6395,6 +6436,37 @@
     au < frozen ; exists ; 2018 ; 2018 ; French Studies Bulletin Volume 39 ; 39 ; >
     au < crawling ; exists ; 2019 ; 2019 ; French Studies Bulletin Volume 40 ; 40 ; >
     au < crawling ; exists ; 2020 ; 2020 ; French Studies Bulletin Volume 41 ; 41 ; >
+
+  }
+
+  {
+
+    title <
+      name = G3: Genes, Genomes, Genetics ;
+      eissn = 2160-1836
+    >
+
+    param[journal_id] = gastro
+    #2011 volume 1 to 2020 volume 10 had been processed in Genetics Society of America
+
+    au < exists ; exists ; 2021 ; 2021 ; G3: Genes, Genomes, Genetics Volume 11 ; 11 ; >
+
+  }
+
+  {
+
+    title <
+      name = Genetics ;
+      issn = 0016-6731 ;
+      eissn = 1943-2631 ;
+      issnl = 0016-6731
+    >
+
+    param[journal_id] = genetics
+    #1916 volume 1 to 2009 volume 183 had NOT processed in Genetics Society of America
+    #2010 volume 184 to 2020 volume 10 had been processed in Genetics Society of America
+
+    au < exists ; exists ; 2021 ; 2021 ; Genetics Volume 217-219 ; 217-219 ; >
 
   }
 
