@@ -114,6 +114,7 @@
       au < doNotProcess ; 2018 ; 2018 ; The American Biology Teacher Volume 80 ; 80 >
       au < doNotProcess ; 2019 ; 2019 ; The American Biology Teacher Volume 81 ; 81 >
       au < exists ; 2020 ; 2020 ; The American Biology Teacher Volume 82 ; 82 >
+      au < exists ; 2021 ; 2021 ; The American Biology Teacher Volume 83 ; 83 >
 
   }
 
@@ -190,6 +191,7 @@
       au < doNotProcess ; 2018 ; 2018 ; Asian Survey Volume 58 ; 58 >
       au < doNotProcess ; 2019 ; 2019 ; Asian Survey Volume 59 ; 59 >
       au < exists ; 2020 ; 2020 ; Asian Survey Volume 60 ; 60 >
+      au < exists ; 2021 ; 2021 ; Asian Survey Volume 61 ; 61 >
 
   }
 
@@ -211,6 +213,25 @@
       au < doNotProcess ; 2014 ; 2014 ; Boom: A Journal of California Volume 4 ; 4 >
       au < doNotProcess ; 2015 ; 2015 ; Boom: A Journal of California Volume 5 ; 5 >
       au < doNotProcess ; 2016 ; 2016 ; Boom: A Journal of California Volume 6 ; 6 >
+
+  }
+
+  {
+
+      title <
+        name = Collabra: Psychology ;
+        eissn = 2474-7394 
+    >
+
+      param[journal_id] = collabra
+
+      au < doNotProcess ; 2015 ; 2015 ; Collabra: Psychology Volume 1 ; 1 >
+      au < doNotProcess ; 2016 ; 2016 ; Collabra: Psychology Volume 2 ; 2 >
+      au < doNotProcess ; 2017 ; 2017 ; Collabra: Psychology Volume 3 ; 3 >
+      au < doNotProcess ; 2018 ; 2018 ; Collabra: Psychology Volume 4 ; 4 >
+      au < doNotProcess ; 2019 ; 2019 ; Collabra: Psychology Volume 5 ; 5 >
+      au < exists ; 2020 ; 2020 ; Collabra: Psychology Volume 6 ; 6 >
+      au < exists ; 2021 ; 2021 ; Collabra: Psychology Volume 7 ; 7 >
 
   }
 
@@ -264,6 +285,7 @@
       au < doNotProcess ; 2018 ; 2018 ; Classical Antiquity Volume 37 ; 37 >
       au < doNotProcess ; 2019 ; 2019 ; Classical Antiquity Volume 38 ; 38 >
       au < exists ; 2020 ; 2020 ; Classical Antiquity Volume 39 ; 39 >
+      au < exists ; 2021 ; 2021 ; Classical Antiquity Volume 40 ; 40 >
 
   }
 
@@ -385,7 +407,8 @@
       au < doNotProcess ; 2017 ; 2017 ; California History Volume 94 ; 94 >
       au < doNotProcess ; 2018 ; 2018 ; California History Volume 95 ; 95 >
       au < doNotProcess ; 2019 ; 2019 ; California History Volume 96 ; 96 >
-      au < exists ; 2020 ; 2020 ; California History Volume 97 ; 97 >
+      au < exists ; 2020 ; 2020 ; Classical Antiquity Volume 39 ; 39 >
+      au < exists ; 2021 ; 2021 ; Classical Antiquity Volume 40 ; 40 >
 
   }
 
@@ -408,6 +431,7 @@
       au < doNotProcess ; 2018 ; 2018 ; Departures in Critical Qualitative Research Volume 7 ; 7 >
       au < doNotProcess ; 2019 ; 2019 ; Departures in Critical Qualitative Research Volume 8 ; 8 >
       au < exists ; 2020 ; 2020 ; Departures in Critical Qualitative Research Volume 9 ; 9 >
+      au < exists ; 2021 ; 2021 ; Departures in Critical Qualitative Research Volume 10 ; 10 >
 
   }
 
@@ -551,6 +575,7 @@
       au < doNotProcess ; 2018 ; 2018 ; Feminist Media Histories Volume 4 ; 4 >
       au < doNotProcess ; 2019 ; 2019 ; Feminist Media Histories Volume 5 ; 5 >
       au < exists ; 2020 ; 2020 ; Feminist Media Histories Volume 6 ; 6 >
+      au < exists ; 2021 ; 2021 ; Feminist Media Histories Volume 7 ; 7 >
 
   }
 
@@ -678,6 +703,7 @@
       au < doNotProcess ; 2018 ; 2018 ; Gastronomica: The Journal of Critical Food Studies Volume 18 ; 18 >
       au < doNotProcess ; 2019 ; 2019 ; Gastronomica: The Journal of Critical Food Studies Volume 19 ; 19 >
       au < exists ; 2020 ; 2020 ; Gastronomica: The Journal of Critical Food Studies Volume 20 ; 20 >
+      au < exists ; 2021 ; 2021 ; Gastronomica: The Journal of Critical Food Studies Volume 21 ; 21 >
 
   }
 
@@ -742,6 +768,7 @@
       au < doNotProcess ; 2018 ; 2018 ; Historical Studies in the Natural Sciences Volume 48 ; 48 >
       au < doNotProcess ; 2019 ; 2019 ; Historical Studies in the Natural Sciences Volume 49 ; 49 >
       au < exists ; 2020 ; 2020 ; Historical Studies in the Natural Sciences Volume 50 ; 50 >
+      au < exists ; 2021 ; 2021 ; Historical Studies in the Natural Sciences Volume 51 ; 51 >
 
   }
 
@@ -769,6 +796,7 @@
       au < doNotProcess ; 2018 ; 2018 ; International Review of Qualitative Research Volume 11 ; 11 >
       au < doNotProcess ; 2019 ; 2019 ; International Review of Qualitative Research Volume 12 ; 12 >
       au < exists ; 2020 ; 2020 ; International Review of Qualitative Research Volume 13 ; 13 >
+      au < exists ; 2021 ; 2021 ; International Review of Qualitative Research Volume 14 ; 14 >
 
   }
 
@@ -875,6 +903,7 @@
       au < doNotProcess ; 2018 ; 2018 ; Journal of the American Musicological Society Volume 71 ; 71 >
       au < doNotProcess ; 2019 ; 2019 ; Journal of the American Musicological Society Volume 72 ; 72 >
       au < exists ; 2020 ; 2020 ; Journal of the American Musicological Society Volume 73 ; 73 >
+      au < exists ; 2021 ; 2021 ; Journal of the American Musicological Society Volume 74 ; 74 >
 
     }
 
@@ -929,6 +958,7 @@
       au < doNotProcess ; 2018 ; 2018 ; The Journal of Musicology Volume 35 ; 35 >
       au < doNotProcess ; 2019 ; 2019 ; The Journal of Musicology Volume 36 ; 36 >
       au < exists ; 2020 ; 2020 ; The Journal of Musicology Volume 37 ; 37 >
+      au < exists ; 2021 ; 2021 ; The Journal of Musicology Volume 38 ; 38 >
 
   }
 
@@ -1087,6 +1117,7 @@
       au < doNotProcess ; 2018 ; 2018 ; Journal of the Society of Architectural Historians Volume 77 ; 77 >
       au < doNotProcess ; 2019 ; 2019 ; Journal of the Society of Architectural Historians Volume 78 ; 78 >
       au < exists ; 2020 ; 2020 ; Journal of the Society of Architectural Historians Volume 79 ; 79 >
+      au < exists ; 2021 ; 2021 ; Journal of the Society of Architectural Historians Volume 80 ; 80 >
 
   }
 
