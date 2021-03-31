@@ -1819,7 +1819,6 @@ public class TestPluginManager extends LockssTestCase {
     String auDir = LockssRepositoryImpl.getAuDir(au.getAuId(), tempDirPath,
                                                  false);
     File auDirFile = new File(auDir);
-    log.critical("auDir: " + auDir);
     assertTrue(auDirFile.exists());
 
     mgr.deleteAu(au);

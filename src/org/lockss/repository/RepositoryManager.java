@@ -123,7 +123,7 @@ public class RepositoryManager
     CheckUnnormalizedMode.Log;
 
   /** If set, the contents of deleted AUs will be moved to a directory
-   * below this.  Must be a path relative to .../cache. */
+   * below this.  Must be a path relative to the parent of .../cache. */
   public static final String PARAM_MOVE_DELETED_AUS_TO =
     PREFIX + "moveDeletedAusTo";
   public static final String DEFAULT_MOVE_DELETED_AUS_TO = null;
@@ -195,8 +195,8 @@ public class RepositoryManager
     pluginMgr.registerAuEventHandler(auEventHandler);
   }
 
-  /** Optionally rename the repository dir belonging to a deleted AU to a
-   * "deleted" directory, and remove the auid -> dir mapping */
+  /** Optionally rename the repository dir(s) belonging to a deleted AU to
+   * a "deleted" directory, and remove the auid -> dir mapping(s) */
 
   // Testcase for this is TestPluginManager.testRenameDeletedAuDir().
   // This is not bulletproof, but making it so would be more work than is
@@ -209,50 +209,58 @@ public class RepositoryManager
       // Do this only for Delete, not Deactivate or RestartDelete
     case Delete:
       if (!StringUtil.isNullString(paramMoveDeletedAusTo)) {
-        // Normally should be only one dir for AU, easier to handle all
-        // repos than figure out which is correct if more than one
-        List<String> repoRoots = findExistingAuBaseDirsFor(auid);
-        log.debug2("del repos for: " + au.getName() + ": " + repoRoots);
-        for (String repoRoot : repoRoots) {
-          File auDir =
-            new File(LockssRepositoryImpl.getAuDir(auid, repoRoot, false));
-          String auDirName = auDir.getName();
+        // Normally will be only one dir for AU, no harm in checking all
+        // the repos
+        for (String repoName : getRepositoryList()) {
+          String repoRoot =
+            LockssRepositoryImpl.getLocalRepositoryPath(repoName);
+          // Ensure deleted dir exists
           File deletedDir = new File(repoRoot, paramMoveDeletedAusTo);
           if (!deletedDir.exists()) {
             log.debug("Creating deleted AU dir: " + deletedDir);
             if (!deletedDir.mkdirs()) {
               log.error("Couldn't create deleted AU dir: " + deletedDir);
-              break;
+              continue;
             }
           }
+          LockssRepositoryImpl.LocalRepository localRepo =
+            LockssRepositoryImpl.getLocalRepository(repoRoot);
+          synchronized (localRepo) {
+            String auDirPath =
+              LockssRepositoryImpl.getAuDir(auid, repoRoot, false);
+            if (auDirPath != null) {
+              log.debug2("del repo for: " + au.getName() + ": " + auDirPath);
+              File auDir = new File(auDirPath);
+              String auDirName = auDir.getName();
 
-          // Uniqueify the dirname under the "deleted" dir
-          File moveToDir = new File(deletedDir, auDirName);
-          int suffix = 1;
-          while (moveToDir.exists()) {
-            moveToDir = new File(deletedDir, auDirName + "." + suffix++);
-          }
-          try {
-            log.debug2("move(" + auDir.toPath() + ", "
-                       + moveToDir.toPath() + ")");
-            Files.move(auDir.toPath(), moveToDir.toPath(),
-                       StandardCopyOption.ATOMIC_MOVE);
-            // Remove entry from map
-            LockssRepositoryImpl.removeAuDirEntry(auid, repoRoot);
-            // Update timestamp so janitor script knows when to delete the
-            // dir.
-            FileUtils.touch(moveToDir);
+              // Uniqueify the dirname under the "deleted" dir
+              File moveToDir = new File(deletedDir, auDirName);
+              int suffix = 1;
+              while (moveToDir.exists()) {
+                moveToDir = new File(deletedDir, auDirName + "." + suffix++);
+              }
+              try {
+                log.debug2("move(" + auDir.toPath() + ", "
+                           + moveToDir.toPath() + ")");
 
-            // Unfinished idea to leave a symlink behind temporarily (to be
-            // deleted by TimerQ or some such) so that still-running polls
-            // and crawls won't recreate the dir.  There isn't sufficient
-            // locking available to guarantee that, and the symlink would
-            // be left around if the daemon dies before it's deleted
-//           Files.createSymbolicLink(auDir.toPath(),
-//                                    moveToDir.toPath());
-          } catch (IOException e) {
-            log.error("failed to move deleted AU dir: " + auDir +
-                      " to deleted dir: " + moveToDir, e);
+                if (pluginMgr.getAuFromId(auid) != null) {
+                  log.debug("AU recreated, not deleting repo dir: " +
+                            au.getName());
+                  continue;
+                }
+                Files.move(auDir.toPath(), moveToDir.toPath(),
+                           StandardCopyOption.ATOMIC_MOVE);
+                // Remove entry from map
+                LockssRepositoryImpl.removeAuDirEntry(pluginMgr, auid, repoRoot);
+
+                // Update timestamp so janitor script knows when to delete the
+                // dir.
+                FileUtils.touch(moveToDir);
+              } catch (IOException e) {
+                log.error("failed to move deleted AU dir: " + auDir +
+                          " to deleted dir: " + moveToDir, e);
+              }
+            }
           }
         }
       }

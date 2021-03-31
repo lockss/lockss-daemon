@@ -596,11 +596,12 @@ public class LockssRepositoryImpl
     return getAuDir(au.getAuId(), repoRoot, create);
   }
 
-  static boolean removeAuDirEntry(String auid, String repoRoot) {
+  static void removeAuDirEntry(PluginManager pluginMgr,
+                               String auid, String repoRoot) {
     LocalRepository localRepo = getLocalRepository(repoRoot);
-    synchronized (localRepo) {
-      Map aumap = localRepo.getAuMap();
-      return aumap.remove(auid) != null;
+    Map aumap = localRepo.getAuMap();
+    if (aumap.remove(auid) == null) {
+      logger.warning("AUID disappeared from map: "  + auid);
     }
   }
 
