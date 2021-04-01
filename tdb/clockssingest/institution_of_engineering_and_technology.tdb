@@ -25,7 +25,6 @@
       param[journal_id] = el
       #from Vol 1 in 1965
 
-
       au < finished ; finished ; 1965 ; Electronics Letters Volume 1 ; 1 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 1966 ; Electronics Letters Volume 2 ; 2 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 1967 ; Electronics Letters Volume 3 ; 3 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
@@ -319,6 +318,21 @@
       au < deepCrawl ; exists ; 2018 ; IET Electrical Systems in Transportation Volume 8 ; 8 ; http://digital-library.theiet.org/ ; >
       au < deepCrawl ; exists ; 2019 ; IET Electrical Systems in Transportation Volume 9 ; 9 ; https://digital-library.theiet.org/ ; >
       au < crawling ; exists ; 2020 ; IET Electrical Systems in Transportation Volume 10 ; 10 ; https://digital-library.theiet.org/ ; >
+
+    }
+
+    {
+
+    title <
+      name = IET Energy Systems Integration ;
+      eissn = 2516-8401
+
+      >
+      param[journal_id] = iet-esi
+
+
+      au < exists ; exists ; 2019 ; IET Energy Systems Integration Volume 1 ; 1 ; https://digital-library.theiet.org/ ; >
+      au < exists ; exists ; 2020 ; IET Energy Systems Integration Volume 2 ; 2 ; https://digital-library.theiet.org/ ; >
 
     }
 
@@ -665,6 +679,21 @@
       au < deepCrawl ; exists ; 2018 ; IET Signal Processing Volume 12 ; 12 ; http://digital-library.theiet.org/ ; >
       au < deepCrawl ; exists ; 2019 ; IET Signal Processing Volume 13 ; 13 ; https://digital-library.theiet.org/ ; >
       au < crawling ; exists ; 2020 ; IET Signal Processing Volume 14 ; 14 ; https://digital-library.theiet.org/ ; >
+
+    }
+
+    {
+
+    title <
+      name = IET Smart Cities ;
+      eissn = 2631-7680
+
+      >
+      param[journal_id] = iet-smc
+
+
+      au < exists ; exists ; 2019 ; IET Smart Cities Volume 1 ; 1 ; https://digital-library.theiet.org/ ; >
+      au < exists ; exists ; 2020 ; IET Smart Cities Volume 2 ; 2 ; https://digital-library.theiet.org/ ; >
 
     }
 
