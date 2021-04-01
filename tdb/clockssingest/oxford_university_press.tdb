@@ -19212,6 +19212,44 @@
   {
 
     title <
+      name = The Journal of Mechanics ;
+      issn = 0360-5310 ;
+      eissn = 1744-5019 ;
+      issnl = 0360-5310
+    >
+
+    param[journal_id] = jom
+
+    au < doNotProcess ; exists ; 1998 ; 1998 ; Journal of Mechanics Volume 14 ; 14 ; >
+    au < doNotProcess ; exists ; 1999 ; 1999 ; Journal of Mechanics Volume 15 ; 15 ; >
+    au < doNotProcess ; exists ; 2000 ; 2000 ; Journal of Mechanics Volume 16 ; 16 ; >
+    au < doNotProcess ; exists ; 2001 ; 2001 ; Journal of Mechanics Volume 17 ; 17 ; >
+    au < doNotProcess ; exists ; 2002 ; 2002 ; Journal of Mechanics Volume 18 ; 18 ; >
+    au < doNotProcess ; exists ; 2003 ; 2003 ; Journal of Mechanics Volume 19 ; 19 ; >
+    au < doNotProcess ; exists ; 2004 ; 2004 ; Journal of Mechanics Volume 20 ; 20 ; >
+    au < doNotProcess ; exists ; 2005 ; 2005 ; Journal of Mechanics Volume 21 ; 21 ; >
+    au < doNotProcess ; exists ; 2006 ; 2006 ; Journal of Mechanics Volume 22 ; 22 ; >
+    au < doNotProcess ; exists ; 2007 ; 2007 ; Journal of Mechanics Volume 23 ; 23 ; >
+    au < manifest ; exists ; 2008 ; 2008 ; Journal of Mechanics Volume 24 ; 24 ; >
+    au < manifest ; exists ; 2009 ; 2009 ; Journal of Mechanics Volume 25 ; 25 ; >
+    au < manifest ; exists ; 2010 ; 2010 ; Journal of Mechanics Volume 26 ; 26 ; >
+    au < manifest ; exists ; 2011 ; 2011 ; Journal of Mechanics Volume 27 ; 27 ; >
+    au < manifest ; exists ; 2012 ; 2012 ; Journal of Mechanics Volume 28 ; 28 ; >
+    au < manifest ; exists ; 2013 ; 2013 ; Journal of Mechanics Volume 29 ; 29 ; >
+    au < manifest ; exists ; 2014 ; 2014 ; Journal of Mechanics Volume 30 ; 30 ; >
+    au < manifest ; exists ; 2015 ; 2015 ; Journal of Mechanics Volume 31 ; 31 ; >
+    au < manifest ; exists ; 2016 ; 2016 ; Journal of Mechanics Volume 32 ; 32 ; >
+    au < manifest ; exists ; 2017 ; 2017 ; Journal of Mechanics Volume 33 ; 33 ; >
+    au < manifest ; exists ; 2018 ; 2018 ; Journal of Mechanics Volume 34 ; 34 ; >
+    au < manifest ; exists ; 2019 ; 2019 ; Journal of Mechanics Volume 35 ; 35 ; >
+    au < manifest ; exists ; 2020 ; 2020 ; Journal of Mechanics Volume 36 ; 36 ; >
+    au < expected ; exists ; 2021 ; 2021 ; Journal of Mechanics Volume 37 ; 37 ; >
+
+  }
+
+  {
+
+    title <
       name = The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine ;
       issn = 0360-5310 ;
       eissn = 1744-5019 ;
