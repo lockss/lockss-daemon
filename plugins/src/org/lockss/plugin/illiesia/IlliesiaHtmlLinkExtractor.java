@@ -27,8 +27,8 @@ public class IlliesiaHtmlLinkExtractor extends GoslingHtmlLinkExtractor {
     IlliesiaCharsetUtil.InputStreamAndCharset InAndCs = IlliesiaCharsetUtil.getCharsetStream(in, encoding);
     InputStream newIs = InAndCs.getInStream();
     String expCs = InAndCs.getCharset();
-    logger.info(encoding);
-    logger.info(expCs);
+    logger.debug3("Original encoding anticipated: " + encoding);
+    logger.debug3("Encoding guessed from BOM: " + expCs);
     super.extractUrls(au, newIs, expCs, srcUrl, cb);
   }
 

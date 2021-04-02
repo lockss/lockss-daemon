@@ -66,7 +66,7 @@ public class IlliesiaCharsetUtil extends CharsetUtil {
       return null;
     }
   }
-
+  // This is the method we need to modify, note initializing charset to null, instead of calling findCharsetInText()
   public static InputStreamAndCharset getCharsetStream(InputStream inStream,
                                                        String expectedCharset)
       throws IOException {
