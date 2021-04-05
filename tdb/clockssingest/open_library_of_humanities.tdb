@@ -5,7 +5,7 @@
     #info[contract] = 2019 ;
     #info[tester] = 5 ;
     #info[poller] = 2 ;
-    info[platform] = Custom/OAI
+    info[platform] = Janeway/OAI
   >
   
     plugin = org.lockss.plugin.janeway.olh.ClockssOLHPlugin
@@ -20,8 +20,16 @@
 
     param[base_url] = https://www.comicsgrid.com/
 
-    # I got volume from here: https://www.comicsgrid.com/api/oai/?verb=ListRecords&metadataPrefix=oai_dc&from=2019-01-01&until=2019-12-31
+    # volume here: https://www.comicsgrid.com/api/oai/?verb=ListRecords&metadataPrefix=oai_dc&from=2019-01-01&until=2019-12-31
+    au < exists ; exists ; 2013 ; 3 ; Comics Grid Volume 3 ; 2013 ; >
+    au < exists ; exists ; 2014 ; 4 ; Comics Grid Volume 4 ; 2014 ; >
+    au < exists ; exists ; 2015 ; 5 ; Comics Grid Volume 5 ; 2015 ; >
+    au < exists ; exists ; 2016 ; 6 ; Comics Grid Volume 6 ; 2016 ; >
+    au < exists ; exists ; 2017 ; 7 ; Comics Grid Volume 7 ; 2017 ; >
+    au < exists ; exists ; 2018 ; 8 ; Comics Grid Volume 8 ; 2018 ; >
     au < manifest ; exists ; 2019 ; 9 ; Comics Grid Volume 9 ; 2019 ; >
+    au < exists ; exists ; 2020 ; 10 ; Comics Grid Volume 10 ; 2020 ; >
+    au < exists ; exists ; 2021 ; 11 ; Comics Grid Volume 11 ; 2021 ; >
 
   }
   {
