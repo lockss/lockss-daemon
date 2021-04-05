@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-Copyright (c) 2000-2020, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -372,11 +372,13 @@ Args:
 
   <property name="ext.javadoc"
                       value="http://documents.lockss.org/gamma-libs/" />
-  <!-- Needed by entitlement registry -->
+  <!-- Next three JARs needed by entitlement registry -->
   <property name="jackson.version" value="2.9.10" />
   <property name="jackson-core.jar" value="${lib}/jackson-core-${jackson.version}.jar" />
   <property name="jackson-databind.jar" value="${lib}/jackson-databind-${jackson.version}.8.jar" /><!-- NOTE: 2.9.10.8 -->
   <property name="jackson-annotations.jar" value="${lib}/jackson-annotations-${jackson.version}.jar" />
+
+  <property name="json-path.jar" value="${lib}/json-path-2.5.0.jar" />
 
   <property name="antlr.runtime.jar" value="${lib}/antlr-runtime-4.5.3.jar" />
   <property name="antlr.tools.jar" value="${lib}/antlr-4.5.3-complete.jar" />
@@ -585,10 +587,11 @@ Args:
     <pathelement path="${gentlyWEB-utils.jar}" />
 	<!-- Needed for DB migration-->
 	<pathelement path="${getopt.jar}" />
-    <!-- Needed by entitlement registry -->
+    <!-- Next three JARs needed by entitlement registry -->
     <pathelement path="${jackson-annotations.jar}" />
     <pathelement path="${jackson-core.jar}" />
     <pathelement path="${jackson-databind.jar}" />
+    <pathelement path="${json-path.jar}" />
     <!-- Needed for TDB tools: -->
     <pathelement path="${antlr.runtime.jar}" />
     <!-- Needed by XOAI -->
