@@ -2,10 +2,11 @@
 
   publisher <
     name = American Medical Association ;
-    info[platform] = SC
+    info[platform] = SC. Clockss version exists!
   >
 
-  plugin = org.lockss.plugin.silverchair.ama.AmaSilverchairPlugin
+  plugin = needs.plugin
+  #plugin = org.lockss.plugin.silverchair.ama.AmaSilverchairPlugin
   implicit < status ; year ; name ; param[year] >
   
   param[base_url] = https://jamanetwork.com/
