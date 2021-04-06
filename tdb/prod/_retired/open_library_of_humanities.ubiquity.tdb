@@ -101,7 +101,8 @@
 
       comment[publisher] = Open Library of Humanities
 #      param[base_url] = https://marvell.openlibhums.org/
-      #implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
+      plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
+      implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
 
       au < down ; 2016 ; 1 ; Marvell Studies Volume 2016 ; 2016 ; https://marvell.openlibhums.org/ >
       au < down ; 2017 ; 2 ; Marvell Studies Volume 2017 ; 2017 ; https://marvell.openlibhums.org/ >
@@ -120,6 +121,8 @@
 
       comment[publisher] = Open Library of Humanities
 #      param[base_url] = https://olh.openlibhums.org/
+      plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
+      implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
 
       au < down ; 2015 ; 1 ; Open Library of Humanities Volume 2015 ; 2015 ; https://olh.openlibhums.org/ >
       au < down ; 2016 ; 2 ; Open Library of Humanities Volume 2016 ; 2016 ; https://olh.openlibhums.org/ >
@@ -139,6 +142,8 @@
 
       comment[publisher] = Open Library of Humanities
 #      param[base_url] = http://www.mamsie.bbk.ac.uk/
+      plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
+      implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
 
       au < down ; 2009 ; 1 ; Studies in the Maternal Volume 2009 ; 2009 ; http://www.mamsie.bbk.ac.uk/ >
       au < down ; 2010 ; 2 ; Studies in the Maternal Volume 2010 ; 2010 ; http://www.mamsie.bbk.ac.uk/ >
@@ -164,6 +169,8 @@
 
       comment[publisher] = Open Library of Humanities
 #      param[base_url] = https://traj.openlibhums.org/
+      plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
+      implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
 #     changed name from "Conference" to "Journal"
 #     for the conference, articles are from the previous year.
 #     nothing published in 1995.
@@ -210,6 +217,8 @@
 
       comment[publisher] = Open Library of Humanities
 #      param[base_url] = http://www.comicsgrid.com/
+      plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
+      implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
 
       au < down ; 2013 ; 1 ; Comics Grid Volume 2013 ; 2013 ; http://www.comicsgrid.com/ >
       au < down ; 2014 ; 2 ; Comics Grid Volume 2014 ; 2014 ; http://www.comicsgrid.com/ >
