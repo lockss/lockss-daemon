@@ -509,11 +509,11 @@ public class SimpleHasher {
   }
 
   void fillInResult(HasherResult result, HasherStatus status, String errmsg) {
-    result.setRunnerStatus(status);
-    result.setRunnerError(errmsg);
     result.setBytesHashed(getBytesHashed());
     result.setFilesHashed(getFilesHashed());
     result.setElapsedTime(getElapsedTime());
+    result.setRunnerError(errmsg);
+    result.setRunnerStatus(status);
   }
 
   /**
