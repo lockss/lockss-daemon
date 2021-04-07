@@ -47,6 +47,8 @@ import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
 
+import javax.swing.text.html.HTML;
+
 /**
  * This filter will eventually replace
  * {@link TaylorAndFrancisHtmlHashFilterFactory}.
@@ -75,7 +77,9 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
             //need to keep the second \\b so we don't pick up articleMetrics, or articleTools
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "\\barticle\\b[^-_]"), // avoid match on pageArticle, article-card
             // KEEP abstract [abs, full, ref]
+            /* removing this, it is too broad the string 'abstract' occurs in many div classes
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "abstract"),
+             */
             // KEEP active content area [abs, full, ref, suppl]
             HtmlNodeFilters.tagWithAttribute("div", "id", "informationPanel"), // article info [abs]
             HtmlNodeFilters.tagWithAttribute("div", "id", "fulltextPanel"), // full text [full]
@@ -92,9 +96,13 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
             HtmlNodeFilters.tagWithAttributeRegex("div", "class","tocArticleEntry"),
             // Abstract
             // Full text html - used doi/(full|abs)/10.1080/01650424.2016.1167222
+            /* Do not include this anymore, we will grab title from elsewhere -- markom April 6, 2021
             HtmlNodeFilters.tagWithAttribute("div", "class","publicationContentTitle"),
+
             HtmlNodeFilters.tagWithAttributeRegex("div", "class","abstractSection "),
-            HtmlNodeFilters.tagWithAttribute("div", "class","hlFld-Fulltext"),                          
+            */
+            // likewise, this is too broad, grab the child divs instead, doing this lower in '//new content...' section
+//            HtmlNodeFilters.tagWithAttribute("div", "class","hlFld-Fulltext"),
             // Figures page (may or may not have contents
             HtmlNodeFilters.tagWithAttribute("div","class","figuresContent"),
             // showCitFormats form page 
@@ -104,7 +112,29 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
             //and one with multiple downloadable files
             //doi/suppl/10.1080/1070289X.2013.822381
             HtmlNodeFilters.tagWithAttribute("div","class", "supplemental-material-container"),
-            
+
+            // older content that we need on the ingest machines
+            //HtmlNodeFilters.allExceptSubtree(
+            //    HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "references"),
+            //    HtmlNodeFilters.tag("strong")
+            //),
+
+            // new content that we need to include to compare with older content, also, just like to keep this content
+            //HtmlNodeFilters.tagWithAttribute("div", "id", "references-Section"),
+              // grab the title of the article (note, the span tag, the div tag is not in the 'correct' order
+            HtmlNodeFilters.tagWithAttributeRegex("span","class","hlFld-title"),
+              // grab the author names, but exclude the email and affiliation
+//            HtmlNodeFilters.allExceptSubtree(
+//                HtmlNodeFilters.tagWithAttribute("a","class","entryAuthor"),
+//                HtmlNodeFilters.tag("span")
+//            ),
+            HtmlNodeFilters.tagWithAttribute("div", "class","hlFld-Abstract"),
+            HtmlNodeFilters.tagWithAttribute("div", "class","hlFld-KeywordText"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class","NLM_sec_level_1"),
+            // keep Ack[nowledgments] section
+            // Note, sometimes the acknowledgemetns does not have this div
+            // and is instead in a more generic NLM_sec_level_1 class
+            HtmlNodeFilters.tagWithAttribute("div", "id", "ack"),
 
             // we get rid of all tags at the end so won't keep links unless explicitly
             // included here
@@ -204,7 +234,40 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
              */
             HtmlNodeFilters.tagWithAttributeRegex("span", "class", "access-icon"),
             HtmlNodeFilters.tagWithAttribute("div", "class", "metrics-panel"),
-            
+
+            // older content that we do not need on the ingest machines
+            HtmlNodeFilters.allExceptSubtree(
+              HtmlNodeFilters.tag("h3"),
+              // in new content there is a table caption embedded in an h3 tag. wild
+              HtmlNodeFilters.tag("p")
+            ),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "summationHeading"),
+            HtmlNodeFilters.tagWithAttribute("div", "class", "sectionHeadingDiv"),
+            HtmlNodeFilters.tagWithAttribute("ul", "class", "references"),
+            HtmlNodeFilters.tagWithAttribute("div", "class", "pageRange"),
+//            HtmlNodeFilters.allExceptSubtree(
+                HtmlNodeFilters.tagWithAttribute("div", "class", "doiMeta clear"),
+//                HtmlNodeFilters.tagWithAttribute("span", "class", "hlFld-ContribAuthor")
+//            ),
+            // title and author info is embedded in the figures and tables (but with differing format, exclude
+            // figureViewerArticleInfo, tableViewerArticleInfo, for the new content this is a class name
+            HtmlNodeFilters.tagWithAttributeRegex("div", "id", "ViewerArticleInfo" ),
+            // old crawls have the tables at the bottom.
+            HtmlNodeFilters.tagWithAttributeRegex("div", "id", "table-content-" ),
+
+            // this is for both new and old crawls,
+            // figureDownloadOption tableDownloadOption
+            // old crawls have 'PowerPoint...' new crawls 'Display...'
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "DownloadOption" ),
+
+            // newer content that we need to exclude to agree with older content
+            // We would like to keep the references, but the new theme does not embed the list numbers while the old theme does0
+            // HtmlNodeFilters.tagWithAttribute("span", "class", "googleScholar-container"),
+            HtmlNodeFilters.tagWithAttributeRegex("h2", "id", "."),
+            HtmlNodeFilters.tagWithAttributeRegex("h2", "class", "."),
+            HtmlNodeFilters.tagWithAttribute("p", "class", "kwd-title"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "ViewerArticleInfo" ),
+
             new NodeFilter() {
               @Override
               public boolean accept(Node node) {
@@ -305,7 +368,7 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
   public static final Pattern PAT_CITING_ARTICLES = Pattern.compile("<li>(<div>)?(<strong>)?(Citing Articles:|Citations:|Citation information:|<a href=\"/doi/citedby/).*?</li>", Pattern.CASE_INSENSITIVE); 
   public static final String REP_CITING_ARTICLES = EMPTY_STRING;
   
-  public static final Pattern PAT_PUBLISHED_ONLINE = Pattern.compile("(<(b|h[23456])>)?(Published online:|Available online:|Version of record first published:)(</\\2>)?.*?>", Pattern.CASE_INSENSITIVE); 
+  public static final Pattern PAT_PUBLISHED_ONLINE = Pattern.compile("(<(b|h[23456])>)?(Published online:|Available online:|Version of record first published:)(</\\2>)?.*?>", Pattern.CASE_INSENSITIVE);
   public static final String REP_PUBLISHED_ONLINE = EMPTY_STRING;
   
   public static final Pattern PAT_PUB_ID = Pattern.compile("</pub-id>.*?</li>", Pattern.CASE_INSENSITIVE); 

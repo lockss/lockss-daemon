@@ -30,6 +30,11 @@
 package org.lockss.plugin.taylorandfrancis;
 
 import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
+import org.apache.commons.lang.StringUtils;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockArchivalUnit;
 import org.lockss.test.StringInputStream;
@@ -208,7 +213,6 @@ public class TestTafHtmlHashFilterFactory extends LockssTestCase {
   "<p>‘archival taxonomies’, " +
   "</p></td></tr></table></div>";
 
-
   /*
    *  Compare Html and HtmlHashFiltered
    */
@@ -249,5 +253,21 @@ public class TestTafHtmlHashFilterFactory extends LockssTestCase {
         new StringInputStream(withTocArticleEntry), Constants.DEFAULT_ENCODING);
     assertEquals(withoutTocArticleEntry, StringUtil.fromInputStream(actIn));
   }
-  
+
+  public void testOldCrawlAgreeNewCrawlActaOrtho() throws Exception {
+    // this tests whether an old html document crawl in 2016 will hash compare to the "same" article from 2021
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        getResourceAsStream("17453670810016597.2021.html"),
+        Constants.DEFAULT_ENCODING);
+    String lstr = StringUtil.fromInputStream(actIn);
+
+    InputStream actIn2 = fact.createFilteredInputStream(mau,
+        getResourceAsStream("17453670810016597.2016.html"),
+        Constants.DEFAULT_ENCODING);
+    String istr = StringUtil.fromInputStream(actIn2);
+    //log.info(StringUtils.difference(lstr,istr));
+    assertEquals(lstr, istr);
+
+  }
+
 }
