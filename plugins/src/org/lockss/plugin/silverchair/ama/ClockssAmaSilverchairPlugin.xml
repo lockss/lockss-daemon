@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>12</string>
+    <string>13</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -17,8 +17,13 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>12</string>
+    <string>13</string>
   </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>American Medical Association Plugin (CLOCKSS)</string>
+  </entry>
+  <entry>
   <entry>
     <string>au_name</string>
     <string>"American Medical Association Plugin (CLOCKSS), Base URL %s, Resource ID %d, Year %d", base_url, resource_id, year</string>
