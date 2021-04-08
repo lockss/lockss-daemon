@@ -2179,7 +2179,7 @@
     au < doNotProcess ; doNotProcess ; 2007 ; Education + Training Volume 49 ; 49 ; >
     au < manifest ; exists ; 2008 ; Education + Training Volume 50 ; 50 ; >
     au < manifest ; exists ; 2009 ; Education + Training Volume 51 ; 51 ; >
-    au < manifest ; exists ; 2010 ; Education + Training Volume 52 ; 52 ; >
+    au < ready ; exists ; 2010 ; Education + Training Volume 52 ; 52 ; >
     au < manifest ; exists ; 2011 ; Education + Training Volume 53 ; 53 ; >
     au < crawling ; exists ; 2012 ; Education + Training Volume 54 ; 54 ; >
     au < crawling ; exists ; 2013 ; Education + Training Volume 55 ; 55 ; >
@@ -3043,7 +3043,7 @@
     au < manifest ; exists ; 2008 ; History of Education Review Volume 37 ; 37 ; >
     au < manifest ; exists ; 2009 ; History of Education Review Volume 38 ; 38 ; >
     au < crawling ; exists ; 2010 ; History of Education Review Volume 39 ; 39 ; >
-    au < manifest ; exists ; 2011 ; History of Education Review Volume 40 ; 40 ; >
+    au < ready ; exists ; 2011 ; History of Education Review Volume 40 ; 40 ; >
     au < crawling ; exists ; 2012 ; History of Education Review Volume 41 ; 41 ; >
     au < crawling ; exists ; 2013 ; History of Education Review Volume 42 ; 42 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; History of Education Review Volume 43 ; 43 ; >
@@ -3575,8 +3575,8 @@
     au < manifest ; exists ; 2008 ; Information Management & Computer Security Volume 16 ; 16 ; >
     au < manifest ; exists ; 2009 ; Information Management & Computer Security Volume 17 ; 17 ; >
     au < crawling ; exists ; 2010 ; Information Management & Computer Security Volume 18 ; 18 ; >
-    au < manifest ; exists ; 2011 ; Information Management & Computer Security Volume 19 ; 19 ; >
-    au < manifest ; exists ; 2012 ; Information Management & Computer Security Volume 20 ; 20 ; >
+    au < ready ; exists ; 2011 ; Information Management & Computer Security Volume 19 ; 19 ; >
+    au < ready ; exists ; 2012 ; Information Management & Computer Security Volume 20 ; 20 ; >
     au < crawling ; exists ; 2013 ; Information Management & Computer Security Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Information Management & Computer Security Volume 22 ; 22 ; >
 
@@ -3631,7 +3631,7 @@
     au < manifest ; exists ; 2008 ; Information Technology & People Volume 21 ; 21 ; >
     au < manifest ; exists ; 2009 ; Information Technology & People Volume 22 ; 22 ; >
     au < crawling ; exists ; 2010 ; Information Technology & People Volume 23 ; 23 ; >
-    au < manifest ; exists ; 2011 ; Information Technology & People Volume 24 ; 24 ; >
+    au < ready ; exists ; 2011 ; Information Technology & People Volume 24 ; 24 ; >
     au < crawling ; exists ; 2012 ; Information Technology & People Volume 25 ; 25 ; >
     au < crawling ; exists ; 2013 ; Information Technology & People Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Information Technology & People Volume 27 ; 27 ; >
@@ -4197,7 +4197,7 @@
     comment[journal_id] = ijdrbe
 
     au < crawling ; exists ; 2010 ; International Journal of Disaster Resilience in the Built Environment Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2011 ; International Journal of Disaster Resilience in the Built Environment Volume 2 ; 2 ; >
+    au < ready ; exists ; 2011 ; International Journal of Disaster Resilience in the Built Environment Volume 2 ; 2 ; >
     au < crawling ; exists ; 2012 ; International Journal of Disaster Resilience in the Built Environment Volume 3 ; 3 ; >
     au < crawling ; exists ; 2013 ; International Journal of Disaster Resilience in the Built Environment Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Disaster Resilience in the Built Environment Volume 5 ; 5 ; >
@@ -4324,7 +4324,7 @@
     au < manifest ; exists ; 2009 ; International Journal of Energy Sector Management Volume 3 ; 3 ; >
     au < crawling ; exists ; 2010 ; International Journal of Energy Sector Management Volume 4 ; 4 ; >
     au < crawling ; exists ; 2011 ; International Journal of Energy Sector Management Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2012 ; International Journal of Energy Sector Management Volume 6 ; 6 ; >
+    au < ready ; exists ; 2012 ; International Journal of Energy Sector Management Volume 6 ; 6 ; >
     au < crawling ; exists ; 2013 ; International Journal of Energy Sector Management Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Energy Sector Management Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Energy Sector Management Volume 9 ; 9 ; >
