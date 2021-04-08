@@ -24,10 +24,10 @@
     #manifest page: http://illiesia.speciesfile.org/html/2019.html
     #No 2020 content as of 2020/2/01
 
-    au < ready ; exists ; 2005 ; Illiesia International Journal of Stonefly Research Volume 1 ; 1 ; 2005 ; > #no substance. crawl rules?
-    au < ready ; exists ; 2006 ; Illiesia International Journal of Stonefly Research Volume 2 ; 2 ; 2006 ; > #no substance. crawl rules?
-    au < ready ; exists ; 2007 ; Illiesia International Journal of Stonefly Research Volume 3 ; 3 ; 2007 ; > #no substance. crawl rules?
-    au < ready ; exists ; 2008 ; Illiesia International Journal of Stonefly Research Volume 4 ; 4 ; 2008 ; > #no substance. crawl rules?
+    au < crawling ; exists ; 2005 ; Illiesia International Journal of Stonefly Research Volume 1 ; 1 ; 2005 ; > #no substance. crawl rules?
+    au < crawling ; exists ; 2006 ; Illiesia International Journal of Stonefly Research Volume 2 ; 2 ; 2006 ; > #no substance. crawl rules?
+    au < crawling ; exists ; 2007 ; Illiesia International Journal of Stonefly Research Volume 3 ; 3 ; 2007 ; > #no substance. crawl rules?
+    au < crawling ; exists ; 2008 ; Illiesia International Journal of Stonefly Research Volume 4 ; 4 ; 2008 ; > #no substance. crawl rules?
     au < doNotProcess ; exists ; 2009 ; Illiesia International Journal of Stonefly Research Volume 5 ; 5 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; Illiesia International Journal of Stonefly Research Volume 6 ; 6 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Illiesia International Journal of Stonefly Research Volume 7 ; 7 ; 2011 ; >
