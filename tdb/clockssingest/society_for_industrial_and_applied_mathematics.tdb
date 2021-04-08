@@ -409,7 +409,7 @@
     au < finished ; manifest ; 2016 ; Journal on Imaging Sciences Volume 9 ; 9 ; http://epubs.siam.org/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Journal on Imaging Sciences Volume 10 ; 10 ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2018 ; Journal on Imaging Sciences Volume 11 ; 11 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2019 ; Journal on Imaging Sciences Volume 12 ; 12 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2019 ; Journal on Imaging Sciences Volume 12 ; 12 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2020 ; Journal on Imaging Sciences Volume 13 ; 13 ; https://epubs.siam.org/ ; >
 
   }
@@ -424,15 +424,15 @@
 
     param[journal_id] = sjmaah
 
-    au < finished ; crawling ; 1970 ; Journal on Mathematical Analysis Volume 1 ; 1 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1971 ; Journal on Mathematical Analysis Volume 2 ; 2 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 1972 ; Journal on Mathematical Analysis Volume 3 ; 3 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 1973 ; Journal on Mathematical Analysis Volume 4 ; 4 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 1974 ; Journal on Mathematical Analysis Volume 5 ; 5 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 1975 ; Journal on Mathematical Analysis Volume 6 ; 6 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1976 ; Journal on Mathematical Analysis Volume 7 ; 7 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 1977 ; Journal on Mathematical Analysis Volume 8 ; 8 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 1978 ; Journal on Mathematical Analysis Volume 9 ; 9 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 1970 ; Journal on Mathematical Analysis Volume 1 ; 1 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1971 ; Journal on Mathematical Analysis Volume 2 ; 2 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1972 ; Journal on Mathematical Analysis Volume 3 ; 3 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1973 ; Journal on Mathematical Analysis Volume 4 ; 4 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 1974 ; Journal on Mathematical Analysis Volume 5 ; 5 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1975 ; Journal on Mathematical Analysis Volume 6 ; 6 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1976 ; Journal on Mathematical Analysis Volume 7 ; 7 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1977 ; Journal on Mathematical Analysis Volume 8 ; 8 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1978 ; Journal on Mathematical Analysis Volume 9 ; 9 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 1979 ; Journal on Mathematical Analysis Volume 10 ; 10 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 1980 ; Journal on Mathematical Analysis Volume 11 ; 11 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1981 ; Journal on Mathematical Analysis Volume 12 ; 12 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
