@@ -7,6 +7,7 @@
     info[poller] = 3
 
   >
+  #Moved to Wolters Kluwer
 
     plugin = org.lockss.plugin.atypon.asco.ClockssAscoJournalsPlugin
     implicit < status ; status2 ; year ; name ; param[volume_name] ; param[base_url] ; hidden[proxy] >
@@ -70,7 +71,7 @@
       au < deepCrawl ; exists ; 2018 ; Journal of Clinical Oncology Volume 36 ; 36 ; http://ascopubs.org/ ; >
       au < deepCrawl ; exists ; 2019 ; Journal of Clinical Oncology Volume 37 ; 37 ; https://ascopubs.org/ ; >
       au < crawling ; exists ; 2020 ; Journal of Clinical Oncology Volume 38 ; 38 ; https://ascopubs.org/ ; >
-
+      #moved publishers
   }
 
   {
