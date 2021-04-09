@@ -85,10 +85,11 @@
       #Taylor & Francis back content delivery
       au < readySource ; crawling ; 2021 ; Taylor & Francis Back Content 2021_01 ; 2021_01 >
       au < readySource ; crawling ; 2021 ; Taylor & Francis Back Content 2021_02 ; 2021_02 >
-      au < notReady ; exists ; 2021 ; Taylor & Francis Back Content 2021_03 ; 2021_03 >
-      au < notReady ; exists ; 2021 ; Taylor & Francis Back Content 2021_04 ; 2021_04 >
-      au < notReady ; exists ; 2021 ; Taylor & Francis Back Content 2021_05 ; 2021_05 >
-      au < notReady ; exists ; 2021 ; Taylor & Francis Back Content 2021_06 ; 2021_06 >
+      au < readySource ; crawling ; 2021 ; Taylor & Francis Back Content 2021_03 ; 2021_03 >
+      au < expected ; exists ; 2021 ; Taylor & Francis Back Content 2021_04 ; 2021_04 >
+      au < expected ; exists ; 2021 ; Taylor & Francis Back Content 2021_05 ; 2021_05 >
+      au < expected ; exists ; 2021 ; Taylor & Francis Back Content 2021_06 ; 2021_06 >
+      au < expected ; exists ; 2021 ; Taylor & Francis Back Content 2021_07 ; 2021_07 >
 
       }
 
