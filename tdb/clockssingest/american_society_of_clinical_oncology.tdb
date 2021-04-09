@@ -15,6 +15,8 @@
     #moving to Atypon October 2016
     #param[base_url] = http://ascopubs.org/
 
+    #move to Wolters Kluwer 01/2021
+
   {
     title <
       name = Journal of Clinical Oncology ;
@@ -92,7 +94,7 @@
       issnl = 2378-9506
     >
 
-      #param[base_url] = http://jgo.ascopubs.org/ 
+      #param[base_url] = http://jgo.ascopubs.org/
       param[journal_id] = jgo
 
       au < finished ; finished ; 2015 ; Journal of Global Oncology Volume 1 ; 1 ; http://ascopubs.org/ ; reingest1.clockss.org:8082 >
@@ -112,7 +114,7 @@
       issnl = 2688-1527
     >
 
-      #param[base_url] = http://jop.ascopubs.org/ 
+      #param[base_url] = http://jop.ascopubs.org/
       param[journal_id] = op
 
       #title changed as of 2020
@@ -127,7 +129,7 @@
       issnl = 1554-7477
     >
 
-      #param[base_url] = http://jop.ascopubs.org/ 
+      #param[base_url] = http://jop.ascopubs.org/
       param[journal_id] = jop
 
       au < finished ; finished ; 2005 ; Journal of Oncology Practice Volume 1 ; 1 ; http://ascopubs.org/ ; reingest3.clockss.org:8083 >
