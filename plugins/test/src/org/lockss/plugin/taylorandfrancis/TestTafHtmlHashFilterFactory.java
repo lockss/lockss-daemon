@@ -69,7 +69,7 @@ public class TestTafHtmlHashFilterFactory extends LockssTestCase {
 
  
   private static final String withoutPrevNext =
-      " Volume 47 ";
+      "";//"" Volume 47 ";
   
   private static final String manifest =
 "<!DOCTYPE html>\n"+
@@ -154,7 +154,7 @@ public class TestTafHtmlHashFilterFactory extends LockssTestCase {
   
   
   private static final String withoutPeopleAlsoRead =  
-" Hello World Hello Article ";
+"";//"" Hello World Hello Article ";
   
   private static final String withArticleMetrics = 
 "    <div class=\"overview borderedmodule-last\">Hello Kitty" +      
@@ -172,12 +172,13 @@ public class TestTafHtmlHashFilterFactory extends LockssTestCase {
 "    </div>";  
 
   private static final String withoutArticleMetrics =  
-" Hello Kitty ";
+"";//"" Hello Kitty ";
   
   private static final String withTocArticleEntry = "<div class=\"tocArticleEntry\"> Hello Article </div>" +
   "<div class=\"tocArticleEntry include-metrics-panel\"> Hello World </div>";
   
-  private static final String withoutTocArticleEntry = " Hello Article Hello World ";
+  private static final String withoutTocArticleEntry =
+      "";//"" Hello Article Hello World ";
   
   private static final String hasBulletList =
   "    <div class=\"overview borderedmodule-last\">Hello World" +
@@ -254,15 +255,32 @@ public class TestTafHtmlHashFilterFactory extends LockssTestCase {
     assertEquals(withoutTocArticleEntry, StringUtil.fromInputStream(actIn));
   }
 
-  public void testOldCrawlAgreeNewCrawlActaOrtho() throws Exception {
+  public void testOldCrawlAgreeNewCrawlArticle() throws Exception {
     // this tests whether an old html document crawl in 2016 will hash compare to the "same" article from 2021
+    // the html documents are Open Access
     InputStream actIn = fact.createFilteredInputStream(mau,
-        getResourceAsStream("17453670810016597.2021.html"),
+        getResourceAsStream("ARTICLE17453670810016597.2021.html"),
         Constants.DEFAULT_ENCODING);
     String lstr = StringUtil.fromInputStream(actIn);
 
     InputStream actIn2 = fact.createFilteredInputStream(mau,
-        getResourceAsStream("17453670810016597.2016.html"),
+        getResourceAsStream("ARTICLE17453670810016597.2016.html"),
+        Constants.DEFAULT_ENCODING);
+    String istr = StringUtil.fromInputStream(actIn2);
+    //log.info(StringUtils.difference(lstr,istr));
+    assertEquals(lstr, istr);
+
+  }
+  public void testOldCrawlAgreeNewCrawlTableOfContents() throws Exception {
+    // this tests whether an old html document crawl in 2016 will hash compare to the "same" TOC from 2021
+    // the html documents are Open Access
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        getResourceAsStream("TOCtacl20384.2019.html"),
+        Constants.DEFAULT_ENCODING);
+    String lstr = StringUtil.fromInputStream(actIn);
+
+    InputStream actIn2 = fact.createFilteredInputStream(mau,
+        getResourceAsStream("TOCtacl20384.2016.html"),
         Constants.DEFAULT_ENCODING);
     String istr = StringUtil.fromInputStream(actIn2);
     //log.info(StringUtils.difference(lstr,istr));

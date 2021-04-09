@@ -40,7 +40,9 @@ import org.apache.commons.io.input.CountingInputStream;
 import org.htmlparser.*;
 import org.htmlparser.filters.OrFilter;
 import org.htmlparser.tags.*;
+import org.htmlparser.util.NodeList;
 import org.lockss.daemon.PluginException;
+import org.lockss.extractor.MetadataField;
 import org.lockss.filter.*;
 import org.lockss.filter.HtmlTagFilter.TagPair;
 import org.lockss.filter.html.*;
@@ -93,7 +95,7 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
             HtmlNodeFilters.tagWithAttribute("body", "class", "popupBody"),
             // New skin 2017 - re-examining all aspects from scratch
             // TOC (now Regex, to catch class= with multiple entries
-            HtmlNodeFilters.tagWithAttributeRegex("div", "class","tocArticleEntry"),
+            //HtmlNodeFilters.tagWithAttributeRegex("div", "class","tocArticleEntry"),
             // Abstract
             // Full text html - used doi/(full|abs)/10.1080/01650424.2016.1167222
             /* Do not include this anymore, we will grab title from elsewhere -- markom April 6, 2021
@@ -122,7 +124,7 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
             // new content that we need to include to compare with older content, also, just like to keep this content
             //HtmlNodeFilters.tagWithAttribute("div", "id", "references-Section"),
               // grab the title of the article (note, the span tag, the div tag is not in the 'correct' order
-            HtmlNodeFilters.tagWithAttributeRegex("span","class","hlFld-title"),
+            HtmlNodeFilters.tagWithAttributeRegex("span","class","hlFld-Title", true),
               // grab the author names, but exclude the email and affiliation
 //            HtmlNodeFilters.allExceptSubtree(
 //                HtmlNodeFilters.tagWithAttribute("a","class","entryAuthor"),
@@ -135,6 +137,17 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
             // Note, sometimes the acknowledgemetns does not have this div
             // and is instead in a more generic NLM_sec_level_1 class
             HtmlNodeFilters.tagWithAttribute("div", "id", "ack"),
+
+            // keep on new content from issue toc
+              // some children of these get removed below
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class","tocAuthors"),
+            /*
+            HtmlNodeFilters.tagWithAttribute("a", "class","expander open"),
+            HtmlNodeFilters.tagWithAttribute("div", "class","yearContent open"),
+            */
+            // we want the value of this tag <input type="hidden" name="title" value="Alcheringa: An Australasian Journal of Palaeontology (2014)">
+            // sadly, not sure how to do so
+
 
             // we get rid of all tags at the end so won't keep links unless explicitly
             // included here
@@ -152,6 +165,18 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
                       }
                     }
                   }
+                  // the a tag for entryTitle on old content has an h3 child,
+                  // this is a bonkers situation, but there is an h3 tag we get rid of elsewhere that also gets rid of
+                  // this one, so lets change it to a p tag. :P - markom 4/9/2021
+                  String tagClass = ((LinkTag) node).getAttribute("class");
+                  if(tagClass != null && !tagClass.isEmpty() && tagClass.equals("entryTitle")) {
+                    Node child = node.getFirstChild();
+                    if (child instanceof HeadingTag) {
+                      //log.info(((HeadingTag) child).getStringText());
+                      ((HeadingTag) child).setTagName("p");
+                    }
+                  }
+
                 }
                 return false;
               }
@@ -235,6 +260,7 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
             HtmlNodeFilters.tagWithAttributeRegex("span", "class", "access-icon"),
             HtmlNodeFilters.tagWithAttribute("div", "class", "metrics-panel"),
 
+            // FOR ARTICLE PAGES
             // older content that we do not need on the ingest machines
             HtmlNodeFilters.allExceptSubtree(
               HtmlNodeFilters.tag("h3"),
@@ -261,12 +287,43 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "DownloadOption" ),
 
             // newer content that we need to exclude to agree with older content
-            // We would like to keep the references, but the new theme does not embed the list numbers while the old theme does0
+            // We would like to keep the references, but the new theme does not embed the list numbers while the old theme does
             // HtmlNodeFilters.tagWithAttribute("span", "class", "googleScholar-container"),
             HtmlNodeFilters.tagWithAttributeRegex("h2", "id", "."),
             HtmlNodeFilters.tagWithAttributeRegex("h2", "class", "."),
             HtmlNodeFilters.tagWithAttribute("p", "class", "kwd-title"),
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "ViewerArticleInfo" ),
+
+            // ISSUE TOC PAGES
+            // OLD CONTENT
+            HtmlNodeFilters.tagWithAttribute("div", "class","overview borderedmodule-last"),
+            HtmlNodeFilters.tagWithAttributeRegex("ul", "class","doimetalist"),
+            HtmlNodeFilters.allExceptSubtree(
+                HtmlNodeFilters.tag("h4"),
+                // in old content there is a span tag embedded in an h4 tag which has author name in it,
+                // the rest of the h4 has 'pages <int>' and is different than the new format
+                HtmlNodeFilters.tag("span")
+            ),
+            HtmlNodeFilters.allExceptSubtree(
+                HtmlNodeFilters.tagWithAttribute("span", "class", "articleEntryAuthorsLinks"),
+                // in new content there is a table caption embedded in an h3 tag. wild
+                HtmlNodeFilters.tag("a")
+            ),
+            HtmlNodeFilters.tagWithAttribute("div", "class","ft"),
+            HtmlNodeFilters.tagWithAttribute("div", "class","article-type"),
+            // NEW CONTENT
+            HtmlNodeFilters.tagWithAttribute("div", "class","article-type"),
+            //HtmlNodeFilters.tagWithAttributeRegex("div", "class","art_title"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class","tocPageRange"),
+            HtmlNodeFilters.tagWithAttribute("div", "class","tocDeliverFormatsLinks"),
+            HtmlNodeFilters.tagWithAttribute("div", "class","tocEPubDate"),
+
+
+
+            /*
+            HtmlNodeFilters.tagWithAttribute("span", "class","slider-vol-year"),
+            HtmlNodeFilters.tagWithAttribute("a", "class",""),
+            */
 
             new NodeFilter() {
               @Override
