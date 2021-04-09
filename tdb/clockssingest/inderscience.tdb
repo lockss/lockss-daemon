@@ -2691,7 +2691,7 @@
       au < finished ; finished ; 2017 ; International Journal of Design Engineering Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2018 ; International Journal of Design Engineering Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; International Journal of Design Engineering Volume 9 [partial] ; 9 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 > #issue 2 not online
-      au < manifest ; exists ; 2020 ; International Journal of Design Engineering Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; >
+      au < ready ; exists ; 2020 ; International Journal of Design Engineering Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -3667,7 +3667,7 @@
       au < doNotProcess ; exists ; 2007 ; International Journal of Environment, Workplace and Employment Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2008-2018 ; International Journal of Environment, Workplace and Employment Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < testing ; exists ; 2019 ; International Journal of Environment, Workplace and Employment Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2020 ; International Journal of Environment, Workplace and Employment Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
+      au < ready ; exists ; 2020 ; International Journal of Environment, Workplace and Employment Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -6660,7 +6660,7 @@
       au < finished ; finished ; 2017 ; International Journal of Mobile Network Design and Innovation Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2018 ; International Journal of Mobile Network Design and Innovation Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2019 ; International Journal of Mobile Network Design and Innovation Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < manifest ; exists ; 2020 ; International Journal of Mobile Network Design and Innovation Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; >
+      au < ready ; exists ; 2020 ; International Journal of Mobile Network Design and Innovation Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -9792,7 +9792,7 @@
       au < finished ; finished ; 2017 ; International Journal of Water Volume 11 ; 11 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2018 ; International Journal of Water Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; International Journal of Water Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < manifest ; exists ; 2020 ; International Journal of Water Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; >
+      au < ready ; exists ; 2020 ; International Journal of Water Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; >
 
     }
 

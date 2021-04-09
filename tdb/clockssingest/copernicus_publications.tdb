@@ -608,17 +608,17 @@
 
       au < manifest ; exists ; 1998 ; 1998 ; Fossil Record Reports Volume 1 ; 1 ; >
       au < manifest ; exists ; 1999 ; 1999 ; Fossil Record Reports Volume 2 ; 2 ; >
-      au < manifest ; exists ; 2000 ; 2000 ; Fossil Record Reports Volume 3 ; 3 ; >
-      au < manifest ; exists ; 2001 ; 2001 ; Fossil Record Reports Volume 4 ; 4 ; >
-      au < manifest ; exists ; 2002 ; 2002 ; Fossil Record Reports Volume 5 ; 5 ; >
-      au < manifest ; exists ; 2003 ; 2003 ; Fossil Record Reports Volume 6 ; 6 ; >
-      au < manifest ; exists ; 2004 ; 2004 ; Fossil Record Reports Volume 7 ; 7 ; >
-      au < manifest ; exists ; 2005 ; 2005 ; Fossil Record Reports Volume 8 ; 8 ; >
-      au < manifest ; exists ; 2006 ; 2006 ; Fossil Record Reports Volume 9 ; 9 ; >
-      au < manifest ; exists ; 2007 ; 2007 ; Fossil Record Reports Volume 10 ; 10 ; >
-      au < manifest ; exists ; 2008 ; 2008 ; Fossil Record Reports Volume 11 ; 11 ; >
-      au < manifest ; exists ; 2009 ; 2009 ; Fossil Record Reports Volume 12 ; 12 ; >
-      au < manifest ; exists ; 2010 ; 2010 ; Fossil Record Reports Volume 13 ; 13 ; >
+      au < ready ; exists ; 2000 ; 2000 ; Fossil Record Reports Volume 3 ; 3 ; >
+      au < ready ; exists ; 2001 ; 2001 ; Fossil Record Reports Volume 4 ; 4 ; >
+      au < ready ; exists ; 2002 ; 2002 ; Fossil Record Reports Volume 5 ; 5 ; >
+      au < ready ; exists ; 2003 ; 2003 ; Fossil Record Reports Volume 6 ; 6 ; >
+      au < ready ; exists ; 2004 ; 2004 ; Fossil Record Reports Volume 7 ; 7 ; >
+      au < ready ; exists ; 2005 ; 2005 ; Fossil Record Reports Volume 8 ; 8 ; >
+      au < ready ; exists ; 2006 ; 2006 ; Fossil Record Reports Volume 9 ; 9 ; >
+      au < ready ; exists ; 2007 ; 2007 ; Fossil Record Reports Volume 10 ; 10 ; >
+      au < ready ; exists ; 2008 ; 2008 ; Fossil Record Reports Volume 11 ; 11 ; >
+      au < ready ; exists ; 2009 ; 2009 ; Fossil Record Reports Volume 12 ; 12 ; >
+      au < ready ; exists ; 2010 ; 2010 ; Fossil Record Reports Volume 13 ; 13 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Fossil Record Reports Volume 14 [abstract only] ; 14 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Fossil Record Reports Volume 15 [abstract only] ; 15 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Fossil Record Reports Volume 16 [abstract only] ; 16 ; >
@@ -1388,11 +1388,12 @@
 
       # CLOCKSS only
       attr[journal_id] = piahs
-      param[home_url] = https://www.proc-iahs.net/
+      #param[home_url] = https://www.proc-iahs.net/ --- 301 Moved Permanently
       #param[base_url] = https://piahs.copernicus.org/articles/
       param[base_url] = https://piahs.copernicus.org/
       #https://piahs.copernicus.org/articles/volumes.html works fine
       #param[home_url] = https://www.proceedings-international-association-of-hydrological-sciences.net/
+      param[home_url] = https://www.proceedings-iahs.net/
 
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Proceedings of the International Association of Hydrological Sciences Volume 364 ; 364 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 365 ; 365 ; >
