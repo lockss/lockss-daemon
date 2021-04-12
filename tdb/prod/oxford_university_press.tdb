@@ -2773,19 +2773,19 @@
     au < exists ; 2005 ; 2005 ; British Journal of Surgery Volume 92 ; 92 >
     au < exists ; 2006 ; 2006 ; British Journal of Surgery Volume 93 ; 93 >
     au < exists ; 2007 ; 2007 ; British Journal of Surgery Volume 94 ; 94 >
-    au < exists ; 2008 ; 2008 ; British Journal of Surgery Volume 95 ; 95 >
-    au < exists ; 2009 ; 2009 ; British Journal of Surgery Volume 96 ; 96 >
-    au < exists ; 2010 ; 2010 ; British Journal of Surgery Volume 97 ; 97 >
-    au < exists ; 2011 ; 2011 ; British Journal of Surgery Volume 98 ; 98 >
-    au < exists ; 2012 ; 2012 ; British Journal of Surgery Volume 99 ; 99 >
-    au < exists ; 2013 ; 2013 ; British Journal of Surgery Volume 100 ; 100 >
-    au < exists ; 2014 ; 2014 ; British Journal of Surgery Volume 101 ; 101 >
-    au < exists ; 2015 ; 2015 ; British Journal of Surgery Volume 102 ; 102 >
-    au < exists ; 2016 ; 2016 ; British Journal of Surgery Volume 103 ; 103 >
-    au < exists ; 2017 ; 2017 ; British Journal of Surgery Volume 104 ; 104 >
-    au < exists ; 2018 ; 2018 ; British Journal of Surgery Volume 105 ; 105 >
-    au < exists ; 2019 ; 2019 ; British Journal of Surgery Volume 106 ; 106 >
-    au < exists ; 2020 ; 2020 ; British Journal of Surgery Volume 107 ; 107 >
+    au < manifest ; 2008 ; 2008 ; British Journal of Surgery Volume 95 ; 95 >
+    au < manifest ; 2009 ; 2009 ; British Journal of Surgery Volume 96 ; 96 >
+    au < manifest ; 2010 ; 2010 ; British Journal of Surgery Volume 97 ; 97 >
+    au < manifest ; 2011 ; 2011 ; British Journal of Surgery Volume 98 ; 98 >
+    au < manifest ; 2012 ; 2012 ; British Journal of Surgery Volume 99 ; 99 >
+    au < manifest ; 2013 ; 2013 ; British Journal of Surgery Volume 100 ; 100 >
+    au < manifest ; 2014 ; 2014 ; British Journal of Surgery Volume 101 ; 101 >
+    au < manifest ; 2015 ; 2015 ; British Journal of Surgery Volume 102 ; 102 >
+    au < manifest ; 2016 ; 2016 ; British Journal of Surgery Volume 103 ; 103 >
+    au < manifest ; 2017 ; 2017 ; British Journal of Surgery Volume 104 ; 104 >
+    au < manifest ; 2018 ; 2018 ; British Journal of Surgery Volume 105 ; 105 >
+    au < manifest ; 2019 ; 2019 ; British Journal of Surgery Volume 106 ; 106 >
+    au < manifest ; 2020 ; 2020 ; British Journal of Surgery Volume 107 ; 107 >
 
   }
 
@@ -6444,7 +6444,7 @@
     param[journal_id] = gastro
     #2011 volume 1 to 2020 volume 10 had been processed in Genetics Society of America
 
-    au < exists ; 2021 ; 2021 ; G3: Genes, Genomes, Genetics Volume 11 ; 11 >
+    au < manifest ; 2021 ; 2021 ; G3: Genes, Genomes, Genetics Volume 11 ; 11 >
 
   }
 
@@ -6460,7 +6460,7 @@
     param[journal_id] = genetics
     #1916 volume 1 to 2020 volume 216 had been processed in Genetics Society of America
 
-    au < exists ; 2021 ; 2021 ; Genetics Volume 217-219 ; 217-219 >
+    au < manifest ; 2021 ; 2021 ; Genetics Volume 217-219 ; 217-219 >
 
   }
 
@@ -15399,7 +15399,7 @@
       au < doNotProcess ; 2017 ; 2017 ; The Plant Cell Volume 29 ; 29 >
       au < doNotProcess ; 2018 ; 2018 ; The Plant Cell Volume 30 ; 30 >
       au < doNotProcess ; 2019 ; 2019 ; The Plant Cell Volume 31 ; 31 >
-      au < exists ; 2020 ; 2020 ; The Plant Cell Volume 32 ; 32 >
+      au < manifest ; 2020 ; 2020 ; The Plant Cell Volume 32 ; 32 >
 
   }
 
@@ -18760,19 +18760,19 @@
     au < exists ; 2005 ; 2005 ; The Journal of Aesthetics & Art Criticism Volume 63 ; 63 >
     au < exists ; 2006 ; 2006 ; The Journal of Aesthetics & Art Criticism Volume 64 ; 64 >
     au < exists ; 2007 ; 2007 ; The Journal of Aesthetics & Art Criticism Volume 65 ; 65 >
-    au < exists ; 2008 ; 2008 ; The Journal of Aesthetics & Art Criticism Volume 66 ; 66 >
-    au < exists ; 2009 ; 2009 ; The Journal of Aesthetics & Art Criticism Volume 67 ; 67 >
-    au < exists ; 2010 ; 2010 ; The Journal of Aesthetics & Art Criticism Volume 68 ; 68 >
-    au < exists ; 2011 ; 2011 ; The Journal of Aesthetics & Art Criticism Volume 69 ; 69 >
-    au < exists ; 2012 ; 2012 ; The Journal of Aesthetics & Art Criticism Volume 70 ; 70 >
-    au < exists ; 2013 ; 2013 ; The Journal of Aesthetics & Art Criticism Volume 71 ; 71 >
-    au < exists ; 2014 ; 2014 ; The Journal of Aesthetics & Art Criticism Volume 72 ; 72 >
-    au < exists ; 2015 ; 2015 ; The Journal of Aesthetics & Art Criticism Volume 73 ; 73 >
-    au < exists ; 2016 ; 2016 ; The Journal of Aesthetics & Art Criticism Volume 74 ; 74 >
-    au < exists ; 2017 ; 2017 ; The Journal of Aesthetics & Art Criticism Volume 75 ; 75 >
-    au < exists ; 2018 ; 2018 ; The Journal of Aesthetics & Art Criticism Volume 76 ; 76 >
-    au < exists ; 2019 ; 2019 ; The Journal of Aesthetics & Art Criticism Volume 77 ; 77 >
-    au < exists ; 2020 ; 2020 ; The Journal of Aesthetics & Art Criticism Volume 78 ; 78 >
+    au < manifest ; 2008 ; 2008 ; The Journal of Aesthetics & Art Criticism Volume 66 ; 66 >
+    au < manifest ; 2009 ; 2009 ; The Journal of Aesthetics & Art Criticism Volume 67 ; 67 >
+    au < manifest ; 2010 ; 2010 ; The Journal of Aesthetics & Art Criticism Volume 68 ; 68 >
+    au < manifest ; 2011 ; 2011 ; The Journal of Aesthetics & Art Criticism Volume 69 ; 69 >
+    au < manifest ; 2012 ; 2012 ; The Journal of Aesthetics & Art Criticism Volume 70 ; 70 >
+    au < manifest ; 2013 ; 2013 ; The Journal of Aesthetics & Art Criticism Volume 71 ; 71 >
+    au < manifest ; 2014 ; 2014 ; The Journal of Aesthetics & Art Criticism Volume 72 ; 72 >
+    au < manifest ; 2015 ; 2015 ; The Journal of Aesthetics & Art Criticism Volume 73 ; 73 >
+    au < manifest ; 2016 ; 2016 ; The Journal of Aesthetics & Art Criticism Volume 74 ; 74 >
+    au < manifest ; 2017 ; 2017 ; The Journal of Aesthetics & Art Criticism Volume 75 ; 75 >
+    au < manifest ; 2018 ; 2018 ; The Journal of Aesthetics & Art Criticism Volume 76 ; 76 >
+    au < manifest ; 2019 ; 2019 ; The Journal of Aesthetics & Art Criticism Volume 77 ; 77 >
+    au < manifest ; 2020 ; 2020 ; The Journal of Aesthetics & Art Criticism Volume 78 ; 78 >
 
   }
 

@@ -61,7 +61,7 @@
       au < aap.AAPDrupalPlugin ; released ; 2019 ; AAP Grand Rounds Volume 41 ; 41 ; https://aapgrandrounds.aappublications.org/ >
       au < aap.AAPDrupalPlugin ; notReady ; 2019 ; AAP Grand Rounds Volume 42 ; 42 ; https://aapgrandrounds.aappublications.org/ > # Probe url: https://aapgrand.smart01.highwire.org/content/42/3/35 outside of crawl spec
       au < aap.AAPDrupalPlugin ; released ; 2020 ; AAP Grand Rounds Volume 43 ; 43 ; https://aapgrandrounds.aappublications.org/ > 
-      au < aap.AAPDrupalPlugin ; exists ; 2020 ; AAP Grand Rounds Volume 44 ; 44 ; https://aapgrandrounds.aappublications.org/ > 
+      au < aap.AAPDrupalPlugin ; manifest ; 2020 ; AAP Grand Rounds Volume 44 ; 44 ; https://aapgrandrounds.aappublications.org/ > 
 
     }
 
@@ -149,7 +149,7 @@
       au < aap.AAPDrupalPlugin ; released ; 2017 ; Hospital Pediatrics Volume 7 ; 7 ; https://hosppeds.aappublications.org/ >
       au < aap.AAPDrupalPlugin ; released ; 2018 ; Hospital Pediatrics Volume 8 ; 8 ; https://hosppeds.aappublications.org/ >
       au < aap.AAPDrupalPlugin ; released ; 2019 ; Hospital Pediatrics Volume 9 ; 9 ; https://hosppeds.aappublications.org/ >
-      au < aap.AAPDrupalPlugin ; exists ; 2020 ; Hospital Pediatrics Volume 10 ; 10 ; https://hosppeds.aappublications.org/ >
+      au < aap.AAPDrupalPlugin ; manifest ; 2020 ; Hospital Pediatrics Volume 10 ; 10 ; https://hosppeds.aappublications.org/ >
 
     }
     
@@ -189,7 +189,7 @@
       au < aap.AAPDrupalPlugin ; released ; 2017 ; NeoReviews Volume 18 ; 18 ; http://neoreviews.aappublications.org/ >
       au < aap.AAPDrupalPlugin ; released ; 2018 ; NeoReviews Volume 19 ; 19 ; http://neoreviews.aappublications.org/ >
       au < aap.AAPDrupalPlugin ; released ; 2019 ; NeoReviews Volume 20 ; 20 ; https://neoreviews.aappublications.org/ >
-      au < aap.AAPDrupalPlugin ; exists ; 2020 ; NeoReviews Volume 21 ; 21 ; https://neoreviews.aappublications.org/ >
+      au < aap.AAPDrupalPlugin ; manifest ; 2020 ; NeoReviews Volume 21 ; 21 ; https://neoreviews.aappublications.org/ >
 
     }
 
@@ -354,7 +354,7 @@
       au < aap.AAPDrupalPlugin ; released ; 2019 ; Pediatrics Volume 143 ; 143 ; https://pediatrics.aappublications.org/ >
       au < aap.AAPDrupalPlugin ; released ; 2019 ; Pediatrics Volume 144 ; 144 ; https://pediatrics.aappublications.org/ >
       au < aap.AAPDrupalPlugin ; manifest ; 2020 ; Pediatrics Volume 145 ; 145 ; https://pediatrics.aappublications.org/ >
-      au < aap.AAPDrupalPlugin ; exists ; 2020 ; Pediatrics Volume 146 ; 146 ; https://pediatrics.aappublications.org/ >
+      au < aap.AAPDrupalPlugin ; manifest ; 2020 ; Pediatrics Volume 146 ; 146 ; https://pediatrics.aappublications.org/ >
 
     }
 
@@ -414,7 +414,7 @@
       au < aap.AAPDrupalPlugin ; released ; 2017 ; Pediatrics in Review Volume 38 ; 38 ; https://pedsinreview.aappublications.org/ >
       au < aap.AAPDrupalPlugin ; released ; 2018 ; Pediatrics in Review Volume 39 ; 39 ; https://pedsinreview.aappublications.org/ >
       au < aap.AAPDrupalPlugin ; released ; 2019 ; Pediatrics in Review Volume 40 ; 40 ; https://pedsinreview.aappublications.org/ >
-      au < aap.AAPDrupalPlugin ; exists ; 2020 ; Pediatrics in Review Volume 41 ; 41 ; https://pedsinreview.aappublications.org/ >
+      au < aap.AAPDrupalPlugin ; manifest ; 2020 ; Pediatrics in Review Volume 41 ; 41 ; https://pedsinreview.aappublications.org/ >
 
     }
 

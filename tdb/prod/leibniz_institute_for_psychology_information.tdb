@@ -112,7 +112,7 @@
       param[journal_id] = meth
 
       au < ojs3.Ojs3Plugin ; manifest ; 2020 ; Methodology Volume 16 ; 16 ; 2020 ; https://meth.psychopen.eu/ > #no substance urls
-      au < ojs3.Ojs3Plugin ; expected ; 2021 ; Methodology Volume 17 ; 17 ; 2021 ; https://meth.psychopen.eu/ >
+      au < ojs3.Ojs3Plugin ; manifest ; 2021 ; Methodology Volume 17 ; 17 ; 2021 ; https://meth.psychopen.eu/ >
 
   }
 

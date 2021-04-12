@@ -204,7 +204,7 @@
       au < doNotProcess ; 2017 ; 3 ; Open Library of Humanities Volume 2017 ; 2017 ; >
       au < doNotProcess ; 2018 ; 4 ; Open Library of Humanities Volume 2018 ; 2018 ; >
       au < doNotProcess ; 2019 ; 5 ; Open Library of Humanities Volume 2019 ; 2019 ; >
-      au < exists ; 2020 ; 6 ; Open Library of Humanities Volume 2020 ; 2020 ; >
+      au < manifest ; 2020 ; 6 ; Open Library of Humanities Volume 2020 ; 2020 ; >
 
   }
 
@@ -228,7 +228,7 @@
       au < doNotProcess ; 2017 ; 9 ; Studies in the Maternal Volume 2017 ; 2017 ; >
       au < doNotProcess ; 2018 ; 10 ; Studies in the Maternal Volume 2018 ; 2018 ; >
       au < doNotProcess ; 2019 ; 11 ; Studies in the Maternal Volume 2019 ; 2019 ; >
-      au < exists ; 2020 ; 12 ; Studies in the Maternal Volume 2020 ; 2020 ; >
+      au < manifest ; 2020 ; 12 ; Studies in the Maternal Volume 2020 ; 2020 ; >
 
   }
 
@@ -246,13 +246,13 @@
 
       au < doesNotExist ; 1991 ; 1 ; Theoretical Roman Archaeology Conference Volume 1991 ; 1991 ; >
       au < doesNotExist ; 1992 ; 2 ; Theoretical Roman Archaeology Conference Volume 1992 ; 1992 ; >
-      au < exists ; 1993 ; 3 ; Theoretical Roman Archaeology Conference Volume 1993 ; 1993 ; ># 1991 articles
+      au < manifest ; 1993 ; 3 ; Theoretical Roman Archaeology Conference Volume 1993 ; 1993 ; ># 1991 articles
       au < doesNotExist ; 1994 ; 4 ; Theoretical Roman Archaeology Conference Volume 1994 ; 1994 ; >
-      au < exists ; 1995 ; 5 ; Theoretical Roman Archaeology Conference Volume 1995 ; 1995 ; ># 1992 and 1994 articles
+      au < manifest ; 1995 ; 5 ; Theoretical Roman Archaeology Conference Volume 1995 ; 1995 ; ># 1992 and 1994 articles
       au < doesNotExist ; 1996 ; 6 ; Theoretical Roman Archaeology Conference Volume 1996 ; 1996 ; >
-      au < exists ; 1997 ; 7 ; Theoretical Roman Archaeology Conference Volume 1997 ; 1997 ; ># 1996 articles
-      au < exists ; 1998 ; 8 ; Theoretical Roman Archaeology Conference Volume 1998 ; 1998 ; >
-      au < exists ; 1999 ; 9 ; Theoretical Roman Archaeology Conference Volume 1999 ; 1999 ; >
+      au < manifest ; 1997 ; 7 ; Theoretical Roman Archaeology Conference Volume 1997 ; 1997 ; ># 1996 articles
+      au < manifest ; 1998 ; 8 ; Theoretical Roman Archaeology Conference Volume 1998 ; 1998 ; >
+      au < manifest ; 1999 ; 9 ; Theoretical Roman Archaeology Conference Volume 1999 ; 1999 ; >
       au < doNotProcess ; 2000 ; 10 ; Theoretical Roman Archaeology Conference Volume 2000 ; 2000 ; >
       au < doNotProcess ; 2001 ; 11 ; Theoretical Roman Archaeology Conference Volume 2001 ; 2001 ; >
       au < doNotProcess ; 2002 ; 12 ; Theoretical Roman Archaeology Conference Volume 2002 ; 2002 ; >
@@ -270,10 +270,10 @@
       au < doNotProcess ; 2014 ; 24 ; Theoretical Roman Archaeology Conference Volume 2014 ; 2014 ; >
       au < doNotProcess ; 2015 ; 25 ; Theoretical Roman Archaeology Conference Volume 2015 ; 2015 ; >
       au < doesNotExist ; 2016 ; 26 ; Theoretical Roman Archaeology Journal Volume 2016 ; 2016 ; >
-      au < exists ; 2017 ; 27 ; Theoretical Roman Archaeology Journal Volume 2017 ; 2017 ; >
+      au < manifest ; 2017 ; 27 ; Theoretical Roman Archaeology Journal Volume 2017 ; 2017 ; >
       au < doNotProcess ; 2018 ; 28 ; Theoretical Roman Archaeology Journal Volume 2018 ; 2018 ; >
       au < doNotProcess ; 2019 ; 29 ; Theoretical Roman Archaeology Journal Volume 2019 ; 2019 ; >
-      au < exists ; 2020 ; 30 ; Theoretical Roman Archaeology Journal Volume 2020 ; 2020 ; >
+      au < manifest ; 2020 ; 30 ; Theoretical Roman Archaeology Journal Volume 2020 ; 2020 ; >
 
   }
 }
