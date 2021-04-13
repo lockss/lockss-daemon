@@ -123,9 +123,9 @@
     param[journal_id] = leedff
 
     au < crawling ; exists ; 1982 ; The Leading Edge Volume 1 ; 1 ; https://library.seg.org/ ; >
-    au < ready ; exists ; 1983 ; The Leading Edge Volume 2 ; 2 ; https://library.seg.org/ ; >
+    au < crawling ; exists ; 1983 ; The Leading Edge Volume 2 ; 2 ; https://library.seg.org/ ; >
     au < crawling ; exists ; 1984 ; The Leading Edge Volume 3 ; 3 ; https://library.seg.org/ ; >
-    au < ready ; exists ; 1985 ; The Leading Edge Volume 4 ; 4 ; https://library.seg.org/ ; >
+    au < crawling ; exists ; 1985 ; The Leading Edge Volume 4 ; 4 ; https://library.seg.org/ ; >
     au < crawling ; exists ; 1986 ; The Leading Edge Volume 5 ; 5 ; https://library.seg.org/ ; >
     au < crawling ; exists ; 1987 ; The Leading Edge Volume 6 ; 6 ; https://library.seg.org/ ; >
     au < notReady ; exists ; 1988 ; The Leading Edge Volume 7 ; 7 ; https://library.seg.org/ ; >
@@ -199,7 +199,7 @@
     au < notReady ; exists ; 1997 ; Journal of Environmental and Engineering Geophysics Volume 2 ; 2  ; https://library.seg.org/ ; >
     au < crawling ; exists ; 1998 ; Journal of Environmental and Engineering Geophysics Volume 3 ; 3  ; https://library.seg.org/ ; >
     au < notReady ; exists ; 1999 ; Journal of Environmental and Engineering Geophysics Volume 4 ; 4  ; https://library.seg.org/ ; >
-    au < ready ; exists ; 2000 ; Journal of Environmental and Engineering Geophysics Volume 5 ; 5  ; https://library.seg.org/ ; >
+    au < crawling ; exists ; 2000 ; Journal of Environmental and Engineering Geophysics Volume 5 ; 5  ; https://library.seg.org/ ; >
     au < crawling ; exists ; 2001 ; Journal of Environmental and Engineering Geophysics Volume 6 ; 6  ; https://library.seg.org/ ; >
     au < frozen ; exists ; 2002 ; Journal of Environmental and Engineering Geophysics Volume 7 ; 7  ; https://library.seg.org/ ; >
     au < notReady ; exists ; 2003 ; Journal of Environmental and Engineering Geophysics Volume 8 ; 8  ; https://library.seg.org/ ; >
