@@ -232,7 +232,7 @@
     au < finished ; manifest ; 2016 ; Journal on Computing Volume 45 ; 45 ; http://epubs.siam.org/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Journal on Computing Volume 46 ; 46 ; http://epubs.siam.org/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2018 ; Journal on Computing Volume 47 ; 47 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
-    au < finished ; frozen ; 2019 ; Journal on Computing Volume 48 ; 48 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Journal on Computing Volume 48 ; 48 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2020 ; Journal on Computing Volume 49 ; 49 ; https://epubs.siam.org/ ; >
 
   }
@@ -361,7 +361,7 @@
     au < finished ; manifest ; 2016 ; Journal on Discrete Mathematics Volume 30 ; 30 ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2017 ; Journal on Discrete Mathematics Volume 31 ; 31 ; http://epubs.siam.org/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2018 ; Journal on Discrete Mathematics Volume 32 ; 32 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2019 ; Journal on Discrete Mathematics Volume 33 ; 33 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Journal on Discrete Mathematics Volume 33 ; 33 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2020 ; Journal on Discrete Mathematics Volume 34 ; 34 ; https://epubs.siam.org/ ; >
 
   }
@@ -384,7 +384,7 @@
     au < finished ; manifest ; 2016 ; Journal on Financial Mathematics Volume 7 ; 7 ; http://epubs.siam.org/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Journal on Financial Mathematics Volume 8 ; 8 ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2018 ; Journal on Financial Mathematics Volume 9 ; 9 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2019 ; Journal on Financial Mathematics Volume 10 ; 10 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Journal on Financial Mathematics Volume 10 ; 10 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2020 ; Journal on Financial Mathematics Volume 11 ; 11 ; https://epubs.siam.org/ ; >
 
   }
@@ -409,7 +409,7 @@
     au < finished ; manifest ; 2016 ; Journal on Imaging Sciences Volume 9 ; 9 ; http://epubs.siam.org/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; Journal on Imaging Sciences Volume 10 ; 10 ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2018 ; Journal on Imaging Sciences Volume 11 ; 11 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2019 ; Journal on Imaging Sciences Volume 12 ; 12 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Journal on Imaging Sciences Volume 12 ; 12 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2020 ; Journal on Imaging Sciences Volume 13 ; 13 ; https://epubs.siam.org/ ; >
 
   }
