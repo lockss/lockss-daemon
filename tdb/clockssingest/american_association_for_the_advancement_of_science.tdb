@@ -535,7 +535,7 @@
       au < finished ; manifest ; 2016 ; Science Immunology Volume 1 ; 1 ; http://immunology.sciencemag.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2017 ; Science Immunology Volume 2 ; 2 ; http://immunology.sciencemag.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2018 ; Science Immunology Volume 3 ; 3 ; http://immunology.sciencemag.org/ ; >
-      au < crawling ; exists ; 2019 ; Science Immunology Volume 4 ; 4 ; https://immunology.sciencemag.org/ ; >
+      au < frozen ; exists ; 2019 ; Science Immunology Volume 4 ; 4 ; https://immunology.sciencemag.org/ ; >
       au < crawling ; exists ; 2020 ; Science Immunology Volume 5 ; 5 ; https://immunology.sciencemag.org/ ; >
 
   }
