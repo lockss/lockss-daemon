@@ -1,0 +1,37 @@
+<map>
+    <entry>
+        <string>plugin_status</string>
+        <string>development</string>
+    </entry>
+    <entry>
+        <string>plugin_identifier</string>
+        <string>org.lockss.plugin.silverchair.ucpress.UCPressSilverchairPlugin</string>
+    </entry>
+    <entry>
+        <string>plugin_version</string>
+        <string>1</string>
+    </entry>
+    <entry>
+        <string>plugin_parent</string>
+        <string>org.lockss.plugin.silverchair.SilverchairCommonThemePlugin</string>
+    </entry>
+    <entry>
+        <string>plugin_parent_version</string>
+        <string>5</string>
+    </entry>
+    <entry>
+        <string>plugin_name</string>
+        <string>University of California Press Plugin</string>
+    </entry>
+    <entry>
+        <string>au_name</string>
+        <string>"University of California Press Plugin, Base URL %s, Journal ID %s,  Year %d, Volume %s", base_url, journal_id, year, volume_name</string>
+    </entry>
+    <!--https://online.ucpress.edu/ncm/issue/browse-by-year/2019-->
+    <entry>
+        <string>au_start_url</string>
+        <list>
+            <string>"%s%s/issue/browse-by-year/%d", base_url, journal_id, year</string>
+        </list>
+    </entry>
+</map>
