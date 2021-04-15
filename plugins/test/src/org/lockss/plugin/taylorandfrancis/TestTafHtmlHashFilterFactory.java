@@ -29,16 +29,20 @@
 
 package org.lockss.plugin.taylorandfrancis;
 
+import java.io.File;
 import java.io.InputStream;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.util.Properties;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.StringUtils;
+import org.lockss.plugin.atypon.BaseAtyponLoginPageChecker;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockArchivalUnit;
 import org.lockss.test.StringInputStream;
 import org.lockss.util.Constants;
+import org.lockss.util.HeaderUtil;
 import org.lockss.util.StringUtil;
 
 public class TestTafHtmlHashFilterFactory extends LockssTestCase {
@@ -255,7 +259,7 @@ public class TestTafHtmlHashFilterFactory extends LockssTestCase {
     assertEquals(withoutTocArticleEntry, StringUtil.fromInputStream(actIn));
   }
 
-  public void testOldCrawlAgreeNewCrawlArticle() throws Exception {
+  public void testIortArticleOldNew() throws Exception {
     // this tests whether an old html document crawl in 2016 will hash compare to the "same" article from 2021
     // the html documents are Open Access
     InputStream actIn = fact.createFilteredInputStream(mau,
@@ -271,7 +275,8 @@ public class TestTafHtmlHashFilterFactory extends LockssTestCase {
     assertEquals(lstr, istr);
 
   }
-  public void testOldCrawlAgreeNewCrawlTableOfContents() throws Exception {
+
+  public void testTaclTocOldNew() throws Exception {
     // this tests whether an old html document crawl in 2016 will hash compare to the "same" TOC from 2021
     // the html documents are Open Access
     InputStream actIn = fact.createFilteredInputStream(mau,
@@ -287,5 +292,4 @@ public class TestTafHtmlHashFilterFactory extends LockssTestCase {
     assertEquals(lstr, istr);
 
   }
-
 }

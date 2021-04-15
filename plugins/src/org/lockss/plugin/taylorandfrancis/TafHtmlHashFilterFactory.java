@@ -124,21 +124,29 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
             // new content that we need to include to compare with older content, also, just like to keep this content
             //HtmlNodeFilters.tagWithAttribute("div", "id", "references-Section"),
               // grab the title of the article (note, the span tag, the div tag is not in the 'correct' order
-            HtmlNodeFilters.tagWithAttributeRegex("span","class","hlFld-Title", true),
+            //HtmlNodeFilters.allExceptSubtree(
+            //  HtmlNodeFilters.a,
+              HtmlNodeFilters.tagWithAttributeRegex("span","class","hlFld-Title", true),
+            //  HtmlNodeFilters.tag("a")
+            //),
+            // We can't even grab the author names because of the inconsistent placement, or formatting.
               // grab the author names, but exclude the email and affiliation
 //            HtmlNodeFilters.allExceptSubtree(
 //                HtmlNodeFilters.tagWithAttribute("a","class","entryAuthor"),
 //                HtmlNodeFilters.tag("span")
 //            ),
-            HtmlNodeFilters.tagWithAttribute("div", "class","hlFld-Abstract"),
-            HtmlNodeFilters.tagWithAttribute("div", "class","hlFld-KeywordText"),
+            // there is a div.class.hlFld-Abstract parent of a hlFld-Abstract child, causing duplicate abstract text,
+            //HtmlNodeFilters.tagWithAttributeRegex("div", "class","hlFld-Abstract"),
+            // hopefully grabbing the inner will work
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class","abstractSection"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class","hlFld-KeywordText"),
             HtmlNodeFilters.tagWithAttributeRegex("div", "class","NLM_sec_level_1"),
             // keep Ack[nowledgments] section
             // Note, sometimes the acknowledgemetns does not have this div
             // and is instead in a more generic NLM_sec_level_1 class
             HtmlNodeFilters.tagWithAttribute("div", "id", "ack"),
 
-            // keep on new content from issue toc
+            // keep on new content from issue TOC
               // some children of these get removed below
             HtmlNodeFilters.tagWithAttributeRegex("div", "class","tocAuthors"),
             /*
@@ -147,7 +155,6 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
             */
             // we want the value of this tag <input type="hidden" name="title" value="Alcheringa: An Australasian Journal of Palaeontology (2014)">
             // sadly, not sure how to do so
-
 
             // we get rid of all tags at the end so won't keep links unless explicitly
             // included here
@@ -253,8 +260,8 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
             HtmlNodeFilters.tagWithAttribute("span", "class","ref-lnk"), //in-line rollover ref info
             //Figures
             //showCit
-            
-            /* 
+
+            /*
              * Noticed changes in 10/2/2018 - views counts on TOC
              */
             HtmlNodeFilters.tagWithAttributeRegex("span", "class", "access-icon"),
@@ -267,6 +274,13 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
               // in new content there is a table caption embedded in an h3 tag. wild
               HtmlNodeFilters.tag("p")
             ),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "hlFld-ContribAuthor"),
+            // Some ancillary author info is sometimes outside the 'hlFld-ContribAuthor' tag, it is in 'NLM-author-notes'
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "NLM_author-notes"),
+            // Keywords are inconsistent too, we need to explicitly exclude them as sometimes they are embedded in a
+            // kept tag
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "abstractKeywords"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "hlFld-KeywordText"),
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "summationHeading"),
             HtmlNodeFilters.tagWithAttribute("div", "class", "sectionHeadingDiv"),
             HtmlNodeFilters.tagWithAttribute("ul", "class", "references"),
@@ -280,6 +294,10 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
             HtmlNodeFilters.tagWithAttributeRegex("div", "id", "ViewerArticleInfo" ),
             // old crawls have the tables at the bottom.
             HtmlNodeFilters.tagWithAttributeRegex("div", "id", "table-content-" ),
+            // There are class=hlFld-Title tags in the related articles section that get pulled in that we do not want.
+            HtmlNodeFilters.ancestor(
+                HtmlNodeFilters.tagWithAttribute("div", "class", "relatedItem")
+            ),
 
             // this is for both new and old crawls,
             // figureDownloadOption tableDownloadOption
