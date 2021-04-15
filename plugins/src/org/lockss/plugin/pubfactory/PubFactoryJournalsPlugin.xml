@@ -63,6 +63,7 @@
     <string>au_start_url</string>
     <!-- https://www.berghahnjournals.com/lockss-manifest/journal/democratic-theory/volume/4 -->
     <!-- https://journals.ametsoc.org/lockss-manifest/journal/hydr/volume/16 -->
+    <!-- https://erp.bioscientifica.com/lockss-manifest/journal/echo/1-->
     <string>"%slockss-manifest/journal/%s/volume/%s", base_url, journal_id, volume_name</string>
   </entry>
   <entry>
