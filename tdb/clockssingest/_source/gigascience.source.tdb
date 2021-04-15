@@ -19,7 +19,7 @@
     hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[directory] >
 
-    au < expected ; exists ; 2021_01 ; GigaScience Journal Source Content 2021_01 ; 2021_01 >
+    au < readySource ; crawling ; 2021_01 ; GigaScience Journal Source Content 2021_01 ; 2021_01 >
 
   }
 
