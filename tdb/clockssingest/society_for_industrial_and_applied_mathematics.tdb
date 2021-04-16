@@ -521,9 +521,9 @@
     au < finished ; frozen ; 1994 ; Journal on Matrix Analysis and Application Volume 15 ; 15 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 1995 ; Journal on Matrix Analysis and Application Volume 16 ; 16 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 1996 ; Journal on Matrix Analysis and Application Volume 17 ; 17 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 1997 ; Journal on Matrix Analysis and Application Volume 18 ; 18 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 1998 ; Journal on Matrix Analysis and Application Volume 19 ; 19 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 1999 ; Journal on Matrix Analysis and Application Volume 20 ; 20 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1997 ; Journal on Matrix Analysis and Application Volume 18 ; 18 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1998 ; Journal on Matrix Analysis and Application Volume 19 ; 19 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 1999 ; Journal on Matrix Analysis and Application Volume 20 ; 20 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2000 ; Journal on Matrix Analysis and Application Volume 21 ; 21 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2001 ; Journal on Matrix Analysis and Application Volume 22 ; 22 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2002 ; Journal on Matrix Analysis and Application Volume 23 ; 23 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
@@ -567,13 +567,13 @@
     {
     param[journal_id] = sjnaam
 
-    au < finished ; crawling ; 1966 ; Journal on Numerical Analysis Volume 3 ; 3 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 1967 ; Journal on Numerical Analysis Volume 4 ; 4 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1968 ; Journal on Numerical Analysis Volume 5 ; 5 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 1969 ; Journal on Numerical Analysis Volume 6 ; 6 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 1970 ; Journal on Numerical Analysis Volume 7 ; 7 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 1971 ; Journal on Numerical Analysis Volume 8 ; 8 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 1972 ; Journal on Numerical Analysis Volume 9 ; 9 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1966 ; Journal on Numerical Analysis Volume 3 ; 3 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1967 ; Journal on Numerical Analysis Volume 4 ; 4 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1968 ; Journal on Numerical Analysis Volume 5 ; 5 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1969 ; Journal on Numerical Analysis Volume 6 ; 6 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1970 ; Journal on Numerical Analysis Volume 7 ; 7 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 1971 ; Journal on Numerical Analysis Volume 8 ; 8 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1972 ; Journal on Numerical Analysis Volume 9 ; 9 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1973 ; Journal on Numerical Analysis Volume 10 ; 10 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 1974 ; Journal on Numerical Analysis Volume 11 ; 11 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 1975 ; Journal on Numerical Analysis Volume 12 ; 12 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
