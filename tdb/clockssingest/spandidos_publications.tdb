@@ -40,6 +40,8 @@
       au < finished ; manifest ; 2019 ; Oncology Letters Volume 18 ; 18 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2020 ; Oncology Letters Volume 19 ; 19 ; >
       au < crawling ; exists ; 2020 ; Oncology Letters Volume 20 ; 20 ; >
+      au < expected ; exists ; 2021 ; Oncology Letters Volume 21 ; 21 ; >
+      au < expected ; exists ; 2021 ; Oncology Letters Volume 22 ; 22 ; >
 
     }
   
@@ -110,6 +112,8 @@
       au < finished ; manifest ; 2019 ; International Journal of Oncology Volume 55 ; 55 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2020 ; International Journal of Oncology Volume 56 ; 56 ; >
       au < crawling ; exists ; 2020 ; International Journal of Oncology Volume 57 ; 57 ; >
+      au < expected ; exists ; 2021 ; International Journal of Oncology Volume 58 ; 58 ; >
+      au < expected ; exists ; 2021 ; International Journal of Oncology Volume 59 ; 59 ; >
 
     }
   
@@ -135,6 +139,8 @@
       au < finished ; manifest ; 2019 ; Molecular and Clinical Oncology Volume 11 ; 11 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2020 ; Molecular and Clinical Oncology Volume 12 ; 12 ; >
       au < crawling ; exists ; 2020 ; Molecular and Clinical Oncology Volume 13 ; 13 ; >
+      au < expected ; exists ; 2021 ; Molecular and Clinical Oncology Volume 14 ; 14 ; >
+      au < expected ; exists ; 2021 ; Molecular and Clinical Oncology Volume 15 ; 15 ; >
 
     }
   
@@ -167,6 +173,8 @@
       au < finished ; manifest ; 2019 ; Experimental and Therapeutic Medicine Volume 18 ; 18 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2020 ; Experimental and Therapeutic Medicine Volume 19 ; 19 ; >
       au < crawling ; exists ; 2020 ; Experimental and Therapeutic Medicine Volume 20 ; 20 ; >
+      au < expected ; exists ; 2021 ; Experimental and Therapeutic Medicine Volume 21 ; 21 ; >
+      au < expected ; exists ; 2021 ; Experimental and Therapeutic Medicine Volume 22 ; 22 ; >
 
     }
   
@@ -225,6 +233,8 @@
       au < manifest ; exists ; 2019 ; International Journal of Molecular Medicine Volume 44 ; 44 ; >
       au < crawling ; exists ; 2020 ; International Journal of Molecular Medicine Volume 45 ; 45 ; >
       au < crawling ; exists ; 2020 ; International Journal of Molecular Medicine Volume 46 ; 46 ; >
+      au < expected ; exists ; 2021 ; International Journal of Molecular Medicine Volume 47 ; 47 ; >
+      au < expected ; exists ; 2021 ; International Journal of Molecular Medicine Volume 48 ; 48 ; >
 
     }
   
@@ -250,6 +260,8 @@
       au < finished ; manifest ; 2019 ; Biomedical Reports Volume 11 ; 11 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2020 ; Biomedical Reports Volume 12 ; 12 ; >
       au < crawling ; exists ; 2020 ; Biomedical Reports Volume 13 ; 13 ; >
+      au < expected ; exists ; 2021 ; Biomedical Reports Volume 14 ; 14 ; >
+      au < expected ; exists ; 2021 ; Biomedical Reports Volume 15 ; 15 ; >
 
     }
   
@@ -306,6 +318,8 @@
       au < finished ; manifest ; 2019 ; Oncology Reports Volume 42 ; 42 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2020 ; Oncology Reports Volume 43 ; 43 ; >
       au < crawling ; exists ; 2020 ; Oncology Reports Volume 44 ; 44 ; >
+      au < expected ; exists ; 2021 ; Oncology Reports Volume 45 ; 45 ; >
+      au < expected ; exists ; 2021 ; Oncology Reports Volume 46 ; 46 ; >
 
     }
   
@@ -340,6 +354,8 @@
       au < finished ; manifest ; 2019 ; Molecular Medicine Reports Volume 20 ; 20 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2020 ; Molecular Medicine Reports Volume 21 ; 21 ; >
       au < crawling ; exists ; 2020 ; Molecular Medicine Reports Volume 22 ; 22 ; >
+      au < expected ; exists ; 2021 ; Molecular Medicine Reports Volume 23 ; 23 ; >
+      au < expected ; exists ; 2021 ; Molecular Medicine Reports Volume 24 ; 24 ; >
 
     }
     
@@ -354,6 +370,7 @@
   
       au < finished ; manifest ; 2019 ; World Academy of Sciences Journal Volume 1 ; 1 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2020 ; World Academy of Sciences Journal Volume 2 ; 2 ; >
+      au < expected ; exists ; 2021 ; World Academy of Sciences Journal Volume 3 ; 3 ; >
 
     }
 
