@@ -40,14 +40,15 @@ else
   exit 1
 fi
 
-if command -v python3 > /dev/null; then
+_0="$($REALPATH "${0}")"
+
+if command -v python3 > /dev/null ; then
   PYTHON3='python3'
-elif command -v python > /dev/null && [ "$(python -c 'import sys ; print(sys.version_info.major)')" = '3' ]; then
+elif command -v python > /dev/null && [ "$(python -c 'import sys ; print(sys.version_info.major)')" = '3' ] ; then
   PYTHON3='python'
 else
-  echo "${0}: no Python 3 executable on the PATH" >&2
+  echo "${_0}: no Python 3 executable on the PATH" >&2
   exit 1
 fi
 
-_0="$($REALPATH "${0}")"
 "${PYTHON3}" "$(cd "$(dirname "${_0}")" && pwd)/$(basename "${_0}").py" "$@"
