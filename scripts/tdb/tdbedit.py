@@ -4,7 +4,7 @@
 in TDB files from one or more old values to a new value.'''
 
 __copyright__ = '''\
-Copyright (c) 2000-2020, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
 All rights reserved.'''
 
 __license__ = '''\
@@ -144,7 +144,7 @@ backup copy is made under 'a.tdb.bak'. If that backup file already exists, it is
 overwritten.
 '''
 
-__version__ = '0.5.0'
+__version__ = '0.5.1'
 
 import io
 import optparse
@@ -458,7 +458,7 @@ def _build_au_index(options, aus):
   errors = 0
   for fstr in options.files:
     continue_outer = False
-    with open(fstr, 'r') as f:
+    with open(fstr, 'r', encoding='utf-8') as f:
       for lineindex, line in enumerate(f):
         mat = _IMPLICIT.search(line)
         if mat is not None:
