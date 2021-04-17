@@ -581,17 +581,17 @@ def _file_lines(fstr):
   whitespace trimmed. Exits with sys.exit() if the result has zero elements.
   Trims cruft after auid, there is an assumption that fstr is a file of auids
   '''
-# Last modified 2015-08-31
+# Last modified 2020-10-01
   # partition() line into parts, x.partition('#')[0] is the part before '#' or the entire line if not present
   # strip removes whitespace
-  with open(os.path.expanduser(fstr)) as f: ret = filter(lambda y: len(y) > 0, [x.partition('#')[0].strip() for x in f])
+  with open(os.path.expanduser(fstr)) as f: ret = list(filter(lambda y: len(y) > 0, [x.partition('#')[0].strip() for x in f]))
   if len(ret) == 0: sys.exit('Error: %s contains no meaningful lines' % (fstr,))
   # in case there is cruft after the auid, such as a list of machines that passed the ready_to_finish script
   # lambda is cool, see above usage,
   # split will handle tabs or spaces
   # the first field must be the auid
   # map returns an array
-  ret = map(lambda x : x.split()[0], ret)
+  ret = list(map(lambda x : x.split()[0], ret))
   return ret
 
 def _main():
