@@ -41,8 +41,8 @@
     au < crawling ; exists ; 2003 ; 2003 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 38 ; 38 ; >
     au < crawling ; exists ; 2004 ; 2004 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 39 ; 39 ; >
     au < crawling ; exists ; 2005 ; 2005 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 40 ; 40 ; >
-    au < manifest ; exists ; 2006 ; 2006 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 41 ; 41 ; >
-    au < manifest ; exists ; 2007 ; 2007 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 42 ; 42 ; >
+    au < ready ; exists ; 2006 ; 2006 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 41 ; 41 ; >
+    au < ready ; exists ; 2007 ; 2007 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 42 ; 42 ; >
     au < crawling ; exists ; 2008 ; 2008 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 43 ; 43 ; >
     au < finished ; manifest ; 2009 ; 2009 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 44 ; 44 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 45 ; 45 ; >
@@ -99,7 +99,7 @@
     au < crawling ; exists ; 2001 ; 2001 ; Aktuelle Dermatologie Volume 27 ; 27 ; >
     au < crawling ; exists ; 2002 ; 2002 ; Aktuelle Dermatologie Volume 28 ; 28 ; >
     au < crawling ; exists ; 2003 ; 2003 ; Aktuelle Dermatologie Volume 29 ; 29 ; >
-    au < manifest ; exists ; 2004 ; 2004 ; Aktuelle Dermatologie Volume 30 ; 30 ; >
+    au < ready ; exists ; 2004 ; 2004 ; Aktuelle Dermatologie Volume 30 ; 30 ; >
     au < crawling ; exists ; 2005 ; 2005 ; Aktuelle Dermatologie Volume 31 ; 31 ; >
     au < crawling ; exists ; 2006 ; 2006 ; Aktuelle Dermatologie Volume 32 ; 32 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Aktuelle Dermatologie Volume 33 ; 33 ; >
@@ -133,7 +133,7 @@
 
     au < crawling ; exists ; 2001 ; 2001 ; Aktuelle Ernährungsmedizin Volume 26 ; 26 ; >
     au < crawling ; exists ; 2002 ; 2002 ; Aktuelle Ernährungsmedizin Volume 27 ; 27 ; >
-    au < manifest ; exists ; 2003 ; 2003 ; Aktuelle Ernährungsmedizin Volume 28 ; 28 ; >
+    au < ready ; exists ; 2003 ; 2003 ; Aktuelle Ernährungsmedizin Volume 28 ; 28 ; >
     au < crawling ; exists ; 2004 ; 2004 ; Aktuelle Ernährungsmedizin Volume 29 ; 29 ; >
     au < crawling ; exists ; 2005 ; 2005 ; Aktuelle Ernährungsmedizin Volume 30 ; 30 ; >
     au < crawling ; exists ; 2006 ; 2006 ; Aktuelle Ernährungsmedizin Volume 31 ; 31 ; >
@@ -216,7 +216,7 @@
     au < crawling ; exists ; 2003 ; 2003 ; Aktuelle Neurologie Volume 30 ; 30 ; >
     au < manifest ; exists ; 2004 ; 2004 ; Aktuelle Neurologie Volume 31 ; 31 ; >
     au < crawling ; exists ; 2005 ; 2005 ; Aktuelle Neurologie Volume 32 ; 32 ; >
-    au < manifest ; exists ; 2006 ; 2006 ; Aktuelle Neurologie Volume 33 ; 33 ; >
+    au < ready ; exists ; 2006 ; 2006 ; Aktuelle Neurologie Volume 33 ; 33 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Aktuelle Neurologie Volume 34 ; 34 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Aktuelle Neurologie Volume 35 ; 35 ; >
     au < frozen ; exists ; 2009 ; 2009 ; Aktuelle Neurologie Volume 36 ; 36 ; >
@@ -265,7 +265,7 @@
     au < doNotProcess ; exists ; 1998 ; 1998 ; Aktuelle Rheumatologie Volume 25 ; 25 ; >
     au < doNotProcess ; exists ; 1999 ; 1999 ; Aktuelle Rheumatologie Volume 26 ; 26 ; >
     au < crawling ; exists ; 2000 ; 2000 ; Aktuelle Rheumatologie Volume 27 ; 27 ; >
-    au < manifest ; exists ; 2001 ; 2001 ; Aktuelle Rheumatologie Volume 28 ; 28 ; >
+    au < ready ; exists ; 2001 ; 2001 ; Aktuelle Rheumatologie Volume 28 ; 28 ; >
     au < crawling ; exists ; 2002 ; 2002 ; Aktuelle Rheumatologie Volume 29 ; 29 ; >
     au < crawling ; exists ; 2003 ; 2003 ; Aktuelle Rheumatologie Volume 30 ; 30 ; >
     au < crawling ; exists ; 2004 ; 2004 ; Aktuelle Rheumatologie Volume 31 ; 31 ; >
@@ -301,9 +301,9 @@
    param[journal_id] = 10.1055/s-00000006
    comment[years] = 2001-2007
 
-    au < manifest ; exists ; 2001 ; 2001 ; Aktuelle Traumatologie Volume 31 ; 31 ; >
+    au < ready ; exists ; 2001 ; 2001 ; Aktuelle Traumatologie Volume 31 ; 31 ; >
     au < crawling ; exists ; 2002 ; 2002 ; Aktuelle Traumatologie Volume 32 ; 32 ; >
-    au < manifest ; exists ; 2003 ; 2003 ; Aktuelle Traumatologie Volume 33 ; 33 ; >
+    au < ready ; exists ; 2003 ; 2003 ; Aktuelle Traumatologie Volume 33 ; 33 ; >
     au < crawling ; exists ; 2004 ; 2004 ; Aktuelle Traumatologie Volume 34 ; 34 ; >
     au < crawling ; exists ; 2005 ; 2005 ; Aktuelle Traumatologie Volume 35 ; 35 ; >
     au < crawling ; exists ; 2006 ; 2006 ; Aktuelle Traumatologie Volume 36 ; 36 ; >
@@ -347,8 +347,8 @@
     au < crawling ; exists ; 2003 ; 2003 ; Aktuelle Urologie Volume 34 ; 34 ; >
     au < crawling ; exists ; 2004 ; 2004 ; Aktuelle Urologie Volume 35 ; 35 ; >
     au < crawling ; exists ; 2005 ; 2005 ; Aktuelle Urologie Volume 36 ; 36 ; >
-    au < manifest ; exists ; 2006 ; 2006 ; Aktuelle Urologie Volume 37 ; 37 ; >
-    au < manifest ; exists ; 2007 ; 2007 ; Aktuelle Urologie Volume 38 ; 38 ; >
+    au < ready ; exists ; 2006 ; 2006 ; Aktuelle Urologie Volume 37 ; 37 ; >
+    au < ready ; exists ; 2007 ; 2007 ; Aktuelle Urologie Volume 38 ; 38 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Aktuelle Urologie Volume 39 ; 39 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Aktuelle Urologie Volume 40 ; 40 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; Aktuelle Urologie Volume 41 ; 41 ; >
@@ -634,7 +634,7 @@
     au < crawling ; exists ; 2002 ; 2002 ; Arzneimittelforschung Volume 52 ; 52 ; >
     au < crawling ; exists ; 2003 ; 2003 ; Arzneimittelforschung Volume 53 ; 53 ; >
     au < crawling ; exists ; 2004 ; 2004 ; Arzneimittelforschung Volume 54 ; 54 ; >
-    au < manifest ; exists ; 2005 ; 2005 ; Arzneimittelforschung Volume 55 ; 55 ; >
+    au < ready ; exists ; 2005 ; 2005 ; Arzneimittelforschung Volume 55 ; 55 ; >
     au < crawling ; exists ; 2006 ; 2006 ; Arzneimittelforschung Volume 56 ; 56 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Arzneimittelforschung Volume 57 ; 57 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Arzneimittelforschung Volume 58 ; 58 ; >
@@ -800,7 +800,7 @@
     param[journal_id] = 10.1055/s-00000049
     comment[years] = 2001-current
 
-    au < manifest ; exists ; 2001 ; 2001 ; Clinics in Colon and Rectal Surgery Volume 14 ; 14 ; >
+    au < ready ; exists ; 2001 ; 2001 ; Clinics in Colon and Rectal Surgery Volume 14 ; 14 ; >
     au < crawling ; exists ; 2002 ; 2002 ; Clinics in Colon and Rectal Surgery Volume 15 ; 15 ; >
     au < crawling ; exists ; 2003 ; 2003 ; Clinics in Colon and Rectal Surgery Volume 16 ; 16 ; >
     au < crawling ; exists ; 2004 ; 2004 ; Clinics in Colon and Rectal Surgery Volume 17 ; 17 ; >
@@ -1019,7 +1019,7 @@
     comment[years] = 2000 only - journal published 1996-2000
     comment[continued_by] = 1617-5891 Deutsche Zeitschrift fur Onkologie
 
-   au < manifest ; exists ; 2000 ; 2000 ; Zeitschrift für Onkologie Volume 32 ; 32 ; >
+   au < ready ; exists ; 2000 ; 2000 ; Zeitschrift für Onkologie Volume 32 ; 32 ; >
 
   }
 
@@ -2430,7 +2430,7 @@
    au < manifest ; exists ; 2005 ; 2005 ; Informationen aus Orthodontie & Kieferorthopädie Volume 37 ; 37 ; >
    au < manifest ; exists ; 2006 ; 2006 ; Informationen aus Orthodontie & Kieferorthopädie Volume 38 ; 38 ; >
    au < manifest ; exists ; 2007 ; 2007 ; Informationen aus Orthodontie & Kieferorthopädie Volume 39 ; 39 ; >
-   au < manifest ; exists ; 2008 ; 2008 ; Informationen aus Orthodontie & Kieferorthopädie Volume 40 ; 40 ; >
+   au < ready ; exists ; 2008 ; 2008 ; Informationen aus Orthodontie & Kieferorthopädie Volume 40 ; 40 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Informationen aus Orthodontie & Kieferorthopädie Volume 41 ; 41 ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Informationen aus Orthodontie & Kieferorthopädie Volume 42 ; 42 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2011 ; 2011 ; Informationen aus Orthodontie & Kieferorthopädie Volume 43 ; 43 ; reingest2.clockss.org:8085 >
@@ -2640,7 +2640,7 @@
     au < manifest ; exists ; 2005 ; 2005 ; International Journal of Sports Medicine Volume 26 ; 26 ; >
     au < manifest ; exists ; 2006 ; 2006 ; International Journal of Sports Medicine Volume 27 ; 27 ; >
     au < manifest ; exists ; 2007 ; 2007 ; International Journal of Sports Medicine Volume 28 ; 28 ; >
-    au < manifest ; exists ; 2008 ; 2008 ; International Journal of Sports Medicine Volume 29 ; 29 ; >
+    au < ready ; exists ; 2008 ; 2008 ; International Journal of Sports Medicine Volume 29 ; 29 ; >
     au < finished ; manifest ; 2009 ; 2009 ; International Journal of Sports Medicine Volume 30 ; 30 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; International Journal of Sports Medicine Volume 31 ; 31 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2011 ; 2011 ; International Journal of Sports Medicine Volume 32 ; 32 ; reingest2.clockss.org:8085 >
@@ -4265,7 +4265,7 @@
 
     au < manifest ; exists ; 2006 ; 2006 ; Orthopädie und Unfallchirurgie up2date Volume 1 ; 1 ; >
     au < manifest ; exists ; 2007 ; 2007 ; Orthopädie und Unfallchirurgie up2date Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2008 ; 2008 ; Orthopädie und Unfallchirurgie up2date Volume 3 ; 3 ; >
+    au < ready ; exists ; 2008 ; 2008 ; Orthopädie und Unfallchirurgie up2date Volume 3 ; 3 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Orthopädie und Unfallchirurgie up2date Volume 4 ; 4 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; Orthopädie und Unfallchirurgie up2date Volume 5 ; 5 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2011 ; 2011 ; Orthopädie und Unfallchirurgie up2date Volume 6 ; 6 ; reingest2.clockss.org:8085 >
@@ -5021,7 +5021,7 @@
    au < manifest ; exists ; 2005 ; 2005 ; Radiologie up2date Volume 5 ; 5 ; >
    au < manifest ; exists ; 2006 ; 2006 ; Radiologie up2date Volume 6 ; 6 ; >
    au < manifest ; exists ; 2007 ; 2007 ; Radiologie up2date Volume 7 ; 7 ; >
-   au < manifest ; exists ; 2008 ; 2008 ; Radiologie up2date Volume 8 ; 8 ; >
+   au < ready ; exists ; 2008 ; 2008 ; Radiologie up2date Volume 8 ; 8 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Radiologie up2date Volume 9 ; 9 ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Radiologie up2date Volume 10 ; 10 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2011 ; 2011 ; Radiologie up2date Volume 11 ; 11 ; reingest2.clockss.org:8085 >
@@ -5049,7 +5049,7 @@
     param[journal_id] = 10.1055/s-00000159
     comment[years] = 2008-current
 
-   au < manifest ; exists ; 2008 ; 2008 ; Radiopraxis Volume 1 ; 1 ; >
+   au < ready ; exists ; 2008 ; 2008 ; Radiopraxis Volume 1 ; 1 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Radiopraxis Volume 2 ; 2 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Radiopraxis Volume 3 ; 3 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2011 ; 2011 ; Radiopraxis Volume 4 ; 4 ; reingest2.clockss.org:8085 >
@@ -5237,7 +5237,7 @@
     au < manifest ; exists ; 2005 ; 2005 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 177 ; 177 ; >
     au < manifest ; exists ; 2006 ; 2006 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 178 ; 178 ; >
     au < manifest ; exists ; 2007 ; 2007 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 179 ; 179 ; >
-    au < manifest ; exists ; 2008 ; 2008 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 180 ; 180 ; >
+    au < ready ; exists ; 2008 ; 2008 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 180 ; 180 ; >
     au < finished ; manifest ; 2009 ; 2009 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 181 ; 181 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2010 ; 2010 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 182 ; 182 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2011 ; 2011 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 183 ; 183 ; reingest2.clockss.org:8085 >
