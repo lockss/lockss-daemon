@@ -467,7 +467,7 @@
       au < finished ; manifest ; 2006 ; Faraday Discussions Volume 132 ; 132 ; 2006 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2006 ; Faraday Discussions Volume 133 ; 133 ; 2006 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
 
-      au < crawling ; exists ; 2007 ; Faraday Discussions Volume 134 ; 134 ; 2007 ; https://pubs.rsc.org/ ; >
+      au < frozen ; exists ; 2007 ; Faraday Discussions Volume 134 ; 134 ; 2007 ; https://pubs.rsc.org/ ; >
       au < finished ; manifest ; 2007 ; Faraday Discussions Volume 135 ; 135 ; 2007 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2007 ; Faraday Discussions Volume 136 ; 136 ; 2007 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
 
@@ -964,7 +964,7 @@
       au < frozen ; exists ; 2004 ; New Journal of Chemistry Volume 28 ; 28 ; 2004 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2005 ; New Journal of Chemistry Volume 29 ; 29 ; 2005 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2006 ; New Journal of Chemistry Volume 30 ; 30 ; 2006 ; https://pubs.rsc.org/ ; >
-      au < crawling ; exists ; 2007 ; New Journal of Chemistry Volume 31 ; 31 ; 2007 ; https://pubs.rsc.org/ ; >
+      au < frozen ; exists ; 2007 ; New Journal of Chemistry Volume 31 ; 31 ; 2007 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2008 ; New Journal of Chemistry Volume 32 ; 32 ; 2008 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2009 ; New Journal of Chemistry Volume 33 ; 33 ; 2009 ; http://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2010 ; New Journal of Chemistry Volume 34 ; 34 ; 2010 ; http://pubs.rsc.org/ ; >
